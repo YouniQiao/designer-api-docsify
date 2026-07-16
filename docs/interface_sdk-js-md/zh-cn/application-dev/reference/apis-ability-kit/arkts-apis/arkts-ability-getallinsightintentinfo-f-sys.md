@@ -1,5 +1,11 @@
 # getAllInsightIntentInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { insightIntentDriver } from '@kit.AbilityKit';
+```
+
 ## getAllInsightIntentInfo
 
 ```TypeScript
@@ -13,6 +19,8 @@ function getAllInsightIntentInfo(intentFlags: number): Promise<Array<InsightInte
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-insightIntentDriver-function getAllInsightIntentInfo(intentFlags: int): Promise<Array<InsightIntentInfo>>--><!--Device-insightIntentDriver-function getAllInsightIntentInfo(intentFlags: int): Promise<Array<InsightIntentInfo>>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -28,7 +36,7 @@ function getAllInsightIntentInfo(intentFlags: number): Promise<Array<InsightInte
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;InsightIntentInfo&gt;&gt; | Promise对象，返回意图信息对象数组。 |
+| Promise<Array<InsightIntentInfo>> | Promise对象，返回意图信息对象数组。 |
 
 **错误码：**
 

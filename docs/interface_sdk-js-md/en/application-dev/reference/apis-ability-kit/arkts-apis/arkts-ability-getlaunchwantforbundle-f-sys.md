@@ -12,12 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getLaunchWantForBundle(bundleName: string, userId: number, callback: AsyncCallback<Want>): void
 ```
 
-Obtains the Want used to launch the bundle based on the given bundle name and user ID. This API uses an
-asynchronous callback to return the result.
+Obtains the Want used to launch the bundle based on the given bundle name and user ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getLaunchWantForBundle(bundleName: string, userId: int, callback: AsyncCallback<Want>): void--><!--Device-bundleManager-function getLaunchWantForBundle(bundleName: string, userId: int, callback: AsyncCallback<Want>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -28,8 +29,8 @@ asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| userId | number | Yes | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). |
-| callback | AsyncCallback&lt;Want&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. Ifthe operation is successful, **err** is **null** and **data** is the Want. Otherwise, **err** is an errorobject. |
+| userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Want> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the Want. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -74,12 +75,13 @@ try {
 function getLaunchWantForBundle(bundleName: string, callback: AsyncCallback<Want>): void
 ```
 
-Obtains the Want used to launch the bundle based on the given bundle name. This API uses an asynchronous callback
-to return the result.
+Obtains the Want used to launch the bundle based on the given bundle name. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getLaunchWantForBundle(bundleName: string, callback: AsyncCallback<Want>): void--><!--Device-bundleManager-function getLaunchWantForBundle(bundleName: string, callback: AsyncCallback<Want>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -90,7 +92,7 @@ to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | AsyncCallback&lt;Want&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. Ifthe operation is successful, **err** is **null** and **data** is the Want. Otherwise, **err** is an errorobject. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Want> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the Want. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -133,12 +135,13 @@ try {
 function getLaunchWantForBundle(bundleName: string, userId?: number): Promise<Want>
 ```
 
-Obtains the Want used to launch the bundle based on the given bundle name and user ID. This API uses a promise to
-return the result.
+Obtains the Want used to launch the bundle based on the given bundle name and user ID. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getLaunchWantForBundle(bundleName: string, userId?: int): Promise<Want>--><!--Device-bundleManager-function getLaunchWantForBundle(bundleName: string, userId?: int): Promise<Want>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -149,13 +152,13 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| userId | number | No | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Want&gt; | Promise used to return the Want object obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Want> | Promise used to return the Want object obtained. |
 
 **Error codes:**
 

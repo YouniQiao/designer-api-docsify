@@ -14,10 +14,11 @@ function getSimOperatorNumeric(slotId: number, callback: AsyncCallback<string>):
 
 Obtains the home PLMN number of the SIM card in a specified slot.
 
-<p>The value is recorded in the SIM card and is irrelevant to the network
-with which the SIM card is currently registered.
+<p>The value is recorded in the SIM card and is irrelevant to the network with which the SIM card is currently registered.
 
 **Since:** 6
+
+<!--Device-sim-function getSimOperatorNumeric(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getSimOperatorNumeric(slotId: int, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -26,7 +27,7 @@ with which the SIM card is currently registered.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Indicates the callback for getting the PLMN number;returns an empty string if no SIM card is inserted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Indicates the callback for getting the PLMN number;returns an empty string if no SIM card is inserted. |
 
 **Error codes:**
 
@@ -60,10 +61,11 @@ function getSimOperatorNumeric(slotId: number): Promise<string>
 
 Obtains the home PLMN number of the SIM card in a specified slot.
 
-<p>The value is recorded in the SIM card and is irrelevant to the network
-with which the SIM card is currently registered.
+<p>The value is recorded in the SIM card and is irrelevant to the network with which the SIM card is currently registered.
 
 **Since:** 6
+
+<!--Device-sim-function getSimOperatorNumeric(slotId: int): Promise<string>--><!--Device-sim-function getSimOperatorNumeric(slotId: int): Promise<string>-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -77,7 +79,7 @@ with which the SIM card is currently registered.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the PLMN number; returns an empty string if no SIM card is inserted. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the PLMN number; returns an empty string if no SIM card is inserted. |
 
 **Error codes:**
 

@@ -20,13 +20,15 @@ Obtains the latest operating hand status.
 - API version 20+: ohos.permission.ACTIVITY_MOTION or ohos.permission.DETECT_GESTURE
 - API version 15 - 19: ohos.permission.ACTIVITY_MOTION
 
+<!--Device-motion-function getRecentOperatingHandStatus(): OperatingHandStatus--><!--Device-motion-function getRecentOperatingHandStatus(): OperatingHandStatus-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| OperatingHandStatus | Status of the operating hand. |
+| [OperatingHandStatus](arkts-multimodalawareness-operatinghandstatus-e.md) | Status of the operating hand. |
 
 **Error codes:**
 

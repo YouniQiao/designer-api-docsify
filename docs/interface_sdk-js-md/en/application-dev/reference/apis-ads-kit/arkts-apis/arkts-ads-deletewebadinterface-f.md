@@ -12,12 +12,13 @@ import { advertising } from '@kit.AdsKit';
 function deleteWebAdInterface(controller: web_webview.WebviewController, needRefresh: boolean): void
 ```
 
-Deletes the ad JavaScript object injected through **registerWebAdInterface**
-(this API is only open to some pre-installed system applications).
+Deletes the ad JavaScript object injected through **registerWebAdInterface**(this API is only open to some pre-installed system applications).
 
 **Since:** 16
 
 **Atomic service API:** This API can be used in atomic services since API version 16.
+
+<!--Device-advertising-function deleteWebAdInterface(controller: web_webview.WebviewController, needRefresh: boolean): void--><!--Device-advertising-function deleteWebAdInterface(controller: web_webview.WebviewController, needRefresh: boolean): void-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -32,7 +33,7 @@ Deletes the ad JavaScript object injected through **registerWebAdInterface**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: Mandatory parameters are leftunspecified. |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: Mandatory parameters are left unspecified. |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 
 **Example**

@@ -1,13 +1,12 @@
 # GenericsTask
 
-Implements a generic task. **GenericsTask** inherits from
-[Task](arkts-arkts-execute-f.md#execute-1).
-During the creation of a generic task, the passed-in parameter types and return value types of concurrent functions
-are verified in the compilation phase. Other behaviors are the same as those during the creation of a task.
+Implements a generic task. **GenericsTask** inherits from [Task](arkts-arkts-execute-f.md#execute-1).During the creation of a generic task, the passed-in parameter types and return value types of concurrent functions are verified in the compilation phase. Other behaviors are the same as those during the creation of a task.
 
 **Inheritance/Implementation:** GenericsTask extends [Task](arkts-arkts-task-c.md)
 
 **Since:** 13
+
+<!--Device-taskpool-class GenericsTask<A extends Array<Object>, R> extends Task--><!--Device-taskpool-class GenericsTask<A extends Array<Object>, R> extends Task-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -29,14 +28,16 @@ A constructor used to create a **GenericsTask** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-GenericsTask-constructor(func: (...args: A) => R | Promise<R>, ...args: A)--><!--Device-GenericsTask-constructor(func: (...args: A) => R | Promise<R>, ...args: A)-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| func | (...args: A) =&gt; R \| Promise&lt;R&gt; | Yes | Function to be executed. The function must be decorated using[@Concurrent](../../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about thesupported return value types of the function, see[Sequenceable Data Types](../../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
-| args | A | Yes | Arguments of the function. For details about the supported parameter types, see[Sequenceable Data Types](../../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). Thedefault value is **undefined**. |
+| func | (...args: A) => R \| Promise<R> | Yes | Function to be executed. The function must be decorated using [@Concurrent](../../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types of the function, see [Sequenceable Data Types](../../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
+| args | A | Yes | Arguments of the function. For details about the supported parameter types, see [Sequenceable Data Types](../../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). The default value is **undefined**. |
 
 **Error codes:**
 
@@ -83,6 +84,8 @@ A constructor used to create a **GenericsTask** instance, with the task name spe
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-GenericsTask-constructor(name: string, func: (...args: A) => R | Promise<R>, ...args: A)--><!--Device-GenericsTask-constructor(name: string, func: (...args: A) => R | Promise<R>, ...args: A)-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -90,8 +93,8 @@ A constructor used to create a **GenericsTask** instance, with the task name spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the generic task. |
-| func | (...args: A) =&gt; R \| Promise&lt;R&gt; | Yes | Function to be executed. The function must be decorated using[@Concurrent](../../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about thesupported return value types of the function, see[Sequenceable Data Types](../../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
-| args | A | Yes | Arguments of the function. For details about the supported parameter types, see[Sequenceable Data Types](../../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). Thedefault value is **undefined**. |
+| func | (...args: A) => R \| Promise<R> | Yes | Function to be executed. The function must be decorated using [@Concurrent](../../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types of the function, see [Sequenceable Data Types](../../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
+| args | A | Yes | Arguments of the function. For details about the supported parameter types, see [Sequenceable Data Types](../../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). The default value is **undefined**. |
 
 **Error codes:**
 

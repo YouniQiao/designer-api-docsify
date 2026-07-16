@@ -1,5 +1,11 @@
 # getInputMethodController
 
+## 导入模块
+
+```TypeScript
+import { inputMethod } from '@kit.IMEKit';
+```
+
 ## getInputMethodController
 
 ```TypeScript
@@ -14,13 +20,15 @@ function getInputMethodController(): InputMethodController
 
 **替代接口：** [getController](arkts-ime-getcontroller-f.md#getcontroller-1)
 
+<!--Device-inputMethod-function getInputMethodController(): InputMethodController--><!--Device-inputMethod-function getInputMethodController(): InputMethodController-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| InputMethodController | 回调返回当前客户端实例。 |
+| [InputMethodController](arkts-ime-inputmethodcontroller-i.md) | 回调返回当前客户端实例。 |
 
 **示例：**
 

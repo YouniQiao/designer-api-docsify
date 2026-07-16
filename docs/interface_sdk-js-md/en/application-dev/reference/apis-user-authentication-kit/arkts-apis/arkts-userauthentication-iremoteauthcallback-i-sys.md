@@ -4,6 +4,8 @@ Provides APIs for getting WidgetParam in remote authentication scenarios.
 
 **Since:** 26.0.0
 
+<!--Device-userAuth-interface IRemoteAuthCallback--><!--Device-userAuth-interface IRemoteAuthCallback-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Called to get the information presented on the user authentication page for remo
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-IRemoteAuthCallback-onGetRemoteAuthWidgetParam: WidgetParamCallback--><!--Device-IRemoteAuthCallback-onGetRemoteAuthWidgetParam: WidgetParamCallback-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **System API:** This is a system API.
@@ -38,14 +42,15 @@ Called to get the information presented on the user authentication page for remo
 onRemoteAuthResult: ResultCallback
 ```
 
-Called to return the authentication result. If the authentication is successful,
-UserAuthResult contains the token information.
+Called to return the authentication result. If the authentication is successful,UserAuthResult contains the token information.
 
 **Type:** ResultCallback
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-IRemoteAuthCallback-onRemoteAuthResult: ResultCallback--><!--Device-IRemoteAuthCallback-onRemoteAuthResult: ResultCallback-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 

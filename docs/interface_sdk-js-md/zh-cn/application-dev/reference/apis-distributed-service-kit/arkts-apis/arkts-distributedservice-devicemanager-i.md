@@ -4,7 +4,15 @@
 
 **起始版本：** 10
 
+<!--Device-distributedDeviceManager-interface DeviceManager--><!--Device-distributedDeviceManager-interface DeviceManager-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+## 导入模块
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+```
 
 ## bindTarget
 
@@ -18,6 +26,8 @@ bindTarget(deviceId: string, bindParam: { [key: string]: Object; }, callback: As
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-bindTarget(deviceId: string, bindParam: { [key: string]: Object; }, callback: AsyncCallback<{deviceId: string;}>): void--><!--Device-DeviceManager-bindTarget(deviceId: string, bindParam: { [key: string]: Object; }, callback: AsyncCallback<{deviceId: string;}>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
@@ -26,14 +36,14 @@ bindTarget(deviceId: string, bindParam: { [key: string]: Object; }, callback: As
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备标识。长度范围1~255字符。 |
 | bindParam | { [key: string]: Object; } | 是 | 认证参数。由开发者自行决定传入的键值对。默认会携带以下key值：<br>bindType 此值是绑定的类型，必填。<br />-1：PIN码。<br>targetPkgName 绑定目标的包名。<br>appName 尝试绑定目标的应用程序名称。<br>appOperation 应用程序要绑定目标的原因。<br>customDescription 操作的详细说明。 |
-| callback | AsyncCallback&lt;{deviceId: string;}&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<{deviceId: string;}> | 是 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified deviceId is greater than 255. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 | [11600103](../../apis-distributedservice-kit/errorcode-device-manager.md#11600103-认证业务不可用) | Authentication unavailable. |
 
@@ -87,19 +97,21 @@ getAvailableDeviceList(callback: AsyncCallback<Array<DeviceBasicInfo>>): void
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getAvailableDeviceList(callback: AsyncCallback<Array<DeviceBasicInfo>>): void--><!--Device-DeviceManager-getAvailableDeviceList(callback: AsyncCallback<Array<DeviceBasicInfo>>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;DeviceBasicInfo&gt;&gt; | 是 | 获取所有可信设备列表的回调，返回设备信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<DeviceBasicInfo>> | 是 | 获取所有可信设备列表的回调，返回设备信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
 **示例：**
@@ -138,19 +150,21 @@ getAvailableDeviceList(): Promise<Array<DeviceBasicInfo>>
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getAvailableDeviceList(): Promise<Array<DeviceBasicInfo>>--><!--Device-DeviceManager-getAvailableDeviceList(): Promise<Array<DeviceBasicInfo>>-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;DeviceBasicInfo&gt;&gt; | Promise实例，用于获取异步返回结果。 |
+| Promise<Array<DeviceBasicInfo>> | Promise实例，用于获取异步返回结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
 **示例：**
@@ -187,19 +201,21 @@ getAvailableDeviceListSync(): Array<DeviceBasicInfo>
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getAvailableDeviceListSync(): Array<DeviceBasicInfo>--><!--Device-DeviceManager-getAvailableDeviceListSync(): Array<DeviceBasicInfo>-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;DeviceBasicInfo&gt; | 返回可信设备列表。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<DeviceBasicInfo> | 返回可信设备列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
 **示例：**
@@ -232,6 +248,8 @@ getDeviceName(networkId: string): string
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getDeviceName(networkId: string): string--><!--Device-DeviceManager-getDeviceName(networkId: string): string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
@@ -250,7 +268,7 @@ getDeviceName(networkId: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified networkId is greater than 255. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
@@ -287,6 +305,8 @@ getDeviceType(networkId: string): number
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getDeviceType(networkId: string): int--><!--Device-DeviceManager-getDeviceType(networkId: string): int-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
@@ -305,7 +325,7 @@ getDeviceType(networkId: string): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified networkId is greater than 255. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
@@ -342,6 +362,8 @@ getLocalDeviceId(): string
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getLocalDeviceId(): string--><!--Device-DeviceManager-getLocalDeviceId(): string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **返回值：**
@@ -354,7 +376,7 @@ getLocalDeviceId(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
 **示例：**
@@ -388,6 +410,8 @@ getLocalDeviceName(): string
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getLocalDeviceName(): string--><!--Device-DeviceManager-getLocalDeviceName(): string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **返回值：**
@@ -400,7 +424,7 @@ getLocalDeviceName(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
 **示例：**
@@ -434,6 +458,8 @@ getLocalDeviceNetworkId(): string
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getLocalDeviceNetworkId(): string--><!--Device-DeviceManager-getLocalDeviceNetworkId(): string-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **返回值：**
@@ -446,7 +472,7 @@ getLocalDeviceNetworkId(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
 **示例：**
@@ -480,6 +506,8 @@ getLocalDeviceType(): number
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getLocalDeviceType(): int--><!--Device-DeviceManager-getLocalDeviceType(): int-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **返回值：**
@@ -492,7 +520,7 @@ getLocalDeviceType(): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
 **示例：**
@@ -526,6 +554,8 @@ off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChange; 
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChange; device: DeviceBasicInfo; }>): void--><!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChange; device: DeviceBasicInfo; }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
@@ -533,13 +563,13 @@ off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChange; 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceStateChange' | 是 | 根据应用程序的包名取消注册设备状态回调，固定为deviceStateChange。 |
-| callback | Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | 否 |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ action: DeviceStateChange; device: DeviceBasicInfo; }> | 否 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified type is greater than 255. |
 
 **示例：**
@@ -584,6 +614,8 @@ off(type: 'discoverSuccess', callback?: Callback<{ device: DeviceBasicInfo; }>):
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-off(type: 'discoverSuccess', callback?: Callback<{ device: DeviceBasicInfo; }>): void--><!--Device-DeviceManager-off(type: 'discoverSuccess', callback?: Callback<{ device: DeviceBasicInfo; }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
@@ -591,13 +623,13 @@ off(type: 'discoverSuccess', callback?: Callback<{ device: DeviceBasicInfo; }>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'discoverSuccess' | 是 | 取消注册设备发现回调，固定为discoverSuccess。 |
-| callback | Callback&lt;{ device: DeviceBasicInfo; }&gt; | 否 |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ device: DeviceBasicInfo; }> | 否 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified type is greater than 255. |
 
 **示例：**
@@ -641,6 +673,8 @@ off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): voi
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): void--><!--Device-DeviceManager-off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
@@ -648,13 +682,13 @@ off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceNameChange' | 是 | 取消注册设备名称改变回调，固定为deviceNameChange。 |
-| callback | Callback&lt;{ deviceName: string; }&gt; | 否 |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ deviceName: string; }> | 否 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified type is greater than 255. |
 
 **示例：**
@@ -693,6 +727,8 @@ off(type: 'discoverFailure', callback?: Callback<{ reason: number; }>): void
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-off(type: 'discoverFailure', callback?: Callback<{ reason: int; }>): void--><!--Device-DeviceManager-off(type: 'discoverFailure', callback?: Callback<{ reason: int; }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
@@ -700,13 +736,13 @@ off(type: 'discoverFailure', callback?: Callback<{ reason: number; }>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'discoverFailure' | 是 | 取消注册设备发现失败回调，固定为discoverFailure。 |
-| callback | Callback&lt;{ reason: number; }&gt; | 否 |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ reason: number; }> | 否 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified type is greater than 255. |
 
 **示例：**
@@ -745,6 +781,8 @@ off(type: 'serviceDie', callback?: Callback<{}>): void
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-off(type: 'serviceDie', callback?: Callback<{}>): void--><!--Device-DeviceManager-off(type: 'serviceDie', callback?: Callback<{}>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
@@ -752,13 +790,13 @@ off(type: 'serviceDie', callback?: Callback<{}>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'serviceDie' | 是 | 取消注册serviceDie回调，以便在devicemanager服务异常终止时通知应用程序，固定为serviceDie。 |
-| callback | Callback&lt;{}&gt; | 否 |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{}> | 否 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified type is greater than 255. |
 
 **示例：**
@@ -793,6 +831,8 @@ on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChange; de
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChange; device: DeviceBasicInfo; }>): void--><!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChange; device: DeviceBasicInfo; }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
@@ -800,13 +840,13 @@ on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChange; de
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceStateChange' | 是 | 注册设备状态回调，固定为deviceStateChange。 |
-| callback | Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | 是 |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ action: DeviceStateChange; device: DeviceBasicInfo; }> | 是 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified type is greater than 255. |
 
 **示例：**
@@ -851,6 +891,8 @@ on(type: 'discoverSuccess', callback: Callback<{ device: DeviceBasicInfo; }>): v
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-on(type: 'discoverSuccess', callback: Callback<{ device: DeviceBasicInfo; }>): void--><!--Device-DeviceManager-on(type: 'discoverSuccess', callback: Callback<{ device: DeviceBasicInfo; }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
@@ -858,13 +900,13 @@ on(type: 'discoverSuccess', callback: Callback<{ device: DeviceBasicInfo; }>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'discoverSuccess' | 是 | 注册设备发现回调，以便在发现周边设备时通知应用程序，固定为discoverSuccess。 |
-| callback | Callback&lt;{ device: DeviceBasicInfo; }&gt; | 是 |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ device: DeviceBasicInfo; }> | 是 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified type is greater than 255. |
 
 **示例：**
@@ -908,6 +950,8 @@ on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void--><!--Device-DeviceManager-on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
@@ -915,13 +959,13 @@ on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceNameChange' | 是 | 注册设备名称改变回调，以便在设备名称改变时通知应用程序，固定为deviceNameChange。 |
-| callback | Callback&lt;{ deviceName: string; }&gt; | 是 |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ deviceName: string; }> | 是 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified type is greater than 255. |
 
 **示例：**
@@ -960,6 +1004,8 @@ on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void--><!--Device-DeviceManager-on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
@@ -967,13 +1013,13 @@ on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'discoverFailure' | 是 | 注册设备发现失败回调，以便在发现周边设备失败时通知应用程序，固定为discoverFailure。 |
-| callback | Callback&lt;{ reason: number; }&gt; | 是 |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ reason: number; }> | 是 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified type is greater than 255. |
 
 **示例：**
@@ -1012,6 +1058,8 @@ on(type: 'serviceDie', callback?: Callback<{}>): void
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-on(type: 'serviceDie', callback?: Callback<{}>): void--><!--Device-DeviceManager-on(type: 'serviceDie', callback?: Callback<{}>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
@@ -1019,13 +1067,13 @@ on(type: 'serviceDie', callback?: Callback<{}>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'serviceDie' | 是 | 注册serviceDie回调，以便在devicemanager服务异常终止时通知应用程序，固定为serviceDie。 |
-| callback | Callback&lt;{}&gt; | 否 |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{}> | 否 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified type is greater than 255. |
 
 **示例：**
@@ -1060,6 +1108,8 @@ startDiscovering(discoverParam: { [key: string]: Object; }, filterOptions?: { [k
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-startDiscovering(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; }): void--><!--Device-DeviceManager-startDiscovering(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; }): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
@@ -1074,7 +1124,7 @@ startDiscovering(discoverParam: { [key: string]: Object; }, filterOptions?: { [k
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-发现业务不可用) | Discovery unavailable. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
@@ -1116,13 +1166,15 @@ stopDiscovering(): void
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-stopDiscovering(): void--><!--Device-DeviceManager-stopDiscovering(): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required tocall the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
 **示例：**
@@ -1155,6 +1207,8 @@ unbindTarget(deviceId: string): void
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-unbindTarget(deviceId: string): void--><!--Device-DeviceManager-unbindTarget(deviceId: string): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
@@ -1168,7 +1222,7 @@ unbindTarget(deviceId: string): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified deviceId is greater than 255. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
 **示例：**

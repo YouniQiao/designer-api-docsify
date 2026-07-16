@@ -10,6 +10,8 @@ Defines the reporting frequency mode of the sensor.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-sensor-type SensorFrequency = 'game' | 'ui' | 'normal'--><!--Device-sensor-type SensorFrequency = 'game' | 'ui' | 'normal'-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 | Type | Description |

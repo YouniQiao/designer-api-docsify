@@ -1,5 +1,11 @@
 # setPointerSizeSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+```
+
 ## setPointerSizeSync
 
 ```TypeScript
@@ -9,6 +15,8 @@ function setPointerSizeSync(size: number): void
 设置鼠标光标大小，使用同步方式进行设置。
 
 **起始版本：** 10
+
+<!--Device-pointer-function setPointerSizeSync(size: int): void--><!--Device-pointer-function setPointerSizeSync(size: int): void-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

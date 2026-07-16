@@ -12,13 +12,13 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function on(type: 'openDLPFile', listener: Callback<AccessedDLPFileInfo>): void
 ```
 
-Subscribes to a DLP file open event. After this API is successfully called, a callback notification is sent to
-the current application when the DLP file is opened. This API can be called only in non-DLP sandbox applications.
+Subscribes to a DLP file open event. After this API is successfully called, a callback notification is sent to the current application when the DLP file is opened. This API can be called only in non-DLP sandbox applications.
 
-You can subscribe to this event when your application needs to perform specific operations (such as logging and
-updating the UI) after a DLP file is opened.
+You can subscribe to this event when your application needs to perform specific operations (such as logging and updating the UI) after a DLP file is opened.
 
 **Since:** 10
+
+<!--Device-dlpPermission-function on(type: 'openDLPFile', listener: Callback<AccessedDLPFileInfo>): void--><!--Device-dlpPermission-function on(type: 'openDLPFile', listener: Callback<AccessedDLPFileInfo>): void-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -26,8 +26,8 @@ updating the UI) after a DLP file is opened.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'openDLPFile' | Yes | Event type. It has a fixed value of **openDLPFile**, which indicates the DLP fileopen event. |
-| listener | Callback&lt;AccessedDLPFileInfo&gt; | Yes | Callback invoked when a DLP file is opened. The applicationwill be notified when the DLP file is opened. |
+| type | 'openDLPFile' | Yes | Event type. It has a fixed value of **openDLPFile**, which indicates the DLP file open event. |
+| listener | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AccessedDLPFileInfo> | Yes | Callback invoked when a DLP file is opened. The application will be notified when the DLP file is opened. |
 
 **Error codes:**
 

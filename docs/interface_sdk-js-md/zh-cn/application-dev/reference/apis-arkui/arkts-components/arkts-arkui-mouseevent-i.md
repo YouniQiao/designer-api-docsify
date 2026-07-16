@@ -6,6 +6,8 @@
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare interface MouseEvent extends BaseEvent--><!--Device-unnamed-declare interface MouseEvent extends BaseEvent-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## getCurrentLocalPosition
@@ -20,7 +22,9 @@ getCurrentLocalPosition?(): Coordinate2D
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MouseEvent-getCurrentLocalPosition?(): Coordinate2D--><!--Device-MouseEvent-getCurrentLocalPosition?(): Coordinate2D-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,7 +32,7 @@ getCurrentLocalPosition?(): Coordinate2D
 
 | 类型 | 说明 |
 | --- | --- |
-| Coordinate2D | - 点击位置相对于当前组件实时位置的左上角坐标。 |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | - 点击位置相对于当前组件实时位置的左上角坐标。 |
 
 ## getHistoricalPoints
 
@@ -38,15 +42,15 @@ getHistoricalPoints?(): Array<MouseHistoricalPoint>
 
 获取当前帧的所有历史点信息。历史点可用于实现更平滑的绘制效果。
 
-该接口仅能在[MouseEvent](arkts-arkui-mouseevent-i.md)中调用，用于获取触发[onMouse](arkts-arkui-commonmethod-c.md#onmouse-1)时当前帧历史点的相关信息，不同设备每帧的鼠标事件上报频率不同，一
-帧通常只会上报一个鼠标事件，如果当前帧收到的[MouseEvent](arkts-arkui-mouseevent-i.md)数目大于1，会将该帧最后一个点通过[onMouse](arkts-arkui-commonmethod-c.md#onmouse-1)返回，其余点作为历
-史点。
+该接口仅能在[MouseEvent](arkts-arkui-mouseevent-i.md)中调用，用于获取触发[onMouse](arkts-arkui-commonmethod-c.md#onmouse-1)时当前帧历史点的相关信息，不同设备每帧的鼠标事件上报频率不同，一帧通常只会上报一个鼠标事件，如果当前帧收到的[MouseEvent](arkts-arkui-mouseevent-i.md)数目大于1，会将该帧最后一个点通过[onMouse](arkts-arkui-commonmethod-c.md#onmouse-1)返回，其余点作为历史点。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MouseEvent-getHistoricalPoints?(): Array<MouseHistoricalPoint>--><!--Device-MouseEvent-getHistoricalPoints?(): Array<MouseHistoricalPoint>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,7 +58,7 @@ getHistoricalPoints?(): Array<MouseHistoricalPoint>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;MouseHistoricalPoint&gt; | 当前帧的所有历史点信息组成的数组。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<MouseHistoricalPoint> | 当前帧的所有历史点信息组成的数组。 |
 
 ## action
 
@@ -68,7 +72,9 @@ action: MouseAction
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MouseEvent-action: MouseAction--><!--Device-MouseEvent-action: MouseAction-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,7 +90,9 @@ button: MouseButton
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MouseEvent-button: MouseButton--><!--Device-MouseEvent-button: MouseButton-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,7 +112,9 @@ displayX: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MouseEvent-displayX: number--><!--Device-MouseEvent-displayX: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -124,7 +134,9 @@ displayY: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MouseEvent-displayY: number--><!--Device-MouseEvent-displayY: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -138,8 +150,7 @@ eventHandleId?: number
 
 取值范围：[0, +∞)
 
-**说明：** 在使用[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postinputeventwithstrategy-1)接口分发事件时会使用该字段，事件每分
-发一次字段会增加100000。
+**说明：** 在使用[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postinputeventwithstrategy-1)接口分发事件时会使用该字段，事件每分发一次字段会增加100000。
 
 多次使用相同的eventHandleId进行事件分发将导致事件响应异常。仅在构造事件的时候需要对此字段赋值，其余情况开发者无需处理。
 
@@ -149,7 +160,9 @@ eventHandleId?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本24开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MouseEvent-eventHandleId?: number--><!--Device-MouseEvent-eventHandleId?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -171,7 +184,9 @@ globalDisplayX?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MouseEvent-globalDisplayX?: number--><!--Device-MouseEvent-globalDisplayX?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -193,7 +208,9 @@ globalDisplayY?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MouseEvent-globalDisplayY?: number--><!--Device-MouseEvent-globalDisplayY?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -211,7 +228,9 @@ pressedButtons?: MouseButton[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MouseEvent-pressedButtons?: MouseButton[]--><!--Device-MouseEvent-pressedButtons?: MouseButton[]-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -231,7 +250,9 @@ rawDeltaX?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MouseEvent-rawDeltaX?: number--><!--Device-MouseEvent-rawDeltaX?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -251,7 +272,9 @@ rawDeltaY?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MouseEvent-rawDeltaY?: number--><!--Device-MouseEvent-rawDeltaY?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -273,6 +296,8 @@ screenX: number
 
 **替代接口：** [windowX](arkts-arkui-mouseevent-i.md#windowx)
 
+<!--Device-MouseEvent-screenX: number--><!--Device-MouseEvent-screenX: number-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## screenY
@@ -293,6 +318,8 @@ screenY: number
 
 **替代接口：** [windowY](arkts-arkui-mouseevent-i.md#windowy)
 
+<!--Device-MouseEvent-screenY: number--><!--Device-MouseEvent-screenY: number-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## stopPropagation
@@ -307,7 +334,9 @@ stopPropagation: () => void
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MouseEvent-stopPropagation: () => void--><!--Device-MouseEvent-stopPropagation: () => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -327,7 +356,9 @@ windowX: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MouseEvent-windowX: number--><!--Device-MouseEvent-windowX: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -347,7 +378,9 @@ windowY: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MouseEvent-windowY: number--><!--Device-MouseEvent-windowY: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -365,7 +398,9 @@ x: number
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MouseEvent-x: number--><!--Device-MouseEvent-x: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -383,7 +418,9 @@ y: number
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MouseEvent-y: number--><!--Device-MouseEvent-y: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,11 +1,10 @@
 # KeyCode
 
-按键编码。[添加按键事件策略](arkts-mdm-addkeyeventpolicies-f.md#addkeyeventpolicies-1)、[删除按键事件策略](arkts-mdm-removekeyeventpolicies-f.md#removekeyeventpolicies-1)、
-[获取按键事件策略](arkts-mdm-getkeyeventpolicies-f.md#getkeyeventpolicies-1)和
-[按键事件回调](arkts-mdm-enterpriseadminextensionability-c.md#onkeyevent-1)接口通过按键编码
-映射到设备对应实际按键。
+按键编码。[添加按键事件策略](arkts-mdm-addkeyeventpolicies-f.md#addkeyeventpolicies-1)、[删除按键事件策略](arkts-mdm-removekeyeventpolicies-f.md#removekeyeventpolicies-1)、[获取按键事件策略](arkts-mdm-getkeyeventpolicies-f.md#getkeyeventpolicies-1)和[按键事件回调](arkts-mdm-enterpriseadminextensionability-c.md#onkeyevent-1)接口通过按键编码映射到设备对应实际按键。
 
 **起始版本：** 23
+
+<!--Device-systemManager-enum KeyCode--><!--Device-systemManager-enum KeyCode-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -21,6 +20,8 @@ POWER = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KeyCode-POWER = 0--><!--Device-KeyCode-POWER = 0-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## VOLUME_UP
@@ -34,6 +35,8 @@ VOLUME_UP = 1
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyCode-VOLUME_UP = 1--><!--Device-KeyCode-VOLUME_UP = 1-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -49,6 +52,8 @@ VOLUME_DOWN = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KeyCode-VOLUME_DOWN = 2--><!--Device-KeyCode-VOLUME_DOWN = 2-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## BACK
@@ -62,6 +67,8 @@ BACK = 3
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyCode-BACK = 3--><!--Device-KeyCode-BACK = 3-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -77,6 +84,8 @@ HOME = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KeyCode-HOME = 4--><!--Device-KeyCode-HOME = 4-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## RECENT
@@ -90,6 +99,8 @@ RECENT = 5
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyCode-RECENT = 5--><!--Device-KeyCode-RECENT = 5-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

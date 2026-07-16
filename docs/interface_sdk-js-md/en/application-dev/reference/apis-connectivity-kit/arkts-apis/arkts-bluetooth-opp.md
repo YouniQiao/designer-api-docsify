@@ -4,6 +4,8 @@ Provides methods to accessing bluetooth OPP(OBEX OBJECT PUSH Profile)-related ca
 
 **Since:** 16
 
+<!--Device-unnamed-declare namespace opp--><!--Device-unnamed-declare namespace opp-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import

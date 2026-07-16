@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+<!--Device-audio-enum InterruptType--><!--Device-audio-enum InterruptType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## INTERRUPT_TYPE_BEGIN
@@ -16,7 +18,9 @@ INTERRUPT_TYPE_BEGIN = 1
 
 **起始版本：** 7
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-InterruptType-INTERRUPT_TYPE_BEGIN = 1--><!--Device-InterruptType-INTERRUPT_TYPE_BEGIN = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -30,7 +34,9 @@ INTERRUPT_TYPE_END = 2
 
 **起始版本：** 7
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-InterruptType-INTERRUPT_TYPE_END = 2--><!--Device-InterruptType-INTERRUPT_TYPE_END = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 

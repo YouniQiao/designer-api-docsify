@@ -14,13 +14,15 @@ function createAVRecorder(callback: AsyncCallback<AVRecorder>): void
 
 Creates an AVRecorder instance. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> An application can create multiple AVRecorder instances. However, because the device shares a common audio
-> channel, only one instance can record audio at a time. Any attempt to create the second instance for audio
+> **NOTE**  
+>  
+> An application can create multiple AVRecorder instances. However, because the device shares a common audio  
+> channel, only one instance can record audio at a time. Any attempt to create the second instance for audio  
 > recording fails due to audio channel conflicts.
 
 **Since:** 9
+
+<!--Device-media-function createAVRecorder(callback: AsyncCallback<AVRecorder>): void--><!--Device-media-function createAVRecorder(callback: AsyncCallback<AVRecorder>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -28,7 +30,7 @@ Creates an AVRecorder instance. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;AVRecorder&gt; | Yes | Callback function, which returns an **AVRecorder** instance forrecording audio and video. Otherwise, **null** is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AVRecorder> | Yes | Callback function, which returns an **AVRecorder** instance for recording audio and video. Otherwise, **null** is returned. |
 
 **Error codes:**
 
@@ -62,15 +64,17 @@ function createAVRecorder(): Promise<AVRecorder>
 
 Creates an AVRecorder instance. This API uses a promise to return the result.
 
-> **NOTE**
->
-> An application can create multiple AVRecorder instances. However, because the device shares a common audio
-> channel, only one instance can record audio at a time. Any attempt to create the second instance for audio
+> **NOTE**  
+>  
+> An application can create multiple AVRecorder instances. However, because the device shares a common audio  
+> channel, only one instance can record audio at a time. Any attempt to create the second instance for audio  
 > recording fails due to audio channel conflicts.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-media-function createAVRecorder(): Promise<AVRecorder>--><!--Device-media-function createAVRecorder(): Promise<AVRecorder>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -78,7 +82,7 @@ Creates an AVRecorder instance. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVRecorder&gt; | Promise used to return an **AVRecorder** instance, which can be used to recordaudio and video. Otherwise, **null** is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AVRecorder> | Promise used to return an **AVRecorder** instance, which can be used to record audio and video. Otherwise, **null** is returned. |
 
 **Error codes:**
 

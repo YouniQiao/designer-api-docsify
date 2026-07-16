@@ -1,5 +1,11 @@
 # @ohos.app.ability.AutoFillExtensionAbility
 
+## 导入模块
+
+```TypeScript
+import { AutoFillExtensionAbility } from '@kit.AbilityKit';
+```
+
 ## 汇总
 
 <!--Del-->

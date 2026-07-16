@@ -1,5 +1,11 @@
 # getTouchModeSync
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+```
+
 ## getTouchModeSync
 
 ```TypeScript
@@ -10,9 +16,11 @@ function getTouchModeSync(): string
 
 **起始版本：** 20
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-accessibility-function getTouchModeSync(): string--><!--Device-accessibility-function getTouchModeSync(): string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

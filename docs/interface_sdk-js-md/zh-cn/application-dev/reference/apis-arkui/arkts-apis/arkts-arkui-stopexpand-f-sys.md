@@ -1,5 +1,11 @@
 # stopExpand（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { screen } from '@kit.ArkUI';
+```
+
 ## stopExpand
 
 ```TypeScript
@@ -12,6 +18,8 @@ function stopExpand(expandScreen:Array<number>, callback: AsyncCallback<void>): 
 
 **废弃版本：** 20
 
+<!--Device-screen-function stopExpand(expandScreen:Array<long>, callback: AsyncCallback<void>): void--><!--Device-screen-function stopExpand(expandScreen:Array<long>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +28,8 @@ function stopExpand(expandScreen:Array<number>, callback: AsyncCallback<void>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| expandScreen | Array&lt;number&gt; | 是 | 扩展屏幕ID集合，其中ID为整数。 expandScreen数组大小不应超过1000。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当停止屏幕扩展模式成功，err为undefined，否则为错误对象。 |
+| expandScreen | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<number> | 是 | 扩展屏幕ID集合，其中ID为整数。 expandScreen数组大小不应超过1000。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当停止屏幕扩展模式成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -62,6 +70,8 @@ function stopExpand(expandScreen:Array<number>): Promise<void>
 
 **废弃版本：** 20
 
+<!--Device-screen-function stopExpand(expandScreen:Array<long>): Promise<void>--><!--Device-screen-function stopExpand(expandScreen:Array<long>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -70,13 +80,13 @@ function stopExpand(expandScreen:Array<number>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| expandScreen | Array&lt;number&gt; | 是 | 扩展屏幕ID集合，其中ID为整数。expandScreen数组大小不应超过1000。 |
+| expandScreen | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<number> | 是 | 扩展屏幕ID集合，其中ID为整数。expandScreen数组大小不应超过1000。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

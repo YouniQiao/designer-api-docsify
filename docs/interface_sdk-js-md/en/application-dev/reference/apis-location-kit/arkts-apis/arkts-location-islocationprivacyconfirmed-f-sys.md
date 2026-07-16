@@ -16,6 +16,8 @@ Querying location privacy protocol confirmation status.
 
 **Since:** 9
 
+<!--Device-geoLocationManager-function isLocationPrivacyConfirmed(type: LocationPrivacyType): boolean--><!--Device-geoLocationManager-function isLocationPrivacyConfirmed(type: LocationPrivacyType): boolean-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Querying location privacy protocol confirmation status.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | LocationPrivacyType | Yes | Indicates location privacy protocol type. |
+| type | [LocationPrivacyType](arkts-location-locationprivacytype-e.md) | Yes | Indicates location privacy protocol type. |
 
 **Return value:**
 

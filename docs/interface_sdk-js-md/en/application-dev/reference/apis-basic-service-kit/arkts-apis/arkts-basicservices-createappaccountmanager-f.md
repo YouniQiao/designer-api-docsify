@@ -16,13 +16,15 @@ Creates an **AppAccountManager** object.
 
 **Since:** 7
 
+<!--Device-appAccount-function createAppAccountManager(): AppAccountManager--><!--Device-appAccount-function createAppAccountManager(): AppAccountManager-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AppAccountManager | **AppAccountManager** object created. |
+| [AppAccountManager](arkts-basicservices-appaccountmanager-i.md) | **AppAccountManager** object created. |
 
 **Example**
 

@@ -1,9 +1,10 @@
 # OnscreenAwarenessOptions (System API)
 
-Defines the list of onscreen awareness parameters, which is used to obtain onscreen information in specific
-scenarios. For example, a window ID is provided to collect application UI content and links.
+Defines the list of onscreen awareness parameters, which is used to obtain onscreen information in specific scenarios. For example, a window ID is provided to collect application UI content and links.
 
 **Since:** 23
+
+<!--Device-onScreen-export interface OnscreenAwarenessOptions--><!--Device-onScreen-export interface OnscreenAwarenessOptions-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -28,6 +29,8 @@ List of awareness parameters. The parameter result is a key-value data object.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OnscreenAwarenessOptions-parameters?: Record<string, Object>--><!--Device-OnscreenAwarenessOptions-parameters?: Record<string, Object>-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 

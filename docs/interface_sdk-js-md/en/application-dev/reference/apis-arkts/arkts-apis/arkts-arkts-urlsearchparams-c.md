@@ -8,6 +8,8 @@ The URLSearchParams interface defines some practical methods to process URL quer
 
 **Substitutes:** URLParams
 
+<!--Device-url-class URLSearchParams--><!--Device-url-class URLSearchParams-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -22,8 +24,7 @@ import { url } from '@kit.ArkTS';
 [Symbol.iterator](): IterableIterator<[string, string]>
 ```
 
-Returns an iterator allowing to go through all key/value
-pairs contained in this object.
+Returns an iterator allowing to go through all key/value pairs contained in this object.
 
 **Since:** 7
 
@@ -31,13 +32,15 @@ pairs contained in this object.
 
 **Substitutes:** iterator]
 
+<!--Device-URLSearchParams-[Symbol.iterator](): IterableIterator<[string, string]>--><!--Device-URLSearchParams-[Symbol.iterator](): IterableIterator<[string, string]>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;[string, string]&gt; | Returns an ES6 iterator. Each item of the iterator is aJavaScript Array.The first item of Array is name, and the second item of Array is value. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<[string, string]> | Returns an ES6 iterator. Each item of the iterator is a JavaScript Array.The first item of Array is name, and the second item of Array is value. |
 
 **Example**
 
@@ -66,6 +69,8 @@ Appends a specified key/value pair as a new search parameter.
 
 **Substitutes:** append
 
+<!--Device-URLSearchParams-append(name: string, value: string): void--><!--Device-URLSearchParams-append(name: string, value: string): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -90,12 +95,7 @@ paramsObject.append('fod', '3');
 constructor(init?: string[][] | Record<string, string> | string | URLSearchParams)
 ```
 
-A parameterized constructor used to create an URLSearchParams instance.
-As the input parameter of the constructor function, init supports four types.
-The input parameter is a character string two-dimensional array.
-The input parameter is the object list.
-The input parameter is a character string.
-The input parameter is the URLSearchParams object.
+A parameterized constructor used to create an URLSearchParams instance.As the input parameter of the constructor function, init supports four types.The input parameter is a character string two-dimensional array.The input parameter is the object list.The input parameter is a character string.The input parameter is the URLSearchParams object.
 
 **Since:** 7
 
@@ -103,13 +103,15 @@ The input parameter is the URLSearchParams object.
 
 **Substitutes:** constructor
 
+<!--Device-URLSearchParams-constructor(init?: string[][] | Record<string, string> | string | URLSearchParams)--><!--Device-URLSearchParams-constructor(init?: string[][] | Record<string, string> | string | URLSearchParams)-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| init | string[][] \| Record&lt;string, string&gt; \| string \| URLSearchParams | No | init init |
+| init | string[][] \| Record<string, string> \| string \| URLSearchParams | No | init init |
 
 **Example**
 
@@ -136,6 +138,8 @@ Deletes the given search parameter and its associated value,from the list of all
 
 **Substitutes:** delete
 
+<!--Device-URLSearchParams-delete(name: string): void--><!--Device-URLSearchParams-delete(name: string): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -159,8 +163,7 @@ paramsObject.delete('fod');
 entries(): IterableIterator<[string, string]>
 ```
 
-Returns an ES6 iterator. Each item of the iterator is a JavaScript Array.
-The first item of Array is name, and the second item of Array is value.
+Returns an ES6 iterator. Each item of the iterator is a JavaScript Array.The first item of Array is name, and the second item of Array is value.
 
 **Since:** 7
 
@@ -168,13 +171,15 @@ The first item of Array is name, and the second item of Array is value.
 
 **Substitutes:** entries
 
+<!--Device-URLSearchParams-entries(): IterableIterator<[string, string]>--><!--Device-URLSearchParams-entries(): IterableIterator<[string, string]>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;[string, string]&gt; | Returns an iterator for ES6. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<[string, string]> | Returns an iterator for ES6. |
 
 **Example**
 
@@ -203,14 +208,16 @@ Callback functions are used to traverse key-value pairs on the URLSearchParams i
 
 **Substitutes:** forEach
 
+<!--Device-URLSearchParams-forEach(callbackFn: (value: string, key: string, searchParams: URLSearchParams) => void, thisArg?: Object): void--><!--Device-URLSearchParams-forEach(callbackFn: (value: string, key: string, searchParams: URLSearchParams) => void, thisArg?: Object): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: string, key: string, searchParams: URLSearchParams) =&gt; void | Yes | The callback function to execute for each key-value pair |
-| thisArg | Object | No | The value to use as this when executing callbackFn |
+| callbackFn | (value: string, key: string, searchParams: URLSearchParams) => void | Yes | The callback function to execute for each key-value pair |
+| thisArg | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | No | The value to use as this when executing callbackFn |
 
 **Example**
 
@@ -235,6 +242,8 @@ Returns the first value associated to the given search parameter.
 **Deprecated since:** 9
 
 **Substitutes:** get
+
+<!--Device-URLSearchParams-get(name: string): string | null--><!--Device-URLSearchParams-get(name: string): string | null-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -274,6 +283,8 @@ Returns all key-value pairs associated with a given search parameter as an array
 
 **Substitutes:** getAll
 
+<!--Device-URLSearchParams-getAll(name: string): string[]--><!--Device-URLSearchParams-getAll(name: string): string[]-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -312,6 +323,8 @@ Returns a Boolean that indicates whether a parameter with the specified name exi
 
 **Substitutes:** has
 
+<!--Device-URLSearchParams-has(name: string): boolean--><!--Device-URLSearchParams-has(name: string): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -349,13 +362,15 @@ Returns an iterator allowing to go through all keys contained in this object.
 
 **Substitutes:** keys
 
+<!--Device-URLSearchParams-keys(): IterableIterator<string>--><!--Device-URLSearchParams-keys(): IterableIterator<string>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;string&gt; | Returns an ES6 Iterator over the names of each name-value pair. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<string> | Returns an ES6 Iterator over the names of each name-value pair. |
 
 **Example**
 
@@ -376,16 +391,15 @@ for (let key of keys) {
 set(name: string, value: string): void
 ```
 
-Sets the value associated with a given search parameter to the
-given value. If there were several matching values, this method
-deletes the others. If the search parameter doesn't exist, this
-method creates it.
+Sets the value associated with a given search parameter to the given value. If there were several matching values, this method deletes the others. If the search parameter doesn't exist, this method creates it.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
 **Substitutes:** set
+
+<!--Device-URLSearchParams-set(name: string, value: string): void--><!--Device-URLSearchParams-set(name: string, value: string): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -419,6 +433,8 @@ Sort all key/value pairs contained in this object in place and return undefined.
 
 **Substitutes:** sort
 
+<!--Device-URLSearchParams-sort(): void--><!--Device-URLSearchParams-sort(): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Example**
@@ -443,6 +459,8 @@ Returns a query string suitable for use in a URL.
 **Deprecated since:** 9
 
 **Substitutes:** toString
+
+<!--Device-URLSearchParams-toString(): string--><!--Device-URLSearchParams-toString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -476,13 +494,15 @@ Returns an iterator allowing to go through all values contained in this object.
 
 **Substitutes:** values
 
+<!--Device-URLSearchParams-values(): IterableIterator<string>--><!--Device-URLSearchParams-values(): IterableIterator<string>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;string&gt; | Returns an ES6 Iterator over the values of each name-value pair. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<string> | Returns an ES6 Iterator over the values of each name-value pair. |
 
 **Example**
 

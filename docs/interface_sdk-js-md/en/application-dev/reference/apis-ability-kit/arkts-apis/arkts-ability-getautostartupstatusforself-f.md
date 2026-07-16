@@ -12,14 +12,13 @@ import { autoStartupManager } from '@kit.AbilityKit';
 function getAutoStartupStatusForSelf(): Promise<boolean>
 ```
 
-Checks whether the current application is enabled for automatic startup at boot time. This API uses a promise to
-return the result.
-This API can be properly called only on phones, PC/2-in-1 devices, tablets, and wearables. On other devices, it
-returns the error code 801.
+Checks whether the current application is enabled for automatic startup at boot time. This API uses a promise to return the result.This API can be properly called only on phones, PC/2-in-1 devices, tablets, and wearables. On other devices, it returns the error code 801.
 
 **Since:** 21
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-autoStartupManager-function getAutoStartupStatusForSelf(): Promise<boolean>--><!--Device-autoStartupManager-function getAutoStartupStatusForSelf(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -27,7 +26,7 @@ returns the error code 801.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the auto-startup status. **true** if enabled for automaticstartup at boot time, **false** otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the auto-startup status. **true** if enabled for automatic startup at boot time, **false** otherwise. |
 
 **Error codes:**
 

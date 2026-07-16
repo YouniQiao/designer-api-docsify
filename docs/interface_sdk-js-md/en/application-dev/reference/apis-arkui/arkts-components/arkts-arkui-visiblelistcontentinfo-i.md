@@ -4,6 +4,8 @@ Describes the details of the child components in the visible area of a list.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface VisibleListContentInfo--><!--Device-unnamed-declare interface VisibleListContentInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## index
@@ -22,6 +24,8 @@ Index of the list item or list item group in the list display area.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-VisibleListContentInfo-index: number--><!--Device-VisibleListContentInfo-index: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## itemGroupArea
@@ -30,8 +34,7 @@ Index of the list item or list item group in the list display area.
 itemGroupArea?: ListItemGroupArea
 ```
 
-Position of the top or bottom edge of the viewport in the
-list item group to which the edge is located, if applicable.
+Position of the top or bottom edge of the viewport in the list item group to which the edge is located, if applicable.
 
 **Type:** ListItemGroupArea
 
@@ -41,6 +44,8 @@ list item group to which the edge is located, if applicable.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-VisibleListContentInfo-itemGroupArea?: ListItemGroupArea--><!--Device-VisibleListContentInfo-itemGroupArea?: ListItemGroupArea-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## itemIndexInGroup
@@ -49,8 +54,7 @@ list item group to which the edge is located, if applicable.
 itemIndexInGroup?: number
 ```
 
-Index of the starting or ending list item in the list
-item group to which the top or bottom edge of the viewport is located.
+Index of the starting or ending list item in the list item group to which the top or bottom edge of the viewport is located.
 
 **Type:** number
 
@@ -59,6 +63,8 @@ item group to which the top or bottom edge of the viewport is located.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-VisibleListContentInfo-itemIndexInGroup?: number--><!--Device-VisibleListContentInfo-itemIndexInGroup?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,6 +4,8 @@ Provides the widget information.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface FormInfo--><!--Device-unnamed-declare interface FormInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -20,6 +22,8 @@ Ability name of the widget.
 
 **Since:** 12
 
+<!--Device-FormInfo-ability: string--><!--Device-FormInfo-ability: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -35,6 +39,8 @@ Bundle name of the widget.
 **Type:** string
 
 **Since:** 12
+
+<!--Device-FormInfo-bundle: string--><!--Device-FormInfo-bundle: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,6 +60,8 @@ Default value: **Dimension_2_2**
 
 **Since:** 12
 
+<!--Device-FormInfo-dimension?: FormDimension--><!--Device-FormInfo-dimension?: FormDimension-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -64,15 +72,15 @@ Default value: **Dimension_2_2**
 exemptAppLock?: boolean
 ```
 
-Whether the widget is exempt from app lock. **true**: The widget is exempt from app lock management. No app lock
-overlay is displayed when an app lock is applied to the host application. **false**: The widget is managed by app
-lock. The app lock overlay is displayed when an app lock is applied to the host application.
+Whether the widget is exempt from app lock. **true**: The widget is exempt from app lock management. No app lock overlay is displayed when an app lock is applied to the host application. **false**: The widget is managed by app lock. The app lock overlay is displayed when an app lock is applied to the host application.
 
 Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 20
+
+<!--Device-FormInfo-exemptAppLock?: boolean--><!--Device-FormInfo-exemptAppLock?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,6 +104,8 @@ If a widget host uses the same ID for two widgets, the one added later is displa
 
 **Since:** 12
 
+<!--Device-FormInfo-id: number | string--><!--Device-FormInfo-id: number | string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -111,6 +121,8 @@ Module name of the widget.
 **Type:** string
 
 **Since:** 12
+
+<!--Device-FormInfo-module: string--><!--Device-FormInfo-module: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -128,6 +140,8 @@ Widget name.
 
 **Since:** 12
 
+<!--Device-FormInfo-name: string--><!--Device-FormInfo-name: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -140,19 +154,18 @@ renderingMode?: FormRenderingMode
 
 Widget rendering mode. Default value: **FULL_COLOR**. The options are as follows:
 
-- **FULL_COLOR**: full color mode, where the widget framework does not change the widget effect, which means that
-the widget is displayed in the effect as you set it.
-- **SINGLE_COLOR**: single color mode, where the widget framework sets the widget background to transparent. In
-this mode you need to set the widget style based on the best practices.
+- **FULL_COLOR**: full color mode, where the widget framework does not change the widget effect, which means that the widget is displayed in the effect as you set it.  
+- **SINGLE_COLOR**: single color mode, where the widget framework sets the widget background to transparent. In this mode you need to set the widget style based on the best practices.
 
 **NOTE**
 
-If the system does not support unified rendering, the widget framework does not set the widget background to
-transparent in single color mode.
+If the system does not support unified rendering, the widget framework does not set the widget background to transparent in single color mode.
 
 **Type:** FormRenderingMode
 
 **Since:** 12
+
+<!--Device-FormInfo-renderingMode?: FormRenderingMode--><!--Device-FormInfo-renderingMode?: FormRenderingMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -170,6 +183,8 @@ The shape of the form.
 
 **Since:** 12
 
+<!--Device-FormInfo-shape?: FormShape--><!--Device-FormInfo-shape?: FormShape-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -180,14 +195,15 @@ The shape of the form.
 temporary?: boolean
 ```
 
-Whether the widget is a temporary widget. **true**: The widget is a temporary widget. **false**: The widget is not
-a temporary widget.
+Whether the widget is a temporary widget. **true**: The widget is a temporary widget. **false**: The widget is not a temporary widget.
 
 Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 12
+
+<!--Device-FormInfo-temporary?: boolean--><!--Device-FormInfo-temporary?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -204,6 +220,8 @@ The want of the form.
 **Type:** import('../api/@ohos.app.ability.Want').default
 
 **Since:** 12
+
+<!--Device-FormInfo-want?: import('../api/@ohos.app.ability.Want').default--><!--Device-FormInfo-want?: import('../api/@ohos.app.ability.Want').default-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

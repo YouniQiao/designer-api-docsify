@@ -2,23 +2,25 @@
 
 Defines the radial gradient parameters.
 
-> **NOTE**
->
-> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> **NOTE**  
+>  
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element  
 > 's @since version number is higher than inner elements'. This does not affect interface usability.
 
-> **NOTE**
->
-> When using the **colors** parameter, take note of the following:
->
-> [ResourceColor](arkts-arkui-resourcecolor-t.md) indicates the color, and **number** indicates the color's position, which
-> ranges from 0 to 1.0: **0** indicates the start of the container, and **1.0** indicates the end of the container.
-> To create a gradient with multiple color stops, you are advised to set the **number** values in ascending order. If
-> a value of **number** in an array is smaller than that in the previous one, it is considered as equal to the
+> **NOTE**  
+>  
+> When using the **colors** parameter, take note of the following:  
+>  
+> [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) indicates the color, and **number** indicates the color's position, which  
+> ranges from 0 to 1.0: **0** indicates the start of the container, and **1.0** indicates the end of the container.  
+> To create a gradient with multiple color stops, you are advised to set the **number** values in ascending order. If  
+> a value of **number** in an array is smaller than that in the previous one, it is considered as equal to the  
 > previous value.
 
 **Since:** 18
+
+<!--Device-unnamed-declare interface RadialGradientOptions--><!--Device-unnamed-declare interface RadialGradientOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,6 +40,8 @@ Center of the radial gradient, that is, the coordinates relative to the upper le
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-RadialGradientOptions-center: [Length, Length]--><!--Device-RadialGradientOptions-center: [Length, Length]-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## colors
@@ -46,12 +50,7 @@ Center of the radial gradient, that is, the coordinates relative to the upper le
 colors: Array<[ResourceColor, number]>
 ```
 
-Array of color stops, each of which consists of a color and its stop position. Invalid colors are automatically
-skipped. **ResourceColor** represents the color. **number** represents the stop position of the color, with a range
-of [0, 1.0]. Values less than 0 are treated as **0**, and values greater than 1.0 are treated as **1.0**. **0**
-indicates the start of the gradient; **1.0** indicates the end. To achieve multi-color gradients, the **number**
-parameters in the array should be set in ascending order. If a later number is less than a previous one, it is
-treated as equal to the previous value.
+Array of color stops, each of which consists of a color and its stop position. Invalid colors are automatically skipped. **ResourceColor** represents the color. **number** represents the stop position of the color, with a range of [0, 1.0]. Values less than 0 are treated as **0**, and values greater than 1.0 are treated as **1.0**. **0** indicates the start of the gradient; **1.0** indicates the end. To achieve multi-color gradients, the **number** parameters in the array should be set in ascending order. If a later number is less than a previous one, it is treated as equal to the previous value.
 
 Default value: **[]**, meaning no gradient effect.
 
@@ -63,6 +62,8 @@ Default value: **[]**, meaning no gradient effect.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-RadialGradientOptions-colors: Array<[ResourceColor, number]>--><!--Device-RadialGradientOptions-colors: Array<[ResourceColor, number]>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## radius
@@ -73,8 +74,7 @@ radius: Length
 
 Radius of the radial gradient.
 
-Value range:
-[0, +∞). A value less than 0 is treated as **0**. If the value is **undefined**, the system adaptively determines the gradient radius.
+Value range:[0, +∞). A value less than 0 is treated as **0**. If the value is **undefined**, the system adaptively determines the gradient radius.
 
 **Type:** Length
 
@@ -83,6 +83,8 @@ Value range:
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-RadialGradientOptions-radius: Length--><!--Device-RadialGradientOptions-radius: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -109,6 +111,8 @@ Default value: **false**.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-RadialGradientOptions-repeating?: boolean--><!--Device-RadialGradientOptions-repeating?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -12,12 +12,13 @@ import { connection } from '@kit.NetworkKit';
 function getConnectOwnerUid(protocol: ProtocolType, local: NetAddress, remote: NetAddress): Promise<number>
 ```
 
-Obtains the data network that is activated by default.
-You can only call this method in VPN application.
+Obtains the data network that is activated by default.You can only call this method in VPN application.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-connection-function getConnectOwnerUid(protocol: ProtocolType, local: NetAddress, remote: NetAddress): Promise<int>--><!--Device-connection-function getConnectOwnerUid(protocol: ProtocolType, local: NetAddress, remote: NetAddress): Promise<int>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -25,15 +26,15 @@ You can only call this method in VPN application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| protocol | ProtocolType | Yes | Protocol type. |
-| local | NetAddress | Yes | Local net address. |
-| remote | NetAddress | Yes | Remote net address. |
+| protocol | [ProtocolType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-protocoltype-e.md) | Yes | Protocol type. |
+| local | [NetAddress](arkts-network-netaddress-i.md) | Yes | Local net address. |
+| remote | [NetAddress](arkts-network-netaddress-i.md) | Yes | Remote net address. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The owner uid of the specified connection. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | The owner uid of the specified connection. |
 
 **Error codes:**
 

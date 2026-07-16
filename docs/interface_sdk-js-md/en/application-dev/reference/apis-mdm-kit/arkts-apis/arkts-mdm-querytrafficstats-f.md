@@ -26,13 +26,27 @@ Queries usage statistics of application traffic.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function queryTrafficStats(
+    admin: Want,
+    bundleName: string,
+    appIndex: number,
+    accountId: number,
+    networkInfo: statistics.NetworkInfo
+  ): Promise<statistics.NetStatsInfo>--><!--Device-applicationManager-function queryTrafficStats(
+    admin: Want,
+    bundleName: string,
+    appIndex: number,
+    accountId: number,
+    networkInfo: statistics.NetworkInfo
+  ): Promise<statistics.NetStatsInfo>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | admin indicates the enterprise admin extension ability information. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | admin indicates the enterprise admin extension ability information. |
 | bundleName | string | Yes | bundleName indicates the bundle name of application to be queried. |
 | appIndex | number | Yes | appIndex indicates the index of the bundle.<br>The value must be an integer greater than or equal to 0. |
 | accountId | number | Yes | accountId indicates the local ID of the OS account.<br>The value must be an integer greater than or equal to 0.<br>You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2)of @ohos.account.osAccount to obtain the ID. |
@@ -42,7 +56,7 @@ Queries usage statistics of application traffic.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;statistics.NetStatsInfo&gt; | returns the detailed network statistics information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<statistics.NetStatsInfo> | returns the detailed network statistics information. |
 
 **Error codes:**
 

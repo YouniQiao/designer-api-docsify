@@ -6,6 +6,8 @@ Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md) and has all attributes o
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface BadgeParamWithNumber extends BadgeParam--><!--Device-unnamed-declare interface BadgeParamWithNumber extends BadgeParam-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## count
@@ -20,9 +22,7 @@ Number of notifications.
 
 If the value is less than or equal to 0 and less than the value of **maxCount**, no badge is displayed.
 
-Value range: [-2147483648, 2147483647]. If the value is out of the range, 4294967296 is added or subtracted so that
-the value is within the range. If the value is not an integer, it is rounded off to the nearest integer. For
-example, 5.5 is rounded off to 5.
+Value range: [-2147483648, 2147483647]. If the value is out of the range, 4294967296 is added or subtracted so that the value is within the range. If the value is not an integer, it is rounded off to the nearest integer. For example, 5.5 is rounded off to 5.
 
 **Type:** number
 
@@ -32,6 +32,8 @@ example, 5.5 is rounded off to 5.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-BadgeParamWithNumber-count: number--><!--Device-BadgeParamWithNumber-count: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## maxCount
@@ -40,14 +42,11 @@ example, 5.5 is rounded off to 5.
 maxCount?: number
 ```
 
-Maximum number of messages. If the number of messages exceeds the maximum, only **maxCount+** is displayed. For
-example, if **maxCount** is 99, **99+** is displayed.
+Maximum number of messages. If the number of messages exceeds the maximum, only **maxCount+** is displayed. For example, if **maxCount** is 99, **99+** is displayed.
 
 Default value: **99**
 
-Value range: [-2147483648, 2147483647]. If the value is out of the range, 4294967296 is added or subtracted so that
-the value is within the range. If the value is not an integer, it is rounded off to the nearest integer. For
-example, 5.5 is rounded off to 5.
+Value range: [-2147483648, 2147483647]. If the value is out of the range, 4294967296 is added or subtracted so that the value is within the range. If the value is not an integer, it is rounded off to the nearest integer. For example, 5.5 is rounded off to 5.
 
 **Type:** number
 
@@ -58,6 +57,8 @@ example, 5.5 is rounded off to 5.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-BadgeParamWithNumber-maxCount?: number--><!--Device-BadgeParamWithNumber-maxCount?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

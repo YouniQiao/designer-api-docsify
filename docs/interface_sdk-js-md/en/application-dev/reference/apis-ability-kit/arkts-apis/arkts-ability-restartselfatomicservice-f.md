@@ -14,13 +14,13 @@ function restartSelfAtomicService(context: Context): void
 
 Restarts the current atomic service.
 
-> **NOTE**
->
-> - Currently, atomic services can be started only in an independent window.
->
-> - If you call this API,
-> [ApplicationContext.restartApp()](./application/ApplicationContext:ApplicationContext/restartApp), or
-> [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp-1) within 3 seconds
+> **NOTE**  
+>  
+> - Currently, atomic services can be started only in an independent window.  
+>  
+> - If you call this API,  
+> [ApplicationContext.restartApp()](./application/ApplicationContext:ApplicationContext/restartApp), or  
+> [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp-1) within 3 seconds  
 > after a successful call to this API, the system returns error code 16000064.
 
 **Since:** 20
@@ -29,13 +29,15 @@ Restarts the current atomic service.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-abilityManager-function restartSelfAtomicService(context: Context): void--><!--Device-abilityManager-function restartSelfAtomicService(context: Context): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability.<br>Note: Currently, only[UIAbilityContext](arkts-ability-uiabilitycontext-c.md) is supported.<br> |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the ability.<br>Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) is supported.<br> |
 
 **Error codes:**
 

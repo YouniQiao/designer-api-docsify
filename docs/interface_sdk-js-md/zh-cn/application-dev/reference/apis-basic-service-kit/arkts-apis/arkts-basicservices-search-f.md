@@ -1,15 +1,22 @@
 # search
 
+## 导入模块
+
+```TypeScript
+import { request } from '@kit.BasicServicesKit';
+```
+
 ## search
 
 ```TypeScript
 function search(callback: AsyncCallback<Array<string>>): void
 ```
 
-根据默认[Filter](arkts-basicservices-filter-i.md)过滤条件查找任务id，即查询调用
-时刻至24小时前的所有任务的任务id。使用callback异步回调。
+根据默认[Filter](arkts-basicservices-filter-i.md)过滤条件查找任务id，即查询调用时刻至24小时前的所有任务的任务id。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-agent-function search(callback: AsyncCallback<Array<string>>): void--><!--Device-agent-function search(callback: AsyncCallback<Array<string>>): void-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -17,7 +24,7 @@ function search(callback: AsyncCallback<Array<string>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。当根据过滤条件查找任务成功，err为undefined，data为满足条件的任务id；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<string>> | 是 | 回调函数。当根据过滤条件查找任务成功，err为undefined，data为满足条件的任务id；否则为错误对象。 |
 
 **错误码：**
 
@@ -33,10 +40,11 @@ function search(callback: AsyncCallback<Array<string>>): void
 function search(filter: Filter, callback: AsyncCallback<Array<string>>): void
 ```
 
-根据[Filter](arkts-basicservices-filter-i.md)过滤条件查找任务id。使用
-callback异步回调。
+根据[Filter](arkts-basicservices-filter-i.md)过滤条件查找任务id。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-agent-function search(filter: Filter, callback: AsyncCallback<Array<string>>): void--><!--Device-agent-function search(filter: Filter, callback: AsyncCallback<Array<string>>): void-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -44,8 +52,8 @@ callback异步回调。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | Filter | 是 | 过滤条件。 |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。当根据过滤条件查找任务成功，err为undefined，data为满足条件的任务id；否则为错误对象。 |
+| filter | [Filter](arkts-basicservices-filter-i.md) | 是 | 过滤条件。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<string>> | 是 | 回调函数。当根据过滤条件查找任务成功，err为undefined，data为满足条件的任务id；否则为错误对象。 |
 
 **错误码：**
 
@@ -61,10 +69,11 @@ callback异步回调。
 function search(filter?: Filter): Promise<Array<string>>
 ```
 
-根据[Filter](arkts-basicservices-filter-i.md)过滤条件查找任务id。使用
-Promise异步回调。
+根据[Filter](arkts-basicservices-filter-i.md)过滤条件查找任务id。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-agent-function search(filter?: Filter): Promise<Array<string>>--><!--Device-agent-function search(filter?: Filter): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -72,13 +81,13 @@ Promise异步回调。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | Filter | 否 | 过滤条件。默认值为空。 |
+| filter | [Filter](arkts-basicservices-filter-i.md) | 否 | 过滤条件。默认值为空。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象。返回满足条件任务id的Promise对象。 |
+| Promise<Array<string>> | Promise对象。返回满足条件任务id的Promise对象。 |
 
 **错误码：**
 

@@ -6,6 +6,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-enum SwitchMode--><!--Device-unnamed-enum SwitchMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## SMOOTH
@@ -18,7 +20,9 @@ SMOOTH = 0
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SwitchMode-SMOOTH = 0--><!--Device-SwitchMode-SMOOTH = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -32,7 +36,9 @@ SEGMENT = 1
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SwitchMode-SEGMENT = 1--><!--Device-SwitchMode-SEGMENT = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -46,7 +52,9 @@ CLOSEST = 2
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SwitchMode-CLOSEST = 2--><!--Device-SwitchMode-CLOSEST = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 

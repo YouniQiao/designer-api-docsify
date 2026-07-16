@@ -2,13 +2,15 @@
 
 Defines the options of the **List** component.
 
-> **NOTE**
->
-> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> **NOTE**  
+>  
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element  
 > 's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
+
+<!--Device-unnamed-interface ListOptions--><!--Device-unnamed-interface ListOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +20,9 @@ Defines the options of the **List** component.
 initialIndex?: number
 ```
 
-Index of the item to be displayed at the start when the list is initially loaded.
-Anonymous Object Rectification.
+Index of the item to be displayed at the start when the list is initially loaded.Anonymous Object Rectification.
 
-<p><strong>NOTE</strong>
-<br>If the set value is a negative number or is greater than the index of the last item in the list,
-the value is invalid. In this case, the default value will be used.
-</p>
+<p><strong>NOTE</strong><br>If the set value is a negative number or is greater than the index of the last item in the list,the value is invalid. In this case, the default value will be used.</p>
 
 **Type:** number
 
@@ -36,6 +34,8 @@ the value is invalid. In this case, the default value will be used.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ListOptions-initialIndex?: number--><!--Device-ListOptions-initialIndex?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## scroller
@@ -44,12 +44,9 @@ the value is invalid. In this case, the default value will be used.
 scroller?: Scroller
 ```
 
-Scroller, which can be bound to scrollable components.
-Anonymous Object Rectification.
+Scroller, which can be bound to scrollable components.Anonymous Object Rectification.
 
-<p><strong>NOTE</strong>
-<br>The scroller cannot be bound to other scrollable components.
-</p>
+<p><strong>NOTE</strong><br>The scroller cannot be bound to other scrollable components.</p>
 
 **Type:** Scroller
 
@@ -59,6 +56,8 @@ Anonymous Object Rectification.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ListOptions-scroller?: Scroller--><!--Device-ListOptions-scroller?: Scroller-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## space
@@ -67,19 +66,9 @@ Anonymous Object Rectification.
 space?: number | string
 ```
 
-Spacing between list items along the main axis.
-<br>Default value: **0**
-<br>If the parameter type is number, the unit is vp.
-Anonymous Object Rectification.
+Spacing between list items along the main axis.<br>Default value: **0**<br>If the parameter type is number, the unit is vp.Anonymous Object Rectification.
 
-<p><strong>NOTE</strong>
-<br>If this parameter is set to a negative number or a value greater than or equal to the length of the list
-content area, the default value is used.
-<br>If this parameter is set to a value less than the width of the list divider, the width of the list divider
-is used as the spacing.
-<br> Child components of <em>List</em> whose <em>visibility</em> attribute is set to <em>None</em> are not
-displayed, but the spacing above and below them still takes effect.
-</p>
+<p><strong>NOTE</strong><br>If this parameter is set to a negative number or a value greater than or equal to the length of the list content area, the default value is used.<br>If this parameter is set to a value less than the width of the list divider, the width of the list divider is used as the spacing.<br> Child components of <em>List</em> whose <em>visibility</em> attribute is set to <em>None</em> are not displayed, but the spacing above and below them still takes effect.</p>
 
 **Type:** number | string
 
@@ -91,6 +80,8 @@ displayed, but the spacing above and below them still takes effect.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ListOptions-space?: number | string--><!--Device-ListOptions-space?: number | string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## spaceWidth
@@ -101,15 +92,7 @@ spaceWidth?: Dimension
 
 Spacing between list items along the main axis.
 
-<p><strong>NOTE</strong>
-<br>If this parameter is set to a negative number or a value greater than or equal to the length of the list
-content area, the default value is used.
-<br>If this parameter is set to a value less than the width of the list divider, the width of the list divider
-is used as the spacing.
-<br> Child components of <em>ListItemGroup</em> whose <em>visibility</em> attribute is set to <em>None</em>
-are not displayed, but the spacing above and below them still takes effect.
-<br> If both spaceWidth and space are set, spaceWidth will take precedence.
-</p>
+<p><strong>NOTE</strong><br>If this parameter is set to a negative number or a value greater than or equal to the length of the list content area, the default value is used.<br>If this parameter is set to a value less than the width of the list divider, the width of the list divider is used as the spacing.<br> Child components of <em>ListItemGroup</em> whose <em>visibility</em> attribute is set to <em>None</em>are not displayed, but the spacing above and below them still takes effect.<br> If both spaceWidth and space are set, spaceWidth will take precedence.</p>
 
 **Type:** Dimension
 
@@ -122,6 +105,8 @@ are not displayed, but the spacing above and below them still takes effect.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
+
+<!--Device-ListOptions-spaceWidth?: Dimension--><!--Device-ListOptions-spaceWidth?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

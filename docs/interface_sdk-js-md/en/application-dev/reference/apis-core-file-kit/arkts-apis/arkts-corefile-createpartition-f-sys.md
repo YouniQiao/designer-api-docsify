@@ -20,6 +20,8 @@ Creates a partition on a disk. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-volumeManager-function createPartition(diskId: string, params: PartitionParams): Promise<void>--><!--Device-volumeManager-function createPartition(diskId: string, params: PartitionParams): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -29,13 +31,13 @@ Creates a partition on a disk. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | diskId | string | Yes | Disk ID. |
-| params | PartitionParams | Yes | Partition creation options. |
+| params | [PartitionParams](arkts-corefile-partitionparams-i-sys.md) | Yes | Partition creation options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

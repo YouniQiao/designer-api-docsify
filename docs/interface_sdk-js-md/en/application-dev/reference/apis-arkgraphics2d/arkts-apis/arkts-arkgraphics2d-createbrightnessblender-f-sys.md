@@ -18,6 +18,8 @@ Create a BrightnessBlender, which is used to adjust the brightness of UI compone
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
+<!--Device-uiEffect-function createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlender--><!--Device-uiEffect-function createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlender-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Create a BrightnessBlender, which is used to adjust the brightness of UI compone
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | BrightnessBlenderParam | Yes | The brightness blender parameters. |
+| param | [BrightnessBlenderParam](arkts-arkgraphics2d-brightnessblenderparam-i-sys.md) | Yes | The brightness blender parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| BrightnessBlender | Returns the blender. |
+| [BrightnessBlender](arkts-arkgraphics2d-brightnessblender-i-sys.md) | Returns the blender. |
 
 **Example**
 

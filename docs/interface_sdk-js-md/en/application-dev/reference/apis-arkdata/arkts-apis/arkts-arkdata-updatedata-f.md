@@ -20,15 +20,17 @@ Updates the data in the UDMF public data channel. This API uses an asynchronous 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-unifiedDataChannel-function updateData(options: Options, data: UnifiedData, callback: AsyncCallback<void>): void--><!--Device-unifiedDataChannel-function updateData(options: Options, data: UnifiedData, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | Options | Yes | Configuration for the data update operation. The **key** field is mandatory. If it isnot specified, error code 401 will be returned. Only the DATA_HUB channel of the **intention** parameter issupported. The settings of other parameters do not affect the use of this API. |
-| data | UnifiedData | Yes | Data to update. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the data is updated successfully,**err** is **undefined**. Otherwise, **err** is an error object. |
+| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-options-i.md) | Yes | Configuration for the data update operation. The **key** field is mandatory. If it is not specified, error code 401 will be returned. Only the DATA_HUB channel of the **intention** parameter is supported. The settings of other parameters do not affect the use of this API. |
+| data | [UnifiedData](../../apis-arkui/arkts-components/arkts-arkui-unifieddata-t.md) | Yes | Data to update. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the data is updated successfully,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -103,20 +105,22 @@ Updates the data in the UDMF public data channel. This API uses a promise to ret
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-unifiedDataChannel-function updateData(options: Options, data: UnifiedData): Promise<void>--><!--Device-unifiedDataChannel-function updateData(options: Options, data: UnifiedData): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | Options | Yes | Configuration for the data update operation. The **key** field is mandatory. If it isnot specified, error code 401 will be returned. Only the DATA_HUB channel of the **intention** parameter issupported. The settings of other parameters do not affect the use of this API. |
-| data | UnifiedData | Yes | Data to update. |
+| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-options-i.md) | Yes | Configuration for the data update operation. The **key** field is mandatory. If it is not specified, error code 401 will be returned. Only the DATA_HUB channel of the **intention** parameter is supported. The settings of other parameters do not affect the use of this API. |
+| data | [UnifiedData](../../apis-arkui/arkts-components/arkts-arkui-unifieddata-t.md) | Yes | Data to update. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

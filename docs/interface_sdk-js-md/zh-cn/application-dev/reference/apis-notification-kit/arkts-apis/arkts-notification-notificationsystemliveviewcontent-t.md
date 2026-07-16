@@ -8,6 +8,8 @@ export type NotificationSystemLiveViewContent = _NotificationSystemLiveViewConte
 
 **起始版本：** 11
 
+<!--Device-notificationManager-export type NotificationSystemLiveViewContent = _NotificationSystemLiveViewContent--><!--Device-notificationManager-export type NotificationSystemLiveViewContent = _NotificationSystemLiveViewContent-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **属性类型：** _NotificationSystemLiveViewContent

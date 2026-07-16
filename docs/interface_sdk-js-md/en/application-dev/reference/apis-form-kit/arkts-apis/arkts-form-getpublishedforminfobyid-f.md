@@ -12,12 +12,11 @@ import { formProvider } from '@kit.FormKit';
 function getPublishedFormInfoById(formId: string): Promise<formInfo.FormInfo>
 ```
 
-Obtains the information of the widget that has been added to the home screen on the device. This API uses a promise
-to return the result.
+Obtains the information of the widget that has been added to the home screen on the device. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This field is supported since API version 18 and deprecated since API version 20. You are advised to use
+> **NOTE**  
+>  
+> This field is supported since API version 18 and deprecated since API version 20. You are advised to use  
 > [getPublishedRunningFormInfoById](arkts-form-getpublishedrunningforminfobyid-f.md#getpublishedrunningforminfobyid-1) instead.
 
 **Since:** 18
@@ -27,6 +26,8 @@ to return the result.
 **Substitutes:** [getPublishedRunningFormInfoById](arkts-form-getpublishedrunningforminfobyid-f.md#getpublishedrunningforminfobyid-1)
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-formProvider-function getPublishedFormInfoById(formId: string): Promise<formInfo.FormInfo>--><!--Device-formProvider-function getPublishedFormInfoById(formId: string): Promise<formInfo.FormInfo>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -40,7 +41,7 @@ to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;formInfo.FormInfo&gt; | Promise used to return the information obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<formInfo.FormInfo> | Promise used to return the information obtained. |
 
 **Error codes:**
 

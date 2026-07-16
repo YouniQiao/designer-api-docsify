@@ -1,5 +1,11 @@
 # setBatteryConfig（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { batteryInfo } from '@kit.BasicServicesKit';
+```
+
 ## setBatteryConfig
 
 ```TypeScript
@@ -9,6 +15,8 @@ function setBatteryConfig(sceneName: string, sceneValue: string): number
 按场景名称设置电池配置。
 
 **起始版本：** 11
+
+<!--Device-batteryInfo-function setBatteryConfig(sceneName: string, sceneValue: string): number--><!--Device-batteryInfo-function setBatteryConfig(sceneName: string, sceneValue: string): number-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 

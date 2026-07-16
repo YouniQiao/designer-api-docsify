@@ -1,5 +1,11 @@
 # setFoldDisplayMode（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { display } from '@kit.ArkUI';
+```
+
 ## setFoldDisplayMode
 
 ```TypeScript
@@ -10,6 +16,8 @@ function setFoldDisplayMode(mode: FoldDisplayMode): void
 
 **起始版本：** 10
 
+<!--Device-display-function setFoldDisplayMode(mode: FoldDisplayMode): void--><!--Device-display-function setFoldDisplayMode(mode: FoldDisplayMode): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **系统接口：** 此接口为系统接口。
@@ -18,7 +26,7 @@ function setFoldDisplayMode(mode: FoldDisplayMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | FoldDisplayMode | 是 | 可折叠设备的显示模式。 |
+| mode | [FoldDisplayMode](arkts-arkui-folddisplaymode-e.md) | 是 | 可折叠设备的显示模式。 |
 
 **错误码：**
 
@@ -54,6 +62,8 @@ function setFoldDisplayMode(mode: FoldDisplayMode, reason: string): void
 
 **起始版本：** 19
 
+<!--Device-display-function setFoldDisplayMode(mode: FoldDisplayMode, reason: string): void--><!--Device-display-function setFoldDisplayMode(mode: FoldDisplayMode, reason: string): void-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **系统接口：** 此接口为系统接口。
@@ -62,7 +72,7 @@ function setFoldDisplayMode(mode: FoldDisplayMode, reason: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | FoldDisplayMode | 是 | 可折叠设备的显示模式。 |
+| mode | [FoldDisplayMode](arkts-arkui-folddisplaymode-e.md) | 是 | 可折叠设备的显示模式。 |
 | reason | string | 是 | 更改显示模式的原因。不设置，则默认为空字符串。 |
 
 **错误码：**

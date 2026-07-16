@@ -18,6 +18,8 @@ Set app group by bundleName.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function setAppGroup(bundleName: string, newGroup: GroupType, callback: AsyncCallback<void>): void--><!--Device-usageStatistics-function setAppGroup(bundleName: string, newGroup: GroupType, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **System API:** This is a system API.
@@ -27,8 +29,8 @@ Set app group by bundleName.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | name of the application. |
-| newGroup | GroupType | Yes | the group of the application whose name is bundleName. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result.If the query is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| newGroup | [GroupType](arkts-backgroundtasks-grouptype-e-sys.md) | Yes | the group of the application whose name is bundleName. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result.If the query is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -77,6 +79,8 @@ Set app group by bundleName.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function setAppGroup(bundleName: string, newGroup: GroupType): Promise<void>--><!--Device-usageStatistics-function setAppGroup(bundleName: string, newGroup: GroupType): Promise<void>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **System API:** This is a system API.
@@ -86,13 +90,13 @@ Set app group by bundleName.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | name of the application. |
-| newGroup | GroupType | Yes | the group of the application whose name is bundleName. |
+| newGroup | [GroupType](arkts-backgroundtasks-grouptype-e-sys.md) | Yes | the group of the application whose name is bundleName. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by setAppGroup. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by setAppGroup. |
 
 **Error codes:**
 

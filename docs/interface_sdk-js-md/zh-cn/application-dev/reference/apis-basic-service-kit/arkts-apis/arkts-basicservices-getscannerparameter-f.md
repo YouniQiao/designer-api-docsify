@@ -1,5 +1,11 @@
 # getScannerParameter
 
+## 导入模块
+
+```TypeScript
+import { scan } from '@kit.BasicServicesKit';
+```
+
 ## getScannerParameter
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getScannerParameter(scannerId: string): Promise<ScannerParameter[]>
 **起始版本：** 20
 
 **需要权限：** ohos.permission.PRINT
+
+<!--Device-scan-function getScannerParameter(scannerId: string): Promise<ScannerParameter[]>--><!--Device-scan-function getScannerParameter(scannerId: string): Promise<ScannerParameter[]>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -24,7 +32,7 @@ function getScannerParameter(scannerId: string): Promise<ScannerParameter[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ScannerParameter[]&gt; | Promise used to return the scanner parameters. |
+| Promise<ScannerParameter[]> | Promise used to return the scanner parameters. |
 
 **错误码：**
 

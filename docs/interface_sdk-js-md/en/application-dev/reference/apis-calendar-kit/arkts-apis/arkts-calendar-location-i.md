@@ -4,6 +4,8 @@ Describes the event location.
 
 **Since:** 10
 
+<!--Device-calendarManager-interface Location--><!--Device-calendarManager-interface Location-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 ## Modules to Import
@@ -18,14 +20,15 @@ import { calendarManager } from '@kit.CalendarKit';
 latitude?: number
 ```
 
-Latitude of the location. The value range is [-90, 90]. The default value is **undefined**. If the value is out
-of the range, the map cannot be displayed properly.
+Latitude of the location. The value range is [-90, 90]. The default value is **undefined**. If the value is out of the range, the map cannot be displayed properly.
 
 **Type:** number
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Location-latitude?: number--><!--Device-Location-latitude?: number-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -43,6 +46,8 @@ Location, with a maximum of 5,000 characters. If this parameter is not specified
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Location-location?: string--><!--Device-Location-location?: string-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 ## longitude
@@ -51,14 +56,15 @@ Location, with a maximum of 5,000 characters. If this parameter is not specified
 longitude?: number
 ```
 
-Longitude of the location. The value range is [-180, 180]. The default value is **undefined**. If the value is
-out of the range, the map cannot be displayed properly.
+Longitude of the location. The value range is [-180, 180]. The default value is **undefined**. If the value is out of the range, the map cannot be displayed properly.
 
 **Type:** number
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Location-longitude?: number--><!--Device-Location-longitude?: number-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
 

@@ -6,6 +6,8 @@ Defines a touch event.
 
 **Since:** 9
 
+<!--Device-unnamed-export declare interface TouchEvent extends InputEvent--><!--Device-unnamed-export declare interface TouchEvent extends InputEvent-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Event type.
 
 **Since:** 9
 
+<!--Device-TouchEvent-action: Action--><!--Device-TouchEvent-action: Action-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## sourceType
@@ -39,6 +43,8 @@ Device type of the touch source.
 **Type:** SourceType
 
 **Since:** 9
+
+<!--Device-TouchEvent-sourceType: SourceType--><!--Device-TouchEvent-sourceType: SourceType-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -54,6 +60,8 @@ Current touch point.
 
 **Since:** 9
 
+<!--Device-TouchEvent-touch: Touch--><!--Device-TouchEvent-touch: Touch-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## touches
@@ -67,6 +75,8 @@ All touch points.
 **Type:** Touch[]
 
 **Since:** 9
+
+<!--Device-TouchEvent-touches: Touch[]--><!--Device-TouchEvent-touches: Touch[]-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 

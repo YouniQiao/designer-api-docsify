@@ -24,13 +24,15 @@ By default, the system queries call records generated within 6 hours.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-contact-function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: int): Promise<boolean>--><!--Device-contact-function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: int): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of the application or capability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of the application or capability. |
 | phoneNumber | string | Yes | Indicates the phone number. |
 | minDuration | number | Yes | Indicates the minimum call duration in seconds. |
 
@@ -38,7 +40,7 @@ By default, the system queries call records generated within 6 hours.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns true if any matching call is found, false otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns true if any matching call is found, false otherwise. |
 
 **Error codes:**
 
@@ -85,22 +87,24 @@ Check whether there are any calls that meet the specified condition.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-contact-function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: int, withinTime: int): Promise<boolean>--><!--Device-contact-function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: int, withinTime: int): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of the application or capability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of the application or capability. |
 | phoneNumber | string | Yes | Indicates the phone number. |
 | minDuration | number | Yes | Indicates the minimum call duration in seconds. |
-| withinTime | number | Yes | Indicates the period of time prior to the current time that the start and end timeof calls should be within, in seconds. Up to 6 hours. |
+| withinTime | number | Yes | Indicates the period of time prior to the current time that the start and end time of calls should be within, in seconds. Up to 6 hours. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns true if any matching call is found, false otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns true if any matching call is found, false otherwise. |
 
 **Error codes:**
 

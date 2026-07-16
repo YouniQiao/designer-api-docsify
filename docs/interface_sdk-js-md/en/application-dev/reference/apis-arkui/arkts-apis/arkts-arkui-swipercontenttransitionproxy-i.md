@@ -1,27 +1,26 @@
 # SwiperContentTransitionProxy
 
-Implements the proxy object returned during the execution of the custom page transition animation of the
-**ArcSwiper** component. You can use this object to obtain the page information in the custom animation viewport. You
-can also call the **finishTransition** API of this object to notify the **ArcSwiper** component that the custom
-animation has finished playing.
+Implements the proxy object returned during the execution of the custom page transition animation of the **ArcSwiper** component. You can use this object to obtain the page information in the custom animation viewport. You can also call the **finishTransition** API of this object to notify the **ArcSwiper** component that the custom animation has finished playing.
 
 > **NOTE**
 
-> - For example, when the index of the currently selected child component is 0, during a transition animation from
-> page 0 to page 1, the callback is triggered for all pages within the viewport on every frame. When pages 0 and 1
-> are both in the viewport, the callback is triggered twice per frame. The first callback has **selectedIndex** as
-> **0**, **index** as **0**, **position** as the ratio of how much page 0 has moved relative to its position before
-> the animation started on the current frame, and **mainAxisLength** as the length of page 0 on the main axis. The
-> second callback has **selectedIndex** as **0**, **index** as **1**, **position** as the ratio of how much page 1
-> has moved relative to page 0 before the animation started on the current frame, and **mainAxisLength** as the
-> length of page 1 on the main axis.
->
-> - If the animation curve is a spring interpolation curve, during the transition animation from page 0 to page 1,
-> due to the position and velocity when the user lifts their finger off the screen, animation may overshoot and slide
-> past to page 2, then bounce back to page 1. Throughout this process, a callback is triggered for pages 1 and 2
+> - For example, when the index of the currently selected child component is 0, during a transition animation from  
+> page 0 to page 1, the callback is triggered for all pages within the viewport on every frame. When pages 0 and 1  
+> are both in the viewport, the callback is triggered twice per frame. The first callback has **selectedIndex** as  
+> **0**, **index** as **0**, **position** as the ratio of how much page 0 has moved relative to its position before  
+> the animation started on the current frame, and **mainAxisLength** as the length of page 0 on the main axis. The  
+> second callback has **selectedIndex** as **0**, **index** as **1**, **position** as the ratio of how much page 1  
+> has moved relative to page 0 before the animation started on the current frame, and **mainAxisLength** as the  
+> length of page 1 on the main axis.  
+>  
+> - If the animation curve is a spring interpolation curve, during the transition animation from page 0 to page 1,  
+> due to the position and velocity when the user lifts their finger off the screen, animation may overshoot and slide  
+> past to page 2, then bounce back to page 1. Throughout this process, a callback is triggered for pages 1 and 2  
 > within the viewport on every frame.
 
 **Since:** 18
+
+<!--Device-unnamed-declare interface SwiperContentTransitionProxy--><!--Device-unnamed-declare interface SwiperContentTransitionProxy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -43,6 +42,8 @@ Notifies the **ArcSwiper** component that the custom animation has finished play
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SwiperContentTransitionProxy-finishTransition(): void--><!--Device-SwiperContentTransitionProxy-finishTransition(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## index
@@ -59,6 +60,8 @@ Index of a page in the viewport.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SwiperContentTransitionProxy-index: number--><!--Device-SwiperContentTransitionProxy-index: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## mainAxisLength
@@ -67,14 +70,15 @@ Index of a page in the viewport.
 mainAxisLength: number
 ```
 
-Length of the page specified by **index** along the main axis.
-Unit: vp.
+Length of the page specified by **index** along the main axis.Unit: vp.
 
 **Type:** number
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SwiperContentTransitionProxy-mainAxisLength: number--><!--Device-SwiperContentTransitionProxy-mainAxisLength: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -84,14 +88,15 @@ Unit: vp.
 position: number
 ```
 
-Position of the page specified by **index** relative to the start position of the **ArcSwiper** main axis (start
-position of the page corresponding to **selectedIndex**).
+Position of the page specified by **index** relative to the start position of the **ArcSwiper** main axis (start position of the page corresponding to **selectedIndex**).
 
 **Type:** number
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SwiperContentTransitionProxy-position: number--><!--Device-SwiperContentTransitionProxy-position: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -108,6 +113,8 @@ Index of the currently selected page.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SwiperContentTransitionProxy-selectedIndex: number--><!--Device-SwiperContentTransitionProxy-selectedIndex: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 

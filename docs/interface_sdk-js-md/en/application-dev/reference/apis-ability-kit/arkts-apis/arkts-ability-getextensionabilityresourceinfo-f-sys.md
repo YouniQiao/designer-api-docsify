@@ -12,12 +12,13 @@ import { bundleResourceManager } from '@kit.AbilityKit';
 function getExtensionAbilityResourceInfo(bundleName: string, extensionAbilityType: bundleManager.ExtensionAbilityType, resourceFlags: number, appIndex?: number): Array<LauncherAbilityResourceInfo>
 ```
 
-Obtains the ExtensionAbility resource information of an application based on the bundle name, ExtensionAbility type
-, resource flags, and clone ID. This API returns the result synchronously.
+Obtains the ExtensionAbility resource information of an application based on the bundle name, ExtensionAbility type, resource flags, and clone ID. This API returns the result synchronously.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.GET_BUNDLE_RESOURCES
+
+<!--Device-bundleResourceManager-function getExtensionAbilityResourceInfo(bundleName: string, extensionAbilityType: bundleManager.ExtensionAbilityType, resourceFlags: int, appIndex?: int): Array<LauncherAbilityResourceInfo>--><!--Device-bundleResourceManager-function getExtensionAbilityResourceInfo(bundleName: string, extensionAbilityType: bundleManager.ExtensionAbilityType, resourceFlags: int, appIndex?: int): Array<LauncherAbilityResourceInfo>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -28,15 +29,15 @@ Obtains the ExtensionAbility resource information of an application based on the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
-| extensionAbilityType | bundleManager.ExtensionAbilityType | Yes | ExtensionAbility type. Only**ExtensionAbilityType.INPUT_METHOD**, **ExtensionAbilityType.SHARE** and **ExtensionAbilityType.ACTION** aresupported. |
-| resourceFlags | number | Yes | Resource information flags, which indicate the type of resource information toobtain. |
+| extensionAbilityType | bundleManager.ExtensionAbilityType | Yes | ExtensionAbility type. Only **ExtensionAbilityType.INPUT_METHOD**, **ExtensionAbilityType.SHARE** and **ExtensionAbilityType.ACTION** are supported. |
+| resourceFlags | number | Yes | Resource information flags, which indicate the type of resource information to obtain. |
 | appIndex | number | No | ID of the application clone. The default value is **0**. The value ranges from 0 to 5.The value **0** indicates the main application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;LauncherAbilityResourceInfo&gt; | ExtensionAbility resource information of the application, includingthe icon and name. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<LauncherAbilityResourceInfo> | ExtensionAbility resource information of the application, including the icon and name. |
 
 **Error codes:**
 

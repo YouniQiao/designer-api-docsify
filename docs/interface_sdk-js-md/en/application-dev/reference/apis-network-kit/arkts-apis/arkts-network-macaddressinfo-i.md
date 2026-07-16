@@ -4,6 +4,8 @@ Defines the mac address info of the Ethernet.
 
 **Since:** 14
 
+<!--Device-ethernet-export interface MacAddressInfo--><!--Device-ethernet-export interface MacAddressInfo-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Ethernet interface name.
 
 **Since:** 14
 
+<!--Device-MacAddressInfo-iface: string--><!--Device-MacAddressInfo-iface: string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 ## macAddress
@@ -37,6 +41,8 @@ Ethernet specific mac address.
 **Type:** string
 
 **Since:** 14
+
+<!--Device-MacAddressInfo-macAddress: string--><!--Device-MacAddressInfo-macAddress: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 

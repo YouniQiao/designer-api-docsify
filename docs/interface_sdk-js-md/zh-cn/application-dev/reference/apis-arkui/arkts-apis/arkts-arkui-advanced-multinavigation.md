@@ -1,5 +1,11 @@
 # @ohos.arkui.advanced.MultiNavigation
 
+## 导入模块
+
+```TypeScript
+import { MultiNavPathStack, MultiNavigation, SplitPolicy } from '@kit.ArkUI';
+```
+
 ## 汇总
 
 ### 类
@@ -12,7 +18,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [MultiNavigation](arkts-arkui-multinavigation-s.md) | MultiNavigation用于在大尺寸设备上分栏显示、进行路由跳转。@link NavPathStack#getParent}、&gt; [setInterception](../arkts-components/arkts-arkui-navpathstack-c.md#setinterception-1)、&gt; [pushDestination](../arkts-components/arkts-arkui-navpathstack-c.md#pushdestination-1)等)，可能会发生无法预期的问题。&gt; MultiNavigation在深层嵌套场景下，可能存在路由动效异常的问题。 |
+| [MultiNavigation](arkts-arkui-multinavigation-s.md) | MultiNavigation用于在大尺寸设备上分栏显示、进行路由跳转。 |
 
 ### 枚举
 

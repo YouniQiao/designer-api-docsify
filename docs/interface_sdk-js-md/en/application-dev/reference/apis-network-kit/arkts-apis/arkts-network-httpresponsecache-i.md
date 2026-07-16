@@ -4,6 +4,8 @@ Defines an object that stores the response to an HTTP request.
 
 **Since:** 11
 
+<!--Device-http-export interface HttpResponseCache--><!--Device-http-export interface HttpResponseCache-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Disables a cache and deletes the data in it.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HttpResponseCache-delete(callback: AsyncCallback<void>): void--><!--Device-HttpResponseCache-delete(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of delete. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of delete. |
 
 **Example**
 
@@ -96,13 +100,15 @@ Disables a cache and deletes the data in it.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HttpResponseCache-delete(): Promise<void>--><!--Device-HttpResponseCache-delete(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the delete. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the delete. |
 
 **Example**
 
@@ -156,13 +162,15 @@ Writes data in the cache to the file system so that all the cached data can be a
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HttpResponseCache-flush(callback: AsyncCallback<void>): void--><!--Device-HttpResponseCache-flush(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of flush. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of flush. |
 
 **Example**
 
@@ -226,13 +234,15 @@ Writes data in the cache to the file system so that all the cached data can be a
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HttpResponseCache-flush(): Promise<void>--><!--Device-HttpResponseCache-flush(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the flush. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the flush. |
 
 **Example**
 

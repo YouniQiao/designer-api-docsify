@@ -2,15 +2,15 @@
 
 This interface implements audio volume management.
 
-Before calling any API in AudioVolumeManager, you must use
-[getVolumeManager](arkts-audio-audiomanager-i.md#getvolumemanager-1) to obtain an
-AudioVolumeManager instance.
+Before calling any API in AudioVolumeManager, you must use [getVolumeManager](arkts-audio-audiomanager-i.md#getvolumemanager-1) to obtain an AudioVolumeManager instance.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > - The initial APIs of this interface are supported since API version 9.
 
 **Since:** 9
+
+<!--Device-audio-interface AudioVolumeManager--><!--Device-audio-interface AudioVolumeManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -32,6 +32,8 @@ Interface for forcibly setting the volume type by pressing the volume key.
 
 **Required permissions:** ohos.permission.MODIFY_AUDIO_SETTINGS
 
+<!--Device-AudioVolumeManager-forceVolumeKeyControlType(volumeType: AudioVolumeType, duration: int): void--><!--Device-AudioVolumeManager-forceVolumeKeyControlType(volumeType: AudioVolumeType, duration: int): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -40,8 +42,8 @@ Interface for forcibly setting the volume type by pressing the volume key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | Yes | Audio volume typethat the application expects to control using the volume key. |
-| duration | number | Yes | Duration for continuing to control the volume type when no key is pressed.The forced volume type setting is released when the timer expires. Unit is second, the maximumduration is 10 seconds.If the duration is set to -1, the setting is canceled. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type that the application expects to control using the volume key. |
+| duration | number | Yes | Duration for continuing to control the volume type when no key is pressed.The forced volume type setting is released when the timer expires. Unit is second, the maximum duration is 10 seconds.If the duration is set to -1, the setting is canceled. |
 
 **Error codes:**
 
@@ -64,6 +66,8 @@ Obtains the Volume information of the active audio streams.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AudioVolumeManager-getActiveStreamsVolumeInfo(): ActiveStreamsVolumeInfoArray--><!--Device-AudioVolumeManager-getActiveStreamsVolumeInfo(): ActiveStreamsVolumeInfoArray-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -72,7 +76,7 @@ Obtains the Volume information of the active audio streams.
 
 | Type | Description |
 | --- | --- |
-| ActiveStreamsVolumeInfoArray | Returns the result. |
+| [ActiveStreamsVolumeInfoArray](arkts-audio-activestreamsvolumeinfoarray-t-sys.md) | Returns the result. |
 
 **Error codes:**
 
@@ -93,6 +97,8 @@ Get the volume for specified app with range from 0 to 100. Applications with sam
 
 **Required permissions:** ohos.permission.MANAGE_AUDIO_CONFIG
 
+<!--Device-AudioVolumeManager-getAppVolumePercentageForUid(uid: int): Promise<int>--><!--Device-AudioVolumeManager-getAppVolumePercentageForUid(uid: int): Promise<int>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -107,7 +113,7 @@ Get the volume for specified app with range from 0 to 100. Applications with sam
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the application's volume percentage. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the application's volume percentage. |
 
 **Error codes:**
 
@@ -138,6 +144,8 @@ Obtains volume type by stream type.
 
 **Since:** 20
 
+<!--Device-AudioVolumeManager-getAudioVolumeTypeByStreamUsage(streamUsage: StreamUsage): AudioVolumeType--><!--Device-AudioVolumeManager-getAudioVolumeTypeByStreamUsage(streamUsage: StreamUsage): AudioVolumeType-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -146,13 +154,13 @@ Obtains volume type by stream type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamUsage | StreamUsage | Yes | Audio stream type. |
+| streamUsage | [StreamUsage](arkts-audio-streamusage-e-sys.md) | Yes | Audio stream type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AudioVolumeType | Return the audio volume type. |
+| [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | Return the audio volume type. |
 
 **Error codes:**
 
@@ -171,6 +179,8 @@ Obtains the maximum volume allowed for a volume type.
 
 **Since:** 20
 
+<!--Device-AudioVolumeManager-getMaxSystemVolume(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeManager-getMaxSystemVolume(volumeType: AudioVolumeType): int-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -179,7 +189,7 @@ Obtains the maximum volume allowed for a volume type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | Yes | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type. |
 
 **Return value:**
 
@@ -204,6 +214,8 @@ Obtains the minimum volume allowed for a volume type.
 
 **Since:** 20
 
+<!--Device-AudioVolumeManager-getMinSystemVolume(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeManager-getMinSystemVolume(volumeType: AudioVolumeType): int-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -212,7 +224,7 @@ Obtains the minimum volume allowed for a volume type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | Yes | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type. |
 
 **Return value:**
 
@@ -237,6 +249,8 @@ Gets the minimum system volume percentage application can set for specified volu
 
 **Since:** 23
 
+<!--Device-AudioVolumeManager-getMinSystemVolumePercentage(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeManager-getMinSystemVolumePercentage(volumeType: AudioVolumeType): int-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -245,7 +259,7 @@ Gets the minimum system volume percentage application can set for specified volu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | Yes | Audio volume type to get. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type to get. |
 
 **Return value:**
 
@@ -270,6 +284,8 @@ Obtains stream types by volume type.
 
 **Since:** 20
 
+<!--Device-AudioVolumeManager-getStreamUsagesByVolumeType(volumeType: AudioVolumeType): StreamUsageArray--><!--Device-AudioVolumeManager-getStreamUsagesByVolumeType(volumeType: AudioVolumeType): StreamUsageArray-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -278,13 +294,13 @@ Obtains stream types by volume type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | Yes | Audio stream type. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | Yes | Audio stream type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| StreamUsageArray | Return the audio stream types. |
+| [StreamUsageArray](arkts-audio-streamusagearray-t-sys.md) | Return the audio stream types. |
 
 **Error codes:**
 
@@ -303,6 +319,8 @@ Obtains system supported volume types.
 
 **Since:** 20
 
+<!--Device-AudioVolumeManager-getSupportedAudioVolumeTypes(): Array<Readonly<AudioVolumeType>>--><!--Device-AudioVolumeManager-getSupportedAudioVolumeTypes(): Array<Readonly<AudioVolumeType>>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -311,7 +329,7 @@ Obtains system supported volume types.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Readonly&lt;AudioVolumeType&gt;&gt; | Return the system volume type array. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Readonly<AudioVolumeType>> | Return the system volume type array. |
 
 **Error codes:**
 
@@ -329,6 +347,8 @@ Obtains the volume of a volume type.
 
 **Since:** 20
 
+<!--Device-AudioVolumeManager-getSystemVolume(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeManager-getSystemVolume(volumeType: AudioVolumeType): int-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -337,7 +357,7 @@ Obtains the volume of a volume type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | Yes | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type. |
 
 **Return value:**
 
@@ -362,6 +382,8 @@ Obtains the volume of streams in specific uid application.
 
 **Since:** 20
 
+<!--Device-AudioVolumeManager-getSystemVolumeByUid(volumeType: AudioVolumeType, callingUid: int): int--><!--Device-AudioVolumeManager-getSystemVolumeByUid(volumeType: AudioVolumeType, callingUid: int): int-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -370,7 +392,7 @@ Obtains the volume of streams in specific uid application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | Yes | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type. |
 | callingUid | number | Yes | Uid of the stream owner. |
 
 **Return value:**
@@ -397,6 +419,8 @@ Gets the current system volume percentage for specified volume type.
 
 **Since:** 23
 
+<!--Device-AudioVolumeManager-getSystemVolumePercentage(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeManager-getSystemVolumePercentage(volumeType: AudioVolumeType): int-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -405,7 +429,7 @@ Gets the current system volume percentage for specified volume type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | Yes | Audio volume type to get. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type to get. |
 
 **Return value:**
 
@@ -430,6 +454,8 @@ Get the volume group list for a networkId. This method uses an asynchronous call
 
 **Since:** 9
 
+<!--Device-AudioVolumeManager-getVolumeGroupInfos(networkId: string, callback: AsyncCallback<VolumeGroupInfos>): void--><!--Device-AudioVolumeManager-getVolumeGroupInfos(networkId: string, callback: AsyncCallback<VolumeGroupInfos>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -439,7 +465,7 @@ Get the volume group list for a networkId. This method uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | networkId | string | Yes | Distributed deice net work id |
-| callback | AsyncCallback&lt;VolumeGroupInfos&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<VolumeGroupInfos> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -466,6 +492,8 @@ Get the volume group list for a networkId. This method uses a promise to return 
 
 **Since:** 9
 
+<!--Device-AudioVolumeManager-getVolumeGroupInfos(networkId: string): Promise<VolumeGroupInfos>--><!--Device-AudioVolumeManager-getVolumeGroupInfos(networkId: string): Promise<VolumeGroupInfos>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -480,7 +508,7 @@ Get the volume group list for a networkId. This method uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;VolumeGroupInfos&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<VolumeGroupInfos> | Promise used to return the result. |
 
 **Example**
 
@@ -502,6 +530,8 @@ Get the volume group list for a networkId.
 
 **Since:** 10
 
+<!--Device-AudioVolumeManager-getVolumeGroupInfosSync(networkId: string): VolumeGroupInfos--><!--Device-AudioVolumeManager-getVolumeGroupInfosSync(networkId: string): VolumeGroupInfos-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -516,7 +546,7 @@ Get the volume group list for a networkId.
 
 | Type | Description |
 | --- | --- |
-| VolumeGroupInfos | Volume group info list. |
+| [VolumeGroupInfos](arkts-audio-volumegroupinfos-t-sys.md) | Volume group info list. |
 
 **Error codes:**
 
@@ -550,6 +580,8 @@ Gets the volume db value that system calculate by volume type, volume level and 
 
 **Since:** 20
 
+<!--Device-AudioVolumeManager-getVolumeInUnitOfDb(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType): double--><!--Device-AudioVolumeManager-getVolumeInUnitOfDb(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType): double-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -558,9 +590,9 @@ Gets the volume db value that system calculate by volume type, volume level and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | Yes | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type. |
 | volumeLevel | number | Yes | Volume level. |
-| device | DeviceType | Yes | Output device type. |
+| device | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-devicetype-e.md) | Yes | Output device type. |
 
 **Return value:**
 
@@ -581,12 +613,13 @@ Gets the volume db value that system calculate by volume type, volume level and 
 isAppVolumeMutedForUid(uid: number, owned: boolean): Promise<boolean>
 ```
 
-Checks whether the app volume is muted. If there are multiple callers setting muted states,
-only when all callers cancel muted state the volume of this app will be truly unmuted.
+Checks whether the app volume is muted. If there are multiple callers setting muted states,only when all callers cancel muted state the volume of this app will be truly unmuted.
 
 **Since:** 19
 
 **Required permissions:** ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioVolumeManager-isAppVolumeMutedForUid(uid: int, owned: boolean): Promise<boolean>--><!--Device-AudioVolumeManager-isAppVolumeMutedForUid(uid: int, owned: boolean): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -597,13 +630,13 @@ only when all callers cancel muted state the volume of this app will be truly un
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | number | Yes | App's uid. |
-| owned | boolean | Yes | If true is passed, the result will be indicated your owned muted statesettings to this app. Otherwise if false is passed, the result will be indicated the real muted state. |
+| owned | boolean | Yes | If true is passed, the result will be indicated your owned muted state settings to this app. Otherwise if false is passed, the result will be indicated the real muted state. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -623,6 +656,8 @@ Checks whether a volume type is muted.
 
 **Since:** 20
 
+<!--Device-AudioVolumeManager-isSystemMuted(volumeType: AudioVolumeType): boolean--><!--Device-AudioVolumeManager-isSystemMuted(volumeType: AudioVolumeType): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -631,13 +666,13 @@ Checks whether a volume type is muted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | Yes | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The mute status of the volume type. The value truemeans that the volume type is muted, and false means the opposite. |
+| boolean | The mute status of the volume type. The value true means that the volume type is muted, and false means the opposite. |
 
 **Error codes:**
 
@@ -658,6 +693,8 @@ Unsubscribes to the app volume change events..
 
 **Required permissions:** ohos.permission.MANAGE_AUDIO_CONFIG
 
+<!--Device-AudioVolumeManager-off(type: 'appVolumeChangeForUid', callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'appVolumeChangeForUid', callback?: Callback<VolumeEvent>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -666,8 +703,8 @@ Unsubscribes to the app volume change events..
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'appVolumeChangeForUid' | Yes | Type of the event to be unregistered. Only the appVolumeChangeForUidevent is supported. |
-| callback | Callback&lt;VolumeEvent&gt; | No | Callback used to obtain the invoking volume change event. |
+| type | 'appVolumeChangeForUid' | Yes | Type of the event to be unregistered. Only the appVolumeChangeForUid event is supported. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VolumeEvent> | No | Callback used to obtain the invoking volume change event. |
 
 **Error codes:**
 
@@ -687,6 +724,8 @@ Unsubscribes from active volume type changes.
 
 **Since:** 20
 
+<!--Device-AudioVolumeManager-off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void--><!--Device-AudioVolumeManager-off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -696,7 +735,7 @@ Unsubscribes from active volume type changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'activeVolumeTypeChange' | Yes | Type of the event to unregister.Only the activeVolumeTypeChange event is supported. |
-| callback | Callback&lt;AudioVolumeType&gt; | No | Callback used to return the active volume type. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioVolumeType> | No | Callback used to return the active volume type. |
 
 **Error codes:**
 
@@ -715,6 +754,8 @@ Unsubscribes to the system volume change events.
 
 **Since:** 20
 
+<!--Device-AudioVolumeManager-off(type: 'systemVolumeChange', callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'systemVolumeChange', callback?: Callback<VolumeEvent>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -724,7 +765,7 @@ Unsubscribes to the system volume change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'systemVolumeChange' | Yes | Type of the event to be unregistered.Only the systemVolumeChange event is supported. |
-| callback | Callback&lt;VolumeEvent&gt; | No | Callback used to obtain the invoking volume change event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VolumeEvent> | No | Callback used to obtain the invoking volume change event. |
 
 **Error codes:**
 
@@ -745,6 +786,8 @@ Unsubscribes from the system volume change events.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AudioVolumeManager-offSystemVolumeChangeByFilter(callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-offSystemVolumeChangeByFilter(callback?: Callback<VolumeEvent>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -753,7 +796,7 @@ Unsubscribes from the system volume change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;VolumeEvent&gt; | No | Callback used in the subscription. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VolumeEvent> | No | Callback used in the subscription. |
 
 **Error codes:**
 
@@ -772,6 +815,8 @@ Unsubscribes from system volume percentage change events.
 
 **Since:** 23
 
+<!--Device-AudioVolumeManager-offVolumePercentageChange(callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-offVolumePercentageChange(callback?: Callback<VolumeEvent>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -780,7 +825,7 @@ Unsubscribes from system volume percentage change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;VolumeEvent&gt; | No | Callback used to return the system volume percentage change event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VolumeEvent> | No | Callback used to return the system volume percentage change event. |
 
 **Error codes:**
 
@@ -795,12 +840,13 @@ Unsubscribes from system volume percentage change events.
 on(type: 'appVolumeChangeForUid', uid: number, callback: Callback<VolumeEvent>): void
 ```
 
-Listens for specified app volume change events.
-The app volume may changed by {@link setAppVolumePercentageForUid}.
+Listens for specified app volume change events.The app volume may changed by {@link setAppVolumePercentageForUid}.
 
 **Since:** 19
 
 **Required permissions:** ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioVolumeManager-on(type: 'appVolumeChangeForUid', uid: int, callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-on(type: 'appVolumeChangeForUid', uid: int, callback: Callback<VolumeEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -810,9 +856,9 @@ The app volume may changed by {@link setAppVolumePercentageForUid}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'appVolumeChangeForUid' | Yes | Type of the event to listen for. Only theappVolumeChangeForUid event is supported. |
+| type | 'appVolumeChangeForUid' | Yes | Type of the event to listen for. Only the appVolumeChangeForUid event is supported. |
 | uid | number | Yes | The app's uid. |
-| callback | Callback&lt;VolumeEvent&gt; | Yes | Callback used to get the app volume change event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VolumeEvent> | Yes | Callback used to get the app volume change event. |
 
 **Error codes:**
 
@@ -832,6 +878,8 @@ Subscribes to active volume type changes.
 
 **Since:** 20
 
+<!--Device-AudioVolumeManager-on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void--><!--Device-AudioVolumeManager-on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -841,7 +889,7 @@ Subscribes to active volume type changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'activeVolumeTypeChange' | Yes | Type of the event to listen for.Only the activeVolumeTypeChange event is supported. |
-| callback | Callback&lt;AudioVolumeType&gt; | Yes | Callback used to return the active volume type. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioVolumeType> | Yes | Callback used to return the active volume type. |
 
 **Error codes:**
 
@@ -860,6 +908,8 @@ Listens for system volume change events. This method uses a callback to get volu
 
 **Since:** 20
 
+<!--Device-AudioVolumeManager-on(type: 'systemVolumeChange', callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-on(type: 'systemVolumeChange', callback: Callback<VolumeEvent>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -869,7 +919,7 @@ Listens for system volume change events. This method uses a callback to get volu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'systemVolumeChange' | Yes | Type of the event to listen for.Only the systemVolumeChange event is supported. |
-| callback | Callback&lt;VolumeEvent&gt; | Yes | Callback used to get the system volume change event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VolumeEvent> | Yes | Callback used to get the system volume change event. |
 
 **Error codes:**
 
@@ -884,12 +934,13 @@ Listens for system volume change events. This method uses a callback to get volu
 onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<VolumeEvent>): void
 ```
 
-Subscribes to system volume change events.
-When the system volume for the target filter changes, registered clients will receive a callback.
+Subscribes to system volume change events.When the system volume for the target filter changes, registered clients will receive a callback.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioVolumeManager-onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<VolumeEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -899,8 +950,8 @@ When the system volume for the target filter changes, registered clients will re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | SystemVolumeFilter | Yes | Filter for system volume changes. |
-| callback | Callback&lt;VolumeEvent&gt; | Yes | Callback to receive information aboutthe system volume. |
+| filter | [SystemVolumeFilter](arkts-audio-systemvolumefilter-i-sys.md) | Yes | Filter for system volume changes. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VolumeEvent> | Yes | Callback to receive information about the system volume. |
 
 **Error codes:**
 
@@ -919,6 +970,8 @@ Subscribes to system volume percentage change events.
 
 **Since:** 23
 
+<!--Device-AudioVolumeManager-onVolumePercentageChange(callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onVolumePercentageChange(callback: Callback<VolumeEvent>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -927,7 +980,7 @@ Subscribes to system volume percentage change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;VolumeEvent&gt; | Yes | Callback used to return the system volume percentage change event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VolumeEvent> | Yes | Callback used to return the system volume percentage change event. |
 
 **Error codes:**
 
@@ -942,12 +995,13 @@ Subscribes to system volume percentage change events.
 setAppVolumeMutedForUid(uid: number, muted: boolean): Promise<void>
 ```
 
-Change mute state of specified application volume. If there are multiple callers setting muted states,
-only when all callers cancel muted state the volume of this app will be truly unmuted.
+Change mute state of specified application volume. If there are multiple callers setting muted states,only when all callers cancel muted state the volume of this app will be truly unmuted.
 
 **Since:** 19
 
 **Required permissions:** ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioVolumeManager-setAppVolumeMutedForUid(uid: int, muted: boolean): Promise<void>--><!--Device-AudioVolumeManager-setAppVolumeMutedForUid(uid: int, muted: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -964,7 +1018,7 @@ only when all callers cancel muted state the volume of this app will be truly un
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -987,6 +1041,8 @@ Sets the volume for specified app with range from 0 to 100. Applications with sa
 
 **Required permissions:** ohos.permission.MANAGE_AUDIO_CONFIG
 
+<!--Device-AudioVolumeManager-setAppVolumePercentageForUid(uid: int, volume: int): Promise<void>--><!--Device-AudioVolumeManager-setAppVolumePercentageForUid(uid: int, volume: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -1002,7 +1058,7 @@ Sets the volume for specified app with range from 0 to 100. Applications with sa
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1037,6 +1093,8 @@ Sets the volume for specific uid application. This method uses a promise to retu
 
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
+<!--Device-AudioVolumeManager-setSystemVolumeByUid(volumeType: AudioVolumeType, volume: int, callingUid: int): Promise<void>--><!--Device-AudioVolumeManager-setSystemVolumeByUid(volumeType: AudioVolumeType, volume: int, callingUid: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -1045,7 +1103,7 @@ Sets the volume for specific uid application. This method uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | Yes | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type. |
 | volume | number | Yes | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
 | callingUid | number | Yes | Uid of the stream owner. |
 
@@ -1053,7 +1111,7 @@ Sets the volume for specific uid application. This method uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1070,16 +1128,13 @@ Sets the volume for specific uid application. This method uses a promise to retu
 setSystemVolumePercentage(volumeType: AudioVolumeType, percentage: number): Promise<void>
 ```
 
-Sets the system volume percentage, using an integer ranging from minimum system volume percentage to 100.
-The volume percentage corresponds to volume levels, with each level tied to a specific percentage.
-When the volume level changes, the volume percentage adjusts accordingly and is mapped within the range of volume
-levels.
-Zero volume is mapped to 0, and the maximum volume is mapped to 100%. Intermediate volume levels are evenly
-distributed beween 1 and 99. When the volume percentage changes, the volume level changes accordingly.
+Sets the system volume percentage, using an integer ranging from minimum system volume percentage to 100.The volume percentage corresponds to volume levels, with each level tied to a specific percentage.When the volume level changes, the volume percentage adjusts accordingly and is mapped within the range of volume levels.Zero volume is mapped to 0, and the maximum volume is mapped to 100%. Intermediate volume levels are evenly distributed beween 1 and 99. When the volume percentage changes, the volume level changes accordingly.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioVolumeManager-setSystemVolumePercentage(volumeType: AudioVolumeType, percentage: int): Promise<void>--><!--Device-AudioVolumeManager-setSystemVolumePercentage(volumeType: AudioVolumeType, percentage: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -1089,14 +1144,14 @@ distributed beween 1 and 99. When the volume percentage changes, the volume leve
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | Yes | Audio volume type to set. |
-| percentage | number | Yes | Percentage to set. It must be an integer with the rangefrom minimum value getted by {@link #getMinSystemVolumePercentage} to 100. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | Yes | Audio volume type to set. |
+| percentage | number | Yes | Percentage to set. It must be an integer with the range from minimum value getted by {@link #getMinSystemVolumePercentage} to 100. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1104,6 +1159,6 @@ distributed beween 1 and 99. When the volume percentage changes, the volume leve
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, includingvolumeType or percentage param begin out of range. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, including volumeType or percentage param begin out of range. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Crash or blocking occurs in system process. |
 

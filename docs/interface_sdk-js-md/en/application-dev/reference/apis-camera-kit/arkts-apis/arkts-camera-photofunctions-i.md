@@ -2,9 +2,11 @@
 
 Photo Functions object.
 
-**Inheritance/Implementation:** PhotoFunctions extends [FlashQuery](arkts-camera-flashquery-i.md), [AutoExposureQuery](arkts-camera-autoexposurequery-i.md), [ManualExposureQuery](arkts-camera-manualexposurequery-i.md), [FocusQuery](arkts-camera-focusquery-i.md), [ZoomQuery](arkts-camera-zoomquery-i.md), [BeautyQuery](arkts-camera-beautyquery-i-sys.md), [ColorEffectQuery](arkts-camera-coloreffectquery-i-sys.md), [ColorManagementQuery](arkts-camera-colormanagementquery-i.md), [MacroQuery](arkts-camera-macroquery-i-sys.md), [SceneDetectionQuery](arkts-camera-scenedetectionquery-i-sys.md)
+**Inheritance/Implementation:** PhotoFunctions extends [FlashQuery](arkts-camera-flashquery-i.md), [AutoExposureQuery](arkts-camera-autoexposurequery-i.md), [ManualExposureQuery](arkts-camera-manualexposurequery-i-sys.md), [FocusQuery](arkts-camera-focusquery-i.md), [ZoomQuery](arkts-camera-zoomquery-i.md), [BeautyQuery](arkts-camera-beautyquery-i-sys.md), [ColorEffectQuery](arkts-camera-coloreffectquery-i-sys.md), [ColorManagementQuery](arkts-camera-colormanagementquery-i.md), [MacroQuery](arkts-camera-macroquery-i-sys.md), [SceneDetectionQuery](arkts-camera-scenedetectionquery-i-sys.md)
 
 **Since:** 13
+
+<!--Device-camera-interface PhotoFunctions extends FlashQuery, AutoExposureQuery, ManualExposureQuery, FocusQuery, ZoomQuery, BeautyQuery, ColorEffectQuery, ColorManagementQuery, MacroQuery, SceneDetectionQuery--><!--Device-camera-interface PhotoFunctions extends FlashQuery, AutoExposureQuery, ManualExposureQuery, FocusQuery, ZoomQuery, BeautyQuery, ColorEffectQuery, ColorManagementQuery, MacroQuery, SceneDetectionQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

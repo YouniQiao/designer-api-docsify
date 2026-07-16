@@ -1,0 +1,20 @@
+# LengthMetrics
+
+```TypeScript
+declare type LengthMetrics = import('../api/arkui/Graphics').LengthMetrics
+```
+
+Defines LengthMetrics.
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-unnamed-declare type LengthMetrics = import('../api/arkui/Graphics').LengthMetrics--><!--Device-unnamed-declare type LengthMetrics = import('../api/arkui/Graphics').LengthMetrics-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Property type:** import('../api/arkui/Graphics').LengthMetrics
+

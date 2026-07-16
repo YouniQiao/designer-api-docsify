@@ -12,15 +12,15 @@ import { omapi } from '@kit.ConnectivityKit';
 function newSEService(type: 'serviceState', callback: Callback<ServiceState>): SEService
 ```
 
-Establish a new connection that can be used to connect to all the SEs available in the system.
-The connection process can be quite long, so it happens in an asynchronous way. It is usable only
-if the specified callback is called or if isConnected() returns true.
+Establish a new connection that can be used to connect to all the SEs available in the system.The connection process can be quite long, so it happens in an asynchronous way. It is usable only if the specified callback is called or if isConnected() returns true.
 
 **Since:** 10
 
 **Deprecated since:** 12
 
 **Substitutes:** [createService](arkts-connectivity-createservice-f.md#createservice-1)
+
+<!--Device-omapi-function newSEService(type: 'serviceState', callback: Callback<ServiceState>): SEService--><!--Device-omapi-function newSEService(type: 'serviceState', callback: Callback<ServiceState>): SEService-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
 
@@ -29,13 +29,13 @@ if the specified callback is called or if isConnected() returns true.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceState' | Yes | nfc serviceState |
-| callback | Callback&lt;ServiceState&gt; | Yes | The callback to return the service. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ServiceState> | Yes | The callback to return the service. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SEService | The new SEService instance. |
+| [SEService](arkts-connectivity-seservice-i.md) | The new SEService instance. |
 
 **Error codes:**
 

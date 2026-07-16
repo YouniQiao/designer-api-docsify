@@ -4,6 +4,8 @@ The enum of gatt characteristic write type
 
 **Since:** 10
 
+<!--Device-ble-enum GattWriteType--><!--Device-ble-enum GattWriteType-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## WRITE
@@ -20,6 +22,8 @@ Write characteristic with response.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GattWriteType-WRITE = 1--><!--Device-GattWriteType-WRITE = 1-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## WRITE_NO_RESPONSE
@@ -35,6 +39,8 @@ Write characteristic without response.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GattWriteType-WRITE_NO_RESPONSE = 2--><!--Device-GattWriteType-WRITE_NO_RESPONSE = 2-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

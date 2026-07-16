@@ -18,6 +18,8 @@ Get account information of SIM card.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getSimAccountInfo(slotId: int, callback: AsyncCallback<IccAccountInfo>): void--><!--Device-sim-function getSimAccountInfo(slotId: int, callback: AsyncCallback<IccAccountInfo>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -25,7 +27,7 @@ Get account information of SIM card.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;IccAccountInfo&gt; | Yes | Indicates the callback forgetting a {@code IccAccountInfo} object. The ICCID and phone number will be nullif the permission ohos.permission.GET_TELEPHONY_STATE is not granted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<IccAccountInfo> | Yes | Indicates the callback for getting a {@code IccAccountInfo} object. The ICCID and phone number will be null if the permission ohos.permission.GET_TELEPHONY_STATE is not granted. |
 
 **Error codes:**
 
@@ -64,6 +66,8 @@ Get account information of SIM card.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getSimAccountInfo(slotId: int): Promise<IccAccountInfo>--><!--Device-sim-function getSimAccountInfo(slotId: int): Promise<IccAccountInfo>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -76,7 +80,7 @@ Get account information of SIM card.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;IccAccountInfo&gt; | Returns a {@code IccAccountInfo} object. The ICCID and phone numberwill be null if has no ohos.permission.GET_TELEPHONY_STATE. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<IccAccountInfo> | Returns a {@code IccAccountInfo} object. The ICCID and phone number will be null if has no ohos.permission.GET_TELEPHONY_STATE. |
 
 **Error codes:**
 

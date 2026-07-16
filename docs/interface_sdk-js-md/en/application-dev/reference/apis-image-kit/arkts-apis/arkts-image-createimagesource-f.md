@@ -14,13 +14,13 @@ function createImageSource(uri: string): ImageSource
 
 Creates an ImageSource instance based on a given URI.
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call
-[release](arkts-image-pixelmap-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure
-that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-pixelmap-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-sendableImage-function createImageSource(uri: string): ImageSource--><!--Device-sendableImage-function createImageSource(uri: string): ImageSource-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -28,13 +28,13 @@ that all asynchronous operations associated with the instance have finished and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Image path. Currently, only the application sandbox path is supported.<br>The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng[SVG](../../../../reference/apis-image-kit/arkts-apis-image-f.md#svg-tags), and ico. |
+| uri | string | Yes | Image path. Currently, only the application sandbox path is supported.<br>The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng [SVG](../../../../reference/apis-image-kit/arkts-apis-image-f.md#svg-tags), and ico. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
+| [ImageSource](arkts-image-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Example**
 
@@ -57,13 +57,13 @@ function createImageSource(fd: number): ImageSource
 
 Creates an ImageSource instance based on a given file descriptor.
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call
-[release](arkts-image-pixelmap-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure
-that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-pixelmap-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-sendableImage-function createImageSource(fd: number): ImageSource--><!--Device-sendableImage-function createImageSource(fd: number): ImageSource-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -77,7 +77,7 @@ that all asynchronous operations associated with the instance have finished and 
 
 | Type | Description |
 | --- | --- |
-| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
+| [ImageSource](arkts-image-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Example**
 
@@ -100,13 +100,9 @@ async function Demo(context : Context) {
 function createImageSource(buf: ArrayBuffer): ImageSource
 ```
 
-Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the
-pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call
-[sendableImage.createPixelMap](arkts-image-createpixelmap-f.md#createpixelmap-1).
+Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call [sendableImage.createPixelMap](arkts-image-createpixelmap-f.md#createpixelmap-1).
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call
-[release](arkts-image-pixelmap-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure
-that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-pixelmap-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 12
 
@@ -114,19 +110,21 @@ that all asynchronous operations associated with the instance have finished and 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-sendableImage-function createImageSource(buf: ArrayBuffer): ImageSource--><!--Device-sendableImage-function createImageSource(buf: ArrayBuffer): ImageSource-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Array of image buffers. |
+| buf | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Array of image buffers. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
+| [ImageSource](arkts-image-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Example**
 

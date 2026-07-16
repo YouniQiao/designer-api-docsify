@@ -1,5 +1,11 @@
 # startContinuationDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+```
+
 ## startContinuationDeviceManager
 
 ```TypeScript
@@ -16,7 +22,9 @@ function startContinuationDeviceManager(token: number, callback: AsyncCallback<v
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-continuationManager-function startContinuationDeviceManager(token: number, callback: AsyncCallback<void>): void--><!--Device-continuationManager-function startContinuationDeviceManager(token: number, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
@@ -25,7 +33,7 @@ function startContinuationDeviceManager(token: number, callback: AsyncCallback<v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | token | number | 是 | 注册后的token。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当模块选择完成，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当模块选择完成，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
@@ -77,7 +85,17 @@ function startContinuationDeviceManager(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-continuationManager-function startContinuationDeviceManager(
+    token: number,
+    options: ContinuationExtraParams,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-continuationManager-function startContinuationDeviceManager(
+    token: number,
+    options: ContinuationExtraParams,
+    callback: AsyncCallback<void>
+  ): void-End-->
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
@@ -86,8 +104,8 @@ function startContinuationDeviceManager(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | token | number | 是 | 注册后的token。 |
-| options | ContinuationExtraParams | 是 | 过滤可选择设备列表的额外参数。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当模块选择完成，err为undefined，否则返回错误对象。 |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-i.md) | 是 | 过滤可选择设备列表的额外参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当模块选择完成，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
@@ -140,7 +158,9 @@ function startContinuationDeviceManager(token: number, options?: ContinuationExt
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-continuationManager-function startContinuationDeviceManager(token: number, options?: ContinuationExtraParams): Promise<void>--><!--Device-continuationManager-function startContinuationDeviceManager(token: number, options?: ContinuationExtraParams): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
@@ -149,13 +169,13 @@ function startContinuationDeviceManager(token: number, options?: ContinuationExt
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | token | number | 是 | 注册后的token。 |
-| options | ContinuationExtraParams | 否 | 过滤可选择设备列表的额外参数，该参数可缺省。 |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-i.md) | 否 | 过滤可选择设备列表的额外参数，该参数可缺省。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise形式返回接口调用结果。 |
+| Promise<void> | Promise形式返回接口调用结果。 |
 
 **错误码：**
 

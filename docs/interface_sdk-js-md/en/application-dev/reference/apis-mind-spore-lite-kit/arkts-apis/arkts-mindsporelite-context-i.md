@@ -4,6 +4,8 @@ Provides the device configurations
 
 **Since:** 10
 
+<!--Device-mindSporeLite-interface Context--><!--Device-mindSporeLite-interface Context-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 ## Modules to Import
@@ -26,6 +28,8 @@ The cpu device information
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Context-cpu?: CpuDevice--><!--Device-Context-cpu?: CpuDevice-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 ## nnrt
@@ -42,6 +46,8 @@ The NNRT device information
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Context-nnrt?: NNRTDevice--><!--Device-Context-nnrt?: NNRTDevice-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 ## target
@@ -57,6 +63,8 @@ The target device
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Context-target?: string[]--><!--Device-Context-target?: string[]-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 

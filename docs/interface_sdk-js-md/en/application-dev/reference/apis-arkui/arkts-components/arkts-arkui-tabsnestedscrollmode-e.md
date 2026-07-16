@@ -4,6 +4,8 @@ Enumerates the nested scrolling modes of the **Tabs** component and its parent c
 
 **Since:** 24
 
+<!--Device-unnamed-declare enum TabsNestedScrollMode--><!--Device-unnamed-declare enum TabsNestedScrollMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SELF_ONLY
@@ -12,14 +14,15 @@ Enumerates the nested scrolling modes of the **Tabs** component and its parent c
 SELF_ONLY = 0
 ```
 
-The scrolling is contained within the **Tabs** component, and no scroll chaining occurs, that is,
-the parent component does not scroll when the component scrolling reaches the boundary.
+The scrolling is contained within the **Tabs** component, and no scroll chaining occurs, that is,the parent component does not scroll when the component scrolling reaches the boundary.
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-TabsNestedScrollMode-SELF_ONLY = 0--><!--Device-TabsNestedScrollMode-SELF_ONLY = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,15 +32,15 @@ the parent component does not scroll when the component scrolling reaches the bo
 SELF_FIRST = 1
 ```
 
-The **Tabs** component scrolls first, and when it hits the boundary, the parent component scrolls.
-When the parent container hits the boundary, its edge effect is displayed. If no edge effect is specified
-for the parent container, the edge effect of the **Tabs** component is displayed instead.
+The **Tabs** component scrolls first, and when it hits the boundary, the parent component scrolls.When the parent container hits the boundary, its edge effect is displayed. If no edge effect is specified for the parent container, the edge effect of the **Tabs** component is displayed instead.
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-TabsNestedScrollMode-SELF_FIRST = 1--><!--Device-TabsNestedScrollMode-SELF_FIRST = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

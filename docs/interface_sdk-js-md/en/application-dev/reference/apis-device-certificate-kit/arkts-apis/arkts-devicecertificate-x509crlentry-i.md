@@ -4,6 +4,8 @@ Provides APIs for operating on a revoked certificate entry in a CRL.
 
 **Since:** 11
 
+<!--Device-cert-interface X509CRLEntry--><!--Device-cert-interface X509CRLEntry-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
@@ -20,13 +22,15 @@ getCertIssuer(): DataBlob
 
 Obtains the issuer name of the revoked certificate.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > The obtained issuer name of this revoked certificate contains a string terminator.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509CRLEntry-getCertIssuer(): DataBlob--><!--Device-X509CRLEntry-getCertIssuer(): DataBlob-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -34,7 +38,7 @@ Obtains the issuer name of the revoked certificate.
 
 | Type | Description |
 | --- | --- |
-| DataBlob | Issuer name of the revoked certificate obtained. |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | Issuer name of the revoked certificate obtained. |
 
 **Error codes:**
 
@@ -57,13 +61,15 @@ Obtains the issuer name of the revoked certificate based on the encoding type.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-X509CRLEntry-getCertIssuer(encodingType: EncodingType): string--><!--Device-X509CRLEntry-getCertIssuer(encodingType: EncodingType): string-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encodingType | EncodingType | Yes | Encoding type. |
+| encodingType | [EncodingType](arkts-devicecertificate-encodingtype-e.md) | Yes | Encoding type. |
 
 **Return value:**
 
@@ -93,13 +99,15 @@ Obtains the distinguished name (DN) of the issuer of the revoked certificate.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CRLEntry-getCertIssuerX500DistinguishedName(): X500DistinguishedName--><!--Device-X509CRLEntry-getCertIssuerX500DistinguishedName(): X500DistinguishedName-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| X500DistinguishedName | DN object obtained. |
+| [X500DistinguishedName](arkts-devicecertificate-x500distinguishedname-i.md) | DN object obtained. |
 
 **Error codes:**
 
@@ -115,12 +123,13 @@ Obtains the distinguished name (DN) of the issuer of the revoked certificate.
 getEncoded(callback: AsyncCallback<EncodingBlob>): void
 ```
 
-Obtains the serialized data of this revoked certificate entry. This API uses an asynchronous callback to return the
-result.
+Obtains the serialized data of this revoked certificate entry. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509CRLEntry-getEncoded(callback: AsyncCallback<EncodingBlob>): void--><!--Device-X509CRLEntry-getEncoded(callback: AsyncCallback<EncodingBlob>): void-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -128,7 +137,7 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;EncodingBlob&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined**, and **data** is the serialized data of the revoked certificate entry obtained.Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<EncodingBlob> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the serialized data of the revoked certificate entry obtained.Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -151,13 +160,15 @@ Obtains the serialized data of this revoked certificate entry. This API uses a p
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CRLEntry-getEncoded(): Promise<EncodingBlob>--><!--Device-X509CRLEntry-getEncoded(): Promise<EncodingBlob>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;EncodingBlob&gt; | Promise used to return the serialized data of the revoked certificate entryobtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<EncodingBlob> | Promise used to return the serialized data of the revoked certificate entry obtained. |
 
 **Error codes:**
 
@@ -180,13 +191,15 @@ Obtains the CRL entry extensions in DER format.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CRLEntry-getExtensions(): DataBlob--><!--Device-X509CRLEntry-getExtensions(): DataBlob-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataBlob | X.509 CRL entry extensions obtained. |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | X.509 CRL entry extensions obtained. |
 
 **Error codes:**
 
@@ -208,13 +221,15 @@ Obtains the CRL entry extensions.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CRLEntry-getExtensionsObject(): CertExtension--><!--Device-X509CRLEntry-getExtensionsObject(): CertExtension-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CertExtension | CRL entry extensions. |
+| [CertExtension](arkts-devicecertificate-certextension-i.md) | CRL entry extensions. |
 
 **Error codes:**
 
@@ -235,6 +250,8 @@ Obtains the certificate's revocation date.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509CRLEntry-getRevocationDate(): string--><!--Device-X509CRLEntry-getRevocationDate(): string-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -264,6 +281,8 @@ Obtains the serial number of this revoked certificate.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CRLEntry-getSerialNumber(): bigint--><!--Device-X509CRLEntry-getSerialNumber(): bigint-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
@@ -291,6 +310,8 @@ Checks whether this CRL entry has extensions.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509CRLEntry-hasExtensions(): boolean--><!--Device-X509CRLEntry-hasExtensions(): boolean-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -320,13 +341,15 @@ Obtains the hash value of the data in DER format.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CRLEntry-hashCode(): Uint8Array--><!--Device-X509CRLEntry-hashCode(): Uint8Array-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Hash value obtained. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Hash value obtained. |
 
 **Error codes:**
 
@@ -347,6 +370,8 @@ Converts the object data into a string.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509CRLEntry-toString(): string--><!--Device-X509CRLEntry-toString(): string-End-->
 
 **System capability:** SystemCapability.Security.Cert
 

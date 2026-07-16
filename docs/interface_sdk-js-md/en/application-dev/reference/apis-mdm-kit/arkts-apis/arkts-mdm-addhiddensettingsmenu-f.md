@@ -12,10 +12,7 @@ import { deviceSettings } from '@kit.MDMKit';
 function addHiddenSettingsMenu(admin: Want, menusToHidden: Array<SettingsMenu>): void
 ```
 
-Adds a setting item to the hidden setting item list of the current user. Then the setting item is hidden in the
-current user's settings menu and cannot be found in settings search. Even if the setting item is located through
-some means, it cannot be opened when tapped. The settings take effect immediately after the API is called. The
-Settings application does not need to be restarted.
+Adds a setting item to the hidden setting item list of the current user. Then the setting item is hidden in the current user's settings menu and cannot be found in settings search. Even if the setting item is located through some means, it cannot be opened when tapped. The settings take effect immediately after the API is called. The Settings application does not need to be restarted.
 
 **Since:** 24
 
@@ -23,14 +20,16 @@ Settings application does not need to be restarted.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-deviceSettings-function addHiddenSettingsMenu(admin: Want, menusToHidden: Array<SettingsMenu>): void--><!--Device-deviceSettings-function addHiddenSettingsMenu(admin: Want, menusToHidden: Array<SettingsMenu>): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| menusToHidden | Array&lt;SettingsMenu&gt; | Yes | Hidden setting item list. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| menusToHidden | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<SettingsMenu> | Yes | Hidden setting item list. |
 
 **Error codes:**
 

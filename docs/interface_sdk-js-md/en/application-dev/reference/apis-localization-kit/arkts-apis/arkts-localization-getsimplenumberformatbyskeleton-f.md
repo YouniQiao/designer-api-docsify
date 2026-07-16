@@ -18,20 +18,22 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-i18n-export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleNumberFormat--><!--Device-i18n-export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleNumberFormat-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| skeleton | string | Yes | Valid skeleton. For details about the supported characters and their meanings, see[Number Skeletons](https://unicode-org.github.io/icu/userguide/format_parse/numbers/skeletons.html#number-skeletons). |
+| skeleton | string | Yes | Valid skeleton. For details about the supported characters and their meanings, see [Number Skeletons](https://unicode-org.github.io/icu/userguide/format_parse/numbers/skeletons.html#number-skeletons). |
 | locale | Intl.Locale | No | **Locale** object. The default value is the current system locale. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SimpleNumberFormat | **SimpleNumberFormat** object. |
+| [SimpleNumberFormat](arkts-localization-simplenumberformat-c.md) | **SimpleNumberFormat** object. |
 
 **Error codes:**
 
@@ -56,20 +58,22 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-i18n-export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: intl.Locale): SimpleNumberFormat--><!--Device-i18n-export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: intl.Locale): SimpleNumberFormat-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| skeleton | string | Yes | Valid skeleton. For details about the supported characters and their meanings, see[Number Skeletons](https://unicode-org.github.io/icu/userguide/format_parse/numbers/skeletons.html#number-skeletons). |
+| skeleton | string | Yes | Valid skeleton. For details about the supported characters and their meanings, see [Number Skeletons](https://unicode-org.github.io/icu/userguide/format_parse/numbers/skeletons.html#number-skeletons). |
 | locale | intl.Locale | No | **Locale** object. The default value is the current system locale. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SimpleNumberFormat | **SimpleNumberFormat** object. |
+| [SimpleNumberFormat](arkts-localization-simplenumberformat-c.md) | **SimpleNumberFormat** object. |
 
 **Error codes:**
 

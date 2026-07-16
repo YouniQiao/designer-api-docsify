@@ -12,12 +12,13 @@ import { adminManager } from '@kit.MDMKit';
 function getSuperAdmin(): Promise<Want>
 ```
 
-Obtains the super device administrator application of this administrator. This API uses a promise to return the
-result.
+Obtains the super device administrator application of this administrator. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-adminManager-function getSuperAdmin(): Promise<Want>--><!--Device-adminManager-function getSuperAdmin(): Promise<Want>-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -27,7 +28,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Want&gt; | Promise used to return the super device administrator application obtained. If no superdevice administrator application is activated on the device, **bundleName** and **abilityName** in **Want**returned are empty strings. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Want> | Promise used to return the super device administrator application obtained. If no super device administrator application is activated on the device, **bundleName** and **abilityName** in **Want** returned are empty strings. |
 
 **Error codes:**
 

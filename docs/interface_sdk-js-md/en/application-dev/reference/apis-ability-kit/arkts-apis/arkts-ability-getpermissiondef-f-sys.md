@@ -12,12 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getPermissionDef(permissionName: string, callback: AsyncCallback<PermissionDef>): void
 ```
 
-Obtains the PermissionDef struct based on the given permission name. This API uses an asynchronous callback to
-return the result.
+Obtains the PermissionDef struct based on the given permission name. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getPermissionDef(permissionName: string, callback: AsyncCallback<PermissionDef>): void--><!--Device-bundleManager-function getPermissionDef(permissionName: string, callback: AsyncCallback<PermissionDef>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -28,7 +29,7 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | permissionName | string | Yes | Name of the permission. |
-| callback | AsyncCallback&lt;PermissionDef&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return theresult. If the operation is successful, **err** is **null** and **data** is the PermissionDef object obtained.Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<PermissionDef> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the PermissionDef object obtained.Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -75,6 +76,8 @@ Obtains the PermissionDef struct based on the given permission name. This API us
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundleManager-function getPermissionDef(permissionName: string): Promise<PermissionDef>--><!--Device-bundleManager-function getPermissionDef(permissionName: string): Promise<PermissionDef>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -89,7 +92,7 @@ Obtains the PermissionDef struct based on the given permission name. This API us
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PermissionDef&gt; | Promise used to return the PermissionDef object obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PermissionDef> | Promise used to return the PermissionDef object obtained. |
 
 **Error codes:**
 

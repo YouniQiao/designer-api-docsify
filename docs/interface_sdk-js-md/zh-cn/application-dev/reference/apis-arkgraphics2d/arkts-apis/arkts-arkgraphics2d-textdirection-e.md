@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-text-enum TextDirection--><!--Device-text-enum TextDirection-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## RTL
@@ -16,7 +18,9 @@ RTL = 0
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextDirection-RTL = 0--><!--Device-TextDirection-RTL = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -30,7 +34,9 @@ LTR = 1
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextDirection-LTR = 1--><!--Device-TextDirection-LTR = 1-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

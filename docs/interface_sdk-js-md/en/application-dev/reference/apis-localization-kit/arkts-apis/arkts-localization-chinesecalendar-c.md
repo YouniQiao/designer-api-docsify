@@ -1,11 +1,12 @@
 # ChineseCalendar
 
-Provide a ChineseCalendar interface which could handle unique characteristics of the chinese calendar,
-such as leap month.
+Provide a ChineseCalendar interface which could handle unique characteristics of the chinese calendar,such as leap month.
 
 **Inheritance/Implementation:** ChineseCalendar extends [Calendar](arkts-localization-calendar-c.md)
 
 **Since:** 26.0.0
+
+<!--Device-i18n-export class ChineseCalendar extends Calendar--><!--Device-i18n-export class ChineseCalendar extends Calendar-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -28,6 +29,8 @@ Checks whether a given month exist leap month in gregorianYear and cyclicalYear.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChineseCalendar-public static checkLeapMonth(gregorianYear: int, cyclicalYear: int, month: int): boolean--><!--Device-ChineseCalendar-public static checkLeapMonth(gregorianYear: int, cyclicalYear: int, month: int): boolean-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -65,11 +68,13 @@ Sets the year, month, day, hour, minute, second, isLeapMonth for this ChineseCal
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChineseCalendar-public setChineseCalendarTime(chineseCalendarTime: ChineseCalendarTime): void--><!--Device-ChineseCalendar-public setChineseCalendarTime(chineseCalendarTime: ChineseCalendarTime): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chineseCalendarTime | ChineseCalendarTime | Yes | Indicates the time element used to set for ChineseCalendar. |
+| chineseCalendarTime | [ChineseCalendarTime](arkts-localization-chinesecalendartime-i.md) | Yes | Indicates the time element used to set for ChineseCalendar. |
 

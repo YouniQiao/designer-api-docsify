@@ -1,5 +1,11 @@
 # queryCurrentBundleEvents（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+```
+
 ## queryCurrentBundleEvents
 
 ```TypeScript
@@ -9,6 +15,8 @@ function queryCurrentBundleEvents(begin: number, end: number, callback: AsyncCal
 通过指定起始和结束时间，查询当前应用的事件集合，使用Callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-usageStatistics-function queryCurrentBundleEvents(begin: long, end: long, callback: AsyncCallback<Array<BundleEvents>>): void--><!--Device-usageStatistics-function queryCurrentBundleEvents(begin: long, end: long, callback: AsyncCallback<Array<BundleEvents>>): void-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -20,7 +28,7 @@ function queryCurrentBundleEvents(begin: number, end: number, callback: AsyncCal
 | --- | --- | --- | --- |
 | begin | number | 是 | 起始时间，单位：ms。 |
 | end | number | 是 | 结束时间，单位：ms。 |
-| callback | AsyncCallback&lt;Array&lt;BundleEvents&gt;&gt; | 是 | 回调方法。当查询成功，err为undefined，data为指定起始和结束时间段内，当前应用的事件集合；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<BundleEvents>> | 是 | 回调方法。当查询成功，err为undefined，data为指定起始和结束时间段内，当前应用的事件集合；否则为错误对象。 |
 
 **错误码：**
 
@@ -67,6 +75,8 @@ function queryCurrentBundleEvents(begin: number, end: number): Promise<Array<Bun
 
 **起始版本：** 9
 
+<!--Device-usageStatistics-function queryCurrentBundleEvents(begin: long, end: long): Promise<Array<BundleEvents>>--><!--Device-usageStatistics-function queryCurrentBundleEvents(begin: long, end: long): Promise<Array<BundleEvents>>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -82,7 +92,7 @@ function queryCurrentBundleEvents(begin: number, end: number): Promise<Array<Bun
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;BundleEvents&gt;&gt; | Promise对象。返回指定起始和结束时间段内，当前应用的事件集合。 |
+| Promise<Array<BundleEvents>> | Promise对象。返回指定起始和结束时间段内，当前应用的事件集合。 |
 
 **错误码：**
 
@@ -129,6 +139,8 @@ function queryCurrentBundleEvents(begin: number, end: number, maxNum: number): P
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-usageStatistics-function queryCurrentBundleEvents(begin: long, end: long, maxNum: int): Promise<Array<BundleEvents>>--><!--Device-usageStatistics-function queryCurrentBundleEvents(begin: long, end: long, maxNum: int): Promise<Array<BundleEvents>>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -145,7 +157,7 @@ function queryCurrentBundleEvents(begin: number, end: number, maxNum: number): P
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;BundleEvents&gt;&gt; | Promise对象，返回指定起始和结束时间段内，当前应用的事件集合。 |
+| Promise<Array<BundleEvents>> | Promise对象，返回指定起始和结束时间段内，当前应用的事件集合。 |
 
 **错误码：**
 

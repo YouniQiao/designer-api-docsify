@@ -4,6 +4,8 @@ Represents the USB device information.
 
 **Since:** 9
 
+<!--Device-usbManager-interface USBDevice--><!--Device-usbManager-interface USBDevice-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Bus address.
 
 **Since:** 9
 
+<!--Device-USBDevice-busNum: int--><!--Device-USBDevice-busNum: int-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## clazz
@@ -37,6 +41,8 @@ Device class.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-USBDevice-clazz: int--><!--Device-USBDevice-clazz: int-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -52,6 +58,8 @@ Device configuration descriptor information.
 
 **Since:** 9
 
+<!--Device-USBDevice-configs: Array<USBConfiguration>--><!--Device-USBDevice-configs: Array<USBConfiguration>-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## devAddress
@@ -65,6 +73,8 @@ Device address.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-USBDevice-devAddress: int--><!--Device-USBDevice-devAddress: int-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -80,6 +90,8 @@ Device manufacturer.
 
 **Since:** 9
 
+<!--Device-USBDevice-manufacturerName: string--><!--Device-USBDevice-manufacturerName: string-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## name
@@ -93,6 +105,8 @@ Device name.
 **Type:** string
 
 **Since:** 9
+
+<!--Device-USBDevice-name: string--><!--Device-USBDevice-name: string-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -108,6 +122,8 @@ Product ID.
 
 **Since:** 9
 
+<!--Device-USBDevice-productId: int--><!--Device-USBDevice-productId: int-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## productName
@@ -121,6 +137,8 @@ Product name.
 **Type:** string
 
 **Since:** 9
+
+<!--Device-USBDevice-productName: string--><!--Device-USBDevice-productName: string-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -136,6 +154,8 @@ Device protocol code.
 
 **Since:** 9
 
+<!--Device-USBDevice-protocol: int--><!--Device-USBDevice-protocol: int-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## serial
@@ -149,6 +169,8 @@ Sequence number.
 **Type:** string
 
 **Since:** 9
+
+<!--Device-USBDevice-serial: string--><!--Device-USBDevice-serial: string-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -164,6 +186,8 @@ Device subclass.
 
 **Since:** 9
 
+<!--Device-USBDevice-subClass: int--><!--Device-USBDevice-subClass: int-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## vendorId
@@ -178,6 +202,8 @@ Vendor ID.
 
 **Since:** 9
 
+<!--Device-USBDevice-vendorId: int--><!--Device-USBDevice-vendorId: int-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## version
@@ -191,6 +217,8 @@ Version number.
 **Type:** string
 
 **Since:** 9
+
+<!--Device-USBDevice-version: string--><!--Device-USBDevice-version: string-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 

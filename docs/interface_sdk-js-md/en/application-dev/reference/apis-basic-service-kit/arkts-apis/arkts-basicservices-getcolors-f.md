@@ -18,14 +18,16 @@ Obtains the wallpaper colors for the wallpaper of the specified type. Returns rg
 
 **Deprecated since:** 9
 
+<!--Device-wallpaper-function getColors(wallpaperType: WallpaperType, callback: AsyncCallback<Array<RgbaColor>>): void--><!--Device-wallpaper-function getColors(wallpaperType: WallpaperType, callback: AsyncCallback<Array<RgbaColor>>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | WallpaperType | Yes | indicates the wallpaper type. |
-| callback | AsyncCallback&lt;Array&lt;RgbaColor&gt;&gt; | Yes | the callback of getColors. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<RgbaColor>> | Yes | the callback of getColors. |
 
 **Example**
 
@@ -55,19 +57,21 @@ Obtains the wallpaper colors for the wallpaper of the specified type. Returns rg
 
 **Deprecated since:** 9
 
+<!--Device-wallpaper-function getColors(wallpaperType: WallpaperType): Promise<Array<RgbaColor>>--><!--Device-wallpaper-function getColors(wallpaperType: WallpaperType): Promise<Array<RgbaColor>>-End-->
+
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | WallpaperType | Yes | indicates the wallpaper type. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;RgbaColor&gt;&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<RgbaColor>> | the promise returned by the function. |
 
 **Example**
 

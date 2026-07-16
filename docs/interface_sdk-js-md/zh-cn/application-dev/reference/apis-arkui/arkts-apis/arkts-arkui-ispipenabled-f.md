@@ -1,5 +1,11 @@
 # isPiPEnabled
 
+## 导入模块
+
+```TypeScript
+import { PiPWindow } from '@kit.ArkUI';
+```
+
 ## isPiPEnabled
 
 ```TypeScript
@@ -10,7 +16,9 @@ function isPiPEnabled(): boolean
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PiPWindow-function isPiPEnabled(): boolean--><!--Device-PiPWindow-function isPiPEnabled(): boolean-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 

@@ -1,5 +1,11 @@
 # setTouchpadDoubleTapAndDragState（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+```
+
 ## setTouchpadDoubleTapAndDragState
 
 ```TypeScript
@@ -10,6 +16,8 @@ function setTouchpadDoubleTapAndDragState(isOpen: boolean, callback: AsyncCallba
 
 **起始版本：** 14
 
+<!--Device-pointer-function setTouchpadDoubleTapAndDragState(isOpen: boolean, callback: AsyncCallback<void>): void--><!--Device-pointer-function setTouchpadDoubleTapAndDragState(isOpen: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -19,7 +27,7 @@ function setTouchpadDoubleTapAndDragState(isOpen: boolean, callback: AsyncCallba
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isOpen | boolean | 是 | 双击拖拽开关的状态，true代表开启，false代表关闭。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当设置触控板双击拖拽开关状态成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当设置触控板双击拖拽开关状态成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -71,6 +79,8 @@ function setTouchpadDoubleTapAndDragState(isOpen: boolean): Promise<void>
 
 **起始版本：** 14
 
+<!--Device-pointer-function setTouchpadDoubleTapAndDragState(isOpen: boolean): Promise<void>--><!--Device-pointer-function setTouchpadDoubleTapAndDragState(isOpen: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -85,7 +95,7 @@ function setTouchpadDoubleTapAndDragState(isOpen: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

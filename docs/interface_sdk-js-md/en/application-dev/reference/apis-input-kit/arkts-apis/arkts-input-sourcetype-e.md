@@ -4,6 +4,8 @@ Enumerates touch sources. Currently, only the touchscreen and touchpad are suppo
 
 **Since:** 9
 
+<!--Device-unnamed-export declare enum SourceType--><!--Device-unnamed-export declare enum SourceType-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## TOUCH_SCREEN
@@ -15,6 +17,8 @@ TOUCH_SCREEN = 0
 Touchscreen.
 
 **Since:** 9
+
+<!--Device-SourceType-TOUCH_SCREEN = 0--><!--Device-SourceType-TOUCH_SCREEN = 0-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -28,6 +32,8 @@ Stylus.
 
 **Since:** 9
 
+<!--Device-SourceType-PEN = 1--><!--Device-SourceType-PEN = 1-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## TOUCH_PAD
@@ -39,6 +45,8 @@ TOUCH_PAD = 2
 Touchpad.
 
 **Since:** 9
+
+<!--Device-SourceType-TOUCH_PAD = 2--><!--Device-SourceType-TOUCH_PAD = 2-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 

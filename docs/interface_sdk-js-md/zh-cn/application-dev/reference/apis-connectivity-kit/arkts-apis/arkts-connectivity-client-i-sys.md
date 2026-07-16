@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-ssap-interface Client--><!--Device-ssap-interface Client-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
+
+## 导入模块
+
+```TypeScript
+import { ssap } from '@kit.ConnectivityKit';
+```
 
 ## callMethod
 
@@ -20,6 +28,8 @@ callMethod(method: Method): Promise<Method>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-callMethod(method: Method): Promise<Method>--><!--Device-Client-callMethod(method: Method): Promise<Method>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -28,13 +38,13 @@ callMethod(method: Method): Promise<Method>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| method | Method | 是 | 指示要调用的方法 |
+| method | [Method](arkts-connectivity-method-i-sys.md) | 是 | 指示要调用的方法 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Method&gt; | Promise用于返回方法结果。 |
+| Promise<Method> | Promise用于返回方法结果。 |
 
 **错误码：**
 
@@ -59,6 +69,8 @@ offEventNotify(callback?: Callback<Event>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-offEventNotify(callback?: Callback<Event>): void--><!--Device-Client-offEventNotify(callback?: Callback<Event>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -67,7 +79,7 @@ offEventNotify(callback?: Callback<Event>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;Event&gt; | 否 | 用于监听事件通知事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<Event> | 否 | 用于监听事件通知事件的回调。 |
 
 ## onEventNotify
 
@@ -83,6 +95,8 @@ onEventNotify(callback: Callback<Event>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-onEventNotify(callback: Callback<Event>): void--><!--Device-Client-onEventNotify(callback: Callback<Event>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -91,7 +105,7 @@ onEventNotify(callback: Callback<Event>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;Event&gt; | 是 | 用于监听事件通知事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<Event> | 是 | 用于监听事件通知事件的回调。 |
 
 ## readDescriptor
 
@@ -107,6 +121,8 @@ readDescriptor(descriptor: PropertyDescriptor): Promise<PropertyDescriptor>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-readDescriptor(descriptor: PropertyDescriptor): Promise<PropertyDescriptor>--><!--Device-Client-readDescriptor(descriptor: PropertyDescriptor): Promise<PropertyDescriptor>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -115,13 +131,13 @@ readDescriptor(descriptor: PropertyDescriptor): Promise<PropertyDescriptor>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| descriptor | PropertyDescriptor | 是 | 指示要读取的描述符 |
+| descriptor | [PropertyDescriptor](arkts-connectivity-propertydescriptor-i.md) | 是 | 指示要读取的描述符 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PropertyDescriptor&gt; | Promise用于返回描述符值。 |
+| Promise<PropertyDescriptor> | Promise用于返回描述符值。 |
 
 **错误码：**
 
@@ -148,6 +164,8 @@ setPropertyIndication(property: Property, enable: boolean): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-setPropertyIndication(property: Property, enable: boolean): Promise<void>--><!--Device-Client-setPropertyIndication(property: Property, enable: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -156,14 +174,14 @@ setPropertyIndication(property: Property, enable: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| property | Property | 是 | 要指示的属性。 |
+| property | [Property](arkts-connectivity-property-i.md) | 是 | 要指示的属性。 |
 | enable | boolean | 是 | 指定是否启用属性的指示 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise<void> | 返回promise对象。 |
 
 **错误码：**
 
@@ -193,6 +211,8 @@ writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-writeDescriptor(descriptor: PropertyDescriptor): Promise<void>--><!--Device-Client-writeDescriptor(descriptor: PropertyDescriptor): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -201,13 +221,13 @@ writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| descriptor | PropertyDescriptor | 是 | 指示要写入的描述符。<br>描述符类型不应为CLIENT_PROPERTY_CONFIG。 |
+| descriptor | [PropertyDescriptor](arkts-connectivity-propertydescriptor-i.md) | 是 | 指示要写入的描述符。<br>描述符类型不应为CLIENT_PROPERTY_CONFIG。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise用于返回结果。 |
+| Promise<void> | Promise用于返回结果。 |
 
 **错误码：**
 

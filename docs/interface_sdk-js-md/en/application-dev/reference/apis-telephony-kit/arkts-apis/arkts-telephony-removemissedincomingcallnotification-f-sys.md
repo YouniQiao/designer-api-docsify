@@ -18,6 +18,8 @@ Remove missed incoming call notification.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE and ohos.permission.READ_CALL_LOG and ohos.permission.WRITE_CALL_LOG
 
+<!--Device-call-function removeMissedIncomingCallNotification(callback: AsyncCallback<void>): void--><!--Device-call-function removeMissedIncomingCallNotification(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Remove missed incoming call notification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of removeMissedIncomingCallNotification. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of removeMissedIncomingCallNotification. |
 
 **Error codes:**
 
@@ -67,6 +69,8 @@ Remove missed incoming call notification.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE and ohos.permission.READ_CALL_LOG and ohos.permission.WRITE_CALL_LOG
 
+<!--Device-call-function removeMissedIncomingCallNotification(): Promise<void>--><!--Device-call-function removeMissedIncomingCallNotification(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -75,7 +79,7 @@ Remove missed incoming call notification.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the removeMissedIncomingCallNotification. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the removeMissedIncomingCallNotification. |
 
 **Error codes:**
 

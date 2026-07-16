@@ -14,15 +14,15 @@ function finishLogCollected(admin: Want): void
 
 Deletes the device logs collected by the current MDM app under the current user.
 
-> **NOTE**
->
-> After the app calls [startCollectLog](arkts-mdm-startcollectlog-f.md#startcollectlog-1) to initiate log collection and
-> receives the
-> [EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterpriseadminextensionability-c.md#onlogcollected-1)
-> callback, you are advised to immediately copy or process the logs, and then call this API to delete the collected
-> logs.
->
-> If this API is not called, device logs will occupy the system storage space, which does not affect the next call
+> **NOTE**  
+>  
+> After the app calls [startCollectLog](arkts-mdm-startcollectlog-f.md#startcollectlog-1) to initiate log collection and  
+> receives the  
+> [EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterpriseadminextensionability-c.md#onlogcollected-1)  
+> callback, you are advised to immediately copy or process the logs, and then call this API to delete the collected  
+> logs.  
+>  
+> If this API is not called, device logs will occupy the system storage space, which does not affect the next call  
 > of [startCollectLog](arkts-mdm-startcollectlog-f.md#startcollectlog-1) to start a log collection task.
 
 **Since:** 23
@@ -31,13 +31,15 @@ Deletes the device logs collected by the current MDM app under the current user.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-systemManager-function finishLogCollected(admin: Want): void--><!--Device-systemManager-function finishLogCollected(admin: Want): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 
 **Error codes:**
 

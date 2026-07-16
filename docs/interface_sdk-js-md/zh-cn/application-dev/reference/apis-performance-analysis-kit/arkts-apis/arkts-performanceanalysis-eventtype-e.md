@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-hiAppEvent-enum EventType--><!--Device-hiAppEvent-enum EventType-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## FAULT
@@ -16,7 +18,9 @@ FAULT = 1
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EventType-FAULT = 1--><!--Device-EventType-FAULT = 1-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -30,7 +34,9 @@ STATISTIC = 2
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EventType-STATISTIC = 2--><!--Device-EventType-STATISTIC = 2-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -44,7 +50,9 @@ SECURITY = 3
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EventType-SECURITY = 3--><!--Device-EventType-SECURITY = 3-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -58,7 +66,9 @@ BEHAVIOR = 4
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EventType-BEHAVIOR = 4--><!--Device-EventType-BEHAVIOR = 4-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 

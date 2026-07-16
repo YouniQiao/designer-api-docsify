@@ -1,5 +1,11 @@
 # getDisallowedRunningBundles（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+```
+
 ## getDisallowedRunningBundles
 
 ```TypeScript
@@ -18,6 +24,8 @@ function getDisallowedRunningBundles(admin: Want, callback: AsyncCallback<Array<
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function getDisallowedRunningBundles(admin: Want, callback: AsyncCallback<Array<string>>): void--><!--Device-applicationManager-function getDisallowedRunningBundles(admin: Want, callback: AsyncCallback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -26,8 +34,8 @@ function getDisallowedRunningBundles(admin: Want, callback: AsyncCallback<Array<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，当获取应用运行禁止名单成功时，err为null，否则为错误对象。<br/>**说明：** API version 20及之前版本，返回值为应用[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)列表。从API version 21版本开始，返回值为应用[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)或[appIdentifier](../../../../quick-start/common-problem-of-application.md#什么是appidentifier)列表。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | 是 | 回调函数，当获取应用运行禁止名单成功时，err为null，否则为错误对象。<br/>**说明：** API version 20及之前版本，返回值为应用[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)列表。从API version 21版本开始，返回值为应用[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)或[appIdentifier](../../../../quick-start/common-problem-of-application.md#什么是appidentifier)列表。 |
 
 **错误码：**
 
@@ -80,6 +88,8 @@ function getDisallowedRunningBundles(admin: Want, userId: number, callback: Asyn
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function getDisallowedRunningBundles(admin: Want, userId: number, callback: AsyncCallback<Array<string>>): void--><!--Device-applicationManager-function getDisallowedRunningBundles(admin: Want, userId: number, callback: AsyncCallback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -88,9 +98,9 @@ function getDisallowedRunningBundles(admin: Want, userId: number, callback: Asyn
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | userId | number | 是 | 用户ID，指定具体用户。取值范围：大于等于0。 |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，当获取应用运行禁止名单成功时，err为null，否则为错误对象。<br/>**说明：** API version 20及之前版本，返回值为应用[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)列表。从API version 21版本开始，返回值为应用[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)或[appIdentifier](../../../../quick-start/common-problem-of-application.md#什么是appidentifier)列表。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | 是 | 回调函数，当获取应用运行禁止名单成功时，err为null，否则为错误对象。<br/>**说明：** API version 20及之前版本，返回值为应用[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)列表。从API version 21版本开始，返回值为应用[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)或[appIdentifier](../../../../quick-start/common-problem-of-application.md#什么是appidentifier)列表。 |
 
 **错误码：**
 
@@ -143,6 +153,8 @@ function getDisallowedRunningBundles(admin: Want, userId?: number): Promise<Arra
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function getDisallowedRunningBundles(admin: Want, userId?: number): Promise<Array<string>>--><!--Device-applicationManager-function getDisallowedRunningBundles(admin: Want, userId?: number): Promise<Array<string>>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -151,14 +163,14 @@ function getDisallowedRunningBundles(admin: Want, userId?: number): Promise<Arra
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | userId | number | 否 | 用户ID，取值范围：大于等于0。<br> - 调用接口时，若传入userId，表示指定用户。<br> - 调用接口时，若未传入userId，表示当前用户。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回当前/指定用户下的应用运行禁止名单。<br/>**说明：** API version 20及之前版本，返回值为应用[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)列表。从API version 21版本开始，返回值为应用[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)或[appIdentifier](../../../../quick-start/common-problem-of-application.md#什么是appidentifier)列表。 |
+| Promise<Array<string>> | Promise对象，返回当前/指定用户下的应用运行禁止名单。<br/>**说明：** API version 20及之前版本，返回值为应用[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)列表。从API version 21版本开始，返回值为应用[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)或[appIdentifier](../../../../quick-start/common-problem-of-application.md#什么是appidentifier)列表。 |
 
 **错误码：**
 

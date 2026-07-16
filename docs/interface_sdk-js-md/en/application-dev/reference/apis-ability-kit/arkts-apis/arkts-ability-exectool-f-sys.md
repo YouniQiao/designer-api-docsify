@@ -21,6 +21,10 @@ Execute a CLI command
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-cliManager-function execTool(toolName: string, subCommand: string, args: Record<string, Object>, challenge: string,
+    execOptions?: ExecOptions): Promise<CliSessionInfo>--><!--Device-cliManager-function execTool(toolName: string, subCommand: string, args: Record<string, Object>, challenge: string,
+    execOptions?: ExecOptions): Promise<CliSessionInfo>-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -31,15 +35,15 @@ Execute a CLI command
 | --- | --- | --- | --- |
 | toolName | string | Yes | The name of target tool. |
 | subCommand | string | Yes | The subCommand of this execute action. |
-| args | Record&lt;string, Object&gt; | Yes | The input args of tool. |
+| args | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Object> | Yes | The input args of tool. |
 | challenge | string | Yes | The unique identifier get from access token manager. |
-| execOptions | ExecOptions | No | The options of this action. |
+| execOptions | [ExecOptions](arkts-ability-execoptions-i-sys.md) | No | The options of this action. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CliSessionInfo&gt; | execute result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CliSessionInfo> | execute result. |
 
 **Error codes:**
 

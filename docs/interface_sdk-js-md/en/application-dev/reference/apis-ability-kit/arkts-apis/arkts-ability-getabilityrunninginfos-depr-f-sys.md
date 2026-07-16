@@ -16,6 +16,8 @@ Obtains the ability running information. This API uses a promise to return the r
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
+<!--Device-abilityManager-function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>--><!--Device-abilityManager-function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Obtains the ability running information. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AbilityRunningInfo&gt;&gt; | Promise used to return the ability running information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AbilityRunningInfo>> | Promise used to return the ability running information. |
 
 
 ## getAbilityRunningInfos
@@ -43,6 +45,8 @@ Obtains the ability running information. This API uses an asynchronous callback 
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
+<!--Device-abilityManager-function getAbilityRunningInfos(callback: AsyncCallback<Array<AbilityRunningInfo>>): void--><!--Device-abilityManager-function getAbilityRunningInfos(callback: AsyncCallback<Array<AbilityRunningInfo>>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -51,5 +55,5 @@ Obtains the ability running information. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;AbilityRunningInfo&gt;&gt; | Yes | Callback used to return the ability running information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<AbilityRunningInfo>> | Yes | Callback used to return the ability running information. |
 

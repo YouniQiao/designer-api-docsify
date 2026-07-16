@@ -4,6 +4,8 @@ Defines the Web resource response.
 
 **Since:** 8
 
+<!--Device-unnamed-declare class WebResourceResponse--><!--Device-unnamed-declare class WebResourceResponse-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## constructor
@@ -18,6 +20,8 @@ Constructor.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebResourceResponse-constructor()--><!--Device-WebResourceResponse-constructor()-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## getReasonMessage
@@ -31,6 +35,8 @@ Gets the reason message.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebResourceResponse-getReasonMessage(): string--><!--Device-WebResourceResponse-getReasonMessage(): string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -52,6 +58,8 @@ Gets the response code.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebResourceResponse-getResponseCode(): number--><!--Device-WebResourceResponse-getResponseCode(): number-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -72,6 +80,8 @@ Gets the response data.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebResourceResponse-getResponseData(): string--><!--Device-WebResourceResponse-getResponseData(): string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -89,6 +99,8 @@ getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined
 Gets the response data.
 
 **Since:** 13
+
+<!--Device-WebResourceResponse-getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined--><!--Device-WebResourceResponse-getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -110,6 +122,8 @@ Gets the response encoding.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebResourceResponse-getResponseEncoding(): string--><!--Device-WebResourceResponse-getResponseEncoding(): string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -130,13 +144,15 @@ Gets the response headers.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebResourceResponse-getResponseHeader(): Array<Header>--><!--Device-WebResourceResponse-getResponseHeader(): Array<Header>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Header&gt; | Return the response headers. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Header> | Return the response headers. |
 
 ## getResponseIsReady
 
@@ -147,6 +163,8 @@ getResponseIsReady(): boolean
 Gets whether the response is ready.
 
 **Since:** 13
+
+<!--Device-WebResourceResponse-getResponseIsReady(): boolean--><!--Device-WebResourceResponse-getResponseIsReady(): boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -168,6 +186,8 @@ Gets the response MIME type.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebResourceResponse-getResponseMimeType(): string--><!--Device-WebResourceResponse-getResponseMimeType(): string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -187,6 +207,8 @@ Sets the reason message.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebResourceResponse-setReasonMessage(reason: string): void--><!--Device-WebResourceResponse-setReasonMessage(reason: string): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -208,6 +230,8 @@ Sets the response code.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebResourceResponse-setResponseCode(code: number): void--><!--Device-WebResourceResponse-setResponseCode(code: number): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -227,6 +251,8 @@ Sets the response data.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebResourceResponse-setResponseData(data: string | number | Resource | ArrayBuffer): void--><!--Device-WebResourceResponse-setResponseData(data: string | number | Resource | ArrayBuffer): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -248,6 +274,8 @@ Sets the response encoding.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebResourceResponse-setResponseEncoding(encoding: string): void--><!--Device-WebResourceResponse-setResponseEncoding(encoding: string): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -268,13 +296,15 @@ Sets the response headers.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebResourceResponse-setResponseHeader(header: Array<Header>): void--><!--Device-WebResourceResponse-setResponseHeader(header: Array<Header>): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| header | Array&lt;Header&gt; | Yes | the response headers. |
+| header | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Header> | Yes | the response headers. |
 
 ## setResponseIsReady
 
@@ -287,6 +317,8 @@ Sets the response is ready or not.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebResourceResponse-setResponseIsReady(IsReady: boolean): void--><!--Device-WebResourceResponse-setResponseIsReady(IsReady: boolean): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -307,6 +339,8 @@ Sets the response MIME type.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebResourceResponse-setResponseMimeType(mimeType: string): void--><!--Device-WebResourceResponse-setResponseMimeType(mimeType: string): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

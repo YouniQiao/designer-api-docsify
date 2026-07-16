@@ -4,6 +4,8 @@ Defines the notification flags.
 
 **Since:** 8
 
+<!--Device-unnamed-export interface NotificationFlags--><!--Device-unnamed-export interface NotificationFlags-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## bannerEnabled
@@ -17,6 +19,8 @@ Settings of banner for the notification. The default value is **TYPE_NONE**. Onl
 **Type:** NotificationFlagStatus
 
 **Since:** 23
+
+<!--Device-NotificationFlags-bannerEnabled?: NotificationFlagStatus--><!--Device-NotificationFlags-bannerEnabled?: NotificationFlagStatus-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -32,6 +36,8 @@ Settings of screen lock for the notification. The default value is **TYPE_NONE**
 
 **Since:** 23
 
+<!--Device-NotificationFlags-lockScreenEnabled?: NotificationFlagStatus--><!--Device-NotificationFlags-lockScreenEnabled?: NotificationFlagStatus-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## soundEnabled
@@ -40,12 +46,13 @@ Settings of screen lock for the notification. The default value is **TYPE_NONE**
 soundEnabled?: NotificationFlagStatus
 ```
 
-Settings of sound for the notification. The default value is **TYPE_NONE**. This parameter becomes writable
-starting from API version 23. Only TYPE_CLOSE takes effect.
+Settings of sound for the notification. The default value is **TYPE_NONE**. This parameter becomes writable starting from API version 23. Only TYPE_CLOSE takes effect.
 
 **Type:** NotificationFlagStatus
 
 **Since:** 8
+
+<!--Device-NotificationFlags-soundEnabled?: NotificationFlagStatus--><!--Device-NotificationFlags-soundEnabled?: NotificationFlagStatus-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -55,12 +62,13 @@ starting from API version 23. Only TYPE_CLOSE takes effect.
 vibrationEnabled?: NotificationFlagStatus
 ```
 
-Settings of vibration for the notification. The default value is **TYPE_NONE**. This parameter becomes writable
-starting from API version 23. Only TYPE_CLOSE takes effect.
+Settings of vibration for the notification. The default value is **TYPE_NONE**. This parameter becomes writable starting from API version 23. Only TYPE_CLOSE takes effect.
 
 **Type:** NotificationFlagStatus
 
 **Since:** 8
+
+<!--Device-NotificationFlags-vibrationEnabled?: NotificationFlagStatus--><!--Device-NotificationFlags-vibrationEnabled?: NotificationFlagStatus-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

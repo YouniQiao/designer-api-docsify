@@ -6,6 +6,8 @@ Manager HID device profile.
 
 **Since:** 23
 
+<!--Device-hid-interface HidDeviceProfile extends BaseProfile--><!--Device-hid-interface HidDeviceProfile extends BaseProfile-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -28,13 +30,15 @@ Initiate an HID connection to a remote HID host device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HidDeviceProfile-connect(deviceId: BluetoothAddress): void--><!--Device-HidDeviceProfile-connect(deviceId: BluetoothAddress): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | BluetoothAddress | Yes | Indicates the address of the remote Bluetooth device. |
+| deviceId | [BluetoothAddress](arkts-connectivity-bluetoothaddress-i.md) | Yes | Indicates the address of the remote Bluetooth device. |
 
 **Error codes:**
 
@@ -79,6 +83,8 @@ Disconnect the HID connection with the remote device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HidDeviceProfile-disconnect(): void--><!--Device-HidDeviceProfile-disconnect(): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Error codes:**
@@ -117,13 +123,15 @@ Unsubscribe from the event that a GET_REPORT message is received from the peer d
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HidDeviceProfile-offGetReport(callback?: Callback<GetReportData>): void--><!--Device-HidDeviceProfile-offGetReport(callback?: Callback<GetReportData>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;GetReportData&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<GetReportData> | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -162,13 +170,15 @@ Unsubscribe from the event reported when InterruptData is received from the remo
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HidDeviceProfile-offInterruptDataReceived(callback?: Callback<InterruptData>): void--><!--Device-HidDeviceProfile-offInterruptDataReceived(callback?: Callback<InterruptData>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;InterruptData&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<InterruptData> | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -207,13 +217,15 @@ Unsubscribe from the event that a SET_PROTOCOL message is received from the peer
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HidDeviceProfile-offSetProtocol(callback?: Callback<ProtocolData>): void--><!--Device-HidDeviceProfile-offSetProtocol(callback?: Callback<ProtocolData>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;ProtocolData&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ProtocolData> | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -252,13 +264,15 @@ Unsubscribe from the event that a SET_REPORT message is received from the peer d
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HidDeviceProfile-offSetReport(callback?: Callback<SetReportData>): void--><!--Device-HidDeviceProfile-offSetReport(callback?: Callback<SetReportData>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;SetReportData&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SetReportData> | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -297,13 +311,15 @@ Unsubscribe from the event reported when virtual Cable is removed.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HidDeviceProfile-offVirtualCableUnplug(callback?: Callback<void>): void--><!--Device-HidDeviceProfile-offVirtualCableUnplug(callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -342,13 +358,15 @@ Subscribe to the event reported when GET_REPORT message is received from the rem
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HidDeviceProfile-onGetReport(callback: Callback<GetReportData>): void--><!--Device-HidDeviceProfile-onGetReport(callback: Callback<GetReportData>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;GetReportData&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<GetReportData> | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -386,13 +404,15 @@ Subscribe to the event reported when InterruptData is received from the remote.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HidDeviceProfile-onInterruptDataReceived(callback: Callback<InterruptData>): void--><!--Device-HidDeviceProfile-onInterruptDataReceived(callback: Callback<InterruptData>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;InterruptData&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<InterruptData> | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -430,13 +450,15 @@ Subscribe to the event reported when SET_PROTOCOL message is received from the r
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HidDeviceProfile-onSetProtocol(callback: Callback<ProtocolData>): void--><!--Device-HidDeviceProfile-onSetProtocol(callback: Callback<ProtocolData>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;ProtocolData&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ProtocolData> | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -474,13 +496,15 @@ Subscribe to the event reported when SET_REPORT message is received from the rem
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HidDeviceProfile-onSetReport(callback: Callback<SetReportData>): void--><!--Device-HidDeviceProfile-onSetReport(callback: Callback<SetReportData>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;SetReportData&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SetReportData> | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -518,13 +542,15 @@ Subscribe to the event reported when virtual Cable is removed.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HidDeviceProfile-onVirtualCableUnplug(callback: Callback<void>): void--><!--Device-HidDeviceProfile-onVirtualCableUnplug(callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -554,11 +580,7 @@ try {
 registerHidDevice(sdp: HidDeviceSdp, inQos: HidDeviceQos, outQos: HidDeviceQos, callback: Callback<boolean>): void
 ```
 
-Application registers the HID Device capability.
-The application will only successfully call this API when it's in the foreground.
-If the application that has registered the HID Device capability is switched to the background, the system
-automatically cancels the HID Device capability registration. The application can listen to the appStatusChange
-callback to detect the status change.
+Application registers the HID Device capability.The application will only successfully call this API when it's in the foreground.If the application that has registered the HID Device capability is switched to the background, the system automatically cancels the HID Device capability registration. The application can listen to the appStatusChange callback to detect the status change.
 
 **Since:** 23
 
@@ -566,16 +588,18 @@ callback to detect the status change.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HidDeviceProfile-registerHidDevice(sdp: HidDeviceSdp, inQos: HidDeviceQos, outQos: HidDeviceQos, callback: Callback<boolean>): void--><!--Device-HidDeviceProfile-registerHidDevice(sdp: HidDeviceSdp, inQos: HidDeviceQos, outQos: HidDeviceQos, callback: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sdp | HidDeviceSdp | Yes | Describe the hid device capability fields of this endpoint being queried. |
-| inQos | HidDeviceQos | Yes | Describe the In Quality of Service (QoS) settingsfor the Bluetooth HID device application. |
-| outQos | HidDeviceQos | Yes | Describe the Out Quality of Service (QoS) settingsfor the Bluetooth HID device application. |
-| callback | Callback&lt;boolean&gt; | Yes | Callback for HID device registration status changes,{@code true} indicates register success or {@code false} otherwise. |
+| sdp | [HidDeviceSdp](arkts-connectivity-hiddevicesdp-i.md) | Yes | Describe the hid device capability fields of this endpoint being queried. |
+| inQos | [HidDeviceQos](arkts-connectivity-hiddeviceqos-i.md) | Yes | Describe the In Quality of Service (QoS) settings for the Bluetooth HID device application. |
+| outQos | [HidDeviceQos](arkts-connectivity-hiddeviceqos-i.md) | Yes | Describe the Out Quality of Service (QoS) settings for the Bluetooth HID device application. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | Yes | Callback for HID device registration status changes,{@code true} indicates register success or {@code false} otherwise. |
 
 **Error codes:**
 
@@ -654,15 +678,17 @@ Reply report to a remote HID host device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HidDeviceProfile-replyReport(type: ReportType, id: int, reportData: Uint8Array): void--><!--Device-HidDeviceProfile-replyReport(type: ReportType, id: int, reportData: Uint8Array): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | ReportType | Yes | Report type for reply |
+| type | [ReportType](arkts-connectivity-reporttype-e.md) | Yes | Report type for reply |
 | id | number | Yes | Report Id, as defined in descriptor.It can be 0 in case Report Id are not defined in descriptor. |
-| reportData | Uint8Array | Yes | Report Data send to host. |
+| reportData | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Report Data send to host. |
 
 **Error codes:**
 
@@ -704,13 +730,15 @@ Report error to a remote HID host device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HidDeviceProfile-reportError(error: ErrorReason): void--><!--Device-HidDeviceProfile-reportError(error: ErrorReason): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | ErrorReason | Yes | error reason to send. |
+| error | [ErrorReason](arkts-connectivity-errorreason-e.md) | Yes | error reason to send. |
 
 **Error codes:**
 
@@ -750,6 +778,8 @@ Send report to a remote HID host device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HidDeviceProfile-sendReport(id: int, reportData: Uint8Array): void--><!--Device-HidDeviceProfile-sendReport(id: int, reportData: Uint8Array): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -757,7 +787,7 @@ Send report to a remote HID host device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | number | Yes | Report ID defined in the descriptor. |
-| reportData | Uint8Array | Yes | Report data sent to the host device. |
+| reportData | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Report data sent to the host device. |
 
 **Error codes:**
 
@@ -797,6 +827,8 @@ Application unregisters the HID Device capability.
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HidDeviceProfile-unregisterHidDevice(): void--><!--Device-HidDeviceProfile-unregisterHidDevice(): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

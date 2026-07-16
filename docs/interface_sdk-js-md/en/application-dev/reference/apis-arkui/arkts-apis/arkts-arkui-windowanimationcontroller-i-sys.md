@@ -4,6 +4,8 @@ Window animation controller.
 
 **Since:** 9
 
+<!--Device-windowAnimationManager-export interface WindowAnimationController--><!--Device-windowAnimationManager-export interface WindowAnimationController-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -27,6 +29,10 @@ Called on application transition.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WindowAnimationController-onAppTransition(fromWindowTarget: WindowAnimationTarget, toWindowTarget: WindowAnimationTarget,
+      finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onAppTransition(fromWindowTarget: WindowAnimationTarget, toWindowTarget: WindowAnimationTarget,
+      finishCallback: WindowAnimationFinishedCallback): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -35,9 +41,9 @@ Called on application transition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromWindowTarget | WindowAnimationTarget | Yes | Window target of the source application. |
-| toWindowTarget | WindowAnimationTarget | Yes | Window target of the destination application. |
-| finishCallback | WindowAnimationFinishedCallback | Yes | Animation finished callback. |
+| fromWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | Yes | Window target of the source application. |
+| toWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | Yes | Window target of the destination application. |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
 **Example**
 
@@ -55,6 +61,8 @@ Called on closing a window.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WindowAnimationController-onCloseWindow(closingWindowTarget: WindowAnimationTarget, finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onCloseWindow(closingWindowTarget: WindowAnimationTarget, finishCallback: WindowAnimationFinishedCallback): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -63,8 +71,8 @@ Called on closing a window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| closingWindowTarget | WindowAnimationTarget | Yes |  |
-| finishCallback | WindowAnimationFinishedCallback | Yes | Animation finished callback. |
+| closingWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | Yes |  |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
 **Example**
 
@@ -83,6 +91,10 @@ Called on minimizing a window.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WindowAnimationController-onMinimizeWindow(minimizingWindowTarget: WindowAnimationTarget,
+      finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onMinimizeWindow(minimizingWindowTarget: WindowAnimationTarget,
+      finishCallback: WindowAnimationFinishedCallback): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -91,8 +103,8 @@ Called on minimizing a window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minimizingWindowTarget | WindowAnimationTarget | Yes | Window target of the minimizing window. |
-| finishCallback | WindowAnimationFinishedCallback | Yes | Animation finished callback. |
+| minimizingWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | Yes | Window target of the minimizing window. |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
 **Example**
 
@@ -110,6 +122,8 @@ Called on unlocking the screen.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WindowAnimationController-onScreenUnlock(finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onScreenUnlock(finishCallback: WindowAnimationFinishedCallback): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -118,7 +132,7 @@ Called on unlocking the screen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| finishCallback | WindowAnimationFinishedCallback | Yes | Animation finished callback. |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
 ## onStartAppFromLauncher
 
@@ -133,6 +147,10 @@ Called on starting an application form launcher.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WindowAnimationController-onStartAppFromLauncher(startingWindowTarget: WindowAnimationTarget,
+      finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onStartAppFromLauncher(startingWindowTarget: WindowAnimationTarget,
+      finishCallback: WindowAnimationFinishedCallback): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -141,8 +159,8 @@ Called on starting an application form launcher.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startingWindowTarget | WindowAnimationTarget | Yes | indicates Window target of the starting application. |
-| finishCallback | WindowAnimationFinishedCallback | Yes | Animation finished callback. |
+| startingWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | Yes | indicates Window target of the starting application. |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
 **Example**
 
@@ -161,6 +179,10 @@ Called on starting an application form other.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WindowAnimationController-onStartAppFromOther(startingWindowTarget: WindowAnimationTarget,
+      finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onStartAppFromOther(startingWindowTarget: WindowAnimationTarget,
+      finishCallback: WindowAnimationFinishedCallback): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -169,8 +191,8 @@ Called on starting an application form other.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startingWindowTarget | WindowAnimationTarget | Yes | Window target of the starting application. |
-| finishCallback | WindowAnimationFinishedCallback | Yes | Animation finished callback. |
+| startingWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | Yes | Window target of the starting application. |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
 **Example**
 
@@ -189,6 +211,10 @@ Called on starting an application form recent.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WindowAnimationController-onStartAppFromRecent(startingWindowTarget: WindowAnimationTarget,
+      finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onStartAppFromRecent(startingWindowTarget: WindowAnimationTarget,
+      finishCallback: WindowAnimationFinishedCallback): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -197,8 +223,8 @@ Called on starting an application form recent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startingWindowTarget | WindowAnimationTarget | Yes | Window target of the starting application. |
-| finishCallback | WindowAnimationFinishedCallback | Yes | Animation finished callback. |
+| startingWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | Yes | Window target of the starting application. |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
 **Example**
 
@@ -217,6 +243,10 @@ Called on window animation targets update.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WindowAnimationController-onWindowAnimationTargetsUpdate(fullScreenWindowTarget: WindowAnimationTarget,
+      floatingWindowTargets: Array<WindowAnimationTarget>): void--><!--Device-WindowAnimationController-onWindowAnimationTargetsUpdate(fullScreenWindowTarget: WindowAnimationTarget,
+      floatingWindowTargets: Array<WindowAnimationTarget>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -225,8 +255,8 @@ Called on window animation targets update.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fullScreenWindowTarget | WindowAnimationTarget | Yes | The fullscreen window target. |
-| floatingWindowTargets | Array&lt;WindowAnimationTarget&gt; | Yes | All the floating window targets. |
+| fullScreenWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | Yes | The fullscreen window target. |
+| floatingWindowTargets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<WindowAnimationTarget> | Yes | All the floating window targets. |
 
 **Example**
 

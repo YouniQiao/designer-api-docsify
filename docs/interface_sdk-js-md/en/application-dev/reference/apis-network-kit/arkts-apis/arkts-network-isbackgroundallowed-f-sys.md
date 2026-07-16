@@ -18,6 +18,8 @@ Get the status if applications can use data on background.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function isBackgroundAllowed(callback: AsyncCallback<boolean>): void--><!--Device-policy-function isBackgroundAllowed(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Get the status if applications can use data on background.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | the callback of allowed or not to use data on background. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | the callback of allowed or not to use data on background. |
 
 **Error codes:**
 
@@ -64,6 +66,8 @@ Get the status if applications can use data on background.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function isBackgroundAllowed(): Promise<boolean>--><!--Device-policy-function isBackgroundAllowed(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -72,7 +76,7 @@ Get the status if applications can use data on background.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | The promise returned by the function. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Provides the drm provision request definitions.
 
 **Since:** 14
 
+<!--Device-drm-interface ProvisionRequest--><!--Device-drm-interface ProvisionRequest-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Provision request data sent to provision server.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-ProvisionRequest-data: Uint8Array--><!--Device-ProvisionRequest-data: Uint8Array-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## defaultURL
@@ -41,6 +45,8 @@ Provision server URL.
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ProvisionRequest-defaultURL: string--><!--Device-ProvisionRequest-defaultURL: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 

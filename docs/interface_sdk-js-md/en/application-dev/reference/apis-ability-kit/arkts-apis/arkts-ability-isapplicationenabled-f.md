@@ -12,12 +12,13 @@ import { bundle } from '@kit.AbilityKit';
 function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether an application is enabled based on a given bundle name. This API uses an asynchronous callback to
-return the result.
+Checks whether an application is enabled based on a given bundle name. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-bundle-function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-bundle-function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -26,7 +27,7 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. **true** if enabled, **false**otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. **true** if enabled, **false** otherwise. |
 
 
 ## isApplicationEnabled
@@ -35,12 +36,13 @@ return the result.
 function isApplicationEnabled(bundleName: string): Promise<boolean>
 ```
 
-Checks whether an application is enabled based on a given bundle name. This API uses a promise to return the
-result.
+Checks whether an application is enabled based on a given bundle name. This API uses a promise to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-bundle-function isApplicationEnabled(bundleName: string): Promise<boolean>--><!--Device-bundle-function isApplicationEnabled(bundleName: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -54,5 +56,5 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** if enabled, **false** otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. **true** if enabled, **false** otherwise. |
 

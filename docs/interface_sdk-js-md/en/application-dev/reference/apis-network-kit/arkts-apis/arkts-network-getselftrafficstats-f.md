@@ -12,10 +12,11 @@ import { statistics } from '@kit.NetworkKit';
 function getSelfTrafficStats(networkInfo: NetworkInfo): Promise<NetStatsInfo>
 ```
 
-Get the traffic usage details of the specified network of the calling application
-in the specified time period and the specified networktype.
+Get the traffic usage details of the specified network of the calling application in the specified time period and the specified networktype.
 
 **Since:** 22
+
+<!--Device-statistics-function getSelfTrafficStats(networkInfo: NetworkInfo): Promise<NetStatsInfo>--><!--Device-statistics-function getSelfTrafficStats(networkInfo: NetworkInfo): Promise<NetStatsInfo>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -23,13 +24,13 @@ in the specified time period and the specified networktype.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| networkInfo | NetworkInfo | Yes | Information about the network to be queried. |
+| networkInfo | [NetworkInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-networkinfo-i.md) | Yes | Information about the network to be queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetStatsInfo&gt; | The statistics of the calling application. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetStatsInfo> | The statistics of the calling application. |
 
 **Error codes:**
 

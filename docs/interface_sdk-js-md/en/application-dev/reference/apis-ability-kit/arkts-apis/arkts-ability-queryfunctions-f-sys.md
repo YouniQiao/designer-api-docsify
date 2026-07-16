@@ -20,6 +20,8 @@ Query all available functions.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-functionManager-function queryFunctions(): Promise<Array<FunctionInfo>>--><!--Device-functionManager-function queryFunctions(): Promise<Array<FunctionInfo>>-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Query all available functions.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;FunctionInfo&gt;&gt; | The promise used to return available functions. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<FunctionInfo>> | The promise used to return available functions. |
 
 **Error codes:**
 

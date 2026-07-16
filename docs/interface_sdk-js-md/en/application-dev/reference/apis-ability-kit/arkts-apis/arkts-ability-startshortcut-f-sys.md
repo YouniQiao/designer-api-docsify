@@ -12,12 +12,13 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 function startShortcut(shortcutInfo: ShortcutInfo, options?: StartOptions): Promise<void>
 ```
 
-Starts an ability based on the specified [shortcut information](arkts-ability-shortcutinfo-i.md). This API uses
-a promise to return the result.
+Starts an ability based on the specified [shortcut information](arkts-ability-shortcutinfo-i-sys.md). This API uses a promise to return the result.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.START_SHORTCUT
+
+<!--Device-launcherBundleManager-function startShortcut(shortcutInfo: ShortcutInfo, options?: StartOptions): Promise<void>--><!--Device-launcherBundleManager-function startShortcut(shortcutInfo: ShortcutInfo, options?: StartOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -27,14 +28,14 @@ a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shortcutInfo | ShortcutInfo | Yes | Shortcut information of the application. |
-| options | StartOptions | No | Startup parameters, which are used to specify the window mode and device ID forswitching the mission to the foreground. |
+| shortcutInfo | [ShortcutInfo](arkts-ability-shortcutinfo-i-sys.md) | Yes | Shortcut information of the application. |
+| options | [StartOptions](arkts-ability-startoptions-c-sys.md) | No | Startup parameters, which are used to specify the window mode and device ID for switching the mission to the foreground. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

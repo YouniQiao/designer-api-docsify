@@ -12,14 +12,13 @@ import { bundleState } from '@kit.BackgroundTasksKit';
 function isIdleState(bundleName: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the application specified by **bundleName** is in the idle state. A third-party application can only
-check the idle state of itself. A system application can check the idle state of other applications only when it is
-granted with the ohos.permission.BUNDLE_ACTIVE_INFO permission. This API uses an asynchronous callback to return
-the result.
+Checks whether the application specified by **bundleName** is in the idle state. A third-party application can only check the idle state of itself. A system application can check the idle state of other applications only when it is granted with the ohos.permission.BUNDLE_ACTIVE_INFO permission. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-bundleState-function isIdleState(bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-bundleState-function isIdleState(bundleName: string, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -28,7 +27,7 @@ the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of an application. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. If the specified **bundleName** isvalid, the idle state of the application is returned; otherwise, **null** is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. If the specified **bundleName** is valid, the idle state of the application is returned; otherwise, **null** is returned. |
 
 **Example**
 
@@ -53,13 +52,13 @@ bundleState.isIdleState("com.ohos.camera", (err: BusinessError, res: boolean) =>
 function isIdleState(bundleName: string): Promise<boolean>
 ```
 
-Checks whether the application specified by **bundleName** is in the idle state. A third-party application can only
-check the idle state of itself. A system application can check the idle state of other applications only when it is
-granted with the ohos.permission.BUNDLE_ACTIVE_INFO permission. This API uses a promise to return the result.
+Checks whether the application specified by **bundleName** is in the idle state. A third-party application can only check the idle state of itself. A system application can check the idle state of other applications only when it is granted with the ohos.permission.BUNDLE_ACTIVE_INFO permission. This API uses a promise to return the result.
 
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-bundleState-function isIdleState(bundleName: string): Promise<boolean>--><!--Device-bundleState-function isIdleState(bundleName: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -73,7 +72,7 @@ granted with the ohos.permission.BUNDLE_ACTIVE_INFO permission. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. If the specified **bundleName** is valid, the idlestate of the application is returned; otherwise, **null** is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. If the specified **bundleName** is valid, the idle state of the application is returned; otherwise, **null** is returned. |
 
 **Example**
 

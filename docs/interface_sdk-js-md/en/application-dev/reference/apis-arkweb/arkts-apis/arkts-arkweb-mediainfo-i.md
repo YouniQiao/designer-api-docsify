@@ -1,11 +1,10 @@
 # MediaInfo
 
-Represents a **MediaInfo** object used as a parameter of the
-[CreateNativeMediaPlayerCallback](arkts-arkweb-createnativemediaplayercallback-t.md) callback. The
-object contains information about media on the web page. The application may create, based on the information, a
-player that takes over media playback of the web page.
+Represents a **MediaInfo** object used as a parameter of the [CreateNativeMediaPlayerCallback](arkts-arkweb-createnativemediaplayercallback-t.md) callback. The object contains information about media on the web page. The application may create, based on the information, a player that takes over media playback of the web page.
 
 **Since:** 12
+
+<!--Device-webview-interface MediaInfo--><!--Device-webview-interface MediaInfo-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -27,6 +26,8 @@ Attributes in **<video>** or **<audio>**.
 
 **Since:** 12
 
+<!--Device-MediaInfo-attributes: Record<string, string>--><!--Device-MediaInfo-attributes: Record<string, string>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## controlList
@@ -43,6 +44,8 @@ Value of the **controlslist** attribute in **<video>** or **<audio>**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MediaInfo-controlList: string[]--><!--Device-MediaInfo-controlList: string[]-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## controlsShown
@@ -53,14 +56,15 @@ controlsShown: boolean
 
 Whether the **controls** attribute exists in **<video>** or **<audio>**.
 
-The value **true** means that the **controls** attribute exists in **<video>** or **<audio>**, and **false**
-means the opposite.
+The value **true** means that the **controls** attribute exists in **<video>** or **<audio>**, and **false** means the opposite.
 
 **Type:** boolean
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MediaInfo-controlsShown: boolean--><!--Device-MediaInfo-controlsShown: boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -76,6 +80,8 @@ ID of **<video>** or **<audio>** on the web page.
 
 **Since:** 12
 
+<!--Device-MediaInfo-embedID: string--><!--Device-MediaInfo-embedID: string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## headers
@@ -89,6 +95,8 @@ HTTP headers that need to be included in the player's request for media resource
 **Type:** Record<string, string>
 
 **Since:** 12
+
+<!--Device-MediaInfo-headers: Record<string, string>--><!--Device-MediaInfo-headers: Record<string, string>-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -106,6 +114,8 @@ Source of the media. There may be multiple sources. The application needs to sel
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MediaInfo-mediaSrcList: MediaSourceInfo[]--><!--Device-MediaInfo-mediaSrcList: MediaSourceInfo[]-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## mediaType
@@ -121,6 +131,8 @@ Type of the media.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MediaInfo-mediaType: MediaType--><!--Device-MediaInfo-mediaType: MediaType-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -140,6 +152,8 @@ The value **true** means to mute the player, and **false** means the opposite.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MediaInfo-muted: boolean--><!--Device-MediaInfo-muted: boolean-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## posterUrl
@@ -155,6 +169,8 @@ URL of a poster.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MediaInfo-posterUrl: string--><!--Device-MediaInfo-posterUrl: string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -172,6 +188,8 @@ Whether preloading is required.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MediaInfo-preload: Preload--><!--Device-MediaInfo-preload: Preload-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## surfaceInfo
@@ -187,6 +205,8 @@ Surface information used for same-layer rendering.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MediaInfo-surfaceInfo: NativeMediaPlayerSurfaceInfo--><!--Device-MediaInfo-surfaceInfo: NativeMediaPlayerSurfaceInfo-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

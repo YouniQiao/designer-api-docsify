@@ -4,6 +4,8 @@ Type of action sequence.
 
 **Since:** 26.0.0
 
+<!--Device-mechanicManager-export enum ActionType--><!--Device-mechanicManager-export enum ActionType-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -17,6 +19,8 @@ LANDSCAPE_PORTRAIT_SWITCH = 0
 Landscape-to-Portrait switching.
 
 **Since:** 26.0.0
+
+<!--Device-ActionType-LANDSCAPE_PORTRAIT_SWITCH = 0--><!--Device-ActionType-LANDSCAPE_PORTRAIT_SWITCH = 0-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -32,6 +36,8 @@ Action of patrol on the ground.
 
 **Since:** 26.0.0
 
+<!--Device-ActionType-PATROL_MODE = 1--><!--Device-ActionType-PATROL_MODE = 1-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -45,6 +51,8 @@ GREET_MODE = 2
 Action of greeting the owner.
 
 **Since:** 26.0.0
+
+<!--Device-ActionType-GREET_MODE = 2--><!--Device-ActionType-GREET_MODE = 2-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -60,6 +68,8 @@ Action of tilting head up.
 
 **Since:** 26.0.0
 
+<!--Device-ActionType-HEAD_UP = 3--><!--Device-ActionType-HEAD_UP = 3-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -73,6 +83,8 @@ HEAD_UP_SLIGHTLY = 4
 Action of tilting head up slightly.
 
 **Since:** 26.0.0
+
+<!--Device-ActionType-HEAD_UP_SLIGHTLY = 4--><!--Device-ActionType-HEAD_UP_SLIGHTLY = 4-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -88,6 +100,8 @@ Action of looking straight ahead.
 
 **Since:** 26.0.0
 
+<!--Device-ActionType-EYE_LEVEL = 5--><!--Device-ActionType-EYE_LEVEL = 5-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -101,6 +115,8 @@ HEAD_DOWN_SLIGHTLY = 6
 Action of tilting head down slightly.
 
 **Since:** 26.0.0
+
+<!--Device-ActionType-HEAD_DOWN_SLIGHTLY = 6--><!--Device-ActionType-HEAD_DOWN_SLIGHTLY = 6-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -116,6 +132,8 @@ Action of tilting head down completely.
 
 **Since:** 26.0.0
 
+<!--Device-ActionType-HEAD_DOWN = 7--><!--Device-ActionType-HEAD_DOWN = 7-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -129,6 +147,8 @@ HEAD_WIGGLE = 8
 Action of wiggling head.
 
 **Since:** 26.0.0
+
+<!--Device-ActionType-HEAD_WIGGLE = 8--><!--Device-ActionType-HEAD_WIGGLE = 8-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -144,6 +164,8 @@ Action of nodding.
 
 **Since:** 26.0.0
 
+<!--Device-ActionType-NOD = 9--><!--Device-ActionType-NOD = 9-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -157,6 +179,8 @@ HEAD_SHAKE = 10
 Action of shaking head.
 
 **Since:** 26.0.0
+
+<!--Device-ActionType-HEAD_SHAKE = 10--><!--Device-ActionType-HEAD_SHAKE = 10-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -172,6 +196,8 @@ Action of happy.
 
 **Since:** 26.0.0
 
+<!--Device-ActionType-HAPPY = 1000--><!--Device-ActionType-HAPPY = 1000-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -185,6 +211,8 @@ ANGRY = 1001
 Action of angry.
 
 **Since:** 26.0.0
+
+<!--Device-ActionType-ANGRY = 1001--><!--Device-ActionType-ANGRY = 1001-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -200,6 +228,8 @@ Action of sad.
 
 **Since:** 26.0.0
 
+<!--Device-ActionType-SAD = 1002--><!--Device-ActionType-SAD = 1002-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -213,6 +243,8 @@ SCARED = 1003
 Action of scared.
 
 **Since:** 26.0.0
+
+<!--Device-ActionType-SCARED = 1003--><!--Device-ActionType-SCARED = 1003-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -228,6 +260,8 @@ Action of dance.
 
 **Since:** 26.0.0
 
+<!--Device-ActionType-DANCE = 2000--><!--Device-ActionType-DANCE = 2000-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -241,6 +275,8 @@ ACTING_CUTE = 2001
 Action of acting cute.
 
 **Since:** 26.0.0
+
+<!--Device-ActionType-ACTING_CUTE = 2001--><!--Device-ActionType-ACTING_CUTE = 2001-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -256,6 +292,8 @@ Action of celebrate.
 
 **Since:** 26.0.0
 
+<!--Device-ActionType-CELEBRATE = 2002--><!--Device-ActionType-CELEBRATE = 2002-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -269,6 +307,8 @@ WAKEUP = 2003
 Action of wakeup.
 
 **Since:** 26.0.0
+
+<!--Device-ActionType-WAKEUP = 2003--><!--Device-ActionType-WAKEUP = 2003-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -284,6 +324,8 @@ Action of sleep.
 
 **Since:** 26.0.0
 
+<!--Device-ActionType-SLEEP = 2004--><!--Device-ActionType-SLEEP = 2004-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -298,6 +340,8 @@ Action of low power.
 
 **Since:** 26.0.0
 
+<!--Device-ActionType-LOW_POWER = 2005--><!--Device-ActionType-LOW_POWER = 2005-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -311,6 +355,8 @@ THINKING = 2006
 Action of thinking.
 
 **Since:** 26.0.0
+
+<!--Device-ActionType-THINKING = 2006--><!--Device-ActionType-THINKING = 2006-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
 

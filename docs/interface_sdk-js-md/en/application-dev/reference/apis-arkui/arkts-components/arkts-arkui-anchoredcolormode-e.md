@@ -2,6 +2,8 @@
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare enum AnchoredColorMode--><!--Device-unnamed-declare enum AnchoredColorMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FOLLOW_SYSTEM
@@ -18,6 +20,8 @@ Defines the mode which is follow up with system.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-AnchoredColorMode-FOLLOW_SYSTEM = 0--><!--Device-AnchoredColorMode-FOLLOW_SYSTEM = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FOLLOW_TARGET
@@ -33,6 +37,8 @@ Defines the mode which is follow up with target.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AnchoredColorMode-FOLLOW_TARGET = 1--><!--Device-AnchoredColorMode-FOLLOW_TARGET = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

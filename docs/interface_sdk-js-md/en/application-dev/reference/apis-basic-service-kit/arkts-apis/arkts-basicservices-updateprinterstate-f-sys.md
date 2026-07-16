@@ -18,6 +18,8 @@ Updates the printer state. This API uses an asynchronous callback to return the 
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function updatePrinterState(printerId: string, state: PrinterState, callback: AsyncCallback<void>): void--><!--Device-print-function updatePrinterState(printerId: string, state: PrinterState, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -27,8 +29,8 @@ Updates the printer state. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | printerId | string | Yes | Printer ID. |
-| state | PrinterState | Yes | Printer state. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| state | [PrinterState](arkts-basicservices-printerstate-e.md) | Yes | Printer state. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -69,6 +71,8 @@ Updates the printer state. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function updatePrinterState(printerId: string, state: PrinterState): Promise<void>--><!--Device-print-function updatePrinterState(printerId: string, state: PrinterState): Promise<void>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -78,13 +82,13 @@ Updates the printer state. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | printerId | string | Yes | Printer ID. |
-| state | PrinterState | Yes | Printer state. |
+| state | [PrinterState](arkts-basicservices-printerstate-e.md) | Yes | Printer state. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -1,13 +1,20 @@
 # PixelMapDrawableDescriptor
 
-支持通过传入PixelMap创建PixelMapDrawableDescriptor对象。
-继承自[DrawableDescriptor](arkts-arkui-drawabledescriptorloadedresult-i.md)。
+支持通过传入PixelMap创建PixelMapDrawableDescriptor对象。继承自[DrawableDescriptor](arkts-arkui-drawabledescriptorloadedresult-i.md)。
 
 **继承/实现关系：** PixelMapDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-drawabledescriptor-c.md)
 
 **起始版本：** 12
 
+<!--Device-unnamed-export class PixelMapDrawableDescriptor extends DrawableDescriptor--><!--Device-unnamed-export class PixelMapDrawableDescriptor extends DrawableDescriptor-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from '@kit.ArkUI';
+```
 
 ## constructor
 
@@ -21,7 +28,9 @@ PixelMapDrawableDescriptor的构造函数。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMapDrawableDescriptor-constructor(src?: image.PixelMap)--><!--Device-PixelMapDrawableDescriptor-constructor(src?: image.PixelMap)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,7 +52,9 @@ PixelMapDrawableDescriptor的构造函数，通过PixelMap类型或者ResourceSt
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMapDrawableDescriptor-constructor(src?: image.PixelMap | ResourceStr)--><!--Device-PixelMapDrawableDescriptor-constructor(src?: image.PixelMap | ResourceStr)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

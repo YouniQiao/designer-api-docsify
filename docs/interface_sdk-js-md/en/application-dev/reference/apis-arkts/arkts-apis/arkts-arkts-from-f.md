@@ -18,6 +18,8 @@ Allocates a new FastBuffer using an array of bytes in the range 0 – 255. Array
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-fastbuffer-function from(array: number[]): FastBuffer--><!--Device-fastbuffer-function from(array: number[]): FastBuffer-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -30,7 +32,7 @@ Allocates a new FastBuffer using an array of bytes in the range 0 – 255. Array
 
 | Type | Description |
 | --- | --- |
-| FastBuffer | Return a new allocated FastBuffer |
+| [FastBuffer](arkts-arkts-fastbuffer-c.md) | Return a new allocated FastBuffer |
 
 **Example**
 
@@ -56,6 +58,8 @@ This creates a view of the ArrayBuffer without copying the underlying memory.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-fastbuffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): FastBuffer--><!--Device-fastbuffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): FastBuffer-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -70,7 +74,7 @@ This creates a view of the ArrayBuffer without copying the underlying memory.
 
 | Type | Description |
 | --- | --- |
-| FastBuffer | Return a view of the ArrayBuffer |
+| [FastBuffer](arkts-arkts-fastbuffer-c.md) | Return a view of the ArrayBuffer |
 
 **Error codes:**
 
@@ -104,6 +108,8 @@ Copies the passed buffer data onto a new FastBuffer instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-fastbuffer-function from(buffer: FastBuffer | Uint8Array): FastBuffer--><!--Device-fastbuffer-function from(buffer: FastBuffer | Uint8Array): FastBuffer-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -116,7 +122,7 @@ Copies the passed buffer data onto a new FastBuffer instance.
 
 | Type | Description |
 | --- | --- |
-| FastBuffer | Return a new allocated FastBuffer |
+| [FastBuffer](arkts-arkts-fastbuffer-c.md) | Return a new allocated FastBuffer |
 
 **Error codes:**
 
@@ -151,12 +157,13 @@ console.info("uint8Array:", uint8Array)
 function from(value: string, encoding?: BufferEncoding): FastBuffer
 ```
 
-Creates a new FastBuffer containing string. The encoding parameter identifies the character encoding
-to be used when converting string into bytes.
+Creates a new FastBuffer containing string. The encoding parameter identifies the character encoding to be used when converting string into bytes.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-fastbuffer-function from(value: string, encoding?: BufferEncoding): FastBuffer--><!--Device-fastbuffer-function from(value: string, encoding?: BufferEncoding): FastBuffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -165,13 +172,13 @@ to be used when converting string into bytes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | string | Yes | The string to encode into a FastBuffer |
-| encoding | BufferEncoding | No | encoding [encoding='utf8'] The encoding of string |
+| encoding | [BufferEncoding](arkts-arkts-bufferencoding-t.md) | No | encoding [encoding='utf8'] The encoding of string |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| FastBuffer | Return a new FastBuffer containing string |
+| [FastBuffer](arkts-arkts-fastbuffer-c.md) | Return a new FastBuffer containing string |
 
 **Example**
 

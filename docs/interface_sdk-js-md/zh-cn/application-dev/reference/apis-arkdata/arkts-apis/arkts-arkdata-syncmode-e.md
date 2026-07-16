@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-distributedKVStore-enum SyncMode--><!--Device-distributedKVStore-enum SyncMode-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## PULL_ONLY
@@ -17,6 +19,8 @@ PULL_ONLY
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SyncMode-PULL_ONLY--><!--Device-SyncMode-PULL_ONLY-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -32,6 +36,8 @@ PUSH_ONLY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SyncMode-PUSH_ONLY--><!--Device-SyncMode-PUSH_ONLY-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## PUSH_PULL
@@ -45,6 +51,8 @@ PUSH_PULL
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SyncMode-PUSH_PULL--><!--Device-SyncMode-PUSH_PULL-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 

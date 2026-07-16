@@ -6,7 +6,15 @@ autoFillManager模块提供账号密码保存等功能。
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace autoFillManager--><!--Device-unnamed-declare namespace autoFillManager-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+## 导入模块
+
+```TypeScript
+import { autoFillManager } from '@kit.AbilityKit';
+```
 
 ## 汇总
 

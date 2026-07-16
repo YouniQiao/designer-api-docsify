@@ -16,6 +16,8 @@ Encode the message content.
 
 **Since:** 8
 
+<!--Device-sms-function encodeMms(mms: MmsInformation, callback: AsyncCallback<Array<int>>): void--><!--Device-sms-function encodeMms(mms: MmsInformation, callback: AsyncCallback<Array<int>>): void-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -24,8 +26,8 @@ Encode the message content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mms | MmsInformation | Yes | Indicates MMS messages. |
-| callback | AsyncCallback&lt;Array&lt;number&gt;&gt; | Yes | Indicates the callback for getting the result of MMS encoding. |
+| mms | [MmsInformation](arkts-telephony-mmsinformation-i-sys.md) | Yes | Indicates MMS messages. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<number>> | Yes | Indicates the callback for getting the result of MMS encoding. |
 
 **Error codes:**
 
@@ -70,6 +72,8 @@ Encode the message content.
 
 **Since:** 8
 
+<!--Device-sms-function encodeMms(mms: MmsInformation): Promise<Array<int>>--><!--Device-sms-function encodeMms(mms: MmsInformation): Promise<Array<int>>-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -78,13 +82,13 @@ Encode the message content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mms | MmsInformation | Yes | Indicates MMS messages. |
+| mms | [MmsInformation](arkts-telephony-mmsinformation-i-sys.md) | Yes | Indicates MMS messages. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Returns the result of MMS encoding. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | Returns the result of MMS encoding. |
 
 **Error codes:**
 

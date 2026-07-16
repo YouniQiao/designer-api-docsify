@@ -16,16 +16,18 @@ Subscribes to the device status.
 
 **Since:** 9
 
+<!--Device-stationary-function on(activity: ActivityType, event: ActivityEvent, reportLatencyNs: number, callback: Callback<ActivityResponse>): void--><!--Device-stationary-function on(activity: ActivityType, event: ActivityEvent, reportLatencyNs: number, callback: Callback<ActivityResponse>): void-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| activity | ActivityType | Yes | Device status type. |
-| event | ActivityEvent | Yes | Event type. |
+| activity | [ActivityType](arkts-multimodalawareness-activitytype-t.md) | Yes | Device status type. |
+| event | [ActivityEvent](arkts-multimodalawareness-activityevent-e.md) | Yes | Event type. |
 | reportLatencyNs | number | Yes | Report delay, in ns. The value ranges from **1000000000** to **3000000000**. |
-| callback | Callback&lt;ActivityResponse&gt; | Yes | Callback used to receive reported data. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ActivityResponse> | Yes | Callback used to receive reported data. |
 
 **Example**
 

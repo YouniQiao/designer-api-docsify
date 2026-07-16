@@ -12,13 +12,13 @@ import { formProvider } from '@kit.FormKit';
 function cancelOverflow(formId: string): Promise<void>
 ```
 
-Cancels an animation. This API takes effect only for
-[scene-based widgets](../../../../form/arkts-ui-widget-configuration.md#sceneanimationparams-field). This API uses a
-promise to return the result.
+Cancels an animation. This API takes effect only for [scene-based widgets](../../../../form/arkts-ui-widget-configuration.md#sceneanimationparams-field). This API uses a promise to return the result.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-formProvider-function cancelOverflow(formId: string): Promise<void>--><!--Device-formProvider-function cancelOverflow(formId: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -32,13 +32,13 @@ promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function cancelOverflow cannot work correctly due to limited device capabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function cancelOverflow can not work correctly due to limited device capabilities. |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |

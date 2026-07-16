@@ -22,6 +22,8 @@ Writes the NDEF Data.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
+<!--Device-connectedTag-function writeNdefTag(data: string): Promise<void>--><!--Device-connectedTag-function writeNdefTag(data: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.ConnectedTag
 
 **Parameters:**
@@ -34,7 +36,7 @@ Writes the NDEF Data.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The void. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The void. |
 
 **Example**
 
@@ -68,6 +70,8 @@ Writes the NDEF Data.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
+<!--Device-connectedTag-function writeNdefTag(data: string, callback: AsyncCallback<void>): void--><!--Device-connectedTag-function writeNdefTag(data: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.ConnectedTag
 
 **Parameters:**
@@ -75,7 +79,7 @@ Writes the NDEF Data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | string | Yes | The Data to write. |
-| callback | AsyncCallback&lt;void&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes |  |
 
 **Example**
 

@@ -1,5 +1,11 @@
 # cancelReminderOnDisplay
 
+## 导入模块
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+```
+
 ## cancelReminderOnDisplay
 
 ```TypeScript
@@ -9,6 +15,8 @@ function cancelReminderOnDisplay(reminderId: number): Promise<void>
 取消当前通知中心内显示的通知卡片，不取消代理提醒数据。例如：每天重复的提醒，该提醒正在通知中心内显示，该接口将通知从通知中心内取消，并且会按照设定的周期，在第二天再次提醒。
 
 **起始版本：** 23
+
+<!--Device-reminderAgentManager-function cancelReminderOnDisplay(reminderId: int): Promise<void>--><!--Device-reminderAgentManager-function cancelReminderOnDisplay(reminderId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -22,7 +30,7 @@ function cancelReminderOnDisplay(reminderId: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

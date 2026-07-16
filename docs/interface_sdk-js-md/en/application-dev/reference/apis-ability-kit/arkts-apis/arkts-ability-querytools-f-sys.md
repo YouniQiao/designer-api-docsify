@@ -20,6 +20,8 @@ Query all detailed information of tools
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-cliManager-function queryTools(): Promise<Array<ToolInfo>>--><!--Device-cliManager-function queryTools(): Promise<Array<ToolInfo>>-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Query all detailed information of tools
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ToolInfo&gt;&gt; | List of full tool detail info. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ToolInfo>> | List of full tool detail info. |
 
 **Error codes:**
 

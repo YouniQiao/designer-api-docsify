@@ -1,5 +1,11 @@
 # createAtManager
 
+## 导入模块
+
+```TypeScript
+import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
+```
+
 ## createAtManager
 
 ```TypeScript
@@ -10,7 +16,9 @@ function createAtManager(): AtManager
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-abilityAccessCtrl-function createAtManager(): AtManager--><!--Device-abilityAccessCtrl-function createAtManager(): AtManager-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -18,7 +26,7 @@ function createAtManager(): AtManager
 
 | 类型 | 说明 |
 | --- | --- |
-| AtManager | 获取程序访问控制模块的实例。 |
+| [AtManager](arkts-ability-atmanager-i.md) | 获取程序访问控制模块的实例。 |
 
 **示例：**
 

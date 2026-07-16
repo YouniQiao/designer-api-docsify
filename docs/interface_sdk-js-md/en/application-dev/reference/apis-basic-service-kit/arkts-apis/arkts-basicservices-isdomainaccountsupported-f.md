@@ -18,13 +18,15 @@ Checks whether this domain account is supported. This API uses a promise to retu
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-osAccount-function isDomainAccountSupported(): Promise<boolean>--><!--Device-osAccount-function isDomainAccountSupported(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means this domain account issupported; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means this domain account is supported; the value **false** means the opposite. |
 
 **Error codes:**
 

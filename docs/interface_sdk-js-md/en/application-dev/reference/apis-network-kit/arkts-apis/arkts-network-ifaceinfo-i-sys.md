@@ -4,6 +4,8 @@ Parameters for obtaining detailed information on network interface traffic usage
 
 **Since:** 10
 
+<!--Device-statistics-export interface IfaceInfo--><!--Device-statistics-export interface IfaceInfo-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ End time for querying traffic.
 
 **Since:** 10
 
+<!--Device-IfaceInfo-endTime: int--><!--Device-IfaceInfo-endTime: int-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ Network interface for querying traffic.
 
 **Since:** 10
 
+<!--Device-IfaceInfo-iface: string--><!--Device-IfaceInfo-iface: string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ Start time for querying traffic.
 **Type:** number
 
 **Since:** 10
+
+<!--Device-IfaceInfo-startTime: int--><!--Device-IfaceInfo-startTime: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

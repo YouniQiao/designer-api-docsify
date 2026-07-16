@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-drawing-enum ScaleToFit--><!--Device-drawing-enum ScaleToFit-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## FILL_SCALE_TO_FIT
@@ -15,6 +17,8 @@ FILL_SCALE_TO_FIT = 0
 将源矩形缩放以填充满整个目标矩形，可能会改变源矩形的长宽比。
 
 **起始版本：** 12
+
+<!--Device-ScaleToFit-FILL_SCALE_TO_FIT = 0--><!--Device-ScaleToFit-FILL_SCALE_TO_FIT = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -28,6 +32,8 @@ START_SCALE_TO_FIT = 1
 
 **起始版本：** 12
 
+<!--Device-ScaleToFit-START_SCALE_TO_FIT = 1--><!--Device-ScaleToFit-START_SCALE_TO_FIT = 1-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## CENTER_SCALE_TO_FIT
@@ -40,6 +46,8 @@ CENTER_SCALE_TO_FIT = 2
 
 **起始版本：** 12
 
+<!--Device-ScaleToFit-CENTER_SCALE_TO_FIT = 2--><!--Device-ScaleToFit-CENTER_SCALE_TO_FIT = 2-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## END_SCALE_TO_FIT
@@ -51,6 +59,8 @@ END_SCALE_TO_FIT = 3
 保持源矩形的长宽比进行缩放，并对齐到目标矩形的右下方。
 
 **起始版本：** 12
+
+<!--Device-ScaleToFit-END_SCALE_TO_FIT = 3--><!--Device-ScaleToFit-END_SCALE_TO_FIT = 3-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

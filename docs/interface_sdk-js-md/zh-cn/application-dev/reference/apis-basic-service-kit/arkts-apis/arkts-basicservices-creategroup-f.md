@@ -1,15 +1,22 @@
 # createGroup
 
+## 导入模块
+
+```TypeScript
+import { request } from '@kit.BasicServicesKit';
+```
+
 ## createGroup
 
 ```TypeScript
 function createGroup(config: GroupConfig): Promise<string>
 ```
 
-根据[GroupConfig](arkts-basicservices-groupconfig-i.md)分组条件创建分组
-，并返回分组id。使用Promise异步回调。
+根据[GroupConfig](arkts-basicservices-groupconfig-i.md)分组条件创建分组，并返回分组id。使用Promise异步回调。
 
 **起始版本：** 15
+
+<!--Device-agent-function createGroup(config: GroupConfig): Promise<string>--><!--Device-agent-function createGroup(config: GroupConfig): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -17,13 +24,13 @@ function createGroup(config: GroupConfig): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | GroupConfig | 是 | 下载任务分组选项。 |
+| config | [GroupConfig](arkts-basicservices-groupconfig-i.md) | 是 | 下载任务分组选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象。返回创建完成的分组id。 |
+| Promise<string> | Promise对象。返回创建完成的分组id。 |
 
 **错误码：**
 

@@ -21,6 +21,10 @@ Unsubscribe from the results of indoor and outdoor recognition.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-spatialAwareness-function offIndoorOrOutdoorIdentify(configParams: DistanceMeasurementConfigParams,
+    callback?: Callback<DoorPositionResponse>): void--><!--Device-spatialAwareness-function offIndoorOrOutdoorIdentify(configParams: DistanceMeasurementConfigParams,
+    callback?: Callback<DoorPositionResponse>): void-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **System API:** This is a system API.
@@ -29,8 +33,8 @@ Unsubscribe from the results of indoor and outdoor recognition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configParams | DistanceMeasurementConfigParams | Yes | Configuration parameters for identification inside and<br> outside the door |
-| callback | Callback&lt;DoorPositionResponse&gt; | No | Callback for identification inside and outside the door |
+| configParams | [DistanceMeasurementConfigParams](arkts-multimodalawareness-distancemeasurementconfigparams-i-sys.md) | Yes | Configuration parameters for identification inside and<br> outside the door |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DoorPositionResponse> | No | Callback for identification inside and outside the door |
 
 **Error codes:**
 

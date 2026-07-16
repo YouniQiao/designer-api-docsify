@@ -6,6 +6,8 @@ Represents a media asset change request.
 
 **Since:** 11
 
+<!--Device-photoAccessHelper-class MediaAssetChangeRequest implements MediaChangeRequest--><!--Device-photoAccessHelper-class MediaAssetChangeRequest implements MediaChangeRequest-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -22,11 +24,13 @@ addResource(type: ResourceType, proxy: PhotoProxy): void
 
 Adds resources using **PhotoProxy** data.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > For the same asset change request, this API cannot be repeatedly called after resources are successfully added.
 
 **Since:** 11
+
+<!--Device-MediaAssetChangeRequest-addResource(type: ResourceType, proxy: PhotoProxy): void--><!--Device-MediaAssetChangeRequest-addResource(type: ResourceType, proxy: PhotoProxy): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -36,8 +40,8 @@ Adds resources using **PhotoProxy** data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | ResourceType | Yes | Type of the resource to add. |
-| proxy | PhotoProxy | Yes | PhotoProxy data of the resource to add. |
+| type | [ResourceType](../../apis-ability-kit/arkts-apis/arkts-ability-resourcetype-e.md) | Yes | Type of the resource to add. |
+| proxy | [PhotoProxy](arkts-medialibrary-photoproxy-i.md) | Yes | PhotoProxy data of the resource to add. |
 
 **Error codes:**
 
@@ -86,6 +90,8 @@ Adds a resource using fileUri from file management directory
 
 **Required permissions:** ohos.permission.ACCESS_MEDIALIB_THUMB_DB
 
+<!--Device-MediaAssetChangeRequest-addResourceForPicker(type: ResourceType, fileUri: string): void--><!--Device-MediaAssetChangeRequest-addResourceForPicker(type: ResourceType, fileUri: string): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -94,7 +100,7 @@ Adds a resource using fileUri from file management directory
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | ResourceType | Yes | Type of the resource to add. |
+| type | [ResourceType](../../apis-ability-kit/arkts-apis/arkts-ability-resourcetype-e.md) | Yes | Type of the resource to add. |
 | fileUri | string | Yes | Data source of the resource to be added,which is specified by a URI in the application sandbox directory. |
 
 **Error codes:**
@@ -116,8 +122,8 @@ Creates an asset change request with the specified file name.
 
 The file name must meet the following requirements:
 
-- A valid file name must include a base name and a supported image or video extension.
-- The total length of the file name must be between 1 and 255 characters.
+- A valid file name must include a base name and a supported image or video extension.  
+- The total length of the file name must be between 1 and 255 characters.  
 - The base name must not contain any invalid characters.
 
 Starting from API version 18, the following characters are considered invalid: \ / : * ? " < > |
@@ -125,6 +131,8 @@ Starting from API version 18, the following characters are considered invalid: \
 For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` < > | { } [ ]
 
 **Since:** 11
+
+<!--Device-MediaAssetChangeRequest-static createAssetRequest(context: Context, displayName: string, options?: PhotoCreateOptions): MediaAssetChangeRequest--><!--Device-MediaAssetChangeRequest-static createAssetRequest(context: Context, displayName: string, options?: PhotoCreateOptions): MediaAssetChangeRequest-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -134,15 +142,15 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability instance. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the ability instance. |
 | displayName | string | Yes | File name of the image or video to create. |
-| options | PhotoCreateOptions | No | Options for creating an image or video asset. |
+| options | [PhotoCreateOptions](arkts-medialibrary-photocreateoptions-i-sys.md) | No | Options for creating an image or video asset. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MediaAssetChangeRequest | **MediaAssetChangeRequest** created. |
+| [MediaAssetChangeRequest](arkts-medialibrary-mediaassetchangerequest-c-sys.md) | **MediaAssetChangeRequest** created. |
 
 **Error codes:**
 
@@ -181,15 +189,14 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 static deleteAssetsPermanentlyWithUri(context: Context, assetUris: string[]): Promise<void>
 ```
 
-Permanently deletes images or videos in batches by URI. The deleted images or videos are not stored in the
-recycle bin. This API uses a promise to return the result.
+Permanently deletes images or videos in batches by URI. The deleted images or videos are not stored in the recycle bin. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - Assets that exist only on the local device, on the cloud, or on both the local device and the cloud can be
-> permanently deleted. The deleted assets are not stored in the recycle bin.
->
-> - This operation is irreversible. The deleted assets cannot be restored. Exercise caution when performing this
+> **NOTE**  
+>  
+> - Assets that exist only on the local device, on the cloud, or on both the local device and the cloud can be  
+> permanently deleted. The deleted assets are not stored in the recycle bin.  
+>  
+> - This operation is irreversible. The deleted assets cannot be restored. Exercise caution when performing this  
 > operation.
 
 **Since:** 24
@@ -197,6 +204,8 @@ recycle bin. This API uses a promise to return the result.
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaAssetChangeRequest-static deleteAssetsPermanentlyWithUri(context: Context, assetUris: string[]): Promise<void>--><!--Device-MediaAssetChangeRequest-static deleteAssetsPermanentlyWithUri(context: Context, assetUris: string[]): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -206,14 +215,14 @@ recycle bin. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability instance. |
-| assetUris | string[] | Yes | Array of URIs of the images or videos to be deleted. The array can contain amaximum of 500 elements. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the ability instance. |
+| assetUris | string[] | Yes | Array of URIs of the images or videos to be deleted. The array can contain a maximum of 500 elements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -247,18 +256,20 @@ static deleteCloudAssetsWithUri(context: Context, assetUris: string[]): Promise<
 
 Deletes cloud media assets to the trash in batches. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - If the assets are only on the local device, no changes are made.
->
-> - If the assets are only in the cloud, they are moved directly to the trash.
->
-> - If the assets are on both the local device and the cloud, after deletion, they only remain on the local
+> **NOTE**  
+>  
+> - If the assets are only on the local device, no changes are made.  
+>  
+> - If the assets are only in the cloud, they are moved directly to the trash.  
+>  
+> - If the assets are on both the local device and the cloud, after deletion, they only remain on the local  
 > device, and the cloud copies are moved in the trash.
 
 **Since:** 22
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-MediaAssetChangeRequest-static deleteCloudAssetsWithUri(context: Context, assetUris: string[]): Promise<void>--><!--Device-MediaAssetChangeRequest-static deleteCloudAssetsWithUri(context: Context, assetUris: string[]): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -268,14 +279,14 @@ Deletes cloud media assets to the trash in batches. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability instance. |
-| assetUris | string[] | Yes | Array of URIs of the images or videos to be deleted. The array can contain amaximum of 500 elements. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the ability instance. |
+| assetUris | string[] | Yes | Array of URIs of the images or videos to be deleted. The array can contain a maximum of 500 elements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -308,14 +319,16 @@ static deleteLocalAssetsPermanently(context: Context, assets: Array<PhotoAsset>)
 
 Permanently deletes images or videos in batches. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
+> **NOTE**  
+>  
+> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this  
 > operation.
 
 **Since:** 18
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-MediaAssetChangeRequest-static deleteLocalAssetsPermanently(context: Context, assets: Array<PhotoAsset>): Promise<void>--><!--Device-MediaAssetChangeRequest-static deleteLocalAssetsPermanently(context: Context, assets: Array<PhotoAsset>): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -325,14 +338,14 @@ Permanently deletes images or videos in batches. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability instance. |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Array of images or videos to be permanently deleted. The array can containa maximum of 500 elements. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the ability instance. |
+| assets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PhotoAsset> | Yes | Array of images or videos to be permanently deleted. The array can contain a maximum of 500 elements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -375,14 +388,16 @@ static deleteLocalAssetsPermanentlyWithUri(context: Context, assetUris: Array<st
 
 Permanently deletes images or video assets in batches by URI. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
+> **NOTE**  
+>  
+> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this  
 > operation.
 
 **Since:** 19
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-MediaAssetChangeRequest-static deleteLocalAssetsPermanentlyWithUri(context: Context, assetUris: Array<string>): Promise<void>--><!--Device-MediaAssetChangeRequest-static deleteLocalAssetsPermanentlyWithUri(context: Context, assetUris: Array<string>): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -392,14 +407,14 @@ Permanently deletes images or video assets in batches by URI. This API uses a pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability instance. |
-| assetUris | Array&lt;string&gt; | Yes | Array of URIs of the images or videos to be permanently deleted. The arraycan contain a maximum of 500 elements. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the ability instance. |
+| assetUris | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Array of URIs of the images or videos to be permanently deleted. The array can contain a maximum of 500 elements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -418,18 +433,20 @@ static deleteLocalAssetsWithUri(context: Context, assetUris: string[]): Promise<
 
 Deletes local media assets to the trash in batches. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - If the assets are only on the local device, they are moved directly to the trash.
->
-> - If the assets are only in the cloud, no changes are made.
->
-> - If the assets are on both the local device and the cloud, after deletion, they only remain in the cloud, and
+> **NOTE**  
+>  
+> - If the assets are only on the local device, they are moved directly to the trash.  
+>  
+> - If the assets are only in the cloud, no changes are made.  
+>  
+> - If the assets are on both the local device and the cloud, after deletion, they only remain in the cloud, and  
 > the local copies are moved in the trash.
 
 **Since:** 22
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-MediaAssetChangeRequest-static deleteLocalAssetsWithUri(context: Context, assetUris: string[]): Promise<void>--><!--Device-MediaAssetChangeRequest-static deleteLocalAssetsWithUri(context: Context, assetUris: string[]): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -439,14 +456,14 @@ Deletes local media assets to the trash in batches. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability instance. |
-| assetUris | string[] | Yes | Array of URIs of the images or videos to be deleted. The array can contain amaximum of 500 elements. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the ability instance. |
+| assetUris | string[] | Yes | Array of URIs of the images or videos to be deleted. The array can contain a maximum of 500 elements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -480,6 +497,8 @@ setAppLinkInfo(appLink: string): void
 Sets the information about the app link association.
 
 **Since:** 21
+
+<!--Device-MediaAssetChangeRequest-setAppLinkInfo(appLink: string): void--><!--Device-MediaAssetChangeRequest-setAppLinkInfo(appLink: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -533,6 +552,8 @@ Sets the status of the app link association.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MediaAssetChangeRequest-setAppLinkState(appLinkState: AppLinkState): void--><!--Device-MediaAssetChangeRequest-setAppLinkState(appLinkState: AppLinkState): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -541,7 +562,7 @@ Sets the status of the app link association.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appLinkState | AppLinkState | Yes | Whether to enable or disable the app link association. |
+| appLinkState | [AppLinkState](arkts-medialibrary-applinkstate-e-sys.md) | Yes | Whether to enable or disable the app link association. |
 
 **Error codes:**
 
@@ -578,10 +599,11 @@ async function example(asset: photoAccessHelper.PhotoAsset, context: Context) {
 setCameraShotKey(cameraShotKey: string): void
 ```
 
-Sets the Key for the Ultra Snapshot feature, which allows the camera to take photos or record videos with the
-screen off.
+Sets the Key for the Ultra Snapshot feature, which allows the camera to take photos or record videos with the screen off.
 
 **Since:** 12
+
+<!--Device-MediaAssetChangeRequest-setCameraShotKey(cameraShotKey: string): void--><!--Device-MediaAssetChangeRequest-setCameraShotKey(cameraShotKey: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -591,7 +613,7 @@ screen off.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraShotKey | string | Yes | Key for the Ultra Snapshot feature, which allows the camera to take photos orrecord videos with the screen off. (This parameter is available only for the system camera, and the key valueis defined by the system camera.) |
+| cameraShotKey | string | Yes | Key for the Ultra Snapshot feature, which allows the camera to take photos or record videos with the screen off. (This parameter is available only for the system camera, and the key value is defined by the system camera.) |
 
 **Error codes:**
 
@@ -631,6 +653,8 @@ Sets the display mode of the composite image. This API uses a promise to return 
 
 **Since:** 23
 
+<!--Device-MediaAssetChangeRequest-setCompositeDisplayMode(compositeDisplayMode: CompositeDisplayMode): Promise<void>--><!--Device-MediaAssetChangeRequest-setCompositeDisplayMode(compositeDisplayMode: CompositeDisplayMode): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -639,13 +663,13 @@ Sets the display mode of the composite image. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| compositeDisplayMode | CompositeDisplayMode | Yes | Display mode. |
+| compositeDisplayMode | [CompositeDisplayMode](arkts-medialibrary-compositedisplaymode-e-sys.md) | Yes | Display mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -691,6 +715,8 @@ Saves the edited data of an asset.
 
 **Since:** 11
 
+<!--Device-MediaAssetChangeRequest-setEditData(editData: MediaAssetEditData): void--><!--Device-MediaAssetChangeRequest-setEditData(editData: MediaAssetEditData): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -699,7 +725,7 @@ Saves the edited data of an asset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| editData | MediaAssetEditData | Yes | Edited data to save. |
+| editData | [MediaAssetEditData](arkts-medialibrary-mediaasseteditdata-c-sys.md) | Yes | Edited data to save. |
 
 **Error codes:**
 
@@ -752,6 +778,8 @@ Sets the effect of this moving photo.
 
 **Since:** 12
 
+<!--Device-MediaAssetChangeRequest-setEffectMode(mode: MovingPhotoEffectMode): void--><!--Device-MediaAssetChangeRequest-setEffectMode(mode: MovingPhotoEffectMode): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -760,7 +788,7 @@ Sets the effect of this moving photo.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | MovingPhotoEffectMode | Yes | Effect to set. |
+| mode | [MovingPhotoEffectMode](arkts-medialibrary-movingphotoeffectmode-e-sys.md) | Yes | Effect to set. |
 
 **Error codes:**
 
@@ -804,6 +832,8 @@ setFavorite(favoriteState: boolean): void
 Favorites or unfavorites this file asset.
 
 **Since:** 26.0.0
+
+<!--Device-MediaAssetChangeRequest-setFavorite(favoriteState: boolean): void--><!--Device-MediaAssetChangeRequest-setFavorite(favoriteState: boolean): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -859,6 +889,8 @@ Sets the status of the app link association.
 
 **Since:** 21
 
+<!--Device-MediaAssetChangeRequest-setHasAppLink(hasAppLink: int): void--><!--Device-MediaAssetChangeRequest-setHasAppLink(hasAppLink: int): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -913,6 +945,8 @@ setHidden(hiddenState: boolean): void
 Hides this file.
 
 **Since:** 11
+
+<!--Device-MediaAssetChangeRequest-setHidden(hiddenState: boolean): void--><!--Device-MediaAssetChangeRequest-setHidden(hiddenState: boolean): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -972,6 +1006,8 @@ Set hidden state of asset.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MediaAssetChangeRequest-setHiddenAttribute(hiddenState: boolean): void--><!--Device-MediaAssetChangeRequest-setHiddenAttribute(hiddenState: boolean): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1027,6 +1063,8 @@ setLocation(longitude: number, latitude: number): void
 Sets location information.
 
 **Since:** 11
+
+<!--Device-MediaAssetChangeRequest-setLocation(longitude: double, latitude: double): void--><!--Device-MediaAssetChangeRequest-setLocation(longitude: double, latitude: double): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1085,6 +1123,8 @@ Saves MovingPhoto version which is used to determine what special efficacy is su
 
 **Since:** 26.0.0
 
+<!--Device-MediaAssetChangeRequest-setMovingPhotoVersion(version: int): void--><!--Device-MediaAssetChangeRequest-setMovingPhotoVersion(version: int): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1141,6 +1181,8 @@ Sets the watermark type supported by photos.
 
 **Since:** 14
 
+<!--Device-MediaAssetChangeRequest-setSupportedWatermarkType(watermarkType: WatermarkType): void--><!--Device-MediaAssetChangeRequest-setSupportedWatermarkType(watermarkType: WatermarkType): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1149,7 +1191,7 @@ Sets the watermark type supported by photos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| watermarkType | WatermarkType | Yes | Watermark type to set.<br>**NOTE**<br>**WatermarkType.DEFAULT** cannot be passed. |
+| watermarkType | [WatermarkType](arkts-medialibrary-watermarktype-e-sys.md) | Yes | Watermark type to set.<br>**NOTE**<br>**WatermarkType.DEFAULT** cannot be passed. |
 
 **Error codes:**
 
@@ -1196,6 +1238,8 @@ Set title by filemanger.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaAssetChangeRequest-setTitleByFile(name: string): void--><!--Device-MediaAssetChangeRequest-setTitleByFile(name: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1251,6 +1295,8 @@ setUserComment(userComment: string): void
 Sets the user comment information of this media asset.
 
 **Since:** 11
+
+<!--Device-MediaAssetChangeRequest-setUserComment(userComment: string): void--><!--Device-MediaAssetChangeRequest-setUserComment(userComment: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1309,6 +1355,8 @@ Set video enhancement attribute
 
 **Since:** 13
 
+<!--Device-MediaAssetChangeRequest-setVideoEnhancementAttr(videoEnhancementType: VideoEnhancementType, photoId: string): void--><!--Device-MediaAssetChangeRequest-setVideoEnhancementAttr(videoEnhancementType: VideoEnhancementType, photoId: string): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1317,7 +1365,7 @@ Set video enhancement attribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| videoEnhancementType | VideoEnhancementType | Yes | The type of video enhancement |
+| videoEnhancementType | [VideoEnhancementType](arkts-medialibrary-videoenhancementtype-e-sys.md) | Yes | The type of video enhancement |
 | photoId | string | Yes | The photo id of video |
 
 **Error codes:**

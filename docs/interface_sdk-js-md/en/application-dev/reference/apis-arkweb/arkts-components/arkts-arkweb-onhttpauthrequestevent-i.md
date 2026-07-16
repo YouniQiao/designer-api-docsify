@@ -4,6 +4,8 @@ Defines the triggered when the browser needs credentials from the user.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface OnHttpAuthRequestEvent--><!--Device-unnamed-declare interface OnHttpAuthRequestEvent-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## handler
@@ -19,6 +21,8 @@ Defines the http auth request result.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-OnHttpAuthRequestEvent-handler: HttpAuthHandler--><!--Device-OnHttpAuthRequestEvent-handler: HttpAuthHandler-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -36,6 +40,8 @@ Host of the page.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-OnHttpAuthRequestEvent-host: string--><!--Device-OnHttpAuthRequestEvent-host: string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## realm
@@ -51,6 +57,8 @@ realm of the page.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-OnHttpAuthRequestEvent-realm: string--><!--Device-OnHttpAuthRequestEvent-realm: string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

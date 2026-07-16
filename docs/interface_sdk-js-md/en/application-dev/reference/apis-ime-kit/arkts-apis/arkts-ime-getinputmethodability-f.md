@@ -12,13 +12,13 @@ import { inputMethodEngine } from '@kit.IMEKit';
 function getInputMethodAbility(): InputMethodAbility
 ```
 
-Obtains an [InputMethodAbility](arkts-ime-inputmethodability-i.md) instance for the input method. This API
-can be called only by an input method.
+Obtains an [InputMethodAbility](arkts-ime-inputmethodability-i.md) instance for the input method. This API can be called only by an input method.
 
-The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event, create/
-destroy an input method panel, and the like.
+The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event, create/destroy an input method panel, and the like.
 
 **Since:** 9
+
+<!--Device-inputMethodEngine-function getInputMethodAbility(): InputMethodAbility--><!--Device-inputMethodEngine-function getInputMethodAbility(): InputMethodAbility-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -26,7 +26,7 @@ destroy an input method panel, and the like.
 
 | Type | Description |
 | --- | --- |
-| InputMethodAbility | **InputMethodAbility** instance. |
+| [InputMethodAbility](arkts-ime-inputmethodability-i.md) | **InputMethodAbility** instance. |
 
 **Example**
 

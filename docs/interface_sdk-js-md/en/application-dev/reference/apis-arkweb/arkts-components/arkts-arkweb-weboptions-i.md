@@ -4,6 +4,8 @@ Defines web options through the [APIs](arkts-arkweb-web.md).
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface WebOptions--><!--Device-unnamed-declare interface WebOptions-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## controller
@@ -12,15 +14,15 @@ Defines web options through the [APIs](arkts-arkweb-web.md).
 controller: WebController | WebviewController
 ```
 
-Controller that controls various behaviors of **Web** components, including page navigation, declaration period
-status, and JavaScript interaction. **WebController** is deprecated since API version 9. You are advised to use
-[WebviewController](arkts-arkweb-webviewcontroller-t.md) instead.
+Controller that controls various behaviors of **Web** components, including page navigation, declaration period status, and JavaScript interaction. **WebController** is deprecated since API version 9. You are advised to use [WebviewController](arkts-arkweb-webviewcontroller-t.md) instead.
 
 **Type:** WebController | WebviewController
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebOptions-controller: WebController | WebviewController--><!--Device-WebOptions-controller: WebController | WebviewController-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -38,6 +40,8 @@ Default value: **false**.
 
 **Since:** 22
 
+<!--Device-WebOptions-emulateTouchFromMouseEvent? : boolean--><!--Device-WebOptions-emulateTouchFromMouseEvent? : boolean-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## incognitoMode
@@ -46,16 +50,15 @@ Default value: **false**.
 incognitoMode? : boolean
 ```
 
-Whether to enable incognito mode. The value **true** means to enable incognito mode, and **false** means the
-opposite.
-Default value: **false**.
-If **undefined** or **null** is passed, the value is **false**.
+Whether to enable incognito mode. The value **true** means to enable incognito mode, and **false** means the opposite.Default value: **false**.If **undefined** or **null** is passed, the value is **false**.
 
 **Type:** boolean
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebOptions-incognitoMode? : boolean--><!--Device-WebOptions-incognitoMode? : boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -73,6 +76,8 @@ Rendering mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WebOptions-renderMode? : RenderMode--><!--Device-WebOptions-renderMode? : RenderMode-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## sharedRenderProcessToken
@@ -81,15 +86,13 @@ Rendering mode.
 sharedRenderProcessToken? : string
 ```
 
-Token of the shared rendering process specified by the **Web** component. In multi-rendering process mode, the
-**Web** component with the same token preferentially attempts to reuse the rendering process bound to the token.
-The token is bound to the rendering process when the rendering process is initialized. When the rendering process
-is not associated with a **Web** component, its binding to the token is removed.
-Default value: **""**.
+Token of the shared rendering process specified by the **Web** component. In multi-rendering process mode, the **Web** component with the same token preferentially attempts to reuse the rendering process bound to the token.The token is bound to the rendering process when the rendering process is initialized. When the rendering process is not associated with a **Web** component, its binding to the token is removed.Default value: **""**.
 
 **Type:** string
 
 **Since:** 12
+
+<!--Device-WebOptions-sharedRenderProcessToken? : string--><!--Device-WebOptions-sharedRenderProcessToken? : string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -99,15 +102,15 @@ Default value: **""**.
 src: string | Resource
 ```
 
-Address of a web page resource. To access local resource files, use the $rawfile or resource protocol. To load a
-local resource file (in HTML or TXT format) in the sandbox outside of the application package, use **file://** to
-specify the path of the sandbox.
+Address of a web page resource. To access local resource files, use the $rawfile or resource protocol. To load a local resource file (in HTML or TXT format) in the sandbox outside of the application package, use **file://** to specify the path of the sandbox.
 
 **Type:** string | Resource
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebOptions-src: string | Resource--><!--Device-WebOptions-src: string | Resource-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

@@ -6,6 +6,8 @@ Manager a2dp source profile.
 
 **Since:** 10
 
+<!--Device-a2dp-interface A2dpSourceProfile extends BaseProfile--><!--Device-a2dp-interface A2dpSourceProfile extends BaseProfile-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -25,6 +27,8 @@ Initiate an A2DP connection to a remote device.
 **Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
+
+<!--Device-A2dpSourceProfile-connect(deviceId: string): void--><!--Device-A2dpSourceProfile-connect(deviceId: string): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -61,6 +65,8 @@ Turn off the absolute volume switch.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
+<!--Device-A2dpSourceProfile-disableAbsoluteVolume(deviceId: string): Promise<void>--><!--Device-A2dpSourceProfile-disableAbsoluteVolume(deviceId: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -75,7 +81,7 @@ Turn off the absolute volume switch.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 
@@ -101,6 +107,8 @@ Turn off the absolute volume switch..
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
+<!--Device-A2dpSourceProfile-disableAbsoluteVolume(deviceId: string, callback: AsyncCallback<void>): void--><!--Device-A2dpSourceProfile-disableAbsoluteVolume(deviceId: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -110,7 +118,7 @@ Turn off the absolute volume switch..
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback result. |
 
 **Error codes:**
 
@@ -136,6 +144,8 @@ Restriction devices to play music within {@code duration} milliseconds of connec
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
+<!--Device-A2dpSourceProfile-disableAutoPlay(deviceId: string, duration: int): Promise<void>--><!--Device-A2dpSourceProfile-disableAutoPlay(deviceId: string, duration: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -151,7 +161,7 @@ Restriction devices to play music within {@code duration} milliseconds of connec
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 
@@ -176,6 +186,8 @@ Disconnect the A2DP connection with the remote device.
 **Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
+
+<!--Device-A2dpSourceProfile-disconnect(deviceId: string): void--><!--Device-A2dpSourceProfile-disconnect(deviceId: string): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -212,6 +224,8 @@ Turn on the absolute volume switch.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
+<!--Device-A2dpSourceProfile-enableAbsoluteVolume(deviceId: string): Promise<void>--><!--Device-A2dpSourceProfile-enableAbsoluteVolume(deviceId: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -226,7 +240,7 @@ Turn on the absolute volume switch.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 
@@ -252,6 +266,8 @@ Turn on the absolute volume switch..
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
+<!--Device-A2dpSourceProfile-enableAbsoluteVolume(deviceId: string, callback: AsyncCallback<void>): void--><!--Device-A2dpSourceProfile-enableAbsoluteVolume(deviceId: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -261,7 +277,7 @@ Turn on the absolute volume switch..
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback result. |
 
 **Error codes:**
 
@@ -287,6 +303,8 @@ Allow devices to automatically play music when connected.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
+<!--Device-A2dpSourceProfile-enableAutoPlay(deviceId: string): Promise<void>--><!--Device-A2dpSourceProfile-enableAutoPlay(deviceId: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -301,7 +319,7 @@ Allow devices to automatically play music when connected.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 
@@ -327,6 +345,8 @@ Obtains the duration for which automatic playback is disabled.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
+<!--Device-A2dpSourceProfile-getAutoPlayDisabledDuration(deviceId: string): Promise<int>--><!--Device-A2dpSourceProfile-getAutoPlayDisabledDuration(deviceId: string): Promise<int>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -341,7 +361,7 @@ Obtains the duration for which automatic playback is disabled.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns the duration &lt;milliseconds&gt;;If returns { @code -1 } means allow devices automatic play music when connected. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Returns the duration &lt;milliseconds&gt;;If returns { @code -1 } means allow devices automatic play music when connected. |
 
 **Error codes:**
 
@@ -367,6 +387,8 @@ Get codec information.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
+<!--Device-A2dpSourceProfile-getCurrentCodecInfo(deviceId: string): CodecInfo--><!--Device-A2dpSourceProfile-getCurrentCodecInfo(deviceId: string): CodecInfo-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -381,7 +403,7 @@ Get codec information.
 
 | Type | Description |
 | --- | --- |
-| CodecInfo | Returns the CodecInfo. |
+| [CodecInfo](arkts-connectivity-codecinfo-i.md) | Returns the CodecInfo. |
 
 **Error codes:**
 
@@ -407,6 +429,8 @@ Get the full codec capabilities negotiated between the active device and the loc
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
+<!--Device-A2dpSourceProfile-getCurrentFullCodecInfo(deviceId: string): CodecInfoList[]--><!--Device-A2dpSourceProfile-getCurrentFullCodecInfo(deviceId: string): CodecInfoList[]-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -421,7 +445,7 @@ Get the full codec capabilities negotiated between the active device and the loc
 
 | Type | Description |
 | --- | --- |
-| CodecInfoList[] | Returns the CodecInfoList. |
+| [CodecInfoList](arkts-connectivity-codecinfolist-i.md)[] | Returns the CodecInfoList. |
 
 **Error codes:**
 
@@ -447,6 +471,8 @@ Checks whether the absolute volume is enabled.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
+<!--Device-A2dpSourceProfile-isAbsoluteVolumeEnabled(deviceId: string): Promise<boolean>--><!--Device-A2dpSourceProfile-isAbsoluteVolumeEnabled(deviceId: string): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -461,7 +487,7 @@ Checks whether the absolute volume is enabled.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns the promise object. |
 
 **Error codes:**
 
@@ -487,6 +513,8 @@ Checks whether the absolute volume is enabled.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
+<!--Device-A2dpSourceProfile-isAbsoluteVolumeEnabled(deviceId: string, callback: AsyncCallback<boolean>): void--><!--Device-A2dpSourceProfile-isAbsoluteVolumeEnabled(deviceId: string, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -496,7 +524,7 @@ Checks whether the absolute volume is enabled.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | the callback result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | the callback result. |
 
 **Error codes:**
 
@@ -522,6 +550,8 @@ Checks whether the device supports absolute volume.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
+<!--Device-A2dpSourceProfile-isAbsoluteVolumeSupported(deviceId: string): Promise<boolean>--><!--Device-A2dpSourceProfile-isAbsoluteVolumeSupported(deviceId: string): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -536,7 +566,7 @@ Checks whether the device supports absolute volume.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns the promise object. |
 
 **Error codes:**
 
@@ -562,6 +592,8 @@ Checks whether the device supports absolute volume.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
+<!--Device-A2dpSourceProfile-isAbsoluteVolumeSupported(deviceId: string, callback: AsyncCallback<boolean>): void--><!--Device-A2dpSourceProfile-isAbsoluteVolumeSupported(deviceId: string, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -571,7 +603,7 @@ Checks whether the device supports absolute volume.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to listen for the pairing request event. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to listen for the pairing request event. |
 
 **Error codes:**
 
@@ -597,6 +629,8 @@ Set codec information.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
+<!--Device-A2dpSourceProfile-setCurrentCodecInfo(deviceId: string, codecInfo: CodecInfo): void--><!--Device-A2dpSourceProfile-setCurrentCodecInfo(deviceId: string, codecInfo: CodecInfo): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -606,7 +640,7 @@ Set codec information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| codecInfo | CodecInfo | Yes | Indicates the CodecInfo. |
+| codecInfo | [CodecInfo](arkts-connectivity-codecinfo-i.md) | Yes | Indicates the CodecInfo. |
 
 **Error codes:**
 

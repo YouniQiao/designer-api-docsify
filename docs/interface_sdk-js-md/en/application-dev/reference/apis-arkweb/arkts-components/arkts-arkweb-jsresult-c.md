@@ -4,6 +4,8 @@ Defines the js result.
 
 **Since:** 8
 
+<!--Device-unnamed-declare class JsResult--><!--Device-unnamed-declare class JsResult-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## constructor
@@ -17,6 +19,8 @@ Constructor.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-JsResult-constructor()--><!--Device-JsResult-constructor()-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,6 +36,8 @@ Handle the user's JavaScript result if cancel the dialog.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-JsResult-handleCancel(): void--><!--Device-JsResult-handleCancel(): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## handleConfirm
@@ -46,6 +52,8 @@ Handle the user's JavaScript result if confirm the dialog.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-JsResult-handleConfirm(): void--><!--Device-JsResult-handleConfirm(): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## handlePromptConfirm
@@ -59,6 +67,8 @@ Handle the user's JavaScript result if confirm the prompt dialog.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-JsResult-handlePromptConfirm(result: string): void--><!--Device-JsResult-handlePromptConfirm(result: string): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

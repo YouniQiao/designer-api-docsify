@@ -4,6 +4,8 @@ Enumerates content protection level.
 
 **Since:** 12
 
+<!--Device-drm-enum ContentProtectionLevel--><!--Device-drm-enum ContentProtectionLevel-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## CONTENT_PROTECTION_LEVEL_UNKNOWN
@@ -17,6 +19,8 @@ Device decrypt and decode type unknown.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_UNKNOWN = 0--><!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_UNKNOWN = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -32,6 +36,8 @@ Device using software level.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_SW_CRYPTO--><!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_SW_CRYPTO-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## CONTENT_PROTECTION_LEVEL_HW_CRYPTO
@@ -45,6 +51,8 @@ Device using hardware level.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_HW_CRYPTO--><!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_HW_CRYPTO-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -60,6 +68,8 @@ Device using enhanced hardware level.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_ENHANCED_HW--><!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_ENHANCED_HW-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## CONTENT_PROTECTION_LEVEL_MAX
@@ -73,6 +83,8 @@ Max mode.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_MAX--><!--Device-ContentProtectionLevel-CONTENT_PROTECTION_LEVEL_MAX-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 

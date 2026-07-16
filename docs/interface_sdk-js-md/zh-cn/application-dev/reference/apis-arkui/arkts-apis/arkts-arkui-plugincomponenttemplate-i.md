@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-interface PluginComponentTemplate--><!--Device-unnamed-interface PluginComponentTemplate-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { PluginComponentTemplate } from '@kit.ArkUI';
+```
 
 ## ability
 
@@ -18,7 +26,9 @@ ability: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PluginComponentTemplate-ability: string--><!--Device-PluginComponentTemplate-ability: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,7 +44,9 @@ source: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PluginComponentTemplate-source: string--><!--Device-PluginComponentTemplate-source: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

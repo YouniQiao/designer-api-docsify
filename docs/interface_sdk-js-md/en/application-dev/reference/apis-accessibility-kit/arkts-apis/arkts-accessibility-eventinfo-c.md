@@ -4,6 +4,8 @@ Describes a GUI change event.
 
 **Since:** 7
 
+<!--Device-accessibility-class EventInfo--><!--Device-accessibility-class EventInfo-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## Modules to Import
@@ -26,13 +28,15 @@ Constructor, which is used to construct an EventInfo instance using a JSON objec
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-EventInfo-constructor(jsonObject: Object)--><!--Device-EventInfo-constructor(jsonObject: Object)-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jsonObject | Object | Yes | JSON object that contains the **type**, **bundleName**, and **triggerAction**fields. |
+| jsonObject | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | JSON object that contains the **type**, **bundleName**, and **triggerAction** fields. |
 
 **Example**
 
@@ -61,15 +65,17 @@ Constructor, which is used to construct an EventInfo instance using independent 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-EventInfo-constructor(type: EventType, bundleName: string, triggerAction: Action)--><!--Device-EventInfo-constructor(type: EventType, bundleName: string, triggerAction: Action)-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | EventType | Yes | Accessibility event types. |
+| type | [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-eventtype-t-sys.md) | Yes | Accessibility event types. |
 | bundleName | string | Yes | Target application name. |
-| triggerAction | Action | Yes | Action that triggers the event. |
+| triggerAction | [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-action-e.md) | Yes | Action that triggers the event. |
 
 **Example**
 
@@ -96,6 +102,8 @@ Start index. The default value is **0**.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-EventInfo-beginIndex?: int--><!--Device-EventInfo-beginIndex?: int-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## bundleName
@@ -114,6 +122,8 @@ Name of the target application (mandatory).
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-EventInfo-bundleName: string--><!--Device-EventInfo-bundleName: string-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## componentType
@@ -126,7 +136,7 @@ It should correspond to the event source component type, and the default value i
 
 Example:
 
-- Button type - > 'Button'
+- Button type - > 'Button'  
 - Image type - > 'Image'
 
 **Type:** string
@@ -137,6 +147,8 @@ Example:
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-EventInfo-componentType?: string--><!--Device-EventInfo-componentType?: string-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## contents
@@ -145,8 +157,7 @@ Example:
 contents?: Array<string>
 ```
 
-Content list, which is set according to the actual scenario with no special restrictions. The default value is
-empty.
+Content list, which is set according to the actual scenario with no special restrictions. The default value is empty.
 
 **Type:** Array<string>
 
@@ -155,6 +166,8 @@ empty.
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-EventInfo-contents?: Array<string>--><!--Device-EventInfo-contents?: Array<string>-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -174,6 +187,8 @@ Current index. The default value is **0**.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-EventInfo-currentIndex?: int--><!--Device-EventInfo-currentIndex?: int-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## customId
@@ -192,6 +207,8 @@ Component ID for active focusing, and the default value is empty.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-EventInfo-customId?: string--><!--Device-EventInfo-customId?: string-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## description
@@ -200,8 +217,7 @@ Component ID for active focusing, and the default value is empty.
 description?: string
 ```
 
-Event description, which is set according to the actual scenario with no special restrictions, and the default
-value is empty.
+Event description, which is set according to the actual scenario with no special restrictions, and the default value is empty.
 
 **Type:** string
 
@@ -210,6 +226,8 @@ value is empty.
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-EventInfo-description?: string--><!--Device-EventInfo-description?: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -229,6 +247,8 @@ Element ID of the component. The default value is **0**.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-EventInfo-elementId?: int--><!--Device-EventInfo-elementId?: int-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## endIndex
@@ -246,6 +266,8 @@ End index. The default value is **0**.
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-EventInfo-endIndex?: int--><!--Device-EventInfo-endIndex?: int-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -265,6 +287,8 @@ Total number of items. The default value is **0**.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-EventInfo-itemCount?: int--><!--Device-EventInfo-itemCount?: int-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## lastContent
@@ -273,8 +297,7 @@ Total number of items. The default value is **0**.
 lastContent?: string
 ```
 
-Latest content, which is set according to the actual scenario with no special restrictions. The default value is
-empty.
+Latest content, which is set according to the actual scenario with no special restrictions. The default value is empty.
 
 **Type:** string
 
@@ -283,6 +306,8 @@ empty.
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-EventInfo-lastContent?: string--><!--Device-EventInfo-lastContent?: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -302,6 +327,8 @@ ID of the page where the event occurs. The default value is **0**.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-EventInfo-pageId ?: int--><!--Device-EventInfo-pageId ?: int-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## textAnnouncedForAccessibility
@@ -310,8 +337,7 @@ ID of the page where the event occurs. The default value is **0**.
 textAnnouncedForAccessibility?: string
 ```
 
-Content for auto-broadcasting. When the application needs to proactively broadcast, set the broadcast content
-according to the actual scenario with no special restrictions, and the default value is empty.
+Content for auto-broadcasting. When the application needs to proactively broadcast, set the broadcast content according to the actual scenario with no special restrictions, and the default value is empty.
 
 **Type:** string
 
@@ -320,6 +346,8 @@ according to the actual scenario with no special restrictions, and the default v
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-EventInfo-textAnnouncedForAccessibility?: string--><!--Device-EventInfo-textAnnouncedForAccessibility?: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -339,6 +367,8 @@ Text moving granularity. The default value is char.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-EventInfo-textMoveUnit?: TextMoveUnit--><!--Device-EventInfo-textMoveUnit?: TextMoveUnit-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## textResourceAnnouncedForAccessibility
@@ -356,6 +386,8 @@ Content for auto-broadcasting. The value is a string of the **Resource** type.
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-EventInfo-textResourceAnnouncedForAccessibility?: Resource--><!--Device-EventInfo-textResourceAnnouncedForAccessibility?: Resource-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -375,6 +407,8 @@ Action that triggers the event (mandatory).
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-EventInfo-triggerAction: Action--><!--Device-EventInfo-triggerAction: Action-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## type
@@ -393,6 +427,8 @@ Accessibility event type (mandatory).
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-EventInfo-type: EventType--><!--Device-EventInfo-type: EventType-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## windowUpdateType
@@ -410,6 +446,8 @@ Window update type.
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-EventInfo-windowUpdateType?: WindowUpdateType--><!--Device-EventInfo-windowUpdateType?: WindowUpdateType-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 

@@ -16,13 +16,15 @@ Obtain the current country code.
 
 **Since:** 9
 
+<!--Device-geoLocationManager-function getCountryCode(callback: AsyncCallback<CountryCode>): void--><!--Device-geoLocationManager-function getCountryCode(callback: AsyncCallback<CountryCode>): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;CountryCode&gt; | Yes | Indicates the callback for reporting the country code. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<CountryCode> | Yes | Indicates the callback for reporting the country code. |
 
 **Error codes:**
 
@@ -64,13 +66,15 @@ Obtain the current country code.
 
 **Since:** 9
 
+<!--Device-geoLocationManager-function getCountryCode(): Promise<CountryCode>--><!--Device-geoLocationManager-function getCountryCode(): Promise<CountryCode>-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CountryCode&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CountryCode> | The promise returned by the function. |
 
 **Error codes:**
 

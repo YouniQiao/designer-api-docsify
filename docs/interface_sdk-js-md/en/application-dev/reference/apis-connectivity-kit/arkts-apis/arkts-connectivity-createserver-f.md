@@ -20,13 +20,15 @@ Creates a SSAP server instance.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ssap-function createServer(): Server--><!--Device-ssap-function createServer(): Server-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Server | Returns a SSAP server instance {@code Server}. |
+| [Server](arkts-connectivity-server-i.md) | Returns a SSAP server instance {@code Server}. |
 
 **Error codes:**
 

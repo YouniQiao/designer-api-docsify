@@ -14,14 +14,16 @@ Adds a notification slot of a specified type. This API uses an asynchronous call
 
 **Substitutes:** addSlot
 
+<!--Device-notification-function addSlot(type: SlotType, callback: AsyncCallback<void>): void--><!--Device-notification-function addSlot(type: SlotType, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SlotType | Yes | Type of the notification slot to add. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| type | [SlotType](arkts-notification-slottype-e.md) | Yes | Type of the notification slot to add. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 
 ## addSlot
@@ -38,17 +40,19 @@ Adds a notification slot of a specified type. This API uses a promise to return 
 
 **Substitutes:** addSlot
 
+<!--Device-notification-function addSlot(type: SlotType): Promise<void>--><!--Device-notification-function addSlot(type: SlotType): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SlotType | Yes | Type of the notification slot to add. |
+| type | [SlotType](arkts-notification-slottype-e.md) | Yes | Type of the notification slot to add. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 

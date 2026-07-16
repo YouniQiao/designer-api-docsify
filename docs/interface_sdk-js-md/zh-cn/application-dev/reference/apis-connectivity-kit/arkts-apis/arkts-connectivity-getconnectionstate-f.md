@@ -1,5 +1,11 @@
 # getConnectionState
 
+## 导入模块
+
+```TypeScript
+import { dataTransfer } from '@kit.ConnectivityKit';
+```
+
 ## getConnectionState
 
 ```TypeScript
@@ -14,19 +20,21 @@ function getConnectionState(params: ConnectionStateParams): ConnectionState
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-dataTransfer-function getConnectionState(params: ConnectionStateParams): ConnectionState--><!--Device-dataTransfer-function getConnectionState(params: ConnectionStateParams): ConnectionState-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | ConnectionStateParams | 是 | 获取连接状态参数 |
+| params | [ConnectionStateParams](arkts-connectivity-connectionstateparams-i.md) | 是 | 获取连接状态参数 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ConnectionState | 返回数据传输的连接状态。 |
+| [ConnectionState](arkts-connectivity-connectionstate-t.md) | 返回数据传输的连接状态。 |
 
 **错误码：**
 

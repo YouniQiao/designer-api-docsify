@@ -18,6 +18,8 @@ Subscribes to vpn connect state changes.
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 
+<!--Device-vpn-function on(type: 'connect', callback: Callback<VpnConnectState>): void--><!--Device-vpn-function on(type: 'connect', callback: Callback<VpnConnectState>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Subscribes to vpn connect state changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' | Yes | Indicates vpn connect state changes. |
-| callback | Callback&lt;VpnConnectState&gt; | Yes | The callback of the vpn connect state. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VpnConnectState> | Yes | The callback of the vpn connect state. |
 
 **Error codes:**
 
@@ -53,6 +55,8 @@ Subscribes to vpn connect state changes.
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 
+<!--Device-vpn-function on(type: 'connectMulti', callback: Callback<MultiVpnConnectState>): void--><!--Device-vpn-function on(type: 'connectMulti', callback: Callback<MultiVpnConnectState>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -62,7 +66,7 @@ Subscribes to vpn connect state changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectMulti' | Yes | Indicates multi vpn connect state changes. |
-| callback | Callback&lt;MultiVpnConnectState&gt; | Yes | The callback of the multi vpn connect state. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<MultiVpnConnectState> | Yes | The callback of the multi vpn connect state. |
 
 **Error codes:**
 

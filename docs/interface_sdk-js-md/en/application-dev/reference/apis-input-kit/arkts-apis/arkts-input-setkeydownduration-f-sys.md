@@ -12,10 +12,11 @@ import { shortKey } from '@kit.InputKit';
 function setKeyDownDuration(businessKey: string, delay: number, callback: AsyncCallback<void>): void
 ```
 
-Sets the delay for starting an ability using shortcut keys. This API uses an asynchronous callback to return the
-result.
+Sets the delay for starting an ability using shortcut keys. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-shortKey-function setKeyDownDuration(businessKey: string, delay: int, callback: AsyncCallback<void>): void--><!--Device-shortKey-function setKeyDownDuration(businessKey: string, delay: int, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.ShortKey
 
@@ -25,9 +26,9 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| businessKey | string | Yes | Unique service ID registered on the multimodal side. It corresponds to**businessId** in the **ability_launch_config.json** file. You need to query this parameter on your own beforecalling the API. |
-| delay | number | Yes | Delay for starting an ability using shortcut keys, in milliseconds. This field is valid onlywhen shortcut keys are pressed. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| businessKey | string | Yes | Unique service ID registered on the multimodal side. It corresponds to **businessId** in the **ability_launch_config.json** file. You need to query this parameter on your own before calling the API. |
+| delay | number | Yes | Delay for starting an ability using shortcut keys, in milliseconds. This field is valid only when shortcut keys are pressed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -79,6 +80,8 @@ Sets the delay for starting an ability using shortcut keys. This API uses a prom
 
 **Since:** 10
 
+<!--Device-shortKey-function setKeyDownDuration(businessKey: string, delay: int): Promise<void>--><!--Device-shortKey-function setKeyDownDuration(businessKey: string, delay: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.ShortKey
 
 **System API:** This is a system API.
@@ -87,14 +90,14 @@ Sets the delay for starting an ability using shortcut keys. This API uses a prom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| businessKey | string | Yes | Unique service ID registered on the multimodal side. It corresponds to**businessId** in the **ability_launch_config.json** file. You need to query this parameter on your own beforecalling the API. |
-| delay | number | Yes | Delay for starting an ability using shortcut keys, in milliseconds. This field is valid onlywhen shortcut keys are pressed. |
+| businessKey | string | Yes | Unique service ID registered on the multimodal side. It corresponds to **businessId** in the **ability_launch_config.json** file. You need to query this parameter on your own before calling the API. |
+| delay | number | Yes | Delay for starting an ability using shortcut keys, in milliseconds. This field is valid only when shortcut keys are pressed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

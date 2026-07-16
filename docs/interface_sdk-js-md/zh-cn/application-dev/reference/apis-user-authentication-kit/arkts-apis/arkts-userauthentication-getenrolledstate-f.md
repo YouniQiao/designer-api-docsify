@@ -1,5 +1,11 @@
 # getEnrolledState
 
+## 导入模块
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+```
+
 ## getEnrolledState
 
 ```TypeScript
@@ -12,7 +18,9 @@ function getEnrolledState(authType: UserAuthType): EnrolledState
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-userAuth-function getEnrolledState(authType: UserAuthType): EnrolledState--><!--Device-userAuth-function getEnrolledState(authType: UserAuthType): EnrolledState-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -20,13 +28,13 @@ function getEnrolledState(authType: UserAuthType): EnrolledState
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| authType | UserAuthType | 是 | 认证类型。用于指定查询的凭据类型，支持FACE（人脸）、FINGERPRINT（指纹）、PIN（密码）、COMPANION_DEVICE（伴随设备）。查询PIN时返回的是密码的整体状态，而非单个密码的数量。 |
+| authType | [UserAuthType](arkts-userauthentication-userauthtype-e.md) | 是 | 认证类型。用于指定查询的凭据类型，支持FACE（人脸）、FINGERPRINT（指纹）、PIN（密码）、COMPANION_DEVICE（伴随设备）。查询PIN时返回的是密码的整体状态，而非单个密码的数量。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| EnrolledState | 当查询成功时，返回值为用户注册凭据的状态。包含credentialDigest（凭据摘要）和credentialCount（凭据数量）。应用可保存credentialDigest值，后续查询时对比以检测凭据变更。 |
+| [EnrolledState](arkts-userauthentication-enrolledstate-i.md) | 当查询成功时，返回值为用户注册凭据的状态。包含credentialDigest（凭据摘要）和credentialCount（凭据数量）。应用可保存credentialDigest值，后续查询时对比以检测凭据变更。 |
 
 **错误码：**
 

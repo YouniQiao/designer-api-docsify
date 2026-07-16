@@ -16,6 +16,8 @@ Subscribes to the property change event of the status bar and navigation bar.
 
 **Since:** 8
 
+<!--Device-window-function on(type: 'systemBarTintChange', callback: Callback<SystemBarTintState>): void--><!--Device-window-function on(type: 'systemBarTintChange', callback: Callback<SystemBarTintState>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -24,8 +26,8 @@ Subscribes to the property change event of the status bar and navigation bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'systemBarTintChange' | Yes | Event type. The value is fixed at **'systemBarTintChange'**, indicating theproperty change event of the status bar and navigation bar. |
-| callback | Callback&lt;SystemBarTintState&gt; | Yes | Callback used to return the properties of the status bar andnavigation bar. |
+| type | 'systemBarTintChange' | Yes | Event type. The value is fixed at **'systemBarTintChange'**, indicating the property change event of the status bar and navigation bar. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<SystemBarTintState> | Yes | Callback used to return the properties of the status bar and navigation bar. |
 
 **Error codes:**
 
@@ -58,6 +60,8 @@ Subscribes to the gesture navigation status change event.
 
 **Since:** 10
 
+<!--Device-window-function on(type: 'gestureNavigationEnabledChange', callback: Callback<boolean>): void--><!--Device-window-function on(type: 'gestureNavigationEnabledChange', callback: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -66,8 +70,8 @@ Subscribes to the gesture navigation status change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'gestureNavigationEnabledChange' | Yes | Event type. The value is fixed at**'gestureNavigationEnabledChange'**, indicating the gesture navigation status change event. |
-| callback | Callback&lt;boolean&gt; | Yes | Callback used to return the gesture navigation status. **true** if enabled,**false** otherwise. |
+| type | 'gestureNavigationEnabledChange' | Yes | Event type. The value is fixed at **'gestureNavigationEnabledChange'**, indicating the gesture navigation status change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<boolean> | Yes | Callback used to return the gesture navigation status. **true** if enabled,**false** otherwise. |
 
 **Error codes:**
 
@@ -102,6 +106,8 @@ Subscribes to the watermark status change event.
 
 **Since:** 10
 
+<!--Device-window-function on(type: 'waterMarkFlagChange', callback: Callback<boolean>): void--><!--Device-window-function on(type: 'waterMarkFlagChange', callback: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -110,8 +116,8 @@ Subscribes to the watermark status change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'waterMarkFlagChange' | Yes | Event type. The value is fixed at **'waterMarkFlagChange'**, indicating thewatermark status change event. |
-| callback | Callback&lt;boolean&gt; | Yes | Callback used to return the watermark status. **true** if enabled,**false** otherwise. |
+| type | 'waterMarkFlagChange' | Yes | Event type. The value is fixed at **'waterMarkFlagChange'**, indicating the watermark status change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<boolean> | Yes | Callback used to return the watermark status. **true** if enabled,**false** otherwise. |
 
 **Error codes:**
 

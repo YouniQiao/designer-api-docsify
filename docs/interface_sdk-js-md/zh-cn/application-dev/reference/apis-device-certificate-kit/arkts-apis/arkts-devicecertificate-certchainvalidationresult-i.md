@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-cert-interface CertChainValidationResult--><!--Device-cert-interface CertChainValidationResult-End-->
+
 **系统能力：** SystemCapability.Security.Cert
+
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
 
 ## entityCert
 
@@ -18,7 +26,9 @@ readonly entityCert: X509Cert
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CertChainValidationResult-readonly entityCert: X509Cert--><!--Device-CertChainValidationResult-readonly entityCert: X509Cert-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -34,7 +44,9 @@ readonly trustAnchor: X509TrustAnchor
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CertChainValidationResult-readonly trustAnchor: X509TrustAnchor--><!--Device-CertChainValidationResult-readonly trustAnchor: X509TrustAnchor-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

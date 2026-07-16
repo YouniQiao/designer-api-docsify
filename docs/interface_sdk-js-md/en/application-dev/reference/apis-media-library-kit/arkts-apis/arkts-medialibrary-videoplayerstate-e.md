@@ -4,6 +4,8 @@ VideoPlayerState. include PLAYING, PAUSED, STOPPED, SEEK_START and SEEK_FINISH
 
 **Since:** 14
 
+<!--Device-unnamed-export declare enum VideoPlayerState--><!--Device-unnamed-export declare enum VideoPlayerState-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## PLAYING
@@ -17,6 +19,8 @@ PLAYING. video is playing
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-VideoPlayerState-PLAYING = 0--><!--Device-VideoPlayerState-PLAYING = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -32,6 +36,8 @@ PAUSED. video is paused
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-VideoPlayerState-PAUSED = 1--><!--Device-VideoPlayerState-PAUSED = 1-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## STOPPED
@@ -45,6 +51,8 @@ STOPPED. video is stopped
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-VideoPlayerState-STOPPED = 2--><!--Device-VideoPlayerState-STOPPED = 2-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -60,6 +68,8 @@ SEEK_START. seek drag is start
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-VideoPlayerState-SEEK_START = 3--><!--Device-VideoPlayerState-SEEK_START = 3-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## SEEK_FINISH
@@ -73,6 +83,8 @@ SEEK_FINISH. seek drag is finish
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-VideoPlayerState-SEEK_FINISH = 4--><!--Device-VideoPlayerState-SEEK_FINISH = 4-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

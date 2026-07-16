@@ -20,6 +20,8 @@ Get remote device battery information.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-bas-function getRemoteDeviceBatteryInfo(deviceId: BluetoothAddress): Promise<BatteryInfo>--><!--Device-bas-function getRemoteDeviceBatteryInfo(deviceId: BluetoothAddress): Promise<BatteryInfo>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -28,13 +30,13 @@ Get remote device battery information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | BluetoothAddress | Yes | Indicates address of peer device. |
+| deviceId | [BluetoothAddress](arkts-connectivity-bluetoothaddress-i.md) | Yes | Indicates address of peer device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BatteryInfo&gt; | Returns the battery info. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<BatteryInfo> | Returns the battery info. |
 
 **Error codes:**
 

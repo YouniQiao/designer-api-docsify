@@ -1,14 +1,15 @@
 # DragController
 
-Provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or long-press event, an
-application can initiate a drag action and carry drag information therein.
+Provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or long-press event, an application can initiate a drag action and carry drag information therein.
 
-> **NOTE**
->
-> In the following API examples, you must first use [getDragController()](arkts-arkui-uicontext-c.md#getdragcontroller-1) in
+> **NOTE**  
+>  
+> In the following API examples, you must first use [getDragController()](arkts-arkui-uicontext-c.md#getdragcontroller-1) in  
 > **UIContext** to obtain a **DragController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 11
+
+<!--Device-unnamed-export class DragController--><!--Device-unnamed-export class DragController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,14 +25,15 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 cancelDataLoading(key: string): void
 ```
 
-Cancels the data loading initiated by the [startDataLoading](../arkts-components/arkts-arkui-dragevent-i.md#startdataloading-1)
-API. This API can be called only after the drag is released.
+Cancels the data loading initiated by the [startDataLoading](../arkts-components/arkts-arkui-dragevent-i.md#startdataloading-1)API. This API can be called only after the drag is released.
 
 **Since:** 15
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-DragController-cancelDataLoading(key: string): void--><!--Device-DragController-cancelDataLoading(key: string): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,15 +56,10 @@ API. This API can be called only after the drag is released.
 createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dragController.DragInfo): dragController.DragAction
 ```
 
-Creates a drag action object for initiating drag and drop operations. You need to explicitly specify one or more
-drag previews, the drag data, and the drag handle point. If a drag operation initiated by an existing drag action
-object is not completed, no new object can be created, and calling the API will throw an exception. After the
-lifecycle of the drag action object ends, the callback functions registered on this object become invalid.
-Therefore, it is necessary to hold this object within a longer scope and replace the old value with a new object
-returned by **createDragAction** before each drag initiation.
+Creates a drag action object for initiating drag and drop operations. You need to explicitly specify one or more drag previews, the drag data, and the drag handle point. If a drag operation initiated by an existing drag action object is not completed, no new object can be created, and calling the API will throw an exception. After the lifecycle of the drag action object ends, the callback functions registered on this object become invalid.Therefore, it is necessary to hold this object within a longer scope and replace the old value with a new object returned by **createDragAction** before each drag initiation.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > For optimal drag and drop performance, limit the number of drag previews.
 
 **Since:** 11
@@ -71,20 +68,22 @@ returned by **createDragAction** before each drag initiation.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DragController-createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dragController.DragInfo): dragController.DragAction--><!--Device-DragController-createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dragController.DragInfo): dragController.DragAction-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| customArray | Array&lt;CustomBuilder \| DragItemInfo&gt; | Yes | Object to be dragged. |
+| customArray | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<CustomBuilder \| DragItemInfo> | Yes | Object to be dragged. |
 | dragInfo | dragController.DragInfo | Yes | Drag information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| dragController.DragAction | **DragAction** object, which is used to subscribe to drag state changes andstart the drag service. |
+| dragController.DragAction | **DragAction** object, which is used to subscribe to drag state changes and start the drag service. |
 
 **Error codes:**
 
@@ -99,13 +98,7 @@ returned by **createDragAction** before each drag initiation.
 enableDropDisallowedBadge(enabled: boolean): void
 ```
 
-Specifies whether to enable the display of a disallowed badge when dragged content is incompatible with a component
-'s configured [allowDrop](../arkts-components/arkts-arkui-commonmethod-c.md#allowdrop-1) types. When a component can accept or process dragged data
-or returns **DragBehavior.COPY** to indicate copy mode processing, the drag preview shows a plus icon with data
-count badge. When the component returns **DragBehavior.MOVE** to indicate cut mode processing, only the data count
-badge appears. When this feature is enabled, the system automatically displays a disallowed badge during drag
-operations if the dragged data types are incompatible with the target component's allowed drop types. This API
-currently does not support [UIExtension](arkts-arkui-uiextension.md).
+Specifies whether to enable the display of a disallowed badge when dragged content is incompatible with a component's configured [allowDrop](../arkts-components/arkts-arkui-commonmethod-c.md#allowdrop-1) types. When a component can accept or process dragged data or returns **DragBehavior.COPY** to indicate copy mode processing, the drag preview shows a plus icon with data count badge. When the component returns **DragBehavior.MOVE** to indicate cut mode processing, only the data count badge appears. When this feature is enabled, the system automatically displays a disallowed badge during drag operations if the dragged data types are incompatible with the target component's allowed drop types. This API currently does not support [UIExtension](arkts-arkui-uiextension.md).
 
 **Since:** 20
 
@@ -113,13 +106,15 @@ currently does not support [UIExtension](arkts-arkui-uiextension.md).
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-DragController-enableDropDisallowedBadge(enabled: boolean): void--><!--Device-DragController-enableDropDisallowedBadge(enabled: boolean): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable the display of a disallowed badge when dragged content isincompatible with a component's configured [allowDrop](../arkts-components/arkts-arkui-commonmethod-c.md#allowdrop-1) types. The value **true**means to enable the display of a disallowed badge, and **false** means the opposite. The default value is**false**. |
+| enabled | boolean | Yes | Whether to enable the display of a disallowed badge when dragged content is incompatible with a component's configured [allowDrop](../arkts-components/arkts-arkui-commonmethod-c.md#allowdrop-1) types. The value **true** means to enable the display of a disallowed badge, and **false** means the opposite. The default value is **false**. |
 
 ## executeDrag
 
@@ -128,8 +123,7 @@ executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragI
     callback: AsyncCallback<dragController.DragEventParam>): void
 ```
 
-Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a callback
-to return the drag event result.
+Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a callback to return the drag event result.
 
 **Since:** 11
 
@@ -137,15 +131,19 @@ to return the drag event result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragInfo,
+    callback: AsyncCallback<dragController.DragEventParam>): void--><!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragInfo,
+    callback: AsyncCallback<dragController.DragEventParam>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| custom | CustomBuilder \| DragItemInfo | Yes | Object to be dragged.<br> **NOTE**<br>The global builder is notsupported. If the [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) component is used in the builder, enable synchronous loading, that is,set the [syncLoad](ImageAttribute#syncLoad) attribute of the component to **true**. The builder is usedonly to generate the image displayed during the current dragging. If the root component of the builder has zerowidth or height, it will cause failure in drag image generation, which in turn breaks the entire dragoperation. Changes to the builder, if any, apply to the next dragging, but not to the current dragging. |
+| custom | CustomBuilder \| DragItemInfo | Yes | Object to be dragged.<br> **NOTE**<br>The global builder is not supported. If the [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) component is used in the builder, enable synchronous loading, that is,set the [syncLoad](ImageAttribute#syncLoad) attribute of the component to **true**. The builder is used only to generate the image displayed during the current dragging. If the root component of the builder has zero width or height, it will cause failure in drag image generation, which in turn breaks the entire drag operation. Changes to the builder, if any, apply to the next dragging, but not to the current dragging. |
 | dragInfo | dragController.DragInfo | Yes | Drag information. |
-| callback | AsyncCallback&lt;dragController.DragEventParam&gt; | Yes | Callback used to return the result.<br>-**event**: drag event information that includes only the drag result.<br>- **extraParams**: extra informationabout the drag event.<br>**Since:** 12 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<dragController.DragEventParam> | Yes | Callback used to return the result.<br>-**event**: drag event information that includes only the drag result.<br>- **extraParams**: extra information about the drag event.<br>**Since:** 12 |
 
 **Error codes:**
 
@@ -161,14 +159,17 @@ executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragI
     : Promise<dragController.DragEventParam>
 ```
 
-Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise
-to return the drag event result.
+Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the drag event result.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragInfo)
+    : Promise<dragController.DragEventParam>--><!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragInfo)
+    : Promise<dragController.DragEventParam>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -183,7 +184,7 @@ to return the drag event result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;dragController.DragEventParam&gt; | A Promise with the drag event information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<dragController.DragEventParam> | A Promise with the drag event information. |
 
 **Error codes:**
 
@@ -205,6 +206,8 @@ Obtains the **DragPreview** object, which represents the preview displayed durin
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DragController-getDragPreview(): dragController.DragPreview--><!--Device-DragController-getDragPreview(): dragController.DragPreview-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -228,13 +231,15 @@ Controls whether the application can initiate a drag operation.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-DragController-notifyDragStartRequest(requestStatus: dragController.DragStartRequestStatus): void--><!--Device-DragController-notifyDragStartRequest(requestStatus: dragController.DragStartRequestStatus): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestStatus | dragController.DragStartRequestStatus | Yes | Whether the application can initiate a dragoperation. |
+| requestStatus | dragController.DragStartRequestStatus | Yes | Whether the application can initiate a drag operation. |
 
 ## setDragEventStrictReportingEnabled
 
@@ -242,8 +247,7 @@ Controls whether the application can initiate a drag operation.
 setDragEventStrictReportingEnabled(enable: boolean): void
 ```
 
-Sets whether the **onDragLeave** callback of the parent component is triggered when an item is dragged from the
-parent to the child component.
+Sets whether the **onDragLeave** callback of the parent component is triggered when an item is dragged from the parent to the child component.
 
 **Since:** 12
 
@@ -251,11 +255,13 @@ parent to the child component.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DragController-setDragEventStrictReportingEnabled(enable: boolean): void--><!--Device-DragController-setDragEventStrictReportingEnabled(enable: boolean): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether the **onDragLeave** callback of the parent component is triggered when an itemis dragged from the parent to the child component. The value **true** means the **onDragLeave** callback of theparent component is triggered, and **false** means the opposite. |
+| enable | boolean | Yes | Whether the **onDragLeave** callback of the parent component is triggered when an item is dragged from the parent to the child component. The value **true** means the **onDragLeave** callback of the parent component is triggered, and **false** means the opposite. |
 

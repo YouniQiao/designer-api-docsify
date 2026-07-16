@@ -4,6 +4,8 @@ Provides APIs for domain account management.
 
 **Since:** 18
 
+<!--Device-osAccount-class DomainAccountManager--><!--Device-osAccount-class DomainAccountManager-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Authenticates a domain account.
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-DomainAccountManager-static auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callback: IUserAuthCallback): void--><!--Device-DomainAccountManager-static auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callback: IUserAuthCallback): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -32,9 +36,9 @@ Authenticates a domain account.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | DomainAccountInfo | Yes | Domain account information. |
-| credential | Uint8Array | Yes | Credentials of the domain account. |
-| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
+| credential | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Credentials of the domain account. |
+| callback | [IUserAuthCallback](arkts-basicservices-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
 
 **Error codes:**
 
@@ -91,12 +95,21 @@ static auth(
       callback: IUserAuthCallback): void
 ```
 
-Authenticates a specified domain account. You can specify authentication options, such as server parameters. This
-API uses an asynchronous callback to return the result.
+Authenticates a specified domain account. You can specify authentication options, such as server parameters. This API uses an asynchronous callback to return the result.
 
 **Since:** 24
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
+
+<!--Device-DomainAccountManager-static auth(
+      domainAccountInfo: DomainAccountInfo,
+      credential: Uint8Array,
+      options: DomainAccountAuthOptions,
+      callback: IUserAuthCallback): void--><!--Device-DomainAccountManager-static auth(
+      domainAccountInfo: DomainAccountInfo,
+      credential: Uint8Array,
+      options: DomainAccountAuthOptions,
+      callback: IUserAuthCallback): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -106,10 +119,10 @@ API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | DomainAccountInfo | Yes | Domain account information. |
-| credential | Uint8Array | Yes | Credentials of the domain account. |
-| options | DomainAccountAuthOptions | Yes | Options for domain account authentication. |
-| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
+| credential | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Credentials of the domain account. |
+| options | [DomainAccountAuthOptions](arkts-basicservices-domainaccountauthoptions-i-sys.md) | Yes | Options for domain account authentication. |
+| callback | [IUserAuthCallback](arkts-basicservices-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
 
 **Error codes:**
 
@@ -175,6 +188,8 @@ Authenticates a domain account in a pop-up window.
 **Required permissions:** 
 - API version 10: ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-DomainAccountManager-static authWithPopup(callback: IUserAuthCallback): void--><!--Device-DomainAccountManager-static authWithPopup(callback: IUserAuthCallback): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -183,7 +198,7 @@ Authenticates a domain account in a pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
+| callback | [IUserAuthCallback](arkts-basicservices-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
 
 **Error codes:**
 
@@ -236,6 +251,8 @@ Authenticates a domain account in a pop-up window.
 **Required permissions:** 
 - API version 10: ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-DomainAccountManager-static authWithPopup(localId: int, callback: IUserAuthCallback): void--><!--Device-DomainAccountManager-static authWithPopup(localId: int, callback: IUserAuthCallback): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -245,7 +262,7 @@ Authenticates a domain account in a pop-up window.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | Local ID of the OS account bound to the domain account. |
-| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
+| callback | [IUserAuthCallback](arkts-basicservices-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
 
 **Error codes:**
 
@@ -292,10 +309,11 @@ try {
 static getAccessToken(businessParams: Record<string, Object>, callback: AsyncCallback<Uint8Array>): void
 ```
 
-Obtains the service access token of a domain account. This API uses an asynchronous callback to return the
-result.
+Obtains the service access token of a domain account. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+<!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, Object>, callback: AsyncCallback<Uint8Array>): void--><!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, Object>, callback: AsyncCallback<Uint8Array>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -305,8 +323,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| businessParams | Record&lt;string, Object&gt; | Yes | Service parameters.The specific formats vary depending on the domain plug-in. |
-| callback | AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null**. Otherwise, an error object is returned. |
+| businessParams | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Object> | Yes | Service parameters.The specific formats vary depending on the domain plug-in. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Uint8Array> | Yes | Callback used to return the result.If the operation is successful, **err** is **null**. Otherwise, an error object is returned. |
 
 **Error codes:**
 
@@ -359,6 +377,8 @@ Obtains the service access token of a domain account. This API uses a promise to
 
 **Since:** 11
 
+<!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, Object>): Promise<Uint8Array>--><!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, Object>): Promise<Uint8Array>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -367,13 +387,13 @@ Obtains the service access token of a domain account. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| businessParams | Record&lt;string, Object&gt; | Yes | Service parameters.The specific formats vary depending on the domain plug-in. |
+| businessParams | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Object> | Yes | Service parameters.The specific formats vary depending on the domain plug-in. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the service access token obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Uint8Array> | Promise used to return the service access token obtained. |
 
 **Error codes:**
 
@@ -420,12 +440,13 @@ try {
 static getAccountInfo(options: GetDomainAccountInfoOptions, callback: AsyncCallback<DomainAccountInfo>): void
 ```
 
-Obtains information about a specified domain account. This API uses an asynchronous callback to return the
-result.
+Obtains information about a specified domain account. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.GET_DOMAIN_ACCOUNTS
+
+<!--Device-DomainAccountManager-static getAccountInfo(options: GetDomainAccountInfoOptions, callback: AsyncCallback<DomainAccountInfo>): void--><!--Device-DomainAccountManager-static getAccountInfo(options: GetDomainAccountInfoOptions, callback: AsyncCallback<DomainAccountInfo>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -435,8 +456,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | GetDomainAccountInfoOptions | Yes | Domain account information. |
-| callback | AsyncCallback&lt;DomainAccountInfo&gt; | Yes | Callback used to return the result. |
+| options | [GetDomainAccountInfoOptions](arkts-basicservices-getdomainaccountinfooptions-i-sys.md) | Yes | Domain account information. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<DomainAccountInfo> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -491,6 +512,8 @@ Obtains information about a specified domain account. This API uses a promise to
 
 **Required permissions:** ohos.permission.GET_DOMAIN_ACCOUNTS
 
+<!--Device-DomainAccountManager-static getAccountInfo(options: GetDomainAccountInfoOptions): Promise<DomainAccountInfo>--><!--Device-DomainAccountManager-static getAccountInfo(options: GetDomainAccountInfoOptions): Promise<DomainAccountInfo>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -499,13 +522,13 @@ Obtains information about a specified domain account. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | GetDomainAccountInfoOptions | Yes | Domain account information. |
+| options | [GetDomainAccountInfoOptions](arkts-basicservices-getdomainaccountinfooptions-i-sys.md) | Yes | Domain account information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DomainAccountInfo&gt; | Promise used to return the domain account information obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DomainAccountInfo> | Promise used to return the domain account information obtained. |
 
 **Error codes:**
 
@@ -558,6 +581,8 @@ Checks whether a domain account exists. This API uses an asynchronous callback t
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-DomainAccountManager-static hasAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<boolean>): void--><!--Device-DomainAccountManager-static hasAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -566,8 +591,8 @@ Checks whether a domain account exists. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | DomainAccountInfo | Yes | Domain account information. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result.The value **true** means that the specified domain account exists; the value **false** means the opposite. |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result.The value **true** means that the specified domain account exists; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -621,6 +646,8 @@ Checks whether a domain account exists. This API uses a promise to return the re
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-DomainAccountManager-static hasAccount(domainAccountInfo: DomainAccountInfo): Promise<boolean>--><!--Device-DomainAccountManager-static hasAccount(domainAccountInfo: DomainAccountInfo): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -629,13 +656,13 @@ Checks whether a domain account exists. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | DomainAccountInfo | Yes | Domain account information. |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result.The value **true** means that the specified domain account exists; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result.The value **true** means that the specified domain account exists; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -687,6 +714,8 @@ Checks whether the authentication of a domain account has expired. This API uses
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-DomainAccountManager-static isAuthenticationExpired(domainAccountInfo: DomainAccountInfo): Promise<boolean>--><!--Device-DomainAccountManager-static isAuthenticationExpired(domainAccountInfo: DomainAccountInfo): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -695,13 +724,13 @@ Checks whether the authentication of a domain account has expired. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | DomainAccountInfo | Yes | Domain account information. |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means thatthe specified domain account has expired; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means that the specified domain account has expired; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -746,6 +775,8 @@ Registers a domain plug-in.
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-DomainAccountManager-static registerPlugin(plugin: DomainPlugin): void--><!--Device-DomainAccountManager-static registerPlugin(plugin: DomainPlugin): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -754,7 +785,7 @@ Registers a domain plug-in.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| plugin | DomainPlugin | Yes | Domain plug-in to register. |
+| plugin | [DomainPlugin](arkts-basicservices-domainplugin-i-sys.md) | Yes | Domain plug-in to register. |
 
 **Error codes:**
 
@@ -810,6 +841,8 @@ Unregisters this domain plug-in.
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-DomainAccountManager-static unregisterPlugin(): void--><!--Device-DomainAccountManager-static unregisterPlugin(): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -847,12 +880,21 @@ static updateAccountToken(
     ): void
 ```
 
-Updates the token of a domain account. An empty token means an invalid token. This API uses an asynchronous
-callback to return the result.
+Updates the token of a domain account. An empty token means an invalid token. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-DomainAccountManager-static updateAccountToken(
+      domainAccountInfo: DomainAccountInfo,
+      token: Uint8Array,
+      callback: AsyncCallback<void>
+    ): void--><!--Device-DomainAccountManager-static updateAccountToken(
+      domainAccountInfo: DomainAccountInfo,
+      token: Uint8Array,
+      callback: AsyncCallback<void>
+    ): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -862,9 +904,9 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | DomainAccountInfo | Yes | Domain account information. |
-| token | Uint8Array | Yes | New domain account token. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
+| token | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | New domain account token. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result.If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -909,12 +951,13 @@ try {
 static updateAccountToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array): Promise<void>
 ```
 
-Updates the token of a domain account. An empty token means an invalid token. This API uses a promise to return
-the result.
+Updates the token of a domain account. An empty token means an invalid token. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-DomainAccountManager-static updateAccountToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array): Promise<void>--><!--Device-DomainAccountManager-static updateAccountToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -924,14 +967,14 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | DomainAccountInfo | Yes | Domain account information. |
-| token | Uint8Array | Yes | New domain account token. |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
+| token | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | New domain account token. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

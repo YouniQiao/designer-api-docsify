@@ -4,6 +4,8 @@ Enumerates the bundle types.
 
 **Since:** 9
 
+<!--Device-bundleManager-export enum BundleType--><!--Device-bundleManager-export enum BundleType-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## APP
@@ -18,6 +20,8 @@ The bundle is an application.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-BundleType-APP = 0--><!--Device-BundleType-APP = 0-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## ATOMIC_SERVICE
@@ -31,6 +35,8 @@ The bundle is an atomic service.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-BundleType-ATOMIC_SERVICE = 1--><!--Device-BundleType-ATOMIC_SERVICE = 1-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

@@ -6,6 +6,8 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 
 **Since:** 23
 
+<!--Device-webview-enum BlanklessFrameInterpolationState--><!--Device-webview-enum BlanklessFrameInterpolationState-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## FRAME_INTERPOLATION_SUCCEEDED
@@ -21,6 +23,8 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BlanklessFrameInterpolationState-FRAME_INTERPOLATION_SUCCEEDED = 0--><!--Device-BlanklessFrameInterpolationState-FRAME_INTERPOLATION_SUCCEEDED = 0-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -38,6 +42,8 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BlanklessFrameInterpolationState-FRAME_INTERPOLATION_FAILED = 1--><!--Device-BlanklessFrameInterpolationState-FRAME_INTERPOLATION_FAILED = 1-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## FRAME_INTERPOLATION_REMOVED
@@ -53,6 +59,8 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BlanklessFrameInterpolationState-FRAME_INTERPOLATION_REMOVED = 2--><!--Device-BlanklessFrameInterpolationState-FRAME_INTERPOLATION_REMOVED = 2-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

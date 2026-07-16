@@ -8,6 +8,8 @@
 
 **起始版本：** 18
 
+<!--Device-unnamed-declare interface TabBarOptions--><!--Device-unnamed-declare interface TabBarOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## icon
@@ -22,7 +24,9 @@ TabBar icon.
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TabBarOptions-icon?: string | Resource--><!--Device-TabBarOptions-icon?: string | Resource-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,7 +42,9 @@ TabBar text.
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TabBarOptions-text?: string | Resource--><!--Device-TabBarOptions-text?: string | Resource-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

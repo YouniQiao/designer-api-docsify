@@ -8,6 +8,8 @@ Defines the Web cookie.
 
 **Substitutes:** WebCookieManager
 
+<!--Device-unnamed-declare class WebCookie--><!--Device-unnamed-declare class WebCookie-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## constructor
@@ -26,6 +28,8 @@ Constructor.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebCookie-constructor()--><!--Device-WebCookie-constructor()-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## saveCookie
@@ -42,6 +46,8 @@ Saves the cookies.
 
 **Substitutes:** saveCookieAsync
 
+<!--Device-WebCookie-saveCookie()--><!--Device-WebCookie-saveCookie()-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## setCookie
@@ -57,6 +63,8 @@ Sets the cookie.
 **Deprecated since:** 9
 
 **Substitutes:** setCookie
+
+<!--Device-WebCookie-setCookie()--><!--Device-WebCookie-setCookie()-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

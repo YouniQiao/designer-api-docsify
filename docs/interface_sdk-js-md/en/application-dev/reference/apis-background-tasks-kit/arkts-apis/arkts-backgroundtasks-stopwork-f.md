@@ -18,14 +18,16 @@ Stops a deferred task.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-workScheduler-function stopWork(work: WorkInfo, needCancel?: boolean): void--><!--Device-workScheduler-function stopWork(work: WorkInfo, needCancel?: boolean): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| work | WorkInfo | Yes | Deferred task to stop. |
-| needCancel | boolean | No | Whether to clear the task while stopping it.<br>The value **true** means to clearthe task while stopping it, and **false** means to stop the task only. The default value is **false**. |
+| work | [WorkInfo](arkts-backgroundtasks-workinfo-i.md) | Yes | Deferred task to stop. |
+| needCancel | boolean | No | Whether to clear the task while stopping it.<br>The value **true** means to clear the task while stopping it, and **false** means to stop the task only. The default value is **false**. |
 
 **Error codes:**
 

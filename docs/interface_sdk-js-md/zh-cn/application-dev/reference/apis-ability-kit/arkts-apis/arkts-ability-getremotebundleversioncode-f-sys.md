@@ -1,5 +1,11 @@
 # getRemoteBundleVersionCode（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { distributedBundleManager } from '@kit.AbilityKit';
+```
+
 ## getRemoteBundleVersionCode
 
 ```TypeScript
@@ -13,6 +19,8 @@ function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promi
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-distributedBundleManager-function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promise<long>--><!--Device-distributedBundleManager-function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promise<long>-End-->
 
 **系统能力：** SystemCapability.BundleManager.DistributedBundleFramework
 
@@ -29,7 +37,7 @@ function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，调用成功返回版本信息；调用失败返回错误对象。 |
+| Promise<number> | Promise对象，调用成功返回版本信息；调用失败返回错误对象。 |
 
 **错误码：**
 

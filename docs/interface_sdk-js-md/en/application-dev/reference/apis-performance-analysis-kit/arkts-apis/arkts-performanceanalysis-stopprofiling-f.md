@@ -12,15 +12,15 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 function stopProfiling(): void
 ```
 
-Stops the VM profiling method. **stopProfiling()** and **startProfiling(filename: string)** are called in pairs.
-**startProfiling(filename: string)** always occurs before **stopProfiling()**. You are advised not to call either
-of these methods repeatedly. Otherwise, an exception may occur.
+Stops the VM profiling method. **stopProfiling()** and **startProfiling(filename: string)** are called in pairs.**startProfiling(filename: string)** always occurs before **stopProfiling()**. You are advised not to call either of these methods repeatedly. Otherwise, an exception may occur.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** [stopJsCpuProfiling](arkts-performanceanalysis-stopjscpuprofiling-f.md#stopjscpuprofiling-1)
+
+<!--Device-hidebug-function stopProfiling(): void--><!--Device-hidebug-function stopProfiling(): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 

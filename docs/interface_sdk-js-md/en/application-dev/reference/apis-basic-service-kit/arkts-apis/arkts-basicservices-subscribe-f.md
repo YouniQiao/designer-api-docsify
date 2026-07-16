@@ -18,14 +18,16 @@ Subscribes to a common event. This API uses an asynchronous callback to return t
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-commonEventManager-function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<CommonEventData>): void--><!--Device-commonEventManager-function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<CommonEventData>): void-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | CommonEventSubscriber | Yes | Subscriber object. |
-| callback | AsyncCallback&lt;CommonEventData&gt; | Yes | Callback triggered if the operation is successful; otherwise,**err** is an error object. |
+| subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-i.md) | Yes | Subscriber object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<CommonEventData> | Yes | Callback triggered if the operation is successful; otherwise,**err** is an error object. |
 
 **Error codes:**
 

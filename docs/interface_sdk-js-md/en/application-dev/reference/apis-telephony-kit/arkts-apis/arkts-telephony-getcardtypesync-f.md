@@ -16,6 +16,8 @@ Obtains the type of the SIM card inserted in a specified slot.
 
 **Since:** 10
 
+<!--Device-sim-function getCardTypeSync(slotId: int): CardType--><!--Device-sim-function getCardTypeSync(slotId: int): CardType-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -28,7 +30,7 @@ Obtains the type of the SIM card inserted in a specified slot.
 
 | Type | Description |
 | --- | --- |
-| CardType | Returns the SIM card type. |
+| [CardType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-cardtype-e.md) | Returns the SIM card type. |
 
 **Example**
 

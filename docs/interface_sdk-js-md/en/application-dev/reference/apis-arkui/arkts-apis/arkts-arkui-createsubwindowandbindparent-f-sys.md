@@ -13,14 +13,15 @@ function createSubWindowAndBindParent(name: string, parentId: number, ctx: BaseC
     parentWindowEventListener: WindowEventListener): Promise<Window>
 ```
 
-Create a subwindow with a specific name and bind parent.
-The parent window only supports main window.
-The subwindow follows the parent window to show/hide, but does not follow the parent window to destroy.
-The subwindow listens to the parent window lifecycle changes through the callback function.
+Create a subwindow with a specific name and bind parent.The parent window only supports main window.The subwindow follows the parent window to show/hide, but does not follow the parent window to destroy.The subwindow listens to the parent window lifecycle changes through the callback function.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-window-function createSubWindowAndBindParent(name: string, parentId: int, ctx: BaseContext,
+    parentWindowEventListener: WindowEventListener): Promise<Window>--><!--Device-window-function createSubWindowAndBindParent(name: string, parentId: int, ctx: BaseContext,
+    parentWindowEventListener: WindowEventListener): Promise<Window>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -32,14 +33,14 @@ The subwindow listens to the parent window lifecycle changes through the callbac
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates window name. |
 | parentId | number | Yes | Indicates parent window id. The window id is a non-negative number and exists. |
-| ctx | BaseContext | Yes | Indicates the context on which the window depends. |
-| parentWindowEventListener | WindowEventListener | Yes | Indicates the event listener of parent window. |
+| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Indicates the context on which the window depends. |
+| parentWindowEventListener | [WindowEventListener](arkts-arkui-windoweventlistener-t.md) | Yes | Indicates the event listener of parent window. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Window&gt; | The interface for creating a window returns a promise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Window> | The interface for creating a window returns a promise. |
 
 **Error codes:**
 

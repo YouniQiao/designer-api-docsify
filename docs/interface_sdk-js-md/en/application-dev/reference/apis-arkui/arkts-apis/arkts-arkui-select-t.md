@@ -12,6 +12,8 @@ Represents a FrameNode of the **Select** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-typeNode-type Select = TypedFrameNode<SelectInterface, SelectAttribute>--><!--Device-typeNode-type Select = TypedFrameNode<SelectInterface, SelectAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** TypedFrameNode<SelectInterface, SelectAttribute>

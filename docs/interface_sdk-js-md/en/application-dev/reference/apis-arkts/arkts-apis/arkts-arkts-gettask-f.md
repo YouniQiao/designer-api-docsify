@@ -14,19 +14,21 @@ function getTask(taskId: number, taskName?: string): Task | undefined
 
 Obtains the corresponding task instance by task ID, or by task ID and task name.
 
-> **NOTE**
->
-> - If no task instance is found based on the input task ID, **undefined** is returned.
->
-> - If the corresponding task instance can be queried based on the input task ID but the thread that calls the
-> **getTask** method is different from the thread that creates the task instance, **undefined** is returned.
->
-> - If taskId and taskName are both passed, and the name of the task instance queried via task ID does not match
+> **NOTE**  
+>  
+> - If no task instance is found based on the input task ID, **undefined** is returned.  
+>  
+> - If the corresponding task instance can be queried based on the input task ID but the thread that calls the  
+> **getTask** method is different from the thread that creates the task instance, **undefined** is returned.  
+>  
+> - If taskId and taskName are both passed, and the name of the task instance queried via task ID does not match  
 > the provided task name, **undefined** is returned.
 
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-taskpool-function getTask(taskId: number, taskName?: string): Task | undefined--><!--Device-taskpool-function getTask(taskId: number, taskName?: string): Task | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -41,7 +43,7 @@ Obtains the corresponding task instance by task ID, or by task ID and task name.
 
 | Type | Description |
 | --- | --- |
-| Task | Task instance. If an exception occurs, **undefined** is returned. For details, seethe preceding description. |
+| [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-task-i.md) | Task instance. If an exception occurs, **undefined** is returned. For details, see the preceding description. |
 
 **Example**
 

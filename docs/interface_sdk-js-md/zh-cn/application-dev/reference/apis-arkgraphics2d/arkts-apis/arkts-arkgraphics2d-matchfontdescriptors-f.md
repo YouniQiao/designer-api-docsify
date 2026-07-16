@@ -1,5 +1,11 @@
 # matchFontDescriptors
 
+## 导入模块
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D';
+```
+
 ## matchFontDescriptors
 
 ```TypeScript
@@ -10,7 +16,9 @@ function matchFontDescriptors(desc: FontDescriptor): Promise<Array<FontDescripto
 
 **起始版本：** 18
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-text-function matchFontDescriptors(desc: FontDescriptor): Promise<Array<FontDescriptor>>--><!--Device-text-function matchFontDescriptors(desc: FontDescriptor): Promise<Array<FontDescriptor>>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -18,13 +26,13 @@ function matchFontDescriptors(desc: FontDescriptor): Promise<Array<FontDescripto
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| desc | FontDescriptor | 是 | 指定需要用来做匹配的字体描述符。如果不指定任何字段，则返回系统的所有字体描述符。如果填写了指定字段，则按照指定字段进行匹配。如果匹配失败，返回空数组。 |
+| desc | [FontDescriptor](arkts-arkgraphics2d-fontdescriptor-i.md) | 是 | 指定需要用来做匹配的字体描述符。如果不指定任何字段，则返回系统的所有字体描述符。如果填写了指定字段，则按照指定字段进行匹配。如果匹配失败，返回空数组。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;FontDescriptor&gt;&gt; | Promise对象，返回所有匹配到的系统字体描述符。 |
+| Promise<Array<FontDescriptor>> | Promise对象，返回所有匹配到的系统字体描述符。 |
 
 **错误码：**
 

@@ -1,5 +1,11 @@
 # getGlobalProxy（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { networkManager } from '@kit.MDMKit';
+```
+
 ## getGlobalProxy
 
 ```TypeScript
@@ -18,6 +24,8 @@ function getGlobalProxy(admin: Want, callback: AsyncCallback<connection.HttpProx
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-networkManager-function getGlobalProxy(admin: Want, callback: AsyncCallback<connection.HttpProxy>): void--><!--Device-networkManager-function getGlobalProxy(admin: Want, callback: AsyncCallback<connection.HttpProxy>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -26,8 +34,8 @@ function getGlobalProxy(admin: Want, callback: AsyncCallback<connection.HttpProx
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| callback | AsyncCallback&lt;connection.HttpProxy&gt; | 是 | 回调函数。当接口调用成功，err为null，否则err为错误对象。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<connection.HttpProxy> | 是 | 回调函数。当接口调用成功，err为null，否则err为错误对象。 |
 
 **错误码：**
 
@@ -80,6 +88,8 @@ function getGlobalProxy(admin: Want): Promise<connection.HttpProxy>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-networkManager-function getGlobalProxy(admin: Want): Promise<connection.HttpProxy>--><!--Device-networkManager-function getGlobalProxy(admin: Want): Promise<connection.HttpProxy>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -88,13 +98,13 @@ function getGlobalProxy(admin: Want): Promise<connection.HttpProxy>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;connection.HttpProxy&gt; | Promise used to return the global HTTP proxy information obtained. |
+| Promise<connection.HttpProxy> | Promise used to return the global HTTP proxy information obtained. |
 
 **错误码：**
 

@@ -14,6 +14,8 @@ Defines LazyVWaterFlowLayout Component.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-unnamed-export declare const LazyVWaterFlowLayout: LazyVWaterFlowLayoutInterface--><!--Device-unnamed-export declare const LazyVWaterFlowLayout: LazyVWaterFlowLayoutInterface-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## LazyVWaterFlowLayoutInstance
@@ -29,6 +31,8 @@ Defines LazyVWaterFlowLayout Component instance.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-unnamed-export declare const LazyVWaterFlowLayoutInstance: LazyVWaterFlowLayoutAttribute--><!--Device-unnamed-export declare const LazyVWaterFlowLayoutInstance: LazyVWaterFlowLayoutAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

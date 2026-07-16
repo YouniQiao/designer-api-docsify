@@ -1,5 +1,11 @@
 # getAuthLockState
 
+## 导入模块
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+```
+
 ## getAuthLockState
 
 ```TypeScript
@@ -12,7 +18,9 @@ function getAuthLockState(authType: UserAuthType): Promise<AuthLockState>
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-userAuth-function getAuthLockState(authType: UserAuthType): Promise<AuthLockState>--><!--Device-userAuth-function getAuthLockState(authType: UserAuthType): Promise<AuthLockState>-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -20,13 +28,13 @@ function getAuthLockState(authType: UserAuthType): Promise<AuthLockState>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| authType | UserAuthType | 是 | 认证类型。 |
+| authType | [UserAuthType](arkts-userauthentication-userauthtype-e.md) | 是 | 认证类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AuthLockState&gt; | Promise对象，当查询成功时，返回值为指定认证类型的身份认证冻结状态。失败时报错。 |
+| Promise<AuthLockState> | Promise对象，当查询成功时，返回值为指定认证类型的身份认证冻结状态。失败时报错。 |
 
 **错误码：**
 

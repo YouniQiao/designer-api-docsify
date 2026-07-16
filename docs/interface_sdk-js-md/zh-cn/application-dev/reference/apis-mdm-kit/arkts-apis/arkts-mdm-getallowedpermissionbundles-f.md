@@ -1,5 +1,11 @@
 # getAllowedPermissionBundles
 
+## 导入模块
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+```
+
 ## getAllowedPermissionBundles
 
 ```TypeScript
@@ -13,6 +19,8 @@ function getAllowedPermissionBundles(admin: Want | null, permission: string, acc
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-securityManager-function getAllowedPermissionBundles(admin: Want | null, permission: string, accountId: number): Array<common.ApplicationInstance>--><!--Device-securityManager-function getAllowedPermissionBundles(admin: Want | null, permission: string, accountId: number): Array<common.ApplicationInstance>-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -28,7 +36,7 @@ function getAllowedPermissionBundles(admin: Want | null, permission: string, acc
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common.ApplicationInstance&gt; | the list of applicationsthat are allowed to be granted the permission. |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<common.ApplicationInstance> | the list of applications that are allowed to be granted the permission. |
 
 **错误码：**
 

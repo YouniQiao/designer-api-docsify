@@ -4,9 +4,17 @@
 
 **起始版本：** 21
 
+<!--Device-dlpPermission-export interface DLPProperty--><!--Device-dlpPermission-export interface DLPProperty-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+```
 
 ## actionUponExpiry
 
@@ -19,6 +27,8 @@ actionUponExpiry?: ActionType
 **类型：** ActionType
 
 **起始版本：** 21
+
+<!--Device-DLPProperty-actionUponExpiry?: ActionType--><!--Device-DLPProperty-actionUponExpiry?: ActionType-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -36,6 +46,8 @@ authUserList?: Array<AuthUser>
 
 **起始版本：** 21
 
+<!--Device-DLPProperty-authUserList?: Array<AuthUser>--><!--Device-DLPProperty-authUserList?: Array<AuthUser>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +63,8 @@ contactAccount: string
 **类型：** string
 
 **起始版本：** 21
+
+<!--Device-DLPProperty-contactAccount: string--><!--Device-DLPProperty-contactAccount: string-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -68,6 +82,8 @@ everyoneAccessList?: Array<DLPFileAccess>
 
 **起始版本：** 21
 
+<!--Device-DLPProperty-everyoneAccessList?: Array<DLPFileAccess>--><!--Device-DLPProperty-everyoneAccessList?: Array<DLPFileAccess>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -83,6 +99,8 @@ expireTime?: number
 **类型：** number
 
 **起始版本：** 21
+
+<!--Device-DLPProperty-expireTime?: number--><!--Device-DLPProperty-expireTime?: number-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -100,6 +118,8 @@ offlineAccess: boolean
 
 **起始版本：** 21
 
+<!--Device-DLPProperty-offlineAccess: boolean--><!--Device-DLPProperty-offlineAccess: boolean-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -115,6 +135,8 @@ ownerAccount: string
 **类型：** string
 
 **起始版本：** 21
+
+<!--Device-DLPProperty-ownerAccount: string--><!--Device-DLPProperty-ownerAccount: string-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -132,6 +154,8 @@ ownerAccountID: string
 
 **起始版本：** 21
 
+<!--Device-DLPProperty-ownerAccountID: string--><!--Device-DLPProperty-ownerAccountID: string-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -147,6 +171,8 @@ ownerAccountType: AccountType
 **类型：** AccountType
 
 **起始版本：** 21
+
+<!--Device-DLPProperty-ownerAccountType: AccountType--><!--Device-DLPProperty-ownerAccountType: AccountType-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

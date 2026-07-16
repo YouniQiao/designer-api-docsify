@@ -4,6 +4,8 @@ Enumerates the callbacks used for the request for loading multiple ads.
 
 **Since:** 11
 
+<!--Device-advertising-export interface MultiSlotsAdLoadListener--><!--Device-advertising-export interface MultiSlotsAdLoadListener-End-->
+
 **System capability:** SystemCapability.Advertising.Ads
 
 ## Modules to Import
@@ -23,6 +25,8 @@ Called when an ad request fails.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MultiSlotsAdLoadListener-onAdLoadFailure(errorCode: number, errorMsg: string): void--><!--Device-MultiSlotsAdLoadListener-onAdLoadFailure(errorCode: number, errorMsg: string): void-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -62,13 +66,15 @@ Called when a request for loading multiple ads is successful.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MultiSlotsAdLoadListener-onAdLoadSuccess(adsMap: Map<string, Array<Advertisement>>): void--><!--Device-MultiSlotsAdLoadListener-onAdLoadSuccess(adsMap: Map<string, Array<Advertisement>>): void-End-->
+
 **System capability:** SystemCapability.Advertising.Ads
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adsMap | Map&lt;string, Array&lt;Advertisement&gt;&gt; | Yes | Ad data, which is a mapping set thatuses ad slot IDs as keys to store the requested ad content. |
+| adsMap | [Map](../../apis-na/arkts-apis/arkts-na-map-i.md)<string, Array<Advertisement>> | Yes | Ad data, which is a mapping set that uses ad slot IDs as keys to store the requested ad content. |
 
 **Example**
 

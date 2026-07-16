@@ -1,18 +1,16 @@
 # UserAuthIcon
 
-The **userAuthIcon** module is a UI component module of the OpenHarmony user identity and access management (UserIAM)
-system. It provides an out-of-the-box authentication icon component (**UserAuthIcon**). This component is used to
-display the face authentication or fingerprint authentication icon on the application UI. It supports custom icon
-colors and dimensions, and can directly launch the system authentication dialog box component when the icon is
-tapped.
+The **userAuthIcon** module is a UI component module of the OpenHarmony user identity and access management (UserIAM)system. It provides an out-of-the-box authentication icon component (**UserAuthIcon**). This component is used to display the face authentication or fingerprint authentication icon on the application UI. It supports custom icon colors and dimensions, and can directly launch the system authentication dialog box component when the icon is tapped.
 
 This module applies to the following scenarios:
 
-- Quickly integrating the face or fingerprint authentication entry into the application UI.
-- Displaying biometric authentication icons in a unified style.
+- Quickly integrating the face or fingerprint authentication entry into the application UI.  
+- Displaying biometric authentication icons in a unified style.  
 - Tapping the icon to trigger the system-level authentication process.
 
 **Since:** 12
+
+<!--Device-unnamed-export default struct UserAuthIcon--><!--Device-unnamed-export default struct UserAuthIcon-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -28,16 +26,15 @@ import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 authParam: userAuth.AuthParam
 ```
 
-User authentication parameters. The parameters include the **challenge** value, authentication type (**authType**
-), and authentication trust level (**authTrustLevel**). The challenge value is used to prevent replay attacks.
-The authentication type specifies the available authentication methods (such as face, fingerprint, and PIN). The
-authentication trust level determines the security strength of the authentication.
+User authentication parameters. The parameters include the **challenge** value, authentication type (**authType**), and authentication trust level (**authTrustLevel**). The challenge value is used to prevent replay attacks.The authentication type specifies the available authentication methods (such as face, fingerprint, and PIN). The authentication trust level determines the security strength of the authentication.
 
 **Type:** userAuth.AuthParam
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UserAuthIcon-authParam: userAuth.AuthParam--><!--Device-UserAuthIcon-authParam: userAuth.AuthParam-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -47,9 +44,7 @@ authentication trust level determines the security strength of the authenticatio
 iconColor?: ResourceColor
 ```
 
-Icon color. It is used to set the color of the authentication icon. Multiple formats are supported, such as color
-values and resource references. By default, the system accent color is used. You can customize the color based on
-the application theme, for example, using **Color.Blue** or **$r('app.color.primary')**.
+Icon color. It is used to set the color of the authentication icon. Multiple formats are supported, such as color values and resource references. By default, the system accent color is used. You can customize the color based on the application theme, for example, using **Color.Blue** or **$r('app.color.primary')**.
 
 **Type:** ResourceColor
 
@@ -59,6 +54,8 @@ the application theme, for example, using **Color.Blue** or **$r('app.color.prim
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UserAuthIcon-iconColor?: ResourceColor--><!--Device-UserAuthIcon-iconColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## iconHeight
@@ -67,9 +64,7 @@ the application theme, for example, using **Color.Blue** or **$r('app.color.prim
 iconHeight?: Dimension
 ```
 
-Icon height. It is used to set the height of the authentication icon. The aspect ratio is 1:1 (that is, the
-height is the same as the width). The default value is **64fp**, and percentage strings are not supported. You
-are advised to select a proper size based on the UI layout.
+Icon height. It is used to set the height of the authentication icon. The aspect ratio is 1:1 (that is, the height is the same as the width). The default value is **64fp**, and percentage strings are not supported. You are advised to select a proper size based on the UI layout.
 
 **Type:** Dimension
 
@@ -79,6 +74,8 @@ are advised to select a proper size based on the UI layout.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UserAuthIcon-iconHeight?: Dimension--><!--Device-UserAuthIcon-iconHeight?: Dimension-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## onAuthResult
@@ -87,20 +84,17 @@ are advised to select a proper size based on the UI layout.
 onAuthResult: (result: userAuth.UserAuthResult) => void
 ```
 
-Result callback. This callback is triggered after a user completes authentication. The callback parameters
-include the authentication result code (**result**), authentication token (**token**), and authentication type (
-**authType**). Your application needs to process the authentication result in this callback. For example, if the
-authentication is successful, your application can obtain the token for subsequent security operations. If the
-authentication fails, your application can prompt the user to try again.
+Result callback. This callback is triggered after a user completes authentication. The callback parameters include the authentication result code (**result**), authentication token (**token**), and authentication type (**authType**). Your application needs to process the authentication result in this callback. For example, if the authentication is successful, your application can obtain the token for subsequent security operations. If the authentication fails, your application can prompt the user to try again.
 
-Note:The application must request the **ohos.permission.ACCESS_BIOMETRIC** permission. Otherwise, it will only
-display the icon and cannot start the authentication component.
+Note:The application must request the **ohos.permission.ACCESS_BIOMETRIC** permission. Otherwise, it will only display the icon and cannot start the authentication component.
 
 **Type:** (result: userAuth.UserAuthResult) => void
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UserAuthIcon-onAuthResult: (result: userAuth.UserAuthResult) => void--><!--Device-UserAuthIcon-onAuthResult: (result: userAuth.UserAuthResult) => void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -110,15 +104,15 @@ display the icon and cannot start the authentication component.
 onIconClick?: () => void
 ```
 
-Icon click callback. This callback is triggered when a user taps the authentication icon. You can use this
-callback to prepare for the tap or record user behavior logs. If this callback is not set, the authentication
-process is directly triggered after the icon is tapped.
+Icon click callback. This callback is triggered when a user taps the authentication icon. You can use this callback to prepare for the tap or record user behavior logs. If this callback is not set, the authentication process is directly triggered after the icon is tapped.
 
 **Type:** () => void
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UserAuthIcon-onIconClick?: () => void--><!--Device-UserAuthIcon-onIconClick?: () => void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -128,15 +122,15 @@ process is directly triggered after the icon is tapped.
 widgetParam: userAuth.WidgetParam
 ```
 
-Parameters on the user authentication page. The parameters include the authentication screen title (**title**)
-and navigation button text (**navigationButtonText**), which are used to customize the content displayed in the
-authentication dialog box.
+Parameters on the user authentication page. The parameters include the authentication screen title (**title**)and navigation button text (**navigationButtonText**), which are used to customize the content displayed in the authentication dialog box.
 
 **Type:** userAuth.WidgetParam
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UserAuthIcon-widgetParam: userAuth.WidgetParam--><!--Device-UserAuthIcon-widgetParam: userAuth.WidgetParam-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 

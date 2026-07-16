@@ -4,7 +4,15 @@
 
 **起始版本：** 13
 
+<!--Device-image-interface AuxiliaryPictureInfo--><!--Device-image-interface AuxiliaryPictureInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
+
+## 导入模块
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+```
 
 ## auxiliaryPictureType
 
@@ -17,6 +25,8 @@ auxiliaryPictureType: AuxiliaryPictureType
 **类型：** AuxiliaryPictureType
 
 **起始版本：** 13
+
+<!--Device-AuxiliaryPictureInfo-auxiliaryPictureType: AuxiliaryPictureType--><!--Device-AuxiliaryPictureInfo-auxiliaryPictureType: AuxiliaryPictureType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -32,6 +42,8 @@ colorSpace: colorSpaceManager.ColorSpaceManager
 
 **起始版本：** 13
 
+<!--Device-AuxiliaryPictureInfo-colorSpace: colorSpaceManager.ColorSpaceManager--><!--Device-AuxiliaryPictureInfo-colorSpace: colorSpaceManager.ColorSpaceManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## pixelFormat
@@ -45,6 +57,8 @@ pixelFormat: PixelMapFormat
 **类型：** PixelMapFormat
 
 **起始版本：** 13
+
+<!--Device-AuxiliaryPictureInfo-pixelFormat: PixelMapFormat--><!--Device-AuxiliaryPictureInfo-pixelFormat: PixelMapFormat-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -60,6 +74,8 @@ rowStride: number
 
 **起始版本：** 13
 
+<!--Device-AuxiliaryPictureInfo-rowStride: int--><!--Device-AuxiliaryPictureInfo-rowStride: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## size
@@ -73,6 +89,8 @@ size: Size
 **类型：** Size
 
 **起始版本：** 13
+
+<!--Device-AuxiliaryPictureInfo-size: Size--><!--Device-AuxiliaryPictureInfo-size: Size-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

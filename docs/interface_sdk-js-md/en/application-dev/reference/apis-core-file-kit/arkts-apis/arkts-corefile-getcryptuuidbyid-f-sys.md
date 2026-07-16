@@ -20,6 +20,8 @@ Get the encrypting uuid.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-encryptedVolumeManager-function getCryptUuidById(volumeId: string): Promise<string>--><!--Device-encryptedVolumeManager-function getCryptUuidById(volumeId: string): Promise<string>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -34,7 +36,7 @@ Get the encrypting uuid.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | return Promise |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | return Promise |
 
 **Error codes:**
 

@@ -1,5 +1,11 @@
 # sendTerminalResponseCmd（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## sendTerminalResponseCmd
 
 ```TypeScript
@@ -12,6 +18,8 @@ Send terminal response command to SIM card.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function sendTerminalResponseCmd(slotId: int, cmd: string, callback: AsyncCallback<void>): void--><!--Device-sim-function sendTerminalResponseCmd(slotId: int, cmd: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ Send terminal response command to SIM card.
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
 | cmd | string | 是 | Indicates sending command. |
-| callback | AsyncCallback&lt;void&gt; | 是 | The callback of sendTerminalResponseCmd. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | The callback of sendTerminalResponseCmd. |
 
 **错误码：**
 
@@ -62,6 +70,8 @@ Send terminal response command to SIM card.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function sendTerminalResponseCmd(slotId: int, cmd: string): Promise<void>--><!--Device-sim-function sendTerminalResponseCmd(slotId: int, cmd: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -77,7 +87,7 @@ Send terminal response command to SIM card.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the sendTerminalResponseCmd. |
+| Promise<void> | The promise returned by the sendTerminalResponseCmd. |
 
 **错误码：**
 

@@ -16,13 +16,15 @@ Set application level http proxy {@link HttpProxy}.
 
 **Since:** 11
 
+<!--Device-connection-function setAppHttpProxy(httpProxy: HttpProxy): void--><!--Device-connection-function setAppHttpProxy(httpProxy: HttpProxy): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| httpProxy | HttpProxy | Yes | Indicates the application level proxy settings. For details, see {@link HttpProxy}. |
+| httpProxy | [HttpProxy](arkts-network-httpproxy-t.md) | Yes | Indicates the application level proxy settings. For details, see {@link HttpProxy}. |
 
 **Error codes:**
 

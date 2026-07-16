@@ -8,6 +8,8 @@ Describes the widget state information.
 
 **Substitutes:** FormStateInfo
 
+<!--Device-formInfo-interface FormStateInfo--><!--Device-formInfo-interface FormStateInfo-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 ## formState
@@ -26,6 +28,8 @@ Widget state.
 
 **Substitutes:** formState
 
+<!--Device-FormStateInfo-formState: FormState--><!--Device-FormStateInfo-formState: FormState-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 ## want
@@ -43,6 +47,8 @@ Want text.
 **Deprecated since:** 9
 
 **Substitutes:** want
+
+<!--Device-FormStateInfo-want: Want--><!--Device-FormStateInfo-want: Want-End-->
 
 **System capability:** SystemCapability.Ability.Form
 

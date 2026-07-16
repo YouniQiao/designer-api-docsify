@@ -12,10 +12,11 @@ import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 function notifyMetadataBindingEvent(bundleName: string): Promise<string>
 ```
 
-Transfers metadata to the application or service that calls the encoding API. This API uses a promise to return the
-result.
+Transfers metadata to the application or service that calls the encoding API. This API uses a promise to return the result.
 
 **Since:** 18
+
+<!--Device-metadataBinding-function notifyMetadataBindingEvent(bundleName: string): Promise<string>--><!--Device-metadataBinding-function notifyMetadataBindingEvent(bundleName: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.MetadataBinding
 
@@ -31,7 +32,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the application link information of the current page. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the application link information of the current page. |
 
 **Error codes:**
 

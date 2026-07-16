@@ -1,5 +1,11 @@
 # getOsAccountSubProfileManager（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+```
+
 ## getOsAccountSubProfileManager
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getOsAccountSubProfileManager(): OsAccountSubProfileManager
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-osAccount-function getOsAccountSubProfileManager(): OsAccountSubProfileManager--><!--Device-osAccount-function getOsAccountSubProfileManager(): OsAccountSubProfileManager-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function getOsAccountSubProfileManager(): OsAccountSubProfileManager
 
 | 类型 | 说明 |
 | --- | --- |
-| OsAccountSubProfileManager | 系统账号子身份资料管理器的实例对象。 |
+| [OsAccountSubProfileManager](arkts-basicservices-osaccountsubprofilemanager-i-sys.md) | 系统账号子身份资料管理器的实例对象。 |
 
 **错误码：**
 

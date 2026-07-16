@@ -19,6 +19,10 @@ Attempt to download the given downloadable Profile.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE
 
+<!--Device-eSIM-function downloadProfile(slotId: int, portIndex: int, profile: DownloadableProfile,
+                           configuration: DownloadConfiguration): Promise<DownloadProfileResult>--><!--Device-eSIM-function downloadProfile(slotId: int, portIndex: int, profile: DownloadableProfile,
+                           configuration: DownloadConfiguration): Promise<DownloadProfileResult>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -29,14 +33,14 @@ Attempt to download the given downloadable Profile.
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number. |
 | portIndex | number | Yes | Index of the port for the slot. |
-| profile | DownloadableProfile | Yes | The Bound Profile Package data returned by SM-DP+ server. |
-| configuration | DownloadConfiguration | Yes | Configuration information during downloading. |
+| profile | [DownloadableProfile](arkts-telephony-downloadableprofile-i.md) | Yes | The Bound Profile Package data returned by SM-DP+ server. |
+| configuration | [DownloadConfiguration](arkts-telephony-downloadconfiguration-i-sys.md) | Yes | Configuration information during downloading. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DownloadProfileResult&gt; | Return the given downloadableProfile. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DownloadProfileResult> | Return the given downloadableProfile. |
 
 **Error codes:**
 

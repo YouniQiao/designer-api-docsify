@@ -4,7 +4,15 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-export declare interface Pinch--><!--Device-unnamed-export declare interface Pinch-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+## 导入模块
+
+```TypeScript
+import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersTap, ThreeFingersSwipe, TouchGestureEvent } from '@kit.InputKit';
+```
 
 ## scale
 
@@ -17,6 +25,8 @@ scale: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-Pinch-scale: double--><!--Device-Pinch-scale: double-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -31,6 +41,8 @@ type: ActionType
 **类型：** ActionType
 
 **起始版本：** 10
+
+<!--Device-Pinch-type: ActionType--><!--Device-Pinch-type: ActionType-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 

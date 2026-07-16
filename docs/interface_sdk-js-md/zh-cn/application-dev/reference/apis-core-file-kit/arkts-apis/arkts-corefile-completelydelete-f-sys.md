@@ -1,5 +1,11 @@
 # completelyDelete（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { trash } from '@kit.CoreFileKit';
+```
+
 ## completelyDelete
 
 ```TypeScript
@@ -15,6 +21,8 @@ Permanently deletes a file or directory from the **Recently deleted** list.
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-trash-function completelyDelete(uri: string): void--><!--Device-trash-function completelyDelete(uri: string): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

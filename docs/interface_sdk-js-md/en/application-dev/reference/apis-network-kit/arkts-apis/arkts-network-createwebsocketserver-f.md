@@ -16,13 +16,15 @@ Creates a web socket Server.
 
 **Since:** 23
 
+<!--Device-webSocket-function createWebSocketServer(): WebSocketServer--><!--Device-webSocket-function createWebSocketServer(): WebSocketServer-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| WebSocketServer | the WebSocketServer Object. |
+| [WebSocketServer](arkts-network-websocketserver-i.md) | the WebSocketServer Object. |
 
 **Example**
 

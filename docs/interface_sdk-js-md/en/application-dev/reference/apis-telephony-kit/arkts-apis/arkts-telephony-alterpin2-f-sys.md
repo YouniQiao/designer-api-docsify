@@ -18,6 +18,8 @@ Change Pin2 password.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function alterPin2(slotId: int, newPin2: string, oldPin2: string, callback: AsyncCallback<LockStatusResponse>): void--><!--Device-sim-function alterPin2(slotId: int, newPin2: string, oldPin2: string, callback: AsyncCallback<LockStatusResponse>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -29,7 +31,7 @@ Change Pin2 password.
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
 | newPin2 | string | Yes | Indicates a new password. |
 | oldPin2 | string | Yes | Indicates old password. |
-| callback | AsyncCallback&lt;LockStatusResponse&gt; | Yes | Indicates the callback for gettingthe response to obtain the SIM card lock status of the specified card slot. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<LockStatusResponse> | Yes | Indicates the callback for getting the response to obtain the SIM card lock status of the specified card slot. |
 
 **Error codes:**
 
@@ -70,6 +72,8 @@ Change Pin2 password.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function alterPin2(slotId: int, newPin2: string, oldPin2: string): Promise<LockStatusResponse>--><!--Device-sim-function alterPin2(slotId: int, newPin2: string, oldPin2: string): Promise<LockStatusResponse>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -86,7 +90,7 @@ Change Pin2 password.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;LockStatusResponse&gt; | Returns the response to obtainthe SIM card lock status of the specified card slot. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<LockStatusResponse> | Returns the response to obtain the SIM card lock status of the specified card slot. |
 
 **Error codes:**
 

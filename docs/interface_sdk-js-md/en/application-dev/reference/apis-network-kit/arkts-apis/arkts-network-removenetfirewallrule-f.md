@@ -18,6 +18,8 @@ Delete a firewall rule by userId and ruleId.
 
 **Required permissions:** ohos.permission.MANAGE_NET_FIREWALL
 
+<!--Device-netFirewall-function removeNetFirewallRule(userId: number, ruleId: number): Promise<void>--><!--Device-netFirewall-function removeNetFirewallRule(userId: number, ruleId: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 **Parameters:**
@@ -31,7 +33,7 @@ Delete a firewall rule by userId and ruleId.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns void. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns void. |
 
 **Error codes:**
 

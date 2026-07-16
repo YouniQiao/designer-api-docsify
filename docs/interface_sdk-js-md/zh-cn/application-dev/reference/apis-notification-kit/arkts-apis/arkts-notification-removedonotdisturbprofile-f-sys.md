@@ -18,6 +18,8 @@ function removeDoNotDisturbProfile(templates: Array<DoNotDisturbProfile>): Promi
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function removeDoNotDisturbProfile(templates: Array<DoNotDisturbProfile>): Promise<void>--><!--Device-notificationManager-function removeDoNotDisturbProfile(templates: Array<DoNotDisturbProfile>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,13 +28,13 @@ function removeDoNotDisturbProfile(templates: Array<DoNotDisturbProfile>): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| templates | Array&lt;DoNotDisturbProfile&gt; | 是 | 勿扰模式的配置信息。 |
+| templates | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<DoNotDisturbProfile> | 是 | 勿扰模式的配置信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -81,6 +83,8 @@ function removeDoNotDisturbProfile(templates: Array<DoNotDisturbProfile>, userId
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-notificationManager-function removeDoNotDisturbProfile(templates: Array<DoNotDisturbProfile>, userId: int): Promise<void>--><!--Device-notificationManager-function removeDoNotDisturbProfile(templates: Array<DoNotDisturbProfile>, userId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -89,14 +93,14 @@ function removeDoNotDisturbProfile(templates: Array<DoNotDisturbProfile>, userId
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| templates | Array&lt;DoNotDisturbProfile&gt; | 是 | 勿扰模式的配置信息。 |
+| templates | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<DoNotDisturbProfile> | 是 | 勿扰模式的配置信息。 |
 | userId | number | 是 | 删除勿扰模式配置的用户ID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果。 |
+| Promise<void> | Promise对象。无返回结果。 |
 
 **错误码：**
 

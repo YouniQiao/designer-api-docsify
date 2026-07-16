@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface OffsetOptions--><!--Device-unnamed-declare interface OffsetOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## xOffset
@@ -22,7 +24,9 @@ xOffset?: Dimension
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OffsetOptions-xOffset?: Dimension--><!--Device-OffsetOptions-xOffset?: Dimension-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,7 +46,9 @@ yOffset?: Dimension
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OffsetOptions-yOffset?: Dimension--><!--Device-OffsetOptions-yOffset?: Dimension-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

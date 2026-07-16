@@ -2,14 +2,16 @@
 
 Defines a color filter.
 
-> **NOTE**
->
-> - This module uses the physical pixel unit, px.
->
-> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
+> **NOTE**  
+>  
+> - This module uses the physical pixel unit, px.  
+>  
+> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state  
 > transitions.
 
 **Since:** 11
+
+<!--Device-drawing-class ColorFilter--><!--Device-drawing-class ColorFilter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -29,20 +31,22 @@ Creates a **ColorFilter** object with a given color and blend mode.
 
 **Since:** 11
 
+<!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): ColorFilter--><!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): ColorFilter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer rangingfrom 0 to 255. |
-| mode | BlendMode | Yes | Blend mode. |
+| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
+| mode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | Yes | Blend mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | Color filter. |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
 
 **Error codes:**
 
@@ -60,6 +64,8 @@ Creates a **ColorFilter** object with a given color and blend mode.
 
 **Since:** 18
 
+<!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color | number, mode: BlendMode): ColorFilter--><!--Device-ColorFilter-static createBlendModeColorFilter(color: common2D.Color | number, mode: BlendMode): ColorFilter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
@@ -67,13 +73,13 @@ Creates a **ColorFilter** object with a given color and blend mode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | color | common2D.Color \| number | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
-| mode | BlendMode | Yes | Blend mode. |
+| mode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | Yes | Blend mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | Color filter. |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
 
 **Error codes:**
 
@@ -91,20 +97,22 @@ Creates a **ColorFilter** object by combining another two color filters.
 
 **Since:** 11
 
+<!--Device-ColorFilter-static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFilter--><!--Device-ColorFilter-static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFilter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| outer | ColorFilter | Yes | Color filter that takes effect later in the new filter. |
-| inner | ColorFilter | Yes | Color filter that takes effect first in the new filter. |
+| outer | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Yes | Color filter that takes effect later in the new filter. |
+| inner | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Yes | Color filter that takes effect first in the new filter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | Color filter. |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
 
 **Error codes:**
 
@@ -118,10 +126,11 @@ Creates a **ColorFilter** object by combining another two color filters.
 static createLightingColorFilter(mutColor: common2D.Color | number, addColor: common2D.Color | number): ColorFilter
 ```
 
-Creates a lighting color filter. It multiplies the RGB channel values by one color and then adds another color
-value. The final output stays between 0 and 255.
+Creates a lighting color filter. It multiplies the RGB channel values by one color and then adds another color value. The final output stays between 0 and 255.
 
 **Since:** 20
+
+<!--Device-ColorFilter-static createLightingColorFilter(mutColor: common2D.Color | number, addColor: common2D.Color | number): ColorFilter--><!--Device-ColorFilter-static createLightingColorFilter(mutColor: common2D.Color | number, addColor: common2D.Color | number): ColorFilter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -129,14 +138,14 @@ value. The final output stays between 0 and 255.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mutColor | common2D.Color \| number | Yes | Color used for multiplication. The value is in the ARGB format, andeach color channel is an integer ranging from 0 to 255. If the value is of the number type, it must be anunsigned integer in the hexadecimal ARGB format. |
-| addColor | common2D.Color \| number | Yes | Color used for addition. The value is in the ARGB format, and eachcolor channel is an integer ranging from 0 to 255. If the value is of the number type, it must be an unsignedinteger in the hexadecimal ARGB format. |
+| mutColor | common2D.Color \| number | Yes | Color used for multiplication. The value is in the ARGB format, and each color channel is an integer ranging from 0 to 255. If the value is of the number type, it must be an unsigned integer in the hexadecimal ARGB format. |
+| addColor | common2D.Color \| number | Yes | Color used for addition. The value is in the ARGB format, and each color channel is an integer ranging from 0 to 255. If the value is of the number type, it must be an unsigned integer in the hexadecimal ARGB format. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | **ColorFilter** object created. |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | **ColorFilter** object created. |
 
 ## createLinearToSRGBGamma
 
@@ -148,13 +157,15 @@ Creates a **ColorFilter** object that applies the sRGB gamma curve to the RGB ch
 
 **Since:** 11
 
+<!--Device-ColorFilter-static createLinearToSRGBGamma(): ColorFilter--><!--Device-ColorFilter-static createLinearToSRGBGamma(): ColorFilter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | Color filter. |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
 
 ## createLumaColorFilter
 
@@ -162,10 +173,11 @@ Creates a **ColorFilter** object that applies the sRGB gamma curve to the RGB ch
 static createLumaColorFilter(): ColorFilter
 ```
 
-Creates a **ColorFilter** object that multiplies the luma into the alpha channel and sets the RGB channels to
-zero.
+Creates a **ColorFilter** object that multiplies the luma into the alpha channel and sets the RGB channels to zero.
 
 **Since:** 11
+
+<!--Device-ColorFilter-static createLumaColorFilter(): ColorFilter--><!--Device-ColorFilter-static createLumaColorFilter(): ColorFilter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -173,7 +185,7 @@ zero.
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | Color filter. |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
 
 ## createMatrixColorFilter
 
@@ -185,19 +197,21 @@ Creates a color filter object with a 4*5 color matrix.
 
 **Since:** 12
 
+<!--Device-ColorFilter-static createMatrixColorFilter(matrix: Array<double>): ColorFilter--><!--Device-ColorFilter-static createMatrixColorFilter(matrix: Array<double>): ColorFilter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| matrix | Array&lt;number&gt; | Yes | An array of 20 numbers, indicating the 4*5 matrix. |
+| matrix | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | An array of 20 numbers, indicating the 4*5 matrix. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | Color filter. |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
 
 **Error codes:**
 
@@ -215,11 +229,13 @@ Creates a **ColorFilter** object that applies the RGB channels to the sRGB gamma
 
 **Since:** 11
 
+<!--Device-ColorFilter-static createSRGBGammaToLinear(): ColorFilter--><!--Device-ColorFilter-static createSRGBGammaToLinear(): ColorFilter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | Color filter. |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
 

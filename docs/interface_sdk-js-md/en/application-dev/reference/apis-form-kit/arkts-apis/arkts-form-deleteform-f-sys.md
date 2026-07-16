@@ -12,12 +12,13 @@ import { formHost } from '@kit.FormKit';
 function deleteForm(formId: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes a widget. After this API is called, the application can no longer use the widget, and the Widget Manager
-will not retain the widget information. This API uses an asynchronous callback to return the result.
+Deletes a widget. After this API is called, the application can no longer use the widget, and the Widget Manager will not retain the widget information. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
+
+<!--Device-formHost-function deleteForm(formId: string, callback: AsyncCallback<void>): void--><!--Device-formHost-function deleteForm(formId: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -28,7 +29,7 @@ will not retain the widget information. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the widget is deleted, **error**is undefined; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the widget is deleted, **error** is undefined; otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -50,12 +51,13 @@ will not retain the widget information. This API uses an asynchronous callback t
 function deleteForm(formId: string): Promise<void>
 ```
 
-Deletes a widget. After this API is called, the application can no longer use the widget, and the Widget Manager
-will not retain the widget information. This API uses a promise to return the result.
+Deletes a widget. After this API is called, the application can no longer use the widget, and the Widget Manager will not retain the widget information. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
+
+<!--Device-formHost-function deleteForm(formId: string): Promise<void>--><!--Device-formHost-function deleteForm(formId: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -71,7 +73,7 @@ will not retain the widget information. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

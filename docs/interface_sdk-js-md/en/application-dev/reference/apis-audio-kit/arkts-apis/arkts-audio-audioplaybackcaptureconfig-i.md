@@ -8,6 +8,8 @@ Defines configuration for capturing played audio.
 
 **Substitutes:** OH_AVScreenCapture
 
+<!--Device-audio-interface AudioPlaybackCaptureConfig--><!--Device-audio-interface AudioPlaybackCaptureConfig-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 
 ## Modules to Import
@@ -31,6 +33,8 @@ Options for filtering the played audio streams to be recorded.
 **Deprecated since:** 12
 
 **Substitutes:** OH_AVScreenCapture
+
+<!--Device-AudioPlaybackCaptureConfig-filterOptions: CaptureFilterOptions--><!--Device-AudioPlaybackCaptureConfig-filterOptions: CaptureFilterOptions-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 

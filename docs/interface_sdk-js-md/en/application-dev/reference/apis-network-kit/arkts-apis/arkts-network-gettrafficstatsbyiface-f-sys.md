@@ -18,6 +18,8 @@ Get the traffic usage details of the network interface in the specified time per
 
 **Required permissions:** ohos.permission.GET_NETWORK_STATS
 
+<!--Device-statistics-function getTrafficStatsByIface(ifaceInfo: IfaceInfo, callback: AsyncCallback<NetStatsInfo>): void--><!--Device-statistics-function getTrafficStatsByIface(ifaceInfo: IfaceInfo, callback: AsyncCallback<NetStatsInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Get the traffic usage details of the network interface in the specified time per
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ifaceInfo | IfaceInfo | Yes | Detailed query content. See {@link IfaceInfo}. |
-| callback | AsyncCallback&lt;NetStatsInfo&gt; | Yes | Returns the {@link NetStatsInfo} object; |
+| ifaceInfo | [IfaceInfo](arkts-network-ifaceinfo-i-sys.md) | Yes | Detailed query content. See {@link IfaceInfo}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<NetStatsInfo> | Yes | Returns the {@link NetStatsInfo} object; |
 
 **Error codes:**
 
@@ -85,6 +87,8 @@ Get the traffic usage details of the network interface in the specified time per
 
 **Required permissions:** ohos.permission.GET_NETWORK_STATS
 
+<!--Device-statistics-function getTrafficStatsByIface(ifaceInfo: IfaceInfo): Promise<NetStatsInfo>--><!--Device-statistics-function getTrafficStatsByIface(ifaceInfo: IfaceInfo): Promise<NetStatsInfo>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -93,13 +97,13 @@ Get the traffic usage details of the network interface in the specified time per
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ifaceInfo | IfaceInfo | Yes | Detailed query content. See {@link IfaceInfo}. |
+| ifaceInfo | [IfaceInfo](arkts-network-ifaceinfo-i-sys.md) | Yes | Detailed query content. See {@link IfaceInfo}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetStatsInfo&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetStatsInfo> | The promise returned by the function. |
 
 **Error codes:**
 

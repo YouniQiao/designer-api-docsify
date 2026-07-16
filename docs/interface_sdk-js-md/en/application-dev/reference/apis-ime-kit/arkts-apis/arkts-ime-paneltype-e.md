@@ -4,6 +4,8 @@ Enumerates the types of the input method panel.
 
 **Since:** 10
 
+<!--Device-inputMethodEngine-export enum PanelType--><!--Device-inputMethodEngine-export enum PanelType-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## SOFT_KEYBOARD
@@ -16,6 +18,8 @@ Panel for displaying a virtual software keyboard.
 
 **Since:** 10
 
+<!--Device-PanelType-SOFT_KEYBOARD = 0--><!--Device-PanelType-SOFT_KEYBOARD = 0-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## STATUS_BAR
@@ -27,6 +31,8 @@ STATUS_BAR
 Panel for displaying status bar.
 
 **Since:** 10
+
+<!--Device-PanelType-STATUS_BAR--><!--Device-PanelType-STATUS_BAR-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 

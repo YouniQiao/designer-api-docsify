@@ -1,5 +1,11 @@
 # addIncomingCallPolicyNumbers
 
+## 导入模块
+
+```TypeScript
+import { telephonyManager } from '@kit.MDMKit';
+```
+
 ## addIncomingCallPolicyNumbers
 
 ```TypeScript
@@ -10,9 +16,7 @@ function addIncomingCallPolicyNumbers(admin: Want, policy: adminManager.Policy, 
 
 以下情况下，通过本接口添加通话呼入的允许或禁用名单，会报策略冲突：
 
-1. 已经通过[setDisallowedPolicy](arkts-mdm-setdisallowedpolicy-f.md#setdisallowedpolicy-1)接口禁用了设备通话能力，再通过本接口添加通话呼入的禁用或允许名单，返回203错误码。通过[setDisallowedPolicy](arkts-mdm-setdisallowedpolicy-f.md#setdisallowedpolicy-1)接口解除禁用设备通话能力后，可解除冲突。
-2. 已经通过本接口设置了通话呼入的禁用名单，再通过本接口添加通话呼入允许名单，返回9200010错误码。通过[removeIncomingCallPolicyNumbers](arkts-mdm-removeincomingcallpolicynumbers-f.md#removeincomingcallpolicynumbers-1)接口将之前设置的通话呼入禁用名单移除后，可解除冲突。
-3. 已经通过本接口设置了通话呼入的允许名单，再通过本接口添加通话呼入禁用名单，返回9200010错误码。通过[removeIncomingCallPolicyNumbers](arkts-mdm-removeincomingcallpolicynumbers-f.md#removeincomingcallpolicynumbers-1)接口将之前设置的通话呼入允许名单移除后，可解除冲突。
+1. 已经通过[setDisallowedPolicy](arkts-mdm-setdisallowedpolicy-f.md#setdisallowedpolicy-1)接口禁用了设备通话能力，再通过本接口添加通话呼入的禁用或允许名单，返回203错误码。通过[setDisallowedPolicy](arkts-mdm-setdisallowedpolicy-f.md#setdisallowedpolicy-1)接口解除禁用设备通话能力后，可解除冲突。2. 已经通过本接口设置了通话呼入的禁用名单，再通过本接口添加通话呼入允许名单，返回9200010错误码。通过[removeIncomingCallPolicyNumbers](arkts-mdm-removeincomingcallpolicynumbers-f.md#removeincomingcallpolicynumbers-1)接口将之前设置的通话呼入禁用名单移除后，可解除冲突。3. 已经通过本接口设置了通话呼入的允许名单，再通过本接口添加通话呼入禁用名单，返回9200010错误码。通过[removeIncomingCallPolicyNumbers](arkts-mdm-removeincomingcallpolicynumbers-f.md#removeincomingcallpolicynumbers-1)接口将之前设置的通话呼入允许名单移除后，可解除冲突。
 
 **起始版本：** 20
 
@@ -20,15 +24,17 @@ function addIncomingCallPolicyNumbers(admin: Want, policy: adminManager.Policy, 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-telephonyManager-function addIncomingCallPolicyNumbers(admin: Want, policy: adminManager.Policy, numbers: Array<string>): void--><!--Device-telephonyManager-function addIncomingCallPolicyNumbers(admin: Want, policy: adminManager.Policy, numbers: Array<string>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | policy | adminManager.Policy | 是 | 允许或禁用名单策略。BLOCK_LIST为禁用名单，TRUST_LIST为允许名单。 |
-| numbers | Array&lt;string&gt; | 是 | 通话号码列表，当前仅支持全号码匹配。数组总长度不能超过1000。例如，若当前允许名单数组中已有100个号码，则最多支持通过该接口再添加900个。 |
+| numbers | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 通话号码列表，当前仅支持全号码匹配。数组总长度不能超过1000。例如，若当前允许名单数组中已有100个号码，则最多支持通过该接口再添加900个。 |
 
 **错误码：**
 
@@ -40,7 +46,7 @@ function addIncomingCallPolicyNumbers(admin: Want, policy: adminManager.Policy, 
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) | The parameter validation failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
 | [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) | This function is prohibited by enterprise management policies. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
 **示例：**
 

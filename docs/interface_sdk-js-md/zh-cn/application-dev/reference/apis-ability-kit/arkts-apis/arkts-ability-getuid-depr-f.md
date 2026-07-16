@@ -14,7 +14,9 @@ function getUid(agent: WantAgent, callback: AsyncCallback<number>): void
 
 **替代接口：** getUid
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-wantAgent-function getUid(agent: WantAgent, callback: AsyncCallback<number>): void--><!--Device-wantAgent-function getUid(agent: WantAgent, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -22,8 +24,8 @@ function getUid(agent: WantAgent, callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| agent | WantAgent | 是 | WantAgent对象。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 获取WantAgent实例的用户ID的回调方法。 |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | 是 | WantAgent对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 获取WantAgent实例的用户ID的回调方法。 |
 
 **示例：**
 
@@ -95,7 +97,9 @@ function getUid(agent: WantAgent): Promise<number>
 
 **替代接口：** getUid
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-wantAgent-function getUid(agent: WantAgent): Promise<number>--><!--Device-wantAgent-function getUid(agent: WantAgent): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -103,13 +107,13 @@ function getUid(agent: WantAgent): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| agent | WantAgent | 是 | WantAgent对象。 |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | 是 | WantAgent对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | 以Promise形式返回获取WantAgent实例的用户ID。 |
+| Promise<number> | 以Promise形式返回获取WantAgent实例的用户ID。 |
 
 **示例：**
 

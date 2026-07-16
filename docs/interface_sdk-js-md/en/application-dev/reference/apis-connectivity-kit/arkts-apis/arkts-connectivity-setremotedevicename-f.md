@@ -22,6 +22,8 @@ Modify remote device name.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-connection-function setRemoteDeviceName(deviceId: string, name: string): Promise<void>--><!--Device-connection-function setRemoteDeviceName(deviceId: string, name: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -35,7 +37,7 @@ Modify remote device name.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 

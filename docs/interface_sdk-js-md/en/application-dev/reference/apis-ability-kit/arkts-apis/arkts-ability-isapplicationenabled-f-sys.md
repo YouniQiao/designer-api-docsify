@@ -16,6 +16,8 @@ Checks whether an application or an application clone is enabled. This API uses 
 
 **Since:** 12
 
+<!--Device-bundleManager-function isApplicationEnabled(bundleName: string, appIndex: int): Promise<boolean>--><!--Device-bundleManager-function isApplicationEnabled(bundleName: string, appIndex: int): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -25,13 +27,13 @@ Checks whether an application or an application clone is enabled. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| appIndex | number | Yes | Index of the application clone.<br> The value **0** means to obtain the enabled status ofthe main application. A value greater than 0 means to obtain the enabled status of the application clone. |
+| appIndex | number | Yes | Index of the application clone.<br> The value **0** means to obtain the enabled status of the main application. A value greater than 0 means to obtain the enabled status of the application clone. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** if enabled, **false** otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. **true** if enabled, **false** otherwise. |
 
 **Error codes:**
 
@@ -75,6 +77,8 @@ Checks whether an application is enabled. This API uses an asynchronous callback
 
 **Since:** 9
 
+<!--Device-bundleManager-function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-bundleManager-function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -84,7 +88,7 @@ Checks whether an application is enabled. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result.**true** if enabled, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result.**true** if enabled, **false** otherwise. |
 
 **Error codes:**
 
@@ -129,6 +133,8 @@ Checks whether an application is enabled. This API uses a promise to return the 
 
 **Since:** 9
 
+<!--Device-bundleManager-function isApplicationEnabled(bundleName: string): Promise<boolean>--><!--Device-bundleManager-function isApplicationEnabled(bundleName: string): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -143,7 +149,7 @@ Checks whether an application is enabled. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** if enabled, **false** otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. **true** if enabled, **false** otherwise. |
 
 **Error codes:**
 

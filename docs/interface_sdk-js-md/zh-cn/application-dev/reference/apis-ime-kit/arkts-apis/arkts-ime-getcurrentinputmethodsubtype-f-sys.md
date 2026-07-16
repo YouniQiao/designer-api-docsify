@@ -1,5 +1,11 @@
 # getCurrentInputMethodSubtype（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { inputMethod } from '@kit.IMEKit';
+```
+
 ## getCurrentInputMethodSubtype
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getCurrentInputMethodSubtype(userId?: number): InputMethodSubtype
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-inputMethod-function getCurrentInputMethodSubtype(userId?: int): InputMethodSubtype--><!--Device-inputMethod-function getCurrentInputMethodSubtype(userId?: int): InputMethodSubtype-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -26,7 +34,7 @@ function getCurrentInputMethodSubtype(userId?: number): InputMethodSubtype
 
 | 类型 | 说明 |
 | --- | --- |
-| InputMethodSubtype | 返回当前输入法子类型对象。 |
+| [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | 返回当前输入法子类型对象。 |
 
 **错误码：**
 

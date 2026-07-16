@@ -12,18 +12,15 @@ import { asset } from '@kit.AssetStoreKit';
 function query(query: AssetMap): Promise<Array<AssetMap>>
 ```
 
-Queries one or more assets. If user authentication is required for the access to the asset,
-call [asset.preQuery](arkts-assetstore-prequery-f.md#prequery-1) before this API and call [asset.postQuery](arkts-assetstore-postquery-f.md#postquery-1)
-after this API. For details about the development procedure, see
-[Development Guidance](../../../../security/AssetStoreKit/asset-js-query-auth.md).
-This API uses a promise to return the result.
+Queries one or more assets. If user authentication is required for the access to the asset,call [asset.preQuery](arkts-assetstore-prequery-f.md#prequery-1) before this API and call [asset.postQuery](arkts-assetstore-postquery-f.md#postquery-1)after this API. For details about the development procedure, see [Development Guidance](../../../../security/AssetStoreKit/asset-js-query-auth.md).This API uses a promise to return the result.
 
-If no asset is found, an exception indicating that no asset is found is thrown instead of returning
-an empty query result list.
+If no asset is found, an exception indicating that no asset is found is thrown instead of returning an empty query result list.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-asset-function query(query: AssetMap): Promise<Array<AssetMap>>--><!--Device-asset-function query(query: AssetMap): Promise<Array<AssetMap>>-End-->
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -31,13 +28,13 @@ an empty query result list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | AssetMap | Yes | Attributes of the asset to query, such as the asset alias, access control attributes,and custom data. |
+| query | [AssetMap](arkts-assetstore-assetmap-t.md) | Yes | Attributes of the asset to query, such as the asset alias, access control attributes,and custom data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AssetMap&gt;&gt; | Promise used to return the result obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AssetMap>> | Promise used to return the result obtained. |
 
 **Error codes:**
 

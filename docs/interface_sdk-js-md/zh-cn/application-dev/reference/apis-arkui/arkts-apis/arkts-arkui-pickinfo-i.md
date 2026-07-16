@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-screenshot-interface PickInfo--><!--Device-screenshot-interface PickInfo-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+## 导入模块
+
+```TypeScript
+import { screenshot } from '@kit.ArkUI';
+```
 
 ## pickRect
 
@@ -18,7 +26,9 @@ pickRect: Rect
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PickInfo-pickRect: Rect--><!--Device-PickInfo-pickRect: Rect-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -34,7 +44,9 @@ pixelMap: image.PixelMap
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PickInfo-pixelMap: image.PixelMap--><!--Device-PickInfo-pixelMap: image.PixelMap-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 

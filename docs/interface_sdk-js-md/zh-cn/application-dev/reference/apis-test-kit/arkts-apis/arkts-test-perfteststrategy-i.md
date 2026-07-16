@@ -2,14 +2,22 @@
 
 性能测试执行策略。
 
-> **说明**
->
-> 属性actionCode和resetCode的入参类型为回调函数"Callback\<boolean>"。在代码段中需要主动调用此回调函数，通知框架代码段执行完成，否则会导致代码段执行超时。
+> **说明**  
+>  
+> 属性actionCode和resetCode的入参类型为回调函数"Callback\<boolean>"。在代码段中需要主动调用此回调函数，通知框架代码段执行完成，否则会导致代码段执行超时。  
 > > 其中，回调函数的参数为boolean类型，true代表代码段执行符合预期，false代表代码段执行不符合预期。[代码示例](arkts-test-perftest-c.md#create-1)。
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare interface PerfTestStrategy--><!--Device-unnamed-declare interface PerfTestStrategy-End-->
+
 **系统能力：** SystemCapability.Test.PerfTest
+
+## 导入模块
+
+```TypeScript
+import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from '@kit.TestKit';
+```
 
 ## actionCode
 
@@ -23,7 +31,9 @@ actionCode: Callback<Callback<boolean>>
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PerfTestStrategy-actionCode: Callback<Callback<boolean>>--><!--Device-PerfTestStrategy-actionCode: Callback<Callback<boolean>>-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -39,7 +49,9 @@ bundleName?: string
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PerfTestStrategy-bundleName?: string--><!--Device-PerfTestStrategy-bundleName?: string-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -55,7 +67,9 @@ iterations?: number
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PerfTestStrategy-iterations?: int--><!--Device-PerfTestStrategy-iterations?: int-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -71,7 +85,9 @@ metrics: Array<PerfMetric>
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PerfTestStrategy-metrics: Array<PerfMetric>--><!--Device-PerfTestStrategy-metrics: Array<PerfMetric>-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -87,7 +103,9 @@ resetCode?: Callback<Callback<boolean>>
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PerfTestStrategy-resetCode?: Callback<Callback<boolean>>--><!--Device-PerfTestStrategy-resetCode?: Callback<Callback<boolean>>-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -103,7 +121,9 @@ timeout?: number
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PerfTestStrategy-timeout?: int--><!--Device-PerfTestStrategy-timeout?: int-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 

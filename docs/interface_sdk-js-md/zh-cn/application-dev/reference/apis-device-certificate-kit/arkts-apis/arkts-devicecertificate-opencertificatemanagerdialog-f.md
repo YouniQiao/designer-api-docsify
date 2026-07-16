@@ -1,5 +1,11 @@
 # openCertificateManagerDialog
 
+## 导入模块
+
+```TypeScript
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
+```
+
 ## openCertificateManagerDialog
 
 ```TypeScript
@@ -14,6 +20,8 @@ function openCertificateManagerDialog(context: common.Context, pageType: Certifi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-certificateManagerDialog-function openCertificateManagerDialog(context: common.Context, pageType: CertificateDialogPageType): Promise<void>--><!--Device-certificateManagerDialog-function openCertificateManagerDialog(context: common.Context, pageType: CertificateDialogPageType): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 **参数：**
@@ -21,19 +29,19 @@ function openCertificateManagerDialog(context: common.Context, pageType: Certifi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | common.Context | 是 | 表示应用的上下文信息。 |
-| pageType | CertificateDialogPageType | 是 | 表示页面类型。 |
+| pageType | [CertificateDialogPageType](arkts-devicecertificate-certificatedialogpagetype-e.md) | 是 | 表示页面类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 

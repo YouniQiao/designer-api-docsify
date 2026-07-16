@@ -4,6 +4,8 @@ Represents a version component.
 
 **Since:** 9
 
+<!--Device-update-export interface VersionComponent--><!--Device-update-export interface VersionComponent-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Component ID.
 
 **Since:** 9
 
+<!--Device-VersionComponent-componentId: string--><!--Device-VersionComponent-componentId: string-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Component type.
 **Type:** ComponentType
 
 **Since:** 9
+
+<!--Device-VersionComponent-componentType: ComponentType--><!--Device-VersionComponent-componentType: ComponentType-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -58,6 +64,8 @@ Information about the version description file.
 
 **Since:** 9
 
+<!--Device-VersionComponent-descriptionInfo: DescriptionInfo--><!--Device-VersionComponent-descriptionInfo: DescriptionInfo-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Display version number.
 **Type:** string
 
 **Since:** 9
+
+<!--Device-VersionComponent-displayVersion: string--><!--Device-VersionComponent-displayVersion: string-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -90,6 +100,8 @@ Effective mode.
 
 **Since:** 9
 
+<!--Device-VersionComponent-effectiveMode: EffectiveMode--><!--Device-VersionComponent-effectiveMode: EffectiveMode-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -105,6 +117,8 @@ Internal version number.
 **Type:** string
 
 **Since:** 9
+
+<!--Device-VersionComponent-innerVersion: string--><!--Device-VersionComponent-innerVersion: string-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -122,6 +136,8 @@ OTA mode.
 
 **Since:** 20
 
+<!--Device-VersionComponent-otaMode?: OtaMode--><!--Device-VersionComponent-otaMode?: OtaMode-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -138,6 +154,8 @@ Size of the update package, in bytes.
 
 **Since:** 9
 
+<!--Device-VersionComponent-size: int--><!--Device-VersionComponent-size: int-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -153,6 +171,8 @@ Update mode.
 **Type:** UpgradeAction
 
 **Since:** 9
+
+<!--Device-VersionComponent-upgradeAction: UpgradeAction--><!--Device-VersionComponent-upgradeAction: UpgradeAction-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 

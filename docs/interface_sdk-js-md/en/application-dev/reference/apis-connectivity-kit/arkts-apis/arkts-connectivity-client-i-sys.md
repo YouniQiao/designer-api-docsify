@@ -1,9 +1,10 @@
 # Client
 
-Manages SSAP client. Before calling a SSAP client method,
-you must use {@link createClient} to create a ssap client instance.
+Manages SSAP client. Before calling a SSAP client method,you must use {@link createClient} to create a ssap client instance.
 
 **Since:** 26.0.0
+
+<!--Device-ssap-interface Client--><!--Device-ssap-interface Client-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -27,6 +28,8 @@ Calls the method of a server.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Client-callMethod(method: Method): Promise<Method>--><!--Device-Client-callMethod(method: Method): Promise<Method>-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **System API:** This is a system API.
@@ -35,13 +38,13 @@ Calls the method of a server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| method | Method | Yes | Indicates the Method to call. |
+| method | [Method](arkts-connectivity-method-i-sys.md) | Yes | Indicates the Method to call. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Method&gt; | Promise used to return the Method result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Method> | Promise used to return the Method result. |
 
 **Error codes:**
 
@@ -66,6 +69,8 @@ Unsubscribes from event notifications.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Client-offEventNotify(callback?: Callback<Event>): void--><!--Device-Client-offEventNotify(callback?: Callback<Event>): void-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **System API:** This is a system API.
@@ -74,7 +79,7 @@ Unsubscribes from event notifications.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;Event&gt; | No | Callback used to listen for the event notified event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<Event> | No | Callback used to listen for the event notified event. |
 
 ## onEventNotify
 
@@ -90,6 +95,8 @@ This event is accessible only to system applications that granted the ohos.permi
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Client-onEventNotify(callback: Callback<Event>): void--><!--Device-Client-onEventNotify(callback: Callback<Event>): void-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **System API:** This is a system API.
@@ -98,7 +105,7 @@ This event is accessible only to system applications that granted the ohos.permi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;Event&gt; | Yes | Callback used to listen for the event notified event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<Event> | Yes | Callback used to listen for the event notified event. |
 
 ## readDescriptor
 
@@ -114,6 +121,8 @@ Reads the descriptor of a server.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Client-readDescriptor(descriptor: PropertyDescriptor): Promise<PropertyDescriptor>--><!--Device-Client-readDescriptor(descriptor: PropertyDescriptor): Promise<PropertyDescriptor>-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **System API:** This is a system API.
@@ -122,13 +131,13 @@ Reads the descriptor of a server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | PropertyDescriptor | Yes | Indicates the descriptor to read. |
+| descriptor | [PropertyDescriptor](../../apis-na/arkts-apis/arkts-na-propertydescriptor-i.md) | Yes | Indicates the descriptor to read. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PropertyDescriptor&gt; | Promise used to return the descriptor value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PropertyDescriptor> | Promise used to return the descriptor value. |
 
 **Error codes:**
 
@@ -155,6 +164,8 @@ Enables or disables indication of a property when value changed.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Client-setPropertyIndication(property: Property, enable: boolean): Promise<void>--><!--Device-Client-setPropertyIndication(property: Property, enable: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **System API:** This is a system API.
@@ -163,14 +174,14 @@ Enables or disables indication of a property when value changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| property | Property | Yes | Indicates the property to indicate. |
+| property | [Property](arkts-connectivity-property-i.md) | Yes | Indicates the property to indicate. |
 | enable | boolean | Yes | Specifies whether to enable indication of the property. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 
@@ -192,15 +203,15 @@ writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 
 Writes the descriptor of a server.
 
-This method does not support writing client property configuration descriptors. To write client property
-configuration descriptors, call [setPropertyNotification](arkts-connectivity-client-i.md#setpropertynotification-1) or
-[setPropertyIndication](arkts-connectivity-client-i-sys.md#setpropertyindication-1) instead.
+This method does not support writing client property configuration descriptors. To write client property configuration descriptors, call [setPropertyNotification](arkts-connectivity-client-i.md#setpropertynotification-1) or [setPropertyIndication](arkts-connectivity-client-i-sys.md#setpropertyindication-1) instead.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Client-writeDescriptor(descriptor: PropertyDescriptor): Promise<void>--><!--Device-Client-writeDescriptor(descriptor: PropertyDescriptor): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -210,13 +221,13 @@ configuration descriptors, call [setPropertyNotification](arkts-connectivity-cli
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | PropertyDescriptor | Yes | Indicates the descriptor to write.<br>The descriptor type should not be CLIENT_PROPERTY_CONFIG. |
+| descriptor | [PropertyDescriptor](../../apis-na/arkts-apis/arkts-na-propertydescriptor-i.md) | Yes | Indicates the descriptor to write.<br>The descriptor type should not be CLIENT_PROPERTY_CONFIG. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 

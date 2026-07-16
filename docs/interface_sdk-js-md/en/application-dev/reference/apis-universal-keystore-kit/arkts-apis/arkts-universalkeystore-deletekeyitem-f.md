@@ -14,13 +14,15 @@ function deleteKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 
 Deletes a key. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
-> Deleting SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)
+> **NOTE**  
+> Deleting SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)  
 > requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-huks-function deleteKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<void>): void--><!--Device-huks-function deleteKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -28,15 +30,15 @@ Deletes a key. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | Alias of the key to delete. It must be the key alias passed in when the key wasgenerated. |
-| options | HuksOptions | Yes | Attribute of the key to be deleted. If[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md) is used to specify the security level of the key to bedeleted,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** ispassed in. If the API version is earlier than 12, the default value **DE** is passed in. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| keyAlias | string | Yes | Alias of the key to delete. It must be the key alias passed in when the key was generated. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Attribute of the key to be deleted. If [HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md) is used to specify the security level of the key to be deleted,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly becausethe ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified.2. Incorrect parameter types.3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
 | [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
@@ -152,14 +154,16 @@ function deleteKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 
 Deletes a key. This API uses a promise to return the result.
 
-> **NOTE**
->
-> Deleting SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)
+> **NOTE**  
+>  
+> Deleting SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)  
 > requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-huks-function deleteKeyItem(keyAlias: string, options: HuksOptions): Promise<void>--><!--Device-huks-function deleteKeyItem(keyAlias: string, options: HuksOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -167,20 +171,20 @@ Deletes a key. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | Alias of the key to delete. It must be the key alias passed in when the key wasgenerated. |
-| options | HuksOptions | Yes | Attribute tag of the key to be deleted. If[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md) is used to specify the security level of the key to bedeleted,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** ispassed in. If the API version is earlier than 12, the default value **DE** is passed in. |
+| keyAlias | string | Yes | Alias of the key to delete. It must be the key alias passed in when the key was generated. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Attribute tag of the key to be deleted. If [HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md) is used to specify the security level of the key to be deleted,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly becausethe ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified.2. Incorrect parameter types.3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
 | [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |

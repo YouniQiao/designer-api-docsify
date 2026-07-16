@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare interface Layoutable--><!--Device-unnamed-declare interface Layoutable-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## getBorderWidth
@@ -18,7 +20,9 @@ getBorderWidth() : DirectionalEdgesT<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Layoutable-getBorderWidth() : DirectionalEdgesT<number>--><!--Device-Layoutable-getBorderWidth() : DirectionalEdgesT<number>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,7 +30,7 @@ getBorderWidth() : DirectionalEdgesT<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| DirectionalEdgesT&lt;number&gt; | 子组件的borderWidth信息。 |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)<number> | 子组件的borderWidth信息。 |
 
 ## getMargin
 
@@ -40,7 +44,9 @@ getMargin() : DirectionalEdgesT<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Layoutable-getMargin() : DirectionalEdgesT<number>--><!--Device-Layoutable-getMargin() : DirectionalEdgesT<number>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,7 +54,7 @@ getMargin() : DirectionalEdgesT<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| DirectionalEdgesT&lt;number&gt; | 子组件的margin信息。 |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)<number> | 子组件的margin信息。 |
 
 ## getPadding
 
@@ -62,7 +68,9 @@ getPadding() : DirectionalEdgesT<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Layoutable-getPadding() : DirectionalEdgesT<number>--><!--Device-Layoutable-getPadding() : DirectionalEdgesT<number>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,7 +78,7 @@ getPadding() : DirectionalEdgesT<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| DirectionalEdgesT&lt;number&gt; | 子组件的padding信息。 |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)<number> | 子组件的padding信息。 |
 
 ## layout
 
@@ -84,7 +92,9 @@ layout(position: Position): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Layoutable-layout(position: Position): void--><!--Device-Layoutable-layout(position: Position): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,7 +102,7 @@ layout(position: Position): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| position | Position | 是 | 绝对位置。 |
+| position | [Position](../arkts-apis/arkts-arkui-position-i.md) | 是 | 绝对位置。 |
 
 ## measureResult
 
@@ -100,8 +110,7 @@ layout(position: Position): void
 measureResult: MeasureResult
 ```
 
-子组件测量后的尺寸信息。
-单位为： vp。
+子组件测量后的尺寸信息。单位为： vp。
 
 **类型：** MeasureResult
 
@@ -109,7 +118,9 @@ measureResult: MeasureResult
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Layoutable-measureResult: MeasureResult--><!--Device-Layoutable-measureResult: MeasureResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -119,8 +130,7 @@ measureResult: MeasureResult
 uniqueId?: number
 ```
 
-系统为子组件分配的唯一标识UniqueID。
-取值应为≥0的整数。
+系统为子组件分配的唯一标识UniqueID。取值应为≥0的整数。
 
 **类型：** number
 
@@ -128,7 +138,9 @@ uniqueId?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Layoutable-uniqueId?: number--><!--Device-Layoutable-uniqueId?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

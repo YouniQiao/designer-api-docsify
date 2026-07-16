@@ -1,5 +1,11 @@
 # getBundleArchiveInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getBundleArchiveInfo
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getBundleArchiveInfo(hapFilePath: string, bundleFlags: number, callback
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundleManager-function getBundleArchiveInfo(hapFilePath: string, bundleFlags: int, callback: AsyncCallback<BundleInfo>): void--><!--Device-bundleManager-function getBundleArchiveInfo(hapFilePath: string, bundleFlags: int, callback: AsyncCallback<BundleInfo>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ function getBundleArchiveInfo(hapFilePath: string, bundleFlags: number, callback
 | --- | --- | --- | --- |
 | hapFilePath | string | 是 | 表示存储HAP的路径，路径应该是当前应用程序数据目录的相对路径。 |
 | bundleFlags | number | 是 | 表示用于指定要返回的BundleInfo对象中包含的信息的标志。 |
-| callback | AsyncCallback&lt;BundleInfo&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的BundleInfo；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<BundleInfo> | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的BundleInfo；否则为错误对象。 |
 
 **错误码：**
 
@@ -71,6 +79,8 @@ function getBundleArchiveInfo(hapFilePath: string,  bundleFlags: number): Promis
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundleManager-function getBundleArchiveInfo(hapFilePath: string,  bundleFlags: int): Promise<BundleInfo>--><!--Device-bundleManager-function getBundleArchiveInfo(hapFilePath: string,  bundleFlags: int): Promise<BundleInfo>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -86,7 +96,7 @@ function getBundleArchiveInfo(hapFilePath: string,  bundleFlags: number): Promis
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;BundleInfo&gt; | Promise对象，返回BundleInfo。 |
+| Promise<BundleInfo> | Promise对象，返回BundleInfo。 |
 
 **错误码：**
 

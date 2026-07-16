@@ -8,7 +8,15 @@
 
 **替代接口：** [UserAuthResult](arkts-userauthentication-userauthresult-i.md)
 
+<!--Device-userAuth-interface AuthResultInfo--><!--Device-userAuth-interface AuthResultInfo-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
+
+## 导入模块
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+```
 
 ## lockoutDuration
 
@@ -25,6 +33,8 @@ lockoutDuration?: number
 **废弃版本：** 11
 
 **替代接口：** [lockoutDuration](arkts-userauthentication-authlockstate-i.md#lockoutduration)
+
+<!--Device-AuthResultInfo-lockoutDuration?: number--><!--Device-AuthResultInfo-lockoutDuration?: number-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -44,6 +54,8 @@ remainAttempts?: number
 
 **替代接口：** [remainingAuthAttempts](arkts-userauthentication-authlockstate-i.md#remainingauthattempts)
 
+<!--Device-AuthResultInfo-remainAttempts?: number--><!--Device-AuthResultInfo-remainAttempts?: number-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## result
@@ -62,6 +74,8 @@ result: number
 
 **替代接口：** [result](arkts-userauthentication-userauthresult-i.md#result)
 
+<!--Device-AuthResultInfo-result: number--><!--Device-AuthResultInfo-result: number-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## token
@@ -79,6 +93,8 @@ token?: Uint8Array
 **废弃版本：** 11
 
 **替代接口：** [token](arkts-userauthentication-userauthresult-i.md#token)
+
+<!--Device-AuthResultInfo-token?: Uint8Array--><!--Device-AuthResultInfo-token?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

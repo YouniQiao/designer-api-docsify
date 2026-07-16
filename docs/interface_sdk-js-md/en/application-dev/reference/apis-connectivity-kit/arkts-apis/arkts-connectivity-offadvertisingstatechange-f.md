@@ -18,13 +18,15 @@ Unsubscribes from the advertising state change event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-advertising-function offAdvertisingStateChange(callback?: Callback<AdvertisingStateChangeInfo>): void--><!--Device-advertising-function offAdvertisingStateChange(callback?: Callback<AdvertisingStateChangeInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AdvertisingStateChangeInfo&gt; | No | Callback used to listen for the advertising state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<AdvertisingStateChangeInfo> | No | Callback used to listen for the advertising state. |
 
 **Error codes:**
 

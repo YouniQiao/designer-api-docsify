@@ -4,6 +4,8 @@ Provides accessibility configuration of the slider prefix and suffix.
 
 **Since:** 20
 
+<!--Device-unnamed-interface SliderCustomContentOptions--><!--Device-unnamed-interface SliderCustomContentOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityDescription
@@ -24,6 +26,8 @@ Default value: **"Double-tap to activate"**
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SliderCustomContentOptions-accessibilityDescription?: ResourceStr--><!--Device-SliderCustomContentOptions-accessibilityDescription?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityGroup
@@ -34,9 +38,7 @@ accessibilityGroup?: boolean
 
 Whether to enable accessibility grouping.
 
-The value **true** means to enable accessibility grouping, and **false** means the opposite. When accessibility
-grouping is enabled, the component and all its children are treated as a single selectable unit, and the
-accessibility service will no longer focus on the individual child components.
+The value **true** means to enable accessibility grouping, and **false** means the opposite. When accessibility grouping is enabled, the component and all its children are treated as a single selectable unit, and the accessibility service will no longer focus on the individual child components.
 
 Default value: **false**
 
@@ -47,6 +49,8 @@ Default value: **false**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SliderCustomContentOptions-accessibilityGroup?: boolean--><!--Device-SliderCustomContentOptions-accessibilityGroup?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,8 +70,7 @@ The options are as follows:
 
 **"no"**: The component cannot be recognized by accessibility services.
 
-**"no-hide-descendants"**: Neither the component nor its child components can be recognized by accessibility
-services.
+**"no-hide-descendants"**: Neither the component nor its child components can be recognized by accessibility services.
 
 Default value: **"auto"**
 
@@ -78,6 +81,8 @@ Default value: **"auto"**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SliderCustomContentOptions-accessibilityLevel?: string--><!--Device-SliderCustomContentOptions-accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,6 +103,8 @@ Default value: **""**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SliderCustomContentOptions-accessibilityText?: ResourceStr--><!--Device-SliderCustomContentOptions-accessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

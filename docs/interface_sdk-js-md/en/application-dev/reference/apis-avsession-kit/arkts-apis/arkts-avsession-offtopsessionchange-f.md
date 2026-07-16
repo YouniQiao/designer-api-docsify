@@ -18,13 +18,15 @@ Unregister top session changed callback
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES_FOR_PUBLIC
 
+<!--Device-avSession-function offTopSessionChange(callback?: Callback<AVSessionDescriptor>): void--><!--Device-avSession-function offTopSessionChange(callback?: Callback<AVSessionDescriptor>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AVSessionDescriptor&gt; | No | Used to unregister listener for ('topSessionChange') command |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AVSessionDescriptor> | No | Used to unregister listener for ('topSessionChange') command |
 
 **Error codes:**
 

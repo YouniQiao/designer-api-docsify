@@ -4,6 +4,8 @@ P2P device status.
 
 **Since:** 9
 
+<!--Device-wifiManager-enum P2pDeviceStatus--><!--Device-wifiManager-enum P2pDeviceStatus-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 ## CONNECTED
@@ -15,6 +17,8 @@ CONNECTED = 0
 Indicate p2p device is connected.
 
 **Since:** 9
+
+<!--Device-P2pDeviceStatus-CONNECTED = 0--><!--Device-P2pDeviceStatus-CONNECTED = 0-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -28,6 +32,8 @@ Indicate p2p device is invited.
 
 **Since:** 9
 
+<!--Device-P2pDeviceStatus-INVITED = 1--><!--Device-P2pDeviceStatus-INVITED = 1-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 ## FAILED
@@ -39,6 +45,8 @@ FAILED = 2
 Indicate p2p device is failed.
 
 **Since:** 9
+
+<!--Device-P2pDeviceStatus-FAILED = 2--><!--Device-P2pDeviceStatus-FAILED = 2-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -52,6 +60,8 @@ Indicate p2p device is available.
 
 **Since:** 9
 
+<!--Device-P2pDeviceStatus-AVAILABLE = 3--><!--Device-P2pDeviceStatus-AVAILABLE = 3-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 ## UNAVAILABLE
@@ -63,6 +73,8 @@ UNAVAILABLE = 4
 Indicate p2p device is unavailable.
 
 **Since:** 9
+
+<!--Device-P2pDeviceStatus-UNAVAILABLE = 4--><!--Device-P2pDeviceStatus-UNAVAILABLE = 4-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 

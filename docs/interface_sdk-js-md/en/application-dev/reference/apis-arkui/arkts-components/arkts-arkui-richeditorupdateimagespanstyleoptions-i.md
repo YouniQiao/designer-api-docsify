@@ -8,6 +8,8 @@ Inherits [RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.m
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface RichEditorUpdateImageSpanStyleOptions extends RichEditorSpanStyleOptions--><!--Device-unnamed-declare interface RichEditorUpdateImageSpanStyleOptions extends RichEditorSpanStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## imageStyle
@@ -25,6 +27,8 @@ Image style.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RichEditorUpdateImageSpanStyleOptions-imageStyle: RichEditorImageSpanStyle--><!--Device-RichEditorUpdateImageSpanStyleOptions-imageStyle: RichEditorImageSpanStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

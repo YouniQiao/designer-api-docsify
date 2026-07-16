@@ -20,6 +20,8 @@ Query insight intent entity information.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-insightIntentDriver-function queryEntityInfo(param: QueryParam): Promise<Array<Record<string, Object>>>--><!--Device-insightIntentDriver-function queryEntityInfo(param: QueryParam): Promise<Array<Record<string, Object>>>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -28,13 +30,13 @@ Query insight intent entity information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | QueryParam | Yes | Query parameter. |
+| param | [QueryParam](arkts-ability-queryparam-i-sys.md) | Yes | Query parameter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Record&lt;string, Object&gt;&gt;&gt; | - Returns the insight intent entity information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Record<string, Object>>> | - Returns the insight intent entity information. |
 
 **Error codes:**
 

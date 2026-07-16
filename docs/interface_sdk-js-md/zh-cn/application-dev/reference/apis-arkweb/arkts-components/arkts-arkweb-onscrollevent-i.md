@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface OnScrollEvent--><!--Device-unnamed-declare interface OnScrollEvent-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## xOffset
@@ -20,7 +22,9 @@ xOffset: number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnScrollEvent-xOffset: number--><!--Device-OnScrollEvent-xOffset: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -38,7 +42,9 @@ yOffset: number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnScrollEvent-yOffset: number--><!--Device-OnScrollEvent-yOffset: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

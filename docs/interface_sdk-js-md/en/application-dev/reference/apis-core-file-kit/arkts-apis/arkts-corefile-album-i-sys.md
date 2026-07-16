@@ -10,6 +10,8 @@ Provides APIs to manage albums.
 
 **Substitutes:** [Album](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-album-i.md)
 
+<!--Device-userFileManager-interface Album extends AbsAlbum--><!--Device-userFileManager-interface Album extends AbsAlbum-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -26,8 +28,7 @@ import { userFileManager } from '@kit.CoreFileKit';
 addPhotoAssets(assets: Array<FileAsset>, callback: AsyncCallback<void>): void
 ```
 
-Adds image and video assets to an album. Before the operation, ensure that the image and video assets to add and
-the album exist. This API uses an asynchronous callback to return the result.
+Adds image and video assets to an album. Before the operation, ensure that the image and video assets to add and the album exist. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -37,6 +38,8 @@ the album exist. This API uses an asynchronous callback to return the result.
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-Album-addPhotoAssets(assets: Array<FileAsset>, callback: AsyncCallback<void>): void--><!--Device-Album-addPhotoAssets(assets: Array<FileAsset>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -45,8 +48,8 @@ the album exist. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;FileAsset&gt; | Yes | Array of the image and video assets to add. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback that returns no value. |
+| assets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<FileAsset> | Yes | Array of the image and video assets to add. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -93,8 +96,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 addPhotoAssets(assets: Array<FileAsset>): Promise<void>
 ```
 
-Adds image and video assets to an album. Before the operation, ensure that the image and video assets to add and
-the album exist. This API uses a promise to return the result.
+Adds image and video assets to an album. Before the operation, ensure that the image and video assets to add and the album exist. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -104,6 +106,8 @@ the album exist. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-Album-addPhotoAssets(assets: Array<FileAsset>): Promise<void>--><!--Device-Album-addPhotoAssets(assets: Array<FileAsset>): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -112,13 +116,13 @@ the album exist. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;FileAsset&gt; | Yes | Array of the image and video assets to add. |
+| assets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<FileAsset> | Yes | Array of the image and video assets to add. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -164,8 +168,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 commitModify(callback: AsyncCallback<void>): void
 ```
 
-Commits the modification on the album attributes to the database. This API uses an asynchronous callback to
-return the result.
+Commits the modification on the album attributes to the database. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -175,6 +178,8 @@ return the result.
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-Album-commitModify(callback: AsyncCallback<void>): void--><!--Device-Album-commitModify(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -183,7 +188,7 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback that returns no value. |
 
 **Example**
 
@@ -228,6 +233,8 @@ Commits the modification on the album attributes to the database. This API uses 
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-Album-commitModify(): Promise<void>--><!--Device-Album-commitModify(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -236,7 +243,7 @@ Commits the modification on the album attributes to the database. This API uses 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -274,12 +281,11 @@ async function example(mgr: userFileManager.UserFileManager) {
 deletePhotoAssets(assets: Array<FileAsset>, callback: AsyncCallback<void>): void
 ```
 
-Deletes image or video assets from the recycle bin. Before the operation, ensure that the image or video assets
-exist in the recycle bin. This API uses an asynchronous callback to return the result.
+Deletes image or video assets from the recycle bin. Before the operation, ensure that the image or video assets exist in the recycle bin. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
+> **NOTE**  
+>  
+> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this  
 > operation.
 
 **Since:** 10
@@ -290,6 +296,8 @@ exist in the recycle bin. This API uses an asynchronous callback to return the r
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-Album-deletePhotoAssets(assets: Array<FileAsset>, callback: AsyncCallback<void>): void--><!--Device-Album-deletePhotoAssets(assets: Array<FileAsset>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -298,8 +306,8 @@ exist in the recycle bin. This API uses an asynchronous callback to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;FileAsset&gt; | Yes | Array of the image or video assets to delete. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback that returns no value. |
+| assets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<FileAsset> | Yes | Array of the image or video assets to delete. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -346,12 +354,11 @@ async function example(mgr: userFileManager.UserFileManager) {
 deletePhotoAssets(assets: Array<FileAsset>): Promise<void>
 ```
 
-Deletes image or video assets from the recycle bin. Before the operation, ensure that the image or video assets
-exist in the recycle bin. This API uses a promise to return the result.
+Deletes image or video assets from the recycle bin. Before the operation, ensure that the image or video assets exist in the recycle bin. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
+> **NOTE**  
+>  
+> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this  
 > operation.
 
 **Since:** 10
@@ -362,6 +369,8 @@ exist in the recycle bin. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-Album-deletePhotoAssets(assets: Array<FileAsset>): Promise<void>--><!--Device-Album-deletePhotoAssets(assets: Array<FileAsset>): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -370,13 +379,13 @@ exist in the recycle bin. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;FileAsset&gt; | Yes | Array of the image or video assets to delete. |
+| assets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<FileAsset> | Yes | Array of the image or video assets to delete. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -422,8 +431,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 recoverPhotoAssets(assets: Array<FileAsset>, callback: AsyncCallback<void>): void
 ```
 
-Recovers image or video assets from the recycle bin. Before the operation, ensure that the image or video assets
-exist in the recycle bin. This API uses an asynchronous callback to return the result.
+Recovers image or video assets from the recycle bin. Before the operation, ensure that the image or video assets exist in the recycle bin. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -433,6 +441,8 @@ exist in the recycle bin. This API uses an asynchronous callback to return the r
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-Album-recoverPhotoAssets(assets: Array<FileAsset>, callback: AsyncCallback<void>): void--><!--Device-Album-recoverPhotoAssets(assets: Array<FileAsset>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -441,8 +451,8 @@ exist in the recycle bin. This API uses an asynchronous callback to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;FileAsset&gt; | Yes | Array of the image or video assets to recover. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback that returns no value. |
+| assets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<FileAsset> | Yes | Array of the image or video assets to recover. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -489,8 +499,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 recoverPhotoAssets(assets: Array<FileAsset>): Promise<void>
 ```
 
-Recovers image or video assets from the recycle bin. Before the operation, ensure that the image or video assets
-exist in the recycle bin. This API uses a promise to return the result.
+Recovers image or video assets from the recycle bin. Before the operation, ensure that the image or video assets exist in the recycle bin. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -500,6 +509,8 @@ exist in the recycle bin. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-Album-recoverPhotoAssets(assets: Array<FileAsset>): Promise<void>--><!--Device-Album-recoverPhotoAssets(assets: Array<FileAsset>): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -508,13 +519,13 @@ exist in the recycle bin. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;FileAsset&gt; | Yes | Array of the image or video assets to recover. |
+| assets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<FileAsset> | Yes | Array of the image or video assets to recover. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -560,8 +571,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 removePhotoAssets(assets: Array<FileAsset>, callback: AsyncCallback<void>): void
 ```
 
-Removes image and video assets from an album. The album and file resources must exist. This API uses an
-asynchronous callback to return the result.
+Removes image and video assets from an album. The album and file resources must exist. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -571,6 +581,8 @@ asynchronous callback to return the result.
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-Album-removePhotoAssets(assets: Array<FileAsset>, callback: AsyncCallback<void>): void--><!--Device-Album-removePhotoAssets(assets: Array<FileAsset>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -579,8 +591,8 @@ asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;FileAsset&gt; | Yes | Array of the image and video assets to remove. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback that returns no value. |
+| assets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<FileAsset> | Yes | Array of the image and video assets to remove. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -627,8 +639,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 removePhotoAssets(assets: Array<FileAsset>): Promise<void>
 ```
 
-Removes image and video assets from an album. The album and file resources must exist. This API uses a promise to
-return the result.
+Removes image and video assets from an album. The album and file resources must exist. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -638,6 +649,8 @@ return the result.
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-Album-removePhotoAssets(assets: Array<FileAsset>): Promise<void>--><!--Device-Album-removePhotoAssets(assets: Array<FileAsset>): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -646,13 +659,13 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;FileAsset&gt; | Yes | Array of the image and video assets to remove. |
+| assets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<FileAsset> | Yes | Array of the image and video assets to remove. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

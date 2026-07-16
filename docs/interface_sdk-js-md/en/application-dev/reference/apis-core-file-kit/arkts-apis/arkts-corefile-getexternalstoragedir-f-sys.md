@@ -12,12 +12,13 @@ import { Environment } from '@kit.CoreFileKit';
 function getExternalStorageDir(): string
 ```
 
-Obtains the sandbox path of the root directory of an external storage card. This API is available only to the
-devices with the SystemCapability.FileManagement.File.Environment.FolderObtain system capability.
+Obtains the sandbox path of the root directory of an external storage card. This API is available only to the devices with the SystemCapability.FileManagement.File.Environment.FolderObtain system capability.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-Environment-function getExternalStorageDir(): string--><!--Device-Environment-function getExternalStorageDir(): string-End-->
 
 **System capability:** SystemCapability.FileManagement.File.Environment.FolderObtain
 
@@ -34,7 +35,7 @@ devices with the SystemCapability.FileManagement.File.Environment.FolderObtain s
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application usessystem API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 13900042 | Unknown error. |
 

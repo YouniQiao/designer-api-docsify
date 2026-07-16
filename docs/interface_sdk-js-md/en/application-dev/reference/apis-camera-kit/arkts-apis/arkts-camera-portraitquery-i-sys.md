@@ -4,6 +4,8 @@ Queries portrait parameters.
 
 **Since:** 12
 
+<!--Device-camera-interface PortraitQuery--><!--Device-camera-interface PortraitQuery-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -24,6 +26,8 @@ Obtains the supported portrait effects.
 
 **Since:** 10
 
+<!--Device-PortraitQuery-getSupportedPortraitEffects(): Array<PortraitEffect>--><!--Device-PortraitQuery-getSupportedPortraitEffects(): Array<PortraitEffect>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -32,7 +36,7 @@ Obtains the supported portrait effects.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;PortraitEffect&gt; | Array of portrait effects supported. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PortraitEffect> | Array of portrait effects supported. |
 
 **Error codes:**
 

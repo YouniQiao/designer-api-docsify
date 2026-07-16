@@ -6,6 +6,8 @@ Inherits from [BaseEvent](arkts-arkui-baseevent-i.md).
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface HoverEvent extends BaseEvent--><!--Device-unnamed-declare interface HoverEvent extends BaseEvent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## displayX
@@ -25,6 +27,8 @@ Unit: vp.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-HoverEvent-displayX?: number--><!--Device-HoverEvent-displayX?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,6 +50,8 @@ Unit: vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-HoverEvent-displayY?: number--><!--Device-HoverEvent-displayY?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## globalDisplayX
@@ -54,8 +60,7 @@ Unit: vp.
 globalDisplayX?: number
 ```
 
-X coordinate of the cursor or stylus position in the
-[global coordinate system](../../../../windowmanager/window-terminology.md#global-coordinate-system).
+X coordinate of the cursor or stylus position in the [global coordinate system](../../../../windowmanager/window-terminology.md#global-coordinate-system).
 
 Unit: vp.
 
@@ -68,6 +73,8 @@ Value range: (-∞, +∞).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-HoverEvent-globalDisplayX?: number--><!--Device-HoverEvent-globalDisplayX?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -77,8 +84,7 @@ Value range: (-∞, +∞).
 globalDisplayY?: number
 ```
 
-Y coordinate of the cursor or stylus position in the
-[global coordinate system](../../../../windowmanager/window-terminology.md#global-coordinate-system).
+Y coordinate of the cursor or stylus position in the [global coordinate system](../../../../windowmanager/window-terminology.md#global-coordinate-system).
 
 Unit: vp.
 
@@ -91,6 +97,8 @@ Value range: (-∞, +∞).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-HoverEvent-globalDisplayY?: number--><!--Device-HoverEvent-globalDisplayY?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -109,6 +117,8 @@ Disables [event bubbling](../../../../ui/arkts-interaction-basic-principles.md#e
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-HoverEvent-stopPropagation: () => void--><!--Device-HoverEvent-stopPropagation: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -130,6 +140,8 @@ Unit: vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-HoverEvent-windowX?: number--><!--Device-HoverEvent-windowX?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## windowY
@@ -150,6 +162,8 @@ Unit: vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-HoverEvent-windowY?: number--><!--Device-HoverEvent-windowY?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## x
@@ -158,9 +172,7 @@ Unit: vp.
 x?: number
 ```
 
-X coordinate of the cursor or stylus position in the
-[component coordinate system](../../../../ui/arkui-glossary.md#component-coordinate-system) based on the current
-component.
+X coordinate of the cursor or stylus position in the [component coordinate system](../../../../ui/arkui-glossary.md#component-coordinate-system) based on the current component.
 
 Unit: vp.
 
@@ -171,6 +183,8 @@ Unit: vp.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-HoverEvent-x?: number--><!--Device-HoverEvent-x?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -180,9 +194,7 @@ Unit: vp.
 y?: number
 ```
 
-Y coordinate of the cursor or stylus position in the
-[component coordinate system](../../../../ui/arkui-glossary.md#component-coordinate-system) based on the current
-component.
+Y coordinate of the cursor or stylus position in the [component coordinate system](../../../../ui/arkui-glossary.md#component-coordinate-system) based on the current component.
 
 Unit: vp.
 
@@ -193,6 +205,8 @@ Unit: vp.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-HoverEvent-y?: number--><!--Device-HoverEvent-y?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

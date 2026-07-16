@@ -4,6 +4,8 @@ The namespace of abilityToolAccessCtrl
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare namespace abilityToolAccessCtrl--><!--Device-unnamed-declare namespace abilityToolAccessCtrl-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.

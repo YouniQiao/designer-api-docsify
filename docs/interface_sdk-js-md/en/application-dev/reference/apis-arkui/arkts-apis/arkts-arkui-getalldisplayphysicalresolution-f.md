@@ -12,12 +12,13 @@ import { display } from '@kit.ArkUI';
 function getAllDisplayPhysicalResolution(): Promise<Array<DisplayPhysicalResolution>>
 ```
 
-Obtains all the display modes supported by the current device, along with the physical screen resolutions for each
-mode. This API uses a promise to return the result.
+Obtains all the display modes supported by the current device, along with the physical screen resolutions for each mode. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-display-function getAllDisplayPhysicalResolution(): Promise<Array<DisplayPhysicalResolution>>--><!--Device-display-function getAllDisplayPhysicalResolution(): Promise<Array<DisplayPhysicalResolution>>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -25,7 +26,7 @@ mode. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DisplayPhysicalResolution&gt;&gt; | Promise used to return all the DisplayPhysicalResolutionobjects. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<DisplayPhysicalResolution>> | Promise used to return all the DisplayPhysicalResolution objects. |
 
 **Error codes:**
 

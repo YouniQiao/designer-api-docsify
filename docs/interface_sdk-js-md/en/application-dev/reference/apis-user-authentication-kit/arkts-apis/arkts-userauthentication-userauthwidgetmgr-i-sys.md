@@ -1,10 +1,10 @@
 # UserAuthWidgetMgr (System API)
 
-Defines the authentication widget manager. It is used to register the custom authentication widget with the
-**UserAuthWidgetMgr** for unified management and scheduling. Through this API, the custom authentication widget can
-receive commands from the user authentication framework and perform corresponding operations.
+Defines the authentication widget manager. It is used to register the custom authentication widget with the **UserAuthWidgetMgr** for unified management and scheduling. Through this API, the custom authentication widget can receive commands from the user authentication framework and perform corresponding operations.
 
 **Since:** 10
+
+<!--Device-userAuth-interface UserAuthWidgetMgr--><!--Device-userAuth-interface UserAuthWidgetMgr-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -22,10 +22,11 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 off(type: 'command', callback?: IAuthWidgetCallback): void
 ```
 
-Unsubscribes from command events from the user authentication framework. The authentication widget uses this API
-to unsubscribe from commands from the user authentication framework.
+Unsubscribes from command events from the user authentication framework. The authentication widget uses this API to unsubscribe from commands from the user authentication framework.
 
 **Since:** 10
+
+<!--Device-UserAuthWidgetMgr-off(type: 'command', callback?: IAuthWidgetCallback): void--><!--Device-UserAuthWidgetMgr-off(type: 'command', callback?: IAuthWidgetCallback): void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -35,8 +36,8 @@ to unsubscribe from commands from the user authentication framework.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'command' | Yes | Event type to subscribe to. The value **'command'** indicates that the event that theuser authentication framework sends commands to the identity authentication widget is unsubscribed. |
-| callback | IAuthWidgetCallback | No | Callback function. It specifies the callback function to beunregistered. If this parameter is not passed, all registered callback functions are unregistered. |
+| type | 'command' | Yes | Event type to subscribe to. The value **'command'** indicates that the event that the user authentication framework sends commands to the identity authentication widget is unsubscribed. |
+| callback | [IAuthWidgetCallback](arkts-userauthentication-iauthwidgetcallback-i-sys.md) | No | Callback function. It specifies the callback function to be unregistered. If this parameter is not passed, all registered callback functions are unregistered. |
 
 **Error codes:**
 
@@ -74,11 +75,11 @@ try {
 on(type: 'command', callback: IAuthWidgetCallback): void
 ```
 
-Subscribes to command events from the user authentication framework. The authentication widget uses this API to
-subscribe to commands from the user authentication framework so that it can perform corresponding authentication
-operations based on the commands.
+Subscribes to command events from the user authentication framework. The authentication widget uses this API to subscribe to commands from the user authentication framework so that it can perform corresponding authentication operations based on the commands.
 
 **Since:** 10
+
+<!--Device-UserAuthWidgetMgr-on(type: 'command', callback: IAuthWidgetCallback): void--><!--Device-UserAuthWidgetMgr-on(type: 'command', callback: IAuthWidgetCallback): void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -88,8 +89,8 @@ operations based on the commands.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'command' | Yes | Event type to subscribe to. The value **'command'** indicates that the event is usedby the user authentication framework to send commands to the user authentication widget. |
-| callback | IAuthWidgetCallback | Yes | Callback function. It is used to receive commands from the userauthentication framework. The authentication widget needs to parse the commands and perform correspondingoperations in the callback. |
+| type | 'command' | Yes | Event type to subscribe to. The value **'command'** indicates that the event is used by the user authentication framework to send commands to the user authentication widget. |
+| callback | [IAuthWidgetCallback](arkts-userauthentication-iauthwidgetcallback-i-sys.md) | Yes | Callback function. It is used to receive commands from the user authentication framework. The authentication widget needs to parse the commands and perform corresponding operations in the callback. |
 
 **Error codes:**
 

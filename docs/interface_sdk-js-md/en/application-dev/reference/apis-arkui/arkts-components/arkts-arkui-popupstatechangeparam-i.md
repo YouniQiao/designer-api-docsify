@@ -4,6 +4,8 @@ Display state of the popup.
 
 **Since:** 18
 
+<!--Device-unnamed-declare interface PopupStateChangeParam--><!--Device-unnamed-declare interface PopupStateChangeParam-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## isVisible
@@ -12,8 +14,7 @@ Display state of the popup.
 isVisible: boolean
 ```
 
-Display state of the popup. It returns **true** when the popup transitions from closed to open, and **false** when
-the popup transitions from open to closed.
+Display state of the popup. It returns **true** when the popup transitions from closed to open, and **false** when the popup transitions from open to closed.
 
 **Type:** boolean
 
@@ -22,6 +23,8 @@ the popup transitions from open to closed.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-PopupStateChangeParam-isVisible: boolean--><!--Device-PopupStateChangeParam-isVisible: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

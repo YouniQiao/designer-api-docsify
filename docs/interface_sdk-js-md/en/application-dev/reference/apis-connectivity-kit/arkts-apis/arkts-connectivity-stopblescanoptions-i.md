@@ -2,6 +2,8 @@
 
 **Since:** 6
 
+<!--Device-unnamed-export interface StopBLEScanOptions--><!--Device-unnamed-export interface StopBLEScanOptions-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 
 ## Modules to Import
@@ -24,6 +26,8 @@ StopBLEScanOptions completed
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-StopBLEScanOptions-complete: () => void--><!--Device-StopBLEScanOptions-complete: () => void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 
 ## fail
@@ -40,6 +44,8 @@ StopBLEScanOptions failed
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-StopBLEScanOptions-fail: (data: string, code: number) => void--><!--Device-StopBLEScanOptions-fail: (data: string, code: number) => void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 
 ## success
@@ -55,6 +61,8 @@ StopBLEScanOptions success
 **Since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-StopBLEScanOptions-success: () => void--><!--Device-StopBLEScanOptions-success: () => void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 

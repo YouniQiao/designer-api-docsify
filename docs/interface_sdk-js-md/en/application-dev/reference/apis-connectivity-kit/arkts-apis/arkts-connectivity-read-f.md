@@ -18,13 +18,15 @@ Reads the NDEF data from the connected NFC tag.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
+<!--Device-connectedTag-function read(): Promise<number[]>--><!--Device-connectedTag-function read(): Promise<number[]>-End-->
+
 **System capability:** SystemCapability.Communication.ConnectedTag
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number[]&gt; | The reponse NDEF data. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number[]> | The reponse NDEF data. |
 
 **Error codes:**
 
@@ -61,13 +63,15 @@ Reads the NDEF data from the connected NFC tag.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
+<!--Device-connectedTag-function read(callback: AsyncCallback<number[]>): void--><!--Device-connectedTag-function read(callback: AsyncCallback<number[]>): void-End-->
+
 **System capability:** SystemCapability.Communication.ConnectedTag
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number[]&gt; | Yes | The callback to receive the data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number[]> | Yes | The callback to receive the data. |
 
 **Error codes:**
 

@@ -6,6 +6,8 @@ Sets the type of sliding panel.
 
 **Deprecated since:** 12
 
+<!--Device-unnamed-declare enum PanelType--><!--Device-unnamed-declare enum PanelType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Minibar
@@ -22,6 +24,8 @@ The switch between the minibar and full-screen display is provided.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PanelType-Minibar = 0--><!--Device-PanelType-Minibar = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Foldable
@@ -30,14 +34,15 @@ The switch between the minibar and full-screen display is provided.
 Foldable = 1
 ```
 
-Permanent content display class.
-The switchover effect is provided in three sizes: large (full-screen), medium (half-screen), and small.
+Permanent content display class.The switchover effect is provided in three sizes: large (full-screen), medium (half-screen), and small.
 
 **Since:** 11
 
 **Deprecated since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PanelType-Foldable = 1--><!--Device-PanelType-Foldable = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,14 +52,15 @@ The switchover effect is provided in three sizes: large (full-screen), medium (h
 Temporary = 2
 ```
 
-Temporary content display area.
-The switchover effect is provided in three sizes: large (full-screen), medium (half-screen), and small.
+Temporary content display area.The switchover effect is provided in three sizes: large (full-screen), medium (half-screen), and small.
 
 **Since:** 11
 
 **Deprecated since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PanelType-Temporary = 2--><!--Device-PanelType-Temporary = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,14 +70,15 @@ The switchover effect is provided in three sizes: large (full-screen), medium (h
 CUSTOM = 3
 ```
 
-Custom content display area.
-The switchover effect is provided in three sizes: large (full-screen), medium (half-screen), and small.
+Custom content display area.The switchover effect is provided in three sizes: large (full-screen), medium (half-screen), and small.
 
 **Since:** 11
 
 **Deprecated since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PanelType-CUSTOM = 3--><!--Device-PanelType-CUSTOM = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

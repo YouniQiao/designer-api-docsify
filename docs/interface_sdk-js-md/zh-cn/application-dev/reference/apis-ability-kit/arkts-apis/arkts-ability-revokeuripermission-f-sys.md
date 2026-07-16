@@ -1,25 +1,32 @@
 # revokeUriPermission（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { uriPermissionManager } from '@kit.AbilityKit';
+```
+
 ## revokeUriPermission
 
 ```TypeScript
 function revokeUriPermission(uri: string, targetBundleName: string, callback: AsyncCallback<number>): void
 ```
 
-撤销授权指定应用的URI。使用callback异步回调。
-该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
+撤销授权指定应用的URI。使用callback异步回调。该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
 
-> **说明：**
->
-> - 允许应用撤销自身获得的其他应用URI权限，或授权给其他应用的URI权限。
->
-> - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](@ohos.file.fileuri:fileUri.getUriFromPath)接口获取。对于应用自行拼接的URI，系统无法保证
+> **说明：**  
+>  
+> - 允许应用撤销自身获得的其他应用URI权限，或授权给其他应用的URI权限。  
+>  
+> - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](@ohos.file.fileuri:fileUri.getUriFromPath)接口获取。对于应用自行拼接的URI，系统无法保证  
 > 其功能。
 
 **起始版本：** 10
 
 **需要权限：** 
 - API版本10 - 11：ohos.permission.PROXY_AUTHORIZATION_URI
+
+<!--Device-uriPermissionManager-function revokeUriPermission(uri: string, targetBundleName: string, callback: AsyncCallback<number>): void--><!--Device-uriPermissionManager-function revokeUriPermission(uri: string, targetBundleName: string, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -31,7 +38,7 @@ function revokeUriPermission(uri: string, targetBundleName: string, callback: As
 | --- | --- | --- | --- |
 | uri | string | 是 | 指向文件的URI，scheme固定为"file"，参考[FileUri](@ohos.file.fileuri:fileUri.FileUri#constructor)。 |
 | targetBundleName | string | 是 | 被撤销授权uri的应用包名。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。返回0表示有权限，返回-1表示无权限。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。返回0表示有权限，返回-1表示无权限。 |
 
 **错误码：**
 
@@ -69,20 +76,21 @@ uriPermissionManager.revokeUriPermission(uri, targetBundleName, (error) => {
 function revokeUriPermission(uri: string, targetBundleName: string): Promise<number>
 ```
 
-撤销授权指定应用的URI。使用Promise异步回调。
-该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
+撤销授权指定应用的URI。使用Promise异步回调。该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
 
-> **说明：**
->
-> - 允许应用撤销自身获得的其他应用URI权限，或授权给其他应用的URI权限。
->
-> - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](@ohos.file.fileuri:fileUri.getUriFromPath)接口获取。对于应用自行拼接的URI，系统无法保证
+> **说明：**  
+>  
+> - 允许应用撤销自身获得的其他应用URI权限，或授权给其他应用的URI权限。  
+>  
+> - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](@ohos.file.fileuri:fileUri.getUriFromPath)接口获取。对于应用自行拼接的URI，系统无法保证  
 > 其功能。
 
 **起始版本：** 10
 
 **需要权限：** 
 - API版本10 - 11：ohos.permission.PROXY_AUTHORIZATION_URI
+
+<!--Device-uriPermissionManager-function revokeUriPermission(uri: string, targetBundleName: string): Promise<number>--><!--Device-uriPermissionManager-function revokeUriPermission(uri: string, targetBundleName: string): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -99,7 +107,7 @@ function revokeUriPermission(uri: string, targetBundleName: string): Promise<num
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回0表示有权限，返回-1表示无权限。 |
+| Promise<number> | Promise对象。返回0表示有权限，返回-1表示无权限。 |
 
 **错误码：**
 
@@ -137,19 +145,20 @@ uriPermissionManager.revokeUriPermission(uri, targetBundleName)
 function revokeUriPermission(uri: string, targetBundleName: string, appCloneIndex: number): Promise<void>
 ```
 
-撤销授权指定应用的URI。使用Promise异步回调。
-该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
+撤销授权指定应用的URI。使用Promise异步回调。该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
 
-> **说明：**
->
-> - 允许应用撤销自身获得的其他应用URI权限，或授权给其他应用的URI权限。
->
-> - 该接口支持撤销授权给分身应用的URI权限，需要指定目标应用的应用包名和分身索引。
->
-> - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](@ohos.file.fileuri:fileUri.getUriFromPath)接口获取。对于应用自行拼接的URI，系统无法保证
+> **说明：**  
+>  
+> - 允许应用撤销自身获得的其他应用URI权限，或授权给其他应用的URI权限。  
+>  
+> - 该接口支持撤销授权给分身应用的URI权限，需要指定目标应用的应用包名和分身索引。  
+>  
+> - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](@ohos.file.fileuri:fileUri.getUriFromPath)接口获取。对于应用自行拼接的URI，系统无法保证  
 > 其功能。
 
 **起始版本：** 14
+
+<!--Device-uriPermissionManager-function revokeUriPermission(uri: string, targetBundleName: string, appCloneIndex: int): Promise<void>--><!--Device-uriPermissionManager-function revokeUriPermission(uri: string, targetBundleName: string, appCloneIndex: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -167,7 +176,7 @@ function revokeUriPermission(uri: string, targetBundleName: string, appCloneInde
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

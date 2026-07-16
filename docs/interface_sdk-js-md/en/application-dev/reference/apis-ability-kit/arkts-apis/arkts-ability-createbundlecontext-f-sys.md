@@ -14,12 +14,12 @@ export function createBundleContext(context: Context, bundleName: string): Promi
 
 Creates the context for an application. This API uses a promise to return the result.
 
-> **NOTE**
->
-> Starting from API version 18, the context can obtain the
-> [process name](../../../../reference/apis-ability-kit/js-apis-inner-application-context.md#context) of the current
-> application. The **processName** property in the context created by **createBundleContext** is the same as the
-> **processName** property in the input parameter **Context**. The values of other properties are obtained based on
+> **NOTE**  
+>  
+> Starting from API version 18, the context can obtain the  
+> [process name](../../../../reference/apis-ability-kit/js-apis-inner-application-context.md#context) of the current  
+> application. The **processName** property in the context created by **createBundleContext** is the same as the  
+> **processName** property in the input parameter **Context**. The values of other properties are obtained based on  
 > the input parameters **Context**, **bundleName**, and **moduleName**.
 
 **Since:** 12
@@ -27,6 +27,8 @@ Creates the context for an application. This API uses a promise to return the re
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-application-export function createBundleContext(context: Context, bundleName: string): Promise<Context>--><!--Device-application-export function createBundleContext(context: Context, bundleName: string): Promise<Context>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -36,14 +38,14 @@ Creates the context for an application. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. |
 | bundleName | string | Yes | Bundle name of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Context&gt; | Promise used to return the context created. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Context> | Promise used to return the context created. |
 
 **Error codes:**
 

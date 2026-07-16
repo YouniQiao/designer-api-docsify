@@ -22,6 +22,16 @@ Imports a key securely for the specified user. This API uses a promise to return
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-huks-function importWrappedKeyItemAsUser(
+    userId: number, keyAlias: string,
+    wrappingKeyAlias: string,
+    huksOptions: HuksOptions
+  ): Promise<void>--><!--Device-huks-function importWrappedKeyItemAsUser(
+    userId: number, keyAlias: string,
+    wrappingKeyAlias: string,
+    huksOptions: HuksOptions
+  ): Promise<void>-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **System API:** This is a system API.
@@ -33,13 +43,13 @@ Imports a key securely for the specified user. This API uses a promise to return
 | userId | number | Yes | User ID. |
 | keyAlias | string | Yes | Alias of the wrapped key to import. |
 | wrappingKeyAlias | string | Yes | Alias of the key used to decrypt the wrapped key. |
-| huksOptions | HuksOptions | Yes | Options for importing the wrapped key. The algorithm, key purpose, and keylength are mandatory. |
+| huksOptions | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Options for importing the wrapped key. The algorithm, key purpose, and key length are mandatory. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

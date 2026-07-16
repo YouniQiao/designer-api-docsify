@@ -4,6 +4,8 @@ Provides APIs for managing OS accounts.
 
 **Since:** 7
 
+<!--Device-osAccount-interface AccountManager--><!--Device-osAccount-interface AccountManager-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 ## Modules to Import
@@ -18,10 +20,11 @@ import { osAccount } from '@kit.BasicServicesKit';
 checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether multiple OS accounts are supported. This API uses an asynchronous callback to return the
-result.
+Checks whether multiple OS accounts are supported. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AccountManager-checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -29,7 +32,7 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value**true** means multiple OS accounts are supported;the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means multiple OS accounts are supported;the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -69,13 +72,15 @@ Checks whether multiple OS accounts are supported. This API uses a promise to re
 
 **Since:** 9
 
+<!--Device-AccountManager-checkMultiOsAccountEnabled(): Promise<boolean>--><!--Device-AccountManager-checkMultiOsAccountEnabled(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value**true** means multiple OS accounts are supported;the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means multiple OS accounts are supported;the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -110,9 +115,9 @@ checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void
 
 Checks whether an OS account is activated. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
+> **NOTE**  
+>  
+> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available  
 > only to system applications.
 
 **Since:** 9
@@ -121,6 +126,8 @@ Checks whether an OS account is activated. This API uses an asynchronous callbac
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -128,7 +135,7 @@ Checks whether an OS account is activated. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true**means the account is activated; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means the account is activated; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -173,9 +180,9 @@ checkOsAccountActivated(localId: number): Promise<boolean>
 
 Checks whether an OS account is activated. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
+> **NOTE**  
+>  
+> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available  
 > only to system applications.
 
 **Since:** 9
@@ -183,6 +190,8 @@ Checks whether an OS account is activated. This API uses a promise to return the
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-checkOsAccountActivated(localId: number): Promise<boolean>--><!--Device-AccountManager-checkOsAccountActivated(localId: number): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -196,7 +205,7 @@ Checks whether an OS account is activated. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** meansthe account is activated; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means the account is activated; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -237,12 +246,11 @@ try {
 checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the specified constraint is enabled for an OS account. This API uses an asynchronous callback
-to return the result.
+Checks whether the specified constraint is enabled for an OS account. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
+> **NOTE**  
+>  
+> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available  
 > only to system applications.
 
 **Since:** 9
@@ -250,6 +258,8 @@ to return the result.
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -259,7 +269,7 @@ to return the result.
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
 | constraint | string | Yes | [Constraint](../../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) to check. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value**true** means the specified constraint is enabled; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means the specified constraint is enabled; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -303,12 +313,11 @@ try {
 checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<boolean>
 ```
 
-Checks whether the specified constraint is enabled for an OS account. This API uses a promise to return the
-result.
+Checks whether the specified constraint is enabled for an OS account. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
+> **NOTE**  
+>  
+> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available  
 > only to system applications.
 
 **Since:** 9
@@ -316,6 +325,8 @@ result.
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<boolean>--><!--Device-AccountManager-checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -330,7 +341,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** meansthe specified constraint is enabled; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means the specified constraint is enabled; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -372,10 +383,11 @@ try {
 checkOsAccountTestable(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether this OS account is a test account. This API uses an asynchronous callback to return the
-result.
+Checks whether this OS account is a test account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AccountManager-checkOsAccountTestable(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountTestable(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -383,7 +395,7 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value**true** means the account is a test account; the value **false** means the opposite;the default value is **false**. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means the account is a test account; the value **false** means the opposite;the default value is **false**. |
 
 **Error codes:**
 
@@ -423,13 +435,15 @@ Checks whether this OS account is a test account. This API uses a promise to ret
 
 **Since:** 9
 
+<!--Device-AccountManager-checkOsAccountTestable(): Promise<boolean>--><!--Device-AccountManager-checkOsAccountTestable(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true**means the account is a test account; the value **false** means the opposite;the default value is **false**. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means the account is a test account; the value **false** means the opposite;the default value is **false**. |
 
 **Error codes:**
 
@@ -464,9 +478,9 @@ checkOsAccountVerified(callback: AsyncCallback<boolean>): void
 
 Checks whether this OS account is unlocked. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 9 and deprecated since API version 11. You are advised to use
+> **NOTE**  
+>  
+> This API is supported since API version 9 and deprecated since API version 11. You are advised to use  
 > [isOsAccountUnlocked](arkts-basicservices-accountmanager-i.md#isosaccountunlocked-1) instead.
 
 **Since:** 9
@@ -475,13 +489,15 @@ Checks whether this OS account is unlocked. This API uses an asynchronous callba
 
 **Substitutes:** [isOsAccountUnlocked()](arkts-basicservices-accountmanager-i.md#isosaccountunlocked-1)
 
+<!--Device-AccountManager-checkOsAccountVerified(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountVerified(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true**means the OS account has been verified; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -518,9 +534,9 @@ checkOsAccountVerified(): Promise<boolean>
 
 Checks whether this OS account has been verified. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 9 and deprecated since API version 11. You are advised to use
+> **NOTE**  
+>  
+> This API is supported since API version 9 and deprecated since API version 11. You are advised to use  
 > [isOsAccountUnlocked](arkts-basicservices-accountmanager-i.md#isosaccountunlocked-1) instead.
 
 **Since:** 9
@@ -529,13 +545,15 @@ Checks whether this OS account has been verified. This API uses a promise to ret
 
 **Substitutes:** [isOsAccountUnlocked()](arkts-basicservices-accountmanager-i.md#isosaccountunlocked-1)
 
+<!--Device-AccountManager-checkOsAccountVerified(): Promise<boolean>--><!--Device-AccountManager-checkOsAccountVerified(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means theOS account has been verified; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -570,9 +588,9 @@ checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 
 Checks whether an OS account has been verified. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
+> **NOTE**  
+>  
+> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available  
 > only to system applications.
 
 **Since:** 9
@@ -581,6 +599,8 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -588,7 +608,7 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true**means the OS account has been verified; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -631,9 +651,9 @@ checkOsAccountVerified(localId: number): Promise<boolean>
 
 Checks whether an OS account has been verified. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
+> **NOTE**  
+>  
+> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available  
 > only to system applications.
 
 **Since:** 9
@@ -641,6 +661,8 @@ Checks whether an OS account has been verified. This API uses a promise to retur
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-checkOsAccountVerified(localId: number): Promise<boolean>--><!--Device-AccountManager-checkOsAccountVerified(localId: number): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -654,7 +676,7 @@ Checks whether an OS account has been verified. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means theOS account has been verified; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -693,10 +715,11 @@ try {
 getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<number>>): void
 ```
 
-Obtains information about all activated OS accounts. This API uses an asynchronous callback to return the
-result.
+Obtains information about all activated OS accounts. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AccountManager-getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<int>>): void--><!--Device-AccountManager-getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<int>>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -704,7 +727,7 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is a list of activated OS accounts.Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<number>> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is a list of activated OS accounts.Otherwise, **data** is an error object. |
 
 **Error codes:**
 
@@ -747,13 +770,15 @@ Obtains information about all activated OS accounts. This API uses a promise to 
 
 **Since:** 9
 
+<!--Device-AccountManager-getActivatedOsAccountLocalIds(): Promise<Array<int>>--><!--Device-AccountManager-getActivatedOsAccountLocalIds(): Promise<Array<int>>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the information about all activated OS accounts. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | Promise used to return the information about all activated OS accounts. |
 
 **Error codes:**
 
@@ -788,9 +813,9 @@ getCreatedOsAccountsCount(callback: AsyncCallback<number>): void
 
 Obtains the number of OS accounts created. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
 > [getOsAccountCount](arkts-basicservices-accountmanager-i.md#getosaccountcount-1) instead.
 
 **Since:** 7
@@ -801,13 +826,15 @@ Obtains the number of OS accounts created. This API uses an asynchronous callbac
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getCreatedOsAccountsCount(callback: AsyncCallback<number>): void--><!--Device-AccountManager-getCreatedOsAccountsCount(callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **null** and **data** is the number of created OS accounts.If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the number of created OS accounts.If the operation fails, **err** is an error object. |
 
 **Example**
 
@@ -833,9 +860,9 @@ getCreatedOsAccountsCount(): Promise<number>
 
 Obtains the number of OS accounts created. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
 > [getOsAccountCount](arkts-basicservices-accountmanager-i.md#getosaccountcount-2) instead.
 
 **Since:** 7
@@ -846,13 +873,15 @@ Obtains the number of OS accounts created. This API uses a promise to return the
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getCreatedOsAccountsCount(): Promise<number>--><!--Device-AccountManager-getCreatedOsAccountsCount(): Promise<number>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the number of created OS accounts. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the number of created OS accounts. |
 
 **Example**
 
@@ -874,12 +903,11 @@ accountManager.getCreatedOsAccountsCount().then((count: number) => {
 getCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 ```
 
-Obtains information about the OS account to which the current process belongs. This API uses an asynchronous
-callback to return the result.
+Obtains information about the OS account to which the current process belongs. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
+> **NOTE**  
+>  
+> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available  
 > only to system applications.
 
 **Since:** 9
@@ -890,13 +918,15 @@ callback to return the result.
 - API version 10+: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.GET_LOCAL_ACCOUNTS
 - API version 9: ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void--><!--Device-AccountManager-getCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;OsAccountInfo&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the OS account information obtained.Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<OsAccountInfo> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the OS account information obtained.Otherwise, **data** is an error object. |
 
 **Error codes:**
 
@@ -932,12 +962,11 @@ try {
 getCurrentOsAccount(): Promise<OsAccountInfo>
 ```
 
-Obtains information about the OS account to which the current process belongs. This API uses a promise to
-return the result.
+Obtains information about the OS account to which the current process belongs. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
+> **NOTE**  
+>  
+> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available  
 > only to system applications.
 
 **Since:** 9
@@ -948,13 +977,15 @@ return the result.
 - API version 10+: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.GET_LOCAL_ACCOUNTS
 - API version 9: ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getCurrentOsAccount(): Promise<OsAccountInfo>--><!--Device-AccountManager-getCurrentOsAccount(): Promise<OsAccountInfo>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OsAccountInfo&gt; | Promise used to return the OS account information obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<OsAccountInfo> | Promise used to return the OS account information obtained. |
 
 **Error codes:**
 
@@ -990,10 +1021,10 @@ getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 
 Obtains the ID of a distributed virtual device. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [queryDistributedVirtualDeviceId](arkts-basicservices-accountmanager-i.md#querydistributedvirtualdeviceid-1)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [queryDistributedVirtualDeviceId](arkts-basicservices-accountmanager-i.md#querydistributedvirtualdeviceid-1)  
 > instead.
 
 **Since:** 7
@@ -1004,13 +1035,15 @@ Obtains the ID of a distributed virtual device. This API uses an asynchronous ca
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void--><!--Device-AccountManager-getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the distributed virtualdevice ID obtained. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the distributed virtual device ID obtained. Otherwise, **data** is an error object. |
 
 **Example**
 
@@ -1036,9 +1069,9 @@ getDistributedVirtualDeviceId(): Promise<string>
 
 Obtains the ID of this distributed virtual device. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
 > [queryDistributedVirtualDeviceId](arkts-basicservices-accountmanager-i.md#querydistributedvirtualdeviceid-2) instead.
 
 **Since:** 7
@@ -1049,13 +1082,15 @@ Obtains the ID of this distributed virtual device. This API uses a promise to re
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getDistributedVirtualDeviceId(): Promise<string>--><!--Device-AccountManager-getDistributedVirtualDeviceId(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the distributed virtual device ID obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the distributed virtual device ID obtained. |
 
 **Example**
 
@@ -1081,13 +1116,15 @@ Obtains the ID of the foreground OS account. This API uses a promise to return t
 
 **Since:** 15
 
+<!--Device-AccountManager-getForegroundOsAccountLocalId(): Promise<int>--><!--Device-AccountManager-getForegroundOsAccountLocalId(): Promise<int>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the ID of the foreground OS account. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the ID of the foreground OS account. |
 
 **Error codes:**
 
@@ -1120,12 +1157,11 @@ try {
 getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains all constraints enabled for an OS account. This API uses an asynchronous callback to return the
-result.
+Obtains all constraints enabled for an OS account. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available  
 > only to system applications.
 
 **Since:** 7
@@ -1136,6 +1172,8 @@ result.
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string>>): void--><!--Device-AccountManager-getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string>>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -1143,7 +1181,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **null** and **data** is a list of all[constraints](../../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) enabledfor the OS account. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all [constraints](../../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) enabled for the OS account. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -1173,9 +1211,9 @@ getOsAccountAllConstraints(localId: number): Promise<Array<string>>
 
 Obtains all constraints enabled for an OS account. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available  
 > only to system applications.
 
 **Since:** 7
@@ -1185,6 +1223,8 @@ Obtains all constraints enabled for an OS account. This API uses a promise to re
 **Substitutes:** getOsAccountConstraints(localId:
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountAllConstraints(localId: number): Promise<Array<string>>--><!--Device-AccountManager-getOsAccountAllConstraints(localId: number): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1198,7 +1238,7 @@ Obtains all constraints enabled for an OS account. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return all the[constraints](../../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) enabledfor the OS account. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return all the [constraints](../../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) enabled for the OS account. |
 
 **Example**
 
@@ -1224,12 +1264,11 @@ accountManager.getOsAccountAllConstraints(localId).then((constraints: string[]) 
 getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains all constraints enabled for an OS account. This API uses an asynchronous callback to return the
-result.
+Obtains all constraints enabled for an OS account. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
+> **NOTE**  
+>  
+> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available  
 > only to system applications.
 
 **Since:** 9
@@ -1238,6 +1277,8 @@ result.
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>): void--><!--Device-AccountManager-getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -1245,7 +1286,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is all[constraints](../../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) obtained.Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is all [constraints](../../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) obtained.Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1290,9 +1331,9 @@ getOsAccountConstraints(localId: number): Promise<Array<string>>
 
 Obtains all constraints enabled for an OS account. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
+> **NOTE**  
+>  
+> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available  
 > only to system applications.
 
 **Since:** 9
@@ -1300,6 +1341,8 @@ Obtains all constraints enabled for an OS account. This API uses a promise to re
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountConstraints(localId: number): Promise<Array<string>>--><!--Device-AccountManager-getOsAccountConstraints(localId: number): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1313,7 +1356,7 @@ Obtains all constraints enabled for an OS account. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return all the[constraints](../../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) enabledfor the OS account. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return all the [constraints](../../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) enabled for the OS account. |
 
 **Error codes:**
 
@@ -1354,12 +1397,13 @@ try {
 getOsAccountCount(callback: AsyncCallback<number>): void
 ```
 
-Obtains the number of OS accounts created. This API uses an asynchronous callback to return the result.
-This API can be called only by system applications.
+Obtains the number of OS accounts created. This API uses an asynchronous callback to return the result.This API can be called only by system applications.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountCount(callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountCount(callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1367,7 +1411,7 @@ This API can be called only by system applications.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **null** and **data** is the number of created OS accounts.If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the number of created OS accounts.If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -1404,12 +1448,13 @@ try {
 getOsAccountCount(): Promise<number>
 ```
 
-Obtains the number of OS accounts created. This API uses a promise to return the result.
-This API can be called only by system applications.
+Obtains the number of OS accounts created. This API uses a promise to return the result.This API can be called only by system applications.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountCount(): Promise<int>--><!--Device-AccountManager-getOsAccountCount(): Promise<int>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1417,7 +1462,7 @@ This API can be called only by system applications.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the number of created OS accounts. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the number of created OS accounts. |
 
 **Error codes:**
 
@@ -1451,12 +1496,13 @@ try {
 getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>
 ```
 
-Obtains the domain account information associated with a specified OS account. This API uses a promise to
-return the result.
+Obtains the domain account information associated with a specified OS account. This API uses a promise to return the result.
 
 **Since:** 15
 
 **Required permissions:** ohos.permission.GET_DOMAIN_ACCOUNTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>--><!--Device-AccountManager-getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1470,7 +1516,7 @@ return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DomainAccountInfo&gt; | Promise used to return the domain account information obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DomainAccountInfo> | Promise used to return the domain account information obtained. |
 
 **Error codes:**
 
@@ -1508,10 +1554,11 @@ accountManager.getOsAccountDomainInfo(localId).then((domainAccountInfo: osAccoun
 getOsAccountLocalId(callback: AsyncCallback<number>): void
 ```
 
-Obtains the ID of the OS account to which the current process belongs. This API uses an asynchronous callback
-to return the result.
+Obtains the ID of the OS account to which the current process belongs. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AccountManager-getOsAccountLocalId(callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalId(callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1519,7 +1566,7 @@ to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **null** and **data** is the OS account ID obtained.Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained.Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1555,10 +1602,11 @@ try {
 getOsAccountLocalId(): Promise<number>
 ```
 
-Obtains the ID of the OS account to which the current process belongs. This API uses a promise to return the
-result.
+Obtains the ID of the OS account to which the current process belongs. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AccountManager-getOsAccountLocalId(): Promise<int>--><!--Device-AccountManager-getOsAccountLocalId(): Promise<int>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1566,7 +1614,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the OS account ID obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the OS account ID obtained. |
 
 **Error codes:**
 
@@ -1601,10 +1649,10 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<
 
 Obtains the OS account ID based on the SN. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalIdForSerialNumber](arkts-basicservices-accountmanager-i.md#getosaccountlocalidforserialnumber-1)
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [getOsAccountLocalIdForSerialNumber](arkts-basicservices-accountmanager-i.md#getosaccountlocalidforserialnumber-1)  
 > instead.
 
 **Since:** 8
@@ -1613,6 +1661,8 @@ Obtains the OS account ID based on the SN. This API uses an asynchronous callbac
 
 **Substitutes:** getOsAccountLocalIdForSerialNumber(serialNumber:
 
+<!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -1620,7 +1670,7 @@ Obtains the OS account ID based on the SN. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | serialNumber | number | Yes | Account SN. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the OS account ID obtained.Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the OS account ID obtained.Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -1649,10 +1699,10 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>
 
 Obtains the OS account ID based on the SN. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalIdForSerialNumber](arkts-basicservices-accountmanager-i.md#getosaccountlocalidforserialnumber-2)
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [getOsAccountLocalIdForSerialNumber](arkts-basicservices-accountmanager-i.md#getosaccountlocalidforserialnumber-2)  
 > instead.
 
 **Since:** 8
@@ -1660,6 +1710,8 @@ Obtains the OS account ID based on the SN. This API uses a promise to return the
 **Deprecated since:** 9
 
 **Substitutes:** getOsAccountLocalIdForSerialNumber(serialNumber:
+
+<!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1673,7 +1725,7 @@ Obtains the OS account ID based on the SN. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the OS account ID obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the OS account ID obtained. |
 
 **Example**
 
@@ -1698,13 +1750,13 @@ accountManager.getOsAccountLocalIdBySerialNumber(serialNumber).then((localId: nu
 getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<number>): void
 ```
 
-Obtains the OS account ID based on the domain account information. This API uses an asynchronous callback to
-return the result.
-This API can be called only by system applications.
+Obtains the OS account ID based on the domain account information. This API uses an asynchronous callback to return the result.This API can be called only by system applications.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1712,8 +1764,8 @@ This API can be called only by system applications.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainInfo | DomainAccountInfo | Yes | Domain account information. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **null** and **data** is the ID of the OS account associated withthe domain account. Otherwise, **err** is an error object. |
+| domainInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i.md) | Yes | Domain account information. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the ID of the OS account associated with the domain account. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1753,13 +1805,13 @@ try {
 getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo): Promise<number>
 ```
 
-Obtains the OS account ID based on the domain account information. This API uses a promise to return the
-result.
-This API can be called only by system applications.
+Obtains the OS account ID based on the domain account information. This API uses a promise to return the result.This API can be called only by system applications.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo): Promise<int>--><!--Device-AccountManager-getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo): Promise<int>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1767,13 +1819,13 @@ This API can be called only by system applications.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainInfo | DomainAccountInfo | Yes | Domain account information. |
+| domainInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i.md) | Yes | Domain account information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the ID of the OS account associated with the domain account. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the ID of the OS account associated with the domain account. |
 
 **Error codes:**
 
@@ -1815,6 +1867,8 @@ Obtains the OS account ID based on the SN. This API uses an asynchronous callbac
 
 **Since:** 9
 
+<!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long, callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long, callback: AsyncCallback<int>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -1822,7 +1876,7 @@ Obtains the OS account ID based on the SN. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | serialNumber | number | Yes | Account SN. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the OS account ID obtained.Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the OS account ID obtained.Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1868,6 +1922,8 @@ Obtains the OS account ID based on the SN. This API uses a promise to return the
 
 **Since:** 9
 
+<!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long): Promise<int>--><!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long): Promise<int>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -1880,7 +1936,7 @@ Obtains the OS account ID based on the SN. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the OS account ID obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the OS account ID obtained. |
 
 **Error codes:**
 
@@ -1920,10 +1976,11 @@ try {
 getOsAccountLocalIdForUid(uid: number, callback: AsyncCallback<number>): void
 ```
 
-Obtains the OS account ID based on the process UID. This API uses an asynchronous callback to return the
-result.
+Obtains the OS account ID based on the process UID. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int, callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1932,7 +1989,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | number | Yes | Process UID. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **null** and **data** is the OS account ID obtained.Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained.Otherwise, **data** is an error object. |
 
 **Error codes:**
 
@@ -1977,6 +2034,8 @@ Obtains the OS account ID based on the process UID. This API uses a promise to r
 
 **Since:** 9
 
+<!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int): Promise<int>--><!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int): Promise<int>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -1989,7 +2048,7 @@ Obtains the OS account ID based on the process UID. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the OS account ID obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the OS account ID obtained. |
 
 **Error codes:**
 
@@ -2031,6 +2090,8 @@ getOsAccountLocalIdForUidSync(uid: number): number
 Obtains the OS account ID based on the process UID. The API returns the result synchronously.
 
 **Since:** 10
+
+<!--Device-AccountManager-getOsAccountLocalIdForUidSync(uid: int): int--><!--Device-AccountManager-getOsAccountLocalIdForUidSync(uid: int): int-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -2079,13 +2140,12 @@ try {
 getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<number>): void
 ```
 
-Obtains the OS account ID based on the domain account information. This API uses an asynchronous callback to
-return the result.
+Obtains the OS account ID based on the domain account information. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalIdForDomain](arkts-basicservices-accountmanager-i.md#getosaccountlocalidfordomain-1)
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [getOsAccountLocalIdForDomain](arkts-basicservices-accountmanager-i.md#getosaccountlocalidfordomain-1)  
 > instead.
 
 **Since:** 8
@@ -2096,14 +2156,16 @@ return the result.
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainInfo | DomainAccountInfo | Yes | Domain account information. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **null** and **data** is the OS account ID obtained.Otherwise, **err** is an error object. |
+| domainInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i.md) | Yes | Domain account information. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained.Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -2128,13 +2190,12 @@ accountManager.getOsAccountLocalIdFromDomain(domainInfo, (err: BusinessError, lo
 getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>
 ```
 
-Obtains the OS account ID based on the domain account information. This API uses a promise to return the
-result.
+Obtains the OS account ID based on the domain account information. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalIdForDomain](arkts-basicservices-accountmanager-i.md#getosaccountlocalidfordomain-2)
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [getOsAccountLocalIdForDomain](arkts-basicservices-accountmanager-i.md#getosaccountlocalidfordomain-2)  
 > instead.
 
 **Since:** 8
@@ -2145,19 +2206,21 @@ result.
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainInfo | DomainAccountInfo | Yes | Domain account information. |
+| domainInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i.md) | Yes | Domain account information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the ID of the OS account associatedwith the domain account. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the ID of the OS account associated with the domain account. |
 
 **Example**
 
@@ -2180,13 +2243,12 @@ accountManager.getOsAccountLocalIdFromDomain(domainInfo).then((localId: number) 
 getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void
 ```
 
-Obtains the ID of the OS account to which the current process belongs. This API uses an asynchronous callback
-to return the result.
+Obtains the ID of the OS account to which the current process belongs. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalId](arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [getOsAccountLocalId](arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)  
 > instead.
 
 **Since:** 7
@@ -2195,13 +2257,15 @@ to return the result.
 
 **Substitutes:** getOsAccountLocalId(callback:
 
+<!--Device-AccountManager-getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **null** and **data** is the OS account ID obtained.Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained.Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -2225,12 +2289,11 @@ accountManager.getOsAccountLocalIdFromProcess((err: BusinessError, localId: numb
 getOsAccountLocalIdFromProcess(): Promise<number>
 ```
 
-Obtains the ID of the OS account to which the current process belongs. This API uses a promise to return the
-result.
+Obtains the ID of the OS account to which the current process belongs. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
 > [getOsAccountLocalId](arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2) instead.
 
 **Since:** 7
@@ -2239,13 +2302,15 @@ result.
 
 **Substitutes:** [getOsAccountLocalId()](arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2)
 
+<!--Device-AccountManager-getOsAccountLocalIdFromProcess(): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdFromProcess(): Promise<number>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the OS account ID obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the OS account ID obtained. |
 
 **Example**
 
@@ -2267,13 +2332,12 @@ accountManager.getOsAccountLocalIdFromProcess().then((localId: number) => {
 getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void
 ```
 
-Obtains the OS account ID based on the process UID. This API uses an asynchronous callback to return the
-result.
+Obtains the OS account ID based on the process UID. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalIdForUid](arkts-basicservices-accountmanager-i.md#getosaccountlocalidforuid-1)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [getOsAccountLocalIdForUid](arkts-basicservices-accountmanager-i.md#getosaccountlocalidforuid-1)  
 > instead.
 
 **Since:** 7
@@ -2282,6 +2346,8 @@ result.
 
 **Substitutes:** getOsAccountLocalIdForUid(uid:
 
+<!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -2289,7 +2355,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | number | Yes | Process UID. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **null** and **data** is the OS account ID obtained.Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained.Otherwise, **data** is an error object. |
 
 **Example**
 
@@ -2318,9 +2384,9 @@ getOsAccountLocalIdFromUid(uid: number): Promise<number>
 
 Obtains the OS account ID based on the process UID. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
 > [getOsAccountLocalIdForUid](arkts-basicservices-accountmanager-i.md#getosaccountlocalidforuid-2) instead.
 
 **Since:** 7
@@ -2328,6 +2394,8 @@ Obtains the OS account ID based on the process UID. This API uses a promise to r
 **Deprecated since:** 9
 
 **Substitutes:** getOsAccountLocalIdForUid(uid:
+
+<!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number): Promise<number>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -2341,7 +2409,7 @@ Obtains the OS account ID based on the process UID. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the OS account ID obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the OS account ID obtained. |
 
 **Example**
 
@@ -2366,8 +2434,7 @@ accountManager.getOsAccountLocalIdFromUid(uid).then((localId: number) => {
 getOsAccountLocalIds(): Promise<number[]>
 ```
 
-Obtains the local IDs of all non-system-level OS accounts. Non-system-level OS accounts are visible to
-users and are usually used for operations such as login. This API uses a promise to return the result.
+Obtains the local IDs of all non-system-level OS accounts. Non-system-level OS accounts are visible to users and are usually used for operations such as login. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -2375,13 +2442,15 @@ users and are usually used for operations such as login. This API uses a promise
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AccountManager-getOsAccountLocalIds(): Promise<int[]>--><!--Device-AccountManager-getOsAccountLocalIds(): Promise<int[]>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number[]&gt; | Promise used to return the local IDs of all non-system-level OS accounts. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number[]> | Promise used to return the local IDs of all non-system-level OS accounts. |
 
 **Error codes:**
 
@@ -2419,13 +2488,15 @@ Obtains the name of the OS account of the caller. This API uses a promise to ret
 
 **Since:** 12
 
+<!--Device-AccountManager-getOsAccountName(): Promise<string>--><!--Device-AccountManager-getOsAccountName(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the OS account name obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the OS account name obtained. |
 
 **Error codes:**
 
@@ -2466,6 +2537,8 @@ Obtains the name of an OS account based on its local ID. This API uses a promise
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AccountManager-getOsAccountNameByLocalId(localId: int): Promise<string>--><!--Device-AccountManager-getOsAccountNameByLocalId(localId: int): Promise<string>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -2478,7 +2551,7 @@ Obtains the name of an OS account based on its local ID. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the name of the target OS account. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the name of the target OS account. |
 
 **Error codes:**
 
@@ -2514,10 +2587,11 @@ try {
 getOsAccountType(callback: AsyncCallback<OsAccountType>): void
 ```
 
-Obtains the type of the account to which the current process belongs. This API uses an asynchronous callback to
-return the result.
+Obtains the type of the account to which the current process belongs. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AccountManager-getOsAccountType(callback: AsyncCallback<OsAccountType>): void--><!--Device-AccountManager-getOsAccountType(callback: AsyncCallback<OsAccountType>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -2525,7 +2599,7 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;OsAccountType&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the OS account type obtained.Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<OsAccountType> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the OS account type obtained.Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2561,10 +2635,11 @@ try {
 getOsAccountType(): Promise<OsAccountType>
 ```
 
-Obtains the type of the account to which the current process belongs. This API uses a promise to return the
-result.
+Obtains the type of the account to which the current process belongs. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AccountManager-getOsAccountType(): Promise<OsAccountType>--><!--Device-AccountManager-getOsAccountType(): Promise<OsAccountType>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -2572,7 +2647,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OsAccountType&gt; | Promise used to return the OS account type obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<OsAccountType> | Promise used to return the OS account type obtained. |
 
 **Error codes:**
 
@@ -2605,13 +2680,12 @@ try {
 getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void
 ```
 
-Obtains the type of the account to which the current process belongs. This API uses an asynchronous callback to
-return the result.
+Obtains the type of the account to which the current process belongs. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountType](arkts-basicservices-accountmanager-i.md#getosaccounttype-1)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [getOsAccountType](arkts-basicservices-accountmanager-i.md#getosaccounttype-1)  
 > instead.
 
 **Since:** 7
@@ -2620,13 +2694,15 @@ return the result.
 
 **Substitutes:** getOsAccountType(callback:
 
+<!--Device-AccountManager-getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void--><!--Device-AccountManager-getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;OsAccountType&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the OS account type obtained.Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<OsAccountType> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the OS account type obtained.Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -2650,12 +2726,11 @@ accountManager.getOsAccountTypeFromProcess((err: BusinessError, accountType: osA
 getOsAccountTypeFromProcess(): Promise<OsAccountType>
 ```
 
-Obtains the type of the account to which the current process belongs. This API uses a promise to return the
-result.
+Obtains the type of the account to which the current process belongs. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
 > [getOsAccountType](arkts-basicservices-accountmanager-i.md#getosaccounttype-2) instead.
 
 **Since:** 7
@@ -2664,13 +2739,15 @@ result.
 
 **Substitutes:** [getOsAccountType()](arkts-basicservices-accountmanager-i.md#getosaccounttype-2)
 
+<!--Device-AccountManager-getOsAccountTypeFromProcess(): Promise<OsAccountType>--><!--Device-AccountManager-getOsAccountTypeFromProcess(): Promise<OsAccountType>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OsAccountType&gt; | Promise used to return the OS account type obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<OsAccountType> | Promise used to return the OS account type obtained. |
 
 **Example**
 
@@ -2692,13 +2769,12 @@ accountManager.getOsAccountTypeFromProcess().then((accountType: osAccount.OsAcco
 getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void
 ```
 
-Obtains the SN of an OS account based on the account ID. This API uses an asynchronous callback to return the
-result.
+Obtains the SN of an OS account based on the account ID. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getSerialNumberForOsAccountLocalId](arkts-basicservices-accountmanager-i.md#getserialnumberforosaccountlocalid-1)
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [getSerialNumberForOsAccountLocalId](arkts-basicservices-accountmanager-i.md#getserialnumberforosaccountlocalid-1)  
 > instead.
 
 **Since:** 8
@@ -2707,6 +2783,8 @@ result.
 
 **Substitutes:** getSerialNumberForOsAccountLocalId(localId:
 
+<!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -2714,7 +2792,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the SN obtained.Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the SN obtained.Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -2744,10 +2822,10 @@ getSerialNumberByOsAccountLocalId(localId: number): Promise<number>
 
 Obtains the SN of an OS account based on the account ID. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getSerialNumberForOsAccountLocalId](arkts-basicservices-accountmanager-i.md#getserialnumberforosaccountlocalid-2)
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [getSerialNumberForOsAccountLocalId](arkts-basicservices-accountmanager-i.md#getserialnumberforosaccountlocalid-2)  
 > instead.
 
 **Since:** 8
@@ -2755,6 +2833,8 @@ Obtains the SN of an OS account based on the account ID. This API uses a promise
 **Deprecated since:** 9
 
 **Substitutes:** getSerialNumberForOsAccountLocalId(localId:
+
+<!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number): Promise<number>--><!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number): Promise<number>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -2768,7 +2848,7 @@ Obtains the SN of an OS account based on the account ID. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the SN obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the SN obtained. |
 
 **Example**
 
@@ -2794,10 +2874,11 @@ accountManager.getSerialNumberByOsAccountLocalId(localId).then((serialNumber: nu
 getSerialNumberForOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void
 ```
 
-Obtains the SN of an OS account based on the account ID. This API uses an asynchronous callback to return the
-result.
+Obtains the SN of an OS account based on the account ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int, callback: AsyncCallback<long>): void--><!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int, callback: AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -2806,7 +2887,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the SN obtained.Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the SN obtained.Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2852,6 +2933,8 @@ Obtains the SN of an OS account based on the account ID. This API uses a promise
 
 **Since:** 9
 
+<!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int): Promise<long>--><!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int): Promise<long>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -2864,7 +2947,7 @@ Obtains the SN of an OS account based on the account ID. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the SN obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the SN obtained. |
 
 **Error codes:**
 
@@ -2904,13 +2987,12 @@ try {
 isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether multiple OS accounts are supported. This API uses an asynchronous callback to return the
-result.
+Checks whether multiple OS accounts are supported. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [checkMultiOsAccountEnabled](arkts-basicservices-accountmanager-i.md#checkmultiosaccountenabled-1)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [checkMultiOsAccountEnabled](arkts-basicservices-accountmanager-i.md#checkmultiosaccountenabled-1)  
 > instead.
 
 **Since:** 7
@@ -2919,13 +3001,15 @@ result.
 
 **Substitutes:** checkMultiOsAccountEnabled(callback:
 
+<!--Device-AccountManager-isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result.The value **true** means multiple OS accounts are supported;the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result.The value **true** means multiple OS accounts are supported;the value **false** means the opposite. |
 
 **Example**
 
@@ -2951,9 +3035,9 @@ isMultiOsAccountEnable(): Promise<boolean>
 
 Checks whether multiple OS accounts are supported. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
 > [checkMultiOsAccountEnabled](arkts-basicservices-accountmanager-i.md#checkmultiosaccountenabled-2) instead.
 
 **Since:** 7
@@ -2962,13 +3046,15 @@ Checks whether multiple OS accounts are supported. This API uses a promise to re
 
 **Substitutes:** [checkMultiOsAccountEnabled()](arkts-basicservices-accountmanager-i.md#checkmultiosaccountenabled-2)
 
+<!--Device-AccountManager-isMultiOsAccountEnable(): Promise<boolean>--><!--Device-AccountManager-isMultiOsAccountEnable(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** meansmultiple OS accounts are supported; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means multiple OS accounts are supported; the value **false** means the opposite. |
 
 **Example**
 
@@ -2992,9 +3078,9 @@ isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void
 
 Checks whether an OS account is activated. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available  
 > only to system applications.
 
 **Since:** 7
@@ -3005,6 +3091,8 @@ Checks whether an OS account is activated. This API uses an asynchronous callbac
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -3012,7 +3100,7 @@ Checks whether an OS account is activated. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value**true** means the account is activated; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means the account is activated; the value **false** means the opposite. |
 
 **Example**
 
@@ -3042,9 +3130,9 @@ isOsAccountActived(localId: number): Promise<boolean>
 
 Checks whether an OS account is activated. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available  
 > only to system applications.
 
 **Since:** 7
@@ -3054,6 +3142,8 @@ Checks whether an OS account is activated. This API uses a promise to return the
 **Substitutes:** checkOsAccountActivated(localId:
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-isOsAccountActived(localId: number): Promise<boolean>--><!--Device-AccountManager-isOsAccountActived(localId: number): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -3067,7 +3157,7 @@ Checks whether an OS account is activated. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** meansthe account is activated; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means the account is activated; the value **false** means the opposite. |
 
 **Example**
 
@@ -3093,12 +3183,11 @@ accountManager.isOsAccountActived(localId).then((isActived: boolean) => {
 isOsAccountConstraintEnable(localId: number, constraint: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the specified constraint is enabled for an OS account. This API uses an asynchronous callback
-to return the result.
+Checks whether the specified constraint is enabled for an OS account. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available  
 > only to system applications.
 
 **Since:** 7
@@ -3109,6 +3198,8 @@ to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-isOsAccountConstraintEnable(localId: number, constraint: string, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isOsAccountConstraintEnable(localId: number, constraint: string, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -3117,7 +3208,7 @@ to return the result.
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
 | constraint | string | Yes | [Constraint](../../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) to check. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true**means the specified constraint is enabled; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means the specified constraint is enabled; the value **false** means the opposite. |
 
 **Example**
 
@@ -3146,12 +3237,11 @@ accountManager.isOsAccountConstraintEnable(localId, constraint, (err: BusinessEr
 isOsAccountConstraintEnable(localId: number, constraint: string): Promise<boolean>
 ```
 
-Checks whether the specified constraint is enabled for an OS account. This API uses a promise to return the
-result.
+Checks whether the specified constraint is enabled for an OS account. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available  
 > only to system applications.
 
 **Since:** 7
@@ -3161,6 +3251,8 @@ result.
 **Substitutes:** checkOsAccountConstraintEnabled(localId:
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-isOsAccountConstraintEnable(localId: number, constraint: string): Promise<boolean>--><!--Device-AccountManager-isOsAccountConstraintEnable(localId: number, constraint: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -3175,7 +3267,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** meansthe specified constraint is enabled; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means the specified constraint is enabled; the value **false** means the opposite. |
 
 **Example**
 
@@ -3206,6 +3298,8 @@ Checks whether a constraint is enabled for this OS account. This API uses a prom
 
 **Since:** 11
 
+<!--Device-AccountManager-isOsAccountConstraintEnabled(constraint: string): Promise<boolean>--><!--Device-AccountManager-isOsAccountConstraintEnabled(constraint: string): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -3218,7 +3312,7 @@ Checks whether a constraint is enabled for this OS account. This API uses a prom
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** meansthe specified constraint is enabled; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means the specified constraint is enabled; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -3259,13 +3353,15 @@ Checks whether this OS account is unlocked. This API uses a promise to return th
 
 **Since:** 11
 
+<!--Device-AccountManager-isOsAccountUnlocked(): Promise<boolean>--><!--Device-AccountManager-isOsAccountUnlocked(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** meansthe OS account has been verified; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -3300,10 +3396,10 @@ isOsAccountVerified(callback: AsyncCallback<boolean>): void
 
 Checks whether an OS account has been verified. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [checkOsAccountVerified](arkts-basicservices-accountmanager-i.md#checkosaccountverified-1)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [checkOsAccountVerified](arkts-basicservices-accountmanager-i.md#checkosaccountverified-1)  
 > instead.
 
 **Since:** 7
@@ -3314,13 +3410,15 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-isOsAccountVerified(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isOsAccountVerified(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value**true** means the OS account has been verified; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
 
 **Example**
 
@@ -3346,9 +3444,9 @@ isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 
 Checks whether an OS account has been verified. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available  
 > only to system applications.
 
 **Since:** 7
@@ -3359,6 +3457,8 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -3366,7 +3466,7 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value**true** means the OS account has been verified; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
 
 **Example**
 
@@ -3394,9 +3494,9 @@ isOsAccountVerified(localId?: number): Promise<boolean>
 
 Checks whether an OS account has been verified. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available  
 > only to system applications.
 
 **Since:** 7
@@ -3406,6 +3506,8 @@ Checks whether an OS account has been verified. This API uses a promise to retur
 **Substitutes:** checkOsAccountVerified(localId:
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-isOsAccountVerified(localId?: number): Promise<boolean>--><!--Device-AccountManager-isOsAccountVerified(localId?: number): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -3419,7 +3521,7 @@ Checks whether an OS account has been verified. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means theOS account has been verified; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
 
 **Example**
 
@@ -3441,13 +3543,12 @@ accountManager.isOsAccountVerified().then((isVerified: boolean) => {
 isTestOsAccount(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether this OS account is a test account. This API uses an asynchronous callback to return the
-result.
+Checks whether this OS account is a test account. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [checkOsAccountTestable](arkts-basicservices-accountmanager-i.md#checkosaccounttestable-1)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [checkOsAccountTestable](arkts-basicservices-accountmanager-i.md#checkosaccounttestable-1)  
 > instead.
 
 **Since:** 7
@@ -3456,13 +3557,15 @@ result.
 
 **Substitutes:** checkOsAccountTestable(callback:
 
+<!--Device-AccountManager-isTestOsAccount(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isTestOsAccount(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value**true** means the account is a test account; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means the account is a test account; the value **false** means the opposite. |
 
 **Example**
 
@@ -3488,9 +3591,9 @@ isTestOsAccount(): Promise<boolean>
 
 Checks whether this OS account is a test account. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
 > [checkOsAccountTestable](arkts-basicservices-accountmanager-i.md#checkosaccounttestable-2) instead.
 
 **Since:** 7
@@ -3499,13 +3602,15 @@ Checks whether this OS account is a test account. This API uses a promise to ret
 
 **Substitutes:** [checkOsAccountTestable()](arkts-basicservices-accountmanager-i.md#checkosaccounttestable-2)
 
+<!--Device-AccountManager-isTestOsAccount(): Promise<boolean>--><!--Device-AccountManager-isTestOsAccount(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** meansthe account is a test account; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means the account is a test account; the value **false** means the opposite. |
 
 **Example**
 
@@ -3527,13 +3632,12 @@ let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
 queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void
 ```
 
-Obtains information about all activated OS accounts. This API uses an asynchronous callback to return the
-result.
+Obtains information about all activated OS accounts. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getActivatedOsAccountLocalIds](arkts-basicservices-accountmanager-i.md#getactivatedosaccountlocalids-1)
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [getActivatedOsAccountLocalIds](arkts-basicservices-accountmanager-i.md#getactivatedosaccountlocalids-1)  
 > instead.
 
 **Since:** 8
@@ -3542,13 +3646,15 @@ result.
 
 **Substitutes:** getActivatedOsAccountLocalIds(callback:
 
+<!--Device-AccountManager-queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void--><!--Device-AccountManager-queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is a list of activated OS accounts.Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<number>> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is a list of activated OS accounts.Otherwise, **data** is an error object. |
 
 **Example**
 
@@ -3577,9 +3683,9 @@ queryActivatedOsAccountIds(): Promise<Array<number>>
 
 Obtains information about all activated OS accounts. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
 > [getActivatedOsAccountLocalIds](arkts-basicservices-accountmanager-i.md#getactivatedosaccountlocalids-2) instead.
 
 **Since:** 8
@@ -3588,13 +3694,15 @@ Obtains information about all activated OS accounts. This API uses a promise to 
 
 **Substitutes:** [getActivatedOsAccountLocalIds()](arkts-basicservices-accountmanager-i.md#getactivatedosaccountlocalids-2)
 
+<!--Device-AccountManager-queryActivatedOsAccountIds(): Promise<Array<number>>--><!--Device-AccountManager-queryActivatedOsAccountIds(): Promise<Array<number>>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the information about all activated OS accounts. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | Promise used to return the information about all activated OS accounts. |
 
 **Example**
 
@@ -3616,12 +3724,11 @@ accountManager.queryActivatedOsAccountIds().then((idArray: number[]) => {
 queryCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 ```
 
-Obtains information about the OS account to which the current process belongs. This API uses an asynchronous
-callback to return the result.
+Obtains information about the OS account to which the current process belongs. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available  
 > only to system applications.
 
 **Since:** 7
@@ -3632,13 +3739,15 @@ callback to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-queryCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void--><!--Device-AccountManager-queryCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;OsAccountInfo&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the OS account information obtained.Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<OsAccountInfo> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the OS account information obtained.Otherwise, **data** is an error object. |
 
 **Example**
 
@@ -3662,12 +3771,11 @@ accountManager.queryCurrentOsAccount((err: BusinessError, curAccountInfo: osAcco
 queryCurrentOsAccount(): Promise<OsAccountInfo>
 ```
 
-Obtains information about the OS account to which the current process belongs. This API uses a promise to
-return the result.
+Obtains information about the OS account to which the current process belongs. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available  
 > only to system applications.
 
 **Since:** 7
@@ -3678,13 +3786,15 @@ return the result.
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-queryCurrentOsAccount(): Promise<OsAccountInfo>--><!--Device-AccountManager-queryCurrentOsAccount(): Promise<OsAccountInfo>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OsAccountInfo&gt; | Promise used to return the OS account information obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<OsAccountInfo> | Promise used to return the OS account information obtained. |
 
 **Example**
 
@@ -3712,13 +3822,15 @@ Queries the ID of a distributed virtual device. This API uses an asynchronous ca
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-queryDistributedVirtualDeviceId(callback: AsyncCallback<string>): void--><!--Device-AccountManager-queryDistributedVirtualDeviceId(callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the distributed virtual device IDobtained. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the distributed virtual device ID obtained. Otherwise, **data** is an error object. |
 
 **Error codes:**
 
@@ -3761,13 +3873,15 @@ Queries the ID of this distributed virtual device. This API uses a promise to re
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-queryDistributedVirtualDeviceId(): Promise<string>--><!--Device-AccountManager-queryDistributedVirtualDeviceId(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the distributed virtual device ID obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the distributed virtual device ID obtained. |
 
 **Error codes:**
 

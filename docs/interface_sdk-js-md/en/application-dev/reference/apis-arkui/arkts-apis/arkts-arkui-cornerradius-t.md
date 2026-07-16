@@ -12,6 +12,8 @@ Sets the semi-axis lengths for the x-axis and y-axis of the rounded corners.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-unnamed-export type CornerRadius = Corners<Vector2>--><!--Device-unnamed-export type CornerRadius = Corners<Vector2>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** Corners<Vector2>

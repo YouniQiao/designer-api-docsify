@@ -2,19 +2,21 @@
 
 A constructor used to create a **DigitIndicator** object. It inherits from [Indicator](arkts-arkui-indicator-c.md).
 
-> **NOTE**
->
-> When pages are turned by group, the child nodes displayed in the digit-style navigation indicator do not count
-> placeholder nodes.
->
-> The maximum value of [maxFontScale](TextAttribute#maxFontScale) for the digit-style navigation indicator is
-> **2**.
->
+> **NOTE**  
+>  
+> When pages are turned by group, the child nodes displayed in the digit-style navigation indicator do not count  
+> placeholder nodes.  
+>  
+> The maximum value of [maxFontScale](TextAttribute#maxFontScale) for the digit-style navigation indicator is  
+> **2**.  
+>  
 > The mirror display of the page number depends on the RTL status of the system.
 
 **Inheritance/Implementation:** DigitIndicator extends [Indicator<DigitIndicator>](Indicator<DigitIndicator>)
 
 **Since:** 10
+
+<!--Device-unnamed-declare class DigitIndicator extends Indicator<DigitIndicator>--><!--Device-unnamed-declare class DigitIndicator extends Indicator<DigitIndicator>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,14 +28,14 @@ constructor()
 
 A constructor used to create a **DotIndicator** object.
 
-> **NOTE**
->
-> - When pressed, the navigation indicator is zoomed in to 1.33 times. To account for this, there is a certain
-> distance between the navigation indicator's visible boundary and its actual boundary in the non-pressed state.
-> The distance increases with the value of **itemWidth**, **itemHeight**, **selectedItemWidth**, and
-> **selectedItemHeight**.
->
-> - If there are too many pages and dot-style indicators exceed the page, you are advised to use the
+> **NOTE**  
+>  
+> - When pressed, the navigation indicator is zoomed in to 1.33 times. To account for this, there is a certain  
+> distance between the navigation indicator's visible boundary and its actual boundary in the non-pressed state.  
+> The distance increases with the value of **itemWidth**, **itemHeight**, **selectedItemWidth**, and  
+> **selectedItemHeight**.  
+>  
+> - If there are too many pages and dot-style indicators exceed the page, you are advised to use the  
 > **maxDisplayCount** parameter to set the number of dots to be displayed.
 
 **Since:** 10
@@ -43,6 +45,8 @@ A constructor used to create a **DotIndicator** object.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-DigitIndicator-constructor()--><!--Device-DigitIndicator-constructor()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,19 +66,21 @@ Sets the font style of the digit-style navigation indicator.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-DigitIndicator-digitFont(value: Font): DigitIndicator--><!--Device-DigitIndicator-digitFont(value: Font): DigitIndicator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Font | Yes | Font style of the digit-style navigation indicator.<br>Only the **size** and **weight**parameters in **Font** are adjustable. Setting **family** and **style** has no effect.<br>Default value:<br>{size:?14,?weight:?FontWeight.Normal?} |
+| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | Yes | Font style of the digit-style navigation indicator.<br>Only the **size** and **weight** parameters in **Font** are adjustable. Setting **family** and **style** has no effect.<br>Default value:<br>{size:?14,?weight:?FontWeight.Normal?} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DigitIndicator | Current digit-style navigation indicator. |
+| [DigitIndicator](arkts-arkui-digitindicator-c.md) | Current digit-style navigation indicator. |
 
 ## fontColor
 
@@ -92,19 +98,21 @@ Sets the font color of the digit-style navigation indicator.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-DigitIndicator-fontColor(value: ResourceColor): DigitIndicator--><!--Device-DigitIndicator-fontColor(value: ResourceColor): DigitIndicator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Font color of the digit-style navigation indicator.<br>Default value:**'#ff182431'** |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the digit-style navigation indicator.<br>Default value:**'#ff182431'** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DigitIndicator | Current digit-style navigation indicator. |
+| [DigitIndicator](arkts-arkui-digitindicator-c.md) | Current digit-style navigation indicator. |
 
 ## selectedDigitFont
 
@@ -122,19 +130,21 @@ Sets the font style of the selected digit-style navigation indicator.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-DigitIndicator-selectedDigitFont(value: Font): DigitIndicator--><!--Device-DigitIndicator-selectedDigitFont(value: Font): DigitIndicator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Font | Yes | Font style of the selected digit-style navigation indicator.<br>Default value:<br>{?size:?14,?weight:?FontWeight.Normal?} |
+| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | Yes | Font style of the selected digit-style navigation indicator.<br>Default value:<br>{?size:?14,?weight:?FontWeight.Normal?} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DigitIndicator | Current digit-style navigation indicator. |
+| [DigitIndicator](arkts-arkui-digitindicator-c.md) | Current digit-style navigation indicator. |
 
 ## selectedFontColor
 
@@ -152,17 +162,19 @@ Sets the font color of the selected digit-style navigation indicator.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-DigitIndicator-selectedFontColor(value: ResourceColor): DigitIndicator--><!--Device-DigitIndicator-selectedFontColor(value: ResourceColor): DigitIndicator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Font color of the selected digit-style navigation indicator.<br>Default value:**'#ff182431'** |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the selected digit-style navigation indicator.<br>Default value:**'#ff182431'** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DigitIndicator | Current digit-style navigation indicator. |
+| [DigitIndicator](arkts-arkui-digitindicator-c.md) | Current digit-style navigation indicator. |
 

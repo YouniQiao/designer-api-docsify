@@ -4,6 +4,8 @@ The FastBuffer object is a method of handling buffers dedicated to binary data.
 
 **Since:** 20
 
+<!--Device-fastbuffer-class FastBuffer--><!--Device-fastbuffer-class FastBuffer-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -18,12 +20,13 @@ import { fastbuffer } from '@kit.ArkTS';
 compare(target: FastBuffer | Uint8Array, targetStart?: number, targetEnd?: number, sourceStart?: number, sourceEnd?: number): -1 | 0 | 1
 ```
 
-Compares buf with target and returns a number indicating whether buf comes before, after,
-or is the same as target in sort order. Comparison is based on the actual sequence of bytes in each FastBuffer.
+Compares buf with target and returns a number indicating whether buf comes before, after,or is the same as target in sort order. Comparison is based on the actual sequence of bytes in each FastBuffer.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-compare(target: FastBuffer | Uint8Array, targetStart?: number, targetEnd?: number, sourceStart?: number, sourceEnd?: number): -1 | 0 | 1--><!--Device-FastBuffer-compare(target: FastBuffer | Uint8Array, targetStart?: number, targetEnd?: number, sourceStart?: number, sourceEnd?: number): -1 | 0 | 1-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -41,7 +44,7 @@ or is the same as target in sort order. Comparison is based on the actual sequen
 
 | Type | Description |
 | --- | --- |
-| -1 | 0 is returned if target is the same as buf1 is returned if target should come before buf when sorted.-1 is returned if target should come after buf when sorted. |
+| -1 | 0 is returned if target is the same as buf1 is returned if target should come before buf when sorted.  -1 is returned if target should come after buf when sorted. |
 
 **Error codes:**
 
@@ -73,12 +76,13 @@ console.info(buf1.compare(buf2, 5, 6, 5).toString());
 copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number, sourceEnd?: number): number
 ```
 
-Copies data from a region of buf to a region in target, even if the target memory region overlaps with buf.
-If sourceEnd is greater than the length of the target, the length of the target shall prevail, and the extra part will not be overwritten.
+Copies data from a region of buf to a region in target, even if the target memory region overlaps with buf.If sourceEnd is greater than the length of the target, the length of the target shall prevail, and the extra part will not be overwritten.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number, sourceEnd?: number): number--><!--Device-FastBuffer-copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number, sourceEnd?: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -137,13 +141,21 @@ Creates and returns an iterator of [index, byte] pairs from the contents of buf.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-entries(): IterableIterator<[
+            number,
+            number
+        ]>--><!--Device-FastBuffer-entries(): IterableIterator<[
+            number,
+            number
+        ]>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;[            number,            number        ]&gt; | @syscap SystemCapability.Utils.Lang@crossplatform@atomicservice |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<[             number,             number         ]> | @syscap SystemCapability.Utils.Lang@crossplatform@atomicservice |
 
 **Example**
 
@@ -179,6 +191,8 @@ Returns true if both buf and otherBuffer have exactly the same bytes, false othe
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-equals(otherBuffer: Uint8Array | FastBuffer): boolean--><!--Device-FastBuffer-equals(otherBuffer: Uint8Array | FastBuffer): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -228,6 +242,8 @@ Fills buf with the specified value. If the offset and end are not given, the ent
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: number, encoding?: BufferEncoding): FastBuffer--><!--Device-FastBuffer-fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: number, encoding?: BufferEncoding): FastBuffer-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -237,13 +253,13 @@ Fills buf with the specified value. If the offset and end are not given, the ent
 | value | string \| FastBuffer \| Uint8Array \| number | Yes | The value to fill into the buffer |
 | offset | number | No | offset [offset = 0] Number of bytes to skip before starting to fill buf |
 | end | number | No | end [end = buf.length] Where to stop filling buf (not inclusive) |
-| encoding | BufferEncoding | No | encoding [encoding='utf8'] The encoding for value if value is a string |
+| encoding | [BufferEncoding](arkts-arkts-bufferencoding-t.md) | No | encoding [encoding='utf8'] The encoding for value if value is a string |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| FastBuffer | A reference to buf |
+| [FastBuffer](arkts-arkts-fastbuffer-c.md) | A reference to buf |
 
 **Error codes:**
 
@@ -275,6 +291,8 @@ Returns true if value was found in buf, false otherwise
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-includes(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): boolean--><!--Device-FastBuffer-includes(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -283,7 +301,7 @@ Returns true if value was found in buf, false otherwise
 | --- | --- | --- | --- |
 | value | string \| number \| FastBuffer \| Uint8Array | Yes | The value to search for in the buffer |
 | byteOffset | number | No | byteOffset [byteOffset = 0] Where to begin searching in buf. If negative, then offset is calculated from the end of buf |
-| encoding | BufferEncoding | No | encoding [encoding='utf8'] If value is a string, this is its encoding |
+| encoding | [BufferEncoding](arkts-arkts-bufferencoding-t.md) | No | encoding [encoding='utf8'] If value is a string, this is its encoding |
 
 **Return value:**
 
@@ -316,6 +334,8 @@ The index of the first occurrence of value in buf
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number--><!--Device-FastBuffer-indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -324,7 +344,7 @@ The index of the first occurrence of value in buf
 | --- | --- | --- | --- |
 | value | string \| number \| FastBuffer \| Uint8Array | Yes | The value to find the index for in the buffer |
 | byteOffset | number | No | byteOffset [byteOffset = 0] Where to begin searching in buf |
-| encoding | BufferEncoding | No | encoding [encoding='utf8'] If value is a string,this is the encoding used to determine the binary representation of the string that will be searched for in buf |
+| encoding | [BufferEncoding](arkts-arkts-bufferencoding-t.md) | No | encoding [encoding='utf8'] If value is a string,this is the encoding used to determine the binary representation of the string that will be searched for in buf |
 
 **Return value:**
 
@@ -357,13 +377,15 @@ Creates and returns an iterator of buf keys (indices).
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-keys(): IterableIterator<number>--><!--Device-FastBuffer-keys(): IterableIterator<number>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;number&gt; | @syscap SystemCapability.Utils.Lang@crossplatform@atomicservice |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<number> | @syscap SystemCapability.Utils.Lang@crossplatform@atomicservice |
 
 **Example**
 
@@ -398,6 +420,8 @@ The index of the last occurrence of value in buf
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number--><!--Device-FastBuffer-lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -406,7 +430,7 @@ The index of the last occurrence of value in buf
 | --- | --- | --- | --- |
 | value | string \| number \| FastBuffer \| Uint8Array | Yes | The value to find the last index for in the buffer |
 | byteOffset | number | No | byteOffset [byteOffset = 0] Where to begin searching in buf |
-| encoding | BufferEncoding | No | encoding [encoding='utf8'] If value is a string,this is the encoding used to determine the binary representation of the string that will be searched for in buf |
+| encoding | [BufferEncoding](arkts-arkts-bufferencoding-t.md) | No | encoding [encoding='utf8'] If value is a string,this is the encoding used to determine the binary representation of the string that will be searched for in buf |
 
 **Return value:**
 
@@ -438,6 +462,8 @@ Reads a signed, big-endian 64-bit integer from buf at the specified offset
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-readBigInt64BE(offset?: number): bigint--><!--Device-FastBuffer-readBigInt64BE(offset?: number): bigint-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -483,6 +509,8 @@ Reads a signed, little-endian 64-bit integer from buf at the specified offset
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-readBigInt64LE(offset?: number): bigint--><!--Device-FastBuffer-readBigInt64LE(offset?: number): bigint-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -526,6 +554,8 @@ Reads a unsigned, big-endian 64-bit integer from buf at the specified offset
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-readBigUInt64BE(offset?: number): bigint--><!--Device-FastBuffer-readBigUInt64BE(offset?: number): bigint-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -571,6 +601,8 @@ Reads a unsigned, little-endian 64-bit integer from buf at the specified offset
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-readBigUInt64LE(offset?: number): bigint--><!--Device-FastBuffer-readBigUInt64LE(offset?: number): bigint-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -615,6 +647,8 @@ Reads a 64-bit, big-endian double from buf at the specified offset
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-readDoubleBE(offset?: number): number--><!--Device-FastBuffer-readDoubleBE(offset?: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -657,6 +691,8 @@ Reads a 64-bit, little-endian double from buf at the specified offset
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-readDoubleLE(offset?: number): number--><!--Device-FastBuffer-readDoubleLE(offset?: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -701,6 +737,8 @@ Reads a 32-bit, big-endian float from buf at the specified offset
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-readFloatBE(offset?: number): number--><!--Device-FastBuffer-readFloatBE(offset?: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -743,6 +781,8 @@ Reads a 32-bit, little-endian float from buf at the specified offset
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-readFloatLE(offset?: number): number--><!--Device-FastBuffer-readFloatLE(offset?: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -787,6 +827,8 @@ Reads a signed, big-endian 16-bit integer from buf at the specified offset
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-readInt16BE(offset?: number): number--><!--Device-FastBuffer-readInt16BE(offset?: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -829,6 +871,8 @@ Reads a signed, little-endian 16-bit integer from buf at the specified offset
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-readInt16LE(offset?: number): number--><!--Device-FastBuffer-readInt16LE(offset?: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -873,6 +917,8 @@ Reads a signed, big-endian 32-bit integer from buf at the specified offset
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-readInt32BE(offset?: number): number--><!--Device-FastBuffer-readInt32BE(offset?: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -915,6 +961,8 @@ Reads a signed, little-endian 32-bit integer from buf at the specified offset
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-readInt32LE(offset?: number): number--><!--Device-FastBuffer-readInt32LE(offset?: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -959,6 +1007,8 @@ Reads a signed 8-bit integer from buf at the specified offset
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-readInt8(offset?: number): number--><!--Device-FastBuffer-readInt8(offset?: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -998,12 +1048,13 @@ console.info(buf.readInt8(1).toString());
 readIntBE(offset: number, byteLength: number): number
 ```
 
-Reads byteLength number of bytes from buf at the specified offset and interprets the result as a big-endian,
-two's complement signed value supporting up to 48 bits of accuracy
+Reads byteLength number of bytes from buf at the specified offset and interprets the result as a big-endian,two's complement signed value supporting up to 48 bits of accuracy
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-readIntBE(offset: number, byteLength: number): number--><!--Device-FastBuffer-readIntBE(offset: number, byteLength: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1044,12 +1095,13 @@ console.info(num.toString());
 readIntLE(offset: number, byteLength: number): number
 ```
 
-Reads byteLength number of bytes from buf at the specified offset and interprets the result as a little-endian,
-two's complement signed value supporting up to 48 bits of accuracy.
+Reads byteLength number of bytes from buf at the specified offset and interprets the result as a little-endian,two's complement signed value supporting up to 48 bits of accuracy.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-readIntLE(offset: number, byteLength: number): number--><!--Device-FastBuffer-readIntLE(offset: number, byteLength: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1094,6 +1146,8 @@ Reads an unsigned, big-endian 16-bit integer from buf at the specified offset
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-readUInt16BE(offset?: number): number--><!--Device-FastBuffer-readUInt16BE(offset?: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1140,6 +1194,8 @@ Reads an unsigned, little-endian 16-bit integer from buf at the specified offset
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-readUInt16LE(offset?: number): number--><!--Device-FastBuffer-readUInt16LE(offset?: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -1185,6 +1241,8 @@ Reads an unsigned, big-endian 32-bit integer from buf at the specified offset
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-readUInt32BE(offset?: number): number--><!--Device-FastBuffer-readUInt32BE(offset?: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -1227,6 +1285,8 @@ Reads an unsigned, little-endian 32-bit integer from buf at the specified offset
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-readUInt32LE(offset?: number): number--><!--Device-FastBuffer-readUInt32LE(offset?: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1271,6 +1331,8 @@ Reads an unsigned 8-bit integer from buf at the specified offset
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-readUInt8(offset?: number): number--><!--Device-FastBuffer-readUInt8(offset?: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -1310,12 +1372,13 @@ console.info(buf.readUInt8(1).toString());
 readUIntBE(offset: number, byteLength: number): number
 ```
 
-Reads byteLength number of bytes from buf at the specified offset and interprets the result as
-an unsigned big-endian integer supporting up to 48 bits of accuracy.
+Reads byteLength number of bytes from buf at the specified offset and interprets the result as an unsigned big-endian integer supporting up to 48 bits of accuracy.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-readUIntBE(offset: number, byteLength: number): number--><!--Device-FastBuffer-readUIntBE(offset: number, byteLength: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1355,12 +1418,13 @@ console.info(buf.readUIntBE(0, 6).toString(16));
 readUIntLE(offset: number, byteLength: number): number
 ```
 
-Reads byteLength number of bytes from buf at the specified offset and interprets the result as an unsigned,
-little-endian integer supporting up to 48 bits of accuracy.
+Reads byteLength number of bytes from buf at the specified offset and interprets the result as an unsigned,little-endian integer supporting up to 48 bits of accuracy.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-readUIntLE(offset: number, byteLength: number): number--><!--Device-FastBuffer-readUIntLE(offset: number, byteLength: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1406,6 +1470,8 @@ Returns a new FastBuffer that references the same memory as the original, but of
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-subarray(start?: number, end?: number): FastBuffer--><!--Device-FastBuffer-subarray(start?: number, end?: number): FastBuffer-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -1419,7 +1485,7 @@ Returns a new FastBuffer that references the same memory as the original, but of
 
 | Type | Description |
 | --- | --- |
-| FastBuffer | Returns a new FastBuffer that references the same memory as the original |
+| [FastBuffer](arkts-arkts-fastbuffer-c.md) | Returns a new FastBuffer that references the same memory as the original |
 
 **Example**
 
@@ -1449,13 +1515,15 @@ Interprets buf as an array of unsigned 16-bit integers and swaps the byte order 
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-swap16(): FastBuffer--><!--Device-FastBuffer-swap16(): FastBuffer-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| FastBuffer | A reference to buf |
+| [FastBuffer](arkts-arkts-fastbuffer-c.md) | A reference to buf |
 
 **Error codes:**
 
@@ -1489,13 +1557,15 @@ Interprets buf as an array of unsigned 32-bit integers and swaps the byte order 
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-swap32(): FastBuffer--><!--Device-FastBuffer-swap32(): FastBuffer-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| FastBuffer | A reference to buf |
+| [FastBuffer](arkts-arkts-fastbuffer-c.md) | A reference to buf |
 
 **Error codes:**
 
@@ -1529,13 +1599,15 @@ Interprets buf as an array of unsigned 64-bit integers and swaps the byte order 
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-swap64(): FastBuffer--><!--Device-FastBuffer-swap64(): FastBuffer-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| FastBuffer | A reference to buf |
+| [FastBuffer](arkts-arkts-fastbuffer-c.md) | A reference to buf |
 
 **Error codes:**
 
@@ -1569,13 +1641,15 @@ Returns a JSON representation of buf
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-toJSON(): Object--><!--Device-FastBuffer-toJSON(): Object-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Object | Returns a JSON |
+| [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Returns a JSON |
 
 **Example**
 
@@ -1600,6 +1674,8 @@ Decodes buf to a string according to the specified character encoding in encodin
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-toString(encoding?: string, start?: number, end?: number): string--><!--Device-FastBuffer-toString(encoding?: string, start?: number, end?: number): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1649,13 +1725,15 @@ Creates and returns an iterator for buf values (bytes).
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-values(): IterableIterator<number>--><!--Device-FastBuffer-values(): IterableIterator<number>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;number&gt; | @syscap SystemCapability.Utils.Lang@crossplatform@atomicservice |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<number> | @syscap SystemCapability.Utils.Lang@crossplatform@atomicservice |
 
 **Example**
 
@@ -1691,6 +1769,8 @@ Writes string to buf at offset according to the character encoding in encoding
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-write(str: string, offset?: number, length?: number, encoding?: string): number--><!--Device-FastBuffer-write(str: string, offset?: number, length?: number, encoding?: string): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1745,6 +1825,8 @@ Writes value to buf at the specified offset as big-endian.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-writeBigInt64BE(value: bigint, offset?: number): number--><!--Device-FastBuffer-writeBigInt64BE(value: bigint, offset?: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -1789,6 +1871,8 @@ Writes value to buf at the specified offset as little-endian.
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-writeBigInt64LE(value: bigint, offset?: number): number--><!--Device-FastBuffer-writeBigInt64LE(value: bigint, offset?: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1835,6 +1919,8 @@ Writes value to buf at the specified offset as big-endian.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-writeBigUInt64BE(value: bigint, offset?: number): number--><!--Device-FastBuffer-writeBigUInt64BE(value: bigint, offset?: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -1879,6 +1965,8 @@ Writes value to buf at the specified offset as little-endian.
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-writeBigUInt64LE(value: bigint, offset?: number): number--><!--Device-FastBuffer-writeBigUInt64LE(value: bigint, offset?: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1925,6 +2013,8 @@ Writes value to buf at the specified offset as big-endian.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-writeDoubleBE(value: number, offset?: number): number--><!--Device-FastBuffer-writeDoubleBE(value: number, offset?: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -1969,6 +2059,8 @@ Writes value to buf at the specified offset as little-endian.
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-writeDoubleLE(value: number, offset?: number): number--><!--Device-FastBuffer-writeDoubleLE(value: number, offset?: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -2015,6 +2107,8 @@ Writes value to buf at the specified offset as big-endian.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-writeFloatBE(value: number, offset?: number): number--><!--Device-FastBuffer-writeFloatBE(value: number, offset?: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -2059,6 +2153,8 @@ Writes value to buf at the specified offset as little-endian.
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-writeFloatLE(value: number, offset?: number): number--><!--Device-FastBuffer-writeFloatLE(value: number, offset?: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -2105,6 +2201,8 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-writeInt16BE(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt16BE(value: number, offset?: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -2149,6 +2247,8 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-writeInt16LE(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt16LE(value: number, offset?: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -2195,6 +2295,8 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-writeInt32BE(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt32BE(value: number, offset?: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -2240,6 +2342,8 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-writeInt32LE(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt32LE(value: number, offset?: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -2284,6 +2388,8 @@ Writes value to buf at the specified offset. value must be a valid signed 8-bit 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-writeInt8(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt8(value: number, offset?: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -2333,6 +2439,8 @@ Writes byteLength bytes of value to buf at the specified offset as big-endian
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-writeIntBE(value: number, offset: number, byteLength: number): number--><!--Device-FastBuffer-writeIntBE(value: number, offset: number, byteLength: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -2379,6 +2487,8 @@ Writes byteLength bytes of value to buf at the specified offset as little-endian
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-writeIntLE(value: number, offset: number, byteLength: number): number--><!--Device-FastBuffer-writeIntLE(value: number, offset: number, byteLength: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -2424,6 +2534,8 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-writeUInt16BE(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt16BE(value: number, offset?: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -2473,6 +2585,8 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-writeUInt16LE(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt16LE(value: number, offset?: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -2521,6 +2635,8 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-writeUInt32BE(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt32BE(value: number, offset?: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -2566,6 +2682,8 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-writeUInt32LE(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt32LE(value: number, offset?: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -2610,6 +2728,8 @@ Writes value to buf at the specified offset. value must be a valid unsigned 8-bi
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-writeUInt8(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt8(value: number, offset?: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -2665,6 +2785,8 @@ Writes byteLength bytes of value to buf at the specified offset as big-endian
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-writeUIntBE(value: number, offset: number, byteLength: number): number--><!--Device-FastBuffer-writeUIntBE(value: number, offset: number, byteLength: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -2710,6 +2832,8 @@ Writes byteLength bytes of value to buf at the specified offset as little-endian
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-writeUIntLE(value: number, offset: number, byteLength: number): number--><!--Device-FastBuffer-writeUIntLE(value: number, offset: number, byteLength: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -2759,6 +2883,8 @@ The arraybuffer underlying the FastBuffer object
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-buffer: ArrayBuffer--><!--Device-FastBuffer-buffer: ArrayBuffer-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## byteOffset
@@ -2775,6 +2901,8 @@ The byteOffset of the Buffers underlying ArrayBuffer object
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FastBuffer-byteOffset: number--><!--Device-FastBuffer-byteOffset: number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## length
@@ -2790,6 +2918,8 @@ Returns the number of bytes in buf
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FastBuffer-length: number--><!--Device-FastBuffer-length: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

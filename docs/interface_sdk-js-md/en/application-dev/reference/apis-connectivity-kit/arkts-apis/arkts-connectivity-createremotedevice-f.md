@@ -18,6 +18,8 @@ Creates a remote device instance.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-remoteDevice-function createRemoteDevice(address: string): RemoteDevice--><!--Device-remoteDevice-function createRemoteDevice(address: string): RemoteDevice-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**
@@ -30,7 +32,7 @@ Creates a remote device instance.
 
 | Type | Description |
 | --- | --- |
-| RemoteDevice | Returns a near link remote device instance. |
+| [RemoteDevice](arkts-connectivity-remotedevice-i.md) | Returns a near link remote device instance. |
 
 **Error codes:**
 

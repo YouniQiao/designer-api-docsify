@@ -4,6 +4,8 @@ CounterType指定Counter类型。
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare enum CounterType--><!--Device-unnamed-declare enum CounterType-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## LIST
@@ -18,7 +20,9 @@ LIST = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CounterType-LIST = 0--><!--Device-CounterType-LIST = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,7 +38,9 @@ COMPACT = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CounterType-COMPACT = 1--><!--Device-CounterType-COMPACT = 1-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,7 +56,9 @@ INLINE = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CounterType-INLINE = 2--><!--Device-CounterType-INLINE = 2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,7 +74,9 @@ INLINE_DATE = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CounterType-INLINE_DATE = 3--><!--Device-CounterType-INLINE_DATE = 3-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

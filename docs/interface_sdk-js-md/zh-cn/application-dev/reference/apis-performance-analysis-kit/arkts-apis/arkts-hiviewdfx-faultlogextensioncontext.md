@@ -1,5 +1,11 @@
 # @ohos.hiviewdfx.FaultLogExtensionContext
 
+## 导入模块
+
+```TypeScript
+import { FaultLogExtensionContext } from '@kit.PerformanceAnalysisKit';
+```
+
 ## 汇总
 
 ### 类

@@ -12,6 +12,8 @@ function sendPrivateCommand(commandData: Record<string, CommandDataType>): Promi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-inputMethodSystemPanelManager-function sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>--><!--Device-inputMethodSystemPanelManager-function sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **系统接口：** 此接口为系统接口。
@@ -20,13 +22,13 @@ function sendPrivateCommand(commandData: Record<string, CommandDataType>): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| commandData | Record&lt;string, CommandDataType&gt; | 是 | 将要发送的命令数据。最大大小32KB。 |
+| commandData | Record<string, CommandDataType> | 是 | 将要发送的命令数据。最大大小32KB。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回的Promise。 |
+| Promise<void> | 返回的Promise。 |
 
 **错误码：**
 

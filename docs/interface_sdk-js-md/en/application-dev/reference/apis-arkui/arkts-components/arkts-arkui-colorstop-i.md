@@ -4,6 +4,8 @@ Describes the gradient color stop.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface ColorStop--><!--Device-unnamed-declare interface ColorStop-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## color
@@ -22,6 +24,8 @@ Color value at the gradient color stop.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ColorStop-color: ResourceColor--><!--Device-ColorStop-color: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## offset
@@ -30,8 +34,7 @@ Color value at the gradient color stop.
 offset: Length
 ```
 
-Gradient color stop (proportion value between 0 and 1). A value less than 0 evaluates to the value **0**. A value
-greater than 1 evaluates to the value **1**.
+Gradient color stop (proportion value between 0 and 1). A value less than 0 evaluates to the value **0**. A value greater than 1 evaluates to the value **1**.
 
 **NOTE**
 
@@ -46,6 +49,8 @@ For example, **'10vp'** is converted to 10, and **'10%'** is converted to 0.1.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ColorStop-offset: Length--><!--Device-ColorStop-offset: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

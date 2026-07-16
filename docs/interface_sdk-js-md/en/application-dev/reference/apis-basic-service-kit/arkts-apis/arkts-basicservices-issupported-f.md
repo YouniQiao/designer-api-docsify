@@ -16,19 +16,21 @@ Checks whether a specified type of {@link RunningLock} is supported.
 
 **Since:** 9
 
+<!--Device-runningLock-function isSupported(type: RunningLockType): boolean--><!--Device-runningLock-function isSupported(type: RunningLockType): boolean-End-->
+
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | RunningLockType | Yes | Type of the running lock. The value must be an enum. |
+| type | [RunningLockType](arkts-basicservices-runninglocktype-e.md) | Yes | Type of the running lock. The value must be an enum. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The value **true** indicates that the specified type of the running lock is supported, and thevalue **false** indicates the opposite. |
+| boolean | The value **true** indicates that the specified type of the running lock is supported, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

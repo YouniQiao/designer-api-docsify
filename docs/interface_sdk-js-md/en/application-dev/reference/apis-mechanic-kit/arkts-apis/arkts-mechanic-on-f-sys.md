@@ -12,10 +12,11 @@ import { mechanicManager } from '@kit.MechanicKit';
 function on(type: 'rotationAxesStatusChange', callback: Callback<RotationAxesStateChangeInfo>): void
 ```
 
-Register a listener for axis state changes.
-The status of the rotation axis changes dynamically, which needs to be monitored.
+Register a listener for axis state changes.The status of the rotation axis changes dynamically, which needs to be monitored.
 
 **Since:** 20
+
+<!--Device-mechanicManager-function on(type: 'rotationAxesStatusChange', callback: Callback<RotationAxesStateChangeInfo>): void--><!--Device-mechanicManager-function on(type: 'rotationAxesStatusChange', callback: Callback<RotationAxesStateChangeInfo>): void-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -26,7 +27,7 @@ The status of the rotation axis changes dynamically, which needs to be monitored
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'rotationAxesStatusChange' | Yes | Event type. |
-| callback | Callback&lt;RotationAxesStateChangeInfo&gt; | Yes | Rotate axis state changes callback. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<RotationAxesStateChangeInfo> | Yes | Rotate axis state changes callback. |
 
 **Error codes:**
 

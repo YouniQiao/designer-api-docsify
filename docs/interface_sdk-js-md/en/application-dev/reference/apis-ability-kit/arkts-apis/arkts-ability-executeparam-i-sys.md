@@ -4,6 +4,8 @@ Defines the parameter used to execute an intent call.
 
 **Since:** 11
 
+<!--Device-insightIntentDriver-interface ExecuteParam--><!--Device-insightIntentDriver-interface ExecuteParam-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -20,15 +22,15 @@ import { insightIntentDriver } from '@kit.AbilityKit';
 abilityName: string
 ```
 
-Name of the ability to be called. If an intent defined by the
-[@InsightIntentLink](../../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)
-decorator is used to implement application redirection, this parameter can be left empty.
+Name of the ability to be called. If an intent defined by the [@InsightIntentLink](../../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)decorator is used to implement application redirection, this parameter can be left empty.
 
 **Type:** string
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExecuteParam-abilityName: string--><!--Device-ExecuteParam-abilityName: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -48,6 +50,8 @@ Name of the bundle to which the ability to be called belongs.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExecuteParam-bundleName: string--><!--Device-ExecuteParam-bundleName: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -58,14 +62,15 @@ Name of the bundle to which the ability to be called belongs.
 deviceId?: string
 ```
 
-Indicates the device identifier. Obtained from
-{@link @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager#getAvailableDeviceListSync}
+Indicates the device identifier. Obtained from{@link @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager#getAvailableDeviceListSync}
 
 **Type:** string
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExecuteParam-deviceId?: string--><!--Device-ExecuteParam-deviceId?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -77,14 +82,15 @@ Indicates the device identifier. Obtained from
 displayId?: number
 ```
 
-Physical screen ID specified during intent call. The value must be an integer. This parameter is valid only when
-**executeMode** is set to **UI_ABILITY_FOREGROUND**.
+Physical screen ID specified during intent call. The value must be an integer. This parameter is valid only when **executeMode** is set to **UI_ABILITY_FOREGROUND**.
 
 **Type:** number
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExecuteParam-displayId?: long--><!--Device-ExecuteParam-displayId?: long-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -96,16 +102,15 @@ Physical screen ID specified during intent call. The value must be an integer. T
 executeMode: insightIntent.ExecuteMode
 ```
 
-Intent execution mode. If an intent defined by the
-[@InsightIntentLink](../../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)
-decorator is used to implement application redirection, this parameter must be filled (with any value that
-conforms to the definition), although it will not actually take effect.
+Intent execution mode. If an intent defined by the [@InsightIntentLink](../../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)decorator is used to implement application redirection, this parameter must be filled (with any value that conforms to the definition), although it will not actually take effect.
 
 **Type:** insightIntent.ExecuteMode
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExecuteParam-executeMode: insightIntent.ExecuteMode--><!--Device-ExecuteParam-executeMode: insightIntent.ExecuteMode-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -117,19 +122,19 @@ conforms to the definition), although it will not actually take effect.
 flags?: number
 ```
 
-[Flags](arkts-ability-flags-e.md) of the URIs authorized by the intent caller to
-the intent executor during the call.
+[Flags](arkts-ability-flags-e.md) of the URIs authorized by the intent caller to the intent executor during the call.
 
 **NOTE**
 
-This parameter supports only **FLAG_AUTH_READ_URI_PERMISSION**, **FLAG_AUTH_WRITE_URI_PERMISSION**, and
-FLAG_AUTH_READ_URI_PERMISSION|
+This parameter supports only **FLAG_AUTH_READ_URI_PERMISSION**, **FLAG_AUTH_WRITE_URI_PERMISSION**, and FLAG_AUTH_READ_URI_PERMISSION|
 
 **Type:** number
 
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExecuteParam-flags?: int--><!--Device-ExecuteParam-flags?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -149,6 +154,8 @@ Intent name.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExecuteParam-insightIntentName: string--><!--Device-ExecuteParam-insightIntentName: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -166,6 +173,8 @@ Intent call parameter.
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExecuteParam-insightIntentParam: Record<string, Object>--><!--Device-ExecuteParam-insightIntentParam: Record<string, Object>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -185,6 +194,8 @@ Name of the module to which the ability belongs.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExecuteParam-moduleName: string--><!--Device-ExecuteParam-moduleName: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -195,16 +206,15 @@ Name of the module to which the ability belongs.
 uris?: Array<string>
 ```
 
-List of URIs authorized by the intent caller to the intent executor during the call. If an intent defined by the
-[@InsightIntentLink](../../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)
-decorator is used to implement application redirection, this field is mandatory. Only the first element in the
-array is read as the URI of [openLink](arkts-ability-uiabilitycontext-c.md#openlink-1).
+List of URIs authorized by the intent caller to the intent executor during the call. If an intent defined by the [@InsightIntentLink](../../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)decorator is used to implement application redirection, this field is mandatory. Only the first element in the array is read as the URI of [openLink](arkts-ability-uiabilitycontext-c.md#openlink-1).
 
 **Type:** Array<string>
 
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExecuteParam-uris?: Array<string>--><!--Device-ExecuteParam-uris?: Array<string>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -220,14 +230,15 @@ ID of the user to which the intent belongs.
 
 **NOTE**
 
-If the user ID of the calling application is different from the user ID of the intent, the calling application
-must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission.
+If the user ID of the calling application is different from the user ID of the intent, the calling application must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExecuteParam-userId?: int--><!--Device-ExecuteParam-userId?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

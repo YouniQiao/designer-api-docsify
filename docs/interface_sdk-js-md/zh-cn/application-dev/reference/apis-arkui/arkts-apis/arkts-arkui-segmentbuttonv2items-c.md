@@ -8,7 +8,15 @@
 
 **起始版本：** 18
 
+<!--Device-unnamed-export declare class SegmentButtonV2Items extends Array<SegmentButtonV2Item>--><!--Device-unnamed-export declare class SegmentButtonV2Items extends Array<SegmentButtonV2Item>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { OnSelectedIndexesChange, TabSegmentButtonV2, SegmentButtonV2Items, MultiCapsuleSegmentButtonV2, OnSelectedIndexChange, SegmentButtonV2ItemOptions, SegmentButtonV2Item, CapsuleSegmentButtonV2 } from '@kit.ArkUI';
+```
 
 ## constructor
 
@@ -22,7 +30,9 @@ constructor(items: SegmentButtonV2ItemOptions[])
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SegmentButtonV2Items-constructor(items: SegmentButtonV2ItemOptions[])--><!--Device-SegmentButtonV2Items-constructor(items: SegmentButtonV2ItemOptions[])-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,7 +40,7 @@ constructor(items: SegmentButtonV2ItemOptions[])
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| items | SegmentButtonV2ItemOptions[] | 是 | 分段按钮选项配置参数集合。 |
+| items | [SegmentButtonV2ItemOptions](arkts-arkui-segmentbuttonv2itemoptions-i.md)[] | 是 | 分段按钮选项配置参数集合。 |
 
 ## hasHybrid
 
@@ -46,7 +56,9 @@ get hasHybrid(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SegmentButtonV2Items-get hasHybrid(): boolean--><!--Device-SegmentButtonV2Items-get hasHybrid(): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

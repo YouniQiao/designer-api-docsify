@@ -1,11 +1,18 @@
 # Component
 
-UiTest框架在API9中，Component类代表了UI界面上的一个控件，提供控件属性获取，控件点击，滑动查找，文本注入等API。
-该类提供的所有方法都使用Promise方式作为异步方法，需使用await调用。
+UiTest框架在API9中，Component类代表了UI界面上的一个控件，提供控件属性获取，控件点击，滑动查找，文本注入等API。该类提供的所有方法都使用Promise方式作为异步方法，需使用await调用。
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class Component--><!--Device-unnamed-declare class Component-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
+
+## 导入模块
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
+```
 
 ## clearText
 
@@ -17,7 +24,9 @@ clearText(): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-clearText(): Promise<void>--><!--Device-Component-clearText(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -25,7 +34,7 @@ clearText(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -58,7 +67,9 @@ click(): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-click(): Promise<void>--><!--Device-Component-click(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -66,7 +77,7 @@ click(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -102,7 +113,9 @@ doubleClick(): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-doubleClick(): Promise<void>--><!--Device-Component-doubleClick(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -110,7 +123,7 @@ doubleClick(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -143,7 +156,9 @@ dragTo(target: Component): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-dragTo(target: Component): Promise<void>--><!--Device-Component-dragTo(target: Component): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -151,13 +166,13 @@ dragTo(target: Component): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | Component | 是 | 目标控件。 |
+| target | [Component](../../apis-image-kit/arkts-apis/arkts-image-component-i.md) | 是 | 目标控件。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -196,7 +211,9 @@ getBounds(): Promise<Rect>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-getBounds(): Promise<Rect>--><!--Device-Component-getBounds(): Promise<Rect>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -204,7 +221,7 @@ getBounds(): Promise<Rect>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Rect&gt; | - Promise对象，返回控件对象的边框信息。 |
+| Promise<Rect> | - Promise对象，返回控件对象的边框信息。 |
 
 **错误码：**
 
@@ -237,7 +254,9 @@ getBoundsCenter(): Promise<Point>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-getBoundsCenter(): Promise<Point>--><!--Device-Component-getBoundsCenter(): Promise<Point>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -245,7 +264,7 @@ getBoundsCenter(): Promise<Point>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Point&gt; | - Promise对象，返回控件对象所占区域的中心点信息。 |
+| Promise<Point> | - Promise对象，返回控件对象所占区域的中心点信息。 |
 
 **错误码：**
 
@@ -278,7 +297,9 @@ getDescription(): Promise<string>
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-getDescription(): Promise<string>--><!--Device-Component-getDescription(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -286,7 +307,7 @@ getDescription(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | - Promise对象，返回控件的描述信息。 |
+| Promise<string> | - Promise对象，返回控件的描述信息。 |
 
 **错误码：**
 
@@ -319,7 +340,9 @@ getDisplayId(): Promise<number>
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-getDisplayId(): Promise<int>--><!--Device-Component-getDisplayId(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -327,7 +350,7 @@ getDisplayId(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | - Promise对象，返回控件所属的屏幕ID。 |
+| Promise<number> | - Promise对象，返回控件所属的屏幕ID。 |
 
 **错误码：**
 
@@ -360,7 +383,9 @@ getHint(): Promise<string>
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-getHint(): Promise<string>--><!--Device-Component-getHint(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -368,7 +393,7 @@ getHint(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | - Promise对象，返回控件的提示文本。 |
+| Promise<string> | - Promise对象，返回控件的提示文本。 |
 
 **错误码：**
 
@@ -401,7 +426,9 @@ getId(): Promise<string>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-getId(): Promise<string>--><!--Device-Component-getId(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -409,7 +436,7 @@ getId(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | - Promise对象，返回控件的id值。 |
+| Promise<string> | - Promise对象，返回控件的id值。 |
 
 **错误码：**
 
@@ -438,13 +465,13 @@ async function demo() {
 getOriginalText(): Promise<string>
 ```
 
-获取控件对象的文本信息。使用Promise异步回调。如果控件的无障碍属性
-[accessibilityLevel](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel)
-设置为'no'或'no-hide-descendants'，可以使用本接口获取控件的文本信息，无法使用[Component.getText()](arkts-test-component-c.md#gettext-1)获取控件的文本信息。
+获取控件对象的文本信息。使用Promise异步回调。如果控件的无障碍属性[accessibilityLevel](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel)设置为'no'或'no-hide-descendants'，可以使用本接口获取控件的文本信息，无法使用[Component.getText()](arkts-test-component-c.md#gettext-1)获取控件的文本信息。
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-getOriginalText(): Promise<string>--><!--Device-Component-getOriginalText(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -452,7 +479,7 @@ getOriginalText(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | - Promise对象，返回控件的文本信息。 |
+| Promise<string> | - Promise对象，返回控件的文本信息。 |
 
 **错误码：**
 
@@ -483,16 +510,18 @@ getText(): Promise<string>
 
 获取控件对象的文本信息。使用Promise异步回调。
 
-> **说明**
->
-> 如果控件的无障碍属性
-> [accessibilityLevel](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel)
-> 设置为'no'或'no-hide-descendants'，无法使用本接口获取控件的文本信息，可以使用[Component.getOriginalText()](arkts-test-component-c.md#getoriginaltext-1)
+> **说明**  
+>  
+> 如果控件的无障碍属性  
+> [accessibilityLevel](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel)  
+> 设置为'no'或'no-hide-descendants'，无法使用本接口获取控件的文本信息，可以使用[Component.getOriginalText()](arkts-test-component-c.md#getoriginaltext-1)  
 > 获取控件的文本信息。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-getText(): Promise<string>--><!--Device-Component-getText(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -500,7 +529,7 @@ getText(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | - Promise对象，返回控件的文本信息。 |
+| Promise<string> | - Promise对象，返回控件的文本信息。 |
 
 **错误码：**
 
@@ -533,7 +562,9 @@ getType(): Promise<string>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-getType(): Promise<string>--><!--Device-Component-getType(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -541,7 +572,7 @@ getType(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | - Promise对象，返回控件的类型。 |
+| Promise<string> | - Promise对象，返回控件的类型。 |
 
 **错误码：**
 
@@ -574,7 +605,9 @@ inputText(text: string): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-inputText(text: string): Promise<void>--><!--Device-Component-inputText(text: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -588,7 +621,7 @@ inputText(text: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -625,7 +658,9 @@ inputText(text: string, mode: InputTextMode): Promise<void>
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-inputText(text: string, mode: InputTextMode): Promise<void>--><!--Device-Component-inputText(text: string, mode: InputTextMode): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -634,20 +669,20 @@ inputText(text: string, mode: InputTextMode): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 输入的文本信息，当前支持英文、中文和特殊字符。 |
-| mode | InputTextMode | 是 | 输入文本的方式，取值请参考[InputTextMode](arkts-test-inputtextmode-i.md)。**说明：** InputTextMode.addition取值为true时，在控件已有文本末尾后追加指定文本。取值为false时，指定文本将覆盖控件已有文本。 |
+| mode | [InputTextMode](arkts-test-inputtextmode-i.md) | 是 | 输入文本的方式，取值请参考[InputTextMode](arkts-test-inputtextmode-i.md)。* **说明：** InputTextMode.addition取值为true时，在控件已有文本末尾后追加指定文本。取值为false时，指定文本将覆盖控件已有文本。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work correctly due to limited devicecapabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work correctly due to limited device capabilities. |
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
@@ -675,7 +710,9 @@ isCheckable(): Promise<boolean>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-isCheckable(): Promise<boolean>--><!--Device-Component-isCheckable(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -683,7 +720,7 @@ isCheckable(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise对象，返回控件对象能否可被勾选属性。true：可被勾选。false：不可被勾选。 |
+| Promise<boolean> | - Promise对象，返回控件对象能否可被勾选属性。true：可被勾选。false：不可被勾选。 |
 
 **错误码：**
 
@@ -720,7 +757,9 @@ isChecked(): Promise<boolean>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-isChecked(): Promise<boolean>--><!--Device-Component-isChecked(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -728,7 +767,7 @@ isChecked(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise对象，返回控件对象被勾选状态。true：被勾选。false：未被勾选。 |
+| Promise<boolean> | - Promise对象，返回控件对象被勾选状态。true：被勾选。false：未被勾选。 |
 
 **错误码：**
 
@@ -765,7 +804,9 @@ isClickable(): Promise<boolean>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-isClickable(): Promise<boolean>--><!--Device-Component-isClickable(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -773,7 +814,7 @@ isClickable(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise对象，返回控件对象是否可点击。true：可点击。false：不可点击。 |
+| Promise<boolean> | - Promise对象，返回控件对象是否可点击。true：可点击。false：不可点击。 |
 
 **错误码：**
 
@@ -810,7 +851,9 @@ isEnabled(): Promise<boolean>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-isEnabled(): Promise<boolean>--><!--Device-Component-isEnabled(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -818,7 +861,7 @@ isEnabled(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise对象，返回控件使能状态。true：使能。false：未使能。 |
+| Promise<boolean> | - Promise对象，返回控件使能状态。true：使能。false：未使能。 |
 
 **错误码：**
 
@@ -855,7 +898,9 @@ isFocused(): Promise<boolean>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-isFocused(): Promise<boolean>--><!--Device-Component-isFocused(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -863,7 +908,7 @@ isFocused(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise对象，返回控件对象获焦状态。true：获焦。false：未获焦。 |
+| Promise<boolean> | - Promise对象，返回控件对象获焦状态。true：获焦。false：未获焦。 |
 
 **错误码：**
 
@@ -900,7 +945,9 @@ isLongClickable(): Promise<boolean>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-isLongClickable(): Promise<boolean>--><!--Device-Component-isLongClickable(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -908,7 +955,7 @@ isLongClickable(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise对象，返回控件对象是否可点击。true：可点击。false：不可点击。 |
+| Promise<boolean> | - Promise对象，返回控件对象是否可点击。true：可点击。false：不可点击。 |
 
 **错误码：**
 
@@ -945,7 +992,9 @@ isScrollable(): Promise<boolean>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-isScrollable(): Promise<boolean>--><!--Device-Component-isScrollable(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -953,7 +1002,7 @@ isScrollable(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise对象，返回控件对象是否可滑动。true：可滑动。false：不可滑动。 |
+| Promise<boolean> | - Promise对象，返回控件对象是否可滑动。true：可滑动。false：不可滑动。 |
 
 **错误码：**
 
@@ -990,7 +1039,9 @@ isSelected(): Promise<boolean>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-isSelected(): Promise<boolean>--><!--Device-Component-isSelected(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -998,7 +1049,7 @@ isSelected(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise对象，返回控件对象被选中状态。true：被选中。false：未被选中。 |
+| Promise<boolean> | - Promise对象，返回控件对象被选中状态。true：被选中。false：未被选中。 |
 
 **错误码：**
 
@@ -1035,7 +1086,9 @@ longClick(): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-longClick(): Promise<void>--><!--Device-Component-longClick(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1043,7 +1096,7 @@ longClick(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1076,7 +1129,9 @@ pinchIn(scale: number): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-pinchIn(scale: double): Promise<void>--><!--Device-Component-pinchIn(scale: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1090,7 +1145,7 @@ pinchIn(scale: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1124,7 +1179,9 @@ pinchOut(scale: number): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-pinchOut(scale: double): Promise<void>--><!--Device-Component-pinchOut(scale: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1138,7 +1195,7 @@ pinchOut(scale: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1172,7 +1229,9 @@ scrollSearch(on: On): Promise<Component>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-scrollSearch(on: On): Promise<Component>--><!--Device-Component-scrollSearch(on: On): Promise<Component>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1180,13 +1239,13 @@ scrollSearch(on: On): Promise<Component>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| on | On | 是 | 目标控件的属性要求。 |
+| on | [On](arkts-test-on-c.md) | 是 | 目标控件的属性要求。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Component&gt; | - Promise对象，返回目标控件对象。 |
+| Promise<Component> | - Promise对象，返回目标控件对象。 |
 
 **错误码：**
 
@@ -1223,7 +1282,9 @@ scrollSearch(on: On, vertical?: boolean, offset?: number): Promise<Component>
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-scrollSearch(on: On, vertical?: boolean, offset?: number): Promise<Component>--><!--Device-Component-scrollSearch(on: On, vertical?: boolean, offset?: number): Promise<Component>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1231,7 +1292,7 @@ scrollSearch(on: On, vertical?: boolean, offset?: number): Promise<Component>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| on | On | 是 | 目标控件的属性要求。 |
+| on | [On](arkts-test-on-c.md) | 是 | 目标控件的属性要求。 |
 | vertical | boolean | 否 | 默认为true，表示查找方向是纵向。false表示查找方向为横向。 |
 | offset | number | 否 | 滑动起点/终点到组件边框的偏移，默认80，单位：px，取值范围：大于等于0的整数。 |
 
@@ -1239,7 +1300,7 @@ scrollSearch(on: On, vertical?: boolean, offset?: number): Promise<Component>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Component&gt; | - Promise对象，返回目标控件对象。 |
+| Promise<Component> | - Promise对象，返回目标控件对象。 |
 
 **错误码：**
 
@@ -1273,7 +1334,9 @@ scrollToBottom(speed?: number): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-scrollToBottom(speed?: int): Promise<void>--><!--Device-Component-scrollToBottom(speed?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1287,13 +1350,13 @@ scrollToBottom(speed?: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameterverification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
@@ -1321,7 +1384,9 @@ scrollToTop(speed?: number): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Component-scrollToTop(speed?: int): Promise<void>--><!--Device-Component-scrollToTop(speed?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1335,13 +1400,13 @@ scrollToTop(speed?: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameterverification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 

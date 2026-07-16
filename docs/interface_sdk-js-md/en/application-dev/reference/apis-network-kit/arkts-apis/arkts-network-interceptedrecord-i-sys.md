@@ -4,6 +4,8 @@ Intercepted record.
 
 **Since:** 14
 
+<!--Device-netFirewall-interface InterceptedRecord--><!--Device-netFirewall-interface InterceptedRecord-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Application or service ID.
 
 **Since:** 14
 
+<!--Device-InterceptedRecord-appUid?: number--><!--Device-InterceptedRecord-appUid?: number-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Blocked domain name information.
 **Type:** string
 
 **Since:** 14
+
+<!--Device-InterceptedRecord-domain?: string--><!--Device-InterceptedRecord-domain?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -58,6 +64,8 @@ Local IP.
 
 **Since:** 14
 
+<!--Device-InterceptedRecord-localIp?: string--><!--Device-InterceptedRecord-localIp?: string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Local port.
 **Type:** number
 
 **Since:** 14
+
+<!--Device-InterceptedRecord-localPort?: number--><!--Device-InterceptedRecord-localPort?: number-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -90,6 +100,8 @@ Transport layer protocol.
 
 **Since:** 14
 
+<!--Device-InterceptedRecord-protocol?: number--><!--Device-InterceptedRecord-protocol?: number-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 **System API:** This is a system API.
@@ -105,6 +117,8 @@ Remote IP.
 **Type:** string
 
 **Since:** 14
+
+<!--Device-InterceptedRecord-remoteIp?: string--><!--Device-InterceptedRecord-remoteIp?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -122,6 +136,8 @@ Remote port.
 
 **Since:** 14
 
+<!--Device-InterceptedRecord-remotePort?: number--><!--Device-InterceptedRecord-remotePort?: number-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 **System API:** This is a system API.
@@ -137,6 +153,8 @@ Time stamp.
 **Type:** number
 
 **Since:** 14
+
+<!--Device-InterceptedRecord-time: number--><!--Device-InterceptedRecord-time: number-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 

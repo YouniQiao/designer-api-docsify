@@ -4,6 +4,8 @@ The http body stream of the request.
 
 **Since:** 12
 
+<!--Device-webview-class WebHttpBodyStream--><!--Device-webview-class WebHttpBodyStream-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -23,6 +25,8 @@ Get the current position of the data stream. Unit: bytes.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WebHttpBodyStream-getPosition(): number--><!--Device-WebHttpBodyStream-getPosition(): number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -44,6 +48,8 @@ Get the total size of the data stream. When data is chunked, always return zero.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WebHttpBodyStream-getSize(): number--><!--Device-WebHttpBodyStream-getSize(): number-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -64,13 +70,15 @@ Initialize data stream.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WebHttpBodyStream-initialize(): Promise<void>--><!--Device-WebHttpBodyStream-initialize(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise of data stream is initialized. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise of data stream is initialized. |
 
 **Error codes:**
 
@@ -90,6 +98,8 @@ Whether data stream is chunked.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WebHttpBodyStream-isChunked(): boolean--><!--Device-WebHttpBodyStream-isChunked(): boolean-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -104,12 +114,13 @@ Whether data stream is chunked.
 isEof(): boolean
 ```
 
-Whether all data stream has been consumed. For chunked uploads,
-returns false until the first read attempt.
+Whether all data stream has been consumed. For chunked uploads,returns false until the first read attempt.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WebHttpBodyStream-isEof(): boolean--><!--Device-WebHttpBodyStream-isEof(): boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -125,12 +136,13 @@ returns false until the first read attempt.
 isInMemory(): boolean
 ```
 
-Returns true if the upload data in the stream is entirely in memory, and all read requests will succeed
-synchronously. Expected to return false for chunked requests.
+Returns true if the upload data in the stream is entirely in memory, and all read requests will succeed synchronously. Expected to return false for chunked requests.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WebHttpBodyStream-isInMemory(): boolean--><!--Device-WebHttpBodyStream-isInMemory(): boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -152,6 +164,8 @@ Read the data stream to the buffer. Unit: bytes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WebHttpBodyStream-read(size: number): Promise<ArrayBuffer>--><!--Device-WebHttpBodyStream-read(size: number): Promise<ArrayBuffer>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -164,7 +178,7 @@ Read the data stream to the buffer. Unit: bytes.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Read array buffer of result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ArrayBuffer> | Read array buffer of result. |
 
 **Error codes:**
 

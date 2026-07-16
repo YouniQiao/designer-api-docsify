@@ -12,11 +12,11 @@ import { notificationManager } from '@kit.NotificationKit';
 function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a specified template is supported before using
-[NotificationTemplate](arkts-notification-notificationtemplate-i.md) to publish a notification.
-This API uses an asynchronous callback to return the result.
+Checks whether a specified template is supported before using [NotificationTemplate](arkts-notification-notificationtemplate-i.md) to publish a notification.This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-notificationManager-function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -25,7 +25,7 @@ This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | templateName | string | Yes | Template name. Currently, only **downloadTemplate** is supported. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates thatthe template is supported, and **false** indicates the opposite. If this API call fails, an error object isreturned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** indicates that the template is supported, and **false** indicates the opposite. If this API call fails, an error object is returned. |
 
 **Error codes:**
 
@@ -60,11 +60,11 @@ notificationManager.isSupportTemplate(templateName, isSupportTemplateCallback);
 function isSupportTemplate(templateName: string): Promise<boolean>
 ```
 
-Checks whether a specified template is supported before using
-[NotificationTemplate](arkts-notification-notificationtemplate-i.md) to publish a notification.
-This API uses a promise to return the result.
+Checks whether a specified template is supported before using [NotificationTemplate](arkts-notification-notificationtemplate-i.md) to publish a notification.This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-notificationManager-function isSupportTemplate(templateName: string): Promise<boolean>--><!--Device-notificationManager-function isSupportTemplate(templateName: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -78,7 +78,7 @@ This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the specifiedtemplate is supported, and **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means that the specified template is supported, and **false** means the opposite. |
 
 **Error codes:**
 

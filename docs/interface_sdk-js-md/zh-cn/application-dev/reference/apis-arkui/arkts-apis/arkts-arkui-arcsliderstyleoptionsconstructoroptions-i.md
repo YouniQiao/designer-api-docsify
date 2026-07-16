@@ -4,7 +4,15 @@ ArcSliderStyleOptions的构造信息。
 
 **起始版本：** 18
 
+<!--Device-unnamed-interface ArcSliderStyleOptionsConstructorOptions--><!--Device-unnamed-interface ArcSliderStyleOptionsConstructorOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
+
+## 导入模块
+
+```TypeScript
+import { ArcSliderLayoutOptions, ArcSliderValueOptionsConstructorOptions, ArcSliderValueOptions, ArcSliderStyleOptionsConstructorOptions, ArcSlider, ArcSliderLayoutOptionsConstructorOptions, ArcSliderOptions, ArcSliderStyleOptions, ArcSliderPosition, ArcSliderOptionsConstructorOptions } from '@kit.ArkUI';
+```
 
 ## activeTrackThickness
 
@@ -24,7 +32,9 @@ activeTrackThickness?: number
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSliderStyleOptionsConstructorOptions-activeTrackThickness?: number--><!--Device-ArcSliderStyleOptionsConstructorOptions-activeTrackThickness?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -44,7 +54,9 @@ selectedColor?: string
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSliderStyleOptionsConstructorOptions-selectedColor?: string--><!--Device-ArcSliderStyleOptionsConstructorOptions-selectedColor?: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -66,7 +78,9 @@ trackBlur?: number
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSliderStyleOptionsConstructorOptions-trackBlur?: number--><!--Device-ArcSliderStyleOptionsConstructorOptions-trackBlur?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -86,7 +100,9 @@ trackColor?: string
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSliderStyleOptionsConstructorOptions-trackColor?: string--><!--Device-ArcSliderStyleOptionsConstructorOptions-trackColor?: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -108,7 +124,9 @@ trackThickness?: number
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSliderStyleOptionsConstructorOptions-trackThickness?: number--><!--Device-ArcSliderStyleOptionsConstructorOptions-trackThickness?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 

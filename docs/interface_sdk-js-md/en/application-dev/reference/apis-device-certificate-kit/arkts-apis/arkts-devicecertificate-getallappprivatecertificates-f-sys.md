@@ -18,6 +18,8 @@ Obtains all private credentials. This API uses an asynchronous callback to retur
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
 
+<!--Device-certificateManager-function getAllAppPrivateCertificates(callback: AsyncCallback<CMResult>): void--><!--Device-certificateManager-function getAllAppPrivateCertificates(callback: AsyncCallback<CMResult>): void-End-->
+
 **System capability:** SystemCapability.Security.CertificateManager
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Obtains all private credentials. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;CMResult&gt; | Yes | Callback used to return the result. If all private credentials areobtained, **err** is **null**, and **data** is the **credentialList** attribute in the[CMResult](arkts-devicecertificate-cmresult-i.md) object. Otherwise, **err** is an errorobject. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<CMResult> | Yes | Callback used to return the result. If all private credentials are obtained, **err** is **null**, and **data** is the **credentialList** attribute in the [CMResult](arkts-devicecertificate-cmresult-i.md) object. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
@@ -76,6 +78,8 @@ Obtains all private credentials. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
 
+<!--Device-certificateManager-function getAllAppPrivateCertificates(): Promise<CMResult>--><!--Device-certificateManager-function getAllAppPrivateCertificates(): Promise<CMResult>-End-->
+
 **System capability:** SystemCapability.Security.CertificateManager
 
 **System API:** This is a system API.
@@ -84,13 +88,13 @@ Obtains all private credentials. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the result, which is the value of **credentialList** in the[CMResult](arkts-devicecertificate-cmresult-i.md) object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CMResult> | Promise used to return the result, which is the value of **credentialList** in the [CMResult](arkts-devicecertificate-cmresult-i.md) object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 

@@ -20,6 +20,8 @@ Registers the callback for remote authentication.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-userAuth-function registerRemoteAuthCallback(callback: IRemoteAuthCallback): void--><!--Device-userAuth-function registerRemoteAuthCallback(callback: IRemoteAuthCallback): void-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Registers the callback for remote authentication.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | IRemoteAuthCallback | Yes | Callback used to get remote authentication WidgetParam and return theresult |
+| callback | [IRemoteAuthCallback](arkts-userauthentication-iremoteauthcallback-i-sys.md) | Yes | Callback used to get remote authentication WidgetParam and return the result |
 
 **Error codes:**
 

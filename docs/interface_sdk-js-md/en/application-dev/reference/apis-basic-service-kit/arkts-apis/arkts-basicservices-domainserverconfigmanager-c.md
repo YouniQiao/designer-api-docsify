@@ -4,6 +4,8 @@ Provides APIs for domain server configuration and management.
 
 **Since:** 18
 
+<!--Device-osAccount-class DomainServerConfigManager--><!--Device-osAccount-class DomainServerConfigManager-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 ## Modules to Import
@@ -24,19 +26,21 @@ Adds domain server configuration. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
+<!--Device-DomainServerConfigManager-static addServerConfig(parameters: Record<string, Object>): Promise<DomainServerConfig>--><!--Device-DomainServerConfigManager-static addServerConfig(parameters: Record<string, Object>): Promise<DomainServerConfig>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameters | Record&lt;string, Object&gt; | Yes | Configuration parameters of the domain server. |
+| parameters | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Object> | Yes | Configuration parameters of the domain server. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DomainServerConfig&gt; | Promise used to return the configuration ofthe newly added domain server. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DomainServerConfig> | Promise used to return the configuration of the newly added domain server. |
 
 **Error codes:**
 
@@ -80,19 +84,21 @@ Obtains the server configuration of a domain account. This API uses a promise to
 
 **Required permissions:** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
+<!--Device-DomainServerConfigManager-static getAccountServerConfig(domainAccountInfo: DomainAccountInfo): Promise<DomainServerConfig>--><!--Device-DomainServerConfigManager-static getAccountServerConfig(domainAccountInfo: DomainAccountInfo): Promise<DomainServerConfig>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | DomainAccountInfo | Yes | Information of the domain account. |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i.md) | Yes | Information of the domain account. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DomainServerConfig&gt; | Promise used to return the domain server configuration of the account. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DomainServerConfig> | Promise used to return the domain server configuration of the account. |
 
 **Error codes:**
 
@@ -133,13 +139,15 @@ Obtains the configurations of all domain servers. This API uses a promise to ret
 
 **Required permissions:** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
+<!--Device-DomainServerConfigManager-static getAllServerConfigs(): Promise<Array<DomainServerConfig>>--><!--Device-DomainServerConfigManager-static getAllServerConfigs(): Promise<Array<DomainServerConfig>>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DomainServerConfig&gt;&gt; | Promise used to return the domain server configuration obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<DomainServerConfig>> | Promise used to return the domain server configuration obtained. |
 
 **Error codes:**
 
@@ -184,6 +192,8 @@ Obtains the domain server configuration. This API uses a promise to return the r
 
 **Required permissions:** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
+<!--Device-DomainServerConfigManager-static getServerConfig(configId: string): Promise<DomainServerConfig>--><!--Device-DomainServerConfigManager-static getServerConfig(configId: string): Promise<DomainServerConfig>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -196,7 +206,7 @@ Obtains the domain server configuration. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DomainServerConfig&gt; | Promise used to return the domain server configuration obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DomainServerConfig> | Promise used to return the domain server configuration obtained. |
 
 **Error codes:**
 
@@ -242,6 +252,8 @@ Removes domain server configuration. This API uses a promise to return the resul
 
 **Required permissions:** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
+<!--Device-DomainServerConfigManager-static removeServerConfig(configId: string): Promise<void>--><!--Device-DomainServerConfigManager-static removeServerConfig(configId: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -254,7 +266,7 @@ Removes domain server configuration. This API uses a promise to return the resul
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -298,6 +310,8 @@ Updates the domain server configuration. This API uses a promise to return the r
 
 **Required permissions:** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
+<!--Device-DomainServerConfigManager-static updateServerConfig(configId: string, parameters: Record<string, Object>): Promise<DomainServerConfig>--><!--Device-DomainServerConfigManager-static updateServerConfig(configId: string, parameters: Record<string, Object>): Promise<DomainServerConfig>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
@@ -305,13 +319,13 @@ Updates the domain server configuration. This API uses a promise to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | configId | string | Yes | Server configuration ID. |
-| parameters | Record&lt;string, Object&gt; | Yes | Configuration parameters of the domain server. |
+| parameters | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Object> | Yes | Configuration parameters of the domain server. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DomainServerConfig&gt; | Promise used to return the updated domain server configuration. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DomainServerConfig> | Promise used to return the updated domain server configuration. |
 
 **Error codes:**
 

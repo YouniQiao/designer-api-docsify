@@ -20,14 +20,16 @@ Removes applications that hide launcher icons.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function removeHideLauncherIcon(admin: Want, bundleNames: Array<string>): void--><!--Device-applicationManager-function removeHideLauncherIcon(admin: Want, bundleNames: Array<string>): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | admin indicates the enterprise admin extension ability information. |
-| bundleNames | Array&lt;string&gt; | Yes | bundleNames indicates the bundle name list of the applications. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | admin indicates the enterprise admin extension ability information. |
+| bundleNames | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | bundleNames indicates the bundle name list of the applications. |
 
 **Error codes:**
 

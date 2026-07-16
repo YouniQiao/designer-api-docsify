@@ -8,6 +8,8 @@ Describes the parameters of the of the Gatt client's characteristic write reques
 
 **Substitutes:** CharacteristicWriteRequest
 
+<!--Device-bluetooth-interface CharacteristicWriteReq--><!--Device-bluetooth-interface CharacteristicWriteReq-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -32,6 +34,8 @@ The UUID of a CharacteristicWriteReq instance
 
 **Substitutes:** characteristicUuid
 
+<!--Device-CharacteristicWriteReq-characteristicUuid: string--><!--Device-CharacteristicWriteReq-characteristicUuid: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## deviceId
@@ -49,6 +53,8 @@ Indicates the address of the client that initiates the write request
 **Deprecated since:** 9
 
 **Substitutes:** deviceId
+
+<!--Device-CharacteristicWriteReq-deviceId: string--><!--Device-CharacteristicWriteReq-deviceId: string-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -68,6 +74,8 @@ Whether this request should be pending for later operation
 
 **Substitutes:** isPrep
 
+<!--Device-CharacteristicWriteReq-isPrep: boolean--><!--Device-CharacteristicWriteReq-isPrep: boolean-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## needRsp
@@ -85,6 +93,8 @@ Whether the remote client need a response
 **Deprecated since:** 9
 
 **Substitutes:** needRsp
+
+<!--Device-CharacteristicWriteReq-needRsp: boolean--><!--Device-CharacteristicWriteReq-needRsp: boolean-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -104,6 +114,8 @@ Indicates the byte offset of the start position for writing characteristic value
 
 **Substitutes:** offset
 
+<!--Device-CharacteristicWriteReq-offset: number--><!--Device-CharacteristicWriteReq-offset: number-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## serviceUuid
@@ -121,6 +133,8 @@ The UUID of the service to which the characteristic belongs
 **Deprecated since:** 9
 
 **Substitutes:** serviceUuid
+
+<!--Device-CharacteristicWriteReq-serviceUuid: string--><!--Device-CharacteristicWriteReq-serviceUuid: string-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -140,6 +154,8 @@ The Id of the write request
 
 **Substitutes:** transId
 
+<!--Device-CharacteristicWriteReq-transId: number--><!--Device-CharacteristicWriteReq-transId: number-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## value
@@ -157,6 +173,8 @@ Indicates the value to be written
 **Deprecated since:** 9
 
 **Substitutes:** value
+
+<!--Device-CharacteristicWriteReq-value: ArrayBuffer--><!--Device-CharacteristicWriteReq-value: ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

@@ -6,6 +6,8 @@ Defines default close icon.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class ChipV2CloseIcon extends ChipV2Accessibility--><!--Device-unnamed-export declare class ChipV2CloseIcon extends ChipV2Accessibility-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,13 +30,15 @@ The constructor of ChipV2CloseIcon
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2CloseIcon-constructor(config: ChipV2CloseConfig)--><!--Device-ChipV2CloseIcon-constructor(config: ChipV2CloseConfig)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | ChipV2CloseConfig | Yes | config of close icon |
+| config | [ChipV2CloseConfig](arkts-arkui-chipv2closeconfig-i.md) | Yes | config of close icon |
 
 ## fontSize
 
@@ -51,6 +55,8 @@ Set font size for the close icon.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipV2CloseIcon-public fontSize?: LengthMetrics--><!--Device-ChipV2CloseIcon-public fontSize?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

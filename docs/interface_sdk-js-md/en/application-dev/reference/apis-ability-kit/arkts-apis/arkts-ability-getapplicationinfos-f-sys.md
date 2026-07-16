@@ -12,8 +12,7 @@ import { bundle } from '@kit.AbilityKit';
 function getApplicationInfos(bundleFlags: number, userId: number, callback: AsyncCallback<Array<ApplicationInfo>>): void
 ```
 
-Obtains information about all installed apps for a specified user. This API uses an asynchronous
-callback to return the result.
+Obtains information about all installed apps for a specified user. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -23,6 +22,8 @@ callback to return the result.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundle-function getApplicationInfos(bundleFlags: number, userId: number, callback: AsyncCallback<Array<ApplicationInfo>>): void--><!--Device-bundle-function getApplicationInfos(bundleFlags: number, userId: number, callback: AsyncCallback<Array<ApplicationInfo>>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **System API:** This is a system API.
@@ -31,9 +32,9 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlags | number | Yes | Flag used to specify the information contained in the returnedapplication information object. Value range: see the application information related flagsin BundleFlag. |
+| bundleFlags | number | Yes | Flag used to specify the information contained in the returned application information object. Value range: see the application information related flags in BundleFlag. |
 | userId | number | Yes | User ID. Value range: greater than or equal to 0. |
-| callback | AsyncCallback&lt;Array&lt;ApplicationInfo&gt;&gt; | Yes | Callback used to return the result. IfgetApplicationInfos is successful, **err** is **undefined**, and the list of app information asthe input parameter at program startup. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<ApplicationInfo>> | Yes | Callback used to return the result. If getApplicationInfos is successful, **err** is **undefined**, and the list of app information as the input parameter at program startup. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -60,8 +61,7 @@ bundle.getApplicationInfos(bundleFlags, userId, (err, data) => {
 function getApplicationInfos(bundleFlags: number, callback: AsyncCallback<Array<ApplicationInfo>>): void
 ```
 
-Obtains information about installed apps for the user to which the caller belongs.
-This API uses an asynchronous callback to return the result.
+Obtains information about installed apps for the user to which the caller belongs.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -71,6 +71,8 @@ This API uses an asynchronous callback to return the result.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundle-function getApplicationInfos(bundleFlags: number, callback: AsyncCallback<Array<ApplicationInfo>>): void--><!--Device-bundle-function getApplicationInfos(bundleFlags: number, callback: AsyncCallback<Array<ApplicationInfo>>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **System API:** This is a system API.
@@ -79,8 +81,8 @@ This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlags | number | Yes | Flag used to specify the information contained in the returnedapplication information object. Value range: see the application information related flagsin BundleFlag. |
-| callback | AsyncCallback&lt;Array&lt;ApplicationInfo&gt;&gt; | Yes | Callback used to return the result. IfgetApplicationInfos is successful, **err** is **undefined**, and the list ofapp information as the input parameter at program startup. Otherwise, **err** is an error object. |
+| bundleFlags | number | Yes | Flag used to specify the information contained in the returned application information object. Value range: see the application information related flags in BundleFlag. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<ApplicationInfo>> | Yes | Callback used to return the result. If getApplicationInfos is successful, **err** is **undefined**, and the list of app information as the input parameter at program startup. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -116,6 +118,8 @@ Obtains information about all installed apps for a specified user. This API uses
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundle-function getApplicationInfos(bundleFlags: number, userId?: number): Promise<Array<ApplicationInfo>>--><!--Device-bundle-function getApplicationInfos(bundleFlags: number, userId?: number): Promise<Array<ApplicationInfo>>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **System API:** This is a system API.
@@ -124,14 +128,14 @@ Obtains information about all installed apps for a specified user. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlags | number | Yes | Flag used to specify the information contained in the returned applicationinformation object. Value range: see the application information related flags in BundleFlag. |
+| bundleFlags | number | Yes | Flag used to specify the information contained in the returned application information object. Value range: see the application information related flags in BundleFlag. |
 | userId | number | No | User ID. Default value: the user to which the caller belongs.Value range: greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ApplicationInfo&gt;&gt; | Promise used to return the list of app informationwhen obtained successfully. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ApplicationInfo>> | Promise used to return the list of app information when obtained successfully. |
 
 **Example**
 

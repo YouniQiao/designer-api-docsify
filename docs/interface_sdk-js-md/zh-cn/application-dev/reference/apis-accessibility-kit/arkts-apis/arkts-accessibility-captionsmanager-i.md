@@ -1,11 +1,18 @@
 # CaptionsManager
 
-字幕配置管理，在调用CaptionsManager的方法前，需要先通过 [accessibility.getCaptionsManager()](arkts-accessibility-getcaptionsmanager-f.md#getcaptionsmanager-1)获取
-CaptionsManager实例。
+字幕配置管理，在调用CaptionsManager的方法前，需要先通过 [accessibility.getCaptionsManager()](arkts-accessibility-getcaptionsmanager-f.md#getcaptionsmanager-1)获取CaptionsManager实例。
 
 **起始版本：** 8
 
+<!--Device-accessibility-interface CaptionsManager--><!--Device-accessibility-interface CaptionsManager-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
+
+## 导入模块
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+```
 
 ## off('enableChange')
 
@@ -19,6 +26,8 @@ off(type: 'enableChange', callback?: Callback<boolean>): void
 
 **废弃版本：** 12
 
+<!--Device-CaptionsManager-off(type: 'enableChange', callback?: Callback<boolean>): void--><!--Device-CaptionsManager-off(type: 'enableChange', callback?: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
 **参数：**
@@ -26,7 +35,7 @@ off(type: 'enableChange', callback?: Callback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'enableChange' | 是 | 取消监听的事件名，固定为‘enableChange’，即字幕配置启用状态变化事件。 |
-| callback | Callback&lt;boolean&gt; | 否 | 回调函数，取消指定callback对象的事件响应。需与[on('enableChange')](arkts-accessibility-captionsmanager-i.md#on-1)的callback一致。缺省时，表示注销所有已注册事件。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | 否 | 回调函数，取消指定callback对象的事件响应。需与[on('enableChange')](arkts-accessibility-captionsmanager-i.md#on-1)的callback一致。缺省时，表示注销所有已注册事件。 |
 
 **错误码：**
 
@@ -77,6 +86,8 @@ off(type: 'styleChange', callback?: Callback<CaptionsStyle>): void
 
 **废弃版本：** 12
 
+<!--Device-CaptionsManager-off(type: 'styleChange', callback?: Callback<CaptionsStyle>): void--><!--Device-CaptionsManager-off(type: 'styleChange', callback?: Callback<CaptionsStyle>): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
 **参数：**
@@ -84,7 +95,7 @@ off(type: 'styleChange', callback?: Callback<CaptionsStyle>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'styleChange' | 是 | 取消监听的事件名，固定为‘styleChange’，即字幕风格变化事件。 |
-| callback | Callback&lt;CaptionsStyle&gt; | 否 | 回调函数，取消指定callback对象的事件响应。需与[on('styleChange')](arkts-accessibility-captionsmanager-i.md#on-2)的callback一致。缺省时，表示注销所有已注册事件。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CaptionsStyle> | 否 | 回调函数，取消指定callback对象的事件响应。需与[on('styleChange')](arkts-accessibility-captionsmanager-i.md#on-2)的callback一致。缺省时，表示注销所有已注册事件。 |
 
 **错误码：**
 
@@ -131,17 +142,19 @@ on(type: 'enableChange', callback: Callback<boolean>): void
 
 监听字幕配置启用状态变化事件，使用callback异步回调。
 
-> **说明：**
->
-> - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
->
-> - 调用此方法后，务必在对象生命周期结束前使用
-> [off('enableChange')](arkts-accessibility-captionsmanager-i.md#off-1)
+> **说明：**  
+>  
+> - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。  
+>  
+> - 调用此方法后，务必在对象生命周期结束前使用  
+> [off('enableChange')](arkts-accessibility-captionsmanager-i.md#off-1)  
 > 取消监听，否则可能会导致崩溃。
 
 **起始版本：** 8
 
 **废弃版本：** 12
+
+<!--Device-CaptionsManager-on(type: 'enableChange', callback: Callback<boolean>): void--><!--Device-CaptionsManager-on(type: 'enableChange', callback: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
@@ -150,7 +163,7 @@ on(type: 'enableChange', callback: Callback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'enableChange' | 是 | 监听的事件名，固定为‘enableChange’，即字幕配置启用状态变化事件。 |
-| callback | Callback&lt;boolean&gt; | 是 | 回调函数，在启用状态变化时将状态通过此函数进行通知。返回true表示字幕配置开启，返回false表示字幕配置关闭。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | 是 | 回调函数，在启用状态变化时将状态通过此函数进行通知。返回true表示字幕配置开启，返回false表示字幕配置关闭。 |
 
 **错误码：**
 
@@ -192,17 +205,19 @@ on(type: 'styleChange', callback: Callback<CaptionsStyle>): void
 
 监听字幕风格变化事件，使用callback异步回调。
 
-> **说明：**
->
-> - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
->
-> - 调用此方法后，务必在对象生命周期结束前使用
-> [off('styleChange')](arkts-accessibility-captionsmanager-i.md#off-2)
+> **说明：**  
+>  
+> - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。  
+>  
+> - 调用此方法后，务必在对象生命周期结束前使用  
+> [off('styleChange')](arkts-accessibility-captionsmanager-i.md#off-2)  
 > 取消监听，否则可能会导致崩溃。
 
 **起始版本：** 8
 
 **废弃版本：** 12
+
+<!--Device-CaptionsManager-on(type: 'styleChange', callback: Callback<CaptionsStyle>): void--><!--Device-CaptionsManager-on(type: 'styleChange', callback: Callback<CaptionsStyle>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
@@ -211,7 +226,7 @@ on(type: 'styleChange', callback: Callback<CaptionsStyle>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'styleChange' | 是 | 监听的事件名，固定为‘styleChange’，即字幕风格变化事件。 |
-| callback | Callback&lt;CaptionsStyle&gt; | 是 | 回调函数，在字幕风格变化时通过此函数进行通知。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CaptionsStyle> | 是 | 回调函数，在字幕风格变化时通过此函数进行通知。 |
 
 **错误码：**
 
@@ -257,9 +272,11 @@ enabled: boolean
 
 **起始版本：** 8
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CaptionsManager-enabled: boolean--><!--Device-CaptionsManager-enabled: boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
@@ -275,9 +292,11 @@ style: CaptionsStyle
 
 **起始版本：** 8
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CaptionsManager-style: CaptionsStyle--><!--Device-CaptionsManager-style: CaptionsStyle-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 

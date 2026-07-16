@@ -4,6 +4,8 @@ Provides touch information of the same-layer tag.
 
 **Since:** 11
 
+<!--Device-unnamed-declare interface NativeEmbedTouchInfo--><!--Device-unnamed-declare interface NativeEmbedTouchInfo-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## embedId
@@ -19,6 +21,8 @@ Unique ID of the same-layer tag.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NativeEmbedTouchInfo-embedId?: string--><!--Device-NativeEmbedTouchInfo-embedId?: string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -36,6 +40,8 @@ Gesture event consumption result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NativeEmbedTouchInfo-result?: EventResult--><!--Device-NativeEmbedTouchInfo-result?: EventResult-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## touchEvent
@@ -51,6 +57,8 @@ Touch action information.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NativeEmbedTouchInfo-touchEvent?: TouchEvent--><!--Device-NativeEmbedTouchInfo-touchEvent?: TouchEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

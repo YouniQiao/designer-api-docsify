@@ -4,7 +4,15 @@
 
 **起始版本：** 7
 
+<!--Device-contact-class Name--><!--Device-contact-class Name-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
+
+## 导入模块
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+```
 
 ## familyName
 
@@ -18,7 +26,9 @@ familyName?: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Name-familyName?: string--><!--Device-Name-familyName?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -34,7 +44,9 @@ familyNamePhonetic?: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Name-familyNamePhonetic?: string--><!--Device-Name-familyNamePhonetic?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -50,7 +62,9 @@ fullName: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Name-fullName: string--><!--Device-Name-fullName: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -66,7 +80,9 @@ givenName?: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Name-givenName?: string--><!--Device-Name-givenName?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -82,7 +98,9 @@ givenNamePhonetic?: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Name-givenNamePhonetic?: string--><!--Device-Name-givenNamePhonetic?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -98,7 +116,9 @@ hasName?: boolean
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Name-hasName?: boolean--><!--Device-Name-hasName?: boolean-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -114,7 +134,9 @@ middleName?: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Name-middleName?: string--><!--Device-Name-middleName?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -130,7 +152,9 @@ middleNamePhonetic?: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Name-middleNamePhonetic?: string--><!--Device-Name-middleNamePhonetic?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -146,7 +170,9 @@ namePrefix?: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Name-namePrefix?: string--><!--Device-Name-namePrefix?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -162,7 +188,9 @@ nameSuffix?: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Name-nameSuffix?: string--><!--Device-Name-nameSuffix?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 

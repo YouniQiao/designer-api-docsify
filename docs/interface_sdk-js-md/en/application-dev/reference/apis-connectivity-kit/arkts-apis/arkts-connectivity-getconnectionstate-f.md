@@ -20,19 +20,21 @@ Obtains the connection status for data transfer.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-dataTransfer-function getConnectionState(params: ConnectionStateParams): ConnectionState--><!--Device-dataTransfer-function getConnectionState(params: ConnectionStateParams): ConnectionState-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | ConnectionStateParams | Yes | Parameters used to obtain the connection status. |
+| params | [ConnectionStateParams](arkts-connectivity-connectionstateparams-i.md) | Yes | Parameters used to obtain the connection status. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ConnectionState | Returns the connection status for data transfer. |
+| [ConnectionState](arkts-connectivity-connectionstate-t.md) | Returns the connection status for data transfer. |
 
 **Error codes:**
 

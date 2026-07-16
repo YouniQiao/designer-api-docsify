@@ -4,6 +4,8 @@ Provides gauge options.
 
 **Since:** 18
 
+<!--Device-unnamed-interface GaugeOptions--><!--Device-unnamed-interface GaugeOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## max
@@ -30,6 +32,8 @@ The values of **max** and **min** can be negative numbers.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-GaugeOptions-max?: number--><!--Device-GaugeOptions-max?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## min
@@ -50,6 +54,8 @@ Default value: **0**
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-GaugeOptions-min?: number--><!--Device-GaugeOptions-min?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -58,8 +64,7 @@ Default value: **0**
 value: number
 ```
 
-Current value of the gauge, that is, the position to which the indicator points in the gauge. It is used as the
-initial value of the gauge when it is created.
+Current value of the gauge, that is, the position to which the indicator points in the gauge. It is used as the initial value of the gauge when it is created.
 
 Default value: **0**
 
@@ -74,6 +79,8 @@ If the value is not within the range defined by the **min** and **max** paramete
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-GaugeOptions-value: number--><!--Device-GaugeOptions-value: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,5 +1,11 @@
 # createHash
 
+## 导入模块
+
+```TypeScript
+import { hash } from '@kit.CoreFileKit';
+```
+
 ## createHash
 
 ```TypeScript
@@ -9,6 +15,8 @@ function createHash(algorithm: string): HashStream
 创建并返回 HashStream 对象，该对象可用于使用给定的 algorithm 生成哈希摘要。
 
 **起始版本：** 12
+
+<!--Device-hash-function createHash(algorithm: string): HashStream--><!--Device-hash-function createHash(algorithm: string): HashStream-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -22,7 +30,7 @@ function createHash(algorithm: string): HashStream
 
 | 类型 | 说明 |
 | --- | --- |
-| HashStream | HashStream 类的实例。 |
+| [HashStream](arkts-corefile-hashstream-c.md) | HashStream 类的实例。 |
 
 **错误码：**
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface WriteStreamOptions--><!--Device-unnamed-export interface WriteStreamOptions-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+```
 
 ## mode
 
@@ -40,6 +48,8 @@ mode?: number
 
 **起始版本：** 12
 
+<!--Device-WriteStreamOptions-mode?: number--><!--Device-WriteStreamOptions-mode?: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## start
@@ -53,6 +63,8 @@ start?: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-WriteStreamOptions-start?: number--><!--Device-WriteStreamOptions-start?: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

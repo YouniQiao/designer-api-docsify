@@ -10,6 +10,8 @@ Called to get the information presented on the user authentication page for remo
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-userAuth-type WidgetParamCallback = (challenge: Uint8Array) => WidgetParam--><!--Device-userAuth-type WidgetParamCallback = (challenge: Uint8Array) => WidgetParam-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **System API:** This is a system API.

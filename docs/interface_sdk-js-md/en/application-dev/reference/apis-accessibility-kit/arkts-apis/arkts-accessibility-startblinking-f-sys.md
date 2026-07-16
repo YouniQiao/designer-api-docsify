@@ -20,6 +20,8 @@ Enable the flash or screen to blink for flash alert.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-config-function startBlinking(mode: BlinkingMode, scenario: BlinkingScenario): BlinkResultCode--><!--Device-config-function startBlinking(mode: BlinkingMode, scenario: BlinkingScenario): BlinkResultCode-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -28,14 +30,14 @@ Enable the flash or screen to blink for flash alert.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | BlinkingMode | Yes | Indicates the mode of screen flickering or flash light flashing. |
-| scenario | BlinkingScenario | Yes | Indicates the scenario that blinking is triggered. |
+| mode | [BlinkingMode](arkts-accessibility-blinkingmode-e-sys.md) | Yes | Indicates the mode of screen flickering or flash light flashing. |
+| scenario | [BlinkingScenario](arkts-accessibility-blinkingscenario-e-sys.md) | Yes | Indicates the scenario that blinking is triggered. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| BlinkResultCode | Returns the result code. |
+| [BlinkResultCode](arkts-accessibility-blinkresultcode-e-sys.md) | Returns the result code. |
 
 **Error codes:**
 

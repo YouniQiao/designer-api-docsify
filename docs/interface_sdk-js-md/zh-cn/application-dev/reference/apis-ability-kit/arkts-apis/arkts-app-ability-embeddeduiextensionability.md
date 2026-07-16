@@ -1,5 +1,11 @@
 # @ohos.app.ability.EmbeddedUIExtensionAbility
 
+## 导入模块
+
+```TypeScript
+import { EmbeddedUIExtensionAbility } from '@kit.AbilityKit';
+```
+
 ## 汇总
 
 ### 类

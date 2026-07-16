@@ -1,5 +1,11 @@
 # getAttribute
 
+## 导入模块
+
+```TypeScript
+import { serialManager } from '@kit.BasicServicesKit';
+```
+
 ## getAttribute
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getAttribute(portId: number): Readonly<SerialAttribute>
 获取指定串口的配置参数。
 
 **起始版本：** 19
+
+<!--Device-serialManager-function getAttribute(portId: int): Readonly<SerialAttribute>--><!--Device-serialManager-function getAttribute(portId: int): Readonly<SerialAttribute>-End-->
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -22,7 +30,7 @@ function getAttribute(portId: number): Readonly<SerialAttribute>
 
 | 类型 | 说明 |
 | --- | --- |
-| Readonly&lt;SerialAttribute&gt; | 返回串口的配置参数。 |
+| Readonly<SerialAttribute> | 返回串口的配置参数。 |
 
 **错误码：**
 

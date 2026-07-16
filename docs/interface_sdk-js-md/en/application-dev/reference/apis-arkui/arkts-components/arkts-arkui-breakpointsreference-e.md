@@ -4,6 +4,8 @@ Breakpoint reference of the grid container component.
 
 **Since:** 9
 
+<!--Device-unnamed-declare enum BreakpointsReference--><!--Device-unnamed-declare enum BreakpointsReference-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## WindowSize
@@ -20,6 +22,8 @@ The window is used as a reference.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-BreakpointsReference-WindowSize--><!--Device-BreakpointsReference-WindowSize-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ComponentSize
@@ -35,6 +39,8 @@ The container is used as a reference.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-BreakpointsReference-ComponentSize--><!--Device-BreakpointsReference-ComponentSize-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

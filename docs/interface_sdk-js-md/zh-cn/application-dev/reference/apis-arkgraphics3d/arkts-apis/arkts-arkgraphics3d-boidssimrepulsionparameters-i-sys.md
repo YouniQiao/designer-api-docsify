@@ -4,6 +4,8 @@ Boids模拟斥力场参数。
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-export interface BoidsSimRepulsionParameters--><!--Device-unnamed-export interface BoidsSimRepulsionParameters-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -22,6 +24,8 @@ accelerationMag?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BoidsSimRepulsionParameters-accelerationMag?: double--><!--Device-BoidsSimRepulsionParameters-accelerationMag?: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -39,6 +43,8 @@ radius?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BoidsSimRepulsionParameters-radius?: double--><!--Device-BoidsSimRepulsionParameters-radius?: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

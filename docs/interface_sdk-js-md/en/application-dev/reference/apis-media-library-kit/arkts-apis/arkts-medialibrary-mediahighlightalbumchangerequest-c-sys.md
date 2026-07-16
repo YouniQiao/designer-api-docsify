@@ -1,11 +1,12 @@
 # MediaHighlightAlbumChangeRequest (System API)
 
-Provides APIs for managing the media album change request. It inherits from
-[MediaAnalysisAlbumChangeRequest](arkts-medialibrary-mediaanalysisalbumchangerequest-c-sys.md).
+Provides APIs for managing the media album change request. It inherits from [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-mediaanalysisalbumchangerequest-c-sys.md).
 
 **Inheritance/Implementation:** MediaHighlightAlbumChangeRequest extends [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-mediaanalysisalbumchangerequest-c-sys.md)
 
 **Since:** 21
+
+<!--Device-photoAccessHelper-class MediaHighlightAlbumChangeRequest extends MediaAnalysisAlbumChangeRequest--><!--Device-photoAccessHelper-class MediaHighlightAlbumChangeRequest extends MediaAnalysisAlbumChangeRequest-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -27,6 +28,8 @@ Constructor.
 
 **Since:** 21
 
+<!--Device-MediaHighlightAlbumChangeRequest-constructor(album: Album)--><!--Device-MediaHighlightAlbumChangeRequest-constructor(album: Album)-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -35,7 +38,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| album | Album | Yes | **Highlights** album. |
+| album | [Album](arkts-medialibrary-album-i-sys.md) | Yes | **Highlights** album. |
 
 **Error codes:**
 
@@ -82,6 +85,8 @@ Sets the specified attribute value in the highlights album.
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-MediaHighlightAlbumChangeRequest-setHighlightAttribute(attribute: HighlightAlbumChangeAttribute, value: string): void--><!--Device-MediaHighlightAlbumChangeRequest-setHighlightAttribute(attribute: HighlightAlbumChangeAttribute, value: string): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -90,8 +95,8 @@ Sets the specified attribute value in the highlights album.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| attribute | HighlightAlbumChangeAttribute | Yes | Attribute to set. |
-| value | string | Yes | Value to set for the attribute.<br>When **attribute** is **IS_VIEWED** or **IS_FAVORITE**, the value is **0** or **1**.When **attribute** is **NOTIFICATION_TIME**, the value is anumeric string of a maximum of 8 bytes, for example, **12345678**. |
+| attribute | [HighlightAlbumChangeAttribute](arkts-medialibrary-highlightalbumchangeattribute-e-sys.md) | Yes | Attribute to set. |
+| value | string | Yes | Value to set for the attribute.<br>When **attribute** is **IS_VIEWED** or **IS_FAVORITE**, the value is **0** or **1**.When **attribute** is **NOTIFICATION_TIME**, the value is a numeric string of a maximum of 8 bytes, for example, **12345678**. |
 
 **Error codes:**
 

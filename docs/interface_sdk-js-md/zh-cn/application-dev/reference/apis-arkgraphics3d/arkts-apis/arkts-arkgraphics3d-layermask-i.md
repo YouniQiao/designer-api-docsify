@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface LayerMask--><!--Device-unnamed-export interface LayerMask-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## getEnabled
@@ -15,6 +17,8 @@ getEnabled(index: number): boolean
 获取图层掩码是否启用.
 
 **起始版本：** 12
+
+<!--Device-LayerMask-getEnabled(index: int): boolean--><!--Device-LayerMask-getEnabled(index: int): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -39,6 +43,8 @@ setEnabled(index: number, enabled: boolean): void
 设置图层掩码是否启用.
 
 **起始版本：** 12
+
+<!--Device-LayerMask-setEnabled(index: int, enabled: boolean): void--><!--Device-LayerMask-setEnabled(index: int, enabled: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

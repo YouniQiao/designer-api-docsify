@@ -20,6 +20,8 @@ Get the encrypting progress.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-encryptedVolumeManager-function getCryptProgressById(volumeId: string): Promise<int>--><!--Device-encryptedVolumeManager-function getCryptProgressById(volumeId: string): Promise<int>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -34,7 +36,7 @@ Get the encrypting progress.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | return Promise |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | return Promise |
 
 **Error codes:**
 

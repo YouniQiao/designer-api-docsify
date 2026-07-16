@@ -4,6 +4,8 @@ Defines the application account manager, which is used to manage account informa
 
 **Since:** 7
 
+<!--Device-appAccount-interface AppAccountManager--><!--Device-appAccount-interface AppAccountManager-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 ## Modules to Import
@@ -20,10 +22,10 @@ addAccount(name: string, callback: AsyncCallback<void>): void
 
 Adds an application account with the given name. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [createAccount](arkts-basicservices-appaccountmanager-i.md#createaccount-1)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [createAccount](arkts-basicservices-appaccountmanager-i.md#createaccount-1)  
 > instead.
 
 **Since:** 7
@@ -32,6 +34,8 @@ Adds an application account with the given name. This API uses an asynchronous c
 
 **Substitutes:** createAccount(name:
 
+<!--Device-AppAccountManager-addAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-addAccount(name: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -39,7 +43,7 @@ Adds an application account with the given name. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result.If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -58,13 +62,12 @@ appAccountManager.addAccount('WangWu', (err: BusinessError) => {
 addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void
 ```
 
-Adds an application account name and additional information. This API uses an asynchronous callback to return the
-result.
+Adds an application account name and additional information. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [createAccount](arkts-basicservices-appaccountmanager-i.md#createaccount-2)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [createAccount](arkts-basicservices-appaccountmanager-i.md#createaccount-2)  
 > instead.
 
 **Since:** 7
@@ -72,6 +75,8 @@ result.
 **Deprecated since:** 9
 
 **Substitutes:** createAccount(name:
+
+<!--Device-AppAccountManager-addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -81,7 +86,7 @@ result.
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | extraInfo | string | Yes | Additional information (information that can be converted to the string type).It cannot contain sensitive information, such as the application account password and token. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result.If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -102,9 +107,9 @@ addAccount(name: string, extraInfo?: string): Promise<void>
 
 Adds an application account name and additional information. This API uses a promise to return the result.
 
-> **NOTE**
-> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [createAccount](arkts-basicservices-appaccountmanager-i.md#createaccount-3)
+> **NOTE**  
+> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [createAccount](arkts-basicservices-appaccountmanager-i.md#createaccount-3)  
 > instead.
 
 **Since:** 7
@@ -113,6 +118,8 @@ Adds an application account name and additional information. This API uses a pro
 
 **Substitutes:** createAccount(name:
 
+<!--Device-AppAccountManager-addAccount(name: string, extraInfo?: string): Promise<void>--><!--Device-AppAccountManager-addAccount(name: string, extraInfo?: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -120,13 +127,13 @@ Adds an application account name and additional information. This API uses a pro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| extraInfo | string | No | Additional information (information that can be converted to the string type).<br>The additional information cannot be sensitive information (such as the password and token)of the application account. <br>By default, no value is passed, which means no additional informationneeds to be added for the account. |
+| extraInfo | string | No | Additional information (information that can be converted to the string type).<br>The additional information cannot be sensitive information (such as the password and token)of the application account. <br>By default, no value is passed, which means no additional information needs to be added for the account. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -152,13 +159,12 @@ addAccountImplicitly(
     ): void
 ```
 
-Adds an application account implicitly based on the specified owner. This API uses an asynchronous callback to
-return the result.
+Adds an application account implicitly based on the specified owner. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [createAccountImplicitly](arkts-basicservices-appaccountmanager-i.md#createaccountimplicitly-1)
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [createAccountImplicitly](arkts-basicservices-appaccountmanager-i.md#createaccountimplicitly-1)  
 > instead.
 
 **Since:** 8
@@ -166,6 +172,18 @@ return the result.
 **Deprecated since:** 9
 
 **Substitutes:** createAccountImplicitly(owner:
+
+<!--Device-AppAccountManager-addAccountImplicitly(
+      owner: string,
+      authType: string,
+      options: { [key: string]: any },
+      callback: AuthenticatorCallback
+    ): void--><!--Device-AppAccountManager-addAccountImplicitly(
+      owner: string,
+      authType: string,
+      options: { [key: string]: any },
+      callback: AuthenticatorCallback
+    ): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -176,7 +194,7 @@ return the result.
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application.The value cannot exceed 1024 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | options | { [key: string]: any } | Yes | Options for the authentication, which can be set as required. |
-| callback | AuthenticatorCallback | Yes | Authenticator callback used to return the result. |
+| callback | [AuthenticatorCallback](arkts-basicservices-authenticatorcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 **Example**
 
@@ -230,6 +248,8 @@ Authenticates an application account. This API uses an asynchronous callback to 
 
 **Since:** 9
 
+<!--Device-AppAccountManager-auth(name: string, owner: string, authType: string, callback: AuthCallback): void--><!--Device-AppAccountManager-auth(name: string, owner: string, authType: string, callback: AuthCallback): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -239,7 +259,7 @@ Authenticates an application account. This API uses an asynchronous callback to 
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application.The value cannot exceed 1024 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| callback | AuthCallback | Yes | Authenticator callback used to return the result. |
+| callback | [AuthCallback](arkts-basicservices-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 **Error codes:**
 
@@ -316,6 +336,20 @@ Authenticates an application account. This API uses an asynchronous callback to 
 
 **Since:** 9
 
+<!--Device-AppAccountManager-auth(
+      name: string,
+      owner: string,
+      authType: string,
+      options: Record<string, Object>,
+      callback: AuthCallback
+    ): void--><!--Device-AppAccountManager-auth(
+      name: string,
+      owner: string,
+      authType: string,
+      options: Record<string, Object>,
+      callback: AuthCallback
+    ): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -325,8 +359,8 @@ Authenticates an application account. This API uses an asynchronous callback to 
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application.The value cannot exceed 1024 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| options | Record&lt;string, Object&gt; | Yes | Options for the authentication. |
-| callback | AuthCallback | Yes | Authenticator callback used to return the result. |
+| options | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Object> | Yes | Options for the authentication. |
+| callback | [AuthCallback](arkts-basicservices-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 **Error codes:**
 
@@ -404,10 +438,10 @@ authenticate(
 
 Authenticates an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [auth](arkts-basicservices-appaccountmanager-i.md#auth-1)
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [auth](arkts-basicservices-appaccountmanager-i.md#auth-1)  
 > instead.
 
 **Since:** 8
@@ -415,6 +449,20 @@ Authenticates an application account. This API uses an asynchronous callback to 
 **Deprecated since:** 9
 
 **Substitutes:** auth(name:
+
+<!--Device-AppAccountManager-authenticate(
+      name: string,
+      owner: string,
+      authType: string,
+      options: { [key: string]: any },
+      callback: AuthenticatorCallback
+    ): void--><!--Device-AppAccountManager-authenticate(
+      name: string,
+      owner: string,
+      authType: string,
+      options: { [key: string]: any },
+      callback: AuthenticatorCallback
+    ): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -426,7 +474,7 @@ Authenticates an application account. This API uses an asynchronous callback to 
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application.The value cannot exceed 1024 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | options | { [key: string]: any } | Yes | Options for the authentication. |
-| callback | AuthenticatorCallback | Yes | Authenticator callback used to return the result. |
+| callback | [AuthenticatorCallback](arkts-basicservices-authenticatorcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 **Example**
 
@@ -476,10 +524,11 @@ struct Index {
 checkAccountLabels(name: string, owner: string, labels: Array<string>, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether an application account has specific labels. This API uses an asynchronous callback to return the
-result. The labels are checked by the authenticator of the target application.
+Checks whether an application account has specific labels. This API uses an asynchronous callback to return the result. The labels are checked by the authenticator of the target application.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -489,8 +538,8 @@ result. The labels are checked by the authenticator of the target application.
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application.The value cannot exceed 1024 characters. |
-| labels | Array&lt;string&gt; | Yes | Labels to check. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** can be **true** or **false**.The value **true** means the application account has the labels; the value **false** means the opposite.If the operation fails, **err** is an error object. |
+| labels | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Labels to check. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** can be **true** or **false**.The value **true** means the application account has the labels; the value **false** means the opposite.If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -532,10 +581,11 @@ try {
 checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<boolean>
 ```
 
-Checks whether an application account has specific labels. This API uses a promise to return the result. The
-labels are checked by the authenticator of the target application.
+Checks whether an application account has specific labels. This API uses a promise to return the result. The labels are checked by the authenticator of the target application.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<boolean>--><!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -545,13 +595,13 @@ labels are checked by the authenticator of the target application.
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application.The value cannot exceed 1024 characters. |
-| labels | Array&lt;string&gt; | Yes | Labels to check. |
+| labels | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Labels to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the applicationaccount has the labels; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means the application account has the labels; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -591,10 +641,11 @@ try {
 checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether an application can access the data of an account. This API uses an asynchronous callback to return
-the result.
+Checks whether an application can access the data of an account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -604,7 +655,7 @@ the result.
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means theapplication can access the account data; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means the application can access the account data; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -646,6 +697,8 @@ Checks whether an application can access the data of an account. This API uses a
 
 **Since:** 9
 
+<!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string): Promise<boolean>--><!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -659,7 +712,7 @@ Checks whether an application can access the data of an account. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the application canaccess the account data; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means the application can access the account data; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -694,13 +747,12 @@ try {
 checkAppAccountSyncEnable(name: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether data synchronization is enabled for an application account. This API uses an asynchronous callback
-to return the result.
+Checks whether data synchronization is enabled for an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [checkDataSyncEnabled](arkts-basicservices-appaccountmanager-i.md#checkdatasyncenabled-1)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [checkDataSyncEnabled](arkts-basicservices-appaccountmanager-i.md#checkdatasyncenabled-1)  
 > instead.
 
 **Since:** 7
@@ -711,6 +763,8 @@ to return the result.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-AppAccountManager-checkAppAccountSyncEnable(name: string, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAppAccountSyncEnable(name: string, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -718,7 +772,7 @@ to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means datasynchronization is enabled for the application account; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
 
 **Example**
 
@@ -741,12 +795,11 @@ appAccountManager.checkAppAccountSyncEnable('ZhangSan', (err: BusinessError, res
 checkAppAccountSyncEnable(name: string): Promise<boolean>
 ```
 
-Checks whether data synchronization is enabled for an application account. This API uses a promise to return the
-result.
+Checks whether data synchronization is enabled for an application account. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
 > [checkDataSyncEnabled](arkts-basicservices-appaccountmanager-i.md#checkdatasyncenabled-2) instead.
 
 **Since:** 7
@@ -756,6 +809,8 @@ result.
 **Substitutes:** checkDataSyncEnabled(name:
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-AppAccountManager-checkAppAccountSyncEnable(name: string): Promise<boolean>--><!--Device-AppAccountManager-checkAppAccountSyncEnable(name: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -769,7 +824,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** meansdata synchronization is enabled for the application account; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
 
 **Example**
 
@@ -790,10 +845,11 @@ appAccountManager.checkAppAccountSyncEnable('ZhangSan').then((data: boolean) => 
 checkAuthTokenVisibility(name: string, authType: string, bundleName: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks the visibility of an authorization token of the specified authentication type to an application. This API
-uses an asynchronous callback to return the result.
+Checks the visibility of an authorization token of the specified authentication type to an application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -804,7 +860,7 @@ uses an asynchronous callback to return the result.
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null** and **data** can be **true** (the authorization token is visible to the application)or **false** (the authorization token is not visible to the application). If the operation fails,**err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. If the operation is successful,**err** is **null** and **data** can be **true** (the authorization token is visible to the application)or **false** (the authorization token is not visible to the application). If the operation fails,**err** is an error object. |
 
 **Error codes:**
 
@@ -843,10 +899,11 @@ try {
 checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>
 ```
 
-Checks the visibility of an authorization token of the specified authentication type to an application. This API
-uses a promise to return the result.
+Checks the visibility of an authorization token of the specified authentication type to an application. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>--><!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -862,7 +919,7 @@ uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means theauthorization token is visible to the application; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means the authorization token is visible to the application; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -899,12 +956,13 @@ try {
 checkDataSyncEnabled(name: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether data synchronization is enabled for an application account. This API uses an asynchronous callback
-to return the result.
+Checks whether data synchronization is enabled for an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-AppAccountManager-checkDataSyncEnabled(name: string, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkDataSyncEnabled(name: string, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -913,7 +971,7 @@ to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means datasynchronization is enabled for the application account; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -951,12 +1009,13 @@ try {
 checkDataSyncEnabled(name: string): Promise<boolean>
 ```
 
-Checks whether data synchronization is enabled for an application account. This API uses a promise to return the
-result.
+Checks whether data synchronization is enabled for an application account. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-AppAccountManager-checkDataSyncEnabled(name: string): Promise<boolean>--><!--Device-AppAccountManager-checkDataSyncEnabled(name: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -970,7 +1029,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** meansdata synchronization is enabled for the application account; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -1011,13 +1070,12 @@ checkOAuthTokenVisibility(
     ): void
 ```
 
-Checks the visibility of an authorization token of the specified authentication type to an application. This API
-uses an asynchronous callback to return the result.
+Checks the visibility of an authorization token of the specified authentication type to an application. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [checkAuthTokenVisibility](arkts-basicservices-appaccountmanager-i.md#checkauthtokenvisibility-1)
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [checkAuthTokenVisibility](arkts-basicservices-appaccountmanager-i.md#checkauthtokenvisibility-1)  
 > instead.
 
 **Since:** 8
@@ -1025,6 +1083,18 @@ uses an asynchronous callback to return the result.
 **Deprecated since:** 9
 
 **Substitutes:** checkAuthTokenVisibility(name:
+
+<!--Device-AppAccountManager-checkOAuthTokenVisibility(
+      name: string,
+      authType: string,
+      bundleName: string,
+      callback: AsyncCallback<boolean>
+    ): void--><!--Device-AppAccountManager-checkOAuthTokenVisibility(
+      name: string,
+      authType: string,
+      bundleName: string,
+      callback: AsyncCallback<boolean>
+    ): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1035,7 +1105,7 @@ uses an asynchronous callback to return the result.
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null** and **data** can be **true** (the authorization token is visible to the application)or **false** (the authorization token is not visible to the application).If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. If the operation is successful,**err** is **null** and **data** can be **true** (the authorization token is visible to the application)or **false** (the authorization token is not visible to the application).If the operation fails, **err** is an error object. |
 
 **Example**
 
@@ -1059,13 +1129,12 @@ appAccountManager.checkOAuthTokenVisibility('LiSi', 'getSocialData', 'com.exampl
 checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>
 ```
 
-Checks the visibility of an authorization token of the specified authentication type to an application. This API
-uses a promise to return the result.
+Checks the visibility of an authorization token of the specified authentication type to an application. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [checkAuthTokenVisibility](arkts-basicservices-appaccountmanager-i.md#checkauthtokenvisibility-2)
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [checkAuthTokenVisibility](arkts-basicservices-appaccountmanager-i.md#checkauthtokenvisibility-2)  
 > instead.
 
 **Since:** 8
@@ -1073,6 +1142,8 @@ uses a promise to return the result.
 **Deprecated since:** 9
 
 **Substitutes:** checkAuthTokenVisibility(name:
+
+<!--Device-AppAccountManager-checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>--><!--Device-AppAccountManager-checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1088,7 +1159,7 @@ uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** meansthe authorization token is visible to the application; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means the authorization token is visible to the application; the value **false** means the opposite. |
 
 **Example**
 
@@ -1114,6 +1185,8 @@ Creates an application account with the given name. This API uses an asynchronou
 
 **Since:** 9
 
+<!--Device-AppAccountManager-createAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-createAccount(name: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -1121,7 +1194,7 @@ Creates an application account with the given name. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1163,6 +1236,8 @@ Creates an application account with custom data. This API uses an asynchronous c
 
 **Since:** 9
 
+<!--Device-AppAccountManager-createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -1170,8 +1245,8 @@ Creates an application account with custom data. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| options | CreateAccountOptions | Yes | Options for creating the application account. You can customizedata based on service requirements, but do not add sensitive data (such as passwords and tokens). |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| options | [CreateAccountOptions](arkts-basicservices-createaccountoptions-i.md) | Yes | Options for creating the application account. You can customize data based on service requirements, but do not add sensitive data (such as passwords and tokens). |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1218,6 +1293,8 @@ Creates an application account with custom data. This API uses a promise to retu
 
 **Since:** 9
 
+<!--Device-AppAccountManager-createAccount(name: string, options?: CreateAccountOptions): Promise<void>--><!--Device-AppAccountManager-createAccount(name: string, options?: CreateAccountOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -1225,13 +1302,13 @@ Creates an application account with custom data. This API uses a promise to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| options | CreateAccountOptions | No | Options for creating the application account.You can customize data based on service requirements, but do not add sensitive data(such as passwords and tokens).<br>By default, no value is passed in, which means no additionalinformation needs to be added for the account. |
+| options | [CreateAccountOptions](arkts-basicservices-createaccountoptions-i.md) | No | Options for creating the application account.You can customize data based on service requirements, but do not add sensitive data(such as passwords and tokens).<br>By default, no value is passed in, which means no additional information needs to be added for the account. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1272,10 +1349,11 @@ try {
 createAccountImplicitly(owner: string, callback: AuthCallback): void
 ```
 
-Creates an application account implicitly based on the specified account owner. This API uses an asynchronous
-callback to return the result.
+Creates an application account implicitly based on the specified account owner. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-createAccountImplicitly(owner: string, callback: AuthCallback): void--><!--Device-AppAccountManager-createAccountImplicitly(owner: string, callback: AuthCallback): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1284,7 +1362,7 @@ callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application.The value cannot exceed 1024 characters. |
-| callback | AuthCallback | Yes | Authenticator callback used to return the result. |
+| callback | [AuthCallback](arkts-basicservices-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 **Error codes:**
 
@@ -1350,10 +1428,11 @@ struct Index {
 createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, callback: AuthCallback): void
 ```
 
-Creates an application account implicitly based on the specified account owner and options. This API uses an
-asynchronous callback to return the result.
+Creates an application account implicitly based on the specified account owner and options. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, callback: AuthCallback): void--><!--Device-AppAccountManager-createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, callback: AuthCallback): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1362,8 +1441,8 @@ asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application.The value cannot exceed 1024 characters. |
-| options | CreateAccountImplicitlyOptions | Yes | Options for implicitly creating the account. |
-| callback | AuthCallback | Yes | Authenticator callback used to return the result. |
+| options | [CreateAccountImplicitlyOptions](arkts-basicservices-createaccountimplicitlyoptions-i.md) | Yes | Options for implicitly creating the account. |
+| callback | [AuthCallback](arkts-basicservices-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 **Error codes:**
 
@@ -1435,10 +1514,10 @@ deleteAccount(name: string, callback: AsyncCallback<void>): void
 
 Deletes an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [removeAccount](arkts-basicservices-appaccountmanager-i.md#removeaccount-1)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [removeAccount](arkts-basicservices-appaccountmanager-i.md#removeaccount-1)  
 > instead.
 
 **Since:** 7
@@ -1447,6 +1526,8 @@ Deletes an application account. This API uses an asynchronous callback to return
 
 **Substitutes:** removeAccount(name:
 
+<!--Device-AppAccountManager-deleteAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteAccount(name: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -1454,7 +1535,7 @@ Deletes an application account. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -1475,10 +1556,10 @@ deleteAccount(name: string): Promise<void>
 
 Deletes an application account. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [removeAccount](arkts-basicservices-appaccountmanager-i.md#removeaccount-2)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [removeAccount](arkts-basicservices-appaccountmanager-i.md#removeaccount-2)  
 > instead.
 
 **Since:** 7
@@ -1486,6 +1567,8 @@ Deletes an application account. This API uses a promise to return the result.
 **Deprecated since:** 9
 
 **Substitutes:** removeAccount(name:
+
+<!--Device-AppAccountManager-deleteAccount(name: string): Promise<void>--><!--Device-AppAccountManager-deleteAccount(name: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1499,7 +1582,7 @@ Deletes an application account. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -1520,10 +1603,11 @@ appAccountManager.deleteAccount('ZhaoLiu').then(() => {
 deleteAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes the authorization token of the specified authentication type for an application account. This API uses an
-asynchronous callback to return the result.
+Deletes the authorization token of the specified authentication type for an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1534,8 +1618,8 @@ asynchronous callback to return the result.
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application.The value cannot exceed 1024 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| token | string | Yes | Authorization token. The value cannot exceed 1024 characters. If the tokendoes not exist, no operation is performed. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| token | string | Yes | Authorization token. The value cannot exceed 1024 characters. If the token does not exist, no operation is performed. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1574,10 +1658,11 @@ try {
 deleteAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>
 ```
 
-Deletes the authorization token of the specified authentication type for an application account. This API uses a
-promise to return the result.
+Deletes the authorization token of the specified authentication type for an application account. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1588,13 +1673,13 @@ promise to return the result.
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application.The value cannot exceed 1024 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| token | string | Yes | Authorization token. The value cannot exceed 1024 characters. If the tokendoes not exist, no operation is performed. |
+| token | string | Yes | Authorization token. The value cannot exceed 1024 characters. If the token does not exist, no operation is performed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1630,10 +1715,11 @@ try {
 deleteCredential(name: string, credentialType: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes the credential of the specified type from an application account. This API uses an asynchronous callback
-to return the result.
+Deletes the credential of the specified type from an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1643,7 +1729,7 @@ to return the result.
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1681,10 +1767,11 @@ try {
 deleteCredential(name: string, credentialType: string): Promise<void>
 ```
 
-Deletes the credential of the specified type from an application account. This API uses a promise to return the
-result.
+Deletes the credential of the specified type from an application account. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string): Promise<void>--><!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1699,7 +1786,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1735,13 +1822,12 @@ try {
 deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes the authorization token of the specified authentication type for an application account. This API uses an
-asynchronous callback to return the result.
+Deletes the authorization token of the specified authentication type for an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [deleteAuthToken](arkts-basicservices-appaccountmanager-i.md#deleteauthtoken-1)
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [deleteAuthToken](arkts-basicservices-appaccountmanager-i.md#deleteauthtoken-1)  
 > instead.
 
 **Since:** 8
@@ -1749,6 +1835,8 @@ asynchronous callback to return the result.
 **Deprecated since:** 9
 
 **Substitutes:** deleteAuthToken(name:
+
+<!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1760,7 +1848,7 @@ asynchronous callback to return the result.
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application.The value cannot exceed 1024 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | token | string | Yes | Authorization token. The value cannot exceed 1024 characters. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -1784,13 +1872,12 @@ appAccountManager.deleteOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSoci
 deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>
 ```
 
-Deletes the authorization token of the specified authentication type for an application account. This API uses a
-promise to return the result.
+Deletes the authorization token of the specified authentication type for an application account. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [deleteAuthToken](arkts-basicservices-appaccountmanager-i.md#deleteauthtoken-2)
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [deleteAuthToken](arkts-basicservices-appaccountmanager-i.md#deleteauthtoken-2)  
 > instead.
 
 **Since:** 8
@@ -1798,6 +1885,8 @@ promise to return the result.
 **Deprecated since:** 9
 
 **Substitutes:** deleteAuthToken(name:
+
+<!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1814,7 +1903,7 @@ promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -1835,13 +1924,12 @@ appAccountManager.deleteOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSoci
 disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-Disables an application account from accessing an application. This API uses an asynchronous callback to return
-the result.
+Disables an application account from accessing an application. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setAppAccess](arkts-basicservices-appaccountmanager-i.md#setappaccess-1)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [setAppAccess](arkts-basicservices-appaccountmanager-i.md#setappaccess-1)  
 > instead.
 
 **Since:** 7
@@ -1849,6 +1937,8 @@ the result.
 **Deprecated since:** 9
 
 **Substitutes:** setAppAccess(name:
+
+<!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1858,7 +1948,7 @@ the result.
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -1879,10 +1969,10 @@ disableAppAccess(name: string, bundleName: string): Promise<void>
 
 Disables an application account from accessing an application. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setAppAccess](arkts-basicservices-appaccountmanager-i.md#setappaccess-2)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [setAppAccess](arkts-basicservices-appaccountmanager-i.md#setappaccess-2)  
 > instead.
 
 **Since:** 7
@@ -1890,6 +1980,8 @@ Disables an application account from accessing an application. This API uses a p
 **Deprecated since:** 9
 
 **Substitutes:** setAppAccess(name:
+
+<!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string): Promise<void>--><!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1904,7 +1996,7 @@ Disables an application account from accessing an application. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -1925,13 +2017,12 @@ appAccountManager.disableAppAccess('ZhangSan', 'com.example.accountjsdemo').then
 enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-Enables an application account to access an application. This API uses an asynchronous callback to return the
-result.
+Enables an application account to access an application. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setAppAccess](arkts-basicservices-appaccountmanager-i.md#setappaccess-1)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [setAppAccess](arkts-basicservices-appaccountmanager-i.md#setappaccess-1)  
 > instead.
 
 **Since:** 7
@@ -1939,6 +2030,8 @@ result.
 **Deprecated since:** 9
 
 **Substitutes:** setAppAccess(name:
+
+<!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1948,7 +2041,7 @@ result.
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -1973,10 +2066,10 @@ enableAppAccess(name: string, bundleName: string): Promise<void>
 
 Enables an application account to access an application. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setAppAccess](arkts-basicservices-appaccountmanager-i.md#setappaccess-2)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [setAppAccess](arkts-basicservices-appaccountmanager-i.md#setappaccess-2)  
 > instead.
 
 **Since:** 7
@@ -1984,6 +2077,8 @@ Enables an application account to access an application. This API uses a promise
 **Deprecated since:** 9
 
 **Substitutes:** setAppAccess(name:
+
+<!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string): Promise<void>--><!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -1998,7 +2093,7 @@ Enables an application account to access an application. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -2021,10 +2116,10 @@ getAccountCredential(name: string, credentialType: string, callback: AsyncCallba
 
 Obtains the credential of an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCredential](arkts-basicservices-appaccountmanager-i.md#getcredential-1)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [getCredential](arkts-basicservices-appaccountmanager-i.md#getcredential-1)  
 > instead.
 
 **Since:** 7
@@ -2032,6 +2127,8 @@ Obtains the credential of an application account. This API uses an asynchronous 
 **Deprecated since:** 9
 
 **Substitutes:** getCredential(name:
+
+<!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2041,7 +2138,7 @@ Obtains the credential of an application account. This API uses an asynchronous 
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null** and **data** is the credential obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the result. If the operation is successful,**err** is **null** and **data** is the credential obtained. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -2066,10 +2163,10 @@ getAccountCredential(name: string, credentialType: string): Promise<string>
 
 Obtains the credential of an application account. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCredential](arkts-basicservices-appaccountmanager-i.md#getcredential-2)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [getCredential](arkts-basicservices-appaccountmanager-i.md#getcredential-2)  
 > instead.
 
 **Since:** 7
@@ -2077,6 +2174,8 @@ Obtains the credential of an application account. This API uses a promise to ret
 **Deprecated since:** 9
 
 **Substitutes:** getCredential(name:
+
+<!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string): Promise<string>--><!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2091,7 +2190,7 @@ Obtains the credential of an application account. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the credential obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the credential obtained. |
 
 **Example**
 
@@ -2112,14 +2211,12 @@ appAccountManager.getAccountCredential('ZhangSan', 'credentialType001').then((da
 getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains additional information of an application account. Additional information refers to other information that
-can be converted to the string type. It cannot contain sensitive information, such as the application account
-password and token. This API uses an asynchronous callback to return the result.
+Obtains additional information of an application account. Additional information refers to other information that can be converted to the string type. It cannot contain sensitive information, such as the application account password and token. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCustomData](arkts-basicservices-appaccountmanager-i.md#getcustomdata-1)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [getCustomData](arkts-basicservices-appaccountmanager-i.md#getcustomdata-1)  
 > instead.
 
 **Since:** 7
@@ -2128,6 +2225,8 @@ password and token. This API uses an asynchronous callback to return the result.
 
 **Substitutes:** getCustomData(name:
 
+<!--Device-AppAccountManager-getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -2135,7 +2234,7 @@ password and token. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the additional informationobtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the additional information obtained. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -2158,13 +2257,11 @@ appAccountManager.getAccountExtraInfo('ZhangSan', (err: BusinessError, result: s
 getAccountExtraInfo(name: string): Promise<string>
 ```
 
-Obtains additional information of an application account. Additional information refers to other information that
-can be converted to the string type. It cannot contain sensitive information, such as the application account
-password and token. This API uses a promise to return the result.
+Obtains additional information of an application account. Additional information refers to other information that can be converted to the string type. It cannot contain sensitive information, such as the application account password and token. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
 > [getCustomData](arkts-basicservices-appaccountmanager-i.md#getcustomdata-2) instead.
 
 **Since:** 7
@@ -2172,6 +2269,8 @@ password and token. This API uses a promise to return the result.
 **Deprecated since:** 9
 
 **Substitutes:** getCustomData(name:
+
+<!--Device-AppAccountManager-getAccountExtraInfo(name: string): Promise<string>--><!--Device-AppAccountManager-getAccountExtraInfo(name: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2185,7 +2284,7 @@ password and token. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the additional information obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the additional information obtained. |
 
 **Example**
 
@@ -2206,15 +2305,11 @@ appAccountManager.getAccountExtraInfo('ZhangSan').then((data: string) => {
 getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-Obtains the application accounts that can be accessed by the invoker based on the application account owner. This
-API uses an asynchronous callback to return the result.
-This method applies to the following accounts:
-<br> Accounts of this application.
-<br> Accounts of third-party applications. To obtain such information,
-<br> your application must have gained authorization from the third-party applications or
-<br> have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
+Obtains the application accounts that can be accessed by the invoker based on the application account owner. This API uses an asynchronous callback to return the result.This method applies to the following accounts:<br> Accounts of this application.<br> Accounts of third-party applications. To obtain such information,<br> your application must have gained authorization from the third-party applications or<br> have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2223,7 +2318,7 @@ This method applies to the following accounts:
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application.The value cannot exceed 1024 characters. |
-| callback | AsyncCallback&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is null and **data** is the application account informationobtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<AppAccountInfo>> | Yes | Callback used to return the result.If the operation is successful, **err** is null and **data** is the application account information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2260,15 +2355,11 @@ try {
 getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>
 ```
 
-Obtains the application accounts that can be accessed by the invoker based on the application account owner. This
-API uses a promise to return the result.
-This method applies to the following accounts:
-<br> Accounts of this application.
-<br> Accounts of third-party applications. To obtain such information,
-<br> your application must have gained authorization from the third-party applications or
-<br> have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
+Obtains the application accounts that can be accessed by the invoker based on the application account owner. This API uses a promise to return the result.This method applies to the following accounts:<br> Accounts of this application.<br> Accounts of third-party applications. To obtain such information,<br> your application must have gained authorization from the third-party applications or<br> have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2282,7 +2373,7 @@ This method applies to the following accounts:
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AppAccountInfo&gt;&gt; | Promise used to return the application account information obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AppAccountInfo>> | Promise used to return the application account information obtained. |
 
 **Error codes:**
 
@@ -2317,17 +2408,12 @@ try {
 getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-Obtains information about all accessible application accounts. This API uses an asynchronous callback to return
-the result.
-This method applies to the following accounts:
-<br> Accounts of this application.
-<br> Accounts of third-party applications. To obtain such information,
-<br> your application must have gained authorization from the third-party applications.
+Obtains information about all accessible application accounts. This API uses an asynchronous callback to return the result.This method applies to the following accounts:<br> Accounts of this application.<br> Accounts of third-party applications. To obtain such information,<br> your application must have gained authorization from the third-party applications.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getAllAccounts](arkts-basicservices-appaccountmanager-i.md#getallaccounts-1)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [getAllAccounts](arkts-basicservices-appaccountmanager-i.md#getallaccounts-1)  
 > instead.
 
 **Since:** 7
@@ -2338,13 +2424,15 @@ This method applies to the following accounts:
 
 **Required permissions:** ohos.permission.GET_ALL_APP_ACCOUNTS
 
+<!--Device-AppAccountManager-getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is a list of accessible applicationaccounts. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<AppAccountInfo>> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is a list of accessible application accounts. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -2367,15 +2455,11 @@ appAccountManager.getAllAccessibleAccounts((err: BusinessError, data: appAccount
 getAllAccessibleAccounts(): Promise<Array<AppAccountInfo>>
 ```
 
-Obtains information about all accessible application accounts. This API uses a promise to return the result.
-This method applies to the following accounts:
-<br> Accounts of this application.
-<br> Accounts of third-party applications. To obtain such information,
-<br> your application must have gained authorization from the third-party applications.
+Obtains information about all accessible application accounts. This API uses a promise to return the result.This method applies to the following accounts:<br> Accounts of this application.<br> Accounts of third-party applications. To obtain such information,<br> your application must have gained authorization from the third-party applications.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
 > [getAllAccounts](arkts-basicservices-appaccountmanager-i.md#getallaccounts-2) instead.
 
 **Since:** 7
@@ -2386,13 +2470,15 @@ This method applies to the following accounts:
 
 **Required permissions:** ohos.permission.GET_ALL_APP_ACCOUNTS
 
+<!--Device-AppAccountManager-getAllAccessibleAccounts(): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-getAllAccessibleAccounts(): Promise<Array<AppAccountInfo>>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AppAccountInfo&gt;&gt; | Promise used to return information about all accessible accounts. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AppAccountInfo>> | Promise used to return information about all accessible accounts. |
 
 **Example**
 
@@ -2413,15 +2499,11 @@ appAccountManager.getAllAccessibleAccounts().then((data: appAccount.AppAccountIn
 getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-Obtains information about all accessible application accounts. This API uses an asynchronous callback to return
-the result.
-This method applies to the following accounts:
-<br> Accounts of this application.
-<br> Accounts of third-party applications. To obtain such information,
-<br> your application must have gained authorization from the third-party applications or
-<br> have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
+Obtains information about all accessible application accounts. This API uses an asynchronous callback to return the result.This method applies to the following accounts:<br> Accounts of this application.<br> Accounts of third-party applications. To obtain such information,<br> your application must have gained authorization from the third-party applications or<br> have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2429,7 +2511,7 @@ This method applies to the following accounts:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is a list of accessible applicationaccounts. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<AppAccountInfo>> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is a list of accessible application accounts. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2464,14 +2546,11 @@ try {
 getAllAccounts(): Promise<Array<AppAccountInfo>>
 ```
 
-Obtains information about all accessible application accounts. This API uses a promise to return the result.
-This method applies to the following accounts:
-<br> Accounts of this application.
-<br> Accounts of third-party applications. To obtain such information,
-<br> your application must have gained authorization from the third-party applications or
-<br> have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
+Obtains information about all accessible application accounts. This API uses a promise to return the result.This method applies to the following accounts:<br> Accounts of this application.<br> Accounts of third-party applications. To obtain such information,<br> your application must have gained authorization from the third-party applications or<br> have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-getAllAccounts(): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-getAllAccounts(): Promise<Array<AppAccountInfo>>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2479,7 +2558,7 @@ This method applies to the following accounts:
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AppAccountInfo&gt;&gt; | Promise used to return information about all accessible accounts. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AppAccountInfo>> | Promise used to return information about all accessible accounts. |
 
 **Error codes:**
 
@@ -2511,17 +2590,12 @@ try {
 getAllAccounts(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-Obtains the application accounts that can be accessed by the invoker based on the application account owner. This
-API uses an asynchronous callback to return the result.
-This method applies to the following accounts:
-<br> Accounts of this application.
-<br> Accounts of third-party applications. To obtain such information,
-<br> your application must have gained authorization from the third-party applications.
+Obtains the application accounts that can be accessed by the invoker based on the application account owner. This API uses an asynchronous callback to return the result.This method applies to the following accounts:<br> Accounts of this application.<br> Accounts of third-party applications. To obtain such information,<br> your application must have gained authorization from the third-party applications.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getAccountsByOwner](arkts-basicservices-appaccountmanager-i.md#getaccountsbyowner-1)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [getAccountsByOwner](arkts-basicservices-appaccountmanager-i.md#getaccountsbyowner-1)  
 > instead.
 
 **Since:** 7
@@ -2532,6 +2606,8 @@ This method applies to the following accounts:
 
 **Required permissions:** ohos.permission.GET_ALL_APP_ACCOUNTS
 
+<!--Device-AppAccountManager-getAllAccounts(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-getAllAccounts(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -2539,7 +2615,7 @@ This method applies to the following accounts:
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application.The value cannot exceed 1024 characters. |
-| callback | AsyncCallback&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes | Callback used to return information aboutall accessible application accounts. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<AppAccountInfo>> | Yes | Callback used to return information about all accessible application accounts. |
 
 **Example**
 
@@ -2563,16 +2639,11 @@ appAccountManager.getAllAccounts(selfBundle, (err: BusinessError, data: appAccou
 getAllAccounts(owner: string): Promise<Array<AppAccountInfo>>
 ```
 
-Obtains the application accounts that can be accessed by the invoker based on the application account owner. This
-API uses a promise to return the result.
-This method applies to the following accounts:
-<br> Accounts of this application.
-<br> Accounts of third-party applications. To obtain such information,
-<br> your application must have gained authorization from the third-party applications.
+Obtains the application accounts that can be accessed by the invoker based on the application account owner. This API uses a promise to return the result.This method applies to the following accounts:<br> Accounts of this application.<br> Accounts of third-party applications. To obtain such information,<br> your application must have gained authorization from the third-party applications.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
 > [getAccountsByOwner](arkts-basicservices-appaccountmanager-i.md#getaccountsbyowner-2) instead.
 
 **Since:** 7
@@ -2582,6 +2653,8 @@ This method applies to the following accounts:
 **Substitutes:** getAccountsByOwner(owner:
 
 **Required permissions:** ohos.permission.GET_ALL_APP_ACCOUNTS
+
+<!--Device-AppAccountManager-getAllAccounts(owner: string): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-getAllAccounts(owner: string): Promise<Array<AppAccountInfo>>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2595,7 +2668,7 @@ This method applies to the following accounts:
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AppAccountInfo&gt;&gt; | Promise used to return the application accounts that can beaccessed by the invoker. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AppAccountInfo>> | Promise used to return the application accounts that can be accessed by the invoker. |
 
 **Example**
 
@@ -2617,10 +2690,11 @@ appAccountManager.getAllAccounts(selfBundle).then((data: appAccount.AppAccountIn
 getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<AuthTokenInfo>>): void
 ```
 
-Obtains all tokens visible to the invoker for an application account. This API uses an asynchronous callback to
-return the result.
+Obtains all tokens visible to the invoker for an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<AuthTokenInfo>>): void--><!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<AuthTokenInfo>>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2630,7 +2704,7 @@ return the result.
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application.The value cannot exceed 1024 characters. |
-| callback | AsyncCallback&lt;Array&lt;AuthTokenInfo&gt;&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is a list of all tokens visibleto the invoker. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<AuthTokenInfo>> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is a list of all tokens visible to the invoker. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2668,10 +2742,11 @@ try {
 getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>
 ```
 
-Obtains all tokens visible to the invoker for an application account. This API uses a promise to return the
-result.
+Obtains all tokens visible to the invoker for an application account. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>--><!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2686,7 +2761,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AuthTokenInfo&gt;&gt; | Promise used to return the tokens obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AuthTokenInfo>> | Promise used to return the tokens obtained. |
 
 **Error codes:**
 
@@ -2722,13 +2797,12 @@ try {
 getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void
 ```
 
-Obtains all tokens visible to the invoker for an application account. This API uses an asynchronous callback to
-return the result.
+Obtains all tokens visible to the invoker for an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAllAuthTokens](arkts-basicservices-appaccountmanager-i.md#getallauthtokens-1)
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [getAllAuthTokens](arkts-basicservices-appaccountmanager-i.md#getallauthtokens-1)  
 > instead.
 
 **Since:** 8
@@ -2736,6 +2810,8 @@ return the result.
 **Deprecated since:** 9
 
 **Substitutes:** getAllAuthTokens(name:
+
+<!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void--><!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2745,7 +2821,7 @@ return the result.
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application.The value cannot exceed 1024 characters. |
-| callback | AsyncCallback&lt;Array&lt;OAuthTokenInfo&gt;&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is a list of all tokens visible tothe invoker. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<OAuthTokenInfo>> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is a list of all tokens visible to the invoker. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -2769,12 +2845,11 @@ appAccountManager.getAllOAuthTokens('LiSi', 'com.example.accountjsdemo',
 getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>
 ```
 
-Obtains all tokens visible to the invoker for an application account. This API uses a promise to return the
-result.
+Obtains all tokens visible to the invoker for an application account. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
 > [getAllAuthTokens](arkts-basicservices-appaccountmanager-i.md#getallauthtokens-2) instead.
 
 **Since:** 8
@@ -2782,6 +2857,8 @@ result.
 **Deprecated since:** 9
 
 **Substitutes:** getAllAuthTokens(name:
+
+<!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>--><!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2796,7 +2873,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;OAuthTokenInfo&gt;&gt; | Promise used to return the tokens obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<OAuthTokenInfo>> | Promise used to return the tokens obtained. |
 
 **Example**
 
@@ -2818,13 +2895,12 @@ appAccountManager.getAllOAuthTokens('LiSi', 'com.example.accountjsdemo').then((
 getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the associated data of an application account based on the specified key. This API uses an asynchronous
-callback to return the result.
+Obtains the associated data of an application account based on the specified key. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCustomData](arkts-basicservices-appaccountmanager-i.md#getcustomdata-1)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [getCustomData](arkts-basicservices-appaccountmanager-i.md#getcustomdata-1)  
 > instead.
 
 **Since:** 7
@@ -2832,6 +2908,8 @@ callback to return the result.
 **Deprecated since:** 9
 
 **Substitutes:** getCustomData(name:
+
+<!--Device-AppAccountManager-getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2841,7 +2919,7 @@ callback to return the result.
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | key | string | Yes | Key of the associated data. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the data obtained.Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the data obtained.Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -2866,9 +2944,9 @@ getAssociatedData(name: string, key: string): Promise<string>
 
 Obtains data associated with an application account. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
 > [getCustomData](arkts-basicservices-appaccountmanager-i.md#getcustomdata-2) instead.
 
 **Since:** 7
@@ -2876,6 +2954,8 @@ Obtains data associated with an application account. This API uses a promise to 
 **Deprecated since:** 9
 
 **Substitutes:** getCustomData(name:
+
+<!--Device-AppAccountManager-getAssociatedData(name: string, key: string): Promise<string>--><!--Device-AppAccountManager-getAssociatedData(name: string, key: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2890,7 +2970,7 @@ Obtains data associated with an application account. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the data obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the data obtained. |
 
 **Example**
 
@@ -2911,10 +2991,11 @@ appAccountManager.getAssociatedData('ZhangSan', 'k001').then((data: string) => {
 getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void
 ```
 
-Obtains the authenticator callback for an authentication session. This API uses an asynchronous callback to
-return the result.
+Obtains the authenticator callback for an authentication session. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void--><!--Device-AppAccountManager-getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -2923,7 +3004,7 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sessionId | string | Yes | ID of the authentication session. |
-| callback | AsyncCallback&lt;AuthCallback&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the authenticatorcallback object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<AuthCallback> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the authenticator callback object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2980,6 +3061,8 @@ Obtains the authenticator callback for an authentication session. This API uses 
 
 **Since:** 9
 
+<!--Device-AppAccountManager-getAuthCallback(sessionId: string): Promise<AuthCallback>--><!--Device-AppAccountManager-getAuthCallback(sessionId: string): Promise<AuthCallback>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -2992,7 +3075,7 @@ Obtains the authenticator callback for an authentication session. This API uses 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AuthCallback&gt; | Promise used to return the authenticator callback obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AuthCallback> | Promise used to return the authenticator callback obtained. |
 
 **Error codes:**
 
@@ -3043,12 +3126,11 @@ export default class EntryAbility extends UIAbility {
 getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains the authorization list of the specified authentication type for an application account. The authorization
-list contains all authorized bundles. The token authorization list is set by
-[setAuthTokenVisibility](arkts-basicservices-appaccountmanager-i.md#setauthtokenvisibility-1)
-. This API uses an asynchronous callback to return the result.
+Obtains the authorization list of the specified authentication type for an application account. The authorization list contains all authorized bundles. The token authorization list is set by [setAuthTokenVisibility](arkts-basicservices-appaccountmanager-i.md#setauthtokenvisibility-1). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void--><!--Device-AppAccountManager-getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3058,7 +3140,7 @@ list contains all authorized bundles. The token authorization list is set by
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is a list of authorizedbundles obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is a list of authorized bundles obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -3096,12 +3178,11 @@ try {
 getAuthList(name: string, authType: string): Promise<Array<string>>
 ```
 
-Obtains the authorization list of the specified authentication type for an application account. The authorization
-list contains all authorized bundles. The token authorization list is set by
-[setAuthTokenVisibility](arkts-basicservices-appaccountmanager-i.md#setauthtokenvisibility-1)
-. This API uses a promise to return the result.
+Obtains the authorization list of the specified authentication type for an application account. The authorization list contains all authorized bundles. The token authorization list is set by [setAuthTokenVisibility](arkts-basicservices-appaccountmanager-i.md#setauthtokenvisibility-1). This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-getAuthList(name: string, authType: string): Promise<Array<string>>--><!--Device-AppAccountManager-getAuthList(name: string, authType: string): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3116,7 +3197,7 @@ list contains all authorized bundles. The token authorization list is set by
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return a list of authorized bundles. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return a list of authorized bundles. |
 
 **Error codes:**
 
@@ -3152,10 +3233,11 @@ try {
 getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the authorization token of the specified authentication type for an application account. This API uses an
-asynchronous callback to return the result.
+Obtains the authorization token of the specified authentication type for an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3166,7 +3248,7 @@ asynchronous callback to return the result.
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application.The value cannot exceed 1024 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is theauthorization token value obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the authorization token value obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -3205,10 +3287,11 @@ try {
 getAuthToken(name: string, owner: string, authType: string): Promise<string>
 ```
 
-Obtains the authorization token of the specified authentication type for an application account. This API uses a
-promise to return the result.
+Obtains the authorization token of the specified authentication type for an application account. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string): Promise<string>--><!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3224,7 +3307,7 @@ promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the authorization token obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the authorization token obtained. |
 
 **Error codes:**
 
@@ -3260,13 +3343,12 @@ try {
 getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void
 ```
 
-Obtains the authenticator callback for an authentication session. This API uses an asynchronous callback to
-return the result.
+Obtains the authenticator callback for an authentication session. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthCallback](arkts-basicservices-appaccountmanager-i.md#getauthcallback-1)
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [getAuthCallback](arkts-basicservices-appaccountmanager-i.md#getauthcallback-1)  
 > instead.
 
 **Since:** 8
@@ -3275,6 +3357,8 @@ return the result.
 
 **Substitutes:** getAuthCallback(sessionId:
 
+<!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void--><!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -3282,7 +3366,7 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sessionId | string | Yes | ID of the authentication session. |
-| callback | AsyncCallback&lt;AuthenticatorCallback&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the authenticator callbackobtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<AuthenticatorCallback> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the authenticator callback obtained. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -3319,9 +3403,9 @@ getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>
 
 Obtains the authenticator callback for an authentication session. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
 > [getAuthCallback](arkts-basicservices-appaccountmanager-i.md#getauthcallback-2) instead.
 
 **Since:** 8
@@ -3329,6 +3413,8 @@ Obtains the authenticator callback for an authentication session. This API uses 
 **Deprecated since:** 9
 
 **Substitutes:** getAuthCallback(sessionId:
+
+<!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>--><!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3342,7 +3428,7 @@ Obtains the authenticator callback for an authentication session. This API uses 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AuthenticatorCallback&gt; | Promise used to return the authenticator callback obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AuthenticatorCallback> | Promise used to return the authenticator callback obtained. |
 
 **Example**
 
@@ -3375,13 +3461,12 @@ export default class EntryAbility extends UIAbility {
 getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void
 ```
 
-Obtains the authenticator information of an application. This API uses an asynchronous callback to return the
-result.
+Obtains the authenticator information of an application. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [queryAuthenticatorInfo](arkts-basicservices-appaccountmanager-i.md#queryauthenticatorinfo-1)
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [queryAuthenticatorInfo](arkts-basicservices-appaccountmanager-i.md#queryauthenticatorinfo-1)  
 > instead.
 
 **Since:** 8
@@ -3390,6 +3475,8 @@ result.
 
 **Substitutes:** queryAuthenticatorInfo(owner:
 
+<!--Device-AppAccountManager-getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void--><!--Device-AppAccountManager-getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -3397,7 +3484,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application.The value cannot exceed 1024 characters. |
-| callback | AsyncCallback&lt;AuthenticatorInfo&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **null** and **data** is the authenticator information obtained. Otherwise,**err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<AuthenticatorInfo> | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator information obtained. Otherwise,**err** is an error object. |
 
 **Example**
 
@@ -3423,9 +3510,9 @@ getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 
 Obtains the authenticator information of an application. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
 > [queryAuthenticatorInfo](arkts-basicservices-appaccountmanager-i.md#queryauthenticatorinfo-2) instead.
 
 **Since:** 8
@@ -3433,6 +3520,8 @@ Obtains the authenticator information of an application. This API uses a promise
 **Deprecated since:** 9
 
 **Substitutes:** queryAuthenticatorInfo(owner:
+
+<!--Device-AppAccountManager-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>--><!--Device-AppAccountManager-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3446,7 +3535,7 @@ Obtains the authenticator information of an application. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AuthenticatorInfo&gt; | Promise used to return the authenticator information obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AuthenticatorInfo> | Promise used to return the authenticator information obtained. |
 
 **Example**
 
@@ -3472,6 +3561,8 @@ Obtains the credential of an application account. This API uses an asynchronous 
 
 **Since:** 9
 
+<!--Device-AppAccountManager-getCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -3480,7 +3571,7 @@ Obtains the credential of an application account. This API uses an asynchronous 
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null** and **data** is the credential obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the result. If the operation is successful,**err** is **null** and **data** is the credential obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -3522,6 +3613,8 @@ Obtains the credential of an application account. This API uses a promise to ret
 
 **Since:** 9
 
+<!--Device-AppAccountManager-getCredential(name: string, credentialType: string): Promise<string>--><!--Device-AppAccountManager-getCredential(name: string, credentialType: string): Promise<string>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -3535,7 +3628,7 @@ Obtains the credential of an application account. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the credential obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the credential obtained. |
 
 **Error codes:**
 
@@ -3571,10 +3664,11 @@ try {
 getCustomData(name: string, key: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the custom data of an application account based on the specified key. This API uses an asynchronous
-callback to return the result.
+Obtains the custom data of an application account based on the specified key. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-getCustomData(name: string, key: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getCustomData(name: string, key: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3584,7 +3678,7 @@ callback to return the result.
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | key | string | Yes | Key of the custom data. The value cannot exceed 512 characters. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the custom data valueobtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the custom data value obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -3622,10 +3716,11 @@ try {
 getCustomData(name: string, key: string): Promise<string>
 ```
 
-Obtains the custom data of an application account based on the specified key. This API uses a promise to return
-the result.
+Obtains the custom data of an application account based on the specified key. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-getCustomData(name: string, key: string): Promise<string>--><!--Device-AppAccountManager-getCustomData(name: string, key: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3640,7 +3735,7 @@ the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the custom data value obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the custom data value obtained. |
 
 **Error codes:**
 
@@ -3676,10 +3771,11 @@ try {
 getCustomDataSync(name: string, key: string): string
 ```
 
-Obtains the custom data of an application account based on the specified key. The API returns the result
-synchronously.
+Obtains the custom data of an application account based on the specified key. The API returns the result synchronously.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-getCustomDataSync(name: string, key: string): string--><!--Device-AppAccountManager-getCustomDataSync(name: string, key: string): string-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3727,15 +3823,12 @@ try {
 getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains the authorization list of the specified authentication type for an application account. The authorization
-list contains all authorized bundles. The token authorization list is set by
-[setOAuthTokenVisibility](arkts-basicservices-appaccountmanager-i.md#setoauthtokenvisibility-1)
-. This API uses an asynchronous callback to return the result.
+Obtains the authorization list of the specified authentication type for an application account. The authorization list contains all authorized bundles. The token authorization list is set by [setOAuthTokenVisibility](arkts-basicservices-appaccountmanager-i.md#setoauthtokenvisibility-1). This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthList](arkts-basicservices-appaccountmanager-i.md#getauthlist-1)
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [getAuthList](arkts-basicservices-appaccountmanager-i.md#getauthlist-1)  
 > instead.
 
 **Since:** 8
@@ -3743,6 +3836,8 @@ list contains all authorized bundles. The token authorization list is set by
 **Deprecated since:** 9
 
 **Substitutes:** getAuthList(name:
+
+<!--Device-AppAccountManager-getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void--><!--Device-AppAccountManager-getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3752,7 +3847,7 @@ list contains all authorized bundles. The token authorization list is set by
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is a list of authorizedbundles obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is a list of authorized bundles obtained. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -3775,14 +3870,11 @@ appAccountManager.getOAuthList('LiSi', 'getSocialData', (err: BusinessError, dat
 getOAuthList(name: string, authType: string): Promise<Array<string>>
 ```
 
-Obtains the authorization list of the specified authentication type for an application account. The authorization
-list contains all authorized bundles. The token authorization list is set by
-[setOAuthTokenVisibility](arkts-basicservices-appaccountmanager-i.md#setoauthtokenvisibility-1)
-. This API uses a promise to return the result.
+Obtains the authorization list of the specified authentication type for an application account. The authorization list contains all authorized bundles. The token authorization list is set by [setOAuthTokenVisibility](arkts-basicservices-appaccountmanager-i.md#setoauthtokenvisibility-1). This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
 > [getAuthList](arkts-basicservices-appaccountmanager-i.md#getauthlist-2) instead.
 
 **Since:** 8
@@ -3790,6 +3882,8 @@ list contains all authorized bundles. The token authorization list is set by
 **Deprecated since:** 9
 
 **Substitutes:** getAuthList(name:
+
+<!--Device-AppAccountManager-getOAuthList(name: string, authType: string): Promise<Array<string>>--><!--Device-AppAccountManager-getOAuthList(name: string, authType: string): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3804,7 +3898,7 @@ list contains all authorized bundles. The token authorization list is set by
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return a list of authorized bundles. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return a list of authorized bundles. |
 
 **Example**
 
@@ -3825,13 +3919,12 @@ appAccountManager.getOAuthList('LiSi', 'getSocialData').then((data: string[]) =>
 getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the authorization token of the specified authentication type for an application account. This API uses an
-asynchronous callback to return the result.
+Obtains the authorization token of the specified authentication type for an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthToken](arkts-basicservices-appaccountmanager-i.md#getauthtoken-1)
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [getAuthToken](arkts-basicservices-appaccountmanager-i.md#getauthtoken-1)  
 > instead.
 
 **Since:** 8
@@ -3839,6 +3932,8 @@ asynchronous callback to return the result.
 **Deprecated since:** 9
 
 **Substitutes:** getAuthToken(name:
+
+<!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3849,7 +3944,7 @@ asynchronous callback to return the result.
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application.The value cannot exceed 1024 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null** and **data** is the authorization token value obtained.Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the result. If the operation is successful,**err** is **null** and **data** is the authorization token value obtained.Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -3873,13 +3968,12 @@ appAccountManager.getOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialD
 getOAuthToken(name: string, owner: string, authType: string): Promise<string>
 ```
 
-Obtains the authorization token of the specified authentication type for an application account. This API uses a
-promise to return the result.
+Obtains the authorization token of the specified authentication type for an application account. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthToken](arkts-basicservices-appaccountmanager-i.md#getauthtoken-2)
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [getAuthToken](arkts-basicservices-appaccountmanager-i.md#getauthtoken-2)  
 > instead.
 
 **Since:** 8
@@ -3887,6 +3981,8 @@ promise to return the result.
 **Deprecated since:** 9
 
 **Substitutes:** getAuthToken(name:
+
+<!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string): Promise<string>--><!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -3902,7 +3998,7 @@ promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the authorization token obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the authorization token obtained. |
 
 **Example**
 
@@ -3925,10 +4021,10 @@ off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void
 
 Unsubscribes from account information changes.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [off('accountChange')](arkts-basicservices-appaccountmanager-i.md#off-2)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [off('accountChange')](arkts-basicservices-appaccountmanager-i.md#off-2)  
 > instead.
 
 **Since:** 7
@@ -3937,6 +4033,8 @@ Unsubscribes from account information changes.
 
 **Substitutes:** off(type:
 
+<!--Device-AppAccountManager-off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -3944,7 +4042,7 @@ Unsubscribes from account information changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type to subscribe to. The value is **'change'**.An event will be reported when the account information changes. |
-| callback | Callback&lt;Array&lt;AppAccountInfo&gt;&gt; | No | Callback to unregister.By default, no value is passed, which means to unregister all callbacks forthe specified event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<AppAccountInfo>> | No | Callback to unregister.By default, no value is passed, which means to unregister all callbacks for the specified event. |
 
 **Example**
 
@@ -3977,6 +4075,8 @@ Unsubscribes from account information changes.
 
 **Since:** 9
 
+<!--Device-AppAccountManager-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -3984,7 +4084,7 @@ Unsubscribes from account information changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'accountChange' | Yes | Event type to unsubscribe from. The value is **'accountChange'**. |
-| callback | Callback&lt;Array&lt;AppAccountInfo&gt;&gt; | No | Callback to unregister. By default, no value is passed,which means to unregister all callbacks for the specified event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<AppAccountInfo>> | No | Callback to unregister. By default, no value is passed,which means to unregister all callbacks for the specified event. |
 
 **Error codes:**
 
@@ -4026,10 +4126,10 @@ on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInf
 
 Subscribes to account information changes of apps.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [on('accountChange')](arkts-basicservices-appaccountmanager-i.md#on-2)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [on('accountChange')](arkts-basicservices-appaccountmanager-i.md#on-2)  
 > instead.
 
 **Since:** 7
@@ -4038,6 +4138,8 @@ Subscribes to account information changes of apps.
 
 **Substitutes:** on(type:
 
+<!--Device-AppAccountManager-on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -4045,8 +4147,8 @@ Subscribes to account information changes of apps.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type to subscribe to. The value is **'change'**.An event will be reported when the account information changes. |
-| owners | Array&lt;string&gt; | Yes | Application bundle names of the account. |
-| callback | Callback&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes | Callback registered to return the list ofchanged application accounts. |
+| owners | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Application bundle names of the account. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<AppAccountInfo>> | Yes | Callback registered to return the list of changed application accounts. |
 
 **Example**
 
@@ -4076,6 +4178,8 @@ Subscribes to account information changes of apps.
 
 **Since:** 9
 
+<!--Device-AppAccountManager-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -4083,8 +4187,8 @@ Subscribes to account information changes of apps.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'accountChange' | Yes | Event type to subscribe to. The value is **'accountChange'**.An event will be reported when the account information of the target application changes. |
-| owners | Array&lt;string&gt; | Yes | Application bundle names of the account. |
-| callback | Callback&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes | Callback registered to return the listof changed application accounts. |
+| owners | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Application bundle names of the account. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<AppAccountInfo>> | Yes | Callback registered to return the list of changed application accounts. |
 
 **Error codes:**
 
@@ -4118,10 +4222,11 @@ try {
 queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void
 ```
 
-Obtains the authenticator information of an application. This API uses an asynchronous callback to return the
-result.
+Obtains the authenticator information of an application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void--><!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4130,7 +4235,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application.The value cannot exceed 1024 characters. |
-| callback | AsyncCallback&lt;AuthenticatorInfo&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **null** and **data** is the authenticator information obtained.Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<AuthenticatorInfo> | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator information obtained.Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -4172,6 +4277,8 @@ Obtains the authenticator information of an application. This API uses a promise
 
 **Since:** 9
 
+<!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>--><!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -4184,7 +4291,7 @@ Obtains the authenticator information of an application. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AuthenticatorInfo&gt; | Promise used to return the authenticator information obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AuthenticatorInfo> | Promise used to return the authenticator information obtained. |
 
 **Error codes:**
 
@@ -4224,6 +4331,8 @@ Removes an application account. This API uses an asynchronous callback to return
 
 **Since:** 9
 
+<!--Device-AppAccountManager-removeAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-removeAccount(name: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -4231,7 +4340,7 @@ Removes an application account. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -4272,6 +4381,8 @@ Removes an application account. This API uses a promise to return the result.
 
 **Since:** 9
 
+<!--Device-AppAccountManager-removeAccount(name: string): Promise<void>--><!--Device-AppAccountManager-removeAccount(name: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -4284,7 +4395,7 @@ Removes an application account. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -4319,11 +4430,11 @@ try {
 selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-Selects the accounts that can be accessed by the invoker based on the options. This API uses an asynchronous
-callback to return the result. If the options contain label constraints, the authenticator of the target
-application provides the capability of checking the labels.
+Selects the accounts that can be accessed by the invoker based on the options. This API uses an asynchronous callback to return the result. If the options contain label constraints, the authenticator of the target application provides the capability of checking the labels.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4331,8 +4442,8 @@ application provides the capability of checking the labels.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SelectAccountsOptions | Yes | Options for selecting accounts. |
-| callback | AsyncCallback&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is a list of accounts selected.Otherwise, **err** is an error object. |
+| options | [SelectAccountsOptions](arkts-basicservices-selectaccountsoptions-i.md) | Yes | Options for selecting accounts. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<AppAccountInfo>> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is a list of accounts selected.Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -4375,11 +4486,11 @@ try {
 selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccountInfo>>
 ```
 
-Selects the accounts that can be accessed by the invoker based on the options. This API uses a promise to return
-the result. If the options contain label constraints, the authenticator of the target application provides the
-capability of checking the labels.
+Selects the accounts that can be accessed by the invoker based on the options. This API uses a promise to return the result. If the options contain label constraints, the authenticator of the target application provides the capability of checking the labels.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccountInfo>>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4387,13 +4498,13 @@ capability of checking the labels.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SelectAccountsOptions | Yes | Options for selecting accounts. |
+| options | [SelectAccountsOptions](arkts-basicservices-selectaccountsoptions-i.md) | Yes | Options for selecting accounts. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AppAccountInfo&gt;&gt; | Promise used to return the accounts selected. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AppAccountInfo>> | Promise used to return the accounts selected. |
 
 **Error codes:**
 
@@ -4434,10 +4545,10 @@ setAccountCredential(name: string, credentialType: string, credential: string, c
 
 Sets a credential for an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCredential](arkts-basicservices-appaccountmanager-i.md#setcredential-1)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [setCredential](arkts-basicservices-appaccountmanager-i.md#setcredential-1)  
 > instead.
 
 **Since:** 7
@@ -4445,6 +4556,8 @@ Sets a credential for an application account. This API uses an asynchronous call
 **Deprecated since:** 9
 
 **Substitutes:** setCredential(name:
+
+<!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4455,7 +4568,7 @@ Sets a credential for an application account. This API uses an asynchronous call
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
 | credential | string | Yes | Credential value. The custom value, the value cannot exceed 1024 characters. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -4480,10 +4593,10 @@ setAccountCredential(name: string, credentialType: string, credential: string): 
 
 Sets a credential for an application account. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCredential](arkts-basicservices-appaccountmanager-i.md#setcredential-2)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [setCredential](arkts-basicservices-appaccountmanager-i.md#setcredential-2)  
 > instead.
 
 **Since:** 7
@@ -4491,6 +4604,8 @@ Sets a credential for an application account. This API uses a promise to return 
 **Deprecated since:** 9
 
 **Substitutes:** setCredential(name:
+
+<!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>--><!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4506,7 +4621,7 @@ Sets a credential for an application account. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -4527,13 +4642,12 @@ appAccountManager.setAccountCredential('ZhangSan', 'credentialType001', 'credent
 setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void
 ```
 
-Sets additional information for an application account. This API uses an asynchronous callback to return the
-result.
+Sets additional information for an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCustomData](arkts-basicservices-appaccountmanager-i.md#setcustomdata-1)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [setCustomData](arkts-basicservices-appaccountmanager-i.md#setcustomdata-1)  
 > instead.
 
 **Since:** 7
@@ -4541,6 +4655,8 @@ result.
 **Deprecated since:** 9
 
 **Substitutes:** setCustomData(name:
+
+<!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4550,7 +4666,7 @@ result.
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | extraInfo | string | Yes | Additional information (information that can be converted to the string type).It cannot contain sensitive information, such as the application account password and token. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -4575,10 +4691,10 @@ setAccountExtraInfo(name: string, extraInfo: string): Promise<void>
 
 Sets additional information for an application account. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCustomData](arkts-basicservices-appaccountmanager-i.md#setcustomdata-2)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [setCustomData](arkts-basicservices-appaccountmanager-i.md#setcustomdata-2)  
 > instead.
 
 **Since:** 7
@@ -4586,6 +4702,8 @@ Sets additional information for an application account. This API uses a promise 
 **Deprecated since:** 9
 
 **Substitutes:** setCustomData(name:
+
+<!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string): Promise<void>--><!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4600,7 +4718,7 @@ Sets additional information for an application account. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -4621,10 +4739,11 @@ appAccountManager.setAccountExtraInfo('ZhangSan', 'Tk002').then(() => {
 setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets the access to the data of an account for an application. This API uses an asynchronous callback to return
-the result.
+Sets the access to the data of an account for an application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4635,7 +4754,7 @@ the result.
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
 | isAccessible | boolean | Yes | Whether the access is allowed. The value **true** means to allow the access;the value **false** means the opposite. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -4677,6 +4796,8 @@ Sets the access to the data of an account for an application. This API uses a pr
 
 **Since:** 9
 
+<!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<void>--><!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -4691,7 +4812,7 @@ Sets the access to the data of an account for an application. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -4727,13 +4848,12 @@ try {
 setAppAccountSyncEnable(name: string, isEnable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets data synchronization for an application account. This API uses an asynchronous callback to return the
-result.
+Sets data synchronization for an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setDataSyncEnabled](arkts-basicservices-appaccountmanager-i.md#setdatasyncenabled-1)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [setDataSyncEnabled](arkts-basicservices-appaccountmanager-i.md#setdatasyncenabled-1)  
 > instead.
 
 **Since:** 7
@@ -4744,6 +4864,8 @@ result.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-AppAccountManager-setAppAccountSyncEnable(name: string, isEnable: boolean, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAppAccountSyncEnable(name: string, isEnable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -4751,8 +4873,8 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| isEnable | boolean | Yes | Whether to enable data synchronization. The value **true** means thatdata synchronization is enabled, and **false** means the opposite. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| isEnable | boolean | Yes | Whether to enable data synchronization. The value **true** means that data synchronization is enabled, and **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -4777,10 +4899,10 @@ setAppAccountSyncEnable(name: string, isEnable: boolean): Promise<void>
 
 Sets data synchronization for an application account. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setDataSyncEnabled](arkts-basicservices-appaccountmanager-i.md#setdatasyncenabled-2)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [setDataSyncEnabled](arkts-basicservices-appaccountmanager-i.md#setdatasyncenabled-2)  
 > instead.
 
 **Since:** 7
@@ -4791,6 +4913,8 @@ Sets data synchronization for an application account. This API uses a promise to
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-AppAccountManager-setAppAccountSyncEnable(name: string, isEnable: boolean): Promise<void>--><!--Device-AppAccountManager-setAppAccountSyncEnable(name: string, isEnable: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -4798,13 +4922,13 @@ Sets data synchronization for an application account. This API uses a promise to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| isEnable | boolean | Yes | Whether to enable data synchronization. The value **true** means thatdata synchronization is enabled, and **false** means the opposite. |
+| isEnable | boolean | Yes | Whether to enable data synchronization. The value **true** means that data synchronization is enabled, and **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -4825,13 +4949,12 @@ appAccountManager.setAppAccountSyncEnable('ZhangSan', true).then(() => {
 setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void
 ```
 
-Sets data to be associated with an application account. This API uses an asynchronous callback to return the
-result.
+Sets data to be associated with an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCustomData](arkts-basicservices-appaccountmanager-i.md#setcustomdata-1)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [setCustomData](arkts-basicservices-appaccountmanager-i.md#setcustomdata-1)  
 > instead.
 
 **Since:** 7
@@ -4839,6 +4962,8 @@ result.
 **Deprecated since:** 9
 
 **Substitutes:** setCustomData(name:
+
+<!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4849,7 +4974,7 @@ result.
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | key | string | Yes | Key of the associated data. |
 | value | string | Yes | Value of the data to set. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -4874,10 +4999,10 @@ setAssociatedData(name: string, key: string, value: string): Promise<void>
 
 Sets data to be associated with an application account. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCustomData](arkts-basicservices-appaccountmanager-i.md#setcustomdata-2)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [setCustomData](arkts-basicservices-appaccountmanager-i.md#setcustomdata-2)  
 > instead.
 
 **Since:** 7
@@ -4885,6 +5010,8 @@ Sets data to be associated with an application account. This API uses a promise 
 **Deprecated since:** 9
 
 **Substitutes:** setCustomData(name:
+
+<!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string): Promise<void>--><!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4900,7 +5027,7 @@ Sets data to be associated with an application account. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -4921,10 +5048,11 @@ appAccountManager.setAssociatedData('ZhangSan', 'k001', 'v001').then(() => {
 setAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void
 ```
 
-Sets an authorization token of the specific authentication type for an application account. This API uses an
-asynchronous callback to return the result.
+Sets an authorization token of the specific authentication type for an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4935,7 +5063,7 @@ asynchronous callback to return the result.
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | token | string | Yes | Authorization token. The value cannot exceed 1024 characters. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -4973,10 +5101,11 @@ try {
 setAuthToken(name: string, authType: string, token: string): Promise<void>
 ```
 
-Sets an authorization token of the specific authentication type for an application account. This API uses a
-promise to return the result.
+Sets an authorization token of the specific authentication type for an application account. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4992,7 +5121,7 @@ promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -5034,10 +5163,23 @@ setAuthTokenVisibility(
     ): void
 ```
 
-Sets the visibility of an authorization token to an application. This API uses an asynchronous callback to return
-the result.
+Sets the visibility of an authorization token to an application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AppAccountManager-setAuthTokenVisibility(
+      name: string,
+      authType: string,
+      bundleName: string,
+      isVisible: boolean,
+      callback: AsyncCallback<void>
+    ): void--><!--Device-AppAccountManager-setAuthTokenVisibility(
+      name: string,
+      authType: string,
+      bundleName: string,
+      isVisible: boolean,
+      callback: AsyncCallback<void>
+    ): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -5049,7 +5191,7 @@ the result.
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
 | isVisible | boolean | Yes | Whether the authorization token is visible to the application.The value **true** means the authorization token is visible to the application;the value **false** means the opposite. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -5093,6 +5235,8 @@ Sets the visibility of an authorization token to an application. This API uses a
 
 **Since:** 9
 
+<!--Device-AppAccountManager-setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>--><!--Device-AppAccountManager-setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -5108,7 +5252,7 @@ Sets the visibility of an authorization token to an application. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -5149,6 +5293,8 @@ Sets the authenticator attributes of an application. This API uses an asynchrono
 
 **Since:** 9
 
+<!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, callback: AuthCallback): void--><!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, callback: AuthCallback): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -5156,7 +5302,7 @@ Sets the authenticator attributes of an application. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | owner | string | Yes | Owner of the authenticator. The value is the Bundle name of the application.The value cannot exceed 1024 characters. |
-| callback | AuthCallback | Yes | Callback used to return the result. |
+| callback | [AuthCallback](arkts-basicservices-authcallback-i.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -5202,6 +5348,8 @@ Sets the authenticator properties. This API uses an asynchronous callback to ret
 
 **Since:** 9
 
+<!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callback: AuthCallback): void--><!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callback: AuthCallback): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -5209,8 +5357,8 @@ Sets the authenticator properties. This API uses an asynchronous callback to ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | owner | string | Yes | Owner of the authenticator. The value is the Bundle name of the application.The value cannot exceed 1024 characters. |
-| options | SetPropertiesOptions | Yes | Authenticator properties to set. |
-| callback | AuthCallback | Yes | Authenticator callback used to return the result. |
+| options | [SetPropertiesOptions](arkts-basicservices-setpropertiesoptions-i.md) | Yes | Authenticator properties to set. |
+| callback | [AuthCallback](arkts-basicservices-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 **Error codes:**
 
@@ -5260,6 +5408,10 @@ Sets a credential for an application account. This API uses an asynchronous call
 
 **Since:** 9
 
+<!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string,
+                             callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string,
+                             callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -5269,7 +5421,7 @@ Sets a credential for an application account. This API uses an asynchronous call
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
 | credential | string | Yes | Credential value. The custom value, the value cannot exceed 1024 characters. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the credential is setsuccessfully, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the credential is set successfully, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -5310,6 +5462,8 @@ Sets a credential for an application account. This API uses a promise to return 
 
 **Since:** 9
 
+<!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string): Promise<void>--><!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -5324,7 +5478,7 @@ Sets a credential for an application account. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -5363,6 +5517,8 @@ Sets custom data for an application account. This API uses an asynchronous callb
 
 **Since:** 9
 
+<!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -5372,7 +5528,7 @@ Sets custom data for an application account. This API uses an asynchronous callb
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | key | string | Yes | Key of the custom data. The value cannot exceed 512 characters. |
 | value | string | Yes | Value of the custom data. The value cannot exceed 512 characters. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -5414,6 +5570,8 @@ Sets custom data for an application account. This API uses a promise to return t
 
 **Since:** 9
 
+<!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string): Promise<void>--><!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -5428,7 +5586,7 @@ Sets custom data for an application account. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -5464,12 +5622,13 @@ try {
 setDataSyncEnabled(name: string, isEnabled: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets data synchronization for an application account. This API uses an asynchronous callback to return the
-result.
+Sets data synchronization for an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-AppAccountManager-setDataSyncEnabled(name: string, isEnabled: boolean, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setDataSyncEnabled(name: string, isEnabled: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -5478,8 +5637,8 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| isEnabled | boolean | Yes | Whether to enable data synchronization. The value **true** means that datasynchronization is enabled, and **false** means the opposite. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| isEnabled | boolean | Yes | Whether to enable data synchronization. The value **true** means that data synchronization is enabled, and **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -5519,6 +5678,8 @@ Sets data synchronization for an application account. This API uses a promise to
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-AppAccountManager-setDataSyncEnabled(name: string, isEnabled: boolean): Promise<void>--><!--Device-AppAccountManager-setDataSyncEnabled(name: string, isEnabled: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -5526,13 +5687,13 @@ Sets data synchronization for an application account. This API uses a promise to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| isEnabled | boolean | Yes | Whether to enable data synchronization. The value **true** means that datasynchronization is enabled, and **false** means the opposite. |
+| isEnabled | boolean | Yes | Whether to enable data synchronization. The value **true** means that data synchronization is enabled, and **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -5568,13 +5729,12 @@ try {
 setOAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void
 ```
 
-Sets an authorization token of the specific authentication type for an application account. This API uses an
-asynchronous callback to return the result.
+Sets an authorization token of the specific authentication type for an application account. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [setAuthToken](arkts-basicservices-appaccountmanager-i.md#setauthtoken-1)
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [setAuthToken](arkts-basicservices-appaccountmanager-i.md#setauthtoken-1)  
 > instead.
 
 **Since:** 8
@@ -5582,6 +5742,8 @@ asynchronous callback to return the result.
 **Deprecated since:** 9
 
 **Substitutes:** setAuthToken(name:
+
+<!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -5592,7 +5754,7 @@ asynchronous callback to return the result.
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | token | string | Yes | Authorization token. The value cannot exceed 1024 characters. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -5615,13 +5777,12 @@ appAccountManager.setOAuthToken('LiSi', 'getSocialData', 'xxxx', (err: BusinessE
 setOAuthToken(name: string, authType: string, token: string): Promise<void>
 ```
 
-Sets an authorization token of the specific authentication type for an application account. This API uses a
-promise to return the result.
+Sets an authorization token of the specific authentication type for an application account. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [setAuthToken](arkts-basicservices-appaccountmanager-i.md#setauthtoken-2)
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [setAuthToken](arkts-basicservices-appaccountmanager-i.md#setauthtoken-2)  
 > instead.
 
 **Since:** 8
@@ -5629,6 +5790,8 @@ promise to return the result.
 **Deprecated since:** 9
 
 **Substitutes:** setAuthToken(name:
+
+<!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -5644,7 +5807,7 @@ promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -5671,13 +5834,12 @@ setOAuthTokenVisibility(
     ): void
 ```
 
-Sets the visibility of an authorization token to an application. This API uses an asynchronous callback to return
-the result.
+Sets the visibility of an authorization token to an application. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [setAuthTokenVisibility](arkts-basicservices-appaccountmanager-i.md#setauthtokenvisibility-1)
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [setAuthTokenVisibility](arkts-basicservices-appaccountmanager-i.md#setauthtokenvisibility-1)  
 > instead.
 
 **Since:** 8
@@ -5685,6 +5847,20 @@ the result.
 **Deprecated since:** 9
 
 **Substitutes:** setAuthTokenVisibility(
+
+<!--Device-AppAccountManager-setOAuthTokenVisibility(
+      name: string,
+      authType: string,
+      bundleName: string,
+      isVisible: boolean,
+      callback: AsyncCallback<void>
+    ): void--><!--Device-AppAccountManager-setOAuthTokenVisibility(
+      name: string,
+      authType: string,
+      bundleName: string,
+      isVisible: boolean,
+      callback: AsyncCallback<void>
+    ): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -5696,7 +5872,7 @@ the result.
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
 | isVisible | boolean | Yes | Whether the authorization token is visible to the application.The value **true** means the authorization token is visible to the application;the value **false** means the opposite. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -5722,10 +5898,10 @@ setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVi
 
 Sets the visibility of an authorization token to an application. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [setAuthTokenVisibility](arkts-basicservices-appaccountmanager-i.md#setauthtokenvisibility-2)
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [setAuthTokenVisibility](arkts-basicservices-appaccountmanager-i.md#setauthtokenvisibility-2)  
 > instead.
 
 **Since:** 8
@@ -5733,6 +5909,8 @@ Sets the visibility of an authorization token to an application. This API uses a
 **Deprecated since:** 9
 
 **Substitutes:** setAuthTokenVisibility(name:
+
+<!--Device-AppAccountManager-setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>--><!--Device-AppAccountManager-setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -5743,13 +5921,13 @@ Sets the visibility of an authorization token to an application. This API uses a
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
-| isVisible | boolean | Yes | Whether the authorization token is visible to the application. The value **true** meansthe authorization token is visible to the application; the value **false** means the opposite. |
+| isVisible | boolean | Yes | Whether the authorization token is visible to the application. The value **true** means the authorization token is visible to the application; the value **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -5774,6 +5952,8 @@ Verifies the credential of an application account. This API uses an asynchronous
 
 **Since:** 9
 
+<!--Device-AppAccountManager-verifyCredential(name: string, owner: string, callback: AuthCallback): void--><!--Device-AppAccountManager-verifyCredential(name: string, owner: string, callback: AuthCallback): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -5782,7 +5962,7 @@ Verifies the credential of an application account. This API uses an asynchronous
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application.The value cannot exceed 1024 characters. |
-| callback | AuthCallback | Yes | Callback used to return the result. |
+| callback | [AuthCallback](arkts-basicservices-authcallback-i.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -5829,6 +6009,8 @@ Verifies the user credential. This API uses an asynchronous callback to return t
 
 **Since:** 9
 
+<!--Device-AppAccountManager-verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, callback: AuthCallback): void--><!--Device-AppAccountManager-verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, callback: AuthCallback): void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 **Parameters:**
@@ -5837,8 +6019,8 @@ Verifies the user credential. This API uses an asynchronous callback to return t
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application.The value cannot exceed 1024 characters. |
-| options | VerifyCredentialOptions | Yes | Options for credential verification. |
-| callback | AuthCallback | Yes | Callback used to return the result. |
+| options | [VerifyCredentialOptions](arkts-basicservices-verifycredentialoptions-i.md) | Yes | Options for credential verification. |
+| callback | [AuthCallback](arkts-basicservices-authcallback-i.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 

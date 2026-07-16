@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-cloudSyncManager-enum Action--><!--Device-cloudSyncManager-enum Action-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **系统接口：** 此接口为系统接口。
@@ -18,6 +20,8 @@ RETAIN_DATA = 0
 
 **起始版本：** 10
 
+<!--Device-Action-RETAIN_DATA = 0--><!--Device-Action-RETAIN_DATA = 0-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +35,8 @@ CLEAR_DATA = 1
 清除云端标识信息，若存在本地缓存文件，一并删除。
 
 **起始版本：** 10
+
+<!--Device-Action-CLEAR_DATA = 1--><!--Device-Action-CLEAR_DATA = 1-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 

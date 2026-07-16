@@ -20,14 +20,16 @@ Finds a window based on the ID. This API uses an asynchronous callback to return
 
 **Substitutes:** [findWindow](arkts-arkui-findwindow-f.md#findwindow-1)
 
+<!--Device-window-function find(id: string, callback: AsyncCallback<Window>): void--><!--Device-window-function find(id: string, callback: AsyncCallback<Window>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Window name, that is, the value of name in[Configuration](arkts-arkui-configuration-i.md). |
-| callback | AsyncCallback&lt;Window&gt; | Yes | Callback used to return the window found. |
+| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-configuration-i.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Window> | Yes | Callback used to return the window found. |
 
 **Example**
 
@@ -62,19 +64,21 @@ Finds a window based on the ID. This API uses a promise to return the result.
 
 **Substitutes:** [findWindow](arkts-arkui-findwindow-f.md#findwindow-1)
 
+<!--Device-window-function find(id: string): Promise<Window>--><!--Device-window-function find(id: string): Promise<Window>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Window name, that is, the value of name in[Configuration](arkts-arkui-configuration-i.md). |
+| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-configuration-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Window&gt; | Promise used to return the window found. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Window> | Promise used to return the window found. |
 
 **Example**
 

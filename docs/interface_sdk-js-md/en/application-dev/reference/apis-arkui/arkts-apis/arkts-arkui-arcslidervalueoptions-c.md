@@ -4,6 +4,8 @@ Defines the value of the arc slider.
 
 **Since:** 18
 
+<!--Device-unnamed-declare class ArcSliderValueOptions--><!--Device-unnamed-declare class ArcSliderValueOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
@@ -24,13 +26,15 @@ A constructor used to create an **ArcSliderValueOptions** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcSliderValueOptions-constructor(options?: ArcSliderValueOptionsConstructorOptions)--><!--Device-ArcSliderValueOptions-constructor(options?: ArcSliderValueOptionsConstructorOptions)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ArcSliderValueOptionsConstructorOptions | No | Constructor information for **ArcSliderValueOptions**. |
+| options | [ArcSliderValueOptionsConstructorOptions](arkts-arkui-arcslidervalueoptionsconstructoroptions-i.md) | No | Constructor information for **ArcSliderValueOptions**. |
 
 ## max
 
@@ -56,6 +60,8 @@ If the value is not within the [min, max] range, the value of **min** or **max**
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcSliderValueOptions-max?: number--><!--Device-ArcSliderValueOptions-max?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## min
@@ -76,6 +82,8 @@ Default value: **0**.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcSliderValueOptions-min?: number--><!--Device-ArcSliderValueOptions-min?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## progress
@@ -93,6 +101,8 @@ Default value: same as the value of **min**.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSliderValueOptions-progress?: number--><!--Device-ArcSliderValueOptions-progress?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 

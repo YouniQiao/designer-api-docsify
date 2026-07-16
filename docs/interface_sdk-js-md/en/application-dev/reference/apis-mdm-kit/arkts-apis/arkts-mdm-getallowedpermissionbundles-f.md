@@ -20,6 +20,8 @@ Gets the applications that are allowed to be granted the permission.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-securityManager-function getAllowedPermissionBundles(admin: Want | null, permission: string, accountId: number): Array<common.ApplicationInstance>--><!--Device-securityManager-function getAllowedPermissionBundles(admin: Want | null, permission: string, accountId: number): Array<common.ApplicationInstance>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
@@ -34,7 +36,7 @@ Gets the applications that are allowed to be granted the permission.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common.ApplicationInstance&gt; | the list of applicationsthat are allowed to be granted the permission. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<common.ApplicationInstance> | the list of applications that are allowed to be granted the permission. |
 
 **Error codes:**
 

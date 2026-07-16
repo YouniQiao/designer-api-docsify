@@ -4,6 +4,8 @@ Describes the scanned Wi-Fi information.
 
 **Since:** 12
 
+<!--Device-wifiManager-interface WifiScanInfo--><!--Device-wifiManager-interface WifiScanInfo-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Frequency band, 1: 2.4G, 2: 5G
 
 **Since:** 9
 
+<!--Device-WifiScanInfo-band: int--><!--Device-WifiScanInfo-band: int-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## bssid
@@ -39,6 +43,8 @@ Wi-Fi bssid(MAC): the length is 6
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WifiScanInfo-bssid: string--><!--Device-WifiScanInfo-bssid: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -56,6 +62,8 @@ Wi-Fi bssid type
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WifiScanInfo-bssidType: DeviceAddressType--><!--Device-WifiScanInfo-bssidType: DeviceAddressType-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## capabilities
@@ -69,6 +77,8 @@ Hotspot capability
 **Type:** string
 
 **Since:** 9
+
+<!--Device-WifiScanInfo-capabilities: string--><!--Device-WifiScanInfo-capabilities: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -84,6 +94,8 @@ Center frequency 0.
 
 **Since:** 9
 
+<!--Device-WifiScanInfo-centerFrequency0: int--><!--Device-WifiScanInfo-centerFrequency0: int-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## centerFrequency1
@@ -98,6 +110,8 @@ Center frequency 1.
 
 **Since:** 9
 
+<!--Device-WifiScanInfo-centerFrequency1: int--><!--Device-WifiScanInfo-centerFrequency1: int-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## channelWidth
@@ -111,6 +125,8 @@ Channel width
 **Type:** number
 
 **Since:** 9
+
+<!--Device-WifiScanInfo-channelWidth: int--><!--Device-WifiScanInfo-channelWidth: int-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -128,6 +144,8 @@ Frequency
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WifiScanInfo-frequency: int--><!--Device-WifiScanInfo-frequency: int-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## infoElems
@@ -142,6 +160,8 @@ Information elements.
 
 **Since:** 9
 
+<!--Device-WifiScanInfo-infoElems: Array<WifiInfoElem>--><!--Device-WifiScanInfo-infoElems: Array<WifiInfoElem>-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## isHiLinkNetwork
@@ -155,6 +175,8 @@ Whether the Wi-Fi hotspot is HiLink network.
 **Type:** boolean
 
 **Since:** 12
+
+<!--Device-WifiScanInfo-isHiLinkNetwork: boolean--><!--Device-WifiScanInfo-isHiLinkNetwork: boolean-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -172,6 +194,8 @@ Received signal strength indicator (RSSI)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WifiScanInfo-rssi: int--><!--Device-WifiScanInfo-rssi: int-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## securityType
@@ -187,6 +211,8 @@ Security type: reference definition of WifiSecurityType
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WifiScanInfo-securityType: WifiSecurityType--><!--Device-WifiScanInfo-securityType: WifiSecurityType-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -204,6 +230,8 @@ Wi-Fi SSID: the maximum length is 32
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WifiScanInfo-ssid: string--><!--Device-WifiScanInfo-ssid: string-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## supportedWifiCategory
@@ -218,6 +246,8 @@ Supported wifi category
 
 **Since:** 12
 
+<!--Device-WifiScanInfo-supportedWifiCategory: WifiCategory--><!--Device-WifiScanInfo-supportedWifiCategory: WifiCategory-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## timestamp
@@ -231,6 +261,8 @@ Time stamp
 **Type:** number
 
 **Since:** 9
+
+<!--Device-WifiScanInfo-timestamp: long--><!--Device-WifiScanInfo-timestamp: long-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 

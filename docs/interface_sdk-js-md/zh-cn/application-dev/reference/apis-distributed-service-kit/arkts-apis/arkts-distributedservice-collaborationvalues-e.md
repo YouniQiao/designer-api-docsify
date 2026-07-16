@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+<!--Device-abilityConnectionManager-export enum CollaborationValues--><!--Device-abilityConnectionManager-export enum CollaborationValues-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## ABILITY_COLLABORATION_TYPE_DEFAULT
@@ -18,6 +20,8 @@ ABILITY_COLLABORATION_TYPE_DEFAULT = 'ohos.collaboration.value.abilityCollab'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CollaborationValues-ABILITY_COLLABORATION_TYPE_DEFAULT = 'ohos.collaboration.value.abilityCollab'--><!--Device-CollaborationValues-ABILITY_COLLABORATION_TYPE_DEFAULT = 'ohos.collaboration.value.abilityCollab'-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## ABILITY_COLLABORATION_TYPE_CONNECT_PROXY
@@ -31,6 +35,8 @@ ABILITY_COLLABORATION_TYPE_CONNECT_PROXY = 'ohos.collaboration.value.connectProx
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CollaborationValues-ABILITY_COLLABORATION_TYPE_CONNECT_PROXY = 'ohos.collaboration.value.connectProxy'--><!--Device-CollaborationValues-ABILITY_COLLABORATION_TYPE_CONNECT_PROXY = 'ohos.collaboration.value.connectProxy'-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 

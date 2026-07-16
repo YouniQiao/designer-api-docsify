@@ -4,7 +4,15 @@
 
 **起始版本：** 21
 
+<!--Device-cert-interface Pkcs12CreationConfig--><!--Device-cert-interface Pkcs12CreationConfig-End-->
+
 **系统能力：** SystemCapability.Security.Cert
+
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
 
 ## certEncParams
 
@@ -18,7 +26,9 @@ certEncParams?: PbesParams
 
 **起始版本：** 21
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Pkcs12CreationConfig-certEncParams?: PbesParams--><!--Device-Pkcs12CreationConfig-certEncParams?: PbesParams-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -36,7 +46,9 @@ encryptCert?: boolean
 
 **起始版本：** 21
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Pkcs12CreationConfig-encryptCert?: boolean--><!--Device-Pkcs12CreationConfig-encryptCert?: boolean-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -52,7 +64,9 @@ keyEncParams?: PbesParams
 
 **起始版本：** 21
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Pkcs12CreationConfig-keyEncParams?: PbesParams--><!--Device-Pkcs12CreationConfig-keyEncParams?: PbesParams-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -70,7 +84,9 @@ macDigestAlgorithm?: Pkcs12MacDigestAlgorithm
 
 **起始版本：** 21
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Pkcs12CreationConfig-macDigestAlgorithm?: Pkcs12MacDigestAlgorithm--><!--Device-Pkcs12CreationConfig-macDigestAlgorithm?: Pkcs12MacDigestAlgorithm-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -80,8 +96,7 @@ macDigestAlgorithm?: Pkcs12MacDigestAlgorithm
 macIterations?: number
 ```
 
-表示P12的MAC的迭代次数。默认为2048。
-取值应为正整数。
+表示P12的MAC的迭代次数。默认为2048。取值应为正整数。
 
 **类型：** number
 
@@ -89,7 +104,9 @@ macIterations?: number
 
 **起始版本：** 21
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Pkcs12CreationConfig-macIterations?: int--><!--Device-Pkcs12CreationConfig-macIterations?: int-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -99,8 +116,7 @@ macIterations?: number
 macSaltLen?: number
 ```
 
-表示P12的MAC的盐值长度。最小值为8，默认为16。
-取值应为≥8的整数。
+表示P12的MAC的盐值长度。最小值为8，默认为16。取值应为≥8的整数。
 
 **类型：** number
 
@@ -108,7 +124,9 @@ macSaltLen?: number
 
 **起始版本：** 21
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Pkcs12CreationConfig-macSaltLen?: int--><!--Device-Pkcs12CreationConfig-macSaltLen?: int-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -124,7 +142,9 @@ password: string
 
 **起始版本：** 21
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Pkcs12CreationConfig-password: string--><!--Device-Pkcs12CreationConfig-password: string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

@@ -8,6 +8,8 @@ Provides content options of the modal.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface ContentCoverOptions extends BindOptions--><!--Device-unnamed-declare interface ContentCoverOptions extends BindOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableSafeArea
@@ -16,9 +18,7 @@ Provides content options of the modal.
 enableSafeArea?: boolean
 ```
 
-Whether the full-screen modal adapts to the safe area. **true** indicates the full-screen modal adapts to the safe
-area, restricting content within the safe area and avoiding the navigation and status bars. **false** indicates no
-processing is applied, maintaining the same style as before. The default value is **false**.
+Whether the full-screen modal adapts to the safe area. **true** indicates the full-screen modal adapts to the safe area, restricting content within the safe area and avoiding the navigation and status bars. **false** indicates no processing is applied, maintaining the same style as before. The default value is **false**.
 
 **Type:** boolean
 
@@ -29,6 +29,8 @@ processing is applied, maintaining the same style as before. The default value i
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-ContentCoverOptions-enableSafeArea?: boolean--><!--Device-ContentCoverOptions-enableSafeArea?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,6 +58,8 @@ This property has no effect when it is set together with **transition**.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ContentCoverOptions-modalTransition?: ModalTransition--><!--Device-ContentCoverOptions-modalTransition?: ModalTransition-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onWillDismiss
@@ -68,9 +72,7 @@ Callback invoked to prevent a user attempt to dismiss the modal.
 
 **NOTE**
 
-After this callback is registered, touching the back button does not immediately dismiss the modal. You can use the
-**reason** parameter to determine the type of operation that triggers the dismiss and decide whether to dismiss the
-modal based on the reason. Nesting **onWillDismiss** callbacks is not allowed.
+After this callback is registered, touching the back button does not immediately dismiss the modal. You can use the **reason** parameter to determine the type of operation that triggers the dismiss and decide whether to dismiss the modal based on the reason. Nesting **onWillDismiss** callbacks is not allowed.
 
 **Type:** Callback<DismissContentCoverAction>
 
@@ -79,6 +81,8 @@ modal based on the reason. Nesting **onWillDismiss** callbacks is not allowed.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ContentCoverOptions-onWillDismiss?: Callback<DismissContentCoverAction>--><!--Device-ContentCoverOptions-onWillDismiss?: Callback<DismissContentCoverAction>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -97,6 +101,8 @@ Custom transition mode of the modal.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ContentCoverOptions-transition?: TransitionEffect--><!--Device-ContentCoverOptions-transition?: TransitionEffect-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

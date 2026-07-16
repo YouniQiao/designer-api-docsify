@@ -4,6 +4,8 @@ WebGL 2.0
 
 **Since:** 7
 
+<!--Device-unnamed-interface WebGL2RenderingContextBase--><!--Device-unnamed-interface WebGL2RenderingContextBase-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## beginQuery
@@ -18,6 +20,8 @@ Begins a query
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-beginQuery(target: webgl.GLenum, query: WebGLQuery): void--><!--Device-WebGL2RenderingContextBase-beginQuery(target: webgl.GLenum, query: WebGLQuery): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -25,7 +29,7 @@ Begins a query
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | webgl.GLenum | Yes | Target |
-| query | WebGLQuery | Yes | Query |
+| query | [WebGLQuery](arkts-arkgraphics2d-webglquery-i.md) | Yes | Query |
 
 ## beginTransformFeedback
 
@@ -38,6 +42,8 @@ Begins transform feedback
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-beginTransformFeedback(primitiveMode: webgl.GLenum): void--><!--Device-WebGL2RenderingContextBase-beginTransformFeedback(primitiveMode: webgl.GLenum): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -58,6 +64,8 @@ Binds buffer base
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-bindBufferBase(target: webgl.GLenum, index: webgl.GLuint, buffer: webgl.WebGLBuffer | null): void--><!--Device-WebGL2RenderingContextBase-bindBufferBase(target: webgl.GLenum, index: webgl.GLuint, buffer: webgl.WebGLBuffer | null): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -87,6 +95,20 @@ Binds buffer range
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-bindBufferRange(
+      target: webgl.GLenum,
+      index: webgl.GLuint,
+      buffer: webgl.WebGLBuffer | null,
+      offset: webgl.GLintptr,
+      size: webgl.GLsizeiptr,
+    ): void--><!--Device-WebGL2RenderingContextBase-bindBufferRange(
+      target: webgl.GLenum,
+      index: webgl.GLuint,
+      buffer: webgl.WebGLBuffer | null,
+      offset: webgl.GLintptr,
+      size: webgl.GLsizeiptr,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -111,6 +133,8 @@ Binds a sampler
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-bindSampler(unit: webgl.GLuint, sampler: WebGLSampler | null): void--><!--Device-WebGL2RenderingContextBase-bindSampler(unit: webgl.GLuint, sampler: WebGLSampler | null): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -132,6 +156,8 @@ Binds a transform feedback
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-bindTransformFeedback(target: webgl.GLenum, tf: WebGLTransformFeedback | null): void--><!--Device-WebGL2RenderingContextBase-bindTransformFeedback(target: webgl.GLenum, tf: WebGLTransformFeedback | null): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -152,6 +178,8 @@ Binds a vertex array
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-bindVertexArray(array: WebGLVertexArrayObject | null): void--><!--Device-WebGL2RenderingContextBase-bindVertexArray(array: WebGLVertexArrayObject | null): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -184,6 +212,30 @@ Blits framebuffer
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-blitFramebuffer(
+      srcX0: webgl.GLint,
+      srcY0: webgl.GLint,
+      srcX1: webgl.GLint,
+      srcY1: webgl.GLint,
+      dstX0: webgl.GLint,
+      dstY0: webgl.GLint,
+      dstX1: webgl.GLint,
+      dstY1: webgl.GLint,
+      mask: webgl.GLbitfield,
+      filter: webgl.GLenum,
+    ): void--><!--Device-WebGL2RenderingContextBase-blitFramebuffer(
+      srcX0: webgl.GLint,
+      srcY0: webgl.GLint,
+      srcX1: webgl.GLint,
+      srcY1: webgl.GLint,
+      dstX0: webgl.GLint,
+      dstY0: webgl.GLint,
+      dstX1: webgl.GLint,
+      dstY1: webgl.GLint,
+      mask: webgl.GLbitfield,
+      filter: webgl.GLenum,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -213,6 +265,8 @@ Clears bufferfi
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-clearBufferfi(buffer: webgl.GLenum, drawbuffer: webgl.GLint, depth: webgl.GLfloat, stencil: webgl.GLint): void--><!--Device-WebGL2RenderingContextBase-clearBufferfi(buffer: webgl.GLenum, drawbuffer: webgl.GLint, depth: webgl.GLfloat, stencil: webgl.GLint): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -240,6 +294,18 @@ Clears bufferfv
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-clearBufferfv(
+      buffer: webgl.GLenum,
+      drawbuffer: webgl.GLint,
+      values: webgl.Float32List,
+      srcOffset?: webgl.GLuint,
+    ): void--><!--Device-WebGL2RenderingContextBase-clearBufferfv(
+      buffer: webgl.GLenum,
+      drawbuffer: webgl.GLint,
+      values: webgl.Float32List,
+      srcOffset?: webgl.GLuint,
+    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -269,6 +335,18 @@ Clears bufferiv
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-clearBufferiv(
+      buffer: webgl.GLenum,
+      drawbuffer: webgl.GLint,
+      values: webgl.Int32List,
+      srcOffset?: webgl.GLuint,
+    ): void--><!--Device-WebGL2RenderingContextBase-clearBufferiv(
+      buffer: webgl.GLenum,
+      drawbuffer: webgl.GLint,
+      values: webgl.Int32List,
+      srcOffset?: webgl.GLuint,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -292,6 +370,8 @@ Clears bufferuiv
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-clearBufferuiv(buffer: webgl.GLenum, drawbuffer: webgl.GLint, values: Uint32List, srcOffset?: webgl.GLuint): void--><!--Device-WebGL2RenderingContextBase-clearBufferuiv(buffer: webgl.GLenum, drawbuffer: webgl.GLint, values: Uint32List, srcOffset?: webgl.GLuint): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -300,7 +380,7 @@ Clears bufferuiv
 | --- | --- | --- | --- |
 | buffer | webgl.GLenum | Yes | Buffer |
 | drawbuffer | webgl.GLint | Yes | Draw buffer |
-| values | Uint32List | Yes | Values |
+| values | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Values |
 | srcOffset | webgl.GLuint | No | Source offset |
 
 ## clientWaitSync
@@ -315,15 +395,17 @@ Client waits for sync object
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-clientWaitSync(sync: WebGLSync, flags: webgl.GLbitfield, timeout: GLuint64 ): webgl.GLenum--><!--Device-WebGL2RenderingContextBase-clientWaitSync(sync: WebGLSync, flags: webgl.GLbitfield, timeout: GLuint64 ): webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sync | WebGLSync | Yes | Sync object |
+| sync | [WebGLSync](arkts-arkgraphics2d-webglsync-i.md) | Yes | Sync object |
 | flags | webgl.GLbitfield | Yes | Flags |
-| timeout | GLuint64 | Yes | Timeout |
+| timeout | [GLuint64](arkts-arkgraphics2d-gluint64-t.md) | Yes | Timeout |
 
 **Return value:**
 
@@ -352,6 +434,28 @@ Compressed texture image 3D from PBO offset
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-compressedTexImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      internalformat: webgl.GLenum,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+      border: webgl.GLint,
+      imageSize: webgl.GLsizei,
+      offset: webgl.GLintptr,
+    ): void--><!--Device-WebGL2RenderingContextBase-compressedTexImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      internalformat: webgl.GLenum,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+      border: webgl.GLint,
+      imageSize: webgl.GLsizei,
+      offset: webgl.GLintptr,
+    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -392,6 +496,30 @@ Compressed texture image 3D from ArrayBufferView
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-compressedTexImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      internalformat: webgl.GLenum,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+      border: webgl.GLint,
+      srcData: ArrayBufferView,
+      srcOffset?: webgl.GLuint,
+      srcLengthOverride?: webgl.GLuint,
+    ): void--><!--Device-WebGL2RenderingContextBase-compressedTexImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      internalformat: webgl.GLenum,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+      border: webgl.GLint,
+      srcData: ArrayBufferView,
+      srcOffset?: webgl.GLuint,
+      srcLengthOverride?: webgl.GLuint,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -405,7 +533,7 @@ Compressed texture image 3D from ArrayBufferView
 | height | webgl.GLsizei | Yes | Height |
 | depth | webgl.GLsizei | Yes | Depth |
 | border | webgl.GLint | Yes | Border |
-| srcData | ArrayBufferView | Yes | Source data |
+| srcData | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-arraybufferview-i.md) | Yes | Source data |
 | srcOffset | webgl.GLuint | No | Source offset |
 | srcLengthOverride | webgl.GLuint | No | Source length override |
 
@@ -432,6 +560,32 @@ Compressed texture sub image 3D from PBO offset
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-compressedTexSubImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      xoffset: webgl.GLint,
+      yoffset: webgl.GLint,
+      zoffset: webgl.GLint,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+      format: webgl.GLenum,
+      imageSize: webgl.GLsizei,
+      offset: webgl.GLintptr,
+    ): void--><!--Device-WebGL2RenderingContextBase-compressedTexSubImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      xoffset: webgl.GLint,
+      yoffset: webgl.GLint,
+      zoffset: webgl.GLint,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+      format: webgl.GLenum,
+      imageSize: webgl.GLsizei,
+      offset: webgl.GLintptr,
+    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -476,6 +630,34 @@ Compressed texture sub image 3D from ArrayBufferView
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-compressedTexSubImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      xoffset: webgl.GLint,
+      yoffset: webgl.GLint,
+      zoffset: webgl.GLint,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+      format: webgl.GLenum,
+      srcData: ArrayBufferView,
+      srcOffset?: webgl.GLuint,
+      srcLengthOverride?: webgl.GLuint,
+    ): void--><!--Device-WebGL2RenderingContextBase-compressedTexSubImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      xoffset: webgl.GLint,
+      yoffset: webgl.GLint,
+      zoffset: webgl.GLint,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+      format: webgl.GLenum,
+      srcData: ArrayBufferView,
+      srcOffset?: webgl.GLuint,
+      srcLengthOverride?: webgl.GLuint,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -491,7 +673,7 @@ Compressed texture sub image 3D from ArrayBufferView
 | height | webgl.GLsizei | Yes | Height |
 | depth | webgl.GLsizei | Yes | Depth |
 | format | webgl.GLenum | Yes | Format |
-| srcData | ArrayBufferView | Yes | Source data |
+| srcData | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-arraybufferview-i.md) | Yes | Source data |
 | srcOffset | webgl.GLuint | No | Source offset |
 | srcLengthOverride | webgl.GLuint | No | Source length override |
 
@@ -512,6 +694,20 @@ Copies data from one buffer to another
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-copyBufferSubData(
+      readTarget: webgl.GLenum,
+      writeTarget: webgl.GLenum,
+      readOffset: webgl.GLintptr,
+      writeOffset: webgl.GLintptr,
+      size: webgl.GLsizeiptr,
+    ): void--><!--Device-WebGL2RenderingContextBase-copyBufferSubData(
+      readTarget: webgl.GLenum,
+      writeTarget: webgl.GLenum,
+      readOffset: webgl.GLintptr,
+      writeOffset: webgl.GLintptr,
+      size: webgl.GLsizeiptr,
+    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -547,6 +743,28 @@ Copies a portion of a 3D texture image
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-copyTexSubImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      xoffset: webgl.GLint,
+      yoffset: webgl.GLint,
+      zoffset: webgl.GLint,
+      x: webgl.GLint,
+      y: webgl.GLint,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+    ): void--><!--Device-WebGL2RenderingContextBase-copyTexSubImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      xoffset: webgl.GLint,
+      yoffset: webgl.GLint,
+      zoffset: webgl.GLint,
+      x: webgl.GLint,
+      y: webgl.GLint,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -575,13 +793,15 @@ Creates a query
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-createQuery(): WebGLQuery | null--><!--Device-WebGL2RenderingContextBase-createQuery(): WebGLQuery | null-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| WebGLQuery | The created query |
+| [WebGLQuery](arkts-arkgraphics2d-webglquery-i.md) | The created query |
 
 ## createSampler
 
@@ -595,13 +815,15 @@ Creates a sampler
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-createSampler(): WebGLSampler | null--><!--Device-WebGL2RenderingContextBase-createSampler(): WebGLSampler | null-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| WebGLSampler | The created sampler |
+| [WebGLSampler](arkts-arkgraphics2d-webglsampler-i.md) | The created sampler |
 
 ## createTransformFeedback
 
@@ -615,13 +837,15 @@ Creates a transform feedback object
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-createTransformFeedback(): WebGLTransformFeedback | null--><!--Device-WebGL2RenderingContextBase-createTransformFeedback(): WebGLTransformFeedback | null-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| WebGLTransformFeedback | The created transform feedback |
+| [WebGLTransformFeedback](arkts-arkgraphics2d-webgltransformfeedback-i.md) | The created transform feedback |
 
 ## createVertexArray
 
@@ -635,13 +859,15 @@ Creates a vertex array object
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-createVertexArray(): WebGLVertexArrayObject | null--><!--Device-WebGL2RenderingContextBase-createVertexArray(): WebGLVertexArrayObject | null-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| WebGLVertexArrayObject | The created vertex array object |
+| [WebGLVertexArrayObject](arkts-arkgraphics2d-webglvertexarrayobject-i.md) | The created vertex array object |
 
 ## deleteQuery
 
@@ -654,6 +880,8 @@ Deletes a query
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-deleteQuery(query: WebGLQuery | null): void--><!--Device-WebGL2RenderingContextBase-deleteQuery(query: WebGLQuery | null): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -675,6 +903,8 @@ Deletes a sampler
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-deleteSampler(sampler: WebGLSampler | null): void--><!--Device-WebGL2RenderingContextBase-deleteSampler(sampler: WebGLSampler | null): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -694,6 +924,8 @@ Deletes a sync object
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-deleteSync(sync: WebGLSync | null): void--><!--Device-WebGL2RenderingContextBase-deleteSync(sync: WebGLSync | null): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -715,6 +947,8 @@ Deletes a transform feedback object
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-deleteTransformFeedback(tf: WebGLTransformFeedback | null): void--><!--Device-WebGL2RenderingContextBase-deleteTransformFeedback(tf: WebGLTransformFeedback | null): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -734,6 +968,8 @@ Deletes a vertex array object
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-deleteVertexArray(vertexArray: WebGLVertexArrayObject | null): void--><!--Device-WebGL2RenderingContextBase-deleteVertexArray(vertexArray: WebGLVertexArrayObject | null): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -760,6 +996,18 @@ Draws arrays instanced
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-drawArraysInstanced(
+      mode: webgl.GLenum,
+      first: webgl.GLint,
+      count: webgl.GLsizei,
+      instanceCount: webgl.GLsizei,
+    ): void--><!--Device-WebGL2RenderingContextBase-drawArraysInstanced(
+      mode: webgl.GLenum,
+      first: webgl.GLint,
+      count: webgl.GLsizei,
+      instanceCount: webgl.GLsizei,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -782,6 +1030,8 @@ Sets draw buffers
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-drawBuffers(buffers: webgl.GLenum[]): void--><!--Device-WebGL2RenderingContextBase-drawBuffers(buffers: webgl.GLenum[]): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -808,6 +1058,20 @@ Draws elements instanced
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-drawElementsInstanced(
+      mode: webgl.GLenum,
+      count: webgl.GLsizei,
+      type: webgl.GLenum,
+      offset: webgl.GLintptr,
+      instanceCount: webgl.GLsizei,
+    ): void--><!--Device-WebGL2RenderingContextBase-drawElementsInstanced(
+      mode: webgl.GLenum,
+      count: webgl.GLsizei,
+      type: webgl.GLenum,
+      offset: webgl.GLintptr,
+      instanceCount: webgl.GLsizei,
+    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -840,6 +1104,22 @@ Draws range elements
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-drawRangeElements(
+      mode: webgl.GLenum,
+      start: webgl.GLuint,
+      end: webgl.GLuint,
+      count: webgl.GLsizei,
+      type: webgl.GLenum,
+      offset: webgl.GLintptr,
+    ): void--><!--Device-WebGL2RenderingContextBase-drawRangeElements(
+      mode: webgl.GLenum,
+      start: webgl.GLuint,
+      end: webgl.GLuint,
+      count: webgl.GLsizei,
+      type: webgl.GLenum,
+      offset: webgl.GLintptr,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -865,6 +1145,8 @@ Ends a query
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-endQuery(target: webgl.GLenum): void--><!--Device-WebGL2RenderingContextBase-endQuery(target: webgl.GLenum): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -885,6 +1167,8 @@ Ends transform feedback
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-endTransformFeedback(): void--><!--Device-WebGL2RenderingContextBase-endTransformFeedback(): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## fenceSync
@@ -899,6 +1183,8 @@ Creates a sync object
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-fenceSync(condition: webgl.GLenum, flags: webgl.GLbitfield): WebGLSync | null--><!--Device-WebGL2RenderingContextBase-fenceSync(condition: webgl.GLenum, flags: webgl.GLbitfield): WebGLSync | null-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -912,7 +1198,7 @@ Creates a sync object
 
 | Type | Description |
 | --- | --- |
-| WebGLSync | The created sync object |
+| [WebGLSync](arkts-arkgraphics2d-webglsync-i.md) | The created sync object |
 
 ## framebufferTextureLayer
 
@@ -931,6 +1217,20 @@ Attaches a texture layer to a framebuffer
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-framebufferTextureLayer(
+      target: webgl.GLenum,
+      attachment: webgl.GLenum,
+      texture: webgl.WebGLTexture | null,
+      level: webgl.GLint,
+      layer: webgl.GLint,
+    ): void--><!--Device-WebGL2RenderingContextBase-framebufferTextureLayer(
+      target: webgl.GLenum,
+      attachment: webgl.GLenum,
+      texture: webgl.WebGLTexture | null,
+      level: webgl.GLint,
+      layer: webgl.GLint,
+    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -955,6 +1255,8 @@ Gets active uniform block name
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-getActiveUniformBlockName(program: webgl.WebGLProgram, uniformBlockIndex: webgl.GLuint): string | null--><!--Device-WebGL2RenderingContextBase-getActiveUniformBlockName(program: webgl.WebGLProgram, uniformBlockIndex: webgl.GLuint): string | null-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -987,6 +1289,16 @@ Gets active uniform block parameter
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-getActiveUniformBlockParameter(
+      program: webgl.WebGLProgram,
+      uniformBlockIndex: webgl.GLuint,
+      pname: webgl.GLenum,
+    ): any--><!--Device-WebGL2RenderingContextBase-getActiveUniformBlockParameter(
+      program: webgl.WebGLProgram,
+      uniformBlockIndex: webgl.GLuint,
+      pname: webgl.GLenum,
+    ): any-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -1014,6 +1326,8 @@ Gets active uniforms
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-getActiveUniforms(program: webgl.WebGLProgram, uniformIndices: webgl.GLuint[], pname: webgl.GLenum): any--><!--Device-WebGL2RenderingContextBase-getActiveUniforms(program: webgl.WebGLProgram, uniformIndices: webgl.GLuint[], pname: webgl.GLenum): any-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -1049,6 +1363,20 @@ Gets buffer sub data
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-getBufferSubData(
+      target: webgl.GLenum,
+      srcByteOffset: webgl.GLintptr,
+      dstBuffer: ArrayBufferView,
+      dstOffset?: webgl.GLuint,
+      length?: webgl.GLuint,
+    ): void--><!--Device-WebGL2RenderingContextBase-getBufferSubData(
+      target: webgl.GLenum,
+      srcByteOffset: webgl.GLintptr,
+      dstBuffer: ArrayBufferView,
+      dstOffset?: webgl.GLuint,
+      length?: webgl.GLuint,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -1057,7 +1385,7 @@ Gets buffer sub data
 | --- | --- | --- | --- |
 | target | webgl.GLenum | Yes | Buffer target |
 | srcByteOffset | webgl.GLintptr | Yes | Source byte offset |
-| dstBuffer | ArrayBufferView | Yes | Destination buffer |
+| dstBuffer | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-arraybufferview-i.md) | Yes | Destination buffer |
 | dstOffset | webgl.GLuint | No | Destination offset |
 | length | webgl.GLuint | No | Length |
 
@@ -1072,6 +1400,8 @@ Gets fragment data location
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-getFragDataLocation(program: webgl.WebGLProgram, name: string): webgl.GLint--><!--Device-WebGL2RenderingContextBase-getFragDataLocation(program: webgl.WebGLProgram, name: string): webgl.GLint-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -1100,6 +1430,8 @@ Gets indexed parameter
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-getIndexedParameter(target: webgl.GLenum, index: webgl.GLuint): any--><!--Device-WebGL2RenderingContextBase-getIndexedParameter(target: webgl.GLenum, index: webgl.GLuint): any-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -1126,6 +1458,8 @@ Gets internal format parameter
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-getInternalformatParameter(target: webgl.GLenum, internalformat: webgl.GLenum, pname: webgl.GLenum): any--><!--Device-WebGL2RenderingContextBase-getInternalformatParameter(target: webgl.GLenum, internalformat: webgl.GLenum, pname: webgl.GLenum): any-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -1155,6 +1489,8 @@ Gets a query
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-getQuery(target: webgl.GLenum, pname: webgl.GLenum): WebGLQuery | null--><!--Device-WebGL2RenderingContextBase-getQuery(target: webgl.GLenum, pname: webgl.GLenum): WebGLQuery | null-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -1168,7 +1504,7 @@ Gets a query
 
 | Type | Description |
 | --- | --- |
-| WebGLQuery | The query |
+| [WebGLQuery](arkts-arkgraphics2d-webglquery-i.md) | The query |
 
 ## getQueryParameter
 
@@ -1182,13 +1518,15 @@ Gets query parameter
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-getQueryParameter(query: WebGLQuery, pname: webgl.GLenum): any--><!--Device-WebGL2RenderingContextBase-getQueryParameter(query: WebGLQuery, pname: webgl.GLenum): any-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | WebGLQuery | Yes | Query |
+| query | [WebGLQuery](arkts-arkgraphics2d-webglquery-i.md) | Yes | Query |
 | pname | webgl.GLenum | Yes | Parameter name |
 
 **Return value:**
@@ -1209,13 +1547,15 @@ Gets sampler parameter
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-getSamplerParameter(sampler: WebGLSampler, pname: webgl.GLenum): any--><!--Device-WebGL2RenderingContextBase-getSamplerParameter(sampler: WebGLSampler, pname: webgl.GLenum): any-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sampler | WebGLSampler | Yes | Sampler |
+| sampler | [WebGLSampler](arkts-arkgraphics2d-webglsampler-i.md) | Yes | Sampler |
 | pname | webgl.GLenum | Yes | Parameter name |
 
 **Return value:**
@@ -1236,13 +1576,15 @@ Gets sync parameter
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-getSyncParameter(sync: WebGLSync, pname: webgl.GLenum): any--><!--Device-WebGL2RenderingContextBase-getSyncParameter(sync: WebGLSync, pname: webgl.GLenum): any-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sync | WebGLSync | Yes | Sync object |
+| sync | [WebGLSync](arkts-arkgraphics2d-webglsync-i.md) | Yes | Sync object |
 | pname | webgl.GLenum | Yes | Parameter name |
 
 **Return value:**
@@ -1262,6 +1604,8 @@ Gets transform feedback varying
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-getTransformFeedbackVarying(program: webgl.WebGLProgram, index: webgl.GLuint): webgl.WebGLActiveInfo | null--><!--Device-WebGL2RenderingContextBase-getTransformFeedbackVarying(program: webgl.WebGLProgram, index: webgl.GLuint): webgl.WebGLActiveInfo | null-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -1290,6 +1634,8 @@ Gets uniform block index
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-getUniformBlockIndex(program: webgl.WebGLProgram, uniformBlockName: string): webgl.GLuint--><!--Device-WebGL2RenderingContextBase-getUniformBlockIndex(program: webgl.WebGLProgram, uniformBlockName: string): webgl.GLuint-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -1317,6 +1663,8 @@ Gets uniform indices
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-getUniformIndices(program: webgl.WebGLProgram, uniformNames: string[]): webgl.GLuint[] | null--><!--Device-WebGL2RenderingContextBase-getUniformIndices(program: webgl.WebGLProgram, uniformNames: string[]): webgl.GLuint[] | null-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -1343,6 +1691,8 @@ Invalidates framebuffer attachments
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-invalidateFramebuffer(target: webgl.GLenum, attachments: webgl.GLenum[]): void--><!--Device-WebGL2RenderingContextBase-invalidateFramebuffer(target: webgl.GLenum, attachments: webgl.GLenum[]): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -1372,6 +1722,22 @@ Invalidates sub framebuffer attachments
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-invalidateSubFramebuffer(
+      target: webgl.GLenum,
+      attachments: webgl.GLenum[],
+      x: webgl.GLint,
+      y: webgl.GLint,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+    ): void--><!--Device-WebGL2RenderingContextBase-invalidateSubFramebuffer(
+      target: webgl.GLenum,
+      attachments: webgl.GLenum[],
+      x: webgl.GLint,
+      y: webgl.GLint,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -1396,6 +1762,8 @@ Returns whether a query is valid
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-isQuery(query: WebGLQuery | null): webgl.GLboolean--><!--Device-WebGL2RenderingContextBase-isQuery(query: WebGLQuery | null): webgl.GLboolean-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -1423,6 +1791,8 @@ Returns whether a sampler is valid
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-isSampler(sampler: WebGLSampler | null): webgl.GLboolean--><!--Device-WebGL2RenderingContextBase-isSampler(sampler: WebGLSampler | null): webgl.GLboolean-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -1448,6 +1818,8 @@ Returns whether a sync object is valid
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-isSync(sync: WebGLSync | null): webgl.GLboolean--><!--Device-WebGL2RenderingContextBase-isSync(sync: WebGLSync | null): webgl.GLboolean-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -1475,6 +1847,8 @@ Returns whether a transform feedback is valid
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-isTransformFeedback(tf: WebGLTransformFeedback | null): webgl.GLboolean--><!--Device-WebGL2RenderingContextBase-isTransformFeedback(tf: WebGLTransformFeedback | null): webgl.GLboolean-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -1500,6 +1874,8 @@ Returns whether a vertex array is valid
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-isVertexArray(vertexArray: WebGLVertexArrayObject | null): webgl.GLboolean--><!--Device-WebGL2RenderingContextBase-isVertexArray(vertexArray: WebGLVertexArrayObject | null): webgl.GLboolean-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -1527,6 +1903,8 @@ Pauses transform feedback
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-pauseTransformFeedback(): void--><!--Device-WebGL2RenderingContextBase-pauseTransformFeedback(): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## readBuffer
@@ -1540,6 +1918,8 @@ Sets the read buffer
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readBuffer(src: webgl.GLenum): void--><!--Device-WebGL2RenderingContextBase-readBuffer(src: webgl.GLenum): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -1567,6 +1947,20 @@ Sets renderbuffer storage with multisampling
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-renderbufferStorageMultisample(
+      target: webgl.GLenum,
+      samples: webgl.GLsizei,
+      internalformat: webgl.GLenum,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+    ): void--><!--Device-WebGL2RenderingContextBase-renderbufferStorageMultisample(
+      target: webgl.GLenum,
+      samples: webgl.GLsizei,
+      internalformat: webgl.GLenum,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -1591,6 +1985,8 @@ Resumes transform feedback
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-resumeTransformFeedback(): void--><!--Device-WebGL2RenderingContextBase-resumeTransformFeedback(): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## samplerParameterf
@@ -1605,13 +2001,15 @@ Sets sampler parameterf
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-samplerParameterf(sampler: WebGLSampler, pname: webgl.GLenum, param: webgl.GLfloat): void--><!--Device-WebGL2RenderingContextBase-samplerParameterf(sampler: WebGLSampler, pname: webgl.GLenum, param: webgl.GLfloat): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sampler | WebGLSampler | Yes | Sampler |
+| sampler | [WebGLSampler](arkts-arkgraphics2d-webglsampler-i.md) | Yes | Sampler |
 | pname | webgl.GLenum | Yes | Parameter name |
 | param | webgl.GLfloat | Yes | Parameter value |
 
@@ -1627,13 +2025,15 @@ Sets sampler parameteri
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-samplerParameteri(sampler: WebGLSampler, pname: webgl.GLenum, param: webgl.GLint): void--><!--Device-WebGL2RenderingContextBase-samplerParameteri(sampler: WebGLSampler, pname: webgl.GLenum, param: webgl.GLint): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sampler | WebGLSampler | Yes | Sampler |
+| sampler | [WebGLSampler](arkts-arkgraphics2d-webglsampler-i.md) | Yes | Sampler |
 | pname | webgl.GLenum | Yes | Parameter name |
 | param | webgl.GLint | Yes | Parameter value |
 
@@ -1659,6 +2059,30 @@ Sets texture image 3D from PBO offset
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-texImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      internalformat: webgl.GLint,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+      border: webgl.GLint,
+      format: webgl.GLenum,
+      type: webgl.GLenum,
+      pboOffset: webgl.GLintptr,
+    ): void--><!--Device-WebGL2RenderingContextBase-texImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      internalformat: webgl.GLint,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+      border: webgl.GLint,
+      format: webgl.GLenum,
+      type: webgl.GLenum,
+      pboOffset: webgl.GLintptr,
+    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -1700,6 +2124,30 @@ Sets texture image 3D from TexImageSource
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-texImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      internalformat: webgl.GLint,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+      border: webgl.GLint,
+      format: webgl.GLenum,
+      type: webgl.GLenum,
+      source: webgl.TexImageSource,
+    ): void--><!--Device-WebGL2RenderingContextBase-texImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      internalformat: webgl.GLint,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+      border: webgl.GLint,
+      format: webgl.GLenum,
+      type: webgl.GLenum,
+      source: webgl.TexImageSource,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -1739,6 +2187,30 @@ Sets texture image 3D from ArrayBufferView
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-texImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      internalformat: webgl.GLint,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+      border: webgl.GLint,
+      format: webgl.GLenum,
+      type: webgl.GLenum,
+      srcData: ArrayBufferView | null,
+    ): void--><!--Device-WebGL2RenderingContextBase-texImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      internalformat: webgl.GLint,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+      border: webgl.GLint,
+      format: webgl.GLenum,
+      type: webgl.GLenum,
+      srcData: ArrayBufferView | null,
+    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -1781,6 +2253,32 @@ Sets texture image 3D from ArrayBufferView with offset
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-texImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      internalformat: webgl.GLint,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+      border: webgl.GLint,
+      format: webgl.GLenum,
+      type: webgl.GLenum,
+      srcData: ArrayBufferView,
+      srcOffset: webgl.GLuint,
+    ): void--><!--Device-WebGL2RenderingContextBase-texImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      internalformat: webgl.GLint,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+      border: webgl.GLint,
+      format: webgl.GLenum,
+      type: webgl.GLenum,
+      srcData: ArrayBufferView,
+      srcOffset: webgl.GLuint,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -1796,7 +2294,7 @@ Sets texture image 3D from ArrayBufferView with offset
 | border | webgl.GLint | Yes | Border |
 | format | webgl.GLenum | Yes | Format |
 | type | webgl.GLenum | Yes | Type |
-| srcData | ArrayBufferView | Yes | Source data |
+| srcData | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-arraybufferview-i.md) | Yes | Source data |
 | srcOffset | webgl.GLuint | Yes | Source offset |
 
 ## texStorage2D
@@ -1816,6 +2314,20 @@ Sets texture storage 2D
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-texStorage2D(
+      target: webgl.GLenum,
+      levels: webgl.GLsizei,
+      internalformat: webgl.GLenum,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+    ): void--><!--Device-WebGL2RenderingContextBase-texStorage2D(
+      target: webgl.GLenum,
+      levels: webgl.GLsizei,
+      internalformat: webgl.GLenum,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -1847,6 +2359,22 @@ Sets texture storage 3D
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-texStorage3D(
+      target: webgl.GLenum,
+      levels: webgl.GLsizei,
+      internalformat: webgl.GLenum,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+    ): void--><!--Device-WebGL2RenderingContextBase-texStorage3D(
+      target: webgl.GLenum,
+      levels: webgl.GLsizei,
+      internalformat: webgl.GLenum,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -1884,6 +2412,32 @@ Sets texture sub image 3D from PBO offset
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-texSubImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      xoffset: webgl.GLint,
+      yoffset: webgl.GLint,
+      zoffset: webgl.GLint,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+      format: webgl.GLenum,
+      type: webgl.GLenum,
+      pboOffset: webgl.GLintptr,
+    ): void--><!--Device-WebGL2RenderingContextBase-texSubImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      xoffset: webgl.GLint,
+      yoffset: webgl.GLint,
+      zoffset: webgl.GLint,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+      format: webgl.GLenum,
+      type: webgl.GLenum,
+      pboOffset: webgl.GLintptr,
+    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -1926,6 +2480,32 @@ Sets texture sub image 3D from TexImageSource
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-texSubImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      xoffset: webgl.GLint,
+      yoffset: webgl.GLint,
+      zoffset: webgl.GLint,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+      format: webgl.GLenum,
+      type: webgl.GLenum,
+      source: webgl.TexImageSource,
+    ): void--><!--Device-WebGL2RenderingContextBase-texSubImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      xoffset: webgl.GLint,
+      yoffset: webgl.GLint,
+      zoffset: webgl.GLint,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+      format: webgl.GLenum,
+      type: webgl.GLenum,
+      source: webgl.TexImageSource,
+    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -1970,6 +2550,34 @@ Sets texture sub image 3D from ArrayBufferView
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-texSubImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      xoffset: webgl.GLint,
+      yoffset: webgl.GLint,
+      zoffset: webgl.GLint,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+      format: webgl.GLenum,
+      type: webgl.GLenum,
+      srcData: ArrayBufferView | null,
+      srcOffset?: webgl.GLuint,
+    ): void--><!--Device-WebGL2RenderingContextBase-texSubImage3D(
+      target: webgl.GLenum,
+      level: webgl.GLint,
+      xoffset: webgl.GLint,
+      yoffset: webgl.GLint,
+      zoffset: webgl.GLint,
+      width: webgl.GLsizei,
+      height: webgl.GLsizei,
+      depth: webgl.GLsizei,
+      format: webgl.GLenum,
+      type: webgl.GLenum,
+      srcData: ArrayBufferView | null,
+      srcOffset?: webgl.GLuint,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -2001,6 +2609,8 @@ Sets transform feedback varyings
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-transformFeedbackVaryings(program: webgl.WebGLProgram, varyings: string[], bufferMode: webgl.GLenum): void--><!--Device-WebGL2RenderingContextBase-transformFeedbackVaryings(program: webgl.WebGLProgram, varyings: string[], bufferMode: webgl.GLenum): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -2022,6 +2632,8 @@ Sets uniform1ui value
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-uniform1ui(location: webgl.WebGLUniformLocation | null, v0: webgl.GLuint): void--><!--Device-WebGL2RenderingContextBase-uniform1ui(location: webgl.WebGLUniformLocation | null, v0: webgl.GLuint): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2049,6 +2661,18 @@ Sets uniform1uiv value
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-uniform1uiv(
+      location: webgl.WebGLUniformLocation | null,
+      data: Uint32List,
+      srcOffset?: webgl.GLuint,
+      srcLength?: webgl.GLuint,
+    ): void--><!--Device-WebGL2RenderingContextBase-uniform1uiv(
+      location: webgl.WebGLUniformLocation | null,
+      data: Uint32List,
+      srcOffset?: webgl.GLuint,
+      srcLength?: webgl.GLuint,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -2056,7 +2680,7 @@ Sets uniform1uiv value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| data | Uint32List | Yes | Data |
+| data | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Data |
 | srcOffset | webgl.GLuint | No | Source offset |
 | srcLength | webgl.GLuint | No | Source length |
 
@@ -2071,6 +2695,8 @@ Sets uniform2ui value
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-uniform2ui(location: webgl.WebGLUniformLocation | null, v0: webgl.GLuint, v1: webgl.GLuint): void--><!--Device-WebGL2RenderingContextBase-uniform2ui(location: webgl.WebGLUniformLocation | null, v0: webgl.GLuint, v1: webgl.GLuint): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2099,6 +2725,18 @@ Sets uniform2uiv value
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-uniform2uiv(
+      location: webgl.WebGLUniformLocation | null,
+      data: Uint32List,
+      srcOffset?: webgl.GLuint,
+      srcLength?: webgl.GLuint,
+    ): void--><!--Device-WebGL2RenderingContextBase-uniform2uiv(
+      location: webgl.WebGLUniformLocation | null,
+      data: Uint32List,
+      srcOffset?: webgl.GLuint,
+      srcLength?: webgl.GLuint,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -2106,7 +2744,7 @@ Sets uniform2uiv value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| data | Uint32List | Yes | Data |
+| data | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Data |
 | srcOffset | webgl.GLuint | No | Source offset |
 | srcLength | webgl.GLuint | No | Source length |
 
@@ -2121,6 +2759,8 @@ Sets uniform3ui value
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-uniform3ui(location: webgl.WebGLUniformLocation | null, v0: webgl.GLuint, v1: webgl.GLuint, v2: webgl.GLuint): void--><!--Device-WebGL2RenderingContextBase-uniform3ui(location: webgl.WebGLUniformLocation | null, v0: webgl.GLuint, v1: webgl.GLuint, v2: webgl.GLuint): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2150,6 +2790,18 @@ Sets uniform3uiv value
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-uniform3uiv(
+      location: webgl.WebGLUniformLocation | null,
+      data: Uint32List,
+      srcOffset?: webgl.GLuint,
+      srcLength?: webgl.GLuint,
+    ): void--><!--Device-WebGL2RenderingContextBase-uniform3uiv(
+      location: webgl.WebGLUniformLocation | null,
+      data: Uint32List,
+      srcOffset?: webgl.GLuint,
+      srcLength?: webgl.GLuint,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -2157,7 +2809,7 @@ Sets uniform3uiv value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| data | Uint32List | Yes | Data |
+| data | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Data |
 | srcOffset | webgl.GLuint | No | Source offset |
 | srcLength | webgl.GLuint | No | Source length |
 
@@ -2178,6 +2830,20 @@ Sets uniform4ui value
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-uniform4ui(
+      location: webgl.WebGLUniformLocation | null,
+      v0: webgl.GLuint,
+      v1: webgl.GLuint,
+      v2: webgl.GLuint,
+      v3: webgl.GLuint,
+    ): void--><!--Device-WebGL2RenderingContextBase-uniform4ui(
+      location: webgl.WebGLUniformLocation | null,
+      v0: webgl.GLuint,
+      v1: webgl.GLuint,
+      v2: webgl.GLuint,
+      v3: webgl.GLuint,
+    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2208,6 +2874,18 @@ Sets uniform4uiv value
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-uniform4uiv(
+      location: webgl.WebGLUniformLocation | null,
+      data: Uint32List,
+      srcOffset?: webgl.GLuint,
+      srcLength?: webgl.GLuint,
+    ): void--><!--Device-WebGL2RenderingContextBase-uniform4uiv(
+      location: webgl.WebGLUniformLocation | null,
+      data: Uint32List,
+      srcOffset?: webgl.GLuint,
+      srcLength?: webgl.GLuint,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -2215,7 +2893,7 @@ Sets uniform4uiv value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| data | Uint32List | Yes | Data |
+| data | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Data |
 | srcOffset | webgl.GLuint | No | Source offset |
 | srcLength | webgl.GLuint | No | Source length |
 
@@ -2234,6 +2912,16 @@ Sets uniform block binding
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-uniformBlockBinding(
+      program: webgl.WebGLProgram,
+      uniformBlockIndex: webgl.GLuint,
+      uniformBlockBinding: webgl.GLuint,
+    ): void--><!--Device-WebGL2RenderingContextBase-uniformBlockBinding(
+      program: webgl.WebGLProgram,
+      uniformBlockIndex: webgl.GLuint,
+      uniformBlockBinding: webgl.GLuint,
+    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2262,6 +2950,20 @@ Sets uniformMatrix2x3fv value
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-uniformMatrix2x3fv(
+      location: webgl.WebGLUniformLocation | null,
+      transpose: webgl.GLboolean,
+      data: webgl.Float32List,
+      srcOffset?: webgl.GLuint,
+      srcLength?: webgl.GLuint,
+    ): void--><!--Device-WebGL2RenderingContextBase-uniformMatrix2x3fv(
+      location: webgl.WebGLUniformLocation | null,
+      transpose: webgl.GLboolean,
+      data: webgl.Float32List,
+      srcOffset?: webgl.GLuint,
+      srcLength?: webgl.GLuint,
+    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2293,6 +2995,20 @@ Sets uniformMatrix2x4fv value
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-uniformMatrix2x4fv(
+      location: webgl.WebGLUniformLocation | null,
+      transpose: webgl.GLboolean,
+      data: webgl.Float32List,
+      srcOffset?: webgl.GLuint,
+      srcLength?: webgl.GLuint,
+    ): void--><!--Device-WebGL2RenderingContextBase-uniformMatrix2x4fv(
+      location: webgl.WebGLUniformLocation | null,
+      transpose: webgl.GLboolean,
+      data: webgl.Float32List,
+      srcOffset?: webgl.GLuint,
+      srcLength?: webgl.GLuint,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -2322,6 +3038,20 @@ Sets uniformMatrix3x2fv value
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-uniformMatrix3x2fv(
+      location: webgl.WebGLUniformLocation | null,
+      transpose: webgl.GLboolean,
+      data: webgl.Float32List,
+      srcOffset?: webgl.GLuint,
+      srcLength?: webgl.GLuint,
+    ): void--><!--Device-WebGL2RenderingContextBase-uniformMatrix3x2fv(
+      location: webgl.WebGLUniformLocation | null,
+      transpose: webgl.GLboolean,
+      data: webgl.Float32List,
+      srcOffset?: webgl.GLuint,
+      srcLength?: webgl.GLuint,
+    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2353,6 +3083,20 @@ Sets uniformMatrix3x4fv value
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-uniformMatrix3x4fv(
+      location: webgl.WebGLUniformLocation | null,
+      transpose: webgl.GLboolean,
+      data: webgl.Float32List,
+      srcOffset?: webgl.GLuint,
+      srcLength?: webgl.GLuint,
+    ): void--><!--Device-WebGL2RenderingContextBase-uniformMatrix3x4fv(
+      location: webgl.WebGLUniformLocation | null,
+      transpose: webgl.GLboolean,
+      data: webgl.Float32List,
+      srcOffset?: webgl.GLuint,
+      srcLength?: webgl.GLuint,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -2382,6 +3126,20 @@ Sets uniformMatrix4x2fv value
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-uniformMatrix4x2fv(
+      location: webgl.WebGLUniformLocation | null,
+      transpose: webgl.GLboolean,
+      data: webgl.Float32List,
+      srcOffset?: webgl.GLuint,
+      srcLength?: webgl.GLuint,
+    ): void--><!--Device-WebGL2RenderingContextBase-uniformMatrix4x2fv(
+      location: webgl.WebGLUniformLocation | null,
+      transpose: webgl.GLboolean,
+      data: webgl.Float32List,
+      srcOffset?: webgl.GLuint,
+      srcLength?: webgl.GLuint,
+    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2413,6 +3171,20 @@ Sets uniformMatrix4x3fv value
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-uniformMatrix4x3fv(
+      location: webgl.WebGLUniformLocation | null,
+      transpose: webgl.GLboolean,
+      data: webgl.Float32List,
+      srcOffset?: webgl.GLuint,
+      srcLength?: webgl.GLuint,
+    ): void--><!--Device-WebGL2RenderingContextBase-uniformMatrix4x3fv(
+      location: webgl.WebGLUniformLocation | null,
+      transpose: webgl.GLboolean,
+      data: webgl.Float32List,
+      srcOffset?: webgl.GLuint,
+      srcLength?: webgl.GLuint,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -2437,6 +3209,8 @@ Sets vertex attrib divisor
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-vertexAttribDivisor(index: webgl.GLuint, divisor: webgl.GLuint): void--><!--Device-WebGL2RenderingContextBase-vertexAttribDivisor(index: webgl.GLuint, divisor: webgl.GLuint): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -2457,6 +3231,8 @@ Sets vertex attrib I4i value
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-vertexAttribI4i(index: webgl.GLuint, x: webgl.GLint, y: webgl.GLint, z: webgl.GLint, w: webgl.GLint): void--><!--Device-WebGL2RenderingContextBase-vertexAttribI4i(index: webgl.GLuint, x: webgl.GLint, y: webgl.GLint, z: webgl.GLint, w: webgl.GLint): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2482,6 +3258,8 @@ Sets vertex attrib I4iv value
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-vertexAttribI4iv(index: webgl.GLuint, values: webgl.Int32List): void--><!--Device-WebGL2RenderingContextBase-vertexAttribI4iv(index: webgl.GLuint, values: webgl.Int32List): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -2502,6 +3280,8 @@ Sets vertex attrib I4ui value
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-vertexAttribI4ui(index: webgl.GLuint, x: webgl.GLuint, y: webgl.GLuint, z: webgl.GLuint, w: webgl.GLuint): void--><!--Device-WebGL2RenderingContextBase-vertexAttribI4ui(index: webgl.GLuint, x: webgl.GLuint, y: webgl.GLuint, z: webgl.GLuint, w: webgl.GLuint): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2527,6 +3307,8 @@ Sets vertex attrib I4uiv value
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-vertexAttribI4uiv(index: webgl.GLuint, values: Uint32List): void--><!--Device-WebGL2RenderingContextBase-vertexAttribI4uiv(index: webgl.GLuint, values: Uint32List): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
@@ -2534,7 +3316,7 @@ Sets vertex attrib I4uiv value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | webgl.GLuint | Yes | Vertex attribute index |
-| values | Uint32List | Yes | Values |
+| values | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Values |
 
 ## vertexAttribIPointer
 
@@ -2553,6 +3335,20 @@ Sets vertex attrib integer pointer
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-vertexAttribIPointer(
+      index: webgl.GLuint,
+      size: webgl.GLint,
+      type: webgl.GLenum,
+      stride: webgl.GLsizei,
+      offset: webgl.GLintptr,
+    ): void--><!--Device-WebGL2RenderingContextBase-vertexAttribIPointer(
+      index: webgl.GLuint,
+      size: webgl.GLint,
+      type: webgl.GLenum,
+      stride: webgl.GLsizei,
+      offset: webgl.GLintptr,
+    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2578,15 +3374,17 @@ Waits for sync object
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-waitSync(sync: WebGLSync, flags: webgl.GLbitfield, timeout: GLint64): void--><!--Device-WebGL2RenderingContextBase-waitSync(sync: WebGLSync, flags: webgl.GLbitfield, timeout: GLint64): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sync | WebGLSync | Yes | Sync object |
+| sync | [WebGLSync](arkts-arkgraphics2d-webglsync-i.md) | Yes | Sync object |
 | flags | webgl.GLbitfield | Yes | Flags |
-| timeout | GLint64 | Yes | Timeout |
+| timeout | [GLint64](arkts-arkgraphics2d-glint64-t.md) | Yes | Timeout |
 
 ## ACTIVE_UNIFORM_BLOCKS
 
@@ -2601,6 +3399,8 @@ Active Uniform Blocks
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly ACTIVE_UNIFORM_BLOCKS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly ACTIVE_UNIFORM_BLOCKS: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2618,6 +3418,8 @@ Already Signaled
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly ALREADY_SIGNALED: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly ALREADY_SIGNALED: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## ANY_SAMPLES_PASSED
@@ -2633,6 +3435,8 @@ Any Samples Passed
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly ANY_SAMPLES_PASSED: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly ANY_SAMPLES_PASSED: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2650,6 +3454,8 @@ Any Samples Passed Conservative
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly ANY_SAMPLES_PASSED_CONSERVATIVE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly ANY_SAMPLES_PASSED_CONSERVATIVE: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## COLOR
@@ -2665,6 +3471,8 @@ Buffer: color
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly COLOR: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2682,6 +3490,8 @@ Color Attachment1
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT1: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT1: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## COLOR_ATTACHMENT10
@@ -2697,6 +3507,8 @@ Color Attachment10
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT10: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT10: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2714,6 +3526,8 @@ Color Attachment11
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT11: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT11: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## COLOR_ATTACHMENT12
@@ -2729,6 +3543,8 @@ Color Attachment12
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT12: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT12: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2746,6 +3562,8 @@ Color Attachment13
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT13: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT13: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## COLOR_ATTACHMENT14
@@ -2761,6 +3579,8 @@ Color Attachment14
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT14: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT14: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2778,6 +3598,8 @@ Color Attachment15
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT15: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT15: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## COLOR_ATTACHMENT2
@@ -2793,6 +3615,8 @@ Color Attachment2
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT2: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT2: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2810,6 +3634,8 @@ Color Attachment3
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT3: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT3: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## COLOR_ATTACHMENT4
@@ -2825,6 +3651,8 @@ Color Attachment4
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT4: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT4: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2842,6 +3670,8 @@ Color Attachment5
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT5: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT5: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## COLOR_ATTACHMENT6
@@ -2857,6 +3687,8 @@ Color Attachment6
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT6: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT6: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2874,6 +3706,8 @@ Color Attachment7
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT7: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT7: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## COLOR_ATTACHMENT8
@@ -2889,6 +3723,8 @@ Color Attachment8
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT8: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT8: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2906,6 +3742,8 @@ Color Attachment9
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT9: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COLOR_ATTACHMENT9: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## COMPARE_REF_TO_TEXTURE
@@ -2921,6 +3759,8 @@ Compare Ref To Texture
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly COMPARE_REF_TO_TEXTURE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COMPARE_REF_TO_TEXTURE: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2938,6 +3778,8 @@ Condition Satisfied
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly CONDITION_SATISFIED: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly CONDITION_SATISFIED: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## COPY_READ_BUFFER
@@ -2953,6 +3795,8 @@ Copy Read Buffer
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly COPY_READ_BUFFER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COPY_READ_BUFFER: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2970,6 +3814,8 @@ Copy Read Buffer Binding
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly COPY_READ_BUFFER_BINDING: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COPY_READ_BUFFER_BINDING: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## COPY_WRITE_BUFFER
@@ -2985,6 +3831,8 @@ Copy Write Buffer
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly COPY_WRITE_BUFFER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COPY_WRITE_BUFFER: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3002,6 +3850,8 @@ Copy Write Buffer Binding
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly COPY_WRITE_BUFFER_BINDING: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly COPY_WRITE_BUFFER_BINDING: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## CURRENT_QUERY
@@ -3017,6 +3867,8 @@ Current query
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly CURRENT_QUERY: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly CURRENT_QUERY: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3034,6 +3886,8 @@ Buffer: depth
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly DEPTH: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DEPTH: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## DEPTH24_STENCIL8
@@ -3049,6 +3903,8 @@ Depth24 Stencil8
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly DEPTH24_STENCIL8: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DEPTH24_STENCIL8: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3066,6 +3922,8 @@ Depth32F Stencil8
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly DEPTH32F_STENCIL8: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DEPTH32F_STENCIL8: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## DEPTH_COMPONENT24
@@ -3081,6 +3939,8 @@ Internal format: depth component24
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly DEPTH_COMPONENT24: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DEPTH_COMPONENT24: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3098,6 +3958,8 @@ Depth Component32F
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly DEPTH_COMPONENT32F: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DEPTH_COMPONENT32F: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## DRAW_BUFFER0
@@ -3113,6 +3975,8 @@ Draw buffer 0
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER0: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER0: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3130,6 +3994,8 @@ Draw buffer 1
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER1: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER1: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## DRAW_BUFFER10
@@ -3145,6 +4011,8 @@ Draw Buffer10
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER10: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER10: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3162,6 +4030,8 @@ Draw Buffer11
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER11: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER11: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## DRAW_BUFFER12
@@ -3177,6 +4047,8 @@ Draw Buffer12
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER12: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER12: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3194,6 +4066,8 @@ Draw Buffer13
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER13: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER13: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## DRAW_BUFFER14
@@ -3209,6 +4083,8 @@ Draw Buffer14
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER14: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER14: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3226,6 +4102,8 @@ Draw Buffer15
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER15: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER15: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## DRAW_BUFFER2
@@ -3241,6 +4119,8 @@ Draw buffer 2
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER2: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER2: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3258,6 +4138,8 @@ Draw buffer 3
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER3: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER3: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## DRAW_BUFFER4
@@ -3273,6 +4155,8 @@ Draw buffer 4
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER4: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER4: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3290,6 +4174,8 @@ Draw Buffer5
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER5: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER5: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## DRAW_BUFFER6
@@ -3305,6 +4191,8 @@ Draw Buffer6
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER6: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER6: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3322,6 +4210,8 @@ Draw Buffer7
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER7: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER7: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## DRAW_BUFFER8
@@ -3337,6 +4227,8 @@ Draw Buffer8
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER8: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER8: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3354,6 +4246,8 @@ Draw Buffer9
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER9: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_BUFFER9: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## DRAW_FRAMEBUFFER
@@ -3369,6 +4263,8 @@ Draw Framebuffer
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly DRAW_FRAMEBUFFER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_FRAMEBUFFER: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3386,6 +4282,8 @@ Draw Framebuffer Binding
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly DRAW_FRAMEBUFFER_BINDING: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DRAW_FRAMEBUFFER_BINDING: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## DYNAMIC_COPY
@@ -3401,6 +4299,8 @@ Buffer usage: dynamic copy
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly DYNAMIC_COPY: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DYNAMIC_COPY: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3418,6 +4318,8 @@ Buffer usage: dynamic read
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly DYNAMIC_READ: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly DYNAMIC_READ: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## FLOAT_32_UNSIGNED_INT_24_8_REV
@@ -3433,6 +4335,8 @@ Float 32 Unsigned Int 24 8 Rev
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly FLOAT_32_UNSIGNED_INT_24_8_REV: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FLOAT_32_UNSIGNED_INT_24_8_REV: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3450,6 +4354,8 @@ Float Mat2X3
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly FLOAT_MAT2x3: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FLOAT_MAT2x3: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## FLOAT_MAT2x4
@@ -3465,6 +4371,8 @@ Float Mat2X4
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly FLOAT_MAT2x4: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FLOAT_MAT2x4: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3482,6 +4390,8 @@ Float Mat3X2
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly FLOAT_MAT3x2: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FLOAT_MAT3x2: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## FLOAT_MAT3x4
@@ -3497,6 +4407,8 @@ Float Mat3X4
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly FLOAT_MAT3x4: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FLOAT_MAT3x4: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3514,6 +4426,8 @@ Float Mat4X2
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly FLOAT_MAT4x2: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FLOAT_MAT4x2: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## FLOAT_MAT4x3
@@ -3529,6 +4443,8 @@ Float Mat4X3
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly FLOAT_MAT4x3: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FLOAT_MAT4x3: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3546,6 +4462,8 @@ Fragment Shader Derivative Hint
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly FRAGMENT_SHADER_DERIVATIVE_HINT: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FRAGMENT_SHADER_DERIVATIVE_HINT: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE
@@ -3561,6 +4479,8 @@ Framebuffer Attachment Alpha Size
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3578,6 +4498,8 @@ Framebuffer Attachment Blue Size
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_BLUE_SIZE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_BLUE_SIZE: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING
@@ -3593,6 +4515,8 @@ Framebuffer Attachment Color Encoding
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3610,6 +4534,8 @@ Framebuffer Attachment Component Type
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE
@@ -3625,6 +4551,8 @@ Framebuffer Attachment Depth Size
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3642,6 +4570,8 @@ Framebuffer Attachment Green Size
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_GREEN_SIZE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_GREEN_SIZE: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## FRAMEBUFFER_ATTACHMENT_RED_SIZE
@@ -3657,6 +4587,8 @@ Framebuffer Attachment Red Size
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_RED_SIZE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_RED_SIZE: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3674,6 +4606,8 @@ Framebuffer Attachment Stencil Size
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER
@@ -3689,6 +4623,8 @@ Framebuffer Attachment Texture Layer
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3706,6 +4642,8 @@ Framebuffer Default
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_DEFAULT: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_DEFAULT: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## FRAMEBUFFER_INCOMPLETE_MULTISAMPLE
@@ -3721,6 +4659,8 @@ Framebuffer Incomplete Multisample
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_INCOMPLETE_MULTISAMPLE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly FRAMEBUFFER_INCOMPLETE_MULTISAMPLE: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3738,6 +4678,8 @@ Half Float
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly HALF_FLOAT: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly HALF_FLOAT: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## INTERLEAVED_ATTRIBS
@@ -3753,6 +4695,8 @@ Interleaved Attribs
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly INTERLEAVED_ATTRIBS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly INTERLEAVED_ATTRIBS: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3770,6 +4714,8 @@ Data type: INT 2_10_10_10_REV
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly INT_2_10_10_10_REV: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly INT_2_10_10_10_REV: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## INT_SAMPLER_2D
@@ -3785,6 +4731,8 @@ Int Sampler 2D
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly INT_SAMPLER_2D: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly INT_SAMPLER_2D: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3802,6 +4750,8 @@ Int Sampler 2D Array
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly INT_SAMPLER_2D_ARRAY: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly INT_SAMPLER_2D_ARRAY: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## INT_SAMPLER_3D
@@ -3817,6 +4767,8 @@ Int Sampler 3D
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly INT_SAMPLER_3D: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly INT_SAMPLER_3D: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3834,6 +4786,8 @@ Int Sampler Cube
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly INT_SAMPLER_CUBE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly INT_SAMPLER_CUBE: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## INVALID_INDEX
@@ -3849,6 +4803,8 @@ Invalid Index
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly INVALID_INDEX: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly INVALID_INDEX: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3866,6 +4822,8 @@ Max value
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly MAX: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## MAX_3D_TEXTURE_SIZE
@@ -3881,6 +4839,8 @@ Max 3D texture size
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly MAX_3D_TEXTURE_SIZE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_3D_TEXTURE_SIZE: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3898,6 +4858,8 @@ Max Array Texture Layers
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly MAX_ARRAY_TEXTURE_LAYERS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_ARRAY_TEXTURE_LAYERS: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## MAX_CLIENT_WAIT_TIMEOUT_WEBGL
@@ -3913,6 +4875,8 @@ Max client wait timeout WebGL
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly MAX_CLIENT_WAIT_TIMEOUT_WEBGL: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_CLIENT_WAIT_TIMEOUT_WEBGL: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3930,6 +4894,8 @@ Max Color Attachments
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly MAX_COLOR_ATTACHMENTS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_COLOR_ATTACHMENTS: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS
@@ -3945,6 +4911,8 @@ Max Combined Fragment Uniform Components
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3962,6 +4930,8 @@ Max Combined Uniform Blocks
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly MAX_COMBINED_UNIFORM_BLOCKS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_COMBINED_UNIFORM_BLOCKS: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS
@@ -3977,6 +4947,8 @@ Max Combined Vertex Uniform Components
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3994,6 +4966,8 @@ Max draw buffers
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly MAX_DRAW_BUFFERS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_DRAW_BUFFERS: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## MAX_ELEMENTS_INDICES
@@ -4009,6 +4983,8 @@ Max elements indices
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly MAX_ELEMENTS_INDICES: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_ELEMENTS_INDICES: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4026,6 +5002,8 @@ Max elements vertices
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly MAX_ELEMENTS_VERTICES: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_ELEMENTS_VERTICES: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## MAX_ELEMENT_INDEX
@@ -4041,6 +5019,8 @@ Max element index
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly MAX_ELEMENT_INDEX: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_ELEMENT_INDEX: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4058,6 +5038,8 @@ Max Fragment Input Components
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly MAX_FRAGMENT_INPUT_COMPONENTS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_FRAGMENT_INPUT_COMPONENTS: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## MAX_FRAGMENT_UNIFORM_BLOCKS
@@ -4073,6 +5055,8 @@ Max Fragment Uniform Blocks
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly MAX_FRAGMENT_UNIFORM_BLOCKS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_FRAGMENT_UNIFORM_BLOCKS: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4090,6 +5074,8 @@ Max Fragment Uniform Components
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly MAX_FRAGMENT_UNIFORM_COMPONENTS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_FRAGMENT_UNIFORM_COMPONENTS: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## MAX_PROGRAM_TEXEL_OFFSET
@@ -4105,6 +5091,8 @@ Max Program Texel Offset
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly MAX_PROGRAM_TEXEL_OFFSET: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_PROGRAM_TEXEL_OFFSET: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4122,6 +5110,8 @@ Max Samples
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly MAX_SAMPLES: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_SAMPLES: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## MAX_SERVER_WAIT_TIMEOUT
@@ -4137,6 +5127,8 @@ Max Server Wait Timeout
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly MAX_SERVER_WAIT_TIMEOUT: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_SERVER_WAIT_TIMEOUT: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4154,6 +5146,8 @@ Max texture LOD bias
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly MAX_TEXTURE_LOD_BIAS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_TEXTURE_LOD_BIAS: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS
@@ -4169,6 +5163,8 @@ Max Transform Feedback Interleaved Components
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4186,6 +5182,8 @@ Max Transform Feedback Separate Attribs
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS
@@ -4201,6 +5199,8 @@ Max Transform Feedback Separate Components
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4218,6 +5218,8 @@ Max Uniform Block Size
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly MAX_UNIFORM_BLOCK_SIZE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_UNIFORM_BLOCK_SIZE: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## MAX_UNIFORM_BUFFER_BINDINGS
@@ -4233,6 +5235,8 @@ Max Uniform Buffer Bindings
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly MAX_UNIFORM_BUFFER_BINDINGS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_UNIFORM_BUFFER_BINDINGS: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4250,6 +5254,8 @@ Max Varying Components
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly MAX_VARYING_COMPONENTS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_VARYING_COMPONENTS: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## MAX_VERTEX_OUTPUT_COMPONENTS
@@ -4265,6 +5271,8 @@ Max Vertex Output Components
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly MAX_VERTEX_OUTPUT_COMPONENTS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_VERTEX_OUTPUT_COMPONENTS: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4282,6 +5290,8 @@ Max Vertex Uniform Blocks
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly MAX_VERTEX_UNIFORM_BLOCKS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_VERTEX_UNIFORM_BLOCKS: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## MAX_VERTEX_UNIFORM_COMPONENTS
@@ -4297,6 +5307,8 @@ Max Vertex Uniform Components
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly MAX_VERTEX_UNIFORM_COMPONENTS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MAX_VERTEX_UNIFORM_COMPONENTS: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4314,6 +5326,8 @@ Min value
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly MIN: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MIN: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## MIN_PROGRAM_TEXEL_OFFSET
@@ -4329,6 +5343,8 @@ Min Program Texel Offset
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly MIN_PROGRAM_TEXEL_OFFSET: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly MIN_PROGRAM_TEXEL_OFFSET: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4346,6 +5362,8 @@ Object Type
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly OBJECT_TYPE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly OBJECT_TYPE: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## PACK_ROW_LENGTH
@@ -4361,6 +5379,8 @@ Pack row length
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly PACK_ROW_LENGTH: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly PACK_ROW_LENGTH: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4378,6 +5398,8 @@ Pack skip pixels
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly PACK_SKIP_PIXELS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly PACK_SKIP_PIXELS: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## PACK_SKIP_ROWS
@@ -4393,6 +5415,8 @@ Pack skip rows
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly PACK_SKIP_ROWS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly PACK_SKIP_ROWS: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4410,6 +5434,8 @@ Pixel Pack Buffer
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly PIXEL_PACK_BUFFER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly PIXEL_PACK_BUFFER: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## PIXEL_PACK_BUFFER_BINDING
@@ -4425,6 +5451,8 @@ Pixel Pack Buffer Binding
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly PIXEL_PACK_BUFFER_BINDING: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly PIXEL_PACK_BUFFER_BINDING: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4442,6 +5470,8 @@ Pixel Unpack Buffer
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly PIXEL_UNPACK_BUFFER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly PIXEL_UNPACK_BUFFER: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## PIXEL_UNPACK_BUFFER_BINDING
@@ -4457,6 +5487,8 @@ Pixel Unpack Buffer Binding
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly PIXEL_UNPACK_BUFFER_BINDING: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly PIXEL_UNPACK_BUFFER_BINDING: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4474,6 +5506,8 @@ Query result
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly QUERY_RESULT: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly QUERY_RESULT: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## QUERY_RESULT_AVAILABLE
@@ -4489,6 +5523,8 @@ Query result available
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly QUERY_RESULT_AVAILABLE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly QUERY_RESULT_AVAILABLE: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4506,6 +5542,8 @@ R11F G11F B10F
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly R11F_G11F_B10F: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly R11F_G11F_B10F: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## R16F
@@ -4521,6 +5559,8 @@ R16F
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly R16F: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly R16F: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4538,6 +5578,8 @@ R16I
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly R16I: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly R16I: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## R16UI
@@ -4553,6 +5595,8 @@ R16Ui
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly R16UI: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly R16UI: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4570,6 +5614,8 @@ R32F
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly R32F: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly R32F: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## R32I
@@ -4585,6 +5631,8 @@ R32I
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly R32I: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly R32I: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4602,6 +5650,8 @@ R32Ui
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly R32UI: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly R32UI: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## R8
@@ -4617,6 +5667,8 @@ R8
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly R8: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly R8: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4634,6 +5686,8 @@ R8I
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly R8I: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly R8I: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## R8UI
@@ -4649,6 +5703,8 @@ R8Ui
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly R8UI: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly R8UI: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4666,6 +5722,8 @@ R8 Snorm
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly R8_SNORM: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly R8_SNORM: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## RASTERIZER_DISCARD
@@ -4681,6 +5739,8 @@ Rasterizer Discard
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RASTERIZER_DISCARD: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RASTERIZER_DISCARD: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4698,6 +5758,8 @@ Read buffer
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly READ_BUFFER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly READ_BUFFER: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## READ_FRAMEBUFFER
@@ -4713,6 +5775,8 @@ Read Framebuffer
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly READ_FRAMEBUFFER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly READ_FRAMEBUFFER: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4730,6 +5794,8 @@ Read Framebuffer Binding
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly READ_FRAMEBUFFER_BINDING: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly READ_FRAMEBUFFER_BINDING: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## RED
@@ -4745,6 +5811,8 @@ Pixel format: red
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RED: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RED: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4762,6 +5830,8 @@ Red Integer
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly RED_INTEGER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RED_INTEGER: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## RENDERBUFFER_SAMPLES
@@ -4777,6 +5847,8 @@ Renderbuffer Samples
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RENDERBUFFER_SAMPLES: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RENDERBUFFER_SAMPLES: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4794,6 +5866,8 @@ Rg
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly RG: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RG: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## RG16F
@@ -4809,6 +5883,8 @@ Rg16F
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RG16F: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RG16F: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4826,6 +5902,8 @@ Rg16I
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly RG16I: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RG16I: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## RG16UI
@@ -4841,6 +5919,8 @@ Rg16Ui
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RG16UI: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RG16UI: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4858,6 +5938,8 @@ Rg32F
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly RG32F: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RG32F: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## RG32I
@@ -4873,6 +5955,8 @@ Rg32I
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RG32I: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RG32I: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4890,6 +5974,8 @@ Rg32Ui
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly RG32UI: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RG32UI: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## RG8
@@ -4905,6 +5991,8 @@ Rg8
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RG8: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RG8: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4922,6 +6010,8 @@ Rg8I
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly RG8I: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RG8I: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## RG8UI
@@ -4937,6 +6027,8 @@ Rg8Ui
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RG8UI: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RG8UI: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4954,6 +6046,8 @@ Rg8 Snorm
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly RG8_SNORM: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RG8_SNORM: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## RGB10_A2
@@ -4969,6 +6063,8 @@ Internal format: RGB10_A2
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RGB10_A2: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB10_A2: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -4986,6 +6082,8 @@ Internal format: RGB10_A2UI
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly RGB10_A2UI: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB10_A2UI: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## RGB16F
@@ -5001,6 +6099,8 @@ Rgb16F
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RGB16F: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB16F: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5018,6 +6118,8 @@ Rgb16I
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly RGB16I: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB16I: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## RGB16UI
@@ -5033,6 +6135,8 @@ Rgb16Ui
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RGB16UI: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB16UI: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5050,6 +6154,8 @@ Rgb32F
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly RGB32F: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB32F: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## RGB32I
@@ -5065,6 +6171,8 @@ Rgb32I
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RGB32I: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB32I: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5082,6 +6190,8 @@ Rgb32Ui
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly RGB32UI: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB32UI: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## RGB8
@@ -5097,6 +6207,8 @@ Internal format: RGB8
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RGB8: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB8: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5114,6 +6226,8 @@ Rgb8I
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly RGB8I: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB8I: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## RGB8UI
@@ -5129,6 +6243,8 @@ Rgb8Ui
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RGB8UI: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB8UI: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5146,6 +6262,8 @@ Rgb8 Snorm
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly RGB8_SNORM: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB8_SNORM: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## RGB9_E5
@@ -5161,6 +6279,8 @@ Rgb9 E5
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RGB9_E5: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB9_E5: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5178,6 +6298,8 @@ Rgba16F
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly RGBA16F: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGBA16F: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## RGBA16I
@@ -5193,6 +6315,8 @@ Rgba16I
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RGBA16I: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGBA16I: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5210,6 +6334,8 @@ Rgba16Ui
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly RGBA16UI: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGBA16UI: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## RGBA32F
@@ -5225,6 +6351,8 @@ Rgba32F
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RGBA32F: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGBA32F: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5242,6 +6370,8 @@ Rgba32I
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly RGBA32I: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGBA32I: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## RGBA32UI
@@ -5257,6 +6387,8 @@ Rgba32Ui
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RGBA32UI: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGBA32UI: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5274,6 +6406,8 @@ Internal format: RGBA8
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly RGBA8: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGBA8: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## RGBA8I
@@ -5289,6 +6423,8 @@ Rgba8I
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RGBA8I: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGBA8I: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5306,6 +6442,8 @@ Rgba8Ui
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly RGBA8UI: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGBA8UI: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## RGBA8_SNORM
@@ -5321,6 +6459,8 @@ Rgba8 Snorm
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RGBA8_SNORM: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGBA8_SNORM: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5338,6 +6478,8 @@ Rgba Integer
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly RGBA_INTEGER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGBA_INTEGER: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## RGB_INTEGER
@@ -5353,6 +6495,8 @@ Rgb Integer
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly RGB_INTEGER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RGB_INTEGER: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5370,6 +6514,8 @@ Rg Integer
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly RG_INTEGER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly RG_INTEGER: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## SAMPLER_2D_ARRAY
@@ -5385,6 +6531,8 @@ Sampler 2D Array
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly SAMPLER_2D_ARRAY: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SAMPLER_2D_ARRAY: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5402,6 +6550,8 @@ Sampler 2D Array Shadow
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly SAMPLER_2D_ARRAY_SHADOW: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SAMPLER_2D_ARRAY_SHADOW: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## SAMPLER_2D_SHADOW
@@ -5417,6 +6567,8 @@ Sampler 2D Shadow
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly SAMPLER_2D_SHADOW: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SAMPLER_2D_SHADOW: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5434,6 +6586,8 @@ Sampler 3D
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly SAMPLER_3D: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SAMPLER_3D: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## SAMPLER_BINDING
@@ -5449,6 +6603,8 @@ Sampler Binding
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly SAMPLER_BINDING: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SAMPLER_BINDING: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5466,6 +6622,8 @@ Sampler Cube Shadow
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly SAMPLER_CUBE_SHADOW: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SAMPLER_CUBE_SHADOW: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## SEPARATE_ATTRIBS
@@ -5481,6 +6639,8 @@ Separate Attribs
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly SEPARATE_ATTRIBS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SEPARATE_ATTRIBS: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5498,6 +6658,8 @@ Signaled
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly SIGNALED: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SIGNALED: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## SIGNED_NORMALIZED
@@ -5513,6 +6675,8 @@ Signed Normalized
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly SIGNED_NORMALIZED: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SIGNED_NORMALIZED: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5530,6 +6694,8 @@ Srgb
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly SRGB: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SRGB: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## SRGB8
@@ -5545,6 +6711,8 @@ Srgb8
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly SRGB8: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SRGB8: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5562,6 +6730,8 @@ Srgb8 Alpha8
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly SRGB8_ALPHA8: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SRGB8_ALPHA8: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## STATIC_COPY
@@ -5577,6 +6747,8 @@ Buffer usage: static copy
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly STATIC_COPY: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly STATIC_COPY: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5594,6 +6766,8 @@ Buffer usage: static read
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly STATIC_READ: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly STATIC_READ: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## STENCIL
@@ -5609,6 +6783,8 @@ Buffer: stencil
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly STENCIL: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly STENCIL: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5626,6 +6802,8 @@ Buffer usage: stream copy
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly STREAM_COPY: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly STREAM_COPY: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## STREAM_READ
@@ -5641,6 +6819,8 @@ Buffer usage: stream read
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly STREAM_READ: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly STREAM_READ: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5658,6 +6838,8 @@ Sync Condition
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly SYNC_CONDITION: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SYNC_CONDITION: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## SYNC_FENCE
@@ -5673,6 +6855,8 @@ Sync Fence
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly SYNC_FENCE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SYNC_FENCE: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5690,6 +6874,8 @@ Sync Flags
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly SYNC_FLAGS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SYNC_FLAGS: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## SYNC_FLUSH_COMMANDS_BIT
@@ -5705,6 +6891,8 @@ Sync Flush Commands Bit
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly SYNC_FLUSH_COMMANDS_BIT: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SYNC_FLUSH_COMMANDS_BIT: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5722,6 +6910,8 @@ Sync Gpu Commands Complete
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly SYNC_GPU_COMMANDS_COMPLETE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SYNC_GPU_COMMANDS_COMPLETE: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## SYNC_STATUS
@@ -5737,6 +6927,8 @@ Sync Status
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly SYNC_STATUS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly SYNC_STATUS: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5754,6 +6946,8 @@ Texture 2D Array
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly TEXTURE_2D_ARRAY: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TEXTURE_2D_ARRAY: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## TEXTURE_3D
@@ -5769,6 +6963,8 @@ Texture target: 3D
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly TEXTURE_3D: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TEXTURE_3D: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5786,6 +6982,8 @@ Texture base level
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly TEXTURE_BASE_LEVEL: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TEXTURE_BASE_LEVEL: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## TEXTURE_BINDING_2D_ARRAY
@@ -5801,6 +6999,8 @@ Texture Binding 2D Array
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly TEXTURE_BINDING_2D_ARRAY: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TEXTURE_BINDING_2D_ARRAY: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5818,6 +7018,8 @@ Texture binding 3D
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly TEXTURE_BINDING_3D: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TEXTURE_BINDING_3D: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## TEXTURE_COMPARE_FUNC
@@ -5833,6 +7035,8 @@ Texture compare function
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly TEXTURE_COMPARE_FUNC: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TEXTURE_COMPARE_FUNC: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5850,6 +7054,8 @@ Texture compare mode
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly TEXTURE_COMPARE_MODE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TEXTURE_COMPARE_MODE: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## TEXTURE_IMMUTABLE_FORMAT
@@ -5865,6 +7071,8 @@ Texture immutable format
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly TEXTURE_IMMUTABLE_FORMAT: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TEXTURE_IMMUTABLE_FORMAT: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5882,6 +7090,8 @@ Texture immutable levels
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly TEXTURE_IMMUTABLE_LEVELS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TEXTURE_IMMUTABLE_LEVELS: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## TEXTURE_MAX_LEVEL
@@ -5897,6 +7107,8 @@ Texture max level
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly TEXTURE_MAX_LEVEL: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TEXTURE_MAX_LEVEL: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5914,6 +7126,8 @@ Texture max LOD
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly TEXTURE_MAX_LOD: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TEXTURE_MAX_LOD: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## TEXTURE_MIN_LOD
@@ -5929,6 +7143,8 @@ Texture min LOD
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly TEXTURE_MIN_LOD: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TEXTURE_MIN_LOD: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5946,6 +7162,8 @@ Texture wrap: R
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly TEXTURE_WRAP_R: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TEXTURE_WRAP_R: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## TIMEOUT_EXPIRED
@@ -5961,6 +7179,8 @@ Timeout Expired
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly TIMEOUT_EXPIRED: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TIMEOUT_EXPIRED: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -5978,6 +7198,8 @@ Timeout ignored
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly TIMEOUT_IGNORED: GLint64--><!--Device-WebGL2RenderingContextBase-readonly TIMEOUT_IGNORED: GLint64-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## TRANSFORM_FEEDBACK
@@ -5993,6 +7215,8 @@ Transform feedback target
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6010,6 +7234,8 @@ Transform feedback active
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_ACTIVE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_ACTIVE: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## TRANSFORM_FEEDBACK_BINDING
@@ -6025,6 +7251,8 @@ Transform feedback binding
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_BINDING: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_BINDING: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6042,6 +7270,8 @@ Transform Feedback Buffer
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_BUFFER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_BUFFER: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## TRANSFORM_FEEDBACK_BUFFER_BINDING
@@ -6057,6 +7287,8 @@ Transform Feedback Buffer Binding
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_BUFFER_BINDING: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_BUFFER_BINDING: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6074,6 +7306,8 @@ Transform Feedback Buffer Mode
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_BUFFER_MODE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_BUFFER_MODE: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## TRANSFORM_FEEDBACK_BUFFER_SIZE
@@ -6089,6 +7323,8 @@ Transform Feedback Buffer Size
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_BUFFER_SIZE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_BUFFER_SIZE: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6106,6 +7342,8 @@ Transform Feedback Buffer Start
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_BUFFER_START: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_BUFFER_START: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## TRANSFORM_FEEDBACK_PAUSED
@@ -6121,6 +7359,8 @@ Transform feedback paused
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_PAUSED: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_PAUSED: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6138,6 +7378,8 @@ Transform Feedback Primitives Written
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## TRANSFORM_FEEDBACK_VARYINGS
@@ -6153,6 +7395,8 @@ Transform Feedback Varyings
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_VARYINGS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly TRANSFORM_FEEDBACK_VARYINGS: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6170,6 +7414,8 @@ Uniform Array Stride
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly UNIFORM_ARRAY_STRIDE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_ARRAY_STRIDE: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## UNIFORM_BLOCK_ACTIVE_UNIFORMS
@@ -6185,6 +7431,8 @@ Uniform Block Active Uniforms
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_ACTIVE_UNIFORMS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_ACTIVE_UNIFORMS: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6202,6 +7450,8 @@ Uniform Block Active Uniform Indices
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## UNIFORM_BLOCK_BINDING
@@ -6217,6 +7467,8 @@ Uniform Block Binding
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_BINDING: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_BINDING: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6234,6 +7486,8 @@ Uniform Block Data Size
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_DATA_SIZE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_DATA_SIZE: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## UNIFORM_BLOCK_INDEX
@@ -6249,6 +7503,8 @@ Uniform Block Index
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_INDEX: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_INDEX: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6266,6 +7522,8 @@ Uniform Block Referenced By Fragment Shader
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_REFERENCED_BY_FRAGMENT_SHADER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_REFERENCED_BY_FRAGMENT_SHADER: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER
@@ -6281,6 +7539,8 @@ Uniform Block Referenced By Vertex Shader
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6298,6 +7558,8 @@ Uniform Buffer
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BUFFER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BUFFER: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## UNIFORM_BUFFER_BINDING
@@ -6313,6 +7575,8 @@ Uniform Buffer Binding
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BUFFER_BINDING: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BUFFER_BINDING: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6330,6 +7594,8 @@ Uniform Buffer Offset Alignment
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BUFFER_OFFSET_ALIGNMENT: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BUFFER_OFFSET_ALIGNMENT: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## UNIFORM_BUFFER_SIZE
@@ -6345,6 +7611,8 @@ Uniform Buffer Size
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BUFFER_SIZE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BUFFER_SIZE: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6362,6 +7630,8 @@ Uniform Buffer Start
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BUFFER_START: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_BUFFER_START: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## UNIFORM_IS_ROW_MAJOR
@@ -6377,6 +7647,8 @@ Uniform Is Row Major
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly UNIFORM_IS_ROW_MAJOR: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_IS_ROW_MAJOR: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6394,6 +7666,8 @@ Uniform Matrix Stride
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly UNIFORM_MATRIX_STRIDE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_MATRIX_STRIDE: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## UNIFORM_OFFSET
@@ -6409,6 +7683,8 @@ Uniform Offset
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly UNIFORM_OFFSET: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_OFFSET: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6426,6 +7702,8 @@ Uniform Size
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly UNIFORM_SIZE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_SIZE: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## UNIFORM_TYPE
@@ -6441,6 +7719,8 @@ Uniform Type
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly UNIFORM_TYPE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNIFORM_TYPE: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6458,6 +7738,8 @@ Unpack image height
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly UNPACK_IMAGE_HEIGHT: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNPACK_IMAGE_HEIGHT: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## UNPACK_ROW_LENGTH
@@ -6473,6 +7755,8 @@ Unpack row length
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly UNPACK_ROW_LENGTH: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNPACK_ROW_LENGTH: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6490,6 +7774,8 @@ Unpack skip images
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly UNPACK_SKIP_IMAGES: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNPACK_SKIP_IMAGES: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## UNPACK_SKIP_PIXELS
@@ -6505,6 +7791,8 @@ Unpack skip pixels
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly UNPACK_SKIP_PIXELS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNPACK_SKIP_PIXELS: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6522,6 +7810,8 @@ Unpack skip rows
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly UNPACK_SKIP_ROWS: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNPACK_SKIP_ROWS: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## UNSIGNALED
@@ -6537,6 +7827,8 @@ Unsignaled
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly UNSIGNALED: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNSIGNALED: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6554,6 +7846,8 @@ Unsigned Int 10F 11F 11F Rev
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_10F_11F_11F_REV: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_10F_11F_11F_REV: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## UNSIGNED_INT_24_8
@@ -6569,6 +7863,8 @@ Unsigned Int 24 8
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_24_8: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_24_8: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6586,6 +7882,8 @@ Data type: unsigned int 2_10_10_10 rev
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_2_10_10_10_REV: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_2_10_10_10_REV: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## UNSIGNED_INT_5_9_9_9_REV
@@ -6601,6 +7899,8 @@ Unsigned Int 5 9 9 9 Rev
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_5_9_9_9_REV: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_5_9_9_9_REV: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6618,6 +7918,8 @@ Unsigned Int Sampler 2D
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_SAMPLER_2D: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_SAMPLER_2D: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## UNSIGNED_INT_SAMPLER_2D_ARRAY
@@ -6633,6 +7935,8 @@ Unsigned Int Sampler 2D Array
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_SAMPLER_2D_ARRAY: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_SAMPLER_2D_ARRAY: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6650,6 +7954,8 @@ Unsigned Int Sampler 3D
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_SAMPLER_3D: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_SAMPLER_3D: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## UNSIGNED_INT_SAMPLER_CUBE
@@ -6665,6 +7971,8 @@ Unsigned Int Sampler Cube
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_SAMPLER_CUBE: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_SAMPLER_CUBE: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6682,6 +7990,8 @@ Unsigned Int Vec2
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_VEC2: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_VEC2: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## UNSIGNED_INT_VEC3
@@ -6697,6 +8007,8 @@ Unsigned Int Vec3
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_VEC3: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_VEC3: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6714,6 +8026,8 @@ Unsigned Int Vec4
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_VEC4: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_INT_VEC4: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## UNSIGNED_NORMALIZED
@@ -6729,6 +8043,8 @@ Unsigned Normalized
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_NORMALIZED: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly UNSIGNED_NORMALIZED: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6746,6 +8062,8 @@ Vertex Array Binding
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly VERTEX_ARRAY_BINDING: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly VERTEX_ARRAY_BINDING: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## VERTEX_ATTRIB_ARRAY_DIVISOR
@@ -6761,6 +8079,8 @@ Vertex Attrib Array Divisor
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly VERTEX_ATTRIB_ARRAY_DIVISOR: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly VERTEX_ATTRIB_ARRAY_DIVISOR: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -6778,6 +8098,8 @@ Vertex Attrib Array Integer
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGL2RenderingContextBase-readonly VERTEX_ATTRIB_ARRAY_INTEGER: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly VERTEX_ATTRIB_ARRAY_INTEGER: webgl.GLenum-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## WAIT_FAILED
@@ -6793,6 +8115,8 @@ Wait Failed
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-WebGL2RenderingContextBase-readonly WAIT_FAILED: webgl.GLenum--><!--Device-WebGL2RenderingContextBase-readonly WAIT_FAILED: webgl.GLenum-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 

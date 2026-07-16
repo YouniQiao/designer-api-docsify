@@ -4,6 +4,8 @@
 
 **Deprecated since:** 9
 
+<!--Device-bundleState-interface BundleActiveInfoResponse--><!--Device-bundleState-interface BundleActiveInfoResponse-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 ## Modules to Import
@@ -25,6 +27,8 @@ the struct of BundleActiveInfoResponse.
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-BundleActiveInfoResponse-[key: string]: BundleStateInfo--><!--Device-BundleActiveInfoResponse-[key: string]: BundleStateInfo-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 

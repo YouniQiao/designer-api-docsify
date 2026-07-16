@@ -8,6 +8,8 @@ Defines the type of data to return for a subscription to data changes of the dev
 
 **Substitutes:** ORIENTATION
 
+<!--Device-unnamed-export interface SubscribeDeviceOrientationOptions--><!--Device-unnamed-export interface SubscribeDeviceOrientationOptions-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -34,6 +36,8 @@ Callback invoked when an API call fails.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-SubscribeDeviceOrientationOptions-fail?: (data: string, code: number) => void--><!--Device-SubscribeDeviceOrientationOptions-fail?: (data: string, code: number) => void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## interval
@@ -46,8 +50,8 @@ Interval at which the callback is invoked to return the device orientation senso
 
 The default value is **normal**. The options are as follows:
 
-- **game**: called at an interval of 20 ms, which is applicable to gaming scenarios.
-- **ui**: called at an interval of 60 ms, which is applicable to UI updating scenarios.
+- **game**: called at an interval of 20 ms, which is applicable to gaming scenarios.  
+- **ui**: called at an interval of 60 ms, which is applicable to UI updating scenarios.  
 - **normal**: called at an interval of 200 ms, which is applicable to power-saving scenarios.
 
 **Type:** string
@@ -59,6 +63,8 @@ The default value is **normal**. The options are as follows:
 **Substitutes:** Options.interval
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeDeviceOrientationOptions-interval: string--><!--Device-SubscribeDeviceOrientationOptions-interval: string-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
@@ -79,6 +85,8 @@ Callback invoked when the device orientation sensor data changes.
 **Substitutes:** on
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeDeviceOrientationOptions-success: (data: DeviceOrientationResponse) => void--><!--Device-SubscribeDeviceOrientationOptions-success: (data: DeviceOrientationResponse) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 

@@ -4,6 +4,8 @@ Provides methods to operate or manage Connected Tag.
 
 **Since:** 8
 
+<!--Device-unnamed-declare namespace connectedTag--><!--Device-unnamed-declare namespace connectedTag-End-->
+
 **System capability:** SystemCapability.Communication.ConnectedTag
 
 ## Modules to Import

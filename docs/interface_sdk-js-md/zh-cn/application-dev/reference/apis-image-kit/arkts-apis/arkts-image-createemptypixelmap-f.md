@@ -1,5 +1,11 @@
 # createEmptyPixelMap
 
+## 导入模块
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+```
+
 ## createEmptyPixelMap
 
 ```TypeScript
@@ -14,9 +20,11 @@ The following pixel format is not supported for PixelMap creation: ASTC_4x4.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-image-function createEmptyPixelMap(param: InitializationOptions): PixelMap--><!--Device-image-function createEmptyPixelMap(param: InitializationOptions): PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -24,13 +32,13 @@ The following pixel format is not supported for PixelMap creation: ASTC_4x4.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | InitializationOptions | 是 | Initialization options for the PixelMap.If InitializationOptions.pixelFormat is set to ASTC_4x4, it will be reset to the default value RGBA_8888. |
+| param | [InitializationOptions](arkts-image-initializationoptions-i.md) | 是 | Initialization options for the PixelMap.If InitializationOptions.pixelFormat is set to ASTC_4x4, it will be reset to the default value RGBA_8888. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| PixelMap | The new PixelMap created. |
+| [PixelMap](arkts-image-pixelmap-i.md) | The new PixelMap created. |
 
 **错误码：**
 

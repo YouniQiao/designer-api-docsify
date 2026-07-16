@@ -8,6 +8,8 @@ Defines the options of GridContainer.
 
 **Substitutes:** grid_col/GridColOptions
 
+<!--Device-unnamed-declare interface GridContainerOptions--><!--Device-unnamed-declare interface GridContainerOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## columns
@@ -25,6 +27,8 @@ Sets the total number of columns in the current layout.
 **Deprecated since:** 9
 
 **Substitutes:** grid_col/GridColOptions
+
+<!--Device-GridContainerOptions-columns?: number | "auto"--><!--Device-GridContainerOptions-columns?: number | "auto"-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ Grid layout column spacing.
 
 **Substitutes:** grid_col/GridColOptions
 
+<!--Device-GridContainerOptions-gutter?: number | string--><!--Device-GridContainerOptions-gutter?: number | string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## margin
@@ -62,6 +68,8 @@ Spacing on both sides of the grid layout.
 
 **Substitutes:** grid_col/GridColOptions
 
+<!--Device-GridContainerOptions-margin?: number | string--><!--Device-GridContainerOptions-margin?: number | string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## sizeType
@@ -79,6 +87,8 @@ Select the device width type.
 **Deprecated since:** 9
 
 **Substitutes:** grid_col/GridColOptions
+
+<!--Device-GridContainerOptions-sizeType?: SizeType--><!--Device-GridContainerOptions-sizeType?: SizeType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

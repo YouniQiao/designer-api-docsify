@@ -4,9 +4,17 @@ Transition Controller
 
 **起始版本：** 11
 
+<!--Device-uiExtensionHost-interface UIExtensionHostWindowProxy--><!--Device-uiExtensionHost-interface UIExtensionHostWindowProxy-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { uiExtensionHost } from '@kit.ArkUI';
+```
 
 ## createSubWindowWithOptions
 
@@ -19,6 +27,8 @@ createSubWindowWithOptions(name: string, subWindowOptions: window.SubWindowOptio
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionHostWindowProxy-createSubWindowWithOptions(name: string, subWindowOptions: window.SubWindowOptions): Promise<window.Window>--><!--Device-UIExtensionHostWindowProxy-createSubWindowWithOptions(name: string, subWindowOptions: window.SubWindowOptions): Promise<window.Window>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -35,14 +45,14 @@ createSubWindowWithOptions(name: string, subWindowOptions: window.SubWindowOptio
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;window.Window&gt; | Promise used to return the subwindow created. |
+| Promise<window.Window> | Promise used to return the subwindow created. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified.2. Incorrect parameters types.3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible causes:1. The window is not created or destroyed.2. Internal task error.3. The subWindow has been created and can not be created again.4. It is not allowed to create non-secure window when secure extension exists. |
 | 1300035 | Creating a subwindow is not allowed in the current context. Possible cause:1. An AgentUIExtensionAbility cannot create a subwindow. |
 
@@ -101,12 +111,15 @@ createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOption
         followCreatorLifecycle: boolean): Promise<window.Window>
 ```
 
-创建该UIExtensionHostWindowProxy实例下的子窗口，可通过设置followCreatorLifecycle，决定子窗是否跟随组件（EmbeddedComponent或
-UIExtensionComponent）的生命周期，使用Promise异步回调。
+创建该UIExtensionHostWindowProxy实例下的子窗口，可通过设置followCreatorLifecycle，决定子窗是否跟随组件（EmbeddedComponent或UIExtensionComponent）的生命周期，使用Promise异步回调。
 
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionHostWindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,
+        followCreatorLifecycle: boolean): Promise<window.Window>--><!--Device-UIExtensionHostWindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,
+        followCreatorLifecycle: boolean): Promise<window.Window>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -124,7 +137,7 @@ UIExtensionComponent）的生命周期，使用Promise异步回调。
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;window.Window&gt; | Promise used to return the subwindow. |
+| Promise<window.Window> | Promise used to return the subwindow. |
 
 **错误码：**
 
@@ -194,6 +207,8 @@ getWindowAvoidArea(type: window.AvoidAreaType): window.AvoidArea
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionHostWindowProxy-getWindowAvoidArea(type: window.AvoidAreaType): window.AvoidArea--><!--Device-UIExtensionHostWindowProxy-getWindowAvoidArea(type: window.AvoidAreaType): window.AvoidArea-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -243,15 +258,15 @@ hideNonSecureWindows(shouldHide: boolean): Promise<void>
 
 设置是否隐藏不安全窗口，使用Promise异步回调。
 
-> **说明：**
->
-> - 不安全窗口是指可能遮挡[EmbeddedComponent](./@internal/component/ets/embedded_component)（或
-> [UIExtensionComponent](./@internal/component/ets/ui_extension_component)）组件的窗口，如全局悬浮窗、宿主子窗口和宿主创建的Dialog窗口
-> （不包括系统应用创建的上述类型窗口）。
->
-> - 当EmbeddedComponent（或UIExtensionComponent）组件被用来显示敏感操作提示内容时，可以选择隐藏不安全窗口，保护敏感操作提示内容不会被遮挡。当EmbeddedComponent（或
-> UIExtensionComponent）组件不显示或销毁时，不安全窗口会重新显示。
->
+> **说明：**  
+>  
+> - 不安全窗口是指可能遮挡[EmbeddedComponent](./@internal/component/ets/embedded_component)（或  
+> [UIExtensionComponent](./@internal/component/ets/ui_extension_component)）组件的窗口，如全局悬浮窗、宿主子窗口和宿主创建的Dialog窗口  
+> （不包括系统应用创建的上述类型窗口）。  
+>  
+> - 当EmbeddedComponent（或UIExtensionComponent）组件被用来显示敏感操作提示内容时，可以选择隐藏不安全窗口，保护敏感操作提示内容不会被遮挡。当EmbeddedComponent（或  
+> UIExtensionComponent）组件不显示或销毁时，不安全窗口会重新显示。  
+>  
 > - 针对PC/2in1设备，当调用hideNonSecureWindows(true)时，不安全窗口中的全局悬浮窗不会被隐藏。
 
 **起始版本：** 11
@@ -260,6 +275,8 @@ hideNonSecureWindows(shouldHide: boolean): Promise<void>
 - API版本12+：ohos.permission.ALLOW_SHOW_NON_SECURE_WINDOWS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionHostWindowProxy-hideNonSecureWindows(shouldHide: boolean): Promise<void>--><!--Device-UIExtensionHostWindowProxy-hideNonSecureWindows(shouldHide: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -275,13 +292,13 @@ hideNonSecureWindows(shouldHide: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。、 |
+| Promise<void> | 无返回结果的Promise对象。、 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified.2. Incorrect parameters types.3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | Abnormal state. Possible causes:1. Permission denied. Interface caller does not have permission "ohos.permission.ALLOW_SHOW_NON_SECURE_WINDOWS".2. The UIExtension window proxy is abnormal.<br>**适用版本：** 12+ |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 12+ |
@@ -325,15 +342,17 @@ hidePrivacyContentForHost(shouldHide: boolean): Promise<void>
 
 设置UIExtension组件在非系统截图时的隐私内容保护开关，使用Promise异步回调。
 
-> **说明：**
->
-> 开启截图隐私内容保护后，使用窗口截图[window.snapshot](../../../../reference/apis-arkui/arkts-apis-window-Window.md#snapshot9)或者组件截图
-> [UIContext.getComponentSnapshot](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getcomponentsnapshot12)
+> **说明：**  
+>  
+> 开启截图隐私内容保护后，使用窗口截图[window.snapshot](../../../../reference/apis-arkui/arkts-apis-window-Window.md#snapshot9)或者组件截图  
+> [UIContext.getComponentSnapshot](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getcomponentsnapshot12)  
 > 将无法截取到当前组件的内容（不包括该组件下创建的子窗）。
 
 **起始版本：** 13
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionHostWindowProxy-hidePrivacyContentForHost(shouldHide: boolean): Promise<void>--><!--Device-UIExtensionHostWindowProxy-hidePrivacyContentForHost(shouldHide: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -349,7 +368,7 @@ hidePrivacyContentForHost(shouldHide: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -392,6 +411,8 @@ off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, a
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionHostWindowProxy-off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void--><!--Device-UIExtensionHostWindowProxy-off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -401,7 +422,7 @@ off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, a
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'avoidAreaChange' | 是 | 注销的事件类型，固定为'avoidAreaChange'，即系统避让区变化事件。 |
-| callback | Callback&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | 否 |  |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<{ type: window.AvoidAreaType, area: window.AvoidArea }> | 否 |  |
 
 **错误码：**
 
@@ -438,6 +459,8 @@ off(type: 'windowSizeChange', callback?: Callback<window.Size>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionHostWindowProxy-off(type: 'windowSizeChange', callback?: Callback<window.Size>): void--><!--Device-UIExtensionHostWindowProxy-off(type: 'windowSizeChange', callback?: Callback<window.Size>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -447,7 +470,7 @@ off(type: 'windowSizeChange', callback?: Callback<window.Size>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'windowSizeChange' | 是 | 注销的事件类型，固定值：'windowSizeChange'，即组件（EmbeddedComponent或UIExtensionComponent）尺寸变化事件。 |
-| callback | Callback&lt;window.Size&gt; | 否 | 回调函数。返回当前的组件（EmbeddedComponent或UIExtensionComponent）尺寸。如果传入该参数，则关闭该监听。如果未传入参数，则关闭组件（EmbeddedComponent或UIExtensionComponent）尺寸变化的监听。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<window.Size> | 否 | 回调函数。返回当前的组件（EmbeddedComponent或UIExtensionComponent）尺寸。如果传入该参数，则关闭该监听。如果未传入参数，则关闭组件（EmbeddedComponent或UIExtensionComponent）尺寸变化的监听。 |
 
 **错误码：**
 
@@ -484,6 +507,8 @@ on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, are
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionHostWindowProxy-on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void--><!--Device-UIExtensionHostWindowProxy-on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -493,7 +518,7 @@ on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, are
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'avoidAreaChange' | 是 | 监听的事件类型，固定为'avoidAreaChange'，即系统避让区变化事件。 |
-| callback | Callback&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | 是 |  |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<{ type: window.AvoidAreaType, area: window.AvoidArea }> | 是 |  |
 
 **错误码：**
 
@@ -532,6 +557,8 @@ on(type: 'windowSizeChange', callback: Callback<window.Size>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIExtensionHostWindowProxy-on(type: 'windowSizeChange', callback: Callback<window.Size>): void--><!--Device-UIExtensionHostWindowProxy-on(type: 'windowSizeChange', callback: Callback<window.Size>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -541,7 +568,7 @@ on(type: 'windowSizeChange', callback: Callback<window.Size>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'windowSizeChange' | 是 | 监听的事件类型，固定为'windowSizeChange'，即组件（EmbeddedComponent或UIExtensionComponent）尺寸变化事件。 |
-| callback | Callback&lt;window.Size&gt; | 是 | 回调函数：入参用于接收当前组件（EmbeddedComponent或UIExtensionComponent）的尺寸。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<window.Size> | 是 | 回调函数：入参用于接收当前组件（EmbeddedComponent或UIExtensionComponent）的尺寸。 |
 
 **错误码：**
 
@@ -576,13 +603,15 @@ setWaterMarkFlag(enable: boolean): Promise<void>
 
 为当前窗口添加或删除安全水印标志，使用Promise异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 添加安全水印标志后，窗口在前台时会将当前全屏幕覆盖水印。全屏、悬浮窗、分屏等场景下只要有添加了安全水印标志的窗口在前台，就会显示全屏水印。
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionHostWindowProxy-setWaterMarkFlag(enable: boolean): Promise<void>--><!--Device-UIExtensionHostWindowProxy-setWaterMarkFlag(enable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -598,7 +627,7 @@ setWaterMarkFlag(enable: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -646,16 +675,15 @@ properties: UIExtensionHostWindowProxyProperties
 
 UIExtensionComponent组件以及宿主窗口的信息。
 
-**约束：** 由于架构约束，不建议在
-[onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensionability-c.md#onsessioncreate-1)阶段同步获取该值，建议在收到
-[on('windowSizeChange')](arkts-arkui-uiextensionhostwindowproxy-i-sys.md#on-2)
-回调之后获取。
+**约束：** 由于架构约束，不建议在[onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensionability-c.md#onsessioncreate-1)阶段同步获取该值，建议在收到[on('windowSizeChange')](arkts-arkui-uiextensionhostwindowproxy-i-sys.md#on-2)回调之后获取。
 
 **类型：** UIExtensionHostWindowProxyProperties
 
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionHostWindowProxy-properties: UIExtensionHostWindowProxyProperties--><!--Device-UIExtensionHostWindowProxy-properties: UIExtensionHostWindowProxyProperties-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

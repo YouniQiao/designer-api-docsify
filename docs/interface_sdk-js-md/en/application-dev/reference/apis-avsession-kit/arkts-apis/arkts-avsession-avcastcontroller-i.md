@@ -4,6 +4,8 @@ AVCastController definition used to implement a remote control when a cast is co
 
 **Since:** 10
 
+<!--Device-avSession-interface AVCastController--><!--Device-avSession-interface AVCastController-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## Modules to Import
@@ -22,13 +24,15 @@ Get the playback status of the current player
 
 **Since:** 10
 
+<!--Device-AVCastController-getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void--><!--Device-AVCastController-getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;AVPlaybackState&gt; | Yes | The triggered asyncCallback when (getAVPlaybackState). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AVPlaybackState> | Yes | The triggered asyncCallback when (getAVPlaybackState). |
 
 **Error codes:**
 
@@ -48,13 +52,15 @@ Get the playback status of the current player
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVCastController-getAVPlaybackState(): Promise<AVPlaybackState>--><!--Device-AVCastController-getAVPlaybackState(): Promise<AVPlaybackState>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVPlaybackState&gt; | (AVPlaybackState) returned through promise |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AVPlaybackState> | (AVPlaybackState) returned through promise |
 
 **Error codes:**
 
@@ -72,13 +78,15 @@ Get the current playing item
 
 **Since:** 10
 
+<!--Device-AVCastController-getCurrentItem(callback: AsyncCallback<AVQueueItem>): void--><!--Device-AVCastController-getCurrentItem(callback: AsyncCallback<AVQueueItem>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;AVQueueItem&gt; | Yes | The triggered asyncCallback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AVQueueItem> | Yes | The triggered asyncCallback. |
 
 **Error codes:**
 
@@ -98,13 +106,15 @@ Get the current playing item
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVCastController-getCurrentItem(): Promise<AVQueueItem>--><!--Device-AVCastController-getCurrentItem(): Promise<AVQueueItem>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVQueueItem&gt; | (AVQueueItem) returned through promise |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AVQueueItem> | (AVQueueItem) returned through promise |
 
 **Error codes:**
 
@@ -124,19 +134,21 @@ Get recommended resolution of remote player based on each decoder.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-AVCastController-getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel>--><!--Device-AVCastController-getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| decoderType | DecoderType | Yes | The decoder type. |
+| decoderType | [DecoderType](arkts-avsession-decodertype-e.md) | Yes | The decoder type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResolutionLevel&gt; | ResolutionLevel returned through promise |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ResolutionLevel> | ResolutionLevel returned through promise |
 
 **Error codes:**
 
@@ -156,13 +168,15 @@ Get supported decoders of remote player.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-AVCastController-getSupportedDecoders(): Promise<Array<DecoderType>>--><!--Device-AVCastController-getSupportedDecoders(): Promise<Array<DecoderType>>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DecoderType&gt;&gt; | (DecoderType) returned through promise |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<DecoderType>> | (DecoderType) returned through promise |
 
 **Error codes:**
 
@@ -182,13 +196,15 @@ Get supported hdr capabilities of remote player.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-AVCastController-getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>--><!--Device-AVCastController-getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;hdrCapability.HDRFormat&gt;&gt; | HDRFormat returned through promise |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<hdrCapability.HDRFormat>> | HDRFormat returned through promise |
 
 **Error codes:**
 
@@ -208,13 +224,15 @@ Get supported speed of remote player.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-AVCastController-getSupportedPlaySpeeds(): Promise<Array<double>>--><!--Device-AVCastController-getSupportedPlaySpeeds(): Promise<Array<double>>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | supported speed returned through promise |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | supported speed returned through promise |
 
 **Error codes:**
 
@@ -232,13 +250,15 @@ Get commands supported by the current cast controller
 
 **Since:** 11
 
+<!--Device-AVCastController-getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void--><!--Device-AVCastController-getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;AVCastControlCommandType&gt;&gt; | Yes | The triggered asyncCallback when (getValidCommands). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<AVCastControlCommandType>> | Yes | The triggered asyncCallback when (getValidCommands). |
 
 **Error codes:**
 
@@ -256,13 +276,15 @@ Get commands supported by the current cast controller
 
 **Since:** 11
 
+<!--Device-AVCastController-getValidCommands(): Promise<Array<AVCastControlCommandType>>--><!--Device-AVCastController-getValidCommands(): Promise<Array<AVCastControlCommandType>>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AVCastControlCommandType&gt;&gt; | array of AVCastControlCommandType promise |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AVCastControlCommandType>> | array of AVCastControlCommandType promise |
 
 **Error codes:**
 
@@ -282,6 +304,8 @@ Unregister playback state changed callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVCastController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): void--><!--Device-AVCastController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -289,7 +313,7 @@ Unregister playback state changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playbackStateChange' | Yes |  |
-| callback | (state: AVPlaybackState) =&gt; void | No | The callback used to handle playback state changed event.The callback function provides the {@link AVPlaybackState} parameter. |
+| callback | (state: AVPlaybackState) => void | No | The callback used to handle playback state changed event.The callback function provides the {@link AVPlaybackState} parameter. |
 
 **Error codes:**
 
@@ -309,6 +333,8 @@ Unregister listener for current media item playback events.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCastController-off(type: 'mediaItemChange'): void--><!--Device-AVCastController-off(type: 'mediaItemChange'): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -331,12 +357,13 @@ Unregister listener for current media item playback events.
 off(type: 'playNext'): void
 ```
 
-Unregister playback command callback sent by remote side or media center.
-When canceling the callback, need to update the supported commands list.
+Unregister playback command callback sent by remote side or media center.When canceling the callback, need to update the supported commands list.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCastController-off(type: 'playNext'): void--><!--Device-AVCastController-off(type: 'playNext'): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -359,12 +386,13 @@ When canceling the callback, need to update the supported commands list.
 off(type: 'playPrevious'): void
 ```
 
-Unregister playback command callback sent by remote side or media center.
-When canceling the callback, need to update the supported commands list.
+Unregister playback command callback sent by remote side or media center.When canceling the callback, need to update the supported commands list.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCastController-off(type: 'playPrevious'): void--><!--Device-AVCastController-off(type: 'playPrevious'): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -391,6 +419,8 @@ Unregister requested playback command callback sent by remote side or media cent
 
 **Since:** 11
 
+<!--Device-AVCastController-off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void--><!--Device-AVCastController-off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -398,7 +428,7 @@ Unregister requested playback command callback sent by remote side or media cent
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'requestPlay' | Yes | Type of the 'requestPlay' to listen for. |
-| callback | Callback&lt;AVQueueItem&gt; | No | Used to handle 'requestPlay' command |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AVQueueItem> | No | Used to handle 'requestPlay' command |
 
 **Error codes:**
 
@@ -417,6 +447,8 @@ Unregister endOfStream state callback.
 
 **Since:** 11
 
+<!--Device-AVCastController-off(type: 'endOfStream', callback?: Callback<void>): void--><!--Device-AVCastController-off(type: 'endOfStream', callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -424,7 +456,7 @@ Unregister endOfStream state callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'endOfStream' | Yes | Type of the 'endOfStream' to listen for. |
-| callback | Callback&lt;void&gt; | No | Used to handle 'endOfStream' command |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | Used to handle 'endOfStream' command |
 
 **Error codes:**
 
@@ -444,6 +476,8 @@ Unregister listens for playback events.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCastController-off(type: 'seekDone'): void--><!--Device-AVCastController-off(type: 'seekDone'): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -470,6 +504,8 @@ Unregister the valid commands of the casted session changed callback
 
 **Since:** 11
 
+<!--Device-AVCastController-off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandType>>)--><!--Device-AVCastController-off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandType>>)-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -477,7 +513,7 @@ Unregister the valid commands of the casted session changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'validCommandChange' | Yes | 'validCommandChange' |
-| callback | Callback&lt;Array&lt;AVCastControlCommandType&gt;&gt; | No | The callback used to handle the changes.The callback function provides an array of AVCastControlCommandType. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<AVCastControlCommandType>> | No | The callback used to handle the changes.The callback function provides an array of AVCastControlCommandType. |
 
 **Error codes:**
 
@@ -496,6 +532,8 @@ off(type: 'videoSizeChange'): void
 Unregister listener for video size change event, used at remote side.
 
 **Since:** 12
+
+<!--Device-AVCastController-off(type: 'videoSizeChange'): void--><!--Device-AVCastController-off(type: 'videoSizeChange'): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -531,6 +569,8 @@ Unregister listens for playback error events.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVCastController-off(type: 'error'): void--><!--Device-AVCastController-off(type: 'error'): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -564,6 +604,8 @@ Unregister listeners for cast control generic error events.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-AVCastController-off(type: 'castControlGenericError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlGenericError', callback?: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -571,7 +613,7 @@ Unregister listeners for cast control generic error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlGenericError' | Yes | Type of the 'castControlGenericError' to listen for. |
-| callback | ErrorCallback | No | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -591,6 +633,8 @@ Unregister listeners for cast control input/output error events.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-AVCastController-off(type: 'castControlIoError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlIoError', callback?: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -598,7 +642,7 @@ Unregister listeners for cast control input/output error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlIoError' | Yes | Type of the 'castControlIoError' to listen for. |
-| callback | ErrorCallback | No | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -618,6 +662,8 @@ Unregister listeners for cast control parsing error events.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-AVCastController-off(type: 'castControlParsingError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlParsingError', callback?: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -625,7 +671,7 @@ Unregister listeners for cast control parsing error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlParsingError' | Yes | Type of the 'castControlParsingError' to listen for. |
-| callback | ErrorCallback | No | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -645,6 +691,8 @@ Unregister listeners for cast control decoding error events.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-AVCastController-off(type: 'castControlDecodingError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlDecodingError', callback?: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -652,7 +700,7 @@ Unregister listeners for cast control decoding error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlDecodingError' | Yes | Type of the 'castControlDecodingError' to listen for. |
-| callback | ErrorCallback | No | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -672,6 +720,8 @@ Unregister listeners for cast control audio renderer error events.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-AVCastController-off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -679,7 +729,7 @@ Unregister listeners for cast control audio renderer error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlAudioRendererError' | Yes | Type of the 'castControlAudioRendererError' to listen for. |
-| callback | ErrorCallback | No | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -699,6 +749,8 @@ Unregister listeners for cast control drm error events.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-AVCastController-off(type: 'castControlDrmError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlDrmError', callback?: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -706,7 +758,7 @@ Unregister listeners for cast control drm error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlDrmError' | Yes | Type of the 'castControlDrmError' to listen for. |
-| callback | ErrorCallback | No | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -726,6 +778,8 @@ Unregister listener for drm key request.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVCastController-off(type: 'keyRequest', callback?: KeyRequestCallback): void--><!--Device-AVCastController-off(type: 'keyRequest', callback?: KeyRequestCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -733,7 +787,7 @@ Unregister listener for drm key request.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyRequest' | Yes | Type of the 'keyRequest' to listen for. |
-| callback | KeyRequestCallback | No | Callback used to request drm key. |
+| callback | [KeyRequestCallback](arkts-avsession-keyrequestcallback-t.md) | No | Callback used to request drm key. |
 
 **Error codes:**
 
@@ -754,6 +808,8 @@ Unregister listener for custom data sent from remote device.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-AVCastController-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void--><!--Device-AVCastController-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -761,7 +817,7 @@ Unregister listener for custom data sent from remote device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | Yes | Type of the 'customDataChange' to listen for. |
-| callback | Callback&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Record<string, Object>> | No | Callback used to retrieve custom data. |
 
 **Error codes:**
 
@@ -781,6 +837,8 @@ Register playback state changed callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVCastController-on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void): void--><!--Device-AVCastController-on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -788,8 +846,8 @@ Register playback state changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playbackStateChange' | Yes |  |
-| filter | Array&lt;keyof AVPlaybackState&gt; \| 'all' | Yes | The properties of {@link AVPlaybackState} that you caredabout |
-| callback | (state: AVPlaybackState) =&gt; void | Yes | The callback used to handle playback state changed event.The callback function provides the {@link AVPlaybackState} parameter. |
+| filter | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<keyof AVPlaybackState> \| 'all' | Yes | The properties of {@link AVPlaybackState} that you cared about |
+| callback | (state: AVPlaybackState) => void | Yes | The callback used to handle playback state changed event.The callback function provides the {@link AVPlaybackState} parameter. |
 
 **Error codes:**
 
@@ -810,6 +868,8 @@ Register listener for current media item playback events.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVCastController-on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void--><!--Device-AVCastController-on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -817,7 +877,7 @@ Register listener for current media item playback events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'mediaItemChange' | Yes | Type of the playback event to listen for. |
-| callback | Callback&lt;AVQueueItem&gt; | Yes | Callback used to listen for current item changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AVQueueItem> | Yes | Callback used to listen for current item changed. |
 
 **Error codes:**
 
@@ -832,12 +892,13 @@ Register listener for current media item playback events.
 on(type: 'playNext', callback: Callback<void>): void
 ```
 
-Register playback command callback sent by remote side or media center.
-Application needs update the new media resource when receive these commands by using playItem.
+Register playback command callback sent by remote side or media center.Application needs update the new media resource when receive these commands by using playItem.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCastController-on(type: 'playNext', callback: Callback<void>): void--><!--Device-AVCastController-on(type: 'playNext', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -846,7 +907,7 @@ Application needs update the new media resource when receive these commands by u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playNext' | Yes | Type of the 'playNext' event to listen for. |
-| callback | Callback&lt;void&gt; | Yes | Used to handle 'playNext' command |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Used to handle 'playNext' command |
 
 **Error codes:**
 
@@ -861,12 +922,13 @@ Application needs update the new media resource when receive these commands by u
 on(type: 'playPrevious', callback: Callback<void>): void
 ```
 
-Register playback command callback sent by remote side or media center.
-Application needs update the new media resource when receive these commands by using playItem.
+Register playback command callback sent by remote side or media center.Application needs update the new media resource when receive these commands by using playItem.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCastController-on(type: 'playPrevious', callback: Callback<void>): void--><!--Device-AVCastController-on(type: 'playPrevious', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -875,7 +937,7 @@ Application needs update the new media resource when receive these commands by u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playPrevious' | Yes | Type of the 'playPrevious' to listen for. |
-| callback | Callback&lt;void&gt; | Yes | Used to handle 'playPrevious' command |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Used to handle 'playPrevious' command |
 
 **Error codes:**
 
@@ -890,10 +952,11 @@ Application needs update the new media resource when receive these commands by u
 on(type: 'requestPlay', callback: Callback<AVQueueItem>): void
 ```
 
-Register requested playback command callback sent by remote side or media center.
-The AVQueueItem may include the requested assetId, starting position and other configurations.
+Register requested playback command callback sent by remote side or media center.The AVQueueItem may include the requested assetId, starting position and other configurations.
 
 **Since:** 11
+
+<!--Device-AVCastController-on(type: 'requestPlay', callback: Callback<AVQueueItem>): void--><!--Device-AVCastController-on(type: 'requestPlay', callback: Callback<AVQueueItem>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -902,7 +965,7 @@ The AVQueueItem may include the requested assetId, starting position and other c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'requestPlay' | Yes | Type of the 'requestPlay' to listen for. |
-| callback | Callback&lt;AVQueueItem&gt; | Yes | Used to handle 'requestPlay' command |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AVQueueItem> | Yes | Used to handle 'requestPlay' command |
 
 **Error codes:**
 
@@ -917,10 +980,11 @@ The AVQueueItem may include the requested assetId, starting position and other c
 on(type: 'endOfStream', callback: Callback<void>): void
 ```
 
-Register endOfStream state callback.
-Application needs update the new media resource when receive these commands by using playItem.
+Register endOfStream state callback.Application needs update the new media resource when receive these commands by using playItem.
 
 **Since:** 11
+
+<!--Device-AVCastController-on(type: 'endOfStream', callback: Callback<void>): void--><!--Device-AVCastController-on(type: 'endOfStream', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -929,7 +993,7 @@ Application needs update the new media resource when receive these commands by u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'endOfStream' | Yes | Type of the 'endOfStream' to listen for. |
-| callback | Callback&lt;void&gt; | Yes | Used to handle 'endOfStream' command |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Used to handle 'endOfStream' command |
 
 **Error codes:**
 
@@ -950,6 +1014,8 @@ Register listens for playback events.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVCastController-on(type: 'seekDone', callback: Callback<int>): void--><!--Device-AVCastController-on(type: 'seekDone', callback: Callback<int>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -957,7 +1023,7 @@ Register listens for playback events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'seekDone' | Yes | Type of the 'seekDone' to listen for. |
-| callback | Callback&lt;number&gt; | Yes | Callback used to listen for the playback seekDone event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | Yes | Callback used to listen for the playback seekDone event. |
 
 **Error codes:**
 
@@ -976,6 +1042,8 @@ Register the valid commands of the casted session changed callback
 
 **Since:** 11
 
+<!--Device-AVCastController-on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType>>)--><!--Device-AVCastController-on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType>>)-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -983,7 +1051,7 @@ Register the valid commands of the casted session changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'validCommandChange' | Yes | 'validCommandChange' |
-| callback | Callback&lt;Array&lt;AVCastControlCommandType&gt;&gt; | Yes | The callback used to handle the changes.The callback function provides an array of AVCastControlCommandType. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<AVCastControlCommandType>> | Yes | The callback used to handle the changes.The callback function provides an array of AVCastControlCommandType. |
 
 **Error codes:**
 
@@ -1003,6 +1071,8 @@ Register listener for video size change event, used at remote side.
 
 **Since:** 12
 
+<!--Device-AVCastController-on(type: 'videoSizeChange', callback: (width: int, height: int) => void): void--><!--Device-AVCastController-on(type: 'videoSizeChange', callback: (width: int, height: int) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -1010,7 +1080,7 @@ Register listener for video size change event, used at remote side.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'videoSizeChange' | Yes | Type of the 'videoSizeChange' to listen for. |
-| callback | (width: number, height: number) =&gt; void | Yes | Callback used to return video size. |
+| callback | (width: number, height: number) => void | Yes | Callback used to return video size. |
 
 **Error codes:**
 
@@ -1041,6 +1111,8 @@ Register listeners for playback error events.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVCastController-on(type: 'error', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -1048,7 +1120,7 @@ Register listeners for playback error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Type of the 'error' to listen for. |
-| callback | ErrorCallback | Yes | Callback used to listen for the playback error event. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback used to listen for the playback error event. |
 
 **Error codes:**
 
@@ -1075,6 +1147,8 @@ Register listeners for cast control generic error events.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-AVCastController-on(type: 'castControlGenericError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlGenericError', callback: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -1082,7 +1156,7 @@ Register listeners for cast control generic error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlGenericError' | Yes | Type of the 'castControlGenericError' to listen for. |
-| callback | ErrorCallback | Yes | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -1096,10 +1170,10 @@ Register listeners for cast control generic error events.
 | [6611004](../errorcode-avsession.md#6611004-runtime-check-failure) | The runtime check failed. |
 | [6611100](../errorcode-avsession.md#6611100-crossdevice-data-transmission-locked) | Cross-device data transmission is locked. |
 | [6611101](../errorcode-avsession.md#6611101-unsupported-seek-mode) | The specified seek mode is not supported. |
-| [6611102](../errorcode-avsession.md#6611102-invalid-seek-target) | The position to seek to is out of the range of the media assetor the specified seek mode is not supported. |
+| [6611102](../errorcode-avsession.md#6611102-invalid-seek-target) | The position to seek to is out of the range of the media asset or the specified seek mode is not supported. |
 | [6611103](../errorcode-avsession.md#6611103-unsupported-playback-mode) | The specified playback mode is not supported. |
 | [6611104](../errorcode-avsession.md#6611104-unsupported-playback-speed) | The specified playback speed is not supported. |
-| [6611105](../errorcode-avsession.md#6611105-device-revocation) | The action failed because either the media source device or the media sinkdevice has been revoked. |
+| [6611105](../errorcode-avsession.md#6611105-device-revocation) | The action failed because either the media source device or the media sink device has been revoked. |
 | [6611106](../errorcode-avsession.md#6611106-invalid-input-parameter) | The parameter is invalid, for example, the url is illegal to play. |
 | [6611107](../errorcode-avsession.md#6611107-memory-allocation-failure) | Allocation of memory failed. |
 | [6611108](../errorcode-avsession.md#6611108-operation-not-allowed) | Operation is not allowed. |
@@ -1116,6 +1190,8 @@ Register listeners for cast control input/output error events.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-AVCastController-on(type: 'castControlIoError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlIoError', callback: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -1123,7 +1199,7 @@ Register listeners for cast control input/output error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlIoError' | Yes | Type of the 'castControlIoError' to listen for. |
-| callback | ErrorCallback | Yes | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -1137,7 +1213,7 @@ Register listeners for cast control input/output error events.
 | [6612004](../errorcode-avsession.md#6612004-unexpected-http-response-status-code-from-the-http-server) | The HTTP server returns an unexpected HTTP response status code. |
 | [6612005](../errorcode-avsession.md#6612005-file-does-not-exist) | The file does not exist. |
 | [6612006](../errorcode-avsession.md#6612006-no-permission-for-io-operations) | No permission is granted to perform the IO operation. |
-| [6612007](../errorcode-avsession.md#6612007-operation-not-allowed-by-network-security-configuration) | Access to cleartext HTTP traffic is not allowed by the app's network securityconfiguration. |
+| [6612007](../errorcode-avsession.md#6612007-operation-not-allowed-by-network-security-configuration) | Access to cleartext HTTP traffic is not allowed by the app's network security configuration. |
 | [6612008](../errorcode-avsession.md#6612008-data-to-read-out-of-range) | Reading data out of the data bound. |
 | [6612100](../errorcode-avsession.md#6612100-no-playable-content) | The media does not contain any contents that can be played. |
 | [6612101](../errorcode-avsession.md#6612101-failure-in-reading-media-assets) | The media cannot be read, for example, because of dust or scratches. |
@@ -1145,7 +1221,7 @@ Register listeners for cast control input/output error events.
 | [6612103](../errorcode-avsession.md#6612103-content-expired) | The content using the validity interval has expired. |
 | [6612104](../errorcode-avsession.md#6612104-requested-content-cannot-be-used) | Using the requested content to play is not allowed. |
 | [6612105](../errorcode-avsession.md#6612105-unable-to-verify-the-allowed-content) | The use of the allowed content cannot be verified. |
-| [6612106](../errorcode-avsession.md#6612106-frequent-resource-usage) | The number of times this content has been used as requested has reached themaximum allowed number of uses. |
+| [6612106](../errorcode-avsession.md#6612106-frequent-resource-usage) | The number of times this content has been used as requested has reached the maximum allowed number of uses. |
 | [6612107](../errorcode-avsession.md#6612107-failure-in-sending-resource-packages-to-the-remote-device) | An error occurs when sending packet from source device to sink device. |
 
 ## on('castControlParsingError')
@@ -1160,6 +1236,8 @@ Register listeners for cast control parsing error events.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-AVCastController-on(type: 'castControlParsingError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlParsingError', callback: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -1167,7 +1245,7 @@ Register listeners for cast control parsing error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlParsingError' | Yes | Type of the 'castControlParsingError' to listen for. |
-| callback | ErrorCallback | Yes | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -1177,7 +1255,7 @@ Register listeners for cast control parsing error events.
 | [6613000](../errorcode-avsession.md#6613000-unknown-parsing-error) | Unspecified error related to content parsing. |
 | [6613001](../errorcode-avsession.md#6613001-invalid-type) | Parsing error associated with media container format bit streams. |
 | [6613002](../errorcode-avsession.md#6613002-error-in-parsing-media-manifest) | Parsing error associated with the media manifest. |
-| [6613003](../errorcode-avsession.md#6613003-unsupported-media-format) | An error occurs when attempting to extract a file with an unsupported mediacontainer formator an unsupported media container feature. |
+| [6613003](../errorcode-avsession.md#6613003-unsupported-media-format) | An error occurs when attempting to extract a file with an unsupported media container format or an unsupported media container feature. |
 | [6613004](../errorcode-avsession.md#6613004-unsupported-feature-in-the-media-manifest) | Unsupported feature in the media manifest. |
 
 ## on('castControlDecodingError')
@@ -1192,6 +1270,8 @@ Register listeners for cast control decoding error events.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-AVCastController-on(type: 'castControlDecodingError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlDecodingError', callback: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -1199,7 +1279,7 @@ Register listeners for cast control decoding error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlDecodingError' | Yes | Type of the 'castControlDecodingError' to listen for. |
-| callback | ErrorCallback | Yes | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -1225,6 +1305,8 @@ Register listeners for cast control audio renderer error error events.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-AVCastController-on(type: 'castControlAudioRendererError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlAudioRendererError', callback: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -1232,7 +1314,7 @@ Register listeners for cast control audio renderer error error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlAudioRendererError' | Yes | Type of the 'castControlAudioRendererError' to listen for. |
-| callback | ErrorCallback | Yes | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -1255,6 +1337,8 @@ Register listeners for cast control drm error events.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-AVCastController-on(type: 'castControlDrmError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlDrmError', callback: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -1262,7 +1346,7 @@ Register listeners for cast control drm error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlDrmError' | Yes | Type of the 'castControlDrmError' to listen for. |
-| callback | ErrorCallback | Yes | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -1292,6 +1376,8 @@ Register listener for drm key request.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVCastController-on(type: 'keyRequest', callback: KeyRequestCallback): void--><!--Device-AVCastController-on(type: 'keyRequest', callback: KeyRequestCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -1299,7 +1385,7 @@ Register listener for drm key request.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyRequest' | Yes | Type of the 'keyRequest' to listen for. |
-| callback | KeyRequestCallback | Yes | Callback used to request drm key. |
+| callback | [KeyRequestCallback](arkts-avsession-keyrequestcallback-t.md) | Yes | Callback used to request drm key. |
 
 **Error codes:**
 
@@ -1320,6 +1406,8 @@ Register listener for custom data sent from remote device.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-AVCastController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void--><!--Device-AVCastController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -1327,7 +1415,7 @@ Register listener for custom data sent from remote device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | Yes | Type of the 'customDataChange' to listen for. |
-| callback | Callback&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Record<string, Object>> | Yes | Callback used to retrieve custom data. |
 
 **Error codes:**
 
@@ -1345,14 +1433,16 @@ Load the current item and mediaUri can be null, this is needed for sink media in
 
 **Since:** 10
 
+<!--Device-AVCastController-prepare(item: AVQueueItem, callback: AsyncCallback<void>): void--><!--Device-AVCastController-prepare(item: AVQueueItem, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | AVQueueItem | Yes | media item info. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| item | [AVQueueItem](arkts-avsession-avqueueitem-i.md) | Yes | media item info. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -1374,19 +1464,21 @@ Load the current item and mediaUri can be null, this is needed for sink media in
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVCastController-prepare(item: AVQueueItem): Promise<void>--><!--Device-AVCastController-prepare(item: AVQueueItem): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | AVQueueItem | Yes | media item info. |
+| item | [AVQueueItem](arkts-avsession-avqueueitem-i.md) | Yes | media item info. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1408,6 +1500,8 @@ Process the response corresponding to the media key request obtained by the appl
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVCastController-processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>--><!--Device-AVCastController-processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -1415,13 +1509,13 @@ Process the response corresponding to the media key request obtained by the appl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | assetId | string | Yes | The assetId of resource which provides the response. |
-| response | Uint8Array | Yes | Response corresponding to the request. |
+| response | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Response corresponding to the request. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 **Error codes:**
 
@@ -1440,13 +1534,15 @@ Destroy the controller
 
 **Since:** 11
 
+<!--Device-AVCastController-release(callback: AsyncCallback<void>): void--><!--Device-AVCastController-release(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
@@ -1466,13 +1562,15 @@ Destroy the controller
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVCastController-release(): Promise<void>--><!--Device-AVCastController-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 **Error codes:**
 
@@ -1490,14 +1588,16 @@ Send control commands to remote player
 
 **Since:** 10
 
+<!--Device-AVCastController-sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>): void--><!--Device-AVCastController-sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | AVCastControlCommand | Yes | The command to be send. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| command | [AVCastControlCommand](arkts-avsession-avcastcontrolcommand-i.md) | Yes | The command to be send. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -1520,19 +1620,21 @@ Send control commands to remote player
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVCastController-sendControlCommand(command: AVCastControlCommand): Promise<void>--><!--Device-AVCastController-sendControlCommand(command: AVCastControlCommand): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | AVCastControlCommand | Yes | The command to be send. |
+| command | [AVCastControlCommand](arkts-avsession-avcastcontrolcommand-i.md) | Yes | The command to be send. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1555,19 +1657,21 @@ Sends custom data to a remote device.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-AVCastController-sendCustomData(data: Record<string, Object>): Promise<void>--><!--Device-AVCastController-sendCustomData(data: Record<string, Object>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | Yes | Custom data populated by the application. |
+| data | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Object> | Yes | Custom data populated by the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1585,14 +1689,16 @@ Play the current item, should contain mediaUri otherwise the playback will fail.
 
 **Since:** 10
 
+<!--Device-AVCastController-start(item: AVQueueItem, callback: AsyncCallback<void>): void--><!--Device-AVCastController-start(item: AVQueueItem, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | AVQueueItem | Yes | media item info. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| item | [AVQueueItem](arkts-avsession-avqueueitem-i.md) | Yes | media item info. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -1614,19 +1720,21 @@ Play the current item, should contain mediaUri otherwise the playback will fail.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVCastController-start(item: AVQueueItem): Promise<void>--><!--Device-AVCastController-start(item: AVQueueItem): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | AVQueueItem | Yes | media item info. |
+| item | [AVQueueItem](arkts-avsession-avqueueitem-i.md) | Yes | media item info. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 

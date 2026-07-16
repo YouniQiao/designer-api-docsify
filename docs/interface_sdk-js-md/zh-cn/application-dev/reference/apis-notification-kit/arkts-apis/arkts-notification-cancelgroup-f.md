@@ -14,10 +14,11 @@ function cancelGroup(groupName: string, callback: AsyncCallback<void>): void
 
 取消当前应用指定组下的通知。使用callback异步回调。
 
-通知组groupName是在发布通知时通过NotificationRequest的groupName字段指定的分组标识。
-取消后，该组下所有通知将从通知中心移除。适用于需要按业务分组批量取消通知的场景。
+通知组groupName是在发布通知时通过NotificationRequest的groupName字段指定的分组标识。取消后，该组下所有通知将从通知中心移除。适用于需要按业务分组批量取消通知的场景。
 
 **起始版本：** 9
+
+<!--Device-notificationManager-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -26,7 +27,7 @@ function cancelGroup(groupName: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | groupName | string | 是 | 通知组名称，此名称需要在发布通知时通过[NotificationRequest](arkts-notification-notificationrequest-i.md)对象指定。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当取消当前应用指定组下的通知成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当取消当前应用指定组下的通知成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -63,10 +64,11 @@ function cancelGroup(groupName: string): Promise<void>
 
 取消当前应用指定组下的通知。使用Promise异步回调。
 
-通知组groupName是在发布通知时通过NotificationRequest的groupName字段指定的分组标识。
-取消后，该组下所有通知将从通知中心移除。适用于需要按业务分组批量取消通知的场景。
+通知组groupName是在发布通知时通过NotificationRequest的groupName字段指定的分组标识。取消后，该组下所有通知将从通知中心移除。适用于需要按业务分组批量取消通知的场景。
 
 **起始版本：** 9
+
+<!--Device-notificationManager-function cancelGroup(groupName: string): Promise<void>--><!--Device-notificationManager-function cancelGroup(groupName: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -80,7 +82,7 @@ function cancelGroup(groupName: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

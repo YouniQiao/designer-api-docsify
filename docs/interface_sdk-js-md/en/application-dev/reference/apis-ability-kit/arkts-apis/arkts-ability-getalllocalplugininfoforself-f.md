@@ -20,13 +20,15 @@ Obtains information about all local plugins installed on the current application
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-pluginBundleManager-function getAllLocalPluginInfoForSelf(): Promise<Array<PluginBundleInfo>>--><!--Device-pluginBundleManager-function getAllLocalPluginInfoForSelf(): Promise<Array<PluginBundleInfo>>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PluginBundleInfo&gt;&gt; | Promise used to return the list of PluginBundleInfos object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<PluginBundleInfo>> | Promise used to return the list of PluginBundleInfos object. |
 
 **Error codes:**
 

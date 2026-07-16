@@ -18,6 +18,8 @@ function cancel(representativeBundle: BundleOption, id: number): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-notificationManager-function cancel(representativeBundle: BundleOption, id: int): Promise<void>--><!--Device-notificationManager-function cancel(representativeBundle: BundleOption, id: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,14 +28,14 @@ function cancel(representativeBundle: BundleOption, id: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| representativeBundle | BundleOption | 是 | 应用的包信息。 |
+| representativeBundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 应用的包信息。 |
 | id | number | 是 | 通知ID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

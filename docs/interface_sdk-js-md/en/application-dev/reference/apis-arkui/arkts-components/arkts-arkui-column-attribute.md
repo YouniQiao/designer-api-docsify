@@ -8,6 +8,8 @@ The [universal events](arkts-arkui-commonmethod-c.md) are supported.
 
 **Since:** 7
 
+<!--Device-unnamed-declare class ColumnAttribute extends CommonMethod<ColumnAttribute>--><!--Device-unnamed-declare class ColumnAttribute extends CommonMethod<ColumnAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## alignItems
@@ -24,13 +26,15 @@ Alignment mode of the child components in the horizontal direction.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ColumnAttribute-alignItems(value: HorizontalAlign): ColumnAttribute--><!--Device-ColumnAttribute-alignItems(value: HorizontalAlign): ColumnAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | HorizontalAlign | Yes | Alignment mode of child components in the horizontal direction.<br>Default value: **HorizontalAlign.Center** |
+| value | [HorizontalAlign](../arkts-apis/arkts-arkui-horizontalalign-e.md) | Yes | Alignment mode of child components in the horizontal direction.<br>Default value: **HorizontalAlign.Center** |
 
 ## justifyContent
 
@@ -46,13 +50,15 @@ Alignment mode of the child components in the vertical direction.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ColumnAttribute-justifyContent(value: FlexAlign): ColumnAttribute--><!--Device-ColumnAttribute-justifyContent(value: FlexAlign): ColumnAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | FlexAlign | Yes | Alignment mode of child components in the vertical direction.<br>Default value:**FlexAlign.Start** |
+| value | [FlexAlign](../arkts-apis/arkts-arkui-flexalign-e.md) | Yes | Alignment mode of child components in the vertical direction.<br>Default value:**FlexAlign.Start** |
 
 ## reverse
 
@@ -70,11 +76,13 @@ Sets whether to reverse the vertical arrangement of child components.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-ColumnAttribute-reverse(isReversed: Optional<boolean>): ColumnAttribute--><!--Device-ColumnAttribute-reverse(isReversed: Optional<boolean>): ColumnAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isReversed | Optional&lt;boolean&gt; | Yes | Whether to reverse the vertical arrangement of child components.<br>Default value: **true**. **true**: Child components are arranged in reverse order vertically. **false**: Childcomponents are arranged in normal order vertically. |
+| isReversed | [Optional](arkts-arkui-optional-t.md)<boolean> | Yes | Whether to reverse the vertical arrangement of child components.<br>Default value: **true**. **true**: Child components are arranged in reverse order vertically. **false**: Child components are arranged in normal order vertically. |
 

@@ -20,6 +20,8 @@ Query a network trace route.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function queryTraceRoute(destination: string, option?: TraceRouteOptions): Promise<TraceRouteInfo[]>--><!--Device-connection-function queryTraceRoute(destination: string, option?: TraceRouteOptions): Promise<TraceRouteInfo[]>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -27,13 +29,13 @@ Query a network trace route.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | destination | string | Yes | the destination domain or address. |
-| option | TraceRouteOptions | No | the trace route option. |
+| option | [TraceRouteOptions](arkts-network-tracerouteoptions-i.md) | No | the trace route option. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;TraceRouteInfo[]&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<TraceRouteInfo[]> | The promise returned by the function. |
 
 **Error codes:**
 

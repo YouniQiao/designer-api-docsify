@@ -4,6 +4,8 @@ Provides common style configuration options for the progress indicator.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface CommonProgressStyleOptions--><!--Device-unnamed-declare interface CommonProgressStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableSmoothEffect
@@ -12,9 +14,7 @@ Provides common style configuration options for the progress indicator.
 enableSmoothEffect?: boolean
 ```
 
-Whether to enable the smooth effect. When this feature is enabled, the progress value transitions from the current
-value to the target value with a progress change animation displayed on the page. When this feature is disabled,
-the progress value jumps directly to the target value without any animation.
+Whether to enable the smooth effect. When this feature is enabled, the progress value transitions from the current value to the target value with a progress change animation displayed on the page. When this feature is disabled,the progress value jumps directly to the target value without any animation.
 
 **true**: The smooth effect is enabled.
 
@@ -31,6 +31,8 @@ Default value: **true**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CommonProgressStyleOptions-enableSmoothEffect?: boolean--><!--Device-CommonProgressStyleOptions-enableSmoothEffect?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

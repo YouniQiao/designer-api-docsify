@@ -12,13 +12,13 @@ import { fastbuffer } from '@kit.ArkTS';
 function byteLength(value: string | FastBuffer | TypedArray | DataView | ArrayBuffer | SharedArrayBuffer, encoding?: BufferEncoding): number
 ```
 
-Returns the byte length of a string when encoded using `encoding`.
-This is not the same as [`String.prototype.length`], which does not account
-for the encoding that is used to convert the string into bytes.
+Returns the byte length of a string when encoded using `encoding`.This is not the same as [`String.prototype.length`], which does not account for the encoding that is used to convert the string into bytes.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-fastbuffer-function byteLength(value: string | FastBuffer | TypedArray | DataView | ArrayBuffer | SharedArrayBuffer, encoding?: BufferEncoding): number--><!--Device-fastbuffer-function byteLength(value: string | FastBuffer | TypedArray | DataView | ArrayBuffer | SharedArrayBuffer, encoding?: BufferEncoding): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,7 +27,7 @@ for the encoding that is used to convert the string into bytes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | string \| FastBuffer \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | Yes | Target string. |
-| encoding | BufferEncoding | No | Encoding format of the string. The default value is 'utf8'. |
+| encoding | [BufferEncoding](arkts-arkts-bufferencoding-t.md) | No | Encoding format of the string. The default value is 'utf8'. |
 
 **Return value:**
 

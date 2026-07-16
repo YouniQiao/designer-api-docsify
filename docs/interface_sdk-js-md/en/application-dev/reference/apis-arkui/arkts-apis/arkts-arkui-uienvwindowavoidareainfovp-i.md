@@ -1,9 +1,10 @@
 # UIEnvWindowAvoidAreaInfoVP
 
-Describes [environment variable](../../../../ui/arkts-env-system-property.md) data types for window avoidance areas
-of different types. All types of window avoidance areas are measured in vp.
+Describes [environment variable](../../../../ui/arkts-env-system-property.md) data types for window avoidance areas of different types. All types of window avoidance areas are measured in vp.
 
 **Since:** 23
+
+<!--Device-window-interface UIEnvWindowAvoidAreaInfoVP--><!--Device-window-interface UIEnvWindowAvoidAreaInfoVP-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -25,6 +26,8 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_C
 
 **Since:** 23
 
+<!--Device-UIEnvWindowAvoidAreaInfoVP-cutout: UIEnvAvoidAreaVP--><!--Device-UIEnvWindowAvoidAreaInfoVP-cutout: UIEnvAvoidAreaVP-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## keyboard
@@ -39,6 +42,8 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_K
 
 **Since:** 23
 
+<!--Device-UIEnvWindowAvoidAreaInfoVP-keyboard: UIEnvAvoidAreaVP--><!--Device-UIEnvWindowAvoidAreaInfoVP-keyboard: UIEnvAvoidAreaVP-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## navigationIndicator
@@ -47,12 +52,13 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_K
 navigationIndicator: UIEnvAvoidAreaVP
 ```
 
-Avoidance area whose [AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_NAVIGATION_INDICATOR**
-type, in vp.
+Avoidance area whose [AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_NAVIGATION_INDICATOR** type, in vp.
 
 **Type:** UIEnvAvoidAreaVP
 
 **Since:** 23
+
+<!--Device-UIEnvWindowAvoidAreaInfoVP-navigationIndicator: UIEnvAvoidAreaVP--><!--Device-UIEnvWindowAvoidAreaInfoVP-navigationIndicator: UIEnvAvoidAreaVP-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -67,6 +73,8 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_S
 **Type:** UIEnvAvoidAreaVP
 
 **Since:** 23
+
+<!--Device-UIEnvWindowAvoidAreaInfoVP-statusBar: UIEnvAvoidAreaVP--><!--Device-UIEnvWindowAvoidAreaInfoVP-statusBar: UIEnvAvoidAreaVP-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

@@ -1,9 +1,10 @@
 # AudioHapticManager
 
-Manages the audio-haptic feature. Before calling any API in AudioHapticManager, you must use
-[getAudioHapticManager](arkts-audio-getaudiohapticmanager-f.md#getaudiohapticmanager-1) to create an AudioHapticManager instance.
+Manages the audio-haptic feature. Before calling any API in AudioHapticManager, you must use [getAudioHapticManager](arkts-audio-getaudiohapticmanager-f.md#getaudiohapticmanager-1) to create an AudioHapticManager instance.
 
 **Since:** 11
+
+<!--Device-audioHaptic-interface AudioHapticManager--><!--Device-audioHaptic-interface AudioHapticManager-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -19,12 +20,13 @@ import { audioHaptic } from '@kit.AudioKit';
 createPlayer(id: number, options?: AudioHapticPlayerOptions): Promise<AudioHapticPlayer>
 ```
 
-Create an audio haptic player. This method uses a promise to return the result. If haptics is needed, caller
-should have the permission of ohos.permission.VIBRATE.
+Create an audio haptic player. This method uses a promise to return the result. If haptics is needed, caller should have the permission of ohos.permission.VIBRATE.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.VIBRATE
+
+<!--Device-AudioHapticManager-createPlayer(id: number, options?: AudioHapticPlayerOptions): Promise<AudioHapticPlayer>--><!--Device-AudioHapticManager-createPlayer(id: number, options?: AudioHapticPlayerOptions): Promise<AudioHapticPlayer>-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -33,13 +35,13 @@ should have the permission of ohos.permission.VIBRATE.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | number | Yes | Source ID. |
-| options | AudioHapticPlayerOptions | No | Options of the audio-haptic player. |
+| options | [AudioHapticPlayerOptions](arkts-audio-audiohapticplayeroptions-i.md) | No | Options of the audio-haptic player. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioHapticPlayer&gt; | Promise used to return the audio-haptic player. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AudioHapticPlayer> | Promise used to return the audio-haptic player. |
 
 **Error codes:**
 
@@ -78,14 +80,16 @@ registerSource(audioUri: string, hapticUri: string): Promise<number>
 
 Registers audio and haptic resources via URIs. This API uses a promise to return the result.
 
-> **NOTE**
->
-> A maximum of 128 resources can be registered at the same time for an application. Any attempt to register
-> beyond this limit will fail (returning a negative resource ID). You are advised to reasonably manage the number
-> of registered resources. For resources that are no longer used, you are advised to unregister them in a timely
+> **NOTE**  
+>  
+> A maximum of 128 resources can be registered at the same time for an application. Any attempt to register  
+> beyond this limit will fail (returning a negative resource ID). You are advised to reasonably manage the number  
+> of registered resources. For resources that are no longer used, you are advised to unregister them in a timely  
 > manner.
 
 **Since:** 11
+
+<!--Device-AudioHapticManager-registerSource(audioUri: string, hapticUri: string): Promise<int>--><!--Device-AudioHapticManager-registerSource(audioUri: string, hapticUri: string): Promise<int>-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -93,14 +97,14 @@ Registers audio and haptic resources via URIs. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| audioUri | string | Yes | URI of the audio source.<br>- For details about the supported audio resource formatsand path formats in the normal latency mode, see [AVPlayer](../../apis-media-kit/arkts-apis/arkts-multimedia-media.md).<br>- Fordetails about the supported audio resource formats in the low-latency mode, see[SoundPool](../../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool). The pathformat must meet the requirements described in[fileIo.open](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioopen).<br>- In both modes, youare advised to pass in the absolute path of the file. |
-| hapticUri | string | Yes | URI of the haptic source.<br>For details about the supported haptic resourceformats, see [HapticFileDescriptor](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-hapticfiledescriptor-i.md). The path format mustmeet the requirements described in[fileIo.open](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioopen).<br>You are advised topass in the absolute path of the file. |
+| audioUri | string | Yes | URI of the audio source.<br>- For details about the supported audio resource formats and path formats in the normal latency mode, see [AVPlayer](../../apis-media-kit/arkts-apis/arkts-multimedia-media.md).<br>- For details about the supported audio resource formats in the low-latency mode, see [SoundPool](../../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool). The path format must meet the requirements described in [fileIo.open](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioopen).<br>- In both modes, you are advised to pass in the absolute path of the file. |
+| hapticUri | string | Yes | URI of the haptic source.<br>For details about the supported haptic resource formats, see [HapticFileDescriptor](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-hapticfiledescriptor-i.md). The path format must meet the requirements described in [fileIo.open](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioopen).<br>You are advised to pass in the absolute path of the file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise, which returns the registered resource ID.<br>In normal cases, the returned resource ID is a non-negative number. A negative ID indicates a registrationfailure. In this case, check whether the number of registered resources exceeds the upper limit. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise, which returns the registered resource ID.<br>In normal cases, the returned resource ID is a non-negative number. A negative ID indicates a registration failure. In this case, check whether the number of registered resources exceeds the upper limit. |
 
 **Error codes:**
 
@@ -134,14 +138,16 @@ registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFi
 
 Registers audio and haptic resources via file descriptors. This API uses a promise to return the result.
 
-> **NOTE**
->
-> A maximum of 128 resources can be registered at the same time for an application. Any attempt to register
-> beyond this limit will fail (returning a negative resource ID). You are advised to reasonably manage the number
-> of registered resources. For resources that are no longer used, you are advised to unregister them in a timely
+> **NOTE**  
+>  
+> A maximum of 128 resources can be registered at the same time for an application. Any attempt to register  
+> beyond this limit will fail (returning a negative resource ID). You are advised to reasonably manage the number  
+> of registered resources. For resources that are no longer used, you are advised to unregister them in a timely  
 > manner.
 
 **Since:** 20
+
+<!--Device-AudioHapticManager-registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<int>--><!--Device-AudioHapticManager-registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<int>-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -149,14 +155,14 @@ Registers audio and haptic resources via file descriptors. This API uses a promi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| audioFd | AudioHapticFileDescriptor | Yes | Valid file descriptor object that has been opened, used todescribe the audio file. The offset and length must match the actual file length. |
-| hapticFd | AudioHapticFileDescriptor | Yes | Valid file descriptor object that has been opened, used todescribe the haptic file. The offset and length must match the actual file length. |
+| audioFd | [AudioHapticFileDescriptor](arkts-audio-audiohapticfiledescriptor-i.md) | Yes | Valid file descriptor object that has been opened, used to describe the audio file. The offset and length must match the actual file length. |
+| hapticFd | [AudioHapticFileDescriptor](arkts-audio-audiohapticfiledescriptor-i.md) | Yes | Valid file descriptor object that has been opened, used to describe the haptic file. The offset and length must match the actual file length. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise, which returns the registered resource ID.<br>In normal cases, the returned resource ID is a non-negative number. A negative ID indicates a registrationfailure. In this case, check whether the number of registered resources exceeds the upper limit. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise, which returns the registered resource ID.<br>In normal cases, the returned resource ID is a non-negative number. A negative ID indicates a registration failure. In this case, check whether the number of registered resources exceeds the upper limit. |
 
 **Example**
 
@@ -201,6 +207,8 @@ Sets the latency mode for an audio-haptic source.
 
 **Since:** 11
 
+<!--Device-AudioHapticManager-setAudioLatencyMode(id:int, latencyMode: AudioLatencyMode): void--><!--Device-AudioHapticManager-setAudioLatencyMode(id:int, latencyMode: AudioLatencyMode): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
 **Parameters:**
@@ -208,7 +216,7 @@ Sets the latency mode for an audio-haptic source.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | number | Yes | Source ID. |
-| latencyMode | AudioLatencyMode | Yes | Audio latency mode. |
+| latencyMode | [AudioLatencyMode](arkts-audio-audiolatencymode-e.md) | Yes | Audio latency mode. |
 
 **Error codes:**
 
@@ -239,6 +247,8 @@ setStreamUsage(id: number, usage: audio.StreamUsage): void
 Sets the stream usage for an audio-haptic source.
 
 **Since:** 11
+
+<!--Device-AudioHapticManager-setStreamUsage(id: int, usage: audio.StreamUsage): void--><!--Device-AudioHapticManager-setStreamUsage(id: int, usage: audio.StreamUsage): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -278,12 +288,14 @@ unregisterSource(id: number): Promise<void>
 
 Unregisters an audio-haptic source. This API uses a promise to return the result.
 
-> **NOTE**
->
-> For resources that are no longer used, you are advised to unregister them in a timely manner to avoid issues
+> **NOTE**  
+>  
+> For resources that are no longer used, you are advised to unregister them in a timely manner to avoid issues  
 > such as resource leaks or the number of resources exceeding the upper limit.
 
 **Since:** 11
+
+<!--Device-AudioHapticManager-unregisterSource(id: int): Promise<void>--><!--Device-AudioHapticManager-unregisterSource(id: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -297,7 +309,7 @@ Unregisters an audio-haptic source. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

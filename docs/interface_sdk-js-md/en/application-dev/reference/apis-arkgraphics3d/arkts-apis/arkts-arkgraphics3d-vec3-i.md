@@ -4,6 +4,8 @@ Defines Vec3.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface Vec3--><!--Device-unnamed-export interface Vec3-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## x
@@ -17,6 +19,8 @@ X component of the vec3.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-Vec3-x: double--><!--Device-Vec3-x: double-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -32,6 +36,8 @@ Y component of the vec3.
 
 **Since:** 12
 
+<!--Device-Vec3-y: double--><!--Device-Vec3-y: double-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## z
@@ -45,6 +51,8 @@ Z component of the vec3.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-Vec3-z: double--><!--Device-Vec3-z: double-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

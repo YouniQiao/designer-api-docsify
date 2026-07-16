@@ -1,9 +1,10 @@
 # UIEnvWindowAvoidAreaInfoPX
 
-Describes [environment variable](../../../../ui/arkts-env-system-property.md) data types for window avoidance areas
-of different types. All types of window avoidance areas are measured in px.
+Describes [environment variable](../../../../ui/arkts-env-system-property.md) data types for window avoidance areas of different types. All types of window avoidance areas are measured in px.
 
 **Since:** 23
+
+<!--Device-window-interface UIEnvWindowAvoidAreaInfoPX--><!--Device-window-interface UIEnvWindowAvoidAreaInfoPX-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -25,6 +26,8 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_C
 
 **Since:** 23
 
+<!--Device-UIEnvWindowAvoidAreaInfoPX-cutout: AvoidArea--><!--Device-UIEnvWindowAvoidAreaInfoPX-cutout: AvoidArea-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## keyboard
@@ -39,6 +42,8 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_K
 
 **Since:** 23
 
+<!--Device-UIEnvWindowAvoidAreaInfoPX-keyboard: AvoidArea--><!--Device-UIEnvWindowAvoidAreaInfoPX-keyboard: AvoidArea-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## navigationIndicator
@@ -47,12 +52,13 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_K
 navigationIndicator: AvoidArea
 ```
 
-Avoidance area whose [AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_NAVIGATION_INDICATOR**
-type, in px.
+Avoidance area whose [AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_NAVIGATION_INDICATOR** type, in px.
 
 **Type:** AvoidArea
 
 **Since:** 23
+
+<!--Device-UIEnvWindowAvoidAreaInfoPX-navigationIndicator: AvoidArea--><!--Device-UIEnvWindowAvoidAreaInfoPX-navigationIndicator: AvoidArea-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -67,6 +73,8 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-avoidareatype-e.md) is **TYPE_S
 **Type:** AvoidArea
 
 **Since:** 23
+
+<!--Device-UIEnvWindowAvoidAreaInfoPX-statusBar: AvoidArea--><!--Device-UIEnvWindowAvoidAreaInfoPX-statusBar: AvoidArea-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

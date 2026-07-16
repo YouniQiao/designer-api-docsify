@@ -16,19 +16,21 @@ Obtains the configuration parameters of a specified serial port.
 
 **Since:** 19
 
+<!--Device-serialManager-function getAttribute(portId: int): Readonly<SerialAttribute>--><!--Device-serialManager-function getAttribute(portId: int): Readonly<SerialAttribute>-End-->
+
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPortreturned by [getPortList](arkts-basicservices-getportlist-f.md#getportlist-1). |
+| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-getportlist-f.md#getportlist-1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Readonly&lt;SerialAttribute&gt; | Configuration parameters of the serial port. |
+| [Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md)<SerialAttribute> | Configuration parameters of the serial port. |
 
 **Error codes:**
 

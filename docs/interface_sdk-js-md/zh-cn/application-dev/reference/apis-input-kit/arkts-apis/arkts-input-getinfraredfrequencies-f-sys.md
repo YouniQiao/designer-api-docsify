@@ -1,5 +1,11 @@
 # getInfraredFrequencies（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { infraredEmitter } from '@kit.InputKit';
+```
+
 ## getInfraredFrequencies
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getInfraredFrequencies(): Array<InfraredFrequency>
 
 **需要权限：** ohos.permission.MANAGE_INPUT_INFRARED_EMITTER
 
+<!--Device-infraredEmitter-function getInfraredFrequencies(): Array<InfraredFrequency>--><!--Device-infraredEmitter-function getInfraredFrequencies(): Array<InfraredFrequency>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InfraredEmitter
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function getInfraredFrequencies(): Array<InfraredFrequency>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;InfraredFrequency&gt; | 红外信号的频率范围，包含多组最大和最小频率。<br/>从API version 23开始，当设备不具有红外发射器，返回一组最大和最小频率，且均为0Hz。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<InfraredFrequency> | 红外信号的频率范围，包含多组最大和最小频率。<br/>从API version 23开始，当设备不具有红外发射器，返回一组最大和最小频率，且均为0Hz。 |
 
 **错误码：**
 

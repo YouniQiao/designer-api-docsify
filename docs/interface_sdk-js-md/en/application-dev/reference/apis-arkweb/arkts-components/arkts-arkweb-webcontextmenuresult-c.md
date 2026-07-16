@@ -4,6 +4,8 @@ Defines the context menu result, related to {@link WebContextMenuResult} method.
 
 **Since:** 9
 
+<!--Device-unnamed-declare class WebContextMenuResult--><!--Device-unnamed-declare class WebContextMenuResult-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## closeContextMenu
@@ -12,12 +14,13 @@ Defines the context menu result, related to {@link WebContextMenuResult} method.
 closeContextMenu(): void
 ```
 
-When close context menu without other call in WebContextMenuResult,
-User should call this function to close menu
+When close context menu without other call in WebContextMenuResult,User should call this function to close menu
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebContextMenuResult-closeContextMenu(): void--><!--Device-WebContextMenuResult-closeContextMenu(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -33,6 +36,8 @@ Constructor.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebContextMenuResult-constructor()--><!--Device-WebContextMenuResult-constructor()-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## copy
@@ -47,6 +52,8 @@ Executes the copy operation related to this context menu.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebContextMenuResult-copy(): void--><!--Device-WebContextMenuResult-copy(): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## copyImage
@@ -55,12 +62,13 @@ Executes the copy operation related to this context menu.
 copyImage(): void
 ```
 
-If WebContextMenuParam has image content, this function will copy image related to this context menu.
-If WebContextMenuParam has no image content, this function will do nothing.
+If WebContextMenuParam has image content, this function will copy image related to this context menu.If WebContextMenuParam has no image content, this function will do nothing.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebContextMenuResult-copyImage(): void--><!--Device-WebContextMenuResult-copyImage(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -76,6 +84,8 @@ Executes the cut operation related to this context menu.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebContextMenuResult-cut(): void--><!--Device-WebContextMenuResult-cut(): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## paste
@@ -86,13 +96,13 @@ paste(): void
 
 Executes the paste operation related to this context menu.
 
-<p><strong>API Note</strong>:<br>
-Permissions need to be configured: ohos.permission.READ_PASTEBOARD.
-</p>
+<p><strong>API Note</strong>:<br>Permissions need to be configured: ohos.permission.READ_PASTEBOARD.</p>
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebContextMenuResult-paste(): void--><!--Device-WebContextMenuResult-paste(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -104,11 +114,11 @@ pasteAndMatchStyle(): void
 
 Executes the paste and match style operation related to this context menu.
 
-<p><strong>API Note</strong>:<br>
-Permissions need to be configured: ohos.permission.READ_PASTEBOARD.
-</p>
+<p><strong>API Note</strong>:<br>Permissions need to be configured: ohos.permission.READ_PASTEBOARD.</p>
 
 **Since:** 20
+
+<!--Device-WebContextMenuResult-pasteAndMatchStyle(): void--><!--Device-WebContextMenuResult-pasteAndMatchStyle(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -122,6 +132,8 @@ Executes the redo operation related to this context menu.
 
 **Since:** 20
 
+<!--Device-WebContextMenuResult-redo(): void--><!--Device-WebContextMenuResult-redo(): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## requestPasswordAutoFill
@@ -133,6 +145,8 @@ requestPasswordAutoFill(): void
 Request to fill the password vault contents into the input field.
 
 **Since:** 23
+
+<!--Device-WebContextMenuResult-requestPasswordAutoFill(): void--><!--Device-WebContextMenuResult-requestPasswordAutoFill(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -148,6 +162,8 @@ Performing the "Save As Image" operation associated with this context menu will 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WebContextMenuResult-saveImage(): void--><!--Device-WebContextMenuResult-saveImage(): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## selectAll
@@ -162,6 +178,8 @@ Executes the selectAll operation related to this context menu.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebContextMenuResult-selectAll(): void--><!--Device-WebContextMenuResult-selectAll(): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## undo
@@ -173,6 +191,8 @@ undo(): void
 Executes the undo operation related to this context menu.
 
 **Since:** 20
+
+<!--Device-WebContextMenuResult-undo(): void--><!--Device-WebContextMenuResult-undo(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

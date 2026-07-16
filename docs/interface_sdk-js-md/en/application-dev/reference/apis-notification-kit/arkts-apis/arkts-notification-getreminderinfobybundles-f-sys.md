@@ -18,6 +18,8 @@ Batch obtains reminders of specified applications. This API uses a promise to re
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getReminderInfoByBundles(bundles: Array<BundleOption>) : Promise<Array<NotificationReminderInfo>>--><!--Device-notificationManager-function getReminderInfoByBundles(bundles: Array<BundleOption>) : Promise<Array<NotificationReminderInfo>>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Batch obtains reminders of specified applications. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundles | Array&lt;BundleOption&gt; | Yes | Bundles whose reminders are to be obtained. |
+| bundles | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<BundleOption> | Yes | Bundles whose reminders are to be obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NotificationReminderInfo&gt;&gt; | Promise used to return the application reminders obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<NotificationReminderInfo>> | Promise used to return the application reminders obtained. |
 
 **Error codes:**
 

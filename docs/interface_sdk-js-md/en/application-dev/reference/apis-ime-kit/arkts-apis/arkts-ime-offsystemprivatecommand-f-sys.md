@@ -18,6 +18,8 @@ Unsubscribe from the event when the input method application sends private data 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-inputMethodSystemPanelManager-function offSystemPrivateCommand(callback?: Callback<Record<string, CommandDataType>>): void--><!--Device-inputMethodSystemPanelManager-function offSystemPrivateCommand(callback?: Callback<Record<string, CommandDataType>>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Unsubscribe from the event when the input method application sends private data 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;Record&lt;string, CommandDataType&gt;&gt; | No | callback triggered whenan input method application sends a private data command. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Record<string, CommandDataType>> | No | callback triggered when an input method application sends a private data command. |
 
 **Error codes:**
 

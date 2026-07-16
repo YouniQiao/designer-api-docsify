@@ -18,6 +18,8 @@ Subscribe to the system panel status change event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-inputMethodSystemPanelManager-function onSystemPanelStatusChange(callback: Callback<SystemPanelStatus>): void--><!--Device-inputMethodSystemPanelManager-function onSystemPanelStatusChange(callback: Callback<SystemPanelStatus>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Subscribe to the system panel status change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;SystemPanelStatus&gt; | Yes | callback triggered when the system panel status changes. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SystemPanelStatus> | Yes | callback triggered when the system panel status changes. |
 
 **Error codes:**
 

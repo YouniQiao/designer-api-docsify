@@ -18,6 +18,8 @@ Checks whether a key exists for the specified user. This API uses a promise to r
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-huks-function hasKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<boolean>--><!--Device-huks-function hasKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **System API:** This is a system API.
@@ -28,13 +30,13 @@ Checks whether a key exists for the specified user. This API uses a promise to r
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
 | keyAlias | string | Yes | Alias of the key to check. |
-| huksOptions | HuksOptions | Yes | Attribute tag of the key to be checked. If[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md) is used to specify the securitylevel of the key to be checked,<br>this parameter can be left empty. If the API version is 12 or later, thedefault value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passedin. |
+| huksOptions | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Attribute tag of the key to be checked. If [HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md) is used to specify the security level of the key to be checked,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. If the key exists, **true** is returned. Otherwise, **false** is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. If the key exists, **true** is returned. Otherwise, **false** is returned. |
 
 **Error codes:**
 

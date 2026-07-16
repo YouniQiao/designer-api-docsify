@@ -1,5 +1,11 @@
 # queryBundleStateInfos（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleState } from '@kit.BackgroundTasksKit';
+```
+
 ## queryBundleStateInfos
 
 ```TypeScript
@@ -16,6 +22,8 @@ This method queries usage information at the {@link #BY_OPTIMIZED} interval by d
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-bundleState-function queryBundleStateInfos(begin: number, end: number, callback: AsyncCallback<BundleActiveInfoResponse>): void--><!--Device-bundleState-function queryBundleStateInfos(begin: number, end: number, callback: AsyncCallback<BundleActiveInfoResponse>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -26,7 +34,7 @@ This method queries usage information at the {@link #BY_OPTIMIZED} interval by d
 | --- | --- | --- | --- |
 | begin | number | 是 | Indicates the start time of the query period, in milliseconds. |
 | end | number | 是 | Indicates the end time of the query period, in milliseconds. |
-| callback | AsyncCallback&lt;BundleActiveInfoResponse&gt; | 是 | the callback of queryBundleStateInfos.the {@link BundleActiveInfoResponse} objects containing the usage information about each bundle. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<BundleActiveInfoResponse> | 是 | the callback of queryBundleStateInfos.the {@link BundleActiveInfoResponse} objects containing the usage information about each bundle. |
 
 **示例：**
 
@@ -63,6 +71,8 @@ This method queries usage information at the {@link #BY_OPTIMIZED} interval by d
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-bundleState-function queryBundleStateInfos(begin: number, end: number): Promise<BundleActiveInfoResponse>--><!--Device-bundleState-function queryBundleStateInfos(begin: number, end: number): Promise<BundleActiveInfoResponse>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -78,7 +88,7 @@ This method queries usage information at the {@link #BY_OPTIMIZED} interval by d
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;BundleActiveInfoResponse&gt; | the promise returned by queryBundleStatsInfos.the {@link BundleActiveInfoResponse} objects containing the usage information about each bundle. |
+| Promise<BundleActiveInfoResponse> | the promise returned by queryBundleStatsInfos.the {@link BundleActiveInfoResponse} objects containing the usage information about each bundle. |
 
 **示例：**
 

@@ -18,6 +18,8 @@ Get history play list information records.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function getHistoricalAVQueueInfos(maxSize: int, maxAppSize: int, callback: AsyncCallback<Array<Readonly<AVQueueInfo>>>): void--><!--Device-avSession-function getHistoricalAVQueueInfos(maxSize: int, maxAppSize: int, callback: AsyncCallback<Array<Readonly<AVQueueInfo>>>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Get history play list information records.
 | --- | --- | --- | --- |
 | maxSize | number | Yes | Specifies the maximum size of the returned value array. |
 | maxAppSize | number | Yes | Specifies the maximum app size of the returned value array. |
-| callback | AsyncCallback&lt;Array&lt;Readonly&lt;AVQueueInfo&gt;&gt;&gt; | Yes | async callback for an array of AVQueueInfo.If provided '0' or not provided, the maximum value is determined by the system. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Readonly<AVQueueInfo>>> | Yes | async callback for an array of AVQueueInfo.If provided '0' or not provided, the maximum value is determined by the system. |
 
 **Error codes:**
 
@@ -61,6 +63,8 @@ Get history play list information records.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function getHistoricalAVQueueInfos(maxSize: int, maxAppSize: int): Promise<Array<Readonly<AVQueueInfo>>>--><!--Device-avSession-function getHistoricalAVQueueInfos(maxSize: int, maxAppSize: int): Promise<Array<Readonly<AVQueueInfo>>>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -76,7 +80,7 @@ Get history play list information records.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Readonly&lt;AVQueueInfo&gt;&gt;&gt; | Promise for an array of AVQueueInfo |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Readonly<AVQueueInfo>>> | Promise for an array of AVQueueInfo |
 
 **Error codes:**
 

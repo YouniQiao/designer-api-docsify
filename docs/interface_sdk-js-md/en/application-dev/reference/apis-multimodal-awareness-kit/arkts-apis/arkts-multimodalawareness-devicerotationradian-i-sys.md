@@ -4,6 +4,8 @@ Interface for device rotation radian
 
 **Since:** 20
 
+<!--Device-deviceStatus-export interface DeviceRotationRadian--><!--Device-deviceStatus-export interface DeviceRotationRadian-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ indicates X-RotationRadian
 
 **Since:** 20
 
+<!--Device-DeviceRotationRadian-x: double--><!--Device-DeviceRotationRadian-x: double-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ indicates Y-RotationRadian
 
 **Since:** 20
 
+<!--Device-DeviceRotationRadian-y: double--><!--Device-DeviceRotationRadian-y: double-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ indicates Z-RotationRadian
 **Type:** number
 
 **Since:** 20
+
+<!--Device-DeviceRotationRadian-z: double--><!--Device-DeviceRotationRadian-z: double-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
 

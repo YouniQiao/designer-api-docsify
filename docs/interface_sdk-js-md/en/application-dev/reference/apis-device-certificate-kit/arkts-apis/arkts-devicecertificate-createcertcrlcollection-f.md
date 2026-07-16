@@ -18,20 +18,22 @@ Creates an object for a collection of X.509 certificates and CRLs.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-cert-function createCertCRLCollection(certs: Array<X509Cert>, crls?: Array<X509CRL>): CertCRLCollection--><!--Device-cert-function createCertCRLCollection(certs: Array<X509Cert>, crls?: Array<X509CRL>): CertCRLCollection-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| certs | Array&lt;X509Cert&gt; | Yes | X.509 certificates. |
-| crls | Array&lt;X509CRL&gt; | No | Array of X509CRL. |
+| certs | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<X509Cert> | Yes | X.509 certificates. |
+| crls | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<X509CRL> | No | Array of X509CRL. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CertCRLCollection | **CertCRLCollection** object created. |
+| [CertCRLCollection](arkts-devicecertificate-certcrlcollection-i.md) | **CertCRLCollection** object created. |
 
 **Error codes:**
 

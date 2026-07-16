@@ -22,14 +22,16 @@ Obtain address info from location
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function getAddressesFromLocation(request: ReverseGeoCodeRequest, callback: AsyncCallback<Array<GeoAddress>>): void--><!--Device-geolocation-function getAddressesFromLocation(request: ReverseGeoCodeRequest, callback: AsyncCallback<Array<GeoAddress>>): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | ReverseGeoCodeRequest | Yes | Indicates the reverse geocode query parameters. |
-| callback | AsyncCallback&lt;Array&lt;GeoAddress&gt;&gt; | Yes | Indicates the callback for reporting the address info. |
+| request | [ReverseGeoCodeRequest](arkts-location-reversegeocoderequest-i.md) | Yes | Indicates the reverse geocode query parameters. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<GeoAddress>> | Yes | Indicates the callback for reporting the address info. |
 
 **Example**
 
@@ -64,19 +66,21 @@ Obtain address info from location
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function getAddressesFromLocation(request: ReverseGeoCodeRequest): Promise<Array<GeoAddress>>--><!--Device-geolocation-function getAddressesFromLocation(request: ReverseGeoCodeRequest): Promise<Array<GeoAddress>>-End-->
+
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | ReverseGeoCodeRequest | Yes | Indicates the reverse geocode query parameters. |
+| request | [ReverseGeoCodeRequest](arkts-location-reversegeocoderequest-i.md) | Yes | Indicates the reverse geocode query parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;GeoAddress&gt;&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<GeoAddress>> | The promise returned by the function. |
 
 **Example**
 

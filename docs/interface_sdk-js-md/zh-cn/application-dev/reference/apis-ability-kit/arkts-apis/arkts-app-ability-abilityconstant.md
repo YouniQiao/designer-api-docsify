@@ -1,12 +1,18 @@
 # @ohos.app.ability.AbilityConstant
 
-AbilityConstant提供Ability相关的枚举，包括应用启动原因[LaunchReason](arkts-ability-launchreason-e.md)、上次退出原因
-[LastExitReason](arkts-ability-lastexitreason-e.md)、迁移结果[OnContinueResult](arkts-ability-oncontinueresult-e.md)
-等。
+AbilityConstant提供Ability相关的枚举，包括应用启动原因[LaunchReason](arkts-ability-launchreason-e.md)、上次退出原因[LastExitReason](arkts-ability-lastexitreason-e.md)、迁移结果[OnContinueResult](arkts-ability-oncontinueresult-e.md)等。
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace AbilityConstant--><!--Device-unnamed-declare namespace AbilityConstant-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+## 导入模块
+
+```TypeScript
+import { AbilityConstant } from '@kit.AbilityKit';
+```
 
 ## 汇总
 

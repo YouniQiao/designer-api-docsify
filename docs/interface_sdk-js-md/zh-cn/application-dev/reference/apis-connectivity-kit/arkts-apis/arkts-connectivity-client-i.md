@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-ssap-interface Client--><!--Device-ssap-interface Client-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
+
+## 导入模块
+
+```TypeScript
+import { ssap } from '@kit.ConnectivityKit';
+```
 
 ## close
 
@@ -19,6 +27,8 @@ close(): void
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Client-close(): void--><!--Device-Client-close(): void-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -44,13 +54,15 @@ connect(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-connect(): Promise<void>--><!--Device-Client-connect(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise<void> | 返回promise对象。 |
 
 **错误码：**
 
@@ -74,13 +86,15 @@ disconnect(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-disconnect(): Promise<void>--><!--Device-Client-disconnect(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise<void> | 返回promise对象。 |
 
 **错误码：**
 
@@ -104,13 +118,15 @@ getServices(): Promise<Service[]>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-getServices(): Promise<Service[]>--><!--Device-Client-getServices(): Promise<Service[]>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Service[]&gt; | Returns the service list of the server. |
+| Promise<Service[]> | Returns the service list of the server. |
 
 **错误码：**
 
@@ -132,13 +148,15 @@ offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void--><!--Device-Client-offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;ConnectionChangeState&gt; | 否 | 用于监听连接状态改变事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<ConnectionChangeState> | 否 | 用于监听连接状态改变事件的回调。 |
 
 ## offMtuChange
 
@@ -152,13 +170,15 @@ offMtuChange(callback?: Callback<number>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-offMtuChange(callback?: Callback<int>): void--><!--Device-Client-offMtuChange(callback?: Callback<int>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;number&gt; | 否 | 用于监听mtu变化事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<number> | 否 | 用于监听mtu变化事件的回调。 |
 
 ## offPropertyChange
 
@@ -172,13 +192,15 @@ offPropertyChange(callback?: Callback<Property>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-offPropertyChange(callback?: Callback<Property>): void--><!--Device-Client-offPropertyChange(callback?: Callback<Property>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;Property&gt; | 否 | 用于监听属性值变更事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<Property> | 否 | 用于监听属性值变更事件的回调。 |
 
 ## onConnectionStateChange
 
@@ -188,13 +210,13 @@ onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 
 订阅客户端连接状态更改事件。
 
-只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
-如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。
-回调返回真实设备地址，否则返回随机设备地址。
+只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。回调返回真实设备地址，否则返回随机设备地址。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Client-onConnectionStateChange(callback: Callback<ConnectionChangeState>): void--><!--Device-Client-onConnectionStateChange(callback: Callback<ConnectionChangeState>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -202,7 +224,7 @@ onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;ConnectionChangeState&gt; | 是 | 用于监听连接状态改变事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<ConnectionChangeState> | 是 | 用于监听连接状态改变事件的回调。 |
 
 ## onMtuChange
 
@@ -218,13 +240,15 @@ onMtuChange(callback: Callback<number>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-onMtuChange(callback: Callback<int>): void--><!--Device-Client-onMtuChange(callback: Callback<int>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;number&gt; | 是 | 用于监听mtu变化事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<number> | 是 | 用于监听mtu变化事件的回调。 |
 
 ## onPropertyChange
 
@@ -240,13 +264,15 @@ onPropertyChange(callback: Callback<Property>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-onPropertyChange(callback: Callback<Property>): void--><!--Device-Client-onPropertyChange(callback: Callback<Property>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;Property&gt; | 是 | 用于监听属性值更改事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<Property> | 是 | 用于监听属性值更改事件的回调。 |
 
 ## readProperty
 
@@ -262,19 +288,21 @@ readProperty(property: Property): Promise<Property>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-readProperty(property: Property): Promise<Property>--><!--Device-Client-readProperty(property: Property): Promise<Property>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| property | Property | 是 | 指示要读取的属性 |
+| property | [Property](arkts-connectivity-property-i.md) | 是 | 指示要读取的属性 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Property&gt; | 返回属性值Promise。 |
+| Promise<Property> | 返回属性值Promise。 |
 
 **错误码：**
 
@@ -292,14 +320,15 @@ readProperty(property: Property): Promise<Property>
 requestMtuSize(mtu: number): Promise<void>
 ```
 
-与服务端协商MTU大小。
-协商结果需要通过订阅MTU事件获取。
+与服务端协商MTU大小。协商结果需要通过订阅MTU事件获取。
 
 **起始版本：** 26.0.0
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Client-requestMtuSize(mtu: int): Promise<void>--><!--Device-Client-requestMtuSize(mtu: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -313,7 +342,7 @@ requestMtuSize(mtu: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise<void> | 返回promise对象。 |
 
 **错误码：**
 
@@ -337,20 +366,22 @@ setPropertyNotification(property: Property, enable: boolean): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-setPropertyNotification(property: Property, enable: boolean): Promise<void>--><!--Device-Client-setPropertyNotification(property: Property, enable: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| property | Property | 是 | 要通知的属性 |
+| property | [Property](arkts-connectivity-property-i.md) | 是 | 要通知的属性 |
 | enable | boolean | 是 | 指定是否启用属性的通知 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise<void> | 返回promise对象。 |
 
 **错误码：**
 
@@ -376,20 +407,22 @@ writeProperty(property: Property, writeType: PropertyWriteType): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Client-writeProperty(property: Property, writeType: PropertyWriteType): Promise<void>--><!--Device-Client-writeProperty(property: Property, writeType: PropertyWriteType): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| property | Property | 是 | 指示要写入的属性 |
-| writeType | PropertyWriteType | 是 | 写类型 |
+| property | [Property](arkts-connectivity-property-i.md) | 是 | 指示要写入的属性 |
+| writeType | [PropertyWriteType](arkts-connectivity-propertywritetype-e.md) | 是 | 写类型 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise用于返回结果。 |
+| Promise<void> | Promise用于返回结果。 |
 
 **错误码：**
 

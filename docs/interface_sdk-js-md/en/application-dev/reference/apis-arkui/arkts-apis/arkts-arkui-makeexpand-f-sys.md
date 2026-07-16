@@ -18,6 +18,8 @@ Sets the screen to extended mode. This API uses an asynchronous callback to retu
 
 **Deprecated since:** 20
 
+<!--Device-screen-function makeExpand(options:Array<ExpandOption>, callback: AsyncCallback<long>): void--><!--Device-screen-function makeExpand(options:Array<ExpandOption>, callback: AsyncCallback<long>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Sets the screen to extended mode. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | Array&lt;ExpandOption&gt; | Yes | Parameters for expanding the screen. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the group ID of the extended screens, where theID is an integer. |
+| options | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ExpandOption> | Yes | Parameters for expanding the screen. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the group ID of the extended screens, where the ID is an integer. |
 
 **Error codes:**
 
@@ -77,6 +79,8 @@ Sets the screen to extended mode. This API uses a promise to return the result.
 
 **Deprecated since:** 20
 
+<!--Device-screen-function makeExpand(options:Array<ExpandOption>): Promise<long>--><!--Device-screen-function makeExpand(options:Array<ExpandOption>): Promise<long>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -85,13 +89,13 @@ Sets the screen to extended mode. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | Array&lt;ExpandOption&gt; | Yes | Parameters for expanding the screen. |
+| options | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ExpandOption> | Yes | Parameters for expanding the screen. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the group ID of the extended screens, where the ID is an integer. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the group ID of the extended screens, where the ID is an integer. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Defines the mediaquery interface.
 
 **Since:** 11
 
+<!--Device-unnamed-export default class MediaQuery--><!--Device-unnamed-export default class MediaQuery-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Queries a media item and returns a MediaQueryList object.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-MediaQuery-static matchMedia(condition: string): MediaQueryList--><!--Device-MediaQuery-static matchMedia(condition: string): MediaQueryList-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -36,7 +40,7 @@ Queries a media item and returns a MediaQueryList object.
 
 | Type | Description |
 | --- | --- |
-| MediaQueryList | @syscap SystemCapability.ArkUI.ArkUI.Full@atomicservice |
+| [MediaQueryList](arkts-arkui-mediaquerylist-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@atomicservice |
 
 **Example**
 

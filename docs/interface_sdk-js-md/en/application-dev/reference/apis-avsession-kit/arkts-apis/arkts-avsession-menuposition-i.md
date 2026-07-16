@@ -4,6 +4,8 @@ Position definition of one component on which the menu will bind and popup.
 
 **Since:** 22
 
+<!--Device-avSession-interface MenuPosition--><!--Device-avSession-interface MenuPosition-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Component height, uint is vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-MenuPosition-height: int--><!--Device-MenuPosition-height: int-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## width
@@ -41,6 +45,8 @@ Component width, uint is vp.
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-MenuPosition-width: int--><!--Device-MenuPosition-width: int-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -58,6 +64,8 @@ Coordinate x of the position of the component, uint is vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-MenuPosition-x: int--><!--Device-MenuPosition-x: int-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## y
@@ -73,6 +81,8 @@ Coordinate y of the position of the component, uint is vp.
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-MenuPosition-y: int--><!--Device-MenuPosition-y: int-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 

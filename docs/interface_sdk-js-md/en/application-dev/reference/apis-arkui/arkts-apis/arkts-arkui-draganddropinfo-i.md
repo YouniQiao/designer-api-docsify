@@ -4,6 +4,8 @@ Provides the data reported when the state changes during dragging.
 
 **Since:** 11
 
+<!--Device-dragController-interface DragAndDropInfo--><!--Device-dragController-interface DragAndDropInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -18,8 +20,7 @@ import { dragController } from '@kit.ArkUI';
 event: DragEvent
 ```
 
-Drag event corresponding to the current state. The drag event initiated by **dragController** only supports the
-APIs for obtaining the result and behavior, and is used exclusively for the dragging end state.
+Drag event corresponding to the current state. The drag event initiated by **dragController** only supports the APIs for obtaining the result and behavior, and is used exclusively for the dragging end state.
 
 **Type:** DragEvent
 
@@ -28,6 +29,8 @@ APIs for obtaining the result and behavior, and is used exclusively for the drag
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DragAndDropInfo-event: DragEvent--><!--Device-DragAndDropInfo-event: DragEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,6 +50,8 @@ Additional information about the drag action. Not supported currently. The defau
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DragAndDropInfo-extraParams?: string--><!--Device-DragAndDropInfo-extraParams?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## status
@@ -64,6 +69,8 @@ Current dragging state (started or ended).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DragAndDropInfo-status: DragStatus--><!--Device-DragAndDropInfo-status: DragStatus-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

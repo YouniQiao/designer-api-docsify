@@ -16,6 +16,8 @@ Get an SMS segment encode relation information.
 
 **Since:** 8
 
+<!--Device-sms-function getSmsSegmentsInfo(slotId: int, message: string, force7bit: boolean, callback: AsyncCallback<SmsSegmentsInfo>): void--><!--Device-sms-function getSmsSegmentsInfo(slotId: int, message: string, force7bit: boolean, callback: AsyncCallback<SmsSegmentsInfo>): void-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -24,10 +26,10 @@ Get an SMS segment encode relation information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot indexnumber supported by the device. |
+| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 | message | string | Yes | Indicates short message. |
 | force7bit | boolean | Yes | Indicates whether to use 7 bit encoding. |
-| callback | AsyncCallback&lt;SmsSegmentsInfo&gt; | Yes | Indicates the callback for getting a {@code SmsSegmentsInfo}object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<SmsSegmentsInfo> | Yes | Indicates the callback for getting a {@code SmsSegmentsInfo}object. |
 
 **Error codes:**
 
@@ -64,6 +66,8 @@ Get an SMS segment encode relation information.
 
 **Since:** 8
 
+<!--Device-sms-function getSmsSegmentsInfo(slotId: int, message: string, force7bit: boolean): Promise<SmsSegmentsInfo>--><!--Device-sms-function getSmsSegmentsInfo(slotId: int, message: string, force7bit: boolean): Promise<SmsSegmentsInfo>-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -72,7 +76,7 @@ Get an SMS segment encode relation information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot indexnumber supported by the device. |
+| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 | message | string | Yes | Indicates short message. |
 | force7bit | boolean | Yes | Indicates whether to use 7 bit encoding. |
 
@@ -80,7 +84,7 @@ Get an SMS segment encode relation information.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SmsSegmentsInfo&gt; | Returns a {@code SmsSegmentsInfo} object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SmsSegmentsInfo> | Returns a {@code SmsSegmentsInfo} object. |
 
 **Error codes:**
 

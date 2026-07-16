@@ -12,12 +12,13 @@ import { volumeManager } from '@kit.CoreFileKit';
 function mount(volumeId: string, callback: AsyncCallback<void>): void
 ```
 
-Mounts a volume. This API uses an asynchronous callback to return the result. Currently, only the FAT, exFAT, ext4
-and NTFS file systems are supported.
+Mounts a volume. This API uses an asynchronous callback to return the result. Currently, only the FAT, exFAT, ext4and NTFS file systems are supported.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
+
+<!--Device-volumeManager-function mount(volumeId: string, callback: AsyncCallback<void>): void--><!--Device-volumeManager-function mount(volumeId: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -28,7 +29,7 @@ and NTFS file systems are supported.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volumeId | string | Yes | Volume ID. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback invoked when the specified volume is mounted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback invoked when the specified volume is mounted. |
 
 **Error codes:**
 
@@ -51,12 +52,13 @@ and NTFS file systems are supported.
 function mount(volumeId: string): Promise<void>
 ```
 
-Mounts a volume. This API uses a promise to return the result. Currently, only the FAT, exFAT, ext4 and NTFS file
-systems are supported.
+Mounts a volume. This API uses a promise to return the result. Currently, only the FAT, exFAT, ext4 and NTFS file systems are supported.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
+
+<!--Device-volumeManager-function mount(volumeId: string): Promise<void>--><!--Device-volumeManager-function mount(volumeId: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -72,7 +74,7 @@ systems are supported.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-PiPWindow-enum VideoMeetingControlGroup--><!--Device-PiPWindow-enum VideoMeetingControlGroup-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## HANG_UP_BUTTON
@@ -16,7 +18,9 @@ HANG_UP_BUTTON = 301
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-VideoMeetingControlGroup-HANG_UP_BUTTON = 301--><!--Device-VideoMeetingControlGroup-HANG_UP_BUTTON = 301-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -30,7 +34,9 @@ CAMERA_SWITCH = 302
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-VideoMeetingControlGroup-CAMERA_SWITCH = 302--><!--Device-VideoMeetingControlGroup-CAMERA_SWITCH = 302-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -44,7 +50,9 @@ MUTE_SWITCH = 303
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-VideoMeetingControlGroup-MUTE_SWITCH = 303--><!--Device-VideoMeetingControlGroup-MUTE_SWITCH = 303-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -58,7 +66,9 @@ MICROPHONE_SWITCH = 304
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-VideoMeetingControlGroup-MICROPHONE_SWITCH = 304--><!--Device-VideoMeetingControlGroup-MICROPHONE_SWITCH = 304-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 

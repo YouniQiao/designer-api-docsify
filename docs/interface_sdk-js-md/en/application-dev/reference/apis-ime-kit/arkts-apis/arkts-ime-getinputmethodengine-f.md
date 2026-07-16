@@ -22,13 +22,15 @@ The input method can use the obtained instance to subscribe to a soft keyboard d
 
 **Substitutes:** [getInputMethodAbility()](arkts-ime-getinputmethodability-f.md#getinputmethodability-1)
 
+<!--Device-inputMethodEngine-function getInputMethodEngine(): InputMethodEngine--><!--Device-inputMethodEngine-function getInputMethodEngine(): InputMethodEngine-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| InputMethodEngine | **InputMethodAbility** instance. |
+| [InputMethodEngine](arkts-ime-inputmethodengine-i.md) | **InputMethodAbility** instance. |
 
 **Example**
 

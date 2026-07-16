@@ -4,6 +4,8 @@ Declare type SymbolOptions
 
 **Since:** 18
 
+<!--Device-unnamed-export declare class SymbolOptions--><!--Device-unnamed-export declare class SymbolOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ The effect strategy of symbol icon.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SymbolOptions-effectStrategy?: SymbolEffectStrategy--><!--Device-SymbolOptions-effectStrategy?: SymbolEffectStrategy-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontColor
@@ -45,6 +49,8 @@ The color of symbol icon.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SymbolOptions-fontColor?: Array<ResourceColor>--><!--Device-SymbolOptions-fontColor?: Array<ResourceColor>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +70,8 @@ The size of symbol icon.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SymbolOptions-fontSize?: number | string | Resource--><!--Device-SymbolOptions-fontSize?: number | string | Resource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontWeight
@@ -82,6 +90,8 @@ The fontWeight of symbol icon.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SymbolOptions-fontWeight?: number | FontWeight | string--><!--Device-SymbolOptions-fontWeight?: number | FontWeight | string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## renderingStrategy
@@ -99,6 +109,8 @@ The rendering strategy of symbol icon.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SymbolOptions-renderingStrategy?: SymbolRenderingStrategy--><!--Device-SymbolOptions-renderingStrategy?: SymbolRenderingStrategy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

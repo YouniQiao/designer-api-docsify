@@ -4,6 +4,8 @@ Defines the client certificate request result, related to {@link onClientAuthent
 
 **Since:** 9
 
+<!--Device-unnamed-declare class ClientAuthenticationHandler--><!--Device-unnamed-declare class ClientAuthenticationHandler-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## cancel
@@ -18,6 +20,8 @@ Cancel this certificate request.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ClientAuthenticationHandler-cancel(): void--><!--Device-ClientAuthenticationHandler-cancel(): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## confirm
@@ -31,6 +35,8 @@ Confirm to use the specified private key and client certificate chain.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ClientAuthenticationHandler-confirm(priKeyFile: string, certChainFile: string): void--><!--Device-ClientAuthenticationHandler-confirm(priKeyFile: string, certChainFile: string): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -53,6 +59,8 @@ Confirm to use the authUri.The authUri can be obtained from certificate manageme
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ClientAuthenticationHandler-confirm(authUri: string): void--><!--Device-ClientAuthenticationHandler-confirm(authUri: string): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -71,6 +79,8 @@ Confirm to use the identify of the certificate. The identify can be obtained fro
 
 **Since:** 22
 
+<!--Device-ClientAuthenticationHandler-confirm(identity: string, credentialTypeOrCertChainFile: CredentialType | string): void--><!--Device-ClientAuthenticationHandler-confirm(identity: string, credentialTypeOrCertChainFile: CredentialType | string): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -78,7 +88,7 @@ Confirm to use the identify of the certificate. The identify can be obtained fro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | identity | string | Yes | The identify of the credential. |
-| credentialTypeOrCertChainFile | CredentialType \| string | Yes | The type of the credential or the file that storeclient certificate chain. |
+| credentialTypeOrCertChainFile | CredentialType \| string | Yes | The type of the credential or the file that store client certificate chain. |
 
 **Error codes:**
 
@@ -98,6 +108,8 @@ Constructor.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ClientAuthenticationHandler-constructor()--><!--Device-ClientAuthenticationHandler-constructor()-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## ignore
@@ -111,6 +123,8 @@ Ignore this certificate request temporarily.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ClientAuthenticationHandler-ignore(): void--><!--Device-ClientAuthenticationHandler-ignore(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

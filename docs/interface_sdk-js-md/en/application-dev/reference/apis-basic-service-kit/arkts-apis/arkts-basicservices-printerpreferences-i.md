@@ -4,6 +4,8 @@ Defines the printer preferences.
 
 **Since:** 18
 
+<!--Device-print-interface PrinterPreferences--><!--Device-print-interface PrinterPreferences-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## Modules to Import
@@ -18,12 +20,13 @@ import { print } from '@kit.BasicServicesKit';
 borderless?: boolean
 ```
 
-Whether to print without margins. The value **true** means to print without margins, and **false** means the
-opposite. The default value is **false**.
+Whether to print without margins. The value **true** means to print without margins, and **false** means the opposite. The default value is **false**.
 
 **Type:** boolean
 
 **Since:** 18
+
+<!--Device-PrinterPreferences-borderless?: boolean--><!--Device-PrinterPreferences-borderless?: boolean-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -41,6 +44,8 @@ Default collate.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PrinterPreferences-defaultCollate?: boolean--><!--Device-PrinterPreferences-defaultCollate?: boolean-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## defaultColorMode
@@ -57,6 +62,8 @@ Default color mode.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PrinterPreferences-defaultColorMode?: PrintColorMode--><!--Device-PrinterPreferences-defaultColorMode?: PrintColorMode-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## defaultDuplexMode
@@ -70,6 +77,8 @@ Default duplex mode.
 **Type:** PrintDuplexMode
 
 **Since:** 18
+
+<!--Device-PrinterPreferences-defaultDuplexMode?: PrintDuplexMode--><!--Device-PrinterPreferences-defaultDuplexMode?: PrintDuplexMode-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -85,6 +94,8 @@ Default paper type.
 
 **Since:** 18
 
+<!--Device-PrinterPreferences-defaultMediaType?: string--><!--Device-PrinterPreferences-defaultMediaType?: string-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## defaultOrientation
@@ -99,6 +110,8 @@ Default print orientation.
 
 **Since:** 18
 
+<!--Device-PrinterPreferences-defaultOrientation?: PrintOrientationMode--><!--Device-PrinterPreferences-defaultOrientation?: PrintOrientationMode-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## defaultPageSizeId
@@ -107,13 +120,13 @@ Default print orientation.
 defaultPageSizeId?: string
 ```
 
-ID of the default paper size. The value can be a standard paper size defined by the International Organization
-for Standardization (ISO), for example, ISO_A4, or a non-standard paper size defined in the system, for example,
-Custom.178 × 254 mm.
+ID of the default paper size. The value can be a standard paper size defined by the International Organization for Standardization (ISO), for example, ISO_A4, or a non-standard paper size defined in the system, for example,Custom.178 × 254 mm.
 
 **Type:** string
 
 **Since:** 18
+
+<!--Device-PrinterPreferences-defaultPageSizeId?: string--><!--Device-PrinterPreferences-defaultPageSizeId?: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -128,6 +141,8 @@ Default print quality.
 **Type:** PrintQuality
 
 **Since:** 18
+
+<!--Device-PrinterPreferences-defaultPrintQuality?: PrintQuality--><!--Device-PrinterPreferences-defaultPrintQuality?: PrintQuality-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -145,6 +160,8 @@ Default reverse.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PrinterPreferences-defaultReverse?: boolean--><!--Device-PrinterPreferences-defaultReverse?: boolean-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## options
@@ -153,12 +170,13 @@ Default reverse.
 options?: string
 ```
 
-Other fields in the printer preferences. The fields are queried from the printer or obtained from the printer
-driver and stored in the string in JSON format.
+Other fields in the printer preferences. The fields are queried from the printer or obtained from the printer driver and stored in the string in JSON format.
 
 **Type:** string
 
 **Since:** 18
+
+<!--Device-PrinterPreferences-options?: string--><!--Device-PrinterPreferences-options?: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -175,6 +193,8 @@ Vendor-specific printer preferences in JSON format.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PrinterPreferences-vendorOptions?: string--><!--Device-PrinterPreferences-vendorOptions?: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 

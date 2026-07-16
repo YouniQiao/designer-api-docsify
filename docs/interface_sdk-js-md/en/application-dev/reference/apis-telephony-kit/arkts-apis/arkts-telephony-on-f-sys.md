@@ -12,12 +12,13 @@ import { radio } from '@kit.TelephonyKit';
 function on(type: 'imsRegStateChange', slotId: number, imsType: ImsServiceType, callback: Callback<ImsRegInfo>): void
 ```
 
-Called when the IMS registration state of specified IMS service type corresponding to
-a monitored {@code slotId} updates.
+Called when the IMS registration state of specified IMS service type corresponding to a monitored {@code slotId} updates.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-radio-function on(type: 'imsRegStateChange', slotId: int, imsType: ImsServiceType, callback: Callback<ImsRegInfo>): void--><!--Device-radio-function on(type: 'imsRegStateChange', slotId: int, imsType: ImsServiceType, callback: Callback<ImsRegInfo>): void-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -29,8 +30,8 @@ a monitored {@code slotId} updates.
 | --- | --- | --- | --- |
 | type | 'imsRegStateChange' | Yes | Event type. Indicates the imsRegStateChange event to be subscribed to. |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| imsType | ImsServiceType | Yes | Indicates the ims service type of the {@link ImsServiceType}. |
-| callback | Callback&lt;ImsRegInfo&gt; | Yes | Indicates the callback for getting an instance ofthe {@link ImsRegInfo} class. |
+| imsType | [ImsServiceType](arkts-telephony-imsservicetype-e-sys.md) | Yes | Indicates the ims service type of the {@link ImsServiceType}. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ImsRegInfo> | Yes | Indicates the callback for getting an instance of the {@link ImsRegInfo} class. |
 
 **Error codes:**
 

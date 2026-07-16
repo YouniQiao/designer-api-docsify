@@ -4,6 +4,8 @@
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare interface DepthVector3--><!--Device-unnamed-declare interface DepthVector3-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -23,6 +25,8 @@ X component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DepthVector3-x: double--><!--Device-DepthVector3-x: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ Y component.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-DepthVector3-y: double--><!--Device-DepthVector3-y: double-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -63,6 +69,8 @@ Z component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DepthVector3-z: double--><!--Device-DepthVector3-z: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

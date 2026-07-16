@@ -6,6 +6,8 @@ RgbaColor definition
 
 **Deprecated since:** 9
 
+<!--Device-wallpaper-interface RgbaColor--><!--Device-wallpaper-interface RgbaColor-End-->
+
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 ## Modules to Import
@@ -28,6 +30,8 @@ The range is 0 to 255.
 
 **Deprecated since:** 9
 
+<!--Device-RgbaColor-alpha: long--><!--Device-RgbaColor-alpha: long-End-->
+
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 ## blue
@@ -43,6 +47,8 @@ The range is 0 to 255.
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-RgbaColor-blue: long--><!--Device-RgbaColor-blue: long-End-->
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -60,6 +66,8 @@ The range is 0 to 255.
 
 **Deprecated since:** 9
 
+<!--Device-RgbaColor-green: long--><!--Device-RgbaColor-green: long-End-->
+
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 ## red
@@ -75,6 +83,8 @@ The range is 0 to 255.
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-RgbaColor-red: long--><!--Device-RgbaColor-red: long-End-->
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 

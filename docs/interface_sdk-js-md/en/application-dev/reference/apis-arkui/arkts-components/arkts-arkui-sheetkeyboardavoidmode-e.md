@@ -4,6 +4,8 @@ Define the mode of sheet how to avoid keyboard.
 
 **Since:** 13
 
+<!--Device-unnamed-declare enum SheetKeyboardAvoidMode--><!--Device-unnamed-declare enum SheetKeyboardAvoidMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NONE
@@ -20,6 +22,8 @@ Sheet will not aovid keyboard.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-SheetKeyboardAvoidMode-NONE = 0--><!--Device-SheetKeyboardAvoidMode-NONE = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TRANSLATE_AND_RESIZE
@@ -28,14 +32,15 @@ Sheet will not aovid keyboard.
 TRANSLATE_AND_RESIZE = 1
 ```
 
-Firstly sheet will avoid keyboard by changing its height.
-And then sheet will avoid by resizing after reaching its maximum height.
+Firstly sheet will avoid keyboard by changing its height.And then sheet will avoid by resizing after reaching its maximum height.
 
 **Since:** 13
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-SheetKeyboardAvoidMode-TRANSLATE_AND_RESIZE = 1--><!--Device-SheetKeyboardAvoidMode-TRANSLATE_AND_RESIZE = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -53,6 +58,8 @@ Sheet will only avoid keyboard by resizing the content.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-SheetKeyboardAvoidMode-RESIZE_ONLY = 2--><!--Device-SheetKeyboardAvoidMode-RESIZE_ONLY = 2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TRANSLATE_AND_SCROLL
@@ -61,14 +68,15 @@ Sheet will only avoid keyboard by resizing the content.
 TRANSLATE_AND_SCROLL = 3
 ```
 
-Firstly sheet will avoid keyboard by changing its height.
-And then sheet will avoid keyboard by scrolling after reaching its maximum height.
+Firstly sheet will avoid keyboard by changing its height.And then sheet will avoid keyboard by scrolling after reaching its maximum height.
 
 **Since:** 13
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-SheetKeyboardAvoidMode-TRANSLATE_AND_SCROLL = 3--><!--Device-SheetKeyboardAvoidMode-TRANSLATE_AND_SCROLL = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,6 +93,8 @@ Popup sheet will avoid keyboard by default.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SheetKeyboardAvoidMode-POPUP_SHEET = 4--><!--Device-SheetKeyboardAvoidMode-POPUP_SHEET = 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

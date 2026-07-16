@@ -14,7 +14,9 @@ function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): 
 
 **替代接口：** getWantAgent
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-wantAgent-function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): void--><!--Device-wantAgent-function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -22,8 +24,8 @@ function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | WantAgentInfo | 是 | WantAgent信息。 |
-| callback | AsyncCallback&lt;WantAgent&gt; | 是 | 创建WantAgent的回调方法。 |
+| info | [WantAgentInfo](arkts-ability-wantagentinfo-t.md) | 是 | WantAgent信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<WantAgent> | 是 | 创建WantAgent的回调方法。 |
 
 **示例：**
 
@@ -84,7 +86,9 @@ function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 
 **替代接口：** getWantAgent
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-wantAgent-function getWantAgent(info: WantAgentInfo): Promise<WantAgent>--><!--Device-wantAgent-function getWantAgent(info: WantAgentInfo): Promise<WantAgent>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -92,13 +96,13 @@ function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | WantAgentInfo | 是 | WantAgent信息。 |
+| info | [WantAgentInfo](arkts-ability-wantagentinfo-t.md) | 是 | WantAgent信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;WantAgent&gt; | 以Promise形式返回WantAgent。 |
+| Promise<WantAgent> | 以Promise形式返回WantAgent。 |
 
 **示例：**
 

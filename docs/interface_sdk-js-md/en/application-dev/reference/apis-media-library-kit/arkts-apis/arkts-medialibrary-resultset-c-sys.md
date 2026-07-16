@@ -2,10 +2,11 @@
 
 Defines APIs to access the result set obtained by querying the RDB store.
 
-Before calling any of the following APIs, you must use [query](arkts-medialibrary-photoaccesshelper-i-sys.md#query-1) to
-obtain a ResultSet instance.
+Before calling any of the following APIs, you must use [query](arkts-medialibrary-photoaccesshelper-i-sys.md#query-1) to obtain a ResultSet instance.
 
 **Since:** 22
+
+<!--Device-photoAccessHelper-class ResultSet--><!--Device-photoAccessHelper-class ResultSet-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -26,6 +27,8 @@ close(): void
 Closes this resultSet to release memory. If it is not closed, memory leaks may occur.
 
 **Since:** 22
+
+<!--Device-ResultSet-close(): void--><!--Device-ResultSet-close(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -63,6 +66,8 @@ Obtains the values of all columns in the specified row.
 
 **Since:** 22
 
+<!--Device-ResultSet-getRow(): ValuesBucket--><!--Device-ResultSet-getRow(): ValuesBucket-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -71,7 +76,7 @@ Obtains the values of all columns in the specified row.
 
 | Type | Description |
 | --- | --- |
-| ValuesBucket | Values of all columns in the specified row. |
+| [ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-valuesbucket-t.md) | Values of all columns in the specified row. |
 
 **Error codes:**
 
@@ -107,6 +112,8 @@ Obtains the value of the specified column in the current row.
 
 **Since:** 22
 
+<!--Device-ResultSet-getValue(columnIndex: int): ValueType--><!--Device-ResultSet-getValue(columnIndex: int): ValueType-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -115,13 +122,13 @@ Obtains the value of the specified column in the current row.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | number | Yes | Index of the specified column, starting from 0. The value ranges from 0 to the totalnumber of columns in the result set minus 1. |
+| columnIndex | number | Yes | Index of the specified column, starting from 0. The value ranges from 0 to the total number of columns in the result set minus 1. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ValueType | Allowed data field types. |
+| [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Allowed data field types. |
 
 **Error codes:**
 
@@ -157,6 +164,8 @@ goToFirstRow(): boolean
 Moves the cursor to the first row of the result set.
 
 **Since:** 22
+
+<!--Device-ResultSet-goToFirstRow(): boolean--><!--Device-ResultSet-goToFirstRow(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -201,6 +210,8 @@ Moves the cursor to the next row in the result set.
 
 **Since:** 22
 
+<!--Device-ResultSet-goToNextRow(): boolean--><!--Device-ResultSet-goToNextRow(): boolean-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -244,6 +255,8 @@ Moves the cursor to the specified row in the result set.
 
 **Since:** 22
 
+<!--Device-ResultSet-goToRow(position: int): boolean--><!--Device-ResultSet-goToRow(position: int): boolean-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -252,7 +265,7 @@ Moves the cursor to the specified row in the result set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | number | Yes | Index of the specified row, starting from 0. The value ranges from 0 to the totalnumber of rows in the result set minus 1. |
+| position | number | Yes | Index of the specified row, starting from 0. The value ranges from 0 to the total number of rows in the result set minus 1. |
 
 **Return value:**
 
@@ -296,6 +309,8 @@ Number of columns in the result set.
 
 **Since:** 22
 
+<!--Device-ResultSet-columnCount: int--><!--Device-ResultSet-columnCount: int-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -306,12 +321,13 @@ Number of columns in the result set.
 isAtLastRow: boolean
 ```
 
-Whether the cursor is in the last row of the result set. **true** if the cursor is in the last row; **false**
-otherwise.
+Whether the cursor is in the last row of the result set. **true** if the cursor is in the last row; **false** otherwise.
 
 **Type:** boolean
 
 **Since:** 22
+
+<!--Device-ResultSet-isAtLastRow: boolean--><!--Device-ResultSet-isAtLastRow: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -329,6 +345,8 @@ Number of rows in the result set.
 
 **Since:** 22
 
+<!--Device-ResultSet-rowCount: int--><!--Device-ResultSet-rowCount: int-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -344,6 +362,8 @@ Index of the current row in the result set.
 **Type:** number
 
 **Since:** 22
+
+<!--Device-ResultSet-rowIndex: int--><!--Device-ResultSet-rowIndex: int-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

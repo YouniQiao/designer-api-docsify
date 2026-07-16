@@ -1,9 +1,10 @@
 # KeyItem
 
-Enumerates other key information. This refers to the information of other keys that have been pressed when the
-current [KeyCode](arkts-mdm-keycode-e.md) event occurs.
+Enumerates other key information. This refers to the information of other keys that have been pressed when the current [KeyCode](arkts-mdm-keycode-e.md) event occurs.
 
 **Since:** 23
+
+<!--Device-systemManager-interface KeyItem--><!--Device-systemManager-interface KeyItem-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -19,15 +20,15 @@ import { systemManager } from '@kit.MDMKit';
 downTime: number
 ```
 
-Time when the key action occurs. The value is a microsecond-level timestamp after the system is powered on.
-Navigation keys do not support combination expansion, so their occurrence time is displayed as 0.
-The value range is all integers.
+Time when the key action occurs. The value is a microsecond-level timestamp after the system is powered on.Navigation keys do not support combination expansion, so their occurrence time is displayed as 0.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-KeyItem-downTime: number--><!--Device-KeyItem-downTime: number-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -45,6 +46,8 @@ Key code.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-KeyItem-keyCode: KeyCode--><!--Device-KeyItem-keyCode: KeyCode-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## pressed
@@ -60,6 +63,8 @@ Key action. It indicates whether the key is pressed: **true** for pressed; **fal
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-KeyItem-pressed: boolean--><!--Device-KeyItem-pressed: boolean-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

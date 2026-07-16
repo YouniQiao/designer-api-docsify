@@ -4,6 +4,8 @@ Returns the changes of the application badge enabling state.
 
 **Since:** 8
 
+<!--Device-unnamed-export interface EnabledNotificationCallbackData--><!--Device-unnamed-export interface EnabledNotificationCallbackData-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -20,6 +22,8 @@ Bundle name of the application.
 
 **Since:** 8
 
+<!--Device-EnabledNotificationCallbackData-readonly bundle: string--><!--Device-EnabledNotificationCallbackData-readonly bundle: string-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -30,13 +34,15 @@ Bundle name of the application.
 readonly enable: boolean
 ```
 
-Whether the application notification is enabled.
-- **true**: enabled.
+Whether the application notification is enabled.  
+- **true**: enabled.  
 - **false**: disabled.
 
 **Type:** boolean
 
 **Since:** 8
+
+<!--Device-EnabledNotificationCallbackData-readonly enable: boolean--><!--Device-EnabledNotificationCallbackData-readonly enable: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -53,6 +59,8 @@ UID of the application.
 **Type:** number
 
 **Since:** 8
+
+<!--Device-EnabledNotificationCallbackData-readonly uid: int--><!--Device-EnabledNotificationCallbackData-readonly uid: int-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

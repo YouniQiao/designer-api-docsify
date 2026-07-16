@@ -1,5 +1,11 @@
 # releaseDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+```
+
 ## releaseDeviceManager
 
 ```TypeScript
@@ -10,13 +16,15 @@ function releaseDeviceManager(deviceManager: DeviceManager): void
 
 **起始版本：** 10
 
+<!--Device-distributedDeviceManager-function releaseDeviceManager(deviceManager: DeviceManager): void--><!--Device-distributedDeviceManager-function releaseDeviceManager(deviceManager: DeviceManager): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceManager | DeviceManager | 是 | 设备管理器对象实例。 |
+| deviceManager | [DeviceManager](arkts-distributedservice-devicemanager-i.md) | 是 | 设备管理器对象实例。 |
 
 **错误码：**
 

@@ -12,20 +12,21 @@ import { formHost } from '@kit.FormKit';
 function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>, callback: AsyncCallback<void>): void
 ```
 
-Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses an
-asynchronous callback to return the result.
+Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework
-> checks whether the destination is proper and whether the widget has the redirection permission, and then
-> triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured,
-> in the case of router-based redirection, the widget framework does not trigger redirection for the widget.
+> **NOTE**  
+>  
+> Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework  
+> checks whether the destination is proper and whether the widget has the redirection permission, and then  
+> triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured,  
+> in the case of router-based redirection, the widget framework does not trigger redirection for the widget.  
 > - Only one router proxy can be set for a widget. If multiple proxies are set, only the last proxy takes effect.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
+
+<!--Device-formHost-function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>, callback: AsyncCallback<void>): void--><!--Device-formHost-function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -35,9 +36,9 @@ asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | Yes | Array of widget IDs. |
-| proxy | Callback&lt;Want&gt; | Yes | Callback used to return the Want information required for redirection. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the router proxy is set, **error** is**undefined**; otherwise, an exception is thrown. |
+| formIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Array of widget IDs. |
+| proxy | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Want> | Yes | Callback used to return the Want information required for redirection. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the router proxy is set, **error** is **undefined**; otherwise, an exception is thrown. |
 
 **Error codes:**
 
@@ -58,21 +59,22 @@ asynchronous callback to return the result.
 function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>): Promise<void>
 ```
 
-Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses a promise
-to return the result. This API uses a promise to return the result.
+Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses a promise to return the result. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework
-> checks whether the destination is proper and whether the widget has the redirection permission, and then
-> triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured,
-> in the case of router-based redirection, the widget framework does not trigger redirection for the widget.
->
+> **NOTE**  
+>  
+> - Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework  
+> checks whether the destination is proper and whether the widget has the redirection permission, and then  
+> triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured,  
+> in the case of router-based redirection, the widget framework does not trigger redirection for the widget.  
+>  
 > - Only one router proxy can be set for a widget. If multiple proxies are set, only the last proxy takes effect.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
+
+<!--Device-formHost-function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>): Promise<void>--><!--Device-formHost-function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -82,14 +84,14 @@ to return the result. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | Yes | Array of widget IDs. |
-| proxy | Callback&lt;Want&gt; | Yes | Callback used to return the Want information required for redirection. |
+| formIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Array of widget IDs. |
+| proxy | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Want> | Yes | Callback used to return the Want information required for redirection. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

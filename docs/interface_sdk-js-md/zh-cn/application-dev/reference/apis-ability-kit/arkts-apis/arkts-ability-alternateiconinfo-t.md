@@ -10,6 +10,8 @@ export type AlternateIconInfo = _BundleInfo.AlternateIconInfo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bundleManager-export type AlternateIconInfo = _BundleInfo.AlternateIconInfo--><!--Device-bundleManager-export type AlternateIconInfo = _BundleInfo.AlternateIconInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **属性类型：** _BundleInfo.AlternateIconInfo

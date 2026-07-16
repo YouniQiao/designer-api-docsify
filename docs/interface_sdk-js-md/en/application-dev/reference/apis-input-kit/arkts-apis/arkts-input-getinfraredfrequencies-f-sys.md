@@ -18,6 +18,8 @@ Queries the frequency range of IR signals supported by the device.
 
 **Required permissions:** ohos.permission.MANAGE_INPUT_INFRARED_EMITTER
 
+<!--Device-infraredEmitter-function getInfraredFrequencies(): Array<InfraredFrequency>--><!--Device-infraredEmitter-function getInfraredFrequencies(): Array<InfraredFrequency>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InfraredEmitter
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Queries the frequency range of IR signals supported by the device.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;InfraredFrequency&gt; | Frequency range of IR signals, including multiple groups of maximum andminimum frequencies.<br>Since API version 23, one group of maximum and minimum frequencies, both of which are **0** Hz, arereturned. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<InfraredFrequency> | Frequency range of IR signals, including multiple groups of maximum and minimum frequencies.<br>Since API version 23, one group of maximum and minimum frequencies, both of which are **0** Hz, are returned. |
 
 **Error codes:**
 

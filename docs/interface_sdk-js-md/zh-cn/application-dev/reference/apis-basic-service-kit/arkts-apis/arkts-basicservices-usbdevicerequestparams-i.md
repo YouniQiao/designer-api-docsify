@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-usbManager-interface USBDeviceRequestParams--><!--Device-usbManager-interface USBDeviceRequestParams-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
+
+## 导入模块
+
+```TypeScript
+import { usbManager } from '@kit.BasicServicesKit';
+```
 
 ## bRequest
 
@@ -17,6 +25,8 @@ bRequest: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-USBDeviceRequestParams-bRequest: int--><!--Device-USBDeviceRequestParams-bRequest: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -32,6 +42,8 @@ bmRequestType: number
 
 **起始版本：** 12
 
+<!--Device-USBDeviceRequestParams-bmRequestType: int--><!--Device-USBDeviceRequestParams-bmRequestType: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## data
@@ -45,6 +57,8 @@ data: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 12
+
+<!--Device-USBDeviceRequestParams-data: Uint8Array--><!--Device-USBDeviceRequestParams-data: Uint8Array-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -60,6 +74,8 @@ wIndex: number
 
 **起始版本：** 12
 
+<!--Device-USBDeviceRequestParams-wIndex: int--><!--Device-USBDeviceRequestParams-wIndex: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## wLength
@@ -74,6 +90,8 @@ wLength: number
 
 **起始版本：** 12
 
+<!--Device-USBDeviceRequestParams-wLength: int--><!--Device-USBDeviceRequestParams-wLength: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## wValue
@@ -87,6 +105,8 @@ wValue: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-USBDeviceRequestParams-wValue: int--><!--Device-USBDeviceRequestParams-wValue: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 

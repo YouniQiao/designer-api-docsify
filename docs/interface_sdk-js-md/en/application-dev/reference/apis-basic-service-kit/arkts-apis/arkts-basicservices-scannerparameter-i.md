@@ -4,6 +4,8 @@ Defines the scanner parameters.
 
 **Since:** 20
 
+<!--Device-scan-interface ScannerParameter--><!--Device-scan-interface ScannerParameter-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Integer constraints of the option.
 
 **Since:** 20
 
+<!--Device-ScannerParameter-optionConstraintInt?: int[]--><!--Device-ScannerParameter-optionConstraintInt?: int[]-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## optionConstraintRange
@@ -37,6 +41,8 @@ Range constraint of the option.
 **Type:** Range
 
 **Since:** 20
+
+<!--Device-ScannerParameter-optionConstraintRange?: Range--><!--Device-ScannerParameter-optionConstraintRange?: Range-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -52,6 +58,8 @@ String constraints of the option.
 
 **Since:** 20
 
+<!--Device-ScannerParameter-optionConstraintString?: string[]--><!--Device-ScannerParameter-optionConstraintString?: string[]-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## optionConstraintType
@@ -65,6 +73,8 @@ Constraint type of the option.
 **Type:** ConstraintType
 
 **Since:** 20
+
+<!--Device-ScannerParameter-optionConstraintType: ConstraintType--><!--Device-ScannerParameter-optionConstraintType: ConstraintType-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -80,6 +90,8 @@ Option description.
 
 **Since:** 20
 
+<!--Device-ScannerParameter-optionDesc: string--><!--Device-ScannerParameter-optionDesc: string-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## optionIndex
@@ -93,6 +105,8 @@ Option index.
 **Type:** number
 
 **Since:** 20
+
+<!--Device-ScannerParameter-optionIndex: int--><!--Device-ScannerParameter-optionIndex: int-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -108,6 +122,8 @@ Option name.
 
 **Since:** 20
 
+<!--Device-ScannerParameter-optionName: string--><!--Device-ScannerParameter-optionName: string-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## optionTitle
@@ -121,6 +137,8 @@ Option title.
 **Type:** string
 
 **Since:** 20
+
+<!--Device-ScannerParameter-optionTitle: string--><!--Device-ScannerParameter-optionTitle: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -136,6 +154,8 @@ Option value type.
 
 **Since:** 20
 
+<!--Device-ScannerParameter-optionType: OptionValueType--><!--Device-ScannerParameter-optionType: OptionValueType-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## optionUnit
@@ -149,6 +169,8 @@ Physical unit of the option.
 **Type:** PhysicalUnit
 
 **Since:** 20
+
+<!--Device-ScannerParameter-optionUnit: PhysicalUnit--><!--Device-ScannerParameter-optionUnit: PhysicalUnit-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 

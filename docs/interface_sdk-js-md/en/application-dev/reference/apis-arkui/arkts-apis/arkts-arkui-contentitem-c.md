@@ -4,6 +4,8 @@ Defines elements for the left and center areas of the **ComposeListItem** compon
 
 **Since:** 10
 
+<!--Device-unnamed-export declare class ContentItem--><!--Device-unnamed-export declare class ContentItem-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,6 +34,8 @@ If this parameter is not set or is set to **undefined**, the description is not 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ContentItem-description?: ResourceStr--><!--Device-ContentItem-description?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## icon
@@ -52,6 +56,8 @@ If this parameter is not set or is set to **undefined**, the icon is not display
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ContentItem-icon?: ResourceStr--><!--Device-ContentItem-icon?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## iconStyle
@@ -71,6 +77,8 @@ If this parameter is not set or is set to **undefined**, the icon is not display
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ContentItem-iconStyle?: IconType--><!--Device-ContentItem-iconStyle?: IconType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,6 +102,8 @@ If this parameter is not set or is set to **undefined**, the primary text is not
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ContentItem-primaryText?: ResourceStr--><!--Device-ContentItem-primaryText?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## secondaryText
@@ -116,6 +126,8 @@ If this parameter is not set or is set to **undefined**, the secondary text is n
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ContentItem-secondaryText?: ResourceStr--><!--Device-ContentItem-secondaryText?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## symbolStyle
@@ -124,8 +136,7 @@ If this parameter is not set or is set to **undefined**, the secondary text is n
 symbolStyle?: SymbolGlyphModifier
 ```
 
-Symbol icon resource of the element on the left, which has higher priority than **icon**. If both **icon** and this
-parameter are set, only the symbol icon is displayed.
+Symbol icon resource of the element on the left, which has higher priority than **icon**. If both **icon** and this parameter are set, only the symbol icon is displayed.
 
 If this parameter is not set or is set to **undefined**, the symbol icon is not displayed.
 
@@ -136,6 +147,8 @@ If this parameter is not set or is set to **undefined**, the symbol icon is not 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ContentItem-symbolStyle?: SymbolGlyphModifier--><!--Device-ContentItem-symbolStyle?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

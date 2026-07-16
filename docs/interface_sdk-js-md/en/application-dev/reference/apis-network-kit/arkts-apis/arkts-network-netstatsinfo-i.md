@@ -4,6 +4,8 @@ Detailed information of statistics.
 
 **Since:** 22
 
+<!--Device-statistics-export interface NetStatsInfo--><!--Device-statistics-export interface NetStatsInfo-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Bytes of received.
 
 **Since:** 22
 
+<!--Device-NetStatsInfo-rxBytes: long--><!--Device-NetStatsInfo-rxBytes: long-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## rxPackets
@@ -37,6 +41,8 @@ Packets of received.
 **Type:** number
 
 **Since:** 22
+
+<!--Device-NetStatsInfo-rxPackets: long--><!--Device-NetStatsInfo-rxPackets: long-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -52,6 +58,8 @@ Bytes of send.
 
 **Since:** 22
 
+<!--Device-NetStatsInfo-txBytes: long--><!--Device-NetStatsInfo-txBytes: long-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## txPackets
@@ -65,6 +73,8 @@ Packets of send.
 **Type:** number
 
 **Since:** 22
+
+<!--Device-NetStatsInfo-txPackets: long--><!--Device-NetStatsInfo-txPackets: long-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

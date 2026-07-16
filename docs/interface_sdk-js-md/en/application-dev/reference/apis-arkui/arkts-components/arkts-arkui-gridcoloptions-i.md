@@ -2,13 +2,13 @@
 
 Defines the options of the **GridCol** component.
 
-The values of `span`, `offset`, and `order` attributes are inherited in the sequence of **xs**, **sm**, **md**,
-**lg**, **xl**, and **xxl**. If no value is set for a breakpoint, the value is obtained from the previous breakpoint.
+The values of `span`, `offset`, and `order` attributes are inherited in the sequence of **xs**, **sm**, **md**,**lg**, **xl**, and **xxl**. If no value is set for a breakpoint, the value is obtained from the previous breakpoint.
 
-Since API version 20, inheritance of the **span** property follows rules detailed in
-[GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md).
+Since API version 20, inheritance of the **span** property follows rules detailed in [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md).
 
 **Since:** 9
+
+<!--Device-unnamed-declare interface GridColOptions--><!--Device-unnamed-declare interface GridColOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,6 +32,8 @@ Invalid values are treated as the default value.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-GridColOptions-offset?: number | GridColColumnOption--><!--Device-GridColOptions-offset?: number | GridColColumnOption-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## order
@@ -40,8 +42,7 @@ Invalid values are treated as the default value.
 order?: number | GridColColumnOption
 ```
 
-Sequence number of the component. Child components of the grid are sorted in ascending order based on their
-sequence numbers.
+Sequence number of the component. Child components of the grid are sorted in ascending order based on their sequence numbers.
 
 The value must be a non-negative integer. Default value: **0**.
 
@@ -49,11 +50,9 @@ Invalid values are treated as the default value.
 
 **NOTE**
 
-If a child component shares an **order** value with another child component or does not have **order** set, it is
-displayed based on its code sequence number.
+If a child component shares an **order** value with another child component or does not have **order** set, it is displayed based on its code sequence number.
 
-If **order** is not set for all child components, those that have **order** set are displayed after those that do
-not and are sorted in ascending order based on the value.
+If **order** is not set for all child components, those that have **order** set are displayed after those that do not and are sorted in ascending order based on the value.
 
 **Type:** number | GridColColumnOption
 
@@ -63,6 +62,8 @@ not and are sorted in ascending order based on the value.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-GridColOptions-order?: number | GridColColumnOption--><!--Device-GridColOptions-order?: number | GridColColumnOption-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## span
@@ -71,8 +72,7 @@ not and are sorted in ascending order based on the value.
 span?: number | GridColColumnOption
 ```
 
-Number of columns occupied by the component. If it is set to **0**, the component is not involved in layout
-calculation, that is, the component is not rendered.
+Number of columns occupied by the component. If it is set to **0**, the component is not involved in layout calculation, that is, the component is not rendered.
 
 The value must be a non-negative integer. Default value: **1**.
 
@@ -85,6 +85,8 @@ Invalid values are treated as the default value.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-GridColOptions-span?: number | GridColColumnOption--><!--Device-GridColOptions-span?: number | GridColColumnOption-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

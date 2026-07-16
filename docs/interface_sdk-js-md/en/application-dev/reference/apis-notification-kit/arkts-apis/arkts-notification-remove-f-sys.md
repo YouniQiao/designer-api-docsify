@@ -17,12 +17,23 @@ function remove(
   ): void
 ```
 
-Removes a notification based on the bundle information and notification key. This API uses an asynchronous callback
-to return the result.
+Removes a notification based on the bundle information and notification key. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationSubscribe-function remove(
+    bundle: BundleOption,
+    notificationKey: NotificationKey,
+    reason: RemoveReason,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-notificationSubscribe-function remove(
+    bundle: BundleOption,
+    notificationKey: NotificationKey,
+    reason: RemoveReason,
+    callback: AsyncCallback<void>
+  ): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -32,10 +43,10 @@ to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
-| notificationKey | NotificationKey | Yes | Notification key. |
-| reason | RemoveReason | Yes | Reason for removing the notification. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
+| notificationKey | [NotificationKey](arkts-notification-notificationkey-i-sys.md) | Yes | Notification key. |
+| reason | [RemoveReason](arkts-notification-removereason-e-sys.md) | Yes | Reason for removing the notification. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -82,12 +93,13 @@ notificationSubscribe.remove(bundle, notificationKey, reason, removeCallback);
 function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: RemoveReason): Promise<void>
 ```
 
-Removes a notification based on the bundle information and notification key. This API uses a promise to return the
-result.
+Removes a notification based on the bundle information and notification key. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationSubscribe-function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: RemoveReason): Promise<void>--><!--Device-notificationSubscribe-function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: RemoveReason): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -97,15 +109,15 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
-| notificationKey | NotificationKey | Yes | Notification key. |
-| reason | RemoveReason | Yes | Reason for removing the notification. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
+| notificationKey | [NotificationKey](arkts-notification-notificationkey-i-sys.md) | Yes | Notification key. |
+| reason | [RemoveReason](arkts-notification-removereason-e-sys.md) | Yes | Reason for removing the notification. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -149,12 +161,13 @@ notificationSubscribe.remove(bundle, notificationKey, reason).then(() => {
 function remove(hashCode: string, reason: RemoveReason, callback: AsyncCallback<void>): void
 ```
 
-Removes a notification based on the specified unique notification ID. This API uses an asynchronous callback to
-return the result.
+Removes a notification based on the specified unique notification ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationSubscribe-function remove(hashCode: string, reason: RemoveReason, callback: AsyncCallback<void>): void--><!--Device-notificationSubscribe-function remove(hashCode: string, reason: RemoveReason, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -164,9 +177,9 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hashCode | string | Yes | Unique notification ID. It is the value of **hashCode** in the[NotificationRequest](arkts-notification-notificationrequest-i.md) object of[SubscribeCallbackData](arkts-notification-subscribecallbackdata-i-sys.md) used in the[onConsume](arkts-notification-notificationsubscriber-i-sys.md#onconsume) callback. |
-| reason | RemoveReason | Yes | Reason for removing the notification. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| hashCode | string | Yes | Unique notification ID. It is the value of **hashCode** in the [NotificationRequest](arkts-notification-notificationrequest-i.md) object of [SubscribeCallbackData](arkts-notification-subscribecallbackdata-i-sys.md) used in the [onConsume](arkts-notification-notificationsubscriber-i-sys.md#onconsume) callback. |
+| reason | [RemoveReason](arkts-notification-removereason-e-sys.md) | Yes | Reason for removing the notification. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -211,6 +224,8 @@ Removes specified notifications. This API uses an asynchronous callback to retur
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationSubscribe-function remove(hashCodes: Array<String>, reason: RemoveReason, callback: AsyncCallback<void>): void--><!--Device-notificationSubscribe-function remove(hashCodes: Array<String>, reason: RemoveReason, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -219,9 +234,9 @@ Removes specified notifications. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hashCodes | Array&lt;String&gt; | Yes | Array of unique notification IDs. It is the value of **hashCode** in the[NotificationRequest](arkts-notification-notificationrequest-i.md) object of[SubscribeCallbackData](arkts-notification-subscribecallbackdata-i-sys.md) used in the[onConsume](arkts-notification-notificationsubscriber-i-sys.md#onconsume) callback. |
-| reason | RemoveReason | Yes | Reason for removing the notification. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| hashCodes | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<String> | Yes | Array of unique notification IDs. It is the value of **hashCode** in the [NotificationRequest](arkts-notification-notificationrequest-i.md) object of [SubscribeCallbackData](arkts-notification-subscribecallbackdata-i-sys.md) used in the [onConsume](arkts-notification-notificationsubscriber-i-sys.md#onconsume) callback. |
+| reason | [RemoveReason](arkts-notification-removereason-e-sys.md) | Yes | Reason for removing the notification. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -265,6 +280,8 @@ Removes a notification based on the specified unique notification ID. This API u
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationSubscribe-function remove(hashCode: string, reason: RemoveReason): Promise<void>--><!--Device-notificationSubscribe-function remove(hashCode: string, reason: RemoveReason): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -273,14 +290,14 @@ Removes a notification based on the specified unique notification ID. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hashCode | string | Yes | Unique notification ID. It is the value of **hashCode** in the[NotificationRequest](arkts-notification-notificationrequest-i.md) object of[SubscribeCallbackData](arkts-notification-subscribecallbackdata-i-sys.md) used in the[onConsume](arkts-notification-notificationsubscriber-i-sys.md#onconsume) callback. |
-| reason | RemoveReason | Yes | Reason for removing the notification. |
+| hashCode | string | Yes | Unique notification ID. It is the value of **hashCode** in the [NotificationRequest](arkts-notification-notificationrequest-i.md) object of [SubscribeCallbackData](arkts-notification-subscribecallbackdata-i-sys.md) used in the [onConsume](arkts-notification-notificationsubscriber-i-sys.md#onconsume) callback. |
+| reason | [RemoveReason](arkts-notification-removereason-e-sys.md) | Yes | Reason for removing the notification. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -322,6 +339,8 @@ Removes specified notifications. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationSubscribe-function remove(hashCodes: Array<String>, reason: RemoveReason): Promise<void>--><!--Device-notificationSubscribe-function remove(hashCodes: Array<String>, reason: RemoveReason): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -330,14 +349,14 @@ Removes specified notifications. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hashCodes | Array&lt;String&gt; | Yes | Array of unique notification IDs. |
-| reason | RemoveReason | Yes | Reason for removing the notification. |
+| hashCodes | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<String> | Yes | Array of unique notification IDs. |
+| reason | [RemoveReason](arkts-notification-removereason-e-sys.md) | Yes | Reason for removing the notification. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

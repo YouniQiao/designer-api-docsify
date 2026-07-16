@@ -4,6 +4,8 @@ Describes the settings for taking an image.
 
 **Since:** 10
 
+<!--Device-camera-interface PhotoCaptureSetting--><!--Device-camera-interface PhotoCaptureSetting-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Photo image compression quality.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-PhotoCaptureSetting-compressionQuality?: int--><!--Device-PhotoCaptureSetting-compressionQuality?: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## location
@@ -44,6 +48,8 @@ Geolocation information of the image (depending on the device hardware informati
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-PhotoCaptureSetting-location?: Location--><!--Device-PhotoCaptureSetting-location?: Location-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## mirror
@@ -52,15 +58,15 @@ Geolocation information of the image (depending on the device hardware informati
 mirror?: boolean
 ```
 
-Whether mirror photography is enabled (disabled by default). Before using this enumerated value, call
-[isMirrorSupported](arkts-camera-photooutput-i.md#ismirrorsupported-1) to check whether mirror
-photography is supported. **true** if enabled, **false** otherwise.
+Whether mirror photography is enabled (disabled by default). Before using this enumerated value, call [isMirrorSupported](arkts-camera-photooutput-i.md#ismirrorsupported-1) to check whether mirror photography is supported. **true** if enabled, **false** otherwise.
 
 **Type:** boolean
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-PhotoCaptureSetting-mirror?: boolean--><!--Device-PhotoCaptureSetting-mirror?: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -78,6 +84,8 @@ Image quality (low by default).
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-PhotoCaptureSetting-quality?: QualityLevel--><!--Device-PhotoCaptureSetting-quality?: QualityLevel-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## rotation
@@ -93,6 +101,8 @@ Rotation angle of the image. The default value is **0**, indicating clockwise ro
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-PhotoCaptureSetting-rotation?: ImageRotation--><!--Device-PhotoCaptureSetting-rotation?: ImageRotation-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

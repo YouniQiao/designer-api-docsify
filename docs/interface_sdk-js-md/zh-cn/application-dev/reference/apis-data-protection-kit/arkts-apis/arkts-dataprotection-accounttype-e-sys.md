@@ -4,6 +4,8 @@
 
 **起始版本：** 21
 
+<!--Device-dlpPermission-export enum AccountType--><!--Device-dlpPermission-export enum AccountType-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -18,6 +20,8 @@ CLOUD_ACCOUNT = 1
 
 **起始版本：** 21
 
+<!--Device-AccountType-CLOUD_ACCOUNT = 1--><!--Device-AccountType-CLOUD_ACCOUNT = 1-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -31,6 +35,8 @@ DOMAIN_ACCOUNT = 2
 表示域账号。
 
 **起始版本：** 21
+
+<!--Device-AccountType-DOMAIN_ACCOUNT = 2--><!--Device-AccountType-DOMAIN_ACCOUNT = 2-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

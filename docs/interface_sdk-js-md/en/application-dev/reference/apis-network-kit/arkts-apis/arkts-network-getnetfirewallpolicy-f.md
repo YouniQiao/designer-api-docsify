@@ -18,6 +18,8 @@ Get firewall policy by userId.
 
 **Required permissions:** ohos.permission.GET_NET_FIREWALL
 
+<!--Device-netFirewall-function getNetFirewallPolicy(userId: number): Promise<NetFirewallPolicy>--><!--Device-netFirewall-function getNetFirewallPolicy(userId: number): Promise<NetFirewallPolicy>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 **Parameters:**
@@ -30,7 +32,7 @@ Get firewall policy by userId.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetFirewallPolicy&gt; | Current user firewall policy. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetFirewallPolicy> | Current user firewall policy. |
 
 **Error codes:**
 

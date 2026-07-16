@@ -1,9 +1,10 @@
 # XComponentController
 
-Defines the controller of the XComponent.
-You can bind the controller to the XComponent to call the component APIs through the controller.
+Defines the controller of the XComponent.You can bind the controller to the XComponent to call the component APIs through the controller.
 
 **Since:** 12
+
+<!--Device-unnamed-declare class XComponentController--><!--Device-unnamed-declare class XComponentController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +20,8 @@ A constructor used to create a XComponentController instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-XComponentController-constructor()--><!--Device-XComponentController-constructor()-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## getXComponentContext
@@ -27,12 +30,13 @@ A constructor used to create a XComponentController instance.
 getXComponentContext(): Object
 ```
 
-Obtains the context of an XComponent object.
-This API works only when type of the XComponent is set to SURFACE("surface") or TEXTURE.
+Obtains the context of an XComponent object.This API works only when type of the XComponent is set to SURFACE("surface") or TEXTURE.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-XComponentController-getXComponentContext(): Object--><!--Device-XComponentController-getXComponentContext(): Object-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,7 +44,7 @@ This API works only when type of the XComponent is set to SURFACE("surface") or 
 
 | Type | Description |
 | --- | --- |
-| Object | Context of the XComponent object.The APIs contained in the context are defined by developers.The context is passed in as the first parameter of the onLoad callback. |
+| [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Context of the XComponent object.The APIs contained in the context are defined by developers.The context is passed in as the first parameter of the onLoad callback. |
 
 ## getXComponentSurfaceId
 
@@ -48,12 +52,13 @@ This API works only when type of the XComponent is set to SURFACE("surface") or 
 getXComponentSurfaceId(): string
 ```
 
-Obtains the ID of the surface held by the XComponent, which can then be used for @ohos APIs.
-This API works only when type of the XComponent is set to SURFACE("surface") or TEXTURE.
+Obtains the ID of the surface held by the XComponent, which can then be used for @ohos APIs.This API works only when type of the XComponent is set to SURFACE("surface") or TEXTURE.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-XComponentController-getXComponentSurfaceId(): string--><!--Device-XComponentController-getXComponentSurfaceId(): string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -77,13 +82,15 @@ Get the rectangle information of surface created by XComponent.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-XComponentController-getXComponentSurfaceRect(): SurfaceRect--><!--Device-XComponentController-getXComponentSurfaceRect(): SurfaceRect-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SurfaceRect | The surface rectangle information. |
+| [SurfaceRect](arkts-arkui-surfacerect-i.md) | The surface rectangle information. |
 
 ## getXComponentSurfaceRotation
 
@@ -99,13 +106,15 @@ Get the rotation options result of the Surface created by XComponent.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-XComponentController-getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>--><!--Device-XComponentController-getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Required&lt;SurfaceRotationOptions&gt; | The surface rotation options result. |
+| [Required](../../apis-na/arkts-apis/arkts-na-required-t.md)<SurfaceRotationOptions> | The surface rotation options result. |
 
 ## lockCanvas
 
@@ -121,13 +130,15 @@ Get a Canvas for drawing into the surface created by XComponent.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-XComponentController-lockCanvas(): DrawingCanvas | null--><!--Device-XComponentController-lockCanvas(): DrawingCanvas | null-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DrawingCanvas | Returns a Canvas for drawing into the surface created by XComponent.Returns null if the surface is not available. |
+| [DrawingCanvas](arkts-arkui-drawingcanvas-t.md) | Returns a Canvas for drawing into the surface created by XComponent.Returns null if the surface is not available. |
 
 ## onSurfaceChanged
 
@@ -143,6 +154,8 @@ Called after the surface rectangle information is changed.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-XComponentController-onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void--><!--Device-XComponentController-onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -150,7 +163,7 @@ Called after the surface rectangle information is changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | surfaceId | string | Yes | The id of the surface created by XComponent. |
-| rect | SurfaceRect | Yes | The rectangle information of the surface created by XComponent. |
+| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | Yes | The rectangle information of the surface created by XComponent. |
 
 ## onSurfaceCreated
 
@@ -165,6 +178,8 @@ Called after the surface is first created.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-XComponentController-onSurfaceCreated(surfaceId: string): void--><!--Device-XComponentController-onSurfaceCreated(surfaceId: string): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -188,6 +203,8 @@ Called when the surface is about to be destroyed.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-XComponentController-onSurfaceDestroyed(surfaceId: string): void--><!--Device-XComponentController-onSurfaceDestroyed(surfaceId: string): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -210,13 +227,15 @@ Set the config of the surface created by the XComponent.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-XComponentController-setXComponentSurfaceConfig(config: SurfaceConfig):void--><!--Device-XComponentController-setXComponentSurfaceConfig(config: SurfaceConfig):void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | SurfaceConfig | Yes | surface config |
+| config | [SurfaceConfig](arkts-arkui-surfaceconfig-i.md) | Yes | surface config |
 
 ## setXComponentSurfaceRect
 
@@ -232,13 +251,15 @@ Set the rectangle information of surface created by XComponent.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-XComponentController-setXComponentSurfaceRect(rect: SurfaceRect): void--><!--Device-XComponentController-setXComponentSurfaceRect(rect: SurfaceRect): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | SurfaceRect | Yes | The surface rectangle information. |
+| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | Yes | The surface rectangle information. |
 
 ## setXComponentSurfaceRotation
 
@@ -254,13 +275,15 @@ Set the rotation options of the Surface created by XComponent.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-XComponentController-setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void--><!--Device-XComponentController-setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotationOptions | SurfaceRotationOptions | Yes | The surface rotation options. |
+| rotationOptions | [SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md) | Yes | The surface rotation options. |
 
 ## setXComponentSurfaceSize
 
@@ -271,8 +294,7 @@ setXComponentSurfaceSize(value: {
   }): void
 ```
 
-Sets the width and height of the surface held by the XComponent.
-This API works only when type of the XComponent is set to SURFACE("surface") or TEXTURE.
+Sets the width and height of the surface held by the XComponent.This API works only when type of the XComponent is set to SURFACE("surface") or TEXTURE.
 
 **Since:** 9
 
@@ -280,13 +302,21 @@ This API works only when type of the XComponent is set to SURFACE("surface") or 
 
 **Substitutes:** [setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect-1)
 
+<!--Device-XComponentController-setXComponentSurfaceSize(value: {
+    surfaceWidth: number;
+    surfaceHeight: number;
+  }): void--><!--Device-XComponentController-setXComponentSurfaceSize(value: {
+    surfaceWidth: number;
+    surfaceHeight: number;
+  }): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | {    surfaceWidth: number;    surfaceHeight: number;  } | Yes | Width and Height of the surface held by the XComponent. |
+| value | {     surfaceWidth: number;     surfaceHeight: number;   } | Yes | Width and Height of the surface held by the XComponent. |
 
 ## startImageAnalyzer
 
@@ -294,10 +324,7 @@ This API works only when type of the XComponent is set to SURFACE("surface") or 
 startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 ```
 
-Starts AI image analysis in the given settings.
-Before calling this API, make sure the AI image analyzer is enabled.
-Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API.
-If this API is repeatedly called before the execution is complete, an error callback is triggered.
+Starts AI image analysis in the given settings.Before calling this API, make sure the AI image analyzer is enabled.Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API.If this API is repeatedly called before the execution is complete, an error callback is triggered.
 
 **Since:** 12
 
@@ -305,19 +332,21 @@ If this API is repeatedly called before the execution is complete, an error call
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-XComponentController-startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>--><!--Device-XComponentController-startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | ImageAnalyzerConfig | Yes | Settings of the AI image analyzer. |
+| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | Yes | Settings of the AI image analyzer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -333,14 +362,15 @@ If this API is repeatedly called before the execution is complete, an error call
 stopImageAnalyzer(): void
 ```
 
-Stops AI image analysis.
-The content displayed by the AI image analyzer will be destroyed.
+Stops AI image analysis.The content displayed by the AI image analyzer will be destroyed.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-XComponentController-stopImageAnalyzer(): void--><!--Device-XComponentController-stopImageAnalyzer(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -358,11 +388,13 @@ Posts the new contents of the Canvas to the surface created by XComponent and re
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-XComponentController-unlockCanvasAndPost(canvas: DrawingCanvas):void--><!--Device-XComponentController-unlockCanvasAndPost(canvas: DrawingCanvas):void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| canvas | DrawingCanvas | Yes | The canvas previously obtained from lockCanvas. |
+| canvas | [DrawingCanvas](arkts-arkui-drawingcanvas-t.md) | Yes | The canvas previously obtained from lockCanvas. |
 

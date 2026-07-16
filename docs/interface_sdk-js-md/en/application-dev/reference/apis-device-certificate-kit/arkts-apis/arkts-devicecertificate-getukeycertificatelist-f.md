@@ -20,6 +20,8 @@ Obtains the list of USB Key credential . This API uses a promise to return the r
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-certificateManager-function getUkeyCertificateList(ukeyProvider: string, ukeyInfo: UkeyInfo): Promise<CMResult>--><!--Device-certificateManager-function getUkeyCertificateList(ukeyProvider: string, ukeyInfo: UkeyInfo): Promise<CMResult>-End-->
+
 **System capability:** SystemCapability.Security.CertificateManager
 
 **Parameters:**
@@ -27,13 +29,13 @@ Obtains the list of USB Key credential . This API uses a promise to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ukeyProvider | string | Yes | USB Key device provider |
-| ukeyInfo | UkeyInfo | Yes | Attributes of a USB Key credential |
+| ukeyInfo | [UkeyInfo](arkts-devicecertificate-ukeyinfo-i.md) | Yes | Attributes of a USB Key credential |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **credentialDetailList** inthe [CMResult](arkts-devicecertificate-cmresult-i.md) object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CMResult> | Promise used to return the operation result, that is, **credentialDetailList** in the [CMResult](arkts-devicecertificate-cmresult-i.md) object. |
 
 **Error codes:**
 

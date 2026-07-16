@@ -4,6 +4,8 @@ FetchResult provides APIs to manage the file retrieval result.
 
 **Since:** 10
 
+<!--Device-photoAccessHelper-interface FetchResult<T>--><!--Device-photoAccessHelper-interface FetchResult<T>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -18,10 +20,11 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 getRangeObjects(index: number, offset: number): Promise<T[]>
 ```
 
-Obtains the file asset array of a specified length (second parameter) from the specified index (first parameter)
-in the result set. This API uses a promise to return the result.
+Obtains the file asset array of a specified length (second parameter) from the specified index (first parameter)in the result set. This API uses a promise to return the result.
 
 **Since:** 23
+
+<!--Device-FetchResult-getRangeObjects(index: int, offset: int): Promise<T[]>--><!--Device-FetchResult-getRangeObjects(index: int, offset: int): Promise<T[]>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -31,14 +34,14 @@ in the result set. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the file asset to be obtained. The value must be greater than or equal to 0 andless than the number of objects in the result set. |
+| index | number | Yes | Index of the file asset to be obtained. The value must be greater than or equal to 0 and less than the number of objects in the result set. |
 | offset | number | Yes | Number of file assets to be obtained. The value must be greater than 0.<br>The sum of **index** and **offset** must be less than the total number of objects in the result set.Otherwise, error code **23800151** is thrown. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;T[]&gt; | Promise array. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<T[]> | Promise array. |
 
 **Error codes:**
 

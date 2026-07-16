@@ -2,11 +2,15 @@
 
 **Inheritance/Implementation:** URIErrorConstructor extends [ErrorConstructor](arkts-na-errorconstructor-i.md)
 
+<!--Device-unnamed-interface URIErrorConstructor extends ErrorConstructor--><!--Device-unnamed-interface URIErrorConstructor extends ErrorConstructor-End-->
+
 ## constructor
 
 ```TypeScript
 new(message?: string): URIError
 ```
+
+<!--Device-URIErrorConstructor-new(message?: string): URIError--><!--Device-URIErrorConstructor-new(message?: string): URIError-End-->
 
 **Parameters:**
 
@@ -18,7 +22,7 @@ new(message?: string): URIError
 
 | Type | Description |
 | --- | --- |
-| URIError |  |
+| [URIError](arkts-na-urierror-i.md) |  |
 
 ## constructor
 
@@ -26,6 +30,8 @@ new(message?: string): URIError
 (message?: string): URIError
 ```
 
+<!--Device-URIErrorConstructor-(message?: string): URIError--><!--Device-URIErrorConstructor-(message?: string): URIError-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -36,7 +42,7 @@ new(message?: string): URIError
 
 | Type | Description |
 | --- | --- |
-| URIError |  |
+| [URIError](arkts-na-urierror-i.md) |  |
 
 ## prototype
 
@@ -45,4 +51,6 @@ readonly prototype: URIError
 ```
 
 **Type:** URIError
+
+<!--Device-URIErrorConstructor-readonly prototype: URIError--><!--Device-URIErrorConstructor-readonly prototype: URIError-End-->
 

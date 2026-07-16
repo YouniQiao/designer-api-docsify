@@ -12,12 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getBundleArchiveInfoSync(hapFilePath: string, bundleFlags: number): BundleInfo
 ```
 
-Obtains the bundle information based on the given HAP file path and bundle flags. This API returns the result
-synchronously.
+Obtains the bundle information based on the given HAP file path and bundle flags. This API returns the result synchronously.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getBundleArchiveInfoSync(hapFilePath: string, bundleFlags: int): BundleInfo--><!--Device-bundleManager-function getBundleArchiveInfoSync(hapFilePath: string, bundleFlags: int): BundleInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -27,14 +28,14 @@ synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hapFilePath | string | Yes | Path where the HAP file is stored. The path must be the relative path of thecurrent bundle's data directory. |
+| hapFilePath | string | Yes | Path where the HAP file is stored. The path must be the relative path of the current bundle's data directory. |
 | bundleFlags | number | Yes | Type of the bundle information to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| BundleInfo | Bundle information obtained. |
+| [BundleInfo](arkts-ability-bundleinfo-i-sys.md) | Bundle information obtained. |
 
 **Error codes:**
 

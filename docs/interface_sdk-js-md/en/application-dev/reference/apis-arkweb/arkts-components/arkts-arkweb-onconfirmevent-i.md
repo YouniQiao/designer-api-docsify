@@ -4,6 +4,8 @@ Defines the callback used when a web page triggers **confirm()**.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface OnConfirmEvent--><!--Device-unnamed-declare interface OnConfirmEvent-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## message
@@ -19,6 +21,8 @@ Information displayed in the dialog box.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-OnConfirmEvent-message: string--><!--Device-OnConfirmEvent-message: string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -36,6 +40,8 @@ User operation result that is notified to the **Web** component.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-OnConfirmEvent-result: JsResult--><!--Device-OnConfirmEvent-result: JsResult-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## url
@@ -51,6 +57,8 @@ URL of the web page where the dialog box is displayed.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-OnConfirmEvent-url: string--><!--Device-OnConfirmEvent-url: string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

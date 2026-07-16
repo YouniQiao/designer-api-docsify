@@ -18,13 +18,15 @@ Open the input method detail page.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-settings-function openInputMethodDetail(context: Context, bundleName: string, inputMethodId: string): void--><!--Device-settings-function openInputMethodDetail(context: Context, bundleName: string, inputMethodId: string): void-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. Only UIAbilityContext and UIExtensionContext are supported. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. Only UIAbilityContext and UIExtensionContext are supported. |
 | bundleName | string | Yes | bundle name of the input method. |
 | inputMethodId | string | Yes | id of the input method. |
 

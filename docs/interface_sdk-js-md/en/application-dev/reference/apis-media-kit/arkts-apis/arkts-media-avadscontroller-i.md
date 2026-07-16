@@ -4,6 +4,8 @@ Definition of the Ad Content Control Interface
 
 **Since:** 26.0.0
 
+<!--Device-media-interface AVAdsController--><!--Device-media-interface AVAdsController-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 ## Modules to Import
@@ -18,12 +20,13 @@ import { media } from '@kit.MediaKit';
 addAdsMediaSource(src: MediaSource, start: number): Promise<string>
 ```
 
-Add an advertisement film source to the advertisement controller,
-The insertion time (relative to the playback progress of the main media asset) can be specified.
+Add an advertisement film source to the advertisement controller,The insertion time (relative to the playback progress of the main media asset) can be specified.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVAdsController-addAdsMediaSource(src: MediaSource, start: int): Promise<string>--><!--Device-AVAdsController-addAdsMediaSource(src: MediaSource, start: int): Promise<string>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -31,14 +34,14 @@ The insertion time (relative to the playback progress of the main media asset) c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | MediaSource | Yes | Video source to be inserted into the main content for playback. |
+| src | [MediaSource](arkts-media-mediasource-i.md) | Yes | Video source to be inserted into the main content for playback. |
 | start | number | Yes | Progress value of inserting data to the main media asset.<br>Unit: milliseconds. The value should be an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the ID of the added media source in the ad controller. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the ID of the added media source in the ad controller. |
 
 **Error codes:**
 
@@ -58,6 +61,8 @@ Disable playback of the remaining broadcast content in the current session
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVAdsController-disableAllAdsMediaSource(): void--><!--Device-AVAdsController-disableAllAdsMediaSource(): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 ## offAdsEventListenerLoadingError
@@ -72,13 +77,15 @@ Unregisters the event processing function when the ad content fails to be loaded
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVAdsController-offAdsEventListenerLoadingError(callback?: OnAdsEventLoadingErrorHandle): void--><!--Device-AVAdsController-offAdsEventListenerLoadingError(callback?: OnAdsEventLoadingErrorHandle): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnAdsEventLoadingErrorHandle | No | Ad content loading failure processing function.<br>Default value: If this parameter is not specified, all processing functions of the event arederegistered. |
+| callback | [OnAdsEventLoadingErrorHandle](arkts-media-onadseventloadingerrorhandle-t.md) | No | Ad content loading failure processing function.<br>Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
 
 ## offAdsListenerAdsCompleted
 
@@ -92,13 +99,15 @@ Unregisters the processing function of the event triggered by the completion of 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVAdsController-offAdsListenerAdsCompleted(callback?: Callback<string>): void--><!--Device-AVAdsController-offAdsListenerAdsCompleted(callback?: Callback<string>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;string&gt; | No | Processing function of the advertisement playing completion event.<br>Default value: If this parameter is not specified, all processing functions of the event arederegistered. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<string> | No | Processing function of the advertisement playing completion event.<br>Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
 
 ## offAdsListenerAdsSkipped
 
@@ -112,13 +121,15 @@ Unregisters the processing function of the event triggered when advertisement is
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVAdsController-offAdsListenerAdsSkipped(callback?: Callback<string>): void--><!--Device-AVAdsController-offAdsListenerAdsSkipped(callback?: Callback<string>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;string&gt; | No | Advertisement Skipped Processing Function.<br>Default value: If this parameter is not specified, all processing functions of the event arederegistered. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<string> | No | Advertisement Skipped Processing Function.<br>Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
 
 ## offAdsListenerAdsStarted
 
@@ -132,13 +143,15 @@ Unregisters the processing function for the event triggered when a new ad conten
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVAdsController-offAdsListenerAdsStarted(callback?: OnAdsEventAdsStartedHandle): void--><!--Device-AVAdsController-offAdsListenerAdsStarted(callback?: OnAdsEventAdsStartedHandle): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnAdsEventAdsStartedHandle | No | Processing function when the ad content starts to be played.It is usually used to switch the logic of the playback page.<br>Default value: If this parameter is not specified, all processing functions of the event arederegistered. |
+| callback | [OnAdsEventAdsStartedHandle](arkts-media-onadseventadsstartedhandle-t.md) | No | Processing function when the ad content starts to be played.It is usually used to switch the logic of the playback page.<br>Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
 
 ## onAdsEventListenerLoadingError
 
@@ -152,13 +165,15 @@ Registers the event processing function when the ad content fails to be loaded.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVAdsController-onAdsEventListenerLoadingError(callback: OnAdsEventLoadingErrorHandle): void--><!--Device-AVAdsController-onAdsEventListenerLoadingError(callback: OnAdsEventLoadingErrorHandle): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnAdsEventLoadingErrorHandle | Yes | This function is used to process ad content loading failures.This function needs to be implemented by the application.<br>The first parameter is used to transfer the advertisement ID, and the second parameter is used totransfer the failure cause. |
+| callback | [OnAdsEventLoadingErrorHandle](arkts-media-onadseventloadingerrorhandle-t.md) | Yes | This function is used to process ad content loading failures.This function needs to be implemented by the application.<br>The first parameter is used to transfer the advertisement ID, and the second parameter is used to transfer the failure cause. |
 
 ## onAdsListenerAdsCompleted
 
@@ -172,13 +187,15 @@ Registers the processing function of the event triggered by the completion of ad
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVAdsController-onAdsListenerAdsCompleted(callback: Callback<string>): void--><!--Device-AVAdsController-onAdsListenerAdsCompleted(callback: Callback<string>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;string&gt; | Yes | Processing function of the ad event, which contains the ID of the ad thatis played. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<string> | Yes | Processing function of the ad event, which contains the ID of the ad that is played. |
 
 ## onAdsListenerAdsSkipped
 
@@ -192,13 +209,15 @@ Registers the processing function of the event triggered when advertisement is s
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVAdsController-onAdsListenerAdsSkipped(callback: Callback<string>): void--><!--Device-AVAdsController-onAdsListenerAdsSkipped(callback: Callback<string>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;string&gt; | Yes | Processing function for the advertisement to be jumped out of date. Theparameter is passed as the ID of the skipped advertisement. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<string> | Yes | Processing function for the advertisement to be jumped out of date. The parameter is passed as the ID of the skipped advertisement. |
 
 ## onAdsListenerAdsStarted
 
@@ -212,13 +231,15 @@ Registers the processing function for the event triggered when a new ad content 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVAdsController-onAdsListenerAdsStarted(callback: OnAdsEventAdsStartedHandle): void--><!--Device-AVAdsController-onAdsListenerAdsStarted(callback: OnAdsEventAdsStartedHandle): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnAdsEventAdsStartedHandle | Yes | Processing function when the ad content starts to be played.The logic for switching the playback page is commonly used.<br>The first parameter indicates the ID of the advertisement that is being played, and the second parameterindicates the duration of the advertisement. |
+| callback | [OnAdsEventAdsStartedHandle](arkts-media-onadseventadsstartedhandle-t.md) | Yes | Processing function when the ad content starts to be played.The logic for switching the playback page is commonly used.<br>The first parameter indicates the ID of the advertisement that is being played, and the second parameter indicates the duration of the advertisement. |
 
 ## release
 
@@ -231,6 +252,8 @@ Release the AVAdsController object.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVAdsController-release(): void--><!--Device-AVAdsController-release(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -245,6 +268,8 @@ Remove the ad source specified in the AdsController.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVAdsController-removeAdsMediaSource(id: string): void--><!--Device-AVAdsController-removeAdsMediaSource(id: string): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -271,6 +296,8 @@ Skip the ad content that is being played.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVAdsController-skipCurrentAdsMediaSource(): void--><!--Device-AVAdsController-skipCurrentAdsMediaSource(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 

@@ -4,6 +4,8 @@ Describes the returned paragraph information.
 
 **Since:** 11
 
+<!--Device-unnamed-declare interface RichEditorParagraphResult--><!--Device-unnamed-declare interface RichEditorParagraphResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## range
@@ -22,6 +24,8 @@ Start and end positions of the paragraph.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RichEditorParagraphResult-range: [number, number]--><!--Device-RichEditorParagraphResult-range: [number, number]-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## style
@@ -39,6 +43,8 @@ Paragraph style.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RichEditorParagraphResult-style: RichEditorParagraphStyle--><!--Device-RichEditorParagraphResult-style: RichEditorParagraphStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

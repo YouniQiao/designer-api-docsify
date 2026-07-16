@@ -4,6 +4,8 @@ Information about a profile which is downloadable to an eUICC using.
 
 **Since:** 18
 
+<!--Device-eSIM-export interface DownloadableProfile--><!--Device-eSIM-export interface DownloadableProfile-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Gets the accessRules.
 
 **Since:** 18
 
+<!--Device-DownloadableProfile-accessRules?: Array<AccessRule>--><!--Device-DownloadableProfile-accessRules?: Array<AccessRule>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 ## activationCode
@@ -37,6 +41,8 @@ Activation code.
 **Type:** string
 
 **Since:** 18
+
+<!--Device-DownloadableProfile-activationCode: string--><!--Device-DownloadableProfile-activationCode: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -52,6 +58,8 @@ Carrier name.
 
 **Since:** 18
 
+<!--Device-DownloadableProfile-carrierName?: string--><!--Device-DownloadableProfile-carrierName?: string-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 ## confirmationCode
@@ -65,6 +73,8 @@ Confirmation code.
 **Type:** string
 
 **Since:** 18
+
+<!--Device-DownloadableProfile-confirmationCode?: string--><!--Device-DownloadableProfile-confirmationCode?: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 

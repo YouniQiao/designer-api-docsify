@@ -4,6 +4,8 @@ Enumerates the scale modes of images.
 
 **Since:** 9
 
+<!--Device-image-enum ScaleMode--><!--Device-image-enum ScaleMode-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## FIT_TARGET_SIZE
@@ -20,6 +22,8 @@ Reduces the image size to the dimensions of the target.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-ScaleMode-FIT_TARGET_SIZE = 0--><!--Device-ScaleMode-FIT_TARGET_SIZE = 0-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## CENTER_CROP
@@ -35,6 +39,8 @@ Scales the image so that it fills the requested bounds of the target and crops t
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-ScaleMode-CENTER_CROP = 1--><!--Device-ScaleMode-CENTER_CROP = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

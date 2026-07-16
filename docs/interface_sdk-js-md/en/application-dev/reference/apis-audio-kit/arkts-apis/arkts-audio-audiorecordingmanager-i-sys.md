@@ -1,9 +1,10 @@
 # AudioRecordingManager
 
-Provides recording strategy management, including collaborative recording
-and recording control capabilities.
+Provides recording strategy management, including collaborative recording and recording control capabilities.
 
 **Since:** 26.0.0
+
+<!--Device-audio-interface AudioRecordingManager--><!--Device-audio-interface AudioRecordingManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -25,6 +26,8 @@ Unsubscribes from the system recording controller panel enabled state change eve
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AudioRecordingManager-offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControllerChangeInfo>): void--><!--Device-AudioRecordingManager-offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControllerChangeInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
@@ -33,7 +36,7 @@ Unsubscribes from the system recording controller panel enabled state change eve
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;SystemRecordControllerChangeInfo&gt; | No | The Callback used in subscriptionfunction for unsubscribing. If not using this parameter, all callbacks subscribed in currentprocess before will be unsubscribed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SystemRecordControllerChangeInfo> | No | The Callback used in subscription function for unsubscribing. If not using this parameter, all callbacks subscribed in current process before will be unsubscribed. |
 
 **Error codes:**
 
@@ -55,6 +58,8 @@ Subscribes to the system recording controller panel enabled state change event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AudioRecordingManager-onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerChangeInfo>): void--><!--Device-AudioRecordingManager-onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerChangeInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
@@ -63,7 +68,7 @@ Subscribes to the system recording controller panel enabled state change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;SystemRecordControllerChangeInfo&gt; | Yes | Callback used to listenwhether the system recording controller panel enabled state change event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SystemRecordControllerChangeInfo> | Yes | Callback used to listen whether the system recording controller panel enabled state change event. |
 
 **Error codes:**
 

@@ -20,6 +20,8 @@ Set the senior mode state for app.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-config-function setSeniorModeStateForApp(appSeniorModeInfos: Array<AppSeniorModeInfo>): Promise<void>--><!--Device-config-function setSeniorModeStateForApp(appSeniorModeInfos: Array<AppSeniorModeInfo>): Promise<void>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -28,13 +30,13 @@ Set the senior mode state for app.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appSeniorModeInfos | Array&lt;AppSeniorModeInfo&gt; | Yes | Indicates the list ofapp package names and statuses for which the advanced mode needs to be set. |
+| appSeniorModeInfos | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<AppSeniorModeInfo> | Yes | Indicates the list of app package names and statuses for which the advanced mode needs to be set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

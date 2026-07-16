@@ -18,13 +18,15 @@ Obtains the thread information and task information of the task pool.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-taskpool-function getTaskPoolInfo(): TaskPoolInfo--><!--Device-taskpool-function getTaskPoolInfo(): TaskPoolInfo-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TaskPoolInfo | Internal information about the task pool. |
+| [TaskPoolInfo](arkts-arkts-taskpoolinfo-c.md) | Internal information about the task pool. |
 
 **Example**
 

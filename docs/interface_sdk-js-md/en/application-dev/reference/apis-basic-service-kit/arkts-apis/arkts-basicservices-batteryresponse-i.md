@@ -6,6 +6,8 @@ Defines a response that returns the charging status and remaining power of the d
 
 **Deprecated since:** 6
 
+<!--Device-unnamed-export interface BatteryResponse--><!--Device-unnamed-export interface BatteryResponse-End-->
+
 **System capability:** SystemCapability.PowerManager.BatteryManager.Lite
 
 ## Modules to Import
@@ -20,12 +22,9 @@ import { GetStatusOptions, BatteryResponse } from '@kit.BasicServicesKit';
 charging: boolean
 ```
 
-Whether the battery is being charged. The value **true** indicates that the battery is being charged; **false**
-indicates the opposite. The default value is **false**.
+Whether the battery is being charged. The value **true** indicates that the battery is being charged; **false** indicates the opposite. The default value is **false**.
 
-Note: This API is no longer maintained since API version 6 except for lite wearables. You are advised to use
-[batteryInfo.chargingStatus](../../../../reference/apis-basic-services-kit/js-apis-battery-info.md#constants)
-instead.
+Note: This API is no longer maintained since API version 6 except for lite wearables. You are advised to use [batteryInfo.chargingStatus](../../../../reference/apis-basic-services-kit/js-apis-battery-info.md#constants)instead.
 
 **Type:** boolean
 
@@ -34,6 +33,8 @@ instead.
 **Deprecated since:** 6
 
 **Substitutes:** [chargingStatus](arkts-basicservices-batteryinfo-con.md#chargingstatus)
+
+<!--Device-BatteryResponse-charging: boolean--><!--Device-BatteryResponse-charging: boolean-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Lite
 
@@ -45,8 +46,7 @@ level: number
 
 Current battery level in percent, which ranges from **0.00** to **1.00**.
 
-Note: This API is no longer maintained since API version 6 except for lite wearables. You are advised to use
-[batteryInfo.batterySOC](../../../../reference/apis-basic-services-kit/js-apis-battery-info.md#constants) instead.
+Note: This API is no longer maintained since API version 6 except for lite wearables. You are advised to use [batteryInfo.batterySOC](../../../../reference/apis-basic-services-kit/js-apis-battery-info.md#constants) instead.
 
 **Type:** number
 
@@ -55,6 +55,8 @@ Note: This API is no longer maintained since API version 6 except for lite weara
 **Deprecated since:** 6
 
 **Substitutes:** [batterySOC](arkts-basicservices-batteryinfo-con.md#batterysoc)
+
+<!--Device-BatteryResponse-level: number--><!--Device-BatteryResponse-level: number-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Lite
 

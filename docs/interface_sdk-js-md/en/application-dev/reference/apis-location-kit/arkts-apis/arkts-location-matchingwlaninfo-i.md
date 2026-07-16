@@ -4,6 +4,8 @@ Matching WLAN information structure.
 
 **Since:** 26.0.0
 
+<!--Device-geoLocationManager-export interface MatchingWlanInfo--><!--Device-geoLocationManager-export interface MatchingWlanInfo-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Indicates the index of the matched WLAN in the wlanBssidArray.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-MatchingWlanInfo-index: int--><!--Device-MatchingWlanInfo-index: int-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## ssid
@@ -45,6 +49,8 @@ WLAN SSID.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-MatchingWlanInfo-ssid: string--><!--Device-MatchingWlanInfo-ssid: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 

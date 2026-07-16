@@ -18,6 +18,8 @@ Sets a user operation.
 
 **Required permissions:** ohos.permission.CONNECT_MECHANIC_HARDWARE
 
+<!--Device-mechanicManager-function setUserOperation(operation: Operation, mac: string, params: string): void--><!--Device-mechanicManager-function setUserOperation(operation: Operation, mac: string, params: string): void-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Sets a user operation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| operation | Operation | Yes | Operation type. |
+| operation | [Operation](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-operation-e.md) | Yes | Operation type. |
 | mac | string | Yes | MAC address. |
 | params | string | Yes | Operation parameters. |
 

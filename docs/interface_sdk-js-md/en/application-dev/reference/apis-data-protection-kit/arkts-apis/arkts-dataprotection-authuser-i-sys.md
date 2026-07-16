@@ -4,6 +4,8 @@ Represents the user authorization information.
 
 **Since:** 21
 
+<!--Device-dlpPermission-export interface AuthUser--><!--Device-dlpPermission-export interface AuthUser-End-->
+
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **System API:** This is a system API.
@@ -20,12 +22,13 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 authAccount: string
 ```
 
-Account of the user who can access the DLP file. The value contains a maximum of 255 bytes. If the value is
-out of range, error code 401 is thrown.
+Account of the user who can access the DLP file. The value contains a maximum of 255 bytes. If the value is out of range, error code 401 is thrown.
 
 **Type:** string
 
 **Since:** 21
+
+<!--Device-AuthUser-authAccount: string--><!--Device-AuthUser-authAccount: string-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -43,6 +46,8 @@ Type of the account.
 
 **Since:** 21
 
+<!--Device-AuthUser-authAccountType: AccountType--><!--Device-AuthUser-authAccountType: AccountType-End-->
+
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **System API:** This is a system API.
@@ -59,6 +64,8 @@ Permission granted to the user.
 
 **Since:** 21
 
+<!--Device-AuthUser-dlpFileAccess: DLPFileAccess--><!--Device-AuthUser-dlpFileAccess: DLPFileAccess-End-->
+
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **System API:** This is a system API.
@@ -69,12 +76,13 @@ Permission granted to the user.
 permExpiryTime: number
 ```
 
-Time when the authorization expires. The value must be greater than or equal to 0. If the value is out of
-range, it will be forcibly converted to an unsigned integer. Unit: s.
+Time when the authorization expires. The value must be greater than or equal to 0. If the value is out of range, it will be forcibly converted to an unsigned integer. Unit: s.
 
 **Type:** number
 
 **Since:** 21
+
+<!--Device-AuthUser-permExpiryTime: number--><!--Device-AuthUser-permExpiryTime: number-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 

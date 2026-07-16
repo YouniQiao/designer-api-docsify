@@ -4,6 +4,8 @@ Returns the list of onscreen awareness information.
 
 **Since:** 23
 
+<!--Device-onScreen-export interface OnscreenAwarenessInfo--><!--Device-onScreen-export interface OnscreenAwarenessInfo-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Application index.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OnscreenAwarenessInfo-appIndex?: int--><!--Device-OnscreenAwarenessInfo-appIndex?: int-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -45,6 +49,8 @@ Application name.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OnscreenAwarenessInfo-appName?: string--><!--Device-OnscreenAwarenessInfo-appName?: string-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -64,6 +70,8 @@ Application bundle name.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OnscreenAwarenessInfo-bundleName?: string--><!--Device-OnscreenAwarenessInfo-bundleName?: string-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -74,14 +82,15 @@ Application bundle name.
 collectStrategy?: number
 ```
 
-Page collection policy, which is the bitwise OR operation combination of
-<br> [CollectStrategy](onScreen. CollectStrategy).
+Page collection policy, which is the bitwise OR operation combination of<br> [CollectStrategy](arkts-multimodalawareness-collectstrategy-e-sys.md).
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OnscreenAwarenessInfo-collectStrategy?: int--><!--Device-OnscreenAwarenessInfo-collectStrategy?: int-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -101,6 +110,8 @@ Display ID.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OnscreenAwarenessInfo-displayId?: long--><!--Device-OnscreenAwarenessInfo-displayId?: long-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -118,6 +129,8 @@ Entity information.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OnscreenAwarenessInfo-entityInfo?: EntityInfo[]--><!--Device-OnscreenAwarenessInfo-entityInfo?: EntityInfo[]-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -137,6 +150,8 @@ Data item information.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OnscreenAwarenessInfo-items?: AwarenessItem[]--><!--Device-OnscreenAwarenessInfo-items?: AwarenessItem[]-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -154,6 +169,8 @@ Page language information.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OnscreenAwarenessInfo-languageInfo?: string--><!--Device-OnscreenAwarenessInfo-languageInfo?: string-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -173,6 +190,8 @@ Applet ID, for example, the ID of WeChat or Alipay.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OnscreenAwarenessInfo-miniProgramId?: string--><!--Device-OnscreenAwarenessInfo-miniProgramId?: string-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -190,6 +209,8 @@ Name of a third-party mini program.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OnscreenAwarenessInfo-miniProgramName?: string--><!--Device-OnscreenAwarenessInfo-miniProgramName?: string-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -209,6 +230,8 @@ Application page ID.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OnscreenAwarenessInfo-pageId?: string--><!--Device-OnscreenAwarenessInfo-pageId?: string-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -226,6 +249,8 @@ Page tag information.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OnscreenAwarenessInfo-pageTags?: string[]--><!--Device-OnscreenAwarenessInfo-pageTags?: string[]-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -245,6 +270,8 @@ Return code. The default value **0** indicates success.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OnscreenAwarenessInfo-resultCode: int--><!--Device-OnscreenAwarenessInfo-resultCode: int-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -262,6 +289,8 @@ Collection record ID.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OnscreenAwarenessInfo-sampleId?: string--><!--Device-OnscreenAwarenessInfo-sampleId?: string-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -281,6 +310,8 @@ Timestamp for accessing a specified page, in milliseconds.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OnscreenAwarenessInfo-timestamp: long--><!--Device-OnscreenAwarenessInfo-timestamp: long-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -299,6 +330,8 @@ Application UID.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OnscreenAwarenessInfo-uid?: string--><!--Device-OnscreenAwarenessInfo-uid?: string-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -316,6 +349,8 @@ Window ID.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OnscreenAwarenessInfo-windowId?: int--><!--Device-OnscreenAwarenessInfo-windowId?: int-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 

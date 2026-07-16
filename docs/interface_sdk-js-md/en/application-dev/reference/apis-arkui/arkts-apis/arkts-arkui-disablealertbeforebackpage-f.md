@@ -20,6 +20,8 @@ Disables the display of a confirm dialog box before returning to the previous pa
 
 **Substitutes:** [hideAlertBeforeBackPage](arkts-arkui-router-c.md#hidealertbeforebackpage-1)
 
+<!--Device-router-function disableAlertBeforeBackPage(): void--><!--Device-router-function disableAlertBeforeBackPage(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Example**

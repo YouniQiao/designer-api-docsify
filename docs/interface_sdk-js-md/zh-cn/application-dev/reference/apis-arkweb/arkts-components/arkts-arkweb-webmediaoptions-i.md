@@ -4,6 +4,8 @@ Defines the Media Options.
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface WebMediaOptions--><!--Device-unnamed-declare interface WebMediaOptions-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## audioExclusive
@@ -18,7 +20,9 @@ Whether the audio of each web is exclusive.
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMediaOptions-audioExclusive?: boolean--><!--Device-WebMediaOptions-audioExclusive?: boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -34,6 +38,8 @@ audioSessionType?: AudioSessionType
 
 **起始版本：** 20
 
+<!--Device-WebMediaOptions-audioSessionType?: AudioSessionType--><!--Device-WebMediaOptions-audioSessionType?: AudioSessionType-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## resumeInterval
@@ -48,7 +54,9 @@ The time interval for audio playback to resume.
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMediaOptions-resumeInterval?: number--><!--Device-WebMediaOptions-resumeInterval?: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

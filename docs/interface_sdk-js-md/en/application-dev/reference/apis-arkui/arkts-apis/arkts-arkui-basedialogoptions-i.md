@@ -4,6 +4,8 @@ Defines the options of the dialog box.
 
 **Since:** 11
 
+<!--Device-promptAction-interface BaseDialogOptions--><!--Device-promptAction-interface BaseDialogOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -18,10 +20,7 @@ import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 alignment?: DialogAlignment
 ```
 
-Alignment mode of the dialog box in the vertical direction.
-<br>Default value: **DialogAlignment.Default**
-<br>**NOTE**
-<br>If **showInSubWindow** is set to **true** in **UIExtension**, the dialog box is aligned with the host window based on **UIExtension**.
+Alignment mode of the dialog box in the vertical direction.<br>Default value: **DialogAlignment.Default**<br>**NOTE**<br>If **showInSubWindow** is set to **true** in **UIExtension**, the dialog box is aligned with the host window based on **UIExtension**.
 
 **Type:** DialogAlignment
 
@@ -31,6 +30,8 @@ Alignment mode of the dialog box in the vertical direction.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BaseDialogOptions-alignment?: DialogAlignment--><!--Device-BaseDialogOptions-alignment?: DialogAlignment-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## autoCancel
@@ -39,8 +40,7 @@ Alignment mode of the dialog box in the vertical direction.
 autoCancel?: boolean
 ```
 
-Whether to dismiss the dialog box when the mask is touched. The value **true** means to dismiss the dialog
-box when the mask is touched, and **false** means the opposite.<br>Default value: **true**.
+Whether to dismiss the dialog box when the mask is touched. The value **true** means to dismiss the dialog box when the mask is touched, and **false** means the opposite.<br>Default value: **true**.
 
 **Type:** boolean
 
@@ -51,6 +51,8 @@ box when the mask is touched, and **false** means the opposite.<br>Default value
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BaseDialogOptions-autoCancel?: boolean--><!--Device-BaseDialogOptions-autoCancel?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,6 +72,8 @@ Options for customizing the background blur style. For details about the default
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-BaseDialogOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions--><!--Device-BaseDialogOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundEffect
@@ -88,6 +92,8 @@ Options for customizing the background effect. For details about the default val
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-BaseDialogOptions-backgroundEffect?: BackgroundEffectOptions--><!--Device-BaseDialogOptions-backgroundEffect?: BackgroundEffectOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## dialogTransition
@@ -105,6 +111,8 @@ Transition effect for the dialog box content. By default, there is no transition
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-BaseDialogOptions-dialogTransition?: TransitionEffect--><!--Device-BaseDialogOptions-dialogTransition?: TransitionEffect-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,6 +134,8 @@ Defines the dialog display mode when show in subwindow.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-BaseDialogOptions-displayModeInSubWindow?: DialogDisplayMode--><!--Device-BaseDialogOptions-displayModeInSubWindow?: DialogDisplayMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableHoverMode
@@ -134,15 +144,7 @@ Defines the dialog display mode when show in subwindow.
 enableHoverMode?: boolean
 ```
 
-Whether to respond when the device is in semi-folded mode. The value **true** means to respond when the device
-is in semi-folded mode.
-<br>Default value: **false**, meaning not to respond when the device is in semi-folded mode.
-<br>**NOTE**
-<br>For a PC or 2-in-1 device, the prompt is displayed on the upper half of the screen by default
-when **enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the prompt on
-the lower half of the screen. For other devices, the prompt is displayed on the lower half of the screen
-by default when **enableHoverMode** is set to **true**. You can set **hoverModeArea** to display
-the prompt on the upper half of the screen.
+Whether to respond when the device is in semi-folded mode. The value **true** means to respond when the device is in semi-folded mode.<br>Default value: **false**, meaning not to respond when the device is in semi-folded mode.<br>**NOTE**<br>For a PC or 2-in-1 device, the prompt is displayed on the upper half of the screen by default when **enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the prompt on the lower half of the screen. For other devices, the prompt is displayed on the lower half of the screen by default when **enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the prompt on the upper half of the screen.
 
 **Type:** boolean
 
@@ -154,6 +156,8 @@ the prompt on the upper half of the screen.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-BaseDialogOptions-enableHoverMode?: boolean--><!--Device-BaseDialogOptions-enableHoverMode?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## focusable
@@ -162,12 +166,7 @@ the prompt on the upper half of the screen.
 focusable?: boolean
 ```
 
-Whether the dialog box can gain focus.
-<br>**true**: The dialog box can gain focus.
-<br>**false**: The dialog box cannot gain focus.
-<br>Default value: **true**.
-<br>**NOTE**
-<br>Only dialog boxes that are displayed on top of the current window can gain focus.
+Whether the dialog box can gain focus.<br>**true**: The dialog box can gain focus.<br>**false**: The dialog box cannot gain focus.<br>Default value: **true**.<br>**NOTE**<br>Only dialog boxes that are displayed on top of the current window can gain focus.
 
 **Type:** boolean
 
@@ -179,6 +178,8 @@ Whether the dialog box can gain focus.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-BaseDialogOptions-focusable?: boolean--><!--Device-BaseDialogOptions-focusable?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## hoverModeArea
@@ -187,8 +188,7 @@ Whether the dialog box can gain focus.
 hoverModeArea?: HoverModeAreaType
 ```
 
-Display area of the dialog box in the hover state.
-<br>Default value: **HoverModeAreaType.BOTTOM_SCREEN**
+Display area of the dialog box in the hover state.<br>Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 
 **Type:** HoverModeAreaType
 
@@ -200,6 +200,8 @@ Display area of the dialog box in the hover state.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-BaseDialogOptions-hoverModeArea?: HoverModeAreaType--><!--Device-BaseDialogOptions-hoverModeArea?: HoverModeAreaType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## immersiveMode
@@ -208,10 +210,7 @@ Display area of the dialog box in the hover state.
 immersiveMode?: ImmersiveMode
 ```
 
-Overlay effect for the page-level dialog box.
-<br>**NOTE**
-<br>- Default value: **ImmersiveMode.DEFAULT**
-<br>- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
+Overlay effect for the page-level dialog box.<br>**NOTE**<br>- Default value: **ImmersiveMode.DEFAULT**<br>- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
 **Type:** ImmersiveMode
 
@@ -223,6 +222,8 @@ Overlay effect for the page-level dialog box.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-BaseDialogOptions-immersiveMode?: ImmersiveMode--><!--Device-BaseDialogOptions-immersiveMode?: ImmersiveMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## isModal
@@ -231,11 +232,7 @@ Overlay effect for the page-level dialog box.
 isModal?: boolean
 ```
 
-Whether the dialog box is a modal, which has a mask applied and does not allow for interaction with other
-components around the dialog box.
-<br>**true**: The dialog box is a modal.
-<br>**false**: The dialog box is not a modal.
-<br>Default value: **true**.
+Whether the dialog box is a modal, which has a mask applied and does not allow for interaction with other components around the dialog box.<br>**true**: The dialog box is a modal.<br>**false**: The dialog box is not a modal.<br>Default value: **true**.
 
 **Type:** boolean
 
@@ -247,6 +244,8 @@ components around the dialog box.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BaseDialogOptions-isModal?: boolean--><!--Device-BaseDialogOptions-isModal?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## keyboardAvoidDistance
@@ -255,11 +254,7 @@ components around the dialog box.
 keyboardAvoidDistance?: LengthMetrics
 ```
 
-Distance between the dialog box and the keyboard after keyboard avoidance is applied.
-<br>**NOTE**
-<br>- Default value: **16vp**
-<br>- Default unit: vp
-<br>- This parameter takes effect only when **keyboardAvoidMode** is set to **DEFAULT**.
+Distance between the dialog box and the keyboard after keyboard avoidance is applied.<br>**NOTE**<br>- Default value: **16vp**<br>- Default unit: vp<br>- This parameter takes effect only when **keyboardAvoidMode** is set to **DEFAULT**.
 
 **Type:** LengthMetrics
 
@@ -269,6 +264,8 @@ Distance between the dialog box and the keyboard after keyboard avoidance is app
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-BaseDialogOptions-keyboardAvoidDistance?: LengthMetrics--><!--Device-BaseDialogOptions-keyboardAvoidDistance?: LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## keyboardAvoidMode
@@ -277,8 +274,7 @@ Distance between the dialog box and the keyboard after keyboard avoidance is app
 keyboardAvoidMode?: KeyboardAvoidMode
 ```
 
-How the dialog box avoids the soft keyboard when it is brought up.
-<br>Default value: **KeyboardAvoidMode.DEFAULT**
+How the dialog box avoids the soft keyboard when it is brought up.<br>Default value: **KeyboardAvoidMode.DEFAULT**
 
 **Type:** KeyboardAvoidMode
 
@@ -290,6 +286,8 @@ How the dialog box avoids the soft keyboard when it is brought up.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BaseDialogOptions-keyboardAvoidMode?: KeyboardAvoidMode--><!--Device-BaseDialogOptions-keyboardAvoidMode?: KeyboardAvoidMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## levelMode
@@ -298,10 +296,7 @@ How the dialog box avoids the soft keyboard when it is brought up.
 levelMode?: LevelMode
 ```
 
-Display level of the dialog box.
-<br>**NOTE**
-<br>- Default value: **LevelMode.OVERLAY**
-<br>- This parameter takes effect only when **showInSubWindow** is set to **false**.
+Display level of the dialog box.<br>**NOTE**<br>- Default value: **LevelMode.OVERLAY**<br>- This parameter takes effect only when **showInSubWindow** is set to **false**.
 
 **Type:** LevelMode
 
@@ -313,6 +308,8 @@ Display level of the dialog box.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-BaseDialogOptions-levelMode?: LevelMode--><!--Device-BaseDialogOptions-levelMode?: LevelMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## levelOrder
@@ -321,10 +318,7 @@ Display level of the dialog box.
 levelOrder?: LevelOrder
 ```
 
-Display order of the dialog box.
-<br>**NOTE**
-<br>- Default value: **LevelOrder.clamp(0)**
-<br>- Dynamic updating is not supported.
+Display order of the dialog box.<br>**NOTE**<br>- Default value: **LevelOrder.clamp(0)**<br>- Dynamic updating is not supported.
 
 **Type:** LevelOrder
 
@@ -336,6 +330,8 @@ Display order of the dialog box.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-BaseDialogOptions-levelOrder?: LevelOrder--><!--Device-BaseDialogOptions-levelOrder?: LevelOrder-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## levelUniqueId
@@ -344,10 +340,7 @@ Display order of the dialog box.
 levelUniqueId?: number
 ```
 
-[Unique ID](js-apis-arkui-frameNode.md#getuniqueid12) of the node under the display level for the page-level dialog box.
-<br>Value range: a number no less than 0
-<br>**NOTE**
-<br>- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
+[Unique ID](js-apis-arkui-frameNode.md#getuniqueid12) of the node under the display level for the page-level dialog box.<br>Value range: a number no less than 0<br>**NOTE**<br>- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
 **Type:** number
 
@@ -357,6 +350,8 @@ levelUniqueId?: number
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-BaseDialogOptions-levelUniqueId?: number--><!--Device-BaseDialogOptions-levelUniqueId?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## maskColor
@@ -365,8 +360,7 @@ levelUniqueId?: number
 maskColor?: ResourceColor
 ```
 
-Mask color.
-<br>Default value: **0x33000000**
+Mask color.<br>Default value: **0x33000000**
 
 **Type:** ResourceColor
 
@@ -376,6 +370,8 @@ Mask color.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BaseDialogOptions-maskColor?: ResourceColor--><!--Device-BaseDialogOptions-maskColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## maskRect
@@ -384,12 +380,7 @@ Mask color.
 maskRect?: Rectangle
 ```
 
-Mask area.
-<br>Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**
-<br>**NOTE**
-<br>**maskRect** does not take effect when **showInSubWindow** is set to **true**.
-<br>If only some properties in [Rectangle](arkui-ts/ts-methods-alert-dialog-box.md#rectangle8) are set,
-the unset properties default to 0.
+Mask area.<br>Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**<br>**NOTE**<br>**maskRect** does not take effect when **showInSubWindow** is set to **true**.<br>If only some properties in [Rectangle](arkui-ts/ts-methods-alert-dialog-box.md#rectangle8) are set,the unset properties default to 0.
 
 **Type:** Rectangle
 
@@ -398,6 +389,8 @@ the unset properties default to 0.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BaseDialogOptions-maskRect?: Rectangle--><!--Device-BaseDialogOptions-maskRect?: Rectangle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -417,6 +410,8 @@ Transition effect for the mask. By default, there is no transition effect.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-BaseDialogOptions-maskTransition?: TransitionEffect--><!--Device-BaseDialogOptions-maskTransition?: TransitionEffect-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## offset
@@ -425,8 +420,7 @@ Transition effect for the mask. By default, there is no transition effect.
 offset?: Offset
 ```
 
-Offset of the dialog box based on the **alignment** settings.
-<br>Default value: **{&nbsp;dx:&nbsp;0&nbsp;,&nbsp;dy:&nbsp;0&nbsp;}**
+Offset of the dialog box based on the **alignment** settings.<br>Default value: **{&nbsp;dx:&nbsp;0&nbsp;,&nbsp;dy:&nbsp;0&nbsp;}**
 
 **Type:** Offset
 
@@ -436,6 +430,8 @@ Offset of the dialog box based on the **alignment** settings.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BaseDialogOptions-offset?: Offset--><!--Device-BaseDialogOptions-offset?: Offset-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onDidAppear
@@ -444,14 +440,8 @@ Offset of the dialog box based on the **alignment** settings.
 onDidAppear?: () => void
 ```
 
-Event callback after the dialog box appears.
-<br>**NOTE**
-<br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange)
-> onWillDisappear > onDidDisappear.
-<br>2. You can set the callback event for changing the dialog box display effect in **onDidAppear**.
-The settings take effect next time the dialog box appears.
-<br>3. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.
-<br>4. If the dialog box is dismissed before its appearance animation is finished, this callback is not invoked.
+Event callback after the dialog box appears.<br>**NOTE**<br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange)  
+> onWillDisappear > onDidDisappear.<br>2. You can set the callback event for changing the dialog box display effect in **onDidAppear**.The settings take effect next time the dialog box appears.<br>3. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.<br>4. If the dialog box is dismissed before its appearance animation is finished, this callback is not invoked.
 
 **Type:** () => void
 
@@ -460,6 +450,8 @@ The settings take effect next time the dialog box appears.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BaseDialogOptions-onDidAppear?: () => void--><!--Device-BaseDialogOptions-onDidAppear?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -469,11 +461,8 @@ The settings take effect next time the dialog box appears.
 onDidDisappear?: () => void
 ```
 
-Event callback after the dialog box disappears.
-<br>**NOTE**
-<br>The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange)
-> onWillDisappear > onDidDisappear.
-<br>This callback is not triggered if the dialog box disappearance animation is interrupted (for example, by page navigation).
+Event callback after the dialog box disappears.<br>**NOTE**<br>The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange)  
+> onWillDisappear > onDidDisappear.<br>This callback is not triggered if the dialog box disappearance animation is interrupted (for example, by page navigation).
 
 **Type:** () => void
 
@@ -482,6 +471,8 @@ Event callback after the dialog box disappears.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BaseDialogOptions-onDidDisappear?: () => void--><!--Device-BaseDialogOptions-onDidDisappear?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -491,12 +482,8 @@ Event callback after the dialog box disappears.
 onWillAppear?: () => void
 ```
 
-Event callback when the dialog box is about to appear.
-<br>**NOTE**
-<br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange)
-> onWillDisappear > onDidDisappear.
-<br>2. You can set the callback event for changing the dialog box display effect in **onWillAppear**.
-The settings take effect next time the dialog box appears.
+Event callback when the dialog box is about to appear.<br>**NOTE**<br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange)  
+> onWillDisappear > onDidDisappear.<br>2. You can set the callback event for changing the dialog box display effect in **onWillAppear**.The settings take effect next time the dialog box appears.
 
 **Type:** () => void
 
@@ -505,6 +492,8 @@ The settings take effect next time the dialog box appears.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BaseDialogOptions-onWillAppear?: () => void--><!--Device-BaseDialogOptions-onWillAppear?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -514,11 +503,8 @@ The settings take effect next time the dialog box appears.
 onWillDisappear?: () => void
 ```
 
-Event callback when the dialog box is about to disappear.
-<br>**NOTE**
-<br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange)
-> onWillDisappear > onDidDisappear.
-<br>2. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.
+Event callback when the dialog box is about to disappear.<br>**NOTE**<br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange)  
+> onWillDisappear > onDidDisappear.<br>2. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.
 
 **Type:** () => void
 
@@ -528,6 +514,8 @@ Event callback when the dialog box is about to disappear.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BaseDialogOptions-onWillDisappear?: () => void--><!--Device-BaseDialogOptions-onWillDisappear?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onWillDismiss
@@ -536,13 +524,7 @@ Event callback when the dialog box is about to disappear.
 onWillDismiss?: Callback<DismissDialogAction>
 ```
 
-Callback for interactive dismissal of the dialog box.
-<br>**NOTE**
-<br>1. If this callback is registered, the dialog box will not be dismissed immediately after the user touches
-the mask or the Back button, presses the Esc key, or swipes left or right on the screen.
-The **reason** parameter in the callback is used to determine whether the dialog box can be dismissed.
-The reason returned by the component does not support the value **CLOSE_BUTTON**.
-<br>2. In the **onWillDismiss** callback, another **onWillDismiss** callback is not allowed.
+Callback for interactive dismissal of the dialog box.<br>**NOTE**<br>1. If this callback is registered, the dialog box will not be dismissed immediately after the user touches the mask or the Back button, presses the Esc key, or swipes left or right on the screen.The **reason** parameter in the callback is used to determine whether the dialog box can be dismissed.The reason returned by the component does not support the value **CLOSE_BUTTON**.<br>2. In the **onWillDismiss** callback, another **onWillDismiss** callback is not allowed.
 
 **Type:** Callback<DismissDialogAction>
 
@@ -552,6 +534,8 @@ The reason returned by the component does not support the value **CLOSE_BUTTON**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BaseDialogOptions-onWillDismiss?: Callback<DismissDialogAction>--><!--Device-BaseDialogOptions-onWillDismiss?: Callback<DismissDialogAction>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## showInSubWindow
@@ -560,9 +544,7 @@ The reason returned by the component does not support the value **CLOSE_BUTTON**
 showInSubWindow?: boolean
 ```
 
-Whether to show the dialog box in a subwindow when the dialog box needs to be displayed outside the main window.
-<br>**true**: The dialog box is shown in a subwindow.
-<br>Default value: **false**, meaning the dialog box is displayed within the application, not in a separate subwindow
+Whether to show the dialog box in a subwindow when the dialog box needs to be displayed outside the main window.<br>**true**: The dialog box is shown in a subwindow.<br>Default value: **false**, meaning the dialog box is displayed within the application, not in a separate subwindow
 
 **Type:** boolean
 
@@ -574,6 +556,8 @@ Whether to show the dialog box in a subwindow when the dialog box needs to be di
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BaseDialogOptions-showInSubWindow?: boolean--><!--Device-BaseDialogOptions-showInSubWindow?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## systemMaterial
@@ -582,8 +566,7 @@ Whether to show the dialog box in a subwindow when the dialog box needs to be di
 systemMaterial?: SystemUiMaterial
 ```
 
-System material of the dialog box. Different materials have different effects and can affect visual attributes
-such as the background color, border, and shadow of the dialog box.
+System material of the dialog box. Different materials have different effects and can affect visual attributes such as the background color, border, and shadow of the dialog box.
 
 **Type:** SystemUiMaterial
 
@@ -593,6 +576,8 @@ such as the background color, border, and shadow of the dialog box.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-BaseDialogOptions-systemMaterial?: SystemUiMaterial--><!--Device-BaseDialogOptions-systemMaterial?: SystemUiMaterial-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## transition
@@ -601,13 +586,7 @@ such as the background color, border, and shadow of the dialog box.
 transition?: TransitionEffect
 ```
 
-Transition effect for the appearance and disappearance of the dialog box.<br>**NOTE**
-<br> 1. If this parameter is not set, the default effect is used.
-<br> 2. Touching the Back button during the appearance animation pauses the appearance animation and starts
-the disappearance animation. The final effect is one obtained after the curves of the appearance and
-disappearance animations are combined.
-<br> 3. Touching the Back button during the exit animation does not affect the animation playback.
-Touching the Back button again closes the application.
+Transition effect for the appearance and disappearance of the dialog box.<br>**NOTE**<br> 1. If this parameter is not set, the default effect is used.<br> 2. Touching the Back button during the appearance animation pauses the appearance animation and starts the disappearance animation. The final effect is one obtained after the curves of the appearance and disappearance animations are combined.<br> 3. Touching the Back button during the exit animation does not affect the animation playback.Touching the Back button again closes the application.
 
 **Type:** TransitionEffect
 
@@ -616,6 +595,8 @@ Touching the Back button again closes the application.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BaseDialogOptions-transition?: TransitionEffect--><!--Device-BaseDialogOptions-transition?: TransitionEffect-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

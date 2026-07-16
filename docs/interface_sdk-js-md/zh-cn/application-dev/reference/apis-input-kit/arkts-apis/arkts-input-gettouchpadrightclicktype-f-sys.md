@@ -1,5 +1,11 @@
 # getTouchpadRightClickType（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+```
+
 ## getTouchpadRightClickType
 
 ```TypeScript
@@ -10,6 +16,8 @@ function getTouchpadRightClickType(callback: AsyncCallback<RightClickType>): voi
 
 **起始版本：** 10
 
+<!--Device-pointer-function getTouchpadRightClickType(callback: AsyncCallback<RightClickType>): void--><!--Device-pointer-function getTouchpadRightClickType(callback: AsyncCallback<RightClickType>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -18,7 +26,7 @@ function getTouchpadRightClickType(callback: AsyncCallback<RightClickType>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;RightClickType&gt; | 是 | 回调函数。当获取触控板右键菜单类型成功，err为undefined，对象是触控板右键菜单类型；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<RightClickType> | 是 | 回调函数。当获取触控板右键菜单类型成功，err为undefined，对象是触控板右键菜单类型；否则为错误对象。 |
 
 **错误码：**
 
@@ -70,6 +78,8 @@ function getTouchpadRightClickType(): Promise<RightClickType>
 
 **起始版本：** 10
 
+<!--Device-pointer-function getTouchpadRightClickType(): Promise<RightClickType>--><!--Device-pointer-function getTouchpadRightClickType(): Promise<RightClickType>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -78,7 +88,7 @@ function getTouchpadRightClickType(): Promise<RightClickType>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;RightClickType&gt; | Promise对象，返回触控板右键菜单类型。 |
+| Promise<RightClickType> | Promise对象，返回触控板右键菜单类型。 |
 
 **错误码：**
 

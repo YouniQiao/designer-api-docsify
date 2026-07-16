@@ -2,16 +2,18 @@
 
 This module defines a struct for setting typeface arguments.
 
-> **NOTE**
->
-> - The initial APIs of this class are supported since API version 20.
->
-> - This module uses the physical pixel unit, px.
->
-> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
+> **NOTE**  
+>  
+> - The initial APIs of this class are supported since API version 20.  
+>  
+> - This module uses the physical pixel unit, px.  
+>  
+> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state  
 > transitions.
 
 **Since:** 20
+
+<!--Device-drawing-class TypefaceArguments--><!--Device-drawing-class TypefaceArguments-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -32,6 +34,8 @@ Defines the typeface weight.
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TypefaceArguments-addVariation(axis: string, value: number)--><!--Device-TypefaceArguments-addVariation(axis: string, value: number)-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -59,6 +63,8 @@ Constructor for typeface arguments.
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TypefaceArguments-constructor()--><!--Device-TypefaceArguments-constructor()-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

@@ -4,6 +4,8 @@ Implements event listening.
 
 **Since:** 9
 
+<!--Device-unnamed-export interface WorkerEventListener--><!--Device-unnamed-export interface WorkerEventListener-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Specifies the callback function to be invoked.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WorkerEventListener-(event: Event): void | Promise<void>--><!--Device-WorkerEventListener-(event: Event): void | Promise<void>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Event | Yes | Event class for the callback to invoke. |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-event-c.md) | Yes | Event class for the callback to invoke. |
 
 **Error codes:**
 

@@ -12,10 +12,11 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 function disableGwpAsanGrayscale(): void
 ```
 
-Disables GWP-ASan. This API is used to cancel the custom configuration and restore the default parameter
-[GwpAsanOptions](arkts-performanceanalysis-gwpasanoptions-i.md).
+Disables GWP-ASan. This API is used to cancel the custom configuration and restore the default parameter [GwpAsanOptions](arkts-performanceanalysis-gwpasanoptions-i.md).
 
 **Since:** 20
+
+<!--Device-hidebug-function disableGwpAsanGrayscale(): void--><!--Device-hidebug-function disableGwpAsanGrayscale(): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 

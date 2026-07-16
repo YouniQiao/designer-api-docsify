@@ -1,5 +1,11 @@
 # queryHolders
 
+## 导入模块
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+```
+
 ## queryHolders
 
 ```TypeScript
@@ -16,13 +22,15 @@ function queryHolders(callback: AsyncCallback<Array<Holder>>): void
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryHolders(callback: AsyncCallback<Array<Holder>>): void--><!--Device-contact-function queryHolders(callback: AsyncCallback<Array<Holder>>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;Holder&gt;&gt; | 是 | 回调函数。成功返回查询到的创建联系人应用信息的对象数组；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Holder>> | 是 | 回调函数。成功返回查询到的创建联系人应用信息的对象数组；失败返回具体的错误码信息。 |
 
 **示例：**
 
@@ -53,14 +61,16 @@ function queryHolders(context: Context, callback: AsyncCallback<Array<Holder>>):
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryHolders(context: Context, callback: AsyncCallback<Array<Holder>>): void--><!--Device-contact-function queryHolders(context: Context, callback: AsyncCallback<Array<Holder>>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文Context。 |
-| callback | AsyncCallback&lt;Array&lt;Holder&gt;&gt; | 是 | 回调函数。成功返回查询到的创建联系人应用信息的对象数组；失败返回具体的错误码信息。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Holder>> | 是 | 回调函数。成功返回查询到的创建联系人应用信息的对象数组；失败返回具体的错误码信息。 |
 
 **错误码：**
 
@@ -107,13 +117,15 @@ function queryHolders(): Promise<Array<Holder>>
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryHolders(): Promise<Array<Holder>>--><!--Device-contact-function queryHolders(): Promise<Array<Holder>>-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Holder&gt;&gt; | Promise对象。返回查询到的创建联系人应用信息的对象数组。 |
+| Promise<Array<Holder>> | Promise对象。返回查询到的创建联系人应用信息的对象数组。 |
 
 **示例：**
 
@@ -140,19 +152,21 @@ function queryHolders(context: Context): Promise<Array<Holder>>
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryHolders(context: Context): Promise<Array<Holder>>--><!--Device-contact-function queryHolders(context: Context): Promise<Array<Holder>>-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文Context。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Holder&gt;&gt; | Promise对象。返回查询到的创建联系人应用信息的对象数组。 |
+| Promise<Array<Holder>> | Promise对象。返回查询到的创建联系人应用信息的对象数组。 |
 
 **错误码：**
 

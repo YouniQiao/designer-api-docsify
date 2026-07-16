@@ -18,6 +18,8 @@ Subscribe Wi-Fi stream change events.
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_CONNECTION
 
+<!--Device-wifiManager-function on(type: 'streamChange', callback: Callback<number>): void--><!--Device-wifiManager-function on(type: 'streamChange', callback: Callback<number>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Subscribe Wi-Fi stream change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'streamChange' | Yes | event name. |
-| callback | Callback&lt;number&gt; | Yes | the callback of on, 1: stream down, 2: stream up, 3: stream bidirectional |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | Yes | the callback of on, 1: stream down, 2: stream up, 3: stream bidirectional |
 
 **Error codes:**
 
@@ -52,6 +54,8 @@ Subscribe Wi-Fi device config change events.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function on(type: 'deviceConfigChange', callback: Callback<number>): void--><!--Device-wifiManager-function on(type: 'deviceConfigChange', callback: Callback<number>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -61,7 +65,7 @@ Subscribe Wi-Fi device config change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceConfigChange' | Yes | event name. |
-| callback | Callback&lt;number&gt; | Yes | the callback of on, 0: config is added, 1: config is changed, 2: config is removed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | Yes | the callback of on, 0: config is added, 1: config is changed, 2: config is removed. |
 
 **Error codes:**
 
@@ -86,6 +90,8 @@ Subscribe Wi-Fi hotspot sta join events.
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
 
+<!--Device-wifiManager-function on(type: 'hotspotStaJoin', callback: Callback<StationInfo>): void--><!--Device-wifiManager-function on(type: 'hotspotStaJoin', callback: Callback<StationInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
 **System API:** This is a system API.
@@ -95,7 +101,7 @@ Subscribe Wi-Fi hotspot sta join events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hotspotStaJoin' | Yes | event name. |
-| callback | Callback&lt;StationInfo&gt; | Yes | the callback of on |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<StationInfo> | Yes | the callback of on |
 
 **Error codes:**
 
@@ -120,6 +126,8 @@ Subscribe Wi-Fi hotspot sta leave events.
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
 
+<!--Device-wifiManager-function on(type: 'hotspotStaLeave', callback: Callback<StationInfo>): void--><!--Device-wifiManager-function on(type: 'hotspotStaLeave', callback: Callback<StationInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
 **System API:** This is a system API.
@@ -129,7 +137,7 @@ Subscribe Wi-Fi hotspot sta leave events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hotspotStaLeave' | Yes | event name. |
-| callback | Callback&lt;StationInfo&gt; | Yes | the callback of on |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<StationInfo> | Yes | the callback of on |
 
 **Error codes:**
 

@@ -6,5 +6,7 @@ Defines directional light.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface DirectionalLight extends Light--><!--Device-unnamed-export interface DirectionalLight extends Light-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

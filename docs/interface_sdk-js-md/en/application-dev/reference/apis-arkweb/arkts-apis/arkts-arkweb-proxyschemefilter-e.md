@@ -4,6 +4,8 @@ Enum type supplied to {@link insertProxyRule} for indicating the scheme filter f
 
 **Since:** 15
 
+<!--Device-webview-enum ProxySchemeFilter--><!--Device-webview-enum ProxySchemeFilter-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## MATCH_ALL_SCHEMES
@@ -17,6 +19,8 @@ This indicates all the schemes will use the proxy.
 **Since:** 15
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-ProxySchemeFilter-MATCH_ALL_SCHEMES = 0--><!--Device-ProxySchemeFilter-MATCH_ALL_SCHEMES = 0-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,6 +36,8 @@ This indicates only the HTTP requests will use the proxy.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-ProxySchemeFilter-MATCH_HTTP = 1--><!--Device-ProxySchemeFilter-MATCH_HTTP = 1-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## MATCH_HTTPS
@@ -45,6 +51,8 @@ This indicates only the HTTPS requests will use the proxy.
 **Since:** 15
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-ProxySchemeFilter-MATCH_HTTPS = 2--><!--Device-ProxySchemeFilter-MATCH_HTTPS = 2-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

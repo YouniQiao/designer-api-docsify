@@ -1,5 +1,11 @@
 # setAutoTimeStatus（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { systemDateTime } from '@kit.BasicServicesKit';
+```
+
 ## setAutoTimeStatus
 
 ```TypeScript
@@ -11,6 +17,8 @@ function setAutoTimeStatus(status: boolean): Promise<void>
 **起始版本：** 21
 
 **需要权限：** ohos.permission.SET_TIME
+
+<!--Device-systemDateTime-function setAutoTimeStatus(status: boolean): Promise<void>--><!--Device-systemDateTime-function setAutoTimeStatus(status: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
 
@@ -26,7 +34,7 @@ function setAutoTimeStatus(status: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

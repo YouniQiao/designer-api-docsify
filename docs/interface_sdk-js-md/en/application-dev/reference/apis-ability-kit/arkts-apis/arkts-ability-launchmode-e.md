@@ -1,8 +1,8 @@
 # LaunchMode
 
-> **NOTE**
->
-> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use  
 > [bundleManager.LaunchType](arkts-ability-launchtype-e.md) instead.
 
 Enumerates the ability launch modes.
@@ -12,6 +12,8 @@ Enumerates the ability launch modes.
 **Deprecated since:** 9
 
 **Substitutes:** [LaunchType](arkts-ability-launchtype-e.md)
+
+<!--Device-bundle-export enum LaunchMode--><!--Device-bundle-export enum LaunchMode-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -29,6 +31,8 @@ The ability has only one instance.
 
 **Substitutes:** SINGLETON
 
+<!--Device-LaunchMode-SINGLETON = 0--><!--Device-LaunchMode-SINGLETON = 0-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## STANDARD
@@ -44,6 +48,8 @@ The ability can have multiple instances.
 **Deprecated since:** 9
 
 **Substitutes:** MULTITON
+
+<!--Device-LaunchMode-STANDARD = 1--><!--Device-LaunchMode-STANDARD = 1-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 

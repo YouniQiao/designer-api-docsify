@@ -1,9 +1,10 @@
 # InputMethodListDialog
 
-InputMethodListDialog({controller: CustomDialogController, patternOptions?: PatternOptions})
-Implements a dialog box showing the input method list.
+InputMethodListDialog({controller: CustomDialogController, patternOptions?: PatternOptions})Implements a dialog box showing the input method list.
 
 **Since:** 11
+
+<!--Device-unnamed-export declare struct InputMethodListDialog--><!--Device-unnamed-export declare struct InputMethodListDialog-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -25,6 +26,8 @@ Sets the controller.
 
 **Since:** 11
 
+<!--Device-InputMethodListDialog-controller: CustomDialogController--><!--Device-InputMethodListDialog-controller: CustomDialogController-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## patternOptions
@@ -38,6 +41,8 @@ Sets the pattern options. This parameter can be left blank when it is not defaul
 **Type:** PatternOptions
 
 **Since:** 11
+
+<!--Device-InputMethodListDialog-patternOptions?: PatternOptions--><!--Device-InputMethodListDialog-patternOptions?: PatternOptions-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 

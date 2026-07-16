@@ -20,6 +20,8 @@ Stops screen hopping. This API uses an asynchronous callback to return the resul
 
 **Substitutes:** deactivateCooperate
 
+<!--Device-inputDeviceCooperate-function stop(callback: AsyncCallback<void>): void--><!--Device-inputDeviceCooperate-function stop(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Cooperator
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Stops screen hopping. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback. If the operation is successful, **err** is **undefined**.Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback. If the operation is successful, **err** is **undefined**.Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -83,6 +85,8 @@ Stops screen hopping. This API uses a promise to return the result.
 
 **Substitutes:** deactivateCooperate
 
+<!--Device-inputDeviceCooperate-function stop(): Promise<void>--><!--Device-inputDeviceCooperate-function stop(): Promise<void>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Cooperator
 
 **System API:** This is a system API.
@@ -91,7 +95,7 @@ Stops screen hopping. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

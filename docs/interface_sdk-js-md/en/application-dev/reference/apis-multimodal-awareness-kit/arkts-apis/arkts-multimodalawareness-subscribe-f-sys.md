@@ -19,6 +19,10 @@ Subscribes to user status monitoring.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-userStatus-function subscribe(featureId: UserStatusFeature, callback: Callback<UserStatusData>,
+    deviceInfo?: DeviceInfo[]): int--><!--Device-userStatus-function subscribe(featureId: UserStatusFeature, callback: Callback<UserStatusData>,
+    deviceInfo?: DeviceInfo[]): int-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
@@ -27,9 +31,9 @@ Subscribes to user status monitoring.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| featureId | UserStatusFeature | Yes | Indicates the feature to be subscribed to. |
-| callback | Callback&lt;UserStatusData&gt; | Yes | Callback used to return user status data. |
-| deviceInfo | DeviceInfo[] | No | List of devices to enable user status monitoring. |
+| featureId | [UserStatusFeature](arkts-multimodalawareness-userstatusfeature-e-sys.md) | Yes | Indicates the feature to be subscribed to. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<UserStatusData> | Yes | Callback used to return user status data. |
+| deviceInfo | [DeviceInfo](../../apis-avsession-kit/arkts-apis/arkts-avsession-deviceinfo-i-sys.md)[] | No | List of devices to enable user status monitoring. |
 
 **Return value:**
 

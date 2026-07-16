@@ -16,16 +16,18 @@ function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAg
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
+<!--Device-backgroundTaskManager-function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent, callback: AsyncCallback<void>): void--><!--Device-backgroundTaskManager-function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用运行的上下文。<br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 |
-| bgMode | BackgroundMode | 是 | 向系统申请的后台模式。 |
-| wantAgent | WantAgent | 是 | 通知参数，用于指定长时任务通知点击后跳转的界面。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，申请长时任务成功时，err为undefined，否则为错误对象。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用运行的上下文。<br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 |
+| bgMode | [BackgroundMode](arkts-backgroundtasks-backgroundmode-e.md) | 是 | 向系统申请的后台模式。 |
+| wantAgent | [WantAgent](arkts-backgroundtasks-wantagent-i.md) | 是 | 通知参数，用于指定长时任务通知点击后跳转的界面。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，申请长时任务成功时，err为undefined，否则为错误对象。 |
 
 **示例：**
 
@@ -123,21 +125,23 @@ function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAg
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
+<!--Device-backgroundTaskManager-function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent): Promise<void>--><!--Device-backgroundTaskManager-function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent): Promise<void>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | - 应用运行的上下文。<br>FA模型的应用Context定义见[Context]{@link./app/context}。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 |
-| bgMode | BackgroundMode | 是 | 向系统申请的后台模式。 |
-| wantAgent | WantAgent | 是 | 通知参数，用于指定长时任务通知点击跳转的界面。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | - 应用运行的上下文。<br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 |
+| bgMode | [BackgroundMode](arkts-backgroundtasks-backgroundmode-e.md) | 是 | 向系统申请的后台模式。 |
+| wantAgent | [WantAgent](arkts-backgroundtasks-wantagent-i.md) | 是 | 通知参数，用于指定长时任务通知点击跳转的界面。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **示例：**
 

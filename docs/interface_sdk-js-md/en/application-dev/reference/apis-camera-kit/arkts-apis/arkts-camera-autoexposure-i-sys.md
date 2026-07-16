@@ -1,11 +1,12 @@
 # AutoExposure
 
-AutoExposure inherits from [AutoExposureQuery](arkts-camera-autoexposurequery-i.md).
-It provides APIs related to auto exposure.
+AutoExposure inherits from [AutoExposureQuery](arkts-camera-autoexposurequery-i.md).It provides APIs related to auto exposure.
 
 **Inheritance/Implementation:** AutoExposure extends [AutoExposureQuery](arkts-camera-autoexposurequery-i.md)
 
 **Since:** 11
+
+<!--Device-camera-interface AutoExposure extends AutoExposureQuery--><!--Device-camera-interface AutoExposure extends AutoExposureQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -27,6 +28,8 @@ Gets current exposure metering mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-AutoExposure-getExposureMeteringMode(): ExposureMeteringMode--><!--Device-AutoExposure-getExposureMeteringMode(): ExposureMeteringMode-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -35,7 +38,7 @@ Gets current exposure metering mode.
 
 | Type | Description |
 | --- | --- |
-| ExposureMeteringMode | The current exposure metering mode. |
+| [ExposureMeteringMode](arkts-camera-exposuremeteringmode-e-sys.md) | The current exposure metering mode. |
 
 **Error codes:**
 
@@ -57,6 +60,8 @@ Sets exposure metering mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-AutoExposure-setExposureMeteringMode(aeMeteringMode: ExposureMeteringMode): void--><!--Device-AutoExposure-setExposureMeteringMode(aeMeteringMode: ExposureMeteringMode): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -65,7 +70,7 @@ Sets exposure metering mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aeMeteringMode | ExposureMeteringMode | Yes | Exposure metering mode. |
+| aeMeteringMode | [ExposureMeteringMode](arkts-camera-exposuremeteringmode-e-sys.md) | Yes | Exposure metering mode. |
 
 **Error codes:**
 

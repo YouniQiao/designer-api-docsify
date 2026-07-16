@@ -4,6 +4,8 @@ Indicates the permission status.
 
 **Since:** 26.0.0
 
+<!--Device-abilityAccessCtrl-interface PermissionStatusInfo--><!--Device-abilityAccessCtrl-interface PermissionStatusInfo-End-->
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -20,28 +22,26 @@ import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
 grantFlags: number
 ```
 
-Permission flags. The value range is as follows:
-- 0: The permission is not set by the user.
-- 1: The permission is set by the user. If the permission is not granted, a permission dialog box can be
-displayed again to request authorization.
-- 2: The permission is set by the user. If the permission is not granted, a permission dialog box cannot be
-displayed again to request authorization. The user needs to grant the permission in system settings.
-- 4: The permission is set by the system.
-- 8: The permission is pre-granted by the system and can be revoked.
-- 16: The permission is set by a security control.
-- 32: The permission is fixed by a security policy. The user cannot grant or revoke it.
-- 64: The permission is allowed only when the app is in the foreground during the current lifecycle.
-- 128: The permission is fixed by an administrator policy. The user cannot grant or revoke it, but the
-administrator can unfix it.
-- 256: The permission is unfixed by an administrator policy. The user can grant or revoke it.
-- 512: The permission is restricted by a user policy.
-The value should be an integer.
+Permission flags. The value range is as follows:  
+- 0: The permission is not set by the user.  
+- 1: The permission is set by the user. If the permission is not granted, a permission dialog box can be displayed again to request authorization.  
+- 2: The permission is set by the user. If the permission is not granted, a permission dialog box cannot be displayed again to request authorization. The user needs to grant the permission in system settings.  
+- 4: The permission is set by the system.  
+- 8: The permission is pre-granted by the system and can be revoked.  
+- 16: The permission is set by a security control.  
+- 32: The permission is fixed by a security policy. The user cannot grant or revoke it.  
+- 64: The permission is allowed only when the app is in the foreground during the current lifecycle.  
+- 128: The permission is fixed by an administrator policy. The user cannot grant or revoke it, but the administrator can unfix it.  
+- 256: The permission is unfixed by an administrator policy. The user can grant or revoke it.  
+- 512: The permission is restricted by a user policy.The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PermissionStatusInfo-grantFlags: int--><!--Device-PermissionStatusInfo-grantFlags: int-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -61,6 +61,8 @@ Permission authorization status.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PermissionStatusInfo-grantStatus: GrantStatus--><!--Device-PermissionStatusInfo-grantStatus: GrantStatus-End-->
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -71,15 +73,15 @@ Permission authorization status.
 grantTimestamp?: number
 ```
 
-Timestamp of the authorization status change. This is an optional field and is returned when the
-permission status changes.
-Unit: milliseconds.
+Timestamp of the authorization status change. This is an optional field and is returned when the permission status changes.Unit: milliseconds.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PermissionStatusInfo-grantTimestamp?: long--><!--Device-PermissionStatusInfo-grantTimestamp?: long-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -99,6 +101,8 @@ Permission name.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PermissionStatusInfo-permissionName: Permissions--><!--Device-PermissionStatusInfo-permissionName: Permissions-End-->
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -109,14 +113,15 @@ Permission name.
 tokenID: number
 ```
 
-Application ID.
-The value should be an integer.
+Application ID.The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PermissionStatusInfo-tokenID: int--><!--Device-PermissionStatusInfo-tokenID: int-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 

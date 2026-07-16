@@ -4,6 +4,8 @@ WebGL 1.0
 
 **Since:** 7
 
+<!--Device-unnamed-interface WebGLRenderingContextOverloads--><!--Device-unnamed-interface WebGLRenderingContextOverloads-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 ## bufferData
@@ -18,15 +20,17 @@ Sets buffer data
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGLRenderingContextOverloads-bufferData(target: GLenum, size: GLsizeiptr, usage: GLenum): void--><!--Device-WebGLRenderingContextOverloads-bufferData(target: GLenum, size: GLsizeiptr, usage: GLenum): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | GLenum | Yes | Buffer target |
-| size | GLsizeiptr | Yes | Buffer size |
-| usage | GLenum | Yes | Buffer usage |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer target |
+| size | [GLsizeiptr](arkts-arkgraphics2d-glsizeiptr-t.md) | Yes | Buffer size |
+| usage | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer usage |
 
 ## bufferData
 
@@ -40,15 +44,17 @@ Sets buffer data from BufferSource
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGLRenderingContextOverloads-bufferData(target: GLenum, data: BufferSource | null, usage: GLenum): void--><!--Device-WebGLRenderingContextOverloads-bufferData(target: GLenum, data: BufferSource | null, usage: GLenum): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | GLenum | Yes | Buffer target |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer target |
 | data | BufferSource \| null | Yes | Buffer data |
-| usage | GLenum | Yes | Buffer usage |
+| usage | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer usage |
 
 ## bufferSubData
 
@@ -62,14 +68,16 @@ Sets buffer sub data
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGLRenderingContextOverloads-bufferSubData(target: GLenum, offset: GLintptr, data: BufferSource): void--><!--Device-WebGLRenderingContextOverloads-bufferSubData(target: GLenum, offset: GLintptr, data: BufferSource): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | GLenum | Yes | Buffer target |
-| offset | GLintptr | Yes | Offset |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer target |
+| offset | [GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Offset |
 | data | BufferSource | Yes | Data to set |
 
 ## compressedTexImage2D
@@ -92,19 +100,37 @@ Compressed texture image 2D
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGLRenderingContextOverloads-compressedTexImage2D(
+      target: GLenum,
+      level: GLint,
+      internalformat: GLenum,
+      width: GLsizei,
+      height: GLsizei,
+      border: GLint,
+      data: ArrayBufferView,
+    ): void--><!--Device-WebGLRenderingContextOverloads-compressedTexImage2D(
+      target: GLenum,
+      level: GLint,
+      internalformat: GLenum,
+      width: GLsizei,
+      height: GLsizei,
+      border: GLint,
+      data: ArrayBufferView,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | GLenum | Yes | Texture target |
-| level | GLint | Yes | Mipmap level |
-| internalformat | GLenum | Yes | Internal format |
-| width | GLsizei | Yes | Width |
-| height | GLsizei | Yes | Height |
-| border | GLint | Yes | Border |
-| data | ArrayBufferView | Yes | Compressed image data |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| internalformat | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Internal format |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| border | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border |
+| data | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-arraybufferview-i.md) | Yes | Compressed image data |
 
 ## compressedTexSubImage2D
 
@@ -127,20 +153,40 @@ Compressed texture sub image 2D
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGLRenderingContextOverloads-compressedTexSubImage2D(
+      target: GLenum,
+      level: GLint,
+      xoffset: GLint,
+      yoffset: GLint,
+      width: GLsizei,
+      height: GLsizei,
+      format: GLenum,
+      data: ArrayBufferView,
+    ): void--><!--Device-WebGLRenderingContextOverloads-compressedTexSubImage2D(
+      target: GLenum,
+      level: GLint,
+      xoffset: GLint,
+      yoffset: GLint,
+      width: GLsizei,
+      height: GLsizei,
+      format: GLenum,
+      data: ArrayBufferView,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | GLenum | Yes | Texture target |
-| level | GLint | Yes | Mipmap level |
-| xoffset | GLint | Yes | X offset |
-| yoffset | GLint | Yes | Y offset |
-| width | GLsizei | Yes | Width |
-| height | GLsizei | Yes | Height |
-| format | GLenum | Yes | Format |
-| data | ArrayBufferView | Yes | Compressed image data |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| xoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
+| yoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Format |
+| data | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-arraybufferview-i.md) | Yes | Compressed image data |
 
 ## readPixels
 
@@ -162,18 +208,36 @@ Reads pixels from the framebuffer
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGLRenderingContextOverloads-readPixels(
+      x: GLint,
+      y: GLint,
+      width: GLsizei,
+      height: GLsizei,
+      format: GLenum,
+      type: GLenum,
+      pixels: ArrayBufferView | null,
+    ): void--><!--Device-WebGLRenderingContextOverloads-readPixels(
+      x: GLint,
+      y: GLint,
+      width: GLsizei,
+      height: GLsizei,
+      format: GLenum,
+      type: GLenum,
+      pixels: ArrayBufferView | null,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | GLint | Yes | X coordinate |
-| y | GLint | Yes | Y coordinate |
-| width | GLsizei | Yes | Width |
-| height | GLsizei | Yes | Height |
-| format | GLenum | Yes | Pixel format |
-| type | GLenum | Yes | Pixel type |
+| x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X coordinate |
+| y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y coordinate |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
+| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
 | pixels | ArrayBufferView \| null | Yes | Pixel buffer |
 
 ## texImage2D
@@ -198,20 +262,42 @@ Sets texture image 2D from pixels
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGLRenderingContextOverloads-texImage2D(
+      target: GLenum,
+      level: GLint,
+      internalformat: GLint,
+      width: GLsizei,
+      height: GLsizei,
+      border: GLint,
+      format: GLenum,
+      type: GLenum,
+      pixels: ArrayBufferView | null,
+    ): void--><!--Device-WebGLRenderingContextOverloads-texImage2D(
+      target: GLenum,
+      level: GLint,
+      internalformat: GLint,
+      width: GLsizei,
+      height: GLsizei,
+      border: GLint,
+      format: GLenum,
+      type: GLenum,
+      pixels: ArrayBufferView | null,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | GLenum | Yes | Texture target |
-| level | GLint | Yes | Mipmap level |
-| internalformat | GLint | Yes | Internal format |
-| width | GLsizei | Yes | Width |
-| height | GLsizei | Yes | Height |
-| border | GLint | Yes | Border |
-| format | GLenum | Yes | Pixel format |
-| type | GLenum | Yes | Pixel type |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| internalformat | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Internal format |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| border | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border |
+| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
+| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
 | pixels | ArrayBufferView \| null | Yes | Pixel data |
 
 ## texImage2D
@@ -233,18 +319,34 @@ Sets texture image 2D from TexImageSource
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGLRenderingContextOverloads-texImage2D(
+      target: GLenum,
+      level: GLint,
+      internalformat: GLint,
+      format: GLenum,
+      type: GLenum,
+      source: TexImageSource,
+    ): void--><!--Device-WebGLRenderingContextOverloads-texImage2D(
+      target: GLenum,
+      level: GLint,
+      internalformat: GLint,
+      format: GLenum,
+      type: GLenum,
+      source: TexImageSource,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | GLenum | Yes | Texture target |
-| level | GLint | Yes | Mipmap level |
-| internalformat | GLint | Yes | Internal format |
-| format | GLenum | Yes | Pixel format |
-| type | GLenum | Yes | Pixel type |
-| source | TexImageSource | Yes | Image source |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| internalformat | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Internal format |
+| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
+| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
+| source | [TexImageSource](arkts-arkgraphics2d-teximagesource-t.md) | Yes | Image source |
 
 ## texSubImage2D
 
@@ -268,20 +370,42 @@ Sets texture sub image 2D from pixels
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGLRenderingContextOverloads-texSubImage2D(
+      target: GLenum,
+      level: GLint,
+      xoffset: GLint,
+      yoffset: GLint,
+      width: GLsizei,
+      height: GLsizei,
+      format: GLenum,
+      type: GLenum,
+      pixels: ArrayBufferView | null,
+    ): void--><!--Device-WebGLRenderingContextOverloads-texSubImage2D(
+      target: GLenum,
+      level: GLint,
+      xoffset: GLint,
+      yoffset: GLint,
+      width: GLsizei,
+      height: GLsizei,
+      format: GLenum,
+      type: GLenum,
+      pixels: ArrayBufferView | null,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | GLenum | Yes | Texture target |
-| level | GLint | Yes | Mipmap level |
-| xoffset | GLint | Yes | X offset |
-| yoffset | GLint | Yes | Y offset |
-| width | GLsizei | Yes | Width |
-| height | GLsizei | Yes | Height |
-| format | GLenum | Yes | Pixel format |
-| type | GLenum | Yes | Pixel type |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| xoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
+| yoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
+| width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
+| height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
+| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
+| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
 | pixels | ArrayBufferView \| null | Yes | Pixel data |
 
 ## texSubImage2D
@@ -304,19 +428,37 @@ Sets texture sub image 2D from TexImageSource
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGLRenderingContextOverloads-texSubImage2D(
+      target: GLenum,
+      level: GLint,
+      xoffset: GLint,
+      yoffset: GLint,
+      format: GLenum,
+      type: GLenum,
+      source: TexImageSource,
+    ): void--><!--Device-WebGLRenderingContextOverloads-texSubImage2D(
+      target: GLenum,
+      level: GLint,
+      xoffset: GLint,
+      yoffset: GLint,
+      format: GLenum,
+      type: GLenum,
+      source: TexImageSource,
+    ): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | GLenum | Yes | Texture target |
-| level | GLint | Yes | Mipmap level |
-| xoffset | GLint | Yes | X offset |
-| yoffset | GLint | Yes | Y offset |
-| format | GLenum | Yes | Pixel format |
-| type | GLenum | Yes | Pixel type |
-| source | TexImageSource | Yes | Image source |
+| target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
+| level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
+| xoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X offset |
+| yoffset | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y offset |
+| format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
+| type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
+| source | [TexImageSource](arkts-arkgraphics2d-teximagesource-t.md) | Yes | Image source |
 
 ## uniform1fv
 
@@ -330,6 +472,8 @@ Sets uniform1fv value
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGLRenderingContextOverloads-uniform1fv(location: WebGLUniformLocation | null, v: Float32List): void--><!--Device-WebGLRenderingContextOverloads-uniform1fv(location: WebGLUniformLocation | null, v: Float32List): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
@@ -337,7 +481,7 @@ Sets uniform1fv value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | location | WebGLUniformLocation \| null | Yes | Uniform location |
-| v | Float32List | Yes | Value array |
+| v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Value array |
 
 ## uniform1iv
 
@@ -351,6 +495,8 @@ Sets uniform1iv value
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGLRenderingContextOverloads-uniform1iv(location: WebGLUniformLocation | null, v: Int32List): void--><!--Device-WebGLRenderingContextOverloads-uniform1iv(location: WebGLUniformLocation | null, v: Int32List): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
@@ -358,7 +504,7 @@ Sets uniform1iv value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | location | WebGLUniformLocation \| null | Yes | Uniform location |
-| v | Int32List | Yes | Value array |
+| v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Value array |
 
 ## uniform2fv
 
@@ -372,6 +518,8 @@ Sets uniform2fv value
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGLRenderingContextOverloads-uniform2fv(location: WebGLUniformLocation | null, v: Float32List): void--><!--Device-WebGLRenderingContextOverloads-uniform2fv(location: WebGLUniformLocation | null, v: Float32List): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
@@ -379,7 +527,7 @@ Sets uniform2fv value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | location | WebGLUniformLocation \| null | Yes | Uniform location |
-| v | Float32List | Yes | Value array |
+| v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Value array |
 
 ## uniform2iv
 
@@ -393,6 +541,8 @@ Sets uniform2iv value
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGLRenderingContextOverloads-uniform2iv(location: WebGLUniformLocation | null, v: Int32List): void--><!--Device-WebGLRenderingContextOverloads-uniform2iv(location: WebGLUniformLocation | null, v: Int32List): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
@@ -400,7 +550,7 @@ Sets uniform2iv value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | location | WebGLUniformLocation \| null | Yes | Uniform location |
-| v | Int32List | Yes | Value array |
+| v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Value array |
 
 ## uniform3fv
 
@@ -414,6 +564,8 @@ Sets uniform3fv value
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGLRenderingContextOverloads-uniform3fv(location: WebGLUniformLocation | null, v: Float32List): void--><!--Device-WebGLRenderingContextOverloads-uniform3fv(location: WebGLUniformLocation | null, v: Float32List): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
@@ -421,7 +573,7 @@ Sets uniform3fv value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | location | WebGLUniformLocation \| null | Yes | Uniform location |
-| v | Float32List | Yes | Value array |
+| v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Value array |
 
 ## uniform3iv
 
@@ -435,6 +587,8 @@ Sets uniform3iv value
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGLRenderingContextOverloads-uniform3iv(location: WebGLUniformLocation | null, v: Int32List): void--><!--Device-WebGLRenderingContextOverloads-uniform3iv(location: WebGLUniformLocation | null, v: Int32List): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
@@ -442,7 +596,7 @@ Sets uniform3iv value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | location | WebGLUniformLocation \| null | Yes | Uniform location |
-| v | Int32List | Yes | Value array |
+| v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Value array |
 
 ## uniform4fv
 
@@ -456,6 +610,8 @@ Sets uniform4fv value
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGLRenderingContextOverloads-uniform4fv(location: WebGLUniformLocation | null, v: Float32List): void--><!--Device-WebGLRenderingContextOverloads-uniform4fv(location: WebGLUniformLocation | null, v: Float32List): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
@@ -463,7 +619,7 @@ Sets uniform4fv value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | location | WebGLUniformLocation \| null | Yes | Uniform location |
-| v | Float32List | Yes | Value array |
+| v | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Value array |
 
 ## uniform4iv
 
@@ -477,6 +633,8 @@ Sets uniform4iv value
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGLRenderingContextOverloads-uniform4iv(location: WebGLUniformLocation | null, v: Int32List): void--><!--Device-WebGLRenderingContextOverloads-uniform4iv(location: WebGLUniformLocation | null, v: Int32List): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
@@ -484,7 +642,7 @@ Sets uniform4iv value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | location | WebGLUniformLocation \| null | Yes | Uniform location |
-| v | Int32List | Yes | Value array |
+| v | [Int32List](arkts-arkgraphics2d-int32list-t.md) | Yes | Value array |
 
 ## uniformMatrix2fv
 
@@ -498,6 +656,8 @@ Sets uniformMatrix2fv value
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGLRenderingContextOverloads-uniformMatrix2fv(location: WebGLUniformLocation | null, transpose: GLboolean, value: Float32List): void--><!--Device-WebGLRenderingContextOverloads-uniformMatrix2fv(location: WebGLUniformLocation | null, transpose: GLboolean, value: Float32List): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
@@ -505,8 +665,8 @@ Sets uniformMatrix2fv value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | location | WebGLUniformLocation \| null | Yes | Uniform location |
-| transpose | GLboolean | Yes | Whether to transpose |
-| value | Float32List | Yes | Matrix value |
+| transpose | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to transpose |
+| value | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Matrix value |
 
 ## uniformMatrix3fv
 
@@ -520,6 +680,8 @@ Sets uniformMatrix3fv value
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGLRenderingContextOverloads-uniformMatrix3fv(location: WebGLUniformLocation | null, transpose: GLboolean, value: Float32List): void--><!--Device-WebGLRenderingContextOverloads-uniformMatrix3fv(location: WebGLUniformLocation | null, transpose: GLboolean, value: Float32List): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
@@ -527,8 +689,8 @@ Sets uniformMatrix3fv value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | location | WebGLUniformLocation \| null | Yes | Uniform location |
-| transpose | GLboolean | Yes | Whether to transpose |
-| value | Float32List | Yes | Matrix value |
+| transpose | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to transpose |
+| value | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Matrix value |
 
 ## uniformMatrix4fv
 
@@ -542,6 +704,8 @@ Sets uniformMatrix4fv value
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WebGLRenderingContextOverloads-uniformMatrix4fv(location: WebGLUniformLocation | null, transpose: GLboolean, value: Float32List): void--><!--Device-WebGLRenderingContextOverloads-uniformMatrix4fv(location: WebGLUniformLocation | null, transpose: GLboolean, value: Float32List): void-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 **Parameters:**
@@ -549,6 +713,6 @@ Sets uniformMatrix4fv value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | location | WebGLUniformLocation \| null | Yes | Uniform location |
-| transpose | GLboolean | Yes | Whether to transpose |
-| value | Float32List | Yes | Matrix value |
+| transpose | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to transpose |
+| value | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Matrix value |
 

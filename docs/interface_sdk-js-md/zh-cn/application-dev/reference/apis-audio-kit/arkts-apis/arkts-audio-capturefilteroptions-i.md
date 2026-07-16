@@ -8,7 +8,15 @@
 
 **替代接口：** OH_AVScreenCapture
 
+<!--Device-audio-interface CaptureFilterOptions--><!--Device-audio-interface CaptureFilterOptions-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## usages
 
@@ -25,6 +33,8 @@ Filter by stream usages. But not allow to capture voice streams.
 **废弃版本：** 12
 
 **替代接口：** OH_AVScreenCapture
+
+<!--Device-CaptureFilterOptions-usages: Array<StreamUsage>--><!--Device-CaptureFilterOptions-usages: Array<StreamUsage>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 

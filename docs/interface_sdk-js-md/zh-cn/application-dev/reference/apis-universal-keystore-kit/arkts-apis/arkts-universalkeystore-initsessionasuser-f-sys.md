@@ -1,5 +1,11 @@
 # initSessionAsUser（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+```
+
 ## initSessionAsUser
 
 ```TypeScript
@@ -12,6 +18,8 @@ function initSessionAsUser(userId: number, keyAlias: string, huksOptions: HuksOp
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-huks-function initSessionAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<HuksSessionHandle>--><!--Device-huks-function initSessionAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<HuksSessionHandle>-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **系统接口：** 此接口为系统接口。
@@ -22,13 +30,13 @@ function initSessionAsUser(userId: number, keyAlias: string, huksOptions: HuksOp
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID。 |
 | keyAlias | string | 是 | initSessionAsUser操作密钥的别名。 |
-| huksOptions | HuksOptions | 是 | initSessionAsUser参数集合。 |
+| huksOptions | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | 是 | initSessionAsUser参数集合。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;HuksSessionHandle&gt; | Promise对象。将initSessionAsUser操作返回的handle添加到密钥管理系统的回调。 |
+| Promise<HuksSessionHandle> | Promise对象。将initSessionAsUser操作返回的handle添加到密钥管理系统的回调。 |
 
 **错误码：**
 

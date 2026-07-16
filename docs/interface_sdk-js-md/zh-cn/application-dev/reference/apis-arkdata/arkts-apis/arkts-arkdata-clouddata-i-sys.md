@@ -4,9 +4,17 @@
 
 **起始版本：** 11
 
+<!--Device-cloudExtension-export interface CloudData--><!--Device-cloudExtension-export interface CloudData-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { cloudExtension } from '@kit.ArkData';
+```
 
 ## hasMore
 
@@ -19,6 +27,8 @@ hasMore: boolean
 **类型：** boolean
 
 **起始版本：** 11
+
+<!--Device-CloudData-hasMore: boolean--><!--Device-CloudData-hasMore: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -36,6 +46,8 @@ nextCursor: string
 
 **起始版本：** 11
 
+<!--Device-CloudData-nextCursor: string--><!--Device-CloudData-nextCursor: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +63,8 @@ values: Array<Record<string, CloudType>>
 **类型：** Array<Record<string, CloudType>>
 
 **起始版本：** 11
+
+<!--Device-CloudData-values: Array<Record<string, CloudType>>--><!--Device-CloudData-values: Array<Record<string, CloudType>>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 

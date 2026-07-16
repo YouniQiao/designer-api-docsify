@@ -18,6 +18,8 @@ Updates an asset in the specified user space. This API uses a promise to return 
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-asset-function updateAsUser(userId: number, query: AssetMap, attributesToUpdate: AssetMap): Promise<void>--><!--Device-asset-function updateAsUser(userId: number, query: AssetMap, attributesToUpdate: AssetMap): Promise<void>-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
@@ -27,14 +29,14 @@ Updates an asset in the specified user space. This API uses a promise to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | the user identifier to update an Asset. The value must be greater than or equal to 100. |
-| query | AssetMap | Yes | Attributes of the asset to update, such as the asset alias, access control attributes,and custom data. |
-| attributesToUpdate | AssetMap | Yes | New attributes of the asset, such as the asset plaintext and custom data. |
+| query | [AssetMap](arkts-assetstore-assetmap-t.md) | Yes | Attributes of the asset to update, such as the asset alias, access control attributes,and custom data. |
+| attributesToUpdate | [AssetMap](arkts-assetstore-assetmap-t.md) | Yes | New attributes of the asset, such as the asset plaintext and custom data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

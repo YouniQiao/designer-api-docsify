@@ -18,20 +18,22 @@ Obtain the resource ID of the provider.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-huksExternalCrypto-function getResourceId(providerName: string, params: HuksExternalCryptoParam[]): Promise<string>--><!--Device-huksExternalCrypto-function getResourceId(providerName: string, params: HuksExternalCryptoParam[]): Promise<string>-End-->
+
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| providerName | string | Yes | Indicates the name of the external crypto providerand must be globally unique. One effective way is to include manufacturer information. |
-| params | HuksExternalCryptoParam[] | Yes | Indicates the input operation parameters,including the bundle name, ability name, and the related information to get the resource ID. |
+| providerName | string | Yes | Indicates the name of the external crypto provider and must be globally unique. One effective way is to include manufacturer information. |
+| params | [HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcryptoparam-i.md)[] | Yes | Indicates the input operation parameters,including the bundle name, ability name, and the related information to get the resource ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | The promise returned by the function. |
 
 **Error codes:**
 

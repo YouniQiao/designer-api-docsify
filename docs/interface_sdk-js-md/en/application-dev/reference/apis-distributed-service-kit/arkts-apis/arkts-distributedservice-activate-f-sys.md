@@ -20,6 +20,8 @@ Starts screen hopping. This API uses an asynchronous callback to return the resu
 
 **Substitutes:** activateCooperate(targetNetworkId:
 
+<!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number, callback: AsyncCallback<void>): void--><!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **System API:** This is a system API.
@@ -30,7 +32,7 @@ Starts screen hopping. This API uses an asynchronous callback to return the resu
 | --- | --- | --- | --- |
 | targetNetworkId | string | Yes | Descriptor of the target device for screen hopping. |
 | inputDeviceId | number | Yes | Identifier of the input device for screen hopping. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the operation result. If the operation issuccessful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -76,6 +78,8 @@ Starts screen hopping. This API uses a promise to return the result.
 
 **Substitutes:** activateCooperate(targetNetworkId:
 
+<!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>--><!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **System API:** This is a system API.
@@ -91,7 +95,7 @@ Starts screen hopping. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

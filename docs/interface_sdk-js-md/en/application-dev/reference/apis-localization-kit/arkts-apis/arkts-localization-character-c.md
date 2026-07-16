@@ -8,6 +8,8 @@ Provides the API for accessing unicode character properties. For example, determ
 
 **Substitutes:** [Unicode](arkts-localization-unicode-c.md)
 
+<!--Device-i18n-export class Character--><!--Device-i18n-export class Character-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
@@ -30,13 +32,15 @@ Obtains the type of the input character.
 
 **Substitutes:** [getType](arkts-localization-unicode-c.md#gettype-1)
 
+<!--Device-Character-getType(ch: string): string--><!--Device-Character-getType(ch: string): string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character ischecked. |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
 
 **Return value:**
 
@@ -58,13 +62,15 @@ Checks whether the input character is a digit.
 
 **Substitutes:** [isDigit](arkts-localization-unicode-c.md#isdigit-1)
 
+<!--Device-Character-isDigit(ch: string): boolean--><!--Device-Character-isDigit(ch: string): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character ischecked. |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
 
 **Return value:**
 
@@ -86,13 +92,15 @@ Checks whether the input character is an ideographic character.
 
 **Substitutes:** [isIdeograph](arkts-localization-unicode-c.md#isideograph-1)
 
+<!--Device-Character-isIdeograph(ch: string): boolean--><!--Device-Character-isIdeograph(ch: string): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character ischecked. |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
 
 **Return value:**
 
@@ -114,13 +122,15 @@ Checks whether the input character is a letter.
 
 **Substitutes:** [isLetter](arkts-localization-unicode-c.md#isletter-1)
 
+<!--Device-Character-isLetter(ch: string): boolean--><!--Device-Character-isLetter(ch: string): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character ischecked. |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
 
 **Return value:**
 
@@ -142,13 +152,15 @@ Checks whether the input character is a lowercase letter.
 
 **Substitutes:** [isLowerCase](arkts-localization-unicode-c.md#islowercase-1)
 
+<!--Device-Character-isLowerCase(ch: string): boolean--><!--Device-Character-isLowerCase(ch: string): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character ischecked. |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
 
 **Return value:**
 
@@ -170,13 +182,15 @@ Checks whether the input character is of the right to left (RTL) language.
 
 **Substitutes:** [isRTL](arkts-localization-unicode-c.md#isrtl-1)
 
+<!--Device-Character-isRTL(ch: string): boolean--><!--Device-Character-isRTL(ch: string): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character ischecked. |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
 
 **Return value:**
 
@@ -198,13 +212,15 @@ Checks whether the input character is a space.
 
 **Substitutes:** [isSpaceChar](arkts-localization-unicode-c.md#isspacechar-1)
 
+<!--Device-Character-isSpaceChar(ch: string): boolean--><!--Device-Character-isSpaceChar(ch: string): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character ischecked. |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
 
 **Return value:**
 
@@ -226,13 +242,15 @@ Checks whether the input character is an uppercase letter.
 
 **Substitutes:** [isUpperCase](arkts-localization-unicode-c.md#isuppercase-1)
 
+<!--Device-Character-isUpperCase(ch: string): boolean--><!--Device-Character-isUpperCase(ch: string): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character ischecked. |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
 
 **Return value:**
 
@@ -254,13 +272,15 @@ Checks whether the input character is a whitespace.
 
 **Substitutes:** [isWhitespace](arkts-localization-unicode-c.md#iswhitespace-1)
 
+<!--Device-Character-isWhitespace(ch: string): boolean--><!--Device-Character-isWhitespace(ch: string): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character ischecked. |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
 
 **Return value:**
 

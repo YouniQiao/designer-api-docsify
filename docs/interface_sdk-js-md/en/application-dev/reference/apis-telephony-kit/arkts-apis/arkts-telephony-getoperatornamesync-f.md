@@ -16,6 +16,8 @@ Get the operator name of the specified SIM card slot.
 
 **Since:** 10
 
+<!--Device-radio-function getOperatorNameSync(slotId: int): string--><!--Device-radio-function getOperatorNameSync(slotId: int): string-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**

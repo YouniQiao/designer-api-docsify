@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare enum IndexerAlign--><!--Device-unnamed-declare enum IndexerAlign-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## Left
@@ -16,7 +18,9 @@ Left
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-IndexerAlign-Left--><!--Device-IndexerAlign-Left-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,7 +34,9 @@ Right
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-IndexerAlign-Right--><!--Device-IndexerAlign-Right-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,7 +52,9 @@ START
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-IndexerAlign-START--><!--Device-IndexerAlign-START-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,7 +70,9 @@ END
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-IndexerAlign-END--><!--Device-IndexerAlign-END-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

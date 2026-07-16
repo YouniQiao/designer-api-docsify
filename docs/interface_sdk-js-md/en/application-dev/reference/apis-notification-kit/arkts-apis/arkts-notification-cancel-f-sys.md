@@ -14,10 +14,11 @@ function cancel(representativeBundle: BundleOption, id: number): Promise<void>
 
 Cancels the notification of other applications of the user. This API uses a promise to return the result.
 
-The current application must have a proxy relationship with another application, or the
-**ohos.permission.NOTIFICATION_AGENT_CONTROLLER** permission is granted to the current application.
+The current application must have a proxy relationship with another application, or the **ohos.permission.NOTIFICATION_AGENT_CONTROLLER** permission is granted to the current application.
 
 **Since:** 12
+
+<!--Device-notificationManager-function cancel(representativeBundle: BundleOption, id: int): Promise<void>--><!--Device-notificationManager-function cancel(representativeBundle: BundleOption, id: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -27,14 +28,14 @@ The current application must have a proxy relationship with another application,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| representativeBundle | BundleOption | Yes | Bundle information of the application. |
+| representativeBundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
 | id | number | Yes | Notification ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

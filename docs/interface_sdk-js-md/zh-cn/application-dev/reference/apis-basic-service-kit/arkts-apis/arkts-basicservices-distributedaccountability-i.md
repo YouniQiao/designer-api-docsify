@@ -4,7 +4,15 @@
 
 **起始版本：** 7
 
+<!--Device-distributedAccount-interface DistributedAccountAbility--><!--Device-distributedAccount-interface DistributedAccountAbility-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
+
+## 导入模块
+
+```TypeScript
+import { distributedAccount } from '@kit.BasicServicesKit';
+```
 
 ## getOsAccountDistributedInfo
 
@@ -18,13 +26,15 @@ getOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 
 **需要权限：** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or ohos.permission.GET_DISTRIBUTED_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DistributedAccountAbility-getOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void--><!--Device-DistributedAccountAbility-getOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;DistributedInfo&gt; | 是 | 回调参数。当获取分布式账号信息成功，err为undefined，data为获取到的分布式账号信息对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<DistributedInfo> | 是 | 回调参数。当获取分布式账号信息成功，err为undefined，data为获取到的分布式账号信息对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -69,13 +79,15 @@ getOsAccountDistributedInfo(): Promise<DistributedInfo>
 
 **需要权限：** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or ohos.permission.GET_DISTRIBUTED_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DistributedAccountAbility-getOsAccountDistributedInfo(): Promise<DistributedInfo>--><!--Device-DistributedAccountAbility-getOsAccountDistributedInfo(): Promise<DistributedInfo>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DistributedInfo&gt; | Promise对象，返回分布式账号信息对象。 |
+| Promise<DistributedInfo> | Promise对象，返回分布式账号信息对象。 |
 
 **错误码：**
 
@@ -112,10 +124,10 @@ queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 
 获取分布式账号信息。使用callback异步回调。
 
-> **说明：**
->
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountDistributedInfo](arkts-basicservices-distributedaccountability-i.md#getosaccountdistributedinfo-1)
+> **说明：**  
+>  
+> 从API version 7开始支持，从API version 9开始废弃。建议使用  
+> [getOsAccountDistributedInfo](arkts-basicservices-distributedaccountability-i.md#getosaccountdistributedinfo-1)  
 > 替代。
 
 **起始版本：** 7
@@ -126,13 +138,15 @@ queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DistributedAccountAbility-queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void--><!--Device-DistributedAccountAbility-queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;DistributedInfo&gt; | 是 | 回调函数。当获取分布式账号信息成功，err为undefined，data为获取到的分布式账号信息对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<DistributedInfo> | 是 | 回调函数。当获取分布式账号信息成功，err为undefined，data为获取到的分布式账号信息对象；否则为错误对象。 |
 
 **示例：**
 
@@ -160,10 +174,10 @@ queryOsAccountDistributedInfo(): Promise<DistributedInfo>
 
 获取分布式账号信息。使用Promise异步回调。
 
-> **说明：**
->
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountDistributedInfo](arkts-basicservices-distributedaccountability-i.md#getosaccountdistributedinfo-2)
+> **说明：**  
+>  
+> 从API version 7开始支持，从API version 9开始废弃。建议使用  
+> [getOsAccountDistributedInfo](arkts-basicservices-distributedaccountability-i.md#getosaccountdistributedinfo-2)  
 > 替代。
 
 **起始版本：** 7
@@ -174,13 +188,15 @@ queryOsAccountDistributedInfo(): Promise<DistributedInfo>
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DistributedAccountAbility-queryOsAccountDistributedInfo(): Promise<DistributedInfo>--><!--Device-DistributedAccountAbility-queryOsAccountDistributedInfo(): Promise<DistributedInfo>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DistributedInfo&gt; | Promise对象，返回分布式账号信息对象。 |
+| Promise<DistributedInfo> | Promise对象，返回分布式账号信息对象。 |
 
 **示例：**
 
@@ -203,12 +219,13 @@ accountAbility.queryOsAccountDistributedInfo().then((data: distributedAccount.Di
 setOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void
 ```
 
-更新分布式账号信息。使用callback异步回调。
-该接口仅限系统应用调用。
+更新分布式账号信息。使用callback异步回调。该接口仅限系统应用调用。
 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
+
+<!--Device-DistributedAccountAbility-setOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void--><!--Device-DistributedAccountAbility-setOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -216,8 +233,8 @@ setOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallbac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| accountInfo | DistributedInfo | 是 | 分布式账号信息。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当更新分布式账号信息成功时，err为undefined，否则为错误对象。 |
+| accountInfo | [DistributedInfo](arkts-basicservices-distributedinfo-i.md) | 是 | 分布式账号信息。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当更新分布式账号信息成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -260,12 +277,13 @@ try {
 setOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 ```
 
-更新分布式账号信息。使用Promise异步回调。
-该接口仅限系统应用调用。
+更新分布式账号信息。使用Promise异步回调。该接口仅限系统应用调用。
 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
+
+<!--Device-DistributedAccountAbility-setOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>--><!--Device-DistributedAccountAbility-setOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -273,13 +291,13 @@ setOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| accountInfo | DistributedInfo | 是 | 分布式账号信息。 |
+| accountInfo | [DistributedInfo](arkts-basicservices-distributedinfo-i.md) | 是 | 分布式账号信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| Promise<void> | Promise对象，无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -322,10 +340,10 @@ updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCall
 
 更新分布式账号信息。使用callback异步回调。
 
-> **说明：**
->
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setOsAccountDistributedInfo](arkts-basicservices-distributedaccountability-i.md#setosaccountdistributedinfo-1)
+> **说明：**  
+>  
+> 从API version 7开始支持，从API version 9开始废弃。建议使用  
+> [setOsAccountDistributedInfo](arkts-basicservices-distributedaccountability-i.md#setosaccountdistributedinfo-1)  
 > 替代。
 
 **起始版本：** 7
@@ -336,14 +354,16 @@ updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCall
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-DistributedAccountAbility-updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void--><!--Device-DistributedAccountAbility-updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| accountInfo | DistributedInfo | 是 | 分布式账号信息。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当更新分布式账号信息成功时，err为undefined，否则为错误对象。 |
+| accountInfo | [DistributedInfo](arkts-basicservices-distributedinfo-i.md) | 是 | 分布式账号信息。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当更新分布式账号信息成功时，err为undefined，否则为错误对象。 |
 
 **示例：**
 
@@ -373,10 +393,10 @@ updateOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 
 更新分布式账号信息。使用Promise异步回调。
 
-> **说明：**
->
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setOsAccountDistributedInfo](arkts-basicservices-distributedaccountability-i.md#setosaccountdistributedinfo-2)
+> **说明：**  
+>  
+> 从API version 7开始支持，从API version 9开始废弃。建议使用  
+> [setOsAccountDistributedInfo](arkts-basicservices-distributedaccountability-i.md#setosaccountdistributedinfo-2)  
 > 替代。
 
 **起始版本：** 7
@@ -387,19 +407,21 @@ updateOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-DistributedAccountAbility-updateOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>--><!--Device-DistributedAccountAbility-updateOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| accountInfo | DistributedInfo | 是 | 分布式账号信息。 |
+| accountInfo | [DistributedInfo](arkts-basicservices-distributedinfo-i.md) | 是 | 分布式账号信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| Promise<void> | Promise对象，无返回结果的Promise对象。 |
 
 **示例：**
 

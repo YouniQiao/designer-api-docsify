@@ -1,10 +1,10 @@
 # UiWindow
 
-The **UiWindow** class represents a window on the UI and provides APIs for obtaining window attributes, dragging a
-window, and adjusting the window size.
-All APIs provided in this class use a promise to return the result and must be invoked using **await**.
+The **UiWindow** class represents a window on the UI and provides APIs for obtaining window attributes, dragging a window, and adjusting the window size.All APIs provided in this class use a promise to return the result and must be invoked using **await**.
 
 **Since:** 9
+
+<!--Device-unnamed-declare class UiWindow--><!--Device-unnamed-declare class UiWindow-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -26,13 +26,15 @@ Closes a window. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-UiWindow-close(): Promise<void>--><!--Device-UiWindow-close(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Error codes:**
 
@@ -68,13 +70,15 @@ Focuses a window. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-UiWindow-focus(): Promise<void>--><!--Device-UiWindow-focus(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Error codes:**
 
@@ -109,13 +113,15 @@ Obtains the bounds information of a window. This API uses a promise to return th
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-UiWindow-getBounds(): Promise<Rect>--><!--Device-UiWindow-getBounds(): Promise<Rect>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Rect&gt; | - Promise used to return the window border information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Rect> | - Promise used to return the window border information. |
 
 **Error codes:**
 
@@ -150,13 +156,15 @@ Obtains the bundle name of the application to which a window belongs. This API u
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-UiWindow-getBundleName(): Promise<string>--><!--Device-UiWindow-getBundleName(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | - Promise used to return the bundle name of the application to which the window belongs. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | - Promise used to return the bundle name of the application to which the window belongs. |
 
 **Error codes:**
 
@@ -191,13 +199,15 @@ Obtains the ID of the display to which a window belongs. This API uses a promise
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-UiWindow-getDisplayId(): Promise<int>--><!--Device-UiWindow-getDisplayId(): Promise<int>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | - Promise used to return the ID of the display to which the window belongs. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | - Promise used to return the ID of the display to which the window belongs. |
 
 **Error codes:**
 
@@ -232,13 +242,15 @@ Obtains the window title. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-UiWindow-getTitle(): Promise<string>--><!--Device-UiWindow-getTitle(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | - Promise used to return the window title. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | - Promise used to return the window title. |
 
 **Error codes:**
 
@@ -273,13 +285,15 @@ Obtains the window mode. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-UiWindow-getWindowMode(): Promise<WindowMode>--><!--Device-UiWindow-getWindowMode(): Promise<WindowMode>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WindowMode&gt; | - Promise used to return the window mode information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<WindowMode> | - Promise used to return the window mode information. |
 
 **Error codes:**
 
@@ -314,13 +328,15 @@ Checks whether a window is active. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-UiWindow-isActive(): Promise<boolean>--><!--Device-UiWindow-isActive(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the window is active. The value **true** indicates thatthe window is active, and **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | - Promise used to return whether the window is active. The value **true** indicates that the window is active, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -357,13 +373,15 @@ Checks whether a window is active. This API uses a promise to return the result.
 
 **Substitutes:** [isActive](arkts-test-uiwindow-c.md#isactive-1)
 
+<!--Device-UiWindow-isActived(): Promise<boolean>--><!--Device-UiWindow-isActived(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the window is active. The value **true** indicates thatthe window is active, and **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | - Promise used to return whether the window is active. The value **true** indicates that the window is active, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -398,13 +416,15 @@ Checks whether a window is focused. This API uses a promise to return the result
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-UiWindow-isFocused(): Promise<boolean>--><!--Device-UiWindow-isFocused(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the window is focused. The value **true** indicates thatthe component is focused, and **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | - Promise used to return whether the window is focused. The value **true** indicates that the component is focused, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -433,12 +453,13 @@ async function demo() {
 maximize(): Promise<void>
 ```
 
-Maximizes a window. This API uses a promise to return the result. This API is applicable to windows that can be
-maximized.
+Maximizes a window. This API uses a promise to return the result. This API is applicable to windows that can be maximized.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-UiWindow-maximize(): Promise<void>--><!--Device-UiWindow-maximize(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -446,7 +467,7 @@ maximized.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Error codes:**
 
@@ -476,12 +497,13 @@ async function demo() {
 minimize(): Promise<void>
 ```
 
-Minimizes a window. This API uses a promise to return the result. This API is applicable to windows that can be
-minimized.
+Minimizes a window. This API uses a promise to return the result. This API is applicable to windows that can be minimized.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-UiWindow-minimize(): Promise<void>--><!--Device-UiWindow-minimize(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -489,7 +511,7 @@ minimized.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Error codes:**
 
@@ -519,12 +541,13 @@ async function demo() {
 moveTo(x: number, y: number): Promise<void>
 ```
 
-Moves a window to the target point. This API uses a promise to return the result. This API is applicable to
-moveable windows.
+Moves a window to the target point. This API uses a promise to return the result. This API is applicable to moveable windows.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-UiWindow-moveTo(x: int, y: int): Promise<void>--><!--Device-UiWindow-moveTo(x: int, y: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -532,14 +555,14 @@ moveable windows.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | Number, which indicates the horizontal coordinate of the target point. The value is an integergreater than or equal to 0.<br>Unit: px |
-| y | number | Yes | Number, which indicates the vertical coordinate of the target point. The value is an integer greaterthan or equal to 0.<br>Unit: px |
+| x | number | Yes | Number, which indicates the horizontal coordinate of the target point. The value is an integer greater than or equal to 0.<br>Unit: px |
+| y | number | Yes | Number, which indicates the vertical coordinate of the target point. The value is an integer greater than or equal to 0.<br>Unit: px |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Error codes:**
 
@@ -570,12 +593,13 @@ async function demo() {
 resize(wide: number, height: number, direction: ResizeDirection): Promise<void>
 ```
 
-Resizes a window based on the specified width, height, and direction. This API uses a promise to return the
-result. This API is applicable to resizable windows.
+Resizes a window based on the specified width, height, and direction. This API uses a promise to return the result. This API is applicable to resizable windows.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-UiWindow-resize(wide: int, height: int, direction: ResizeDirection): Promise<void>--><!--Device-UiWindow-resize(wide: int, height: int, direction: ResizeDirection): Promise<void>-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -585,13 +609,13 @@ result. This API is applicable to resizable windows.
 | --- | --- | --- | --- |
 | wide | number | Yes | Width of the adjusted window, in number format.The value is an integer greater than or equal to 0.<br>Unit: px |
 | height | number | Yes | Height of the adjusted window, in number format.The value is an integer greater than or equal to 0.<br>Unit: px |
-| direction | ResizeDirection | Yes | Resize direction. |
+| direction | [ResizeDirection](arkts-test-resizedirection-e.md) | Yes | Resize direction. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Error codes:**
 
@@ -614,13 +638,15 @@ Resumes a window to its previous mode. This API uses a promise to return the res
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-UiWindow-resume(): Promise<void>--><!--Device-UiWindow-resume(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Error codes:**
 
@@ -650,12 +676,13 @@ async function demo() {
 split(): Promise<void>
 ```
 
-Switches to the split-screen mode. This API uses a promise to return the result. This API is applicable to
-windows that support screen splitting.
+Switches to the split-screen mode. This API uses a promise to return the result. This API is applicable to windows that support screen splitting.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-UiWindow-split(): Promise<void>--><!--Device-UiWindow-split(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -663,7 +690,7 @@ windows that support screen splitting.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Error codes:**
 

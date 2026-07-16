@@ -1,14 +1,12 @@
 # ImageSource
 
-Provides APIs to obtain image information. Before calling any API in ImageSource, you must use
-[sendableImage.createImageSource](arkts-image-createimagesource-f.md#createimagesource-1) to create an ImageSource
-instance.
+Provides APIs to obtain image information. Before calling any API in ImageSource, you must use [sendableImage.createImageSource](arkts-image-createimagesource-f.md#createimagesource-1) to create an ImageSource instance.
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call
-[release](arkts-image-pixelmap-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure
-that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-pixelmap-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 12
+
+<!--Device-sendableImage-interface ImageSource--><!--Device-sendableImage-interface ImageSource-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -26,16 +24,15 @@ createPixelMap(options?: image.DecodingOptions): Promise<PixelMap>
 
 Creates a PixelMap object based on decoding options. This API uses a promise to return the result.
 
-Images occupy a large amount of memory. When you finish using a PixelMap instance, call
-[release](arkts-image-pixelmap-i.md#release-1) to free the memory promptly. Before releasing the instance,
-ensure that all asynchronous operations associated with the instance have finished and the instance is no longer
-needed.
+Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-pixelmap-i.md#release-1) to free the memory promptly. Before releasing the instance,ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-ImageSource-createPixelMap(options?: image.DecodingOptions): Promise<PixelMap>--><!--Device-ImageSource-createPixelMap(options?: image.DecodingOptions): Promise<PixelMap>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -49,7 +46,7 @@ needed.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PixelMap> | Promise used to return the PixelMap object. |
 
 **Example**
 
@@ -77,13 +74,13 @@ release(): Promise<void>
 
 Releases this ImageSource instance. This API uses a promise to return the result.
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call this API to free the
-memory promptly.
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call this API to free the memory promptly.
 
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished
-and the instance is no longer needed.
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 12
+
+<!--Device-ImageSource-release(): Promise<void>--><!--Device-ImageSource-release(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -91,7 +88,7 @@ and the instance is no longer needed.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Example**
 

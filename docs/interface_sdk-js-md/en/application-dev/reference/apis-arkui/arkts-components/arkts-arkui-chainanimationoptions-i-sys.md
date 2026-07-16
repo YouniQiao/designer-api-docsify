@@ -4,6 +4,8 @@ Defines the chain animation options.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface ChainAnimationOptions--><!--Device-unnamed-declare interface ChainAnimationOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -23,6 +25,8 @@ Conductivity of chain animation.
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ChainAnimationOptions-conductivity?: number--><!--Device-ChainAnimationOptions-conductivity?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ Damping of chain spring.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ChainAnimationOptions-damping?: number--><!--Device-ChainAnimationOptions-damping?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -63,6 +69,8 @@ Edge effect of chain animation.
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ChainAnimationOptions-edgeEffect?: ChainEdgeEffect--><!--Device-ChainAnimationOptions-edgeEffect?: ChainEdgeEffect-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,6 +92,8 @@ Intensity of chain animation.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ChainAnimationOptions-intensity?: number--><!--Device-ChainAnimationOptions-intensity?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -94,14 +104,15 @@ Intensity of chain animation.
 maxSpace: Length
 ```
 
-Maximum space for chain animation.
-<br>Unit: same as **Length**.
+Maximum space for chain animation.<br>Unit: same as **Length**.
 
 **Type:** Length
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ChainAnimationOptions-maxSpace: Length--><!--Device-ChainAnimationOptions-maxSpace: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -113,14 +124,15 @@ Maximum space for chain animation.
 minSpace: Length
 ```
 
-Minimum space for chain animation.
-<br>Unit: same as **Length**.
+Minimum space for chain animation.<br>Unit: same as **Length**.
 
 **Type:** Length
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ChainAnimationOptions-minSpace: Length--><!--Device-ChainAnimationOptions-minSpace: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -141,6 +153,8 @@ Stiffness of chain spring.
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ChainAnimationOptions-stiffness?: number--><!--Device-ChainAnimationOptions-stiffness?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

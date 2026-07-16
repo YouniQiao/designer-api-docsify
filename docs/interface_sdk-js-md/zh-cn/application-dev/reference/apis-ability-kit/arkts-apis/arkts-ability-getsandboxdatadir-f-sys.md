@@ -1,5 +1,11 @@
 # getSandboxDataDir（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getSandboxDataDir
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getSandboxDataDir(bundleName: string, appIndex: number): string
 **起始版本：** 20
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getSandboxDataDir(bundleName: string, appIndex: int): string--><!--Device-bundleManager-function getSandboxDataDir(bundleName: string, appIndex: int): string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

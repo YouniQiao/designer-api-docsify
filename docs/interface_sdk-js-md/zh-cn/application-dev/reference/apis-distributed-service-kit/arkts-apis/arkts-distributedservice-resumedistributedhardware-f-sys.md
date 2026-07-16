@@ -1,5 +1,11 @@
 # resumeDistributedHardware（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { hardwareManager } from '@kit.DistributedServiceKit';
+```
+
 ## resumeDistributedHardware
 
 ```TypeScript
@@ -12,6 +18,8 @@ function resumeDistributedHardware(description: HardwareDescriptor): Promise<voi
 
 **需要权限：** ohos.permission.ACCESS_DISTRIBUTED_HARDWARE
 
+<!--Device-hardwareManager-function resumeDistributedHardware(description: HardwareDescriptor): Promise<void>--><!--Device-hardwareManager-function resumeDistributedHardware(description: HardwareDescriptor): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
 **系统接口：** 此接口为系统接口。
@@ -20,13 +28,13 @@ function resumeDistributedHardware(description: HardwareDescriptor): Promise<voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| description | HardwareDescriptor | 是 | 硬件描述信息。 |
+| description | [HardwareDescriptor](arkts-distributedservice-hardwaredescriptor-i-sys.md) | 是 | 硬件描述信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

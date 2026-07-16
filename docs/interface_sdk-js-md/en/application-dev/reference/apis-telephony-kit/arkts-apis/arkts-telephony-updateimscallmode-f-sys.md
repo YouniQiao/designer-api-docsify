@@ -18,6 +18,8 @@ Update Ims call mode.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function updateImsCallMode(callId: int, mode: ImsCallMode, callback: AsyncCallback<void>): void--><!--Device-call-function updateImsCallMode(callId: int, mode: ImsCallMode, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -27,8 +29,8 @@ Update Ims call mode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | number | Yes | Indicates the identifier of the call. |
-| mode | ImsCallMode | Yes | Indicates the mode of the ims call. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of updateImsCallMode. |
+| mode | [ImsCallMode](arkts-telephony-imscallmode-e-sys.md) | Yes | Indicates the mode of the ims call. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of updateImsCallMode. |
 
 **Error codes:**
 
@@ -70,6 +72,8 @@ Update Ims call mode.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function updateImsCallMode(callId: int, mode: ImsCallMode): Promise<void>--><!--Device-call-function updateImsCallMode(callId: int, mode: ImsCallMode): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -79,13 +83,13 @@ Update Ims call mode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | number | Yes | Indicates the identifier of the call. |
-| mode | ImsCallMode | Yes | Indicates the mode of the ims call. |
+| mode | [ImsCallMode](arkts-telephony-imscallmode-e-sys.md) | Yes | Indicates the mode of the ims call. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the updateImsCallMode. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the updateImsCallMode. |
 
 **Error codes:**
 

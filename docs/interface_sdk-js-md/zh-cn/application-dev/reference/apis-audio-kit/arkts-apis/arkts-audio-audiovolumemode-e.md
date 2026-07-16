@@ -4,6 +4,8 @@
 
 **起始版本：** 19
 
+<!--Device-audio-enum AudioVolumeMode--><!--Device-audio-enum AudioVolumeMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 ## SYSTEM_GLOBAL
@@ -16,6 +18,8 @@ SYSTEM_GLOBAL = 0
 
 **起始版本：** 19
 
+<!--Device-AudioVolumeMode-SYSTEM_GLOBAL = 0--><!--Device-AudioVolumeMode-SYSTEM_GLOBAL = 0-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 ## APP_INDIVIDUAL
@@ -27,6 +31,8 @@ APP_INDIVIDUAL = 1
 应用级音量。
 
 **起始版本：** 19
+
+<!--Device-AudioVolumeMode-APP_INDIVIDUAL = 1--><!--Device-AudioVolumeMode-APP_INDIVIDUAL = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 

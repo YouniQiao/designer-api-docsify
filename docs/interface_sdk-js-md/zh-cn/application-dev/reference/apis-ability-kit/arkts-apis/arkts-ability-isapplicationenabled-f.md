@@ -1,5 +1,11 @@
 # isApplicationEnabled
 
+## 导入模块
+
+```TypeScript
+import { bundle } from '@kit.AbilityKit';
+```
+
 ## isApplicationEnabled
 
 ```TypeScript
@@ -12,6 +18,8 @@ function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolea
 
 **废弃版本：** 9
 
+<!--Device-bundle-function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-bundle-function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **参数：**
@@ -19,7 +27,7 @@ function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolea
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 要查询的应用Bundle名称。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数，返回boolean代表是否启用。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数，返回boolean代表是否启用。 |
 
 
 ## isApplicationEnabled
@@ -34,6 +42,8 @@ function isApplicationEnabled(bundleName: string): Promise<boolean>
 
 **废弃版本：** 9
 
+<!--Device-bundle-function isApplicationEnabled(bundleName: string): Promise<boolean>--><!--Device-bundle-function isApplicationEnabled(bundleName: string): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **参数：**
@@ -46,5 +56,5 @@ function isApplicationEnabled(bundleName: string): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise形式返回boolean代表是否启用。 |
+| Promise<boolean> | Promise形式返回boolean代表是否启用。 |
 

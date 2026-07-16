@@ -1,5 +1,11 @@
 # disconnectDfs
 
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+```
+
 ## disconnectDfs
 
 ```TypeScript
@@ -11,6 +17,8 @@ declare function disconnectDfs(networkId: string): Promise<void>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-unnamed-declare function disconnectDfs(networkId: string): Promise<void>--><!--Device-unnamed-declare function disconnectDfs(networkId: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -24,7 +32,7 @@ declare function disconnectDfs(networkId: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回值。 |
+| Promise<void> | Promise对象。无返回值。 |
 
 **错误码：**
 

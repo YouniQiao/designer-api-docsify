@@ -4,6 +4,8 @@ Enumerates the window change event types that can be listened for.
 
 **Since:** 22
 
+<!--Device-unnamed-declare enum WindowChangeType--><!--Device-unnamed-declare enum WindowChangeType-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 ## WINDOW_UNDEFINED
@@ -12,12 +14,13 @@ Enumerates the window change event types that can be listened for.
 WINDOW_UNDEFINED = 0
 ```
 
-Non-window change event.
-<br>Note: This value can only be used as a return value. If it is passed in an API, an exception will be thrown.
+Non-window change event.<br>Note: This value can only be used as a return value. If it is passed in an API, an exception will be thrown.
 
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-WindowChangeType-WINDOW_UNDEFINED = 0--><!--Device-WindowChangeType-WINDOW_UNDEFINED = 0-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -33,6 +36,8 @@ Window adding event.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-WindowChangeType-WINDOW_ADDED = 1--><!--Device-WindowChangeType-WINDOW_ADDED = 1-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 ## WINDOW_REMOVED
@@ -47,6 +52,8 @@ Window removing event.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-WindowChangeType-WINDOW_REMOVED = 2--><!--Device-WindowChangeType-WINDOW_REMOVED = 2-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 ## WINDOW_BOUNDS_CHANGED
@@ -60,6 +67,8 @@ Window bounds change event.
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-WindowChangeType-WINDOW_BOUNDS_CHANGED = 3--><!--Device-WindowChangeType-WINDOW_BOUNDS_CHANGED = 3-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 

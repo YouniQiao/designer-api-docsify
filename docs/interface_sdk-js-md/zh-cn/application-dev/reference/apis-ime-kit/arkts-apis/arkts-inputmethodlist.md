@@ -1,5 +1,11 @@
 # @ohos.inputMethodList
 
+## 导入模块
+
+```TypeScript
+import { Pattern, InputMethodListDialog, PatternOptions } from '@kit.IMEKit';
+```
+
 ## 汇总
 
 ### 结构体

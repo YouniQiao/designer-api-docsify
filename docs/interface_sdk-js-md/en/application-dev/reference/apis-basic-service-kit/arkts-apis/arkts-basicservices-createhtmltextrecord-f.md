@@ -20,6 +20,8 @@ Creates a **PasteDataRecord** object of the HTML text type.
 
 **Substitutes:** createRecord(mimeType:
 
+<!--Device-pasteboard-function createHtmlTextRecord(htmlText: string): PasteDataRecord--><!--Device-pasteboard-function createHtmlTextRecord(htmlText: string): PasteDataRecord-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
@@ -32,7 +34,7 @@ Creates a **PasteDataRecord** object of the HTML text type.
 
 | Type | Description |
 | --- | --- |
-| PasteDataRecord | **PasteDataRecord** object of the HTML text type. |
+| [PasteDataRecord](arkts-basicservices-pastedatarecord-i.md) | **PasteDataRecord** object of the HTML text type. |
 
 **Example**
 

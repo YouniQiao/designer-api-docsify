@@ -1,13 +1,14 @@
 # Stat
 
-Provides detailed file information. Before calling a method of the **Stat** class, use the [stat()](arkts-corefile-fileio-stat-f.md#stat-1)
-method synchronously or asynchronously to create a **Stat** instance.
+Provides detailed file information. Before calling a method of the **Stat** class, use the [stat()](arkts-corefile-fileio-stat-f.md#stat-1)method synchronously or asynchronously to create a **Stat** instance.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
 **Substitutes:** [fs:Stat](arkts-corefile-stat-i.md)
+
+<!--Device-unnamed-declare interface Stat--><!--Device-unnamed-declare interface Stat-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -17,14 +18,15 @@ method synchronously or asynchronously to create a **Stat** instance.
 isBlockDevice(): boolean
 ```
 
-Checks whether this file is a block special file. A block special file supports access by block only, and it is
-cached when accessed.
+Checks whether this file is a block special file. A block special file supports access by block only, and it is cached when accessed.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
 **Substitutes:** [isBlockDevice](arkts-corefile-stat-i.md#isblockdevice-1)
+
+<!--Device-Stat-isBlockDevice(): boolean--><!--Device-Stat-isBlockDevice(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -48,14 +50,15 @@ let isBLockDevice = fileio.statSync(filePath).isBlockDevice();
 isCharacterDevice(): boolean
 ```
 
-Checks whether this file is a character special file. A character special file supports random access, and it is
-not cached when accessed.
+Checks whether this file is a character special file. A character special file supports random access, and it is not cached when accessed.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
 **Substitutes:** [isCharacterDevice](arkts-corefile-stat-i.md#ischaracterdevice-1)
+
+<!--Device-Stat-isCharacterDevice(): boolean--><!--Device-Stat-isCharacterDevice(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -87,6 +90,8 @@ Checks whether this file is a directory.
 
 **Substitutes:** [isDirectory](arkts-corefile-stat-i.md#isdirectory-1)
 
+<!--Device-Stat-isDirectory(): boolean--><!--Device-Stat-isDirectory(): boolean-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
@@ -116,6 +121,8 @@ Checks whether this file is a named pipe (or FIFO). Named pipes are used for int
 **Deprecated since:** 9
 
 **Substitutes:** [isFIFO](arkts-corefile-stat-i.md#isfifo-1)
+
+<!--Device-Stat-isFIFO(): boolean--><!--Device-Stat-isFIFO(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -147,6 +154,8 @@ Checks whether this file is a regular file.
 
 **Substitutes:** [isFile](arkts-corefile-stat-i.md#isfile-1)
 
+<!--Device-Stat-isFile(): boolean--><!--Device-Stat-isFile(): boolean-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
@@ -177,6 +186,8 @@ Checks whether this file is a socket.
 
 **Substitutes:** [isSocket](arkts-corefile-stat-i.md#issocket-1)
 
+<!--Device-Stat-isSocket(): boolean--><!--Device-Stat-isSocket(): boolean-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
@@ -206,6 +217,8 @@ Checks whether this file is a symbolic link.
 **Deprecated since:** 9
 
 **Substitutes:** [isSymbolicLink](arkts-corefile-stat-i.md#issymboliclink-1)
+
+<!--Device-Stat-isSymbolicLink(): boolean--><!--Device-Stat-isSymbolicLink(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -239,6 +252,8 @@ Time when the file was last accessed. The value is the number of seconds elapsed
 
 **Substitutes:** [atime](arkts-corefile-stat-i.md#atime)
 
+<!--Device-Stat-readonly atime: number--><!--Device-Stat-readonly atime: number-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## blocks
@@ -255,6 +270,8 @@ Number of blocks occupied by a file. Each block is 512 bytes.
 
 **Deprecated since:** 9
 
+<!--Device-Stat-readonly blocks: number--><!--Device-Stat-readonly blocks: number-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## ctime
@@ -263,8 +280,7 @@ Number of blocks occupied by a file. Each block is 512 bytes.
 readonly ctime: number
 ```
 
-Time of the last status change of the file. The value is the number of seconds elapsed since 00:00:00 on January 1,
-1970.
+Time of the last status change of the file. The value is the number of seconds elapsed since 00:00:00 on January 1,1970.
 
 **Type:** number
 
@@ -273,6 +289,8 @@ Time of the last status change of the file. The value is the number of seconds e
 **Deprecated since:** 9
 
 **Substitutes:** [ctime](arkts-corefile-stat-i.md#ctime)
+
+<!--Device-Stat-readonly ctime: number--><!--Device-Stat-readonly ctime: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -289,6 +307,8 @@ Major device number.
 **Since:** 6
 
 **Deprecated since:** 9
+
+<!--Device-Stat-readonly dev: number--><!--Device-Stat-readonly dev: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -308,6 +328,8 @@ ID of the user group of the file.
 
 **Substitutes:** [gid](arkts-corefile-stat-i.md#gid)
 
+<!--Device-Stat-readonly gid: number--><!--Device-Stat-readonly gid: number-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## ino
@@ -326,6 +348,8 @@ File identifier, which varies with files on the same device.
 
 **Substitutes:** ino
 
+<!--Device-Stat-readonly ino: number--><!--Device-Stat-readonly ino: number-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## mode
@@ -334,31 +358,27 @@ File identifier, which varies with files on the same device.
 readonly mode: number
 ```
 
-File type and permissions. The first four bits indicate the file type, and the last 12 bits indicate the
-permissions. The bit fields are described as follows:
-- **0o170000**: mask used to obtain the file type.
-- **0o140000**: The file is a socket.
-- **0o120000**: The file is a symbolic link.
-- **0o100000**: The file is a regular file.
-- **0o060000**: The file is a block device.
-- **0o040000**: The file is a directory.
-- **0o020000**: The file is a character device.
-- **0o010000**: The file is a named pipe (FIFO).
-- **0o0700**: mask used to obtain the owner permissions.
-- **0o0400**: The owner has the permission to read a regular file or a directory entry.
-- **0o0200**: The owner has the permission to write a regular file or create and delete a directory entry.
-- **0o0100**: The owner has the permission to execute a regular file or search for the specified path in a
-directory.
-- **0o0070**: mask used to obtain the user group permissions.
-- **0o0040**: The user group has the permission to read a regular file or a directory entry.
-- **0o0020**: The user group has the permission to write a regular file or create and delete a directory entry.
-- **0o0010**: The user group has the permission to execute a regular file or search for the specified path in a
-directory.
-- **0o0007**: mask used to obtain the permissions of other users.
-- **0o0004**: Other users have the permission to read a regular file or a directory entry.
-- **0o0002**: Other users have the permission to write a regular file or create and delete a directory entry.
-- **0o0001**: Other users have the permission to execute a regular file or search for the specified path in a
-directory.
+File type and permissions. The first four bits indicate the file type, and the last 12 bits indicate the permissions. The bit fields are described as follows:  
+- **0o170000**: mask used to obtain the file type.  
+- **0o140000**: The file is a socket.  
+- **0o120000**: The file is a symbolic link.  
+- **0o100000**: The file is a regular file.  
+- **0o060000**: The file is a block device.  
+- **0o040000**: The file is a directory.  
+- **0o020000**: The file is a character device.  
+- **0o010000**: The file is a named pipe (FIFO).  
+- **0o0700**: mask used to obtain the owner permissions.  
+- **0o0400**: The owner has the permission to read a regular file or a directory entry.  
+- **0o0200**: The owner has the permission to write a regular file or create and delete a directory entry.  
+- **0o0100**: The owner has the permission to execute a regular file or search for the specified path in a directory.  
+- **0o0070**: mask used to obtain the user group permissions.  
+- **0o0040**: The user group has the permission to read a regular file or a directory entry.  
+- **0o0020**: The user group has the permission to write a regular file or create and delete a directory entry.  
+- **0o0010**: The user group has the permission to execute a regular file or search for the specified path in a directory.  
+- **0o0007**: mask used to obtain the permissions of other users.  
+- **0o0004**: Other users have the permission to read a regular file or a directory entry.  
+- **0o0002**: Other users have the permission to write a regular file or create and delete a directory entry.  
+- **0o0001**: Other users have the permission to execute a regular file or search for the specified path in a directory.
 
 **Type:** number
 
@@ -368,6 +388,8 @@ directory.
 
 **Substitutes:** [mode](arkts-corefile-stat-i.md#mode)
 
+<!--Device-Stat-readonly mode: number--><!--Device-Stat-readonly mode: number-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## mtime
@@ -376,8 +398,7 @@ directory.
 readonly mtime: number
 ```
 
-Time when the file content was last modified. The value is the number of seconds elapsed since 00:00:00 on January
-1, 1970.
+Time when the file content was last modified. The value is the number of seconds elapsed since 00:00:00 on January1, 1970.
 
 **Type:** number
 
@@ -386,6 +407,8 @@ Time when the file content was last modified. The value is the number of seconds
 **Deprecated since:** 9
 
 **Substitutes:** [mtime](arkts-corefile-stat-i.md#mtime)
+
+<!--Device-Stat-readonly mtime: number--><!--Device-Stat-readonly mtime: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -403,6 +426,8 @@ Number of hard links in the file.
 
 **Deprecated since:** 9
 
+<!--Device-Stat-readonly nlink: number--><!--Device-Stat-readonly nlink: number-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## rdev
@@ -418,6 +443,8 @@ Minor device number.
 **Since:** 6
 
 **Deprecated since:** 9
+
+<!--Device-Stat-readonly rdev: number--><!--Device-Stat-readonly rdev: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -437,6 +464,8 @@ File size, in bytes. This parameter is valid only for regular files.
 
 **Substitutes:** [size](arkts-corefile-stat-i.md#size)
 
+<!--Device-Stat-readonly size: number--><!--Device-Stat-readonly size: number-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## uid
@@ -454,6 +483,8 @@ ID of the file owner.
 **Deprecated since:** 9
 
 **Substitutes:** [uid](arkts-corefile-stat-i.md#uid)
+
+<!--Device-Stat-readonly uid: number--><!--Device-Stat-readonly uid: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

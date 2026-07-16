@@ -1,5 +1,11 @@
 # authPrintJob（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+```
+
 ## authPrintJob
 
 ```TypeScript
@@ -13,6 +19,8 @@ function authPrintJob(jobId: string, userName: string, password: string): Promis
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-print-function authPrintJob(jobId: string, userName: string, password: string): Promise<boolean>--><!--Device-print-function authPrintJob(jobId: string, userName: string, password: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -30,7 +38,7 @@ function authPrintJob(jobId: string, userName: string, password: string): Promis
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | the promise returned by the function. |
+| Promise<boolean> | the promise returned by the function. |
 
 **错误码：**
 

@@ -20,6 +20,8 @@ function setPriorityStrategyByBundles(strategies: Map<BundleOption, number>): Pr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-notificationManager-function setPriorityStrategyByBundles(strategies: Map<BundleOption, long>): Promise<void>--><!--Device-notificationManager-function setPriorityStrategyByBundles(strategies: Map<BundleOption, long>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -28,13 +30,13 @@ function setPriorityStrategyByBundles(strategies: Map<BundleOption, number>): Pr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strategies | Map&lt;BundleOption, number&gt; | 是 | 应用通知优先策略的键值对集合。与PriorityStrategyStatus的枚举进行按位或运算得到值。 |
+| strategies | [Map](../../apis-arkts/arkts-apis/arkts-arkts-map-c.md)<BundleOption, number> | 是 | 应用通知优先策略的键值对集合。与PriorityStrategyStatus的枚举进行按位或运算得到值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

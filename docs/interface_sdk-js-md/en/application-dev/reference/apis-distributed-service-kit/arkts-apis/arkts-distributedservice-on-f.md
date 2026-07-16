@@ -20,6 +20,8 @@ Subscribes to data receiving events. This API returns the result asynchronously 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-proxyChannelManager-function on(type: 'receiveData', channelId: number, callback: Callback<DataInfo>): void--><!--Device-proxyChannelManager-function on(type: 'receiveData', channelId: number, callback: Callback<DataInfo>): void-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Parameters:**
@@ -28,7 +30,7 @@ Subscribes to data receiving events. This API returns the result asynchronously 
 | --- | --- | --- | --- |
 | type | 'receiveData' | Yes | Event type. The value **receiveData** indicates the data receiving event. |
 | channelId | number | Yes | Channel ID obtained when the proxy channel is opened. |
-| callback | Callback&lt;DataInfo&gt; | Yes | Callback used to return the received data. If the callback function isregistered multiple times, only the last registered one takes effect. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DataInfo> | Yes | Callback used to return the received data. If the callback function is registered multiple times, only the last registered one takes effect. |
 
 **Error codes:**
 
@@ -85,15 +87,17 @@ Subscribes to channel state change events. This API returns the result asynchron
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-proxyChannelManager-function on(type: 'channelStateChange', channelId: number, callback: Callback<ChannelStateInfo>): void--><!--Device-proxyChannelManager-function on(type: 'channelStateChange', channelId: number, callback: Callback<ChannelStateInfo>): void-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'channelStateChange' | Yes | Event type. The value **channelStateChange** indicates the channel statechange event. |
+| type | 'channelStateChange' | Yes | Event type. The value **channelStateChange** indicates the channel state change event. |
 | channelId | number | Yes | Channel ID obtained when the proxy channel is opened. |
-| callback | Callback&lt;ChannelStateInfo&gt; | Yes | Callback used to return the received channel state. If thecallback function is registered multiple times, only the last registered one takes effect. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ChannelStateInfo> | Yes | Callback used to return the received channel state. If the callback function is registered multiple times, only the last registered one takes effect. |
 
 **Error codes:**
 

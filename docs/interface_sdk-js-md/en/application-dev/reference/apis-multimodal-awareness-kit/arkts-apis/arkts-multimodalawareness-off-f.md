@@ -16,15 +16,17 @@ Unsubscribes from the device status.
 
 **Since:** 9
 
+<!--Device-stationary-function off(activity: ActivityType, event: ActivityEvent, callback?: Callback<ActivityResponse>): void--><!--Device-stationary-function off(activity: ActivityType, event: ActivityEvent, callback?: Callback<ActivityResponse>): void-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| activity | ActivityType | Yes | Device status type. |
-| event | ActivityEvent | Yes | Event type. |
-| callback | Callback&lt;ActivityResponse&gt; | No | Callback used to receive reported data. If no value or**undefined** is passed, all callbacks associated with the specified event in the process will be unregistered. |
+| activity | [ActivityType](arkts-multimodalawareness-activitytype-t.md) | Yes | Device status type. |
+| event | [ActivityEvent](arkts-multimodalawareness-activityevent-e.md) | Yes | Event type. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ActivityResponse> | No | Callback used to receive reported data. If no value or **undefined** is passed, all callbacks associated with the specified event in the process will be unregistered. |
 
 **Example**
 

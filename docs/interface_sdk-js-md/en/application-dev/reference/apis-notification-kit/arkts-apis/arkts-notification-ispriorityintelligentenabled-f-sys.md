@@ -12,14 +12,15 @@ import { notificationManager } from '@kit.NotificationKit';
 function isPriorityIntelligentEnabled(): Promise<boolean>
 ```
 
-Obtains whether the intelligent priority notification service is enabled. This API uses a promise to return the
-result.
+Obtains whether the intelligent priority notification service is enabled. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-notificationManager-function isPriorityIntelligentEnabled(): Promise<boolean>--><!--Device-notificationManager-function isPriorityIntelligentEnabled(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -29,7 +30,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise that contains the enabling status of the intelligent priority notificationservice.<br> - **true**: The intelligent priority notification service is enabled.<br> - **false**: The intelligent priority notification service is disabled. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise that contains the enabling status of the intelligent priority notification service.<br> - **true**: The intelligent priority notification service is enabled.<br> - **false**: The intelligent priority notification service is disabled. |
 
 **Error codes:**
 

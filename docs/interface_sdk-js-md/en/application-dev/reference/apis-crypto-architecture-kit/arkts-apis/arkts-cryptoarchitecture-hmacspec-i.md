@@ -1,15 +1,16 @@
 # HmacSpec
 
-Represents the child class of [MacSpec](arkts-cryptoarchitecture-macspec-i.md). It is used as an input parameter for HMAC
-computation.
+Represents the child class of [MacSpec](arkts-cryptoarchitecture-macspec-i.md). It is used as an input parameter for HMAC computation.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > **mdName** specifies the HMAC message digest algorithm. It is mandatory.
 
 **Inheritance/Implementation:** HmacSpec extends [MacSpec](arkts-cryptoarchitecture-macspec-i.md)
 
 **Since:** 18
+
+<!--Device-cryptoFramework-interface HmacSpec extends MacSpec--><!--Device-cryptoFramework-interface HmacSpec extends MacSpec-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Mac
 
@@ -32,6 +33,8 @@ Message digest algorithm.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-HmacSpec-mdName: string--><!--Device-HmacSpec-mdName: string-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Mac
 

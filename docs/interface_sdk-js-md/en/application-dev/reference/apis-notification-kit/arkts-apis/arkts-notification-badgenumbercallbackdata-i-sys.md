@@ -4,6 +4,8 @@ Returns the changes of the application badge number.
 
 **Since:** 10
 
+<!--Device-unnamed-export interface BadgeNumberCallbackData--><!--Device-unnamed-export interface BadgeNumberCallbackData-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -19,6 +21,8 @@ Key value of an application instance.
 **Type:** string
 
 **Since:** 15
+
+<!--Device-BadgeNumberCallbackData-readonly appInstanceKey?: string--><!--Device-BadgeNumberCallbackData-readonly appInstanceKey?: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -36,6 +40,8 @@ Number of notifications displayed on the application icon.
 
 **Since:** 10
 
+<!--Device-BadgeNumberCallbackData-readonly badgeNumber: int--><!--Device-BadgeNumberCallbackData-readonly badgeNumber: int-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -52,6 +58,8 @@ Bundle name of the application.
 
 **Since:** 10
 
+<!--Device-BadgeNumberCallbackData-readonly bundle: string--><!--Device-BadgeNumberCallbackData-readonly bundle: string-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -62,8 +70,7 @@ Bundle name of the application.
 readonly instanceKey?: number
 ```
 
-Key value of an application instance. This parameter is supported since API version 12 and
-deprecated since API version 15.You are advised to use **appInstanceKey** instead.
+Key value of an application instance. This parameter is supported since API version 12 and deprecated since API version 15.You are advised to use **appInstanceKey** instead.
 
 **Type:** number
 
@@ -72,6 +79,8 @@ deprecated since API version 15.You are advised to use **appInstanceKey** instea
 **Deprecated since:** 15
 
 **Substitutes:** [appInstanceKey](arkts-notification-badgenumbercallbackdata-i-sys.md#appinstancekey)
+
+<!--Device-BadgeNumberCallbackData-readonly instanceKey?: number--><!--Device-BadgeNumberCallbackData-readonly instanceKey?: number-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -88,6 +97,8 @@ UID of the application.
 **Type:** number
 
 **Since:** 10
+
+<!--Device-BadgeNumberCallbackData-readonly uid: int--><!--Device-BadgeNumberCallbackData-readonly uid: int-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

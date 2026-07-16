@@ -4,6 +4,8 @@ Describes the configuration options for polygon-to-polygon transformation mappin
 
 **Since:** 12
 
+<!--Device-matrix4-export interface PolyToPolyOptions--><!--Device-matrix4-export interface PolyToPolyOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -27,6 +29,8 @@ Coordinates of the destination point.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PolyToPolyOptions-dst:Array<Point>--><!--Device-PolyToPolyOptions-dst:Array<Point>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,6 +56,8 @@ Value range: [0, +∞).
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PolyToPolyOptions-dstIndex?: number--><!--Device-PolyToPolyOptions-dstIndex?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## pointCount
@@ -60,8 +66,7 @@ Value range: [0, +∞).
 pointCount?:number
 ```
 
-Number of used points. **0**: returns an identity matrix. **1**: returns a translation matrix. 2-4: returns a
-transformation matrix.
+Number of used points. **0**: returns an identity matrix. **1**: returns a translation matrix. 2-4: returns a transformation matrix.
 
 Default value: **0**.
 
@@ -76,6 +81,8 @@ Value range: [0, +∞).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PolyToPolyOptions-pointCount?:number--><!--Device-PolyToPolyOptions-pointCount?:number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,6 +101,8 @@ Coordinates of the source point.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PolyToPolyOptions-src: Array<Point>--><!--Device-PolyToPolyOptions-src: Array<Point>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -118,6 +127,8 @@ Value range: [0, +∞).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PolyToPolyOptions-srcIndex?: number--><!--Device-PolyToPolyOptions-srcIndex?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,5 +1,11 @@
 # getAVScreenCaptureConfigurableParameters（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { media } from '@kit.MediaKit';
+```
+
 ## getAVScreenCaptureConfigurableParameters
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getAVScreenCaptureConfigurableParameters(sessionId: number): Promise<st
 get Configurations which user can changes from AVScreenCapture server
 
 **起始版本：** 20
+
+<!--Device-media-function getAVScreenCaptureConfigurableParameters(sessionId: int): Promise<string>--><!--Device-media-function getAVScreenCaptureConfigurableParameters(sessionId: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -24,7 +32,7 @@ get Configurations which user can changes from AVScreenCapture server
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Returns a configurable configuration item string. |
+| Promise<string> | Returns a configurable configuration item string. |
 
 **错误码：**
 

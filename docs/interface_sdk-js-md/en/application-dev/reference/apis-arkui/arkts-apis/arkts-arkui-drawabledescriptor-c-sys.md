@@ -1,9 +1,10 @@
 # DrawableDescriptor
 
-Represents the base class providing overridable methods for [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md)
-acquisition and image resource loading.
+Represents the base class providing overridable methods for [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md)acquisition and image resource loading.
 
 **Since:** 10
+
+<!--Device-unnamed-export class DrawableDescriptor--><!--Device-unnamed-export class DrawableDescriptor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,6 +25,8 @@ Creates a new DrawableDescriptor.
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DrawableDescriptor-constructor()--><!--Device-DrawableDescriptor-constructor()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

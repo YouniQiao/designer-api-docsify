@@ -1,19 +1,26 @@
 # getAllAppCloneBundleInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getAllAppCloneBundleInfo
 
 ```TypeScript
 function getAllAppCloneBundleInfo(bundleName: string, bundleFlags: number, userId?: number): Promise<Array<BundleInfo>>
 ```
 
-根据bundleName、[bundleFlags](arkts-ability-bundleflag-e.md)以及用户ID查询主应用和分身应用的BundleInfo列表。
-使用Promise异步回调。
+根据bundleName、[bundleFlags](arkts-ability-bundleflag-e.md)以及用户ID查询主应用和分身应用的BundleInfo列表。使用Promise异步回调。
 
 获取调用方自身的信息时不需要权限。
 
 **起始版本：** 12
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getAllAppCloneBundleInfo(bundleName: string, bundleFlags: int, userId?: int): Promise<Array<BundleInfo>>--><!--Device-bundleManager-function getAllAppCloneBundleInfo(bundleName: string, bundleFlags: int, userId?: int): Promise<Array<BundleInfo>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -31,7 +38,7 @@ function getAllAppCloneBundleInfo(bundleName: string, bundleFlags: number, userI
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;BundleInfo&gt;&gt; | Promise对象。返回应用包信息列表。 |
+| Promise<Array<BundleInfo>> | Promise对象。返回应用包信息列表。 |
 
 **错误码：**
 

@@ -18,7 +18,7 @@ import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeC
 
 | Name | Description |
 | --- | --- |
-| [Callee](arkts-ability-callee-i.md) | Background communication object created by the system for the UIAbility, known as the Callee UIAbility (Callee), which is capable of receiving data sent from the Caller object. |
+| [Callee](arkts-ability-callee-i.md) | Background communication object created by the system for the UIAbility, known as the Callee UIAbility (Callee),which is capable of receiving data sent from the Caller object. |
 | [CalleeCallback](arkts-ability-calleecallback-i.md) | Defines the callback of the registration message notification of the UIAbility. |
 | [Caller](arkts-ability-caller-i.md) | A Caller UIAbility can use the [startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startabilitybycall-1) API to start the target Callee UIAbility. After the target UIAbility is started successfully, a Caller object is returned to the caller for communication. |
 | [OnReleaseCallback](arkts-ability-onreleasecallback-i.md) | Defines the callback that is invoked when the stub on the target UIAbility is disconnected. |

@@ -1,13 +1,10 @@
 # HapModuleInfo
 
-The HapModuleInfo module provides information about an HAP module. Unless otherwise specified, the information is
-obtained through
-[bundle.getBundleInfo](arkts-ability-getbundleinfo-f.md#getbundleinfo-3)
-.
+The HapModuleInfo module provides information about an HAP module. Unless otherwise specified, the information is obtained through [bundle.getBundleInfo](arkts-ability-getbundleinfo-f.md#getbundleinfo-3).
 
-> **NOTE**
->
-> The APIs of this module have been deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> The APIs of this module have been deprecated since API version 9. You are advised to use  
 > [bundleManager-HapModuleInfo](arkts-ability-hapmoduleinfo-depr-i.md) instead.
 
 **Since:** 7
@@ -15,6 +12,8 @@ obtained through
 **Deprecated since:** 9
 
 **Substitutes:** [hapModuleInfo:HapModuleInfo](arkts-ability-hapmoduleinfo-depr-i.md)
+
+<!--Device-unnamed-export interface HapModuleInfo--><!--Device-unnamed-export interface HapModuleInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -36,6 +35,8 @@ Ability information.
 
 **Substitutes:** abilitiesInfo
 
+<!--Device-HapModuleInfo-readonly abilityInfo: Array<AbilityInfo>--><!--Device-HapModuleInfo-readonly abilityInfo: Array<AbilityInfo>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## backgroundImg
@@ -53,6 +54,8 @@ Module background image.
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-HapModuleInfo-readonly backgroundImg: string--><!--Device-HapModuleInfo-readonly backgroundImg: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -74,6 +77,8 @@ Module description.
 
 **Substitutes:** description
 
+<!--Device-HapModuleInfo-readonly description: string--><!--Device-HapModuleInfo-readonly description: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## descriptionId
@@ -93,6 +98,8 @@ Module description ID.
 **Deprecated since:** 9
 
 **Substitutes:** descriptionId
+
+<!--Device-HapModuleInfo-readonly descriptionId: number--><!--Device-HapModuleInfo-readonly descriptionId: number-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -114,6 +121,8 @@ Device types supported by the module.
 
 **Substitutes:** deviceTypes
 
+<!--Device-HapModuleInfo-readonly deviceTypes: Array<string>--><!--Device-HapModuleInfo-readonly deviceTypes: Array<string>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## icon
@@ -133,6 +142,8 @@ Module icon.
 **Deprecated since:** 9
 
 **Substitutes:** icon
+
+<!--Device-HapModuleInfo-readonly icon: string--><!--Device-HapModuleInfo-readonly icon: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -154,6 +165,8 @@ Module icon ID.
 
 **Substitutes:** iconId
 
+<!--Device-HapModuleInfo-readonly iconId: number--><!--Device-HapModuleInfo-readonly iconId: number-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## installationFree
@@ -173,6 +186,8 @@ Whether installation-free is supported. **true** if supported, **false** otherwi
 **Deprecated since:** 9
 
 **Substitutes:** installationFree
+
+<!--Device-HapModuleInfo-readonly installationFree: boolean--><!--Device-HapModuleInfo-readonly installationFree: boolean-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -194,6 +209,8 @@ Module label.
 
 **Substitutes:** label
 
+<!--Device-HapModuleInfo-readonly label: string--><!--Device-HapModuleInfo-readonly label: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## labelId
@@ -214,6 +231,8 @@ Module label ID.
 
 **Substitutes:** labelId
 
+<!--Device-HapModuleInfo-readonly labelId: number--><!--Device-HapModuleInfo-readonly labelId: number-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## mainAbilityName
@@ -231,6 +250,8 @@ Name of the main ability.
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-HapModuleInfo-readonly mainAbilityName: string--><!--Device-HapModuleInfo-readonly mainAbilityName: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -252,6 +273,8 @@ Module name.
 
 **Substitutes:** name
 
+<!--Device-HapModuleInfo-readonly moduleName: string--><!--Device-HapModuleInfo-readonly moduleName: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## name
@@ -272,6 +295,8 @@ Module name.
 
 **Substitutes:** name
 
+<!--Device-HapModuleInfo-readonly name: string--><!--Device-HapModuleInfo-readonly name: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## reqCapabilities
@@ -290,6 +315,8 @@ Capabilities required for module running.
 
 **Deprecated since:** 9
 
+<!--Device-HapModuleInfo-readonly reqCapabilities: Array<string>--><!--Device-HapModuleInfo-readonly reqCapabilities: Array<string>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## supportedModes
@@ -307,6 +334,8 @@ Running modes supported by the module.
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-HapModuleInfo-readonly supportedModes: number--><!--Device-HapModuleInfo-readonly supportedModes: number-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 

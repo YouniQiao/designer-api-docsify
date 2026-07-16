@@ -8,6 +8,8 @@ Performs date and time formatting.
 
 **Substitutes:** org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
 
+<!--Device-intl-export class DateTimeFormat--><!--Device-intl-export class DateTimeFormat-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
@@ -33,6 +35,8 @@ Creates a **DateTimeOptions** object for the specified locale.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-DateTimeFormat-constructor()--><!--Device-DateTimeFormat-constructor()-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -64,14 +68,16 @@ Creates a **DateTimeOptions** object for the specified locale.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-DateTimeFormat-constructor(locale: string | Array<string>, options?: DateTimeOptions)--><!--Device-DateTimeFormat-constructor(locale: string | Array<string>, options?: DateTimeOptions)-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, thefirst valid locale ID is used. |
-| options | DateTimeOptions | No | Options for creating the **DateTimeOptions** object.If no options are set, the default values of **year**, **month**, and **day** are **numeric**. |
+| locale | string \| Array<string> | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
+| options | [DateTimeOptions](arkts-localization-datetimeoptions-i.md) | No | Options for creating the **DateTimeOptions** object.If no options are set, the default values of **year**, **month**, and **day** are **numeric**. |
 
 **Example**
 
@@ -104,13 +110,15 @@ Formats the date and time.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-DateTimeFormat-format(date: Date): string--><!--Device-DateTimeFormat-format(date: Date): string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | Yes | Date and time. Note: The month starts from **0**. For example, **0** indicates January. |
+| date | [Date](../../apis-na/arkts-apis/arkts-na-date-i.md) | Yes | Date and time. Note: The month starts from **0**. For example, **0** indicates January. |
 
 **Return value:**
 
@@ -152,14 +160,16 @@ Formats date and time ranges.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-DateTimeFormat-formatRange(startDate: Date, endDate: Date): string--><!--Device-DateTimeFormat-formatRange(startDate: Date, endDate: Date): string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startDate | Date | Yes | Start date and time. Note: The month starts from **0**. For example, **0** indicatesJanuary. |
-| endDate | Date | Yes | End date and time. Note: The month starts from **0**. For example, **0** indicatesJanuary. |
+| startDate | [Date](../../apis-na/arkts-apis/arkts-na-date-i.md) | Yes | Start date and time. Note: The month starts from **0**. For example, **0** indicates January. |
+| endDate | [Date](../../apis-na/arkts-apis/arkts-na-date-i.md) | Yes | End date and time. Note: The month starts from **0**. For example, **0** indicates January. |
 
 **Return value:**
 
@@ -198,13 +208,15 @@ Obtains the options for creating a **DateTimeOptions** object.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-DateTimeFormat-resolvedOptions(): DateTimeOptions--><!--Device-DateTimeFormat-resolvedOptions(): DateTimeOptions-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DateTimeOptions | Options for the **DateTimeOptions** object. |
+| [DateTimeOptions](arkts-localization-datetimeoptions-i.md) | Options for the **DateTimeOptions** object. |
 
 **Example**
 

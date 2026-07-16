@@ -18,6 +18,8 @@ Start network sharing for given type.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-sharing-function startSharing(type: SharingIfaceType, callback: AsyncCallback<void>): void--><!--Device-sharing-function startSharing(type: SharingIfaceType, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Start network sharing for given type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SharingIfaceType | Yes | Enumeration of shareable interface types. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of startSharing. |
+| type | [SharingIfaceType](arkts-network-sharingifacetype-e-sys.md) | Yes | Enumeration of shareable interface types. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of startSharing. |
 
 **Error codes:**
 
@@ -71,6 +73,8 @@ Start network sharing for given type.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-sharing-function startSharing(type: SharingIfaceType): Promise<void>--><!--Device-sharing-function startSharing(type: SharingIfaceType): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
@@ -79,13 +83,13 @@ Start network sharing for given type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SharingIfaceType | Yes | Enumeration of shareable interface types. |
+| type | [SharingIfaceType](arkts-network-sharingifacetype-e-sys.md) | Yes | Enumeration of shareable interface types. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

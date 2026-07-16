@@ -6,9 +6,17 @@
 
 **废弃版本：** 11
 
+<!--Device-deviceManager-interface SubscribeInfo--><!--Device-deviceManager-interface SubscribeInfo-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { deviceManager } from '@kit.DistributedServiceKit';
+```
 
 ## capability
 
@@ -23,6 +31,8 @@ capability: SubscribeCap
 **起始版本：** 7
 
 **废弃版本：** 11
+
+<!--Device-SubscribeInfo-capability: SubscribeCap--><!--Device-SubscribeInfo-capability: SubscribeCap-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -42,6 +52,8 @@ freq: ExchangeFreq
 
 **废弃版本：** 11
 
+<!--Device-SubscribeInfo-freq: ExchangeFreq--><!--Device-SubscribeInfo-freq: ExchangeFreq-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -59,6 +71,8 @@ isSameAccount: boolean
 **起始版本：** 7
 
 **废弃版本：** 11
+
+<!--Device-SubscribeInfo-isSameAccount: boolean--><!--Device-SubscribeInfo-isSameAccount: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -78,6 +92,8 @@ isWakeRemote: boolean
 
 **废弃版本：** 11
 
+<!--Device-SubscribeInfo-isWakeRemote: boolean--><!--Device-SubscribeInfo-isWakeRemote: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -95,6 +111,8 @@ medium: ExchangeMedium
 **起始版本：** 7
 
 **废弃版本：** 11
+
+<!--Device-SubscribeInfo-medium: ExchangeMedium--><!--Device-SubscribeInfo-medium: ExchangeMedium-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -114,6 +132,8 @@ mode: DiscoverMode
 
 **废弃版本：** 11
 
+<!--Device-SubscribeInfo-mode: DiscoverMode--><!--Device-SubscribeInfo-mode: DiscoverMode-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -131,6 +151,8 @@ subscribeId: number
 **起始版本：** 7
 
 **废弃版本：** 11
+
+<!--Device-SubscribeInfo-subscribeId: number--><!--Device-SubscribeInfo-subscribeId: number-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 

@@ -20,6 +20,8 @@ Get all AVMusicTemplate descriptors.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-avMusicTemplate-function getAllAVMusicTemplateDescriptors(userId?: int): AVMusicTemplateDescriptor[]--><!--Device-avMusicTemplate-function getAllAVMusicTemplateDescriptors(userId?: int): AVMusicTemplateDescriptor[]-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **System API:** This is a system API.
@@ -34,7 +36,7 @@ Get all AVMusicTemplate descriptors.
 
 | Type | Description |
 | --- | --- |
-| AVMusicTemplateDescriptor[] | an AVMusicTemplate descriptor array |
+| [AVMusicTemplateDescriptor](arkts-avsession-avmusictemplatedescriptor-i-sys.md)[] | an AVMusicTemplate descriptor array |
 
 **Error codes:**
 
@@ -42,5 +44,5 @@ Get all AVMusicTemplate descriptors.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verify failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function getAllAVMusicTemplateDescriptorscan not work correctly due to limited device capabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function getAllAVMusicTemplateDescriptors can not work correctly due to limited device capabilities. |
 

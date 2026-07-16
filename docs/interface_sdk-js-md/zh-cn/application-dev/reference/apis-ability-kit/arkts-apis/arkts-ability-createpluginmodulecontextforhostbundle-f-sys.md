@@ -1,5 +1,11 @@
 # createPluginModuleContextForHostBundle（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { application } from '@kit.AbilityKit';
+```
+
 ## createPluginModuleContextForHostBundle
 
 ```TypeScript
@@ -15,6 +21,10 @@ export function createPluginModuleContextForHostBundle(context: Context, pluginB
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-application-export function createPluginModuleContextForHostBundle(context: Context, pluginBundleName: string, pluginModuleName: string,
+    hostBundleName: string): Promise<Context>--><!--Device-application-export function createPluginModuleContextForHostBundle(context: Context, pluginBundleName: string, pluginModuleName: string,
+    hostBundleName: string): Promise<Context>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,7 +33,7 @@ export function createPluginModuleContextForHostBundle(context: Context, pluginB
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 表示应用上下文。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 表示应用上下文。 |
 | pluginBundleName | string | 是 | 表示应用的插件包名。 |
 | pluginModuleName | string | 是 | 表示应用的插件模块名。 |
 | hostBundleName | string | 是 | 表示安装插件的应用包名。 |
@@ -32,7 +42,7 @@ export function createPluginModuleContextForHostBundle(context: Context, pluginB
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Context&gt; | Promise对象。返回创建的Context，返回的Context中的属性processName和config与入参Context中的属性processName和config的值相同。 |
+| Promise<Context> | Promise对象。返回创建的Context，返回的Context中的属性processName和config与入参Context中的属性processName和config的值相同。 |
 
 **错误码：**
 

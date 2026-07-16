@@ -1,5 +1,11 @@
 # getInsightIntentInfoByIntentName（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { insightIntentDriver } from '@kit.AbilityKit';
+```
+
 ## getInsightIntentInfoByIntentName
 
 ```TypeScript
@@ -13,6 +19,8 @@ function getInsightIntentInfoByIntentName(bundleName: string, moduleName: string
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-insightIntentDriver-function getInsightIntentInfoByIntentName(bundleName: string, moduleName: string, intentName: string, intentFlags: int): Promise<InsightIntentInfo>--><!--Device-insightIntentDriver-function getInsightIntentInfoByIntentName(bundleName: string, moduleName: string, intentName: string, intentFlags: int): Promise<InsightIntentInfo>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -31,7 +39,7 @@ function getInsightIntentInfoByIntentName(bundleName: string, moduleName: string
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;InsightIntentInfo&gt; | Promise对象，返回意图信息对象。 |
+| Promise<InsightIntentInfo> | Promise对象，返回意图信息对象。 |
 
 **错误码：**
 

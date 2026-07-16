@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+<!--Device-floatingBall-enum FloatingBallTemplate--><!--Device-floatingBall-enum FloatingBallTemplate-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## STATIC
@@ -15,6 +17,8 @@ STATIC = 1
 静态布局，支持标题和图标。使用此模板时，FloatingBallParams中的title参数和icon参数必传。
 
 **起始版本：** 20
+
+<!--Device-FloatingBallTemplate-STATIC = 1--><!--Device-FloatingBallTemplate-STATIC = 1-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -28,6 +32,8 @@ NORMAL = 2
 
 **起始版本：** 20
 
+<!--Device-FloatingBallTemplate-NORMAL = 2--><!--Device-FloatingBallTemplate-NORMAL = 2-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## EMPHATIC
@@ -40,6 +46,8 @@ EMPHATIC = 3
 
 **起始版本：** 20
 
+<!--Device-FloatingBallTemplate-EMPHATIC = 3--><!--Device-FloatingBallTemplate-EMPHATIC = 3-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## SIMPLE
@@ -51,6 +59,8 @@ SIMPLE = 4
 纯文本布局，只支持标题。使用此模板时，FloatingBallParams中的title参数必传。
 
 **起始版本：** 20
+
+<!--Device-FloatingBallTemplate-SIMPLE = 4--><!--Device-FloatingBallTemplate-SIMPLE = 4-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 

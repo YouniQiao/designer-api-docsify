@@ -1,13 +1,14 @@
 # NotificationSortingMap (System API)
 
-The **NotificationSortingMap** module provides APIs for defining the sorting information of active notifications in
-all subscribed notifications.
+The **NotificationSortingMap** module provides APIs for defining the sorting information of active notifications in all subscribed notifications.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > The APIs provided by this module are system APIs.
 
 **Since:** 7
+
+<!--Device-unnamed-export interface NotificationSortingMap--><!--Device-unnamed-export interface NotificationSortingMap-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -25,6 +26,8 @@ Hash codes for notification sorting.
 
 **Since:** 7
 
+<!--Device-NotificationSortingMap-readonly sortedHashCode: Array<string>--><!--Device-NotificationSortingMap-readonly sortedHashCode: Array<string>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -40,6 +43,8 @@ Array of notification sorting information.
 **Type:** Record<string, NotificationSorting>
 
 **Since:** 7
+
+<!--Device-NotificationSortingMap-readonly sortings: Record<string, NotificationSorting>--><!--Device-NotificationSortingMap-readonly sortings: Record<string, NotificationSorting>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

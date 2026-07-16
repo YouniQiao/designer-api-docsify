@@ -4,6 +4,8 @@ Describes the information about a suspended continuous task.
 
 **Since:** 20
 
+<!--Device-backgroundTaskManager-interface ContinuousTaskSuspendInfo--><!--Device-backgroundTaskManager-interface ContinuousTaskSuspendInfo-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## Modules to Import
@@ -24,6 +26,8 @@ ID of the suspended continuous task.
 
 **Since:** 20
 
+<!--Device-ContinuousTaskSuspendInfo-continuousTaskId: int--><!--Device-ContinuousTaskSuspendInfo-continuousTaskId: int-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## suspendMessage
@@ -40,6 +44,8 @@ Describes the information about a suspended continuous task.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ContinuousTaskSuspendInfo-suspendMessage?: SuspendMessage--><!--Device-ContinuousTaskSuspendInfo-suspendMessage?: SuspendMessage-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## suspendReason
@@ -54,6 +60,8 @@ Reason why the continuous task is suspended.
 
 **Since:** 20
 
+<!--Device-ContinuousTaskSuspendInfo-suspendReason: ContinuousTaskSuspendReason--><!--Device-ContinuousTaskSuspendInfo-suspendReason: ContinuousTaskSuspendReason-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## suspendState
@@ -62,12 +70,13 @@ Reason why the continuous task is suspended.
 suspendState: boolean
 ```
 
-Continuous task state. The value **false** indicates that the task is activated, and the value **true** indicates
-that the task is suspended.
+Continuous task state. The value **false** indicates that the task is activated, and the value **true** indicates that the task is suspended.
 
 **Type:** boolean
 
 **Since:** 20
+
+<!--Device-ContinuousTaskSuspendInfo-suspendState: boolean--><!--Device-ContinuousTaskSuspendInfo-suspendState: boolean-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 

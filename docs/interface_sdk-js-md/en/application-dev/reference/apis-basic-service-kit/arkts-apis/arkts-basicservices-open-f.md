@@ -16,13 +16,15 @@ Opens a serial port device.
 
 **Since:** 19
 
+<!--Device-serialManager-function open(portId: int): void--><!--Device-serialManager-function open(portId: int): void-End-->
+
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPortreturned by [getPortList](arkts-basicservices-getportlist-f.md#getportlist-1). |
+| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-getportlist-f.md#getportlist-1). |
 
 **Error codes:**
 

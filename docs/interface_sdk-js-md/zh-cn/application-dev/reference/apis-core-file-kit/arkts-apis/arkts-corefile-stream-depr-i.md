@@ -8,6 +8,8 @@
 
 **替代接口：** [fs:Stream](arkts-corefile-stream-i.md)
 
+<!--Device-unnamed-declare interface Stream--><!--Device-unnamed-declare interface Stream-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## close
@@ -24,13 +26,15 @@ close(): Promise<void>
 
 **替代接口：** [close](arkts-corefile-stream-i.md#close-1)
 
+<!--Device-Stream-close(): Promise<void>--><!--Device-Stream-close(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。返回表示异步关闭文件流的结果。 |
+| Promise<void> | Promise对象。返回表示异步关闭文件流的结果。 |
 
 **示例：**
 
@@ -60,13 +64,15 @@ close(callback: AsyncCallback<void>): void
 
 **替代接口：** [close](arkts-corefile-stream-i.md#close-1)
 
+<!--Device-Stream-close(callback: AsyncCallback<void>): void--><!--Device-Stream-close(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 异步关闭文件流之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 异步关闭文件流之后的回调。 |
 
 **示例：**
 
@@ -94,6 +100,8 @@ closeSync(): void
 
 **替代接口：** [closeSync](arkts-corefile-stream-i.md#closesync-1)
 
+<!--Device-Stream-closeSync(): void--><!--Device-Stream-closeSync(): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **示例：**
@@ -119,13 +127,15 @@ flush(): Promise<void>
 
 **替代接口：** [flush](arkts-corefile-stream-i.md#flush-1)
 
+<!--Device-Stream-flush(): Promise<void>--><!--Device-Stream-flush(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。返回表示异步刷新文件流的结果。 |
+| Promise<void> | Promise对象。返回表示异步刷新文件流的结果。 |
 
 **示例：**
 
@@ -155,13 +165,15 @@ flush(callback: AsyncCallback<void>): void
 
 **替代接口：** [flush](arkts-corefile-stream-i.md#flush-1)
 
+<!--Device-Stream-flush(callback: AsyncCallback<void>): void--><!--Device-Stream-flush(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 异步刷新文件流后的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 异步刷新文件流后的回调函数。 |
 
 **示例：**
 
@@ -188,6 +200,8 @@ flushSync(): void
 **废弃版本：** 9
 
 **替代接口：** [flushSync](arkts-corefile-stream-i.md#flushsync-1)
+
+<!--Device-Stream-flushSync(): void--><!--Device-Stream-flushSync(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -221,20 +235,36 @@ read(
 
 **替代接口：** [read](arkts-corefile-stream-i.md#read-1)
 
+<!--Device-Stream-read(
+    buffer: ArrayBuffer,
+    options?: {
+      position?: number;
+      offset?: number;
+      length?: number;
+    }
+  ): Promise<ReadOut>--><!--Device-Stream-read(
+    buffer: ArrayBuffer,
+    options?: {
+      position?: number;
+      offset?: number;
+      length?: number;
+    }
+  ): Promise<ReadOut>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| options | {      position?: number;      offset?: number;      length?: number;    } | 否 | 支持如下选项：<br/>-?offset，number类型，表示将数据读取到缓冲区的位置，即相对于缓冲区首地址的偏移，单位为Byte。可选，默认为0。<br/>-?length，number类型，表示期望读取数据的长度。可选，默认缓冲区长度减去偏移长度，单位为Byte。<br/>-?position，number类型，表示期望读取文件的位置。可选，默认从当前位置开始读，单位为Byte。<br/>约束：offset+length&lt;=buffer.size。 |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | 用于读取文件的缓冲区。 |
+| options | {       position?: number;       offset?: number;       length?: number;     } | 否 | 支持如下选项：<br/>-?offset，number类型，表示将数据读取到缓冲区的位置，即相对于缓冲区首地址的偏移，单位为Byte。可选，默认为0。<br/>-?length，number类型，表示期望读取数据的长度。可选，默认缓冲区长度减去偏移长度，单位为Byte。<br/>-?position，number类型，表示期望读取文件的位置。可选，默认从当前位置开始读，单位为Byte。<br/>约束：offset+length&lt;=buffer.size。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ReadOut&gt; | Promise对象。返回读取的结果。 |
+| Promise<ReadOut> | Promise对象。返回读取的结果。 |
 
 **示例：**
 
@@ -277,14 +307,16 @@ read.
 
 **替代接口：** [read](arkts-corefile-stream-i.md#read-1)
 
+<!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<ReadOut>): void--><!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<ReadOut>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | buffer. |
-| callback | AsyncCallback&lt;ReadOut&gt; | 是 | callback. |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | buffer. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ReadOut> | 是 | callback. |
 
 ## read
 
@@ -308,15 +340,33 @@ read(
 
 **替代接口：** [read](arkts-corefile-stream-i.md#read-1)
 
+<!--Device-Stream-read(
+    buffer: ArrayBuffer,
+    options: {
+      position?: number;
+      offset?: number;
+      length?: number;
+    },
+    callback: AsyncCallback<ReadOut>
+  ): void--><!--Device-Stream-read(
+    buffer: ArrayBuffer,
+    options: {
+      position?: number;
+      offset?: number;
+      length?: number;
+    },
+    callback: AsyncCallback<ReadOut>
+  ): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| options | {      position?: number;      offset?: number;      length?: number;    } | 是 | 支持如下选项：<br/>-?offset，number类型，表示将数据读取到缓冲区的位置，即相对于缓冲区首地址的偏移，单位为Byte。可选，默认为0。<br/>-?length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度减去偏移长度。<br/>-?position，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。<br/>约束：offset+length&lt;=buffer.size。 |
-| callback | AsyncCallback&lt;ReadOut&gt; | 是 | 异步从流文件读取数据之后的回调。 |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | 用于读取文件的缓冲区。 |
+| options | {       position?: number;       offset?: number;       length?: number;     } | 是 | 支持如下选项：<br/>-?offset，number类型，表示将数据读取到缓冲区的位置，即相对于缓冲区首地址的偏移，单位为Byte。可选，默认为0。<br/>-?length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度减去偏移长度。<br/>-?position，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。<br/>约束：offset+length&lt;=buffer.size。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ReadOut> | 是 | 异步从流文件读取数据之后的回调。 |
 
 **示例：**
 
@@ -366,14 +416,30 @@ readSync(
 
 **替代接口：** [readSync](arkts-corefile-stream-i.md#readsync-1)
 
+<!--Device-Stream-readSync(
+    buffer: ArrayBuffer,
+    options?: {
+      position?: number;
+      offset?: number;
+      length?: number;
+    }
+  ): number--><!--Device-Stream-readSync(
+    buffer: ArrayBuffer,
+    options?: {
+      position?: number;
+      offset?: number;
+      length?: number;
+    }
+  ): number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| options | {      position?: number;      offset?: number;      length?: number;    } | 否 | 支持如下选项：<br/>-?offset，number类型，表示将数据读取到缓冲区的位置，即相对于缓冲区首地址的偏移，单位为Byte。可选，默认为0。<br/>-?length，number类型，表示期望读取数据的长度。可选，默认缓冲区长度减去偏移长度，单位为Byte。<br/>-?position，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。<br/>约束：offset+length&lt;=buffer.size。 |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | 用于读取文件的缓冲区。 |
+| options | {       position?: number;       offset?: number;       length?: number;     } | 否 | 支持如下选项：<br/>-?offset，number类型，表示将数据读取到缓冲区的位置，即相对于缓冲区首地址的偏移，单位为Byte。可选，默认为0。<br/>-?length，number类型，表示期望读取数据的长度。可选，默认缓冲区长度减去偏移长度，单位为Byte。<br/>-?position，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。<br/>约束：offset+length&lt;=buffer.size。 |
 
 **返回值：**
 
@@ -422,6 +488,24 @@ write(
 
 **替代接口：** [write](arkts-corefile-stream-i.md#write-1)
 
+<!--Device-Stream-write(
+    buffer: ArrayBuffer | string,
+    options?: {
+      offset?: number;
+      length?: number;
+      position?: number;
+      encoding?: string;
+    }
+  ): Promise<number>--><!--Device-Stream-write(
+    buffer: ArrayBuffer | string,
+    options?: {
+      offset?: number;
+      length?: number;
+      position?: number;
+      encoding?: string;
+    }
+  ): Promise<number>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -429,13 +513,13 @@ write(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | {      offset?: number;      length?: number;      position?: number;      encoding?: string;    } | 否 | 支持如下选项：<br/>-?offset，number类型，表示期望写入数据的位置相对于数据首地址的偏移，单位为Byte。可选，默认为0。<br/>-?length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度减去偏移长度。<br/>-?position，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。<br/>-?encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认?'utf-8'。仅支持?'utf-8'。<br/>约束：offset+length&lt;=buffer.size。 |
+| options | {       offset?: number;       length?: number;       position?: number;       encoding?: string;     } | 否 | 支持如下选项：<br/>-?offset，number类型，表示期望写入数据的位置相对于数据首地址的偏移，单位为Byte。可选，默认为0。<br/>-?length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度减去偏移长度。<br/>-?position，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。<br/>-?encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认?'utf-8'。仅支持?'utf-8'。<br/>约束：offset+length&lt;=buffer.size。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回实际写入的长度，单位为Byte。 |
+| Promise<number> | Promise对象。返回实际写入的长度，单位为Byte。 |
 
 **示例：**
 
@@ -475,6 +559,8 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 
 **替代接口：** [write](arkts-corefile-stream-i.md#write-1)
 
+<!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void--><!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -482,7 +568,7 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | 是 | Data to write. It can be a string or data from a buffer. |
-| callback | AsyncCallback&lt;number&gt; | 是 | Callback invoked when the data is written asynchronously, which isused to return the length of the data written, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | Callback invoked when the data is written asynchronously, which is used to return the length of the data written, in bytes. |
 
 ## write
 
@@ -507,6 +593,26 @@ write(
 
 **替代接口：** [write](arkts-corefile-stream-i.md#write-1)
 
+<!--Device-Stream-write(
+    buffer: ArrayBuffer | string,
+    options: {
+      offset?: number;
+      length?: number;
+      position?: number;
+      encoding?: string;
+    },
+    callback: AsyncCallback<number>
+  ): void--><!--Device-Stream-write(
+    buffer: ArrayBuffer | string,
+    options: {
+      offset?: number;
+      length?: number;
+      position?: number;
+      encoding?: string;
+    },
+    callback: AsyncCallback<number>
+  ): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -514,8 +620,8 @@ write(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | {      offset?: number;      length?: number;      position?: number;      encoding?: string;    } | 是 | 支持如下选项：<br/>-?offset，number类型，表示期望写入数据的位置相对于数据首地址的偏移，单位为Byte。可选，默认为0。<br/>-?length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度减去偏移长度。<br/>-?position，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。<br/>-?encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认?'utf-8'。仅支持?'utf-8'。<br/>约束：offset+length&lt;=buffer.size。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 异步写入完成后执行的回调函数，返回实际写入的长度，单位为Byte。 |
+| options | {       offset?: number;       length?: number;       position?: number;       encoding?: string;     } | 是 | 支持如下选项：<br/>-?offset，number类型，表示期望写入数据的位置相对于数据首地址的偏移，单位为Byte。可选，默认为0。<br/>-?length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度减去偏移长度。<br/>-?position，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。<br/>-?encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认?'utf-8'。仅支持?'utf-8'。<br/>约束：offset+length&lt;=buffer.size。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 异步写入完成后执行的回调函数，返回实际写入的长度，单位为Byte。 |
 
 **示例：**
 
@@ -564,6 +670,24 @@ writeSync(
 
 **替代接口：** [writeSync](arkts-corefile-stream-i.md#writesync-1)
 
+<!--Device-Stream-writeSync(
+    buffer: ArrayBuffer | string,
+    options?: {
+      offset?: number;
+      length?: number;
+      position?: number;
+      encoding?: string;
+    }
+  ): number--><!--Device-Stream-writeSync(
+    buffer: ArrayBuffer | string,
+    options?: {
+      offset?: number;
+      length?: number;
+      position?: number;
+      encoding?: string;
+    }
+  ): number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -571,7 +695,7 @@ writeSync(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | {      offset?: number;      length?: number;      position?: number;      encoding?: string;    } | 否 | 支持如下选项：<br/>-?offset，number类型，表示期望写入数据的位置相对于数据首地址的偏移，单位为Byte。可选，默认为0。<br/>-?length，number类型，表示期望写入数据的长度。可选，默认缓冲区长度减去偏移长度。<br/>-?position，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。<br/>-?encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认?'utf-8'。仅支持?'utf-8'。<br/>约束：offset+length&lt;=buffer.size。 |
+| options | {       offset?: number;       length?: number;       position?: number;       encoding?: string;     } | 否 | 支持如下选项：<br/>-?offset，number类型，表示期望写入数据的位置相对于数据首地址的偏移，单位为Byte。可选，默认为0。<br/>-?length，number类型，表示期望写入数据的长度。可选，默认缓冲区长度减去偏移长度。<br/>-?position，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。<br/>-?encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认?'utf-8'。仅支持?'utf-8'。<br/>约束：offset+length&lt;=buffer.size。 |
 
 **返回值：**
 

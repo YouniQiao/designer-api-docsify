@@ -4,6 +4,8 @@ Defines the SearchButton options.
 
 **Since:** 10
 
+<!--Device-unnamed-interface SearchButtonOptions--><!--Device-unnamed-interface SearchButtonOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## autoDisable
@@ -16,8 +18,7 @@ Whether to disable the search button when there is no text input.
 
 Default value: **false**
 
-**true**: The search button is disabled when there is no text input. **false**: The search button remains enabled
-regardless of the text input.
+**true**: The search button is disabled when there is no text input. **false**: The search button remains enabled regardless of the text input.
 
 **Type:** Boolean
 
@@ -28,6 +29,8 @@ regardless of the text input.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SearchButtonOptions-autoDisable?: Boolean--><!--Device-SearchButtonOptions-autoDisable?: Boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,6 +50,8 @@ Font color of the button.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SearchButtonOptions-fontColor?: ResourceColor--><!--Device-SearchButtonOptions-fontColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontSize
@@ -64,6 +69,8 @@ Font size of the button. It cannot be set in percentage.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SearchButtonOptions-fontSize?: Length--><!--Device-SearchButtonOptions-fontSize?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

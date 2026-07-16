@@ -4,6 +4,8 @@ Defines the response interface to receive the device status.
 
 **Since:** 9
 
+<!--Device-stationary-interface ActivityResponse--><!--Device-stationary-interface ActivityResponse-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
 
 ## Modules to Import
@@ -23,6 +25,8 @@ New device status.
 **Type:** ActivityState
 
 **Since:** 9
+
+<!--Device-ActivityResponse-state: ActivityState--><!--Device-ActivityResponse-state: ActivityState-End-->
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
 

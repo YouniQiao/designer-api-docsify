@@ -4,14 +4,15 @@
 export type FormEditExtensionContext = _FormEditExtensionContext.default
 ```
 
-The context of form edit extension. It allows access to
-formEditExtension-specific resources.
+The context of form edit extension. It allows access to formEditExtension-specific resources.
 
 **Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-common-export type FormEditExtensionContext = _FormEditExtensionContext.default--><!--Device-common-export type FormEditExtensionContext = _FormEditExtensionContext.default-End-->
 
 **System capability:** SystemCapability.Ability.Form
 

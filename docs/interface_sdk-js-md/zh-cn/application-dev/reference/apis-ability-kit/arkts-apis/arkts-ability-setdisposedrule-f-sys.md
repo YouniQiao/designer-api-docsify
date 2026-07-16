@@ -1,5 +1,11 @@
 # setDisposedRule（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appControl } from '@kit.AbilityKit';
+```
+
 ## setDisposedRule
 
 ```TypeScript
@@ -12,6 +18,8 @@ function setDisposedRule(appId: string, rule: DisposedRule, appIndex?: number): 
 
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
+<!--Device-appControl-function setDisposedRule(appId: string, rule: DisposedRule, appIndex?: int): void--><!--Device-appControl-function setDisposedRule(appId: string, rule: DisposedRule, appIndex?: int): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +28,8 @@ function setDisposedRule(appId: string, rule: DisposedRule, appIndex?: number): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| appId | string | 是 | 要被设置拦截规则应用的appId或appIdentifier。使用appId设置的拦截规则会覆盖使用appIdentifier设置的拦截规则，反之同理。<br/>**说明：**&lt;br/&gt; appId是应用的唯一标识，由应用Bundle名称和签名信息决定，获取方法参见[获取应用的appId](../../../../quick-start/common-problem-of-application.md#如何获取应用信息中的appid)。<br>[appIdentifier](arkts-ability-signatureinfo-i.md)也是应用的唯一标识，详情信息可参考[什么是appIdentifier](../../../../quick-start/common-problem-of-application.md#什么是appidentifier)，获取方法参见[获取应用的appIdentifier](../../../../quick-start/common-problem-of-application.md#如何获取应用信息中的appidentifier)。 |
-| rule | DisposedRule | 是 | 指示对应用的拦截规则。 |
+| appId | string | 是 | 要被设置拦截规则应用的appId或appIdentifier。使用appId设置的拦截规则会覆盖使用appIdentifier设置的拦截规则，反之同理。<br/>**说明：**<br/> appId是应用的唯一标识，由应用Bundle名称和签名信息决定，获取方法参见[获取应用的appId](../../../../quick-start/common-problem-of-application.md#如何获取应用信息中的appid)。<br>[appIdentifier](arkts-ability-signatureinfo-i.md)也是应用的唯一标识，详情信息可参考[什么是appIdentifier](../../../../quick-start/common-problem-of-application.md#什么是appidentifier)，获取方法参见[获取应用的appIdentifier](../../../../quick-start/common-problem-of-application.md#如何获取应用信息中的appidentifier)。 |
+| rule | [DisposedRule](arkts-ability-disposedrule-i-sys.md) | 是 | 指示对应用的拦截规则。 |
 | appIndex | number | 否 | 表示分身应用的索引，默认值为0。<br> appIndex为0时，表示设置主应用的拦截规则。appIndex大于0时，表示设置指定分身应用的拦截规则。<br>**起始版本：** 12 |
 
 **错误码：**

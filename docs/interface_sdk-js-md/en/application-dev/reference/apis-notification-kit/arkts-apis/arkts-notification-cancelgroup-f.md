@@ -12,15 +12,13 @@ import { notificationManager } from '@kit.NotificationKit';
 function cancelGroup(groupName: string, callback: AsyncCallback<void>): void
 ```
 
-Cancels notifications under a notification group of this application. This API uses an asynchronous callback to
-return the result.
+Cancels notifications under a notification group of this application. This API uses an asynchronous callback to return the result.
 
-The notification group **groupName** is the group identifier specified through the **groupName** field of
-NotificationRequest when a notification is published. After cancellation, all notifications under this group
-will be removed from the notification center. This is suitable for scenarios where notifications need to be
-canceled in batches by service group.
+The notification group **groupName** is the group identifier specified through the **groupName** field of NotificationRequest when a notification is published. After cancellation, all notifications under this group will be removed from the notification center. This is suitable for scenarios where notifications need to be canceled in batches by service group.
 
 **Since:** 9
+
+<!--Device-notificationManager-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -28,8 +26,8 @@ canceled in batches by service group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| groupName | string | Yes | Name of the notification group, which is specified through[NotificationRequest](arkts-notification-notificationrequest-i.md) when the notification ispublished. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| groupName | string | Yes | Name of the notification group, which is specified through [NotificationRequest](arkts-notification-notificationrequest-i.md) when the notification is published. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -66,12 +64,11 @@ function cancelGroup(groupName: string): Promise<void>
 
 Cancels notifications under a notification group of this application. This API uses a promise to return the result.
 
-The notification group **groupName** is the group identifier specified through the **groupName** field of
-NotificationRequest when a notification is published. After cancellation, all notifications under this group
-will be removed from the notification center. This is suitable for scenarios where notifications need to be
-canceled in batches by service group.
+The notification group **groupName** is the group identifier specified through the **groupName** field of NotificationRequest when a notification is published. After cancellation, all notifications under this group will be removed from the notification center. This is suitable for scenarios where notifications need to be canceled in batches by service group.
 
 **Since:** 9
+
+<!--Device-notificationManager-function cancelGroup(groupName: string): Promise<void>--><!--Device-notificationManager-function cancelGroup(groupName: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -79,13 +76,13 @@ canceled in batches by service group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| groupName | string | Yes | Name of the notification group, which is specified through[NotificationRequest](arkts-notification-notificationrequest-i.md) when the notification ispublished. |
+| groupName | string | Yes | Name of the notification group, which is specified through [NotificationRequest](arkts-notification-notificationrequest-i.md) when the notification is published. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

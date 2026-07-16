@@ -18,13 +18,15 @@ Obtains the display mode of this foldable device.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-display-function getFoldDisplayMode(): FoldDisplayMode--><!--Device-display-function getFoldDisplayMode(): FoldDisplayMode-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| FoldDisplayMode | Display mode of the foldable device. |
+| [FoldDisplayMode](arkts-arkui-folddisplaymode-e.md) | Display mode of the foldable device. |
 
 **Error codes:**
 

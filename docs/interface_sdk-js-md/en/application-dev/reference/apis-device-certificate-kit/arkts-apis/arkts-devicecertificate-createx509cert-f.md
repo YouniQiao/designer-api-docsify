@@ -18,14 +18,16 @@ Creates an **X509Cert** instance. This API uses an asynchronous callback to retu
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-cert-function createX509Cert(inStream: EncodingBlob, callback: AsyncCallback<X509Cert>): void--><!--Device-cert-function createX509Cert(inStream: EncodingBlob, callback: AsyncCallback<X509Cert>): void-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inStream | EncodingBlob | Yes | X.509 certificate serialization data. |
-| callback | AsyncCallback&lt;X509Cert&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the **X509Cert** instance created. Otherwise, **err** is an errorobject. |
+| inStream | [EncodingBlob](arkts-devicecertificate-encodingblob-i.md) | Yes | X.509 certificate serialization data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<X509Cert> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the **X509Cert** instance created. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -90,19 +92,21 @@ Creates an **X509Cert** instance. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-cert-function createX509Cert(inStream: EncodingBlob): Promise<X509Cert>--><!--Device-cert-function createX509Cert(inStream: EncodingBlob): Promise<X509Cert>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inStream | EncodingBlob | Yes | X.509 certificate serialization data. |
+| inStream | [EncodingBlob](arkts-devicecertificate-encodingblob-i.md) | Yes | X.509 certificate serialization data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;X509Cert&gt; | Promise used to return the **X509Cert** instance created. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<X509Cert> | Promise used to return the **X509Cert** instance created. |
 
 **Error codes:**
 

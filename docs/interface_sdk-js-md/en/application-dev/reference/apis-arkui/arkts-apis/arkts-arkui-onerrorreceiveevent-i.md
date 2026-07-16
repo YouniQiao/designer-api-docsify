@@ -4,6 +4,8 @@ Error receive event when the web page receives a web resource loading error.
 
 **Since:** 12
 
+<!--Device-unnamed-export declare interface OnErrorReceiveEvent--><!--Device-unnamed-export declare interface OnErrorReceiveEvent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Web resource error of event.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-OnErrorReceiveEvent-error: WebResourceError--><!--Device-OnErrorReceiveEvent-error: WebResourceError-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## request
@@ -41,6 +45,8 @@ Web resource request of event.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-OnErrorReceiveEvent-request: WebResourceRequest--><!--Device-OnErrorReceiveEvent-request: WebResourceRequest-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

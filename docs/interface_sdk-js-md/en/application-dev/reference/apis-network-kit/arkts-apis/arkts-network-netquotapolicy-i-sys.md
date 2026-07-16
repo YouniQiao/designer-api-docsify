@@ -4,6 +4,8 @@ Net quota policies, including matching network rule usage periods, restrictions,
 
 **Since:** 10
 
+<!--Device-policy-export interface NetQuotaPolicy--><!--Device-policy-export interface NetQuotaPolicy-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ The matching rules of network quota policies.
 
 **Since:** 10
 
+<!--Device-NetQuotaPolicy-networkMatchRule: NetworkMatchRule--><!--Device-NetQuotaPolicy-networkMatchRule: NetworkMatchRule-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Policies that limit network quota.
 **Type:** QuotaPolicy
 
 **Since:** 10
+
+<!--Device-NetQuotaPolicy-quotaPolicy: QuotaPolicy--><!--Device-NetQuotaPolicy-quotaPolicy: QuotaPolicy-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

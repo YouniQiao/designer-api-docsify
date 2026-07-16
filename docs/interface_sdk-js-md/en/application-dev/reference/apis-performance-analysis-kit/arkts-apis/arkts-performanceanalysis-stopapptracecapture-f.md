@@ -12,15 +12,13 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 function stopAppTraceCapture(): void
 ```
 
-Stops application trace collection. Use [startAppTraceCapture()](arkts-performanceanalysis-startapptracecapture-f.md#startapptracecapture-1) to start
-collection before calling this API. If this API is called before trace collection or it is repeatedly called, an
-exception will occur.
+Stops application trace collection. Use [startAppTraceCapture()](arkts-performanceanalysis-startapptracecapture-f.md#startapptracecapture-1) to start collection before calling this API. If this API is called before trace collection or it is repeatedly called, an exception will occur.
 
-If **startAppTraceCapture ()** is called without a properly specified **limitSize**, the size of the generated
-trace may exceed the **limitSize** value, causing the system to automatically call **stopAppTraceCapture()**. In
-this case, if **stopAppTraceCapture()** is called again, an error code 11400105 will be displayed.
+If **startAppTraceCapture ()** is called without a properly specified **limitSize**, the size of the generated trace may exceed the **limitSize** value, causing the system to automatically call **stopAppTraceCapture()**. In this case, if **stopAppTraceCapture()** is called again, an error code 11400105 will be displayed.
 
 **Since:** 12
+
+<!--Device-hidebug-function stopAppTraceCapture(): void--><!--Device-hidebug-function stopAppTraceCapture(): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 

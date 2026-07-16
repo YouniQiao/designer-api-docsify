@@ -16,6 +16,8 @@ Unsubscribes from the pre-download error events. This API uses an asynchronous c
 
 **Since:** 23
 
+<!--Device-cacheDownload-function offDownloadError(url: string, callback?: Callback<DownloadError>): void--><!--Device-cacheDownload-function offDownloadError(url: string, callback?: Callback<DownloadError>): void-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **Parameters:**
@@ -23,7 +25,7 @@ Unsubscribes from the pre-download error events. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL to be unregistered, with a maximum of 8192 bytes. |
-| callback | Callback&lt;DownloadError&gt; | No | Callback used to return the error information about the pre-download. If this parameter is left blank, all error callback functions of the URL are unregistered. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DownloadError> | No | Callback used to return the error information about the pre-download. If this parameter is left blank, all error callback functions of the URL are unregistered. |
 
 **Example**
 

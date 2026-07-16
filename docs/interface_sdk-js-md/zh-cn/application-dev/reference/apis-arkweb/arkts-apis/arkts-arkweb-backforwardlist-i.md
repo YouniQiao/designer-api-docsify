@@ -4,7 +4,15 @@ Provides back and forward history list information method. related to {@link His
 
 **起始版本：** 9
 
+<!--Device-webview-interface BackForwardList--><!--Device-webview-interface BackForwardList-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
+
+## 导入模块
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+```
 
 ## getItemAtIndex
 
@@ -16,7 +24,9 @@ getItemAtIndex(index: number): HistoryItem
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BackForwardList-getItemAtIndex(index: number): HistoryItem--><!--Device-BackForwardList-getItemAtIndex(index: number): HistoryItem-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -30,7 +40,7 @@ getItemAtIndex(index: number): HistoryItem
 
 | 类型 | 说明 |
 | --- | --- |
-| HistoryItem | 历史记录项。 |
+| [HistoryItem](arkts-arkweb-historyitem-i.md) | 历史记录项。 |
 
 **错误码：**
 
@@ -50,7 +60,9 @@ currentIndex: number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BackForwardList-currentIndex: number--><!--Device-BackForwardList-currentIndex: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -66,7 +78,9 @@ size: number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BackForwardList-size: number--><!--Device-BackForwardList-size: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

@@ -1,5 +1,11 @@
 # createCertExtension
 
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
+
 ## createCertExtension
 
 ```TypeScript
@@ -10,7 +16,9 @@ function createCertExtension(inStream: EncodingBlob, callback: AsyncCallback<Cer
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cert-function createCertExtension(inStream: EncodingBlob, callback: AsyncCallback<CertExtension>): void--><!--Device-cert-function createCertExtension(inStream: EncodingBlob, callback: AsyncCallback<CertExtension>): void-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -18,8 +26,8 @@ function createCertExtension(inStream: EncodingBlob, callback: AsyncCallback<Cer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inStream | EncodingBlob | 是 | 表示序列化的证书扩展数据。 |
-| callback | AsyncCallback&lt;CertExtension&gt; | 是 | 回调函数。当创建证书扩展域段对象成功时，err为undefined，data为获取到的CertExtension实例；否则为错误对象。 |
+| inStream | [EncodingBlob](arkts-devicecertificate-encodingblob-i.md) | 是 | 表示序列化的证书扩展数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<CertExtension> | 是 | 回调函数。当创建证书扩展域段对象成功时，err为undefined，data为获取到的CertExtension实例；否则为错误对象。 |
 
 **错误码：**
 
@@ -75,7 +83,9 @@ function createCertExtension(inStream: EncodingBlob): Promise<CertExtension>
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cert-function createCertExtension(inStream: EncodingBlob): Promise<CertExtension>--><!--Device-cert-function createCertExtension(inStream: EncodingBlob): Promise<CertExtension>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -83,13 +93,13 @@ function createCertExtension(inStream: EncodingBlob): Promise<CertExtension>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inStream | EncodingBlob | 是 | 表示序列化的证书扩展数据。 |
+| inStream | [EncodingBlob](arkts-devicecertificate-encodingblob-i.md) | 是 | 表示序列化的证书扩展数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CertExtension&gt; | Promise对象，返回创建的CertExtension实例。 |
+| Promise<CertExtension> | Promise对象，返回创建的CertExtension实例。 |
 
 **错误码：**
 

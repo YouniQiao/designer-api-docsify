@@ -10,6 +10,8 @@ Configuring parameters in geo fence requests
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-export interface GeofenceRequest--><!--Device-geolocation-export interface GeofenceRequest-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## Modules to Import
@@ -32,6 +34,8 @@ geofence: Geofence
 
 **Substitutes:** geofence
 
+<!--Device-GeofenceRequest-geofence: Geofence--><!--Device-GeofenceRequest-geofence: Geofence-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## priority
@@ -48,6 +52,8 @@ priority: LocationRequestPriority
 
 **Substitutes:** priority
 
+<!--Device-GeofenceRequest-priority: LocationRequestPriority--><!--Device-GeofenceRequest-priority: LocationRequestPriority-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## scenario
@@ -63,6 +69,8 @@ scenario: LocationRequestScenario
 **Deprecated since:** 9
 
 **Substitutes:** scenario
+
+<!--Device-GeofenceRequest-scenario: LocationRequestScenario--><!--Device-GeofenceRequest-scenario: LocationRequestScenario-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 

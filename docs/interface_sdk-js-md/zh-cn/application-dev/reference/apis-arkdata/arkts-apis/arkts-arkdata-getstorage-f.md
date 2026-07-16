@@ -14,12 +14,14 @@ function getStorage(path: string, callback: AsyncCallback<Storage>): void
 
 **替代接口：** getPreferences
 
+<!--Device-storage-function getStorage(path: string, callback: AsyncCallback<Storage>): void--><!--Device-storage-function getStorage(path: string, callback: AsyncCallback<Storage>): void-End-->
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 应用程序内部数据存储路径。 |
-| callback | AsyncCallback&lt;Storage&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Storage> | 是 | 回调函数。 |
 
 
 ## getStorage
@@ -36,6 +38,8 @@ function getStorage(path: string): Promise<Storage>
 
 **替代接口：** getPreferences
 
+<!--Device-storage-function getStorage(path: string): Promise<Storage>--><!--Device-storage-function getStorage(path: string): Promise<Storage>-End-->
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -46,5 +50,5 @@ function getStorage(path: string): Promise<Storage>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Storage&gt; | Promise实例，用于异步获取结果。 |
+| Promise<Storage> | Promise实例，用于异步获取结果。 |
 

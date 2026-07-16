@@ -1,17 +1,18 @@
 # FocusMovement
 
-Sets the target component for focus movement based on key presses. If it is not specified, the default focus movement
-logic applies.
+Sets the target component for focus movement based on key presses. If it is not specified, the default focus movement logic applies.
 
-> **NOTE**
->
-> Directly using **focusControl** can lead to the issue of
-> [ambiguous UI context](../../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the
-> [UIContext](../arkts-apis/arkts-arkui-uicontext-c.md) object using the **getUIContext()** API and then obtain the
-> **focusControl** bound to the instance using the
+> **NOTE**  
+>  
+> Directly using **focusControl** can lead to the issue of  
+> [ambiguous UI context](../../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the  
+> [UIContext](../arkts-apis/arkts-arkui-uicontext-c.md) object using the **getUIContext()** API and then obtain the  
+> **focusControl** bound to the instance using the  
 > [getFocusController](../arkts-apis/arkts-arkui-uicontext-c.md#getfocuscontroller-1) API.
 
 **Since:** 18
+
+<!--Device-unnamed-declare interface FocusMovement--><!--Device-unnamed-declare interface FocusMovement-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,6 +34,8 @@ The default value resets **backward** to empty.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-FocusMovement-backward?: string--><!--Device-FocusMovement-backward?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## down
@@ -52,6 +55,8 @@ The default value resets **down** to empty.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-FocusMovement-down?: string--><!--Device-FocusMovement-down?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,6 +78,8 @@ The default value resets **forward** to empty.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-FocusMovement-forward?: string--><!--Device-FocusMovement-forward?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## left
@@ -92,6 +99,8 @@ The default value resets **left** to empty.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-FocusMovement-left?: string--><!--Device-FocusMovement-left?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -113,6 +122,8 @@ The default value resets **right** to empty.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-FocusMovement-right?: string--><!--Device-FocusMovement-right?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## up
@@ -132,6 +143,8 @@ The default value resets **up** to empty.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-FocusMovement-up?: string--><!--Device-FocusMovement-up?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

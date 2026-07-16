@@ -4,6 +4,8 @@ Enumerates the ringtone parameters.
 
 **Since:** 10
 
+<!--Device-unnamed-export interface RingtoneOptions--><!--Device-unnamed-export interface RingtoneOptions-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -20,6 +22,8 @@ Whether to enable loop playback. **true** to enable, **false** otherwise.
 
 **Since:** 10
 
+<!--Device-RingtoneOptions-loop: boolean--><!--Device-RingtoneOptions-loop: boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -35,6 +39,8 @@ Relative volume. The value ranges from 0.00 to 1.00. The value **1.00** indicate
 **Type:** number
 
 **Since:** 10
+
+<!--Device-RingtoneOptions-volume: double--><!--Device-RingtoneOptions-volume: double-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 

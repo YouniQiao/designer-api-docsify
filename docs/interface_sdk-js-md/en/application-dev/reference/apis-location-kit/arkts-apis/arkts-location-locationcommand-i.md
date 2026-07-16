@@ -10,6 +10,8 @@ Location subsystem command structure
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-export interface LocationCommand--><!--Device-geolocation-export interface LocationCommand-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## Modules to Import
@@ -32,6 +34,8 @@ command: string
 
 **Substitutes:** command
 
+<!--Device-LocationCommand-command: string--><!--Device-LocationCommand-command: string-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## scenario
@@ -47,6 +51,8 @@ scenario: LocationRequestScenario
 **Deprecated since:** 9
 
 **Substitutes:** scenario
+
+<!--Device-LocationCommand-scenario: LocationRequestScenario--><!--Device-LocationCommand-scenario: LocationRequestScenario-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 

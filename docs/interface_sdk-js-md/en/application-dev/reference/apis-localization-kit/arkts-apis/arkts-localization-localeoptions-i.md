@@ -1,11 +1,10 @@
 # LocaleOptions
 
-Options for initializing the **Locale** object. Since API version 9, the **LocaleOptions** attribute is changed
-from mandatory to optional.
+Options for initializing the **Locale** object. Since API version 9, the **LocaleOptions** attribute is changed from mandatory to optional.
 
-> **NOTE**
->
-> - For details about **calendar**, see Table 1 in
+> **NOTE**  
+>  
+> - For details about **calendar**, see Table 1 in  
 > [Calendar Setting](../../../../internationalization/i18n-calendar.md).
 
 **Since:** 6
@@ -13,6 +12,8 @@ from mandatory to optional.
 **Deprecated since:** 20
 
 **Substitutes:** options)
+
+<!--Device-intl-export interface LocaleOptions--><!--Device-intl-export interface LocaleOptions-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -30,9 +31,7 @@ calendar?: string
 
 Calendar parameter. The value can be:
 
-"buddhist", "chinese", "coptic", "dangi", "ethioaa", "ethiopic", "gregory", "hebrew", "indian", "islamic", "
-islamic-umalqura", "islamic-tbla", "islamic-civil", "islamic-rgsa", "iso8601", "japanese", "persian", "roc",
-or "islamicc".
+"buddhist", "chinese", "coptic", "dangi", "ethioaa", "ethiopic", "gregory", "hebrew", "indian", "islamic", "islamic-umalqura", "islamic-tbla", "islamic-civil", "islamic-rgsa", "iso8601", "japanese", "persian", "roc",or "islamicc".
 
 **Type:** string
 
@@ -45,6 +44,8 @@ or "islamicc".
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-LocaleOptions-calendar?: string--><!--Device-LocaleOptions-calendar?: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -73,6 +74,8 @@ Whether case is taken into account for the locale's collation rules. The value c
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-LocaleOptions-caseFirst?: string--><!--Device-LocaleOptions-caseFirst?: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -128,6 +131,8 @@ Collation rules for the locale. The value can be:
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-LocaleOptions-collation?: string--><!--Device-LocaleOptions-collation?: string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## hourCycle
@@ -152,6 +157,8 @@ Hour cycle. The value can be:
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-LocaleOptions-hourCycle?: string--><!--Device-LocaleOptions-hourCycle?: string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## numberingSystem
@@ -162,13 +169,7 @@ numberingSystem?: string
 
 Numbering system. The value can be:
 
-**adlm**, **ahom**, **arab**, **arabext**, **bali**, **beng**, **bhks**, **brah**, **cakm**, **cham**, **deva**,
-**diak**, **fullwide**, **gong**, **gonm**, **gujr**, **guru**, **hanidec**, **hmng**, **hmnp**, **java**,
-**kali**, **khmr**, **knda**, **lana**, **lanatham**, **laoo**, **latn**, **lepc**, **limb**, **mathbold**,
-**mathdbl**, **mathmono**, **mathsanb**, **mathsans**, **mlym**, **modi**, **mong**, **mroo**, **mtei**, **mymr**,
-**mymrshan**, **mymrtlng**, **newa**, **nkoo**, **olck**, **orya**, **osma**, **rohg**, **saur**, **segment**,
-**shrd**, **sind**, **sinh**, **sora**, **sund**, **takr**, **talu**, **tamldec**, **telu**, **thai**, **tibt**,
-**tirh**, **vaii**, **wara**, or **wcho**.
+**adlm**, **ahom**, **arab**, **arabext**, **bali**, **beng**, **bhks**, **brah**, **cakm**, **cham**, **deva**,**diak**, **fullwide**, **gong**, **gonm**, **gujr**, **guru**, **hanidec**, **hmng**, **hmnp**, **java**,**kali**, **khmr**, **knda**, **lana**, **lanatham**, **laoo**, **latn**, **lepc**, **limb**, **mathbold**,**mathdbl**, **mathmono**, **mathsanb**, **mathsans**, **mlym**, **modi**, **mong**, **mroo**, **mtei**, **mymr**,**mymrshan**, **mymrtlng**, **newa**, **nkoo**, **olck**, **orya**, **osma**, **rohg**, **saur**, **segment**,**shrd**, **sind**, **sinh**, **sora**, **sund**, **takr**, **talu**, **tamldec**, **telu**, **thai**, **tibt**,**tirh**, **vaii**, **wara**, or **wcho**.
 
 **Type:** string
 
@@ -182,6 +183,8 @@ Numbering system. The value can be:
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-LocaleOptions-numberingSystem?: string--><!--Device-LocaleOptions-numberingSystem?: string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## numeric
@@ -190,10 +193,7 @@ Numbering system. The value can be:
 numeric?: boolean
 ```
 
-Whether to treat numeric characters as numbers for sorting. The value true means to treat numeric characters as
-numbers for sorting, and the value **false** means to treat numeric characters as ordinary characters for
-sorting. For example, when this parameter is set to **true**, comparing the string **21** with the string **123**
-is equivalent to comparing the number 21 with the number 123. The default value is **false**.
+Whether to treat numeric characters as numbers for sorting. The value true means to treat numeric characters as numbers for sorting, and the value **false** means to treat numeric characters as ordinary characters for sorting. For example, when this parameter is set to **true**, comparing the string **21** with the string **123** is equivalent to comparing the number 21 with the number 123. The default value is **false**.
 
 **Type:** boolean
 
@@ -206,6 +206,8 @@ is equivalent to comparing the number 21 with the number 123. The default value 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-LocaleOptions-numeric?: boolean--><!--Device-LocaleOptions-numeric?: boolean-End-->
 
 **System capability:** SystemCapability.Global.I18n
 

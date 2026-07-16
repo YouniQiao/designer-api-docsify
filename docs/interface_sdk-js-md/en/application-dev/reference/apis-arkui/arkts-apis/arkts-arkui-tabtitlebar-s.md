@@ -4,6 +4,8 @@ Declaration of the tabbed title bar.
 
 **Since:** 22
 
+<!--Device-unnamed-export declare struct TabTitleBar--><!--Device-unnamed-export declare struct TabTitleBar-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Menu items on the right side.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TabTitleBar-menuItems?: Array<TabTitleBarMenuItem>--><!--Device-TabTitleBar-menuItems?: Array<TabTitleBarMenuItem>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## swiperContent
@@ -36,8 +40,7 @@ Menu items on the right side.
 swiperContent: () => void
 ```
 
-Content builder. Each component corresponds to a tab item.
-The builder needs to be transferred.
+Content builder. Each component corresponds to a tab item.The builder needs to be transferred.
 
 **Type:** () => void
 
@@ -48,6 +51,8 @@ The builder needs to be transferred.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TabTitleBar-swiperContent: () => void--><!--Device-TabTitleBar-swiperContent: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,6 +71,8 @@ Tab items on the left side.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TabTitleBar-tabItems: Array<TabTitleBarTabItem>--><!--Device-TabTitleBar-tabItems: Array<TabTitleBarTabItem>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

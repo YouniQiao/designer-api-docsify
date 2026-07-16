@@ -1,5 +1,11 @@
 # @ohos.arkui.Prefetcher
 
+## 导入模块
+
+```TypeScript
+import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from '@kit.ArkUI';
+```
+
 ## 汇总
 
 ### 类

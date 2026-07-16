@@ -20,6 +20,8 @@ Obtains the authorization information of a continuous task.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-backgroundTaskManager-function getBackgroundTaskState(stateInfo: BackgroundTaskStateInfo): UserAuthResult--><!--Device-backgroundTaskManager-function getBackgroundTaskState(stateInfo: BackgroundTaskStateInfo): UserAuthResult-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **System API:** This is a system API.
@@ -28,13 +30,13 @@ Obtains the authorization information of a continuous task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stateInfo | BackgroundTaskStateInfo | Yes | Required authorization information, including the user ID,application bundle name, and application clone ID. |
+| stateInfo | [BackgroundTaskStateInfo](arkts-backgroundtasks-backgroundtaskstateinfo-i-sys.md) | Yes | Required authorization information, including the user ID,application bundle name, and application clone ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| UserAuthResult | Authorization result. |
+| [UserAuthResult](arkts-backgroundtasks-userauthresult-e.md) | Authorization result. |
 
 **Error codes:**
 

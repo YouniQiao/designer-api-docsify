@@ -1,5 +1,11 @@
 # getSelfManagedBrowserPolicy
 
+## 导入模块
+
+```TypeScript
+import { browser } from '@kit.MDMKit';
+```
+
 ## getSelfManagedBrowserPolicy
 
 ```TypeScript
@@ -12,13 +18,15 @@ function getSelfManagedBrowserPolicy(): ArrayBuffer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-browser-function getSelfManagedBrowserPolicy(): ArrayBuffer--><!--Device-browser-function getSelfManagedBrowserPolicy(): ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArrayBuffer | 浏览器策略。 |
+| [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 浏览器策略。 |
 
 **示例：**
 

@@ -4,6 +4,8 @@ Represents the package check result.
 
 **Since:** 9
 
+<!--Device-update-export interface CheckResult--><!--Device-update-export interface CheckResult-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ The value **true** indicates that a new version is available, and the value **fa
 
 **Since:** 9
 
+<!--Device-CheckResult-isExistNewVersion: boolean--><!--Device-CheckResult-isExistNewVersion: boolean-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -43,6 +47,8 @@ Information about the new version.
 **Type:** NewVersionInfo
 
 **Since:** 9
+
+<!--Device-CheckResult-newVersionInfo: NewVersionInfo--><!--Device-CheckResult-newVersionInfo: NewVersionInfo-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 

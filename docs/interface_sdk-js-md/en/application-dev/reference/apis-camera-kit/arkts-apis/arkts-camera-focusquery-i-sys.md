@@ -4,6 +4,8 @@ Provides the API to check whether the focus assist is supported.
 
 **Since:** 12
 
+<!--Device-camera-interface FocusQuery--><!--Device-camera-interface FocusQuery-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
@@ -22,6 +24,8 @@ Checks whether the focus assist is supported.
 
 **Since:** 12
 
+<!--Device-FocusQuery-isFocusAssistSupported(): boolean--><!--Device-FocusQuery-isFocusAssistSupported(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -30,7 +34,7 @@ Checks whether the focus assist is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the focus assist. **true** if supported, **false**otherwise. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| boolean | Check result for the support of the focus assist. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -68,6 +72,8 @@ Checks whether a focus drive type is supported.
 
 **Since:** 15
 
+<!--Device-FocusQuery-isFocusDrivenTypeSupported(type: FocusDrivenType): boolean--><!--Device-FocusQuery-isFocusDrivenTypeSupported(type: FocusDrivenType): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -76,13 +82,13 @@ Checks whether a focus drive type is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | FocusDrivenType | Yes | Focus drive type. |
+| type | [FocusDrivenType](arkts-camera-focusdriventype-e-sys.md) | Yes | Focus drive type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the focus drive type. **true** if supported, **false**otherwise. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| boolean | Check result for the support of the focus drive type. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -121,6 +127,8 @@ Checks whether a focus range type is supported.
 
 **Since:** 15
 
+<!--Device-FocusQuery-isFocusRangeTypeSupported(type: FocusRangeType): boolean--><!--Device-FocusQuery-isFocusRangeTypeSupported(type: FocusRangeType): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -129,13 +137,13 @@ Checks whether a focus range type is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | FocusRangeType | Yes | Focus range type. |
+| type | [FocusRangeType](arkts-camera-focusrangetype-e-sys.md) | Yes | Focus range type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the focus range type. **true** if supported, **false**otherwise. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| boolean | Check result for the support of the focus range type. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 

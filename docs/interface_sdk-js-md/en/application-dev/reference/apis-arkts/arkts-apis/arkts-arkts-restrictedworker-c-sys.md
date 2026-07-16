@@ -6,6 +6,8 @@ The RestrictedWorker class contains all Worker functions.
 
 **Since:** 11
 
+<!--Device-worker-class RestrictedWorker extends ThreadWorker--><!--Device-worker-class RestrictedWorker extends ThreadWorker-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Creates a worker instance
 
 **Since:** 11
 
+<!--Device-RestrictedWorker-constructor(scriptURL: string, options?: WorkerOptions)--><!--Device-RestrictedWorker-constructor(scriptURL: string, options?: WorkerOptions)-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **System API:** This is a system API.
@@ -35,7 +39,7 @@ Creates a worker instance
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | scriptURL | string | Yes | scriptURL URL of the script to be executed by the worker |
-| options | WorkerOptions | No | Options that can be set for the worker |
+| options | [WorkerOptions](arkts-arkts-workeroptions-i.md) | No | Options that can be set for the worker |
 
 **Error codes:**
 

@@ -22,6 +22,8 @@ Makes a call.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
+<!--Device-call-function dial(phoneNumber: string, options: DialOptions, callback: AsyncCallback<boolean>): void--><!--Device-call-function dial(phoneNumber: string, options: DialOptions, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **Parameters:**
@@ -29,8 +31,8 @@ Makes a call.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Indicates the called number. |
-| options | DialOptions | Yes | Indicates additional information carried in the call. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Indicates the callback for getting the result of the call.Returns {@code true} if the call request is successful; returns {@code false} otherwise.Note that the value {@code true} indicates only the successful processing of the request; it does not meanthat the call is or can be connected. |
+| options | [DialOptions](arkts-telephony-dialoptions-i.md) | Yes | Indicates additional information carried in the call. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Indicates the callback for getting the result of the call.Returns {@code true} if the call request is successful; returns {@code false} otherwise.Note that the value {@code true} indicates only the successful processing of the request; it does not mean that the call is or can be connected. |
 
 **Example**
 
@@ -63,6 +65,8 @@ Makes a call.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
+<!--Device-call-function dial(phoneNumber: string, options?: DialOptions): Promise<boolean>--><!--Device-call-function dial(phoneNumber: string, options?: DialOptions): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **Parameters:**
@@ -70,13 +74,13 @@ Makes a call.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Indicates the called number. |
-| options | DialOptions | No | Indicates additional information carried in the call. |
+| options | [DialOptions](arkts-telephony-dialoptions-i.md) | No | Indicates additional information carried in the call. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns the result of the call.Returns {@code true} if the call request is successful; returns {@code false} otherwise.Note that the value {@code true} indicates only the successful processing of the request; it does not meanthat the call is or can be connected. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns the result of the call.Returns {@code true} if the call request is successful; returns {@code false} otherwise.Note that the value {@code true} indicates only the successful processing of the request; it does not mean that the call is or can be connected. |
 
 **Example**
 
@@ -111,6 +115,8 @@ Makes a call.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
+<!--Device-call-function dial(phoneNumber: string, callback: AsyncCallback<boolean>): void--><!--Device-call-function dial(phoneNumber: string, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **Parameters:**
@@ -118,7 +124,7 @@ Makes a call.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Indicates the called number. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Indicates the callback for getting the result of the call.Returns {@code true} if the call request is successful; returns {@code false} otherwise.Note that the value {@code true} indicates only the successful processing of the request; it does not meanthat the call is or can be connected. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Indicates the callback for getting the result of the call.Returns {@code true} if the call request is successful; returns {@code false} otherwise.Note that the value {@code true} indicates only the successful processing of the request; it does not mean that the call is or can be connected. |
 
 **Example**
 

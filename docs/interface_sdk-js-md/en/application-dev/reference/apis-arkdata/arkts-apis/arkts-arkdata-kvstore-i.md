@@ -1,16 +1,14 @@
 # KVStore
 
-Provides APIs to manage data in a KV store, for example, adding or deleting data and subscribing to data changes or
-completion of data sync.
-Before calling any method in **KVStore**, you must use
-[getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-2)
-to obtain a **KVStore** object.
+Provides APIs to manage data in a KV store, for example, adding or deleting data and subscribing to data changes or completion of data sync.Before calling any method in **KVStore**, you must use [getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-2)to obtain a **KVStore** object.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
 **Substitutes:** SingleKVStore
+
+<!--Device-distributedData-interface KVStore--><!--Device-distributedData-interface KVStore-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -28,13 +26,15 @@ Commits the transaction in this KV store. This API uses an asynchronous callback
 
 **Substitutes:** commit
 
+<!--Device-KVStore-commit(callback: AsyncCallback<void>): void--><!--Device-KVStore-commit(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -68,13 +68,15 @@ Commits the transaction in this KV store. This API uses a promise to return the 
 
 **Substitutes:** commit
 
+<!--Device-KVStore-commit(): Promise<void>--><!--Device-KVStore-commit(): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -106,14 +108,16 @@ Deletes a KV pair from this KV store. This API uses an asynchronous callback to 
 
 **Substitutes:** delete
 
+<!--Device-KVStore-delete(key: string, callback: AsyncCallback<void>): void--><!--Device-KVStore-delete(key: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-n.md#constants). |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-constants-n.md#constants). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -156,19 +160,21 @@ Deletes a KV pair from this KV store. This API uses a promise to return the resu
 
 **Substitutes:** delete
 
+<!--Device-KVStore-delete(key: string): Promise<void>--><!--Device-KVStore-delete(key: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-n.md#constants). |
+| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-constants-n.md#constants). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -207,6 +213,8 @@ Deletes KV pairs in batches from this KV store. This API uses an asynchronous ca
 
 **Substitutes:** deleteBatch
 
+<!--Device-KVStore-deleteBatch(keys: string[], callback: AsyncCallback<void>): void--><!--Device-KVStore-deleteBatch(keys: string[], callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
@@ -214,7 +222,7 @@ Deletes KV pairs in batches from this KV store. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keys | string[] | Yes | KV pairs to delete in batches. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -262,6 +270,8 @@ Deletes KV pairs in batches from this KV store. This API uses a promise to retur
 
 **Substitutes:** deleteBatch
 
+<!--Device-KVStore-deleteBatch(keys: string[]): Promise<void>--><!--Device-KVStore-deleteBatch(keys: string[]): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
@@ -274,7 +284,7 @@ Deletes KV pairs in batches from this KV store. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -326,14 +336,16 @@ Sets data sync, which can be enabled or disabled. This API uses an asynchronous 
 
 **Substitutes:** enableSync
 
+<!--Device-KVStore-enableSync(enabled: boolean, callback: AsyncCallback<void>): void--><!--Device-KVStore-enableSync(enabled: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable data sync. The value **true** means to enable data sync, and **false**means the opposite. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| enabled | boolean | Yes | Whether to enable data sync. The value **true** means to enable data sync, and **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -367,19 +379,21 @@ Sets data sync, which can be enabled or disabled. This API uses a promise to ret
 
 **Substitutes:** enableSync
 
+<!--Device-KVStore-enableSync(enabled: boolean): Promise<void>--><!--Device-KVStore-enableSync(enabled: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable data sync. The value **true** means to enable data sync, and **false**means the opposite. |
+| enabled | boolean | Yes | Whether to enable data sync. The value **true** means to enable data sync, and **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -411,6 +425,8 @@ Unsubscribes from data changes.
 
 **Substitutes:** off
 
+<!--Device-KVStore-off(event: 'dataChange', listener?: Callback<ChangeNotification>): void--><!--Device-KVStore-off(event: 'dataChange', listener?: Callback<ChangeNotification>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
@@ -418,7 +434,7 @@ Unsubscribes from data changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
-| listener | Callback&lt;ChangeNotification&gt; | No | Callback to unregister. If this parameter is not specified, allcallbacks for data changes will be unregistered. |
+| listener | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ChangeNotification> | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
 
 **Example**
 
@@ -456,6 +472,8 @@ Unsubscribes from sync completion events.
 
 **Substitutes:** off
 
+<!--Device-KVStore-off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void--><!--Device-KVStore-off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
@@ -463,7 +481,7 @@ Unsubscribes from sync completion events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates a sync completion event. |
-| syncCallback | Callback&lt;Array&lt;[string, number]&gt;&gt; | No | Callback to unregister. If this parameter is not specified,all callbacks for data changes will be unregistered. |
+| syncCallback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<[string, number]>> | No | Callback to unregister. If this parameter is not specified,all callbacks for data changes will be unregistered. |
 
 **Example**
 
@@ -501,6 +519,8 @@ Subscribes to data changes of the specified type.
 
 **Substitutes:** on
 
+<!--Device-KVStore-on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void--><!--Device-KVStore-on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
@@ -508,8 +528,8 @@ Subscribes to data changes of the specified type.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
-| type | SubscribeType | Yes | Type of data change. |
-| listener | Callback&lt;ChangeNotification&gt; | Yes | Callback used to return the result. |
+| type | [SubscribeType](../../apis-notification-kit/arkts-apis/arkts-notification-subscribetype-e.md) | Yes | Type of data change. |
+| listener | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ChangeNotification> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -535,6 +555,8 @@ Subscribes to sync completion events.
 
 **Substitutes:** on
 
+<!--Device-KVStore-on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void--><!--Device-KVStore-on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
@@ -542,7 +564,7 @@ Subscribes to sync completion events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates a sync completion event. |
-| syncCallback | Callback&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback used to return a sync completion event. |
+| syncCallback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<[string, number]>> | Yes | Callback used to return a sync completion event. |
 
 **Example**
 
@@ -560,8 +582,7 @@ kvStore.on('syncComplete', function (data) {
 put(key: string, value: Uint8Array | string | number | boolean, callback: AsyncCallback<void>): void
 ```
 
-Adds a KV pair of the specified type to this KV store. This API uses an asynchronous callback to return the
-result.
+Adds a KV pair of the specified type to this KV store. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -569,15 +590,17 @@ result.
 
 **Substitutes:** put
 
+<!--Device-KVStore-put(key: string, value: Uint8Array | string | number | boolean, callback: AsyncCallback<void>): void--><!--Device-KVStore-put(key: string, value: Uint8Array | string | number | boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-n.md#constants). |
-| value | Uint8Array \| string \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array,number, string, or boolean. A value of the Uint8Array or string type cannot exceed[MAX_VALUE_LENGTH](arkts-arkdata-constants-n.md#constants). |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-constants-n.md#constants). |
+| value | Uint8Array \| string \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array,number, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-constants-n.md#constants). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -613,20 +636,22 @@ Adds a KV pair of the specified type to this KV store. This API uses a promise t
 
 **Substitutes:** put
 
+<!--Device-KVStore-put(key: string, value: Uint8Array | string | number | boolean): Promise<void>--><!--Device-KVStore-put(key: string, value: Uint8Array | string | number | boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-n.md#constants). |
-| value | Uint8Array \| string \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array,number, string, or boolean. A value of the Uint8Array or string type cannot exceed[MAX_VALUE_LENGTH](arkts-arkdata-constants-n.md#constants). |
+| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-constants-n.md#constants). |
+| value | Uint8Array \| string \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array,number, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-constants-n.md#constants). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -660,14 +685,16 @@ Inserts KV pairs in batches to this KV store. This API uses an asynchronous call
 
 **Substitutes:** putBatch
 
+<!--Device-KVStore-putBatch(entries: Entry[], callback: AsyncCallback<void>): void--><!--Device-KVStore-putBatch(entries: Entry[], callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entries | Entry[] | Yes | KV pairs to insert in batches. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| entries | [Entry](arkts-arkdata-entry-i.md)[] | Yes | KV pairs to insert in batches. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -715,19 +742,21 @@ Inserts KV pairs in batches to this KV store. This API uses a promise to return 
 
 **Substitutes:** putBatch
 
+<!--Device-KVStore-putBatch(entries: Entry[]): Promise<void>--><!--Device-KVStore-putBatch(entries: Entry[]): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entries | Entry[] | Yes | KV pairs to insert in batches. |
+| entries | [Entry](arkts-arkdata-entry-i.md)[] | Yes | KV pairs to insert in batches. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -778,13 +807,15 @@ Rolls back the transaction in this KV store. This API uses an asynchronous callb
 
 **Substitutes:** rollback
 
+<!--Device-KVStore-rollback(callback: AsyncCallback<void>): void--><!--Device-KVStore-rollback(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -818,13 +849,15 @@ Rolls back the transaction in this KV store. This API uses a promise to return t
 
 **Substitutes:** rollback
 
+<!--Device-KVStore-rollback(): Promise<void>--><!--Device-KVStore-rollback(): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -856,6 +889,8 @@ Sets the data sync range. This API uses an asynchronous callback to return the r
 
 **Substitutes:** setSyncRange
 
+<!--Device-KVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: AsyncCallback<void>): void--><!--Device-KVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
@@ -864,7 +899,7 @@ Sets the data sync range. This API uses an asynchronous callback to return the r
 | --- | --- | --- | --- |
 | localLabels | string[] | Yes | Sync labels set for the local device. |
 | remoteSupportLabels | string[] | Yes | Sync labels set for remote devices. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -896,6 +931,8 @@ Sets the data sync range. This API uses a promise to return the result.
 
 **Substitutes:** setSyncRange
 
+<!--Device-KVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void>--><!--Device-KVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
@@ -909,7 +946,7 @@ Sets the data sync range. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -943,13 +980,15 @@ Starts the transaction in this KV store. This API uses an asynchronous callback 
 
 **Substitutes:** startTransaction
 
+<!--Device-KVStore-startTransaction(callback: AsyncCallback<void>): void--><!--Device-KVStore-startTransaction(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -1003,13 +1042,15 @@ Starts the transaction in this KV store. This API uses a promise to return the r
 
 **Substitutes:** startTransaction
 
+<!--Device-KVStore-startTransaction(): Promise<void>--><!--Device-KVStore-startTransaction(): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 

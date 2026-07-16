@@ -1,5 +1,11 @@
 # setPointerSpeed（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+```
+
 ## setPointerSpeed
 
 ```TypeScript
@@ -10,6 +16,8 @@ function setPointerSpeed(speed: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-pointer-function setPointerSpeed(speed: int, callback: AsyncCallback<void>): void--><!--Device-pointer-function setPointerSpeed(speed: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -19,7 +27,7 @@ function setPointerSpeed(speed: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | speed | number | 是 | 鼠标移动速度，范围1-20，默认为10。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当设置鼠标移动速度成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当设置鼠标移动速度成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -71,6 +79,8 @@ function setPointerSpeed(speed: number): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-pointer-function setPointerSpeed(speed: int): Promise<void>--><!--Device-pointer-function setPointerSpeed(speed: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -85,7 +95,7 @@ function setPointerSpeed(speed: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

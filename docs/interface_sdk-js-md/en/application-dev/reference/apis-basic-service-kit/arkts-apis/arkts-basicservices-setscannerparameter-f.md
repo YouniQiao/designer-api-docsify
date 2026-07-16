@@ -18,6 +18,8 @@ Sets scanner parameters. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.PRINT
 
+<!--Device-scan-function setScannerParameter(scannerId: string, optionIndex: int, value: ScannerOptionValue): Promise<void>--><!--Device-scan-function setScannerParameter(scannerId: string, optionIndex: int, value: ScannerOptionValue): Promise<void>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
@@ -26,13 +28,13 @@ Sets scanner parameters. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | scannerId | string | Yes | Scanner ID. |
 | optionIndex | number | Yes | Index of the option to be set. |
-| value | ScannerOptionValue | Yes | Value to be set. |
+| value | [ScannerOptionValue](arkts-basicservices-scanneroptionvalue-i.md) | Yes | Value to be set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

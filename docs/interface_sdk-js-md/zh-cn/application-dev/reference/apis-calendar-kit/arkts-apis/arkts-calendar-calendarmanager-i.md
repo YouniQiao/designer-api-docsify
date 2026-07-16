@@ -1,11 +1,18 @@
 # CalendarManager
 
-下列API示例中需先通过[getCalendarManager()](arkts-calendar-getcalendarmanager-f.md#getcalendarmanager-1)方法获取CalendarManager对象，再通过此对象调用对应方法，进行
-Calendar的创建、删除、修改、查询等操作。
+下列API示例中需先通过[getCalendarManager()](arkts-calendar-getcalendarmanager-f.md#getcalendarmanager-1)方法获取CalendarManager对象，再通过此对象调用对应方法，进行Calendar的创建、删除、修改、查询等操作。
 
 **起始版本：** 10
 
+<!--Device-calendarManager-export interface CalendarManager--><!--Device-calendarManager-export interface CalendarManager-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
+
+## 导入模块
+
+```TypeScript
+import { calendarManager } from '@kit.CalendarKit';
+```
 
 ## createCalendar
 
@@ -19,19 +26,21 @@ createCalendar(calendarAccount: CalendarAccount): Promise<Calendar>
 
 **需要权限：** ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 
+<!--Device-CalendarManager-createCalendar(calendarAccount: CalendarAccount): Promise<Calendar>--><!--Device-CalendarManager-createCalendar(calendarAccount: CalendarAccount): Promise<Calendar>-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| calendarAccount | CalendarAccount | 是 | 日历账户信息。 |
+| calendarAccount | [CalendarAccount](arkts-calendar-calendaraccount-i.md) | 是 | 日历账户信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Calendar&gt; | Promise对象，返回创建的Calendar对象。 |
+| Promise<Calendar> | Promise对象，返回创建的Calendar对象。 |
 
 **错误码：**
 
@@ -76,14 +85,16 @@ createCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calenda
 
 **需要权限：** ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 
+<!--Device-CalendarManager-createCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>): void--><!--Device-CalendarManager-createCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>): void-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| calendarAccount | CalendarAccount | 是 | 日历账户信息。 |
-| callback | AsyncCallback&lt;Calendar&gt; | 是 | 回调函数，当创建账户成功时，err为undefined，data为创建成功的Calendar；否则为错误对象。 |
+| calendarAccount | [CalendarAccount](arkts-calendar-calendaraccount-i.md) | 是 | 日历账户信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Calendar> | 是 | 回调函数，当创建账户成功时，err为undefined，data为创建成功的Calendar；否则为错误对象。 |
 
 **错误码：**
 
@@ -133,19 +144,21 @@ deleteCalendar(calendar: Calendar): Promise<void>
 
 **需要权限：** ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 
+<!--Device-CalendarManager-deleteCalendar(calendar: Calendar): Promise<void>--><!--Device-CalendarManager-deleteCalendar(calendar: Calendar): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| calendar | Calendar | 是 | 即将删除的Calendar对象。无法删除默认账户。 |
+| calendar | [Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-calendar-c.md) | 是 | 即将删除的Calendar对象。无法删除默认账户。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -201,14 +214,16 @@ deleteCalendar(calendar: Calendar, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 
+<!--Device-CalendarManager-deleteCalendar(calendar: Calendar, callback: AsyncCallback<void>): void--><!--Device-CalendarManager-deleteCalendar(calendar: Calendar, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| calendar | Calendar | 是 | 即将删除的Calendar对象。无法删除默认账户。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，当删除账户成功时，err为undefined；否则为错误对象。 |
+| calendar | [Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-calendar-c.md) | 是 | 即将删除的Calendar对象。无法删除默认账户。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，当删除账户成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -261,12 +276,13 @@ calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calenda
 editEvent(event: Event): Promise<number>
 ```
 
-通过跳转到日程创建页面创建单个日程，入参Event不填日程id，不支持设置instanceStartTime、instanceEndTime、identifier、attendee、service、isLunar和timeZone属性，也不支持添加重要日程。使用Promise异步回调。
-使用该接口创建的日程，系统日历可以进行查询和修改，申请到READ_WHOLE_CALENDAR权限的三方应用可以查询，申请到WRITE_WHOLE_CALENDAR权限的三方应用可以修改。
+通过跳转到日程创建页面创建单个日程，入参Event不填日程id，不支持设置instanceStartTime、instanceEndTime、identifier、attendee、service、isLunar和timeZone属性，也不支持添加重要日程。使用Promise异步回调。使用该接口创建的日程，系统日历可以进行查询和修改，申请到READ_WHOLE_CALENDAR权限的三方应用可以查询，申请到WRITE_WHOLE_CALENDAR权限的三方应用可以修改。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CalendarManager-editEvent(event: Event): Promise<number>--><!--Device-CalendarManager-editEvent(event: Event): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -274,13 +290,13 @@ editEvent(event: Event): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Event | 是 | Event对象。 |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-event-c.md) | 是 | Event对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回日程的id，日程id是日程的唯一标识符，是数据库的自增主键。创建失败时没有返回值；当返回值小于0时代表用户取消创建；当返回值大于0时代表日程创建成功；没有等于0的情况。 |
+| Promise<number> | Promise对象，返回日程的id，日程id是日程的唯一标识符，是数据库的自增主键。创建失败时没有返回值；当返回值小于0时代表用户取消创建；当返回值大于0时代表日程创建成功；没有等于0的情况。 |
 
 **示例：**
 
@@ -314,13 +330,15 @@ getAllCalendars(): Promise<Calendar[]>
 
 **需要权限：** ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 
+<!--Device-CalendarManager-getAllCalendars(): Promise<Calendar[]>--><!--Device-CalendarManager-getAllCalendars(): Promise<Calendar[]>-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Calendar[]&gt; | Promise对象，返回查询到的Calendar对象数组。 |
+| Promise<Calendar[]> | Promise对象，返回查询到的Calendar对象数组。 |
 
 **错误码：**
 
@@ -365,13 +383,15 @@ getAllCalendars(callback: AsyncCallback<Calendar[]>): void
 
 **需要权限：** ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 
+<!--Device-CalendarManager-getAllCalendars(callback: AsyncCallback<Calendar[]>): void--><!--Device-CalendarManager-getAllCalendars(callback: AsyncCallback<Calendar[]>): void-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Calendar[]&gt; | 是 | 回调函数，当查询账户成功时，err为undefined，data为查询到的Calendar数组；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Calendar[]> | 是 | 回调函数，当查询账户成功时，err为undefined，data为查询到的Calendar数组；否则为错误对象。 |
 
 **错误码：**
 
@@ -416,7 +436,9 @@ getCalendar(calendarAccount?: CalendarAccount): Promise<Calendar>
 
 **需要权限：** ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CalendarManager-getCalendar(calendarAccount?: CalendarAccount): Promise<Calendar>--><!--Device-CalendarManager-getCalendar(calendarAccount?: CalendarAccount): Promise<Calendar>-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -424,13 +446,13 @@ getCalendar(calendarAccount?: CalendarAccount): Promise<Calendar>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| calendarAccount | CalendarAccount | 否 | 指定日历账户信息，用来获取指定Calendar对象，不填时，表示获取默认Calendar对象。 |
+| calendarAccount | [CalendarAccount](arkts-calendar-calendaraccount-i.md) | 否 | 指定日历账户信息，用来获取指定Calendar对象，不填时，表示获取默认Calendar对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Calendar&gt; | Promise对象，返回查询到的Calendar对象。 |
+| Promise<Calendar> | Promise对象，返回查询到的Calendar对象。 |
 
 **错误码：**
 
@@ -471,7 +493,9 @@ getCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>)
 
 **需要权限：** ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CalendarManager-getCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>): void--><!--Device-CalendarManager-getCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>): void-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -479,8 +503,8 @@ getCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| calendarAccount | CalendarAccount | 是 | 指定日历账户信息。 |
-| callback | AsyncCallback&lt;Calendar&gt; | 是 | 回调函数，当查询账户成功时，err为undefined，data为查询到的Calendar；否则为错误对象。 |
+| calendarAccount | [CalendarAccount](arkts-calendar-calendaraccount-i.md) | 是 | 指定日历账户信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Calendar> | 是 | 回调函数，当查询账户成功时，err为undefined，data为查询到的Calendar；否则为错误对象。 |
 
 **错误码：**
 
@@ -533,7 +557,9 @@ getCalendar(callback: AsyncCallback<Calendar>): void
 
 **需要权限：** ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CalendarManager-getCalendar(callback: AsyncCallback<Calendar>): void--><!--Device-CalendarManager-getCalendar(callback: AsyncCallback<Calendar>): void-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -541,7 +567,7 @@ getCalendar(callback: AsyncCallback<Calendar>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Calendar&gt; | 是 | 回调函数，当查询账户成功时，err为undefined，data为查询到的Calendar；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Calendar> | 是 | 回调函数，当查询账户成功时，err为undefined，data为查询到的Calendar；否则为错误对象。 |
 
 **错误码：**
 

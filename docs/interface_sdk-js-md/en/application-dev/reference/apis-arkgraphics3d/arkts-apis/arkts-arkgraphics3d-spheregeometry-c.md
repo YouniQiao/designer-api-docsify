@@ -6,6 +6,8 @@ Define a sphere.
 
 **Since:** 18
 
+<!--Device-unnamed-export declare class SphereGeometry extends GeometryDefinition--><!--Device-unnamed-export declare class SphereGeometry extends GeometryDefinition-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## radius
@@ -20,6 +22,8 @@ The radius of the sphere, the unit is the scene unit in the world coordinate sys
 
 **Since:** 18
 
+<!--Device-SphereGeometry-set radius(value: double)--><!--Device-SphereGeometry-set radius(value: double)-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## segmentCount
@@ -33,6 +37,8 @@ Divide the sphere latitudinally into this many circles and each circle longitudi
 **Type:** number
 
 **Since:** 18
+
+<!--Device-SphereGeometry-set segmentCount(value: int)--><!--Device-SphereGeometry-set segmentCount(value: int)-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

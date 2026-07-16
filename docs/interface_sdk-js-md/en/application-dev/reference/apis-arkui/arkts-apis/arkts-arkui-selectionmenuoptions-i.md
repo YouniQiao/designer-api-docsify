@@ -4,6 +4,8 @@ Defines the configuration options of the **SelectionMenu** component.
 
 **Since:** 11
 
+<!--Device-unnamed-export interface SelectionMenuOptions--><!--Device-unnamed-export interface SelectionMenuOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -18,8 +20,7 @@ import { EditorMenuOptions, SelectionMenuOptions, EditorEventInfo, SelectionMenu
 backgroundSystemMaterial?: uiMaterial.Material
 ```
 
-Set system-styled materials for the component. Different materials have different effects,
-which can influence the backgroundColor, border, shadow, and other visual attributes.
+Set system-styled materials for the component. Different materials have different effects,which can influence the backgroundColor, border, shadow, and other visual attributes.
 
 **Type:** uiMaterial.Material
 
@@ -28,6 +29,8 @@ which can influence the backgroundColor, border, shadow, and other visual attrib
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SelectionMenuOptions-backgroundSystemMaterial?: uiMaterial.Material--><!--Device-SelectionMenuOptions-backgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -41,8 +44,7 @@ Expanded drop-down menu options.
 
 If this parameter is left empty, the expanded drop-down menu is not displayed.
 
-The options configured for **ExpandedMenuOptions** are displayed in the **More** menu option, and clicking **More**
-shows the expanded drop-down menu.
+The options configured for **ExpandedMenuOptions** are displayed in the **More** menu option, and clicking **More** shows the expanded drop-down menu.
 
 **Type:** RichEditorController
 
@@ -51,6 +53,8 @@ shows the expanded drop-down menu.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SelectionMenuOptions-controller?: RichEditorController--><!--Device-SelectionMenuOptions-controller?: RichEditorController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,11 +68,9 @@ Edit menu.
 
 If **editorMenuOptions** is not set, the edit menu is not displayed.
 
-When both **action** and **builder** in **EditorMenuOptions** are configured, clicking the edit icon will trigger
-both.
+When both **action** and **builder** in **EditorMenuOptions** are configured, clicking the edit icon will trigger both.
 
-By default, the context menu is not closed when the edit menu icon is clicked. You can configure
-**closeSelectionMenu** of **RichEditorController** in **action** to enable the menu to be closed.
+By default, the context menu is not closed when the edit menu icon is clicked. You can configure **closeSelectionMenu** of **RichEditorController** in **action** to enable the menu to be closed.
 
 **Type:** Array<EditorMenuOptions>
 
@@ -77,6 +79,8 @@ By default, the context menu is not closed when the edit menu icon is clicked. Y
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SelectionMenuOptions-editorMenuOptions?: Array<EditorMenuOptions>--><!--Device-SelectionMenuOptions-editorMenuOptions?: Array<EditorMenuOptions>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,8 +94,7 @@ Expanded drop-down menu options.
 
 If this parameter is left empty, the expanded drop-down menu is not displayed.
 
-The options configured for **ExpandedMenuOptions** are displayed in the **More** menu option, and clicking **More**
-shows the expanded drop-down menu.
+The options configured for **ExpandedMenuOptions** are displayed in the **More** menu option, and clicking **More** shows the expanded drop-down menu.
 
 **Type:** Array<ExpandedMenuOptions>
 
@@ -100,6 +103,8 @@ shows the expanded drop-down menu.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SelectionMenuOptions-expandedMenuOptions?: Array<ExpandedMenuOptions>--><!--Device-SelectionMenuOptions-expandedMenuOptions?: Array<ExpandedMenuOptions>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -125,6 +130,8 @@ It is effective only when the **controller** parameter is set and the preset men
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SelectionMenuOptions-onCopy?: (event?: EditorEventInfo) => void--><!--Device-SelectionMenuOptions-onCopy?: (event?: EditorEventInfo) => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onCut
@@ -148,6 +155,8 @@ It is effective only when the **controller** parameter is set and the preset men
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SelectionMenuOptions-onCut?: (event?: EditorEventInfo) => void--><!--Device-SelectionMenuOptions-onCut?: (event?: EditorEventInfo) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -173,6 +182,8 @@ It is effective only when the **controller** parameter is set and the preset men
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SelectionMenuOptions-onPaste?: (event?: EditorEventInfo) => void--><!--Device-SelectionMenuOptions-onPaste?: (event?: EditorEventInfo) => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onSelectAll
@@ -196,6 +207,8 @@ It is effective only when the **controller** parameter is set and the preset men
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SelectionMenuOptions-onSelectAll?: (event?: EditorEventInfo) => void--><!--Device-SelectionMenuOptions-onSelectAll?: (event?: EditorEventInfo) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

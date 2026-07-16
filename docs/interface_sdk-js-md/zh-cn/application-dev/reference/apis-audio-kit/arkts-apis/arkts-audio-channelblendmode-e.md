@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-audio-enum ChannelBlendMode--><!--Device-audio-enum ChannelBlendMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## MODE_DEFAULT
@@ -15,6 +17,8 @@ MODE_DEFAULT = 0
 无声道混合。
 
 **起始版本：** 11
+
+<!--Device-ChannelBlendMode-MODE_DEFAULT = 0--><!--Device-ChannelBlendMode-MODE_DEFAULT = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -28,6 +32,8 @@ MODE_BLEND_LR = 1
 
 **起始版本：** 11
 
+<!--Device-ChannelBlendMode-MODE_BLEND_LR = 1--><!--Device-ChannelBlendMode-MODE_BLEND_LR = 1-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## MODE_ALL_LEFT
@@ -40,6 +46,8 @@ MODE_ALL_LEFT = 2
 
 **起始版本：** 11
 
+<!--Device-ChannelBlendMode-MODE_ALL_LEFT = 2--><!--Device-ChannelBlendMode-MODE_ALL_LEFT = 2-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## MODE_ALL_RIGHT
@@ -51,6 +59,8 @@ MODE_ALL_RIGHT = 3
 从右声道覆盖到左声道混合。
 
 **起始版本：** 11
+
+<!--Device-ChannelBlendMode-MODE_ALL_RIGHT = 3--><!--Device-ChannelBlendMode-MODE_ALL_RIGHT = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 

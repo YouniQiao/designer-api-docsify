@@ -18,6 +18,8 @@ Disable cellular data services.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-data-function disableCellularData(callback: AsyncCallback<void>): void--><!--Device-data-function disableCellularData(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CellularData
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Disable cellular data services.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of disableCellularData. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of disableCellularData. |
 
 **Error codes:**
 
@@ -69,6 +71,8 @@ Disable cellular data services.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-data-function disableCellularData(): Promise<void>--><!--Device-data-function disableCellularData(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CellularData
 
 **System API:** This is a system API.
@@ -77,7 +81,7 @@ Disable cellular data services.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the disableCellularData. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the disableCellularData. |
 
 **Error codes:**
 

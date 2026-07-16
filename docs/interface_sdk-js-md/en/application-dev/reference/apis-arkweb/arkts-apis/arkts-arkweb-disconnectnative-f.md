@@ -20,6 +20,8 @@ Disconnects the connection of a specified web native message extension.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-webNativeMessagingExtensionManager-function disconnectNative(connectionId: number): Promise<void>--><!--Device-webNativeMessagingExtensionManager-function disconnectNative(connectionId: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -32,7 +34,7 @@ Disconnects the connection of a specified web native message extension.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

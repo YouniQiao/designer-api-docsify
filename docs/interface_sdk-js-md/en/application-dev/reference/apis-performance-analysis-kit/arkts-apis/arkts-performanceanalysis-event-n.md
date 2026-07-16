@@ -1,10 +1,10 @@
 # event
 
-Provides event name constants, including system event name constants and application event name constants.
-<br>The application event name constants are optional custom event names reserved when you call Write for
-application event logging.
+Provides event name constants, including system event name constants and application event name constants.<br>The application event name constants are optional custom event names reserved when you call Write for application event logging.
 
 **Since:** 9
+
+<!--Device-hiAppEvent-namespace event--><!--Device-hiAppEvent-namespace event-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 

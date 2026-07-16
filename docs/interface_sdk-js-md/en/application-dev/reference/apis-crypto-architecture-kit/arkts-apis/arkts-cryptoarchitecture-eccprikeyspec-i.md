@@ -1,14 +1,14 @@
 # ECCPriKeySpec
 
-Defines a child class of [AsyKeySpec](arkts-cryptoarchitecture-asykeyspec-i.md) used to specify the parameters of the
-private key in the ECC algorithm.
+Defines a child class of [AsyKeySpec](arkts-cryptoarchitecture-asykeyspec-i.md) used to specify the parameters of the private key in the ECC algorithm.
 
-To generate a key based on key parameters, pass it to
-[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec-1) to create a key generator.
+To generate a key based on key parameters, pass it to [createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec-1) to create a key generator.
 
 **Inheritance/Implementation:** ECCPriKeySpec extends [AsyKeySpec](arkts-cryptoarchitecture-asykeyspec-i.md)
 
 **Since:** 10
+
+<!--Device-cryptoFramework-interface ECCPriKeySpec extends AsyKeySpec--><!--Device-cryptoFramework-interface ECCPriKeySpec extends AsyKeySpec-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -34,6 +34,8 @@ Common parameters of the public and private keys in the ECC algorithm.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ECCPriKeySpec-params: ECCCommonParamsSpec--><!--Device-ECCPriKeySpec-params: ECCCommonParamsSpec-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 10 to 11: SystemCapability.Security.CryptoFramework
@@ -51,6 +53,8 @@ Private key **sk** in the ECC algorithm.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ECCPriKeySpec-sk: bigint--><!--Device-ECCPriKeySpec-sk: bigint-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey

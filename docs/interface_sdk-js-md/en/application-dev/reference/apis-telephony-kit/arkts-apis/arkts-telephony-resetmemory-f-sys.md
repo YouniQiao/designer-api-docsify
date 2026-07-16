@@ -18,6 +18,8 @@ Erase all specific profiles and reset the eUICC.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE
 
+<!--Device-eSIM-function resetMemory(slotId: int, options?:ResetOption): Promise<ResultCode>--><!--Device-eSIM-function resetMemory(slotId: int, options?:ResetOption): Promise<ResultCode>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -27,13 +29,13 @@ Erase all specific profiles and reset the eUICC.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number. |
-| options | ResetOption | No | Options for resetting eUICC memory. |
+| options | [ResetOption](arkts-telephony-resetoption-e-sys.md) | No | Options for resetting eUICC memory. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultCode&gt; | Returns the result of the reset operation. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ResultCode> | Returns the result of the reset operation. |
 
 **Error codes:**
 

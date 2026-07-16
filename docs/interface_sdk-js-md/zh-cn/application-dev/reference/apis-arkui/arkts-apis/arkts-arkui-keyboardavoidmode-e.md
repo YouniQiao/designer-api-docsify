@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-export const enum KeyboardAvoidMode--><!--Device-unnamed-export const enum KeyboardAvoidMode-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## OFFSET
@@ -18,7 +20,9 @@ Offset Type, the layout moves up.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-KeyboardAvoidMode-OFFSET = 0--><!--Device-KeyboardAvoidMode-OFFSET = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,7 +38,9 @@ Resize Type, the layout is resized.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-KeyboardAvoidMode-RESIZE = 1--><!--Device-KeyboardAvoidMode-RESIZE = 1-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,7 +56,9 @@ Offset Type, the layout moves up, and this adjustment also occurs if the caret p
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-KeyboardAvoidMode-OFFSET_WITH_CARET = 2--><!--Device-KeyboardAvoidMode-OFFSET_WITH_CARET = 2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,7 +74,9 @@ Resize Type, the layout moves up, and this adjustment also occurs if the caret p
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-KeyboardAvoidMode-RESIZE_WITH_CARET = 3--><!--Device-KeyboardAvoidMode-RESIZE_WITH_CARET = 3-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,7 +92,9 @@ None Type, the layout is not adjusted to avoid the keyboard.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-KeyboardAvoidMode-NONE = 4--><!--Device-KeyboardAvoidMode-NONE = 4-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

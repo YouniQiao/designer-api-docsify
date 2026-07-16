@@ -16,13 +16,15 @@ Checks whether geofencing is enabled. This API uses a promise to return the resu
 
 **Since:** 23
 
+<!--Device-notificationManager-function isGeofenceEnabled(): Promise<boolean>--><!--Device-notificationManager-function isGeofenceEnabled(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that geofencing isenabled, and the value **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** indicates that geofencing is enabled, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

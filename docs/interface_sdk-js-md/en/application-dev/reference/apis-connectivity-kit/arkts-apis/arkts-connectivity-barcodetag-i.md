@@ -6,6 +6,8 @@ Provides methods for accessing Barcode tag.
 
 **Since:** 18
 
+<!--Device-unnamed-export interface BarcodeTag extends TagSession--><!--Device-unnamed-export interface BarcodeTag extends TagSession-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## getBarcode
@@ -22,13 +24,15 @@ Returns the barcode of a Barcode tag.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-BarcodeTag-getBarcode(): Promise<ArrayBuffer>--><!--Device-BarcodeTag-getBarcode(): Promise<ArrayBuffer>-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | The barcode of tag. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ArrayBuffer> | The barcode of tag. |
 
 **Error codes:**
 

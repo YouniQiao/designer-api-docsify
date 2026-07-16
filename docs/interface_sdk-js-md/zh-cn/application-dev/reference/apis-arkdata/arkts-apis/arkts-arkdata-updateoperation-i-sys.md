@@ -4,9 +4,17 @@
 
 **起始版本：** 12
 
+<!--Device-dataShare-interface UpdateOperation--><!--Device-dataShare-interface UpdateOperation-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { dataShare } from '@kit.ArkData';
+```
 
 ## predicates
 
@@ -21,6 +29,8 @@ predicates: dataSharePredicates.DataSharePredicates
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UpdateOperation-predicates: dataSharePredicates.DataSharePredicates--><!--Device-UpdateOperation-predicates: dataSharePredicates.DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -39,6 +49,8 @@ values: ValuesBucket
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UpdateOperation-values: ValuesBucket--><!--Device-UpdateOperation-values: ValuesBucket-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 

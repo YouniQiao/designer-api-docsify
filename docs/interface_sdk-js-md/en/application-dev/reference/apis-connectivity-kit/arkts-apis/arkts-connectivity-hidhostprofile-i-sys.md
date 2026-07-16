@@ -10,6 +10,8 @@ Manager hid host profile.
 
 **Substitutes:** HidHostProfile
 
+<!--Device-bluetoothManager-interface HidHostProfile extends BaseProfile--><!--Device-bluetoothManager-interface HidHostProfile extends BaseProfile-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -24,9 +26,7 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 connect(device: string): void
 ```
 
-Connect to device with hid host.
-On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to
-ACCESS_BLUETOOTH and MANAGE_BLUETOOTH.
+Connect to device with hid host.On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH and MANAGE_BLUETOOTH.
 
 **Since:** 9
 
@@ -37,6 +37,8 @@ ACCESS_BLUETOOTH and MANAGE_BLUETOOTH.
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 - API version 9: ohos.permission.DISCOVER_BLUETOOTH
+
+<!--Device-HidHostProfile-connect(device: string): void--><!--Device-HidHostProfile-connect(device: string): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -67,9 +69,7 @@ ACCESS_BLUETOOTH and MANAGE_BLUETOOTH.
 disconnect(device: string): void
 ```
 
-Disconnect to device with hid host.
-On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to
-ACCESS_BLUETOOTH and MANAGE_BLUETOOTH.
+Disconnect to device with hid host.On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH and MANAGE_BLUETOOTH.
 
 **Since:** 9
 
@@ -80,6 +80,8 @@ ACCESS_BLUETOOTH and MANAGE_BLUETOOTH.
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 - API version 9: ohos.permission.DISCOVER_BLUETOOTH
+
+<!--Device-HidHostProfile-disconnect(device: string): void--><!--Device-HidHostProfile-disconnect(device: string): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

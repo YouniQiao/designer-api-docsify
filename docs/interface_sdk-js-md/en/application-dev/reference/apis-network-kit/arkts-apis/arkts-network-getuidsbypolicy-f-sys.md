@@ -18,6 +18,8 @@ Query the application UIDs of the specified policy.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function getUidsByPolicy(policy: NetUidPolicy, callback: AsyncCallback<Array<number>>): void--><!--Device-policy-function getUidsByPolicy(policy: NetUidPolicy, callback: AsyncCallback<Array<number>>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Query the application UIDs of the specified policy.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policy | NetUidPolicy | Yes | the policy of the current UID of application.For details, see {@link NetUidPolicy}. |
-| callback | AsyncCallback&lt;Array&lt;number&gt;&gt; | Yes | the callback of getUidsByPolicy. |
+| policy | [NetUidPolicy](arkts-network-netuidpolicy-e-sys.md) | Yes | the policy of the current UID of application.For details, see {@link NetUidPolicy}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<number>> | Yes | the callback of getUidsByPolicy. |
 
 **Error codes:**
 
@@ -65,6 +67,8 @@ Query the application UIDs of the specified policy.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function getUidsByPolicy(policy: NetUidPolicy): Promise<Array<number>>--><!--Device-policy-function getUidsByPolicy(policy: NetUidPolicy): Promise<Array<number>>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -73,13 +77,13 @@ Query the application UIDs of the specified policy.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policy | NetUidPolicy | Yes | the policy of the current UID of application.For details, see {@link NetUidPolicy}. |
+| policy | [NetUidPolicy](arkts-network-netuidpolicy-e-sys.md) | Yes | the policy of the current UID of application.For details, see {@link NetUidPolicy}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | The promise returned by the function. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Indicates the options of Navigation's Titlebar.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface TitleOptions--><!--Device-unnamed-export interface TitleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Background color.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TitleOptions-backgroundColor?: ResourceColor--><!--Device-TitleOptions-backgroundColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## barStyle
@@ -43,6 +47,8 @@ Set title bar style.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TitleOptions-barStyle?: BarStyle--><!--Device-TitleOptions-barStyle?: BarStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,6 +68,8 @@ Whether to enable the blur effect.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TitleOptions-isBlurEnabled?: boolean--><!--Device-TitleOptions-isBlurEnabled?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## titleBarType
@@ -80,6 +88,8 @@ Set title bar type.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TitleOptions-titleBarType?: TitleBarType--><!--Device-TitleOptions-titleBarType?: TitleBarType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## titleIcon
@@ -97,6 +107,8 @@ Set title bar icon.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TitleOptions-titleIcon?: Resource | SymbolGlyphModifier--><!--Device-TitleOptions-titleIcon?: Resource | SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

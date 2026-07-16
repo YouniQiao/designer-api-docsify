@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-i18n-export class Transliterator--><!--Device-i18n-export class Transliterator-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
 
 ## getAvailableIDs
 
@@ -16,7 +24,9 @@ static getAvailableIDs(): string[]
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Transliterator-static getAvailableIDs(): string[]--><!--Device-Transliterator-static getAvailableIDs(): string[]-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -47,7 +57,9 @@ static getInstance(id: string): Transliterator
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Transliterator-static getInstance(id: string): Transliterator--><!--Device-Transliterator-static getInstance(id: string): Transliterator-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -61,7 +73,7 @@ static getInstance(id: string): Transliterator
 
 | 类型 | 说明 |
 | --- | --- |
-| Transliterator | 音译对象。 |
+| [Transliterator](arkts-localization-transliterator-c.md) | 音译对象。 |
 
 **示例：**
 
@@ -82,7 +94,9 @@ transform(text: string): string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Transliterator-transform(text: string): string--><!--Device-Transliterator-transform(text: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

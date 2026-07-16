@@ -1,5 +1,11 @@
 # publishAsUser（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { commonEventManager } from '@kit.BasicServicesKit';
+```
+
 ## publishAsUser
 
 ```TypeScript
@@ -9,6 +15,8 @@ function publishAsUser(event: string, userId: number, callback: AsyncCallback<vo
 向指定用户发布公共事件。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-commonEventManager-function publishAsUser(event: string, userId: int, callback: AsyncCallback<void>): void--><!--Device-commonEventManager-function publishAsUser(event: string, userId: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -20,7 +28,7 @@ function publishAsUser(event: string, userId: number, callback: AsyncCallback<vo
 | --- | --- | --- | --- |
 | event | string | 是 | 表示要发送的公共事件。 |
 | userId | number | 是 | 表示指定向该用户ID发送此公共事件。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当公共事件发布成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当公共事件发布成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -73,6 +81,18 @@ function publishAsUser(
 
 **起始版本：** 9
 
+<!--Device-commonEventManager-function publishAsUser(
+    event: string,
+    userId: int,
+    options: CommonEventPublishData,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-commonEventManager-function publishAsUser(
+    event: string,
+    userId: int,
+    options: CommonEventPublishData,
+    callback: AsyncCallback<void>
+  ): void-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -83,8 +103,8 @@ function publishAsUser(
 | --- | --- | --- | --- |
 | event | string | 是 | 表示要发布的公共事件。 |
 | userId | number | 是 | 表示指定向该用户ID发送此公共事件。 |
-| options | CommonEventPublishData | 是 | 表示发布公共事件的属性。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当公共事件发布成功，err为undefined，否则为错误对象。 |
+| options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-i.md) | 是 | 表示发布公共事件的属性。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当公共事件发布成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

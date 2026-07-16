@@ -4,6 +4,8 @@ Enumerates the types of recommended images.
 
 **Since:** 11
 
+<!--Device-photoAccessHelper-enum RecommendationType--><!--Device-photoAccessHelper-enum RecommendationType-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## COLOR_STYLE_PHOTO
@@ -15,6 +17,8 @@ COLOR_STYLE_PHOTO = 12
 Recommended style.
 
 **Since:** 18
+
+<!--Device-RecommendationType-COLOR_STYLE_PHOTO = 12--><!--Device-RecommendationType-COLOR_STYLE_PHOTO = 12-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -32,6 +36,8 @@ Cat images will be recommended.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RecommendationType-CAT = 13--><!--Device-RecommendationType-CAT = 13-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -47,6 +53,8 @@ Dog images will be recommended.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RecommendationType-DOG = 14--><!--Device-RecommendationType-DOG = 14-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -64,6 +72,8 @@ Architecture images will be recommended.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RecommendationType-ARCHITECTURE = 15--><!--Device-RecommendationType-ARCHITECTURE = 15-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -80,6 +90,8 @@ Landscape images will be recommended.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RecommendationType-LANDSCAPE = 16--><!--Device-RecommendationType-LANDSCAPE = 16-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -95,6 +107,8 @@ Images generated using the 3D Gaussian technology will be recommended.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RecommendationType-GAUSSIAN_SPLAT_3D = 17--><!--Device-RecommendationType-GAUSSIAN_SPLAT_3D = 17-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

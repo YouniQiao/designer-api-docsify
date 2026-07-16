@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface SubscribeCallbackData--><!--Device-unnamed-export interface SubscribeCallbackData-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -14,14 +16,15 @@
 readonly notificationClassification?: NotificationClassification
 ```
 
-通知分类信息。
-仅在[NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-i-sys.md)中的enableClassification为true时存在。
+通知分类信息。仅在[NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-i-sys.md)中的enableClassification为true时存在。
 
 **类型：** NotificationClassification
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SubscribeCallbackData-readonly notificationClassification?: NotificationClassification--><!--Device-SubscribeCallbackData-readonly notificationClassification?: NotificationClassification-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -39,6 +42,8 @@ readonly reason?: number
 
 **起始版本：** 7
 
+<!--Device-SubscribeCallbackData-readonly reason?: int--><!--Device-SubscribeCallbackData-readonly reason?: int-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -54,6 +59,8 @@ readonly request: NotificationRequest
 **类型：** NotificationRequest
 
 **起始版本：** 7
+
+<!--Device-SubscribeCallbackData-readonly request: NotificationRequest--><!--Device-SubscribeCallbackData-readonly request: NotificationRequest-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -71,6 +78,8 @@ readonly sortingMap?: NotificationSortingMap
 
 **起始版本：** 7
 
+<!--Device-SubscribeCallbackData-readonly sortingMap?: NotificationSortingMap--><!--Device-SubscribeCallbackData-readonly sortingMap?: NotificationSortingMap-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +96,8 @@ readonly sound?: string
 
 **起始版本：** 7
 
+<!--Device-SubscribeCallbackData-readonly sound?: string--><!--Device-SubscribeCallbackData-readonly sound?: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -102,6 +113,8 @@ readonly vibrationValues?: Array<number>
 **类型：** Array<number>
 
 **起始版本：** 7
+
+<!--Device-SubscribeCallbackData-readonly vibrationValues?: Array<long>--><!--Device-SubscribeCallbackData-readonly vibrationValues?: Array<long>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -120,6 +133,8 @@ voiceContent?: VoiceContent
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SubscribeCallbackData-voiceContent?: VoiceContent--><!--Device-SubscribeCallbackData-voiceContent?: VoiceContent-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

@@ -18,16 +18,14 @@ In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 ar
 
 [LogType](arkts-mdm-logtype-e.md) is supported since API version 23.
 
-After a rule with [Action](arkts-mdm-action-e.md) set to **ALLOW** is added, a rule with **Action** set to
-**DENY** is added by default to discard or intercept all packets for domain name resolution that do not meet the
-**ALLOW** rule.
+After a rule with [Action](arkts-mdm-action-e.md) set to **ALLOW** is added, a rule with **Action** set to **DENY** is added by default to discard or intercept all packets for domain name resolution that do not meet the **ALLOW** rule.
 
 After the device is restarted, the domain name filtering rules are cleared.
 
-> **NOTE**
->
-> To prevent interception rules from becoming ineffective due to DNS caching, it is recommended that you configure
-> domain name filtering rules immediately after the system starts up. If interception fails because of DNS caching,
+> **NOTE**  
+>  
+> To prevent interception rules from becoming ineffective due to DNS caching, it is recommended that you configure  
+> domain name filtering rules immediately after the system starts up. If interception fails because of DNS caching,  
 > restart the system to clear the cache and restore the interception function.
 
 **Since:** 12
@@ -36,14 +34,16 @@ After the device is restarted, the domain name filtering rules are cleared.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-networkManager-function addDomainFilterRule(admin: Want, domainFilterRule: DomainFilterRule): void--><!--Device-networkManager-function addDomainFilterRule(admin: Want, domainFilterRule: DomainFilterRule): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| domainFilterRule | DomainFilterRule | Yes | Domain name filtering rule to add. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| domainFilterRule | [DomainFilterRule](arkts-mdm-domainfilterrule-i.md) | Yes | Domain name filtering rule to add. |
 
 **Error codes:**
 
@@ -51,7 +51,7 @@ After the device is restarted, the domain name filtering rules are cleared.
 | --- | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Example**

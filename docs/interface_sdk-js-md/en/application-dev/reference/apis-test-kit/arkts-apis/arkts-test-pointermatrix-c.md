@@ -1,9 +1,10 @@
 # PointerMatrix
 
-Represents a two-dimensional array of pointers on the device display, it's used to build a
-multi-finger trace which can be injected with UiDriver.
+Represents a two-dimensional array of pointers on the device display, it's used to build a multi-finger trace which can be injected with UiDriver.
 
 **Since:** 9
+
+<!--Device-unnamed-declare class PointerMatrix--><!--Device-unnamed-declare class PointerMatrix-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -25,6 +26,8 @@ Creates a **PointerMatrix** object and returns the object created. This API is a
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PointerMatrix-static create(fingers: int, steps: int): PointerMatrix--><!--Device-PointerMatrix-static create(fingers: int, steps: int): PointerMatrix-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -38,7 +41,7 @@ Creates a **PointerMatrix** object and returns the object created. This API is a
 
 | Type | Description |
 | --- | --- |
-| PointerMatrix | - **PointerMatrix** object created. |
+| [PointerMatrix](arkts-test-pointermatrix-c.md) | - **PointerMatrix** object created. |
 
 **Error codes:**
 
@@ -64,12 +67,13 @@ async function demo() {
 setPoint(finger: number, step: number, point: Point): void
 ```
 
-Sets the coordinates for the action corresponding to the specified finger and step in the **PointerMatrix**
-object.
+Sets the coordinates for the action corresponding to the specified finger and step in the **PointerMatrix** object.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PointerMatrix-setPoint(finger: int, step: int, point: Point): void--><!--Device-PointerMatrix-setPoint(finger: int, step: int, point: Point): void-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -77,9 +81,9 @@ object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| finger | number | Yes | Number of fingers. The value is an integer greater than or equal to 0 and cannot exceed thenumber of fingers set when the **PointerMatrix** object is constructed. |
-| step | number | Yes | Number of steps. The value is an integer greater than or equal to 0 and cannot exceed the numberof steps set when the **PointerMatrix** object is constructed. |
-| point | Point | Yes | Coordinates of the action. It is recommended that the distance between adjacent coordinates bewithin the range of 10 px to 80 px. |
+| finger | number | Yes | Number of fingers. The value is an integer greater than or equal to 0 and cannot exceed the number of fingers set when the **PointerMatrix** object is constructed. |
+| step | number | Yes | Number of steps. The value is an integer greater than or equal to 0 and cannot exceed the number of steps set when the **PointerMatrix** object is constructed. |
+| point | [Point](arkts-test-point-i.md) | Yes | Coordinates of the action. It is recommended that the distance between adjacent coordinates be within the range of 10 px to 80 px. |
 
 **Error codes:**
 

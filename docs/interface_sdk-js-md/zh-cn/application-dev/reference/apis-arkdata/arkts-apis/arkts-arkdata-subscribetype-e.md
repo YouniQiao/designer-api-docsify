@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-distributedKVStore-enum SubscribeType--><!--Device-distributedKVStore-enum SubscribeType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## SUBSCRIBE_TYPE_LOCAL
@@ -17,6 +19,8 @@ SUBSCRIBE_TYPE_LOCAL
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SubscribeType-SUBSCRIBE_TYPE_LOCAL--><!--Device-SubscribeType-SUBSCRIBE_TYPE_LOCAL-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -32,6 +36,8 @@ SUBSCRIBE_TYPE_REMOTE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SubscribeType-SUBSCRIBE_TYPE_REMOTE--><!--Device-SubscribeType-SUBSCRIBE_TYPE_REMOTE-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## SUBSCRIBE_TYPE_ALL
@@ -45,6 +51,8 @@ SUBSCRIBE_TYPE_ALL
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SubscribeType-SUBSCRIBE_TYPE_ALL--><!--Device-SubscribeType-SUBSCRIBE_TYPE_ALL-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 

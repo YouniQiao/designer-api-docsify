@@ -1,10 +1,10 @@
 # Stream
 
-Provides API for stream operations. Before calling any API of **Stream**, you need to create a **Stream** instance by
-using [fileIo.createStream](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatestream) or
-[fileIo.fdopenStream](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiofdopenstream).
+Provides API for stream operations. Before calling any API of **Stream**, you need to create a **Stream** instance by using [fileIo.createStream](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatestream) or [fileIo.fdopenStream](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiofdopenstream).
 
 **Since:** 9
+
+<!--Device-unnamed-declare interface Stream--><!--Device-unnamed-declare interface Stream-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -26,13 +26,15 @@ Closes the file stream. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-Stream-close(): Promise<void>--><!--Device-Stream-close(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -72,13 +74,15 @@ Closes the file stream. This API uses an asynchronous callback to return the res
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-Stream-close(callback: AsyncCallback<void>): void--><!--Device-Stream-close(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback invoked immediately after the stream is closed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback invoked immediately after the stream is closed. |
 
 **Error codes:**
 
@@ -120,6 +124,8 @@ Closes the file stream. This API returns the result synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-Stream-closeSync(): void--><!--Device-Stream-closeSync(): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Error codes:**
@@ -154,13 +160,15 @@ Flushes the file stream. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-Stream-flush(): Promise<void>--><!--Device-Stream-flush(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -207,13 +215,15 @@ Flushes the file stream. This API uses an asynchronous callback to return the re
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-Stream-flush(callback: AsyncCallback<void>): void--><!--Device-Stream-flush(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -262,6 +272,8 @@ Flushes the file stream. This API returns the result synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-Stream-flushSync(): void--><!--Device-Stream-flushSync(): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Error codes:**
@@ -306,20 +318,28 @@ Reads data from a stream file. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-Stream-read(
+      buffer: ArrayBuffer,
+      options?: ReadOptions
+  ): Promise<number>--><!--Device-Stream-read(
+      buffer: ArrayBuffer,
+      options?: ReadOptions
+  ): Promise<number>-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| options | ReadOptions | No | The options are as follows:<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length.<br>- **offset** (number):position of the data to read in the file, in bytes. This parameter is optional. By default, data is read fromthe current position.<br>**Since:** 11 |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Buffer used to store the file read. |
+| options | [ReadOptions](arkts-corefile-readoptions-i.md) | No | The options are as follows:<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length.<br>- **offset** (number):position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the data read, in bytes. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the data read, in bytes. |
 
 **Error codes:**
 
@@ -372,14 +392,16 @@ Reads data from a stream file. This API uses an asynchronous callback to return 
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void--><!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. The callback returns the data read,in bytes. |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Buffer used to store the file read. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. The callback returns the data read,in bytes. |
 
 **Error codes:**
 
@@ -432,15 +454,25 @@ Reads data from a stream file. This API uses an asynchronous callback to return 
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-Stream-read(
+      buffer: ArrayBuffer,
+      options: ReadOptions,
+      callback: AsyncCallback<number>
+  ): void--><!--Device-Stream-read(
+      buffer: ArrayBuffer,
+      options: ReadOptions,
+      callback: AsyncCallback<number>
+  ): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| options | ReadOptions | Yes | The options are as follows:<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length.<br>- **offset** (number):position of the data to read in the file, in bytes. This parameter is optional. By default, data is read fromthe current position.<br>**Since:** 11 |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. The callback returns the data read,in bytes. |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Buffer used to store the file read. |
+| options | [ReadOptions](arkts-corefile-readoptions-i.md) | Yes | The options are as follows:<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length.<br>- **offset** (number):position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br>**Since:** 11 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. The callback returns the data read,in bytes. |
 
 **Error codes:**
 
@@ -497,14 +529,22 @@ Reads data from a stream file. This API returns the result synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-Stream-readSync(
+      buffer: ArrayBuffer,
+      options?: ReadOptions
+  ): number--><!--Device-Stream-readSync(
+      buffer: ArrayBuffer,
+      options?: ReadOptions
+  ): number-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| options | ReadOptions | No | The options are as follows:<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length.<br>- **offset** (number):position of the data to read in the file, in bytes. This parameter is optional. By default, data is read fromthe current position.<br><br>**Since:** 11 |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Buffer used to store the file read. |
+| options | [ReadOptions](arkts-corefile-readoptions-i.md) | No | The options are as follows:<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length.<br>- **offset** (number):position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br><br>**Since:** 11 |
 
 **Return value:**
 
@@ -559,6 +599,14 @@ Writes data to a stream file. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-Stream-write(
+      buffer: ArrayBuffer | string,
+      options?: WriteOptions
+  ): Promise<number>--><!--Device-Stream-write(
+      buffer: ArrayBuffer | string,
+      options?: WriteOptions
+  ): Promise<number>-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
@@ -566,13 +614,13 @@ Writes data to a stream file. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | WriteOptions | No | The options are as follows:<br>- **length** (number): length of the data towrite, in bytes. The default value is the buffer length.<br>- **offset** (number): start position to write thedata in the file, in bytes. This parameter is optional. By default, data is written from the current position.&lt;br&gt;- **encoding** (string): format of the data to be encoded when the data is a string. The default value is**'utf-8'**, which is the only value supported.<br>**Since:** 11 |
+| options | [WriteOptions](arkts-corefile-writeoptions-i.md) | No | The options are as follows:<br>- **length** (number): length of the data to write, in bytes. The default value is the buffer length.<br>- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position.<br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the length of the data written, in bytes. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the length of the data written, in bytes. |
 
 **Error codes:**
 
@@ -625,6 +673,8 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void--><!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
@@ -632,7 +682,7 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. The callback returns the length ofthe data written, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. The callback returns the length of the data written, in bytes. |
 
 **Error codes:**
 
@@ -687,6 +737,16 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-Stream-write(
+      buffer: ArrayBuffer | string,
+      options: WriteOptions,
+      callback: AsyncCallback<number>
+  ): void--><!--Device-Stream-write(
+      buffer: ArrayBuffer | string,
+      options: WriteOptions,
+      callback: AsyncCallback<number>
+  ): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
@@ -694,8 +754,8 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | WriteOptions | Yes | The options are as follows:<br>- **length** (number): length of the data towrite, in bytes. This parameter is optional. The default value is the buffer length.<br>- **offset** (number):start position to write the data in the file, in bytes. This parameter is optional. By default, data is writtenfrom the current position.<br>- **encoding** (string): format of the data to be encoded when the data is astring. The default value is **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. The callback returns the length ofthe data written, in bytes. |
+| options | [WriteOptions](arkts-corefile-writeoptions-i.md) | Yes | The options are as follows:<br>- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length.<br>- **offset** (number):start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position.<br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. The callback returns the length of the data written, in bytes. |
 
 **Error codes:**
 
@@ -755,6 +815,14 @@ Writes data to a stream file. This API returns the result synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-Stream-writeSync(
+      buffer: ArrayBuffer | string,
+      options?: WriteOptions
+  ): number--><!--Device-Stream-writeSync(
+      buffer: ArrayBuffer | string,
+      options?: WriteOptions
+  ): number-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
@@ -762,7 +830,7 @@ Writes data to a stream file. This API returns the result synchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | WriteOptions | No | The options are as follows:<br>- **length** (number): length of the data towrite, in bytes. This parameter is optional. The default value is the buffer length.<br>- **offset** (number):start position to write the data in the file, in bytes. This parameter is optional. By default, data is writtenfrom the current position.<br>- **encoding** (string): format of the data to be encoded when the data is astring. The default value is **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
+| options | [WriteOptions](arkts-corefile-writeoptions-i.md) | No | The options are as follows:<br>- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length.<br>- **offset** (number):start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position.<br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
 
 **Return value:**
 

@@ -6,9 +6,17 @@
 
 **废弃版本：** 23
 
+<!--Device-fileAccess-interface RootInfo--><!--Device-fileAccess-interface RootInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { fileAccess } from '@kit.CoreFileKit';
+```
 
 ## listFile
 
@@ -16,8 +24,7 @@
 listFile(filter?: Filter): FileIterator
 ```
 
-以同步方法从某个目录，基于过滤器，获取下一级符合条件的文件(夹)信息的迭代器对象FileIterator，然后通过[next](arkts-corefile-fileiterator-i-sys.md#next-1)方法返回
-[FileInfo](arkts-corefile-fileinfo-i-sys.md)。目前仅支持内置存储设备过滤，外置存储设备不支持过滤。
+以同步方法从某个目录，基于过滤器，获取下一级符合条件的文件(夹)信息的迭代器对象FileIterator，然后通过[next](arkts-corefile-fileiterator-i-sys.md#next-1)方法返回[FileInfo](arkts-corefile-fileinfo-i-sys.md)。目前仅支持内置存储设备过滤，外置存储设备不支持过滤。
 
 **起始版本：** 9
 
@@ -29,6 +36,8 @@ listFile(filter?: Filter): FileIterator
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RootInfo-listFile(filter?: Filter): FileIterator--><!--Device-RootInfo-listFile(filter?: Filter): FileIterator-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -37,13 +46,13 @@ listFile(filter?: Filter): FileIterator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | Filter | 否 | Indicates the filter of file. |
+| filter | [Filter](../../apis-arkui/arkts-components/arkts-arkui-filter-t.md) | 否 | Indicates the filter of file. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| FileIterator | Returns the FileIterator Object. |
+| [FileIterator](arkts-corefile-fileiterator-i-sys.md) | Returns the FileIterator Object. |
 
 **错误码：**
 
@@ -123,8 +132,7 @@ try {
 scanFile(filter?: Filter): FileIterator
 ```
 
-以同步方法从某设备根节点开始，基于过滤器，递归获取符合条件的文件信息的迭代器对象FileIterator，然后通过[next](arkts-corefile-fileiterator-i-sys.md#next-1)方法返回
-[FileInfo](arkts-corefile-fileinfo-i-sys.md)。目前仅支持内置存储设备。
+以同步方法从某设备根节点开始，基于过滤器，递归获取符合条件的文件信息的迭代器对象FileIterator，然后通过[next](arkts-corefile-fileiterator-i-sys.md#next-1)方法返回[FileInfo](arkts-corefile-fileinfo-i-sys.md)。目前仅支持内置存储设备。
 
 **起始版本：** 9
 
@@ -134,6 +142,8 @@ scanFile(filter?: Filter): FileIterator
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RootInfo-scanFile(filter?: Filter): FileIterator--><!--Device-RootInfo-scanFile(filter?: Filter): FileIterator-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -142,13 +152,13 @@ scanFile(filter?: Filter): FileIterator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | Filter | 否 | Indicates the filter of file. |
+| filter | [Filter](../../apis-arkui/arkts-components/arkts-arkui-filter-t.md) | 否 | Indicates the filter of file. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| FileIterator | Returns the RootIterator Object. |
+| [FileIterator](arkts-corefile-fileiterator-i-sys.md) | Returns the RootIterator Object. |
 
 **错误码：**
 
@@ -240,6 +250,8 @@ deviceFlags: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RootInfo-deviceFlags: number--><!--Device-RootInfo-deviceFlags: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -261,6 +273,8 @@ deviceType: number
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RootInfo-deviceType: number--><!--Device-RootInfo-deviceType: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -284,6 +298,8 @@ displayName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RootInfo-displayName: string--><!--Device-RootInfo-displayName: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -306,6 +322,8 @@ relativePath: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RootInfo-relativePath: string--><!--Device-RootInfo-relativePath: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -327,6 +345,8 @@ uri: string
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RootInfo-uri: string--><!--Device-RootInfo-uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

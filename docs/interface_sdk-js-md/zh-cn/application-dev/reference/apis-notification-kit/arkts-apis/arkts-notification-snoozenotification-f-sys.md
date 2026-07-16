@@ -12,14 +12,15 @@ import { notificationManager } from '@kit.NotificationKit';
 function snoozeNotification(hashCode: string, delayTime: number): Promise<void>
 ```
 
-设置通知稍后提醒。该通知在指定时间后再次提醒，每次设置只会提醒一次，提醒方式与该通知相同。
-设置后该通知被删除。
+设置通知稍后提醒。该通知在指定时间后再次提醒，每次设置只会提醒一次，提醒方式与该通知相同。设置后该通知被删除。
 
 **起始版本：** 26.0.0
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-notificationManager-function snoozeNotification(hashCode: string, delayTime: long): Promise<void>--><!--Device-notificationManager-function snoozeNotification(hashCode: string, delayTime: long): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -36,7 +37,7 @@ function snoozeNotification(hashCode: string, delayTime: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

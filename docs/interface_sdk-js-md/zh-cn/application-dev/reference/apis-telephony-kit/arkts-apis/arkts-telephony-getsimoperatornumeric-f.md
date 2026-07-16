@@ -1,5 +1,11 @@
 # getSimOperatorNumeric
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## getSimOperatorNumeric
 
 ```TypeScript
@@ -8,10 +14,11 @@ function getSimOperatorNumeric(slotId: number, callback: AsyncCallback<string>):
 
 Obtains the home PLMN number of the SIM card in a specified slot.
 
-<p>The value is recorded in the SIM card and is irrelevant to the network
-with which the SIM card is currently registered.
+<p>The value is recorded in the SIM card and is irrelevant to the network with which the SIM card is currently registered.
 
 **起始版本：** 6
+
+<!--Device-sim-function getSimOperatorNumeric(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getSimOperatorNumeric(slotId: int, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -20,7 +27,7 @@ with which the SIM card is currently registered.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;string&gt; | 是 | Indicates the callback for getting the PLMN number;returns an empty string if no SIM card is inserted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | Indicates the callback for getting the PLMN number;returns an empty string if no SIM card is inserted. |
 
 **错误码：**
 
@@ -54,10 +61,11 @@ function getSimOperatorNumeric(slotId: number): Promise<string>
 
 Obtains the home PLMN number of the SIM card in a specified slot.
 
-<p>The value is recorded in the SIM card and is irrelevant to the network
-with which the SIM card is currently registered.
+<p>The value is recorded in the SIM card and is irrelevant to the network with which the SIM card is currently registered.
 
 **起始版本：** 6
+
+<!--Device-sim-function getSimOperatorNumeric(slotId: int): Promise<string>--><!--Device-sim-function getSimOperatorNumeric(slotId: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -71,7 +79,7 @@ with which the SIM card is currently registered.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the PLMN number; returns an empty string if no SIM card is inserted. |
+| Promise<string> | Returns the PLMN number; returns an empty string if no SIM card is inserted. |
 
 **错误码：**
 

@@ -18,6 +18,8 @@ Obtains all active notifications. This API uses an asynchronous callback to retu
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getAllActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void--><!--Device-notificationManager-function getAllActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Obtains all active notifications. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;NotificationRequest&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<NotificationRequest>> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -69,6 +71,8 @@ Obtains all active notifications. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getAllActiveNotifications(): Promise<Array<NotificationRequest>>--><!--Device-notificationManager-function getAllActiveNotifications(): Promise<Array<NotificationRequest>>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -77,7 +81,7 @@ Obtains all active notifications. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NotificationRequest&gt;&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<NotificationRequest>> | Promise used to return the result. |
 
 **Error codes:**
 

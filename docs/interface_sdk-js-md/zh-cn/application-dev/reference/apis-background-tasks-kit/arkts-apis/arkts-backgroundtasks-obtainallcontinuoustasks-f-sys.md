@@ -1,5 +1,11 @@
 # obtainAllContinuousTasks（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+```
+
 ## obtainAllContinuousTasks
 
 ```TypeScript
@@ -14,6 +20,8 @@ function obtainAllContinuousTasks(): Promise<ContinuousTaskInfo[]>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-backgroundTaskManager-function obtainAllContinuousTasks(): Promise<ContinuousTaskInfo[]>--><!--Device-backgroundTaskManager-function obtainAllContinuousTasks(): Promise<ContinuousTaskInfo[]>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ function obtainAllContinuousTasks(): Promise<ContinuousTaskInfo[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ContinuousTaskInfo[]&gt; | Promise对象，返回所有长时任务信息。 |
+| Promise<ContinuousTaskInfo[]> | Promise对象，返回所有长时任务信息。 |
 
 **错误码：**
 

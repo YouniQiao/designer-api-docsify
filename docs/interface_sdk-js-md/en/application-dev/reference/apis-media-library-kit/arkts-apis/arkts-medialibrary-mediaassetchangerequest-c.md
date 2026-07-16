@@ -6,6 +6,8 @@ Represents a media asset change request.
 
 **Since:** 11
 
+<!--Device-photoAccessHelper-class MediaAssetChangeRequest implements MediaChangeRequest--><!--Device-photoAccessHelper-class MediaAssetChangeRequest implements MediaChangeRequest-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -20,17 +22,18 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 addResource(type: ResourceType, fileUri: string): void
 ```
 
-Adds resources from the application sandbox based on the file URI. For details about the data source, see
-[@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+Adds resources from the application sandbox based on the file URI. For details about the data source, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
 
-> **NOTE**
->
-> For the same asset change request, this API cannot be repeatedly called after the resource is successfully
+> **NOTE**  
+>  
+> For the same asset change request, this API cannot be repeatedly called after the resource is successfully  
 > added. For a moving photo, you can call this API twice to add the image and video resources.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-MediaAssetChangeRequest-addResource(type: ResourceType, fileUri: string): void--><!--Device-MediaAssetChangeRequest-addResource(type: ResourceType, fileUri: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -38,8 +41,8 @@ Adds resources from the application sandbox based on the file URI. For details a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | ResourceType | Yes | Type of the resource to add. |
-| fileUri | string | Yes | Data source of the resource to be added, which is specified by a URI in theapplication sandbox directory. Example:**'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.jpg'**. |
+| type | [ResourceType](../../apis-ability-kit/arkts-apis/arkts-ability-resourcetype-e.md) | Yes | Type of the resource to add. |
+| fileUri | string | Yes | Data source of the resource to be added, which is specified by a URI in the application sandbox directory. Example:**'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.jpg'**. |
 
 **Error codes:**
 
@@ -58,14 +61,16 @@ addResource(type: ResourceType, data: ArrayBuffer): void
 
 Adds a resource using **ArrayBuffer** data.
 
-> **NOTE**
->
-> For the same asset change request, this API cannot be repeatedly called after the resource is successfully
+> **NOTE**  
+>  
+> For the same asset change request, this API cannot be repeatedly called after the resource is successfully  
 > added. For a moving photo, you can call this API twice to add the image and video resources.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-MediaAssetChangeRequest-addResource(type: ResourceType, data: ArrayBuffer): void--><!--Device-MediaAssetChangeRequest-addResource(type: ResourceType, data: ArrayBuffer): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -73,8 +78,8 @@ Adds a resource using **ArrayBuffer** data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | ResourceType | Yes | Type of the resource to add. |
-| data | ArrayBuffer | Yes | Data of the resource to add. |
+| type | [ResourceType](../../apis-ability-kit/arkts-apis/arkts-ability-resourcetype-e.md) | Yes | Type of the resource to add. |
+| data | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Data of the resource to add. |
 
 **Error codes:**
 
@@ -96,13 +101,15 @@ Constructor used to initialize an asset change request.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MediaAssetChangeRequest-constructor(asset: PhotoAsset)--><!--Device-MediaAssetChangeRequest-constructor(asset: PhotoAsset)-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| asset | PhotoAsset | Yes | Assets to change. |
+| asset | [PhotoAsset](arkts-medialibrary-photoasset-i.md) | Yes | Assets to change. |
 
 **Error codes:**
 
@@ -123,22 +130,24 @@ Create an asset change request based on the file type and filename extension.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-MediaAssetChangeRequest-static createAssetRequest(context: Context, photoType: PhotoType, extension: string, options?: CreateOptions): MediaAssetChangeRequest--><!--Device-MediaAssetChangeRequest-static createAssetRequest(context: Context, photoType: PhotoType, extension: string, options?: CreateOptions): MediaAssetChangeRequest-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability instance. |
-| photoType | PhotoType | Yes | Type of the file to create, which can be **IMAGE** or **VIDEO**. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the ability instance. |
+| photoType | [PhotoType](arkts-medialibrary-phototype-e.md) | Yes | Type of the file to create, which can be **IMAGE** or **VIDEO**. |
 | extension | string | Yes | File name extension, for example, **'jpg'**. |
-| options | CreateOptions | No | Options for creating the image or video asset, for example,**{title: 'testPhoto'}**.<br>The file name must not contain any invalid characters, which are:.. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
+| options | [CreateOptions](arkts-medialibrary-createoptions-i.md) | No | Options for creating the image or video asset, for example,**{title: 'testPhoto'}**.<br>The file name must not contain any invalid characters, which are:.. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MediaAssetChangeRequest | **MediaAssetChangeRequest** created. |
+| [MediaAssetChangeRequest](arkts-medialibrary-mediaassetchangerequest-c.md) | **MediaAssetChangeRequest** created. |
 
 **Error codes:**
 
@@ -155,12 +164,13 @@ static createImageAssetRequest(context: Context, fileUri: string): MediaAssetCha
 
 Creates an image asset change request.
 
-For details about data source of the asset to be created, see
-[@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+For details about data source of the asset to be created, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MediaAssetChangeRequest-static createImageAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest--><!--Device-MediaAssetChangeRequest-static createImageAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -168,14 +178,14 @@ For details about data source of the asset to be created, see
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability instance. |
-| fileUri | string | Yes | Data source of the image asset, which is specified by a URI in the applicationsandbox directory. Example: **'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.jpg'**. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the ability instance. |
+| fileUri | string | Yes | Data source of the image asset, which is specified by a URI in the application sandbox directory. Example: **'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.jpg'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MediaAssetChangeRequest | **MediaAssetChangeRequest** created. |
+| [MediaAssetChangeRequest](arkts-medialibrary-mediaassetchangerequest-c.md) | **MediaAssetChangeRequest** created. |
 
 **Error codes:**
 
@@ -193,10 +203,11 @@ static createVideoAssetRequest(context: Context, fileUri: string): MediaAssetCha
 
 Creates a video asset change request.
 
-For details about data source of the asset to be created, see
-[@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+For details about data source of the asset to be created, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
 
 **Since:** 11
+
+<!--Device-MediaAssetChangeRequest-static createVideoAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest--><!--Device-MediaAssetChangeRequest-static createVideoAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -204,14 +215,14 @@ For details about data source of the asset to be created, see
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability instance. |
-| fileUri | string | Yes | Data source of the video asset, which is specified by a URI in the applicationsandbox directory. Example: **'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.mp4'**. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the ability instance. |
+| fileUri | string | Yes | Data source of the video asset, which is specified by a URI in the application sandbox directory. Example: **'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.mp4'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MediaAssetChangeRequest | **MediaAssetChangeRequest** created. |
+| [MediaAssetChangeRequest](arkts-medialibrary-mediaassetchangerequest-c.md) | **MediaAssetChangeRequest** created. |
 
 **Error codes:**
 
@@ -233,20 +244,22 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-MediaAssetChangeRequest-static deleteAssets(context: Context, assets: Array<PhotoAsset>): Promise<void>--><!--Device-MediaAssetChangeRequest-static deleteAssets(context: Context, assets: Array<PhotoAsset>): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability instance. |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Array of media assets to delete. The array can contain a maximum of 300elements. &lt;!--Del--&gt;System applications are not subject to this limitation.&lt;!--DelEnd--&gt; |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the ability instance. |
+| assets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PhotoAsset> | Yes | Array of media assets to delete. The array can contain a maximum of 300elements. &lt;!--Del--&gt;System applications are not subject to this limitation.&lt;!--DelEnd--&gt; |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -268,20 +281,22 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-MediaAssetChangeRequest-static deleteAssets(context: Context, uriList: Array<string>): Promise<void>--><!--Device-MediaAssetChangeRequest-static deleteAssets(context: Context, uriList: Array<string>): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability instance. |
-| uriList | Array&lt;string&gt; | Yes | URIs of the media assets to delete. The array can contain a maximum of 300elements. &lt;!--Del--&gt;System applications are not subject to this limitation.&lt;!--DelEnd--&gt; |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the ability instance. |
+| uriList | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | URIs of the media assets to delete. The array can contain a maximum of 300elements. &lt;!--Del--&gt;System applications are not subject to this limitation.&lt;!--DelEnd--&gt; |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -302,6 +317,8 @@ Discards the photo taken by the camera.
 
 **Since:** 12
 
+<!--Device-MediaAssetChangeRequest-discardCameraPhoto(): void--><!--Device-MediaAssetChangeRequest-discardCameraPhoto(): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Error codes:**
@@ -319,15 +336,17 @@ getAsset(): PhotoAsset
 
 Obtains the asset in this asset change request.
 
-> **NOTE**
->
-> For the change request used to create an asset, this API returns **null** before
-> [applyChanges](arkts-medialibrary-photoaccesshelper-i.md#applychanges-1) is called
+> **NOTE**  
+>  
+> For the change request used to create an asset, this API returns **null** before  
+> [applyChanges](arkts-medialibrary-photoaccesshelper-i.md#applychanges-1) is called  
 > to apply the changes.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MediaAssetChangeRequest-getAsset(): PhotoAsset--><!--Device-MediaAssetChangeRequest-getAsset(): PhotoAsset-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -335,7 +354,7 @@ Obtains the asset in this asset change request.
 
 | Type | Description |
 | --- | --- |
-| PhotoAsset | Asset obtained. |
+| [PhotoAsset](arkts-medialibrary-photoasset-i.md) | Asset obtained. |
 
 **Error codes:**
 
@@ -352,14 +371,16 @@ getWriteCacheHandler(): Promise<number>
 
 Obtains the handler used for writing a file to cache. This API uses a promise to return the result.
 
-> **NOTE**
->
-> For the same asset change request, this API cannot be repeatedly called after a temporary file write handle is
+> **NOTE**  
+>  
+> For the same asset change request, this API cannot be repeatedly called after a temporary file write handle is  
 > successfully obtained.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-MediaAssetChangeRequest-getWriteCacheHandler(): Promise<int>--><!--Device-MediaAssetChangeRequest-getWriteCacheHandler(): Promise<int>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -367,7 +388,7 @@ Obtains the handler used for writing a file to cache. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the write handle obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the write handle obtained. |
 
 **Error codes:**
 
@@ -388,6 +409,8 @@ Saves the photo taken by the camera.
 
 **Since:** 12
 
+<!--Device-MediaAssetChangeRequest-saveCameraPhoto(): void--><!--Device-MediaAssetChangeRequest-saveCameraPhoto(): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Error codes:**
@@ -407,13 +430,15 @@ Saves the photo taken by the camera.
 
 **Since:** 13
 
+<!--Device-MediaAssetChangeRequest-saveCameraPhoto(imageFileType: ImageFileType): void--><!--Device-MediaAssetChangeRequest-saveCameraPhoto(imageFileType: ImageFileType): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageFileType | ImageFileType | Yes | File type of the photo to save. |
+| imageFileType | [ImageFileType](arkts-medialibrary-imagefiletype-e.md) | Yes | File type of the photo to save. |
 
 **Error codes:**
 
@@ -432,13 +457,15 @@ Sets the orientation of this image.
 
 **Since:** 15
 
+<!--Device-MediaAssetChangeRequest-setOrientation(orientation: int): void--><!--Device-MediaAssetChangeRequest-setOrientation(orientation: int): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| orientation | number | Yes | Rotation angle of the image to set. The value can only be **0**, **90**, **180**, or**270**. |
+| orientation | number | Yes | Rotation angle of the image to set. The value can only be **0**, **90**, **180**, or **270**. |
 
 **Error codes:**
 
@@ -458,6 +485,8 @@ Sets the media asset title.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MediaAssetChangeRequest-setTitle(title: string): void--><!--Device-MediaAssetChangeRequest-setTitle(title: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -489,6 +518,8 @@ A readonly member for type checking.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-MediaAssetChangeRequest-readonly comment: string--><!--Device-MediaAssetChangeRequest-readonly comment: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

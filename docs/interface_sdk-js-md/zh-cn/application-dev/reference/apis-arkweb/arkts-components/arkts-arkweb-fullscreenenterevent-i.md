@@ -4,6 +4,8 @@ Web组件进入全屏回调事件的详情。
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface FullScreenEnterEvent--><!--Device-unnamed-declare interface FullScreenEnterEvent-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## handler
@@ -18,7 +20,9 @@ handler: FullScreenExitHandler
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FullScreenEnterEvent-handler: FullScreenExitHandler--><!--Device-FullScreenEnterEvent-handler: FullScreenExitHandler-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -34,7 +38,9 @@ videoHeight?: number
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FullScreenEnterEvent-videoHeight?: number--><!--Device-FullScreenEnterEvent-videoHeight?: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -50,7 +56,9 @@ videoWidth?: number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FullScreenEnterEvent-videoWidth?: number--><!--Device-FullScreenEnterEvent-videoWidth?: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

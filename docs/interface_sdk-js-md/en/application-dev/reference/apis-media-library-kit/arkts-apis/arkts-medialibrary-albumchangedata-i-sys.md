@@ -4,6 +4,8 @@ Describes the change data of an album.
 
 **Since:** 20
 
+<!--Device-photoAccessHelper-interface AlbumChangeData--><!--Device-photoAccessHelper-interface AlbumChangeData-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -23,6 +25,8 @@ Version number of the album notification, which is used to determine the order o
 **Type:** number
 
 **Since:** 20
+
+<!--Device-AlbumChangeData-version: long--><!--Device-AlbumChangeData-version: long-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -20,6 +20,8 @@ update cloud devices.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function updateCloudBluetoothDevice(trustedPairedDevices: TrustedPairedDevices): Promise<void>--><!--Device-connection-function updateCloudBluetoothDevice(trustedPairedDevices: TrustedPairedDevices): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -28,13 +30,13 @@ update cloud devices.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| trustedPairedDevices | TrustedPairedDevices | Yes | Indicates the cloud devices. |
+| trustedPairedDevices | [TrustedPairedDevices](arkts-connectivity-trustedpaireddevices-i-sys.md) | Yes | Indicates the cloud devices. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 

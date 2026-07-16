@@ -1,13 +1,12 @@
 # BackPressActionProposal
 
-Smart gesture back press action handling. When dynamically customizing smart gesture behavior through the
-[registerMonitor](arkts-arkui-smartgesturecontroller-c.md#registermonitor-1) API, setting the return value
-[GestureHandlingResolution](arkts-arkui-gesturehandlingresolution-c.md)'s **selectedProposal** to an object of this type
-navigates back to the previous page.
+Smart gesture back press action handling. When dynamically customizing smart gesture behavior through the [registerMonitor](arkts-arkui-smartgesturecontroller-c.md#registermonitor-1) API, setting the return value [GestureHandlingResolution](arkts-arkui-gesturehandlingresolution-c.md)'s **selectedProposal** to an object of this type navigates back to the previous page.
 
 **Inheritance/Implementation:** BackPressActionProposal extends [BaseGestureHandlingProposal](arkts-arkui-basegesturehandlingproposal-c.md)
 
 **Since:** 26.0.0
+
+<!--Device-unnamed-export class BackPressActionProposal extends BaseGestureHandlingProposal--><!--Device-unnamed-export class BackPressActionProposal extends BaseGestureHandlingProposal-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,6 +29,8 @@ Constructor for the smart gesture back press action handling.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-BackPressActionProposal-constructor()--><!--Device-BackPressActionProposal-constructor()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

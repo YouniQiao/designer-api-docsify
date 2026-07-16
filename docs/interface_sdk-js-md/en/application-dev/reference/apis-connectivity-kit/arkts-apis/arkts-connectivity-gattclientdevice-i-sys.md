@@ -1,9 +1,10 @@
 # GattClientDevice
 
-Manages GATT client. Before calling an Gatt client method, you must use {@link createGattClientDevice} to create an
-GattClientDevice instance.
+Manages GATT client. Before calling an Gatt client method, you must use {@link createGattClientDevice} to create an GattClientDevice instance.
 
 **Since:** 10
+
+<!--Device-ble-interface GattClientDevice--><!--Device-ble-interface GattClientDevice-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -28,6 +29,10 @@ Writes the characteristic of a BLE peripheral device with context.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-GattClientDevice-writeCharacteristicValueWithContext(
+      characteristic: BLECharacteristic, writeType: GattWriteType): Promise<GattRspContext>--><!--Device-GattClientDevice-writeCharacteristicValueWithContext(
+      characteristic: BLECharacteristic, writeType: GattWriteType): Promise<GattRspContext>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -36,14 +41,14 @@ Writes the characteristic of a BLE peripheral device with context.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | BLECharacteristic | Yes | Indicates the characteristic to write. |
-| writeType | GattWriteType | Yes | Write type of the characteristic.The interface currently only supports {@link GattWriteType#WRITE} mode. |
+| characteristic | [BLECharacteristic](arkts-connectivity-blecharacteristic-i.md) | Yes | Indicates the characteristic to write. |
+| writeType | [GattWriteType](arkts-connectivity-gattwritetype-e.md) | Yes | Write type of the characteristic.The interface currently only supports {@link GattWriteType#WRITE} mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GattRspContext&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<GattRspContext> | Promise used to return the result. |
 
 **Error codes:**
 

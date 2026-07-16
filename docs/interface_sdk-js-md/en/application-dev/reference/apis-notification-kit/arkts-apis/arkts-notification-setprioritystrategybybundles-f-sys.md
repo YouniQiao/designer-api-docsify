@@ -20,6 +20,8 @@ Sets the application priority notification strategies in batches. This API uses 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-notificationManager-function setPriorityStrategyByBundles(strategies: Map<BundleOption, long>): Promise<void>--><!--Device-notificationManager-function setPriorityStrategyByBundles(strategies: Map<BundleOption, long>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -28,13 +30,13 @@ Sets the application priority notification strategies in batches. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategies | Map&lt;BundleOption, number&gt; | Yes | Key-value pair set of the application notification prioritystrategies. This parameter is obtained by performing the bitwise OR operation with the enumeration of[PriorityStrategyStatus](arkts-notification-prioritystrategystatus-e-sys.md). |
+| strategies | [Map](../../apis-na/arkts-apis/arkts-na-map-i.md)<BundleOption, number> | Yes | Key-value pair set of the application notification priority strategies. This parameter is obtained by performing the bitwise OR operation with the enumeration of [PriorityStrategyStatus](arkts-notification-prioritystrategystatus-e-sys.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

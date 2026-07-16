@@ -4,6 +4,8 @@ Enumerates the ability flags, which indicate the type of ability information to 
 
 **Since:** 20
 
+<!--Device-bundleManager-enum AbilityFlag--><!--Device-bundleManager-enum AbilityFlag-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -14,16 +16,13 @@ Enumerates the ability flags, which indicate the type of ability information to 
 GET_ABILITY_INFO_DEFAULT = 0x00000000
 ```
 
-Used to obtain the default [ability information](bundleManager/AbilityInfo), which does not contain
-permissions, metadata, or ability information of disabled abilities. <!--Del-->You can use
-[setAbilityEnabled](arkts-ability-setabilityenabled-f-sys.md#setabilityenabled-2)
-to set the ability enabling status and use
-[isAbilityEnabled](arkts-ability-isabilityenabled-f-sys.md#isabilityenabled-3) to obtain
-the ability enabling status.<!--DelEnd-->
+Used to obtain the default [ability information](bundleManager/AbilityInfo), which does not contain permissions, metadata, or ability information of disabled abilities. <!--Del-->You can use [setAbilityEnabled](arkts-ability-setabilityenabled-f-sys.md#setabilityenabled-2)to set the ability enabling status and use [isAbilityEnabled](arkts-ability-isabilityenabled-f-sys.md#isabilityenabled-3) to obtain the ability enabling status.<!--DelEnd-->
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-AbilityFlag-GET_ABILITY_INFO_DEFAULT = 0x00000000--><!--Device-AbilityFlag-GET_ABILITY_INFO_DEFAULT = 0x00000000-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -41,6 +40,8 @@ Used to obtain the ability information containing permissions.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000001--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000001-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -56,6 +57,8 @@ Used to obtain the ability information containing application information.
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000002--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000002-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -73,6 +76,8 @@ Used to obtain the ability information containing metadata.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000004--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000004-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -88,6 +93,8 @@ Used to obtain the ability information of disabled abilities.
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_DISABLE = 0x00000008--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_DISABLE = 0x00000008-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -105,6 +112,8 @@ Used to obtain the ability information of system applications.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-AbilityFlag-GET_ABILITY_INFO_ONLY_SYSTEM_APP = 0x00000010--><!--Device-AbilityFlag-GET_ABILITY_INFO_ONLY_SYSTEM_APP = 0x00000010-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -115,12 +124,13 @@ Used to obtain the ability information of system applications.
 GET_ABILITY_INFO_WITH_APP_LINKING = 0x00000040
 ```
 
-Used to obtain the ability information that passes <!--RP3-->
-[domain name verification](../../../../application-models/app-linking-startup.md#working-principles)<!--RP3End-->.
+Used to obtain the ability information that passes <!--RP3-->[domain name verification](../../../../application-models/app-linking-startup.md#working-principles)<!--RP3End-->.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_APP_LINKING = 0x00000040--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_APP_LINKING = 0x00000040-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -137,6 +147,8 @@ Used to obtain the ability information containing skills.
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_SKILL = 0x00000080--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_SKILL = 0x00000080-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

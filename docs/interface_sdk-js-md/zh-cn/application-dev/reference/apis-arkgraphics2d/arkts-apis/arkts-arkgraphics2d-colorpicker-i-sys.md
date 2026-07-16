@@ -1,11 +1,18 @@
 # ColorPicker
 
-取色类，用于从一张图像数据中获取它的主要颜色。在调用ColorPicker的方法前，需要先通过
-[createColorPicker](arkts-arkgraphics2d-createcolorpicker-f.md#createcolorpicker-1)创建一个ColorPicker实例。
+取色类，用于从一张图像数据中获取它的主要颜色。在调用ColorPicker的方法前，需要先通过[createColorPicker](arkts-arkgraphics2d-createcolorpicker-f.md#createcolorpicker-1)创建一个ColorPicker实例。
 
 **起始版本：** 9
 
+<!--Device-effectKit-interface ColorPicker--><!--Device-effectKit-interface ColorPicker-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
+
+## 导入模块
+
+```TypeScript
+import { effectKit } from '@kit.ArkGraphics2D';
+```
 
 ## discriminatePictureLightDegree
 
@@ -21,6 +28,8 @@ discriminatePictureLightDegree(): PictureLightDegree
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-ColorPicker-discriminatePictureLightDegree(): PictureLightDegree--><!--Device-ColorPicker-discriminatePictureLightDegree(): PictureLightDegree-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,7 +38,7 @@ discriminatePictureLightDegree(): PictureLightDegree
 
 | 类型 | 说明 |
 | --- | --- |
-| PictureLightDegree | - 图像颜色明亮程度。 |
+| [PictureLightDegree](arkts-arkgraphics2d-picturelightdegree-e-sys.md) | - 图像颜色明亮程度。 |
 
 **示例：**
 
@@ -71,6 +80,8 @@ getAlphaZeroTransparentProportion(): number
 **起始版本：** 23
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ColorPicker-getAlphaZeroTransparentProportion(): double--><!--Device-ColorPicker-getAlphaZeroTransparentProportion(): double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -129,6 +140,8 @@ getComplexityDegree(): PictureComplexityDegree
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-ColorPicker-getComplexityDegree(): PictureComplexityDegree--><!--Device-ColorPicker-getComplexityDegree(): PictureComplexityDegree-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。
@@ -137,7 +150,7 @@ getComplexityDegree(): PictureComplexityDegree
 
 | 类型 | 说明 |
 | --- | --- |
-| PictureComplexityDegree | 图像内容复杂度。 |
+| [PictureComplexityDegree](arkts-arkgraphics2d-picturecomplexitydegree-e-sys.md) | 图像内容复杂度。 |
 
 **错误码：**
 
@@ -188,6 +201,8 @@ getDeepenImmersionColor(): Color
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-ColorPicker-getDeepenImmersionColor(): Color--><!--Device-ColorPicker-getDeepenImmersionColor(): Color-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。
@@ -196,7 +211,7 @@ getDeepenImmersionColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| Color | - Color实例，即图像强沉浸色对应的颜色值，失败时返回null。 |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md) | - Color实例，即图像强沉浸色对应的颜色值，失败时返回null。 |
 
 **示例：**
 
@@ -241,6 +256,8 @@ getImmersiveBackgroundColor(): Color
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-ColorPicker-getImmersiveBackgroundColor(): Color--><!--Device-ColorPicker-getImmersiveBackgroundColor(): Color-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。
@@ -249,7 +266,7 @@ getImmersiveBackgroundColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| Color | - Color实例，即图像沉浸式背景色对应的颜色值，失败时返回null。 |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md) | - Color实例，即图像沉浸式背景色对应的颜色值，失败时返回null。 |
 
 **示例：**
 
@@ -294,6 +311,8 @@ getImmersiveForegroundColor(): Color
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-ColorPicker-getImmersiveForegroundColor(): Color--><!--Device-ColorPicker-getImmersiveForegroundColor(): Color-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。
@@ -302,7 +321,7 @@ getImmersiveForegroundColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| Color | - Color实例，即图像沉浸式前景色对应的颜色值，失败时返回null。 |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md) | - Color实例，即图像沉浸式前景色对应的颜色值，失败时返回null。 |
 
 **示例：**
 
@@ -347,6 +366,8 @@ getMorandiShadowColor(): Color
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-ColorPicker-getMorandiShadowColor(): Color--><!--Device-ColorPicker-getMorandiShadowColor(): Color-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。
@@ -355,7 +376,7 @@ getMorandiShadowColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| Color | - Color实例，即图像莫兰迪阴影色对应的颜色值，失败时返回null。 |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md) | - Color实例，即图像莫兰迪阴影色对应的颜色值，失败时返回null。 |
 
 **示例：**
 
@@ -392,15 +413,15 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getReverseColor(): Color
 ```
 
-基于图像亮度判别结果生成反向颜色，并将结果写入[Color](arkts-arkgraphics2d-color-i.md)里。根据
-[discriminatePictureLightDegree](arkts-arkgraphics2d-colorpicker-i-sys.md#discriminatepicturelightdegree-1)接口获取的图片明亮类型得到一个反色，
-仅极亮色图片（EXTREMELY_LIGHT_COLOR_PICTURE）类型返回黑色，其他类型返回白色。用于界面主题或对比度计算。
+基于图像亮度判别结果生成反向颜色，并将结果写入[Color](arkts-arkgraphics2d-color-i.md)里。根据[discriminatePictureLightDegree](arkts-arkgraphics2d-colorpicker-i-sys.md#discriminatepicturelightdegree-1)接口获取的图片明亮类型得到一个反色，仅极亮色图片（EXTREMELY_LIGHT_COLOR_PICTURE）类型返回黑色，其他类型返回白色。用于界面主题或对比度计算。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ColorPicker-getReverseColor(): Color--><!--Device-ColorPicker-getReverseColor(): Color-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -410,7 +431,7 @@ getReverseColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| Color | - Color实例，即图像反向颜色对应的颜色值，失败时返回null。 |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md) | - Color实例，即图像反向颜色对应的颜色值，失败时返回null。 |
 
 **示例：**
 
@@ -453,6 +474,8 @@ getShadeDegree(): PictureShadeDegree
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-ColorPicker-getShadeDegree(): PictureShadeDegree--><!--Device-ColorPicker-getShadeDegree(): PictureShadeDegree-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。
@@ -461,7 +484,7 @@ getShadeDegree(): PictureShadeDegree
 
 | 类型 | 说明 |
 | --- | --- |
-| PictureShadeDegree | 图像颜色深浅度。 |
+| [PictureShadeDegree](arkts-arkgraphics2d-pictureshadedegree-e-sys.md) | 图像颜色深浅度。 |
 
 **错误码：**
 
@@ -510,6 +533,8 @@ getTopProportionColorsAndPercentage(colorCount: number): Map<Color | null, numbe
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-ColorPicker-getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double | null>--><!--Device-ColorPicker-getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double | null>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。
@@ -524,7 +549,7 @@ getTopProportionColorsAndPercentage(colorCount: number): Map<Color | null, numbe
 
 | 类型 | 说明 |
 | --- | --- |
-| Map&lt;Color \| null, number \| null&gt; | 图像占比前`colorCount`的颜色值与对应比例的字典，比例的取值范围为[0,1]。- 当实际读取的特征色个数小于`colorCount`时，字典大小为实际特征色个数。- 取色失败或取色个数小于1返回`Map()`。 |
+| [Map](../../apis-arkts/arkts-apis/arkts-arkts-map-c.md)<Color \| null, number \| null> | 图像占比前`colorCount`的颜色值与对应比例的字典，比例的取值范围为[0,1]。  - 当实际读取的特征色个数小于`colorCount`时，字典大小为实际特征色个数。  - 取色失败或取色个数小于1返回`Map()`。 |
 
 **错误码：**
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-i18n-export class I18NUtil--><!--Device-i18n-export class I18NUtil-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
 
 ## convertCanonicalLocaleIdentifier
 
@@ -18,7 +26,9 @@ static convertCanonicalLocaleIdentifier(locale: string): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-I18NUtil-static convertCanonicalLocaleIdentifier(locale: string): string--><!--Device-I18NUtil-static convertCanonicalLocaleIdentifier(locale: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -44,7 +54,9 @@ static getBestMatchLocale(locale: string, localeList: string[]): string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-I18NUtil-static getBestMatchLocale(locale: string, localeList: string[]): string--><!--Device-I18NUtil-static getBestMatchLocale(locale: string, localeList: string[]): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -78,7 +90,9 @@ static getDateOrder(locale: string): string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-I18NUtil-static getDateOrder(locale: string): string--><!--Device-I18NUtil-static getDateOrder(locale: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -106,7 +120,9 @@ static getThreeLetterLanguage(locale: string): string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-I18NUtil-static getThreeLetterLanguage(locale: string): string--><!--Device-I18NUtil-static getThreeLetterLanguage(locale: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -141,7 +157,9 @@ static getThreeLetterRegion(locale: string): string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-I18NUtil-static getThreeLetterRegion(locale: string): string--><!--Device-I18NUtil-static getThreeLetterRegion(locale: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -174,7 +192,9 @@ static getTimePeriodName(hour:number, locale?: string): string
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-I18NUtil-static getTimePeriodName(hour:int, locale?: string): string--><!--Device-I18NUtil-static getTimePeriodName(hour:int, locale?: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -210,7 +230,9 @@ static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-I18NUtil-static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl.Locale): string--><!--Device-I18NUtil-static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl.Locale): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -250,7 +272,9 @@ static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: intl
 
 **替代接口：** getUnicodeWrappedFilePath(path:
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-I18NUtil-static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: intl.Locale): string--><!--Device-I18NUtil-static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: intl.Locale): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -282,15 +306,17 @@ static setUnicodeWrappedBidiDirection(text: string, direction: 'RTL' | 'LTR'): s
 
 设置整段文本中部分文本方向，包括RTL、LTR。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 在强字符（指具有明确书写方向的字符）中不生效。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-I18NUtil-static setUnicodeWrappedBidiDirection(text: string, direction: 'RTL' | 'LTR'): string--><!--Device-I18NUtil-static setUnicodeWrappedBidiDirection(text: string, direction: 'RTL' | 'LTR'): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -317,7 +343,9 @@ static unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: number, locale: 
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-I18NUtil-static unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string--><!--Device-I18NUtil-static unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -325,8 +353,8 @@ static unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: number, locale: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fromUnit | UnitInfo | 是 | 需要转换的单位。 |
-| toUnit | UnitInfo | 是 | 转换成的目标单位。 |
+| fromUnit | [UnitInfo](arkts-localization-unitinfo-i.md) | 是 | 需要转换的单位。 |
+| toUnit | [UnitInfo](arkts-localization-unitinfo-i.md) | 是 | 转换成的目标单位。 |
 | value | number | 是 | 需要转换的单位的数量值。 |
 | locale | string | 是 | [表示区域ID的字符串](../../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组成，如：zh-Hans-CN。 |
 | style | string | 否 | 格式化使用的风格，取值包括：'long', 'short', 'narrow'。默认值：short。<br>不同取值显示效果请参考[数字与度量衡国际化](../../../../internationalization/i18n-numbers-weights-measures.md)。 |

@@ -1,5 +1,11 @@
 # debug
 
+## 导入模块
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+```
+
 ## debug
 
 ```TypeScript
@@ -12,7 +18,9 @@ DEBUG级别的日志在正式发布版本中默认不被打印，只有在调试
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-hilog-function debug(domain: number, tag: string, format: string, ...args: any[]): void--><!--Device-hilog-function debug(domain: number, tag: string, format: string, ...args: any[]): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiLog
 

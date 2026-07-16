@@ -4,7 +4,15 @@
 
 **起始版本：** 10
 
+<!--Device-i18n-export class Normalizer--><!--Device-i18n-export class Normalizer-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
 
 ## getInstance
 
@@ -16,7 +24,9 @@ static getInstance(mode: NormalizerMode): Normalizer
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Normalizer-static getInstance(mode: NormalizerMode): Normalizer--><!--Device-Normalizer-static getInstance(mode: NormalizerMode): Normalizer-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -24,13 +34,13 @@ static getInstance(mode: NormalizerMode): Normalizer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | NormalizerMode | 是 | 文本标准化范式。 |
+| mode | [NormalizerMode](arkts-localization-normalizermode-e.md) | 是 | 文本标准化范式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Normalizer | 返回指定范式的文本标准化对象。 |
+| [Normalizer](arkts-localization-normalizer-c.md) | 返回指定范式的文本标准化对象。 |
 
 **错误码：**
 
@@ -63,7 +73,9 @@ normalize(text: string): string
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Normalizer-normalize(text: string): string--><!--Device-Normalizer-normalize(text: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

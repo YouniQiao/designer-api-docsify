@@ -4,6 +4,8 @@ HTTP server authentication.
 
 **Since:** 18
 
+<!--Device-http-export interface ServerAuthentication--><!--Device-http-export interface ServerAuthentication-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Authentication type of server. If not set, negotiate with the server.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ServerAuthentication-authenticationType?: AuthenticationType--><!--Device-ServerAuthentication-authenticationType?: AuthenticationType-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## credential
@@ -41,6 +45,8 @@ Credential of server.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ServerAuthentication-credential: Credential--><!--Device-ServerAuthentication-credential: Credential-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

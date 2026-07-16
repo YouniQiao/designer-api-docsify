@@ -4,6 +4,8 @@ Describes the position and affinity of a glyph.
 
 **Since:** 12
 
+<!--Device-text-interface PositionWithAffinity--><!--Device-text-interface PositionWithAffinity-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Affinity of the position.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-PositionWithAffinity-affinity: Affinity--><!--Device-PositionWithAffinity-affinity: Affinity-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## position
@@ -41,6 +45,8 @@ Index of the glyph relative to the paragraph. The value is an integer.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-PositionWithAffinity-position: int--><!--Device-PositionWithAffinity-position: int-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

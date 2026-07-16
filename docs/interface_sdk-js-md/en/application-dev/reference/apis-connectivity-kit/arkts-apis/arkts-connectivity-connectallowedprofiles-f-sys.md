@@ -22,6 +22,8 @@ Connects all allowed bluetooth profiles between the local and remote device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function connectAllowedProfiles(deviceId: string, callback: AsyncCallback<void>): void--><!--Device-connection-function connectAllowedProfiles(deviceId: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -31,7 +33,7 @@ Connects all allowed bluetooth profiles between the local and remote device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback result. |
 
 **Error codes:**
 
@@ -80,6 +82,8 @@ Connects all allowed bluetooth profiles between the local and remote device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function connectAllowedProfiles(deviceId: string): Promise<void>--><!--Device-connection-function connectAllowedProfiles(deviceId: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -94,7 +98,7 @@ Connects all allowed bluetooth profiles between the local and remote device.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 

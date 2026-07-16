@@ -14,13 +14,15 @@ Cancels the suspension delay.
 
 **Substitutes:** [cancelSuspendDelay](arkts-backgroundtasks-cancelsuspenddelay-f.md#cancelsuspenddelay-1)
 
+<!--Device-backgroundTaskManager-function cancelSuspendDelay(requestId: number): void--><!--Device-backgroundTaskManager-function cancelSuspendDelay(requestId: number): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestId | number | Yes | ID of the suspension delay request. The value is obtained by calling[requestSuspendDelay](arkts-backgroundtasks-requestsuspenddelay-depr-f.md#requestsuspenddelay-1). |
+| requestId | number | Yes | ID of the suspension delay request. The value is obtained by calling [requestSuspendDelay](arkts-backgroundtasks-requestsuspenddelay-depr-f.md#requestsuspenddelay-1). |
 
 **Example**
 

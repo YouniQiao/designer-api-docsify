@@ -4,6 +4,8 @@ Describes the paragraph style.
 
 **Since:** 11
 
+<!--Device-unnamed-declare interface RichEditorParagraphStyle--><!--Device-unnamed-declare interface RichEditorParagraphStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## leadingMargin
@@ -12,8 +14,7 @@ Describes the paragraph style.
 leadingMargin?: Dimension | LeadingMarginPlaceholder
 ```
 
-Indent of the paragraph. It has no effect if the paragraph starts with an image or builder span. If of the
-**Dimension** type, this parameter cannot be set in percentage. Default value: **{"size":["0.00px","0.00px"]}**
+Indent of the paragraph. It has no effect if the paragraph starts with an image or builder span. If of the **Dimension** type, this parameter cannot be set in percentage. Default value: **{"size":["0.00px","0.00px"]}**
 
 **Type:** Dimension | LeadingMarginPlaceholder
 
@@ -22,6 +23,8 @@ Indent of the paragraph. It has no effect if the paragraph starts with an image 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RichEditorParagraphStyle-leadingMargin?: Dimension | LeadingMarginPlaceholder--><!--Device-RichEditorParagraphStyle-leadingMargin?: Dimension | LeadingMarginPlaceholder-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,6 +48,8 @@ This parameter takes effect when **wordBreak** is not set to **breakAll**. Hyphe
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RichEditorParagraphStyle-lineBreakStrategy?: LineBreakStrategy--><!--Device-RichEditorParagraphStyle-lineBreakStrategy?: LineBreakStrategy-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## paragraphSpacing
@@ -67,6 +72,8 @@ Default value: **0**
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-RichEditorParagraphStyle-paragraphSpacing?: number--><!--Device-RichEditorParagraphStyle-paragraphSpacing?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## shaderStyle
@@ -84,6 +91,8 @@ Set shader style.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-RichEditorParagraphStyle-shaderStyle?: ShaderStyle--><!--Device-RichEditorParagraphStyle-shaderStyle?: ShaderStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -105,6 +114,8 @@ Default value: **TextAlign.START**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RichEditorParagraphStyle-textAlign?: TextAlign--><!--Device-RichEditorParagraphStyle-textAlign?: TextAlign-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## textDirection
@@ -124,6 +135,8 @@ Default value: TextDirection.DEFAULT
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-RichEditorParagraphStyle-textDirection?: TextDirection--><!--Device-RichEditorParagraphStyle-textDirection?: TextDirection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -145,6 +158,8 @@ Default value: **TextVerticalAlign.BASELINE**.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-RichEditorParagraphStyle-textVerticalAlign?: TextVerticalAlign--><!--Device-RichEditorParagraphStyle-textVerticalAlign?: TextVerticalAlign-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## wordBreak
@@ -164,6 +179,8 @@ Default value: **WordBreak.BREAK_WORD**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RichEditorParagraphStyle-wordBreak?: WordBreak--><!--Device-RichEditorParagraphStyle-wordBreak?: WordBreak-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

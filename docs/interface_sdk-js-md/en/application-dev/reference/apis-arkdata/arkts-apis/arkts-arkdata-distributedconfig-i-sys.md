@@ -4,6 +4,8 @@ Defines a struct for distributed configuration of a table.
 
 **Since:** 10
 
+<!--Device-relationalStore-interface DistributedConfig--><!--Device-relationalStore-interface DistributedConfig-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## Modules to Import
@@ -23,6 +25,8 @@ Specifies the reference relationships between tables.
 **Type:** Array<Reference>
 
 **Since:** 11
+
+<!--Device-DistributedConfig-references?: Array<Reference>--><!--Device-DistributedConfig-references?: Array<Reference>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 

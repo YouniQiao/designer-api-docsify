@@ -4,6 +4,8 @@ Defines a four-finger swipe gesture event.
 
 **Since:** 10
 
+<!--Device-unnamed-export declare interface FourFingersSwipe--><!--Device-unnamed-export declare interface FourFingersSwipe-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Gesture event type, for example, gesture start, gesture update, or gesture end.
 
 **Since:** 10
 
+<!--Device-FourFingersSwipe-type: ActionType--><!--Device-FourFingersSwipe-type: ActionType-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## x
@@ -38,6 +42,8 @@ X coordinate, in px.
 
 **Since:** 10
 
+<!--Device-FourFingersSwipe-x: int--><!--Device-FourFingersSwipe-x: int-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## y
@@ -51,6 +57,8 @@ Y coordinate, in px.
 **Type:** number
 
 **Since:** 10
+
+<!--Device-FourFingersSwipe-y: int--><!--Device-FourFingersSwipe-y: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 

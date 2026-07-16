@@ -16,6 +16,8 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string, callback: 
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function removeGroupByBundle(bundle: BundleOption, groupName: string, callback: AsyncCallback<void>): void--><!--Device-notification-function removeGroupByBundle(bundle: BundleOption, groupName: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -24,9 +26,9 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string, callback: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 应用的包信息。 |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 应用的包信息。 |
 | groupName | string | 是 | 通知组名称。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 删除指定应用指定组下通知的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 删除指定应用指定组下通知的回调函数。 |
 
 
 ## removeGroupByBundle
@@ -45,6 +47,8 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string): Promise<v
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function removeGroupByBundle(bundle: BundleOption, groupName: string): Promise<void>--><!--Device-notification-function removeGroupByBundle(bundle: BundleOption, groupName: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -53,12 +57,12 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string): Promise<v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 应用的包信息。 |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 应用的包信息。 |
 | groupName | string | 是 | 通知组名称。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 

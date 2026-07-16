@@ -4,7 +4,15 @@
 
 **起始版本：** 6
 
+<!--Device-unnamed-export interface ErrorCallback<T extends Error = BusinessError>--><!--Device-unnamed-export interface ErrorCallback<T extends Error = BusinessError>-End-->
+
 **系统能力：** SystemCapability.Base
+
+## 导入模块
+
+```TypeScript
+import { Callback, BusinessError, ErrorCallback, AsyncCallback } from '@kit.BasicServicesKit';
+```
 
 ## constructor
 
@@ -14,7 +22,9 @@
 
 **起始版本：** 6
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ErrorCallback-(err: T): void--><!--Device-ErrorCallback-(err: T): void-End-->
 
 **系统能力：** SystemCapability.Base
 

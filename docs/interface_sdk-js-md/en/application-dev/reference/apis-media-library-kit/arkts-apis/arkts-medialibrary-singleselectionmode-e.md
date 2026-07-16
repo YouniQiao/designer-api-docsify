@@ -4,6 +4,8 @@ Enumeration type of single selection mode
 
 **Since:** 18
 
+<!--Device-photoAccessHelper-export enum SingleSelectionMode--><!--Device-photoAccessHelper-export enum SingleSelectionMode-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## BROWSER_MODE
@@ -17,6 +19,8 @@ Mode for previewing large images.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SingleSelectionMode-BROWSER_MODE = 0--><!--Device-SingleSelectionMode-BROWSER_MODE = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -32,6 +36,8 @@ Mode for direct selection.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SingleSelectionMode-SELECT_MODE = 1--><!--Device-SingleSelectionMode-SELECT_MODE = 1-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## BROWSER_AND_SELECT_MODE
@@ -40,12 +46,13 @@ Mode for direct selection.
 BROWSER_AND_SELECT_MODE = 2
 ```
 
-Compatibility mode. Tapping the bottom-right area enables direct selection, whereas tapping elsewhere switches to
-large image preview mode.
+Compatibility mode. Tapping the bottom-right area enables direct selection, whereas tapping elsewhere switches to large image preview mode.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SingleSelectionMode-BROWSER_AND_SELECT_MODE = 2--><!--Device-SingleSelectionMode-BROWSER_AND_SELECT_MODE = 2-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -4,9 +4,17 @@
 
 **起始版本：** 9
 
+<!--Device-privacyManager-interface UsedRecordDetail--><!--Device-privacyManager-interface UsedRecordDetail-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+```
 
 ## accessDuration
 
@@ -14,12 +22,13 @@
 accessDuration: number
 ```
 
-访问时长。
-单位为：毫秒。
+访问时长。单位为：毫秒。
 
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-UsedRecordDetail-accessDuration: long--><!--Device-UsedRecordDetail-accessDuration: long-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -39,6 +48,8 @@ count?: number
 
 **起始版本：** 11
 
+<!--Device-UsedRecordDetail-count?: int--><!--Device-UsedRecordDetail-count?: int-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -51,7 +62,7 @@ lockScreenStatus?: number
 
 访问时的锁屏状态。
 
-- 1，表示非锁屏场景使用权限。
+- 1，表示非锁屏场景使用权限。  
 - 2，表示锁屏场景使用权限。
 
 默认值：1。
@@ -59,6 +70,8 @@ lockScreenStatus?: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-UsedRecordDetail-lockScreenStatus?: int--><!--Device-UsedRecordDetail-lockScreenStatus?: int-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -76,6 +89,8 @@ status: number
 
 **起始版本：** 9
 
+<!--Device-UsedRecordDetail-status: int--><!--Device-UsedRecordDetail-status: int-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -86,12 +101,13 @@ status: number
 timestamp: number
 ```
 
-访问时的时间戳。
-单位为：毫秒。
+访问时的时间戳。单位为：毫秒。
 
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-UsedRecordDetail-timestamp: long--><!--Device-UsedRecordDetail-timestamp: long-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -110,6 +126,8 @@ usedType?: PermissionUsedType
 **类型：** PermissionUsedType
 
 **起始版本：** 12
+
+<!--Device-UsedRecordDetail-usedType?: PermissionUsedType--><!--Device-UsedRecordDetail-usedType?: PermissionUsedType-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

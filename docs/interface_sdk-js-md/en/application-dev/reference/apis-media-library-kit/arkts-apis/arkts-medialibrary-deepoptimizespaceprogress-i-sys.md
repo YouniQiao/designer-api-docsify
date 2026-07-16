@@ -4,6 +4,8 @@ Defines the DeepOptimizeSpaceProgress data structure.
 
 **Since:** 26.0.0
 
+<!--Device-photoAccessHelper-interface DeepOptimizeSpaceProgress--><!--Device-photoAccessHelper-interface DeepOptimizeSpaceProgress-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -20,14 +22,15 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 progress: number
 ```
 
-The percentage of deep optimize space state.
-Unit: Percentage, The value range is all integers, Value range: [0, 100].
+The percentage of deep optimize space state.Unit: Percentage, The value range is all integers, Value range: [0, 100].
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DeepOptimizeSpaceProgress-progress: int--><!--Device-DeepOptimizeSpaceProgress-progress: int-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -46,6 +49,8 @@ The current deep optimize space state.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DeepOptimizeSpaceProgress-state: DeepOptimizeState--><!--Device-DeepOptimizeSpaceProgress-state: DeepOptimizeState-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -4,6 +4,8 @@ Defines the details for triggering a geofence.
 
 **Since:** 23
 
+<!--Device-unnamed-export interface Trigger--><!--Device-unnamed-export interface Trigger-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -19,6 +21,8 @@ Details about a geofence.
 **Type:** Geofence
 
 **Since:** 23
+
+<!--Device-Trigger-condition:Geofence--><!--Device-Trigger-condition:Geofence-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -36,6 +40,8 @@ Display time of a live view, in seconds. The value ranges from 15 to 1800. The d
 
 **Since:** 23
 
+<!--Device-Trigger-displayTime?:int--><!--Device-Trigger-displayTime?:int-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -51,6 +57,8 @@ Trigger type.
 **Type:** TriggerType
 
 **Since:** 23
+
+<!--Device-Trigger-type:TriggerType--><!--Device-Trigger-type:TriggerType-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

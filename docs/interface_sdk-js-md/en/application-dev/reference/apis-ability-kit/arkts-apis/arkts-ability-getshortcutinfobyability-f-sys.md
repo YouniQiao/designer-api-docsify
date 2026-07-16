@@ -12,17 +12,15 @@ import { shortcutManager } from '@kit.AbilityKit';
 function getShortcutInfoByAbility(bundleName: string, moduleName: string, abilityName: string, userId?: number, appIndex?: number): Array<ShortcutInfo>
 ```
 
-Obtains shortcut info by bundleName, moduleName, abilityName, userId and appIndex.
-If you need to obtains shortcut info under the current user, ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
-needs to be applied for.
-If you need to obtains shortcut info under other users, ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and
-ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS need to be applied for.
+Obtains shortcut info by bundleName, moduleName, abilityName, userId and appIndex.If you need to obtains shortcut info under the current user, ohos.permission.GET_BUNDLE_INFO_PRIVILEGED needs to be applied for.If you need to obtains shortcut info under other users, ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS need to be applied for.
 
 **Since:** 24
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or (ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-shortcutManager-function getShortcutInfoByAbility(bundleName: string, moduleName: string, abilityName: string, userId?: int, appIndex?: int): Array<ShortcutInfo>--><!--Device-shortcutManager-function getShortcutInfoByAbility(bundleName: string, moduleName: string, abilityName: string, userId?: int, appIndex?: int): Array<ShortcutInfo>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -42,7 +40,7 @@ ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS need to be applied for.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ShortcutInfo&gt; | An array of ShortcutInfo objects. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ShortcutInfo> | An array of ShortcutInfo objects. |
 
 **Error codes:**
 

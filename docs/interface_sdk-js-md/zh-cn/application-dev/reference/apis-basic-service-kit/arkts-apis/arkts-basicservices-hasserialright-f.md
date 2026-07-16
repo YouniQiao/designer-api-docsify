@@ -1,5 +1,11 @@
 # hasSerialRight
 
+## 导入模块
+
+```TypeScript
+import { serialManager } from '@kit.BasicServicesKit';
+```
+
 ## hasSerialRight
 
 ```TypeScript
@@ -9,6 +15,8 @@ function hasSerialRight(portId: number): boolean
 检查应用程序是否具有访问串口设备的权限。应用退出后再拉起时，需要重新申请授权。
 
 **起始版本：** 19
+
+<!--Device-serialManager-function hasSerialRight(portId: int): boolean--><!--Device-serialManager-function hasSerialRight(portId: int): boolean-End-->
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 

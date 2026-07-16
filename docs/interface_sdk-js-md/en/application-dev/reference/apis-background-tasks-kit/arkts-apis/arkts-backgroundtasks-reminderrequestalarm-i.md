@@ -8,6 +8,8 @@ Defines a reminder for an alarm.
 
 **Since:** 9
 
+<!--Device-reminderAgentManager-interface ReminderRequestAlarm extends ReminderRequest--><!--Device-reminderAgentManager-interface ReminderRequestAlarm extends ReminderRequest-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## Modules to Import
@@ -22,12 +24,13 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 daysOfWeek?: Array<number>
 ```
 
-Days of a week when the reminder repeats. The value ranges from 1 to 7, corresponding to the data from Monday to
-Sunday. This parameter is left empty by default.
+Days of a week when the reminder repeats. The value ranges from 1 to 7, corresponding to the data from Monday to Sunday. This parameter is left empty by default.
 
 **Type:** Array<number>
 
 **Since:** 9
+
+<!--Device-ReminderRequestAlarm-daysOfWeek?: Array<int>--><!--Device-ReminderRequestAlarm-daysOfWeek?: Array<int>-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -43,6 +46,8 @@ Hour portion of the reminder time. The value range is [0, 23].
 
 **Since:** 9
 
+<!--Device-ReminderRequestAlarm-hour: int--><!--Device-ReminderRequestAlarm-hour: int-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## minute
@@ -56,6 +61,8 @@ Minute portion of the reminder time. The value range is [0, 59].
 **Type:** number
 
 **Since:** 9
+
+<!--Device-ReminderRequestAlarm-minute: int--><!--Device-ReminderRequestAlarm-minute: int-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 

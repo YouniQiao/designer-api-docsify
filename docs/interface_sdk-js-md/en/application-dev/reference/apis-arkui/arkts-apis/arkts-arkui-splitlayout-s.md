@@ -4,6 +4,8 @@ Declare SplitLayout.The SplitLayout is used for upper and lower graphic layouts.
 
 **Since:** 22
 
+<!--Device-unnamed-export declare struct SplitLayout--><!--Device-unnamed-export declare struct SplitLayout-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Container in the user-defined splitlayout display area.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-SplitLayout-@BuilderParam container: () => void--><!--Device-SplitLayout-@BuilderParam container: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## mainImage
@@ -49,6 +53,8 @@ Image in the layout.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-SplitLayout-@State mainImage: ResourceStr--><!--Device-SplitLayout-@State mainImage: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,6 +76,8 @@ Title text in the layout.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-SplitLayout-@Prop primaryText: ResourceStr--><!--Device-SplitLayout-@Prop primaryText: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## secondaryText
@@ -90,6 +98,8 @@ Description text in the layout.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-SplitLayout-@Prop secondaryText?: ResourceStr--><!--Device-SplitLayout-@Prop secondaryText?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## tertiaryText
@@ -109,6 +119,8 @@ Auxiliary text in the layout.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-SplitLayout-@Prop tertiaryText?: ResourceStr--><!--Device-SplitLayout-@Prop tertiaryText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

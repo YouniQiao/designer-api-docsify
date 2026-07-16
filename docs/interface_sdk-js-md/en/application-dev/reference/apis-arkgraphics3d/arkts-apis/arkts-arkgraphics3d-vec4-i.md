@@ -4,6 +4,8 @@ Defines Vec4.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface Vec4--><!--Device-unnamed-export interface Vec4-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## w
@@ -17,6 +19,8 @@ W component of the vec4.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-Vec4-w: double--><!--Device-Vec4-w: double-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -32,6 +36,8 @@ X component of the vec4.
 
 **Since:** 12
 
+<!--Device-Vec4-x: double--><!--Device-Vec4-x: double-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## y
@@ -46,6 +52,8 @@ Y component of the vec4.
 
 **Since:** 12
 
+<!--Device-Vec4-y: double--><!--Device-Vec4-y: double-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## z
@@ -59,6 +67,8 @@ Z component of the vec4.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-Vec4-z: double--><!--Device-Vec4-z: double-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

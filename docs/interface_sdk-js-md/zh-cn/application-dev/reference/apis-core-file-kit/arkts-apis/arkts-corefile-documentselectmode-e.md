@@ -4,6 +4,8 @@ Enumerates the types of documents selected.
 
 **起始版本：** 11
 
+<!--Device-picker-export enum DocumentSelectMode--><!--Device-picker-export enum DocumentSelectMode-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService.FolderSelection
 
 ## FILE
@@ -16,7 +18,9 @@ FILE = 0
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DocumentSelectMode-FILE = 0--><!--Device-DocumentSelectMode-FILE = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService.FolderSelection
 
@@ -30,7 +34,9 @@ FOLDER = 1
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DocumentSelectMode-FOLDER = 1--><!--Device-DocumentSelectMode-FOLDER = 1-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService.FolderSelection
 
@@ -44,7 +50,9 @@ MIXED = 2
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DocumentSelectMode-MIXED = 2--><!--Device-DocumentSelectMode-MIXED = 2-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService.FolderSelection
 

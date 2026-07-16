@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+<!--Device-unnamed-enum LoadingRequestError--><!--Device-unnamed-enum LoadingRequestError-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## LOADING_ERROR_SUCCESS
@@ -16,7 +18,9 @@ LOADING_ERROR_SUCCESS = 0
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LoadingRequestError-LOADING_ERROR_SUCCESS = 0--><!--Device-LoadingRequestError-LOADING_ERROR_SUCCESS = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -30,7 +34,9 @@ LOADING_ERROR_NOT_READY = 1
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LoadingRequestError-LOADING_ERROR_NOT_READY = 1--><!--Device-LoadingRequestError-LOADING_ERROR_NOT_READY = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -44,7 +50,9 @@ LOADING_ERROR_NO_RESOURCE = 2
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LoadingRequestError-LOADING_ERROR_NO_RESOURCE = 2--><!--Device-LoadingRequestError-LOADING_ERROR_NO_RESOURCE = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -58,7 +66,9 @@ LOADING_ERROR_INVAID_HANDLE = 3
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LoadingRequestError-LOADING_ERROR_INVAID_HANDLE = 3--><!--Device-LoadingRequestError-LOADING_ERROR_INVAID_HANDLE = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -72,7 +82,9 @@ LOADING_ERROR_ACCESS_DENIED = 4
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LoadingRequestError-LOADING_ERROR_ACCESS_DENIED = 4--><!--Device-LoadingRequestError-LOADING_ERROR_ACCESS_DENIED = 4-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -86,7 +98,9 @@ LOADING_ERROR_ACCESS_TIMEOUT = 5
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LoadingRequestError-LOADING_ERROR_ACCESS_TIMEOUT = 5--><!--Device-LoadingRequestError-LOADING_ERROR_ACCESS_TIMEOUT = 5-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -100,7 +114,9 @@ LOADING_ERROR_AUTHORIZE_FAILED = 6
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LoadingRequestError-LOADING_ERROR_AUTHORIZE_FAILED = 6--><!--Device-LoadingRequestError-LOADING_ERROR_AUTHORIZE_FAILED = 6-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 

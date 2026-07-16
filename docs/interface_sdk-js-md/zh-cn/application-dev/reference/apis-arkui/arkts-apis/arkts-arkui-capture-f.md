@@ -1,5 +1,11 @@
 # capture
 
+## 导入模块
+
+```TypeScript
+import { screenshot } from '@kit.ArkUI';
+```
+
 ## capture
 
 ```TypeScript
@@ -16,7 +22,9 @@ function capture(options?: CaptureOption): Promise<image.PixelMap>
 - API版本22+：ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CUSTOM_SCREEN_RECORDING
 - API版本14 - 21：ohos.permission.CUSTOM_SCREEN_CAPTURE
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-screenshot-function capture(options?: CaptureOption): Promise<image.PixelMap>--><!--Device-screenshot-function capture(options?: CaptureOption): Promise<image.PixelMap>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -24,13 +32,13 @@ function capture(options?: CaptureOption): Promise<image.PixelMap>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | CaptureOption | 否 | 截取图像的相关信息。此参数不填时，默认截取displayId为0的屏幕截图。<br>**起始版本：** 22 |
+| options | [CaptureOption](arkts-arkui-captureoption-i.md) | 否 | 截取图像的相关信息。此参数不填时，默认截取displayId为0的屏幕截图。<br>**起始版本：** 22 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return a PixelMap object. |
+| Promise<image.PixelMap> | Promise used to return a PixelMap object. |
 
 **错误码：**
 

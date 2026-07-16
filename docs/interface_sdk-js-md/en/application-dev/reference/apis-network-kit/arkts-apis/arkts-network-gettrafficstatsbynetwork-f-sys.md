@@ -18,6 +18,8 @@ Get the traffic usage details of the specified network of all applications in th
 
 **Required permissions:** ohos.permission.GET_NETWORK_STATS
 
+<!--Device-statistics-function getTrafficStatsByNetwork(networkInfo: NetworkInfo): Promise<UidNetStatsInfo>--><!--Device-statistics-function getTrafficStatsByNetwork(networkInfo: NetworkInfo): Promise<UidNetStatsInfo>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Get the traffic usage details of the specified network of all applications in th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| networkInfo | NetworkInfo | Yes | Information about the network to be queried. |
+| networkInfo | [NetworkInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-networkinfo-i.md) | Yes | Information about the network to be queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;UidNetStatsInfo&gt; | The statistics of the sim card. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<UidNetStatsInfo> | The statistics of the sim card. |
 
 **Error codes:**
 

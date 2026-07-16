@@ -16,19 +16,21 @@ Converts the asset data that can be passed across threads into the data that can
 
 **Since:** 12
 
+<!--Device-sendableRelationalStore-function fromSendableAsset(asset: Asset): NonSendableAsset--><!--Device-sendableRelationalStore-function fromSendableAsset(asset: Asset): NonSendableAsset-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| asset | Asset | Yes | Asset data that can be passed across threads. |
+| asset | [Asset](arkts-arkdata-asset-i.md) | Yes | Asset data that can be passed across threads. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| NonSendableAsset | Asset data that cannot be passed across threads. |
+| [NonSendableAsset](arkts-arkdata-nonsendableasset-t.md) | Asset data that cannot be passed across threads. |
 
 **Error codes:**
 

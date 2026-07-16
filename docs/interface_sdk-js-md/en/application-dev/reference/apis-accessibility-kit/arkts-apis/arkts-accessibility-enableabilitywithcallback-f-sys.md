@@ -16,14 +16,23 @@ function enableAbilityWithCallback(
   ): Promise<void>
 ```
 
-Enables the auxiliary extension ability and specifies [ConnectCallback](arkts-accessibility-connectcallback-i-sys.md) to be invoked when
-the state of an auxiliary extension ability changes. This API uses a promise to return the result.
+Enables the auxiliary extension ability and specifies [ConnectCallback](arkts-accessibility-connectcallback-i-sys.md) to be invoked when the state of an auxiliary extension ability changes. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-config-function enableAbilityWithCallback(
+    name: string,
+    capability: Array<accessibility.Capability>,
+    connectCallback: ConnectCallback
+  ): Promise<void>--><!--Device-config-function enableAbilityWithCallback(
+    name: string,
+    capability: Array<accessibility.Capability>,
+    connectCallback: ConnectCallback
+  ): Promise<void>-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -34,14 +43,14 @@ the state of an auxiliary extension ability changes. This API uses a promise to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the accessibility extension ability, in the format of 'bundleName/abilityName'. |
-| capability | Array&lt;accessibility.Capability&gt; | Yes | Capabilities of the auxiliary extension ability. |
-| connectCallback | ConnectCallback | Yes | Callback to be invoked when the state of an auxiliary extensionability changes. |
+| capability | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<accessibility.Capability> | Yes | Capabilities of the auxiliary extension ability. |
+| connectCallback | [ConnectCallback](arkts-accessibility-connectcallback-i-sys.md) | Yes | Callback to be invoked when the state of an auxiliary extension ability changes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

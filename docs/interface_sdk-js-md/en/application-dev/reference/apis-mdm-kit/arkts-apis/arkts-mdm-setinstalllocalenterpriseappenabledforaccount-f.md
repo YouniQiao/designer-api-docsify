@@ -12,18 +12,14 @@ import { systemManager } from '@kit.MDMKit';
 function setInstallLocalEnterpriseAppEnabledForAccount(admin: Want, isEnable: boolean, accountId: number): void
 ```
 
-Sets whether local installation of enterprise applications is supported for a specified user. After the policy of
-supporting local enterprise application installation is delivered to a PC/2-in-1 enterprise device that has the
-local installation capability, the user can double-click an enterprise application installation package on the
-desktop or in the Files application to install it.
+Sets whether local installation of enterprise applications is supported for a specified user. After the policy of supporting local enterprise application installation is delivered to a PC/2-in-1 enterprise device that has the local installation capability, the user can double-click an enterprise application installation package on the desktop or in the Files application to install it.
 
-Only enterprise applications signed with the **enterprise_normal** or **enterprise_mdm** signature type are
-supported.
+Only enterprise applications signed with the **enterprise_normal** or **enterprise_mdm** signature type are supported.
 
-> **NOTE**
->
-> A PC/2-in-1 enterprise device supports local installation of enterprise applications for the current user if any
-> of the following conditions is met:
+> **NOTE**  
+>  
+> A PC/2-in-1 enterprise device supports local installation of enterprise applications for the current user if any  
+> of the following conditions is met:  
 >
 
 <!--RP7--><!--RP7End-->
@@ -34,15 +30,17 @@ supported.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-systemManager-function setInstallLocalEnterpriseAppEnabledForAccount(admin: Want, isEnable: boolean, accountId: number): void--><!--Device-systemManager-function setInstallLocalEnterpriseAppEnabledForAccount(admin: Want, isEnable: boolean, accountId: number): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| isEnable | boolean | Yes | Whether local installation of enterprise applications is supported. The value**true** indicates that the local installation of enterprise applications is supported, and the value **false**indicates the opposite. |
-| accountId | number | Yes | Account ID.<br>The value must be an integer greater than or equal to 0.<br>You can call APIs such as[getOsAccountLocalId](@ohos.account.osAccount:osAccount.AccountManager.getOsAccountLocalId(callback:AsyncCallback&lt;int&gt;))to obtain the account ID. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| isEnable | boolean | Yes | Whether local installation of enterprise applications is supported. The value **true** indicates that the local installation of enterprise applications is supported, and the value **false** indicates the opposite. |
+| accountId | number | Yes | Account ID.<br>The value must be an integer greater than or equal to 0.<br>You can call APIs such as [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)to obtain the account ID. |
 
 **Error codes:**
 

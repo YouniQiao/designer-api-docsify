@@ -18,6 +18,8 @@ Sets the address for the Short Message Service Center (SMSC) based on a specifie
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sms-function setSmscAddr(slotId: int, smscAddr: string, callback: AsyncCallback<void>): void--><!--Device-sms-function setSmscAddr(slotId: int, smscAddr: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Sets the address for the Short Message Service Center (SMSC) based on a specifie
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the ID of the slot holding the SIM card for sending SMS messages. |
 | smscAddr | string | Yes | Indicates the SMSC address. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of setSmscAddr. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of setSmscAddr. |
 
 **Error codes:**
 
@@ -69,6 +71,8 @@ Sets the address for the Short Message Service Center (SMSC) based on a specifie
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sms-function setSmscAddr(slotId: int, smscAddr: string): Promise<void>--><!--Device-sms-function setSmscAddr(slotId: int, smscAddr: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -84,7 +88,7 @@ Sets the address for the Short Message Service Center (SMSC) based on a specifie
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setSmscAddr. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the setSmscAddr. |
 
 **Error codes:**
 

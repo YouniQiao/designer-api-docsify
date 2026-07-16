@@ -20,6 +20,8 @@ Aborts a key operation. This API uses an asynchronous callback to return the res
 
 **Substitutes:** abortSession(handle:
 
+<!--Device-huks-function abort(handle: number, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function abort(handle: number, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **Parameters:**
@@ -27,8 +29,8 @@ Aborts a key operation. This API uses an asynchronous callback to return the res
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | handle | number | Yes | Handle of the **abort** operation, which is of the uint64 type. |
-| options | HuksOptions | Yes | Parameter set used for the **abort** operation. |
-| callback | AsyncCallback&lt;HuksResult&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Parameter set used for the **abort** operation. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<HuksResult> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -137,6 +139,8 @@ Aborts a key operation. This API uses a promise to return the result.
 
 **Substitutes:** abortSession(handle:
 
+<!--Device-huks-function abort(handle: number, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function abort(handle: number, options: HuksOptions): Promise<HuksResult>-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **Parameters:**
@@ -144,13 +148,13 @@ Aborts a key operation. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | handle | number | Yes | Handle of the **abort** operation, which is of the uint64 type. |
-| options | HuksOptions | Yes | Parameter set used for the **abort** operation. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Parameter set used for the **abort** operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksResult&gt; | Promise that returns **HuksResult**. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HuksResult> | Promise that returns **HuksResult**. |
 
 **Example**
 

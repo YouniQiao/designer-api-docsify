@@ -8,6 +8,8 @@ Implements event listening.
 
 **Substitutes:** WorkerEventListener
 
+<!--Device-unnamed-export interface EventListener--><!--Device-unnamed-export interface EventListener-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -30,13 +32,15 @@ Specifies the callback to invoke.
 
 **Substitutes:** (event:
 
+<!--Device-EventListener-(evt: Event): void | Promise<void>--><!--Device-EventListener-(evt: Event): void | Promise<void>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| evt | Event | Yes | evt evt Event class for the callback to invoke. |
+| evt | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-event-c.md) | Yes | evt evt Event class for the callback to invoke. |
 
 **Example**
 

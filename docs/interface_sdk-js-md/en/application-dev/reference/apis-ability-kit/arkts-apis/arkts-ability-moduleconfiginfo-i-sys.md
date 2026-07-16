@@ -4,6 +4,8 @@ ModuleConfigInfo: the module summary of a bundle.
 
 **Since:** 9
 
+<!--Device-unnamed-export interface ModuleConfigInfo--><!--Device-unnamed-export interface ModuleConfigInfo-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
@@ -19,6 +21,8 @@ Ability information of the module.
 **Type:** Array<ModuleAbilityInfo>
 
 **Since:** 9
+
+<!--Device-ModuleConfigInfo-readonly abilities: Array<ModuleAbilityInfo>--><!--Device-ModuleConfigInfo-readonly abilities: Array<ModuleAbilityInfo>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -36,6 +40,8 @@ API version of the module.
 
 **Since:** 9
 
+<!--Device-ModuleConfigInfo-readonly apiVersion: ApiVersion--><!--Device-ModuleConfigInfo-readonly apiVersion: ApiVersion-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
@@ -51,6 +57,8 @@ Device types supported by the module.
 **Type:** Array<string>
 
 **Since:** 9
+
+<!--Device-ModuleConfigInfo-readonly deviceTypes: Array<string>--><!--Device-ModuleConfigInfo-readonly deviceTypes: Array<string>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -68,6 +76,8 @@ Distribution information of the module.
 
 **Since:** 9
 
+<!--Device-ModuleConfigInfo-readonly distro: ModuleDistroInfo--><!--Device-ModuleConfigInfo-readonly distro: ModuleDistroInfo-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
@@ -84,6 +94,8 @@ ExtensionAbility information of the module.
 
 **Since:** 9
 
+<!--Device-ModuleConfigInfo-readonly extensionAbilities: Array<ExtensionAbility>--><!--Device-ModuleConfigInfo-readonly extensionAbilities: Array<ExtensionAbility>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
@@ -99,6 +111,8 @@ Name of the main ability.
 **Type:** string
 
 **Since:** 9
+
+<!--Device-ModuleConfigInfo-readonly mainAbility: string--><!--Device-ModuleConfigInfo-readonly mainAbility: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 

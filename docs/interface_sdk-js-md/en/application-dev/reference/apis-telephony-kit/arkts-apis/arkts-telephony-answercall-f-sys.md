@@ -18,6 +18,8 @@ Answers the incoming call.
 
 **Required permissions:** ohos.permission.ANSWER_CALL
 
+<!--Device-call-function answerCall(callId: int, callback: AsyncCallback<void>): void--><!--Device-call-function answerCall(callId: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Answers the incoming call.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | number | Yes | Indicates the identifier of the call to answer. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of answerCall. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of answerCall. |
 
 **Error codes:**
 
@@ -69,6 +71,8 @@ Answers the incoming call.
 
 **Required permissions:** ohos.permission.ANSWER_CALL
 
+<!--Device-call-function answerCall(callId?: int): Promise<void>--><!--Device-call-function answerCall(callId?: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -83,7 +87,7 @@ Answers the incoming call.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the answerCall. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the answerCall. |
 
 **Error codes:**
 
@@ -123,6 +127,8 @@ Answers the incoming call without callId.
 
 **Required permissions:** ohos.permission.ANSWER_CALL or ohos.permission.MANAGE_CALL_FOR_DEVICES
 
+<!--Device-call-function answerCall(callback: AsyncCallback<void>): void--><!--Device-call-function answerCall(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -131,7 +137,7 @@ Answers the incoming call without callId.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of answerCall. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of answerCall. |
 
 **Error codes:**
 
@@ -173,6 +179,8 @@ Answers the incoming video call
 
 **Required permissions:** ohos.permission.ANSWER_CALL
 
+<!--Device-call-function answerCall(videoState: VideoStateType, callId: int): Promise<void>--><!--Device-call-function answerCall(videoState: VideoStateType, callId: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -181,14 +189,14 @@ Answers the incoming video call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| videoState | VideoStateType | Yes | Indicates the answer the call with video or voice. |
+| videoState | [VideoStateType](arkts-telephony-videostatetype-e-sys.md) | Yes | Indicates the answer the call with video or voice. |
 | callId | number | Yes | Indicates the identifier of the call to answer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the answerCall. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the answerCall. |
 
 **Error codes:**
 
@@ -228,6 +236,8 @@ Answers the incoming rtt
 
 **Required permissions:** ohos.permission.ANSWER_CALL
 
+<!--Device-call-function answerCall(videoState: VideoStateType, callId: int, isRtt: boolean): Promise<void>--><!--Device-call-function answerCall(videoState: VideoStateType, callId: int, isRtt: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -236,7 +246,7 @@ Answers the incoming rtt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| videoState | VideoStateType | Yes | Indicates the answer the call with video or voice. |
+| videoState | [VideoStateType](arkts-telephony-videostatetype-e-sys.md) | Yes | Indicates the answer the call with video or voice. |
 | callId | number | Yes | Indicates the identifier of the call to answer. |
 | isRtt | boolean | Yes | Indicates the call is rtt or not. |
 
@@ -244,7 +254,7 @@ Answers the incoming rtt
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the answerCall. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the answerCall. |
 
 **Error codes:**
 

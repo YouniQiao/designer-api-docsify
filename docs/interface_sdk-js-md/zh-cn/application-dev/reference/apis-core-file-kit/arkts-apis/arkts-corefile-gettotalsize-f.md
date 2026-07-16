@@ -1,5 +1,11 @@
 # getTotalSize
 
+## 导入模块
+
+```TypeScript
+import { storageStatistics } from '@kit.CoreFileKit';
+```
+
 ## getTotalSize
 
 ```TypeScript
@@ -10,13 +16,15 @@ function getTotalSize(): Promise<number>
 
 **起始版本：** 15
 
+<!--Device-storageStatistics-function getTotalSize(): Promise<long>--><!--Device-storageStatistics-function getTotalSize(): Promise<long>-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回内置存储的总空间大小（单位为Byte）。 (Unit: Byte) |
+| Promise<number> | Promise对象，返回内置存储的总空间大小（单位为Byte）。 (Unit: Byte) |
 
 **错误码：**
 

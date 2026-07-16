@@ -1,13 +1,20 @@
 # ChineseCalendar
 
-提供农历相关的能力，包括设置农历时间、判断指定年份某月是否存在闰月。
-继承自[Calendar](arkts-localization-calendar-c.md)，支持[Calendar](arkts-localization-calendar-c.md)的方法。
+提供农历相关的能力，包括设置农历时间、判断指定年份某月是否存在闰月。继承自[Calendar](arkts-localization-calendar-c.md)，支持[Calendar](arkts-localization-calendar-c.md)的方法。
 
 **继承/实现关系：** ChineseCalendar extends [Calendar](arkts-localization-calendar-c.md)
 
 **起始版本：** 26.0.0
 
+<!--Device-i18n-export class ChineseCalendar extends Calendar--><!--Device-i18n-export class ChineseCalendar extends Calendar-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
 
 ## checkLeapMonth
 
@@ -21,7 +28,9 @@ public static checkLeapMonth(gregorianYear: number, cyclicalYear: number, month:
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChineseCalendar-public static checkLeapMonth(gregorianYear: int, cyclicalYear: int, month: int): boolean--><!--Device-ChineseCalendar-public static checkLeapMonth(gregorianYear: int, cyclicalYear: int, month: int): boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -57,7 +66,9 @@ public setChineseCalendarTime(chineseCalendarTime: ChineseCalendarTime): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChineseCalendar-public setChineseCalendarTime(chineseCalendarTime: ChineseCalendarTime): void--><!--Device-ChineseCalendar-public setChineseCalendarTime(chineseCalendarTime: ChineseCalendarTime): void-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -65,5 +76,5 @@ public setChineseCalendarTime(chineseCalendarTime: ChineseCalendarTime): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| chineseCalendarTime | ChineseCalendarTime | 是 | 农历时间对象。 |
+| chineseCalendarTime | [ChineseCalendarTime](arkts-localization-chinesecalendartime-i.md) | 是 | 农历时间对象。 |
 

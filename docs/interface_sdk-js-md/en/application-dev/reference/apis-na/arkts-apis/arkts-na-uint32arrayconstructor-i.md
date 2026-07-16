@@ -1,10 +1,14 @@
 # Uint32ArrayConstructor
 
+<!--Device-unnamed-interface Uint32ArrayConstructor--><!--Device-unnamed-interface Uint32ArrayConstructor-End-->
+
 ## constructor
 
 ```TypeScript
 new(length: number): Uint32Array
 ```
+
+<!--Device-Uint32ArrayConstructor-new(length: number): Uint32Array--><!--Device-Uint32ArrayConstructor-new(length: number): Uint32Array-End-->
 
 **Parameters:**
 
@@ -16,7 +20,7 @@ new(length: number): Uint32Array
 
 | Type | Description |
 | --- | --- |
-| Uint32Array |  |
+| [Uint32Array](arkts-na-uint32array-i.md) |  |
 
 ## constructor
 
@@ -24,17 +28,19 @@ new(length: number): Uint32Array
 new(array: ArrayLike<number> | ArrayBufferLike): Uint32Array
 ```
 
+<!--Device-Uint32ArrayConstructor-new(array: ArrayLike<number> | ArrayBufferLike): Uint32Array--><!--Device-Uint32ArrayConstructor-new(array: ArrayLike<number> | ArrayBufferLike): Uint32Array-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; \| ArrayBufferLike | Yes |  |
+| array | [ArrayLike](arkts-na-arraylike-i.md)<number> \| ArrayBufferLike | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint32Array |  |
+| [Uint32Array](arkts-na-uint32array-i.md) |  |
 
 ## constructor
 
@@ -42,11 +48,13 @@ new(array: ArrayLike<number> | ArrayBufferLike): Uint32Array
 new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint32Array
 ```
 
+<!--Device-Uint32ArrayConstructor-new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint32Array--><!--Device-Uint32ArrayConstructor-new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint32Array-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBufferLike | Yes |  |
+| buffer | [ArrayBufferLike](arkts-na-arraybufferlike-t.md) | Yes |  |
 | byteOffset | number | No |  |
 | length | number | No |  |
 
@@ -54,7 +62,7 @@ new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint32Array
 
 | Type | Description |
 | --- | --- |
-| Uint32Array |  |
+| [Uint32Array](arkts-na-uint32array-i.md) |  |
 
 ## from
 
@@ -64,17 +72,19 @@ from(arrayLike: ArrayLike<number>): Uint32Array
 
 Creates an array from an array-like or iterable object.
 
+<!--Device-Uint32ArrayConstructor-from(arrayLike: ArrayLike<number>): Uint32Array--><!--Device-Uint32ArrayConstructor-from(arrayLike: ArrayLike<number>): Uint32Array-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;number&gt; | Yes |  |
+| arrayLike | [ArrayLike](arkts-na-arraylike-i.md)<number> | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint32Array |  |
+| [Uint32Array](arkts-na-uint32array-i.md) |  |
 
 ## from
 
@@ -84,19 +94,21 @@ from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: a
 
 Creates an array from an array-like or iterable object.
 
+<!--Device-Uint32ArrayConstructor-from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Uint32Array--><!--Device-Uint32ArrayConstructor-from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Uint32Array-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;T&gt; | Yes |  |
-| mapfn | (v: T, k: number) =&gt; number | Yes |  |
+| arrayLike | [ArrayLike](arkts-na-arraylike-i.md)<T> | Yes |  |
+| mapfn | (v: T, k: number) => number | Yes |  |
 | thisArg | any | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint32Array |  |
+| [Uint32Array](arkts-na-uint32array-i.md) |  |
 
 ## of
 
@@ -105,6 +117,8 @@ of(...items: number[]): Uint32Array
 ```
 
 Returns a new array from a set of elements.
+
+<!--Device-Uint32ArrayConstructor-of(...items: number[]): Uint32Array--><!--Device-Uint32ArrayConstructor-of(...items: number[]): Uint32Array-End-->
 
 **Parameters:**
 
@@ -116,7 +130,7 @@ Returns a new array from a set of elements.
 
 | Type | Description |
 | --- | --- |
-| Uint32Array |  |
+| [Uint32Array](arkts-na-uint32array-i.md) |  |
 
 ## BYTES_PER_ELEMENT
 
@@ -128,6 +142,8 @@ The size in bytes of each element in the array.
 
 **Type:** number
 
+<!--Device-Uint32ArrayConstructor-readonly BYTES_PER_ELEMENT: number--><!--Device-Uint32ArrayConstructor-readonly BYTES_PER_ELEMENT: number-End-->
+
 ## prototype
 
 ```TypeScript
@@ -135,4 +151,6 @@ readonly prototype: Uint32Array
 ```
 
 **Type:** Uint32Array
+
+<!--Device-Uint32ArrayConstructor-readonly prototype: Uint32Array--><!--Device-Uint32ArrayConstructor-readonly prototype: Uint32Array-End-->
 

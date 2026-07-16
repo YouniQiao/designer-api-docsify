@@ -4,7 +4,15 @@
 
 **起始版本：** 18
 
+<!--Device-image-interface PackingOptionsForSequence--><!--Device-image-interface PackingOptionsForSequence-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
+
+## 导入模块
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+```
 
 ## delayTimeList
 
@@ -14,12 +22,14 @@ delayTimeList: Array<number>
 
 GIF编码中设定每帧输出图像的延迟时间，取值需大于0。
 
-- 单位：10毫秒（ms）。例如，取值为10时，实际单帧延迟是100毫秒。
+- 单位：10毫秒（ms）。例如，取值为10时，实际单帧延迟是100毫秒。  
 - 如果长度小于frameCount，不足的部分将使用delayTimeList中的最后一个值进行填充。
 
 **类型：** Array<number>
 
 **起始版本：** 18
+
+<!--Device-PackingOptionsForSequence-delayTimeList: Array<int>--><!--Device-PackingOptionsForSequence-delayTimeList: Array<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -31,14 +41,16 @@ disposalTypes?: Array<number>
 
 GIF编码中设定每帧输出图像的帧过渡模式，如果长度小于frameCount，不足的部分将使用disposalTypes中的最后一个值进行填充，可取值如下：
 
-- 0：不需要任何操作。
-- 1：保持图形不变。
-- 2：恢复背景色。
+- 0：不需要任何操作。  
+- 1：保持图形不变。  
+- 2：恢复背景色。  
 - 3：恢复到之前的状态。
 
 **类型：** Array<number>
 
 **起始版本：** 18
+
+<!--Device-PackingOptionsForSequence-disposalTypes?: Array<int>--><!--Device-PackingOptionsForSequence-disposalTypes?: Array<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -53,6 +65,8 @@ GIF编码中指定的帧数。
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-PackingOptionsForSequence-frameCount: int--><!--Device-PackingOptionsForSequence-frameCount: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -69,6 +83,8 @@ loopCount?: number
 **类型：** number
 
 **起始版本：** 18
+
+<!--Device-PackingOptionsForSequence-loopCount?: int--><!--Device-PackingOptionsForSequence-loopCount?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 

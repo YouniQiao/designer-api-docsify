@@ -12,12 +12,11 @@ import { inputDevice } from '@kit.InputKit';
 function getDevice(deviceId: number, callback: AsyncCallback<InputDeviceData>): void
 ```
 
-Obtains the information about the input device with the specified ID. This API uses an asynchronous callback to
-return the result.
+Obtains the information about the input device with the specified ID. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. Use
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. Use  
 > [inputDevice.getDeviceInfo](arkts-input-getdeviceinfo-f.md#getdeviceinfo-1) instead.
 
 **Since:** 8
@@ -26,14 +25,16 @@ return the result.
 
 **Substitutes:** getDeviceInfo
 
+<!--Device-inputDevice-function getDevice(deviceId: number, callback: AsyncCallback<InputDeviceData>): void--><!--Device-inputDevice-function getDevice(deviceId: number, callback: AsyncCallback<InputDeviceData>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | number | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled orrestarted, its ID may change. |
-| callback | AsyncCallback&lt;InputDeviceData&gt; | Yes | Callback function. If the retrieval is successful, **err** is**undefined**, and **data** is the input device information. Otherwise, **err** is an error object. |
+| deviceId | number | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<InputDeviceData> | Yes | Callback function. If the retrieval is successful, **err** is **undefined**, and **data** is the input device information. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -72,9 +73,9 @@ function getDevice(deviceId: number): Promise<InputDeviceData>
 
 Obtains the information about the input device with the specified ID. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. Use
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. Use  
 > [inputDevice.getDeviceInfo](arkts-input-getdeviceinfo-f.md#getdeviceinfo-1) instead.
 
 **Since:** 8
@@ -83,19 +84,21 @@ Obtains the information about the input device with the specified ID. This API u
 
 **Substitutes:** getDeviceInfo
 
+<!--Device-inputDevice-function getDevice(deviceId: number): Promise<InputDeviceData>--><!--Device-inputDevice-function getDevice(deviceId: number): Promise<InputDeviceData>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | number | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled orrestarted, its ID may change. |
+| deviceId | number | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;InputDeviceData&gt; | Promise used to return information about the input device, including deviceID, name, supported source, physical address, version information, and product information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<InputDeviceData> | Promise used to return information about the input device, including device ID, name, supported source, physical address, version information, and product information. |
 
 **Example**
 

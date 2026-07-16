@@ -20,6 +20,8 @@ Checks whether a UID belongs to this application.
 
 **Substitutes:** [isAppUid](arkts-arkts-processmanager-c.md#isappuid-1)
 
+<!--Device-process-function isAppUid(v: number): boolean--><!--Device-process-function isAppUid(v: number): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**

@@ -1,5 +1,11 @@
 # queryLastUseTime（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+```
+
 ## queryLastUseTime
 
 ```TypeScript
@@ -12,6 +18,8 @@ function queryLastUseTime(appInfo: Record<string, Array<number>>): Promise<AppSt
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryLastUseTime(appInfo: Record<string, Array<long>>): Promise<AppStatsMap>--><!--Device-usageStatistics-function queryLastUseTime(appInfo: Record<string, Array<long>>): Promise<AppStatsMap>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -20,13 +28,13 @@ function queryLastUseTime(appInfo: Record<string, Array<number>>): Promise<AppSt
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| appInfo | Record&lt;string, Array&lt;number&gt;&gt; | 是 | 参数为map结构，key是bundleName，value是查询应用的index（可以有多个，通过Array传入）。 |
+| appInfo | Record<string, Array<number>> | 是 | 参数为map结构，key是bundleName，value是查询应用的index（可以有多个，通过Array传入）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AppStatsMap&gt; | Promise对象。返回指定bundleName和index应用使用的具体信息。 |
+| Promise<AppStatsMap> | Promise对象。返回指定bundleName和index应用使用的具体信息。 |
 
 **错误码：**
 

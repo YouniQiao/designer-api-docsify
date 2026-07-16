@@ -22,6 +22,8 @@ The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 
 **Substitutes:** finishSession(handle:
 
+<!--Device-huks-function finish(handle: number, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function finish(handle: number, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **Parameters:**
@@ -29,8 +31,8 @@ The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | handle | number | Yes | Handle of the **finish** operation, which is of the uint64 type. |
-| options | HuksOptions | Yes | Parameter set used for the **finish** operation. |
-| callback | AsyncCallback&lt;HuksResult&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Parameter set used for the **finish** operation. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<HuksResult> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
 
 
 ## finish
@@ -49,6 +51,8 @@ The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 
 **Substitutes:** finishSession(
 
+<!--Device-huks-function finish(handle: number, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function finish(handle: number, options: HuksOptions): Promise<HuksResult>-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **Parameters:**
@@ -56,11 +60,11 @@ The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | handle | number | Yes | Handle of the **finish** operation, which is of the uint64 type. |
-| options | HuksOptions | Yes | Parameter set used for the **finish** operation. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Parameter set used for the **finish** operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksResult&gt; | Promise that returns **HuksResult**. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HuksResult> | Promise that returns **HuksResult**. |
 

@@ -14,6 +14,8 @@ Updates the ID in the specified uri
 
 **Substitutes:** updateId
 
+<!--Device-dataUriUtils-function updateId(uri: string, id: number): string--><!--Device-dataUriUtils-function updateId(uri: string, id: number): string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**

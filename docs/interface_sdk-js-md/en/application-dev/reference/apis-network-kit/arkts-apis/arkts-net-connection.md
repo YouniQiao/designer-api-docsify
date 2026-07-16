@@ -4,6 +4,8 @@ Provides interfaces to manage and use data networks.
 
 **Since:** 11
 
+<!--Device-unnamed-declare namespace connection--><!--Device-unnamed-declare namespace connection-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import

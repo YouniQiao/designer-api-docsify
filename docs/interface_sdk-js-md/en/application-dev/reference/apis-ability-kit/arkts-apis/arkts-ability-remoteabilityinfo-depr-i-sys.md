@@ -2,11 +2,11 @@
 
 The module provides information about a remote ability.
 
-> **NOTE**
->
-> The APIs of this module have been deprecated since API version 9. You are advised to use
-> [bundleManager-RemoteAbilityInfo](arkts-ability-remoteabilityinfo-depr-i-sys.md) instead.
->
+> **NOTE**  
+>  
+> The APIs of this module have been deprecated since API version 9. You are advised to use  
+> [bundleManager-RemoteAbilityInfo](arkts-ability-remoteabilityinfo-depr-i-sys.md) instead.  
+>  
 > The APIs provided by this module are system APIs.
 
 **Since:** 8
@@ -14,6 +14,8 @@ The module provides information about a remote ability.
 **Deprecated since:** 9
 
 **Substitutes:** [remoteAbilityInfo:RemoteAbilityInfo](arkts-ability-remoteabilityinfo-depr-i-sys.md)
+
+<!--Device-unnamed-export interface RemoteAbilityInfo--><!--Device-unnamed-export interface RemoteAbilityInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
 
@@ -37,6 +39,8 @@ Element name information of the ability.
 
 **Substitutes:** elementName
 
+<!--Device-RemoteAbilityInfo-readonly elementName: ElementName--><!--Device-RemoteAbilityInfo-readonly elementName: ElementName-End-->
+
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
 
 **System API:** This is a system API.
@@ -59,6 +63,8 @@ Icon of the ability.
 
 **Substitutes:** icon
 
+<!--Device-RemoteAbilityInfo-readonly icon: string--><!--Device-RemoteAbilityInfo-readonly icon: string-End-->
+
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
 
 **System API:** This is a system API.
@@ -80,6 +86,8 @@ Ability name.
 **Deprecated since:** 9
 
 **Substitutes:** label
+
+<!--Device-RemoteAbilityInfo-readonly label: string--><!--Device-RemoteAbilityInfo-readonly label: string-End-->
 
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
 

@@ -4,6 +4,8 @@ Represents data of the hyperlink type.
 
 **Since:** 12
 
+<!--Device-uniformDataStruct-interface Hyperlink--><!--Device-uniformDataStruct-interface Hyperlink-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Description of the linked content. This parameter is optional. By default, it is
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Hyperlink-description?: string--><!--Device-Hyperlink-description?: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## details
@@ -34,9 +38,7 @@ Description of the linked content. This parameter is optional. By default, it is
 details?: Record<string, string>
 ```
 
-Object of the dictionary type used to describe the attributes of the hyperlink. Both the key and value of the
-object are of the string type. For example, the following is a **details** object used to describe the properties
-of a file:
+Object of the dictionary type used to describe the attributes of the hyperlink. Both the key and value of the object are of the string type. For example, the following is a **details** object used to describe the properties of a file:
 
 {
 
@@ -54,6 +56,8 @@ By default, it is an empty dictionary object.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Hyperlink-details?: Record<string, string>--><!--Device-Hyperlink-details?: Record<string, string>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## uniformDataType
@@ -62,14 +66,15 @@ By default, it is an empty dictionary object.
 readonly uniformDataType: 'general.hyperlink'
 ```
 
-Uniform data type, which has a fixed value of **general.hyperlink**. For details, see
-[UniformDataType](arkts-arkdata-uniformdatatype-e.md).
+Uniform data type, which has a fixed value of **general.hyperlink**. For details, see [UniformDataType](arkts-arkdata-uniformdatatype-e.md).
 
 **Type:** 'general.hyperlink'
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Hyperlink-readonly uniformDataType: 'general.hyperlink'--><!--Device-Hyperlink-readonly uniformDataType: 'general.hyperlink'-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -86,6 +91,8 @@ URL.
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Hyperlink-url: string--><!--Device-Hyperlink-url: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 

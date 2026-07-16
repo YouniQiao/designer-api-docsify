@@ -20,15 +20,17 @@ Deletes a key. This API uses an asynchronous callback to return the result.
 
 **Substitutes:** deleteKeyItem(keyAlias:
 
+<!--Device-huks-function deleteKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function deleteKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | Alias of the key to delete. It must be the key alias passed in when the key wasgenerated. |
-| options | HuksOptions | Yes | Options for deleting the key. |
-| callback | AsyncCallback&lt;HuksResult&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
+| keyAlias | string | Yes | Alias of the key to delete. It must be the key alias passed in when the key was generated. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Options for deleting the key. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<HuksResult> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -60,20 +62,22 @@ Deletes a key. This API uses a promise to return the result.
 
 **Substitutes:** deleteKeyItem(keyAlias:
 
+<!--Device-huks-function deleteKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function deleteKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | Alias of the key to delete. It must be the key alias passed in when the key wasgenerated. |
-| options | HuksOptions | Yes | Options for deleting the key. |
+| keyAlias | string | Yes | Alias of the key to delete. It must be the key alias passed in when the key was generated. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Options for deleting the key. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksResult&gt; | Promise that returns **HuksResult**. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HuksResult> | Promise that returns **HuksResult**. |
 
 **Example**
 

@@ -4,6 +4,8 @@ Defines label margin.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export interface ChipV2LabelMarginConfig--><!--Device-unnamed-export interface ChipV2LabelMarginConfig-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Left label margin length.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2LabelMarginConfig-left?: LengthMetrics--><!--Device-ChipV2LabelMarginConfig-left?: LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## right
@@ -45,6 +49,8 @@ Right label margin length.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipV2LabelMarginConfig-right?: LengthMetrics--><!--Device-ChipV2LabelMarginConfig-right?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

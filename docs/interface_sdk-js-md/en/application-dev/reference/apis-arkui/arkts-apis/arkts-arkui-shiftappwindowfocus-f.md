@@ -12,25 +12,23 @@ import { window } from '@kit.ArkUI';
 function shiftAppWindowFocus(sourceWindowId: number, targetWindowId: number): Promise<void>
 ```
 
-Shifts the window focus from the source window to the target window in the same application. The window focus can
-be shifted within the main window and child windows. This API uses a promise to return the result.
+Shifts the window focus from the source window to the target window in the same application. The window focus can be shifted within the main window and child windows. This API uses a promise to return the result.
 
-Ensure that the target window can gain focus (configurable by calling
-[setWindowFocusable()](arkts-arkui-window-i.md#setwindowfocusable-2)
-) and that [showWindow()](arkts-arkui-window-i.md#showwindow-1) has been
-successfully executed.
+Ensure that the target window can gain focus (configurable by calling [setWindowFocusable()](arkts-arkui-window-i.md#setwindowfocusable-2)) and that [showWindow()](arkts-arkui-window-i.md#showwindow-1) has been successfully executed.
 
-> **NOTE**
->
-> Before calling **shiftAppWindowFocus()**, ensure that the target window has called
-> [loadContent()](arkts-arkui-window-i.md#loadcontent-1)
-> or [setUIContent()](arkts-arkui-window-i.md#setuicontent-1)
-> and these operations have been effective. Otherwise, an invisible window may gain focus, causing function
+> **NOTE**  
+>  
+> Before calling **shiftAppWindowFocus()**, ensure that the target window has called  
+> [loadContent()](arkts-arkui-window-i.md#loadcontent-1)  
+> or [setUIContent()](arkts-arkui-window-i.md#setuicontent-1)  
+> and these operations have been effective. Otherwise, an invisible window may gain focus, causing function  
 > exceptions or affecting user experience.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-window-function shiftAppWindowFocus(sourceWindowId: int, targetWindowId: int): Promise<void>--><!--Device-window-function shiftAppWindowFocus(sourceWindowId: int, targetWindowId: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -38,21 +36,21 @@ successfully executed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceWindowId | number | Yes | ID of the source window, which is having the focus. You are advised to call[getWindowProperties()](arkts-arkui-window-i.md#getwindowproperties-1) to obtain the window ID. |
-| targetWindowId | number | Yes | ID of the target window. You are advised to call[getWindowProperties()](arkts-arkui-window-i.md#getwindowproperties-1) to obtain the window ID. |
+| sourceWindowId | number | Yes | ID of the source window, which is having the focus. You are advised to call [getWindowProperties()](arkts-arkui-window-i.md#getwindowproperties-1) to obtain the window ID. |
+| targetWindowId | number | Yes | ID of the target window. You are advised to call [getWindowProperties()](arkts-arkui-window-i.md#getwindowproperties-1) to obtain the window ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: 1. The window is not created or destroyed;2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation.Possible cause: 1. Invalid window type. Only main windows and subwindows are supported.2. The two windows are not from the same process. |

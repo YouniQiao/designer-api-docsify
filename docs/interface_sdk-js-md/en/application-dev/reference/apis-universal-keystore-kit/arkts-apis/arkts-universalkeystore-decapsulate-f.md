@@ -13,11 +13,13 @@ function decapsulate(keyAlias: string, params: HuksParam[], encapData: Uint8Arra
       sharedKeyAlias?: string, sharedKeyParams?:  HuksParam[]): Promise<HuksReturnResult>
 ```
 
-Decapsulates a post-quantum cryptography key. This operation can be managed by HUKS
-or the app itself. If the app chooses to manage the key,
-the symmetric key is contained in the outData field of HuksReturnResult.
+Decapsulates a post-quantum cryptography key. This operation can be managed by HUKS or the app itself. If the app chooses to manage the key,the symmetric key is contained in the outData field of HuksReturnResult.
 
 **Since:** 26.0.0
+
+<!--Device-huks-function decapsulate(keyAlias: string, params: HuksParam[], encapData: Uint8Array,
+      sharedKeyAlias?: string, sharedKeyParams?:  HuksParam[]): Promise<HuksReturnResult>--><!--Device-huks-function decapsulate(keyAlias: string, params: HuksParam[], encapData: Uint8Array,
+      sharedKeyAlias?: string, sharedKeyParams?:  HuksParam[]): Promise<HuksReturnResult>-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -26,16 +28,16 @@ the symmetric key is contained in the outData field of HuksReturnResult.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the post-quantum cryptography key. |
-| params | HuksParam[] | Yes | Decapsulation properties. |
-| encapData | Uint8Array | Yes | Encapsulated shared key. |
+| params | [HuksParam](arkts-universalkeystore-huksparam-i.md)[] | Yes | Decapsulation properties. |
+| encapData | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Encapsulated shared key. |
 | sharedKeyAlias | string | No | Alias of the key used for decapsulation.This parameter must be specified if HUKS is used for key management.If the app manages the key by itself, ignore this parameter. |
-| sharedKeyParams | HuksParam[] | No | Properties of the decapsulated key.This parameter must be specified if HUKS is used for key management.If the app manages the key by itself, ignore this parameter. |
+| sharedKeyParams | [HuksParam](arkts-universalkeystore-huksparam-i.md)[] | No | Properties of the decapsulated key.This parameter must be specified if HUKS is used for key management.If the app manages the key by itself, ignore this parameter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HuksReturnResult> | Promise used to return the result. |
 
 **Error codes:**
 

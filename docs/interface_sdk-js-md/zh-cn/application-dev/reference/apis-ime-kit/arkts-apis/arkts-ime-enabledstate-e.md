@@ -4,6 +4,8 @@
 
 **起始版本：** 15
 
+<!--Device-inputMethod-export enum EnabledState--><!--Device-inputMethod-export enum EnabledState-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## DISABLED
@@ -17,6 +19,8 @@ DISABLED = 0
 **使用场景：**输入法已被禁用，不能作为当前输入法使用。
 
 **起始版本：** 15
+
+<!--Device-EnabledState-DISABLED = 0--><!--Device-EnabledState-DISABLED = 0-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -32,6 +36,8 @@ BASIC_MODE
 
 **起始版本：** 15
 
+<!--Device-EnabledState-BASIC_MODE--><!--Device-EnabledState-BASIC_MODE-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## FULL_EXPERIENCE_MODE
@@ -45,6 +51,8 @@ FULL_EXPERIENCE_MODE
 **使用场景：**输入法已启用且处于完整体验模式，支持所有功能（包括自定义通信、预上屏等）。
 
 **起始版本：** 15
+
+<!--Device-EnabledState-FULL_EXPERIENCE_MODE--><!--Device-EnabledState-FULL_EXPERIENCE_MODE-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

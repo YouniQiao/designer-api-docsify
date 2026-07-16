@@ -4,6 +4,8 @@ Tone attributes.
 
 **Since:** 12
 
+<!--Device-systemSoundManager-interface ToneAttrs--><!--Device-systemSoundManager-interface ToneAttrs-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -23,6 +25,8 @@ getCategory(): number
 Gets tone category.
 
 **Since:** 12
+
+<!--Device-ToneAttrs-getCategory(): int--><!--Device-ToneAttrs-getCategory(): int-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -57,6 +61,8 @@ Gets customized type of tone.
 
 **Since:** 12
 
+<!--Device-ToneAttrs-getCustomizedType(): ToneCustomizedType--><!--Device-ToneAttrs-getCustomizedType(): ToneCustomizedType-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -65,7 +71,7 @@ Gets customized type of tone.
 
 | Type | Description |
 | --- | --- |
-| ToneCustomizedType | Customized type of tone. |
+| [ToneCustomizedType](arkts-audio-tonecustomizedtype-e-sys.md) | Customized type of tone. |
 
 **Error codes:**
 
@@ -89,6 +95,8 @@ getFileName(): string
 Gets file name of tone.
 
 **Since:** 12
+
+<!--Device-ToneAttrs-getFileName(): string--><!--Device-ToneAttrs-getFileName(): string-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -119,10 +127,11 @@ toneAttrs.getFileName();
 getMediaType(): MediaType
 ```
 
-Gets media type. This function returns {@link MediaType#AUDIO} if the media type has not been changed
-by {@link setMediaType}.
+Gets media type. This function returns {@link MediaType#AUDIO} if the media type has not been changed by {@link setMediaType}.
 
 **Since:** 20
+
+<!--Device-ToneAttrs-getMediaType(): MediaType--><!--Device-ToneAttrs-getMediaType(): MediaType-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -132,7 +141,7 @@ by {@link setMediaType}.
 
 | Type | Description |
 | --- | --- |
-| MediaType | Media type. |
+| [MediaType](../../apis-arkweb/arkts-apis/arkts-arkweb-mediatype-e.md) | Media type. |
 
 **Error codes:**
 
@@ -156,6 +165,8 @@ getTitle(): string
 Gets title of tone.
 
 **Since:** 12
+
+<!--Device-ToneAttrs-getTitle(): string--><!--Device-ToneAttrs-getTitle(): string-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -190,6 +201,8 @@ Gets uri of tone.
 
 **Since:** 12
 
+<!--Device-ToneAttrs-getUri(): string--><!--Device-ToneAttrs-getUri(): string-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -222,6 +235,8 @@ setCategory(category: number): void
 Sets tone category.
 
 **Since:** 12
+
+<!--Device-ToneAttrs-setCategory(category: int): void--><!--Device-ToneAttrs-setCategory(category: int): void-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -259,6 +274,8 @@ Sets file name of tone.
 
 **Since:** 12
 
+<!--Device-ToneAttrs-setFileName(name: string): void--><!--Device-ToneAttrs-setFileName(name: string): void-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -295,6 +312,8 @@ Sets media type.
 
 **Since:** 20
 
+<!--Device-ToneAttrs-setMediaType(type: MediaType): void--><!--Device-ToneAttrs-setMediaType(type: MediaType): void-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -303,7 +322,7 @@ Sets media type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | MediaType | Yes | Target media type. |
+| type | [MediaType](../../apis-arkweb/arkts-apis/arkts-arkweb-mediatype-e.md) | Yes | Target media type. |
 
 **Error codes:**
 
@@ -329,6 +348,8 @@ setTitle(title: string): void
 Sets title of tone.
 
 **Since:** 12
+
+<!--Device-ToneAttrs-setTitle(title: string): void--><!--Device-ToneAttrs-setTitle(title: string): void-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 

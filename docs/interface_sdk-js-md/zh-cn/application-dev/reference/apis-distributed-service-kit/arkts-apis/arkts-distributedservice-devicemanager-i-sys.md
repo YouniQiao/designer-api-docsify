@@ -8,7 +8,15 @@
 
 **替代接口：** [DeviceManager](arkts-distributedservice-devicemanager-i.md)
 
+<!--Device-deviceManager-interface DeviceManager--><!--Device-deviceManager-interface DeviceManager-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+## 导入模块
+
+```TypeScript
+import { deviceManager } from '@kit.DistributedServiceKit';
+```
 
 ## authenticateDevice
 
@@ -30,6 +38,16 @@ authenticateDevice(
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-authenticateDevice(
+      deviceInfo: DeviceInfo,
+      authParam: AuthParam,
+      callback: AsyncCallback<{ deviceId: string, pinToken?: number }>
+    ): void--><!--Device-DeviceManager-authenticateDevice(
+      deviceInfo: DeviceInfo,
+      authParam: AuthParam,
+      callback: AsyncCallback<{ deviceId: string, pinToken?: number }>
+    ): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -38,9 +56,9 @@ authenticateDevice(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceInfo | DeviceInfo | 是 | 设备信息。 |
-| authParam | AuthParam | 是 | 认证参数。 |
-| callback | AsyncCallback&lt;{ deviceId: string, pinToken?: number }&gt; | 是 |  |
+| deviceInfo | [DeviceInfo](../../apis-driver-development-kit/arkts-apis/arkts-driverdevelopment-deviceinfo-i-sys.md) | 是 | 设备信息。 |
+| authParam | [AuthParam](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-authparam-i-sys.md) | 是 | 认证参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<{ deviceId: string, pinToken?: number }> | 是 |  |
 
 **错误码：**
 
@@ -131,6 +149,8 @@ deleteCredential(queryInfo: string, callback: AsyncCallback<{ resultInfo: string
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-deleteCredential(queryInfo: string, callback: AsyncCallback<{ resultInfo: string }>): void--><!--Device-DeviceManager-deleteCredential(queryInfo: string, callback: AsyncCallback<{ resultInfo: string }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -140,7 +160,7 @@ deleteCredential(queryInfo: string, callback: AsyncCallback<{ resultInfo: string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | queryInfo | string | 是 | 删除凭据信息。长度范围1~64000字符。 |
-| callback | AsyncCallback&lt;{ resultInfo: string }&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<{ resultInfo: string }> | 是 |  |
 
 **错误码：**
 
@@ -204,6 +224,8 @@ getDeviceInfo(networkId: string, callback: AsyncCallback<DeviceInfo>): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-getDeviceInfo(networkId: string, callback: AsyncCallback<DeviceInfo>): void--><!--Device-DeviceManager-getDeviceInfo(networkId: string, callback: AsyncCallback<DeviceInfo>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -213,7 +235,7 @@ getDeviceInfo(networkId: string, callback: AsyncCallback<DeviceInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | networkId | string | 是 | 设备的网络标识。长度范围1~255字符。 |
-| callback | AsyncCallback&lt;DeviceInfo&gt; | 是 | 获取指定设备信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DeviceInfo> | 是 | 获取指定设备信息。 |
 
 **错误码：**
 
@@ -263,6 +285,8 @@ getDeviceInfo(networkId: string): Promise<DeviceInfo>
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-getDeviceInfo(networkId: string): Promise<DeviceInfo>--><!--Device-DeviceManager-getDeviceInfo(networkId: string): Promise<DeviceInfo>-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -277,7 +301,7 @@ getDeviceInfo(networkId: string): Promise<DeviceInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DeviceInfo&gt; | Promise实例，用于获取异步返回结果。 |
+| Promise<DeviceInfo> | Promise实例，用于获取异步返回结果。 |
 
 **错误码：**
 
@@ -320,6 +344,8 @@ getLocalDeviceInfo(callback: AsyncCallback<DeviceInfo>): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-getLocalDeviceInfo(callback: AsyncCallback<DeviceInfo>): void--><!--Device-DeviceManager-getLocalDeviceInfo(callback: AsyncCallback<DeviceInfo>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -328,7 +354,7 @@ getLocalDeviceInfo(callback: AsyncCallback<DeviceInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;DeviceInfo&gt; | 是 | 获取本地设备信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DeviceInfo> | 是 | 获取本地设备信息。 |
 
 **错误码：**
 
@@ -377,6 +403,8 @@ getLocalDeviceInfo(): Promise<DeviceInfo>
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-getLocalDeviceInfo(): Promise<DeviceInfo>--><!--Device-DeviceManager-getLocalDeviceInfo(): Promise<DeviceInfo>-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -385,7 +413,7 @@ getLocalDeviceInfo(): Promise<DeviceInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DeviceInfo&gt; | Promise实例，用于获取异步返回结果。 |
+| Promise<DeviceInfo> | Promise实例，用于获取异步返回结果。 |
 
 **错误码：**
 
@@ -425,6 +453,8 @@ getLocalDeviceInfoSync(): DeviceInfo
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-getLocalDeviceInfoSync(): DeviceInfo--><!--Device-DeviceManager-getLocalDeviceInfoSync(): DeviceInfo-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -433,14 +463,14 @@ getLocalDeviceInfoSync(): DeviceInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| DeviceInfo | 返回本地设备列表。 |
+| [DeviceInfo](../../apis-driver-development-kit/arkts-apis/arkts-driverdevelopment-deviceinfo-i-sys.md) | 返回本地设备列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
 **示例：**
@@ -476,6 +506,8 @@ getTrustedDeviceList(callback: AsyncCallback<Array<DeviceInfo>>): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-getTrustedDeviceList(callback: AsyncCallback<Array<DeviceInfo>>): void--><!--Device-DeviceManager-getTrustedDeviceList(callback: AsyncCallback<Array<DeviceInfo>>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -484,7 +516,7 @@ getTrustedDeviceList(callback: AsyncCallback<Array<DeviceInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;DeviceInfo&gt;&gt; | 是 | 获取所有可信设备列表的回调，返回设备信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<DeviceInfo>> | 是 | 获取所有可信设备列表的回调，返回设备信息。 |
 
 **错误码：**
 
@@ -532,6 +564,8 @@ getTrustedDeviceList(): Promise<Array<DeviceInfo>>
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-getTrustedDeviceList(): Promise<Array<DeviceInfo>>--><!--Device-DeviceManager-getTrustedDeviceList(): Promise<Array<DeviceInfo>>-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -540,7 +574,7 @@ getTrustedDeviceList(): Promise<Array<DeviceInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;DeviceInfo&gt;&gt; | Promise实例，用于获取异步返回结果。 |
+| Promise<Array<DeviceInfo>> | Promise实例，用于获取异步返回结果。 |
 
 **错误码：**
 
@@ -580,6 +614,8 @@ getTrustedDeviceListSync(): Array<DeviceInfo>
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-getTrustedDeviceListSync(): Array<DeviceInfo>--><!--Device-DeviceManager-getTrustedDeviceListSync(): Array<DeviceInfo>-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -588,14 +624,14 @@ getTrustedDeviceListSync(): Array<DeviceInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;DeviceInfo&gt; | 返回可信设备列表。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<DeviceInfo> | 返回可信设备列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
 **示例：**
@@ -629,6 +665,8 @@ getTrustedDeviceListSync(isRefresh: boolean): Array<DeviceInfo>
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-getTrustedDeviceListSync(isRefresh: boolean): Array<DeviceInfo>--><!--Device-DeviceManager-getTrustedDeviceListSync(isRefresh: boolean): Array<DeviceInfo>-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -643,14 +681,14 @@ getTrustedDeviceListSync(isRefresh: boolean): Array<DeviceInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;DeviceInfo&gt; | 返回可信设备列表。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<DeviceInfo> | 返回可信设备列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
@@ -685,6 +723,8 @@ importCredential(credentialInfo: string, callback: AsyncCallback<{ resultInfo: s
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-importCredential(credentialInfo: string, callback: AsyncCallback<{ resultInfo: string }>): void--><!--Device-DeviceManager-importCredential(credentialInfo: string, callback: AsyncCallback<{ resultInfo: string }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -694,7 +734,7 @@ importCredential(credentialInfo: string, callback: AsyncCallback<{ resultInfo: s
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | credentialInfo | string | 是 | 导入凭据信息。长度范围1~64000字符。 |
-| callback | AsyncCallback&lt;{ resultInfo: string }&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<{ resultInfo: string }> | 是 |  |
 
 **错误码：**
 
@@ -787,6 +827,8 @@ off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void--><!--Device-DeviceManager-off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -796,7 +838,7 @@ off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'uiStateChange' | 是 | 取消注册的设备管理器 ui 状态回调，固定为uiStateChange。 |
-| callback | Callback&lt;{ param: string }&gt; | 否 |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ param: string }> | 否 |  |
 
 **错误码：**
 
@@ -837,6 +879,8 @@ off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAc
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void--><!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -846,7 +890,7 @@ off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAc
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceStateChange' | 是 | 根据应用程序的包名取消注册设备状态回调，固定为deviceStateChange。 |
-| callback | Callback&lt;{ action: DeviceStateChangeAction, device: DeviceInfo }&gt; | 否 |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ action: DeviceStateChangeAction, device: DeviceInfo }> | 否 |  |
 
 **错误码：**
 
@@ -902,6 +946,8 @@ off(type: 'deviceFound', callback?: Callback<{ subscribeId: number, device: Devi
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-off(type: 'deviceFound', callback?: Callback<{ subscribeId: number, device: DeviceInfo }>): void--><!--Device-DeviceManager-off(type: 'deviceFound', callback?: Callback<{ subscribeId: number, device: DeviceInfo }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -911,7 +957,7 @@ off(type: 'deviceFound', callback?: Callback<{ subscribeId: number, device: Devi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceFound' | 是 | 取消注册设备发现回调，固定为deviceFound。 |
-| callback | Callback&lt;{ subscribeId: number, device: DeviceInfo }&gt; | 否 |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ subscribeId: number, device: DeviceInfo }> | 否 |  |
 
 **错误码：**
 
@@ -967,6 +1013,8 @@ off(type: 'discoverFail', callback?: Callback<{ subscribeId: number, reason: num
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-off(type: 'discoverFail', callback?: Callback<{ subscribeId: number, reason: number }>): void--><!--Device-DeviceManager-off(type: 'discoverFail', callback?: Callback<{ subscribeId: number, reason: number }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -976,7 +1024,7 @@ off(type: 'discoverFail', callback?: Callback<{ subscribeId: number, reason: num
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'discoverFail' | 是 | 取消注册设备发现失败回调，固定为discoverFail。 |
-| callback | Callback&lt;{ subscribeId: number, reason: number }&gt; | 否 |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ subscribeId: number, reason: number }> | 否 |  |
 
 **错误码：**
 
@@ -1022,6 +1070,8 @@ off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void--><!--Device-DeviceManager-off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1031,7 +1081,7 @@ off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'publishSuccess' | 是 | 取消注册设备发布成功回调，固定为publishSuccess。 |
-| callback | Callback&lt;{ publishId: number }&gt; | 否 |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ publishId: number }> | 否 |  |
 
 **错误码：**
 
@@ -1076,6 +1126,8 @@ off(type: 'publishFail', callback?: Callback<{ publishId: number, reason: number
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-off(type: 'publishFail', callback?: Callback<{ publishId: number, reason: number }>): void--><!--Device-DeviceManager-off(type: 'publishFail', callback?: Callback<{ publishId: number, reason: number }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1085,7 +1137,7 @@ off(type: 'publishFail', callback?: Callback<{ publishId: number, reason: number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'publishFail' | 是 | 取消注册设备发布失败回调，固定为publishFail。 |
-| callback | Callback&lt;{ publishId: number, reason: number }&gt; | 否 |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ publishId: number, reason: number }> | 否 |  |
 
 **错误码：**
 
@@ -1133,6 +1185,8 @@ off(type: 'serviceDie', callback?: () => void): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-off(type: 'serviceDie', callback?: () => void): void--><!--Device-DeviceManager-off(type: 'serviceDie', callback?: () => void): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1142,7 +1196,7 @@ off(type: 'serviceDie', callback?: () => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'serviceDie' | 是 | 取消注册serviceDie回调，以便在devicemanager服务异常终止时通知应用程序，固定为serviceDie。 |
-| callback | () =&gt; void | 否 | 取消注册serviceDie的回调方法。 |
+| callback | () => void | 否 | 取消注册serviceDie的回调方法。 |
 
 **错误码：**
 
@@ -1185,6 +1239,8 @@ ui状态变更回调。
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-on(type: 'uiStateChange', callback: Callback<{ param: string }>): void--><!--Device-DeviceManager-on(type: 'uiStateChange', callback: Callback<{ param: string }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1194,7 +1250,7 @@ ui状态变更回调。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'uiStateChange' | 是 | 注册的设备管理器 ui 状态回调，以便在状态改变时通知应用，固定为uiStateChange。 |
-| callback | Callback&lt;{ param: string }&gt; | 是 |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ param: string }> | 是 |  |
 
 **错误码：**
 
@@ -1248,6 +1304,8 @@ on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeActi
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void--><!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1257,7 +1315,7 @@ on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeActi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceStateChange' | 是 | 注册设备状态回调，固定为deviceStateChange。 |
-| callback | Callback&lt;{ action: DeviceStateChangeAction, device: DeviceInfo }&gt; | 是 |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ action: DeviceStateChangeAction, device: DeviceInfo }> | 是 |  |
 
 **错误码：**
 
@@ -1313,6 +1371,8 @@ on(type: 'deviceFound', callback: Callback<{ subscribeId: number, device: Device
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-on(type: 'deviceFound', callback: Callback<{ subscribeId: number, device: DeviceInfo }>): void--><!--Device-DeviceManager-on(type: 'deviceFound', callback: Callback<{ subscribeId: number, device: DeviceInfo }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1322,7 +1382,7 @@ on(type: 'deviceFound', callback: Callback<{ subscribeId: number, device: Device
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceFound' | 是 | 注册设备发现回调，以便在发现周边设备时通知应用程序，固定为deviceFound。 |
-| callback | Callback&lt;{ subscribeId: number, device: DeviceInfo }&gt; | 是 |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ subscribeId: number, device: DeviceInfo }> | 是 |  |
 
 **错误码：**
 
@@ -1378,6 +1438,8 @@ on(type: 'discoverFail', callback: Callback<{ subscribeId: number, reason: numbe
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-on(type: 'discoverFail', callback: Callback<{ subscribeId: number, reason: number }>): void--><!--Device-DeviceManager-on(type: 'discoverFail', callback: Callback<{ subscribeId: number, reason: number }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1387,7 +1449,7 @@ on(type: 'discoverFail', callback: Callback<{ subscribeId: number, reason: numbe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'discoverFail' | 是 | 注册设备发现失败回调，以便在发现周边设备失败时通知应用程序，固定为discoverFail。 |
-| callback | Callback&lt;{ subscribeId: number, reason: number }&gt; | 是 |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ subscribeId: number, reason: number }> | 是 |  |
 
 **错误码：**
 
@@ -1433,6 +1495,8 @@ on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void--><!--Device-DeviceManager-on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1442,7 +1506,7 @@ on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'publishSuccess' | 是 | 注册发布设备成功回调，以便将发布成功时通知应用程序，固定为publishSuccess。 |
-| callback | Callback&lt;{ publishId: number }&gt; | 是 |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ publishId: number }> | 是 |  |
 
 **错误码：**
 
@@ -1487,6 +1551,8 @@ on(type: 'publishFail', callback: Callback<{ publishId: number, reason: number }
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-on(type: 'publishFail', callback: Callback<{ publishId: number, reason: number }>): void--><!--Device-DeviceManager-on(type: 'publishFail', callback: Callback<{ publishId: number, reason: number }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1496,7 +1562,7 @@ on(type: 'publishFail', callback: Callback<{ publishId: number, reason: number }
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'publishFail' | 是 | 注册设备发布失败回调，以便在发布设备失败时通知应用程序，固定为publishFail。 |
-| callback | Callback&lt;{ publishId: number, reason: number }&gt; | 是 |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ publishId: number, reason: number }> | 是 |  |
 
 **错误码：**
 
@@ -1544,6 +1610,8 @@ on(type: 'serviceDie', callback: () => void): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-on(type: 'serviceDie', callback: () => void): void--><!--Device-DeviceManager-on(type: 'serviceDie', callback: () => void): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1553,7 +1621,7 @@ on(type: 'serviceDie', callback: () => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'serviceDie' | 是 | 注册serviceDie回调，以便在devicemanager服务异常终止时通知应用程序，固定为serviceDie。 |
-| callback | () =&gt; void | 是 | 注册serviceDie的回调方法。 |
+| callback | () => void | 是 | 注册serviceDie的回调方法。 |
 
 **错误码：**
 
@@ -1594,6 +1662,8 @@ publishDeviceDiscovery(publishInfo: PublishInfo): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-publishDeviceDiscovery(publishInfo: PublishInfo): void--><!--Device-DeviceManager-publishDeviceDiscovery(publishInfo: PublishInfo): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1602,7 +1672,7 @@ publishDeviceDiscovery(publishInfo: PublishInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| publishInfo | PublishInfo | 是 | 发布设备发现信息。 |
+| publishInfo | [PublishInfo](arkts-distributedservice-publishinfo-i-sys.md) | 是 | 发布设备发现信息。 |
 
 **错误码：**
 
@@ -1610,7 +1680,7 @@ publishDeviceDiscovery(publishInfo: PublishInfo): void
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600105](../../apis-distributedservice-kit/errorcode-device-manager.md#11600105-发布业务不可用) | Publish unavailable. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
@@ -1662,6 +1732,8 @@ release(): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-release(): void--><!--Device-DeviceManager-release(): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1671,7 +1743,7 @@ release(): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
 **示例：**
@@ -1704,6 +1776,8 @@ requestCredentialRegisterInfo(requestInfo: string, callback: AsyncCallback<{ reg
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-requestCredentialRegisterInfo(requestInfo: string, callback: AsyncCallback<{ registerInfo: string }>): void--><!--Device-DeviceManager-requestCredentialRegisterInfo(requestInfo: string, callback: AsyncCallback<{ registerInfo: string }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1713,7 +1787,7 @@ requestCredentialRegisterInfo(requestInfo: string, callback: AsyncCallback<{ reg
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | requestInfo | string | 是 | 请求凭据信息。最大长度255字符。 |
-| callback | AsyncCallback&lt;{ registerInfo: string }&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<{ registerInfo: string }> | 是 |  |
 
 **错误码：**
 
@@ -1774,6 +1848,8 @@ setUserOperation(operateAction: number, params: string): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-setUserOperation(operateAction: number, params: string): void--><!--Device-DeviceManager-setUserOperation(operateAction: number, params: string): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1791,7 +1867,7 @@ setUserOperation(operateAction: number, params: string): void
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified params is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 **示例：**
 
@@ -1834,6 +1910,8 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-startDeviceDiscovery(subscribeInfo: SubscribeInfo): void--><!--Device-DeviceManager-startDeviceDiscovery(subscribeInfo: SubscribeInfo): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1842,7 +1920,7 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscribeInfo | SubscribeInfo | 是 | 发现信息。 |
+| subscribeInfo | [SubscribeInfo](arkts-distributedservice-subscribeinfo-i-sys.md) | 是 | 发现信息。 |
 
 **错误码：**
 
@@ -1850,7 +1928,7 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo): void
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified param is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-发现业务不可用) | Discovery unavailable. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
@@ -1907,6 +1985,8 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void--><!--Device-DeviceManager-startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -1915,7 +1995,7 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscribeInfo | SubscribeInfo | 是 | 发现信息。 |
+| subscribeInfo | [SubscribeInfo](arkts-distributedservice-subscribeinfo-i-sys.md) | 是 | 发现信息。 |
 | filterOptions | string | 否 | 发现设备过滤信息。可选，默认为undefined，发现未上线设备。长度范围1~255字符。 |
 
 **错误码：**
@@ -1924,7 +2004,7 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified param is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-发现业务不可用) | Discovery unavailable. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
@@ -2003,6 +2083,8 @@ stopDeviceDiscovery(subscribeId: number): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-stopDeviceDiscovery(subscribeId: number): void--><!--Device-DeviceManager-stopDeviceDiscovery(subscribeId: number): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -2019,7 +2101,7 @@ stopDeviceDiscovery(subscribeId: number): void
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified param is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
 **示例：**
@@ -2056,6 +2138,8 @@ unAuthenticateDevice(deviceInfo: DeviceInfo): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-unAuthenticateDevice(deviceInfo: DeviceInfo): void--><!--Device-DeviceManager-unAuthenticateDevice(deviceInfo: DeviceInfo): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -2064,7 +2148,7 @@ unAuthenticateDevice(deviceInfo: DeviceInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceInfo | DeviceInfo | 是 | 设备信息。 |
+| deviceInfo | [DeviceInfo](../../apis-driver-development-kit/arkts-apis/arkts-driverdevelopment-deviceinfo-i-sys.md) | 是 | 设备信息。 |
 
 **错误码：**
 
@@ -2072,7 +2156,7 @@ unAuthenticateDevice(deviceInfo: DeviceInfo): void
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
 **示例：**
@@ -2121,6 +2205,8 @@ unPublishDeviceDiscovery(publishId: number): void
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-unPublishDeviceDiscovery(publishId: number): void--><!--Device-DeviceManager-unPublishDeviceDiscovery(publishId: number): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -2137,7 +2223,7 @@ unPublishDeviceDiscovery(publishId: number): void
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
 **示例：**
@@ -2172,6 +2258,8 @@ verifyAuthInfo(authInfo: AuthInfo, callback: AsyncCallback<{ deviceId: string, l
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-verifyAuthInfo(authInfo: AuthInfo, callback: AsyncCallback<{ deviceId: string, level: number }>): void--><!--Device-DeviceManager-verifyAuthInfo(authInfo: AuthInfo, callback: AsyncCallback<{ deviceId: string, level: number }>): void-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -2180,8 +2268,8 @@ verifyAuthInfo(authInfo: AuthInfo, callback: AsyncCallback<{ deviceId: string, l
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| authInfo | AuthInfo | 是 | 认证信息。 |
-| callback | AsyncCallback&lt;{ deviceId: string, level: number }&gt; | 是 |  |
+| authInfo | [AuthInfo](arkts-distributedservice-authinfo-i-sys.md) | 是 | 认证信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<{ deviceId: string, level: number }> | 是 |  |
 
 **错误码：**
 

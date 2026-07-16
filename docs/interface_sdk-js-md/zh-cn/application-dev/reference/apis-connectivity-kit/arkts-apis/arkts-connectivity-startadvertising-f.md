@@ -1,5 +1,11 @@
 # startAdvertising
 
+## 导入模块
+
+```TypeScript
+import { advertising } from '@kit.ConnectivityKit';
+```
+
 ## startAdvertising
 
 ```TypeScript
@@ -14,19 +20,21 @@ function startAdvertising(advertisingParams: AdvertisingParams): Promise<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-advertising-function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>--><!--Device-advertising-function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| advertisingParams | AdvertisingParams | 是 | 表示广播参数。 |
+| advertisingParams | [AdvertisingParams](arkts-connectivity-advertisingparams-i.md) | 是 | 表示广播参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | 返回广播句柄promise对象。 |
+| Promise<number> | 返回广播句柄promise对象。 |
 
 **错误码：**
 

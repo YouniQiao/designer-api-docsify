@@ -4,7 +4,15 @@ ArkTS语言。
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare namespace lang--><!--Device-unnamed-declare namespace lang-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { Retention, RetentionPolicy } from '@kit.ArkTS';
+```
 
 ## 汇总
 

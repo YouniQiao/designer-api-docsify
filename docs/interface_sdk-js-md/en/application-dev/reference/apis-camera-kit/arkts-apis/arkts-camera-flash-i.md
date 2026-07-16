@@ -1,11 +1,12 @@
 # Flash
 
-Flash extends [FlashQuery](arkts-camera-flashquery-i.md)
-Provides APIs related to the flash.
+Flash extends [FlashQuery](arkts-camera-flashquery-i.md)Provides APIs related to the flash.
 
 **Inheritance/Implementation:** Flash extends [FlashQuery](arkts-camera-flashquery-i.md)
 
 **Since:** 11
+
+<!--Device-camera-interface Flash extends FlashQuery--><!--Device-camera-interface Flash extends FlashQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -27,13 +28,15 @@ Obtains the flash mode in use.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Flash-getFlashMode(): FlashMode--><!--Device-Flash-getFlashMode(): FlashMode-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| FlashMode | Flash mode obtained. If the operation fails, undefined is returned and an error codedefined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is thrown. |
+| [FlashMode](arkts-camera-flashmode-e.md) | Flash mode obtained. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is thrown. |
 
 **Error codes:**
 
@@ -55,13 +58,15 @@ Unsubscribes flash state change event callback.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-Flash-offFlashStateChange(callback?: Callback<FlashState>): void--><!--Device-Flash-offFlashStateChange(callback?: Callback<FlashState>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;FlashState&gt; | No | Callback used to get the flash state change. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<FlashState> | No | Callback used to get the flash state change. |
 
 ## onFlashStateChange
 
@@ -77,13 +82,15 @@ Subscribes flash state change event callback.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-Flash-onFlashStateChange(callback: Callback<FlashState>): void--><!--Device-Flash-onFlashStateChange(callback: Callback<FlashState>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;FlashState&gt; | Yes | Callback used to get the flash state change. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<FlashState> | Yes | Callback used to get the flash state change. |
 
 ## setFlashMode
 
@@ -95,12 +102,13 @@ Sets a flash mode.
 
 Before the setting, do the following checks:
 
-1. Use [hasFlash](arkts-camera-flashquery-i.md#hasflash-1) to check whether the camera device has flash.
-2. Use [isFlashModeSupported](arkts-camera-flashquery-i.md#isflashmodesupported-1) to check whether the camera device supports the flash mode.
+1. Use [hasFlash](arkts-camera-flashquery-i.md#hasflash-1) to check whether the camera device has flash.2. Use [isFlashModeSupported](arkts-camera-flashquery-i.md#isflashmodesupported-1) to check whether the camera device supports the flash mode.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-Flash-setFlashMode(flashMode: FlashMode): void--><!--Device-Flash-setFlashMode(flashMode: FlashMode): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -108,7 +116,7 @@ Before the setting, do the following checks:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flashMode | FlashMode | Yes | Flash mode. If the input parameter is null or undefined, it is treated as 0 andthe flash is turned off. |
+| flashMode | [FlashMode](arkts-camera-flashmode-e.md) | Yes | Flash mode. If the input parameter is null or undefined, it is treated as 0 and the flash is turned off. |
 
 **Error codes:**
 

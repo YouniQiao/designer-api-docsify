@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface ExtensionAbility--><!--Device-unnamed-export interface ExtensionAbility-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -20,6 +22,8 @@ readonly forms: Array<AbilityFormInfo>
 
 **起始版本：** 9
 
+<!--Device-ExtensionAbility-readonly forms: Array<AbilityFormInfo>--><!--Device-ExtensionAbility-readonly forms: Array<AbilityFormInfo>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +39,8 @@ readonly name: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-ExtensionAbility-readonly name: string--><!--Device-ExtensionAbility-readonly name: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 

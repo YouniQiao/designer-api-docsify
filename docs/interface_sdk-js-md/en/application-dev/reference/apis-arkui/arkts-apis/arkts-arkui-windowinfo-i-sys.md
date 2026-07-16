@@ -4,6 +4,8 @@ Describes the window information.
 
 **Since:** 18
 
+<!--Device-window-interface WindowInfo--><!--Device-window-interface WindowInfo-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ abilityName of window
 
 **Since:** 18
 
+<!--Device-WindowInfo-abilityName: string--><!--Device-WindowInfo-abilityName: string-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ Bundle name of the application.
 
 **Since:** 18
 
+<!--Device-WindowInfo-bundleName: string--><!--Device-WindowInfo-bundleName: string-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
@@ -52,12 +58,13 @@ Bundle name of the application.
 isFocused?: boolean
 ```
 
-Whether the window gains focus. **true** if the window gains focus, **false** otherwise. The return value is the
-same as that of the [isFocused()](arkts-arkui-window-i.md#isfocused-1) API.
+Whether the window gains focus. **true** if the window gains focus, **false** otherwise. The return value is the same as that of the [isFocused()](arkts-arkui-window-i.md#isfocused-1) API.
 
 **Type:** boolean
 
 **Since:** 18
+
+<!--Device-WindowInfo-isFocused?: boolean--><!--Device-WindowInfo-isFocused?: boolean-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -75,6 +82,8 @@ Window size.
 
 **Since:** 18
 
+<!--Device-WindowInfo-rect: Rect--><!--Device-WindowInfo-rect: Rect-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
@@ -91,6 +100,8 @@ Window ID.
 
 **Since:** 18
 
+<!--Device-WindowInfo-windowId: int--><!--Device-WindowInfo-windowId: int-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
@@ -106,6 +117,8 @@ Window mode.
 **Type:** WindowStatusType
 
 **Since:** 18
+
+<!--Device-WindowInfo-windowStatusType: WindowStatusType--><!--Device-WindowInfo-windowStatusType: WindowStatusType-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

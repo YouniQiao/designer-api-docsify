@@ -18,6 +18,8 @@ Switches the uninstall state of an application. This API is independent of EDM a
 
 **Required permissions:** ohos.permission.CHANGE_BUNDLE_UNINSTALL_STATE
 
+<!--Device-bundleManager-function switchUninstallState(bundleName: string, state: boolean): void--><!--Device-bundleManager-function switchUninstallState(bundleName: string, state: boolean): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Switches the uninstall state of an application. This API is independent of EDM a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
-| state | boolean | Yes | Whether the application can be uninstalled. **true** if the application can beuninstalled, **false** otherwise. |
+| state | boolean | Yes | Whether the application can be uninstalled. **true** if the application can be uninstalled, **false** otherwise. |
 
 **Error codes:**
 

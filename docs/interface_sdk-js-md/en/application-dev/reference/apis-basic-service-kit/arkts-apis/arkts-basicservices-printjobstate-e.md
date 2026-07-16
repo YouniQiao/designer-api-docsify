@@ -4,6 +4,8 @@ Enumerates the print job states.
 
 **Since:** 14
 
+<!--Device-print-enum PrintJobState--><!--Device-print-enum PrintJobState-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## PRINT_JOB_PREPARE
@@ -15,6 +17,8 @@ PRINT_JOB_PREPARE = 0
 The printer is prepared for the print job.
 
 **Since:** 14
+
+<!--Device-PrintJobState-PRINT_JOB_PREPARE = 0--><!--Device-PrintJobState-PRINT_JOB_PREPARE = 0-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -28,6 +32,8 @@ The print job is on the print queue of the printer.
 
 **Since:** 14
 
+<!--Device-PrintJobState-PRINT_JOB_QUEUED = 1--><!--Device-PrintJobState-PRINT_JOB_QUEUED = 1-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## PRINT_JOB_RUNNING
@@ -39,6 +45,8 @@ PRINT_JOB_RUNNING = 2
 The print job is being executed.
 
 **Since:** 14
+
+<!--Device-PrintJobState-PRINT_JOB_RUNNING = 2--><!--Device-PrintJobState-PRINT_JOB_RUNNING = 2-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -52,6 +60,8 @@ The print job is blocked.
 
 **Since:** 14
 
+<!--Device-PrintJobState-PRINT_JOB_BLOCKED = 3--><!--Device-PrintJobState-PRINT_JOB_BLOCKED = 3-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## PRINT_JOB_COMPLETED
@@ -63,6 +73,8 @@ PRINT_JOB_COMPLETED = 4
 The print job is complete.
 
 **Since:** 14
+
+<!--Device-PrintJobState-PRINT_JOB_COMPLETED = 4--><!--Device-PrintJobState-PRINT_JOB_COMPLETED = 4-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 

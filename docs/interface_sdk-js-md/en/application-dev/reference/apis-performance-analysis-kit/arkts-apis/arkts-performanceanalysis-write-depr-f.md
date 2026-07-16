@@ -14,6 +14,8 @@ Writes event information to the event file of the current day. This API uses a p
 
 **Substitutes:** write
 
+<!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object): Promise<void>--><!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object): Promise<void>-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Parameters:**
@@ -21,14 +23,14 @@ Writes event information to the event file of the current day. This API uses a p
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventName | string | Yes | Application event name. |
-| eventType | EventType | Yes | Application event type. |
+| eventType | [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-eventtype-t-sys.md) | Yes | Application event type. |
 | keyValues | object | Yes | Application event key-value pair params. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to asynchronously process the callback in the **then()** and **catch()**methods when event writing succeeded or failed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to asynchronously process the callback in the **then()** and **catch()** methods when event writing succeeded or failed. |
 
 **Example**
 
@@ -57,14 +59,15 @@ hiAppEvent.write("test_event", hiAppEvent.EventType.FAULT, eventParams).then(() 
 function write(eventName: string, eventType: EventType, keyValues: object, callback: AsyncCallback<void>): void
 ```
 
-Writes event information to the event file of the current day. This API uses an asynchronous callback to return the
-result.
+Writes event information to the event file of the current day. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
 **Substitutes:** write
+
+<!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object, callback: AsyncCallback<void>): void--><!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -73,9 +76,9 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventName | string | Yes | Application event name. |
-| eventType | EventType | Yes | Application event type. |
+| eventType | [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-eventtype-t-sys.md) | Yes | Application event type. |
 | keyValues | object | Yes | Application event key-value pair params. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback function. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback function. |
 
 **Example**
 

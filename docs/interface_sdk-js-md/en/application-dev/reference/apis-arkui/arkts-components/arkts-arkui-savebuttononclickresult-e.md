@@ -4,6 +4,8 @@ Enumerates the authorization results after the **SaveButton** component is tappe
 
 **Since:** 10
 
+<!--Device-unnamed-declare enum SaveButtonOnClickResult--><!--Device-unnamed-declare enum SaveButtonOnClickResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SUCCESS
@@ -19,6 +21,8 @@ Authorization is successful.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SaveButtonOnClickResult-SUCCESS = 0--><!--Device-SaveButtonOnClickResult-SUCCESS = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ Authorization fails.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SaveButtonOnClickResult-TEMPORARY_AUTHORIZATION_FAILED = 1--><!--Device-SaveButtonOnClickResult-TEMPORARY_AUTHORIZATION_FAILED = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CANCELED_BY_USER
@@ -44,15 +50,15 @@ Authorization fails.
 CANCELED_BY_USER = 2
 ```
 
-Authorization is canceled by the user through a dialog box after the **SaveButton** component is clicked. This
-value is returned in the callback result only when [userCancelEvent](SaveButtonAttribute#userCancelEvent) is
-triggered with its parameter set to **true**.
+Authorization is canceled by the user through a dialog box after the **SaveButton** component is clicked. This value is returned in the callback result only when [userCancelEvent](SaveButtonAttribute#userCancelEvent) is triggered with its parameter set to **true**.
 
 **Since:** 21
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-SaveButtonOnClickResult-CANCELED_BY_USER = 2--><!--Device-SaveButtonOnClickResult-CANCELED_BY_USER = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

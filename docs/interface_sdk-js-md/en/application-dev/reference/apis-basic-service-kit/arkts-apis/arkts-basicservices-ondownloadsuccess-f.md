@@ -16,6 +16,8 @@ Subscribes to the pre-download completion events. This API uses an asynchronous 
 
 **Since:** 23
 
+<!--Device-cacheDownload-function onDownloadSuccess(url: string, callback: Callback<void>): void--><!--Device-cacheDownload-function onDownloadSuccess(url: string, callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **Parameters:**
@@ -23,7 +25,7 @@ Subscribes to the pre-download completion events. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | Callback URL to be registered, with a maximum of 8,192 bytes. |
-| callback | Callback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 

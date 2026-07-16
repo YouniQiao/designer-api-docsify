@@ -4,6 +4,8 @@ Defines the default or custom style parameters for the **ArcButton** component.
 
 **Since:** 18
 
+<!--Device-unnamed-interface CommonArcButtonOptions--><!--Device-unnamed-interface CommonArcButtonOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Default value: **BlurStyle.NONE**
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-CommonArcButtonOptions-backgroundBlurStyle?: BlurStyle--><!--Device-CommonArcButtonOptions-backgroundBlurStyle?: BlurStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## backgroundColor
@@ -47,6 +51,8 @@ Default value: **Color.Black**
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CommonArcButtonOptions-backgroundColor?: ColorMetrics--><!--Device-CommonArcButtonOptions-backgroundColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -68,6 +74,8 @@ Default value: **Color.White**
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-CommonArcButtonOptions-fontColor?: ColorMetrics--><!--Device-CommonArcButtonOptions-fontColor?: ColorMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## fontFamily
@@ -83,6 +91,8 @@ Font family of the arc button.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CommonArcButtonOptions-fontFamily?: string | Resource--><!--Device-CommonArcButtonOptions-fontFamily?: string | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -102,6 +112,8 @@ Default value: **{start:24vp, top: 10vp,end: 24vp, bottom:16vp }**
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-CommonArcButtonOptions-fontMargin?: LocalizedMargin--><!--Device-CommonArcButtonOptions-fontMargin?: LocalizedMargin-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## fontSize
@@ -119,6 +131,8 @@ Default value: **19fp**
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CommonArcButtonOptions-fontSize?: LengthMetrics--><!--Device-CommonArcButtonOptions-fontSize?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -138,6 +152,8 @@ Default value: **FontStyle.Normal**
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-CommonArcButtonOptions-fontStyle?: FontStyle--><!--Device-CommonArcButtonOptions-fontStyle?: FontStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## label
@@ -153,6 +169,8 @@ Text displayed on the arc button.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CommonArcButtonOptions-label?: ResourceStr--><!--Device-CommonArcButtonOptions-label?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -170,6 +188,8 @@ Callback triggered by click actions on the arc button.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-CommonArcButtonOptions-onClick?: Callback<ClickEvent>--><!--Device-CommonArcButtonOptions-onClick?: Callback<ClickEvent>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## onTouch
@@ -185,6 +205,8 @@ Callback triggered by touch actions on the arc button.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CommonArcButtonOptions-onTouch?: Callback<TouchEvent>--><!--Device-CommonArcButtonOptions-onTouch?: Callback<TouchEvent>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -203,6 +225,8 @@ Default value: **ArcButtonPosition.BOTTOM_EDGE**
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CommonArcButtonOptions-position?: ArcButtonPosition--><!--Device-CommonArcButtonOptions-position?: ArcButtonPosition-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -224,6 +248,8 @@ Default value: **Color.White**
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-CommonArcButtonOptions-pressedFontColor?: ColorMetrics--><!--Device-CommonArcButtonOptions-pressedFontColor?: ColorMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## progressConfig
@@ -232,13 +258,7 @@ Default value: **Color.White**
 progressConfig?: ArcButtonProgressConfig
 ```
 
-Parameters for the progress indicator of the **ArcButton** component. If this property is not set, the
-**ArcButton** component is displayed as a button (see
-[Example 1](../../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#example-1-setting-an-arc-button)
-). If this property is set, the component is displayed as a progress indicator (see
-[Example 2](../../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#example-2-setting-a-device-progress-indicator-button)
-). The progress indicator style is not affected by the settings of the
-[ArcButtonStyleMode](arkts-arkui-arcbuttonstylemode-e.md) attribute.
+Parameters for the progress indicator of the **ArcButton** component. If this property is not set, the **ArcButton** component is displayed as a button (see [Example 1](../../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#example-1-setting-an-arc-button)). If this property is set, the component is displayed as a progress indicator (see [Example 2](../../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#example-2-setting-a-device-progress-indicator-button)). The progress indicator style is not affected by the settings of the [ArcButtonStyleMode](arkts-arkui-arcbuttonstylemode-e.md) attribute.
 
 Default value: default values of all properties of [ArcButtonProgressConfig](arkts-arkui-arcbuttonprogressconfig-c.md)
 
@@ -249,6 +269,8 @@ Default value: default values of all properties of [ArcButtonProgressConfig](ark
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-CommonArcButtonOptions-progressConfig?: ArcButtonProgressConfig--><!--Device-CommonArcButtonOptions-progressConfig?: ArcButtonProgressConfig-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -267,6 +289,8 @@ Default value: **Color.Black**
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CommonArcButtonOptions-shadowColor?: ColorMetrics--><!--Device-CommonArcButtonOptions-shadowColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -288,6 +312,8 @@ The value **true** means to enable the shadow, and **false** means the opposite.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-CommonArcButtonOptions-shadowEnabled?: boolean--><!--Device-CommonArcButtonOptions-shadowEnabled?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## status
@@ -306,6 +332,8 @@ Default value: **ArcButtonStatus.NORMAL**
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-CommonArcButtonOptions-status?: ArcButtonStatus--><!--Device-CommonArcButtonOptions-status?: ArcButtonStatus-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## styleMode
@@ -314,8 +342,7 @@ Default value: **ArcButtonStatus.NORMAL**
 styleMode?: ArcButtonStyleMode
 ```
 
-Style mode for the arc button. This style cannot be used together with the
-[ArcButtonProgressConfig](arkts-arkui-arcbuttonprogressconfig-c.md) style.
+Style mode for the arc button. This style cannot be used together with the [ArcButtonProgressConfig](arkts-arkui-arcbuttonprogressconfig-c.md) style.
 
 Default value: **ArcButtonStyleMode.EMPHASIZED_LIGHT**
 
@@ -324,6 +351,8 @@ Default value: **ArcButtonStyleMode.EMPHASIZED_LIGHT**
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CommonArcButtonOptions-styleMode?: ArcButtonStyleMode--><!--Device-CommonArcButtonOptions-styleMode?: ArcButtonStyleMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 

@@ -4,6 +4,8 @@ Represents a device screen lock password policy.
 
 **Since:** 12
 
+<!--Device-securityManager-export interface PasswordPolicy--><!--Device-securityManager-export interface PasswordPolicy-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## Modules to Import
@@ -18,14 +20,15 @@ import { securityManager } from '@kit.MDMKit';
 additionalDescription?: string
 ```
 
-Password complexity description, for example, "The password must contain 8 to 30 characters consisting of letters
-, digits, and special characters".
+Password complexity description, for example, "The password must contain 8 to 30 characters consisting of letters, digits, and special characters".
 
 **Type:** string
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PasswordPolicy-additionalDescription?: string--><!--Device-PasswordPolicy-additionalDescription?: string-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -43,6 +46,8 @@ Regular expression for password complexity.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PasswordPolicy-complexityRegex?: string--><!--Device-PasswordPolicy-complexityRegex?: string-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## passwordAlgs
@@ -59,6 +64,8 @@ The encryption algorithm of the password.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PasswordPolicy-passwordAlgs?: PasswordAlgs--><!--Device-PasswordPolicy-passwordAlgs?: PasswordAlgs-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## validityPeriod
@@ -74,6 +81,8 @@ Password validity period, in ms.
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PasswordPolicy-validityPeriod?: long--><!--Device-PasswordPolicy-validityPeriod?: long-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

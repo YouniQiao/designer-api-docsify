@@ -4,6 +4,8 @@ Represents the same-layer rendering configuration of the **Web** component.
 
 **Since:** 16
 
+<!--Device-unnamed-declare interface EmbedOptions--><!--Device-unnamed-declare interface EmbedOptions-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## supportCssDisplayChange
@@ -16,8 +18,7 @@ Whether the same-layer rendering visibility API supports the display attribute.
 
 By default, the visibility status of same-layer tags relative to the viewport is supported.
 
-If this attribute is set to **true**, CSS attributes can be displayed, including visibility, display, width, and
-height.
+If this attribute is set to **true**, CSS attributes can be displayed, including visibility, display, width, and height.
 
 Otherwise, CSS attributes are not displayed, and only same-layer tags are visible relative to the viewport.
 
@@ -26,6 +27,8 @@ Otherwise, CSS attributes are not displayed, and only same-layer tags are visibl
 **Default:** false
 
 **Since:** 20
+
+<!--Device-EmbedOptions-supportCssDisplayChange?: boolean--><!--Device-EmbedOptions-supportCssDisplayChange?: boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -37,13 +40,11 @@ supportDefaultIntrinsicSize?: boolean
 
 Whether a same-layer rendering element supports the fixed size of 300 × 150.
 
-When the size of an element is set using CSS on the HTML5 side, the size of the same-layer rendering element uses
-the CSS size. Otherwise, the size is fixed.
+When the size of an element is set using CSS on the HTML5 side, the size of the same-layer rendering element uses the CSS size. Otherwise, the size is fixed.
 
 If the value is **true**, the fixed size is 300 × 150.
 
-If the value is **false** and the CSS size is not set on the HTML5 side, the same-layer rendering elements are not
-rendered.
+If the value is **false** and the CSS size is not set on the HTML5 side, the same-layer rendering elements are not rendered.
 
 Default value: **false**.
 
@@ -54,6 +55,8 @@ Unit: pixels.
 **Default:** false
 
 **Since:** 16
+
+<!--Device-EmbedOptions-supportDefaultIntrinsicSize?: boolean--><!--Device-EmbedOptions-supportDefaultIntrinsicSize?: boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

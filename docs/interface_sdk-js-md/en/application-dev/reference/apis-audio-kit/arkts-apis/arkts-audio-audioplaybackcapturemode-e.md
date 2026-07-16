@@ -4,6 +4,8 @@ Defines mode for playback capture, each mode means different target streams to c
 
 **Since:** 26.0.0
 
+<!--Device-audio-enum AudioPlaybackCaptureMode--><!--Device-audio-enum AudioPlaybackCaptureMode-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 
 ## MODE_DEFAULT
@@ -17,6 +19,8 @@ Default mode. Capture most of the audio streams, except tone streams and privacy
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioPlaybackCaptureMode-MODE_DEFAULT = 0x0--><!--Device-AudioPlaybackCaptureMode-MODE_DEFAULT = 0x0-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 
@@ -32,6 +36,8 @@ Media mode. Capture media, voice message and also unknown streams.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AudioPlaybackCaptureMode-MODE_MEDIA = 0x1--><!--Device-AudioPlaybackCaptureMode-MODE_MEDIA = 0x1-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 
 ## MODE_EXCLUDING_SELF
@@ -45,6 +51,8 @@ Excluding self mode. Capture streams excluding the audio played by application i
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioPlaybackCaptureMode-MODE_EXCLUDING_SELF = 0x8000--><!--Device-AudioPlaybackCaptureMode-MODE_EXCLUDING_SELF = 0x8000-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 

@@ -18,19 +18,21 @@ Obtains a CameraManager instance. This API returns the result synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-camera-function getCameraManager(context: Context): CameraManager--><!--Device-camera-function getCameraManager(context: Context): CameraManager-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CameraManager | CameraManager instance obtained. |
+| [CameraManager](arkts-camera-cameramanager-i.md) | CameraManager instance obtained. |
 
 **Error codes:**
 

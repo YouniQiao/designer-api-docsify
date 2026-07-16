@@ -1,5 +1,11 @@
 # getBatteryStats（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { batteryStats } from '@kit.BasicServicesKit';
+```
+
 ## getBatteryStats
 
 ```TypeScript
@@ -10,6 +16,8 @@ function getBatteryStats(): Promise<Array<BatteryStatsInfo>>
 
 **起始版本：** 8
 
+<!--Device-batteryStats-function getBatteryStats(): Promise<Array<BatteryStatsInfo>>--><!--Device-batteryStats-function getBatteryStats(): Promise<Array<BatteryStatsInfo>>-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -18,7 +26,7 @@ function getBatteryStats(): Promise<Array<BatteryStatsInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;BatteryStatsInfo&gt;&gt; | Promise对象，返回耗电信息列表。 |
+| Promise<Array<BatteryStatsInfo>> | Promise对象，返回耗电信息列表。 |
 
 **错误码：**
 
@@ -51,6 +59,8 @@ function getBatteryStats(callback: AsyncCallback<Array<BatteryStatsInfo>>): void
 
 **起始版本：** 8
 
+<!--Device-batteryStats-function getBatteryStats(callback: AsyncCallback<Array<BatteryStatsInfo>>): void--><!--Device-batteryStats-function getBatteryStats(callback: AsyncCallback<Array<BatteryStatsInfo>>): void-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -59,7 +69,7 @@ function getBatteryStats(callback: AsyncCallback<Array<BatteryStatsInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;BatteryStatsInfo&gt;&gt; | 是 | 回调函数。当获取耗电信息列表成功，err为undefined，data为获取到的Array&lt;[BatteryStatsInfo](arkts-basicservices-batterystatsinfo-i-sys.md)&gt;&gt;；否则为错误对象；AsyncCallback封装了一个BatteryStatsInfo类型的接口。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<BatteryStatsInfo>> | 是 | 回调函数。当获取耗电信息列表成功，err为undefined，data为获取到的Array&lt;[BatteryStatsInfo](arkts-basicservices-batterystatsinfo-i-sys.md)&gt;&gt;；否则为错误对象；AsyncCallback封装了一个BatteryStatsInfo类型的接口。 |
 
 **错误码：**
 

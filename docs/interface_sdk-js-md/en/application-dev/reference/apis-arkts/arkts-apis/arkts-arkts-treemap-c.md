@@ -1,10 +1,10 @@
 # TreeMap
 
-TreeMap stores key-value (KV) pairs. Each key must be unique and have only one value.
-TreeMap is implemented using a red-black tree, which is a binary search tree where keys
-are stored in sorted order for efficient insertion and removal.
+TreeMap stores key-value (KV) pairs. Each key must be unique and have only one value.TreeMap is implemented using a red-black tree, which is a binary search tree where keys are stored in sorted order for efficient insertion and removal.
 
 **Since:** 8
+
+<!--Device-unnamed-declare class TreeMap<K, V>--><!--Device-unnamed-declare class TreeMap<K, V>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,13 +26,15 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TreeMap-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-TreeMap-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<[K, V]> | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
 
 **Error codes:**
 
@@ -95,6 +97,8 @@ Clear all element groups in the map
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TreeMap-clear(): void--><!--Device-TreeMap-clear(): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
@@ -127,13 +131,15 @@ A constructor used to create a TreeMap object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TreeMap-constructor(comparator?: (firstValue: K, secondValue: K) => boolean)--><!--Device-TreeMap-constructor(comparator?: (firstValue: K, secondValue: K) => boolean)-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| comparator | (firstValue: K, secondValue: K) =&gt; boolean | No | comparatorcomparator (Optional) User-defined comparison functions.firstValue (required) previous element.secondValue (required) next element. |
+| comparator | (firstValue: K, secondValue: K) => boolean | No | comparator comparator (Optional) User-defined comparison functions.firstValue (required) previous element.secondValue (required) next element. |
 
 **Error codes:**
 
@@ -196,12 +202,13 @@ console.info("length:", ts1.length); // length: 2
 entries(): IterableIterator<[K, V]>
 ```
 
-Returns a new Iterator object that contains the [key, value] pairs for each element in the Map object in insertion
-order
+Returns a new Iterator object that contains the [key, value] pairs for each element in the Map object in insertion order
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TreeMap-entries(): IterableIterator<[K, V]>--><!--Device-TreeMap-entries(): IterableIterator<[K, V]>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -209,7 +216,7 @@ order
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | @throws { BusinessError } 10200011 - The entries method cannot be bound. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<[K, V]> | @throws { BusinessError } 10200011 - The entries method cannot be bound. |
 
 **Error codes:**
 
@@ -253,12 +260,13 @@ while(!t.done) {
 forEach(callbackFn: (value?: V, key?: K, map?: TreeMap<K, V>) => void, thisArg?: Object): void
 ```
 
-Executes the given callback function once for each real key in the map.
-It does not perform functions on deleted keys
+Executes the given callback function once for each real key in the map.It does not perform functions on deleted keys
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TreeMap-forEach(callbackFn: (value?: V, key?: K, map?: TreeMap<K, V>) => void, thisArg?: Object): void--><!--Device-TreeMap-forEach(callbackFn: (value?: V, key?: K, map?: TreeMap<K, V>) => void, thisArg?: Object): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -266,8 +274,8 @@ It does not perform functions on deleted keys
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value?: V, key?: K, map?: TreeMap&lt;K, V&gt;) =&gt; void | Yes | callbackFncallbackFn (required) A function that accepts up to three arguments.The function to be called for each element. |
-| thisArg | Object | No | thisArgthisArg (Optional) The value to be used as this value for when callbackFn is called.If thisArg is omitted, undefined is used as the this value. |
+| callbackFn | (value?: V, key?: K, map?: TreeMap<K, V>) => void | Yes | callbackFn callbackFn (required) A function that accepts up to three arguments.The function to be called for each element. |
+| thisArg | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | No | thisArg thisArg (Optional) The value to be used as this value for when callbackFn is called.If thisArg is omitted, undefined is used as the this value. |
 
 **Error codes:**
 
@@ -314,6 +322,8 @@ Returns a specified element in a Map object, or undefined if there is no corresp
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TreeMap-get(key: K): V--><!--Device-TreeMap-get(key: K): V-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -351,12 +361,13 @@ console.info("result:", result); // result: 356
 getFirstKey(): K
 ```
 
-Obtains the first sorted key in the treemap.
-Or returns undefined if tree map is empty
+Obtains the first sorted key in the treemap.Or returns undefined if tree map is empty
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TreeMap-getFirstKey(): K--><!--Device-TreeMap-getFirstKey(): K-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -390,12 +401,13 @@ console.info("result:", result); // result: sparrow
 getHigherKey(key: K): K
 ```
 
-Returns the least element greater than or equal to the specified key
-if the key does not exist, undefined is returned
+Returns the least element greater than or equal to the specified key if the key does not exist, undefined is returned
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TreeMap-getHigherKey(key: K): K--><!--Device-TreeMap-getHigherKey(key: K): K-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -436,12 +448,13 @@ console.info("result:", result); // result: 4
 getLastKey(): K
 ```
 
-Obtains the last sorted key in the treemap.
-Or returns undefined if tree map is empty
+Obtains the last sorted key in the treemap.Or returns undefined if tree map is empty
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TreeMap-getLastKey(): K--><!--Device-TreeMap-getLastKey(): K-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -475,12 +488,13 @@ console.info("result:", result); // result: squirrel
 getLowerKey(key: K): K
 ```
 
-Returns the greatest element smaller than or equal to the specified key
-if the key does not exist, undefined is returned
+Returns the greatest element smaller than or equal to the specified key if the key does not exist, undefined is returned
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TreeMap-getLowerKey(key: K): K--><!--Device-TreeMap-getLowerKey(key: K): K-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -527,6 +541,8 @@ Returns whether a key is contained in this map
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TreeMap-hasKey(key: K): boolean--><!--Device-TreeMap-hasKey(key: K): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -568,6 +584,8 @@ Returns whether a value is contained in this map
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TreeMap-hasValue(value: V): boolean--><!--Device-TreeMap-hasValue(value: V): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -611,6 +629,8 @@ Returns whether the Map object contains elements
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TreeMap-isEmpty(): boolean--><!--Device-TreeMap-isEmpty(): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -646,13 +666,15 @@ Returns a new Iterator object that contains the keys contained in this map
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TreeMap-keys(): IterableIterator<K>--><!--Device-TreeMap-keys(): IterableIterator<K>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;K&gt; | @throws { BusinessError } 10200011 - The keys method cannot be bound. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<K> | @throws { BusinessError } 10200011 - The keys method cannot be bound. |
 
 **Error codes:**
 
@@ -687,6 +709,8 @@ Remove a specified element from a Map object
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TreeMap-remove(key: K): V--><!--Device-TreeMap-remove(key: K): V-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -731,6 +755,8 @@ Replace the old value by new value corresponding to the specified key
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TreeMap-replace(key: K, newValue: V): boolean--><!--Device-TreeMap-replace(key: K, newValue: V): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -774,6 +800,8 @@ Adds or updates a(new) key-value pair with a key and value specified for the Map
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TreeMap-set(key: K, value: V): Object--><!--Device-TreeMap-set(key: K, value: V): Object-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -787,7 +815,7 @@ Adds or updates a(new) key-value pair with a key and value specified for the Map
 
 | Type | Description |
 | --- | --- |
-| Object | the map object after set |
+| [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | the map object after set |
 
 **Error codes:**
 
@@ -816,13 +844,15 @@ Adds all element groups in one map to another map
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TreeMap-setAll(map: TreeMap<K, V>): void--><!--Device-TreeMap-setAll(map: TreeMap<K, V>): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| map | TreeMap&lt;K, V&gt; | Yes | map map the Map object to add members |
+| map | [TreeMap](arkts-arkts-treemap-c.md)<K, V> | Yes | map map the Map object to add members |
 
 **Error codes:**
 
@@ -861,13 +891,15 @@ Returns a new Iterator object that contains the values contained in this map
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TreeMap-values(): IterableIterator<V>--><!--Device-TreeMap-values(): IterableIterator<V>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;V&gt; | @throws { BusinessError } 10200011 - The values method cannot be bound. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<V> | @throws { BusinessError } 10200011 - The values method cannot be bound. |
 
 **Error codes:**
 
@@ -903,6 +935,8 @@ Gets the element number of the TreeMap.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TreeMap-length: number--><!--Device-TreeMap-length: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

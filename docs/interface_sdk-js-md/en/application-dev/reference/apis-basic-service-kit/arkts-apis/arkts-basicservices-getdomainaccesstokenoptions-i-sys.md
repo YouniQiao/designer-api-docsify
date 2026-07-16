@@ -4,6 +4,8 @@ Defines the options for obtaining a domain access token.
 
 **Since:** 10
 
+<!--Device-osAccount-interface GetDomainAccessTokenOptions--><!--Device-osAccount-interface GetDomainAccessTokenOptions-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Service parameters customized by the service party based on the request protocol
 
 **Since:** 10
 
+<!--Device-GetDomainAccessTokenOptions-businessParams: Record<string, Object>--><!--Device-GetDomainAccessTokenOptions-businessParams: Record<string, Object>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Unique identifier of the caller.
 **Type:** number
 
 **Since:** 10
+
+<!--Device-GetDomainAccessTokenOptions-callerUid: int--><!--Device-GetDomainAccessTokenOptions-callerUid: int-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -58,6 +64,8 @@ Domain account information.
 
 **Since:** 10
 
+<!--Device-GetDomainAccessTokenOptions-domainAccountInfo: DomainAccountInfo--><!--Device-GetDomainAccessTokenOptions-domainAccountInfo: DomainAccountInfo-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Token of the domain account.
 **Type:** Uint8Array
 
 **Since:** 10
+
+<!--Device-GetDomainAccessTokenOptions-domainAccountToken: Uint8Array--><!--Device-GetDomainAccessTokenOptions-domainAccountToken: Uint8Array-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 

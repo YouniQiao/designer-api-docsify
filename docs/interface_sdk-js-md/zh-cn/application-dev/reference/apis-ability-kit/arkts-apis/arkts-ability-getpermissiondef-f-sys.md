@@ -1,5 +1,11 @@
 # getPermissionDef（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getPermissionDef
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getPermissionDef(permissionName: string, callback: AsyncCallback<Permis
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundleManager-function getPermissionDef(permissionName: string, callback: AsyncCallback<PermissionDef>): void--><!--Device-bundleManager-function getPermissionDef(permissionName: string, callback: AsyncCallback<PermissionDef>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -21,7 +29,7 @@ function getPermissionDef(permissionName: string, callback: AsyncCallback<Permis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | permissionName | string | 是 | 表示权限名称。 |
-| callback | AsyncCallback&lt;PermissionDef&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的Array&lt;PermissionDef&gt;；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<PermissionDef> | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的Array&lt;PermissionDef&gt;；否则为错误对象。 |
 
 **错误码：**
 
@@ -68,6 +76,8 @@ function getPermissionDef(permissionName: string): Promise<PermissionDef>
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundleManager-function getPermissionDef(permissionName: string): Promise<PermissionDef>--><!--Device-bundleManager-function getPermissionDef(permissionName: string): Promise<PermissionDef>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -82,7 +92,7 @@ function getPermissionDef(permissionName: string): Promise<PermissionDef>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PermissionDef&gt; | Promise对象，返回Array&lt;PermissionDef&gt;对象。 |
+| Promise<PermissionDef> | Promise对象，返回Array&lt;PermissionDef&gt;对象。 |
 
 **错误码：**
 

@@ -18,6 +18,8 @@ Queries all active print jobs. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function queryAllActivePrintJobs(): Promise<PrintJob[]>--><!--Device-print-function queryAllActivePrintJobs(): Promise<PrintJob[]>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Queries all active print jobs. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PrintJob[]&gt; | Promise used to return a list of all active print jobs. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PrintJob[]> | Promise used to return a list of all active print jobs. |
 
 **Error codes:**
 

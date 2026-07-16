@@ -1,5 +1,11 @@
 # createTrustAnchorsWithKeyStore
 
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
+
 ## createTrustAnchorsWithKeyStore
 
 ```TypeScript
@@ -10,7 +16,9 @@ function createTrustAnchorsWithKeyStore(keystore: Uint8Array, pwd: string): Prom
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cert-function createTrustAnchorsWithKeyStore(keystore: Uint8Array, pwd: string): Promise<Array<X509TrustAnchor>>--><!--Device-cert-function createTrustAnchorsWithKeyStore(keystore: Uint8Array, pwd: string): Promise<Array<X509TrustAnchor>>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -18,14 +26,14 @@ function createTrustAnchorsWithKeyStore(keystore: Uint8Array, pwd: string): Prom
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keystore | Uint8Array | 是 | DER格式的P12文件原始数据。 |
+| keystore | [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 是 | DER格式的P12文件原始数据。 |
 | pwd | string | 是 | 密码。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;X509TrustAnchor&gt;&gt; | Promise对象，返回X509TrustAnchor对象数组。 |
+| Promise<Array<X509TrustAnchor>> | Promise对象，返回X509TrustAnchor对象数组。 |
 
 **错误码：**
 

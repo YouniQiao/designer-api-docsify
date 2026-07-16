@@ -2,10 +2,11 @@
 
 Implements a unit for text layout.
 
-Before calling any of the following APIs, you must use [getGlyphRuns()](arkts-arkgraphics2d-textline-c.md#getglyphruns-1) of the
-[TextLine](arkts-arkgraphics2d-textline-c.md) class to create a **Run** object.
+Before calling any of the following APIs, you must use [getGlyphRuns()](arkts-arkgraphics2d-textline-c.md#getglyphruns-1) of the [TextLine](arkts-arkgraphics2d-textline-c.md) class to create a **Run** object.
 
 **Since:** 12
+
+<!--Device-text-class Run--><!--Device-text-class Run-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -27,19 +28,21 @@ Obtains the glyph width array of each glyph within the specified range of the ru
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Run-getAdvances(range: Range): Array<common2D.Point>--><!--Device-Run-getAdvances(range: Range): Array<common2D.Point>-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | Range | Yes | Range of the glyph position to be obtained. **range.start** indicates the start positionof the range, and **range.end** indicates the range length. If the length is **0**, the range starts from**range.start** and ends at the end of the run. If **range.end** or **range.start** is set to a negativevalue, **null**, or **undefined**, **undefined** is returned. |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | Yes | Range of the glyph position to be obtained. **range.start** indicates the start position of the range, and **range.end** indicates the range length. If the length is **0**, the range starts from **range.start** and ends at the end of the run. If **range.end** or **range.start** is set to a negative value, **null**, or **undefined**, **undefined** is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Returns the glyph width array of each glyph in the run unit relative to thehorizontal direction. In [common2D.Point](arkts-arkgraphics2d-point-i.md), the x valuerepresents the glyph width of each glyph relative to the horizontal direction, in physical pixels (px). The yvalue is a reserved field and returns **0** by default. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<common2D.Point> | Returns the glyph width array of each glyph in the run unit relative to the horizontal direction. In [common2D.Point](arkts-arkgraphics2d-point-i.md), the x value represents the glyph width of each glyph relative to the horizontal direction, in physical pixels (px). The y value is a reserved field and returns **0** by default. |
 
 **Example**
 
@@ -62,6 +65,8 @@ Obtains the **Font** object of this run.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-Run-getFont(): drawing.Font--><!--Device-Run-getFont(): drawing.Font-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -90,6 +95,8 @@ Obtains the number of glyphs in this run.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Run-getGlyphCount(): int--><!--Device-Run-getGlyphCount(): int-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
@@ -117,13 +124,15 @@ Obtains the index of each glyph in this run.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Run-getGlyphs(): Array<int>--><!--Device-Run-getGlyphs(): Array<int>-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Array holding the index of each glyph in the run. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Array holding the index of each glyph in the run. |
 
 **Example**
 
@@ -144,19 +153,21 @@ Obtains the index of each glyph in the specified range of this run.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Run-getGlyphs(range: Range): Array<int>--><!--Device-Run-getGlyphs(range: Range): Array<int>-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | Range | Yes | Range of glyph indices to obtain. **range.start** indicates the starting position of therange, and **range.end** indicates the length of the range. When **range.end** is **0**, glyphs are fetchedfrom **range.start** to the end of the rendered block. If **range.end** or **range.start** is set to anegative value, **null**, or **undefined**, **undefined** is returned. |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | Yes | Range of glyph indices to obtain. **range.start** indicates the starting position of the range, and **range.end** indicates the length of the range. When **range.end** is **0**, glyphs are fetched from **range.start** to the end of the rendered block. If **range.end** or **range.start** is set to a negative value, **null**, or **undefined**, **undefined** is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Array holding the index of each glyph in the run. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Array holding the index of each glyph in the run. |
 
 **Example**
 
@@ -193,25 +204,24 @@ struct Index {
 getImageBounds(): common2D.Rect
 ```
 
-Obtains the image boundaries of the typographic unit. Equivalent to visual boundaries, these boundaries are
-associated with the typographic font, font size, and characters. For example, for the string " a b " (which has a
-space before "a" and a space after "b"), only "a b" is visible to users, and therefore the image boundaries do
-not include these spaces at the beginning and end of the line.
+Obtains the image boundaries of the typographic unit. Equivalent to visual boundaries, these boundaries are associated with the typographic font, font size, and characters. For example, for the string " a b " (which has a space before "a" and a space after "b"), only "a b" is visible to users, and therefore the image boundaries do not include these spaces at the beginning and end of the line.
 
-> **NOTE**
->
-> The following figure shows the image boundaries of the string " a b ".
->
-> ![image_ImageBounds.png](../../../../reference/apis-arkgraphics2d/figures/image_ImageBounds.png)
->
-> The following figure shows the image boundaries of the strings "j" and "E".
->
-> !
+> **NOTE**  
+>  
+> The following figure shows the image boundaries of the string " a b ".  
+>  
+> ![image_ImageBounds.png](../../../../reference/apis-arkgraphics2d/figures/image_ImageBounds.png)  
+>  
+> The following figure shows the image boundaries of the strings "j" and "E".  
+>  
+> !  
 > [image_ImageBounds_Character.png](../../../../reference/apis-arkgraphics2d/figures/image_ImageBounds_Character.png)
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-Run-getImageBounds(): common2D.Rect--><!--Device-Run-getImageBounds(): common2D.Rect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -240,13 +250,15 @@ Obtains the offset of each glyph in this run relative to its index.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Run-getOffsets(): Array<common2D.Point>--><!--Device-Run-getOffsets(): Array<common2D.Point>-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Array holding the offset of each glyph in the run relative to its index. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<common2D.Point> | Array holding the offset of each glyph in the run relative to its index. |
 
 **Example**
 
@@ -267,13 +279,15 @@ Obtains the position of each glyph relative to the respective line in this run.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Run-getPositions(): Array<common2D.Point>--><!--Device-Run-getPositions(): Array<common2D.Point>-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Array holding the position of each glyph relative to the respective line inthe run. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<common2D.Point> | Array holding the position of each glyph relative to the respective line in the run. |
 
 **Example**
 
@@ -294,19 +308,21 @@ Obtains the position array of each glyph relative to the respective line within 
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Run-getPositions(range: Range): Array<common2D.Point>--><!--Device-Run-getPositions(range: Range): Array<common2D.Point>-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | Range | Yes | Range of the glyphs, where **range.start** indicates the start position of the range,and **range.end** indicates the length of the range. If the length is **0**, the range is from**range.start** to the end of the run. If **range.end** or **range.start** is set to a negative value,**null**, or **undefined**, **undefined** is returned. |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | Yes | Range of the glyphs, where **range.start** indicates the start position of the range,and **range.end** indicates the length of the range. If the length is **0**, the range is from **range.start** to the end of the run. If **range.end** or **range.start** is set to a negative value,**null**, or **undefined**, **undefined** is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Array holding the position of each glyph relative to the respective line inthe run. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<common2D.Point> | Array holding the position of each glyph relative to the respective line in the run. |
 
 **Example**
 
@@ -343,12 +359,13 @@ struct Index {
 getStringIndices(range?: Range): Array<number>
 ```
 
-Obtains an array of character indices for glyphs within a specified range of this run, where the indices are
-offsets relative to the entire paragraph.
+Obtains an array of character indices for glyphs within a specified range of this run, where the indices are offsets relative to the entire paragraph.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-Run-getStringIndices(range?: Range): Array<int>--><!--Device-Run-getStringIndices(range?: Range): Array<int>-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -356,13 +373,13 @@ offsets relative to the entire paragraph.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | Range | No | Range of character indices to be obtained. **range.start** indicates the startingposition of the range, and **range.end** indicates the range length. If the length is 0, characters areretrieved from **range.start** to the end of the rendered block. If **range.end** or **range.start** is setto a negative value, **null**, or **undefined**, **undefined** is returned. If this parameter is not passed,the entire run is obtained. |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | No | Range of character indices to be obtained. **range.start** indicates the starting position of the range, and **range.end** indicates the range length. If the length is 0, characters are retrieved from **range.start** to the end of the rendered block. If **range.end** or **range.start** is set to a negative value, **null**, or **undefined**, **undefined** is returned. If this parameter is not passed,the entire run is obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Array of character indices. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Array of character indices. |
 
 **Example**
 
@@ -405,13 +422,15 @@ Obtains the range of glyphs generated by this run.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Run-getStringRange(): Range--><!--Device-Run-getStringRange(): Range-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Range | Range of the glyphs, where **start** indicates the start position of the range, which is theindex relative to the entire paragraph, and **end** indicates the length of the range. |
+| [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | Range of the glyphs, where **start** indicates the start position of the range, which is the index relative to the entire paragraph, and **end** indicates the length of the range. |
 
 **Example**
 
@@ -434,13 +453,15 @@ Obtains the text direction of the run.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Run-getTextDirection(): TextDirection--><!--Device-Run-getTextDirection(): TextDirection-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TextDirection | Obtains the text direction of the run. |
+| [TextDirection](arkts-arkgraphics2d-textdirection-e.md) | Obtains the text direction of the run. |
 
 **Example**
 
@@ -463,13 +484,15 @@ Obtains the text style of this run.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-Run-getTextStyle(): TextStyle--><!--Device-Run-getTextStyle(): TextStyle-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TextStyle | Text style of this run. |
+| [TextStyle](arkts-arkgraphics2d-textstyle-i.md) | Text style of this run. |
 
 ## getTypographicBounds
 
@@ -477,24 +500,24 @@ Obtains the text style of this run.
 getTypographicBounds(): TypographicBounds
 ```
 
-Obtains the typographic boundaries of the typographic unit. These boundaries are associated with the typographic
-font and font size, but not with the characters. For example, for the string " a b " (which has a space before "a
-" and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line.
+Obtains the typographic boundaries of the typographic unit. These boundaries are associated with the typographic font and font size, but not with the characters. For example, for the string " a b " (which has a space before "a" and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line.
 
-> **NOTE**
->
-> The following figure shows the typographic boundaries of the string " a b ".
->
-> ![image_TypographicBounds.png](../../../../reference/apis-arkgraphics2d/figures/image_TypographicBounds.png)
->
-> The following figure shows the typographic boundaries of the strings "j" and "E".
->
-> !
+> **NOTE**  
+>  
+> The following figure shows the typographic boundaries of the string " a b ".  
+>  
+> ![image_TypographicBounds.png](../../../../reference/apis-arkgraphics2d/figures/image_TypographicBounds.png)  
+>  
+> The following figure shows the typographic boundaries of the strings "j" and "E".  
+>  
+> !  
 > [image_TypographicBounds_Character.png](../../../../reference/apis-arkgraphics2d/figures/image_TypographicBounds_Character.png)
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-Run-getTypographicBounds(): TypographicBounds--><!--Device-Run-getTypographicBounds(): TypographicBounds-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -502,7 +525,7 @@ font and font size, but not with the characters. For example, for the string " a
 
 | Type | Description |
 | --- | --- |
-| TypographicBounds | Typographic boundaries of the run. |
+| [TypographicBounds](arkts-arkgraphics2d-typographicbounds-i.md) | Typographic boundaries of the run. |
 
 **Example**
 
@@ -523,6 +546,8 @@ Paints this run on the canvas with the coordinate point (x, y) as the upper left
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Run-paint(canvas: drawing.Canvas, x: double, y: double): void--><!--Device-Run-paint(canvas: drawing.Canvas, x: double, y: double): void-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
@@ -530,8 +555,8 @@ Paints this run on the canvas with the coordinate point (x, y) as the upper left
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | canvas | drawing.Canvas | Yes | Target canvas. |
-| x | number | Yes | Horizontal coordinate of the upper left corner, which is a floating-point value, inphysical pixels (px). |
-| y | number | Yes | Vertical coordinate of the upper left corner, which is a floating-point value, in physicalpixels (px). |
+| x | number | Yes | Horizontal coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
+| y | number | Yes | Vertical coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
 
 **Example**
 

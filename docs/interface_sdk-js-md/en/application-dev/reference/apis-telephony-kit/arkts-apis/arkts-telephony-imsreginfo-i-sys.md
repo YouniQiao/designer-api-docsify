@@ -4,6 +4,8 @@ Indicates IMS registration information.
 
 **Since:** 9
 
+<!--Device-radio-export interface ImsRegInfo--><!--Device-radio-export interface ImsRegInfo-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Indicates the registration status of the ims service.
 
 **Since:** 9
 
+<!--Device-ImsRegInfo-imsRegState: ImsRegState--><!--Device-ImsRegInfo-imsRegState: ImsRegState-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Indicates the mode of ims radio technology.
 **Type:** ImsRegTech
 
 **Since:** 9
+
+<!--Device-ImsRegInfo-imsRegTech: ImsRegTech--><!--Device-ImsRegInfo-imsRegTech: ImsRegTech-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 

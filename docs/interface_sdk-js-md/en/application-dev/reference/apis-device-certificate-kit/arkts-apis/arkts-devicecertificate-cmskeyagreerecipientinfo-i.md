@@ -4,6 +4,8 @@ Represents KeyAgree recipient information for CMS enveloped data.
 
 **Since:** 22
 
+<!--Device-cert-interface CmsKeyAgreeRecipientInfo--><!--Device-cert-interface CmsKeyAgreeRecipientInfo-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
@@ -26,6 +28,8 @@ EC certificate.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-CmsKeyAgreeRecipientInfo-cert: X509Cert--><!--Device-CmsKeyAgreeRecipientInfo-cert: X509Cert-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## digestAlgorithm
@@ -43,6 +47,8 @@ KDF digest algorithm. The default value is **SHA256**.
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-CmsKeyAgreeRecipientInfo-digestAlgorithm?: CmsKeyAgreeRecipientDigestAlgorithm--><!--Device-CmsKeyAgreeRecipientInfo-digestAlgorithm?: CmsKeyAgreeRecipientDigestAlgorithm-End-->
 
 **System capability:** SystemCapability.Security.Cert
 

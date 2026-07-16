@@ -14,13 +14,15 @@ function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void
 
 **替代接口：** getSlots
 
+<!--Device-notification-function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void--><!--Device-notification-function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;NotificationSlot&gt;&gt; | 是 | 以callback形式返回获取此应用程序的所有通知通道的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<NotificationSlot>> | 是 | 以callback形式返回获取此应用程序的所有通知通道的结果。 |
 
 
 ## getSlots
@@ -37,11 +39,13 @@ function getSlots(): Promise<Array<NotificationSlot>>
 
 **替代接口：** getSlots
 
+<!--Device-notification-function getSlots(): Promise<Array<NotificationSlot>>--><!--Device-notification-function getSlots(): Promise<Array<NotificationSlot>>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;NotificationSlot&gt;&gt; | 以Promise形式返回获取此应用程序的所有通知通道的结果。 |
+| Promise<Array<NotificationSlot>> | 以Promise形式返回获取此应用程序的所有通知通道的结果。 |
 

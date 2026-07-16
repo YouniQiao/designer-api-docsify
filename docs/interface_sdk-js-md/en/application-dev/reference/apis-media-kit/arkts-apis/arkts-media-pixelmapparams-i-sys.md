@@ -4,6 +4,8 @@ Defines the format parameters of the video thumbnail to be obtained.
 
 **Since:** 12
 
+<!--Device-media-interface PixelMapParams--><!--Device-media-interface PixelMapParams-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
 ## Modules to Import
@@ -18,14 +20,15 @@ import { media } from '@kit.MediaKit';
 autoFlip?: boolean
 ```
 
-Auto flip the thumbnail when video has mirror attribute (Vertical Flip or Horizontal Flip).
-If the value is false, the returned thumbnail will not be flipped.
+Auto flip the thumbnail when video has mirror attribute (Vertical Flip or Horizontal Flip).If the value is false, the returned thumbnail will not be flipped.
 
 **System API**: This is a system API.
 
 **Type:** boolean
 
 **Since:** 21
+
+<!--Device-PixelMapParams-autoFlip?: boolean--><!--Device-PixelMapParams-autoFlip?: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
@@ -44,6 +47,8 @@ Color format of the thumbnail.
 **Type:** PixelFormat
 
 **Since:** 11
+
+<!--Device-PixelMapParams-colorFormat?: PixelFormat--><!--Device-PixelMapParams-colorFormat?: PixelFormat-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 

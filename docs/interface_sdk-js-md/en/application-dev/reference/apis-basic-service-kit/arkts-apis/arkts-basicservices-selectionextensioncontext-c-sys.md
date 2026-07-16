@@ -1,18 +1,15 @@
 # SelectionExtensionContext (System API)
 
-**SelectionExtensionContext** is the context of
-[SelectionExtensionAbility](arkts-basicservices-selectionextensionability-c-sys.md), which is
-inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
-When a **SelectionExtensionAbility** component is instantiated, the system automatically creates the corresponding
-**SelectionExtensionContext**. You can use **SelectionExtensionContext** to start other abilities in the same
-application.
+**SelectionExtensionContext** is the context of [SelectionExtensionAbility](arkts-basicservices-selectionextensionability-c-sys.md), which is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).When a **SelectionExtensionAbility** component is instantiated, the system automatically creates the corresponding **SelectionExtensionContext**. You can use **SelectionExtensionContext** to start other abilities in the same application.
 
-> **NOTE**
+> **NOTE**  
 > - This module is supported only on PCs/2-in-1 devices.
 
 **Inheritance/Implementation:** SelectionExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **Since:** 24
+
+<!--Device-unnamed-declare class SelectionExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class SelectionExtensionContext extends ExtensionContext-End-->
 
 **System capability:** SystemCapability.SelectionInput.Selection
 
@@ -36,6 +33,8 @@ Starts an ability. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SelectionExtensionContext-startAbility(want: Want): Promise<void>--><!--Device-SelectionExtensionContext-startAbility(want: Want): Promise<void>-End-->
+
 **System capability:** SystemCapability.SelectionInput.Selection
 
 **System API:** This is a system API.
@@ -44,13 +43,13 @@ Starts an ability. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information of the ability to start, including the ability name and bundle name. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information of the ability to start, including the ability name and bundle name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

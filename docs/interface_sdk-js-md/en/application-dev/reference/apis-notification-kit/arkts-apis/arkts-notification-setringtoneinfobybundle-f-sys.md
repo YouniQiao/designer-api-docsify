@@ -18,6 +18,8 @@ Sets the custom ringtone information for an application. This API uses a promise
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function setRingtoneInfoByBundle(bundle: BundleOption, ringtoneInfo: RingtoneInfo): Promise<void>--><!--Device-notificationManager-function setRingtoneInfoByBundle(bundle: BundleOption, ringtoneInfo: RingtoneInfo): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -26,14 +28,14 @@ Sets the custom ringtone information for an application. This API uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
-| ringtoneInfo | RingtoneInfo | Yes | Custom ringtone information. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
+| ringtoneInfo | [RingtoneInfo](arkts-notification-ringtoneinfo-i-sys.md) | Yes | Custom ringtone information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

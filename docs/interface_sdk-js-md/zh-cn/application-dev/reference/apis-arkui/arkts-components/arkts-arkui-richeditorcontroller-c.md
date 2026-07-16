@@ -2,13 +2,13 @@
 
 RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)。
 
-> **说明：**
->
-> 当内容的长度超过组件显示区域的高度时，调用插入接口（例如[addTextSpan](arkts-arkui-richeditorcontroller-c.md#addtextspan-1)、
-> [addImageSpan](arkts-arkui-richeditorcontroller-c.md#addimagespan-1)、[addBuilderSpan](arkts-arkui-richeditorcontroller-c.md#addbuilderspan-1)
+> **说明：**  
+>  
+> 当内容的长度超过组件显示区域的高度时，调用插入接口（例如[addTextSpan](arkts-arkui-richeditorcontroller-c.md#addtextspan-1)、  
+> [addImageSpan](arkts-arkui-richeditorcontroller-c.md#addimagespan-1)、[addBuilderSpan](arkts-arkui-richeditorcontroller-c.md#addbuilderspan-1)  
 > 、[addSymbolSpan](arkts-arkui-richeditorcontroller-c.md#addsymbolspan-1)），组件会自动滚动内容使得插入内容末尾可见。
 
-###### 导入对象
+## 导入对象
 
 ```ts
 controller: RichEditorController = new RichEditorController();
@@ -17,6 +17,8 @@ controller: RichEditorController = new RichEditorController();
 **继承/实现关系：** RichEditorController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)
 
 **起始版本：** 10
+
+<!--Device-unnamed-declare class RichEditorController extends RichEditorBaseController--><!--Device-unnamed-declare class RichEditorController extends RichEditorBaseController-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,68 +30,70 @@ addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): nu
 
 在RichEditor中添加用户自定义布局（BuilderSpan）。
 
-> **说明：**
->
-> - RichEditor组件添加占位Span，占位Span调用系统的measure方法计算真实的长宽和位置。
->
-> - 可通过[RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md)设置此builder在RichEditor中的index（一个文字为一个单位）。
->
-> - 此占位Span不可获焦，支持拖拽，支持部分通用属性，占位、删除等能力等同于ImageSpan，长度视为一个文字。
->
-> - 支持通过[bindSelectionMenu](RichEditorAttribute#bindSelectionMenu)设置自定义菜单。
->
-> - 不支持通过[getSpans](arkts-arkui-richeditorcontroller-c.md#getspans-1)，[getSelection](arkts-arkui-richeditorcontroller-c.md#getselection-1)，
-> [onSelect](RichEditorAttribute#onSelect)，[aboutToDelete](RichEditorAttribute#aboutToDelete)获取
-> builderSpan信息。
->
-> - 不支持通过[updateSpanStyle](arkts-arkui-richeditorcontroller-c.md#updatespanstyle-1)，
-> [updateParagraphStyle](arkts-arkui-richeditorcontroller-c.md#updateparagraphstyle-1)等方式更新builder。
->
-> - 对此builder节点进行复制或粘贴不生效。
->
-> - builder的布局约束由RichEditor传入，如果builder里最外层组件不设置大小，则会用RichEditor的大小作为maxSize。
->
-> - builder的手势相关事件机制与通用手势事件相同，如果builder中未设置透传，则仅有builder中的子组件响应。
->
-> - 如果组件光标闪烁，插入后光标位置更新为新插入builder的后面。
->
-> - 对[addBuilderSpan](arkts-arkui-richeditorcontroller-c.md#addbuilderspan-1)的节点文本，
-> [enableDataDetector](RichEditorAttribute#enableDataDetector)、
-> [dataDetectorConfig](RichEditorAttribute#dataDetectorConfig)、
-> [enableSelectedDataDetector](RichEditorAttribute#enableSelectedDataDetector)功能不会生效。
-> 通用属性仅支持[size](arkts-arkui-commonmethod-c.md#size-1)、[padding](arkts-arkui-commonmethod-c.md#padding-1)、[margin](arkts-arkui-commonmethod-c.md#margin-1)、
-> [aspectRatio](arkts-arkui-commonmethod-c.md#aspectratio-1)、[borderStyle](arkts-arkui-commonmethod-c.md#borderstyle-1)、
-> [borderWidth](arkts-arkui-commonmethod-c.md#borderwidth-1)、[borderColor](arkts-arkui-commonmethod-c.md#bordercolor-1)、
-> [borderRadius](arkts-arkui-commonmethod-c.md#borderradius-1)、
-> [backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor-1)、
-> [backgroundBlurStyle](arkts-arkui-commonmethod-c.md#backgroundblurstyle-1)
-> 、[opacity](arkts-arkui-commonmethod-c.md#opacity-1)、
-> [blur](arkts-arkui-commonmethod-c.md#blur-1)、
-> [backdropBlur](arkts-arkui-commonmethod-c.md#backdropblur-1)、
-> [shadow](arkts-arkui-commonmethod-c.md#shadow-1)、
-> [grayscale](arkts-arkui-commonmethod-c.md#grayscale-1)、
-> [brightness](arkts-arkui-commonmethod-c.md#brightness-1)、[saturate](arkts-arkui-commonmethod-c.md#saturate-1)
-> 、[contrast](arkts-arkui-commonmethod-c.md#contrast-1)、
-> [invert](arkts-arkui-commonmethod-c.md#invert-1)、
-> [sepia](arkts-arkui-commonmethod-c.md#sepia-1)、
-> [hueRotate](arkts-arkui-commonmethod-c.md#huerotate-1)、
-> [colorBlend](arkts-arkui-commonmethod-c.md#colorblend-1)、
-> [linearGradientBlur](arkts-arkui-commonmethod-c.md#lineargradientblur-1)、
-> [clip](arkts-arkui-commonmethod-c.md#clip-1)、[mask](arkts-arkui-commonmethod-c.md#mask-1)、
-> [foregroundBlurStyle](arkts-arkui-commonmethod-c.md#foregroundblurstyle-1)
-> 、[accessibilityGroup](arkts-arkui-commonmethod-c.md#accessibilitygroup-1)、
-> [accessibilityText](arkts-arkui-commonmethod-c.md#accessibilitytext-1)、
-> [accessibilityDescription](arkts-arkui-commonmethod-c.md#accessibilitydescription-1)、
-> [accessibilityLevel](arkts-arkui-commonmethod-c.md#accessibilitylevel-1)、
-> [sphericalEffect](arkts-arkui-commonmethod-c.md#sphericaleffect-1)、
-> [lightUpEffect](arkts-arkui-commonmethod-c.md#lightupeffect-1)、
+> **说明：**  
+>  
+> - RichEditor组件添加占位Span，占位Span调用系统的measure方法计算真实的长宽和位置。  
+>  
+> - 可通过[RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md)设置此builder在RichEditor中的index（一个文字为一个单位）。  
+>  
+> - 此占位Span不可获焦，支持拖拽，支持部分通用属性，占位、删除等能力等同于ImageSpan，长度视为一个文字。  
+>  
+> - 支持通过[bindSelectionMenu](RichEditorAttribute#bindSelectionMenu)设置自定义菜单。  
+>  
+> - 不支持通过[getSpans](arkts-arkui-richeditorcontroller-c.md#getspans-1)，[getSelection](arkts-arkui-richeditorcontroller-c.md#getselection-1)，  
+> [onSelect](RichEditorAttribute#onSelect)，[aboutToDelete](RichEditorAttribute#aboutToDelete)获取  
+> builderSpan信息。  
+>  
+> - 不支持通过[updateSpanStyle](arkts-arkui-richeditorcontroller-c.md#updatespanstyle-1)，  
+> [updateParagraphStyle](arkts-arkui-richeditorcontroller-c.md#updateparagraphstyle-1)等方式更新builder。  
+>  
+> - 对此builder节点进行复制或粘贴不生效。  
+>  
+> - builder的布局约束由RichEditor传入，如果builder里最外层组件不设置大小，则会用RichEditor的大小作为maxSize。  
+>  
+> - builder的手势相关事件机制与通用手势事件相同，如果builder中未设置透传，则仅有builder中的子组件响应。  
+>  
+> - 如果组件光标闪烁，插入后光标位置更新为新插入builder的后面。  
+>  
+> - 对[addBuilderSpan](arkts-arkui-richeditorcontroller-c.md#addbuilderspan-1)的节点文本，  
+> [enableDataDetector](RichEditorAttribute#enableDataDetector)、  
+> [dataDetectorConfig](RichEditorAttribute#dataDetectorConfig)、  
+> [enableSelectedDataDetector](RichEditorAttribute#enableSelectedDataDetector)功能不会生效。  
+> 通用属性仅支持[size](arkts-arkui-commonmethod-c.md#size-1)、[padding](arkts-arkui-commonmethod-c.md#padding-1)、[margin](arkts-arkui-commonmethod-c.md#margin-1)、  
+> [aspectRatio](arkts-arkui-commonmethod-c.md#aspectratio-1)、[borderStyle](arkts-arkui-commonmethod-c.md#borderstyle-1)、  
+> [borderWidth](arkts-arkui-commonmethod-c.md#borderwidth-1)、[borderColor](arkts-arkui-commonmethod-c.md#bordercolor-1)、  
+> [borderRadius](arkts-arkui-commonmethod-c.md#borderradius-1)、  
+> [backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor-1)、  
+> [backgroundBlurStyle](arkts-arkui-commonmethod-c.md#backgroundblurstyle-1)  
+> 、[opacity](arkts-arkui-commonmethod-c.md#opacity-1)、  
+> [blur](arkts-arkui-commonmethod-c.md#blur-1)、  
+> [backdropBlur](arkts-arkui-commonmethod-c.md#backdropblur-1)、  
+> [shadow](arkts-arkui-commonmethod-c.md#shadow-1)、  
+> [grayscale](arkts-arkui-commonmethod-c.md#grayscale-1)、  
+> [brightness](arkts-arkui-commonmethod-c.md#brightness-1)、[saturate](arkts-arkui-commonmethod-c.md#saturate-1)  
+> 、[contrast](arkts-arkui-commonmethod-c.md#contrast-1)、  
+> [invert](arkts-arkui-commonmethod-c.md#invert-1)、  
+> [sepia](arkts-arkui-commonmethod-c.md#sepia-1)、  
+> [hueRotate](arkts-arkui-commonmethod-c.md#huerotate-1)、  
+> [colorBlend](arkts-arkui-commonmethod-c.md#colorblend-1)、  
+> [linearGradientBlur](arkts-arkui-commonmethod-c.md#lineargradientblur-1)、  
+> [clip](arkts-arkui-commonmethod-c.md#clip-1)、[mask](arkts-arkui-commonmethod-c.md#mask-1)、  
+> [foregroundBlurStyle](arkts-arkui-commonmethod-c.md#foregroundblurstyle-1)  
+> 、[accessibilityGroup](arkts-arkui-commonmethod-c.md#accessibilitygroup-1)、  
+> [accessibilityText](arkts-arkui-commonmethod-c.md#accessibilitytext-1)、  
+> [accessibilityDescription](arkts-arkui-commonmethod-c.md#accessibilitydescription-1)、  
+> [accessibilityLevel](arkts-arkui-commonmethod-c.md#accessibilitylevel-1)、  
+> [sphericalEffect](arkts-arkui-commonmethod-c.md#sphericaleffect-1)、  
+> [lightUpEffect](arkts-arkui-commonmethod-c.md#lightupeffect-1)、  
 > [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect-1)。
 
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RichEditorController-addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): number--><!--Device-RichEditorController-addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -97,8 +101,8 @@ addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): nu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | CustomBuilder | 是 | 自定义布局内容，用于在RichEditor中创建BuilderSpan占位组件。 |
-| options | RichEditorBuilderSpanOptions | 否 | builder选项。当需要设置builder的偏移位置或无障碍属性时传入此参数；省略时，builder添加到所有内容末尾。 |
+| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 | 自定义布局内容，用于在RichEditor中创建BuilderSpan占位组件。 |
+| options | [RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md) | 否 | builder选项。当需要设置builder的偏移位置或无障碍属性时传入此参数；省略时，builder添加到所有内容末尾。 |
 
 **返回值：**
 
@@ -120,7 +124,9 @@ addImageSpan(value: PixelMap | ResourceStr, options?: RichEditorImageSpanOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RichEditorController-addImageSpan(value: PixelMap | ResourceStr, options?: RichEditorImageSpanOptions): number--><!--Device-RichEditorController-addImageSpan(value: PixelMap | ResourceStr, options?: RichEditorImageSpanOptions): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -129,7 +135,7 @@ addImageSpan(value: PixelMap | ResourceStr, options?: RichEditorImageSpanOptions
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | PixelMap \| ResourceStr | 是 | 图片内容。 |
-| options | RichEditorImageSpanOptions | 否 | 图片选项。<br>当需要设置图片样式、偏移位置或段落样式时传入此参数；不传入时，图片将使用默认样式插入到内容末尾。 |
+| options | [RichEditorImageSpanOptions](arkts-arkui-richeditorimagespanoptions-i.md) | 否 | 图片选项。<br>当需要设置图片样式、偏移位置或段落样式时传入此参数；不传入时，图片将使用默认样式插入到内容末尾。 |
 
 **返回值：**
 
@@ -151,7 +157,9 @@ SymbolSpan暂不支持手势、复制操作和拖拽处理。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RichEditorController-addSymbolSpan(value: Resource, options?: RichEditorSymbolSpanOptions ): number--><!--Device-RichEditorController-addSymbolSpan(value: Resource, options?: RichEditorSymbolSpanOptions ): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -159,8 +167,8 @@ SymbolSpan暂不支持手势、复制操作和拖拽处理。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Resource | 是 | SymbolSpan图标资源引用，用于指定系统预置或自定义的Symbol图标。 |
-| options | RichEditorSymbolSpanOptions | 否 | symbol选项。<br>当需要设置SymbolSpan的偏移位置或样式时传入此参数；不传入时，SymbolSpan将使用默认样式插入到内容末尾。 |
+| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md) | 是 | SymbolSpan图标资源引用，用于指定系统预置或自定义的Symbol图标。 |
+| options | [RichEditorSymbolSpanOptions](arkts-arkui-richeditorsymbolspanoptions-i.md) | 否 | symbol选项。<br>当需要设置SymbolSpan的偏移位置或样式时传入此参数；不传入时，SymbolSpan将使用默认样式插入到内容末尾。 |
 
 **返回值：**
 
@@ -180,7 +188,9 @@ addTextSpan(content: ResourceStr, options?: RichEditorTextSpanOptions): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RichEditorController-addTextSpan(content: ResourceStr, options?: RichEditorTextSpanOptions): number--><!--Device-RichEditorController-addTextSpan(content: ResourceStr, options?: RichEditorTextSpanOptions): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -188,8 +198,8 @@ addTextSpan(content: ResourceStr, options?: RichEditorTextSpanOptions): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | ResourceStr | 是 | 文本内容。<br>从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
-| options | RichEditorTextSpanOptions | 否 | 文本选项。<br>当需要设置偏移位置、文本样式、段落样式等信息时传入此参数；不传入时，文本将使用默认样式插入到内容末尾。 |
+| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本内容。<br>从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
+| options | [RichEditorTextSpanOptions](arkts-arkui-richeditortextspanoptions-i.md) | 否 | 文本选项。<br>当需要设置偏移位置、文本样式、段落样式等信息时传入此参数；不传入时，文本将使用默认样式插入到内容末尾。 |
 
 **返回值：**
 
@@ -209,7 +219,9 @@ deleteSpans(value?: RichEditorRange): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RichEditorController-deleteSpans(value?: RichEditorRange): void--><!--Device-RichEditorController-deleteSpans(value?: RichEditorRange): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -217,7 +229,7 @@ deleteSpans(value?: RichEditorRange): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | RichEditorRange | 否 | 删除范围。省略时，删除所有文本和图片。 |
+| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | 否 | 删除范围。省略时，删除所有文本和图片。 |
 
 ## fromStyledString
 
@@ -231,7 +243,9 @@ fromStyledString(value: StyledString): Array<RichEditorSpan>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RichEditorController-fromStyledString(value: StyledString): Array<RichEditorSpan>--><!--Device-RichEditorController-fromStyledString(value: StyledString): Array<RichEditorSpan>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -239,13 +253,13 @@ fromStyledString(value: StyledString): Array<RichEditorSpan>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | StyledString | 是 | 转换前的属性字符串。 |
+| value | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 是 | 转换前的属性字符串。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;RichEditorSpan&gt; | 将属性字符串解析后得到的文本和图片Span信息，可用于查询属性字符串中各Span的内容、样式和位置。<br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<RichEditorSpan> | 将属性字符串解析后得到的文本和图片Span信息，可用于查询属性字符串中各Span的内容、样式和位置。<br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 **错误码：**
 
@@ -265,7 +279,9 @@ getParagraphs(value?: RichEditorRange): Array<RichEditorParagraphResult>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RichEditorController-getParagraphs(value?: RichEditorRange): Array<RichEditorParagraphResult>--><!--Device-RichEditorController-getParagraphs(value?: RichEditorRange): Array<RichEditorParagraphResult>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -273,13 +289,13 @@ getParagraphs(value?: RichEditorRange): Array<RichEditorParagraphResult>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | RichEditorRange | 否 | 需要获取段落的范围。<br>省略时，获取所有段落信息。 |
+| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | 否 | 需要获取段落的范围。<br>省略时，获取所有段落信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;RichEditorParagraphResult&gt; | 选中范围内的段落信息，包含各段落的样式和起始结束位置，可用于查询段落排版属性或进行段落样式更新。<br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<RichEditorParagraphResult> | 选中范围内的段落信息，包含各段落的样式和起始结束位置，可用于查询段落排版属性或进行段落样式更新。<br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## getSelection
 
@@ -293,7 +309,9 @@ getSelection(): RichEditorSelection
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RichEditorController-getSelection(): RichEditorSelection--><!--Device-RichEditorController-getSelection(): RichEditorSelection-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -301,7 +319,7 @@ getSelection(): RichEditorSelection
 
 | 类型 | 说明 |
 | --- | --- |
-| RichEditorSelection | 选中区域起始/结束位置及选中文本和图片的详细信息。<br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| [RichEditorSelection](arkts-arkui-richeditorselection-i.md) | 选中区域起始/结束位置及选中文本和图片的详细信息。<br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## getSpans
 
@@ -315,7 +333,9 @@ getSpans(value?: RichEditorRange): Array<RichEditorImageSpanResult | RichEditorT
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RichEditorController-getSpans(value?: RichEditorRange): Array<RichEditorImageSpanResult | RichEditorTextSpanResult>--><!--Device-RichEditorController-getSpans(value?: RichEditorRange): Array<RichEditorImageSpanResult | RichEditorTextSpanResult>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -323,13 +343,13 @@ getSpans(value?: RichEditorRange): Array<RichEditorImageSpanResult | RichEditorT
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | RichEditorRange | 否 | 需要获取span的范围。<br>省略时，获取所有span信息。 |
+| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | 否 | 需要获取span的范围。<br>省略时，获取所有span信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;RichEditorImageSpanResult \| RichEditorTextSpanResult&gt; | 指定范围内的文本和图片Span详细信息，包含各Span的位置、内容、样式等属性，可用于查询和操作组件内的文本与图片内容。<br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<RichEditorImageSpanResult \| RichEditorTextSpanResult> | 指定范围内的文本和图片Span详细信息，包含各Span的位置、内容、样式等属性，可用于查询和操作组件内的文本与图片内容。<br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## toStyledString
 
@@ -343,7 +363,9 @@ toStyledString(value: RichEditorRange): StyledString
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RichEditorController-toStyledString(value: RichEditorRange): StyledString--><!--Device-RichEditorController-toStyledString(value: RichEditorRange): StyledString-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -351,13 +373,13 @@ toStyledString(value: RichEditorRange): StyledString
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | RichEditorRange | 是 | 需要获取的范围。 |
+| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | 是 | 需要获取的范围。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| StyledString | 组件指定范围内容转换后的属性字符串，可用于跨组件传递富文本内容或进行样式编辑操作。<br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 组件指定范围内容转换后的属性字符串，可用于跨组件传递富文本内容或进行样式编辑操作。<br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 **错误码：**
 
@@ -377,7 +399,9 @@ updateParagraphStyle(value: RichEditorParagraphStyleOptions): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RichEditorController-updateParagraphStyle(value: RichEditorParagraphStyleOptions): void--><!--Device-RichEditorController-updateParagraphStyle(value: RichEditorParagraphStyleOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -385,7 +409,7 @@ updateParagraphStyle(value: RichEditorParagraphStyleOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | RichEditorParagraphStyleOptions | 是 | 段落的样式选项信息。 |
+| value | [RichEditorParagraphStyleOptions](arkts-arkui-richeditorparagraphstyleoptions-i.md) | 是 | 段落的样式选项信息。 |
 
 ## updateSpanStyle
 
@@ -403,7 +427,9 @@ updateSpanStyle(value: RichEditorUpdateTextSpanStyleOptions | RichEditorUpdateIm
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RichEditorController-updateSpanStyle(value: RichEditorUpdateTextSpanStyleOptions | RichEditorUpdateImageSpanStyleOptions | RichEditorUpdateSymbolSpanStyleOptions): void--><!--Device-RichEditorController-updateSpanStyle(value: RichEditorUpdateTextSpanStyleOptions | RichEditorUpdateImageSpanStyleOptions | RichEditorUpdateSymbolSpanStyleOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,9 +1,10 @@
 # DragStartRequestStatus
 
-Enumerates the states defining whether an application can initiate a drag operation. This API is effective only
-when [onDragStart](../arkts-components/arkts-arkui-commonmethod-c.md#ondragstart-1) is called.
+Enumerates the states defining whether an application can initiate a drag operation. This API is effective only when [onDragStart](../arkts-components/arkts-arkui-commonmethod-c.md#ondragstart-1) is called.
 
 **Since:** 18
+
+<!--Device-dragController-const enum DragStartRequestStatus--><!--Device-dragController-const enum DragStartRequestStatus-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,6 +22,8 @@ The application is preparing data and cannot initiate a drag operation yet.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-DragStartRequestStatus-WAITING = 0--><!--Device-DragStartRequestStatus-WAITING = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## READY
@@ -36,6 +39,8 @@ The application has completed data preparation and is ready to initiate a drag o
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-DragStartRequestStatus-READY = 1--><!--Device-DragStartRequestStatus-READY = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

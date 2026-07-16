@@ -4,6 +4,8 @@ Describes the style of the sidebar control button.
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface ButtonStyle--><!--Device-unnamed-declare interface ButtonStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## height
@@ -30,6 +32,8 @@ Value range: [0, +∞).
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ButtonStyle-height?: number--><!--Device-ButtonStyle-height?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## icons
@@ -47,6 +51,8 @@ If the resource fails to be obtained or this attribute is not set, the default i
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ButtonStyle-icons?: ButtonIconOptions--><!--Device-ButtonStyle-icons?: ButtonIconOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,6 +76,8 @@ Value range: [0, +∞).
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ButtonStyle-left?: number--><!--Device-ButtonStyle-left?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## top
@@ -91,6 +99,8 @@ Value range: [0, +∞).
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ButtonStyle-top?: number--><!--Device-ButtonStyle-top?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -117,6 +127,8 @@ Value range: [0, +∞).
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ButtonStyle-width?: number--><!--Device-ButtonStyle-width?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

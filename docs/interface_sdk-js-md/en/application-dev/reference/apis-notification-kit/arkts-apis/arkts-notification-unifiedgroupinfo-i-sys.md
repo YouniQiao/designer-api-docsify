@@ -4,6 +4,8 @@ Describes the fields of notification intelligent unification information.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface UnifiedGroupInfo--><!--Device-unnamed-export interface UnifiedGroupInfo-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -19,6 +21,8 @@ Unified group summary.
 **Type:** string
 
 **Since:** 12
+
+<!--Device-UnifiedGroupInfo-content?: string--><!--Device-UnifiedGroupInfo-content?: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -36,6 +40,8 @@ Other unification information.
 
 **Since:** 12
 
+<!--Device-UnifiedGroupInfo-extraInfo?: { [key: string]: any }--><!--Device-UnifiedGroupInfo-extraInfo?: { [key: string]: any }-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -51,6 +57,8 @@ Unified group ID.
 **Type:** string
 
 **Since:** 12
+
+<!--Device-UnifiedGroupInfo-key?: string--><!--Device-UnifiedGroupInfo-key?: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -68,6 +76,8 @@ Name of a unification scene.
 
 **Since:** 12
 
+<!--Device-UnifiedGroupInfo-sceneName?: string--><!--Device-UnifiedGroupInfo-sceneName?: string-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -83,6 +93,8 @@ Unified group title.
 **Type:** string
 
 **Since:** 12
+
+<!--Device-UnifiedGroupInfo-title?: string--><!--Device-UnifiedGroupInfo-title?: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

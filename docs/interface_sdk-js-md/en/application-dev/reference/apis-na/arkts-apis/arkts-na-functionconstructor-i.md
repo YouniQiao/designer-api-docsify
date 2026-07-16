@@ -1,5 +1,7 @@
 # FunctionConstructor
 
+<!--Device-unnamed-interface FunctionConstructor--><!--Device-unnamed-interface FunctionConstructor-End-->
+
 ## constructor
 
 ```TypeScript
@@ -8,6 +10,8 @@ new(...args: string[]): Function
 
 Creates a new function.
 
+<!--Device-FunctionConstructor-new(...args: string[]): Function--><!--Device-FunctionConstructor-new(...args: string[]): Function-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -18,7 +22,7 @@ Creates a new function.
 
 | Type | Description |
 | --- | --- |
-| Function |  |
+| [Function](arkts-na-function-i.md) |  |
 
 ## constructor
 
@@ -26,6 +30,8 @@ Creates a new function.
 (...args: string[]): Function
 ```
 
+<!--Device-FunctionConstructor-(...args: string[]): Function--><!--Device-FunctionConstructor-(...args: string[]): Function-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -36,7 +42,7 @@ Creates a new function.
 
 | Type | Description |
 | --- | --- |
-| Function |  |
+| [Function](arkts-na-function-i.md) |  |
 
 ## prototype
 
@@ -45,4 +51,6 @@ readonly prototype: Function
 ```
 
 **Type:** Function
+
+<!--Device-FunctionConstructor-readonly prototype: Function--><!--Device-FunctionConstructor-readonly prototype: Function-End-->
 

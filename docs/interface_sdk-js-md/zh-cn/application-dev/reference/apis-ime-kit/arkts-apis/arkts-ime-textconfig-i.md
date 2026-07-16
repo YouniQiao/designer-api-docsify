@@ -4,7 +4,15 @@
 
 **起始版本：** 10
 
+<!--Device-inputMethod-export interface TextConfig--><!--Device-inputMethod-export interface TextConfig-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+## 导入模块
+
+```TypeScript
+import { inputMethod } from '@kit.IMEKit';
+```
 
 ## capitalizeMode
 
@@ -20,6 +28,8 @@ capitalizeMode?: CapitalizeMode
 
 **起始版本：** 20
 
+<!--Device-TextConfig-capitalizeMode?: CapitalizeMode--><!--Device-TextConfig-capitalizeMode?: CapitalizeMode-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## cursorInfo
@@ -33,6 +43,8 @@ cursorInfo?: CursorInfo
 **类型：** CursorInfo
 
 **起始版本：** 10
+
+<!--Device-TextConfig-cursorInfo?: CursorInfo--><!--Device-TextConfig-cursorInfo?: CursorInfo-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -48,6 +60,8 @@ inputAttribute: InputAttribute
 
 **起始版本：** 10
 
+<!--Device-TextConfig-inputAttribute: InputAttribute--><!--Device-TextConfig-inputAttribute: InputAttribute-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## newEditBox
@@ -62,6 +76,8 @@ newEditBox?: boolean
 
 **起始版本：** 20
 
+<!--Device-TextConfig-newEditBox?: boolean--><!--Device-TextConfig-newEditBox?: boolean-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## selection
@@ -75,6 +91,8 @@ selection?: Range
 **类型：** Range
 
 **起始版本：** 10
+
+<!--Device-TextConfig-selection?: Range--><!--Device-TextConfig-selection?: Range-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -91,6 +109,8 @@ windowId?: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-TextConfig-windowId?: int--><!--Device-TextConfig-windowId?: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

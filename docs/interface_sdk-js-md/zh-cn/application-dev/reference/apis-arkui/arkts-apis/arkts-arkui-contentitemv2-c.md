@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-export declare class ContentItemV2--><!--Device-unnamed-export declare class ContentItemV2-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, OperateCheckV2, OperateItemV2, OperateItemV2Options, OperateIconV2Options, OperateButtonV2, OperateButtonV2Options, ContentItemV2, ContentItemV2Options } from '@kit.ArkUI';
+```
 
 ## constructor
 
@@ -18,7 +26,9 @@ ContentItemV2的构造函数。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ContentItemV2-constructor(options?: ContentItemV2Options)--><!--Device-ContentItemV2-constructor(options?: ContentItemV2Options)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,7 +36,7 @@ ContentItemV2的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | ContentItemV2Options | 否 | 列表左侧属性配置。 |
+| options | [ContentItemV2Options](arkts-arkui-contentitemv2options-i.md) | 否 | 列表左侧属性配置。 |
 
 ## description
 
@@ -42,7 +52,9 @@ public description?: ResourceStr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ContentItemV2-public description?: ResourceStr--><!--Device-ContentItemV2-public description?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,7 +74,9 @@ public icon?: ResourceStr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ContentItemV2-public icon?: ResourceStr--><!--Device-ContentItemV2-public icon?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,7 +96,9 @@ public iconStyle?: IconTypeV2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ContentItemV2-public iconStyle?: IconTypeV2--><!--Device-ContentItemV2-public iconStyle?: IconTypeV2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,7 +116,9 @@ public primaryText?: ResourceStr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ContentItemV2-public primaryText?: ResourceStr--><!--Device-ContentItemV2-public primaryText?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -118,7 +136,9 @@ public secondaryText?: ResourceStr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ContentItemV2-public secondaryText?: ResourceStr--><!--Device-ContentItemV2-public secondaryText?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -138,7 +158,9 @@ public symbolStyle?: SymbolGlyphModifier
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ContentItemV2-public symbolStyle?: SymbolGlyphModifier--><!--Device-ContentItemV2-public symbolStyle?: SymbolGlyphModifier-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

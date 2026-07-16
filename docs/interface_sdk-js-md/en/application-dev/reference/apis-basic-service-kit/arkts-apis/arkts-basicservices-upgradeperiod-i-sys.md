@@ -4,6 +4,8 @@ Represents an automatic update period.
 
 **Since:** 9
 
+<!--Device-update-export interface UpgradePeriod--><!--Device-update-export interface UpgradePeriod-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ End time.
 
 **Since:** 9
 
+<!--Device-UpgradePeriod-end: int--><!--Device-UpgradePeriod-end: int-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Start time.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-UpgradePeriod-start: int--><!--Device-UpgradePeriod-start: int-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 

@@ -4,6 +4,8 @@ Declare type LaunchController
 
 **Since:** 12
 
+<!--Device-unnamed-export declare class LaunchController--><!--Device-unnamed-export declare class LaunchController-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -25,6 +27,8 @@ Function to launch atomicservice.
 **Type:** LaunchAtomicServiceCallback
 
 **Since:** 12
+
+<!--Device-LaunchController-public launchAtomicService: LaunchAtomicServiceCallback--><!--Device-LaunchController-public launchAtomicService: LaunchAtomicServiceCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

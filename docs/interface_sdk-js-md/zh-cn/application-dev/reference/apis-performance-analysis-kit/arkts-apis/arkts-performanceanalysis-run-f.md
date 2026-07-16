@@ -1,5 +1,11 @@
 # run
 
+## 导入模块
+
+```TypeScript
+import { hiRetrieval } from '@kit.PerformanceAnalysisKit';
+```
+
 ## run
 
 ```TypeScript
@@ -10,7 +16,9 @@ function run(): void
 
 **起始版本：** 26.0.0
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-hiRetrieval-function run(): void--><!--Device-hiRetrieval-function run(): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiRetrieval
 

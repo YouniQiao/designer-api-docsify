@@ -20,6 +20,8 @@ Obtain the single Wi-Fi configuration with Network ID.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-wifiManager-function getDeviceConfig(networkId: int): WifiDeviceConfig--><!--Device-wifiManager-function getDeviceConfig(networkId: int): WifiDeviceConfig-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -34,7 +36,7 @@ Obtain the single Wi-Fi configuration with Network ID.
 
 | Type | Description |
 | --- | --- |
-| WifiDeviceConfig | Returns the Wi-Fi configuration corresponding to the network ID. |
+| [WifiDeviceConfig](arkts-connectivity-wifideviceconfig-i-sys.md) | Returns the Wi-Fi configuration corresponding to the network ID. |
 
 **Error codes:**
 

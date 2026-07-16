@@ -4,6 +4,8 @@
 
 **Deprecated since:** 6
 
+<!--Device-unnamed-export interface GetDeviceOptions--><!--Device-unnamed-export interface GetDeviceOptions-End-->
+
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Called when the execution is completed.
 
 **Deprecated since:** 6
 
+<!--Device-GetDeviceOptions-complete?: () => void--><!--Device-GetDeviceOptions-complete?: () => void-End-->
+
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
 ## fail
@@ -42,6 +46,8 @@ Called when the device information fails to be obtained.
 
 **Deprecated since:** 6
 
+<!--Device-GetDeviceOptions-fail?: (data: any, code: number) => void--><!--Device-GetDeviceOptions-fail?: (data: any, code: number) => void-End-->
+
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
 ## success
@@ -57,6 +63,8 @@ Called when the device information is obtained.
 **Since:** 3
 
 **Deprecated since:** 6
+
+<!--Device-GetDeviceOptions-success?: (data: DeviceResponse) => void--><!--Device-GetDeviceOptions-success?: (data: DeviceResponse) => void-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 

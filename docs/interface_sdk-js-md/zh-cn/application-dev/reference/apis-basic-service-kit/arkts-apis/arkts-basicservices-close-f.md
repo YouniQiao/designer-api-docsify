@@ -1,5 +1,11 @@
 # close
 
+## 导入模块
+
+```TypeScript
+import { serialManager } from '@kit.BasicServicesKit';
+```
+
 ## close
 
 ```TypeScript
@@ -9,6 +15,8 @@ function close(portId: number): void
 关闭串口。
 
 **起始版本：** 19
+
+<!--Device-serialManager-function close(portId: int): void--><!--Device-serialManager-function close(portId: int): void-End-->
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 

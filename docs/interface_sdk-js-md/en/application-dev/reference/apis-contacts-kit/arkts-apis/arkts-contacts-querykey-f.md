@@ -12,8 +12,7 @@ import { contact } from '@kit.ContactsKit';
 function queryKey(id: number, callback: AsyncCallback<string>): void
 ```
 
-Queries the key of a contact based on the specified contact ID. This API uses an asynchronous callback to return
-the result.
+Queries the key of a contact based on the specified contact ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -23,6 +22,8 @@ the result.
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryKey(id: number, callback: AsyncCallback<string>): void--><!--Device-contact-function queryKey(id: number, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -30,7 +31,7 @@ the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | number | Yes | Contact ID. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, thekey of the queried contact is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the key of the queried contact is returned. If the operation fails, an error code is returned. |
 
 **Example**
 
@@ -55,12 +56,13 @@ contact.queryKey(1, (err: BusinessError, data) => {
 function queryKey(context: Context, id: number, callback: AsyncCallback<string>): void
 ```
 
-Queries the key of a contact based on the specified contact ID. This API uses an asynchronous callback to return
-the result.
+Queries the key of a contact based on the specified contact ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryKey(context: Context, id: number, callback: AsyncCallback<string>): void--><!--Device-contact-function queryKey(context: Context, id: number, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -68,9 +70,9 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
 | id | number | Yes | Contact ID. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, thekey of the queried contact is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the key of the queried contact is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -107,8 +109,7 @@ contact.queryKey(context, 1, (err: BusinessError, data) => {
 function queryKey(id: number, holder: Holder, callback: AsyncCallback<string>): void
 ```
 
-Queries the key of a contact based on the specified contact ID and holder. This API uses an asynchronous callback
-to return the result.
+Queries the key of a contact based on the specified contact ID and holder. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -118,6 +119,8 @@ to return the result.
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryKey(id: number, holder: Holder, callback: AsyncCallback<string>): void--><!--Device-contact-function queryKey(id: number, holder: Holder, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -125,8 +128,8 @@ to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | number | Yes | Contact ID. |
-| holder | Holder | Yes | Application that creates the contacts.If the passed parameter is empty, the systemcontact application is used by default. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, thekey of the queried contact is returned. If the operation fails, an error code is returned. |
+| holder | [Holder](arkts-contacts-holder-c.md) | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the key of the queried contact is returned. If the operation fails, an error code is returned. |
 
 **Example**
 
@@ -155,12 +158,13 @@ contact.queryKey(1, {
 function queryKey(context: Context, id: number, holder: Holder, callback: AsyncCallback<string>): void
 ```
 
-Queries the key of a contact based on the specified contact ID and holder. This API uses an asynchronous callback
-to return the result.
+Queries the key of a contact based on the specified contact ID and holder. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryKey(context: Context, id: number, holder: Holder, callback: AsyncCallback<string>): void--><!--Device-contact-function queryKey(context: Context, id: number, holder: Holder, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -168,10 +172,10 @@ to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
 | id | number | Yes | Contact ID. |
-| holder | Holder | Yes | Application that creates the contacts.If the passed parameter is empty, the systemcontact application is used by default. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, thekey of the queried contact is returned. If the operation fails, an error code is returned. |
+| holder | [Holder](arkts-contacts-holder-c.md) | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the key of the queried contact is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -212,8 +216,7 @@ contact.queryKey(context, 1, {
 function queryKey(id: number, holder?: Holder): Promise<string>
 ```
 
-Queries the key of a contact based on the specified contact ID and holder. This API uses a promise to return the
-result.
+Queries the key of a contact based on the specified contact ID and holder. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -223,6 +226,8 @@ result.
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryKey(id: number, holder?: Holder): Promise<string>--><!--Device-contact-function queryKey(id: number, holder?: Holder): Promise<string>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -230,13 +235,13 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | number | Yes | Contact ID. |
-| holder | Holder | No | Application information for a contact. If this parameter is not specified, the systemcontact application is used by default. |
+| holder | [Holder](arkts-contacts-holder-c.md) | No | Application information for a contact. If this parameter is not specified, the system contact application is used by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the result, which is the key of the queried contact. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the result, which is the key of the queried contact. |
 
 **Example**
 
@@ -261,12 +266,13 @@ promise.then((data) => {
 function queryKey(context: Context, id: number, holder?: Holder): Promise<string>
 ```
 
-Queries the key of a contact based on the specified contact ID and holder. This API uses a promise to return the
-result.
+Queries the key of a contact based on the specified contact ID and holder. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryKey(context: Context, id: number, holder?: Holder): Promise<string>--><!--Device-contact-function queryKey(context: Context, id: number, holder?: Holder): Promise<string>-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -274,15 +280,15 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
 | id | number | Yes | Contact ID. |
-| holder | Holder | No | Application information for a contact. If this parameter is not specified, the systemcontact application is used by default. |
+| holder | [Holder](arkts-contacts-holder-c.md) | No | Application information for a contact. If this parameter is not specified, the system contact application is used by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the result, which is the key of the queried contact. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the result, which is the key of the queried contact. |
 
 **Error codes:**
 

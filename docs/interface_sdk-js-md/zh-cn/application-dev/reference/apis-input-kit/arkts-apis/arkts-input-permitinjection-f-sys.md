@@ -1,5 +1,11 @@
 # permitInjection（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { inputEventClient } from '@kit.InputKit';
+```
+
 ## permitInjection
 
 ```TypeScript
@@ -11,6 +17,8 @@ function permitInjection(result: boolean): void
 **起始版本：** 12
 
 **需要权限：** ohos.permission.INJECT_INPUT_EVENT
+
+<!--Device-inputEventClient-function permitInjection(result: boolean): void--><!--Device-inputEventClient-function permitInjection(result: boolean): void-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 

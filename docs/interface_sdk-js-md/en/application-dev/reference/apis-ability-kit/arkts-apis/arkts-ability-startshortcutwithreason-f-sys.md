@@ -12,16 +12,15 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 function startShortcutWithReason(shortcutInfo: ShortcutInfo, startReason: string, options?: StartOptions): Promise<void>
 ```
 
-Starts an ability based on the specified shortcut information, and carries the reason for the shortcut launch. This
-API uses a promise to return the result.
+Starts an ability based on the specified shortcut information, and carries the reason for the shortcut launch. This API uses a promise to return the result.
 
-The launched ability can obtain the launch reason through the **launchReasonMessage** field of
-[LaunchParam](arkts-ability-launchparam-i.md) and handle service logic
-accordingly.
+The launched ability can obtain the launch reason through the **launchReasonMessage** field of [LaunchParam](arkts-ability-launchparam-i.md) and handle service logic accordingly.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.START_SHORTCUT and ohos.permission.SET_LAUNCH_REASON_MESSAGE
+
+<!--Device-launcherBundleManager-function startShortcutWithReason(shortcutInfo: ShortcutInfo, startReason: string, options?: StartOptions): Promise<void>--><!--Device-launcherBundleManager-function startShortcutWithReason(shortcutInfo: ShortcutInfo, startReason: string, options?: StartOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -31,15 +30,15 @@ accordingly.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shortcutInfo | ShortcutInfo | Yes | Shortcut information of the application. |
-| startReason | string | Yes | Reason for launching the shortcut. The value can be[AbilityConstant.REASON_MESSAGE_DESKTOP_SHORTCUT](../../../../reference/apis-ability-kit/js-apis-app-ability-abilityConstant.md#constants), indicating a home screen shortcut launch. |
-| options | StartOptions | No | Parameters used to specify the window mode of the target ability. |
+| shortcutInfo | [ShortcutInfo](arkts-ability-shortcutinfo-i-sys.md) | Yes | Shortcut information of the application. |
+| startReason | string | Yes | Reason for launching the shortcut. The value can be [AbilityConstant.REASON_MESSAGE_DESKTOP_SHORTCUT](../../../../reference/apis-ability-kit/js-apis-app-ability-abilityConstant.md#constants), indicating a home screen shortcut launch. |
+| options | [StartOptions](arkts-ability-startoptions-c-sys.md) | No | Parameters used to specify the window mode of the target ability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

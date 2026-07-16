@@ -18,6 +18,8 @@ Set the current network selection mode.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-radio-function setNetworkSelectionMode(options: NetworkSelectionModeOptions, callback: AsyncCallback<void>): void--><!--Device-radio-function setNetworkSelectionMode(options: NetworkSelectionModeOptions, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Set the current network selection mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | NetworkSelectionModeOptions | Yes | Indicates the network selection mode option. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of setNetworkSelectionMode. |
+| options | [NetworkSelectionModeOptions](arkts-telephony-networkselectionmodeoptions-i-sys.md) | Yes | Indicates the network selection mode option. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of setNetworkSelectionMode. |
 
 **Error codes:**
 
@@ -81,6 +83,8 @@ Set the current network selection mode.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-radio-function setNetworkSelectionMode(options: NetworkSelectionModeOptions): Promise<void>--><!--Device-radio-function setNetworkSelectionMode(options: NetworkSelectionModeOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -89,13 +93,13 @@ Set the current network selection mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | NetworkSelectionModeOptions | Yes | Indicates the network selection mode option. |
+| options | [NetworkSelectionModeOptions](arkts-telephony-networkselectionmodeoptions-i-sys.md) | Yes | Indicates the network selection mode option. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setNetworkSelectionMode. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the setNetworkSelectionMode. |
 
 **Error codes:**
 

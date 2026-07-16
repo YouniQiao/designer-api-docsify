@@ -20,6 +20,8 @@ Query session status.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-cliManager-function querySession(sessionId: string): Promise<CliSessionInfo>--><!--Device-cliManager-function querySession(sessionId: string): Promise<CliSessionInfo>-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -34,7 +36,7 @@ Query session status.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CliSessionInfo&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CliSessionInfo> | The promise returned by the function. |
 
 **Error codes:**
 

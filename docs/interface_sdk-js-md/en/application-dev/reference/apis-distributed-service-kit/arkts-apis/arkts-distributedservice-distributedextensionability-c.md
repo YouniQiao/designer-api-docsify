@@ -1,9 +1,10 @@
 # DistributedExtensionAbility
 
-The **DistributedExtensionAbility** module provides distributed extension capabilities and lifecycle callbacks for
-distributed ability creation, destruction, and connection.
+The **DistributedExtensionAbility** module provides distributed extension capabilities and lifecycle callbacks for distributed ability creation, destruction, and connection.
 
 **Since:** 20
+
+<!--Device-unnamed-declare class DistributedExtensionAbility--><!--Device-unnamed-declare class DistributedExtensionAbility-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -25,19 +26,21 @@ Callback invoked to return the collaboration result in multi-device collaboratio
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DistributedExtensionAbility-onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateResult--><!--Device-DistributedExtensionAbility-onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateResult-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParam | Record&lt;string, Object&gt; | Yes | Want parameter, which supports only the key **"ohos.extra.param.key.supportCollaborateIndex"**. The key can be used to obtain the data passed by the caller andperform corresponding processing. |
+| wantParam | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Object> | Yes | Want parameter, which supports only the key **"ohos.extra.param.key.supportCollaborateIndex"**. The key can be used to obtain the data passed by the caller and perform corresponding processing. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AbilityConstant.CollaborateResult | Collaboration result, that is, whether the target application accepts thecollaboration request. |
+| AbilityConstant.CollaborateResult | Collaboration result, that is, whether the target application accepts the collaboration request. |
 
 **Example**
 
@@ -72,13 +75,15 @@ Callback invoked to initialize the service logic when a **DistributedExtensionAb
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DistributedExtensionAbility-onCreate(want: Want): void--><!--Device-DistributedExtensionAbility-onCreate(want: Want): void-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information related to the **DistributedExtensionAbility** instance, including the abilityname and bundle name. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information related to the **DistributedExtensionAbility** instance, including the ability name and bundle name. |
 
 **Example**
 
@@ -108,6 +113,8 @@ Callback invoked to clear resources when a **ServiceExtensionAbility** instance 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DistributedExtensionAbility-onDestroy(): void--><!--Device-DistributedExtensionAbility-onDestroy(): void-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Example**
@@ -136,6 +143,8 @@ Context of the **DistributedExtension**. This context inherits from **ExtensionC
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DistributedExtensionAbility-context: DistributedExtensionContext--><!--Device-DistributedExtensionAbility-context: DistributedExtensionContext-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 

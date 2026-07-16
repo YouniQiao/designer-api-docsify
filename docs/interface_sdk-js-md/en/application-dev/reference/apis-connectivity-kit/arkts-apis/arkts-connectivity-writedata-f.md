@@ -20,19 +20,21 @@ Writes data by address and UUID.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-dataTransfer-function writeData(params: DataParams): Promise<void>--><!--Device-dataTransfer-function writeData(params: DataParams): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | DataParams | Yes | Indicates the send data params. |
+| params | [DataParams](arkts-connectivity-dataparams-i.md) | Yes | Indicates the send data params. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 

@@ -18,6 +18,8 @@ Sets the status of the automatic time setting. This API uses a promise to return
 
 **Required permissions:** ohos.permission.SET_TIME
 
+<!--Device-systemDateTime-function setAutoTimeStatus(status: boolean): Promise<void>--><!--Device-systemDateTime-function setAutoTimeStatus(status: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Sets the status of the automatic time setting. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| status | boolean | Yes | Whether to enable the automatic time setting.<br>- **true**: Enable the automatic timesetting.<br>- **false**: Disable the automatic time setting. |
+| status | boolean | Yes | Whether to enable the automatic time setting.<br>- **true**: Enable the automatic time setting.<br>- **false**: Disable the automatic time setting. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

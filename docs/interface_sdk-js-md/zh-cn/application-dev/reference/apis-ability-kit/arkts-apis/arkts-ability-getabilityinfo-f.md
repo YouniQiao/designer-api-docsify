@@ -1,5 +1,11 @@
 # getAbilityInfo
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getAbilityInfo
 
 ```TypeScript
@@ -12,7 +18,9 @@ function getAbilityInfo(uri: string, abilityFlags: number): Promise<Array<Abilit
 
 **需要权限：** ohos.permission.GET_ABILITY_INFO
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-bundleManager-function getAbilityInfo(uri: string, abilityFlags: int): Promise<Array<AbilityInfo>>--><!--Device-bundleManager-function getAbilityInfo(uri: string, abilityFlags: int): Promise<Array<AbilityInfo>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -27,7 +35,7 @@ function getAbilityInfo(uri: string, abilityFlags: number): Promise<Array<Abilit
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;AbilityInfo&gt;&gt; | Promise对象，返回获取到的Ability信息数组。 |
+| Promise<Array<AbilityInfo>> | Promise对象，返回获取到的Ability信息数组。 |
 
 **错误码：**
 

@@ -6,6 +6,8 @@
 
 **起始版本：** 15
 
+<!--Device-unnamed-declare interface FocusAxisEvent extends BaseEvent--><!--Device-unnamed-declare interface FocusAxisEvent extends BaseEvent-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## axisMap
@@ -22,7 +24,9 @@ axisMap: Map<AxisModel, number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FocusAxisEvent-axisMap: Map<AxisModel, number>--><!--Device-FocusAxisEvent-axisMap: Map<AxisModel, number>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,7 +44,9 @@ stopPropagation: Callback<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FocusAxisEvent-stopPropagation: Callback<void>--><!--Device-FocusAxisEvent-stopPropagation: Callback<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

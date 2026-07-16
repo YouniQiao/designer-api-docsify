@@ -14,9 +14,9 @@ function setExtBundleStats(userId: number, stats: ExtBundleStats): Promise<void>
 
 Reports the space usage of system applications or system services. This API uses a promise to return the result.
 
-> **NOTE**
->
-> If the value of **flag** in **stats** is **false**, the value of **businessName** must be the bundle name of an
+> **NOTE**  
+>  
+> If the value of **flag** in **stats** is **false**, the value of **businessName** must be the bundle name of an  
 > application.
 
 **Since:** 23
@@ -24,6 +24,8 @@ Reports the space usage of system applications or system services. This API uses
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-storageStatistics-function setExtBundleStats(userId: int, stats: ExtBundleStats): Promise<void>--><!--Device-storageStatistics-function setExtBundleStats(userId: int, stats: ExtBundleStats): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -34,13 +36,13 @@ Reports the space usage of system applications or system services. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
-| stats | ExtBundleStats | Yes | Space usage of system applications or system services. |
+| stats | [ExtBundleStats](arkts-corefile-extbundlestats-i-sys.md) | Yes | Space usage of system applications or system services. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

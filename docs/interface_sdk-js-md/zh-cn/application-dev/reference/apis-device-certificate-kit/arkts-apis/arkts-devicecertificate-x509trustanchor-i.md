@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-cert-interface X509TrustAnchor--><!--Device-cert-interface X509TrustAnchor-End-->
+
 **系统能力：** SystemCapability.Security.Cert
+
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
 
 ## CACert
 
@@ -18,7 +26,9 @@ CACert?: X509Cert
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509TrustAnchor-CACert?: X509Cert--><!--Device-X509TrustAnchor-CACert?: X509Cert-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -34,7 +44,9 @@ CAPubKey?: Uint8Array
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509TrustAnchor-CAPubKey?: Uint8Array--><!--Device-X509TrustAnchor-CAPubKey?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -50,7 +62,9 @@ CASubject?: Uint8Array
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509TrustAnchor-CASubject?: Uint8Array--><!--Device-X509TrustAnchor-CASubject?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -66,7 +80,9 @@ nameConstraints?: Uint8Array
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509TrustAnchor-nameConstraints?: Uint8Array--><!--Device-X509TrustAnchor-nameConstraints?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

@@ -4,6 +4,8 @@ Defines additional options for binding an input method.
 
 **Since:** 19
 
+<!--Device-inputMethodEngine-export interface AttachOptions--><!--Device-inputMethodEngine-export interface AttachOptions-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Modules to Import
@@ -18,14 +20,15 @@ import { inputMethodEngine } from '@kit.IMEKit';
 isSimpleKeyboardEnabled?: boolean
 ```
 
-Whether to enable the simple keyboard. This attribute is set by the edit box application. The value **true**
-means that the simple keyboard is enabled, and the value **false** means the opposite.
+Whether to enable the simple keyboard. This attribute is set by the edit box application. The value **true** means that the simple keyboard is enabled, and the value **false** means the opposite.
 
 If this attribute is not set or is set to an invalid value, the simple keyboard is disabled by default.
 
 **Type:** boolean
 
 **Since:** 20
+
+<!--Device-AttachOptions-isSimpleKeyboardEnabled?: boolean--><!--Device-AttachOptions-isSimpleKeyboardEnabled?: boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -35,12 +38,13 @@ If this attribute is not set or is set to an invalid value, the simple keyboard 
 requestKeyboardReason?: RequestKeyboardReason
 ```
 
-Reason for requesting the keyboard. This attribute is set by the edit box application. If this attribute is not
-set or is set to an invalid value, the keyboard will not be triggered by default.
+Reason for requesting the keyboard. This attribute is set by the edit box application. If this attribute is not set or is set to an invalid value, the keyboard will not be triggered by default.
 
 **Type:** RequestKeyboardReason
 
 **Since:** 19
+
+<!--Device-AttachOptions-requestKeyboardReason?: RequestKeyboardReason--><!--Device-AttachOptions-requestKeyboardReason?: RequestKeyboardReason-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 

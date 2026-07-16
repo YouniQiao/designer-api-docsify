@@ -14,19 +14,21 @@ function getFontDescriptorsFromPath(path: string | Resource): Promise<Array<Font
 
 Obtains an array of font descriptors by font file path. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - An empty array is returned if the font file is not found, the font file path is invalid, the font file does not
-> have the required permission, or the file is not in the font format.
->
-> - The **weight** field in [FontDescriptor](arkts-arkgraphics2d-fontdescriptor-i.md) does not exactly correspond to the weight
-> value in the font file. Instead, the actual weight value in the font file is rounded off and mapped to the
-> [FontWeight](arkts-arkgraphics2d-fontweight-e.md) enum value. For example, the weight value 350 in the font file is mapped to 4
+> **NOTE**  
+>  
+> - An empty array is returned if the font file is not found, the font file path is invalid, the font file does not  
+> have the required permission, or the file is not in the font format.  
+>  
+> - The **weight** field in [FontDescriptor](arkts-arkgraphics2d-fontdescriptor-i.md) does not exactly correspond to the weight  
+> value in the font file. Instead, the actual weight value in the font file is rounded off and mapped to the  
+> [FontWeight](arkts-arkgraphics2d-fontweight-e.md) enum value. For example, the weight value 350 in the font file is mapped to 4  
 > 00, and the corresponding enum value is W400.
 
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-text-function getFontDescriptorsFromPath(path: string | Resource): Promise<Array<FontDescriptor>>--><!--Device-text-function getFontDescriptorsFromPath(path: string | Resource): Promise<Array<FontDescriptor>>-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -34,13 +36,13 @@ Obtains an array of font descriptors by font file path. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string \| Resource | Yes | Path of the font file to be queried. The path must be in the format of "**file://** + Absolute path of the font file" or **$rawfile** (a file path relative to the**resources/rawfile** directory in the project, which includes the font file name). |
+| path | string \| Resource | Yes | Path of the font file to be queried. The path must be in the format of "**file://** + Absolute path of the font file" or **$rawfile** (a file path relative to the **resources/rawfile** directory in the project, which includes the font file name). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;FontDescriptor&gt;&gt; | Promise used to return all font descriptors. If the font file cannot befound, the path is invalid, the font file does not have the required permission, or the file is not a font file, an empty array is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<FontDescriptor>> | Promise used to return all font descriptors. If the font file cannot be found, the path is invalid, the font file does not have the required permission, or the file is not a font file, an empty array is returned. |
 
 **Example**
 

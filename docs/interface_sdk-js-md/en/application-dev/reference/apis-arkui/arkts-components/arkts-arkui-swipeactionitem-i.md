@@ -1,13 +1,12 @@
 # SwipeActionItem
 
-Describes the swipe action item.
-For a list in vertical layout, it refers to the delete option displayed on the left (or right) of the list item
-when the list item is swiped right (or left).
+Describes the swipe action item.For a list in vertical layout, it refers to the delete option displayed on the left (or right) of the list item when the list item is swiped right (or left).
 
-For a list in horizontal layout, it refers to the delete option displayed below (or above) the list item
-when the list item is swiped up (or down).
+For a list in horizontal layout, it refers to the delete option displayed below (or above) the list item when the list item is swiped up (or down).
 
 **Since:** 10
+
+<!--Device-unnamed-declare interface SwipeActionItem--><!--Device-unnamed-declare interface SwipeActionItem-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -17,8 +16,7 @@ when the list item is swiped up (or down).
 actionAreaDistance?: Length
 ```
 
-Swipe distance threshold for deleting the list item. This threshold applies after the swipe action component
-is fully swiped into view and triggers the deletion action.
+Swipe distance threshold for deleting the list item. This threshold applies after the swipe action component is fully swiped into view and triggers the deletion action.
 
 **Type:** Length
 
@@ -30,6 +28,8 @@ is fully swiped into view and triggers the deletion action.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SwipeActionItem-actionAreaDistance?: Length--><!--Device-SwipeActionItem-actionAreaDistance?: Length-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## builder
@@ -38,8 +38,7 @@ is fully swiped into view and triggers the deletion action.
 builder?: CustomBuilder
 ```
 
-Swipe action item displayed when the list item is swiped left or right (in vertical list layout)
-or up or down (in horizontal list layout).
+Swipe action item displayed when the list item is swiped left or right (in vertical list layout)or up or down (in horizontal list layout).
 
 **Type:** CustomBuilder
 
@@ -49,6 +48,8 @@ or up or down (in horizontal list layout).
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SwipeActionItem-builder?: CustomBuilder--><!--Device-SwipeActionItem-builder?: CustomBuilder-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## builderComponent
@@ -57,8 +58,7 @@ or up or down (in horizontal list layout).
 builderComponent?: ComponentContent
 ```
 
-Swipe action item displayed when the list item is swiped left or right (in vertical list layout)
-or up or down (in horizontal list layout).
+Swipe action item displayed when the list item is swiped left or right (in vertical list layout)or up or down (in horizontal list layout).
 
 **Type:** ComponentContent
 
@@ -67,6 +67,8 @@ or up or down (in horizontal list layout).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SwipeActionItem-builderComponent?: ComponentContent--><!--Device-SwipeActionItem-builderComponent?: ComponentContent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,6 +88,8 @@ Callback invoked when the list item is released while in the delete area.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SwipeActionItem-onAction?: () => void--><!--Device-SwipeActionItem-onAction?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onEnterActionArea
@@ -103,6 +107,8 @@ Callback invoked each time the list item enters the delete area.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SwipeActionItem-onEnterActionArea?: () => void--><!--Device-SwipeActionItem-onEnterActionArea?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -122,6 +128,8 @@ Callback invoked each time the list item exits the delete area.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SwipeActionItem-onExitActionArea?: () => void--><!--Device-SwipeActionItem-onExitActionArea?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onStateChange
@@ -139,6 +147,8 @@ Callback invoked when the swipe state of the list item changes.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SwipeActionItem-onStateChange?: (state: SwipeActionState) => void--><!--Device-SwipeActionItem-onStateChange?: (state: SwipeActionState) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

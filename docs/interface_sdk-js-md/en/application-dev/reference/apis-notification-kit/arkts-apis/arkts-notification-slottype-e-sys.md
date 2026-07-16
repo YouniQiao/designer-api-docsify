@@ -2,10 +2,11 @@
 
 Enumerates the notification slot types.
 
-Different types correspond to different [SlotLevel](arkts-notification-slotlevel-e.md) values,
-determining the reminder behavior of the notification.
+Different types correspond to different [SlotLevel](arkts-notification-slotlevel-e.md) values,determining the reminder behavior of the notification.
 
 **Since:** 9
+
+<!--Device-notificationManager-export enum SlotType--><!--Device-notificationManager-export enum SlotType-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -18,6 +19,8 @@ EMERGENCY_INFORMATION = 10
 Emergency event.
 
 **Since:** 12
+
+<!--Device-SlotType-EMERGENCY_INFORMATION = 10--><!--Device-SlotType-EMERGENCY_INFORMATION = 10-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

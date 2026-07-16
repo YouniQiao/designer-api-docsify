@@ -4,6 +4,8 @@ MissionCallback registered by app.
 
 **Since:** 9
 
+<!--Device-unnamed-export interface MissionCallback--><!--Device-unnamed-export interface MissionCallback-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
@@ -23,6 +25,8 @@ Called by system when mission changed.
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MissionCallback-notifyMissionsChanged: NotifyMissionsChangedCallback--><!--Device-MissionCallback-notifyMissionsChanged: NotifyMissionsChangedCallback-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -44,6 +48,8 @@ Called by system when network disconnect.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MissionCallback-notifyNetDisconnect: NotifyNetDisconnectCallback--><!--Device-MissionCallback-notifyNetDisconnect: NotifyNetDisconnectCallback-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
@@ -63,6 +69,8 @@ Called by system when snapshot changed.
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MissionCallback-notifySnapshot: NotifySnapshotCallback--><!--Device-MissionCallback-notifySnapshot: NotifySnapshotCallback-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 

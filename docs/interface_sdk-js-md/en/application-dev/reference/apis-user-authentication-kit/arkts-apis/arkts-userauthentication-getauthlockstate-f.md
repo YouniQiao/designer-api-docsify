@@ -20,19 +20,21 @@ Queries the lockout state of the specified authentication type. This API uses a 
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-userAuth-function getAuthLockState(authType: UserAuthType): Promise<AuthLockState>--><!--Device-userAuth-function getAuthLockState(authType: UserAuthType): Promise<AuthLockState>-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | UserAuthType | Yes | Authentication type. |
+| authType | [UserAuthType](arkts-userauthentication-userauthtype-e.md) | Yes | Authentication type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AuthLockState&gt; | Promise used to return the result. An error is reported when the operationfails. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AuthLockState> | Promise used to return the result. An error is reported when the operation fails. |
 
 **Error codes:**
 

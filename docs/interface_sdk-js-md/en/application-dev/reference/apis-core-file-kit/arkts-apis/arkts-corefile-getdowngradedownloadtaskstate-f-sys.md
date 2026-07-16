@@ -20,6 +20,8 @@ Supports querying the execution status of full data download tasks for integrate
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-cloudSyncManager-function getDowngradeDownloadTaskState(bundleNames: Array<string>): Promise<Array<DownloadProgress>>--><!--Device-cloudSyncManager-function getDowngradeDownloadTaskState(bundleNames: Array<string>): Promise<Array<DownloadProgress>>-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **System API:** This is a system API.
@@ -28,13 +30,13 @@ Supports querying the execution status of full data download tasks for integrate
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleNames | Array&lt;string&gt; | Yes | array of bundleName. |
+| bundleNames | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | array of bundleName. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DownloadProgress&gt;&gt; | - Return Promise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<DownloadProgress>> | - Return Promise. |
 
 **Error codes:**
 

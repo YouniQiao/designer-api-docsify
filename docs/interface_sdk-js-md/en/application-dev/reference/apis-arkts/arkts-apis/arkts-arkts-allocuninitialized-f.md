@@ -18,6 +18,8 @@ Allocates a new un-pooled FastBuffer for a fixed size bytes. The FastBuffer will
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-fastbuffer-function allocUninitialized(size: number): FastBuffer--><!--Device-fastbuffer-function allocUninitialized(size: number): FastBuffer-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -30,7 +32,7 @@ Allocates a new un-pooled FastBuffer for a fixed size bytes. The FastBuffer will
 
 | Type | Description |
 | --- | --- |
-| FastBuffer | Return a new allocated FastBuffer |
+| [FastBuffer](arkts-arkts-fastbuffer-c.md) | Return a new allocated FastBuffer |
 
 **Example**
 

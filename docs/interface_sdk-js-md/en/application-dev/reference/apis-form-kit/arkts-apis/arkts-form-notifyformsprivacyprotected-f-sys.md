@@ -16,12 +16,21 @@ function notifyFormsPrivacyProtected(
   ): void
 ```
 
-Notifies that the privacy protection status of the specified widgets changes. This API uses an asynchronous
-callback to return the result.
+Notifies that the privacy protection status of the specified widgets changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
+
+<!--Device-formHost-function notifyFormsPrivacyProtected(
+    formIds: Array<string>,
+    isProtected: boolean,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-formHost-function notifyFormsPrivacyProtected(
+    formIds: Array<string>,
+    isProtected: boolean,
+    callback: AsyncCallback<void>
+  ): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -31,9 +40,9 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | Yes | ID of the widgets. |
+| formIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | ID of the widgets. |
 | isProtected | boolean | Yes | Whether a widget requires privacy protection.<br>**true**: The widget requires privacy protection.<br>**false**: The widget does not require privacy protection. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If privacy protection is setsuccessfully, **error** is undefined; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If privacy protection is set successfully, **error** is undefined; otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -53,12 +62,13 @@ callback to return the result.
 function notifyFormsPrivacyProtected(formIds: Array<string>, isProtected: boolean): Promise<void>
 ```
 
-Notifies that the privacy protection status of the specified widgets changes. This API uses a promise to return
-the result.
+Notifies that the privacy protection status of the specified widgets changes. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
+
+<!--Device-formHost-function notifyFormsPrivacyProtected(formIds: Array<string>, isProtected: boolean): Promise<void>--><!--Device-formHost-function notifyFormsPrivacyProtected(formIds: Array<string>, isProtected: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -68,14 +78,14 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | Yes | ID of the widgets. |
+| formIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | ID of the widgets. |
 | isProtected | boolean | Yes | Whether a widget requires privacy protection.<br>**true**: The widget requires privacy protection.<br>**false**: The widget does not require privacy protection. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

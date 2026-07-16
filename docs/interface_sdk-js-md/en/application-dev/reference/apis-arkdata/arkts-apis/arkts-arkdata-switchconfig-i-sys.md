@@ -4,6 +4,8 @@ Defines the switch configuration of a device-cloud synergy database.
 
 **Since:** 23
 
+<!--Device-cloudData-interface SwitchConfig--><!--Device-cloudData-interface SwitchConfig-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -20,12 +22,13 @@ import { cloudData } from '@kit.ArkData';
 dbInfo: Record<string, DBSwitchInfo>
 ```
 
-Switch configuration information of a database. The key is the database name, and the value is the configuration
-information of the database.
+Switch configuration information of a database. The key is the database name, and the value is the configuration information of the database.
 
 **Type:** Record<string, DBSwitchInfo>
 
 **Since:** 23
+
+<!--Device-SwitchConfig-dbInfo: Record<string, DBSwitchInfo>--><!--Device-SwitchConfig-dbInfo: Record<string, DBSwitchInfo>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 

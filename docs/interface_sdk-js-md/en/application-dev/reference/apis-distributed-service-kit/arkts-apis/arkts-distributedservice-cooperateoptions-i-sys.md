@@ -4,6 +4,8 @@ Screen hopping options, such as the exit position.
 
 **Since:** 20
 
+<!--Device-cooperate-interface CooperateOptions--><!--Device-cooperate-interface CooperateOptions-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Screen ID of the peer device.
 
 **Since:** 20
 
+<!--Device-CooperateOptions-displayId: long--><!--Device-CooperateOptions-displayId: long-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ X coordinate of the mouse cursor.
 
 **Since:** 20
 
+<!--Device-CooperateOptions-displayX: int--><!--Device-CooperateOptions-displayX: int-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ Y coordinate of the mouse cursor.
 **Type:** number
 
 **Since:** 20
+
+<!--Device-CooperateOptions-displayY: int--><!--Device-CooperateOptions-displayY: int-End-->
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 

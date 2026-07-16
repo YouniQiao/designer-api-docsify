@@ -12,12 +12,13 @@ import { settings } from '@kit.BasicServicesKit';
 function unregisterKeyObserver(context: Context, name: string, domainName: string): boolean
 ```
 
-Monitor unregister key(synchronous method)
-[USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
+Monitor unregister key(synchronous method)[USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-settings-function unregisterKeyObserver(context: Context, name: string, domainName: string): boolean--><!--Device-settings-function unregisterKeyObserver(context: Context, name: string, domainName: string): boolean-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -25,7 +26,7 @@ Monitor unregister key(synchronous method)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
 | name | string | Yes | Indicates the name of the character string. |
 | domainName | string | Yes | Indicates the name of the domain name to set. |
 

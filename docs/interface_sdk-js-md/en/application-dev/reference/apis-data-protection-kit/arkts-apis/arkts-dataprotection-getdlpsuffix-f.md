@@ -12,13 +12,13 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function getDLPSuffix(): string
 ```
 
-Obtains the DLP file name extension. After the API is called successfully, the DLP file name extension (for
-example, .dlp) is returned. This API returns the result synchronously.
+Obtains the DLP file name extension. After the API is called successfully, the DLP file name extension (for example, .dlp) is returned. This API returns the result synchronously.
 
-This API is used to obtain the standard extension of the DLP file, which can be used to construct the DLP file
-name or the determination of the file type.
+This API is used to obtain the standard extension of the DLP file, which can be used to construct the DLP file name or the determination of the file type.
 
 **Since:** 10
+
+<!--Device-dlpPermission-function getDLPSuffix(): string--><!--Device-dlpPermission-function getDLPSuffix(): string-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -26,7 +26,7 @@ name or the determination of the file type.
 
 | Type | Description |
 | --- | --- |
-| string | DLP file name extension obtained. For example, if the original file name is **test.txt**, theencrypted DLP file name is **test.txt.dlp**, and the returned extension is **.dlp**. |
+| string | DLP file name extension obtained. For example, if the original file name is **test.txt**, the encrypted DLP file name is **test.txt.dlp**, and the returned extension is **.dlp**. |
 
 **Error codes:**
 

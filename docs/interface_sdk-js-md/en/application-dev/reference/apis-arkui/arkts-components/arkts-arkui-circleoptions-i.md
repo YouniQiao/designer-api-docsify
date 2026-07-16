@@ -4,6 +4,8 @@ Describes the options of the circle.
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface CircleOptions--><!--Device-unnamed-declare interface CircleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## height
@@ -12,9 +14,7 @@ Describes the options of the circle.
 height?: Length
 ```
 
-Height.
-Unit: vp, The value must be greater than or equal to 0, Default The **undefined**, **null**, **NaN**, and
-**Infinity** values are invalid and treated as the default value. Default value: **0**.
+Height.Unit: vp, The value must be greater than or equal to 0, Default The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. Default value: **0**.
 
 **Type:** Length
 
@@ -23,6 +23,8 @@ Unit: vp, The value must be greater than or equal to 0, Default The **undefined*
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-CircleOptions-height?: Length--><!--Device-CircleOptions-height?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,9 +34,7 @@ Unit: vp, The value must be greater than or equal to 0, Default The **undefined*
 width?: Length
 ```
 
-Width.
-Unit: vp, The value must be greater than or equal to 0, Default The **undefined**, **null**, **NaN**, and
-**Infinity** values are invalid and treated as the default value. Default value: **0**.
+Width.Unit: vp, The value must be greater than or equal to 0, Default The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. Default value: **0**.
 
 **Type:** Length
 
@@ -43,6 +43,8 @@ Unit: vp, The value must be greater than or equal to 0, Default The **undefined*
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-CircleOptions-width?: Length--><!--Device-CircleOptions-width?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

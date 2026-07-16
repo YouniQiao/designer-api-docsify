@@ -1,5 +1,11 @@
 # getLocalUpdater（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { update } from '@kit.BasicServicesKit';
+```
+
 ## getLocalUpdater
 
 ```TypeScript
@@ -10,6 +16,8 @@ function getLocalUpdater(): LocalUpdater
 
 **起始版本：** 9
 
+<!--Device-update-function getLocalUpdater(): LocalUpdater--><!--Device-update-function getLocalUpdater(): LocalUpdater-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -18,7 +26,7 @@ function getLocalUpdater(): LocalUpdater
 
 | 类型 | 说明 |
 | --- | --- |
-| LocalUpdater | 本地升级对象。 |
+| [LocalUpdater](arkts-basicservices-localupdater-i-sys.md) | 本地升级对象。 |
 
 **错误码：**
 

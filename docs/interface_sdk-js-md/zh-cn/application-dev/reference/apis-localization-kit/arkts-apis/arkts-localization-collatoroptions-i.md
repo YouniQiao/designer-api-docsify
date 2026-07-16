@@ -6,7 +6,15 @@
 
 **起始版本：** 8
 
+<!--Device-intl-export interface CollatorOptions--><!--Device-intl-export interface CollatorOptions-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+```
 
 ## caseFirst
 
@@ -28,7 +36,9 @@ caseFirst?: string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CollatorOptions-caseFirst?: string--><!--Device-CollatorOptions-caseFirst?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -78,7 +88,9 @@ collation?: string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CollatorOptions-collation?: string--><!--Device-CollatorOptions-collation?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -96,7 +108,9 @@ true表示忽略标点符号，false表示考虑标点符号。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CollatorOptions-ignorePunctuation?: boolean--><!--Device-CollatorOptions-ignorePunctuation?: boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -118,7 +132,9 @@ localeMatcher?: string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CollatorOptions-localeMatcher?: string--><!--Device-CollatorOptions-localeMatcher?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -140,7 +156,9 @@ false：不使用数字排序，比如：'1' < '10' < '11' < '2'。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CollatorOptions-numeric?: boolean--><!--Device-CollatorOptions-numeric?: boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -166,7 +184,9 @@ sensitivity?: string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CollatorOptions-sensitivity?: string--><!--Device-CollatorOptions-sensitivity?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -188,7 +208,9 @@ usage?: string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CollatorOptions-usage?: string--><!--Device-CollatorOptions-usage?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

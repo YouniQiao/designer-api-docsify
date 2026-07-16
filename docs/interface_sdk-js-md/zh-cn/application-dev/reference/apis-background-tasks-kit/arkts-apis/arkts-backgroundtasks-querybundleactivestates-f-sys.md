@@ -1,5 +1,11 @@
 # queryBundleActiveStates（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleState } from '@kit.BackgroundTasksKit';
+```
+
 ## queryBundleActiveStates
 
 ```TypeScript
@@ -14,6 +20,8 @@ Queries state data of all bundles within a specified period identified by the st
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-bundleState-function queryBundleActiveStates(begin: number, end: number, callback: AsyncCallback<Array<BundleActiveState>>): void--><!--Device-bundleState-function queryBundleActiveStates(begin: number, end: number, callback: AsyncCallback<Array<BundleActiveState>>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -24,7 +32,7 @@ Queries state data of all bundles within a specified period identified by the st
 | --- | --- | --- | --- |
 | begin | number | 是 | Indicates the start time of the query period, in milliseconds. |
 | end | number | 是 | Indicates the end time of the query period, in milliseconds. |
-| callback | AsyncCallback&lt;Array&lt;BundleActiveState&gt;&gt; | 是 | the state data of all bundles. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<BundleActiveState>> | 是 | the state data of all bundles. |
 
 **示例：**
 
@@ -61,6 +69,8 @@ Queries state data of all bundles within a specified period identified by the st
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-bundleState-function queryBundleActiveStates(begin: number, end: number): Promise<Array<BundleActiveState>>--><!--Device-bundleState-function queryBundleActiveStates(begin: number, end: number): Promise<Array<BundleActiveState>>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -76,7 +86,7 @@ Queries state data of all bundles within a specified period identified by the st
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;BundleActiveState&gt;&gt; | the state data of all bundles. |
+| Promise<Array<BundleActiveState>> | the state data of all bundles. |
 
 **示例：**
 

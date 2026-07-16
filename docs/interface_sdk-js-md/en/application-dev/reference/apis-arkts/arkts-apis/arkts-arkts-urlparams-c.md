@@ -4,6 +4,8 @@ The URLParams interface defines some practical methods to process URL query stri
 
 **Since:** 9
 
+<!--Device-url-class URLParams--><!--Device-url-class URLParams-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -18,13 +20,13 @@ import { url } from '@kit.ArkTS';
 [Symbol.iterator](): IterableIterator<[string, string]>
 ```
 
-Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and the first and second fields
-ofeach array are
-the key and value respectively.
+Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and the first and second fields ofeach array are the key and value respectively.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URLParams-[Symbol.iterator](): IterableIterator<[string, string]>--><!--Device-URLParams-[Symbol.iterator](): IterableIterator<[string, string]>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -32,7 +34,7 @@ the key and value respectively.
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;[string, string]&gt; | Returns an ES6 iterator. Each item of the iterator is aJavaScript Array.The first item of Array is name, and the second item of Array is value. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<[string, string]> | Returns an ES6 iterator. Each item of the iterator is a JavaScript Array.The first item of Array is name, and the second item of Array is value. |
 
 **Example**
 
@@ -58,6 +60,8 @@ Appends a key-value pair into the query string.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URLParams-append(name: string, value: string): void--><!--Device-URLParams-append(name: string, value: string): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -89,13 +93,15 @@ A constructor used to create a URLParams instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-URLParams-constructor(init?: string[][] | Record<string, string> | string | URLParams)--><!--Device-URLParams-constructor(init?: string[][] | Record<string, string> | string | URLParams)-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| init | string[][] \| Record&lt;string, string&gt; \| string \| URLParams | No | Input parameter objects, whichinclude the following:- string[][]: two-dimensional string array.- Record&lt;string, string&gt;: list of objects.- string: string.- URLParams: object.The default value is null. |
+| init | string[][] \| Record<string, string> \| string \| URLParams | No | Input parameter objects, which include the following:  - string[][]: two-dimensional string array.  - Record&lt;string, string&gt;: list of objects.  - string: string.  - URLParams: object.The default value is null. |
 
 **Example**
 
@@ -127,6 +133,8 @@ Deletes key-value pairs of the specified key.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-URLParams-delete(name: string): void--><!--Device-URLParams-delete(name: string): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -150,12 +158,13 @@ paramsObject.delete('fod');
 entries(): IterableIterator<[string, string]>
 ```
 
-Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and the first and second fields of
-each array are the key and value respectively.
+Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and the first and second fields of each array are the key and value respectively.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URLParams-entries(): IterableIterator<[string, string]>--><!--Device-URLParams-entries(): IterableIterator<[string, string]>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -163,7 +172,7 @@ each array are the key and value respectively.
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;[string, string]&gt; | Returns an iterator for ES6. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<[string, string]> | Returns an iterator for ES6. |
 
 **Example**
 
@@ -190,14 +199,16 @@ Callback functions are used to traverse key-value pairs on the URLParams instanc
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-URLParams-forEach(callbackFn: (value: string, key: string, searchParams: URLParams) => void, thisArg?: Object): void--><!--Device-URLParams-forEach(callbackFn: (value: string, key: string, searchParams: URLParams) => void, thisArg?: Object): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: string, key: string, searchParams: URLParams) =&gt; void | Yes | callbackFn value Current traversal key value,key Indicates the name of the key that is traversed. |
-| thisArg | Object | No | thisArg to be used as this value for when callbackFn is called |
+| callbackFn | (value: string, key: string, searchParams: URLParams) => void | Yes | callbackFn value Current traversal key value,key Indicates the name of the key that is traversed. |
+| thisArg | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | No | thisArg to be used as this value for when callbackFn is called |
 
 **Example**
 
@@ -220,6 +231,8 @@ Obtains the value of the first key-value pair based on the specified key.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URLParams-get(name: string): string | null--><!--Device-URLParams-get(name: string): string | null-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -257,6 +270,8 @@ Obtains all the values based on the specified key.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-URLParams-getAll(name: string): string[]--><!--Device-URLParams-getAll(name: string): string[]-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -293,6 +308,8 @@ Checks whether a key has a value.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-URLParams-has(name: string): boolean--><!--Device-URLParams-has(name: string): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -328,13 +345,15 @@ Obtains an ES6 iterator that contains the keys of all the key-value pairs.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-URLParams-keys(): IterableIterator<string>--><!--Device-URLParams-keys(): IterableIterator<string>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;string&gt; | Returns an ES6 Iterator over the names of each name-value pair. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<string> | Returns an ES6 Iterator over the names of each name-value pair. |
 
 **Example**
 
@@ -355,15 +374,13 @@ for (let key of keys) {
 set(name: string, value: string): void
 ```
 
-Sets the value for a key. If key-value pairs matching the specified key exist, the value of the first key-
-value
-pair will be set to the specified value and other key-value pairs will be deleted. Otherwise, the key-value
-pair
-will be appended to the query string.
+Sets the value for a key. If key-value pairs matching the specified key exist, the value of the first key-value pair will be set to the specified value and other key-value pairs will be deleted. Otherwise, the key-value pair will be appended to the query string.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URLParams-set(name: string, value: string): void--><!--Device-URLParams-set(name: string, value: string): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -389,13 +406,13 @@ paramsObject.set('baz', '3'); // Add a third parameter.
 sort(): void
 ```
 
-Sorts all key-value pairs contained in this object based on the Unicode code points of the keys and returns
-undefined. This method uses a stable sorting algorithm, that is, the relative order between key-value pairs
-with equal keys is retained.
+Sorts all key-value pairs contained in this object based on the Unicode code points of the keys and returns undefined. This method uses a stable sorting algorithm, that is, the relative order between key-value pairs with equal keys is retained.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URLParams-sort(): void--><!--Device-URLParams-sort(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -414,12 +431,13 @@ console.info(paramsObject.toString()); // Display the sorted query string // Out
 toString(): string
 ```
 
-Obtains search parameters that are serialized as a string and, if necessary, percent-encodes the characters
-in the string.
+Obtains search parameters that are serialized as a string and, if necessary, percent-encodes the characters in the string.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URLParams-toString(): string--><!--Device-URLParams-toString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -451,13 +469,15 @@ Obtains an ES6 iterator that contains the values of all the key-value pairs.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-URLParams-values(): IterableIterator<string>--><!--Device-URLParams-values(): IterableIterator<string>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;string&gt; | Returns an ES6 Iterator over the values of each name-value pair. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<string> | Returns an ES6 Iterator over the values of each name-value pair. |
 
 **Example**
 

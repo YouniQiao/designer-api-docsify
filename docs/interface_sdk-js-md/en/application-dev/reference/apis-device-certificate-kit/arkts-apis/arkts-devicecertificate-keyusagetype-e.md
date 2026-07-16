@@ -4,6 +4,8 @@ Enumerates the purposes for which the key in the certificate is used.
 
 **Since:** 12
 
+<!--Device-cert-enum KeyUsageType--><!--Device-cert-enum KeyUsageType-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## KEYUSAGE_DIGITAL_SIGNATURE
@@ -17,6 +19,8 @@ The certificate holder can use the private key contained in the certificate to g
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-KeyUsageType-KEYUSAGE_DIGITAL_SIGNATURE = 0--><!--Device-KeyUsageType-KEYUSAGE_DIGITAL_SIGNATURE = 0-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -32,6 +36,8 @@ The certificate holder can use the key to create a digital signature as part of 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-KeyUsageType-KEYUSAGE_NON_REPUDIATION = 1--><!--Device-KeyUsageType-KEYUSAGE_NON_REPUDIATION = 1-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## KEYUSAGE_KEY_ENCIPHERMENT
@@ -45,6 +51,8 @@ The certificate holder can use the public key contained in the certificate for k
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-KeyUsageType-KEYUSAGE_KEY_ENCIPHERMENT = 2--><!--Device-KeyUsageType-KEYUSAGE_KEY_ENCIPHERMENT = 2-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -60,6 +68,8 @@ The certificate holder can use the public key contained in the certificate for d
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-KeyUsageType-KEYUSAGE_DATA_ENCIPHERMENT = 3--><!--Device-KeyUsageType-KEYUSAGE_DATA_ENCIPHERMENT = 3-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## KEYUSAGE_KEY_AGREEMENT
@@ -73,6 +83,8 @@ The certificate holder can use the private key contained in the certificate to p
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-KeyUsageType-KEYUSAGE_KEY_AGREEMENT = 4--><!--Device-KeyUsageType-KEYUSAGE_KEY_AGREEMENT = 4-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -88,6 +100,8 @@ The certificate holder can use the private key contained in the certificate to s
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-KeyUsageType-KEYUSAGE_KEY_CERT_SIGN = 5--><!--Device-KeyUsageType-KEYUSAGE_KEY_CERT_SIGN = 5-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## KEYUSAGE_CRL_SIGN
@@ -101,6 +115,8 @@ The certificate holder can use the private key contained in the certificate to s
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-KeyUsageType-KEYUSAGE_CRL_SIGN = 6--><!--Device-KeyUsageType-KEYUSAGE_CRL_SIGN = 6-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -116,6 +132,8 @@ The certificate holder can use the key to perform encryption operations only.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-KeyUsageType-KEYUSAGE_ENCIPHER_ONLY = 7--><!--Device-KeyUsageType-KEYUSAGE_ENCIPHER_ONLY = 7-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## KEYUSAGE_DECIPHER_ONLY
@@ -129,6 +147,8 @@ The certificate holder can use the key to perform decryption operations only.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-KeyUsageType-KEYUSAGE_DECIPHER_ONLY = 8--><!--Device-KeyUsageType-KEYUSAGE_DECIPHER_ONLY = 8-End-->
 
 **System capability:** SystemCapability.Security.Cert
 

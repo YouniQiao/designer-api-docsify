@@ -14,15 +14,13 @@ function deleteRdbStore(context: Context, name: string, callback: AsyncCallback<
 
 Deletes the RDB store with the specified database file name. This API uses a promise to return the result.
 
-If **vector** is set to **true** in [StoreConfig]
-{@link @ohos.data.relationalStore:relationalStore.StoreConfig} when an RDB store is created, using this API cannot
-delete the RDB store. Use [deleteRdbStore]
-{@link relationalStore.deleteRdbStore(context: Context, config: StoreConfig)} instead.
+If **vector** is set to **true** in [StoreConfig](arkts-arkdata-storeconfig-i.md) when an RDB store is created, using this API cannot delete the RDB store. Use [deleteRdbStore](arkts-arkdata-deleterdbstore-f.md#deleterdbstore-4) instead.
 
-Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet** of the vector store have been
-closed.
+Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet** of the vector store have been closed.
 
 **Since:** 9
+
+<!--Device-relationalStore-function deleteRdbStore(context: Context, name: string, callback: AsyncCallback<void>): void--><!--Device-relationalStore-function deleteRdbStore(context: Context, name: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -30,9 +28,9 @@ closed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context.<br>For details about the application context of the FA model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
 | name | string | Yes | Name of the RDB store to delete. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback invoked to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback invoked to return the result. |
 
 **Error codes:**
 
@@ -96,16 +94,13 @@ function deleteRdbStore(context: Context, config: StoreConfig, callback: AsyncCa
 
 Deletes an RDB store. This API uses an asynchronous callback to return the result.
 
-After the deletion, you are advised to set the database object to null. If the database file is stored in the
-sandbox directory, use this API to delete the database. If multiple processes operate the same database, other
-processes should be notified about the database deletion so that they can detect and process the deletion. If a
-custom path is set in [StoreConfig](arkts-arkdata-storeconfig-i.md) during RDB store
-creation, using this API to delete the RDB store.
+After the deletion, you are advised to set the database object to null. If the database file is stored in the sandbox directory, use this API to delete the database. If multiple processes operate the same database, other processes should be notified about the database deletion so that they can detect and process the deletion. If a custom path is set in [StoreConfig](arkts-arkdata-storeconfig-i.md) during RDB store creation, using this API to delete the RDB store.
 
-Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet** of the vector store have been
-closed.
+Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet** of the vector store have been closed.
 
 **Since:** 10
+
+<!--Device-relationalStore-function deleteRdbStore(context: Context, config: StoreConfig, callback: AsyncCallback<void>): void--><!--Device-relationalStore-function deleteRdbStore(context: Context, config: StoreConfig, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -113,9 +108,9 @@ closed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
-| config | StoreConfig | Yes | Configuration of the RDB store. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback invoked to return the result. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context.<br>For details about the application context of the FA model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
+| config | [StoreConfig](arkts-arkdata-storeconfig-i.md) | Yes | Configuration of the RDB store. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback invoked to return the result. |
 
 **Error codes:**
 
@@ -190,15 +185,13 @@ function deleteRdbStore(context: Context, name: string): Promise<void>
 
 Deletes an RDB store. This API uses a promise to return the result.
 
-After the deletion, you are advised to set the database object to null. If a custom path is set in
-[StoreConfig](arkts-arkdata-storeconfig-i.md) when an RDB store is created, using
-this API cannot delete the RDB store. Use
-[deleteRdbStore](arkts-arkdata-deleterdbstore-f.md#deleterdbstore-4) instead.
+After the deletion, you are advised to set the database object to null. If a custom path is set in [StoreConfig](arkts-arkdata-storeconfig-i.md) when an RDB store is created, using this API cannot delete the RDB store. Use [deleteRdbStore](arkts-arkdata-deleterdbstore-f.md#deleterdbstore-4) instead.
 
-Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet** of the vector store have been
-closed.
+Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet** of the vector store have been closed.
 
 **Since:** 9
+
+<!--Device-relationalStore-function deleteRdbStore(context: Context, name: string): Promise<void>--><!--Device-relationalStore-function deleteRdbStore(context: Context, name: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -206,14 +199,14 @@ closed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context.<br>For details about the application context of the FA model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
 | name | string | Yes | Name of the RDB store to delete. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -273,16 +266,13 @@ function deleteRdbStore(context: Context, config: StoreConfig): Promise<void>
 
 Deletes an RDB store. This API uses a promise to return the result.
 
-After the deletion, you are advised to set the database object to null. If the database file is stored in the
-sandbox directory, use this API to delete the database. If multiple processes operate the same database, other
-processes should be notified about the database deletion so that they can detect and process the deletion. If a
-custom path is set in [StoreConfig](arkts-arkdata-storeconfig-i.md) during RDB store
-creation, using this API to delete the RDB store.
+After the deletion, you are advised to set the database object to null. If the database file is stored in the sandbox directory, use this API to delete the database. If multiple processes operate the same database, other processes should be notified about the database deletion so that they can detect and process the deletion. If a custom path is set in [StoreConfig](arkts-arkdata-storeconfig-i.md) during RDB store creation, using this API to delete the RDB store.
 
-Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet** of the vector store have been
-closed.
+Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet** of the vector store have been closed.
 
 **Since:** 10
+
+<!--Device-relationalStore-function deleteRdbStore(context: Context, config: StoreConfig): Promise<void>--><!--Device-relationalStore-function deleteRdbStore(context: Context, config: StoreConfig): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -290,14 +280,14 @@ closed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
-| config | StoreConfig | Yes | Configuration of the RDB store. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context.<br>For details about the application context of the FA model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
+| config | [StoreConfig](arkts-arkdata-storeconfig-i.md) | Yes | Configuration of the RDB store. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

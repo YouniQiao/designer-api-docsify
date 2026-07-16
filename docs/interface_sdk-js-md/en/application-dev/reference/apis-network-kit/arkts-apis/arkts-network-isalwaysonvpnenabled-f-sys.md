@@ -20,6 +20,8 @@ Get the Always on VPN mode status for a device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-vpnExtension-function isAlwaysOnVpnEnabled(bundleName: string): Promise<boolean>--><!--Device-vpnExtension-function isAlwaysOnVpnEnabled(bundleName: string): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -34,7 +36,7 @@ Get the Always on VPN mode status for a device.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | return the mode for alway on vpn status |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | return the mode for alway on vpn status |
 
 **Error codes:**
 

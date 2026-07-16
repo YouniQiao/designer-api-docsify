@@ -4,6 +4,8 @@ Indicates the info of the rtt message.
 
 **Since:** 22
 
+<!--Device-call-export interface RttMessageInfo--><!--Device-call-export interface RttMessageInfo-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Indicates the id of rtt.
 
 **Since:** 22
 
+<!--Device-RttMessageInfo-callId: int--><!--Device-RttMessageInfo-callId: int-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Indicates the rtt messgae.
 **Type:** string
 
 **Since:** 22
+
+<!--Device-RttMessageInfo-rttMessage: string--><!--Device-RttMessageInfo-rttMessage: string-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 

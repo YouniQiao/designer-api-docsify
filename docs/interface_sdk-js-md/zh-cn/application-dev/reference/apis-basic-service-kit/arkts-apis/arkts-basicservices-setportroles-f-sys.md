@@ -1,5 +1,11 @@
 # setPortRoles（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { usbManager } from '@kit.BasicServicesKit';
+```
+
 ## setPortRoles
 
 ```TypeScript
@@ -14,6 +20,8 @@ function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRo
 
 **替代接口：** setPortRoleTypes(portId:
 
+<!--Device-usbManager-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<void>--><!--Device-usbManager-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<void>-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 **系统接口：** 此接口为系统接口。
@@ -23,18 +31,18 @@ function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | portId | number | 是 | 端口号。 |
-| powerRole | PowerRoleType | 是 | 充电的角色。 |
-| dataRole | DataRoleType | 是 | 数据传输的角色。 |
+| powerRole | [PowerRoleType](arkts-basicservices-powerroletype-e-sys.md) | 是 | 充电的角色。 |
+| dataRole | [DataRoleType](arkts-basicservices-dataroletype-e-sys.md) | 是 | 数据传输的角色。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。 |
+| Promise<void> | Promise对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified.<br>2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:* <br>1.Mandatory parameters are left unspecified.* <br>2.Incorrect parameter types. |
 

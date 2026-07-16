@@ -18,6 +18,8 @@ Installs a font in the specified path. This API uses a promise to return the res
 
 **Required permissions:** ohos.permission.UPDATE_FONT
 
+<!--Device-fontManager-function installFont(path: string): Promise<int>--><!--Device-fontManager-function installFont(path: string): Promise<int>-End-->
+
 **System capability:** SystemCapability.Global.FontManager
 
 **System API:** This is a system API.
@@ -32,7 +34,7 @@ Installs a font in the specified path. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. The value **0** indicates that the installation issuccessful, and any other value indicates that the installation has failed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result. The value **0** indicates that the installation is successful, and any other value indicates that the installation has failed. |
 
 **Error codes:**
 

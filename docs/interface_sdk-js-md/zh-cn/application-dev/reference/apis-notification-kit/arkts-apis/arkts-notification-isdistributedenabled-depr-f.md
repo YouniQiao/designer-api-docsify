@@ -14,13 +14,15 @@ function isDistributedEnabled(callback: AsyncCallback<boolean>): void
 
 **替代接口：** isDistributedEnabled
 
+<!--Device-notification-function isDistributedEnabled(callback: AsyncCallback<boolean>): void--><!--Device-notification-function isDistributedEnabled(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 设备是否支持分布式通知的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 设备是否支持分布式通知的回调函数。 |
 
 
 ## isDistributedEnabled
@@ -37,11 +39,13 @@ function isDistributedEnabled(): Promise<boolean>
 
 **替代接口：** isDistributedEnabled
 
+<!--Device-notification-function isDistributedEnabled(): Promise<boolean>--><!--Device-notification-function isDistributedEnabled(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise方式返回设备是否支持分布式通知的结果。 |
+| Promise<boolean> | Promise方式返回设备是否支持分布式通知的结果。 |
 

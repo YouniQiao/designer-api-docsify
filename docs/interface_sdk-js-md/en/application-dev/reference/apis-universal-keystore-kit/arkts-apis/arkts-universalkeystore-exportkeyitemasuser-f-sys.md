@@ -18,6 +18,8 @@ Exports the public key for the specified user. This API uses a promise to return
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-huks-function exportKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<HuksReturnResult>--><!--Device-huks-function exportKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<HuksReturnResult>-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **System API:** This is a system API.
@@ -28,13 +30,13 @@ Exports the public key for the specified user. This API uses a promise to return
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
 | keyAlias | string | Yes | Key alias, which must be the same as the alias used when the key was generated. |
-| huksOptions | HuksOptions | Yes | Empty object (leave this parameter empty). |
+| huksOptions | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Empty object (leave this parameter empty). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | Promise used to return the result. If the operation is successful,**outData** in **HuksReturnResult** is the public key exported. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HuksReturnResult> | Promise used to return the result. If the operation is successful,**outData** in **HuksReturnResult** is the public key exported. |
 
 **Error codes:**
 

@@ -16,6 +16,8 @@ Converts a temporary widget to a normal one. This API uses an asynchronous callb
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
+<!--Device-formHost-function castTempForm(formId: string, callback: AsyncCallback<void>): void--><!--Device-formHost-function castTempForm(formId: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -25,7 +27,7 @@ Converts a temporary widget to a normal one. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the widget is converted to anormal one, **error** is undefined; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the widget is converted to a normal one, **error** is undefined; otherwise, **error** is an error object. |
 
 
 ## castTempForm
@@ -44,6 +46,8 @@ Converts a temporary widget to a normal one. This API uses a promise to return t
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
+<!--Device-formHost-function castTempForm(formId: string): Promise<void>--><!--Device-formHost-function castTempForm(formId: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -58,5 +62,5 @@ Converts a temporary widget to a normal one. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 

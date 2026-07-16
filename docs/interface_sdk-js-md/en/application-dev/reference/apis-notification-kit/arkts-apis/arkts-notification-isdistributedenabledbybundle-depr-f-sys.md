@@ -6,8 +6,7 @@
 function isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallback<boolean>): void
 ```
 
-Obtains whether an application supports distributed notifications based on the bundle.
-This API uses an asynchronous callback to return the result.
+Obtains whether an application supports distributed notifications based on the bundle.This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -17,6 +16,8 @@ This API uses an asynchronous callback to return the result.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallback<boolean>): void--><!--Device-notification-function isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -25,8 +26,8 @@ This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Application bundle. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Application bundle. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. |
 
 
 ## isDistributedEnabledByBundle
@@ -35,8 +36,7 @@ This API uses an asynchronous callback to return the result.
 function isDistributedEnabledByBundle(bundle: BundleOption): Promise<boolean>
 ```
 
-Checks whether a specified application supports distributed notifications.
-This API uses an asynchronous callback to return the result.
+Checks whether a specified application supports distributed notifications.This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -46,6 +46,8 @@ This API uses an asynchronous callback to return the result.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function isDistributedEnabledByBundle(bundle: BundleOption): Promise<boolean>--><!--Device-notification-function isDistributedEnabledByBundle(bundle: BundleOption): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -54,11 +56,11 @@ This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Application bundle. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Application bundle. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. |
 

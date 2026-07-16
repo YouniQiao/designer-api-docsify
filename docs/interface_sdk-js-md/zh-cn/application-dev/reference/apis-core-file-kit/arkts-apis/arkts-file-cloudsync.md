@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace cloudSync--><!--Device-unnamed-declare namespace cloudSync-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+## 导入模块
+
+```TypeScript
+import { cloudSync } from '@kit.CoreFileKit';
+```
 
 ## 汇总
 
@@ -76,7 +84,7 @@
 | --- | --- |
 | [DownloadErrorType](arkts-corefile-downloaderrortype-e.md) | 端云下载错误类型，为枚举类型。 |
 | [DownloadFileType](arkts-corefile-downloadfiletype-e.md) | 云盘缓存文件类型的枚举。 |
-| [ErrorType](arkts-corefile-errortype-e.md) | 端云同步失败类型，为枚举类型。- 当前阶段，同步过程中，当开启无限量使用移动数据网络，移动数据网络和WIFI均不可用时，才会返回NETWORK_UNAVAILABLE；开启无限量使用移动数据网络，若有一种类型网络可用，则能正常同步。- 同步过程中，非充电场景下，电量低于10%，完成当前批上行同步后停止同步，返回低电量；- 触发同步时，非充电场景下，若电量低于10%，则不允许同步- 上行时，若云端空间不足，则文件上行失败，云端无该文件记录。 |
+| [ErrorType](arkts-corefile-errortype-e.md) | 端云同步失败类型，为枚举类型。- 当前阶段，同步过程中，当开启无限量使用移动数据网络，移动数据网络和WIFI均不可用时，才会返回NETWORK_UNAVAILABLE；开启无限量使用移动数据网络，若有一种类型网络可用，则能正常同步。 - 同步过程中，非充电场景下，电量低于10%，完成当前批上行同步后停止同步，返回低电量； - 触发同步时，非充电场景下，若电量低于10%，则不允许同步 - 上行时，若云端空间不足，则文件上行失败，云端无该文件记录。 |
 | [FileState](arkts-corefile-filestate-e.md) | 端云文件同步状态，为枚举类型。 |
 | [NotifyType](arkts-corefile-notifytype-e.md) | 数据变更通知类型。 |
 | [State](arkts-corefile-state-e.md) | 云文件下载状态，为枚举类型。 |
@@ -87,7 +95,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ErrorType](arkts-corefile-errortype-e-sys.md) | 端云同步失败类型，为枚举类型。- 当前阶段，同步过程中，当开启无限量使用移动数据网络，移动数据网络和WIFI均不可用时，才会返回NETWORK_UNAVAILABLE；开启无限量使用移动数据网络，若有一种类型网络可用，则能正常同步。- 同步过程中，非充电场景下，电量低于10%，完成当前批上行同步后停止同步，返回低电量；- 触发同步时，非充电场景下，若电量低于10%，则不允许同步- 上行时，若云端空间不足，则文件上行失败，云端无该文件记录。 |
+| [ErrorType](arkts-corefile-errortype-e-sys.md) | 端云同步失败类型，为枚举类型。- 当前阶段，同步过程中，当开启无限量使用移动数据网络，移动数据网络和WIFI均不可用时，才会返回NETWORK_UNAVAILABLE；开启无限量使用移动数据网络，若有一种类型网络可用，则能正常同步。 - 同步过程中，非充电场景下，电量低于10%，完成当前批上行同步后停止同步，返回低电量； - 触发同步时，非充电场景下，若电量低于10%，则不允许同步 - 上行时，若云端空间不足，则文件上行失败，云端无该文件记录。 |
 | [FileSyncState](arkts-corefile-filesyncstate-e-sys.md) | 端云文件同步状态，为枚举类型。 |
 | [OptimizeState](arkts-corefile-optimizestate-e-sys.md) | 优化空间状态，为枚举类型。 |
 | [State](arkts-corefile-state-e-sys.md) | 云文件下载状态，为枚举类型。 |

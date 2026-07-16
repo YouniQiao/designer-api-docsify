@@ -4,6 +4,8 @@ Declaration of the editable title bar.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare struct EditableTitleBarV2--><!--Device-unnamed-export declare struct EditableTitleBarV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Image item configuration, displayed on the left side of the title.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-EditableTitleBarV2-imageItem?: EditableTitleBarItemV2--><!--Device-EditableTitleBarV2-imageItem?: EditableTitleBarItemV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## leftIcon
@@ -45,6 +49,8 @@ Left icon configuration.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarV2-leftIcon?: EditableLeftIconV2--><!--Device-EditableTitleBarV2-leftIcon?: EditableLeftIconV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +70,8 @@ Custom menu items array, maximum 2-3 items.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-EditableTitleBarV2-menuItems?: Array<EditableTitleBarMenuItemV2>--><!--Device-EditableTitleBarV2-menuItems?: Array<EditableTitleBarMenuItemV2>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## options
@@ -81,6 +89,8 @@ Style and layout configuration.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarV2-options: EditableTitleBarStyleV2--><!--Device-EditableTitleBarV2-options: EditableTitleBarStyleV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +110,8 @@ Save button configuration.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-EditableTitleBarV2-saveButton?: EditableSaveButtonV2--><!--Device-EditableTitleBarV2-saveButton?: EditableSaveButtonV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## title
@@ -117,6 +129,8 @@ Title configuration, supports string or object form.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarV2-title: ResourceStr | EditableTitleV2--><!--Device-EditableTitleBarV2-title: ResourceStr | EditableTitleV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

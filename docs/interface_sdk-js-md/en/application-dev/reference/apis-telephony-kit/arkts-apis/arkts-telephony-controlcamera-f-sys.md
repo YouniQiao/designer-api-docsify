@@ -18,6 +18,8 @@ Control camera to open/close/switch camera by cameraId when video call.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function controlCamera(callId: int, cameraId: string): Promise<void>--><!--Device-call-function controlCamera(callId: int, cameraId: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -33,7 +35,7 @@ Control camera to open/close/switch camera by cameraId when video call.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the controlCamera. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the controlCamera. |
 
 **Error codes:**
 

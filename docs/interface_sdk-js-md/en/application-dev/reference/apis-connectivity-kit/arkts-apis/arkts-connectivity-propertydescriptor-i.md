@@ -4,6 +4,8 @@ Describes the SSAP descriptor for property.
 
 **Since:** 26.0.0
 
+<!--Device-ssap-interface PropertyDescriptor--><!--Device-ssap-interface PropertyDescriptor-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import
@@ -26,6 +28,8 @@ The type of the propertyDescriptor instance.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PropertyDescriptor-descriptorType: PropertyDescriptorType--><!--Device-PropertyDescriptor-descriptorType: PropertyDescriptorType-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## isWriteable
@@ -34,14 +38,15 @@ The type of the propertyDescriptor instance.
 isWriteable?: boolean
 ```
 
-Indicates whether the descriptor is writable.
-Default value: true.
+Indicates whether the descriptor is writable.Default value: true.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PropertyDescriptor-isWriteable?: boolean--><!--Device-PropertyDescriptor-isWriteable?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -51,16 +56,15 @@ Default value: true.
 propertyUuid: string
 ```
 
-The UUID of the {@link Property} instance which the propertyDescriptor belongs to.
-The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),
-for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.
-<br>NearLink standard UUIDs are not allowed.
+The UUID of the {@link Property} instance which the propertyDescriptor belongs to.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.<br>NearLink standard UUIDs are not allowed.
 
 **Type:** string
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PropertyDescriptor-propertyUuid: string--><!--Device-PropertyDescriptor-propertyUuid: string-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -70,16 +74,15 @@ for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifi
 serviceUuid: string
 ```
 
-The UUID of the {@link Service} instance which the master property of descriptor belongs to.
-The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),
-for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.
-<br>NearLink standard UUIDs are not allowed.
+The UUID of the {@link Service} instance which the master property of descriptor belongs to.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.<br>NearLink standard UUIDs are not allowed.
 
 **Type:** string
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PropertyDescriptor-serviceUuid: string--><!--Device-PropertyDescriptor-serviceUuid: string-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -96,6 +99,8 @@ The value of the propertyDescriptor instance.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PropertyDescriptor-value: ArrayBuffer--><!--Device-PropertyDescriptor-value: ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 

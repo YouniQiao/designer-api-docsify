@@ -16,13 +16,15 @@ Cancels a transient task.
 
 **Since:** 9
 
+<!--Device-backgroundTaskManager-function cancelSuspendDelay(requestId: int): void--><!--Device-backgroundTaskManager-function cancelSuspendDelay(requestId: int): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestId | number | Yes | Request ID of the transient task. It is obtained by calling the[requestSuspendDelay](arkts-backgroundtasks-requestsuspenddelay-f.md#requestsuspenddelay-1) API. |
+| requestId | number | Yes | Request ID of the transient task. It is obtained by calling the [requestSuspendDelay](arkts-backgroundtasks-requestsuspenddelay-f.md#requestsuspenddelay-1) API. |
 
 **Error codes:**
 

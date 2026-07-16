@@ -4,6 +4,8 @@ Declare struct PopoverDialogV2
 
 **Since:** 18
 
+<!--Device-unnamed-export declare struct PopoverDialogV2--><!--Device-unnamed-export declare struct PopoverDialogV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Sets the callback when visibility changed.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-PopoverDialogV2-$visible?: PopoverDialogV2OnVisibleChange--><!--Device-PopoverDialogV2-$visible?: PopoverDialogV2OnVisibleChange-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## popover
@@ -45,6 +49,8 @@ Sets the PopoverDialogV2 options.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-PopoverDialogV2-popover: PopoverDialogV2Options--><!--Device-PopoverDialogV2-popover: PopoverDialogV2Options-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,6 +72,8 @@ Sets the targetBuilder content.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-PopoverDialogV2-targetBuilder: CustomBuilder--><!--Device-PopoverDialogV2-targetBuilder: CustomBuilder-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## visible
@@ -83,6 +91,8 @@ Sets the PopoverDialogV2 Visible Status.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-PopoverDialogV2-visible: boolean--><!--Device-PopoverDialogV2-visible: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,17 +4,25 @@ UIContext实例对象。
 
 > **说明：**
 
-> - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。
->
-> - 以下API需要通过对应的UIContext实例调用。获取UIContext分为三种方式，第一种是使用ohos.window中的
-> [getUIContext()](../../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10)方法获取UIContext实例，第二种是通过自定
-> 义组件内置方法[getUIContext()](../../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#getuicontext)获取UIContext
-> 实例，第三种是通过UIContext类的静态方法如[getCallingScopeUIContext](arkts-arkui-uicontext-c.md#getcallingscopeuicontext-1)获取UIContext实例。本文中
+> - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。  
+>  
+> - 以下API需要通过对应的UIContext实例调用。获取UIContext分为三种方式，第一种是使用ohos.window中的  
+> [getUIContext()](../../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10)方法获取UIContext实例，第二种是通过自定  
+> 义组件内置方法[getUIContext()](../../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#getuicontext)获取UIContext  
+> 实例，第三种是通过UIContext类的静态方法如[getCallingScopeUIContext](arkts-arkui-uicontext-c.md#getcallingscopeuicontext-1)获取UIContext实例。本文中  
 > UIContext对象以uiContext表示。
 
 **起始版本：** 10
 
+<!--Device-unnamed-export class UIContext--><!--Device-unnamed-export class UIContext-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
+```
 
 ## animateToImmediately
 
@@ -28,7 +36,9 @@ animateToImmediately(param: AnimateParam, processor: Callback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIContext-animateToImmediately(param: AnimateParam, processor: Callback<void>): void--><!--Device-UIContext-animateToImmediately(param: AnimateParam, processor: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,8 +48,8 @@ animateToImmediately(param: AnimateParam, processor: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | AnimateParam | 是 | 设置动画效果相关参数。 |
-| processor | Callback&lt;void&gt; | 是 | 回调函数。指定显示动效的闭包函数，在闭包函数中导致的状态变化系统会自动插入过渡动画。 |
+| param | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | 是 | 设置动画效果相关参数。 |
+| processor | [Callback](../arkts-components/arkts-arkui-callback-i.md)<void> | 是 | 回调函数。指定显示动效的闭包函数，在闭包函数中导致的状态变化系统会自动插入过渡动画。 |
 
 ## clearResourceCache
 
@@ -53,7 +63,9 @@ clearResourceCache(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12 - 12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12 - 12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIContext-clearResourceCache(): void--><!--Device-UIContext-clearResourceCache(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,6 +108,8 @@ freezeUINode(id: string, isFrozen: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIContext-freezeUINode(id: string, isFrozen: boolean): void--><!--Device-UIContext-freezeUINode(id: string, isFrozen: boolean): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -124,6 +138,8 @@ freezeUINode(uniqueId: number, isFrozen: boolean): void
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIContext-freezeUINode(uniqueId: number, isFrozen: boolean): void--><!--Device-UIContext-freezeUINode(uniqueId: number, isFrozen: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -154,6 +170,8 @@ getLuminanceSampler(target: TargetInfo): LuminanceSampler | undefined
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIContext-getLuminanceSampler(target: TargetInfo): LuminanceSampler | undefined--><!--Device-UIContext-getLuminanceSampler(target: TargetInfo): LuminanceSampler | undefined-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -162,13 +180,13 @@ getLuminanceSampler(target: TargetInfo): LuminanceSampler | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | TargetInfo | 是 | 目标组件的标识。 |
+| target | [TargetInfo](arkts-arkui-targetinfo-i.md) | 是 | 目标组件的标识。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| LuminanceSampler | the luminance sampler or undefined. |
+| [LuminanceSampler](arkts-arkui-luminancesampler-c-sys.md) | the luminance sampler or undefined. |
 
 **示例：**
 
@@ -185,6 +203,8 @@ recycleInvisibleImageMemory(enabled: boolean): void
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIContext-recycleInvisibleImageMemory(enabled: boolean): void--><!--Device-UIContext-recycleInvisibleImageMemory(enabled: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -229,13 +249,15 @@ setDynamicDimming(id: string, value: number): void
 
 通过该方法设置组件的压暗程度。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 设置该属性后设置其他效果类属性会导致效果冲突。
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIContext-setDynamicDimming(id: string, value: number): void--><!--Device-UIContext-setDynamicDimming(id: string, value: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -283,6 +305,8 @@ setKeyboardAppearanceConfig(uniqueId: number, config: KeyboardAppearanceConfig):
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-UIContext-setKeyboardAppearanceConfig(uniqueId: number, config: KeyboardAppearanceConfig): void--><!--Device-UIContext-setKeyboardAppearanceConfig(uniqueId: number, config: KeyboardAppearanceConfig): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -292,7 +316,7 @@ setKeyboardAppearanceConfig(uniqueId: number, config: KeyboardAppearanceConfig):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uniqueId | number | 是 | The unique id of the input component. |
-| config | KeyboardAppearanceConfig | 是 | The config of keyboard. |
+| config | [KeyboardAppearanceConfig](arkts-arkui-keyboardappearanceconfig-i-sys.md) | 是 | The config of keyboard. |
 
 **错误码：**
 

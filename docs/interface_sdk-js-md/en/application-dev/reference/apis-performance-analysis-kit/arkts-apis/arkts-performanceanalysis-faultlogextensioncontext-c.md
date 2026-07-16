@@ -1,15 +1,11 @@
 # FaultLogExtensionContext
 
-FaultLogExtensionContext is the context of
-[FaultLogExtensionAbility](arkts-performanceanalysis-faultlogextensionability-c.md) and inherits from
-[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
+FaultLogExtensionContext is the context of [FaultLogExtensionAbility](arkts-performanceanalysis-faultlogextensionability-c.md) and inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
 
-This module provides APIs for accessing resources of a specific
-[FaultLogExtensionAbility](arkts-performanceanalysis-faultlogextensionability-c.md). An
-ExtensionAbility can use the context directly provided by ExtensionContext or that extended from ExtensionContext.
+This module provides APIs for accessing resources of a specific [FaultLogExtensionAbility](arkts-performanceanalysis-faultlogextensionability-c.md). An ExtensionAbility can use the context directly provided by ExtensionContext or that extended from ExtensionContext.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > - The APIs of this module can be used only in the stage model.
 
 **Inheritance/Implementation:** FaultLogExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
@@ -17,6 +13,8 @@ ExtensionAbility can use the context directly provided by ExtensionContext or th
 **Since:** 21
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-unnamed-export default class FaultLogExtensionContext extends ExtensionContext--><!--Device-unnamed-export default class FaultLogExtensionContext extends ExtensionContext-End-->
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 

@@ -1,5 +1,11 @@
 # onAutoSyncTrigger
 
+## 导入模块
+
+```TypeScript
+import { cloudData } from '@kit.ArkData';
+```
+
 ## onAutoSyncTrigger
 
 ```TypeScript
@@ -12,13 +18,15 @@ function onAutoSyncTrigger(observer: Callback<AutoSyncTriggerInfo>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-cloudData-function onAutoSyncTrigger(observer: Callback<AutoSyncTriggerInfo>): void--><!--Device-cloudData-function onAutoSyncTrigger(observer: Callback<AutoSyncTriggerInfo>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| observer | Callback&lt;AutoSyncTriggerInfo&gt; | 是 | 回调函数。 |
+| observer | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AutoSyncTriggerInfo> | 是 | 回调函数。 |
 
 **错误码：**
 

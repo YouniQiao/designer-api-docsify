@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-ssap-interface Server--><!--Device-ssap-interface Server-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
+
+## 导入模块
+
+```TypeScript
+import { ssap } from '@kit.ConnectivityKit';
+```
 
 ## addService
 
@@ -20,13 +28,15 @@ addService(service: Service): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Server-addService(service: Service): void--><!--Device-Server-addService(service: Service): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| service | Service | 是 | 需要添加并注册ssap服务 |
+| service | [Service](arkts-connectivity-service-i.md) | 是 | 需要添加并注册ssap服务 |
 
 **错误码：**
 
@@ -52,6 +62,8 @@ close(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Server-close(): void--><!--Device-Server-close(): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **错误码：**
@@ -76,6 +88,8 @@ notifyPropertyChanged(address: string, property: Property): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Server-notifyPropertyChanged(address: string, property: Property): Promise<void>--><!--Device-Server-notifyPropertyChanged(address: string, property: Property): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
@@ -83,13 +97,13 @@ notifyPropertyChanged(address: string, property: Property): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | address | string | 是 | 设备地址。<br>长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。 |
-| property | Property | 是 | 指示要通知的属性 |
+| property | [Property](arkts-connectivity-property-i.md) | 是 | 指示要通知的属性 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise<void> | 返回promise对象。 |
 
 **错误码：**
 
@@ -114,13 +128,15 @@ offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Server-offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void--><!--Device-Server-offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;ConnectionChangeState&gt; | 否 | 用于监听连接状态改变事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<ConnectionChangeState> | 否 | 用于监听连接状态改变事件的回调。 |
 
 ## offMtuChange
 
@@ -134,13 +150,15 @@ offMtuChange(callback?: Callback<number>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Server-offMtuChange(callback?: Callback<int>): void--><!--Device-Server-offMtuChange(callback?: Callback<int>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;number&gt; | 否 | 用于监听mtu变化事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<number> | 否 | 用于监听mtu变化事件的回调。 |
 
 ## offPropertyRead
 
@@ -154,13 +172,15 @@ offPropertyRead(callback?: Callback<PropertyReadRequest>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Server-offPropertyRead(callback?: Callback<PropertyReadRequest>): void--><!--Device-Server-offPropertyRead(callback?: Callback<PropertyReadRequest>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;PropertyReadRequest&gt; | 否 | 用于监听属性操作事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<PropertyReadRequest> | 否 | 用于监听属性操作事件的回调。 |
 
 ## offPropertyWrite
 
@@ -174,13 +194,15 @@ offPropertyWrite(callback?: Callback<PropertyWriteRequest>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Server-offPropertyWrite(callback?: Callback<PropertyWriteRequest>): void--><!--Device-Server-offPropertyWrite(callback?: Callback<PropertyWriteRequest>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;PropertyWriteRequest&gt; | 否 | 用于监听属性操作事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<PropertyWriteRequest> | 否 | 用于监听属性操作事件的回调。 |
 
 ## onConnectionStateChange
 
@@ -190,13 +212,13 @@ onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 
 订阅服务器连接状态更改事件。
 
-只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
-如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。
-回调返回真实设备地址，否则返回随机设备地址。
+只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。回调返回真实设备地址，否则返回随机设备地址。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Server-onConnectionStateChange(callback: Callback<ConnectionChangeState>): void--><!--Device-Server-onConnectionStateChange(callback: Callback<ConnectionChangeState>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -204,7 +226,7 @@ onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;ConnectionChangeState&gt; | 是 | 用于监听连接状态改变事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<ConnectionChangeState> | 是 | 用于监听连接状态改变事件的回调。 |
 
 ## onMtuChange
 
@@ -220,13 +242,15 @@ onMtuChange(callback: Callback<number>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Server-onMtuChange(callback: Callback<int>): void--><!--Device-Server-onMtuChange(callback: Callback<int>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;number&gt; | 是 | 用于监听mtu变化事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<number> | 是 | 用于监听mtu变化事件的回调。 |
 
 ## onPropertyRead
 
@@ -236,13 +260,13 @@ onPropertyRead(callback: Callback<PropertyReadRequest>): void
 
 从客户端订阅属性读取事件。
 
-只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
-如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。
-回调返回真实设备地址，否则返回随机设备地址。
+只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。回调返回真实设备地址，否则返回随机设备地址。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Server-onPropertyRead(callback: Callback<PropertyReadRequest>): void--><!--Device-Server-onPropertyRead(callback: Callback<PropertyReadRequest>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -250,7 +274,7 @@ onPropertyRead(callback: Callback<PropertyReadRequest>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;PropertyReadRequest&gt; | 是 | 用于监听属性操作事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<PropertyReadRequest> | 是 | 用于监听属性操作事件的回调。 |
 
 ## onPropertyWrite
 
@@ -260,13 +284,13 @@ onPropertyWrite(callback: Callback<PropertyWriteRequest>): void
 
 从客户端订阅属性写入事件。
 
-只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
-如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。
-回调返回真实设备地址，否则返回随机设备地址。
+只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。回调返回真实设备地址，否则返回随机设备地址。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Server-onPropertyWrite(callback: Callback<PropertyWriteRequest>): void--><!--Device-Server-onPropertyWrite(callback: Callback<PropertyWriteRequest>): void-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -274,7 +298,7 @@ onPropertyWrite(callback: Callback<PropertyWriteRequest>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;PropertyWriteRequest&gt; | 是 | 用于监听属性操作事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<PropertyWriteRequest> | 是 | 用于监听属性操作事件的回调。 |
 
 ## removeService
 
@@ -289,6 +313,8 @@ removeService(serviceUuid: string): void
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Server-removeService(serviceUuid: string): void--><!--Device-Server-removeService(serviceUuid: string): void-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -322,13 +348,15 @@ sendResponse(response: ServerResponse): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Server-sendResponse(response: ServerResponse): void--><!--Device-Server-sendResponse(response: ServerResponse): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| response | ServerResponse | 是 | 表示响应。 |
+| response | [ServerResponse](arkts-connectivity-serverresponse-i.md) | 是 | 表示响应。 |
 
 **错误码：**
 

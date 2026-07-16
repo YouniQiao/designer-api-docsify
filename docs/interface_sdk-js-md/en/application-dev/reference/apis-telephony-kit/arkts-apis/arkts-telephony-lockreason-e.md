@@ -4,6 +4,8 @@ Enum for SIM card lock type.
 
 **Since:** 8
 
+<!--Device-observer-export enum LockReason--><!--Device-observer-export enum LockReason-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## SIM_NONE
@@ -15,6 +17,8 @@ SIM_NONE = 0
 Indicates no SIM lock.
 
 **Since:** 8
+
+<!--Device-LockReason-SIM_NONE = 0--><!--Device-LockReason-SIM_NONE = 0-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -28,6 +32,8 @@ Indicates the PIN lock.
 
 **Since:** 8
 
+<!--Device-LockReason-SIM_PIN = 1--><!--Device-LockReason-SIM_PIN = 1-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## SIM_PUK
@@ -39,6 +45,8 @@ SIM_PUK = 2
 Indicates the PUK lock.
 
 **Since:** 8
+
+<!--Device-LockReason-SIM_PUK = 2--><!--Device-LockReason-SIM_PUK = 2-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -52,6 +60,8 @@ Indicates network personalization of PIN lock(refer 3GPP TS 22.022 [33]).
 
 **Since:** 8
 
+<!--Device-LockReason-SIM_PN_PIN = 3--><!--Device-LockReason-SIM_PN_PIN = 3-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## SIM_PN_PUK
@@ -63,6 +73,8 @@ SIM_PN_PUK = 4
 Indicates network personalization of PUK lock(refer 3GPP TS 22.022 [33]).
 
 **Since:** 8
+
+<!--Device-LockReason-SIM_PN_PUK = 4--><!--Device-LockReason-SIM_PN_PUK = 4-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -76,6 +88,8 @@ Indicates network subset personalization of PIN lock(refer 3GPP TS 22.022 [33]).
 
 **Since:** 8
 
+<!--Device-LockReason-SIM_PU_PIN = 5--><!--Device-LockReason-SIM_PU_PIN = 5-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## SIM_PU_PUK
@@ -87,6 +101,8 @@ SIM_PU_PUK = 6
 Indicates network subset personalization of PUK lock(refer 3GPP TS 22.022 [33]).
 
 **Since:** 8
+
+<!--Device-LockReason-SIM_PU_PUK = 6--><!--Device-LockReason-SIM_PU_PUK = 6-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -100,6 +116,8 @@ Indicates service provider personalization of PIN lock(refer 3GPP TS 22.022 [33]
 
 **Since:** 8
 
+<!--Device-LockReason-SIM_PP_PIN = 7--><!--Device-LockReason-SIM_PP_PIN = 7-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## SIM_PP_PUK
@@ -111,6 +129,8 @@ SIM_PP_PUK = 8
 Indicates service provider personalization of PUK lock(refer 3GPP TS 22.022 [33]).
 
 **Since:** 8
+
+<!--Device-LockReason-SIM_PP_PUK = 8--><!--Device-LockReason-SIM_PP_PUK = 8-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -124,6 +144,8 @@ Indicates corporate personalization of PIN lock(refer 3GPP TS 22.022 [33]).
 
 **Since:** 8
 
+<!--Device-LockReason-SIM_PC_PIN = 9--><!--Device-LockReason-SIM_PC_PIN = 9-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## SIM_PC_PUK
@@ -135,6 +157,8 @@ SIM_PC_PUK = 10
 Indicates corporate personalization of PUK lock(refer 3GPP TS 22.022 [33]).
 
 **Since:** 8
+
+<!--Device-LockReason-SIM_PC_PUK = 10--><!--Device-LockReason-SIM_PC_PUK = 10-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -148,6 +172,8 @@ Indicates SIM/USIM personalization of PIN lock(refer 3GPP TS 22.022 [33]).
 
 **Since:** 8
 
+<!--Device-LockReason-SIM_SIM_PIN = 11--><!--Device-LockReason-SIM_SIM_PIN = 11-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## SIM_SIM_PUK
@@ -159,6 +185,8 @@ SIM_SIM_PUK = 12
 Indicates SIM/USIM personalization of PUK lock(refer 3GPP TS 22.022 [33]).
 
 **Since:** 8
+
+<!--Device-LockReason-SIM_SIM_PUK = 12--><!--Device-LockReason-SIM_SIM_PUK = 12-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 

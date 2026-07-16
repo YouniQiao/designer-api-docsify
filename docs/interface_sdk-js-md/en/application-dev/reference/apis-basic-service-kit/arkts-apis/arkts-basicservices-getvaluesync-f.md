@@ -22,13 +22,15 @@ Get value from settingsdata(synchronous method)
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-settings-function getValueSync(dataAbilityHelper: DataAbilityHelper, name: string, defValue: string): string--><!--Device-settings-function getValueSync(dataAbilityHelper: DataAbilityHelper, name: string, defValue: string): string-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataAbilityHelper | DataAbilityHelper | Yes | Indicates dataAbilityHelper instance. |
+| dataAbilityHelper | [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-i.md) | Yes | Indicates dataAbilityHelper instance. |
 | name | string | Yes | Indicates the name of the character string. |
 | defValue | string | Yes | Indicates the default value of the character string. |
 
@@ -63,13 +65,15 @@ Get value from settingsdata(synchronous method)
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-settings-function getValueSync(context: Context, name: string, defValue: string): string--><!--Device-settings-function getValueSync(context: Context, name: string, defValue: string): string-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
 | name | string | Yes | Indicates the name of the character string. |
 | defValue | string | Yes | Indicates the default value of the character string. |
 
@@ -99,12 +103,13 @@ let value = settings.getValueSync(context, settings.display.SCREEN_BRIGHTNESS_ST
 function getValueSync(context: Context, name: string, defValue: string, domainName: string): string
 ```
 
-Get value from settingsdata(synchronous method).
-[USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
+Get value from settingsdata(synchronous method).[USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-settings-function getValueSync(context: Context, name: string, defValue: string, domainName: string): string--><!--Device-settings-function getValueSync(context: Context, name: string, defValue: string, domainName: string): string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -112,7 +117,7 @@ Get value from settingsdata(synchronous method).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
 | name | string | Yes | Indicates the name of the character string. |
 | defValue | string | Yes | Indicates the default value of the character string. |
 | domainName | string | Yes | Indicates the name of the domain name to set. |

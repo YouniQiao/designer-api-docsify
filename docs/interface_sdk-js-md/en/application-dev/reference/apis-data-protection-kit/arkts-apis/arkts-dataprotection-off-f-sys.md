@@ -12,18 +12,17 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function off(type: 'uninstallDLPSandbox', listener?: Callback<DLPSandboxState>): void
 ```
 
-Unsubscribes from the DLP sandbox uninstall event. After the API is successfully called, the application will no
-longer receive callback notifications for the DLP sandbox uninstall event.
+Unsubscribes from the DLP sandbox uninstall event. After the API is successfully called, the application will no longer receive callback notifications for the DLP sandbox uninstall event.
 
-This API can be called only after a listener is registered using
-[on](arkts-dataprotection-on-f-sys.md#on-2).
+This API can be called only after a listener is registered using [on](arkts-dataprotection-on-f-sys.md#on-2).
 
-When the DLP management application exits or no longer needs to track sandbox status changes, unregister the
-listener to release resources.
+When the DLP management application exits or no longer needs to track sandbox status changes, unregister the listener to release resources.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
+
+<!--Device-dlpPermission-function off(type: 'uninstallDLPSandbox', listener?: Callback<DLPSandboxState>): void--><!--Device-dlpPermission-function off(type: 'uninstallDLPSandbox', listener?: Callback<DLPSandboxState>): void-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -33,8 +32,8 @@ listener to release resources.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'uninstallDLPSandbox' | Yes | Event type. It has a fixed value of **uninstallDLPSandbox**, whichindicates the DLP sandbox application uninstall event. |
-| listener | Callback&lt;DLPSandboxState&gt; | No | Callback used when a sandbox application is uninstalled. Bydefault, this parameter is left blank, which unregisters all callbacks for the sandbox uninstall event. |
+| type | 'uninstallDLPSandbox' | Yes | Event type. It has a fixed value of **uninstallDLPSandbox**, which indicates the DLP sandbox application uninstall event. |
+| listener | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DLPSandboxState> | No | Callback used when a sandbox application is uninstalled. By default, this parameter is left blank, which unregisters all callbacks for the sandbox uninstall event. |
 
 **Error codes:**
 

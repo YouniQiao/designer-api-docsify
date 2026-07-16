@@ -22,6 +22,8 @@ All callback functions will be deregistered If there is no specific callback par
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-wifiManager-function off(type: 'wifiStateChange', callback?: Callback<number>): void--><!--Device-wifiManager-function off(type: 'wifiStateChange', callback?: Callback<number>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **Parameters:**
@@ -29,7 +31,7 @@ All callback functions will be deregistered If there is no specific callback par
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'wifiStateChange' | Yes | event name. |
-| callback | Callback&lt;number&gt; | No | the callback of off |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | No | the callback of off |
 
 **Error codes:**
 
@@ -64,14 +66,15 @@ All callback functions will be deregistered If there is no specific callback par
 function off(type: 'wifiConnectionChange', callback?: Callback<number>): void
 ```
 
-Unsubscribe Wi-Fi connection change events.
-All callback functions will be deregistered If there is no specific callback parameter.
+Unsubscribe Wi-Fi connection change events.All callback functions will be deregistered If there is no specific callback parameter.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-wifiManager-function off(type: 'wifiConnectionChange', callback?: Callback<number>): void--><!--Device-wifiManager-function off(type: 'wifiConnectionChange', callback?: Callback<number>): void-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -80,7 +83,7 @@ All callback functions will be deregistered If there is no specific callback par
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'wifiConnectionChange' | Yes | event name. |
-| callback | Callback&lt;number&gt; | No | the callback of off |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | No | the callback of off |
 
 **Error codes:**
 
@@ -115,14 +118,15 @@ All callback functions will be deregistered If there is no specific callback par
 function off(type: 'wifiScanStateChange', callback?: Callback<number>): void
 ```
 
-Unsubscribe Wi-Fi scan status change events.
-All callback functions will be deregistered If there is no specific callback parameter.
+Unsubscribe Wi-Fi scan status change events.All callback functions will be deregistered If there is no specific callback parameter.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-wifiManager-function off(type: 'wifiScanStateChange', callback?: Callback<number>): void--><!--Device-wifiManager-function off(type: 'wifiScanStateChange', callback?: Callback<number>): void-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -131,7 +135,7 @@ All callback functions will be deregistered If there is no specific callback par
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'wifiScanStateChange' | Yes | event name. |
-| callback | Callback&lt;number&gt; | No | the callback of off |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | No | the callback of off |
 
 **Error codes:**
 
@@ -166,12 +170,13 @@ All callback functions will be deregistered If there is no specific callback par
 function off(type: 'wifiRssiChange', callback?: Callback<number>): void
 ```
 
-Unsubscribe Wi-Fi rssi change events.
-All callback functions will be deregistered If there is no specific callback parameter.
+Unsubscribe Wi-Fi rssi change events.All callback functions will be deregistered If there is no specific callback parameter.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
+
+<!--Device-wifiManager-function off(type: 'wifiRssiChange', callback?: Callback<number>): void--><!--Device-wifiManager-function off(type: 'wifiRssiChange', callback?: Callback<number>): void-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -180,7 +185,7 @@ All callback functions will be deregistered If there is no specific callback par
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'wifiRssiChange' | Yes | event name. |
-| callback | Callback&lt;number&gt; | No | the callback of off |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | No | the callback of off |
 
 **Error codes:**
 
@@ -215,12 +220,13 @@ All callback functions will be deregistered If there is no specific callback par
 function off(type: 'hotspotStateChange', callback?: Callback<number>): void
 ```
 
-Unsubscribe Wi-Fi hotspot state change events.
-All callback functions will be deregistered If there is no specific callback parameter.
+Unsubscribe Wi-Fi hotspot state change events.All callback functions will be deregistered If there is no specific callback parameter.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
+
+<!--Device-wifiManager-function off(type: 'hotspotStateChange', callback?: Callback<number>): void--><!--Device-wifiManager-function off(type: 'hotspotStateChange', callback?: Callback<number>): void-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -229,7 +235,7 @@ All callback functions will be deregistered If there is no specific callback par
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hotspotStateChange' | Yes | event name. |
-| callback | Callback&lt;number&gt; | No | the callback of off |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | No | the callback of off |
 
 **Error codes:**
 
@@ -270,6 +276,8 @@ Unsubscribe P2P status change events.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function off(type: 'p2pStateChange', callback?: Callback<number>): void--><!--Device-wifiManager-function off(type: 'p2pStateChange', callback?: Callback<number>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 **Parameters:**
@@ -277,7 +285,7 @@ Unsubscribe P2P status change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pStateChange' | Yes | event name. |
-| callback | Callback&lt;number&gt; | No | the callback of off |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | No | the callback of off |
 
 **Error codes:**
 
@@ -318,6 +326,8 @@ Unsubscribe P2P connection change events.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function off(type: 'p2pConnectionChange', callback?: Callback<WifiP2pLinkedInfo>): void--><!--Device-wifiManager-function off(type: 'p2pConnectionChange', callback?: Callback<WifiP2pLinkedInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 **Parameters:**
@@ -325,7 +335,7 @@ Unsubscribe P2P connection change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pConnectionChange' | Yes | event name. |
-| callback | Callback&lt;WifiP2pLinkedInfo&gt; | No | the callback of off |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<WifiP2pLinkedInfo> | No | the callback of off |
 
 **Error codes:**
 
@@ -364,6 +374,8 @@ Unsubscribe P2P local device change events.
 
 **Since:** 10
 
+<!--Device-wifiManager-function off(type: 'p2pDeviceChange', callback?: Callback<WifiP2pDevice>): void--><!--Device-wifiManager-function off(type: 'p2pDeviceChange', callback?: Callback<WifiP2pDevice>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 **Parameters:**
@@ -371,7 +383,7 @@ Unsubscribe P2P local device change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pDeviceChange' | Yes | event name. |
-| callback | Callback&lt;WifiP2pDevice&gt; | No | the callback of off |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<WifiP2pDevice> | No | the callback of off |
 
 **Error codes:**
 
@@ -410,6 +422,8 @@ Unsubscribe P2P peer device change events.
 
 **Since:** 10
 
+<!--Device-wifiManager-function off(type: 'p2pPeerDeviceChange', callback?: Callback<WifiP2pDevice[]>): void--><!--Device-wifiManager-function off(type: 'p2pPeerDeviceChange', callback?: Callback<WifiP2pDevice[]>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 **Parameters:**
@@ -417,7 +431,7 @@ Unsubscribe P2P peer device change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pPeerDeviceChange' | Yes | event name. |
-| callback | Callback&lt;WifiP2pDevice[]&gt; | No | the callback of off |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<WifiP2pDevice[]> | No | the callback of off |
 
 **Error codes:**
 
@@ -458,6 +472,8 @@ Unsubscribe P2P persistent group change events.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function off(type: 'p2pPersistentGroupChange', callback?: Callback<void>): void--><!--Device-wifiManager-function off(type: 'p2pPersistentGroupChange', callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 **Parameters:**
@@ -465,7 +481,7 @@ Unsubscribe P2P persistent group change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pPersistentGroupChange' | Yes | event name. |
-| callback | Callback&lt;void&gt; | No | the callback of off |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | the callback of off |
 
 **Error codes:**
 
@@ -506,6 +522,8 @@ Unsubscribe P2P discovery events.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function off(type: 'p2pDiscoveryChange', callback?: Callback<number>): void--><!--Device-wifiManager-function off(type: 'p2pDiscoveryChange', callback?: Callback<number>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 **Parameters:**
@@ -513,7 +531,7 @@ Unsubscribe P2P discovery events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pDiscoveryChange' | Yes | event name. |
-| callback | Callback&lt;number&gt; | No | the callback of off |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | No | the callback of off |
 
 **Error codes:**
 

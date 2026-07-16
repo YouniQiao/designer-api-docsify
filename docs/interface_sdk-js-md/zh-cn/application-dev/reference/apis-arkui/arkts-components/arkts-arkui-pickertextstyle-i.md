@@ -4,6 +4,8 @@ Provide an interface for the text style of picker
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare interface PickerTextStyle--><!--Device-unnamed-declare interface PickerTextStyle-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## color
@@ -20,7 +22,9 @@ Font color.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PickerTextStyle-color?: ResourceColor--><!--Device-PickerTextStyle-color?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,7 +42,9 @@ Text style.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PickerTextStyle-font?: Font--><!--Device-PickerTextStyle-font?: Font-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

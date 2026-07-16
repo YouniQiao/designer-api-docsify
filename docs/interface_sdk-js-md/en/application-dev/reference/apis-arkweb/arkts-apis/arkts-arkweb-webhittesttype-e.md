@@ -1,9 +1,10 @@
 # WebHitTestType
 
-Enumerates the cursor node types for the
-[getLastHitTest](arkts-arkweb-webviewcontroller-c.md#getlasthittest-1) API.
+Enumerates the cursor node types for the [getLastHitTest](arkts-arkweb-webviewcontroller-c.md#getlasthittest-1) API.
 
 **Since:** 9
+
+<!--Device-webview-enum WebHitTestType--><!--Device-webview-enum WebHitTestType-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -19,6 +20,8 @@ Editable area.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebHitTestType-EditText = 0--><!--Device-WebHitTestType-EditText = 0-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Email
@@ -32,6 +35,8 @@ Email address.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebHitTestType-Email = 1--><!--Device-WebHitTestType-Email = 1-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -47,6 +52,8 @@ Hyperlink, where **src** is **http**.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebHitTestType-HttpAnchor = 2--><!--Device-WebHitTestType-HttpAnchor = 2-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## HttpAnchorImg
@@ -60,6 +67,8 @@ Image with a hyperlink, where **src** is http + HTML::img.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebHitTestType-HttpAnchorImg = 3--><!--Device-WebHitTestType-HttpAnchorImg = 3-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -75,6 +84,8 @@ HTML::img tag.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebHitTestType-Img = 4--><!--Device-WebHitTestType-Img = 4-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Map
@@ -88,6 +99,8 @@ Geographical address.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebHitTestType-Map = 5--><!--Device-WebHitTestType-Map = 5-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -103,6 +116,8 @@ Phone number.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebHitTestType-Phone = 6--><!--Device-WebHitTestType-Phone = 6-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Unknown
@@ -116,6 +131,8 @@ Unknown content.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebHitTestType-Unknown = 7--><!--Device-WebHitTestType-Unknown = 7-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

@@ -1,5 +1,11 @@
 # disableGwpAsanGrayscale
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+```
+
 ## disableGwpAsanGrayscale
 
 ```TypeScript
@@ -9,6 +15,8 @@ function disableGwpAsanGrayscale(): void
 ֹͣʹ��GWP-ASan�����øýӿڽ�ȡ���Զ������ã��ָ�Ĭ�ϲ���GwpAsanOptions��
 
 **起始版本：** 20
+
+<!--Device-hidebug-function disableGwpAsanGrayscale(): void--><!--Device-hidebug-function disableGwpAsanGrayscale(): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 

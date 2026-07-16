@@ -2,19 +2,21 @@
 
 Implements a **GeolocationPermissions** object.
 
-> **NOTE**
->
-> - The sample effect is subject to the actual device.
->
-> - You must load the **Web** component before calling the APIs in **GeolocationPermissions**.
->
-> - Required Permissions
-> **ohos.permission.LOCATION**, **ohos.permission.APPROXIMATELY_LOCATION**, and
-> **ohos.permission.LOCATION_IN_BACKGROUND**, which are required for accessing the location information. For details
-> about the permissions, see
+> **NOTE**  
+>  
+> - The sample effect is subject to the actual device.  
+>  
+> - You must load the **Web** component before calling the APIs in **GeolocationPermissions**.  
+>  
+> - Required Permissions  
+> **ohos.permission.LOCATION**, **ohos.permission.APPROXIMATELY_LOCATION**, and  
+> **ohos.permission.LOCATION_IN_BACKGROUND**, which are required for accessing the location information. For details  
+> about the permissions, see  
 > [@ohos.geolocation (Geolocation)](../../../../reference/apis-location-kit/js-apis-geolocation.md).
 
 **Since:** 9
+
+<!--Device-webview-class GeolocationPermissions--><!--Device-webview-class GeolocationPermissions-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -36,6 +38,8 @@ Allows the specified origin to use the geolocation information.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GeolocationPermissions-static allowGeolocation(origin: string, incognito?: boolean): void--><!--Device-GeolocationPermissions-static allowGeolocation(origin: string, incognito?: boolean): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -43,7 +47,7 @@ Allows the specified origin to use the geolocation information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | origin | string | Yes | Index of the origin. |
-| incognito | boolean | No | Whether to allow the specified origin to use the geolocation information inincognito mode. The value **true** means to allow the specified origin to use the geolocation information inincognito mode, and **false** means the opposite.<br>Default value: **false**.<br>If **null** or**undefined** is passed in, the value is **false**.<br>**Since:** 11 |
+| incognito | boolean | No | Whether to allow the specified origin to use the geolocation information in incognito mode. The value **true** means to allow the specified origin to use the geolocation information in incognito mode, and **false** means the opposite.<br>Default value: **false**.<br>If **null** or **undefined** is passed in, the value is **false**.<br>**Since:** 11 |
 
 **Error codes:**
 
@@ -64,13 +68,15 @@ Clears the geolocation permission status of all sources.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GeolocationPermissions-static deleteAllGeolocation(incognito?: boolean): void--><!--Device-GeolocationPermissions-static deleteAllGeolocation(incognito?: boolean): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| incognito | boolean | No | Whether to clear the geolocation permission status of all sources in incognitomode. The value **true** means to clear the geolocation permission status of all sources in incognito mode,and **false** means the opposite.<br>Default value: **false**.<br>If **null** or **undefined** is passed in,the value is **false**.<br>**Since:** 11 |
+| incognito | boolean | No | Whether to clear the geolocation permission status of all sources in incognito mode. The value **true** means to clear the geolocation permission status of all sources in incognito mode,and **false** means the opposite.<br>Default value: **false**.<br>If **null** or **undefined** is passed in,the value is **false**.<br>**Since:** 11 |
 
 ## deleteGeolocation
 
@@ -84,6 +90,8 @@ Clears the geolocation permission status of a specified origin.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GeolocationPermissions-static deleteGeolocation(origin: string, incognito?: boolean): void--><!--Device-GeolocationPermissions-static deleteGeolocation(origin: string, incognito?: boolean): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -91,7 +99,7 @@ Clears the geolocation permission status of a specified origin.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | origin | string | Yes | Index of the origin. |
-| incognito | boolean | No | Whether to clear the geolocation permission status of a specified origin inincognito mode. The value **true** means to clear the geolocation permission status of a specified origin inincognito mode, and **false** means the opposite.<br>Default value: **false**.<br>If **null** or**undefined** is passed in, the value is **false**.<br>**Since:** 11 |
+| incognito | boolean | No | Whether to clear the geolocation permission status of a specified origin in incognito mode. The value **true** means to clear the geolocation permission status of a specified origin in incognito mode, and **false** means the opposite.<br>Default value: **false**.<br>If **null** or **undefined** is passed in, the value is **false**.<br>**Since:** 11 |
 
 **Error codes:**
 
@@ -112,6 +120,8 @@ Obtains the geolocation permission status of the specified origin. This API uses
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GeolocationPermissions-static getAccessibleGeolocation(origin: string, incognito?: boolean): Promise<boolean>--><!--Device-GeolocationPermissions-static getAccessibleGeolocation(origin: string, incognito?: boolean): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -119,13 +129,13 @@ Obtains the geolocation permission status of the specified origin. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | origin | string | Yes | Index of the origin. |
-| incognito | boolean | No | Whether to obtain the geolocation permission status of the specified origin inincognito mode. The value **true** means to obtain the geolocation permission status of the specified originin incognito mode, and **false** means the opposite.<br>Default value: **false**.<br>If **null** or**undefined** is passed, error code **401** is thrown.<br>**Since:** 11 |
+| incognito | boolean | No | Whether to obtain the geolocation permission status of the specified origin in incognito mode. The value **true** means to obtain the geolocation permission status of the specified origin in incognito mode, and **false** means the opposite.<br>Default value: **false**.<br>If **null** or **undefined** is passed, error code **401** is thrown.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the geolocation permission status of the specified origin.<br>If the operation is successful, the value **true** means that the geolocation permission is granted, and**false** means the opposite.<br>If the operation fails, the geolocation permission status of the specified origin is not found. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the geolocation permission status of the specified origin.<br>If the operation is successful, the value **true** means that the geolocation permission is granted, and **false** means the opposite.<br>If the operation fails, the geolocation permission status of the specified origin is not found. |
 
 **Error codes:**
 
@@ -140,12 +150,13 @@ Obtains the geolocation permission status of the specified origin. This API uses
 static getAccessibleGeolocation(origin: string, callback: AsyncCallback<boolean>, incognito?: boolean): void
 ```
 
-Obtains the geolocation permission status of the specified origin. This API uses an asynchronous callback to
-return the result.
+Obtains the geolocation permission status of the specified origin. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GeolocationPermissions-static getAccessibleGeolocation(origin: string, callback: AsyncCallback<boolean>, incognito?: boolean): void--><!--Device-GeolocationPermissions-static getAccessibleGeolocation(origin: string, callback: AsyncCallback<boolean>, incognito?: boolean): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -154,8 +165,8 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | origin | string | Yes | Index of the origin. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the geolocation permission status of thespecified origin.<br>If the operation is successful, the value **true** means that the geolocation permissionis granted, and **false** means the opposite.<br>If the operation fails, the geolocation permission status ofthe specified origin is not found. |
-| incognito | boolean | No | Whether to obtain the geolocation permission status of the specified origin inincognito mode. The value **true** means to obtain the geolocation permission status of the specified originin incognito mode, and **false** means the opposite.<br>Default value: **false**.<br>If **null** or**undefined** is passed, error code **401** is thrown.<br>**Since:** 11 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the geolocation permission status of the specified origin.<br>If the operation is successful, the value **true** means that the geolocation permission is granted, and **false** means the opposite.<br>If the operation fails, the geolocation permission status of the specified origin is not found. |
+| incognito | boolean | No | Whether to obtain the geolocation permission status of the specified origin in incognito mode. The value **true** means to obtain the geolocation permission status of the specified origin in incognito mode, and **false** means the opposite.<br>Default value: **false**.<br>If **null** or **undefined** is passed, error code **401** is thrown.<br>**Since:** 11 |
 
 **Error codes:**
 
@@ -176,19 +187,21 @@ Obtains the geolocation permission status of all origins. This API uses a promis
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GeolocationPermissions-static getStoredGeolocation(incognito?: boolean): Promise<Array<string>>--><!--Device-GeolocationPermissions-static getStoredGeolocation(incognito?: boolean): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| incognito | boolean | No | Whether to obtain the geolocation permission status of all origins in incognitomode. The value **true** means to obtain the geolocation permission status of all origins in incognito mode,and **false** means the opposite.<br>Default value: **false**.<br>If **null** or **undefined** is passed,error code **401** is thrown.<br>**Since:** 11 |
+| incognito | boolean | No | Whether to obtain the geolocation permission status of all origins in incognito mode. The value **true** means to obtain the geolocation permission status of all origins in incognito mode,and **false** means the opposite.<br>Default value: **false**.<br>If **null** or **undefined** is passed,error code **401** is thrown.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the geolocation permission status of all origins. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return the geolocation permission status of all origins. |
 
 **Error codes:**
 
@@ -202,12 +215,13 @@ Obtains the geolocation permission status of all origins. This API uses a promis
 static getStoredGeolocation(callback: AsyncCallback<Array<string>>, incognito?: boolean): void
 ```
 
-Obtains the geolocation permission status of all origins. This API uses an asynchronous callback to return the
-result.
+Obtains the geolocation permission status of all origins. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GeolocationPermissions-static getStoredGeolocation(callback: AsyncCallback<Array<string>>, incognito?: boolean): void--><!--Device-GeolocationPermissions-static getStoredGeolocation(callback: AsyncCallback<Array<string>>, incognito?: boolean): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -215,8 +229,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the geolocation permission status ofall origins. |
-| incognito | boolean | No | Whether to obtain the geolocation permission status of all origins in incognitomode. The value **true** means to obtain the geolocation permission status of all origins in incognito mode,and **false** means the opposite.<br>Default value: **false**.<br>If **null** or **undefined** is passed,error code **401** is thrown.<br>**Since:** 11 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback used to return the geolocation permission status of all origins. |
+| incognito | boolean | No | Whether to obtain the geolocation permission status of all origins in incognito mode. The value **true** means to obtain the geolocation permission status of all origins in incognito mode,and **false** means the opposite.<br>Default value: **false**.<br>If **null** or **undefined** is passed,error code **401** is thrown.<br>**Since:** 11 |
 
 **Error codes:**
 

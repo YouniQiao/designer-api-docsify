@@ -1,5 +1,11 @@
 # setPointerSpeedSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+```
+
 ## setPointerSpeedSync
 
 ```TypeScript
@@ -9,6 +15,8 @@ function setPointerSpeedSync(speed: number): void
 使用同步方式设置鼠标移动速度。
 
 **起始版本：** 10
+
+<!--Device-pointer-function setPointerSpeedSync(speed: int): void--><!--Device-pointer-function setPointerSpeedSync(speed: int): void-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

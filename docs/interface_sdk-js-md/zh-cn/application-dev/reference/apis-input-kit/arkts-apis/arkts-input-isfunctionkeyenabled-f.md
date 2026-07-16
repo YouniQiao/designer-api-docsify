@@ -1,5 +1,11 @@
 # isFunctionKeyEnabled
 
+## 导入模块
+
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+```
+
 ## isFunctionKeyEnabled
 
 ```TypeScript
@@ -10,19 +16,21 @@ function isFunctionKeyEnabled(functionKey: FunctionKey): Promise<boolean>
 
 **起始版本：** 15
 
+<!--Device-inputDevice-function isFunctionKeyEnabled(functionKey: FunctionKey): Promise<boolean>--><!--Device-inputDevice-function isFunctionKeyEnabled(functionKey: FunctionKey): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| functionKey | FunctionKey | 是 | 需要设置的功能键类型。 |
+| functionKey | [FunctionKey](arkts-input-functionkey-e.md) | 是 | 需要设置的功能键类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回查询结果，true表示功能键使能，false表示功能键未使能。 |
+| Promise<boolean> | Promise对象。返回查询结果，true表示功能键使能，false表示功能键未使能。 |
 
 **错误码：**
 

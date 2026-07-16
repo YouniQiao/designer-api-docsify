@@ -4,6 +4,8 @@ Describes the options of system tones.
 
 **Since:** 11
 
+<!--Device-unnamed-export interface SystemToneOptions--><!--Device-unnamed-export interface SystemToneOptions-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -20,6 +22,8 @@ Whether to mute the audio. **true** to mute, **false** otherwise.
 
 **Since:** 11
 
+<!--Device-SystemToneOptions-muteAudio?: boolean--><!--Device-SystemToneOptions-muteAudio?: boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -35,6 +39,8 @@ Whether to turn off haptics feedback when a system tone is played. **true** to t
 **Type:** boolean
 
 **Since:** 11
+
+<!--Device-SystemToneOptions-muteHaptics?: boolean--><!--Device-SystemToneOptions-muteHaptics?: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 

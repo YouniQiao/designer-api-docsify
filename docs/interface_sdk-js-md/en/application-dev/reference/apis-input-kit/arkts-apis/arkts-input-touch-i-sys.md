@@ -4,6 +4,8 @@ Defines the touch point information.
 
 **Since:** 9
 
+<!--Device-unnamed-export declare interface Touch--><!--Device-unnamed-export declare interface Touch-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## Modules to Import
@@ -18,14 +20,15 @@ import { SourceType, ToolType, TouchEvent, FixedMode, KeyAction, Touch } from '@
 blobId?: number
 ```
 
-Touch point attribute ID. Currently, only single-finger touch is supported. The value **1** indicates left-hand
-touch, and the value **2** indicates right-hand touch.
+Touch point attribute ID. Currently, only single-finger touch is supported. The value **1** indicates left-hand touch, and the value **2** indicates right-hand touch.
 
 **Type:** number
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Touch-blobId?: int--><!--Device-Touch-blobId?: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -43,6 +46,8 @@ Corrected value of the screenX coordinate in one-hand mode, in px.
 
 **Since:** 19
 
+<!--Device-Touch-fixedDisplayX?: int--><!--Device-Touch-fixedDisplayX?: int-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 **System API:** This is a system API.
@@ -58,6 +63,8 @@ Corrected value of the screenY coordinate in one-hand mode, in px.
 **Type:** number
 
 **Since:** 19
+
+<!--Device-Touch-fixedDisplayY?: int--><!--Device-Touch-fixedDisplayY?: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 

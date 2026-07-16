@@ -4,6 +4,8 @@ Defines the lite settings capability for wearables.
 
 **Since:** 24
 
+<!--Device-unnamed-declare namespace settingsLite--><!--Device-unnamed-declare namespace settingsLite-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core.Lite
 
 ## Modules to Import
@@ -27,5 +29,5 @@ import { settingsLite } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [ClickCallback](arkts-basicservices-clickcallback-i.md) | Defines a callback used to return whether the application started by double-pressing the function key is theapplication itself. |
+| [ClickCallback](arkts-basicservices-clickcallback-i.md) | Defines a callback used to return whether the application started by double-pressing the function key is the application itself. |
 

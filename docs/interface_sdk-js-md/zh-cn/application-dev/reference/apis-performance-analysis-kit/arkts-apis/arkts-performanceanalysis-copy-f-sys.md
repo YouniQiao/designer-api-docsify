@@ -1,5 +1,11 @@
 # copy（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { logLibrary } from '@kit.PerformanceAnalysisKit';
+```
+
 ## copy
 
 ```TypeScript
@@ -11,6 +17,8 @@ function copy(logType: string, logName: string, dest: string): Promise<void>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_HIVIEW_SYSTEM
+
+<!--Device-logLibrary-function copy(logType: string, logName: string, dest: string): Promise<void>--><!--Device-logLibrary-function copy(logType: string, logName: string, dest: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.LogLibrary
 
@@ -28,7 +36,7 @@ function copy(logType: string, logName: string, dest: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise实例，可以在其then()、catch()方法中分别对拷贝成功、拷贝异常的回调进行处理。 |
+| Promise<void> | Promise实例，可以在其then()、catch()方法中分别对拷贝成功、拷贝异常的回调进行处理。 |
 
 **错误码：**
 
@@ -78,6 +86,8 @@ function copy(logType: string, logName: string, dest: string, callback: AsyncCal
 
 **需要权限：** ohos.permission.READ_HIVIEW_SYSTEM
 
+<!--Device-logLibrary-function copy(logType: string, logName: string, dest: string, callback: AsyncCallback<void>): void--><!--Device-logLibrary-function copy(logType: string, logName: string, dest: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.Hiview.LogLibrary
 
 **系统接口：** 此接口为系统接口。
@@ -89,7 +99,7 @@ function copy(logType: string, logName: string, dest: string, callback: AsyncCal
 | logType | string | 是 | 日志类型字符串，例如“HILOG”, "FAULTLOG", "BETACLUB", "REMOTELOG"等。 |
 | logName | string | 是 | 日志文件名称。 |
 | dest | string | 是 | 目标目录，需填入相对目录名称。传入dest字串后，日志文件将保存到应用缓存路径下的"hiview/*dest*"文件夹，即"../cache/hiview/*dest*"。可填入多层目录。<br>如果传入空字串，将保存到根目录下，即应用缓存路径下的hiview文件夹。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，可以在回调函数中处理接口返回值。0表示拷贝成功，其它值表示拷贝失败。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，可以在回调函数中处理接口返回值。0表示拷贝成功，其它值表示拷贝失败。 |
 
 **错误码：**
 

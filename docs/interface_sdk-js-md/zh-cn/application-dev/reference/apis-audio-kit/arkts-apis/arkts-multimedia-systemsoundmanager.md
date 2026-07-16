@@ -4,9 +4,17 @@
 
 **起始版本：** 23
 
+<!--Device-unnamed-declare namespace systemSoundManager--><!--Device-unnamed-declare namespace systemSoundManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { systemSoundManager } from '@kit.AudioKit';
+```
 
 ## 汇总
 
@@ -47,8 +55,8 @@
 | [SystemSoundType](arkts-audio-systemsoundtype-e.md) | 枚举，表示系统音效类型。 |
 | [SystemToneType](arkts-audio-systemtonetype-e-sys.md) | 枚举，系统铃声类型。 |
 | [ToneCustomizedType](arkts-audio-tonecustomizedtype-e-sys.md) | 枚举，铃声自定义类型。 |
-| [ToneHapticsFeature](arkts-audio-tonehapticsfeature-e-sys.md) | 枚举，系统振动风格定义。\| 名称 \| 值 \| 说明 \|\| ----------------------------- \| -- \| -------------------- \|\| STANDARD\| 0 \| 标准振动风格。 \|\| GENTLE \| 1 \| 轻柔振动风格。 \| |
-| [ToneHapticsMode](arkts-audio-tonehapticsmode-e-sys.md) | 枚举，系统铃音场景的振动模式。\| 名称 \| 值 \| 说明 \|\| ----------------------------- \| -- \| -------------------- \|\| NONE \| 0 \| 无振动模式。 \|\| SYNC \| 1 \| 与铃音同步模式。 \|\| NON_SYNC \| 2 \| 非同步模式。 \| |
+| [ToneHapticsFeature](arkts-audio-tonehapticsfeature-e-sys.md) | 枚举，系统振动风格定义。\| 名称 \| 值 \| 说明 \| \| ----------------------------- \| -- \| -------------------- \| \| STANDARD\| 0 \| 标准振动风格。 \| \| GENTLE \| 1 \| 轻柔振动风格。 \| |
+| [ToneHapticsMode](arkts-audio-tonehapticsmode-e-sys.md) | 枚举，系统铃音场景的振动模式。\| 名称 \| 值 \| 说明 \| \| ----------------------------- \| -- \| -------------------- \| \| NONE \| 0 \| 无振动模式。 \| \| SYNC \| 1 \| 与铃音同步模式。 \| \| NON_SYNC \| 2 \| 非同步模式。 \| |
 | [ToneHapticsType](arkts-audio-tonehapticstype-e-sys.md) | 枚举，系统铃音的振动类型。 |
 <!--DelEnd-->
 

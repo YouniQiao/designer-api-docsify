@@ -6,6 +6,8 @@ Defines the TextPickerDialogOptionsExt for Text Picker Dialog.
 
 **Since:** 20
 
+<!--Device-unnamed-declare interface TextPickerDialogOptionsExt extends TextPickerOptions--><!--Device-unnamed-declare interface TextPickerDialogOptionsExt extends TextPickerOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## distortionMode
@@ -25,6 +27,8 @@ Default Value: DistortionMode.DISTORTION_AUTO
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TextPickerDialogOptionsExt-distortionMode?: DistortionMode--><!--Device-TextPickerDialogOptionsExt-distortionMode?: DistortionMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,6 +51,8 @@ Default Value: EdgeLightMode.EDGELIGHT_AUTO
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TextPickerDialogOptionsExt-edgeLightMode?: EdgeLightMode--><!--Device-TextPickerDialogOptionsExt-edgeLightMode?: EdgeLightMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

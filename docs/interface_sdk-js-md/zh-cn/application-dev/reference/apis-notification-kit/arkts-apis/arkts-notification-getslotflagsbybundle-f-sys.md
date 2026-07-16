@@ -18,6 +18,8 @@ function getSlotFlagsByBundle(bundle: BundleOption): Promise<number>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getSlotFlagsByBundle(bundle: BundleOption): Promise<long>--><!--Device-notificationManager-function getSlotFlagsByBundle(bundle: BundleOption): Promise<long>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,13 +28,13 @@ function getSlotFlagsByBundle(bundle: BundleOption): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 指定应用的包信息。 |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 指定应用的包信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | 以Promise形式返回获取指定应用的通知渠道标识位。<br>- bit0：铃声提示。0表示关闭，1表示开启。<br>- bit1：锁屏。0表示关闭，1表示开启。<br>- bit2：横幅。0表示关闭，1表示开启。<br>- bit3：亮屏。0表示关闭，1表示开启。<br>- bit4：振动。0表示关闭，1表示开启。<br>- bit5：状态栏通知图标。0表示关闭，1表示开启。 |
+| Promise<number> | 以Promise形式返回获取指定应用的通知渠道标识位。<br>- bit0：铃声提示。0表示关闭，1表示开启。<br>- bit1：锁屏。0表示关闭，1表示开启。<br>- bit2：横幅。0表示关闭，1表示开启。<br>- bit3：亮屏。0表示关闭，1表示开启。<br>- bit4：振动。0表示关闭，1表示开启。<br>- bit5：状态栏通知图标。0表示关闭，1表示开启。 |
 
 **错误码：**
 

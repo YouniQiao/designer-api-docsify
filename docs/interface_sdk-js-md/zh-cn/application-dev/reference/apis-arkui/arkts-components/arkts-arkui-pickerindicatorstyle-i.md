@@ -4,6 +4,8 @@
 
 **起始版本：** 22
 
+<!--Device-unnamed-declare interface PickerIndicatorStyle--><!--Device-unnamed-declare interface PickerIndicatorStyle-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundColor
@@ -28,7 +30,9 @@ backgroundColor?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PickerIndicatorStyle-backgroundColor?: ResourceColor--><!--Device-PickerIndicatorStyle-backgroundColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,10 +50,7 @@ borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 
 说明：
 
-1. 当type为PickerIndicatorType.BACKGROUND时生效。
-2. [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-c.md)：统一设置四个圆角半径的大小和单位。
-3. [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md)：单独设置四个圆角半径的大小（单位为vp）。
-4. [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)：单独设置四个圆角半径的大小和单位。
+1. 当type为PickerIndicatorType.BACKGROUND时生效。2. [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-c.md)：统一设置四个圆角半径的大小和单位。3. [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md)：单独设置四个圆角半径的大小（单位为vp）。4. [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)：单独设置四个圆角半径的大小和单位。
 
 **类型：** LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 
@@ -59,7 +60,9 @@ borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PickerIndicatorStyle-borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses--><!--Device-PickerIndicatorStyle-borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,7 +88,9 @@ dividerColor?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PickerIndicatorStyle-dividerColor?: ResourceColor--><!--Device-PickerIndicatorStyle-dividerColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -101,8 +106,7 @@ endMargin?: LengthMetrics
 
 单位：与LengthMetrics一致。
 
-取值范围：startMargin与endMargin之和不得超过UIPickerComponent容器的宽度。设置小于0或startMargin与endMargin之和超过
-UIPickerComponent容器的宽度时，使用默认值。不支持“百分比”类型。
+取值范围：startMargin与endMargin之和不得超过UIPickerComponent容器的宽度。设置小于0或startMargin与endMargin之和超过UIPickerComponent容器的宽度时，使用默认值。不支持“百分比”类型。
 
 说明：
 
@@ -116,7 +120,9 @@ UIPickerComponent容器的宽度时，使用默认值。不支持“百分比”
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PickerIndicatorStyle-endMargin?: LengthMetrics--><!--Device-PickerIndicatorStyle-endMargin?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -132,8 +138,7 @@ startMargin?: LengthMetrics
 
 单位：与LengthMetrics一致。
 
-取值范围：startMargin与endMargin之和不得超过UIPickerComponent容器的宽度。设置小于0或startMargin与endMargin之和超过
-UIPickerComponent容器的宽度时，使用默认值。不支持“百分比”类型。
+取值范围：startMargin与endMargin之和不得超过UIPickerComponent容器的宽度。设置小于0或startMargin与endMargin之和超过UIPickerComponent容器的宽度时，使用默认值。不支持“百分比”类型。
 
 说明：
 
@@ -147,7 +152,9 @@ UIPickerComponent容器的宽度时，使用默认值。不支持“百分比”
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PickerIndicatorStyle-startMargin?: LengthMetrics--><!--Device-PickerIndicatorStyle-startMargin?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -167,8 +174,7 @@ strokeWidth?: LengthMetrics
 
 说明：
 
-1. 当type为PickerIndicatorType.DIVIDER时生效。
-2. 通过LengthMetrics.resource方式设置时，使用非长度属性的值会按照0vp处理。
+1. 当type为PickerIndicatorType.DIVIDER时生效。2. 通过LengthMetrics.resource方式设置时，使用非长度属性的值会按照0vp处理。
 
 **类型：** LengthMetrics
 
@@ -178,7 +184,9 @@ strokeWidth?: LengthMetrics
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PickerIndicatorStyle-strokeWidth?: LengthMetrics--><!--Device-PickerIndicatorStyle-strokeWidth?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -202,7 +210,9 @@ type: PickerIndicatorType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PickerIndicatorStyle-type: PickerIndicatorType--><!--Device-PickerIndicatorStyle-type: PickerIndicatorType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

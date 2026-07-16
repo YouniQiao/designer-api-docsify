@@ -1,5 +1,11 @@
 # setHomeWallpaper
 
+## 导入模块
+
+```TypeScript
+import { deviceSettings } from '@kit.MDMKit';
+```
+
 ## setHomeWallpaper
 
 ```TypeScript
@@ -14,20 +20,22 @@ function setHomeWallpaper(admin: Want, fd: number):  Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-deviceSettings-function setHomeWallpaper(admin: Want, fd: number):  Promise<void>--><!--Device-deviceSettings-function setHomeWallpaper(admin: Want, fd: number):  Promise<void>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | fd | number | 是 | 需要设置为桌面壁纸图片的文件描述符，可以通过file.fs的[openSync](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioopensync)接口获取应用沙箱目录下的图片文件描述符。壁纸图片大小不能超过100MB。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。当设置桌面壁纸失败后会抛出错误对象。 |
+| Promise<void> | 无返回结果的Promise对象。当设置桌面壁纸失败后会抛出错误对象。 |
 
 **错误码：**
 

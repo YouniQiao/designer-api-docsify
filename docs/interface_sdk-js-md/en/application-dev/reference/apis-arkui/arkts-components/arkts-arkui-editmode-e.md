@@ -6,6 +6,8 @@ Enumerates the edit modes of list items.
 
 **Deprecated since:** 9
 
+<!--Device-unnamed-declare enum EditMode--><!--Device-unnamed-declare enum EditMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## None
@@ -19,6 +21,8 @@ Unrestricted operations.
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-EditMode-None--><!--Device-EditMode-None-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,6 +38,8 @@ The list item can be deleted.
 
 **Deprecated since:** 9
 
+<!--Device-EditMode-Deletable--><!--Device-EditMode-Deletable-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Movable
@@ -47,6 +53,8 @@ The list item can be moved.
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-EditMode-Movable--><!--Device-EditMode-Movable-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

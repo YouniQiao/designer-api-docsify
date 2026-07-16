@@ -4,6 +4,8 @@ Defines a subscription data holder for processing event information.
 
 **Since:** 9
 
+<!--Device-hiAppEvent-class AppEventPackageHolder--><!--Device-hiAppEvent-class AppEventPackageHolder-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## Modules to Import
@@ -18,13 +20,13 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 constructor(watcherName: string)
 ```
 
-Constructs an **AppEventPackageHolder** instance. You can call [addWatcher](arkts-performanceanalysis-addwatcher-f.md#addwatcher-1) to add
-an event watcher, and then associate the **AppEventPackageHolder** instance with the watcher added in the
-application based on the watcher name.
+Constructs an **AppEventPackageHolder** instance. You can call [addWatcher](arkts-performanceanalysis-addwatcher-f.md#addwatcher-1) to add an event watcher, and then associate the **AppEventPackageHolder** instance with the watcher added in the application based on the watcher name.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AppEventPackageHolder-constructor(watcherName: string)--><!--Device-AppEventPackageHolder-constructor(watcherName: string)-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -58,12 +60,13 @@ let holder1: hiAppEvent.AppEventPackageHolder = new hiAppEvent.AppEventPackageHo
 setRow(size: number): void
 ```
 
-Sets the number of data records of the event package obtained each time. When **setRow()** and **setSize()** are
-called at the same time, only **setRow()** takes effect.
+Sets the number of data records of the event package obtained each time. When **setRow()** and **setSize()** are called at the same time, only **setRow()** takes effect.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AppEventPackageHolder-setRow(size: int): void--><!--Device-AppEventPackageHolder-setRow(size: int): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -71,14 +74,14 @@ called at the same time, only **setRow()** takes effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | Number of events. The value range is (0, 2^31-1]. If the value is out of the range, anexception is thrown. |
+| size | number | Yes | Number of events. The value range is (0, 2^31-1]. If the value is out of the range, an exception is thrown. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
-| [11104001](../errorcode-hiappevent.md#11104001-invalid-event-package-size) | Invalid size value. Possibly caused by the size value is less than or equalto zero. |
+| [11104001](../errorcode-hiappevent.md#11104001-invalid-event-package-size) | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
 
 **Example**
 
@@ -102,20 +105,22 @@ Sets the threshold for the data size of the event package obtained each time.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AppEventPackageHolder-setSize(size: int): void--><!--Device-AppEventPackageHolder-setSize(size: int): void-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | Data size threshold, in bytes. The value range is [0, 2^31-1]. If the value is out of therange, an exception is thrown. |
+| size | number | Yes | Data size threshold, in bytes. The value range is [0, 2^31-1]. If the value is out of the range, an exception is thrown. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
-| [11104001](../errorcode-hiappevent.md#11104001-invalid-event-package-size) | Invalid size value. Possibly caused by the size value is less than or equalto zero. |
+| [11104001](../errorcode-hiappevent.md#11104001-invalid-event-package-size) | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
 
 **Example**
 
@@ -135,9 +140,7 @@ takeNext(): AppEventPackage
 
 Obtains the subscription event.
 
-The system obtains the subscription event data based on the data size threshold specified by **setSize** or the
-number of data records specified by **setRow**. By default, one subscription event data record is obtained. When
-all subscription event data is obtained, **null** is returned.
+The system obtains the subscription event data based on the data size threshold specified by **setSize** or the number of data records specified by **setRow**. By default, one subscription event data record is obtained. When all subscription event data is obtained, **null** is returned.
 
 When **setRow** and **setSize** are called at the same time, only **setRow** takes effect.
 
@@ -145,13 +148,15 @@ When **setRow** and **setSize** are called at the same time, only **setRow** tak
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AppEventPackageHolder-takeNext(): AppEventPackage--><!--Device-AppEventPackageHolder-takeNext(): AppEventPackage-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AppEventPackage | Event package object. If all subscription event data has been retrieved, **null** isreturned. |
+| [AppEventPackage](arkts-performanceanalysis-appeventpackage-i.md) | Event package object. If all subscription event data has been retrieved, **null** is returned. |
 
 **Example**
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+<!--Device-unnamed-enum MediaDescriptionKey--><!--Device-unnamed-enum MediaDescriptionKey-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## MD_KEY_TRACK_INDEX
@@ -16,7 +18,9 @@ MD_KEY_TRACK_INDEX = 'track_index'
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaDescriptionKey-MD_KEY_TRACK_INDEX = 'track_index'--><!--Device-MediaDescriptionKey-MD_KEY_TRACK_INDEX = 'track_index'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -30,7 +34,9 @@ MD_KEY_TRACK_TYPE = 'track_type'
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaDescriptionKey-MD_KEY_TRACK_TYPE = 'track_type'--><!--Device-MediaDescriptionKey-MD_KEY_TRACK_TYPE = 'track_type'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -44,7 +50,9 @@ MD_KEY_CODEC_MIME = 'codec_mime'
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaDescriptionKey-MD_KEY_CODEC_MIME = 'codec_mime'--><!--Device-MediaDescriptionKey-MD_KEY_CODEC_MIME = 'codec_mime'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -58,7 +66,9 @@ MD_KEY_DURATION = 'duration'
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaDescriptionKey-MD_KEY_DURATION = 'duration'--><!--Device-MediaDescriptionKey-MD_KEY_DURATION = 'duration'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -72,7 +82,9 @@ MD_KEY_BITRATE = 'bitrate'
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaDescriptionKey-MD_KEY_BITRATE = 'bitrate'--><!--Device-MediaDescriptionKey-MD_KEY_BITRATE = 'bitrate'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -86,7 +98,9 @@ MD_KEY_WIDTH = 'width'
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaDescriptionKey-MD_KEY_WIDTH = 'width'--><!--Device-MediaDescriptionKey-MD_KEY_WIDTH = 'width'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -100,7 +114,9 @@ MD_KEY_HEIGHT = 'height'
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaDescriptionKey-MD_KEY_HEIGHT = 'height'--><!--Device-MediaDescriptionKey-MD_KEY_HEIGHT = 'height'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -114,7 +130,9 @@ MD_KEY_FRAME_RATE = 'frame_rate'
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaDescriptionKey-MD_KEY_FRAME_RATE = 'frame_rate'--><!--Device-MediaDescriptionKey-MD_KEY_FRAME_RATE = 'frame_rate'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -128,7 +146,9 @@ MD_KEY_AUD_CHANNEL_COUNT = 'channel_count'
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaDescriptionKey-MD_KEY_AUD_CHANNEL_COUNT = 'channel_count'--><!--Device-MediaDescriptionKey-MD_KEY_AUD_CHANNEL_COUNT = 'channel_count'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -142,7 +162,9 @@ MD_KEY_AUD_SAMPLE_RATE = 'sample_rate'
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaDescriptionKey-MD_KEY_AUD_SAMPLE_RATE = 'sample_rate'--><!--Device-MediaDescriptionKey-MD_KEY_AUD_SAMPLE_RATE = 'sample_rate'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -156,7 +178,9 @@ MD_KEY_AUD_SAMPLE_DEPTH = 'sample_depth'
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaDescriptionKey-MD_KEY_AUD_SAMPLE_DEPTH = 'sample_depth'--><!--Device-MediaDescriptionKey-MD_KEY_AUD_SAMPLE_DEPTH = 'sample_depth'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -170,7 +194,9 @@ MD_KEY_LANGUAGE = 'language'
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaDescriptionKey-MD_KEY_LANGUAGE = 'language'--><!--Device-MediaDescriptionKey-MD_KEY_LANGUAGE = 'language'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -184,7 +210,9 @@ MD_KEY_TRACK_NAME = 'track_name'
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaDescriptionKey-MD_KEY_TRACK_NAME = 'track_name'--><!--Device-MediaDescriptionKey-MD_KEY_TRACK_NAME = 'track_name'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -198,7 +226,9 @@ MD_KEY_HDR_TYPE = 'hdr_type'
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaDescriptionKey-MD_KEY_HDR_TYPE = 'hdr_type'--><!--Device-MediaDescriptionKey-MD_KEY_HDR_TYPE = 'hdr_type'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -212,7 +242,9 @@ MD_KEY_ORIGINAL_WIDTH = 'original_width'
 
 **起始版本：** 21
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaDescriptionKey-MD_KEY_ORIGINAL_WIDTH = 'original_width'--><!--Device-MediaDescriptionKey-MD_KEY_ORIGINAL_WIDTH = 'original_width'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -226,7 +258,9 @@ MD_KEY_ORIGINAL_HEIGHT = 'original_height'
 
 **起始版本：** 21
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaDescriptionKey-MD_KEY_ORIGINAL_HEIGHT = 'original_height'--><!--Device-MediaDescriptionKey-MD_KEY_ORIGINAL_HEIGHT = 'original_height'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -240,7 +274,9 @@ MD_KEY_MIME_TYPE = 'mime_type'
 
 **起始版本：** 23
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaDescriptionKey-MD_KEY_MIME_TYPE = 'mime_type'--><!--Device-MediaDescriptionKey-MD_KEY_MIME_TYPE = 'mime_type'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -254,7 +290,9 @@ MD_KEY_REFERENCE_TRACK_IDS = 'ref_track_ids'
 
 **起始版本：** 23
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaDescriptionKey-MD_KEY_REFERENCE_TRACK_IDS = 'ref_track_ids'--><!--Device-MediaDescriptionKey-MD_KEY_REFERENCE_TRACK_IDS = 'ref_track_ids'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -268,7 +306,9 @@ MD_KEY_TRACK_REFERENCE_TYPE = 'track_ref_type'
 
 **起始版本：** 23
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaDescriptionKey-MD_KEY_TRACK_REFERENCE_TYPE = 'track_ref_type'--><!--Device-MediaDescriptionKey-MD_KEY_TRACK_REFERENCE_TYPE = 'track_ref_type'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 

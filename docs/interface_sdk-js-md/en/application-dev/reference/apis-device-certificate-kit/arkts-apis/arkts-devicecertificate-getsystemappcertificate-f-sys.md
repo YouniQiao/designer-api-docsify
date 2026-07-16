@@ -12,14 +12,15 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 function getSystemAppCertificate(keyUri: string) : Promise<CMResult>
 ```
 
-Obtains the credential details of the system application. This API is called only by the certificate management
-application. This API uses a promise to return the result.
+Obtains the credential details of the system application. This API is called only by the certificate management application. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_SYSTEM_APP_CERT
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-certificateManager-function getSystemAppCertificate(keyUri: string) : Promise<CMResult>--><!--Device-certificateManager-function getSystemAppCertificate(keyUri: string) : Promise<CMResult>-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -35,7 +36,7 @@ application. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **credential** in the[CMResult](arkts-devicecertificate-cmresult-i.md) object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CMResult> | Promise used to return the operation result, that is, **credential** in the [CMResult](arkts-devicecertificate-cmresult-i.md) object. |
 
 **Error codes:**
 

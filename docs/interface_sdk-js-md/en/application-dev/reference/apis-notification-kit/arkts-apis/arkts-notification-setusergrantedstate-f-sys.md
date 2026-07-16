@@ -12,12 +12,13 @@ import { notificationExtensionSubscription } from '@kit.NotificationKit';
 function setUserGrantedState(targetBundle: BundleOption, enabled: boolean): Promise<void>
 ```
 
-Sets the enabling state of the **Allow access to notifications on this device** switch for a specified application.
-This API uses a promise to return the result.
+Sets the enabling state of the **Allow access to notifications on this device** switch for a specified application.This API uses a promise to return the result.
 
 **Since:** 22
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationExtensionSubscription-function setUserGrantedState(targetBundle: BundleOption, enabled: boolean): Promise<void>--><!--Device-notificationExtensionSubscription-function setUserGrantedState(targetBundle: BundleOption, enabled: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -27,14 +28,14 @@ This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetBundle | BundleOption | Yes | Information about the target application. The application must haverequested the ohos.permission.SUBSCRIBE_NOTIFICATION permission and implemented[NotificationSubscriberExtensionAbility](arkts-notification-notificationsubscriberextensionability-c.md).Otherwise, error code 1600022 is returned. |
-| enabled | boolean | Yes | Whether to enable the device notification access. The value **true** indicates thatthis functionality is enabled, and **false** indicates the opposite. |
+| targetBundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Information about the target application. The application must have requested the ohos.permission.SUBSCRIBE_NOTIFICATION permission and implemented [NotificationSubscriberExtensionAbility](arkts-notification-notificationsubscriberextensionability-c.md).Otherwise, error code 1600022 is returned. |
+| enabled | boolean | Yes | Whether to enable the device notification access. The value **true** indicates that this functionality is enabled, and **false** indicates the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

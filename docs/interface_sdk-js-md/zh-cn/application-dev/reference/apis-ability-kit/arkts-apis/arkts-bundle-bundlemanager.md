@@ -1,13 +1,18 @@
 # @ohos.bundle.bundleManager
 
-本模块提供应用信息的查询能力，支持应用包信息[BundleInfo](bundleManager/BundleInfo)、应用程序信息
-[ApplicationInfo](bundleManager/ApplicationInfo)、UIAbility组件信息
-[AbilityInfo](bundleManager/AbilityInfo)、ExtensionAbility组件信息
-[ExtensionAbilityInfo](bundleManager/ExtensionAbilityInfo:ExtensionAbilityInfo)等信息的查询。
+本模块提供应用信息的查询能力，支持应用包信息[BundleInfo](bundleManager/BundleInfo)、应用程序信息[ApplicationInfo](bundleManager/ApplicationInfo)、UIAbility组件信息[AbilityInfo](bundleManager/AbilityInfo)、ExtensionAbility组件信息[ExtensionAbilityInfo](bundleManager/ExtensionAbilityInfo:ExtensionAbilityInfo)等信息的查询。
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace bundleManager--><!--Device-unnamed-declare namespace bundleManager-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
+
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
 
 ## 汇总
 
@@ -35,8 +40,8 @@
 | [getInstalledBundleList](arkts-ability-getinstalledbundlelist-f.md#getinstalledbundlelist-1) | 根据给定的bundleFlags获取系统中所有的BundleInfo。使用Promise异步回调。 |
 | [getLaunchWant](arkts-ability-getlaunchwant-f.md#getlaunchwant-1) | 获取本应用[入口UIAbility](../../../../quick-start/application-package-glossary.md#uiability)的Want参数。 |
 | [getPluginBundlePathForSelf](arkts-ability-getpluginbundlepathforself-f.md#getpluginbundlepathforself-1) | 获取指定插件在当前[应用沙箱](../../../../file-management/app-sandbox-directory.md)内的安装路径。 |
-| [getProfileByAbility](arkts-ability-getprofilebyability-f.md#getprofilebyability-1) | 根据给定的moduleName、abilityName和metadataName（module.json5中[abilities标签](../../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name）获取自身相应配置文件的json格式字符串。使用callback异步回调。&gt; 说明：&gt; &gt; 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 $string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)的相&gt; 关接口，来获取引用的资源。 |
-| [getProfileByAbility](arkts-ability-getprofilebyability-f.md#getprofilebyability-2) | 根据给定的moduleName、abilityName和metadataName（module.json5中[abilities标签](../../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name）获取自身相应配置文件的json格式字符串。使用Promise异步回调。&gt; 说明：&gt; &gt; 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 $string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)的相&gt; 关接口，来获取引用的资源。 |
+| [getProfileByAbility](arkts-ability-getprofilebyability-f.md#getprofilebyability-1) | 根据给定的moduleName、abilityName和metadataName（module.json5中[abilities标签](../../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name）获取自身相应配置文件的json格式字符串。使用callback异步回调。&gt; 说明： &gt; &gt; 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 $string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)的相 &gt; 关接口，来获取引用的资源。 |
+| [getProfileByAbility](arkts-ability-getprofilebyability-f.md#getprofilebyability-2) | 根据给定的moduleName、abilityName和metadataName（module.json5中[abilities标签](../../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name）获取自身相应配置文件的json格式字符串。使用Promise异步回调。&gt; 说明： &gt; &gt; 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 $string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)的相 &gt; 关接口，来获取引用的资源。 |
 | [getProfileByAbilitySync](arkts-ability-getprofilebyabilitysync-f.md#getprofilebyabilitysync-1) | 以同步方法根据给定的moduleName、abilityName和metadataName（module.json5中[metadata标签](../../../../quick-start/module-configuration-file.md#metadata标签)下的name）获取自身相应配置文件的json格式字符串，返回对象为string数组。 |
 | [getProfileByExtensionAbility](arkts-ability-getprofilebyextensionability-f.md#getprofilebyextensionability-1) | 根据给定的moduleName、extensionAbilityName和metadataName（module.json5中[metadata标签](../../../../quick-start/module-configuration-file.md#metadata标签)下的name）获取自身相应配置文件的json格式字符串。使用callback异步回调。 |
 | [getProfileByExtensionAbility](arkts-ability-getprofilebyextensionability-f.md#getprofilebyextensionability-2) | 根据给定的moduleName、extensionAbilityName和metadataName（module.json5中[metadata标签](../../../../quick-start/module-configuration-file.md#metadata标签)下的name）获取自身相应配置文件的json格式字符串。使用Promise异步回调。 |
@@ -58,8 +63,8 @@
 | [disableDynamicIcon](arkts-ability-disabledynamicicon-f-sys.md#disabledynamicicon-2) | 根据给定的bundleName和option禁用动态图标。使用Promise异步回调。禁用当前用户下的动态图标信息时需要申请权限ohos.permission.ACCESS_DYNAMIC_ICON。禁用其他用户下的动态图标信息时需要申请权限ohos.permission.ACCESS_DYNAMIC_ICON 和 ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS。 |
 | [enableDynamicIcon](arkts-ability-enabledynamicicon-f-sys.md#enabledynamicicon-1) | 根据给定的bundleName、moduleName使能动态图标。使用Promise异步回调。 |
 | [enableDynamicIcon](arkts-ability-enabledynamicicon-f-sys.md#enabledynamicicon-2) | 根据给定的bundleName、moduleName和option使能动态图标。使用Promise异步回调。使能当前用户下的动态图标信息时需要申请权限ohos.permission.ACCESS_DYNAMIC_ICON。使能其他用户下的动态图标信息时需要申请权限ohos.permission.ACCESS_DYNAMIC_ICON 和 ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS。 |
-| [getAbilityIcon](arkts-ability-getabilityicon-f-sys.md#getabilityicon-1) | 通过bundleName、moduleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)，使用callback异步回调。获取调用方信息时不需要权限。@link @ohos.resourceManager:resourceManager.ResourceManager.getMediaContent(resId: long, callback: _AsyncCallback&lt;Uint8Array&gt;)}&gt; 替代。 |
-| [getAbilityIcon](arkts-ability-getabilityicon-f-sys.md#getabilityicon-2) | 通过bundleName、moduleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)，使用Promise异步回调。获取调用方信息时不需要权限。@link @ohos.resourceManager:resourceManager.ResourceManager.getMediaContent(resId: long, callback: _AsyncCallback&lt;Uint8Array&gt;)}&gt; 替代。 |
+| [getAbilityIcon](arkts-ability-getabilityicon-f-sys.md#getabilityicon-1) | 通过bundleName、moduleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)，使用callback异步回调。获取调用方信息时不需要权限。 |
+| [getAbilityIcon](arkts-ability-getabilityicon-f-sys.md#getabilityicon-2) | 通过bundleName、moduleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)，使用Promise异步回调。获取调用方信息时不需要权限。 |
 | [getAbilityLabel](arkts-ability-getabilitylabel-f-sys.md#getabilitylabel-1) | 获取指定bundleName、moduleName和abilityName的label。使用callback异步回调。获取调用方自身的信息时不需要权限。 |
 | [getAbilityLabel](arkts-ability-getabilitylabel-f-sys.md#getabilitylabel-2) | 获取指定bundleName、moduleName和abilityName的label。使用Promise异步回调。获取调用方自身的信息时不需要权限。 |
 | [getAbilityLabelSync](arkts-ability-getabilitylabelsync-f-sys.md#getabilitylabelsync-1) | 以同步的方法获取指定bundleName、moduleName和abilityName的label。获取调用方自身的信息时不需要权限。 |
@@ -75,7 +80,7 @@
 | [getAllBundleInfo](arkts-ability-getallbundleinfo-f-sys.md#getallbundleinfo-3) | 根据给定的bundleFlags和userId获取系统中所有的BundleInfo。使用Promise异步回调。 |
 | [getAllBundleInfoByDeveloperId](arkts-ability-getallbundleinfobydeveloperid-f-sys.md#getallbundleinfobydeveloperid-1) | 根据给定的developerId获取当前用户下的包信息列表。 |
 | [getAllBundleInstallInfo](arkts-ability-getallbundleinstallinfo-f-sys.md#getallbundleinstallinfo-1) | 获取系统内所有应用的扩展安装信息。使用Promise异步回调。 |
-| [getAllDynamicIconInfo](arkts-ability-getalldynamiciconinfo-f-sys.md#getalldynamiciconinfo-1) | 查询指定用户下所有应用和所有分身的动态图标信息。使用Promise异步回调。查询当前用户下所有应用和所有分身的动态图标信息时需要申请权限ohos.permission.GET_BUNDLE_INFO_PRIVILEGED。查询其他用户或者所有用户下所有应用和所有分身的动态图标信息时需要申请权限ohos.permission.GET_BUNDLE_INFO_PRIVILEGED 和 ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS。 |
+| [getAllDynamicIconInfo](arkts-ability-getalldynamiciconinfo-f-sys.md#getalldynamiciconinfo-1) | 查询指定用户下所有应用和所有分身的动态图标信息。使用Promise异步回调。查询当前用户下所有应用和所有分身的动态图标信息时需要申请权限ohos.permission.GET_BUNDLE_INFO_PRIVILEGED。查询其他用户或者所有用户下所有应用和所有分身的动态图标信息时需要申请权限ohos.permission.GET_BUNDLE_INFO_PRIVILEGED 和ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS。 |
 | [getAllNewPreinstalledApplicationInfo](arkts-ability-getallnewpreinstalledapplicationinfo-f-sys.md#getallnewpreinstalledapplicationinfo-1) | 获取设备OTA升级期间当前用户下新增的所有预置应用信息。使用Promise异步回调。 |
 | [getAllPluginInfo](arkts-ability-getallplugininfo-f-sys.md#getallplugininfo-1) | 根据给定的hostBundleName和userId获取所有的PluginBundleInfo。使用Promise异步回调。 |
 | [getAllPreinstalledApplicationInfo](arkts-ability-getallpreinstalledapplicationinfo-f-sys.md#getallpreinstalledapplicationinfo-1) | 获取所有预置应用信息。使用Promise异步回调。 |

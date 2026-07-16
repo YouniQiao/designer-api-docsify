@@ -6,6 +6,8 @@ Define AppIntentEntity.
 
 **Since:** 26.0.0
 
+<!--Device-insightIntent-abstract class AppIntentEntity<T> implements IntentEntity--><!--Device-insightIntent-abstract class AppIntentEntity<T> implements IntentEntity-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
@@ -28,19 +30,21 @@ Called when query entity execute.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-AppIntentEntity-abstract onQueryEntity(params: QueryEntityParam): Promise<Array<T>>--><!--Device-AppIntentEntity-abstract onQueryEntity(params: QueryEntityParam): Promise<Array<T>>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | QueryEntityParam | Yes | The params of query entity. |
+| params | [QueryEntityParam](arkts-ability-queryentityparam-i.md) | Yes | The params of query entity. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;T&gt;&gt; | - Returns an array of subclasses of the AppIntentEntity class, support promise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<T>> | - Returns an array of subclasses of the AppIntentEntity class, support promise. |
 
 ## displayName
 
@@ -57,6 +61,8 @@ The display name of entity.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AppIntentEntity-displayName: string--><!--Device-AppIntentEntity-displayName: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

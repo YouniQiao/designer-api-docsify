@@ -8,6 +8,8 @@ Widget information.
 
 **Substitutes:** FormInfo
 
+<!--Device-formInfo-interface FormInfo--><!--Device-formInfo-interface FormInfo-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 ## abilityName
@@ -25,6 +27,8 @@ Name of the ability to which the widget belongs.
 **Deprecated since:** 9
 
 **Substitutes:** abilityName
+
+<!--Device-FormInfo-abilityName: string--><!--Device-FormInfo-abilityName: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -44,6 +48,8 @@ Name of the bundle to which the widget belongs.
 
 **Substitutes:** bundleName
 
+<!--Device-FormInfo-bundleName: string--><!--Device-FormInfo-bundleName: string-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 ## colorMode
@@ -61,6 +67,8 @@ Color mode of the widget.
 **Deprecated since:** 9
 
 **Substitutes:** colorMode
+
+<!--Device-FormInfo-colorMode: ColorMode--><!--Device-FormInfo-colorMode: ColorMode-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -80,6 +88,8 @@ Custom data of the widget.
 
 **Substitutes:** customizeData
 
+<!--Device-FormInfo-customizeData: { [key: string]: [value: string] }--><!--Device-FormInfo-customizeData: { [key: string]: [value: string] }-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 ## defaultDimension
@@ -97,6 +107,8 @@ Default dimension of the widget.
 **Deprecated since:** 9
 
 **Substitutes:** defaultDimension
+
+<!--Device-FormInfo-defaultDimension: number--><!--Device-FormInfo-defaultDimension: number-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -116,6 +128,8 @@ Description of the widget.
 
 **Substitutes:** description
 
+<!--Device-FormInfo-description: string--><!--Device-FormInfo-description: string-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 ## formConfigAbility
@@ -134,6 +148,8 @@ Configuration ability of the widget.
 
 **Substitutes:** formConfigAbility
 
+<!--Device-FormInfo-formConfigAbility: string--><!--Device-FormInfo-formConfigAbility: string-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 ## formVisibleNotify
@@ -144,7 +160,7 @@ formVisibleNotify: boolean
 
 Whether to send a notification when the widget is visible.
 
-- **true**: The widget provider is notified of the status change.
+- **true**: The widget provider is notified of the status change.  
 - **false**: The widget provider is not notified of the status change.
 
 **Type:** boolean
@@ -154,6 +170,8 @@ Whether to send a notification when the widget is visible.
 **Deprecated since:** 9
 
 **Substitutes:** formVisibleNotify
+
+<!--Device-FormInfo-formVisibleNotify: boolean--><!--Device-FormInfo-formVisibleNotify: boolean-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -165,7 +183,7 @@ isDefault: boolean
 
 Whether the widget is the default one.
 
-- **true**: The widget is the default one.
+- **true**: The widget is the default one.  
 - **false**: The widget is not the default one.
 
 **Type:** boolean
@@ -175,6 +193,8 @@ Whether the widget is the default one.
 **Deprecated since:** 9
 
 **Substitutes:** isDefault
+
+<!--Device-FormInfo-isDefault: boolean--><!--Device-FormInfo-isDefault: boolean-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -194,6 +214,8 @@ Component name of the JS widget.
 
 **Substitutes:** jsComponentName
 
+<!--Device-FormInfo-jsComponentName: string--><!--Device-FormInfo-jsComponentName: string-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 ## moduleName
@@ -211,6 +233,8 @@ Name of the module to which the widget belongs.
 **Deprecated since:** 9
 
 **Substitutes:** moduleName
+
+<!--Device-FormInfo-moduleName: string--><!--Device-FormInfo-moduleName: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -230,6 +254,8 @@ Widget name.
 
 **Substitutes:** name
 
+<!--Device-FormInfo-name: string--><!--Device-FormInfo-name: string-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 ## relatedBundleName
@@ -245,6 +271,8 @@ Name of the associated bundle to which the widget belongs.
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-FormInfo-relatedBundleName: string--><!--Device-FormInfo-relatedBundleName: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -264,6 +292,8 @@ Time when the widget was updated.
 
 **Substitutes:** scheduledUpdateTime
 
+<!--Device-FormInfo-scheduledUpdateTime: string--><!--Device-FormInfo-scheduledUpdateTime: string-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 ## supportDimensions
@@ -281,6 +311,8 @@ Dimensions supported by the widget.
 **Deprecated since:** 9
 
 **Substitutes:** supportDimensions
+
+<!--Device-FormInfo-supportDimensions: Array<number>--><!--Device-FormInfo-supportDimensions: Array<number>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -300,6 +332,8 @@ Type of the widget. Currently, only JS widgets are supported.
 
 **Substitutes:** type
 
+<!--Device-FormInfo-type: FormType--><!--Device-FormInfo-type: FormType-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 ## updateDuration
@@ -318,6 +352,8 @@ Update period of the widget.
 
 **Substitutes:** updateDuration
 
+<!--Device-FormInfo-updateDuration: number--><!--Device-FormInfo-updateDuration: number-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 ## updateEnabled
@@ -328,7 +364,7 @@ updateEnabled: boolean
 
 Whether the widget is updatable.
 
-- **true**: The widget can be updated periodically.
+- **true**: The widget can be updated periodically.  
 - **false**: The widget cannot be updated periodically.
 
 **Type:** boolean
@@ -338,6 +374,8 @@ Whether the widget is updatable.
 **Deprecated since:** 9
 
 **Substitutes:** updateEnabled
+
+<!--Device-FormInfo-updateEnabled: boolean--><!--Device-FormInfo-updateEnabled: boolean-End-->
 
 **System capability:** SystemCapability.Ability.Form
 

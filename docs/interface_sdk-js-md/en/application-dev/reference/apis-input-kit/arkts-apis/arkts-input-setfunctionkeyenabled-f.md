@@ -12,12 +12,13 @@ import { inputDevice } from '@kit.InputKit';
 function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Promise<void>
 ```
 
-Specifies whether to enable a function key (for example, **CapsLock**). This API uses a promise to return the
-result.
+Specifies whether to enable a function key (for example, **CapsLock**). This API uses a promise to return the result.
 
 **Since:** 15
 
 **Required permissions:** ohos.permission.INPUT_KEYBOARD_CONTROLLER
+
+<!--Device-inputDevice-function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Promise<void>--><!--Device-inputDevice-function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -25,14 +26,14 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| functionKey | FunctionKey | Yes | Type of the function key. |
-| enabled | boolean | Yes | Status of the function key. The value **true** indicates that the function key isenabled, and the value **false** indicates the opposite. |
+| functionKey | [FunctionKey](arkts-input-functionkey-e.md) | Yes | Type of the function key. |
+| enabled | boolean | Yes | Status of the function key. The value **true** indicates that the function key is enabled, and the value **false** indicates the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

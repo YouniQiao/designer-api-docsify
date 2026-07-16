@@ -1,9 +1,10 @@
 # LeakWatcherConfig
 
-Defines the **LeakWatcherConfig** object, which contains multiple configurable properties for memory leak
-monitoring.
+Defines the **LeakWatcherConfig** object, which contains multiple configurable properties for memory leak monitoring.
 
 **Since:** 24
+
+<!--Device-jsLeakWatcher-interface LeakWatcherConfig--><!--Device-jsLeakWatcher-interface LeakWatcherConfig-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
@@ -19,8 +20,7 @@ import { jsLeakWatcher } from '@kit.PerformanceAnalysisKit';
 bgLeakCountThreshold?: number
 ```
 
-Threshold for the number of leak objects in a background application. Dump is triggered when this threshold is
-reached.
+Threshold for the number of leak objects in a background application. Dump is triggered when this threshold is reached.
 
 During the GC/Dump phase, dump is triggered when the value is greater than or equal to 1.
 
@@ -29,6 +29,8 @@ The default threshold is **1**.
 **Type:** number
 
 **Since:** 24
+
+<!--Device-LeakWatcherConfig-bgLeakCountThreshold?: int--><!--Device-LeakWatcherConfig-bgLeakCountThreshold?: int-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
@@ -46,6 +48,8 @@ The default value is 30 seconds.
 
 **Since:** 24
 
+<!--Device-LeakWatcherConfig-checkInterval?: int--><!--Device-LeakWatcherConfig-checkInterval?: int-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## dumpHeapWaitTimeMs
@@ -54,11 +58,9 @@ The default value is 30 seconds.
 dumpHeapWaitTimeMs?: number
 ```
 
-Delay interval for executing dump. This parameter ensures that GC can be scheduled and executed before dump. The
-delay interval is less than or equal to the leak detection interval, in milliseconds.
+Delay interval for executing dump. This parameter ensures that GC can be scheduled and executed before dump. The delay interval is less than or equal to the leak detection interval, in milliseconds.
 
-If the configured delay exceeds the leak detection interval, the delay defaults to that of the leak detection
-interval.
+If the configured delay exceeds the leak detection interval, the delay defaults to that of the leak detection interval.
 
 If no new leaked object exists, dump will not be triggered.
 
@@ -67,6 +69,8 @@ By default, the dump is performed 5 seconds after the GC ends.
 **Type:** number
 
 **Since:** 24
+
+<!--Device-LeakWatcherConfig-dumpHeapWaitTimeMs?: int--><!--Device-LeakWatcherConfig-dumpHeapWaitTimeMs?: int-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
@@ -90,6 +94,8 @@ The default value is an empty array.
 
 **Since:** 24
 
+<!--Device-LeakWatcherConfig-exclusionList?: Array<string>--><!--Device-LeakWatcherConfig-exclusionList?: Array<string>-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## fgLeakCountThreshold
@@ -98,8 +104,7 @@ The default value is an empty array.
 fgLeakCountThreshold?: number
 ```
 
-Threshold for the number of leaked objects in a foreground application. Dump is triggered when this threshold is
-reached.
+Threshold for the number of leaked objects in a foreground application. Dump is triggered when this threshold is reached.
 
 During the GC/Dump phase, dump is triggered when the value is greater than or equal to 5.
 
@@ -109,6 +114,8 @@ The default threshold is **5**.
 
 **Since:** 24
 
+<!--Device-LeakWatcherConfig-fgLeakCountThreshold?: int--><!--Device-LeakWatcherConfig-fgLeakCountThreshold?: int-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## maxStoredHeapDumps
@@ -117,14 +124,15 @@ The default threshold is **5**.
 maxStoredHeapDumps?: number
 ```
 
-Maximum number of dump files that can be saved. To prevent the disk space from being used up, the .rawheap and
-.jsleaklist files with the minimum timestamp are deleted when the number of dump files exceeds the maximum.
+Maximum number of dump files that can be saved. To prevent the disk space from being used up, the .rawheap and.jsleaklist files with the minimum timestamp are deleted when the number of dump files exceeds the maximum.
 
 By default, 10 .rawheap files and 10 .jsleaklist files are saved.
 
 **Type:** number
 
 **Since:** 24
+
+<!--Device-LeakWatcherConfig-maxStoredHeapDumps?: int--><!--Device-LeakWatcherConfig-maxStoredHeapDumps?: int-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
@@ -142,6 +150,8 @@ By default, all component types are monitored.
 
 **Since:** 24
 
+<!--Device-LeakWatcherConfig-monitorObjectTypes: MonitorObjectType--><!--Device-LeakWatcherConfig-monitorObjectTypes: MonitorObjectType-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## objectUniqueIDs
@@ -154,14 +164,15 @@ List of IDs of monitored objects.
 
 This parameter applies only to custom components and does not affect the monitoring of other component types.
 
-For example, if the object class name ID set in the trustlist is the same as that in the custom ID list, the
-custom ID list takes effect.
+For example, if the object class name ID set in the trustlist is the same as that in the custom ID list, the custom ID list takes effect.
 
 The default value is an empty array.
 
 **Type:** Array<number>
 
 **Since:** 24
+
+<!--Device-LeakWatcherConfig-objectUniqueIDs?: Array<int>--><!--Device-LeakWatcherConfig-objectUniqueIDs?: Array<int>-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 

@@ -4,6 +4,8 @@ Indicates request parameters for Bluetooth search function.
 
 **Since:** 26.0.0
 
+<!--Device-geoLocationManager-export interface BluetoothSearchRequestParams--><!--Device-geoLocationManager-export interface BluetoothSearchRequestParams-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Indicates the list of Bluetooth device ID that need to be search.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-BluetoothSearchRequestParams-deviceIdArray: Array<string>--><!--Device-BluetoothSearchRequestParams-deviceIdArray: Array<string>-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## rssiThreshold
@@ -36,9 +40,7 @@ Indicates the list of Bluetooth device ID that need to be search.
 rssiThreshold?: number
 ```
 
-Indicates the Bluetooth RSSI threshold,
-only search Bluetooth BSSID with RSSI greater than this threshold.
-The value range is all integers.
+Indicates the Bluetooth RSSI threshold,only search Bluetooth BSSID with RSSI greater than this threshold.The value range is all integers.
 
 **Type:** number
 
@@ -47,6 +49,8 @@ The value range is all integers.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-BluetoothSearchRequestParams-rssiThreshold?: int--><!--Device-BluetoothSearchRequestParams-rssiThreshold?: int-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 

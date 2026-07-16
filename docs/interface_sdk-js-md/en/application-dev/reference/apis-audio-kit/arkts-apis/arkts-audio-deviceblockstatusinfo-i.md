@@ -4,6 +4,8 @@ Describes the audio device blocked status and device information.
 
 **Since:** 13
 
+<!--Device-audio-interface DeviceBlockStatusInfo--><!--Device-audio-interface DeviceBlockStatusInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Blocked status of the audio device.
 
 **Since:** 13
 
+<!--Device-DeviceBlockStatusInfo-blockStatus: DeviceBlockStatus--><!--Device-DeviceBlockStatusInfo-blockStatus: DeviceBlockStatus-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## devices
@@ -37,6 +41,8 @@ Device information.
 **Type:** AudioDeviceDescriptors
 
 **Since:** 13
+
+<!--Device-DeviceBlockStatusInfo-devices: AudioDeviceDescriptors--><!--Device-DeviceBlockStatusInfo-devices: AudioDeviceDescriptors-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 

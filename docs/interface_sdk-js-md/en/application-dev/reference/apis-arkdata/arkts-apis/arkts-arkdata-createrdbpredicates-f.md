@@ -16,6 +16,8 @@ Creates an **RdbPredicates** object with a table name and **DataAbilityPredicate
 
 **Since:** 7
 
+<!--Device-dataAbility-function createRdbPredicates(name: string, dataAbilityPredicates: DataAbilityPredicates): rdb.RdbPredicates--><!--Device-dataAbility-function createRdbPredicates(name: string, dataAbilityPredicates: DataAbilityPredicates): rdb.RdbPredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Parameters:**
@@ -23,7 +25,7 @@ Creates an **RdbPredicates** object with a table name and **DataAbilityPredicate
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of a database table. |
-| dataAbilityPredicates | DataAbilityPredicates | Yes | **DataAbilityPredicates** object. |
+| dataAbilityPredicates | [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | Yes | **DataAbilityPredicates** object. |
 
 **Return value:**
 

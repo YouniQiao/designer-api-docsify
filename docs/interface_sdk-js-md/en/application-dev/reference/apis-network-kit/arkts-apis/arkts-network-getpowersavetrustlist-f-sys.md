@@ -18,6 +18,8 @@ Obtain the list of uids that are allowed to access the Internet in power saving 
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function getPowerSaveTrustlist(callback: AsyncCallback<Array<number>>): void--><!--Device-policy-function getPowerSaveTrustlist(callback: AsyncCallback<Array<number>>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Obtain the list of uids that are allowed to access the Internet in power saving 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;number&gt;&gt; | Yes | the callback of UIDs list. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<number>> | Yes | the callback of UIDs list. |
 
 **Error codes:**
 
@@ -64,6 +66,8 @@ Obtain the list of uids that are allowed to access the Internet in power saving 
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function getPowerSaveTrustlist(): Promise<Array<number>>--><!--Device-policy-function getPowerSaveTrustlist(): Promise<Array<number>>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -72,7 +76,7 @@ Obtain the list of uids that are allowed to access the Internet in power saving 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | The promise returned by the function. |
 
 **Error codes:**
 

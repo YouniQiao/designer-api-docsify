@@ -12,12 +12,13 @@ import { sms } from '@kit.TelephonyKit';
 function setDefaultSmsSlotId(slotId: number, callback: AsyncCallback<void>): void
 ```
 
-Sets the default SIM card for sending SMS messages. You can obtain the default SIM card by
-using {@code getDefaultSmsSlotId}.
+Sets the default SIM card for sending SMS messages. You can obtain the default SIM card by using {@code getDefaultSmsSlotId}.
 
 **Since:** 7
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-sms-function setDefaultSmsSlotId(slotId: int, callback: AsyncCallback<void>): void--><!--Device-sms-function setDefaultSmsSlotId(slotId: int, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -27,8 +28,8 @@ using {@code getDefaultSmsSlotId}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the default SIM card for sending SMS messages. The value {@code 0} indicatescard slot 1, and the value {@code 1} indicates card slot 2. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of setDefaultSmsSlotId. |
+| slotId | number | Yes | Indicates the default SIM card for sending SMS messages. The value {@code 0} indicates card slot 1, and the value {@code 1} indicates card slot 2. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of setDefaultSmsSlotId. |
 
 **Error codes:**
 
@@ -62,12 +63,13 @@ sms.setDefaultSmsSlotId(0, (err: BusinessError) => {
 function setDefaultSmsSlotId(slotId: number): Promise<void>
 ```
 
-Sets the default SIM card for sending SMS messages. You can obtain the default SIM card by
-using {@code getDefaultSmsSlotId}.
+Sets the default SIM card for sending SMS messages. You can obtain the default SIM card by using {@code getDefaultSmsSlotId}.
 
 **Since:** 7
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-sms-function setDefaultSmsSlotId(slotId: int): Promise<void>--><!--Device-sms-function setDefaultSmsSlotId(slotId: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -77,13 +79,13 @@ using {@code getDefaultSmsSlotId}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the default SIM card for sending SMS messages. The value {@code 0} indicatescard slot 1, and the value {@code 1} indicates card slot 2. |
+| slotId | number | Yes | Indicates the default SIM card for sending SMS messages. The value {@code 0} indicates card slot 1, and the value {@code 1} indicates card slot 2. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setDefaultSmsSlotId. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the setDefaultSmsSlotId. |
 
 **Error codes:**
 

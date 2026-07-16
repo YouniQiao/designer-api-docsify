@@ -1,5 +1,11 @@
 # createAVTranscoder
 
+## 导入模块
+
+```TypeScript
+import { media } from '@kit.MediaKit';
+```
+
 ## createAVTranscoder
 
 ```TypeScript
@@ -8,13 +14,15 @@ function createAVTranscoder(): Promise<AVTranscoder>
 
 创建视频转码实例。使用Promise异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 可创建的视频转码实例不能超过2个。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-media-function createAVTranscoder(): Promise<AVTranscoder>--><!--Device-media-function createAVTranscoder(): Promise<AVTranscoder>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -22,7 +30,7 @@ function createAVTranscoder(): Promise<AVTranscoder>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AVTranscoder&gt; | Promise对象。异步返回AVTranscoder实例，失败时返回null。可用于视频转码。 |
+| Promise<AVTranscoder> | Promise对象。异步返回AVTranscoder实例，失败时返回null。可用于视频转码。 |
 
 **错误码：**
 

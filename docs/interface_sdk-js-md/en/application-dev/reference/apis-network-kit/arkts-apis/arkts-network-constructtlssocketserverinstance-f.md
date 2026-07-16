@@ -16,13 +16,15 @@ Creates a TLSSocketServer object.
 
 **Since:** 24
 
+<!--Device-socket-function constructTLSSocketServerInstance(): TLSSocketServer--><!--Device-socket-function constructTLSSocketServerInstance(): TLSSocketServer-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TLSSocketServer | the TLSSocketServer of the constructTLSSocketServerInstance. |
+| [TLSSocketServer](arkts-network-tlssocketserver-i.md) | the TLSSocketServer of the constructTLSSocketServerInstance. |
 
 **Example**
 

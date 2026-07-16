@@ -14,12 +14,11 @@ function getDeviceRotationRadian(): Promise<DeviceRotationRadian>
 
 Obtains the device posture data.
 
-The posture data contains the rotation angles of the x, y, and z axes, that is, the Euler angles of the three axes.
-The definitions of the three axes are the same as those of the device sensor, and the right-handed coordinate
-system is used. Posture rotation angles are calculated under the z-x-y intrinsic rotation order, and derived by
-converting quaternions obtained via sensor fusion.
+The posture data contains the rotation angles of the x, y, and z axes, that is, the Euler angles of the three axes.The definitions of the three axes are the same as those of the device sensor, and the right-handed coordinate system is used. Posture rotation angles are calculated under the z-x-y intrinsic rotation order, and derived by converting quaternions obtained via sensor fusion.
 
 **Since:** 20
+
+<!--Device-deviceStatus-function getDeviceRotationRadian(): Promise<DeviceRotationRadian>--><!--Device-deviceStatus-function getDeviceRotationRadian(): Promise<DeviceRotationRadian>-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
 
@@ -29,7 +28,7 @@ converting quaternions obtained via sensor fusion.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DeviceRotationRadian&gt; | The result of device rotation radian. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DeviceRotationRadian> | The result of device rotation radian. |
 
 **Error codes:**
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 6
 
+<!--Device-intl-export class NumberFormat--><!--Device-intl-export class NumberFormat-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+```
 
 ## constructor
 
@@ -16,7 +24,9 @@ constructor()
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberFormat-constructor()--><!--Device-NumberFormat-constructor()-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -40,7 +50,9 @@ constructor(locale: string | Array<string>, options?: NumberOptions)
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberFormat-constructor(locale: string | Array<string>, options?: NumberOptions)--><!--Device-NumberFormat-constructor(locale: string | Array<string>, options?: NumberOptions)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -48,8 +60,8 @@ constructor(locale: string | Array<string>, options?: NumberOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
-| options | NumberOptions | 否 | 创建数字格式化对象时可设置的配置项。<br>默认值：所有属性都取默认值时的配置项。 |
+| locale | string \| Array<string> | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
+| options | [NumberOptions](arkts-localization-numberoptions-i.md) | 否 | 创建数字格式化对象时可设置的配置项。<br>默认值：所有属性都取默认值时的配置项。 |
 
 **示例：**
 
@@ -71,7 +83,9 @@ format(num: number): string
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberFormat-format(num: double): string--><!--Device-NumberFormat-format(num: double): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -115,7 +129,9 @@ formatRange(startRange: number, endRange: number): string
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberFormat-formatRange(startRange: double, endRange: double): string--><!--Device-NumberFormat-formatRange(startRange: double, endRange: double): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -152,7 +168,9 @@ resolvedOptions(): NumberOptions
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberFormat-resolvedOptions(): NumberOptions--><!--Device-NumberFormat-resolvedOptions(): NumberOptions-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -160,7 +178,7 @@ resolvedOptions(): NumberOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| NumberOptions | 创建数字格式化对象时设置的配置项。 |
+| [NumberOptions](arkts-localization-numberoptions-i.md) | 创建数字格式化对象时设置的配置项。 |
 
 **示例：**
 

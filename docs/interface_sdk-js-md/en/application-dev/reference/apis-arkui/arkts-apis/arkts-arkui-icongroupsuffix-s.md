@@ -2,12 +2,14 @@
 
 The **ChipGroup** component provides a set of chips for organizing and categorizing files or resource content.
 
-> **NOTE**
->
-> With **SymbolGlyphModifier**, neither modifying the animation type with **symbolEffect** nor setting the effect
+> **NOTE**  
+>  
+> With **SymbolGlyphModifier**, neither modifying the animation type with **symbolEffect** nor setting the effect  
 > strategy with [effectStrategy](SymbolGlyphAttribute#effectStrategy) is supported.
 
 **Since:** 12
+
+<!--Device-unnamed-export declare struct IconGroupSuffix--><!--Device-unnamed-export declare struct IconGroupSuffix-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,8 +25,7 @@ import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixI
 iconBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
-Set system-styled materials for the component. Different materials have different effects, which can influence
-the backgroundColor, border, shadow, and other visual attributes of the component.
+Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
 
 **Type:** uiMaterial.Material
 
@@ -35,6 +36,8 @@ the backgroundColor, border, shadow, and other visual attributes of the componen
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-IconGroupSuffix-iconBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-IconGroupSuffix-iconBackgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -55,6 +58,8 @@ Custom builder items.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-IconGroupSuffix-items: Array<IconItemOptions | SymbolGlyphModifier | SymbolItemOptions>--><!--Device-IconGroupSuffix-items: Array<IconItemOptions | SymbolGlyphModifier | SymbolItemOptions>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

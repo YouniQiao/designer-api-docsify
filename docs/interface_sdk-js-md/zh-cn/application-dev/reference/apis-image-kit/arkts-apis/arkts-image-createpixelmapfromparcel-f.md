@@ -1,5 +1,11 @@
 # createPixelMapFromParcel
 
+## 导入模块
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+```
+
 ## createPixelMapFromParcel
 
 ```TypeScript
@@ -9,6 +15,8 @@ function createPixelMapFromParcel(sequence: rpc.MessageSequence): PixelMap
 Creates a PixelMap object based on MessageSequence parameter.
 
 **起始版本：** 12
+
+<!--Device-sendableImage-function createPixelMapFromParcel(sequence: rpc.MessageSequence): PixelMap--><!--Device-sendableImage-function createPixelMapFromParcel(sequence: rpc.MessageSequence): PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -22,7 +30,7 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | 类型 | 说明 |
 | --- | --- |
-| PixelMap | Returns the instance if the operation is successful.Otherwise, an exception will be thrown. |
+| [PixelMap](arkts-image-pixelmap-i.md) | Returns the instance if the operation is successful.Otherwise, an exception will be thrown. |
 
 **错误码：**
 

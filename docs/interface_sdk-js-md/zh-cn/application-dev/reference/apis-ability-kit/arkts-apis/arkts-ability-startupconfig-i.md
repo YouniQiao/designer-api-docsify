@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export default interface StartupConfig--><!--Device-unnamed-export default interface StartupConfig-End-->
+
 **系统能力：** SystemCapability.Ability.AppStartup
+
+## 导入模块
+
+```TypeScript
+import { StartupConfig } from '@kit.AbilityKit';
+```
 
 ## startupListener
 
@@ -19,6 +27,8 @@ startupListener?: StartupListener
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StartupConfig-startupListener?: StartupListener--><!--Device-StartupConfig-startupListener?: StartupListener-End-->
 
 **系统能力：** SystemCapability.Ability.AppStartup
 
@@ -37,6 +47,8 @@ timeoutMs?: number
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-StartupConfig-timeoutMs?: int--><!--Device-StartupConfig-timeoutMs?: int-End-->
 
 **系统能力：** SystemCapability.Ability.AppStartup
 

@@ -4,6 +4,8 @@ Provides APIs for user IDM.
 
 **Since:** 8
 
+<!--Device-osAccount-class UserIdentityManager--><!--Device-osAccount-class UserIdentityManager-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -20,12 +22,13 @@ import { osAccount } from '@kit.BasicServicesKit';
 addCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void
 ```
 
-Adds credential information, including the credential type, subtype, and token (if a non-PIN credential is added)
-.
+Adds credential information, including the credential type, subtype, and token (if a non-PIN credential is added).
 
 **Since:** 8
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
+
+<!--Device-UserIdentityManager-addCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void--><!--Device-UserIdentityManager-addCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -35,8 +38,8 @@ Adds credential information, including the credential type, subtype, and token (
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| credentialInfo | CredentialInfo | Yes | Credential information to add. |
-| callback | IIdmCallback | Yes | Callback used to return the result. |
+| credentialInfo | [CredentialInfo](arkts-basicservices-credentialinfo-i-sys.md) | Yes | Credential information to add. |
+| callback | [IIdmCallback](arkts-basicservices-iidmcallback-i-sys.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -105,6 +108,8 @@ Cancels an entry based on the challenge value.
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
 
+<!--Device-UserIdentityManager-cancel(challenge: Uint8Array): void--><!--Device-UserIdentityManager-cancel(challenge: Uint8Array): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -113,7 +118,7 @@ Cancels an entry based on the challenge value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| challenge | Uint8Array | Yes | Challenge value. |
+| challenge | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Challenge value. |
 
 **Error codes:**
 
@@ -152,6 +157,8 @@ Closes this session to terminate IDM.
 **Since:** 8
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
+
+<!--Device-UserIdentityManager-closeSession(accountId?: int): void--><!--Device-UserIdentityManager-closeSession(accountId?: int): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -193,6 +200,8 @@ A **constructor()** used to create an instance for user IDM.
 
 **Since:** 8
 
+<!--Device-UserIdentityManager-constructor()--><!--Device-UserIdentityManager-constructor()-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -222,6 +231,8 @@ Deletes user credential information.
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
 
+<!--Device-UserIdentityManager-delCred(credentialId: Uint8Array, token: Uint8Array, callback: IIdmCallback): void--><!--Device-UserIdentityManager-delCred(credentialId: Uint8Array, token: Uint8Array, callback: IIdmCallback): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -230,9 +241,9 @@ Deletes user credential information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| credentialId | Uint8Array | Yes | Credential ID. |
-| token | Uint8Array | Yes | Authentication token. |
-| callback | IIdmCallback | Yes | Callback used to return the result. |
+| credentialId | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Credential ID. |
+| token | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Authentication token. |
+| callback | [IIdmCallback](arkts-basicservices-iidmcallback-i-sys.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -280,6 +291,8 @@ Deletes a user with an authentication token. This API uses an asynchronous callb
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
 
+<!--Device-UserIdentityManager-delUser(token: Uint8Array, callback: IIdmCallback): void--><!--Device-UserIdentityManager-delUser(token: Uint8Array, callback: IIdmCallback): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -288,8 +301,8 @@ Deletes a user with an authentication token. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | Uint8Array | Yes | Authentication token. |
-| callback | IIdmCallback | Yes | Callback used to return the result. |
+| token | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Authentication token. |
+| callback | [IIdmCallback](arkts-basicservices-iidmcallback-i-sys.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -334,6 +347,8 @@ Obtains authentication information. This API uses an asynchronous callback to re
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
+<!--Device-UserIdentityManager-getAuthInfo(callback: AsyncCallback<Array<EnrolledCredInfo>>): void--><!--Device-UserIdentityManager-getAuthInfo(callback: AsyncCallback<Array<EnrolledCredInfo>>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -342,7 +357,7 @@ Obtains authentication information. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;EnrolledCredInfo&gt;&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is information about all registeredcredentials of the user. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<EnrolledCredInfo>> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is information about all registered credentials of the user. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -380,12 +395,13 @@ try {
 getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>): void
 ```
 
-Obtains authentication information of the specified type. This API uses an asynchronous callback to return the
-result.
+Obtains authentication information of the specified type. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
 **Required permissions:** ohos.permission.USE_USER_IDM
+
+<!--Device-UserIdentityManager-getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>): void--><!--Device-UserIdentityManager-getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -395,8 +411,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | AuthType | Yes | Authentication credential type. |
-| callback | AsyncCallback&lt;Array&lt;EnrolledCredInfo&gt;&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the information aboutall enrolled credentials of the specified type. Otherwise, **err** is an error object. |
+| authType | [AuthType](arkts-basicservices-authtype-e-sys.md) | Yes | Authentication credential type. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<EnrolledCredInfo>> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the information about all enrolled credentials of the specified type. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -442,6 +458,8 @@ Obtains authentication information. This API uses a promise to return the result
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
+<!--Device-UserIdentityManager-getAuthInfo(authType: AuthType): Promise<Array<EnrolledCredInfo>>--><!--Device-UserIdentityManager-getAuthInfo(authType: AuthType): Promise<Array<EnrolledCredInfo>>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -450,13 +468,13 @@ Obtains authentication information. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | AuthType | Yes | Authentication type, which indicates that information aboutall authentication types is obtained. |
+| authType | [AuthType](arkts-basicservices-authtype-e-sys.md) | Yes | Authentication type, which indicates that information about all authentication types is obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;EnrolledCredInfo&gt;&gt; | Promise used to return the information aboutall the enrolled credentials of the specified type. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<EnrolledCredInfo>> | Promise used to return the information about all the enrolled credentials of the specified type. |
 
 **Error codes:**
 
@@ -499,6 +517,8 @@ Obtains authentication information. This API uses a promise to return the result
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
+<!--Device-UserIdentityManager-getAuthInfo(options?: GetAuthInfoOptions): Promise<Array<EnrolledCredInfo>>--><!--Device-UserIdentityManager-getAuthInfo(options?: GetAuthInfoOptions): Promise<Array<EnrolledCredInfo>>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -507,13 +527,13 @@ Obtains authentication information. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | GetAuthInfoOptions | No | Optional parameters for obtaining authentication information.This parameter is left empty by default, indicating that all enrolled credential information ofthe current user is obtained. |
+| options | [GetAuthInfoOptions](arkts-basicservices-getauthinfooptions-i-sys.md) | No | Optional parameters for obtaining authentication information.This parameter is left empty by default, indicating that all enrolled credential information of the current user is obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;EnrolledCredInfo&gt;&gt; | Promise used to return the information aboutall the enrolled credentials of the specified type. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<EnrolledCredInfo>> | Promise used to return the information about all the enrolled credentials of the specified type. |
 
 **Error codes:**
 
@@ -555,12 +575,13 @@ try {
 getEnrolledId(authType: AuthType, accountId?: number): Promise<Uint8Array>
 ```
 
-Obtains the ID of the enrolled credential based on the credential type and account ID (optional). This API uses a
-promise to return the result.
+Obtains the ID of the enrolled credential based on the credential type and account ID (optional). This API uses a promise to return the result.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.USE_USER_IDM
+
+<!--Device-UserIdentityManager-getEnrolledId(authType: AuthType, accountId?: int): Promise<Uint8Array>--><!--Device-UserIdentityManager-getEnrolledId(authType: AuthType, accountId?: int): Promise<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -570,14 +591,14 @@ promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | AuthType | Yes | Credential type. |
+| authType | [AuthType](arkts-basicservices-authtype-e-sys.md) | Yes | Credential type. |
 | accountId | number | No | OS account ID, which is left blank by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the credential ID obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Uint8Array> | Promise used to return the credential ID obtained. |
 
 **Error codes:**
 
@@ -619,12 +640,13 @@ try {
 offCredentialChanged(callback?: Callback<CredentialChangeInfo>): void
 ```
 
-Unsubscribes from credential change events. If no callback is not specified, this API unsubscribes from all
-subscription records.
+Unsubscribes from credential change events. If no callback is not specified, this API unsubscribes from all subscription records.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.USE_USER_IDM
+
+<!--Device-UserIdentityManager-offCredentialChanged(callback?: Callback<CredentialChangeInfo>): void--><!--Device-UserIdentityManager-offCredentialChanged(callback?: Callback<CredentialChangeInfo>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -634,7 +656,7 @@ subscription records.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;CredentialChangeInfo&gt; | No | Callback used to listen for the credential change events.The default value is **undefined**, indicating that all subscription records are unregistered.If the value is not undefined, only the subscription records related to the specified callback areunregistered. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CredentialChangeInfo> | No | Callback used to listen for the credential change events.The default value is **undefined**, indicating that all subscription records are unregistered.If the value is not undefined, only the subscription records related to the specified callback are unregistered. |
 
 **Error codes:**
 
@@ -685,12 +707,13 @@ try {
 onCredentialChanged(credentialTypes: AuthType[], callback: Callback<CredentialChangeInfo>): void
 ```
 
-Subscribes to one or more credential change events. This API uses a callback to return the credential change
-information.
+Subscribes to one or more credential change events. This API uses a callback to return the credential change information.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.USE_USER_IDM
+
+<!--Device-UserIdentityManager-onCredentialChanged(credentialTypes: AuthType[], callback: Callback<CredentialChangeInfo>): void--><!--Device-UserIdentityManager-onCredentialChanged(credentialTypes: AuthType[], callback: Callback<CredentialChangeInfo>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -700,8 +723,8 @@ information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| credentialTypes | AuthType[] | Yes | Credential types subscribed. |
-| callback | Callback&lt;CredentialChangeInfo&gt; | Yes | Callback used to listen for the credential change events. |
+| credentialTypes | [AuthType](arkts-basicservices-authtype-e-sys.md)[] | Yes | Credential types subscribed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CredentialChangeInfo> | Yes | Callback used to listen for the credential change events. |
 
 **Error codes:**
 
@@ -752,6 +775,8 @@ Opens a session to obtain the challenge value. This API uses an asynchronous cal
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
 
+<!--Device-UserIdentityManager-openSession(callback: AsyncCallback<Uint8Array>): void--><!--Device-UserIdentityManager-openSession(callback: AsyncCallback<Uint8Array>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -760,7 +785,7 @@ Opens a session to obtain the challenge value. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the challenge value obtained.Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Uint8Array> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the challenge value obtained.Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -798,13 +823,13 @@ try {
 openSession(accountId?: number): Promise<Uint8Array>
 ```
 
-Opens a session. This API returns a challenge value, which can be used to determine whether the subsequent
-identity authentication is in this session. This can prevent replay attacks. This API uses a promise to return
-the result.
+Opens a session. This API returns a challenge value, which can be used to determine whether the subsequent identity authentication is in this session. This can prevent replay attacks. This API uses a promise to return the result.
 
 **Since:** 8
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
+
+<!--Device-UserIdentityManager-openSession(accountId?: int): Promise<Uint8Array>--><!--Device-UserIdentityManager-openSession(accountId?: int): Promise<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -820,7 +845,7 @@ the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the challenge value obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Uint8Array> | Promise used to return the challenge value obtained. |
 
 **Error codes:**
 
@@ -864,6 +889,8 @@ Updates credential information. This API uses an asynchronous callback to return
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
 
+<!--Device-UserIdentityManager-updateCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void--><!--Device-UserIdentityManager-updateCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -872,8 +899,8 @@ Updates credential information. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| credentialInfo | CredentialInfo | Yes | Credential information to add. |
-| callback | IIdmCallback | Yes | Callback used to return the result. |
+| credentialInfo | [CredentialInfo](arkts-basicservices-credentialinfo-i-sys.md) | Yes | Credential information to add. |
+| callback | [IIdmCallback](arkts-basicservices-iidmcallback-i-sys.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 

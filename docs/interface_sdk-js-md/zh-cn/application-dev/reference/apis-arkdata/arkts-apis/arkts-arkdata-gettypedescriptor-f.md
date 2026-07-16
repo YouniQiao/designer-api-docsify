@@ -1,5 +1,11 @@
 # getTypeDescriptor
 
+## 导入模块
+
+```TypeScript
+import { uniformTypeDescriptor } from '@kit.ArkData';
+```
+
 ## getTypeDescriptor
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getTypeDescriptor(typeId: string): TypeDescriptor
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-uniformTypeDescriptor-function getTypeDescriptor(typeId: string): TypeDescriptor--><!--Device-uniformTypeDescriptor-function getTypeDescriptor(typeId: string): TypeDescriptor-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -24,7 +32,7 @@ function getTypeDescriptor(typeId: string): TypeDescriptor
 
 | 类型 | 说明 |
 | --- | --- |
-| TypeDescriptor | 返回标准化数据类型描述类对象。如果要查询的标准化数据类型不存在，则返回null。 |
+| [TypeDescriptor](arkts-arkdata-typedescriptor-c.md) | 返回标准化数据类型描述类对象。如果要查询的标准化数据类型不存在，则返回null。 |
 
 **错误码：**
 

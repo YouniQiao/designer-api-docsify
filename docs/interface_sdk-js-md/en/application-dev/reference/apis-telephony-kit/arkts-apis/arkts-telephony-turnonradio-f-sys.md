@@ -18,6 +18,8 @@ Turn on the radio service.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-radio-function turnOnRadio(slotId: int, callback: AsyncCallback<void>): void--><!--Device-radio-function turnOnRadio(slotId: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Turn on the radio service.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of turnOnRadio. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of turnOnRadio. |
 
 **Error codes:**
 
@@ -70,6 +72,8 @@ Turn on the radio service.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-radio-function turnOnRadio(slotId?: int): Promise<void>--><!--Device-radio-function turnOnRadio(slotId?: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -84,7 +88,7 @@ Turn on the radio service.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the turnOnRadio. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the turnOnRadio. |
 
 **Error codes:**
 
@@ -125,6 +129,8 @@ Turn on the radio service.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-radio-function turnOnRadio(callback: AsyncCallback<void>): void--><!--Device-radio-function turnOnRadio(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -133,7 +139,7 @@ Turn on the radio service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of turnOnRadio. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of turnOnRadio. |
 
 **Error codes:**
 

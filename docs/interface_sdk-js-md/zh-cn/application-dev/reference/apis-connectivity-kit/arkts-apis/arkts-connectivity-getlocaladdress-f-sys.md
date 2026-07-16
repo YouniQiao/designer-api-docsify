@@ -1,5 +1,11 @@
 # getLocalAddress（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { manager } from '@kit.ConnectivityKit';
+```
+
 ## getLocalAddress
 
 ```TypeScript
@@ -13,6 +19,8 @@ function getLocalAddress(): string
 **需要权限：** ohos.permission.ACCESS_NEARLINK and ohos.permission.GET_NEARLINK_LOCAL_MAC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-manager-function getLocalAddress(): string--><!--Device-manager-function getLocalAddress(): string-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 

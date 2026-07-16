@@ -1,5 +1,11 @@
 # evictFilePages（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appMemoryOptimizer } from '@kit.AbilityKit';
+```
+
 ## evictFilePages
 
 ```TypeScript
@@ -12,6 +18,8 @@ function evictFilePages(fileNames: Array<string>): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-appMemoryOptimizer-function evictFilePages(fileNames: Array<string>): Promise<void>--><!--Device-appMemoryOptimizer-function evictFilePages(fileNames: Array<string>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -20,13 +28,13 @@ function evictFilePages(fileNames: Array<string>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fileNames | Array&lt;string&gt; | 是 | 需要释放文件页缓存的文件名数组，文件名必须以.so、.hap 或.hsp结尾。 |
+| fileNames | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 需要释放文件页缓存的文件名数组，文件名必须以.so、.hap 或.hsp结尾。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

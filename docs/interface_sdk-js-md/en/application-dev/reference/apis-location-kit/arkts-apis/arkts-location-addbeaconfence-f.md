@@ -20,25 +20,27 @@ Add a beacon fence.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-geoLocationManager-function addBeaconFence(fenceRequest: BeaconFenceRequest): Promise<int>--><!--Device-geoLocationManager-function addBeaconFence(fenceRequest: BeaconFenceRequest): Promise<int>-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fenceRequest | BeaconFenceRequest | Yes | Indicates the details of the beacon fence. |
+| fenceRequest | [BeaconFenceRequest](arkts-location-beaconfencerequest-i.md) | Yes | Indicates the details of the beacon fence. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The promise returned by the function, for reporting the ID of beacon fence. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | The promise returned by the function, for reporting the ID of beacon fence. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have thepermission required to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call ${geoLocationManager.addBeaconFence}due to limited device capabilities. |
 | [3501100](../errorcode-geoLocationManager.md#3501100-failed-to-add-a-beacon-fence-because-the-location-switch-is-turned-off) | Failed to add a beacon fence because the location switch is off. |
 | [3501101](../errorcode-geoLocationManager.md#3501101-failed-to-add-a-beacon-fence-because-bluetooth-is-disabled) | Failed to add a beacon fence because the bluetooth switch is off. |

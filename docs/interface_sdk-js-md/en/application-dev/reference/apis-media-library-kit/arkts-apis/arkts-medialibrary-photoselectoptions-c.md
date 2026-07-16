@@ -1,11 +1,12 @@
 # PhotoSelectOptions
 
-Defines additional options for selecting media assets from Gallery. It inherits from **BaseSelectOptions**. It is
-used to start the picker of the corresponding user ID space.
+Defines additional options for selecting media assets from Gallery. It inherits from **BaseSelectOptions**. It is used to start the picker of the corresponding user ID space.
 
 **Inheritance/Implementation:** PhotoSelectOptions extends [BaseSelectOptions](arkts-medialibrary-baseselectoptions-c.md)
 
 **Since:** 10
+
+<!--Device-photoAccessHelper-class PhotoSelectOptions extends BaseSelectOptions--><!--Device-photoAccessHelper-class PhotoSelectOptions extends BaseSelectOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -23,14 +24,15 @@ completeButtonText?: CompleteButtonText
 
 Text displayed on the complete button.
 
-The complete button is located in the lower-right corner of the page. It is used by users to signify that they
-have finished selecting images.
+The complete button is located in the lower-right corner of the page. It is used by users to signify that they have finished selecting images.
 
 **Type:** CompleteButtonText
 
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-PhotoSelectOptions-completeButtonText?: CompleteButtonText--><!--Device-PhotoSelectOptions-completeButtonText?: CompleteButtonText-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -42,15 +44,15 @@ contextRecoveryInfo?: ContextRecoveryInfo
 
 Information for restoring the PhotoPicker's state from the last exit.
 
-When the selection process is complete, the PhotoPicker returns **contextRecoveryInfo** to the application. The
-application can then use the information to restore the PhotoPicker's state and the last viewed grid interface
-the next time it starts the PhotoPicker.
+When the selection process is complete, the PhotoPicker returns **contextRecoveryInfo** to the application. The application can then use the information to restore the PhotoPicker's state and the last viewed grid interface the next time it starts the PhotoPicker.
 
 **Type:** ContextRecoveryInfo
 
 **Since:** 21
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-PhotoSelectOptions-contextRecoveryInfo?: ContextRecoveryInfo--><!--Device-PhotoSelectOptions-contextRecoveryInfo?: ContextRecoveryInfo-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -60,9 +62,7 @@ the next time it starts the PhotoPicker.
 isDestroyedWithNavigation?: boolean
 ```
 
-Whether destruction with
-[Navigation](Navigation) is
-supported. **true** if supported, **false** otherwise. The default value is **false**.
+Whether destruction with [Navigation](Navigation) is supported. **true** if supported, **false** otherwise. The default value is **false**.
 
 **Type:** boolean
 
@@ -71,6 +71,8 @@ supported. **true** if supported, **false** otherwise. The default value is **fa
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-PhotoSelectOptions-isDestroyedWithNavigation?: boolean--><!--Device-PhotoSelectOptions-isDestroyedWithNavigation?: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -88,6 +90,8 @@ Whether the image can be edited. **true** if editable, **false** otherwise.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PhotoSelectOptions-isEditSupported?: boolean--><!--Device-PhotoSelectOptions-isEditSupported?: boolean-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## isOriginalSupported
@@ -96,14 +100,15 @@ Whether the image can be edited. **true** if editable, **false** otherwise.
 isOriginalSupported?: boolean
 ```
 
-Whether to display the button for selecting the original image. **true** to display, **false** otherwise. The
-default value is **false**.
+Whether to display the button for selecting the original image. **true** to display, **false** otherwise. The default value is **false**.
 
 **Type:** boolean
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PhotoSelectOptions-isOriginalSupported?: boolean--><!--Device-PhotoSelectOptions-isOriginalSupported?: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -113,14 +118,9 @@ default value is **false**.
 isReturnToPhotoBrowserEnabled?: boolean
 ```
 
-Whether to automatically switch to the full image preview mode after a photo is taken in single-selection mode.
-**true** means to switch, and **false** means the opposite. The default value is **false**.
+Whether to automatically switch to the full image preview mode after a photo is taken in single-selection mode.**true** means to switch, and **false** means the opposite. The default value is **false**.
 
-Note: This parameter takes effect only when
-[SingleSelectionMode](arkts-medialibrary-singleselectionmode-e.md) is set to
-**BROWSER_MODE** or **BROWSER_AND_SELECT_MODE** and
-[BaseSelectOptions.isPreviewForSingleSelectionSupported](arkts-medialibrary-baseselectoptions-c.md)
-is set to **true**.
+Note: This parameter takes effect only when [SingleSelectionMode](arkts-medialibrary-singleselectionmode-e.md) is set to **BROWSER_MODE** or **BROWSER_AND_SELECT_MODE** and [BaseSelectOptions.isPreviewForSingleSelectionSupported](arkts-medialibrary-baseselectoptions-c.md)is set to **true**.
 
 **Type:** boolean
 
@@ -129,6 +129,8 @@ is set to **true**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-PhotoSelectOptions-isReturnToPhotoBrowserEnabled?: boolean--><!--Device-PhotoSelectOptions-isReturnToPhotoBrowserEnabled?: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -148,6 +150,8 @@ Support displaying index numbers.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-PhotoSelectOptions-isSelectionNumberVisible?: boolean--><!--Device-PhotoSelectOptions-isSelectionNumberVisible?: boolean-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## isSelectionOrderAdjustable
@@ -165,6 +169,8 @@ Support selection order adjustment.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-PhotoSelectOptions-isSelectionOrderAdjustable?: boolean--><!--Device-PhotoSelectOptions-isSelectionOrderAdjustable?: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -186,6 +192,8 @@ A maximum of 500 photos can be selected. The default value is **500**.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-PhotoSelectOptions-maxPhotoSelectNumber?: int--><!--Device-PhotoSelectOptions-maxPhotoSelectNumber?: int-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## maxVideoSelectNumber
@@ -206,6 +214,8 @@ A maximum of 500 videos can be selected. The default value is **500**.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-PhotoSelectOptions-maxVideoSelectNumber?: int--><!--Device-PhotoSelectOptions-maxVideoSelectNumber?: int-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## subWindowName
@@ -221,6 +231,8 @@ Name of the child window.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PhotoSelectOptions-subWindowName?: string--><!--Device-PhotoSelectOptions-subWindowName?: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

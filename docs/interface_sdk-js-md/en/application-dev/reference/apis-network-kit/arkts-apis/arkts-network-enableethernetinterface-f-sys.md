@@ -20,6 +20,8 @@ Enable the ethernet interface.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ethernet-function enableEthernetInterface(): Promise<void>--><!--Device-ethernet-function enableEthernetInterface(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Enable the ethernet interface.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned when the ethernet interface is enabled. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned when the ethernet interface is enabled. |
 
 **Error codes:**
 

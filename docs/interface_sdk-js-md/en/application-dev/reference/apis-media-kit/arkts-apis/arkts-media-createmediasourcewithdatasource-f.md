@@ -20,19 +20,21 @@ Creates a media source from a custom data source.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-media-function createMediaSourceWithDataSource(dataSrc: AVDataSrcDescriptor): MediaSource | undefined--><!--Device-media-function createMediaSourceWithDataSource(dataSrc: AVDataSrcDescriptor): MediaSource | undefined-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataSrc | AVDataSrcDescriptor | Yes | Interface definition for obtaining media data. |
+| dataSrc | [AVDataSrcDescriptor](arkts-media-avdatasrcdescriptor-i.md) | Yes | Interface definition for obtaining media data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MediaSource | MediaSource instance if the operation is successful; returns undefined otherwise. |
+| [MediaSource](arkts-media-mediasource-i.md) | MediaSource instance if the operation is successful; returns undefined otherwise. |
 
 **Example**
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export declare struct AVVolumePanel--><!--Device-unnamed-export declare struct AVVolumePanel-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+## 导入模块
+
+```TypeScript
+import { AVVolumePanelParameter, AVVolumePanel } from '@kit.AudioKit';
+```
 
 ## volumeLevel
 
@@ -28,7 +36,9 @@ volumeLevel?: number
 
 **装饰器类型：** @Prop
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVVolumePanel-volumeLevel?: number--><!--Device-AVVolumePanel-volumeLevel?: number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -48,7 +58,9 @@ volumeParameter?: AVVolumePanelParameter
 
 **装饰器类型：** @Prop
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVVolumePanel-volumeParameter?: AVVolumePanelParameter--><!--Device-AVVolumePanel-volumeParameter?: AVVolumePanelParameter-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 

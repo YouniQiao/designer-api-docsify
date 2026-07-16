@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-distributedKVStore-class FieldNode--><!--Device-distributedKVStore-class FieldNode-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
+## 导入模块
+
+```TypeScript
+import { distributedKVStore } from '@kit.ArkData';
+```
 
 ## appendChild
 
@@ -18,13 +26,15 @@ appendChild(child: FieldNode): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FieldNode-appendChild(child: FieldNode): boolean--><!--Device-FieldNode-appendChild(child: FieldNode): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| child | FieldNode | 是 | 要附加的子节点。 |
+| child | [FieldNode](arkts-arkdata-fieldnode-c.md) | 是 | 要附加的子节点。 |
 
 **返回值：**
 
@@ -74,6 +84,8 @@ constructor(name: string)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FieldNode-constructor(name: string)--><!--Device-FieldNode-constructor(name: string)-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 **参数：**
@@ -100,6 +112,8 @@ default: string
 
 **起始版本：** 9
 
+<!--Device-FieldNode-default: string--><!--Device-FieldNode-default: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## nullable
@@ -116,6 +130,8 @@ set nullable(isnullable: boolean)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FieldNode-set nullable(isnullable: boolean)--><!--Device-FieldNode-set nullable(isnullable: boolean)-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## type
@@ -131,6 +147,8 @@ set type(type: number)
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FieldNode-set type(type: int)--><!--Device-FieldNode-set type(type: int)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 

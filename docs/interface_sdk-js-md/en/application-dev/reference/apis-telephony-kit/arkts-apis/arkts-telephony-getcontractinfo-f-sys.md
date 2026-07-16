@@ -18,6 +18,8 @@ Get contract info
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_ESIM_STATE
 
+<!--Device-eSIM-function getContractInfo(slotId: int, requestData: ContractRequestData) : Promise<string>--><!--Device-eSIM-function getContractInfo(slotId: int, requestData: ContractRequestData) : Promise<string>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -27,13 +29,13 @@ Get contract info
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number. |
-| requestData | ContractRequestData | Yes | request infomation required to get contract infomation. |
+| requestData | [ContractRequestData](arkts-telephony-contractrequestdata-i-sys.md) | Yes | request infomation required to get contract infomation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the contract info. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the contract info. |
 
 **Error codes:**
 

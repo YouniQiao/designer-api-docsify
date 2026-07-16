@@ -4,6 +4,8 @@ Defines the type of the button element on the right of the **ComposeListItem** c
 
 **Since:** 10
 
+<!--Device-unnamed-export declare class OperateButton--><!--Device-unnamed-export declare class OperateButton-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -18,11 +20,7 @@ import { OperateCheck, OperateIcon, ComposeListItem, OperateItem, IconType, Cont
 accessibilityDescription?: ResourceStr
 ```
 
-Accessible description of the button on the right. You can provide comprehensive text explanations to help users
-understand the operation they are about to perform and its potential consequences, especially when these cannot be
-inferred from the component's attributes and accessibility text alone. If a component contains both text
-information and the accessible description, the text is announced first and then the accessible description, when
-the component is selected.
+Accessible description of the button on the right. You can provide comprehensive text explanations to help users understand the operation they are about to perform and its potential consequences, especially when these cannot be inferred from the component's attributes and accessibility text alone. If a component contains both text information and the accessible description, the text is announced first and then the accessible description, when the component is selected.
 
 Default value: **"Double-tap to activate"**
 
@@ -34,6 +32,8 @@ Default value: **"Double-tap to activate"**
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-OperateButton-accessibilityDescription?: ResourceStr--><!--Device-OperateButton-accessibilityDescription?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityLevel
@@ -42,8 +42,7 @@ Default value: **"Double-tap to activate"**
 accessibilityLevel?: string
 ```
 
-Accessibility level of the button on the right. It determines whether the component can be recognized by
-accessibility services.
+Accessibility level of the button on the right. It determines whether the component can be recognized by accessibility services.
 
 The options are as follows:
 
@@ -53,8 +52,7 @@ The options are as follows:
 
 **"no"**: The component cannot be recognized by accessibility services.
 
-**"no-hide-descendants"**: Neither the component nor its child components can be recognized by accessibility
-services.
+**"no-hide-descendants"**: Neither the component nor its child components can be recognized by accessibility services.
 
 Default value: **"auto"**
 
@@ -68,6 +66,8 @@ Default value: **"auto"**
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-OperateButton-accessibilityLevel?: string--><!--Device-OperateButton-accessibilityLevel?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
@@ -76,11 +76,7 @@ Default value: **"auto"**
 accessibilityText?: ResourceStr
 ```
 
-Accessibility text, that is, accessible label name, of the button on the right. If a component does not contain
-text information, it will not be announced by the screen reader when selected. In this case, the screen reader user
-cannot know which component is selected. To solve this problem, you can set accessibility text for components
-without text information. When such a component is selected, the screen reader announces the specified
-accessibility text, informing the user which component is selected.
+Accessibility text, that is, accessible label name, of the button on the right. If a component does not contain text information, it will not be announced by the screen reader when selected. In this case, the screen reader user cannot know which component is selected. To solve this problem, you can set accessibility text for components without text information. When such a component is selected, the screen reader announces the specified accessibility text, informing the user which component is selected.
 
 Default value: **""**
 
@@ -91,6 +87,8 @@ Default value: **""**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-OperateButton-accessibilityText?: ResourceStr--><!--Device-OperateButton-accessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -111,6 +109,8 @@ Default value: **""**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-OperateButton-text?: ResourceStr--><!--Device-OperateButton-text?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

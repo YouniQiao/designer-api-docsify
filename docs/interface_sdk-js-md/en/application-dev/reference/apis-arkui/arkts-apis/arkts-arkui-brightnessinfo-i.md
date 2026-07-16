@@ -4,6 +4,8 @@ Describes the screen brightness information. The information comes from the unde
 
 **Since:** 22
 
+<!--Device-display-interface BrightnessInfo--><!--Device-display-interface BrightnessInfo-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
@@ -18,8 +20,7 @@ import { display } from '@kit.ArkUI';
 readonly brightnessPosition?: number
 ```
 
-Position of the brightness bar corresponding to the current screen brightness.
-Value range: [0.0,1.0]. Default value: 0.0.
+Position of the brightness bar corresponding to the current screen brightness.Value range: [0.0,1.0]. Default value: 0.0.
 
 **Type:** number
 
@@ -28,6 +29,8 @@ Value range: [0.0,1.0]. Default value: 0.0.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-BrightnessInfo-readonly brightnessPosition?: double--><!--Device-BrightnessInfo-readonly brightnessPosition?: double-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -45,6 +48,8 @@ Dynamic brightness headroom. The value is a floating-point number greater than 0
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-BrightnessInfo-readonly currentHeadroom: double--><!--Device-BrightnessInfo-readonly currentHeadroom: double-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## maxHeadroom
@@ -61,6 +66,8 @@ Maximum brightness headroom. The value is a floating-point number greater than 0
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-BrightnessInfo-readonly maxHeadroom: double--><!--Device-BrightnessInfo-readonly maxHeadroom: double-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## sdrNits
@@ -76,6 +83,8 @@ Screen brightness. The value is a floating-point number greater than 0. The defa
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-BrightnessInfo-readonly sdrNits: double--><!--Device-BrightnessInfo-readonly sdrNits: double-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

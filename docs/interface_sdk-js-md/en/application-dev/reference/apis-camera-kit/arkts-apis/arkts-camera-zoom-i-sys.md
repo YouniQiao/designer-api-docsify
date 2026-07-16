@@ -1,12 +1,12 @@
 # Zoom
 
-Zoom extend [ZoomQuery](arkts-camera-zoomquery-i.md)
-Provides APIs to process the zoom effect of a camera device, including obtaining the current zoom ratio, setting a
-zoom ratio, setting a zoom ratio in a smooth manner, and preparing or unpreparing for zooming.
+Zoom extend [ZoomQuery](arkts-camera-zoomquery-i.md)Provides APIs to process the zoom effect of a camera device, including obtaining the current zoom ratio, setting a zoom ratio, setting a zoom ratio in a smooth manner, and preparing or unpreparing for zooming.
 
 **Inheritance/Implementation:** Zoom extends [ZoomQuery](arkts-camera-zoomquery-i.md)
 
 **Since:** 11
+
+<!--Device-camera-interface Zoom extends ZoomQuery--><!--Device-camera-interface Zoom extends ZoomQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -26,6 +26,8 @@ Gets zoom center point.
 
 **Since:** 20
 
+<!--Device-Zoom-getZoomCenterPoint(): Point--><!--Device-Zoom-getZoomCenterPoint(): Point-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -34,7 +36,7 @@ Gets zoom center point.
 
 | Type | Description |
 | --- | --- |
-| Point | The current zoom center point. |
+| [Point](../../apis-test-kit/arkts-apis/arkts-test-point-i.md) | The current zoom center point. |
 
 **Error codes:**
 
@@ -52,6 +54,8 @@ prepareZoom(): void
 Instructs the bottom layer to prepare for zooming, for example, powering on the sensor.
 
 **Since:** 11
+
+<!--Device-Zoom-prepareZoom(): void--><!--Device-Zoom-prepareZoom(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -91,6 +95,8 @@ Sets zoom center point.
 
 **Since:** 20
 
+<!--Device-Zoom-setZoomCenterPoint(point: Point): void--><!--Device-Zoom-setZoomCenterPoint(point: Point): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -99,7 +105,7 @@ Sets zoom center point.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | Point | Yes | Target zoom center point. |
+| point | [Point](../../apis-test-kit/arkts-apis/arkts-test-point-i.md) | Yes | Target zoom center point. |
 
 **Error codes:**
 
@@ -117,6 +123,8 @@ unprepareZoom(): void
 Instructs the bottom layer to unprepare for zooming.
 
 **Since:** 11
+
+<!--Device-Zoom-unprepareZoom(): void--><!--Device-Zoom-unprepareZoom(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

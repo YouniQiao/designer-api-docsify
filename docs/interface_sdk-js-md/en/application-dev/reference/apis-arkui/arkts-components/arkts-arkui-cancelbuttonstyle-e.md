@@ -4,6 +4,8 @@ Enum for the style of cancel button.
 
 **Since:** 10
 
+<!--Device-unnamed-declare enum CancelButtonStyle--><!--Device-unnamed-declare enum CancelButtonStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CONSTANT
@@ -19,6 +21,8 @@ The Cancel button is always displayed.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CancelButtonStyle-CONSTANT--><!--Device-CancelButtonStyle-CONSTANT-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ The Cancel button is always hidden.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CancelButtonStyle-INVISIBLE--><!--Device-CancelButtonStyle-INVISIBLE-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## INPUT
@@ -51,6 +57,8 @@ The Cancel button is displayed when there is text input.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CancelButtonStyle-INPUT--><!--Device-CancelButtonStyle-INPUT-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

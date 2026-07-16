@@ -12,15 +12,15 @@ import { print } from '@kit.BasicServicesKit';
 function startDiscoverPrinter(extensionList: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-Discovers printers by specifying the extension list. The discovered printers contain the specified print extension
-abilities. If an empty extension list is specified, all extension abilities are loaded. This API uses an
-asynchronous callback to return the result.
+Discovers printers by specifying the extension list. The discovered printers contain the specified print extension abilities. If an empty extension list is specified, all extension abilities are loaded. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 
 **Required permissions:** 
 - API version 20+: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
 - API version 10 - 19: ohos.permission.MANAGE_PRINT_JOB
+
+<!--Device-print-function startDiscoverPrinter(extensionList: Array<string>, callback: AsyncCallback<void>): void--><!--Device-print-function startDiscoverPrinter(extensionList: Array<string>, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -30,8 +30,8 @@ asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extensionList | Array&lt;string&gt; | Yes | List of[PrintExtensionAbilities](arkts-basicservices-printextensionability-c.md) to be loaded.The list members are the bundle names of the applications with print extension abilities. An empty listindicates that all extension abilities are loaded. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback to be invoked when a printer is discovered. |
+| extensionList | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | List of [PrintExtensionAbilities](arkts-basicservices-printextensionability-c.md) to be loaded.The list members are the bundle names of the applications with print extension abilities. An empty list indicates that all extension abilities are loaded. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback to be invoked when a printer is discovered. |
 
 **Error codes:**
 
@@ -67,15 +67,15 @@ print.startDiscoverPrinter(extensionList, (err: BusinessError) => {
 function startDiscoverPrinter(extensionList: Array<string>): Promise<void>
 ```
 
-Discovers printers by specifying the extension list. The discovered printers contain the specified print extension
-abilities. If an empty extension list is specified, all extension abilities are loaded. This API uses a promise to
-return the result.
+Discovers printers by specifying the extension list. The discovered printers contain the specified print extension abilities. If an empty extension list is specified, all extension abilities are loaded. This API uses a promise to return the result.
 
 **Since:** 20
 
 **Required permissions:** 
 - API version 20+: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
 - API version 10 - 19: ohos.permission.MANAGE_PRINT_JOB
+
+<!--Device-print-function startDiscoverPrinter(extensionList: Array<string>): Promise<void>--><!--Device-print-function startDiscoverPrinter(extensionList: Array<string>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -85,13 +85,13 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extensionList | Array&lt;string&gt; | Yes | List of[PrintExtensionAbilities](arkts-basicservices-printextensionability-c.md) to be loaded.The list members are the bundle names of the applications with print extension abilities. An empty listindicates that all extension abilities are loaded. |
+| extensionList | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | List of [PrintExtensionAbilities](arkts-basicservices-printextensionability-c.md) to be loaded.The list members are the bundle names of the applications with print extension abilities. An empty list indicates that all extension abilities are loaded. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

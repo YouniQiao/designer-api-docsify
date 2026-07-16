@@ -10,6 +10,8 @@ Configuring parameters in current location requests
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-export interface CurrentLocationRequest--><!--Device-geolocation-export interface CurrentLocationRequest-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## Modules to Import
@@ -32,6 +34,8 @@ maxAccuracy?: number
 
 **Substitutes:** maxAccuracy
 
+<!--Device-CurrentLocationRequest-maxAccuracy?: number--><!--Device-CurrentLocationRequest-maxAccuracy?: number-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## priority
@@ -47,6 +51,8 @@ priority?: LocationRequestPriority
 **Deprecated since:** 9
 
 **Substitutes:** priority
+
+<!--Device-CurrentLocationRequest-priority?: LocationRequestPriority--><!--Device-CurrentLocationRequest-priority?: LocationRequestPriority-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -64,6 +70,8 @@ scenario?: LocationRequestScenario
 
 **Substitutes:** scenario
 
+<!--Device-CurrentLocationRequest-scenario?: LocationRequestScenario--><!--Device-CurrentLocationRequest-scenario?: LocationRequestScenario-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## timeoutMs
@@ -79,6 +87,8 @@ timeoutMs?: number
 **Deprecated since:** 9
 
 **Substitutes:** timeoutMs
+
+<!--Device-CurrentLocationRequest-timeoutMs?: number--><!--Device-CurrentLocationRequest-timeoutMs?: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 

@@ -18,19 +18,21 @@ Checks whether a startup task or .so file preloading task is initialized.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-startupManager-function isStartupTaskInitialized(startupTask: string): boolean--><!--Device-startupManager-function isStartupTaskInitialized(startupTask: string): boolean-End-->
+
 **System capability:** SystemCapability.Ability.AppStartup
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startupTask | string | Yes | Name of the [StartupTask](arkts-ability-startuptask-c.md) orname of the .so file to be preloaded. |
+| startupTask | string | Yes | Name of the [StartupTask](arkts-ability-startuptask-c.md) or name of the .so file to be preloaded. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the task is initialized. **true** if initialized, **false**otherwise. |
+| boolean | Check result for whether the task is initialized. **true** if initialized, **false** otherwise. |
 
 **Error codes:**
 

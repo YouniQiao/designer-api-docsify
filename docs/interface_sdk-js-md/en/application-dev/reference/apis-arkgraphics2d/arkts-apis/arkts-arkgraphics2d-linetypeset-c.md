@@ -1,13 +1,12 @@
 # LineTypeset
 
-Implements a carrier that stores the text content and style. It can be used to compute layout details for
-individual lines of text.
+Implements a carrier that stores the text content and style. It can be used to compute layout details for individual lines of text.
 
-Before calling any of the following APIs, you must use
-[buildLineTypeset()](arkts-arkgraphics2d-paragraphbuilder-c.md#buildlinetypeset-1) in the
-[ParagraphBuilder](arkts-arkgraphics2d-paragraphbuilder-c.md) class to create a **LineTypeset** object.
+Before calling any of the following APIs, you must use [buildLineTypeset()](arkts-arkgraphics2d-paragraphbuilder-c.md#buildlinetypeset-1) in the [ParagraphBuilder](arkts-arkgraphics2d-paragraphbuilder-c.md) class to create a **LineTypeset** object.
 
 **Since:** 18
+
+<!--Device-text-class LineTypeset--><!--Device-text-class LineTypeset-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -29,20 +28,22 @@ Generates a text line object based on the specified layout range.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-LineTypeset-createLine(startIndex: int, count: int): TextLine--><!--Device-LineTypeset-createLine(startIndex: int, count: int): TextLine-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startIndex | number | Yes | Start position for layout calculation. The value is an integer in the range[0, total number of text characters). |
-| count | number | Yes | Number of characters from the specified start position. The value is an integer in therange [0, total number of text characters). The sum of **startIndex** and **count** cannot be greater thanthe total number of text characters. If **count** is **0**, the layout range is[startIndex, position of the last character in the text]. You can use[getLineBreak](arkts-arkgraphics2d-linetypeset-c.md#getlinebreak-1) to obtain the number of characters that can fit in thelayout. |
+| startIndex | number | Yes | Start position for layout calculation. The value is an integer in the range [0, total number of text characters). |
+| count | number | Yes | Number of characters from the specified start position. The value is an integer in the range [0, total number of text characters). The sum of **startIndex** and **count** cannot be greater than the total number of text characters. If **count** is **0**, the layout range is [startIndex, position of the last character in the text]. You can use [getLineBreak](arkts-arkgraphics2d-linetypeset-c.md#getlinebreak-1) to obtain the number of characters that can fit in the layout. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TextLine | **TextLine** object generated based on the characters in the text range. |
+| [TextLine](arkts-arkgraphics2d-textline-c.md) | **TextLine** object generated based on the characters in the text range. |
 
 **Error codes:**
 
@@ -72,13 +73,15 @@ Obtains the number of characters that can fit in the layout from the specified p
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-LineTypeset-getLineBreak(startIndex: int, width: double): int--><!--Device-LineTypeset-getLineBreak(startIndex: int, width: double): int-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startIndex | number | Yes | Start position (inclusive) for calculation. The value is an integer in the range[0, total number of text characters). If the parameter is out of range, an exception is thrown. |
+| startIndex | number | Yes | Start position (inclusive) for calculation. The value is an integer in the range [0, total number of text characters). If the parameter is out of range, an exception is thrown. |
 | width | number | Yes | Layout width. The value is a floating point number greater than 0, in px. |
 
 **Return value:**

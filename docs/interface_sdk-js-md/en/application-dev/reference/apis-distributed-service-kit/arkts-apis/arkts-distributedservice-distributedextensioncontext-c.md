@@ -6,6 +6,8 @@ Class inherited for the distributed extension function.
 
 **Since:** 20
 
+<!--Device-unnamed-declare class DistributedExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class DistributedExtensionContext extends ExtensionContext-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 ## Modules to Import
@@ -22,13 +24,13 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 
 Connects to a remote Service extension ability.
 
-This method connects to a Service extension ability on a remote device.
-You must implement the {@link ConnectOptions} interface to obtain the proxy of the target
-service extension when connected.
+This method connects to a Service extension ability on a remote device.You must implement the {@link ConnectOptions} interface to obtain the proxy of the target service extension when connected.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DistributedExtensionContext-connectServiceExtensionAbility(want: Want, options: ConnectOptions): long--><!--Device-DistributedExtensionContext-connectServiceExtensionAbility(want: Want, options: ConnectOptions): long-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -36,8 +38,8 @@ service extension when connected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Indicates the service extension to connect. |
-| options | ConnectOptions | Yes | Indicates the callback of connection. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Indicates the service extension to connect. |
+| options | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-t.md) | Yes | Indicates the callback of connection. |
 
 **Return value:**
 
@@ -75,6 +77,8 @@ Disconnects from a remote Service extension ability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DistributedExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>--><!--Device-DistributedExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Parameters:**
@@ -87,7 +91,7 @@ Disconnects from a remote Service extension ability.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Enumerates predicates used as query conditions. Use the enum name rather than th
 
 **Since:** 11
 
+<!--Device-relationalStore-enum Field--><!--Device-relationalStore-enum Field-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 ## CURSOR_FIELD
@@ -15,6 +17,8 @@ CURSOR_FIELD = '#_cursor'
 Field name used for cursor-based search.
 
 **Since:** 11
+
+<!--Device-Field-CURSOR_FIELD = '#_cursor'--><!--Device-Field-CURSOR_FIELD = '#_cursor'-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -28,6 +32,8 @@ Field name used to specify the data source in cursor-based search.
 
 **Since:** 11
 
+<!--Device-Field-ORIGIN_FIELD = '#_origin'--><!--Device-Field-ORIGIN_FIELD = '#_origin'-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 ## DELETED_FLAG_FIELD
@@ -36,12 +42,13 @@ Field name used to specify the data source in cursor-based search.
 DELETED_FLAG_FIELD = '#_deleted_flag'
 ```
 
-Whether the dirty data (data deleted from the cloud) is cleared from the local device. It fills in the result set
-returned upon the cursor-based search.
+Whether the dirty data (data deleted from the cloud) is cleared from the local device. It fills in the result set returned upon the cursor-based search.
 
 The value **true** means the dirty data is cleared; the value **false** means the opposite.
 
 **Since:** 11
+
+<!--Device-Field-DELETED_FLAG_FIELD = '#_deleted_flag'--><!--Device-Field-DELETED_FLAG_FIELD = '#_deleted_flag'-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -51,11 +58,11 @@ The value **true** means the dirty data is cleared; the value **false** means th
 DATA_STATUS_FIELD = '#_data_status'
 ```
 
-Data status in the cursor-based search result set. The value **0** indicates normal data status; **1** indicates
-that data is retained after the account is logged out; **2** indicates that data is deleted from the cloud; **3**
-indicates that data is deleted after the account is logged out.
+Data status in the cursor-based search result set. The value **0** indicates normal data status; **1** indicates that data is retained after the account is logged out; **2** indicates that data is deleted from the cloud; **3** indicates that data is deleted after the account is logged out.
 
 **Since:** 12
+
+<!--Device-Field-DATA_STATUS_FIELD = '#_data_status'--><!--Device-Field-DATA_STATUS_FIELD = '#_data_status'-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -69,6 +76,8 @@ Party who shares the data. It fills in the result set returned when the owner of
 
 **Since:** 11
 
+<!--Device-Field-OWNER_FIELD = '#_cloud_owner'--><!--Device-Field-OWNER_FIELD = '#_cloud_owner'-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 ## PRIVILEGE_FIELD
@@ -77,10 +86,11 @@ Party who shares the data. It fills in the result set returned when the owner of
 PRIVILEGE_FIELD = '#_cloud_privilege'
 ```
 
-Operation permission on the shared data. It fills in the result set returned when the permission on the shared
-data is searched.
+Operation permission on the shared data. It fills in the result set returned when the permission on the shared data is searched.
 
 **Since:** 11
+
+<!--Device-Field-PRIVILEGE_FIELD = '#_cloud_privilege'--><!--Device-Field-PRIVILEGE_FIELD = '#_cloud_privilege'-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -93,6 +103,8 @@ SHARING_RESOURCE_FIELD = '#_sharing_resource_field'
 Resource shared. It fills in the result set returned when the shared resource is searched.
 
 **Since:** 11
+
+<!--Device-Field-SHARING_RESOURCE_FIELD = '#_sharing_resource_field'--><!--Device-Field-SHARING_RESOURCE_FIELD = '#_sharing_resource_field'-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 

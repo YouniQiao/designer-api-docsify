@@ -1,5 +1,11 @@
 # createPixelMapFromSurface
 
+## 导入模块
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+```
+
 ## createPixelMapFromSurface
 
 ```TypeScript
@@ -9,6 +15,8 @@ function createPixelMapFromSurface(surfaceId: string, region: image.Region): Pro
 Creates a PixelMap object from surface id.
 
 **起始版本：** 12
+
+<!--Device-sendableImage-function createPixelMapFromSurface(surfaceId: string, region: image.Region): Promise<PixelMap>--><!--Device-sendableImage-function createPixelMapFromSurface(surfaceId: string, region: image.Region): Promise<PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -23,7 +31,7 @@ Creates a PixelMap object from surface id.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | Returns the instance if the operation is successful.Otherwise, an exception will be thrown. |
+| Promise<PixelMap> | Returns the instance if the operation is successful.Otherwise, an exception will be thrown. |
 
 **错误码：**
 

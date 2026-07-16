@@ -1,5 +1,11 @@
 # setAppGroup（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+```
+
 ## setAppGroup
 
 ```TypeScript
@@ -12,6 +18,8 @@ function setAppGroup(bundleName: string, newGroup: GroupType, callback: AsyncCal
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function setAppGroup(bundleName: string, newGroup: GroupType, callback: AsyncCallback<void>): void--><!--Device-usageStatistics-function setAppGroup(bundleName: string, newGroup: GroupType, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **系统接口：** 此接口为系统接口。
@@ -21,8 +29,8 @@ function setAppGroup(bundleName: string, newGroup: GroupType, callback: AsyncCal
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用的bundleName。 |
-| newGroup | GroupType | 是 | 应用分组类型。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当设置成功，err为undefined；否则为错误对象。 |
+| newGroup | [GroupType](arkts-backgroundtasks-grouptype-e-sys.md) | 是 | 应用分组类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当设置成功，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -71,6 +79,8 @@ function setAppGroup(bundleName: string, newGroup: GroupType): Promise<void>
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function setAppGroup(bundleName: string, newGroup: GroupType): Promise<void>--><!--Device-usageStatistics-function setAppGroup(bundleName: string, newGroup: GroupType): Promise<void>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **系统接口：** 此接口为系统接口。
@@ -80,13 +90,13 @@ function setAppGroup(bundleName: string, newGroup: GroupType): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用的bundleName。 |
-| newGroup | GroupType | 是 | 应用分组类型。 |
+| newGroup | [GroupType](arkts-backgroundtasks-grouptype-e-sys.md) | 是 | 应用分组类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

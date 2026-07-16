@@ -18,6 +18,8 @@ Open the AI node graph Sheet.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-imageGeneration-function openGeneratorNodeGraph(uiContext: UIContext, options?: GeneratorNodeGraphOptions): Promise<void>--><!--Device-imageGeneration-function openGeneratorNodeGraph(uiContext: UIContext, options?: GeneratorNodeGraphOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -26,12 +28,12 @@ Open the AI node graph Sheet.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | UIContext | Yes | the context of dialog for ui display. |
-| options | GeneratorNodeGraphOptions | No | node graph task parameters. |
+| uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | the context of dialog for ui display. |
+| options | [GeneratorNodeGraphOptions](arkts-arkui-generatornodegraphoptions-i-sys.md) | No | node graph task parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Returns the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Returns the result. |
 

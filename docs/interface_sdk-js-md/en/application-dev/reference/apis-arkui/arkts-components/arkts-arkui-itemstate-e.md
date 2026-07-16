@@ -8,6 +8,8 @@ Display status of **nextLabel** in the stepper.
 
 **Substitutes:** Swiper
 
+<!--Device-unnamed-declare enum ItemState--><!--Device-unnamed-declare enum ItemState-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Normal
@@ -20,8 +22,7 @@ The button on the right is clickable and can navigate users to the next **Steppe
 
 **NOTE**
 
-This API is supported since API version 8 and deprecated since API version 22. You are advised to use
-[index](SwiperAttribute#index) instead.
+This API is supported since API version 8 and deprecated since API version 22. You are advised to use [index](SwiperAttribute#index) instead.
 
 **Since:** 8
 
@@ -30,6 +31,8 @@ This API is supported since API version 8 and deprecated since API version 22. Y
 **Substitutes:** index
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ItemState-Normal--><!--Device-ItemState-Normal-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,8 +46,7 @@ The button on the right is disabled.
 
 **NOTE**
 
-This API is supported since API version 8 and deprecated since API version 22. You are advised to use
-[indicatorInteractive](SwiperAttribute#indicatorInteractive) instead.
+This API is supported since API version 8 and deprecated since API version 22. You are advised to use [indicatorInteractive](SwiperAttribute#indicatorInteractive) instead.
 
 **Since:** 8
 
@@ -53,6 +55,8 @@ This API is supported since API version 8 and deprecated since API version 22. Y
 **Substitutes:** indicatorInteractive
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ItemState-Disabled--><!--Device-ItemState-Disabled-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,8 +70,7 @@ The button on the right is not displayed, and a progress bar is displayed instea
 
 **NOTE**
 
-This API is supported since API version 8 and deprecated since API version 22. You are advised to use
-[Swiper](arkts-arkui-swiper.md) instead.
+This API is supported since API version 8 and deprecated since API version 22. You are advised to use [Swiper](arkts-arkui-swiper.md) instead.
 
 **Since:** 8
 
@@ -77,6 +80,8 @@ This API is supported since API version 8 and deprecated since API version 22. Y
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ItemState-Waiting--><!--Device-ItemState-Waiting-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Skip
@@ -85,13 +90,11 @@ This API is supported since API version 8 and deprecated since API version 22. Y
 Skip
 ```
 
-The button on the right reads "Skip" by default. You can define the processing logic for this state in the
-**onSkip** callback of the stepper.
+The button on the right reads "Skip" by default. You can define the processing logic for this state in the **onSkip** callback of the stepper.
 
 **NOTE**
 
-This API is supported since API version 8 and deprecated since API version 22. You are advised to use
-[index](SwiperAttribute#index) instead.
+This API is supported since API version 8 and deprecated since API version 22. You are advised to use [index](SwiperAttribute#index) instead.
 
 **Since:** 8
 
@@ -100,6 +103,8 @@ This API is supported since API version 8 and deprecated since API version 22. Y
 **Substitutes:** index
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ItemState-Skip--><!--Device-ItemState-Skip-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -12,16 +12,13 @@ import { screenLockFileManager } from '@kit.AbilityKit';
 function releaseAccess(): ReleaseStatus
 ```
 
-Releases the access permission for the caller app's sensitive data under the lock screen in synchronous mode. After
-the release is successful, the reference count of the sensitive data key decreases. When the count reaches zero,
-the key can be destroyed after the screen has been locked for a duration reaching the system-configured lock
-duration threshold.
+Releases the access permission for the caller app's sensitive data under the lock screen in synchronous mode. After the release is successful, the reference count of the sensitive data key decreases. When the count reaches zero,the key can be destroyed after the screen has been locked for a duration reaching the system-configured lock duration threshold.
 
-Before calling this API, ensure that the app has enabled the sensitive data protection function under the lock
-screen, and that the [acquireAccess](arkts-ability-acquireaccess-f.md#acquireaccess-1) API has been called to request the
-permission successfully first.
+Before calling this API, ensure that the app has enabled the sensitive data protection function under the lock screen, and that the [acquireAccess](arkts-ability-acquireaccess-f.md#acquireaccess-1) API has been called to request the permission successfully first.
 
 **Since:** 12
+
+<!--Device-screenLockFileManager-function releaseAccess(): ReleaseStatus--><!--Device-screenLockFileManager-function releaseAccess(): ReleaseStatus-End-->
 
 **System capability:** SystemCapability.Security.ScreenLockFileManager
 
@@ -29,7 +26,7 @@ permission successfully first.
 
 | Type | Description |
 | --- | --- |
-| ReleaseStatus | Release status of the access permission for sensitive data under lock screen. |
+| [ReleaseStatus](arkts-ability-releasestatus-e.md) | Release status of the access permission for sensitive data under lock screen. |
 
 **Error codes:**
 

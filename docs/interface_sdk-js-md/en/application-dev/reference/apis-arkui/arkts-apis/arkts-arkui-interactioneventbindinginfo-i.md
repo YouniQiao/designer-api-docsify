@@ -1,9 +1,10 @@
 # InteractionEventBindingInfo
 
-Describes the binding state of interaction events on components. When querying reveals an interaction event bound to
-the current node, this object provides detailed event binding information.
+Describes the binding state of interaction events on components. When querying reveals an interaction event bound to the current node, this object provides detailed event binding information.
 
 **Since:** 19
+
+<!--Device-unnamed-declare interface InteractionEventBindingInfo--><!--Device-unnamed-declare interface InteractionEventBindingInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +26,8 @@ Whether the event is bound declaratively.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-InteractionEventBindingInfo-baseEventRegistered: boolean--><!--Device-InteractionEventBindingInfo-baseEventRegistered: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## builtInEventRegistered
@@ -33,8 +36,7 @@ Whether the event is bound declaratively.
 builtInEventRegistered: boolean
 ```
 
-Whether the component has built-in events (events that are defined internally by the component and do not require
-manual binding).
+Whether the component has built-in events (events that are defined internally by the component and do not require manual binding).
 
 The value **true** means that the component has built-in events, and **false** means the opposite.
 
@@ -46,6 +48,8 @@ The value **true** means that the component has built-in events, and **false** m
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-InteractionEventBindingInfo-builtInEventRegistered: boolean--><!--Device-InteractionEventBindingInfo-builtInEventRegistered: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## nativeEventRegistered
@@ -54,9 +58,7 @@ The value **true** means that the component has built-in events, and **false** m
 nativeEventRegistered: boolean
 ```
 
-Whether the event is bound through node event registration (
-[registerNodeEvent](../../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#registernodeevent)
-).
+Whether the event is bound through node event registration ([registerNodeEvent](../../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#registernodeevent)).
 
 The value **true** means that the event is bound through node event registration, and **false** means the opposite.
 
@@ -68,6 +70,8 @@ The value **true** means that the event is bound through node event registration
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-InteractionEventBindingInfo-nativeEventRegistered: boolean--><!--Device-InteractionEventBindingInfo-nativeEventRegistered: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## nodeEventRegistered
@@ -76,8 +80,7 @@ The value **true** means that the event is bound through node event registration
 nodeEventRegistered: boolean
 ```
 
-Whether the event is bound through a custom component node. For the implementation example, see
-[Basic Event Example](../../../../reference/apis-arkui/js-apis-arkui-frameNode.md#basic-event-example).
+Whether the event is bound through a custom component node. For the implementation example, see [Basic Event Example](../../../../reference/apis-arkui/js-apis-arkui-frameNode.md#basic-event-example).
 
 The value **true** means that the event is bound through a custom component node, and **false** means the opposite.
 
@@ -88,6 +91,8 @@ The value **true** means that the event is bound through a custom component node
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-InteractionEventBindingInfo-nodeEventRegistered: boolean--><!--Device-InteractionEventBindingInfo-nodeEventRegistered: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

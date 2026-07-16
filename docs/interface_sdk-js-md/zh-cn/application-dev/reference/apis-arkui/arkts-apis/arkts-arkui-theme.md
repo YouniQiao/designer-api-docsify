@@ -1,5 +1,11 @@
 # @ohos.arkui.theme
 
+## 导入模块
+
+```TypeScript
+import { CustomColors, ThemeControl, Colors, CustomDarkColors, Theme, CustomTheme } from '@kit.ArkUI';
+```
+
 ## 汇总
 
 ### 类

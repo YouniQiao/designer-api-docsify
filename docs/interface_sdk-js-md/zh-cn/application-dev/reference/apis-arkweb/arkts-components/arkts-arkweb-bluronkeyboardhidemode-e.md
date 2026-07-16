@@ -4,6 +4,8 @@ Enum type supplied to {@link blurOnKeyboardHideMode} for setting the web blurOnK
 
 **起始版本：** 14
 
+<!--Device-unnamed-declare enum BlurOnKeyboardHideMode--><!--Device-unnamed-declare enum BlurOnKeyboardHideMode-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## SILENT
@@ -16,7 +18,9 @@ The focused input elements on webview will not blur when soft keyboard is hidden
 
 **起始版本：** 14
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BlurOnKeyboardHideMode-SILENT = 0--><!--Device-BlurOnKeyboardHideMode-SILENT = 0-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -30,7 +34,9 @@ The focused input elements on webview will blur when soft keyboard is hidden man
 
 **起始版本：** 14
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BlurOnKeyboardHideMode-BLUR = 1--><!--Device-BlurOnKeyboardHideMode-BLUR = 1-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

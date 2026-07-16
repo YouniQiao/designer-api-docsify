@@ -18,6 +18,8 @@ Get the uri from the path of file in app sandbox
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-fileUri-function getUriFromPath(path: string): string--><!--Device-fileUri-function getUriFromPath(path: string): string-End-->
+
 **System capability:** SystemCapability.FileManagement.AppFileService
 
 **Parameters:**

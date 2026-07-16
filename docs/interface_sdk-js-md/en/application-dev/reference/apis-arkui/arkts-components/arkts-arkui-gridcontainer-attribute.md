@@ -10,5 +10,7 @@ Defines the grid container attribute from inheritance Column
 
 **Substitutes:** grid_col/GridColAttribute
 
+<!--Device-unnamed-declare class GridContainerAttribute extends ColumnAttribute--><!--Device-unnamed-declare class GridContainerAttribute extends ColumnAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

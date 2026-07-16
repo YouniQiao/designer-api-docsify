@@ -14,15 +14,17 @@ function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>
 
 Obtains the UIAbility running information. This API uses a promise to return the result.
 
-> **NOTE**
->
-> If the application has requested the ohos.permission.GET_RUNNING_INFO permission, it can obtain the UIAbility
-> running information of all applications; otherwise, it can obtain the UIAbility running information of the
+> **NOTE**  
+>  
+> If the application has requested the ohos.permission.GET_RUNNING_INFO permission, it can obtain the UIAbility  
+> running information of all applications; otherwise, it can obtain the UIAbility running information of the  
 > current application.
 
 **Since:** 14
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
+
+<!--Device-abilityManager-function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>--><!--Device-abilityManager-function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -30,7 +32,7 @@ Obtains the UIAbility running information. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AbilityRunningInfo&gt;&gt; | Promise used to return the UIAbility running information. You canperform error handling or other custom processing. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AbilityRunningInfo>> | Promise used to return the UIAbility running information. You can perform error handling or other custom processing. |
 
 **Error codes:**
 

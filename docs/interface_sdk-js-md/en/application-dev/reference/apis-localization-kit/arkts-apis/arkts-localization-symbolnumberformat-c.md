@@ -1,13 +1,12 @@
 # SymbolNumberFormat
 
-Provide a Number formatting interface that supports custom symbols.
-This interface formats number values into strings with custom symbols,
-and can replace variable symbols in the formatted result with custom fixed symbols
-(e.g., replacing "null" to "NA").
+Provide a Number formatting interface that supports custom symbols.This interface formats number values into strings with custom symbols,and can replace variable symbols in the formatted result with custom fixed symbols(e.g., replacing "null" to "NA").
 
 **Inheritance/Implementation:** SymbolNumberFormat implements [Intl.NumberFormat](../../apis-na/arkts-apis/arkts-na-numberformat-i.md)
 
 **Since:** 26.0.0
+
+<!--Device-i18n-export class SymbolNumberFormat implements Intl.NumberFormat--><!--Device-i18n-export class SymbolNumberFormat implements Intl.NumberFormat-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -31,6 +30,8 @@ A constructor used to create a SymbolNumberFormat object.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SymbolNumberFormat-public constructor(locale?: Intl.Locale, options?: SymbolNumberFormatOptions)--><!--Device-SymbolNumberFormat-public constructor(locale?: Intl.Locale, options?: SymbolNumberFormatOptions)-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -38,7 +39,7 @@ A constructor used to create a SymbolNumberFormat object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locale | Intl.Locale | No | Locale object used for formatting the date time value.The default value is the current system locale.<br>Default value:The default is the current system locale.<br>Default Value: System Locale.<br>Region object. |
-| options | SymbolNumberFormatOptions | No | Indicates the symbols used to replace.Such as zero, nan, positiveInfinity, etc.<br>Symbol Number Formatting Options. |
+| options | [SymbolNumberFormatOptions](arkts-localization-symbolnumberformatoptions-i.md) | No | Indicates the symbols used to replace.Such as zero, nan, positiveInfinity, etc.<br>Symbol Number Formatting Options. |
 
 ## format
 
@@ -53,6 +54,8 @@ Formats a number with give locale and SymbolNumberFormatOptions.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SymbolNumberFormat-public format(value: number | bigint): string--><!--Device-SymbolNumberFormat-public format(value: number | bigint): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -81,6 +84,8 @@ Formats a number range.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SymbolNumberFormat-public formatRange(startRange: number, endRange: number): string--><!--Device-SymbolNumberFormat-public formatRange(startRange: number, endRange: number): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -111,6 +116,8 @@ Formats a number range into parts.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SymbolNumberFormat-public formatRangeToParts(startRange: number, endRange: number): Intl.NumberFormatPart[]--><!--Device-SymbolNumberFormat-public formatRangeToParts(startRange: number, endRange: number): Intl.NumberFormatPart[]-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -140,6 +147,8 @@ Formats a number into parts.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SymbolNumberFormat-public formatToParts(value?: number | bigint): Intl.NumberFormatPart[]--><!--Device-SymbolNumberFormat-public formatToParts(value?: number | bigint): Intl.NumberFormatPart[]-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -168,6 +177,8 @@ Parse a localized string to number object. For example, "123,456" will parse to 
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SymbolNumberFormat-public parse(text: string, lenientMode: boolean): number--><!--Device-SymbolNumberFormat-public parse(text: string, lenientMode: boolean): number-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -175,7 +186,7 @@ Parse a localized string to number object. For example, "123,456" will parse to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Localized string to be parse.<br>Text to be parsed |
-| lenientMode | boolean | Yes | Indicates whether parsing allows any non-compliant localized strings.For example, "1,23,456" is a invalid thousand separator number string, it will parse failurewhen lenientMode is false, and will parse success with value 123456 when lenientMode is true.it's betterset to false, ensure the data is not polluted.<br>Whether to use loose rules |
+| lenientMode | boolean | Yes | Indicates whether parsing allows any non-compliant localized strings.For example, "1,23,456" is a invalid thousand separator number string, it will parse failure when lenientMode is false, and will parse success with value 123456 when lenientMode is true.it's better set to false, ensure the data is not polluted.<br>Whether to use loose rules |
 
 **Return value:**
 
@@ -195,8 +206,7 @@ Parse a localized string to number object. For example, "123,456" will parse to 
 public resolvedOptions(): ResolvedSymbolNumberFormatOptions
 ```
 
-Represents optional element for the ResolvedSymbolDateTimeFormatOptions object.
-Define the resolved symbol element and value that need to get.
+Represents optional element for the ResolvedSymbolDateTimeFormatOptions object.Define the resolved symbol element and value that need to get.
 
 **Since:** 26.0.0
 
@@ -204,11 +214,13 @@ Define the resolved symbol element and value that need to get.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SymbolNumberFormat-public resolvedOptions(): ResolvedSymbolNumberFormatOptions--><!--Device-SymbolNumberFormat-public resolvedOptions(): ResolvedSymbolNumberFormatOptions-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ResolvedSymbolNumberFormatOptions | Symbol options for SymbolNumberFormat. |
+| [ResolvedSymbolNumberFormatOptions](arkts-localization-resolvedsymbolnumberformatoptions-i.md) | Symbol options for SymbolNumberFormat. |
 

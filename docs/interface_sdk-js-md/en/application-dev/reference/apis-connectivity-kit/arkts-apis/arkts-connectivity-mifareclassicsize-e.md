@@ -4,6 +4,8 @@ MifareClassic Tag size.
 
 **Since:** 12
 
+<!--Device-tag-enum MifareClassicSize--><!--Device-tag-enum MifareClassicSize-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## MC_SIZE_MINI
@@ -17,6 +19,8 @@ MC_SIZE_MINI = 320
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MifareClassicSize-MC_SIZE_MINI = 320--><!--Device-MifareClassicSize-MC_SIZE_MINI = 320-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -32,6 +36,8 @@ MC_SIZE_1K = 1024
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MifareClassicSize-MC_SIZE_1K = 1024--><!--Device-MifareClassicSize-MC_SIZE_1K = 1024-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## MC_SIZE_2K
@@ -46,6 +52,8 @@ MC_SIZE_2K = 2048
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MifareClassicSize-MC_SIZE_2K = 2048--><!--Device-MifareClassicSize-MC_SIZE_2K = 2048-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## MC_SIZE_4K
@@ -59,6 +67,8 @@ MC_SIZE_4K = 4096
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MifareClassicSize-MC_SIZE_4K = 4096--><!--Device-MifareClassicSize-MC_SIZE_4K = 4096-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 

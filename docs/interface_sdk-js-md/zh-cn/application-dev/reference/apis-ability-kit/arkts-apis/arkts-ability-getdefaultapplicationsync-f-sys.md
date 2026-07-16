@@ -1,18 +1,24 @@
 # getDefaultApplicationSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { defaultAppManager } from '@kit.AbilityKit';
+```
+
 ## getDefaultApplicationSync
 
 ```TypeScript
 function getDefaultApplicationSync(type: string, userId?: number): BundleInfo
 ```
 
-以同步方法根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者
-[UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformdatatype-e.md)类型获取默认应用信息，使用
-BundleInfo返回结果。
+以同步方法根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者[UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformdatatype-e.md)类型获取默认应用信息，使用BundleInfo返回结果。
 
 **起始版本：** 10
 
 **需要权限：** ohos.permission.GET_DEFAULT_APPLICATION
+
+<!--Device-defaultAppManager-function getDefaultApplicationSync(type: string, userId?: int): BundleInfo--><!--Device-defaultAppManager-function getDefaultApplicationSync(type: string, userId?: int): BundleInfo-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
@@ -29,7 +35,7 @@ BundleInfo返回结果。
 
 | 类型 | 说明 |
 | --- | --- |
-| BundleInfo | 返回的默认应用包信息。 |
+| [BundleInfo](arkts-ability-bundleinfo-i.md) | 返回的默认应用包信息。 |
 
 **错误码：**
 

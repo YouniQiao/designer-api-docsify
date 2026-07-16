@@ -4,6 +4,8 @@ Describes the information about the cancellation of a continuous task.
 
 **Since:** 15
 
+<!--Device-backgroundTaskManager-interface ContinuousTaskCancelInfo--><!--Device-backgroundTaskManager-interface ContinuousTaskCancelInfo-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Detailed reason for canceling the continuous task.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ContinuousTaskCancelInfo-detailedReason?: ContinuousTaskDetailedCancelReason--><!--Device-ContinuousTaskCancelInfo-detailedReason?: ContinuousTaskDetailedCancelReason-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## id
@@ -40,6 +44,8 @@ ID of the continuous task canceled.
 
 **Since:** 15
 
+<!--Device-ContinuousTaskCancelInfo-id: int--><!--Device-ContinuousTaskCancelInfo-id: int-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## reason
@@ -53,6 +59,8 @@ Reason for canceling the continuous task.
 **Type:** ContinuousTaskCancelReason
 
 **Since:** 15
+
+<!--Device-ContinuousTaskCancelInfo-reason: ContinuousTaskCancelReason--><!--Device-ContinuousTaskCancelInfo-reason: ContinuousTaskCancelReason-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 

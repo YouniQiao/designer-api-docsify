@@ -1,24 +1,25 @@
 # ArrayBuffer
 
-ArkTS TypedArray（[Int8Array](arkts-collections.md)、
-[Uint8Array](arkts-collections.md)、
-[Int16Array](arkts-collections.md)、
-[Uint16Array](arkts-collections.md)、
-[Int32Array](arkts-collections.md)、
-[Uint32Array](arkts-collections.md)、
-[Uint8ClampedArray](arkts-collections.md)、
-[Float32Array](arkts-collections.md)）的底层数据结构。
+ArkTS TypedArray（[Int8Array](arkts-collections.md)、[Uint8Array](arkts-collections.md)、[Int16Array](arkts-collections.md)、[Uint16Array](arkts-collections.md)、[Int32Array](arkts-collections.md)、[Uint32Array](arkts-collections.md)、[Uint8ClampedArray](arkts-collections.md)、[Float32Array](arkts-collections.md)）的底层数据结构。
 
-> **说明**
->
-> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
+> **说明**  
+>  
+> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。  
 > **装饰器类型**：\@Sendable
 
 **起始版本：** 12
 
 **装饰器类型：** @Sendable
 
+<!--Device-collections-class ArrayBuffer--><!--Device-collections-class ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { collections } from '@kit.ArkTS';
+```
 
 ## constructor
 
@@ -30,7 +31,9 @@ constructor(byteLength: number)
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayBuffer-constructor(byteLength: number)--><!--Device-ArrayBuffer-constructor(byteLength: number)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -56,7 +59,9 @@ slice(begin: number, end?: number): ArrayBuffer
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayBuffer-slice(begin: number, end?: number): ArrayBuffer--><!--Device-ArrayBuffer-slice(begin: number, end?: number): ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -71,7 +76,7 @@ slice(begin: number, end?: number): ArrayBuffer
 
 | 类型 | 说明 |
 | --- | --- |
-| ArrayBuffer | 新生成的ArkTS ArrayBuffer对象。 |
+| [ArrayBuffer](arkts-arkts-arraybuffer-c.md) | 新生成的ArkTS ArrayBuffer对象。 |
 
 **错误码：**
 
@@ -92,7 +97,9 @@ buffer所占的字节数。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayBuffer-readonly byteLength: number--><!--Device-ArrayBuffer-readonly byteLength: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

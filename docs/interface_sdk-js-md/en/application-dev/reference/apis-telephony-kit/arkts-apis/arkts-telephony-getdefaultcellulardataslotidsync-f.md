@@ -16,6 +16,8 @@ Get the default cellular data card.
 
 **Since:** 9
 
+<!--Device-data-function getDefaultCellularDataSlotIdSync(): int--><!--Device-data-function getDefaultCellularDataSlotIdSync(): int-End-->
+
 **System capability:** SystemCapability.Telephony.CellularData
 
 **Return value:**

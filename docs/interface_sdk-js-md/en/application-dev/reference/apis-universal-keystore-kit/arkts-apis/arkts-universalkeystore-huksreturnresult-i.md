@@ -4,6 +4,8 @@ Represents the result returned.
 
 **Since:** 9
 
+<!--Device-huks-export interface HuksReturnResult--><!--Device-huks-export interface HuksReturnResult-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Certificate chain information. The default value is **undefined**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksReturnResult-certChains?: Array<string>--><!--Device-HuksReturnResult-certChains?: Array<string>-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## outData
@@ -34,15 +38,15 @@ Certificate chain information. The default value is **undefined**.
 outData?: Uint8Array
 ```
 
-Challenge obtained after the
-[initSession](arkts-universalkeystore-initsession-f.md#initsession-1)
-operation. The default value is **undefined**.
+Challenge obtained after the [initSession](arkts-universalkeystore-initsession-f.md#initsession-1)operation. The default value is **undefined**.
 
 **Type:** Uint8Array
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-HuksReturnResult-outData?: Uint8Array--><!--Device-HuksReturnResult-outData?: Uint8Array-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -52,15 +56,15 @@ operation. The default value is **undefined**.
 properties?: Array<HuksParam>
 ```
 
-Challenge obtained after the
-[initSession](arkts-universalkeystore-initsession-f.md#initsession-1)
-operation. The default value is **undefined**.
+Challenge obtained after the [initSession](arkts-universalkeystore-initsession-f.md#initsession-1)operation. The default value is **undefined**.
 
 **Type:** Array<HuksParam>
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-HuksReturnResult-properties?: Array<HuksParam>--><!--Device-HuksReturnResult-properties?: Array<HuksParam>-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -77,6 +81,8 @@ Shared key.
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-HuksReturnResult-sharedSecret?: Uint8Array--><!--Device-HuksReturnResult-sharedSecret?: Uint8Array-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 

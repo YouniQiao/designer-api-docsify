@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+<!--Device-unnamed-declare interface IMonitor--><!--Device-unnamed-declare interface IMonitor-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -12,17 +14,17 @@
 value<T>(path?: string): IMonitorValue<T> | undefined
 ```
 
-Return the pair of the value before the most recent change and current value for given path.
-If path does not exist, return undefined; If path is not specified, return the value pair
-corresponding to the first path in dirty.
+Return the pair of the value before the most recent change and current value for given path.If path does not exist, return undefined; If path is not specified, return the value pair corresponding to the first path in dirty.
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-IMonitor-value<T>(path?: string): IMonitorValue<T> | undefined--><!--Device-IMonitor-value<T>(path?: string): IMonitorValue<T> | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,7 +38,7 @@ corresponding to the first path in dirty.
 
 | 类型 | 说明 |
 | --- | --- |
-| IMonitorValue&lt;T&gt; | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@form@atomicservice |
+| [IMonitorValue](arkts-arkui-imonitorvalue-i.md)<T> | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@form@atomicservice |
 
 ## dirty
 
@@ -52,9 +54,11 @@ dirty: Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-IMonitor-dirty: Array<string>--><!--Device-IMonitor-dirty: Array<string>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

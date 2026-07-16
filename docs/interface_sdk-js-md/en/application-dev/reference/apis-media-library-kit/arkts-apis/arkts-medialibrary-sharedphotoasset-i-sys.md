@@ -6,6 +6,8 @@ Defines the shared photo asset
 
 **Since:** 14
 
+<!--Device-sendablePhotoAccessHelper-interface SharedPhotoAsset extends lang.ISendable--><!--Device-sendablePhotoAccessHelper-interface SharedPhotoAsset extends lang.ISendable-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Camera shot key of photo asset
 
 **Since:** 14
 
+<!--Device-SharedPhotoAsset-cameraShotKey: string--><!--Device-SharedPhotoAsset-cameraShotKey: string-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -44,6 +48,8 @@ Path data of photo asset
 
 **Since:** 14
 
+<!--Device-SharedPhotoAsset-data: string--><!--Device-SharedPhotoAsset-data: string-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -54,12 +60,13 @@ Path data of photo asset
 dateAdded: number
 ```
 
-Added date of photo asset
-Unit: ms, The value must be an integer greater than or equal to 0.
+Added date of photo asset Unit: ms, The value must be an integer greater than or equal to 0.
 
 **Type:** number
 
 **Since:** 14
+
+<!--Device-SharedPhotoAsset-dateAdded: number--><!--Device-SharedPhotoAsset-dateAdded: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -77,6 +84,8 @@ Added date of photo asset in milliseconds
 
 **Since:** 14
 
+<!--Device-SharedPhotoAsset-dateAddedMs: number--><!--Device-SharedPhotoAsset-dateAddedMs: number-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -93,6 +102,8 @@ The day of the file created
 
 **Since:** 14
 
+<!--Device-SharedPhotoAsset-dateDay: string--><!--Device-SharedPhotoAsset-dateDay: string-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -103,12 +114,13 @@ The day of the file created
 dateModified: number
 ```
 
-Modify date of photo asset
-Unit: ms, The value must be an integer greater than or equal to 0.
+Modify date of photo asset Unit: ms, The value must be an integer greater than or equal to 0.
 
 **Type:** number
 
 **Since:** 14
+
+<!--Device-SharedPhotoAsset-dateModified: number--><!--Device-SharedPhotoAsset-dateModified: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -126,6 +138,8 @@ Modified time of the asset in milliseconds
 
 **Since:** 14
 
+<!--Device-SharedPhotoAsset-dateModifiedMs: number--><!--Device-SharedPhotoAsset-dateModifiedMs: number-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -142,6 +156,8 @@ The month of the file created
 
 **Since:** 14
 
+<!--Device-SharedPhotoAsset-dateMonth: string--><!--Device-SharedPhotoAsset-dateMonth: string-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -152,12 +168,13 @@ The month of the file created
 dateTaken: number
 ```
 
-DateTaken of photo asset
-Unit: ms, The value must be an integer greater than or equal to 0.
+DateTaken of photo asset Unit: ms, The value must be an integer greater than or equal to 0.
 
 **Type:** number
 
 **Since:** 14
+
+<!--Device-SharedPhotoAsset-dateTaken: number--><!--Device-SharedPhotoAsset-dateTaken: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -175,6 +192,8 @@ Trashed date of photo asset
 
 **Since:** 14
 
+<!--Device-SharedPhotoAsset-dateTrashed: number--><!--Device-SharedPhotoAsset-dateTrashed: number-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -190,6 +209,8 @@ Trashed time of the asset in milliseconds
 **Type:** number
 
 **Since:** 14
+
+<!--Device-SharedPhotoAsset-dateTrashedMs: number--><!--Device-SharedPhotoAsset-dateTrashedMs: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -207,6 +228,8 @@ The year of the file created
 
 **Since:** 14
 
+<!--Device-SharedPhotoAsset-dateYear: string--><!--Device-SharedPhotoAsset-dateYear: string-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -223,6 +246,8 @@ Display name of photo asset
 
 **Since:** 14
 
+<!--Device-SharedPhotoAsset-displayName: string--><!--Device-SharedPhotoAsset-displayName: string-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -233,12 +258,13 @@ Display name of photo asset
 duration: number
 ```
 
-Duration of video photo asset
-Unit: ms, The value must be an integer greater than or equal to 0.
+Duration of video photo asset Unit: ms, The value must be an integer greater than or equal to 0.
 
 **Type:** number
 
 **Since:** 14
+
+<!--Device-SharedPhotoAsset-duration: number--><!--Device-SharedPhotoAsset-duration: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -256,6 +282,8 @@ Dynamic range type of the asset
 
 **Since:** 14
 
+<!--Device-SharedPhotoAsset-dynamicRangeType: DynamicRangeType--><!--Device-SharedPhotoAsset-dynamicRangeType: DynamicRangeType-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -272,6 +300,8 @@ File id of photo asset
 
 **Since:** 14
 
+<!--Device-SharedPhotoAsset-fileId: number--><!--Device-SharedPhotoAsset-fileId: number-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -282,12 +312,13 @@ File id of photo asset
 height: number
 ```
 
-Height of photo asset
-Unit: px, The value must be an integer greater than or equal to 0.
+Height of photo asset Unit: px, The value must be an integer greater than or equal to 0.
 
 **Type:** number
 
 **Since:** 14
+
+<!--Device-SharedPhotoAsset-height: number--><!--Device-SharedPhotoAsset-height: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -305,6 +336,8 @@ Hidden state of photo asset
 
 **Since:** 14
 
+<!--Device-SharedPhotoAsset-hidden: boolean--><!--Device-SharedPhotoAsset-hidden: boolean-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -320,6 +353,8 @@ Favorite state of photo asset
 **Type:** boolean
 
 **Since:** 14
+
+<!--Device-SharedPhotoAsset-isFavorite: boolean--><!--Device-SharedPhotoAsset-isFavorite: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -337,6 +372,8 @@ Width and height information of lcd picture
 
 **Since:** 14
 
+<!--Device-SharedPhotoAsset-lcdSize: string--><!--Device-SharedPhotoAsset-lcdSize: string-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -352,6 +389,8 @@ Media type of photo asset
 **Type:** PhotoType
 
 **Since:** 14
+
+<!--Device-SharedPhotoAsset-mediaType: PhotoType--><!--Device-SharedPhotoAsset-mediaType: PhotoType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -369,6 +408,8 @@ Effect mode of moving photo
 
 **Since:** 14
 
+<!--Device-SharedPhotoAsset-movingPhotoEffectMode: MovingPhotoEffectMode--><!--Device-SharedPhotoAsset-movingPhotoEffectMode: MovingPhotoEffectMode-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -379,12 +420,13 @@ Effect mode of moving photo
 orientation: number
 ```
 
-Orientation of photo asset
-Unit: deg, The value must be an integer within [0,359].
+Orientation of photo asset Unit: deg, The value must be an integer within [0,359].
 
 **Type:** number
 
 **Since:** 14
+
+<!--Device-SharedPhotoAsset-orientation: number--><!--Device-SharedPhotoAsset-orientation: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -402,6 +444,8 @@ Pending state of the asset, true means asset is pending
 
 **Since:** 14
 
+<!--Device-SharedPhotoAsset-pending: boolean--><!--Device-SharedPhotoAsset-pending: boolean-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -418,6 +462,8 @@ Position of photo asset
 
 **Since:** 14
 
+<!--Device-SharedPhotoAsset-position: PositionType--><!--Device-SharedPhotoAsset-position: PositionType-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -428,12 +474,13 @@ Position of photo asset
 size: number
 ```
 
-Size of photo asset
-Unit: Byte, The value must be an integer greater than or equal to 0.
+Size of photo asset Unit: Byte, The value must be an integer greater than or equal to 0.
 
 **Type:** number
 
 **Since:** 14
+
+<!--Device-SharedPhotoAsset-size: number--><!--Device-SharedPhotoAsset-size: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -451,6 +498,8 @@ Subtype of photo asset
 
 **Since:** 14
 
+<!--Device-SharedPhotoAsset-subtype: PhotoSubtype--><!--Device-SharedPhotoAsset-subtype: PhotoSubtype-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -466,6 +515,8 @@ Width and height information of thumbnail picture
 **Type:** string
 
 **Since:** 14
+
+<!--Device-SharedPhotoAsset-thmSize: string--><!--Device-SharedPhotoAsset-thmSize: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -483,6 +534,8 @@ modified time of thumbnail status
 
 **Since:** 14
 
+<!--Device-SharedPhotoAsset-thumbnailModifiedMs: number--><!--Device-SharedPhotoAsset-thumbnailModifiedMs: number-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -498,6 +551,8 @@ Ready state of thumbnail
 **Type:** boolean
 
 **Since:** 14
+
+<!--Device-SharedPhotoAsset-thumbnailReady: boolean--><!--Device-SharedPhotoAsset-thumbnailReady: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -515,6 +570,8 @@ visibility of thumbnails
 
 **Since:** 14
 
+<!--Device-SharedPhotoAsset-thumbnailVisible: ThumbnailVisibility--><!--Device-SharedPhotoAsset-thumbnailVisible: ThumbnailVisibility-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -530,6 +587,8 @@ Title of photo asset
 **Type:** string
 
 **Since:** 14
+
+<!--Device-SharedPhotoAsset-title: string--><!--Device-SharedPhotoAsset-title: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -547,6 +606,8 @@ URI of photo asset
 
 **Since:** 14
 
+<!--Device-SharedPhotoAsset-uri: string--><!--Device-SharedPhotoAsset-uri: string-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -563,6 +624,8 @@ User comment info of photo asset
 
 **Since:** 14
 
+<!--Device-SharedPhotoAsset-userComment: string--><!--Device-SharedPhotoAsset-userComment: string-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -573,12 +636,13 @@ User comment info of photo asset
 width: number
 ```
 
-Width of photo asset
-Unit: px, The value must be an integer greater than or equal to 0.
+Width of photo asset Unit: px, The value must be an integer greater than or equal to 0.
 
 **Type:** number
 
 **Since:** 14
+
+<!--Device-SharedPhotoAsset-width: number--><!--Device-SharedPhotoAsset-width: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

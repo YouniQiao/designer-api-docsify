@@ -1,5 +1,11 @@
 # getSimLabelSync
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## getSimLabelSync
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getSimLabelSync(slotId: number): SimLabel
 Obtains the SIM card label synchronously.
 
 **起始版本：** 20
+
+<!--Device-sim-function getSimLabelSync(slotId: int): SimLabel--><!--Device-sim-function getSimLabelSync(slotId: int): SimLabel-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -22,7 +30,7 @@ Obtains the SIM card label synchronously.
 
 | 类型 | 说明 |
 | --- | --- |
-| SimLabel | SIM card label. |
+| [SimLabel](arkts-telephony-simlabel-i.md) | SIM card label. |
 
 **示例：**
 

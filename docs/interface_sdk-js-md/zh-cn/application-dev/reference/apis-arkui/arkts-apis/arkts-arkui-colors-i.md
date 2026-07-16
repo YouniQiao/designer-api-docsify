@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export declare interface Colors--><!--Device-unnamed-export declare interface Colors-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { CustomColors, ThemeControl, Colors, CustomDarkColors, Theme, CustomTheme } from '@kit.ArkUI';
+```
 
 ## alert
 
@@ -20,7 +28,9 @@ alert: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-alert: ResourceColor--><!--Device-Colors-alert: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,7 +48,9 @@ backgroundEmphasize: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-backgroundEmphasize: ResourceColor--><!--Device-Colors-backgroundEmphasize: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,7 +68,9 @@ backgroundFourth: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-backgroundFourth: ResourceColor--><!--Device-Colors-backgroundFourth: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,7 +88,9 @@ backgroundPrimary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-backgroundPrimary: ResourceColor--><!--Device-Colors-backgroundPrimary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,7 +108,9 @@ backgroundSecondary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-backgroundSecondary: ResourceColor--><!--Device-Colors-backgroundSecondary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -110,7 +128,9 @@ backgroundTertiary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-backgroundTertiary: ResourceColor--><!--Device-Colors-backgroundTertiary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -128,7 +148,9 @@ brand: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-brand: ResourceColor--><!--Device-Colors-brand: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -138,8 +160,7 @@ brand: ResourceColor
 compBackgroundEmphasize: ResourceColor
 ```
 
-高亮背景。</br>**影响组件：** [Swiper](../arkts-components/arkts-arkui-swiper.md)、[Toggle](../arkts-components/arkts-arkui-toggle.md)、[Chip](arkts-arkui-advanced-chip.md)、</br>
-[Checkbox](../arkts-components/arkts-arkui-checkbox.md)、[CheckboxGroup](../arkts-components/arkts-arkui-checkboxgroup.md)、[Radio](../arkts-components/arkts-arkui-radio.md)
+高亮背景。</br>**影响组件：** [Swiper](../arkts-components/arkts-arkui-swiper.md)、[Toggle](../arkts-components/arkts-arkui-toggle.md)、[Chip](arkts-arkui-advanced-chip.md)、</br>[Checkbox](../arkts-components/arkts-arkui-checkbox.md)、[CheckboxGroup](../arkts-components/arkts-arkui-checkboxgroup.md)、[Radio](../arkts-components/arkts-arkui-radio.md)
 
 **类型：** ResourceColor
 
@@ -147,7 +168,9 @@ compBackgroundEmphasize: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-compBackgroundEmphasize: ResourceColor--><!--Device-Colors-compBackgroundEmphasize: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -165,7 +188,9 @@ compBackgroundFocus: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-compBackgroundFocus: ResourceColor--><!--Device-Colors-compBackgroundFocus: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -183,7 +208,9 @@ compBackgroundGray: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-compBackgroundGray: ResourceColor--><!--Device-Colors-compBackgroundGray: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -201,7 +228,9 @@ compBackgroundNeutral: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-compBackgroundNeutral: ResourceColor--><!--Device-Colors-compBackgroundNeutral: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -219,7 +248,9 @@ compBackgroundPrimary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-compBackgroundPrimary: ResourceColor--><!--Device-Colors-compBackgroundPrimary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -237,7 +268,9 @@ compBackgroundPrimaryContrary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-compBackgroundPrimaryContrary: ResourceColor--><!--Device-Colors-compBackgroundPrimaryContrary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -255,7 +288,9 @@ compBackgroundPrimaryTran: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-compBackgroundPrimaryTran: ResourceColor--><!--Device-Colors-compBackgroundPrimaryTran: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -273,7 +308,9 @@ compBackgroundSecondary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-compBackgroundSecondary: ResourceColor--><!--Device-Colors-compBackgroundSecondary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -283,11 +320,7 @@ compBackgroundSecondary: ResourceColor
 compBackgroundTertiary: ResourceColor
 ```
 
-三级背景。</br>**影响组件：** [EditableTitleBar](@ohos.arkui.advanced.EditableTitleBar)、[Progress](../arkts-components/arkts-arkui-progress.md)、
-[AlphabetIndexer](../arkts-components/arkts-arkui-alphabetindexer.md)、</br>[Button](../arkts-components/arkts-arkui-button.md)、[Select](../arkts-components/arkts-arkui-select.md)、
-[Toggle](../arkts-components/arkts-arkui-toggle.md)、</br>[Chip](arkts-arkui-advanced-chip.md)、[TextInput](../arkts-components/arkts-arkui-textinput.md)、
-[Search](../arkts-components/arkts-arkui-search.md)。从API版本26.0.0开始，新增[UIPickerComponent](../arkts-components/arkts-arkui-uipickercomponent.md)、
-[TextPicker](../arkts-components/arkts-arkui-textpicker.md)。
+三级背景。</br>**影响组件：** [EditableTitleBar](@ohos.arkui.advanced.EditableTitleBar)、[Progress](../arkts-components/arkts-arkui-progress.md)、[AlphabetIndexer](../arkts-components/arkts-arkui-alphabetindexer.md)、</br>[Button](../arkts-components/arkts-arkui-button.md)、[Select](../arkts-components/arkts-arkui-select.md)、[Toggle](../arkts-components/arkts-arkui-toggle.md)、</br>[Chip](arkts-arkui-advanced-chip.md)、[TextInput](../arkts-components/arkts-arkui-textinput.md)、[Search](../arkts-components/arkts-arkui-search.md)。从API版本26.0.0开始，新增[UIPickerComponent](../arkts-components/arkts-arkui-uipickercomponent.md)、[TextPicker](../arkts-components/arkts-arkui-textpicker.md)。
 
 **类型：** ResourceColor
 
@@ -295,7 +328,9 @@ compBackgroundTertiary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-compBackgroundTertiary: ResourceColor--><!--Device-Colors-compBackgroundTertiary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -313,7 +348,9 @@ compCommonContrary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-compCommonContrary: ResourceColor--><!--Device-Colors-compCommonContrary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -323,10 +360,7 @@ compCommonContrary: ResourceColor
 compDivider: ResourceColor
 ```
 
-通用分割线颜色。</br>**影响组件：** [SelectDialog](@ohos.arkui.advanced.Dialog:SelectDialog)、
-[PatternLock](../arkts-components/arkts-arkui-patternlock.md)、[Divider](../arkts-components/arkts-arkui-divider.md)。从API版本26.0.0开始，新增
-[UIPickerComponent](../arkts-components/arkts-arkui-uipickercomponent.md)、[TextPicker](../arkts-components/arkts-arkui-textpicker.md)、[MenuItem](../arkts-components/arkts-arkui-menuitem.md)、
-[MenuItemGroup](../arkts-components/arkts-arkui-menuitemgroup.md)、[Select](../arkts-components/arkts-arkui-select.md)。
+通用分割线颜色。</br>**影响组件：** [SelectDialog](@ohos.arkui.advanced.Dialog:SelectDialog)、[PatternLock](../arkts-components/arkts-arkui-patternlock.md)、[Divider](../arkts-components/arkts-arkui-divider.md)。从API版本26.0.0开始，新增[UIPickerComponent](../arkts-components/arkts-arkui-uipickercomponent.md)、[TextPicker](../arkts-components/arkts-arkui-textpicker.md)、[MenuItem](../arkts-components/arkts-arkui-menuitem.md)、[MenuItemGroup](../arkts-components/arkts-arkui-menuitemgroup.md)、[Select](../arkts-components/arkts-arkui-select.md)。
 
 **类型：** ResourceColor
 
@@ -334,7 +368,9 @@ compDivider: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-compDivider: ResourceColor--><!--Device-Colors-compDivider: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -344,8 +380,7 @@ compDivider: ResourceColor
 compEmphasizeSecondary: ResourceColor
 ```
 
-20%高亮背景颜色。</br>**影响组件：** [Progress](../arkts-components/arkts-arkui-progress.md)、[ProgressButton](@ohos.arkui.advanced.ProgressButton)、
-[AlphabetIndexer](../arkts-components/arkts-arkui-alphabetindexer.md)、</br>[Select](../arkts-components/arkts-arkui-select.md)、[Toggle](../arkts-components/arkts-arkui-toggle.md)
+20%高亮背景颜色。</br>**影响组件：** [Progress](../arkts-components/arkts-arkui-progress.md)、[ProgressButton](@ohos.arkui.advanced.ProgressButton)、[AlphabetIndexer](../arkts-components/arkts-arkui-alphabetindexer.md)、</br>[Select](../arkts-components/arkts-arkui-select.md)、[Toggle](../arkts-components/arkts-arkui-toggle.md)
 
 **类型：** ResourceColor
 
@@ -353,7 +388,9 @@ compEmphasizeSecondary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-compEmphasizeSecondary: ResourceColor--><!--Device-Colors-compEmphasizeSecondary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -371,7 +408,9 @@ compEmphasizeTertiary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-compEmphasizeTertiary: ResourceColor--><!--Device-Colors-compEmphasizeTertiary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -389,7 +428,9 @@ compFocusedPrimary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-compFocusedPrimary: ResourceColor--><!--Device-Colors-compFocusedPrimary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -407,7 +448,9 @@ compFocusedSecondary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-compFocusedSecondary: ResourceColor--><!--Device-Colors-compFocusedSecondary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -425,7 +468,9 @@ compFocusedTertiary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-compFocusedTertiary: ResourceColor--><!--Device-Colors-compFocusedTertiary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -443,7 +488,9 @@ compForegroundPrimary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-compForegroundPrimary: ResourceColor--><!--Device-Colors-compForegroundPrimary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -461,7 +508,9 @@ confirm: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-confirm: ResourceColor--><!--Device-Colors-confirm: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -479,7 +528,9 @@ container?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-container?: ResourceColor--><!--Device-Colors-container?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -489,15 +540,7 @@ container?: ResourceColor
 fontEmphasize: ResourceColor
 ```
 
-高亮字体颜色。</br>**影响组件：** [TipsDialog](@ohos.arkui.advanced.Dialog:TipsDialog)、
-[ConfirmDialog](@ohos.arkui.advanced.Dialog:ConfirmDialog)、
-[AlertDialog](@ohos.arkui.advanced.Dialog:AlertDialog)、</br>
-[SelectDialog](@ohos.arkui.advanced.Dialog:SelectDialog)、
-[CustomContentDialog](@ohos.arkui.advanced.Dialog:CustomContentDialog)、
-[SubHeader](@ohos.arkui.advanced.SubHeader)、</br>[AlphabetIndexer](../arkts-components/arkts-arkui-alphabetindexer.md)、
-[Popup](arkts-arkui-advanced-popup.md)、[Button](../arkts-components/arkts-arkui-button.md)、</br>[Select](../arkts-components/arkts-arkui-select.md)、
-[ToolBar](@ohos.arkui.advanced.ToolBar)、[Search](../arkts-components/arkts-arkui-search.md)、</br>[TimePicker](../arkts-components/arkts-arkui-timepicker.md)、
-[DatePicker](../arkts-components/arkts-arkui-datepicker.md)、[TextPicker](../arkts-components/arkts-arkui-textpicker.md)。从API版本26.0.0开始，新增[RichEditor](../arkts-components/arkts-arkui-richeditor.md)。
+高亮字体颜色。</br>**影响组件：** [TipsDialog](@ohos.arkui.advanced.Dialog:TipsDialog)、[ConfirmDialog](@ohos.arkui.advanced.Dialog:ConfirmDialog)、[AlertDialog](@ohos.arkui.advanced.Dialog:AlertDialog)、</br>[SelectDialog](@ohos.arkui.advanced.Dialog:SelectDialog)、[CustomContentDialog](@ohos.arkui.advanced.Dialog:CustomContentDialog)、[SubHeader](@ohos.arkui.advanced.SubHeader)、</br>[AlphabetIndexer](../arkts-components/arkts-arkui-alphabetindexer.md)、[Popup](arkts-arkui-advanced-popup.md)、[Button](../arkts-components/arkts-arkui-button.md)、</br>[Select](../arkts-components/arkts-arkui-select.md)、[ToolBar](@ohos.arkui.advanced.ToolBar)、[Search](../arkts-components/arkts-arkui-search.md)、</br>[TimePicker](../arkts-components/arkts-arkui-timepicker.md)、[DatePicker](../arkts-components/arkts-arkui-datepicker.md)、[TextPicker](../arkts-components/arkts-arkui-textpicker.md)。从API版本26.0.0开始，新增[RichEditor](../arkts-components/arkts-arkui-richeditor.md)。
 
 **类型：** ResourceColor
 
@@ -505,7 +548,9 @@ fontEmphasize: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-fontEmphasize: ResourceColor--><!--Device-Colors-fontEmphasize: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -523,7 +568,9 @@ fontFourth: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-fontFourth: ResourceColor--><!--Device-Colors-fontFourth: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -541,7 +588,9 @@ fontOnFourth: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-fontOnFourth: ResourceColor--><!--Device-Colors-fontOnFourth: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -551,8 +600,7 @@ fontOnFourth: ResourceColor
 fontOnPrimary: ResourceColor
 ```
 
-一级文本反转颜色，用于彩色背景。</br>**影响组件：** [Badge](../arkts-components/arkts-arkui-badge.md)、[Button](../arkts-components/arkts-arkui-button.md)、
-[Chip](arkts-arkui-advanced-chip.md)
+一级文本反转颜色，用于彩色背景。</br>**影响组件：** [Badge](../arkts-components/arkts-arkui-badge.md)、[Button](../arkts-components/arkts-arkui-button.md)、[Chip](arkts-arkui-advanced-chip.md)
 
 **类型：** ResourceColor
 
@@ -560,7 +608,9 @@ fontOnPrimary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-fontOnPrimary: ResourceColor--><!--Device-Colors-fontOnPrimary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -578,7 +628,9 @@ fontOnSecondary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-fontOnSecondary: ResourceColor--><!--Device-Colors-fontOnSecondary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -596,7 +648,9 @@ fontOnTertiary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-fontOnTertiary: ResourceColor--><!--Device-Colors-fontOnTertiary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -606,22 +660,7 @@ fontOnTertiary: ResourceColor
 fontPrimary: ResourceColor
 ```
 
-一级文本字体颜色。</br>**影响组件：** [EditableTitleBar](@ohos.arkui.advanced.EditableTitleBar)、
-[LoadingDialog](@ohos.arkui.advanced.Dialog:LoadingDialog)、
-[TipsDialog](@ohos.arkui.advanced.Dialog:TipsDialog)、</br>
-[ConfirmDialog](@ohos.arkui.advanced.Dialog:ConfirmDialog)、
-[AlertDialog](@ohos.arkui.advanced.Dialog:AlertDialog)、
-[SelectDialog](@ohos.arkui.advanced.Dialog:SelectDialog)、</br>
-[CustomContentDialog](@ohos.arkui.advanced.Dialog:CustomContentDialog)、[Swiper](../arkts-components/arkts-arkui-swiper.md)、
-[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md)、</br>[SubHeader](@ohos.arkui.advanced.SubHeader)、
-[ProgressButton](@ohos.arkui.advanced.ProgressButton)、[AlphabetIndexer](../arkts-components/arkts-arkui-alphabetindexer.md)、</br>
-[Popup](arkts-arkui-advanced-popup.md)、[Select](../arkts-components/arkts-arkui-select.md)、[Chip](arkts-arkui-advanced-chip.md)、</br>
-[ToolBar](@ohos.arkui.advanced.ToolBar)、[Menu](../arkts-components/arkts-arkui-menu.md)、[TextInput](../arkts-components/arkts-arkui-textinput.md)、</br>
-[Search](../arkts-components/arkts-arkui-search.md)、[TimePicker](../arkts-components/arkts-arkui-timepicker.md)、[DatePicker](../arkts-components/arkts-arkui-datepicker.md)、</br>
-[TextPicker](../arkts-components/arkts-arkui-textpicker.md)、[ComposeListItem](arkts-arkui-advanced-composelistitem.md)、
-[TreeView](@ohos.arkui.advanced.TreeView)。从API版本26.0.0开始，新增[CalendarPicker](../arkts-components/arkts-arkui-calendarpicker.md)、
-[UIPickerComponent](../arkts-components/arkts-arkui-uipickercomponent.md)、[RichEditor](../arkts-components/arkts-arkui-richeditor.md)、[MenuItem](../arkts-components/arkts-arkui-menuitem.md)、
-[MenuItemGroup](../arkts-components/arkts-arkui-menuitemgroup.md)、[Counter](../arkts-components/arkts-arkui-counter.md)。
+一级文本字体颜色。</br>**影响组件：** [EditableTitleBar](@ohos.arkui.advanced.EditableTitleBar)、[LoadingDialog](@ohos.arkui.advanced.Dialog:LoadingDialog)、[TipsDialog](@ohos.arkui.advanced.Dialog:TipsDialog)、</br>[ConfirmDialog](@ohos.arkui.advanced.Dialog:ConfirmDialog)、[AlertDialog](@ohos.arkui.advanced.Dialog:AlertDialog)、[SelectDialog](@ohos.arkui.advanced.Dialog:SelectDialog)、</br>[CustomContentDialog](@ohos.arkui.advanced.Dialog:CustomContentDialog)、[Swiper](../arkts-components/arkts-arkui-swiper.md)、[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md)、</br>[SubHeader](@ohos.arkui.advanced.SubHeader)、[ProgressButton](@ohos.arkui.advanced.ProgressButton)、[AlphabetIndexer](../arkts-components/arkts-arkui-alphabetindexer.md)、</br>[Popup](arkts-arkui-advanced-popup.md)、[Select](../arkts-components/arkts-arkui-select.md)、[Chip](arkts-arkui-advanced-chip.md)、</br>[ToolBar](@ohos.arkui.advanced.ToolBar)、[Menu](../arkts-components/arkts-arkui-menu.md)、[TextInput](../arkts-components/arkts-arkui-textinput.md)、</br>[Search](../arkts-components/arkts-arkui-search.md)、[TimePicker](../arkts-components/arkts-arkui-timepicker.md)、[DatePicker](../arkts-components/arkts-arkui-datepicker.md)、</br>[TextPicker](../arkts-components/arkts-arkui-textpicker.md)、[ComposeListItem](arkts-arkui-advanced-composelistitem.md)、[TreeView](@ohos.arkui.advanced.TreeView)。从API版本26.0.0开始，新增[CalendarPicker](../arkts-components/arkts-arkui-calendarpicker.md)、[UIPickerComponent](../arkts-components/arkts-arkui-uipickercomponent.md)、[RichEditor](../arkts-components/arkts-arkui-richeditor.md)、[MenuItem](../arkts-components/arkts-arkui-menuitem.md)、[MenuItemGroup](../arkts-components/arkts-arkui-menuitemgroup.md)、[Counter](../arkts-components/arkts-arkui-counter.md)。
 
 **类型：** ResourceColor
 
@@ -629,7 +668,9 @@ fontPrimary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-fontPrimary: ResourceColor--><!--Device-Colors-fontPrimary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -639,14 +680,7 @@ fontPrimary: ResourceColor
 fontSecondary: ResourceColor
 ```
 
-二级文本字体颜色。</br>**影响组件：** [EditableTitleBar](@ohos.arkui.advanced.EditableTitleBar)、
-[AlertDialog](@ohos.arkui.advanced.Dialog:AlertDialog)、
-[CustomContentDialog](@ohos.arkui.advanced.Dialog:CustomContentDialog)、</br>
-[SubHeader](@ohos.arkui.advanced.SubHeader)、[AlphabetIndexer](../arkts-components/arkts-arkui-alphabetindexer.md)、
-[Popup](arkts-arkui-advanced-popup.md)、</br>[TextInput](../arkts-components/arkts-arkui-textinput.md)、[Search](../arkts-components/arkts-arkui-search.md)、
-[ComposeListItem](arkts-arkui-advanced-composelistitem.md)、</br>
-[TreeView](@ohos.arkui.advanced.TreeView)、[TextClock](../arkts-components/arkts-arkui-textclock.md)。从API版本26.0.0开始，新增
-[MenuItem](../arkts-components/arkts-arkui-menuitem.md)、[MenuItemGroup](../arkts-components/arkts-arkui-menuitemgroup.md)。
+二级文本字体颜色。</br>**影响组件：** [EditableTitleBar](@ohos.arkui.advanced.EditableTitleBar)、[AlertDialog](@ohos.arkui.advanced.Dialog:AlertDialog)、[CustomContentDialog](@ohos.arkui.advanced.Dialog:CustomContentDialog)、</br>[SubHeader](@ohos.arkui.advanced.SubHeader)、[AlphabetIndexer](../arkts-components/arkts-arkui-alphabetindexer.md)、[Popup](arkts-arkui-advanced-popup.md)、</br>[TextInput](../arkts-components/arkts-arkui-textinput.md)、[Search](../arkts-components/arkts-arkui-search.md)、[ComposeListItem](arkts-arkui-advanced-composelistitem.md)、</br>[TreeView](@ohos.arkui.advanced.TreeView)、[TextClock](../arkts-components/arkts-arkui-textclock.md)。从API版本26.0.0开始，新增[MenuItem](../arkts-components/arkts-arkui-menuitem.md)、[MenuItemGroup](../arkts-components/arkts-arkui-menuitemgroup.md)。
 
 **类型：** ResourceColor
 
@@ -654,7 +688,9 @@ fontSecondary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-fontSecondary: ResourceColor--><!--Device-Colors-fontSecondary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -672,7 +708,9 @@ fontTertiary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-fontTertiary: ResourceColor--><!--Device-Colors-fontTertiary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -690,7 +728,9 @@ iconEmphasize: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-iconEmphasize: ResourceColor--><!--Device-Colors-iconEmphasize: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -708,7 +748,9 @@ iconFourth: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-iconFourth: ResourceColor--><!--Device-Colors-iconFourth: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -726,7 +768,9 @@ iconOnFourth: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-iconOnFourth: ResourceColor--><!--Device-Colors-iconOnFourth: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -736,8 +780,7 @@ iconOnFourth: ResourceColor
 iconOnPrimary: ResourceColor
 ```
 
-一级图标反转颜色，用于彩色背景。</br>**影响组件：** [Checkbox](../arkts-components/arkts-arkui-checkbox.md)、[CheckboxGroup](../arkts-components/arkts-arkui-checkboxgroup.md)、
-[Radio](../arkts-components/arkts-arkui-radio.md)
+一级图标反转颜色，用于彩色背景。</br>**影响组件：** [Checkbox](../arkts-components/arkts-arkui-checkbox.md)、[CheckboxGroup](../arkts-components/arkts-arkui-checkboxgroup.md)、[Radio](../arkts-components/arkts-arkui-radio.md)
 
 **类型：** ResourceColor
 
@@ -745,7 +788,9 @@ iconOnPrimary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-iconOnPrimary: ResourceColor--><!--Device-Colors-iconOnPrimary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -763,7 +808,9 @@ iconOnSecondary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-iconOnSecondary: ResourceColor--><!--Device-Colors-iconOnSecondary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -781,7 +828,9 @@ iconOnTertiary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-iconOnTertiary: ResourceColor--><!--Device-Colors-iconOnTertiary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -791,9 +840,7 @@ iconOnTertiary: ResourceColor
 iconPrimary: ResourceColor
 ```
 
-一级图标颜色。</br>**影响组件：** [EditableTitleBar](@ohos.arkui.advanced.EditableTitleBar)、[Swiper](../arkts-components/arkts-arkui-swiper.md)、
-[ToolBar](@ohos.arkui.advanced.ToolBar)、</br>[TreeView](@ohos.arkui.advanced.TreeView)。从API版本26.0.0开
-始，新增[MenuItem](../arkts-components/arkts-arkui-menuitem.md)。
+一级图标颜色。</br>**影响组件：** [EditableTitleBar](@ohos.arkui.advanced.EditableTitleBar)、[Swiper](../arkts-components/arkts-arkui-swiper.md)、[ToolBar](@ohos.arkui.advanced.ToolBar)、</br>[TreeView](@ohos.arkui.advanced.TreeView)。从API版本26.0.0开始，新增[MenuItem](../arkts-components/arkts-arkui-menuitem.md)。
 
 **类型：** ResourceColor
 
@@ -801,7 +848,9 @@ iconPrimary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-iconPrimary: ResourceColor--><!--Device-Colors-iconPrimary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -811,10 +860,7 @@ iconPrimary: ResourceColor
 iconSecondary: ResourceColor
 ```
 
-二级图标颜色。</br>**影响组件：** [LoadingDialog](@ohos.arkui.advanced.Dialog:LoadingDialog)、
-[SubHeader](@ohos.arkui.advanced.SubHeader)、</br>[Popup](arkts-arkui-advanced-popup.md)、
-[Chip](arkts-arkui-advanced-chip.md)、[Search](../arkts-components/arkts-arkui-search.md)、</br>
-[TreeView](@ohos.arkui.advanced.TreeView)。从API版本26.0.0开始，新增[LoadingProgress](../arkts-components/arkts-arkui-loadingprogress.md)。
+二级图标颜色。</br>**影响组件：** [LoadingDialog](@ohos.arkui.advanced.Dialog:LoadingDialog)、[SubHeader](@ohos.arkui.advanced.SubHeader)、</br>[Popup](arkts-arkui-advanced-popup.md)、[Chip](arkts-arkui-advanced-chip.md)、[Search](../arkts-components/arkts-arkui-search.md)、</br>[TreeView](@ohos.arkui.advanced.TreeView)。从API版本26.0.0开始，新增[LoadingProgress](../arkts-components/arkts-arkui-loadingprogress.md)。
 
 **类型：** ResourceColor
 
@@ -822,7 +868,9 @@ iconSecondary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-iconSecondary: ResourceColor--><!--Device-Colors-iconSecondary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -840,7 +888,9 @@ iconSubEmphasize: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-iconSubEmphasize: ResourceColor--><!--Device-Colors-iconSubEmphasize: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -858,7 +908,9 @@ iconTertiary: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-iconTertiary: ResourceColor--><!--Device-Colors-iconTertiary: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -876,7 +928,9 @@ interactiveActive: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-interactiveActive: ResourceColor--><!--Device-Colors-interactiveActive: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -894,7 +948,9 @@ interactiveClick: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-interactiveClick: ResourceColor--><!--Device-Colors-interactiveClick: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -904,8 +960,7 @@ interactiveClick: ResourceColor
 interactiveFocus: ResourceColor
 ```
 
-通用获焦交互式颜色。</br>**影响组件：** [EditableTitleBar](@ohos.arkui.advanced.EditableTitleBar)、
-[Chip](arkts-arkui-advanced-chip.md)、[TreeView](@ohos.arkui.advanced.TreeView)
+通用获焦交互式颜色。</br>**影响组件：** [EditableTitleBar](@ohos.arkui.advanced.EditableTitleBar)、[Chip](arkts-arkui-advanced-chip.md)、[TreeView](@ohos.arkui.advanced.TreeView)
 
 **类型：** ResourceColor
 
@@ -913,7 +968,9 @@ interactiveFocus: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-interactiveFocus: ResourceColor--><!--Device-Colors-interactiveFocus: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -923,9 +980,7 @@ interactiveFocus: ResourceColor
 interactiveHover: ResourceColor
 ```
 
-通用悬停交互式颜色。</br>**影响组件：** [EditableTitleBar](@ohos.arkui.advanced.EditableTitleBar)、
-[Chip](arkts-arkui-advanced-chip.md)、[TreeView](@ohos.arkui.advanced.TreeView)。从API版本26.0.0开始，新增
-[RichEditor](../arkts-components/arkts-arkui-richeditor.md)、[MenuItem](../arkts-components/arkts-arkui-menuitem.md)、[Select](../arkts-components/arkts-arkui-select.md)。
+通用悬停交互式颜色。</br>**影响组件：** [EditableTitleBar](@ohos.arkui.advanced.EditableTitleBar)、[Chip](arkts-arkui-advanced-chip.md)、[TreeView](@ohos.arkui.advanced.TreeView)。从API版本26.0.0开始，新增[RichEditor](../arkts-components/arkts-arkui-richeditor.md)、[MenuItem](../arkts-components/arkts-arkui-menuitem.md)、[Select](../arkts-components/arkts-arkui-select.md)。
 
 **类型：** ResourceColor
 
@@ -933,7 +988,9 @@ interactiveHover: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-interactiveHover: ResourceColor--><!--Device-Colors-interactiveHover: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -943,9 +1000,7 @@ interactiveHover: ResourceColor
 interactivePressed: ResourceColor
 ```
 
-通用按压交互式颜色。</br>**影响组件：** [EditableTitleBar](@ohos.arkui.advanced.EditableTitleBar)、
-[Chip](arkts-arkui-advanced-chip.md)、[TreeView](@ohos.arkui.advanced.TreeView)。从API版本26.0.0开始，新增
-[RichEditor](../arkts-components/arkts-arkui-richeditor.md)。
+通用按压交互式颜色。</br>**影响组件：** [EditableTitleBar](@ohos.arkui.advanced.EditableTitleBar)、[Chip](arkts-arkui-advanced-chip.md)、[TreeView](@ohos.arkui.advanced.TreeView)。从API版本26.0.0开始，新增[RichEditor](../arkts-components/arkts-arkui-richeditor.md)。
 
 **类型：** ResourceColor
 
@@ -953,7 +1008,9 @@ interactivePressed: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-interactivePressed: ResourceColor--><!--Device-Colors-interactivePressed: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -971,7 +1028,9 @@ interactiveSelect: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-interactiveSelect: ResourceColor--><!--Device-Colors-interactiveSelect: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -989,7 +1048,9 @@ onPrimary?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-onPrimary?: ResourceColor--><!--Device-Colors-onPrimary?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1007,7 +1068,9 @@ primary?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-primary?: ResourceColor--><!--Device-Colors-primary?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1017,10 +1080,7 @@ primary?: ResourceColor
 warning: ResourceColor
 ```
 
-一级警示色。</br>**影响组件：** [TipsDialog](@ohos.arkui.advanced.Dialog:TipsDialog)、
-[AlertDialog](@ohos.arkui.advanced.Dialog:AlertDialog)、
-[CustomContentDialog](@ohos.arkui.advanced.Dialog:CustomContentDialog)、</br>[Badge](../arkts-components/arkts-arkui-badge.md)、
-[Button](../arkts-components/arkts-arkui-button.md)
+一级警示色。</br>**影响组件：** [TipsDialog](@ohos.arkui.advanced.Dialog:TipsDialog)、[AlertDialog](@ohos.arkui.advanced.Dialog:AlertDialog)、[CustomContentDialog](@ohos.arkui.advanced.Dialog:CustomContentDialog)、</br>[Badge](../arkts-components/arkts-arkui-badge.md)、[Button](../arkts-components/arkts-arkui-button.md)
 
 **类型：** ResourceColor
 
@@ -1028,7 +1088,9 @@ warning: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Colors-warning: ResourceColor--><!--Device-Colors-warning: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

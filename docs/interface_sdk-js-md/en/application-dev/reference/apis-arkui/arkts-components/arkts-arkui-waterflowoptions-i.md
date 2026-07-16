@@ -4,6 +4,8 @@ Provides parameters of the **WaterFlow** component.
 
 **Since:** 9
 
+<!--Device-unnamed-declare interface WaterFlowOptions--><!--Device-unnamed-declare interface WaterFlowOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## footer
@@ -12,15 +14,15 @@ Provides parameters of the **WaterFlow** component.
 footer?: CustomBuilder
 ```
 
-Footer component of the **WaterFlow** component, which is used to display custom content (such as loading
-prompts and bottom icons) at the end of the waterfall. If this parameter is not set, no footer component is
-displayed.
+Footer component of the **WaterFlow** component, which is used to display custom content (such as loading prompts and bottom icons) at the end of the waterfall. If this parameter is not set, no footer component is displayed.
 
 **Type:** CustomBuilder
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WaterFlowOptions-footer?: CustomBuilder--><!--Device-WaterFlowOptions-footer?: CustomBuilder-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,8 +32,7 @@ displayed.
 footerContent?: ComponentContent
 ```
 
-Footer of the **WaterFlow** component. This parameter has a higher priority than **footer**. If both
-**footer** and **footerContent** are set, the component set by **footerContent** will be used.
+Footer of the **WaterFlow** component. This parameter has a higher priority than **footer**. If both **footer** and **footerContent** are set, the component set by **footerContent** will be used.
 
 **Type:** ComponentContent
 
@@ -40,6 +41,8 @@ Footer of the **WaterFlow** component. This parameter has a higher priority than
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-WaterFlowOptions-footerContent?: ComponentContent--><!--Device-WaterFlowOptions-footerContent?: ComponentContent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,6 +64,8 @@ Layout mode of the <em>WaterFlow</em> component.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WaterFlowOptions-layoutMode?: WaterFlowLayoutMode--><!--Device-WaterFlowOptions-layoutMode?: WaterFlowLayoutMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## scroller
@@ -71,15 +76,15 @@ scroller?: Scroller
 
 Controller of the scrollable component, bound to the scrollable component.
 
-<p><strong>NOTE</strong>
-<br>The scroller cannot be bound to other scrollable components, such as ArcList, List, Grid, Scroll, or WaterFlow.
-</p>
+<p><strong>NOTE</strong><br>The scroller cannot be bound to other scrollable components, such as ArcList, List, Grid, Scroll, or WaterFlow.</p>
 
 **Type:** Scroller
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WaterFlowOptions-scroller?: Scroller--><!--Device-WaterFlowOptions-scroller?: Scroller-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -89,16 +94,9 @@ Controller of the scrollable component, bound to the scrollable component.
 sections?: WaterFlowSections
 ```
 
-Water flow item sections, used to implement mixed layouts with different column counts for each section within
-the same **WaterFlow** component. This is applicable to scenarios where different numbers of columns are
-required in different areas. If this parameter is not set, the layout with the same number of columns is used.
+Water flow item sections, used to implement mixed layouts with different column counts for each section within the same **WaterFlow** component. This is applicable to scenarios where different numbers of columns are required in different areas. If this parameter is not set, the layout with the same number of columns is used.
 
-<p><strong>NOTE</strong>
-<br>1. When <em>sections</em> is used, the <em>columnsTemplate</em> and <em>rowsTemplate</em> attributes
-are ignored.
-<br>2. When <em>sections</em> is used, the footer cannot be set separately.
-The last section can function as the footer.
-</p>
+<p><strong>NOTE</strong><br>1. When <em>sections</em> is used, the <em>columnsTemplate</em> and <em>rowsTemplate</em> attributes are ignored.<br>2. When <em>sections</em> is used, the footer cannot be set separately.The last section can function as the footer.</p>
 
 **Type:** WaterFlowSections
 
@@ -107,6 +105,8 @@ The last section can function as the footer.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WaterFlowOptions-sections?: WaterFlowSections--><!--Device-WaterFlowOptions-sections?: WaterFlowSections-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

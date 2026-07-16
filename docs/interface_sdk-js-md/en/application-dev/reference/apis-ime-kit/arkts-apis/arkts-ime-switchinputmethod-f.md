@@ -19,14 +19,16 @@ Switch input method. The caller must be the current inputmethod.
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.CONNECT_IME_ABILITY
 
+<!--Device-inputMethod-function switchInputMethod(target: InputMethodProperty, callback: AsyncCallback<boolean>): void--><!--Device-inputMethod-function switchInputMethod(target: InputMethodProperty, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | InputMethodProperty | Yes | indicates the target input method. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | the callback of switchInputMethod. |
+| target | [InputMethodProperty](arkts-ime-inputmethodproperty-i.md) | Yes | indicates the target input method. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | the callback of switchInputMethod. |
 
 **Error codes:**
 
@@ -71,19 +73,21 @@ Switch input method. The caller must be the current inputmethod.
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.CONNECT_IME_ABILITY
 
+<!--Device-inputMethod-function switchInputMethod(target: InputMethodProperty): Promise<boolean>--><!--Device-inputMethod-function switchInputMethod(target: InputMethodProperty): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | InputMethodProperty | Yes | indicates the target input method. |
+| target | [InputMethodProperty](arkts-ime-inputmethodproperty-i.md) | Yes | indicates the target input method. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | the promise returned by the function. |
 
 **Error codes:**
 

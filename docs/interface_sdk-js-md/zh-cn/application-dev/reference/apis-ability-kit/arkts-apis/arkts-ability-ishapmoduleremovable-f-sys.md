@@ -1,5 +1,11 @@
 # isHapModuleRemovable（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { freeInstall } from '@kit.AbilityKit';
+```
+
 ## isHapModuleRemovable
 
 ```TypeScript
@@ -12,6 +18,8 @@ function isHapModuleRemovable(bundleName: string, moduleName: string, callback: 
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-freeInstall-function isHapModuleRemovable(bundleName: string, moduleName: string, callback: AsyncCallback<boolean>): void--><!--Device-freeInstall-function isHapModuleRemovable(bundleName: string, moduleName: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ function isHapModuleRemovable(bundleName: string, moduleName: string, callback: 
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
 | moduleName | string | 是 | 应用程序模块名称。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)。当获取成功时，err为undefined，data为bool值，true表示可以移除；false表示不可移除；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)。当获取成功时，err为undefined，data为bool值，true表示可以移除；false表示不可移除；否则为错误对象。 |
 
 **错误码：**
 
@@ -48,6 +56,8 @@ function isHapModuleRemovable(bundleName: string, moduleName: string): Promise<b
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-freeInstall-function isHapModuleRemovable(bundleName: string, moduleName: string): Promise<boolean>--><!--Device-freeInstall-function isHapModuleRemovable(bundleName: string, moduleName: string): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -63,7 +73,7 @@ function isHapModuleRemovable(bundleName: string, moduleName: string): Promise<b
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示可以移除；返回false表示不可移除。 |
+| Promise<boolean> | Promise对象。返回true表示可以移除；返回false表示不可移除。 |
 
 **错误码：**
 

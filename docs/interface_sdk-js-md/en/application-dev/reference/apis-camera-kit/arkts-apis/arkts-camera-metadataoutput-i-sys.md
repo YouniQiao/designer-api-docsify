@@ -6,6 +6,8 @@ Implements metadata streams. It inherits from [CameraOutput](arkts-camera-camera
 
 **Since:** 10
 
+<!--Device-camera-interface MetadataOutput extends CameraOutput--><!--Device-camera-interface MetadataOutput extends CameraOutput-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Adds the types of metadata objects to be detected.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-MetadataOutput-addMetadataObjectTypes(types: Array<MetadataObjectType>): void--><!--Device-MetadataOutput-addMetadataObjectTypes(types: Array<MetadataObjectType>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -34,7 +38,7 @@ Adds the types of metadata objects to be detected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| types | Array&lt;MetadataObjectType&gt; | Yes | Metadata object types, which are obtained through**getSupportedOutputCapability**. |
+| types | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<MetadataObjectType> | Yes | Metadata object types, which are obtained through **getSupportedOutputCapability**. |
 
 **Error codes:**
 
@@ -57,6 +61,8 @@ Removes the types of metadata objects to be detected.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-MetadataOutput-removeMetadataObjectTypes(types: Array<MetadataObjectType>): void--><!--Device-MetadataOutput-removeMetadataObjectTypes(types: Array<MetadataObjectType>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -65,7 +71,7 @@ Removes the types of metadata objects to be detected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| types | Array&lt;MetadataObjectType&gt; | Yes | Metadata object types, which are obtained through**getSupportedOutputCapability**. |
+| types | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<MetadataObjectType> | Yes | Metadata object types, which are obtained through **getSupportedOutputCapability**. |
 
 **Error codes:**
 

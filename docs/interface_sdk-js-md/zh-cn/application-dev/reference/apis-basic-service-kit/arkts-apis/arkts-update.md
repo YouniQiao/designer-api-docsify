@@ -4,19 +4,27 @@
 
 升级类型：SD卡升级、在线升级、恢复出厂升级。
 
-- SD卡升级依赖升级包和SD卡安装。
-- 在线升级依赖设备厂商部署的用于管理升级包的服务器。服务器由设备厂商部署，IP由调用者传入，请求的request接口是固定的，由设备厂商开发。
+- SD卡升级依赖升级包和SD卡安装。  
+- 在线升级依赖设备厂商部署的用于管理升级包的服务器。服务器由设备厂商部署，IP由调用者传入，请求的request接口是固定的，由设备厂商开发。  
 - 恢复出厂升级对象提供恢复出厂相关接口。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 本模块接口为系统接口。
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace update--><!--Device-unnamed-declare namespace update-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { update } from '@kit.BasicServicesKit';
+```
 
 ## 汇总
 

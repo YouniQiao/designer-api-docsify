@@ -20,15 +20,17 @@ Removes the applications that are not allowed to run by the current user or spec
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function removeDisallowedRunningBundlesSync(admin: Want, appIds: Array<string>, accountId?: number): void--><!--Device-applicationManager-function removeDisallowedRunningBundlesSync(admin: Want, appIds: Array<string>, accountId?: number): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| appIds | Array&lt;string&gt; | Yes | IDs of the applications to add.<br>Note: Since API version 21, elements in thearray can use **appId** and **appIdentifier**. Only the input **appId** or **appIdentifier** is removed.**appIdentifier** or **appId** of the same app will not be removed. In API version 20 and earlier versions,only **appId** can be transferred. |
-| accountId | number | No | Account ID, which must be greater than or equal to 0.<br> You can call[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2) of @ohos.account.osAccount to obtain the ID.<br> - If **accountId** is passed in, this API applies to the specifieduser.<br> - If **accountId** is not passed in, this API applies to the current user. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| appIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | IDs of the applications to add.<br>Note: Since API version 21, elements in the array can use **appId** and **appIdentifier**. Only the input **appId** or **appIdentifier** is removed.**appIdentifier** or **appId** of the same app will not be removed. In API version 20 and earlier versions,only **appId** can be transferred. |
+| accountId | number | No | Account ID, which must be greater than or equal to 0.<br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2) of @ohos.account.osAccount to obtain the ID.<br> - If **accountId** is passed in, this API applies to the specified user.<br> - If **accountId** is not passed in, this API applies to the current user. |
 
 **Error codes:**
 

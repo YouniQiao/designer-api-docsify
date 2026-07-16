@@ -20,19 +20,21 @@ Obtains the instance of profile.
 
 **Substitutes:** getProfileInstance
 
+<!--Device-bluetooth-function getProfile(profileId: ProfileId): A2dpSourceProfile | HandsFreeAudioGatewayProfile--><!--Device-bluetooth-function getProfile(profileId: ProfileId): A2dpSourceProfile | HandsFreeAudioGatewayProfile-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profileId | ProfileId | Yes | The profile id.. |
+| profileId | [ProfileId](arkts-connectivity-profileid-e.md) | Yes | The profile id.. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| A2dpSourceProfile | Returns instance of profile. |
+| [A2dpSourceProfile](arkts-connectivity-a2dpsourceprofile-i.md) | Returns instance of profile. |
 
 **Example**
 

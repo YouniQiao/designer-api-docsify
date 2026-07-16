@@ -16,6 +16,8 @@ Subscribes to the pre-download error events. This API uses an asynchronous callb
 
 **Since:** 23
 
+<!--Device-cacheDownload-function onDownloadError(url: string, callback: Callback<DownloadError>): void--><!--Device-cacheDownload-function onDownloadError(url: string, callback: Callback<DownloadError>): void-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **Parameters:**
@@ -23,7 +25,7 @@ Subscribes to the pre-download error events. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL to be registered, with a maximum of 8192 bytes. |
-| callback | Callback&lt;DownloadError&gt; | Yes | Callback used to return the error information about the pre-download. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DownloadError> | Yes | Callback used to return the error information about the pre-download. |
 
 **Example**
 

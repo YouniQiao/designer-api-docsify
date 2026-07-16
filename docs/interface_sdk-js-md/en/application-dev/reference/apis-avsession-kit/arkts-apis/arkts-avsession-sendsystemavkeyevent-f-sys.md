@@ -18,6 +18,8 @@ Send system media key event.The system automatically selects the recipient.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function sendSystemAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void--><!--Device-avSession-function sendSystemAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Send system media key event.The system automatically selects the recipient.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | KeyEvent | Yes | The key event to be sent |
-| callback | AsyncCallback&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| event | [KeyEvent](../../apis-arkui/arkts-components/arkts-arkui-keyevent-i.md) | Yes | The key event to be sent |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -66,6 +68,8 @@ Send system media key event.The system automatically selects the recipient.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function sendSystemAVKeyEvent(event: KeyEvent): Promise<void>--><!--Device-avSession-function sendSystemAVKeyEvent(event: KeyEvent): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -74,13 +78,13 @@ Send system media key event.The system automatically selects the recipient.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | KeyEvent | Yes | The key event to be sent |
+| event | [KeyEvent](../../apis-arkui/arkts-components/arkts-arkui-keyevent-i.md) | Yes | The key event to be sent |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 **Error codes:**
 

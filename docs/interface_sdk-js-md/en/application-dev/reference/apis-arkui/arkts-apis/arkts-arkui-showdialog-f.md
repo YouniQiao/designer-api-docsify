@@ -14,18 +14,11 @@ function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDial
 
 Creates and displays a dialog box. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> - This API is supported since API version 9 and deprecated since API version 18.
-You are advised to use [showDialog](arkts-apis-uicontext-promptaction.md#showdialog) instead.
-Before calling this API, you need to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object
-using the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) method
-in [UIContext](arkts-apis-uicontext-uicontext.md). Directly using **showDialog** can lead to the issue
-of [ambiguous UI context](../../ui/arkts-global-interface.md#ambiguous-ui-context).
->
-> - Since API version 10, you can use the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) API
-in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md)
-object associated with the current UI context.
+> **NOTE**  
+>  
+> - This API is supported since API version 9 and deprecated since API version 18.You are advised to use [showDialog](arkts-apis-uicontext-promptaction.md#showdialog) instead.Before calling this API, you need to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) method in [UIContext](arkts-apis-uicontext-uicontext.md). Directly using **showDialog** can lead to the issue of [ambiguous UI context](../../ui/arkts-global-interface.md#ambiguous-ui-context).  
+>  
+> - Since API version 10, you can use the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) API in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md)object associated with the current UI context.
 
 **Since:** 9
 
@@ -35,14 +28,16 @@ object associated with the current UI context.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-promptAction-function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDialogSuccessResponse>): void--><!--Device-promptAction-function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDialogSuccessResponse>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ShowDialogOptions | Yes | Dialog box configuration options. |
-| callback | AsyncCallback&lt;ShowDialogSuccessResponse&gt; | Yes | Callback used to return the result.On success, **err** is **undefined** and **data** contains the dialog box response.On failure, **err** provides error details. |
+| options | [ShowDialogOptions](arkts-arkui-showdialogoptions-i.md) | Yes | Dialog box configuration options. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ShowDialogSuccessResponse> | Yes | Callback used to return the result.On success, **err** is **undefined** and **data** contains the dialog box response.On failure, **err** provides error details. |
 
 **Error codes:**
 
@@ -326,17 +321,11 @@ function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessRespon
 
 Creates and displays a dialog box in the given settings. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - This API is supported since API version 9 and deprecated since API version 18.
-You are advised to use [showDialog](arkts-apis-uicontext-promptaction.md#showdialog-1) instead.
-Before calling this API, you need to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object
-using the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) method in [UIContext](arkts-apis-uicontext-uicontext.md).
-Directly using **showDialog** can lead to the issue of [ambiguous UI context](../../ui/arkts-global-interface.md#ambiguous-ui-context).
->
-> - Since API version 10, you can use the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) API
-in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md)
-object associated with the current UI context.
+> **NOTE**  
+>  
+> - This API is supported since API version 9 and deprecated since API version 18.You are advised to use [showDialog](arkts-apis-uicontext-promptaction.md#showdialog-1) instead.Before calling this API, you need to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) method in [UIContext](arkts-apis-uicontext-uicontext.md).Directly using **showDialog** can lead to the issue of [ambiguous UI context](../../ui/arkts-global-interface.md#ambiguous-ui-context).  
+>  
+> - Since API version 10, you can use the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) API in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md)object associated with the current UI context.
 
 **Since:** 9
 
@@ -346,19 +335,21 @@ object associated with the current UI context.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-promptAction-function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessResponse>--><!--Device-promptAction-function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessResponse>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ShowDialogOptions | Yes | Dialog box configuration options. |
+| options | [ShowDialogOptions](arkts-arkui-showdialogoptions-i.md) | Yes | Dialog box configuration options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ShowDialogSuccessResponse&gt; | Promise that returns the dialog box response. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ShowDialogSuccessResponse> | Promise that returns the dialog box response. |
 
 **Error codes:**
 

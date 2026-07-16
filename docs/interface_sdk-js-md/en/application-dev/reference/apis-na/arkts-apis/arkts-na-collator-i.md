@@ -1,10 +1,14 @@
 # Collator
 
+<!--Device-Intl-interface Collator--><!--Device-Intl-interface Collator-End-->
+
 ## compare
 
 ```TypeScript
 compare(x: string, y: string): number
 ```
+
+<!--Device-Collator-compare(x: string, y: string): number--><!--Device-Collator-compare(x: string, y: string): number-End-->
 
 **Parameters:**
 
@@ -25,9 +29,11 @@ compare(x: string, y: string): number
 resolvedOptions(): ResolvedCollatorOptions
 ```
 
+<!--Device-Collator-resolvedOptions(): ResolvedCollatorOptions--><!--Device-Collator-resolvedOptions(): ResolvedCollatorOptions-End-->
+
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ResolvedCollatorOptions |  |
+| [ResolvedCollatorOptions](arkts-na-resolvedcollatoroptions-i.md) |  |
 

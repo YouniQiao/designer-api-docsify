@@ -1,16 +1,20 @@
 # SymbolDateTimeFormat
 
-提供自定义时间日期符号的能力。继承自
-[Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)，
-支持
-[Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
-的方法。
+提供自定义时间日期符号的能力。继承自[Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)，支持[Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)的方法。
 
 **继承/实现关系：** SymbolDateTimeFormat extends [Intl.DateTimeFormat](Intl.DateTimeFormat)
 
 **起始版本：** 26.0.0
 
+<!--Device-i18n-export class SymbolDateTimeFormat extends Intl.DateTimeFormat--><!--Device-i18n-export class SymbolDateTimeFormat extends Intl.DateTimeFormat-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
 
 ## constructor
 
@@ -24,7 +28,9 @@ public constructor(locale?: Intl.Locale, options?: SymbolDateTimeFormatOptions)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SymbolDateTimeFormat-public constructor(locale?: Intl.Locale, options?: SymbolDateTimeFormatOptions)--><!--Device-SymbolDateTimeFormat-public constructor(locale?: Intl.Locale, options?: SymbolDateTimeFormatOptions)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -33,7 +39,7 @@ public constructor(locale?: Intl.Locale, options?: SymbolDateTimeFormatOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | locale | Intl.Locale | 否 | 区域对象。默认值：系统区域对象。 |
-| options | SymbolDateTimeFormatOptions | 否 | 自定义符号时间日期格式化的配置项。默认值：区域对象默认的符号。 |
+| options | [SymbolDateTimeFormatOptions](arkts-localization-symboldatetimeformatoptions-i.md) | 否 | 自定义符号时间日期格式化的配置项。默认值：区域对象默认的符号。 |
 
 **错误码：**
 
@@ -53,7 +59,9 @@ public format(date?: Date | number): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SymbolDateTimeFormat-public format(date?: Date | number): string--><!--Device-SymbolDateTimeFormat-public format(date?: Date | number): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -81,7 +89,9 @@ public formatRange(startDate: Date | number | bigint, endDate: Date | number | b
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SymbolDateTimeFormat-public formatRange(startDate: Date | number | bigint, endDate: Date | number | bigint): string--><!--Device-SymbolDateTimeFormat-public formatRange(startDate: Date | number | bigint, endDate: Date | number | bigint): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -111,7 +121,11 @@ public formatRangeToParts(startDate: Date | number | bigint, endDate: Date | num
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SymbolDateTimeFormat-public formatRangeToParts(startDate: Date | number | bigint, endDate: Date | number | bigint):
+      Intl.DateTimeRangeFormatPart[]--><!--Device-SymbolDateTimeFormat-public formatRangeToParts(startDate: Date | number | bigint, endDate: Date | number | bigint):
+      Intl.DateTimeRangeFormatPart[]-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -140,7 +154,9 @@ public formatToParts(date?: Date | number): Intl.DateTimeFormatPart[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SymbolDateTimeFormat-public formatToParts(date?: Date | number): Intl.DateTimeFormatPart[]--><!--Device-SymbolDateTimeFormat-public formatToParts(date?: Date | number): Intl.DateTimeFormatPart[]-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -168,7 +184,9 @@ public parse(text: string, lenientMode: boolean): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SymbolDateTimeFormat-public parse(text: string, lenientMode: boolean): number--><!--Device-SymbolDateTimeFormat-public parse(text: string, lenientMode: boolean): number-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -203,7 +221,9 @@ public resolvedOptions(): ResolvedSymbolDateTimeFormatOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SymbolDateTimeFormat-public resolvedOptions(): ResolvedSymbolDateTimeFormatOptions--><!--Device-SymbolDateTimeFormat-public resolvedOptions(): ResolvedSymbolDateTimeFormatOptions-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -211,5 +231,5 @@ public resolvedOptions(): ResolvedSymbolDateTimeFormatOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| ResolvedSymbolDateTimeFormatOptions | 自定义符号时间日期格式化对象配置项的解析结果。 |
+| [ResolvedSymbolDateTimeFormatOptions](arkts-localization-resolvedsymboldatetimeformatoptions-i.md) | 自定义符号时间日期格式化对象配置项的解析结果。 |
 

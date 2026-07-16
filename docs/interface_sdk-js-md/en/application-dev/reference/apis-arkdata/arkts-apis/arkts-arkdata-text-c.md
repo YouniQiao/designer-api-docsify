@@ -1,13 +1,12 @@
 # Text
 
-Represents the text data. It is a child class of [UnifiedRecord](arkts-arkdata-unifiedrecord-c.md) and a base
-class of text data. You are advised to use the child class of **Text**, for example,
-[PlainText](arkts-arkdata-plaintext-c.md), [Hyperlink](arkts-arkdata-hyperlink-c.md), and
-[HTML](arkts-arkdata-html-c.md), to describe data.
+Represents the text data. It is a child class of [UnifiedRecord](arkts-arkdata-unifiedrecord-c.md) and a base class of text data. You are advised to use the child class of **Text**, for example,[PlainText](arkts-arkdata-plaintext-c.md), [Hyperlink](arkts-arkdata-hyperlink-c.md), and [HTML](arkts-arkdata-html-c.md), to describe data.
 
 **Inheritance/Implementation:** Text extends [UnifiedRecord](arkts-arkdata-unifiedrecord-c.md)
 
 **Since:** 10
+
+<!--Device-unifiedDataChannel-class Text extends UnifiedRecord--><!--Device-unifiedDataChannel-class Text extends UnifiedRecord-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -23,8 +22,7 @@ import { unifiedDataChannel } from '@kit.ArkData';
 details?: Record<string, string>
 ```
 
-A dictionary type object, where both the key and value are of the string type and are used to describe the text
-content. For example, a data object with the following content can be created to describe a text file:
+A dictionary type object, where both the key and value are of the string type and are used to describe the text content. For example, a data object with the following content can be created to describe a text file:
 
 {
 
@@ -43,6 +41,8 @@ The default value is an empty dictionary object.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Text-details?: Record<string, string>--><!--Device-Text-details?: Record<string, string>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 

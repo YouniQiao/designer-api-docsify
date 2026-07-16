@@ -4,6 +4,8 @@ Used to indicate the call state of the current call.
 
 **Since:** 11
 
+<!--Device-avSession-interface AVCallState--><!--Device-avSession-interface AVCallState-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Current muted status.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVCallState-muted: boolean--><!--Device-AVCallState-muted: boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## state
@@ -41,6 +45,8 @@ Current call state. See {@link CallState}
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCallState-state: CallState--><!--Device-AVCallState-state: CallState-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 

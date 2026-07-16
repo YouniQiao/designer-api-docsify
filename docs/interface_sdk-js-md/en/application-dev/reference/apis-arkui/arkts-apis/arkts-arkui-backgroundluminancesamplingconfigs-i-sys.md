@@ -4,6 +4,8 @@ Sets the background luminance sampling parameters.
 
 **Since:** 23
 
+<!--Device-unnamed-export interface BackgroundLuminanceSamplingConfigs--><!--Device-unnamed-export interface BackgroundLuminanceSamplingConfigs-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -20,8 +22,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 brightThreshold?: number
 ```
 
-Light color brightness threshold. The value must be an integer in the range of [0, 255]. The dark color brightness
-threshold must be less than the light color brightness threshold.
+Light color brightness threshold. The value must be an integer in the range of [0, 255]. The dark color brightness threshold must be less than the light color brightness threshold.
 
 **Type:** number
 
@@ -30,6 +31,8 @@ threshold must be less than the light color brightness threshold.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BackgroundLuminanceSamplingConfigs-brightThreshold?: number--><!--Device-BackgroundLuminanceSamplingConfigs-brightThreshold?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -41,8 +44,7 @@ threshold must be less than the light color brightness threshold.
 darkThreshold?: number
 ```
 
-Dark color brightness threshold. The value must be an integer in the range of [0, 255]. The dark color brightness
-threshold must be less than the light color brightness threshold.
+Dark color brightness threshold. The value must be an integer in the range of [0, 255]. The dark color brightness threshold must be less than the light color brightness threshold.
 
 **Type:** number
 
@@ -51,6 +53,8 @@ threshold must be less than the light color brightness threshold.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BackgroundLuminanceSamplingConfigs-darkThreshold?: number--><!--Device-BackgroundLuminanceSamplingConfigs-darkThreshold?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,8 +66,7 @@ threshold must be less than the light color brightness threshold.
 region?: Edges<LengthMetrics>
 ```
 
-Sample area offset relative to the component, calculated from the component's upper left corner as the reference
-point.
+Sample area offset relative to the component, calculated from the component's upper left corner as the reference point.
 
 The component's own area is used by default.
 
@@ -72,6 +75,8 @@ The component's own area is used by default.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BackgroundLuminanceSamplingConfigs-region?: Edges<LengthMetrics>--><!--Device-BackgroundLuminanceSamplingConfigs-region?: Edges<LengthMetrics>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,6 +97,8 @@ Color sampling interval, in milliseconds. The minimum value is 180 ms.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BackgroundLuminanceSamplingConfigs-samplingInterval?: number--><!--Device-BackgroundLuminanceSamplingConfigs-samplingInterval?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

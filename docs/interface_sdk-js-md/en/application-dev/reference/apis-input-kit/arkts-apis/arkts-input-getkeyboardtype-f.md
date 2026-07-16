@@ -12,11 +12,11 @@ import { inputDevice } from '@kit.InputKit';
 function getKeyboardType(deviceId: number, callback: AsyncCallback<KeyboardType>): void
 ```
 
-Obtains the keyboard type of the input device, such as full keyboard and numeric keypad. The keyboard type of the
-input device is subject to the result returned by this API. This API uses an asynchronous callback to return the
-result.
+Obtains the keyboard type of the input device, such as full keyboard and numeric keypad. The keyboard type of the input device is subject to the result returned by this API. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-inputDevice-function getKeyboardType(deviceId: int, callback: AsyncCallback<KeyboardType>): void--><!--Device-inputDevice-function getKeyboardType(deviceId: int, callback: AsyncCallback<KeyboardType>): void-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -24,8 +24,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | number | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled orrestarted, its ID may change. |
-| callback | AsyncCallback&lt;KeyboardType&gt; | Yes | Callback function. If the query is successful, **err** is**undefined**, and **data** is the keyboard type of the input device. Otherwise, **err** is an error object. |
+| deviceId | number | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<KeyboardType> | Yes | Callback function. If the query is successful, **err** is **undefined**, and **data** is the keyboard type of the input device. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -77,19 +77,21 @@ Obtains the keyboard type of an input device. This API uses a promise to return 
 
 **Since:** 9
 
+<!--Device-inputDevice-function getKeyboardType(deviceId: int): Promise<KeyboardType>--><!--Device-inputDevice-function getKeyboardType(deviceId: int): Promise<KeyboardType>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | number | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled orrestarted, its ID may change. |
+| deviceId | number | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KeyboardType&gt; | Promise used to return the keyboard type of the input device. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<KeyboardType> | Promise used to return the keyboard type of the input device. |
 
 **Error codes:**
 

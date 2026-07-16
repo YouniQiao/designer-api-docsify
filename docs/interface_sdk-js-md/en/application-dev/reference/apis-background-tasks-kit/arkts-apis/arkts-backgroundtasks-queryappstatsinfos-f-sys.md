@@ -20,6 +20,8 @@ This method queries usage information at the {@link #BY_OPTIMIZED} interval by d
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryAppStatsInfos(begin: long, end: long): Promise<AppStatsMap>--><!--Device-usageStatistics-function queryAppStatsInfos(begin: long, end: long): Promise<AppStatsMap>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -35,7 +37,7 @@ This method queries usage information at the {@link #BY_OPTIMIZED} interval by d
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AppStatsMap&gt; | the promise returned by queryAppStatsInfos.the {@link AppStatsMap} objects containing the usage information about each application. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AppStatsMap> | the promise returned by queryAppStatsInfos.the {@link AppStatsMap} objects containing the usage information about each application. |
 
 **Error codes:**
 

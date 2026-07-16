@@ -1,5 +1,11 @@
 # attestKeyItem
 
+## 导入模块
+
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+```
+
 ## attestKeyItem
 
 ```TypeScript
@@ -8,15 +14,16 @@ function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 
 获取密钥证书。使用callback异步回调。
 
-<!--RP6-->
-> **说明：**
->
-> 在使用非匿名证书密钥证明时生成的证书链可能包含设备标识符（具体实现需向厂商确认），如包含设备标识符，其使用、留存、销毁由开发者决定，建议开发者在其隐私声明中对其使用目的、留存策略和销毁方式进行说明。
-<!--RP6End-->
+<!--RP6-->  
+> **说明：**  
+>  
+> 在使用非匿名证书密钥证明时生成的证书链可能包含设备标识符（具体实现需向厂商确认），如包含设备标识符，其使用、留存、销毁由开发者决定，建议开发者在其隐私声明中对其使用目的、留存策略和销毁方式进行说明。<!--RP6End-->
 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.ATTEST_KEY
+
+<!--Device-huks-function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void--><!--Device-huks-function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
@@ -25,8 +32,8 @@ function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 密钥别名，存放待获取证书密钥的别名。 |
-| options | HuksOptions | 是 | 用于获取证书时指定所需参数与数据。 |
-| callback | AsyncCallback&lt;HuksReturnResult&gt; | 是 | 回调函数。当获取密钥证书成功时，err为undefined，data为获取到的HuksReturnResult；否则为错误对象。 |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | 是 | 用于获取证书时指定所需参数与数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<HuksReturnResult> | 是 | 回调函数。当获取密钥证书成功时，err为undefined，data为获取到的HuksReturnResult；否则为错误对象。 |
 
 **错误码：**
 
@@ -151,15 +158,16 @@ function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksRetu
 
 获取密钥证书。使用Promise异步回调。
 
-<!--RP6-->
-> **说明：**
->
-> 在使用非匿名证书密钥证明时生成的证书链可能包含设备标识符（具体实现需向厂商确认），如包含设备标识符，其使用、留存、销毁由开发者决定，建议开发者在其隐私声明中对其使用目的、留存策略和销毁方式进行说明。
-<!--RP6End-->
+<!--RP6-->  
+> **说明：**  
+>  
+> 在使用非匿名证书密钥证明时生成的证书链可能包含设备标识符（具体实现需向厂商确认），如包含设备标识符，其使用、留存、销毁由开发者决定，建议开发者在其隐私声明中对其使用目的、留存策略和销毁方式进行说明。<!--RP6End-->
 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.ATTEST_KEY
+
+<!--Device-huks-function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>--><!--Device-huks-function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
@@ -168,13 +176,13 @@ function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksRetu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 密钥别名，存放待获取证书密钥的别名。 |
-| options | HuksOptions | 是 | 用于获取证书时指定所需参数与数据。 |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | 是 | 用于获取证书时指定所需参数与数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | Promise对象，返回调用接口的结果。当调用成功时，HuksReturnResult的certChains成员为获取到的证书链。 |
+| Promise<HuksReturnResult> | Promise对象，返回调用接口的结果。当调用成功时，HuksReturnResult的certChains成员为获取到的证书链。 |
 
 **错误码：**
 

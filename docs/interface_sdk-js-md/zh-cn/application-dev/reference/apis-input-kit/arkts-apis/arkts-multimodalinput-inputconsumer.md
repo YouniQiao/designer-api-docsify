@@ -2,13 +2,21 @@
 
 全局快捷键订阅模块，用于处理组合按键的订阅，本模块也支持音量键拦截监听能力。
 
-> **说明：**
->
+> **说明：**  
+>  
 > - 全局快捷键指由系统或应用定义的组合按键，系统快捷键指由系统定义的全局快捷键，应用快捷键指由应用定义的全局快捷键。
 
 **起始版本：** 14
 
+<!--Device-unnamed-declare namespace inputConsumer--><!--Device-unnamed-declare namespace inputConsumer-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
+
+## 导入模块
+
+```TypeScript
+import { inputConsumer } from '@kit.InputKit';
+```
 
 ## 汇总
 
@@ -31,7 +39,7 @@
 | [off](arkts-input-off-f-sys.md#off-1) | 取消订阅系统快捷键。使用callback异步回调。 |
 | [offKey](arkts-input-offkey-f-sys.md#offkey-1) | 取消订阅系统快捷键。使用callback异步回调。 |
 | [on](arkts-input-on-f-sys.md#on-1) | 订阅系统快捷键，使用callback异步回调。 |
-| [onKey](arkts-input-onkey-f-sys.md#onkey-1) | 订阅组合按键（按键命令模式），支持通过triggerType指定不同的触发模式。当满足条件的组合按键输入事件发生时，使用callback异步回调。与 [inputConsumer.on('key')](arkts-input-on-f-sys.md#on-1)现有接口的区别：- 本接口的keyOptions支持triggerType参数，可选择按键按下触发、重复按下触发、重复按下或抬起均会触发等模式。- 本接口回调参数为KeyCommandCallback类型，同时接收KeyOptions和KeyEvent对象。- 本接口采用事件消费机制，可通过事件消费阻止按键事件向后传递。 |
+| [onKey](arkts-input-onkey-f-sys.md#onkey-1) | 订阅组合按键（按键命令模式），支持通过triggerType指定不同的触发模式。当满足条件的组合按键输入事件发生时，使用callback异步回调。与[inputConsumer.on('key')](arkts-input-on-f-sys.md#on-1)现有接口的区别：- 本接口的keyOptions支持triggerType参数，可选择按键按下触发、重复按下触发、重复按下或抬起均会触发等模式。 - 本接口回调参数为KeyCommandCallback类型，同时接收KeyOptions和KeyEvent对象。 - 本接口采用事件消费机制，可通过事件消费阻止按键事件向后传递。 |
 | [setShieldStatus](arkts-input-setshieldstatus-f-sys.md#setshieldstatus-1) | 设置系统快捷键屏蔽类型。 |
 <!--DelEnd-->
 

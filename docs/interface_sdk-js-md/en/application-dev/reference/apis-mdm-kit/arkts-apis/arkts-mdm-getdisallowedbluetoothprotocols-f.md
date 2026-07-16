@@ -20,20 +20,22 @@ Obtains the disallowed Bluetooth protocols of a specified user.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-bluetoothManager-function getDisallowedBluetoothProtocols(admin: Want, accountId: number): Array<Protocol>--><!--Device-bluetoothManager-function getDisallowedBluetoothProtocols(admin: Want, accountId: number): Array<Protocol>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| accountId | number | Yes | Account ID, which must be greater than or equal to 0.<br> You can call[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2) of @ohos.account.osAccount to obtain the account ID. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| accountId | number | Yes | Account ID, which must be greater than or equal to 0.<br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2) of @ohos.account.osAccount to obtain the account ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Protocol&gt; | Array of disallowed Bluetooth protocols. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Protocol> | Array of disallowed Bluetooth protocols. |
 
 **Error codes:**
 
@@ -80,6 +82,8 @@ Gets protocols from the list of bluetooth server that are disallowed to use.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-bluetoothManager-function getDisallowedBluetoothProtocols(admin: Want | null, accountId: number, policy: TransferPolicy): Array<Protocol>--><!--Device-bluetoothManager-function getDisallowedBluetoothProtocols(admin: Want | null, accountId: number, policy: TransferPolicy): Array<Protocol>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
@@ -88,13 +92,13 @@ Gets protocols from the list of bluetooth server that are disallowed to use.
 | --- | --- | --- | --- |
 | admin | Want \| null | Yes | admin indicates the enterprise admin extension ability information. |
 | accountId | number | Yes | accountId indicates the local ID of the OS account<br>The value must be an integer greater than or equal to 0. |
-| policy | TransferPolicy | Yes | policy indicates the policy of transfer. |
+| policy | [TransferPolicy](arkts-mdm-transferpolicy-e.md) | Yes | policy indicates the policy of transfer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Protocol&gt; | protocol of the bluetooth list. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Protocol> | protocol of the bluetooth list. |
 
 **Error codes:**
 

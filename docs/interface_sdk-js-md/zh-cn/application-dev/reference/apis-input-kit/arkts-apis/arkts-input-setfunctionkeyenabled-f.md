@@ -1,5 +1,11 @@
 # setFunctionKeyEnabled
 
+## 导入模块
+
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+```
+
 ## setFunctionKeyEnabled
 
 ```TypeScript
@@ -12,20 +18,22 @@ function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Prom
 
 **需要权限：** ohos.permission.INPUT_KEYBOARD_CONTROLLER
 
+<!--Device-inputDevice-function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Promise<void>--><!--Device-inputDevice-function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| functionKey | FunctionKey | 是 | 需要设置的功能键类型。 |
+| functionKey | [FunctionKey](arkts-input-functionkey-e.md) | 是 | 需要设置的功能键类型。 |
 | enabled | boolean | 是 | 功能键使能状态。取值为true表示使能功能键，取值为false表示不使能功能键。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

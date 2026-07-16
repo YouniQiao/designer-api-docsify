@@ -12,13 +12,13 @@ import { tag } from '@kit.ConnectivityKit';
 function getNdefFormatable(tagInfo: TagInfo): NdefFormatableTag
 ```
 
-Obtains an {@link NdefFormatableTag} object based on the tag information.
-During tag reading, if the tag supports the NDEF Formatable technology,
-an {@link NdefFormatableTag} object will be created based on the tag information.
+Obtains an {@link NdefFormatableTag} object based on the tag information.During tag reading, if the tag supports the NDEF Formatable technology,an {@link NdefFormatableTag} object will be created based on the tag information.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-tag-function getNdefFormatable(tagInfo: TagInfo): NdefFormatableTag--><!--Device-tag-function getNdefFormatable(tagInfo: TagInfo): NdefFormatableTag-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -26,13 +26,13 @@ an {@link NdefFormatableTag} object will be created based on the tag information
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tagInfo | TagInfo | Yes | Indicates the dispatched tag information. |
+| tagInfo | [TagInfo](arkts-connectivity-taginfo-i.md) | Yes | Indicates the dispatched tag information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| NdefFormatableTag | The {@link NdefFormatableTag} object. |
+| [NdefFormatableTag](arkts-connectivity-ndefformatabletag-t.md) | The {@link NdefFormatableTag} object. |
 
 **Error codes:**
 

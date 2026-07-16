@@ -1,5 +1,11 @@
 # getDeviceEncryptionStatus（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+```
+
 ## getDeviceEncryptionStatus
 
 ```TypeScript
@@ -18,6 +24,8 @@ function getDeviceEncryptionStatus(admin: Want): DeviceEncryptionStatus
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-securityManager-function getDeviceEncryptionStatus(admin: Want): DeviceEncryptionStatus--><!--Device-securityManager-function getDeviceEncryptionStatus(admin: Want): DeviceEncryptionStatus-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -26,13 +34,13 @@ function getDeviceEncryptionStatus(admin: Want): DeviceEncryptionStatus
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DeviceEncryptionStatus | 文件加密状态结构体，现只含有是否进行加密字段（bool）。 |
+| [DeviceEncryptionStatus](arkts-mdm-deviceencryptionstatus-i-sys.md) | 文件加密状态结构体，现只含有是否进行加密字段（bool）。 |
 
 **错误码：**
 
@@ -40,7 +48,7 @@ function getDeviceEncryptionStatus(admin: Want): DeviceEncryptionStatus
 | --- | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 

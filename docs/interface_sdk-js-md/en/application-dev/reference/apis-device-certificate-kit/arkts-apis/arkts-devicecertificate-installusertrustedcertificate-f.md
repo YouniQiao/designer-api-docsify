@@ -20,19 +20,21 @@ Install the user CA certificate. Use Promise asynchronous callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-certificateManager-function installUserTrustedCertificate(certificate: CertBlob) : Promise<CMResult>--><!--Device-certificateManager-function installUserTrustedCertificate(certificate: CertBlob) : Promise<CMResult>-End-->
+
 **System capability:** SystemCapability.Security.CertificateManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| certificate | CertBlob | Yes | Certificate information. |
+| certificate | [CertBlob](arkts-devicecertificate-certblob-i.md) | Yes | Certificate information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **uri** in the[CMResult](arkts-devicecertificate-cmresult-i.md) object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CMResult> | Promise used to return the operation result, that is, **uri** in the [CMResult](arkts-devicecertificate-cmresult-i.md) object. |
 
 **Error codes:**
 

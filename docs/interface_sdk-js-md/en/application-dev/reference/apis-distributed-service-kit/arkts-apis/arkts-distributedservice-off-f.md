@@ -20,6 +20,8 @@ Unsubscribes from data receiving events.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-proxyChannelManager-function off(type: 'receiveData', channelId: number, callback?: Callback<DataInfo>): void--><!--Device-proxyChannelManager-function off(type: 'receiveData', channelId: number, callback?: Callback<DataInfo>): void-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Parameters:**
@@ -28,7 +30,7 @@ Unsubscribes from data receiving events.
 | --- | --- | --- | --- |
 | type | 'receiveData' | Yes | Event type. The value **receiveData** indicates the data receiving event. |
 | channelId | number | Yes | Channel ID obtained when the proxy channel is opened. |
-| callback | Callback&lt;DataInfo&gt; | No | Registered callback, If the value is empty, **undefined**, or **null**,all callbacks of data receiving events are unregistered. If the value is not empty, the last registeredcallback is used. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DataInfo> | No | Registered callback, If the value is empty, **undefined**, or **null**,all callbacks of data receiving events are unregistered. If the value is not empty, the last registered callback is used. |
 
 **Error codes:**
 
@@ -83,15 +85,17 @@ Unsubscribes from channel state change events.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-proxyChannelManager-function off(type: 'channelStateChange', channelId: number, callback?: Callback<ChannelStateInfo>): void--><!--Device-proxyChannelManager-function off(type: 'channelStateChange', channelId: number, callback?: Callback<ChannelStateInfo>): void-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'channelStateChange' | Yes | Event type. The value **channelStateChange** indicates the channel statechange event. |
+| type | 'channelStateChange' | Yes | Event type. The value **channelStateChange** indicates the channel state change event. |
 | channelId | number | Yes | Channel ID obtained when the proxy channel is opened. |
-| callback | Callback&lt;ChannelStateInfo&gt; | No | Registered callback, If the value is empty, **undefined**, or**null**, all callbacks of data receiving events are unregistered. If the value is not empty, the lastregistered callback is used. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ChannelStateInfo> | No | Registered callback, If the value is empty, **undefined**, or **null**, all callbacks of data receiving events are unregistered. If the value is not empty, the last registered callback is used. |
 
 **Error codes:**
 

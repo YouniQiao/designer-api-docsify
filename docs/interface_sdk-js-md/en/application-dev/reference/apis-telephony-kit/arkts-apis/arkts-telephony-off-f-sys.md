@@ -18,6 +18,8 @@ Unsubscribe from imsRegStateChange event.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-radio-function off(type: 'imsRegStateChange', slotId: int, imsType: ImsServiceType, callback?: Callback<ImsRegInfo>): void--><!--Device-radio-function off(type: 'imsRegStateChange', slotId: int, imsType: ImsServiceType, callback?: Callback<ImsRegInfo>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -28,8 +30,8 @@ Unsubscribe from imsRegStateChange event.
 | --- | --- | --- | --- |
 | type | 'imsRegStateChange' | Yes | Event type. Indicates the imsRegStateChange event to unsubscribe from. |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| imsType | ImsServiceType | Yes | Indicates the ims service type of the {@link ImsServiceType}. |
-| callback | Callback&lt;ImsRegInfo&gt; | No | Indicates the callback for gettingan instance of the {@link ImsRegInfo} class. |
+| imsType | [ImsServiceType](arkts-telephony-imsservicetype-e-sys.md) | Yes | Indicates the ims service type of the {@link ImsServiceType}. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ImsRegInfo> | No | Indicates the callback for getting an instance of the {@link ImsRegInfo} class. |
 
 **Error codes:**
 

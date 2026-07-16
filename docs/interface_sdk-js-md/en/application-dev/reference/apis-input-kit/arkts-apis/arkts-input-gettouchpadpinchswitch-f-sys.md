@@ -16,6 +16,8 @@ Obtains the touchpad pinch switch state. This API uses an asynchronous callback 
 
 **Since:** 10
 
+<!--Device-pointer-function getTouchpadPinchSwitch(callback: AsyncCallback<boolean>): void--><!--Device-pointer-function getTouchpadPinchSwitch(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Obtains the touchpad pinch switch state. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **state** indicates whether the touchpad pinch switch is enabled (**true**indicates yes and **false** indicates no; default value: **true**). Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **state** indicates whether the touchpad pinch switch is enabled (**true** indicates yes and **false** indicates no; default value: **true**). Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -76,6 +78,8 @@ Obtains the touchpad pinch switch state. This API uses a promise to return the r
 
 **Since:** 10
 
+<!--Device-pointer-function getTouchpadPinchSwitch(): Promise<boolean>--><!--Device-pointer-function getTouchpadPinchSwitch(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **System API:** This is a system API.
@@ -84,7 +88,7 @@ Obtains the touchpad pinch switch state. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the touchpadpinch switch is enabled, and the value **false** indicates that the touchpad pinch switch is disabled. Thedefault value is **true**. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** indicates that the touchpad pinch switch is enabled, and the value **false** indicates that the touchpad pinch switch is disabled. The default value is **true**. |
 
 **Error codes:**
 

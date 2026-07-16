@@ -12,12 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAdditionalInfo(bundleName: string): string
 ```
 
-Obtains additional information about a bundle in synchronous mode. The return value is the **additionalInfo** field
-value in [InstallParam](arkts-ability-installparam-i-sys.md) passed when **install** is called.
+Obtains additional information about a bundle in synchronous mode. The return value is the **additionalInfo** field value in [InstallParam](arkts-ability-installparam-i-sys.md) passed when **install** is called.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getAdditionalInfo(bundleName: string): string--><!--Device-bundleManager-function getAdditionalInfo(bundleName: string): string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

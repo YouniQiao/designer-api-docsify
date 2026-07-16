@@ -12,15 +12,17 @@ import { dialogRequest } from '@kit.AbilityKit';
 function getRequestInfo(want: Want): RequestInfo
 ```
 
-> **NOTE**
->
-> This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes,
-> the request information can be obtained from Want. If this API is used in other scenarios, no return value is
+> **NOTE**  
+>  
+> This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes,  
+> the request information can be obtained from Want. If this API is used in other scenarios, no return value is  
 > obtained.
 
 Obtains the request information from Want.
 
 **Since:** 9
+
+<!--Device-dialogRequest-function getRequestInfo(want: Want): RequestInfo--><!--Device-dialogRequest-function getRequestInfo(want: Want): RequestInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -28,13 +30,13 @@ Obtains the request information from Want.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want passed in the request for a modal dialog box. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want passed in the request for a modal dialog box. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RequestInfo | RequestInfo object obtained, which is used to bind a modal dialog box. |
+| [RequestInfo](arkts-ability-requestinfo-i.md) | RequestInfo object obtained, which is used to bind a modal dialog box. |
 
 **Error codes:**
 

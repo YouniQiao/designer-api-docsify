@@ -1,10 +1,10 @@
 # LinkIntentParamMapping
 
-LinkIntentParamMapping defines the mapping between intent parameters and URI information for the
-[@InsightIntentLink](../../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)
-decorator.
+LinkIntentParamMapping defines the mapping between intent parameters and URI information for the [@InsightIntentLink](../../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)decorator.
 
 **Since:** 20
+
+<!--Device-unnamed-declare interface LinkIntentParamMapping--><!--Device-unnamed-declare interface LinkIntentParamMapping-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -22,13 +22,9 @@ paramCategory?: LinkParamCategory
 
 Category of the intent parameter.
 
-If an intent parameter is of the [LINK](#linkparamcategory) category, the system retrieves **paramMappingName**
-corresponding to **paramName** and appends it to the URI as a key-value pair (where **key** is the value of
-**paramMappingName**, and **value** is the intent parameter value).
+If an intent parameter is of the [LINK](#linkparamcategory) category, the system retrieves **paramMappingName** corresponding to **paramName** and appends it to the URI as a key-value pair (where **key** is the value of **paramMappingName**, and **value** is the intent parameter value).
 
-If an intent parameter is of the [WANT](#linkparamcategory) category, the system retrieves **paramMappingName**
-corresponding to **paramName** and passes the mapping name and value using the **parameters** field in
-[Want](./js-apis-app-ability-want.md).
+If an intent parameter is of the [WANT](#linkparamcategory) category, the system retrieves **paramMappingName** corresponding to **paramName** and passes the mapping name and value using the **parameters** field in [Want](./js-apis-app-ability-want.md).
 
 **Type:** LinkParamCategory
 
@@ -37,6 +33,8 @@ corresponding to **paramName** and passes the mapping name and value using the *
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-LinkIntentParamMapping-paramCategory?: LinkParamCategory--><!--Device-LinkIntentParamMapping-paramCategory?: LinkParamCategory-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -56,6 +54,8 @@ Mapping name of the intent parameter.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-LinkIntentParamMapping-paramMappingName?: string--><!--Device-LinkIntentParamMapping-paramMappingName?: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## paramName
@@ -73,6 +73,8 @@ Name of the intent parameter.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-LinkIntentParamMapping-paramName: string--><!--Device-LinkIntentParamMapping-paramName: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

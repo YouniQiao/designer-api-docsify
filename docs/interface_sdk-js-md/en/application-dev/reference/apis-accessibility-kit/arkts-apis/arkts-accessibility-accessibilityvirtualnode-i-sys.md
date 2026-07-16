@@ -4,6 +4,8 @@ Defines the **AccessibilityVirtualNode**.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare interface AccessibilityVirtualNode--><!--Device-unnamed-export declare interface AccessibilityVirtualNode-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -14,14 +16,15 @@ Defines the **AccessibilityVirtualNode**.
 accessibilityFocused?: boolean
 ```
 
-Whether the accessibility virtual node is focused for accessibility purposes.
-The value **true** indicates that the element is focused, and **false** indicates the opposite.
+Whether the accessibility virtual node is focused for accessibility purposes.The value **true** indicates that the element is focused, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AccessibilityVirtualNode-accessibilityFocused?: boolean--><!--Device-AccessibilityVirtualNode-accessibilityFocused?: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -33,14 +36,15 @@ The value **true** indicates that the element is focused, and **false** indicate
 accessibilityGroup?: boolean
 ```
 
-Whether the accessibility virtual node is an accessibility group.
-The value **true** indicates that the element is an accessibility group, and **false** indicates the opposite.
+Whether the accessibility virtual node is an accessibility group.The value **true** indicates that the element is an accessibility group, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AccessibilityVirtualNode-accessibilityGroup?: boolean--><!--Device-AccessibilityVirtualNode-accessibilityGroup?: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -60,6 +64,8 @@ This property determines whether the component can be recognized by accessibilit
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AccessibilityVirtualNode-accessibilityLevel?: string--><!--Device-AccessibilityVirtualNode-accessibilityLevel?: string-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -78,6 +84,8 @@ Accessibility text information of an accessibility virtual node.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AccessibilityVirtualNode-accessibilityText?: string--><!--Device-AccessibilityVirtualNode-accessibilityText?: string-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -88,14 +96,15 @@ Accessibility text information of an accessibility virtual node.
 checkable?: boolean
 ```
 
-Whether the accessibility virtual node is checkable. The value **true** indicates that the node is checkable,
-and **false** indicates the opposite.
+Whether the accessibility virtual node is checkable. The value **true** indicates that the node is checkable,and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AccessibilityVirtualNode-checkable?: boolean--><!--Device-AccessibilityVirtualNode-checkable?: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -107,14 +116,15 @@ and **false** indicates the opposite.
 checked?: boolean
 ```
 
-Whether the accessibility virtual node is checked. The value **true** indicates that the node is checked,
-and **false** indicates the opposite.
+Whether the accessibility virtual node is checked. The value **true** indicates that the node is checked,and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AccessibilityVirtualNode-checked?: boolean--><!--Device-AccessibilityVirtualNode-checked?: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -134,6 +144,8 @@ List of child accessibility virtual node ids of a component.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AccessibilityVirtualNode-childNodeIds?: Array<long>--><!--Device-AccessibilityVirtualNode-childNodeIds?: Array<long>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -144,14 +156,15 @@ List of child accessibility virtual node ids of a component.
 clickable?: boolean
 ```
 
-Whether the accessibility virtual node is clickable. The value **true** indicates that the node is clickable,
-and **false** indicates the opposite.
+Whether the accessibility virtual node is clickable. The value **true** indicates that the node is clickable,and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AccessibilityVirtualNode-clickable?: boolean--><!--Device-AccessibilityVirtualNode-clickable?: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -171,6 +184,8 @@ Component type of the accessibility virtual node.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AccessibilityVirtualNode-customComponentType?: string--><!--Device-AccessibilityVirtualNode-customComponentType?: string-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -189,6 +204,8 @@ The id of accessibility element.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AccessibilityVirtualNode-elementId?: long--><!--Device-AccessibilityVirtualNode-elementId?: long-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -199,14 +216,15 @@ The id of accessibility element.
 enabled?: boolean
 ```
 
-Whether the accessibility virtual node is enabled. The value **true** indicates that the node is enabled,
-and **false** indicates the opposite.
+Whether the accessibility virtual node is enabled. The value **true** indicates that the node is enabled,and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AccessibilityVirtualNode-enabled?: boolean--><!--Device-AccessibilityVirtualNode-enabled?: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -226,6 +244,8 @@ Parent element id of the accessibility element.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AccessibilityVirtualNode-parentId?: long--><!--Device-AccessibilityVirtualNode-parentId?: long-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -244,6 +264,8 @@ Area of the accessibility virtual node.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AccessibilityVirtualNode-rect?: Rect--><!--Device-AccessibilityVirtualNode-rect?: Rect-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -254,14 +276,15 @@ Area of the accessibility virtual node.
 selected?: boolean
 ```
 
-Whether the accessibility virtual node is selected. The value **true** indicates that the node is selected,
-and **false** indicates the opposite.
+Whether the accessibility virtual node is selected. The value **true** indicates that the node is selected,and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AccessibilityVirtualNode-selected?: boolean--><!--Device-AccessibilityVirtualNode-selected?: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -281,6 +304,8 @@ Supported action names.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AccessibilityVirtualNode-supportedActionNames?: Array<string>--><!--Device-AccessibilityVirtualNode-supportedActionNames?: Array<string>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -298,6 +323,8 @@ Text of the accessibility virtual node.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AccessibilityVirtualNode-text?: string--><!--Device-AccessibilityVirtualNode-text?: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -317,6 +344,8 @@ Click position of the accessibility virtual node.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AccessibilityVirtualNode-touchPosition?: TouchPosition--><!--Device-AccessibilityVirtualNode-touchPosition?: TouchPosition-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -327,14 +356,15 @@ Click position of the accessibility virtual node.
 virtualNodeId: number
 ```
 
-ID of the accessibility virtual node.
-Default value: **-1**.
+ID of the accessibility virtual node.Default value: **-1**.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AccessibilityVirtualNode-virtualNodeId: long--><!--Device-AccessibilityVirtualNode-virtualNodeId: long-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 

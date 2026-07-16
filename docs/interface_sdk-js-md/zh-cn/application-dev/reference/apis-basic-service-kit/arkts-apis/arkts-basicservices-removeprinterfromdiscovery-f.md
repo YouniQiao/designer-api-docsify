@@ -1,5 +1,11 @@
 # removePrinterFromDiscovery
 
+## 导入模块
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+```
+
 ## removePrinterFromDiscovery
 
 ```TypeScript
@@ -11,6 +17,8 @@ function removePrinterFromDiscovery(printerId: string): Promise<void>
 **起始版本：** 14
 
 **需要权限：** ohos.permission.PRINT
+
+<!--Device-print-function removePrinterFromDiscovery(printerId: string): Promise<void>--><!--Device-print-function removePrinterFromDiscovery(printerId: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -24,7 +32,7 @@ function removePrinterFromDiscovery(printerId: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

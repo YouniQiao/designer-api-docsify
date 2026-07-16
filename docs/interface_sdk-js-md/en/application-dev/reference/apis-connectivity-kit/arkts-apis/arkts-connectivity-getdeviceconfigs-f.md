@@ -18,13 +18,15 @@ Obtain the list of all existed Wi-Fi configurations.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
 
+<!--Device-wifiManager-function getDeviceConfigs(): Array<WifiDeviceConfig>--><!--Device-wifiManager-function getDeviceConfigs(): Array<WifiDeviceConfig>-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;WifiDeviceConfig&gt; | Returns the list of all existing Wi-Fi configurations you created on your application. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<WifiDeviceConfig> | Returns the list of all existing Wi-Fi configurations you created on your application. |
 
 **Error codes:**
 

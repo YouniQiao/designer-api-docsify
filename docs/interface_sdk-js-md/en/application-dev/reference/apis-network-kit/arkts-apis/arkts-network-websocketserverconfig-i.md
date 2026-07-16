@@ -4,6 +4,8 @@ Defines parameters for a WebSocket Server.
 
 **Since:** 24
 
+<!--Device-webSocket-export interface WebSocketServerConfig--><!--Device-webSocket-export interface WebSocketServerConfig-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Maximum number of concurrent clients. When it's reached, the server will reject 
 
 **Since:** 24
 
+<!--Device-WebSocketServerConfig-maxConcurrentClientsNumber: int--><!--Device-WebSocketServerConfig-maxConcurrentClientsNumber: int-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## maxConnectionsForOneClient
@@ -37,6 +41,8 @@ Maximum number of one client's connections. When it's reached, the server will r
 **Type:** number
 
 **Since:** 24
+
+<!--Device-WebSocketServerConfig-maxConnectionsForOneClient: int--><!--Device-WebSocketServerConfig-maxConnectionsForOneClient: int-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -52,6 +58,8 @@ Self defined protocol.
 
 **Since:** 24
 
+<!--Device-WebSocketServerConfig-protocol?: string--><!--Device-WebSocketServerConfig-protocol?: string-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## serverCert
@@ -66,6 +74,8 @@ Server cert.
 
 **Since:** 24
 
+<!--Device-WebSocketServerConfig-serverCert?: ServerCert--><!--Device-WebSocketServerConfig-serverCert?: ServerCert-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## serverIP
@@ -74,12 +84,13 @@ Server cert.
 serverIP?: string
 ```
 
-Network card that the server listens on.
-The server listens on this specific address. It's 0.0.0.0 by default.
+Network card that the server listens on.The server listens on this specific address. It's 0.0.0.0 by default.
 
 **Type:** string
 
 **Since:** 24
+
+<!--Device-WebSocketServerConfig-serverIP?: string--><!--Device-WebSocketServerConfig-serverIP?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -94,6 +105,8 @@ Port number that the server listens on.
 **Type:** number
 
 **Since:** 24
+
+<!--Device-WebSocketServerConfig-serverPort: int--><!--Device-WebSocketServerConfig-serverPort: int-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

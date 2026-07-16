@@ -4,21 +4,27 @@
 
 本模块提供了两种生成XML文件的方式:
 
-* [XmlSerializer](arkts-arkts-xmlserializer-c.md)：适用于已知XML文本大小的情况。
-* [XmlDynamicSerializer<sup>20+</sup>](arkts-arkts-xmldynamicserializer-c.md)：适用于未知XML文本大小的情况。
+* [XmlSerializer](arkts-arkts-xmlserializer-c.md)：适用于已知XML文本大小的情况。* [XmlDynamicSerializer<sup>20+</sup>](arkts-arkts-xmldynamicserializer-c.md)：适用于未知XML文本大小的情况。
 
 本模块提供了两种解析XML文件的方式:
 
-* [XmlPullParser](arkts-arkts-xmlpullparser-c.md)：适用于对xml文本进行随机访问和灵活解析的场景。
-* [XmlSAXParser<sup>24+</sup>](arkts-arkts-xmlsaxparser-c.md)：适用于流式解析xml文本的场景，当xml文本较大，其他解析方式会消耗较多内存，建议采用流式解析。
+* [XmlPullParser](arkts-arkts-xmlpullparser-c.md)：适用于对xml文本进行随机访问和灵活解析的场景。* [XmlSAXParser<sup>24+</sup>](arkts-arkts-xmlsaxparser-c.md)：适用于流式解析xml文本的场景，当xml文本较大，其他解析方式会消耗较多内存，建议采用流式解析。
 
-> **说明：**
->
+> **说明：**  
+>  
 > - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare namespace xml--><!--Device-unnamed-declare namespace xml-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { xml } from '@kit.ArkTS';
+```
 
 ## 汇总
 

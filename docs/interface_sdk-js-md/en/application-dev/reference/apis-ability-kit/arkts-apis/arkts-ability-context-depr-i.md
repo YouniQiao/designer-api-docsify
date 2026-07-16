@@ -1,12 +1,12 @@
 # Context
 
-The context of an ability or an application. It allows access to
-application-specific resources, request and verification permissions.
-Can only be obtained through the ability.
+The context of an ability or an application. It allows access to application-specific resources, request and verification permissions.Can only be obtained through the ability.
 
 **Inheritance/Implementation:** Context extends [BaseContext](arkts-ability-basecontext-c.md)
 
 **Since:** 6
+
+<!--Device-unnamed-export interface Context extends BaseContext--><!--Device-unnamed-export interface Context extends BaseContext-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -22,13 +22,15 @@ Checks the detailed information of this ability.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getAbilityInfo(callback: AsyncCallback<AbilityInfo>): void--><!--Device-Context-getAbilityInfo(callback: AsyncCallback<AbilityInfo>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;AbilityInfo&gt; | Yes | Return the detailed information of the current belonging Ability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AbilityInfo> | Yes | Return the detailed information of the current belonging Ability. |
 
 ## getAbilityInfo
 
@@ -42,13 +44,15 @@ Checks the detailed information of this ability.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getAbilityInfo(): Promise<AbilityInfo>--><!--Device-Context-getAbilityInfo(): Promise<AbilityInfo>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AbilityInfo&gt; | Return the detailed information of the current belonging Ability. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AbilityInfo> | Return the detailed information of the current belonging Ability. |
 
 ## getAppType
 
@@ -62,13 +66,15 @@ Obtains the application type.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getAppType(callback: AsyncCallback<string>): void--><!--Device-Context-getAppType(callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes | Returns the type of the current application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Returns the type of the current application. |
 
 ## getAppType
 
@@ -82,13 +88,15 @@ Obtains the application type.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getAppType(): Promise<string>--><!--Device-Context-getAppType(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the type of this app. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the type of this app. |
 
 ## getAppVersionInfo
 
@@ -102,13 +110,15 @@ Obtains the application version information.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getAppVersionInfo(callback: AsyncCallback<AppVersionInfo>): void--><!--Device-Context-getAppVersionInfo(callback: AsyncCallback<AppVersionInfo>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;AppVersionInfo&gt; | Yes | Return application version information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AppVersionInfo> | Yes | Return application version information. |
 
 ## getAppVersionInfo
 
@@ -122,13 +132,15 @@ Obtains the application version information.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getAppVersionInfo(): Promise<AppVersionInfo>--><!--Device-Context-getAppVersionInfo(): Promise<AppVersionInfo>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AppVersionInfo&gt; | Return application version information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AppVersionInfo> | Return application version information. |
 
 ## getApplicationContext
 
@@ -142,13 +154,15 @@ Obtains the context of this application.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getApplicationContext(): Context--><!--Device-Context-getApplicationContext(): Context-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Context | Return application context information. |
+| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-context-i.md) | Return application context information. |
 
 ## getApplicationInfo
 
@@ -162,13 +176,15 @@ Obtains information about the current application.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void--><!--Device-Context-getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;ApplicationInfo&gt; | Yes | Returns information about the current application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ApplicationInfo> | Yes | Returns information about the current application. |
 
 ## getApplicationInfo
 
@@ -182,13 +198,15 @@ Obtains information about the current application.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getApplicationInfo(): Promise<ApplicationInfo>--><!--Device-Context-getApplicationInfo(): Promise<ApplicationInfo>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ApplicationInfo&gt; | Information about the current application. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ApplicationInfo> | Information about the current application. |
 
 ## getBundleName
 
@@ -202,13 +220,15 @@ Obtains the bundle name of the current ability.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getBundleName(callback: AsyncCallback<string>): void--><!--Device-Context-getBundleName(callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes | Returns the Bundle name of the current capability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Returns the Bundle name of the current capability. |
 
 ## getBundleName
 
@@ -222,13 +242,15 @@ Obtains the bundle name of the current ability.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getBundleName(): Promise<string>--><!--Device-Context-getBundleName(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | The Bundle name of the current capability. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | The Bundle name of the current capability. |
 
 ## getCacheDir
 
@@ -242,13 +264,15 @@ Obtains the cache directory of this application on the internal storage.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getCacheDir(callback: AsyncCallback<string>): void--><!--Device-Context-getCacheDir(callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes | Returns the internal storage directory of the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Returns the internal storage directory of the application. |
 
 ## getCacheDir
 
@@ -262,13 +286,15 @@ Obtains the cache directory of this application on the internal storage.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getCacheDir(): Promise<string>--><!--Device-Context-getCacheDir(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the internal storage directory of the application. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the internal storage directory of the application. |
 
 ## getCallingBundle
 
@@ -282,13 +308,15 @@ Obtains the bundle name of the ability that called the current ability.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getCallingBundle(callback: AsyncCallback<string>): void--><!--Device-Context-getCallingBundle(callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes | Returns the Bundle name of the ability caller. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Returns the Bundle name of the ability caller. |
 
 ## getCallingBundle
 
@@ -302,13 +330,15 @@ Obtains the bundle name of the ability that called the current ability.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getCallingBundle(): Promise<string>--><!--Device-Context-getCallingBundle(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the Bundle name of the ability caller. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the Bundle name of the ability caller. |
 
 ## getDisplayOrientation
 
@@ -322,13 +352,15 @@ Obtains the current display orientation of this ability.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getDisplayOrientation(callback: AsyncCallback<bundle.DisplayOrientation>): void--><!--Device-Context-getDisplayOrientation(callback: AsyncCallback<bundle.DisplayOrientation>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;bundle.DisplayOrientation&gt; | Yes | Indicates the realistic direction of the screen. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<bundle.DisplayOrientation> | Yes | Indicates the realistic direction of the screen. |
 
 ## getDisplayOrientation
 
@@ -342,13 +374,15 @@ Obtains the current display orientation of this ability.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getDisplayOrientation(): Promise<bundle.DisplayOrientation>--><!--Device-Context-getDisplayOrientation(): Promise<bundle.DisplayOrientation>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;bundle.DisplayOrientation&gt; | Indicates the screen display direction. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<bundle.DisplayOrientation> | Indicates the screen display direction. |
 
 ## getElementName
 
@@ -362,13 +396,15 @@ Obtains the ohos.bundle.ElementName object of the current ability.This method is
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getElementName(callback: AsyncCallback<ElementName>): void--><!--Device-Context-getElementName(callback: AsyncCallback<ElementName>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;ElementName&gt; | Yes | Returns the ohos.bundle.ElementName of the current capability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ElementName> | Yes | Returns the ohos.bundle.ElementName of the current capability. |
 
 ## getElementName
 
@@ -382,13 +418,15 @@ Obtains the ohos.bundle.ElementName object of the current ability.This method is
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getElementName(): Promise<ElementName>--><!--Device-Context-getElementName(): Promise<ElementName>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ElementName&gt; | The ohos.bundle.ElementName object of the current capability. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ElementName> | The ohos.bundle.ElementName object of the current capability. |
 
 ## getExternalCacheDir
 
@@ -404,13 +442,15 @@ Obtains the absolute path to the application-specific cache directory
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getExternalCacheDir(callback: AsyncCallback<string>): void--><!--Device-Context-getExternalCacheDir(callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes | Returns the absolute path of the application's cache directory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Returns the absolute path of the application's cache directory. |
 
 ## getExternalCacheDir
 
@@ -426,13 +466,15 @@ Obtains the absolute path to the application-specific cache directory
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getExternalCacheDir(): Promise<string>--><!--Device-Context-getExternalCacheDir(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Return the cache directory of the application. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Return the cache directory of the application. |
 
 ## getFilesDir
 
@@ -446,13 +488,15 @@ Obtains the file directory of this application on the internal storage.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getFilesDir(callback: AsyncCallback<string>): void--><!--Device-Context-getFilesDir(callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes | Return the file directory of this application on internal storage. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Return the file directory of this application on internal storage. |
 
 ## getFilesDir
 
@@ -466,13 +510,15 @@ Obtains the file directory of this application on the internal storage.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getFilesDir(): Promise<string>--><!--Device-Context-getFilesDir(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Return the file directory of this application on internal storage. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Return the file directory of this application on internal storage. |
 
 ## getHapModuleInfo
 
@@ -486,13 +532,15 @@ Obtains the ModuleInfo object for this application.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getHapModuleInfo(callback: AsyncCallback<HapModuleInfo>): void--><!--Device-Context-getHapModuleInfo(callback: AsyncCallback<HapModuleInfo>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;HapModuleInfo&gt; | Yes | Returns the ModuleInfo object of the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<HapModuleInfo> | Yes | Returns the ModuleInfo object of the application. |
 
 ## getHapModuleInfo
 
@@ -506,13 +554,15 @@ Obtains the ModuleInfo object for this application.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getHapModuleInfo(): Promise<HapModuleInfo>--><!--Device-Context-getHapModuleInfo(): Promise<HapModuleInfo>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HapModuleInfo&gt; | Return to the ModuleInfo of the application and enjoy it. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HapModuleInfo> | Return to the ModuleInfo of the application and enjoy it. |
 
 ## getOrCreateDistributedDir
 
@@ -520,12 +570,13 @@ Obtains the ModuleInfo object for this application.
 getOrCreateDistributedDir(): Promise<string>
 ```
 
-Obtains the distributed file path for storing ability or application data files.
-If the distributed file path does not exist, the system will create a path and return the created path.
+Obtains the distributed file path for storing ability or application data files.If the distributed file path does not exist, the system will create a path and return the created path.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-Context-getOrCreateDistributedDir(): Promise<string>--><!--Device-Context-getOrCreateDistributedDir(): Promise<string>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -533,7 +584,7 @@ If the distributed file path does not exist, the system will create a path and r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the distributed file path of the Ability or application. If it is the firstcall, a directory will be created. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the distributed file path of the Ability or application. If it is the first call, a directory will be created. |
 
 ## getOrCreateDistributedDir
 
@@ -541,12 +592,13 @@ If the distributed file path does not exist, the system will create a path and r
 getOrCreateDistributedDir(callback: AsyncCallback<string>): void
 ```
 
-Obtains the distributed file path for storing ability or application data files.
-If the distributed file path does not exist, the system will create a path and return the created path.
+Obtains the distributed file path for storing ability or application data files.If the distributed file path does not exist, the system will create a path and return the created path.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-Context-getOrCreateDistributedDir(callback: AsyncCallback<string>): void--><!--Device-Context-getOrCreateDistributedDir(callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -554,7 +606,7 @@ If the distributed file path does not exist, the system will create a path and r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes | Returns the distributed file path of Ability or application.If the path does not exist,the system will create a path and return the created path. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Returns the distributed file path of Ability or application.If the path does not exist,the system will create a path and return the created path. |
 
 ## getOrCreateLocalDir
 
@@ -562,15 +614,13 @@ If the distributed file path does not exist, the system will create a path and r
 getOrCreateLocalDir(): Promise<string>
 ```
 
-Get the local root dir of an app. If it is the first call, the dir
-will be created.
-If in the context of the ability, return the root dir of
-the ability; if in the context of the application, return the
-root dir of the application.
+Get the local root dir of an app. If it is the first call, the dir will be created.If in the context of the ability, return the root dir of the ability; if in the context of the application, return the root dir of the application.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-Context-getOrCreateLocalDir(): Promise<string>--><!--Device-Context-getOrCreateLocalDir(): Promise<string>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -578,7 +628,7 @@ root dir of the application.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | the root dir |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | the root dir |
 
 ## getOrCreateLocalDir
 
@@ -586,15 +636,13 @@ root dir of the application.
 getOrCreateLocalDir(callback: AsyncCallback<string>): void
 ```
 
-Get the local root dir of an app. If it is the first call, the dir
-will be created.
-If in the context of the ability, return the root dir of
-the ability; if in the context of the application, return the
-root dir of the application.
+Get the local root dir of an app. If it is the first call, the dir will be created.If in the context of the ability, return the root dir of the ability; if in the context of the application, return the root dir of the application.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-Context-getOrCreateLocalDir(callback: AsyncCallback<string>): void--><!--Device-Context-getOrCreateLocalDir(callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -602,7 +650,7 @@ root dir of the application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes | Returns the local root directory of the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Returns the local root directory of the application. |
 
 ## getProcessInfo
 
@@ -616,13 +664,15 @@ Obtains information about the current process, including the process ID and name
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getProcessInfo(callback: AsyncCallback<ProcessInfo>): void--><!--Device-Context-getProcessInfo(callback: AsyncCallback<ProcessInfo>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;ProcessInfo&gt; | Yes | Return current process information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ProcessInfo> | Yes | Return current process information. |
 
 ## getProcessInfo
 
@@ -636,13 +686,15 @@ Obtains information about the current process, including the process ID and name
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getProcessInfo(): Promise<ProcessInfo>--><!--Device-Context-getProcessInfo(): Promise<ProcessInfo>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ProcessInfo&gt; | Information about the current process. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ProcessInfo> | Information about the current process. |
 
 ## getProcessName
 
@@ -656,13 +708,15 @@ Obtains the name of the current process.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getProcessName(callback: AsyncCallback<string>): void--><!--Device-Context-getProcessName(callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes | Return current process name. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Return current process name. |
 
 ## getProcessName
 
@@ -676,13 +730,15 @@ Obtains the name of the current process.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-getProcessName(): Promise<string>--><!--Device-Context-getProcessName(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the name of the current process. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the name of the current process. |
 
 ## isUpdatingConfigurations
 
@@ -696,13 +752,15 @@ Checks whether the configuration of this ability is changing.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-isUpdatingConfigurations(callback: AsyncCallback<boolean>): void--><!--Device-Context-isUpdatingConfigurations(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | True if the configuration of the capability is being changed,otherwise false. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | True if the configuration of the capability is being changed,otherwise false. |
 
 ## isUpdatingConfigurations
 
@@ -716,13 +774,15 @@ Checks whether the configuration of this ability is changing.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-isUpdatingConfigurations(): Promise<boolean>--><!--Device-Context-isUpdatingConfigurations(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | true if the configuration of this ability is changing and false otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | true if the configuration of this ability is changing and false otherwise. |
 
 ## printDrawnCompleted
 
@@ -736,13 +796,15 @@ Inform the system of the time required for drawing this Page ability.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-printDrawnCompleted(callback: AsyncCallback<void>): void--><!--Device-Context-printDrawnCompleted(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Represents the specified callback method. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Represents the specified callback method. |
 
 ## printDrawnCompleted
 
@@ -756,13 +818,15 @@ Inform the system of the time required for drawing this Page ability.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-printDrawnCompleted(): Promise<void>--><!--Device-Context-printDrawnCompleted(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise form returns the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise form returns the result. |
 
 ## requestPermissionsFromUser
 
@@ -780,15 +844,25 @@ Requests certain permissions from the system.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-requestPermissionsFromUser(
+    permissions: Array<string>,
+    requestCode: number,
+    resultCallback: AsyncCallback<PermissionRequestResult>
+  ): void--><!--Device-Context-requestPermissionsFromUser(
+    permissions: Array<string>,
+    requestCode: number,
+    resultCallback: AsyncCallback<PermissionRequestResult>
+  ): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permissions | Array&lt;string&gt; | Yes | Indicates the list of permissions to be requested.parameter cannot be null. |
+| permissions | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Indicates the list of permissions to be requested.parameter cannot be null. |
 | requestCode | number | Yes | Indicates the request code to be passed to the PermissionRequestResult |
-| resultCallback | AsyncCallback&lt;PermissionRequestResult&gt; | Yes | Return authorization result information. |
+| resultCallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<PermissionRequestResult> | Yes | Return authorization result information. |
 
 ## requestPermissionsFromUser
 
@@ -802,20 +876,22 @@ Requests certain permissions from the system.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-requestPermissionsFromUser(permissions: Array<string>, requestCode: number): Promise<PermissionRequestResult>--><!--Device-Context-requestPermissionsFromUser(permissions: Array<string>, requestCode: number): Promise<PermissionRequestResult>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permissions | Array&lt;string&gt; | Yes | Indicates the list of permissions to be requested.Parameter cannot be null. |
+| permissions | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Indicates the list of permissions to be requested.Parameter cannot be null. |
 | requestCode | number | Yes | Indicates the request code to be passed to the PermissionRequestResult |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PermissionRequestResult&gt; | Indicates the request code to be passed to PermissionRequestResult. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PermissionRequestResult> | Indicates the request code to be passed to PermissionRequestResult. |
 
 ## setDisplayOrientation
 
@@ -829,6 +905,8 @@ Sets the display orientation of the current ability.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-setDisplayOrientation(orientation: bundle.DisplayOrientation, callback: AsyncCallback<void>): void--><!--Device-Context-setDisplayOrientation(orientation: bundle.DisplayOrientation, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
@@ -836,7 +914,7 @@ Sets the display orientation of the current ability.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | orientation | bundle.DisplayOrientation | Yes | Indicates the new orientation for the current ability. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Indicates the realistic direction of the screen. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Indicates the realistic direction of the screen. |
 
 ## setDisplayOrientation
 
@@ -850,6 +928,8 @@ Sets the display orientation of the current ability.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-setDisplayOrientation(orientation: bundle.DisplayOrientation): Promise<void>--><!--Device-Context-setDisplayOrientation(orientation: bundle.DisplayOrientation): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
@@ -862,7 +942,7 @@ Sets the display orientation of the current ability.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 ## setShowOnLockScreen
 
@@ -870,9 +950,7 @@ Sets the display orientation of the current ability.
 setShowOnLockScreen(show: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to show this ability on top of the lock screen whenever the lock screen is displayed, keeping the
-ability in the ACTIVE state.
-The interface can only take effect in API8 and below versions.
+Sets whether to show this ability on top of the lock screen whenever the lock screen is displayed, keeping the ability in the ACTIVE state.The interface can only take effect in API8 and below versions.
 
 **Since:** 7
 
@@ -882,14 +960,16 @@ The interface can only take effect in API8 and below versions.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-setShowOnLockScreen(show: boolean, callback: AsyncCallback<void>): void--><!--Device-Context-setShowOnLockScreen(show: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| show | boolean | Yes | Specifies whether to show this ability on top of the lock screen. The value true meansto show it on the lock screen, and the value false means not. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Returns the callback result. |
+| show | boolean | Yes | Specifies whether to show this ability on top of the lock screen. The value true means to show it on the lock screen, and the value false means not. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Returns the callback result. |
 
 ## setShowOnLockScreen
 
@@ -897,9 +977,7 @@ The interface can only take effect in API8 and below versions.
 setShowOnLockScreen(show: boolean): Promise<void>
 ```
 
-Sets whether to show this ability on top of the lock screen whenever the lock screen is displayed, keeping the
-ability in the ACTIVE state.
-The interface can only take effect in API8 and below versions.
+Sets whether to show this ability on top of the lock screen whenever the lock screen is displayed, keeping the ability in the ACTIVE state.The interface can only take effect in API8 and below versions.
 
 **Since:** 7
 
@@ -909,19 +987,21 @@ The interface can only take effect in API8 and below versions.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-setShowOnLockScreen(show: boolean): Promise<void>--><!--Device-Context-setShowOnLockScreen(show: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| show | boolean | Yes | Specifies whether to show this ability on top of the lock screen. The value true means toshow it on the lock screen, and the value false means not. |
+| show | boolean | Yes | Specifies whether to show this ability on top of the lock screen. The value true means to show it on the lock screen, and the value false means not. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 ## setWakeUpScreen
 
@@ -939,6 +1019,8 @@ Sets whether to wake up the screen when this ability is restored.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-setWakeUpScreen(wakeUp: boolean, callback: AsyncCallback<void>): void--><!--Device-Context-setWakeUpScreen(wakeUp: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
@@ -946,7 +1028,7 @@ Sets whether to wake up the screen when this ability is restored.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | wakeUp | boolean | Yes | Specifies whether to wake up the screen. The value true means to wake it up,and the value false means not. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Returns the callback result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Returns the callback result. |
 
 ## setWakeUpScreen
 
@@ -964,19 +1046,21 @@ Sets whether to wake up the screen when this ability is restored.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Context-setWakeUpScreen(wakeUp: boolean): Promise<void>--><!--Device-Context-setWakeUpScreen(wakeUp: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wakeUp | boolean | Yes | Specifies whether to wake up the screen. The value true means to wake it up, and thevalue false means not. |
+| wakeUp | boolean | Yes | Specifies whether to wake up the screen. The value true means to wake it up, and the value false means not. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 ## verifyPermission
 
@@ -984,14 +1068,13 @@ Sets whether to wake up the screen when this ability is restored.
 verifyPermission(permission: string, options?: PermissionOptions): Promise<number>
 ```
 
-Verify whether the specified permission is allowed for a particular
-pid and uid running in the system.
-Pid and uid are optional. If you do not pass in pid and uid,
-it will check your own permission.
+Verify whether the specified permission is allowed for a particular pid and uid running in the system.Pid and uid are optional. If you do not pass in pid and uid,it will check your own permission.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-Context-verifyPermission(permission: string, options?: PermissionOptions): Promise<number>--><!--Device-Context-verifyPermission(permission: string, options?: PermissionOptions): Promise<number>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1000,13 +1083,13 @@ it will check your own permission.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | permission | string | Yes | The name of the specified permission. |
-| options | PermissionOptions | No | Permission Options. |
+| options | [PermissionOptions](arkts-ability-permissionoptions-depr-i.md) | No | Permission Options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | asynchronous callback with {@code 0} if the PIDand UID have the permission; callback with {@code -1} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | asynchronous callback with {@code 0} if the PID and UID have the permission; callback with {@code -1} otherwise. |
 
 ## verifyPermission
 
@@ -1014,14 +1097,13 @@ it will check your own permission.
 verifyPermission(permission: string, options: PermissionOptions, callback: AsyncCallback<number>): void
 ```
 
-Verify whether the specified permission is allowed for a particular
-pid and uid running in the system.
-Pid and uid are optional. If you do not pass in pid and uid,
-it will check your own permission.
+Verify whether the specified permission is allowed for a particular pid and uid running in the system.Pid and uid are optional. If you do not pass in pid and uid,it will check your own permission.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-Context-verifyPermission(permission: string, options: PermissionOptions, callback: AsyncCallback<number>): void--><!--Device-Context-verifyPermission(permission: string, options: PermissionOptions, callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1030,8 +1112,8 @@ it will check your own permission.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | permission | string | Yes | The name of the specified permission |
-| options | PermissionOptions | Yes | Permission Options |
-| callback | AsyncCallback&lt;number&gt; | Yes | Return permission verification result, 0 has permission,-1 has no permission. |
+| options | [PermissionOptions](arkts-ability-permissionoptions-depr-i.md) | Yes | Permission Options |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Return permission verification result, 0 has permission,  -1 has no permission. |
 
 ## verifyPermission
 
@@ -1039,14 +1121,13 @@ it will check your own permission.
 verifyPermission(permission: string, callback: AsyncCallback<number>): void
 ```
 
-Verify whether the specified permission is allowed for a particular
-pid and uid running in the system.
-Pid and uid are optional. If you do not pass in pid and uid,
-it will check your own permission.
+Verify whether the specified permission is allowed for a particular pid and uid running in the system.Pid and uid are optional. If you do not pass in pid and uid,it will check your own permission.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-Context-verifyPermission(permission: string, callback: AsyncCallback<number>): void--><!--Device-Context-verifyPermission(permission: string, callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1055,5 +1136,5 @@ it will check your own permission.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | permission | string | Yes | The name of the specified permission |
-| callback | AsyncCallback&lt;number&gt; | Yes | Return permission verification result, 0 has permission,-1 has no permission. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Return permission verification result, 0 has permission,  -1 has no permission. |
 

@@ -18,6 +18,8 @@ Obtains the uninstallation disposed rule of an application or an application clo
 
 **Required permissions:** ohos.permission.GET_DISPOSED_APP_STATUS or ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
+<!--Device-appControl-function getUninstallDisposedRule(appIdentifier: string, appIndex?: int): UninstallDisposedRule--><!--Device-appControl-function getUninstallDisposedRule(appIdentifier: string, appIndex?: int): UninstallDisposedRule-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **System API:** This is a system API.
@@ -26,14 +28,14 @@ Obtains the uninstallation disposed rule of an application or an application clo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appIdentifier | string | Yes | appIdentifier of the target application.<br> If the application does not have anappIdentifier, use its appId instead. **appId** is the unique identifier of an application and is determined bythe bundle name and signature information of the application. For details about how to set **appId**, see[How do I obtain appId from application information](../../../../quick-start/common_problem_of_application.md#how-do-i-obtain-appid-from-application-information). |
-| appIndex | number | No | Index of the application clone. The default value is **0**.<br> The value **0** meansto obtain the uninstallation disposed rule of the main application. A value greater than 0 means to obtain theuninstallation disposed rule of the application clone. |
+| appIdentifier | string | Yes | appIdentifier of the target application.<br> If the application does not have an appIdentifier, use its appId instead. **appId** is the unique identifier of an application and is determined by the bundle name and signature information of the application. For details about how to set **appId**, see [How do I obtain appId from application information](../../../../quick-start/common_problem_of_application.md#how-do-i-obtain-appid-from-application-information). |
+| appIndex | number | No | Index of the application clone. The default value is **0**.<br> The value **0** means to obtain the uninstallation disposed rule of the main application. A value greater than 0 means to obtain the uninstallation disposed rule of the application clone. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| UninstallDisposedRule | Uninstallation disposed rule. |
+| [UninstallDisposedRule](arkts-ability-uninstalldisposedrule-i-sys.md) | Uninstallation disposed rule. |
 
 **Error codes:**
 

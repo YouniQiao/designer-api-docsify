@@ -18,13 +18,15 @@ Determine the file type based on the original file name extension and select an 
 
 **Since:** 10
 
+<!--Device-dlpPermission-function getOriginalFileName(fileName: string): string--><!--Device-dlpPermission-function getOriginalFileName(fileName: string): string-End-->
+
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fileName | string | Yes | Name of the target DLP file. The value contains 1 to 255 bytes. If the value is outof range, error code 401 is thrown. |
+| fileName | string | Yes | Name of the target DLP file. The value contains 1 to 255 bytes. If the value is out of range, error code 401 is thrown. |
 
 **Return value:**
 

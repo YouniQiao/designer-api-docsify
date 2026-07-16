@@ -4,6 +4,8 @@ Used to do observer layout and draw event for component.
 
 **Since:** 10
 
+<!--Device-unnamed-declare namespace inspector--><!--Device-unnamed-declare namespace inspector-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

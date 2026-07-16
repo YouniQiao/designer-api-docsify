@@ -4,6 +4,8 @@ Provides APIs for uploading and downloading assets.
 
 **Since:** 11
 
+<!--Device-cloudExtension-export interface AssetLoader--><!--Device-cloudExtension-export interface AssetLoader-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -24,6 +26,8 @@ Downloads assets. This API uses a promise to return the result.
 
 **Since:** 11
 
+<!--Device-AssetLoader-download(table: string, gid: string, prefix: string, assets: Array<CloudAsset>): Promise<Array<Result<CloudAsset>>>--><!--Device-AssetLoader-download(table: string, gid: string, prefix: string, assets: Array<CloudAsset>): Promise<Array<Result<CloudAsset>>>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -35,13 +39,13 @@ Downloads assets. This API uses a promise to return the result.
 | table | string | Yes | Table name. |
 | gid | string | Yes | Unique identifier generated for the data added to the cloud. |
 | prefix | string | Yes | Asset prefix information. |
-| assets | Array&lt;CloudAsset&gt; | Yes | Assets to download. |
+| assets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<CloudAsset> | Yes | Assets to download. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;CloudAsset&gt;&gt;&gt; | Promise used to return the asset download result,including the asset IDs and asset hash values. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Result<CloudAsset>>> | Promise used to return the asset download result,including the asset IDs and asset hash values. |
 
 **Example**
 
@@ -67,6 +71,8 @@ Uploads assets. This API uses a promise to return the result.
 
 **Since:** 11
 
+<!--Device-AssetLoader-upload(table: string, gid: string, assets: Array<CloudAsset>): Promise<Array<Result<CloudAsset>>>--><!--Device-AssetLoader-upload(table: string, gid: string, assets: Array<CloudAsset>): Promise<Array<Result<CloudAsset>>>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -77,13 +83,13 @@ Uploads assets. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | table | string | Yes | Table name. |
 | gid | string | Yes | Unique identifier generated for the data added to the cloud. |
-| assets | Array&lt;CloudAsset&gt; | Yes | Assets to upload. |
+| assets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<CloudAsset> | Yes | Assets to upload. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;CloudAsset&gt;&gt;&gt; | Promise used to return the asset upload result,including the asset IDs and asset hash values. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Result<CloudAsset>>> | Promise used to return the asset upload result,including the asset IDs and asset hash values. |
 
 **Example**
 

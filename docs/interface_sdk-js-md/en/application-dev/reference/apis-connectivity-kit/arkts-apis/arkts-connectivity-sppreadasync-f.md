@@ -16,6 +16,8 @@ Asynchronous interface for reading data from the socket.
 
 **Since:** 18
 
+<!--Device-socket-function sppReadAsync(clientSocket: int): Promise<ArrayBuffer>--><!--Device-socket-function sppReadAsync(clientSocket: int): Promise<ArrayBuffer>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -28,7 +30,7 @@ Asynchronous interface for reading data from the socket.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Returns the promise object, used to get the spp read data. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ArrayBuffer> | Returns the promise object, used to get the spp read data. |
 
 **Error codes:**
 

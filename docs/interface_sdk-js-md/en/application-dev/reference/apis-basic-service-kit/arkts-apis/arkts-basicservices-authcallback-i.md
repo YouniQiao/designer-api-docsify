@@ -4,6 +4,8 @@ Implements authenticator callbacks.
 
 **Since:** 9
 
+<!--Device-appAccount-interface AuthCallback--><!--Device-appAccount-interface AuthCallback-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Called to continue to process the request.
 
 **Since:** 9
 
+<!--Device-AuthCallback-onRequestContinued?: () => void--><!--Device-AuthCallback-onRequestContinued?: () => void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 ## onRequestRedirected
@@ -38,6 +42,8 @@ Called to redirect a request.
 
 **Since:** 9
 
+<!--Device-AuthCallback-onRequestRedirected: (request: Want) => void--><!--Device-AuthCallback-onRequestRedirected: (request: Want) => void-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 ## onResult
@@ -51,6 +57,8 @@ Called to return the result of an authentication request.
 **Type:** (code: number, result?: AuthResult) => void
 
 **Since:** 9
+
+<!--Device-AuthCallback-onResult: (code: int, result?: AuthResult) => void--><!--Device-AuthCallback-onResult: (code: int, result?: AuthResult) => void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 

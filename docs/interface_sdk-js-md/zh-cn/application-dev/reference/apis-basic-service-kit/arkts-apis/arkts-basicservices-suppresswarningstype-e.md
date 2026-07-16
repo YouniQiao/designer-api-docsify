@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+<!--Device-unnamed-export const enum SuppressWarningsType--><!--Device-unnamed-export const enum SuppressWarningsType-End-->
+
 **系统能力：** SystemCapability.Base
 
 ## COMPATIBILITY
@@ -18,9 +20,11 @@ COMPATIBILITY = 'compatibility'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-SuppressWarningsType-COMPATIBILITY = 'compatibility'--><!--Device-SuppressWarningsType-COMPATIBILITY = 'compatibility'-End-->
 
 **系统能力：** SystemCapability.Base
 
@@ -36,9 +40,11 @@ SYSCAP = 'syscap'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-SuppressWarningsType-SYSCAP = 'syscap'--><!--Device-SuppressWarningsType-SYSCAP = 'syscap'-End-->
 
 **系统能力：** SystemCapability.Base
 
@@ -54,9 +60,11 @@ PERMISSION = 'permission'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-SuppressWarningsType-PERMISSION = 'permission'--><!--Device-SuppressWarningsType-PERMISSION = 'permission'-End-->
 
 **系统能力：** SystemCapability.Base
 

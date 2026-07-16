@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-inputMethodEngine-export interface WindowInfo--><!--Device-inputMethodEngine-export interface WindowInfo-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+## 导入模块
+
+```TypeScript
+import { inputMethodEngine } from '@kit.IMEKit';
+```
 
 ## rect
 
@@ -17,6 +25,8 @@ rect: window.Rect
 **类型：** window.Rect
 
 **起始版本：** 12
+
+<!--Device-WindowInfo-rect: window.Rect--><!--Device-WindowInfo-rect: window.Rect-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -31,6 +41,8 @@ status: window.WindowStatusType
 **类型：** window.WindowStatusType
 
 **起始版本：** 12
+
+<!--Device-WindowInfo-status: window.WindowStatusType--><!--Device-WindowInfo-status: window.WindowStatusType-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

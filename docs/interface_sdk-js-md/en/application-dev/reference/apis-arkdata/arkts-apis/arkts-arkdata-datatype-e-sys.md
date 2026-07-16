@@ -4,6 +4,8 @@ Enumerates the data types.
 
 **Since:** 9
 
+<!--Device-unnamed-export enum DataType--><!--Device-unnamed-export enum DataType-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -19,6 +21,8 @@ Null.
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataType-TYPE_NULL = 0--><!--Device-DataType-TYPE_NULL = 0-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -36,6 +40,8 @@ Long integer.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataType-TYPE_LONG = 1--><!--Device-DataType-TYPE_LONG = 1-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -51,6 +57,8 @@ Double-precision floating-point number.
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataType-TYPE_DOUBLE = 2--><!--Device-DataType-TYPE_DOUBLE = 2-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -68,6 +76,8 @@ String.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataType-TYPE_STRING = 3--><!--Device-DataType-TYPE_STRING = 3-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -83,6 +93,8 @@ Byte array.
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataType-TYPE_BLOB = 4--><!--Device-DataType-TYPE_BLOB = 4-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 

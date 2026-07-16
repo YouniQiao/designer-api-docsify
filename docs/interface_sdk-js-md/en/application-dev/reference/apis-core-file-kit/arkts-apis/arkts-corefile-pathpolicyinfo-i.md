@@ -4,6 +4,8 @@ Policy information to manager permissions on a path.
 
 **Since:** 15
 
+<!--Device-fileShare-export interface PathPolicyInfo--><!--Device-fileShare-export interface PathPolicyInfo-End-->
+
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Indicates the mode of operation for the path.
 
 **Since:** 15
 
+<!--Device-PathPolicyInfo-operationMode: OperationMode--><!--Device-PathPolicyInfo-operationMode: OperationMode-End-->
+
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 ## path
@@ -37,6 +41,8 @@ Indicates the path of the policy information.
 **Type:** string
 
 **Since:** 15
+
+<!--Device-PathPolicyInfo-path: string--><!--Device-PathPolicyInfo-path: string-End-->
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 

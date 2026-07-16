@@ -2,15 +2,15 @@
 
 Defines the transition effect by setting parameters in the struct.
 
-> **NOTE**
->
-> 1. When set to a value of the **TransitionOptions** type, the **transition** attribute must work with
-> [animateTo](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto). The animation duration,
-> curve, and delay follow the settings in **animateTo**.
->
-> 2. If the value of the **TransitionOptions** type has only **type** specified, the transition effect will take on
-> the default opacity. For example, **{type: TransitionType.Insert}** produces the same effect as
-> **{type: TransitionType.Insert, opacity: 0}**. If a specific style is specified, the transition effect will not
+> **NOTE**  
+>  
+> 1. When set to a value of the **TransitionOptions** type, the **transition** attribute must work with  
+> [animateTo](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto). The animation duration,  
+> curve, and delay follow the settings in **animateTo**.  
+>  
+> 2. If the value of the **TransitionOptions** type has only **type** specified, the transition effect will take on  
+> the default opacity. For example, **{type: TransitionType.Insert}** produces the same effect as  
+> **{type: TransitionType.Insert, opacity: 0}**. If a specific style is specified, the transition effect will not  
 > take on the default opacity.
 
 **Since:** 7
@@ -18,6 +18,8 @@ Defines the transition effect by setting parameters in the struct.
 **Deprecated since:** 10
 
 **Substitutes:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
+
+<!--Device-unnamed-declare interface TransitionOptions--><!--Device-unnamed-declare interface TransitionOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,15 +29,13 @@ Defines the transition effect by setting parameters in the struct.
 opacity?: number
 ```
 
-Opacity of the component during transition, which is the value of the start point of insertion and the end point of
-deletion.
+Opacity of the component during transition, which is the value of the start point of insertion and the end point of deletion.
 
 Value range: [0, 1]
 
 **NOTE**
 
-If the value specified is less than 0, the value **0** is used. If the value specified is greater than 1, the value
-**1** is used.
+If the value specified is less than 0, the value **0** is used. If the value specified is greater than 1, the value **1** is used.
 
 **Type:** number
 
@@ -45,6 +45,8 @@ If the value specified is less than 0, the value **0** is used. If the value spe
 
 **Substitutes:** [opacity](arkts-arkui-transitioneffect-c.md#opacity-1)
 
+<!--Device-TransitionOptions-opacity?: number--><!--Device-TransitionOptions-opacity?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## rotate
@@ -53,14 +55,12 @@ If the value specified is less than 0, the value **0** is used. If the value spe
 rotate?: RotateOptions
 ```
 
-Rotation of the component during transition, which is the value of the start point of insertion and the end point
-of deletion.
+Rotation of the component during transition, which is the value of the start point of insertion and the end point of deletion.
 
-- **x**: X-component of the rotation vector.
-- **y**: Y-component of the rotation vector.
-- **z**: Z-component of the rotation vector.
-- **centerX** and **centerY**: rotation center point. The default values are both **"50%"**, indicating the center
-point of the page.
+- **x**: X-component of the rotation vector.  
+- **y**: Y-component of the rotation vector.  
+- **z**: Z-component of the rotation vector.  
+- **centerX** and **centerY**: rotation center point. The default values are both **"50%"**, indicating the center point of the page.  
 - If the center point is (0, 0), it refers to the upper left corner of the component.
 
 **Type:** RotateOptions
@@ -71,6 +71,8 @@ point of the page.
 
 **Substitutes:** [rotate](arkts-arkui-transitioneffect-c.md#rotate-1)
 
+<!--Device-TransitionOptions-rotate?: RotateOptions--><!--Device-TransitionOptions-rotate?: RotateOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## scale
@@ -79,20 +81,17 @@ point of the page.
 scale?: ScaleOptions
 ```
 
-Scaling of the component during transition, which is the value of the start point of insertion and the end point of
-deletion.
+Scaling of the component during transition, which is the value of the start point of insertion and the end point of deletion.
 
-- **x**: scale factor along the x-axis.
-- **y**: scale factor along the y-axis.
-- **z**: scale factor along the z-axis (not effective for the current 2D graphics).
-- **centerX** and **centerY**: scale center point. The default values are both **"50%"**, indicating the center
-point of the page.
+- **x**: scale factor along the x-axis.  
+- **y**: scale factor along the y-axis.  
+- **z**: scale factor along the z-axis (not effective for the current 2D graphics).  
+- **centerX** and **centerY**: scale center point. The default values are both **"50%"**, indicating the center point of the page.  
 - If the center point is (0, 0), it refers to the upper left corner of the component.
 
 **NOTE**
 
-If **centerX** or **centerY** is set to an invalid string (for example, **"illegalString"**), the default value
-**"0"** is used.
+If **centerX** or **centerY** is set to an invalid string (for example, **"illegalString"**), the default value **"0"** is used.
 
 **Type:** ScaleOptions
 
@@ -102,6 +101,8 @@ If **centerX** or **centerY** is set to an invalid string (for example, **"illeg
 
 **Substitutes:** [scale](arkts-arkui-transitioneffect-c.md#scale-1)
 
+<!--Device-TransitionOptions-scale?: ScaleOptions--><!--Device-TransitionOptions-scale?: ScaleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## translate
@@ -110,8 +111,7 @@ If **centerX** or **centerY** is set to an invalid string (for example, **"illeg
 translate?: TranslateOptions
 ```
 
-Translation of the component during transition, which is the value of the start point of insertion and the end
-point of deletion.
+Translation of the component during transition, which is the value of the start point of insertion and the end point of deletion.
 
 -**x**: distance to translate along the x-axis.
 
@@ -127,6 +127,8 @@ point of deletion.
 
 **Substitutes:** [translate](arkts-arkui-transitioneffect-c.md#translate-1)
 
+<!--Device-TransitionOptions-translate?: TranslateOptions--><!--Device-TransitionOptions-translate?: TranslateOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## type
@@ -141,8 +143,7 @@ Default value: **TransitionType.All**
 
 **NOTE**
 
-If **type** is not specified, the default value **TransitionType.All** is used, which means that the transition
-effect works for both component addition and deletion.
+If **type** is not specified, the default value **TransitionType.All** is used, which means that the transition effect works for both component addition and deletion.
 
 **Type:** TransitionType
 
@@ -151,6 +152,8 @@ effect works for both component addition and deletion.
 **Deprecated since:** 10
 
 **Substitutes:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
+
+<!--Device-TransitionOptions-type?: TransitionType--><!--Device-TransitionOptions-type?: TransitionType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

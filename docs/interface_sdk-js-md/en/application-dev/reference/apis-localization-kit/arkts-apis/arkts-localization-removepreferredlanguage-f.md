@@ -20,6 +20,8 @@ Removes a preferred language from the specified position on the preferred langua
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-i18n-export function removePreferredLanguage(index: int): boolean--><!--Device-i18n-export function removePreferredLanguage(index: int): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -32,5 +34,5 @@ Removes a preferred language from the specified position on the preferred langua
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the operation is successful. The value **true** indicates that the operation issuccessful, and the value **false** indicates the opposite. |
+| boolean | Whether the operation is successful. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 

@@ -1,9 +1,10 @@
 # MediaKeySystem
 
-Manages and record MediaKeySessions. Before calling an MediaKeySystem method, we must use getMediaKeySystem
-to get a MediaKeySystem instance, then we can call functions.
+Manages and record MediaKeySessions. Before calling an MediaKeySystem method, we must use getMediaKeySystem to get a MediaKeySystem instance, then we can call functions.
 
 **Since:** 14
+
+<!--Device-drm-interface MediaKeySystem--><!--Device-drm-interface MediaKeySystem-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -25,13 +26,15 @@ Remove media keys corresponding to the mediaKeyId.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MediaKeySystem-clearOfflineMediaKeys(mediaKeyId: Uint8Array): void--><!--Device-MediaKeySystem-clearOfflineMediaKeys(mediaKeyId: Uint8Array): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mediaKeyId | Uint8Array | Yes | The mediaKeyId specifies which media key should be cleared. |
+| mediaKeyId | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | The mediaKeyId specifies which media key should be cleared. |
 
 **Error codes:**
 
@@ -53,19 +56,21 @@ Create a MediaKeySession instance with level.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MediaKeySystem-createMediaKeySession(level: ContentProtectionLevel): MediaKeySession--><!--Device-MediaKeySystem-createMediaKeySession(level: ContentProtectionLevel): MediaKeySession-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | ContentProtectionLevel | Yes | Used to specify the content protection level. |
+| level | [ContentProtectionLevel](arkts-drm-contentprotectionlevel-e.md) | Yes | Used to specify the content protection level. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MediaKeySession | A MediaKeySession instance. |
+| [MediaKeySession](arkts-drm-mediakeysession-i.md) | A MediaKeySession instance. |
 
 **Error codes:**
 
@@ -88,13 +93,15 @@ Create a MediaKeySession instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MediaKeySystem-createMediaKeySession(): MediaKeySession--><!--Device-MediaKeySystem-createMediaKeySession(): MediaKeySession-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MediaKeySession | A MediaKeySession instance. |
+| [MediaKeySession](arkts-drm-mediakeysession-i.md) | A MediaKeySession instance. |
 
 **Error codes:**
 
@@ -115,6 +122,8 @@ Release the resource before the MediaKeySystem gonna be unused.
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-MediaKeySystem-destroy(): void--><!--Device-MediaKeySystem-destroy(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -137,13 +146,15 @@ Generate a media key system provision request.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MediaKeySystem-generateKeySystemRequest(): Promise<ProvisionRequest>--><!--Device-MediaKeySystem-generateKeySystemRequest(): Promise<ProvisionRequest>-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ProvisionRequest&gt; | Promise with ProvisionRequest used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ProvisionRequest> | Promise with ProvisionRequest used to return the result. |
 
 **Error codes:**
 
@@ -164,13 +175,15 @@ Get certificate status of the MediaKeySystem.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MediaKeySystem-getCertificateStatus(): CertificateStatus--><!--Device-MediaKeySystem-getCertificateStatus(): CertificateStatus-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CertificateStatus | Certificate Status of the MediaKeySystem instance. |
+| [CertificateStatus](arkts-drm-certificatestatus-e.md) | Certificate Status of the MediaKeySystem instance. |
 
 **Error codes:**
 
@@ -191,6 +204,8 @@ Get the specified configuration.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MediaKeySystem-getConfigurationByteArray(configName: string): Uint8Array--><!--Device-MediaKeySystem-getConfigurationByteArray(configName: string): Uint8Array-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 **Parameters:**
@@ -203,7 +218,7 @@ Get the specified configuration.
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | The config value. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | The config value. |
 
 **Error codes:**
 
@@ -224,6 +239,8 @@ Get the specified configuration.
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-MediaKeySystem-getConfigurationString(configName: string): string--><!--Device-MediaKeySystem-getConfigurationString(configName: string): string-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -259,13 +276,15 @@ Get max content protection level the device supports.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MediaKeySystem-getMaxContentProtectionLevel(): ContentProtectionLevel--><!--Device-MediaKeySystem-getMaxContentProtectionLevel(): ContentProtectionLevel-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ContentProtectionLevel | The max content protection level of the MediaKeySystem instance. |
+| [ContentProtectionLevel](arkts-drm-contentprotectionlevel-e.md) | The max content protection level of the MediaKeySystem instance. |
 
 **Error codes:**
 
@@ -286,13 +305,15 @@ Get the list of offline MediaKeyIds.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MediaKeySystem-getOfflineMediaKeyIds(): Uint8Array[]--><!--Device-MediaKeySystem-getOfflineMediaKeyIds(): Uint8Array[]-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array[] | The list of offline MediaKeyIds. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md)[] | The list of offline MediaKeyIds. |
 
 **Error codes:**
 
@@ -313,19 +334,21 @@ Get offline media key status corresponding to the mediaKeyId.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MediaKeySystem-getOfflineMediaKeyStatus(mediaKeyId: Uint8Array): OfflineMediaKeyStatus--><!--Device-MediaKeySystem-getOfflineMediaKeyStatus(mediaKeyId: Uint8Array): OfflineMediaKeyStatus-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mediaKeyId | Uint8Array | Yes | The media key identifier. |
+| mediaKeyId | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | The media key identifier. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| OfflineMediaKeyStatus | Offline media key Status. |
+| [OfflineMediaKeyStatus](arkts-drm-offlinemediakeystatus-e.md) | Offline media key Status. |
 
 **Error codes:**
 
@@ -341,12 +364,13 @@ Get offline media key status corresponding to the mediaKeyId.
 getStatistics(): StatisticKeyValue[]
 ```
 
-Get performance statistics information.That includes currentSessionNum, version, decryptNumber,
-and errorDecryptNumber.
+Get performance statistics information.That includes currentSessionNum, version, decryptNumber,and errorDecryptNumber.
 
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-MediaKeySystem-getStatistics(): StatisticKeyValue[]--><!--Device-MediaKeySystem-getStatistics(): StatisticKeyValue[]-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -354,7 +378,7 @@ and errorDecryptNumber.
 
 | Type | Description |
 | --- | --- |
-| StatisticKeyValue[] | A list that includes performance index and corresponding statistics. |
+| [StatisticKeyValue](arkts-drm-statistickeyvalue-i.md)[] | A list that includes performance index and corresponding statistics. |
 
 **Error codes:**
 
@@ -375,6 +399,8 @@ Unregister keySystemRequired events.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MediaKeySystem-off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 **Parameters:**
@@ -382,7 +408,7 @@ Unregister keySystemRequired events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keySystemRequired' | Yes | Type of the drm event to listen for. |
-| callback | (eventInfo: EventInfo) =&gt; void | No | Used to listen for the key system required event. |
+| callback | (eventInfo: EventInfo) => void | No | Used to listen for the key system required event. |
 
 **Error codes:**
 
@@ -403,6 +429,8 @@ Register keySystemRequired events.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MediaKeySystem-on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 **Parameters:**
@@ -410,7 +438,7 @@ Register keySystemRequired events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keySystemRequired' | Yes | Type of the drm event to listen for. |
-| callback | (eventInfo: EventInfo) =&gt; void | Yes | Used to listen for the key system required event. |
+| callback | (eventInfo: EventInfo) => void | Yes | Used to listen for the key system required event. |
 
 **Error codes:**
 
@@ -431,19 +459,21 @@ Process the response corresponding the key system request obtained by the applic
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MediaKeySystem-processKeySystemResponse(response: Uint8Array): Promise<void>--><!--Device-MediaKeySystem-processKeySystemResponse(response: Uint8Array): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| response | Uint8Array | Yes | Response corresponding to the request. |
+| response | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Response corresponding to the request. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -465,6 +495,8 @@ Set the specified configuration.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MediaKeySystem-setConfigurationByteArray(configName: string, value: Uint8Array): void--><!--Device-MediaKeySystem-setConfigurationByteArray(configName: string, value: Uint8Array): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 **Parameters:**
@@ -472,7 +504,7 @@ Set the specified configuration.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | configName | string | Yes | Used to specify the config name. |
-| value | Uint8Array | Yes | The value to be set. |
+| value | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | The value to be set. |
 
 **Error codes:**
 
@@ -493,6 +525,8 @@ Set the specified configuration.
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-MediaKeySystem-setConfigurationString(configName: string, value: string): void--><!--Device-MediaKeySystem-setConfigurationString(configName: string, value: string): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 

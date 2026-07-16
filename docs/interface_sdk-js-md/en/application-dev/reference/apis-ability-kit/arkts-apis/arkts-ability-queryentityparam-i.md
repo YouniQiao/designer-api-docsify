@@ -4,6 +4,8 @@ Parameter for query entity.
 
 **Since:** 26.0.0
 
+<!--Device-insightIntent-interface QueryEntityParam--><!--Device-insightIntent-interface QueryEntityParam-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Indicates the parameters when querying entities by property.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-QueryEntityParam-parameters?: Record<string, Object>--><!--Device-QueryEntityParam-parameters?: Record<string, Object>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## queryType
@@ -45,6 +49,8 @@ The query type.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-QueryEntityParam-queryType: QueryType--><!--Device-QueryEntityParam-queryType: QueryType-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

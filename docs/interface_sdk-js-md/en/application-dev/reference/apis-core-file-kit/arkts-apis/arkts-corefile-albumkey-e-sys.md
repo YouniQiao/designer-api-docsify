@@ -8,6 +8,8 @@ Defines the key album information.
 
 **Substitutes:** [AlbumKeys](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumkeys-e.md)
 
+<!--Device-userFileManager-enum AlbumKey--><!--Device-userFileManager-enum AlbumKey-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -25,6 +27,8 @@ URI of the album.
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [URI](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumkeys-e.md#uri)
+
+<!--Device-AlbumKey-URI--><!--Device-AlbumKey-URI-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -44,6 +48,8 @@ Type of the file.
 
 **Substitutes:** [AlbumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumtype-e.md)
 
+<!--Device-AlbumKey-FILE_TYPE--><!--Device-AlbumKey-FILE_TYPE-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -62,6 +68,8 @@ Name of the album.
 
 **Substitutes:** [ALBUM_NAME](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumkeys-e.md#album_name)
 
+<!--Device-AlbumKey-ALBUM_NAME--><!--Device-AlbumKey-ALBUM_NAME-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -72,14 +80,15 @@ Name of the album.
 DATE_ADDED
 ```
 
-Date when the file was added. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on
-January 1, 1970).
+Date when the file was added. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970).
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [DATE_MODIFIED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumkeys-e-sys.md#date_modified)
+
+<!--Device-AlbumKey-DATE_ADDED--><!--Device-AlbumKey-DATE_ADDED-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -91,14 +100,15 @@ January 1, 1970).
 DATE_MODIFIED
 ```
 
-Date when the file content (not the file name) was last modified. The value is the number of seconds elapsed
-since the Epoch time (00:00:00 UTC on January 1, 1970).
+Date when the file content (not the file name) was last modified. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970).
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [DATE_MODIFIED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumkeys-e-sys.md#date_modified)
+
+<!--Device-AlbumKey-DATE_MODIFIED--><!--Device-AlbumKey-DATE_MODIFIED-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

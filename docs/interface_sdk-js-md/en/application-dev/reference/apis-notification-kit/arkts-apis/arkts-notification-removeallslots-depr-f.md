@@ -14,13 +14,15 @@ Removes all notification slots. This API uses an asynchronous callback to return
 
 **Substitutes:** removeAllSlots
 
+<!--Device-notification-function removeAllSlots(callback: AsyncCallback<void>): void--><!--Device-notification-function removeAllSlots(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 
 ## removeAllSlots
@@ -37,11 +39,13 @@ Removes all notification slots. This API uses a promise to return the result.
 
 **Substitutes:** removeAllSlots
 
+<!--Device-notification-function removeAllSlots(): Promise<void>--><!--Device-notification-function removeAllSlots(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 

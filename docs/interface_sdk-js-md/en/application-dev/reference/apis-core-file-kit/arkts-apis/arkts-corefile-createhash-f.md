@@ -12,10 +12,11 @@ import { hash } from '@kit.CoreFileKit';
 function createHash(algorithm: string): HashStream
 ```
 
-Creates a **HashStream** instance, which can be used to generate a message digest (a hash value) using the given
-algorithm.
+Creates a **HashStream** instance, which can be used to generate a message digest (a hash value) using the given algorithm.
 
 **Since:** 12
+
+<!--Device-hash-function createHash(algorithm: string): HashStream--><!--Device-hash-function createHash(algorithm: string): HashStream-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -23,13 +24,13 @@ algorithm.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algorithm | string | Yes | Algorithm used to calculate the hash value. The value can be **md5**, **sha1**, or**sha256**. **sha256** is recommended for security purposes. |
+| algorithm | string | Yes | Algorithm used to calculate the hash value. The value can be **md5**, **sha1**, or **sha256**. **sha256** is recommended for security purposes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| HashStream | **HashStream** instance created. |
+| [HashStream](arkts-corefile-hashstream-c.md) | **HashStream** instance created. |
 
 **Error codes:**
 

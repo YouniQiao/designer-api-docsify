@@ -4,6 +4,8 @@ List element
 
 **Since:** 4
 
+<!--Device-unnamed-export interface ListElement--><!--Device-unnamed-export interface ListElement-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 ## rotation
@@ -12,14 +14,13 @@ List element
 rotation(obj?: FocusParamObj): void
 ```
 
-Requests or cancels the crown rotation focus for a component.
-If focus is set to true, the crown event focus is requested.
-If focus is set to false, the crown event focus is canceled.
-This attribute can be defaulted to true.
+Requests or cancels the crown rotation focus for a component.If focus is set to true, the crown event focus is requested.If focus is set to false, the crown event focus is canceled.This attribute can be defaulted to true.
 
 **Since:** 4
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-ListElement-rotation(obj?: FocusParamObj): void--><!--Device-ListElement-rotation(obj?: FocusParamObj): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -27,7 +28,7 @@ This attribute can be defaulted to true.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | FocusParamObj | No | { focus: true \| false } |
+| obj | [FocusParamObj](arkts-arkui-focusparamobj-i.md) | No | { focus: true \| false } |
 
 ## scrollTo
 
@@ -41,11 +42,13 @@ Scrolls the list to the position of the item at the specified index.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-ListElement-scrollTo(position: ListScrollToOptions): void--><!--Device-ListElement-scrollTo(position: ListScrollToOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | ListScrollToOptions | Yes |  |
+| position | [ListScrollToOptions](arkts-arkui-listscrolltooptions-i.md) | Yes |  |
 

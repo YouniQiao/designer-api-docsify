@@ -22,19 +22,21 @@ Stops vibration in the specified mode. This API uses a promise to return the res
 
 **Required permissions:** ohos.permission.VIBRATE
 
+<!--Device-vibrator-function stop(stopMode: VibratorStopMode): Promise<void>--><!--Device-vibrator-function stop(stopMode: VibratorStopMode): Promise<void>-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stopMode | VibratorStopMode | Yes | Mode to stop the vibration. |
+| stopMode | [VibratorStopMode](arkts-sensorservice-vibratorstopmode-e.md) | Yes | Mode to stop the vibration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns the result. |
 
 **Example**
 
@@ -76,14 +78,16 @@ Stops vibration in the specified mode. This API uses an asynchronous callback to
 
 **Required permissions:** ohos.permission.VIBRATE
 
+<!--Device-vibrator-function stop(stopMode: VibratorStopMode, callback?: AsyncCallback<void>): void--><!--Device-vibrator-function stop(stopMode: VibratorStopMode, callback?: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stopMode | VibratorStopMode | Yes | Mode to stop the vibration. |
-| callback | AsyncCallback&lt;void&gt; | No | Callback used to return the result. If the vibration stops, **err** is**undefined**; otherwise, **err** is an error object. |
+| stopMode | [VibratorStopMode](arkts-sensorservice-vibratorstopmode-e.md) | Yes | Mode to stop the vibration. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | No | Callback used to return the result. If the vibration stops, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Example**
 

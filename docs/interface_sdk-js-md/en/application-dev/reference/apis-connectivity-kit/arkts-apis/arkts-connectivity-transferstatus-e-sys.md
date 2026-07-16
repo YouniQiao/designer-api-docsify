@@ -4,6 +4,8 @@ Enum for the file transfer status.
 
 **Since:** 16
 
+<!--Device-opp-enum TransferStatus--><!--Device-opp-enum TransferStatus-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -19,6 +21,8 @@ The file is waiting next operate.
 **Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TransferStatus-PENDING = 0--><!--Device-TransferStatus-PENDING = 0-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -36,6 +40,8 @@ The file is transfering.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-TransferStatus-RUNNING = 1--><!--Device-TransferStatus-RUNNING = 1-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -51,6 +57,8 @@ The file is transfer finished.
 **Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TransferStatus-FINISH = 2--><!--Device-TransferStatus-FINISH = 2-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

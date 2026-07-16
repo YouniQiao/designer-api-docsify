@@ -12,12 +12,13 @@ import { policy } from '@kit.NetworkKit';
 function showAppNetPolicySettings(context: Context): Promise<void>
 ```
 
-Open the network settings interface of the application, which is presented in a semi-modal form and can
-be used to configure the network connection method. This API uses a promise to return the result.
+Open the network settings interface of the application, which is presented in a semi-modal form and can be used to configure the network connection method. This API uses a promise to return the result.
 
 **Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-policy-function showAppNetPolicySettings(context: Context): Promise<void>--><!--Device-policy-function showAppNetPolicySettings(context: Context): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -25,13 +26,13 @@ be used to configure the network connection method. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates Context instance. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates Context instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Example**
 

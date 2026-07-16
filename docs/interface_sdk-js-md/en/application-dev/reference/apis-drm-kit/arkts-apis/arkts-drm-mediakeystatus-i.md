@@ -4,6 +4,8 @@ Used to indicate the media key status.
 
 **Since:** 12
 
+<!--Device-drm-interface MediaKeyStatus--><!--Device-drm-interface MediaKeyStatus-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Media key Id in string.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MediaKeyStatus-name: string--><!--Device-MediaKeyStatus-name: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## value
@@ -41,6 +45,8 @@ Media key status description.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MediaKeyStatus-value: string--><!--Device-MediaKeyStatus-value: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 

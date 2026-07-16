@@ -1,14 +1,14 @@
 # DHCommonParamsSpec
 
-Defines a child class of [AsyKeySpec](arkts-cryptoarchitecture-asykeyspec-i.md) used to specify the common parameters of
-the public and private keys in the DH algorithm.
+Defines a child class of [AsyKeySpec](arkts-cryptoarchitecture-asykeyspec-i.md) used to specify the common parameters of the public and private keys in the DH algorithm.
 
-To generate a key based on key parameters, pass it to
-[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec-1) to create a key generator.
+To generate a key based on key parameters, pass it to [createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec-1) to create a key generator.
 
 **Inheritance/Implementation:** DHCommonParamsSpec extends [AsyKeySpec](arkts-cryptoarchitecture-asykeyspec-i.md)
 
 **Since:** 11
+
+<!--Device-cryptoFramework-interface DHCommonParamsSpec extends AsyKeySpec--><!--Device-cryptoFramework-interface DHCommonParamsSpec extends AsyKeySpec-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -34,6 +34,8 @@ Parameter **g** in the DH algorithm.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DHCommonParamsSpec-g: bigint--><!--Device-DHCommonParamsSpec-g: bigint-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 11: SystemCapability.Security.CryptoFramework
@@ -52,6 +54,8 @@ Length of the private key in the DH algorithm, in bits.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DHCommonParamsSpec-l: int--><!--Device-DHCommonParamsSpec-l: int-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 11: SystemCapability.Security.CryptoFramework
@@ -69,6 +73,8 @@ Large prime **p** in the DH algorithm.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DHCommonParamsSpec-p: bigint--><!--Device-DHCommonParamsSpec-p: bigint-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey

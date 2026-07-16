@@ -16,6 +16,8 @@ Subscribes to data of the color sensor.
 
 **Since:** 10
 
+<!--Device-sensor-function on(type: SensorId.COLOR, callback: Callback<ColorResponse>, options?: Options): void--><!--Device-sensor-function on(type: SensorId.COLOR, callback: Callback<ColorResponse>, options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **System API:** This is a system API.
@@ -25,8 +27,8 @@ Subscribes to data of the color sensor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.COLOR | Yes | Sensor type. The value is fixed at **SensorId.COLOR**. |
-| callback | Callback&lt;ColorResponse&gt; | Yes | Callback used to report the sensor data, which is a **ColorResponse**object. |
-| options | Options | No | List of optional parameters. This parameter is used to set the data reportingfrequency. The default value is 200,000,000 ns. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ColorResponse> | Yes | Callback used to report the sensor data, which is a **ColorResponse** object. |
+| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-options-i.md) | No | List of optional parameters. This parameter is used to set the data reporting frequency. The default value is 200,000,000 ns. |
 
 **Error codes:**
 
@@ -47,6 +49,8 @@ Subscribes to data of the Sodium Adsorption Ratio (SAR) sensor.
 
 **Since:** 10
 
+<!--Device-sensor-function on(type: SensorId.SAR, callback: Callback<SarResponse>, options?: Options): void--><!--Device-sensor-function on(type: SensorId.SAR, callback: Callback<SarResponse>, options?: Options): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **System API:** This is a system API.
@@ -56,8 +60,8 @@ Subscribes to data of the Sodium Adsorption Ratio (SAR) sensor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.SAR | Yes | Sensor type. The value is fixed at **SensorId.SAR**. |
-| callback | Callback&lt;SarResponse&gt; | Yes | Callback used to report the sensor data, which is a **SarResponse**object. |
-| options | Options | No | List of optional parameters. This parameter is used to set the data reportingfrequency. The default value is 200,000,000 ns. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SarResponse> | Yes | Callback used to report the sensor data, which is a **SarResponse** object. |
+| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-options-i.md) | No | List of optional parameters. This parameter is used to set the data reporting frequency. The default value is 200,000,000 ns. |
 
 **Error codes:**
 

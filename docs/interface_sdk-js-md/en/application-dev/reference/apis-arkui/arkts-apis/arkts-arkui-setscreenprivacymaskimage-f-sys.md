@@ -16,6 +16,8 @@ Sets a privacy mask image for the screen. This API uses a promise to return the 
 
 **Since:** 19
 
+<!--Device-screen-function setScreenPrivacyMaskImage(screenId: long, image?: image.PixelMap): Promise<void>--><!--Device-screen-function setScreenPrivacyMaskImage(screenId: long, image?: image.PixelMap): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
@@ -25,13 +27,13 @@ Sets a privacy mask image for the screen. This API uses a promise to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | screenId | number | Yes | Screen ID. The value must be a positive integer. |
-| image | image.PixelMap | No | Privacy mask image. If no value is passed, the default privacy mask image isused. |
+| image | image.PixelMap | No | Privacy mask image. If no value is passed, the default privacy mask image is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

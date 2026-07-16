@@ -16,6 +16,8 @@ Creates a PixelMap object from surface id.
 
 **Since:** 12
 
+<!--Device-image-function createPixelMapFromSurfaceSync(surfaceId: string, region: Region): PixelMap--><!--Device-image-function createPixelMapFromSurfaceSync(surfaceId: string, region: Region): PixelMap-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
@@ -23,13 +25,13 @@ Creates a PixelMap object from surface id.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | surfaceId | string | Yes | surface id. |
-| region | Region | Yes | The region to surface. |
+| region | [Region](arkts-image-region-i.md) | Yes | The region to surface. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PixelMap | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
+| [PixelMap](arkts-image-pixelmap-i.md) | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
 
 **Error codes:**
 
@@ -61,6 +63,8 @@ Creates a PixelMap object from surface id.
 
 **Since:** 15
 
+<!--Device-image-function createPixelMapFromSurfaceSync(surfaceId: string): PixelMap--><!--Device-image-function createPixelMapFromSurfaceSync(surfaceId: string): PixelMap-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
@@ -73,7 +77,7 @@ Creates a PixelMap object from surface id.
 
 | Type | Description |
 | --- | --- |
-| PixelMap | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
+| [PixelMap](arkts-image-pixelmap-i.md) | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
 
 **Error codes:**
 

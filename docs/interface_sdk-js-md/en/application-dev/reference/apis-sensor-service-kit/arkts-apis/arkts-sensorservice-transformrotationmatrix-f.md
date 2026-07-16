@@ -13,10 +13,13 @@ function transformRotationMatrix(inRotationVector: Array<number>, coordinates: C
     callback: AsyncCallback<Array<number>>): void
 ```
 
-Transforms a rotation vector based on the coordinate system. This API uses an asynchronous callback to return the
-result.
+Transforms a rotation vector based on the coordinate system. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-sensor-function transformRotationMatrix(inRotationVector: Array<double>, coordinates: CoordinatesOptions,
+    callback: AsyncCallback<Array<double>>): void--><!--Device-sensor-function transformRotationMatrix(inRotationVector: Array<double>, coordinates: CoordinatesOptions,
+    callback: AsyncCallback<Array<double>>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -24,9 +27,9 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inRotationVector | Array&lt;number&gt; | Yes | Rotation vector. |
-| coordinates | CoordinatesOptions | Yes | Rotation vector to transform. |
-| callback | AsyncCallback&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the rotation vector after beingtransformed. |
+| inRotationVector | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Rotation vector. |
+| coordinates | [CoordinatesOptions](arkts-sensorservice-coordinatesoptions-i.md) | Yes | Rotation vector to transform. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<number>> | Yes | Callback used to return the rotation vector after being transformed. |
 
 **Error codes:**
 
@@ -75,20 +78,22 @@ Transforms a rotation vector based on the coordinate system. This API uses a pro
 
 **Since:** 9
 
+<!--Device-sensor-function transformRotationMatrix(inRotationVector: Array<double>, coordinates: CoordinatesOptions): Promise<Array<double>>--><!--Device-sensor-function transformRotationMatrix(inRotationVector: Array<double>, coordinates: CoordinatesOptions): Promise<Array<double>>-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inRotationVector | Array&lt;number&gt; | Yes | Rotation vector. |
-| coordinates | CoordinatesOptions | Yes | Rotation vector to transform. |
+| inRotationVector | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Rotation vector. |
+| coordinates | [CoordinatesOptions](arkts-sensorservice-coordinatesoptions-i.md) | Yes | Rotation vector to transform. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the rotation vector after being transformed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | Promise used to return the rotation vector after being transformed. |
 
 **Error codes:**
 

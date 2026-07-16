@@ -4,6 +4,8 @@ Sets the style for the component of the **Switch** type.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface SwitchStyle--><!--Device-unnamed-declare interface SwitchStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## pointColor
@@ -23,6 +25,8 @@ Default value: **$r('sys.color.ohos_id_color_foreground_contrary')**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SwitchStyle-pointColor?: ResourceColor--><!--Device-SwitchStyle-pointColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,6 +54,8 @@ If the value is not specified or the specified one is less than 0, the radius is
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SwitchStyle-pointRadius?: number | Resource--><!--Device-SwitchStyle-pointRadius?: number | Resource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## trackBorderRadius
@@ -62,12 +68,9 @@ Radius of the slider track border corners when the component is of the **Switch*
 
 **NOTE**
 
-This parameter cannot be set in percentage. If the value specified is less than 0, the radius is set using the
-default value formula. If the value specified is greater than half of the component height, the latter is used. In
-other cases, the value specified is used.
+This parameter cannot be set in percentage. If the value specified is less than 0, the radius is set using the default value formula. If the value specified is greater than half of the component height, the latter is used. In other cases, the value specified is used.
 
-If the value is not specified or the specified one is less than 0, the radius is set using the default value
-formula.
+If the value is not specified or the specified one is less than 0, the radius is set using the default value formula.
 
 Default value formula: Component height (in vp)/2
 
@@ -79,6 +82,8 @@ Default value formula: Component height (in vp)/2
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SwitchStyle-trackBorderRadius?: number | Resource--><!--Device-SwitchStyle-trackBorderRadius?: number | Resource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## unselectedColor
@@ -89,10 +94,7 @@ unselectedColor?: ResourceColor
 
 Background color of the component when it is of the **Switch** type and is disabled.
 
-Default value: **0x337F7F7F** (applies to both dark and light modes). Since API version 20, when
-[optimizing color mode switching overhead](../../../../ui/ui-dark-light-color-adaptation.md#optimizing-color-mode-switching-overhead)
-is enabled, the default value is **0x19000000** (black with 10% opacity) in light mode and **0x19FFFFFF** (white
-with 10% opacity) in dark mode.
+Default value: **0x337F7F7F** (applies to both dark and light modes). Since API version 20, when [optimizing color mode switching overhead](../../../../ui/ui-dark-light-color-adaptation.md#optimizing-color-mode-switching-overhead)is enabled, the default value is **0x19000000** (black with 10% opacity) in light mode and **0x19FFFFFF** (white with 10% opacity) in dark mode.
 
 **Type:** ResourceColor
 
@@ -101,6 +103,8 @@ with 10% opacity) in dark mode.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SwitchStyle-unselectedColor?: ResourceColor--><!--Device-SwitchStyle-unselectedColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

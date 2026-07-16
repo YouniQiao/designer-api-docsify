@@ -18,6 +18,8 @@ Set the policy for the specified UID.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function setPolicyByUid(uid: number, policy: NetUidPolicy, callback: AsyncCallback<void>): void--><!--Device-policy-function setPolicyByUid(uid: number, policy: NetUidPolicy, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -27,8 +29,8 @@ Set the policy for the specified UID.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | number | Yes | the specified UID of application. |
-| policy | NetUidPolicy | Yes | the policy of the current UID of application.For details, see {@link NetUidPolicy}. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of setPolicyByUid. |
+| policy | [NetUidPolicy](arkts-network-netuidpolicy-e-sys.md) | Yes | the policy of the current UID of application.For details, see {@link NetUidPolicy}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of setPolicyByUid. |
 
 **Error codes:**
 
@@ -65,6 +67,8 @@ Set the policy for the specified UID.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function setPolicyByUid(uid: number, policy: NetUidPolicy): Promise<void>--><!--Device-policy-function setPolicyByUid(uid: number, policy: NetUidPolicy): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -74,13 +78,13 @@ Set the policy for the specified UID.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | number | Yes | the specified UID of application. |
-| policy | NetUidPolicy | Yes | the policy of the current UID of application.For details, see {@link NetUidPolicy}. |
+| policy | [NetUidPolicy](arkts-network-netuidpolicy-e-sys.md) | Yes | the policy of the current UID of application.For details, see {@link NetUidPolicy}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

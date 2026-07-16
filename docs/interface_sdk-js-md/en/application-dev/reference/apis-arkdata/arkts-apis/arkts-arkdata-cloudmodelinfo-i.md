@@ -4,6 +4,8 @@ Indicates cloud embedding model information.
 
 **Since:** 26.0.0
 
+<!--Device-intelligence-interface CloudModelInfo--><!--Device-intelligence-interface CloudModelInfo-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Indicates cloud embedding model type.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-CloudModelInfo-modelType: string--><!--Device-CloudModelInfo-modelType: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 ## modelVersionCode
@@ -41,6 +45,8 @@ Indicates cloud embedding model version.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CloudModelInfo-modelVersionCode?: string--><!--Device-CloudModelInfo-modelVersionCode?: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 

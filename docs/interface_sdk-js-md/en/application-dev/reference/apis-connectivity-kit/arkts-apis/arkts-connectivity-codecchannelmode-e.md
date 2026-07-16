@@ -4,6 +4,8 @@ Describes the codec channel mode.
 
 **Since:** 11
 
+<!--Device-a2dp-enum CodecChannelMode--><!--Device-a2dp-enum CodecChannelMode-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## CODEC_CHANNEL_MODE_NONE
@@ -15,6 +17,8 @@ CODEC_CHANNEL_MODE_NONE = 0
 Codec channel mode none.
 
 **Since:** 11
+
+<!--Device-CodecChannelMode-CODEC_CHANNEL_MODE_NONE = 0--><!--Device-CodecChannelMode-CODEC_CHANNEL_MODE_NONE = 0-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -28,6 +32,8 @@ Codec channel mode MONO.
 
 **Since:** 11
 
+<!--Device-CodecChannelMode-CODEC_CHANNEL_MODE_MONO = 1--><!--Device-CodecChannelMode-CODEC_CHANNEL_MODE_MONO = 1-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## CODEC_CHANNEL_MODE_STEREO
@@ -39,6 +45,8 @@ CODEC_CHANNEL_MODE_STEREO = 2
 Codec channel mode STEREO.
 
 **Since:** 11
+
+<!--Device-CodecChannelMode-CODEC_CHANNEL_MODE_STEREO = 2--><!--Device-CodecChannelMode-CODEC_CHANNEL_MODE_STEREO = 2-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

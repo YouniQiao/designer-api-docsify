@@ -4,6 +4,8 @@ Represents the information of certificate.
 
 **Since:** 22
 
+<!--Device-unnamed-export interface HuksCryptoExtensionCertInfo--><!--Device-unnamed-export interface HuksCryptoExtensionCertInfo-End-->
+
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## Modules to Import
@@ -24,6 +26,8 @@ The content of the certificate.
 
 **Since:** 22
 
+<!--Device-HuksCryptoExtensionCertInfo-cert: Uint8Array--><!--Device-HuksCryptoExtensionCertInfo-cert: Uint8Array-End-->
+
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## purpose
@@ -38,6 +42,8 @@ The type of the certificate, sign or encrypt.
 
 **Since:** 22
 
+<!--Device-HuksCryptoExtensionCertInfo-purpose: certificateManager.CertificatePurpose--><!--Device-HuksCryptoExtensionCertInfo-purpose: certificateManager.CertificatePurpose-End-->
+
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## resourceId
@@ -51,6 +57,8 @@ The resource index of the certificate.
 **Type:** string
 
 **Since:** 22
+
+<!--Device-HuksCryptoExtensionCertInfo-resourceId: string--><!--Device-HuksCryptoExtensionCertInfo-resourceId: string-End-->
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 

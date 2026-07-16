@@ -18,6 +18,8 @@ Get distributed avsession controller
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function getDistributedSessionController(distributedSessionType: DistributedSessionType): Promise<Array<AVSessionController>>--><!--Device-avSession-function getDistributedSessionController(distributedSessionType: DistributedSessionType): Promise<Array<AVSessionController>>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Get distributed avsession controller
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| distributedSessionType | DistributedSessionType | Yes | Specifies the distributed session type. |
+| distributedSessionType | [DistributedSessionType](arkts-avsession-distributedsessiontype-e-sys.md) | Yes | Specifies the distributed session type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AVSessionController&gt;&gt; | Promise for AVSessionController. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AVSessionController>> | Promise for AVSessionController. |
 
 **Error codes:**
 

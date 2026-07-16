@@ -1,5 +1,11 @@
 # switchInputMethod（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { inputMethod } from '@kit.IMEKit';
+```
+
 ## switchInputMethod
 
 ```TypeScript
@@ -11,6 +17,8 @@ function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void
 **起始版本：** 11
 
 **需要权限：** ohos.permission.CONNECT_IME_ABILITY
+
+<!--Device-inputMethod-function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void>--><!--Device-inputMethod-function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -27,7 +35,7 @@ function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

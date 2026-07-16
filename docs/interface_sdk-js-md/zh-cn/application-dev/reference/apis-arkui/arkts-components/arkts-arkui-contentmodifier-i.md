@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface ContentModifier<T>--><!--Device-unnamed-declare interface ContentModifier<T>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## applyContent
@@ -26,7 +28,9 @@ ButtonConfiguration、CheckBoxConfiguration、DataPanelConfiguration、TextClock
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ContentModifier-applyContent(): WrappedBuilder<[T]>--><!--Device-ContentModifier-applyContent(): WrappedBuilder<[T]>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,5 +38,5 @@ ButtonConfiguration、CheckBoxConfiguration、DataPanelConfiguration、TextClock
 
 | 类型 | 说明 |
 | --- | --- |
-| WrappedBuilder&lt;[T]&gt; | 组件的属性类，用来区别不同组件自定义内容区后所需要的不同信息，比如Button组件的ButtonConfiguration，Checkbox组件的CheckBoxConfiguration等。 |
+| [WrappedBuilder](arkts-arkui-wrappedbuilder-c.md)<[T]> | 组件的属性类，用来区别不同组件自定义内容区后所需要的不同信息，比如Button组件的ButtonConfiguration，Checkbox组件的CheckBoxConfiguration等。 |
 

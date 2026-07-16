@@ -8,9 +8,17 @@
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare namespace uiAppearance--><!--Device-unnamed-declare namespace uiAppearance-End-->
+
 **系统能力：** SystemCapability.ArkUI.UiAppearance
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { uiAppearance } from '@kit.ArkUI';
+```
 
 ## 汇总
 
@@ -33,6 +41,6 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [DarkMode](arkts-arkui-darkmode-e-sys.md) | 深色模式枚举。\| 名称 \| 值 \| 说明 \|\| -- \| -- \| -- \|\| ALWAYS_DARK \| 0 \| 系统始终为深色。 \|\| ALWAYS_LIGHT \| 1 \| 系统始终为浅色。 \| |
+| [DarkMode](arkts-arkui-darkmode-e-sys.md) | 深色模式枚举。\| 名称 \| 值 \| 说明 \| \| -- \| -- \| -- \| \| ALWAYS_DARK \| 0 \| 系统始终为深色。 \| \| ALWAYS_LIGHT \| 1 \| 系统始终为浅色。 \| |
 <!--DelEnd-->
 

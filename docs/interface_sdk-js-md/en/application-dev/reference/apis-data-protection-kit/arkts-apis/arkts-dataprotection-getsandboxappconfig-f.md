@@ -14,10 +14,11 @@ function getSandboxAppConfig(): Promise<string>
 
 Obtains sandbox application configuration. This API uses a promise to return the result.
 
-This API obtains the sandbox application configuration, which can be used to read or verify the current
-configuration status.
+This API obtains the sandbox application configuration, which can be used to read or verify the current configuration status.
 
 **Since:** 11
+
+<!--Device-dlpPermission-function getSandboxAppConfig(): Promise<string>--><!--Device-dlpPermission-function getSandboxAppConfig(): Promise<string>-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -25,7 +26,7 @@ configuration status.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the result. |
 
 **Error codes:**
 

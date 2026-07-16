@@ -4,6 +4,8 @@ Describes the placeholder style.
 
 **Since:** 12
 
+<!--Device-text-interface PlaceholderSpan--><!--Device-text-interface PlaceholderSpan-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Vertical alignment of the placeholder relative to the surrounding text.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-PlaceholderSpan-align: PlaceholderAlignment--><!--Device-PlaceholderSpan-align: PlaceholderAlignment-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## baseline
@@ -41,6 +45,8 @@ Type of the text baseline.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-PlaceholderSpan-baseline: TextBaseline--><!--Device-PlaceholderSpan-baseline: TextBaseline-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -58,6 +64,8 @@ Offset to the text baseline, in units of px. The value is a floating point numbe
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-PlaceholderSpan-baselineOffset: double--><!--Device-PlaceholderSpan-baselineOffset: double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## height
@@ -74,6 +82,8 @@ Height of the placeholder, in units of px. The value is a floating point number.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-PlaceholderSpan-height: double--><!--Device-PlaceholderSpan-height: double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## width
@@ -89,6 +99,8 @@ Width of the placeholder, in units of px. The value is a floating point number.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-PlaceholderSpan-width: double--><!--Device-PlaceholderSpan-width: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

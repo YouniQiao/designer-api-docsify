@@ -4,6 +4,8 @@ Indicates the results of manual network scan
 
 **Since:** 23
 
+<!--Device-radio-export interface NetworkSearchRealTimeResult--><!--Device-radio-export interface NetworkSearchRealTimeResult-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Indicates whether the network search was stop.
 
 **Since:** 23
 
+<!--Device-NetworkSearchRealTimeResult-isFinish: boolean--><!--Device-NetworkSearchRealTimeResult-isFinish: boolean-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ the network search results.
 **Type:** Array<NetworkInformation>
 
 **Since:** 23
+
+<!--Device-NetworkSearchRealTimeResult-networkInfos: Array<NetworkInformation>--><!--Device-NetworkSearchRealTimeResult-networkInfos: Array<NetworkInformation>-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 

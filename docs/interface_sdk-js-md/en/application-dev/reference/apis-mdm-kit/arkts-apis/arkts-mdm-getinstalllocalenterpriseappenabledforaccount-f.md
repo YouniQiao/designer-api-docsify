@@ -20,20 +20,22 @@ Checks whether local installation of enterprise applications is supported for a 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-systemManager-function getInstallLocalEnterpriseAppEnabledForAccount(admin: Want | null, accountId: number): boolean--><!--Device-systemManager-function getInstallLocalEnterpriseAppEnabledForAccount(admin: Want | null, accountId: number): boolean-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application.<br>If the device has multiple MDMapplications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policiesthat actually take effect on the device are returned. |
+| admin | Want \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application.<br>If the device has multiple MDM applications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policies that actually take effect on the device are returned. |
 | accountId | number | Yes | Account ID.<br>The value must be an integer greater than or equal to 0.<br>You can call APIs such as [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)to obtain the account ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether local installation of enterprise applications is supported. The value **true**indicates that local installation is supported, and the value **false** indicates the opposite. When **admin**is set to **null**, this API checks whether local installation of enterprise applications is supported. |
+| boolean | Whether local installation of enterprise applications is supported. The value **true** indicates that local installation is supported, and the value **false** indicates the opposite. When **admin** is set to **null**, this API checks whether local installation of enterprise applications is supported. |
 
 **Error codes:**
 

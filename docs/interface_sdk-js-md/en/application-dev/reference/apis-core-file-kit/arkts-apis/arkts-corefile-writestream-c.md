@@ -1,13 +1,12 @@
 # WriteStream
 
-Defines a writeable stream. You need to use
-[fileIo.createWriteStream](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatewritestream12) to
-create a **WriteStream** instance, which is inherited from [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-writable-c.md)
-.
+Defines a writeable stream. You need to use [fileIo.createWriteStream](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatewritestream12) to create a **WriteStream** instance, which is inherited from [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-writable-c.md).
 
 **Inheritance/Implementation:** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-writable-c.md)
 
 **Since:** 12
+
+<!--Device-unnamed-declare class WriteStream extends stream.Writable--><!--Device-unnamed-declare class WriteStream extends stream.Writable-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -26,6 +25,8 @@ close(): void
 Closes this writeable stream.
 
 **Since:** 12
+
+<!--Device-WriteStream-close(): void--><!--Device-WriteStream-close(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -59,6 +60,8 @@ The WriteStream constructor.
 
 **Since:** 12
 
+<!--Device-WriteStream-constructor()--><!--Device-WriteStream-constructor()-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## seek
@@ -71,6 +74,8 @@ Adjusts the position of the writeable stream offset pointer.
 
 **Since:** 12
 
+<!--Device-WriteStream-seek(offset: number, whence?: WhenceType): number--><!--Device-WriteStream-seek(offset: number, whence?: WhenceType): number-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
@@ -78,7 +83,7 @@ Adjusts the position of the writeable stream offset pointer.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | offset | number | Yes | Relative offset, in bytes. |
-| whence | WhenceType | No | Where to start the offset. The default value is **SEEK_SET**, which indicates thebeginning of the file. |
+| whence | [WhenceType](arkts-corefile-whencetype-e.md) | No | Where to start the offset. The default value is **SEEK_SET**, which indicates the beginning of the file. |
 
 **Return value:**
 
@@ -118,6 +123,8 @@ Number of bytes written to the writable stream.
 
 **Since:** 12
 
+<!--Device-WriteStream-readonly bytesWritten: number--><!--Device-WriteStream-readonly bytesWritten: number-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## path
@@ -131,6 +138,8 @@ Path of the file corresponding to the writeable stream.
 **Type:** string
 
 **Since:** 12
+
+<!--Device-WriteStream-readonly path: string--><!--Device-WriteStream-readonly path: string-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

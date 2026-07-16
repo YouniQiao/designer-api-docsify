@@ -16,19 +16,21 @@ Creates a floating ball controller. This API uses a promise to return the result
 
 **Since:** 20
 
+<!--Device-floatingBall-function create(config: FloatingBallConfiguration): Promise<FloatingBallController>--><!--Device-floatingBall-function create(config: FloatingBallConfiguration): Promise<FloatingBallController>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | FloatingBallConfiguration | Yes | Parameters for creating the floating ball controller. This parametercannot be empty, and **context** that is used to construct this parameter cannot be empty. |
+| config | [FloatingBallConfiguration](arkts-arkui-floatingballconfiguration-i.md) | Yes | Parameters for creating the floating ball controller. This parameter cannot be empty, and **context** that is used to construct this parameter cannot be empty. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FloatingBallController&gt; | Promise used to return the floating ball controller. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<FloatingBallController> | Promise used to return the floating ball controller. |
 
 **Error codes:**
 

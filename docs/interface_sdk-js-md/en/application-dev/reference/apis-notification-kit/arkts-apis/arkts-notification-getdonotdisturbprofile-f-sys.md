@@ -18,6 +18,8 @@ Queries the Do Not Disturb profile. This API uses a promise to return the result
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getDoNotDisturbProfile(id: long): Promise<DoNotDisturbProfile>--><!--Device-notificationManager-function getDoNotDisturbProfile(id: long): Promise<DoNotDisturbProfile>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -32,7 +34,7 @@ Queries the Do Not Disturb profile. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DoNotDisturbProfile&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DoNotDisturbProfile> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -75,6 +77,8 @@ Queries the Do Not Disturb profile of a specified user. This API uses a promise 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-notificationManager-function getDoNotDisturbProfile(id: long, userId: int): Promise<DoNotDisturbProfile>--><!--Device-notificationManager-function getDoNotDisturbProfile(id: long, userId: int): Promise<DoNotDisturbProfile>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -90,7 +94,7 @@ Queries the Do Not Disturb profile of a specified user. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DoNotDisturbProfile&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DoNotDisturbProfile> | Promise used to return the result. |
 
 **Error codes:**
 

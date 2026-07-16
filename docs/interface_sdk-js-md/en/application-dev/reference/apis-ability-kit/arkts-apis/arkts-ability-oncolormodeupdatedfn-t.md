@@ -12,6 +12,8 @@ Defines an OnColorModeUpdatedFn function.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-systemConfiguration-type OnColorModeUpdatedFn = (colorMode: ConfigurationConstant.ColorMode) => void--><!--Device-systemConfiguration-type OnColorModeUpdatedFn = (colorMode: ConfigurationConstant.ColorMode) => void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**

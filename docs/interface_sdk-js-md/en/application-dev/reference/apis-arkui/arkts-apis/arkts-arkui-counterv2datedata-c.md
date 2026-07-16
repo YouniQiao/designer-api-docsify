@@ -4,6 +4,8 @@ Defines the date data.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare class CounterV2DateData--><!--Device-unnamed-declare class CounterV2DateData-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,6 +27,8 @@ Constructor of the DateData.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CounterV2DateData-constructor(year: int, month: int, day: int)--><!--Device-CounterV2DateData-constructor(year: int, month: int, day: int)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,6 +54,8 @@ Convert the date data to string.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CounterV2DateData-toString(): string--><!--Device-CounterV2DateData-toString(): string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -74,6 +80,8 @@ The day of the DateData.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CounterV2DateData-day: int--><!--Device-CounterV2DateData-day: int-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## month
@@ -92,6 +100,8 @@ The month of the DateData.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CounterV2DateData-month: int--><!--Device-CounterV2DateData-month: int-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## year
@@ -109,6 +119,8 @@ The year of the DateData, ranges from 1 to 5000.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CounterV2DateData-year: int--><!--Device-CounterV2DateData-year: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

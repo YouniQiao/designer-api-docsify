@@ -12,8 +12,7 @@ import { geolocation } from '@kit.LocationKit';
 function flushCachedGnssLocations(callback: AsyncCallback<boolean>): void
 ```
 
-All prepared GNSS locations are returned to the application through the callback function,
-and the bottom-layer buffer is cleared.
+All prepared GNSS locations are returned to the application through the callback function,and the bottom-layer buffer is cleared.
 
 **Since:** 8
 
@@ -23,13 +22,15 @@ and the bottom-layer buffer is cleared.
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function flushCachedGnssLocations(callback: AsyncCallback<boolean>): void--><!--Device-geolocation-function flushCachedGnssLocations(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Gnss
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Indicates the callback for reporting the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Indicates the callback for reporting the result. |
 
 **Example**
 
@@ -53,8 +54,7 @@ geolocation.flushCachedGnssLocations((err, result) => {
 function flushCachedGnssLocations(): Promise<boolean>
 ```
 
-All prepared GNSS locations are returned to the application through the callback function,
-and the bottom-layer buffer is cleared.
+All prepared GNSS locations are returned to the application through the callback function,and the bottom-layer buffer is cleared.
 
 **Since:** 8
 
@@ -64,13 +64,15 @@ and the bottom-layer buffer is cleared.
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function flushCachedGnssLocations(): Promise<boolean>--><!--Device-geolocation-function flushCachedGnssLocations(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Location.Location.Gnss
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | The promise returned by the function. |
 
 **Example**
 

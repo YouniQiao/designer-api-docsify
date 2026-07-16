@@ -18,6 +18,8 @@ Get the status whether the uid app can access the metered network or non-metered
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function isUidNetAllowed(uid: number, isMetered: boolean, callback: AsyncCallback<boolean>): void--><!--Device-policy-function isUidNetAllowed(uid: number, isMetered: boolean, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Get the status whether the uid app can access the metered network or non-metered
 | --- | --- | --- | --- |
 | uid | number | Yes | The specified UID of application. |
 | isMetered | boolean | Yes | Indicates metered network or non-metered network. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | the callback of isUidNetAllowed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | the callback of isUidNetAllowed. |
 
 **Error codes:**
 
@@ -66,6 +68,8 @@ Get the status whether the uid app can access the metered network or non-metered
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function isUidNetAllowed(uid: number, isMetered: boolean): Promise<boolean>--><!--Device-policy-function isUidNetAllowed(uid: number, isMetered: boolean): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -81,7 +85,7 @@ Get the status whether the uid app can access the metered network or non-metered
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -123,6 +127,8 @@ Get the status of whether the specified uid can access the specified network.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function isUidNetAllowed(uid: number, iface: string, callback: AsyncCallback<boolean>): void--><!--Device-policy-function isUidNetAllowed(uid: number, iface: string, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -133,7 +139,7 @@ Get the status of whether the specified uid can access the specified network.
 | --- | --- | --- | --- |
 | uid | number | Yes | The specified UID of application. |
 | iface | string | Yes | The specified network interface name. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | the callback of isUidNetAllowed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | the callback of isUidNetAllowed. |
 
 **Error codes:**
 
@@ -171,6 +177,8 @@ Get the status of whether the specified uid can access the specified network.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function isUidNetAllowed(uid: number, iface: string): Promise<boolean>--><!--Device-policy-function isUidNetAllowed(uid: number, iface: string): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -186,7 +194,7 @@ Get the status of whether the specified uid can access the specified network.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | The promise returned by the function. |
 
 **Error codes:**
 

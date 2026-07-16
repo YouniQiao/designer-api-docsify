@@ -25,6 +25,16 @@
 > page. For example, do not apply the [zIndex]{@link CommonMethod#zIndex} attribute to a **NavDestination**
 > component. This will override the system-defined stacking order and may cause display anomalies.
 
+## Child Components
+
+> **NOTE**  
+>  
+> - Allowed child component types: built-in and custom components, including rendering control types (  
+> [if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md),  
+> [ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md), and  
+> [LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)).  
+>  
+> - Number of child components: multiple.
 
 ## NavDestination
 
@@ -37,6 +47,8 @@ Creates the root container for a subpage in [Navigation]{@link navigation}.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NavDestinationInterface-(): NavDestinationAttribute--><!--Device-NavDestinationInterface-(): NavDestinationAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

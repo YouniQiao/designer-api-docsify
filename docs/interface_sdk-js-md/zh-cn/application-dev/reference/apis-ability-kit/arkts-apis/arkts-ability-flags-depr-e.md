@@ -8,6 +8,8 @@ Flags说明。用于表示处理Want的方式。
 
 **替代接口：** Flags
 
+<!--Device-wantConstant-export enum Flags--><!--Device-wantConstant-export enum Flags-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## FLAG_AUTH_READ_URI_PERMISSION
@@ -23,6 +25,8 @@ FLAG_AUTH_READ_URI_PERMISSION = 0x00000001
 **废弃版本：** 9
 
 **替代接口：** FLAG_AUTH_READ_URI_PERMISSION
+
+<!--Device-Flags-FLAG_AUTH_READ_URI_PERMISSION = 0x00000001--><!--Device-Flags-FLAG_AUTH_READ_URI_PERMISSION = 0x00000001-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -40,6 +44,8 @@ FLAG_AUTH_WRITE_URI_PERMISSION = 0x00000002
 
 **替代接口：** FLAG_AUTH_WRITE_URI_PERMISSION
 
+<!--Device-Flags-FLAG_AUTH_WRITE_URI_PERMISSION = 0x00000002--><!--Device-Flags-FLAG_AUTH_WRITE_URI_PERMISSION = 0x00000002-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## FLAG_ABILITY_FORWARD_RESULT
@@ -53,6 +59,8 @@ FLAG_ABILITY_FORWARD_RESULT = 0x00000004
 **起始版本：** 6
 
 **废弃版本：** 9
+
+<!--Device-Flags-FLAG_ABILITY_FORWARD_RESULT = 0x00000004--><!--Device-Flags-FLAG_ABILITY_FORWARD_RESULT = 0x00000004-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -68,6 +76,8 @@ FLAG_ABILITY_CONTINUATION = 0x00000008
 
 **废弃版本：** 9
 
+<!--Device-Flags-FLAG_ABILITY_CONTINUATION = 0x00000008--><!--Device-Flags-FLAG_ABILITY_CONTINUATION = 0x00000008-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## FLAG_NOT_OHOS_COMPONENT
@@ -81,6 +91,8 @@ FLAG_NOT_OHOS_COMPONENT = 0x00000010
 **起始版本：** 6
 
 **废弃版本：** 9
+
+<!--Device-Flags-FLAG_NOT_OHOS_COMPONENT = 0x00000010--><!--Device-Flags-FLAG_NOT_OHOS_COMPONENT = 0x00000010-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -96,6 +108,8 @@ FLAG_ABILITY_FORM_ENABLED = 0x00000020
 
 **废弃版本：** 9
 
+<!--Device-Flags-FLAG_ABILITY_FORM_ENABLED = 0x00000020--><!--Device-Flags-FLAG_ABILITY_FORM_ENABLED = 0x00000020-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## FLAG_ABILITYSLICE_MULTI_DEVICE
@@ -110,6 +124,8 @@ FLAG_ABILITYSLICE_MULTI_DEVICE = 0x00000100
 
 **废弃版本：** 9
 
+<!--Device-Flags-FLAG_ABILITYSLICE_MULTI_DEVICE = 0x00000100--><!--Device-Flags-FLAG_ABILITYSLICE_MULTI_DEVICE = 0x00000100-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## FLAG_START_FOREGROUND_ABILITY
@@ -123,6 +139,8 @@ FLAG_START_FOREGROUND_ABILITY = 0x00000200
 **起始版本：** 6
 
 **废弃版本：** 9
+
+<!--Device-Flags-FLAG_START_FOREGROUND_ABILITY = 0x00000200--><!--Device-Flags-FLAG_START_FOREGROUND_ABILITY = 0x00000200-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -140,6 +158,8 @@ FLAG_INSTALL_ON_DEMAND = 0x00000800
 
 **替代接口：** FLAG_INSTALL_ON_DEMAND
 
+<!--Device-Flags-FLAG_INSTALL_ON_DEMAND = 0x00000800--><!--Device-Flags-FLAG_INSTALL_ON_DEMAND = 0x00000800-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## FLAG_INSTALL_WITH_BACKGROUND_MODE
@@ -154,6 +174,8 @@ FLAG_INSTALL_WITH_BACKGROUND_MODE = 0x80000000
 
 **废弃版本：** 9
 
+<!--Device-Flags-FLAG_INSTALL_WITH_BACKGROUND_MODE = 0x80000000--><!--Device-Flags-FLAG_INSTALL_WITH_BACKGROUND_MODE = 0x80000000-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## FLAG_ABILITY_CLEAR_MISSION
@@ -162,13 +184,13 @@ FLAG_INSTALL_WITH_BACKGROUND_MODE = 0x80000000
 FLAG_ABILITY_CLEAR_MISSION = 0x00008000
 ```
 
-指示清除其他任务的操作。可以为传递给 **FeatureAbility** 中
-[startAbility](arkts-ability-startability-f.md#startability-1)
-方法的**Want**设置此标志，并且必须与**FLAG_ABILITY_NEW_MISSION**一起使用。
+指示清除其他任务的操作。可以为传递给 **FeatureAbility** 中[startAbility](arkts-ability-startability-f.md#startability-1)方法的**Want**设置此标志，并且必须与**FLAG_ABILITY_NEW_MISSION**一起使用。
 
 **起始版本：** 6
 
 **废弃版本：** 9
+
+<!--Device-Flags-FLAG_ABILITY_CLEAR_MISSION = 0x00008000--><!--Device-Flags-FLAG_ABILITY_CLEAR_MISSION = 0x00008000-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
@@ -184,6 +206,8 @@ FLAG_ABILITY_NEW_MISSION = 0x10000000
 
 **废弃版本：** 9
 
+<!--Device-Flags-FLAG_ABILITY_NEW_MISSION = 0x10000000--><!--Device-Flags-FLAG_ABILITY_NEW_MISSION = 0x10000000-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## FLAG_ABILITY_MISSION_TOP
@@ -197,6 +221,8 @@ FLAG_ABILITY_MISSION_TOP = 0x20000000
 **起始版本：** 6
 
 **废弃版本：** 9
+
+<!--Device-Flags-FLAG_ABILITY_MISSION_TOP = 0x20000000--><!--Device-Flags-FLAG_ABILITY_MISSION_TOP = 0x20000000-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 

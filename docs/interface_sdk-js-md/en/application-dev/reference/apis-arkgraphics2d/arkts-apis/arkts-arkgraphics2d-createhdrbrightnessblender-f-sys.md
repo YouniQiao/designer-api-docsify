@@ -16,6 +16,8 @@ Create an HdrBrightnessBlender, which is used to adjust the HDR brightness of UI
 
 **Since:** 20
 
+<!--Device-uiEffect-function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnessBlender--><!--Device-uiEffect-function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnessBlender-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -24,13 +26,13 @@ Create an HdrBrightnessBlender, which is used to adjust the HDR brightness of UI
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | BrightnessBlenderParam | Yes | The brightness blender parameters. |
+| param | [BrightnessBlenderParam](arkts-arkgraphics2d-brightnessblenderparam-i-sys.md) | Yes | The brightness blender parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| HdrBrightnessBlender | Returns the blender. |
+| [HdrBrightnessBlender](arkts-arkgraphics2d-hdrbrightnessblender-i.md) | Returns the blender. |
 
 **Error codes:**
 

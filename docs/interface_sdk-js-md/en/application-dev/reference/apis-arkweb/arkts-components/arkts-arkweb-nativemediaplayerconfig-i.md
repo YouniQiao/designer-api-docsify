@@ -1,9 +1,10 @@
 # NativeMediaPlayerConfig
 
-Represents the configuration for
-[enabling the application to take over web page media playback](web:WebAttribute.enableNativeMediaPlayer).
+Represents the configuration for [enabling the application to take over web page media playback](web:WebAttribute.enableNativeMediaPlayer).
 
 **Since:** 12
+
+<!--Device-unnamed-declare interface NativeMediaPlayerConfig--><!--Device-unnamed-declare interface NativeMediaPlayerConfig-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -15,8 +16,7 @@ enable: boolean
 
 Whether to enable the application to take over web page media playback.
 
-The value **true** means to enable the application to take over web page media playback, and **false** means the
-opposite.
+The value **true** means to enable the application to take over web page media playback, and **false** means the opposite.
 
 Default value: **false**.
 
@@ -25,6 +25,8 @@ Default value: **false**.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NativeMediaPlayerConfig-enable: boolean--><!--Device-NativeMediaPlayerConfig-enable: boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -34,13 +36,9 @@ Default value: **false**.
 shouldOverlay: boolean
 ```
 
-Whether the video player's display overlays the web page content when the application takes over the web page's
-video player.
+Whether the video player's display overlays the web page content when the application takes over the web page's video player.
 
-The value **true** indicates that the video player's display overlays the web page content. This means that the
-height of the video layer is adjusted to cover the web page content. The value **false** indicates that the video
-player's display does not overlay the web page content. This means that the video player maintains its original
-height and is embedded within the web page.
+The value **true** indicates that the video player's display overlays the web page content. This means that the height of the video layer is adjusted to cover the web page content. The value **false** indicates that the video player's display does not overlay the web page content. This means that the video player maintains its original height and is embedded within the web page.
 
 Default value: **false**.
 
@@ -49,6 +47,8 @@ Default value: **false**.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NativeMediaPlayerConfig-shouldOverlay: boolean--><!--Device-NativeMediaPlayerConfig-shouldOverlay: boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

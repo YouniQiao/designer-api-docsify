@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare interface BaseEvent--><!--Device-unnamed-declare interface BaseEvent-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## getModifierKeyState
@@ -14,15 +16,17 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 获取功能键按压状态。报错信息请参考以下错误码。支持功能键'Ctrl'\|'Alt'\|'Shift'。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 此接口不支持在手写笔场景下使用。
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BaseEvent-getModifierKeyState?(keys: Array<string>): boolean--><!--Device-BaseEvent-getModifierKeyState?(keys: Array<string>): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,7 +34,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | 是 | 功能键列表。 |
+| keys | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 功能键列表。 |
 
 **返回值：**
 
@@ -42,7 +46,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameterverification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
 ## axisHorizontal
 
@@ -66,9 +70,11 @@ axisHorizontal ?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BaseEvent-axisHorizontal ?: number--><!--Device-BaseEvent-axisHorizontal ?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,9 +102,11 @@ axisPinch?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本21开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BaseEvent-axisPinch?: number--><!--Device-BaseEvent-axisPinch?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -124,9 +132,11 @@ axisVertical ?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BaseEvent-axisVertical ?: number--><!--Device-BaseEvent-axisVertical ?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -148,7 +158,9 @@ deviceId?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BaseEvent-deviceId?: number--><!--Device-BaseEvent-deviceId?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -168,9 +180,11 @@ pressure: number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BaseEvent-pressure: number--><!--Device-BaseEvent-pressure: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -190,9 +204,11 @@ rollAngle?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本17开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本17开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BaseEvent-rollAngle?: number--><!--Device-BaseEvent-rollAngle?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -208,9 +224,11 @@ source: SourceType
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BaseEvent-source: SourceType--><!--Device-BaseEvent-source: SourceType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -226,9 +244,11 @@ sourceTool: SourceTool
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BaseEvent-sourceTool: SourceTool--><!--Device-BaseEvent-sourceTool: SourceTool-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -244,9 +264,11 @@ target: EventTarget
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BaseEvent-target: EventTarget--><!--Device-BaseEvent-target: EventTarget-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -268,7 +290,9 @@ targetDisplayId?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BaseEvent-targetDisplayId?: number--><!--Device-BaseEvent-targetDisplayId?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -288,9 +312,11 @@ tiltX: number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BaseEvent-tiltX: number--><!--Device-BaseEvent-tiltX: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -310,9 +336,11 @@ tiltY: number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BaseEvent-tiltY: number--><!--Device-BaseEvent-tiltY: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -330,9 +358,11 @@ timestamp: number
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BaseEvent-timestamp: number--><!--Device-BaseEvent-timestamp: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

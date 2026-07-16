@@ -4,6 +4,8 @@ Enumerates the properties available for the metadata of a WebP image.
 
 **Since:** 24
 
+<!--Device-image-enum WebPPropertyKey--><!--Device-image-enum WebPPropertyKey-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## CANVAS_WIDTH
@@ -17,6 +19,8 @@ Canvas Width.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebPPropertyKey-CANVAS_WIDTH = 'WebPCanvasWidth'--><!--Device-WebPPropertyKey-CANVAS_WIDTH = 'WebPCanvasWidth'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -32,6 +36,8 @@ Canvas Height.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WebPPropertyKey-CANVAS_HEIGHT = 'WebPCanvasHeight'--><!--Device-WebPPropertyKey-CANVAS_HEIGHT = 'WebPCanvasHeight'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## DELAY_TIME
@@ -45,6 +51,8 @@ Delay of each frame in milliseconds.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebPPropertyKey-DELAY_TIME = 'WebPDelayTime'--><!--Device-WebPPropertyKey-DELAY_TIME = 'WebPDelayTime'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -60,6 +68,8 @@ Unclamped delay of each frame in milliseconds.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WebPPropertyKey-UNCLAMPED_DELAY_TIME = 'WebPUnclampedDelayTime'--><!--Device-WebPPropertyKey-UNCLAMPED_DELAY_TIME = 'WebPUnclampedDelayTime'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## LOOP_COUNT
@@ -73,6 +83,8 @@ Loop count.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebPPropertyKey-LOOP_COUNT = 'WebPLoopCount'--><!--Device-WebPPropertyKey-LOOP_COUNT = 'WebPLoopCount'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

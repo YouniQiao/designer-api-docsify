@@ -4,6 +4,8 @@ Defines a struct for obtaining the batch operation result of shared configuratio
 
 **Since:** 20
 
+<!--Device-dataShare-interface DataProxyGetResult--><!--Device-dataShare-interface DataProxyGetResult-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 ## Modules to Import
@@ -18,14 +20,15 @@ import { dataShare } from '@kit.ArkData';
 allowList: string[] | undefined
 ```
 
-If the operation is successful, the allowlist is the one set in shared configuration; otherwise, the allowlist is
-undefined. Only the publisher can obtain the allowlist. Other applications can obtain only the value.
+If the operation is successful, the allowlist is the one set in shared configuration; otherwise, the allowlist is undefined. Only the publisher can obtain the allowlist. Other applications can obtain only the value.
 
 **Type:** string[] | undefined
 
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataProxyGetResult-allowList: string[] | undefined--><!--Device-DataProxyGetResult-allowList: string[] | undefined-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -43,6 +46,8 @@ Operation result code.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataProxyGetResult-result: DataProxyErrorCode--><!--Device-DataProxyGetResult-result: DataProxyErrorCode-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 ## uri
@@ -51,15 +56,15 @@ Operation result code.
 uri: string
 ```
 
-URI to be operated, with a maximum of 256 bytes. The value is fixed at the format of
-**"datashareproxy://{*bundleName*}/{*path*}"**, in which **bundleName** indicates the bundle name of the
-publisher application, and **path** can be set to any value but must be unique in the same application.
+URI to be operated, with a maximum of 256 bytes. The value is fixed at the format of **"datashareproxy://{*bundleName*}/{*path*}"**, in which **bundleName** indicates the bundle name of the publisher application, and **path** can be set to any value but must be unique in the same application.
 
 **Type:** string
 
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataProxyGetResult-uri: string--><!--Device-DataProxyGetResult-uri: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -69,14 +74,15 @@ publisher application, and **path** can be set to any value but must be unique i
 value: ValueType | undefined
 ```
 
-If the operation is successful, the value is the one set in shared configuration; otherwise, the value is
-undefined.
+If the operation is successful, the value is the one set in shared configuration; otherwise, the value is undefined.
 
 **Type:** ValueType | undefined
 
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataProxyGetResult-value: ValueType | undefined--><!--Device-DataProxyGetResult-value: ValueType | undefined-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 

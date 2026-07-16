@@ -1,5 +1,11 @@
 # getUkeyCertificate
 
+## 导入模块
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+```
+
 ## getUkeyCertificate
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getUkeyCertificate(keyUri: string, ukeyInfo: UkeyInfo): Promise<CMResul
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
+<!--Device-certificateManager-function getUkeyCertificate(keyUri: string, ukeyInfo: UkeyInfo): Promise<CMResult>--><!--Device-certificateManager-function getUkeyCertificate(keyUri: string, ukeyInfo: UkeyInfo): Promise<CMResult>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **参数：**
@@ -19,13 +27,13 @@ function getUkeyCertificate(keyUri: string, ukeyInfo: UkeyInfo): Promise<CMResul
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyUri | string | 是 | 表示USB Key证书凭据的唯一标识符，长度限制256字节以内 |
-| ukeyInfo | UkeyInfo | 是 | 表示USB Key证书凭据的属性信息 |
+| ukeyInfo | [UkeyInfo](arkts-devicecertificate-ukeyinfo-i.md) | 是 | 表示USB Key证书凭据的属性信息 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise对象，返回获取到的USB Key证书凭据详情的结果，返回值为 [CMResult](arkts-devicecertificate-cmresult-i.md)对象中的credentialDetailList属性。 |
+| Promise<CMResult> | Promise对象，返回获取到的USB Key证书凭据详情的结果，返回值为 [CMResult](arkts-devicecertificate-cmresult-i.md)对象中的credentialDetailList属性。 |
 
 **错误码：**
 

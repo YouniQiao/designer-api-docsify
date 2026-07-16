@@ -1,5 +1,11 @@
 # getWindowsByCoordinate
 
+## 导入模块
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+```
+
 ## getWindowsByCoordinate
 
 ```TypeScript
@@ -11,7 +17,11 @@ function getWindowsByCoordinate(displayId: number, windowNumber?: number, x?: nu
 
 **起始版本：** 14
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-window-function getWindowsByCoordinate(displayId: long, windowNumber?: int, x?: int, y?: int):
+      Promise<Array<Window>>--><!--Device-window-function getWindowsByCoordinate(displayId: long, windowNumber?: int, x?: int, y?: int):
+      Promise<Array<Window>>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -28,14 +38,14 @@ function getWindowsByCoordinate(displayId: number, windowNumber?: number, x?: nu
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Window&gt;&gt; | Promise对象。返回获取到的窗口对象数组。 |
+| Promise<Array<Window>> | Promise对象。返回获取到的窗口对象数组。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.Possible cause: Internal task error. |
 
 **示例：**

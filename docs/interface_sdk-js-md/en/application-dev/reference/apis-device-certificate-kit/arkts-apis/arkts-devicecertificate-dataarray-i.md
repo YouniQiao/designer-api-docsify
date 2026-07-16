@@ -4,6 +4,8 @@ Defines a list of data arrays.
 
 **Since:** 9
 
+<!--Device-cert-interface DataArray--><!--Device-cert-interface DataArray-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
@@ -25,6 +27,8 @@ Indicates the content of the data array.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DataArray-data: Array<Uint8Array>--><!--Device-DataArray-data: Array<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Security.Cert
 

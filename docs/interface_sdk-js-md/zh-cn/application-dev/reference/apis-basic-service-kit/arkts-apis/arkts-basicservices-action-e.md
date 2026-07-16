@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-agent-enum Action--><!--Device-agent-enum Action-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## DOWNLOAD
@@ -16,7 +18,9 @@ DOWNLOAD
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Action-DOWNLOAD--><!--Device-Action-DOWNLOAD-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -30,7 +34,9 @@ UPLOAD
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Action-UPLOAD--><!--Device-Action-UPLOAD-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 

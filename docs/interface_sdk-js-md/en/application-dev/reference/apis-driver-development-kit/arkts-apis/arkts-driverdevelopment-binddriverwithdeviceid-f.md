@@ -12,14 +12,13 @@ import { deviceManager } from '@kit.DriverDevelopmentKit';
 function bindDriverWithDeviceId(deviceId: number, onDisconnect: AsyncCallback<number>): Promise<RemoteDeviceDriver>
 ```
 
-Binds a peripheral device based on the device information returned by **queryDevices()**. This API uses a promise
-to return the result.
-You need to use [deviceManager.queryDevices](arkts-driverdevelopment-querydevices-f.md#querydevices-1) to obtain the peripheral device
-list.
+Binds a peripheral device based on the device information returned by **queryDevices()**. This API uses a promise to return the result.You need to use [deviceManager.queryDevices](arkts-driverdevelopment-querydevices-f.md#querydevices-1) to obtain the peripheral device list.
 
 **Since:** 19
 
 **Required permissions:** ohos.permission.ACCESS_DDK_DRIVERS
+
+<!--Device-deviceManager-function bindDriverWithDeviceId(deviceId: long, onDisconnect: AsyncCallback<long>): Promise<RemoteDeviceDriver>--><!--Device-deviceManager-function bindDriverWithDeviceId(deviceId: long, onDisconnect: AsyncCallback<long>): Promise<RemoteDeviceDriver>-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -28,13 +27,13 @@ list.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | number | Yes | Device ID, which can be obtained via **queryDevices()**. |
-| onDisconnect | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. When the bound device isdisconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device.Otherwise, **err** is an error object. |
+| onDisconnect | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. When the bound device is disconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device.Otherwise, **err** is an error object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RemoteDeviceDriver&gt; | Promise used to return a **RemoteDeviceDriver** object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<RemoteDeviceDriver> | Promise used to return a **RemoteDeviceDriver** object. |
 
 **Error codes:**
 

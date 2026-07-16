@@ -1,9 +1,10 @@
 # LocalFilePresentStatus (System API)
 
-Specifies a result object that contains the application bundle name and the status information about whether there
-are files that have not been uploaded to the cloud in the cloud storage space.
+Specifies a result object that contains the application bundle name and the status information about whether there are files that have not been uploaded to the cloud in the cloud storage space.
 
 **Since:** 23
+
+<!--Device-cloudSyncManager-interface LocalFilePresentStatus--><!--Device-cloudSyncManager-interface LocalFilePresentStatus-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -27,6 +28,8 @@ Bundle name.
 
 **Since:** 23
 
+<!--Device-LocalFilePresentStatus-bundleName: string--><!--Device-LocalFilePresentStatus-bundleName: string-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **System API:** This is a system API.
@@ -37,12 +40,13 @@ Bundle name.
 isLocalFilePresent: boolean
 ```
 
-Whether there are local files that have not been synchronized to the cloud in the cloud storage space of the
-application. The value **true** indicates that such file exists, and the value **false** indicates the opposite.
+Whether there are local files that have not been synchronized to the cloud in the cloud storage space of the application. The value **true** indicates that such file exists, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 23
+
+<!--Device-LocalFilePresentStatus-isLocalFilePresent: boolean--><!--Device-LocalFilePresentStatus-isLocalFilePresent: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 

@@ -10,6 +10,8 @@ The play for search event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-avMusicTemplate-type PlayForSearchEvent = (command: SearchPlayInfoType, args: SearchPlayInfo) => Promise<OperResult>--><!--Device-avMusicTemplate-type PlayForSearchEvent = (command: SearchPlayInfoType, args: SearchPlayInfo) => Promise<OperResult>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**

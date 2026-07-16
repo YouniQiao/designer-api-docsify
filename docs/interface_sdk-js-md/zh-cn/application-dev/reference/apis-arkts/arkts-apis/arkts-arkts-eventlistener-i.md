@@ -8,7 +8,15 @@
 
 **替代接口：** WorkerEventListener
 
+<!--Device-unnamed-export interface EventListener--><!--Device-unnamed-export interface EventListener-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
+```
 
 ## constructor
 
@@ -24,13 +32,15 @@
 
 **替代接口：** (event:
 
+<!--Device-EventListener-(evt: Event): void | Promise<void>--><!--Device-EventListener-(evt: Event): void | Promise<void>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| evt | Event | 是 | evt evt 回调的事件类。 |
+| evt | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-event-c.md) | 是 | evt evt 回调的事件类。 |
 
 **示例：**
 

@@ -8,9 +8,9 @@ function off(type: 'formUninstall', callback?: Callback<string>): void
 
 Unsubscribes from widget uninstall events. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> Widget uninstall is different from widget removal. When an application is uninstalled, the corresponding widget
+> **NOTE**  
+>  
+> Widget uninstall is different from widget removal. When an application is uninstalled, the corresponding widget  
 > is automatically uninstalled.
 
 **Since:** 8
@@ -18,6 +18,8 @@ Unsubscribes from widget uninstall events. This API uses an asynchronous callbac
 **Deprecated since:** 9
 
 **Substitutes:** off
+
+<!--Device-formHost-function off(type: 'formUninstall', callback?: Callback<string>): void--><!--Device-formHost-function off(type: 'formUninstall', callback?: Callback<string>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -27,6 +29,6 @@ Unsubscribes from widget uninstall events. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'formUninstall' | Yes | Event type. The value **'formUninstall'** indicates a widget uninstallationevent. |
-| callback | Callback&lt;string&gt; | No | Callback used to return the widget ID. If it is left unspecified, itindicates the callback for all the events that have been subscribed.<br> The value must be the same as that in **on('formUninstall')**. |
+| type | 'formUninstall' | Yes | Event type. The value **'formUninstall'** indicates a widget uninstallation event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<string> | No | Callback used to return the widget ID. If it is left unspecified, it indicates the callback for all the events that have been subscribed.<br> The value must be the same as that in **on('formUninstall')**. |
 

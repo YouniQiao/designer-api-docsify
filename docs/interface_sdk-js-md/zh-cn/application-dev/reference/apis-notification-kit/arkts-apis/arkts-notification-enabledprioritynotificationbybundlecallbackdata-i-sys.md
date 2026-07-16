@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+<!--Device-unnamed-export interface EnabledPriorityNotificationByBundleCallbackData--><!--Device-unnamed-export interface EnabledPriorityNotificationByBundleCallbackData-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -20,6 +22,8 @@ readonly bundle: string
 
 **起始版本：** 23
 
+<!--Device-EnabledPriorityNotificationByBundleCallbackData-readonly bundle: string--><!--Device-EnabledPriorityNotificationByBundleCallbackData-readonly bundle: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -30,14 +34,16 @@ readonly bundle: string
 readonly enableStatus: notificationManager.PriorityEnableStatus
 ```
 
-应用通知的优先使能状态。
-- DISABLE：不允许设置为优先通知。
-- ENABLE_BY_INTELLIGENT：允许经智能识别、用户关键词匹配、应用规则匹配等方式设置为优先通知。
+应用通知的优先使能状态。  
+- DISABLE：不允许设置为优先通知。  
+- ENABLE_BY_INTELLIGENT：允许经智能识别、用户关键词匹配、应用规则匹配等方式设置为优先通知。  
 - ENABLE：应用通知均设置为优先通知。
 
 **类型：** notificationManager.PriorityEnableStatus
 
 **起始版本：** 23
+
+<!--Device-EnabledPriorityNotificationByBundleCallbackData-readonly enableStatus: notificationManager.PriorityEnableStatus--><!--Device-EnabledPriorityNotificationByBundleCallbackData-readonly enableStatus: notificationManager.PriorityEnableStatus-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -54,6 +60,8 @@ readonly uid: number
 **类型：** number
 
 **起始版本：** 23
+
+<!--Device-EnabledPriorityNotificationByBundleCallbackData-readonly uid: int--><!--Device-EnabledPriorityNotificationByBundleCallbackData-readonly uid: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

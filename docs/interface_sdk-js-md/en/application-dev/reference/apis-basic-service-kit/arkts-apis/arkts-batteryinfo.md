@@ -1,9 +1,10 @@
 # @ohos.batteryInfo
 
-The **batteryInfo** module provides APIs for querying the charger type, battery health status, and battery charging
-status.
+The **batteryInfo** module provides APIs for querying the charger type, battery health status, and battery charging status.
 
 **Since:** 6
+
+<!--Device-unnamed-declare namespace batteryInfo--><!--Device-unnamed-declare namespace batteryInfo-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 

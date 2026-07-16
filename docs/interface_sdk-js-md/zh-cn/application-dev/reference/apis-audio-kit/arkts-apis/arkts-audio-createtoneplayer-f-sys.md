@@ -1,5 +1,11 @@
 # createTonePlayer（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
+
 ## createTonePlayer
 
 ```TypeScript
@@ -10,6 +16,8 @@ Obtains a {@link TonePlayer} instance. This method uses an asynchronous callback
 
 **起始版本：** 9
 
+<!--Device-audio-function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer>): void--><!--Device-audio-function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -18,8 +26,8 @@ Obtains a {@link TonePlayer} instance. This method uses an asynchronous callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | AudioRendererInfo | 是 | Tone playing attribute. |
-| callback | AsyncCallback&lt;TonePlayer&gt; | 是 | Callback used to return the tonePlayer instance. |
+| options | [AudioRendererInfo](arkts-audio-audiorendererinfo-i.md) | 是 | Tone playing attribute. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<TonePlayer> | 是 | Callback used to return the tonePlayer instance. |
 
 **示例：**
 
@@ -55,6 +63,8 @@ Obtains a {@link TonePlayer} instance. This method uses a promise to return the 
 
 **起始版本：** 9
 
+<!--Device-audio-function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>--><!--Device-audio-function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -63,13 +73,13 @@ Obtains a {@link TonePlayer} instance. This method uses a promise to return the 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | AudioRendererInfo | 是 | Tone playing attribute. |
+| options | [AudioRendererInfo](arkts-audio-audiorendererinfo-i.md) | 是 | Tone playing attribute. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;TonePlayer&gt; | Promise used to return the tonePlayer instance. |
+| Promise<TonePlayer> | Promise used to return the tonePlayer instance. |
 
 **示例：**
 

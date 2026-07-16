@@ -18,19 +18,21 @@ Lists key aliases. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-huks-function listAliases(options: HuksOptions): Promise<HuksListAliasesReturnResult>--><!--Device-huks-function listAliases(options: HuksOptions): Promise<HuksListAliasesReturnResult>-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | HuksOptions | Yes | Parameters for listing key aliases. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Parameters for listing key aliases. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksListAliasesReturnResult&gt; | Promise that returns the operation result. If the operation issuccessful, **keyAliases** of **HuksListAliasesReturnResult** is the obtained key aliases. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HuksListAliasesReturnResult> | Promise that returns the operation result. If the operation is successful, **keyAliases** of **HuksListAliasesReturnResult** is the obtained key aliases. |
 
 **Error codes:**
 

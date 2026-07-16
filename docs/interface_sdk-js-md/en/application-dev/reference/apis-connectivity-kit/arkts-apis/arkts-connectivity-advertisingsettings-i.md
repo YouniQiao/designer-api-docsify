@@ -4,6 +4,8 @@ Describes the settings for advertising.
 
 **Since:** 26.0.0
 
+<!--Device-advertising-interface AdvertisingSettings--><!--Device-advertising-interface AdvertisingSettings-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import
@@ -18,17 +20,15 @@ import { advertising } from '@kit.ConnectivityKit';
 interval?: number
 ```
 
-Indicates the advertising interval.
-The minimum number of slots is 160, and the corresponding time is 20 ms (160 * 0.125 ms = 20 ms).
-The maximum number of slots is 16777215, and the corresponding time is 2097151.875 ms.
-Unit: Slots, The value must be an integer within [160,16777215], each slot is 125 microseconds.
-Default value: 5000.
+Indicates the advertising interval.The minimum number of slots is 160, and the corresponding time is 20 ms (160 * 0.125 ms = 20 ms).The maximum number of slots is 16777215, and the corresponding time is 2097151.875 ms.Unit: Slots, The value must be an integer within [160,16777215], each slot is 125 microseconds.Default value: 5000.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AdvertisingSettings-interval?: int--><!--Device-AdvertisingSettings-interval?: int-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -38,14 +38,15 @@ Default value: 5000.
 isConnectable?: boolean
 ```
 
-Indicates whether the advertising is connectable.
-Default value: true.
+Indicates whether the advertising is connectable.Default value: true.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AdvertisingSettings-isConnectable?: boolean--><!--Device-AdvertisingSettings-isConnectable?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -55,14 +56,15 @@ Default value: true.
 power?: TxPowerMode
 ```
 
-Indicates the advertising power mode.
-Default value: ADV_TX_POWER_LOW.
+Indicates the advertising power mode.Default value: ADV_TX_POWER_LOW.
 
 **Type:** TxPowerMode
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AdvertisingSettings-power?: TxPowerMode--><!--Device-AdvertisingSettings-power?: TxPowerMode-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 

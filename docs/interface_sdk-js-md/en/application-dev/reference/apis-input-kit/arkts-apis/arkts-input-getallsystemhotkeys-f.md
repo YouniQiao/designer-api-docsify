@@ -16,13 +16,15 @@ Obtains all system shortcut keys. This API uses a promise to return the result.
 
 **Since:** 14
 
+<!--Device-inputConsumer-function getAllSystemHotkeys(): Promise<Array<HotkeyOptions>>--><!--Device-inputConsumer-function getAllSystemHotkeys(): Promise<Array<HotkeyOptions>>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;HotkeyOptions&gt;&gt; | Promise used to return the list of all system shortcut keys. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<HotkeyOptions>> | Promise used to return the list of all system shortcut keys. |
 
 **Error codes:**
 

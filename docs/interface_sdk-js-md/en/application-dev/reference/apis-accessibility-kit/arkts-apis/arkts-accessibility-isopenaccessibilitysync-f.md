@@ -12,9 +12,7 @@ import { accessibility } from '@kit.AccessibilityKit';
 function isOpenAccessibilitySync(): boolean
 ```
 
-Checks whether any accessibility application has been enabled in the system. To obtain information about
-accessibility applications in the system, use
-[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync-1).
+Checks whether any accessibility application has been enabled in the system. To obtain information about accessibility applications in the system, use [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync-1).
 
 **Since:** 10
 
@@ -22,13 +20,15 @@ accessibility applications in the system, use
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-accessibility-function isOpenAccessibilitySync(): boolean--><!--Device-accessibility-function isOpenAccessibilitySync(): boolean-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether any accessibility application has been enabled in the system. Returns **true** if oneor more accessibility applications are enabled; returns **false** otherwise. |
+| boolean | Whether any accessibility application has been enabled in the system. Returns **true** if one or more accessibility applications are enabled; returns **false** otherwise. |
 
 **Example**
 

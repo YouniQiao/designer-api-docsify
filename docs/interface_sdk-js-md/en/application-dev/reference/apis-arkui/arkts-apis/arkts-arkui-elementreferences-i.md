@@ -4,6 +4,8 @@ Element References
 
 **Since:** 4
 
+<!--Device-unnamed-export interface ElementReferences--><!--Device-unnamed-export interface ElementReferences-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 ## k
@@ -13,4 +15,6 @@ Element References
 ```
 
 **Type:** object & ListElement & ImageAnimatorElement
+
+<!--Device-ElementReferences-[k: string]: object & ListElement & ImageAnimatorElement--><!--Device-ElementReferences-[k: string]: object & ListElement & ImageAnimatorElement-End-->
 

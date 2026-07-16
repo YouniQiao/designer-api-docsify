@@ -1,5 +1,11 @@
 # abortSession
 
+## 导入模块
+
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+```
+
 ## abortSession
 
 ```TypeScript
@@ -10,7 +16,9 @@ abortSession终止密钥操作。使用callback异步回调。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-huks-function abortSession(handle: number, options: HuksOptions, callback: AsyncCallback<void>): void--><!--Device-huks-function abortSession(handle: number, options: HuksOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -19,8 +27,8 @@ abortSession终止密钥操作。使用callback异步回调。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | handle | number | 是 | abortSession操作的uint64类型的handle值。 |
-| options | HuksOptions | 是 | abortSession操作的参数集合。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当密钥操作abort成功时，err为undefined，否则为错误对象。 |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | 是 | abortSession操作的参数集合。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当密钥操作abort成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -429,7 +437,9 @@ abortSession终止密钥操作。使用Promise异步回调。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-huks-function abortSession(handle: number, options: HuksOptions): Promise<void>--><!--Device-huks-function abortSession(handle: number, options: HuksOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
@@ -438,13 +448,13 @@ abortSession终止密钥操作。使用Promise异步回调。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | handle | number | 是 | abortSession操作的uint64类型的handle值。 |
-| options | HuksOptions | 是 | abortSession操作的参数集合。 |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | 是 | abortSession操作的参数集合。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

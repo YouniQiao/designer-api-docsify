@@ -20,19 +20,21 @@ Creates a KEM instance for key encapsulation and decapsulation operations.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-cryptoFramework-function createKem(algNameId: KemAlgNameId): Kem--><!--Device-cryptoFramework-function createKem(algNameId: KemAlgNameId): Kem-End-->
+
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algNameId | KemAlgNameId | Yes | The algorithm name ID of the KEM. |
+| algNameId | [KemAlgNameId](arkts-cryptoarchitecture-kemalgnameid-e.md) | Yes | The algorithm name ID of the KEM. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Kem | The KEM instance. |
+| [Kem](arkts-cryptoarchitecture-kem-i.md) | The KEM instance. |
 
 **Error codes:**
 

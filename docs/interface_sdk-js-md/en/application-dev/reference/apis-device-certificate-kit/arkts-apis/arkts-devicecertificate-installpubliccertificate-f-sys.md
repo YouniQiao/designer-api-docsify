@@ -12,14 +12,15 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 function installPublicCertificate(keystore: Uint8Array, keystorePwd: string) : Promise<CMResult>
 ```
 
-Installs the public credential of the user. This API is called only by the certificate management application. This
-API uses a promise to return the result.
+Installs the public credential of the user. This API is called only by the certificate management application. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-certificateManager-function installPublicCertificate(keystore: Uint8Array, keystorePwd: string) : Promise<CMResult>--><!--Device-certificateManager-function installPublicCertificate(keystore: Uint8Array, keystorePwd: string) : Promise<CMResult>-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -29,14 +30,14 @@ API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keystore | Uint8Array | Yes | Keystore file containing the key pair and certificate. Only the P12 format issupported. |
+| keystore | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Keystore file containing the key pair and certificate. Only the P12 format is supported. |
 | keystorePwd | string | Yes | Password of the keystore file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **uri** in the[CMResult](arkts-devicecertificate-cmresult-i.md) object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CMResult> | Promise used to return the operation result, that is, **uri** in the [CMResult](arkts-devicecertificate-cmresult-i.md) object. |
 
 **Error codes:**
 

@@ -1,7 +1,7 @@
 # DoNotDisturbType (System API)
 
-> **NOTE**<br>
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> **NOTE**<br>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
 > [notificationManager.DoNotDisturbType](arkts-notification-donotdisturbtype-e-sys.md) instead.
 
 **Since:** 8
@@ -9,6 +9,8 @@
 **Deprecated since:** 9
 
 **Substitutes:** DoNotDisturbType
+
+<!--Device-notification-export enum DoNotDisturbType--><!--Device-notification-export enum DoNotDisturbType-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -28,6 +30,8 @@ Non-DND.
 
 **Substitutes:** TYPE_NONE
 
+<!--Device-DoNotDisturbType-TYPE_NONE = 0--><!--Device-DoNotDisturbType-TYPE_NONE = 0-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -45,6 +49,8 @@ One-shot DND at the specified time segment (only considering the hour and minute
 **Deprecated since:** 9
 
 **Substitutes:** TYPE_ONCE
+
+<!--Device-DoNotDisturbType-TYPE_ONCE = 1--><!--Device-DoNotDisturbType-TYPE_ONCE = 1-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -64,6 +70,8 @@ Daily DND at the specified time segment (only considering the hour and minute).
 
 **Substitutes:** TYPE_DAILY
 
+<!--Device-DoNotDisturbType-TYPE_DAILY = 2--><!--Device-DoNotDisturbType-TYPE_DAILY = 2-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -81,6 +89,8 @@ DND at the specified time segment (considering the year, month, day, hour, and m
 **Deprecated since:** 9
 
 **Substitutes:** TYPE_CLEARLY
+
+<!--Device-DoNotDisturbType-TYPE_CLEARLY = 3--><!--Device-DoNotDisturbType-TYPE_CLEARLY = 3-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

@@ -1,14 +1,14 @@
 # DeviceManager
 
-Provides APIs to obtain information about trusted devices and local devices. Before calling any API in
-**DeviceManager**, you must use **createDeviceManager** to create a **DeviceManager** instance, for example,
-**dmInstance**.
+Provides APIs to obtain information about trusted devices and local devices. Before calling any API in **DeviceManager**, you must use **createDeviceManager** to create a **DeviceManager** instance, for example,**dmInstance**.
 
 **Since:** 7
 
 **Deprecated since:** 11
 
 **Substitutes:** [DeviceManager](arkts-distributedservice-devicemanager-i.md)
+
+<!--Device-deviceManager-interface DeviceManager--><!--Device-deviceManager-interface DeviceManager-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -38,6 +38,16 @@ Authenticates a device.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-authenticateDevice(
+      deviceInfo: DeviceInfo,
+      authParam: AuthParam,
+      callback: AsyncCallback<{ deviceId: string, pinToken?: number }>
+    ): void--><!--Device-DeviceManager-authenticateDevice(
+      deviceInfo: DeviceInfo,
+      authParam: AuthParam,
+      callback: AsyncCallback<{ deviceId: string, pinToken?: number }>
+    ): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -46,9 +56,9 @@ Authenticates a device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceInfo | DeviceInfo | Yes | Device information. |
-| authParam | AuthParam | Yes | Authentication parameter. |
-| callback | AsyncCallback&lt;{ deviceId: string, pinToken?: number }&gt; | Yes |  |
+| deviceInfo | [DeviceInfo](../../apis-avsession-kit/arkts-apis/arkts-avsession-deviceinfo-i-sys.md) | Yes | Device information. |
+| authParam | [AuthParam](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-authparam-i-sys.md) | Yes | Authentication parameter. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<{ deviceId: string, pinToken?: number }> | Yes |  |
 
 **Error codes:**
 
@@ -139,6 +149,8 @@ Deletes credential information.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-deleteCredential(queryInfo: string, callback: AsyncCallback<{ resultInfo: string }>): void--><!--Device-DeviceManager-deleteCredential(queryInfo: string, callback: AsyncCallback<{ resultInfo: string }>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -148,7 +160,7 @@ Deletes credential information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | queryInfo | string | Yes | Credential information to delete. The value is a string of 1 to 64000 characters. |
-| callback | AsyncCallback&lt;{ resultInfo: string }&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<{ resultInfo: string }> | Yes |  |
 
 **Error codes:**
 
@@ -202,8 +214,7 @@ try {
 getDeviceInfo(networkId: string, callback: AsyncCallback<DeviceInfo>): void
 ```
 
-Obtains the information about a specific device based on the network ID. This API uses an asynchronous callback
-to return the result.
+Obtains the information about a specific device based on the network ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -212,6 +223,8 @@ to return the result.
 **Substitutes:** [getDeviceName](arkts-distributedservice-devicemanager-i.md#getdevicename-1)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-getDeviceInfo(networkId: string, callback: AsyncCallback<DeviceInfo>): void--><!--Device-DeviceManager-getDeviceInfo(networkId: string, callback: AsyncCallback<DeviceInfo>): void-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -222,7 +235,7 @@ to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | networkId | string | Yes | Network ID of the device. The value is a string of 1 to 255 characters. |
-| callback | AsyncCallback&lt;DeviceInfo&gt; | Yes | Callback used to return the information about the specifieddevice. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DeviceInfo> | Yes | Callback used to return the information about the specified device. |
 
 **Error codes:**
 
@@ -262,8 +275,7 @@ try {
 getDeviceInfo(networkId: string): Promise<DeviceInfo>
 ```
 
-Obtains the information about a specific device based on the network ID. This API uses a promise to return the
-result.
+Obtains the information about a specific device based on the network ID. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -272,6 +284,8 @@ result.
 **Substitutes:** [getDeviceName](arkts-distributedservice-devicemanager-i.md#getdevicename-1)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-getDeviceInfo(networkId: string): Promise<DeviceInfo>--><!--Device-DeviceManager-getDeviceInfo(networkId: string): Promise<DeviceInfo>-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -287,7 +301,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DeviceInfo&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DeviceInfo> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -330,6 +344,8 @@ Obtains local device information. This API uses an asynchronous callback to retu
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-getLocalDeviceInfo(callback: AsyncCallback<DeviceInfo>): void--><!--Device-DeviceManager-getLocalDeviceInfo(callback: AsyncCallback<DeviceInfo>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -338,7 +354,7 @@ Obtains local device information. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;DeviceInfo&gt; | Yes | Callback used to return the local device information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DeviceInfo> | Yes | Callback used to return the local device information. |
 
 **Error codes:**
 
@@ -387,6 +403,8 @@ Obtains local device information. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-getLocalDeviceInfo(): Promise<DeviceInfo>--><!--Device-DeviceManager-getLocalDeviceInfo(): Promise<DeviceInfo>-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -395,7 +413,7 @@ Obtains local device information. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DeviceInfo&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DeviceInfo> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -435,6 +453,8 @@ Obtains local device information synchronously.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-getLocalDeviceInfoSync(): DeviceInfo--><!--Device-DeviceManager-getLocalDeviceInfoSync(): DeviceInfo-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -443,14 +463,14 @@ Obtains local device information synchronously.
 
 | Type | Description |
 | --- | --- |
-| DeviceInfo | List of local devices obtained. |
+| [DeviceInfo](../../apis-avsession-kit/arkts-apis/arkts-avsession-deviceinfo-i-sys.md) | List of local devices obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
 **Example**
@@ -486,6 +506,8 @@ Obtains all trusted devices. This API uses an asynchronous callback to return th
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-getTrustedDeviceList(callback: AsyncCallback<Array<DeviceInfo>>): void--><!--Device-DeviceManager-getTrustedDeviceList(callback: AsyncCallback<Array<DeviceInfo>>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -494,7 +516,7 @@ Obtains all trusted devices. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;DeviceInfo&gt;&gt; | Yes | Callback used to return the list of trusted devices. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<DeviceInfo>> | Yes | Callback used to return the list of trusted devices. |
 
 **Error codes:**
 
@@ -542,6 +564,8 @@ Obtains all trusted devices. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-getTrustedDeviceList(): Promise<Array<DeviceInfo>>--><!--Device-DeviceManager-getTrustedDeviceList(): Promise<Array<DeviceInfo>>-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -550,7 +574,7 @@ Obtains all trusted devices. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DeviceInfo&gt;&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<DeviceInfo>> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -590,6 +614,8 @@ Obtains all trusted devices synchronously.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-getTrustedDeviceListSync(): Array<DeviceInfo>--><!--Device-DeviceManager-getTrustedDeviceListSync(): Array<DeviceInfo>-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -598,14 +624,14 @@ Obtains all trusted devices synchronously.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;DeviceInfo&gt; | List of trusted devices obtained. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<DeviceInfo> | List of trusted devices obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
 **Example**
@@ -631,14 +657,15 @@ try {
 getTrustedDeviceListSync(isRefresh: boolean): Array<DeviceInfo>
 ```
 
-Enables the DSoftBus heartbeat mode to quickly bring offline trusted devices online and updates the list of
-online trusted devices.
+Enables the DSoftBus heartbeat mode to quickly bring offline trusted devices online and updates the list of online trusted devices.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-getTrustedDeviceListSync(isRefresh: boolean): Array<DeviceInfo>--><!--Device-DeviceManager-getTrustedDeviceListSync(isRefresh: boolean): Array<DeviceInfo>-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -648,20 +675,20 @@ online trusted devices.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isRefresh | boolean | Yes | Whether to enable the heartbeat mode and update the list of online trusteddevices. The value **true** means to enable the heartbeat mode and update the list of online trusted devicesand the value **false** means the opposite. |
+| isRefresh | boolean | Yes | Whether to enable the heartbeat mode and update the list of online trusted devices. The value **true** means to enable the heartbeat mode and update the list of online trusted devices and the value **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;DeviceInfo&gt; | List of trusted devices obtained. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<DeviceInfo> | List of trusted devices obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
@@ -696,6 +723,8 @@ Imports credential information.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-importCredential(credentialInfo: string, callback: AsyncCallback<{ resultInfo: string }>): void--><!--Device-DeviceManager-importCredential(credentialInfo: string, callback: AsyncCallback<{ resultInfo: string }>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -705,7 +734,7 @@ Imports credential information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | credentialInfo | string | Yes | Credential information to import. The value is a string of 1 to 64000characters. |
-| callback | AsyncCallback&lt;{ resultInfo: string }&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<{ resultInfo: string }> | Yes |  |
 
 **Error codes:**
 
@@ -798,6 +827,8 @@ Unsubscribes from UI status changes.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void--><!--Device-DeviceManager-off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -807,7 +838,7 @@ Unsubscribes from UI status changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'uiStateChange' | Yes | Event type, which has a fixed value of **uiStateChange**. |
-| callback | Callback&lt;{ param: string }&gt; | No |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ param: string }> | No |  |
 
 **Error codes:**
 
@@ -848,6 +879,8 @@ Unsubscribes from changes in the device state.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void--><!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -857,7 +890,7 @@ Unsubscribes from changes in the device state.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceStateChange' | Yes | Event type, which has a fixed value of **deviceStateChange**. |
-| callback | Callback&lt;{ action: DeviceStateChangeAction, device: DeviceInfo }&gt; | No |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ action: DeviceStateChangeAction, device: DeviceInfo }> | No |  |
 
 **Error codes:**
 
@@ -913,6 +946,8 @@ Unsubscribes from device discovery events.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-off(type: 'deviceFound', callback?: Callback<{ subscribeId: number, device: DeviceInfo }>): void--><!--Device-DeviceManager-off(type: 'deviceFound', callback?: Callback<{ subscribeId: number, device: DeviceInfo }>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -922,7 +957,7 @@ Unsubscribes from device discovery events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceFound' | Yes | Event type, which has a fixed value of **deviceFound**. |
-| callback | Callback&lt;{ subscribeId: number, device: DeviceInfo }&gt; | No |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ subscribeId: number, device: DeviceInfo }> | No |  |
 
 **Error codes:**
 
@@ -978,6 +1013,8 @@ Unsubscribes from device discovery failures.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-off(type: 'discoverFail', callback?: Callback<{ subscribeId: number, reason: number }>): void--><!--Device-DeviceManager-off(type: 'discoverFail', callback?: Callback<{ subscribeId: number, reason: number }>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -987,7 +1024,7 @@ Unsubscribes from device discovery failures.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoverFail' | Yes | Event type, which has a fixed value of **discoverFail**. |
-| callback | Callback&lt;{ subscribeId: number, reason: number }&gt; | No |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ subscribeId: number, reason: number }> | No |  |
 
 **Error codes:**
 
@@ -1033,6 +1070,8 @@ Unsubscribes from device information publication success events.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void--><!--Device-DeviceManager-off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -1042,7 +1081,7 @@ Unsubscribes from device information publication success events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'publishSuccess' | Yes | Event type, which has a fixed value of **publishSuccess**. |
-| callback | Callback&lt;{ publishId: number }&gt; | No |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ publishId: number }> | No |  |
 
 **Error codes:**
 
@@ -1087,6 +1126,8 @@ Unsubscribes from device information publication failures.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-off(type: 'publishFail', callback?: Callback<{ publishId: number, reason: number }>): void--><!--Device-DeviceManager-off(type: 'publishFail', callback?: Callback<{ publishId: number, reason: number }>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -1096,7 +1137,7 @@ Unsubscribes from device information publication failures.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'publishFail' | Yes | Event type, which has a fixed value of **publishFail**. |
-| callback | Callback&lt;{ publishId: number, reason: number }&gt; | No |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ publishId: number, reason: number }> | No |  |
 
 **Error codes:**
 
@@ -1144,6 +1185,8 @@ Unsubscribes from dead events of the **DeviceManager** service.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-off(type: 'serviceDie', callback?: () => void): void--><!--Device-DeviceManager-off(type: 'serviceDie', callback?: () => void): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -1153,7 +1196,7 @@ Unsubscribes from dead events of the **DeviceManager** service.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceDie' | Yes | Event type, which has a fixed value of **serviceDie**. |
-| callback | () =&gt; void | No | Callback used to return the dead event of the **DeviceManager** service. |
+| callback | () => void | No | Callback used to return the dead event of the **DeviceManager** service. |
 
 **Error codes:**
 
@@ -1196,6 +1239,8 @@ Subscribes to UI status changes.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-on(type: 'uiStateChange', callback: Callback<{ param: string }>): void--><!--Device-DeviceManager-on(type: 'uiStateChange', callback: Callback<{ param: string }>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -1205,7 +1250,7 @@ Subscribes to UI status changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'uiStateChange' | Yes | Event type, which has a fixed value of **uiStateChange**. |
-| callback | Callback&lt;{ param: string }&gt; | Yes |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ param: string }> | Yes |  |
 
 **Error codes:**
 
@@ -1259,6 +1304,8 @@ Subscribes to changes in the device state.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void--><!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -1267,8 +1314,8 @@ Subscribes to changes in the device state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceStateChange' | Yes | Event type. The value is **deviceStateChange**, which indicates a devicestate change event. |
-| callback | Callback&lt;{ action: DeviceStateChangeAction, device: DeviceInfo }&gt; | Yes |  |
+| type | 'deviceStateChange' | Yes | Event type. The value is **deviceStateChange**, which indicates a device state change event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ action: DeviceStateChangeAction, device: DeviceInfo }> | Yes |  |
 
 **Error codes:**
 
@@ -1324,6 +1371,8 @@ Subscribes to device discovery events.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-on(type: 'deviceFound', callback: Callback<{ subscribeId: number, device: DeviceInfo }>): void--><!--Device-DeviceManager-on(type: 'deviceFound', callback: Callback<{ subscribeId: number, device: DeviceInfo }>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -1333,7 +1382,7 @@ Subscribes to device discovery events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceFound' | Yes | Event type, which has a fixed value of **deviceFound**. |
-| callback | Callback&lt;{ subscribeId: number, device: DeviceInfo }&gt; | Yes |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ subscribeId: number, device: DeviceInfo }> | Yes |  |
 
 **Error codes:**
 
@@ -1389,6 +1438,8 @@ Subscribes to device discovery failures.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-on(type: 'discoverFail', callback: Callback<{ subscribeId: number, reason: number }>): void--><!--Device-DeviceManager-on(type: 'discoverFail', callback: Callback<{ subscribeId: number, reason: number }>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -1398,7 +1449,7 @@ Subscribes to device discovery failures.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoverFail' | Yes | Event type, which has a fixed value of **discoverFail**. |
-| callback | Callback&lt;{ subscribeId: number, reason: number }&gt; | Yes |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ subscribeId: number, reason: number }> | Yes |  |
 
 **Error codes:**
 
@@ -1444,6 +1495,8 @@ Subscribes to device information publication success events.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void--><!--Device-DeviceManager-on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -1453,7 +1506,7 @@ Subscribes to device information publication success events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'publishSuccess' | Yes | Event type, which has a fixed value of **publishSuccess**. |
-| callback | Callback&lt;{ publishId: number }&gt; | Yes |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ publishId: number }> | Yes |  |
 
 **Error codes:**
 
@@ -1498,6 +1551,8 @@ Subscribes to device information publication failures.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-on(type: 'publishFail', callback: Callback<{ publishId: number, reason: number }>): void--><!--Device-DeviceManager-on(type: 'publishFail', callback: Callback<{ publishId: number, reason: number }>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -1507,7 +1562,7 @@ Subscribes to device information publication failures.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'publishFail' | Yes | Event type, which has a fixed value of **publishFail**. |
-| callback | Callback&lt;{ publishId: number, reason: number }&gt; | Yes |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ publishId: number, reason: number }> | Yes |  |
 
 **Error codes:**
 
@@ -1555,6 +1610,8 @@ Subscribes to dead events of the **DeviceManager** service.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-on(type: 'serviceDie', callback: () => void): void--><!--Device-DeviceManager-on(type: 'serviceDie', callback: () => void): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -1564,7 +1621,7 @@ Subscribes to dead events of the **DeviceManager** service.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceDie' | Yes | Event type, which has a fixed value of **serviceDie**. |
-| callback | () =&gt; void | Yes | Callback invoked when a dead event of the **DeviceManager** service occurs. |
+| callback | () => void | Yes | Callback invoked when a dead event of the **DeviceManager** service occurs. |
 
 **Error codes:**
 
@@ -1605,6 +1662,8 @@ Publishes device information for discovery purposes. The publish process lasts 2
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-publishDeviceDiscovery(publishInfo: PublishInfo): void--><!--Device-DeviceManager-publishDeviceDiscovery(publishInfo: PublishInfo): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -1613,7 +1672,7 @@ Publishes device information for discovery purposes. The publish process lasts 2
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| publishInfo | PublishInfo | Yes | Device information to publish. |
+| publishInfo | [PublishInfo](arkts-distributedservice-publishinfo-i-sys.md) | Yes | Device information to publish. |
 
 **Error codes:**
 
@@ -1621,7 +1680,7 @@ Publishes device information for discovery purposes. The publish process lasts 2
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600105](../../apis-distributedservice-kit/errorcode-device-manager.md#11600105-publish-unavailable) | Publish unavailable. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
@@ -1673,6 +1732,8 @@ Releases this **DeviceManager** instance when it is no longer used.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-release(): void--><!--Device-DeviceManager-release(): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -1682,7 +1743,7 @@ Releases this **DeviceManager** instance when it is no longer used.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
 **Example**
@@ -1715,6 +1776,8 @@ Obtains the registration information of the credential.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-requestCredentialRegisterInfo(requestInfo: string, callback: AsyncCallback<{ registerInfo: string }>): void--><!--Device-DeviceManager-requestCredentialRegisterInfo(requestInfo: string, callback: AsyncCallback<{ registerInfo: string }>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -1724,7 +1787,7 @@ Obtains the registration information of the credential.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | requestInfo | string | Yes | Request credential information. The value contains a maximum of 255 characters. |
-| callback | AsyncCallback&lt;{ registerInfo: string }&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<{ registerInfo: string }> | Yes |  |
 
 **Error codes:**
 
@@ -1785,6 +1848,8 @@ Sets a user operation.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-setUserOperation(operateAction: number, params: string): void--><!--Device-DeviceManager-setUserOperation(operateAction: number, params: string): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -1802,7 +1867,7 @@ Sets a user operation.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified params is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 **Example**
 
@@ -1835,8 +1900,7 @@ try {
 startDeviceDiscovery(subscribeInfo: SubscribeInfo): void
 ```
 
-Starts to discover peripheral devices. The discovery process lasts 2 minutes. A maximum of 99 devices can be
-discovered.
+Starts to discover peripheral devices. The discovery process lasts 2 minutes. A maximum of 99 devices can be discovered.
 
 **Since:** 8
 
@@ -1846,6 +1910,8 @@ discovered.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-startDeviceDiscovery(subscribeInfo: SubscribeInfo): void--><!--Device-DeviceManager-startDeviceDiscovery(subscribeInfo: SubscribeInfo): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -1854,7 +1920,7 @@ discovered.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeInfo | SubscribeInfo | Yes | Subscription information. |
+| subscribeInfo | [SubscribeInfo](arkts-distributedservice-subscribeinfo-i-sys.md) | Yes | Subscription information. |
 
 **Error codes:**
 
@@ -1862,7 +1928,7 @@ discovered.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified param is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-discovery-unavailable) | Discovery unavailable. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
@@ -1909,8 +1975,7 @@ try {
 startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void
 ```
 
-Starts to discover peripheral devices. The discovery process lasts 2 minutes. A maximum of 99 devices can be
-discovered.
+Starts to discover peripheral devices. The discovery process lasts 2 minutes. A maximum of 99 devices can be discovered.
 
 **Since:** 9
 
@@ -1920,6 +1985,8 @@ discovered.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void--><!--Device-DeviceManager-startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -1928,8 +1995,8 @@ discovered.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeInfo | SubscribeInfo | Yes | Subscription information. |
-| filterOptions | string | No | Options for filtering discovered devices. Optional. The default value is**undefined**, indicating that discovery of offline devices. The value is a string of 1 to 255 characters. |
+| subscribeInfo | [SubscribeInfo](arkts-distributedservice-subscribeinfo-i-sys.md) | Yes | Subscription information. |
+| filterOptions | string | No | Options for filtering discovered devices. Optional. The default value is **undefined**, indicating that discovery of offline devices. The value is a string of 1 to 255 characters. |
 
 **Error codes:**
 
@@ -1937,7 +2004,7 @@ discovered.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified param is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-discovery-unavailable) | Discovery unavailable. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
@@ -2016,6 +2083,8 @@ Stops device discovery.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-stopDeviceDiscovery(subscribeId: number): void--><!--Device-DeviceManager-stopDeviceDiscovery(subscribeId: number): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -2032,7 +2101,7 @@ Stops device discovery.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified param is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
 **Example**
@@ -2069,6 +2138,8 @@ Deauthenticates a device.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-unAuthenticateDevice(deviceInfo: DeviceInfo): void--><!--Device-DeviceManager-unAuthenticateDevice(deviceInfo: DeviceInfo): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -2077,7 +2148,7 @@ Deauthenticates a device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceInfo | DeviceInfo | Yes | Device information. |
+| deviceInfo | [DeviceInfo](../../apis-avsession-kit/arkts-apis/arkts-avsession-deviceinfo-i-sys.md) | Yes | Device information. |
 
 **Error codes:**
 
@@ -2085,7 +2156,7 @@ Deauthenticates a device.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
 **Example**
@@ -2134,6 +2205,8 @@ Stops publishing device information.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-unPublishDeviceDiscovery(publishId: number): void--><!--Device-DeviceManager-unPublishDeviceDiscovery(publishId: number): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -2150,7 +2223,7 @@ Stops publishing device information.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
 **Example**
@@ -2185,6 +2258,8 @@ Verifies authentication information.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
+<!--Device-DeviceManager-verifyAuthInfo(authInfo: AuthInfo, callback: AsyncCallback<{ deviceId: string, level: number }>): void--><!--Device-DeviceManager-verifyAuthInfo(authInfo: AuthInfo, callback: AsyncCallback<{ deviceId: string, level: number }>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -2193,8 +2268,8 @@ Verifies authentication information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authInfo | AuthInfo | Yes | Authentication information. |
-| callback | AsyncCallback&lt;{ deviceId: string, level: number }&gt; | Yes |  |
+| authInfo | [AuthInfo](arkts-distributedservice-authinfo-i-sys.md) | Yes | Authentication information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<{ deviceId: string, level: number }> | Yes |  |
 
 **Error codes:**
 

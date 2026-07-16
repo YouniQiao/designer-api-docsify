@@ -14,6 +14,8 @@ Obtains the ID attached to the end of the path component of the given uri.
 
 **Substitutes:** getId
 
+<!--Device-dataUriUtils-function getId(uri: string): number--><!--Device-dataUriUtils-function getId(uri: string): number-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**

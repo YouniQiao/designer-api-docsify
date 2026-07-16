@@ -2,15 +2,23 @@
 
 本模块提供设备安全管理的能力，包括查询安全补丁状态、查询文件加密状态等。
 
-> **说明：**
->
-> 本模块接口仅可在Stage模型下使用。
->
+> **说明：**  
+>  
+> 本模块接口仅可在Stage模型下使用。  
+>  
 > 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../../mdm/mdm-kit-guide.md)。
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace securityManager--><!--Device-unnamed-declare namespace securityManager-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+```
 
 ## 汇总
 
@@ -47,7 +55,7 @@
 | [setAppClipboardPolicy](arkts-mdm-setappclipboardpolicy-f.md#setappclipboardpolicy-2) | 设置指定用户下指定应用的设备剪贴板策略。 |
 | [setDeviceSecurityLevelPolicy](arkts-mdm-setdevicesecuritylevelpolicy-f.md#setdevicesecuritylevelpolicy-1) | 设备DSL切换策略 |
 | [setDisallowedPermission](arkts-mdm-setdisallowedpermission-f.md#setdisallowedpermission-1) | 禁用指定用户下的指定权限，禁用后指定用户下的所有应用申请和使用指定权限时默认拒绝。 |
-| [setExternalSourceExtensionsPolicy](arkts-mdm-setexternalsourceextensionspolicy-f.md#setexternalsourceextensionspolicy-1) | 设置外部来源扩展程序的管控策略。- DEFAULT： 默认，表示无管控策略，用户可以通过“设置-隐私与安全-高级”中的“运行外部来源的扩展程序”开关来设置是否允许扩展程序运行。- DISALLOW： 禁用。设置此策略后，禁止运行外部来源的扩展程序，运行中的扩展程序可继续运行，扩展程序关闭后无法启动运行。用户无法开启“设置-隐私和安全-高级”中的“运行外部来源的扩展程序”开关。- FORCE_OPEN： 强制开启。设置此策略后，允许运行外部来源的扩展程序，用户无法关闭“设置-隐私和安全-高级”中的“运行外部来源的扩展程序”开关。 |
+| [setExternalSourceExtensionsPolicy](arkts-mdm-setexternalsourceextensionspolicy-f.md#setexternalsourceextensionspolicy-1) | 设置外部来源扩展程序的管控策略。- DEFAULT：默认，表示无管控策略，用户可以通过“设置-隐私与安全-高级”中的“运行外部来源的扩展程序”开关来设置是否允许扩展程序运行。 - DISALLOW：禁用。设置此策略后，禁止运行外部来源的扩展程序，运行中的扩展程序可继续运行，扩展程序关闭后无法启动运行。用户无法开启“设置-隐私和安全-高级”中的“运行外部来源的扩展程序”开关。 - FORCE_OPEN：强制开启。设置此策略后，允许运行外部来源的扩展程序，用户无法关闭“设置-隐私和安全-高级”中的“运行外部来源的扩展程序”开关。 |
 | [setPasswordPolicy](arkts-mdm-setpasswordpolicy-f.md#setpasswordpolicy-1) | 设置设备锁屏口令策略。当用户设置锁屏口令时，如果设置的锁屏口令不符合要求，会有安全提示重新设置锁屏口令。 |
 | [setPermissionManagedState](arkts-mdm-setpermissionmanagedstate-f.md#setpermissionmanagedstate-1) | 设置指定应用的[user_grant权限](permissions:Permissions)的管理策略。 |
 | [setScreenLockDisabledForAccount](arkts-mdm-setscreenlockdisabledforaccount-f.md#setscreenlockdisabledforaccount-1) | 禁用/启用当前用户的滑动解锁能力。启用时：设备灭屏后再亮屏，用户需要在屏幕上滑动后才能进入桌面。禁用时：设备灭屏后再亮屏会直接进入桌面。 |

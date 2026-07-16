@@ -12,12 +12,13 @@ import { media } from '@kit.MediaKit';
 function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSource
 ```
 
-Creates a multi-bitrate media source for streaming media. Currently, only the HTTP-FLV multi-bitrate media source
-is supported.
+Creates a multi-bitrate media source for streaming media. Currently, only the HTTP-FLV multi-bitrate media source is supported.
 
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-media-function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSource--><!--Device-media-function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSource-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -25,13 +26,13 @@ is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streams | Array&lt;MediaStream&gt; | Yes | Array of MediaStream objects. The supported streaming media format is HTTP-FLV. |
+| streams | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<MediaStream> | Yes | Array of MediaStream objects. The supported streaming media format is HTTP-FLV. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MediaSource | MediaSource instance. |
+| [MediaSource](arkts-media-mediasource-i.md) | MediaSource instance. |
 
 **Example**
 

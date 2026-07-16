@@ -1,9 +1,10 @@
 # ContainerReaderInfo
 
-Defines the configuration options for ContainerReader component.
-Used to specify the parameters for container dimension reading and breakpoint analysis.
+Defines the configuration options for ContainerReader component.Used to specify the parameters for container dimension reading and breakpoint analysis.
 
 **Since:** 26.0.0
+
+<!--Device-unnamed-export interface ContainerReaderInfo--><!--Device-unnamed-export interface ContainerReaderInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,8 +20,7 @@ import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from '@k
 heightBreakpoint?: HeightBreakpoint
 ```
 
-Optional height breakpoint configuration for container height analysis.
-Defines the height thresholds that trigger different layout behaviors.
+Optional height breakpoint configuration for container height analysis.Defines the height thresholds that trigger different layout behaviors.
 
 **Type:** HeightBreakpoint
 
@@ -32,6 +32,8 @@ Defines the height thresholds that trigger different layout behaviors.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
+<!--Device-ContainerReaderInfo-heightBreakpoint?: HeightBreakpoint--><!--Device-ContainerReaderInfo-heightBreakpoint?: HeightBreakpoint-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## size
@@ -40,8 +42,7 @@ Defines the height thresholds that trigger different layout behaviors.
 size: Size
 ```
 
-The target container size for layout analysis.
-Defines the reference dimensions used for breakpoint calculation and layout adaptation.
+The target container size for layout analysis.Defines the reference dimensions used for breakpoint calculation and layout adaptation.
 
 **Type:** Size
 
@@ -53,6 +54,8 @@ Defines the reference dimensions used for breakpoint calculation and layout adap
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
+<!--Device-ContainerReaderInfo-size: Size--><!--Device-ContainerReaderInfo-size: Size-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## widthBreakpoint
@@ -61,8 +64,7 @@ Defines the reference dimensions used for breakpoint calculation and layout adap
 widthBreakpoint?: WidthBreakpoint
 ```
 
-Optional width breakpoint configuration for container width analysis.
-Defines the width thresholds that trigger different layout behaviors.
+Optional width breakpoint configuration for container width analysis.Defines the width thresholds that trigger different layout behaviors.
 
 **Type:** WidthBreakpoint
 
@@ -73,6 +75,8 @@ Defines the width thresholds that trigger different layout behaviors.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
+
+<!--Device-ContainerReaderInfo-widthBreakpoint?: WidthBreakpoint--><!--Device-ContainerReaderInfo-widthBreakpoint?: WidthBreakpoint-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

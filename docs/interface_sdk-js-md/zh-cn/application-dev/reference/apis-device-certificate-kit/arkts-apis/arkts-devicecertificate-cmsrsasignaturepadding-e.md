@@ -4,6 +4,8 @@
 
 **起始版本：** 22
 
+<!--Device-cert-enum CmsRsaSignaturePadding--><!--Device-cert-enum CmsRsaSignaturePadding-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 ## PKCS1_PADDING
@@ -16,7 +18,9 @@ PKCS1填充方式。
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CmsRsaSignaturePadding-PKCS1_PADDING = 0--><!--Device-CmsRsaSignaturePadding-PKCS1_PADDING = 0-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -30,7 +34,9 @@ PKCS1 PSS填充方式。
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CmsRsaSignaturePadding-PKCS1_PSS_PADDING = 1--><!--Device-CmsRsaSignaturePadding-PKCS1_PSS_PADDING = 1-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

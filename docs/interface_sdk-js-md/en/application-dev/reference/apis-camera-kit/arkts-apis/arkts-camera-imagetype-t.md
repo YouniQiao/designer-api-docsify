@@ -10,6 +10,8 @@ Defines the image container type, which is used to obtain full-quality images or
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-camera-type ImageType = image.Image | image.Picture--><!--Device-camera-type ImageType = image.Image | image.Picture-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 | Type | Description |

@@ -4,6 +4,8 @@ Provide an interface for the button style of picker
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface PickerDialogButtonStyle--><!--Device-unnamed-declare interface PickerDialogButtonStyle-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundColor
@@ -20,7 +22,9 @@ Describes the button background color.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PickerDialogButtonStyle-backgroundColor?: ResourceColor--><!--Device-PickerDialogButtonStyle-backgroundColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,7 +42,9 @@ Describes the button border radius.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PickerDialogButtonStyle-borderRadius?: Length | BorderRadiuses--><!--Device-PickerDialogButtonStyle-borderRadius?: Length | BorderRadiuses-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,7 +62,9 @@ Describes the button text color.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PickerDialogButtonStyle-fontColor?: ResourceColor--><!--Device-PickerDialogButtonStyle-fontColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,7 +82,9 @@ Describes the button font family.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PickerDialogButtonStyle-fontFamily?: Resource | string--><!--Device-PickerDialogButtonStyle-fontFamily?: Resource | string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,7 +102,9 @@ Describes the button text size.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PickerDialogButtonStyle-fontSize?: Length--><!--Device-PickerDialogButtonStyle-fontSize?: Length-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -110,7 +122,9 @@ Describes the button font style.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PickerDialogButtonStyle-fontStyle?: FontStyle--><!--Device-PickerDialogButtonStyle-fontStyle?: FontStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -128,7 +142,9 @@ Describes the button font weight.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PickerDialogButtonStyle-fontWeight?: FontWeight | number | string--><!--Device-PickerDialogButtonStyle-fontWeight?: FontWeight | number | string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -146,7 +162,9 @@ Define whether the button default to responding to the Enter key
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PickerDialogButtonStyle-primary?: boolean--><!--Device-PickerDialogButtonStyle-primary?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -164,7 +182,9 @@ Describes the button role.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PickerDialogButtonStyle-role?: ButtonRole--><!--Device-PickerDialogButtonStyle-role?: ButtonRole-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -182,7 +202,9 @@ Describes the button style.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PickerDialogButtonStyle-style?: ButtonStyleMode--><!--Device-PickerDialogButtonStyle-style?: ButtonStyleMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -200,7 +222,9 @@ Describes the button style.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PickerDialogButtonStyle-type?: ButtonType--><!--Device-PickerDialogButtonStyle-type?: ButtonType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

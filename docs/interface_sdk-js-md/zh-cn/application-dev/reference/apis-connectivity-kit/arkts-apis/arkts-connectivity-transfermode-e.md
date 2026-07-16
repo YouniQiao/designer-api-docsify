@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-dataTransfer-enum TransferMode--><!--Device-dataTransfer-enum TransferMode-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## BASIC
@@ -18,6 +20,8 @@ BASIC = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TransferMode-BASIC = 0--><!--Device-TransferMode-BASIC = 0-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## RELIABLE
@@ -31,6 +35,8 @@ RELIABLE = 1
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TransferMode-RELIABLE = 1--><!--Device-TransferMode-RELIABLE = 1-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 

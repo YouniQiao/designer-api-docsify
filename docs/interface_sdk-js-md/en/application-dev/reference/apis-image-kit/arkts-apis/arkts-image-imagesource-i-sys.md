@@ -2,18 +2,15 @@
 
 The **ImageSource** class provides APIs to obtain image information.
 
-Before calling any API in ImageSource, you must use
-[image.createImageSource](arkts-image-createimagesource-f.md#createimagesource-1) to create an
-ImageSource instance.
+Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-createimagesource-f.md#createimagesource-1) to create an ImageSource instance.
 
 All APIs in ImageSource cannot be called concurrently.
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call
-[release](arkts-image-imagesource-i.md#release-1) to free the memory promptly. Before
-releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the
-instance is no longer needed.
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-imagesource-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 6
+
+<!--Device-image-interface ImageSource--><!--Device-image-interface ImageSource-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -29,13 +26,11 @@ import { image } from '@kit.ImageKit';
 createWideGamutSdrPixelMap(): Promise<PixelMap>
 ```
 
-Decodes to a SDR PixelMap, using a as wide gamut as possible.
-For a SDR ImageSource, decodes to a SDR PixelMap using its native color space.
-For a HDR ImageSource with a single-channel gainmap, decodes its base(SDR) image and ingores its gainmap.
-For a HDR ImageSource with a three-channel gainmap, decodes to a SDR PixelMap using CM_DISPLAY_BT2020_SRGB
-color space.
+Decodes to a SDR PixelMap, using a as wide gamut as possible.For a SDR ImageSource, decodes to a SDR PixelMap using its native color space.For a HDR ImageSource with a single-channel gainmap, decodes its base(SDR) image and ingores its gainmap.For a HDR ImageSource with a three-channel gainmap, decodes to a SDR PixelMap using CM_DISPLAY_BT2020_SRGB color space.
 
 **Since:** 20
+
+<!--Device-ImageSource-createWideGamutSdrPixelMap(): Promise<PixelMap>--><!--Device-ImageSource-createWideGamutSdrPixelMap(): Promise<PixelMap>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -45,7 +40,7 @@ color space.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | Decoded PixelMap. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PixelMap> | Decoded PixelMap. |
 
 **Error codes:**
 
@@ -68,6 +63,8 @@ Checks whether a JPEG image is progressive. This API uses a promise to return th
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ImageSource-isJpegProgressive(): Promise<boolean>--><!--Device-ImageSource-isJpegProgressive(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **System API:** This is a system API.
@@ -76,7 +73,7 @@ Checks whether a JPEG image is progressive. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise object. The value **true** indicates that the JPEG image is progressive,and the value **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise object. The value **true** indicates that the JPEG image is progressive,and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -113,6 +110,8 @@ Modify the value of properties in an image with the specified keys.The HwMnote r
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ImageSource-modifyImageAllProperties(records: Record<string, string|null>): Promise<void>--><!--Device-ImageSource-modifyImageAllProperties(records: Record<string, string|null>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 **System API:** This is a system API.
@@ -121,13 +120,13 @@ Modify the value of properties in an image with the specified keys.The HwMnote r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | Record&lt;string, string\|null&gt; | Yes | Property Records whose values are to be modified,when the value is set to null the tag will be removed. |
+| records | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, string\|null> | Yes | Property Records whose values are to be modified,when the value is set to null the tag will be removed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails,an error message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return the operation result. If the operation fails,an error message is returned. |
 
 **Error codes:**
 

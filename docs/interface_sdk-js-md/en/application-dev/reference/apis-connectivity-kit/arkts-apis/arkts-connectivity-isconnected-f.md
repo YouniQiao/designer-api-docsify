@@ -20,6 +20,8 @@ Check whether the Wi-Fi connection has been set up.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-wifiManager-function isConnected(): boolean--><!--Device-wifiManager-function isConnected(): boolean-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **Return value:**

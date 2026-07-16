@@ -1,12 +1,10 @@
 # PopupCommonOptions
 
-配置弹出气泡的参数。使用[UIContext](../arkts-apis/arkts-arkui-uicontext.md)中的
-[getPromptAction()](@ohos.arkui.UIContext#getPromptAction)方法获取到
-[PromptAction](@ohos.arkui.UIContext#PromptAction)对象，再通过该对象调用
-[openPopup](../../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#openpopup18)和
-[updatePopup](../../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18)时传入的options参数。
+配置弹出气泡的参数。使用[UIContext](../arkts-apis/arkts-arkui-uicontext.md)中的[getPromptAction()](@ohos.arkui.UIContext#getPromptAction)方法获取到[PromptAction](@ohos.arkui.UIContext#PromptAction)对象，再通过该对象调用[openPopup](../../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#openpopup18)和[updatePopup](../../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18)时传入的options参数。
 
 **起始版本：** 18
+
+<!--Device-unnamed-declare interface PopupCommonOptions--><!--Device-unnamed-declare interface PopupCommonOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,7 +24,9 @@ The height of the arrow.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-arrowHeight?: Dimension--><!--Device-PopupCommonOptions-arrowHeight?: Dimension-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,9 +48,7 @@ Popup箭头在气泡处的偏移。
 
 **说明：**
 
-1. 没设置arrowOffset的情况下，气泡箭头与四个角的距离不能小于圆角半径。
-2. 只有arrowPointPosition不设置或者设置为null、undefined时，arrowOffset属性才生效。
-3. 不支持设置百分比。
+1. 没设置arrowOffset的情况下，气泡箭头与四个角的距离不能小于圆角半径。2. 只有arrowPointPosition不设置或者设置为null、undefined时，arrowOffset属性才生效。3. 不支持设置百分比。
 
 **类型：** Length
 
@@ -58,7 +56,9 @@ Popup箭头在气泡处的偏移。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-arrowOffset?: Length--><!--Device-PopupCommonOptions-arrowOffset?: Length-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,7 +76,9 @@ The position of the sharp corner of popup.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-arrowPointPosition?: ArrowPointPosition--><!--Device-PopupCommonOptions-arrowPointPosition?: ArrowPointPosition-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,7 +98,9 @@ The width of the arrow.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-arrowWidth?: Dimension--><!--Device-PopupCommonOptions-arrowWidth?: Dimension-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -118,7 +122,9 @@ autoCancel?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-autoCancel?: boolean--><!--Device-PopupCommonOptions-autoCancel?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -140,7 +146,9 @@ avoidTarget?: AvoidanceMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-avoidTarget?: AvoidanceMode--><!--Device-PopupCommonOptions-avoidTarget?: AvoidanceMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -160,7 +168,9 @@ Defines popup background blur Style
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-backgroundBlurStyle?: BlurStyle--><!--Device-PopupCommonOptions-backgroundBlurStyle?: BlurStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -178,7 +188,9 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions--><!--Device-PopupCommonOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -196,7 +208,9 @@ backgroundEffect?: BackgroundEffectOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-backgroundEffect?: BackgroundEffectOptions--><!--Device-PopupCommonOptions-backgroundEffect?: BackgroundEffectOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -210,8 +224,7 @@ borderLinearGradient?: PopupBorderLinearGradient
 
 **说明：**
 
-1. borderLinearGradient不设置或者设置为null、undefined时，内描边没有线性渐变效果。
-2. borderLinearGradient设置时，direction默认值是：GradientDirection.Bottom。
+1. borderLinearGradient不设置或者设置为null、undefined时，内描边没有线性渐变效果。2. borderLinearGradient设置时，direction默认值是：GradientDirection.Bottom。
 
 **类型：** PopupBorderLinearGradient
 
@@ -219,7 +232,9 @@ borderLinearGradient?: PopupBorderLinearGradient
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-borderLinearGradient?: PopupBorderLinearGradient--><!--Device-PopupCommonOptions-borderLinearGradient?: PopupBorderLinearGradient-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -237,9 +252,7 @@ borderWidth?: Dimension
 
 **说明：**
 
-1. 不支持设置百分比，设置百分比时按0处理。
-2. 在没有设置Popup组件内描边的情况下，该接口需要和borderLinearGradient配合使用。
-3. 当设置双描边时，建议内描边宽度不超过10vp。
+1. 不支持设置百分比，设置百分比时按0处理。2. 在没有设置Popup组件内描边的情况下，该接口需要和borderLinearGradient配合使用。3. 当设置双描边时，建议内描边宽度不超过10vp。
 
 **类型：** Dimension
 
@@ -247,7 +260,9 @@ borderWidth?: Dimension
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-borderWidth?: Dimension--><!--Device-PopupCommonOptions-borderWidth?: Dimension-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -263,9 +278,7 @@ colorMode?: AnchoredColorMode
 
 **说明：**
 
-1. 仅当绑定组件使用了[WithTheme](../../../../reference/apis-arkui/arkui-ts/ts-container-with-theme.md#接口)标签时，该属性才会生效。
-2. 该属性仅影响组件的默认样式，以及开发者设置的涉及深浅色资源的属性。
-3. 设置为AnchoredColorMode.FOLLOW_SYSTEM时，模糊材质可以跟随，文字颜色以及涉及深浅色资源的属性仍保持跟随绑定组件的深浅色配置。
+1. 仅当绑定组件使用了[WithTheme](../../../../reference/apis-arkui/arkui-ts/ts-container-with-theme.md#接口)标签时，该属性才会生效。2. 该属性仅影响组件的默认样式，以及开发者设置的涉及深浅色资源的属性。3. 设置为AnchoredColorMode.FOLLOW_SYSTEM时，模糊材质可以跟随，文字颜色以及涉及深浅色资源的属性仍保持跟随绑定组件的深浅色配置。
 
 **类型：** AnchoredColorMode
 
@@ -275,7 +288,9 @@ colorMode?: AnchoredColorMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-colorMode?: AnchoredColorMode--><!--Device-PopupCommonOptions-colorMode?: AnchoredColorMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -299,7 +314,9 @@ enableArrow?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-enableArrow?: boolean--><!--Device-PopupCommonOptions-enableArrow?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -315,9 +332,7 @@ Popup组件是否响应悬停态（半折叠状态）变化，即在悬停态下
 
 **说明：**
 
-1. 如果Popup的弹出位置在悬停态折痕区域，Popup组件不会响应悬停态。
-2. 2in1设备从API version 20开始生效。
-3. 2in1设备仅在窗口瀑布模式下生效。
+1. 如果Popup的弹出位置在悬停态折痕区域，Popup组件不会响应悬停态。2. 2in1设备从API version 20开始生效。3. 2in1设备仅在窗口瀑布模式下生效。
 
 **类型：** boolean
 
@@ -327,7 +342,9 @@ Popup组件是否响应悬停态（半折叠状态）变化，即在悬停态下
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-enableHoverMode?: boolean--><!--Device-PopupCommonOptions-enableHoverMode?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -355,7 +372,9 @@ true：气泡可以获焦；false：气泡不会获焦。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-focusable?: boolean--><!--Device-PopupCommonOptions-focusable?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -379,7 +398,9 @@ true：气泡可以拿到变换后宿主的位置，显示到相应位置；fals
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-followTransformOfTarget?: boolean--><!--Device-PopupCommonOptions-followTransformOfTarget?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -399,7 +420,9 @@ levelMode?: LevelMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-levelMode?: LevelMode--><!--Device-PopupCommonOptions-levelMode?: LevelMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -417,7 +440,9 @@ mask?: boolean | PopupMaskType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-mask?: boolean | PopupMaskType--><!--Device-PopupCommonOptions-mask?: boolean | PopupMaskType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -445,7 +470,9 @@ offset?: Position
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-offset?: Position--><!--Device-PopupCommonOptions-offset?: Position-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -467,7 +494,9 @@ onStateChange?: PopupStateChangeCallback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-onStateChange?: PopupStateChangeCallback--><!--Device-PopupCommonOptions-onStateChange?: PopupStateChangeCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -479,13 +508,11 @@ onWillDismiss?: boolean | Callback<DismissPopupAction>
 
 设置Popup交互式关闭拦截开关及拦截回调函数，默认值为true，Popup响应点击、侧滑（左滑/右滑）、三键back。
 
-1. 当为boolean类型时，如果设置为false，则不响应点击、侧滑（左滑/右滑）、三键back、路由跳转或键盘ESC退出事件，仅当设置“气泡显示状态”参数show值为false时才退出；如果设置为true，则正常响应退出事件；
-2. 如果设置为函数类型，则拦截退出事件且执行回调函数。侧滑（左滑/右滑）、三键back、路由跳转或键盘ESC在回调函数中返回的reason为PRESS_BACK，点击为TOUCH_OUTSIDE。
+1. 当为boolean类型时，如果设置为false，则不响应点击、侧滑（左滑/右滑）、三键back、路由跳转或键盘ESC退出事件，仅当设置“气泡显示状态”参数show值为false时才退出；如果设置为true，则正常响应退出事件；2. 如果设置为函数类型，则拦截退出事件且执行回调函数。侧滑（左滑/右滑）、三键back、路由跳转或键盘ESC在回调函数中返回的reason为PRESS_BACK，点击为TOUCH_OUTSIDE。
 
 **说明：**
 
-1. 在onWillDismiss回调中，不能再做onWillDismiss拦截。
-2. 不支持通过[updatePopup](../../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18)进行更新。
+1. 在onWillDismiss回调中，不能再做onWillDismiss拦截。2. 不支持通过[updatePopup](../../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18)进行更新。
 
 **类型：** boolean | Callback<DismissPopupAction>
 
@@ -493,7 +520,9 @@ onWillDismiss?: boolean | Callback<DismissPopupAction>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-onWillDismiss?: boolean | Callback<DismissPopupAction>--><!--Device-PopupCommonOptions-onWillDismiss?: boolean | Callback<DismissPopupAction>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -507,8 +536,7 @@ outlineLinearGradient?: PopupBorderLinearGradient
 
 **说明：**
 
-1. outlineLinearGradient不设置或者设置为null、undefined时，外描边没有线性渐变效果。
-2. outlineLinearGradient设置时，direction默认值是：GradientDirection.Bottom。
+1. outlineLinearGradient不设置或者设置为null、undefined时，外描边没有线性渐变效果。2. outlineLinearGradient设置时，direction默认值是：GradientDirection.Bottom。
 
 **类型：** PopupBorderLinearGradient
 
@@ -516,7 +544,9 @@ outlineLinearGradient?: PopupBorderLinearGradient
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-outlineLinearGradient?: PopupBorderLinearGradient--><!--Device-PopupCommonOptions-outlineLinearGradient?: PopupBorderLinearGradient-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -534,9 +564,7 @@ outlineWidth?: Dimension
 
 **说明：**
 
-1. 不支持设置百分比，设置百分比时按0处理。
-2. 在没有设置Popup组件外描边的情况下，该接口需要和outlineLinearGradient配合使用。
-3. 当设置双描边时，建议外描边宽度不超过10vp。
+1. 不支持设置百分比，设置百分比时按0处理。2. 在没有设置Popup组件外描边的情况下，该接口需要和outlineLinearGradient配合使用。3. 当设置双描边时，建议外描边宽度不超过10vp。
 
 **类型：** Dimension
 
@@ -544,7 +572,9 @@ outlineWidth?: Dimension
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-outlineWidth?: Dimension--><!--Device-PopupCommonOptions-outlineWidth?: Dimension-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -566,7 +596,9 @@ placement?: Placement
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-placement?: Placement--><!--Device-PopupCommonOptions-placement?: Placement-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -576,8 +608,7 @@ placement?: Placement
 popupColor?: ResourceColor
 ```
 
-气泡的颜色。如需去除模糊背景填充效果，需将backgroundBlurStyle设置为BlurStyle.NONE。默认值：透明色[TRANSPARENT](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md)加模糊背景填充效果
-[COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md)。
+气泡的颜色。如需去除模糊背景填充效果，需将backgroundBlurStyle设置为BlurStyle.NONE。默认值：透明色[TRANSPARENT](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md)加模糊背景填充效果[COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md)。
 
 **类型：** ResourceColor
 
@@ -585,7 +616,9 @@ popupColor?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-popupColor?: ResourceColor--><!--Device-PopupCommonOptions-popupColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -605,7 +638,9 @@ The round corners of the popup.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-radius?: Dimension--><!--Device-PopupCommonOptions-radius?: Dimension-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -625,7 +660,9 @@ The style of popup Shadow.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-shadow?: ShadowOptions | ShadowStyle--><!--Device-PopupCommonOptions-shadow?: ShadowOptions | ShadowStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -651,7 +688,9 @@ showInSubWindow?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-showInSubWindow?: boolean--><!--Device-PopupCommonOptions-showInSubWindow?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -667,9 +706,7 @@ systemMaterial?: SystemUiMaterial
 
 **说明：**
 
-不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor-1)、边框颜色
-[borderColor](arkts-arkui-commonmethod-c.md#bordercolor-1)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth-1)、阴影
-[shadow](arkts-arkui-commonmethod-c.md#shadow-1)，不建议与上述接口一起使用。
+不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor-1)、边框颜色[borderColor](arkts-arkui-commonmethod-c.md#bordercolor-1)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth-1)、阴影[shadow](arkts-arkui-commonmethod-c.md#shadow-1)，不建议与上述接口一起使用。
 
 **类型：** SystemUiMaterial
 
@@ -677,7 +714,9 @@ systemMaterial?: SystemUiMaterial
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-systemMaterial?: SystemUiMaterial--><!--Device-PopupCommonOptions-systemMaterial?: SystemUiMaterial-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -699,7 +738,9 @@ targetSpace?: Length
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-targetSpace?: Length--><!--Device-PopupCommonOptions-targetSpace?: Length-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -713,9 +754,7 @@ transition?: TransitionEffect
 
 **说明：**
 
-1. 如果不设置，则使用默认的显示/退出动效。
-2. 显示动效中按back键，打断显示动效，执行退出动效，动画效果为显示动效与退出动效的曲线叠加后的效果。
-3. 退出动效中按back键，不会打断退出动效，退出动效继续执行，back键不被响应。
+1. 如果不设置，则使用默认的显示/退出动效。2. 显示动效中按back键，打断显示动效，执行退出动效，动画效果为显示动效与退出动效的曲线叠加后的效果。3. 退出动效中按back键，不会打断退出动效，退出动效继续执行，back键不被响应。
 
 4.不支持通过[updatePopup](../../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18)进行更新。
 
@@ -725,7 +764,9 @@ transition?: TransitionEffect
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-transition?: TransitionEffect--><!--Device-PopupCommonOptions-transition?: TransitionEffect-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -743,7 +784,9 @@ Set the width of the popup.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PopupCommonOptions-width?: Dimension--><!--Device-PopupCommonOptions-width?: Dimension-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

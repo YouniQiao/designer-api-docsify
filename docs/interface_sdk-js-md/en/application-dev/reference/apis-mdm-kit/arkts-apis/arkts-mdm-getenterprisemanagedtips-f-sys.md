@@ -18,6 +18,8 @@ Gets enterprise message tips.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-adminManager-function getEnterpriseManagedTips(): Promise<string>--><!--Device-adminManager-function getEnterpriseManagedTips(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Gets enterprise message tips.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | returns the enterprise message tips. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | returns the enterprise message tips. |
 
 **Error codes:**
 

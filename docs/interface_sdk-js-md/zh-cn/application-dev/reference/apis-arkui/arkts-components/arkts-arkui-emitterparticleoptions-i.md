@@ -2,11 +2,13 @@
 
 粒子配置。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
+
+<!--Device-unnamed-interface EmitterParticleOptions<PARTICLE extends ParticleType>--><!--Device-unnamed-interface EmitterParticleOptions<PARTICLE extends ParticleType>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,8 +22,7 @@ config: ParticleConfigs[PARTICLE]
 
 config类型和type值有关联：
 
-1. 如果type为ParticleType.POINT，则config类型为[PointParticleParameters](arkts-arkui-pointparticleparameters-i.md) 。
-2. 如果type为ParticleType.IMAGE，则config类型为[ImageParticleParameters](arkts-arkui-imageparticleparameters-i.md) 。
+1. 如果type为ParticleType.POINT，则config类型为[PointParticleParameters](arkts-arkui-pointparticleparameters-i.md) 。2. 如果type为ParticleType.IMAGE，则config类型为[ImageParticleParameters](arkts-arkui-imageparticleparameters-i.md) 。
 
 **类型：** ParticleConfigs[PARTICLE]
 
@@ -29,7 +30,9 @@ config类型和type值有关联：
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EmitterParticleOptions-config: ParticleConfigs[PARTICLE]--><!--Device-EmitterParticleOptions-config: ParticleConfigs[PARTICLE]-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,7 +50,9 @@ count: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EmitterParticleOptions-count: number--><!--Device-EmitterParticleOptions-count: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,7 +74,9 @@ lifetime?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EmitterParticleOptions-lifetime?: number--><!--Device-EmitterParticleOptions-lifetime?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -79,8 +86,7 @@ lifetime?: number
 lifetimeRange?: number
 ```
 
-表示粒子生命周期取值范围，设置lifetimeRange后粒子的生命周期为[lifetime-lifetimeRange, lifetime+lifetimeRange]中间的一个随机整数。lifetimeRange默认值为0，取
-值范围为0到正无穷。设置为负值时取默认值。
+表示粒子生命周期取值范围，设置lifetimeRange后粒子的生命周期为[lifetime-lifetimeRange, lifetime+lifetimeRange]中间的一个随机整数。lifetimeRange默认值为0，取值范围为0到正无穷。设置为负值时取默认值。
 
 **类型：** number
 
@@ -90,7 +96,9 @@ lifetimeRange?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EmitterParticleOptions-lifetimeRange?: number--><!--Device-EmitterParticleOptions-lifetimeRange?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,7 +116,9 @@ type: PARTICLE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EmitterParticleOptions-type: PARTICLE--><!--Device-EmitterParticleOptions-type: PARTICLE-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

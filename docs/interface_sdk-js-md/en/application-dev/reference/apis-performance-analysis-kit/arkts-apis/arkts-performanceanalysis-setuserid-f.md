@@ -18,14 +18,16 @@ Sets a user ID, which is used for association when a [Processor](arkts-performan
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-hiAppEvent-function setUserId(name: string, value: string): void--><!--Device-hiAppEvent-function setUserId(name: string, value: string): void-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Key of a user ID. The value is string that contains a maximum of 256 characters, includingdigits (0 to 9), letters (a to z)(A to Z), underscore (_), and dollar sign ($). It must not start with a digit. |
-| value | string | Yes | Value of a user ID. It can contain a maximum of 256 characters. If the value is **null**or left empty, the user ID is cleared. |
+| name | string | Yes | Key of a user ID. The value is string that contains a maximum of 256 characters, including digits (0 to 9), letters (a to z)(A to Z), underscore (_), and dollar sign ($). It must not start with a digit. |
+| value | string | Yes | Value of a user ID. It can contain a maximum of 256 characters. If the value is **null** or left empty, the user ID is cleared. |
 
 **Error codes:**
 

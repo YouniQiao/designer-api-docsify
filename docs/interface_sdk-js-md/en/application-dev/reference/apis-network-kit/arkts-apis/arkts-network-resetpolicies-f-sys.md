@@ -18,6 +18,8 @@ Reset network policies\rules\quota policies\firewall rules.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function resetPolicies(simId: string, callback: AsyncCallback<void>): void--><!--Device-policy-function resetPolicies(simId: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Reset network policies\rules\quota policies\firewall rules.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | simId | string | Yes | Specify the matched simId of quota policy. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of resetPolicies. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of resetPolicies. |
 
 **Error codes:**
 
@@ -64,6 +66,8 @@ Reset network policies\rules\quota policies\firewall rules.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function resetPolicies(simId: string): Promise<void>--><!--Device-policy-function resetPolicies(simId: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -78,7 +82,7 @@ Reset network policies\rules\quota policies\firewall rules.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

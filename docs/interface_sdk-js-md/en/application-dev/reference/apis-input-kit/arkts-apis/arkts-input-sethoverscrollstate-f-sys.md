@@ -16,6 +16,8 @@ Sets the mouse hover scrolling switch state. This API uses an asynchronous callb
 
 **Since:** 10
 
+<!--Device-pointer-function setHoverScrollState(state: boolean, callback: AsyncCallback<void>): void--><!--Device-pointer-function setHoverScrollState(state: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **System API:** This is a system API.
@@ -24,8 +26,8 @@ Sets the mouse hover scrolling switch state. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | boolean | Yes | Status of the mouse hover scroll switch. The value **true** indicates that the switch isenabled, and the value **false** indicates the opposite. The default value is **true**. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| state | boolean | Yes | Status of the mouse hover scroll switch. The value **true** indicates that the switch is enabled, and the value **false** indicates the opposite. The default value is **true**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -77,6 +79,8 @@ Sets the status of the mouse hover scroll switch. This API uses a promise to ret
 
 **Since:** 10
 
+<!--Device-pointer-function setHoverScrollState(state: boolean): Promise<void>--><!--Device-pointer-function setHoverScrollState(state: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **System API:** This is a system API.
@@ -85,13 +89,13 @@ Sets the status of the mouse hover scroll switch. This API uses a promise to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | boolean | Yes | Status of the mouse hover scroll switch. The value **true** indicates that the switch isenabled, and the value **false** indicates the opposite. The default value is **true**. |
+| state | boolean | Yes | Status of the mouse hover scroll switch. The value **true** indicates that the switch is enabled, and the value **false** indicates the opposite. The default value is **true**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

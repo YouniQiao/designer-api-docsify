@@ -4,7 +4,15 @@
 
 **起始版本：** 6
 
+<!--Device-unnamed-export default class Animator--><!--Device-unnamed-export default class Animator-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@kit.ArkUI';
+```
 
 ## create
 
@@ -14,11 +22,11 @@ static create(options: AnimatorOptions): AnimatorResult
 
 创建animator动画结果对象（AnimatorResult）。
 
-> **说明：**
->
-> -
->
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
+> **说明：**  
+>  
+> -  
+>  
+> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的  
 > [createAnimator](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#createanimator)来明确UI的执行上下文。
 
 **起始版本：** 9
@@ -27,7 +35,9 @@ static create(options: AnimatorOptions): AnimatorResult
 
 **替代接口：** createAnimator
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Animator-static create(options: AnimatorOptions): AnimatorResult--><!--Device-Animator-static create(options: AnimatorOptions): AnimatorResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -35,13 +45,13 @@ static create(options: AnimatorOptions): AnimatorResult
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | AnimatorOptions | 是 | 定义动画选项。 |
+| options | [AnimatorOptions](arkts-arkui-animatoroptions-i.md) | 是 | 定义动画选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AnimatorResult | Animator结果接口。 |
+| [AnimatorResult](arkts-arkui-animatorresult-i.md) | Animator结果接口。 |
 
 **错误码：**
 
@@ -76,14 +86,15 @@ animator.create(options); // 建议使用 UIContext.createAnimator()接口
 static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-创建animator动画结果对象（AnimatorResult）。与[create](Animator.create(options: AnimatorOptions))相比，新增对
-[SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md)类型入参的支持。
+创建animator动画结果对象（AnimatorResult）。与[create](Animator.create(options: AnimatorOptions))相比，新增对[SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md)类型入参的支持。
 
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Animator-static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult--><!--Device-Animator-static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -97,7 +108,7 @@ static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 
 | 类型 | 说明 |
 | --- | --- |
-| AnimatorResult | Animator结果接口。 |
+| [AnimatorResult](arkts-arkui-animatorresult-i.md) | Animator结果接口。 |
 
 **错误码：**
 
@@ -132,19 +143,21 @@ static createAnimator(options: AnimatorOptions): AnimatorResult
 
 **替代接口：** create(options:
 
+<!--Device-Animator-static createAnimator(options: AnimatorOptions): AnimatorResult--><!--Device-Animator-static createAnimator(options: AnimatorOptions): AnimatorResult-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | AnimatorOptions | 是 | 定义动画选项。 |
+| options | [AnimatorOptions](arkts-arkui-animatoroptions-i.md) | 是 | 定义动画选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AnimatorResult | Animator结果接口。 |
+| [AnimatorResult](arkts-arkui-animatorresult-i.md) | Animator结果接口。 |
 
 **示例：**
 

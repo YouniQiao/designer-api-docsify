@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-interface Vector4--><!--Device-unnamed-interface Vector4-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## w
@@ -12,8 +14,7 @@
 w: number
 ```
 
-向量w轴方向的值。
-取值范围：(-∞, +∞)。
+向量w轴方向的值。取值范围：(-∞, +∞)。
 
 **类型：** number
 
@@ -21,7 +22,9 @@ w: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Vector4-w: double--><!--Device-Vector4-w: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,8 +34,7 @@ w: number
 x: number
 ```
 
-向量x轴方向的值。
-取值范围：(-∞,+∞)。
+向量x轴方向的值。取值范围：(-∞,+∞)。
 
 **类型：** number
 
@@ -40,7 +42,9 @@ x: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Vector4-x: double--><!--Device-Vector4-x: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,8 +54,7 @@ x: number
 y: number
 ```
 
-向量y轴方向的值。
-取值范围：(-∞, +∞)。
+向量y轴方向的值。取值范围：(-∞, +∞)。
 
 **类型：** number
 
@@ -59,7 +62,9 @@ y: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Vector4-y: double--><!--Device-Vector4-y: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,8 +74,7 @@ y: number
 z: number
 ```
 
-向量z轴方向的值。
-取值范围：(-∞, +∞)。
+向量z轴方向的值。取值范围：(-∞, +∞)。
 
 **类型：** number
 
@@ -78,7 +82,9 @@ z: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Vector4-z: double--><!--Device-Vector4-z: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,6 +4,8 @@ Defines the data type of the interface restriction.
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare interface Configuration--><!--Device-unnamed-declare interface Configuration-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## colorMode
@@ -18,9 +20,11 @@ Set colorMode.
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Configuration-readonly colorMode: string--><!--Device-Configuration-readonly colorMode: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,9 +40,11 @@ Set fontScale.
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Configuration-readonly fontScale: number--><!--Device-Configuration-readonly fontScale: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

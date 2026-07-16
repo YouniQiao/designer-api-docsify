@@ -1,5 +1,11 @@
 # createAVScreenCaptureRecorder
 
+## 导入模块
+
+```TypeScript
+import { media } from '@kit.MediaKit';
+```
+
 ## createAVScreenCaptureRecorder
 
 ```TypeScript
@@ -10,13 +16,15 @@ function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder>
 
 **起始版本：** 12
 
+<!--Device-media-function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder>--><!--Device-media-function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AVScreenCaptureRecorder&gt; | Promise对象，返回AVScreenCaptureRecorder实例，失败时返回null。可用于进行屏幕录制。 |
+| Promise<AVScreenCaptureRecorder> | Promise对象，返回AVScreenCaptureRecorder实例，失败时返回null。可用于进行屏幕录制。 |
 
 **错误码：**
 

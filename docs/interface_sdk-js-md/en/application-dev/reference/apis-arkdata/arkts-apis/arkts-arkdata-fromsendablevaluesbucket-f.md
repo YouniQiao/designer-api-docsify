@@ -16,19 +16,21 @@ Converts a KV pair that can be passed across threads into the data that cannot b
 
 **Since:** 12
 
+<!--Device-sendableRelationalStore-function fromSendableValuesBucket(valuesBucket: ValuesBucket): NonSendableBucket--><!--Device-sendableRelationalStore-function fromSendableValuesBucket(valuesBucket: ValuesBucket): NonSendableBucket-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| valuesBucket | ValuesBucket | Yes | Data that can be passed across threads. |
+| valuesBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Data that can be passed across threads. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| NonSendableBucket | Data that cannot be passed across threads. |
+| [NonSendableBucket](arkts-arkdata-nonsendablebucket-t.md) | Data that cannot be passed across threads. |
 
 **Error codes:**
 

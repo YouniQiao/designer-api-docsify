@@ -1,9 +1,10 @@
 # TreeSet
 
-TreeSet is implemented based on TreeMap. In TreeSet, only value objects are processed.
-TreeSet can be used to store values, each of which must be unique.
+TreeSet is implemented based on TreeMap. In TreeSet, only value objects are processed.TreeSet can be used to store values, each of which must be unique.
 
 **Since:** 8
+
+<!--Device-unnamed-declare class TreeSet<T>--><!--Device-unnamed-declare class TreeSet<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,13 +26,15 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TreeSet-[Symbol.iterator](): IterableIterator<T>--><!--Device-TreeSet-[Symbol.iterator](): IterableIterator<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;T&gt; | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<T> | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
 
 **Error codes:**
 
@@ -88,6 +91,8 @@ If the set does not contain the element, the specified element is added
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TreeSet-add(value: T): boolean--><!--Device-TreeSet-add(value: T): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -129,6 +134,8 @@ Clears all element groups in a set
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TreeSet-clear(): void--><!--Device-TreeSet-clear(): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
@@ -161,13 +168,15 @@ A constructor used to create a TreeSet object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TreeSet-constructor(comparator?: (firstValue: T, secondValue: T) => boolean)--><!--Device-TreeSet-constructor(comparator?: (firstValue: T, secondValue: T) => boolean)-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| comparator | (firstValue: T, secondValue: T) =&gt; boolean | No | comparatorcomparator (Optional) User-defined comparison functions.firstValue (required) previous element.secondValue (required) next element. |
+| comparator | (firstValue: T, secondValue: T) => boolean | No | comparator comparator (Optional) User-defined comparison functions.firstValue (required) previous element.secondValue (required) next element. |
 
 **Error codes:**
 
@@ -226,12 +235,13 @@ console.info("treeSet: ", ts1.length);
 entries(): IterableIterator<[T, T]>
 ```
 
-Returns a new Iterator object that contains the [key, value] pairs for each element in the Set object in insertion
-order
+Returns a new Iterator object that contains the [key, value] pairs for each element in the Set object in insertion order
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TreeSet-entries(): IterableIterator<[T, T]>--><!--Device-TreeSet-entries(): IterableIterator<[T, T]>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -239,7 +249,7 @@ order
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;[T, T]&gt; | @throws { BusinessError } 10200011 - The entries method cannot be bound. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<[T, T]> | @throws { BusinessError } 10200011 - The entries method cannot be bound. |
 
 **Error codes:**
 
@@ -288,14 +298,16 @@ Executes a provided function once for each value in the Set object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TreeSet-forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Object): void--><!--Device-TreeSet-forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Object): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value?: T, key?: T, set?: TreeSet&lt;T&gt;) =&gt; void | Yes | callbackFncallbackFn (required) A function that accepts up to three arguments.The function to be called for each element. |
-| thisArg | Object | No | thisArgthisArg (Optional) The value to be used as this value for when callbackFn is called.If thisArg is omitted, undefined is used as the this value. |
+| callbackFn | (value?: T, key?: T, set?: TreeSet<T>) => void | Yes | callbackFn callbackFn (required) A function that accepts up to three arguments.The function to be called for each element. |
+| thisArg | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | No | thisArg thisArg (Optional) The value to be used as this value for when callbackFn is called.If thisArg is omitted, undefined is used as the this value. |
 
 **Error codes:**
 
@@ -341,6 +353,8 @@ Gets the first elements in a set
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TreeSet-getFirstValue(): T--><!--Device-TreeSet-getFirstValue(): T-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -373,12 +387,13 @@ console.info("result:", result); // result: sparrow
 getHigherValue(key: T): T
 ```
 
-Returns the least element greater than or equal to the specified key
-if the key does not exist, undefined is returned
+Returns the least element greater than or equal to the specified key if the key does not exist, undefined is returned
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TreeSet-getHigherValue(key: T): T--><!--Device-TreeSet-getHigherValue(key: T): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -424,6 +439,8 @@ Gets the last elements in a set
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TreeSet-getLastValue(): T--><!--Device-TreeSet-getLastValue(): T-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -456,12 +473,13 @@ console.info("result:", result); // result: squirrel
 getLowerValue(key: T): T
 ```
 
-Returns the greatest element smaller than or equal to the specified key
-if the key does not exist, undefined is returned
+Returns the greatest element smaller than or equal to the specified key if the key does not exist, undefined is returned
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TreeSet-getLowerValue(key: T): T--><!--Device-TreeSet-getLowerValue(key: T): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -507,6 +525,8 @@ Returns whether the Set object contains the elements
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TreeSet-has(value: T): boolean--><!--Device-TreeSet-has(value: T): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -549,6 +569,8 @@ Returns whether the Set object contains elements
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TreeSet-isEmpty(): boolean--><!--Device-TreeSet-isEmpty(): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -583,6 +605,8 @@ Return and delete the first element, returns undefined if tree set is empty
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TreeSet-popFirst(): T--><!--Device-TreeSet-popFirst(): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -622,6 +646,8 @@ Return and delete the last element, returns undefined if tree set is empty
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TreeSet-popLast(): T--><!--Device-TreeSet-popLast(): T-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -659,6 +685,8 @@ Remove a specified element from a Set object
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TreeSet-remove(value: T): boolean--><!--Device-TreeSet-remove(value: T): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -703,13 +731,15 @@ Returns a new Iterator object that contains the values contained in this set
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TreeSet-values(): IterableIterator<T>--><!--Device-TreeSet-values(): IterableIterator<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;T&gt; | @throws { BusinessError } 10200011 - The values method cannot be bound. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<T> | @throws { BusinessError } 10200011 - The values method cannot be bound. |
 
 **Error codes:**
 
@@ -745,6 +775,8 @@ Gets the element number of the TreeSet.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TreeSet-length: number--><!--Device-TreeSet-length: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

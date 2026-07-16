@@ -6,9 +6,17 @@
 
 **起始版本：** 9
 
+<!--Device-cryptoFramework-interface SymKeyGenerator--><!--Device-cryptoFramework-interface SymKeyGenerator-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.SymKey
 - API版本9-11：SystemCapability.Security.CryptoFramework
+
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+```
 
 ## convertKey
 
@@ -20,16 +28,18 @@ convertKey(key: DataBlob, callback: AsyncCallback<SymKey>): void
 
 必须在使用[createSymKeyGenerator](arkts-cryptoarchitecture-createsymkeygenerator-f.md#createsymkeygenerator-1)创建对称密钥生成器后，才能使用本函数。
 
-> **说明：**
->
-> 对于HMAC算法的对称密钥，如果已经在创建对称密钥生成器时指定了具体哈希算法（如指定"HMAC|SHA256"），则需要传入与哈希长度一致的二进制
+> **说明：**  
+>  
+> 对于HMAC算法的对称密钥，如果已经在创建对称密钥生成器时指定了具体哈希算法（如指定"HMAC|SHA256"），则需要传入与哈希长度一致的二进制  
 > 密钥数据（如传入SHA256对应256位的密钥数据）。
 
 如果在创建对称密钥生成器时没有指定具体哈希算法，如仅指定"HMAC"，则支持传入长度在[1,4096]范围内（单位为bytes）的任意二进制密钥数据。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SymKeyGenerator-convertKey(key: DataBlob, callback: AsyncCallback<SymKey>): void--><!--Device-SymKeyGenerator-convertKey(key: DataBlob, callback: AsyncCallback<SymKey>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.SymKey
@@ -39,8 +49,8 @@ convertKey(key: DataBlob, callback: AsyncCallback<SymKey>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | DataBlob | 是 | 指定的对称密钥材料。 |
-| callback | AsyncCallback&lt;SymKey&gt; | 是 | 回调函数。当生成对称密钥成功时，err为undefined，data为获取到的SymKey；否则为错误对象。 |
+| key | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | 是 | 指定的对称密钥材料。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<SymKey> | 是 | 回调函数。当生成对称密钥成功时，err为undefined，data为获取到的SymKey；否则为错误对象。 |
 
 **错误码：**
 
@@ -86,7 +96,9 @@ convertKey(key: DataBlob): Promise<SymKey>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SymKeyGenerator-convertKey(key: DataBlob): Promise<SymKey>--><!--Device-SymKeyGenerator-convertKey(key: DataBlob): Promise<SymKey>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.SymKey
@@ -96,13 +108,13 @@ convertKey(key: DataBlob): Promise<SymKey>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | DataBlob | 是 | 指定的密钥材料数据。 |
+| key | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | 是 | 指定的密钥材料数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;SymKey&gt; | Promise对象，返回对称密钥SymKey。 |
+| Promise<SymKey> | Promise对象，返回对称密钥SymKey。 |
 
 **错误码：**
 
@@ -150,19 +162,19 @@ convertKeySync(key: DataBlob): SymKey
 
 必须在使用[createSymKeyGenerator](arkts-cryptoarchitecture-createsymkeygenerator-f.md#createsymkeygenerator-1)创建对称密钥生成器后，才能使用本函数。
 
-> **说明：**
->
-> 对于HMAC算法的对称密钥，如果在创建对称密钥生成器时指定了具体哈希算法（如"HMAC|SHA256"），则需要传入与哈希长度一致的二进制密钥数据
->（如传入SHA256对应的256位密钥数据）。如果在创建对称密钥生成器时未指定具体哈希算法，如仅指定"HMAC"，则支持传入长度在1到4096字节范围
+> **说明：**  
+>  
+> 对于HMAC算法的对称密钥，如果在创建对称密钥生成器时指定了具体哈希算法（如"HMAC|SHA256"），则需要传入与哈希长度一致的二进制密钥数据  
+>（如传入SHA256对应的256位密钥数据）。如果在创建对称密钥生成器时未指定具体哈希算法，如仅指定"HMAC"，则支持传入长度在1到4096字节范围  
 > 内的任意二进制密钥数据。
 
-<br><br>**说明：**
-<br>建议优先使用异步API{@link convertKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。
-因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：**<br>建议优先使用异步API{@link convertKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SymKeyGenerator-convertKeySync(key: DataBlob): SymKey--><!--Device-SymKeyGenerator-convertKeySync(key: DataBlob): SymKey-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.SymKey
 
@@ -170,13 +182,13 @@ convertKeySync(key: DataBlob): SymKey
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | DataBlob | 是 | 指定的对称密钥材料。 |
+| key | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | 是 | 指定的对称密钥材料。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| SymKey | 对称密钥。 |
+| [SymKey](arkts-cryptoarchitecture-symkey-i.md) | 对称密钥。 |
 
 **错误码：**
 
@@ -218,16 +230,18 @@ generateSymKey(callback: AsyncCallback<SymKey>): void
 
 目前支持使用OpenSSL的RAND_priv_bytes()作为底层能力生成随机密钥。
 
-> **说明：**
->
-> 对于HMAC算法的对称密钥，如果在创建对称密钥生成器时指定了具体哈希算法（如"HMAC|SHA256"），则会随机生成与哈希长度一致的二进制密钥
-> 数据（如256位的密钥数据）。如果未指定具体哈希算法，如仅指定"HMAC"，则不支持随机生成对称密钥数据，可通过
-> [convertKey](arkts-cryptoarchitecture-symkeygenerator-i.md#convertkey-1)
+> **说明：**  
+>  
+> 对于HMAC算法的对称密钥，如果在创建对称密钥生成器时指定了具体哈希算法（如"HMAC|SHA256"），则会随机生成与哈希长度一致的二进制密钥  
+> 数据（如256位的密钥数据）。如果未指定具体哈希算法，如仅指定"HMAC"，则不支持随机生成对称密钥数据，可通过  
+> [convertKey](arkts-cryptoarchitecture-symkeygenerator-i.md#convertkey-1)  
 > 方式生成对称密钥数据。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SymKeyGenerator-generateSymKey(callback: AsyncCallback<SymKey>): void--><!--Device-SymKeyGenerator-generateSymKey(callback: AsyncCallback<SymKey>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.SymKey
@@ -237,7 +251,7 @@ generateSymKey(callback: AsyncCallback<SymKey>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;SymKey&gt; | 是 | 回调函数。当生成对称密钥成功时，err为undefined，data为获取到的SymKey；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<SymKey> | 是 | 回调函数。当生成对称密钥成功时，err为undefined，data为获取到的SymKey；否则为错误对象。 |
 
 **错误码：**
 
@@ -272,7 +286,9 @@ generateSymKey(): Promise<SymKey>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SymKeyGenerator-generateSymKey(): Promise<SymKey>--><!--Device-SymKeyGenerator-generateSymKey(): Promise<SymKey>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.SymKey
@@ -282,7 +298,7 @@ generateSymKey(): Promise<SymKey>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;SymKey&gt; | Promise对象，返回对称密钥SymKey。 |
+| Promise<SymKey> | Promise对象，返回对称密钥SymKey。 |
 
 **错误码：**
 
@@ -319,21 +335,20 @@ generateSymKeySync(): SymKey
 
 目前支持使用OpenSSL的RAND_priv_bytes()作为底层能力生成随机密钥。
 
-> **说明：**
->
-> 对于HMAC算法的对称密钥，如果已经在创建对称密钥生成器时指定了具体哈希算法（如指定"HMAC|SHA256"），则会随机生成与哈希长度一致的
+> **说明：**  
+>  
+> 对于HMAC算法的对称密钥，如果已经在创建对称密钥生成器时指定了具体哈希算法（如指定"HMAC|SHA256"），则会随机生成与哈希长度一致的  
 > 二进制密钥数据（如指定"HMAC|SHA256"会随机生成256位的密钥数据）。
 
-如果在创建对称密钥生成器时没有指定具体哈希算法，如仅指定"HMAC"，则不支持随机生成对称密钥数据，可通过
-[convertKeySync](arkts-cryptoarchitecture-symkeygenerator-i.md#convertkeysync-1)方式生成对称密钥数据。
+如果在创建对称密钥生成器时没有指定具体哈希算法，如仅指定"HMAC"，则不支持随机生成对称密钥数据，可通过[convertKeySync](arkts-cryptoarchitecture-symkeygenerator-i.md#convertkeysync-1)方式生成对称密钥数据。
 
-<br><br>**说明：**
-<br>建议优先使用异步API{@link generateSymKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。
-因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：**<br>建议优先使用异步API{@link generateSymKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SymKeyGenerator-generateSymKeySync(): SymKey--><!--Device-SymKeyGenerator-generateSymKeySync(): SymKey-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.SymKey
 
@@ -341,7 +356,7 @@ generateSymKeySync(): SymKey
 
 | 类型 | 说明 |
 | --- | --- |
-| SymKey | 返回对称密钥SymKey。 |
+| [SymKey](arkts-cryptoarchitecture-symkey-i.md) | 返回对称密钥SymKey。 |
 
 **错误码：**
 
@@ -378,7 +393,9 @@ readonly algName: string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SymKeyGenerator-readonly algName: string--><!--Device-SymKeyGenerator-readonly algName: string-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.SymKey

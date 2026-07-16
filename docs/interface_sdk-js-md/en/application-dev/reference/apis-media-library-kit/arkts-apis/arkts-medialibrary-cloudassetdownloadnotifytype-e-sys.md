@@ -4,6 +4,8 @@ Enumerates the types of events reported during a cloud asset download.
 
 **Since:** 21
 
+<!--Device-photoAccessHelper-enum CloudAssetDownloadNotifyType--><!--Device-photoAccessHelper-enum CloudAssetDownloadNotifyType-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -17,6 +19,8 @@ DOWNLOAD_PROGRESS = 0
 Fired when download progress is updated.
 
 **Since:** 21
+
+<!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_PROGRESS = 0--><!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_PROGRESS = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -32,6 +36,8 @@ Fired when a download completes successfully.
 
 **Since:** 21
 
+<!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_FINISHED = 1--><!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_FINISHED = 1-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -45,6 +51,8 @@ DOWNLOAD_FAILED = 2
 Fired when a download fails.
 
 **Since:** 21
+
+<!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_FAILED = 2--><!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_FAILED = 2-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -60,6 +68,8 @@ Fired when a downloaded asset is deleted.
 
 **Since:** 21
 
+<!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_ASSET_DELETED = 3--><!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_ASSET_DELETED = 3-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -73,6 +83,8 @@ DOWNLOAD_AUTO_PAUSED = 4
 Fired when the system automatically pauses a download.
 
 **Since:** 21
+
+<!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_AUTO_PAUSED = 4--><!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_AUTO_PAUSED = 4-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -88,6 +100,8 @@ Fired when the system automatically resumes a download.
 
 **Since:** 21
 
+<!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_AUTO_RESUMED = 5--><!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_AUTO_RESUMED = 5-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -101,6 +115,8 @@ DOWNLOAD_REFRESHED = 6
 Fired when the download status is refreshed.
 
 **Since:** 21
+
+<!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_REFRESHED = 6--><!--Device-CloudAssetDownloadNotifyType-DOWNLOAD_REFRESHED = 6-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -12,10 +12,11 @@ import { configPolicy } from '@kit.BasicServicesKit';
 function getCfgDirList(callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains a list of configuration level directories, in ascending order of priority. This API uses an asynchronous
-callback to return the result.
+Obtains a list of configuration level directories, in ascending order of priority. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
+
+<!--Device-configPolicy-function getCfgDirList(callback: AsyncCallback<Array<string>>): void--><!--Device-configPolicy-function getCfgDirList(callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Customization.ConfigPolicy
 
@@ -25,7 +26,7 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the list of configurationlevel directories is successfully obtained, <strong>err</strong> is <strong>undefined</strong>,and <strong>data</strong> is the obtained list. Otherwise, <strong>err</strong> is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback used to return the result. If the list of configuration level directories is successfully obtained, <strong>err</strong> is <strong>undefined</strong>,and <strong>data</strong> is the obtained list. Otherwise, <strong>err</strong> is an error object. |
 
 **Error codes:**
 
@@ -40,10 +41,11 @@ callback to return the result.
 function getCfgDirList(): Promise<Array<string>>
 ```
 
-Obtains a list of configuration level directories, in ascending order of priority. This API uses a promise to
-return the result.
+Obtains a list of configuration level directories, in ascending order of priority. This API uses a promise to return the result.
 
 **Since:** 8
+
+<!--Device-configPolicy-function getCfgDirList(): Promise<Array<string>>--><!--Device-configPolicy-function getCfgDirList(): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Customization.ConfigPolicy
 
@@ -53,5 +55,5 @@ return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the list of configuration level directories. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return the list of configuration level directories. |
 

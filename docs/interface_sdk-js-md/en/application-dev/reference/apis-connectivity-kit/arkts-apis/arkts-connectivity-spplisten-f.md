@@ -12,8 +12,7 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 function sppListen(name: string, option: SppOption, callback: AsyncCallback<number>): void
 ```
 
-Creates a Bluetooth server listening socket.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Creates a Bluetooth server listening socket.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -25,6 +24,8 @@ On API 10 and above, the permission required by this interface is changed from U
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
+<!--Device-bluetoothManager-function sppListen(name: string, option: SppOption, callback: AsyncCallback<number>): void--><!--Device-bluetoothManager-function sppListen(name: string, option: SppOption, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -32,8 +33,8 @@ On API 10 and above, the permission required by this interface is changed from U
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the service name. |
-| option | SppOption | Yes | Indicates the listen parameters {@link SppOption}. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return a server socket ID. |
+| option | [SppOption](arkts-connectivity-sppoption-i.md) | Yes | Indicates the listen parameters {@link SppOption}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return a server socket ID. |
 
 **Error codes:**
 

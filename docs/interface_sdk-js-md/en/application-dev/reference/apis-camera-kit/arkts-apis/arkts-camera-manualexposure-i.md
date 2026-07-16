@@ -1,11 +1,12 @@
 # ManualExposure (System API)
 
-ManualExposure extends [ManualExposureQuery](arkts-camera-manualexposurequery-i.md)
-Provides APIs to obtain and set the exposure duration.
+ManualExposure extends [ManualExposureQuery](arkts-camera-manualexposurequery-i-sys.md)Provides APIs to obtain and set the exposure duration.
 
-**Inheritance/Implementation:** ManualExposure extends [ManualExposureQuery](arkts-camera-manualexposurequery-i.md)
+**Inheritance/Implementation:** ManualExposure extends [ManualExposureQuery](arkts-camera-manualexposurequery-i-sys.md)
 
 **Since:** 24
+
+<!--Device-camera-interface ManualExposure extends ManualExposureQuery--><!--Device-camera-interface ManualExposure extends ManualExposureQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -29,6 +30,8 @@ Gets current exposure value.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-ManualExposure-getExposureDuration(): int--><!--Device-ManualExposure-getExposureDuration(): int-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
@@ -50,12 +53,13 @@ Gets current exposure value.
 setExposureDuration(exposureDuration: number): void
 ```
 
-Sets Exposure duration value, units: microseconds.This control is only effective if
-ExposureMode is set to EXPOSURE_MODE_MANUAL.
+Sets Exposure duration value, units: microseconds.This control is only effective if ExposureMode is set to EXPOSURE_MODE_MANUAL.
 
 **Since:** 24
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-ManualExposure-setExposureDuration(exposureDuration: int): void--><!--Device-ManualExposure-setExposureDuration(exposureDuration: int): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

@@ -6,6 +6,8 @@ This module provides APIs for collecting statistics on device usage.
 
 **Deprecated since:** 9
 
+<!--Device-unnamed-declare namespace bundleState--><!--Device-unnamed-declare namespace bundleState-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 ## Modules to Import
@@ -20,8 +22,8 @@ import { bundleState } from '@kit.BackgroundTasksKit';
 
 | Name | Description |
 | --- | --- |
-| [isIdleState](arkts-backgroundtasks-isidlestate-f.md#isidlestate-1) | Checks whether the application specified by **bundleName** is in the idle state. A third-party application can onlycheck the idle state of itself. A system application can check the idle state of other applications only when it isgranted with the ohos.permission.BUNDLE_ACTIVE_INFO permission. This API uses an asynchronous callback to return the result. |
-| [isIdleState](arkts-backgroundtasks-isidlestate-f.md#isidlestate-2) | Checks whether the application specified by **bundleName** is in the idle state. A third-party application can onlycheck the idle state of itself. A system application can check the idle state of other applications only when it isgranted with the ohos.permission.BUNDLE_ACTIVE_INFO permission. This API uses a promise to return the result. |
+| [isIdleState](arkts-backgroundtasks-isidlestate-f.md#isidlestate-1) | Checks whether the application specified by **bundleName** is in the idle state. A third-party application can only check the idle state of itself. A system application can check the idle state of other applications only when it is granted with the ohos.permission.BUNDLE_ACTIVE_INFO permission. This API uses an asynchronous callback to return the result. |
+| [isIdleState](arkts-backgroundtasks-isidlestate-f.md#isidlestate-2) | Checks whether the application specified by **bundleName** is in the idle state. A third-party application can only check the idle state of itself. A system application can check the idle state of other applications only when it is granted with the ohos.permission.BUNDLE_ACTIVE_INFO permission. This API uses a promise to return the result. |
 | [queryAppUsagePriorityGroup](arkts-backgroundtasks-queryappusageprioritygroup-f.md#queryappusageprioritygroup-1) | Queries the usage priority group of the calling application.The priority defined in a priority group restricts the resource usage of an application,for example, restricting the running of background tasks. |
 | [queryAppUsagePriorityGroup](arkts-backgroundtasks-queryappusageprioritygroup-f.md#queryappusageprioritygroup-2) | Queries the usage priority group of the calling application.The priority defined in a priority group restricts the resource usage of an application,for example, restricting the running of background tasks. |
 | [queryCurrentBundleActiveStates](arkts-backgroundtasks-querycurrentbundleactivestates-f.md#querycurrentbundleactivestates-1) | Queries state data of the current bundle within a specified period. |

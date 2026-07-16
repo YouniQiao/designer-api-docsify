@@ -1,5 +1,11 @@
 # get
 
+## 导入模块
+
+```TypeScript
+import { componentSnapshot } from '@kit.ArkUI';
+```
+
 ## get
 
 ```TypeScript
@@ -8,12 +14,12 @@ function get(id: string, callback: AsyncCallback<image.PixelMap>, options?: Snap
 
 获取已加载的组件的截图，传入组件的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)，找到对应组件进行截图。通过回调返回结果。
 
-> **说明：**
->
-> - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [getComponentSnapshot](arkts-arkui-uicontext-c.md#getcomponentsnapshot-1)方法
-> 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-componentsnapshot-c.md)对象。
->
+> **说明：**  
+>  
+> - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的  
+> [getComponentSnapshot](arkts-arkui-uicontext-c.md#getcomponentsnapshot-1)方法  
+> 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-componentsnapshot-c.md)对象。  
+>  
 > - 截图会获取最近一帧的绘制内容。如果在组件触发更新的同时调用截图，更新的渲染内容不会被截取到，截图会返回上一帧的绘制内容。
 
 **起始版本：** 10
@@ -24,7 +30,9 @@ function get(id: string, callback: AsyncCallback<image.PixelMap>, options?: Snap
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-componentSnapshot-function get(id: string, callback: AsyncCallback<image.PixelMap>, options?: SnapshotOptions): void--><!--Device-componentSnapshot-function get(id: string, callback: AsyncCallback<image.PixelMap>, options?: SnapshotOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,8 +41,8 @@ function get(id: string, callback: AsyncCallback<image.PixelMap>, options?: Snap
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | string | 是 | 目标组件的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。 |
-| callback | AsyncCallback&lt;image.PixelMap&gt; | 是 | 截图返回结果的回调。 |
-| options | SnapshotOptions | 否 | 截图相关的自定义参数。<br>**起始版本：** 12 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<image.PixelMap> | 是 | 截图返回结果的回调。 |
+| options | [SnapshotOptions](arkts-arkui-snapshotoptions-i.md) | 否 | 截图相关的自定义参数。<br>**起始版本：** 12 |
 
 **错误码：**
 
@@ -96,12 +104,12 @@ function get(id: string, options?: SnapshotOptions): Promise<image.PixelMap>
 
 获取已加载的组件的截图，传入组件的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)，找到对应组件进行截图。通过Promise返回结果。
 
-> **说明：**
->
-> - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [getComponentSnapshot](arkts-arkui-uicontext-c.md#getcomponentsnapshot-1)方法
-> 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-componentsnapshot-c.md)对象。
->
+> **说明：**  
+>  
+> - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的  
+> [getComponentSnapshot](arkts-arkui-uicontext-c.md#getcomponentsnapshot-1)方法  
+> 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-componentsnapshot-c.md)对象。  
+>  
 > - 截图会获取最近一帧的绘制内容。如果在组件触发更新的同时调用截图，更新的渲染内容不会被截取到，截图会返回上一帧的绘制内容。
 
 **起始版本：** 10
@@ -112,7 +120,9 @@ function get(id: string, options?: SnapshotOptions): Promise<image.PixelMap>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-componentSnapshot-function get(id: string, options?: SnapshotOptions): Promise<image.PixelMap>--><!--Device-componentSnapshot-function get(id: string, options?: SnapshotOptions): Promise<image.PixelMap>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -121,13 +131,13 @@ function get(id: string, options?: SnapshotOptions): Promise<image.PixelMap>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | string | 是 | 目标组件的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。 |
-| options | SnapshotOptions | 否 | 截图相关的自定义参数。<br>**起始版本：** 12 |
+| options | [SnapshotOptions](arkts-arkui-snapshotoptions-i.md) | 否 | 截图相关的自定义参数。<br>**起始版本：** 12 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | 截图返回的结果。 |
+| Promise<image.PixelMap> | 截图返回的结果。 |
 
 **错误码：**
 

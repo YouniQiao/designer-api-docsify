@@ -4,6 +4,8 @@ Provides APIs to obtain and set the beauty effect.
 
 **Since:** 12
 
+<!--Device-camera-interface BeautyQuery--><!--Device-camera-interface BeautyQuery-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -20,16 +22,17 @@ import { camera } from '@kit.CameraKit';
 getSupportedBeautyRange(type: BeautyType): Array<number>
 ```
 
-Obtains the levels that can be set a beauty type. The beauty levels vary according to the device type. The
-following table is only an example.
-| Input Parameter | Example Return Value | Return Value Description |
-| ----------------| ---- | ---------|
-| AUTO | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] |Beauty levels supported when **type** is set to **AUTO**. The value **0** * means that beauty mode is disabled, and other positive values mean the corresponding automatic beauty levels. |
-| SKIN_SMOOTH | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] | Beauty levels supported when **type** is set to **SKIN_SMOOTH**. The value * **0** means that the skin smoothing feature is disabled, and other positive values mean the corresponding skin smoothing levels. |
-| FACE_SLENDER | [0, 1, 2, 3, 4, 5] | Beauty levels supported when **type** is set to **FACE_SLENDER**. The value **0** means that * the face slimming feature is disabled, and other positive values mean the corresponding face slimming levels. |
+Obtains the levels that can be set a beauty type. The beauty levels vary according to the device type. The following table is only an example.  
+| Input Parameter | Example Return Value | Return Value Description |  
+| ----------------| ---- | ---------|  
+| AUTO | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] |Beauty levels supported when **type** is set to **AUTO**. The value **0** * means that beauty mode is disabled, and other positive values mean the corresponding automatic beauty levels. |  
+| SKIN_SMOOTH | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] | Beauty levels supported when **type** is set to **SKIN_SMOOTH**. The value * **0** means that the skin smoothing feature is disabled, and other positive values mean the corresponding skin smoothing levels. |  
+| FACE_SLENDER | [0, 1, 2, 3, 4, 5] | Beauty levels supported when **type** is set to **FACE_SLENDER**. The value **0** means that * the face slimming feature is disabled, and other positive values mean the corresponding face slimming levels. |  
 | SKIN_TONE | [-1, 16242611] | Beauty levels supported when **type** is set to **SKIN_TONE**. The value **-1** means that the skin tone perfection feature is disabled. Other non-negative values mean the skin tone perfection levels represented by RGB,<br> for example, 16242611, which is 0xF7D7B3 in hexadecimal format, where F7, D7, and B3 represent the values of the R channel, G channel, and B channel, respectively. |
 
 **Since:** 11
+
+<!--Device-BeautyQuery-getSupportedBeautyRange(type: BeautyType): Array<int>--><!--Device-BeautyQuery-getSupportedBeautyRange(type: BeautyType): Array<int>-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -39,13 +42,13 @@ following table is only an example.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | BeautyType | Yes | Beauty type. |
+| type | [BeautyType](arkts-camera-beautytype-e-sys.md) | Yes | Beauty type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Array of levels supported. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Array of levels supported. |
 
 **Error codes:**
 
@@ -78,6 +81,8 @@ Obtains the supported beauty types.
 
 **Since:** 11
 
+<!--Device-BeautyQuery-getSupportedBeautyTypes(): Array<BeautyType>--><!--Device-BeautyQuery-getSupportedBeautyTypes(): Array<BeautyType>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -86,7 +91,7 @@ Obtains the supported beauty types.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;BeautyType&gt; | Array of beauty types supported. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<BeautyType> | Array of beauty types supported. |
 
 **Error codes:**
 
@@ -115,6 +120,8 @@ Gets supported portrait theme type.
 
 **Since:** 14
 
+<!--Device-BeautyQuery-getSupportedPortraitThemeTypes(): Array<PortraitThemeType>--><!--Device-BeautyQuery-getSupportedPortraitThemeTypes(): Array<PortraitThemeType>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -123,7 +130,7 @@ Gets supported portrait theme type.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;PortraitThemeType&gt; | Lists of portrait theme types |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PortraitThemeType> | Lists of portrait theme types |
 
 **Error codes:**
 
@@ -141,6 +148,8 @@ isPortraitThemeSupported(): boolean
 Checks whether portrait theme is supported.
 
 **Since:** 14
+
+<!--Device-BeautyQuery-isPortraitThemeSupported(): boolean--><!--Device-BeautyQuery-isPortraitThemeSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

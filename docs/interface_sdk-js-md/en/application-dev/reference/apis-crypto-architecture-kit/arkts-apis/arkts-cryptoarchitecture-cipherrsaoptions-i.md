@@ -8,6 +8,8 @@ Defines the input parameters of **cipher.rsa()**.
 
 **Substitutes:** Cipher
 
+<!--Device-unnamed-export interface CipherRsaOptions--><!--Device-unnamed-export interface CipherRsaOptions-End-->
+
 **System capability:** SystemCapability.Security.Cipher
 
 ## Modules to Import
@@ -24,8 +26,7 @@ action: string
 
 Action to perform. The options are as follows:
 
-1. **encrypt**: Encrypts data.
-2. **decrypt**: Decrypts data.
+1. **encrypt**: Encrypts data.2. **decrypt**: Decrypts data.
 
 **Type:** string
 
@@ -34,6 +35,8 @@ Action to perform. The options are as follows:
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
+
+<!--Device-CipherRsaOptions-action: string--><!--Device-CipherRsaOptions-action: string-End-->
 
 **System capability:** SystemCapability.Security.Cipher
 
@@ -53,6 +56,8 @@ Called when the execution is complete.
 
 **Substitutes:** Cipher
 
+<!--Device-CipherRsaOptions-complete: () => void--><!--Device-CipherRsaOptions-complete: () => void-End-->
+
 **System capability:** SystemCapability.Security.Cipher
 
 ## fail
@@ -70,6 +75,8 @@ Called when data fails to be encrypted or decrypted.
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
+
+<!--Device-CipherRsaOptions-fail: (data: string, code: number) => void--><!--Device-CipherRsaOptions-fail: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.Security.Cipher
 
@@ -89,6 +96,8 @@ RSA key. It is a public key in encryption and a private key in decryption.
 
 **Substitutes:** Cipher
 
+<!--Device-CipherRsaOptions-key: string--><!--Device-CipherRsaOptions-key: string-End-->
+
 **System capability:** SystemCapability.Security.Cipher
 
 ## success
@@ -107,6 +116,8 @@ Called when data is encrypted or decrypted successfully.
 
 **Substitutes:** Cipher
 
+<!--Device-CipherRsaOptions-success: (data: CipherResponse) => void--><!--Device-CipherRsaOptions-success: (data: CipherResponse) => void-End-->
+
 **System capability:** SystemCapability.Security.Cipher
 
 ## text
@@ -117,10 +128,7 @@ text: string
 
 Text to be encrypted or decrypted.
 
-The text to be encrypted must be a common text and cannot exceed the length calculated based on the formula (
-keySize/8 - 66). **keySize** indicates the key length. For example, if the key length is 1024 bytes, the text
-cannot exceed 62 bytes (1024/8 - 66 = 62). The text to be decrypted must be a binary value encoded in Base64. The
-default format is used for Base64 encoding.
+The text to be encrypted must be a common text and cannot exceed the length calculated based on the formula (keySize/8 - 66). **keySize** indicates the key length. For example, if the key length is 1024 bytes, the text cannot exceed 62 bytes (1024/8 - 66 = 62). The text to be decrypted must be a binary value encoded in Base64. The default format is used for Base64 encoding.
 
 **Type:** string
 
@@ -129,6 +137,8 @@ default format is used for Base64 encoding.
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
+
+<!--Device-CipherRsaOptions-text: string--><!--Device-CipherRsaOptions-text: string-End-->
 
 **System capability:** SystemCapability.Security.Cipher
 
@@ -147,6 +157,8 @@ RSA padding. The default value is **RSA/None/OAEPWithSHA256AndMGF1Padding**.
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
+
+<!--Device-CipherRsaOptions-transformation?: string--><!--Device-CipherRsaOptions-transformation?: string-End-->
 
 **System capability:** SystemCapability.Security.Cipher
 

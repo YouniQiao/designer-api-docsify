@@ -4,6 +4,8 @@ Defines the style of the arc slider.
 
 **Since:** 18
 
+<!--Device-unnamed-declare class ArcSliderStyleOptions--><!--Device-unnamed-declare class ArcSliderStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
@@ -24,13 +26,15 @@ A constructor used to create an **ArcSliderStyleOptions** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcSliderStyleOptions-constructor(options?: ArcSliderStyleOptionsConstructorOptions)--><!--Device-ArcSliderStyleOptions-constructor(options?: ArcSliderStyleOptionsConstructorOptions)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ArcSliderStyleOptionsConstructorOptions | No | Constructor information for **ArcSliderStyleOptions**. |
+| options | [ArcSliderStyleOptionsConstructorOptions](arkts-arkui-arcsliderstyleoptionsconstructoroptions-i.md) | No | Constructor information for **ArcSliderStyleOptions**. |
 
 ## activeTrackThickness
 
@@ -52,6 +56,8 @@ Value range: [24, 36]. If the value is invalid, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcSliderStyleOptions-activeTrackThickness?: number--><!--Device-ArcSliderStyleOptions-activeTrackThickness?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## selectedColor
@@ -71,6 +77,8 @@ Default value: **#FF5EA1FF**
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSliderStyleOptions-selectedColor?: string--><!--Device-ArcSliderStyleOptions-selectedColor?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -94,6 +102,8 @@ If a value less than 0 is set, the default is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcSliderStyleOptions-trackBlur?: number--><!--Device-ArcSliderStyleOptions-trackBlur?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## trackColor
@@ -113,6 +123,8 @@ Default value: **#33FFFFFF**
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSliderStyleOptions-trackColor?: string--><!--Device-ArcSliderStyleOptions-trackColor?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -135,6 +147,8 @@ Value range: [5, 16]. If the value is invalid, the default value is used.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSliderStyleOptions-trackThickness?: number--><!--Device-ArcSliderStyleOptions-trackThickness?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 

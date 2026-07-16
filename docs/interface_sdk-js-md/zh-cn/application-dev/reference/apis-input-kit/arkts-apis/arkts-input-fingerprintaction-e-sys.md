@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export declare enum FingerprintAction--><!--Device-unnamed-export declare enum FingerprintAction-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **系统接口：** 此接口为系统接口。
@@ -17,6 +19,8 @@ DOWN = 0
 按下事件。
 
 **起始版本：** 12
+
+<!--Device-FingerprintAction-DOWN = 0--><!--Device-FingerprintAction-DOWN = 0-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -32,6 +36,8 @@ UP = 1
 
 **起始版本：** 12
 
+<!--Device-FingerprintAction-UP = 1--><!--Device-FingerprintAction-UP = 1-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +51,8 @@ SLIDE = 2
 滑动事件。
 
 **起始版本：** 12
+
+<!--Device-FingerprintAction-SLIDE = 2--><!--Device-FingerprintAction-SLIDE = 2-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -60,6 +68,8 @@ RETOUCH = 3
 
 **起始版本：** 12
 
+<!--Device-FingerprintAction-RETOUCH = 3--><!--Device-FingerprintAction-RETOUCH = 3-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **系统接口：** 此接口为系统接口。
@@ -73,6 +83,8 @@ CLICK = 4
 双触事件。
 
 **起始版本：** 12
+
+<!--Device-FingerprintAction-CLICK = 4--><!--Device-FingerprintAction-CLICK = 4-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 

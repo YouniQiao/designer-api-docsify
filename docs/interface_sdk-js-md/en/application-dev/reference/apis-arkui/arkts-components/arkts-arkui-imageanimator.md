@@ -5,6 +5,9 @@ as well as the duration of each image can be configured.
 
 > **NOTE**
 
+## Child Components
+
+Not supported
 
 ## ImageAnimator
 
@@ -19,6 +22,8 @@ ImageAnimator is returned.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-ImageAnimatorInterface-(): ImageAnimatorAttribute--><!--Device-ImageAnimatorInterface-(): ImageAnimatorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

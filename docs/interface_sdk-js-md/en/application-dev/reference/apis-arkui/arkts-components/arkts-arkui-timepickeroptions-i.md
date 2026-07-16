@@ -12,10 +12,11 @@ Obtains the current system date and time.
 
 **Method 2**: new Date(value: number | string)
 
-**Method 3**: new Date(year: number, monthIndex: number, date?: number, hours?: number, minutes?: number, seconds?:
-number, ms?: number)
+**Method 3**: new Date(year: number, monthIndex: number, date?: number, hours?: number, minutes?: number, seconds?:number, ms?: number)
 
 **Since:** 8
+
+<!--Device-unnamed-declare interface TimePickerOptions--><!--Device-unnamed-declare interface TimePickerOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,8 +32,7 @@ Default value: **Date(0, 0, 0, 23, 59, 59)**.
 
 **NOTE**
 
-1. Only the hour and minute values take effect.
-2. If **end** is set and is not the default value, **loop** does not take effect.
+1. Only the hour and minute values take effect.2. If **end** is set and is not the default value, **loop** does not take effect.
 
 **Type:** Date
 
@@ -41,6 +41,8 @@ Default value: **Date(0, 0, 0, 23, 59, 59)**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TimePickerOptions-end?: Date--><!--Device-TimePickerOptions-end?: Date-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +66,8 @@ Default value: **TimePickerFormat.HOUR_MINUTE**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TimePickerOptions-format?: TimePickerFormat--><!--Device-TimePickerOptions-format?: TimePickerFormat-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selected
@@ -76,14 +80,15 @@ Time of the selected item.
 
 Default value: current system time
 
-Since API version 10, this parameter supports two-way binding through
-[$$](../../../../ui/state-management/arkts-two-way-sync.md).
+Since API version 10, this parameter supports two-way binding through [$$](../../../../ui/state-management/arkts-two-way-sync.md).
 
 **Type:** Date
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TimePickerOptions-selected?: Date--><!--Device-TimePickerOptions-selected?: Date-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -99,8 +104,7 @@ Default value: **Date(0, 0, 0, 0, 0, 0)**
 
 **NOTE**
 
-1. Only the hour and minute values take effect.
-2. If **start** is set and is not the default value, **loop** does not take effect.
+1. Only the hour and minute values take effect.2. If **start** is set and is not the default value, **loop** does not take effect.
 
 **Type:** Date
 
@@ -109,6 +113,8 @@ Default value: **Date(0, 0, 0, 0, 0, 0)**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TimePickerOptions-start?: Date--><!--Device-TimePickerOptions-start?: Date-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

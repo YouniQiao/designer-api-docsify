@@ -14,13 +14,13 @@ function onPairingRequest(callback: Callback<PairingRequestParam>): void
 
 Subscribes to pairing request events from remote NearLink devices.
 
-This event is accessible only to system applications that granted the ohos.permission.NEARLINK_ACCESS permission.
-If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission,
-the callback returns the real device address; otherwise, a random device address is returned.
+This event is accessible only to system applications that granted the ohos.permission.NEARLINK_ACCESS permission.If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission,the callback returns the real device address; otherwise, a random device address is returned.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-remoteDevice-function onPairingRequest(callback: Callback<PairingRequestParam>): void--><!--Device-remoteDevice-function onPairingRequest(callback: Callback<PairingRequestParam>): void-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -30,7 +30,7 @@ the callback returns the real device address; otherwise, a random device address
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;PairingRequestParam&gt; | Yes | Callback used to listen for the pairing request event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<PairingRequestParam> | Yes | Callback used to listen for the pairing request event. |
 
 **Error codes:**
 

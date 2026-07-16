@@ -4,9 +4,17 @@
 
 **起始版本：** 8
 
+<!--Device-osAccount-class UserAuth--><!--Device-osAccount-class UserAuth-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+```
 
 ## auth
 
@@ -25,6 +33,18 @@ auth(
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-UserAuth-auth(
+      challenge: Uint8Array,
+      authType: AuthType,
+      authTrustLevel: AuthTrustLevel,
+      callback: IUserAuthCallback
+    ): Uint8Array--><!--Device-UserAuth-auth(
+      challenge: Uint8Array,
+      authType: AuthType,
+      authTrustLevel: AuthTrustLevel,
+      callback: IUserAuthCallback
+    ): Uint8Array-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -33,16 +53,16 @@ auth(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| challenge | Uint8Array | 是 | 指示挑战值，挑战值为一个随机数，用于提升安全性。 |
-| authType | AuthType | 是 | 指示认证类型。 |
-| authTrustLevel | AuthTrustLevel | 是 | 指示认证结果的信任级别。 |
-| callback | IUserAuthCallback | 是 | 回调对象，返回认证结果。 |
+| challenge | [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 是 | 指示挑战值，挑战值为一个随机数，用于提升安全性。 |
+| authType | [AuthType](arkts-basicservices-authtype-e-sys.md) | 是 | 指示认证类型。 |
+| authTrustLevel | [AuthTrustLevel](arkts-basicservices-authtrustlevel-e-sys.md) | 是 | 指示认证结果的信任级别。 |
+| callback | [IUserAuthCallback](arkts-basicservices-iuserauthcallback-i-sys.md) | 是 | 回调对象，返回认证结果。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 返回取消的上下文ID。 |
+| [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 返回取消的上下文ID。 |
 
 **错误码：**
 
@@ -112,6 +132,20 @@ auth(
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-UserAuth-auth(
+      challenge: Uint8Array,
+      authType: AuthType,
+      authTrustLevel: AuthTrustLevel,
+      options: AuthOptions,
+      callback: IUserAuthCallback
+    ): Uint8Array--><!--Device-UserAuth-auth(
+      challenge: Uint8Array,
+      authType: AuthType,
+      authTrustLevel: AuthTrustLevel,
+      options: AuthOptions,
+      callback: IUserAuthCallback
+    ): Uint8Array-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -120,17 +154,17 @@ auth(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| challenge | Uint8Array | 是 | 指示挑战值，挑战值为一个随机数，用于防止重放攻击，提升安全性。 |
-| authType | AuthType | 是 | 指示认证类型。 |
-| authTrustLevel | AuthTrustLevel | 是 | 指示认证结果的信任级别。 |
-| options | AuthOptions | 是 | 指示认证用户的可选参数集合。 |
-| callback | IUserAuthCallback | 是 | 回调对象，返回认证结果。 |
+| challenge | [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 是 | 指示挑战值，挑战值为一个随机数，用于防止重放攻击，提升安全性。 |
+| authType | [AuthType](arkts-basicservices-authtype-e-sys.md) | 是 | 指示认证类型。 |
+| authTrustLevel | [AuthTrustLevel](arkts-basicservices-authtrustlevel-e-sys.md) | 是 | 指示认证结果的信任级别。 |
+| options | [AuthOptions](arkts-basicservices-authoptions-i-sys.md) | 是 | 指示认证用户的可选参数集合。 |
+| callback | [IUserAuthCallback](arkts-basicservices-iuserauthcallback-i-sys.md) | 是 | 回调对象，返回认证结果。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 返回取消的上下文ID。 |
+| [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 返回取消的上下文ID。 |
 
 **错误码：**
 
@@ -204,6 +238,20 @@ authUser(
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-UserAuth-authUser(
+      userId: int,
+      challenge: Uint8Array,
+      authType: AuthType,
+      authTrustLevel: AuthTrustLevel,
+      callback: IUserAuthCallback
+    ): Uint8Array--><!--Device-UserAuth-authUser(
+      userId: int,
+      challenge: Uint8Array,
+      authType: AuthType,
+      authTrustLevel: AuthTrustLevel,
+      callback: IUserAuthCallback
+    ): Uint8Array-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -213,16 +261,16 @@ authUser(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | number | 是 | 指示用户身份。 |
-| challenge | Uint8Array | 是 | 指示挑战值，挑战值为一个随机数，用于提升安全性。 |
-| authType | AuthType | 是 | 指示认证类型。 |
-| authTrustLevel | AuthTrustLevel | 是 | 指示认证结果的信任级别。 |
-| callback | IUserAuthCallback | 是 | 回调对象，返回认证结果。 |
+| challenge | [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 是 | 指示挑战值，挑战值为一个随机数，用于提升安全性。 |
+| authType | [AuthType](arkts-basicservices-authtype-e-sys.md) | 是 | 指示认证类型。 |
+| authTrustLevel | [AuthTrustLevel](arkts-basicservices-authtrustlevel-e-sys.md) | 是 | 指示认证结果的信任级别。 |
+| callback | [IUserAuthCallback](arkts-basicservices-iuserauthcallback-i-sys.md) | 是 | 回调对象，返回认证结果。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 返回取消的上下文ID。 |
+| [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 返回取消的上下文ID。 |
 
 **错误码：**
 
@@ -288,6 +336,8 @@ cancelAuth(contextID: Uint8Array): void
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-UserAuth-cancelAuth(contextID: Uint8Array): void--><!--Device-UserAuth-cancelAuth(contextID: Uint8Array): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -296,7 +346,7 @@ cancelAuth(contextID: Uint8Array): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| contextID | Uint8Array | 是 | 指示身份验证上下文ID，此ID动态生成没有具体值。 |
+| contextID | [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 是 | 指示身份验证上下文ID，此ID动态生成没有具体值。 |
 
 **错误码：**
 
@@ -341,6 +391,8 @@ constructor()
 
 **起始版本：** 8
 
+<!--Device-UserAuth-constructor()--><!--Device-UserAuth-constructor()-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -370,6 +422,8 @@ getAvailableStatus(authType: AuthType, authTrustLevel: AuthTrustLevel): number
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-UserAuth-getAvailableStatus(authType: AuthType, authTrustLevel: AuthTrustLevel): int--><!--Device-UserAuth-getAvailableStatus(authType: AuthType, authTrustLevel: AuthTrustLevel): int-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -378,8 +432,8 @@ getAvailableStatus(authType: AuthType, authTrustLevel: AuthTrustLevel): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| authType | AuthType | 是 | 认证类型。 |
-| authTrustLevel | AuthTrustLevel | 是 | 认证的可信等级。 |
+| authType | [AuthType](arkts-basicservices-authtype-e-sys.md) | 是 | 认证类型。 |
+| authTrustLevel | [AuthTrustLevel](arkts-basicservices-authtrustlevel-e-sys.md) | 是 | 认证的可信等级。 |
 
 **返回值：**
 
@@ -428,6 +482,8 @@ getProperty(request: GetPropertyRequest, callback: AsyncCallback<ExecutorPropert
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-UserAuth-getProperty(request: GetPropertyRequest, callback: AsyncCallback<ExecutorProperty>): void--><!--Device-UserAuth-getProperty(request: GetPropertyRequest, callback: AsyncCallback<ExecutorProperty>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -436,8 +492,8 @@ getProperty(request: GetPropertyRequest, callback: AsyncCallback<ExecutorPropert
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | GetPropertyRequest | 是 | 请求信息，包括认证类型和属性类型列表。 |
-| callback | AsyncCallback&lt;ExecutorProperty&gt; | 是 | 回调函数。如果获取成功，err为null，data为执行器属性信息；否则为错误对象。 |
+| request | [GetPropertyRequest](arkts-basicservices-getpropertyrequest-i-sys.md) | 是 | 请求信息，包括认证类型和属性类型列表。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<ExecutorProperty> | 是 | 回调函数。如果获取成功，err为null，data为执行器属性信息；否则为错误对象。 |
 
 **错误码：**
 
@@ -492,6 +548,8 @@ getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-UserAuth-getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>--><!--Device-UserAuth-getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -500,13 +558,13 @@ getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | GetPropertyRequest | 是 | 请求信息，包括认证类型和属性类型列表。 |
+| request | [GetPropertyRequest](arkts-basicservices-getpropertyrequest-i-sys.md) | 是 | 请求信息，包括认证类型和属性类型列表。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ExecutorProperty&gt; | Promise对象，返回执行器属性信息。 |
+| Promise<ExecutorProperty> | Promise对象，返回执行器属性信息。 |
 
 **错误码：**
 
@@ -559,6 +617,8 @@ getPropertyByCredentialId(credentialId: Uint8Array, keys: Array<GetPropertyType>
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-UserAuth-getPropertyByCredentialId(credentialId: Uint8Array, keys: Array<GetPropertyType>): Promise<ExecutorProperty>--><!--Device-UserAuth-getPropertyByCredentialId(credentialId: Uint8Array, keys: Array<GetPropertyType>): Promise<ExecutorProperty>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -567,14 +627,14 @@ getPropertyByCredentialId(credentialId: Uint8Array, keys: Array<GetPropertyType>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| credentialId | Uint8Array | 是 | 指示凭据索引。 |
-| keys | Array&lt;GetPropertyType&gt; | 是 | 指示要查询的属性类型数组。 |
+| credentialId | [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 是 | 指示凭据索引。 |
+| keys | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<GetPropertyType> | 是 | 指示要查询的属性类型数组。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ExecutorProperty&gt; | Promise对象，返回执行器的属性信息。 |
+| Promise<ExecutorProperty> | Promise对象，返回执行器的属性信息。 |
 
 **错误码：**
 
@@ -637,6 +697,8 @@ getVersion(): number
 
 **起始版本：** 8
 
+<!--Device-UserAuth-getVersion(): int--><!--Device-UserAuth-getVersion(): int-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -674,6 +736,8 @@ prepareRemoteAuth(remoteNetworkId: string): Promise<void>
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-UserAuth-prepareRemoteAuth(remoteNetworkId: string): Promise<void>--><!--Device-UserAuth-prepareRemoteAuth(remoteNetworkId: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -688,7 +752,7 @@ prepareRemoteAuth(remoteNetworkId: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| Promise<void> | Promise对象，无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -740,6 +804,8 @@ setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-UserAuth-setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void--><!--Device-UserAuth-setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -748,8 +814,8 @@ setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | SetPropertyRequest | 是 | 请求信息，包括认证类型和要设置的密钥值。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
+| request | [SetPropertyRequest](arkts-basicservices-setpropertyrequest-i-sys.md) | 是 | 请求信息，包括认证类型和要设置的密钥值。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
 
 **错误码：**
 
@@ -799,6 +865,8 @@ setProperty(request: SetPropertyRequest): Promise<void>
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-UserAuth-setProperty(request: SetPropertyRequest): Promise<void>--><!--Device-UserAuth-setProperty(request: SetPropertyRequest): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -807,13 +875,13 @@ setProperty(request: SetPropertyRequest): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | SetPropertyRequest | 是 | 请求信息，包括身份验证类型和要设置的密钥值。 |
+| request | [SetPropertyRequest](arkts-basicservices-setpropertyrequest-i-sys.md) | 是 | 请求信息，包括身份验证类型和要设置的密钥值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| Promise<void> | Promise对象，无返回结果的Promise对象。 |
 
 **错误码：**
 

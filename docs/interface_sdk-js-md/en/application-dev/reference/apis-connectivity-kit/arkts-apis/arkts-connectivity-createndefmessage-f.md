@@ -18,6 +18,8 @@ Creates an NDEF message with raw bytes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ndef-function createNdefMessage(data: int[]): NdefMessage--><!--Device-ndef-function createNdefMessage(data: int[]): NdefMessage-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -30,7 +32,7 @@ Creates an NDEF message with raw bytes.
 
 | Type | Description |
 | --- | --- |
-| NdefMessage | The instance of NdefMessage. |
+| [NdefMessage](arkts-connectivity-ndefmessage-i.md) | The instance of NdefMessage. |
 
 **Error codes:**
 
@@ -51,19 +53,21 @@ Creates an NDEF message with record list.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ndef-function createNdefMessage(ndefRecords: NdefRecord[]): NdefMessage--><!--Device-ndef-function createNdefMessage(ndefRecords: NdefRecord[]): NdefMessage-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ndefRecords | NdefRecord[] | Yes | The NDEF records to parse NDEF message. |
+| ndefRecords | [NdefRecord](arkts-connectivity-ndefrecord-i.md)[] | Yes | The NDEF records to parse NDEF message. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| NdefMessage | The instance of NdefMessage. |
+| [NdefMessage](arkts-connectivity-ndefmessage-i.md) | The instance of NdefMessage. |
 
 **Error codes:**
 

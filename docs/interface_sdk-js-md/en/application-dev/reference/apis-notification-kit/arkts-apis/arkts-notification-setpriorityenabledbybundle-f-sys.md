@@ -18,6 +18,8 @@ Sets the enabling status of the priority notification for an application.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function setPriorityEnabledByBundle(bundle: BundleOption, enableStatus: PriorityEnableStatus): Promise<void>--><!--Device-notificationManager-function setPriorityEnabledByBundle(bundle: BundleOption, enableStatus: PriorityEnableStatus): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -26,14 +28,14 @@ Sets the enabling status of the priority notification for an application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
-| enableStatus | PriorityEnableStatus | Yes | Whether the priority notification for an application is enabled.<br>- **DISABLE**: The priority notification is disabled.<br> - **ENABLE_BY_INTELLIGENT**: The prioritynotification can be enabled through intelligent recognition, user keyword matching, or application rulematching.<br> - **ENABLE**: The priority notification is enabled for all applications. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
+| enableStatus | [PriorityEnableStatus](arkts-notification-priorityenablestatus-e-sys.md) | Yes | Whether the priority notification for an application is enabled.<br>  - **DISABLE**: The priority notification is disabled.<br> - **ENABLE_BY_INTELLIGENT**: The priority notification can be enabled through intelligent recognition, user keyword matching, or application rule matching.<br> - **ENABLE**: The priority notification is enabled for all applications. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

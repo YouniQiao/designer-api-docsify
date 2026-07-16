@@ -10,6 +10,8 @@ Specifies the worker thread running environment, which is isolated from the host
 
 **Substitutes:** ThreadWorkerGlobalScope
 
+<!--Device-unnamed-export interface DedicatedWorkerGlobalScope extends WorkerGlobalScope--><!--Device-unnamed-export interface DedicatedWorkerGlobalScope extends WorkerGlobalScope-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -31,6 +33,8 @@ Close the worker thread to stop the worker from receiving messages
 **Deprecated since:** 9
 
 **Substitutes:** close
+
+<!--Device-DedicatedWorkerGlobalScope-close(): void--><!--Device-DedicatedWorkerGlobalScope-close(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -70,13 +74,15 @@ Send a message to be host thread from the worker
 
 **Substitutes:** postMessage
 
+<!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: Transferable[]): void--><!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: Transferable[]): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| messageObject | Object | Yes | messageObject Data to be sent to the worker |
+| messageObject | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | messageObject Data to be sent to the worker |
 | transfer | Transferable[] | Yes | transfer array cannot contain null. |
 
 ## postMessage
@@ -93,14 +99,16 @@ Send a message to be host thread from the worker
 
 **Substitutes:** postMessage
 
+<!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, options?: PostMessageOptions): void--><!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, options?: PostMessageOptions): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| messageObject | Object | Yes | messageObject Data to be sent to the worker |
-| options | PostMessageOptions | No | Option can be set for postmessage. |
+| messageObject | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | messageObject Data to be sent to the worker |
+| options | [PostMessageOptions](arkts-arkts-postmessageoptions-i.md) | No | Option can be set for postmessage. |
 
 **Example**
 
@@ -141,14 +149,16 @@ Send a message to host thread from the worker
 
 **Substitutes:** postMessage
 
+<!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: ArrayBuffer[]): void--><!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: ArrayBuffer[]): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| messageObject | Object | Yes | messageObject Data to be sent to the worker |
-| transfer | ArrayBuffer[] | Yes | transfer array cannot contain null. |
+| messageObject | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | messageObject Data to be sent to the worker |
+| transfer | [ArrayBuffer](arkts-arkts-arraybuffer-c.md)[] | Yes | transfer array cannot contain null. |
 
 **Example**
 
@@ -185,10 +195,7 @@ workerPort.onmessage = (): void => {
 onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
 ```
 
-The onmessage attribute of parentPort specifies the event handler
-to be called then the worker thread receives a message sent by
-the host thread through worker postMessage.
-The event handler is executed in the worker thread.
+The onmessage attribute of parentPort specifies the event handler to be called then the worker thread receives a message sent by the host thread through worker postMessage.The event handler is executed in the worker thread.
 
 **Type:** (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
 
@@ -198,6 +205,8 @@ The event handler is executed in the worker thread.
 
 **Substitutes:** onmessage
 
+<!--Device-DedicatedWorkerGlobalScope-onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void--><!--Device-DedicatedWorkerGlobalScope-onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## onmessageerror
@@ -206,9 +215,7 @@ The event handler is executed in the worker thread.
 onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
 ```
 
-The onmessage attribute of parentPort specifies the event handler
-to be called then the worker receives a message that cannot be deserialized.
-The event handler is executed in the worker thread.
+The onmessage attribute of parentPort specifies the event handler to be called then the worker receives a message that cannot be deserialized.The event handler is executed in the worker thread.
 
 **Type:** (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
 
@@ -217,6 +224,8 @@ The event handler is executed in the worker thread.
 **Deprecated since:** 9
 
 **Substitutes:** onmessageerror
+
+<!--Device-DedicatedWorkerGlobalScope-onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void--><!--Device-DedicatedWorkerGlobalScope-onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

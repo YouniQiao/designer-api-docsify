@@ -2,10 +2,11 @@
 
 Provides APIs for using the **SymKeyGenerator**.
 
-Before using the APIs of this class, use [createSymKeyGenerator](arkts-cryptoarchitecture-createsymkeygenerator-f.md#createsymkeygenerator-1) to
-create a **SymKeyGenerator** instance.
+Before using the APIs of this class, use [createSymKeyGenerator](arkts-cryptoarchitecture-createsymkeygenerator-f.md#createsymkeygenerator-1) to create a **SymKeyGenerator** instance.
 
 **Since:** 9
+
+<!--Device-cryptoFramework-interface SymKeyGenerator--><!--Device-cryptoFramework-interface SymKeyGenerator-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.SymKey
@@ -25,21 +26,21 @@ convertKey(key: DataBlob, callback: AsyncCallback<SymKey>): void
 
 Converts specified data into a symmetric key. This API uses an asynchronous callback to return the result.
 
-This API can be used only after a **symKeyGenerator** instance is created by using
-[createSymKeyGenerator](arkts-cryptoarchitecture-createsymkeygenerator-f.md#createsymkeygenerator-1).
+This API can be used only after a **symKeyGenerator** instance is created by using [createSymKeyGenerator](arkts-cryptoarchitecture-createsymkeygenerator-f.md#createsymkeygenerator-1).
 
-> **NOTE**
->
-> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified
-> when the symmetric key generator is created, the binary key data passed in must match the hash length (for
+> **NOTE**  
+>  
+> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified  
+> when the symmetric key generator is created, the binary key data passed in must match the hash length (for  
 > example, a 256-bit key for SHA256).
 
-If no hash algorithm is specified when the symmetric key generator is created (for example, only **HMAC** is
-specified), any binary key data with a length of 1 to 4,096 bytes is supported.
+If no hash algorithm is specified when the symmetric key generator is created (for example, only **HMAC** is specified), any binary key data with a length of 1 to 4,096 bytes is supported.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SymKeyGenerator-convertKey(key: DataBlob, callback: AsyncCallback<SymKey>): void--><!--Device-SymKeyGenerator-convertKey(key: DataBlob, callback: AsyncCallback<SymKey>): void-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.SymKey
@@ -49,8 +50,8 @@ specified), any binary key data with a length of 1 to 4,096 bytes is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | DataBlob | Yes | Data to convert. |
-| callback | AsyncCallback&lt;SymKey&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the symmetric key obtained. Otherwise, **err** is an error object. |
+| key | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | Data to convert. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<SymKey> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the symmetric key obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -92,12 +93,13 @@ convertKey(key: DataBlob): Promise<SymKey>
 
 Converts specified data into a symmetric key. This API uses a promise to return the result.
 
-Before using this API, create a symmetric key generator by using
-[createSymKeyGenerator](arkts-cryptoarchitecture-createsymkeygenerator-f.md#createsymkeygenerator-1).
+Before using this API, create a symmetric key generator by using [createSymKeyGenerator](arkts-cryptoarchitecture-createsymkeygenerator-f.md#createsymkeygenerator-1).
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SymKeyGenerator-convertKey(key: DataBlob): Promise<SymKey>--><!--Device-SymKeyGenerator-convertKey(key: DataBlob): Promise<SymKey>-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.SymKey
@@ -107,13 +109,13 @@ Before using this API, create a symmetric key generator by using
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | DataBlob | Yes | Data to convert. |
+| key | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | Data to convert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SymKey&gt; | Promise used to return the symmetric key generated. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SymKey> | Promise used to return the symmetric key generated. |
 
 **Error codes:**
 
@@ -159,25 +161,23 @@ convertKeySync(key: DataBlob): SymKey
 
 Converts specified data into a symmetric key.
 
-This API can be used only after a **symKeyGenerator** instance is created by using
-[createSymKeyGenerator](arkts-cryptoarchitecture-createsymkeygenerator-f.md#createsymkeygenerator-1).
+This API can be used only after a **symKeyGenerator** instance is created by using [createSymKeyGenerator](arkts-cryptoarchitecture-createsymkeygenerator-f.md#createsymkeygenerator-1).
 
-> **NOTE**
->
-> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified
-> when the symmetric key generator is created, the binary key data passed in must match the hash length (for
-> example, a 256-bit key for SHA256). If no hash algorithm is specified when the symmetric key generator is
-> created (for example, only **HMAC** is specified), any binary key data with a length of 1 to 4,096 bytes is
+> **NOTE**  
+>  
+> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified  
+> when the symmetric key generator is created, the binary key data passed in must match the hash length (for  
+> example, a 256-bit key for SHA256). If no hash algorithm is specified when the symmetric key generator is  
+> created (for example, only **HMAC** is specified), any binary key data with a length of 1 to 4,096 bytes is  
 > supported.
 
-<br><br>**NOTE**
-<br>It is recommended to prioritize the use of asynchronous API, {@link convertKey}. Synchronous API may
-take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,
-it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link convertKey}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SymKeyGenerator-convertKeySync(key: DataBlob): SymKey--><!--Device-SymKeyGenerator-convertKeySync(key: DataBlob): SymKey-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Key.SymKey
 
@@ -185,13 +185,13 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | DataBlob | Yes | Data to convert. |
+| key | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | Data to convert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SymKey | Symmetric key obtained. |
+| [SymKey](arkts-cryptoarchitecture-symkey-i.md) | Symmetric key obtained. |
 
 **Error codes:**
 
@@ -227,25 +227,25 @@ function testConvertKeySync() {
 generateSymKey(callback: AsyncCallback<SymKey>): void
 ```
 
-Generates a random key using this symmetric key generator. This API uses an asynchronous callback to return the
-result.
+Generates a random key using this symmetric key generator. This API uses an asynchronous callback to return the result.
 
-This API can be used only after a **symKeyGenerator** instance is created by using
-[createSymKeyGenerator](arkts-cryptoarchitecture-createsymkeygenerator-f.md#createsymkeygenerator-1).
+This API can be used only after a **symKeyGenerator** instance is created by using [createSymKeyGenerator](arkts-cryptoarchitecture-createsymkeygenerator-f.md#createsymkeygenerator-1).
 
 RAND_priv_bytes() of OpenSSL can be used to generate random keys.
 
-> **NOTE**
->
-> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified
-> when the symmetric key generator is created, a binary key matching the hash length (for example, a 256-bit key)
-> will be randomly generated. If no hash algorithm is specified, for example, only **HMAC** is specified, random
-> symmetric key generation is not supported. You can generate symmetric key data using
+> **NOTE**  
+>  
+> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified  
+> when the symmetric key generator is created, a binary key matching the hash length (for example, a 256-bit key)  
+> will be randomly generated. If no hash algorithm is specified, for example, only **HMAC** is specified, random  
+> symmetric key generation is not supported. You can generate symmetric key data using  
 > [convertKey](arkts-cryptoarchitecture-symkeygenerator-i.md#convertkey-1).
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SymKeyGenerator-generateSymKey(callback: AsyncCallback<SymKey>): void--><!--Device-SymKeyGenerator-generateSymKey(callback: AsyncCallback<SymKey>): void-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.SymKey
@@ -255,7 +255,7 @@ RAND_priv_bytes() of OpenSSL can be used to generate random keys.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;SymKey&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined**, and **data** is the symmetric key obtained. Otherwise, **err** is anerror object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<SymKey> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the symmetric key obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -284,14 +284,15 @@ generateSymKey(): Promise<SymKey>
 
 Generates a random key using this symmetric key generator. This API uses a promise to return the result.
 
-This API can be used only after a **symKeyGenerator** instance is created by using
-[createSymKeyGenerator](arkts-cryptoarchitecture-createsymkeygenerator-f.md#createsymkeygenerator-1).
+This API can be used only after a **symKeyGenerator** instance is created by using [createSymKeyGenerator](arkts-cryptoarchitecture-createsymkeygenerator-f.md#createsymkeygenerator-1).
 
 RAND_priv_bytes() of OpenSSL can be used to generate random keys.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SymKeyGenerator-generateSymKey(): Promise<SymKey>--><!--Device-SymKeyGenerator-generateSymKey(): Promise<SymKey>-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.SymKey
@@ -301,7 +302,7 @@ RAND_priv_bytes() of OpenSSL can be used to generate random keys.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SymKey&gt; | Promise used to return the symmetric key generated. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SymKey> | Promise used to return the symmetric key generated. |
 
 **Error codes:**
 
@@ -334,29 +335,25 @@ generateSymKeySync(): SymKey
 
 Generates a random key using this symmetric key generator. This API returns the result synchronously.
 
-This API can be used only after a **symKeyGenerator** instance is created by using
-[createSymKeyGenerator](arkts-cryptoarchitecture-createsymkeygenerator-f.md#createsymkeygenerator-1).
+This API can be used only after a **symKeyGenerator** instance is created by using [createSymKeyGenerator](arkts-cryptoarchitecture-createsymkeygenerator-f.md#createsymkeygenerator-1).
 
 RAND_priv_bytes() of OpenSSL can be used to generate random keys.
 
-> **NOTE**
->
-> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified
-> when the symmetric key generator is created, a binary key matching the hash length (for example, a 256-bit key)
+> **NOTE**  
+>  
+> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified  
+> when the symmetric key generator is created, a binary key matching the hash length (for example, a 256-bit key)  
 > will be randomly generated.
 
-If no hash algorithm is specified, for example, only **HMAC** is specified, random symmetric key generation is
-not supported. You can generate symmetric key data using
-[convertKeySync](arkts-cryptoarchitecture-symkeygenerator-i.md#convertkeysync-1).
+If no hash algorithm is specified, for example, only **HMAC** is specified, random symmetric key generation is not supported. You can generate symmetric key data using [convertKeySync](arkts-cryptoarchitecture-symkeygenerator-i.md#convertkeysync-1).
 
-<br><br>**NOTE**
-<br>It is recommended to prioritize the use of asynchronous API, {@link generateSymKey}. Synchronous API may
-take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,
-it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link generateSymKey}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SymKeyGenerator-generateSymKeySync(): SymKey--><!--Device-SymKeyGenerator-generateSymKeySync(): SymKey-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Key.SymKey
 
@@ -364,7 +361,7 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 
 | Type | Description |
 | --- | --- |
-| SymKey | Symmetric key generated. |
+| [SymKey](arkts-cryptoarchitecture-symkey-i.md) | Symmetric key generated. |
 
 **Error codes:**
 
@@ -402,6 +399,8 @@ Indicates the algorithm name of the SymKeyGenerator object.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SymKeyGenerator-readonly algName: string--><!--Device-SymKeyGenerator-readonly algName: string-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.SymKey

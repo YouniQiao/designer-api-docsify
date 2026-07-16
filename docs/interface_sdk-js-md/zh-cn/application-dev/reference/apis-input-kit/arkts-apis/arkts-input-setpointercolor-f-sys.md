@@ -1,5 +1,11 @@
 # setPointerColor（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+```
+
 ## setPointerColor
 
 ```TypeScript
@@ -8,11 +14,13 @@ function setPointerColor(color: number, callback: AsyncCallback<void>): void
 
 设置鼠标光标颜色，使用callback异步回调。
 
-> **说明**：
->
+> **说明**：  
+>  
 > 设置和调试时，需连接外部设备，如鼠标、蓝牙等。
 
 **起始版本：** 10
+
+<!--Device-pointer-function setPointerColor(color: int, callback: AsyncCallback<void>): void--><!--Device-pointer-function setPointerColor(color: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -23,7 +31,7 @@ function setPointerColor(color: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | color | number | 是 | 鼠标光标颜色，默认为黑色：0x000000。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当设置成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当设置成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -73,11 +81,13 @@ function setPointerColor(color: number): Promise<void>
 
 设置鼠标光标颜色，使用Promise异步回调。
 
-> **说明**：
->
+> **说明**：  
+>  
 > 设置和调试时，需连接外部设备，如鼠标、蓝牙等。
 
 **起始版本：** 10
+
+<!--Device-pointer-function setPointerColor(color: int): Promise<void>--><!--Device-pointer-function setPointerColor(color: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -93,7 +103,7 @@ function setPointerColor(color: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

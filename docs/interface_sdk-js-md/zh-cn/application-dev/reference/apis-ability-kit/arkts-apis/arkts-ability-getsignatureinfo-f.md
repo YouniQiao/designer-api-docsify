@@ -1,5 +1,11 @@
 # getSignatureInfo
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getSignatureInfo
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getSignatureInfo(uid: number): SignatureInfo
 **起始版本：** 18
 
 **需要权限：** ohos.permission.GET_SIGNATURE_INFO
+
+<!--Device-bundleManager-function getSignatureInfo(uid: int): SignatureInfo--><!--Device-bundleManager-function getSignatureInfo(uid: int): SignatureInfo-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -24,7 +32,7 @@ function getSignatureInfo(uid: number): SignatureInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| SignatureInfo | 返回SignatureInfo对象。 |
+| [SignatureInfo](../../apis-mdm-kit/arkts-apis/arkts-mdm-signatureinfo-i.md) | 返回SignatureInfo对象。 |
 
 **错误码：**
 

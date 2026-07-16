@@ -1,5 +1,11 @@
 # getRecoverableApplicationInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getRecoverableApplicationInfo
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getRecoverableApplicationInfo(callback: AsyncCallback<Array<Recoverable
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundleManager-function getRecoverableApplicationInfo(callback: AsyncCallback<Array<RecoverableApplicationInfo>>): void--><!--Device-bundleManager-function getRecoverableApplicationInfo(callback: AsyncCallback<Array<RecoverableApplicationInfo>>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function getRecoverableApplicationInfo(callback: AsyncCallback<Array<Recoverable
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;RecoverableApplicationInfo&gt;&gt; | 是 | * [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的所有可恢复的预置应用信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<RecoverableApplicationInfo>> | 是 | * [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的所有可恢复的预置应用信息。 |
 
 **错误码：**
 
@@ -64,6 +72,8 @@ function getRecoverableApplicationInfo(): Promise<Array<RecoverableApplicationIn
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundleManager-function getRecoverableApplicationInfo(): Promise<Array<RecoverableApplicationInfo>>--><!--Device-bundleManager-function getRecoverableApplicationInfo(): Promise<Array<RecoverableApplicationInfo>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -72,7 +82,7 @@ function getRecoverableApplicationInfo(): Promise<Array<RecoverableApplicationIn
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;RecoverableApplicationInfo&gt;&gt; | Promise对象，返回所有可恢复的预置应用信息。 |
+| Promise<Array<RecoverableApplicationInfo>> | Promise对象，返回所有可恢复的预置应用信息。 |
 
 **错误码：**
 

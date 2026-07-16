@@ -4,6 +4,8 @@ Describes the coordinate options.
 
 **Since:** 8
 
+<!--Device-sensor-interface CoordinatesOptions--><!--Device-sensor-interface CoordinatesOptions-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
@@ -24,6 +26,8 @@ X coordinate direction.
 
 **Since:** 8
 
+<!--Device-CoordinatesOptions-x: int--><!--Device-CoordinatesOptions-x: int-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## y
@@ -37,6 +41,8 @@ Y coordinate direction.
 **Type:** number
 
 **Since:** 8
+
+<!--Device-CoordinatesOptions-y: int--><!--Device-CoordinatesOptions-y: int-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 

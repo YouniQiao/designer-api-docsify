@@ -18,6 +18,8 @@ Update the policy file.
 
 **Required permissions:** ohos.permission.MANAGE_SECURITY_GUARD_CONFIG
 
+<!--Device-securityGuard-function updatePolicyFile(policyFile: PolicyFile): Promise<void>--><!--Device-securityGuard-function updatePolicyFile(policyFile: PolicyFile): Promise<void>-End-->
+
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Update the policy file.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policyFile | PolicyFile | Yes | Indicates the policy file information. |
+| policyFile | [PolicyFile](arkts-securityguard-policyfile-i-sys.md) | Yes | Indicates the policy file information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 

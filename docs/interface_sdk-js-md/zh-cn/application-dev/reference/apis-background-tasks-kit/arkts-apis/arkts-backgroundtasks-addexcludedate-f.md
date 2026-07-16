@@ -1,5 +1,11 @@
 # addExcludeDate
 
+## 导入模块
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+```
+
 ## addExcludeDate
 
 ```TypeScript
@@ -9,6 +15,8 @@ function addExcludeDate(reminderId: number, date: Date): Promise<void>
 为指定id的周期性的日历提醒，添加不提醒日期（如每天提醒的日历，设置周二不提醒）。使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-reminderAgentManager-function addExcludeDate(reminderId: int, date: Date): Promise<void>--><!--Device-reminderAgentManager-function addExcludeDate(reminderId: int, date: Date): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -23,7 +31,7 @@ function addExcludeDate(reminderId: number, date: Date): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

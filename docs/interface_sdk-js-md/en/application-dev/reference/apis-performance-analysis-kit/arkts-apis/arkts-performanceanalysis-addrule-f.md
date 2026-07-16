@@ -20,6 +20,8 @@ Adds one or more rules. HiChecker detects unexpected operations or gives feedbac
 
 **Substitutes:** [addCheckRule](arkts-performanceanalysis-addcheckrule-f.md#addcheckrule-1)
 
+<!--Device-hichecker-function addRule(rule: bigint): void--><!--Device-hichecker-function addRule(rule: bigint): void-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 **Parameters:**

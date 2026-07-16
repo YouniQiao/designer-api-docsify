@@ -12,8 +12,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAbilityInfo(uri: string, abilityFlags: number): Promise<Array<AbilityInfo>>
 ```
 
-Obtains the ability information based on the given resource identifier and ability flag. This API uses a promise to
-return the result.
+Obtains the ability information based on the given resource identifier and ability flag. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -21,20 +20,22 @@ return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-bundleManager-function getAbilityInfo(uri: string, abilityFlags: int): Promise<Array<AbilityInfo>>--><!--Device-bundleManager-function getAbilityInfo(uri: string, abilityFlags: int): Promise<Array<AbilityInfo>>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the resource. The value is the same as that of the[uris field under skills in the module.json5 file](../../../../quick-start/module-configuration-file.md#skills). |
+| uri | string | Yes | URI of the resource. The value is the same as that of the [uris field under skills in the module.json5 file](../../../../quick-start/module-configuration-file.md#skills). |
 | abilityFlags | number | Yes | [Ability flag](arkts-ability-abilityflag-e-sys.md),indicating the ability information to be obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AbilityInfo&gt;&gt; | Promise used to return an array of ability information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AbilityInfo>> | Promise used to return an array of ability information. |
 
 **Error codes:**
 

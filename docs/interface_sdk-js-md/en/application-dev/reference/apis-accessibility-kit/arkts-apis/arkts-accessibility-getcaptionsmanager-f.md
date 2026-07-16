@@ -18,13 +18,15 @@ Obtains a **CaptionsManager** instance.
 
 **Deprecated since:** 12
 
+<!--Device-accessibility-function getCaptionsManager(): CaptionsManager--><!--Device-accessibility-function getCaptionsManager(): CaptionsManager-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CaptionsManager | Captions configuration. |
+| [CaptionsManager](arkts-accessibility-captionsmanager-i.md) | Captions configuration. |
 
 **Example**
 

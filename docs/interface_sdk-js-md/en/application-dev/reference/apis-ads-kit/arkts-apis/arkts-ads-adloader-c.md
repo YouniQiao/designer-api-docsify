@@ -4,6 +4,8 @@ Provides the APIs for loading ads.
 
 **Since:** 11
 
+<!--Device-advertising-export class AdLoader--><!--Device-advertising-export class AdLoader-End-->
+
 **System capability:** SystemCapability.Advertising.Ads
 
 ## Modules to Import
@@ -23,6 +25,8 @@ Constructor.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AdLoader-constructor(context: common.Context)--><!--Device-AdLoader-constructor(context: common.Context)-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -59,21 +63,23 @@ Loads an ad.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AdLoader-loadAd(adParam: AdRequestParams, adOptions: AdOptions, listener: AdLoadListener): void--><!--Device-AdLoader-loadAd(adParam: AdRequestParams, adOptions: AdOptions, listener: AdLoadListener): void-End-->
+
 **System capability:** SystemCapability.Advertising.Ads
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adParam | AdRequestParams | Yes | Ad request parameters. |
-| adOptions | AdOptions | Yes | Ad configuration parameters. |
-| listener | AdLoadListener | Yes | Callback listener for ad requests. |
+| adParam | [AdRequestParams](arkts-ads-adrequestparams-i.md) | Yes | Ad request parameters. |
+| adOptions | [AdOptions](arkts-ads-adoptions-i.md) | Yes | Ad configuration parameters. |
+| listener | [AdLoadListener](arkts-ads-adloadlistener-i.md) | Yes | Callback listener for ad requests. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are leftunspecified.2. Incorrect parameter types. 3.Parameter verification failed |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 | [21800003](../errorcode-ads.md#21800003-ad-loading-failure) | Failed to load the ad request. |
 | [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported.<br>**Applicable version:** 12 and later |
@@ -122,21 +128,23 @@ Loads multiple ads.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AdLoader-loadAdWithMultiSlots(adParams: AdRequestParams[], adOptions: AdOptions, listener: MultiSlotsAdLoadListener): void--><!--Device-AdLoader-loadAdWithMultiSlots(adParams: AdRequestParams[], adOptions: AdOptions, listener: MultiSlotsAdLoadListener): void-End-->
+
 **System capability:** SystemCapability.Advertising.Ads
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adParams | AdRequestParams[] | Yes | Ad request parameters. |
-| adOptions | AdOptions | Yes | Ad configuration parameters. |
-| listener | MultiSlotsAdLoadListener | Yes | Callback listener for ad requests. |
+| adParams | [AdRequestParams](arkts-ads-adrequestparams-i.md)[] | Yes | Ad request parameters. |
+| adOptions | [AdOptions](arkts-ads-adoptions-i.md) | Yes | Ad configuration parameters. |
+| listener | [MultiSlotsAdLoadListener](arkts-ads-multislotsadloadlistener-i.md) | Yes | Callback listener for ad requests. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are leftunspecified.2. Incorrect parameter types. 3.Parameter verification failed |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 | [21800003](../errorcode-ads.md#21800003-ad-loading-failure) | Failed to load the ad request. |
 | [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported.<br>**Applicable version:** 12 and later |

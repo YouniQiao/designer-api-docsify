@@ -1,17 +1,24 @@
 # preQueryAsUser（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { asset } from '@kit.AssetStoreKit';
+```
+
 ## preQueryAsUser
 
 ```TypeScript
 function preQueryAsUser(userId: number, query: AssetMap): Promise<Uint8Array>
 ```
 
-在指定用户空间中查询的预处理，用于需要用户认证的关键资产。在用户认证成功后，应当随后调用[asset.queryAsUser](arkts-assetstore-queryasuser-f-sys.md#queryasuser-1)和
-[asset.postQueryAsUser](arkts-assetstore-postqueryasuser-f-sys.md#postqueryasuser-1)接口。使用Promise异步回调。
+在指定用户空间中查询的预处理，用于需要用户认证的关键资产。在用户认证成功后，应当随后调用[asset.queryAsUser](arkts-assetstore-queryasuser-f-sys.md#queryasuser-1)和[asset.postQueryAsUser](arkts-assetstore-postqueryasuser-f-sys.md#postqueryasuser-1)接口。使用Promise异步回调。
 
 **起始版本：** 12
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-asset-function preQueryAsUser(userId: number, query: AssetMap): Promise<Uint8Array>--><!--Device-asset-function preQueryAsUser(userId: number, query: AssetMap): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -22,13 +29,13 @@ function preQueryAsUser(userId: number, query: AssetMap): Promise<Uint8Array>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID。取值范围大于等于100。 |
-| query | AssetMap | 是 | 关键资产的查询条件，如别名、访问控制属性、自定义数据等。 |
+| query | [AssetMap](arkts-assetstore-assetmap-t.md) | 是 | 关键资产的查询条件，如别名、访问控制属性、自定义数据等。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回挑战值。<br>**说明：** 挑战值用于后续用户认证。 |
+| Promise<Uint8Array> | Promise对象，返回挑战值。<br>**说明：** 挑战值用于后续用户认证。 |
 
 **错误码：**
 

@@ -1,11 +1,12 @@
 # StartupTask
 
-The module provides capabilities related to startup tasks in
-[AppStartup](../../../../application-models/app-startup.md).
+The module provides capabilities related to startup tasks in [AppStartup](../../../../application-models/app-startup.md).
 
 **Since:** 12
 
 **Decorator:** @Sendable
+
+<!--Device-unnamed-declare class StartupTask--><!--Device-unnamed-declare class StartupTask-End-->
 
 **System capability:** SystemCapability.Ability.AppStartup
 
@@ -21,12 +22,13 @@ import { StartupTask } from '@kit.AbilityKit';
 init(context: AbilityStageContext): Promise<Object | void>
 ```
 
-Called when all the dependent startup tasks are complete. You can initialize the startup task in this callback.
-This API uses a promise to return the result.
+Called when all the dependent startup tasks are complete. You can initialize the startup task in this callback.This API uses a promise to return the result.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StartupTask-init(context: AbilityStageContext): Promise<Object | void>--><!--Device-StartupTask-init(context: AbilityStageContext): Promise<Object | void>-End-->
 
 **System capability:** SystemCapability.Ability.AppStartup
 
@@ -34,13 +36,13 @@ This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | AbilityStageContext | Yes | Context environment of the[AbilityStage](arkts-ability-abilitystage-c.md). |
+| context | [AbilityStageContext](arkts-ability-abilitystagecontext-t.md) | Yes | Context environment of the [AbilityStage](arkts-ability-abilitystage-c.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Object \| void&gt; | Promise used to return the execution result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Object \| void> | Promise used to return the execution result. |
 
 **Example**
 
@@ -79,6 +81,8 @@ Called when the dependent startup task is complete.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-StartupTask-onDependencyCompleted?(dependency: string, result: Object): void--><!--Device-StartupTask-onDependencyCompleted?(dependency: string, result: Object): void-End-->
+
 **System capability:** SystemCapability.Ability.AppStartup
 
 **Parameters:**
@@ -86,7 +90,7 @@ Called when the dependent startup task is complete.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | dependency | string | Yes | Name of the dependent startup task. |
-| result | Object | Yes | Execution result of [init](arkts-ability-startuptask-c.md#init-1) of thedependent startup task. |
+| result | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Execution result of [init](StartupTask#init(context: AbilityStageContext)) of the dependent startup task. |
 
 **Example**
 

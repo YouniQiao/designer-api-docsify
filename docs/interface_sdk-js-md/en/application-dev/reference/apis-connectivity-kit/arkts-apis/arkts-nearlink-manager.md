@@ -4,6 +4,8 @@ Provides methods to manage NearLink devices.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare namespace manager--><!--Device-unnamed-declare namespace manager-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import

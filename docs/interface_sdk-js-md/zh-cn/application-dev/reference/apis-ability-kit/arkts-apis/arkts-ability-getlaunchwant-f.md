@@ -1,5 +1,11 @@
 # getLaunchWant
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getLaunchWant
 
 ```TypeScript
@@ -10,7 +16,9 @@ function getLaunchWant(): Want
 
 **起始版本：** 13
 
-**元服务API：** 从API版本13开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+
+<!--Device-bundleManager-function getLaunchWant(): Want--><!--Device-bundleManager-function getLaunchWant(): Want-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -18,7 +26,7 @@ function getLaunchWant(): Want
 
 | 类型 | 说明 |
 | --- | --- |
-| Want | 返回仅包含bundleName和abilityName的Want对象。 |
+| [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 返回仅包含bundleName和abilityName的Want对象。 |
 
 **错误码：**
 

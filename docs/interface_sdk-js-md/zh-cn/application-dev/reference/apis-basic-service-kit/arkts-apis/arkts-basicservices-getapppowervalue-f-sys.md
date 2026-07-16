@@ -1,5 +1,11 @@
 # getAppPowerValue（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { batteryStats } from '@kit.BasicServicesKit';
+```
+
 ## getAppPowerValue
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getAppPowerValue(uid: number): number
 获取应用的耗电量，单位毫安时。
 
 **起始版本：** 8
+
+<!--Device-batteryStats-function getAppPowerValue(uid: int): double--><!--Device-batteryStats-function getAppPowerValue(uid: int): double-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 

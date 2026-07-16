@@ -20,13 +20,15 @@ Ends the current call. Only carrier calls are supported, excluding MeeTime calls
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-telephonyManager-function hangupCalling(admin: Want): void--><!--Device-telephonyManager-function hangupCalling(admin: Want): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 
 **Error codes:**
 

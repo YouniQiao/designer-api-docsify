@@ -1,5 +1,11 @@
 # @ohos.arkui.components.ArkDynamicLayout
 
+## 导入模块
+
+```TypeScript
+import { DynamicLayoutAttribute, DynamicLayout } from '@kit.ArkUI';
+```
+
 ## 汇总
 
 ### 类

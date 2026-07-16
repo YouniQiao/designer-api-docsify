@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare class DatePickerDialog--><!--Device-unnamed-declare class DatePickerDialog-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## show
@@ -18,9 +20,7 @@ static show(options?: DatePickerDialogOptions)
 
 showDatePickerDialog需先获取[UIContext](../arkts-apis/arkts-arkui-uicontext.md)实例后再进行调用。
 
-- 从API version 10开始，可以通过使用[UIContext](../arkts-apis/arkts-arkui-uicontext.md)中的
-[showDatePickerDialog](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#showdatepickerdialog)
-来明确UI的执行上下文。
+- 从API version 10开始，可以通过使用[UIContext](../arkts-apis/arkts-arkui-uicontext.md)中的[showDatePickerDialog](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#showdatepickerdialog)来明确UI的执行上下文。
 
 **起始版本：** 8
 
@@ -28,7 +28,9 @@ showDatePickerDialog需先获取[UIContext](../arkts-apis/arkts-arkui-uicontext.
 
 **替代接口：** showDatePickerDialog
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DatePickerDialog-static show(options?: DatePickerDialogOptions)--><!--Device-DatePickerDialog-static show(options?: DatePickerDialogOptions)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,5 +38,5 @@ showDatePickerDialog需先获取[UIContext](../arkts-apis/arkts-arkui-uicontext.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | DatePickerDialogOptions | 否 | 配置日期选择器弹窗的参数。参数缺省时无法弹出弹窗。 |
+| options | [DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md) | 否 | 配置日期选择器弹窗的参数。参数缺省时无法弹出弹窗。 |
 

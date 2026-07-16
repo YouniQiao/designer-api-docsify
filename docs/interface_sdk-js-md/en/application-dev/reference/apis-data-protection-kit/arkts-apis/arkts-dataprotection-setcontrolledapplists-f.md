@@ -20,20 +20,22 @@ Set the list of applications that are subject to enterprise DLP control.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-dlpPermission-function setControlledAppLists(appLists: Array<string>, userId?: number): Promise<void>--><!--Device-dlpPermission-function setControlledAppLists(appLists: Array<string>, userId?: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appLists | Array&lt;string&gt; | Yes | The appIdentifiers of applications to be put under controlled<br>The maximum length is 100.<br>The value range of Array is [0, 100], and the value range of String is [0, 4096]. |
+| appLists | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | The appIdentifiers of applications to be put under controlled<br>The maximum length is 100.<br>The value range of Array is [0, 100], and the value range of String is [0, 4096]. |
 | userId | number | No | The target userId for which the controlled app list is configured.If not specified, the current user is used by default<br>The value range is all integers. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -44,5 +46,5 @@ Set the list of applications that are subject to enterprise DLP control.
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
 | 19100023 | The specified userId is inconsistent with the current userId. |
-| 19100024 | The specified userId belongs to a personal space user andcannot be managed. |
+| 19100024 | The specified userId belongs to a personal space user and cannot be managed. |
 

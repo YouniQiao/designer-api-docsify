@@ -18,6 +18,8 @@ Obtains the priority configuration of an application.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getBundlePriorityConfig(bundle: BundleOption): Promise<string>--><!--Device-notificationManager-function getBundlePriorityConfig(bundle: BundleOption): Promise<string>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Obtains the priority configuration of an application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the result. |
 
 **Error codes:**
 

@@ -6,14 +6,22 @@
 
 该模块主要用于以下场景：
 
-- 设备解锁认证。
-- 金融支付验证。
-- 应用登录保护。
+- 设备解锁认证。  
+- 金融支付验证。  
+- 应用登录保护。  
 - 敏感操作确认。
 
 **起始版本：** 6
 
+<!--Device-unnamed-declare namespace userAuth--><!--Device-unnamed-declare namespace userAuth-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
+
+## 导入模块
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+```
 
 ## 汇总
 

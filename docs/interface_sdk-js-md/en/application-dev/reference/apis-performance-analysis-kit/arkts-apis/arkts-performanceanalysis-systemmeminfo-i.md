@@ -4,6 +4,8 @@ Describes the system memory information, including the total memory, free memory
 
 **Since:** 12
 
+<!--Device-hidebug-interface SystemMemInfo--><!--Device-hidebug-interface SystemMemInfo-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## Modules to Import
@@ -18,12 +20,13 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 availableMem: bigint
 ```
 
-Available memory of the system, in KB. The value of this parameter is obtained by reading the value of
-**MemAvailable** in the **\/proc/meminfo** node.
+Available memory of the system, in KB. The value of this parameter is obtained by reading the value of **MemAvailable** in the **\/proc/meminfo** node.
 
 **Type:** bigint
 
 **Since:** 12
+
+<!--Device-SystemMemInfo-availableMem: bigint--><!--Device-SystemMemInfo-availableMem: bigint-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -33,12 +36,13 @@ Available memory of the system, in KB. The value of this parameter is obtained b
 freeMem: bigint
 ```
 
-Free memory of the system, in KB. The value of this parameter is obtained by reading the value of **MemFree** in
-the **\/proc/meminfo** node.
+Free memory of the system, in KB. The value of this parameter is obtained by reading the value of **MemFree** in the **\/proc/meminfo** node.
 
 **Type:** bigint
 
 **Since:** 12
+
+<!--Device-SystemMemInfo-freeMem: bigint--><!--Device-SystemMemInfo-freeMem: bigint-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -48,12 +52,13 @@ the **\/proc/meminfo** node.
 totalMem: bigint
 ```
 
-Total memory of the system, in KB. The value of this parameter is obtained by reading the value of **MemTotal**
-in the **\/proc/meminfo** node.
+Total memory of the system, in KB. The value of this parameter is obtained by reading the value of **MemTotal** in the **\/proc/meminfo** node.
 
 **Type:** bigint
 
 **Since:** 12
+
+<!--Device-SystemMemInfo-totalMem: bigint--><!--Device-SystemMemInfo-totalMem: bigint-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 

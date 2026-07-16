@@ -6,6 +6,8 @@ Defines the date style options.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare class CounterV2DateStyleOptions extends CounterV2CommonOptions--><!--Device-unnamed-declare class CounterV2DateStyleOptions extends CounterV2CommonOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,6 +34,8 @@ Set the day of the counter component.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CounterV2DateStyleOptions-day?: int--><!--Device-CounterV2DateStyleOptions-day?: int-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## month
@@ -52,6 +56,8 @@ Set the month of the counter component.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CounterV2DateStyleOptions-month?: int--><!--Device-CounterV2DateStyleOptions-month?: int-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onDateChange
@@ -69,6 +75,8 @@ Trigger an event when the date of the counter has been changed.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CounterV2DateStyleOptions-onDateChange?: OnDateCounterV2ChangeCallback--><!--Device-CounterV2DateStyleOptions-onDateChange?: OnDateCounterV2ChangeCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -89,6 +97,8 @@ Set the year of the counter component, ranges from 1 to 5000.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CounterV2DateStyleOptions-year?: int--><!--Device-CounterV2DateStyleOptions-year?: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

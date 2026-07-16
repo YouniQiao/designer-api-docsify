@@ -4,6 +4,8 @@ The definition of MediaEntity.
 
 **Since:** 23
 
+<!--Device-avMusicTemplate-interface MediaEntity--><!--Device-avMusicTemplate-interface MediaEntity-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Description of the media resource.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MediaEntity-desc?: string--><!--Device-MediaEntity-desc?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## imageUrl
@@ -41,6 +45,8 @@ Cover image url of the media resource.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaEntity-imageUrl: string--><!--Device-MediaEntity-imageUrl: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -58,6 +64,8 @@ Unique ID of the media resource.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MediaEntity-mediaId: string--><!--Device-MediaEntity-mediaId: string-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## mediaType
@@ -73,6 +81,8 @@ Type of the media resource.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaEntity-mediaType: EntityType--><!--Device-MediaEntity-mediaType: EntityType-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -90,6 +100,8 @@ Parent id of the media resource.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MediaEntity-parentId: string--><!--Device-MediaEntity-parentId: string-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## parentMediaType
@@ -105,6 +117,8 @@ Parent media type of the media resource.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaEntity-parentMediaType: EntityType--><!--Device-MediaEntity-parentMediaType: EntityType-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -122,6 +136,8 @@ Play state of the media resource.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MediaEntity-playState: PlaybackState--><!--Device-MediaEntity-playState: PlaybackState-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## title
@@ -137,6 +153,8 @@ Title of the media resource.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaEntity-title: string--><!--Device-MediaEntity-title: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 

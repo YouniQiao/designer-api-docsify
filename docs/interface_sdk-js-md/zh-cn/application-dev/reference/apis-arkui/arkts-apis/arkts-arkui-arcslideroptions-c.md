@@ -4,7 +4,15 @@
 
 **起始版本：** 18
 
+<!--Device-unnamed-declare class ArcSliderOptions--><!--Device-unnamed-declare class ArcSliderOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
+
+## 导入模块
+
+```TypeScript
+import { ArcSliderLayoutOptions, ArcSliderValueOptionsConstructorOptions, ArcSliderValueOptions, ArcSliderStyleOptionsConstructorOptions, ArcSlider, ArcSliderLayoutOptionsConstructorOptions, ArcSliderOptions, ArcSliderStyleOptions, ArcSliderPosition, ArcSliderOptionsConstructorOptions } from '@kit.ArkUI';
+```
 
 ## constructor
 
@@ -16,7 +24,9 @@ ArcSliderOptions的构造函数。
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSliderOptions-constructor(options?: ArcSliderOptionsConstructorOptions)--><!--Device-ArcSliderOptions-constructor(options?: ArcSliderOptionsConstructorOptions)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -24,7 +34,7 @@ ArcSliderOptions的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | ArcSliderOptionsConstructorOptions | 否 | ArcSliderOptions的构造信息。 |
+| options | [ArcSliderOptionsConstructorOptions](arkts-arkui-arcslideroptionsconstructoroptions-i.md) | 否 | ArcSliderOptions的构造信息。 |
 
 ## digitalCrownSensitivity
 
@@ -40,7 +50,9 @@ digitalCrownSensitivity?: CrownSensitivity
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSliderOptions-digitalCrownSensitivity?: CrownSensitivity--><!--Device-ArcSliderOptions-digitalCrownSensitivity?: CrownSensitivity-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -58,7 +70,9 @@ layoutOptions?: ArcSliderLayoutOptions
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSliderOptions-layoutOptions?: ArcSliderLayoutOptions--><!--Device-ArcSliderOptions-layoutOptions?: ArcSliderLayoutOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -76,7 +90,9 @@ onChange?: ArcSliderChangeHandler
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSliderOptions-onChange?: ArcSliderChangeHandler--><!--Device-ArcSliderOptions-onChange?: ArcSliderChangeHandler-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -94,7 +110,9 @@ onEnlarge?: ArcSliderEnlargeHandler
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSliderOptions-onEnlarge?: ArcSliderEnlargeHandler--><!--Device-ArcSliderOptions-onEnlarge?: ArcSliderEnlargeHandler-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -112,7 +130,9 @@ onTouch?: ArcSliderTouchHandler
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSliderOptions-onTouch?: ArcSliderTouchHandler--><!--Device-ArcSliderOptions-onTouch?: ArcSliderTouchHandler-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -130,7 +150,9 @@ styleOptions?: ArcSliderStyleOptions
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSliderOptions-styleOptions?: ArcSliderStyleOptions--><!--Device-ArcSliderOptions-styleOptions?: ArcSliderStyleOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -148,7 +170,9 @@ valueOptions?: ArcSliderValueOptions
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSliderOptions-valueOptions?: ArcSliderValueOptions--><!--Device-ArcSliderOptions-valueOptions?: ArcSliderValueOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 

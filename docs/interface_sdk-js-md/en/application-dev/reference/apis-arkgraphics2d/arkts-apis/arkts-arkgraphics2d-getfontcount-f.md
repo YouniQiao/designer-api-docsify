@@ -14,8 +14,7 @@ function getFontCount(path: string | Resource) : number
 
 Obtains the number of font files contained in a font file based on the font file path.
 
-Returns **0** if the font file is not found, the font file path is invalid, the font file does not have the
-required permission, or the file is not in the font format.
+Returns **0** if the font file is not found, the font file path is invalid, the font file does not have the required permission, or the file is not in the font format.
 
 **Since:** 23
 
@@ -23,13 +22,15 @@ required permission, or the file is not in the font format.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-text-function getFontCount(path: string | Resource) : int--><!--Device-text-function getFontCount(path: string | Resource) : int-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string \| Resource | Yes | Path of the font file to be queried. The path must be in the format of "**file://** + Absolute path of the font file" or **$rawfile** (a file path relative to the**resources/rawfile** directory in the project, which includes the font file name). |
+| path | string \| Resource | Yes | Path of the font file to be queried. The path must be in the format of "**file://** + Absolute path of the font file" or **$rawfile** (a file path relative to the **resources/rawfile** directory in the project, which includes the font file name). |
 
 **Return value:**
 

@@ -16,6 +16,8 @@ Check whether the specific action type is supported.
 
 **Since:** 26.0.0
 
+<!--Device-mechanicManager-function isSupportAction(mechId: int, actionType: ActionType): boolean--><!--Device-mechanicManager-function isSupportAction(mechId: int, actionType: ActionType): boolean-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -25,7 +27,7 @@ Check whether the specific action type is supported.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mechId | number | Yes | ID of the mechanical device.<br>The value should be an integer. |
-| actionType | ActionType | Yes | Type of action sequence. |
+| actionType | [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-actiontype-t.md) | Yes | Type of action sequence. |
 
 **Return value:**
 

@@ -20,6 +20,8 @@ Unregister event callback for the printer info queried.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-print-function offPrinterInfoQuery(callback?: PrinterInfoQueryCallback): void--><!--Device-print-function offPrinterInfoQuery(callback?: PrinterInfoQueryCallback): void-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Unregister event callback for the printer info queried.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | PrinterInfoQueryCallback | No | The callback function for the printer info queried.<br>The callback function for the printer info queried. |
+| callback | [PrinterInfoQueryCallback](arkts-basicservices-printerinfoquerycallback-t-sys.md) | No | The callback function for the printer info queried.<br>The callback function for the printer info queried. |
 
 **Error codes:**
 

@@ -12,6 +12,8 @@ Represents a FrameNode of the **Column** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-type Column = TypedFrameNode<ColumnInterface, ColumnAttribute>--><!--Device-typeNode-type Column = TypedFrameNode<ColumnInterface, ColumnAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** TypedFrameNode<ColumnInterface, ColumnAttribute>

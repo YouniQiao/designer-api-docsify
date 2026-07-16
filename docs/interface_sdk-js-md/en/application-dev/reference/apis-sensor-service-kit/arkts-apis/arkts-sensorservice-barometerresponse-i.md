@@ -8,6 +8,8 @@ Defines a **BarometerResponse** object.
 
 **Substitutes:** BarometerResponse
 
+<!--Device-unnamed-export interface BarometerResponse--><!--Device-unnamed-export interface BarometerResponse-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -33,6 +35,8 @@ Pressure, in pascal.
 **Substitutes:** BarometerResponse.pressure
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-BarometerResponse-pressure: number--><!--Device-BarometerResponse-pressure: number-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 

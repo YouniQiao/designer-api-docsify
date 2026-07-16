@@ -1,5 +1,11 @@
 # sendImage（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+```
+
 ## sendImage
 
 ```TypeScript
@@ -11,6 +17,8 @@ Send image data.
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-abilityConnectionManager-function sendImage(sessionId: int, image: image.PixelMap, quality?: int): Promise<void>--><!--Device-abilityConnectionManager-function sendImage(sessionId: int, image: image.PixelMap, quality?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -28,7 +36,7 @@ Send image data.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise<void> | The promise returned by the function. |
 
 **错误码：**
 

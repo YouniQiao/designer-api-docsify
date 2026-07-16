@@ -4,6 +4,8 @@ Defines the result of the authorization.
 
 **Since:** 24
 
+<!--Device-osAccount-interface AcquireAuthorizationResult--><!--Device-osAccount-interface AcquireAuthorizationResult-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -30,6 +32,8 @@ Whether the authorization result is reused. The default value is **undefined**.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AcquireAuthorizationResult-isReused?: boolean--><!--Device-AcquireAuthorizationResult-isReused?: boolean-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -48,6 +52,8 @@ Permission associated with the authorization.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AcquireAuthorizationResult-privilege: string--><!--Device-AcquireAuthorizationResult-privilege: string-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -58,15 +64,15 @@ Permission associated with the authorization.
 resultCode: AuthorizationResultCode
 ```
 
-Authorization result code.
-If the authorization is successful, AuthorizationResultCode#AUTHORIZATION_SUCCESS is returned.
-Otherwise, an error code is returned. For details, see AuthorizationResultCode.
+Authorization result code.If the authorization is successful, AuthorizationResultCode#AUTHORIZATION_SUCCESS is returned.Otherwise, an error code is returned. For details, see AuthorizationResultCode.
 
 **Type:** AuthorizationResultCode
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AcquireAuthorizationResult-resultCode: AuthorizationResultCode--><!--Device-AcquireAuthorizationResult-resultCode: AuthorizationResultCode-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -86,6 +92,8 @@ Authorization token. The default value is **undefined**.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AcquireAuthorizationResult-token?: Uint8Array--><!--Device-AcquireAuthorizationResult-token?: Uint8Array-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -103,6 +111,8 @@ Validity period of the authorization, in seconds. The default value is **300**.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AcquireAuthorizationResult-validityPeriod?: int--><!--Device-AcquireAuthorizationResult-validityPeriod?: int-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 

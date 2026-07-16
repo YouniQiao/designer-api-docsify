@@ -4,6 +4,8 @@ Provides the context for the transition animation.
 
 **Since:** 9
 
+<!--Device-window-interface TransitionContext--><!--Device-window-interface TransitionContext-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -20,10 +22,11 @@ import { window } from '@kit.ArkUI';
 completeTransition(isCompleted: boolean): void
 ```
 
-Completes the transition. This API can be called only after [animateTo()](../arkts-components/arkts-arkui-common-animateto-f.md#animateto-1)
-is executed.
+Completes the transition. This API can be called only after [animateTo()](../arkts-components/arkts-arkui-common-animateto-f.md#animateto-1)is executed.
 
 **Since:** 9
+
+<!--Device-TransitionContext-completeTransition(isCompleted: boolean): void--><!--Device-TransitionContext-completeTransition(isCompleted: boolean): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -39,7 +42,7 @@ is executed.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
 
 **Example**
@@ -85,6 +88,8 @@ The target window with animation
 **Type:** Window
 
 **Since:** 9
+
+<!--Device-TransitionContext-toWindow: Window--><!--Device-TransitionContext-toWindow: Window-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

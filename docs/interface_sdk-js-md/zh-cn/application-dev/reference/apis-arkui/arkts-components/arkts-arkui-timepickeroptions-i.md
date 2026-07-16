@@ -12,10 +12,11 @@ Date对象用于处理日期和时间，使用方式如下。
 
 **方式2：** new Date(value: number | string)
 
-**方式3：** new Date(year: number, monthIndex: number, date?: number, hours?: number, minutes?: number, seconds?:
-number, ms?: number)
+**方式3：** new Date(year: number, monthIndex: number, date?: number, hours?: number, minutes?: number, seconds?:number, ms?: number)
 
 **起始版本：** 8
+
+<!--Device-unnamed-declare interface TimePickerOptions--><!--Device-unnamed-declare interface TimePickerOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,8 +32,7 @@ end?: Date
 
 **说明：**
 
-1. 仅设置的小时和分钟生效。
-2. 设置了end且为非默认值的场景下，loop不生效。
+1. 仅设置的小时和分钟生效。2. 设置了end且为非默认值的场景下，loop不生效。
 
 **类型：** Date
 
@@ -40,7 +40,9 @@ end?: Date
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TimePickerOptions-end?: Date--><!--Device-TimePickerOptions-end?: Date-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,7 +64,9 @@ format?: TimePickerFormat
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TimePickerOptions-format?: TimePickerFormat--><!--Device-TimePickerOptions-format?: TimePickerFormat-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,7 +86,9 @@ selected?: Date
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TimePickerOptions-selected?: Date--><!--Device-TimePickerOptions-selected?: Date-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,8 +104,7 @@ start?: Date
 
 **说明：**
 
-1. 仅设置的小时和分钟生效。
-2. 设置了start且为非默认值的场景下，loop不生效。
+1. 仅设置的小时和分钟生效。2. 设置了start且为非默认值的场景下，loop不生效。
 
 **类型：** Date
 
@@ -107,7 +112,9 @@ start?: Date
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TimePickerOptions-start?: Date--><!--Device-TimePickerOptions-start?: Date-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

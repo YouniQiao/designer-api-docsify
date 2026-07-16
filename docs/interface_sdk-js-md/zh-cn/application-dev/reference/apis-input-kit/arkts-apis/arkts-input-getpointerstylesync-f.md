@@ -1,5 +1,11 @@
 # getPointerStyleSync
 
+## 导入模块
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+```
+
 ## getPointerStyleSync
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getPointerStyleSync(windowId: number): PointerStyle
 查询指定窗口的鼠标样式类型，如向东箭头、向西箭头、向南箭头、向北箭头等。此接口仅支持获取本应用进程内窗口的鼠标样式类型。
 
 **起始版本：** 10
+
+<!--Device-pointer-function getPointerStyleSync(windowId: int): PointerStyle--><!--Device-pointer-function getPointerStyleSync(windowId: int): PointerStyle-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -22,7 +30,7 @@ function getPointerStyleSync(windowId: number): PointerStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| PointerStyle | 返回鼠标样式类型。 |
+| [PointerStyle](../../apis-arkui/arkts-apis/arkts-arkui-pointerstyle-t.md) | 返回鼠标样式类型。 |
 
 **错误码：**
 

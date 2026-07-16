@@ -4,6 +4,8 @@ Describes the identity information of an application clone.
 
 **Since:** 14
 
+<!--Device-unnamed-export interface AppCloneIdentity--><!--Device-unnamed-export interface AppCloneIdentity-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## appIndex
@@ -12,12 +14,13 @@ Describes the identity information of an application clone.
 readonly appIndex: number
 ```
 
-Clone index information of the app package. The value is an integer ranging from [0-5],
-where 0 indicates the main app and 1-5 indicate clone apps.
+Clone index information of the app package. The value is an integer ranging from [0-5],where 0 indicates the main app and 1-5 indicate clone apps.
 
 **Type:** number
 
 **Since:** 14
+
+<!--Device-AppCloneIdentity-readonly appIndex: int--><!--Device-AppCloneIdentity-readonly appIndex: int-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -32,6 +35,8 @@ Bundle name of the application.
 **Type:** string
 
 **Since:** 14
+
+<!--Device-AppCloneIdentity-readonly bundleName: string--><!--Device-AppCloneIdentity-readonly bundleName: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

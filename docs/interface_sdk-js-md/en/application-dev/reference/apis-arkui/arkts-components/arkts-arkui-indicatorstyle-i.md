@@ -4,6 +4,8 @@ Represents an indicator style object.
 
 **Since:** 10
 
+<!--Device-unnamed-interface IndicatorStyle--><!--Device-unnamed-interface IndicatorStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## borderRadius
@@ -30,6 +32,8 @@ Value range: [0, +∞)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-IndicatorStyle-borderRadius?: Length--><!--Device-IndicatorStyle-borderRadius?: Length-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## color
@@ -49,6 +53,8 @@ Default value: **#FF007DFF**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-IndicatorStyle-color?: ResourceColor--><!--Device-IndicatorStyle-color?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,6 +79,8 @@ Value range: [0, +∞)
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-IndicatorStyle-height?: Length--><!--Device-IndicatorStyle-height?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -99,6 +107,8 @@ Value range: [0, +∞)
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-IndicatorStyle-marginTop?: Length--><!--Device-IndicatorStyle-marginTop?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -129,6 +139,8 @@ If this parameter is set to **0**, the tab text width will be used instead.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-IndicatorStyle-width?: Length--><!--Device-IndicatorStyle-width?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

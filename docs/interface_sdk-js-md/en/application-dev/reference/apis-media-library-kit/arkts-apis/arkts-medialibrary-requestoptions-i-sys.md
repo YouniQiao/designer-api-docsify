@@ -4,6 +4,8 @@ Represents request options.
 
 **Since:** 11
 
+<!--Device-photoAccessHelper-interface RequestOptions--><!--Device-photoAccessHelper-interface RequestOptions-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -23,6 +25,8 @@ Type of the asset file requested, which can be the original file or edited file.
 **Type:** SourceMode
 
 **Since:** 11
+
+<!--Device-RequestOptions-sourceMode?: SourceMode--><!--Device-RequestOptions-sourceMode?: SourceMode-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

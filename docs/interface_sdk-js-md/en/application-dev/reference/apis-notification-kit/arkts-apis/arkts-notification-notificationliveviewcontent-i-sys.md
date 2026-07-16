@@ -6,6 +6,8 @@ Describes the common live view.
 
 **Since:** 11
 
+<!--Device-unnamed-export interface NotificationLiveViewContent extends NotificationBasicContent--><!--Device-unnamed-export interface NotificationLiveViewContent extends NotificationBasicContent-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -21,6 +23,8 @@ Redirection by tapping in the auxiliary area. This parameter is left empty by de
 **Type:** WantAgent
 
 **Since:** 20
+
+<!--Device-NotificationLiveViewContent-extensionWantAgent?: WantAgent--><!--Device-NotificationLiveViewContent-extensionWantAgent?: WantAgent-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -38,6 +42,8 @@ Extra information of the live view. This parameter is left empty by default.
 
 **Since:** 11
 
+<!--Device-NotificationLiveViewContent-extraInfo?: Record<string, Object>--><!--Device-NotificationLiveViewContent-extraInfo?: Record<string, Object>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -50,12 +56,14 @@ isLocalUpdateOnly?: boolean
 
 Whether the live view is updated only locally. The default value is **false**.
 
-- **true**: Yes.
+- **true**: Yes.  
 - **false**: No.
 
 **Type:** boolean
 
 **Since:** 12
+
+<!--Device-NotificationLiveViewContent-isLocalUpdateOnly?: boolean--><!--Device-NotificationLiveViewContent-isLocalUpdateOnly?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -73,6 +81,8 @@ Extra image information of the live view. This parameter is left empty by defaul
 
 **Since:** 11
 
+<!--Device-NotificationLiveViewContent-pictureInfo?: Record<string, Array<image.PixelMap>>--><!--Device-NotificationLiveViewContent-pictureInfo?: Record<string, Array<image.PixelMap>>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -89,6 +99,8 @@ Notification status.
 
 **Since:** 11
 
+<!--Device-NotificationLiveViewContent-status: LiveViewStatus--><!--Device-NotificationLiveViewContent-status: LiveViewStatus-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -99,13 +111,13 @@ Notification status.
 version?: number
 ```
 
-If the version number stored in the database is not **0xffffffff**, the version number needs to be verified when
-the live view is updated or ended to ensure that the current version number is greater than the version number
-stored in the database. The default value is **0xffffffff**.
+If the version number stored in the database is not **0xffffffff**, the version number needs to be verified when the live view is updated or ended to ensure that the current version number is greater than the version number stored in the database. The default value is **0xffffffff**.
 
 **Type:** number
 
 **Since:** 11
+
+<!--Device-NotificationLiveViewContent-version?: int--><!--Device-NotificationLiveViewContent-version?: int-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

@@ -10,6 +10,8 @@ Defines PopoverDialogV2 Options
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-unnamed-export declare interface PopoverDialogV2Options extends CustomPopupOptions--><!--Device-unnamed-export declare interface PopoverDialogV2Options extends CustomPopupOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

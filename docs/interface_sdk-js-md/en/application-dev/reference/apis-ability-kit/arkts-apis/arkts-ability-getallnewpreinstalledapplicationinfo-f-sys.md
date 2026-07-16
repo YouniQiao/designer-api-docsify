@@ -20,6 +20,8 @@ Obtains PreinstalledApplicationInfo of all newly added preinstalled applications
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-bundleManager-function getAllNewPreinstalledApplicationInfo(): Promise<Array<PreinstalledApplicationInfo>>--><!--Device-bundleManager-function getAllNewPreinstalledApplicationInfo(): Promise<Array<PreinstalledApplicationInfo>>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Obtains PreinstalledApplicationInfo of all newly added preinstalled applications
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PreinstalledApplicationInfo&gt;&gt; | Returns a list of PreinstalledApplicationInfo objects. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<PreinstalledApplicationInfo>> | Returns a list of PreinstalledApplicationInfo objects. |
 
 **Error codes:**
 

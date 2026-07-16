@@ -1,5 +1,11 @@
 # sendableResourceToResource
 
+## 导入模块
+
+```TypeScript
+import { sendableResourceManager } from '@kit.LocalizationKit';
+```
+
 ## sendableResourceToResource
 
 ```TypeScript
@@ -10,7 +16,9 @@ export function sendableResourceToResource(resource: SendableResource): Resource
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-sendableResourceManager-export function sendableResourceToResource(resource: SendableResource): Resource--><!--Device-sendableResourceManager-export function sendableResourceToResource(resource: SendableResource): Resource-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -18,13 +26,13 @@ export function sendableResourceToResource(resource: SendableResource): Resource
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | SendableResource | 是 | SendableResource对象。 |
+| resource | [SendableResource](arkts-localization-sendableresource-t.md) | 是 | SendableResource对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Resource | 转换后的Resource对象。 |
+| [Resource](arkts-localization-resource-i.md) | 转换后的Resource对象。 |
 
 **错误码：**
 

@@ -4,6 +4,8 @@ Enumerates the camera output formats.
 
 **Since:** 10
 
+<!--Device-camera-enum CameraFormat--><!--Device-camera-enum CameraFormat-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## CAMERA_FORMAT_RGBA_8888
@@ -17,6 +19,8 @@ RGBA_8888 image.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraFormat-CAMERA_FORMAT_RGBA_8888 = 3--><!--Device-CameraFormat-CAMERA_FORMAT_RGBA_8888 = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -32,6 +36,8 @@ YUV_420_SP image, which corresponds to the NV21 image.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraFormat-CAMERA_FORMAT_YUV_420_SP = 1003--><!--Device-CameraFormat-CAMERA_FORMAT_YUV_420_SP = 1003-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## CAMERA_FORMAT_JPEG
@@ -45,6 +51,8 @@ JPEG image.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraFormat-CAMERA_FORMAT_JPEG = 2000--><!--Device-CameraFormat-CAMERA_FORMAT_JPEG = 2000-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -60,6 +68,8 @@ YCBCR_P010 image.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraFormat-CAMERA_FORMAT_YCBCR_P010--><!--Device-CameraFormat-CAMERA_FORMAT_YCBCR_P010-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## CAMERA_FORMAT_YCRCB_P010
@@ -74,6 +84,8 @@ YCRCB_P010 image.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraFormat-CAMERA_FORMAT_YCRCB_P010 = 2002--><!--Device-CameraFormat-CAMERA_FORMAT_YCRCB_P010 = 2002-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## CAMERA_FORMAT_HEIC
@@ -87,6 +99,8 @@ HEIF image.
 **Since:** 13
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraFormat-CAMERA_FORMAT_HEIC = 2003--><!--Device-CameraFormat-CAMERA_FORMAT_HEIC = 2003-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

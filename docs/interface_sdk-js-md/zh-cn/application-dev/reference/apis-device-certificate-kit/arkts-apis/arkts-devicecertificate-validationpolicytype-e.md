@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-cert-enum ValidationPolicyType--><!--Device-cert-enum ValidationPolicyType-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 ## VALIDATION_POLICY_TYPE_X509
@@ -16,7 +18,9 @@ VALIDATION_POLICY_TYPE_X509 = 0
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ValidationPolicyType-VALIDATION_POLICY_TYPE_X509 = 0--><!--Device-ValidationPolicyType-VALIDATION_POLICY_TYPE_X509 = 0-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -30,7 +34,9 @@ VALIDATION_POLICY_TYPE_SSL = 1
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ValidationPolicyType-VALIDATION_POLICY_TYPE_SSL = 1--><!--Device-ValidationPolicyType-VALIDATION_POLICY_TYPE_SSL = 1-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

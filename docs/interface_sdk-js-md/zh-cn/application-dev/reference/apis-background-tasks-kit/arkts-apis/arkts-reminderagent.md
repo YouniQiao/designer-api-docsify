@@ -10,7 +10,15 @@
 
 **替代接口：** [reminderAgentManager:reminderAgentManager](arkts-reminderagentmanager.md)
 
+<!--Device-unnamed-declare namespace reminderAgent--><!--Device-unnamed-declare namespace reminderAgent-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
+
+## 导入模块
+
+```TypeScript
+import { reminderAgent } from '@kit.BackgroundTasksKit';
+```
 
 ## 汇总
 

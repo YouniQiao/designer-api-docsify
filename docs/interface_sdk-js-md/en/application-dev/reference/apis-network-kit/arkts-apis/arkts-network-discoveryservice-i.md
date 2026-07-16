@@ -4,6 +4,8 @@ Defines a DiscoveryService object for discovering mDNS services of the specified
 
 **Since:** 11
 
+<!--Device-mdns-export interface DiscoveryService--><!--Device-mdns-export interface DiscoveryService-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Cancels listening for discoveryStart events of mDNS services.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DiscoveryService-off(type: 'discoveryStart', callback?: Callback<DiscoveryEventInfo>): void--><!--Device-DiscoveryService-off(type: 'discoveryStart', callback?: Callback<DiscoveryEventInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
 **Parameters:**
@@ -31,7 +35,7 @@ Cancels listening for discoveryStart events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoveryStart' | Yes | Indicates Event name. |
-| callback | Callback&lt;DiscoveryEventInfo&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DiscoveryEventInfo> | No | the callback used to return the result. |
 
 **Example**
 
@@ -72,6 +76,8 @@ Cancels listening for discoveryStop events of mDNS services.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DiscoveryService-off(type: 'discoveryStop', callback?: Callback<DiscoveryEventInfo>): void--><!--Device-DiscoveryService-off(type: 'discoveryStop', callback?: Callback<DiscoveryEventInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
 **Parameters:**
@@ -79,7 +85,7 @@ Cancels listening for discoveryStop events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoveryStop' | Yes | Indicates Event name. |
-| callback | Callback&lt;DiscoveryEventInfo&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DiscoveryEventInfo> | No | the callback used to return the result. |
 
 ## off('serviceFound')
 
@@ -93,6 +99,8 @@ Cancels listening for serviceFound events of mDNS services.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DiscoveryService-off(type: 'serviceFound', callback?: Callback<LocalServiceInfo>): void--><!--Device-DiscoveryService-off(type: 'serviceFound', callback?: Callback<LocalServiceInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
 **Parameters:**
@@ -100,7 +108,7 @@ Cancels listening for serviceFound events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceFound' | Yes | Indicates Event name. |
-| callback | Callback&lt;LocalServiceInfo&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<LocalServiceInfo> | No | the callback used to return the result. |
 
 **Example**
 
@@ -144,6 +152,8 @@ Cancels listening for serviceLost events of mDNS services.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DiscoveryService-off(type: 'serviceLost', callback?: Callback<LocalServiceInfo>): void--><!--Device-DiscoveryService-off(type: 'serviceLost', callback?: Callback<LocalServiceInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
 **Parameters:**
@@ -151,7 +161,7 @@ Cancels listening for serviceLost events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceLost' | Yes | Indicates Event name. |
-| callback | Callback&lt;LocalServiceInfo&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<LocalServiceInfo> | No | the callback used to return the result. |
 
 **Example**
 
@@ -192,6 +202,8 @@ Enables listening for discoveryStart events of mDNS services.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DiscoveryService-on(type: 'discoveryStart', callback: Callback<DiscoveryEventInfo>): void--><!--Device-DiscoveryService-on(type: 'discoveryStart', callback: Callback<DiscoveryEventInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
 **Parameters:**
@@ -199,7 +211,7 @@ Enables listening for discoveryStart events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoveryStart' | Yes | Indicates Event name. |
-| callback | Callback&lt;DiscoveryEventInfo&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DiscoveryEventInfo> | Yes | the callback used to return the result. |
 
 **Example**
 
@@ -236,6 +248,8 @@ Enables listening for discoveryStop events of mDNS services.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DiscoveryService-on(type: 'discoveryStop', callback: Callback<DiscoveryEventInfo>): void--><!--Device-DiscoveryService-on(type: 'discoveryStop', callback: Callback<DiscoveryEventInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
 **Parameters:**
@@ -243,7 +257,7 @@ Enables listening for discoveryStop events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoveryStop' | Yes | Indicates Event name. |
-| callback | Callback&lt;DiscoveryEventInfo&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DiscoveryEventInfo> | Yes | the callback used to return the result. |
 
 **Example**
 
@@ -280,6 +294,8 @@ Enables listening for serviceFound events of mDNS services.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DiscoveryService-on(type: 'serviceFound', callback: Callback<LocalServiceInfo>): void--><!--Device-DiscoveryService-on(type: 'serviceFound', callback: Callback<LocalServiceInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
 **Parameters:**
@@ -287,7 +303,7 @@ Enables listening for serviceFound events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceFound' | Yes | Indicates Event name. |
-| callback | Callback&lt;LocalServiceInfo&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<LocalServiceInfo> | Yes | the callback used to return the result. |
 
 **Example**
 
@@ -327,6 +343,8 @@ Enables listening for serviceLost events of mDNS services.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DiscoveryService-on(type: 'serviceLost', callback: Callback<LocalServiceInfo>): void--><!--Device-DiscoveryService-on(type: 'serviceLost', callback: Callback<LocalServiceInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
 **Parameters:**
@@ -334,7 +352,7 @@ Enables listening for serviceLost events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceLost' | Yes | Indicates Event name. |
-| callback | Callback&lt;LocalServiceInfo&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<LocalServiceInfo> | Yes | the callback used to return the result. |
 
 **Example**
 
@@ -371,6 +389,8 @@ Starts searching for mDNS services on the LAN.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DiscoveryService-startSearchingMDNS(): void--><!--Device-DiscoveryService-startSearchingMDNS(): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
 **Example**
@@ -401,6 +421,8 @@ Stops searching for mDNS services on the LAN.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DiscoveryService-stopSearchingMDNS(): void--><!--Device-DiscoveryService-stopSearchingMDNS(): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 

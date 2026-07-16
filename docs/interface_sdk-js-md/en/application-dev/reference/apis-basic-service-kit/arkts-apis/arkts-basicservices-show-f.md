@@ -16,6 +16,8 @@ Queries the task details based on the task ID. This API uses an asynchronous cal
 
 **Since:** 10
 
+<!--Device-agent-function show(id: string, callback: AsyncCallback<TaskInfo>): void--><!--Device-agent-function show(id: string, callback: AsyncCallback<TaskInfo>): void-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **Parameters:**
@@ -23,7 +25,7 @@ Queries the task details based on the task ID. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | Task ID. |
-| callback | AsyncCallback&lt;TaskInfo&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the **TaskInfo** object obtained. Otherwise, **err** is an errorobject. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<TaskInfo> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the **TaskInfo** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -44,6 +46,8 @@ Queries the task details based on the task ID. This API uses a promise to return
 
 **Since:** 10
 
+<!--Device-agent-function show(id: string): Promise<TaskInfo>--><!--Device-agent-function show(id: string): Promise<TaskInfo>-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **Parameters:**
@@ -56,7 +60,7 @@ Queries the task details based on the task ID. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;TaskInfo&gt; | Promise used to return the **TaskInfo** object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<TaskInfo> | Promise used to return the **TaskInfo** object. |
 
 **Error codes:**
 

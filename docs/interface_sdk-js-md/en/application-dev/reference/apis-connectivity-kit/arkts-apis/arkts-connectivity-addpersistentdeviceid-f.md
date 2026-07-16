@@ -12,14 +12,15 @@ import { access } from '@kit.ConnectivityKit';
 function addPersistentDeviceId(deviceId: string): Promise<void>
 ```
 
-Add a persistent random device address. Once the randomized address is successfully added,
-the application can save it for an extended period of time.
+Add a persistent random device address. Once the randomized address is successfully added,the application can save it for an extended period of time.
 
 **Since:** 16
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.PERSISTENT_BLUETOOTH_PEERS_MAC
 
 **Atomic service API:** This API can be used in atomic services since API version 16.
+
+<!--Device-access-function addPersistentDeviceId(deviceId: string): Promise<void>--><!--Device-access-function addPersistentDeviceId(deviceId: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -33,7 +34,7 @@ the application can save it for an extended period of time.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 

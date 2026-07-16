@@ -20,6 +20,8 @@ Obtains the profile UUIDs supported by the remote device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function getRemoteProfileUuids(deviceId: string, callback: AsyncCallback<Array<ProfileUuids>>): void--><!--Device-connection-function getRemoteProfileUuids(deviceId: string, callback: AsyncCallback<Array<ProfileUuids>>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -29,7 +31,7 @@ Obtains the profile UUIDs supported by the remote device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| callback | AsyncCallback&lt;Array&lt;ProfileUuids&gt;&gt; | Yes | the callback of getRemoteProfileUuids. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<ProfileUuids>> | Yes | the callback of getRemoteProfileUuids. |
 
 **Error codes:**
 
@@ -73,6 +75,8 @@ Obtains the profile UUIDs supported by the remote device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function getRemoteProfileUuids(deviceId: string): Promise<Array<ProfileUuids>>--><!--Device-connection-function getRemoteProfileUuids(deviceId: string): Promise<Array<ProfileUuids>>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -87,7 +91,7 @@ Obtains the profile UUIDs supported by the remote device.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ProfileUuids&gt;&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ProfileUuids>> | Returns the promise object. |
 
 **Error codes:**
 

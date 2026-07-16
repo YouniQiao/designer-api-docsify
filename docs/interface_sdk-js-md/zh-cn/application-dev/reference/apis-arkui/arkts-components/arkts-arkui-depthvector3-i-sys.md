@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-declare interface DepthVector3--><!--Device-unnamed-declare interface DepthVector3-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +24,9 @@ X分量。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DepthVector3-x: double--><!--Device-DepthVector3-x: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,7 +46,9 @@ Y分量。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DepthVector3-y: double--><!--Device-DepthVector3-y: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,7 +68,9 @@ Z分量。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DepthVector3-z: double--><!--Device-DepthVector3-z: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,5 +1,11 @@
 # getExcludeDates
 
+## 导入模块
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+```
+
 ## getExcludeDates
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getExcludeDates(reminderId: number): Promise<Array<Date>>
 为指定id的周期性的日历提醒，查询设置的所有不提醒日期。使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-reminderAgentManager-function getExcludeDates(reminderId: int): Promise<Array<Date>>--><!--Device-reminderAgentManager-function getExcludeDates(reminderId: int): Promise<Array<Date>>-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -22,7 +30,7 @@ function getExcludeDates(reminderId: number): Promise<Array<Date>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Date&gt;&gt; | Promise对象。返回特定日历设置的所有不提醒日期。 |
+| Promise<Array<Date>> | Promise对象。返回特定日历设置的所有不提醒日期。 |
 
 **错误码：**
 

@@ -18,6 +18,8 @@ Stop Streaming
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-abilityConnectionManager-function stopStream(streamId: int): void--><!--Device-abilityConnectionManager-function stopStream(streamId: int): void-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **System API:** This is a system API.

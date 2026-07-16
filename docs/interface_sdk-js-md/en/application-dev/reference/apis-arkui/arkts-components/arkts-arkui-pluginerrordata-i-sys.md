@@ -1,9 +1,10 @@
 # PluginErrorData (System API)
 
-Data provided when an error occurs.
-AnonyMous Object Rectification
+Data provided when an error occurs.AnonyMous Object Rectification
 
 **Since:** 18
+
+<!--Device-unnamed-declare interface PluginErrorData--><!--Device-unnamed-declare interface PluginErrorData-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,12 +16,13 @@ AnonyMous Object Rectification
 errcode: number
 ```
 
-Error code.
-AnonyMous Object Rectification
+Error code.AnonyMous Object Rectification
 
 **Type:** number
 
 **Since:** 18
+
+<!--Device-PluginErrorData-errcode: number--><!--Device-PluginErrorData-errcode: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,12 +34,13 @@ AnonyMous Object Rectification
 msg: string
 ```
 
-Error message.
-AnonyMous Object Rectification
+Error message.AnonyMous Object Rectification
 
 **Type:** string
 
 **Since:** 18
+
+<!--Device-PluginErrorData-msg: string--><!--Device-PluginErrorData-msg: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -18,6 +18,8 @@ function isSmartReminderEnabled(deviceType: string): Promise<boolean>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isSmartReminderEnabled(deviceType: string): Promise<boolean>--><!--Device-notificationManager-function isSmartReminderEnabled(deviceType: string): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -32,7 +34,7 @@ function isSmartReminderEnabled(deviceType: string): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | 以Promise形式返回设备与其他设备协同智能提醒的开关是否开启的结果（true：开启，false：未开启）。 |
+| Promise<boolean> | 以Promise形式返回设备与其他设备协同智能提醒的开关是否开启的结果（true：开启，false：未开启）。 |
 
 **错误码：**
 

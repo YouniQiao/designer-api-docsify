@@ -1,5 +1,11 @@
 # addNotificationSlot
 
+## 导入模块
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+```
+
 ## addNotificationSlot
 
 ```TypeScript
@@ -10,14 +16,16 @@ function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<voi
 
 **起始版本：** 9
 
+<!--Device-reminderAgentManager-function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void--><!--Device-reminderAgentManager-function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slot | NotificationSlot | 是 | 通知渠道实例，仅支持设置其notificationType属性。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当添加NotificationSlot成功，err为undefined；否则为错误对象。 |
+| slot | [NotificationSlot](../../apis-notification-kit/arkts-apis/arkts-notification-notificationslot-i.md) | 是 | 通知渠道实例，仅支持设置其notificationType属性。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当添加NotificationSlot成功，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -57,19 +65,21 @@ function addNotificationSlot(slot: NotificationSlot): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-reminderAgentManager-function addNotificationSlot(slot: NotificationSlot): Promise<void>--><!--Device-reminderAgentManager-function addNotificationSlot(slot: NotificationSlot): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slot | NotificationSlot | 是 | 通知渠道实例，仅支持设置其notificationType属性。 |
+| slot | [NotificationSlot](../../apis-notification-kit/arkts-apis/arkts-notification-notificationslot-i.md) | 是 | 通知渠道实例，仅支持设置其notificationType属性。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

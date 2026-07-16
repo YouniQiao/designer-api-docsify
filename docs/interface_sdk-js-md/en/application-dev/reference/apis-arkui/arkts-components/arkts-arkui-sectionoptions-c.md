@@ -4,6 +4,8 @@ Describes the configuration of the water flow item section.
 
 **Since:** 12
 
+<!--Device-unnamed-declare class SectionOptions--><!--Device-unnamed-declare class SectionOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## columnsGap
@@ -12,8 +14,7 @@ Describes the configuration of the water flow item section.
 columnsGap?: Dimension
 ```
 
-Column gap of the section. If this parameter is not set, the [columnsGap](WaterFlowAttribute#columnsGap) of
-the **WaterFlow** component is used by default. If an invalid value is set, 0 vp is used.
+Column gap of the section. If this parameter is not set, the [columnsGap](WaterFlowAttribute#columnsGap) of the **WaterFlow** component is used by default. If an invalid value is set, 0 vp is used.
 
 **Type:** Dimension
 
@@ -22,6 +23,8 @@ the **WaterFlow** component is used by default. If an invalid value is set, 0 vp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SectionOptions-columnsGap?: Dimension--><!--Device-SectionOptions-columnsGap?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,6 +50,8 @@ If the value is less than 1, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SectionOptions-crossCount?: number--><!--Device-SectionOptions-crossCount?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## itemsCount
@@ -55,10 +60,7 @@ If the value is less than 1, the default value is used.
 itemsCount: number
 ```
 
-Number of **FlowItem** components in a section. The value must be a non-negative number. If the **splice**,
-**push**, or **update** APIs receive a section whose **itemsCount** is set to a negative number, these APIs will
-not be executed. Do not use a section whose **itemsCount** is **0**. Otherwise, the layout calculation may be
-abnormal.
+Number of **FlowItem** components in a section. The value must be a non-negative number. If the **splice**,**push**, or **update** APIs receive a section whose **itemsCount** is set to a negative number, these APIs will not be executed. Do not use a section whose **itemsCount** is **0**. Otherwise, the layout calculation may be abnormal.
 
 **Type:** number
 
@@ -67,6 +69,8 @@ abnormal.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SectionOptions-itemsCount: number--><!--Device-SectionOptions-itemsCount: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,8 +86,7 @@ Default value: **0**
 
 Unit: vp
 
-When **margin** is set to a percentage, the width of the **WaterFlow** component is used as the base value for the
-top, bottom, left, and right margins.
+When **margin** is set to a percentage, the width of the **WaterFlow** component is used as the base value for the top, bottom, left, and right margins.
 
 **Type:** Margin | Dimension
 
@@ -95,6 +98,8 @@ top, bottom, left, and right margins.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SectionOptions-margin?: Margin | Dimension--><!--Device-SectionOptions-margin?: Margin | Dimension-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onGetItemMainSizeByIndex
@@ -103,19 +108,11 @@ top, bottom, left, and right margins.
 onGetItemMainSizeByIndex?: GetItemMainSizeByIndex
 ```
 
-Callback used to obtain the main axis size, in vp, of the water flow item at a specified index during the layout
-process of the **WaterFlow** component. For a vertical **WaterFlow** component, this size refers to the height, and
-for a horizontal **WaterFlow** component, it refers to the width.
+Callback used to obtain the main axis size, in vp, of the water flow item at a specified index during the layout process of the **WaterFlow** component. For a vertical **WaterFlow** component, this size refers to the height, and for a horizontal **WaterFlow** component, it refers to the width.
 
 **NOTE**
 
-1. When both **onGetItemMainSizeByIndex** and the width or height attribute of **FlowItem** are used,
-the main-axis size is determined by the return value of **onGetItemMainSizeByIndex**,
-which will override the main-axis length of **FlowItem**.
-2. Using **onGetItemMainSizeByIndex** can improve the efficiency of jumping to a specific position
-or index in the **WaterFlow** component. Avoid mixing the use of **onGetItemMainSizeByIndex** with sections
-that do not have it set, as this can cause layout exceptions.
-3. If **onGetItemMainSizeByIndex** returns a negative number, the height of the water flow item is 0.
+1. When both **onGetItemMainSizeByIndex** and the width or height attribute of **FlowItem** are used,the main-axis size is determined by the return value of **onGetItemMainSizeByIndex**,which will override the main-axis length of **FlowItem**.2. Using **onGetItemMainSizeByIndex** can improve the efficiency of jumping to a specific position or index in the **WaterFlow** component. Avoid mixing the use of **onGetItemMainSizeByIndex** with sections that do not have it set, as this can cause layout exceptions.3. If **onGetItemMainSizeByIndex** returns a negative number, the height of the water flow item is 0.
 
 **Type:** GetItemMainSizeByIndex
 
@@ -125,6 +122,8 @@ that do not have it set, as this can cause layout exceptions.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SectionOptions-onGetItemMainSizeByIndex?: GetItemMainSizeByIndex--><!--Device-SectionOptions-onGetItemMainSizeByIndex?: GetItemMainSizeByIndex-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## rowsGap
@@ -133,8 +132,7 @@ that do not have it set, as this can cause layout exceptions.
 rowsGap?: Dimension
 ```
 
-Row gap of the section. If this parameter is not set, the [rowsGap](WaterFlowAttribute#rowsGap) of the
-**WaterFlow** component is used by default. If an invalid value is set, 0 vp is used.
+Row gap of the section. If this parameter is not set, the [rowsGap](WaterFlowAttribute#rowsGap) of the **WaterFlow** component is used by default. If an invalid value is set, 0 vp is used.
 
 **Type:** Dimension
 
@@ -143,6 +141,8 @@ Row gap of the section. If this parameter is not set, the [rowsGap](WaterFlowAtt
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SectionOptions-rowsGap?: Dimension--><!--Device-SectionOptions-rowsGap?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,6 +4,8 @@ Information about the check box group.
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface CheckboxGroupOptions--><!--Device-unnamed-declare interface CheckboxGroupOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## group
@@ -25,6 +27,8 @@ Among multiple check box groups with the same group name, only the first one tak
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-CheckboxGroupOptions-group?: string--><!--Device-CheckboxGroupOptions-group?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

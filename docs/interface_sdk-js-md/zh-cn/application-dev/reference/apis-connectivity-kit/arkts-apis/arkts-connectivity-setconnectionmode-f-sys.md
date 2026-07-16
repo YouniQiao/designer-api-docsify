@@ -1,5 +1,11 @@
 # setConnectionMode（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { manager } from '@kit.ConnectivityKit';
+```
+
 ## setConnectionMode
 
 ```TypeScript
@@ -14,6 +20,8 @@ function setConnectionMode(mode: ConnectionMode, duration: number): Promise<void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-manager-function setConnectionMode(mode: ConnectionMode, duration: int): Promise<void>--><!--Device-manager-function setConnectionMode(mode: ConnectionMode, duration: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -22,14 +30,14 @@ function setConnectionMode(mode: ConnectionMode, duration: number): Promise<void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | ConnectionMode | 是 | 需要设置的NearLink连接模式 |
+| mode | [ConnectionMode](arkts-connectivity-connectionmode-e-sys.md) | 是 | 需要设置的NearLink连接模式 |
 | duration | number | 是 | 表示设置连接模式的持续时间（以秒为单位）。值为0表示无限制<br>单位为： 秒，取值应为≥0的整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise<void> | 返回promise对象。 |
 
 **错误码：**
 

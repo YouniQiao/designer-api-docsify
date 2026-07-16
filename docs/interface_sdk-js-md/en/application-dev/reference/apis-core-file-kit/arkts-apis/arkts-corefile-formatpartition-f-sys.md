@@ -20,6 +20,8 @@ Formats a partition on a disk. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-volumeManager-function formatPartition(diskId: string, partitionNum: int, params: FormatParams): Promise<void>--><!--Device-volumeManager-function formatPartition(diskId: string, partitionNum: int, params: FormatParams): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -30,13 +32,13 @@ Formats a partition on a disk. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | diskId | string | Yes | Disk ID. |
 | partitionNum | number | Yes | Partition number. |
-| params | FormatParams | Yes | Format options. |
+| params | [FormatParams](arkts-corefile-formatparams-i-sys.md) | Yes | Format options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

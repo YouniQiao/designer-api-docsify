@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare enum DataOperationType--><!--Device-unnamed-declare enum DataOperationType-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## ADD
@@ -18,7 +20,9 @@ ADD = 'add'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DataOperationType-ADD = 'add'--><!--Device-DataOperationType-ADD = 'add'-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,7 +38,9 @@ DELETE = 'delete'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DataOperationType-DELETE = 'delete'--><!--Device-DataOperationType-DELETE = 'delete'-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,7 +56,9 @@ EXCHANGE = 'exchange'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DataOperationType-EXCHANGE = 'exchange'--><!--Device-DataOperationType-EXCHANGE = 'exchange'-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,7 +74,9 @@ MOVE = 'move'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DataOperationType-MOVE = 'move'--><!--Device-DataOperationType-MOVE = 'move'-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,7 +92,9 @@ CHANGE = 'change'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DataOperationType-CHANGE = 'change'--><!--Device-DataOperationType-CHANGE = 'change'-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,7 +110,9 @@ RELOAD = 'reload'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DataOperationType-RELOAD = 'reload'--><!--Device-DataOperationType-RELOAD = 'reload'-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

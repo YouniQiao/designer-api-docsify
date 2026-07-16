@@ -14,14 +14,16 @@ Subscribes to common events. This API uses an asynchronous callback to return th
 
 **Substitutes:** [subscribe](arkts-basicservices-subscribe-f.md#subscribe-1)
 
+<!--Device-commonEvent-function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<CommonEventData>): void--><!--Device-commonEvent-function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<CommonEventData>): void-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | CommonEventSubscriber | Yes | Subscriber object. |
-| callback | AsyncCallback&lt;CommonEventData&gt; | Yes | Callback used to return the result. |
+| subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-i.md) | Yes | Subscriber object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<CommonEventData> | Yes | Callback used to return the result. |
 
 **Example**
 

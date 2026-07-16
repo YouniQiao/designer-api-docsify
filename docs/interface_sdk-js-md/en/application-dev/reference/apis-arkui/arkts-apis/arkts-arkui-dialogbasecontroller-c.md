@@ -4,6 +4,8 @@ The class used to control dialog.
 
 **Since:** 26.1.0
 
+<!--Device-unnamed-export class DialogBaseController--><!--Device-unnamed-export class DialogBaseController-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Close the corresponding dialog.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
+<!--Device-DialogBaseController-close(): void--><!--Device-DialogBaseController-close(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -41,6 +45,8 @@ The constructor.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-DialogBaseController-constructor()--><!--Device-DialogBaseController-constructor()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,11 +64,13 @@ Get the state.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
+<!--Device-DialogBaseController-getState(): DialogState--><!--Device-DialogBaseController-getState(): DialogState-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DialogState | return the state. |
+| [DialogState](arkts-arkui-dialogstate-e.md) | return the state. |
 

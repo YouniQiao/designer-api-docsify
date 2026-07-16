@@ -4,6 +4,8 @@ Provides APIs for the file manager application to download files from the Drive 
 
 **Since:** 11
 
+<!--Device-cloudSync-class CloudFileCache--><!--Device-cloudSync-class CloudFileCache-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Deletes a cache file. This API returns the result synchronously.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-CloudFileCache-cleanCache(uri: string): void--><!--Device-CloudFileCache-cleanCache(uri: string): void-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
@@ -39,8 +43,8 @@ Deletes a cache file. This API returns the result synchronously.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are leftunspecified;<br>2.Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error. |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
@@ -77,6 +81,8 @@ A constructor used to create a CloudFileCache object.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-CloudFileCache-constructor(bundleName: string)--><!--Device-CloudFileCache-constructor(bundleName: string)-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
@@ -85,7 +91,7 @@ A constructor used to create a CloudFileCache object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Name of the bundle that need to start download task and subscribes downloadprogress. |
+| bundleName | string | Yes | Name of the bundle that need to start download task and subscribes download progress. |
 
 **Error codes:**
 
@@ -107,6 +113,8 @@ Query the download state of the cloud file list.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-CloudFileCache-getDownloadList(uris: Array<string>): Promise<Array<DownloadProgress>>--><!--Device-CloudFileCache-getDownloadList(uris: Array<string>): Promise<Array<DownloadProgress>>-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
@@ -115,13 +123,13 @@ Query the download state of the cloud file list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uris | Array&lt;string&gt; | Yes | uris of queryed files. |
+| uris | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | uris of queryed files. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DownloadProgress&gt;&gt; | - Return Promise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<DownloadProgress>> | - Return Promise. |
 
 **Error codes:**
 

@@ -4,9 +4,17 @@
 
 **起始版本：** 9
 
+<!--Device-windowAnimationManager-export interface WindowAnimationController--><!--Device-windowAnimationManager-export interface WindowAnimationController-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { windowAnimationManager } from '@kit.ArkUI';
+```
 
 ## onAppTransition
 
@@ -21,6 +29,10 @@ onAppTransition(fromWindowTarget: WindowAnimationTarget, toWindowTarget: WindowA
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WindowAnimationController-onAppTransition(fromWindowTarget: WindowAnimationTarget, toWindowTarget: WindowAnimationTarget,
+      finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onAppTransition(fromWindowTarget: WindowAnimationTarget, toWindowTarget: WindowAnimationTarget,
+      finishCallback: WindowAnimationFinishedCallback): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,9 +41,9 @@ onAppTransition(fromWindowTarget: WindowAnimationTarget, toWindowTarget: WindowA
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fromWindowTarget | WindowAnimationTarget | 是 | 转场前的动画窗口。 |
-| toWindowTarget | WindowAnimationTarget | 是 | 转场后的动画窗口。 |
-| finishCallback | WindowAnimationFinishedCallback | 是 | 动画完成后的回调。 |
+| fromWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | 是 | 转场前的动画窗口。 |
+| toWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | 是 | 转场后的动画窗口。 |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationfinishedcallback-i-sys.md) | 是 | 动画完成后的回调。 |
 
 **示例：**
 
@@ -49,6 +61,8 @@ onCloseWindow(closingWindowTarget: WindowAnimationTarget, finishCallback: Window
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WindowAnimationController-onCloseWindow(closingWindowTarget: WindowAnimationTarget, finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onCloseWindow(closingWindowTarget: WindowAnimationTarget, finishCallback: WindowAnimationFinishedCallback): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -57,8 +71,8 @@ onCloseWindow(closingWindowTarget: WindowAnimationTarget, finishCallback: Window
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| closingWindowTarget | WindowAnimationTarget | 是 | 动画目标窗口。 |
-| finishCallback | WindowAnimationFinishedCallback | 是 | 动画完成后的回调。 |
+| closingWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | 是 | 动画目标窗口。 |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationfinishedcallback-i-sys.md) | 是 | 动画完成后的回调。 |
 
 **示例：**
 
@@ -77,6 +91,10 @@ onMinimizeWindow(minimizingWindowTarget: WindowAnimationTarget,
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WindowAnimationController-onMinimizeWindow(minimizingWindowTarget: WindowAnimationTarget,
+      finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onMinimizeWindow(minimizingWindowTarget: WindowAnimationTarget,
+      finishCallback: WindowAnimationFinishedCallback): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -85,8 +103,8 @@ onMinimizeWindow(minimizingWindowTarget: WindowAnimationTarget,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| minimizingWindowTarget | WindowAnimationTarget | 是 | 动画目标窗口。 |
-| finishCallback | WindowAnimationFinishedCallback | 是 | 动画完成后的回调。 |
+| minimizingWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | 是 | 动画目标窗口。 |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationfinishedcallback-i-sys.md) | 是 | 动画完成后的回调。 |
 
 **示例：**
 
@@ -104,6 +122,8 @@ onScreenUnlock(finishCallback: WindowAnimationFinishedCallback): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WindowAnimationController-onScreenUnlock(finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onScreenUnlock(finishCallback: WindowAnimationFinishedCallback): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -112,7 +132,7 @@ onScreenUnlock(finishCallback: WindowAnimationFinishedCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| finishCallback | WindowAnimationFinishedCallback | 是 | 动画完成后的回调。 |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationfinishedcallback-i-sys.md) | 是 | 动画完成后的回调。 |
 
 ## onStartAppFromLauncher
 
@@ -127,6 +147,10 @@ onStartAppFromLauncher(startingWindowTarget: WindowAnimationTarget,
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WindowAnimationController-onStartAppFromLauncher(startingWindowTarget: WindowAnimationTarget,
+      finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onStartAppFromLauncher(startingWindowTarget: WindowAnimationTarget,
+      finishCallback: WindowAnimationFinishedCallback): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -135,8 +159,8 @@ onStartAppFromLauncher(startingWindowTarget: WindowAnimationTarget,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| startingWindowTarget | WindowAnimationTarget | 是 | 动画目标窗口。 |
-| finishCallback | WindowAnimationFinishedCallback | 是 | 动画完成后的回调。 |
+| startingWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | 是 | 动画目标窗口。 |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationfinishedcallback-i-sys.md) | 是 | 动画完成后的回调。 |
 
 **示例：**
 
@@ -155,6 +179,10 @@ onStartAppFromOther(startingWindowTarget: WindowAnimationTarget,
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WindowAnimationController-onStartAppFromOther(startingWindowTarget: WindowAnimationTarget,
+      finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onStartAppFromOther(startingWindowTarget: WindowAnimationTarget,
+      finishCallback: WindowAnimationFinishedCallback): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -163,8 +191,8 @@ onStartAppFromOther(startingWindowTarget: WindowAnimationTarget,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| startingWindowTarget | WindowAnimationTarget | 是 | 动画目标窗口。 |
-| finishCallback | WindowAnimationFinishedCallback | 是 | 动画完成后的回调 |
+| startingWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | 是 | 动画目标窗口。 |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationfinishedcallback-i-sys.md) | 是 | 动画完成后的回调 |
 
 **示例：**
 
@@ -183,6 +211,10 @@ onStartAppFromRecent(startingWindowTarget: WindowAnimationTarget,
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WindowAnimationController-onStartAppFromRecent(startingWindowTarget: WindowAnimationTarget,
+      finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onStartAppFromRecent(startingWindowTarget: WindowAnimationTarget,
+      finishCallback: WindowAnimationFinishedCallback): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -191,8 +223,8 @@ onStartAppFromRecent(startingWindowTarget: WindowAnimationTarget,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| startingWindowTarget | WindowAnimationTarget | 是 | 动画目标窗口。 |
-| finishCallback | WindowAnimationFinishedCallback | 是 | 动画完成后的回调。 |
+| startingWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | 是 | 动画目标窗口。 |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationfinishedcallback-i-sys.md) | 是 | 动画完成后的回调。 |
 
 **示例：**
 
@@ -211,6 +243,10 @@ onWindowAnimationTargetsUpdate(fullScreenWindowTarget: WindowAnimationTarget,
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WindowAnimationController-onWindowAnimationTargetsUpdate(fullScreenWindowTarget: WindowAnimationTarget,
+      floatingWindowTargets: Array<WindowAnimationTarget>): void--><!--Device-WindowAnimationController-onWindowAnimationTargetsUpdate(fullScreenWindowTarget: WindowAnimationTarget,
+      floatingWindowTargets: Array<WindowAnimationTarget>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -219,8 +255,8 @@ onWindowAnimationTargetsUpdate(fullScreenWindowTarget: WindowAnimationTarget,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fullScreenWindowTarget | WindowAnimationTarget | 是 | 全屏状态的动画目标窗口。 |
-| floatingWindowTargets | Array&lt;WindowAnimationTarget&gt; | 是 | 悬浮状态的动画目标窗口。 |
+| fullScreenWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | 是 | 全屏状态的动画目标窗口。 |
+| floatingWindowTargets | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<WindowAnimationTarget> | 是 | 悬浮状态的动画目标窗口。 |
 
 **示例：**
 

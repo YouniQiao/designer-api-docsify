@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-declare enum WebKeyboardAppearanceMode--><!--Device-unnamed-declare enum WebKeyboardAppearanceMode-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## NONE_IMMERSIVE
@@ -17,6 +19,8 @@ NONE_IMMERSIVE = 0
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebKeyboardAppearanceMode-NONE_IMMERSIVE = 0--><!--Device-WebKeyboardAppearanceMode-NONE_IMMERSIVE = 0-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -32,6 +36,8 @@ IMMERSIVE = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WebKeyboardAppearanceMode-IMMERSIVE = 1--><!--Device-WebKeyboardAppearanceMode-IMMERSIVE = 1-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## LIGHT_IMMERSIVE
@@ -46,6 +52,8 @@ LIGHT_IMMERSIVE = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WebKeyboardAppearanceMode-LIGHT_IMMERSIVE = 2--><!--Device-WebKeyboardAppearanceMode-LIGHT_IMMERSIVE = 2-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## DARK_IMMERSIVE
@@ -59,6 +67,8 @@ DARK_IMMERSIVE = 3
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebKeyboardAppearanceMode-DARK_IMMERSIVE = 3--><!--Device-WebKeyboardAppearanceMode-DARK_IMMERSIVE = 3-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

@@ -6,6 +6,8 @@
 
 **起始版本：** 21
 
+<!--Device-unnamed-export interface Effect extends SceneResource--><!--Device-unnamed-export interface Effect extends SceneResource-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## getPropertyValue
@@ -19,6 +21,8 @@ getPropertyValue(propertyName: string): Object | null | undefined
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Effect-getPropertyValue(propertyName: string): Object | null | undefined--><!--Device-Effect-getPropertyValue(propertyName: string): Object | null | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -46,6 +50,8 @@ setPropertyValue(propertyName: string, value: Object | undefined): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Effect-setPropertyValue(propertyName: string, value: Object | undefined): boolean--><!--Device-Effect-setPropertyValue(propertyName: string, value: Object | undefined): boolean-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
@@ -67,12 +73,13 @@ setPropertyValue(propertyName: string, value: Object | undefined): boolean
 readonly effectId: string
 ```
 
-特效的ID.
-这是用于创建特效的ID.
+特效的ID.这是用于创建特效的ID.
 
 **类型：** string
 
 **起始版本：** 21
+
+<!--Device-Effect-readonly effectId: string--><!--Device-Effect-readonly effectId: string-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -87,6 +94,8 @@ enabled: boolean
 **类型：** boolean
 
 **起始版本：** 21
+
+<!--Device-Effect-enabled: boolean--><!--Device-Effect-enabled: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

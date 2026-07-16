@@ -18,6 +18,8 @@ Obtains the added scanners. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-scan-function getAddedScanners(): Promise<ScannerDevice[]>--><!--Device-scan-function getAddedScanners(): Promise<ScannerDevice[]>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Obtains the added scanners. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ScannerDevice[]&gt; | Promise used to return the array of added scanners. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ScannerDevice[]> | Promise used to return the array of added scanners. |
 
 **Error codes:**
 

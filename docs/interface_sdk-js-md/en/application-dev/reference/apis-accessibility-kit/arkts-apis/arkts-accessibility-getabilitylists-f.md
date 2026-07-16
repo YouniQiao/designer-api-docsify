@@ -24,15 +24,25 @@ Obtains the accessibility application list. This API uses an asynchronous callba
 
 **Substitutes:** getAccessibilityExtensionList(abilityType:
 
+<!--Device-accessibility-function getAbilityLists(
+    abilityType: AbilityType,
+    stateType: AbilityState,
+    callback: AsyncCallback<Array<AccessibilityAbilityInfo>>
+  ): void--><!--Device-accessibility-function getAbilityLists(
+    abilityType: AbilityType,
+    stateType: AbilityState,
+    callback: AsyncCallback<Array<AccessibilityAbilityInfo>>
+  ): void-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| abilityType | AbilityType | Yes | Accessibility application type. |
-| stateType | AbilityState | Yes | Accessibility application status. |
-| callback | AsyncCallback&lt;Array&lt;AccessibilityAbilityInfo&gt;&gt; | Yes | Callback used to return the accessibilityapplication list. If the operation is successful, **err** is **undefined** and **data** is the accessibilityapplication list. Otherwise, it is an error object. |
+| abilityType | [AbilityType](arkts-accessibility-abilitytype-t.md) | Yes | Accessibility application type. |
+| stateType | [AbilityState](arkts-accessibility-abilitystate-t.md) | Yes | Accessibility application status. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<AccessibilityAbilityInfo>> | Yes | Callback used to return the accessibility application list. If the operation is successful, **err** is **undefined** and **data** is the accessibility application list. Otherwise, it is an error object. |
 
 **Example**
 
@@ -68,20 +78,22 @@ Obtains the accessibility application list. This API uses a promise to return th
 
 **Substitutes:** getAccessibilityExtensionList(abilityType:
 
+<!--Device-accessibility-function getAbilityLists(abilityType: AbilityType, stateType: AbilityState): Promise<Array<AccessibilityAbilityInfo>>--><!--Device-accessibility-function getAbilityLists(abilityType: AbilityType, stateType: AbilityState): Promise<Array<AccessibilityAbilityInfo>>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| abilityType | AbilityType | Yes | Accessibility application type. |
-| stateType | AbilityState | Yes | Accessibility application status. |
+| abilityType | [AbilityType](arkts-accessibility-abilitytype-t.md) | Yes | Accessibility application type. |
+| stateType | [AbilityState](arkts-accessibility-abilitystate-t.md) | Yes | Accessibility application status. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AccessibilityAbilityInfo&gt;&gt; | Promise used to return the accessibility application list. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AccessibilityAbilityInfo>> | Promise used to return the accessibility application list. |
 
 **Example**
 

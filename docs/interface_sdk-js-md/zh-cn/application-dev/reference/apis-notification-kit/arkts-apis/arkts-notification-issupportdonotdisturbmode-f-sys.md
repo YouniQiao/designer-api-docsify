@@ -18,6 +18,8 @@ function isSupportDoNotDisturbMode(callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isSupportDoNotDisturbMode(callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isSupportDoNotDisturbMode(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,7 +28,7 @@ function isSupportDoNotDisturbMode(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 查询是否支持免打扰功能回调函数（true：支持，false：不支持）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 查询是否支持免打扰功能回调函数（true：支持，false：不支持）。 |
 
 **错误码：**
 
@@ -70,6 +72,8 @@ function isSupportDoNotDisturbMode(): Promise<boolean>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isSupportDoNotDisturbMode(): Promise<boolean>--><!--Device-notificationManager-function isSupportDoNotDisturbMode(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -78,7 +82,7 @@ function isSupportDoNotDisturbMode(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | 以Promise形式返回获取是否支持免打扰功能的结果（true：支持，false：不支持）。 |
+| Promise<boolean> | 以Promise形式返回获取是否支持免打扰功能的结果（true：支持，false：不支持）。 |
 
 **错误码：**
 

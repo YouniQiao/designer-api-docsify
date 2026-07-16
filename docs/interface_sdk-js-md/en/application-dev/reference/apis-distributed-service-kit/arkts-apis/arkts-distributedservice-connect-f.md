@@ -12,12 +12,13 @@ import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 function connect(sessionId: number): Promise<ConnectResult>
 ```
 
-Sets up a UIAbility connection after a collaboration session is created and the session ID is obtained. This API
-uses a promise to return the result.
+Sets up a UIAbility connection after a collaboration session is created and the session ID is obtained. This API uses a promise to return the result.
 
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-abilityConnectionManager-function connect(sessionId: int): Promise<ConnectResult>--><!--Device-abilityConnectionManager-function connect(sessionId: int): Promise<ConnectResult>-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -31,7 +32,7 @@ uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ConnectResult&gt; | Promise used to return the[connection result](arkts-distributedservice-connectresult-i.md). |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ConnectResult> | Promise used to return the [connection result](arkts-distributedservice-connectresult-i.md). |
 
 **Error codes:**
 

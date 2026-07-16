@@ -12,12 +12,13 @@ import { WantAgent } from '@kit.AbilityKit';
 function getUid(agent: WantAgent, callback: AsyncCallback<number>): void
 ```
 
-Obtains the user ID of a WantAgent object.
-This API uses an asynchronous callback to return the result.
+Obtains the user ID of a WantAgent object.This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-wantAgent-function getUid(agent: WantAgent, callback: AsyncCallback<int>): void--><!--Device-wantAgent-function getUid(agent: WantAgent, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -25,8 +26,8 @@ This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | WantAgent | Yes | Target WantAgent object. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the user ID. |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | Target WantAgent object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the user ID. |
 
 **Error codes:**
 
@@ -114,12 +115,13 @@ try {
 function getUid(agent: WantAgent): Promise<number>
 ```
 
-Obtains the user ID of a WantAgent object.
-This API uses a promise to return the result.
+Obtains the user ID of a WantAgent object.This API uses a promise to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-wantAgent-function getUid(agent: WantAgent): Promise<int>--><!--Device-wantAgent-function getUid(agent: WantAgent): Promise<int>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -127,13 +129,13 @@ This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | WantAgent | Yes | Target WantAgent object. |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | Target WantAgent object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the user ID. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the user ID. |
 
 **Error codes:**
 

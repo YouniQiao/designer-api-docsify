@@ -12,15 +12,15 @@ import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 function updateEnabledBusinessIds(templateId: Uint8Array, enabledBusinessIds: number[]): Promise<void>
 ```
 
-Updates the service scope supported by the specified companion device template. This API is used to modify the
-list of service IDs enabled for a registered template, thereby controlling the service scenarios in which the
-template can be used. This API uses a promise to return the result.
+Updates the service scope supported by the specified companion device template. This API is used to modify the list of service IDs enabled for a registered template, thereby controlling the service scenarios in which the template can be used. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-companionDeviceAuth-function updateEnabledBusinessIds(templateId: Uint8Array, enabledBusinessIds: int[]): Promise<void>--><!--Device-companionDeviceAuth-function updateEnabledBusinessIds(templateId: Uint8Array, enabledBusinessIds: int[]): Promise<void>-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -30,14 +30,14 @@ template can be used. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templateId | Uint8Array | Yes | ID of the target template. Unique ID of the template whose service scope is tobe updated, which can be obtained through[getTemplateStatus](arkts-userauthentication-statusmonitor-i-sys.md#gettemplatestatus-1). |
-| enabledBusinessIds | number[] | Yes | ID set of services supported by the template. It indicates the list ofservice scenarios to be enabled, such as [DEFAULT] and [Service ID for unlocking the screen]. Differentservice IDs correspond to different authentication scenarios. You can configure the service IDs based onservice requirements. |
+| templateId | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | ID of the target template. Unique ID of the template whose service scope is to be updated, which can be obtained through [getTemplateStatus](arkts-userauthentication-statusmonitor-i-sys.md#gettemplatestatus-1). |
+| enabledBusinessIds | number[] | Yes | ID set of services supported by the template. It indicates the list of service scenarios to be enabled, such as [DEFAULT] and [Service ID for unlocking the screen]. Different service IDs correspond to different authentication scenarios. You can configure the service IDs based on service requirements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

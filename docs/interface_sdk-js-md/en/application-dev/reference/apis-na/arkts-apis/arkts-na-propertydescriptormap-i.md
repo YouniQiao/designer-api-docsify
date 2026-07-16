@@ -1,5 +1,7 @@
 # PropertyDescriptorMap
 
+<!--Device-unnamed-interface PropertyDescriptorMap--><!--Device-unnamed-interface PropertyDescriptorMap-End-->
+
 ## key
 
 ```TypeScript
@@ -7,4 +9,6 @@
 ```
 
 **Type:** PropertyDescriptor
+
+<!--Device-PropertyDescriptorMap-[key: PropertyKey]: PropertyDescriptor--><!--Device-PropertyDescriptorMap-[key: PropertyKey]: PropertyDescriptor-End-->
 

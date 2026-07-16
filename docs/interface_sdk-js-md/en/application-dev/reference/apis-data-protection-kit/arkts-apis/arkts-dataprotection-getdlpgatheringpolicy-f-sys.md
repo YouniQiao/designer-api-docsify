@@ -20,6 +20,8 @@ This API is used to obtain the DLP sandbox gathering policy of the current syste
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
+<!--Device-dlpPermission-function getDLPGatheringPolicy(): Promise<GatheringPolicyType>--><!--Device-dlpPermission-function getDLPGatheringPolicy(): Promise<GatheringPolicyType>-End-->
+
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ This API is used to obtain the DLP sandbox gathering policy of the current syste
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GatheringPolicyType&gt; | Promise used to return the DLP sandbox gathering policy obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<GatheringPolicyType> | Promise used to return the DLP sandbox gathering policy obtained. |
 
 **Error codes:**
 
@@ -67,6 +69,8 @@ This API is used to obtain the DLP sandbox gathering policy of the current syste
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
+<!--Device-dlpPermission-function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): void--><!--Device-dlpPermission-function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): void-End-->
+
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **System API:** This is a system API.
@@ -75,7 +79,7 @@ This API is used to obtain the DLP sandbox gathering policy of the current syste
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;GatheringPolicyType&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<GatheringPolicyType> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

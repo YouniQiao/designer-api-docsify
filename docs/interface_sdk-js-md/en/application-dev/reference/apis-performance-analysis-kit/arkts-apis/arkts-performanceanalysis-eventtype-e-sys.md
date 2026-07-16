@@ -4,6 +4,8 @@ Enumerate system event types.
 
 **Since:** 9
 
+<!--Device-hiSysEvent-enum EventType--><!--Device-hiSysEvent-enum EventType-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
@@ -17,6 +19,8 @@ FAULT = 1
 Error event.
 
 **Since:** 9
+
+<!--Device-EventType-FAULT = 1--><!--Device-EventType-FAULT = 1-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -32,6 +36,8 @@ Statistic event.
 
 **Since:** 9
 
+<!--Device-EventType-STATISTIC = 2--><!--Device-EventType-STATISTIC = 2-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
@@ -46,6 +52,8 @@ Security event.
 
 **Since:** 9
 
+<!--Device-EventType-SECURITY = 3--><!--Device-EventType-SECURITY = 3-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
@@ -59,6 +67,8 @@ BEHAVIOR = 4
 User behavior event.
 
 **Since:** 9
+
+<!--Device-EventType-BEHAVIOR = 4--><!--Device-EventType-BEHAVIOR = 4-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 

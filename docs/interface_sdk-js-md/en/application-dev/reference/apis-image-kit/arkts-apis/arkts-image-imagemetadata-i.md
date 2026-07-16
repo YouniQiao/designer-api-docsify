@@ -4,6 +4,8 @@ Metadata set of an image.
 
 **Since:** 23
 
+<!--Device-image-interface ImageMetadata--><!--Device-image-interface ImageMetadata-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Avis metadata.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ImageMetadata-avisMetadata?: AvisMetadata--><!--Device-ImageMetadata-avisMetadata?: AvisMetadata-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## dngMetadata
@@ -41,6 +45,8 @@ Dng metadata.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ImageMetadata-dngMetadata?: DngMetadata--><!--Device-ImageMetadata-dngMetadata?: DngMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -58,6 +64,8 @@ Exif metadata.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ImageMetadata-exifMetadata?: ExifMetadata--><!--Device-ImageMetadata-exifMetadata?: ExifMetadata-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gifMetadata
@@ -73,6 +81,8 @@ Gif metadata.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ImageMetadata-gifMetadata?: GifMetadata--><!--Device-ImageMetadata-gifMetadata?: GifMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -90,6 +100,8 @@ Heifs metadata.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ImageMetadata-heifsMetadata?: HeifsMetadata--><!--Device-ImageMetadata-heifsMetadata?: HeifsMetadata-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## jfifMetadata
@@ -105,6 +117,8 @@ Jfif metadata.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ImageMetadata-jfifMetadata?: JfifMetadata--><!--Device-ImageMetadata-jfifMetadata?: JfifMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -122,6 +136,8 @@ Huawei Camera metadata.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ImageMetadata-makerNoteHuaweiMetadata?: MakerNoteHuaweiMetadata--><!--Device-ImageMetadata-makerNoteHuaweiMetadata?: MakerNoteHuaweiMetadata-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## pngMetadata
@@ -137,6 +153,8 @@ Png metadata.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ImageMetadata-pngMetadata?: PngMetadata--><!--Device-ImageMetadata-pngMetadata?: PngMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -154,6 +172,8 @@ Tiff metadata.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ImageMetadata-tiffMetadata?: TiffMetadata--><!--Device-ImageMetadata-tiffMetadata?: TiffMetadata-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## webPMetadata
@@ -170,6 +190,8 @@ WebP metadata.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ImageMetadata-webPMetadata?: WebPMetadata--><!--Device-ImageMetadata-webPMetadata?: WebPMetadata-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## xmpMetadata
@@ -185,6 +207,8 @@ XMP metadata.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ImageMetadata-xmpMetadata?: XMPMetadata--><!--Device-ImageMetadata-xmpMetadata?: XMPMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

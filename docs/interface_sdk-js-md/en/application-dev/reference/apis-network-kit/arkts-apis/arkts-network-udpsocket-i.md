@@ -4,6 +4,8 @@ Defines a UDPSocket connection.
 
 **Since:** 10
 
+<!--Device-socket-export interface UDPSocket--><!--Device-socket-export interface UDPSocket-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -24,14 +26,16 @@ Binds the IP address and port number. The port number can be specified or random
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-UDPSocket-bind(address: NetAddress, callback: AsyncCallback<void>): void--><!--Device-UDPSocket-bind(address: NetAddress, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | NetAddress | Yes | Destination address. {@link NetAddress} |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of bind. |
+| address | [NetAddress](arkts-network-netaddress-i.md) | Yes | Destination address. {@link NetAddress} |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of bind. |
 
 **Error codes:**
 
@@ -73,19 +77,21 @@ Binds the IP address and port number. The port number can be specified or random
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-UDPSocket-bind(address: NetAddress): Promise<void>--><!--Device-UDPSocket-bind(address: NetAddress): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | NetAddress | Yes | Destination address. {@link NetAddress} |
+| address | [NetAddress](arkts-network-netaddress-i.md) | Yes | Destination address. {@link NetAddress} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -125,13 +131,15 @@ Closes a UDPSocket connection.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-UDPSocket-close(callback: AsyncCallback<void>): void--><!--Device-UDPSocket-close(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of close. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of close. |
 
 **Error codes:**
 
@@ -168,13 +176,15 @@ Closes a UDPSocket connection.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-UDPSocket-close(): Promise<void>--><!--Device-UDPSocket-close(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -207,13 +217,15 @@ Obtains the local address of a UDPSocket connection.
 
 **Since:** 24
 
+<!--Device-UDPSocket-getLocalAddress(): Promise<NetAddress>--><!--Device-UDPSocket-getLocalAddress(): Promise<NetAddress>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetAddress> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -260,13 +272,15 @@ Obtains the file descriptor of the UDPSocket.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-UDPSocket-getSocketFd(): Promise<int>--><!--Device-UDPSocket-getSocketFd(): Promise<int>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The promise returns the file descriptor of the UDP socket. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | The promise returns the file descriptor of the UDP socket. |
 
 **Error codes:**
 
@@ -311,13 +325,15 @@ Obtains the status of the UDPSocket connection.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-UDPSocket-getState(callback: AsyncCallback<SocketStateBase>): void--><!--Device-UDPSocket-getState(callback: AsyncCallback<SocketStateBase>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;SocketStateBase&gt; | Yes | the callback of getState. {@link SocketStateBase}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<SocketStateBase> | Yes | the callback of getState. {@link SocketStateBase}. |
 
 **Error codes:**
 
@@ -365,13 +381,15 @@ Obtains the status of the UDPSocket connection.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-UDPSocket-getState(): Promise<SocketStateBase>--><!--Device-UDPSocket-getState(): Promise<SocketStateBase>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SocketStateBase&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SocketStateBase> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -415,6 +433,8 @@ Cancels listening for message receiving events of the UDPSocket connection.
 
 **Since:** 11
 
+<!--Device-UDPSocket-off(type: 'message', callback?: Callback<SocketMessageInfo>): void--><!--Device-UDPSocket-off(type: 'message', callback?: Callback<SocketMessageInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -422,7 +442,7 @@ Cancels listening for message receiving events of the UDPSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Indicates Event name. |
-| callback | Callback&lt;SocketMessageInfo&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SocketMessageInfo> | No | the callback used to return the result. |
 
 **Example**
 
@@ -459,6 +479,8 @@ Cancels listening for data packet message events or close events of the UDPSocke
 
 **Since:** 10
 
+<!--Device-UDPSocket-off(type: 'listening' | 'close', callback?: Callback<void>): void--><!--Device-UDPSocket-off(type: 'listening' | 'close', callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -466,7 +488,7 @@ Cancels listening for data packet message events or close events of the UDPSocke
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'listening' \| 'close' | Yes | Indicates Event name. |
-| callback | Callback&lt;void&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | the callback used to return the result. |
 
 **Example**
 
@@ -502,6 +524,8 @@ Cancels listening for data packet message events or close events of the UDPSocke
 
 **Since:** 10
 
+<!--Device-UDPSocket-off(type: 'listening' | 'close', callback?: Callback<void>): void--><!--Device-UDPSocket-off(type: 'listening' | 'close', callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -509,7 +533,7 @@ Cancels listening for data packet message events or close events of the UDPSocke
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'listening' \| 'close' | Yes | Indicates Event name. |
-| callback | Callback&lt;void&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | the callback used to return the result. |
 
 **Example**
 
@@ -545,6 +569,8 @@ Cancels listening for error events of the UDPSocket connection.
 
 **Since:** 10
 
+<!--Device-UDPSocket-off(type: 'error', callback?: ErrorCallback): void--><!--Device-UDPSocket-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -552,7 +578,7 @@ Cancels listening for error events of the UDPSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Indicates Event name. |
-| callback | ErrorCallback | No | the callback used to return the result. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | the callback used to return the result. |
 
 **Example**
 
@@ -581,6 +607,8 @@ Listens for message receiving events of the UDPSocket connection.
 
 **Since:** 11
 
+<!--Device-UDPSocket-on(type: 'message', callback: Callback<SocketMessageInfo>): void--><!--Device-UDPSocket-on(type: 'message', callback: Callback<SocketMessageInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -588,7 +616,7 @@ Listens for message receiving events of the UDPSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Indicates Event name. |
-| callback | Callback&lt;SocketMessageInfo&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SocketMessageInfo> | Yes | the callback used to return the result. |
 
 **Example**
 
@@ -622,6 +650,8 @@ Listens for data packet message events or close events of the UDPSocket connecti
 
 **Since:** 10
 
+<!--Device-UDPSocket-on(type: 'listening' | 'close', callback: Callback<void>): void--><!--Device-UDPSocket-on(type: 'listening' | 'close', callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -629,7 +659,7 @@ Listens for data packet message events or close events of the UDPSocket connecti
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'listening' \| 'close' | Yes | Indicates Event name. |
-| callback | Callback&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | the callback used to return the result. |
 
 **Example**
 
@@ -657,6 +687,8 @@ Listens for data packet message events or close events of the UDPSocket connecti
 
 **Since:** 10
 
+<!--Device-UDPSocket-on(type: 'listening' | 'close', callback: Callback<void>): void--><!--Device-UDPSocket-on(type: 'listening' | 'close', callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -664,7 +696,7 @@ Listens for data packet message events or close events of the UDPSocket connecti
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'listening' \| 'close' | Yes | Indicates Event name. |
-| callback | Callback&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | the callback used to return the result. |
 
 **Example**
 
@@ -692,6 +724,8 @@ Listens for error events of the UDPSocket connection.
 
 **Since:** 10
 
+<!--Device-UDPSocket-on(type: 'error', callback: ErrorCallback): void--><!--Device-UDPSocket-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -699,7 +733,7 @@ Listens for error events of the UDPSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Indicates Event name. |
-| callback | ErrorCallback | Yes | the callback used to return the result. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | the callback used to return the result. |
 
 **Example**
 
@@ -726,14 +760,16 @@ Sends data over a UDPSocket connection.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-UDPSocket-send(options: UDPSendOptions, callback: AsyncCallback<void>): void--><!--Device-UDPSocket-send(options: UDPSendOptions, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | UDPSendOptions | Yes | Optional parameters {@link UDPSendOptions}. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of send. |
+| options | [UDPSendOptions](arkts-network-udpsendoptions-i.md) | Yes | Optional parameters {@link UDPSendOptions}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of send. |
 
 **Error codes:**
 
@@ -845,19 +881,21 @@ Sends data over a UDPSocket connection.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-UDPSocket-send(options: UDPSendOptions): Promise<void>--><!--Device-UDPSocket-send(options: UDPSendOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | UDPSendOptions | Yes | Optional parameters {@link UDPSendOptions}. |
+| options | [UDPSendOptions](arkts-network-udpsendoptions-i.md) | Yes | Optional parameters {@link UDPSendOptions}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -963,14 +1001,16 @@ Sets other attributes of the UDPSocket connection.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-UDPSocket-setExtraOptions(options: UDPExtraOptions, callback: AsyncCallback<void>): void--><!--Device-UDPSocket-setExtraOptions(options: UDPExtraOptions, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | UDPExtraOptions | Yes | Optional parameters {@link UDPExtraOptions}. |
-| callback | AsyncCallback&lt;void&gt; | Yes |  |
+| options | [UDPExtraOptions](arkts-network-udpextraoptions-i.md) | Yes | Optional parameters {@link UDPExtraOptions}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes |  |
 
 **Error codes:**
 
@@ -1027,19 +1067,21 @@ Sets other attributes of the UDPSocket connection.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-UDPSocket-setExtraOptions(options: UDPExtraOptions): Promise<void>--><!--Device-UDPSocket-setExtraOptions(options: UDPExtraOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | UDPExtraOptions | Yes | Optional parameters {@link UDPExtraOptions}. |
+| options | [UDPExtraOptions](arkts-network-udpextraoptions-i.md) | Yes | Optional parameters {@link UDPExtraOptions}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

@@ -12,10 +12,11 @@ import { securityLabel } from '@kit.CoreFileKit';
 function setSecurityLabel(path: string, type: DataLevel): Promise<void>
 ```
 
-Sets the data security level for a file or directory. The level can only be adjusted from low to high, or set to
-the same level. This API uses a promise to return the result.
+Sets the data security level for a file or directory. The level can only be adjusted from low to high, or set to the same level. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-securityLabel-function setSecurityLabel(path: string, type: DataLevel): Promise<void>--><!--Device-securityLabel-function setSecurityLabel(path: string, type: DataLevel): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -24,13 +25,13 @@ the same level. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | File path. |
-| type | DataLevel | Yes | Data security level. The value can only be **s0**, **s1**, **s2**, **s3**, or **s4**. |
+| type | [DataLevel](arkts-corefile-datalevel-t.md) | Yes | Data security level. The value can only be **s0**, **s1**, **s2**, **s3**, or **s4**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -65,10 +66,11 @@ securityLabel.setSecurityLabel(filePath, "s0").then(() => {
 function setSecurityLabel(path: string, type: DataLevel, callback: AsyncCallback<void>): void
 ```
 
-Sets the data security level for a file or directory. The level can only be adjusted from low to high, or set to
-the same level. This API uses an asynchronous callback to return the result.
+Sets the data security level for a file or directory. The level can only be adjusted from low to high, or set to the same level. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-securityLabel-function setSecurityLabel(path: string, type: DataLevel, callback: AsyncCallback<void>): void--><!--Device-securityLabel-function setSecurityLabel(path: string, type: DataLevel, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -77,8 +79,8 @@ the same level. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | File path. |
-| type | DataLevel | Yes | Data security level. The value can only be **s0**, **s1**, **s2**, **s3**, or **s4**. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the security level. |
+| type | [DataLevel](arkts-corefile-datalevel-t.md) | Yes | Data security level. The value can only be **s0**, **s1**, **s2**, **s3**, or **s4**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the security level. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Describes the scanned WiFi information.
 
 **Since:** 10
 
+<!--Device-geoLocationManager-export interface WifiScanInfo--><!--Device-geoLocationManager-export interface WifiScanInfo-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ WiFi bssid(MAC): the length is 6.
 
 **Since:** 10
 
+<!--Device-WifiScanInfo-bssid: string--><!--Device-WifiScanInfo-bssid: string-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Frequency
 **Type:** number
 
 **Since:** 10
+
+<!--Device-WifiScanInfo-frequency: int--><!--Device-WifiScanInfo-frequency: int-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -58,6 +64,8 @@ Received signal strength indicator (RSSI).
 
 **Since:** 10
 
+<!--Device-WifiScanInfo-rssi: int--><!--Device-WifiScanInfo-rssi: int-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
@@ -74,6 +82,8 @@ WiFi SSID: the maximum length is 32.
 
 **Since:** 10
 
+<!--Device-WifiScanInfo-ssid: string--><!--Device-WifiScanInfo-ssid: string-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
@@ -89,6 +99,8 @@ Time stamp.
 **Type:** number
 
 **Since:** 10
+
+<!--Device-WifiScanInfo-timestamp: long--><!--Device-WifiScanInfo-timestamp: long-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 

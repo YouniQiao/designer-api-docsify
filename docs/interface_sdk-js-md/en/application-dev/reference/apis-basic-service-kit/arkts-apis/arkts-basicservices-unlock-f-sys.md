@@ -16,6 +16,8 @@ Unlock the screen.
 
 **Since:** 11
 
+<!--Device-screenLock-function unlock(callback: AsyncCallback<boolean>): void--><!--Device-screenLock-function unlock(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Unlock the screen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | the callback of unlock. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | the callback of unlock. |
 
 **Error codes:**
 
@@ -61,6 +63,8 @@ Unlock the screen.
 
 **Since:** 11
 
+<!--Device-screenLock-function unlock(): Promise<boolean>--><!--Device-screenLock-function unlock(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 **System API:** This is a system API.
@@ -69,7 +73,7 @@ Unlock the screen.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | the promise returned by the function. |
 
 **Error codes:**
 

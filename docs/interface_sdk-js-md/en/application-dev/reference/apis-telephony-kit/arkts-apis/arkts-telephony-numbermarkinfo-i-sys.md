@@ -4,6 +4,8 @@ Indicates the mark information of the phone number.
 
 **Since:** 12
 
+<!--Device-call-export interface NumberMarkInfo--><!--Device-call-export interface NumberMarkInfo-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Indicates if this is a number mark from cloud.
 
 **Since:** 12
 
+<!--Device-NumberMarkInfo-isCloud?: boolean--><!--Device-NumberMarkInfo-isCloud?: boolean-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Indicates the content of number mark.
 **Type:** string
 
 **Since:** 12
+
+<!--Device-NumberMarkInfo-markContent?: string--><!--Device-NumberMarkInfo-markContent?: string-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -58,6 +64,8 @@ Indicates the count of number mark.
 
 **Since:** 12
 
+<!--Device-NumberMarkInfo-markCount?: int--><!--Device-NumberMarkInfo-markCount?: int-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Indicates the details of number mark.
 **Type:** string
 
 **Since:** 14
+
+<!--Device-NumberMarkInfo-markDetails?: string--><!--Device-NumberMarkInfo-markDetails?: string-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -90,6 +100,8 @@ Indicates the source of number mark.
 
 **Since:** 12
 
+<!--Device-NumberMarkInfo-markSource?: string--><!--Device-NumberMarkInfo-markSource?: string-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -105,6 +117,8 @@ Indicates the type of number mark.
 **Type:** MarkType
 
 **Since:** 12
+
+<!--Device-NumberMarkInfo-markType: MarkType--><!--Device-NumberMarkInfo-markType: MarkType-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 

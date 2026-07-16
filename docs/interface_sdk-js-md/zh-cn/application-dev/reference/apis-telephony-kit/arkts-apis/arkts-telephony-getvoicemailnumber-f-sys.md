@@ -1,5 +1,11 @@
 # getVoiceMailNumber（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## getVoiceMailNumber
 
 ```TypeScript
@@ -12,6 +18,8 @@ Obtains the voice mailbox number of the SIM card in a specified slot.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getVoiceMailNumber(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getVoiceMailNumber(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -21,7 +29,7 @@ Obtains the voice mailbox number of the SIM card in a specified slot.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from {@code 0} to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;string&gt; | 是 | Indicates the callback for getting the voice mailbox number;returns an empty string if no voice mailbox number is written into the SIM card. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | Indicates the callback for getting the voice mailbox number;returns an empty string if no voice mailbox number is written into the SIM card. |
 
 **错误码：**
 
@@ -61,6 +69,8 @@ Obtains the voice mailbox number of the SIM card in a specified slot.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getVoiceMailNumber(slotId: int): Promise<string>--><!--Device-sim-function getVoiceMailNumber(slotId: int): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -75,7 +85,7 @@ Obtains the voice mailbox number of the SIM card in a specified slot.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the voice mailbox number.returns an empty string if no voice mailbox number is written into the SIM card. |
+| Promise<string> | Returns the voice mailbox number.returns an empty string if no voice mailbox number is written into the SIM card. |
 
 **错误码：**
 

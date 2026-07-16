@@ -1,5 +1,11 @@
 # createDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+```
+
 ## createDeviceManager
 
 ```TypeScript
@@ -9,6 +15,8 @@ function createDeviceManager(bundleName: string): DeviceManager
 创建一个设备管理实例。设备管理实例是分布式设备管理方法的调用入口。用于获取可信设备和本地设备的相关信息。
 
 **起始版本：** 10
+
+<!--Device-distributedDeviceManager-function createDeviceManager(bundleName: string): DeviceManager--><!--Device-distributedDeviceManager-function createDeviceManager(bundleName: string): DeviceManager-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -22,7 +30,7 @@ function createDeviceManager(bundleName: string): DeviceManager
 
 | 类型 | 说明 |
 | --- | --- |
-| DeviceManager | 返回设备管理器对象实例。 |
+| [DeviceManager](arkts-distributedservice-devicemanager-i.md) | 返回设备管理器对象实例。 |
 
 **错误码：**
 

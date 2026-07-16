@@ -12,14 +12,13 @@ import { application } from '@kit.AbilityKit';
 export function exitMasterProcessRole(): Promise<void>
 ```
 
-Relinquishes the [master-process](../../../../application-models/ability-terminology.md#master-process) role from the
-current process. This API uses a promise to return the result.
-This API can be properly called only on 2-in-1 devices and tablets. If it is called on other device types, error
-code 801 is returned.
+Relinquishes the [master-process](../../../../application-models/ability-terminology.md#master-process) role from the current process. This API uses a promise to return the result.This API can be properly called only on 2-in-1 devices and tablets. If it is called on other device types, error code 801 is returned.
 
 **Since:** 21
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-application-export function exitMasterProcessRole(): Promise<void>--><!--Device-application-export function exitMasterProcessRole(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -27,7 +26,7 @@ code 801 is returned.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

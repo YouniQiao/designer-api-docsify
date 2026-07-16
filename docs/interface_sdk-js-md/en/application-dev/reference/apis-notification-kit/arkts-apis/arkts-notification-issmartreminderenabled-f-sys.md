@@ -14,12 +14,13 @@ function isSmartReminderEnabled(deviceType: string): Promise<boolean>
 
 Obtains a smart reminder for cross-device collaboration. This API uses a promise to return the result.
 
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,
-error code 801 is returned.
+This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function isSmartReminderEnabled(deviceType: string): Promise<boolean>--><!--Device-notificationManager-function isSmartReminderEnabled(deviceType: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -35,7 +36,7 @@ error code 801 is returned.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result (**true**: enabled; **false**: disabled). |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result (**true**: enabled; **false**: disabled). |
 
 **Error codes:**
 

@@ -1,9 +1,10 @@
 # AnimatableArithmetic
 
-该接口定义非number数据类型的动画运算规则。对非number类型的数据（如数组、结构体、颜色等）做动画，需要实现AnimatableArithmetic\<T\>接口中加法、减法、乘法和判断相等函数，使得该数据能参与动画的插值运算
-和识别该数据是否发生改变。即定义它们为实现了AnimatableArithmetic\<T\>接口的类型。
+该接口定义非number数据类型的动画运算规则。对非number类型的数据（如数组、结构体、颜色等）做动画，需要实现AnimatableArithmetic\<T\>接口中加法、减法、乘法和判断相等函数，使得该数据能参与动画的插值运算和识别该数据是否发生改变。即定义它们为实现了AnimatableArithmetic\<T\>接口的类型。
 
 **起始版本：** 10
+
+<!--Device-unnamed-declare interface AnimatableArithmetic<T>--><!--Device-unnamed-declare interface AnimatableArithmetic<T>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,7 +20,9 @@ equals(rhs: AnimatableArithmetic<T>): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AnimatableArithmetic-equals(rhs: AnimatableArithmetic<T>): boolean--><!--Device-AnimatableArithmetic-equals(rhs: AnimatableArithmetic<T>): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,7 +30,7 @@ equals(rhs: AnimatableArithmetic<T>): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rhs | AnimatableArithmetic&lt;T&gt; | 是 | 和自身比较相等的另一个数据对象。 |
+| rhs | [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)<T> | 是 | 和自身比较相等的另一个数据对象。 |
 
 **返回值：**
 
@@ -47,7 +50,9 @@ multiply(scale: number): AnimatableArithmetic<T>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AnimatableArithmetic-multiply(scale: number): AnimatableArithmetic<T>--><!--Device-AnimatableArithmetic-multiply(scale: number): AnimatableArithmetic<T>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,7 +66,7 @@ multiply(scale: number): AnimatableArithmetic<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| AnimatableArithmetic&lt;T&gt; | 乘法运算的结果。 |
+| [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)<T> | 乘法运算的结果。 |
 
 ## plus
 
@@ -75,7 +80,9 @@ plus(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AnimatableArithmetic-plus(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>--><!--Device-AnimatableArithmetic-plus(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -83,13 +90,13 @@ plus(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rhs | AnimatableArithmetic&lt;T&gt; | 是 | 加法运算的对象。 |
+| rhs | [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)<T> | 是 | 加法运算的对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AnimatableArithmetic&lt;T&gt; | 加法运算的结果。 |
+| [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)<T> | 加法运算的结果。 |
 
 ## subtract
 
@@ -103,7 +110,9 @@ subtract(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AnimatableArithmetic-subtract(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>--><!--Device-AnimatableArithmetic-subtract(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -111,11 +120,11 @@ subtract(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rhs | AnimatableArithmetic&lt;T&gt; | 是 | 减法运算的对象。 |
+| rhs | [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)<T> | 是 | 减法运算的对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AnimatableArithmetic&lt;T&gt; | 减法运算的结果。 |
+| [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)<T> | 减法运算的结果。 |
 

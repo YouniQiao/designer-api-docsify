@@ -12,17 +12,15 @@ import { notificationManager } from '@kit.NotificationKit';
 function openNotificationSettingsWithResult(context: UIAbilityContext): Promise<NotificationSetting>
 ```
 
-Opens the notification settings page of the application, which is presented in a semi-modal window
-and can be used to set notification switches, notification reminder methods, etc. This API uses
-a promise to return the user-set status when the semi-modal window is closed.
+Opens the notification settings page of the application, which is presented in a semi-modal window and can be used to set notification switches, notification reminder methods, etc. This API uses a promise to return the user-set status when the semi-modal window is closed.
 
-Unlike openNotificationSettings, this API returns a NotificationSetting object when the semi-modal
-window is closed. You can determine whether the user has enabled the notification permission
-based on the returned result, thereby deciding subsequent logic.
+Unlike openNotificationSettings, this API returns a NotificationSetting object when the semi-modal window is closed. You can determine whether the user has enabled the notification permission based on the returned result, thereby deciding subsequent logic.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-notificationManager-function openNotificationSettingsWithResult(context: UIAbilityContext): Promise<NotificationSetting>--><!--Device-notificationManager-function openNotificationSettingsWithResult(context: UIAbilityContext): Promise<NotificationSetting>-End-->
 
 **System capability:** SystemCapability.Notification.NotificationSettings
 
@@ -30,13 +28,13 @@ based on the returned result, thereby deciding subsequent logic.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIAbilityContext | Yes | Ability context bound to the notification settings page. |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-t.md) | Yes | Ability context bound to the notification settings page. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NotificationSetting&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NotificationSetting> | Promise used to return the result. |
 
 **Error codes:**
 

@@ -1,5 +1,11 @@
 # setMultiScreenRelativePosition（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { screen } from '@kit.ArkUI';
+```
+
 ## setMultiScreenRelativePosition
 
 ```TypeScript
@@ -11,6 +17,10 @@ function setMultiScreenRelativePosition(mainScreenOptions: MultiScreenPositionOp
 
 **起始版本：** 13
 
+<!--Device-screen-function setMultiScreenRelativePosition(mainScreenOptions: MultiScreenPositionOptions,
+    secondaryScreenOptions: MultiScreenPositionOptions): Promise<void>--><!--Device-screen-function setMultiScreenRelativePosition(mainScreenOptions: MultiScreenPositionOptions,
+    secondaryScreenOptions: MultiScreenPositionOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -19,14 +29,14 @@ function setMultiScreenRelativePosition(mainScreenOptions: MultiScreenPositionOp
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mainScreenOptions | MultiScreenPositionOptions | 是 | 主屏的位置信息。 |
-| secondaryScreenOptions | MultiScreenPositionOptions | 是 | 扩展屏幕的位置信息。 |
+| mainScreenOptions | [MultiScreenPositionOptions](arkts-arkui-multiscreenpositionoptions-i-sys.md) | 是 | 主屏的位置信息。 |
+| secondaryScreenOptions | [MultiScreenPositionOptions](arkts-arkui-multiscreenpositionoptions-i-sys.md) | 是 | 扩展屏幕的位置信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

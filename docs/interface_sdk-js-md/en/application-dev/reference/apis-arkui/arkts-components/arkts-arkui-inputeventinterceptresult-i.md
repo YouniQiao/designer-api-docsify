@@ -1,9 +1,10 @@
 # InputEventInterceptResult
 
-Input event interception result interface, used by the listener callback
-[InputEventListener](arkts-arkui-inputeventlistener-t.md) to return the interception decision.
+Input event interception result interface, used by the listener callback [InputEventListener](arkts-arkui-inputeventlistener-t.md) to return the interception decision.
 
 **Since:** 26.0.0
+
+<!--Device-unnamed-declare interface InputEventInterceptResult--><!--Device-unnamed-declare interface InputEventInterceptResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,6 +27,8 @@ Input event interception action.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-InputEventInterceptResult-action: InputEventInterceptAction--><!--Device-InputEventInterceptResult-action: InputEventInterceptAction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

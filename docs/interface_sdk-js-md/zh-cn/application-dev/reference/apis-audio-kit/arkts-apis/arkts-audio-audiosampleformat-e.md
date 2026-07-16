@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+<!--Device-audio-enum AudioSampleFormat--><!--Device-audio-enum AudioSampleFormat-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## SAMPLE_FORMAT_INVALID
@@ -15,6 +17,8 @@ SAMPLE_FORMAT_INVALID = -1
 无效格式。
 
 **起始版本：** 8
+
+<!--Device-AudioSampleFormat-SAMPLE_FORMAT_INVALID = -1--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_INVALID = -1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -28,6 +32,8 @@ SAMPLE_FORMAT_U8 = 0
 
 **起始版本：** 8
 
+<!--Device-AudioSampleFormat-SAMPLE_FORMAT_U8 = 0--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_U8 = 0-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## SAMPLE_FORMAT_S16LE
@@ -39,6 +45,8 @@ SAMPLE_FORMAT_S16LE = 1
 带符号的16位整数，小尾数。
 
 **起始版本：** 8
+
+<!--Device-AudioSampleFormat-SAMPLE_FORMAT_S16LE = 1--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_S16LE = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -54,6 +62,8 @@ SAMPLE_FORMAT_S24LE = 2
 
 **起始版本：** 8
 
+<!--Device-AudioSampleFormat-SAMPLE_FORMAT_S24LE = 2--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_S24LE = 2-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## SAMPLE_FORMAT_S32LE
@@ -68,6 +78,8 @@ SAMPLE_FORMAT_S32LE = 3
 
 **起始版本：** 8
 
+<!--Device-AudioSampleFormat-SAMPLE_FORMAT_S32LE = 3--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_S32LE = 3-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## SAMPLE_FORMAT_F32LE
@@ -81,6 +93,8 @@ SAMPLE_FORMAT_F32LE = 4
 由于系统限制，该采样格式仅部分设备支持，请根据实际情况使用。
 
 **起始版本：** 9
+
+<!--Device-AudioSampleFormat-SAMPLE_FORMAT_F32LE = 4--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_F32LE = 4-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 

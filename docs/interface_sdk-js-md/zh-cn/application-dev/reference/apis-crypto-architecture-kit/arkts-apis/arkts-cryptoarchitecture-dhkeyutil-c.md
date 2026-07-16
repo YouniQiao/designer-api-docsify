@@ -4,9 +4,17 @@
 
 **起始版本：** 11
 
+<!--Device-cryptoFramework-class DHKeyUtil--><!--Device-cryptoFramework-class DHKeyUtil-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API版本11：SystemCapability.Security.CryptoFramework
+
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+```
 
 ## genDHCommonParamsSpec
 
@@ -14,12 +22,13 @@
 static genDHCommonParamsSpec(pLen: number, skLen?: number): DHCommonParamsSpec
 ```
 
-根据素数P的长度和私钥长度（单位为bit）生成DH公共密钥参数。详见
-[DH密钥生成规格](../../../../security/CryptoArchitectureKit/crypto-asym-key-generation-conversion-spec.md#dh)。
+根据素数P的长度和私钥长度（单位为bit）生成DH公共密钥参数。详见[DH密钥生成规格](../../../../security/CryptoArchitectureKit/crypto-asym-key-generation-conversion-spec.md#dh)。
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DHKeyUtil-static genDHCommonParamsSpec(pLen: int, skLen?: int): DHCommonParamsSpec--><!--Device-DHKeyUtil-static genDHCommonParamsSpec(pLen: int, skLen?: int): DHCommonParamsSpec-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -36,7 +45,7 @@ static genDHCommonParamsSpec(pLen: number, skLen?: number): DHCommonParamsSpec
 
 | 类型 | 说明 |
 | --- | --- |
-| DHCommonParamsSpec | 返回DH公共密钥参数。 |
+| [DHCommonParamsSpec](arkts-cryptoarchitecture-dhcommonparamsspec-i.md) | 返回DH公共密钥参数。 |
 
 **错误码：**
 

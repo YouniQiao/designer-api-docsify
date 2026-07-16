@@ -1,9 +1,10 @@
 # FaceAuthManager (System API)
 
-Provides APIs for facial authentication management. It provides management features during face enrollment,
-including setting the surface ID of the face preview page.
+Provides APIs for facial authentication management. It provides management features during face enrollment,including setting the surface ID of the face preview page.
 
 **Since:** 9
+
+<!--Device-faceAuth-class FaceAuthManager--><!--Device-faceAuth-class FaceAuthManager-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.FaceAuth
 
@@ -25,6 +26,8 @@ Creates a face authentication manager object.
 
 **Since:** 9
 
+<!--Device-FaceAuthManager-constructor()--><!--Device-FaceAuthManager-constructor()-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.FaceAuth
 
 **System API:** This is a system API.
@@ -44,14 +47,13 @@ let faceAuthManager = new faceAuth.FaceAuthManager();
 setSurfaceId(surfaceId: string): void
 ```
 
-Sets the surface ID of the face preview page during face enrollment. This API must be used together with
-[addCredential](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-useridentitymanager-c-sys.md#addcredential-1) to display the face
-preview page through the surface of the
-[getXComponentSurfaceId](../../apis-arkui/arkts-components/arkts-arkui-xcomponentcontroller-c.md#getxcomponentsurfaceid-1) component.
+Sets the surface ID of the face preview page during face enrollment. This API must be used together with [addCredential](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-useridentitymanager-c-sys.md#addcredential-1) to display the face preview page through the surface of the [getXComponentSurfaceId](../../apis-arkui/arkts-components/arkts-arkui-xcomponentcontroller-c.md#getxcomponentsurfaceid-1) component.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
+
+<!--Device-FaceAuthManager-setSurfaceId(surfaceId: string): void--><!--Device-FaceAuthManager-setSurfaceId(surfaceId: string): void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.FaceAuth
 
@@ -61,7 +63,7 @@ preview page through the surface of the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| surfaceId | string | Yes | ID of the surface held by[XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponentcontroller-c.md#getxcomponentsurfaceid-1). This ID is used to display the face previewpage during face enrollment. It must be obtained using the **getXComponentSurfaceId** method of**XComponentController**. |
+| surfaceId | string | Yes | ID of the surface held by [XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponentcontroller-c.md#getxcomponentsurfaceid-1). This ID is used to display the face preview page during face enrollment. It must be obtained using the **getXComponentSurfaceId** method of **XComponentController**. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Enumerates the focus states.
 
 **Since:** 10
 
+<!--Device-camera-enum FocusState--><!--Device-camera-enum FocusState-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## FOCUS_STATE_SCAN
@@ -17,6 +19,8 @@ Focusing.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-FocusState-FOCUS_STATE_SCAN = 0--><!--Device-FocusState-FOCUS_STATE_SCAN = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -32,6 +36,8 @@ Focused.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-FocusState-FOCUS_STATE_FOCUSED = 1--><!--Device-FocusState-FOCUS_STATE_FOCUSED = 1-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## FOCUS_STATE_UNFOCUSED
@@ -45,6 +51,8 @@ Unfocused.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-FocusState-FOCUS_STATE_UNFOCUSED = 2--><!--Device-FocusState-FOCUS_STATE_UNFOCUSED = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

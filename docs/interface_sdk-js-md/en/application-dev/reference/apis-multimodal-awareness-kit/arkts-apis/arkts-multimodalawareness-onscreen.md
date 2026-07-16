@@ -2,10 +2,12 @@
 
 This module provides the onscreen awareness capability.
 
-> **NOTE**
+> **NOTE**  
 >
 
 **Since:** 20
+
+<!--Device-unnamed-declare namespace onScreen--><!--Device-unnamed-declare namespace onScreen-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -25,7 +27,7 @@ import { onScreen } from '@kit.MultimodalAwarenessKit';
 | [apperceive](arkts-multimodalawareness-apperceive-f-sys.md#apperceive-1) | Proactively triggers screen content awareness to obtain the screen content for snapshot analysis. |
 | [capture](arkts-multimodalawareness-capture-f-sys.md#capture-1) | Proactively triggers screen content awareness to obtain page information. |
 | [getPageContent](arkts-multimodalawareness-getpagecontent-f-sys.md#getpagecontent-1) | Obtains the onscreen content when a window is displayed on the screen. |
-| [interact](arkts-multimodalawareness-interact-f-sys.md#interact-1) | Proactively triggers screen behavior interaction to identify screen behaviors and return behavior receipts. For <br> example, after a link is clicked, the system accurately jumps to the specified paragraph and <br> highlights the text based on the receipt information. |
+| [interact](arkts-multimodalawareness-interact-f-sys.md#interact-1) | Proactively triggers screen behavior interaction to identify screen behaviors and return behavior receipts. For<br> example, after a link is clicked, the system accurately jumps to the specified paragraph and<br> highlights the text based on the receipt information. |
 | [offReadingScreenPermissionListener](arkts-multimodalawareness-offreadingscreenpermissionlistener-f-sys.md#offreadingscreenpermissionlistener-1) | Disables the screen content access permission monitoring. |
 | [onReadingScreenPermissionListener](arkts-multimodalawareness-onreadingscreenpermissionlistener-f-sys.md#onreadingscreenpermissionlistener-1) | Enables the screen content access permission monitoring and returns the permission status in real time. |
 | [sendControlEvent](arkts-multimodalawareness-sendcontrolevent-f-sys.md#sendcontrolevent-1) | If the target window is displayed on the screen, you can use this API to send screen control events based on the paragraph information obtained via [onScreen.getPageContent](arkts-multimodalawareness-getpagecontent-f-sys.md#getpagecontent-1). |

@@ -12,6 +12,8 @@ Called when auto fill request is failed to be handled.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-autoFillManager-type OnFillFailureFn = (result: FillFailureResult) => void--><!--Device-autoFillManager-type OnFillFailureFn = (result: FillFailureResult) => void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Parameters:**

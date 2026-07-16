@@ -4,7 +4,15 @@ Media Stream. AVPlayer use this for mediaData access, current version only suppo
 
 **起始版本：** 19
 
+<!--Device-unnamed-interface MediaStream--><!--Device-unnamed-interface MediaStream-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
+
+## 导入模块
+
+```TypeScript
+import { media } from '@kit.MediaKit';
+```
 
 ## bitrate
 
@@ -18,7 +26,9 @@ biterate of this mediaStream.
 
 **起始版本：** 19
 
-**元服务API：** 从API版本19开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaStream-bitrate: int--><!--Device-MediaStream-bitrate: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -34,7 +44,9 @@ video height.
 
 **起始版本：** 19
 
-**元服务API：** 从API版本19开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaStream-height: int--><!--Device-MediaStream-height: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -50,7 +62,9 @@ url for this mediaStream
 
 **起始版本：** 19
 
-**元服务API：** 从API版本19开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaStream-url: string--><!--Device-MediaStream-url: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -66,7 +80,9 @@ video width.
 
 **起始版本：** 19
 
-**元服务API：** 从API版本19开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaStream-width: int--><!--Device-MediaStream-width: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 

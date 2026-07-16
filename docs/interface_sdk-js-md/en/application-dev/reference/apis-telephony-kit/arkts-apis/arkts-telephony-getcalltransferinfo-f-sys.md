@@ -18,6 +18,8 @@ Get call forwarding information.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-call-function getCallTransferInfo(slotId: int, type: CallTransferType, callback: AsyncCallback<CallTransferResult>): void--><!--Device-call-function getCallTransferInfo(slotId: int, type: CallTransferType, callback: AsyncCallback<CallTransferResult>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -27,8 +29,8 @@ Get call forwarding information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| type | CallTransferType | Yes | Indicates which type of call forwarding to obtain. |
-| callback | AsyncCallback&lt;CallTransferResult&gt; | Yes | Indicates the callback for getting the call forwarding status. |
+| type | [CallTransferType](arkts-telephony-calltransfertype-e-sys.md) | Yes | Indicates which type of call forwarding to obtain. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<CallTransferResult> | Yes | Indicates the callback for getting the call forwarding status. |
 
 **Error codes:**
 
@@ -70,6 +72,8 @@ Get call forwarding information.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-call-function getCallTransferInfo(slotId: int, type: CallTransferType): Promise<CallTransferResult>--><!--Device-call-function getCallTransferInfo(slotId: int, type: CallTransferType): Promise<CallTransferResult>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -79,13 +83,13 @@ Get call forwarding information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| type | CallTransferType | Yes | Indicates which type of call forwarding to obtain. |
+| type | [CallTransferType](arkts-telephony-calltransfertype-e-sys.md) | Yes | Indicates which type of call forwarding to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CallTransferResult&gt; | Returns the call forwarding status. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CallTransferResult> | Returns the call forwarding status. |
 
 **Error codes:**
 

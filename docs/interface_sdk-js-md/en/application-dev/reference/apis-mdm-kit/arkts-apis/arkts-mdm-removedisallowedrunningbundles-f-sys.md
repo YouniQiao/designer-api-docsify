@@ -12,8 +12,7 @@ import { applicationManager } from '@kit.MDMKit';
 function removeDisallowedRunningBundles(admin: Want, appIds: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-Removes an application from the applications that are not allowed to run under the current user. This API uses an
-asynchronous callback to return the result.
+Removes an application from the applications that are not allowed to run under the current user. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -25,6 +24,8 @@ asynchronous callback to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function removeDisallowedRunningBundles(admin: Want, appIds: Array<string>, callback: AsyncCallback<void>): void--><!--Device-applicationManager-function removeDisallowedRunningBundles(admin: Want, appIds: Array<string>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -33,9 +34,9 @@ asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| appIds | Array&lt;string&gt; | Yes | Application IDs.<br>Note: Since API version 21, elements in the array can use**appId** and **appIdentifier**. Only the input **appId** or **appIdentifier** is removed. **appIdentifier** or**appId** of the same app will not be removed. In API version 20 and earlier versions, only **appId** can betransferred. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| appIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Application IDs.<br>Note: Since API version 21, elements in the array can use **appId** and **appIdentifier**. Only the input **appId** or **appIdentifier** is removed. **appIdentifier** or **appId** of the same app will not be removed. In API version 20 and earlier versions, only **appId** can be transferred. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback invoked to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -78,8 +79,7 @@ applicationManager.removeDisallowedRunningBundles(wantTemp, appIds, (err) => {
 function removeDisallowedRunningBundles(admin: Want, appIds: Array<string>, userId: number, callback: AsyncCallback<void>): void
 ```
 
-Removes an application from the applications that are not allowed to run under the current user (specified by
-**userId**). This API uses an asynchronous callback to return the result.
+Removes an application from the applications that are not allowed to run under the current user (specified by **userId**). This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -91,6 +91,8 @@ Removes an application from the applications that are not allowed to run under t
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function removeDisallowedRunningBundles(admin: Want, appIds: Array<string>, userId: number, callback: AsyncCallback<void>): void--><!--Device-applicationManager-function removeDisallowedRunningBundles(admin: Want, appIds: Array<string>, userId: number, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -99,10 +101,10 @@ Removes an application from the applications that are not allowed to run under t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| appIds | Array&lt;string&gt; | Yes | Application IDs.<br>Note: Since API version 21, elements in the array can use**appId** and **appIdentifier**. Only the input **appId** or **appIdentifier** is removed. **appIdentifier** or**appId** of the same app will not be removed. In API version 20 and earlier versions, only **appId** can betransferred. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| appIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Application IDs.<br>Note: Since API version 21, elements in the array can use **appId** and **appIdentifier**. Only the input **appId** or **appIdentifier** is removed. **appIdentifier** or **appId** of the same app will not be removed. In API version 20 and earlier versions, only **appId** can be transferred. |
 | userId | number | Yes | User ID, which must be greater than or equal to 0. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback invoked to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -145,8 +147,7 @@ applicationManager.removeDisallowedRunningBundles(wantTemp, appIds, 100, (err) =
 function removeDisallowedRunningBundles(admin: Want, appIds: Array<string>, userId?: number): Promise<void>
 ```
 
-Removes an application from the applications that are not allowed to run under the current or specified user. This
-API uses a promise to return the result.
+Removes an application from the applications that are not allowed to run under the current or specified user. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -158,6 +159,8 @@ API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function removeDisallowedRunningBundles(admin: Want, appIds: Array<string>, userId?: number): Promise<void>--><!--Device-applicationManager-function removeDisallowedRunningBundles(admin: Want, appIds: Array<string>, userId?: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -166,15 +169,15 @@ API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| appIds | Array&lt;string&gt; | Yes | Application IDs.<br>Note: Since API version 21, elements in the array can use**appId** and **appIdentifier**. Only the input **appId** or **appIdentifier** is removed. **appIdentifier** or**appId** of the same app will not be removed. In API version 20 and earlier versions, only **appId** can betransferred. |
-| userId | number | No | User ID, which must be greater than or equal to 0.<br> - If **userId** is passed in, theapplications cannot be run by the specified user.<br> - If **userId** is not passed in, the applications cannotbe run by the current user. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| appIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Application IDs.<br>Note: Since API version 21, elements in the array can use **appId** and **appIdentifier**. Only the input **appId** or **appIdentifier** is removed. **appIdentifier** or **appId** of the same app will not be removed. In API version 20 and earlier versions, only **appId** can be transferred. |
+| userId | number | No | User ID, which must be greater than or equal to 0.<br> - If **userId** is passed in, the applications cannot be run by the specified user.<br> - If **userId** is not passed in, the applications cannot be run by the current user. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. An error object is thrown when an application that is notallowed to run fails to be removed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. An error object is thrown when an application that is not allowed to run fails to be removed. |
 
 **Error codes:**
 

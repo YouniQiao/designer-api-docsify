@@ -1,33 +1,22 @@
 # AccessibilityOptions
 
-Defines the accessibility options of the suffix icon.
+Defines the struct of AccessibilityOptions.
 
 **Since:** 14
 
+<!--Device-unnamed-declare interface AccessibilityOptions--><!--Device-unnamed-declare interface AccessibilityOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Modules to Import
+## accessibilityPreferred
 
 ```TypeScript
-import { SuffixIconOptions, CloseOptions, ChipSymbolGlyphOptions, Chip, AccessibilitySelectedType, LabelMarginOptions, LabelOptions, PrefixIconOptions, IconCommonOptions, ChipOptions, ChipSuffixSymbolGlyphOptions, ChipSize, AccessibilityOptions } from '@kit.ArkUI';
+accessibilityPreferred?: boolean
 ```
 
-## accessibilityDescription
+accessibilityPreferred - Should accessibilityText be prioritized when concatenating child component strings.
 
-```TypeScript
-accessibilityDescription?: ResourceStr
-```
-
-Accessibility description. You can provide comprehensive text explanations to help users understand the operation
-they are about to perform and its consequences, especially when these cannot be inferred from the component's
-attributes and accessibility text alone. If a component contains both text information and the accessible
-description, the text is announced first and then the accessible description, when the component is selected.
-
-Default value: **''**
-
-If the value is **undefined**, the default value is used.
-
-**Type:** ResourceStr
+**Type:** boolean
 
 **Since:** 14
 
@@ -35,66 +24,87 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-AccessibilityOptions-accessibilityPreferred?: boolean--><!--Device-AccessibilityOptions-accessibilityPreferred?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## accessibilityLevel
+## actionControllerId
 
 ```TypeScript
-accessibilityLevel?: string
+actionControllerId?: string
 ```
 
-Accessibility level. It determines whether the component can be recognized by accessibility services.
-
-The options are as follows:
-
-**"auto"**: It is treated as "yes" by the system.
-
-**"yes"**: The component can be recognized by accessibility services.
-
-**"no"**: The component cannot be recognized by accessibility services.
-
-**"no-hide-descendants"**: Neither the component nor its child components can be recognized by accessibility
-services.
-
-Default value: **"auto"**
-
-If the value is **undefined**, the default value is used.
+actionControllerId - the first component of a specific id found within the composition defined by accessibility group will take over part of the accessibility action of the composition
 
 **Type:** string
 
-**Default:** "auto"
-
-**Since:** 14
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-AccessibilityOptions-actionControllerId?: string--><!--Device-AccessibilityOptions-actionControllerId?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## accessibilityText
+## actionControllerRoleType
 
 ```TypeScript
-accessibilityText?: ResourceStr
+actionControllerRoleType?: AccessibilityRoleType
 ```
 
-Accessibility text, that is, accessible label name. If a component does not contain text information, it will not
-be announced by the screen reader when selected. In this case, the screen reader user cannot know which component
-is selected. To solve this problem, you can set accessibility text for components without text information. When
-such a component is selected, the screen reader announces the specified accessibility text, informing the user
-which component is selected.
+actionControllerRoleType - the first component of a specific type found within the composition defined by accessibility group will take over part of the accessibility action of the composition
 
-Default value: **''**
+**Type:** AccessibilityRoleType
 
-If the value is **undefined**, the default value is used.
-
-**Type:** ResourceStr
-
-**Since:** 14
+**Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-AccessibilityOptions-actionControllerRoleType?: AccessibilityRoleType--><!--Device-AccessibilityOptions-actionControllerRoleType?: AccessibilityRoleType-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## stateControllerId
+
+```TypeScript
+stateControllerId?: string
+```
+
+stateControllerId - the first component of a specific id found within the composition defined by accessibility group will take over the state attributes and announcement of the composition
+
+**Type:** string
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-AccessibilityOptions-stateControllerId?: string--><!--Device-AccessibilityOptions-stateControllerId?: string-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## stateControllerRoleType
+
+```TypeScript
+stateControllerRoleType?: AccessibilityRoleType
+```
+
+stateControllerRoleType - the first component of a specific type found within the composition defined by accessibility group will take over the state attributes and announcement of the composition
+
+**Type:** AccessibilityRoleType
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-AccessibilityOptions-stateControllerRoleType?: AccessibilityRoleType--><!--Device-AccessibilityOptions-stateControllerRoleType?: AccessibilityRoleType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

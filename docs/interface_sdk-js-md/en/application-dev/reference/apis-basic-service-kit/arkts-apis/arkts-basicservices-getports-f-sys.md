@@ -12,14 +12,15 @@ import { usbManager } from '@kit.BasicServicesKit';
 function getPorts(): Array<USBPort>
 ```
 
-Obtains the list of all physical USB ports. When the developer mode is disabled, **undefined** may be returned if
-no device is connected. Check whether the return value of the API is empty.
+Obtains the list of all physical USB ports. When the developer mode is disabled, **undefined** may be returned if no device is connected. Check whether the return value of the API is empty.
 
 **Since:** 9
 
 **Deprecated since:** 12
 
 **Substitutes:** [getPortList()](arkts-basicservices-getportlist-f-sys.md#getportlist-1)
+
+<!--Device-usbManager-function getPorts(): Array<USBPort>--><!--Device-usbManager-function getPorts(): Array<USBPort>-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -29,5 +30,5 @@ no device is connected. Check whether the return value of the API is empty.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;USBPort&gt; | List of physical USB ports. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<USBPort> | List of physical USB ports. |
 

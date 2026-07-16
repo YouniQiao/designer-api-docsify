@@ -1,11 +1,10 @@
 # AudioPlayer
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 6开始支持，从API version 9开始废弃，建议使用[AVPlayer](arkts-media-media-n.md)替代。
 
-音频播放管理类，用于管理和播放音频媒体。在调用AudioPlayer的方法前，需要先通过
-[createAudioPlayer()](arkts-media-createaudioplayer-f.md#createaudioplayer-1)构建一个AudioPlayer实例。
+音频播放管理类，用于管理和播放音频媒体。在调用AudioPlayer的方法前，需要先通过[createAudioPlayer()](arkts-media-createaudioplayer-f.md#createaudioplayer-1)构建一个AudioPlayer实例。
 
 **起始版本：** 6
 
@@ -13,7 +12,15 @@
 
 **替代接口：** [media:media](arkts-media-media-n.md)
 
+<!--Device-unnamed-interface AudioPlayer--><!--Device-unnamed-interface AudioPlayer-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
+
+## 导入模块
+
+```TypeScript
+import { media } from '@kit.MediaKit';
+```
 
 ## getTrackDescription
 
@@ -23,9 +30,9 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 
 获取音频轨道信息。需在'dataLoad'事件成功触发后，才能调用。通过回调函数获取返回值。
 
-> **说明：**
-> > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.getTrackDescription](arkts-media-avplayer-i.md#gettrackdescription-1)
+> **说明：**  
+> > 从API version 8开始支持，从API version 9开始废弃，建议使用  
+> [AVPlayer.getTrackDescription](arkts-media-avplayer-i.md#gettrackdescription-1)  
 > 替代。
 
 **起始版本：** 8
@@ -34,13 +41,15 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 
 **替代接口：** getTrackDescription(callback:
 
+<!--Device-AudioPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void--><!--Device-AudioPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;MediaDescription&gt;&gt; | 是 | 回调函数。获取音频轨道信息成功时，err为undefined，data为获取到的MediaDescription数组，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<MediaDescription>> | 是 | 回调函数。获取音频轨道信息成功时，err为undefined，data为获取到的MediaDescription数组，否则为错误对象。 |
 
 ## getTrackDescription
 
@@ -50,8 +59,8 @@ getTrackDescription(): Promise<Array<MediaDescription>>
 
 获取音频轨道信息。需在'dataLoad'事件成功触发后，才能调用。通过Promise获取返回值。
 
-> **说明：**
-> > 从API version 8开始支持，从API version 9开始废弃，建议使用
+> **说明：**  
+> > 从API version 8开始支持，从API version 9开始废弃，建议使用  
 > [AVPlayer.getTrackDescription](arkts-media-avplayer-i.md#gettrackdescription-2)替代。
 
 **起始版本：** 8
@@ -60,13 +69,15 @@ getTrackDescription(): Promise<Array<MediaDescription>>
 
 **替代接口：** [getTrackDescription()](arkts-media-avplayer-i.md#gettrackdescription-2)
 
+<!--Device-AudioPlayer-getTrackDescription(): Promise<Array<MediaDescription>>--><!--Device-AudioPlayer-getTrackDescription(): Promise<Array<MediaDescription>>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;MediaDescription&gt;&gt; | 音频轨道信息MediaDescription数组Promise返回值。 |
+| Promise<Array<MediaDescription>> | 音频轨道信息MediaDescription数组Promise返回值。 |
 
 ## on('bufferingUpdate')
 
@@ -76,9 +87,9 @@ on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: numbe
 
 开始订阅音频缓存更新事件。仅网络播放支持该订阅事件。
 
-> **说明：**
-> > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.on('bufferingUpdate')](@ohos.multimedia.media:media.AVPlayer.on(type: 'bufferingUpdate', callback: OnBufferingUpdateHandler))
+> **说明：**  
+> > 从API version 8开始支持，从API version 9开始废弃，建议使用  
+> [AVPlayer.on('bufferingUpdate')](@ohos.multimedia.media:media.AVPlayer.on(type: 'bufferingUpdate', callback: OnBufferingUpdateHandler))  
 > 替代。
 
 **起始版本：** 8
@@ -87,6 +98,8 @@ on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: numbe
 
 **替代接口：** on(type:
 
+<!--Device-AudioPlayer-on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void--><!--Device-AudioPlayer-on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
@@ -94,7 +107,7 @@ on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: numbe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'bufferingUpdate' | 是 | 音频缓存事件回调类型，支持的事件：'bufferingUpdate'。 |
-| callback | (infoType: BufferingInfoType, value: number) =&gt; void | 是 | 音频缓存事件回调方法。<br>[BufferingInfoType](@ohos.multimedia.media:media.BufferingInfoType)value值固定为0。 |
+| callback | (infoType: BufferingInfoType, value: number) => void | 是 | 音频缓存事件回调方法。<br>[BufferingInfoType](@ohos.multimedia.media:media.BufferingInfoType)value值固定为0。 |
 
 ## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
@@ -104,9 +117,9 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 开始订阅音频播放事件。
 
-> **说明：**
-> > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.on('stateChange')](@ohos.multimedia.media:media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle))
+> **说明：**  
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用  
+> [AVPlayer.on('stateChange')](@ohos.multimedia.media:media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle))  
 > 替代。
 
 **起始版本：** 6
@@ -115,6 +128,8 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 **替代接口：** on(type:
 
+<!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
@@ -122,7 +137,7 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | 是 | 播放事件回调类型，支持的事件包括：'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange'。<br>- 'play'：完成[play()](media.AudioPlayer.play)调用，音频开始播放，触发该事件。<br>- 'pause'：完成[pause()](media.AudioPlayer.pause)调用，音频暂停播放，触发该事件。<br>- 'stop'：完成[stop()](media.AudioPlayer.stop)调用，音频停止播放，触发该事件。<br>- 'reset'：完成[reset()](media.AudioPlayer.reset)调用，播放器重置，触发该事件。<br>- 'dataLoad'：完成音频数据加载后触发该事件，即src属性设置完成后触发该事件。<br>- 'finish'：完成音频播放后触发该事件。<br>- 'volumeChange'：完成[setVolume()](media.AudioPlayer.setVolume)调用，播放音量改变后触发该事件。 |
-| callback | () =&gt; void | 是 | 播放事件回调方法。 |
+| callback | () => void | 是 | 播放事件回调方法。 |
 
 ## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
@@ -132,9 +147,9 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 开始订阅音频播放事件。
 
-> **说明：**
-> > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.on('stateChange')](@ohos.multimedia.media:media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle))
+> **说明：**  
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用  
+> [AVPlayer.on('stateChange')](@ohos.multimedia.media:media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle))  
 > 替代。
 
 **起始版本：** 6
@@ -143,6 +158,8 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 **替代接口：** on(type:
 
+<!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
@@ -150,7 +167,7 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | 是 | 播放事件回调类型，支持的事件包括：'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange'。<br>- 'play'：完成[play()](media.AudioPlayer.play)调用，音频开始播放，触发该事件。<br>- 'pause'：完成[pause()](media.AudioPlayer.pause)调用，音频暂停播放，触发该事件。<br>- 'stop'：完成[stop()](media.AudioPlayer.stop)调用，音频停止播放，触发该事件。<br>- 'reset'：完成[reset()](media.AudioPlayer.reset)调用，播放器重置，触发该事件。<br>- 'dataLoad'：完成音频数据加载后触发该事件，即src属性设置完成后触发该事件。<br>- 'finish'：完成音频播放后触发该事件。<br>- 'volumeChange'：完成[setVolume()](media.AudioPlayer.setVolume)调用，播放音量改变后触发该事件。 |
-| callback | () =&gt; void | 是 | 播放事件回调方法。 |
+| callback | () => void | 是 | 播放事件回调方法。 |
 
 ## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
@@ -160,9 +177,9 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 开始订阅音频播放事件。
 
-> **说明：**
-> > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.on('stateChange')](@ohos.multimedia.media:media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle))
+> **说明：**  
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用  
+> [AVPlayer.on('stateChange')](@ohos.multimedia.media:media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle))  
 > 替代。
 
 **起始版本：** 6
@@ -171,6 +188,8 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 **替代接口：** on(type:
 
+<!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
@@ -178,7 +197,7 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | 是 | 播放事件回调类型，支持的事件包括：'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange'。<br>- 'play'：完成[play()](media.AudioPlayer.play)调用，音频开始播放，触发该事件。<br>- 'pause'：完成[pause()](media.AudioPlayer.pause)调用，音频暂停播放，触发该事件。<br>- 'stop'：完成[stop()](media.AudioPlayer.stop)调用，音频停止播放，触发该事件。<br>- 'reset'：完成[reset()](media.AudioPlayer.reset)调用，播放器重置，触发该事件。<br>- 'dataLoad'：完成音频数据加载后触发该事件，即src属性设置完成后触发该事件。<br>- 'finish'：完成音频播放后触发该事件。<br>- 'volumeChange'：完成[setVolume()](media.AudioPlayer.setVolume)调用，播放音量改变后触发该事件。 |
-| callback | () =&gt; void | 是 | 播放事件回调方法。 |
+| callback | () => void | 是 | 播放事件回调方法。 |
 
 ## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
@@ -188,9 +207,9 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 开始订阅音频播放事件。
 
-> **说明：**
-> > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.on('stateChange')](@ohos.multimedia.media:media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle))
+> **说明：**  
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用  
+> [AVPlayer.on('stateChange')](@ohos.multimedia.media:media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle))  
 > 替代。
 
 **起始版本：** 6
@@ -199,6 +218,8 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 **替代接口：** on(type:
 
+<!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
@@ -206,7 +227,7 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | 是 | 播放事件回调类型，支持的事件包括：'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange'。<br>- 'play'：完成[play()](media.AudioPlayer.play)调用，音频开始播放，触发该事件。<br>- 'pause'：完成[pause()](media.AudioPlayer.pause)调用，音频暂停播放，触发该事件。<br>- 'stop'：完成[stop()](media.AudioPlayer.stop)调用，音频停止播放，触发该事件。<br>- 'reset'：完成[reset()](media.AudioPlayer.reset)调用，播放器重置，触发该事件。<br>- 'dataLoad'：完成音频数据加载后触发该事件，即src属性设置完成后触发该事件。<br>- 'finish'：完成音频播放后触发该事件。<br>- 'volumeChange'：完成[setVolume()](media.AudioPlayer.setVolume)调用，播放音量改变后触发该事件。 |
-| callback | () =&gt; void | 是 | 播放事件回调方法。 |
+| callback | () => void | 是 | 播放事件回调方法。 |
 
 ## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
@@ -216,9 +237,9 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 开始订阅音频播放事件。
 
-> **说明：**
-> > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.on('stateChange')](@ohos.multimedia.media:media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle))
+> **说明：**  
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用  
+> [AVPlayer.on('stateChange')](@ohos.multimedia.media:media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle))  
 > 替代。
 
 **起始版本：** 6
@@ -227,6 +248,8 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 **替代接口：** on(type:
 
+<!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
@@ -234,7 +257,7 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | 是 | 播放事件回调类型，支持的事件包括：'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange'。<br>- 'play'：完成[play()](media.AudioPlayer.play)调用，音频开始播放，触发该事件。<br>- 'pause'：完成[pause()](media.AudioPlayer.pause)调用，音频暂停播放，触发该事件。<br>- 'stop'：完成[stop()](media.AudioPlayer.stop)调用，音频停止播放，触发该事件。<br>- 'reset'：完成[reset()](media.AudioPlayer.reset)调用，播放器重置，触发该事件。<br>- 'dataLoad'：完成音频数据加载后触发该事件，即src属性设置完成后触发该事件。<br>- 'finish'：完成音频播放后触发该事件。<br>- 'volumeChange'：完成[setVolume()](media.AudioPlayer.setVolume)调用，播放音量改变后触发该事件。 |
-| callback | () =&gt; void | 是 | 播放事件回调方法。 |
+| callback | () => void | 是 | 播放事件回调方法。 |
 
 ## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
@@ -244,9 +267,9 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 开始订阅音频播放事件。
 
-> **说明：**
-> > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.on('stateChange')](@ohos.multimedia.media:media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle))
+> **说明：**  
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用  
+> [AVPlayer.on('stateChange')](@ohos.multimedia.media:media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle))  
 > 替代。
 
 **起始版本：** 6
@@ -255,6 +278,8 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 **替代接口：** on(type:
 
+<!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
@@ -262,7 +287,7 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | 是 | 播放事件回调类型，支持的事件包括：'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange'。<br>- 'play'：完成[play()](media.AudioPlayer.play)调用，音频开始播放，触发该事件。<br>- 'pause'：完成[pause()](media.AudioPlayer.pause)调用，音频暂停播放，触发该事件。<br>- 'stop'：完成[stop()](media.AudioPlayer.stop)调用，音频停止播放，触发该事件。<br>- 'reset'：完成[reset()](media.AudioPlayer.reset)调用，播放器重置，触发该事件。<br>- 'dataLoad'：完成音频数据加载后触发该事件，即src属性设置完成后触发该事件。<br>- 'finish'：完成音频播放后触发该事件。<br>- 'volumeChange'：完成[setVolume()](media.AudioPlayer.setVolume)调用，播放音量改变后触发该事件。 |
-| callback | () =&gt; void | 是 | 播放事件回调方法。 |
+| callback | () => void | 是 | 播放事件回调方法。 |
 
 ## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
@@ -272,9 +297,9 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 开始订阅音频播放事件。
 
-> **说明：**
-> > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.on('stateChange')](@ohos.multimedia.media:media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle))
+> **说明：**  
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用  
+> [AVPlayer.on('stateChange')](@ohos.multimedia.media:media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle))  
 > 替代。
 
 **起始版本：** 6
@@ -283,6 +308,8 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 **替代接口：** on(type:
 
+<!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
@@ -290,7 +317,7 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | 是 | 播放事件回调类型，支持的事件包括：'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange'。<br>- 'play'：完成[play()](media.AudioPlayer.play)调用，音频开始播放，触发该事件。<br>- 'pause'：完成[pause()](media.AudioPlayer.pause)调用，音频暂停播放，触发该事件。<br>- 'stop'：完成[stop()](media.AudioPlayer.stop)调用，音频停止播放，触发该事件。<br>- 'reset'：完成[reset()](media.AudioPlayer.reset)调用，播放器重置，触发该事件。<br>- 'dataLoad'：完成音频数据加载后触发该事件，即src属性设置完成后触发该事件。<br>- 'finish'：完成音频播放后触发该事件。<br>- 'volumeChange'：完成[setVolume()](media.AudioPlayer.setVolume)调用，播放音量改变后触发该事件。 |
-| callback | () =&gt; void | 是 | 播放事件回调方法。 |
+| callback | () => void | 是 | 播放事件回调方法。 |
 
 ## on('timeUpdate')
 
@@ -300,9 +327,9 @@ on(type: 'timeUpdate', callback: Callback<number>): void
 
 开始订阅音频播放时间更新事件。处于播放状态时，每隔1s上报一次该事件。
 
-> **说明：**
-> > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.on('timeUpdate')](@ohos.multimedia.media:media.AVPlayer.on(type: 'timeUpdate', callback: Callback<int>))
+> **说明：**  
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用  
+> [AVPlayer.on('timeUpdate')](@ohos.multimedia.media:media.AVPlayer.on(type: 'timeUpdate', callback: Callback<int>))  
 > 替代。
 
 **起始版本：** 6
@@ -311,6 +338,8 @@ on(type: 'timeUpdate', callback: Callback<number>): void
 
 **替代接口：** on(type:
 
+<!--Device-AudioPlayer-on(type: 'timeUpdate', callback: Callback<number>): void--><!--Device-AudioPlayer-on(type: 'timeUpdate', callback: Callback<number>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
@@ -318,7 +347,7 @@ on(type: 'timeUpdate', callback: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'timeUpdate' | 是 | 播放事件回调类型，支持的事件包括：'timeUpdate'。<br>- 'timeUpdate'：音频播放时间戳更新，开始播放后自动触发该事件。 |
-| callback | Callback&lt;number&gt; | 是 | 播放事件回调方法。回调方法入参为更新后的时间戳。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | 是 | 播放事件回调方法。回调方法入参为更新后的时间戳。 |
 
 ## on('audioInterrupt')
 
@@ -328,9 +357,9 @@ on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void
 
 监听音频焦点变化事件，参考[audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-interruptevent-i.md)。
 
-> **说明：**
-> > 从API version 9开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.on('audioInterrupt')](@ohos.multimedia.media:media.AVPlayer.on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>))
+> **说明：**  
+> > 从API version 9开始支持，从API version 9开始废弃，建议使用  
+> [AVPlayer.on('audioInterrupt')](@ohos.multimedia.media:media.AVPlayer.on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>))  
 > 替代。
 
 **起始版本：** 9
@@ -339,6 +368,8 @@ on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void
 
 **替代接口：** on(type:
 
+<!--Device-AudioPlayer-on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void--><!--Device-AudioPlayer-on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
@@ -346,7 +377,7 @@ on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioInterrupt' | 是 | 音频焦点变化事件回调类型，支持的事件：'audioInterrupt'。 |
-| callback | (info: audio.InterruptEvent) =&gt; void | 是 | 音频焦点变化事件回调方法。 |
+| callback | (info: audio.InterruptEvent) => void | 是 | 音频焦点变化事件回调方法。 |
 
 ## on('error')
 
@@ -356,9 +387,9 @@ on(type: 'error', callback: ErrorCallback): void
 
 开始订阅音频播放错误事件，当上报error错误事件后，用户需处理error事件，退出播放操作。
 
-> **说明：**
-> > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.on('error')](@ohos.multimedia.media:media.AVPlayer.on(type: 'error', callback: ErrorCallback))替
+> **说明：**  
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用  
+> [AVPlayer.on('error')](@ohos.multimedia.media:media.AVPlayer.on(type: 'error', callback: ErrorCallback))替  
 > 代。
 
 **起始版本：** 6
@@ -367,6 +398,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 **替代接口：** on(type:
 
+<!--Device-AudioPlayer-on(type: 'error', callback: ErrorCallback): void--><!--Device-AudioPlayer-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 **参数：**
@@ -374,7 +407,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 播放错误事件回调类型，支持的事件包括：'error'。<br>- 'error'：音频播放中发生错误，触发该事件。 |
-| callback | ErrorCallback | 是 | 播放错误事件回调方法。 |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | 是 | 播放错误事件回调方法。 |
 
 ## pause
 
@@ -384,8 +417,8 @@ pause(): void
 
 暂停播放音频资源。
 
-> **说明：**
-> > 从API version 6开始支持，从API version 9开始废弃，建议使用
+> **说明：**  
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用  
 > [AVPlayer.pause](arkts-media-avplayer-i.md#pause-1)替代。
 
 **起始版本：** 6
@@ -393,6 +426,8 @@ pause(): void
 **废弃版本：** 9
 
 **替代接口：** pause(callback:
+
+<!--Device-AudioPlayer-pause(): void--><!--Device-AudioPlayer-pause(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -404,8 +439,8 @@ play(): void
 
 开始播放音频资源，需在'dataLoad'事件成功触发后，才能调用。
 
-> **说明：**
-> > 从API version 6开始支持，从API version 9开始废弃，建议使用
+> **说明：**  
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用  
 > [AVPlayer.play](arkts-media-avplayer-i.md#play-1)替代。
 
 **起始版本：** 6
@@ -413,6 +448,8 @@ play(): void
 **废弃版本：** 9
 
 **替代接口：** play(callback:
+
+<!--Device-AudioPlayer-play(): void--><!--Device-AudioPlayer-play(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -424,8 +461,8 @@ release(): void
 
 释放音频资源。
 
-> **说明：**
-> > 从API version 6开始支持，从API version 9开始废弃，建议使用
+> **说明：**  
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用  
 > [AVPlayer.release](arkts-media-avplayer-i.md#release-1)替代。
 
 **起始版本：** 6
@@ -433,6 +470,8 @@ release(): void
 **废弃版本：** 9
 
 **替代接口：** release(callback:
+
+<!--Device-AudioPlayer-release(): void--><!--Device-AudioPlayer-release(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -444,8 +483,8 @@ reset(): void
 
 重置播放音频资源。
 
-> **说明：**
-> > 从API version 7开始支持，从API version 9开始废弃，建议使用
+> **说明：**  
+> > 从API version 7开始支持，从API version 9开始废弃，建议使用  
 > [AVPlayer.reset](arkts-media-avplayer-i.md#reset-1)替代。
 
 **起始版本：** 7
@@ -453,6 +492,8 @@ reset(): void
 **废弃版本：** 9
 
 **替代接口：** reset(callback:
+
+<!--Device-AudioPlayer-reset(): void--><!--Device-AudioPlayer-reset(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -464,8 +505,8 @@ seek(timeMs: number): void
 
 跳转到指定播放位置。
 
-> **说明：**
-> > 从API version 6开始支持，从API version 9开始废弃，建议使用[AVPlayer.seek](arkts-media-avplayer-i.md#seek-1)替代
+> **说明：**  
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用[AVPlayer.seek](arkts-media-avplayer-i.md#seek-1)替代  
 > 。
 
 **起始版本：** 6
@@ -473,6 +514,8 @@ seek(timeMs: number): void
 **废弃版本：** 9
 
 **替代接口：** [seek](arkts-media-avplayer-i.md#seek-1)
+
+<!--Device-AudioPlayer-seek(timeMs: number): void--><!--Device-AudioPlayer-seek(timeMs: number): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -490,8 +533,8 @@ setVolume(vol: number): void
 
 设置音量。
 
-> **说明：**
-> > 从API version 6开始支持，从API version 9开始废弃，建议使用
+> **说明：**  
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用  
 > [AVPlayer.setVolume](arkts-media-avplayer-i.md#setvolume-1)替代。
 
 **起始版本：** 6
@@ -499,6 +542,8 @@ setVolume(vol: number): void
 **废弃版本：** 9
 
 **替代接口：** [setVolume](arkts-media-avplayer-i.md#setvolume-1)
+
+<!--Device-AudioPlayer-setVolume(vol: number): void--><!--Device-AudioPlayer-setVolume(vol: number): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -516,8 +561,8 @@ stop(): void
 
 停止播放音频资源。
 
-> **说明：**
-> > 从API version 6开始支持，从API version 9开始废弃，建议使用
+> **说明：**  
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用  
 > [AVPlayer.stop](arkts-media-avplayer-i.md#stop-1)替代。
 
 **起始版本：** 6
@@ -525,6 +570,8 @@ stop(): void
 **废弃版本：** 9
 
 **替代接口：** stop(callback:
+
+<!--Device-AudioPlayer-stop(): void--><!--Device-AudioPlayer-stop(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -544,6 +591,8 @@ audioInterruptMode?: audio.InterruptMode
 
 **替代接口：** audioInterruptMode
 
+<!--Device-AudioPlayer-audioInterruptMode?: audio.InterruptMode--><!--Device-AudioPlayer-audioInterruptMode?: audio.InterruptMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 ## currentTime
@@ -562,6 +611,8 @@ readonly currentTime: number
 
 **替代接口：** currentTime
 
+<!--Device-AudioPlayer-readonly currentTime: number--><!--Device-AudioPlayer-readonly currentTime: number-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 ## duration
@@ -579,6 +630,8 @@ readonly duration: number
 **废弃版本：** 9
 
 **替代接口：** duration
+
+<!--Device-AudioPlayer-readonly duration: number--><!--Device-AudioPlayer-readonly duration: number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -600,9 +653,7 @@ fdSrc: AVFileDescriptor
 
 音乐3(地址偏移:151，字节长度:150)
 
-1. 播放音乐1：AVFileDescriptor { fd = 资源句柄; offset = 0; length = 100; }
-2. 播放音乐2：AVFileDescriptor { fd = 资源句柄; offset = 101; length = 50; }
-3. 播放音乐3：AVFileDescriptor { fd = 资源句柄; offset = 151; length = 150; }
+1. 播放音乐1：AVFileDescriptor { fd = 资源句柄; offset = 0; length = 100; }2. 播放音乐2：AVFileDescriptor { fd = 资源句柄; offset = 101; length = 50; }3. 播放音乐3：AVFileDescriptor { fd = 资源句柄; offset = 151; length = 150; }
 
 假设是一个独立的音乐文件: 请使用src=fd://xx
 
@@ -613,6 +664,8 @@ fdSrc: AVFileDescriptor
 **废弃版本：** 9
 
 **替代接口：** fdSrc
+
+<!--Device-AudioPlayer-fdSrc: AVFileDescriptor--><!--Device-AudioPlayer-fdSrc: AVFileDescriptor-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -632,6 +685,8 @@ loop: boolean
 
 **替代接口：** loop
 
+<!--Device-AudioPlayer-loop: boolean--><!--Device-AudioPlayer-loop: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
 ## src
@@ -648,9 +703,7 @@ src: string
 
 ![](../../../../reference/apis-media-kit/figures/zh-cn_image_url.png)
 
-2. http网络播放: http://xx
-3. https网络播放: https://xx
-4. hls网络播放路径：http://xx或者https://xx
+2. http网络播放: http://xx3. https网络播放: https://xx4. hls网络播放路径：http://xx或者https://xx
 
 ohos.permission.READ_MEDIA 或 ohos.permission.INTERNET。
 
@@ -663,6 +716,8 @@ ohos.permission.READ_MEDIA 或 ohos.permission.INTERNET。
 **替代接口：** url
 
 **需要权限：** ohos.permission.READ_MEDIA or ohos.permission.INTERNET
+
+<!--Device-AudioPlayer-src: string--><!--Device-AudioPlayer-src: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 
@@ -681,6 +736,8 @@ readonly state: AudioState
 **废弃版本：** 9
 
 **替代接口：** state
+
+<!--Device-AudioPlayer-readonly state: AudioState--><!--Device-AudioPlayer-readonly state: AudioState-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioPlayer
 

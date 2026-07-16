@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-i18n-export interface ChineseCalendarTime--><!--Device-i18n-export interface ChineseCalendarTime-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
 
 ## cyclicalYear
 
@@ -22,7 +30,9 @@ cyclicalYear: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChineseCalendarTime-cyclicalYear: int--><!--Device-ChineseCalendarTime-cyclicalYear: int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -40,7 +50,9 @@ date: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChineseCalendarTime-date: int--><!--Device-ChineseCalendarTime-date: int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -60,7 +72,9 @@ gregorianYear: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChineseCalendarTime-gregorianYear: int--><!--Device-ChineseCalendarTime-gregorianYear: int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -78,7 +92,9 @@ hour?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChineseCalendarTime-hour?: int--><!--Device-ChineseCalendarTime-hour?: int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -96,7 +112,9 @@ isLeapMonth?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChineseCalendarTime-isLeapMonth?: boolean--><!--Device-ChineseCalendarTime-isLeapMonth?: boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -114,7 +132,9 @@ minute?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChineseCalendarTime-minute?: int--><!--Device-ChineseCalendarTime-minute?: int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -136,7 +156,9 @@ month: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChineseCalendarTime-month: int--><!--Device-ChineseCalendarTime-month: int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -154,7 +176,9 @@ second?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChineseCalendarTime-second?: int--><!--Device-ChineseCalendarTime-second?: int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

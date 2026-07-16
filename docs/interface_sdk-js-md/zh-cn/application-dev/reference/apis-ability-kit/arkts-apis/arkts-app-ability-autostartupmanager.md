@@ -4,9 +4,17 @@ autoStartupManager模块提供获取自身应用的开机自启状态。
 
 **起始版本：** 21
 
+<!--Device-unnamed-declare namespace autoStartupManager--><!--Device-unnamed-declare namespace autoStartupManager-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { autoStartupManager } from '@kit.AbilityKit';
+```
 
 ## 汇总
 
@@ -15,7 +23,7 @@ autoStartupManager模块提供获取自身应用的开机自启状态。
 | 名称 | 说明 |
 | --- | --- |
 | [getAutoStartupStatusForSelf](arkts-ability-getautostartupstatusforself-f.md#getautostartupstatusforself-1) | 获取当前应用的开机自启动状态。使用Promise异步回调。该接口仅在Phone、PC/2in1、Tablet和Wearable设备中可正常调用，在其他设备中返回801错误码。 |
-| [isAutoStartupSupported](arkts-ability-isautostartupsupported-f.md#isautostartupsupported-1) | 检查当前设备是否支持开机自启动。@link autoStartupManager.getAutoStartupStatusForSelf} 之前，先调&gt; 用该接口检查设备能力。如果返回false，则表明当前设备不支持开机自启动。 |
+| [isAutoStartupSupported](arkts-ability-isautostartupsupported-f.md#isautostartupsupported-1) | 检查当前设备是否支持开机自启动。 |
 
 <!--Del-->
 ### 函数（系统接口）

@@ -4,7 +4,15 @@
 
 **起始版本：** 20
 
+<!--Device-dataShare-interface DataProxyChangeInfo--><!--Device-dataShare-interface DataProxyChangeInfo-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+## 导入模块
+
+```TypeScript
+import { dataShare } from '@kit.ArkData';
+```
 
 ## type
 
@@ -19,6 +27,8 @@ type: ChangeType
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataProxyChangeInfo-type: ChangeType--><!--Device-DataProxyChangeInfo-type: ChangeType-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -36,6 +46,8 @@ uri: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataProxyChangeInfo-uri: string--><!--Device-DataProxyChangeInfo-uri: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 ## value
@@ -52,6 +64,8 @@ value: ValueType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataProxyChangeInfo-value: ValueType--><!--Device-DataProxyChangeInfo-value: ValueType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 ## values
@@ -67,6 +81,8 @@ values?: ValueType[]
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataProxyChangeInfo-values?: ValueType[]--><!--Device-DataProxyChangeInfo-values?: ValueType[]-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 

@@ -4,6 +4,8 @@ Declare struct PhotoPickerComponent
 
 **Since:** 12
 
+<!--Device-unnamed-export declare struct PhotoPickerComponent--><!--Device-unnamed-export declare struct PhotoPickerComponent-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Build function of PhotoPickerComponent
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PhotoPickerComponent-build(): void--><!--Device-PhotoPickerComponent-build(): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## onCurrentAlbumDeleted
@@ -41,6 +45,8 @@ Callback when the current album is deleted
 **Since:** 13
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-PhotoPickerComponent-onCurrentAlbumDeleted?: CurrentAlbumDeletedCallback--><!--Device-PhotoPickerComponent-onCurrentAlbumDeleted?: CurrentAlbumDeletedCallback-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -58,6 +64,8 @@ Callback when Deselect photos or videos
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PhotoPickerComponent-onDeselect?: (uri: string) => void--><!--Device-PhotoPickerComponent-onDeselect?: (uri: string) => void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## onEnterPhotoBrowser
@@ -73,6 +81,8 @@ Callback when enter photo browser, will return photoBrowserInfo
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PhotoPickerComponent-onEnterPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) => boolean--><!--Device-PhotoPickerComponent-onEnterPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) => boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -92,6 +102,8 @@ Callback when an error occurs in the PhotoPickerComponent.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-PhotoPickerComponent-onError?: ErrorCallback--><!--Device-PhotoPickerComponent-onError?: ErrorCallback-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## onExceedMaxSelected
@@ -107,6 +119,8 @@ Callback when exceed max selected
 **Since:** 13
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-PhotoPickerComponent-onExceedMaxSelected?: ExceedMaxSelectedCallback--><!--Device-PhotoPickerComponent-onExceedMaxSelected?: ExceedMaxSelectedCallback-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -124,6 +138,8 @@ Callback when exit photo browser, will return photoBrowserInfo
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PhotoPickerComponent-onExitPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) => boolean--><!--Device-PhotoPickerComponent-onExitPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) => boolean-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## onItemClicked
@@ -140,6 +156,8 @@ Callback when click item. include click camera item and thumbnail item, will ret
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PhotoPickerComponent-onItemClicked?: (itemInfo: ItemInfo, clickType: ClickType) => boolean--><!--Device-PhotoPickerComponent-onItemClicked?: (itemInfo: ItemInfo, clickType: ClickType) => boolean-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## onItemClickedNotify
@@ -148,8 +166,7 @@ Callback when click item. include click camera item and thumbnail item, will ret
 onItemClickedNotify?: ItemClickedNotifyCallback
 ```
 
-Callback when click item. Includes camera items and thumbnail items. Returns itemInfo in the callback.
-Must be used in conjunction with the addData method.
+Callback when click item. Includes camera items and thumbnail items. Returns itemInfo in the callback.Must be used in conjunction with the addData method.
 
 **Type:** ItemClickedNotifyCallback
 
@@ -158,6 +175,8 @@ Must be used in conjunction with the addData method.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-PhotoPickerComponent-onItemClickedNotify?: ItemClickedNotifyCallback--><!--Device-PhotoPickerComponent-onItemClickedNotify?: ItemClickedNotifyCallback-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -174,6 +193,8 @@ Callback when moving photo badge state changed
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-PhotoPickerComponent-onMovingPhotoBadgeStateChanged?: MovingPhotoBadgeStateChangedCallback--><!--Device-PhotoPickerComponent-onMovingPhotoBadgeStateChanged?: MovingPhotoBadgeStateChangedCallback-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -193,6 +214,8 @@ Callback when photo browser change start (upon user swipe release), will return 
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-PhotoPickerComponent-onPhotoBrowserChangeStart?: PhotoBrowserChangeStartCallback--><!--Device-PhotoPickerComponent-onPhotoBrowserChangeStart?: PhotoBrowserChangeStartCallback-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## onPhotoBrowserChanged
@@ -208,6 +231,8 @@ Callback when photo browser change, will return browserItemInfo
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PhotoPickerComponent-onPhotoBrowserChanged?: (browserItemInfo: BaseItemInfo) => boolean--><!--Device-PhotoPickerComponent-onPhotoBrowserChanged?: (browserItemInfo: BaseItemInfo) => boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -227,6 +252,8 @@ Callback when the zoom scale changes during large image browsing.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-PhotoPickerComponent-onPhotoBrowserZoom?: PhotoBrowserZoomCallback--><!--Device-PhotoPickerComponent-onPhotoBrowserZoom?: PhotoBrowserZoomCallback-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## onPickerControllerReady
@@ -235,14 +262,15 @@ Callback when the zoom scale changes during large image browsing.
 onPickerControllerReady?: () => void
 ```
 
-Callback when pickerController is ready.
-Set data to picker component by pickerController is supported after pickerController is ready
+Callback when pickerController is ready.Set data to picker component by pickerController is supported after pickerController is ready
 
 **Type:** () => void
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PhotoPickerComponent-onPickerControllerReady?: () => void--><!--Device-PhotoPickerComponent-onPickerControllerReady?: () => void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -262,6 +290,8 @@ Callback when the grid's level is switched via pinch gesture.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-PhotoPickerComponent-onPinchGridSwitched?: PinchGridSwitchedCallback--><!--Device-PhotoPickerComponent-onPinchGridSwitched?: PinchGridSwitchedCallback-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## onScrollStopAtEnd
@@ -279,6 +309,8 @@ Callback when the grid stops scrolling at the ending position.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-PhotoPickerComponent-onScrollStopAtEnd?: ScrollStopAtEndCallback--><!--Device-PhotoPickerComponent-onScrollStopAtEnd?: ScrollStopAtEndCallback-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -298,6 +330,8 @@ Callback when the grid stops scrolling at the starting position.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-PhotoPickerComponent-onScrollStopAtStart?: ScrollStopAtStartCallback--><!--Device-PhotoPickerComponent-onScrollStopAtStart?: ScrollStopAtStartCallback-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## onSelect
@@ -313,6 +347,8 @@ Callback when select photos or videos
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PhotoPickerComponent-onSelect?: (uri: string) => void--><!--Device-PhotoPickerComponent-onSelect?: (uri: string) => void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -330,6 +366,8 @@ Callback when selected items are deleted
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-PhotoPickerComponent-onSelectedItemsDeleted?: ItemsDeletedCallback--><!--Device-PhotoPickerComponent-onSelectedItemsDeleted?: ItemsDeletedCallback-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## onVideoPlayStateChanged
@@ -345,6 +383,8 @@ Callback when the video play state changed
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-PhotoPickerComponent-onVideoPlayStateChanged?: videoPlayStateChangedCallback--><!--Device-PhotoPickerComponent-onVideoPlayStateChanged?: videoPlayStateChangedCallback-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -364,6 +404,8 @@ PickerController
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PhotoPickerComponent-pickerController: PickerController--><!--Device-PhotoPickerComponent-pickerController: PickerController-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## pickerOptions
@@ -379,6 +421,8 @@ PickerOptions
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PhotoPickerComponent-pickerOptions?: PickerOptions--><!--Device-PhotoPickerComponent-pickerOptions?: PickerOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -1,11 +1,18 @@
 # Driver
 
-Driver类为uitest测试框架的总入口，提供控件匹配/查找，按键注入，坐标点击/滑动，截图等能力。
-该类提供的方法除Driver.create()和Driver.createUIEventObserver()以外的所有方法都使用Promise方式作为异步方法，需使用await方式调用。
+Driver类为uitest测试框架的总入口，提供控件匹配/查找，按键注入，坐标点击/滑动，截图等能力。该类提供的方法除Driver.create()和Driver.createUIEventObserver()以外的所有方法都使用Promise方式作为异步方法，需使用await方式调用。
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class Driver--><!--Device-unnamed-declare class Driver-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
+
+## 导入模块
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
+```
 
 ## assertComponentExist
 
@@ -17,7 +24,9 @@ assertComponentExist(on: On): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-assertComponentExist(on: On): Promise<void>--><!--Device-Driver-assertComponentExist(on: On): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -25,13 +34,13 @@ assertComponentExist(on: On): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| on | On | 是 | 目标控件的属性要求。 |
+| on | [On](arkts-test-on-c.md) | 是 | 目标控件的属性要求。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -64,7 +73,9 @@ click(x: number, y: number): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-click(x: int, y: int): Promise<void>--><!--Device-Driver-click(x: int, y: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -79,7 +90,7 @@ click(x: number, y: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -113,7 +124,9 @@ clickAt(point: Point): Promise<void>
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-clickAt(point: Point): Promise<void>--><!--Device-Driver-clickAt(point: Point): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -121,13 +134,13 @@ clickAt(point: Point): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | Point | 是 | 以Point对象的形式传入目标点信息。 |
+| point | [Point](arkts-test-point-i.md) | 是 | 以Point对象的形式传入目标点信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -159,7 +172,9 @@ clickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 
 **起始版本：** 26.0.0
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-clickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>--><!--Device-Driver-clickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -167,14 +182,14 @@ clickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | Point | 是 | 手指接触屏幕的坐标点。 |
-| options | TouchOptions | 否 | 单击操作的选项。只有''属性适用于此方法。设置其他属性将导致BusinessError 17000007。<br>默认值：参考TouchOptions的默认值。 |
+| point | [Point](arkts-test-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
+| options | [TouchOptions](arkts-test-touchoptions-i.md) | 否 | 单击操作的选项。只有''属性适用于此方法。设置其他属性将导致BusinessError 17000007。<br>默认值：参考TouchOptions的默认值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| Promise<void> | - Promise that returns no value. |
 
 **错误码：**
 
@@ -210,7 +225,9 @@ static create(): Driver
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-static create(): Driver--><!--Device-Driver-static create(): Driver-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -218,7 +235,7 @@ static create(): Driver
 
 | 类型 | 说明 |
 | --- | --- |
-| Driver | - 返回构造的Driver对象。 |
+| [Driver](arkts-test-driver-c.md) | - 返回构造的Driver对象。 |
 
 **错误码：**
 
@@ -248,7 +265,9 @@ createUIEventObserver(): UIEventObserver
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-createUIEventObserver(): UIEventObserver--><!--Device-Driver-createUIEventObserver(): UIEventObserver-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -256,7 +275,7 @@ createUIEventObserver(): UIEventObserver
 
 | 类型 | 说明 |
 | --- | --- |
-| UIEventObserver | - 返回找到的目标窗口对象。 |
+| [UIEventObserver](arkts-test-uieventobserver-i.md) | - 返回找到的目标窗口对象。 |
 
 **错误码：**
 
@@ -287,7 +306,9 @@ crownRotate(d: number, speed?: number): Promise<void>
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-crownRotate(d: int, speed?: int): Promise<void>--><!--Device-Driver-crownRotate(d: int, speed?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -302,7 +323,7 @@ crownRotate(d: number, speed?: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -338,7 +359,9 @@ delayMs(duration: number): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-delayMs(duration: int): Promise<void>--><!--Device-Driver-delayMs(duration: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -352,7 +375,7 @@ delayMs(duration: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -384,7 +407,9 @@ doubleClick(x: number, y: number): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-doubleClick(x: int, y: int): Promise<void>--><!--Device-Driver-doubleClick(x: int, y: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -399,7 +424,7 @@ doubleClick(x: number, y: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -431,7 +456,9 @@ doubleClickAt(point: Point): Promise<void>
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-doubleClickAt(point: Point): Promise<void>--><!--Device-Driver-doubleClickAt(point: Point): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -439,13 +466,13 @@ doubleClickAt(point: Point): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | Point | 是 | 以Point对象的形式传入目标点信息。 |
+| point | [Point](arkts-test-point-i.md) | 是 | 以Point对象的形式传入目标点信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -477,7 +504,9 @@ drag(startx: number, starty: number, endx: number, endy: number, speed?: number)
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-drag(startx: int, starty: int, endx: int, endy: int, speed?: int): Promise<void>--><!--Device-Driver-drag(startx: int, starty: int, endx: int, endy: int, speed?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -495,7 +524,7 @@ drag(startx: number, starty: number, endx: number, endy: number, speed?: number)
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -527,7 +556,9 @@ dragBetween(from: Point, to: Point, speed?: number, duration?: number): Promise<
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-dragBetween(from: Point, to: Point, speed?: int, duration?: int): Promise<void>--><!--Device-Driver-dragBetween(from: Point, to: Point, speed?: int, duration?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -535,8 +566,8 @@ dragBetween(from: Point, to: Point, speed?: number, duration?: number): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| from | Point | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
-| to | Point | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。**说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
+| from | [Point](arkts-test-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
+| to | [Point](arkts-test-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。* **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
 | speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错误码。 |
 | duration | number | 否 | 拖拽前长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。 |
 
@@ -544,7 +575,7 @@ dragBetween(from: Point, to: Point, speed?: number, duration?: number): Promise<
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -576,7 +607,9 @@ dragBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<
 
 **起始版本：** 26.0.0
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-dragBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<void>--><!--Device-Driver-dragBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -584,15 +617,15 @@ dragBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| from | Point | 是 | 手指接触屏幕的坐标点。 |
-| to | Point | 是 | 手指离开屏幕的坐标点。 |
-| options | TouchOptions | 否 | 拖动操作的选项。只有“压力”、“速度”和“持续时间”属性适用于此方法。设置其他属性将导致BusinessError 17000007。<br>默认值：参考TouchOptions的默认值。 |
+| from | [Point](arkts-test-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
+| to | [Point](arkts-test-point-i.md) | 是 | 手指离开屏幕的坐标点。 |
+| options | [TouchOptions](arkts-test-touchoptions-i.md) | 否 | 拖动操作的选项。只有“压力”、“速度”和“持续时间”属性适用于此方法。设置其他属性将导致BusinessError 17000007。<br>默认值：参考TouchOptions的默认值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| Promise<void> | - Promise that returns no value. |
 
 **错误码：**
 
@@ -630,7 +663,9 @@ Get the current layout information and save as file with json format.
 
 **起始版本：** 26.0.0
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-dumpLayout(savePath: string, displayId?: int): Promise<boolean>--><!--Device-Driver-dumpLayout(savePath: string, displayId?: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -638,14 +673,14 @@ Get the current layout information and save as file with json format.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| savePath | string | 是 | the path where to store the json, must be in the application sandbox directory.The path must be the [sandbox path](../../../../file-management/app-sandbox-directory.md) of the currentapplication. |
+| savePath | string | 是 | the path where to store the json, must be in the application sandbox directory.The path must be the [sandbox path](../../../../file-management/app-sandbox-directory.md) of the current application. |
 | displayId | number | 否 | the Id of the specified display, default is the displayId of the main screen. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | true if dump layout and file-storing are completed successfully,false otherwise. |
+| Promise<boolean> | true if dump layout and file-storing are completed successfully,false otherwise. |
 
 **错误码：**
 
@@ -678,7 +713,9 @@ findComponent(on: On): Promise<Component>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-findComponent(on: On): Promise<Component>--><!--Device-Driver-findComponent(on: On): Promise<Component>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -686,13 +723,13 @@ findComponent(on: On): Promise<Component>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| on | On | 是 | 目标控件的属性要求。 |
+| on | [On](arkts-test-on-c.md) | 是 | 目标控件的属性要求。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Component&gt; | - Promise对象，返回控件对象。 |
+| Promise<Component> | - Promise对象，返回控件对象。 |
 
 **错误码：**
 
@@ -726,7 +763,9 @@ findComponents(on: On): Promise<Array<Component>>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-findComponents(on: On): Promise<Array<Component>>--><!--Device-Driver-findComponents(on: On): Promise<Array<Component>>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -734,13 +773,13 @@ findComponents(on: On): Promise<Array<Component>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| on | On | 是 | 目标控件的属性要求。 |
+| on | [On](arkts-test-on-c.md) | 是 | 目标控件的属性要求。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Component&gt;&gt; | - Promise对象，返回控件对象的列表。 |
+| Promise<Array<Component>> | - Promise对象，返回控件对象的列表。 |
 
 **错误码：**
 
@@ -774,7 +813,9 @@ findWindow(filter: WindowFilter): Promise<UiWindow>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-findWindow(filter: WindowFilter): Promise<UiWindow>--><!--Device-Driver-findWindow(filter: WindowFilter): Promise<UiWindow>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -782,13 +823,13 @@ findWindow(filter: WindowFilter): Promise<UiWindow>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | WindowFilter | 是 | 目标窗口的属性。 |
+| filter | [WindowFilter](arkts-test-windowfilter-i.md) | 是 | 目标窗口的属性。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;UiWindow&gt; | - Promise对象，返回目标窗口对象。 |
+| Promise<UiWindow> | - Promise对象，返回目标窗口对象。 |
 
 **错误码：**
 
@@ -820,7 +861,9 @@ fling(from: Point, to: Point, stepLen: number, speed: number): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-fling(from: Point, to: Point, stepLen: int, speed: int): Promise<void>--><!--Device-Driver-fling(from: Point, to: Point, stepLen: int, speed: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -828,8 +871,8 @@ fling(from: Point, to: Point, stepLen: number, speed: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| from | Point | 是 | 手指接触屏幕的起始点坐标。 |
-| to | Point | 是 | 手指离开屏幕时的坐标点。 |
+| from | [Point](arkts-test-point-i.md) | 是 | 手指接触屏幕的起始点坐标。 |
+| to | [Point](arkts-test-point-i.md) | 是 | 手指离开屏幕时的坐标点。 |
 | stepLen | number | 是 | 间隔距离，取值大于等于0的整数，单位：px。 |
 | speed | number | 是 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数时设为默认值600。为负数时抛出401错误码。 |
 
@@ -837,7 +880,7 @@ fling(from: Point, to: Point, stepLen: number, speed: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -869,7 +912,9 @@ fling(direction: UiDirection, speed: number): Promise<void>
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-fling(direction: UiDirection, speed: int): Promise<void>--><!--Device-Driver-fling(direction: UiDirection, speed: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -877,14 +922,14 @@ fling(direction: UiDirection, speed: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | UiDirection | 是 | 进行抛滑的方向。 |
+| direction | [UiDirection](arkts-test-uidirection-e.md) | 是 | 进行抛滑的方向。 |
 | speed | number | 是 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数时设为默认值600。为负数时抛出401错误码。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -916,7 +961,9 @@ fling(direction: UiDirection, speed: number, displayId: number): Promise<void>
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-fling(direction: UiDirection, speed: int, displayId: int): Promise<void>--><!--Device-Driver-fling(direction: UiDirection, speed: int, displayId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -924,7 +971,7 @@ fling(direction: UiDirection, speed: number, displayId: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | UiDirection | 是 | 进行抛滑的方向。 |
+| direction | [UiDirection](arkts-test-uidirection-e.md) | 是 | 进行抛滑的方向。 |
 | speed | number | 是 | 滑动速率，取值范围为200-40000，默认值为600，单位：px/s。为不在范围内的非负数时设为默认值600。为负数时抛出401错误码。 |
 | displayId | number | 是 | 指定设备屏幕ID。取值范围：大于等于0的整数。**说明：** 传入displayId不存在时，将抛出17000007异常。 |
 
@@ -932,7 +979,7 @@ fling(direction: UiDirection, speed: number, displayId: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -964,7 +1011,9 @@ getDisplayDensity(): Promise<Point>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-getDisplayDensity(): Promise<Point>--><!--Device-Driver-getDisplayDensity(): Promise<Point>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -972,7 +1021,7 @@ getDisplayDensity(): Promise<Point>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Point&gt; | Promise对象，返回Point对象，当前设备屏幕的分辨率为Point.x*Point.y。 |
+| Promise<Point> | Promise对象，返回Point对象，当前设备屏幕的分辨率为Point.x*Point.y。 |
 
 **错误码：**
 
@@ -1003,7 +1052,9 @@ getDisplayDensity(displayId: number): Promise<Point>
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-getDisplayDensity(displayId: int): Promise<Point>--><!--Device-Driver-getDisplayDensity(displayId: int): Promise<Point>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1011,13 +1062,13 @@ getDisplayDensity(displayId: number): Promise<Point>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayId | number | 是 | 指定设备屏幕ID。取值范围：大于等于0的整数。**说明：** 传入displayId不存在时，将抛出17000007异常。 |
+| displayId | number | 是 | 指定设备屏幕ID。取值范围：大于等于0的整数。* **说明：** 传入displayId不存在时，将抛出17000007异常。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Point&gt; | Promise对象，返回Point对象，当前设备指定屏幕的分辨率为Point.x*Point.y。 |
+| Promise<Point> | Promise对象，返回Point对象，当前设备指定屏幕的分辨率为Point.x*Point.y。 |
 
 **错误码：**
 
@@ -1049,7 +1100,9 @@ getDisplayRotation(): Promise<DisplayRotation>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-getDisplayRotation(): Promise<DisplayRotation>--><!--Device-Driver-getDisplayRotation(): Promise<DisplayRotation>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1057,7 +1110,7 @@ getDisplayRotation(): Promise<DisplayRotation>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DisplayRotation&gt; | - Promise对象，返回当前设备的显示方向。 |
+| Promise<DisplayRotation> | - Promise对象，返回当前设备的显示方向。 |
 
 **错误码：**
 
@@ -1088,7 +1141,9 @@ getDisplayRotation(displayId: number): Promise<DisplayRotation>
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-getDisplayRotation(displayId: int): Promise<DisplayRotation>--><!--Device-Driver-getDisplayRotation(displayId: int): Promise<DisplayRotation>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1096,13 +1151,13 @@ getDisplayRotation(displayId: number): Promise<DisplayRotation>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayId | number | 是 | 指定设备屏幕ID。取值范围：大于等于0的整数。**说明：** 传入displayId不存在时，将抛出17000007异常。 |
+| displayId | number | 是 | 指定设备屏幕ID。取值范围：大于等于0的整数。* **说明：** 传入displayId不存在时，将抛出17000007异常。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DisplayRotation&gt; | - Promise对象，返回指定屏幕的显示方向。 |
+| Promise<DisplayRotation> | - Promise对象，返回指定屏幕的显示方向。 |
 
 **错误码：**
 
@@ -1134,7 +1189,9 @@ getDisplaySize(): Promise<Point>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-getDisplaySize(): Promise<Point>--><!--Device-Driver-getDisplaySize(): Promise<Point>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1142,7 +1199,7 @@ getDisplaySize(): Promise<Point>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Point&gt; | - Promise对象，返回Point对象，当前设备屏幕的大小为Point.x * Point.y。 |
+| Promise<Point> | - Promise对象，返回Point对象，当前设备屏幕的大小为Point.x * Point.y。 |
 
 **错误码：**
 
@@ -1173,7 +1230,9 @@ getDisplaySize(displayId: number): Promise<Point>
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-getDisplaySize(displayId: int): Promise<Point>--><!--Device-Driver-getDisplaySize(displayId: int): Promise<Point>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1187,7 +1246,7 @@ getDisplaySize(displayId: number): Promise<Point>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Point&gt; | Promise对象，返回Point对象，当前设备指定屏幕的大小为Point.x * Point.y。 |
+| Promise<Point> | Promise对象，返回Point对象，当前设备指定屏幕的大小为Point.x * Point.y。 |
 
 **错误码：**
 
@@ -1217,13 +1276,15 @@ injectKnucklePointerAction(pointers: PointerMatrix, speed?: number): Promise<voi
 
 模拟指关节多点注入滑动操作。使用Promise异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 若设备关闭了指关节手势<!--RP4--><!--RP4End-->，则调用本接口返回17000005错误码。
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>--><!--Device-Driver-injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1231,14 +1292,14 @@ injectKnucklePointerAction(pointers: PointerMatrix, speed?: number): Promise<voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pointers | PointerMatrix | 是 | 滑动轨迹，包括操作手指个数和滑动坐标序列。**说明**：当前仅支持单指操作，PointerMatrix中的操作手指个数fingers必须设置为1。 |
+| pointers | [PointerMatrix](arkts-test-pointermatrix-c.md) | 是 | 滑动轨迹，包括操作手指个数和滑动坐标序列。* **说明**：当前仅支持单指操作，PointerMatrix中的操作手指个数fingers必须设置为1。 |
 | speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错误码。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果。 |
+| Promise<void> | - Promise对象。无返回结果。 |
 
 **错误码：**
 
@@ -1279,7 +1340,9 @@ injectMultiPointerAction(pointers: PointerMatrix, speed?: number): Promise<boole
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-injectMultiPointerAction(pointers: PointerMatrix, speed?: int): Promise<boolean>--><!--Device-Driver-injectMultiPointerAction(pointers: PointerMatrix, speed?: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1287,14 +1350,14 @@ injectMultiPointerAction(pointers: PointerMatrix, speed?: number): Promise<boole
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pointers | PointerMatrix | 是 | 滑动轨迹，包括操作手指个数和滑动坐标序列。 |
+| pointers | [PointerMatrix](arkts-test-pointermatrix-c.md) | 是 | 滑动轨迹，包括操作手指个数和滑动坐标序列。 |
 | speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。<br>**起始版本：** 11 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise对象，返回操作是否成功完成。true：完成，false：未完成。 |
+| Promise<boolean> | - Promise对象，返回操作是否成功完成。true：完成，false：未完成。 |
 
 **错误码：**
 
@@ -1342,7 +1405,9 @@ injectPenPointerAction(pointers: PointerMatrix, speed?: number, pressure?: numbe
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-injectPenPointerAction(pointers: PointerMatrix, speed?: int, pressure?: double): Promise<void>--><!--Device-Driver-injectPenPointerAction(pointers: PointerMatrix, speed?: int, pressure?: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1350,7 +1415,7 @@ injectPenPointerAction(pointers: PointerMatrix, speed?: number, pressure?: numbe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pointers | PointerMatrix | 是 | 滑动轨迹，包括操作手指个数和滑动坐标序列。**说明**：当前仅支持单指操作，PointerMatrix中的操作手指个数fingers必须设置为1。 |
+| pointers | [PointerMatrix](arkts-test-pointermatrix-c.md) | 是 | 滑动轨迹，包括操作手指个数和滑动坐标序列。* **说明**：当前仅支持单指操作，PointerMatrix中的操作手指个数fingers必须设置为1。 |
 | speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
 | pressure | number | 否 | 手写笔多点连续注入的压力，默认为1.0，取值范围为0.0到1.0。 |
 
@@ -1358,7 +1423,7 @@ injectPenPointerAction(pointers: PointerMatrix, speed?: number, pressure?: numbe
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象，返回无结果的Promise对象。 |
+| Promise<void> | - Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 
@@ -1397,7 +1462,9 @@ inputText(p: Point, text: string): Promise<void>
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-inputText(p: Point, text: string): Promise<void>--><!--Device-Driver-inputText(p: Point, text: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1405,14 +1472,14 @@ inputText(p: Point, text: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| p | Point | 是 | 输入文本的坐标点。 |
+| p | [Point](arkts-test-point-i.md) | 是 | 输入文本的坐标点。 |
 | text | string | 是 | 输入的文本信息，当前支持英文、中文和特殊字符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1450,7 +1517,9 @@ inputText(p: Point, text: string, mode: InputTextMode): Promise<void>
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-inputText(p: Point, text: string, mode: InputTextMode): Promise<void>--><!--Device-Driver-inputText(p: Point, text: string, mode: InputTextMode): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1458,15 +1527,15 @@ inputText(p: Point, text: string, mode: InputTextMode): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| p | Point | 是 | 输入文本的坐标点。 |
+| p | [Point](arkts-test-point-i.md) | 是 | 输入文本的坐标点。 |
 | text | string | 是 | 输入的文本信息，当前支持英文、中文和特殊字符。 |
-| mode | InputTextMode | 是 | 输入文本的方式，取值请参考[InputTextMode](arkts-test-inputtextmode-i.md)。**说明：**InputTextMode.addition取值为true时，将光标移动至文本末尾后输入指定文本。取值为false时，将在坐标点位置输入指定文本。 |
+| mode | [InputTextMode](arkts-test-inputtextmode-i.md) | 是 | 输入文本的方式，取值请参考[InputTextMode](arkts-test-inputtextmode-i.md)。* **说明：*** InputTextMode.addition取值为true时，将光标移动至文本末尾后输入指定文本。取值为false时，将在坐标点位置输入指定文本。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1509,7 +1578,9 @@ isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: number, durat
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: int, duration?: int): Promise<boolean>--><!--Device-Driver-isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: int, duration?: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1517,9 +1588,9 @@ isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: number, durat
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| on | On | 是 | 目标控件的属性要求。 |
-| from | Point | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
-| to | Point | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。**说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
+| on | [On](arkts-test-on-c.md) | 是 | 目标控件的属性要求。 |
+| from | [Point](arkts-test-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
+| to | [Point](arkts-test-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。* **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
 | speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错误码。 |
 | duration | number | 否 | 拖拽前长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。 |
 
@@ -1527,7 +1598,7 @@ isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: number, durat
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise对象。返回拖拽操作期间目标控件是否存在。true：存在。false：不存在。 |
+| Promise<boolean> | - Promise对象。返回拖拽操作期间目标控件是否存在。true：存在。false：不存在。 |
 
 **错误码：**
 
@@ -1559,7 +1630,9 @@ isComponentPresentWhenLongClick(on: On, point: Point, duration?: number): Promis
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-isComponentPresentWhenLongClick(on: On, point: Point, duration?: int): Promise<boolean>--><!--Device-Driver-isComponentPresentWhenLongClick(on: On, point: Point, duration?: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1567,15 +1640,15 @@ isComponentPresentWhenLongClick(on: On, point: Point, duration?: number): Promis
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| on | On | 是 | 目标控件的属性要求。 |
-| point | Point | 是 | 长按的坐标点。 |
+| on | [On](arkts-test-on-c.md) | 是 | 目标控件的属性要求。 |
+| point | [Point](arkts-test-point-i.md) | 是 | 长按的坐标点。 |
 | duration | number | 否 | 长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise对象。返回长按操作期间目标控件是否存在。true：存在。false：不存在。 |
+| Promise<boolean> | - Promise对象。返回长按操作期间目标控件是否存在。true：存在。false：不存在。 |
 
 **错误码：**
 
@@ -1607,7 +1680,9 @@ isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: number): Pro
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: int): Promise<boolean>--><!--Device-Driver-isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1615,16 +1690,16 @@ isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: number): Pro
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| on | On | 是 | 目标控件的属性要求。 |
-| from | Point | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
-| to | Point | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。**说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
+| on | [On](arkts-test-on-c.md) | 是 | 目标控件的属性要求。 |
+| from | [Point](arkts-test-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
+| to | [Point](arkts-test-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。* **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
 | speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错误码。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise对象。返回滑动操作期间目标控件是否存在。true：存在。false：不存在。 |
+| Promise<boolean> | - Promise对象。返回滑动操作期间目标控件是否存在。true：存在。false：不存在。 |
 
 **错误码：**
 
@@ -1654,13 +1729,15 @@ knuckleKnock(pointers: Array<Point>, times: number): Promise<void>
 
 模拟指关节敲击屏幕操作。使用Promise异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 若设备关闭了指关节手势<!--RP4--><!--RP4End-->，则调用本接口返回17000005错误码。
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-knuckleKnock(pointers: Array<Point>, times: int): Promise<void>--><!--Device-Driver-knuckleKnock(pointers: Array<Point>, times: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1668,14 +1745,14 @@ knuckleKnock(pointers: Array<Point>, times: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pointers | Array&lt;Point&gt; | 是 | 指关节敲击屏幕坐标点的数组，数组长度取值为1或2。 |
+| pointers | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Point> | 是 | 指关节敲击屏幕坐标点的数组，数组长度取值为1或2。 |
 | times | number | 是 | 指关节连续敲击屏幕的次数，取值为1或2。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果。 |
+| Promise<void> | - Promise对象。无返回结果。 |
 
 **错误码：**
 
@@ -1710,7 +1787,9 @@ longClick(x: number, y: number): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-longClick(x: int, y: int): Promise<void>--><!--Device-Driver-longClick(x: int, y: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1725,7 +1804,7 @@ longClick(x: number, y: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1757,7 +1836,9 @@ longClickAt(point: Point, duration?: number): Promise<void>
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-longClickAt(point: Point, duration?: int): Promise<void>--><!--Device-Driver-longClickAt(point: Point, duration?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1765,14 +1846,14 @@ longClickAt(point: Point, duration?: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | Point | 是 | 以Point对象的形式传入目标点信息。 |
+| point | [Point](arkts-test-point-i.md) | 是 | 以Point对象的形式传入目标点信息。 |
 | duration | number | 否 | 长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1804,7 +1885,9 @@ longClickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 
 **起始版本：** 26.0.0
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-longClickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>--><!--Device-Driver-longClickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1812,14 +1895,14 @@ longClickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | Point | 是 | 手指接触屏幕的坐标点。 |
-| options | TouchOptions | 否 | 用于长单击操作的选项。只有“持续时间”和“压力”属性适用于此方法。设置其他属性将导致BusinessError 17000007。<br>默认值：参考TouchOptions的默认值。 |
+| point | [Point](arkts-test-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
+| options | [TouchOptions](arkts-test-touchoptions-i.md) | 否 | 用于长单击操作的选项。只有“持续时间”和“压力”属性适用于此方法。设置其他属性将导致BusinessError 17000007。<br>默认值：参考TouchOptions的默认值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| Promise<void> | - Promise that returns no value. |
 
 **错误码：**
 
@@ -1856,7 +1939,9 @@ mouseClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-mouseClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>--><!--Device-Driver-mouseClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1864,8 +1949,8 @@ mouseClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| p | Point | 是 | 鼠标点击的坐标。 |
-| btnId | MouseButton | 是 | 按下的鼠标按钮。 |
+| p | [Point](arkts-test-point-i.md) | 是 | 鼠标点击的坐标。 |
+| btnId | [MouseButton](arkts-test-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
 | key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)，默认值为0。<br>**起始版本：** 11 |
 | key2 | number | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)，默认值为0。<br>**起始版本：** 11 |
 
@@ -1873,7 +1958,7 @@ mouseClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1905,7 +1990,9 @@ mouseDoubleClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Pr
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-mouseDoubleClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>--><!--Device-Driver-mouseDoubleClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1913,8 +2000,8 @@ mouseDoubleClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Pr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| p | Point | 是 | 鼠标双击的坐标。 |
-| btnId | MouseButton | 是 | 按下的鼠标按钮。 |
+| p | [Point](arkts-test-point-i.md) | 是 | 鼠标双击的坐标。 |
+| btnId | [MouseButton](arkts-test-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
 | key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)，默认值0。 |
 | key2 | number | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)，默认值0。 |
 
@@ -1922,7 +2009,7 @@ mouseDoubleClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Pr
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1954,7 +2041,9 @@ mouseDrag(from: Point, to: Point, speed?: number): Promise<void>
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-mouseDrag(from: Point, to: Point, speed?: number): Promise<void>--><!--Device-Driver-mouseDrag(from: Point, to: Point, speed?: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -1962,15 +2051,15 @@ mouseDrag(from: Point, to: Point, speed?: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| from | Point | 是 | 起始点坐标。 |
-| to | Point | 是 | 终点坐标。 |
+| from | [Point](arkts-test-point-i.md) | 是 | 起始点坐标。 |
+| to | [Point](arkts-test-point-i.md) | 是 | 终点坐标。 |
 | speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -2002,7 +2091,9 @@ mouseDrag(from: Point, to: Point, speed?: number, duration?: number): Promise<vo
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-mouseDrag(from: Point, to: Point, speed?: int, duration?: int): Promise<void>--><!--Device-Driver-mouseDrag(from: Point, to: Point, speed?: int, duration?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -2010,8 +2101,8 @@ mouseDrag(from: Point, to: Point, speed?: number, duration?: number): Promise<vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| from | Point | 是 | 起始点坐标。 |
-| to | Point | 是 | 终点坐标。 |
+| from | [Point](arkts-test-point-i.md) | 是 | 起始点坐标。 |
+| to | [Point](arkts-test-point-i.md) | 是 | 终点坐标。 |
 | speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
 | duration | number | 否 | 拖拽前长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。 |
 
@@ -2019,7 +2110,7 @@ mouseDrag(from: Point, to: Point, speed?: number, duration?: number): Promise<vo
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -2047,12 +2138,13 @@ async function demo() {
 mouseDragWithOptions(from: Point, to: Point, touchOptions?: TouchOptions, keyOptions?: KeyOptions): Promise<void>
 ```
 
-按住鼠标左键并在屏幕上的指定点之间拖动，
-具有可选的触摸和按键设置。
+按住鼠标左键并在屏幕上的指定点之间拖动，具有可选的触摸和按键设置。
 
 **起始版本：** 26.0.0
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-mouseDragWithOptions(from: Point, to: Point, touchOptions?: TouchOptions, keyOptions?: KeyOptions): Promise<void>--><!--Device-Driver-mouseDragWithOptions(from: Point, to: Point, touchOptions?: TouchOptions, keyOptions?: KeyOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -2060,16 +2152,16 @@ mouseDragWithOptions(from: Point, to: Point, touchOptions?: TouchOptions, keyOpt
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| from | Point | 是 | 起点。 |
-| to | Point | 是 | 终点。 |
-| touchOptions | TouchOptions | 否 | 速度和持续时间设置的触摸选项。在此方法中，只有“速度”和“持续时间”属性有效。设置其他属性会导致BusinessError 17000007。<br>默认值：参考TouchOptions的默认值。 |
-| keyOptions | KeyOptions | 否 | 拖动期间要按的键代码的键选项。<br>默认值：参考keyOptions的默认值。 |
+| from | [Point](arkts-test-point-i.md) | 是 | 起点。 |
+| to | [Point](arkts-test-point-i.md) | 是 | 终点。 |
+| touchOptions | [TouchOptions](arkts-test-touchoptions-i.md) | 否 | 速度和持续时间设置的触摸选项。在此方法中，只有“速度”和“持续时间”属性有效。设置其他属性会导致BusinessError 17000007。<br>默认值：参考TouchOptions的默认值。 |
+| keyOptions | [KeyOptions](arkts-test-keyoptions-i.md) | 否 | 拖动期间要按的键代码的键选项。<br>默认值：参考keyOptions的默认值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| Promise<void> | - Promise that returns no value. |
 
 **错误码：**
 
@@ -2110,7 +2202,9 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Prom
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<void>--><!--Device-Driver-mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -2118,8 +2212,8 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Prom
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| p | Point | 是 | 鼠标长按的坐标。 |
-| btnId | MouseButton | 是 | 按下的鼠标按钮。 |
+| p | [Point](arkts-test-point-i.md) | 是 | 鼠标长按的坐标。 |
+| btnId | [MouseButton](arkts-test-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
 | key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)，默认值为0。 |
 | key2 | number | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)，默认值为0。 |
 
@@ -2127,7 +2221,7 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Prom
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -2160,7 +2254,9 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number, durat
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-mouseLongClick(p: Point, btnId: MouseButton, key1?: int, key2?: int, duration?: int): Promise<void>--><!--Device-Driver-mouseLongClick(p: Point, btnId: MouseButton, key1?: int, key2?: int, duration?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -2168,8 +2264,8 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number, durat
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| p | Point | 是 | 鼠标长按的坐标。 |
-| btnId | MouseButton | 是 | 按下的鼠标按钮。 |
+| p | [Point](arkts-test-point-i.md) | 是 | 鼠标长按的坐标。 |
+| btnId | [MouseButton](arkts-test-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
 | key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)，默认值为0。 |
 | key2 | number | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)，默认值为0。 |
 | duration | number | 否 | 长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。 |
@@ -2178,7 +2274,7 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number, durat
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -2211,7 +2307,9 @@ mouseMoveTo(p: Point): Promise<void>
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-mouseMoveTo(p: Point): Promise<void>--><!--Device-Driver-mouseMoveTo(p: Point): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -2219,13 +2317,13 @@ mouseMoveTo(p: Point): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| p | Point | 是 | 目标点的坐标。 |
+| p | [Point](arkts-test-point-i.md) | 是 | 目标点的坐标。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -2257,7 +2355,9 @@ mouseMoveWithTrack(from: Point, to: Point, speed?: number): Promise<void>
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-mouseMoveWithTrack(from: Point, to: Point, speed?: int): Promise<void>--><!--Device-Driver-mouseMoveWithTrack(from: Point, to: Point, speed?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -2265,15 +2365,15 @@ mouseMoveWithTrack(from: Point, to: Point, speed?: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| from | Point | 是 | 起始点坐标。 |
-| to | Point | 是 | 终点坐标。 |
+| from | [Point](arkts-test-point-i.md) | 是 | 起始点坐标。 |
+| to | [Point](arkts-test-point-i.md) | 是 | 终点坐标。 |
 | speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -2305,7 +2405,9 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number): P
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number): Promise<void>--><!--Device-Driver-mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -2313,7 +2415,7 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number): P
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| p | Point | 是 | 鼠标点击的坐标。 |
+| p | [Point](arkts-test-point-i.md) | 是 | 鼠标点击的坐标。 |
 | down | boolean | 是 | 滚轮滑动方向是否向下。true表示向下滑动。false表示向上滚动。 |
 | d | number | 是 | 鼠标滚轮滚动的格数，取值大于等于0的整数，每格对应目标点位移120px。 |
 | key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)，默认值为0。<br>**起始版本：** 11 |
@@ -2323,7 +2425,7 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number): P
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -2355,7 +2457,9 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number, sp
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-mouseScroll(p: Point, down: boolean, d: int, key1?: int, key2?: int, speed?: int): Promise<void>--><!--Device-Driver-mouseScroll(p: Point, down: boolean, d: int, key1?: int, key2?: int, speed?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -2363,7 +2467,7 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number, sp
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| p | Point | 是 | 鼠标点击的坐标。 |
+| p | [Point](arkts-test-point-i.md) | 是 | 鼠标点击的坐标。 |
 | down | boolean | 是 | 滚轮滑动方向是否向下。true表示向下滑动。false表示向上滚动。 |
 | d | number | 是 | 鼠标滚轮滚动的格数，取值大于等于0的整数，每格对应目标点位移120px。 |
 | key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-keycode-e.md)，默认值为0。 |
@@ -2374,7 +2478,7 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number, sp
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -2406,7 +2510,9 @@ penClick(point: Point): Promise<void>
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-penClick(point: Point): Promise<void>--><!--Device-Driver-penClick(point: Point): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -2414,13 +2520,13 @@ penClick(point: Point): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | Point | 是 | 点击的坐标点。 |
+| point | [Point](arkts-test-point-i.md) | 是 | 点击的坐标点。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象，返回无结果的Promise对象。 |
+| Promise<void> | - Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 
@@ -2452,7 +2558,9 @@ penDoubleClick(point: Point): Promise<void>
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-penDoubleClick(point: Point): Promise<void>--><!--Device-Driver-penDoubleClick(point: Point): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -2460,13 +2568,13 @@ penDoubleClick(point: Point): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | Point | 是 | 双击的坐标点。 |
+| point | [Point](arkts-test-point-i.md) | 是 | 双击的坐标点。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象，返回无结果的Promise对象。 |
+| Promise<void> | - Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 
@@ -2498,7 +2606,9 @@ penLongClick(point: Point, pressure?: number): Promise<void>
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-penLongClick(point: Point, pressure?: double): Promise<void>--><!--Device-Driver-penLongClick(point: Point, pressure?: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -2506,14 +2616,14 @@ penLongClick(point: Point, pressure?: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | Point | 是 | 长按的坐标点。 |
+| point | [Point](arkts-test-point-i.md) | 是 | 长按的坐标点。 |
 | pressure | number | 否 | 手写笔滑动操作的压力，默认为1.0，取值范围为0.0到1.0。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象，返回无结果的Promise对象。 |
+| Promise<void> | - Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 
@@ -2545,7 +2655,9 @@ penSwipe(startPoint: Point, endPoint: Point, speed?: number, pressure?: number):
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-penSwipe(startPoint: Point, endPoint: Point, speed?: int, pressure?: double): Promise<void>--><!--Device-Driver-penSwipe(startPoint: Point, endPoint: Point, speed?: int, pressure?: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -2553,8 +2665,8 @@ penSwipe(startPoint: Point, endPoint: Point, speed?: number, pressure?: number):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| startPoint | Point | 是 | 起始位置的坐标点。 |
-| endPoint | Point | 是 | 结束位置的坐标点。 |
+| startPoint | [Point](arkts-test-point-i.md) | 是 | 起始位置的坐标点。 |
+| endPoint | [Point](arkts-test-point-i.md) | 是 | 结束位置的坐标点。 |
 | speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
 | pressure | number | 否 | 手写笔滑动操作的压力，默认为1.0，取值范围为0.0到1.0。 |
 
@@ -2562,7 +2674,7 @@ penSwipe(startPoint: Point, endPoint: Point, speed?: number, pressure?: number):
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象，返回无结果的Promise对象。 |
+| Promise<void> | - Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 
@@ -2594,7 +2706,9 @@ pressBack(): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-pressBack(): Promise<void>--><!--Device-Driver-pressBack(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -2602,7 +2716,7 @@ pressBack(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -2633,7 +2747,9 @@ pressBack(displayId: number): Promise<void>
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-pressBack(displayId: int): Promise<void>--><!--Device-Driver-pressBack(displayId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -2647,7 +2763,7 @@ pressBack(displayId: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -2679,7 +2795,9 @@ pressHome(): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-pressHome(): Promise<void>--><!--Device-Driver-pressHome(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -2687,7 +2805,7 @@ pressHome(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -2718,7 +2836,9 @@ pressHome(displayId: number): Promise<void>
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-pressHome(displayId: int): Promise<void>--><!--Device-Driver-pressHome(displayId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -2726,13 +2846,13 @@ pressHome(displayId: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayId | number | 是 | 指定设备屏幕ID。取值范围：大于等于0的整数。**说明：** 传入displayId不存在时，将抛出17000007异常。 |
+| displayId | number | 是 | 指定设备屏幕ID。取值范围：大于等于0的整数。* **说明：** 传入displayId不存在时，将抛出17000007异常。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -2764,7 +2884,9 @@ screenCap(savePath: string): Promise<boolean>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-screenCap(savePath: string): Promise<boolean>--><!--Device-Driver-screenCap(savePath: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -2778,7 +2900,7 @@ screenCap(savePath: string): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise对象，返回截图操作是否成功完成。true：完成，false：未完成。 |
+| Promise<boolean> | - Promise对象，返回截图操作是否成功完成。true：完成，false：未完成。 |
 
 **错误码：**
 
@@ -2810,7 +2932,9 @@ screenCap(savePath: string, displayId: number): Promise<boolean>
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-screenCap(savePath: string, displayId: int): Promise<boolean>--><!--Device-Driver-screenCap(savePath: string, displayId: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -2825,7 +2949,7 @@ screenCap(savePath: string, displayId: number): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回截图操作是否成功完成。true：完成。false：未完成。 |
+| Promise<boolean> | Promise对象，返回截图操作是否成功完成。true：完成。false：未完成。 |
 
 **错误码：**
 
@@ -2857,7 +2981,9 @@ screenCapture(savePath: string, rect?: Rect): Promise<boolean>
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-screenCapture(savePath: string, rect?: Rect): Promise<boolean>--><!--Device-Driver-screenCapture(savePath: string, rect?: Rect): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -2866,13 +2992,13 @@ screenCapture(savePath: string, rect?: Rect): Promise<boolean>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | savePath | string | 是 | 文件保存路径。路径需为当前应用的[沙箱路径](../../../../file-management/app-sandbox-directory.md)。 |
-| rect | Rect | 否 | 截图区域，默认为全屏。<br>**起始版本：** 11 |
+| rect | [Rect](arkts-test-rect-i.md) | 否 | 截图区域，默认为全屏。<br>**起始版本：** 11 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise对象，返回截图操作是否成功完成。true：成功完成，false：未成功完成。 |
+| Promise<boolean> | - Promise对象，返回截图操作是否成功完成。true：成功完成，false：未成功完成。 |
 
 **错误码：**
 
@@ -2909,7 +3035,9 @@ setDisplayRotation(rotation: DisplayRotation): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-setDisplayRotation(rotation: DisplayRotation): Promise<void>--><!--Device-Driver-setDisplayRotation(rotation: DisplayRotation): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -2917,13 +3045,13 @@ setDisplayRotation(rotation: DisplayRotation): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rotation | DisplayRotation | 是 | 设备的显示方向。 |
+| rotation | [DisplayRotation](arkts-test-displayrotation-e.md) | 是 | 设备的显示方向。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -2955,7 +3083,9 @@ setDisplayRotationEnabled(enabled: boolean): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-setDisplayRotationEnabled(enabled: boolean): Promise<void>--><!--Device-Driver-setDisplayRotationEnabled(enabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -2969,7 +3099,7 @@ setDisplayRotationEnabled(enabled: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -3001,7 +3131,9 @@ swipe(startx: number, starty: number, endx: number, endy: number, speed?: number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-swipe(startx: int, starty: int, endx: int, endy: int, speed?: int): Promise<void>--><!--Device-Driver-swipe(startx: int, starty: int, endx: int, endy: int, speed?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -3019,7 +3151,7 @@ swipe(startx: number, starty: number, endx: number, endy: number, speed?: number
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -3053,7 +3185,9 @@ swipeBetween(from: Point, to: Point, speed?: number): Promise<void>
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-swipeBetween(from: Point, to: Point, speed?: int): Promise<void>--><!--Device-Driver-swipeBetween(from: Point, to: Point, speed?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -3061,15 +3195,15 @@ swipeBetween(from: Point, to: Point, speed?: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| from | Point | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
-| to | Point | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。**说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
+| from | [Point](arkts-test-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
+| to | [Point](arkts-test-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。* **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
 | speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错误码。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -3101,7 +3235,9 @@ swipeBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise
 
 **起始版本：** 26.0.0
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-swipeBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<void>--><!--Device-Driver-swipeBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -3109,15 +3245,15 @@ swipeBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| from | Point | 是 | 手指接触屏幕的坐标点。 |
-| to | Point | 是 | 手指离开屏幕的坐标点。 |
-| options | TouchOptions | 否 | 滑动操作的选项。只有“速度”和“压力”属性适用于此方法。设置其他属性将导致BusinessError 17000007。<br>默认值：参考TouchOptions的默认值。 |
+| from | [Point](arkts-test-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
+| to | [Point](arkts-test-point-i.md) | 是 | 手指离开屏幕的坐标点。 |
+| options | [TouchOptions](arkts-test-touchoptions-i.md) | 否 | 滑动操作的选项。只有“速度”和“压力”属性适用于此方法。设置其他属性将导致BusinessError 17000007。<br>默认值：参考TouchOptions的默认值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| Promise<void> | - Promise that returns no value. |
 
 **错误码：**
 
@@ -3154,7 +3290,9 @@ touchPadMultiFingerSwipe(fingers: number, direction: UiDirection, options?: Touc
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-touchPadMultiFingerSwipe(fingers: int, direction: UiDirection, options?: TouchPadSwipeOptions): Promise<void>--><!--Device-Driver-touchPadMultiFingerSwipe(fingers: int, direction: UiDirection, options?: TouchPadSwipeOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -3163,14 +3301,14 @@ touchPadMultiFingerSwipe(fingers: number, direction: UiDirection, options?: Touc
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | fingers | number | 是 | 触摸板多指滑动的手指数。取值为3或者4。 |
-| direction | UiDirection | 是 | 触摸板多指滑动的方向。 |
-| options | TouchPadSwipeOptions | 否 | 触摸板多指滑动手势附加选项，默认取TouchPadSwipeOptions中各属性的默认值。 |
+| direction | [UiDirection](arkts-test-uidirection-e.md) | 是 | 触摸板多指滑动的方向。 |
+| options | [TouchPadSwipeOptions](arkts-test-touchpadswipeoptions-i.md) | 否 | 触摸板多指滑动手势附加选项，默认取TouchPadSwipeOptions中各属性的默认值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象，返回无结果的Promise对象。 |
+| Promise<void> | - Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 
@@ -3203,7 +3341,9 @@ touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: number, speed?
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: int, speed?: int): Promise<void>--><!--Device-Driver-touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: int, speed?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -3211,8 +3351,8 @@ touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: number, speed?
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | Point | 是 | 触摸板双指滚动时鼠标光标的位置。 |
-| direction | UiDirection | 是 | 触摸板双指滚动的方向。 |
+| point | [Point](arkts-test-point-i.md) | 是 | 触摸板双指滚动时鼠标光标的位置。 |
+| direction | [UiDirection](arkts-test-uidirection-e.md) | 是 | 触摸板双指滚动的方向。 |
 | d | number | 是 | 触摸板双指滚动的格数，取值为大于等于0的整数，每格对应目标点位移120px。 |
 | speed | number | 否 | 触摸板双指滚动的速度，范围：1-500的整数，单位：格/秒。为不在范围内的非负数或为null/undefined时设为默认值20。为负数时抛出17000007错误码。 |
 
@@ -3220,7 +3360,7 @@ touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: number, speed?
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象，无返回结果。 |
+| Promise<void> | - Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -3253,7 +3393,9 @@ triggerCombineKeys(key0: number, key1: number, key2?: number): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-triggerCombineKeys(key0: number, key1: number, key2?: number): Promise<void>--><!--Device-Driver-triggerCombineKeys(key0: number, key1: number, key2?: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -3269,7 +3411,7 @@ triggerCombineKeys(key0: number, key1: number, key2?: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -3302,7 +3444,9 @@ triggerCombineKeys(key0: number, key1: number, key2?: number, displayId?: number
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-triggerCombineKeys(key0: int, key1: int, key2?: int, displayId?: int): Promise<void>--><!--Device-Driver-triggerCombineKeys(key0: int, key1: int, key2?: int, displayId?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -3319,7 +3463,7 @@ triggerCombineKeys(key0: number, key1: number, key2?: number, displayId?: number
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -3351,7 +3495,9 @@ triggerKey(keyCode: number): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-triggerKey(keyCode: int): Promise<void>--><!--Device-Driver-triggerKey(keyCode: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -3365,7 +3511,7 @@ triggerKey(keyCode: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -3398,7 +3544,9 @@ triggerKey(keyCode: number, displayId: number): Promise<void>
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-triggerKey(keyCode: int, displayId: int): Promise<void>--><!--Device-Driver-triggerKey(keyCode: int, displayId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -3413,7 +3561,7 @@ triggerKey(keyCode: number, displayId: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -3446,14 +3594,14 @@ Trigger pen key operation.
 
 Supported combinations:
 
-- HANDWRITING mode: HANDWRITING key with CLICK or DOUBLE_CLICK operation.
-- AIR_MOUSE mode: AIR_MOUSE key with CLICK or DOUBLE_CLICK operation (requires point in options),
-HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK operation.
-Other combinations will result in a BusinessError 17000007.
+- HANDWRITING mode: HANDWRITING key with CLICK or DOUBLE_CLICK operation.  
+- AIR_MOUSE mode: AIR_MOUSE key with CLICK or DOUBLE_CLICK operation (requires point in options),HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK operation.Other combinations will result in a BusinessError 17000007.
 
 **起始版本：** 26.0.0
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-triggerPenKey(key: PenKey, mode: PenMode, operation: PenKeyOperation, options?: PenKeyOperationOptions): Promise<void>--><!--Device-Driver-triggerPenKey(key: PenKey, mode: PenMode, operation: PenKeyOperation, options?: PenKeyOperationOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -3461,16 +3609,16 @@ Other combinations will result in a BusinessError 17000007.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | PenKey | 是 | the pen key to operate. |
-| mode | PenMode | 是 | the pen mode. |
-| operation | PenKeyOperation | 是 | the operation type. |
-| options | PenKeyOperationOptions | 否 | the operation options, including optional coordinate point.Default value: Refer to the default value of PenKeyOperationOption.<br>默认值：参考PenKeyOperationOption的默认值。 |
+| key | [PenKey](arkts-test-penkey-e.md) | 是 | the pen key to operate. |
+| mode | [PenMode](arkts-test-penmode-e.md) | 是 | the pen mode. |
+| operation | [PenKeyOperation](arkts-test-penkeyoperation-e.md) | 是 | the operation type. |
+| options | [PenKeyOperationOptions](arkts-test-penkeyoperationoptions-i.md) | 否 | the operation options, including optional coordinate point.Default value: Refer to the default value of PenKeyOperationOption.<br>默认值：参考PenKeyOperationOption的默认值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| Promise<void> | - Promise that returns no value. |
 
 **错误码：**
 
@@ -3508,7 +3656,9 @@ waitForComponent(on: On, time: number): Promise<Component>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-waitForComponent(on: On, time: number): Promise<Component>--><!--Device-Driver-waitForComponent(on: On, time: number): Promise<Component>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -3516,14 +3666,14 @@ waitForComponent(on: On, time: number): Promise<Component>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| on | On | 是 | 目标控件的属性要求。 |
+| on | [On](arkts-test-on-c.md) | 是 | 目标控件的属性要求。 |
 | time | number | 是 | 查找目标控件的持续时间。单位ms，取值范围：大于等于0的整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Component&gt; | Promise对象，返回控件对象。 |
+| Promise<Component> | Promise对象，返回控件对象。 |
 
 **错误码：**
 
@@ -3555,7 +3705,9 @@ waitForIdle(idleTime: number, timeout: number): Promise<boolean>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-waitForIdle(idleTime: int, timeout: int): Promise<boolean>--><!--Device-Driver-waitForIdle(idleTime: int, timeout: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -3570,7 +3722,7 @@ waitForIdle(idleTime: number, timeout: number): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise对象，返回当前界面的所有控件是否已经空闲。true：已经空闲，false：不空闲。 |
+| Promise<boolean> | - Promise对象，返回当前界面的所有控件是否已经空闲。true：已经空闲，false：不空闲。 |
 
 **错误码：**
 
@@ -3602,7 +3754,9 @@ wakeUpDisplay(): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Driver-wakeUpDisplay(): Promise<void>--><!--Device-Driver-wakeUpDisplay(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -3610,7 +3764,7 @@ wakeUpDisplay(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

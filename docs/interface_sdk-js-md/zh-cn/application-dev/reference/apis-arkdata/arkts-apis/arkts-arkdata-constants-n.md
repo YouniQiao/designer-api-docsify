@@ -8,6 +8,8 @@ KVStore常量。
 
 **替代接口：** Constants
 
+<!--Device-distributedData-namespace Constants--><!--Device-distributedData-namespace Constants-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## 汇总

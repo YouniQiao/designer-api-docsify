@@ -4,6 +4,8 @@ This module provides the capability to media enhancement
 
 **Since:** 23
 
+<!--Device-unnamed-declare namespace avMusicTemplate--><!--Device-unnamed-declare namespace avMusicTemplate-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## Modules to Import

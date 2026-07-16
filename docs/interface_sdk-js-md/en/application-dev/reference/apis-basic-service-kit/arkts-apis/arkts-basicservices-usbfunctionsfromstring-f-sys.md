@@ -20,6 +20,8 @@ Converts the USB function list in the string format to a numeric mask in Device 
 
 **Substitutes:** getFunctionsFromString(funcs:
 
+<!--Device-usbManager-function usbFunctionsFromString(funcs: string): number--><!--Device-usbManager-function usbFunctionsFromString(funcs: string): number-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 **System API:** This is a system API.
@@ -40,5 +42,5 @@ Converts the USB function list in the string format to a numeric mask in Device 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified.<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:* <br>1.Mandatory parameters are left unspecified.* <br>2.Incorrect parameter types. |
 

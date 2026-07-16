@@ -22,14 +22,16 @@ Triggers vibration based on a specified duration. This API uses an asynchronous 
 
 **Required permissions:** ohos.permission.VIBRATE
 
+<!--Device-vibrator-function vibrate(duration: number, callback?: AsyncCallback<void>): void--><!--Device-vibrator-function vibrate(duration: number, callback?: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| duration | number | Yes | Vibration duration, in ms. The value range is (0,1800000]. The maximum vibrationduration varies with devices due to different component protection design specifications of drivers provided bydifferent vendors. It is recommended that a single vibration duration be less than or equal to 10s to maximizeuser experience. |
-| callback | AsyncCallback&lt;void&gt; | No | Callback used to return the result. If the vibration starts, **err** is**undefined**; otherwise, **err** is an error object. |
+| duration | number | Yes | Vibration duration, in ms. The value range is (0,1800000]. The maximum vibration duration varies with devices due to different component protection design specifications of drivers provided by different vendors. It is recommended that a single vibration duration be less than or equal to 10s to maximize user experience. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | No | Callback used to return the result. If the vibration starts, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Example**
 
@@ -64,19 +66,21 @@ Triggers vibration based on a specified duration. This API uses a promise to ret
 
 **Required permissions:** ohos.permission.VIBRATE
 
+<!--Device-vibrator-function vibrate(duration: number): Promise<void>--><!--Device-vibrator-function vibrate(duration: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| duration | number | Yes | Vibration duration, in ms. The value range is (0,1800000]. The maximum vibrationduration varies with devices due to different component protection design specifications of drivers provided bydifferent vendors. It is recommended that a single vibration duration be less than or equal to 10s to maximizeuser experience. |
+| duration | number | Yes | Vibration duration, in ms. The value range is (0,1800000]. The maximum vibration duration varies with devices due to different component protection design specifications of drivers provided by different vendors. It is recommended that a single vibration duration be less than or equal to 10s to maximize user experience. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns the result. |
 
 **Example**
 
@@ -109,19 +113,21 @@ Triggers vibration based on a specified effect. This API uses a promise to retur
 
 **Required permissions:** ohos.permission.VIBRATE
 
+<!--Device-vibrator-function vibrate(effectId: EffectId): Promise<void>--><!--Device-vibrator-function vibrate(effectId: EffectId): Promise<void>-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effectId | EffectId | Yes | Effect ID. The value is a string of a maximum of 64 characters. If the lengthexceeds 64 characters, the first 64 characters are used. You are advised to check whether the effect ID issupported. |
+| effectId | [EffectId](arkts-sensorservice-effectid-e.md) | Yes | Effect ID. The value is a string of a maximum of 64 characters. If the length exceeds 64 characters, the first 64 characters are used. You are advised to check whether the effect ID is supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns the result. |
 
 **Example**
 
@@ -154,14 +160,16 @@ Triggers vibration based on a specified effect. This API uses an asynchronous ca
 
 **Required permissions:** ohos.permission.VIBRATE
 
+<!--Device-vibrator-function vibrate(effectId: EffectId, callback?: AsyncCallback<void>): void--><!--Device-vibrator-function vibrate(effectId: EffectId, callback?: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effectId | EffectId | Yes | Effect ID. The value is a string of a maximum of 64 characters. If the lengthexceeds 64 characters, the first 64 characters are used. You are advised to check whether the effect ID issupported. |
-| callback | AsyncCallback&lt;void&gt; | No | Callback used to return the result. If the vibration starts, **err** is**undefined**; otherwise, **err** is an error object. |
+| effectId | [EffectId](arkts-sensorservice-effectid-e.md) | Yes | Effect ID. The value is a string of a maximum of 64 characters. If the length exceeds 64 characters, the first 64 characters are used. You are advised to check whether the effect ID is supported. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | No | Callback used to return the result. If the vibration starts, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Example**
 

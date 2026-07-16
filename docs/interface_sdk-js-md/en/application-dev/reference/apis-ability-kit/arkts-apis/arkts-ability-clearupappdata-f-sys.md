@@ -12,12 +12,13 @@ import { appManager } from '@kit.AbilityKit';
 function clearUpAppData(bundleName: string, appCloneIndex?: number): Promise<void>
 ```
 
-Clears data of a specified application based on the bundle name and application clone index. This API uses a
-promise to return the result.
+Clears data of a specified application based on the bundle name and application clone index. This API uses a promise to return the result.
 
 **Since:** 13
 
 **Required permissions:** ohos.permission.CLEAN_APPLICATION_DATA
+
+<!--Device-appManager-function clearUpAppData(bundleName: string, appCloneIndex?: int): Promise<void>--><!--Device-appManager-function clearUpAppData(bundleName: string, appCloneIndex?: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -34,7 +35,7 @@ promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

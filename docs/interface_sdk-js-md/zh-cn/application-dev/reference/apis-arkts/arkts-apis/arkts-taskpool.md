@@ -1,26 +1,23 @@
 # @ohos.taskpool
 
-任务池（taskpool）的作用是为应用程序提供多线程运行环境，降低资源消耗并提升系统性能，且您无需关心线程的生命周期。您可以使用任务池API
-创建后台任务（Task），并进行如执行任务或取消任务等操作。理论上，任务池API允许创建的任务数量不受限制，但由于内存限制，不建议这样做。此外，
-不建议在任务中执行阻塞操作，尤其是无限期阻塞操作，因为长时间的阻塞操作会占用工作线程，可能阻塞其他任务的调度，影响应用性能。
-创建同一优先级的任务时，可以自行决定其执行顺序。任务的实际执行顺序与调用任务池API提供的任务执行接口的顺序一致。任务的默认优先级为MEDIUM。
-当同一时间待执行的任务数量大于任务池工作线程数量，任务池会根据负载均衡机制进行扩容，增加工作线程数量，减少整体等待时长。同样，当执行的任务数量减少，
-工作线程数量大于执行任务数量，部分工作线程处于空闲状态，任务池会根据负载均衡机制进行缩容，减少工作线程数量。
-如需了解任务池API返回错误码的详细信息，请参阅
-[语言基础类库错误码](../../../../reference/apis-arkts/errorcode-utils.md)。
-如需了解使用TaskPool时的相关注意点，请参阅
-[TaskPool注意事项](../../../../arkts-utils/taskpool-introduction.md#taskpool注意事项)。
-文档中涉及以下任务概念：
+任务池（taskpool）的作用是为应用程序提供多线程运行环境，降低资源消耗并提升系统性能，且您无需关心线程的生命周期。您可以使用任务池API创建后台任务（Task），并进行如执行任务或取消任务等操作。理论上，任务池API允许创建的任务数量不受限制，但由于内存限制，不建议这样做。此外，不建议在任务中执行阻塞操作，尤其是无限期阻塞操作，因为长时间的阻塞操作会占用工作线程，可能阻塞其他任务的调度，影响应用性能。创建同一优先级的任务时，可以自行决定其执行顺序。任务的实际执行顺序与调用任务池API提供的任务执行接口的顺序一致。任务的默认优先级为MEDIUM。当同一时间待执行的任务数量大于任务池工作线程数量，任务池会根据负载均衡机制进行扩容，增加工作线程数量，减少整体等待时长。同样，当执行的任务数量减少，工作线程数量大于执行任务数量，部分工作线程处于空闲状态，任务池会根据负载均衡机制进行缩容，减少工作线程数量。如需了解任务池API返回错误码的详细信息，请参阅[语言基础类库错误码](../../../../reference/apis-arkts/errorcode-utils.md)。如需了解使用TaskPool时的相关注意点，请参阅[TaskPool注意事项](../../../../arkts-utils/taskpool-introduction.md#taskpool注意事项)。文档中涉及以下任务概念：
 
-- 任务组任务：对应为[TaskGroup](arkts-arkts-taskgroup-c.md)任务。
-- 串行队列任务：对应为[SequenceRunner](arkts-arkts-sequencerunner-c.md)任务。
-- 异步队列任务：对应为[AsyncRunner](arkts-arkts-asyncrunner-c.md)任务。
-- 周期任务：由
-[executePeriodically](arkts-arkts-executeperiodically-f.md#executeperiodically-1)执行的任务。
+- 任务组任务：对应为[TaskGroup](arkts-arkts-taskgroup-c.md)任务。  
+- 串行队列任务：对应为[SequenceRunner](arkts-arkts-sequencerunner-c.md)任务。  
+- 异步队列任务：对应为[AsyncRunner](arkts-arkts-asyncrunner-c.md)任务。  
+- 周期任务：由[executePeriodically](arkts-arkts-executeperiodically-f.md#executeperiodically-1)执行的任务。
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace taskpool--><!--Device-unnamed-declare namespace taskpool-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { taskpool } from '@kit.ArkTS';
+```
 
 ## 汇总
 
@@ -43,7 +40,7 @@
 | [executeDelayed](arkts-arkts-executedelayed-f.md#executedelayed-2) | 延时执行泛型任务，不校验任务的参数类型和返回值类型。使用Promise异步回调。executeDelayed任务的校验是结合**new GenericsTask**一起用的，参数、返回值类型需与**new GenericsTask**中的类型保持一致。 |
 | [executePeriodically](arkts-arkts-executeperiodically-f.md#executeperiodically-1) | 周期任务每隔period时长执行一次。当前执行模式支持设置任务优先级，并可以通过调用**cancel()**取消执行。周期任务不能是任务组任务、串行队列任务或异步队列任务，不能再次调用执行接口，且执行的任务不能拥有依赖关系。 |
 | [executePeriodically](arkts-arkts-executeperiodically-f.md#executeperiodically-2) | 周期执行泛型任务，不校验任务的参数类型和返回值类型。executePeriodically任务的校验是结合**new GenericsTask**一起用的，参数、返回值类型需与**new GenericsTask**中的类型保持一致。 |
-| [getTask](arkts-arkts-gettask-f.md#gettask-1) | 通过taskId或taskId与taskName获取对应的Task实例。&gt; **说明**&gt;&gt; - 如果传入的taskId查询不到对应的Task实例，则会返回**undefined**。&gt;&gt; - 如果传入的taskId能够查询到对应的Task实例，但是调用**getTask**方法的线程和创建Task实例的线程不一致，则会返回**undefined**。&gt;&gt; - 如果同时传入taskId和taskName，通过taskId查询到的Task实例的name和传入的taskName不一致，则会返回**undefined**。 |
+| [getTask](arkts-arkts-gettask-f.md#gettask-1) | 通过taskId或taskId与taskName获取对应的Task实例。&gt; **说明** &gt; &gt; - 如果传入的taskId查询不到对应的Task实例，则会返回**undefined**。 &gt; &gt; - 如果传入的taskId能够查询到对应的Task实例，但是调用**getTask**方法的线程和创建Task实例的线程不一致，则会返回**undefined**。 &gt; &gt; - 如果同时传入taskId和taskName，通过taskId查询到的Task实例的name和传入的taskName不一致，则会返回**undefined**。 |
 | [getTaskPoolInfo](arkts-arkts-gettaskpoolinfo-f.md#gettaskpoolinfo-1) | 获取任务池的线程信息和任务信息。 |
 | [isConcurrent](arkts-arkts-isconcurrent-f.md#isconcurrent-1) | 检查函数是否为并发函数。 |
 | [terminateTask](arkts-arkts-terminatetask-f.md#terminatetask-1) | 中止任务池中的长时任务，在长时任务执行完成后调用。中止后，执行长时任务的线程可能会被回收。 |

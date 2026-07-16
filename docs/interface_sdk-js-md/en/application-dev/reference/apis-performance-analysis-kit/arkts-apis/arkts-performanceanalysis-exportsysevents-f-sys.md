@@ -12,12 +12,13 @@ import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 function exportSysEvents(queryArg: QueryArg, rules: QueryRule[]): number
 ```
 
-Exports system events in batches and writes them as a file to the fixed directory of the application sandbox (that
-is, /data/storage/el2/base/cache/hiview/event/).
+Exports system events in batches and writes them as a file to the fixed directory of the application sandbox (that is, /data/storage/el2/base/cache/hiview/event/).
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_DFX_SYSEVENT
+
+<!--Device-hiSysEvent-function exportSysEvents(queryArg: QueryArg, rules: QueryRule[]): long--><!--Device-hiSysEvent-function exportSysEvents(queryArg: QueryArg, rules: QueryRule[]): long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -27,8 +28,8 @@ is, /data/storage/el2/base/cache/hiview/event/).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| queryArg | QueryArg | Yes | Event query parameters for the export. |
-| rules | QueryRule[] | Yes | Array of event query rules for the export. |
+| queryArg | [QueryArg](arkts-performanceanalysis-queryarg-i-sys.md) | Yes | Event query parameters for the export. |
+| rules | [QueryRule](arkts-performanceanalysis-queryrule-i-sys.md)[] | Yes | Array of event query rules for the export. |
 
 **Return value:**
 

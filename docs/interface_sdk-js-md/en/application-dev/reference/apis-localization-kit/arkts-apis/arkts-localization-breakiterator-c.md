@@ -4,6 +4,8 @@ Provides text line breaking capabilities, such as obtaining, moving, and identif
 
 **Since:** 8
 
+<!--Device-i18n-export class BreakIterator--><!--Device-i18n-export class BreakIterator-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
@@ -23,6 +25,8 @@ Obtains the position of the break iterator in the text.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BreakIterator-current(): int--><!--Device-BreakIterator-current(): int-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -55,6 +59,8 @@ Moves the break iterator to the first line break point, which is always at the b
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BreakIterator-first(): int--><!--Device-BreakIterator-first(): int-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
@@ -86,6 +92,8 @@ Moves the line break iterator to the line break point after the specified positi
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BreakIterator-following(offset: int): int--><!--Device-BreakIterator-following(offset: int): int-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -98,7 +106,7 @@ Moves the line break iterator to the line break point after the specified positi
 
 | Type | Description |
 | --- | --- |
-| number | Position of the break iterator in the text after movement. The value **-1** is returned if theposition of the break iterator is outside of the processed text after movement. |
+| number | Position of the break iterator in the text after movement. The value **-1** is returned if the position of the break iterator is outside of the processed text after movement. |
 
 **Example**
 
@@ -124,6 +132,8 @@ Obtains the text processed by the **BreakIterator** object.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BreakIterator-getLineBreakText(): string--><!--Device-BreakIterator-getLineBreakText(): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -156,6 +166,8 @@ Checks whether the specified position is a line break point.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BreakIterator-isBoundary(offset: int): boolean--><!--Device-BreakIterator-isBoundary(offset: int): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -168,7 +180,7 @@ Checks whether the specified position is a line break point.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the specified position is a line break point. The value **true** indicates that thespecified position is a line break point, and the value **false** indicates the opposite.If **true** is returned, the break iterator is moved to the position specified by **offset**. Otherwise, thebreak iterator is moved to the text line break point after the position specified by **offset**, which isequivalent to calling **following**. |
+| boolean | Whether the specified position is a line break point. The value **true** indicates that the specified position is a line break point, and the value **false** indicates the opposite.If **true** is returned, the break iterator is moved to the position specified by **offset**. Otherwise, the break iterator is moved to the text line break point after the position specified by **offset**, which is equivalent to calling **following**. |
 
 **Example**
 
@@ -188,12 +200,13 @@ isBoundary = iterator.isBoundary(5); // isBoundary = false;
 last(): number
 ```
 
-Moves the break iterator to the last line break point, which is always the next position after the end of the
-processed text.
+Moves the break iterator to the last line break point, which is always the next position after the end of the processed text.
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BreakIterator-last(): int--><!--Device-BreakIterator-last(): int-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -226,19 +239,21 @@ Moves the break iterator backward by the specified number of line break points.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BreakIterator-next(index?: int): int--><!--Device-BreakIterator-next(index?: int): int-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | No | Number of line break points for moving the break iterator. The value is an integer.A positive number means to move the break iterator backward, and a negative number means to move the breakiterator forward.The default value is **1**. |
+| index | number | No | Number of line break points for moving the break iterator. The value is an integer.A positive number means to move the break iterator backward, and a negative number means to move the break iterator forward.The default value is **1**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Position of the break iterator in the text after movement.The value **-1** is returned if the position of the break iterator is outside of the processed text aftermovement. |
+| number | Position of the break iterator in the text after movement.The value **-1** is returned if the position of the break iterator is outside of the processed text after movement. |
 
 **Example**
 
@@ -265,13 +280,15 @@ Moves the break iterator foreward by one line break point.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BreakIterator-previous(): int--><!--Device-BreakIterator-previous(): int-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Position of the break iterator in the text after movement.The value **-1** is returned if the position of the break iterator is outside of the processed text aftermovement. |
+| number | Position of the break iterator in the text after movement.The value **-1** is returned if the position of the break iterator is outside of the processed text after movement. |
 
 **Example**
 
@@ -297,6 +314,8 @@ Sets the text to be processed by the **BreakIterator** object.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BreakIterator-setLineBreakText(text: string): void--><!--Device-BreakIterator-setLineBreakText(text: string): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 

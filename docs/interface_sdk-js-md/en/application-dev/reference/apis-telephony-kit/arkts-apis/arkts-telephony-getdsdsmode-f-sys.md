@@ -18,6 +18,8 @@ Obtains the value of dsds mode.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getDsdsMode(callback: AsyncCallback<DsdsMode>): void--><!--Device-sim-function getDsdsMode(callback: AsyncCallback<DsdsMode>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Obtains the value of dsds mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;DsdsMode&gt; | Yes | Indicates the callback forgetting one of the following dsds mode states:&lt;ul&gt;&lt;li&gt;{@code DsdsMode#DSDS_MODE_V2}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V3}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_TDM}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_DSDA}&lt;/ul&gt; |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DsdsMode> | Yes | Indicates the callback for getting one of the following dsds mode states:&lt;ul&gt;&lt;li&gt;{@code DsdsMode#DSDS_MODE_V2}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V3}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_TDM}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_DSDA}&lt;/ul&gt; |
 
 **Error codes:**
 
@@ -35,7 +37,7 @@ Obtains the value of dsds mode.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect toservice. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
 
@@ -68,6 +70,8 @@ Obtains the value of dsds mode.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getDsdsMode(): Promise<DsdsMode>--><!--Device-sim-function getDsdsMode(): Promise<DsdsMode>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -76,7 +80,7 @@ Obtains the value of dsds mode.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DsdsMode&gt; | Returns one of the following dsds modestates:&lt;ul&gt;&lt;li&gt;{@code DsdsMode#DSDS_MODE_V2}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V3}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_TDM}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_DSDA}&lt;/ul&gt; |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DsdsMode> | Returns one of the following dsds mode states:&lt;ul&gt;&lt;li&gt;{@code DsdsMode#DSDS_MODE_V2}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V3}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_TDM}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_DSDA}&lt;/ul&gt; |
 
 **Error codes:**
 
@@ -85,7 +89,7 @@ Obtains the value of dsds mode.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect toservice. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
 

@@ -18,6 +18,8 @@ Obtains an {@link WakeupManager} instance.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-intelligentVoice-function getWakeupManager(): WakeupManager--><!--Device-intelligentVoice-function getWakeupManager(): WakeupManager-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Obtains an {@link WakeupManager} instance.
 
 | Type | Description |
 | --- | --- |
-| WakeupManager | this {@link WakeupManager} object. |
+| [WakeupManager](arkts-basicservices-wakeupmanager-i-sys.md) | this {@link WakeupManager} object. |
 
 **Error codes:**
 

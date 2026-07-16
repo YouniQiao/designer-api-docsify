@@ -1,9 +1,10 @@
 # @ohos.multimedia.systemSoundManager
 
-This module provides basic capabilities for managing system sound effects, including defining system sound effect
-types and obtaining system sound effect players.
+This module provides basic capabilities for managing system sound effects, including defining system sound effect types and obtaining system sound effect players.
 
 **Since:** 23
+
+<!--Device-unnamed-declare namespace systemSoundManager--><!--Device-unnamed-declare namespace systemSoundManager-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 

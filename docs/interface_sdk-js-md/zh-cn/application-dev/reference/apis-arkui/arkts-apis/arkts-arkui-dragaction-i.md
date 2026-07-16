@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-dragController-interface DragAction--><!--Device-dragController-interface DragAction-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { dragController } from '@kit.ArkUI';
+```
 
 ## off('statusChange')
 
@@ -18,7 +26,9 @@ off(type: 'statusChange', callback?: Callback<DragAndDropInfo>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DragAction-off(type: 'statusChange', callback?: Callback<DragAndDropInfo>): void--><!--Device-DragAction-off(type: 'statusChange', callback?: Callback<DragAndDropInfo>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,7 +37,7 @@ off(type: 'statusChange', callback?: Callback<DragAndDropInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'statusChange' | 是 | for status changing |
-| callback | Callback&lt;DragAndDropInfo&gt; | 否 | with drag event and status information |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<DragAndDropInfo> | 否 | with drag event and status information |
 
 ## on('statusChange')
 
@@ -41,7 +51,9 @@ on(type: 'statusChange', callback: Callback<DragAndDropInfo>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DragAction-on(type: 'statusChange', callback: Callback<DragAndDropInfo>): void--><!--Device-DragAction-on(type: 'statusChange', callback: Callback<DragAndDropInfo>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,7 +62,7 @@ on(type: 'statusChange', callback: Callback<DragAndDropInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'statusChange' | 是 | for status changing |
-| callback | Callback&lt;DragAndDropInfo&gt; | 是 | with drag event and status information |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<DragAndDropInfo> | 是 | with drag event and status information |
 
 ## startDrag
 
@@ -64,7 +76,9 @@ startDrag(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DragAction-startDrag(): Promise<void>--><!--Device-DragAction-startDrag(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,7 +86,7 @@ startDrag(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

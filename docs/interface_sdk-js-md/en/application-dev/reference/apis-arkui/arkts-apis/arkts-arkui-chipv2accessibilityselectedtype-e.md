@@ -4,6 +4,8 @@ Enum for ChipV2AccessibilitySelectedType
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare enum ChipV2AccessibilitySelectedType--><!--Device-unnamed-export declare enum ChipV2AccessibilitySelectedType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CLICKED
@@ -19,6 +21,8 @@ Default type.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipV2AccessibilitySelectedType-CLICKED = 0--><!--Device-ChipV2AccessibilitySelectedType-CLICKED = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ Checked type.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2AccessibilitySelectedType-CHECKED = 1--><!--Device-ChipV2AccessibilitySelectedType-CHECKED = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SELECTED
@@ -51,6 +57,8 @@ Selected type.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipV2AccessibilitySelectedType-SELECTED = 2--><!--Device-ChipV2AccessibilitySelectedType-SELECTED = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

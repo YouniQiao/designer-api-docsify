@@ -1,5 +1,11 @@
 # getAddedScanners（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { scan } from '@kit.BasicServicesKit';
+```
+
 ## getAddedScanners
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getAddedScanners(): Promise<ScannerDevice[]>
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-scan-function getAddedScanners(): Promise<ScannerDevice[]>--><!--Device-scan-function getAddedScanners(): Promise<ScannerDevice[]>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function getAddedScanners(): Promise<ScannerDevice[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ScannerDevice[]&gt; | Promise used to return the array of added scanners. |
+| Promise<ScannerDevice[]> | Promise used to return the array of added scanners. |
 
 **错误码：**
 

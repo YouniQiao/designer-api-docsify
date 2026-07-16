@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-displaySync-interface IntervalInfo--><!--Device-displaySync-interface IntervalInfo-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { displaySync } from '@kit.ArkGraphics2D';
+```
 
 ## targetTimestamp
 
@@ -17,6 +25,8 @@ targetTimestamp: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-IntervalInfo-targetTimestamp: long--><!--Device-IntervalInfo-targetTimestamp: long-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,6 +41,8 @@ timestamp: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-IntervalInfo-timestamp: long--><!--Device-IntervalInfo-timestamp: long-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

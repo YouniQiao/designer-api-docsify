@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export enum ToneMappingType--><!--Device-unnamed-export enum ToneMappingType-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## ACES
@@ -15,6 +17,8 @@ ACES = 0
 ACES色调映射类型.
 
 **起始版本：** 12
+
+<!--Device-ToneMappingType-ACES = 0--><!--Device-ToneMappingType-ACES = 0-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -28,6 +32,8 @@ ACES_2020色调映射类型.
 
 **起始版本：** 12
 
+<!--Device-ToneMappingType-ACES_2020 = 1--><!--Device-ToneMappingType-ACES_2020 = 1-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## FILMIC
@@ -39,6 +45,8 @@ FILMIC = 2
 FILMIC色调映射类型.
 
 **起始版本：** 12
+
+<!--Device-ToneMappingType-FILMIC = 2--><!--Device-ToneMappingType-FILMIC = 2-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

@@ -12,12 +12,13 @@ import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 function setProperty(resourceId: string, propertyId: string, params?: HuksExternalCryptoParam[]): Promise<void>
 ```
 
-The set-type operations of the external crypto extension support calling custom interfaces.
-However, the custom interface must be registered with the provider.
+The set-type operations of the external crypto extension support calling custom interfaces.However, the custom interface must be registered with the provider.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-huksExternalCrypto-function setProperty(resourceId: string, propertyId: string, params?: HuksExternalCryptoParam[]): Promise<void>--><!--Device-huksExternalCrypto-function setProperty(resourceId: string, propertyId: string, params?: HuksExternalCryptoParam[]): Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -27,13 +28,13 @@ However, the custom interface must be registered with the provider.
 | --- | --- | --- | --- |
 | resourceId | string | Yes | Indicates the resource ID of the provider. |
 | propertyId | string | Yes | Indicates the ID of the property needed to set.Currently supports part of the method names defined in GMT 0016-2023 and self-defined methods registered. |
-| params | HuksExternalCryptoParam[] | No | Indicates the operation parameters.This parameter is optional and contains parameters related to the property ID needed to set. |
+| params | [HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcryptoparam-i.md)[] | No | Indicates the operation parameters.This parameter is optional and contains parameters related to the property ID needed to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

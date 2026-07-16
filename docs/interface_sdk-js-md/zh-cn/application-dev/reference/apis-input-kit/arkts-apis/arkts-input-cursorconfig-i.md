@@ -4,7 +4,15 @@
 
 **起始版本：** 15
 
+<!--Device-pointer-interface CursorConfig--><!--Device-pointer-interface CursorConfig-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
+
+## 导入模块
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+```
 
 ## followSystem
 
@@ -17,6 +25,8 @@ followSystem : boolean
 **类型：** boolean
 
 **起始版本：** 15
+
+<!--Device-CursorConfig-followSystem : boolean--><!--Device-CursorConfig-followSystem : boolean-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

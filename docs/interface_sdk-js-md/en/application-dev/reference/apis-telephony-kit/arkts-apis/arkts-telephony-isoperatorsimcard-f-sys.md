@@ -16,6 +16,8 @@ Indicates whether the SIM card in a specified slot is a specified operator.
 
 **Since:** 11
 
+<!--Device-sim-function isOperatorSimCard(slotId: int, operator: OperatorSimCard): boolean--><!--Device-sim-function isOperatorSimCard(slotId: int, operator: OperatorSimCard): boolean-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -25,7 +27,7 @@ Indicates whether the SIM card in a specified slot is a specified operator.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| operator | OperatorSimCard | Yes | Indicates the operator of sim. |
+| operator | [OperatorSimCard](arkts-telephony-operatorsimcard-e-sys.md) | Yes | Indicates the operator of sim. |
 
 **Return value:**
 

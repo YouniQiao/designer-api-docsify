@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+<!--Device-huks-export enum HuksKeyStorageType--><!--Device-huks-export enum HuksKeyStorageType-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Core
 
 ## HUKS_STORAGE_TEMP
@@ -14,12 +16,13 @@ HUKS_STORAGE_TEMP = 0
 
 表示通过本地直接管理密钥。
 
-**说明：** 从API version 8开始支持，从API version 10开始废弃，由于开发者正常使用密钥管理过程中并不需要使用此TAG，故无替代接口。针对密钥派生场景，可使用
-HUKS_STORAGE_ONLY_USED_IN_HUKS 与 HUKS_STORAGE_KEY_EXPORT_ALLOWED。
+**说明：** 从API version 8开始支持，从API version 10开始废弃，由于开发者正常使用密钥管理过程中并不需要使用此TAG，故无替代接口。针对密钥派生场景，可使用HUKS_STORAGE_ONLY_USED_IN_HUKS 与 HUKS_STORAGE_KEY_EXPORT_ALLOWED。
 
 **起始版本：** 8
 
 **废弃版本：** 10
+
+<!--Device-HuksKeyStorageType-HUKS_STORAGE_TEMP = 0--><!--Device-HuksKeyStorageType-HUKS_STORAGE_TEMP = 0-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -31,12 +34,13 @@ HUKS_STORAGE_PERSISTENT = 1
 
 表示通过HUKS service管理密钥。
 
-**说明：** 从API version 8开始支持，从API version 10开始废弃，由于开发者正常使用密钥管理过程中并不需要使用此TAG，故无替代接口。针对密钥派生场景，可使用
-HUKS_STORAGE_ONLY_USED_IN_HUKS 与 HUKS_STORAGE_KEY_EXPORT_ALLOWED。
+**说明：** 从API version 8开始支持，从API version 10开始废弃，由于开发者正常使用密钥管理过程中并不需要使用此TAG，故无替代接口。针对密钥派生场景，可使用HUKS_STORAGE_ONLY_USED_IN_HUKS 与 HUKS_STORAGE_KEY_EXPORT_ALLOWED。
 
 **起始版本：** 8
 
 **废弃版本：** 10
+
+<!--Device-HuksKeyStorageType-HUKS_STORAGE_PERSISTENT = 1--><!--Device-HuksKeyStorageType-HUKS_STORAGE_PERSISTENT = 1-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -50,7 +54,9 @@ HUKS_STORAGE_ONLY_USED_IN_HUKS = 2
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HuksKeyStorageType-HUKS_STORAGE_ONLY_USED_IN_HUKS = 2--><!--Device-HuksKeyStorageType-HUKS_STORAGE_ONLY_USED_IN_HUKS = 2-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -66,7 +72,9 @@ HUKS_STORAGE_KEY_EXPORT_ALLOWED = 3
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HuksKeyStorageType-HUKS_STORAGE_KEY_EXPORT_ALLOWED = 3--><!--Device-HuksKeyStorageType-HUKS_STORAGE_KEY_EXPORT_ALLOWED = 3-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core

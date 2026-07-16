@@ -4,6 +4,8 @@ Define html web message port.
 
 **Since:** 9
 
+<!--Device-webview-interface WebMessagePort--><!--Device-webview-interface WebMessagePort-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Close port.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebMessagePort-close(): void--><!--Device-WebMessagePort-close(): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## onMessageEvent
@@ -38,13 +42,15 @@ Receive message from other port.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebMessagePort-onMessageEvent(callback: (result: WebMessage) => void): void--><!--Device-WebMessagePort-onMessageEvent(callback: (result: WebMessage) => void): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (result: WebMessage) =&gt; void | Yes | Callback function for receiving messages. |
+| callback | (result: WebMessage) => void | Yes | Callback function for receiving messages. |
 
 **Error codes:**
 
@@ -65,13 +71,15 @@ Receive message from other port.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebMessagePort-onMessageEventExt(callback: (result: WebMessageExt) => void): void--><!--Device-WebMessagePort-onMessageEventExt(callback: (result: WebMessageExt) => void): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (result: WebMessageExt) =&gt; void | Yes | Callback function for receiving messages. |
+| callback | (result: WebMessageExt) => void | Yes | Callback function for receiving messages. |
 
 **Error codes:**
 
@@ -92,13 +100,15 @@ Post a message to other port.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebMessagePort-postMessageEvent(message: WebMessage): void--><!--Device-WebMessagePort-postMessageEvent(message: WebMessage): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | WebMessage | Yes | Message to send. |
+| message | [WebMessage](arkts-arkweb-webmessage-t.md) | Yes | Message to send. |
 
 **Error codes:**
 
@@ -119,13 +129,15 @@ Post a message to other port.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebMessagePort-postMessageEventExt(message: WebMessageExt): void--><!--Device-WebMessagePort-postMessageEventExt(message: WebMessageExt): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | WebMessageExt | Yes | Message to send. |
+| message | [WebMessageExt](arkts-arkweb-webmessageext-c.md) | Yes | Message to send. |
 
 **Error codes:**
 
@@ -147,6 +159,8 @@ The flag indicates whether more formats are supported than string and array buff
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebMessagePort-isExtentionType?: boolean--><!--Device-WebMessagePort-isExtentionType?: boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

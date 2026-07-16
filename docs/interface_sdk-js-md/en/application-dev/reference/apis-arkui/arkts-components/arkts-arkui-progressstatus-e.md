@@ -4,6 +4,8 @@ Current state of the progress indicator.
 
 **Since:** 10
 
+<!--Device-unnamed-declare enum ProgressStatus--><!--Device-unnamed-declare enum ProgressStatus-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## LOADING
@@ -20,6 +22,8 @@ Loading.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ProgressStatus-LOADING--><!--Device-ProgressStatus-LOADING-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PROGRESSING
@@ -35,6 +39,8 @@ Progressing.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ProgressStatus-PROGRESSING--><!--Device-ProgressStatus-PROGRESSING-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 7
 
+<!--Device-contact-class PhoneNumber--><!--Device-contact-class PhoneNumber-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
+
+## 导入模块
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+```
 
 ## CUSTOM_LABEL
 
@@ -18,7 +26,9 @@ static readonly CUSTOM_LABEL: 0
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-static readonly CUSTOM_LABEL: 0--><!--Device-PhoneNumber-static readonly CUSTOM_LABEL: 0-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -34,7 +44,9 @@ static readonly INVALID_LABEL_ID: -1
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-static readonly INVALID_LABEL_ID: -1--><!--Device-PhoneNumber-static readonly INVALID_LABEL_ID: -1-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -50,7 +62,9 @@ static readonly NUM_ASSISTANT: 19
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-static readonly NUM_ASSISTANT: 19--><!--Device-PhoneNumber-static readonly NUM_ASSISTANT: 19-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -66,7 +80,9 @@ static readonly NUM_CALLBACK: 8
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-static readonly NUM_CALLBACK: 8--><!--Device-PhoneNumber-static readonly NUM_CALLBACK: 8-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -82,7 +98,9 @@ static readonly NUM_CAR: 9
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-static readonly NUM_CAR: 9--><!--Device-PhoneNumber-static readonly NUM_CAR: 9-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -98,7 +116,9 @@ static readonly NUM_COMPANY_MAIN: 10
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-static readonly NUM_COMPANY_MAIN: 10--><!--Device-PhoneNumber-static readonly NUM_COMPANY_MAIN: 10-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -114,7 +134,9 @@ static readonly NUM_FAX_HOME: 5
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-static readonly NUM_FAX_HOME: 5--><!--Device-PhoneNumber-static readonly NUM_FAX_HOME: 5-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -130,7 +152,9 @@ static readonly NUM_FAX_WORK: 4
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-static readonly NUM_FAX_WORK: 4--><!--Device-PhoneNumber-static readonly NUM_FAX_WORK: 4-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -146,7 +170,9 @@ static readonly NUM_HOME: 1
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-static readonly NUM_HOME: 1--><!--Device-PhoneNumber-static readonly NUM_HOME: 1-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -162,7 +188,9 @@ static readonly NUM_ISDN: 11
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-static readonly NUM_ISDN: 11--><!--Device-PhoneNumber-static readonly NUM_ISDN: 11-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -178,7 +206,9 @@ static readonly NUM_MAIN: 12
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-static readonly NUM_MAIN: 12--><!--Device-PhoneNumber-static readonly NUM_MAIN: 12-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -194,7 +224,9 @@ static readonly NUM_MMS: 20
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-static readonly NUM_MMS: 20--><!--Device-PhoneNumber-static readonly NUM_MMS: 20-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -210,7 +242,9 @@ static readonly NUM_MOBILE: 2
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-static readonly NUM_MOBILE: 2--><!--Device-PhoneNumber-static readonly NUM_MOBILE: 2-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -226,7 +260,9 @@ static readonly NUM_OTHER: 7
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-static readonly NUM_OTHER: 7--><!--Device-PhoneNumber-static readonly NUM_OTHER: 7-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -242,7 +278,9 @@ static readonly NUM_OTHER_FAX: 13
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-static readonly NUM_OTHER_FAX: 13--><!--Device-PhoneNumber-static readonly NUM_OTHER_FAX: 13-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -258,7 +296,9 @@ static readonly NUM_PAGER: 6
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-static readonly NUM_PAGER: 6--><!--Device-PhoneNumber-static readonly NUM_PAGER: 6-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -274,7 +314,9 @@ static readonly NUM_RADIO: 14
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-static readonly NUM_RADIO: 14--><!--Device-PhoneNumber-static readonly NUM_RADIO: 14-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -290,7 +332,9 @@ static readonly NUM_TELEX: 15
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-static readonly NUM_TELEX: 15--><!--Device-PhoneNumber-static readonly NUM_TELEX: 15-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -306,7 +350,9 @@ static readonly NUM_TTY_TDD: 16
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-static readonly NUM_TTY_TDD: 16--><!--Device-PhoneNumber-static readonly NUM_TTY_TDD: 16-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -322,7 +368,9 @@ static readonly NUM_WORK: 3
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-static readonly NUM_WORK: 3--><!--Device-PhoneNumber-static readonly NUM_WORK: 3-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -338,7 +386,9 @@ static readonly NUM_WORK_MOBILE: 17
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-static readonly NUM_WORK_MOBILE: 17--><!--Device-PhoneNumber-static readonly NUM_WORK_MOBILE: 17-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -354,7 +404,9 @@ static readonly NUM_WORK_PAGER: 18
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-static readonly NUM_WORK_PAGER: 18--><!--Device-PhoneNumber-static readonly NUM_WORK_PAGER: 18-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -370,7 +422,9 @@ labelId?: number
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-labelId?: number--><!--Device-PhoneNumber-labelId?: number-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -386,7 +440,9 @@ labelName?: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-labelName?: string--><!--Device-PhoneNumber-labelName?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -402,7 +458,9 @@ phoneNumber: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumber-phoneNumber: string--><!--Device-PhoneNumber-phoneNumber: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 

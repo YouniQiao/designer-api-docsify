@@ -8,6 +8,8 @@
 
 **起始版本：** 8
 
+<!--Device-xml-enum EventType--><!--Device-xml-enum EventType-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## START_DOCUMENT
@@ -20,7 +22,9 @@ START_DOCUMENT
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EventType-START_DOCUMENT--><!--Device-EventType-START_DOCUMENT-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -34,7 +38,9 @@ END_DOCUMENT
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EventType-END_DOCUMENT--><!--Device-EventType-END_DOCUMENT-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -48,7 +54,9 @@ START_TAG
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EventType-START_TAG--><!--Device-EventType-START_TAG-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -62,7 +70,9 @@ END_TAG
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EventType-END_TAG--><!--Device-EventType-END_TAG-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -76,7 +86,9 @@ TEXT
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EventType-TEXT--><!--Device-EventType-TEXT-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -90,7 +102,9 @@ CDATA事件。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EventType-CDSECT--><!--Device-EventType-CDSECT-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -104,7 +118,9 @@ XML注释事件。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EventType-COMMENT--><!--Device-EventType-COMMENT-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -118,7 +134,9 @@ XML文档类型声明事件。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EventType-DOCDECL--><!--Device-EventType-DOCDECL-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -132,7 +150,9 @@ XML处理指令声明事件。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EventType-INSTRUCTION--><!--Device-EventType-INSTRUCTION-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -146,7 +166,9 @@ ENTITY_REFERENCE
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EventType-ENTITY_REFERENCE--><!--Device-EventType-ENTITY_REFERENCE-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -160,7 +182,9 @@ WHITESPACE
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EventType-WHITESPACE--><!--Device-EventType-WHITESPACE-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

@@ -16,6 +16,8 @@ Unregister application state observer.
 
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 
+<!--Device-appManager-function unregisterApplicationStateObserver(observerId: number, callback: AsyncCallback<void>): void--><!--Device-appManager-function unregisterApplicationStateObserver(observerId: number, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -25,7 +27,7 @@ Unregister application state observer.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | observerId | number | Yes | Indicates the number code of the observer. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Represents the specified callback method. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Represents the specified callback method. |
 
 **Example**
 
@@ -63,6 +65,8 @@ Unregister application state observer.
 
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 
+<!--Device-appManager-function unregisterApplicationStateObserver(observerId: number): Promise<void>--><!--Device-appManager-function unregisterApplicationStateObserver(observerId: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -77,7 +81,7 @@ Unregister application state observer.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Example**
 

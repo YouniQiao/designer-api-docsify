@@ -22,14 +22,16 @@ Send extended commands to location subsystem.
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function sendCommand(command: LocationCommand, callback: AsyncCallback<boolean>): void--><!--Device-geolocation-function sendCommand(command: LocationCommand, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | LocationCommand | Yes | Indicates the extended Command Message Body. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Indicates the callback for reporting the send command result. |
+| command | [LocationCommand](arkts-location-locationcommand-i.md) | Yes | Indicates the extended Command Message Body. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Indicates the callback for reporting the send command result. |
 
 **Example**
 
@@ -64,19 +66,21 @@ Send extended commands to location subsystem.
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function sendCommand(command: LocationCommand): Promise<boolean>--><!--Device-geolocation-function sendCommand(command: LocationCommand): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | LocationCommand | Yes | Indicates the extended Command Message Body. |
+| command | [LocationCommand](arkts-location-locationcommand-i.md) | Yes | Indicates the extended Command Message Body. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | The promise returned by the function. |
 
 **Example**
 

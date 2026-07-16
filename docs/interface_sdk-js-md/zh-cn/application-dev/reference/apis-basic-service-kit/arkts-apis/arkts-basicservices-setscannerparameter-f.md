@@ -1,5 +1,11 @@
 # setScannerParameter
 
+## 导入模块
+
+```TypeScript
+import { scan } from '@kit.BasicServicesKit';
+```
+
 ## setScannerParameter
 
 ```TypeScript
@@ -12,6 +18,8 @@ function setScannerParameter(scannerId: string, optionIndex: number, value: Scan
 
 **需要权限：** ohos.permission.PRINT
 
+<!--Device-scan-function setScannerParameter(scannerId: string, optionIndex: int, value: ScannerOptionValue): Promise<void>--><!--Device-scan-function setScannerParameter(scannerId: string, optionIndex: int, value: ScannerOptionValue): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
@@ -20,13 +28,13 @@ function setScannerParameter(scannerId: string, optionIndex: number, value: Scan
 | --- | --- | --- | --- |
 | scannerId | string | 是 | 扫描仪的ID。 |
 | optionIndex | number | 是 | 要设置的选项的索引。 |
-| value | ScannerOptionValue | 是 | 要设置的值。 |
+| value | [ScannerOptionValue](arkts-basicservices-scanneroptionvalue-i.md) | 是 | 要设置的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

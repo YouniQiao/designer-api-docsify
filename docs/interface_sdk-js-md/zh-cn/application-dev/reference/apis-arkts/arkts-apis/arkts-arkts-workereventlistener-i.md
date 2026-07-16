@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface WorkerEventListener--><!--Device-unnamed-export interface WorkerEventListener-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
+```
 
 ## constructor
 
@@ -16,7 +24,9 @@
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WorkerEventListener-(event: Event): void | Promise<void>--><!--Device-WorkerEventListener-(event: Event): void | Promise<void>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -24,7 +34,7 @@
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Event | 是 | 回调的事件类。 |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-event-c.md) | 是 | 回调的事件类。 |
 
 **错误码：**
 

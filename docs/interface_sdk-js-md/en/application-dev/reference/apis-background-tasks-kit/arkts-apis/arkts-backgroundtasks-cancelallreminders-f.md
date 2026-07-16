@@ -16,13 +16,15 @@ Cancels all reminders set by the current application. This API uses an asynchron
 
 **Since:** 9
 
+<!--Device-reminderAgentManager-function cancelAllReminders(callback: AsyncCallback<void>): void--><!--Device-reminderAgentManager-function cancelAllReminders(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result.If all the reminders are canceled,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result.If all the reminders are canceled,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -58,13 +60,15 @@ Cancels all reminders set by the current application. This API uses a promise to
 
 **Since:** 9
 
+<!--Device-reminderAgentManager-function cancelAllReminders(): Promise<void>--><!--Device-reminderAgentManager-function cancelAllReminders(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

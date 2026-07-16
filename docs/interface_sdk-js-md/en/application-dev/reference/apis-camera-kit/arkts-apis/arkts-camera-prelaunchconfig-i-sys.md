@@ -1,10 +1,10 @@
 # PrelaunchConfig (System API)
 
-Defines the camera prelaunch configuration.
-Currently, the configuration is used for sensor-level prelaunch. It will be used for stream-level prelaunch in a
-later version.
+Defines the camera prelaunch configuration.Currently, the configuration is used for sensor-level prelaunch. It will be used for stream-level prelaunch in a later version.
 
 **Since:** 10
+
+<!--Device-camera-interface PrelaunchConfig--><!--Device-camera-interface PrelaunchConfig-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -28,6 +28,8 @@ Activation time, in minutes.
 
 **Since:** 11
 
+<!--Device-PrelaunchConfig-activeTime?: int--><!--Device-PrelaunchConfig-activeTime?: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -43,6 +45,8 @@ Camera device.
 **Type:** CameraDevice
 
 **Since:** 10
+
+<!--Device-PrelaunchConfig-cameraDevice: CameraDevice--><!--Device-PrelaunchConfig-cameraDevice: CameraDevice-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -60,6 +64,8 @@ Type of the parameter used for prelaunch.
 
 **Since:** 11
 
+<!--Device-PrelaunchConfig-restoreParamType?: RestoreParamType--><!--Device-PrelaunchConfig-restoreParamType?: RestoreParamType-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -75,6 +81,8 @@ Setting parameter.
 **Type:** SettingParam
 
 **Since:** 11
+
+<!--Device-PrelaunchConfig-settingParam?: SettingParam--><!--Device-PrelaunchConfig-settingParam?: SettingParam-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

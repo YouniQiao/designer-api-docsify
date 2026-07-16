@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-export enum DataType--><!--Device-unnamed-export enum DataType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -19,6 +21,8 @@ TYPE_NULL = 0
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataType-TYPE_NULL = 0--><!--Device-DataType-TYPE_NULL = 0-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -36,6 +40,8 @@ TYPE_LONG = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataType-TYPE_LONG = 1--><!--Device-DataType-TYPE_LONG = 1-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +57,8 @@ TYPE_DOUBLE = 2
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataType-TYPE_DOUBLE = 2--><!--Device-DataType-TYPE_DOUBLE = 2-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -68,6 +76,8 @@ TYPE_STRING = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataType-TYPE_STRING = 3--><!--Device-DataType-TYPE_STRING = 3-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -83,6 +93,8 @@ TYPE_BLOB = 4
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataType-TYPE_BLOB = 4--><!--Device-DataType-TYPE_BLOB = 4-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 

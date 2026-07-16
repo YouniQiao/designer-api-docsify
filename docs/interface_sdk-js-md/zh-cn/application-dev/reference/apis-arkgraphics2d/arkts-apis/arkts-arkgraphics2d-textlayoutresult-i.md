@@ -4,7 +4,15 @@
 
 **起始版本：** 24
 
+<!--Device-text-interface TextLayoutResult--><!--Device-text-interface TextLayoutResult-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
+
+## 导入模块
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D';
+```
 
 ## correctRect
 
@@ -20,7 +28,9 @@ correctRect: TextRectSize
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本24开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextLayoutResult-correctRect: TextRectSize--><!--Device-TextLayoutResult-correctRect: TextRectSize-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -38,7 +48,9 @@ fitStrRange: Array<Range>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本24开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextLayoutResult-fitStrRange: Array<Range>--><!--Device-TextLayoutResult-fitStrRange: Array<Range>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

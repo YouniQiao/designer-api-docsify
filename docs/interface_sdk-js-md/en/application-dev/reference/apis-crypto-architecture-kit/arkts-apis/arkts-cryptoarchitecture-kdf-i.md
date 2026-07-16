@@ -1,9 +1,10 @@
 # Kdf
 
-Defines the key derivation function class. Before using APIs of this class, you need to create an instance of this
-class by using **createKdf(algName: string): Kdf**.
+Defines the key derivation function class. Before using APIs of this class, you need to create an instance of this class by using **createKdf(algName: string): Kdf**.
 
 **Since:** 11
+
+<!--Device-cryptoFramework-interface Kdf--><!--Device-cryptoFramework-interface Kdf-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Kdf
@@ -21,12 +22,13 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 generateSecret(params: KdfSpec, callback: AsyncCallback<DataBlob>): void
 ```
 
-Generates a key based on the specified key derivation parameters. This API uses an asynchronous callback to
-return the result.
+Generates a key based on the specified key derivation parameters. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Kdf-generateSecret(params: KdfSpec, callback: AsyncCallback<DataBlob>): void--><!--Device-Kdf-generateSecret(params: KdfSpec, callback: AsyncCallback<DataBlob>): void-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Kdf
@@ -36,8 +38,8 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | KdfSpec | Yes | Parameters of the key derivation function. |
-| callback | AsyncCallback&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the derived key obtained. Otherwise, **err** is an error object. |
+| params | [KdfSpec](arkts-cryptoarchitecture-kdfspec-i.md) | Yes | Parameters of the key derivation function. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DataBlob> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the derived key obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -108,6 +110,8 @@ Generates a key based on the specified key derivation parameters. This API uses 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Kdf-generateSecret(params: KdfSpec): Promise<DataBlob>--><!--Device-Kdf-generateSecret(params: KdfSpec): Promise<DataBlob>-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Kdf
 - API version 11: SystemCapability.Security.CryptoFramework
@@ -116,13 +120,13 @@ Generates a key based on the specified key derivation parameters. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | KdfSpec | Yes | Parameters of the key derivation function. |
+| params | [KdfSpec](arkts-cryptoarchitecture-kdfspec-i.md) | Yes | Parameters of the key derivation function. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise used to return the derived key. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DataBlob> | Promise used to return the derived key. |
 
 **Error codes:**
 
@@ -189,14 +193,13 @@ generateSecretSync(params: KdfSpec): DataBlob
 
 Generates a key based on the specified key derivation parameters. This API returns the result synchronously.
 
-<br><br>**NOTE**
-<br>It is recommended to prioritize the use of asynchronous API, {@link generateSecret}. Synchronous API may
-take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,
-it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link generateSecret}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Kdf-generateSecretSync(params: KdfSpec): DataBlob--><!--Device-Kdf-generateSecretSync(params: KdfSpec): DataBlob-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
@@ -204,13 +207,13 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | KdfSpec | Yes | Parameters of the key derivation function. |
+| params | [KdfSpec](arkts-cryptoarchitecture-kdfspec-i.md) | Yes | Parameters of the key derivation function. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataBlob | The derived key. |
+| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | The derived key. |
 
 **Error codes:**
 
@@ -273,6 +276,8 @@ Indicates the algorithm name of the key derivation function.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Kdf-readonly algName: string--><!--Device-Kdf-readonly algName: string-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Kdf

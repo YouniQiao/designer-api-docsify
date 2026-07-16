@@ -18,6 +18,8 @@ Sends text messages after a collaboration session is set up.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-abilityConnectionManager-function sendMessage(sessionId: int, msg: string): Promise<void>--><!--Device-abilityConnectionManager-function sendMessage(sessionId: int, msg: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Parameters:**
@@ -31,7 +33,7 @@ Sends text messages after a collaboration session is set up.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

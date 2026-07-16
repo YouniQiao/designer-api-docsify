@@ -12,16 +12,15 @@ import { dragController } from '@kit.ArkUI';
 function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: DragInfo): DragAction
 ```
 
-Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise
-to return the result.
+Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - Since API version 11, you can use the
-> [getDragController](arkts-arkui-uicontext-c.md#getdragcontroller-1) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the
-> [DragController](arkts-arkui-dragcontroller-c.md) object associated with the current UI context.
->
+> **NOTE**  
+>  
+> - Since API version 11, you can use the  
+> [getDragController](arkts-arkui-uicontext-c.md#getdragcontroller-1) API in  
+> [UIContext](arkts-arkui-uicontext.md) to obtain the  
+> [DragController](arkts-arkui-dragcontroller-c.md) object associated with the current UI context.  
+>  
 > - For optimal drag and drop performance, limit the number of drag previews.
 
 **Since:** 11
@@ -34,20 +33,22 @@ to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-dragController-function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: DragInfo): DragAction--><!--Device-dragController-function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: DragInfo): DragAction-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| customArray | Array&lt;CustomBuilder \| DragItemInfo&gt; | Yes | Object to be dragged. |
-| dragInfo | DragInfo | Yes | Drag information. |
+| customArray | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<CustomBuilder \| DragItemInfo> | Yes | Object to be dragged. |
+| dragInfo | [DragInfo](arkts-arkui-draginfo-i.md) | Yes | Drag information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DragAction | **DragAction** object, which is used to subscribe to drag state changes and start thedrag service. |
+| [DragAction](arkts-arkui-dragaction-i.md) | **DragAction** object, which is used to subscribe to drag state changes and start the drag service. |
 
 **Error codes:**
 

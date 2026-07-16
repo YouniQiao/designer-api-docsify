@@ -18,20 +18,22 @@ Create an mDNS based discovery service with context and serviceType.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-mdns-function createDiscoveryService(context: Context, serviceType: string): DiscoveryService--><!--Device-mdns-function createDiscoveryService(context: Context, serviceType: string): DiscoveryService-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
 | serviceType | string | Yes | The service type being discovered. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DiscoveryService | the DiscoveryService of the createDiscoveryService. |
+| [DiscoveryService](arkts-network-discoveryservice-i.md) | the DiscoveryService of the createDiscoveryService. |
 
 **Error codes:**
 

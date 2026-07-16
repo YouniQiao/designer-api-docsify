@@ -1,11 +1,18 @@
 # TypeDescriptor
 
-标准化数据类型的描述类，它包含了一些属性和方法用于描述标准化数据类型自身以及和其他标准化数据类型之间的归属与层级关系，例如通过typeId与belongingToTypes维护类型映射关系，并提供层级判断等方法。详细属性与方法参见
-下文说明。
+标准化数据类型的描述类，它包含了一些属性和方法用于描述标准化数据类型自身以及和其他标准化数据类型之间的归属与层级关系，例如通过typeId与belongingToTypes维护类型映射关系，并提供层级判断等方法。详细属性与方法参见下文说明。
 
 **起始版本：** 11
 
+<!--Device-uniformTypeDescriptor-class TypeDescriptor--><!--Device-uniformTypeDescriptor-class TypeDescriptor-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+## 导入模块
+
+```TypeScript
+import { uniformTypeDescriptor } from '@kit.ArkData';
+```
 
 ## belongsTo
 
@@ -18,6 +25,8 @@ belongsTo(type: string): boolean
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TypeDescriptor-belongsTo(type: string): boolean--><!--Device-TypeDescriptor-belongsTo(type: string): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -66,12 +75,13 @@ try {
 equals(typeDescriptor: TypeDescriptor): boolean
 ```
 
-判断指定的标准化数据类型描述类对象的类型ID和当前标准化数据类型描述类对象的类型ID是否相同，即[TypeDescriptor](arkts-arkdata-typedescriptor-c.md)对象的
-typeId。
+判断指定的标准化数据类型描述类对象的类型ID和当前标准化数据类型描述类对象的类型ID是否相同，即[TypeDescriptor](arkts-arkdata-typedescriptor-c.md)对象的typeId。
 
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TypeDescriptor-equals(typeDescriptor: TypeDescriptor): boolean--><!--Device-TypeDescriptor-equals(typeDescriptor: TypeDescriptor): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -79,7 +89,7 @@ typeId。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| typeDescriptor | TypeDescriptor | 是 | 待比较的标准化数据类型描述类对象。 |
+| typeDescriptor | [TypeDescriptor](arkts-arkdata-typedescriptor-c.md) | 是 | 待比较的标准化数据类型描述类对象。 |
 
 **返回值：**
 
@@ -124,6 +134,8 @@ isHigherLevelType(type: string): boolean
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TypeDescriptor-isHigherLevelType(type: string): boolean--><!--Device-TypeDescriptor-isHigherLevelType(type: string): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -176,6 +188,8 @@ isLowerLevelType(type: string): boolean
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TypeDescriptor-isLowerLevelType(type: string): boolean--><!--Device-TypeDescriptor-isLowerLevelType(type: string): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -231,6 +245,8 @@ set belongingToTypes(value: Array<string>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TypeDescriptor-set belongingToTypes(value: Array<string>)--><!--Device-TypeDescriptor-set belongingToTypes(value: Array<string>)-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## description
@@ -246,6 +262,8 @@ set description(value: string)
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TypeDescriptor-set description(value: string)--><!--Device-TypeDescriptor-set description(value: string)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -263,6 +281,8 @@ set filenameExtensions(value: Array<string>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TypeDescriptor-set filenameExtensions(value: Array<string>)--><!--Device-TypeDescriptor-set filenameExtensions(value: Array<string>)-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## iconFile
@@ -278,6 +298,8 @@ set iconFile(value: string)
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TypeDescriptor-set iconFile(value: string)--><!--Device-TypeDescriptor-set iconFile(value: string)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -295,6 +317,8 @@ set mimeTypes(value: Array<string>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TypeDescriptor-set mimeTypes(value: Array<string>)--><!--Device-TypeDescriptor-set mimeTypes(value: Array<string>)-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## referenceURL
@@ -311,6 +335,8 @@ set referenceURL(value: string)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TypeDescriptor-set referenceURL(value: string)--><!--Device-TypeDescriptor-set referenceURL(value: string)-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## typeId
@@ -326,6 +352,8 @@ set typeId(value: string)
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TypeDescriptor-set typeId(value: string)--><!--Device-TypeDescriptor-set typeId(value: string)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 

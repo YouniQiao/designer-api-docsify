@@ -4,6 +4,8 @@ The class of a running form information.
 
 **Since:** 20
 
+<!--Device-formInfo-interface RunningFormInfo--><!--Device-formInfo-interface RunningFormInfo-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -30,6 +32,8 @@ Obtains the class name of the ability to which this form belongs.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-RunningFormInfo-readonly abilityName: string--><!--Device-RunningFormInfo-readonly abilityName: string-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -50,6 +54,8 @@ Obtains the bundle name of the application to which this form belongs.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-RunningFormInfo-readonly bundleName: string--><!--Device-RunningFormInfo-readonly bundleName: string-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -60,8 +66,7 @@ Obtains the bundle name of the application to which this form belongs.
 readonly dimension: number
 ```
 
-Obtains the grid style of this form.
-The value must be a positive integer, refer to {@link formInfo.FormDimension}.
+Obtains the grid style of this form.The value must be a positive integer, refer to {@link formInfo.FormDimension}.
 
 **Type:** number
 
@@ -70,6 +75,8 @@ The value must be a positive integer, refer to {@link formInfo.FormDimension}.
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-RunningFormInfo-readonly dimension: int--><!--Device-RunningFormInfo-readonly dimension: int-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -89,6 +96,8 @@ Obtains the extra data of the this form.
 
 **Since:** 12
 
+<!--Device-RunningFormInfo-readonly extraData?: Record<string, Object>--><!--Device-RunningFormInfo-readonly extraData?: Record<string, Object>-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -104,6 +113,8 @@ Obtains the description of this form.
 **Type:** string
 
 **Since:** 11
+
+<!--Device-RunningFormInfo-readonly formDescription: string--><!--Device-RunningFormInfo-readonly formDescription: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -125,6 +136,8 @@ Obtains the id of the this form.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-RunningFormInfo-readonly formId: string--><!--Device-RunningFormInfo-readonly formId: string-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -144,6 +157,8 @@ The location of this form.
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-RunningFormInfo-readonly formLocation: FormLocation--><!--Device-RunningFormInfo-readonly formLocation: FormLocation-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -165,6 +180,8 @@ Obtains the name of this form.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-RunningFormInfo-readonly formName: string--><!--Device-RunningFormInfo-readonly formName: string-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -183,6 +200,8 @@ Obtains the stage of form use.
 
 **Since:** 11
 
+<!--Device-RunningFormInfo-readonly formUsageState: FormUsageState--><!--Device-RunningFormInfo-readonly formUsageState: FormUsageState-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -200,6 +219,8 @@ Obtains the bundle name of the form host application.
 **Default:** -
 
 **Since:** 10
+
+<!--Device-RunningFormInfo-readonly hostBundleName: string--><!--Device-RunningFormInfo-readonly hostBundleName: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -221,6 +242,8 @@ Obtains the name of the application module to which this form belongs.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-RunningFormInfo-readonly moduleName: string--><!--Device-RunningFormInfo-readonly moduleName: string-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -238,6 +261,8 @@ Obtains the visibility of this form.
 **Default:** -
 
 **Since:** 10
+
+<!--Device-RunningFormInfo-readonly visibilityType: VisibilityType--><!--Device-RunningFormInfo-readonly visibilityType: VisibilityType-End-->
 
 **System capability:** SystemCapability.Ability.Form
 

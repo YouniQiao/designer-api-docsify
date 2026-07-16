@@ -4,6 +4,8 @@ Describes the accessibility event information.
 
 **Since:** 20
 
+<!--Device-unnamed-export declare interface AccessibilityEventInfo--><!--Device-unnamed-export declare interface AccessibilityEventInfo-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Event type.
 
 **Since:** 20
 
+<!--Device-AccessibilityEventInfo-eventType: AccessibilityEventType--><!--Device-AccessibilityEventInfo-eventType: AccessibilityEventType-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -36,12 +40,13 @@ Event type.
 extraInfo?: string
 ```
 
-Added or deleted text content carried by the **TextArea**, **TextInput**, **SearchField**, or **RichEdit**
-component.
+Added or deleted text content carried by the **TextArea**, **TextInput**, **SearchField**, or **RichEdit** component.
 
 **Type:** string
 
 **Since:** 20
+
+<!--Device-AccessibilityEventInfo-extraInfo?: string--><!--Device-AccessibilityEventInfo-extraInfo?: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -59,6 +64,8 @@ Target component where the event occurs.
 
 **Since:** 20
 
+<!--Device-AccessibilityEventInfo-target?: AccessibilityElement--><!--Device-AccessibilityEventInfo-target?: AccessibilityElement-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -74,6 +81,8 @@ Timestamp of the event, in milliseconds. The default value is **0**.
 **Type:** number
 
 **Since:** 20
+
+<!--Device-AccessibilityEventInfo-timestamp?: long--><!--Device-AccessibilityEventInfo-timestamp?: long-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 

@@ -12,6 +12,8 @@
 
 **起始版本：** 14
 
+<!--Device-unnamed-declare enum NavigationSystemTransitionType--><!--Device-unnamed-declare enum NavigationSystemTransitionType-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## DEFAULT
@@ -26,7 +28,9 @@ DEFAULT = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NavigationSystemTransitionType-DEFAULT = 0--><!--Device-NavigationSystemTransitionType-DEFAULT = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,7 +46,9 @@ NONE = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NavigationSystemTransitionType-NONE = 1--><!--Device-NavigationSystemTransitionType-NONE = 1-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,7 +64,9 @@ TITLE = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NavigationSystemTransitionType-TITLE = 2--><!--Device-NavigationSystemTransitionType-TITLE = 2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,7 +82,9 @@ CONTENT = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NavigationSystemTransitionType-CONTENT = 3--><!--Device-NavigationSystemTransitionType-CONTENT = 3-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,7 +100,9 @@ FADE = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NavigationSystemTransitionType-FADE = 4--><!--Device-NavigationSystemTransitionType-FADE = 4-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -106,7 +118,9 @@ EXPLODE = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NavigationSystemTransitionType-EXPLODE = 5--><!--Device-NavigationSystemTransitionType-EXPLODE = 5-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -122,7 +136,9 @@ SLIDE_RIGHT = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NavigationSystemTransitionType-SLIDE_RIGHT = 6--><!--Device-NavigationSystemTransitionType-SLIDE_RIGHT = 6-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -138,7 +154,9 @@ SLIDE_BOTTOM = 7
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NavigationSystemTransitionType-SLIDE_BOTTOM = 7--><!--Device-NavigationSystemTransitionType-SLIDE_BOTTOM = 7-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

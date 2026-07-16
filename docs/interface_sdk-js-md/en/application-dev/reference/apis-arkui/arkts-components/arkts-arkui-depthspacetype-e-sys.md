@@ -4,6 +4,8 @@ Depth space type enumeration.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare enum DepthSpaceType--><!--Device-unnamed-declare enum DepthSpaceType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -22,6 +24,8 @@ Instance mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-DepthSpaceType-INSTANCE = 0--><!--Device-DepthSpaceType-INSTANCE = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -37,6 +41,8 @@ Global mode.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DepthSpaceType-GLOBAL = 1--><!--Device-DepthSpaceType-GLOBAL = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

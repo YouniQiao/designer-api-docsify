@@ -1,5 +1,11 @@
 # setDefaultPrinter（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+```
+
 ## setDefaultPrinter
 
 ```TypeScript
@@ -12,6 +18,8 @@ function setDefaultPrinter(printerId: string, type: DefaultPrinterType): Promise
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function setDefaultPrinter(printerId: string, type: DefaultPrinterType): Promise<void>--><!--Device-print-function setDefaultPrinter(printerId: string, type: DefaultPrinterType): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -21,13 +29,13 @@ function setDefaultPrinter(printerId: string, type: DefaultPrinterType): Promise
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | printerId | string | 是 | 表示打印机ID。 |
-| type | DefaultPrinterType | 是 | 表示默认打印机类型。 |
+| type | [DefaultPrinterType](arkts-basicservices-defaultprintertype-e.md) | 是 | 表示默认打印机类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

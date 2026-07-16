@@ -1,5 +1,11 @@
 # on
 
+## 导入模块
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+```
+
 ## on('deviceSelected')
 
 ```TypeScript
@@ -18,7 +24,9 @@ function on(type: 'deviceSelected', token: number, callback: Callback<Array<Cont
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-continuationManager-function on(type: 'deviceSelected', token: number, callback: Callback<Array<ContinuationResult>>): void--><!--Device-continuationManager-function on(type: 'deviceSelected', token: number, callback: Callback<Array<ContinuationResult>>): void-End-->
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
@@ -28,7 +36,7 @@ function on(type: 'deviceSelected', token: number, callback: Callback<Array<Cont
 | --- | --- | --- | --- |
 | type | 'deviceSelected' | 是 | 监听的事件类型，固定值"deviceSelected"。 |
 | token | number | 是 | 注册后的token。 |
-| callback | Callback&lt;Array&lt;ContinuationResult&gt;&gt; | 是 | 当用户从设备选择模块中选择设备时调用，返回设备ID、设备类型和设备名称供开发者使用。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<ContinuationResult>> | 是 | 当用户从设备选择模块中选择设备时调用，返回设备ID、设备类型和设备名称供开发者使用。 |
 
 **错误码：**
 
@@ -80,7 +88,9 @@ function on(type: 'deviceUnselected', token: number, callback: Callback<Array<Co
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-continuationManager-function on(type: 'deviceUnselected', token: number, callback: Callback<Array<ContinuationResult>>): void--><!--Device-continuationManager-function on(type: 'deviceUnselected', token: number, callback: Callback<Array<ContinuationResult>>): void-End-->
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
@@ -90,7 +100,7 @@ function on(type: 'deviceUnselected', token: number, callback: Callback<Array<Co
 | --- | --- | --- | --- |
 | type | 'deviceUnselected' | 是 | 监听的事件类型，固定值"deviceUnselected"。 |
 | token | number | 是 | 注册后的token。 |
-| callback | Callback&lt;Array&lt;ContinuationResult&gt;&gt; | 是 | 当用户从设备选择模块中断开设备时调用，返回设备ID、设备类型和设备名称供开发者使用。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<ContinuationResult>> | 是 | 当用户从设备选择模块中断开设备时调用，返回设备ID、设备类型和设备名称供开发者使用。 |
 
 **错误码：**
 
@@ -141,6 +151,8 @@ function on(type: 'deviceConnect', callback: Callback<ContinuationResult>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-continuationManager-function on(type: 'deviceConnect', callback: Callback<ContinuationResult>): void--><!--Device-continuationManager-function on(type: 'deviceConnect', callback: Callback<ContinuationResult>): void-End-->
+
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
 **参数：**
@@ -148,7 +160,7 @@ function on(type: 'deviceConnect', callback: Callback<ContinuationResult>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceConnect' | 是 | 监听的事件类型，固定值"deviceConnect"。 |
-| callback | Callback&lt;ContinuationResult&gt; | 是 | 当用户从设备选择模块中选择设备时调用，返回设备ID、设备类型和设备名称供开发者使用。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ContinuationResult> | 是 | 当用户从设备选择模块中选择设备时调用，返回设备ID、设备类型和设备名称供开发者使用。 |
 
 **示例：**
 
@@ -180,6 +192,8 @@ function on(type: 'deviceDisconnect', callback: Callback<string>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-continuationManager-function on(type: 'deviceDisconnect', callback: Callback<string>): void--><!--Device-continuationManager-function on(type: 'deviceDisconnect', callback: Callback<string>): void-End-->
+
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
 **参数：**
@@ -187,7 +201,7 @@ function on(type: 'deviceDisconnect', callback: Callback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceDisconnect' | 是 | 监听的事件类型，固定值"deviceDisconnect"。 |
-| callback | Callback&lt;string&gt; | 是 | 当用户从设备选择模块中断开设备时调用，返回设备ID供开发者使用。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<string> | 是 | 当用户从设备选择模块中断开设备时调用，返回设备ID供开发者使用。 |
 
 **示例：**
 

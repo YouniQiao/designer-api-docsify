@@ -10,6 +10,8 @@ Defines the routing policy.
 
 **Substitutes:** NavPathStack
 
+<!--Device-unnamed-declare enum NavRouteMode--><!--Device-unnamed-declare enum NavRouteMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PUSH_WITH_RECREATE
@@ -18,8 +20,7 @@ Defines the routing policy.
 PUSH_WITH_RECREATE
 ```
 
-The new navigation destination page replaces the current one. The current page is destroyed, but the information
-about this page is retained in the navigation stack.
+The new navigation destination page replaces the current one. The current page is destroyed, but the information about this page is retained in the navigation stack.
 
 **Since:** 10
 
@@ -30,6 +31,8 @@ about this page is retained in the navigation stack.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NavRouteMode-PUSH_WITH_RECREATE--><!--Device-NavRouteMode-PUSH_WITH_RECREATE-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -39,8 +42,7 @@ about this page is retained in the navigation stack.
 PUSH
 ```
 
-The new navigation destination page overwrites the current one. The current page is not destroyed, and the
-information about this page is retained in the navigation stack.
+The new navigation destination page overwrites the current one. The current page is not destroyed, and the information about this page is retained in the navigation stack.
 
 **Since:** 10
 
@@ -51,6 +53,8 @@ information about this page is retained in the navigation stack.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NavRouteMode-PUSH--><!--Device-NavRouteMode-PUSH-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,8 +64,7 @@ information about this page is retained in the navigation stack.
 REPLACE
 ```
 
-The new navigation destination page replaces the current one. The current page is destroyed, and the information
-about this page is removed from the navigation stack.
+The new navigation destination page replaces the current one. The current page is destroyed, and the information about this page is removed from the navigation stack.
 
 **Since:** 10
 
@@ -72,6 +75,8 @@ about this page is removed from the navigation stack.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NavRouteMode-REPLACE--><!--Device-NavRouteMode-REPLACE-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

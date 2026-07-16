@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-reminderAgentManager-interface ActionButton--><!--Device-reminderAgentManager-interface ActionButton-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
+
+## 导入模块
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+```
 
 ## dataShareUpdate
 
@@ -17,6 +25,8 @@ dataShareUpdate?: DataShareUpdate
 **类型：** DataShareUpdate
 
 **起始版本：** 11
+
+<!--Device-ActionButton-dataShareUpdate?: DataShareUpdate--><!--Device-ActionButton-dataShareUpdate?: DataShareUpdate-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -33,6 +43,8 @@ wantAgent?: WantAgent
 **类型：** WantAgent
 
 **起始版本：** 10
+
+<!--Device-ActionButton-wantAgent?: WantAgent--><!--Device-ActionButton-wantAgent?: WantAgent-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 

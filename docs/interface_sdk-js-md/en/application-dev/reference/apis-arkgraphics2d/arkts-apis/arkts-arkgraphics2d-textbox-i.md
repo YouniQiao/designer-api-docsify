@@ -4,6 +4,8 @@ Rectangular area of the text, indicating the rectangular space occupied by the t
 
 **Since:** 12
 
+<!--Device-text-interface TextBox--><!--Device-text-interface TextBox-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Text direction.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TextBox-direction: TextDirection--><!--Device-TextBox-direction: TextDirection-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## rect
@@ -41,6 +45,8 @@ Rectangular area information, in physical pixels (px).
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TextBox-rect: common2D.Rect--><!--Device-TextBox-rect: common2D.Rect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

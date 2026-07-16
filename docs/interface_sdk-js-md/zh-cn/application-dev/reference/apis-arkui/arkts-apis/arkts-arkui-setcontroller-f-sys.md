@@ -1,5 +1,11 @@
 # setController（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { windowAnimationManager } from '@kit.ArkUI';
+```
+
 ## setController
 
 ```TypeScript
@@ -12,6 +18,8 @@ function setController(controller: WindowAnimationController): void
 
 **起始版本：** 9
 
+<!--Device-windowAnimationManager-function setController(controller: WindowAnimationController): void--><!--Device-windowAnimationManager-function setController(controller: WindowAnimationController): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function setController(controller: WindowAnimationController): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| controller | WindowAnimationController | 是 | 窗口动画的控制器。 |
+| controller | [WindowAnimationController](arkts-arkui-windowanimationcontroller-i-sys.md) | 是 | 窗口动画的控制器。 |
 
 **示例：**
 

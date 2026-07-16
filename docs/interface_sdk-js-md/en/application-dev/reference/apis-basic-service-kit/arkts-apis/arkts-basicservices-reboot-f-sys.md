@@ -18,6 +18,8 @@ Reboots a device.
 
 **Required permissions:** ohos.permission.REBOOT
 
+<!--Device-power-function reboot(reason: string): void--><!--Device-power-function reboot(reason: string): void-End-->
+
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Reboots a device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reason | string | Yes | Indicates the restart reason. For example, "updater" indicates entering the updater modeafter the restart. If the parameter is not specified, the system enters the normal mode after the restart.reason parameter must be of type string. |
+| reason | string | Yes | Indicates the restart reason. For example, "updater" indicates entering the updater mode after the restart. If the parameter is not specified, the system enters the normal mode after the restart.reason parameter must be of type string. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; |
 | [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |

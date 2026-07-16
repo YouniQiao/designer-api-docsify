@@ -4,6 +4,8 @@ Provides the geographical location definitions for media resources.
 
 **Since:** 6
 
+<!--Device-media-interface Location--><!--Device-media-interface Location-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Latitude.
 
 **Since:** 6
 
+<!--Device-Location-latitude: double--><!--Device-Location-latitude: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## longitude
@@ -37,6 +41,8 @@ Longitude.
 **Type:** number
 
 **Since:** 6
+
+<!--Device-Location-longitude: double--><!--Device-Location-longitude: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 

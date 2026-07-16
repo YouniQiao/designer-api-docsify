@@ -4,6 +4,8 @@ The module defines the task listener used in [App Startup](../../../../applicati
 
 **Since:** 12
 
+<!--Device-unnamed-declare class StartupListener--><!--Device-unnamed-declare class StartupListener-End-->
+
 **System capability:** SystemCapability.Ability.AppStartup
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Called when all startup tasks complete.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-StartupListener-onCompleted?(error: BusinessError<void>): void--><!--Device-StartupListener-onCompleted?(error: BusinessError<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AppStartup
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | BusinessError&lt;void&gt; | Yes | Indicates the error during execution. |
+| error | [BusinessError](../../apis-arkui/arkts-components/arkts-arkui-businesserror-t.md)<void> | Yes | Indicates the error during execution. |
 
 **Example**
 

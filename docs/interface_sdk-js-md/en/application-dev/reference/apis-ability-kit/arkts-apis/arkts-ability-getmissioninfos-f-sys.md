@@ -18,6 +18,8 @@ Obtains information about all missions. This API uses an asynchronous callback t
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-missionManager-function getMissionInfos(deviceId: string, numMax: int, callback: AsyncCallback<Array<MissionInfo>>): void--><!--Device-missionManager-function getMissionInfos(deviceId: string, numMax: int, callback: AsyncCallback<Array<MissionInfo>>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Obtains information about all missions. This API uses an asynchronous callback t
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
 | numMax | number | Yes | Maximum number of missions whose information can be obtained. |
-| callback | AsyncCallback&lt;Array&lt;MissionInfo&gt;&gt; | Yes | Callback used to return the array of mission informationobtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<MissionInfo>> | Yes | Callback used to return the array of mission information obtained. |
 
 **Error codes:**
 
@@ -74,6 +76,8 @@ Obtains information about all missions. This API uses a promise to return the re
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-missionManager-function getMissionInfos(deviceId: string, numMax: int): Promise<Array<MissionInfo>>--><!--Device-missionManager-function getMissionInfos(deviceId: string, numMax: int): Promise<Array<MissionInfo>>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
@@ -89,7 +93,7 @@ Obtains information about all missions. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;MissionInfo&gt;&gt; | Promise used to return the array of mission information obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<MissionInfo>> | Promise used to return the array of mission information obtained. |
 
 **Error codes:**
 

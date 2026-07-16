@@ -4,7 +4,15 @@ ArcSliderLayoutValueOptions的构造信息。
 
 **起始版本：** 18
 
+<!--Device-unnamed-interface ArcSliderLayoutOptionsConstructorOptions--><!--Device-unnamed-interface ArcSliderLayoutOptionsConstructorOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
+
+## 导入模块
+
+```TypeScript
+import { ArcSliderLayoutOptions, ArcSliderValueOptionsConstructorOptions, ArcSliderValueOptions, ArcSliderStyleOptionsConstructorOptions, ArcSlider, ArcSliderLayoutOptionsConstructorOptions, ArcSliderOptions, ArcSliderStyleOptions, ArcSliderPosition, ArcSliderOptionsConstructorOptions } from '@kit.ArkUI';
+```
 
 ## position
 
@@ -22,7 +30,9 @@ position?: ArcSliderPosition
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSliderLayoutOptionsConstructorOptions-position?: ArcSliderPosition--><!--Device-ArcSliderLayoutOptionsConstructorOptions-position?: ArcSliderPosition-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -42,7 +52,9 @@ reverse?: boolean
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSliderLayoutOptionsConstructorOptions-reverse?: boolean--><!--Device-ArcSliderLayoutOptionsConstructorOptions-reverse?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 

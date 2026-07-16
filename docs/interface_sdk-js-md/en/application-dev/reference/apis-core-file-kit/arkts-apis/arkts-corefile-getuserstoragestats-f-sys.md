@@ -18,6 +18,8 @@ Obtains the storage statistics of this user, in bytes. This API uses a promise t
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
+<!--Device-storageStatistics-function getUserStorageStats(): Promise<StorageStats>--><!--Device-storageStatistics-function getUserStorageStats(): Promise<StorageStats>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Obtains the storage statistics of this user, in bytes. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;StorageStats&gt; | Promise used to return the storage statistics (in bytes) obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<StorageStats> | Promise used to return the storage statistics (in bytes) obtained. |
 
 **Error codes:**
 
@@ -63,6 +65,8 @@ Obtains the storage statistics of this user, in bytes. This API uses an asynchro
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
+<!--Device-storageStatistics-function getUserStorageStats(callback: AsyncCallback<StorageStats>): void--><!--Device-storageStatistics-function getUserStorageStats(callback: AsyncCallback<StorageStats>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **System API:** This is a system API.
@@ -71,7 +75,7 @@ Obtains the storage statistics of this user, in bytes. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;StorageStats&gt; | Yes | Callback used to return the storage statistics obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<StorageStats> | Yes | Callback used to return the storage statistics obtained. |
 
 **Error codes:**
 
@@ -111,6 +115,8 @@ Obtains the storage statistics of the specified user, in bytes. This API uses a 
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
+<!--Device-storageStatistics-function getUserStorageStats(userId: long): Promise<StorageStats>--><!--Device-storageStatistics-function getUserStorageStats(userId: long): Promise<StorageStats>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **System API:** This is a system API.
@@ -125,7 +131,7 @@ Obtains the storage statistics of the specified user, in bytes. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;StorageStats&gt; | Promise used to return the storage statistics (in bytes) obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<StorageStats> | Promise used to return the storage statistics (in bytes) obtained. |
 
 **Error codes:**
 
@@ -158,12 +164,13 @@ storageStatistics.getUserStorageStats(userId).then((storageStats: storageStatist
 function getUserStorageStats(userId: number, callback: AsyncCallback<StorageStats>): void
 ```
 
-Obtains the storage statistics of the specified user, in bytes. This API uses an asynchronous callback to
-return the result.
+Obtains the storage statistics of the specified user, in bytes. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
+
+<!--Device-storageStatistics-function getUserStorageStats(userId: long, callback: AsyncCallback<StorageStats>): void--><!--Device-storageStatistics-function getUserStorageStats(userId: long, callback: AsyncCallback<StorageStats>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -174,7 +181,7 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
-| callback | AsyncCallback&lt;StorageStats&gt; | Yes | Callback used to return the storage statistics obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<StorageStats> | Yes | Callback used to return the storage statistics obtained. |
 
 **Error codes:**
 

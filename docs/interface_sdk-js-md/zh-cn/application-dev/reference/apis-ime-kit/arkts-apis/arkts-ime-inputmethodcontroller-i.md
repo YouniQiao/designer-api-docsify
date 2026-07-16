@@ -4,31 +4,28 @@
 
 InputMethodController是输入法客户端控制器，面向前台应用提供与输入法交互的核心能力。通过`inputMethod.getController()`获取实例后，可进行以下操作：
 
-- **绑定管理**：通过
-[attach](arkts-ime-inputmethodcontroller-i.md#attach-1)
-建立与输入法的绑定，通过[detach](arkts-ime-inputmethodcontroller-i.md#detach-1)解除绑定。attach和
-detach必须配对使用。
-- **键盘控制**：通过[showTextInput](arkts-ime-inputmethodcontroller-i.md#showtextinput-1)拉
-起软键盘进入编辑状态，通过[hideTextInput](arkts-ime-inputmethodcontroller-i.md#hidetextinput-1)隐
-藏软键盘退出编辑状态。showTextInput和hideTextInput必须配对使用。
-- **编辑框状态同步**：通过
-[updateCursor](arkts-ime-inputmethodcontroller-i.md#updatecursor-1)
-、
-[changeSelection](arkts-ime-inputmethodcontroller-i.md#changeselection-1)
-、
-[updateAttribute](arkts-ime-inputmethodcontroller-i.md#updateattribute-1)
-等接口向输入法同步光标、选区、属性等编辑框状态信息。
+- **绑定管理**：通过[attach](arkts-ime-inputmethodcontroller-i.md#attach-1)建立与输入法的绑定，通过[detach](arkts-ime-inputmethodcontroller-i.md#detach-1)解除绑定。attach和detach必须配对使用。  
+- **键盘控制**：通过[showTextInput](arkts-ime-inputmethodcontroller-i.md#showtextinput-1)拉起软键盘进入编辑状态，通过[hideTextInput](arkts-ime-inputmethodcontroller-i.md#hidetextinput-1)隐藏软键盘退出编辑状态。showTextInput和hideTextInput必须配对使用。  
+- **编辑框状态同步**：通过[updateCursor](arkts-ime-inputmethodcontroller-i.md#updatecursor-1)、[changeSelection](arkts-ime-inputmethodcontroller-i.md#changeselection-1)、[updateAttribute](arkts-ime-inputmethodcontroller-i.md#updateattribute-1)等接口向输入法同步光标、选区、属性等编辑框状态信息。  
 - **事件订阅**：通过on('insertText')、on('deleteLeft')等接口订阅输入法应用发送的文本操作事件。
 
 典型调用序列：`getController()` → `attach()` → `showTextInput()`/`hideTextInput()` → `detach()`
 
-> **注意：**
->
+> **注意：**  
+>  
 > attach和detach必须配对使用，showTextInput和hideTextInput必须配对使用，否则可能导致资源泄漏或状态不一致。
 
 **起始版本：** 6
 
+<!--Device-inputMethod-interface InputMethodController--><!--Device-inputMethod-interface InputMethodController-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+## 导入模块
+
+```TypeScript
+import { inputMethod } from '@kit.IMEKit';
+```
 
 ## attach
 
@@ -50,6 +47,8 @@ attach(showKeyboard: boolean, textConfig: TextConfig, callback: AsyncCallback<vo
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig, callback: AsyncCallback<void>): void--><!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -57,8 +56,8 @@ attach(showKeyboard: boolean, textConfig: TextConfig, callback: AsyncCallback<vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | showKeyboard | boolean | 是 | 绑定输入法成功后，是否拉起输入法键盘。<br>- true表示拉起。<br>- false表示不拉起。 |
-| textConfig | TextConfig | 是 | 编辑框的配置信息。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当绑定输入法成功后，err为undefined；否则为错误对象。 |
+| textConfig | [TextConfig](arkts-ime-textconfig-i.md) | 是 | 编辑框的配置信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当绑定输入法成功后，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -98,6 +97,8 @@ attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>--><!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -105,13 +106,13 @@ attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | showKeyboard | boolean | 是 | 绑定输入法成功后，是否拉起输入法键盘。<br>- true表示拉起。<br>- false表示不拉起。 |
-| textConfig | TextConfig | 是 | 编辑框的配置信息。 |
+| textConfig | [TextConfig](arkts-ime-textconfig-i.md) | 是 | 编辑框的配置信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -149,6 +150,8 @@ attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: Req
 
 **起始版本：** 15
 
+<!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: RequestKeyboardReason): Promise<void>--><!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: RequestKeyboardReason): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -156,14 +159,14 @@ attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: Req
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | showKeyboard | boolean | 是 | 绑定输入法成功后，是否拉起输入法键盘。<br>- true表示拉起。<br>- false表示不拉起。 |
-| textConfig | TextConfig | 是 | 编辑框的配置信息。 |
-| requestKeyboardReason | RequestKeyboardReason | 是 | 请求键盘输入的原因。 |
+| textConfig | [TextConfig](arkts-ime-textconfig-i.md) | 是 | 编辑框的配置信息。 |
+| requestKeyboardReason | [RequestKeyboardReason](arkts-ime-requestkeyboardreason-e.md) | 是 | 请求键盘输入的原因。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -205,21 +208,23 @@ attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InputMethodController-attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?: AttachOptions): Promise<void>--><!--Device-InputMethodController-attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?: AttachOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | UIContext | 是 | UIContext实例对象。 |
-| textConfig | TextConfig | 是 | 编辑框的配置信息。 |
-| attachOptions | AttachOptions | 否 | 绑定附加选项。 |
+| uiContext | [UIContext](../../apis-arkui/arkts-components/arkts-arkui-uicontext-t.md) | 是 | UIContext实例对象。 |
+| textConfig | [TextConfig](arkts-ime-textconfig-i.md) | 是 | 编辑框的配置信息。 |
+| attachOptions | [AttachOptions](arkts-ime-attachoptions-i.md) | 否 | 绑定附加选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -259,6 +264,8 @@ changeSelection(text: string, start: number, end: number, callback: AsyncCallbac
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-changeSelection(text: string, start: int, end: int, callback: AsyncCallback<void>): void--><!--Device-InputMethodController-changeSelection(text: string, start: int, end: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -268,7 +275,7 @@ changeSelection(text: string, start: number, end: number, callback: AsyncCallbac
 | text | string | 是 | 整个输入文本。 |
 | start | number | 是 | 所选文本的起始位置。该参数应为大于或等于0的整数。 |
 | end | number | 是 | 所选文本的结束位置。该参数应为大于或等于0的整数。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当文本信息更新成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当文本信息更新成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -304,6 +311,8 @@ changeSelection(text: string, start: number, end: number): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-changeSelection(text: string, start: int, end: int): Promise<void>--><!--Device-InputMethodController-changeSelection(text: string, start: int, end: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -318,7 +327,7 @@ changeSelection(text: string, start: number, end: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -360,13 +369,15 @@ detach(callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-detach(callback: AsyncCallback<void>): void--><!--Device-InputMethodController-detach(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当解绑定输入法成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当解绑定输入法成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -408,13 +419,15 @@ detach(): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-detach(): Promise<void>--><!--Device-InputMethodController-detach(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -446,13 +459,15 @@ discardTypingText(): Promise<void>
 
 **起始版本：** 20
 
+<!--Device-InputMethodController-discardTypingText(): Promise<void>--><!--Device-InputMethodController-discardTypingText(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -495,13 +510,15 @@ hideSoftKeyboard(callback: AsyncCallback<void>): void
 
 **相似接口差异点及选取原则**：
 
-- **hideSoftKeyboard**：面向系统应用，需权限ohos.permission.CONNECT_IME_ABILITY，仅隐藏键盘不退出编辑状态。
-- **hideTextInput**：面向自绘控件，隐藏键盘并退出编辑状态，可再次showTextInput重新进入。
+- **hideSoftKeyboard**：面向系统应用，需权限ohos.permission.CONNECT_IME_ABILITY，仅隐藏键盘不退出编辑状态。  
+- **hideTextInput**：面向自绘控件，隐藏键盘并退出编辑状态，可再次showTextInput重新进入。  
 - **选取原则**：自绘控件使用hideTextInput；系统应用且有权限时使用hideSoftKeyboard。
 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.CONNECT_IME_ABILITY
+
+<!--Device-InputMethodController-hideSoftKeyboard(callback: AsyncCallback<void>): void--><!--Device-InputMethodController-hideSoftKeyboard(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -509,7 +526,7 @@ hideSoftKeyboard(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当软键盘隐藏成功。err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当软键盘隐藏成功。err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -546,13 +563,15 @@ hideSoftKeyboard(): Promise<void>
 
 **需要权限：** ohos.permission.CONNECT_IME_ABILITY
 
+<!--Device-InputMethodController-hideSoftKeyboard(): Promise<void>--><!--Device-InputMethodController-hideSoftKeyboard(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -591,11 +610,11 @@ hideTextInput(callback: AsyncCallback<void>): void
 
 **异步返回方式**：使用callback异步回调。成功时err为undefined；失败时返回BusinessError对象。
 
-**前提条件/前置操作**：需先调用
-[attach](arkts-ime-inputmethodcontroller-i.md#attach-1)
-完成绑定，且已调用showTextInput进入编辑状态。
+**前提条件/前置操作**：需先调用[attach](arkts-ime-inputmethodcontroller-i.md#attach-1)完成绑定，且已调用showTextInput进入编辑状态。
 
 **起始版本：** 10
+
+<!--Device-InputMethodController-hideTextInput(callback: AsyncCallback<void>): void--><!--Device-InputMethodController-hideTextInput(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -603,7 +622,7 @@ hideTextInput(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当成功退出编辑状态时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当成功退出编辑状态时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -638,13 +657,15 @@ hideTextInput(): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-hideTextInput(): Promise<void>--><!--Device-InputMethodController-hideTextInput(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -677,6 +698,8 @@ off(type: 'selectByRange', callback?: Callback<Range>): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-off(type: 'selectByRange', callback?: Callback<Range>): void--><!--Device-InputMethodController-off(type: 'selectByRange', callback?: Callback<Range>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -684,7 +707,7 @@ off(type: 'selectByRange', callback?: Callback<Range>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selectByRange' | 是 | 设置监听类型，固定取值为'selectByRange'。 |
-| callback | Callback&lt;Range&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Range> | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例：**
 
@@ -711,6 +734,8 @@ off(type: 'selectByMovement', callback?: Callback<Movement>): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-off(type: 'selectByMovement', callback?: Callback<Movement>): void--><!--Device-InputMethodController-off(type: 'selectByMovement', callback?: Callback<Movement>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -718,7 +743,7 @@ off(type: 'selectByMovement', callback?: Callback<Movement>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selectByMovement' | 是 | 设置监听类型，固定取值为'selectByMovement'。 |
-| callback | Callback&lt;Movement&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Movement> | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例：**
 
@@ -745,6 +770,8 @@ off(type: 'insertText', callback?: (text: string) => void): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-off(type: 'insertText', callback?: (text: string) => void): void--><!--Device-InputMethodController-off(type: 'insertText', callback?: (text: string) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -752,7 +779,7 @@ off(type: 'insertText', callback?: (text: string) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'insertText' | 是 | 设置监听类型，固定取值为'insertText'。 |
-| callback | (text: string) =&gt; void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br/>参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | (text: string) => void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br/>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例：**
 
@@ -779,6 +806,8 @@ off(type: 'deleteLeft', callback?: (length: number) => void): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-off(type: 'deleteLeft', callback?: (length: number) => void): void--><!--Device-InputMethodController-off(type: 'deleteLeft', callback?: (length: number) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -786,7 +815,7 @@ off(type: 'deleteLeft', callback?: (length: number) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deleteLeft' | 是 | 设置监听，固定取值为'deleteLeft'。 |
-| callback | (length: number) =&gt; void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | (length: number) => void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例：**
 
@@ -813,6 +842,8 @@ off(type: 'deleteRight', callback?: (length: number) => void): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-off(type: 'deleteRight', callback?: (length: number) => void): void--><!--Device-InputMethodController-off(type: 'deleteRight', callback?: (length: number) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -820,7 +851,7 @@ off(type: 'deleteRight', callback?: (length: number) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deleteRight' | 是 | 设置监听类型，固定取值为`deleteRight`。 |
-| callback | (length: number) =&gt; void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | (length: number) => void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例：**
 
@@ -846,6 +877,8 @@ off(type: 'sendKeyboardStatus', callback?: (keyboardStatus: KeyboardStatus) => v
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-off(type: 'sendKeyboardStatus', callback?: (keyboardStatus: KeyboardStatus) => void): void--><!--Device-InputMethodController-off(type: 'sendKeyboardStatus', callback?: (keyboardStatus: KeyboardStatus) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -853,7 +886,7 @@ off(type: 'sendKeyboardStatus', callback?: (keyboardStatus: KeyboardStatus) => v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'sendKeyboardStatus' | 是 | 设置监听类型，固定取值为'sendKeyboardStatus'。 |
-| callback | (keyboardStatus: KeyboardStatus) =&gt; void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | (keyboardStatus: KeyboardStatus) => void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例：**
 
@@ -880,6 +913,8 @@ off(type: 'sendFunctionKey', callback?: (functionKey: FunctionKey) => void): voi
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-off(type: 'sendFunctionKey', callback?: (functionKey: FunctionKey) => void): void--><!--Device-InputMethodController-off(type: 'sendFunctionKey', callback?: (functionKey: FunctionKey) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -887,7 +922,7 @@ off(type: 'sendFunctionKey', callback?: (functionKey: FunctionKey) => void): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'sendFunctionKey' | 是 | 设置监听类型，固定取值为'sendFunctionKey'。 |
-| callback | (functionKey: FunctionKey) =&gt; void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | (functionKey: FunctionKey) => void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例：**
 
@@ -914,6 +949,8 @@ off(type: 'moveCursor', callback?: (direction: Direction) => void): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-off(type: 'moveCursor', callback?: (direction: Direction) => void): void--><!--Device-InputMethodController-off(type: 'moveCursor', callback?: (direction: Direction) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -921,7 +958,7 @@ off(type: 'moveCursor', callback?: (direction: Direction) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'moveCursor' | 是 | 设置监听类型，固定取值为'moveCursor'。 |
-| callback | (direction: Direction) =&gt; void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | (direction: Direction) => void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例：**
 
@@ -948,6 +985,8 @@ off(type: 'handleExtendAction', callback?: (action: ExtendAction) => void): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-off(type: 'handleExtendAction', callback?: (action: ExtendAction) => void): void--><!--Device-InputMethodController-off(type: 'handleExtendAction', callback?: (action: ExtendAction) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -955,7 +994,7 @@ off(type: 'handleExtendAction', callback?: (action: ExtendAction) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'handleExtendAction' | 是 | 设置监听类型，固定取值为'handleExtendAction'。 |
-| callback | (action: ExtendAction) =&gt; void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | (action: ExtendAction) => void | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例：**
 
@@ -982,6 +1021,8 @@ off(type: 'getLeftTextOfCursor', callback?: (length: number) => string): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-off(type: 'getLeftTextOfCursor', callback?: (length: number) => string): void--><!--Device-InputMethodController-off(type: 'getLeftTextOfCursor', callback?: (length: number) => string): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -989,7 +1030,7 @@ off(type: 'getLeftTextOfCursor', callback?: (length: number) => string): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'getLeftTextOfCursor' | 是 | 设置监听类型，固定取值为'getLeftTextOfCursor'。 |
-| callback | (length: number) =&gt; string | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | (length: number) => string | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例：**
 
@@ -1016,6 +1057,8 @@ off(type: 'getRightTextOfCursor', callback?: (length: number) => string): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-off(type: 'getRightTextOfCursor', callback?: (length: number) => string): void--><!--Device-InputMethodController-off(type: 'getRightTextOfCursor', callback?: (length: number) => string): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1023,7 +1066,7 @@ off(type: 'getRightTextOfCursor', callback?: (length: number) => string): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'getRightTextOfCursor' | 是 | 设置监听类型，固定取值为'getRightTextOfCursor'。 |
-| callback | (length: number) =&gt; string | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | (length: number) => string | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例：**
 
@@ -1050,6 +1093,8 @@ off(type: 'getTextIndexAtCursor', callback?: () => number): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-off(type: 'getTextIndexAtCursor', callback?: () => number): void--><!--Device-InputMethodController-off(type: 'getTextIndexAtCursor', callback?: () => number): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1057,7 +1102,7 @@ off(type: 'getTextIndexAtCursor', callback?: () => number): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'getTextIndexAtCursor' | 是 | 设置监听类型，固定取值为'getTextIndexAtCursor'。 |
-| callback | () =&gt; number | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | () => number | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例：**
 
@@ -1084,6 +1129,8 @@ off(type: 'setPreviewText', callback?: SetPreviewTextCallback): void
 
 **起始版本：** 17
 
+<!--Device-InputMethodController-off(type: 'setPreviewText', callback?: SetPreviewTextCallback): void--><!--Device-InputMethodController-off(type: 'setPreviewText', callback?: SetPreviewTextCallback): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1091,7 +1138,7 @@ off(type: 'setPreviewText', callback?: SetPreviewTextCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'setPreviewText' | 是 | 设置监听类型，固定取值为'setPreviewText'。 |
-| callback | SetPreviewTextCallback | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [SetPreviewTextCallback](arkts-ime-setpreviewtextcallback-t.md) | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例：**
 
@@ -1128,6 +1175,8 @@ off(type: 'finishTextPreview', callback?: Callback<void>): void
 
 **起始版本：** 17
 
+<!--Device-InputMethodController-off(type: 'finishTextPreview', callback?: Callback<void>): void--><!--Device-InputMethodController-off(type: 'finishTextPreview', callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1135,7 +1184,7 @@ off(type: 'finishTextPreview', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'finishTextPreview' | 是 | 设置监听类型，固定取值为'finishTextPreview'。 |
-| callback | Callback&lt;void&gt; | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | 否 | 取消订阅的回调函数，需要与on接口传入的保持一致。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例：**
 
@@ -1173,6 +1222,8 @@ on(type: 'selectByRange', callback: Callback<Range>): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-on(type: 'selectByRange', callback: Callback<Range>): void--><!--Device-InputMethodController-on(type: 'selectByRange', callback: Callback<Range>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1180,7 +1231,7 @@ on(type: 'selectByRange', callback: Callback<Range>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selectByRange' | 是 | 设置监听类型，固定取值为'selectByRange'。 |
-| callback | Callback&lt;Range&gt; | 是 | 回调函数，返回需要选中的文本范围。<br/>根据传入的文本范围，开发者在回调函数中编辑框中相应文本。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Range> | 是 | 回调函数，返回需要选中的文本范围。<br/>根据传入的文本范围，开发者在回调函数中编辑框中相应文本。 |
 
 **错误码：**
 
@@ -1207,6 +1258,8 @@ on(type: 'selectByMovement', callback: Callback<Movement>): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-on(type: 'selectByMovement', callback: Callback<Movement>): void--><!--Device-InputMethodController-on(type: 'selectByMovement', callback: Callback<Movement>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1214,7 +1267,7 @@ on(type: 'selectByMovement', callback: Callback<Movement>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selectByMovement' | 是 | 设置监听类型，固定取值为'selectByMovement'。 |
-| callback | Callback&lt;Movement&gt; | 是 | 回调函数，返回光标移动的方向。<br/>根据传入的光标移动方向，选中编辑框中相应文本。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Movement> | 是 | 回调函数，返回光标移动的方向。<br/>根据传入的光标移动方向，选中编辑框中相应文本。 |
 
 **错误码：**
 
@@ -1241,6 +1294,8 @@ on(type: 'insertText', callback: (text: string) => void): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-on(type: 'insertText', callback: (text: string) => void): void--><!--Device-InputMethodController-on(type: 'insertText', callback: (text: string) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1248,7 +1303,7 @@ on(type: 'insertText', callback: (text: string) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'insertText' | 是 | 设置监听类型，固定取值为'insertText'。 |
-| callback | (text: string) =&gt; void | 是 | 回调函数，返回需要插入的文本内容。<br/>根据传入的文本，在回调函数中操作编辑框中的内容。 |
+| callback | (text: string) => void | 是 | 回调函数，返回需要插入的文本内容。<br/>根据传入的文本，在回调函数中操作编辑框中的内容。 |
 
 **错误码：**
 
@@ -1289,6 +1344,8 @@ on(type: 'deleteLeft', callback: (length: number) => void): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-on(type: 'deleteLeft', callback: (length: number) => void): void--><!--Device-InputMethodController-on(type: 'deleteLeft', callback: (length: number) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1296,7 +1353,7 @@ on(type: 'deleteLeft', callback: (length: number) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deleteLeft' | 是 | 设置监听类型，固定取值为'deleteLeft'。 |
-| callback | (length: number) =&gt; void | 是 | 回调函数，返回需要向左删除的文本长度。<br/>根据传入的删除长度，在回调函数中操作编辑框中的文本。 |
+| callback | (length: number) => void | 是 | 回调函数，返回需要向左删除的文本长度。<br/>根据传入的删除长度，在回调函数中操作编辑框中的文本。 |
 
 **错误码：**
 
@@ -1324,6 +1381,8 @@ on(type: 'deleteRight', callback: (length: number) => void): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-on(type: 'deleteRight', callback: (length: number) => void): void--><!--Device-InputMethodController-on(type: 'deleteRight', callback: (length: number) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1331,7 +1390,7 @@ on(type: 'deleteRight', callback: (length: number) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deleteRight' | 是 | 设置监听类型，固定取值为'deleteRight'。 |
-| callback | (length: number) =&gt; void | 是 | 回调函数，返回需要向右删除的文本长度。<br/>根据传入的删除长度，在回调函数中操作编辑框中的文本。 |
+| callback | (length: number) => void | 是 | 回调函数，返回需要向右删除的文本长度。<br/>根据传入的删除长度，在回调函数中操作编辑框中的文本。 |
 
 **错误码：**
 
@@ -1359,6 +1418,8 @@ on(type: 'sendKeyboardStatus', callback: (keyboardStatus: KeyboardStatus) => voi
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-on(type: 'sendKeyboardStatus', callback: (keyboardStatus: KeyboardStatus) => void): void--><!--Device-InputMethodController-on(type: 'sendKeyboardStatus', callback: (keyboardStatus: KeyboardStatus) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1366,7 +1427,7 @@ on(type: 'sendKeyboardStatus', callback: (keyboardStatus: KeyboardStatus) => voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'sendKeyboardStatus' | 是 | 设置监听类型，固定取值为'sendKeyboardStatus'。 |
-| callback | (keyboardStatus: KeyboardStatus) =&gt; void | 是 | 回调函数，返回软键盘状态。<br/>根据传入的软键盘状态，在回调函数中做相应操作。 |
+| callback | (keyboardStatus: KeyboardStatus) => void | 是 | 回调函数，返回软键盘状态。<br/>根据传入的软键盘状态，在回调函数中做相应操作。 |
 
 **错误码：**
 
@@ -1394,6 +1455,8 @@ on(type: 'sendFunctionKey', callback: (functionKey: FunctionKey) => void): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-on(type: 'sendFunctionKey', callback: (functionKey: FunctionKey) => void): void--><!--Device-InputMethodController-on(type: 'sendFunctionKey', callback: (functionKey: FunctionKey) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1401,7 +1464,7 @@ on(type: 'sendFunctionKey', callback: (functionKey: FunctionKey) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'sendFunctionKey' | 是 | 设置监听类型，固定取值为'sendFunctionKey'。 |
-| callback | (functionKey: FunctionKey) =&gt; void | 是 | 回调函数，返回输入法应用发送的功能键信息。<br/>根据返回的功能键信息，做相应操作。 |
+| callback | (functionKey: FunctionKey) => void | 是 | 回调函数，返回输入法应用发送的功能键信息。<br/>根据返回的功能键信息，做相应操作。 |
 
 **错误码：**
 
@@ -1429,6 +1492,8 @@ on(type: 'moveCursor', callback: (direction: Direction) => void): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-on(type: 'moveCursor', callback: (direction: Direction) => void): void--><!--Device-InputMethodController-on(type: 'moveCursor', callback: (direction: Direction) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1436,7 +1501,7 @@ on(type: 'moveCursor', callback: (direction: Direction) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'moveCursor' | 是 | 设置监听类型，固定取值为'moveCursor'。 |
-| callback | (direction: Direction) =&gt; void | 是 | 回调函数，返回光标信息。<br/>根据返回的光标移动方向，改变光标位置，如光标向上或向下。 |
+| callback | (direction: Direction) => void | 是 | 回调函数，返回光标信息。<br/>根据返回的光标移动方向，改变光标位置，如光标向上或向下。 |
 
 **错误码：**
 
@@ -1464,6 +1529,8 @@ on(type: 'handleExtendAction', callback: (action: ExtendAction) => void): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-on(type: 'handleExtendAction', callback: (action: ExtendAction) => void): void--><!--Device-InputMethodController-on(type: 'handleExtendAction', callback: (action: ExtendAction) => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1471,7 +1538,7 @@ on(type: 'handleExtendAction', callback: (action: ExtendAction) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'handleExtendAction' | 是 | 设置监听类型，固定取值为'handleExtendAction'。 |
-| callback | (action: ExtendAction) =&gt; void | 是 | 回调函数，返回扩展编辑操作类型。<br/>根据传入的扩展编辑操作类型，做相应的操作，如剪切、复制等。 |
+| callback | (action: ExtendAction) => void | 是 | 回调函数，返回扩展编辑操作类型。<br/>根据传入的扩展编辑操作类型，做相应的操作，如剪切、复制等。 |
 
 **错误码：**
 
@@ -1499,6 +1566,8 @@ on(type: 'getLeftTextOfCursor', callback: (length: number) => string): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-on(type: 'getLeftTextOfCursor', callback: (length: number) => string): void--><!--Device-InputMethodController-on(type: 'getLeftTextOfCursor', callback: (length: number) => string): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1506,7 +1575,7 @@ on(type: 'getLeftTextOfCursor', callback: (length: number) => string): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'getLeftTextOfCursor' | 是 | 设置监听类型，固定取值为'getLeftTextOfCursor'。 |
-| callback | (length: number) =&gt; string | 是 | 回调函数，获取编辑框最新状态下光标左侧指定长度的文本内容并返回。 |
+| callback | (length: number) => string | 是 | 回调函数，获取编辑框最新状态下光标左侧指定长度的文本内容并返回。 |
 
 **错误码：**
 
@@ -1536,6 +1605,8 @@ on(type: 'getRightTextOfCursor', callback: (length: number) => string): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-on(type: 'getRightTextOfCursor', callback: (length: number) => string): void--><!--Device-InputMethodController-on(type: 'getRightTextOfCursor', callback: (length: number) => string): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1543,7 +1614,7 @@ on(type: 'getRightTextOfCursor', callback: (length: number) => string): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'getRightTextOfCursor' | 是 | 设置监听类型，固定取值为'getRightTextOfCursor'。 |
-| callback | (length: number) =&gt; string | 是 | 回调函数，获取编辑框最新状态下光标右侧指定长度的文本内容并返回。 |
+| callback | (length: number) => string | 是 | 回调函数，获取编辑框最新状态下光标右侧指定长度的文本内容并返回。 |
 
 **错误码：**
 
@@ -1573,6 +1644,8 @@ on(type: 'getTextIndexAtCursor', callback: () => number): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-on(type: 'getTextIndexAtCursor', callback: () => number): void--><!--Device-InputMethodController-on(type: 'getTextIndexAtCursor', callback: () => number): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1580,7 +1653,7 @@ on(type: 'getTextIndexAtCursor', callback: () => number): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'getTextIndexAtCursor' | 是 | 设置监听类型，固定取值为'getTextIndexAtCursor'。 |
-| callback | () =&gt; number | 是 | 回调函数，获取编辑框最新状态下光标处文本索引并返回。 |
+| callback | () => number | 是 | 回调函数，获取编辑框最新状态下光标处文本索引并返回。 |
 
 **错误码：**
 
@@ -1610,6 +1683,8 @@ on(type: 'setPreviewText', callback: SetPreviewTextCallback): void
 
 **起始版本：** 17
 
+<!--Device-InputMethodController-on(type: 'setPreviewText', callback: SetPreviewTextCallback): void--><!--Device-InputMethodController-on(type: 'setPreviewText', callback: SetPreviewTextCallback): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1617,7 +1692,7 @@ on(type: 'setPreviewText', callback: SetPreviewTextCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'setPreviewText' | 是 | 设置监听类型，固定取值为'setPreviewText'。 |
-| callback | SetPreviewTextCallback | 是 | 回调函数。用于接收文本预览的内容并返回。 |
+| callback | [SetPreviewTextCallback](arkts-ime-setpreviewtextcallback-t.md) | 是 | 回调函数。用于接收文本预览的内容并返回。 |
 
 **错误码：**
 
@@ -1660,6 +1735,8 @@ on(type: 'finishTextPreview', callback: Callback<void>): void
 
 **起始版本：** 17
 
+<!--Device-InputMethodController-on(type: 'finishTextPreview', callback: Callback<void>): void--><!--Device-InputMethodController-on(type: 'finishTextPreview', callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1667,7 +1744,7 @@ on(type: 'finishTextPreview', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'finishTextPreview' | 是 | 设置监听类型，固定取值为'finishTextPreview'。 |
-| callback | Callback&lt;void&gt; | 是 | 回调函数。用于处理预览文本结束的逻辑，类型为void。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | 是 | 回调函数。用于处理预览文本结束的逻辑，类型为void。 |
 
 **错误码：**
 
@@ -1711,13 +1788,15 @@ recvMessage(msgHandler?: MessageHandler): void
 
 **起始版本：** 15
 
+<!--Device-InputMethodController-recvMessage(msgHandler?: MessageHandler): void--><!--Device-InputMethodController-recvMessage(msgHandler?: MessageHandler): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| msgHandler | MessageHandler | 否 | 该对象通过[onMessage](arkts-ime-messagehandler-i.md#onmessage-1)接收来自输入法应用所发送的自定义通信数据，并通过[onTerminated](arkts-ime-messagehandler-i.md#onterminated-1)接收终止此对象订阅的消息。<br>若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-messagehandler-i.md)对象，同时触发其[onTerminated](arkts-ime-messagehandler-i.md#onterminated-1)回调函数。 |
+| msgHandler | [MessageHandler](arkts-ime-messagehandler-i.md) | 否 | 该对象通过[onMessage](arkts-ime-messagehandler-i.md#onmessage-1)接收来自输入法应用所发送的自定义通信数据，并通过[onTerminated](arkts-ime-messagehandler-i.md#onterminated-1)接收终止此对象订阅的消息。<br>若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-messagehandler-i.md)对象，同时触发其[onTerminated](arkts-ime-messagehandler-i.md#onterminated-1)回调函数。 |
 
 **错误码：**
 
@@ -1751,11 +1830,13 @@ inputMethodController.recvMessage();
 sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 ```
 
-发送自定义通信至输入法应用。使用Promise异步回调。
->
+发送自定义通信至输入法应用。使用Promise异步回调。  
+>  
 > msgId最大限制256B，msgParam最大限制128KB。
 
 **起始版本：** 15
+
+<!--Device-InputMethodController-sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>--><!--Device-InputMethodController-sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1764,13 +1845,13 @@ sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | msgId | string | 是 | 需要发送至输入法应用的自定义数据的标识符。 |
-| msgParam | ArrayBuffer | 否 | 需要发送至输入法应用的自定义数据的消息体。 |
+| msgParam | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 否 | 需要发送至输入法应用的自定义数据的消息体。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1808,6 +1889,8 @@ setCallingWindow(windowId: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-setCallingWindow(windowId: int, callback: AsyncCallback<void>): void--><!--Device-InputMethodController-setCallingWindow(windowId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1815,7 +1898,7 @@ setCallingWindow(windowId: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | windowId | number | 是 | 绑定输入法应用的应用程序所在的窗口Id。该参数应为整数。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当设置成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当设置成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -1852,6 +1935,8 @@ setCallingWindow(windowId: number): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-setCallingWindow(windowId: int): Promise<void>--><!--Device-InputMethodController-setCallingWindow(windowId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1864,7 +1949,7 @@ setCallingWindow(windowId: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1909,13 +1994,15 @@ showSoftKeyboard(callback: AsyncCallback<void>): void
 
 **相似接口差异点及选取原则**：
 
-- **showSoftKeyboard**：面向系统应用，需权限ohos.permission.CONNECT_IME_ABILITY，仅显示键盘不改变编辑状态。
-- **showTextInput**：面向自绘控件，需先attach绑定，拉起键盘并进入编辑状态。
+- **showSoftKeyboard**：面向系统应用，需权限ohos.permission.CONNECT_IME_ABILITY，仅显示键盘不改变编辑状态。  
+- **showTextInput**：面向自绘控件，需先attach绑定，拉起键盘并进入编辑状态。  
 - **选取原则**：自绘控件使用showTextInput；系统应用且有权限时使用showSoftKeyboard。
 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.CONNECT_IME_ABILITY
+
+<!--Device-InputMethodController-showSoftKeyboard(callback: AsyncCallback<void>): void--><!--Device-InputMethodController-showSoftKeyboard(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1923,7 +2010,7 @@ showSoftKeyboard(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当软键盘显示成功。err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当软键盘显示成功。err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1960,13 +2047,15 @@ showSoftKeyboard(): Promise<void>
 
 **需要权限：** ohos.permission.CONNECT_IME_ABILITY
 
+<!--Device-InputMethodController-showSoftKeyboard(): Promise<void>--><!--Device-InputMethodController-showSoftKeyboard(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -2005,11 +2094,11 @@ showTextInput(callback: AsyncCallback<void>): void
 
 **异步返回方式**：使用callback异步回调。成功时err为undefined；失败时返回BusinessError对象。
 
-**前提条件/前置操作**：需先调用
-[attach](arkts-ime-inputmethodcontroller-i.md#attach-1)
-完成绑定，否则会报12800009错误。
+**前提条件/前置操作**：需先调用[attach](arkts-ime-inputmethodcontroller-i.md#attach-1)完成绑定，否则会报12800009错误。
 
 **起始版本：** 10
+
+<!--Device-InputMethodController-showTextInput(callback: AsyncCallback<void>): void--><!--Device-InputMethodController-showTextInput(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -2017,7 +2106,7 @@ showTextInput(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。若成功进入编辑状态，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。若成功进入编辑状态，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -2052,13 +2141,15 @@ showTextInput(): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-showTextInput(): Promise<void>--><!--Device-InputMethodController-showTextInput(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -2091,19 +2182,21 @@ showTextInput(requestKeyboardReason: RequestKeyboardReason): Promise<void>
 
 **起始版本：** 15
 
+<!--Device-InputMethodController-showTextInput(requestKeyboardReason: RequestKeyboardReason): Promise<void>--><!--Device-InputMethodController-showTextInput(requestKeyboardReason: RequestKeyboardReason): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| requestKeyboardReason | RequestKeyboardReason | 是 | 请求键盘输入的原因。 |
+| requestKeyboardReason | [RequestKeyboardReason](arkts-ime-requestkeyboardreason-e.md) | 是 | 请求键盘输入的原因。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -2142,13 +2235,15 @@ stopInput(callback: AsyncCallback<boolean>): void
 
 **替代接口：** [stopInputSession](arkts-ime-inputmethodcontroller-i.md#stopinputsession-1)
 
+<!--Device-InputMethodController-stopInput(callback: AsyncCallback<boolean>): void--><!--Device-InputMethodController-stopInput(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。当会话结束成功，err为undefined，data为true；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。当会话结束成功，err为undefined，data为true；否则为错误对象。 |
 
 **示例：**
 
@@ -2183,13 +2278,15 @@ stopInput(): Promise<boolean>
 
 **替代接口：** [stopInputSession](arkts-ime-inputmethodcontroller-i.md#stopinputsession-1)
 
+<!--Device-InputMethodController-stopInput(): Promise<boolean>--><!--Device-InputMethodController-stopInput(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示会话结束成功；返回false表示会话结束失败。 |
+| Promise<boolean> | Promise对象。返回true表示会话结束成功；返回false表示会话结束失败。 |
 
 **示例：**
 
@@ -2228,13 +2325,15 @@ stopInputSession(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 9
 
+<!--Device-InputMethodController-stopInputSession(callback: AsyncCallback<boolean>): void--><!--Device-InputMethodController-stopInputSession(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。当结束输入会话成功时，err为undefined，data为true；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。当结束输入会话成功时，err为undefined，data为true；否则为错误对象。 |
 
 **错误码：**
 
@@ -2272,13 +2371,15 @@ stopInputSession(): Promise<boolean>
 
 **起始版本：** 9
 
+<!--Device-InputMethodController-stopInputSession(): Promise<boolean>--><!--Device-InputMethodController-stopInputSession(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示结束输入会话成功，返回false表示结束输入会话失败。 |
+| Promise<boolean> | Promise对象。返回true表示结束输入会话成功，返回false表示结束输入会话失败。 |
 
 **错误码：**
 
@@ -2314,14 +2415,16 @@ updateAttribute(attribute: InputAttribute, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-updateAttribute(attribute: InputAttribute, callback: AsyncCallback<void>): void--><!--Device-InputMethodController-updateAttribute(attribute: InputAttribute, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| attribute | InputAttribute | 是 | 编辑框属性对象。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当编辑框属性信息更新成功时，err为undefined；否则为错误对象。 |
+| attribute | [InputAttribute](arkts-ime-inputattribute-i.md) | 是 | 编辑框属性对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当编辑框属性信息更新成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -2358,19 +2461,21 @@ updateAttribute(attribute: InputAttribute): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-updateAttribute(attribute: InputAttribute): Promise<void>--><!--Device-InputMethodController-updateAttribute(attribute: InputAttribute): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| attribute | InputAttribute | 是 | 编辑框属性对象。 |
+| attribute | [InputAttribute](arkts-ime-inputattribute-i.md) | 是 | 编辑框属性对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -2405,14 +2510,16 @@ updateCursor(cursorInfo: CursorInfo, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-updateCursor(cursorInfo: CursorInfo, callback: AsyncCallback<void>): void--><!--Device-InputMethodController-updateCursor(cursorInfo: CursorInfo, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cursorInfo | CursorInfo | 是 | 光标信息。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当光标信息更新成功时，err为undefined；否则为错误对象。 |
+| cursorInfo | [CursorInfo](arkts-ime-cursorinfo-i.md) | 是 | 光标信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当光标信息更新成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -2455,19 +2562,21 @@ updateCursor(cursorInfo: CursorInfo): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-InputMethodController-updateCursor(cursorInfo: CursorInfo): Promise<void>--><!--Device-InputMethodController-updateCursor(cursorInfo: CursorInfo): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cursorInfo | CursorInfo | 是 | 光标信息。 |
+| cursorInfo | [CursorInfo](arkts-ime-cursorinfo-i.md) | 是 | 光标信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

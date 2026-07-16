@@ -12,6 +12,8 @@ Enumerates the capabilities of an accessibility application.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-accessibility-type Capability = 'retrieve' | 'touchGuide' | 'keyEventObserver' | 'zoom' | 'gesture'--><!--Device-accessibility-type Capability = 'retrieve' | 'touchGuide' | 'keyEventObserver' | 'zoom' | 'gesture'-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 | Type | Description |

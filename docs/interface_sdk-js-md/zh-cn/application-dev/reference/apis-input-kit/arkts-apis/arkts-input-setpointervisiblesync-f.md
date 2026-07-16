@@ -1,5 +1,11 @@
 # setPointerVisibleSync
 
+## 导入模块
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+```
+
 ## setPointerVisibleSync
 
 ```TypeScript
@@ -9,6 +15,8 @@ function setPointerVisibleSync(visible: boolean): void
 设置当前窗口鼠标光标的显示状态，使用同步方式。
 
 **起始版本：** 10
+
+<!--Device-pointer-function setPointerVisibleSync(visible: boolean): void--><!--Device-pointer-function setPointerVisibleSync(visible: boolean): void-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

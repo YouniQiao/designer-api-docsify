@@ -6,6 +6,8 @@
 
 **起始版本：** 9
 
+<!--Device-bundleManager-export enum DisplayOrientation--><!--Device-bundleManager-export enum DisplayOrientation-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## UNSPECIFIED
@@ -18,7 +20,9 @@ UNSPECIFIED = 0
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DisplayOrientation-UNSPECIFIED = 0--><!--Device-DisplayOrientation-UNSPECIFIED = 0-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -32,7 +36,9 @@ LANDSCAPE = 1
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DisplayOrientation-LANDSCAPE = 1--><!--Device-DisplayOrientation-LANDSCAPE = 1-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -46,7 +52,9 @@ PORTRAIT = 2
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DisplayOrientation-PORTRAIT = 2--><!--Device-DisplayOrientation-PORTRAIT = 2-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -60,7 +68,9 @@ FOLLOW_RECENT = 3
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DisplayOrientation-FOLLOW_RECENT = 3--><!--Device-DisplayOrientation-FOLLOW_RECENT = 3-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -74,7 +84,9 @@ LANDSCAPE_INVERTED = 4
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DisplayOrientation-LANDSCAPE_INVERTED = 4--><!--Device-DisplayOrientation-LANDSCAPE_INVERTED = 4-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -88,7 +100,9 @@ PORTRAIT_INVERTED = 5
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DisplayOrientation-PORTRAIT_INVERTED = 5--><!--Device-DisplayOrientation-PORTRAIT_INVERTED = 5-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -102,7 +116,9 @@ AUTO_ROTATION = 6
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DisplayOrientation-AUTO_ROTATION = 6--><!--Device-DisplayOrientation-AUTO_ROTATION = 6-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -116,7 +132,9 @@ AUTO_ROTATION_LANDSCAPE = 7
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DisplayOrientation-AUTO_ROTATION_LANDSCAPE = 7--><!--Device-DisplayOrientation-AUTO_ROTATION_LANDSCAPE = 7-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -130,7 +148,9 @@ AUTO_ROTATION_PORTRAIT = 8
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DisplayOrientation-AUTO_ROTATION_PORTRAIT = 8--><!--Device-DisplayOrientation-AUTO_ROTATION_PORTRAIT = 8-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -144,7 +164,9 @@ AUTO_ROTATION_RESTRICTED = 9
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DisplayOrientation-AUTO_ROTATION_RESTRICTED = 9--><!--Device-DisplayOrientation-AUTO_ROTATION_RESTRICTED = 9-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -158,7 +180,9 @@ AUTO_ROTATION_LANDSCAPE_RESTRICTED = 10
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DisplayOrientation-AUTO_ROTATION_LANDSCAPE_RESTRICTED = 10--><!--Device-DisplayOrientation-AUTO_ROTATION_LANDSCAPE_RESTRICTED = 10-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -172,7 +196,9 @@ AUTO_ROTATION_PORTRAIT_RESTRICTED = 11
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DisplayOrientation-AUTO_ROTATION_PORTRAIT_RESTRICTED = 11--><!--Device-DisplayOrientation-AUTO_ROTATION_PORTRAIT_RESTRICTED = 11-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -186,7 +212,9 @@ LOCKED = 12
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DisplayOrientation-LOCKED = 12--><!--Device-DisplayOrientation-LOCKED = 12-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -200,7 +228,9 @@ AUTO_ROTATION_UNSPECIFIED = 13
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DisplayOrientation-AUTO_ROTATION_UNSPECIFIED = 13--><!--Device-DisplayOrientation-AUTO_ROTATION_UNSPECIFIED = 13-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -214,7 +244,9 @@ FOLLOW_DESKTOP = 14
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DisplayOrientation-FOLLOW_DESKTOP = 14--><!--Device-DisplayOrientation-FOLLOW_DESKTOP = 14-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

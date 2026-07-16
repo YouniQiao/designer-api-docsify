@@ -16,6 +16,8 @@ Sets the keyboard repeat delay. This API uses an asynchronous callback to return
 
 **Since:** 10
 
+<!--Device-inputDevice-function setKeyboardRepeatDelay(delay: int, callback: AsyncCallback<void>): void--><!--Device-inputDevice-function setKeyboardRepeatDelay(delay: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 **System API:** This is a system API.
@@ -24,8 +26,8 @@ Sets the keyboard repeat delay. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| delay | number | Yes | Keyboard repeat delay, in ms. The value range is [300, 1000] and the default value is**500**. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| delay | number | Yes | Keyboard repeat delay, in ms. The value range is [300, 1000] and the default value is **500**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -77,6 +79,8 @@ Sets the keyboard repeat delay. This API uses a promise to return the result.
 
 **Since:** 10
 
+<!--Device-inputDevice-function setKeyboardRepeatDelay(delay: int): Promise<void>--><!--Device-inputDevice-function setKeyboardRepeatDelay(delay: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 **System API:** This is a system API.
@@ -85,13 +89,13 @@ Sets the keyboard repeat delay. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| delay | number | Yes | Keyboard repeat delay, in ms. The value range is [300, 1000] and the default value is**500**. |
+| delay | number | Yes | Keyboard repeat delay, in ms. The value range is [300, 1000] and the default value is **500**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

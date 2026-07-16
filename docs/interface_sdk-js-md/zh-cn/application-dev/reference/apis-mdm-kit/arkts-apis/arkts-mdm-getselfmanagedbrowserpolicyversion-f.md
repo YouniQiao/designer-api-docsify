@@ -1,5 +1,11 @@
 # getSelfManagedBrowserPolicyVersion
 
+## 导入模块
+
+```TypeScript
+import { browser } from '@kit.MDMKit';
+```
+
 ## getSelfManagedBrowserPolicyVersion
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getSelfManagedBrowserPolicyVersion(): string
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-browser-function getSelfManagedBrowserPolicyVersion(): string--><!--Device-browser-function getSelfManagedBrowserPolicyVersion(): string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

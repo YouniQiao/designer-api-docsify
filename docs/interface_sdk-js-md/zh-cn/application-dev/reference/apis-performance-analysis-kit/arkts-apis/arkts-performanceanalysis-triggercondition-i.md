@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-hiAppEvent-interface TriggerCondition--><!--Device-hiAppEvent-interface TriggerCondition-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
+
+## 导入模块
+
+```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+```
 
 ## row
 
@@ -18,7 +26,9 @@ row?: number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TriggerCondition-row?: int--><!--Device-TriggerCondition-row?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -34,7 +44,9 @@ size?: number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TriggerCondition-size?: int--><!--Device-TriggerCondition-size?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -50,7 +62,9 @@ timeOut?: number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TriggerCondition-timeOut?: int--><!--Device-TriggerCondition-timeOut?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 

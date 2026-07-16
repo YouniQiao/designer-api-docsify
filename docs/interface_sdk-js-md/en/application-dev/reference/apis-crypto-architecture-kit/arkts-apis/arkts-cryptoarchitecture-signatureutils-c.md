@@ -4,6 +4,8 @@ Provides utilities for converting ECC/SM2 signature data.
 
 **Since:** 20
 
+<!--Device-cryptoFramework-class SignatureUtils--><!--Device-cryptoFramework-class SignatureUtils-End-->
+
 **System capability:** SystemCapability.Security.CryptoFramework.Signature
 
 ## Modules to Import
@@ -24,19 +26,21 @@ Converts an ECC/SM2 signature (r, s) to the ASN1 DER format.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SignatureUtils-static genEccSignature(spec: EccSignatureSpec): Uint8Array--><!--Device-SignatureUtils-static genEccSignature(spec: EccSignatureSpec): Uint8Array-End-->
+
 **System capability:** SystemCapability.Security.CryptoFramework.Signature
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| spec | EccSignatureSpec | Yes | ECC/SM2 signature data to convert. |
+| spec | [EccSignatureSpec](arkts-cryptoarchitecture-eccsignaturespec-i.md) | Yes | ECC/SM2 signature data to convert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Signature data in ASN1 DER format. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Signature data in ASN1 DER format. |
 
 **Error codes:**
 
@@ -83,19 +87,21 @@ Generates r and s from the ECC/SM2 signature data in ASN1 DER format.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SignatureUtils-static genEccSignatureSpec(data: Uint8Array): EccSignatureSpec--><!--Device-SignatureUtils-static genEccSignatureSpec(data: Uint8Array): EccSignatureSpec-End-->
+
 **System capability:** SystemCapability.Security.CryptoFramework.Signature
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Uint8Array | Yes | Signature data in ASN1 DER format. |
+| data | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Signature data in ASN1 DER format. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| EccSignatureSpec | Object that contains r and s. |
+| [EccSignatureSpec](arkts-cryptoarchitecture-eccsignaturespec-i.md) | Object that contains r and s. |
 
 **Error codes:**
 

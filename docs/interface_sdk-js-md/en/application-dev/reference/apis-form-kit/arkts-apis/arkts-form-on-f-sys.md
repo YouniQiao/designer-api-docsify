@@ -12,12 +12,13 @@ import { formObserver } from '@kit.FormKit';
 function on(type: 'formAdd', observerCallback: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Listens to the event of add form.
-<p>You can use this method to listen to the event of add form.</p>
+Listens to the event of add form.<p>You can use this method to listen to the event of add form.</p>
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
+
+<!--Device-formObserver-function on(type: 'formAdd', observerCallback: Callback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function on(type: 'formAdd', observerCallback: Callback<formInfo.RunningFormInfo>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -28,7 +29,7 @@ Listens to the event of add form.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'formAdd' | Yes | Indicates event type. |
-| observerCallback | Callback&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the runningform info. |
+| observerCallback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<formInfo.RunningFormInfo> | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -44,12 +45,13 @@ Listens to the event of add form.
 function on(type: 'formAdd', hostBundleName: string, observerCallback: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Listens to the event of add form.
-<p>You can use this method to listen to the event of add form for a particular card host.</p>
+Listens to the event of add form.<p>You can use this method to listen to the event of add form for a particular card host.</p>
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
+
+<!--Device-formObserver-function on(type: 'formAdd', hostBundleName: string, observerCallback: Callback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function on(type: 'formAdd', hostBundleName: string, observerCallback: Callback<formInfo.RunningFormInfo>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -61,7 +63,7 @@ Listens to the event of add form.
 | --- | --- | --- | --- |
 | type | 'formAdd' | Yes | Indicates event type. |
 | hostBundleName | string | Yes | Indicates the bundle name of the form host application. |
-| observerCallback | Callback&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the runningform info. |
+| observerCallback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<formInfo.RunningFormInfo> | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -77,12 +79,13 @@ Listens to the event of add form.
 function on(type: 'formRemove', observerCallback: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Listens to the event of remove form.
-<p>You can use this method to listen to the event of remove form.</p>
+Listens to the event of remove form.<p>You can use this method to listen to the event of remove form.</p>
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
+
+<!--Device-formObserver-function on(type: 'formRemove', observerCallback: Callback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function on(type: 'formRemove', observerCallback: Callback<formInfo.RunningFormInfo>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -93,7 +96,7 @@ Listens to the event of remove form.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'formRemove' | Yes | Indicates event type. |
-| observerCallback | Callback&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the runningform info. |
+| observerCallback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<formInfo.RunningFormInfo> | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -109,12 +112,13 @@ Listens to the event of remove form.
 function on(type: 'formRemove', hostBundleName: string, observerCallback: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Listens to the event of remove form.
-<p>You can use this method to listen to the event of remove form for a particular card host.</p>
+Listens to the event of remove form.<p>You can use this method to listen to the event of remove form for a particular card host.</p>
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
+
+<!--Device-formObserver-function on(type: 'formRemove', hostBundleName: string, observerCallback: Callback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function on(type: 'formRemove', hostBundleName: string, observerCallback: Callback<formInfo.RunningFormInfo>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -126,7 +130,7 @@ Listens to the event of remove form.
 | --- | --- | --- | --- |
 | type | 'formRemove' | Yes | Indicates event type. |
 | hostBundleName | string | Yes | Indicates the bundle name of the form host application. |
-| observerCallback | Callback&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the runningform info. |
+| observerCallback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<formInfo.RunningFormInfo> | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -142,12 +146,13 @@ Listens to the event of remove form.
 function on(type: 'notifyVisible', observerCallback: Callback<Array<formInfo.RunningFormInfo>>): void
 ```
 
-Listens to the event of notifyVisible type change.
-<p>You can use this method to listen to the event of notifyVisible type change.</p>
+Listens to the event of notifyVisible type change.<p>You can use this method to listen to the event of notifyVisible type change.</p>
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
+
+<!--Device-formObserver-function on(type: 'notifyVisible', observerCallback: Callback<Array<formInfo.RunningFormInfo>>): void--><!--Device-formObserver-function on(type: 'notifyVisible', observerCallback: Callback<Array<formInfo.RunningFormInfo>>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -158,7 +163,7 @@ Listens to the event of notifyVisible type change.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'notifyVisible' | Yes | Indicates event type. |
-| observerCallback | Callback&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback is used to returnthe running form info. |
+| observerCallback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<formInfo.RunningFormInfo>> | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -178,12 +183,21 @@ function on(
   ): void
 ```
 
-Listens to the event of notifyVisible type change.
-<p>You can use this method to listen to the event of notifyVisible type change for a particular card host.</p>
+Listens to the event of notifyVisible type change.<p>You can use this method to listen to the event of notifyVisible type change for a particular card host.</p>
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
+
+<!--Device-formObserver-function on(
+    type: 'notifyVisible',
+    hostBundleName: string,
+    observerCallback: Callback<Array<formInfo.RunningFormInfo>>
+  ): void--><!--Device-formObserver-function on(
+    type: 'notifyVisible',
+    hostBundleName: string,
+    observerCallback: Callback<Array<formInfo.RunningFormInfo>>
+  ): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -195,7 +209,7 @@ Listens to the event of notifyVisible type change.
 | --- | --- | --- | --- |
 | type | 'notifyVisible' | Yes | Indicates event type. |
 | hostBundleName | string | Yes | Indicates the bundle name of the form host application. |
-| observerCallback | Callback&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback is used to returnthe running form info. |
+| observerCallback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<formInfo.RunningFormInfo>> | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -211,12 +225,13 @@ Listens to the event of notifyVisible type change.
 function on(type: 'notifyInvisible', observerCallback: Callback<Array<formInfo.RunningFormInfo>>): void
 ```
 
-Listens to the event of notifyInvisible type change.
-<p>You can use this method to listen to the event of notifyInvisible type change.</p>
+Listens to the event of notifyInvisible type change.<p>You can use this method to listen to the event of notifyInvisible type change.</p>
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
+
+<!--Device-formObserver-function on(type: 'notifyInvisible', observerCallback: Callback<Array<formInfo.RunningFormInfo>>): void--><!--Device-formObserver-function on(type: 'notifyInvisible', observerCallback: Callback<Array<formInfo.RunningFormInfo>>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -227,7 +242,7 @@ Listens to the event of notifyInvisible type change.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'notifyInvisible' | Yes | Indicates event type. |
-| observerCallback | Callback&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback is used to returnthe running form info. |
+| observerCallback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<formInfo.RunningFormInfo>> | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -247,12 +262,21 @@ function on(
   ): void
 ```
 
-Listens to the event of notifyInvisible type change.
-<p>You can use this method to listen to the event of notifyInvisible type change for a particular card host.</p>
+Listens to the event of notifyInvisible type change.<p>You can use this method to listen to the event of notifyInvisible type change for a particular card host.</p>
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
+
+<!--Device-formObserver-function on(
+    type: 'notifyInvisible',
+    hostBundleName: string,
+    observerCallback: Callback<Array<formInfo.RunningFormInfo>>,
+  ): void--><!--Device-formObserver-function on(
+    type: 'notifyInvisible',
+    hostBundleName: string,
+    observerCallback: Callback<Array<formInfo.RunningFormInfo>>,
+  ): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -264,7 +288,7 @@ Listens to the event of notifyInvisible type change.
 | --- | --- | --- | --- |
 | type | 'notifyInvisible' | Yes | Indicates event type. |
 | hostBundleName | string | Yes | Indicates the bundle name of the form host application. |
-| observerCallback | Callback&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback is used to returnthe running form info. |
+| observerCallback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<formInfo.RunningFormInfo>> | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -280,12 +304,13 @@ Listens to the event of notifyInvisible type change.
 function on(type: 'router', observerCallback: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Router event listening in registered form.
-<p>This interface requires permission to receive callback.</p>
+Router event listening in registered form.<p>This interface requires permission to receive callback.</p>
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
+
+<!--Device-formObserver-function on(type: 'router', observerCallback: Callback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function on(type: 'router', observerCallback: Callback<formInfo.RunningFormInfo>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -296,7 +321,7 @@ Router event listening in registered form.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'router' | Yes | Indicates event type. |
-| observerCallback | Callback&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the runningform info. |
+| observerCallback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<formInfo.RunningFormInfo> | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -312,12 +337,13 @@ Router event listening in registered form.
 function on(type: 'router', hostBundleName: string, observerCallback: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Router event listening in registered form.
-<p>This interface requires permission to receive callback.</p>
+Router event listening in registered form.<p>This interface requires permission to receive callback.</p>
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
+
+<!--Device-formObserver-function on(type: 'router', hostBundleName: string, observerCallback: Callback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function on(type: 'router', hostBundleName: string, observerCallback: Callback<formInfo.RunningFormInfo>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -329,7 +355,7 @@ Router event listening in registered form.
 | --- | --- | --- | --- |
 | type | 'router' | Yes | Indicates event type. |
 | hostBundleName | string | Yes | Indicates the bundle name of the form host application. |
-| observerCallback | Callback&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the runningform info. |
+| observerCallback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<formInfo.RunningFormInfo> | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -345,12 +371,13 @@ Router event listening in registered form.
 function on(type: 'message', observerCallback: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Message event listening in registered form.
-<p>This interface requires permission to receive callback.</p>
+Message event listening in registered form.<p>This interface requires permission to receive callback.</p>
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
+
+<!--Device-formObserver-function on(type: 'message', observerCallback: Callback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function on(type: 'message', observerCallback: Callback<formInfo.RunningFormInfo>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -361,7 +388,7 @@ Message event listening in registered form.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Indicates event type. |
-| observerCallback | Callback&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the runningform info. |
+| observerCallback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<formInfo.RunningFormInfo> | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -377,12 +404,13 @@ Message event listening in registered form.
 function on(type: 'message', hostBundleName: string, observerCallback: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Message event listening in registered form.
-<p>This interface requires permission to receive callback.</p>
+Message event listening in registered form.<p>This interface requires permission to receive callback.</p>
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
+
+<!--Device-formObserver-function on(type: 'message', hostBundleName: string, observerCallback: Callback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function on(type: 'message', hostBundleName: string, observerCallback: Callback<formInfo.RunningFormInfo>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -394,7 +422,7 @@ Message event listening in registered form.
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Indicates event type. |
 | hostBundleName | string | Yes | Indicates the bundle name of the form host application. |
-| observerCallback | Callback&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the runningform info. |
+| observerCallback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<formInfo.RunningFormInfo> | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -410,12 +438,13 @@ Message event listening in registered form.
 function on(type: 'call', observerCallback: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Call event listening in registered form.
-<p>This interface requires permission to receive callback.</p>
+Call event listening in registered form.<p>This interface requires permission to receive callback.</p>
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
+
+<!--Device-formObserver-function on(type: 'call', observerCallback: Callback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function on(type: 'call', observerCallback: Callback<formInfo.RunningFormInfo>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -426,7 +455,7 @@ Call event listening in registered form.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'call' | Yes | Indicates event type. |
-| observerCallback | Callback&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the runningform info. |
+| observerCallback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<formInfo.RunningFormInfo> | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
@@ -442,12 +471,13 @@ Call event listening in registered form.
 function on(type: 'call', hostBundleName: string, observerCallback: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Call event listening in registered form.
-<p>This interface requires permission to receive callback.</p>
+Call event listening in registered form.<p>This interface requires permission to receive callback.</p>
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
+
+<!--Device-formObserver-function on(type: 'call', hostBundleName: string, observerCallback: Callback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function on(type: 'call', hostBundleName: string, observerCallback: Callback<formInfo.RunningFormInfo>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -459,7 +489,7 @@ Call event listening in registered form.
 | --- | --- | --- | --- |
 | type | 'call' | Yes | Indicates event type. |
 | hostBundleName | string | Yes | Indicates the bundle name of the form host application. |
-| observerCallback | Callback&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the runningform info. |
+| observerCallback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<formInfo.RunningFormInfo> | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 

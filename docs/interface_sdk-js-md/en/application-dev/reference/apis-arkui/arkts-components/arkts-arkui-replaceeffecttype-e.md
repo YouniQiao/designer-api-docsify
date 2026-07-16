@@ -4,6 +4,8 @@ The replace effect type of symbol.
 
 **Since:** 20
 
+<!--Device-unnamed-declare enum ReplaceEffectType--><!--Device-unnamed-declare enum ReplaceEffectType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SEQUENTIAL
@@ -12,8 +14,7 @@ The replace effect type of symbol.
 SEQUENTIAL = 0
 ```
 
-Sequential replacement: The current symbol disappears before a new symbol appears. This is the default symbol
-replacement effect type.
+Sequential replacement: The current symbol disappears before a new symbol appears. This is the default symbol replacement effect type.
 
 **Since:** 20
 
@@ -22,6 +23,8 @@ replacement effect type.
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
+
+<!--Device-ReplaceEffectType-SEQUENTIAL = 0--><!--Device-ReplaceEffectType-SEQUENTIAL = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -41,6 +44,8 @@ Cross-fade transition effect: The current symbol fades out while a new symbol fa
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
 
+<!--Device-ReplaceEffectType-CROSS_FADE = 1--><!--Device-ReplaceEffectType-CROSS_FADE = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SLASH_OVERLAY
@@ -49,8 +54,7 @@ Cross-fade transition effect: The current symbol fades out while a new symbol fa
 SLASH_OVERLAY = 2
 ```
 
-Slash overlay effect: The current symbol is replaced with a symbol featuring diagonal slash, typically indicating
-disabled state.
+Slash overlay effect: The current symbol is replaced with a symbol featuring diagonal slash, typically indicating disabled state.
 
 **Since:** 20
 
@@ -59,6 +63,8 @@ disabled state.
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
+
+<!--Device-ReplaceEffectType-SLASH_OVERLAY = 2--><!--Device-ReplaceEffectType-SLASH_OVERLAY = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

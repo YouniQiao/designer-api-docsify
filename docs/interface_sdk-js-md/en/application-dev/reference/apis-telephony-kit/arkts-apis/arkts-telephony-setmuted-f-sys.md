@@ -16,6 +16,8 @@ Set mute during a call.
 
 **Since:** 8
 
+<!--Device-call-function setMuted(callback: AsyncCallback<void>): void--><!--Device-call-function setMuted(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Set mute during a call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of setMuted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of setMuted. |
 
 **Error codes:**
 
@@ -63,6 +65,8 @@ Set mute during a call.
 
 **Since:** 8
 
+<!--Device-call-function setMuted(): Promise<void>--><!--Device-call-function setMuted(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -71,7 +75,7 @@ Set mute during a call.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setMuted. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the setMuted. |
 
 **Error codes:**
 

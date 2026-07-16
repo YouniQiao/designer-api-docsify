@@ -4,9 +4,17 @@
 
 **起始版本：** 13
 
+<!--Device-unnamed-interface WatermarkConfig--><!--Device-unnamed-interface WatermarkConfig-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { media } from '@kit.MediaKit';
+```
 
 ## left
 
@@ -19,6 +27,8 @@ left: number
 **类型：** number
 
 **起始版本：** 13
+
+<!--Device-WatermarkConfig-left: int--><!--Device-WatermarkConfig-left: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -35,6 +45,8 @@ top: number
 **类型：** number
 
 **起始版本：** 13
+
+<!--Device-WatermarkConfig-top: int--><!--Device-WatermarkConfig-top: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 

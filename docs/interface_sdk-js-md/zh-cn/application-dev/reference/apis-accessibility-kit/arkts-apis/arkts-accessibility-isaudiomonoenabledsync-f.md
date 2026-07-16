@@ -1,5 +1,11 @@
 # isAudioMonoEnabledSync
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+```
+
 ## isAudioMonoEnabledSync
 
 ```TypeScript
@@ -11,6 +17,8 @@ function isAudioMonoEnabledSync(): boolean
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-accessibility-function isAudioMonoEnabledSync(): boolean--><!--Device-accessibility-function isAudioMonoEnabledSync(): boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

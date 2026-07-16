@@ -12,6 +12,8 @@ type SecureLevel = 'S1' | 'S2' | 'S3' | 'S4'
 
 **替代接口：** [AuthTrustLevel](arkts-userauthentication-authtrustlevel-e.md)
 
+<!--Device-userAuth-type SecureLevel = 'S1' | 'S2' | 'S3' | 'S4'--><!--Device-userAuth-type SecureLevel = 'S1' | 'S2' | 'S3' | 'S4'-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 | 类型 | 说明 |

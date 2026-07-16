@@ -16,6 +16,8 @@ Unregister session create callback
 
 **Since:** 9
 
+<!--Device-avSession-function off(type: 'sessionCreate', callback?: (session: AVSessionDescriptor) => void): void--><!--Device-avSession-function off(type: 'sessionCreate', callback?: (session: AVSessionDescriptor) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -25,7 +27,7 @@ Unregister session create callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sessionCreate' | Yes | Registration Type, session creation, 'sessionCreate' |
-| callback | (session: AVSessionDescriptor) =&gt; void | No | Used to unregister listener for ('sessionCreate') command |
+| callback | (session: AVSessionDescriptor) => void | No | Used to unregister listener for ('sessionCreate') command |
 
 **Error codes:**
 
@@ -72,6 +74,8 @@ Unregister session destroy callback
 
 **Since:** 9
 
+<!--Device-avSession-function off(type: 'sessionDestroy', callback?: (session: AVSessionDescriptor) => void): void--><!--Device-avSession-function off(type: 'sessionDestroy', callback?: (session: AVSessionDescriptor) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -81,7 +85,7 @@ Unregister session destroy callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sessionDestroy' | Yes | Registration Type, session deletion, 'sessionDestroy' |
-| callback | (session: AVSessionDescriptor) =&gt; void | No | Used to unregister listener for ('sessionDestroy') command |
+| callback | (session: AVSessionDescriptor) => void | No | Used to unregister listener for ('sessionDestroy') command |
 
 **Error codes:**
 
@@ -128,6 +132,8 @@ Unregister top session changed callback
 
 **Since:** 9
 
+<!--Device-avSession-function off(type: 'topSessionChange', callback?: (session: AVSessionDescriptor) => void): void--><!--Device-avSession-function off(type: 'topSessionChange', callback?: (session: AVSessionDescriptor) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -137,7 +143,7 @@ Unregister top session changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'topSessionChange' | Yes | Registration Type, top priority session change, 'topSessionChange' |
-| callback | (session: AVSessionDescriptor) =&gt; void | No | Used to unregister listener for ('topSessionChange') command |
+| callback | (session: AVSessionDescriptor) => void | No | Used to unregister listener for ('topSessionChange') command |
 
 **Error codes:**
 
@@ -184,6 +190,8 @@ Unregister Session service death callback, notifying the application to clean up
 
 **Since:** 9
 
+<!--Device-avSession-function off(type: 'sessionServiceDie', callback?: () => void): void--><!--Device-avSession-function off(type: 'sessionServiceDie', callback?: () => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **System API:** This is a system API.
@@ -193,7 +201,7 @@ Unregister Session service death callback, notifying the application to clean up
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sessionServiceDie' | Yes | Registration Type, 'sessionServiceDie' |
-| callback | () =&gt; void | No | Used to unregister listener for ('sessionServiceDie') command. |
+| callback | () => void | No | Used to unregister listener for ('sessionServiceDie') command. |
 
 **Error codes:**
 
@@ -221,6 +229,8 @@ Unregister distributed session changed callback
 
 **Since:** 18
 
+<!--Device-avSession-function off(type: 'distributedSessionChange', distributedSessionType: DistributedSessionType, callback?: Callback<Array<AVSessionController>>): void--><!--Device-avSession-function off(type: 'distributedSessionChange', distributedSessionType: DistributedSessionType, callback?: Callback<Array<AVSessionController>>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -230,8 +240,8 @@ Unregister distributed session changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'distributedSessionChange' | Yes | Registration Type, distributed session change |
-| distributedSessionType | DistributedSessionType | Yes | Indicates the distributed session type |
-| callback | Callback&lt;Array&lt;AVSessionController&gt;&gt; | No | The callback will return remote changedAVSessionController. |
+| distributedSessionType | [DistributedSessionType](arkts-avsession-distributedsessiontype-e-sys.md) | Yes | Indicates the distributed session type |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<AVSessionController>> | No | The callback will return remote changed AVSessionController. |
 
 **Error codes:**
 
@@ -258,6 +268,8 @@ Unregister device discovery callback
 
 **Since:** 10
 
+<!--Device-avSession-function off(type: 'deviceAvailable', callback?: (device: OutputDeviceInfo) => void): void--><!--Device-avSession-function off(type: 'deviceAvailable', callback?: (device: OutputDeviceInfo) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -267,7 +279,7 @@ Unregister device discovery callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceAvailable' | Yes | Registration Type |
-| callback | (device: OutputDeviceInfo) =&gt; void | No | Used to returns the device info |
+| callback | (device: OutputDeviceInfo) => void | No | Used to returns the device info |
 
 **Error codes:**
 
@@ -294,6 +306,8 @@ Unregister device offline callback
 
 **Since:** 11
 
+<!--Device-avSession-function off(type: 'deviceOffline', callback?: (deviceId: string) => void): void--><!--Device-avSession-function off(type: 'deviceOffline', callback?: (deviceId: string) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -303,7 +317,7 @@ Unregister device offline callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceOffline' | Yes | Registration Type |
-| callback | (deviceId: string) =&gt; void | No | Used to returns the device info |
+| callback | (deviceId: string) => void | No | Used to returns the device info |
 
 **Error codes:**
 
@@ -330,6 +344,8 @@ UnRegister log event callback.
 
 **Since:** 13
 
+<!--Device-avSession-function off(type: 'deviceLogEvent', callback?: Callback<DeviceLogEventCode>): void--><!--Device-avSession-function off(type: 'deviceLogEvent', callback?: Callback<DeviceLogEventCode>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -339,7 +355,7 @@ UnRegister log event callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceLogEvent' | Yes | Command to register 'deviceLogEvent'. |
-| callback | Callback&lt;DeviceLogEventCode&gt; | No | Used to handle ('deviceLogEvent') command |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DeviceLogEventCode> | No | Used to handle ('deviceLogEvent') command |
 
 **Error codes:**
 
@@ -370,6 +386,8 @@ Unregisters a system callback for the device connection phase.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function off(type: 'deviceStateChanged', callback?: Callback<DeviceState>): void--><!--Device-avSession-function off(type: 'deviceStateChanged', callback?: Callback<DeviceState>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -379,7 +397,7 @@ Unregisters a system callback for the device connection phase.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceStateChanged' | Yes | Event type. |
-| callback | Callback&lt;DeviceState&gt; | No | Callback used to return the device information. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DeviceState> | No | Callback used to return the device information. |
 
 **Error codes:**
 

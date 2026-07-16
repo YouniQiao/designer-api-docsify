@@ -1,10 +1,10 @@
 # ArrayList
 
-ArrayList is a linear data structure that is implemented based on arrays.
-ArrayList can dynamically adjust the capacity based on project requirements.
-It increases the capacity by 50% each time.
+ArrayList is a linear data structure that is implemented based on arrays.ArrayList can dynamically adjust the capacity based on project requirements.It increases the capacity by 50% each time.
 
 **Since:** 8
+
+<!--Device-unnamed-declare class ArrayList<T>--><!--Device-unnamed-declare class ArrayList<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,13 +26,15 @@ Obtains an iterator, each item of which is a JavaScript object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ArrayList-[Symbol.iterator](): IterableIterator<T>--><!--Device-ArrayList-[Symbol.iterator](): IterableIterator<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;T&gt; | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<T> | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
 
 **Error codes:**
 
@@ -84,6 +86,8 @@ Adds an element at the end of this ArrayList.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ArrayList-add(element: T): boolean--><!--Device-ArrayList-add(element: T): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -96,7 +100,7 @@ Adds an element at the end of this ArrayList.
 
 | Type | Description |
 | --- | --- |
-| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false**is returned. |
+| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -137,6 +141,8 @@ Clears this ArrayList and sets its length to **0**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ArrayList-clear(): void--><!--Device-ArrayList-clear(): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
@@ -169,13 +175,15 @@ Clones this ArrayList and returns a copy. The modification to the copy does not 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ArrayList-clone(): ArrayList<T>--><!--Device-ArrayList-clone(): ArrayList<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArrayList&lt;T&gt; | New **ArrayList** instance obtained. |
+| [ArrayList](arkts-arkts-arraylist-c.md)<T> | New **ArrayList** instance obtained. |
 
 **Error codes:**
 
@@ -208,6 +216,8 @@ A constructor used to create an **ArrayList** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ArrayList-constructor()--><!--Device-ArrayList-constructor()-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
@@ -235,13 +245,15 @@ Converts this ArrayList into an array.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ArrayList-convertToArray(): Array<T>--><!--Device-ArrayList-convertToArray(): Array<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | Array obtained. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<T> | Array obtained. |
 
 **Error codes:**
 
@@ -274,14 +286,16 @@ Uses a callback to traverse each element in the **ArrayList** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ArrayList-forEach(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => void, thisArg?: Object): void--><!--Device-ArrayList-forEach(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => void, thisArg?: Object): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, arrlist?: ArrayList&lt;T&gt;) =&gt; void | Yes | Callback invoked for the replacement. |
-| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is thisinstance. |
+| callbackFn | (value: T, index?: number, arrlist?: ArrayList<T>) => void | Yes | Callback invoked for the replacement. |
+| thisArg | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
 
@@ -318,6 +332,8 @@ Obtains the capacity of this ArrayList.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ArrayList-getCapacity(): int--><!--Device-ArrayList-getCapacity(): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -357,6 +373,8 @@ Obtains the index of the first occurrence of the specified element in this Array
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ArrayList-getIndexOf(element: T): int--><!--Device-ArrayList-getIndexOf(element: T): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -406,6 +424,8 @@ Obtains the index of the last occurrence of the specified element in this ArrayL
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ArrayList-getLastIndexOf(element: T): int--><!--Device-ArrayList-getLastIndexOf(element: T): int-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -454,6 +474,8 @@ Checks whether this ArrayList has the specified element.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ArrayList-has(element: T): boolean--><!--Device-ArrayList-has(element: T): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -496,6 +518,8 @@ Increases the capacity of this ArrayList.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ArrayList-increaseCapacityTo(newCapacity: int): void--><!--Device-ArrayList-increaseCapacityTo(newCapacity: int): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -536,6 +560,8 @@ Inserts an element at a specified index within the length range. If index is out
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ArrayList-insert(element: T, index: int): void--><!--Device-ArrayList-insert(element: T, index: int): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -543,7 +569,7 @@ Inserts an element at a specified index within the length range. If index is out
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | element | T | Yes | Target element. |
-| index | number | Yes | Index of the position where the element is to be inserted. The value must be less than orequal to int32_max, that is, 2147483647. |
+| index | number | Yes | Index of the position where the element is to be inserted. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Error codes:**
 
@@ -575,13 +601,15 @@ Checks whether this ArrayList is empty (contains no element).
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ArrayList-isEmpty(): boolean--><!--Device-ArrayList-isEmpty(): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the ArrayList is empty; otherwise, **false**is returned. |
+| boolean | Check result. The value **true** is returned if the ArrayList is empty; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -613,6 +641,8 @@ Removes the first occurrence of the specified element from this ArrayList.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ArrayList-remove(element: T): boolean--><!--Device-ArrayList-remove(element: T): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -658,6 +688,8 @@ Removes an element with the specified position from this ArrayList.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ArrayList-removeByIndex(index: int): T--><!--Device-ArrayList-removeByIndex(index: int): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -706,6 +738,8 @@ Removes elements within the range [fromIndex, toIndex).
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ArrayList-removeByRange(fromIndex: int, toIndex: int): void--><!--Device-ArrayList-removeByRange(fromIndex: int, toIndex: int): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -746,14 +780,16 @@ Replaces all elements in this ArrayList with new elements, and returns the new o
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ArrayList-replaceAllElements(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => T, thisArg?: Object): void--><!--Device-ArrayList-replaceAllElements(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => T, thisArg?: Object): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, arrlist?: ArrayList&lt;T&gt;) =&gt; T | Yes | Callback invoked for the replacement. |
-| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is thisinstance. |
+| callbackFn | (value: T, index?: number, arrlist?: ArrayList<T>) => T | Yes | Callback invoked for the replacement. |
+| thisArg | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
 
@@ -788,13 +824,15 @@ Sorts elements in an ArrayList according to the order defined by the specified c
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ArrayList-sort(comparator?: ArrayListComparatorFn<T>): void--><!--Device-ArrayList-sort(comparator?: ArrayListComparatorFn<T>): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| comparator | ArrayListComparatorFn&lt;T&gt; | No | Callback invoked for sorting. The default value is the callbackfunction for sorting elements in ascending order.<br> There has been a compatibility change since API version 23. In API version 22 and earlier versions, the type is `(firstValue: T, secondValue: T) =&gt; number`.<br>**Since:** 23 |
+| comparator | [ArrayListComparatorFn](arkts-arkts-arraylistcomparatorfn-t.md)<T> | No | Callback invoked for sorting. The default value is the callback function for sorting elements in ascending order.<br> There has been a compatibility change since API version 23. In API version 22 and earlier versions, the type is `(firstValue: T, secondValue: T) =&gt; number`.<br>**Since:** 23 |
 
 **Error codes:**
 
@@ -822,12 +860,13 @@ arrayList.sort();
 subArrayList(fromIndex: number, toIndex: number): ArrayList<T>
 ```
 
-Obtains elements from this **ArrayList** within the range
-[fromIndex, toIndex) and returns them as a new ArrayList instance.
+Obtains elements from this **ArrayList** within the range [fromIndex, toIndex) and returns them as a new ArrayList instance.
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ArrayList-subArrayList(fromIndex: int, toIndex: int): ArrayList<T>--><!--Device-ArrayList-subArrayList(fromIndex: int, toIndex: int): ArrayList<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -842,7 +881,7 @@ Obtains elements from this **ArrayList** within the range
 
 | Type | Description |
 | --- | --- |
-| ArrayList&lt;T&gt; | New **ArrayList** instance obtained. |
+| [ArrayList](arkts-arkts-arraylist-c.md)<T> | New **ArrayList** instance obtained. |
 
 **Error codes:**
 
@@ -875,6 +914,8 @@ Releases the reserved space in this ArrayList by adjusting the capacity to the a
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ArrayList-trimToCurrentLength(): void--><!--Device-ArrayList-trimToCurrentLength(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -911,6 +952,8 @@ Returns the element at the given index.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ArrayList-[index: int]: T--><!--Device-ArrayList-[index: int]: T-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## length
@@ -926,6 +969,8 @@ Number of elements in an ArrayList.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ArrayList-length: number--><!--Device-ArrayList-length: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

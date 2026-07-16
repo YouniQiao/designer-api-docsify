@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-inputEventClient-interface TouchPoint--><!--Device-inputEventClient-interface TouchPoint-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
+
+## 导入模块
+
+```TypeScript
+import { inputEventClient } from '@kit.InputKit';
+```
 
 ## displayId
 
@@ -19,6 +27,8 @@ displayId: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TouchPoint-displayId: int--><!--Device-TouchPoint-displayId: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -36,6 +46,8 @@ displayX: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TouchPoint-displayX: int--><!--Device-TouchPoint-displayX: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 ## displayY
@@ -52,6 +64,8 @@ displayY: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TouchPoint-displayY: int--><!--Device-TouchPoint-displayY: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 ## id
@@ -67,6 +81,8 @@ id: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TouchPoint-id: int--><!--Device-TouchPoint-id: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 

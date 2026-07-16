@@ -1,5 +1,11 @@
 # queryPrintJobById（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+```
+
 ## queryPrintJobById
 
 ```TypeScript
@@ -12,6 +18,8 @@ function queryPrintJobById(jobId: string, callback: AsyncCallback<PrintJob>): vo
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function queryPrintJobById(jobId: string, callback: AsyncCallback<PrintJob>): void--><!--Device-print-function queryPrintJobById(jobId: string, callback: AsyncCallback<PrintJob>): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -21,7 +29,7 @@ function queryPrintJobById(jobId: string, callback: AsyncCallback<PrintJob>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | jobId | string | 是 | 表示打印任务ID。 |
-| callback | AsyncCallback&lt;PrintJob&gt; | 是 | 异步按打印任务ID查询打印任务之后的回调。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<PrintJob> | 是 | 异步按打印任务ID查询打印任务之后的回调。 |
 
 **错误码：**
 
@@ -61,6 +69,8 @@ function queryPrintJobById(jobId: string): Promise<PrintJob>
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function queryPrintJobById(jobId: string): Promise<PrintJob>--><!--Device-print-function queryPrintJobById(jobId: string): Promise<PrintJob>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -75,7 +85,7 @@ function queryPrintJobById(jobId: string): Promise<PrintJob>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PrintJob&gt; | Promise对象，返回查询到的打印任务。 |
+| Promise<PrintJob> | Promise对象，返回查询到的打印任务。 |
 
 **错误码：**
 

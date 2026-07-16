@@ -4,6 +4,8 @@ Get All Volumes.
 
 **Since:** 9
 
+<!--Device-volumeManager-export interface Volume--><!--Device-volumeManager-export interface Volume-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Description of the volume.
 
 **Since:** 9
 
+<!--Device-Volume-description: string--><!--Device-Volume-description: string-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -36,12 +40,13 @@ Description of the volume.
 diskId: string
 ```
 
-ID of the disk to which the volume belongs. A disk can have one or more volumes. The disk ID is in the disk-{
-Primary device ID}-{Secondary device ID} format, which is similar to the volume ID.
+ID of the disk to which the volume belongs. A disk can have one or more volumes. The disk ID is in the disk-{Primary device ID}-{Secondary device ID} format, which is similar to the volume ID.
 
 **Type:** string
 
 **Since:** 9
+
+<!--Device-Volume-diskId: string--><!--Device-Volume-diskId: string-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -61,6 +66,8 @@ Extra information of the volume.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Volume-extraInfo?: string--><!--Device-Volume-extraInfo?: string-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -77,6 +84,8 @@ File system type. Common file systems are **ext2**, **vfat**, and **NTFS**.
 
 **Since:** 12
 
+<!--Device-Volume-fsType: string--><!--Device-Volume-fsType: string-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -87,13 +96,13 @@ File system type. Common file systems are **ext2**, **vfat**, and **NTFS**.
 id: string
 ```
 
-Volume ID, in the vol-{Primary device ID}-{Secondary device ID} format. The primary device IDs identify devices
-of different types. The secondary device IDs identify different devices of the same type. The volume IDs vary
-depending on the card insertion sequence.
+Volume ID, in the vol-{Primary device ID}-{Secondary device ID} format. The primary device IDs identify devices of different types. The secondary device IDs identify different devices of the same type. The volume IDs vary depending on the card insertion sequence.
 
 **Type:** string
 
 **Since:** 9
+
+<!--Device-Volume-id: string--><!--Device-Volume-id: string-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -113,6 +122,8 @@ Partition number.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Volume-partitionNum?: int--><!--Device-Volume-partitionNum?: int-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -129,6 +140,8 @@ Path of the volume mounted. Generally, the path is **\/mnt/data/external/{uuid}*
 
 **Since:** 9
 
+<!--Device-Volume-path: string--><!--Device-Volume-path: string-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -139,12 +152,13 @@ Path of the volume mounted. Generally, the path is **\/mnt/data/external/{uuid}*
 removable: boolean
 ```
 
-Whether the volume can be removed. Currently, only removable storage devices are supported. The value **true**
-means the device can be removed; the value **false** means the opposite.
+Whether the volume can be removed. Currently, only removable storage devices are supported. The value **true** means the device can be removed; the value **false** means the opposite.
 
 **Type:** boolean
 
 **Since:** 9
+
+<!--Device-Volume-removable: boolean--><!--Device-Volume-removable: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -170,6 +184,8 @@ Volume status.
 
 **Since:** 9
 
+<!--Device-Volume-state: int--><!--Device-Volume-state: int-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -180,12 +196,13 @@ Volume status.
 uuid: string
 ```
 
-Volume UUID, which uniquely identifies a volume irrespective of the card insertion sequence. However, the UUID of
-a volume will change after the volume is formatted.
+Volume UUID, which uniquely identifies a volume irrespective of the card insertion sequence. However, the UUID of a volume will change after the volume is formatted.
 
 **Type:** string
 
 **Since:** 9
+
+<!--Device-Volume-uuid: string--><!--Device-Volume-uuid: string-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 

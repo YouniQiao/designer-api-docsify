@@ -18,6 +18,8 @@ Queries device-supported atomic capabilities.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-userStatus-function queryCapabilities(capabilities: UserStatusAtomicCap[]): UserStatusAtomicCap[]--><!--Device-userStatus-function queryCapabilities(capabilities: UserStatusAtomicCap[]): UserStatusAtomicCap[]-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Queries device-supported atomic capabilities.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| capabilities | UserStatusAtomicCap[] | Yes | List of atomic capabilities to query. |
+| capabilities | [UserStatusAtomicCap](arkts-multimodalawareness-userstatusatomiccap-e-sys.md)[] | Yes | List of atomic capabilities to query. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| UserStatusAtomicCap[] | Returns the list of device-supported atomic capabilities. |
+| [UserStatusAtomicCap](arkts-multimodalawareness-userstatusatomiccap-e-sys.md)[] | Returns the list of device-supported atomic capabilities. |
 
 **Error codes:**
 

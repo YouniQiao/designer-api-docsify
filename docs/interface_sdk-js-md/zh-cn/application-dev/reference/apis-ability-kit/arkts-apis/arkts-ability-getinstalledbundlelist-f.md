@@ -1,5 +1,11 @@
 # getInstalledBundleList
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getInstalledBundleList
 
 ```TypeScript
@@ -14,6 +20,8 @@ function getInstalledBundleList(bundleFlags: number): Promise<Array<BundleInfo>>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bundleManager-function getInstalledBundleList(bundleFlags: int): Promise<Array<BundleInfo>>--><!--Device-bundleManager-function getInstalledBundleList(bundleFlags: int): Promise<Array<BundleInfo>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **参数：**
@@ -26,7 +34,7 @@ function getInstalledBundleList(bundleFlags: number): Promise<Array<BundleInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;BundleInfo&gt;&gt; | Promise对象，返回当前已安装应用的信息列表。 |
+| Promise<Array<BundleInfo>> | Promise对象，返回当前已安装应用的信息列表。 |
 
 **错误码：**
 

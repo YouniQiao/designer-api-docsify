@@ -12,9 +12,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 function createKeyboardDelegate(): KeyboardDelegate
 ```
 
-Obtains a [KeyboardDelegate](arkts-ime-keyboarddelegate-i.md) instance for the input method. The input
-method can use the obtained instance to subscribe to a physical keyboard event, text selection change event, and
-more.
+Obtains a [KeyboardDelegate](arkts-ime-keyboarddelegate-i.md) instance for the input method. The input method can use the obtained instance to subscribe to a physical keyboard event, text selection change event, and more.
 
 **Since:** 8
 
@@ -22,13 +20,15 @@ more.
 
 **Substitutes:** [getKeyboardDelegate()](arkts-ime-getkeyboarddelegate-f.md#getkeyboarddelegate-1)
 
+<!--Device-inputMethodEngine-function createKeyboardDelegate(): KeyboardDelegate--><!--Device-inputMethodEngine-function createKeyboardDelegate(): KeyboardDelegate-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| KeyboardDelegate | **KeyboardDelegate** instance. |
+| [KeyboardDelegate](arkts-ime-keyboarddelegate-i.md) | **KeyboardDelegate** instance. |
 
 **Example**
 

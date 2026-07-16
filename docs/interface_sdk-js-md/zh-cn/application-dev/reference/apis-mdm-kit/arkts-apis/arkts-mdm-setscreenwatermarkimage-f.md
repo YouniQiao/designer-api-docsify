@@ -1,5 +1,11 @@
 # setScreenWatermarkImage
 
+## 导入模块
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+```
+
 ## setScreenWatermarkImage
 
 ```TypeScript
@@ -14,13 +20,15 @@ function setScreenWatermarkImage(admin: Want, pixelMap: image.PixelMap): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-securityManager-function setScreenWatermarkImage(admin: Want, pixelMap: image.PixelMap): void--><!--Device-securityManager-function setScreenWatermarkImage(admin: Want, pixelMap: image.PixelMap): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件 |
 | pixelMap | image.PixelMap | 是 | 水印图片的图像像素类 |
 
 **错误码：**

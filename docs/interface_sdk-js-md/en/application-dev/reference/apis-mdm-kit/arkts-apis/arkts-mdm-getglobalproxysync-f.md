@@ -20,13 +20,15 @@ Obtains the global network proxy.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-networkManager-function getGlobalProxySync(admin: Want): connection.HttpProxy--><!--Device-networkManager-function getGlobalProxySync(admin: Want): connection.HttpProxy-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 
 **Return value:**
 

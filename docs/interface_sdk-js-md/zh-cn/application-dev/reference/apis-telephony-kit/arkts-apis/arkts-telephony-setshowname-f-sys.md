@@ -1,5 +1,11 @@
 # setShowName（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## setShowName
 
 ```TypeScript
@@ -12,6 +18,8 @@ Set the SIM card display name of the specified card slot.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function setShowName(slotId: int, name: string, callback: AsyncCallback<void>): void--><!--Device-sim-function setShowName(slotId: int, name: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ Set the SIM card display name of the specified card slot.
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
 | name | string | 是 | Indicates SIM card name. |
-| callback | AsyncCallback&lt;void&gt; | 是 | The callback of setShowName. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | The callback of setShowName. |
 
 **错误码：**
 
@@ -63,6 +71,8 @@ Set the SIM card display name of the specified card slot.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function setShowName(slotId: int, name: string): Promise<void>--><!--Device-sim-function setShowName(slotId: int, name: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -78,7 +88,7 @@ Set the SIM card display name of the specified card slot.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setShowName. |
+| Promise<void> | The promise returned by the setShowName. |
 
 **错误码：**
 

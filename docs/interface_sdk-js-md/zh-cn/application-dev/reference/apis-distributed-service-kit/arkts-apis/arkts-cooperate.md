@@ -2,15 +2,23 @@
 
 键鼠穿越功能模块，提供两台或多台设备组网协同后键鼠共享能力，实现键鼠输入设备的跨设备协同操作。
 
-> **说明**
->
+> **说明**  
+>  
 > - 本模块接口均为系统接口。
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace cooperate--><!--Device-unnamed-declare namespace cooperate-End-->
+
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { cooperate } from '@kit.DistributedServiceKit';
+```
 
 ## 汇总
 

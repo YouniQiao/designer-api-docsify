@@ -8,6 +8,8 @@ type GcStats = Record<string, number>
 
 **起始版本：** 12
 
+<!--Device-hidebug-type GcStats = Record<string, long>--><!--Device-hidebug-type GcStats = Record<string, long>-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **属性类型：** Record<string, long>

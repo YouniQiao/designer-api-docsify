@@ -1,9 +1,10 @@
 # ColorPicker
 
-A class used to obtain the color from an image. Before calling any method of ColorPicker, use createColorPicker to
-create a ColorPicker instance.
+A class used to obtain the color from an image. Before calling any method of ColorPicker, use createColorPicker to create a ColorPicker instance.
 
 **Since:** 9
+
+<!--Device-effectKit-interface ColorPicker--><!--Device-effectKit-interface ColorPicker-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -27,6 +28,8 @@ Discriminates the light and dark degree of the picture.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
+<!--Device-ColorPicker-discriminatePictureLightDegree(): PictureLightDegree--><!--Device-ColorPicker-discriminatePictureLightDegree(): PictureLightDegree-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **System API:** This is a system API.
@@ -35,7 +38,7 @@ Discriminates the light and dark degree of the picture.
 
 | Type | Description |
 | --- | --- |
-| PictureLightDegree | - returns the picture light and dark degree. |
+| [PictureLightDegree](arkts-arkgraphics2d-picturelightdegree-e-sys.md) | - returns the picture light and dark degree. |
 
 ## getAlphaZeroTransparentProportion
 
@@ -48,6 +51,8 @@ Get the proportion of transparent pixels with alpha=0 in the image
 **Since:** 23
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-ColorPicker-getAlphaZeroTransparentProportion(): double--><!--Device-ColorPicker-getAlphaZeroTransparentProportion(): double-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -106,6 +111,8 @@ Get complexity degree of an image
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
+<!--Device-ColorPicker-getComplexityDegree(): PictureComplexityDegree--><!--Device-ColorPicker-getComplexityDegree(): PictureComplexityDegree-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **System API:** This is a system API.
@@ -114,7 +121,7 @@ Get complexity degree of an image
 
 | Type | Description |
 | --- | --- |
-| PictureComplexityDegree | complexity degree of an image |
+| [PictureComplexityDegree](arkts-arkgraphics2d-picturecomplexitydegree-e-sys.md) | complexity degree of an image |
 
 **Error codes:**
 
@@ -157,14 +164,15 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getDeepenImmersionColor(): Color
 ```
 
-Generates a stronger immersion color that merges with the background color and is deeper than
-the background color.
+Generates a stronger immersion color that merges with the background color and is deeper than the background color.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
+
+<!--Device-ColorPicker-getDeepenImmersionColor(): Color--><!--Device-ColorPicker-getDeepenImmersionColor(): Color-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -174,7 +182,7 @@ the background color.
 
 | Type | Description |
 | --- | --- |
-| Color | - returns the stronger immersion color that both blends with the backgroundand appears deeper than the background. |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md) | - returns the stronger immersion color that both blends with the background and appears deeper than the background. |
 
 ## getImmersiveBackgroundColor
 
@@ -190,6 +198,8 @@ Generates an immersive background color that creates an immersive visual effect.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
+<!--Device-ColorPicker-getImmersiveBackgroundColor(): Color--><!--Device-ColorPicker-getImmersiveBackgroundColor(): Color-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **System API:** This is a system API.
@@ -198,7 +208,7 @@ Generates an immersive background color that creates an immersive visual effect.
 
 | Type | Description |
 | --- | --- |
-| Color | - returns the immersive background color. |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md) | - returns the immersive background color. |
 
 ## getImmersiveForegroundColor
 
@@ -214,6 +224,8 @@ Generates an immersive foreground color that creates an immersive visual effect 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
+<!--Device-ColorPicker-getImmersiveForegroundColor(): Color--><!--Device-ColorPicker-getImmersiveForegroundColor(): Color-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **System API:** This is a system API.
@@ -222,7 +234,7 @@ Generates an immersive foreground color that creates an immersive visual effect 
 
 | Type | Description |
 | --- | --- |
-| Color | - returns the immersive foreground color. |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md) | - returns the immersive foreground color. |
 
 ## getMorandiShadowColor
 
@@ -238,6 +250,8 @@ Gets the Morandi shadow color from the dominant color.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
+<!--Device-ColorPicker-getMorandiShadowColor(): Color--><!--Device-ColorPicker-getMorandiShadowColor(): Color-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **System API:** This is a system API.
@@ -246,7 +260,7 @@ Gets the Morandi shadow color from the dominant color.
 
 | Type | Description |
 | --- | --- |
-| Color | - returns the Morandi shadow color converted from the dominant color. |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md) | - returns the Morandi shadow color converted from the dominant color. |
 
 ## getReverseColor
 
@@ -254,15 +268,15 @@ Gets the Morandi shadow color from the dominant color.
 getReverseColor(): Color
 ```
 
-Gets the reverse color based on the discriminatePictureLightDegree result.
-When the picture light degree is EXTREMELY_LIGHT_COLOR_PICTURE, returns black color.
-For other picture light degree types, returns white color.
+Gets the reverse color based on the discriminatePictureLightDegree result.When the picture light degree is EXTREMELY_LIGHT_COLOR_PICTURE, returns black color.For other picture light degree types, returns white color.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
+
+<!--Device-ColorPicker-getReverseColor(): Color--><!--Device-ColorPicker-getReverseColor(): Color-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -272,7 +286,7 @@ For other picture light degree types, returns white color.
 
 | Type | Description |
 | --- | --- |
-| Color | - returns the reverse color for UI themes or contrast calculations. |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md) | - returns the reverse color for UI themes or contrast calculations. |
 
 ## getShadeDegree
 
@@ -286,6 +300,8 @@ Get shade degree of an image
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
+<!--Device-ColorPicker-getShadeDegree(): PictureShadeDegree--><!--Device-ColorPicker-getShadeDegree(): PictureShadeDegree-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **System API:** This is a system API.
@@ -294,7 +310,7 @@ Get shade degree of an image
 
 | Type | Description |
 | --- | --- |
-| PictureShadeDegree | shade degree of an image |
+| [PictureShadeDegree](arkts-arkgraphics2d-pictureshadedegree-e-sys.md) | shade degree of an image |
 
 **Error codes:**
 
@@ -343,6 +359,8 @@ Get top proportion colors and percentages of an image
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
+<!--Device-ColorPicker-getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double | null>--><!--Device-ColorPicker-getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double | null>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **System API:** This is a system API.
@@ -357,7 +375,7 @@ Get top proportion colors and percentages of an image
 
 | Type | Description |
 | --- | --- |
-| Map&lt;Color \| null, number \| null&gt; | Map of colors and percentages, sorted by proportion.- If the number of colors obtained is less than the value of colorCount, the map size isthe actual number obtained.- If the colors fail to be obtained or the number of colors obtained is less than 1, Map() is returned.- If the value of colorCount is greater than 10, a map holding the first 10 colors withthe top proportions is returned. |
+| [Map](../../apis-na/arkts-apis/arkts-na-map-i.md)<Color \| null, number \| null> | Map of colors and percentages, sorted by proportion.  - If the number of colors obtained is less than the value of colorCount, the map size is the actual number obtained.  - If the colors fail to be obtained or the number of colors obtained is less than 1, Map() is returned.  - If the value of colorCount is greater than 10, a map holding the first 10 colors with the top proportions is returned. |
 
 **Error codes:**
 

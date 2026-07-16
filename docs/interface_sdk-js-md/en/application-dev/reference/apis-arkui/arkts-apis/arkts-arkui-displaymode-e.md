@@ -4,6 +4,8 @@ DisplayMode enum defines the display mode of the picker.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare enum DisplayMode--><!--Device-unnamed-export declare enum DisplayMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DATE
@@ -19,6 +21,8 @@ Displays only the date.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DisplayMode-DATE = 0--><!--Device-DisplayMode-DATE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ Displays only the time.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-DisplayMode-TIME = 1--><!--Device-DisplayMode-TIME = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DATE_TIME
@@ -51,6 +57,8 @@ Displays both date and time.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DisplayMode-DATE_TIME = 2--><!--Device-DisplayMode-DATE_TIME = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

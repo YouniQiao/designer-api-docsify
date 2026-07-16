@@ -2,15 +2,15 @@
 
 This interface implements audio session management.
 
-Before calling any API in AudioSessionManager, you must use
-[getSessionManager](arkts-audio-audiomanager-i.md#getsessionmanager-1) to obtain an
-AudioSessionManager instance.
+Before calling any API in AudioSessionManager, you must use [getSessionManager](arkts-audio-audiomanager-i.md#getsessionmanager-1) to obtain an AudioSessionManager instance.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > - The initial APIs of this interface are supported since API version 12.
 
 **Since:** 12
+
+<!--Device-audio-interface AudioSessionManager--><!--Device-audio-interface AudioSessionManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -32,19 +32,21 @@ Activates an audio session. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-AudioSessionManager-activateAudioSession(strategy: AudioSessionStrategy): Promise<void>--><!--Device-AudioSessionManager-activateAudioSession(strategy: AudioSessionStrategy): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategy | AudioSessionStrategy | Yes | Audio session strategy. |
+| strategy | [AudioSessionStrategy](arkts-audio-audiosessionstrategy-i.md) | Yes | Audio session strategy. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -60,11 +62,11 @@ Activates an audio session. This API uses a promise to return the result.
 clearSelectedMediaInputDevice(): Promise<void>
 ```
 
-Clears the media input device set by calling
-[selectMediaInputDevice](arkts-audio-audiosessionmanager-i.md#selectmediainputdevice-1). This API uses a promise to
-return the result.
+Clears the media input device set by calling [selectMediaInputDevice](arkts-audio-audiosessionmanager-i.md#selectmediainputdevice-1). This API uses a promise to return the result.
 
 **Since:** 21
+
+<!--Device-AudioSessionManager-clearSelectedMediaInputDevice(): Promise<void>--><!--Device-AudioSessionManager-clearSelectedMediaInputDevice(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -72,7 +74,7 @@ return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -92,13 +94,15 @@ Deactivates this audio session. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-AudioSessionManager-deactivateAudioSession(): Promise<void>--><!--Device-AudioSessionManager-deactivateAudioSession(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -114,27 +118,19 @@ enableMuteSuggestionWhenMixWithOthers(enable: boolean): void
 
 Enables mute suggestion notifications for mixed playback.
 
-Typically, when the audio mixing mode is used, if two applications plays audio at the same time, their audio
-streams are mixed. In certain scenarios (such as games or broadcasts), applications can mute their own audio to
-provide a better user experience.
+Typically, when the audio mixing mode is used, if two applications plays audio at the same time, their audio streams are mixed. In certain scenarios (such as games or broadcasts), applications can mute their own audio to provide a better user experience.
 
-If this feature is enabled, mute and unmute suggestions will be sent through the
-[AudioSessionStateChangedEvent](arkts-audio-audiosessionstatechangedevent-i.md) callback after
-the audio session state change event is subscribed to. Receiving the muted suggestion indicates that another
-application starts to play audio, and the played audio and the audio of this application cannot be mixed.
+If this feature is enabled, mute and unmute suggestions will be sent through the [AudioSessionStateChangedEvent](arkts-audio-audiosessionstatechangedevent-i.md) callback after the audio session state change event is subscribed to. Receiving the muted suggestion indicates that another application starts to play audio, and the played audio and the audio of this application cannot be mixed.
 
-This feature can be used only by audio sessions for which
-[AudioSessionScene](arkts-audio-audiosessionscene-e.md) has been set and the
-**CONCURRENCY_MIX_WITH_OTHERS** mode has been activated. This feature takes effect only once when the audio
-session is activated. You need to enable it again before each activation of the audio session.
+This feature can be used only by audio sessions for which [AudioSessionScene](arkts-audio-audiosessionscene-e.md) has been set and the **CONCURRENCY_MIX_WITH_OTHERS** mode has been activated. This feature takes effect only once when the audio session is activated. You need to enable it again before each activation of the audio session.
 
-For details, see
-[Enabling Mute Suggestion Notifications for Mixed Playback](../../../../media/audio/audio-session-management.md#enabling-mute-suggestion-notifications-for-mixed-playback)
-.
+For details, see [Enabling Mute Suggestion Notifications for Mixed Playback](../../../../media/audio/audio-session-management.md#enabling-mute-suggestion-notifications-for-mixed-playback).
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioSessionManager-enableMuteSuggestionWhenMixWithOthers(enable: boolean): void--><!--Device-AudioSessionManager-enableMuteSuggestionWhenMixWithOthers(enable: boolean): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -142,13 +138,13 @@ For details, see
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable mute suggestion notifications for mixed playback. **true** toenable, **false** otherwise. |
+| enable | boolean | Yes | Whether to enable mute suggestion notifications for mixed playback. **true** to enable, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Function is called without setting {@link #AudioSessionScene} orcalled after audio session activation. |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) | Function is called without setting {@link #AudioSessionScene} or called after audio session activation. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, system internal error. |
 
 ## getAvailableDevices
@@ -161,19 +157,21 @@ Obtains the available audio devices.
 
 **Since:** 21
 
+<!--Device-AudioSessionManager-getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors--><!--Device-AudioSessionManager-getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceUsage | DeviceUsage | Yes | Audio device type (classified by usage). |
+| deviceUsage | [DeviceUsage](arkts-audio-deviceusage-e.md) | Yes | Audio device type (classified by usage). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AudioDeviceDescriptors | Device list. |
+| [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | Device list. |
 
 **Error codes:**
 
@@ -188,11 +186,11 @@ Obtains the available audio devices.
 getBluetoothAndNearlinkPreferredRecordCategory(): BluetoothAndNearlinkPreferredRecordCategory
 ```
 
-Obtains the preferred device category for recording with Bluetooth or NearLink, which is set by calling
-[setBluetoothAndNearlinkPreferredRecordCategory](arkts-audio-audiosessionmanager-i.md#setbluetoothandnearlinkpreferredrecordcategory-1)
-.
+Obtains the preferred device category for recording with Bluetooth or NearLink, which is set by calling [setBluetoothAndNearlinkPreferredRecordCategory](arkts-audio-audiosessionmanager-i.md#setbluetoothandnearlinkpreferredrecordcategory-1).
 
 **Since:** 21
+
+<!--Device-AudioSessionManager-getBluetoothAndNearlinkPreferredRecordCategory(): BluetoothAndNearlinkPreferredRecordCategory--><!--Device-AudioSessionManager-getBluetoothAndNearlinkPreferredRecordCategory(): BluetoothAndNearlinkPreferredRecordCategory-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -200,7 +198,7 @@ Obtains the preferred device category for recording with Bluetooth or NearLink, 
 
 | Type | Description |
 | --- | --- |
-| BluetoothAndNearlinkPreferredRecordCategory | Preferred device category for recording with Bluetoothor NearLink. |
+| [BluetoothAndNearlinkPreferredRecordCategory](arkts-audio-bluetoothandnearlinkpreferredrecordcategory-e.md) | Preferred device category for recording with Bluetooth or NearLink. |
 
 **Error codes:**
 
@@ -214,10 +212,11 @@ Obtains the preferred device category for recording with Bluetooth or NearLink, 
 getDefaultOutputDevice(): DeviceType
 ```
 
-Obtains the default audio output device set by calling
-[setDefaultOutputDevice](arkts-audio-audiosessionmanager-i.md#setdefaultoutputdevice-1).
+Obtains the default audio output device set by calling [setDefaultOutputDevice](arkts-audio-audiosessionmanager-i.md#setdefaultoutputdevice-1).
 
 **Since:** 20
+
+<!--Device-AudioSessionManager-getDefaultOutputDevice(): DeviceType--><!--Device-AudioSessionManager-getDefaultOutputDevice(): DeviceType-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -225,7 +224,7 @@ Obtains the default audio output device set by calling
 
 | Type | Description |
 | --- | --- |
-| DeviceType | Device type.<br>The options are **EARPIECE**, **SPEAKER**, and **DEFAULT**. |
+| [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-devicetype-e.md) | Device type.<br>The options are **EARPIECE**, **SPEAKER**, and **DEFAULT**. |
 
 **Error codes:**
 
@@ -240,11 +239,11 @@ Obtains the default audio output device set by calling
 getSelectedMediaInputDevice(): AudioDeviceDescriptor
 ```
 
-Obtains the media input device set by calling
-[selectMediaInputDevice](arkts-audio-audiosessionmanager-i.md#selectmediainputdevice-1). If no device has been specified
-, the device with **deviceType** set to **INVALID** is returned.
+Obtains the media input device set by calling [selectMediaInputDevice](arkts-audio-audiosessionmanager-i.md#selectmediainputdevice-1). If no device has been specified, the device with **deviceType** set to **INVALID** is returned.
 
 **Since:** 21
+
+<!--Device-AudioSessionManager-getSelectedMediaInputDevice(): AudioDeviceDescriptor--><!--Device-AudioSessionManager-getSelectedMediaInputDevice(): AudioDeviceDescriptor-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -252,7 +251,7 @@ Obtains the media input device set by calling
 
 | Type | Description |
 | --- | --- |
-| AudioDeviceDescriptor | Media input device. |
+| [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i.md) | Media input device. |
 
 **Error codes:**
 
@@ -272,13 +271,15 @@ Checks whether this audio session is activated.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-AudioSessionManager-isAudioSessionActivated(): boolean--><!--Device-AudioSessionManager-isAudioSessionActivated(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the audio session is activated. **true** if activated, **false**otherwise. |
+| boolean | Check result for whether the audio session is activated. **true** if activated, **false** otherwise. |
 
 ## isOtherMediaPlaying
 
@@ -286,12 +287,13 @@ Checks whether this audio session is activated.
 isOtherMediaPlaying(): boolean
 ```
 
-Check whether any other application is currently playing audio of the four media types: **MUSIC**, **MOVIE**,
-**AUDIOBOOK**, and **GAME**. Audio sessions that have activated these media types will also be checked.
+Check whether any other application is currently playing audio of the four media types: **MUSIC**, **MOVIE**,**AUDIOBOOK**, and **GAME**. Audio sessions that have activated these media types will also be checked.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioSessionManager-isOtherMediaPlaying(): boolean--><!--Device-AudioSessionManager-isOtherMediaPlaying(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -307,12 +309,13 @@ Check whether any other application is currently playing audio of the four media
 off(type: 'audioSessionDeactivated', callback?: Callback<AudioSessionDeactivatedEvent>): void
 ```
 
-Unsubscribes from the audio session deactivation event. This API uses an asynchronous callback to return the
-result.
+Unsubscribes from the audio session deactivation event. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AudioSessionManager-off(type: 'audioSessionDeactivated', callback?: Callback<AudioSessionDeactivatedEvent>): void--><!--Device-AudioSessionManager-off(type: 'audioSessionDeactivated', callback?: Callback<AudioSessionDeactivatedEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -320,8 +323,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioSessionDeactivated' | Yes | Event type. The event **'audioSessionDeactivated'** is triggered whenthe audio session is deactivated. |
-| callback | Callback&lt;AudioSessionDeactivatedEvent&gt; | No | Callback used to return the reason why the audiosession is deactivated. |
+| type | 'audioSessionDeactivated' | Yes | Event type. The event **'audioSessionDeactivated'** is triggered when the audio session is deactivated. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioSessionDeactivatedEvent> | No | Callback used to return the reason why the audio session is deactivated. |
 
 **Error codes:**
 
@@ -336,10 +339,11 @@ result.
 off(type: 'audioSessionStateChanged', callback?: Callback<AudioSessionStateChangedEvent>): void
 ```
 
-Unsubscribes from the audio session state change event. This API uses an asynchronous callback to return the
-result.
+Unsubscribes from the audio session state change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
+
+<!--Device-AudioSessionManager-off(type: 'audioSessionStateChanged', callback?: Callback<AudioSessionStateChangedEvent>): void--><!--Device-AudioSessionManager-off(type: 'audioSessionStateChanged', callback?: Callback<AudioSessionStateChangedEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -347,8 +351,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioSessionStateChanged' | Yes | Event type. The event **'audioSessionStateChanged'** is triggeredwhen the audio session state is changed. |
-| callback | Callback&lt;AudioSessionStateChangedEvent&gt; | No | Callback used to return the audio session changeinformation. |
+| type | 'audioSessionStateChanged' | Yes | Event type. The event **'audioSessionStateChanged'** is triggered when the audio session state is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioSessionStateChangedEvent> | No | Callback used to return the audio session change information. |
 
 **Error codes:**
 
@@ -363,10 +367,11 @@ result.
 off(type: 'currentOutputDeviceChanged', callback?: Callback<CurrentOutputDeviceChangedEvent>): void
 ```
 
-Unsubscribes from the current output device change event. This API uses an asynchronous callback to return the
-result.
+Unsubscribes from the current output device change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
+
+<!--Device-AudioSessionManager-off(type: 'currentOutputDeviceChanged', callback?: Callback<CurrentOutputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-off(type: 'currentOutputDeviceChanged', callback?: Callback<CurrentOutputDeviceChangedEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -374,8 +379,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'currentOutputDeviceChanged' | Yes | Event type. The event **'currentOutputDeviceChanged'** istriggered when the current output device is changed. |
-| callback | Callback&lt;CurrentOutputDeviceChangedEvent&gt; | No | Callback used to return the information aboutthe current output device. |
+| type | 'currentOutputDeviceChanged' | Yes | Event type. The event **'currentOutputDeviceChanged'** is triggered when the current output device is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CurrentOutputDeviceChangedEvent> | No | Callback used to return the information about the current output device. |
 
 **Error codes:**
 
@@ -394,14 +399,16 @@ Unsubscribes from the event indicating that the connection status of an availabl
 
 **Since:** 21
 
+<!--Device-AudioSessionManager-off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): void--><!--Device-AudioSessionManager-off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'availableDeviceChange' | Yes | Event type. The event **'availableDeviceChange'** is triggered when theconnection status of available audio devices is changed. |
-| callback | Callback&lt;DeviceChangeAction&gt; | No | Callback used to return the available device change details. |
+| type | 'availableDeviceChange' | Yes | Event type. The event **'availableDeviceChange'** is triggered when the connection status of available audio devices is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DeviceChangeAction> | No | Callback used to return the available device change details. |
 
 **Error codes:**
 
@@ -419,14 +426,16 @@ Unsubscribes from the current input device change event.
 
 **Since:** 21
 
+<!--Device-AudioSessionManager-off(type: 'currentInputDeviceChanged', callback?: Callback<CurrentInputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-off(type: 'currentInputDeviceChanged', callback?: Callback<CurrentInputDeviceChangedEvent>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'currentInputDeviceChanged' | Yes | Event type. The event **'currentInputDeviceChanged'** is triggeredwhen the current input device is changed. |
-| callback | Callback&lt;CurrentInputDeviceChangedEvent&gt; | No | Callback used to return the information aboutthe current input device. |
+| type | 'currentInputDeviceChanged' | Yes | Event type. The event **'currentInputDeviceChanged'** is triggered when the current input device is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CurrentInputDeviceChangedEvent> | No | Callback used to return the information about the current input device. |
 
 **Error codes:**
 
@@ -440,12 +449,13 @@ Unsubscribes from the current input device change event.
 on(type: 'audioSessionDeactivated', callback: Callback<AudioSessionDeactivatedEvent>): void
 ```
 
-Subscribes to the audio session deactivation event, which is triggered when an audio session is deactivated. This
-API uses an asynchronous callback to return the result.
+Subscribes to the audio session deactivation event, which is triggered when an audio session is deactivated. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AudioSessionManager-on(type: 'audioSessionDeactivated', callback: Callback<AudioSessionDeactivatedEvent>): void--><!--Device-AudioSessionManager-on(type: 'audioSessionDeactivated', callback: Callback<AudioSessionDeactivatedEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -453,8 +463,8 @@ API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioSessionDeactivated' | Yes | Event type. The event **'audioSessionDeactivated'** is triggered whenthe audio session is deactivated. |
-| callback | Callback&lt;AudioSessionDeactivatedEvent&gt; | Yes | Callback used to return the reason why the audiosession is deactivated. |
+| type | 'audioSessionDeactivated' | Yes | Event type. The event **'audioSessionDeactivated'** is triggered when the audio session is deactivated. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioSessionDeactivatedEvent> | Yes | Callback used to return the reason why the audio session is deactivated. |
 
 **Error codes:**
 
@@ -469,10 +479,11 @@ API uses an asynchronous callback to return the result.
 on(type: 'audioSessionStateChanged', callback: Callback<AudioSessionStateChangedEvent>): void
 ```
 
-Subscribes to the audio session state change event, which is triggered when the audio session focus is changed.
-This API uses an asynchronous callback to return the result.
+Subscribes to the audio session state change event, which is triggered when the audio session focus is changed.This API uses an asynchronous callback to return the result.
 
 **Since:** 20
+
+<!--Device-AudioSessionManager-on(type: 'audioSessionStateChanged', callback: Callback<AudioSessionStateChangedEvent>): void--><!--Device-AudioSessionManager-on(type: 'audioSessionStateChanged', callback: Callback<AudioSessionStateChangedEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -480,8 +491,8 @@ This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioSessionStateChanged' | Yes | Event type. The event **'audioSessionStateChanged'** is triggeredwhen the audio session state is changed. |
-| callback | Callback&lt;AudioSessionStateChangedEvent&gt; | Yes | Callback used to return the audio session changeinformation. |
+| type | 'audioSessionStateChanged' | Yes | Event type. The event **'audioSessionStateChanged'** is triggered when the audio session state is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioSessionStateChangedEvent> | Yes | Callback used to return the audio session change information. |
 
 **Error codes:**
 
@@ -497,10 +508,11 @@ This API uses an asynchronous callback to return the result.
 on(type: 'currentOutputDeviceChanged', callback: Callback<CurrentOutputDeviceChangedEvent>): void
 ```
 
-Subscribes to the current output device change event, which is triggered when the current output device is
-changed. This API uses an asynchronous callback to return the result.
+Subscribes to the current output device change event, which is triggered when the current output device is changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
+
+<!--Device-AudioSessionManager-on(type: 'currentOutputDeviceChanged', callback: Callback<CurrentOutputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-on(type: 'currentOutputDeviceChanged', callback: Callback<CurrentOutputDeviceChangedEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -508,8 +520,8 @@ changed. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'currentOutputDeviceChanged' | Yes | Event type. The event **'currentOutputDeviceChanged'** istriggered when the current output device is changed. |
-| callback | Callback&lt;CurrentOutputDeviceChangedEvent&gt; | Yes | Callback used to return the information about thecurrent output device. |
+| type | 'currentOutputDeviceChanged' | Yes | Event type. The event **'currentOutputDeviceChanged'** is triggered when the current output device is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CurrentOutputDeviceChangedEvent> | Yes | Callback used to return the information about the current output device. |
 
 **Error codes:**
 
@@ -529,15 +541,17 @@ Subscribes to the event indicating that the connection status of an available au
 
 **Since:** 21
 
+<!--Device-AudioSessionManager-on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void--><!--Device-AudioSessionManager-on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'availableDeviceChange' | Yes | Event type. The event **'availableDeviceChange'** is triggered when theconnection status of available audio devices is changed. |
-| deviceUsage | DeviceUsage | Yes | Audio device type (classified by usage). |
-| callback | Callback&lt;DeviceChangeAction&gt; | Yes | Callback used to return the available device change details. |
+| type | 'availableDeviceChange' | Yes | Event type. The event **'availableDeviceChange'** is triggered when the connection status of available audio devices is changed. |
+| deviceUsage | [DeviceUsage](arkts-audio-deviceusage-e.md) | Yes | Audio device type (classified by usage). |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DeviceChangeAction> | Yes | Callback used to return the available device change details. |
 
 **Error codes:**
 
@@ -556,14 +570,16 @@ Subscribes to the current input device change event, which is triggered when the
 
 **Since:** 21
 
+<!--Device-AudioSessionManager-on(type: 'currentInputDeviceChanged', callback: Callback<CurrentInputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-on(type: 'currentInputDeviceChanged', callback: Callback<CurrentInputDeviceChangedEvent>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'currentInputDeviceChanged' | Yes | Event type. The event **'currentInputDeviceChanged'** is triggeredwhen the current input device is changed. |
-| callback | Callback&lt;CurrentInputDeviceChangedEvent&gt; | Yes | Callback used to return the information about thecurrent input device. |
+| type | 'currentInputDeviceChanged' | Yes | Event type. The event **'currentInputDeviceChanged'** is triggered when the current input device is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CurrentInputDeviceChangedEvent> | Yes | Callback used to return the information about the current input device. |
 
 **Error codes:**
 
@@ -580,22 +596,24 @@ selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>
 
 Selects a media input device. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - This API is not suitable for VoIP call recording; that is, it does not apply to scenarios where
-> [SourceType](arkts-audio-sourcetype-e.md) is **SOURCE_TYPE_VOICE_COMMUNICATION**.
->
-> - Before calling this API, call [getAvailableDevices](arkts-audio-audiosessionmanager-i.md#getavailabledevices-1) to
-> query the list of available input devices and select an input device from the list.
->
-> - If there are recording streams of other applications with higher priorities in the system, the actual input
-> device used will follow the input device selected by these applications.
->
-> - Applications can listen for the
-> [currentInputDeviceChanged](arkts-audio-audiosessionmanager-i.md#on-5)
+> **NOTE**  
+>  
+> - This API is not suitable for VoIP call recording; that is, it does not apply to scenarios where  
+> [SourceType](arkts-audio-sourcetype-e.md) is **SOURCE_TYPE_VOICE_COMMUNICATION**.  
+>  
+> - Before calling this API, call [getAvailableDevices](arkts-audio-audiosessionmanager-i.md#getavailabledevices-1) to  
+> query the list of available input devices and select an input device from the list.  
+>  
+> - If there are recording streams of other applications with higher priorities in the system, the actual input  
+> device used will follow the input device selected by these applications.  
+>  
+> - Applications can listen for the  
+> [currentInputDeviceChanged](arkts-audio-audiosessionmanager-i.md#on-5)  
 > event to find out the actual input device being used.
 
 **Since:** 21
+
+<!--Device-AudioSessionManager-selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>--><!--Device-AudioSessionManager-selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -603,13 +621,13 @@ Selects a media input device. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputAudioDevice | AudioDeviceDescriptor | Yes | Media input device. |
+| inputAudioDevice | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i.md) | Yes | Media input device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -626,15 +644,17 @@ setAudioSessionBehavior(behavior: number): void
 
 Sets audio session behavior parameters. (Multiple flags can be combined.)
 
-> **NOTE**
->
-> If this API is called while an audio session is active, you must call the
-> [activateAudioSession](arkts-audio-audiosessionmanager-i.md#activateaudiosession-1) API again
+> **NOTE**  
+>  
+> If this API is called while an audio session is active, you must call the  
+> [activateAudioSession](arkts-audio-audiosessionmanager-i.md#activateaudiosession-1) API again  
 > for the settings to take effect.
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioSessionManager-setAudioSessionBehavior(behavior: int): void--><!--Device-AudioSessionManager-setAudioSessionBehavior(behavior: int): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -642,7 +662,7 @@ Sets audio session behavior parameters. (Multiple flags can be combined.)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| behavior | number | Yes | Specifies the audio session behavior.<br>This can be a single flag or a bitwise ORcombination of multiple flags.<br>For details about the supported audio session behaviors, see[AudioSessionBehaviorFlags](arkts-audio-audiosessionbehaviorflags-e.md). |
+| behavior | number | Yes | Specifies the audio session behavior.<br>This can be a single flag or a bitwise OR combination of multiple flags.<br>For details about the supported audio session behaviors, see [AudioSessionBehaviorFlags](arkts-audio-audiosessionbehaviorflags-e.md). |
 
 **Error codes:**
 
@@ -661,13 +681,15 @@ Sets an audio session scene.
 
 **Since:** 20
 
+<!--Device-AudioSessionManager-setAudioSessionScene(scene: AudioSessionScene): void--><!--Device-AudioSessionManager-setAudioSessionScene(scene: AudioSessionScene): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scene | AudioSessionScene | Yes | Audio session scene. |
+| scene | [AudioSessionScene](arkts-audio-audiosessionscene-e.md) | Yes | Audio session scene. |
 
 **Error codes:**
 
@@ -683,22 +705,23 @@ Sets an audio session scene.
 setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPreferredRecordCategory): Promise<void>
 ```
 
-Sets the preferred device category for recording with Bluetooth or NearLink. This API uses a promise to return
-the result.
+Sets the preferred device category for recording with Bluetooth or NearLink. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - Applications can set this category before connecting to Bluetooth or NearLink devices, and the system
-> prioritizes using the device for recording when the device is connected.
->
-> - If there are recording streams of other applications with higher priorities in the system, the actual input
-> device used will follow the input device selected by these applications.
->
-> - Applications can listen for the
-> [currentInputDeviceChanged](arkts-audio-audiosessionmanager-i.md#on-5)
+> **NOTE**  
+>  
+> - Applications can set this category before connecting to Bluetooth or NearLink devices, and the system  
+> prioritizes using the device for recording when the device is connected.  
+>  
+> - If there are recording streams of other applications with higher priorities in the system, the actual input  
+> device used will follow the input device selected by these applications.  
+>  
+> - Applications can listen for the  
+> [currentInputDeviceChanged](arkts-audio-audiosessionmanager-i.md#on-5)  
 > event to find out the actual input device being used.
 
 **Since:** 21
+
+<!--Device-AudioSessionManager-setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPreferredRecordCategory): Promise<void>--><!--Device-AudioSessionManager-setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPreferredRecordCategory): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -706,13 +729,13 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| category | BluetoothAndNearlinkPreferredRecordCategory | Yes | Preferred device category for recording withBluetooth or NearLink. |
+| category | [BluetoothAndNearlinkPreferredRecordCategory](arkts-audio-bluetoothandnearlinkpreferredrecordcategory-e.md) | Yes | Preferred device category for recording with Bluetooth or NearLink. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -727,12 +750,13 @@ the result.
 setCapturerMuteHint(mute: boolean): Promise<void>
 ```
 
-Set mute hint for all capturer streams in the current audio session. It dose not mute the recording
-stream, only affects internal processing strategy.
+Set mute hint for all capturer streams in the current audio session. It dose not mute the recording stream, only affects internal processing strategy.
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioSessionManager-setCapturerMuteHint(mute: boolean): Promise<void>--><!--Device-AudioSessionManager-setCapturerMuteHint(mute: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -746,7 +770,7 @@ stream, only affects internal processing strategy.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -762,22 +786,24 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 
 Sets the default audio output device. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - This API applies to the following scenario: When
-> [AudioSessionScene](arkts-audio-audiosessionscene-e.md) is set to **VoIP**, the setting takes
-> effect immediately after the AudioSession is activated. For non-VoIP scenarios, the setting does not take
-> effect upon AudioSession activation. Instead, the setting applies when
-> [StreamUsage](arkts-audio-streamusage-e.md) for playback is voice message, VoIP voice call,
-> or VoIP video call. Supported devices include the earpiece, speaker, and system default device.
->
-> - This API can be called at any time after an AudioSessionManager instance is created. The system records the
-> device set by the application. However, the setting takes effect only after the AudioSession is activated. When
-> the application starts playing, if an external device like Bluetooth headsets or wired headsets is connected,
-> the system prioritizes audio output through the external device. Otherwise, the system uses the device set by
+> **NOTE**  
+>  
+> - This API applies to the following scenario: When  
+> [AudioSessionScene](arkts-audio-audiosessionscene-e.md) is set to **VoIP**, the setting takes  
+> effect immediately after the AudioSession is activated. For non-VoIP scenarios, the setting does not take  
+> effect upon AudioSession activation. Instead, the setting applies when  
+> [StreamUsage](arkts-audio-streamusage-e.md) for playback is voice message, VoIP voice call,  
+> or VoIP video call. Supported devices include the earpiece, speaker, and system default device.  
+>  
+> - This API can be called at any time after an AudioSessionManager instance is created. The system records the  
+> device set by the application. However, the setting takes effect only after the AudioSession is activated. When  
+> the application starts playing, if an external device like Bluetooth headsets or wired headsets is connected,  
+> the system prioritizes audio output through the external device. Otherwise, the system uses the device set by  
 > the application.
 
 **Since:** 20
+
+<!--Device-AudioSessionManager-setDefaultOutputDevice(deviceType: DeviceType): Promise<void>--><!--Device-AudioSessionManager-setDefaultOutputDevice(deviceType: DeviceType): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -785,13 +811,13 @@ Sets the default audio output device. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceType | DeviceType | Yes | Device type.<br>The options are **EARPIECE**, **SPEAKER**, and **DEFAULT**. |
+| deviceType | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-devicetype-e.md) | Yes | Device type.<br>The options are **EARPIECE**, **SPEAKER**, and **DEFAULT**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -807,17 +833,13 @@ Sets the default audio output device. This API uses a promise to return the resu
 setMediaOutputDevice(deviceType: DeviceType): Promise<void>
 ```
 
-Set the audio output device to the built-in speaker, when other audio peripherals
-are connected, such as bluetooth headphones or wired headsets. It should be noted
-that this interface only applies to media streams.
-In scenarios where there are concurrent playback streams with higher priority or user
-selects the output device through system UI, the actual output device used by
-the application may differ from the selected one. The application can obtain currently
-active output device by subscribing to the currentOutputDeviceChanged event.
+Set the audio output device to the built-in speaker, when other audio peripherals are connected, such as bluetooth headphones or wired headsets. It should be noted that this interface only applies to media streams.In scenarios where there are concurrent playback streams with higher priority or user selects the output device through system UI, the actual output device used by the application may differ from the selected one. The application can obtain currently active output device by subscribing to the currentOutputDeviceChanged event.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioSessionManager-setMediaOutputDevice(deviceType: DeviceType): Promise<void>--><!--Device-AudioSessionManager-setMediaOutputDevice(deviceType: DeviceType): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -825,13 +847,13 @@ active output device by subscribing to the currentOutputDeviceChanged event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceType | DeviceType | Yes | the available deviceTypes areSPEAKER: Built-in speakerDEFAULT: Restore to system default output device |
+| deviceType | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-devicetype-e.md) | Yes | the available deviceTypes are SPEAKER: Built-in speaker DEFAULT: Restore to system default output device |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 

@@ -12,6 +12,8 @@ Provide the domain name for user security property.
 
 **Since:** 11
 
+<!--Device-domainName-const USER_SECURITY: string--><!--Device-domainName-const USER_SECURITY: string-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **System API:** This is a system API.

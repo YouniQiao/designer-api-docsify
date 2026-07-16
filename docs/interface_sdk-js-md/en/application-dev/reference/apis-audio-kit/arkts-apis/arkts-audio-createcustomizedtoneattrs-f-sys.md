@@ -16,6 +16,8 @@ Create customized tone attributes.
 
 **Since:** 12
 
+<!--Device-systemSoundManager-function createCustomizedToneAttrs(): ToneAttrs--><!--Device-systemSoundManager-function createCustomizedToneAttrs(): ToneAttrs-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Create customized tone attributes.
 
 | Type | Description |
 | --- | --- |
-| ToneAttrs | Tone attributes created. |
+| [ToneAttrs](arkts-audio-toneattrs-i-sys.md) | Tone attributes created. |
 
 **Error codes:**
 

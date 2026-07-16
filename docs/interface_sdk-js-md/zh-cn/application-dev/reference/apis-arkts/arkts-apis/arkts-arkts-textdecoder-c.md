@@ -4,7 +4,15 @@
 
 **起始版本：** 7
 
+<!--Device-util-class TextDecoder--><!--Device-util-class TextDecoder-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+```
 
 ## constructor
 
@@ -16,7 +24,9 @@ constructor()
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextDecoder-constructor()--><!--Device-TextDecoder-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -44,6 +54,8 @@ constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean 
 
 **替代接口：** [create](arkts-arkts-textdecoder-c.md#create-1)
 
+<!--Device-TextDecoder-constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean })--><!--Device-TextDecoder-constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean })-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -70,7 +82,9 @@ static create(encoding?: string, options?: TextDecoderOptions): TextDecoder
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextDecoder-static create(encoding?: string, options?: TextDecoderOptions): TextDecoder--><!--Device-TextDecoder-static create(encoding?: string, options?: TextDecoderOptions): TextDecoder-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -79,13 +93,13 @@ static create(encoding?: string, options?: TextDecoderOptions): TextDecoder
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | encoding | string | 否 | 编码格式。默认格式为 **'utf-8'**。<br>**起始版本：** 11 |
-| options | TextDecoderOptions | 否 | 解码相关的选项，包含 **fatal** 和 **ignoreBOM**。<br>**起始版本：** 11 |
+| options | [TextDecoderOptions](arkts-arkts-textdecoderoptions-i.md) | 否 | 解码相关的选项，包含 **fatal** 和 **ignoreBOM**。<br>**起始版本：** 11 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| TextDecoder | 创建的 **TextDecoder** 对象。 |
+| [TextDecoder](arkts-arkts-textdecoder-c.md) | 创建的 **TextDecoder** 对象。 |
 
 **示例：**
 
@@ -115,13 +129,15 @@ decode(input: Uint8Array, options?: { stream?: false }): string
 
 **替代接口：** [decodeToString](arkts-arkts-textdecoder-c.md#decodetostring-1)
 
+<!--Device-TextDecoder-decode(input: Uint8Array, options?: { stream?: false }): string--><!--Device-TextDecoder-decode(input: Uint8Array, options?: { stream?: false }): string-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| input | Uint8Array | 是 | 要解码的 Uint8Array 对象。 |
+| input | [Uint8Array](arkts-arkts-uint8array-c.md) | 是 | 要解码的 Uint8Array 对象。 |
 | options | { stream?: false } | 否 | 解码相关的选项。 |
 
 **返回值：**
@@ -158,7 +174,9 @@ decodeToString(input: Uint8Array, options?: DecodeToStringOptions): string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextDecoder-decodeToString(input: Uint8Array, options?: DecodeToStringOptions): string--><!--Device-TextDecoder-decodeToString(input: Uint8Array, options?: DecodeToStringOptions): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -166,8 +184,8 @@ decodeToString(input: Uint8Array, options?: DecodeToStringOptions): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| input | Uint8Array | 是 | 要解码的 Uint8Array 对象。 |
-| options | DecodeToStringOptions | 否 | 解码相关的选项。默认值为 **undefined**。 |
+| input | [Uint8Array](arkts-arkts-uint8array-c.md) | 是 | 要解码的 Uint8Array 对象。 |
+| options | [DecodeToStringOptions](arkts-arkts-decodetostringoptions-i.md) | 否 | 解码相关的选项。默认值为 **undefined**。 |
 
 **返回值：**
 
@@ -228,7 +246,9 @@ decodeWithStream(input: Uint8Array, options?: DecodeWithStreamOptions): string
 
 **替代接口：** [decodeToString](arkts-arkts-textdecoder-c.md#decodetostring-1)
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextDecoder-decodeWithStream(input: Uint8Array, options?: DecodeWithStreamOptions): string--><!--Device-TextDecoder-decodeWithStream(input: Uint8Array, options?: DecodeWithStreamOptions): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -236,8 +256,8 @@ decodeWithStream(input: Uint8Array, options?: DecodeWithStreamOptions): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| input | Uint8Array | 是 | 要解码的 Uint8Array 对象。 |
-| options | DecodeWithStreamOptions | 否 | 解码相关的选项。<br>**起始版本：** 11 |
+| input | [Uint8Array](arkts-arkts-uint8array-c.md) | 是 | 要解码的 Uint8Array 对象。 |
+| options | [DecodeWithStreamOptions](arkts-arkts-decodewithstreamoptions-i.md) | 否 | 解码相关的选项。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -276,17 +296,15 @@ console.info("retStr = " + retStr);
 readonly encoding: string
 ```
 
-编码格式。<br>支持的格式包括：utf-8、ibm866、iso-8859-2、iso-8859-3、iso-8859-4、iso-8859-5、iso-8859-6、
-iso-8859-7、iso-8859-8、iso-8859-8-i、iso-8859-10、iso-8859-13、iso-8859-14、iso-8859-15、koi8-r、koi8-u、
-macintosh、windows-874、windows-1250、windows-1251、windows-1252、windows-1253、windows-1254、windows-1255、
-windows-1256、windows-1257、windows-1258、x-mac-cyrillic、gbk、gb18030、big5、euc-jp、iso-2022-jp、shift_jis、
-euc-kr、utf-16be、utf-16le、gb2312 和 iso-8859-1。
+编码格式。<br>支持的格式包括：utf-8、ibm866、iso-8859-2、iso-8859-3、iso-8859-4、iso-8859-5、iso-8859-6、iso-8859-7、iso-8859-8、iso-8859-8-i、iso-8859-10、iso-8859-13、iso-8859-14、iso-8859-15、koi8-r、koi8-u、macintosh、windows-874、windows-1250、windows-1251、windows-1252、windows-1253、windows-1254、windows-1255、windows-1256、windows-1257、windows-1258、x-mac-cyrillic、gbk、gb18030、big5、euc-jp、iso-2022-jp、shift_jis、euc-kr、utf-16be、utf-16le、gb2312 和 iso-8859-1。
 
 **类型：** string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextDecoder-readonly encoding: string--><!--Device-TextDecoder-readonly encoding: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -302,7 +320,9 @@ readonly fatal: boolean
 
 **起始版本：** 7
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextDecoder-readonly fatal: boolean--><!--Device-TextDecoder-readonly fatal: boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -318,7 +338,9 @@ readonly ignoreBOM = false
 
 **起始版本：** 7
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextDecoder-readonly ignoreBOM = false--><!--Device-TextDecoder-readonly ignoreBOM = false-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

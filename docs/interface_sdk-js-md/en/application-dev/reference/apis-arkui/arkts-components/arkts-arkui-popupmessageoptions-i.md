@@ -4,6 +4,8 @@ Describes the popup message text style.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface PopupMessageOptions--><!--Device-unnamed-declare interface PopupMessageOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## font
@@ -16,8 +18,7 @@ Font settings of the popup message.
 
 **NOTE**
 
-1. Setting **family** is not supported.
-2. The **weight** attribute in **Font** does not support the number type.
+1. Setting **family** is not supported.2. The **weight** attribute in **Font** does not support the number type.
 
 **Type:** Font
 
@@ -26,6 +27,8 @@ Font settings of the popup message.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PopupMessageOptions-font?: Font--><!--Device-PopupMessageOptions-font?: Font-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +47,8 @@ Text color of the popup message.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PopupMessageOptions-textColor?: ResourceColor--><!--Device-PopupMessageOptions-textColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+<!--Device-audio-enum DeviceFlag--><!--Device-audio-enum DeviceFlag-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## OUTPUT_DEVICES_FLAG
@@ -15,6 +17,8 @@ OUTPUT_DEVICES_FLAG = 1
 输出设备。
 
 **起始版本：** 7
+
+<!--Device-DeviceFlag-OUTPUT_DEVICES_FLAG = 1--><!--Device-DeviceFlag-OUTPUT_DEVICES_FLAG = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -28,6 +32,8 @@ INPUT_DEVICES_FLAG = 2
 
 **起始版本：** 7
 
+<!--Device-DeviceFlag-INPUT_DEVICES_FLAG = 2--><!--Device-DeviceFlag-INPUT_DEVICES_FLAG = 2-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## ALL_DEVICES_FLAG
@@ -39,6 +45,8 @@ ALL_DEVICES_FLAG = 3
 所有设备。
 
 **起始版本：** 7
+
+<!--Device-DeviceFlag-ALL_DEVICES_FLAG = 3--><!--Device-DeviceFlag-ALL_DEVICES_FLAG = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 

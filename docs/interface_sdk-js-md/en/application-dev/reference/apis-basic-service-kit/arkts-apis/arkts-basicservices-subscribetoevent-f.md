@@ -12,12 +12,13 @@ import { commonEventManager } from '@kit.BasicServicesKit';
 function subscribeToEvent(subscriber: CommonEventSubscriber, callback: Callback<CommonEventData>): Promise<void>
 ```
 
-Subscribes to a common event. This API uses a promise to return the result, indicating subscription success or
-failure.
+Subscribes to a common event. This API uses a promise to return the result, indicating subscription success or failure.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-commonEventManager-function subscribeToEvent(subscriber: CommonEventSubscriber, callback: Callback<CommonEventData>): Promise<void>--><!--Device-commonEventManager-function subscribeToEvent(subscriber: CommonEventSubscriber, callback: Callback<CommonEventData>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -25,14 +26,14 @@ failure.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | CommonEventSubscriber | Yes | Subscriber object. |
-| callback | Callback&lt;CommonEventData&gt; | Yes | Callback to be invoked when a common event is subscribed to. |
+| subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-i.md) | Yes | Subscriber object. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CommonEventData> | Yes | Callback to be invoked when a common event is subscribed to. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

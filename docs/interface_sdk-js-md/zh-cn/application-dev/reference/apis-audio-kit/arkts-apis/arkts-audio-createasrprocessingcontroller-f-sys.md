@@ -1,5 +1,11 @@
 # createAsrProcessingController（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
+
 ## createAsrProcessingController
 
 ```TypeScript
@@ -10,6 +16,8 @@ Create ASR processing controller on one audio capturer.
 
 **起始版本：** 12
 
+<!--Device-audio-function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController--><!--Device-audio-function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -18,13 +26,13 @@ Create ASR processing controller on one audio capturer.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| audioCapturer | AudioCapturer | 是 | The audio capturer whose ASR processing will be controlled. The sourcetype of this capturer must be {@link SourceType#SOURCE_TYPE_VOICE_RECOGNITION}. |
+| audioCapturer | [AudioCapturer](arkts-audio-audiocapturer-i-sys.md) | 是 | The audio capturer whose ASR processing will be controlled. The source type of this capturer must be {@link SourceType#SOURCE_TYPE_VOICE_RECOGNITION}. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AsrProcessingController | ASR Processing Controller. |
+| [AsrProcessingController](arkts-audio-asrprocessingcontroller-i-sys.md) | ASR Processing Controller. |
 
 **错误码：**
 
@@ -33,7 +41,7 @@ Create ASR processing controller on one audio capturer.
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. e.g. the source type of the input audio capturer is not{@link SourceType#SOURCE_TYPE_VOICE_RECOGNITION} or {@link SourceType#SOURCE_TYPE_WAKEUP}, or this audio captureris already released. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. e.g. the source type of the input audio capturer is not{@link SourceType#SOURCE_TYPE_VOICE_RECOGNITION} or {@link SourceType#SOURCE_TYPE_WAKEUP}, or this audio capturer is already released. |
 
 **示例：**
 

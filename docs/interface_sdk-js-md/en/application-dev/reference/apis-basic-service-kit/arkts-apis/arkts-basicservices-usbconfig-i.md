@@ -1,13 +1,14 @@
 # USBConfig
 
-Represents the USB configuration. One [USBDevice](arkts-basicservices-usbdevice-i.md) can contain multiple **USBConfig**
-instances.
+Represents the USB configuration. One [USBDevice](arkts-basicservices-usbdevice-i.md) can contain multiple **USBConfig** instances.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** [USBConfiguration](arkts-basicservices-usbconfiguration-i.md)
+
+<!--Device-usb-interface USBConfig--><!--Device-usb-interface USBConfig-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -33,6 +34,8 @@ Configuration attributes.
 
 **Substitutes:** [attributes](arkts-basicservices-usbconfiguration-i.md#attributes)
 
+<!--Device-USBConfig-attributes: number--><!--Device-USBConfig-attributes: number-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## id
@@ -50,6 +53,8 @@ Unique ID of the USB configuration.
 **Deprecated since:** 9
 
 **Substitutes:** [id](arkts-basicservices-usbconfiguration-i.md#id)
+
+<!--Device-USBConfig-id: number--><!--Device-USBConfig-id: number-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -69,6 +74,8 @@ Supported interface attributes.
 
 **Substitutes:** [interfaces](arkts-basicservices-usbconfiguration-i.md#interfaces)
 
+<!--Device-USBConfig-interfaces: Array<USBInterface>--><!--Device-USBConfig-interfaces: Array<USBInterface>-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## isRemoteWakeup
@@ -86,6 +93,8 @@ Support for remote wakeup.
 **Deprecated since:** 9
 
 **Substitutes:** [isRemoteWakeup](arkts-basicservices-usbconfiguration-i.md#isremotewakeup)
+
+<!--Device-USBConfig-isRemoteWakeup: boolean--><!--Device-USBConfig-isRemoteWakeup: boolean-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -105,6 +114,8 @@ Support for independent power supplies.
 
 **Substitutes:** [isSelfPowered](arkts-basicservices-usbconfiguration-i.md#isselfpowered)
 
+<!--Device-USBConfig-isSelfPowered: boolean--><!--Device-USBConfig-isSelfPowered: boolean-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## maxPower
@@ -123,6 +134,8 @@ Maximum power consumption, in mA.
 
 **Substitutes:** [maxPower](arkts-basicservices-usbconfiguration-i.md#maxpower)
 
+<!--Device-USBConfig-maxPower: number--><!--Device-USBConfig-maxPower: number-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## name
@@ -140,6 +153,8 @@ Configuration name, which can be left empty.
 **Deprecated since:** 9
 
 **Substitutes:** [name](arkts-basicservices-usbconfiguration-i.md#name)
+
+<!--Device-USBConfig-name: string--><!--Device-USBConfig-name: string-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 

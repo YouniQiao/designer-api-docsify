@@ -1,5 +1,11 @@
 # openToast
 
+## 导入模块
+
+```TypeScript
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+```
+
 ## openToast
 
 ```TypeScript
@@ -8,21 +14,23 @@ function openToast(options: ShowToastOptions): Promise<number>
 
 显示即时反馈并通过Promise返回其id。
 
-> **说明：**
->
-> - 不支持在输入法类型窗口中使用子窗（showMode设置为TOP_MOST或者SYSTEM_TOP_MOST）的openToast，详情见输入法框架的约束与限制说明
-> [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodability-i.md#createpanel-2)
-> 。
->
-> - 直接使用openToast可能导致[UI上下文不明确](../../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用UIContext中的getPromptAction方法获
-> 取到PromptAction对象，再通过该对象调用
+> **说明：**  
+>  
+> - 不支持在输入法类型窗口中使用子窗（showMode设置为TOP_MOST或者SYSTEM_TOP_MOST）的openToast，详情见输入法框架的约束与限制说明  
+> [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodability-i.md#createpanel-2)  
+> 。  
+>  
+> - 直接使用openToast可能导致[UI上下文不明确](../../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用UIContext中的getPromptAction方法获  
+> 取到PromptAction对象，再通过该对象调用  
 > [openToast](../../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#opentoast18)实现。
 
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-promptAction-function openToast(options: ShowToastOptions): Promise<number>--><!--Device-promptAction-function openToast(options: ShowToastOptions): Promise<number>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,13 +38,13 @@ function openToast(options: ShowToastOptions): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | ShowToastOptions | 是 | Toast选项。 |
+| options | [ShowToastOptions](arkts-arkui-showtoastoptions-i.md) | 是 | Toast选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | 返回即时反馈的id，可供closeToast使用。 |
+| Promise<number> | 返回即时反馈的id，可供closeToast使用。 |
 
 **错误码：**
 

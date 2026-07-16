@@ -4,6 +4,8 @@ Implements the common shape methods.
 
 **Since:** 12
 
+<!--Device-unnamed-declare class CommonShapeMethod<T>--><!--Device-unnamed-declare class CommonShapeMethod<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -18,8 +20,7 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 fill(color: ResourceColor): T
 ```
 
-Sets the fill color of this shape, which determines its opacity, with black representing full transparency and
-white representing full opacity.
+Sets the fill color of this shape, which determines its opacity, with black representing full transparency and white representing full opacity.
 
 **Since:** 12
 
@@ -29,13 +30,15 @@ white representing full opacity.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-CommonShapeMethod-fill(color: ResourceColor): T--><!--Device-CommonShapeMethod-fill(color: ResourceColor): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | ResourceColor | Yes | Fill color of the shape, which represents the opacity of the fill area. The blackcolor indicates full transparency, while white indicates full opacity. |
+| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Fill color of the shape, which represents the opacity of the fill area. The black color indicates full transparency, while white indicates full opacity. |
 
 **Return value:**
 
@@ -59,13 +62,15 @@ Sets the coordinate offset relative to the component's layout position.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-CommonShapeMethod-offset(offset: Position): T--><!--Device-CommonShapeMethod-offset(offset: Position): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | Position | Yes | Coordinate offset relative to the component's layout position. |
+| offset | [Position](arkts-arkui-position-i.md) | Yes | Coordinate offset relative to the component's layout position. |
 
 **Return value:**
 
@@ -89,13 +94,15 @@ Sets the position of the shape.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-CommonShapeMethod-position(position: Position): T--><!--Device-CommonShapeMethod-position(position: Position): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | Position | Yes | Position of the shape. |
+| position | [Position](arkts-arkui-position-i.md) | Yes | Position of the shape. |
 
 **Return value:**
 

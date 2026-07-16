@@ -20,6 +20,8 @@ Starts screen hopping. This API uses an asynchronous callback to return the resu
 
 **Substitutes:** activateCooperate
 
+<!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback: AsyncCallback<void>): void--><!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Cooperator
 
 **System API:** This is a system API.
@@ -30,7 +32,7 @@ Starts screen hopping. This API uses an asynchronous callback to return the resu
 | --- | --- | --- | --- |
 | sinkDeviceDescriptor | string | Yes | Descriptor of the target device for screen hopping. |
 | srcInputDeviceId | number | Yes | ID of the target device for screen hopping. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback. If the operation is successful, **err** is **undefined**.Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback. If the operation is successful, **err** is **undefined**.Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -89,6 +91,8 @@ Starts screen hopping. This API uses a promise to return the result.
 
 **Substitutes:** activateCooperate
 
+<!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<void>--><!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Cooperator
 
 **System API:** This is a system API.
@@ -104,7 +108,7 @@ Starts screen hopping. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -16,14 +16,16 @@ Obtains the network search mode of the SIM card in a specified slot.
 
 **Since:** 6
 
+<!--Device-radio-function getNetworkSelectionMode(slotId: int, callback: AsyncCallback<NetworkSelectionMode>): void--><!--Device-radio-function getNetworkSelectionMode(slotId: int, callback: AsyncCallback<NetworkSelectionMode>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slotindex number supported by the device. |
-| callback | AsyncCallback&lt;NetworkSelectionMode&gt; | Yes | Indicates the callback for gettingthe network search mode of the SIM card. Available values are as follows:&lt;ul&gt;&lt;li&gt;{@link NetworkSelectionMode#NETWORK_SELECTION_UNKNOWN}&lt;li&gt;{@link NetworkSelectionMode#NETWORK_SELECTION_AUTOMATIC}&lt;li&gt;{@link NetworkSelectionMode#NETWORK_SELECTION_MANUAL}&lt;ul&gt; |
+| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<NetworkSelectionMode> | Yes | Indicates the callback for getting the network search mode of the SIM card. Available values are as follows:&lt;ul&gt;&lt;li&gt;{@link NetworkSelectionMode#NETWORK_SELECTION_UNKNOWN}&lt;li&gt;{@link NetworkSelectionMode#NETWORK_SELECTION_AUTOMATIC}&lt;li&gt;{@link NetworkSelectionMode#NETWORK_SELECTION_MANUAL}&lt;ul&gt; |
 
 **Error codes:**
 
@@ -62,19 +64,21 @@ Obtains the network search mode of the SIM card in a specified slot.
 
 **Since:** 6
 
+<!--Device-radio-function getNetworkSelectionMode(slotId: int): Promise<NetworkSelectionMode>--><!--Device-radio-function getNetworkSelectionMode(slotId: int): Promise<NetworkSelectionMode>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slotindex number supported by the device. |
+| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetworkSelectionMode&gt; | Returns the network search mode of the SIM card.Available values are as follows:&lt;ul&gt;&lt;li&gt;{@link NetworkSelectionMode#NETWORK_SELECTION_UNKNOWN}&lt;li&gt;{@link NetworkSelectionMode#NETWORK_SELECTION_AUTOMATIC}&lt;li&gt;{@link NetworkSelectionMode#NETWORK_SELECTION_MANUAL}&lt;ul&gt; |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetworkSelectionMode> | Returns the network search mode of the SIM card.Available values are as follows:&lt;ul&gt;&lt;li&gt;{@link NetworkSelectionMode#NETWORK_SELECTION_UNKNOWN}&lt;li&gt;{@link NetworkSelectionMode#NETWORK_SELECTION_AUTOMATIC}&lt;li&gt;{@link NetworkSelectionMode#NETWORK_SELECTION_MANUAL}&lt;ul&gt; |
 
 **Error codes:**
 

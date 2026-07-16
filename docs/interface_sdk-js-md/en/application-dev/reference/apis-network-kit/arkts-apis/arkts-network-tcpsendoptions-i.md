@@ -4,6 +4,8 @@ Defines the parameters for sending data over the TCPSocket connection.
 
 **Since:** 10
 
+<!--Device-socket-export interface TCPSendOptions--><!--Device-socket-export interface TCPSendOptions-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Data to send.
 
 **Since:** 10
 
+<!--Device-TCPSendOptions-data: string | ArrayBuffer--><!--Device-TCPSendOptions-data: string | ArrayBuffer-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## encoding
@@ -37,6 +41,8 @@ Character encoding format.
 **Type:** string
 
 **Since:** 10
+
+<!--Device-TCPSendOptions-encoding?: string--><!--Device-TCPSendOptions-encoding?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

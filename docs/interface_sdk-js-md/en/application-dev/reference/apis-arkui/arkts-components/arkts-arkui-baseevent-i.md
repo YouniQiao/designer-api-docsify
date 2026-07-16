@@ -4,6 +4,8 @@ Basic event type.
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface BaseEvent--><!--Device-unnamed-declare interface BaseEvent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## getModifierKeyState
@@ -12,11 +14,10 @@ Basic event type.
 getModifierKeyState?(keys: Array<string>): boolean
 ```
 
-Obtains the pressed status of modifier keys. For details about the error message, see the following error codes.
-The Ctrl, Alt, and Shift keys are supported.
+Obtains the pressed status of modifier keys. For details about the error message, see the following error codes.The Ctrl, Alt, and Shift keys are supported.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > This API is not supported in stylus scenarios.
 
 **Since:** 12
@@ -25,25 +26,27 @@ The Ctrl, Alt, and Shift keys are supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BaseEvent-getModifierKeyState?(keys: Array<string>): boolean--><!--Device-BaseEvent-getModifierKeyState?(keys: Array<string>): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | Yes | Modifier key list. |
+| keys | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Modifier key list. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Pressed status of modifier keys. Returns **true** if all modifier keys are pressed; returns**false** otherwise. |
+| boolean | Pressed status of modifier keys. Returns **true** if all modifier keys are pressed; returns **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameterverification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
 ## axisHorizontal
 
@@ -57,8 +60,7 @@ Default value: **0**
 
 **NOTE**
 
-This value is available only when the pan gesture is triggered by mouse wheel scrolling or two-finger touchpad
-sliding, or when the pinch gesture is triggered by Ctrl + mouse wheel scrolling.
+This value is available only when the pan gesture is triggered by mouse wheel scrolling or two-finger touchpad sliding, or when the pinch gesture is triggered by Ctrl + mouse wheel scrolling.
 
 **Type:** number
 
@@ -69,6 +71,8 @@ sliding, or when the pinch gesture is triggered by Ctrl + mouse wheel scrolling.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-BaseEvent-axisHorizontal?: number--><!--Device-BaseEvent-axisHorizontal?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,11 +88,9 @@ Default value: **0**
 
 **NOTE**
 
-This value is available only when a pinch gesture is triggered by a two-finger scaling operation on a touchpad or
-during axis events.
+This value is available only when a pinch gesture is triggered by a two-finger scaling operation on a touchpad or during axis events.
 
-In other scenarios, the default value is returned. The scaling ratio represents the ratio of the current two-finger
-distance to the initial two-finger distance when first pressed during a pinch gesture.
+In other scenarios, the default value is returned. The scaling ratio represents the ratio of the current two-finger distance to the initial two-finger distance when first pressed during a pinch gesture.
 
 Value range: [0, +∞).
 
@@ -101,6 +103,8 @@ Value range: [0, +∞).
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 21.
+
+<!--Device-BaseEvent-axisPinch?: number--><!--Device-BaseEvent-axisPinch?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,8 +120,7 @@ Default value: **0**
 
 **NOTE**
 
-This value is available only when the pan gesture is triggered by mouse wheel scrolling or two-finger touchpad
-sliding, or when the pinch gesture is triggered by Ctrl + mouse wheel scrolling.
+This value is available only when the pan gesture is triggered by mouse wheel scrolling or two-finger touchpad sliding, or when the pinch gesture is triggered by Ctrl + mouse wheel scrolling.
 
 **Type:** number
 
@@ -128,6 +131,8 @@ sliding, or when the pinch gesture is triggered by Ctrl + mouse wheel scrolling.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-BaseEvent-axisVertical?: number--><!--Device-BaseEvent-axisVertical?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -151,6 +156,8 @@ Value range: [0, +∞).
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BaseEvent-deviceId?: number--><!--Device-BaseEvent-deviceId?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## pressure
@@ -163,8 +170,7 @@ Press pressure.
 
 Default value: **0**
 
-Value range: [0, 1], typical value 0.913168, where higher values indicate greater pressure. On some devices, the
-return value may be greater than 1 due to different hardware parameter configurations.
+Value range: [0, 1], typical value 0.913168, where higher values indicate greater pressure. On some devices, the return value may be greater than 1 due to different hardware parameter configurations.
 
 **Type:** number
 
@@ -173,6 +179,8 @@ return value may be greater than 1 due to different hardware parameter configura
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-BaseEvent-pressure: number--><!--Device-BaseEvent-pressure: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -196,6 +204,8 @@ Unit: deg
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 17.
 
+<!--Device-BaseEvent-rollAngle?: number--><!--Device-BaseEvent-rollAngle?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## source
@@ -213,6 +223,8 @@ Type of the event input device.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-BaseEvent-source: SourceType--><!--Device-BaseEvent-source: SourceType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -232,6 +244,8 @@ Event input source type.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-BaseEvent-sourceTool: SourceTool--><!--Device-BaseEvent-sourceTool: SourceTool-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## target
@@ -249,6 +263,8 @@ Object that triggers the gesture event.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-BaseEvent-target: EventTarget--><!--Device-BaseEvent-target: EventTarget-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -272,6 +288,8 @@ Value range: [0, +∞).
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-BaseEvent-targetDisplayId?: number--><!--Device-BaseEvent-targetDisplayId?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## tiltX
@@ -293,6 +311,8 @@ Default value: **0**
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-BaseEvent-tiltX: number--><!--Device-BaseEvent-tiltX: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -316,6 +336,8 @@ Default value: **0**
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-BaseEvent-tiltY: number--><!--Device-BaseEvent-tiltY: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## timestamp
@@ -324,8 +346,7 @@ Default value: **0**
 timestamp: number
 ```
 
-Timestamp of the event. It is the interval between the time when the event is triggered and the time when the
-system starts.
+Timestamp of the event. It is the interval between the time when the event is triggered and the time when the system starts.
 
 Unit: ns
 
@@ -336,6 +357,8 @@ Unit: ns
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-BaseEvent-timestamp: number--><!--Device-BaseEvent-timestamp: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,9 +1,10 @@
 # Random
 
-Provides APIs for random number operations. Before using any API of the **Random** class, you must create a
-**Random** instance by using [createRandom](arkts-cryptoarchitecture-createrandom-f.md#createrandom-1).
+Provides APIs for random number operations. Before using any API of the **Random** class, you must create a **Random** instance by using [createRandom](arkts-cryptoarchitecture-createrandom-f.md#createrandom-1).
 
 **Since:** 9
+
+<!--Device-cryptoFramework-interface Random--><!--Device-cryptoFramework-interface Random-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Rand
@@ -28,6 +29,8 @@ Enables the hardware entropy source.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-Random-enableHardwareEntropy(): void--><!--Device-Random-enableHardwareEntropy(): void-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Rand
 
@@ -80,6 +83,8 @@ Generates a random number of the specified length. This API uses an asynchronous
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Random-generateRandom(len: int, callback: AsyncCallback<DataBlob>): void--><!--Device-Random-generateRandom(len: int, callback: AsyncCallback<DataBlob>): void-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Rand
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
@@ -89,7 +94,7 @@ Generates a random number of the specified length. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | len | number | Yes | Length of the random number to generate, in bytes. The value range is [1, INT_MAX]. |
-| callback | AsyncCallback&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the random number obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DataBlob> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the random number obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -129,6 +134,8 @@ Generates a random number of the specified length. This API uses a promise to re
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Random-generateRandom(len: int): Promise<DataBlob>--><!--Device-Random-generateRandom(len: int): Promise<DataBlob>-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Rand
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
@@ -143,7 +150,7 @@ Generates a random number of the specified length. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise used to return the random number generated. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DataBlob> | Promise used to return the random number generated. |
 
 **Error codes:**
 
@@ -248,10 +255,7 @@ generateRandomSync(len: number): DataBlob
 
 Generates a random number of the specified length. This API returns the result synchronously.
 
-<br><br>**NOTE**
-<br>It is recommended to prioritize the use of asynchronous API, {@link generateRandom}. Synchronous API may
-take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,
-it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link generateRandom}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 10
 
@@ -260,6 +264,8 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 - API version 10 to 11: This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Random-generateRandomSync(len: int): DataBlob--><!--Device-Random-generateRandomSync(len: int): DataBlob-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Rand
@@ -275,7 +281,7 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 
 | Type | Description |
 | --- | --- |
-| DataBlob | Returns the generated random number. |
+| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Returns the generated random number. |
 
 **Error codes:**
 
@@ -394,6 +400,8 @@ Sets a seed.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Random-setSeed(seed: DataBlob): void--><!--Device-Random-setSeed(seed: DataBlob): void-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Rand
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
@@ -402,7 +410,7 @@ Sets a seed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| seed | DataBlob | Yes | Seed to set. |
+| seed | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | Seed to set. |
 
 **Error codes:**
 
@@ -448,6 +456,8 @@ Indicates the random generation algorithm name. Currently, only CTR_DRBG is supp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Random-readonly algName: string--><!--Device-Random-readonly algName: string-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Rand

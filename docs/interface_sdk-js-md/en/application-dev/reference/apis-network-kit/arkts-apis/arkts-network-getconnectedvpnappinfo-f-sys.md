@@ -18,6 +18,8 @@ Get the connected VPN App Info.
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 
+<!--Device-vpn-function getConnectedVpnAppInfo(): Promise<Array<string>>--><!--Device-vpn-function getConnectedVpnAppInfo(): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Get the connected VPN App Info.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | The promise returned by the connected VPN App Info. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | The promise returned by the connected VPN App Info. |
 
 **Error codes:**
 

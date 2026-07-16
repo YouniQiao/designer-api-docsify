@@ -4,6 +4,8 @@ Defines struct SubHeaderV2.
 
 **Since:** 18
 
+<!--Device-unnamed-export declare struct SubHeaderV2--><!--Device-unnamed-export declare struct SubHeaderV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Sets the icon of the SubHeaderV2.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SubHeaderV2-readonly icon?: SubHeaderV2IconType--><!--Device-SubHeaderV2-readonly icon?: SubHeaderV2IconType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## operationItems
@@ -45,6 +49,8 @@ Sets the operationItems of the SubHeaderV2.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SubHeaderV2-readonly operationItems?: SubHeaderV2OperationItem[]--><!--Device-SubHeaderV2-readonly operationItems?: SubHeaderV2OperationItem[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +70,8 @@ Sets the operationType of the SubHeaderV2.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SubHeaderV2-readonly operationType?: SubHeaderV2OperationType--><!--Device-SubHeaderV2-readonly operationType?: SubHeaderV2OperationType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## select
@@ -82,6 +90,8 @@ Sets the select of the SubHeaderV2.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SubHeaderV2-readonly select?: SubHeaderV2Select--><!--Device-SubHeaderV2-readonly select?: SubHeaderV2Select-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## title
@@ -99,6 +109,8 @@ Sets the title of the SubHeaderV2.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SubHeaderV2-readonly title?: SubHeaderV2Title--><!--Device-SubHeaderV2-readonly title?: SubHeaderV2Title-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -119,6 +131,8 @@ Set the title content.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SubHeaderV2-titleBuilder?: SubHeaderV2TitleBuilder--><!--Device-SubHeaderV2-titleBuilder?: SubHeaderV2TitleBuilder-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

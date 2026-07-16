@@ -4,6 +4,8 @@
 
 **起始版本：** 22
 
+<!--Device-unnamed-declare interface BlankScreenDetectionEventInfo--><!--Device-unnamed-declare interface BlankScreenDetectionEventInfo-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## blankScreenDetails
@@ -20,6 +22,8 @@ blankScreenDetails?: BlankScreenDetails
 
 **起始版本：** 22
 
+<!--Device-BlankScreenDetectionEventInfo-blankScreenDetails?: BlankScreenDetails--><!--Device-BlankScreenDetectionEventInfo-blankScreenDetails?: BlankScreenDetails-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## blankScreenReason
@@ -34,6 +38,8 @@ blankScreenReason: DetectedBlankScreenReason
 
 **起始版本：** 22
 
+<!--Device-BlankScreenDetectionEventInfo-blankScreenReason: DetectedBlankScreenReason--><!--Device-BlankScreenDetectionEventInfo-blankScreenReason: DetectedBlankScreenReason-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## url
@@ -47,6 +53,8 @@ url: string
 **类型：** string
 
 **起始版本：** 22
+
+<!--Device-BlankScreenDetectionEventInfo-url: string--><!--Device-BlankScreenDetectionEventInfo-url: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

@@ -4,6 +4,8 @@ Provides DialogAbility information, including the bundle name, module name, and 
 
 **Since:** 11
 
+<!--Device-dialogSession-export interface DialogAbilityInfo--><!--Device-dialogSession-export interface DialogAbilityInfo-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ ID of the ability icon.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DialogAbilityInfo-abilityIconId: int--><!--Device-DialogAbilityInfo-abilityIconId: int-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -45,6 +49,8 @@ ID of the ability label.
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DialogAbilityInfo-abilityLabelId: int--><!--Device-DialogAbilityInfo-abilityLabelId: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -64,6 +70,8 @@ Ability name.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DialogAbilityInfo-abilityName: string--><!--Device-DialogAbilityInfo-abilityName: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -81,6 +89,8 @@ Index of the application clone.
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DialogAbilityInfo-appIndex: int--><!--Device-DialogAbilityInfo-appIndex: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -100,6 +110,8 @@ ID of the bundle icon.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DialogAbilityInfo-bundleIconId: int--><!--Device-DialogAbilityInfo-bundleIconId: int-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -117,6 +129,8 @@ ID of the bundle label.
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DialogAbilityInfo-bundleLabelId: int--><!--Device-DialogAbilityInfo-bundleLabelId: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -136,6 +150,8 @@ Bundle name.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DialogAbilityInfo-bundleName: string--><!--Device-DialogAbilityInfo-bundleName: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -154,6 +170,8 @@ Installation directory of the application.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DialogAbilityInfo-codePath?: string--><!--Device-DialogAbilityInfo-codePath?: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -166,11 +184,10 @@ installSource?: string
 
 Installation source of the application. The options are as follows:
 
-- **pre-installed**: pre-installed application installed during the first boot.
-- **ota**: pre-installed application added during system upgrade.
-- **recovery**: pre-installed application manually restored by the user after uninstallation.
-- **bundleName**: installation by the application corresponding to this bundle name. **bundleName** represents a
-variable, subject to the actual value.
+- **pre-installed**: pre-installed application installed during the first boot.  
+- **ota**: pre-installed application added during system upgrade.  
+- **recovery**: pre-installed application manually restored by the user after uninstallation.  
+- **bundleName**: installation by the application corresponding to this bundle name. **bundleName** represents a variable, subject to the actual value.  
 - **unknown**: unknown application installation source.
 
 **Type:** string
@@ -178,6 +195,8 @@ variable, subject to the actual value.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DialogAbilityInfo-installSource?: string--><!--Device-DialogAbilityInfo-installSource?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -197,6 +216,8 @@ Module name.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DialogAbilityInfo-moduleName: string--><!--Device-DialogAbilityInfo-moduleName: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -215,6 +236,8 @@ Multi-app mode.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DialogAbilityInfo-multiAppMode: MultiAppMode--><!--Device-DialogAbilityInfo-multiAppMode: MultiAppMode-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -232,6 +255,8 @@ Whether the ability is visible. **true** if visible, **false** otherwise.
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DialogAbilityInfo-visible: boolean--><!--Device-DialogAbilityInfo-visible: boolean-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

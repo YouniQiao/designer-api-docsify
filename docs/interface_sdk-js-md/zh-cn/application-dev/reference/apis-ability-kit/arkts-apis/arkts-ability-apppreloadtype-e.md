@@ -4,6 +4,8 @@
 
 **起始版本：** 22
 
+<!--Device-application-export enum AppPreloadType--><!--Device-application-export enum AppPreloadType-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## UNSPECIFIED
@@ -17,6 +19,8 @@ UNSPECIFIED = 0
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AppPreloadType-UNSPECIFIED = 0--><!--Device-AppPreloadType-UNSPECIFIED = 0-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -32,6 +36,8 @@ TYPE_CREATE_PROCESS = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AppPreloadType-TYPE_CREATE_PROCESS = 1--><!--Device-AppPreloadType-TYPE_CREATE_PROCESS = 1-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## TYPE_CREATE_ABILITY_STAGE
@@ -45,6 +51,8 @@ TYPE_CREATE_ABILITY_STAGE = 2
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AppPreloadType-TYPE_CREATE_ABILITY_STAGE = 2--><!--Device-AppPreloadType-TYPE_CREATE_ABILITY_STAGE = 2-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -60,6 +68,8 @@ TYPE_CREATE_WINDOW_STAGE = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AppPreloadType-TYPE_CREATE_WINDOW_STAGE = 3--><!--Device-AppPreloadType-TYPE_CREATE_WINDOW_STAGE = 3-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## TYPE_CREATE_BACKGROUND_ABILITY
@@ -73,6 +83,8 @@ TYPE_CREATE_BACKGROUND_ABILITY = 4
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AppPreloadType-TYPE_CREATE_BACKGROUND_ABILITY = 4--><!--Device-AppPreloadType-TYPE_CREATE_BACKGROUND_ABILITY = 4-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

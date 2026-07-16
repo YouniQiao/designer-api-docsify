@@ -20,14 +20,16 @@ Enable the advertising with a specific ID temporarily.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ble-function enableAdvertising(advertisingEnableParams: AdvertisingEnableParams, callback: AsyncCallback<void>): void--><!--Device-ble-function enableAdvertising(advertisingEnableParams: AdvertisingEnableParams, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| advertisingEnableParams | AdvertisingEnableParams | Yes | Indicates the params for enable advertising. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback result. |
+| advertisingEnableParams | [AdvertisingEnableParams](arkts-connectivity-advertisingenableparams-i.md) | Yes | Indicates the params for enable advertising. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback result. |
 
 **Error codes:**
 
@@ -129,19 +131,21 @@ Enable the advertising with a specific ID temporarily.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ble-function enableAdvertising(advertisingEnableParams: AdvertisingEnableParams): Promise<void>--><!--Device-ble-function enableAdvertising(advertisingEnableParams: AdvertisingEnableParams): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| advertisingEnableParams | AdvertisingEnableParams | Yes | Indicates the params for enable advertising. |
+| advertisingEnableParams | [AdvertisingEnableParams](arkts-connectivity-advertisingenableparams-i.md) | Yes | Indicates the params for enable advertising. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 

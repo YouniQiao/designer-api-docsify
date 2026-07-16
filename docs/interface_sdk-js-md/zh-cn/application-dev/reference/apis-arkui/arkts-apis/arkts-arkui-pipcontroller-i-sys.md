@@ -2,12 +2,19 @@
 
 画中画控制器实例。用于启动、停止画中画以及更新回调注册等。
 
-下列API示例中都需先使用[PiPWindow.create()](arkts-arkui-create-f.md#create-1)方法获取到PiPController实例，再通过此实例调用对应方
-法。
+下列API示例中都需先使用[PiPWindow.create()](arkts-arkui-create-f.md#create-1)方法获取到PiPController实例，再通过此实例调用对应方法。
 
 **起始版本：** 11
 
+<!--Device-PiPWindow-interface PiPController--><!--Device-PiPWindow-interface PiPController-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
+
+## 导入模块
+
+```TypeScript
+import { PiPWindow } from '@kit.ArkUI';
+```
 
 ## isPiPSupported
 
@@ -18,6 +25,8 @@ isPiPSupported(): boolean
 Returns a Boolean value that indicates whether picture-in-picture is supported
 
 **起始版本：** 18
+
+<!--Device-PiPController-isPiPSupported(): boolean--><!--Device-PiPController-isPiPSupported(): boolean-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 

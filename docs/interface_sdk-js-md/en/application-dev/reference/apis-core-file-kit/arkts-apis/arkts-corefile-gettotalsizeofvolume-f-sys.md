@@ -18,6 +18,8 @@ Get the total size of volume.
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
+<!--Device-storageStatistics-function getTotalSizeOfVolume(volumeUuid: string, callback: AsyncCallback<long>): void--><!--Device-storageStatistics-function getTotalSizeOfVolume(volumeUuid: string, callback: AsyncCallback<long>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Get the total size of volume.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volumeUuid | string | Yes | The uuid of the volume |
-| callback | AsyncCallback&lt;number&gt; | Yes | callback<br>Unit: Byte. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | callback<br>Unit: Byte. |
 
 **Error codes:**
 
@@ -35,7 +37,7 @@ Get the total size of volume.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatoryparameters are left unspecified;<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
@@ -79,6 +81,8 @@ Get the total size of volume.
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
+<!--Device-storageStatistics-function getTotalSizeOfVolume(volumeUuid: string): Promise<long>--><!--Device-storageStatistics-function getTotalSizeOfVolume(volumeUuid: string): Promise<long>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **System API:** This is a system API.
@@ -93,7 +97,7 @@ Get the total size of volume.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | return Promise (Unit: Byte) |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | return Promise (Unit: Byte) |
 
 **Error codes:**
 
@@ -101,7 +105,7 @@ Get the total size of volume.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatoryparameters are left unspecified;<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |

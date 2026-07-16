@@ -10,6 +10,8 @@ Indicate the profile uuid.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-type ProfileUuids = constant.ProfileUuids--><!--Device-connection-type ProfileUuids = constant.ProfileUuids-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.

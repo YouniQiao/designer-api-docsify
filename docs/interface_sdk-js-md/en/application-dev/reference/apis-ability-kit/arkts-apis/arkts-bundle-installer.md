@@ -2,11 +2,13 @@
 
 The module provides APIs for you to install, uninstall, and recover bundles on devices.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > The APIs provided by this module are system APIs.
 
 **Since:** 9
+
+<!--Device-unnamed-declare namespace installer--><!--Device-unnamed-declare namespace installer-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

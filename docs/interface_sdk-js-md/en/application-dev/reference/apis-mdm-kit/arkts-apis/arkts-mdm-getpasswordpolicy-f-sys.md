@@ -18,6 +18,8 @@ Obtains the device screen lock password policy.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-securityManager-function getPasswordPolicy(): PasswordPolicy--><!--Device-securityManager-function getPasswordPolicy(): PasswordPolicy-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Obtains the device screen lock password policy.
 
 | Type | Description |
 | --- | --- |
-| PasswordPolicy | Device screen lock password policy. |
+| [PasswordPolicy](arkts-mdm-passwordpolicy-i.md) | Device screen lock password policy. |
 
 **Error codes:**
 

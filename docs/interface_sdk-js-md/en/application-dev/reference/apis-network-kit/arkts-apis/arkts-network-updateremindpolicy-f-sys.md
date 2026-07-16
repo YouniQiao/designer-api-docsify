@@ -18,6 +18,8 @@ Update the policy when the quota reaches the upper limit.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function updateRemindPolicy(netType: NetBearType, simId: string, remindType: RemindType, callback: AsyncCallback<void>): void--><!--Device-policy-function updateRemindPolicy(netType: NetBearType, simId: string, remindType: RemindType, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -26,10 +28,10 @@ Update the policy when the quota reaches the upper limit.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netType | NetBearType | Yes | {@link NetBearType}. |
+| netType | [NetBearType](arkts-network-netbeartype-t.md) | Yes | {@link NetBearType}. |
 | simId | string | Yes | Specify the matched simId of quota policy when netType is cellular. |
-| remindType | RemindType | Yes | {@link RemindType}. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of updateRemindPolicy. |
+| remindType | [RemindType](arkts-network-remindtype-e-sys.md) | Yes | {@link RemindType}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of updateRemindPolicy. |
 
 **Error codes:**
 
@@ -72,6 +74,8 @@ Update the policy when the quota reaches the upper limit.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function updateRemindPolicy(netType: NetBearType, simId: string, remindType: RemindType): Promise<void>--><!--Device-policy-function updateRemindPolicy(netType: NetBearType, simId: string, remindType: RemindType): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -80,15 +84,15 @@ Update the policy when the quota reaches the upper limit.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netType | NetBearType | Yes | {@link NetBearType}. |
+| netType | [NetBearType](arkts-network-netbeartype-t.md) | Yes | {@link NetBearType}. |
 | simId | string | Yes | Specify the matched simId of quota policy when netType is cellular. |
-| remindType | RemindType | Yes | {@link RemindType}. |
+| remindType | [RemindType](arkts-network-remindtype-e-sys.md) | Yes | {@link RemindType}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

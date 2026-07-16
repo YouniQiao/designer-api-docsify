@@ -1,5 +1,11 @@
 # createKeyboardDelegate
 
+## 导入模块
+
+```TypeScript
+import { inputMethodEngine } from '@kit.IMEKit';
+```
+
 ## createKeyboardDelegate
 
 ```TypeScript
@@ -14,13 +20,15 @@ function createKeyboardDelegate(): KeyboardDelegate
 
 **替代接口：** [getKeyboardDelegate()](arkts-ime-getkeyboarddelegate-f.md#getkeyboarddelegate-1)
 
+<!--Device-inputMethodEngine-function createKeyboardDelegate(): KeyboardDelegate--><!--Device-inputMethodEngine-function createKeyboardDelegate(): KeyboardDelegate-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| KeyboardDelegate | 客户端编辑事件监听代理。 |
+| [KeyboardDelegate](arkts-ime-keyboarddelegate-i.md) | 客户端编辑事件监听代理。 |
 
 **示例：**
 

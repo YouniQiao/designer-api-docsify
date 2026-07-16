@@ -1,5 +1,11 @@
 # isPrinterDisabled（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+```
+
 ## isPrinterDisabled
 
 ```TypeScript
@@ -18,6 +24,8 @@ function isPrinterDisabled(admin: Want, callback: AsyncCallback<boolean>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-restrictions-function isPrinterDisabled(admin: Want, callback: AsyncCallback<boolean>): void--><!--Device-restrictions-function isPrinterDisabled(admin: Want, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -26,8 +34,8 @@ function isPrinterDisabled(admin: Want, callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数，callback方式返回设备打印能力是否被禁用，true表示设备打印能力被禁用，false表示设备打印能力未被禁用。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数，callback方式返回设备打印能力是否被禁用，true表示设备打印能力被禁用，false表示设备打印能力未被禁用。 |
 
 **错误码：**
 
@@ -80,6 +88,8 @@ function isPrinterDisabled(admin: Want): Promise<boolean>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-restrictions-function isPrinterDisabled(admin: Want): Promise<boolean>--><!--Device-restrictions-function isPrinterDisabled(admin: Want): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -88,13 +98,13 @@ function isPrinterDisabled(admin: Want): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。Promise方式返回设备打印能力是否被禁用，true表示设备打印能力被禁用，false表示设备打印能力未被禁用。 |
+| Promise<boolean> | Promise对象。Promise方式返回设备打印能力是否被禁用，true表示设备打印能力被禁用，false表示设备打印能力未被禁用。 |
 
 **错误码：**
 

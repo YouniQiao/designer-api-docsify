@@ -1,5 +1,11 @@
 # setDefaultVoiceSlotId（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## setDefaultVoiceSlotId
 
 ```TypeScript
@@ -12,6 +18,8 @@ Set the card slot ID of the default voice service.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function setDefaultVoiceSlotId(slotId: int, callback: AsyncCallback<void>): void--><!--Device-sim-function setDefaultVoiceSlotId(slotId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -21,7 +29,7 @@ Set the card slot ID of the default voice service.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;void&gt; | 是 | The callback of setDefaultVoiceSlotId. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | The callback of setDefaultVoiceSlotId. |
 
 **错误码：**
 
@@ -62,6 +70,8 @@ Set the card slot ID of the default voice service.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function setDefaultVoiceSlotId(slotId: int): Promise<void>--><!--Device-sim-function setDefaultVoiceSlotId(slotId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -76,7 +86,7 @@ Set the card slot ID of the default voice service.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setVoiceMailInfo. |
+| Promise<void> | The promise returned by the setVoiceMailInfo. |
 
 **错误码：**
 

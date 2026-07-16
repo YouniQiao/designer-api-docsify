@@ -1,15 +1,14 @@
 # ReadStream
 
-Defines a readable stream. You need to use
-[fileIo.createReadStream](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatereadstream12) to
-create a **ReadStream** instance, which is inherited from
-[stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-readableoptions-i.md).
+Defines a readable stream. You need to use [fileIo.createReadStream](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatereadstream12) to create a **ReadStream** instance, which is inherited from [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-readableoptions-i.md).
 
 The data obtained by **ReadStream** is a decoded string. Currently, only the UTF-8 format is supported.
 
 **Inheritance/Implementation:** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-readable-c.md)
 
 **Since:** 12
+
+<!--Device-unnamed-declare class ReadStream extends stream.Readable--><!--Device-unnamed-declare class ReadStream extends stream.Readable-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -28,6 +27,8 @@ close(): void
 Closes this readable stream.
 
 **Since:** 12
+
+<!--Device-ReadStream-close(): void--><!--Device-ReadStream-close(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -61,6 +62,8 @@ The ReadStream constructor.
 
 **Since:** 12
 
+<!--Device-ReadStream-constructor()--><!--Device-ReadStream-constructor()-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## seek
@@ -73,6 +76,8 @@ Adjusts the position of the readable stream offset pointer.
 
 **Since:** 12
 
+<!--Device-ReadStream-seek(offset: number, whence?: WhenceType): number--><!--Device-ReadStream-seek(offset: number, whence?: WhenceType): number-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
@@ -80,7 +85,7 @@ Adjusts the position of the readable stream offset pointer.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | offset | number | Yes | Relative offset, in bytes. |
-| whence | WhenceType | No | Where to start the offset. The default value is **SEEK_SET**, which indicates thebeginning of the file. |
+| whence | [WhenceType](arkts-corefile-whencetype-e.md) | No | Where to start the offset. The default value is **SEEK_SET**, which indicates the beginning of the file. |
 
 **Return value:**
 
@@ -120,6 +125,8 @@ Number of bytes read by the readable stream.
 
 **Since:** 12
 
+<!--Device-ReadStream-readonly bytesRead: number--><!--Device-ReadStream-readonly bytesRead: number-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## path
@@ -133,6 +140,8 @@ Path of the file corresponding to the readable stream.
 **Type:** string
 
 **Since:** 12
+
+<!--Device-ReadStream-readonly path: string--><!--Device-ReadStream-readonly path: string-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

@@ -4,6 +4,8 @@ Defines a three-finger swipe gesture event.
 
 **Since:** 10
 
+<!--Device-unnamed-export declare interface ThreeFingersSwipe--><!--Device-unnamed-export declare interface ThreeFingersSwipe-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Gesture event type, for example, gesture start, gesture update, or gesture end.
 
 **Since:** 10
 
+<!--Device-ThreeFingersSwipe-type: ActionType--><!--Device-ThreeFingersSwipe-type: ActionType-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## x
@@ -38,6 +42,8 @@ X coordinate, in px.
 
 **Since:** 10
 
+<!--Device-ThreeFingersSwipe-x: int--><!--Device-ThreeFingersSwipe-x: int-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## y
@@ -51,6 +57,8 @@ Y coordinate, in px.
 **Type:** number
 
 **Since:** 10
+
+<!--Device-ThreeFingersSwipe-y: int--><!--Device-ThreeFingersSwipe-y: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 

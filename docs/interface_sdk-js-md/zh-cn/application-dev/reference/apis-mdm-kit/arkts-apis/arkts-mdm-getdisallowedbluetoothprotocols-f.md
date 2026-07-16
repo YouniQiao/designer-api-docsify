@@ -1,5 +1,11 @@
 # getDisallowedBluetoothProtocols
 
+## 导入模块
+
+```TypeScript
+import { bluetoothManager } from '@kit.MDMKit';
+```
+
 ## getDisallowedBluetoothProtocols
 
 ```TypeScript
@@ -14,20 +20,22 @@ function getDisallowedBluetoothProtocols(admin: Want, accountId: number): Array<
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bluetoothManager-function getDisallowedBluetoothProtocols(admin: Want, accountId: number): Array<Protocol>--><!--Device-bluetoothManager-function getDisallowedBluetoothProtocols(admin: Want, accountId: number): Array<Protocol>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | accountId | number | 是 | 用户ID，取值范围：大于等于0。<br> accountId可以通过@ohos.account.osAccount中的[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2)等接口来获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Protocol&gt; | 禁用名单中蓝牙协议的数组。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Protocol> | 禁用名单中蓝牙协议的数组。 |
 
 **错误码：**
 
@@ -70,7 +78,7 @@ function getDisallowedBluetoothProtocols(admin: Want | null, accountId: number, 
 
 获取指定用户指定传输策略下已禁用的蓝牙协议列表。
 
-> **说明：**
+> **说明：**  
 >
 
 **起始版本：** 26.0.0
@@ -79,6 +87,8 @@ function getDisallowedBluetoothProtocols(admin: Want | null, accountId: number, 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bluetoothManager-function getDisallowedBluetoothProtocols(admin: Want | null, accountId: number, policy: TransferPolicy): Array<Protocol>--><!--Device-bluetoothManager-function getDisallowedBluetoothProtocols(admin: Want | null, accountId: number, policy: TransferPolicy): Array<Protocol>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -86,14 +96,14 @@ function getDisallowedBluetoothProtocols(admin: Want | null, accountId: number, 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | Want \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| accountId | number | 是 | <br>不合法的值区间: [0, +。- 用户ID，取值范围：大于等于0。<br> accountId可以通过@ohos.account.osAccount中的[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2)等接口来获取。 |
-| policy | TransferPolicy | 是 | 传输策略。 |
+| accountId | number | 是 | <br>不合法的值区间: [0, +。  - 用户ID，取值范围：大于等于0。<br> accountId可以通过@ohos.account.osAccount中的[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2)等接口来获取。 |
+| policy | [TransferPolicy](arkts-mdm-transferpolicy-e.md) | 是 | 传输策略。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Protocol&gt; | 返回禁用名单中的蓝牙协议数组。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Protocol> | 返回禁用名单中的蓝牙协议数组。 |
 
 **错误码：**
 

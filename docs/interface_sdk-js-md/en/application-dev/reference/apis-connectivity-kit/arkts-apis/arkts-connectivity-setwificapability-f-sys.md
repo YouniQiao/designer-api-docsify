@@ -20,6 +20,8 @@ Set Wi-Fi capability
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-wifiManager-function setWifiCapability(capability: WifiCapability, enable: boolean): void--><!--Device-wifiManager-function setWifiCapability(capability: WifiCapability, enable: boolean): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Set Wi-Fi capability
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| capability | WifiCapability | Yes | Identifies the Wi-Fi capability |
+| capability | [WifiCapability](arkts-connectivity-wificapability-e.md) | Yes | Identifies the Wi-Fi capability |
 | enable | boolean | Yes | Identifies enable or disable specified Wi-Fi capability. |
 
 **Error codes:**

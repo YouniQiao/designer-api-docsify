@@ -14,6 +14,8 @@ Base class for system material objects.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-unnamed-declare type SystemUiMaterial = import('../api/@ohos.arkui.uiMaterial').default.Material--><!--Device-unnamed-declare type SystemUiMaterial = import('../api/@ohos.arkui.uiMaterial').default.Material-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.

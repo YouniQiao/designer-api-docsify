@@ -4,6 +4,8 @@
 
 **起始版本：** 22
 
+<!--Device-unnamed-declare interface BlankScreenDetails--><!--Device-unnamed-declare interface BlankScreenDetails-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## detectedContentfulNodesCount
@@ -19,6 +21,8 @@ detectedContentfulNodesCount?: number
 **类型：** number
 
 **起始版本：** 22
+
+<!--Device-BlankScreenDetails-detectedContentfulNodesCount?: number--><!--Device-BlankScreenDetails-detectedContentfulNodesCount?: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

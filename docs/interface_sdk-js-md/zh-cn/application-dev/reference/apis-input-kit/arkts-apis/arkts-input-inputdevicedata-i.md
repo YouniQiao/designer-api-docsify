@@ -4,7 +4,15 @@
 
 **起始版本：** 8
 
+<!--Device-inputDevice-interface InputDeviceData--><!--Device-inputDevice-interface InputDeviceData-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
+
+## 导入模块
+
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+```
 
 ## axisRanges
 
@@ -17,6 +25,8 @@ axisRanges: Array<AxisRange>
 **类型：** Array<AxisRange>
 
 **起始版本：** 8
+
+<!--Device-InputDeviceData-axisRanges: Array<AxisRange>--><!--Device-InputDeviceData-axisRanges: Array<AxisRange>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -32,6 +42,8 @@ bus: number
 
 **起始版本：** 9
 
+<!--Device-InputDeviceData-bus: int--><!--Device-InputDeviceData-bus: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## id
@@ -45,6 +57,8 @@ id: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-InputDeviceData-id: int--><!--Device-InputDeviceData-id: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -62,6 +76,8 @@ true表示是本地设备，false表示是非本地设备。
 
 **起始版本：** 23
 
+<!--Device-InputDeviceData-isLocal?: boolean--><!--Device-InputDeviceData-isLocal?: boolean-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## isVirtual
@@ -78,6 +94,8 @@ true表示是虚拟设备，false表示是非虚拟设备。
 
 **起始版本：** 23
 
+<!--Device-InputDeviceData-isVirtual?: boolean--><!--Device-InputDeviceData-isVirtual?: boolean-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## name
@@ -91,6 +109,8 @@ name: string
 **类型：** string
 
 **起始版本：** 8
+
+<!--Device-InputDeviceData-name: string--><!--Device-InputDeviceData-name: string-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -106,6 +126,8 @@ phys: string
 
 **起始版本：** 9
 
+<!--Device-InputDeviceData-phys: string--><!--Device-InputDeviceData-phys: string-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## product
@@ -119,6 +141,8 @@ product: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-InputDeviceData-product: int--><!--Device-InputDeviceData-product: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -134,6 +158,8 @@ sources: Array<SourceType>
 
 **起始版本：** 8
 
+<!--Device-InputDeviceData-sources: Array<SourceType>--><!--Device-InputDeviceData-sources: Array<SourceType>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## uniq
@@ -147,6 +173,8 @@ uniq: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-InputDeviceData-uniq: string--><!--Device-InputDeviceData-uniq: string-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -162,6 +190,8 @@ vendor: number
 
 **起始版本：** 9
 
+<!--Device-InputDeviceData-vendor: int--><!--Device-InputDeviceData-vendor: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## version
@@ -175,6 +205,8 @@ version: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-InputDeviceData-version: int--><!--Device-InputDeviceData-version: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 

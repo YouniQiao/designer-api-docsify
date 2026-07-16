@@ -4,6 +4,8 @@ Represents an update service type.
 
 **Since:** 9
 
+<!--Device-update-export interface BusinessType--><!--Device-update-export interface BusinessType-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Represents an update type.
 
 **Since:** 9
 
+<!--Device-BusinessType-subType: BusinessSubType--><!--Device-BusinessType-subType: BusinessSubType-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Supplier or vendor.
 **Type:** BusinessVendor
 
 **Since:** 9
+
+<!--Device-BusinessType-vendor: BusinessVendor--><!--Device-BusinessType-vendor: BusinessVendor-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 

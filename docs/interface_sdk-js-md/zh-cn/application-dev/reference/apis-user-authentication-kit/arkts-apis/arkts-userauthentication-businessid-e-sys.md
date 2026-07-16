@@ -10,6 +10,8 @@
 
 **起始版本：** 23
 
+<!--Device-companionDeviceAuth-enum BusinessId--><!--Device-companionDeviceAuth-enum BusinessId-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -26,6 +28,8 @@ DEFAULT = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BusinessId-DEFAULT = 0--><!--Device-BusinessId-DEFAULT = 0-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -41,6 +45,8 @@ VENDOR_BEGIN = 10000
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BusinessId-VENDOR_BEGIN = 10000--><!--Device-BusinessId-VENDOR_BEGIN = 10000-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 

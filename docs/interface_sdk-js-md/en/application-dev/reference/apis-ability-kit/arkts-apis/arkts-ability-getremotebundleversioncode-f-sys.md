@@ -12,14 +12,15 @@ import { distributedBundleManager } from '@kit.AbilityKit';
 function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promise<number>
 ```
 
-Obtains the version information of an app with a specified bundle name on a specified remote device.
-This API uses a promise to return the result.
+Obtains the version information of an app with a specified bundle name on a specified remote device.This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-distributedBundleManager-function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promise<long>--><!--Device-distributedBundleManager-function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promise<long>-End-->
 
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
 
@@ -29,14 +30,14 @@ This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | ID of the remote device. You can call getAvailableDeviceList to obtainall trusted device lists. The value is the networkId field in the trusted device information. |
+| deviceId | string | Yes | ID of the remote device. You can call getAvailableDeviceList to obtain all trusted device lists. The value is the networkId field in the trusted device information. |
 | bundleName | string | Yes | Bundle name of the app. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise object. If the call succeeds, the version information is returned;if the call fails, an error object is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise object. If the call succeeds, the version information is returned;if the call fails, an error object is returned. |
 
 **Error codes:**
 

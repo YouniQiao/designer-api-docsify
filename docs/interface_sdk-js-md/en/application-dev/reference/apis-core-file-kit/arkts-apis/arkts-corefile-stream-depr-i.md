@@ -1,13 +1,14 @@
 # Stream
 
-Provides a stream for file operations. Before calling any API of the **Stream** class, use **createStream()** to
-create a **Stream** instance synchronously or asynchronously.
+Provides a stream for file operations. Before calling any API of the **Stream** class, use **createStream()** to create a **Stream** instance synchronously or asynchronously.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
 **Substitutes:** [fs:Stream](arkts-corefile-stream-i.md)
+
+<!--Device-unnamed-declare interface Stream--><!--Device-unnamed-declare interface Stream-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -25,13 +26,15 @@ Closes the file stream. This API uses a promise to return the result.
 
 **Substitutes:** [close](arkts-corefile-stream-i.md#close-1)
 
+<!--Device-Stream-close(): Promise<void>--><!--Device-Stream-close(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns the file stream closed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns the file stream closed. |
 
 **Example**
 
@@ -61,13 +64,15 @@ Closes the file stream. This API uses an asynchronous callback to return the res
 
 **Substitutes:** [close](arkts-corefile-stream-i.md#close-1)
 
+<!--Device-Stream-close(callback: AsyncCallback<void>): void--><!--Device-Stream-close(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback invoked when the file stream is closed asynchronously. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback invoked when the file stream is closed asynchronously. |
 
 **Example**
 
@@ -95,6 +100,8 @@ Closes the file stream. This API returns the result synchronously.
 
 **Substitutes:** [closeSync](arkts-corefile-stream-i.md#closesync-1)
 
+<!--Device-Stream-closeSync(): void--><!--Device-Stream-closeSync(): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Example**
@@ -120,13 +127,15 @@ Flushes the file stream. This API uses a promise to return the result.
 
 **Substitutes:** [flush](arkts-corefile-stream-i.md#flush-1)
 
+<!--Device-Stream-flush(): Promise<void>--><!--Device-Stream-flush(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns the file stream flushed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns the file stream flushed. |
 
 **Example**
 
@@ -156,13 +165,15 @@ Flushes the file stream. This API uses an asynchronous callback to return the re
 
 **Substitutes:** [flush](arkts-corefile-stream-i.md#flush-1)
 
+<!--Device-Stream-flush(callback: AsyncCallback<void>): void--><!--Device-Stream-flush(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback invoked when the file stream is asynchronously flushed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback invoked when the file stream is asynchronously flushed. |
 
 **Example**
 
@@ -189,6 +200,8 @@ Flushes the file stream. This API returns the result synchronously.
 **Deprecated since:** 9
 
 **Substitutes:** [flushSync](arkts-corefile-stream-i.md#flushsync-1)
+
+<!--Device-Stream-flushSync(): void--><!--Device-Stream-flushSync(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -222,20 +235,36 @@ Reads data from a stream file. This API uses a promise to return the result.
 
 **Substitutes:** [read](arkts-corefile-stream-i.md#read-1)
 
+<!--Device-Stream-read(
+    buffer: ArrayBuffer,
+    options?: {
+      position?: number;
+      offset?: number;
+      length?: number;
+    }
+  ): Promise<ReadOut>--><!--Device-Stream-read(
+    buffer: ArrayBuffer,
+    options?: {
+      position?: number;
+      offset?: number;
+      length?: number;
+    }
+  ): Promise<ReadOut>-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| options | {      position?: number;      offset?: number;      length?: number;    } | No | The options are as follows:<br>- **offset** (number): position to store the data readin the buffer relative to the start address of the buffer, in bytes. This parameter is optional. The defaultvalue is **0**.<br>- **length** (number): length of the data to read. This parameter is optional. The defaultvalue is the buffer length minus the offset, in bytes.<br>- **position** (number): position of the data to readin the file. This parameter is optional. By default, data is read from the current position, in bytes.<br>Constraints: offset + length &lt;= Buffer size |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Buffer used to store the file read. |
+| options | {       position?: number;       offset?: number;       length?: number;     } | No | The options are as follows:<br>- **offset** (number): position to store the data read in the buffer relative to the start address of the buffer, in bytes. This parameter is optional. The default value is **0**.<br>- **length** (number): length of the data to read. This parameter is optional. The default value is the buffer length minus the offset, in bytes.<br>- **position** (number): position of the data to read in the file. This parameter is optional. By default, data is read from the current position, in bytes.<br>Constraints: offset + length &lt;= Buffer size |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReadOut&gt; | Promise that returns the data read. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ReadOut> | Promise that returns the data read. |
 
 **Example**
 
@@ -278,14 +307,16 @@ read.
 
 **Substitutes:** [read](arkts-corefile-stream-i.md#read-1)
 
+<!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<ReadOut>): void--><!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<ReadOut>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | buffer. |
-| callback | AsyncCallback&lt;ReadOut&gt; | Yes | callback. |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | buffer. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ReadOut> | Yes | callback. |
 
 ## read
 
@@ -309,15 +340,33 @@ Reads data from a stream file. This API uses an asynchronous callback to return 
 
 **Substitutes:** [read](arkts-corefile-stream-i.md#read-1)
 
+<!--Device-Stream-read(
+    buffer: ArrayBuffer,
+    options: {
+      position?: number;
+      offset?: number;
+      length?: number;
+    },
+    callback: AsyncCallback<ReadOut>
+  ): void--><!--Device-Stream-read(
+    buffer: ArrayBuffer,
+    options: {
+      position?: number;
+      offset?: number;
+      length?: number;
+    },
+    callback: AsyncCallback<ReadOut>
+  ): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| options | {      position?: number;      offset?: number;      length?: number;    } | Yes | The options are as follows:<br>- **offset** (number): position to store the data readin the buffer relative to the start address of the buffer, in bytes. This parameter is optional. The defaultvalue is **0**.<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. Thedefault value is the buffer length minus the offset.<br>- **position** (number): position of the data to readin the file, in bytes. This parameter is optional. By default, data is read from the current position.<br>Constraints: offset + length &lt;= Buffer size |
-| callback | AsyncCallback&lt;ReadOut&gt; | Yes | Callback invoked when data is read asynchronously from the streamfile. |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Buffer used to store the file read. |
+| options | {       position?: number;       offset?: number;       length?: number;     } | Yes | The options are as follows:<br>- **offset** (number): position to store the data read in the buffer relative to the start address of the buffer, in bytes. This parameter is optional. The default value is **0**.<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length minus the offset.<br>- **position** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br>Constraints: offset + length &lt;= Buffer size |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ReadOut> | Yes | Callback invoked when data is read asynchronously from the stream file. |
 
 **Example**
 
@@ -367,14 +416,30 @@ Reads data from a stream file. This API returns the result synchronously.
 
 **Substitutes:** [readSync](arkts-corefile-stream-i.md#readsync-1)
 
+<!--Device-Stream-readSync(
+    buffer: ArrayBuffer,
+    options?: {
+      position?: number;
+      offset?: number;
+      length?: number;
+    }
+  ): number--><!--Device-Stream-readSync(
+    buffer: ArrayBuffer,
+    options?: {
+      position?: number;
+      offset?: number;
+      length?: number;
+    }
+  ): number-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| options | {      position?: number;      offset?: number;      length?: number;    } | No | The options are as follows:<br>- **offset** (number): position to store the data readin the buffer relative to the start address of the buffer, in bytes. This parameter is optional. The defaultvalue is **0**.<br>- **length** (number): length of the data to read. This parameter is optional. The defaultvalue is the buffer length minus the offset, in bytes.<br>- **position** (number): position of the data to readin the file, in bytes. This parameter is optional. By default, data is read from the current position.<br>Constraints: offset + length &lt;= Buffer size |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Buffer used to store the file read. |
+| options | {       position?: number;       offset?: number;       length?: number;     } | No | The options are as follows:<br>- **offset** (number): position to store the data read in the buffer relative to the start address of the buffer, in bytes. This parameter is optional. The default value is **0**.<br>- **length** (number): length of the data to read. This parameter is optional. The default value is the buffer length minus the offset, in bytes.<br>- **position** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br>Constraints: offset + length &lt;= Buffer size |
 
 **Return value:**
 
@@ -423,6 +488,24 @@ Writes data to a stream file. This API uses a promise to return the result.
 
 **Substitutes:** [write](arkts-corefile-stream-i.md#write-1)
 
+<!--Device-Stream-write(
+    buffer: ArrayBuffer | string,
+    options?: {
+      offset?: number;
+      length?: number;
+      position?: number;
+      encoding?: string;
+    }
+  ): Promise<number>--><!--Device-Stream-write(
+    buffer: ArrayBuffer | string,
+    options?: {
+      offset?: number;
+      length?: number;
+      position?: number;
+      encoding?: string;
+    }
+  ): Promise<number>-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
@@ -430,13 +513,13 @@ Writes data to a stream file. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | {      offset?: number;      length?: number;      position?: number;      encoding?: string;    } | No | The options are as follows:<br>- **offset** (number): offset of the write positionrelative to the start address of the data, in bytes. This parameter is optional. The default value is **0**.<br>- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value isthe buffer length minus the offset.<br>- **position** (number): start position to write the data into the file,in bytes. This parameter is optional. By default, data is written from the current position.<br>- **encoding**(string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, whichis the only value supported.<br>Constraints: offset + length &lt;= Buffer size |
+| options | {       offset?: number;       length?: number;       position?: number;       encoding?: string;     } | No | The options are as follows:<br>- **offset** (number): offset of the write position relative to the start address of the data, in bytes. This parameter is optional. The default value is **0**.<br  >- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length minus the offset.<br>- **position** (number): start position to write the data into the file,in bytes. This parameter is optional. By default, data is written from the current position.<br>- **encoding**(string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.<br>Constraints: offset + length &lt;= Buffer size |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise that returns the length of the data written, in bytes. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise that returns the length of the data written, in bytes. |
 
 **Example**
 
@@ -476,6 +559,8 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 
 **Substitutes:** [write](arkts-corefile-stream-i.md#write-1)
 
+<!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void--><!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
@@ -483,7 +568,7 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback invoked when the data is written asynchronously, which isused to return the length of the data written, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback invoked when the data is written asynchronously, which is used to return the length of the data written, in bytes. |
 
 ## write
 
@@ -508,6 +593,26 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 
 **Substitutes:** [write](arkts-corefile-stream-i.md#write-1)
 
+<!--Device-Stream-write(
+    buffer: ArrayBuffer | string,
+    options: {
+      offset?: number;
+      length?: number;
+      position?: number;
+      encoding?: string;
+    },
+    callback: AsyncCallback<number>
+  ): void--><!--Device-Stream-write(
+    buffer: ArrayBuffer | string,
+    options: {
+      offset?: number;
+      length?: number;
+      position?: number;
+      encoding?: string;
+    },
+    callback: AsyncCallback<number>
+  ): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
@@ -515,8 +620,8 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | {      offset?: number;      length?: number;      position?: number;      encoding?: string;    } | Yes | The options are as follows:<br>- **offset** (number): offset of the write positionrelative to the start address of the data, in bytes. This parameter is optional. The default value is **0**.<br>- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value isthe buffer length minus the offset.<br>- **position** (number): start position to write the data into the file,in bytes. This parameter is optional. By default, data is written from the current position.<br>- **encoding**(string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, whichis the only value supported.<br>Constraints: offset + length &lt;= Buffer size |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback invoked when the data is written asynchronously, which isused to return the length of the data written, in bytes. |
+| options | {       offset?: number;       length?: number;       position?: number;       encoding?: string;     } | Yes | The options are as follows:<br>- **offset** (number): offset of the write position relative to the start address of the data, in bytes. This parameter is optional. The default value is **0**.<br  >- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length minus the offset.<br>- **position** (number): start position to write the data into the file,in bytes. This parameter is optional. By default, data is written from the current position.<br>- **encoding**(string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.<br>Constraints: offset + length &lt;= Buffer size |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback invoked when the data is written asynchronously, which is used to return the length of the data written, in bytes. |
 
 **Example**
 
@@ -565,6 +670,24 @@ Writes data to a stream file. This API returns the result synchronously.
 
 **Substitutes:** [writeSync](arkts-corefile-stream-i.md#writesync-1)
 
+<!--Device-Stream-writeSync(
+    buffer: ArrayBuffer | string,
+    options?: {
+      offset?: number;
+      length?: number;
+      position?: number;
+      encoding?: string;
+    }
+  ): number--><!--Device-Stream-writeSync(
+    buffer: ArrayBuffer | string,
+    options?: {
+      offset?: number;
+      length?: number;
+      position?: number;
+      encoding?: string;
+    }
+  ): number-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
@@ -572,7 +695,7 @@ Writes data to a stream file. This API returns the result synchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | {      offset?: number;      length?: number;      position?: number;      encoding?: string;    } | No | The options are as follows:<br>- **offset** (number): offset of the write positionrelative to the start address of the data, in bytes. This parameter is optional. The default value is **0**.<br>- **length** (number): length of the data to write. This parameter is optional. The default value is thebuffer length minus the offset.<br>- **position** (number): start position to write the data into the file, inbytes. This parameter is optional. By default, data is written from the current position.<br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which isthe only value supported.<br>Constraints: offset + length &lt;= Buffer size |
+| options | {       offset?: number;       length?: number;       position?: number;       encoding?: string;     } | No | The options are as follows:<br>- **offset** (number): offset of the write position relative to the start address of the data, in bytes. This parameter is optional. The default value is **0**.<br  >- **length** (number): length of the data to write. This parameter is optional. The default value is the buffer length minus the offset.<br>- **position** (number): start position to write the data into the file, in bytes. This parameter is optional. By default, data is written from the current position.<br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.<br>Constraints: offset + length &lt;= Buffer size |
 
 **Return value:**
 

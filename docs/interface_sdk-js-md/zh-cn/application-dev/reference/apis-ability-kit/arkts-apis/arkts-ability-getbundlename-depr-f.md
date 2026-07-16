@@ -14,7 +14,9 @@ function getBundleName(agent: WantAgent, callback: AsyncCallback<string>): void
 
 **替代接口：** getBundleName
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-wantAgent-function getBundleName(agent: WantAgent, callback: AsyncCallback<string>): void--><!--Device-wantAgent-function getBundleName(agent: WantAgent, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -22,8 +24,8 @@ function getBundleName(agent: WantAgent, callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| agent | WantAgent | 是 | WantAgent对象。 |
-| callback | AsyncCallback&lt;string&gt; | 是 | 获取WantAgent实例的包名的回调方法。 |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | 是 | WantAgent对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | 获取WantAgent实例的包名的回调方法。 |
 
 **示例：**
 
@@ -95,7 +97,9 @@ function getBundleName(agent: WantAgent): Promise<string>
 
 **替代接口：** getBundleName
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-wantAgent-function getBundleName(agent: WantAgent): Promise<string>--><!--Device-wantAgent-function getBundleName(agent: WantAgent): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -103,13 +107,13 @@ function getBundleName(agent: WantAgent): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| agent | WantAgent | 是 | WantAgent对象。 |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | 是 | WantAgent对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | 以Promise形式返回获取WantAgent实例的Bundle名称。 |
+| Promise<string> | 以Promise形式返回获取WantAgent实例的Bundle名称。 |
 
 **示例：**
 

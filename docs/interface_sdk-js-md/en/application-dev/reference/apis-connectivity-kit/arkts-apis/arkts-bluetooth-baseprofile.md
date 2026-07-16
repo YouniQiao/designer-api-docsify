@@ -4,6 +4,8 @@ Provides basic profile methods.
 
 **Since:** 10
 
+<!--Device-unnamed-declare namespace baseProfile--><!--Device-unnamed-declare namespace baseProfile-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import

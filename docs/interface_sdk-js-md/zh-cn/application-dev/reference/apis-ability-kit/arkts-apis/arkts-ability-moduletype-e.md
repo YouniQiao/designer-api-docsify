@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-bundleManager-export enum ModuleType--><!--Device-bundleManager-export enum ModuleType-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## ENTRY
@@ -16,7 +18,9 @@ ENTRY = 1
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ModuleType-ENTRY = 1--><!--Device-ModuleType-ENTRY = 1-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -30,7 +34,9 @@ FEATURE = 2
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ModuleType-FEATURE = 2--><!--Device-ModuleType-FEATURE = 2-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -44,7 +50,9 @@ SHARED = 3
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ModuleType-SHARED = 3--><!--Device-ModuleType-SHARED = 3-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

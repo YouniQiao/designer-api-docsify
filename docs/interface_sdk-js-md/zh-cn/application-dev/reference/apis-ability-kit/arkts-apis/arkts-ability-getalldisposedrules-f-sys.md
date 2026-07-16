@@ -1,5 +1,11 @@
 # getAllDisposedRules（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appControl } from '@kit.AbilityKit';
+```
+
 ## getAllDisposedRules
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getAllDisposedRules(): Array<DisposedRuleConfiguration>
 
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS or ohos.permission.GET_DISPOSED_APP_STATUS
 
+<!--Device-appControl-function getAllDisposedRules(): Array<DisposedRuleConfiguration>--><!--Device-appControl-function getAllDisposedRules(): Array<DisposedRuleConfiguration>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function getAllDisposedRules(): Array<DisposedRuleConfiguration>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;DisposedRuleConfiguration&gt; | 应用已设置的拦截规则。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<DisposedRuleConfiguration> | 应用已设置的拦截规则。 |
 
 **错误码：**
 

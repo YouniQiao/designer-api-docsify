@@ -1,5 +1,11 @@
 # getCaptionsManager
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+```
+
 ## getCaptionsManager
 
 ```TypeScript
@@ -12,13 +18,15 @@ function getCaptionsManager(): CaptionsManager
 
 **废弃版本：** 12
 
+<!--Device-accessibility-function getCaptionsManager(): CaptionsManager--><!--Device-accessibility-function getCaptionsManager(): CaptionsManager-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| CaptionsManager | 无障碍字幕配置管理。 |
+| [CaptionsManager](arkts-accessibility-captionsmanager-i.md) | 无障碍字幕配置管理。 |
 
 **示例：**
 

@@ -4,6 +4,8 @@ Describes the data structure of the task response header.
 
 **Since:** 12
 
+<!--Device-agent-interface HttpResponse--><!--Device-agent-interface HttpResponse-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## Modules to Import
@@ -26,6 +28,8 @@ HTTP response header.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HttpResponse-readonly headers: Map<string, Array<string>>--><!--Device-HttpResponse-readonly headers: Map<string, Array<string>>-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## reason
@@ -41,6 +45,8 @@ HTTP response cause.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HttpResponse-readonly reason: string--><!--Device-HttpResponse-readonly reason: string-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -58,6 +64,8 @@ HTTP response status code.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HttpResponse-readonly statusCode: int--><!--Device-HttpResponse-readonly statusCode: int-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## version
@@ -73,6 +81,8 @@ HTTP version.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HttpResponse-readonly version: string--><!--Device-HttpResponse-readonly version: string-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 

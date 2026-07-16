@@ -4,6 +4,8 @@ Describes the measurement information of a single line of text in the text layou
 
 **Since:** 12
 
+<!--Device-text-interface LineMetrics--><!--Device-text-interface LineMetrics-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
@@ -18,14 +20,15 @@ import { text } from '@kit.ArkGraphics2D';
 ascent: number
 ```
 
-Text ascent height, which refers to the distance from the baseline to the top of characters, in physical pixels (
-px).
+Text ascent height, which refers to the distance from the baseline to the top of characters, in physical pixels (px).
 
 **Type:** number
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-LineMetrics-ascent: double--><!--Device-LineMetrics-ascent: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -43,6 +46,8 @@ Y coordinate of the baseline in the line relative to the top of the paragraph, i
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-LineMetrics-baseline: double--><!--Device-LineMetrics-baseline: double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## descent
@@ -51,14 +56,15 @@ Y coordinate of the baseline in the line relative to the top of the paragraph, i
 descent: number
 ```
 
-Text descent height, which refers to the distance from the baseline to the bottom of characters, in physical
-pixels (px).
+Text descent height, which refers to the distance from the baseline to the bottom of characters, in physical pixels (px).
 
 **Type:** number
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-LineMetrics-descent: double--><!--Device-LineMetrics-descent: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -76,6 +82,8 @@ End index of the line in the text buffer.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-LineMetrics-endIndex: int--><!--Device-LineMetrics-endIndex: int-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## height
@@ -92,6 +100,8 @@ Height of the current line, in physical pixels (px). The calculation method is `
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-LineMetrics-height: double--><!--Device-LineMetrics-height: double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## left
@@ -100,14 +110,15 @@ Height of the current line, in physical pixels (px). The calculation method is `
 left: number
 ```
 
-Left edge position of a line, in physical pixels (px). The right edge is the value of **left** plus the value of
-**width**.
+Left edge position of a line, in physical pixels (px). The right edge is the value of **left** plus the value of **width**.
 
 **Type:** number
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-LineMetrics-left: double--><!--Device-LineMetrics-left: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -125,6 +136,8 @@ Line number, starting from 0.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-LineMetrics-lineNumber: int--><!--Device-LineMetrics-lineNumber: int-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## runMetrics
@@ -140,6 +153,8 @@ Mapping between the text index range and the associated font measurement informa
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-LineMetrics-runMetrics: Map<int, RunMetrics>--><!--Device-LineMetrics-runMetrics: Map<int, RunMetrics>-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -157,6 +172,8 @@ Start index of the line in the text buffer.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-LineMetrics-startIndex: int--><!--Device-LineMetrics-startIndex: int-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## topHeight
@@ -173,6 +190,8 @@ Height from the top to the current line, in physical pixels (px).
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-LineMetrics-topHeight: double--><!--Device-LineMetrics-topHeight: double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## width
@@ -188,6 +207,8 @@ Width of a line, in physical pixels (px).
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-LineMetrics-width: double--><!--Device-LineMetrics-width: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

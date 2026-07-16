@@ -4,6 +4,8 @@ Enumerates the desired dynamic range of an image during decoding.
 
 **Since:** 12
 
+<!--Device-image-enum DecodingDynamicRange--><!--Device-image-enum DecodingDynamicRange-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## AUTO
@@ -12,12 +14,11 @@ Enumerates the desired dynamic range of an image during decoding.
 AUTO = 0
 ```
 
-The image is decoded based on the format. If the image is in HDR format, it is decoded based on the HDR content;
-otherwise, it is decoded based on the SDR content. The image source created by calling
-[CreateIncrementalSource](arkts-image-createincrementalsource-f.md#createincrementalsource-1) is
-decoded into SDR content.
+The image is decoded based on the format. If the image is in HDR format, it is decoded based on the HDR content;otherwise, it is decoded based on the SDR content. The image source created by calling [CreateIncrementalSource](arkts-image-createincrementalsource-f.md#createincrementalsource-1) is decoded into SDR content.
 
 **Since:** 12
+
+<!--Device-DecodingDynamicRange-AUTO = 0--><!--Device-DecodingDynamicRange-AUTO = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -31,6 +32,8 @@ The image is decoded according to the standard dynamic range.
 
 **Since:** 12
 
+<!--Device-DecodingDynamicRange-SDR = 1--><!--Device-DecodingDynamicRange-SDR = 1-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## HDR
@@ -39,11 +42,11 @@ The image is decoded according to the standard dynamic range.
 HDR = 2
 ```
 
-The image is decoded according to the high dynamic range. The image source created by calling
-[CreateIncrementalSource](arkts-image-createincrementalsource-f.md#createincrementalsource-1) is
-decoded into SDR content.
+The image is decoded according to the high dynamic range. The image source created by calling [CreateIncrementalSource](arkts-image-createincrementalsource-f.md#createincrementalsource-1) is decoded into SDR content.
 
 **Since:** 12
+
+<!--Device-DecodingDynamicRange-HDR = 2--><!--Device-DecodingDynamicRange-HDR = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

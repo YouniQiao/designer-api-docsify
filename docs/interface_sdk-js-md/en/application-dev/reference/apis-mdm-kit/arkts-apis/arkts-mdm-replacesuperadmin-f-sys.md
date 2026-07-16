@@ -20,6 +20,8 @@ Replaces a specified application with a super device administrator application.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-adminManager-function replaceSuperAdmin(oldAdmin: Want, newAdmin: Want, isKeepPolicy: boolean): void--><!--Device-adminManager-function replaceSuperAdmin(oldAdmin: Want, newAdmin: Want, isKeepPolicy: boolean): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -28,9 +30,9 @@ Replaces a specified application with a super device administrator application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oldAdmin | Want | Yes | Old EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the oldEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| newAdmin | Want | Yes | New EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the newEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| isKeepPolicy | boolean | Yes | A Boolean value indicates whether to retain the policy of the old**EnterpriseAdminExtensionAbility**. The value **true** means that the policy is retained, and the value**false** means the opposite. |
+| oldAdmin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Old EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the old EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| newAdmin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | New EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the new EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| isKeepPolicy | boolean | Yes | A Boolean value indicates whether to retain the policy of the old **EnterpriseAdminExtensionAbility**. The value **true** means that the policy is retained, and the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -39,7 +41,7 @@ Replaces a specified application with a super device administrator application.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200003](../errorcode-enterpriseDeviceManager.md#9200003-invalid-administrator-ability-component) | The administrator ability component is invalid. |
 | [9200011](../errorcode-enterpriseDeviceManager.md#9200011-failed-to-replace-the-device-administrator-application) | Failed to replace the administrator application of the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 **Example**

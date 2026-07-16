@@ -4,6 +4,8 @@ Describes group configuration options for download tasks.
 
 **Since:** 15
 
+<!--Device-agent-interface GroupConfig--><!--Device-agent-interface GroupConfig-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## Modules to Import
@@ -20,7 +22,7 @@ gauge?: boolean
 
 Whether to send progress notifications. This parameter applies only to background tasks.
 
-- **true**: The progress, success, and failure notifications are displayed.
+- **true**: The progress, success, and failure notifications are displayed.  
 - **false**: Only success and failure notifications are displayed.
 
 The default value is **false**.
@@ -28,6 +30,8 @@ The default value is **false**.
 **Type:** boolean
 
 **Since:** 15
+
+<!--Device-GroupConfig-gauge?: boolean--><!--Device-GroupConfig-gauge?: boolean-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -42,6 +46,8 @@ Custom settings for the notification bar. The default value is **{}**.
 **Type:** Notification
 
 **Since:** 15
+
+<!--Device-GroupConfig-notification: Notification--><!--Device-GroupConfig-notification: Notification-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 

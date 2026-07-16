@@ -1,16 +1,17 @@
 # @ohos.enterprise.deviceInfo
 
-The **deviceInfo** module provides APIs for enterprise device information management, including obtaining device
-serial numbers and device names.
+The **deviceInfo** module provides APIs for enterprise device information management, including obtaining device serial numbers and device names.
 
-> **NOTE**
->
-> The APIs of this module can be used only in the stage model.
->
-> The APIs of this module can be called only by a device administrator application that is enabled. For details, see
+> **NOTE**  
+>  
+> The APIs of this module can be used only in the stage model.  
+>  
+> The APIs of this module can be called only by a device administrator application that is enabled. For details, see  
 > [MDM Kit Development](../../../../mdm/mdm-kit-guide.md).
 
 **Since:** 10
+
+<!--Device-unnamed-declare namespace deviceInfo--><!--Device-unnamed-declare namespace deviceInfo-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

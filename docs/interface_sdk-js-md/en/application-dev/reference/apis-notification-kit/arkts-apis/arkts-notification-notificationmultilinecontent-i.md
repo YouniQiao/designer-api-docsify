@@ -2,22 +2,24 @@
 
 Describes the multi-line text notification. This API is inherited from NotificationBasicContent.
 
-> **NOTE**
->
-> - When this notification type forms a group notification with other notifications, its display effect defaults
-> to the collapsed state, and the displayed title and body are the **title** and **text** inherited from
-> NotificationBasicContent. When this notification type is displayed alone and does not form a group notification
-> with other notifications, its display effect defaults to the expanded state, where the displayed title is the
-> expanded title **longTitle**, and the multi-line text content **lines** is displayed as the body.
->
-> - When a user taps a group notification to view the notification details, the display effect of this
-> notification changes to the expanded state.
->
+> **NOTE**  
+>  
+> - When this notification type forms a group notification with other notifications, its display effect defaults  
+> to the collapsed state, and the displayed title and body are the **title** and **text** inherited from  
+> NotificationBasicContent. When this notification type is displayed alone and does not form a group notification  
+> with other notifications, its display effect defaults to the expanded state, where the displayed title is the  
+> expanded title **longTitle**, and the multi-line text content **lines** is displayed as the body.  
+>  
+> - When a user taps a group notification to view the notification details, the display effect of this  
+> notification changes to the expanded state.  
+>  
 > - The actual display effect depends on the device capabilities and the notification center UI style.
 
 **Inheritance/Implementation:** NotificationMultiLineContent extends [NotificationBasicContent](arkts-notification-notificationbasiccontent-i.md)
 
 **Since:** 7
+
+<!--Device-unnamed-export interface NotificationMultiLineContent extends NotificationBasicContent--><!--Device-unnamed-export interface NotificationMultiLineContent extends NotificationBasicContent-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -27,13 +29,13 @@ Describes the multi-line text notification. This API is inherited from Notificat
 briefText: string
 ```
 
-Notification summary content, which is a summary of the notification content and is not displayed in the
-notification center. It cannot be an empty string. The size does not exceed 1024 bytes, and the excess part
-will be truncated.
+Notification summary content, which is a summary of the notification content and is not displayed in the notification center. It cannot be an empty string. The size does not exceed 1024 bytes, and the excess part will be truncated.
 
 **Type:** string
 
 **Since:** 7
+
+<!--Device-NotificationMultiLineContent-briefText: string--><!--Device-NotificationMultiLineContent-briefText: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -43,12 +45,13 @@ will be truncated.
 lines: Array<string>
 ```
 
-List of multi-line text displayed after the notification is expanded. Each line is displayed as an independent
-entry and supports up to three lines. Each line size does not exceed 1024 bytes, excess part will be truncated.
+List of multi-line text displayed after the notification is expanded. Each line is displayed as an independent entry and supports up to three lines. Each line size does not exceed 1024 bytes, excess part will be truncated.
 
 **Type:** Array<string>
 
 **Since:** 7
+
+<!--Device-NotificationMultiLineContent-lines: Array<string>--><!--Device-NotificationMultiLineContent-lines: Array<string>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -58,12 +61,13 @@ entry and supports up to three lines. Each line size does not exceed 1024 bytes,
 longTitle: string
 ```
 
-Title when the notification is expanded. It cannot be an empty string. The size does not exceed 1024 bytes,
-and the excess part will be truncated.
+Title when the notification is expanded. It cannot be an empty string. The size does not exceed 1024 bytes,and the excess part will be truncated.
 
 **Type:** string
 
 **Since:** 7
+
+<!--Device-NotificationMultiLineContent-longTitle: string--><!--Device-NotificationMultiLineContent-longTitle: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

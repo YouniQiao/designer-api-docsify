@@ -1,15 +1,20 @@
 # ToneAttrs（系统接口）
 
-管理铃声属性。在调用ToneAttrs<sup>12+</sup>的接口前，需要先通过
-[createCustomizedToneAttrs](arkts-audio-createcustomizedtoneattrs-f-sys.md#createcustomizedtoneattrs-1)或
-[getDefaultRingtoneAttrs](arkts-audio-systemsoundmanager-i-sys.md#getdefaultringtoneattrs-1)、
-[getRingtoneAttrList](arkts-audio-systemsoundmanager-i-sys.md#getringtoneattrlist-1)等方法获取实例。
+管理铃声属性。在调用ToneAttrs<sup>12+</sup>的接口前，需要先通过[createCustomizedToneAttrs](arkts-audio-createcustomizedtoneattrs-f-sys.md#createcustomizedtoneattrs-1)或[getDefaultRingtoneAttrs](arkts-audio-systemsoundmanager-i-sys.md#getdefaultringtoneattrs-1)、[getRingtoneAttrList](arkts-audio-systemsoundmanager-i-sys.md#getringtoneattrlist-1)等方法获取实例。
 
 **起始版本：** 12
+
+<!--Device-systemSoundManager-interface ToneAttrs--><!--Device-systemSoundManager-interface ToneAttrs-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { systemSoundManager } from '@kit.AudioKit';
+```
 
 ## getCategory
 
@@ -20,6 +25,8 @@ getCategory(): number
 获取铃声类别。
 
 **起始版本：** 12
+
+<!--Device-ToneAttrs-getCategory(): int--><!--Device-ToneAttrs-getCategory(): int-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -54,6 +61,8 @@ getCustomizedType(): ToneCustomizedType
 
 **起始版本：** 12
 
+<!--Device-ToneAttrs-getCustomizedType(): ToneCustomizedType--><!--Device-ToneAttrs-getCustomizedType(): ToneCustomizedType-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -62,7 +71,7 @@ getCustomizedType(): ToneCustomizedType
 
 | 类型 | 说明 |
 | --- | --- |
-| ToneCustomizedType | 定制铃音类型。 |
+| [ToneCustomizedType](arkts-audio-tonecustomizedtype-e-sys.md) | 定制铃音类型。 |
 
 **错误码：**
 
@@ -86,6 +95,8 @@ getFileName(): string
 获取铃声文件名。
 
 **起始版本：** 12
+
+<!--Device-ToneAttrs-getFileName(): string--><!--Device-ToneAttrs-getFileName(): string-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -120,6 +131,8 @@ getMediaType():MediaType
 
 **起始版本：** 20
 
+<!--Device-ToneAttrs-getMediaType():MediaType--><!--Device-ToneAttrs-getMediaType():MediaType-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -128,7 +141,7 @@ getMediaType():MediaType
 
 | 类型 | 说明 |
 | --- | --- |
-| MediaType | 媒体类型，如果应用未调用过setMediaType设置mediatype，则此函数返回的默认值为AUDIO。 |
+| [MediaType](../../apis-media-kit/arkts-apis/arkts-media-mediatype-e.md) | 媒体类型，如果应用未调用过setMediaType设置mediatype，则此函数返回的默认值为AUDIO。 |
 
 **错误码：**
 
@@ -152,6 +165,8 @@ getTitle(): string
 获取铃声标题。
 
 **起始版本：** 12
+
+<!--Device-ToneAttrs-getTitle(): string--><!--Device-ToneAttrs-getTitle(): string-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -186,6 +201,8 @@ getUri(): string
 
 **起始版本：** 12
 
+<!--Device-ToneAttrs-getUri(): string--><!--Device-ToneAttrs-getUri(): string-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -218,6 +235,8 @@ setCategory(category: number): void
 设置铃声类别。
 
 **起始版本：** 12
+
+<!--Device-ToneAttrs-setCategory(category: int): void--><!--Device-ToneAttrs-setCategory(category: int): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -255,6 +274,8 @@ setFileName(name: string): void
 
 **起始版本：** 12
 
+<!--Device-ToneAttrs-setFileName(name: string): void--><!--Device-ToneAttrs-setFileName(name: string): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -291,6 +312,8 @@ setMediaType(type:MediaType):void
 
 **起始版本：** 20
 
+<!--Device-ToneAttrs-setMediaType(type:MediaType):void--><!--Device-ToneAttrs-setMediaType(type:MediaType):void-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -299,7 +322,7 @@ setMediaType(type:MediaType):void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | MediaType | 是 | 媒体类型。 |
+| type | [MediaType](../../apis-media-kit/arkts-apis/arkts-media-mediatype-e.md) | 是 | 媒体类型。 |
 
 **错误码：**
 
@@ -325,6 +348,8 @@ setTitle(title: string): void
 设置铃声标题。
 
 **起始版本：** 12
+
+<!--Device-ToneAttrs-setTitle(title: string): void--><!--Device-ToneAttrs-setTitle(title: string): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 

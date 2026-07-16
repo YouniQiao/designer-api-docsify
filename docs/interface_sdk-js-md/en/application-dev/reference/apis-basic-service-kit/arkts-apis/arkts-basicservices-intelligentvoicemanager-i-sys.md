@@ -4,6 +4,8 @@ Implements intelligent voice management.
 
 **Since:** 10
 
+<!--Device-intelligentVoice-interface IntelligentVoiceManager--><!--Device-intelligentVoice-interface IntelligentVoiceManager-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Obtains capability information.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-IntelligentVoiceManager-getCapabilityInfo(): Array<IntelligentVoiceEngineType>--><!--Device-IntelligentVoiceManager-getCapabilityInfo(): Array<IntelligentVoiceEngineType>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -34,7 +38,7 @@ Obtains capability information.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;IntelligentVoiceEngineType&gt; | array of supported IntelligentVoiceEngineType. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<IntelligentVoiceEngineType> | array of supported IntelligentVoiceEngineType. |
 
 **Error codes:**
 
@@ -64,6 +68,8 @@ Unsubscribes service change events.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-IntelligentVoiceManager-off(type: 'serviceChange', callback?: Callback<ServiceChangeType>): void--><!--Device-IntelligentVoiceManager-off(type: 'serviceChange', callback?: Callback<ServiceChangeType>): void-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -73,7 +79,7 @@ Unsubscribes service change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceChange' | Yes | Type of the event to listen for. Only the serviceChange event is supported. |
-| callback | Callback&lt;ServiceChangeType&gt; | No | Callback is invoked when the event is triggered. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ServiceChangeType> | No | Callback is invoked when the event is triggered. |
 
 **Error codes:**
 
@@ -97,12 +103,13 @@ if (intelligentVoiceManager != null) {
 on(type: 'serviceChange', callback: Callback<ServiceChangeType>): void
 ```
 
-Subscribes service change events. When the state of intelligent voice service changes,
-the callback is invoked.
+Subscribes service change events. When the state of intelligent voice service changes,the callback is invoked.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
+
+<!--Device-IntelligentVoiceManager-on(type: 'serviceChange', callback: Callback<ServiceChangeType>): void--><!--Device-IntelligentVoiceManager-on(type: 'serviceChange', callback: Callback<ServiceChangeType>): void-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -113,7 +120,7 @@ the callback is invoked.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceChange' | Yes | Type of the event to listen for. Only the serviceChange event is supported. |
-| callback | Callback&lt;ServiceChangeType&gt; | Yes | Callback is invoked when the event is triggered. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ServiceChangeType> | Yes | Callback is invoked when the event is triggered. |
 
 **Error codes:**
 

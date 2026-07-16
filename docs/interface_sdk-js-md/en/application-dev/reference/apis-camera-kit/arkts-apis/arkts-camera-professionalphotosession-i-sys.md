@@ -1,14 +1,12 @@
 # ProfessionalPhotoSession (System API)
 
-ProfessionalPhotoSession extends Session, AutoExposure, ManualExposure, Focus, ManualFocus, WhiteBalance, ManualIso
-, Flash, Zoom, ColorEffect, Aperture
-Implements a professional photo session, which sets the parameters of the professional photo mode and saves all
-[CameraInput](arkts-camera-camerainput-i.md) and [CameraOutput](arkts-camera-cameraoutput-i.md)
-instances required to run the camera. It inherits from [Session](arkts-camera-session-i.md).
+ProfessionalPhotoSession extends Session, AutoExposure, ManualExposure, Focus, ManualFocus, WhiteBalance, ManualIso, Flash, Zoom, ColorEffect, Aperture Implements a professional photo session, which sets the parameters of the professional photo mode and saves all [CameraInput](arkts-camera-camerainput-i.md) and [CameraOutput](arkts-camera-cameraoutput-i.md)instances required to run the camera. It inherits from [Session](arkts-camera-session-i.md).
 
-**Inheritance/Implementation:** ProfessionalPhotoSession extends [Session](arkts-camera-session-i.md), [AutoExposure](arkts-camera-autoexposure-i.md), [ManualExposure](arkts-camera-manualexposure-i.md), [Focus](arkts-camera-focus-i.md), [ManualFocus](arkts-camera-manualfocus-i-sys.md), [WhiteBalance](arkts-camera-whitebalance-i.md), [ManualIso](arkts-camera-manualiso-i-sys.md), [Flash](arkts-camera-flash-i.md), [Zoom](arkts-camera-zoom-i.md), [ColorEffect](arkts-camera-coloreffect-i-sys.md), [Aperture](arkts-camera-aperture-i-sys.md)
+**Inheritance/Implementation:** ProfessionalPhotoSession extends [Session](arkts-camera-session-i.md), [AutoExposure](arkts-camera-autoexposure-i.md), [ManualExposure](arkts-camera-manualexposure-i-sys.md), [Focus](arkts-camera-focus-i.md), [ManualFocus](arkts-camera-manualfocus-i-sys.md), [WhiteBalance](arkts-camera-whitebalance-i-sys.md), [ManualIso](arkts-camera-manualiso-i-sys.md), [Flash](arkts-camera-flash-i.md), [Zoom](arkts-camera-zoom-i.md), [ColorEffect](arkts-camera-coloreffect-i-sys.md), [Aperture](arkts-camera-aperture-i-sys.md)
 
 **Since:** 12
+
+<!--Device-camera-interface ProfessionalPhotoSession extends Session, AutoExposure, ManualExposure, Focus,    ManualFocus, WhiteBalance, ManualIso, Flash, Zoom, ColorEffect, Aperture--><!--Device-camera-interface ProfessionalPhotoSession extends Session, AutoExposure, ManualExposure, Focus,    ManualFocus, WhiteBalance, ManualIso, Flash, Zoom, ColorEffect, Aperture-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -30,6 +28,8 @@ Unsubscribes from HighResolutionPhotoSession error events.
 
 **Since:** 12
 
+<!--Device-ProfessionalPhotoSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-ProfessionalPhotoSession-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -38,8 +38,8 @@ Unsubscribes from HighResolutionPhotoSession error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when asession is created. |
-| callback | ErrorCallback | No | Callback used to return the result. This parameter is optional. If thisparameter is specified, the subscription to the specified event **on('error')** with the specified callbackis canceled. (The callback object cannot be an anonymous function.) |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('error')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
 
@@ -66,6 +66,8 @@ Unsubscribes from focus state change events.
 
 **Since:** 12
 
+<!--Device-ProfessionalPhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-ProfessionalPhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -74,8 +76,8 @@ Unsubscribes from focus state change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can belistened for when a session is created. |
-| callback | AsyncCallback&lt;FocusState&gt; | No | Callback used to return the result. This parameter is optional.If this parameter is specified, the subscription to the specified event **on('focusStateChange')** with thespecified callback is canceled. (The callback object cannot be an anonymous function.) |
+| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FocusState> | No | Callback used to return the result. This parameter is optional.If this parameter is specified, the subscription to the specified event **on('focusStateChange')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
 
@@ -102,6 +104,8 @@ Unsubscribes from smooth zoom state change events.
 
 **Since:** 12
 
+<!--Device-ProfessionalPhotoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void--><!--Device-ProfessionalPhotoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -110,8 +114,8 @@ Unsubscribes from smooth zoom state change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'smoothZoomInfoAvailable' | Yes | Event type. The value is fixed at **'smoothZoomInfoAvailable'**. Theevent can be listened for when a session is created. |
-| callback | AsyncCallback&lt;SmoothZoomInfo&gt; | No | Callback used to return the result. This parameter isoptional. If this parameter is specified, the subscription to the specified event**on('smoothZoomInfoAvailable')** with the specified callback is canceled. (The callback object cannot be ananonymous function.) |
+| type | 'smoothZoomInfoAvailable' | Yes | Event type. The value is fixed at **'smoothZoomInfoAvailable'**. The event can be listened for when a session is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<SmoothZoomInfo> | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('smoothZoomInfoAvailable')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
 
@@ -138,6 +142,8 @@ Unsubscribes from automatic ISO change events.
 
 **Since:** 12
 
+<!--Device-ProfessionalPhotoSession-off(type: 'isoInfoChange', callback?: AsyncCallback<IsoInfo>): void--><!--Device-ProfessionalPhotoSession-off(type: 'isoInfoChange', callback?: AsyncCallback<IsoInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -147,7 +153,7 @@ Unsubscribes from automatic ISO change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'isoInfoChange' | Yes | Event type. The value is fixed at **'isoInfoChange'**. |
-| callback | AsyncCallback&lt;IsoInfo&gt; | No | Callback, which is optional and is used to match **callback** in**on('isoInfoChange')**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<IsoInfo> | No | Callback, which is optional and is used to match **callback** in **on('isoInfoChange')**. |
 
 **Error codes:**
 
@@ -174,6 +180,8 @@ Unsubscribes from exposure information change events.
 
 **Since:** 12
 
+<!--Device-ProfessionalPhotoSession-off(type: 'exposureInfoChange', callback?: AsyncCallback<ExposureInfo>): void--><!--Device-ProfessionalPhotoSession-off(type: 'exposureInfoChange', callback?: AsyncCallback<ExposureInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -183,7 +191,7 @@ Unsubscribes from exposure information change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'exposureInfoChange' | Yes | Event type. The value is fixed at **'exposureInfoChange'**. |
-| callback | AsyncCallback&lt;ExposureInfo&gt; | No | Callback, which is optional and is used to match **callback**in **on('exposureInfoChange')**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ExposureInfo> | No | Callback, which is optional and is used to match **callback** in **on('exposureInfoChange')**. |
 
 **Error codes:**
 
@@ -210,6 +218,8 @@ Unsubscribes from aperture change events.
 
 **Since:** 12
 
+<!--Device-ProfessionalPhotoSession-off(type: 'apertureInfoChange', callback?: AsyncCallback<ApertureInfo>): void--><!--Device-ProfessionalPhotoSession-off(type: 'apertureInfoChange', callback?: AsyncCallback<ApertureInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -219,7 +229,7 @@ Unsubscribes from aperture change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'apertureInfoChange' | Yes | Event type. The value is fixed at **'apertureInfoChange'**. |
-| callback | AsyncCallback&lt;ApertureInfo&gt; | No | Callback, which is optional and is used to match **callback**in **on('apertureInfoChange')**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ApertureInfo> | No | Callback, which is optional and is used to match **callback** in **on('apertureInfoChange')**. |
 
 **Error codes:**
 
@@ -246,6 +256,8 @@ Unsubscribes from illumination change events.
 
 **Since:** 12
 
+<!--Device-ProfessionalPhotoSession-off(type: 'luminationInfoChange', callback?: AsyncCallback<LuminationInfo>): void--><!--Device-ProfessionalPhotoSession-off(type: 'luminationInfoChange', callback?: AsyncCallback<LuminationInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -255,7 +267,7 @@ Unsubscribes from illumination change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'luminationInfoChange' | Yes | Event type. The value is fixed at **'luminationInfoChange'**. |
-| callback | AsyncCallback&lt;LuminationInfo&gt; | No | Callback, which is optional and is used to match **callback**in **on('luminationInfoChange')**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<LuminationInfo> | No | Callback, which is optional and is used to match **callback** in **on('luminationInfoChange')**. |
 
 **Error codes:**
 
@@ -278,10 +290,11 @@ function unregisterLuminationInfoEvent(professionalPhotoSession: camera.Professi
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to HighResolutionPhotoSession error events. This API uses an asynchronous callback to return the
-result.
+Subscribes to HighResolutionPhotoSession error events. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
+
+<!--Device-ProfessionalPhotoSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-ProfessionalPhotoSession-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -291,8 +304,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when asession is created. This event is triggered and the error message is returned when an error occurs during thecalling of a session-related API such as[beginConfig](arkts-camera-session-i.md#beginconfig-1),[commitConfig](arkts-camera-session-i.md#commitconfig-2), and[addInput](arkts-camera-session-i.md#addinput-1). |
-| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. This event is triggered and the error message is returned when an error occurs during the calling of a session-related API such as [beginConfig](arkts-camera-session-i.md#beginconfig-1),[commitConfig](arkts-camera-session-i.md#commitconfig-2), and [addInput](arkts-camera-session-i.md#addinput-1). |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -325,6 +338,8 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 
 **Since:** 12
 
+<!--Device-ProfessionalPhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-ProfessionalPhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -333,8 +348,8 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can belistened for when a session is created. This event is triggered only when the camera focus state changes inauto focus mode. |
-| callback | AsyncCallback&lt;FocusState&gt; | Yes | Callback used to return the focus state change. |
+| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. This event is triggered only when the camera focus state changes in auto focus mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FocusState> | Yes | Callback used to return the focus state change. |
 
 **Error codes:**
 
@@ -371,6 +386,8 @@ Subscribes to smooth zoom state change events. This API uses an asynchronous cal
 
 **Since:** 12
 
+<!--Device-ProfessionalPhotoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void--><!--Device-ProfessionalPhotoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -379,8 +396,8 @@ Subscribes to smooth zoom state change events. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'smoothZoomInfoAvailable' | Yes | Event type. The value is fixed at **'smoothZoomInfoAvailable'**. Theevent can be listened for when a session is created. |
-| callback | AsyncCallback&lt;SmoothZoomInfo&gt; | Yes | Callback used to return the smooth zoom state change. |
+| type | 'smoothZoomInfoAvailable' | Yes | Event type. The value is fixed at **'smoothZoomInfoAvailable'**. The event can be listened for when a session is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<SmoothZoomInfo> | Yes | Callback used to return the smooth zoom state change. |
 
 **Error codes:**
 
@@ -413,10 +430,11 @@ function registerSmoothZoomInfo(professionalPhotoSession: camera.ProfessionalPho
 on(type: 'isoInfoChange', callback: AsyncCallback<IsoInfo>): void
 ```
 
-Subscribes to automatic ISO change events to obtain real-time ISO information. This API uses an asynchronous
-callback to return the result.
+Subscribes to automatic ISO change events to obtain real-time ISO information. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
+
+<!--Device-ProfessionalPhotoSession-on(type: 'isoInfoChange', callback: AsyncCallback<IsoInfo>): void--><!--Device-ProfessionalPhotoSession-on(type: 'isoInfoChange', callback: AsyncCallback<IsoInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -427,7 +445,7 @@ callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'isoInfoChange' | Yes | Event type. The value is fixed at **'isoInfoChange'**. |
-| callback | AsyncCallback&lt;IsoInfo&gt; | Yes | Callback used to return the ISO information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<IsoInfo> | Yes | Callback used to return the ISO information. |
 
 **Error codes:**
 
@@ -460,10 +478,11 @@ function registerIsoInfoEvent(professionalPhotoSession: camera.ProfessionalPhoto
 on(type: 'exposureInfoChange', callback: AsyncCallback<ExposureInfo>): void
 ```
 
-Subscribes to exposure information change events to obtain the exposure information. This API uses an
-asynchronous callback to return the result.
+Subscribes to exposure information change events to obtain the exposure information. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
+
+<!--Device-ProfessionalPhotoSession-on(type: 'exposureInfoChange', callback: AsyncCallback<ExposureInfo>): void--><!--Device-ProfessionalPhotoSession-on(type: 'exposureInfoChange', callback: AsyncCallback<ExposureInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -474,7 +493,7 @@ asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'exposureInfoChange' | Yes | Event type. The value is fixed at **'exposureInfoChange'**. |
-| callback | AsyncCallback&lt;ExposureInfo&gt; | Yes | Callback used to return the exposure information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ExposureInfo> | Yes | Callback used to return the exposure information. |
 
 **Error codes:**
 
@@ -507,10 +526,11 @@ function registerExposureInfoEvent(professionalPhotoSession: camera.Professional
 on(type: 'apertureInfoChange', callback: AsyncCallback<ApertureInfo>): void
 ```
 
-Subscribes to aperture change events to obtain the real-time aperture information. This API uses an asynchronous
-callback to return the result.
+Subscribes to aperture change events to obtain the real-time aperture information. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
+
+<!--Device-ProfessionalPhotoSession-on(type: 'apertureInfoChange', callback: AsyncCallback<ApertureInfo>): void--><!--Device-ProfessionalPhotoSession-on(type: 'apertureInfoChange', callback: AsyncCallback<ApertureInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -521,7 +541,7 @@ callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'apertureInfoChange' | Yes | Event type. The value is fixed at **'apertureInfoChange'**. |
-| callback | AsyncCallback&lt;ApertureInfo&gt; | Yes | Callback used to return the aperture information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ApertureInfo> | Yes | Callback used to return the aperture information. |
 
 **Error codes:**
 
@@ -554,10 +574,11 @@ function registerApertureInfoEvent(professionalPhotoSession: camera.Professional
 on(type: 'luminationInfoChange', callback: AsyncCallback<LuminationInfo>): void
 ```
 
-Subscribes to illumination change events to obtain real-time illumination information. This API uses an
-asynchronous callback to return the result.
+Subscribes to illumination change events to obtain real-time illumination information. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
+
+<!--Device-ProfessionalPhotoSession-on(type: 'luminationInfoChange', callback: AsyncCallback<LuminationInfo>): void--><!--Device-ProfessionalPhotoSession-on(type: 'luminationInfoChange', callback: AsyncCallback<LuminationInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -568,7 +589,7 @@ asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'luminationInfoChange' | Yes | Event type. The value is fixed at **'luminationInfoChange'**. |
-| callback | AsyncCallback&lt;LuminationInfo&gt; | Yes | Callback used to return the illumination information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<LuminationInfo> | Yes | Callback used to return the illumination information. |
 
 **Error codes:**
 

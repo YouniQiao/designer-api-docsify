@@ -1,9 +1,10 @@
 # IPCSkeleton
 
-Obtains IPC context, including the UID and PID, local and remote device IDs, and whether the method is invoked on
-the same device.
+Obtains IPC context, including the UID and PID, local and remote device IDs, and whether the method is invoked on the same device.
 
 **Since:** 7
+
+<!--Device-rpc-class IPCSkeleton--><!--Device-rpc-class IPCSkeleton-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -19,10 +20,11 @@ import { rpc } from '@kit.IPCKit';
 static flushCmdBuffer(object: IRemoteObject): void
 ```
 
-Flushes all suspended commands from the specified **RemoteProxy** to the corresponding **RemoteObject**. This API
-is a static method. You are advised to call this API before performing any sensitive operation.
+Flushes all suspended commands from the specified **RemoteProxy** to the corresponding **RemoteObject**. This API is a static method. You are advised to call this API before performing any sensitive operation.
 
 **Since:** 9
+
+<!--Device-IPCSkeleton-static flushCmdBuffer(object: IRemoteObject): void--><!--Device-IPCSkeleton-static flushCmdBuffer(object: IRemoteObject): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -30,7 +32,7 @@ is a static method. You are advised to call this API before performing any sensi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| object | IRemoteObject | Yes | **RemoteProxy** specified. |
+| object | [IRemoteObject](arkts-ipc-iremoteobject-c.md) | Yes | **RemoteProxy** specified. |
 
 **Error codes:**
 
@@ -72,8 +74,7 @@ try {
 static flushCommands(object: IRemoteObject): number
 ```
 
-Flushes all suspended commands from the specified **RemoteProxy** to the corresponding **RemoteObject**. This API
-is a static method. You are advised to call this API before performing any sensitive operation.
+Flushes all suspended commands from the specified **RemoteProxy** to the corresponding **RemoteObject**. This API is a static method. You are advised to call this API before performing any sensitive operation.
 
 **Since:** 7
 
@@ -81,19 +82,21 @@ is a static method. You are advised to call this API before performing any sensi
 
 **Substitutes:** static
 
+<!--Device-IPCSkeleton-static flushCommands(object: IRemoteObject): number--><!--Device-IPCSkeleton-static flushCommands(object: IRemoteObject): number-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| object | IRemoteObject | Yes | **RemoteProxy** specified. |
+| object | [IRemoteObject](arkts-ipc-iremoteobject-c.md) | Yes | **RemoteProxy** specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Returns **0** if the operation is successful; returns an error code if the input object isnull or a **RemoteObject**, or if the operation fails. |
+| number | Returns **0** if the operation is successful; returns an error code if the input object is null or a **RemoteObject**, or if the operation fails. |
 
 **Example**
 
@@ -133,6 +136,8 @@ Obtains the ID of the device hosting the caller's process. This API is a static 
 
 **Since:** 7
 
+<!--Device-IPCSkeleton-static getCallingDeviceID(): string--><!--Device-IPCSkeleton-static getCallingDeviceID(): string-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -168,11 +173,11 @@ class Stub extends rpc.RemoteObject {
 static getCallingPid(): number
 ```
 
-Obtains the PID of the caller. This API is a static method, which is invoked by the **RemoteObject** object in
-the **onRemoteRequest** method. If this method is not invoked in the IPC context (**onRemoteRequest**), the
-PID of the process will be returned.
+Obtains the PID of the caller. This API is a static method, which is invoked by the **RemoteObject** object in the **onRemoteRequest** method. If this method is not invoked in the IPC context (**onRemoteRequest**), the PID of the process will be returned.
 
 **Since:** 7
+
+<!--Device-IPCSkeleton-static getCallingPid(): int--><!--Device-IPCSkeleton-static getCallingPid(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -213,6 +218,8 @@ Obtains the caller's token ID, which is used to verify the caller identity.
 
 **Since:** 8
 
+<!--Device-IPCSkeleton-static getCallingTokenId(): long--><!--Device-IPCSkeleton-static getCallingTokenId(): long-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -248,11 +255,11 @@ class Stub extends rpc.RemoteObject {
 static getCallingUid(): number
 ```
 
-Obtains the UID of the caller. This API is a static method, which is invoked by the **RemoteObject** object in
-the **onRemoteRequest** method. If this method is not invoked in the IPC context (**onRemoteRequest**), the
-UID of the process will be returned.
+Obtains the UID of the caller. This API is a static method, which is invoked by the **RemoteObject** object in the **onRemoteRequest** method. If this method is not invoked in the IPC context (**onRemoteRequest**), the UID of the process will be returned.
 
 **Since:** 7
+
+<!--Device-IPCSkeleton-static getCallingUid(): int--><!--Device-IPCSkeleton-static getCallingUid(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -293,13 +300,15 @@ Obtains the system capability manager. This API is a static method.
 
 **Since:** 7
 
+<!--Device-IPCSkeleton-static getContextObject(): IRemoteObject--><!--Device-IPCSkeleton-static getContextObject(): IRemoteObject-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IRemoteObject | System capability manager obtained. |
+| [IRemoteObject](arkts-ipc-iremoteobject-c.md) | System capability manager obtained. |
 
 **Example**
 
@@ -325,6 +334,8 @@ static getLocalDeviceID(): string
 Obtains the local device ID. This API is a static method.
 
 **Since:** 7
+
+<!--Device-IPCSkeleton-static getLocalDeviceID(): string--><!--Device-IPCSkeleton-static getLocalDeviceID(): string-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -365,13 +376,15 @@ Checks whether the peer process is a process of the local device. This API is a 
 
 **Since:** 7
 
+<!--Device-IPCSkeleton-static isLocalCalling(): boolean--><!--Device-IPCSkeleton-static isLocalCalling(): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the local and peer processes are on the same device; returns **false**otherwise. |
+| boolean | Returns **true** if the local and peer processes are on the same device; returns **false** otherwise. |
 
 **Example**
 
@@ -400,10 +413,11 @@ class Stub extends rpc.RemoteObject {
 static resetCallingIdentity(): string
 ```
 
-Resets the UID and PID of the remote user to those of the local user. This API is a static method and is used in
-scenarios such as identity authentication.
+Resets the UID and PID of the remote user to those of the local user. This API is a static method and is used in scenarios such as identity authentication.
 
 **Since:** 7
+
+<!--Device-IPCSkeleton-static resetCallingIdentity(): string--><!--Device-IPCSkeleton-static resetCallingIdentity(): string-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -440,11 +454,11 @@ class Stub extends rpc.RemoteObject {
 static restoreCallingIdentity(identity: string): void
 ```
 
-Restores the UID and PID of the remote user. This API is a static method. It is usually called after
-**resetCallingIdentity**, and the UID and PID of the remote user returned by **resetCallingIdentity** are
-required.
+Restores the UID and PID of the remote user. This API is a static method. It is usually called after **resetCallingIdentity**, and the UID and PID of the remote user returned by **resetCallingIdentity** are required.
 
 **Since:** 9
+
+<!--Device-IPCSkeleton-static restoreCallingIdentity(identity: string): void--><!--Device-IPCSkeleton-static restoreCallingIdentity(identity: string): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -452,7 +466,7 @@ required.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| identity | string | Yes | A string containing the UID and PID of the remote user. The length of the stringmust be less than 40960. are returned by **resetCallingIdentity**. |
+| identity | string | Yes | A string containing the UID and PID of the remote user. The length of the string must be less than 40960. are returned by **resetCallingIdentity**. |
 
 **Error codes:**
 
@@ -488,9 +502,7 @@ class Stub extends rpc.RemoteObject {
 static setCallingIdentity(identity: string): boolean
 ```
 
-Sets the UID and PID of the remote user. This API is a static method. It is usually called after
-**resetCallingIdentity**, and the UID and PID of the remote user returned by **resetCallingIdentity** are
-required.
+Sets the UID and PID of the remote user. This API is a static method. It is usually called after **resetCallingIdentity**, and the UID and PID of the remote user returned by **resetCallingIdentity** are required.
 
 **Since:** 7
 
@@ -498,13 +510,15 @@ required.
 
 **Substitutes:** static
 
+<!--Device-IPCSkeleton-static setCallingIdentity(identity: string): boolean--><!--Device-IPCSkeleton-static setCallingIdentity(identity: string): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| identity | string | Yes | String containing the remote user's UID and PID, which are returned by**resetCallingIdentity**. |
+| identity | string | Yes | String containing the remote user's UID and PID, which are returned by **resetCallingIdentity**. |
 
 **Return value:**
 

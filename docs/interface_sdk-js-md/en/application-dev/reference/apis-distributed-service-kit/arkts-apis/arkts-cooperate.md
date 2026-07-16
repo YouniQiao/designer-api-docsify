@@ -1,9 +1,10 @@
 # @ohos.cooperate
 
-The **cooperate** module implements screen hopping for two or more networked devices to share the keyboard and mouse
-for collaborative operations.
+The **cooperate** module implements screen hopping for two or more networked devices to share the keyboard and mouse for collaborative operations.
 
 **Since:** 10
+
+<!--Device-unnamed-declare namespace cooperate--><!--Device-unnamed-declare namespace cooperate-End-->
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 

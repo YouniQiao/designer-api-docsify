@@ -16,6 +16,8 @@ Checks whether the SIM card in a specified slot is activated.
 
 **Since:** 7
 
+<!--Device-sim-function isSimActive(slotId: int, callback: AsyncCallback<boolean>): void--><!--Device-sim-function isSimActive(slotId: int, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -23,7 +25,7 @@ Checks whether the SIM card in a specified slot is activated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from {@code 0} to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Indicates the callback for checkingwhether the SIM card in a specified slot is activated.Returns {@code true} if the SIM card is activated; returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Indicates the callback for checking whether the SIM card in a specified slot is activated.Returns {@code true} if the SIM card is activated; returns {@code false} otherwise. |
 
 **Example**
 
@@ -48,6 +50,8 @@ Checks whether the SIM card in a specified slot is activated.
 
 **Since:** 7
 
+<!--Device-sim-function isSimActive(slotId: int): Promise<boolean>--><!--Device-sim-function isSimActive(slotId: int): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -60,7 +64,7 @@ Checks whether the SIM card in a specified slot is activated.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns {@code true} if the SIM card is activated; returns {@code false} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns {@code true} if the SIM card is activated; returns {@code false} otherwise. |
 
 **Example**
 

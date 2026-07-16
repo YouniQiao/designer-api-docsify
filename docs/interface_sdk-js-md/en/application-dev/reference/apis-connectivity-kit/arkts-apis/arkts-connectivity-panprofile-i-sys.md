@@ -10,6 +10,8 @@ Manager pan profile.
 
 **Substitutes:** PanProfile
 
+<!--Device-bluetoothManager-interface PanProfile extends BaseProfile--><!--Device-bluetoothManager-interface PanProfile extends BaseProfile-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -24,8 +26,7 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 disconnect(device: string): void
 ```
 
-Disconnect to device with pan.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Disconnect to device with pan.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -36,6 +37,8 @@ On API 10 and above, the permission required by this interface is changed from U
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
+
+<!--Device-PanProfile-disconnect(device: string): void--><!--Device-PanProfile-disconnect(device: string): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -66,8 +69,7 @@ On API 10 and above, the permission required by this interface is changed from U
 isTetheringOn(): boolean
 ```
 
-Obtains the tethering enable or disable.
-On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
+Obtains the tethering enable or disable.On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -77,6 +79,8 @@ On API 10 and above, the permission required by this interface is changed to ACC
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
+
+<!--Device-PanProfile-isTetheringOn(): boolean--><!--Device-PanProfile-isTetheringOn(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -101,9 +105,7 @@ On API 10 and above, the permission required by this interface is changed to ACC
 setTethering(enable: boolean): void
 ```
 
-Enable bluetooth tethering.
-On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to
-ACCESS_BLUETOOTH and MANAGE_BLUETOOTH.
+Enable bluetooth tethering.On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH and MANAGE_BLUETOOTH.
 
 **Since:** 9
 
@@ -115,6 +117,8 @@ ACCESS_BLUETOOTH and MANAGE_BLUETOOTH.
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 - API version 9: ohos.permission.DISCOVER_BLUETOOTH
 
+<!--Device-PanProfile-setTethering(enable: boolean): void--><!--Device-PanProfile-setTethering(enable: boolean): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -123,7 +127,7 @@ ACCESS_BLUETOOTH and MANAGE_BLUETOOTH.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Specifies whether to enable tethering. The value {@code true} indicatesthat tethering is enabled, and the value {@code false} indicates that tethering is disabled. |
+| enable | boolean | Yes | Specifies whether to enable tethering. The value {@code true} indicates that tethering is enabled, and the value {@code false} indicates that tethering is disabled. |
 
 **Error codes:**
 

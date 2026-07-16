@@ -16,14 +16,16 @@ Adds a notification slot. This API uses an asynchronous callback to return the r
 
 **Since:** 9
 
+<!--Device-reminderAgentManager-function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void--><!--Device-reminderAgentManager-function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slot | NotificationSlot | Yes | Notification slot instance. Only the **notificationType** property can be set. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result.If the notification slot is added,**err** is **undefined**. Otherwise, **err** is an error object. |
+| slot | [NotificationSlot](../../apis-notification-kit/arkts-apis/arkts-notification-notificationslot-i.md) | Yes | Notification slot instance. Only the **notificationType** property can be set. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result.If the notification slot is added,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -63,19 +65,21 @@ Adds a notification slot. This API uses a promise to return the result.
 
 **Since:** 9
 
+<!--Device-reminderAgentManager-function addNotificationSlot(slot: NotificationSlot): Promise<void>--><!--Device-reminderAgentManager-function addNotificationSlot(slot: NotificationSlot): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slot | NotificationSlot | Yes | Notification slot instance. Only the **notificationType** property can be set. |
+| slot | [NotificationSlot](../../apis-notification-kit/arkts-apis/arkts-notification-notificationslot-i.md) | Yes | Notification slot instance. Only the **notificationType** property can be set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

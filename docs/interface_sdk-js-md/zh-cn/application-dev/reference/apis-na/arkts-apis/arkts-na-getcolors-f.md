@@ -12,14 +12,16 @@ function getColors(wallpaperType: WallpaperType, callback: AsyncCallback<Array<R
 
 **废弃版本：** 9
 
+<!--Device-wallpaper-function getColors(wallpaperType: WallpaperType, callback: AsyncCallback<Array<RgbaColor>>): void--><!--Device-wallpaper-function getColors(wallpaperType: WallpaperType, callback: AsyncCallback<Array<RgbaColor>>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wallpaperType | WallpaperType | 是 |  |
-| callback | AsyncCallback&lt;Array&lt;RgbaColor&gt;&gt; | 是 | 回调函数，返回壁纸的主要颜色信息。 |
+| wallpaperType | [WallpaperType](arkts-na-wallpapertype-e.md) | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<RgbaColor>> | 是 | 回调函数，返回壁纸的主要颜色信息。 |
 
 **示例：**
 
@@ -49,19 +51,21 @@ function getColors(wallpaperType: WallpaperType): Promise<Array<RgbaColor>>
 
 **废弃版本：** 9
 
+<!--Device-wallpaper-function getColors(wallpaperType: WallpaperType): Promise<Array<RgbaColor>>--><!--Device-wallpaper-function getColors(wallpaperType: WallpaperType): Promise<Array<RgbaColor>>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wallpaperType | WallpaperType | 是 |  |
+| wallpaperType | [WallpaperType](arkts-na-wallpapertype-e.md) | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;RgbaColor&gt;&gt; | 返回壁纸的主要颜色信息。 |
+| Promise<Array<RgbaColor>> | 返回壁纸的主要颜色信息。 |
 
 **示例：**
 

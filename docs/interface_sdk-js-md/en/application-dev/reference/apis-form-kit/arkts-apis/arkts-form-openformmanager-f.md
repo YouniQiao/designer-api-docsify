@@ -18,13 +18,15 @@ Opens the Widget Manager page of the current application.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-formProvider-function openFormManager(want: Want): void--><!--Device-formProvider-function openFormManager(want: Want): void-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Parameter that must contain the following fields:<br>**bundleName**: bundle name of widget.<br>**abilityName**: ability name of the widget.<br>**parameters**:<br>- **ohos.extra.param.key.form_dimension**:[Widget dimension](arkts-form-formdimension-e.md).<br>- **ohos.extra.param.key.form_name**:Widget name.<br>- **ohos.extra.param.key.module_name**: module name of the widget. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Parameter that must contain the following fields:<br>**bundleName**: bundle name of widget.<br>**abilityName**: ability name of the widget.<br>**parameters**:<br>- **ohos.extra.param.key.form_dimension**:[Widget dimension](arkts-form-formdimension-e.md).<br>- **ohos.extra.param.key.form_name**:Widget name.<br>- **ohos.extra.param.key.module_name**: module name of the widget. |
 
 **Error codes:**
 

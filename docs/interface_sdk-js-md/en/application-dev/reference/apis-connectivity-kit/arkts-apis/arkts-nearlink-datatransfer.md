@@ -4,6 +4,8 @@ Provides methods to operate and manage data transfer of NearLink.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare namespace dataTransfer--><!--Device-unnamed-declare namespace dataTransfer-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import

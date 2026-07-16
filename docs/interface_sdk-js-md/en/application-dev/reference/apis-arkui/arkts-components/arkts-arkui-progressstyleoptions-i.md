@@ -8,6 +8,8 @@ Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoption
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface ProgressStyleOptions extends CommonProgressStyleOptions--><!--Device-unnamed-declare interface ProgressStyleOptions extends CommonProgressStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## scaleCount
@@ -20,8 +22,7 @@ Number of divisions on the ring-style process indicator.
 
 Default value: **120**
 
-Value range: [2, min(width, height)/scaleWidth/2/π]. If the value is outside this range, the progress indicator is
-displayed in the indeterminate ring style. By default, the minimum width and height are 77 vp.
+Value range: [2, min(width, height)/scaleWidth/2/π]. If the value is outside this range, the progress indicator is displayed in the indeterminate ring style. By default, the minimum width and height are 77 vp.
 
 **Type:** number
 
@@ -31,6 +32,8 @@ displayed in the indeterminate ring style. By default, the minimum width and hei
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ProgressStyleOptions-scaleCount?: number--><!--Device-ProgressStyleOptions-scaleCount?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## scaleWidth
@@ -39,8 +42,7 @@ displayed in the indeterminate ring style. By default, the minimum width and hei
 scaleWidth?: Length
 ```
 
-Scale width of the ring-style progress indicator. Percentage values are not supported. If the scale width is
-greater than the stroke width of the progress indicator, the default scale width is used.
+Scale width of the ring-style progress indicator. Percentage values are not supported. If the scale width is greater than the stroke width of the progress indicator, the default scale width is used.
 
 Default value: **2.0vp**
 
@@ -51,6 +53,8 @@ Default value: **2.0vp**
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ProgressStyleOptions-scaleWidth?: Length--><!--Device-ProgressStyleOptions-scaleWidth?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,6 +77,8 @@ If the value is out of the range, the default value is used.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ProgressStyleOptions-strokeWidth?: Length--><!--Device-ProgressStyleOptions-strokeWidth?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

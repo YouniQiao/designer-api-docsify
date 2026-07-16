@@ -1,5 +1,11 @@
 # factoryReset（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { manager } from '@kit.ConnectivityKit';
+```
+
 ## factoryReset
 
 ```TypeScript
@@ -14,6 +20,8 @@ function factoryReset(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-manager-function factoryReset(): Promise<void>--><!--Device-manager-function factoryReset(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ function factoryReset(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise<void> | 返回promise对象。 |
 
 **错误码：**
 

@@ -12,9 +12,7 @@ import { systemManager } from '@kit.MDMKit';
 function setInstallLocalEnterpriseAppEnabled(admin: Want, isEnable: boolean): void
 ```
 
-Sets whether local installation of enterprise applications is supported. When local installation is enabled, users
-can install enterprise applications (signing certificate distribution type: **enterprise_normal**) by double-
-tapping their installation packages on enterprise PCs/2-in-1 devices with the local installation capability.
+Sets whether local installation of enterprise applications is supported. When local installation is enabled, users can install enterprise applications (signing certificate distribution type: **enterprise_normal**) by double-tapping their installation packages on enterprise PCs/2-in-1 devices with the local installation capability.
 
 **Since:** 20
 
@@ -22,14 +20,16 @@ tapping their installation packages on enterprise PCs/2-in-1 devices with the lo
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-systemManager-function setInstallLocalEnterpriseAppEnabled(admin: Want, isEnable: boolean): void--><!--Device-systemManager-function setInstallLocalEnterpriseAppEnabled(admin: Want, isEnable: boolean): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| isEnable | boolean | Yes | Whether local installation of enterprise applications is supported. The value**true** indicates that the local installation of enterprise applications is supported, and the value **false**indicates the opposite. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| isEnable | boolean | Yes | Whether local installation of enterprise applications is supported. The value **true** indicates that the local installation of enterprise applications is supported, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -37,8 +37,8 @@ tapping their installation packages on enterprise PCs/2-in-1 devices with the lo
 | --- | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
 **Example**
 

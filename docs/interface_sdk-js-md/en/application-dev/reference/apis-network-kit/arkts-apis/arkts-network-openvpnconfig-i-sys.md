@@ -6,6 +6,8 @@ Define configuration of the open VPN network.
 
 **Since:** 12
 
+<!--Device-vpn-export interface OpenVpnConfig extends SysVpnConfig--><!--Device-vpn-export interface OpenVpnConfig extends SysVpnConfig-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ The ask pass for the openvpn VPN network.
 
 **Since:** 12
 
+<!--Device-OpenVpnConfig-askpass?: string--><!--Device-OpenVpnConfig-askpass?: string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -43,6 +47,8 @@ The auth type for the openvpn VPN network.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-OpenVpnConfig-ovpnAuthType?: number--><!--Device-OpenVpnConfig-ovpnAuthType?: number-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -60,6 +66,8 @@ The ca cert file path for the openvpn VPN network.
 
 **Since:** 12
 
+<!--Device-OpenVpnConfig-ovpnCaCertFilePath?: string--><!--Device-OpenVpnConfig-ovpnCaCertFilePath?: string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -75,6 +83,8 @@ The config for the openvpn VPN network.
 **Type:** string
 
 **Since:** 12
+
+<!--Device-OpenVpnConfig-ovpnConfig?: string--><!--Device-OpenVpnConfig-ovpnConfig?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -92,6 +102,8 @@ The config file path for the openvpn VPN network.
 
 **Since:** 12
 
+<!--Device-OpenVpnConfig-ovpnConfigFilePath?: string--><!--Device-OpenVpnConfig-ovpnConfigFilePath?: string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -107,6 +119,8 @@ The port for the openvpn VPN network.
 **Type:** string
 
 **Since:** 12
+
+<!--Device-OpenVpnConfig-ovpnPort?: string--><!--Device-OpenVpnConfig-ovpnPort?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -124,6 +138,8 @@ The private key file path for the openvpn VPN network.
 
 **Since:** 12
 
+<!--Device-OpenVpnConfig-ovpnPrivateKeyFilePath?: string--><!--Device-OpenVpnConfig-ovpnPrivateKeyFilePath?: string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -140,6 +156,8 @@ The protocol for the openvpn VPN network.
 
 **Since:** 12
 
+<!--Device-OpenVpnConfig-ovpnProtocol?: number--><!--Device-OpenVpnConfig-ovpnProtocol?: number-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -155,6 +173,8 @@ The user cert file path for the openvpn VPN network.
 **Type:** string
 
 **Since:** 12
+
+<!--Device-OpenVpnConfig-ovpnUserCertFilePath?: string--><!--Device-OpenVpnConfig-ovpnUserCertFilePath?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 

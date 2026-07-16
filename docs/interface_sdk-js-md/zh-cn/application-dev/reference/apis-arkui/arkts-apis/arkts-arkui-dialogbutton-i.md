@@ -4,7 +4,15 @@
 
 **起始版本：** 26.1.0
 
+<!--Device-dialog-declare interface DialogButton--><!--Device-dialog-declare interface DialogButton-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from '@kit.ArkUI';
+```
 
 ## action
 
@@ -20,7 +28,9 @@ action: VoidCallback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogButton-action: VoidCallback--><!--Device-DialogButton-action: VoidCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,7 +48,9 @@ backgroundColor?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogButton-backgroundColor?: ResourceColor--><!--Device-DialogButton-backgroundColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,7 +70,9 @@ defaultFocus?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogButton-defaultFocus?: boolean--><!--Device-DialogButton-defaultFocus?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,7 +92,9 @@ enabled?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogButton-enabled?: boolean--><!--Device-DialogButton-enabled?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,7 +112,9 @@ fontColor?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogButton-fontColor?: ResourceColor--><!--Device-DialogButton-fontColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -114,7 +132,9 @@ primary?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogButton-primary?: boolean--><!--Device-DialogButton-primary?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -134,7 +154,9 @@ style?: DialogButtonStyle
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogButton-style?: DialogButtonStyle--><!--Device-DialogButton-style?: DialogButtonStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -152,7 +174,9 @@ value: ResourceStr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogButton-value: ResourceStr--><!--Device-DialogButton-value: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

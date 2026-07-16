@@ -1,5 +1,11 @@
 # queryContactsCount
 
+## 导入模块
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+```
+
 ## queryContactsCount
 
 ```TypeScript
@@ -12,7 +18,9 @@ function queryContactsCount(context: Context): Promise<number>
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-contact-function queryContactsCount(context: Context): Promise<int>--><!--Device-contact-function queryContactsCount(context: Context): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -20,13 +28,13 @@ function queryContactsCount(context: Context): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文Context。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回查询到的联系人数量。 |
+| Promise<number> | Promise对象。返回查询到的联系人数量。 |
 
 **错误码：**
 

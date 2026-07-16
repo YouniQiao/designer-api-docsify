@@ -4,6 +4,8 @@ Defines the left and right padding of the chip group, and the spacing between ch
 
 **Since:** 12
 
+<!--Device-unnamed-export interface ChipGroupSpaceOptions--><!--Device-unnamed-export interface ChipGroupSpaceOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -34,6 +36,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ChipGroupSpaceOptions-endSpace?: Length--><!--Device-ChipGroupSpaceOptions-endSpace?: Length-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## itemSpace
@@ -48,8 +52,7 @@ Value range:
 
 Number type: a value greater than or equal to 0 (for example, **0**, **8**, **16**, or **24.5**)
 
-String type: a value greater than or equal to 0, with a unit of fp, vp, px, or lpx (for example, **"8vp"**,
-**"16fp"**, **"12px"**, or **"10lpx"**)
+String type: a value greater than or equal to 0, with a unit of fp, vp, px, or lpx (for example, **"8vp"**,**"16fp"**, **"12px"**, or **"10lpx"**)
 
 Not supported: negative values, percentage units, and invalid string formats.
 
@@ -66,6 +69,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ChipGroupSpaceOptions-itemSpace?: string | number--><!--Device-ChipGroupSpaceOptions-itemSpace?: string | number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,6 +95,8 @@ If this parameter is set to **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ChipGroupSpaceOptions-startSpace?: Length--><!--Device-ChipGroupSpaceOptions-startSpace?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

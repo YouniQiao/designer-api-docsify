@@ -2,14 +2,16 @@
 
 A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-collections.md).
 
-> **NOTE**
->
-> - This module can be imported only to ArkTS files (with the file name extension .ets).
+> **NOTE**  
+>  
+> - This module can be imported only to ArkTS files (with the file name extension .ets).  
 > **Decorator**: \@Sendable
 
 **Since:** 12
 
 **Decorator:** @Sendable
+
+<!--Device-collections-class Int16Array--><!--Device-collections-class Int16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,13 +27,13 @@ import { collections } from '@kit.ArkTS';
 [Symbol.iterator](): IterableIterator<number>
 ```
 
-Returns an iterator, each item of which is a JavaScript object.
-NOTE:
-This API cannot be used in .ets files.
+Returns an iterator, each item of which is a JavaScript object.NOTE:This API cannot be used in .ets files.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Int16Array-[Symbol.iterator](): IterableIterator<number>--><!--Device-Int16Array-[Symbol.iterator](): IterableIterator<number>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -39,7 +41,7 @@ This API cannot be used in .ets files.
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;number&gt; | Iterator object that yields numbers. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<number> | Iterator object that yields numbers. |
 
 **Error codes:**
 
@@ -58,6 +60,8 @@ Returns the element at the given index. If no element is found, **undefined** is
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Int16Array-at(index: number): number | undefined--><!--Device-Int16Array-at(index: number): number | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -92,6 +96,8 @@ A constructor used to create an empty ArkTS Int16Array.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-constructor()--><!--Device-Int16Array-constructor()-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
@@ -111,6 +117,8 @@ A constructor used to create an ArkTS Int16Array of a given length.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Int16Array-constructor(length: number)--><!--Device-Int16Array-constructor(length: number)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -138,13 +146,15 @@ A constructor that creates an ArkTS Int16Array from an iterable object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-constructor(elements: Iterable<number>)--><!--Device-Int16Array-constructor(elements: Iterable<number>)-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | Iterable&lt;number&gt; | Yes | An iterable collection of numbers used to construct an ArkTS Int16Arrayobject. |
+| elements | [Iterable](../../apis-na/arkts-apis/arkts-na-iterable-i.md)<number> | Yes | An iterable collection of numbers used to construct an ArkTS Int16Array object. |
 
 **Error codes:**
 
@@ -164,13 +174,15 @@ A constructor that creates an ArkTS Int16Array from an array-like object or ArkT
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-constructor(array: ArrayLike<number> | ArrayBuffer)--><!--Device-Int16Array-constructor(array: ArrayLike<number> | ArrayBuffer)-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; \| ArrayBuffer | Yes | Object used to construct the ArkTS Int16Array. When theparameter type is ArrayBuffer, the number of bytes occupied by the buffer must be an integer multiple of 4. |
+| array | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)<number> \| ArrayBuffer | Yes | Object used to construct the ArkTS Int16Array. When the parameter type is ArrayBuffer, the number of bytes occupied by the buffer must be an integer multiple of 4. |
 
 **Error codes:**
 
@@ -190,13 +202,15 @@ A constructor that creates an ArkTS Int16Array from an ArrayBuffer.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)--><!--Device-Int16Array-constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | ArrayBuffer object used to construct the ArkTS Int16Array. The number of bytesoccupied by the buffer must be an integer multiple of 4. |
+| buffer | [ArrayBuffer](arkts-arkts-arraybuffer-c.md) | Yes | ArrayBuffer object used to construct the ArkTS Int16Array. The number of bytes occupied by the buffer must be an integer multiple of 4. |
 | byteOffset | number | No | Byte offset of the buffer, beginning at 0. The default value is **0**. |
 | length | number | No | Length of the ArkTS Int16Array. The default value is **0**. |
 
@@ -218,6 +232,8 @@ Copies elements within a given range from this ArkTS Int16Array to another posit
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-copyWithin(target: number, start: number, end?: number): Int16Array--><!--Device-Int16Array-copyWithin(target: number, start: number, end?: number): Int16Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -226,13 +242,13 @@ Copies elements within a given range from this ArkTS Int16Array to another posit
 | --- | --- | --- | --- |
 | target | number | Yes | Start index of the range. If a negative number is passed in, it refers to the index of`target + array.length`. |
 | start | number | Yes | Start index of the range. If a negative number is passed in, it refers to the index of`start + Int16Array.length`. |
-| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to theindex of `end + Int16Array.length`. The default value is the length of the ArkTS Int16Array. |
+| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to the index of `end + Int16Array.length`. The default value is the length of the ArkTS Int16Array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Int16Array | ArkTS Int16Array after being modified. |
+| [Int16Array](arkts-arkts-int16array-c.md) | ArkTS Int16Array after being modified. |
 
 **Error codes:**
 
@@ -253,13 +269,15 @@ Returns an iterator object that contains the key-value pair of each element in t
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-entries(): IterableIterator<[number, number]>--><!--Device-Int16Array-entries(): IterableIterator<[number, number]>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;[number, number]&gt; | Iterator object. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<[number, number]> | Iterator object. |
 
 **Error codes:**
 
@@ -280,13 +298,15 @@ Checks whether all elements in this ArkTS Int16Array meet a given condition.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-every(predicate: TypedArrayPredicateFn<number, Int16Array>): boolean--><!--Device-Int16Array-every(predicate: TypedArrayPredicateFn<number, Int16Array>): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | TypedArrayPredicateFn&lt;number, Int16Array&gt; | Yes | Assertion function used for the test. |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-typedarraypredicatefn-t.md)<number, Int16Array> | Yes | Assertion function used for the test. |
 
 **Return value:**
 
@@ -313,6 +333,8 @@ Fills all elements in a given range in this ArkTS Int16Array with a value.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-fill(value: number, start?: number, end?: number): Int16Array--><!--Device-Int16Array-fill(value: number, start?: number, end?: number): Int16Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -320,14 +342,14 @@ Fills all elements in a given range in this ArkTS Int16Array with a value.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | Value to fill in. |
-| start | number | No | Start index of the range. If a negative number is passed in, it refers to the indexof `start + Int16Array.length`. The default value is **0**. |
-| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to theindex of `end + Int16Array.length`. The default value is the length of the ArkTS Int16Array. |
+| start | number | No | Start index of the range. If a negative number is passed in, it refers to the index of `start + Int16Array.length`. The default value is **0**. |
+| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to the index of `end + Int16Array.length`. The default value is the length of the ArkTS Int16Array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Int16Array | Filled ArkTS Int16Array. |
+| [Int16Array](arkts-arkts-int16array-c.md) | Filled ArkTS Int16Array. |
 
 **Error codes:**
 
@@ -348,19 +370,21 @@ Returns a new ArkTS Int16Array that contains all elements that meet the given co
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-filter(predicate: TypedArrayPredicateFn<number, Int16Array>): Int16Array--><!--Device-Int16Array-filter(predicate: TypedArrayPredicateFn<number, Int16Array>): Int16Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | TypedArrayPredicateFn&lt;number, Int16Array&gt; | Yes | Assertion function used for the test. |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-typedarraypredicatefn-t.md)<number, Int16Array> | Yes | Assertion function used for the test. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Int16Array | Filtered ArkTS Int16Array. |
+| [Int16Array](arkts-arkts-int16array-c.md) | Filtered ArkTS Int16Array. |
 
 **Error codes:**
 
@@ -375,12 +399,13 @@ Returns a new ArkTS Int16Array that contains all elements that meet the given co
 find(predicate: TypedArrayPredicateFn<number, Int16Array>): number | undefined
 ```
 
-Returns the value of the first element that passes a test provided by a callback function. If none of the
-elements pass the test, **undefined** is returned.
+Returns the value of the first element that passes a test provided by a callback function. If none of the elements pass the test, **undefined** is returned.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Int16Array-find(predicate: TypedArrayPredicateFn<number, Int16Array>): number | undefined--><!--Device-Int16Array-find(predicate: TypedArrayPredicateFn<number, Int16Array>): number | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -388,13 +413,13 @@ elements pass the test, **undefined** is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | TypedArrayPredicateFn&lt;number, Int16Array&gt; | Yes | Assertion function used for the test. |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-typedarraypredicatefn-t.md)<number, Int16Array> | Yes | Assertion function used for the test. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Value of the first element that passes the test. If none of the elements pass thetest, **undefined** is returned. |
+| number | Value of the first element that passes the test. If none of the elements pass the test, **undefined** is returned. |
 
 **Error codes:**
 
@@ -409,12 +434,13 @@ elements pass the test, **undefined** is returned.
 findIndex(predicate: TypedArrayPredicateFn<number, Int16Array>): number
 ```
 
-Returns the index of the first element that passes a test provided by a callback function. If none of the
-elements pass the test, **-1** is returned.
+Returns the index of the first element that passes a test provided by a callback function. If none of the elements pass the test, **-1** is returned.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Int16Array-findIndex(predicate: TypedArrayPredicateFn<number, Int16Array>): number--><!--Device-Int16Array-findIndex(predicate: TypedArrayPredicateFn<number, Int16Array>): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -422,7 +448,7 @@ elements pass the test, **-1** is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | TypedArrayPredicateFn&lt;number, Int16Array&gt; | Yes | Assertion function used for the test. |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-typedarraypredicatefn-t.md)<number, Int16Array> | Yes | Assertion function used for the test. |
 
 **Return value:**
 
@@ -449,13 +475,15 @@ Calls a callback function for each element in this ArkTS Int16Array.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-forEach(callbackFn: TypedArrayForEachCallback<number, Int16Array>): void--><!--Device-Int16Array-forEach(callbackFn: TypedArrayForEachCallback<number, Int16Array>): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | TypedArrayForEachCallback&lt;number, Int16Array&gt; | Yes | Callback function to run for each element. |
+| callbackFn | [TypedArrayForEachCallback](arkts-arkts-typedarrayforeachcallback-t.md)<number, Int16Array> | Yes | Callback function to run for each element. |
 
 **Error codes:**
 
@@ -476,19 +504,21 @@ Creates an ArkTS Int16Array from an array-like or iterator object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-static from(arrayLike: ArrayLike<number>): Int16Array--><!--Device-Int16Array-static from(arrayLike: ArrayLike<number>): Int16Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;number&gt; | Yes | Array-like object used to construct the ArkTS Int16Array. |
+| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)<number> | Yes | Array-like object used to construct the ArkTS Int16Array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Int16Array | New ArkTS Int16Array generated. |
+| [Int16Array](arkts-arkts-int16array-c.md) | New ArkTS Int16Array generated. |
 
 ## from
 
@@ -502,20 +532,22 @@ Creates an ArkTS Int16Array from an array-like object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): Int16Array--><!--Device-Int16Array-static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): Int16Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;T&gt; | Yes | Array-like object used to construct the ArkTS Int16Array. |
-| mapFn | TypedArrayFromMapFn&lt;T, number&gt; | Yes | A mapping function to call on every element of the array. |
+| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)<T> | Yes | Array-like object used to construct the ArkTS Int16Array. |
+| mapFn | [TypedArrayFromMapFn](arkts-arkts-typedarrayfrommapfn-t.md)<T, number> | Yes | A mapping function to call on every element of the array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Int16Array | New ArkTS Int16Array generated. |
+| [Int16Array](arkts-arkts-int16array-c.md) | New ArkTS Int16Array generated. |
 
 ## from
 
@@ -529,20 +561,22 @@ Creates an ArkTS Int16Array from an iterator object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, number>): Int16Array--><!--Device-Int16Array-static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, number>): Int16Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | Iterable&lt;number&gt; | Yes | Iterator object used to construct the ArkTS Int16Array. |
-| mapFn | TypedArrayFromMapFn&lt;number, number&gt; | No | Mapping function. If no value is passed in,no special processing is conducted on the elements. |
+| arrayLike | [Iterable](../../apis-na/arkts-apis/arkts-na-iterable-i.md)<number> | Yes | Iterator object used to construct the ArkTS Int16Array. |
+| mapFn | [TypedArrayFromMapFn](arkts-arkts-typedarrayfrommapfn-t.md)<number, number> | No | Mapping function. If no value is passed in,no special processing is conducted on the elements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Int16Array | New ArkTS Int16Array generated. |
+| [Int16Array](arkts-arkts-int16array-c.md) | New ArkTS Int16Array generated. |
 
 ## includes
 
@@ -555,6 +589,8 @@ Checks whether elements are contained in this ArkTS Int16Array.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Int16Array-includes(searchElement: number, fromIndex?: number): boolean--><!--Device-Int16Array-includes(searchElement: number, fromIndex?: number): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -569,7 +605,7 @@ Checks whether elements are contained in this ArkTS Int16Array.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the element exists; otherwise, **false** isreturned. |
+| boolean | Check result. The value **true** is returned if the element exists; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -584,12 +620,13 @@ Checks whether elements are contained in this ArkTS Int16Array.
 indexOf(searchElement: number, fromIndex?: number): number
 ```
 
-Returns the index of the first occurrence of a value in this ArkTS Int16Array. If the value is not found, **-1**
-is returned.
+Returns the index of the first occurrence of a value in this ArkTS Int16Array. If the value is not found, **-1** is returned.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Int16Array-indexOf(searchElement: number, fromIndex?: number): number--><!--Device-Int16Array-indexOf(searchElement: number, fromIndex?: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -598,7 +635,7 @@ is returned.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | number | Yes | Value to search for. |
-| fromIndex | number | No | Index from which the search starts. The default value is **0**. If the index isgreater than or equal to the length of the ArkTS Int16Array, **-1** is returned. If a negative number ispassed in, the search starts from the end of the ArkTS Int16Array. |
+| fromIndex | number | No | Index from which the search starts. The default value is **0**. If the index is greater than or equal to the length of the ArkTS Int16Array, **-1** is returned. If a negative number is passed in, the search starts from the end of the ArkTS Int16Array. |
 
 **Return value:**
 
@@ -625,13 +662,15 @@ Concatenates all elements in this ArkTS Int16Array into a string, with a given s
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-join(separator?: string): string--><!--Device-Int16Array-join(separator?: string): string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| separator | string | No | Separator to be used. If no value is passed in, a comma (,) is used as theseparator. |
+| separator | string | No | Separator to be used. If no value is passed in, a comma (,) is used as the separator. |
 
 **Return value:**
 
@@ -658,13 +697,15 @@ Returns an iterator object that contains the key (index) of each element in this
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-keys(): IterableIterator<number>--><!--Device-Int16Array-keys(): IterableIterator<number>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;number&gt; | Iterator object. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<number> | Iterator object. |
 
 **Error codes:**
 
@@ -685,6 +726,8 @@ Obtains the index of the last occurrence of the specified value in this ArkTS In
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Int16Array-lastIndexOf(searchElement: number, fromIndex?: number): number--><!--Device-Int16Array-lastIndexOf(searchElement: number, fromIndex?: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -692,7 +735,7 @@ Obtains the index of the last occurrence of the specified value in this ArkTS In
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | number | Yes | Value to search for. |
-| fromIndex | number | No | Index from which the search starts. The default value is **0**. If the index isgreater than or equal to the length of the ArkTS Int16Array, **-1** is returned. If a negative number ispassed in, the search starts from the end of the ArkTS Int16Array. |
+| fromIndex | number | No | Index from which the search starts. The default value is **0**. If the index is greater than or equal to the length of the ArkTS Int16Array, **-1** is returned. If a negative number is passed in, the search starts from the end of the ArkTS Int16Array. |
 
 **Return value:**
 
@@ -713,12 +756,13 @@ Obtains the index of the last occurrence of the specified value in this ArkTS In
 map(callbackFn: TypedArrayMapCallback<number, Int16Array>): Int16Array
 ```
 
-Applies a callback function to each element in this ArkTS Int16Array and uses the result to create an ArkTS Int16
-Array.
+Applies a callback function to each element in this ArkTS Int16Array and uses the result to create an ArkTS Int16Array.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Int16Array-map(callbackFn: TypedArrayMapCallback<number, Int16Array>): Int16Array--><!--Device-Int16Array-map(callbackFn: TypedArrayMapCallback<number, Int16Array>): Int16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -726,13 +770,13 @@ Array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | TypedArrayMapCallback&lt;number, Int16Array&gt; | Yes | A function thataccepts up to three arguments.The map method calls the callbackfn function one time for each element in the array. |
+| callbackFn | [TypedArrayMapCallback](arkts-arkts-typedarraymapcallback-t.md)<number, Int16Array> | Yes | A function that accepts up to three arguments.The map method calls the callbackfn function one time for each element in the array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Int16Array | New ArkTS Int16Array. |
+| [Int16Array](arkts-arkts-int16array-c.md) | New ArkTS Int16Array. |
 
 **Error codes:**
 
@@ -753,6 +797,8 @@ Creates an ArkTS Int16Array with a variable number of parameters.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Int16Array-static of(...items: number[]): Int16Array--><!--Device-Int16Array-static of(...items: number[]): Int16Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -765,7 +811,7 @@ Creates an ArkTS Int16Array with a variable number of parameters.
 
 | Type | Description |
 | --- | --- |
-| Int16Array | New ArkTS Int16Array instance. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| [Int16Array](arkts-arkts-int16array-c.md) | New ArkTS Int16Array instance. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## reduce
 
@@ -779,13 +825,15 @@ Applies a reduce function on each element in this ArkTS Int16Array and returns t
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>): number--><!--Device-Int16Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | TypedArrayReduceCallback&lt;number, number, Int16Array&gt; | Yes | A function thataccepts up to four arguments.The reduce method calls the callbackfn function one time for each element in the array. |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-typedarrayreducecallback-t.md)<number, number, Int16Array> | Yes | A function that accepts up to four arguments.The reduce method calls the callbackfn function one time for each element in the array. |
 
 **Return value:**
 
@@ -806,12 +854,13 @@ Applies a reduce function on each element in this ArkTS Int16Array and returns t
 reduce(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>, initialValue: number): number
 ```
 
-Applies a reduce function for each element in this ArkTS Int16Array, receives an initial value as the parameter
-called by the reduce function for the first time, and returns the final reduction result.
+Applies a reduce function for each element in this ArkTS Int16Array, receives an initial value as the parameter called by the reduce function for the first time, and returns the final reduction result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Int16Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>, initialValue: number): number--><!--Device-Int16Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>, initialValue: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -819,8 +868,8 @@ called by the reduce function for the first time, and returns the final reductio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | TypedArrayReduceCallback&lt;number, number, Int16Array&gt; | Yes | A function thataccepts up to four arguments.The reduce method calls the callbackfn function one time for each element in the array. |
-| initialValue | number | Yes | If initialValue is specified, it is used as the initial value to startthe accumulation. The first call to the callbackfn function provides this value as an argumentinstead of an array value. |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-typedarrayreducecallback-t.md)<number, number, Int16Array> | Yes | A function that accepts up to four arguments.The reduce method calls the callbackfn function one time for each element in the array. |
+| initialValue | number | Yes | If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value. |
 
 **Return value:**
 
@@ -841,12 +890,13 @@ called by the reduce function for the first time, and returns the final reductio
 reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Int16Array>, initialValue: U): U
 ```
 
-Applies a reduce function for each element in this ArkTS Int16Array, receives an initial value as the parameter
-called by the reduce function for the first time, and returns the final reduction result.
+Applies a reduce function for each element in this ArkTS Int16Array, receives an initial value as the parameter called by the reduce function for the first time, and returns the final reduction result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Int16Array-reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Int16Array>, initialValue: U): U--><!--Device-Int16Array-reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Int16Array>, initialValue: U): U-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -854,7 +904,7 @@ called by the reduce function for the first time, and returns the final reductio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | TypedArrayReduceCallback&lt;U, number, Int16Array&gt; | Yes | Reduce function. |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-typedarrayreducecallback-t.md)<U, number, Int16Array> | Yes | Reduce function. |
 | initialValue | U | Yes | Initial value. |
 
 **Return value:**
@@ -876,13 +926,13 @@ called by the reduce function for the first time, and returns the final reductio
 reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Int16Array>, initialValue: U): U
 ```
 
-Reversely traverses this ArkTS Int16Array, applies a reduce function for each element in the array, receives an
-initial value as the parameter called by the reduce function for the first time, and returns the final reduction
-result.
+Reversely traverses this ArkTS Int16Array, applies a reduce function for each element in the array, receives an initial value as the parameter called by the reduce function for the first time, and returns the final reduction result.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-Int16Array-reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Int16Array>, initialValue: U): U--><!--Device-Int16Array-reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Int16Array>, initialValue: U): U-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -890,7 +940,7 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | TypedArrayReduceCallback&lt;U, number, Int16Array&gt; | Yes | A function that is called foreach element in the Int16Array. |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-typedarrayreducecallback-t.md)<U, number, Int16Array> | Yes | A function that is called for each element in the Int16Array. |
 | initialValue | U | Yes | A value to use as the first argument to the first call of the callback.<br>If no initial value is provided, the last element of the Int16Array will be used,<br>and the callback will start with the second-to-last element. |
 
 **Return value:**
@@ -912,12 +962,13 @@ result.
 reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>): number
 ```
 
-Reversely traverses this ArkTS Int16Array, applies a reduce function on each element in the array, and returns
-the final reduction result.
+Reversely traverses this ArkTS Int16Array, applies a reduce function on each element in the array, and returns the final reduction result.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-Int16Array-reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>): number--><!--Device-Int16Array-reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -925,7 +976,7 @@ the final reduction result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | TypedArrayReduceCallback&lt;number, number, Int16Array&gt; | Yes | A function that is called foreach element in the Int16Array. |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-typedarrayreducecallback-t.md)<number, number, Int16Array> | Yes | A function that is called for each element in the Int16Array. |
 
 **Return value:**
 
@@ -952,13 +1003,15 @@ Reverses this ArkTS Int16Array.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-reverse(): Int16Array--><!--Device-Int16Array-reverse(): Int16Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Int16Array | Reversed ArkTS Int16Array. |
+| [Int16Array](arkts-arkts-int16array-c.md) | Reversed ArkTS Int16Array. |
 
 **Error codes:**
 
@@ -979,13 +1032,15 @@ Writes the elements in an array-like object to the given start position in seque
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-set(array: ArrayLike<number>, offset?: number): void--><!--Device-Int16Array-set(array: ArrayLike<number>, offset?: number): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; | Yes | Array-like object whose elements will be written. |
+| array | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)<number> | Yes | Array-like object whose elements will be written. |
 | offset | number | No | Start position for writing data. The default value is 0. |
 
 **Error codes:**
@@ -1007,20 +1062,22 @@ Selects a range of elements in this ArkTS Int16Array to create an ArkTS Int16Arr
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-slice(start?: number, end?: number): Int16Array--><!--Device-Int16Array-slice(start?: number, end?: number): Int16Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | No | Start index of the range. If a negative number is passed in, it refers to the indexof `start + Int16Array.length`. The default value is **0**. |
-| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to theindex of `end + Int16Array.length`. The default value is the length of the ArkTS Int16Array. |
+| start | number | No | Start index of the range. If a negative number is passed in, it refers to the index of `start + Int16Array.length`. The default value is **0**. |
+| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to the index of `end + Int16Array.length`. The default value is the length of the ArkTS Int16Array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Int16Array | New ArkTS Int16Array. |
+| [Int16Array](arkts-arkts-int16array-c.md) | New ArkTS Int16Array. |
 
 **Error codes:**
 
@@ -1041,19 +1098,21 @@ Checks whether any element in this ArkTS Int16Array meets a given condition.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-some(predicate: TypedArrayPredicateFn<number, Int16Array>): boolean--><!--Device-Int16Array-some(predicate: TypedArrayPredicateFn<number, Int16Array>): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | TypedArrayPredicateFn&lt;number, Int16Array&gt; | Yes | Assertion function used for the test. |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-typedarraypredicatefn-t.md)<number, Int16Array> | Yes | Assertion function used for the test. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if an element meeting the given conditionexists; otherwise, **false** is returned. |
+| boolean | Check result. The value **true** is returned if an element meeting the given condition exists; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -1074,19 +1133,21 @@ Sorts elements in this ArkTS Int16Array and returns the sorted ArkTS Int16Array.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-sort(compareFn?: TypedArrayCompareFn<number>): Int16Array--><!--Device-Int16Array-sort(compareFn?: TypedArrayCompareFn<number>): Int16Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| compareFn | TypedArrayCompareFn&lt;number&gt; | No | Function that determines the sort order. By default,elements are sorted in ascending order. |
+| compareFn | [TypedArrayCompareFn](arkts-arkts-typedarraycomparefn-t.md)<number> | No | Function that determines the sort order. By default,elements are sorted in ascending order. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Int16Array | Sorted ArkTS Int16Array. |
+| [Int16Array](arkts-arkts-int16array-c.md) | Sorted ArkTS Int16Array. |
 
 **Error codes:**
 
@@ -1101,12 +1162,13 @@ Sorts elements in this ArkTS Int16Array and returns the sorted ArkTS Int16Array.
 subarray(begin?: number, end?: number): Int16Array
 ```
 
-Truncates an array from a specified position and returns a new ArkTS Int16Array based on the same ArkTS
-ArrayBuffer.
+Truncates an array from a specified position and returns a new ArkTS Int16Array based on the same ArkTS ArrayBuffer.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Int16Array-subarray(begin?: number, end?: number): Int16Array--><!--Device-Int16Array-subarray(begin?: number, end?: number): Int16Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1114,14 +1176,14 @@ ArrayBuffer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | number | No | Start index of the range. If a negative number is passed in, it refers to the indexof `begin + Int16Array.length`. The default value is **0**. |
-| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to theindex of `end + Int16Array.length`. The default value is the length of the ArkTS Int16Array. |
+| begin | number | No | Start index of the range. If a negative number is passed in, it refers to the index of `begin + Int16Array.length`. The default value is **0**. |
+| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to the index of `end + Int16Array.length`. The default value is the length of the ArkTS Int16Array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Int16Array | New ArkTS Int16Array. |
+| [Int16Array](arkts-arkts-int16array-c.md) | New ArkTS Int16Array. |
 
 **Error codes:**
 
@@ -1136,13 +1198,13 @@ ArrayBuffer.
 toLocaleString(): string
 ```
 
-Generates a string of digits that matches the cultural conventions of the current system locale. Each element
-converts its digits to a string via its **toLocaleString** API, and these strings are then joined in sequence
-with commas (,).
+Generates a string of digits that matches the cultural conventions of the current system locale. Each element converts its digits to a string via its **toLocaleString** API, and these strings are then joined in sequence with commas (,).
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-Int16Array-toLocaleString(): string--><!--Device-Int16Array-toLocaleString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1171,6 +1233,8 @@ Converts an ArkTS Int16Array to a string.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Int16Array-toString(): string--><!--Device-Int16Array-toString(): string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -1198,13 +1262,15 @@ Returns an iterator object that contains the value of each element in this ArkTS
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-values(): IterableIterator<number>--><!--Device-Int16Array-values(): IterableIterator<number>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;number&gt; | Iterator object. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<number> | Iterator object. |
 
 **Error codes:**
 
@@ -1227,6 +1293,8 @@ Number of bytes occupied by each element in the ArkTS Int16Array.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-static readonly BYTES_PER_ELEMENT: number--><!--Device-Int16Array-static readonly BYTES_PER_ELEMENT: number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## buffer
@@ -1242,6 +1310,8 @@ Bottom-layer buffer used by an ArkTS Int16Array.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Int16Array-readonly buffer: ArrayBuffer--><!--Device-Int16Array-readonly buffer: ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1259,6 +1329,8 @@ Number of bytes occupied by an ArkTS Int16Array.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-readonly byteLength: number--><!--Device-Int16Array-readonly byteLength: number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## byteOffset
@@ -1274,6 +1346,8 @@ Offset between the ArkTS Int16Array and the start position of the ArrayBuffer.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Int16Array-readonly byteOffset: number--><!--Device-Int16Array-readonly byteOffset: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1291,6 +1365,8 @@ Returns the element at a given index in this Int16Array.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Int16Array-[index: number]: number--><!--Device-Int16Array-[index: number]: number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## length
@@ -1306,6 +1382,8 @@ Number of elements in an ArkTS Int16Array.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Int16Array-readonly length: number--><!--Device-Int16Array-readonly length: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

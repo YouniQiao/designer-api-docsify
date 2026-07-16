@@ -2,17 +2,23 @@
 
 管理音频组音量。
 
-在使用AudioVolumeGroupManager的接口之前，需先通过
-[getVolumeGroupManager](arkts-audio-audiovolumemanager-i.md#getvolumegroupmanager-1)
-获取AudioVolumeGroupManager实例。
+在使用AudioVolumeGroupManager的接口之前，需先通过[getVolumeGroupManager](arkts-audio-audiovolumemanager-i.md#getvolumegroupmanager-1)获取AudioVolumeGroupManager实例。
 
-> **说明：**
->
+> **说明：**  
+>  
 > - 本Interface首批接口从API version 9开始支持。
 
 **起始版本：** 9
 
+<!--Device-audio-interface AudioVolumeGroupManager--><!--Device-audio-interface AudioVolumeGroupManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## getMaxAmplitudeForInputDevice
 
@@ -24,19 +30,21 @@ getMaxAmplitudeForInputDevice(inputDevice: AudioDeviceDescriptor): Promise<numbe
 
 **起始版本：** 12
 
+<!--Device-AudioVolumeGroupManager-getMaxAmplitudeForInputDevice(inputDevice: AudioDeviceDescriptor): Promise<double>--><!--Device-AudioVolumeGroupManager-getMaxAmplitudeForInputDevice(inputDevice: AudioDeviceDescriptor): Promise<double>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inputDevice | AudioDeviceDescriptor | 是 | 获取最大电平值的设备信息。 |
+| inputDevice | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i.md) | 是 | 获取最大电平值的设备信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回对应设备的电平值，大小在[0, 1]之间。 |
+| Promise<number> | Promise对象，返回对应设备的电平值，大小在[0, 1]之间。 |
 
 **错误码：**
 
@@ -56,19 +64,21 @@ getMaxAmplitudeForOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<num
 
 **起始版本：** 12
 
+<!--Device-AudioVolumeGroupManager-getMaxAmplitudeForOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<double>--><!--Device-AudioVolumeGroupManager-getMaxAmplitudeForOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<double>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| outputDevice | AudioDeviceDescriptor | 是 | 获取最大电平值的设备信息。 |
+| outputDevice | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i.md) | 是 | 获取最大电平值的设备信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回对应设备的电平值，大小在[0, 1]之间。 |
+| Promise<number> | Promise对象，返回对应设备的电平值，大小在[0, 1]之间。 |
 
 **错误码：**
 
@@ -92,14 +102,16 @@ getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 
 **替代接口：** getMaxVolumeByStream
 
+<!--Device-AudioVolumeGroupManager-getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void--><!--Device-AudioVolumeGroupManager-getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | 音频音量类型。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。当获取指定流的最大音量成功，err为undefined，data为获取到的指定流的最大音量等级；否则为错误对象。 |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。当获取指定流的最大音量成功，err为undefined，data为获取到的指定流的最大音量等级；否则为错误对象。 |
 
 ## getMaxVolume
 
@@ -115,19 +127,21 @@ getMaxVolume(volumeType: AudioVolumeType): Promise<number>
 
 **替代接口：** getMaxVolumeByStream
 
+<!--Device-AudioVolumeGroupManager-getMaxVolume(volumeType: AudioVolumeType): Promise<int>--><!--Device-AudioVolumeGroupManager-getMaxVolume(volumeType: AudioVolumeType): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | 音频音量类型。 |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回最大音量等级。 |
+| Promise<number> | Promise对象，返回最大音量等级。 |
 
 ## getMaxVolumeSync
 
@@ -143,13 +157,15 @@ getMaxVolumeSync(volumeType: AudioVolumeType): number
 
 **替代接口：** getMaxVolumeByStream
 
+<!--Device-AudioVolumeGroupManager-getMaxVolumeSync(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeGroupManager-getMaxVolumeSync(volumeType: AudioVolumeType): int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | 音频音量类型。 |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 
 **返回值：**
 
@@ -178,14 +194,16 @@ getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 
 **替代接口：** getMinVolumeByStream
 
+<!--Device-AudioVolumeGroupManager-getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void--><!--Device-AudioVolumeGroupManager-getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | 音频音量类型。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。当获取指定流的最小音量成功，err为undefined，data为获取到的指定流的最小音量等级；否则为错误对象。 |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。当获取指定流的最小音量成功，err为undefined，data为获取到的指定流的最小音量等级；否则为错误对象。 |
 
 ## getMinVolume
 
@@ -201,19 +219,21 @@ getMinVolume(volumeType: AudioVolumeType): Promise<number>
 
 **替代接口：** getMinVolumeByStream
 
+<!--Device-AudioVolumeGroupManager-getMinVolume(volumeType: AudioVolumeType): Promise<int>--><!--Device-AudioVolumeGroupManager-getMinVolume(volumeType: AudioVolumeType): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | 音频音量类型。 |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回最小音量等级。 |
+| Promise<number> | Promise对象，返回最小音量等级。 |
 
 ## getMinVolumeSync
 
@@ -229,13 +249,15 @@ getMinVolumeSync(volumeType: AudioVolumeType): number
 
 **替代接口：** getMinVolumeByStream
 
+<!--Device-AudioVolumeGroupManager-getMinVolumeSync(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeGroupManager-getMinVolumeSync(volumeType: AudioVolumeType): int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | 音频音量类型。 |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 
 **返回值：**
 
@@ -260,13 +282,15 @@ getRingerMode(callback: AsyncCallback<AudioRingMode>): void
 
 **起始版本：** 9
 
+<!--Device-AudioVolumeGroupManager-getRingerMode(callback: AsyncCallback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-getRingerMode(callback: AsyncCallback<AudioRingMode>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;AudioRingMode&gt; | 是 | 回调函数。当获取铃声模式成功，err为undefined，data为获取到的铃声模式；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AudioRingMode> | 是 | 回调函数。当获取铃声模式成功，err为undefined，data为获取到的铃声模式；否则为错误对象。 |
 
 ## getRingerMode
 
@@ -278,13 +302,15 @@ getRingerMode(): Promise<AudioRingMode>
 
 **起始版本：** 9
 
+<!--Device-AudioVolumeGroupManager-getRingerMode(): Promise<AudioRingMode>--><!--Device-AudioVolumeGroupManager-getRingerMode(): Promise<AudioRingMode>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AudioRingMode&gt; | Promise对象，返回系统的铃声模式。 |
+| Promise<AudioRingMode> | Promise对象，返回系统的铃声模式。 |
 
 ## getRingerModeSync
 
@@ -296,13 +322,15 @@ getRingerModeSync(): AudioRingMode
 
 **起始版本：** 10
 
+<!--Device-AudioVolumeGroupManager-getRingerModeSync(): AudioRingMode--><!--Device-AudioVolumeGroupManager-getRingerModeSync(): AudioRingMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AudioRingMode | 返回系统的铃声模式。 |
+| [AudioRingMode](arkts-audio-audioringmode-e.md) | 返回系统的铃声模式。 |
 
 ## getSystemVolumeInDb
 
@@ -318,16 +346,18 @@ getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: number, device: De
 
 **替代接口：** getVolumeInUnitOfDbByStream
 
+<!--Device-AudioVolumeGroupManager-getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType, callback: AsyncCallback<double>): void--><!--Device-AudioVolumeGroupManager-getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType, callback: AsyncCallback<double>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | 音频音量类型。 |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 | volumeLevel | number | 是 | 音量等级。 |
-| device | DeviceType | 是 | 设备类型。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。当获取音量增益dB值成功，err为undefined，data为获取到的音量增益dB值；否则为错误对象。 |
+| device | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-devicetype-e.md) | 是 | 设备类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。当获取音量增益dB值成功，err为undefined，data为获取到的音量增益dB值；否则为错误对象。 |
 
 **错误码：**
 
@@ -351,21 +381,23 @@ getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: number, device: De
 
 **替代接口：** getVolumeInUnitOfDbByStream
 
+<!--Device-AudioVolumeGroupManager-getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType): Promise<double>--><!--Device-AudioVolumeGroupManager-getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType): Promise<double>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | 音频音量类型。 |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 | volumeLevel | number | 是 | 音量等级。 |
-| device | DeviceType | 是 | 设备类型。 |
+| device | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-devicetype-e.md) | 是 | 设备类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回对应的音量增益dB值。 |
+| Promise<number> | Promise对象，返回对应的音量增益dB值。 |
 
 **错误码：**
 
@@ -389,15 +421,17 @@ getSystemVolumeInDbSync(volumeType: AudioVolumeType, volumeLevel: number, device
 
 **替代接口：** getVolumeInUnitOfDbByStream
 
+<!--Device-AudioVolumeGroupManager-getSystemVolumeInDbSync(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType): double--><!--Device-AudioVolumeGroupManager-getSystemVolumeInDbSync(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType): double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | 音频音量类型。 |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 | volumeLevel | number | 是 | 音量等级。 |
-| device | DeviceType | 是 | 设备类型。 |
+| device | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-devicetype-e.md) | 是 | 设备类型。 |
 
 **返回值：**
 
@@ -426,14 +460,16 @@ getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 
 **替代接口：** getVolumeByStream
 
+<!--Device-AudioVolumeGroupManager-getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void--><!--Device-AudioVolumeGroupManager-getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | 音频音量类型。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。当获取指定流的音量成功，err为undefined，data为获取到的指定流的音量等级；否则为错误对象。指定流的音量等级范围可通过[getMinVolume](arkts-audio-audiovolumegroupmanager-i.md#getminvolume-1)和[getMaxVolume](arkts-audio-audiovolumegroupmanager-i.md#getmaxvolume-1)获取。 |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。当获取指定流的音量成功，err为undefined，data为获取到的指定流的音量等级；否则为错误对象。指定流的音量等级范围可通过[getMinVolume](arkts-audio-audiovolumegroupmanager-i.md#getminvolume-1)和[getMaxVolume](arkts-audio-audiovolumegroupmanager-i.md#getmaxvolume-1)获取。 |
 
 ## getVolume
 
@@ -449,19 +485,21 @@ getVolume(volumeType: AudioVolumeType): Promise<number>
 
 **替代接口：** getVolumeByStream
 
+<!--Device-AudioVolumeGroupManager-getVolume(volumeType: AudioVolumeType): Promise<int>--><!--Device-AudioVolumeGroupManager-getVolume(volumeType: AudioVolumeType): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | 音频音量类型。 |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回指定流的音量等级。指定流的音量等级范围可通过[getMinVolume](arkts-audio-audiovolumegroupmanager-i.md#getminvolume-1)和[getMaxVolume](arkts-audio-audiovolumegroupmanager-i.md#getmaxvolume-1)获取。 |
+| Promise<number> | Promise对象，返回指定流的音量等级。指定流的音量等级范围可通过[getMinVolume](arkts-audio-audiovolumegroupmanager-i.md#getminvolume-1)和[getMaxVolume](arkts-audio-audiovolumegroupmanager-i.md#getmaxvolume-1)获取。 |
 
 ## getVolumeSync
 
@@ -477,13 +515,15 @@ getVolumeSync(volumeType: AudioVolumeType): number
 
 **替代接口：** getVolumeByStream
 
+<!--Device-AudioVolumeGroupManager-getVolumeSync(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeGroupManager-getVolumeSync(volumeType: AudioVolumeType): int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | 音频音量类型。 |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 
 **返回值：**
 
@@ -508,13 +548,15 @@ isMicrophoneMute(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 9
 
+<!--Device-AudioVolumeGroupManager-isMicrophoneMute(callback: AsyncCallback<boolean>): void--><!--Device-AudioVolumeGroupManager-isMicrophoneMute(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。当获取麦克风静音状态成功，err为undefined，data为true表示静音，false表示非静音；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。当获取麦克风静音状态成功，err为undefined，data为true表示静音，false表示非静音；否则为错误对象。 |
 
 ## isMicrophoneMute
 
@@ -526,13 +568,15 @@ isMicrophoneMute(): Promise<boolean>
 
 **起始版本：** 9
 
+<!--Device-AudioVolumeGroupManager-isMicrophoneMute(): Promise<boolean>--><!--Device-AudioVolumeGroupManager-isMicrophoneMute(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示麦克风被静音；返回false表示麦克风未被静音。 |
+| Promise<boolean> | Promise对象。返回true表示麦克风被静音；返回false表示麦克风未被静音。 |
 
 ## isMicrophoneMuteSync
 
@@ -543,6 +587,8 @@ isMicrophoneMuteSync(): boolean
 获取麦克风静音状态。同步返回结果。
 
 **起始版本：** 10
+
+<!--Device-AudioVolumeGroupManager-isMicrophoneMuteSync(): boolean--><!--Device-AudioVolumeGroupManager-isMicrophoneMuteSync(): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -566,14 +612,16 @@ isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 
 **替代接口：** isSystemMutedForStream
 
+<!--Device-AudioVolumeGroupManager-isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void--><!--Device-AudioVolumeGroupManager-isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | 音频音量类型。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。当获取指定音量流静音状态成功，err为undefined，data为true表示静音，false表示非静音；否则为错误对象。 |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。当获取指定音量流静音状态成功，err为undefined，data为true表示静音，false表示非静音；否则为错误对象。 |
 
 ## isMute
 
@@ -589,19 +637,21 @@ isMute(volumeType: AudioVolumeType): Promise<boolean>
 
 **替代接口：** isSystemMutedForStream
 
+<!--Device-AudioVolumeGroupManager-isMute(volumeType: AudioVolumeType): Promise<boolean>--><!--Device-AudioVolumeGroupManager-isMute(volumeType: AudioVolumeType): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | 音频音量类型。 |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示静音；返回false表示非静音。 |
+| Promise<boolean> | Promise对象。返回true表示静音；返回false表示非静音。 |
 
 ## isMuteSync
 
@@ -617,13 +667,15 @@ isMuteSync(volumeType: AudioVolumeType): boolean
 
 **替代接口：** isSystemMutedForStream
 
+<!--Device-AudioVolumeGroupManager-isMuteSync(volumeType: AudioVolumeType): boolean--><!--Device-AudioVolumeGroupManager-isMuteSync(volumeType: AudioVolumeType): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | 音频音量类型。 |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 
 **返回值：**
 
@@ -648,6 +700,8 @@ isVolumeUnadjustable(): boolean
 
 **起始版本：** 10
 
+<!--Device-AudioVolumeGroupManager-isVolumeUnadjustable(): boolean--><!--Device-AudioVolumeGroupManager-isVolumeUnadjustable(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **返回值：**
@@ -666,6 +720,8 @@ off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void
 
 **起始版本：** 18
 
+<!--Device-AudioVolumeGroupManager-off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -673,7 +729,7 @@ off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'ringerModeChange' | 是 | 事件回调类型，支持的事件为'ringerModeChange'，当取消监听铃声模式变化事件时，触发该事件。 |
-| callback | Callback&lt;AudioRingMode&gt; | 否 | 回调函数，返回变化后的铃音模式。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioRingMode> | 否 | 回调函数，返回变化后的铃音模式。 |
 
 **错误码：**
 
@@ -691,6 +747,8 @@ off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void
 
 **起始版本：** 12
 
+<!--Device-AudioVolumeGroupManager-off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void--><!--Device-AudioVolumeGroupManager-off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -698,7 +756,7 @@ off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'micStateChange' | 是 | 事件回调类型，支持的事件为'micStateChange'，当取消监听系统麦克风状态更改事件时，触发该事件。 |
-| callback | Callback&lt;MicStateChangeEvent&gt; | 否 | 回调函数，返回变更后的麦克风状态。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<MicStateChangeEvent> | 否 | 回调函数，返回变更后的麦克风状态。 |
 
 **错误码：**
 
@@ -717,6 +775,8 @@ on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
 
 **起始版本：** 9
 
+<!--Device-AudioVolumeGroupManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -724,7 +784,7 @@ on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'ringerModeChange' | 是 | 事件回调类型，支持的事件为'ringerModeChange'，当铃声模式发生变化时，触发该事件。 |
-| callback | Callback&lt;AudioRingMode&gt; | 是 | 回调函数，返回变化后的铃音模式。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioRingMode> | 是 | 回调函数，返回变化后的铃音模式。 |
 
 **错误码：**
 
@@ -745,6 +805,8 @@ on(type: 'micStateChange', callback: Callback<MicStateChangeEvent>): void
 
 **起始版本：** 9
 
+<!--Device-AudioVolumeGroupManager-on(type: 'micStateChange', callback: Callback<MicStateChangeEvent>): void--><!--Device-AudioVolumeGroupManager-on(type: 'micStateChange', callback: Callback<MicStateChangeEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -752,7 +814,7 @@ on(type: 'micStateChange', callback: Callback<MicStateChangeEvent>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'micStateChange' | 是 | 事件回调类型，支持的事件为'micStateChange'，当检测到系统麦克风状态发生改变时，触发该事件。 |
-| callback | Callback&lt;MicStateChangeEvent&gt; | 是 | 回调函数，返回变更后的麦克风状态。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<MicStateChangeEvent> | 是 | 回调函数，返回变更后的麦克风状态。 |
 
 **错误码：**
 
@@ -769,8 +831,8 @@ setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void
 
 设置麦克风静音状态。使用callback异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 9开始支持，从API version 11开始废弃。
 
 **起始版本：** 9
@@ -779,6 +841,8 @@ setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
 
+<!--Device-AudioVolumeGroupManager-setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioVolumeGroupManager-setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **参数：**
@@ -786,7 +850,7 @@ setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mute | boolean | 是 | 是否设置麦克风为静音状态。true表示静音，false表示非静音。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当设置麦克风静音状态成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当设置麦克风静音状态成功，err为undefined，否则为错误对象。 |
 
 ## setMicrophoneMute
 
@@ -796,8 +860,8 @@ setMicrophoneMute(mute: boolean): Promise<void>
 
 设置麦克风静音状态。使用Promise异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 9开始支持，从API version 11开始废弃。
 
 **起始版本：** 9
@@ -805,6 +869,8 @@ setMicrophoneMute(mute: boolean): Promise<void>
 **废弃版本：** 11
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioVolumeGroupManager-setMicrophoneMute(mute: boolean): Promise<void>--><!--Device-AudioVolumeGroupManager-setMicrophoneMute(mute: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -818,5 +884,5 @@ setMicrophoneMute(mute: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 

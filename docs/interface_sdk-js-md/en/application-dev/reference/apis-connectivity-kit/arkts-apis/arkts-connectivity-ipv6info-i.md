@@ -4,6 +4,8 @@ Wi-Fi IPv6 information.
 
 **Since:** 10
 
+<!--Device-wifiManager-interface Ipv6Info--><!--Device-wifiManager-interface Ipv6Info-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## Modules to Import
@@ -24,6 +26,8 @@ The gateway of the Wi-Fi connection
 
 **Since:** 10
 
+<!--Device-Ipv6Info-gateway: string--><!--Device-Ipv6Info-gateway: string-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## globalIpv6Address
@@ -37,6 +41,8 @@ The global IPv6 address of the Wi-Fi connection
 **Type:** string
 
 **Since:** 10
+
+<!--Device-Ipv6Info-globalIpv6Address: string--><!--Device-Ipv6Info-globalIpv6Address: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -52,6 +58,8 @@ The link IPv6 address of the Wi-Fi connection
 
 **Since:** 10
 
+<!--Device-Ipv6Info-linkIpv6Address: string--><!--Device-Ipv6Info-linkIpv6Address: string-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## netmask
@@ -65,6 +73,8 @@ The network mask of the Wi-Fi connection
 **Type:** string
 
 **Since:** 10
+
+<!--Device-Ipv6Info-netmask: string--><!--Device-Ipv6Info-netmask: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -80,6 +90,8 @@ The primary DNS server IPV6 address of the Wi-Fi connection
 
 **Since:** 10
 
+<!--Device-Ipv6Info-primaryDNS: string--><!--Device-Ipv6Info-primaryDNS: string-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## randomGlobalIpv6Address
@@ -93,6 +105,8 @@ The rand Global IPv6 address of the Wi-Fi connection
 **Type:** string
 
 **Since:** 10
+
+<!--Device-Ipv6Info-randomGlobalIpv6Address: string--><!--Device-Ipv6Info-randomGlobalIpv6Address: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -108,6 +122,8 @@ The rand unique IPv6 address of the Wi-Fi connection
 
 **Since:** 12
 
+<!--Device-Ipv6Info-randomUniqueIpv6Address?: string--><!--Device-Ipv6Info-randomUniqueIpv6Address?: string-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## secondDNS
@@ -122,6 +138,8 @@ The secondary DNS server IPV6 address of the Wi-Fi connection
 
 **Since:** 10
 
+<!--Device-Ipv6Info-secondDNS: string--><!--Device-Ipv6Info-secondDNS: string-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## uniqueIpv6Address
@@ -135,6 +153,8 @@ The unique IPv6 address of the Wi-Fi connection
 **Type:** string
 
 **Since:** 12
+
+<!--Device-Ipv6Info-uniqueIpv6Address?: string--><!--Device-Ipv6Info-uniqueIpv6Address?: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 

@@ -13,13 +13,12 @@ function getLauncherAbilityInfos(bundleName: string,
     userId: number, callback: AsyncCallback<Array<LauncherAbilityInfo>>): void
 ```
 
-Obtains an array of the launcher ability information based on a given bundle name. This API uses an asynchronous
-callback to return the result.
+Obtains an array of the launcher ability information based on a given bundle name. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getLauncherAbilityInfo](@ohos.bundle.launcherBundleManager:launcherBundleManager.getLauncherAbilityInfo(bundleName: string, userId: int, callback: AsyncCallback<Array<LauncherAbilityInfo>>))
+> **NOTE**  
+>  
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [getLauncherAbilityInfo](arkts-ability-getlauncherabilityinfo-f-sys.md#getlauncherabilityinfo-1)  
 > instead.
 
 **Since:** 8
@@ -29,6 +28,10 @@ callback to return the result.
 **Substitutes:** getLauncherAbilityInfo(bundleName:
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-innerBundleManager-function getLauncherAbilityInfos(bundleName: string,
+    userId: number, callback: AsyncCallback<Array<LauncherAbilityInfo>>): void--><!--Device-innerBundleManager-function getLauncherAbilityInfos(bundleName: string,
+    userId: number, callback: AsyncCallback<Array<LauncherAbilityInfo>>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -40,7 +43,7 @@ callback to return the result.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | userId | number | Yes | User ID. The value must be greater than or equal to 0. |
-| callback | AsyncCallback&lt;Array&lt;LauncherAbilityInfo&gt;&gt; | Yes | Callback used to return an array of the launcherability information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<LauncherAbilityInfo>> | Yes | Callback used to return an array of the launcher ability information. |
 
 
 ## getLauncherAbilityInfos
@@ -49,13 +52,12 @@ callback to return the result.
 function getLauncherAbilityInfos(bundleName: string, userId: number): Promise<Array<LauncherAbilityInfo>>
 ```
 
-Obtains an array of the launcher ability information based on a given bundle name. This API uses a promise to
-return the result.
+Obtains an array of the launcher ability information based on a given bundle name. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getLauncherAbilityInfo](@ohos.bundle.launcherBundleManager:launcherBundleManager.getLauncherAbilityInfo(bundleName: string, userId: int, callback: AsyncCallback<Array<LauncherAbilityInfo>>))
+> **NOTE**  
+>  
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [getLauncherAbilityInfo](arkts-ability-getlauncherabilityinfo-f-sys.md#getlauncherabilityinfo-1)  
 > instead.
 
 **Since:** 8
@@ -65,6 +67,8 @@ return the result.
 **Substitutes:** getLauncherAbilityInfo(bundleName:
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-innerBundleManager-function getLauncherAbilityInfos(bundleName: string, userId: number): Promise<Array<LauncherAbilityInfo>>--><!--Device-innerBundleManager-function getLauncherAbilityInfos(bundleName: string, userId: number): Promise<Array<LauncherAbilityInfo>>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -81,5 +85,5 @@ return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;LauncherAbilityInfo&gt;&gt; | Promise used to return an array of the launcher abilityinformation. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<LauncherAbilityInfo>> | Promise used to return an array of the launcher ability information. |
 

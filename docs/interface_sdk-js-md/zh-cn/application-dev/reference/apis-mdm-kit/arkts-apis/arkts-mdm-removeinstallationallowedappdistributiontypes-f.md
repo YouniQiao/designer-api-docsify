@@ -1,13 +1,18 @@
 # removeInstallationAllowedAppDistributionTypes
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+```
+
 ## removeInstallationAllowedAppDistributionTypes
 
 ```TypeScript
 function removeInstallationAllowedAppDistributionTypes(admin: Want, appDistributionTypes: Array<AppDistributionType>): void
 ```
 
-移除应用的分发类型。若只移除了数组中部分的分发类型，则当前设备可以安装数组中剩下的分发类型的应用，但无法安装
-[AppDistributionType](arkts-mdm-appdistributiontype-e.md)中未添加的分发类型的应用。
+移除应用的分发类型。若只移除了数组中部分的分发类型，则当前设备可以安装数组中剩下的分发类型的应用，但无法安装[AppDistributionType](arkts-mdm-appdistributiontype-e.md)中未添加的分发类型的应用。
 
 应用程序签名证书的分发类型详细介绍请参见[ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md)的appDistributionType属性。
 
@@ -17,14 +22,16 @@ function removeInstallationAllowedAppDistributionTypes(admin: Want, appDistribut
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bundleManager-function removeInstallationAllowedAppDistributionTypes(admin: Want, appDistributionTypes: Array<AppDistributionType>): void--><!--Device-bundleManager-function removeInstallationAllowedAppDistributionTypes(admin: Want, appDistributionTypes: Array<AppDistributionType>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| appDistributionTypes | Array&lt;AppDistributionType&gt; | 是 | 应用程序签名证书的分发类型数组。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| appDistributionTypes | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<AppDistributionType> | 是 | 应用程序签名证书的分发类型数组。 |
 
 **错误码：**
 

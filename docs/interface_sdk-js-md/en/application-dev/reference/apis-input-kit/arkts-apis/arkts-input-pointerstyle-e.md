@@ -4,6 +4,8 @@ Mouse pointer style types.
 
 **Since:** 9
 
+<!--Device-pointer-enum PointerStyle--><!--Device-pointer-enum PointerStyle-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## DEFAULT
@@ -15,6 +17,8 @@ DEFAULT = 0
 Default
 
 **Since:** 9
+
+<!--Device-PointerStyle-DEFAULT = 0--><!--Device-PointerStyle-DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -28,6 +32,8 @@ East arrow
 
 **Since:** 9
 
+<!--Device-PointerStyle-EAST = 1--><!--Device-PointerStyle-EAST = 1-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## WEST
@@ -39,6 +45,8 @@ WEST = 2
 West arrow
 
 **Since:** 9
+
+<!--Device-PointerStyle-WEST = 2--><!--Device-PointerStyle-WEST = 2-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -52,6 +60,8 @@ South arrow
 
 **Since:** 9
 
+<!--Device-PointerStyle-SOUTH = 3--><!--Device-PointerStyle-SOUTH = 3-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## NORTH
@@ -63,6 +73,8 @@ NORTH = 4
 North arrow
 
 **Since:** 9
+
+<!--Device-PointerStyle-NORTH = 4--><!--Device-PointerStyle-NORTH = 4-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -76,6 +88,8 @@ West-east arrow
 
 **Since:** 9
 
+<!--Device-PointerStyle-WEST_EAST = 5--><!--Device-PointerStyle-WEST_EAST = 5-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## NORTH_SOUTH
@@ -87,6 +101,8 @@ NORTH_SOUTH = 6
 North-south arrow
 
 **Since:** 9
+
+<!--Device-PointerStyle-NORTH_SOUTH = 6--><!--Device-PointerStyle-NORTH_SOUTH = 6-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -100,6 +116,8 @@ North-east arrow
 
 **Since:** 9
 
+<!--Device-PointerStyle-NORTH_EAST = 7--><!--Device-PointerStyle-NORTH_EAST = 7-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## NORTH_WEST
@@ -111,6 +129,8 @@ NORTH_WEST = 8
 North-west arrow
 
 **Since:** 9
+
+<!--Device-PointerStyle-NORTH_WEST = 8--><!--Device-PointerStyle-NORTH_WEST = 8-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -124,6 +144,8 @@ South-east arrow
 
 **Since:** 9
 
+<!--Device-PointerStyle-SOUTH_EAST = 9--><!--Device-PointerStyle-SOUTH_EAST = 9-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## SOUTH_WEST
@@ -135,6 +157,8 @@ SOUTH_WEST = 10
 South-west arrow
 
 **Since:** 9
+
+<!--Device-PointerStyle-SOUTH_WEST = 10--><!--Device-PointerStyle-SOUTH_WEST = 10-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -148,6 +172,8 @@ North-east and south-west adjustment
 
 **Since:** 9
 
+<!--Device-PointerStyle-NORTH_EAST_SOUTH_WEST = 11--><!--Device-PointerStyle-NORTH_EAST_SOUTH_WEST = 11-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## NORTH_WEST_SOUTH_EAST
@@ -159,6 +185,8 @@ NORTH_WEST_SOUTH_EAST = 12
 North-west and south-east adjustment
 
 **Since:** 9
+
+<!--Device-PointerStyle-NORTH_WEST_SOUTH_EAST = 12--><!--Device-PointerStyle-NORTH_WEST_SOUTH_EAST = 12-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -172,6 +200,8 @@ Cross (accurate selection)
 
 **Since:** 9
 
+<!--Device-PointerStyle-CROSS = 13--><!--Device-PointerStyle-CROSS = 13-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## CURSOR_COPY
@@ -183,6 +213,8 @@ CURSOR_COPY = 14
 Copy
 
 **Since:** 9
+
+<!--Device-PointerStyle-CURSOR_COPY = 14--><!--Device-PointerStyle-CURSOR_COPY = 14-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -196,6 +228,8 @@ Forbid
 
 **Since:** 9
 
+<!--Device-PointerStyle-CURSOR_FORBID = 15--><!--Device-PointerStyle-CURSOR_FORBID = 15-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## COLOR_SUCKER
@@ -207,6 +241,8 @@ COLOR_SUCKER = 16
 Color picker
 
 **Since:** 9
+
+<!--Device-PointerStyle-COLOR_SUCKER = 16--><!--Device-PointerStyle-COLOR_SUCKER = 16-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -220,6 +256,8 @@ Grabbing hand
 
 **Since:** 9
 
+<!--Device-PointerStyle-HAND_GRABBING = 17--><!--Device-PointerStyle-HAND_GRABBING = 17-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## HAND_OPEN
@@ -231,6 +269,8 @@ HAND_OPEN = 18
 Opening hand
 
 **Since:** 9
+
+<!--Device-PointerStyle-HAND_OPEN = 18--><!--Device-PointerStyle-HAND_OPEN = 18-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -244,6 +284,8 @@ Hand-shaped pointer
 
 **Since:** 9
 
+<!--Device-PointerStyle-HAND_POINTING = 19--><!--Device-PointerStyle-HAND_POINTING = 19-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## HELP
@@ -255,6 +297,8 @@ HELP = 20
 Help
 
 **Since:** 9
+
+<!--Device-PointerStyle-HELP = 20--><!--Device-PointerStyle-HELP = 20-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -268,6 +312,8 @@ Move
 
 **Since:** 9
 
+<!--Device-PointerStyle-MOVE = 21--><!--Device-PointerStyle-MOVE = 21-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## RESIZE_LEFT_RIGHT
@@ -279,6 +325,8 @@ RESIZE_LEFT_RIGHT = 22
 Left and right resizing
 
 **Since:** 9
+
+<!--Device-PointerStyle-RESIZE_LEFT_RIGHT = 22--><!--Device-PointerStyle-RESIZE_LEFT_RIGHT = 22-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -292,6 +340,8 @@ Up and down resizing
 
 **Since:** 9
 
+<!--Device-PointerStyle-RESIZE_UP_DOWN = 23--><!--Device-PointerStyle-RESIZE_UP_DOWN = 23-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## SCREENSHOT_CHOOSE
@@ -303,6 +353,8 @@ SCREENSHOT_CHOOSE = 24
 Screenshot crosshair
 
 **Since:** 9
+
+<!--Device-PointerStyle-SCREENSHOT_CHOOSE = 24--><!--Device-PointerStyle-SCREENSHOT_CHOOSE = 24-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -316,6 +368,8 @@ Screenshot
 
 **Since:** 9
 
+<!--Device-PointerStyle-SCREENSHOT_CURSOR = 25--><!--Device-PointerStyle-SCREENSHOT_CURSOR = 25-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## TEXT_CURSOR
@@ -327,6 +381,8 @@ TEXT_CURSOR = 26
 Text selection
 
 **Since:** 9
+
+<!--Device-PointerStyle-TEXT_CURSOR = 26--><!--Device-PointerStyle-TEXT_CURSOR = 26-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -340,6 +396,8 @@ Zoom in
 
 **Since:** 9
 
+<!--Device-PointerStyle-ZOOM_IN = 27--><!--Device-PointerStyle-ZOOM_IN = 27-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## ZOOM_OUT
@@ -351,6 +409,8 @@ ZOOM_OUT = 28
 Zoom out
 
 **Since:** 9
+
+<!--Device-PointerStyle-ZOOM_OUT = 28--><!--Device-PointerStyle-ZOOM_OUT = 28-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -364,6 +424,8 @@ Scrolling east
 
 **Since:** 9
 
+<!--Device-PointerStyle-MIDDLE_BTN_EAST = 29--><!--Device-PointerStyle-MIDDLE_BTN_EAST = 29-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## MIDDLE_BTN_WEST
@@ -375,6 +437,8 @@ MIDDLE_BTN_WEST = 30
 Scrolling west
 
 **Since:** 9
+
+<!--Device-PointerStyle-MIDDLE_BTN_WEST = 30--><!--Device-PointerStyle-MIDDLE_BTN_WEST = 30-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -388,6 +452,8 @@ Scrolling south
 
 **Since:** 9
 
+<!--Device-PointerStyle-MIDDLE_BTN_SOUTH = 31--><!--Device-PointerStyle-MIDDLE_BTN_SOUTH = 31-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## MIDDLE_BTN_NORTH
@@ -399,6 +465,8 @@ MIDDLE_BTN_NORTH = 32
 Scrolling north
 
 **Since:** 9
+
+<!--Device-PointerStyle-MIDDLE_BTN_NORTH = 32--><!--Device-PointerStyle-MIDDLE_BTN_NORTH = 32-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -412,6 +480,8 @@ Scrolling north-south
 
 **Since:** 9
 
+<!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH = 33--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH = 33-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## MIDDLE_BTN_NORTH_EAST
@@ -423,6 +493,8 @@ MIDDLE_BTN_NORTH_EAST = 34
 Scrolling north-east
 
 **Since:** 9
+
+<!--Device-PointerStyle-MIDDLE_BTN_NORTH_EAST = 34--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_EAST = 34-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -436,6 +508,8 @@ Scrolling north-west
 
 **Since:** 9
 
+<!--Device-PointerStyle-MIDDLE_BTN_NORTH_WEST = 35--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_WEST = 35-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## MIDDLE_BTN_SOUTH_EAST
@@ -447,6 +521,8 @@ MIDDLE_BTN_SOUTH_EAST = 36
 Scrolling south-east
 
 **Since:** 9
+
+<!--Device-PointerStyle-MIDDLE_BTN_SOUTH_EAST = 36--><!--Device-PointerStyle-MIDDLE_BTN_SOUTH_EAST = 36-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -460,6 +536,8 @@ Scrolling south-west
 
 **Since:** 9
 
+<!--Device-PointerStyle-MIDDLE_BTN_SOUTH_WEST = 37--><!--Device-PointerStyle-MIDDLE_BTN_SOUTH_WEST = 37-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## MIDDLE_BTN_NORTH_SOUTH_WEST_EAST
@@ -471,6 +549,8 @@ MIDDLE_BTN_NORTH_SOUTH_WEST_EAST = 38
 Moving as a cone in four directions
 
 **Since:** 9
+
+<!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH_WEST_EAST = 38--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH_WEST_EAST = 38-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -484,6 +564,8 @@ Horizontal text selection
 
 **Since:** 10
 
+<!--Device-PointerStyle-HORIZONTAL_TEXT_CURSOR = 39--><!--Device-PointerStyle-HORIZONTAL_TEXT_CURSOR = 39-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## CURSOR_CROSS
@@ -496,6 +578,8 @@ Cross
 
 **Since:** 10
 
+<!--Device-PointerStyle-CURSOR_CROSS = 40--><!--Device-PointerStyle-CURSOR_CROSS = 40-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## CURSOR_CIRCLE
@@ -507,6 +591,8 @@ CURSOR_CIRCLE = 41
 Circle
 
 **Since:** 10
+
+<!--Device-PointerStyle-CURSOR_CIRCLE = 41--><!--Device-PointerStyle-CURSOR_CIRCLE = 41-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -522,6 +608,8 @@ Animation loading
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PointerStyle-LOADING = 42--><!--Device-PointerStyle-LOADING = 42-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## RUNNING
@@ -536,6 +624,8 @@ Animation running in the background
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PointerStyle-RUNNING = 43--><!--Device-PointerStyle-RUNNING = 43-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## MIDDLE_BTN_EAST_WEST
@@ -547,6 +637,8 @@ MIDDLE_BTN_EAST_WEST = 44
 Scrolling east-west
 
 **Since:** 18
+
+<!--Device-PointerStyle-MIDDLE_BTN_EAST_WEST = 44--><!--Device-PointerStyle-MIDDLE_BTN_EAST_WEST = 44-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -560,6 +652,8 @@ Running in the background (extension 1)
 
 **Since:** 22
 
+<!--Device-PointerStyle-RUNNING_LEFT = 45--><!--Device-PointerStyle-RUNNING_LEFT = 45-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## RUNNING_RIGHT
@@ -571,6 +665,8 @@ RUNNING_RIGHT = 46
 Running in the background (extension 2)
 
 **Since:** 22
+
+<!--Device-PointerStyle-RUNNING_RIGHT = 46--><!--Device-PointerStyle-RUNNING_RIGHT = 46-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -584,6 +680,8 @@ Custom circular pointer
 
 **Since:** 22
 
+<!--Device-PointerStyle-AECH_DEVELOPER_DEFINED_ICON = 47--><!--Device-PointerStyle-AECH_DEVELOPER_DEFINED_ICON = 47-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## SCREENRECORDER_CURSOR
@@ -596,6 +694,8 @@ Screen recording
 
 **Since:** 20
 
+<!--Device-PointerStyle-SCREENRECORDER_CURSOR = 48--><!--Device-PointerStyle-SCREENRECORDER_CURSOR = 48-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## LASER_CURSOR
@@ -606,11 +706,11 @@ LASER_CURSOR = 49
 
 Floating This pointer can be used only when the stylus enters the air mouse mode and cannot be directly set.
 
-In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on the
-screen and press the button on the stylus to turn pages up or down. This mode is used for PPT presentation and
-air gesture control.
+In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on the screen and press the button on the stylus to turn pages up or down. This mode is used for PPT presentation and air gesture control.
 
 **Since:** 22
+
+<!--Device-PointerStyle-LASER_CURSOR = 49--><!--Device-PointerStyle-LASER_CURSOR = 49-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -622,11 +722,11 @@ LASER_CURSOR_DOT = 50
 
 Click This pointer can be used only when the stylus enters the air mouse mode and cannot be directly set.
 
-In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on the
-screen and press the button on the stylus to turn pages up or down. This mode is used for PPT presentation and
-air gesture control.
+In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on the screen and press the button on the stylus to turn pages up or down. This mode is used for PPT presentation and air gesture control.
 
 **Since:** 22
+
+<!--Device-PointerStyle-LASER_CURSOR_DOT = 50--><!--Device-PointerStyle-LASER_CURSOR_DOT = 50-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -638,11 +738,11 @@ LASER_CURSOR_DOT_RED = 51
 
 Laser pointer This pointer can be used only when the stylus enters the air mouse mode and cannot be directly set.
 
-In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on the
-screen and press the button on the stylus to turn pages up or down. This mode is used for PPT presentation and
-air gesture control.
+In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on the screen and press the button on the stylus to turn pages up or down. This mode is used for PPT presentation and air gesture control.
 
 **Since:** 22
+
+<!--Device-PointerStyle-LASER_CURSOR_DOT_RED = 51--><!--Device-PointerStyle-LASER_CURSOR_DOT_RED = 51-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -652,10 +752,11 @@ air gesture control.
 DEVELOPER_DEFINED_ICON = -100
 ```
 
-Custom pointer. You can use [setCustomCursor](arkts-input-setcustomcursor-f.md#setcustomcursor-1) to set a custom pointer. The custom
-pointer cannot be directly set using [setPointerStyle](arkts-input-setpointerstyle-f.md#setpointerstyle-1).
+Custom pointer. You can use [setCustomCursor](arkts-input-setcustomcursor-f.md#setcustomcursor-1) to set a custom pointer. The custom pointer cannot be directly set using [setPointerStyle](arkts-input-setpointerstyle-f.md#setpointerstyle-1).
 
 **Since:** 22
+
+<!--Device-PointerStyle-DEVELOPER_DEFINED_ICON = -100--><!--Device-PointerStyle-DEVELOPER_DEFINED_ICON = -100-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 

@@ -4,6 +4,8 @@ Tabs组件的控制器，用于控制Tabs组件进行页签切换。不支持一
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare class TabsController--><!--Device-unnamed-declare class TabsController-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## changeIndex
@@ -16,7 +18,9 @@ changeIndex(value: number): void
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TabsController-changeIndex(value: number): void--><!--Device-TabsController-changeIndex(value: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,7 +40,9 @@ TabsController的构造函数。
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TabsController-constructor()--><!--Device-TabsController-constructor()-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,18 +56,20 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 > **说明：**
 
-> - Tabs的preloadItems需要在Tabs创建之后去调用，首次预加载推荐在Tabs的[onAppear](arkts-arkui-commonmethod-c.md#onappear-1)生命周期中去控制。
->
-> - 如果TabsController对象未绑定任何Tabs组件，直接调用该接口，会抛出JS异常。因此使用该接口时，建议通过try-catch捕获异常。
->
-> - 使用preloadItems预加载标签页时，若需自定义TabBar上的显示内容，推荐使用ComponentContent实现，使用示例请参考
+> - Tabs的preloadItems需要在Tabs创建之后去调用，首次预加载推荐在Tabs的[onAppear](arkts-arkui-commonmethod-c.md#onappear-1)生命周期中去控制。  
+>  
+> - 如果TabsController对象未绑定任何Tabs组件，直接调用该接口，会抛出JS异常。因此使用该接口时，建议通过try-catch捕获异常。  
+>  
+> - 使用preloadItems预加载标签页时，若需自定义TabBar上的显示内容，推荐使用ComponentContent实现，使用示例请参考  
 > [示例9](../../../../reference/apis-arkui/arkui-ts/ts-container-tabcontent.md#示例9通过componentcontent设置tabbar)。
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TabsController-preloadItems(indices: Optional<Array<number>>): Promise<void>--><!--Device-TabsController-preloadItems(indices: Optional<Array<number>>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,13 +77,13 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| indices | Optional&lt;Array&lt;number&gt;&gt; | 是 | 需预加载的子节点的下标数组。<br/>默认值：空数组。 |
+| indices | [Optional](arkts-arkui-optional-t.md)<Array<number>> | 是 | 需预加载的子节点的下标数组。<br/>默认值：空数组。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 预加载完成后触发的回调。 |
+| Promise<void> | 预加载完成后触发的回调。 |
 
 **错误码：**
 
@@ -93,17 +101,19 @@ setTabBarOpacity(opacity: number): void
 
 > **说明：**
 
-> 当使用
-> [bindTabsToScrollable](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable13)或
-> [bindTabsToNestedScrollable](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable13)
-> 等接口绑定了Tabs组件和可滚动容器组件后，在滑动可滚动容器组件时，会触发所有与其绑定的Tabs组件的TabBar的显示和隐藏动效，调用setTabBarOpacity接口设置的TabBar不透明度会失效。因此不建议同时使用
+> 当使用  
+> [bindTabsToScrollable](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable13)或  
+> [bindTabsToNestedScrollable](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable13)  
+> 等接口绑定了Tabs组件和可滚动容器组件后，在滑动可滚动容器组件时，会触发所有与其绑定的Tabs组件的TabBar的显示和隐藏动效，调用setTabBarOpacity接口设置的TabBar不透明度会失效。因此不建议同时使用  
 > bindTabsToScrollable、bindTabsToNestedScrollable和setTabBarOpacity接口。
 
 **起始版本：** 13
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本13开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TabsController-setTabBarOpacity(opacity: number): void--><!--Device-TabsController-setTabBarOpacity(opacity: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -123,17 +133,19 @@ setTabBarTranslate(translate: TranslateOptions): void
 
 > **说明：**
 
-> 当使用
-> [bindTabsToScrollable](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable13)或
-> [bindTabsToNestedScrollable](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable13)
-> 等接口绑定了Tabs组件和可滚动容器组件后，在滑动可滚动容器组件时，会触发所有与其绑定的Tabs组件的TabBar的显示和隐藏动效，调用setTabBarTranslate接口设置的TabBar平移距离会失效。因此不建议同时使
+> 当使用  
+> [bindTabsToScrollable](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable13)或  
+> [bindTabsToNestedScrollable](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable13)  
+> 等接口绑定了Tabs组件和可滚动容器组件后，在滑动可滚动容器组件时，会触发所有与其绑定的Tabs组件的TabBar的显示和隐藏动效，调用setTabBarTranslate接口设置的TabBar平移距离会失效。因此不建议同时使  
 > 用bindTabsToScrollable、bindTabsToNestedScrollable和setTabBarTranslate接口。
 
 **起始版本：** 13
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本13开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TabsController-setTabBarTranslate(translate: TranslateOptions): void--><!--Device-TabsController-setTabBarTranslate(translate: TranslateOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -141,5 +153,5 @@ setTabBarTranslate(translate: TranslateOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| translate | TranslateOptions | 是 | 设置TabBar的平移距离。 |
+| translate | [TranslateOptions](arkts-arkui-translateoptions-i.md) | 是 | 设置TabBar的平移距离。 |
 

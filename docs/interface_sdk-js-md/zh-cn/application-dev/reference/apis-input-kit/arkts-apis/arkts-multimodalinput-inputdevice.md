@@ -6,7 +6,15 @@
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare namespace inputDevice--><!--Device-unnamed-declare namespace inputDevice-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
+
+## 导入模块
+
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+```
 
 ## 汇总
 

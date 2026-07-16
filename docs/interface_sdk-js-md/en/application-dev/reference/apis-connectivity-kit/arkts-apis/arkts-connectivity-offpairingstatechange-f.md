@@ -18,13 +18,15 @@ Unsubscribes from NearLink pairing state change events.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-remoteDevice-function offPairingStateChange(callback?: Callback<PairingStateParam>): void--><!--Device-remoteDevice-function offPairingStateChange(callback?: Callback<PairingStateParam>): void-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;PairingStateParam&gt; | No | Callback function used to listen for the pairing state event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<PairingStateParam> | No | Callback function used to listen for the pairing state event. |
 
 **Error codes:**
 

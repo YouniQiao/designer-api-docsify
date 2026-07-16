@@ -1,9 +1,10 @@
 # AudioRecordingManager
 
-Provides recording strategy management, including collaborative recording
-and recording control capabilities.
+Provides recording strategy management, including collaborative recording and recording control capabilities.
 
 **Since:** 26.0.0
+
+<!--Device-audio-interface AudioRecordingManager--><!--Device-audio-interface AudioRecordingManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -19,19 +20,13 @@ import { audio } from '@kit.AudioKit';
 enableSystemRecordController(show: boolean, config: SystemRecordControllerConfig): Promise<void>
 ```
 
-Enables or disables the system recording controller panel.
-The application can call this API to pull up the recording controller panel before starting the recording stream,
-allowing the user to finish selecting the recording device or audio effect parameters.
-The recording service can then be started to avoid inconsistent audio effects caused by switching during the
-recording process.
-The application must be in the foreground to enable the panel; the enable operation does not take effect
-if the application is in the background. Disabling the panel is not restricted by the application's
-foreground or background status.
-The API uses a promise to return the result.
+Enables or disables the system recording controller panel.The application can call this API to pull up the recording controller panel before starting the recording stream,allowing the user to finish selecting the recording device or audio effect parameters.The recording service can then be started to avoid inconsistent audio effects caused by switching during the recording process.The application must be in the foreground to enable the panel; the enable operation does not take effect if the application is in the background. Disabling the panel is not restricted by the application's foreground or background status.The API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioRecordingManager-enableSystemRecordController(show: boolean, config: SystemRecordControllerConfig): Promise<void>--><!--Device-AudioRecordingManager-enableSystemRecordController(show: boolean, config: SystemRecordControllerConfig): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -40,13 +35,13 @@ The API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | show | boolean | Yes | A boolean value indicating whether to show (true) or hide (false)the system recording controller panel. |
-| config | SystemRecordControllerConfig | Yes | Configuration for the system recording controller panel. |
+| config | [SystemRecordControllerConfig](arkts-audio-systemrecordcontrollerconfig-i.md) | Yes | Configuration for the system recording controller panel. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

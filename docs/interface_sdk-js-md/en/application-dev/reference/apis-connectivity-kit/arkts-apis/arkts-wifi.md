@@ -4,6 +4,8 @@ Provides methods to operate or manage Wi-Fi.
 
 **Since:** 6
 
+<!--Device-unnamed-declare namespace wifi--><!--Device-unnamed-declare namespace wifi-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## Modules to Import
@@ -18,8 +20,8 @@ import { wifi } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [addUntrustedConfig](arkts-connectivity-adduntrustedconfig-f.md#adduntrustedconfig-1) | Adds a specified untrusted hotspot configuration.&lt;p&gt;This method adds one configuration at a time. After this configuration is added, your device will determine whether to connect to the hotspot. |
-| [addUntrustedConfig](arkts-connectivity-adduntrustedconfig-f.md#adduntrustedconfig-2) | Adds a specified untrusted hotspot configuration.&lt;p&gt;This method adds one configuration at a time. After this configuration is added, your device will determine whether to connect to the hotspot. |
+| [addUntrustedConfig](arkts-connectivity-adduntrustedconfig-f.md#adduntrustedconfig-1) | Adds a specified untrusted hotspot configuration.&lt;p&gt;This method adds one configuration at a time. After this configuration is added,your device will determine whether to connect to the hotspot. |
+| [addUntrustedConfig](arkts-connectivity-adduntrustedconfig-f.md#adduntrustedconfig-2) | Adds a specified untrusted hotspot configuration.&lt;p&gt;This method adds one configuration at a time. After this configuration is added,your device will determine whether to connect to the hotspot. |
 | [createGroup](arkts-connectivity-creategroup-f.md#creategroup-1) | Creates a P2P group. |
 | [getCountryCode](arkts-connectivity-getcountrycode-f.md#getcountrycode-1) | Obtains the country code of this device. |
 | [getCurrentGroup](arkts-connectivity-getcurrentgroup-f.md#getcurrentgroup-1) | Obtains information about the current group. |

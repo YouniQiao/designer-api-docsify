@@ -1,11 +1,12 @@
 # ToggleConfiguration
 
-You need a custom class to implement the **ContentModifier** API. This API inherits from
-[CommonConfiguration](arkts-arkui-commonconfiguration-i.md).
+You need a custom class to implement the **ContentModifier** API. This API inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md).
 
 **Inheritance/Implementation:** ToggleConfiguration extends [CommonConfiguration<ToggleConfiguration>](CommonConfiguration<ToggleConfiguration>)
 
 **Since:** 12
+
+<!--Device-unnamed-declare interface ToggleConfiguration extends CommonConfiguration<ToggleConfiguration>--><!--Device-unnamed-declare interface ToggleConfiguration extends CommonConfiguration<ToggleConfiguration>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,6 +30,8 @@ Default value: **true**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ToggleConfiguration-enabled: boolean--><!--Device-ToggleConfiguration-enabled: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## isOn
@@ -51,6 +54,8 @@ Default value: **false**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ToggleConfiguration-isOn: boolean--><!--Device-ToggleConfiguration-isOn: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## triggerChange
@@ -70,6 +75,8 @@ Callback invoked when the toggle's state changes.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ToggleConfiguration-triggerChange: Callback<boolean>--><!--Device-ToggleConfiguration-triggerChange: Callback<boolean>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

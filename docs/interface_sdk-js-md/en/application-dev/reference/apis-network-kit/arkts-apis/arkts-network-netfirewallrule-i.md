@@ -4,6 +4,8 @@ Firewall rules.
 
 **Since:** 15
 
+<!--Device-netFirewall-interface NetFirewallRule--><!--Device-netFirewall-interface NetFirewallRule-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Rule action.
 
 **Since:** 15
 
+<!--Device-NetFirewallRule-action: FirewallRuleAction--><!--Device-NetFirewallRule-action: FirewallRuleAction-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## appUid
@@ -37,6 +41,8 @@ Application or service UID.
 **Type:** number
 
 **Since:** 15
+
+<!--Device-NetFirewallRule-appUid?: number--><!--Device-NetFirewallRule-appUid?: number-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -52,6 +58,8 @@ Rule description.
 
 **Since:** 15
 
+<!--Device-NetFirewallRule-description?: string--><!--Device-NetFirewallRule-description?: string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## direction
@@ -65,6 +73,8 @@ Rule direction, inbound or outbound.
 **Type:** NetFirewallRuleDirection
 
 **Since:** 15
+
+<!--Device-NetFirewallRule-direction: NetFirewallRuleDirection--><!--Device-NetFirewallRule-direction: NetFirewallRuleDirection-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -80,6 +90,8 @@ DNS: valid when ruleType = RULE_DNS, otherwise it will be ignored.
 
 **Since:** 15
 
+<!--Device-NetFirewallRule-dns?: NetFirewallDnsParams--><!--Device-NetFirewallRule-dns?: NetFirewallDnsParams-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## domains
@@ -94,6 +106,8 @@ Domain name list: valid when ruleType = RULE_DOMAIN, otherwise it will be ignore
 
 **Since:** 15
 
+<!--Device-NetFirewallRule-domains?: Array<NetFirewallDomainParams>--><!--Device-NetFirewallRule-domains?: Array<NetFirewallDomainParams>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## id
@@ -107,6 +121,8 @@ Rule id: When a rule is added to the system, the system generates a rule ID.
 **Type:** number
 
 **Since:** 15
+
+<!--Device-NetFirewallRule-id?: number--><!--Device-NetFirewallRule-id?: number-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -124,6 +140,8 @@ Interface name: valid when type = RULE_IP, otherwise it will be ignored.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-NetFirewallRule-interface?: string--><!--Device-NetFirewallRule-interface?: string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## isEnabled
@@ -137,6 +155,8 @@ Whether the rule is enabled.
 **Type:** boolean
 
 **Since:** 15
+
+<!--Device-NetFirewallRule-isEnabled: boolean--><!--Device-NetFirewallRule-isEnabled: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -152,6 +172,8 @@ Local IP address: valid when ruleType = RULE_IP, otherwise it will be ignored.
 
 **Since:** 15
 
+<!--Device-NetFirewallRule-localIps?: Array<NetFirewallIpParams>--><!--Device-NetFirewallRule-localIps?: Array<NetFirewallIpParams>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## localPorts
@@ -165,6 +187,8 @@ Local ports: valid when ruleType = RULE_IP, otherwise it will be ignored.
 **Type:** Array<NetFirewallPortParams>
 
 **Since:** 15
+
+<!--Device-NetFirewallRule-localPorts?: Array<NetFirewallPortParams>--><!--Device-NetFirewallRule-localPorts?: Array<NetFirewallPortParams>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -180,6 +204,8 @@ Rule name.
 
 **Since:** 15
 
+<!--Device-NetFirewallRule-name: string--><!--Device-NetFirewallRule-name: string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## protocol
@@ -193,6 +219,8 @@ Protocol, 1: ICMPv4, 6: TCP, 17: UDP, 58: ICMPv6. Valid when ruleType = RULE_IP,
 **Type:** number
 
 **Since:** 15
+
+<!--Device-NetFirewallRule-protocol?: number--><!--Device-NetFirewallRule-protocol?: number-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -208,6 +236,8 @@ Remote IP address: valid when ruleType = RULE_IP, otherwise it will be ignored.
 
 **Since:** 15
 
+<!--Device-NetFirewallRule-remoteIps?: Array<NetFirewallIpParams>--><!--Device-NetFirewallRule-remoteIps?: Array<NetFirewallIpParams>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## remotePorts
@@ -221,6 +251,8 @@ Remote ports: valid when ruleType = RULE_IP, otherwise it will be ignored.
 **Type:** Array<NetFirewallPortParams>
 
 **Since:** 15
+
+<!--Device-NetFirewallRule-remotePorts?: Array<NetFirewallPortParams>--><!--Device-NetFirewallRule-remotePorts?: Array<NetFirewallPortParams>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -236,6 +268,8 @@ Rule type.
 
 **Since:** 15
 
+<!--Device-NetFirewallRule-type: NetFirewallRuleType--><!--Device-NetFirewallRule-type: NetFirewallRuleType-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## userId
@@ -249,6 +283,8 @@ User id.
 **Type:** number
 
 **Since:** 15
+
+<!--Device-NetFirewallRule-userId: number--><!--Device-NetFirewallRule-userId: number-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 

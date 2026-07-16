@@ -4,6 +4,8 @@ Enumerates the operation results.
 
 **Since:** 9
 
+<!--Device-cryptoFramework-enum Result--><!--Device-cryptoFramework-enum Result-End-->
+
 **System capability:** SystemCapability.Security.CryptoFramework
 
 ## INVALID_PARAMS
@@ -21,6 +23,8 @@ Invalid parameter.
 - API version 9 to 11: This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Result-INVALID_PARAMS = 401--><!--Device-Result-INVALID_PARAMS = 401-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework
 
@@ -40,6 +44,8 @@ Unsupported operation.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Result-NOT_SUPPORT = 801--><!--Device-Result-NOT_SUPPORT = 801-End-->
+
 **System capability:** SystemCapability.Security.CryptoFramework
 
 ## ERR_OUT_OF_MEMORY
@@ -57,6 +63,8 @@ The memory operation failed.
 - API version 9 to 11: This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Result-ERR_OUT_OF_MEMORY = 17620001--><!--Device-Result-ERR_OUT_OF_MEMORY = 17620001-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework
 
@@ -76,6 +84,8 @@ Failed to obtain the native object or convert parameters.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Result-ERR_RUNTIME_ERROR = 17620002--><!--Device-Result-ERR_RUNTIME_ERROR = 17620002-End-->
+
 **System capability:** SystemCapability.Security.CryptoFramework
 
 ## ERR_PARAMETER_CHECK_FAILED
@@ -92,6 +102,8 @@ The parameter check failed.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-Result-ERR_PARAMETER_CHECK_FAILED = 17620003--><!--Device-Result-ERR_PARAMETER_CHECK_FAILED = 17620003-End-->
+
 **System capability:** SystemCapability.Security.CryptoFramework
 
 ## ERR_INVALID_CALL
@@ -107,6 +119,8 @@ Invalid function call.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-Result-ERR_INVALID_CALL = 17620004--><!--Device-Result-ERR_INVALID_CALL = 17620004-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework
 
@@ -125,6 +139,8 @@ Cryptographic operation error.
 - API version 9 to 11: This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Result-ERR_CRYPTO_OPERATION = 17630001--><!--Device-Result-ERR_CRYPTO_OPERATION = 17630001-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework
 

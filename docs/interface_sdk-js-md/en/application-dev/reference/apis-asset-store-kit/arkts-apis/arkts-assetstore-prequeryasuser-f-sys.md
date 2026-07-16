@@ -12,14 +12,13 @@ import { asset } from '@kit.AssetStoreKit';
 function preQueryAsUser(userId: number, query: AssetMap): Promise<Uint8Array>
 ```
 
-Performs preprocessing for the asset query in the specified user space. This API is used when user authentication
-is required for the access to an asset. After the user authentication is successful, call
-[asset.queryAsUser](arkts-assetstore-queryasuser-f-sys.md#queryasuser-1) and [asset.postQueryAsUser](arkts-assetstore-postqueryasuser-f-sys.md#postqueryasuser-1). This API
-uses a promise to return the result.
+Performs preprocessing for the asset query in the specified user space. This API is used when user authentication is required for the access to an asset. After the user authentication is successful, call [asset.queryAsUser](arkts-assetstore-queryasuser-f-sys.md#queryasuser-1) and [asset.postQueryAsUser](arkts-assetstore-postqueryasuser-f-sys.md#postqueryasuser-1). This API uses a promise to return the result.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-asset-function preQueryAsUser(userId: number, query: AssetMap): Promise<Uint8Array>--><!--Device-asset-function preQueryAsUser(userId: number, query: AssetMap): Promise<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -29,14 +28,14 @@ uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | the user identifier to pre-query one or more Assets. The value must be greater thanor equal to 100. |
-| query | AssetMap | Yes | Conditions for querying the asset, such as the asset aliases,access control attributes, and custom data. |
+| userId | number | Yes | the user identifier to pre-query one or more Assets. The value must be greater than or equal to 100. |
+| query | [AssetMap](arkts-assetstore-assetmap-t.md) | Yes | Conditions for querying the asset, such as the asset aliases,access control attributes, and custom data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return a challenge value.<br>**NOTE**: The challenge value is used for subsequent user authentication. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Uint8Array> | Promise used to return a challenge value.<br>**NOTE**: The challenge value is used for subsequent user authentication. |
 
 **Error codes:**
 

@@ -16,6 +16,8 @@ Obtains the power consumption information list. This API uses a promise to retur
 
 **Since:** 8
 
+<!--Device-batteryStats-function getBatteryStats(): Promise<Array<BatteryStatsInfo>>--><!--Device-batteryStats-function getBatteryStats(): Promise<Array<BatteryStatsInfo>>-End-->
+
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Obtains the power consumption information list. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BatteryStatsInfo&gt;&gt; | Promise used to return the power consumption information list. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<BatteryStatsInfo>> | Promise used to return the power consumption information list. |
 
 **Error codes:**
 
@@ -57,6 +59,8 @@ Obtains the power consumption information list. This API uses an asynchronous ca
 
 **Since:** 8
 
+<!--Device-batteryStats-function getBatteryStats(callback: AsyncCallback<Array<BatteryStatsInfo>>): void--><!--Device-batteryStats-function getBatteryStats(callback: AsyncCallback<Array<BatteryStatsInfo>>): void-End-->
+
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
 
 **System API:** This is a system API.
@@ -65,7 +69,7 @@ Obtains the power consumption information list. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;BatteryStatsInfo&gt;&gt; | Yes | Callback used to return the result. If the operationis successful, **err** is undefined and **data** is the obtained Array&lt;[BatteryStatsInfo](arkts-basicservices-batterystatsinfo-i-sys.md)&gt;. Otherwise, **err** is an error object.**AsyncCallback** has encapsulated an API of the **BatteryStatsInfo** class. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<BatteryStatsInfo>> | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the obtained Array&lt;[BatteryStatsInfo](arkts-basicservices-batterystatsinfo-i-sys.md)&gt;. Otherwise, **err** is an error object.**AsyncCallback** has encapsulated an API of the **BatteryStatsInfo** class. |
 
 **Error codes:**
 

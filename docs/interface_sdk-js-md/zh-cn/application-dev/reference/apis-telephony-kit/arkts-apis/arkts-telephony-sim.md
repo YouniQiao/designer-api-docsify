@@ -1,11 +1,18 @@
 # @ohos.telephony.sim
 
-Provides applications with APIs for obtaining SIM card status, card file information, and card specifications.
-SIM cards include SIM, USIM, and CSIM cards.
+Provides applications with APIs for obtaining SIM card status, card file information, and card specifications.SIM cards include SIM, USIM, and CSIM cards.
 
 **起始版本：** 6
 
+<!--Device-unnamed-declare namespace sim--><!--Device-unnamed-declare namespace sim-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
+
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
 
 ## 汇总
 
@@ -37,12 +44,12 @@ SIM cards include SIM, USIM, and CSIM cards.
 | [getSimLabel](arkts-telephony-getsimlabel-f.md#getsimlabel-1) | Obtains the SIM card label. |
 | [getSimLabel](arkts-telephony-getsimlabel-f.md#getsimlabel-2) | 获取SIM卡标签名称 |
 | [getSimLabelSync](arkts-telephony-getsimlabelsync-f.md#getsimlabelsync-1) | Obtains the SIM card label synchronously. |
-| [getSimOperatorNumeric](arkts-telephony-getsimoperatornumeric-f.md#getsimoperatornumeric-1) | Obtains the home PLMN number of the SIM card in a specified slot.&lt;p&gt;The value is recorded in the SIM card and is irrelevant to the networkwith which the SIM card is currently registered. |
-| [getSimOperatorNumeric](arkts-telephony-getsimoperatornumeric-f.md#getsimoperatornumeric-2) | Obtains the home PLMN number of the SIM card in a specified slot.&lt;p&gt;The value is recorded in the SIM card and is irrelevant to the networkwith which the SIM card is currently registered. |
-| [getSimOperatorNumericSync](arkts-telephony-getsimoperatornumericsync-f.md#getsimoperatornumericsync-1) | Obtains the home PLMN number of the SIM card in a specified slot.&lt;p&gt;The value is recorded in the SIM card and is irrelevant to the networkwith which the SIM card is currently registered. |
-| [getSimSpn](arkts-telephony-getsimspn-f.md#getsimspn-1) | Obtains the service provider name (SPN) of the SIM card in a specified slot.&lt;p&gt;The value is recorded in the EFSPN file of the SIM card and is irrelevant to the networkwith which the SIM card is currently registered. |
-| [getSimSpn](arkts-telephony-getsimspn-f.md#getsimspn-2) | Obtains the service provider name (SPN) of the SIM card in a specified slot.&lt;p&gt;The value is recorded in the EFSPN file of the SIM card and is irrelevant to the networkwith which the SIM card is currently registered. |
-| [getSimSpnSync](arkts-telephony-getsimspnsync-f.md#getsimspnsync-1) | Obtains the service provider name (SPN) of the SIM card in a specified slot.&lt;p&gt;The value is recorded in the EFSPN file of the SIM card and is irrelevant to the networkwith which the SIM card is currently registered. |
+| [getSimOperatorNumeric](arkts-telephony-getsimoperatornumeric-f.md#getsimoperatornumeric-1) | Obtains the home PLMN number of the SIM card in a specified slot.&lt;p&gt;The value is recorded in the SIM card and is irrelevant to the network with which the SIM card is currently registered. |
+| [getSimOperatorNumeric](arkts-telephony-getsimoperatornumeric-f.md#getsimoperatornumeric-2) | Obtains the home PLMN number of the SIM card in a specified slot.&lt;p&gt;The value is recorded in the SIM card and is irrelevant to the network with which the SIM card is currently registered. |
+| [getSimOperatorNumericSync](arkts-telephony-getsimoperatornumericsync-f.md#getsimoperatornumericsync-1) | Obtains the home PLMN number of the SIM card in a specified slot.&lt;p&gt;The value is recorded in the SIM card and is irrelevant to the network with which the SIM card is currently registered. |
+| [getSimSpn](arkts-telephony-getsimspn-f.md#getsimspn-1) | Obtains the service provider name (SPN) of the SIM card in a specified slot.&lt;p&gt;The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered. |
+| [getSimSpn](arkts-telephony-getsimspn-f.md#getsimspn-2) | Obtains the service provider name (SPN) of the SIM card in a specified slot.&lt;p&gt;The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered. |
+| [getSimSpnSync](arkts-telephony-getsimspnsync-f.md#getsimspnsync-1) | Obtains the service provider name (SPN) of the SIM card in a specified slot.&lt;p&gt;The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered. |
 | [getSimState](arkts-telephony-getsimstate-f.md#getsimstate-1) | Obtains the state of the SIM card in a specified slot. |
 | [getSimState](arkts-telephony-getsimstate-f.md#getsimstate-2) | Obtains the state of the SIM card in a specified slot. |
 | [getSimStateSync](arkts-telephony-getsimstatesync-f.md#getsimstatesync-1) | Obtains the state of the SIM card in a specified slot. |
@@ -89,8 +96,8 @@ SIM cards include SIM, USIM, and CSIM cards.
 | [getSimAuthentication](arkts-telephony-getsimauthentication-f-sys.md#getsimauthentication-1) | Performs SIM card authentication. |
 | [getSimGid1](arkts-telephony-getsimgid1-f-sys.md#getsimgid1-1) | Obtains the Group Identifier Level 1 (GID1) of the SIM card in a specified slot.The GID1 is recorded in the EFGID1 file of the SIM card. |
 | [getSimGid1](arkts-telephony-getsimgid1-f-sys.md#getsimgid1-2) | Obtains the Group Identifier Level 1 (GID1) of the SIM card in a specified slot.The GID1 is recorded in the EFGID1 file of the SIM card. |
-| [getSimIccId](arkts-telephony-getsimiccid-f-sys.md#getsimiccid-1) | Obtains the ICCID of the SIM card in a specified slot.&lt;p&gt;The ICCID is a unique identifier of a SIM card. It consists of 20 digitsand is recorded in the EFICCID file of the SIM card. |
-| [getSimIccId](arkts-telephony-getsimiccid-f-sys.md#getsimiccid-2) | Obtains the ICCID of the SIM card in a specified slot.&lt;p&gt;The ICCID is a unique identifier of a SIM card. It consists of 20 digitsand is recorded in the EFICCID file of the SIM card. |
+| [getSimIccId](arkts-telephony-getsimiccid-f-sys.md#getsimiccid-1) | Obtains the ICCID of the SIM card in a specified slot.&lt;p&gt;The ICCID is a unique identifier of a SIM card. It consists of 20 digits and is recorded in the EFICCID file of the SIM card. |
+| [getSimIccId](arkts-telephony-getsimiccid-f-sys.md#getsimiccid-2) | Obtains the ICCID of the SIM card in a specified slot.&lt;p&gt;The ICCID is a unique identifier of a SIM card. It consists of 20 digits and is recorded in the EFICCID file of the SIM card. |
 | [getSimTelephoneNumber](arkts-telephony-getsimtelephonenumber-f-sys.md#getsimtelephonenumber-1) | Obtains the MSISDN of the SIM card in a specified slot.The MSISDN is recorded in the EFMSISDN file of the SIM card. |
 | [getSimTelephoneNumber](arkts-telephony-getsimtelephonenumber-f-sys.md#getsimtelephonenumber-2) | Obtains the MSISDN of the SIM card in a specified slot.The MSISDN is recorded in the EFMSISDN file of the SIM card. |
 | [getVoiceMailIdentifier](arkts-telephony-getvoicemailidentifier-f-sys.md#getvoicemailidentifier-1) | Obtains the alpha identifier of the voice mailbox of the SIM card in a specified slot. |

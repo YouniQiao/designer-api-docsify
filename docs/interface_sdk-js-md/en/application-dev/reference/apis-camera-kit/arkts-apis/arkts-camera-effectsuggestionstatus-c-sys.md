@@ -4,6 +4,8 @@ Effect suggestion status
 
 **Since:** 12
 
+<!--Device-camera-class EffectSuggestionStatus--><!--Device-camera-class EffectSuggestionStatus-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Effect Suggestion type status.
 
 **Since:** 12
 
+<!--Device-EffectSuggestionStatus-status: boolean--><!--Device-EffectSuggestionStatus-status: boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Effect Suggestion type.
 **Type:** EffectSuggestionType
 
 **Since:** 12
+
+<!--Device-EffectSuggestionStatus-type: EffectSuggestionType--><!--Device-EffectSuggestionStatus-type: EffectSuggestionType-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

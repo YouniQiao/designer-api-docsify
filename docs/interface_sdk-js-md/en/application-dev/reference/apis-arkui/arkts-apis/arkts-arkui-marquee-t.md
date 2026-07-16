@@ -12,6 +12,8 @@ Represents a FrameNode of the **Marquee** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-typeNode-type Marquee = TypedFrameNode<MarqueeInterface, MarqueeAttribute>--><!--Device-typeNode-type Marquee = TypedFrameNode<MarqueeInterface, MarqueeAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** TypedFrameNode<MarqueeInterface, MarqueeAttribute>

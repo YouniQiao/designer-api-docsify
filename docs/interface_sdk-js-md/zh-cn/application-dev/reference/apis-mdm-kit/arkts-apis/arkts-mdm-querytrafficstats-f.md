@@ -1,5 +1,11 @@
 # queryTrafficStats
 
+## 导入模块
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+```
+
 ## queryTrafficStats
 
 ```TypeScript
@@ -14,15 +20,15 @@ function queryTrafficStats(
 
 查询当前用户下指定应用在特定时间段内使用流量情况。使用Promise异步回调。
 
-> **说明：**
->
-> 传入的网络类型（networkInfo.type）仅支持蜂窝网络（connection.NetBearType.BEARER_CELLULAR）和Wi-Fi网络（
-> connection.NetBearType.BEARER_WIFI）。若传入其他值，接口会返回错误码9200012。
->
-> 传入的起始时间（networkInfo.startTime）、结束时间（networkInfo.endTime）为秒级时间戳。若传入的起始时间、结束时间为负数，或起始时间大于结束时间，接口会返回错误码9200012。
->
-> 传入的用户ID（accountId）非当前用户时，接口会返回错误码9200012。
->
+> **说明：**  
+>  
+> 传入的网络类型（networkInfo.type）仅支持蜂窝网络（connection.NetBearType.BEARER_CELLULAR）和Wi-Fi网络（  
+> connection.NetBearType.BEARER_WIFI）。若传入其他值，接口会返回错误码9200012。  
+>  
+> 传入的起始时间（networkInfo.startTime）、结束时间（networkInfo.endTime）为秒级时间戳。若传入的起始时间、结束时间为负数，或起始时间大于结束时间，接口会返回错误码9200012。  
+>  
+> 传入的用户ID（accountId）非当前用户时，接口会返回错误码9200012。  
+>  
 > 建议查询的时间间隔（结束时间-起始时间）最小为1天，最大为30天。时间间隔太小，查询结果可能不准确。时间间隔太大，查询耗时会很长。
 
 **起始版本：** 26.0.0
@@ -31,15 +37,29 @@ function queryTrafficStats(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function queryTrafficStats(
+    admin: Want,
+    bundleName: string,
+    appIndex: number,
+    accountId: number,
+    networkInfo: statistics.NetworkInfo
+  ): Promise<statistics.NetStatsInfo>--><!--Device-applicationManager-function queryTrafficStats(
+    admin: Want,
+    bundleName: string,
+    appIndex: number,
+    accountId: number,
+    networkInfo: statistics.NetworkInfo
+  ): Promise<statistics.NetStatsInfo>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | bundleName | string | 是 | 应用的包名。 |
-| appIndex | number | 是 | 应用分身索引<br>取值应为≥0的整数。- 应用分身索引，取值范围：大于等于0的整数。<br> appIndex可以通过@ohos.bundle.bundleManager中的[getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-getappcloneidentity-f.md#getappcloneidentity-1)等接口来获取。 |
+| appIndex | number | 是 | 应用分身索引<br>取值应为≥0的整数。  - 应用分身索引，取值范围：大于等于0的整数。<br> appIndex可以通过@ohos.bundle.bundleManager中的[getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-getappcloneidentity-f.md#getappcloneidentity-1)等接口来获取。 |
 | accountId | number | 是 | 用户ID<br>取值应为≥0的整数。<br>accountId可以通过@ohos.account.osAccount中的[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2)等接口来获取。 |
 | networkInfo | statistics.NetworkInfo | 是 | 网络信息。 |
 
@@ -47,7 +67,7 @@ function queryTrafficStats(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;statistics.NetStatsInfo&gt; | returns the detailed network statistics information. |
+| Promise<statistics.NetStatsInfo> | returns the detailed network statistics information. |
 
 **错误码：**
 

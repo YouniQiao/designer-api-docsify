@@ -6,9 +6,7 @@
 function releaseForm(formId: string, callback: AsyncCallback<void>): void
 ```
 
-Releases a widget. After this API is called, the application can no longer use the widget, but the Widget Manager
-still retains the widget cache and storage information. This API uses an asynchronous callback to return the
-result.
+Releases a widget. After this API is called, the application can no longer use the widget, but the Widget Manager still retains the widget cache and storage information. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -17,6 +15,8 @@ result.
 **Substitutes:** [releaseForm](arkts-form-releaseform-f-sys.md#releaseform-1)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
+
+<!--Device-formHost-function releaseForm(formId: string, callback: AsyncCallback<void>): void--><!--Device-formHost-function releaseForm(formId: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -27,7 +27,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the widget is released,**error** is undefined; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the widget is released,**error** is undefined; otherwise, **error** is an error object. |
 
 
 ## releaseForm
@@ -36,9 +36,7 @@ result.
 function releaseForm(formId: string, isReleaseCache: boolean, callback: AsyncCallback<void>): void
 ```
 
-Releases a widget. After this API is called, the application can no longer use the widget, but the Widget Manager
-retains the storage information about the widget and retains or releases the cache information based on the
-setting. This API uses an asynchronous callback to return the result.
+Releases a widget. After this API is called, the application can no longer use the widget, but the Widget Manager retains the storage information about the widget and retains or releases the cache information based on the setting. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -47,6 +45,8 @@ setting. This API uses an asynchronous callback to return the result.
 **Substitutes:** [releaseForm](arkts-form-releaseform-f-sys.md#releaseform-1)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
+
+<!--Device-formHost-function releaseForm(formId: string, isReleaseCache: boolean, callback: AsyncCallback<void>): void--><!--Device-formHost-function releaseForm(formId: string, isReleaseCache: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -58,7 +58,7 @@ setting. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
 | isReleaseCache | boolean | Yes | Whether to release the cache. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the widget is released,**error** is undefined; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the widget is released,**error** is undefined; otherwise, **error** is an error object. |
 
 
 ## releaseForm
@@ -67,9 +67,7 @@ setting. This API uses an asynchronous callback to return the result.
 function releaseForm(formId: string, isReleaseCache?: boolean): Promise<void>
 ```
 
-Releases a widget. After this API is called, the application can no longer use the widget, but the Widget Manager
-retains the storage information about the widget and retains or releases the cache information based on the
-setting. This API uses a promise to return the result.
+Releases a widget. After this API is called, the application can no longer use the widget, but the Widget Manager retains the storage information about the widget and retains or releases the cache information based on the setting. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -78,6 +76,8 @@ setting. This API uses a promise to return the result.
 **Substitutes:** [releaseForm](arkts-form-releaseform-f-sys.md#releaseform-1)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
+
+<!--Device-formHost-function releaseForm(formId: string, isReleaseCache?: boolean): Promise<void>--><!--Device-formHost-function releaseForm(formId: string, isReleaseCache?: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -94,5 +94,5 @@ setting. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 

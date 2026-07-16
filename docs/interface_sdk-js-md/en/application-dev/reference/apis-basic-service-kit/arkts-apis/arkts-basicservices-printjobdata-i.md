@@ -4,6 +4,8 @@ Defines a print job.
 
 **Since:** 23
 
+<!--Device-print-interface PrintJobData--><!--Device-print-interface PrintJobData-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Binary data to print.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PrintJobData-binaryData?: Uint8Array--><!--Device-PrintJobData-binaryData?: Uint8Array-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## colorMode
@@ -41,6 +45,8 @@ Color mode.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PrintJobData-colorMode: PrintColorMode--><!--Device-PrintJobData-colorMode: PrintColorMode-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -58,6 +64,8 @@ Number of file list copies.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PrintJobData-copyNumber: int--><!--Device-PrintJobData-copyNumber: int-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## docFlavor
@@ -73,6 +81,8 @@ Data source type.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PrintJobData-docFlavor: DocFlavor--><!--Device-PrintJobData-docFlavor: DocFlavor-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -90,6 +100,8 @@ Format of the print data.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PrintJobData-documentFormat: PrintDocumentFormat--><!--Device-PrintJobData-documentFormat: PrintDocumentFormat-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## duplexMode
@@ -105,6 +117,8 @@ Simplex or duplex mode.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PrintJobData-duplexMode: PrintDuplexMode--><!--Device-PrintJobData-duplexMode: PrintDuplexMode-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -122,6 +136,8 @@ FD list of files to print.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PrintJobData-fdList?: int[]--><!--Device-PrintJobData-fdList?: int[]-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## isAutoRotate
@@ -130,14 +146,15 @@ FD list of files to print.
 isAutoRotate?: boolean
 ```
 
-Whether to automatically rotate the page. The value **true** means to automatically rotate the page, and
-**false** means the opposite. Default value: **true**.
+Whether to automatically rotate the page. The value **true** means to automatically rotate the page, and **false** means the opposite. Default value: **true**.
 
 **Type:** boolean
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PrintJobData-isAutoRotate?: boolean--><!--Device-PrintJobData-isAutoRotate?: boolean-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -147,14 +164,15 @@ Whether to automatically rotate the page. The value **true** means to automatica
 isBorderless?: boolean
 ```
 
-Whether to print without margins. The value **true** means to print without margins, and **false** means the
-opposite. Default value: **true**.
+Whether to print without margins. The value **true** means to print without margins, and **false** means the opposite. Default value: **true**.
 
 **Type:** boolean
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PrintJobData-isBorderless?: boolean--><!--Device-PrintJobData-isBorderless?: boolean-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -164,14 +182,15 @@ opposite. Default value: **true**.
 isCollate?: boolean
 ```
 
-Whether pages are printed uncollated. The value **true** means that pages are printed uncollated, and **false**
-means the opposite. Default value: **true**.
+Whether pages are printed uncollated. The value **true** means that pages are printed uncollated, and **false** means the opposite. Default value: **true**.
 
 **Type:** boolean
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PrintJobData-isCollate?: boolean--><!--Device-PrintJobData-isCollate?: boolean-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -181,14 +200,15 @@ means the opposite. Default value: **true**.
 isLandscape: boolean
 ```
 
-Whether pages are printed in landscape mode. The value **true** indicates that pages are printed in landscape
-mode, and **false** indicates that pages are printed in portrait mode. The default value is **false**.
+Whether pages are printed in landscape mode. The value **true** indicates that pages are printed in landscape mode, and **false** indicates that pages are printed in portrait mode. The default value is **false**.
 
 **Type:** boolean
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PrintJobData-isLandscape: boolean--><!--Device-PrintJobData-isLandscape: boolean-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -198,14 +218,15 @@ mode, and **false** indicates that pages are printed in portrait mode. The defau
 isReverse?: boolean
 ```
 
-Whether pages are printed in reverse order. The value **true** means that pages are printed in reverse order, and
-**false** means that pages are printed in normal order. The default value is **false**.
+Whether pages are printed in reverse order. The value **true** means that pages are printed in reverse order, and **false** means that pages are printed in normal order. The default value is **false**.
 
 **Type:** boolean
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PrintJobData-isReverse?: boolean--><!--Device-PrintJobData-isReverse?: boolean-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -223,6 +244,8 @@ Whether pages are printed in sequential order.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PrintJobData-isSequential?: boolean--><!--Device-PrintJobData-isSequential?: boolean-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## jobId
@@ -238,6 +261,8 @@ Unique identifier of the print job.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PrintJobData-jobId?: string--><!--Device-PrintJobData-jobId?: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -255,6 +280,8 @@ Name of the print job.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PrintJobData-jobName: string--><!--Device-PrintJobData-jobName: string-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## mediaType
@@ -270,6 +297,8 @@ Type of the paper to print.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PrintJobData-mediaType?: string--><!--Device-PrintJobData-mediaType?: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -287,6 +316,8 @@ Object stringified in JSON format.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PrintJobData-options?: string--><!--Device-PrintJobData-options?: string-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## pageSize
@@ -302,6 +333,8 @@ Selected page size.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PrintJobData-pageSize: PrintPageSize--><!--Device-PrintJobData-pageSize: PrintPageSize-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -319,6 +352,8 @@ Print quality.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PrintJobData-printQuality?: PrintQuality--><!--Device-PrintJobData-printQuality?: PrintQuality-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## printerId
@@ -335,6 +370,8 @@ Printer ID.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PrintJobData-printerId: string--><!--Device-PrintJobData-printerId: string-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## vendorOptions
@@ -350,6 +387,8 @@ Vendor-specific job options in JSON format.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PrintJobData-vendorOptions?: string--><!--Device-PrintJobData-vendorOptions?: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 

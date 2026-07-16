@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface Pattern--><!--Device-unnamed-export interface Pattern-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+## 导入模块
+
+```TypeScript
+import { Pattern, InputMethodListDialog, PatternOptions } from '@kit.IMEKit';
+```
 
 ## icon
 
@@ -24,6 +32,8 @@ icon: Resource
 
 **起始版本：** 11
 
+<!--Device-Pattern-icon: Resource--><!--Device-Pattern-icon: Resource-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## selectedIcon
@@ -38,12 +48,13 @@ selectedIcon: Resource
 
 **使用后效果：** 设置后，弹窗中该模式选项在选中状态时显示此图标。
 
-**相关参数间的配合/制约关系：** selectedIcon应与icon在视觉风格上保持一致，仅在选中状态标识上有所区别（如增加高亮、边框等），以便用户识别当前选中的模式。每个Pattern中的icon和selectedIcon
-必须同时设置，缺一不可。
+**相关参数间的配合/制约关系：** selectedIcon应与icon在视觉风格上保持一致，仅在选中状态标识上有所区别（如增加高亮、边框等），以便用户识别当前选中的模式。每个Pattern中的icon和selectedIcon必须同时设置，缺一不可。
 
 **类型：** Resource
 
 **起始版本：** 11
+
+<!--Device-Pattern-selectedIcon: Resource--><!--Device-Pattern-selectedIcon: Resource-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

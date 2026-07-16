@@ -4,6 +4,8 @@ Defines the credential change information.
 
 **Since:** 23
 
+<!--Device-osAccount-interface CredentialChangeInfo--><!--Device-osAccount-interface CredentialChangeInfo-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ OS account ID.
 
 **Since:** 23
 
+<!--Device-CredentialChangeInfo-accountId: int--><!--Device-CredentialChangeInfo-accountId: int-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Credential ID. An ID is returned when a credential is added or updated. which is
 **Type:** Uint8Array
 
 **Since:** 23
+
+<!--Device-CredentialChangeInfo-addedCredentialId?: Uint8Array--><!--Device-CredentialChangeInfo-addedCredentialId?: Uint8Array-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -58,6 +64,8 @@ Credential change type.
 
 **Since:** 23
 
+<!--Device-CredentialChangeInfo-changeType: CredentialChangeType--><!--Device-CredentialChangeInfo-changeType: CredentialChangeType-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Credential type.
 **Type:** AuthType
 
 **Since:** 23
+
+<!--Device-CredentialChangeInfo-credentialType: AuthType--><!--Device-CredentialChangeInfo-credentialType: AuthType-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -90,6 +100,8 @@ Credential ID. An ID is returned when a credential is deleted or updated. which 
 
 **Since:** 23
 
+<!--Device-CredentialChangeInfo-deletedCredentialId?: Uint8Array--><!--Device-CredentialChangeInfo-deletedCredentialId?: Uint8Array-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -105,6 +117,8 @@ Whether the change is silent. A silent change is automatically initiated by the 
 **Type:** boolean
 
 **Since:** 23
+
+<!--Device-CredentialChangeInfo-isSilent: boolean--><!--Device-CredentialChangeInfo-isSilent: boolean-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 

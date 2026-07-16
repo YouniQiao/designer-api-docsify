@@ -6,9 +6,17 @@
 
 **废弃版本：** 23
 
+<!--Device-fileAccess-interface CopyResult--><!--Device-fileAccess-interface CopyResult-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { fileAccess } from '@kit.CoreFileKit';
+```
 
 ## destUri
 
@@ -27,6 +35,8 @@ destUri: string
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CopyResult-destUri: string--><!--Device-CopyResult-destUri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -50,6 +60,8 @@ errCode: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CopyResult-errCode: number--><!--Device-CopyResult-errCode: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -72,6 +84,8 @@ errMsg: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CopyResult-errMsg: string--><!--Device-CopyResult-errMsg: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +107,8 @@ sourceUri: string
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CopyResult-sourceUri: string--><!--Device-CopyResult-sourceUri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

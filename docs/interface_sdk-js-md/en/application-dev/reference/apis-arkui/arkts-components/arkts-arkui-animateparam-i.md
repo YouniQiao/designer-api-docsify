@@ -4,6 +4,8 @@ Defines parameters related to animation effects.
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface AnimateParam--><!--Device-unnamed-declare interface AnimateParam-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## curve
@@ -44,24 +46,17 @@ When the type is string, it represents an animation interpolation curve, support
 
 **"smooth"**: Smooth curve, **cubic-bezier(0.4, 0.0, 0.4, 1.0)**
 
-**"cubic-bezier(x1, y1, x2, y2)"**: Cubic Bezier curve. The values of **x1** and **x2** must be within the range of
-[0, 1], as in **"cubic-bezier(0.42, 0.0, 0.58, 1.0)"**.
+**"cubic-bezier(x1, y1, x2, y2)"**: Cubic Bezier curve. The values of **x1** and **x2** must be within the range of [0, 1], as in **"cubic-bezier(0.42, 0.0, 0.58, 1.0)"**.
 
-**"steps(number, step-position)"**: Step curve. **number** is required and must be a positive integer.
-**step-position** is optional and the values **start** and **end** are supported; defaults to end, as in
-**"steps(3, start)"**.
+**"steps(number, step-position)"**: Step curve. **number** is required and must be a positive integer.**step-position** is optional and the values **start** and **end** are supported; defaults to end, as in **"steps(3, start)"**.
 
-**"interpolating-spring(velocity,mass,stiffness,damping)"**: For details about the parameters, see
-[curves.interpolatingSpring](../arkts-apis/arkts-arkui-interpolatingspring-f.md#interpolatingspring-1).
+**"interpolating-spring(velocity,mass,stiffness,damping)"**: For details about the parameters, see [curves.interpolatingSpring](../arkts-apis/arkts-arkui-interpolatingspring-f.md#interpolatingspring-1).
 
-**"responsive-spring-motion(response,dampingFraction,overlapDuration)"**: For details about the parameters, see
-[curves.responsiveSpringMotion](../arkts-apis/arkts-arkui-responsivespringmotion-f.md#responsivespringmotion-1).
+**"responsive-spring-motion(response,dampingFraction,overlapDuration)"**: For details about the parameters, see [curves.responsiveSpringMotion](../arkts-apis/arkts-arkui-responsivespringmotion-f.md#responsivespringmotion-1).
 
-**"spring(velocity,mass,stiffness,damping)"**: For details about the parameters, see
-[curves.springCurve](../arkts-apis/arkts-arkui-springcurve-f.md#springcurve-1).
+**"spring(velocity,mass,stiffness,damping)"**: For details about the parameters, see [curves.springCurve](../arkts-apis/arkts-arkui-springcurve-f.md#springcurve-1).
 
-**"spring-motion(response,dampingFraction,overlapDuration)"**: For details about the parameters, see
-[curves.springMotion](../arkts-apis/arkts-arkui-springmotion-f.md#springmotion-1).
+**"spring-motion(response,dampingFraction,overlapDuration)"**: For details about the parameters, see [curves.springMotion](../arkts-apis/arkts-arkui-springmotion-f.md#springmotion-1).
 
 Default value: **Curve.EaseInOut**
 
@@ -74,6 +69,8 @@ Default value: **Curve.EaseInOut**
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-AnimateParam-curve?: Curve | string | ICurve--><!--Device-AnimateParam-curve?: Curve | string | ICurve-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -89,11 +86,7 @@ Default value: **0**
 
 Value range: (-∞, +∞)
 
-Note: 1. A non-negative **delay** defers the start of the animation. A negative **delay** plays the animation ahead
-of schedule. If the absolute value of **delay** is less than the actual animation duration, the animation starts
-its first frame from the state at the absolute value. If the absolute value of **delay** is greater than or equal
-to the actual animation duration, the animation starts its first frame from the end state. The actual animation
-duration is equal to the duration of a single animation multiplied by the number of animation playback times.
+Note: 1. A non-negative **delay** defers the start of the animation. A negative **delay** plays the animation ahead of schedule. If the absolute value of **delay** is less than the actual animation duration, the animation starts its first frame from the state at the absolute value. If the absolute value of **delay** is greater than or equal to the actual animation duration, the animation starts its first frame from the end state. The actual animation duration is equal to the duration of a single animation multiplied by the number of animation playback times.
 
 2. Floating-point values are floored to integers. For example, if the value set is 1.2, **1** will be used.
 
@@ -104,6 +97,8 @@ duration is equal to the duration of a single animation multiplied by the number
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AnimateParam-delay?: number--><!--Device-AnimateParam-delay?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -117,14 +112,9 @@ Animation duration, in ms.
 
 Default value: **1000**
 
-Note: 1. Before API 26.0.0, the maximum animation duration for an ArkTS widget is 1,000 ms; values exceeding this
-limit are clamped to 1,000 ms. Starting from API version 26.0.0, the maximum animation duration for an ArkTS widget
-is adjusted to 2,000 ms.
+Note: 1. Before API 26.0.0, the maximum animation duration for an ArkTS widget is 1,000 ms; values exceeding this limit are clamped to 1,000 ms. Starting from API version 26.0.0, the maximum animation duration for an ArkTS widget is adjusted to 2,000 ms.
 
-2. To stop the animation of a property, change the property value in an animation closure with a duration of 0.
-3. Values less than 0 are clamped to **0**.
-4. Floating-point values are floored to integers. For example, if the value set is 1.2, **1** will be used.
-5. The **duration** parameter does not take effect when [springMotion](../arkts-apis/arkts-arkui-springmotion-f.md#springmotion-1), [responsiveSpringMotion](../arkts-apis/arkts-arkui-responsivespringmotion-f.md#responsivespringmotion-1), and [interpolatingSpring](../arkts-apis/arkts-arkui-interpolatingspring-f.md#interpolatingspring-1) are configured for **curve**.
+2. To stop the animation of a property, change the property value in an animation closure with a duration of 0.3. Values less than 0 are clamped to **0**.4. Floating-point values are floored to integers. For example, if the value set is 1.2, **1** will be used.5. The **duration** parameter does not take effect when [springMotion](../arkts-apis/arkts-arkui-springmotion-f.md#springmotion-1), [responsiveSpringMotion](../arkts-apis/arkts-arkui-responsivespringmotion-f.md#responsivespringmotion-1), and [interpolatingSpring](../arkts-apis/arkts-arkui-interpolatingspring-f.md#interpolatingspring-1) are configured for **curve**.
 
 **Type:** number
 
@@ -135,6 +125,8 @@ is adjusted to 2,000 ms.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-AnimateParam-duration?: number--><!--Device-AnimateParam-duration?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -153,6 +145,8 @@ Expected frame rate range of the animation.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AnimateParam-expectedFrameRateRange?: ExpectedFrameRateRange--><!--Device-AnimateParam-expectedFrameRateRange?: ExpectedFrameRateRange-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -176,6 +170,8 @@ Default value: **FinishCallbackType.REMOVED**
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-AnimateParam-finishCallbackType?: FinishCallbackType--><!--Device-AnimateParam-finishCallbackType?: FinishCallbackType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## iterations
@@ -184,9 +180,7 @@ Default value: **FinishCallbackType.REMOVED**
 iterations?: number
 ```
 
-Number of times that the animation is played. By default, the animation is played once. The value **-1** indicates
-that the animation is played for an unlimited number of times. The value **0** indicates that there is no
-animation.
+Number of times that the animation is played. By default, the animation is played once. The value **-1** indicates that the animation is played for an unlimited number of times. The value **0** indicates that there is no animation.
 
 Default value: **1**
 
@@ -202,6 +196,8 @@ Note: Floating-point values are floored to integers. For example, if the value s
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AnimateParam-iterations?: number--><!--Device-AnimateParam-iterations?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onFinish
@@ -210,12 +206,9 @@ Note: Floating-point values are floored to integers. For example, if the value s
 onFinish?: () => void
 ```
 
-Callback invoked when the animation playback is complete. If the UIAbility moves from the foreground to the
-background, any finite loop animation that is still in progress will be immediately terminated, triggering the
-completion callback.
+Callback invoked when the animation playback is complete. If the UIAbility moves from the foreground to the background, any finite loop animation that is still in progress will be immediately terminated, triggering the completion callback.
 
-If the transition animation is disabled in the developer options and **tempo** is set to **+∞**, the callback is
-executed immediately when the animation playback is complete.
+If the transition animation is disabled in the developer options and **tempo** is set to **+∞**, the callback is executed immediately when the animation playback is complete.
 
 **Type:** () => void
 
@@ -224,6 +217,8 @@ executed immediately when the animation playback is complete.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-AnimateParam-onFinish?: () => void--><!--Device-AnimateParam-onFinish?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -237,18 +232,18 @@ Playback mode. By default, the animation is played from the beginning after the 
 
 Default value: **PlayMode.Normal**
 
-> **Notes about PlayMode**:
->
-> - **PlayMode.Normal** and **PlayMode.Alternate** are recommended. Under these settings, the first round of the
-> animation is played forwards. If **PlayMode.Reverse** or **PlayMode.AlternateReverse** is used, the first round of
-> the animation is played backwards. In this case, the animation jumps to the end state and then starts from there.
->
-> - When using **PlayMode.Alternate** or **PlayMode.AlternateReverse**, make sure the final state of the animation is
-> the same as the value of the state variable. In other words, make sure the last round of the animation is played
-> forwards. When **PlayMode.Alternate** is used, **iterations** must be set to an odd number. When
-> **PlayMode.AlternateReverse** is used, **iterations** must be set to an even number.
->
-> - **PlayMode.Reverse** is not recommended. Under this setting, the animation jumps to the end state at the
+> **Notes about PlayMode**:  
+>  
+> - **PlayMode.Normal** and **PlayMode.Alternate** are recommended. Under these settings, the first round of the  
+> animation is played forwards. If **PlayMode.Reverse** or **PlayMode.AlternateReverse** is used, the first round of  
+> the animation is played backwards. In this case, the animation jumps to the end state and then starts from there.  
+>  
+> - When using **PlayMode.Alternate** or **PlayMode.AlternateReverse**, make sure the final state of the animation is  
+> the same as the value of the state variable. In other words, make sure the last round of the animation is played  
+> forwards. When **PlayMode.Alternate** is used, **iterations** must be set to an odd number. When  
+> **PlayMode.AlternateReverse** is used, **iterations** must be set to an even number.  
+>  
+> - **PlayMode.Reverse** is not recommended. Under this setting, the animation jumps to the end state at the  
 > beginning, and its final state will be different from the value of the state variable.
 
 **Type:** PlayMode
@@ -261,6 +256,8 @@ Default value: **PlayMode.Normal**
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-AnimateParam-playMode?: PlayMode--><!--Device-AnimateParam-playMode?: PlayMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## tempo
@@ -269,11 +266,9 @@ Default value: **PlayMode.Normal**
 tempo?: number
 ```
 
-Animation playback speed. A larger value indicates faster animation playback, and a smaller value indicates slower
-animation playback. The value **0** means that there is no animation.
+Animation playback speed. A larger value indicates faster animation playback, and a smaller value indicates slower animation playback. The value **0** means that there is no animation.
 
-When the value is set to **+∞**, the animation completes in the current frame, and the animation end callback is
-executed immediately.
+When the value is set to **+∞**, the animation completes in the current frame, and the animation end callback is executed immediately.
 
 Default value: **1.0**
 
@@ -288,6 +283,8 @@ Note: Values less than 0 are clamped to **0**.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AnimateParam-tempo?: number--><!--Device-AnimateParam-tempo?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

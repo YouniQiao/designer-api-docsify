@@ -12,18 +12,15 @@ import { notificationManager } from '@kit.NotificationKit';
 function openNotificationSettings(context: UIAbilityContext): Promise<void>
 ```
 
-Opens the notification settings page of the application, which is displayed in semi-modal mode and can be used to
-set the notification enabling and notification mode. This API uses a promise to return the result.
+Opens the notification settings page of the application, which is displayed in semi-modal mode and can be used to set the notification enabling and notification mode. This API uses a promise to return the result.
 
-This is suitable for scenarios where users need to manually modify notification settings, such as
-a secondary request after a user denies authorization, or when the notification reminder method
-(vibration, ringtone, etc.) needs to be modified. When the requestEnableNotification dialog
-box is denied by the user, you can call this API to guide the user to the notification settings
-page to manually enable it.
+This is suitable for scenarios where users need to manually modify notification settings, such as a secondary request after a user denies authorization, or when the notification reminder method(vibration, ringtone, etc.) needs to be modified. When the requestEnableNotification dialog box is denied by the user, you can call this API to guide the user to the notification settings page to manually enable it.
 
 **Since:** 13
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-notificationManager-function openNotificationSettings(context: UIAbilityContext): Promise<void>--><!--Device-notificationManager-function openNotificationSettings(context: UIAbilityContext): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.NotificationSettings
 
@@ -31,13 +28,13 @@ page to manually enable it.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIAbilityContext | Yes | Ability context bound to the notification settings page. |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-t.md) | Yes | Ability context bound to the notification settings page. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

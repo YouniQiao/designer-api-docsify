@@ -16,6 +16,8 @@ Sets the number of mouse scroll lines. This API uses an asynchronous callback to
 
 **Since:** 10
 
+<!--Device-pointer-function setMouseScrollRows(rows: int, callback: AsyncCallback<void>): void--><!--Device-pointer-function setMouseScrollRows(rows: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **System API:** This is a system API.
@@ -25,7 +27,7 @@ Sets the number of mouse scroll lines. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | rows | number | Yes | Number of mouse scroll lines. The value ranges from 1 to 100. The default value is **3**. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -77,6 +79,8 @@ Sets the number of mouse scroll lines. This API uses a promise to return the res
 
 **Since:** 10
 
+<!--Device-pointer-function setMouseScrollRows(rows: int): Promise<void>--><!--Device-pointer-function setMouseScrollRows(rows: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **System API:** This is a system API.
@@ -91,7 +95,7 @@ Sets the number of mouse scroll lines. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

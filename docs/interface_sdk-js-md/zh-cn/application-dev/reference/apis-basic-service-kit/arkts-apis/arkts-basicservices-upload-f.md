@@ -1,5 +1,11 @@
 # upload
 
+## 导入模块
+
+```TypeScript
+import { request } from '@kit.BasicServicesKit';
+```
+
 ## upload
 
 ```TypeScript
@@ -18,14 +24,16 @@ function upload(config: UploadConfig, callback: AsyncCallback<UploadTask>): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-request-function upload(config: UploadConfig, callback: AsyncCallback<UploadTask>): void--><!--Device-request-function upload(config: UploadConfig, callback: AsyncCallback<UploadTask>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Upload
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | UploadConfig | 是 | 上传的配置信息。 |
-| callback | AsyncCallback&lt;UploadTask&gt; | 是 | 回调函数，异步返回UploadTask对象。当上传成功，err为undefined，data为获取到的UploadTask对象；否则为错误对象。 |
+| config | [UploadConfig](arkts-basicservices-uploadconfig-i.md) | 是 | 上传的配置信息。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<UploadTask> | 是 | 回调函数，异步返回UploadTask对象。当上传成功，err为undefined，data为获取到的UploadTask对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -73,19 +81,21 @@ function upload(config: UploadConfig): Promise<UploadTask>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-request-function upload(config: UploadConfig): Promise<UploadTask>--><!--Device-request-function upload(config: UploadConfig): Promise<UploadTask>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Upload
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | UploadConfig | 是 | 上传的配置信息。 |
+| config | [UploadConfig](arkts-basicservices-uploadconfig-i.md) | 是 | 上传的配置信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;UploadTask&gt; | 使用Promise方式，异步返回上传任务UploadTask的Promise对象。 |
+| Promise<UploadTask> | 使用Promise方式，异步返回上传任务UploadTask的Promise对象。 |
 
 **错误码：**
 

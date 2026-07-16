@@ -1,5 +1,11 @@
 # getDeviceList
 
+## 导入模块
+
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+```
+
 ## getDeviceList
 
 ```TypeScript
@@ -10,13 +16,15 @@ function getDeviceList(callback: AsyncCallback<Array<number>>): void
 
 **起始版本：** 9
 
+<!--Device-inputDevice-function getDeviceList(callback: AsyncCallback<Array<int>>): void--><!--Device-inputDevice-function getDeviceList(callback: AsyncCallback<Array<int>>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;number&gt;&gt; | 是 | 回调函数。当获取成功，err为undefined，data为所有输入设备的ID列表（ID是输入设备的唯一标识）；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<number>> | 是 | 回调函数。当获取成功，err为undefined，data为所有输入设备的ID列表（ID是输入设备的唯一标识）；否则为错误对象。 |
 
 **错误码：**
 
@@ -67,13 +75,15 @@ function getDeviceList(): Promise<Array<number>>
 
 **起始版本：** 9
 
+<!--Device-inputDevice-function getDeviceList(): Promise<Array<int>>--><!--Device-inputDevice-function getDeviceList(): Promise<Array<int>>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Promise对象，返回所有输入设备的ID列表。ID是输入设备的唯一标识。 |
+| Promise<Array<number>> | Promise对象，返回所有输入设备的ID列表。ID是输入设备的唯一标识。 |
 
 **示例：**
 

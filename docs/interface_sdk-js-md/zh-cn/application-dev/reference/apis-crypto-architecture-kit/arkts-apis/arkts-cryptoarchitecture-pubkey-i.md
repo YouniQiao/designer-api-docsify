@@ -2,16 +2,23 @@
 
 公钥，是[Key](arkts-cryptoarchitecture-key-i.md)的子类，在非对称加密、签名验证、密钥协商时需要将其对象作为输入使用。
 
-公钥可以通过非对称密钥生成器[AsyKeyGenerator](arkts-cryptoarchitecture-asykeygenerator-i.md)、
-[AsyKeyGeneratorBySpec](arkts-cryptoarchitecture-asykeygeneratorbyspec-i.md)来生成。
+公钥可以通过非对称密钥生成器[AsyKeyGenerator](arkts-cryptoarchitecture-asykeygenerator-i.md)、[AsyKeyGeneratorBySpec](arkts-cryptoarchitecture-asykeygeneratorbyspec-i.md)来生成。
 
 **继承/实现关系：** PubKey extends [Key](arkts-cryptoarchitecture-key-i.md)
 
 **起始版本：** 9
 
+<!--Device-cryptoFramework-interface PubKey extends Key--><!--Device-cryptoFramework-interface PubKey extends Key-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API版本9-11：SystemCapability.Security.CryptoFramework
+
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+```
 
 ## getAsyKeySpec
 
@@ -23,7 +30,9 @@ getAsyKeySpec(itemType: AsyKeySpecItem): bigint | string | number
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PubKey-getAsyKeySpec(itemType: AsyKeySpecItem): bigint | string | int--><!--Device-PubKey-getAsyKeySpec(itemType: AsyKeySpecItem): bigint | string | int-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -33,7 +42,7 @@ getAsyKeySpec(itemType: AsyKeySpecItem): bigint | string | number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| itemType | AsyKeySpecItem | 是 | 指定的密钥参数。 |
+| itemType | [AsyKeySpecItem](arkts-cryptoarchitecture-asykeyspecitem-e.md) | 是 | 指定的密钥参数。 |
 
 **返回值：**
 
@@ -98,15 +107,17 @@ getEncodedDer(format: string): DataBlob
 
 支持根据指定的密钥格式（如规范、压缩状态等），获取符合ASN.1语法和DER编码的公钥数据。
 
-> **说明：**
->
-> 本接口和[Key.getEncoded()](arkts-cryptoarchitecture-key-i.md#getencoded-1)的区别是：
-> 1. 本接口可以指定获取密钥数据的格式。
+> **说明：**  
+>  
+> 本接口和[Key.getEncoded()](arkts-cryptoarchitecture-key-i.md#getencoded-1)的区别是：  
+> 1. 本接口可以指定获取密钥数据的格式。  
 > 2. [Key.getEncoded()](arkts-cryptoarchitecture-key-i.md#getencoded-1)不支持指定获取密钥数据的格式。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PubKey-getEncodedDer(format: string): DataBlob--><!--Device-PubKey-getEncodedDer(format: string): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -120,7 +131,7 @@ getEncodedDer(format: string): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 返回满足ASN.1语法和DER编码的指定密钥格式的公钥数据。 |
+| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | 返回满足ASN.1语法和DER编码的指定密钥格式的公钥数据。 |
 
 **错误码：**
 
@@ -158,7 +169,9 @@ getEncodedPem(format: string): string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PubKey-getEncodedPem(format: string): string--><!--Device-PubKey-getEncodedPem(format: string): string-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -217,7 +230,9 @@ getKeyData(itemType: AsyKeyDataItem): Promise<Uint8Array>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PubKey-getKeyData(itemType: AsyKeyDataItem): Promise<Uint8Array>--><!--Device-PubKey-getKeyData(itemType: AsyKeyDataItem): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -225,13 +240,13 @@ getKeyData(itemType: AsyKeyDataItem): Promise<Uint8Array>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| itemType | AsyKeyDataItem | 是 | 指定密钥数据项类型。 |
+| itemType | [AsyKeyDataItem](arkts-cryptoarchitecture-asykeydataitem-e.md) | 是 | 指定密钥数据项类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回指定密钥数据项类型的公钥数据。 |
+| Promise<Uint8Array> | Promise对象，返回指定密钥数据项类型的公钥数据。 |
 
 **错误码：**
 
@@ -264,15 +279,15 @@ getKeyDataSync(itemType: AsyKeyDataItem): Uint8Array
 
 获取指定的密钥数据类型对应的公钥数据。此API以同步方式返回结果。
 
-<br><br>**说明：**
-<br>建议优先使用异步API{@link getKeyData}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。
-因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：**<br>建议优先使用异步API{@link getKeyData}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PubKey-getKeyDataSync(itemType: AsyKeyDataItem): Uint8Array--><!--Device-PubKey-getKeyDataSync(itemType: AsyKeyDataItem): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -280,13 +295,13 @@ getKeyDataSync(itemType: AsyKeyDataItem): Uint8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| itemType | AsyKeyDataItem | 是 | 指定密钥数据项类型。 |
+| itemType | [AsyKeyDataItem](arkts-cryptoarchitecture-asykeydataitem-e.md) | 是 | 指定密钥数据项类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 返回指定密钥数据项类型的公钥数据。 |
+| [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 返回指定密钥数据项类型的公钥数据。 |
 
 **错误码：**
 

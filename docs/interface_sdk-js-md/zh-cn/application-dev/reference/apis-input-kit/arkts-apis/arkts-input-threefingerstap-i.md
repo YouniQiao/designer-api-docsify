@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-export declare interface ThreeFingersTap--><!--Device-unnamed-export declare interface ThreeFingersTap-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+## 导入模块
+
+```TypeScript
+import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersTap, ThreeFingersSwipe, TouchGestureEvent } from '@kit.InputKit';
+```
 
 ## type
 
@@ -17,6 +25,8 @@ type: ActionType
 **类型：** ActionType
 
 **起始版本：** 11
+
+<!--Device-ThreeFingersTap-type: ActionType--><!--Device-ThreeFingersTap-type: ActionType-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 

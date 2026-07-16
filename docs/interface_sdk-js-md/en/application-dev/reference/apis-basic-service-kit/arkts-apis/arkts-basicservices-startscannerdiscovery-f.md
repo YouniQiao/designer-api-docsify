@@ -18,13 +18,15 @@ Starts scanner discovery. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.PRINT
 
+<!--Device-scan-function startScannerDiscovery(): Promise<void>--><!--Device-scan-function startScannerDiscovery(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

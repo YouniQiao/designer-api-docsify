@@ -6,6 +6,8 @@ Date object.
 
 **Deprecated since:** 20
 
+<!--Device-unnamed-interface MonthData--><!--Device-unnamed-interface MonthData-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -25,6 +27,8 @@ CalendarDay.
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-MonthData-data: CalendarDay[]--><!--Device-MonthData-data: CalendarDay[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,6 +50,8 @@ Gregorian calendar month.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-MonthData-month: number--><!--Device-MonthData-month: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -65,6 +71,8 @@ Gregorian calendar year.
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-MonthData-year: number--><!--Device-MonthData-year: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

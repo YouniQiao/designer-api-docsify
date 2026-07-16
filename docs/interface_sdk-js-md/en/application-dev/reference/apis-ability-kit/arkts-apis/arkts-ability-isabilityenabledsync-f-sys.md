@@ -16,6 +16,8 @@ Checks whether an ability is enabled. This API returns the result synchronously.
 
 **Since:** 10
 
+<!--Device-bundleManager-function isAbilityEnabledSync(info: AbilityInfo): boolean--><!--Device-bundleManager-function isAbilityEnabledSync(info: AbilityInfo): boolean-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Checks whether an ability is enabled. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | AbilityInfo | Yes | Information about the target ability. |
+| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | Yes | Information about the target ability. |
 
 **Return value:**
 

@@ -19,6 +19,8 @@ Injects a touch event.
 **Required permissions:** 
 - API version 12+: ohos.permission.INJECT_INPUT_EVENT
 
+<!--Device-inputEventClient-function injectTouchEvent(touchEvent: TouchEventData): void--><!--Device-inputEventClient-function injectTouchEvent(touchEvent: TouchEventData): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Injects a touch event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| touchEvent | TouchEventData | Yes | Touch event data. [Action](arkts-input-action-e.md) inthis parameter cannot be set to **CANCEL**. |
+| touchEvent | [TouchEventData](arkts-input-toucheventdata-i-sys.md) | Yes | Touch event data. [Action](arkts-input-action-e.md) in this parameter cannot be set to **CANCEL**. |
 
 **Error codes:**
 

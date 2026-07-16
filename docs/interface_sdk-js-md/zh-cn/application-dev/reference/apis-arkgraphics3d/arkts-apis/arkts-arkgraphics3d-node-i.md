@@ -6,6 +6,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface Node extends SceneResource--><!--Device-unnamed-export interface Node extends SceneResource-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## getNodeByPath
@@ -17,6 +19,8 @@ getNodeByPath(path: string): Node | null
 通过路径获取节点.
 
 **起始版本：** 12
+
+<!--Device-Node-getNodeByPath(path: string): Node | null--><!--Device-Node-getNodeByPath(path: string): Node | null-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -30,7 +34,7 @@ getNodeByPath(path: string): Node | null
 
 | 类型 | 说明 |
 | --- | --- |
-| Node | @syscap SystemCapability.ArkUi.Graphics3D |
+| [Node](arkts-arkgraphics3d-node-i.md) | @syscap SystemCapability.ArkUi.Graphics3D |
 
 ## children
 
@@ -43,6 +47,8 @@ readonly children: Container<Node>
 **类型：** Container<Node>
 
 **起始版本：** 12
+
+<!--Device-Node-readonly children: Container<Node>--><!--Device-Node-readonly children: Container<Node>-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -58,6 +64,8 @@ readonly layerMask: LayerMask
 
 **起始版本：** 12
 
+<!--Device-Node-readonly layerMask: LayerMask--><!--Device-Node-readonly layerMask: LayerMask-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## nodeType
@@ -71,6 +79,8 @@ readonly nodeType: NodeType
 **类型：** NodeType
 
 **起始版本：** 12
+
+<!--Device-Node-readonly nodeType: NodeType--><!--Device-Node-readonly nodeType: NodeType-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -86,6 +96,8 @@ readonly parent: Node | null
 
 **起始版本：** 12
 
+<!--Device-Node-readonly parent: Node | null--><!--Device-Node-readonly parent: Node | null-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## path
@@ -99,6 +111,8 @@ readonly path: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-Node-readonly path: string--><!--Device-Node-readonly path: string-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -114,6 +128,8 @@ position: Position3
 
 **起始版本：** 12
 
+<!--Device-Node-position: Position3--><!--Device-Node-position: Position3-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## rotation
@@ -127,6 +143,8 @@ rotation: Quaternion
 **类型：** Quaternion
 
 **起始版本：** 12
+
+<!--Device-Node-rotation: Quaternion--><!--Device-Node-rotation: Quaternion-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -142,6 +160,8 @@ scale: Scale3
 
 **起始版本：** 12
 
+<!--Device-Node-scale: Scale3--><!--Device-Node-scale: Scale3-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## visible
@@ -155,6 +175,8 @@ visible: boolean
 **类型：** boolean
 
 **起始版本：** 12
+
+<!--Device-Node-visible: boolean--><!--Device-Node-visible: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

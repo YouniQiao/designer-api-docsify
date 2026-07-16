@@ -4,6 +4,8 @@ Smart gesture response behavior configuration object.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare interface SmartGestureShortcutOptions--><!--Device-unnamed-declare interface SmartGestureShortcutOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## action
@@ -12,8 +14,7 @@ Smart gesture response behavior configuration object.
 action?: GestureShortcut
 ```
 
-Smart gesture response priority. Currently only **GestureShortcut.PRIMARY** is supported, indicating the component
-serves as the preferred response target for smart gesture operations such as swiping and clicking.
+Smart gesture response priority. Currently only **GestureShortcut.PRIMARY** is supported, indicating the component serves as the preferred response target for smart gesture operations such as swiping and clicking.
 
 Default value: **GestureShortcut.PRIMARY**.
 
@@ -24,6 +25,8 @@ Default value: **GestureShortcut.PRIMARY**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SmartGestureShortcutOptions-action?: GestureShortcut--><!--Device-SmartGestureShortcutOptions-action?: GestureShortcut-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,6 +52,8 @@ Default value: **false**.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SmartGestureShortcutOptions-enabled?: boolean--><!--Device-SmartGestureShortcutOptions-enabled?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectable
@@ -63,8 +68,7 @@ Whether to display and retain the selected state after the component is selected
 
 **false**: Do not show the selection indicator.
 
-When **enabled** is **true**, the default value is **true**; when **enabled** is **false**, the default value is
-**false**.
+When **enabled** is **true**, the default value is **true**; when **enabled** is **false**, the default value is **false**.
 
 **Type:** boolean
 
@@ -73,6 +77,8 @@ When **enabled** is **true**, the default value is **true**; when **enabled** is
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SmartGestureShortcutOptions-selectable?: boolean--><!--Device-SmartGestureShortcutOptions-selectable?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,6 +4,8 @@ Defines the option of ShowActionMenu.
 
 **Since:** 11
 
+<!--Device-unnamed-export interface ShowActionMenuOptions--><!--Device-unnamed-export interface ShowActionMenuOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -18,15 +20,15 @@ import { ShowActionMenuOptions, Button, ShowToastOptions, ShowDialogOptions, Sho
 buttons: [Button, Button?, Button?, Button?, Button?, Button?]
 ```
 
-Array of buttons in the dialog box.
-The array structure is {text:'button', color: '#666666'}.
-One to six buttons are supported.
+Array of buttons in the dialog box.The array structure is {text:'button', color: '#666666'}.One to six buttons are supported.
 
 **Type:** [Button, Button?, Button?, Button?, Button?, Button?]
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ShowActionMenuOptions-buttons: [Button, Button?, Button?, Button?, Button?, Button?]--><!--Device-ShowActionMenuOptions-buttons: [Button, Button?, Button?, Button?, Button?, Button?]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +46,8 @@ Called when the dialog box is closed.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ShowActionMenuOptions-complete?: () => void--><!--Device-ShowActionMenuOptions-complete?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fail
@@ -59,6 +63,8 @@ Called when the operation is cancelled.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ShowActionMenuOptions-fail?: (errMsg: string) => void--><!--Device-ShowActionMenuOptions-fail?: (errMsg: string) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,6 +82,8 @@ Called when the dialog box is displayed.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ShowActionMenuOptions-success?: (tapIndex: number, errMsg: string) => void--><!--Device-ShowActionMenuOptions-success?: (tapIndex: number, errMsg: string) => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## title
@@ -91,6 +99,8 @@ Title of the text to display.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ShowActionMenuOptions-title?: string--><!--Device-ShowActionMenuOptions-title?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

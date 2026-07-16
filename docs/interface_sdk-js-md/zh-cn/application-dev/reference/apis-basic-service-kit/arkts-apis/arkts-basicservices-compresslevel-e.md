@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+<!--Device-zlib-export enum CompressLevel--><!--Device-zlib-export enum CompressLevel-End-->
+
 **系统能力：** SystemCapability.BundleManager.Zlib
 
 ## COMPRESS_LEVEL_NO_COMPRESSION
@@ -16,7 +18,9 @@ COMPRESS_LEVEL_NO_COMPRESSION = 0
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CompressLevel-COMPRESS_LEVEL_NO_COMPRESSION = 0--><!--Device-CompressLevel-COMPRESS_LEVEL_NO_COMPRESSION = 0-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -30,7 +34,9 @@ COMPRESS_LEVEL_BEST_SPEED = 1
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CompressLevel-COMPRESS_LEVEL_BEST_SPEED = 1--><!--Device-CompressLevel-COMPRESS_LEVEL_BEST_SPEED = 1-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -44,7 +50,9 @@ COMPRESS_LEVEL_BEST_COMPRESSION = 9
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CompressLevel-COMPRESS_LEVEL_BEST_COMPRESSION = 9--><!--Device-CompressLevel-COMPRESS_LEVEL_BEST_COMPRESSION = 9-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -58,7 +66,9 @@ COMPRESS_LEVEL_DEFAULT_COMPRESSION = -1
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CompressLevel-COMPRESS_LEVEL_DEFAULT_COMPRESSION = -1--><!--Device-CompressLevel-COMPRESS_LEVEL_DEFAULT_COMPRESSION = -1-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 

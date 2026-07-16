@@ -18,6 +18,8 @@ Checks whether this device allows for network sharing.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-sharing-function isSharingSupported(callback: AsyncCallback<boolean>): void--><!--Device-sharing-function isSharingSupported(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Checks whether this device allows for network sharing.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Returns {@code true} indicating network sharing is supported;returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Returns {@code true} indicating network sharing is supported;returns {@code false} otherwise. |
 
 **Error codes:**
 
@@ -64,6 +66,8 @@ Checks whether this device allows for network sharing.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-sharing-function isSharingSupported(): Promise<boolean>--><!--Device-sharing-function isSharingSupported(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
@@ -72,7 +76,7 @@ Checks whether this device allows for network sharing.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | The promise returned by the function. |
 
 **Error codes:**
 

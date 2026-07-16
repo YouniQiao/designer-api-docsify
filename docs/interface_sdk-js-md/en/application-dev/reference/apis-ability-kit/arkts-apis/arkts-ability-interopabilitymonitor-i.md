@@ -1,9 +1,10 @@
 # InteropAbilityMonitor
 
-Provide methods for matching monitored Ability objects that meet specified conditions.
-The most recently matched Ability objects will be saved in the InteropAbilityMonitor object.
+Provide methods for matching monitored Ability objects that meet specified conditions.The most recently matched Ability objects will be saved in the InteropAbilityMonitor object.
 
 **Since:** 26.0.0
+
+<!--Device-unnamed-export interface InteropAbilityMonitor--><!--Device-unnamed-export interface InteropAbilityMonitor-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -23,6 +24,8 @@ The name of the ability to monitor.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-InteropAbilityMonitor-abilityName: string--><!--Device-InteropAbilityMonitor-abilityName: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## moduleName
@@ -40,6 +43,8 @@ The name of the module to monitor.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-InteropAbilityMonitor-moduleName?: string--><!--Device-InteropAbilityMonitor-moduleName?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -59,6 +64,8 @@ Called back when the state of the ability changes to background.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-InteropAbilityMonitor-onAbilityBackground?: AbilityCallbackFn--><!--Device-InteropAbilityMonitor-onAbilityBackground?: AbilityCallbackFn-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## onAbilityCreate
@@ -76,6 +83,8 @@ Called back when the ability is created.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-InteropAbilityMonitor-onAbilityCreate?: AbilityCallbackFn--><!--Device-InteropAbilityMonitor-onAbilityCreate?: AbilityCallbackFn-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -95,6 +104,8 @@ Called back before the ability is destroyed.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-InteropAbilityMonitor-onAbilityDestroy?: AbilityCallbackFn--><!--Device-InteropAbilityMonitor-onAbilityDestroy?: AbilityCallbackFn-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## onAbilityForeground
@@ -112,6 +123,8 @@ Called back when the state of the ability changes to foreground.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-InteropAbilityMonitor-onAbilityForeground?: AbilityCallbackFn--><!--Device-InteropAbilityMonitor-onAbilityForeground?: AbilityCallbackFn-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -131,6 +144,8 @@ Called back when an ability window stage is created.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-InteropAbilityMonitor-onWindowStageCreate?: AbilityCallbackFn--><!--Device-InteropAbilityMonitor-onWindowStageCreate?: AbilityCallbackFn-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## onWindowStageDestroy
@@ -149,6 +164,8 @@ Called back when an ability window stage is destroyed.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-InteropAbilityMonitor-onWindowStageDestroy?: AbilityCallbackFn--><!--Device-InteropAbilityMonitor-onWindowStageDestroy?: AbilityCallbackFn-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## onWindowStageRestore
@@ -166,6 +183,8 @@ Called back when an ability window stage is restored.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-InteropAbilityMonitor-onWindowStageRestore?: AbilityCallbackFn--><!--Device-InteropAbilityMonitor-onWindowStageRestore?: AbilityCallbackFn-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

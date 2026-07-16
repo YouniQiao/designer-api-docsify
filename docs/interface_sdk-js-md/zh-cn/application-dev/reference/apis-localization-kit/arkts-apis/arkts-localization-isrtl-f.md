@@ -1,5 +1,11 @@
 # isRTL
 
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
+
 ## isRTL
 
 ```TypeScript
@@ -10,7 +16,9 @@ export function isRTL(locale: string): boolean
 
 **起始版本：** 7
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-i18n-export function isRTL(locale: string): boolean--><!--Device-i18n-export function isRTL(locale: string): boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

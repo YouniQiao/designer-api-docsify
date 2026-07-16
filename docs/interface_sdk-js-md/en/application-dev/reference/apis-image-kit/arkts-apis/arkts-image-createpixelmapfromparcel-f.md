@@ -16,6 +16,8 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 **Since:** 12
 
+<!--Device-sendableImage-function createPixelMapFromParcel(sequence: rpc.MessageSequence): PixelMap--><!--Device-sendableImage-function createPixelMapFromParcel(sequence: rpc.MessageSequence): PixelMap-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
@@ -28,7 +30,7 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | Type | Description |
 | --- | --- |
-| PixelMap | Returns the instance if the operation is successful.Otherwise, an exception will be thrown. |
+| [PixelMap](arkts-image-pixelmap-i.md) | Returns the instance if the operation is successful.Otherwise, an exception will be thrown. |
 
 **Error codes:**
 

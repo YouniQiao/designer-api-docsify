@@ -8,6 +8,8 @@
 
 **Required permissions:** ohos.permission.VIBRATE
 
+<!--Device-unnamed-export default class Vibrator--><!--Device-unnamed-export default class Vibrator-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice.Lite
 
 ## Modules to Import
@@ -24,9 +26,9 @@ static vibrate(options?: VibrateOptions): void
 
 Triggers device vibration.
 
-> **NOTE**
->
-> Except for lite wearables. You are advised to use
+> **NOTE**  
+>  
+> Except for lite wearables. You are advised to use  
 > [vibrator.startVibration()](arkts-sensorservice-startvibration-f.md#startvibration-1) since API version 8.
 
 **Since:** 3
@@ -39,11 +41,13 @@ Triggers device vibration.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Vibrator-static vibrate(options?: VibrateOptions): void--><!--Device-Vibrator-static vibrate(options?: VibrateOptions): void-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | VibrateOptions | No | Vibration options. |
+| options | [VibrateOptions](arkts-sensorservice-vibrateoptions-i.md) | No | Vibration options. |
 

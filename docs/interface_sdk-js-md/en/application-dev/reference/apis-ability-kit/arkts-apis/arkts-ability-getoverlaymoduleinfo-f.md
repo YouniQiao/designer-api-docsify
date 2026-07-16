@@ -12,10 +12,11 @@ import { overlay } from '@kit.AbilityKit';
 function getOverlayModuleInfo(moduleName: string, callback: AsyncCallback<OverlayModuleInfo>): void
 ```
 
-Obtains the OverlayModuleInfo about a module with the overlay feature in the current application. This API uses an
-asynchronous callback to return the result.
+Obtains the OverlayModuleInfo about a module with the overlay feature in the current application. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-overlay-function getOverlayModuleInfo(moduleName: string, callback: AsyncCallback<OverlayModuleInfo>): void--><!--Device-overlay-function getOverlayModuleInfo(moduleName: string, callback: AsyncCallback<OverlayModuleInfo>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Overlay
 
@@ -24,7 +25,7 @@ asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Name of the module with the overlay feature. |
-| callback | AsyncCallback&lt;OverlayModuleInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to returnthe result, which is an [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) object.If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<OverlayModuleInfo> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result, which is an [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) object.If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -66,10 +67,11 @@ try {
 function getOverlayModuleInfo(moduleName: string): Promise<OverlayModuleInfo>
 ```
 
-Obtains the OverlayModuleInfo about a module with the overlay feature in the current application. This API uses a
-promise to return the result.
+Obtains the OverlayModuleInfo about a module with the overlay feature in the current application. This API uses a promise to return the result.
 
 **Since:** 10
+
+<!--Device-overlay-function getOverlayModuleInfo(moduleName: string): Promise<OverlayModuleInfo>--><!--Device-overlay-function getOverlayModuleInfo(moduleName: string): Promise<OverlayModuleInfo>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Overlay
 
@@ -83,7 +85,7 @@ promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OverlayModuleInfo&gt; | Promise used to return the result, which is an[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<OverlayModuleInfo> | Promise used to return the result, which is an [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) object. |
 
 **Error codes:**
 

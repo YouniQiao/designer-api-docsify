@@ -12,16 +12,15 @@ import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 function registerDeviceSelectCallback(callback: DeviceSelectCallback): void
 ```
 
-Registers a callback for companion device selection. When the system requires the user to select a companion
-device, this callback is triggered. The application needs to return the information about the selected device in
-the callback. Through this callback, the application can implement custom device selection logic, for example,
-displaying a device selection screen for the user to select a device.
+Registers a callback for companion device selection. When the system requires the user to select a companion device, this callback is triggered. The application needs to return the information about the selected device in the callback. Through this callback, the application can implement custom device selection logic, for example,displaying a device selection screen for the user to select a device.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-companionDeviceAuth-function registerDeviceSelectCallback(callback: DeviceSelectCallback): void--><!--Device-companionDeviceAuth-function registerDeviceSelectCallback(callback: DeviceSelectCallback): void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -31,7 +30,7 @@ displaying a device selection screen for the user to select a device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | DeviceSelectCallback | Yes | Callback for the companion device selection. When this callback isinvoked, **selectPurpose** is passed in. The application needs to return the corresponding**DeviceSelectResult**, including the information about the selected device. |
+| callback | [DeviceSelectCallback](arkts-userauthentication-deviceselectcallback-t-sys.md) | Yes | Callback for the companion device selection. When this callback is invoked, **selectPurpose** is passed in. The application needs to return the corresponding **DeviceSelectResult**, including the information about the selected device. |
 
 **Error codes:**
 

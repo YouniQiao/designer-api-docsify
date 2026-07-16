@@ -20,13 +20,15 @@ Enables the display of a confirm dialog box before returning to the previous pag
 
 **Substitutes:** [showAlertBeforeBackPage](arkts-arkui-router-c.md#showalertbeforebackpage-1)
 
+<!--Device-router-function enableAlertBeforeBackPage(options: EnableAlertOptions): void--><!--Device-router-function enableAlertBeforeBackPage(options: EnableAlertOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | EnableAlertOptions | Yes | Description of the dialog box. |
+| options | [EnableAlertOptions](arkts-arkui-enablealertoptions-i.md) | Yes | Description of the dialog box. |
 
 **Example**
 

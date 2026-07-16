@@ -4,7 +4,15 @@
 
 **起始版本：** 26.1.0
 
+<!--Device-unnamed-export class DialogPresenter--><!--Device-unnamed-export class DialogPresenter-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
+```
 
 ## dismiss
 
@@ -12,14 +20,15 @@
 dismiss(target: number | ComponentContent<Object>): Promise<void>
 ```
 
-关闭对话框。
-接受对话ID（由当前返回）或ComponentContent引用。
+关闭对话框。接受对话ID（由当前返回）或ComponentContent引用。
 
 **起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogPresenter-dismiss(target: int | ComponentContent<Object>): Promise<void>--><!--Device-DialogPresenter-dismiss(target: int | ComponentContent<Object>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,13 +36,13 @@ dismiss(target: number | ComponentContent<Object>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | number \| ComponentContent&lt;Object&gt; | 是 | 要取消的对话ID或组件内容。 |
+| target | number \| ComponentContent<Object> | 是 | 要取消的对话ID或组件内容。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 不会返回任何值的Promise。 |
+| Promise<void> | 不会返回任何值的Promise。 |
 
 **错误码：**
 
@@ -54,7 +63,9 @@ present(options?: dialog.DialogStyleOptions): Promise<DialogResult>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogPresenter-present(options?: dialog.DialogStyleOptions): Promise<DialogResult>--><!--Device-DialogPresenter-present(options?: dialog.DialogStyleOptions): Promise<DialogResult>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,7 +79,7 @@ present(options?: dialog.DialogStyleOptions): Promise<DialogResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DialogResult&gt; | 用于返回对话结果的Promise。 |
+| Promise<DialogResult> | 用于返回对话结果的Promise。 |
 
 **错误码：**
 
@@ -85,18 +96,20 @@ present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>,
 
 提供一个自定义样式的对话框，其中包含所提供的内容。
 
-content参数通过联合类型接受CustomBuilder或ComponentContent：
--CustomBuilder：自定义对话框内容的生成器函数。
+content参数通过联合类型接受CustomBuilder或ComponentContent：  
+-CustomBuilder：自定义对话框内容的生成器函数。  
 - ComponentContent：支持状态驱动更新的ComponentContent。
 
-> **说明**
+> **说明**  
 > isModal = true和showInSubWindow = true不能同时使用。
 
 **起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogPresenter-present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>, options?: dialog.DialogCustomOptions): Promise<DialogResult>--><!--Device-DialogPresenter-present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>, options?: dialog.DialogCustomOptions): Promise<DialogResult>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,14 +117,14 @@ content参数通过联合类型接受CustomBuilder或ComponentContent：
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | CustomBuilder \| CustomBuilderWithId \| ComponentContent&lt;Object&gt; | 是 | 自定义对话框内容。 |
+| content | CustomBuilder \| CustomBuilderWithId \| ComponentContent<Object> | 是 | 自定义对话框内容。 |
 | options | dialog.DialogCustomOptions | 否 | 自定义对话框选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DialogResult&gt; | 用于返回对话结果的Promise。 |
+| Promise<DialogResult> | 用于返回对话结果的Promise。 |
 
 **错误码：**
 
@@ -134,7 +147,9 @@ update(content: ComponentContent<Object>, options?: dialog.DialogBaseOptions): P
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogPresenter-update(content: ComponentContent<Object>, options?: dialog.DialogBaseOptions): Promise<void>--><!--Device-DialogPresenter-update(content: ComponentContent<Object>, options?: dialog.DialogBaseOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -142,14 +157,14 @@ update(content: ComponentContent<Object>, options?: dialog.DialogBaseOptions): P
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | ComponentContent&lt;Object&gt; | 是 | 用于标识对话框的内容。 |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)<Object> | 是 | 用于标识对话框的内容。 |
 | options | dialog.DialogBaseOptions | 否 | 要更新的选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 不会返回任何值的Promise。 |
+| Promise<void> | 不会返回任何值的Promise。 |
 
 **错误码：**
 

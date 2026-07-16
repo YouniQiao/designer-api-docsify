@@ -6,7 +6,15 @@
 
 **起始版本：** 9
 
+<!--Device-process-export class ProcessManager--><!--Device-process-export class ProcessManager-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { process } from '@kit.ArkTS';
+```
 
 ## exit
 
@@ -20,7 +28,9 @@ exit(code: number): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ProcessManager-exit(code: number): void--><!--Device-ProcessManager-exit(code: number): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -46,13 +56,15 @@ getEnvironmentVar(name: string): string
 
 获取环境变量对应的值。
 
-> **说明**
->
+> **说明**  
+>  
 > 获取环境变量的值。如果环境变量不存在，返回 **undefined**。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ProcessManager-getEnvironmentVar(name: string): string--><!--Device-ProcessManager-getEnvironmentVar(name: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -88,7 +100,9 @@ getSystemConfig(name: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ProcessManager-getSystemConfig(name: number): number--><!--Device-ProcessManager-getSystemConfig(name: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -126,7 +140,9 @@ getThreadPriority(v: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ProcessManager-getThreadPriority(v: number): number--><!--Device-ProcessManager-getThreadPriority(v: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -164,7 +180,9 @@ getUidForName(v: string): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ProcessManager-getUidForName(v: string): number--><!--Device-ProcessManager-getUidForName(v: string): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -200,7 +218,9 @@ isAppUid(v: number): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ProcessManager-isAppUid(v: number): boolean--><!--Device-ProcessManager-isAppUid(v: number): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -239,7 +259,9 @@ kill(signal: number, pid: number): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ProcessManager-kill(signal: number, pid: number): boolean--><!--Device-ProcessManager-kill(signal: number, pid: number): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

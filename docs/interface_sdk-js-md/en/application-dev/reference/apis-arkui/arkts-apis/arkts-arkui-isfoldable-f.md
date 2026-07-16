@@ -18,13 +18,15 @@ Checks whether this device is foldable.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-display-function isFoldable(): boolean--><!--Device-display-function isFoldable(): boolean-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the device is foldable. **true** if foldable, **false** otherwise.For small-screen foldable devices where the outer screen serves only as an auxiliary display (and cannot becustomized by applications), the return value is always **false**. For other foldable devices, the return valueis always **true**. |
+| boolean | Check result for whether the device is foldable. **true** if foldable, **false** otherwise.For small-screen foldable devices where the outer screen serves only as an auxiliary display (and cannot be customized by applications), the return value is always **false**. For other foldable devices, the return value is always **true**. |
 
 **Error codes:**
 

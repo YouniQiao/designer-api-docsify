@@ -21,6 +21,10 @@ Proactively triggers screen content awareness to obtain the screen content for s
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-onScreen-function apperceive(capability: OnscreenAwarenessCap, 
+                   options?: OnscreenAwarenessOptions): Promise<OnscreenAwarenessInfo[]>--><!--Device-onScreen-function apperceive(capability: OnscreenAwarenessCap, 
+                   options?: OnscreenAwarenessOptions): Promise<OnscreenAwarenessInfo[]>-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -29,14 +33,14 @@ Proactively triggers screen content awareness to obtain the screen content for s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| capability | OnscreenAwarenessCap | Yes | Onscreen awareness capability list. For details, see the following<br> supported capability list. |
-| options | OnscreenAwarenessOptions | No | Onscreen awareness parameter list. |
+| capability | [OnscreenAwarenessCap](arkts-multimodalawareness-onscreenawarenesscap-i-sys.md) | Yes | Onscreen awareness capability list. For details, see the following<br> supported capability list. |
+| options | [OnscreenAwarenessOptions](arkts-multimodalawareness-onscreenawarenessoptions-i-sys.md) | No | Onscreen awareness parameter list. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OnscreenAwarenessInfo[]&gt; | Promise used to return the onscreen awareness result. The returned<br> onscreen awareness information list **OnscreenAwarenessInfo[]** contains a maximum of two awareness<br> information items. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<OnscreenAwarenessInfo[]> | Promise used to return the onscreen awareness result. The returned<br> onscreen awareness information list **OnscreenAwarenessInfo[]** contains a maximum of two awareness<br> information items. |
 
 **Error codes:**
 

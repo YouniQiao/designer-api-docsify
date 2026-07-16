@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-calendarManager-export enum ServiceType--><!--Device-calendarManager-export enum ServiceType-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 ## MEETING
@@ -16,7 +18,9 @@ MEETING = 'Meeting'
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ServiceType-MEETING = 'Meeting'--><!--Device-ServiceType-MEETING = 'Meeting'-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -30,7 +34,9 @@ WATCHING = 'Watching'
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ServiceType-WATCHING = 'Watching'--><!--Device-ServiceType-WATCHING = 'Watching'-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -44,7 +50,9 @@ REPAYMENT = 'Repayment'
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ServiceType-REPAYMENT = 'Repayment'--><!--Device-ServiceType-REPAYMENT = 'Repayment'-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -58,7 +66,9 @@ LIVE = 'Live'
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ServiceType-LIVE = 'Live'--><!--Device-ServiceType-LIVE = 'Live'-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -72,7 +82,9 @@ SHOPPING = 'Shopping'
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ServiceType-SHOPPING = 'Shopping'--><!--Device-ServiceType-SHOPPING = 'Shopping'-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -86,7 +98,9 @@ TRIP = 'Trip'
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ServiceType-TRIP = 'Trip'--><!--Device-ServiceType-TRIP = 'Trip'-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -100,7 +114,9 @@ CLASS = 'Class'
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ServiceType-CLASS = 'Class'--><!--Device-ServiceType-CLASS = 'Class'-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -114,7 +130,9 @@ SPORTS_EVENTS = 'SportsEvents'
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ServiceType-SPORTS_EVENTS = 'SportsEvents'--><!--Device-ServiceType-SPORTS_EVENTS = 'SportsEvents'-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -128,7 +146,9 @@ SPORTS_EXERCISE = 'SportsExercise'
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ServiceType-SPORTS_EXERCISE = 'SportsExercise'--><!--Device-ServiceType-SPORTS_EXERCISE = 'SportsExercise'-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 

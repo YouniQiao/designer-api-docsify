@@ -4,6 +4,8 @@ Enum for geofence transition status.
 
 **Since:** 12
 
+<!--Device-geoLocationManager-export enum GeofenceTransitionEvent--><!--Device-geoLocationManager-export enum GeofenceTransitionEvent-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## GEOFENCE_TRANSITION_EVENT_APPROACHING_GEOFENCE
@@ -17,6 +19,8 @@ The device is approaching the geofence.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_APPROACHING_GEOFENCE = 8--><!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_APPROACHING_GEOFENCE = 8-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -34,6 +38,8 @@ The device is leaving the geofence.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_LEAVING_GEOFENCE = 16--><!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_LEAVING_GEOFENCE = 16-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **System API:** This is a system API.
@@ -49,6 +55,8 @@ The device is approaching the fence from the outside and already very near to it
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_NEAR_WANDER = 32--><!--Device-GeofenceTransitionEvent-GEOFENCE_TRANSITION_EVENT_NEAR_WANDER = 32-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 

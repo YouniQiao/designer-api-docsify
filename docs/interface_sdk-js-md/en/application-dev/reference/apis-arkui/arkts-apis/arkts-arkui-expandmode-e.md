@@ -4,6 +4,8 @@ Enumerates the expansion mode of child nodes.
 
 **Since:** 15
 
+<!--Device-unnamed-export enum ExpandMode--><!--Device-unnamed-export enum ExpandMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NOT_EXPAND
@@ -12,15 +14,15 @@ Enumerates the expansion mode of child nodes.
 NOT_EXPAND = 0
 ```
 
-The child nodes of the current FrameNode are not expanded. If the FrameNode contains
-[LazyForEach](../arkts-components/arkts-arkui-lazyforeach.md) child nodes, the child nodes are not expanded when the nodes in the main tree
-are being obtained. The child node sequence numbers are calculated based on the nodes in the main tree.
+The child nodes of the current FrameNode are not expanded. If the FrameNode contains [LazyForEach](../arkts-components/arkts-arkui-lazyforeach.md) child nodes, the child nodes are not expanded when the nodes in the main tree are being obtained. The child node sequence numbers are calculated based on the nodes in the main tree.
 
 **Since:** 15
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-ExpandMode-NOT_EXPAND = 0--><!--Device-ExpandMode-NOT_EXPAND = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,15 +32,15 @@ are being obtained. The child node sequence numbers are calculated based on the 
 EXPAND = 1
 ```
 
-The child nodes of the current FrameNode are expanded. If the FrameNode contains [LazyForEach](../arkts-components/arkts-arkui-lazyforeach.md)
-child nodes, all child nodes are expanded when being obtained. The child node sequence numbers are calculated based
-on all child nodes.
+The child nodes of the current FrameNode are expanded. If the FrameNode contains [LazyForEach](../arkts-components/arkts-arkui-lazyforeach.md)child nodes, all child nodes are expanded when being obtained. The child node sequence numbers are calculated based on all child nodes.
 
 **Since:** 15
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-ExpandMode-EXPAND = 1--><!--Device-ExpandMode-EXPAND = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,16 +50,15 @@ on all child nodes.
 LAZY_EXPAND = 2
 ```
 
-The child nodes of the current FrameNode are expanded on demand. If the FrameNode contains
-[LazyForEach](../arkts-components/arkts-arkui-lazyforeach.md) child nodes, the child nodes are not expanded when the nodes in the main tree
-are being obtained, but are expanded when nodes not in the main tree are being obtained. The child node sequence
-numbers are calculated based on all child nodes.
+The child nodes of the current FrameNode are expanded on demand. If the FrameNode contains [LazyForEach](../arkts-components/arkts-arkui-lazyforeach.md) child nodes, the child nodes are not expanded when the nodes in the main tree are being obtained, but are expanded when nodes not in the main tree are being obtained. The child node sequence numbers are calculated based on all child nodes.
 
 **Since:** 15
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-ExpandMode-LAZY_EXPAND = 2--><!--Device-ExpandMode-LAZY_EXPAND = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,17 +68,15 @@ numbers are calculated based on all child nodes.
 LAZY_NOT_EXPAND = 3
 ```
 
-Do not expand children of node.
-If the FrameNode contains LazyForEach child nodes, child nodes can be obtained directly when nodes in main tree.
-When nodes are not in main tree, only a node at corresponding position will be created,
-rather than expanding all child nodes.
-The child node sequence numbers are calculated based on all child nodes.
+Do not expand children of node.If the FrameNode contains LazyForEach child nodes, child nodes can be obtained directly when nodes in main tree.When nodes are not in main tree, only a node at corresponding position will be created,rather than expanding all child nodes.The child node sequence numbers are calculated based on all child nodes.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ExpandMode-LAZY_NOT_EXPAND = 3--><!--Device-ExpandMode-LAZY_NOT_EXPAND = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

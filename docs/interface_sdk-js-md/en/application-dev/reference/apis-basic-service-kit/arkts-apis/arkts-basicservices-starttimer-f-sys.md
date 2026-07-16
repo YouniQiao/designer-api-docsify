@@ -16,6 +16,8 @@ Starts a timer. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
+<!--Device-systemTimer-function startTimer(timer: long, triggerTime: long, callback: AsyncCallback<void>): void--><!--Device-systemTimer-function startTimer(timer: long, triggerTime: long, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **System API:** This is a system API.
@@ -25,8 +27,8 @@ Starts a timer. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | timer | number | Yes | ID of the timer. |
-| triggerTime | number | Yes | Time when the timer is triggered, in milliseconds.<br>If **TIMER_TYPE_REALTIME** isset as the timer type, the value of **triggerTime** is the system startup time, which can be obtained bycalling [systemDateTime.getUptime(STARTUP)](arkts-basicservices-getuptime-f.md#getuptime-1).<br>If**TIMER_TYPE_REALTIME** is not set, the value of **triggerTime** is the wall time, which can be obtained bycalling [systemDateTime.getTime()](arkts-basicservices-gettime-f.md#gettime-1). |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| triggerTime | number | Yes | Time when the timer is triggered, in milliseconds.<br>If **TIMER_TYPE_REALTIME** is set as the timer type, the value of **triggerTime** is the system startup time, which can be obtained by calling [systemDateTime.getUptime(STARTUP)](arkts-basicservices-getuptime-f.md#getuptime-1).<br>If **TIMER_TYPE_REALTIME** is not set, the value of **triggerTime** is the wall time, which can be obtained by calling [systemDateTime.getTime()](arkts-basicservices-gettime-f.md#gettime-1). |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -78,6 +80,8 @@ Starts a timer. This API uses a promise to return the result.
 
 **Since:** 7
 
+<!--Device-systemTimer-function startTimer(timer: long, triggerTime: long): Promise<void>--><!--Device-systemTimer-function startTimer(timer: long, triggerTime: long): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **System API:** This is a system API.
@@ -87,13 +91,13 @@ Starts a timer. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | timer | number | Yes | ID of the timer. |
-| triggerTime | number | Yes | Time when the timer is triggered, in milliseconds.<br>If **TIMER_TYPE_REALTIME** isset as the timer type, the value of **triggerTime** is the system startup time, which can be obtained bycalling [systemDateTime.getUptime(STARTUP)](arkts-basicservices-getuptime-f.md#getuptime-1).<br>If**TIMER_TYPE_REALTIME** is not set, the value of **triggerTime** is the wall time, which can be obtained bycalling [systemDateTime.getTime()](arkts-basicservices-gettime-f.md#gettime-1). |
+| triggerTime | number | Yes | Time when the timer is triggered, in milliseconds.<br>If **TIMER_TYPE_REALTIME** is set as the timer type, the value of **triggerTime** is the system startup time, which can be obtained by calling [systemDateTime.getUptime(STARTUP)](arkts-basicservices-getuptime-f.md#getuptime-1).<br>If **TIMER_TYPE_REALTIME** is not set, the value of **triggerTime** is the wall time, which can be obtained by calling [systemDateTime.getTime()](arkts-basicservices-gettime-f.md#gettime-1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

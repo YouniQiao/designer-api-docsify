@@ -18,13 +18,15 @@ Create an image processing instance.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-videoProcessingEngine-function create(): ImageProcessor--><!--Device-videoProcessingEngine-function create(): ImageProcessor-End-->
+
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ImageProcessor | Returns the ImageProcessor instance if<br>the operation is successful; returns null otherwise. |
+| [ImageProcessor](arkts-image-imageprocessor-i.md) | Returns the ImageProcessor instance if<br>the operation is successful; returns null otherwise. |
 
 **Error codes:**
 

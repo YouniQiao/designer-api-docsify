@@ -8,7 +8,15 @@
 
 **替代接口：** [AuthResultInfo](arkts-userauthentication-authresultinfo-i.md)
 
+<!--Device-userAuth-interface AuthResult--><!--Device-userAuth-interface AuthResult-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
+
+## 导入模块
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+```
 
 ## freezingTime
 
@@ -25,6 +33,8 @@ freezingTime?: number
 **废弃版本：** 9
 
 **替代接口：** [lockoutDuration](arkts-userauthentication-authresultinfo-i.md#lockoutduration)
+
+<!--Device-AuthResult-freezingTime?: number--><!--Device-AuthResult-freezingTime?: number-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -44,6 +54,8 @@ remainTimes?: number
 
 **替代接口：** [remainAttempts](arkts-userauthentication-authresultinfo-i.md#remainattempts)
 
+<!--Device-AuthResult-remainTimes?: number--><!--Device-AuthResult-remainTimes?: number-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## token
@@ -61,6 +73,8 @@ token?: Uint8Array
 **废弃版本：** 9
 
 **替代接口：** [token](arkts-userauthentication-authresultinfo-i.md#token)
+
+<!--Device-AuthResult-token?: Uint8Array--><!--Device-AuthResult-token?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

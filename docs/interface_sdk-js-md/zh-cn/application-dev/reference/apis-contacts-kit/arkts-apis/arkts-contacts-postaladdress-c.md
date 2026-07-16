@@ -4,7 +4,15 @@
 
 **起始版本：** 7
 
+<!--Device-contact-class PostalAddress--><!--Device-contact-class PostalAddress-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
+
+## 导入模块
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+```
 
 ## ADDR_HOME
 
@@ -18,7 +26,9 @@ static readonly ADDR_HOME: 1
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PostalAddress-static readonly ADDR_HOME: 1--><!--Device-PostalAddress-static readonly ADDR_HOME: 1-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -34,7 +44,9 @@ static readonly ADDR_OTHER: 3
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PostalAddress-static readonly ADDR_OTHER: 3--><!--Device-PostalAddress-static readonly ADDR_OTHER: 3-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -50,7 +62,9 @@ static readonly ADDR_WORK: 2
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PostalAddress-static readonly ADDR_WORK: 2--><!--Device-PostalAddress-static readonly ADDR_WORK: 2-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -66,7 +80,9 @@ static readonly CUSTOM_LABEL: 0
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PostalAddress-static readonly CUSTOM_LABEL: 0--><!--Device-PostalAddress-static readonly CUSTOM_LABEL: 0-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -82,7 +98,9 @@ static readonly INVALID_LABEL_ID: -1
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PostalAddress-static readonly INVALID_LABEL_ID: -1--><!--Device-PostalAddress-static readonly INVALID_LABEL_ID: -1-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -98,7 +116,9 @@ city?: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PostalAddress-city?: string--><!--Device-PostalAddress-city?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -114,7 +134,9 @@ country?: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PostalAddress-country?: string--><!--Device-PostalAddress-country?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -130,7 +152,9 @@ labelId?: number
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PostalAddress-labelId?: number--><!--Device-PostalAddress-labelId?: number-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -146,7 +170,9 @@ labelName?: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PostalAddress-labelName?: string--><!--Device-PostalAddress-labelName?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -162,7 +188,9 @@ neighborhood?: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PostalAddress-neighborhood?: string--><!--Device-PostalAddress-neighborhood?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -178,7 +206,9 @@ pobox?: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PostalAddress-pobox?: string--><!--Device-PostalAddress-pobox?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -194,7 +224,9 @@ postalAddress: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PostalAddress-postalAddress: string--><!--Device-PostalAddress-postalAddress: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -210,7 +242,9 @@ postcode?: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PostalAddress-postcode?: string--><!--Device-PostalAddress-postcode?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -226,7 +260,9 @@ region?: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PostalAddress-region?: string--><!--Device-PostalAddress-region?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -242,7 +278,9 @@ street?: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PostalAddress-street?: string--><!--Device-PostalAddress-street?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 

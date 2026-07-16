@@ -4,6 +4,8 @@ The definition of dialog information.
 
 **Since:** 23
 
+<!--Device-avMusicTemplate-interface DialogInfo--><!--Device-avMusicTemplate-interface DialogInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Buttons of the dialog.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DialogInfo-buttons?: DialogButtonInfo[]--><!--Device-DialogInfo-buttons?: DialogButtonInfo[]-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## description
@@ -41,6 +45,8 @@ Other message of the dialog.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DialogInfo-description?: string--><!--Device-DialogInfo-description?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -58,6 +64,8 @@ Unique id of the dialog.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DialogInfo-dialogId: string--><!--Device-DialogInfo-dialogId: string-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## dialogType
@@ -74,6 +82,8 @@ Type of the dialog.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DialogInfo-dialogType: DialogType--><!--Device-DialogInfo-dialogType: DialogType-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## qrCodes
@@ -82,16 +92,15 @@ Type of the dialog.
 qrCodes?: QrCodeInfo[]
 ```
 
-QR code of the dialog.
-Once the QR code information is set,
-this pop-up will be recognized as a QR code pop-up and will display the QR code information with priority.
-A maximum of two can be set.
+QR code of the dialog.Once the QR code information is set,this pop-up will be recognized as a QR code pop-up and will display the QR code information with priority.A maximum of two can be set.
 
 **Type:** QrCodeInfo[]
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DialogInfo-qrCodes?: QrCodeInfo[]--><!--Device-DialogInfo-qrCodes?: QrCodeInfo[]-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -109,6 +118,8 @@ Text content of the dialog.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DialogInfo-text?: string--><!--Device-DialogInfo-text?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## title
@@ -124,6 +135,8 @@ Title of the dialog.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DialogInfo-title?: string--><!--Device-DialogInfo-title?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 

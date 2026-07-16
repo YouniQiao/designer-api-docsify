@@ -14,12 +14,11 @@ function publish(request: NotificationRequest, callback: AsyncCallback<void>): v
 
 Publishes a notification. This API uses an asynchronous callback to return the result.
 
-After a notification is published, it will be displayed as a notification widget in the device's
-notification center, status bar, etc. If the ID and tag of the newly published notification are the
-same as those of an already published notification, the new notification will replace the original
-one, achieving a notification update effect.
+After a notification is published, it will be displayed as a notification widget in the device's notification center, status bar, etc. If the ID and tag of the newly published notification are the same as those of an already published notification, the new notification will replace the original one, achieving a notification update effect.
 
 **Since:** 9
+
+<!--Device-notificationManager-function publish(request: NotificationRequest, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function publish(request: NotificationRequest, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -27,8 +26,8 @@ one, achieving a notification update effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | NotificationRequest | Yes | Content and related configuration of the notification to publish. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| request | [NotificationRequest](arkts-notification-notificationrequest-t.md) | Yes | Content and related configuration of the notification to publish. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -44,10 +43,10 @@ one, achieving a notification update effect.
 | [1600009](../errorcode-notification.md#1600009-notification-sending-limit-reached) | The notification sending frequency reaches the upper limit. |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
 | [1600014](../errorcode-notification.md#1600014-no-related-permission) | No permission.<br>**Applicable version:** 11 and later |
-| [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) | The current notification status does not support duplicateconfigurations.<br>**Applicable version:** 11 and later |
+| [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) | The current notification status does not support duplicate configurations.<br>**Applicable version:** 11 and later |
 | [1600016](../errorcode-notification.md#1600016-updated-notification-version-outdated) | The notification version for this update is too low.<br>**Applicable version:** 11 and later |
-| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-is-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permissionsettings.<br>**Applicable version:** 12 and later |
-| 1600029 | The system failed to find the ExtensionAbility instance for thecustom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
+| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-is-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permission settings.<br>**Applicable version:** 12 and later |
+| 1600029 | The system failed to find the ExtensionAbility instance for the custom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Network unreachable.<br>**Applicable version:** 11 and later |
 
 **Example**
@@ -88,12 +87,11 @@ function publish(request: NotificationRequest): Promise<void>
 
 Publishes a notification. This API uses a promise to return the result.
 
-After a notification is published, it will be displayed as a notification card in the device's notification
-center, status bar, and other locations. If the ID and tag of the newly published notification are the same
-as those of an already published notification, the new notification will replace the original one, achieving
-a notification update effect.
+After a notification is published, it will be displayed as a notification card in the device's notification center, status bar, and other locations. If the ID and tag of the newly published notification are the same as those of an already published notification, the new notification will replace the original one, achieving a notification update effect.
 
 **Since:** 9
+
+<!--Device-notificationManager-function publish(request: NotificationRequest): Promise<void>--><!--Device-notificationManager-function publish(request: NotificationRequest): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -101,13 +99,13 @@ a notification update effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | NotificationRequest | Yes | Content and related configuration of the notification to publish. |
+| request | [NotificationRequest](arkts-notification-notificationrequest-t.md) | Yes | Content and related configuration of the notification to publish. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -123,10 +121,10 @@ a notification update effect.
 | [1600009](../errorcode-notification.md#1600009-notification-sending-limit-reached) | The notification sending frequency reaches the upper limit. |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
 | [1600014](../errorcode-notification.md#1600014-no-related-permission) | No permission.<br>**Applicable version:** 11 and later |
-| [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) | The current notification status does not support duplicateconfigurations.<br>**Applicable version:** 11 and later |
+| [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) | The current notification status does not support duplicate configurations.<br>**Applicable version:** 11 and later |
 | [1600016](../errorcode-notification.md#1600016-updated-notification-version-outdated) | The notification version for this update is too low.<br>**Applicable version:** 11 and later |
-| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-is-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permissionsettings.<br>**Applicable version:** 12 and later |
-| 1600029 | The system failed to find the ExtensionAbility instance for thecustom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
+| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-is-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permission settings.<br>**Applicable version:** 12 and later |
+| 1600029 | The system failed to find the ExtensionAbility instance for the custom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Network unreachable.<br>**Applicable version:** 11 and later |
 
 **Example**

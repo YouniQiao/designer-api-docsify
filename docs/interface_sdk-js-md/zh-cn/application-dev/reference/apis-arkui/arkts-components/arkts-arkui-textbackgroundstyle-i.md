@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare interface TextBackgroundStyle--><!--Device-unnamed-declare interface TextBackgroundStyle-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## color
@@ -20,7 +22,9 @@ color?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextBackgroundStyle-color?: ResourceColor--><!--Device-TextBackgroundStyle-color?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,7 +42,9 @@ radius?: Dimension | BorderRadiuses
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextBackgroundStyle-radius?: Dimension | BorderRadiuses--><!--Device-TextBackgroundStyle-radius?: Dimension | BorderRadiuses-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

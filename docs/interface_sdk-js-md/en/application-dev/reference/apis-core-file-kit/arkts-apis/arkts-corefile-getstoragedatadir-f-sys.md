@@ -16,6 +16,8 @@ Obtains the root directory of the memory. This API uses a promise to return the 
 
 **Since:** 8
 
+<!--Device-Environment-function getStorageDataDir(): Promise<string>--><!--Device-Environment-function getStorageDataDir(): Promise<string>-End-->
+
 **System capability:** SystemCapability.FileManagement.File.Environment
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Obtains the root directory of the memory. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the root directory of the memory. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the root directory of the memory. |
 
 **Error codes:**
 
@@ -45,6 +47,8 @@ Obtains the root directory of the memory. This API uses an asynchronous callback
 
 **Since:** 8
 
+<!--Device-Environment-function getStorageDataDir(callback: AsyncCallback<string>): void--><!--Device-Environment-function getStorageDataDir(callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.Environment
 
 **System API:** This is a system API.
@@ -53,7 +57,7 @@ Obtains the root directory of the memory. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the root directory of the memory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the root directory of the memory. |
 
 **Error codes:**
 

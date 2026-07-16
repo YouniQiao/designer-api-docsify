@@ -1,9 +1,10 @@
 # Connection
 
-Represents a **Connection** object, which provides methods for connecting to and disconnecting from a peer device,
-obtaining the device's ID, sending data, and registering or unregistering event callbacks.
+Represents a **Connection** object, which provides methods for connecting to and disconnecting from a peer device,obtaining the device's ID, sending data, and registering or unregistering event callbacks.
 
 **Since:** 20
+
+<!--Device-linkEnhance-interface Connection--><!--Device-linkEnhance-interface Connection-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -19,14 +20,15 @@ import { linkEnhance } from '@kit.DistributedServiceKit';
 close(): void
 ```
 
-Destroys the **Connection** object to release resources. If the device needs to interact with the peer device
-again, create a **Connection** object again and call `connect()` to initiate a connection.
+Destroys the **Connection** object to release resources. If the device needs to interact with the peer device again, create a **Connection** object again and call `connect()` to initiate a connection.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Connection-close(): void--><!--Device-Connection-close(): void-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -77,6 +79,8 @@ Connects to the server on the client. A maximum number of 10 connections are sup
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Connection-connect(): void--><!--Device-Connection-connect(): void-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Error codes:**
@@ -121,14 +125,15 @@ try {
 disconnect(): void
 ```
 
-Disconnects from the peer device. The created **Connection** object remains valid after this API is called. You
-can call **connect()** to reconnect to the peer device if necessary.
+Disconnects from the peer device. The created **Connection** object remains valid after this API is called. You can call **connect()** to reconnect to the peer device if necessary.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Connection-disconnect(): void--><!--Device-Connection-disconnect(): void-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -171,8 +176,7 @@ try {
 getPeerDeviceId(): string
 ```
 
-Obtains the device ID of the peer device. This API is called when the connection is established successfully
-either by initiating a connection or accepting an incoming connection.
+Obtains the device ID of the peer device. This API is called when the connection is established successfully either by initiating a connection or accepting an incoming connection.
 
 **Since:** 20
 
@@ -180,13 +184,15 @@ either by initiating a connection or accepting an incoming connection.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Connection-getPeerDeviceId(): string--><!--Device-Connection-getPeerDeviceId(): string-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Device ID of the peer device, that is, the BLE MAC address of the peer device. An emptystring is returned if no device ID is obtained. |
+| string | Device ID of the peer device, that is, the BLE MAC address of the peer device. An empty string is returned if no device ID is obtained. |
 
 **Error codes:**
 
@@ -230,6 +236,8 @@ Unregisters the listener for **connectResult** events.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Connection-off(type: 'connectResult', callback?: Callback<ConnectResult>): void--><!--Device-Connection-off(type: 'connectResult', callback?: Callback<ConnectResult>): void-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Parameters:**
@@ -237,7 +245,7 @@ Unregisters the listener for **connectResult** events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectResult' | Yes | Event type, which is **connectResult**. This event is triggered when `connect()` is called. |
-| callback | Callback&lt;ConnectResult&gt; | No | Registered callback. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ConnectResult> | No | Registered callback. |
 
 **Error codes:**
 
@@ -279,8 +287,7 @@ try {
 off(type: 'disconnected', callback?: Callback<number>): void
 ```
 
-Unregisters the listener for **disconnected** events. This API uses an asynchronous callback to return the
-result.
+Unregisters the listener for **disconnected** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 
@@ -288,14 +295,16 @@ result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Connection-off(type: 'disconnected', callback?: Callback<number>): void--><!--Device-Connection-off(type: 'disconnected', callback?: Callback<number>): void-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'disconnected' | Yes | Event type, which is **disconnected**. This event is triggered when theconnection is passively terminated or encounters an exception. |
-| callback | Callback&lt;number&gt; | No | Registered callback, where **number** indicates the returned error code. |
+| type | 'disconnected' | Yes | Event type, which is **disconnected**. This event is triggered when the connection is passively terminated or encounters an exception. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | No | Registered callback, where **number** indicates the returned error code. |
 
 **Error codes:**
 
@@ -345,14 +354,16 @@ Unregisters the listener for **dataReceived** events.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Connection-off(type: 'dataReceived', callback?: Callback<ArrayBuffer>): void--><!--Device-Connection-off(type: 'dataReceived', callback?: Callback<ArrayBuffer>): void-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'dataReceived' | Yes | Event type, which is **dataReceived**. This event is triggered when data isreceived. |
-| callback | Callback&lt;ArrayBuffer&gt; | No | Registered callback. |
+| type | 'dataReceived' | Yes | Event type, which is **dataReceived**. This event is triggered when data is received. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ArrayBuffer> | No | Registered callback. |
 
 **Error codes:**
 
@@ -403,6 +414,8 @@ Registers a listener for **connectResult** events. This API uses an asynchronous
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Connection-on(type: 'connectResult', callback: Callback<ConnectResult>): void--><!--Device-Connection-on(type: 'connectResult', callback: Callback<ConnectResult>): void-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Parameters:**
@@ -410,7 +423,7 @@ Registers a listener for **connectResult** events. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectResult' | Yes | Event type, which is **connectResult**. This event is triggered when `connect()` is called. |
-| callback | Callback&lt;ConnectResult&gt; | Yes | Registered callback. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ConnectResult> | Yes | Registered callback. |
 
 **Error codes:**
 
@@ -460,14 +473,16 @@ Registers a listener for **disconnected** events. This API uses an asynchronous 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Connection-on(type: 'disconnected', callback: Callback<number>): void--><!--Device-Connection-on(type: 'disconnected', callback: Callback<number>): void-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'disconnected' | Yes | Event type, which is **disconnected**. This event is triggered when theconnection is passively terminated or encounters an exception. |
-| callback | Callback&lt;number&gt; | Yes | Registered callback, where **number** indicates the returned error code. |
+| type | 'disconnected' | Yes | Event type, which is **disconnected**. This event is triggered when the connection is passively terminated or encounters an exception. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | Yes | Registered callback, where **number** indicates the returned error code. |
 
 **Error codes:**
 
@@ -506,8 +521,7 @@ try {
 on(type: 'dataReceived', callback: Callback<ArrayBuffer>): void
 ```
 
-Registers a listener for the **dataReceived** events. This API uses an asynchronous callback to return the
-result.
+Registers a listener for the **dataReceived** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 
@@ -515,14 +529,16 @@ result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Connection-on(type: 'dataReceived', callback: Callback<ArrayBuffer>): void--><!--Device-Connection-on(type: 'dataReceived', callback: Callback<ArrayBuffer>): void-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'dataReceived' | Yes | Event type, which is **dataReceived**. This event is triggered when data isreceived. |
-| callback | Callback&lt;ArrayBuffer&gt; | Yes | Registered callback. |
+| type | 'dataReceived' | Yes | Event type, which is **dataReceived**. This event is triggered when data is received. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ArrayBuffer> | Yes | Registered callback. |
 
 **Error codes:**
 
@@ -563,8 +579,7 @@ try {
 sendData(data: ArrayBuffer): void
 ```
 
-Sends data to the server after a connection is established successfully. When the server receives the connection
-callback, it can also send data to the client.
+Sends data to the server after a connection is established successfully. When the server receives the connection callback, it can also send data to the client.
 
 **Since:** 20
 
@@ -572,13 +587,15 @@ callback, it can also send data to the client.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Connection-sendData(data: ArrayBuffer): void--><!--Device-Connection-sendData(data: ArrayBuffer): void-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | ArrayBuffer | Yes | Data to send. The maximum length is 1024 bytes. |
+| data | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Data to send. The maximum length is 1024 bytes. |
 
 **Error codes:**
 

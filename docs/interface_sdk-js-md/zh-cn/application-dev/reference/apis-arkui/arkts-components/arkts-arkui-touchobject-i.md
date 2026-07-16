@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare interface TouchObject--><!--Device-unnamed-declare interface TouchObject-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## getCurrentLocalPosition
@@ -18,7 +20,9 @@ getCurrentLocalPosition?(): Coordinate2D
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TouchObject-getCurrentLocalPosition?(): Coordinate2D--><!--Device-TouchObject-getCurrentLocalPosition?(): Coordinate2D-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,7 +30,7 @@ getCurrentLocalPosition?(): Coordinate2D
 
 | 类型 | 说明 |
 | --- | --- |
-| Coordinate2D | - 点击位置相对于当前组件实时位置的左上角坐标。 |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | - 点击位置相对于当前组件实时位置的左上角坐标。 |
 
 ## displayX
 
@@ -44,7 +48,9 @@ displayX: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TouchObject-displayX: number--><!--Device-TouchObject-displayX: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,7 +70,9 @@ displayY: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TouchObject-displayY: number--><!--Device-TouchObject-displayY: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,7 +94,9 @@ globalDisplayX?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TouchObject-globalDisplayX?: number--><!--Device-TouchObject-globalDisplayX?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,7 +118,9 @@ globalDisplayY?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TouchObject-globalDisplayY?: number--><!--Device-TouchObject-globalDisplayY?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,7 +138,9 @@ hand?: InteractionHand
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TouchObject-hand?: InteractionHand--><!--Device-TouchObject-hand?: InteractionHand-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -146,7 +160,9 @@ height?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TouchObject-height?: number--><!--Device-TouchObject-height?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -162,7 +178,9 @@ id: number
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TouchObject-id: number--><!--Device-TouchObject-id: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -182,7 +200,9 @@ pressedTime?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TouchObject-pressedTime?: number--><!--Device-TouchObject-pressedTime?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -202,7 +222,9 @@ pressure?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TouchObject-pressure?: number--><!--Device-TouchObject-pressure?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -224,6 +246,8 @@ screenX: number
 
 **替代接口：** [windowX](arkts-arkui-touchobject-i.md#windowx)
 
+<!--Device-TouchObject-screenX: number--><!--Device-TouchObject-screenX: number-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## screenY
@@ -244,6 +268,8 @@ screenY: number
 
 **替代接口：** [windowY](arkts-arkui-touchobject-i.md#windowy)
 
+<!--Device-TouchObject-screenY: number--><!--Device-TouchObject-screenY: number-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## type
@@ -258,7 +284,9 @@ type: TouchType
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TouchObject-type: TouchType--><!--Device-TouchObject-type: TouchType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -278,7 +306,9 @@ width?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TouchObject-width?: number--><!--Device-TouchObject-width?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -298,7 +328,9 @@ windowX: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TouchObject-windowX: number--><!--Device-TouchObject-windowX: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -318,7 +350,9 @@ windowY: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TouchObject-windowY: number--><!--Device-TouchObject-windowY: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -336,7 +370,9 @@ x: number
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TouchObject-x: number--><!--Device-TouchObject-x: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -354,7 +390,9 @@ y: number
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TouchObject-y: number--><!--Device-TouchObject-y: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -16,13 +16,15 @@ Checks whether the device is in standby mode.
 
 **Since:** 10
 
+<!--Device-power-function isStandby(): boolean--><!--Device-power-function isStandby(): boolean-End-->
+
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The value **true** indicates that the device is in standby mode, and the value **false**indicates the opposite. |
+| boolean | The value **true** indicates that the device is in standby mode, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

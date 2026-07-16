@@ -8,6 +8,8 @@ The enum of profile id.
 
 **Substitutes:** ProfileId
 
+<!--Device-bluetoothManager-enum ProfileId--><!--Device-bluetoothManager-enum ProfileId-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## PROFILE_A2DP_SOURCE
@@ -23,6 +25,8 @@ A2DP profile.
 **Deprecated since:** 10
 
 **Substitutes:** PROFILE_A2DP_SOURCE
+
+<!--Device-ProfileId-PROFILE_A2DP_SOURCE = 1--><!--Device-ProfileId-PROFILE_A2DP_SOURCE = 1-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -40,6 +44,8 @@ HFP profile.
 
 **Substitutes:** PROFILE_HANDSFREE_AUDIO_GATEWAY
 
+<!--Device-ProfileId-PROFILE_HANDS_FREE_AUDIO_GATEWAY = 4--><!--Device-ProfileId-PROFILE_HANDS_FREE_AUDIO_GATEWAY = 4-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## PROFILE_HID_HOST
@@ -56,6 +62,8 @@ Human Interface Device (HID) profile.
 
 **Substitutes:** PROFILE_HID_HOST
 
+<!--Device-ProfileId-PROFILE_HID_HOST = 6--><!--Device-ProfileId-PROFILE_HID_HOST = 6-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## PROFILE_PAN_NETWORK
@@ -71,6 +79,8 @@ PAN profile.
 **Deprecated since:** 10
 
 **Substitutes:** PROFILE_PAN_NETWORK
+
+<!--Device-ProfileId-PROFILE_PAN_NETWORK = 7--><!--Device-ProfileId-PROFILE_PAN_NETWORK = 7-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

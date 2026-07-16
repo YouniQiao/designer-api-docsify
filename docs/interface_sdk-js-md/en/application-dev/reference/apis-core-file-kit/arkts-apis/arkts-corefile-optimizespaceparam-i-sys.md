@@ -4,6 +4,8 @@ Sets the total optimization space and aging days.
 
 **Since:** 17
 
+<!--Device-cloudSync-interface OptimizeSpaceParam--><!--Device-cloudSync-interface OptimizeSpaceParam-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
@@ -20,14 +22,15 @@ import { cloudSync } from '@kit.CoreFileKit';
 agingDays: number
 ```
 
-Aging days. The system optimizes the local images and videos that have been uploaded to the cloud but not viewed
-for more than the aging days.
+Aging days. The system optimizes the local images and videos that have been uploaded to the cloud but not viewed for more than the aging days.
 
 **Type:** number
 
 **Since:** 17
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
+
+<!--Device-OptimizeSpaceParam-agingDays: int--><!--Device-OptimizeSpaceParam-agingDays: int-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -39,14 +42,15 @@ for more than the aging days.
 totalSize:number
 ```
 
-Total size of the optimization space. You can obtain the total size of all files to be aged through the media
-library API. The size is transferred by the application and is in bytes.
+Total size of the optimization space. You can obtain the total size of all files to be aged through the media library API. The size is transferred by the application and is in bytes.
 
 **Type:** number
 
 **Since:** 17
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
+
+<!--Device-OptimizeSpaceParam-totalSize:long--><!--Device-OptimizeSpaceParam-totalSize:long-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

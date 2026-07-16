@@ -20,6 +20,8 @@ Generate out-of-band data of the local device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function generateLocalOobData(transport: BluetoothTransport): Promise<OobData>--><!--Device-connection-function generateLocalOobData(transport: BluetoothTransport): Promise<OobData>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -28,13 +30,13 @@ Generate out-of-band data of the local device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transport | BluetoothTransport | Yes | Indicates the transport of a remote Bluetooth device. |
+| transport | [BluetoothTransport](arkts-connectivity-bluetoothtransport-e.md) | Yes | Indicates the transport of a remote Bluetooth device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OobData&gt; | Returns the out-of-band data. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<OobData> | Returns the out-of-band data. |
 
 **Error codes:**
 

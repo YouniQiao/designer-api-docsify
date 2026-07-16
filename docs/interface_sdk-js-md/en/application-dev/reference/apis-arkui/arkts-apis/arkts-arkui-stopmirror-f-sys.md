@@ -16,6 +16,8 @@ Stops mirror mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
+<!--Device-screen-function stopMirror(mirrorScreen:Array<long>, callback: AsyncCallback<void>): void--><!--Device-screen-function stopMirror(mirrorScreen:Array<long>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -24,8 +26,8 @@ Stops mirror mode. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mirrorScreen | Array&lt;number&gt; | Yes | Array of IDs of secondary screens. Each ID must be an integer. The size ofthe **mirrorScreen** array cannot exceed 1000. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If mirror mode is stopped, **err** is**undefined**; otherwise, **err** is an error object. |
+| mirrorScreen | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Array of IDs of secondary screens. Each ID must be an integer. The size of the **mirrorScreen** array cannot exceed 1000. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If mirror mode is stopped, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -65,6 +67,8 @@ Stops mirror mode. This API uses a promise to return the result.
 
 **Since:** 10
 
+<!--Device-screen-function stopMirror(mirrorScreen:Array<long>): Promise<void>--><!--Device-screen-function stopMirror(mirrorScreen:Array<long>): Promise<void>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -73,13 +77,13 @@ Stops mirror mode. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mirrorScreen | Array&lt;number&gt; | Yes | Array of IDs of secondary screens. Each ID must be an integer. The size ofthe **mirrorScreen** array cannot exceed 1000. |
+| mirrorScreen | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Array of IDs of secondary screens. Each ID must be an integer. The size of the **mirrorScreen** array cannot exceed 1000. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

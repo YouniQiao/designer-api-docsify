@@ -1,5 +1,11 @@
 # getPointerSpeedSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+```
+
 ## getPointerSpeedSync
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getPointerSpeedSync(): number
 使用同步方式获取当前鼠标移动速度。
 
 **起始版本：** 10
+
+<!--Device-pointer-function getPointerSpeedSync(): int--><!--Device-pointer-function getPointerSpeedSync(): int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

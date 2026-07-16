@@ -4,6 +4,8 @@ Provides methods for intelligent data processing.
 
 **Since:** 15
 
+<!--Device-unnamed-declare namespace intelligence--><!--Device-unnamed-declare namespace intelligence-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 ## Modules to Import

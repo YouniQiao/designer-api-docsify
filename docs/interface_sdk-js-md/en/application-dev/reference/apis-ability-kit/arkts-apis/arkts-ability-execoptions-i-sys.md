@@ -4,6 +4,8 @@ Tool execution options.
 
 **Since:** 26.0.0
 
+<!--Device-cliManager-interface ExecOptions--><!--Device-cliManager-interface ExecOptions-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Indicates whether the tool is executed in the background
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExecOptions-background?: boolean--><!--Device-ExecOptions-background?: boolean-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -46,6 +50,8 @@ Indicates the maximum execution time of the tool, in seconds.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExecOptions-timeout?: long--><!--Device-ExecOptions-timeout?: long-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -63,6 +69,8 @@ Indicates the foreground waiting timeout in milliseconds.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExecOptions-yieldMs?: long--><!--Device-ExecOptions-yieldMs?: long-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 

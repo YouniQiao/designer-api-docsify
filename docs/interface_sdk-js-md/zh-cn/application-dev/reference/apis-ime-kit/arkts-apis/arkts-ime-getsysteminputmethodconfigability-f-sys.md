@@ -1,5 +1,11 @@
 # getSystemInputMethodConfigAbility（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { inputMethod } from '@kit.IMEKit';
+```
+
 ## getSystemInputMethodConfigAbility
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getSystemInputMethodConfigAbility(userId?: number): ElementName
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-inputMethod-function getSystemInputMethodConfigAbility(userId?: int): ElementName--><!--Device-inputMethod-function getSystemInputMethodConfigAbility(userId?: int): ElementName-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -26,7 +34,7 @@ function getSystemInputMethodConfigAbility(userId?: number): ElementName
 
 | 类型 | 说明 |
 | --- | --- |
-| ElementName | 系统输入法设置界面Ability的ElementName。 |
+| [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-t.md) | 系统输入法设置界面Ability的ElementName。 |
 
 **错误码：**
 

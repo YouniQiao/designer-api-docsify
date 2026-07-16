@@ -1,5 +1,11 @@
 # createVirtualScreen（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { screen } from '@kit.ArkUI';
+```
+
 ## createVirtualScreen
 
 ```TypeScript
@@ -12,6 +18,8 @@ function createVirtualScreen(options:VirtualScreenOption, callback: AsyncCallbac
 
 **需要权限：** ohos.permission.CAPTURE_SCREEN
 
+<!--Device-screen-function createVirtualScreen(options:VirtualScreenOption, callback: AsyncCallback<Screen>): void--><!--Device-screen-function createVirtualScreen(options:VirtualScreenOption, callback: AsyncCallback<Screen>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -20,14 +28,14 @@ function createVirtualScreen(options:VirtualScreenOption, callback: AsyncCallbac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | VirtualScreenOption | 是 | 用于创建虚拟屏幕的参数。 |
-| callback | AsyncCallback&lt;Screen&gt; | 是 | 回调函数，返回创建的虚拟屏幕对象。 |
+| options | [VirtualScreenOption](arkts-arkui-virtualscreenoption-i-sys.md) | 是 | 用于创建虚拟屏幕的参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Screen> | 是 | 回调函数，返回创建的虚拟屏幕对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
@@ -81,6 +89,8 @@ function createVirtualScreen(options:VirtualScreenOption): Promise<Screen>
 
 **需要权限：** ohos.permission.CAPTURE_SCREEN
 
+<!--Device-screen-function createVirtualScreen(options:VirtualScreenOption): Promise<Screen>--><!--Device-screen-function createVirtualScreen(options:VirtualScreenOption): Promise<Screen>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -89,19 +99,19 @@ function createVirtualScreen(options:VirtualScreenOption): Promise<Screen>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | VirtualScreenOption | 是 | 用于创建虚拟屏幕的参数。 |
+| options | [VirtualScreenOption](arkts-arkui-virtualscreenoption-i-sys.md) | 是 | 用于创建虚拟屏幕的参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Screen&gt; | Promise对象。返回创建的虚拟屏幕对象。 |
+| Promise<Screen> | Promise对象。返回创建的虚拟屏幕对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. |
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |

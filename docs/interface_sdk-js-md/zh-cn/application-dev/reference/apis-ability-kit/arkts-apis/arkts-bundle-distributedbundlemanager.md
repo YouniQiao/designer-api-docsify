@@ -2,15 +2,23 @@
 
 本模块提供分布式应用的管理能力。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 本模块为系统接口。
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace distributedBundleManager--><!--Device-unnamed-declare namespace distributedBundleManager-End-->
+
 **系统能力：** SystemCapability.BundleManager.DistributedBundleFramework
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { distributedBundleManager } from '@kit.AbilityKit';
+```
 
 ## 汇总
 

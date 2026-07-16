@@ -12,10 +12,11 @@ import { securityLabel } from '@kit.CoreFileKit';
 function getSecurityLabel(path: string): Promise<string>
 ```
 
-Obtains the data security level of a file or directory. If no data security level has been set, **s3** is returned
-by default. This API uses a promise to return the result.
+Obtains the data security level of a file or directory. If no data security level has been set, **s3** is returned by default. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-securityLabel-function getSecurityLabel(path: string): Promise<string>--><!--Device-securityLabel-function getSecurityLabel(path: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -29,7 +30,7 @@ by default. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the data security level. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the data security level. |
 
 **Error codes:**
 
@@ -64,10 +65,11 @@ securityLabel.getSecurityLabel(filePath).then((type: string) => {
 function getSecurityLabel(path: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the data security level of a file or directory. If no data security level has been set, **s3** is returned
-by default. This API uses an asynchronous callback to return the result.
+Obtains the data security level of a file or directory. If no data security level has been set, **s3** is returned by default. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-securityLabel-function getSecurityLabel(path: string, callback: AsyncCallback<string>): void--><!--Device-securityLabel-function getSecurityLabel(path: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -76,7 +78,7 @@ by default. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | File path. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback after the data security level is obtained asynchronously. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback after the data security level is obtained asynchronously. |
 
 **Error codes:**
 

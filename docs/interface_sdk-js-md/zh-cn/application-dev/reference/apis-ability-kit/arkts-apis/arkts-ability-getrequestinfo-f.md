@@ -1,5 +1,11 @@
 # getRequestInfo
 
+## 导入模块
+
+```TypeScript
+import { dialogRequest } from '@kit.AbilityKit';
+```
+
 ## getRequestInfo
 
 ```TypeScript
@@ -8,11 +14,13 @@ function getRequestInfo(want: Want): RequestInfo
 
 从Want中获取请求方的RequestInfo。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 该接口可以在ServiceExtensionAbility下使用，如果ServiceExtensionAbility实现了模态弹框，则能从Want中获取请求方的RequestInfo。其他场景使用该接口，均无法获取返回值。
 
 **起始版本：** 9
+
+<!--Device-dialogRequest-function getRequestInfo(want: Want): RequestInfo--><!--Device-dialogRequest-function getRequestInfo(want: Want): RequestInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -20,13 +28,13 @@ function getRequestInfo(want: Want): RequestInfo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | Want | 是 | 表示发起方请求弹框时传入的want信息。 |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 表示发起方请求弹框时传入的want信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| RequestInfo | 请求方RequestInfo，用于绑定模态窗口。 |
+| [RequestInfo](arkts-ability-requestinfo-i.md) | 请求方RequestInfo，用于绑定模态窗口。 |
 
 **错误码：**
 

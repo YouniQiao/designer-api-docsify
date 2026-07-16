@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare interface CalendarOptions--><!--Device-unnamed-declare interface CalendarOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## disabledDateRange
@@ -16,9 +18,7 @@ disabledDateRange?: DateRange[]
 
 **说明：**
 
-1. 若日期区间内的开始日期或结束日期未设置或设置为异常值，则该日期区间无效。
-2. 若在日期区间内，结束日期早于开始日期，则该日期区间无效。
-3. 当在入口区选定某日期，通过上下箭头调整日期进行增加或减少操作时，若遇到禁用日期，系统将自动跳过整个禁用区间。
+1. 若日期区间内的开始日期或结束日期未设置或设置为异常值，则该日期区间无效。2. 若在日期区间内，结束日期早于开始日期，则该日期区间无效。3. 当在入口区选定某日期，通过上下箭头调整日期进行增加或减少操作时，若遇到禁用日期，系统将自动跳过整个禁用区间。
 
 **类型：** DateRange[]
 
@@ -26,7 +26,9 @@ disabledDateRange?: DateRange[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本19开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CalendarOptions-disabledDateRange?: DateRange[]--><!--Device-CalendarOptions-disabledDateRange?: DateRange[]-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,7 +52,9 @@ end?: Date
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CalendarOptions-end?: Date--><!--Device-CalendarOptions-end?: Date-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,8 +74,7 @@ hintRadius?: number | Resource
 
 **说明：**
 
-当hintRadius为0.0时表示底板样式为直角矩形；当hintRadius为(0.0, 16.0)时，底板样式为圆角矩形；
-当hintRadius为负数或大于16.0时，恢复为默认值16.0。
+当hintRadius为0.0时表示底板样式为直角矩形；当hintRadius为(0.0, 16.0)时，底板样式为圆角矩形；当hintRadius为负数或大于16.0时，恢复为默认值16.0。
 
 **类型：** number | Resource
 
@@ -81,7 +84,9 @@ hintRadius?: number | Resource
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CalendarOptions-hintRadius?: number | Resource--><!--Device-CalendarOptions-hintRadius?: number | Resource-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -105,7 +110,9 @@ selected?: Date
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CalendarOptions-selected?: Date--><!--Device-CalendarOptions-selected?: Date-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -129,7 +136,9 @@ start?: Date
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CalendarOptions-start?: Date--><!--Device-CalendarOptions-start?: Date-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

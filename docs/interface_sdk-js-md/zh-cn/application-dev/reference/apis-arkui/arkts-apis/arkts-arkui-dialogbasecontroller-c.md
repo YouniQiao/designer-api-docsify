@@ -4,7 +4,15 @@
 
 **起始版本：** 26.1.0
 
+<!--Device-unnamed-export class DialogBaseController--><!--Device-unnamed-export class DialogBaseController-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from '@kit.ArkUI';
+```
 
 ## close
 
@@ -18,7 +26,9 @@ close(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseController-close(): void--><!--Device-DialogBaseController-close(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,7 +44,9 @@ constructor()
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseController-constructor()--><!--Device-DialogBaseController-constructor()-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,7 +62,9 @@ getState(): DialogState
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseController-getState(): DialogState--><!--Device-DialogBaseController-getState(): DialogState-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,5 +72,5 @@ getState(): DialogState
 
 | 类型 | 说明 |
 | --- | --- |
-| DialogState | 返回状态。 |
+| [DialogState](arkts-arkui-dialogstate-e.md) | 返回状态。 |
 

@@ -4,6 +4,8 @@ User authorization result.
 
 **Since:** 26.0.0
 
+<!--Device-abilityToolAccessCtrl-interface UserAuthResult--><!--Device-abilityToolAccessCtrl-interface UserAuthResult-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
@@ -20,6 +22,8 @@ Permission information list.
 
 **Since:** 26.0.0
 
+<!--Device-UserAuthResult-permissionInfo: PermissionInfo[]--><!--Device-UserAuthResult-permissionInfo: PermissionInfo[]-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
@@ -35,6 +39,8 @@ Permission query information.
 **Type:** PermissionQuery
 
 **Since:** 26.0.0
+
+<!--Device-UserAuthResult-permissionQuery: PermissionQuery--><!--Device-UserAuthResult-permissionQuery: PermissionQuery-End-->
 
 **System capability:** SystemCapability.Security.Asset
 

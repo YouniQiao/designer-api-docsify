@@ -12,19 +12,19 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function setEnterprisePolicy(policy: EnterprisePolicy): void
 ```
 
-Sets the protection policy for enterprise applications. After the API is successfully called, the DLP protection
-for enterprise applications is implemented based on the configured policy.
+Sets the protection policy for enterprise applications. After the API is successfully called, the DLP protection for enterprise applications is implemented based on the configured policy.
 
-This API is used by the enterprise administrator to configure DLP security policies for unified management of
-data security protection rules.
+This API is used by the enterprise administrator to configure DLP security policies for unified management of data security protection rules.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > This API can be called only by enterprise accounts.
 
 **Since:** 21
 
 **Required permissions:** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
+
+<!--Device-dlpPermission-function setEnterprisePolicy(policy: EnterprisePolicy): void--><!--Device-dlpPermission-function setEnterprisePolicy(policy: EnterprisePolicy): void-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -32,7 +32,7 @@ data security protection rules.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policy | EnterprisePolicy | Yes | Enterprise application protection policy to be set. Access control andbehavior restrictions of enterprise DLP files are implemented based on the policy. |
+| policy | [EnterprisePolicy](arkts-dataprotection-enterprisepolicy-i.md) | Yes | Enterprise application protection policy to be set. Access control and behavior restrictions of enterprise DLP files are implemented based on the policy. |
 
 **Error codes:**
 

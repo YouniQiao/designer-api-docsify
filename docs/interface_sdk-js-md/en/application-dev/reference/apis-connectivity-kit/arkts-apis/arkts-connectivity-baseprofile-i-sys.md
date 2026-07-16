@@ -4,6 +4,8 @@ Base interface of profile.
 
 **Since:** 10
 
+<!--Device-baseProfile-export interface BaseProfile--><!--Device-baseProfile-export interface BaseProfile-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Get connection strategy of this profile.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BaseProfile-getConnectionStrategy(deviceId: string, callback: AsyncCallback<ConnectionStrategy>): void--><!--Device-BaseProfile-getConnectionStrategy(deviceId: string, callback: AsyncCallback<ConnectionStrategy>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -35,7 +39,7 @@ Get connection strategy of this profile.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| callback | AsyncCallback&lt;ConnectionStrategy&gt; | Yes | the callback of getConnectionStrategy. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ConnectionStrategy> | Yes | the callback of getConnectionStrategy. |
 
 **Error codes:**
 
@@ -64,6 +68,8 @@ Get connection strategy of this profile.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BaseProfile-getConnectionStrategy(deviceId: string): Promise<ConnectionStrategy>--><!--Device-BaseProfile-getConnectionStrategy(deviceId: string): Promise<ConnectionStrategy>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -78,7 +84,7 @@ Get connection strategy of this profile.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ConnectionStrategy&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ConnectionStrategy> | Returns the promise object. |
 
 **Error codes:**
 
@@ -107,6 +113,8 @@ Set connection strategy of this profile.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BaseProfile-setConnectionStrategy(deviceId: string, strategy: ConnectionStrategy): Promise<void>--><!--Device-BaseProfile-setConnectionStrategy(deviceId: string, strategy: ConnectionStrategy): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -116,13 +124,13 @@ Set connection strategy of this profile.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| strategy | ConnectionStrategy | Yes | the connection strategy of this profile. |
+| strategy | [ConnectionStrategy](arkts-connectivity-connectionstrategy-e-sys.md) | Yes | the connection strategy of this profile. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 
@@ -151,6 +159,8 @@ Set connection strategy of this profile.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BaseProfile-setConnectionStrategy(deviceId: string, strategy: ConnectionStrategy, callback: AsyncCallback<void>): void--><!--Device-BaseProfile-setConnectionStrategy(deviceId: string, strategy: ConnectionStrategy, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -160,8 +170,8 @@ Set connection strategy of this profile.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| strategy | ConnectionStrategy | Yes | the connection strategy of this profile. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of setConnectionStrategy. |
+| strategy | [ConnectionStrategy](arkts-connectivity-connectionstrategy-e-sys.md) | Yes | the connection strategy of this profile. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of setConnectionStrategy. |
 
 **Error codes:**
 

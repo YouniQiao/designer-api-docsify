@@ -1,5 +1,11 @@
 # getTouchpadPointerSpeed（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+```
+
 ## getTouchpadPointerSpeed
 
 ```TypeScript
@@ -10,6 +16,8 @@ function getTouchpadPointerSpeed(callback: AsyncCallback<number>): void
 
 **起始版本：** 10
 
+<!--Device-pointer-function getTouchpadPointerSpeed(callback: AsyncCallback<int>): void--><!--Device-pointer-function getTouchpadPointerSpeed(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -18,7 +26,7 @@ function getTouchpadPointerSpeed(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。当获取触控板光标移动速度成功，err为undefined，number是获取的触控板光标移动速度；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。当获取触控板光标移动速度成功，err为undefined，number是获取的触控板光标移动速度；否则为错误对象。 |
 
 **错误码：**
 
@@ -70,6 +78,8 @@ function getTouchpadPointerSpeed(): Promise<number>
 
 **起始版本：** 10
 
+<!--Device-pointer-function getTouchpadPointerSpeed(): Promise<int>--><!--Device-pointer-function getTouchpadPointerSpeed(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -78,7 +88,7 @@ function getTouchpadPointerSpeed(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回触控板光标移动速度，speed取值范围[1,11]。 |
+| Promise<number> | Promise对象，返回触控板光标移动速度，speed取值范围[1,11]。 |
 
 **错误码：**
 

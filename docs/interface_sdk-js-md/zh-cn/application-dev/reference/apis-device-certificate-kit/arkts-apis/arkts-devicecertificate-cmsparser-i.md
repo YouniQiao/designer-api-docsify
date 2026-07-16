@@ -2,14 +2,22 @@
 
 CmsParser对象用于对CMS签名或封装数据进行验签或解封装。
 
-> **说明：**
->
-> PKCS #7是用于存储签名或加密数据的标准语法。注意CMS是PKCS #7的扩展，PKCS #7支持的数据类型包括数据、签名数据、封装数据、
+> **说明：**  
+>  
+> PKCS #7是用于存储签名或加密数据的标准语法。注意CMS是PKCS #7的扩展，PKCS #7支持的数据类型包括数据、签名数据、封装数据、  
 > 签名和封装数据、摘要数据、加密数据。常用于保护数据的完整性和机密性。
 
 **起始版本：** 22
 
+<!--Device-cert-interface CmsParser--><!--Device-cert-interface CmsParser-End-->
+
 **系统能力：** SystemCapability.Security.Cert
+
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
 
 ## decryptEnvelopedData
 
@@ -21,7 +29,9 @@ decryptEnvelopedData(config: CmsEnvelopedDecryptionConfig): Promise<Uint8Array>
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CmsParser-decryptEnvelopedData(config: CmsEnvelopedDecryptionConfig): Promise<Uint8Array>--><!--Device-CmsParser-decryptEnvelopedData(config: CmsEnvelopedDecryptionConfig): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -29,13 +39,13 @@ decryptEnvelopedData(config: CmsEnvelopedDecryptionConfig): Promise<Uint8Array>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | CmsEnvelopedDecryptionConfig | 是 | CMS解封装的配置。 |
+| config | [CmsEnvelopedDecryptionConfig](arkts-devicecertificate-cmsenvelopeddecryptionconfig-i.md) | 是 | CMS解封装的配置。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回解封装结果。 |
+| Promise<Uint8Array> | Promise对象，返回解封装结果。 |
 
 **错误码：**
 
@@ -141,7 +151,9 @@ getCerts(type: CmsCertType): Promise<Array<X509Cert>>
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CmsParser-getCerts(type: CmsCertType): Promise<Array<X509Cert>>--><!--Device-CmsParser-getCerts(type: CmsCertType): Promise<Array<X509Cert>>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -149,13 +161,13 @@ getCerts(type: CmsCertType): Promise<Array<X509Cert>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | CmsCertType | 是 | 从cms中获取证书的类型。 |
+| type | [CmsCertType](arkts-devicecertificate-cmscerttype-e.md) | 是 | 从cms中获取证书的类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;X509Cert&gt;&gt; | Promise对象，返回证书集合。 |
+| Promise<Array<X509Cert>> | Promise对象，返回证书集合。 |
 
 **错误码：**
 
@@ -176,7 +188,9 @@ getContentData(): Promise<Uint8Array>
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CmsParser-getContentData(): Promise<Uint8Array>--><!--Device-CmsParser-getContentData(): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -184,7 +198,7 @@ getContentData(): Promise<Uint8Array>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回CMS内容数据。 |
+| Promise<Uint8Array> | Promise对象，返回CMS内容数据。 |
 
 **错误码：**
 
@@ -320,7 +334,9 @@ getContentType(): CmsContentType
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CmsParser-getContentType(): CmsContentType--><!--Device-CmsParser-getContentType(): CmsContentType-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -328,7 +344,7 @@ getContentType(): CmsContentType
 
 | 类型 | 说明 |
 | --- | --- |
-| CmsContentType | 返回CMS内容类型。 |
+| [CmsContentType](arkts-devicecertificate-cmscontenttype-e.md) | 返回CMS内容类型。 |
 
 **错误码：**
 
@@ -463,13 +479,15 @@ setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>
 
 用于把CMS格式的数据转成CMS对象。使用Promise方式返回结果。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 支持PEM和DER格式的CMS消息。**string**对应PEM格式，**Uint8Array**对应DER格式。
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CmsParser-setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>--><!--Device-CmsParser-setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -478,13 +496,13 @@ setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | Uint8Array \| string | 是 | CMS消息内容。 |
-| cmsFormat | CmsFormat | 是 | 指定输入的CMS格式。 |
+| cmsFormat | [CmsFormat](arkts-devicecertificate-cmsformat-e.md) | 是 | 指定输入的CMS格式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -620,7 +638,9 @@ verifySignedData(config: CmsVerificationConfig): Promise<void>
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CmsParser-verifySignedData(config: CmsVerificationConfig): Promise<void>--><!--Device-CmsParser-verifySignedData(config: CmsVerificationConfig): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -628,13 +648,13 @@ verifySignedData(config: CmsVerificationConfig): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | CmsVerificationConfig | 是 | CMS验签配置内容。 |
+| config | [CmsVerificationConfig](arkts-devicecertificate-cmsverificationconfig-i.md) | 是 | CMS验签配置内容。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

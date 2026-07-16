@@ -18,6 +18,8 @@ Cancel call upgrade when voice call upgrade to video call.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
+<!--Device-call-function cancelCallUpgrade(callId: int): Promise<void>--><!--Device-call-function cancelCallUpgrade(callId: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -32,7 +34,7 @@ Cancel call upgrade when voice call upgrade to video call.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the cancelCallUpgrade. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the cancelCallUpgrade. |
 
 **Error codes:**
 

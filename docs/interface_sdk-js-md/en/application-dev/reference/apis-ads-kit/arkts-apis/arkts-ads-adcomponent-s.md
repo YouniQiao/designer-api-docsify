@@ -4,6 +4,8 @@ This module provides the capability of displaying ads, covering native, roll, sp
 
 **Since:** 11
 
+<!--Device-unnamed-declare struct AdComponent--><!--Device-unnamed-declare struct AdComponent-End-->
+
 **System capability:** SystemCapability.Advertising.Ads
 
 ## Modules to Import
@@ -24,6 +26,8 @@ A constructor used to create an **AdComponent** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AdComponent-build(): void--><!--Device-AdComponent-build(): void-End-->
+
 **System capability:** SystemCapability.Advertising.Ads
 
 ## adRenderer
@@ -32,9 +36,7 @@ A constructor used to create an **AdComponent** object.
 adRenderer?: () => void
 ```
 
-Application self-rendered ad style. The application self-rendered ad style is a restricted capability. For details,
-please consult
-[Traffic Monetization Official Website Customer Support](https://developer.huawei.com/consumer/en/doc/monetize/support-0000001061434261).
+Application self-rendered ad style. The application self-rendered ad style is a restricted capability. For details,please consult [Traffic Monetization Official Website Customer Support](https://developer.huawei.com/consumer/en/doc/monetize/support-0000001061434261).
 
 **Type:** () => void
 
@@ -43,6 +45,8 @@ please consult
 **Decorator:** @BuilderParam
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-AdComponent-adRenderer?: () => void--><!--Device-AdComponent-adRenderer?: () => void-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -62,6 +66,8 @@ NOTE: For non-roll ad types, the component only displays the first data in the a
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AdComponent-ads: advertising.Advertisement[]--><!--Device-AdComponent-ads: advertising.Advertisement[]-End-->
+
 **System capability:** SystemCapability.Advertising.Ads
 
 ## displayOptions
@@ -77,6 +83,8 @@ Ad display parameters.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AdComponent-displayOptions: advertising.AdDisplayOptions--><!--Device-AdComponent-displayOptions: advertising.AdDisplayOptions-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -94,6 +102,8 @@ Callback for ad status changes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AdComponent-interactionListener: advertising.AdInteractionListener--><!--Device-AdComponent-interactionListener: advertising.AdInteractionListener-End-->
+
 **System capability:** SystemCapability.Advertising.Ads
 
 ## rollPlayState
@@ -102,10 +112,7 @@ Callback for ad status changes.
 rollPlayState?: number
 ```
 
-Used to provide the playback status of roll ads externally. Set to 1 for playing and 2 for paused. The default
-value is 2. Other values are invalid and do not change the previous playback status. The page where the roll ad is
-located needs to be associated with the property through @State. For usage methods, refer to the
-[sample code](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ads-publisher-service-roll#section4281165885118).
+Used to provide the playback status of roll ads externally. Set to 1 for playing and 2 for paused. The default value is 2. Other values are invalid and do not change the previous playback status. The page where the roll ad is located needs to be associated with the property through @State. For usage methods, refer to the [sample code](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ads-publisher-service-roll#section4281165885118).
 
 **Type:** number
 
@@ -114,6 +121,8 @@ located needs to be associated with the property through @State. For usage metho
 **Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-AdComponent-rollPlayState?: number--><!--Device-AdComponent-rollPlayState?: number-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 

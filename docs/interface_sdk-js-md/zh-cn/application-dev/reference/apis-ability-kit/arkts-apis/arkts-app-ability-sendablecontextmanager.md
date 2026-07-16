@@ -4,7 +4,15 @@ sendableContextManager模块提供Context与[SendableContext](arkts-ability-send
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare namespace sendableContextManager--><!--Device-unnamed-declare namespace sendableContextManager-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+## 导入模块
+
+```TypeScript
+import { sendableContextManager } from '@kit.AbilityKit';
+```
 
 ## 汇总
 

@@ -4,6 +4,8 @@ Provides APIs for certificate chain validator operations.
 
 **Since:** 9
 
+<!--Device-cert-interface CertChainValidator--><!--Device-cert-interface CertChainValidator-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
@@ -20,16 +22,13 @@ validate(certChain: CertChainData, callback: AsyncCallback<void>): void
 
 Validates an X.509 certificate chain. This API uses an asynchronous callback to return the result.
 
-The certificate chain validator does not verify the certificate validity period because the system time on the
-device is untrusted. To check the validity period of a certificate, use the
-[checkValidityWithDate()](arkts-devicecertificate-x509cert-i.md#checkvaliditywithdate-1) API of the **X509Cert** class. For details
-about certificate specifications, see
-[Certificate Specifications](../../../../security/DeviceCertificateKit/certificate-framework-overview.md#certificate-specifications)
-.
+The certificate chain validator does not verify the certificate validity period because the system time on the device is untrusted. To check the validity period of a certificate, use the [checkValidityWithDate()](arkts-devicecertificate-x509cert-i.md#checkvaliditywithdate-1) API of the **X509Cert** class. For details about certificate specifications, see [Certificate Specifications](../../../../security/DeviceCertificateKit/certificate-framework-overview.md#certificate-specifications).
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CertChainValidator-validate(certChain: CertChainData, callback: AsyncCallback<void>): void--><!--Device-CertChainValidator-validate(certChain: CertChainData, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -37,8 +36,8 @@ about certificate specifications, see
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| certChain | CertChainData | Yes | Serialized X.509 certificate chain data. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| certChain | [CertChainData](arkts-devicecertificate-certchaindata-i.md) | Yes | Serialized X.509 certificate chain data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -157,16 +156,13 @@ validate(certChain: CertChainData): Promise<void>
 
 Validates an X.509 certificate chain. This API uses a promise to return the result.
 
-The certificate chain validator does not verify the certificate validity period because the system time on the
-device is untrusted. To check the validity period of a certificate, use the
-[checkValidityWithDate()](arkts-devicecertificate-x509cert-i.md#checkvaliditywithdate-1) API of the **X509Cert** class. For details
-about certificate specifications, see
-[Certificate Specifications](../../../../security/DeviceCertificateKit/certificate-framework-overview.md#certificate-specifications)
-.
+The certificate chain validator does not verify the certificate validity period because the system time on the device is untrusted. To check the validity period of a certificate, use the [checkValidityWithDate()](arkts-devicecertificate-x509cert-i.md#checkvaliditywithdate-1) API of the **X509Cert** class. For details about certificate specifications, see [Certificate Specifications](../../../../security/DeviceCertificateKit/certificate-framework-overview.md#certificate-specifications).
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CertChainValidator-validate(certChain: CertChainData): Promise<void>--><!--Device-CertChainValidator-validate(certChain: CertChainData): Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -174,13 +170,13 @@ about certificate specifications, see
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| certChain | CertChainData | Yes | Serialized X.509 certificate chain data. |
+| certChain | [CertChainData](arkts-devicecertificate-certchaindata-i.md) | Yes | Serialized X.509 certificate chain data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -295,24 +291,9 @@ try {
 validateCert(cert: X509Cert, params: CertValidationParams): Promise<CertValidationResult>
 ```
 
-Validates a certificate by building and verifying its certificate chain. This API uses a promise to return the
-result.
+Validates a certificate by building and verifying its certificate chain. This API uses a promise to return the result.
 
-The certificate chain construction process complies with the following rules:
-1. Trusted anchor source: The trusted certificate list (trustedCerts) is always used as the trust anchor source.
-The preconfigured certificate is used as the trust anchor source only when trustSystemCa is set to true.
-2. Issuer search sequence: The system searches for the issuer from the trust anchor source first. If the issuer
-cannot be found, the system searches for the issuer in the untrusted certificate list (untrustedCerts). The
-intermediate CA certificate downloaded online is an untrusted certificate.
-3. Trust anchor locking: Once the issuer is found in the trust anchor source, the subsequent lookup process does
-not roll back to the untrusted certificate, that is, the subsequent certificates must come from the trust anchor
-source.
-4. Construction completion conditions:
-If partialChain is false (default value), the build is complete only when the root certificate (self-signed
-certificate) is found.
-If partialChain is true, the first time the issuer is found in the trust anchor source, the build is complete.
-5. Follow-up verification: After the certificate chain is constructed, perform other verification operations,
-such as certificate signature verification and certificate revocation check.
+The certificate chain construction process complies with the following rules:1. Trusted anchor source: The trusted certificate list (trustedCerts) is always used as the trust anchor source.The preconfigured certificate is used as the trust anchor source only when trustSystemCa is set to true.2. Issuer search sequence: The system searches for the issuer from the trust anchor source first. If the issuer cannot be found, the system searches for the issuer in the untrusted certificate list (untrustedCerts). The intermediate CA certificate downloaded online is an untrusted certificate.3. Trust anchor locking: Once the issuer is found in the trust anchor source, the subsequent lookup process does not roll back to the untrusted certificate, that is, the subsequent certificates must come from the trust anchor source.4. Construction completion conditions:If partialChain is false (default value), the build is complete only when the root certificate (self-signed certificate) is found.If partialChain is true, the first time the issuer is found in the trust anchor source, the build is complete.5. Follow-up verification: After the certificate chain is constructed, perform other verification operations,such as certificate signature verification and certificate revocation check.
 
 **Since:** 26.0.0
 
@@ -320,20 +301,22 @@ such as certificate signature verification and certificate revocation check.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CertChainValidator-validateCert(cert: X509Cert, params: CertValidationParams): Promise<CertValidationResult>--><!--Device-CertChainValidator-validateCert(cert: X509Cert, params: CertValidationParams): Promise<CertValidationResult>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | X509Cert | Yes | Certificate to verify. |
-| params | CertValidationParams | Yes | Certificate validation parameters. |
+| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-x509cert-t.md) | Yes | Certificate to verify. |
+| params | [CertValidationParams](arkts-devicecertificate-certvalidationparams-i.md) | Yes | Certificate validation parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CertValidationResult&gt; | Promise used to return the result of certificate validation. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CertValidationResult> | Promise used to return the result of certificate validation. |
 
 **Error codes:**
 
@@ -496,6 +479,8 @@ Algorithm used by the X.509 certificate chain validator.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CertChainValidator-readonly algorithm: string--><!--Device-CertChainValidator-readonly algorithm: string-End-->
 
 **System capability:** SystemCapability.Security.Cert
 

@@ -16,19 +16,21 @@ Obtains the list of signal strength information of the registered network corres
 
 **Since:** 10
 
+<!--Device-radio-function getSignalInformationSync(slotId: int): Array<SignalInformation>--><!--Device-radio-function getSignalInformationSync(slotId: int): Array<SignalInformation>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximumcard slots supported by the device. |
+| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slots supported by the device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;SignalInformation&gt; | Returns the callback for getting the instance list ofthe child classes derived from {@link SignalInformation}. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<SignalInformation> | Returns the callback for getting the instance list of the child classes derived from {@link SignalInformation}. |
 
 **Example**
 

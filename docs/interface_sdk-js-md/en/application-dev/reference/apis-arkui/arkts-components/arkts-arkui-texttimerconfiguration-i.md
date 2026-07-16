@@ -8,6 +8,8 @@ You need a custom class to implement the **ContentModifier** API.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface TextTimerConfiguration extends CommonConfiguration<TextTimerConfiguration>--><!--Device-unnamed-declare interface TextTimerConfiguration extends CommonConfiguration<TextTimerConfiguration>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## count
@@ -16,9 +18,7 @@ You need a custom class to implement the **ContentModifier** API.
 count: number
 ```
 
-Timer duration, in milliseconds. It is effective only when **isCountDown** is **true**. The maximum value is 864000
-00 ms (24 hours). If the value is between 0 and 86,400,000, it is used as the initial countdown time. Otherwise,
-the default value is used as the initial countdown time.
+Timer duration, in milliseconds. It is effective only when **isCountDown** is **true**. The maximum value is 86400000 ms (24 hours). If the value is between 0 and 86,400,000, it is used as the initial countdown time. Otherwise,the default value is used as the initial countdown time.
 
 Default value: **60000**
 
@@ -31,6 +31,8 @@ Default value: **60000**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextTimerConfiguration-count: number--><!--Device-TextTimerConfiguration-count: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,6 +51,8 @@ Elapsed time of the timer, in the minimum unit of the format.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextTimerConfiguration-elapsedTime: number--><!--Device-TextTimerConfiguration-elapsedTime: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,6 +77,8 @@ Default value: **false**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextTimerConfiguration-isCountDown: boolean--><!--Device-TextTimerConfiguration-isCountDown: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +106,8 @@ When the value is negative, the timer starts with a negative value and continues
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TextTimerConfiguration-startTime?: number--><!--Device-TextTimerConfiguration-startTime?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## started
@@ -121,6 +129,8 @@ Default value: **false**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextTimerConfiguration-started: boolean--><!--Device-TextTimerConfiguration-started: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

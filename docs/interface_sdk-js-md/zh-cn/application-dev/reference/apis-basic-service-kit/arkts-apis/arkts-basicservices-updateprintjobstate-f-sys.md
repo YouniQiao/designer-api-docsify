@@ -1,5 +1,11 @@
 # updatePrintJobState（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+```
+
 ## updatePrintJobState
 
 ```TypeScript
@@ -15,6 +21,10 @@ function updatePrintJobState(jobId: string, state: PrintJobState, subState: Prin
 - API版本24+：ohos.permission.MANAGE_PRINT_JOB or ohos.permission.ENTERPRISE_MANAGE_PRINT
 - API版本10 - 23：ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function updatePrintJobState(jobId: string, state: PrintJobState, subState: PrintJobSubState,
+    callback: AsyncCallback<void>): void--><!--Device-print-function updatePrintJobState(jobId: string, state: PrintJobState, subState: PrintJobSubState,
+    callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -24,9 +34,9 @@ function updatePrintJobState(jobId: string, state: PrintJobState, subState: Prin
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | jobId | string | 是 | 表示打印任务ID。 |
-| state | PrintJobState | 是 | 表示打印任务状态。 |
-| subState | PrintJobSubState | 是 | 表示打印任务子状态。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 异步更新打印任务状态之后的回调。 |
+| state | [PrintJobState](arkts-basicservices-printjobstate-e.md) | 是 | 表示打印任务状态。 |
+| subState | [PrintJobSubState](arkts-basicservices-printjobsubstate-e.md) | 是 | 表示打印任务子状态。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 异步更新打印任务状态之后的回调。 |
 
 **错误码：**
 
@@ -70,6 +80,8 @@ function updatePrintJobState(jobId: string, state: PrintJobState, subState: Prin
 - API版本24+：ohos.permission.MANAGE_PRINT_JOB or ohos.permission.ENTERPRISE_MANAGE_PRINT
 - API版本10 - 23：ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function updatePrintJobState(jobId: string, state: PrintJobState, subState: PrintJobSubState): Promise<void>--><!--Device-print-function updatePrintJobState(jobId: string, state: PrintJobState, subState: PrintJobSubState): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -79,14 +91,14 @@ function updatePrintJobState(jobId: string, state: PrintJobState, subState: Prin
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | jobId | string | 是 | 表示打印任务ID。 |
-| state | PrintJobState | 是 | 表示打印任务状态。 |
-| subState | PrintJobSubState | 是 | 表示打印任务子状态。 |
+| state | [PrintJobState](arkts-basicservices-printjobstate-e.md) | 是 | 表示打印任务状态。 |
+| subState | [PrintJobSubState](arkts-basicservices-printjobsubstate-e.md) | 是 | 表示打印任务子状态。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

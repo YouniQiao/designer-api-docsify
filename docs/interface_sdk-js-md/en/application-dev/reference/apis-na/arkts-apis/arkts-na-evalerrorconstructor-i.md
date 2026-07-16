@@ -2,11 +2,15 @@
 
 **Inheritance/Implementation:** EvalErrorConstructor extends [ErrorConstructor](arkts-na-errorconstructor-i.md)
 
+<!--Device-unnamed-interface EvalErrorConstructor extends ErrorConstructor--><!--Device-unnamed-interface EvalErrorConstructor extends ErrorConstructor-End-->
+
 ## constructor
 
 ```TypeScript
 new(message?: string): EvalError
 ```
+
+<!--Device-EvalErrorConstructor-new(message?: string): EvalError--><!--Device-EvalErrorConstructor-new(message?: string): EvalError-End-->
 
 **Parameters:**
 
@@ -18,7 +22,7 @@ new(message?: string): EvalError
 
 | Type | Description |
 | --- | --- |
-| EvalError |  |
+| [EvalError](arkts-na-evalerror-i.md) |  |
 
 ## constructor
 
@@ -26,6 +30,8 @@ new(message?: string): EvalError
 (message?: string): EvalError
 ```
 
+<!--Device-EvalErrorConstructor-(message?: string): EvalError--><!--Device-EvalErrorConstructor-(message?: string): EvalError-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -36,7 +42,7 @@ new(message?: string): EvalError
 
 | Type | Description |
 | --- | --- |
-| EvalError |  |
+| [EvalError](arkts-na-evalerror-i.md) |  |
 
 ## prototype
 
@@ -45,4 +51,6 @@ readonly prototype: EvalError
 ```
 
 **Type:** EvalError
+
+<!--Device-EvalErrorConstructor-readonly prototype: EvalError--><!--Device-EvalErrorConstructor-readonly prototype: EvalError-End-->
 

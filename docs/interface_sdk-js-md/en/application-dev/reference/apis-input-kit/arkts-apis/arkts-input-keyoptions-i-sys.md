@@ -4,6 +4,8 @@ Represents combination key options.
 
 **Since:** 8
 
+<!--Device-inputConsumer-interface KeyOptions--><!--Device-inputConsumer-interface KeyOptions-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ For example, in the combination keys **Ctrl+Alt+A**, **A** is called the final k
 
 **Since:** 8
 
+<!--Device-KeyOptions-finalKey: int--><!--Device-KeyOptions-finalKey: int-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **System API:** This is a system API.
@@ -42,13 +46,13 @@ Duration for holding down the key, in μs.
 
 If the value of this field is **0**, a callback is triggered immediately.
 
-If the value of this field is greater than **0** and **isFinalKeyDown** is **true**, a callback is triggered when
-the key keeps being pressed after the specified duration expires. If **isFinalKeyDown** is **false**, a callback
-is triggered when the key is released before the specified duration expires.
+If the value of this field is greater than **0** and **isFinalKeyDown** is **true**, a callback is triggered when the key keeps being pressed after the specified duration expires. If **isFinalKeyDown** is **false**, a callback is triggered when the key is released before the specified duration expires.
 
 **Type:** number
 
 **Since:** 8
+
+<!--Device-KeyOptions-finalKeyDownDuration: int--><!--Device-KeyOptions-finalKeyDownDuration: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -68,6 +72,8 @@ The value **true** indicates that the key is pressed, and the value **false** in
 
 **Since:** 8
 
+<!--Device-KeyOptions-isFinalKeyDown: boolean--><!--Device-KeyOptions-isFinalKeyDown: boolean-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **System API:** This is a system API.
@@ -78,12 +84,13 @@ The value **true** indicates that the key is pressed, and the value **false** in
 isRepeat?: boolean
 ```
 
-Whether to report repeated key events. The value **true** means to report repeated key events, and the value
-**false** means the opposite. The default value is **true**.
+Whether to report repeated key events. The value **true** means to report repeated key events, and the value **false** means the opposite. The default value is **true**.
 
 **Type:** boolean
 
 **Since:** 18
+
+<!--Device-KeyOptions-isRepeat?: boolean--><!--Device-KeyOptions-isRepeat?: boolean-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -95,14 +102,15 @@ Whether to report repeated key events. The value **true** means to report repeat
 preKeys: Array<number>
 ```
 
-Preceding key set. The number of preceding keys ranges from 0 to 4. There is no requirement on the sequence of
-the keys.
+Preceding key set. The number of preceding keys ranges from 0 to 4. There is no requirement on the sequence of the keys.
 
 For example, in the combination keys **Ctrl+Alt+A**, **Ctrl+Alt** are called preceding keys.
 
 **Type:** Array<number>
 
 **Since:** 8
+
+<!--Device-KeyOptions-preKeys: Array<int>--><!--Device-KeyOptions-preKeys: Array<int>-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -114,15 +122,15 @@ For example, in the combination keys **Ctrl+Alt+A**, **Ctrl+Alt** are called pre
 triggerType?: KeyCommandTriggerType
 ```
 
-Trigger type, which indicates that the conditions for triggering the callback expected by the
-shortcut key are met. Once this value is set, isFinalKeyDown and isRepeat will be ignored. This property
-is only for use in APIs that take KeyCommandCallback as the callback function and must be specified.
+Trigger type, which indicates that the conditions for triggering the callback expected by the shortcut key are met. Once this value is set, isFinalKeyDown and isRepeat will be ignored. This property is only for use in APIs that take KeyCommandCallback as the callback function and must be specified.
 
 **Type:** KeyCommandTriggerType
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-KeyOptions-triggerType?: KeyCommandTriggerType--><!--Device-KeyOptions-triggerType?: KeyCommandTriggerType-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 

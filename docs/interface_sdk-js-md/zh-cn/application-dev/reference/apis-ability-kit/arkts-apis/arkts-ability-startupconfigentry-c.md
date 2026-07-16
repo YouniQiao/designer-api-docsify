@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare class StartupConfigEntry--><!--Device-unnamed-declare class StartupConfigEntry-End-->
+
 **系统能力：** SystemCapability.Ability.AppStartup
+
+## 导入模块
+
+```TypeScript
+import { StartupConfigEntry } from '@kit.AbilityKit';
+```
 
 ## onConfig
 
@@ -12,8 +20,7 @@
 onConfig?(): StartupConfig
 ```
 
-在回调[AbilityStage.onCreate](arkts-ability-abilitystage-c.md#oncreate-1)前，若该AbilityStage对应的HAP中启动框架配置
-文件中[定义了启动框架配置](../../../../application-models/app-startup.md#定义启动参数配置)，则会触发该回调。
+在回调[AbilityStage.onCreate](arkts-ability-abilitystage-c.md#oncreate-1)前，若该AbilityStage对应的HAP中启动框架配置文件中[定义了启动框架配置](../../../../application-models/app-startup.md#定义启动参数配置)，则会触发该回调。
 
 开发者可以在该回调中设置启动框架配置信息，详细使用方法可参考[设置启动参数](../../../../application-models/app-startup.md#设置启动参数)章节。
 
@@ -21,13 +28,15 @@ onConfig?(): StartupConfig
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StartupConfigEntry-onConfig?(): StartupConfig--><!--Device-StartupConfigEntry-onConfig?(): StartupConfig-End-->
+
 **系统能力：** SystemCapability.Ability.AppStartup
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| StartupConfig | 启动框架配置信息。 |
+| [StartupConfig](arkts-ability-startupconfig-i.md) | 启动框架配置信息。 |
 
 **示例：**
 
@@ -67,12 +76,9 @@ export default class MyStartupConfigEntry extends StartupConfigEntry {
 onRequestCustomMatchRule(want: Want): string
 ```
 
-在回调[AbilityStage.onCreate](arkts-ability-abilitystage-c.md#oncreate-1)前，若该AbilityStage对应的HAP中启动框架配置
-文件中[定义了启动框架配置](../../../../application-models/app-startup.md#定义启动参数配置)，则会在
-[StartupConfigEntry.onConfig](arkts-ability-startupconfigentry-c.md#onconfig-1)后触发该回调。
+在回调[AbilityStage.onCreate](arkts-ability-abilitystage-c.md#oncreate-1)前，若该AbilityStage对应的HAP中启动框架配置文件中[定义了启动框架配置](../../../../application-models/app-startup.md#定义启动参数配置)，则会在[StartupConfigEntry.onConfig](arkts-ability-startupconfigentry-c.md#onconfig-1)后触发该回调。
 
-开发者可以在该回调中，可以根据调用方传入启动UIAbility的Want中的不同参数来返回不同的自定义匹配规则。启动框架会将其与启动任务配置的matchRules中customization字段进行匹配。若匹配成功，任务将在自动模
-式执行。详细匹配规则请参考[添加任务匹配规则](../../../../application-models/app-startup.md#添加任务匹配规则)章节。
+开发者可以在该回调中，可以根据调用方传入启动UIAbility的Want中的不同参数来返回不同的自定义匹配规则。启动框架会将其与启动任务配置的matchRules中customization字段进行匹配。若匹配成功，任务将在自动模式执行。详细匹配规则请参考[添加任务匹配规则](../../../../application-models/app-startup.md#添加任务匹配规则)章节。
 
 该接口通常用于无法直接通过uri、action或意图名称规则来匹配启动任务的场景，可以使用本接口对匹配规则进一步细化。
 
@@ -80,13 +86,15 @@ onRequestCustomMatchRule(want: Want): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StartupConfigEntry-onRequestCustomMatchRule(want: Want): string--><!--Device-StartupConfigEntry-onRequestCustomMatchRule(want: Want): string-End-->
+
 **系统能力：** SystemCapability.Ability.AppStartup
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | Want | 是 | 启动UIAbility的Want信息。 |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 启动UIAbility的Want信息。 |
 
 **返回值：**
 

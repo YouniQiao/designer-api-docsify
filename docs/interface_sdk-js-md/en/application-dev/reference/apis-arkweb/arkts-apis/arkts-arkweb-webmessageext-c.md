@@ -4,6 +4,8 @@ The message received or sent from web message port.
 
 **Since:** 10
 
+<!--Device-webview-class WebMessageExt--><!--Device-webview-class WebMessageExt-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Get the array value of the web message.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebMessageExt-getArray(): Array<string | number | boolean>--><!--Device-WebMessageExt-getArray(): Array<string | number | boolean>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string \| number \| boolean&gt; | - Returns data of Array type |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string \| number \| boolean> | - Returns data of Array type |
 
 **Error codes:**
 
@@ -50,13 +54,15 @@ Get the array buffer value of the web message.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebMessageExt-getArrayBuffer(): ArrayBuffer--><!--Device-WebMessageExt-getArrayBuffer(): ArrayBuffer-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | - Returns data of ArrayBuffer type |
+| [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | - Returns data of ArrayBuffer type |
 
 **Error codes:**
 
@@ -75,6 +81,8 @@ Get the boolean value of the web message.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebMessageExt-getBoolean(): boolean--><!--Device-WebMessageExt-getBoolean(): boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -102,13 +110,15 @@ Get the error value of the web message.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebMessageExt-getError(): Error--><!--Device-WebMessageExt-getError(): Error-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Error | - Returns data of Error type |
+| [Error](../../apis-na/arkts-apis/arkts-na-error-i.md) | - Returns data of Error type |
 
 **Error codes:**
 
@@ -127,6 +137,8 @@ Get the number value of the web message.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebMessageExt-getNumber(): number--><!--Device-WebMessageExt-getNumber(): number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -154,6 +166,8 @@ Get the string value of the web message.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebMessageExt-getString(): string--><!--Device-WebMessageExt-getString(): string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -180,13 +194,15 @@ Get the type of the web message.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebMessageExt-getType(): WebMessageType--><!--Device-WebMessageExt-getType(): WebMessageType-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| WebMessageType | - Returns data of WebMessageType type |
+| [WebMessageType](arkts-arkweb-webmessagetype-e.md) | - Returns data of WebMessageType type |
 
 ## setArray
 
@@ -200,13 +216,15 @@ Set the array value of the web message.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebMessageExt-setArray(message: Array<string | number | boolean>): void--><!--Device-WebMessageExt-setArray(message: Array<string | number | boolean>): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | Array&lt;string \| number \| boolean&gt; | Yes | set Array type data |
+| message | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string \| number \| boolean> | Yes | set Array type data |
 
 **Error codes:**
 
@@ -227,13 +245,15 @@ Set the array buffer value of the web message.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebMessageExt-setArrayBuffer(message: ArrayBuffer): void--><!--Device-WebMessageExt-setArrayBuffer(message: ArrayBuffer): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | ArrayBuffer | Yes | set ArrayBuffer type data |
+| message | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | set ArrayBuffer type data |
 
 **Error codes:**
 
@@ -253,6 +273,8 @@ Set the boolean value of the web message.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebMessageExt-setBoolean(message: boolean): void--><!--Device-WebMessageExt-setBoolean(message: boolean): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -281,13 +303,15 @@ Set the error value of the web message.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebMessageExt-setError(message: Error): void--><!--Device-WebMessageExt-setError(message: Error): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | Error | Yes | set Error type data |
+| message | [Error](../../apis-na/arkts-apis/arkts-na-error-i.md) | Yes | set Error type data |
 
 **Error codes:**
 
@@ -307,6 +331,8 @@ Set the number value of the web message.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebMessageExt-setNumber(message: number): void--><!--Device-WebMessageExt-setNumber(message: number): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -335,6 +361,8 @@ Set the string value of the web message.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebMessageExt-setString(message: string): void--><!--Device-WebMessageExt-setString(message: string): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -362,13 +390,15 @@ Set the type of the web message.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebMessageExt-setType(type: WebMessageType): void--><!--Device-WebMessageExt-setType(type: WebMessageType): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | WebMessageType | Yes | set WebMessageType type data |
+| type | [WebMessageType](arkts-arkweb-webmessagetype-e.md) | Yes | set WebMessageType type data |
 
 **Error codes:**
 

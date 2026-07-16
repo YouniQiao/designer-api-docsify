@@ -4,7 +4,15 @@
 
 **起始版本：** 10
 
+<!--Device-dlpPermission-export interface RetentionSandboxInfo--><!--Device-dlpPermission-export interface RetentionSandboxInfo-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
+
+## 导入模块
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+```
 
 ## appIndex
 
@@ -17,6 +25,8 @@ appIndex: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-RetentionSandboxInfo-appIndex: number--><!--Device-RetentionSandboxInfo-appIndex: number-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -32,6 +42,8 @@ bundleName: string
 
 **起始版本：** 10
 
+<!--Device-RetentionSandboxInfo-bundleName: string--><!--Device-RetentionSandboxInfo-bundleName: string-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## docUris
@@ -45,6 +57,8 @@ docUris: Array<string>
 **类型：** Array<string>
 
 **起始版本：** 10
+
+<!--Device-RetentionSandboxInfo-docUris: Array<string>--><!--Device-RetentionSandboxInfo-docUris: Array<string>-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

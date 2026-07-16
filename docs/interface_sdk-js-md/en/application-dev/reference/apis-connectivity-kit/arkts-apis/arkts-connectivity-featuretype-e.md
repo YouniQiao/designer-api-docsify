@@ -8,6 +8,8 @@ Defines the capability type.
 
 **Substitutes:** hasHceCapability
 
+<!--Device-cardEmulation-enum FeatureType--><!--Device-cardEmulation-enum FeatureType-End-->
+
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
 ## HCE
@@ -25,6 +27,8 @@ This constant is used to check whether HCE card emulation is supported.
 **Substitutes:** hasHceCapability
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureType-HCE = 0--><!--Device-FeatureType-HCE = 0-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
@@ -44,6 +48,8 @@ This constant is used to check whether SIM card emulation is supported.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureType-UICC = 1--><!--Device-FeatureType-UICC = 1-End-->
+
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
 ## ESE
@@ -61,6 +67,8 @@ This constant is used to check whether eSE card emulation is supported.
 **Substitutes:** hasHceCapability
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureType-ESE = 2--><!--Device-FeatureType-ESE = 2-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 

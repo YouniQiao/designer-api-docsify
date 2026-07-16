@@ -1,5 +1,11 @@
 # offAdvertisingStateChange
 
+## 导入模块
+
+```TypeScript
+import { advertising } from '@kit.ConnectivityKit';
+```
+
 ## offAdvertisingStateChange
 
 ```TypeScript
@@ -12,13 +18,15 @@ function offAdvertisingStateChange(callback?: Callback<AdvertisingStateChangeInf
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-advertising-function offAdvertisingStateChange(callback?: Callback<AdvertisingStateChangeInfo>): void--><!--Device-advertising-function offAdvertisingStateChange(callback?: Callback<AdvertisingStateChangeInfo>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AdvertisingStateChangeInfo&gt; | 否 | 用于监听广播状态的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<AdvertisingStateChangeInfo> | 否 | 用于监听广播状态的回调。 |
 
 **错误码：**
 

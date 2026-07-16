@@ -20,19 +20,21 @@ Creates a **PasteData** object of the Want type.
 
 **Substitutes:** createData(mimeType:
 
+<!--Device-pasteboard-function createWantData(want: Want): PasteData--><!--Device-pasteboard-function createWantData(want: Want): PasteData-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want content. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want content. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PasteData | **PasteData** object. |
+| [PasteData](arkts-basicservices-pastedata-i.md) | **PasteData** object. |
 
 **Example**
 

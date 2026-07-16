@@ -12,10 +12,11 @@ import { request } from '@kit.BasicServicesKit';
 function touch(id: string, token: string, callback: AsyncCallback<TaskInfo>): void
 ```
 
-Queries the task details based on the task ID and token. This API uses an asynchronous callback to return the
-result.
+Queries the task details based on the task ID and token. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-agent-function touch(id: string, token: string, callback: AsyncCallback<TaskInfo>): void--><!--Device-agent-function touch(id: string, token: string, callback: AsyncCallback<TaskInfo>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -25,7 +26,7 @@ result.
 | --- | --- | --- | --- |
 | id | string | Yes | Task ID. |
 | token | string | Yes | Token for task query. |
-| callback | AsyncCallback&lt;TaskInfo&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the **TaskInfo** object obtained. Otherwise, **err** is an errorobject. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<TaskInfo> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the **TaskInfo** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -46,6 +47,8 @@ Queries the task details based on the task ID and token. This API uses a promise
 
 **Since:** 10
 
+<!--Device-agent-function touch(id: string, token: string): Promise<TaskInfo>--><!--Device-agent-function touch(id: string, token: string): Promise<TaskInfo>-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **Parameters:**
@@ -59,7 +62,7 @@ Queries the task details based on the task ID and token. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;TaskInfo&gt; | Promise used to return the **TaskInfo** object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<TaskInfo> | Promise used to return the **TaskInfo** object. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Result Code Enumeration
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export enum OperateVirtualNodeResult--><!--Device-unnamed-export enum OperateVirtualNodeResult-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -19,6 +21,8 @@ Add, remove or update accessibility virtual node successfully.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OperateVirtualNodeResult-SUCCESS = 0--><!--Device-OperateVirtualNodeResult-SUCCESS = 0-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -36,6 +40,8 @@ The accessibility element does not exist.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OperateVirtualNodeResult-ACCESSIBILITY_ELEMENT_NOT_EXIST = 1--><!--Device-OperateVirtualNodeResult-ACCESSIBILITY_ELEMENT_NOT_EXIST = 1-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -51,6 +57,8 @@ Cannot modify root node.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OperateVirtualNodeResult-CANNOT_MODIFY_ROOT_NODE = 2--><!--Device-OperateVirtualNodeResult-CANNOT_MODIFY_ROOT_NODE = 2-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -68,6 +76,8 @@ Accessibility property is empty.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OperateVirtualNodeResult-ACCESSIBILITY_PROPERTY_IS_EMPTY = 3--><!--Device-OperateVirtualNodeResult-ACCESSIBILITY_PROPERTY_IS_EMPTY = 3-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -83,6 +93,8 @@ Allocate id failed.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OperateVirtualNodeResult-ALLOCATE_ID_FAILED = 4--><!--Device-OperateVirtualNodeResult-ALLOCATE_ID_FAILED = 4-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -100,6 +112,8 @@ Virtual node parameter is empty.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OperateVirtualNodeResult-VIRTUAL_NODE_PARAMETER_IS_EMPTY = 5--><!--Device-OperateVirtualNodeResult-VIRTUAL_NODE_PARAMETER_IS_EMPTY = 5-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -116,6 +130,8 @@ Internal error.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OperateVirtualNodeResult-INTERNAL_ERROR = 6--><!--Device-OperateVirtualNodeResult-INTERNAL_ERROR = 6-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -131,6 +147,8 @@ Virtual node is not supported.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OperateVirtualNodeResult-VIRTUAL_NODE_NOT_SUPPORTED = 7--><!--Device-OperateVirtualNodeResult-VIRTUAL_NODE_NOT_SUPPORTED = 7-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 

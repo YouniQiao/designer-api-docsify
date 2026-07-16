@@ -4,6 +4,8 @@ Describes the button displayed for a reminder.
 
 **Since:** 9
 
+<!--Device-reminderAgentManager-interface ActionButton--><!--Device-reminderAgentManager-interface ActionButton-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Text on the button.
 
 **Since:** 9
 
+<!--Device-ActionButton-title: string--><!--Device-ActionButton-title: string-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## titleResource
@@ -32,12 +36,13 @@ Text on the button.
 titleResource?: string
 ```
 
-Resource ID of the title. This parameter is used to read the title information after the system language is
-switched.
+Resource ID of the title. This parameter is used to read the title information after the system language is switched.
 
 **Type:** string
 
 **Since:** 11
+
+<!--Device-ActionButton-titleResource?: string--><!--Device-ActionButton-titleResource?: string-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -52,6 +57,8 @@ Button type.
 **Type:** ActionButtonType
 
 **Since:** 9
+
+<!--Device-ActionButton-type: ActionButtonType--><!--Device-ActionButton-type: ActionButtonType-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 

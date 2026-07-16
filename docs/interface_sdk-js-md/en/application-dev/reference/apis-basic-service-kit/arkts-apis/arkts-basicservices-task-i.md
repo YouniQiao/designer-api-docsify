@@ -1,17 +1,15 @@
 # Task
 
-Implements an upload or download task. Before using this API, you must obtain a **Task** object, from a promise
-through
-[request.agent.create](arkts-basicservices-create-f.md#create-2) or
-from a callback through
-[request.agent.create](arkts-basicservices-create-f.md#create-1).
+Implements an upload or download task. Before using this API, you must obtain a **Task** object, from a promise through [request.agent.create](arkts-basicservices-create-f.md#create-2) or from a callback through [request.agent.create](arkts-basicservices-create-f.md#create-1).
 
-> **NOTE**
->
-> The **Task** object and its mounting callback function are released and automatically reclaimed by the system
+> **NOTE**  
+>  
+> The **Task** object and its mounting callback function are released and automatically reclaimed by the system  
 > after the **remove** method is called.
 
 **Since:** 10
+
+<!--Device-agent-interface Task--><!--Device-agent-interface Task-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -29,15 +27,17 @@ off(event: 'progress', callback?: (progress: Progress) => void): void
 
 Unsubscribes from task progress events.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Task-off(event: 'progress', callback?: (progress: Progress) => void): void--><!--Device-Task-off(event: 'progress', callback?: (progress: Progress) => void): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -46,7 +46,7 @@ Unsubscribes from task progress events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'progress' | Yes | Event type.<br>- **'progress'**: task progress. |
-| callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is notspecified, all callbacks of the task progress events are unregistered. |
+| callback | (progress: Progress) => void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task progress events are unregistered. |
 
 **Error codes:**
 
@@ -63,15 +63,17 @@ off(event: 'completed', callback?: (progress: Progress) => void): void
 
 Unsubscribes from task completion events.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Task-off(event: 'completed', callback?: (progress: Progress) => void): void--><!--Device-Task-off(event: 'completed', callback?: (progress: Progress) => void): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -80,7 +82,7 @@ Unsubscribes from task completion events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'completed' | Yes | Event type.<br>- **'completed'**: task completion. |
-| callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is notspecified, all callbacks of the task completion events are unregistered. |
+| callback | (progress: Progress) => void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task completion events are unregistered. |
 
 **Error codes:**
 
@@ -97,15 +99,17 @@ off(event: 'failed', callback?: (progress: Progress) => void): void
 
 Unsubscribes from task failure events.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Task-off(event: 'failed', callback?: (progress: Progress) => void): void--><!--Device-Task-off(event: 'failed', callback?: (progress: Progress) => void): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -114,7 +118,7 @@ Unsubscribes from task failure events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'failed' | Yes | Event type.<br>- **'failed'**: task failure. |
-| callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is notspecified, all callbacks of the task failure events are unregistered. |
+| callback | (progress: Progress) => void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task failure events are unregistered. |
 
 **Error codes:**
 
@@ -131,13 +135,15 @@ off(event: 'pause', callback?: (progress: Progress) => void): void
 
 Unsubscribes from the foreground task pause event.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 11
+
+<!--Device-Task-off(event: 'pause', callback?: (progress: Progress) => void): void--><!--Device-Task-off(event: 'pause', callback?: (progress: Progress) => void): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -146,7 +152,7 @@ Unsubscribes from the foreground task pause event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'pause' | Yes | Event type.<br>- **'pause'**: task pause. |
-| callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is notspecified, all callbacks of the task pause events are unregistered. |
+| callback | (progress: Progress) => void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task pause events are unregistered. |
 
 **Error codes:**
 
@@ -162,13 +168,15 @@ off(event: 'resume', callback?: (progress: Progress) => void): void
 
 Unsubscribes from foreground task resume events.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 11
+
+<!--Device-Task-off(event: 'resume', callback?: (progress: Progress) => void): void--><!--Device-Task-off(event: 'resume', callback?: (progress: Progress) => void): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -177,7 +185,7 @@ Unsubscribes from foreground task resume events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'resume' | Yes | Event type.<br>- **'resume'**: task resume. |
-| callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is notspecified, all callbacks of the task resume events are unregistered. |
+| callback | (progress: Progress) => void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task resume events are unregistered. |
 
 **Error codes:**
 
@@ -193,13 +201,15 @@ off(event: 'remove', callback?: (progress: Progress) => void): void
 
 Unsubscribes from the task removal event.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 11
+
+<!--Device-Task-off(event: 'remove', callback?: (progress: Progress) => void): void--><!--Device-Task-off(event: 'remove', callback?: (progress: Progress) => void): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -208,7 +218,7 @@ Unsubscribes from the task removal event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'remove' | Yes | Event type.<br>- **'remove'**: task removal. |
-| callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is notspecified, all callbacks of the task removal events are unregistered. |
+| callback | (progress: Progress) => void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task removal events are unregistered. |
 
 **Error codes:**
 
@@ -224,15 +234,17 @@ off(event: 'response', callback?: Callback<HttpResponse>): void
 
 Unsubscribes from task response headers.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Task-off(event: 'response', callback?: Callback<HttpResponse>): void--><!--Device-Task-off(event: 'response', callback?: Callback<HttpResponse>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -241,7 +253,7 @@ Unsubscribes from task response headers.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'response' | Yes | Event type.<br>- **response**: task response. |
-| callback | Callback&lt;HttpResponse&gt; | No | Callback to unregister. If this parameter is not specified, allcallbacks of the current type will be unregistered. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<HttpResponse> | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -257,13 +269,15 @@ off(event: 'faultOccur', callback?: Callback<Faults>): void
 
 Unsubscribes from task failure events.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 20
+
+<!--Device-Task-off(event: 'faultOccur', callback?: Callback<Faults>): void--><!--Device-Task-off(event: 'faultOccur', callback?: Callback<Faults>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -272,7 +286,7 @@ Unsubscribes from task failure events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'faultOccur' | Yes | Event type.<br>- **'faultOccur'**: task failure. |
-| callback | Callback&lt;Faults&gt; | No | Callback to unregister. If this parameter is not specified, allcallbacks of the current type will be unregistered. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Faults> | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -288,13 +302,15 @@ off(event: 'wait', callback?: Callback<WaitingReason>): void
 
 Unsubscribes from task waiting events.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 20
+
+<!--Device-Task-off(event: 'wait', callback?: Callback<WaitingReason>): void--><!--Device-Task-off(event: 'wait', callback?: Callback<WaitingReason>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -303,7 +319,7 @@ Unsubscribes from task waiting events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'wait' | Yes | Event type.<br>- 'wait': The task is waiting. |
-| callback | Callback&lt;WaitingReason&gt; | No | Callback to unregister. If this parameter is not specified, allcallbacks of the current type will be unregistered. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<WaitingReason> | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -319,15 +335,17 @@ on(event: 'progress', callback: (progress: Progress) => void): void
 
 Subscribes to task progress changes. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Task-on(event: 'progress', callback: (progress: Progress) => void): void--><!--Device-Task-on(event: 'progress', callback: (progress: Progress) => void): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -336,7 +354,7 @@ Subscribes to task progress changes. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'progress' | Yes | Event type.<br>- **'progress'**: task progress. |
-| callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
+| callback | (progress: Progress) => void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
@@ -353,15 +371,17 @@ on(event: 'completed', callback: (progress: Progress) => void): void
 
 Subscribes to task completion events. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Task-on(event: 'completed', callback: (progress: Progress) => void): void--><!--Device-Task-on(event: 'completed', callback: (progress: Progress) => void): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -370,7 +390,7 @@ Subscribes to task completion events. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'completed' | Yes | Event type.<br>- **'completed'**: task completion. |
-| callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
+| callback | (progress: Progress) => void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
@@ -385,19 +405,19 @@ Subscribes to task completion events. This API uses an asynchronous callback to 
 on(event: 'failed', callback: (progress: Progress) => void): void
 ```
 
-Subscribes to task failure events. This API uses an asynchronous callback to return the result. You can call
-[request.agent.show](arkts-basicservices-show-f.md#show-2) to
-view the error cause.
+Subscribes to task failure events. This API uses an asynchronous callback to return the result. You can call [request.agent.show](arkts-basicservices-show-f.md#show-2) to view the error cause.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Task-on(event: 'failed', callback: (progress: Progress) => void): void--><!--Device-Task-on(event: 'failed', callback: (progress: Progress) => void): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -406,7 +426,7 @@ view the error cause.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'failed' | Yes | Event type.<br>- **'failed'**: task failure. |
-| callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
+| callback | (progress: Progress) => void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
@@ -423,13 +443,15 @@ on(event: 'pause', callback: (progress: Progress) => void): void
 
 Subscribes to task pause events. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 11
+
+<!--Device-Task-on(event: 'pause', callback: (progress: Progress) => void): void--><!--Device-Task-on(event: 'pause', callback: (progress: Progress) => void): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -438,7 +460,7 @@ Subscribes to task pause events. This API uses an asynchronous callback to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'pause' | Yes | Event type.<br>- **'pause'**: task pause. |
-| callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
+| callback | (progress: Progress) => void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
@@ -454,13 +476,15 @@ on(event: 'resume', callback: (progress: Progress) => void): void
 
 Subscribes to task resume events. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 11
+
+<!--Device-Task-on(event: 'resume', callback: (progress: Progress) => void): void--><!--Device-Task-on(event: 'resume', callback: (progress: Progress) => void): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -469,7 +493,7 @@ Subscribes to task resume events. This API uses an asynchronous callback to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'resume' | Yes | Event type.<br>- **'resume'**: task resume. |
-| callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
+| callback | (progress: Progress) => void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
@@ -485,13 +509,15 @@ on(event: 'remove', callback: (progress: Progress) => void): void
 
 Subscribes to task removal events. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 11
+
+<!--Device-Task-on(event: 'remove', callback: (progress: Progress) => void): void--><!--Device-Task-on(event: 'remove', callback: (progress: Progress) => void): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -500,7 +526,7 @@ Subscribes to task removal events. This API uses an asynchronous callback to ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'remove' | Yes | Event type.<br>- **'remove'**: task removal. |
-| callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
+| callback | (progress: Progress) => void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
@@ -516,15 +542,17 @@ on(event: 'response', callback: Callback<HttpResponse>): void
 
 Subscribes to task response headers. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Task-on(event: 'response', callback: Callback<HttpResponse>): void--><!--Device-Task-on(event: 'response', callback: Callback<HttpResponse>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -533,7 +561,7 @@ Subscribes to task response headers. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'response' | Yes | Event type.<br>- **'response'**: task response. |
-| callback | Callback&lt;HttpResponse&gt; | Yes | Callback used to return the data structure of the task responseheader. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<HttpResponse> | Yes | Callback used to return the data structure of the task response header. |
 
 **Error codes:**
 
@@ -549,13 +577,15 @@ on(event: 'faultOccur', callback: Callback<Faults>): void
 
 Subscribes to task failure events. This API uses a callback to return the result.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 20
+
+<!--Device-Task-on(event: 'faultOccur', callback: Callback<Faults>): void--><!--Device-Task-on(event: 'faultOccur', callback: Callback<Faults>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -564,7 +594,7 @@ Subscribes to task failure events. This API uses a callback to return the result
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'faultOccur' | Yes | Event type.<br>- **'faultOccur'**: task failure. |
-| callback | Callback&lt;Faults&gt; | Yes | Callback used to return the failure cause of the task. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Faults> | Yes | Callback used to return the failure cause of the task. |
 
 **Error codes:**
 
@@ -580,13 +610,15 @@ on(event: 'wait', callback: Callback<WaitingReason>): void
 
 Subscribes to task wait events. This API uses a callback to return the result.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 20
+
+<!--Device-Task-on(event: 'wait', callback: Callback<WaitingReason>): void--><!--Device-Task-on(event: 'wait', callback: Callback<WaitingReason>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -595,7 +627,7 @@ Subscribes to task wait events. This API uses a callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'wait' | Yes | Event type.<br>- 'wait': The task is waiting. |
-| callback | Callback&lt;WaitingReason&gt; | Yes | Callback used to return the waiting reason of the task. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<WaitingReason> | Yes | Callback used to return the waiting reason of the task. |
 
 **Error codes:**
 
@@ -609,11 +641,11 @@ Subscribes to task wait events. This API uses a callback to return the result.
 pause(callback: AsyncCallback<void>): void
 ```
 
-Pauses a task that is waiting, running, or retrying. A paused task can be resumed by
-[resume](arkts-basicservices-task-i.md#resume-1). This API uses an
-asynchronous callback to return the result.
+Pauses a task that is waiting, running, or retrying. A paused task can be resumed by [resume](arkts-basicservices-task-i.md#resume-1). This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-Task-pause(callback: AsyncCallback<void>): void--><!--Device-Task-pause(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -621,7 +653,7 @@ asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -637,11 +669,11 @@ asynchronous callback to return the result.
 pause(): Promise<void>
 ```
 
-Pauses a task that is waiting, running, or retrying. A paused task can be resumed by
-[resume](arkts-basicservices-task-i.md#resume-1). This API uses a promise to
-return the result.
+Pauses a task that is waiting, running, or retrying. A paused task can be resumed by [resume](arkts-basicservices-task-i.md#resume-1). This API uses a promise to return the result.
 
 **Since:** 10
+
+<!--Device-Task-pause(): Promise<void>--><!--Device-Task-pause(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -649,7 +681,7 @@ return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -671,13 +703,15 @@ Resumes a paused task. This API uses an asynchronous callback to return the resu
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-Task-resume(callback: AsyncCallback<void>): void--><!--Device-Task-resume(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -700,13 +734,15 @@ Resumes a paused task. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-Task-resume(): Promise<void>--><!--Device-Task-resume(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -723,10 +759,11 @@ Resumes a paused task. This API uses a promise to return the result.
 setMaxSpeed(speed: number): Promise<void>
 ```
 
-Sets the maximum number of bytes that can be transmitted by a task per second. This API uses a promise to
-return the result.
+Sets the maximum number of bytes that can be transmitted by a task per second. This API uses a promise to return the result.
 
 **Since:** 18
+
+<!--Device-Task-setMaxSpeed(speed: long): Promise<void>--><!--Device-Task-setMaxSpeed(speed: long): Promise<void>-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -734,13 +771,13 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | number | Yes | Maximum number of bytes that can be transmitted by a task per second, with a minimum of16384 bytes. The value cannot be less than the minimum speed value specified by[MinSpeed](arkts-basicservices-minspeed-i.md). |
+| speed | number | Yes | Maximum number of bytes that can be transmitted by a task per second, with a minimum of16384 bytes. The value cannot be less than the minimum speed value specified by [MinSpeed](arkts-basicservices-minspeed-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -759,13 +796,12 @@ Starts a task. This API uses an asynchronous callback to return the result.
 
 Tasks in the following states can be started:
 
-1. Task created by **request.agent.create**.
-2. Download tasks that are created by **request.agent.create** but have failed or paused.
+1. Task created by **request.agent.create**.2. Download tasks that are created by **request.agent.create** but have failed or paused.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 10
@@ -774,13 +810,15 @@ Tasks in the following states can be started:
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Task-start(callback: AsyncCallback<void>): void--><!--Device-Task-start(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -800,13 +838,12 @@ Starts a task. This API uses a promise to return the result.
 
 Tasks in the following states can be started:
 
-1. Task created by **request.agent.create**.
-2. Download tasks that are created by **request.agent.create** but have failed or paused.
+1. Task created by **request.agent.create**.2. Download tasks that are created by **request.agent.create** but have failed or paused.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 10
@@ -815,13 +852,15 @@ Tasks in the following states can be started:
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Task-start(): Promise<void>--><!--Device-Task-start(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -837,13 +876,13 @@ Tasks in the following states can be started:
 stop(callback: AsyncCallback<void>): void
 ```
 
-Stops a task that is running, waiting, or retrying. A paused task can be resumed by
-[start](arkts-basicservices-task-i.md#start-1). This API uses an asynchronous
-callback to return the result.
+Stops a task that is running, waiting, or retrying. A paused task can be resumed by [start](arkts-basicservices-task-i.md#start-1). This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Task-stop(callback: AsyncCallback<void>): void--><!--Device-Task-stop(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -851,7 +890,7 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -866,13 +905,13 @@ callback to return the result.
 stop(): Promise<void>
 ```
 
-Stops a task that is running, waiting, or retrying. A paused task can be resumed by
-[start](arkts-basicservices-task-i.md#start-1). This API uses a promise to
-return the result.
+Stops a task that is running, waiting, or retrying. A paused task can be resumed by [start](arkts-basicservices-task-i.md#start-1). This API uses a promise to return the result.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Task-stop(): Promise<void>--><!--Device-Task-stop(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -880,7 +919,7 @@ return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -903,6 +942,8 @@ Task configuration.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Task-config: Config--><!--Device-Task-config: Config-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## tid
@@ -918,6 +959,8 @@ Task ID, which is unique and automatically generated by the system.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Task-readonly tid: string--><!--Device-Task-readonly tid: string-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 

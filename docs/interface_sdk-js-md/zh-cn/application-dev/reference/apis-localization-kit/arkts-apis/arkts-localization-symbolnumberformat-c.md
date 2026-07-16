@@ -1,16 +1,20 @@
 # SymbolNumberFormat
 
-提供自定义数字符号的能力。继承自
-[Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)，
-支持
-[Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)
-的方法。
+提供自定义数字符号的能力。继承自[Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)，支持[Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)的方法。
 
 **继承/实现关系：** SymbolNumberFormat implements [Intl.NumberFormat](Intl.NumberFormat)
 
 **起始版本：** 26.0.0
 
+<!--Device-i18n-export class SymbolNumberFormat implements Intl.NumberFormat--><!--Device-i18n-export class SymbolNumberFormat implements Intl.NumberFormat-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
 
 ## constructor
 
@@ -24,7 +28,9 @@ public constructor(locale?: Intl.Locale, options?: SymbolNumberFormatOptions)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SymbolNumberFormat-public constructor(locale?: Intl.Locale, options?: SymbolNumberFormatOptions)--><!--Device-SymbolNumberFormat-public constructor(locale?: Intl.Locale, options?: SymbolNumberFormatOptions)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -33,7 +39,7 @@ public constructor(locale?: Intl.Locale, options?: SymbolNumberFormatOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | locale | Intl.Locale | 否 | 区域对象。默认值：系统区域对象。 |
-| options | SymbolNumberFormatOptions | 否 | 自定义数字格式化符号的配置项。默认值：区域默认的符号。 |
+| options | [SymbolNumberFormatOptions](arkts-localization-symbolnumberformatoptions-i.md) | 否 | 自定义数字格式化符号的配置项。默认值：区域默认的符号。 |
 
 ## format
 
@@ -47,7 +53,9 @@ public format(value: number | bigint): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SymbolNumberFormat-public format(value: number | bigint): string--><!--Device-SymbolNumberFormat-public format(value: number | bigint): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -75,7 +83,9 @@ public formatRange(startRange: number, endRange: number): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SymbolNumberFormat-public formatRange(startRange: number, endRange: number): string--><!--Device-SymbolNumberFormat-public formatRange(startRange: number, endRange: number): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -104,7 +114,9 @@ public formatRangeToParts(startRange: number, endRange: number): Intl.NumberForm
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SymbolNumberFormat-public formatRangeToParts(startRange: number, endRange: number): Intl.NumberFormatPart[]--><!--Device-SymbolNumberFormat-public formatRangeToParts(startRange: number, endRange: number): Intl.NumberFormatPart[]-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -133,7 +145,9 @@ public formatToParts(value?: number | bigint): Intl.NumberFormatPart[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SymbolNumberFormat-public formatToParts(value?: number | bigint): Intl.NumberFormatPart[]--><!--Device-SymbolNumberFormat-public formatToParts(value?: number | bigint): Intl.NumberFormatPart[]-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -161,7 +175,9 @@ public parse(text: string, lenientMode: boolean): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SymbolNumberFormat-public parse(text: string, lenientMode: boolean): number--><!--Device-SymbolNumberFormat-public parse(text: string, lenientMode: boolean): number-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -196,7 +212,9 @@ public resolvedOptions(): ResolvedSymbolNumberFormatOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SymbolNumberFormat-public resolvedOptions(): ResolvedSymbolNumberFormatOptions--><!--Device-SymbolNumberFormat-public resolvedOptions(): ResolvedSymbolNumberFormatOptions-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -204,5 +222,5 @@ public resolvedOptions(): ResolvedSymbolNumberFormatOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| ResolvedSymbolNumberFormatOptions | 自定义符号数字格式化对象配置项的解析结果。 |
+| [ResolvedSymbolNumberFormatOptions](arkts-localization-resolvedsymbolnumberformatoptions-i.md) | 自定义符号数字格式化对象配置项的解析结果。 |
 

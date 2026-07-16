@@ -4,6 +4,8 @@ Declaration of the menu item on the right side.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class EditableTitleBarMenuItemV2--><!--Device-unnamed-export declare class EditableTitleBarMenuItemV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,13 +28,15 @@ Constructor of EditableTitleBarMenuItemV2.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-EditableTitleBarMenuItemV2-constructor(options?: EditableTitleBarMenuItemV2Options)--><!--Device-EditableTitleBarMenuItemV2-constructor(options?: EditableTitleBarMenuItemV2Options)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | EditableTitleBarMenuItemV2Options | No | The options of the menu item |
+| options | [EditableTitleBarMenuItemV2Options](arkts-arkui-editabletitlebarmenuitemv2options-i.md) | No | The options of the menu item |
 
 ## accessibilityDescription
 
@@ -49,6 +53,8 @@ Accessibility description.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarMenuItemV2-public accessibilityDescription?: ResourceStr--><!--Device-EditableTitleBarMenuItemV2-public accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,6 +76,8 @@ Accessibility level, options: 'auto', 'yes', 'no'.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-EditableTitleBarMenuItemV2-public accessibilityLevel: string--><!--Device-EditableTitleBarMenuItemV2-public accessibilityLevel: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
@@ -88,6 +96,8 @@ Accessibility text for screen reader.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-EditableTitleBarMenuItemV2-public accessibilityText?: ResourceStr--><!--Device-EditableTitleBarMenuItemV2-public accessibilityText?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## action
@@ -105,6 +115,8 @@ Callback function when click on this menu item.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarMenuItemV2-public action?: OnActionCallback--><!--Device-EditableTitleBarMenuItemV2-public action?: OnActionCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,6 +138,8 @@ Whether to get focus by default.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-EditableTitleBarMenuItemV2-public defaultFocus: boolean--><!--Device-EditableTitleBarMenuItemV2-public defaultFocus: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## isEnabled
@@ -146,6 +160,8 @@ Whether to enable this menu item.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-EditableTitleBarMenuItemV2-public isEnabled: boolean--><!--Device-EditableTitleBarMenuItemV2-public isEnabled: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## label
@@ -164,6 +180,8 @@ Label text for long press dialog.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-EditableTitleBarMenuItemV2-public label?: ResourceStr--><!--Device-EditableTitleBarMenuItemV2-public label?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## symbolStyle
@@ -181,6 +199,8 @@ Symbol icon style modifier.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarMenuItemV2-public symbolStyle?: SymbolGlyphModifier--><!--Device-EditableTitleBarMenuItemV2-public symbolStyle?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -201,6 +221,8 @@ Icon resource, supports Symbol or Image.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarMenuItemV2-public value: ResourceStr--><!--Device-EditableTitleBarMenuItemV2-public value: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

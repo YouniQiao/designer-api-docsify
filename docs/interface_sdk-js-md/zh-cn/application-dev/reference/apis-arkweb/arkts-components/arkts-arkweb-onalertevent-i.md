@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface OnAlertEvent--><!--Device-unnamed-declare interface OnAlertEvent-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## message
@@ -18,7 +20,9 @@ message: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnAlertEvent-message: string--><!--Device-OnAlertEvent-message: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -34,7 +38,9 @@ result: JsResult
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnAlertEvent-result: JsResult--><!--Device-OnAlertEvent-result: JsResult-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -50,7 +56,9 @@ url: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnAlertEvent-url: string--><!--Device-OnAlertEvent-url: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

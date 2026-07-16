@@ -1,5 +1,11 @@
 # getImageSourceSupportedFormats
 
+## 导入模块
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+```
+
 ## getImageSourceSupportedFormats
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getImageSourceSupportedFormats(): string[]
 获取支持解码的图片格式，图片格式以mime type表示。
 
 **起始版本：** 20
+
+<!--Device-image-function getImageSourceSupportedFormats(): string[]--><!--Device-image-function getImageSourceSupportedFormats(): string[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 

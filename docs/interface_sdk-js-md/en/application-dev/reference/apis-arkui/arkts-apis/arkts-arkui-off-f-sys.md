@@ -16,6 +16,8 @@ Unsubscribes from the property change event of the status bar and navigation bar
 
 **Since:** 8
 
+<!--Device-window-function off(type: 'systemBarTintChange', callback?: Callback<SystemBarTintState>): void--><!--Device-window-function off(type: 'systemBarTintChange', callback?: Callback<SystemBarTintState>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -24,8 +26,8 @@ Unsubscribes from the property change event of the status bar and navigation bar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'systemBarTintChange' | Yes | Event type. The value is fixed at **'systemBarTintChange'**, indicating theproperty change event of the status bar and navigation bar. |
-| callback | Callback&lt;SystemBarTintState&gt; | No | Callback used to return the properties of the status bar andnavigation bar. If a value is passed in, the corresponding subscription is canceled. If no value is passed in,all subscriptions to the specified event are canceled. |
+| type | 'systemBarTintChange' | Yes | Event type. The value is fixed at **'systemBarTintChange'**, indicating the property change event of the status bar and navigation bar. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<SystemBarTintState> | No | Callback used to return the properties of the status bar and navigation bar. If a value is passed in, the corresponding subscription is canceled. If no value is passed in,all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
@@ -63,6 +65,8 @@ Unsubscribes from the gesture navigation status change event.
 
 **Since:** 10
 
+<!--Device-window-function off(type: 'gestureNavigationEnabledChange', callback?: Callback<boolean>): void--><!--Device-window-function off(type: 'gestureNavigationEnabledChange', callback?: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -72,7 +76,7 @@ Unsubscribes from the gesture navigation status change event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'gestureNavigationEnabledChange' | Yes | the event of gesture navigation enabled changes. |
-| callback | Callback&lt;boolean&gt; | No | Callback function that has been used for the subscription. If a value is |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<boolean> | No | Callback function that has been used for the subscription. If a value is |
 
 **Error codes:**
 
@@ -111,6 +115,8 @@ Unsubscribes from the watermark status change event.
 
 **Since:** 10
 
+<!--Device-window-function off(type: 'waterMarkFlagChange', callback?: Callback<boolean>): void--><!--Device-window-function off(type: 'waterMarkFlagChange', callback?: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -120,7 +126,7 @@ Unsubscribes from the watermark status change event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'waterMarkFlagChange' | Yes | the event of watermark flag change. |
-| callback | Callback&lt;boolean&gt; | No | Callback function that has been used for the subscription. If a value is |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<boolean> | No | Callback function that has been used for the subscription. If a value is |
 
 **Error codes:**
 

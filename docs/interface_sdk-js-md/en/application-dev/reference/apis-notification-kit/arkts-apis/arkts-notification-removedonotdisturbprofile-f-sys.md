@@ -18,6 +18,8 @@ Deletes the Do Not Disturb profile. This API uses a promise to return the result
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function removeDoNotDisturbProfile(templates: Array<DoNotDisturbProfile>): Promise<void>--><!--Device-notificationManager-function removeDoNotDisturbProfile(templates: Array<DoNotDisturbProfile>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Deletes the Do Not Disturb profile. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templates | Array&lt;DoNotDisturbProfile&gt; | Yes | Do Not Disturb profile. |
+| templates | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<DoNotDisturbProfile> | Yes | Do Not Disturb profile. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -81,6 +83,8 @@ Deletes the Do Not Disturb profile of a specified user. This API uses a promise 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-notificationManager-function removeDoNotDisturbProfile(templates: Array<DoNotDisturbProfile>, userId: int): Promise<void>--><!--Device-notificationManager-function removeDoNotDisturbProfile(templates: Array<DoNotDisturbProfile>, userId: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -89,14 +93,14 @@ Deletes the Do Not Disturb profile of a specified user. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templates | Array&lt;DoNotDisturbProfile&gt; | Yes | Do Not Disturb profile. |
+| templates | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<DoNotDisturbProfile> | Yes | Do Not Disturb profile. |
 | userId | number | Yes | ID of the target user. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no result. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ A cleaner for releasing resources managed by developers through a developer-defi
 
 **Since:** 22
 
+<!--Device-util-class AutoFinalizerCleaner<T>--><!--Device-util-class AutoFinalizerCleaner<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -24,12 +26,14 @@ Register objects that release resources managed by developers.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-AutoFinalizerCleaner-static register<T>(obj: AutoFinalizer<T>, heldValue: T): void--><!--Device-AutoFinalizerCleaner-static register<T>(obj: AutoFinalizer<T>, heldValue: T): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | AutoFinalizer&lt;T&gt; | Yes | The object is registered to the cleaner. |
+| obj | [AutoFinalizer](arkts-arkts-autofinalizer-i.md)<T> | Yes | The object is registered to the cleaner. |
 | heldValue | T | Yes | The value to pass to the finalizer. |
 

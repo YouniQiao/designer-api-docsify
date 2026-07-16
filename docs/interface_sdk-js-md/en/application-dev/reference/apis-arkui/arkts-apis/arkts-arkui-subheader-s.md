@@ -4,6 +4,8 @@ Declare struct SubHeader
 
 **Since:** 18
 
+<!--Device-unnamed-export declare struct SubHeader--><!--Device-unnamed-export declare struct SubHeader-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -33,6 +35,8 @@ Set the content margin.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SubHeader-@Prop contentMargin?: LocalizedMargin--><!--Device-SubHeader-@Prop contentMargin?: LocalizedMargin-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## contentPadding
@@ -57,6 +61,8 @@ Set the content padding.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SubHeader-@Prop contentPadding?: LocalizedPadding--><!--Device-SubHeader-@Prop contentPadding?: LocalizedPadding-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## icon
@@ -77,6 +83,8 @@ Icon resource of content area.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SubHeader-@Prop icon?: ResourceStr--><!--Device-SubHeader-@Prop icon?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## iconSymbolOptions
@@ -94,6 +102,8 @@ Attributes of Symbol icon.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SubHeader-iconSymbolOptions?: SymbolOptions--><!--Device-SubHeader-iconSymbolOptions?: SymbolOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -113,6 +123,8 @@ operation item.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SubHeader-operationItem?: Array<OperationOption>--><!--Device-SubHeader-operationItem?: Array<OperationOption>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## operationSymbolOptions
@@ -130,6 +142,8 @@ Attributes of Symbol icons in operation area.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SubHeader-operationSymbolOptions?: Array<SymbolOptions>--><!--Device-SubHeader-operationSymbolOptions?: Array<SymbolOptions>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -151,6 +165,8 @@ Operation style of SubHeader.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SubHeader-@Prop operationType?: OperationType--><!--Device-SubHeader-@Prop operationType?: OperationType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## primaryTitle
@@ -171,6 +187,8 @@ The first line text of content area.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SubHeader-@Prop primaryTitle?: ResourceStr--><!--Device-SubHeader-@Prop primaryTitle?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## primaryTitleModifier
@@ -188,6 +206,8 @@ Text modifier for primary title.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SubHeader-primaryTitleModifier?: TextModifier--><!--Device-SubHeader-primaryTitleModifier?: TextModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -209,6 +229,8 @@ The secondary line text of content area.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SubHeader-@Prop secondaryTitle?: ResourceStr--><!--Device-SubHeader-@Prop secondaryTitle?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## secondaryTitleModifier
@@ -227,6 +249,8 @@ Text modifier for secondary title.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SubHeader-secondaryTitleModifier?: TextModifier--><!--Device-SubHeader-secondaryTitleModifier?: TextModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## select
@@ -244,6 +268,8 @@ Select option of content area.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SubHeader-select?: SelectOptions--><!--Device-SubHeader-select?: SelectOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -265,6 +291,8 @@ Set the ability to customize the broadcast of the title.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-SubHeader-@Prop titleAccessibilityText?: ResourceStr--><!--Device-SubHeader-@Prop titleAccessibilityText?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## titleBuilder
@@ -285,6 +313,8 @@ Set the title content.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SubHeader-@BuilderParam titleBuilder?: () => void--><!--Device-SubHeader-@BuilderParam titleBuilder?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## titleId
@@ -304,6 +334,8 @@ Set the titleId for title.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-SubHeader-titleId?: string--><!--Device-SubHeader-titleId?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

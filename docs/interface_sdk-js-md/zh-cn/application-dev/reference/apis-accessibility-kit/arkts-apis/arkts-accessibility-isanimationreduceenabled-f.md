@@ -1,5 +1,11 @@
 # isAnimationReduceEnabled
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+```
+
 ## isAnimationReduceEnabled
 
 ```TypeScript
@@ -12,13 +18,15 @@ function isAnimationReduceEnabled(): Promise<boolean>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-accessibility-function isAnimationReduceEnabled(): Promise<boolean>--><!--Device-accessibility-function isAnimationReduceEnabled(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示减弱动效模式已开启；返回false表示减弱动效模式已关闭。 |
+| Promise<boolean> | Promise对象。返回true表示减弱动效模式已开启；返回false表示减弱动效模式已关闭。 |
 
 **示例：**
 

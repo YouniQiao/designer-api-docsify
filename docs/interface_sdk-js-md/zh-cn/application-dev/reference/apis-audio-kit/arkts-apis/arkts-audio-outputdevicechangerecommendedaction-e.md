@@ -6,6 +6,8 @@
 
 **起始版本：** 20
 
+<!--Device-audio-enum OutputDeviceChangeRecommendedAction--><!--Device-audio-enum OutputDeviceChangeRecommendedAction-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## DEVICE_CHANGE_RECOMMEND_TO_CONTINUE
@@ -18,6 +20,8 @@ DEVICE_CHANGE_RECOMMEND_TO_CONTINUE = 0
 
 **起始版本：** 20
 
+<!--Device-OutputDeviceChangeRecommendedAction-DEVICE_CHANGE_RECOMMEND_TO_CONTINUE = 0--><!--Device-OutputDeviceChangeRecommendedAction-DEVICE_CHANGE_RECOMMEND_TO_CONTINUE = 0-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## DEVICE_CHANGE_RECOMMEND_TO_STOP
@@ -29,6 +33,8 @@ DEVICE_CHANGE_RECOMMEND_TO_STOP = 1
 推荐停止播放。
 
 **起始版本：** 20
+
+<!--Device-OutputDeviceChangeRecommendedAction-DEVICE_CHANGE_RECOMMEND_TO_STOP = 1--><!--Device-OutputDeviceChangeRecommendedAction-DEVICE_CHANGE_RECOMMEND_TO_STOP = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 

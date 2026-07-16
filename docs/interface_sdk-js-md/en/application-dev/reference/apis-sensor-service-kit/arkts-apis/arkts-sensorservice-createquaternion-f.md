@@ -20,14 +20,16 @@ Converts a rotation vector into a quaternion. This API uses an asynchronous call
 
 **Substitutes:** getQuaternion(rotationVector:
 
+<!--Device-sensor-function createQuaternion(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function createQuaternion(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotationVector | Array&lt;number&gt; | Yes | Rotation vector to convert. |
-| callback | AsyncCallback&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the quaternion. |
+| rotationVector | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Rotation vector to convert. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<number>> | Yes | Callback used to return the quaternion. |
 
 **Example**
 
@@ -63,19 +65,21 @@ Converts a rotation vector into a quaternion. This API uses a promise to return 
 
 **Substitutes:** getQuaternion(rotationVector:
 
+<!--Device-sensor-function createQuaternion(rotationVector: Array<number>): Promise<Array<number>>--><!--Device-sensor-function createQuaternion(rotationVector: Array<number>): Promise<Array<number>>-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotationVector | Array&lt;number&gt; | Yes | Rotation vector to convert. |
+| rotationVector | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Rotation vector to convert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the quaternion. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | Promise used to return the quaternion. |
 
 **Example**
 

@@ -25,6 +25,18 @@ Queries usage information about each bundle within a specified period at a speci
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-bundleState-function queryBundleStateInfoByInterval(
+    byInterval: IntervalType,
+    begin: number,
+    end: number,
+    callback: AsyncCallback<Array<BundleStateInfo>>
+  ): void--><!--Device-bundleState-function queryBundleStateInfoByInterval(
+    byInterval: IntervalType,
+    begin: number,
+    end: number,
+    callback: AsyncCallback<Array<BundleStateInfo>>
+  ): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -33,10 +45,10 @@ Queries usage information about each bundle within a specified period at a speci
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byInterval | IntervalType | Yes | Indicates the interval at which the usage statistics are queried. |
+| byInterval | [IntervalType](arkts-backgroundtasks-intervaltype-e.md) | Yes | Indicates the interval at which the usage statistics are queried. |
 | begin | number | Yes | Indicates the start time of the query period, in milliseconds. |
 | end | number | Yes | Indicates the end time of the query period, in milliseconds. |
-| callback | AsyncCallback&lt;Array&lt;BundleStateInfo&gt;&gt; | Yes | the callback of usage information about each bundle. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<BundleStateInfo>> | Yes | the callback of usage information about each bundle. |
 
 **Example**
 
@@ -77,6 +89,16 @@ Queries usage information about each bundle within a specified period at a speci
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-bundleState-function queryBundleStateInfoByInterval(
+    byInterval: IntervalType,
+    begin: number,
+    end: number
+  ): Promise<Array<BundleStateInfo>>--><!--Device-bundleState-function queryBundleStateInfoByInterval(
+    byInterval: IntervalType,
+    begin: number,
+    end: number
+  ): Promise<Array<BundleStateInfo>>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -85,7 +107,7 @@ Queries usage information about each bundle within a specified period at a speci
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byInterval | IntervalType | Yes | Indicates the interval at which the usage statistics are queried. |
+| byInterval | [IntervalType](arkts-backgroundtasks-intervaltype-e.md) | Yes | Indicates the interval at which the usage statistics are queried. |
 | begin | number | Yes | Indicates the start time of the query period, in milliseconds. |
 | end | number | Yes | Indicates the end time of the query period, in milliseconds. |
 
@@ -93,7 +115,7 @@ Queries usage information about each bundle within a specified period at a speci
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleStateInfo&gt;&gt; | the usage information about each bundle. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<BundleStateInfo>> | the usage information about each bundle. |
 
 **Example**
 

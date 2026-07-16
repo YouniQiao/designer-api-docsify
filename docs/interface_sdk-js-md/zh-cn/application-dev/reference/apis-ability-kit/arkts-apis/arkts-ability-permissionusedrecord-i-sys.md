@@ -4,9 +4,17 @@
 
 **起始版本：** 9
 
+<!--Device-privacyManager-interface PermissionUsedRecord--><!--Device-privacyManager-interface PermissionUsedRecord-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+```
 
 ## accessCount
 
@@ -19,6 +27,8 @@ accessCount: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-PermissionUsedRecord-accessCount: int--><!--Device-PermissionUsedRecord-accessCount: int-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -38,6 +48,8 @@ accessRecords: Array<UsedRecordDetail>
 
 **起始版本：** 9
 
+<!--Device-PermissionUsedRecord-accessRecords: Array<UsedRecordDetail>--><!--Device-PermissionUsedRecord-accessRecords: Array<UsedRecordDetail>-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -56,6 +68,8 @@ enhancedIdentity?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PermissionUsedRecord-enhancedIdentity?: string--><!--Device-PermissionUsedRecord-enhancedIdentity?: string-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -66,12 +80,13 @@ enhancedIdentity?: string
 lastAccessDuration: number
 ```
 
-最后一次访问时长。
-单位为：毫秒。
+最后一次访问时长。单位为：毫秒。
 
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-PermissionUsedRecord-lastAccessDuration: long--><!--Device-PermissionUsedRecord-lastAccessDuration: long-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -83,12 +98,13 @@ lastAccessDuration: number
 lastAccessTime: number
 ```
 
-最后一次访问时间。
-单位为：毫秒。
+最后一次访问时间。单位为：毫秒。
 
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-PermissionUsedRecord-lastAccessTime: long--><!--Device-PermissionUsedRecord-lastAccessTime: long-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -100,12 +116,13 @@ lastAccessTime: number
 lastRejectTime: number
 ```
 
-最后一次拒绝时间。
-单位为：毫秒。
+最后一次拒绝时间。单位为：毫秒。
 
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-PermissionUsedRecord-lastRejectTime: long--><!--Device-PermissionUsedRecord-lastRejectTime: long-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -123,6 +140,8 @@ permissionName: Permissions
 
 **起始版本：** 9
 
+<!--Device-PermissionUsedRecord-permissionName: Permissions--><!--Device-PermissionUsedRecord-permissionName: Permissions-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -138,6 +157,8 @@ rejectCount: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-PermissionUsedRecord-rejectCount: int--><!--Device-PermissionUsedRecord-rejectCount: int-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -156,6 +177,8 @@ rejectRecords: Array<UsedRecordDetail>
 **类型：** Array<UsedRecordDetail>
 
 **起始版本：** 9
+
+<!--Device-PermissionUsedRecord-rejectRecords: Array<UsedRecordDetail>--><!--Device-PermissionUsedRecord-rejectRecords: Array<UsedRecordDetail>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

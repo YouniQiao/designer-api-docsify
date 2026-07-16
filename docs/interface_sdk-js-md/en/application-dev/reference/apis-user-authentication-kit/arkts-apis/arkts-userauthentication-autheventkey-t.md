@@ -4,14 +4,15 @@
 type AuthEventKey = 'result' | 'tip'
 ```
 
-Defines the keyword of the authentication event type. It is used as a parameter of
-[on](arkts-userauthentication-authinstance-i.md#on).
+Defines the keyword of the authentication event type. It is used as a parameter of [on](arkts-userauthentication-authinstance-i.md#on).
 
 It consists of the fields in **Type** in the following table.
 
 **Since:** 9
 
 **Deprecated since:** 11
+
+<!--Device-userAuth-type AuthEventKey = 'result' | 'tip'--><!--Device-userAuth-type AuthEventKey = 'result' | 'tip'-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 

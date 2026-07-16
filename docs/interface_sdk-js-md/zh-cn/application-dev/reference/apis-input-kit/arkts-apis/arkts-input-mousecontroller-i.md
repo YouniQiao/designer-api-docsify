@@ -2,14 +2,19 @@
 
 提供模拟鼠标操作的功能。模拟鼠标操作序列必须满足以下要求：
 
-1. 鼠标按键只能在抬起状态下被按下。
-2. 鼠标按键只能在被按下后才能抬起。
-3. 有效的轴事件序列必须先调用beginAxis开始事件，然后调用零次或多次updateAxis更新事件，最后调用endAxis结束事件。
-4. 同一时间只能有一个进行中的轴事件序列。
+1. 鼠标按键只能在抬起状态下被按下。2. 鼠标按键只能在被按下后才能抬起。3. 有效的轴事件序列必须先调用beginAxis开始事件，然后调用零次或多次updateAxis更新事件，最后调用endAxis结束事件。4. 同一时间只能有一个进行中的轴事件序列。
 
 **起始版本：** 26.0.0
 
+<!--Device-inputEventClient-interface MouseController--><!--Device-inputEventClient-interface MouseController-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
+
+## 导入模块
+
+```TypeScript
+import { inputEventClient } from '@kit.InputKit';
+```
 
 ## beginAxis
 
@@ -25,20 +30,22 @@ beginAxis(axis: Axis, value: number): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MouseController-beginAxis(axis: Axis, value: int): Promise<void>--><!--Device-MouseController-beginAxis(axis: Axis, value: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| axis | Axis | 是 | 轴类型。 |
+| axis | [Axis](../../apis-arkui/arkts-apis/arkts-arkui-axis-e.md) | 是 | 轴类型。 |
 | value | number | 是 | 轴值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -100,19 +107,21 @@ endAxis(axis: Axis): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MouseController-endAxis(axis: Axis): Promise<void>--><!--Device-MouseController-endAxis(axis: Axis): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| axis | Axis | 是 | 轴类型。 |
+| axis | [Axis](../../apis-arkui/arkts-apis/arkts-arkui-axis-e.md) | 是 | 轴类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -140,6 +149,8 @@ moveTo(displayId: number, displayX: number, displayY: number): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MouseController-moveTo(displayId: int, displayX: int, displayY: int): Promise<void>--><!--Device-MouseController-moveTo(displayId: int, displayX: int, displayY: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **参数：**
@@ -154,7 +165,7 @@ moveTo(displayId: number, displayX: number, displayY: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -208,19 +219,21 @@ pressButton(button: Button): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MouseController-pressButton(button: Button): Promise<void>--><!--Device-MouseController-pressButton(button: Button): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| button | Button | 是 | 要按下的鼠标按键。 |
+| button | [Button](../../apis-arkui/arkts-apis/arkts-arkui-button-i.md) | 是 | 要按下的鼠标按键。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -278,19 +291,21 @@ releaseButton(button: Button): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MouseController-releaseButton(button: Button): Promise<void>--><!--Device-MouseController-releaseButton(button: Button): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| button | Button | 是 | 要抬起的鼠标按键。 |
+| button | [Button](../../apis-arkui/arkts-apis/arkts-arkui-button-i.md) | 是 | 要抬起的鼠标按键。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -318,20 +333,22 @@ updateAxis(axis: Axis, value: number): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MouseController-updateAxis(axis: Axis, value: int): Promise<void>--><!--Device-MouseController-updateAxis(axis: Axis, value: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| axis | Axis | 是 | 轴类型。 |
+| axis | [Axis](../../apis-arkui/arkts-apis/arkts-arkui-axis-e.md) | 是 | 轴类型。 |
 | value | number | 是 | 轴值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

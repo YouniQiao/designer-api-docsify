@@ -13,8 +13,7 @@ function queryAbilityByWant(want: Want,
     bundleFlags: number, userId: number, callback: AsyncCallback<Array<AbilityInfo>>): void
 ```
 
-Obtains the ability information of the specified user based on given Want. This API uses an asynchronous callback
-to return the result.
+Obtains the ability information of the specified user based on given Want. This API uses an asynchronous callback to return the result.
 
 No permission is required for obtaining the caller's own information.
 
@@ -24,16 +23,20 @@ No permission is required for obtaining the caller's own information.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundle-function queryAbilityByWant(want: Want,
+    bundleFlags: number, userId: number, callback: AsyncCallback<Array<AbilityInfo>>): void--><!--Device-bundle-function queryAbilityByWant(want: Want,
+    bundleFlags: number, userId: number, callback: AsyncCallback<Array<AbilityInfo>>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want containing the bundle name. |
-| bundleFlags | number | Yes | Ability information to be returned. For details about the available enumeratedvalues, see the ability information flags in [BundleFlag](arkts-ability-bundleflag-e.md). |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want containing the bundle name. |
+| bundleFlags | number | Yes | Ability information to be returned. For details about the available enumerated values, see the ability information flags in [BundleFlag](arkts-ability-bundleflag-e.md). |
 | userId | number | Yes | User ID. The value must be greater than or equal to 0. |
-| callback | AsyncCallback&lt;Array&lt;AbilityInfo&gt;&gt; | Yes | Callback used to return the ability information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<AbilityInfo>> | Yes | Callback used to return the ability information. |
 
 
 ## queryAbilityByWant
@@ -52,15 +55,17 @@ No permission is required for obtaining the caller's own information.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundle-function queryAbilityByWant(want: Want, bundleFlags: number, callback: AsyncCallback<Array<AbilityInfo>>): void--><!--Device-bundle-function queryAbilityByWant(want: Want, bundleFlags: number, callback: AsyncCallback<Array<AbilityInfo>>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want containing the bundle name. |
-| bundleFlags | number | Yes | Ability information to be returned. For details about the available enumeratedvalues, see the ability information flags in [BundleFlag](arkts-ability-bundleflag-e.md). |
-| callback | AsyncCallback&lt;Array&lt;AbilityInfo&gt;&gt; | Yes | Callback used to return the ability information. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want containing the bundle name. |
+| bundleFlags | number | Yes | Ability information to be returned. For details about the available enumerated values, see the ability information flags in [BundleFlag](arkts-ability-bundleflag-e.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<AbilityInfo>> | Yes | Callback used to return the ability information. |
 
 
 ## queryAbilityByWant
@@ -79,19 +84,21 @@ No permission is required for obtaining the caller's own information.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundle-function queryAbilityByWant(want: Want, bundleFlags: number, userId?: number): Promise<Array<AbilityInfo>>--><!--Device-bundle-function queryAbilityByWant(want: Want, bundleFlags: number, userId?: number): Promise<Array<AbilityInfo>>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want containing the bundle name. |
-| bundleFlags | number | Yes | Ability information to be returned. For details about the available enumeratedvalues, see the ability information flags in [BundleFlag](arkts-ability-bundleflag-e.md). |
-| userId | number | No | User ID. The default value is the user ID of the caller. The value must be greater thanor equal to 0. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want containing the bundle name. |
+| bundleFlags | number | Yes | Ability information to be returned. For details about the available enumerated values, see the ability information flags in [BundleFlag](arkts-ability-bundleflag-e.md). |
+| userId | number | No | User ID. The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AbilityInfo&gt;&gt; | Promise used to return the ability information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AbilityInfo>> | Promise used to return the ability information. |
 

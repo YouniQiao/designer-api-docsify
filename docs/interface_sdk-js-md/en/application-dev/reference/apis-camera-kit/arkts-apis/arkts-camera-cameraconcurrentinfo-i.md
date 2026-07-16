@@ -4,6 +4,8 @@ Describes the camera's concurrency information.
 
 **Since:** 18
 
+<!--Device-camera-interface CameraConcurrentInfo--><!--Device-camera-interface CameraConcurrentInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Concurrent camera device.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraConcurrentInfo-readonly device: CameraDevice--><!--Device-CameraConcurrentInfo-readonly device: CameraDevice-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## modes
@@ -41,6 +45,8 @@ Scene mode.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraConcurrentInfo-readonly modes: Array<SceneMode>--><!--Device-CameraConcurrentInfo-readonly modes: Array<SceneMode>-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -58,6 +64,8 @@ Output capabilities of the camera.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraConcurrentInfo-readonly outputCapabilities: Array<CameraOutputCapability>--><!--Device-CameraConcurrentInfo-readonly outputCapabilities: Array<CameraOutputCapability>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## type
@@ -73,6 +81,8 @@ Concurrency type.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraConcurrentInfo-readonly type: CameraConcurrentType--><!--Device-CameraConcurrentInfo-readonly type: CameraConcurrentType-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

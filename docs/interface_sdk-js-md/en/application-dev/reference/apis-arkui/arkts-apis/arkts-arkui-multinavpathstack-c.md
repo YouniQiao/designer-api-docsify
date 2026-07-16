@@ -1,12 +1,12 @@
 # MultiNavPathStack
 
-Implements a navigation stack of the **MultiNavigation** component. Currently, this stack can be created only by the
-user and cannot be obtained through callbacks. Do not use events or APIs such as **onReady** of **NavDestination** to
-obtain the navigation stack and perform stack operations, as this may lead to unpredictable issues.
+Implements a navigation stack of the **MultiNavigation** component. Currently, this stack can be created only by the user and cannot be obtained through callbacks. Do not use events or APIs such as **onReady** of **NavDestination** to obtain the navigation stack and perform stack operations, as this may lead to unpredictable issues.
 
 **Inheritance/Implementation:** MultiNavPathStack extends [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md)
 
 **Since:** 14
+
+<!--Device-unnamed-export declare class MultiNavPathStack extends NavPathStack--><!--Device-unnamed-export declare class MultiNavPathStack extends NavPathStack-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,7 +26,7 @@ Clears the navigation stack.
 
 > **NOTE**
 
-> If [keepBottomPage](arkts-arkui-multinavpathstack-c.md#keepbottompage-1) is called with **true**, the bottom page of the
+> If [keepBottomPage](arkts-arkui-multinavpathstack-c.md#keepbottompage-1) is called with **true**, the bottom page of the  
 > navigation stack is retained.
 
 **Since:** 14
@@ -34,6 +34,8 @@ Clears the navigation stack.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-MultiNavPathStack-clear(animated?: boolean): void--><!--Device-MultiNavPathStack-clear(animated?: boolean): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -57,6 +59,8 @@ Creates an instance of MultiNavPathStack.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MultiNavPathStack-constructor()--><!--Device-MultiNavPathStack-constructor()-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## disableAnimation
@@ -72,6 +76,8 @@ Disables or enables the transition animation in the **MultiNavigation** componen
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-MultiNavPathStack-disableAnimation(disable: boolean): void--><!--Device-MultiNavPathStack-disableAnimation(disable: boolean): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -95,13 +101,15 @@ Obtains the names of all navigation destination pages in the navigation stack.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MultiNavPathStack-getAllPathName(): Array<string>--><!--Device-MultiNavPathStack-getAllPathName(): Array<string>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Names of all navigation destination pages in the navigation stack. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Names of all navigation destination pages in the navigation stack. |
 
 ## getIndexByName
 
@@ -117,6 +125,8 @@ Obtains the indexes of all the navigation destination pages that match **name**.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MultiNavPathStack-getIndexByName(name: string): Array<number>--><!--Device-MultiNavPathStack-getIndexByName(name: string): Array<number>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -129,7 +139,7 @@ Obtains the indexes of all the navigation destination pages that match **name**.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Indexes of all the matching navigation destination pages.<br>Value range of the number type: [0, +∞). |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Indexes of all the matching navigation destination pages.<br>Value range of the number type: [0, +∞). |
 
 ## getParamByIndex
 
@@ -145,6 +155,8 @@ Obtains the parameter information of the navigation destination page specified b
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MultiNavPathStack-getParamByIndex(index: number): Object | undefined--><!--Device-MultiNavPathStack-getParamByIndex(index: number): Object | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -157,7 +169,7 @@ Obtains the parameter information of the navigation destination page specified b
 
 | Type | Description |
 | --- | --- |
-| Object | **Object**: parameter information of the matching navigation destination page.<br>**undefined**: returned when an invalid index is provided. |
+| [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | **Object**: parameter information of the matching navigation destination page.<br>**undefined**: returned when an invalid index is provided. |
 
 ## getParamByName
 
@@ -173,6 +185,8 @@ Obtains the parameter information of all the navigation destination pages that m
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MultiNavPathStack-getParamByName(name: string): Array<Object>--><!--Device-MultiNavPathStack-getParamByName(name: string): Array<Object>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -185,7 +199,7 @@ Obtains the parameter information of all the navigation destination pages that m
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Object&gt; | Parameter information of all the matching navigation destination pages. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Object> | Parameter information of all the matching navigation destination pages. |
 
 ## keepBottomPage
 
@@ -197,9 +211,9 @@ Sets whether to retain the bottom page when the **pop** or **clear** APIs is cal
 
 > **NOTE**
 
-> **MultiNavigation** treats the home page as a navigation destination page in the stack. By default, calling
-> **pop** or **clear** will also remove the bottom page.
-> > If this API is called with **TRUE**, **MultiNavigation** will retain the bottom page when the **pop** or
+> **MultiNavigation** treats the home page as a navigation destination page in the stack. By default, calling  
+> **pop** or **clear** will also remove the bottom page.  
+> > If this API is called with **TRUE**, **MultiNavigation** will retain the bottom page when the **pop** or  
 > **clear** API is called.
 
 **Since:** 14
@@ -208,13 +222,15 @@ Sets whether to retain the bottom page when the **pop** or **clear** APIs is cal
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MultiNavPathStack-keepBottomPage(keepBottom: boolean): void--><!--Device-MultiNavPathStack-keepBottomPage(keepBottom: boolean): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keepBottom | boolean | Yes | Whether to retain the bottom page.<br>Default value: **false**.<br>**true**: Thebottom page is retained.<br>**false**: The bottom page is not retained. |
+| keepBottom | boolean | Yes | Whether to retain the bottom page.<br>Default value: **false**.<br>**true**: The bottom page is retained.<br>**false**: The bottom page is not retained. |
 
 ## moveIndexToTop
 
@@ -234,6 +250,8 @@ Moves the navigation destination page specified by **index** to the top of the n
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MultiNavPathStack-moveIndexToTop(index: number, animated?: boolean): void--><!--Device-MultiNavPathStack-moveIndexToTop(index: number, animated?: boolean): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -249,8 +267,7 @@ Moves the navigation destination page specified by **index** to the top of the n
 moveToTop(name: string, animated?: boolean): number
 ```
 
-Moves the first navigation destination page that matches **name** from the bottom of the navigation stack to the
-top of the stack.
+Moves the first navigation destination page that matches **name** from the bottom of the navigation stack to the top of the stack.
 
 > **NOTE**
 
@@ -261,6 +278,8 @@ top of the stack.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-MultiNavPathStack-moveToTop(name: string, animated?: boolean): number--><!--Device-MultiNavPathStack-moveToTop(name: string, animated?: boolean): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -275,7 +294,7 @@ top of the stack.
 
 | Type | Description |
 | --- | --- |
-| number | Returns the index of the first navigation destination page that matches **name** from thebottom of the navigation stack; returns **-1** if no such a page is found. |
+| number | Returns the index of the first navigation destination page that matches **name** from the bottom of the navigation stack; returns **-1** if no such a page is found. |
 
 ## pop
 
@@ -287,7 +306,7 @@ Pops the top element out of the navigation stack.
 
 > **NOTE**
 
-> If [keepBottomPage](arkts-arkui-multinavpathstack-c.md#keepbottompage-1) is called with **true**, the bottom page of the
+> If [keepBottomPage](arkts-arkui-multinavpathstack-c.md#keepbottompage-1) is called with **true**, the bottom page of the  
 > navigation stack is retained.
 
 **Since:** 14
@@ -295,6 +314,8 @@ Pops the top element out of the navigation stack.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-MultiNavPathStack-pop(animated?: boolean): NavPathInfo | undefined--><!--Device-MultiNavPathStack-pop(animated?: boolean): NavPathInfo | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -308,7 +329,7 @@ Pops the top element out of the navigation stack.
 
 | Type | Description |
 | --- | --- |
-| NavPathInfo | Information about the navigation destination page at the top of the stack. |
+| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Information about the navigation destination page at the top of the stack. |
 
 ## pop
 
@@ -316,12 +337,11 @@ Pops the top element out of the navigation stack.
 pop(result?: Object, animated?: boolean): NavPathInfo | undefined
 ```
 
-Pops the top element out of the navigation stack and invokes the **onPop** callback to pass the page processing
-result.
+Pops the top element out of the navigation stack and invokes the **onPop** callback to pass the page processing result.
 
 > **NOTE**
 
-> If [keepBottomPage](arkts-arkui-multinavpathstack-c.md#keepbottompage-1) is called with **true**, the bottom page of the
+> If [keepBottomPage](arkts-arkui-multinavpathstack-c.md#keepbottompage-1) is called with **true**, the bottom page of the  
 > navigation stack is retained.
 
 **Since:** 14
@@ -330,20 +350,22 @@ result.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MultiNavPathStack-pop(result?: Object, animated?: boolean): NavPathInfo | undefined--><!--Device-MultiNavPathStack-pop(result?: Object, animated?: boolean): NavPathInfo | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | Object | No | Custom processing result on the page. |
+| result | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | No | Custom processing result on the page. |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| NavPathInfo | Information about the navigation destination page at the top of the stack. |
+| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Information about the navigation destination page at the top of the stack. |
 
 ## popToIndex
 
@@ -358,6 +380,8 @@ Returns the navigation stack to the page specified by **index**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-MultiNavPathStack-popToIndex(index: number, animated?: boolean): void--><!--Device-MultiNavPathStack-popToIndex(index: number, animated?: boolean): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -374,14 +398,15 @@ Returns the navigation stack to the page specified by **index**.
 popToIndex(index: number, result: Object, animated?: boolean): void
 ```
 
-Returns the navigation stack to the page specified by **index** and invokes the **onPop** callback to pass the page
-processing result.
+Returns the navigation stack to the page specified by **index** and invokes the **onPop** callback to pass the page processing result.
 
 **Since:** 14
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-MultiNavPathStack-popToIndex(index: number, result: Object, animated?: boolean): void--><!--Device-MultiNavPathStack-popToIndex(index: number, result: Object, animated?: boolean): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -390,7 +415,7 @@ processing result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | number | Yes | Index of the navigation destination page.<br>Value range: [0, +∞). |
-| result | Object | Yes | Custom processing result on the page. |
+| result | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Custom processing result on the page. |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 ## popToName
@@ -399,14 +424,15 @@ processing result.
 popToName(name: string, animated?: boolean): number
 ```
 
-Pops pages until the first navigation destination page that matches **name** from the bottom of the navigation
-stack is at the top of the stack.
+Pops pages until the first navigation destination page that matches **name** from the bottom of the navigation stack is at the top of the stack.
 
 **Since:** 14
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-MultiNavPathStack-popToName(name: string, animated?: boolean): number--><!--Device-MultiNavPathStack-popToName(name: string, animated?: boolean): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -421,7 +447,7 @@ stack is at the top of the stack.
 
 | Type | Description |
 | --- | --- |
-| number | Returns the index of the first navigation destination page that matches **name** from thebottom of the navigation stack; returns **-1** if no such a page is found.<br>Value range: [-1, +∞). |
+| number | Returns the index of the first navigation destination page that matches **name** from the bottom of the navigation stack; returns **-1** if no such a page is found.<br>Value range: [-1, +∞). |
 
 ## popToName
 
@@ -429,14 +455,15 @@ stack is at the top of the stack.
 popToName(name: string, result: Object, animated?: boolean): number
 ```
 
-Pops pages until the first navigation destination page that matches **name** from the bottom of the navigation
-stack is at the top of the stack. This API uses the **onPop** callback to pass in the page processing result.
+Pops pages until the first navigation destination page that matches **name** from the bottom of the navigation stack is at the top of the stack. This API uses the **onPop** callback to pass in the page processing result.
 
 **Since:** 14
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-MultiNavPathStack-popToName(name: string, result: Object, animated?: boolean): number--><!--Device-MultiNavPathStack-popToName(name: string, result: Object, animated?: boolean): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -445,14 +472,14 @@ stack is at the top of the stack. This API uses the **onPop** callback to pass i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
-| result | Object | Yes | Custom processing result on the page. |
+| result | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Custom processing result on the page. |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Returns the index of the first navigation destination page that matches **name** from thebottom of the navigation stack; returns **-1** if no such a page is found.<br>Value range: [-1, +∞). |
+| number | Returns the index of the first navigation destination page that matches **name** from the bottom of the navigation stack; returns **-1** if no such a page is found.<br>Value range: [-1, +∞). |
 
 ## pushPath
 
@@ -468,15 +495,17 @@ Pushes the specified navigation destination page to the navigation stack.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MultiNavPathStack-pushPath(info: NavPathInfo, animated?: boolean, policy?: SplitPolicy): void--><!--Device-MultiNavPathStack-pushPath(info: NavPathInfo, animated?: boolean, policy?: SplitPolicy): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | NavPathInfo | Yes | Information about the navigation destination page. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
-| policy | SplitPolicy | No | Policy for the current page being pushed. Default value: **DETAIL_PAGE**. |
+| policy | [SplitPolicy](arkts-arkui-splitpolicy-e.md) | No | Policy for the current page being pushed. Default value: **DETAIL_PAGE**. |
 
 ## pushPath
 
@@ -484,14 +513,15 @@ Pushes the specified navigation destination page to the navigation stack.
 pushPath(info: NavPathInfo, options?: NavigationOptions, policy?: SplitPolicy): void
 ```
 
-Pushes the specified navigation destination page to the navigation stack, with stack operation settings through
-**NavigationOptions**.
+Pushes the specified navigation destination page to the navigation stack, with stack operation settings through **NavigationOptions**.
 
 **Since:** 14
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-MultiNavPathStack-pushPath(info: NavPathInfo, options?: NavigationOptions, policy?: SplitPolicy): void--><!--Device-MultiNavPathStack-pushPath(info: NavPathInfo, options?: NavigationOptions, policy?: SplitPolicy): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -499,9 +529,9 @@ Pushes the specified navigation destination page to the navigation stack, with s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | NavPathInfo | Yes | Information about the navigation destination page. |
-| options | NavigationOptions | No | Stack operation settings. Only the **animated** field is supported. |
-| policy | SplitPolicy | No | Policy for the current page being pushed. Default value: **DETAIL_PAGE**. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
+| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No | Stack operation settings. Only the **animated** field is supported. |
+| policy | [SplitPolicy](arkts-arkui-splitpolicy-e.md) | No | Policy for the current page being pushed. Default value: **DETAIL_PAGE**. |
 
 ## pushPathByName
 
@@ -509,14 +539,15 @@ Pushes the specified navigation destination page to the navigation stack, with s
 pushPathByName(name: string, param: Object, animated?: boolean, policy?: SplitPolicy): void
 ```
 
-Pushes the navigation destination page specified by **name** to the navigation stack, passing the data specified by
-**param**.
+Pushes the navigation destination page specified by **name** to the navigation stack, passing the data specified by **param**.
 
 **Since:** 14
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-MultiNavPathStack-pushPathByName(name: string, param: Object, animated?: boolean, policy?: SplitPolicy): void--><!--Device-MultiNavPathStack-pushPathByName(name: string, param: Object, animated?: boolean, policy?: SplitPolicy): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -525,9 +556,9 @@ Pushes the navigation destination page specified by **name** to the navigation s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
-| param | Object | Yes | Detailed parameters of the navigation destination page. |
+| param | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Detailed parameters of the navigation destination page. |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
-| policy | SplitPolicy | No | Policy for the current page being pushed. Default value: **DETAIL_PAGE**. |
+| policy | [SplitPolicy](arkts-arkui-splitpolicy-e.md) | No | Policy for the current page being pushed. Default value: **DETAIL_PAGE**. |
 
 ## pushPathByName
 
@@ -536,15 +567,17 @@ pushPathByName(
     name: string, param: Object, onPop?: base.Callback<PopInfo>, animated?: boolean, policy?: SplitPolicy): void
 ```
 
-Pushes the navigation destination page specified by **name** to the navigation stack, passing the data specified by
-**param**. This API uses the **onPop** callback to handle the result returned when the page is popped out of the
-stack.
+Pushes the navigation destination page specified by **name** to the navigation stack, passing the data specified by **param**. This API uses the **onPop** callback to handle the result returned when the page is popped out of the stack.
 
 **Since:** 14
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-MultiNavPathStack-pushPathByName(
+    name: string, param: Object, onPop?: base.Callback<PopInfo>, animated?: boolean, policy?: SplitPolicy): void--><!--Device-MultiNavPathStack-pushPathByName(
+    name: string, param: Object, onPop?: base.Callback<PopInfo>, animated?: boolean, policy?: SplitPolicy): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -553,10 +586,10 @@ stack.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
-| param | Object | Yes | Detailed parameters of the navigation destination page. |
-| onPop | base.Callback&lt;PopInfo&gt; | No | Callback used to handle the return result. |
+| param | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Detailed parameters of the navigation destination page. |
+| onPop | base.Callback<PopInfo> | No | Callback used to handle the return result. |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
-| policy | SplitPolicy | No | Policy for the current page being pushed. Default value: **DETAIL_PAGE**. |
+| policy | [SplitPolicy](arkts-arkui-splitpolicy-e.md) | No | Policy for the current page being pushed. Default value: **DETAIL_PAGE**. |
 
 ## removeByIndexes
 
@@ -572,13 +605,15 @@ Removes the navigation destination pages specified by **indexes** from the navig
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MultiNavPathStack-removeByIndexes(indexes: Array<number>): number--><!--Device-MultiNavPathStack-removeByIndexes(indexes: Array<number>): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indexes | Array&lt;number&gt; | Yes | Array of indexes of the navigation destination pages to remove.<br>Value rangeof the number type: [0, +∞). |
+| indexes | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Array of indexes of the navigation destination pages to remove.<br>Value range of the number type: [0, +∞). |
 
 **Return value:**
 
@@ -600,6 +635,8 @@ Removes the navigation destination page specified by **name** from the navigatio
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MultiNavPathStack-removeByName(name: string): number--><!--Device-MultiNavPathStack-removeByName(name: string): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -620,8 +657,7 @@ Removes the navigation destination page specified by **name** from the navigatio
 replacePath(info: NavPathInfo, animated?: boolean): void
 ```
 
-Replaces the current top page on the stack with the specified navigation destination page. The new page inherits
-the split policy of the original top page.
+Replaces the current top page on the stack with the specified navigation destination page. The new page inherits the split policy of the original top page.
 
 **Since:** 14
 
@@ -629,13 +665,15 @@ the split policy of the original top page.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MultiNavPathStack-replacePath(info: NavPathInfo, animated?: boolean): void--><!--Device-MultiNavPathStack-replacePath(info: NavPathInfo, animated?: boolean): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | NavPathInfo | Yes | Information about the navigation destination page. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 ## replacePath
@@ -644,14 +682,15 @@ the split policy of the original top page.
 replacePath(info: NavPathInfo, options?: NavigationOptions): void
 ```
 
-Replaces the current top page on the stack with the specified navigation destination page, with stack operation
-settings through **NavigationOptions**. The new page inherits the split policy of the original top page.
+Replaces the current top page on the stack with the specified navigation destination page, with stack operation settings through **NavigationOptions**. The new page inherits the split policy of the original top page.
 
 **Since:** 14
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-MultiNavPathStack-replacePath(info: NavPathInfo, options?: NavigationOptions): void--><!--Device-MultiNavPathStack-replacePath(info: NavPathInfo, options?: NavigationOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -659,8 +698,8 @@ settings through **NavigationOptions**. The new page inherits the split policy o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | NavPathInfo | Yes | Information about the navigation destination page. |
-| options | NavigationOptions | No | Stack operation settings. Only the **animated** field is supported. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
+| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No | Stack operation settings. Only the **animated** field is supported. |
 
 ## replacePathByName
 
@@ -668,14 +707,15 @@ settings through **NavigationOptions**. The new page inherits the split policy o
 replacePathByName(name: string, param: Object, animated?: boolean): void
 ```
 
-Replaces the current top page on the stack with the navigation destination page specified by **name**. The new page
-inherits the split policy of the original top page.
+Replaces the current top page on the stack with the navigation destination page specified by **name**. The new page inherits the split policy of the original top page.
 
 **Since:** 14
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-MultiNavPathStack-replacePathByName(name: string, param: Object, animated?: boolean): void--><!--Device-MultiNavPathStack-replacePathByName(name: string, param: Object, animated?: boolean): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -684,7 +724,7 @@ inherits the split policy of the original top page.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
-| param | Object | Yes | Detailed parameters of the navigation destination page. |
+| param | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Detailed parameters of the navigation destination page. |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 ## setHomeWidthRange
@@ -700,6 +740,8 @@ Sets the draggable range for the home page width. If not set, the width defaults
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-MultiNavPathStack-setHomeWidthRange(minPercent: number, maxPercent: number): void--><!--Device-MultiNavPathStack-setHomeWidthRange(minPercent: number, maxPercent: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -720,15 +762,15 @@ Sets a placeholder page.
 
 > **NOTE**
 
-> The placeholder page is a special page type. When set, it forms a default split-screen effect with the home page
-> on some large-screen devices, that is, the left side is the home page, and the right side is the placeholder
+> The placeholder page is a special page type. When set, it forms a default split-screen effect with the home page  
+> on some large-screen devices, that is, the left side is the home page, and the right side is the placeholder  
 > page.
 
-> In scenarios where the application's drawable area is less than 600 vp, or when a foldable screen switches from
-> the expanded state to the folded state, or when a tablet switches from landscape to portrait mode, the
-> placeholder page will be automatically removed, resulting in only the home page being shown.
-> > Conversely, when the application's drawable area is greater than or equal to 600 vp, or when a foldable screen
-> switches from the folded state to the expanded state, or when a tablet switches from portrait to landscape mode,
+> In scenarios where the application's drawable area is less than 600 vp, or when a foldable screen switches from  
+> the expanded state to the folded state, or when a tablet switches from landscape to portrait mode, the  
+> placeholder page will be automatically removed, resulting in only the home page being shown.  
+> > Conversely, when the application's drawable area is greater than or equal to 600 vp, or when a foldable screen  
+> switches from the folded state to the expanded state, or when a tablet switches from portrait to landscape mode,  
 > the placeholder page will be automatically added to form a split-screen.
 
 **Since:** 14
@@ -737,13 +779,15 @@ Sets a placeholder page.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MultiNavPathStack-setPlaceholderPage(info: NavPathInfo): void--><!--Device-MultiNavPathStack-setPlaceholderPage(info: NavPathInfo): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | NavPathInfo | Yes | Information about the placeholder page. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the placeholder page. |
 
 ## size
 
@@ -758,6 +802,8 @@ Obtains the stack size.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-MultiNavPathStack-size(): number--><!--Device-MultiNavPathStack-size(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -781,13 +827,15 @@ Switches the display mode of the current top detail page in the stack.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MultiNavPathStack-switchFullScreenState(isFullScreen?: boolean): boolean--><!--Device-MultiNavPathStack-switchFullScreenState(isFullScreen?: boolean): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isFullScreen | boolean | No | Whether to enable full-screen mode. The default value is **false**. The value**true** means to enable full-screen mode, and **false** means to enable split-screen mode. |
+| isFullScreen | boolean | No | Whether to enable full-screen mode. The default value is **false**. The value **true** means to enable full-screen mode, and **false** means to enable split-screen mode. |
 
 **Return value:**
 

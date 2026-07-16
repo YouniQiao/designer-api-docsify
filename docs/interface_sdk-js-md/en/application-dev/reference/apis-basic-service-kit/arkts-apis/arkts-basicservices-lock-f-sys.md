@@ -18,6 +18,8 @@ Lock the screen.
 
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK_INNER
 
+<!--Device-screenLock-function lock(callback: AsyncCallback<boolean>): void--><!--Device-screenLock-function lock(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Lock the screen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | the callback of lock. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | the callback of lock. |
 
 **Error codes:**
 
@@ -65,6 +67,8 @@ Lock the screen.
 
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK_INNER
 
+<!--Device-screenLock-function lock(): Promise<boolean>--><!--Device-screenLock-function lock(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 **System API:** This is a system API.
@@ -73,7 +77,7 @@ Lock the screen.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | the promise returned by the function. |
 
 **Error codes:**
 

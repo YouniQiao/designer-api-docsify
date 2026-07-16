@@ -1,5 +1,11 @@
 # getISOCountryCodeForSim
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## getISOCountryCodeForSim
 
 ```TypeScript
@@ -10,6 +16,8 @@ Obtains the ISO country code of the SIM card in a specified slot.
 
 **起始版本：** 6
 
+<!--Device-sim-function getISOCountryCodeForSim(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getISOCountryCodeForSim(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -17,7 +25,7 @@ Obtains the ISO country code of the SIM card in a specified slot.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;string&gt; | 是 | Indicates the callback for getting the country code definedin ISO 3166-2; returns an empty string if no SIM card is inserted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | Indicates the callback for getting the country code defined in ISO 3166-2; returns an empty string if no SIM card is inserted. |
 
 **错误码：**
 
@@ -53,6 +61,8 @@ Obtains the ISO country code of the SIM card in a specified slot.
 
 **起始版本：** 6
 
+<!--Device-sim-function getISOCountryCodeForSim(slotId: int): Promise<string>--><!--Device-sim-function getISOCountryCodeForSim(slotId: int): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -65,7 +75,7 @@ Obtains the ISO country code of the SIM card in a specified slot.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the country code defined in ISO 3166-2;returns an empty string if no SIM card is inserted. |
+| Promise<string> | Returns the country code defined in ISO 3166-2;returns an empty string if no SIM card is inserted. |
 
 **错误码：**
 

@@ -20,13 +20,15 @@ Unsubscribe from ranging state change events.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ranging-function offRangingStateChange(callback?: Callback<RangingStateChangeInfo>): void--><!--Device-ranging-function offRangingStateChange(callback?: Callback<RangingStateChangeInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;RangingStateChangeInfo&gt; | No | Callback used to listen to the ranging state. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<RangingStateChangeInfo> | No | Callback used to listen to the ranging state. |
 
 **Error codes:**
 

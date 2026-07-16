@@ -1,12 +1,12 @@
 # ThreadWorkerGlobalScope
 
-Implements communication between the Worker thread and the host thread. The postMessage API is used to send messages
-to the host thread, and the close API is used to terminate the Worker thread. The ThreadWorkerGlobalScope class
-inherits from GlobalScope9+.
+Implements communication between the Worker thread and the host thread. The postMessage API is used to send messages to the host thread, and the close API is used to terminate the Worker thread. The ThreadWorkerGlobalScope class inherits from GlobalScope9+.
 
 **Inheritance/Implementation:** ThreadWorkerGlobalScope extends [GlobalScope](arkts-arkts-globalscope-i.md)
 
 **Since:** 9
+
+<!--Device-unnamed-export interface ThreadWorkerGlobalScope extends GlobalScope--><!--Device-unnamed-export interface ThreadWorkerGlobalScope extends GlobalScope-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -22,13 +22,13 @@ import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventT
 callGlobalCallObjectMethod(instanceName: string, methodName: string, timeout: number, ...args: Object[]): Object
 ```
 
-Calls a method of an object registered with the host thread. This API is called by the Worker thread.
-The invoking is synchronous for the Worker thread and asynchronous for the host thread. The return value is
-transferred through serialization.
+Calls a method of an object registered with the host thread. This API is called by the Worker thread.The invoking is synchronous for the Worker thread and asynchronous for the host thread. The return value is transferred through serialization.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ThreadWorkerGlobalScope-callGlobalCallObjectMethod(instanceName: string, methodName: string, timeout: number, ...args: Object[]): Object--><!--Device-ThreadWorkerGlobalScope-callGlobalCallObjectMethod(instanceName: string, methodName: string, timeout: number, ...args: Object[]): Object-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -37,15 +37,15 @@ transferred through serialization.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | instanceName | string | Yes | Key used for registration. It is used to search for the object in the host thread. |
-| methodName | string | Yes | Name of the method to call. Note that the method cannot be modified by async orgenerator,or return results asynchronously by using the asynchronous mechanism at the bottom layer. Otherwise, anexception is thrown. |
+| methodName | string | Yes | Name of the method to call. Note that the method cannot be modified by async or generator,or return results asynchronously by using the asynchronous mechanism at the bottom layer. Otherwise, an exception is thrown. |
 | timeout | number | Yes | Maximum duration that the current synchronous invoking waits, in ms.The value is an integer ranging from 1 to 5000. The value 0 means that the 5000 ms duration is used.The value should be an integer.<br>Unit:ms. |
-| args | Object[] | Yes | the method argument called on registered globalCallObject. |
+| args | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md)[] | Yes | the method argument called on registered globalCallObject. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Object | Return the result of method if it has a return value, otherwise return void. |
+| [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Return the result of method if it has a return value, otherwise return void. |
 
 **Error codes:**
 
@@ -120,6 +120,8 @@ Terminates the Worker thread to stop it from receiving messages.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ThreadWorkerGlobalScope-close(): void--><!--Device-ThreadWorkerGlobalScope-close(): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
@@ -162,14 +164,16 @@ Sends a message from the Worker thread to the host thread by transferring object
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ThreadWorkerGlobalScope-postMessage(messageObject: Object, transfer: ArrayBuffer[]): void--><!--Device-ThreadWorkerGlobalScope-postMessage(messageObject: Object, transfer: ArrayBuffer[]): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| messageObject | Object | Yes | Data to be sent to the host thread. The data object must be sequenceable.For details about the supported parameter types, see Sequenceable Data Types. |
-| transfer | ArrayBuffer[] | Yes | ArrayBuffer instance holding an array of objects for which the ownershipis transferred to the host thread. After the transfer, the objects are available only in the host thread. Thearray cannot be null. |
+| messageObject | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Data to be sent to the host thread. The data object must be sequenceable.For details about the supported parameter types, see Sequenceable Data Types. |
+| transfer | [ArrayBuffer](arkts-arkts-arraybuffer-c.md)[] | Yes | ArrayBuffer instance holding an array of objects for which the ownership is transferred to the host thread. After the transfer, the objects are available only in the host thread. The array cannot be null. |
 
 **Error codes:**
 
@@ -216,14 +220,16 @@ Sends a message from the Worker thread to the host thread by transferring object
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ThreadWorkerGlobalScope-postMessage(messageObject: Object, options?: PostMessageOptions): void--><!--Device-ThreadWorkerGlobalScope-postMessage(messageObject: Object, options?: PostMessageOptions): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| messageObject | Object | Yes | Data to be sent to the host thread. The data object must be sequenceable.For details about the supported parameter types, see Sequenceable Data Types. |
-| options | PostMessageOptions | No | If this parameter is specified, it functions the same as ArrayBuffer[].Specifically, the ownership of the objects in the array is transferred to the host thread and becomesunavailable in the Worker thread.The objects are available only in the host thread. If this parameter is not specified, the default valueundefined is used,and information is transferred to the host thread by copying data. |
+| messageObject | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Data to be sent to the host thread. The data object must be sequenceable.For details about the supported parameter types, see Sequenceable Data Types. |
+| options | [PostMessageOptions](arkts-arkts-postmessageoptions-i.md) | No | If this parameter is specified, it functions the same as ArrayBuffer[].Specifically, the ownership of the objects in the array is transferred to the host thread and becomes unavailable in the Worker thread.The objects are available only in the host thread. If this parameter is not specified, the default value undefined is used,and information is transferred to the host thread by copying data. |
 
 **Error codes:**
 
@@ -263,9 +269,7 @@ workerPort.onmessage = (e: MessageEvents): void => {
 postMessageAtFront?(message: Object, priority: Priority, transfer?: ArrayBuffer[]): void
 ```
 
-Sends a message from the Worker thread to the main thread by transferring object ownership,
-and inserted into the head of the corresponding priority queue.Except for the worker thread to the main thread,
-this interface has the same function as postMessage.
+Sends a message from the Worker thread to the main thread by transferring object ownership,and inserted into the head of the corresponding priority queue.Except for the worker thread to the main thread,this interface has the same function as postMessage.
 
 **Since:** 26.0.0
 
@@ -273,15 +277,17 @@ this interface has the same function as postMessage.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ThreadWorkerGlobalScope-postMessageAtFront?(message: Object, priority: Priority, transfer?: ArrayBuffer[]): void--><!--Device-ThreadWorkerGlobalScope-postMessageAtFront?(message: Object, priority: Priority, transfer?: ArrayBuffer[]): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | Object | Yes | Data to be sent to the main thread. The data object must be sequenceable or sendable.For details about the supported sequenceable types, see Sequenceable Data Types.For details about the supported sendable types, see Sendable Data Types. |
-| priority | Priority | Yes | Priority of the Worker EventHandler. |
-| transfer | ArrayBuffer[] | No | ArrayBuffer instance holding an array of objects for which the ownershipis transferred to the main thread. After the transfer, the objects are available only in the main thread.The array cannot be null. |
+| message | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Data to be sent to the main thread. The data object must be sequenceable or sendable.For details about the supported sequenceable types, see Sequenceable Data Types.For details about the supported sendable types, see Sendable Data Types. |
+| priority | [Priority](arkts-arkts-priority-e.md) | Yes | Priority of the Worker EventHandler. |
+| transfer | [ArrayBuffer](arkts-arkts-arraybuffer-c.md)[] | No | ArrayBuffer instance holding an array of objects for which the ownership is transferred to the main thread. After the transfer, the objects are available only in the main thread.The array cannot be null. |
 
 **Error codes:**
 
@@ -296,13 +302,13 @@ this interface has the same function as postMessage.
 postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void
 ```
 
-Sends a message from the Worker thread to the host thread. In the message, a sendable object is passed by reference
-,
-and a non-sendable object is passed by serialization.
+Sends a message from the Worker thread to the host thread. In the message, a sendable object is passed by reference,and a non-sendable object is passed by serialization.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ThreadWorkerGlobalScope-postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void--><!--Device-ThreadWorkerGlobalScope-postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -310,8 +316,8 @@ and a non-sendable object is passed by serialization.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | Object | Yes | Data to be sent to the host thread. The data object must be sequenceable or sendable.For details about the supported sequenceable types, see Sequenceable Data Types.For details about the supported sendable types, see Sendable Data Types. |
-| transfer | ArrayBuffer[] | No | ArrayBuffer instance holding an array of objects for which the ownership istransferred to the host thread. After the transfer, the objects are available only in the host thread.The array cannot be null. The default value is an empty array. |
+| message | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Data to be sent to the host thread. The data object must be sequenceable or sendable.For details about the supported sequenceable types, see Sequenceable Data Types.For details about the supported sendable types, see Sendable Data Types. |
+| transfer | [ArrayBuffer](arkts-arkts-arraybuffer-c.md)[] | No | ArrayBuffer instance holding an array of objects for which the ownership is transferred to the host thread. After the transfer, the objects are available only in the host thread.The array cannot be null. The default value is an empty array. |
 
 **Error codes:**
 
@@ -371,15 +377,15 @@ workerInstance.onmessage = (e: MessageEvents) => {
 onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
 ```
 
-Called when the Worker thread receives a message sent by the host thread through postMessage.
-The event handler is executed in the Worker thread. In the callback function, this indicates the caller's
-ThreadWorkerGlobalScope, and the ev type is MessageEvents, indicating the received message data.
+Called when the Worker thread receives a message sent by the host thread through postMessage.The event handler is executed in the Worker thread. In the callback function, this indicates the caller's ThreadWorkerGlobalScope, and the ev type is MessageEvents, indicating the received message data.
 
 **Type:** (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ThreadWorkerGlobalScope-onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void--><!--Device-ThreadWorkerGlobalScope-onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -389,15 +395,15 @@ ThreadWorkerGlobalScope, and the ev type is MessageEvents, indicating the receiv
 onmessageerror?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
 ```
 
-Called when the Worker thread receives a message that cannot be deserialized. The event handler is executed
-in the Worker thread. In the callback function, this indicates the caller's ThreadWorkerGlobalScope,
-and the ev type is MessageEvents, indicating the received message data.
+Called when the Worker thread receives a message that cannot be deserialized. The event handler is executed in the Worker thread. In the callback function, this indicates the caller's ThreadWorkerGlobalScope,and the ev type is MessageEvents, indicating the received message data.
 
 **Type:** (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ThreadWorkerGlobalScope-onmessageerror?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void--><!--Device-ThreadWorkerGlobalScope-onmessageerror?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

@@ -4,6 +4,8 @@ Defines the information about the dragged item during drag.
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface DragItemInfo--><!--Device-unnamed-declare interface DragItemInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## builder
@@ -16,20 +18,17 @@ Custom component to display during dragging. If **pixelMap** is set, this parame
 
 **NOTE**
 
-Global builder definition is not supported. If the [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) component is used in the builder, enable
-synchronous loading whenever possible, that is, set the [syncLoad](ImageAttribute#syncLoad) attribute of the
-component to **true**. The builder is used only to generate the image displayed during the current dragging.
-Changes to the builder, if any, apply to the next dragging, but not to the current dragging.
+Global builder definition is not supported. If the [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) component is used in the builder, enable synchronous loading whenever possible, that is, set the [syncLoad](ImageAttribute#syncLoad) attribute of the component to **true**. The builder is used only to generate the image displayed during the current dragging.Changes to the builder, if any, apply to the next dragging, but not to the current dragging.
 
-When passing the builder as a parameter, the format builder: ()=>{this.customBuilder()} is recommended to ensure
-correctness of this binding. For details, see
-[Using Functions Decorated with @Builder as CustomBuilder Types](../../../../ui/state-management/arkts-builder.md#using-functions-decorated-with-builder-as-custombuilder-types).
+When passing the builder as a parameter, the format builder: ()=>{this.customBuilder()} is recommended to ensure correctness of this binding. For details, see [Using Functions Decorated with @Builder as CustomBuilder Types](../../../../ui/state-management/arkts-builder.md#using-functions-decorated-with-builder-as-custombuilder-types).
 
 **Type:** CustomBuilder
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DragItemInfo-builder?: CustomBuilder--><!--Device-DragItemInfo-builder?: CustomBuilder-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,6 +46,8 @@ Additional information about the dragged item, used to describe the item being d
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DragItemInfo-extraInfo?: string--><!--Device-DragItemInfo-extraInfo?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## pixelMap
@@ -62,6 +63,8 @@ Image to be displayed during dragging.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DragItemInfo-pixelMap?: PixelMap--><!--Device-DragItemInfo-pixelMap?: PixelMap-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

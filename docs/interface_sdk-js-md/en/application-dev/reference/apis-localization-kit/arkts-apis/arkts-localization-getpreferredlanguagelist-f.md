@@ -20,11 +20,13 @@ Obtains the list of preferred languages.
 
 **Substitutes:** [getPreferredLanguageList](arkts-localization-system-c.md#getpreferredlanguagelist-1)
 
+<!--Device-i18n-export function getPreferredLanguageList(): Array<string>--><!--Device-i18n-export function getPreferredLanguageList(): Array<string>-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | List of preferred languages. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | List of preferred languages. |
 

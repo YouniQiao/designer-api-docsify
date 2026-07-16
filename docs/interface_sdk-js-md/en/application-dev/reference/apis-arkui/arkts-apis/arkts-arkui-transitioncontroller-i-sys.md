@@ -1,9 +1,10 @@
 # TransitionController (System API)
 
-Implements the transition animation controller. Before calling any API, you must create a system window. For
-details, see the sample code.
+Implements the transition animation controller. Before calling any API, you must create a system window. For details, see the sample code.
 
 **Since:** 9
+
+<!--Device-window-interface TransitionController--><!--Device-window-interface TransitionController-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -25,6 +26,8 @@ Customizes the animation for the scenario when the window is hidden.
 
 **Since:** 9
 
+<!--Device-TransitionController-animationForHidden(context: TransitionContext): void--><!--Device-TransitionController-animationForHidden(context: TransitionContext): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -33,13 +36,13 @@ Customizes the animation for the scenario when the window is hidden.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | TransitionContext | Yes | Context of the transition animation. |
+| context | [TransitionContext](arkts-arkui-transitioncontext-i-sys.md) | Yes | Context of the transition animation. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause:1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
 
 **Example**
@@ -112,6 +115,8 @@ Customizes the animation for the scenario when the window is shown.
 
 **Since:** 9
 
+<!--Device-TransitionController-animationForShown(context: TransitionContext): void--><!--Device-TransitionController-animationForShown(context: TransitionContext): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -120,13 +125,13 @@ Customizes the animation for the scenario when the window is shown.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | TransitionContext | Yes | Context of the transition animation. |
+| context | [TransitionContext](arkts-arkui-transitioncontext-i-sys.md) | Yes | Context of the transition animation. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause:1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
 
 **Example**

@@ -18,6 +18,8 @@ Stop rtt.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
+<!--Device-call-function stopRtt(callId: int, type: ImsRttMode): Promise<void>--><!--Device-call-function stopRtt(callId: int, type: ImsRttMode): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -27,13 +29,13 @@ Stop rtt.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | number | Yes | Indicates the identifier of the call. |
-| type | ImsRttMode | Yes | Indicates the type of operation. |
+| type | [ImsRttMode](arkts-telephony-imsrttmode-e-sys.md) | Yes | Indicates the type of operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the stopRtt. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the stopRtt. |
 
 **Error codes:**
 

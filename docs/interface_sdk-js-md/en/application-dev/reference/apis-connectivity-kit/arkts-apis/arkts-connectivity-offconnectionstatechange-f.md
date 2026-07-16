@@ -18,13 +18,15 @@ Unsubscribes from NearLink connection state change events.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-remoteDevice-function offConnectionStateChange(callback?: Callback<ConnectionStateParam>): void--><!--Device-remoteDevice-function offConnectionStateChange(callback?: Callback<ConnectionStateParam>): void-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;ConnectionStateParam&gt; | No | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<ConnectionStateParam> | No | Callback used to listen for the connection state changed event. |
 
 **Error codes:**
 

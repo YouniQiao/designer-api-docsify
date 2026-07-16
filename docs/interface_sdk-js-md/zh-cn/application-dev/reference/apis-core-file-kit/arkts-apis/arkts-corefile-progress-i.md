@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-interface Progress--><!--Device-unnamed-interface Progress-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+```
 
 ## processedSize
 
@@ -17,6 +25,8 @@ readonly processedSize: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-Progress-readonly processedSize: number--><!--Device-Progress-readonly processedSize: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -31,6 +41,8 @@ readonly totalSize: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-Progress-readonly totalSize: number--><!--Device-Progress-readonly totalSize: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

@@ -4,6 +4,8 @@ The **motion** module provides the user motion awareness capabilities, including
 
 **Since:** 15
 
+<!--Device-unnamed-declare namespace motion--><!--Device-unnamed-declare namespace motion-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 ## Modules to Import

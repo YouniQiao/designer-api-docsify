@@ -6,6 +6,8 @@ CurrentDayStyle object.
 
 **废弃版本：** 20
 
+<!--Device-unnamed-interface CurrentDayStyle--><!--Device-unnamed-interface CurrentDayStyle-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -25,6 +27,8 @@ Boundary col offset.
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CurrentDayStyle-boundaryColOffset?: number--><!--Device-CurrentDayStyle-boundaryColOffset?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,6 +50,8 @@ Boundary row offset.
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-CurrentDayStyle-boundaryRowOffset?: number--><!--Device-CurrentDayStyle-boundaryRowOffset?: number-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -65,6 +71,8 @@ Number of columns.
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CurrentDayStyle-colSpace?: number--><!--Device-CurrentDayStyle-colSpace?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,6 +94,8 @@ Daily five row space.
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-CurrentDayStyle-dailyFiveRowSpace?: number--><!--Device-CurrentDayStyle-dailyFiveRowSpace?: number-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -105,6 +115,8 @@ Daily six row space.
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CurrentDayStyle-dailySixRowSpace?: number--><!--Device-CurrentDayStyle-dailySixRowSpace?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,6 +138,8 @@ Text color.
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-CurrentDayStyle-dayColor?: ResourceColor--><!--Device-CurrentDayStyle-dayColor?: ResourceColor-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -145,6 +159,8 @@ Text fontSize.
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CurrentDayStyle-dayFontSize?: number--><!--Device-CurrentDayStyle-dayFontSize?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -166,6 +182,8 @@ Single date height.
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-CurrentDayStyle-dayHeight?: number--><!--Device-CurrentDayStyle-dayHeight?: number-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -185,6 +203,8 @@ Single date width.
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CurrentDayStyle-dayWidth?: number--><!--Device-CurrentDayStyle-dayWidth?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -206,6 +226,8 @@ Data y axis Off set.
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-CurrentDayStyle-dayYAxisOffset?: number--><!--Device-CurrentDayStyle-dayYAxisOffset?: number-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -225,6 +247,8 @@ Gregorian calendar height.
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CurrentDayStyle-gregorianCalendarHeight?: number--><!--Device-CurrentDayStyle-gregorianCalendarHeight?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -246,6 +270,8 @@ lunar Text color.
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-CurrentDayStyle-lunarColor?: ResourceColor--><!--Device-CurrentDayStyle-lunarColor?: ResourceColor-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -265,6 +291,8 @@ lunar text fontSize.
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CurrentDayStyle-lunarDayFontSize?: number--><!--Device-CurrentDayStyle-lunarDayFontSize?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -286,6 +314,8 @@ Lunar data y axis Off set.
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-CurrentDayStyle-lunarDayYAxisOffset?: number--><!--Device-CurrentDayStyle-lunarDayYAxisOffset?: number-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -305,6 +335,8 @@ Single lunar height.
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CurrentDayStyle-lunarHeight?: number--><!--Device-CurrentDayStyle-lunarHeight?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -326,6 +358,8 @@ lunar Work and rest text color.
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-CurrentDayStyle-markLunarColor?: ResourceColor--><!--Device-CurrentDayStyle-markLunarColor?: ResourceColor-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -345,6 +379,8 @@ Schedule marker radius.
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CurrentDayStyle-scheduleMarkerRadius?: number--><!--Device-CurrentDayStyle-scheduleMarkerRadius?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -366,6 +402,8 @@ Schedule marker X axis Off set
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-CurrentDayStyle-scheduleMarkerXAxisOffset?: number--><!--Device-CurrentDayStyle-scheduleMarkerXAxisOffset?: number-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -385,6 +423,8 @@ schedule Marker Y Axis Off set
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CurrentDayStyle-scheduleMarkerYAxisOffset?: number--><!--Device-CurrentDayStyle-scheduleMarkerYAxisOffset?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -406,6 +446,8 @@ Under score length.
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-CurrentDayStyle-underscoreLength?: number--><!--Device-CurrentDayStyle-underscoreLength?: number-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -425,6 +467,8 @@ Under score width.
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CurrentDayStyle-underscoreWidth?: number--><!--Device-CurrentDayStyle-underscoreWidth?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -446,6 +490,8 @@ Under score X Axis Off set.
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-CurrentDayStyle-underscoreXAxisOffset?: number--><!--Device-CurrentDayStyle-underscoreXAxisOffset?: number-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -465,6 +511,8 @@ Under score Y Axis Off set
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CurrentDayStyle-underscoreYAxisOffset?: number--><!--Device-CurrentDayStyle-underscoreYAxisOffset?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

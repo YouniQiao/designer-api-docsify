@@ -4,6 +4,8 @@ Describes the image embedding functions of the multi-modal embedding model.
 
 **Since:** 15
 
+<!--Device-intelligence-interface ImageEmbedding--><!--Device-intelligence-interface ImageEmbedding-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 ## Modules to Import
@@ -18,10 +20,11 @@ import { intelligence } from '@kit.ArkData';
 getEmbedding(image: Image): Promise<Array<number>>
 ```
 
-Obtains the embedding vector of the given image.
-The model can handle images below 20 MB in size in a single inference.
+Obtains the embedding vector of the given image.The model can handle images below 20 MB in size in a single inference.
 
 **Since:** 15
+
+<!--Device-ImageEmbedding-getEmbedding(image: Image): Promise<Array<double>>--><!--Device-ImageEmbedding-getEmbedding(image: Image): Promise<Array<double>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
@@ -29,13 +32,13 @@ The model can handle images below 20 MB in size in a single inference.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | Image | Yes | The input image of the embedding model. |
+| image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-image-i.md) | Yes | The input image of the embedding model. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | The promise used to return the embedding result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | The promise used to return the embedding result. |
 
 **Error codes:**
 
@@ -72,13 +75,15 @@ Loads this image embedding model. If the loading fails, an error code is returne
 
 **Since:** 15
 
+<!--Device-ImageEmbedding-loadModel(): Promise<void>--><!--Device-ImageEmbedding-loadModel(): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -112,13 +117,15 @@ Releases this image embedding model. If the releasing fails, an error code is re
 
 **Since:** 15
 
+<!--Device-ImageEmbedding-releaseModel(): Promise<void>--><!--Device-ImageEmbedding-releaseModel(): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

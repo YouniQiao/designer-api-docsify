@@ -20,21 +20,23 @@ Checks whether the application is forbidden to cancel the keep-alive status.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function isModifyKeepAliveAppsDisallowed(admin: Want, accountId: number, bundleName: string): boolean--><!--Device-applicationManager-function isModifyKeepAliveAppsDisallowed(admin: Want, accountId: number, bundleName: string): boolean-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| accountId | number | Yes | Account ID, which must be greater than or equal to 0.<br> You can call[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2) of @ohos.account.osAccount to obtain the ID. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| accountId | number | Yes | Account ID, which must be greater than or equal to 0.<br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2) of @ohos.account.osAccount to obtain the ID. |
 | bundleName | string | Yes | Bundle name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether to restrict users from manually canceling the keep-alive status. The value **true**indicates that users are not allowed to manually cancel the keep-alive status, and the value **false**indicates the opposite.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
+| boolean | Whether to restrict users from manually canceling the keep-alive status. The value **true** indicates that users are not allowed to manually cancel the keep-alive status, and the value **false** indicates the opposite.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
 
 **Error codes:**
 
@@ -42,7 +44,7 @@ Checks whether the application is forbidden to cancel the keep-alive status.
 | --- | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 **Example**
 

@@ -1,5 +1,11 @@
 # anonAttestKeyItemOfflineAsUser（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+```
+
 ## anonAttestKeyItemOfflineAsUser
 
 ```TypeScript
@@ -7,13 +13,12 @@ function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
       params: HuksParam[]): Promise<HuksReturnResult>
 ```
 
-离线获取匿名证明证书。该接口使用promise返回结果。此操作不需要每次都需要网络连接，
-比anonAttestKeyItemAsUser函数性能高。
+离线获取匿名证明证书。该接口使用promise返回结果。此操作不需要每次都需要网络连接，比anonAttestKeyItemAsUser函数性能高。
 
-> **说明**
-> >
-> -离线密钥证明依赖于网络。您需要定期连接网络才能使用此API更新离线证书。
-> >
+> **说明**  
+> >  
+> -离线密钥证明依赖于网络。您需要定期连接网络才能使用此API更新离线证书。  
+> >  
 > -离线匿名密钥证明要求本地时间准确。否则，可能导致对端无法正常工作。验证证书过期。
 
 **起始版本：** 26.0.0
@@ -21,6 +26,10 @@ function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-huks-function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
+      params: HuksParam[]): Promise<HuksReturnResult>--><!--Device-huks-function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
+      params: HuksParam[]): Promise<HuksReturnResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
@@ -32,19 +41,19 @@ function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID<br>取值范围为全体整数。 |
 | keyAlias | string | 是 | 密钥的别名。 |
-| params | HuksParam[] | 是 | 表示密钥证明操作的选项。 |
+| params | [HuksParam](arkts-universalkeystore-huksparam-i.md)[] | 是 | 表示密钥证明操作的选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | Promise用于返回结果。如果操作成功。HuksReturnResult中的certChains包含获取到的证书链。 |
+| Promise<HuksReturnResult> | Promise用于返回结果。如果操作成功。HuksReturnResult中的certChains包含获取到的证书链。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The app does not have sufficient permissions. Possible causes: Thecross-account permission is not granted, the system is not unlocked by the user, or the user does notexist. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The app does not have sufficient permissions. Possible causes: The cross-account permission is not granted, the system is not unlocked by the user, or the user does not exist. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system apps use system APIs. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | The API is not supported. |
 | [12000001](../errorcode-huks.md#12000001-该子功能不支持特性) | The function is not supported. Possible causes:1. The algorithm mode is not supported.2. The group key is not supported.3. The extended encryption key is not supported. |

@@ -20,6 +20,8 @@ Obtains key properties. This API uses an asynchronous callback to return the res
 
 **Substitutes:** getKeyItemProperties(
 
+<!--Device-huks-function getKeyProperties(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function getKeyProperties(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **Parameters:**
@@ -27,8 +29,8 @@ Obtains key properties. This API uses an asynchronous callback to return the res
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Key alias, which must be the same as the alias used when the key was generated. |
-| options | HuksOptions | Yes | Empty object (leave this parameter empty). |
-| callback | AsyncCallback&lt;HuksResult&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Empty object (leave this parameter empty). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<HuksResult> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -60,6 +62,8 @@ Obtains key properties. This API uses a promise to return the result.
 
 **Substitutes:** getKeyItemProperties(keyAlias:
 
+<!--Device-huks-function getKeyProperties(keyAlias: string, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function getKeyProperties(keyAlias: string, options: HuksOptions): Promise<HuksResult>-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **Parameters:**
@@ -67,13 +71,13 @@ Obtains key properties. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Key alias, which must be the same as the alias used when the key was generated. |
-| options | HuksOptions | Yes | Empty object (leave this parameter empty). |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Empty object (leave this parameter empty). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksResult&gt; | Promise that returns **HuksResult**. **properties** of **HuksResult** returns thekey parameters. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HuksResult> | Promise that returns **HuksResult**. **properties** of **HuksResult** returns the key parameters. |
 
 **Example**
 

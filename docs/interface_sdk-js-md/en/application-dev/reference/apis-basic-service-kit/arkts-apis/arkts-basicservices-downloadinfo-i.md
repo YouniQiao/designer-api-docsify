@@ -4,6 +4,8 @@ Describes the pre-downloaded download information.
 
 **Since:** 20
 
+<!--Device-cacheDownload-interface DownloadInfo--><!--Device-cacheDownload-interface DownloadInfo-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Pre-downloaded network information.
 
 **Since:** 20
 
+<!--Device-DownloadInfo-readonly network: NetworkInfo--><!--Device-DownloadInfo-readonly network: NetworkInfo-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## performance
@@ -38,6 +42,8 @@ Pre-downloaded performance information.
 
 **Since:** 20
 
+<!--Device-DownloadInfo-readonly performance: PerformanceInfo--><!--Device-DownloadInfo-readonly performance: PerformanceInfo-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## resource
@@ -51,6 +57,8 @@ Pre-downloaded resource information.
 **Type:** ResourceInfo
 
 **Since:** 20
+
+<!--Device-DownloadInfo-readonly resource: ResourceInfo--><!--Device-DownloadInfo-readonly resource: ResourceInfo-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 

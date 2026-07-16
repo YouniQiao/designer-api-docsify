@@ -10,6 +10,8 @@ Configuring parameters in reverse geocode requests
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-export interface ReverseGeoCodeRequest--><!--Device-geolocation-export interface ReverseGeoCodeRequest-End-->
+
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## Modules to Import
@@ -32,6 +34,8 @@ latitude: number
 
 **Substitutes:** latitude
 
+<!--Device-ReverseGeoCodeRequest-latitude: number--><!--Device-ReverseGeoCodeRequest-latitude: number-End-->
+
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## locale
@@ -47,6 +51,8 @@ locale?: string
 **Deprecated since:** 9
 
 **Substitutes:** locale
+
+<!--Device-ReverseGeoCodeRequest-locale?: string--><!--Device-ReverseGeoCodeRequest-locale?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -64,6 +70,8 @@ longitude: number
 
 **Substitutes:** longitude
 
+<!--Device-ReverseGeoCodeRequest-longitude: number--><!--Device-ReverseGeoCodeRequest-longitude: number-End-->
+
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## maxItems
@@ -79,6 +87,8 @@ maxItems?: number
 **Deprecated since:** 9
 
 **Substitutes:** maxItems
+
+<!--Device-ReverseGeoCodeRequest-maxItems?: number--><!--Device-ReverseGeoCodeRequest-maxItems?: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 

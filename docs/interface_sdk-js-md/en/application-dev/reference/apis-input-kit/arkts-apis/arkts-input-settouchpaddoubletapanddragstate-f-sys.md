@@ -16,6 +16,8 @@ Sets the touchpad double-tap and drag switch state. This API uses an asynchronou
 
 **Since:** 14
 
+<!--Device-pointer-function setTouchpadDoubleTapAndDragState(isOpen: boolean, callback: AsyncCallback<void>): void--><!--Device-pointer-function setTouchpadDoubleTapAndDragState(isOpen: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **System API:** This is a system API.
@@ -24,8 +26,8 @@ Sets the touchpad double-tap and drag switch state. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isOpen | boolean | Yes | State of the double-tap and drag switch. The value **true** indicates that the switchis enabled, and the value **false** indicates the opposite. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| isOpen | boolean | Yes | State of the double-tap and drag switch. The value **true** indicates that the switch is enabled, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -77,6 +79,8 @@ Sets the touchpad double-tap and drag switch state. This API uses a promise to r
 
 **Since:** 14
 
+<!--Device-pointer-function setTouchpadDoubleTapAndDragState(isOpen: boolean): Promise<void>--><!--Device-pointer-function setTouchpadDoubleTapAndDragState(isOpen: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **System API:** This is a system API.
@@ -85,13 +89,13 @@ Sets the touchpad double-tap and drag switch state. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isOpen | boolean | Yes | State of the double-tap and drag switch. The value **true** indicates that the switchis enabled, and the value **false** indicates the opposite. |
+| isOpen | boolean | Yes | State of the double-tap and drag switch. The value **true** indicates that the switch is enabled, and the value **false** indicates the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

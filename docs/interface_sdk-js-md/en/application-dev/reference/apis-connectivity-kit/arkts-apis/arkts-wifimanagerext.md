@@ -2,11 +2,11 @@
 
 Provides extended methods to operate or manage Wi-Fi.
 
-<p>The APIs involved in this file are non-general APIs.
-These extended APIs are only used by some product types, such as routers.
-Common products should not use these APIs.</p>
+<p>The APIs involved in this file are non-general APIs.These extended APIs are only used by some product types, such as routers.Common products should not use these APIs.</p>
 
 **Since:** 9
+
+<!--Device-unnamed-declare namespace wifiManagerExt--><!--Device-unnamed-declare namespace wifiManagerExt-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Extension
 

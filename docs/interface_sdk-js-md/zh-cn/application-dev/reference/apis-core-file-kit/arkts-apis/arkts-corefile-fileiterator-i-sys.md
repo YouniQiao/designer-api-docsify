@@ -6,9 +6,17 @@
 
 **废弃版本：** 23
 
+<!--Device-fileAccess-interface FileIterator--><!--Device-fileAccess-interface FileIterator-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { fileAccess } from '@kit.CoreFileKit';
+```
 
 ## next
 
@@ -25,6 +33,8 @@ next(): { value: FileInfo, done: boolean }
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileIterator-next(): { value: FileInfo, done: boolean }--><!--Device-FileIterator-next(): { value: FileInfo, done: boolean }-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

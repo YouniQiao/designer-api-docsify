@@ -1,5 +1,11 @@
 # querySyncResult
 
+## 导入模块
+
+```TypeScript
+import { asset } from '@kit.AssetStoreKit';
+```
+
 ## querySyncResult
 
 ```TypeScript
@@ -10,19 +16,21 @@ function querySyncResult(query: AssetMap): Promise<SyncResult>
 
 **起始版本：** 20
 
+<!--Device-asset-function querySyncResult(query: AssetMap): Promise<SyncResult>--><!--Device-asset-function querySyncResult(query: AssetMap): Promise<SyncResult>-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | AssetMap | 是 | 同步结果查询条件，如关键资产所属群组、业务自定义属性信息是否加密。 |
+| query | [AssetMap](arkts-assetstore-assetmap-t.md) | 是 | 同步结果查询条件，如关键资产所属群组、业务自定义属性信息是否加密。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;SyncResult&gt; | Promise对象，返回同步执行结果。 |
+| Promise<SyncResult> | Promise对象，返回同步执行结果。 |
 
 **错误码：**
 

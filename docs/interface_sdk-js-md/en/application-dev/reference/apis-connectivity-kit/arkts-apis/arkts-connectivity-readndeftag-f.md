@@ -22,13 +22,15 @@ Reads the NDEF Data.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
+<!--Device-connectedTag-function readNdefTag(): Promise<string>--><!--Device-connectedTag-function readNdefTag(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Communication.ConnectedTag
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the NDEF Data. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the NDEF Data. |
 
 **Example**
 
@@ -61,13 +63,15 @@ Reads the NDEF Data.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
+<!--Device-connectedTag-function readNdefTag(callback: AsyncCallback<string>): void--><!--Device-connectedTag-function readNdefTag(callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Communication.ConnectedTag
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes |  |
 
 **Example**
 

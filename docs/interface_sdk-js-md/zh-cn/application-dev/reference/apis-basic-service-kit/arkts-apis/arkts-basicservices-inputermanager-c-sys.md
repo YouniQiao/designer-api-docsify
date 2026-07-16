@@ -4,9 +4,17 @@
 
 **起始版本：** 9
 
+<!--Device-osAccount-class InputerManager--><!--Device-osAccount-class InputerManager-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+```
 
 ## registerInputer
 
@@ -20,6 +28,8 @@ static registerInputer(authType: AuthType, inputer: IInputer): void
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL or ohos.permission.MANAGE_USER_IDM
 
+<!--Device-InputerManager-static registerInputer(authType: AuthType, inputer: IInputer): void--><!--Device-InputerManager-static registerInputer(authType: AuthType, inputer: IInputer): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -28,8 +38,8 @@ static registerInputer(authType: AuthType, inputer: IInputer): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| authType | AuthType | 是 | 认证类型。 |
-| inputer | IInputer | 是 | 凭据输入器，用于获取凭据。 |
+| authType | [AuthType](arkts-basicservices-authtype-e-sys.md) | 是 | 认证类型。 |
+| inputer | [IInputer](arkts-basicservices-iinputer-i-sys.md) | 是 | 凭据输入器，用于获取凭据。 |
 
 **错误码：**
 
@@ -76,6 +86,8 @@ static unregisterInputer(authType: AuthType): void
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL or ohos.permission.MANAGE_USER_IDM
 
+<!--Device-InputerManager-static unregisterInputer(authType: AuthType): void--><!--Device-InputerManager-static unregisterInputer(authType: AuthType): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -84,7 +96,7 @@ static unregisterInputer(authType: AuthType): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| authType | AuthType | 是 | 认证类型。 |
+| authType | [AuthType](arkts-basicservices-authtype-e-sys.md) | 是 | 认证类型。 |
 
 **错误码：**
 

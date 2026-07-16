@@ -4,6 +4,8 @@ Information details of the HTTP request
 
 **Since:** 24
 
+<!--Device-http-export interface ConnectionExtraInfo--><!--Device-http-export interface ConnectionExtraInfo-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -26,6 +28,8 @@ The cipher suite used to fetch the resource.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ConnectionExtraInfo-cipherSuite?: CipherSuite--><!--Device-ConnectionExtraInfo-cipherSuite?: CipherSuite-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## isCacheHit
@@ -41,6 +45,8 @@ A Boolean value that indicates whether the http request hit cache.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ConnectionExtraInfo-isCacheHit: boolean--><!--Device-ConnectionExtraInfo-isCacheHit: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -58,6 +64,8 @@ A Boolean value that indicastes whether the task used a proxy connection to fetc
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ConnectionExtraInfo-isProxyConnection: boolean--><!--Device-ConnectionExtraInfo-isProxyConnection: boolean-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## isReusedConnection
@@ -73,6 +81,8 @@ The HTTP request is a reused connection or not.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ConnectionExtraInfo-isReusedConnection: boolean--><!--Device-ConnectionExtraInfo-isReusedConnection: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -90,6 +100,8 @@ localAddress of the HTTP request.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ConnectionExtraInfo-localAddress: string--><!--Device-ConnectionExtraInfo-localAddress: string-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## localPort
@@ -105,6 +117,8 @@ localPort of the HTTP request. -1 for unknown.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ConnectionExtraInfo-localPort: int--><!--Device-ConnectionExtraInfo-localPort: int-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -122,6 +136,8 @@ The network protocol used to fetch the resource.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ConnectionExtraInfo-networkProtocolName: string--><!--Device-ConnectionExtraInfo-networkProtocolName: string-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## redirectCount
@@ -137,6 +153,8 @@ The HTTP request redirect count.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ConnectionExtraInfo-redirectCount: int--><!--Device-ConnectionExtraInfo-redirectCount: int-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -154,6 +172,8 @@ remoteAddress of the HTTP request.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ConnectionExtraInfo-remoteAddress: string--><!--Device-ConnectionExtraInfo-remoteAddress: string-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## remotePort
@@ -170,6 +190,8 @@ remotePort of the HTTP request. -1 for unknown.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ConnectionExtraInfo-remotePort: int--><!--Device-ConnectionExtraInfo-remotePort: int-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## tlsVersion
@@ -185,6 +207,8 @@ The tls version used to fetch the resource.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ConnectionExtraInfo-tlsVersion?: TlsVersion--><!--Device-ConnectionExtraInfo-tlsVersion?: TlsVersion-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

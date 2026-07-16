@@ -4,6 +4,8 @@ Defines a page information collection policy.
 
 **Since:** 23
 
+<!--Device-onScreen-export enum CollectStrategy--><!--Device-onScreen-export enum CollectStrategy-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -19,6 +21,8 @@ Collection is supported.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CollectStrategy-ALLOW = 1 << 0--><!--Device-CollectStrategy-ALLOW = 1 << 0-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -36,6 +40,8 @@ Collection policy of the split-screen window on the application.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-CollectStrategy-SPLIT_SCREEN = 1 << 1--><!--Device-CollectStrategy-SPLIT_SCREEN = 1 << 1-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -51,6 +57,8 @@ Automatic collection is not supported.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CollectStrategy-UNSUPPORTED_APP = 1 << 2--><!--Device-CollectStrategy-UNSUPPORTED_APP = 1 << 2-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -68,6 +76,8 @@ Privacy window of the application.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-CollectStrategy-PRIVATE_WINDOW = 1 << 3--><!--Device-CollectStrategy-PRIVATE_WINDOW = 1 << 3-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -83,6 +93,8 @@ VM application, which is a non-HarmonyOS application.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CollectStrategy-ANCO_APP = 1 << 4--><!--Device-CollectStrategy-ANCO_APP = 1 << 4-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -100,6 +112,8 @@ Collection policies can be configured.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-CollectStrategy-ALLOW_USER_CHANGE = 1 << 5--><!--Device-CollectStrategy-ALLOW_USER_CHANGE = 1 << 5-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -115,6 +129,8 @@ Application data can be collected.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CollectStrategy-BUSINESS_APP = 1 << 6--><!--Device-CollectStrategy-BUSINESS_APP = 1 << 6-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -132,6 +148,8 @@ Floating window.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-CollectStrategy-FLOAT_SCREEN = 1 << 7--><!--Device-CollectStrategy-FLOAT_SCREEN = 1 << 7-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -148,6 +166,8 @@ Picture-in-picture mode.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-CollectStrategy-PIP_SCREEN = 1 << 8--><!--Device-CollectStrategy-PIP_SCREEN = 1 << 8-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -163,6 +183,8 @@ Desktop application.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CollectStrategy-LAUNCHER = 1 << 9--><!--Device-CollectStrategy-LAUNCHER = 1 << 9-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 

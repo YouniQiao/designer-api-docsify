@@ -4,6 +4,8 @@ Describes audio capturer configurations.
 
 **Since:** 8
 
+<!--Device-audio-interface AudioCapturerOptions--><!--Device-audio-interface AudioCapturerOptions-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Audio capturer information.
 
 **Since:** 8
 
+<!--Device-AudioCapturerOptions-capturerInfo: AudioCapturerInfo--><!--Device-AudioCapturerOptions-capturerInfo: AudioCapturerInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 ## playbackCaptureConfig
@@ -34,8 +38,7 @@ playbackCaptureConfig?: AudioPlaybackCaptureConfig
 
 Defines configuration for capturing played audio.
 
-This API is supported since API version 10 and deprecated since API version 12. You are advised to use
-[AVScreenCapture](../../../../reference/apis-media-kit/capi-avscreencapture.md) instead.
+This API is supported since API version 10 and deprecated since API version 12. You are advised to use [AVScreenCapture](../../../../reference/apis-media-kit/capi-avscreencapture.md) instead.
 
 **Type:** AudioPlaybackCaptureConfig
 
@@ -45,6 +48,8 @@ This API is supported since API version 10 and deprecated since API version 12. 
 
 **Substitutes:** OH_AVScreenCapture
 
+<!--Device-AudioCapturerOptions-playbackCaptureConfig?: AudioPlaybackCaptureConfig--><!--Device-AudioCapturerOptions-playbackCaptureConfig?: AudioPlaybackCaptureConfig-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 
 ## playbackCaptureMode
@@ -53,14 +58,15 @@ This API is supported since API version 10 and deprecated since API version 12. 
 playbackCaptureMode?: AudioPlaybackCaptureMode
 ```
 
-The playback capture mode for audio capturer.
-This can be a combination of the available {@link AudioPlaybackCaptureMode}.
+The playback capture mode for audio capturer.This can be a combination of the available {@link AudioPlaybackCaptureMode}.
 
 **Type:** AudioPlaybackCaptureMode
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioCapturerOptions-playbackCaptureMode?: AudioPlaybackCaptureMode--><!--Device-AudioCapturerOptions-playbackCaptureMode?: AudioPlaybackCaptureMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 
@@ -75,6 +81,8 @@ Audio stream information.
 **Type:** AudioStreamInfo
 
 **Since:** 8
+
+<!--Device-AudioCapturerOptions-streamInfo: AudioStreamInfo--><!--Device-AudioCapturerOptions-streamInfo: AudioStreamInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 

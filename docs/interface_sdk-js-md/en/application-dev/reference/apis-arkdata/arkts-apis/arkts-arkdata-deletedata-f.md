@@ -20,14 +20,16 @@ Deletes data from the UDMF public data channel. This API uses an asynchronous ca
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-unifiedDataChannel-function deleteData(options: Options, callback: AsyncCallback<Array<UnifiedData>>): void--><!--Device-unifiedDataChannel-function deleteData(options: Options, callback: AsyncCallback<Array<UnifiedData>>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | Options | Yes | Configuration for the data deletion operation. Both the **key** and **intention** areoptional (only the DATA_HUB channel of **intention** is supported). The return value varies depending on theparameters passed in. |
-| callback | AsyncCallback&lt;Array&lt;UnifiedData&gt;&gt; | Yes | Callback used to return the data deleted.<br>If only the**key** is specified in **options**, the data corresponding to the key deleted is returned.<br>If only the**intention** is specified in **options**, all data in the **intention** deleted is returned.<br>If both**intention** and **key** are specified, the intersection of the two deleted is returned. If there is nointersection between the two, an error object is returned. |
+| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-options-i.md) | Yes | Configuration for the data deletion operation. Both the **key** and **intention** are optional (only the DATA_HUB channel of **intention** is supported). The return value varies depending on the parameters passed in. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<UnifiedData>> | Yes | Callback used to return the data deleted.<br>If only the **key** is specified in **options**, the data corresponding to the key deleted is returned.<br>If only the **intention** is specified in **options**, all data in the **intention** deleted is returned.<br>If both **intention** and **key** are specified, the intersection of the two deleted is returned. If there is no intersection between the two, an error object is returned. |
 
 **Error codes:**
 
@@ -84,19 +86,21 @@ Deletes data from the UDMF public data channel. This API uses a promise to retur
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-unifiedDataChannel-function deleteData(options: Options): Promise<Array<UnifiedData>>--><!--Device-unifiedDataChannel-function deleteData(options: Options): Promise<Array<UnifiedData>>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | Options | Yes | Configuration for the data deletion operation. Both the **key** and **intention** areoptional (only the DATA_HUB channel of **intention** is supported). The return value varies depending on theparameters passed in. |
+| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-options-i.md) | Yes | Configuration for the data deletion operation. Both the **key** and **intention** are optional (only the DATA_HUB channel of **intention** is supported). The return value varies depending on the parameters passed in. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;UnifiedData&gt;&gt; | Promise used to return the data deleted.<br>If only the **key** is specified in **options**, the data corresponding to the key deleted is returned.<br>If only the **intention** is specified in **options**, all data in the **intention** deleted is returned.<br>If both **intention** and **key** are specified, the intersection of the two deleted is returned. If thereis no intersection between the two, an error object is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<UnifiedData>> | Promise used to return the data deleted.<br>If only the **key** is specified in **options**, the data corresponding to the key deleted is returned.<br>If only the **intention** is specified in **options**, all data in the **intention** deleted is returned.<br>If both **intention** and **key** are specified, the intersection of the two deleted is returned. If there is no intersection between the two, an error object is returned. |
 
 **Error codes:**
 

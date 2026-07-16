@@ -1,5 +1,11 @@
 # setAbilityEnabledSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## setAbilityEnabledSync
 
 ```TypeScript
@@ -12,6 +18,8 @@ function setAbilityEnabledSync(info: AbilityInfo, isEnabled: boolean): void
 
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
+<!--Device-bundleManager-function setAbilityEnabledSync(info: AbilityInfo, isEnabled: boolean): void--><!--Device-bundleManager-function setAbilityEnabledSync(info: AbilityInfo, isEnabled: boolean): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function setAbilityEnabledSync(info: AbilityInfo, isEnabled: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | AbilityInfo | 是 | 需要被设置的组件。 |
+| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | 是 | 需要被设置的组件。 |
 | isEnabled | boolean | 是 | 值为true表示使能，值为false表示禁用。 |
 
 **错误码：**

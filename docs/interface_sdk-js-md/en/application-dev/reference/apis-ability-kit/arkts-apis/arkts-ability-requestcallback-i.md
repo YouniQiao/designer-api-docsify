@@ -4,6 +4,8 @@ Provides a callback for setting the modal dialog box request result.
 
 **Since:** 9
 
+<!--Device-dialogRequest-export interface RequestCallback--><!--Device-dialogRequest-export interface RequestCallback-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Sets the result of the request for the modal dialog box.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RequestCallback-setRequestResult(result: RequestResult): void--><!--Device-RequestCallback-setRequestResult(result: RequestResult): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | RequestResult | Yes | Request result to set. |
+| result | [RequestResult](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-requestresult-i-sys.md) | Yes | Request result to set. |
 
 **Error codes:**
 

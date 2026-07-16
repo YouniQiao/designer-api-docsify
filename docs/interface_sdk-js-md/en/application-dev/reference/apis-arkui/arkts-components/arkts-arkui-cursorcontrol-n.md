@@ -2,6 +2,8 @@
 
 **Since:** 11
 
+<!--Device-unnamed-declare namespace cursorControl--><!--Device-unnamed-declare namespace cursorControl-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Summary

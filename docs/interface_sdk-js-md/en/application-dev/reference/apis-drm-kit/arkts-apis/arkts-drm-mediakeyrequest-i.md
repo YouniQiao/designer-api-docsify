@@ -4,6 +4,8 @@ Provides the drm media key request definitions.
 
 **Since:** 12
 
+<!--Device-drm-interface MediaKeyRequest--><!--Device-drm-interface MediaKeyRequest-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Media key request data sent to media key server.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MediaKeyRequest-data: Uint8Array--><!--Device-MediaKeyRequest-data: Uint8Array-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## defaultURL
@@ -42,6 +46,8 @@ Media key server URL.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MediaKeyRequest-defaultURL: string--><!--Device-MediaKeyRequest-defaultURL: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## mediaKeyRequestType
@@ -57,6 +63,8 @@ Media key request type.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MediaKeyRequest-mediaKeyRequestType: MediaKeyRequestType--><!--Device-MediaKeyRequest-mediaKeyRequestType: MediaKeyRequestType-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 

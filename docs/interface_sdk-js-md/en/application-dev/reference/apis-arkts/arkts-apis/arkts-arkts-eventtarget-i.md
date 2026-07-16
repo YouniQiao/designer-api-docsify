@@ -8,6 +8,8 @@ Specific event features.
 
 **Substitutes:** WorkerEventTarget
 
+<!--Device-unnamed-export interface EventTarget--><!--Device-unnamed-export interface EventTarget-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Adds an event listener to the worker.
 
 **Substitutes:** addEventListener
 
+<!--Device-EventTarget-addEventListener(type: string, listener: EventListener): void--><!--Device-EventTarget-addEventListener(type: string, listener: EventListener): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -37,7 +41,7 @@ Adds an event listener to the worker.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the event to listen for. |
-| listener | EventListener | Yes | listener Callback to invoke when an event of the specified type occurs. |
+| listener | [EventListener](arkts-arkts-eventlistener-t.md) | Yes | listener Callback to invoke when an event of the specified type occurs. |
 
 **Example**
 
@@ -67,13 +71,15 @@ Dispatches the event defined for the worker.
 
 **Substitutes:** dispatchEvent
 
+<!--Device-EventTarget-dispatchEvent(event: Event): boolean--><!--Device-EventTarget-dispatchEvent(event: Event): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Event | Yes | Event to dispatch. |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-event-c.md) | Yes | Event to dispatch. |
 
 **Return value:**
 
@@ -141,6 +147,8 @@ Removes all event listeners for the worker.
 
 **Substitutes:** removeAllListener
 
+<!--Device-EventTarget-removeAllListener(): void--><!--Device-EventTarget-removeAllListener(): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Example**
@@ -173,6 +181,8 @@ Removes an event defined for the worker.
 
 **Substitutes:** removeEventListener
 
+<!--Device-EventTarget-removeEventListener(type: string, callback?: EventListener): void--><!--Device-EventTarget-removeEventListener(type: string, callback?: EventListener): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -180,7 +190,7 @@ Removes an event defined for the worker.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the event for which the event listener is removed. |
-| callback | EventListener | No | Callback of the event listener to remove. |
+| callback | [EventListener](arkts-arkts-eventlistener-t.md) | No | Callback of the event listener to remove. |
 
 **Example**
 

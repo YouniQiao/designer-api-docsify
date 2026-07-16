@@ -18,6 +18,8 @@ Get all avsession descriptors of the system
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function getAllSessionDescriptors(callback: AsyncCallback<Array<Readonly<AVSessionDescriptor>>>): void--><!--Device-avSession-function getAllSessionDescriptors(callback: AsyncCallback<Array<Readonly<AVSessionDescriptor>>>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Get all avsession descriptors of the system
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;Readonly&lt;AVSessionDescriptor&gt;&gt;&gt; | Yes | async callback for an array ofAVSessionDescriptors. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Readonly<AVSessionDescriptor>>> | Yes | async callback for an array of AVSessionDescriptors. |
 
 **Error codes:**
 
@@ -82,6 +84,8 @@ Get all avsession descriptors which can be shown on system entrance.
 - API version 23+: ohos.permission.MANAGE_MEDIA_RESOURCES or ohos.permission.MANAGE_MEDIA_RESOURCES_FOR_PUBLIC
 - API version 9 - 22: ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function getAllSessionDescriptors(): Promise<Array<Readonly<AVSessionDescriptor>>>--><!--Device-avSession-function getAllSessionDescriptors(): Promise<Array<Readonly<AVSessionDescriptor>>>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -90,7 +94,7 @@ Get all avsession descriptors which can be shown on system entrance.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Readonly&lt;AVSessionDescriptor&gt;&gt;&gt; | Promise for an array of AVSessionDescriptors |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Readonly<AVSessionDescriptor>>> | Promise for an array of AVSessionDescriptors |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Provides information about the selected content.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface RichEditorSelection--><!--Device-unnamed-declare interface RichEditorSelection-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selection
@@ -22,6 +24,8 @@ Range of the selected.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-RichEditorSelection-selection: [number, number]--><!--Device-RichEditorSelection-selection: [number, number]-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## spans
@@ -39,6 +43,8 @@ Span information.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RichEditorSelection-spans: Array<RichEditorTextSpanResult | RichEditorImageSpanResult>--><!--Device-RichEditorSelection-spans: Array<RichEditorTextSpanResult | RichEditorImageSpanResult>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -12,10 +12,11 @@ import { cloudData } from '@kit.ArkData';
 function changeConfirmation(sharingResource: string, state: State, callback: AsyncCallback<Result<void>>): void
 ```
 
-Changes the invitation confirmation state based on the shared resource ID.
-This API uses an asynchronous callback to return the result.
+Changes the invitation confirmation state based on the shared resource ID.This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+<!--Device-sharing-function changeConfirmation(sharingResource: string, state: State, callback: AsyncCallback<Result<void>>): void--><!--Device-sharing-function changeConfirmation(sharingResource: string, state: State, callback: AsyncCallback<Result<void>>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -26,8 +27,8 @@ This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sharingResource | string | Yes | Shared resource ID. |
-| state | State | Yes | New confirmation state of the invitation. |
-| callback | AsyncCallback&lt;Result&lt;void&gt;&gt; | Yes | Callback used to return the result. |
+| state | [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-state-e.md) | Yes | New confirmation state of the invitation. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Result<void>> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -59,10 +60,11 @@ cloudData.sharing.changeConfirmation('sharing_resource_test', cloudData.sharing.
 function changeConfirmation(sharingResource: string, state: State): Promise<Result<void>>
 ```
 
-Changes the invitation confirmation state based on the shared resource ID.
-This API uses a promise to return the result.
+Changes the invitation confirmation state based on the shared resource ID.This API uses a promise to return the result.
 
 **Since:** 11
+
+<!--Device-sharing-function changeConfirmation(sharingResource: string, state: State): Promise<Result<void>>--><!--Device-sharing-function changeConfirmation(sharingResource: string, state: State): Promise<Result<void>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -73,13 +75,13 @@ This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sharingResource | string | Yes | Shared resource ID. |
-| state | State | Yes | New confirmation state of the invitation. |
+| state | [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-state-e.md) | Yes | New confirmation state of the invitation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;void&gt;&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Result<void>> | Promise used to return the result. |
 
 **Error codes:**
 

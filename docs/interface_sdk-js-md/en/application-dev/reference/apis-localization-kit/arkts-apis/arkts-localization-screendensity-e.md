@@ -4,6 +4,8 @@ Enumerates the screen density types.
 
 **Since:** 6
 
+<!--Device-resourceManager-export enum ScreenDensity--><!--Device-resourceManager-export enum ScreenDensity-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 ## SCREEN_SDPI
@@ -17,6 +19,8 @@ Small-scale DPI.
 **Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScreenDensity-SCREEN_SDPI = 120--><!--Device-ScreenDensity-SCREEN_SDPI = 120-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -32,6 +36,8 @@ Medium-scale DPI.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScreenDensity-SCREEN_MDPI = 160--><!--Device-ScreenDensity-SCREEN_MDPI = 160-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 ## SCREEN_LDPI
@@ -45,6 +51,8 @@ Large-scale DPI.
 **Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScreenDensity-SCREEN_LDPI = 240--><!--Device-ScreenDensity-SCREEN_LDPI = 240-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -60,6 +68,8 @@ Extra-large-scale DPI.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScreenDensity-SCREEN_XLDPI = 320--><!--Device-ScreenDensity-SCREEN_XLDPI = 320-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 ## SCREEN_XXLDPI
@@ -74,6 +84,8 @@ Extra-extra-large-scale DPI.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScreenDensity-SCREEN_XXLDPI = 480--><!--Device-ScreenDensity-SCREEN_XXLDPI = 480-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 ## SCREEN_XXXLDPI
@@ -87,6 +99,8 @@ Extra-extra-extra-large-scale DPI.
 **Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScreenDensity-SCREEN_XXXLDPI = 640--><!--Device-ScreenDensity-SCREEN_XXXLDPI = 640-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 

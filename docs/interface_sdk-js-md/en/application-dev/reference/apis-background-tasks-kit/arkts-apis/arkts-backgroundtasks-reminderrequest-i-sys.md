@@ -4,6 +4,8 @@ Defines the request for publishing a reminder.
 
 **Since:** 9
 
+<!--Device-reminderAgentManager-interface ReminderRequest--><!--Device-reminderAgentManager-interface ReminderRequest-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## Modules to Import
@@ -18,10 +20,8 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 forceDistributed?: boolean
 ```
 
-Whether notifications are forcibly displayed in all scenarios across devices. The default value is **false**. For
-details, see
-[NotificationRequest.forceDistributed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-i-sys.md#forcedistributed)
-- **true**: Notifications are displayed on all collaboration devices.
+Whether notifications are forcibly displayed in all scenarios across devices. The default value is **false**. For details, see [NotificationRequest.forceDistributed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-i-sys.md#forcedistributed)  
+- **true**: Notifications are displayed on all collaboration devices.  
 - **false**: Notifications are displayed on the applications that are on the collaborative management list.
 
 **Type:** boolean
@@ -29,6 +29,8 @@ details, see
 **Default:** false
 
 **Since:** 23
+
+<!--Device-ReminderRequest-forceDistributed?: boolean--><!--Device-ReminderRequest-forceDistributed?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -40,10 +42,8 @@ details, see
 notDistributed?: boolean
 ```
 
-Whether notifications are not displayed in all scenarios across devices. The default value is **false**. For
-details, see
-[NotificationRequest.notDistributed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-i-sys.md#notdistributed)
-- **true**: Notifications are displayed only on the local device.
+Whether notifications are not displayed in all scenarios across devices. The default value is **false**. For details, see [NotificationRequest.notDistributed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-i-sys.md#notdistributed)  
+- **true**: Notifications are displayed only on the local device.  
 - **false**: Notifications are displayed on all collaborative devices.
 
 **Type:** boolean
@@ -51,6 +51,8 @@ details, see
 **Default:** false
 
 **Since:** 23
+
+<!--Device-ReminderRequest-notDistributed?: boolean--><!--Device-ReminderRequest-notDistributed?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 

@@ -2,6 +2,8 @@
 
 **Since:** 10
 
+<!--Device-unnamed-declare namespace mindSporeLite--><!--Device-unnamed-declare namespace mindSporeLite-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 ## Modules to Import

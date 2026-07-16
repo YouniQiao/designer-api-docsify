@@ -4,6 +4,8 @@ Defines an HTTP Interceptor. User can implement this interface to define the han
 
 **Since:** 22
 
+<!--Device-http-export interface HttpInterceptor--><!--Device-http-export interface HttpInterceptor-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -24,20 +26,22 @@ Intercept an HTTP process and do changes as disired.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-HttpInterceptor-interceptorHandle(reqContext: HttpRequestContext, rspContext: HttpResponse): Promise<ChainContinue>--><!--Device-HttpInterceptor-interceptorHandle(reqContext: HttpRequestContext, rspContext: HttpResponse): Promise<ChainContinue>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reqContext | HttpRequestContext | Yes | the context of the target HTTP request. |
-| rspContext | HttpResponse | Yes | the context of the target HTTP response. |
+| reqContext | [HttpRequestContext](arkts-network-httprequestcontext-i.md) | Yes | the context of the target HTTP request. |
+| rspContext | [HttpResponse](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-httpresponse-i.md) | Yes | the context of the target HTTP response. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ChainContinue&gt; | Continue the HTTP process or terminate then return the HTTP response. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ChainContinue> | Continue the HTTP process or terminate then return the HTTP response. |
 
 **Example**
 
@@ -92,6 +96,8 @@ The type of this interceptor. It defines when this intercptor would be called.
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-HttpInterceptor-interceptorType: InterceptorType--><!--Device-HttpInterceptor-interceptorType: InterceptorType-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

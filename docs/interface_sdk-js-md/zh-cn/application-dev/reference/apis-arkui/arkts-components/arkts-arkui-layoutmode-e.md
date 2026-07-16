@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare enum LayoutMode--><!--Device-unnamed-declare enum LayoutMode-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## AUTO
@@ -18,7 +20,9 @@ AUTO = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LayoutMode-AUTO = 0--><!--Device-LayoutMode-AUTO = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,7 +38,9 @@ VERTICAL = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LayoutMode-VERTICAL = 1--><!--Device-LayoutMode-VERTICAL = 1-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,7 +56,9 @@ HORIZONTAL = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LayoutMode-HORIZONTAL = 2--><!--Device-LayoutMode-HORIZONTAL = 2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

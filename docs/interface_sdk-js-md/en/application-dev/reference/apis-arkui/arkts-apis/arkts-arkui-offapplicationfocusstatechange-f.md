@@ -18,13 +18,15 @@ Unregister the callback for application process focus state changes.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-window-function offApplicationFocusStateChange(callback?: Callback<boolean>): void--><!--Device-window-function offApplicationFocusStateChange(callback?: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;boolean&gt; | No | Callback used to return the result whether application processfocused or not. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<boolean> | No | Callback used to return the result whether application process focused or not. If not provided, all callbacks for the given event type will be removed. |
 
 **Example**
 

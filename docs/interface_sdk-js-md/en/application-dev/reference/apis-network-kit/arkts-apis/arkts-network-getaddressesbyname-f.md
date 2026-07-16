@@ -18,6 +18,8 @@ Resolves the host name to obtain all IP addresses based on the default data netw
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-connection-function getAddressesByName(host: string, callback: AsyncCallback<Array<NetAddress>>): void--><!--Device-connection-function getAddressesByName(host: string, callback: AsyncCallback<Array<NetAddress>>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -25,7 +27,7 @@ Resolves the host name to obtain all IP addresses based on the default data netw
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | host | string | Yes | Indicates the host name or the domain. |
-| callback | AsyncCallback&lt;Array&lt;NetAddress&gt;&gt; | Yes | Returns the NetAddress list. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<NetAddress>> | Yes | Returns the NetAddress list. |
 
 **Error codes:**
 
@@ -66,6 +68,8 @@ Resolves the host name to obtain all IP addresses based on the default data netw
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-connection-function getAddressesByName(host: string): Promise<Array<NetAddress>>--><!--Device-connection-function getAddressesByName(host: string): Promise<Array<NetAddress>>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -78,7 +82,7 @@ Resolves the host name to obtain all IP addresses based on the default data netw
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NetAddress&gt;&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<NetAddress>> | The promise returned by the function. |
 
 **Error codes:**
 

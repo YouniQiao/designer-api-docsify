@@ -1,5 +1,11 @@
 # destroyTimer（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { systemTimer } from '@kit.BasicServicesKit';
+```
+
 ## destroyTimer
 
 ```TypeScript
@@ -10,6 +16,8 @@ function destroyTimer(timer: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
+<!--Device-systemTimer-function destroyTimer(timer: long, callback: AsyncCallback<void>): void--><!--Device-systemTimer-function destroyTimer(timer: long, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **系统接口：** 此接口为系统接口。
@@ -19,7 +27,7 @@ function destroyTimer(timer: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | timer | number | 是 | 定时器的ID。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -73,6 +81,8 @@ function destroyTimer(timer: number): Promise<void>
 
 **起始版本：** 7
 
+<!--Device-systemTimer-function destroyTimer(timer: long): Promise<void>--><!--Device-systemTimer-function destroyTimer(timer: long): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **系统接口：** 此接口为系统接口。
@@ -87,7 +97,7 @@ function destroyTimer(timer: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

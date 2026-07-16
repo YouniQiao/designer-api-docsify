@@ -12,12 +12,13 @@ import { connection } from '@kit.NetworkKit';
 function getNetExtAttributeSync(netHandle: NetHandle): string
 ```
 
-Get the network extended attribute for a {@link NetHandle} object.
-To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Get the network extended attribute for a {@link NetHandle} object.To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-connection-function getNetExtAttributeSync(netHandle: NetHandle): string--><!--Device-connection-function getNetExtAttributeSync(netHandle: NetHandle): string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -25,7 +26,7 @@ To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the network to be queried. See {@link NetHandle}. |
+| netHandle | [NetHandle](arkts-network-nethandle-i.md) | Yes | Indicates the network to be queried. See {@link NetHandle}. |
 
 **Return value:**
 

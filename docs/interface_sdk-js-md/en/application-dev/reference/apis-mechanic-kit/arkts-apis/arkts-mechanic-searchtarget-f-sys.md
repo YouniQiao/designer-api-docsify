@@ -16,6 +16,8 @@ Searching for a specified target.
 
 **Since:** 21
 
+<!--Device-mechanicManager-function searchTarget(target: TargetInfo, params: SearchParams): Promise<SearchResult>--><!--Device-mechanicManager-function searchTarget(target: TargetInfo, params: SearchParams): Promise<SearchResult>-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -24,14 +26,14 @@ Searching for a specified target.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | TargetInfo | Yes | Target infomation. |
-| params | SearchParams | Yes | Parameters to use when searching. |
+| target | [TargetInfo](../../apis-arkui/arkts-apis/arkts-arkui-targetinfo-i.md) | Yes | Target infomation. |
+| params | [SearchParams](../../apis-arkui/arkts-apis/arkts-arkui-searchparams-i.md) | Yes | Parameters to use when searching. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SearchResult&gt; | Promise that return the Search result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SearchResult> | Promise that return the Search result. |
 
 **Error codes:**
 

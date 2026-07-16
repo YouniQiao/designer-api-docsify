@@ -18,6 +18,8 @@ Adds a scanner. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-scan-function addScanner(uniqueId: string, discoveryMode: ScannerDiscoveryMode): Promise<void>--><!--Device-scan-function addScanner(uniqueId: string, discoveryMode: ScannerDiscoveryMode): Promise<void>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -27,13 +29,13 @@ Adds a scanner. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uniqueId | string | Yes | Unique ID of the scanner. |
-| discoveryMode | ScannerDiscoveryMode | Yes | Discovery mode. |
+| discoveryMode | [ScannerDiscoveryMode](arkts-basicservices-scannerdiscoverymode-e.md) | Yes | Discovery mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

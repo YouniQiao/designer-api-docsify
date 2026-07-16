@@ -14,11 +14,11 @@ function pushUrl(options: RouterOptions, callback: AsyncCallback<void>): void
 
 Navigates to a specified page in the application.
 
-> **NOTE**
->
-> - Since API version 10, you can use the
-> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> **NOTE**  
+>  
+> - Since API version 10, you can use the  
+> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in  
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated  
 > with the current UI context.
 
 **Since:** 9
@@ -29,14 +29,16 @@ Navigates to a specified page in the application.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-router-function pushUrl(options: RouterOptions, callback: AsyncCallback<void>): void--><!--Device-router-function pushUrl(options: RouterOptions, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | RouterOptions | Yes | Page routing parameters. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| options | [RouterOptions](arkts-arkui-routeroptions-i.md) | Yes | Page routing parameters. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -92,11 +94,11 @@ function pushUrl(options: RouterOptions): Promise<void>
 
 Navigates to a specified page in the application.
 
-> **NOTE**
->
-> - Since API version 10, you can use the
-> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> **NOTE**  
+>  
+> - Since API version 10, you can use the  
+> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in  
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated  
 > with the current UI context.
 
 **Since:** 9
@@ -107,19 +109,21 @@ Navigates to a specified page in the application.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-router-function pushUrl(options: RouterOptions): Promise<void>--><!--Device-router-function pushUrl(options: RouterOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | RouterOptions | Yes | Page routing parameters. |
+| options | [RouterOptions](arkts-arkui-routeroptions-i.md) | Yes | Page routing parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -177,11 +181,11 @@ function pushUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCallba
 
 Navigates to a specified page in the application.
 
-> **NOTE**
->
-> - Since API version 10, you can use the
-> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> **NOTE**  
+>  
+> - Since API version 10, you can use the  
+> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in  
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated  
 > with the current UI context.
 
 **Since:** 9
@@ -192,15 +196,17 @@ Navigates to a specified page in the application.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-router-function pushUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCallback<void>): void--><!--Device-router-function pushUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | RouterOptions | Yes | Page routing parameters. |
-| mode | RouterMode | Yes | Routing mode. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| options | [RouterOptions](arkts-arkui-routeroptions-i.md) | Yes | Page routing parameters. |
+| mode | [RouterMode](arkts-arkui-routermode-e.md) | Yes | Routing mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -256,11 +262,11 @@ function pushUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 
 Navigates to a specified page in the application.
 
-> **NOTE**
->
-> - Since API version 10, you can use the
-> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> **NOTE**  
+>  
+> - Since API version 10, you can use the  
+> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in  
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated  
 > with the current UI context.
 
 **Since:** 9
@@ -271,20 +277,22 @@ Navigates to a specified page in the application.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-router-function pushUrl(options: RouterOptions, mode: RouterMode): Promise<void>--><!--Device-router-function pushUrl(options: RouterOptions, mode: RouterMode): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | RouterOptions | Yes | Page routing parameters. |
-| mode | RouterMode | Yes | Routing mode. |
+| options | [RouterOptions](arkts-arkui-routeroptions-i.md) | Yes | Page routing parameters. |
+| mode | [RouterMode](arkts-arkui-routermode-e.md) | Yes | Routing mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 

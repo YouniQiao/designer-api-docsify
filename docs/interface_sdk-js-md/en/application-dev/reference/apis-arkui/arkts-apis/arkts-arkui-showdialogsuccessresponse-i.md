@@ -4,6 +4,8 @@ Defines the response of ShowDialog.
 
 **Since:** 11
 
+<!--Device-unnamed-export interface ShowDialogSuccessResponse--><!--Device-unnamed-export interface ShowDialogSuccessResponse-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,6 +27,8 @@ Defines the index of data.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ShowDialogSuccessResponse-index: number--><!--Device-ShowDialogSuccessResponse-index: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

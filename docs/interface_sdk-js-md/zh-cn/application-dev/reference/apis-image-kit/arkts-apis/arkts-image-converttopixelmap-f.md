@@ -1,5 +1,11 @@
 # convertToPixelMap
 
+## 导入模块
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+```
+
 ## convertToPixelMap
 
 ```TypeScript
@@ -10,13 +16,15 @@ Creates a image PixelMap from sendable image PixelMap.
 
 **起始版本：** 12
 
+<!--Device-sendableImage-function convertToPixelMap(pixelmap: PixelMap): image.PixelMap--><!--Device-sendableImage-function convertToPixelMap(pixelmap: PixelMap): image.PixelMap-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelmap | PixelMap | 是 | the src pixelmap. |
+| pixelmap | [PixelMap](arkts-image-pixelmap-i.md) | 是 | the src pixelmap. |
 
 **返回值：**
 

@@ -4,6 +4,8 @@ Indicates the event ID of call ability.
 
 **Since:** 8
 
+<!--Device-call-export enum CallAbilityEventId--><!--Device-call-export enum CallAbilityEventId-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -17,6 +19,8 @@ EVENT_DIAL_NO_CARRIER = 1
 Indicates there is no available carrier during dialing.
 
 **Since:** 8
+
+<!--Device-CallAbilityEventId-EVENT_DIAL_NO_CARRIER = 1--><!--Device-CallAbilityEventId-EVENT_DIAL_NO_CARRIER = 1-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -32,6 +36,8 @@ Indicates invalid FDN.
 
 **Since:** 8
 
+<!--Device-CallAbilityEventId-EVENT_INVALID_FDN_NUMBER = 2--><!--Device-CallAbilityEventId-EVENT_INVALID_FDN_NUMBER = 2-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -45,6 +51,8 @@ EVENT_HOLD_CALL_FAILED = 3
 Indicates hold call fail.
 
 **Since:** 11
+
+<!--Device-CallAbilityEventId-EVENT_HOLD_CALL_FAILED = 3--><!--Device-CallAbilityEventId-EVENT_HOLD_CALL_FAILED = 3-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -60,6 +68,8 @@ Indicates swap call fail.
 
 **Since:** 11
 
+<!--Device-CallAbilityEventId-EVENT_SWAP_CALL_FAILED = 4--><!--Device-CallAbilityEventId-EVENT_SWAP_CALL_FAILED = 4-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -73,6 +83,8 @@ EVENT_COMBINE_CALL_FAILED = 5
 Indicates combine call failed.
 
 **Since:** 11
+
+<!--Device-CallAbilityEventId-EVENT_COMBINE_CALL_FAILED = 5--><!--Device-CallAbilityEventId-EVENT_COMBINE_CALL_FAILED = 5-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -88,6 +100,8 @@ Indicates split call failed.
 
 **Since:** 11
 
+<!--Device-CallAbilityEventId-EVENT_SPLIT_CALL_FAILED = 6--><!--Device-CallAbilityEventId-EVENT_SPLIT_CALL_FAILED = 6-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -102,6 +116,8 @@ Indicates show full screen.
 
 **Since:** 12
 
+<!--Device-CallAbilityEventId-EVENT_SHOW_FULL_SCREEN = 7--><!--Device-CallAbilityEventId-EVENT_SHOW_FULL_SCREEN = 7-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -115,6 +131,8 @@ EVENT_SHOW_FLOAT_WINDOW = 8
 Indicates show float window.
 
 **Since:** 12
+
+<!--Device-CallAbilityEventId-EVENT_SHOW_FLOAT_WINDOW = 8--><!--Device-CallAbilityEventId-EVENT_SHOW_FLOAT_WINDOW = 8-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 

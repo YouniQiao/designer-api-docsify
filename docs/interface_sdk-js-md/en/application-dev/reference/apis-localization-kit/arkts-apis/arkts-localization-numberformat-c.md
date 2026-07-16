@@ -4,6 +4,8 @@ Provides the API for formatting number strings.
 
 **Since:** 6
 
+<!--Device-intl-export class NumberFormat--><!--Device-intl-export class NumberFormat-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
@@ -23,6 +25,8 @@ Creates a **NumberFormat** object for the current system locale.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NumberFormat-constructor()--><!--Device-NumberFormat-constructor()-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -48,14 +52,16 @@ Creates a **NumberFormat** object based on the specified locale and options.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NumberFormat-constructor(locale: string | Array<string>, options?: NumberOptions)--><!--Device-NumberFormat-constructor(locale: string | Array<string>, options?: NumberOptions)-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, thefirst valid locale ID is used. |
-| options | NumberOptions | No | Options for creating the **NumberFormat** object. |
+| locale | string \| Array<string> | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
+| options | [NumberOptions](arkts-localization-numberoptions-i.md) | No | Options for creating the **NumberFormat** object. |
 
 **Example**
 
@@ -78,6 +84,8 @@ Formats a number.
 **Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NumberFormat-format(num: double): string--><!--Device-NumberFormat-format(num: double): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -123,6 +131,8 @@ Formats a number range.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-NumberFormat-formatRange(startRange: double, endRange: double): string--><!--Device-NumberFormat-formatRange(startRange: double, endRange: double): string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -160,13 +170,15 @@ Obtains the options for creating a **NumberFormat** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NumberFormat-resolvedOptions(): NumberOptions--><!--Device-NumberFormat-resolvedOptions(): NumberOptions-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| NumberOptions | Options for creating the **NumberFormat** object. |
+| [NumberOptions](arkts-localization-numberoptions-i.md) | Options for creating the **NumberFormat** object. |
 
 **Example**
 

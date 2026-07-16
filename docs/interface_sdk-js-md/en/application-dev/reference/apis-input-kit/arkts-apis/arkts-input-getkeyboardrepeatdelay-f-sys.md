@@ -16,6 +16,8 @@ Obtains the keyboard repeat delay. This API uses an asynchronous callback to ret
 
 **Since:** 10
 
+<!--Device-inputDevice-function getKeyboardRepeatDelay(callback: AsyncCallback<int>): void--><!--Device-inputDevice-function getKeyboardRepeatDelay(callback: AsyncCallback<int>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Obtains the keyboard repeat delay. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the keyboard repeat rate. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the keyboard repeat rate. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -76,6 +78,8 @@ Obtains the keyboard repeat delay. This API uses a promise to return the result.
 
 **Since:** 10
 
+<!--Device-inputDevice-function getKeyboardRepeatDelay(): Promise<int>--><!--Device-inputDevice-function getKeyboardRepeatDelay(): Promise<int>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 **System API:** This is a system API.
@@ -84,7 +88,7 @@ Obtains the keyboard repeat delay. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the keyboard repeat delay. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the keyboard repeat delay. |
 
 **Error codes:**
 

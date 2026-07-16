@@ -1,5 +1,11 @@
 # setAbilityFileTypesForSelf（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## setAbilityFileTypesForSelf
 
 ```TypeScript
@@ -12,6 +18,8 @@ function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fil
 
 **需要权限：** ohos.permission.MANAGE_SELF_SKILLS
 
+<!--Device-bundleManager-function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fileTypes: Array<string>): void--><!--Device-bundleManager-function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fileTypes: Array<string>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fil
 | --- | --- | --- | --- |
 | moduleName | string | 是 | 表示模块的名称。 |
 | abilityName | string | 是 | 表示UIAbility组件的名称。 |
-| fileTypes | Array&lt;string&gt; | 是 | 表示文件类型。fileTypes数组长度不能超过1024，每个元素不能超过512个字符，元素取值为[UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformdatatype-e.md)中的值，元素不能为空、通配符、general.object。 |
+| fileTypes | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 表示文件类型。fileTypes数组长度不能超过1024，每个元素不能超过512个字符，元素取值为[UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformdatatype-e.md)中的值，元素不能为空、通配符、general.object。 |
 
 **错误码：**
 

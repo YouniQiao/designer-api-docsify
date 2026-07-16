@@ -4,6 +4,8 @@ Provides interfaces to manage ethernet.
 
 **Since:** 20
 
+<!--Device-unnamed-declare namespace eap--><!--Device-unnamed-declare namespace eap-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## Modules to Import

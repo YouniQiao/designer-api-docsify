@@ -1,9 +1,10 @@
 # WhiteBalanceQuery (System API)
 
-WhiteBalanceQuery provides APIs to check whether a white balance mode is supported and obtain the white balance
-mode range supported.
+WhiteBalanceQuery provides APIs to check whether a white balance mode is supported and obtain the white balance mode range supported.
 
 **Since:** 20
+
+<!--Device-camera-interface WhiteBalanceQuery--><!--Device-camera-interface WhiteBalanceQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -29,13 +30,15 @@ Query the color tint range.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-WhiteBalanceQuery-getColorTintRange(): Array<int>--><!--Device-WhiteBalanceQuery-getColorTintRange(): Array<int>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | The array of color tint range. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | The array of color tint range. |
 
 **Error codes:**
 

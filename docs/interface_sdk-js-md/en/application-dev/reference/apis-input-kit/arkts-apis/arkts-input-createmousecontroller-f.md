@@ -20,13 +20,15 @@ Creates a mouse controller for simulating mouse operations. This API uses a prom
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-inputEventClient-function createMouseController(): Promise<MouseController>--><!--Device-inputEventClient-function createMouseController(): Promise<MouseController>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MouseController&gt; | Promise used to return the mouse controller instance. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<MouseController> | Promise used to return the mouse controller instance. |
 
 **Error codes:**
 

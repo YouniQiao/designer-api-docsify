@@ -1,10 +1,14 @@
 # ConcatArray
 
+<!--Device-unnamed-interface ConcatArray<T>--><!--Device-unnamed-interface ConcatArray<T>-End-->
+
 ## join
 
 ```TypeScript
 join(separator?: string): string
 ```
+
+<!--Device-ConcatArray-join(separator?: string): string--><!--Device-ConcatArray-join(separator?: string): string-End-->
 
 **Parameters:**
 
@@ -23,6 +27,8 @@ join(separator?: string): string
 ```TypeScript
 slice(start?: number, end?: number): T[]
 ```
+
+<!--Device-ConcatArray-slice(start?: number, end?: number): T[]--><!--Device-ConcatArray-slice(start?: number, end?: number): T[]-End-->
 
 **Parameters:**
 
@@ -45,6 +51,8 @@ readonly length: number
 
 **Type:** number
 
+<!--Device-ConcatArray-readonly length: number--><!--Device-ConcatArray-readonly length: number-End-->
+
 ## n
 
 ```TypeScript
@@ -52,4 +60,6 @@ readonly [n: number]: T
 ```
 
 **Type:** T
+
+<!--Device-ConcatArray-readonly [n: number]: T--><!--Device-ConcatArray-readonly [n: number]: T-End-->
 

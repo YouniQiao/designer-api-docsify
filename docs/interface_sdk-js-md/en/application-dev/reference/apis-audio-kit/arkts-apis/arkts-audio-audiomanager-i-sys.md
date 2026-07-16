@@ -2,10 +2,11 @@
 
 This interface implements audio volume and device management.
 
-Before calling any API in AudioManager, you must use
-[getAudioManager](arkts-audio-getaudiomanager-f.md#getaudiomanager-1) to obtain an AudioManager instance.
+Before calling any API in AudioManager, you must use [getAudioManager](arkts-audio-getaudiomanager-f.md#getaudiomanager-1) to obtain an AudioManager instance.
 
 **Since:** 7
+
+<!--Device-audio-interface AudioManager--><!--Device-audio-interface AudioManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -27,6 +28,8 @@ user disable the safe media volume state.
 
 **Required permissions:** ohos.permission.MODIFY_AUDIO_SETTINGS
 
+<!--Device-AudioManager-disableSafeMediaVolume(): Promise<void>--><!--Device-AudioManager-disableSafeMediaVolume(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
@@ -35,7 +38,7 @@ user disable the safe media volume state.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -67,6 +70,8 @@ Obtains a collaborative playback management instance.
 
 **Since:** 20
 
+<!--Device-AudioManager-getCollaborativeManager(): AudioCollaborativeManager--><!--Device-AudioManager-getCollaborativeManager(): AudioCollaborativeManager-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
@@ -75,7 +80,7 @@ Obtains a collaborative playback management instance.
 
 | Type | Description |
 | --- | --- |
-| AudioCollaborativeManager | Returns a collaborative playback management instance. |
+| [AudioCollaborativeManager](arkts-audio-audiocollaborativemanager-i-sys.md) | Returns a collaborative playback management instance. |
 
 **Error codes:**
 
@@ -93,6 +98,8 @@ Obtains an {@link AudioEffectManager} instance.
 
 **Since:** 18
 
+<!--Device-AudioManager-getEffectManager(): AudioEffectManager--><!--Device-AudioManager-getEffectManager(): AudioEffectManager-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
@@ -101,7 +108,7 @@ Obtains an {@link AudioEffectManager} instance.
 
 | Type | Description |
 | --- | --- |
-| AudioEffectManager | AudioEffectManager instance. |
+| [AudioEffectManager](arkts-audio-audioeffectmanager-i-sys.md) | AudioEffectManager instance. |
 
 **Error codes:**
 
@@ -128,6 +135,8 @@ Obtains the values of a certain key. This method uses a promise to return the qu
 
 **Since:** 11
 
+<!--Device-AudioManager-getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<string, string>>--><!--Device-AudioManager-getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<string, string>>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
@@ -137,13 +146,13 @@ Obtains the values of a certain key. This method uses a promise to return the qu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mainKey | string | Yes | Main key of the audio parameters to get. |
-| subKeys | Array&lt;string&gt; | No | Sub keys of the audio parameters to get. |
+| subKeys | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | No | Sub keys of the audio parameters to get. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, string&gt;&gt; | Promise used to return the key-value pairs. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Record<string, string>> | Promise used to return the key-value pairs. |
 
 **Error codes:**
 
@@ -181,6 +190,8 @@ Listens for system volume change events. This method uses a callback to get volu
 
 **Substitutes:** event:volumeChange
 
+<!--Device-AudioManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void--><!--Device-AudioManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -190,7 +201,7 @@ Listens for system volume change events. This method uses a callback to get volu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'volumeChange' | Yes | Type of the event to listen for. Only the volumeChange event is supported. |
-| callback | Callback&lt;VolumeEvent&gt; | Yes | Callback used to get the system volume change event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VolumeEvent> | Yes | Callback used to get the system volume change event. |
 
 **Example**
 
@@ -217,6 +228,8 @@ Listens for ringer mode change events. This method uses a callback to get ringer
 
 **Substitutes:** event:ringerModeChange
 
+<!--Device-AudioManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void--><!--Device-AudioManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
 **System API:** This is a system API.
@@ -225,8 +238,8 @@ Listens for ringer mode change events. This method uses a callback to get ringer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'ringerModeChange' | Yes | Type of the event to listen for. Only the ringerModeChange event issupported. |
-| callback | Callback&lt;AudioRingMode&gt; | Yes | Callback used to get the updated ringer mode. |
+| type | 'ringerModeChange' | Yes | Type of the event to listen for. Only the ringerModeChange event is supported. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioRingMode> | Yes | Callback used to get the updated ringer mode. |
 
 **Example**
 
@@ -243,10 +256,11 @@ audioManager.on('ringerModeChange', (ringerMode: audio.AudioRingMode) => {
 setAudioScene(scene: AudioScene, callback: AsyncCallback<void>): void
 ```
 
-Sets the audio scene mode to change audio strategies. This method uses an asynchronous callback to return the
-result.
+Sets the audio scene mode to change audio strategies. This method uses an asynchronous callback to return the result.
 
 **Since:** 8
+
+<!--Device-AudioManager-setAudioScene(scene: AudioScene, callback: AsyncCallback<void>): void--><!--Device-AudioManager-setAudioScene(scene: AudioScene, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
@@ -256,8 +270,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scene | AudioScene | Yes | Audio scene mode. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| scene | [AudioScene](arkts-audio-audioscene-e.md) | Yes | Audio scene mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -284,6 +298,8 @@ Sets the audio scene mode to change audio strategies. This method uses a promise
 
 **Since:** 8
 
+<!--Device-AudioManager-setAudioScene(scene: AudioScene): Promise<void>--><!--Device-AudioManager-setAudioScene(scene: AudioScene): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
 **System API:** This is a system API.
@@ -292,13 +308,13 @@ Sets the audio scene mode to change audio strategies. This method uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scene | AudioScene | Yes | Audio scene mode. |
+| scene | [AudioScene](arkts-audio-audioscene-e.md) | Yes | Audio scene mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Example**
 
@@ -325,6 +341,8 @@ Sets extra audio parameters. This method uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MODIFY_AUDIO_SETTINGS
 
+<!--Device-AudioManager-setExtraParameters(mainKey: string, kvpairs: Record<string, string>): Promise<void>--><!--Device-AudioManager-setExtraParameters(mainKey: string, kvpairs: Record<string, string>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
@@ -334,13 +352,13 @@ Sets extra audio parameters. This method uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mainKey | string | Yes | Main key of the audio parameters to set. |
-| kvpairs | Record&lt;string, string&gt; | Yes | Key-value pairs with subkeys and values to set. |
+| kvpairs | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, string> | Yes | Key-value pairs with subkeys and values to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 

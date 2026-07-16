@@ -1,5 +1,11 @@
 # getCrossingSwitchState（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { cooperate } from '@kit.DistributedServiceKit';
+```
+
 ## getCrossingSwitchState
 
 ```TypeScript
@@ -14,6 +20,8 @@ function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boole
 
 **替代接口：** getCooperateSwitchState(networkId:
 
+<!--Device-cooperate-function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boolean>): void--><!--Device-cooperate-function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **系统接口：** 此接口为系统接口。
@@ -23,7 +31,7 @@ function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boole
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | networkId | string | 是 | 键鼠穿越目标设备描述符。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数，返回true表示目标设备键鼠穿越的开关开启，返回false表示开关未开启。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数，返回true表示目标设备键鼠穿越的开关开启，返回false表示开关未开启。 |
 
 **错误码：**
 
@@ -67,6 +75,8 @@ function getCrossingSwitchState(networkId: string): Promise<boolean>
 
 **替代接口：** getCooperateSwitchState(networkId:
 
+<!--Device-cooperate-function getCrossingSwitchState(networkId: string): Promise<boolean>--><!--Device-cooperate-function getCrossingSwitchState(networkId: string): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **系统接口：** 此接口为系统接口。
@@ -81,7 +91,7 @@ function getCrossingSwitchState(networkId: string): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回true表示目标设备键鼠穿越的开关开启，返回false表示开关未开启。 |
+| Promise<boolean> | Promise对象，返回true表示目标设备键鼠穿越的开关开启，返回false表示开关未开启。 |
 
 **错误码：**
 

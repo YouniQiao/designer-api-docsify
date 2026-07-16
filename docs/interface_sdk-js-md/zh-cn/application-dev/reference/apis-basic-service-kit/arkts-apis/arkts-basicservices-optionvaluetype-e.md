@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+<!--Device-scan-enum OptionValueType--><!--Device-scan-enum OptionValueType-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## SCAN_TYPE_BOOL
@@ -15,6 +17,8 @@ SCAN_TYPE_BOOL = 0
 布尔类型。
 
 **起始版本：** 20
+
+<!--Device-OptionValueType-SCAN_TYPE_BOOL = 0--><!--Device-OptionValueType-SCAN_TYPE_BOOL = 0-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -28,6 +32,8 @@ SCAN_TYPE_INT = 1
 
 **起始版本：** 20
 
+<!--Device-OptionValueType-SCAN_TYPE_INT = 1--><!--Device-OptionValueType-SCAN_TYPE_INT = 1-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## SCAN_TYPE_FIXED
@@ -40,6 +46,8 @@ SCAN_TYPE_FIXED = 2
 
 **起始版本：** 20
 
+<!--Device-OptionValueType-SCAN_TYPE_FIXED = 2--><!--Device-OptionValueType-SCAN_TYPE_FIXED = 2-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## SCAN_TYPE_STRING
@@ -51,6 +59,8 @@ SCAN_TYPE_STRING = 3
 字符串类型。
 
 **起始版本：** 20
+
+<!--Device-OptionValueType-SCAN_TYPE_STRING = 3--><!--Device-OptionValueType-SCAN_TYPE_STRING = 3-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

@@ -1,5 +1,11 @@
 # getSuperAdmin（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { adminManager } from '@kit.MDMKit';
+```
+
 ## getSuperAdmin
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getSuperAdmin(): Promise<Want>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-adminManager-function getSuperAdmin(): Promise<Want>--><!--Device-adminManager-function getSuperAdmin(): Promise<Want>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function getSuperAdmin(): Promise<Want>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Want&gt; | 返回超级设备管理应用的Promise对象。当设备没有激活超级管理应用时，返回的Promise中Want的bundleName与abilityName为空串。 |
+| Promise<Want> | 返回超级设备管理应用的Promise对象。当设备没有激活超级管理应用时，返回的Promise中Want的bundleName与abilityName为空串。 |
 
 **错误码：**
 

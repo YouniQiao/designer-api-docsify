@@ -4,6 +4,8 @@ Provides the flag attributes of this window.
 
 **Since:** 9
 
+<!--Device-unnamed-declare interface WindowFilter--><!--Device-unnamed-declare interface WindowFilter-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 ## Modules to Import
@@ -18,14 +20,15 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 active?: boolean
 ```
 
-Whether the window is interacting with the user. The value **true** indicates that the window is interacting with
-the user, and **false** indicates the opposite.
+Whether the window is interacting with the user. The value **true** indicates that the window is interacting with the user, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WindowFilter-active?: boolean--><!--Device-WindowFilter-active?: boolean-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -35,8 +38,7 @@ the user, and **false** indicates the opposite.
 actived?: boolean
 ```
 
-Whether the window is interacting with the user. The value **true** indicates that the window is interacting with
-the user, and **false** indicates the opposite.
+Whether the window is interacting with the user. The value **true** indicates that the window is interacting with the user, and **false** indicates the opposite.
 
 This API is deprecated since API version 11. You are advised to use the **active** API instead.
 
@@ -47,6 +49,8 @@ This API is deprecated since API version 11. You are advised to use the **active
 **Deprecated since:** 11
 
 **Substitutes:** active
+
+<!--Device-WindowFilter-actived?: boolean--><!--Device-WindowFilter-actived?: boolean-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -64,6 +68,8 @@ Bundle name of the application to which the window belongs. The default value is
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WindowFilter-bundleName?: string--><!--Device-WindowFilter-bundleName?: string-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 ## displayId
@@ -72,14 +78,15 @@ Bundle name of the application to which the window belongs. The default value is
 displayId?: number
 ```
 
-ID of the display to which the window belongs. The value is an integer greater than or equal to 0. The default
-value is the default screen ID of the device.
+ID of the display to which the window belongs. The value is an integer greater than or equal to 0. The default value is the default screen ID of the device.
 
 **Type:** number
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-WindowFilter-displayId?: int--><!--Device-WindowFilter-displayId?: int-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -89,14 +96,15 @@ value is the default screen ID of the device.
 focused?: boolean
 ```
 
-Whether the window is focused. The value **true** indicates that the window is focused, and **false** indicates the
-opposite. The default value is **false**.
+Whether the window is focused. The value **true** indicates that the window is focused, and **false** indicates the opposite. The default value is **false**.
 
 **Type:** boolean
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WindowFilter-focused?: boolean--><!--Device-WindowFilter-focused?: boolean-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -113,6 +121,8 @@ Title of the window. The default value is empty.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WindowFilter-title?: string--><!--Device-WindowFilter-title?: string-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 

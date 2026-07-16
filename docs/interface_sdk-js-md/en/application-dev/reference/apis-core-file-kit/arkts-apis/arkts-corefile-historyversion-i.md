@@ -1,10 +1,10 @@
 # HistoryVersion
 
-Represents the historical version information of the device-cloud file when the
-[gethistoryversionlist](arkts-corefile-fileversion-c.md#gethistoryversionlist-1) method of the
-[FileVersion](arkts-corefile-fileversion-c.md) class is called.
+Represents the historical version information of the device-cloud file when the [gethistoryversionlist](arkts-corefile-fileversion-c.md#gethistoryversionlist-1) method of the [FileVersion](arkts-corefile-fileversion-c.md) class is called.
 
 **Since:** 20
+
+<!--Device-cloudSync-interface HistoryVersion--><!--Device-cloudSync-interface HistoryVersion-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -22,16 +22,15 @@ autoResolved: boolean
 
 Whether the current version is the one where conflicts were automatically resolved.
 
-When the application is set to manually resolve conflicts, **false** is returned by default, which is
-meaningless.
+When the application is set to manually resolve conflicts, **false** is returned by default, which is meaningless.
 
-When the application is set to automatically resolve conflicts, the device side automatically resolves conflicts.
-The value **true** means conflicts exist in the current version and have been automatically resolved by the
-device-cloud service; the value **false** means no conflict exists and conflicts are not automatically resolved.
+When the application is set to automatically resolve conflicts, the device side automatically resolves conflicts.The value **true** means conflicts exist in the current version and have been automatically resolved by the device-cloud service; the value **false** means no conflict exists and conflicts are not automatically resolved.
 
 **Type:** boolean
 
 **Since:** 20
+
+<!--Device-HistoryVersion-autoResolved: boolean--><!--Device-HistoryVersion-autoResolved: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -47,6 +46,8 @@ File content modification timestamp, in milliseconds.
 
 **Since:** 20
 
+<!--Device-HistoryVersion-editedTime: long--><!--Device-HistoryVersion-editedTime: long-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## fileSize
@@ -60,6 +61,8 @@ File size in bytes.
 **Type:** number
 
 **Since:** 20
+
+<!--Device-HistoryVersion-fileSize: long--><!--Device-HistoryVersion-fileSize: long-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -75,6 +78,8 @@ File name of the current version.
 
 **Since:** 20
 
+<!--Device-HistoryVersion-originalFileName: string--><!--Device-HistoryVersion-originalFileName: string-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## sha256
@@ -89,6 +94,8 @@ Hash value of the file content of the current version.
 
 **Since:** 20
 
+<!--Device-HistoryVersion-sha256: string--><!--Device-HistoryVersion-sha256: string-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## versionId
@@ -102,6 +109,8 @@ File version.
 **Type:** string
 
 **Since:** 20
+
+<!--Device-HistoryVersion-versionId: string--><!--Device-HistoryVersion-versionId: string-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

@@ -4,6 +4,8 @@ Wi-Fi device configuration information.
 
 **Since:** 12
 
+<!--Device-wifiManager-interface WifiDeviceConfig--><!--Device-wifiManager-interface WifiDeviceConfig-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Wi-Fi bssid(MAC): the length is 6.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WifiDeviceConfig-bssid?: string--><!--Device-WifiDeviceConfig-bssid?: string-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## bssidType
@@ -42,6 +46,8 @@ Wi-Fi bssid type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WifiDeviceConfig-bssidType?: DeviceAddressType--><!--Device-WifiDeviceConfig-bssidType?: DeviceAddressType-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## eapConfig
@@ -55,6 +61,8 @@ EAP config info.
 **Type:** WifiEapConfig
 
 **Since:** 10
+
+<!--Device-WifiDeviceConfig-eapConfig?: WifiEapConfig--><!--Device-WifiDeviceConfig-eapConfig?: WifiEapConfig-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -70,6 +78,8 @@ Hide SSID or not, false(default): not hide
 
 **Since:** 9
 
+<!--Device-WifiDeviceConfig-isHiddenSsid?: boolean--><!--Device-WifiDeviceConfig-isHiddenSsid?: boolean-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## netId
@@ -83,6 +93,8 @@ Allocated networkId
 **Type:** number
 
 **Since:** 22
+
+<!--Device-WifiDeviceConfig-netId?: int--><!--Device-WifiDeviceConfig-netId?: int-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -100,6 +112,8 @@ Wi-Fi key: maximum length is 64.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WifiDeviceConfig-preSharedKey: string--><!--Device-WifiDeviceConfig-preSharedKey: string-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## securityType
@@ -115,6 +129,8 @@ Security type: reference definition of WifiSecurityType
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WifiDeviceConfig-securityType: WifiSecurityType--><!--Device-WifiDeviceConfig-securityType: WifiSecurityType-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -132,6 +148,8 @@ Wi-Fi SSID: the maximum length is 32.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WifiDeviceConfig-ssid: string--><!--Device-WifiDeviceConfig-ssid: string-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## wapiConfig
@@ -145,6 +163,8 @@ WAPI config info.
 **Type:** WifiWapiConfig
 
 **Since:** 12
+
+<!--Device-WifiDeviceConfig-wapiConfig?: WifiWapiConfig--><!--Device-WifiDeviceConfig-wapiConfig?: WifiWapiConfig-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 

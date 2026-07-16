@@ -14,13 +14,13 @@ function traceByValue(name: string, count: number): void
 
 Traces the value changes of an integer variable.
 
-Since API version 19, you are advised to use the
-[traceByValue<sup>19+</sup>()](arkts-performanceanalysis-tracebyvalue-f.md#tracebyvalue-2)
-API to specify the trace output level
+Since API version 19, you are advised to use the [traceByValue<sup>19+</sup>()](arkts-performanceanalysis-tracebyvalue-f.md#tracebyvalue-2)API to specify the trace output level
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-hiTraceMeter-function traceByValue(name: string, count: long): void--><!--Device-hiTraceMeter-function traceByValue(name: string, count: long): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
@@ -28,7 +28,7 @@ API to specify the trace output level
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the integer variable to trace.<br>The maximum length of a trace record is 512bytes. The excess part will be truncated. It is recommended that the length of this parameter be less than orequal to 420 bytes. |
+| name | string | Yes | Name of the integer variable to trace.<br>The maximum length of a trace record is 512bytes. The excess part will be truncated. It is recommended that the length of this parameter be less than or equal to 420 bytes. |
 | count | number | Yes | Value of an integer variable. |
 
 **Example**
@@ -49,12 +49,13 @@ hiTraceMeter.traceByValue("myTestCount", traceCount);  // When myTestCount chang
 function traceByValue(level: HiTraceOutputLevel, name: string, count: number): void
 ```
 
-Traces an integer with the trace output level specified. It is used to mark the name and value of a predefined
-integer variable to be traced.
+Traces an integer with the trace output level specified. It is used to mark the name and value of a predefined integer variable to be traced.
 
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-hiTraceMeter-function traceByValue(level: HiTraceOutputLevel, name: string, count: long): void--><!--Device-hiTraceMeter-function traceByValue(level: HiTraceOutputLevel, name: string, count: long): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
@@ -62,8 +63,8 @@ integer variable to be traced.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | HiTraceOutputLevel | Yes | Trace output level. |
-| name | string | Yes | Name of the integer variable to trace.<br>The maximum length of a trace record is 512bytes. The excess part will be truncated. It is recommended that the length of this parameter be less than orequal to 420 bytes. |
+| level | [HiTraceOutputLevel](arkts-performanceanalysis-hitraceoutputlevel-e.md) | Yes | Trace output level. |
+| name | string | Yes | Name of the integer variable to trace.<br>The maximum length of a trace record is 512bytes. The excess part will be truncated. It is recommended that the length of this parameter be less than or equal to 420 bytes. |
 | count | number | Yes | Value of an integer variable. |
 
 **Example**

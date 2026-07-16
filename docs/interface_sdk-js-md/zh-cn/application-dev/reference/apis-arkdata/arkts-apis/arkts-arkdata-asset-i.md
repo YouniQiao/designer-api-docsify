@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-commonType-interface Asset--><!--Device-commonType-interface Asset-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CommonType
+
+## 导入模块
+
+```TypeScript
+import { commonType } from '@kit.ArkData';
+```
 
 ## createTime
 
@@ -17,6 +25,8 @@ createTime: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-Asset-createTime: string--><!--Device-Asset-createTime: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CommonType
 
@@ -32,6 +42,8 @@ modifyTime: string
 
 **起始版本：** 11
 
+<!--Device-Asset-modifyTime: string--><!--Device-Asset-modifyTime: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CommonType
 
 ## name
@@ -45,6 +57,8 @@ name: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-Asset-name: string--><!--Device-Asset-name: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CommonType
 
@@ -60,6 +74,8 @@ path: string
 
 **起始版本：** 11
 
+<!--Device-Asset-path: string--><!--Device-Asset-path: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CommonType
 
 ## size
@@ -73,6 +89,8 @@ size: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-Asset-size: string--><!--Device-Asset-size: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CommonType
 
@@ -88,6 +106,8 @@ status?: AssetStatus
 
 **起始版本：** 11
 
+<!--Device-Asset-status?: AssetStatus--><!--Device-Asset-status?: AssetStatus-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CommonType
 
 ## uri
@@ -101,6 +121,8 @@ uri: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-Asset-uri: string--><!--Device-Asset-uri: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CommonType
 

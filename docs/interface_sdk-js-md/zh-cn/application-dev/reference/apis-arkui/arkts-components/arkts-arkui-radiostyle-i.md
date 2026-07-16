@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare interface RadioStyle--><!--Device-unnamed-declare interface RadioStyle-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## checkedBackgroundColor
@@ -24,7 +26,9 @@ checkedBackgroundColor?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RadioStyle-checkedBackgroundColor?: ResourceColor--><!--Device-RadioStyle-checkedBackgroundColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,8 +38,7 @@ checkedBackgroundColor?: ResourceColor
 indicatorColor?: ResourceColor
 ```
 
-开启状态内部圆饼颜色。从API version 12开始，indicatorType设置为RadioIndicatorType.TICK和RadioIndicatorType.DOT时，支持修改内部颜色。indicatorType
-设置为RadioIndicatorType.CUSTOM时，不支持修改内部颜色。
+开启状态内部圆饼颜色。从API version 12开始，indicatorType设置为RadioIndicatorType.TICK和RadioIndicatorType.DOT时，支持修改内部颜色。indicatorType设置为RadioIndicatorType.CUSTOM时，不支持修改内部颜色。
 
 默认值：`$r('sys.color.ohos_id_color_foreground_contrary')`
 
@@ -47,7 +50,9 @@ indicatorColor?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RadioStyle-indicatorColor?: ResourceColor--><!--Device-RadioStyle-indicatorColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,7 +74,9 @@ uncheckedBorderColor?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RadioStyle-uncheckedBorderColor?: ResourceColor--><!--Device-RadioStyle-uncheckedBorderColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

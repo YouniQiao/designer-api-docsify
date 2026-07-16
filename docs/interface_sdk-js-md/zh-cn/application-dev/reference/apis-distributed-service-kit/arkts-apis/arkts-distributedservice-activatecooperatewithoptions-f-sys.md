@@ -1,5 +1,11 @@
 # activateCooperateWithOptions（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { cooperate } from '@kit.DistributedServiceKit';
+```
+
 ## activateCooperateWithOptions
 
 ```TypeScript
@@ -14,6 +20,12 @@ function activateCooperateWithOptions(targetNetworkId: string, inputDeviceId: nu
 
 **需要权限：** ohos.permission.COOPERATE_MANAGER
 
+<!--Device-cooperate-function activateCooperateWithOptions(targetNetworkId: string, inputDeviceId: int,
+    cooperateOptions?: CooperateOptions
+  ): Promise<void>--><!--Device-cooperate-function activateCooperateWithOptions(targetNetworkId: string, inputDeviceId: int,
+    cooperateOptions?: CooperateOptions
+  ): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **系统接口：** 此接口为系统接口。
@@ -24,13 +36,13 @@ function activateCooperateWithOptions(targetNetworkId: string, inputDeviceId: nu
 | --- | --- | --- | --- |
 | targetNetworkId | string | 是 | 键鼠穿越目标设备描述符。 |
 | inputDeviceId | number | 是 | 发起穿越操作的输入设备ID。 |
-| cooperateOptions | CooperateOptions | 否 | 穿越可选控制参数，用于控制穿出点具体位置等。不设置此参数时，本接口能力与[cooperate.activateCooperate](arkts-distributedservice-activatecooperate-f-sys.md#activatecooperate-2)相同。 |
+| cooperateOptions | [CooperateOptions](arkts-distributedservice-cooperateoptions-i-sys.md) | 否 | 穿越可选控制参数，用于控制穿出点具体位置等。不设置此参数时，本接口能力与[cooperate.activateCooperate](arkts-distributedservice-activatecooperate-f-sys.md#activatecooperate-2)相同。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

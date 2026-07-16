@@ -1,11 +1,18 @@
 # ColorPicker
 
-取色类，用于从一张图像数据中获取它的主要颜色。在调用ColorPicker的方法前，需要先通过
-[createColorPicker](arkts-arkgraphics2d-createcolorpicker-f.md#createcolorpicker-1)创建一个ColorPicker实例。
+取色类，用于从一张图像数据中获取它的主要颜色。在调用ColorPicker的方法前，需要先通过[createColorPicker](arkts-arkgraphics2d-createcolorpicker-f.md#createcolorpicker-1)创建一个ColorPicker实例。
 
 **起始版本：** 9
 
+<!--Device-effectKit-interface ColorPicker--><!--Device-effectKit-interface ColorPicker-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
+
+## 导入模块
+
+```TypeScript
+import { effectKit } from '@kit.ArkGraphics2D';
+```
 
 ## getAverageColor
 
@@ -17,9 +24,11 @@ getAverageColor(): Color
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ColorPicker-getAverageColor(): Color--><!--Device-ColorPicker-getAverageColor(): Color-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -27,7 +36,7 @@ getAverageColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| Color | Color实例，即图像平均的颜色值，失败时返回null。 |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md) | Color实例，即图像平均的颜色值，失败时返回null。 |
 
 **示例：**
 
@@ -73,9 +82,11 @@ getHighestSaturationColor(): Color
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ColorPicker-getHighestSaturationColor(): Color--><!--Device-ColorPicker-getHighestSaturationColor(): Color-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -83,7 +94,7 @@ getHighestSaturationColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| Color | Color实例，即图像饱和度最高的颜色值，失败时返回null。 |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md) | Color实例，即图像饱和度最高的颜色值，失败时返回null。 |
 
 **示例：**
 
@@ -129,9 +140,11 @@ getLargestProportionColor(): Color
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ColorPicker-getLargestProportionColor(): Color--><!--Device-ColorPicker-getLargestProportionColor(): Color-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -139,7 +152,7 @@ getLargestProportionColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| Color | Color实例，即图像占比最多的颜色值，失败时返回null。 |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md) | Color实例，即图像占比最多的颜色值，失败时返回null。 |
 
 **示例：**
 
@@ -185,9 +198,11 @@ getMainColor(): Promise<Color>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ColorPicker-getMainColor(): Promise<Color>--><!--Device-ColorPicker-getMainColor(): Promise<Color>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -195,7 +210,7 @@ getMainColor(): Promise<Color>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Color&gt; | Promise对象。返回图像主色对应的颜色值，失败时返回错误信息。 |
+| Promise<Color> | Promise对象。返回图像主色对应的颜色值，失败时返回错误信息。 |
 
 **示例：**
 
@@ -243,9 +258,11 @@ getMainColorSync(): Color
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ColorPicker-getMainColorSync(): Color--><!--Device-ColorPicker-getMainColorSync(): Color-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -253,7 +270,7 @@ getMainColorSync(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| Color | Color实例，即图像主色对应的颜色值，失败时返回null。 |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md) | Color实例，即图像主色对应的颜色值，失败时返回null。 |
 
 **示例：**
 
@@ -299,9 +316,11 @@ getTopProportionColors(colorCount: number): Array<Color | null>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ColorPicker-getTopProportionColors(colorCount: int): Array<Color | null>--><!--Device-ColorPicker-getTopProportionColors(colorCount: int): Array<Color | null>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -315,7 +334,7 @@ getTopProportionColors(colorCount: number): Array<Color | null>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Color \| null&gt; | Color数组，即图像占比前`colorCount`的颜色值数组，按占比排序。- 当实际读取的特征色个数小于`colorCount`时，数组大小为实际特征色个数。- 取色失败或取色个数小于1返回`[null]`。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Color \| null> | Color数组，即图像占比前`colorCount`的颜色值数组，按占比排序。  - 当实际读取的特征色个数小于`colorCount`时，数组大小为实际特征色个数。  - 取色失败或取色个数小于1返回`[null]`。 |
 
 **示例：**
 
@@ -365,9 +384,11 @@ isBlackOrWhiteOrGrayColor(color: number): boolean
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ColorPicker-isBlackOrWhiteOrGrayColor(color: long): boolean--><!--Device-ColorPicker-isBlackOrWhiteOrGrayColor(color: long): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

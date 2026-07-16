@@ -4,6 +4,8 @@ Defines the carrier configuration.
 
 **Since:** 8
 
+<!--Device-sim-export interface OperatorConfig--><!--Device-sim-export interface OperatorConfig-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Indicates the field.
 
 **Since:** 8
 
+<!--Device-OperatorConfig-field: string--><!--Device-OperatorConfig-field: string-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Indicates the value.
 **Type:** string
 
 **Since:** 8
+
+<!--Device-OperatorConfig-value: string--><!--Device-OperatorConfig-value: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 

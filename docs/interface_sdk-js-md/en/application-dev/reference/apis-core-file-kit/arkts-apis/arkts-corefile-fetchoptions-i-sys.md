@@ -8,6 +8,8 @@ Defines the options for fetching file attributes.
 
 **Substitutes:** [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchoptions-i.md)
 
+<!--Device-userFileManager-interface FetchOptions--><!--Device-userFileManager-interface FetchOptions-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -24,11 +26,7 @@ import { userFileManager } from '@kit.CoreFileKit';
 fetchColumns: Array<string>
 ```
 
-Options for fetching files based on the attributes in columns. If this parameter is left empty, files are fetched
-by URI, name, and type (the specific field names vary with the file asset or album object) by default. In
-addition, an error will be reported if
-[get](arkts-corefile-userfilemanager-i-sys.md#getphotoassets-1)
-is called to obtain other attributes of this object. Example:
+Options for fetching files based on the attributes in columns. If this parameter is left empty, files are fetched by URI, name, and type (the specific field names vary with the file asset or album object) by default. In addition, an error will be reported if [get](arkts-corefile-userfilemanager-i-sys.md#getphotoassets-1)is called to obtain other attributes of this object. Example:
 
 fetchColumns: ['uri', 'title']
 
@@ -39,6 +37,8 @@ fetchColumns: ['uri', 'title']
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [fetchColumns](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchoptions-i.md#fetchcolumns)
+
+<!--Device-FetchOptions-fetchColumns: Array<string>--><!--Device-FetchOptions-fetchColumns: Array<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -59,6 +59,8 @@ Predicates that specify the fetch criteria.
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [predicates](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchoptions-i.md#predicates)
+
+<!--Device-FetchOptions-predicates: dataSharePredicates.DataSharePredicates--><!--Device-FetchOptions-predicates: dataSharePredicates.DataSharePredicates-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

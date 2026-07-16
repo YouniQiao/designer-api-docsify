@@ -1,19 +1,17 @@
 # UserAuthInstance
 
-Provides APIs for user authentication. The user authentication widget is supported. This API provides complete user
-authentication capabilities, including subscribing to authentication results and intermediate states, and starting
-and canceling authentication. The unified authentication widget provides users with a standardized authentication
-UI and consistent authentication experience.
+Provides APIs for user authentication. The user authentication widget is supported. This API provides complete user authentication capabilities, including subscribing to authentication results and intermediate states, and starting and canceling authentication. The unified authentication widget provides users with a standardized authentication UI and consistent authentication experience.
 
-Before using the APIs of **UserAuthInstance**, you must obtain a **UserAuthInstance** instance by using
-[getUserAuthInstance](arkts-userauthentication-getuserauthinstance-f.md#getuserauthinstance-1).
+Before using the APIs of **UserAuthInstance**, you must obtain a **UserAuthInstance** instance by using [getUserAuthInstance](arkts-userauthentication-getuserauthinstance-f.md#getuserauthinstance-1).
 
 > **NOTE**
 
-> Each **UserAuthInstance** can be used for only one authentication process. To perform authentication again, you
+> Each **UserAuthInstance** can be used for only one authentication process. To perform authentication again, you  
 > must obtain a new **UserAuthInstance** instance.
 
 **Since:** 10
+
+<!--Device-userAuth-interface UserAuthInstance--><!--Device-userAuth-interface UserAuthInstance-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -40,6 +38,8 @@ Cancels this authentication.
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UserAuthInstance-cancel(): void--><!--Device-UserAuthInstance-cancel(): void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -105,12 +105,14 @@ Unsubscribes from the user authentication result.
 
 > **NOTE**
 
-> The [UserAuthInstance](arkts-userauthentication-userauthinstance-i.md) instance used to invoke this API must be the one used
+> The [UserAuthInstance](arkts-userauthentication-userauthinstance-i.md) instance used to invoke this API must be the one used  
 > to subscribe to the event.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UserAuthInstance-off(type: 'result', callback?: IAuthCallback): void--><!--Device-UserAuthInstance-off(type: 'result', callback?: IAuthCallback): void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -119,7 +121,7 @@ Unsubscribes from the user authentication result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'result' | Yes | Event type. The value is **result**, which indicates the authentication result. |
-| callback | IAuthCallback | No | Callback used to return the user authentication result. If this parameter isnot passed, the value passed when the[on('result')](arkts-userauthentication-userauthinstance-i.md#on-1) API is called isused by default. |
+| callback | [IAuthCallback](arkts-userauthentication-iauthcallback-i.md) | No | Callback used to return the user authentication result. If this parameter is not passed, the value passed when the [on('result')](arkts-userauthentication-userauthinstance-i.md#on-1) API is called is used by default. |
 
 **Error codes:**
 
@@ -183,12 +185,14 @@ Unsubscribes from the event for intermediate authentication status.
 
 > **NOTE**
 
-> The [UserAuthInstance](arkts-userauthentication-userauthinstance-i.md) instance used to invoke this API must be the one used
+> The [UserAuthInstance](arkts-userauthentication-userauthinstance-i.md) instance used to invoke this API must be the one used  
 > to subscribe to the event.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-UserAuthInstance-off(type: 'authTip', callback?: AuthTipCallback): void--><!--Device-UserAuthInstance-off(type: 'authTip', callback?: AuthTipCallback): void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -196,8 +200,8 @@ Unsubscribes from the event for intermediate authentication status.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'authTip' | Yes | Event type. The supported event is **'authTip'**. This API unsubscribes from theevent triggered by [on('authtip')](arkts-userauthentication-userauthinstance-i.md#on-2) after the[start()](arkts-userauthentication-userauthinstance-i.md#start-1) call and the initiation of authentication. |
-| callback | AuthTipCallback | No | Callback used to return the intermediate authentication status. If thisparameter is not passed, the value passed when the[on('authtip')](arkts-userauthentication-userauthinstance-i.md#on-2) API is called is used by default. |
+| type | 'authTip' | Yes | Event type. The supported event is **'authTip'**. This API unsubscribes from the event triggered by [on('authtip')](arkts-userauthentication-userauthinstance-i.md#on-2) after the [start()](arkts-userauthentication-userauthinstance-i.md#start-1) call and the initiation of authentication. |
+| callback | [AuthTipCallback](arkts-userauthentication-authtipcallback-t.md) | No | Callback used to return the intermediate authentication status. If this parameter is not passed, the value passed when the [on('authtip')](arkts-userauthentication-userauthinstance-i.md#on-2) API is called is used by default. |
 
 **Error codes:**
 
@@ -254,26 +258,22 @@ try {
 on(type: 'result', callback: IAuthCallback): void
 ```
 
-Subscribes to the user authentication result. This API is used to obtain the final identity authentication result
-after the user completes identity authentication interaction with the authentication component. Before the
-authentication widget disappears, the intermediate authentication failures will not be returned through this API.
-Only the final authentication result (success or failure) is returned through this API. To perceive each
-authentication failure and intermediate status during the entire authentication process, use the
-[on('authTip')](arkts-userauthentication-userauthinstance-i.md#on-2) API for
-subscription.
+Subscribes to the user authentication result. This API is used to obtain the final identity authentication result after the user completes identity authentication interaction with the authentication component. Before the authentication widget disappears, the intermediate authentication failures will not be returned through this API.Only the final authentication result (success or failure) is returned through this API. To perceive each authentication failure and intermediate status during the entire authentication process, use the [on('authTip')](arkts-userauthentication-userauthinstance-i.md#on-2) API for subscription.
 
 > **NOTE**
 
-> On PCs/2-in-1 devices, if an application initiates authentication in an application modal dialog (that is, a
-> valid **uiContext** is passed when the user API parameter [widgetParam](arkts-userauthentication-widgetparam-i.md) is
-> configured) and receives the authentication result, and if other windows need to be displayed, the application
-> needs to obtain the flag message released by the component pop-up window and subscribe to the component release
-> message (**authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED**) through the
+> On PCs/2-in-1 devices, if an application initiates authentication in an application modal dialog (that is, a  
+> valid **uiContext** is passed when the user API parameter [widgetParam](arkts-userauthentication-widgetparam-i.md) is  
+> configured) and receives the authentication result, and if other windows need to be displayed, the application  
+> needs to obtain the flag message released by the component pop-up window and subscribe to the component release  
+> message (**authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED**) through the  
 > [on('authTip')](arkts-userauthentication-userauthinstance-i.md#on-2) API.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UserAuthInstance-on(type: 'result', callback: IAuthCallback): void--><!--Device-UserAuthInstance-on(type: 'result', callback: IAuthCallback): void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -282,7 +282,7 @@ subscription.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'result' | Yes | Event type. The value is **result**, which indicates the authentication result. |
-| callback | IAuthCallback | Yes | Callback used to return the user authentication result. |
+| callback | [IAuthCallback](arkts-userauthentication-iauthcallback-i.md) | Yes | Callback used to return the user authentication result. |
 
 **Error codes:**
 
@@ -297,21 +297,22 @@ subscription.
 on(type: 'authTip', callback: AuthTipCallback): void
 ```
 
-Subscribes to authentication tip information. This API is used to obtain the widget startup and exit messages and
-each authentication failure. This API uses an asynchronous callback to return the result.
+Subscribes to authentication tip information. This API is used to obtain the widget startup and exit messages and each authentication failure. This API uses an asynchronous callback to return the result.
 
 > **NOTE**
 
-> On PCs/2-in-1 devices, if an application initiates authentication in an application modal dialog (that is, a
-> valid **uiContext** is passed when the user API parameter [widgetParam](arkts-userauthentication-widgetparam-i.md) is
-> configured) and receives the authentication result, and if other windows need to be displayed, the application
-> needs to obtain the flag message released by the component pop-up window and subscribe to the component release
-> message (**authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED**) through the
+> On PCs/2-in-1 devices, if an application initiates authentication in an application modal dialog (that is, a  
+> valid **uiContext** is passed when the user API parameter [widgetParam](arkts-userauthentication-widgetparam-i.md) is  
+> configured) and receives the authentication result, and if other windows need to be displayed, the application  
+> needs to obtain the flag message released by the component pop-up window and subscribe to the component release  
+> message (**authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED**) through the  
 > [on('authTip')](arkts-userauthentication-userauthinstance-i.md#on-2) API.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-UserAuthInstance-on(type: 'authTip', callback: AuthTipCallback): void--><!--Device-UserAuthInstance-on(type: 'authTip', callback: AuthTipCallback): void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -319,8 +320,8 @@ each authentication failure. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'authTip' | Yes | Event type. The supported event is **'authTip'**. This event is triggered when[start()](arkts-userauthentication-userauthinstance-i.md#start-1) is called and authentication is initiated. |
-| callback | AuthTipCallback | Yes | Callback used to return the intermediate authentication status. |
+| type | 'authTip' | Yes | Event type. The supported event is **'authTip'**. This event is triggered when [start()](arkts-userauthentication-userauthinstance-i.md#start-1) is called and authentication is initiated. |
+| callback | [AuthTipCallback](arkts-userauthentication-authtipcallback-t.md) | Yes | Callback used to return the intermediate authentication status. |
 
 **Error codes:**
 
@@ -393,6 +394,8 @@ Starts authentication.
 - API version 10 - 19: ohos.permission.ACCESS_BIOMETRIC
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UserAuthInstance-start(): void--><!--Device-UserAuthInstance-start(): void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 

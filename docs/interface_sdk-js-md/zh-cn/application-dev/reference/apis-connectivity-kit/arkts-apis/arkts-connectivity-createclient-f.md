@@ -1,5 +1,11 @@
 # createClient
 
+## 导入模块
+
+```TypeScript
+import { ssap } from '@kit.ConnectivityKit';
+```
+
 ## createClient
 
 ```TypeScript
@@ -14,6 +20,8 @@ function createClient(address: string): Client
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ssap-function createClient(address: string): Client--><!--Device-ssap-function createClient(address: string): Client-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
@@ -26,7 +34,7 @@ function createClient(address: string): Client
 
 | 类型 | 说明 |
 | --- | --- |
-| Client | Returns a SSAP client instance {@code Client}. |
+| [Client](arkts-connectivity-client-i.md) | Returns a SSAP client instance {@code Client}. |
 
 **错误码：**
 

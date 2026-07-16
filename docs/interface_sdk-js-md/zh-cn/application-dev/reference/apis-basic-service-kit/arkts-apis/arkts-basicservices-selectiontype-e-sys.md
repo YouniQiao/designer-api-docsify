@@ -4,6 +4,8 @@
 
 **起始版本：** 24
 
+<!--Device-selectionManager-enum SelectionType--><!--Device-selectionManager-enum SelectionType-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
@@ -19,6 +21,8 @@ MOUSE_MOVE = 1
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SelectionType-MOUSE_MOVE = 1--><!--Device-SelectionType-MOUSE_MOVE = 1-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 
@@ -36,6 +40,8 @@ DOUBLE_CLICK = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SelectionType-DOUBLE_CLICK = 2--><!--Device-SelectionType-DOUBLE_CLICK = 2-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +57,8 @@ TRIPLE_CLICK = 3
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SelectionType-TRIPLE_CLICK = 3--><!--Device-SelectionType-TRIPLE_CLICK = 3-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 

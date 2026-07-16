@@ -18,6 +18,8 @@ Obtains the alpha identifier of the voice mailbox of the SIM card in a specified
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getVoiceMailIdentifier(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getVoiceMailIdentifier(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Obtains the alpha identifier of the voice mailbox of the SIM card in a specified
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from {@code 0} to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Indicates the callback for getting the voice mailbox alpha identifier;returns an empty string if no voice mailbox alpha identifier is written into the SIM card. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Indicates the callback for getting the voice mailbox alpha identifier;returns an empty string if no voice mailbox alpha identifier is written into the SIM card. |
 
 **Error codes:**
 
@@ -67,6 +69,8 @@ Obtains the alpha identifier of the voice mailbox of the SIM card in a specified
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getVoiceMailIdentifier(slotId: int): Promise<string>--><!--Device-sim-function getVoiceMailIdentifier(slotId: int): Promise<string>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -81,7 +85,7 @@ Obtains the alpha identifier of the voice mailbox of the SIM card in a specified
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the voice mailbox alpha identifier;returns an empty string if no voice mailbox alpha identifier is written into the SIM card. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the voice mailbox alpha identifier;returns an empty string if no voice mailbox alpha identifier is written into the SIM card. |
 
 **Error codes:**
 

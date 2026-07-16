@@ -6,6 +6,8 @@ Provides the scene detection capability. It inherits from [SceneDetectionQuery](
 
 **Since:** 12
 
+<!--Device-camera-interface SceneDetection extends SceneDetectionQuery--><!--Device-camera-interface SceneDetection extends SceneDetectionQuery-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -22,11 +24,11 @@ import { camera } from '@kit.CameraKit';
 enableSceneFeature(type: SceneFeatureType, enabled: boolean): void
 ```
 
-Enables or disables a scene feature. This API must be called after
-[SceneFeatureDetectionResult](arkts-camera-scenefeaturedetectionresult-i-sys.md) of the corresponding scene feature is
-received.
+Enables or disables a scene feature. This API must be called after [SceneFeatureDetectionResult](arkts-camera-scenefeaturedetectionresult-i-sys.md) of the corresponding scene feature is received.
 
 **Since:** 12
+
+<!--Device-SceneDetection-enableSceneFeature(type: SceneFeatureType, enabled: boolean): void--><!--Device-SceneDetection-enableSceneFeature(type: SceneFeatureType, enabled: boolean): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -36,7 +38,7 @@ received.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SceneFeatureType | Yes | Scene feature. |
+| type | [SceneFeatureType](arkts-camera-scenefeaturetype-e-sys.md) | Yes | Scene feature. |
 | enabled | boolean | Yes | Whether to enable the scene feature. **true** to enable, **false** otherwise. |
 
 **Error codes:**

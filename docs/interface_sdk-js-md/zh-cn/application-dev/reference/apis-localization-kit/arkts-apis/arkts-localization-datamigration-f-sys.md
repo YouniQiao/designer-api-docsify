@@ -1,5 +1,11 @@
 # dataMigration（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { fontManager } from '@kit.LocalizationKit';
+```
+
 ## dataMigration
 
 ```TypeScript
@@ -12,6 +18,8 @@ function dataMigration(callback: DataMigrationCallback): number
 
 **需要权限：** ohos.permission.UPDATE_FONT
 
+<!--Device-fontManager-function dataMigration(callback: DataMigrationCallback): int--><!--Device-fontManager-function dataMigration(callback: DataMigrationCallback): int-End-->
+
 **系统能力：** SystemCapability.Global.FontManager
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function dataMigration(callback: DataMigrationCallback): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | DataMigrationCallback | 是 | 数据迁移的回调函数。 |
+| callback | [DataMigrationCallback](arkts-localization-datamigrationcallback-i-sys.md) | 是 | 数据迁移的回调函数。 |
 
 **返回值：**
 

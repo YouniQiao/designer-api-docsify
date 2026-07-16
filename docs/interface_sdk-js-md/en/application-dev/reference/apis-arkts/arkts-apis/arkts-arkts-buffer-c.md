@@ -4,6 +4,8 @@ The Buffer object is a method of handling buffers dedicated to binary data.
 
 **Since:** 9
 
+<!--Device-buffer-class Buffer--><!--Device-buffer-class Buffer-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -30,6 +32,20 @@ Compares this **Buffer** object with another object.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-compare(
+      target: Buffer | Uint8Array,
+      targetStart?: number,
+      targetEnd?: number,
+      sourceStart?: number,
+      sourceEnd?: number
+    ): -1 | 0 | 1--><!--Device-Buffer-compare(
+      target: Buffer | Uint8Array,
+      targetStart?: number,
+      targetEnd?: number,
+      sourceStart?: number,
+      sourceEnd?: number
+    ): -1 | 0 | 1-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -37,22 +53,22 @@ Compares this **Buffer** object with another object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | Buffer \| Uint8Array | Yes | Target **Buffer** object to compare. |
-| targetStart | number | No | Offset to the start of the data to compare in the target **Buffer** object. Thedefault value is **0**. |
-| targetEnd | number | No | Offset to the end of the data to compare in the target **Buffer** object (notinclusive). The default value is the length of the target **Buffer** object. |
-| sourceStart | number | No | Offset to the start of the data to compare in this **Buffer** object. Thedefault value is **0**. |
+| targetStart | number | No | Offset to the start of the data to compare in the target **Buffer** object. The default value is **0**. |
+| targetEnd | number | No | Offset to the end of the data to compare in the target **Buffer** object (not inclusive). The default value is the length of the target **Buffer** object. |
+| sourceStart | number | No | Offset to the start of the data to compare in this **Buffer** object. The default value is **0**. |
 | sourceEnd | number | No | Offset to the end of the data to compare in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| -1 | Comparison result. The value **0** is returned if the two **Buffer** objects are the same; **1** is returned if this object comes after the target object when sorted; **-1** is returned if thisobject comes before the target object when sorted. |
+| -1 | Comparison result. The value **0** is returned if the two **Buffer** objects are the same; **1** is returned if this object comes after the target object when sorted; **-1** is returned if this object comes before the target object when sorted. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out ofrange.It must be &gt;= 0 and &lt;= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range.It must be &gt;= 0 and &lt;= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
 
 **Example**
 
@@ -77,12 +93,13 @@ console.info(buf1.compare(buf2, 5, 6, 5).toString());
 copy(target: Buffer | Uint8Array, targetStart?: number, sourceStart?: number, sourceEnd?: number): number
 ```
 
-Copies data at the specified position in this **Buffer** object to the specified position in another **Buffer**
-object.
+Copies data at the specified position in this **Buffer** object to the specified position in another **Buffer** object.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-copy(target: Buffer | Uint8Array, targetStart?: int, sourceStart?: int, sourceEnd?: int): int--><!--Device-Buffer-copy(target: Buffer | Uint8Array, targetStart?: int, sourceStart?: int, sourceEnd?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -91,9 +108,9 @@ object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | Buffer \| Uint8Array | Yes | **Buffer** or **Uint8Array** object to which data is copied. |
-| targetStart | number | No | Offset to the start position in the target object where data is copied. Thedefault value is **0**. |
-| sourceStart | number | No | Offset to the start position in this **Buffer** object where data is copied. Thedefault value is **0**. |
-| sourceEnd | number | No | Offset to the end position in this **Buffer** object (not inclusive). The defaultvalue is the length of this **Buffer** object. |
+| targetStart | number | No | Offset to the start position in the target object where data is copied. The default value is **0**. |
+| sourceStart | number | No | Offset to the start position in this **Buffer** object where data is copied. The default value is **0**. |
+| sourceEnd | number | No | Offset to the end position in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
 
 **Return value:**
 
@@ -105,7 +122,7 @@ object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/sourceStart/sourceEnd]" is out of range. It mustbe &gt;= 0.Received value is: [targetStart/sourceStart/sourceEnd] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/sourceStart/sourceEnd]" is out of range. It must be &gt;= 0.Received value is: [targetStart/sourceStart/sourceEnd] |
 
 **Example**
 
@@ -137,14 +154,16 @@ Creates and returns an iterator that contains key-value pairs of this **Buffer**
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-entries(): IterableIterator<[int, long]>--><!--Device-Buffer-entries(): IterableIterator<[int, long]>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;[number, number]&gt; | Iterator that contains the key and value, both of which are ofthe number type.<br>**Applicable version:** 9 - 10 |
-| IterableIterator&lt;[number, number]&gt; | <br>**Applicable version:** 11 and later |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<[number, number]> | Iterator that contains the key and value, both of which are of the number type.<br>**Applicable version:** 9 - 10 |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<[number, number]> | <br>**Applicable version:** 11 and later |
 
 **Example**
 
@@ -180,6 +199,8 @@ Checks whether this **Buffer** object is the same as another **Buffer** object.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-equals(otherBuffer: Uint8Array | Buffer): boolean--><!--Device-Buffer-equals(otherBuffer: Uint8Array | Buffer): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -228,6 +249,18 @@ Fills this **Buffer** object at the specified position. By default, data is fill
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-fill(
+      value: string | Buffer | Uint8Array | int | double | long,
+      offset?: int,
+      end?: int,
+      encoding?: BufferEncoding
+    ): Buffer--><!--Device-Buffer-fill(
+      value: string | Buffer | Uint8Array | int | double | long,
+      offset?: int,
+      end?: int,
+      encoding?: BufferEncoding
+    ): Buffer-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -235,15 +268,15 @@ Fills this **Buffer** object at the specified position. By default, data is fill
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | string \| Buffer \| Uint8Array \| number \| number \| number | Yes | Value to fill.<br>**Since:** 11 |
-| offset | number | No | Offset to the start position in this **Buffer** object where data is filled. Thedefault value is **0**. |
-| end | number | No | Offset to the end position in this **Buffer** object (not inclusive). The default value isthe length of this **Buffer** object. |
-| encoding | BufferEncoding | No | Encoding format (valid only when **value** is a string). The default valueis **'utf8'**. |
+| offset | number | No | Offset to the start position in this **Buffer** object where data is filled. The default value is **0**. |
+| end | number | No | Offset to the end position in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
+| encoding | [BufferEncoding](arkts-arkts-bufferencoding-t.md) | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Buffer | **Buffer** object filled with the specified value. |
+| [Buffer](arkts-arkts-buffer-c.md) | **Buffer** object filled with the specified value. |
 
 **Error codes:**
 
@@ -263,6 +296,8 @@ Checks whether this **Buffer** object contains the specified value.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-includes(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): boolean--><!--Device-Buffer-includes(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -270,8 +305,8 @@ Checks whether this **Buffer** object contains the specified value.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | string \| number \| number \| number \| Buffer \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
-| byteOffset | number | No | Number of bytes to skip before starting to check data. If the offset is a negativenumber, data is checked from the end of the **Buffer** object. The default value is **0**. |
-| encoding | BufferEncoding | No | Encoding format (valid only when **value** is a string). The default valueis **'utf8'**. |
+| byteOffset | number | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is **0**. |
+| encoding | [BufferEncoding](arkts-arkts-bufferencoding-t.md) | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
 
 **Return value:**
 
@@ -285,12 +320,13 @@ Checks whether this **Buffer** object contains the specified value.
 indexOf(value: string | number | number | number | Buffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
 ```
 
-Obtains the index of the first occurrence of the specified value in this **Buffer** object. If no match is found,
-**-1** is returned.
+Obtains the index of the first occurrence of the specified value in this **Buffer** object. If no match is found,**-1** is returned.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-indexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int--><!--Device-Buffer-indexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -299,8 +335,8 @@ Obtains the index of the first occurrence of the specified value in this **Buffe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | string \| number \| number \| number \| Buffer \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
-| byteOffset | number | No | Number of bytes to skip before starting to check data. If the offset is a negativenumber, data is checked from the end of the **Buffer** object. The default value is **0**. |
-| encoding | BufferEncoding | No | Encoding format (valid only when **value** is a string). The default valueis **'utf8'**. |
+| byteOffset | number | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is **0**. |
+| encoding | [BufferEncoding](arkts-arkts-bufferencoding-t.md) | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
 
 **Return value:**
 
@@ -320,13 +356,15 @@ Creates and returns an iterator that contains the keys of this **Buffer** object
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-keys(): IterableIterator<int>--><!--Device-Buffer-keys(): IterableIterator<int>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;number&gt; | Iterator created. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<number> | Iterator created. |
 
 **Example**
 
@@ -355,12 +393,13 @@ Output: 0
 lastIndexOf(value: string | number | number | number | Buffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
 ```
 
-Obtains the index of the last occurrence of the specified value in this **Buffer** object. If no match is found,
-**-1** is returned.
+Obtains the index of the last occurrence of the specified value in this **Buffer** object. If no match is found,**-1** is returned.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-lastIndexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int--><!--Device-Buffer-lastIndexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -369,8 +408,8 @@ Obtains the index of the last occurrence of the specified value in this **Buffer
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | string \| number \| number \| number \| Buffer \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
-| byteOffset | number | No | Number of bytes to skip before starting to check data. If the offset is a negativenumber, data is checked from the end of the **Buffer** object. The default value is the length of this**Buffer** object. |
-| encoding | BufferEncoding | No | Encoding format (valid only when **value** is a string). The default valueis **'utf8'**. |
+| byteOffset | number | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is the length of this **Buffer** object. |
+| encoding | [BufferEncoding](arkts-arkts-bufferencoding-t.md) | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
 
 **Return value:**
 
@@ -389,6 +428,8 @@ Reads a 64-bit, big-endian, signed big integer from this **Buffer** object at th
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readBigInt64BE(offset?: int): bigint--><!--Device-Buffer-readBigInt64BE(offset?: int): bigint-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -439,6 +480,8 @@ Reads a 64-bit, little-endian, signed big integer from this **Buffer** object at
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-readBigInt64LE(offset?: int): bigint--><!--Device-Buffer-readBigInt64LE(offset?: int): bigint-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -488,6 +531,8 @@ Reads a 64-bit, big-endian, unsigned big integer from this **Buffer** object at 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-readBigUInt64BE(offset?: int): bigint--><!--Device-Buffer-readBigUInt64BE(offset?: int): bigint-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -536,6 +581,8 @@ Reads a 64-bit, little-endian, unsigned big integer from this **Buffer** object 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-readBigUInt64LE(offset?: int): bigint--><!--Device-Buffer-readBigUInt64LE(offset?: int): bigint-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -579,12 +626,13 @@ console.info("result = " + result);
 readDoubleBE(offset?: number): number
 ```
 
-Reads a 64-bit, big-endian, double-precision floating-point number from this **Buffer** object at the specified
-offset.
+Reads a 64-bit, big-endian, double-precision floating-point number from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readDoubleBE(offset?: int): double--><!--Device-Buffer-readDoubleBE(offset?: int): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -627,12 +675,13 @@ console.info("result = " + result);
 readDoubleLE(offset?: number): number
 ```
 
-Reads a 64-bit, little-endian, double-precision floating-point number from this **Buffer** object at the
-specified offset.
+Reads a 64-bit, little-endian, double-precision floating-point number from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readDoubleLE(offset?: int): double--><!--Device-Buffer-readDoubleLE(offset?: int): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -675,12 +724,13 @@ console.info("result = " + result);
 readFloatBE(offset?: number): number
 ```
 
-Reads a 32-bit, big-endian, single-precision floating-point number from this **Buffer** object at the specified
-offset.
+Reads a 32-bit, big-endian, single-precision floating-point number from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readFloatBE(offset?: int): double--><!--Device-Buffer-readFloatBE(offset?: int): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -723,12 +773,13 @@ console.info("result = " + result);
 readFloatLE(offset?: number): number
 ```
 
-Reads a 32-bit, little-endian, single-precision floating-point number from this **Buffer** object at the
-specified offset.
+Reads a 32-bit, little-endian, single-precision floating-point number from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readFloatLE(offset?: int): double--><!--Device-Buffer-readFloatLE(offset?: int): double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -777,6 +828,8 @@ Reads a 16-bit, big-endian, signed integer from this **Buffer** object at the sp
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-readInt16BE(offset?: int): long--><!--Device-Buffer-readInt16BE(offset?: int): long-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -823,6 +876,8 @@ Reads a 16-bit, little-endian, signed integer from this **Buffer** object at the
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readInt16LE(offset?: int): long--><!--Device-Buffer-readInt16LE(offset?: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -871,6 +926,8 @@ Reads a 32-bit, big-endian, signed integer from this **Buffer** object at the sp
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-readInt32BE(offset?: int): long--><!--Device-Buffer-readInt32BE(offset?: int): long-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -917,6 +974,8 @@ Reads a 32-bit, little-endian, signed integer from this **Buffer** object at the
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readInt32LE(offset?: int): long--><!--Device-Buffer-readInt32LE(offset?: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -965,6 +1024,8 @@ Reads an 8-bit signed integer from this **Buffer** object at the specified offse
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-readInt8(offset?: int): long--><!--Device-Buffer-readInt8(offset?: int): long-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -1008,12 +1069,13 @@ console.info("result = " + result);
 readIntBE(offset: number, byteLength: number): number
 ```
 
-Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the
-result as a big-endian, two's complement signed value that supports up to 48 bits of precision.
+Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the result as a big-endian, two's complement signed value that supports up to 48 bits of precision.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readIntBE(offset: int, byteLength: int): long--><!--Device-Buffer-readIntBE(offset: int, byteLength: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1058,12 +1120,13 @@ console.info("result = " + result);
 readIntLE(offset: number, byteLength: number): number
 ```
 
-Reads the specified number of bytes from this **Buffer** object at the specified offset and interprets the result
-as a little-endian, two's complement signed value that supports up to 48 bits of precision.
+Reads the specified number of bytes from this **Buffer** object at the specified offset and interprets the result as a little-endian, two's complement signed value that supports up to 48 bits of precision.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readIntLE(offset: int, byteLength: int): long--><!--Device-Buffer-readIntLE(offset: int, byteLength: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1112,6 +1175,8 @@ Reads a 16-bit, big-endian, unsigned integer from this **Buffer** object at the 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readUInt16BE(offset?: int): long--><!--Device-Buffer-readUInt16BE(offset?: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1162,6 +1227,8 @@ Reads a 16-bit, little-endian, unsigned integer from this **Buffer** object at t
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-readUInt16LE(offset?: int): long--><!--Device-Buffer-readUInt16LE(offset?: int): long-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -1211,6 +1278,8 @@ Reads a 32-bit, big-endian, unsigned integer from this **Buffer** object at the 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-readUInt32BE(offset?: int): long--><!--Device-Buffer-readUInt32BE(offset?: int): long-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -1257,6 +1326,8 @@ Reads a 32-bit, little-endian, unsigned integer from this **Buffer** object at t
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readUInt32LE(offset?: int): long--><!--Device-Buffer-readUInt32LE(offset?: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1305,6 +1376,8 @@ Reads an 8-bit unsigned integer from this **Buffer** object at the specified off
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-readUInt8(offset?: int): long--><!--Device-Buffer-readUInt8(offset?: int): long-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -1348,12 +1421,13 @@ console.info("result = " + result);
 readUIntBE(offset: number, byteLength: number): number
 ```
 
-Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the
-result as an unsigned, big-endian integer that supports up to 48 bits of precision.
+Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the result as an unsigned, big-endian integer that supports up to 48 bits of precision.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readUIntBE(offset: int, byteLength: int): long--><!--Device-Buffer-readUIntBE(offset: int, byteLength: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1397,12 +1471,13 @@ console.info("result = " + result);
 readUIntLE(offset: number, byteLength: number): number
 ```
 
-Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the
-result as an unsigned, little-endian integer that supports up to 48 bits of precision.
+Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the result as an unsigned, little-endian integer that supports up to 48 bits of precision.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readUIntLE(offset: int, byteLength: int): long--><!--Device-Buffer-readUIntLE(offset: int, byteLength: int): long-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1452,20 +1527,22 @@ Truncates this **Buffer** object from the specified position to create a new **B
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-subarray(start?: int, end?: int): Buffer--><!--Device-Buffer-subarray(start?: int, end?: int): Buffer-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | No | Offset to the start position in this **Buffer** object where data is truncated. Thedefault value is **0**. |
-| end | number | No | Offset to the end position in this **Buffer** object (not inclusive). The default value isthe length of this **Buffer** object. |
+| start | number | No | Offset to the start position in this **Buffer** object where data is truncated. The default value is **0**. |
+| end | number | No | Offset to the end position in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Buffer | **Buffer** object created. When the value of **start** or **end** is less than **0**, anempty buffer is returned. |
+| [Buffer](arkts-arkts-buffer-c.md) | **Buffer** object created. When the value of **start** or **end** is less than **0**, an empty buffer is returned. |
 
 **Example**
 
@@ -1495,13 +1572,15 @@ Converts this **Buffer** object into an array of unsigned 16-bit integers and sw
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-swap16(): Buffer--><!--Device-Buffer-swap16(): Buffer-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Buffer | **Buffer** object swapped. |
+| [Buffer](arkts-arkts-buffer-c.md) | **Buffer** object swapped. |
 
 **Error codes:**
 
@@ -1535,13 +1614,15 @@ Converts this **Buffer** object into an array of unsigned 32-bit integers and sw
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-swap32(): Buffer--><!--Device-Buffer-swap32(): Buffer-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Buffer | **Buffer** object swapped. |
+| [Buffer](arkts-arkts-buffer-c.md) | **Buffer** object swapped. |
 
 **Error codes:**
 
@@ -1575,13 +1656,15 @@ Converts this **Buffer** object into an array of unsigned 64-bit integers and sw
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-swap64(): Buffer--><!--Device-Buffer-swap64(): Buffer-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Buffer | **Buffer** object swapped. |
+| [Buffer](arkts-arkts-buffer-c.md) | **Buffer** object swapped. |
 
 **Error codes:**
 
@@ -1615,13 +1698,15 @@ Converts this **Buffer** object into a JSON object.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-toJSON(): Object--><!--Device-Buffer-toJSON(): Object-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Object | JSON object. |
+| [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | JSON object. |
 
 **Example**
 
@@ -1641,12 +1726,13 @@ console.info(JSON.stringify(obj));
 toString(encoding?: string, start?: number, end?: number): string
 ```
 
-Converts the data at the specified position in this **Buffer** object into a string in the specified encoding
-format.
+Converts the data at the specified position in this **Buffer** object into a string in the specified encoding format.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-toString(encoding?: string, start?: number, end?: number): string--><!--Device-Buffer-toString(encoding?: string, start?: number, end?: number): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1654,15 +1740,15 @@ format.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encoding | string | No | Encoding format (valid only when **value** is a string). The default value is**'utf8'**. |
+| encoding | string | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
 | start | number | No | Offset to the start position of the data to convert. The default value is **0**. |
-| end | number | No | Offset to the end position of data. The default value is the length of this **Buffer**object. |
+| end | number | No | Offset to the end position of data. The default value is the length of this **Buffer** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | String. When the value of **start** is greater than or equal to **Buffer.length** or**start** is greater than **end**, an empty string is returned. |
+| string | String. When the value of **start** is greater than or equal to **Buffer.length** or **start** is greater than **end**, an empty string is returned. |
 
 **Example**
 
@@ -1690,13 +1776,15 @@ Creates and returns an iterator that contains the values of this **Buffer** obje
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-values(): IterableIterator<long>--><!--Device-Buffer-values(): IterableIterator<long>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;number&gt; | Iterator. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<number> | Iterator. |
 
 **Example**
 
@@ -1727,12 +1815,13 @@ while (!next.done) {
 write(str: string, offset?: number, length?: number, encoding?: string): number
 ```
 
-Writes a string of the specified length to this **Buffer** object at the specified position in the given encoding
-format.
+Writes a string of the specified length to this **Buffer** object at the specified position in the given encoding format.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-write(str: string, offset?: int, length?: int, encoding?: string): int--><!--Device-Buffer-write(str: string, offset?: int, length?: int, encoding?: string): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1742,7 +1831,7 @@ format.
 | --- | --- | --- | --- |
 | str | string | Yes | String to write. |
 | offset | number | No | Offset. The default value is **0**. |
-| length | number | No | Maximum number of bytes to write. The default value is **Buffer.length** minus**offset**. |
+| length | number | No | Maximum number of bytes to write. The default value is **Buffer.length** minus **offset**. |
 | encoding | string | No | Encoding format of the string. The default value is **'utf8'**. |
 
 **Return value:**
@@ -1785,6 +1874,8 @@ Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeBigInt64BE(value: bigint, offset?: int): int--><!--Device-Buffer-writeBigInt64BE(value: bigint, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1831,6 +1922,8 @@ Writes a 64-bit, little-endian, signed big integer to this **Buffer** object at 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-writeBigInt64LE(value: bigint, offset?: int): int--><!--Device-Buffer-writeBigInt64LE(value: bigint, offset?: int): int-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -1875,6 +1968,8 @@ Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeBigUInt64BE(value: bigint, offset?: int): int--><!--Device-Buffer-writeBigUInt64BE(value: bigint, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1921,6 +2016,8 @@ Writes a 64-bit, little-endian, unsigned big integer to this **Buffer** object a
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-writeBigUInt64LE(value: bigint, offset?: int): int--><!--Device-Buffer-writeBigUInt64LE(value: bigint, offset?: int): int-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -1960,12 +2057,13 @@ console.info("result = " + result);
 writeDoubleBE(value: number, offset?: number): number
 ```
 
-Writes a 64-bit, big-endian, double-precision floating-point number to this **Buffer** object at the specified
-offset.
+Writes a 64-bit, big-endian, double-precision floating-point number to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeDoubleBE(value: double, offset?: int): int--><!--Device-Buffer-writeDoubleBE(value: double, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -2006,12 +2104,13 @@ console.info("result = " + result);
 writeDoubleLE(value: number, offset?: number): number
 ```
 
-Writes a 64-bit, little-endian, double-precision floating-point number to this **Buffer** object at the specified
-offset.
+Writes a 64-bit, little-endian, double-precision floating-point number to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeDoubleLE(value: double, offset?: int): int--><!--Device-Buffer-writeDoubleLE(value: double, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -2052,12 +2151,13 @@ console.info("result = " + result);
 writeFloatBE(value: number, offset?: number): number
 ```
 
-Writes a 32-bit, big-endian, single-precision floating-point number to this **Buffer** object at the specified
-offset.
+Writes a 32-bit, big-endian, single-precision floating-point number to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeFloatBE(value: double, offset?: int): int--><!--Device-Buffer-writeFloatBE(value: double, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -2098,12 +2198,13 @@ console.info("result = " + result);
 writeFloatLE(value: number, offset?: number): number
 ```
 
-Writes a 32-bit, little-endian, single-precision floating-point number to this **Buffer** object at the specified
-offset.
+Writes a 32-bit, little-endian, single-precision floating-point number to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeFloatLE(value: double, offset?: int): int--><!--Device-Buffer-writeFloatLE(value: double, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -2150,6 +2251,8 @@ Writes a 16-bit, big-endian, signed integer to this **Buffer** object at the spe
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-writeInt16BE(value: long, offset?: int): int--><!--Device-Buffer-writeInt16BE(value: long, offset?: int): int-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -2194,6 +2297,8 @@ Writes a 16-bit, little-endian, signed integer to this **Buffer** object at the 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeInt16LE(value: long, offset?: int): int--><!--Device-Buffer-writeInt16LE(value: long, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -2240,6 +2345,8 @@ Writes a 32-bit, big-endian, signed integer to this **Buffer** object at the spe
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-writeInt32BE(value: long, offset?: int): int--><!--Device-Buffer-writeInt32BE(value: long, offset?: int): int-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -2285,6 +2392,8 @@ Writes a 32-bit, little-endian, signed integer to this **Buffer** object at the 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-writeInt32LE(value: long, offset?: int): int--><!--Device-Buffer-writeInt32LE(value: long, offset?: int): int-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -2329,6 +2438,8 @@ Writes an 8-bit signed integer to this **Buffer** object at the specified offset
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeInt8(value: long, offset?: int): int--><!--Device-Buffer-writeInt8(value: long, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -2378,6 +2489,8 @@ Writes a big-endian signed value of the specified length to this **Buffer** obje
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-writeIntBE(value: long, offset: int, byteLength: int): int--><!--Device-Buffer-writeIntBE(value: long, offset: int, byteLength: int): int-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -2424,6 +2537,8 @@ Writes a little-endian signed value of the specified length to this **Buffer** o
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-writeIntLE(value: long, offset: int, byteLength: int): int--><!--Device-Buffer-writeIntLE(value: long, offset: int, byteLength: int): int-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -2469,6 +2584,8 @@ Writes a 16-bit, big-endian, unsigned integer to this **Buffer** object at the s
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeUInt16BE(value: long, offset?: int): int--><!--Device-Buffer-writeUInt16BE(value: long, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -2518,6 +2635,8 @@ Writes a 16-bit, little-endian, unsigned integer to this **Buffer** object at th
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-writeUInt16LE(value: long, offset?: int): int--><!--Device-Buffer-writeUInt16LE(value: long, offset?: int): int-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -2566,6 +2685,8 @@ Writes a 32-bit, big-endian, unsigned integer to this **Buffer** object at the s
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-writeUInt32BE(value: long, offset?: int): int--><!--Device-Buffer-writeUInt32BE(value: long, offset?: int): int-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -2611,6 +2732,8 @@ Writes a 32-bit, little-endian, unsigned integer to this **Buffer** object at th
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-writeUInt32LE(value: long, offset?: int): int--><!--Device-Buffer-writeUInt32LE(value: long, offset?: int): int-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -2655,6 +2778,8 @@ Writes an 8-bit unsigned integer to this **Buffer** object at the specified offs
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeUInt8(value: long, offset?: int): int--><!--Device-Buffer-writeUInt8(value: long, offset?: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -2710,6 +2835,8 @@ Writes an unsigned big-endian value of the specified length to this **Buffer** o
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-writeUIntBE(value: long, offset: int, byteLength: int): int--><!--Device-Buffer-writeUIntBE(value: long, offset: int, byteLength: int): int-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -2755,6 +2882,8 @@ Writes an unsigned little-endian value of the specified length to this **Buffer*
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeUIntLE(value: long, offset: int, byteLength: int): int--><!--Device-Buffer-writeUIntLE(value: long, offset: int, byteLength: int): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -2804,6 +2933,8 @@ buffer: ArrayBuffer
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-buffer: ArrayBuffer--><!--Device-Buffer-buffer: ArrayBuffer-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## byteOffset
@@ -2820,6 +2951,8 @@ Offset of the **Buffer** object in the memory pool.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Buffer-byteOffset: number--><!--Device-Buffer-byteOffset: number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## length
@@ -2835,6 +2968,8 @@ Length of the **Buffer** object, in bytes.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-length: number--><!--Device-Buffer-length: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

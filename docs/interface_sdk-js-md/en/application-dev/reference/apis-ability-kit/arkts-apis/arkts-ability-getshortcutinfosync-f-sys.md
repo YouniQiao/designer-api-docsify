@@ -12,15 +12,15 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 function getShortcutInfoSync(bundleName: string): Array<ShortcutInfo>
 ```
 
-Obtains the [shortcut information](arkts-ability-shortcutinfo-i.md) of the current user based on the given
-bundle name of a main application. To obtain shortcut information about an application clone, use
-[getShortcutInfoByAppIndex](arkts-ability-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex-1).
+Obtains the [shortcut information](arkts-ability-shortcutinfo-i-sys.md) of the current user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use [getShortcutInfoByAppIndex](arkts-ability-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex-1).
 
 No permission is required for obtaining the caller's own information.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-launcherBundleManager-function getShortcutInfoSync(bundleName: string): Array<ShortcutInfo>--><!--Device-launcherBundleManager-function getShortcutInfoSync(bundleName: string): Array<ShortcutInfo>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -36,7 +36,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ShortcutInfo&gt; | Array of the [ShortcutInfo](arkts-ability-shortcutinfo-i.md) objects obtained. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ShortcutInfo> | Array of the [ShortcutInfo](arkts-ability-shortcutinfo-i-sys.md) objects obtained. |
 
 **Error codes:**
 
@@ -73,15 +73,15 @@ try {
 function getShortcutInfoSync(bundleName: string, userId: number): Array<ShortcutInfo>
 ```
 
-Obtains the [shortcut information](arkts-ability-shortcutinfo-i.md) of the specified user based on the given
-bundle name of a main application. To obtain shortcut information about an application clone, use
-[getShortcutInfoByAppIndex](arkts-ability-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex-1).
+Obtains the [shortcut information](arkts-ability-shortcutinfo-i-sys.md) of the specified user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use [getShortcutInfoByAppIndex](arkts-ability-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex-1).
 
 No permission is required for obtaining the caller's own information.
 
 **Since:** 13
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-launcherBundleManager-function getShortcutInfoSync(bundleName: string, userId: int): Array<ShortcutInfo>--><!--Device-launcherBundleManager-function getShortcutInfoSync(bundleName: string, userId: int): Array<ShortcutInfo>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -92,13 +92,13 @@ No permission is required for obtaining the caller's own information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| userId | number | Yes | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). |
+| userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ShortcutInfo&gt; | Array of the [ShortcutInfo](arkts-ability-shortcutinfo-i.md) objects obtained. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ShortcutInfo> | Array of the [ShortcutInfo](arkts-ability-shortcutinfo-i-sys.md) objects obtained. |
 
 **Error codes:**
 

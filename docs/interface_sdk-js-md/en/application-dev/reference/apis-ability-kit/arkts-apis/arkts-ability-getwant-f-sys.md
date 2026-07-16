@@ -12,10 +12,11 @@ import { WantAgent } from '@kit.AbilityKit';
 function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void
 ```
 
-Obtains the Want in a WantAgent object.
-This API uses an asynchronous callback to return the result.
+Obtains the Want in a WantAgent object.This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-wantAgent-function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void--><!--Device-wantAgent-function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -25,8 +26,8 @@ This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | WantAgent | Yes | Target WantAgent object. |
-| callback | AsyncCallback&lt;Want&gt; | Yes | Callback used to return the Want. |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | Target WantAgent object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Want> | Yes | Callback used to return the Want. |
 
 **Error codes:**
 
@@ -44,10 +45,11 @@ This API uses an asynchronous callback to return the result.
 function getWant(agent: WantAgent): Promise<Want>
 ```
 
-Obtains the Want in a WantAgent object.
-This API uses a promise to return the result.
+Obtains the Want in a WantAgent object.This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-wantAgent-function getWant(agent: WantAgent): Promise<Want>--><!--Device-wantAgent-function getWant(agent: WantAgent): Promise<Want>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -57,13 +59,13 @@ This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | WantAgent | Yes | Target WantAgent object. |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | Target WantAgent object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Want&gt; | Promise used to return the Want. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Want> | Promise used to return the Want. |
 
 **Error codes:**
 

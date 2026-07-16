@@ -1,13 +1,14 @@
 # PluralRulesOptions
 
-Defines the options for creating a **PluralRules** object. Since API version 9, the **PluralRulesOptions**
-attribute is changed from mandatory to optional.
+Defines the options for creating a **PluralRules** object. Since API version 9, the **PluralRulesOptions** attribute is changed from mandatory to optional.
 
 **Since:** 8
 
 **Deprecated since:** 20
 
 **Substitutes:** options)
+
+<!--Device-intl-export interface PluralRulesOptions--><!--Device-intl-export interface PluralRulesOptions-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -37,6 +38,8 @@ The default value is **best fit**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PluralRulesOptions-localeMatcher?: string--><!--Device-PluralRulesOptions-localeMatcher?: string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## maximumFractionDigits
@@ -58,6 +61,8 @@ The default value is **3**.
 **Substitutes:** maximumfractiondigits)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PluralRulesOptions-maximumFractionDigits?: int--><!--Device-PluralRulesOptions-maximumFractionDigits?: int-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -81,6 +86,8 @@ The default value is **21**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PluralRulesOptions-maximumSignificantDigits?: int--><!--Device-PluralRulesOptions-maximumSignificantDigits?: int-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## minimumFractionDigits
@@ -102,6 +109,8 @@ The default value is **0**.
 **Substitutes:** minimumfractiondigits)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PluralRulesOptions-minimumFractionDigits?: int--><!--Device-PluralRulesOptions-minimumFractionDigits?: int-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -125,6 +134,8 @@ The default value is **1**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PluralRulesOptions-minimumIntegerDigits?: int--><!--Device-PluralRulesOptions-minimumIntegerDigits?: int-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## minimumSignificantDigits
@@ -146,6 +157,8 @@ The default value is **1**.
 **Substitutes:** minimumsignificantdigits)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PluralRulesOptions-minimumSignificantDigits?: int--><!--Device-PluralRulesOptions-minimumSignificantDigits?: int-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -170,6 +183,8 @@ The value **cardinal** indicates a cardinal number and the value **ordinal** ind
 **Substitutes:** type)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PluralRulesOptions-type?: string--><!--Device-PluralRulesOptions-type?: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 

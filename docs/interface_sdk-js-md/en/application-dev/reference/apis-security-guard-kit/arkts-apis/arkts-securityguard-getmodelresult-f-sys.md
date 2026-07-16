@@ -18,6 +18,8 @@ Request security model result from security guard.
 
 **Required permissions:** ohos.permission.QUERY_SECURITY_MODEL_RESULT
 
+<!--Device-securityGuard-function getModelResult(rule: ModelRule): Promise<ModelResult>--><!--Device-securityGuard-function getModelResult(rule: ModelRule): Promise<ModelResult>-End-->
+
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Request security model result from security guard.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rule | ModelRule | Yes | indicates the security model rule. |
+| rule | [ModelRule](arkts-securityguard-modelrule-i-sys.md) | Yes | indicates the security model rule. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ModelResult&gt; | model Results with Promises. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ModelResult> | model Results with Promises. |
 
 **Error codes:**
 

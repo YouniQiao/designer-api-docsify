@@ -1,5 +1,11 @@
 # @system.app
 
+## 导入模块
+
+```TypeScript
+import { AppResponse, ScreenOnVisibleOptions, RequestFullWindowOptions } from '@kit.ArkUI';
+```
+
 ## 汇总
 
 ### 类

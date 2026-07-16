@@ -18,20 +18,22 @@ Only assets with the same {@link Tag.GROUP_ID} and {@link Tag.REQUIRE_ATTR_ENCRY
 
 **Since:** 26.0.0
 
+<!--Device-asset-function batchUpdate(sourceAttributes: Array<AssetMap>, destAttributes: Array<AssetMap>): Promise<BatchResult>--><!--Device-asset-function batchUpdate(sourceAttributes: Array<AssetMap>, destAttributes: Array<AssetMap>): Promise<BatchResult>-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceAttributes | Array&lt;AssetMap&gt; | Yes | an array of map objects containing asset attributes to query.<br>The {@link Tag.GROUP_ID} and {@link Tag.REQUIRE_ATTR_ENCRYPTED} attributes of all assets must be the same. |
-| destAttributes | Array&lt;AssetMap&gt; | Yes | an array of map objects containing asset attributes to be updated.<br>The {@link Tag.GROUP_ID} and {@link Tag.REQUIRE_ATTR_ENCRYPTED} attributes of all assets must be the same. |
+| sourceAttributes | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<AssetMap> | Yes | an array of map objects containing asset attributes to query.<br>The {@link Tag.GROUP_ID} and {@link Tag.REQUIRE_ATTR_ENCRYPTED} attributes of all assets must be the same. |
+| destAttributes | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<AssetMap> | Yes | an array of map objects containing asset attributes to be updated.<br>The {@link Tag.GROUP_ID} and {@link Tag.REQUIRE_ATTR_ENCRYPTED} attributes of all assets must be the same. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BatchResult&gt; | the promise object returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<BatchResult> | the promise object returned by the function. |
 
 **Error codes:**
 

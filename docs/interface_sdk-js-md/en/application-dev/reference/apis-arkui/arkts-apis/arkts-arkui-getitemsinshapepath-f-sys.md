@@ -18,6 +18,8 @@ Get the image objects located within the selected area.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-componentUtils-function getItemsInShapePath(value: GetItemsInShapePathParams): Array<ImageItem>--><!--Device-componentUtils-function getItemsInShapePath(value: GetItemsInShapePathParams): Array<ImageItem>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -26,11 +28,11 @@ Get the image objects located within the selected area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | GetItemsInShapePathParams | Yes | options to get images in shapePath. |
+| value | [GetItemsInShapePathParams](arkts-arkui-getitemsinshapepathparams-i-sys.md) | Yes | options to get images in shapePath. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ImageItem&gt; | Returns the image objects located within the selected area. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ImageItem> | Returns the image objects located within the selected area. |
 

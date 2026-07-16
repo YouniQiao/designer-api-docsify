@@ -18,6 +18,8 @@ Unsubscribe to pick up sensor event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-motion-function offPickupChange(callback?: Callback<PickupEvent>): void--><!--Device-motion-function offPickupChange(callback?: Callback<PickupEvent>): void-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Unsubscribe to pick up sensor event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;PickupEvent&gt; | No | Callback used for pick up event unsubscription.<br> If this parameter is not specified, all callbacks of the pick up event are unsubscribed from. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<PickupEvent> | No | Callback used for pick up event unsubscription.<br> If this parameter is not specified, all callbacks of the pick up event are unsubscribed from. |
 
 **Error codes:**
 

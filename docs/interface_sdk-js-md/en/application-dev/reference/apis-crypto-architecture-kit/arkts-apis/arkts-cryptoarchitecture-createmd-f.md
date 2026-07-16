@@ -14,9 +14,7 @@ function createMd(algName: string): Md
 
 Creates an **Md** instance for message digest operations.
 
-For details about the supported specifications, see
-[Supported Algorithms and Specifications](../../../../security/CryptoArchitectureKit/crypto-generate-message-digest-overview.md#supported-algorithms-and-specifications)
-.
+For details about the supported specifications, see [Supported Algorithms and Specifications](../../../../security/CryptoArchitectureKit/crypto-generate-message-digest-overview.md#supported-algorithms-and-specifications).
 
 **Since:** 9
 
@@ -26,6 +24,8 @@ For details about the supported specifications, see
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-cryptoFramework-function createMd(algName: string): Md--><!--Device-cryptoFramework-function createMd(algName: string): Md-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.MessageDigest
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
@@ -34,13 +34,13 @@ For details about the supported specifications, see
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algName | string | Yes | Message digest algorithm to use. For details about the supported algorithms, see[Supported Algorithms and Specifications](../../../../security/CryptoArchitectureKit/crypto-generate-message-digest-overview.md#supported-algorithms-and-specifications). |
+| algName | string | Yes | Message digest algorithm to use. For details about the supported algorithms, see [Supported Algorithms and Specifications](../../../../security/CryptoArchitectureKit/crypto-generate-message-digest-overview.md#supported-algorithms-and-specifications). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Md | Returns the [Md](arkts-cryptoarchitecture-md-i.md) instance created. |
+| [Md](arkts-cryptoarchitecture-md-i.md) | Returns the [Md](arkts-cryptoarchitecture-md-i.md) instance created. |
 
 **Error codes:**
 

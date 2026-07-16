@@ -12,12 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getSignatureInfo(uid: number): SignatureInfo
 ```
 
-Obtains the [signature information](bundleManager/BundleInfo:SignatureInfo) of an application based on the
-given UID.
+Obtains the [signature information](bundleManager/BundleInfo:SignatureInfo) of an application based on the given UID.
 
 **Since:** 18
 
 **Required permissions:** ohos.permission.GET_SIGNATURE_INFO
+
+<!--Device-bundleManager-function getSignatureInfo(uid: int): SignatureInfo--><!--Device-bundleManager-function getSignatureInfo(uid: int): SignatureInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -31,7 +32,7 @@ given UID.
 
 | Type | Description |
 | --- | --- |
-| SignatureInfo | SignatureInfo object. |
+| [SignatureInfo](../../apis-mdm-kit/arkts-apis/arkts-mdm-signatureinfo-i.md) | SignatureInfo object. |
 
 **Error codes:**
 

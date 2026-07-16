@@ -2,14 +2,16 @@
 
 Describes the style of a typeface, such as SimSun or KaiTi.
 
-> **NOTE**
->
-> - This module uses the physical pixel unit, px.
->
-> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
+> **NOTE**  
+>  
+> - This module uses the physical pixel unit, px.  
+>  
+> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state  
 > transitions.
 
 **Since:** 11
+
+<!--Device-drawing-class Typeface--><!--Device-drawing-class Typeface-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -29,6 +31,8 @@ Obtains the name of the typeface family, which is the name given to a collection
 
 **Since:** 11
 
+<!--Device-Typeface-getFamilyName(): string--><!--Device-Typeface-getFamilyName(): string-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
@@ -46,6 +50,8 @@ isBold(): boolean
 Checks whether the font is bold.
 
 **Since:** 23
+
+<!--Device-Typeface-isBold(): boolean--><!--Device-Typeface-isBold(): boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -65,6 +71,8 @@ Checks whether the font is italic.
 
 **Since:** 23
 
+<!--Device-Typeface-isItalic(): boolean--><!--Device-Typeface-isItalic(): boolean-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
@@ -83,19 +91,21 @@ Constructs a typeface object from the current typeface and its arguments.
 
 **Since:** 20
 
+<!--Device-Typeface-makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface--><!--Device-Typeface-makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typefaceArguments | TypefaceArguments | Yes | TypefaceArguments for typeface. |
+| typefaceArguments | [TypefaceArguments](arkts-arkgraphics2d-typefacearguments-c.md) | Yes | TypefaceArguments for typeface. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Typeface | Typeface object. In abnormal cases, a null pointer is returned. |
+| [Typeface](arkts-arkgraphics2d-typeface-c.md) | Typeface object. In abnormal cases, a null pointer is returned. |
 
 ## makeFromFile
 
@@ -109,19 +119,21 @@ Constructs a typeface from a file.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Typeface-static makeFromFile(filePath: string): Typeface--><!--Device-Typeface-static makeFromFile(filePath: string): Typeface-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filePath | string | Yes | Path of the file. For details, see[Mappings Between Application Sandbox Paths and Physical Paths](../../../../file-management/app-sandbox-directory.md#mappings-between-application-sandbox-paths-and-physical-paths). |
+| filePath | string | Yes | Path of the file. For details, see [Mappings Between Application Sandbox Paths and Physical Paths](../../../../file-management/app-sandbox-directory.md#mappings-between-application-sandbox-paths-and-physical-paths). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Typeface | Typeface object. |
+| [Typeface](arkts-arkgraphics2d-typeface-c.md) | Typeface object. |
 
 **Error codes:**
 
@@ -141,20 +153,22 @@ Constructs a typeface from the typeface file path and arguments.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Typeface-static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceArguments): Typeface--><!--Device-Typeface-static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceArguments): Typeface-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filePath | string | Yes | Path of the file. For details, see[Mappings Between Application Sandbox Paths and Physical Paths](../../../../file-management/app-sandbox-directory.md#mappings-between-application-sandbox-paths-and-physical-paths). |
-| typefaceArguments | TypefaceArguments | Yes | Typeface arguments. |
+| filePath | string | Yes | Path of the file. For details, see [Mappings Between Application Sandbox Paths and Physical Paths](../../../../file-management/app-sandbox-directory.md#mappings-between-application-sandbox-paths-and-physical-paths). |
+| typefaceArguments | [TypefaceArguments](arkts-arkgraphics2d-typefacearguments-c.md) | Yes | Typeface arguments. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Typeface | Typeface object. In abnormal cases, a null pointer is returned. |
+| [Typeface](arkts-arkgraphics2d-typeface-c.md) | Typeface object. In abnormal cases, a null pointer is returned. |
 
 ## makeFromRawFile
 
@@ -162,12 +176,13 @@ Constructs a typeface from the typeface file path and arguments.
 static makeFromRawFile(rawfile: Resource): Typeface
 ```
 
-Constructs a typeface from a file, which must be stored in the **resources/rawfile** directory of the application
-project.
+Constructs a typeface from a file, which must be stored in the **resources/rawfile** directory of the application project.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-Typeface-static makeFromRawFile(rawfile: Resource): Typeface--><!--Device-Typeface-static makeFromRawFile(rawfile: Resource): Typeface-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -175,13 +190,13 @@ project.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rawfile | Resource | Yes | Resource object corresponding to the file. Currently, only resource objectsreferenced in **$rawfile** format are supported. The corresponding format is **$rawfile('filePath')**, where**filePath** is the relative path of the file to the **resources/rawfile** directory in the project. If thefile is stored in **resources/rawfile**, the reference format is **$rawfile('HarmonyOS_Sans_Bold.ttf')**. Ifthe file is stored in a subdirectory, for example, in **resources/rawfile/ttf**, the reference format is**$rawfile('ttf/HarmonyOS_Sans_Bold.ttf')**. |
+| rawfile | [Resource](../../apis-arkui/arkts-apis/arkts-arkui-resource-t.md) | Yes | Resource object corresponding to the file. Currently, only resource objects referenced in **$rawfile** format are supported. The corresponding format is **$rawfile('filePath')**, where **filePath** is the relative path of the file to the **resources/rawfile** directory in the project. If the file is stored in **resources/rawfile**, the reference format is **$rawfile('HarmonyOS_Sans_Bold.ttf')**. If the file is stored in a subdirectory, for example, in **resources/rawfile/ttf**, the reference format is **$rawfile('ttf/HarmonyOS_Sans_Bold.ttf')**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Typeface | Typeface object. In abnormal cases, a null pointer is returned. |
+| [Typeface](arkts-arkgraphics2d-typeface-c.md) | Typeface object. In abnormal cases, a null pointer is returned. |
 
 ## makeFromRawFileWithArguments
 
@@ -189,12 +204,13 @@ project.
 static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: TypefaceArguments): Typeface
 ```
 
-Constructs a typeface from a file with typeface arguments, which must be stored in the **resources/rawfile**
-directory of the application project.
+Constructs a typeface from a file with typeface arguments, which must be stored in the **resources/rawfile** directory of the application project.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-Typeface-static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: TypefaceArguments): Typeface--><!--Device-Typeface-static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: TypefaceArguments): Typeface-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -202,12 +218,12 @@ directory of the application project.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rawfile | Resource | Yes | Resource object corresponding to the file. Currently, only resource objectsreferenced in **$rawfile** format are supported. The corresponding format is **$rawfile('filePath')**, where**filePath** is the relative path of the file to the **resources/rawfile** directory in the project. |
-| typefaceArguments | TypefaceArguments | Yes | Typeface arguments. |
+| rawfile | [Resource](../../apis-arkui/arkts-apis/arkts-arkui-resource-t.md) | Yes | Resource object corresponding to the file. Currently, only resource objects referenced in **$rawfile** format are supported. The corresponding format is **$rawfile('filePath')**, where **filePath** is the relative path of the file to the **resources/rawfile** directory in the project. |
+| typefaceArguments | [TypefaceArguments](arkts-arkgraphics2d-typefacearguments-c.md) | Yes | Typeface arguments. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Typeface | Typeface object. In abnormal cases, a null pointer is returned. |
+| [Typeface](arkts-arkgraphics2d-typeface-c.md) | Typeface object. In abnormal cases, a null pointer is returned. |
 

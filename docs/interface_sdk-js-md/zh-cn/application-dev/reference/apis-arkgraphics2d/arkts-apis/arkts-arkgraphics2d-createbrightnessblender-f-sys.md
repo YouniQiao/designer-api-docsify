@@ -1,5 +1,11 @@
 # createBrightnessBlender（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
+```
+
 ## createBrightnessBlender
 
 ```TypeScript
@@ -12,6 +18,8 @@ function createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlend
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-uiEffect-function createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlender--><!--Device-uiEffect-function createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlender-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -20,13 +28,13 @@ function createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlend
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | BrightnessBlenderParam | 是 | 实现提亮效果的参数。 |
+| param | [BrightnessBlenderParam](arkts-arkgraphics2d-brightnessblenderparam-i-sys.md) | 是 | 实现提亮效果的参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| BrightnessBlender | 返回设置了提亮效果参数的BrightnessBlender。 |
+| [BrightnessBlender](arkts-arkgraphics2d-brightnessblender-i-sys.md) | 返回设置了提亮效果参数的BrightnessBlender。 |
 
 **示例：**
 

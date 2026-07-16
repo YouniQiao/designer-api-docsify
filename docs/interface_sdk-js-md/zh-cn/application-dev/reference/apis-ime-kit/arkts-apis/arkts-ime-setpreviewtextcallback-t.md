@@ -8,6 +8,8 @@ export type SetPreviewTextCallback = (text: string, range: Range) => void
 
 **起始版本：** 17
 
+<!--Device-inputMethod-export type SetPreviewTextCallback = (text: string, range: Range) => void--><!--Device-inputMethod-export type SetPreviewTextCallback = (text: string, range: Range) => void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**

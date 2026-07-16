@@ -18,6 +18,8 @@ Obtains the number of uplink data bytes of the sharing network interfaces.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-sharing-function getStatsTxBytes(callback: AsyncCallback<int>): void--><!--Device-sharing-function getStatsTxBytes(callback: AsyncCallback<int>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Obtains the number of uplink data bytes of the sharing network interfaces.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Returns the number of uplink data bytes of the sharing network interfaces. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Returns the number of uplink data bytes of the sharing network interfaces. |
 
 **Error codes:**
 
@@ -64,6 +66,8 @@ Obtains the number of uplink data bytes of the sharing network interfaces.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-sharing-function getStatsTxBytes(): Promise<int>--><!--Device-sharing-function getStatsTxBytes(): Promise<int>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
@@ -72,7 +76,7 @@ Obtains the number of uplink data bytes of the sharing network interfaces.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | The promise returned by the function. |
 
 **Error codes:**
 

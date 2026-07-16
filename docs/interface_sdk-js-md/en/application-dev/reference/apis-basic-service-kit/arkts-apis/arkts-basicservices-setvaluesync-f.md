@@ -24,13 +24,15 @@ Set settingsdata value(synchronous method)
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-settings-function setValueSync(dataAbilityHelper: DataAbilityHelper, name: string, value: string): boolean--><!--Device-settings-function setValueSync(dataAbilityHelper: DataAbilityHelper, name: string, value: string): boolean-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataAbilityHelper | DataAbilityHelper | Yes | Indicates dataAbilityHelper instance. |
+| dataAbilityHelper | [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-i.md) | Yes | Indicates dataAbilityHelper instance. |
 | name | string | Yes | Indicates the name of the character string. |
 | value | string | Yes | Indicates the value of the character string. |
 
@@ -67,13 +69,15 @@ Set settingsdata value(synchronous method)
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-settings-function setValueSync(context: Context, name: string, value: string): boolean--><!--Device-settings-function setValueSync(context: Context, name: string, value: string): boolean-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
 | name | string | Yes | Indicates the name of the character string. |
 | value | string | Yes | Indicates the value of the character string. |
 
@@ -103,9 +107,7 @@ let ret = settings.setValueSync(context, settings.display.SCREEN_BRIGHTNESS_STAT
 function setValueSync(context: Context, name: string, value: string, domainName: string): boolean
 ```
 
-Set settingsdata value(synchronous method).
-[DEVICE_SHARED, USER_PROPERTY] domain need ohos.permission.MANAGE_SETTINGS permission.
-[USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
+Set settingsdata value(synchronous method).[DEVICE_SHARED, USER_PROPERTY] domain need ohos.permission.MANAGE_SETTINGS permission.[USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
 
 **Since:** 11
 
@@ -113,13 +115,15 @@ Set settingsdata value(synchronous method).
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-settings-function setValueSync(context: Context, name: string, value: string, domainName: string): boolean--><!--Device-settings-function setValueSync(context: Context, name: string, value: string, domainName: string): boolean-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
 | name | string | Yes | Indicates the name of the character string. |
 | value | string | Yes | Indicates the value of the character string. |
 | domainName | string | Yes | Indicates the name of the domain name to set. |

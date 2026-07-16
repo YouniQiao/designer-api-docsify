@@ -12,16 +12,15 @@ import { window } from '@kit.ArkUI';
 function getLastWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void
 ```
 
-Obtains the topmost layer child window of the current application. This API uses an asynchronous callback to return
-the result.
+Obtains the topmost layer child window of the current application. This API uses an asynchronous callback to return the result.
 
-If no child window exists or the child window is not displayed by calling
-[showWindow()](arkts-arkui-window-i.md#showwindow-1), the main window of the
-application is returned.
+If no child window exists or the child window is not displayed by calling [showWindow()](arkts-arkui-window-i.md#showwindow-1), the main window of the application is returned.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-window-function getLastWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void--><!--Device-window-function getLastWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -29,8 +28,8 @@ application is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ctx | BaseContext | Yes | Current application context. |
-| callback | AsyncCallback&lt;Window&gt; | Yes | Callback used to return the top window obtained. |
+| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Window> | Yes | Callback used to return the top window obtained. |
 
 **Error codes:**
 
@@ -95,13 +94,13 @@ function getLastWindow(ctx: BaseContext): Promise<Window>
 
 Obtains the topmost layer child window of the current application. This API uses a promise to return the result.
 
-If no child window exists or the child window is not displayed by calling
-[showWindow()](arkts-arkui-window-i.md#showwindow-1), the main window of the
-application is returned.
+If no child window exists or the child window is not displayed by calling [showWindow()](arkts-arkui-window-i.md#showwindow-1), the main window of the application is returned.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-window-function getLastWindow(ctx: BaseContext): Promise<Window>--><!--Device-window-function getLastWindow(ctx: BaseContext): Promise<Window>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -109,13 +108,13 @@ application is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ctx | BaseContext | Yes | Current application context. |
+| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Window&gt; | Promise used to return the topmost layer window obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Window> | Promise used to return the topmost layer window obtained. |
 
 **Error codes:**
 

@@ -10,6 +10,8 @@ Enum for location priority
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-export enum LocationRequestPriority--><!--Device-geolocation-export enum LocationRequestPriority-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## UNSET
@@ -23,6 +25,8 @@ UNSET = 0x200
 **Deprecated since:** 9
 
 **Substitutes:** UNSET
+
+<!--Device-LocationRequestPriority-UNSET = 0x200--><!--Device-LocationRequestPriority-UNSET = 0x200-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -38,6 +42,8 @@ ACCURACY
 
 **Substitutes:** ACCURACY
 
+<!--Device-LocationRequestPriority-ACCURACY--><!--Device-LocationRequestPriority-ACCURACY-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## LOW_POWER
@@ -52,6 +58,8 @@ LOW_POWER
 
 **Substitutes:** LOW_POWER
 
+<!--Device-LocationRequestPriority-LOW_POWER--><!--Device-LocationRequestPriority-LOW_POWER-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## FIRST_FIX
@@ -65,6 +73,8 @@ FIRST_FIX
 **Deprecated since:** 9
 
 **Substitutes:** FIRST_FIX
+
+<!--Device-LocationRequestPriority-FIRST_FIX--><!--Device-LocationRequestPriority-FIRST_FIX-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 

@@ -2,15 +2,15 @@
 
 This interface provides APIs for audio capture.
 
-Before calling any API in AudioCapturer, you must use
-[createAudioCapturer](arkts-audio-createaudiocapturer-f.md#createaudiocapturer-1)
-to create an AudioCapturer instance.
+Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkts-audio-createaudiocapturer-f.md#createaudiocapturer-1)to create an AudioCapturer instance.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > - The initial APIs of this interface are supported since API version 8.
 
 **Since:** 8
+
+<!--Device-audio-interface AudioCapturer--><!--Device-audio-interface AudioCapturer-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -30,13 +30,15 @@ Obtains the stream ID of this audio capturer. This API uses an asynchronous call
 
 **Since:** 9
 
+<!--Device-AudioCapturer-getAudioStreamId(callback: AsyncCallback<long>): void--><!--Device-AudioCapturer-getAudioStreamId(callback: AsyncCallback<long>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the stream ID obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the stream ID obtained; otherwise, **err** is an error object. |
 
 ## getAudioStreamId
 
@@ -48,13 +50,15 @@ Obtains the stream ID of this audio capturer. This API uses a promise to return 
 
 **Since:** 9
 
+<!--Device-AudioCapturer-getAudioStreamId(): Promise<long>--><!--Device-AudioCapturer-getAudioStreamId(): Promise<long>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the stream ID. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the stream ID. |
 
 ## getAudioStreamIdSync
 
@@ -65,6 +69,8 @@ getAudioStreamIdSync(): number
 Obtains the stream ID of this audio capturer. This API returns the result synchronously.
 
 **Since:** 10
+
+<!--Device-AudioCapturer-getAudioStreamIdSync(): long--><!--Device-AudioCapturer-getAudioStreamIdSync(): long-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -80,10 +86,11 @@ Obtains the stream ID of this audio capturer. This API returns the result synchr
 getAudioTime(callback: AsyncCallback<number>): void
 ```
 
-Obtains the timestamp of the current recording position, measured in nanoseconds from the Unix epoch (January 1,
-1970). This API uses an asynchronous callback to return the result.
+Obtains the timestamp of the current recording position, measured in nanoseconds from the Unix epoch (January 1,1970). This API uses an asynchronous callback to return the result.
 
 **Since:** 8
+
+<!--Device-AudioCapturer-getAudioTime(callback: AsyncCallback<long>): void--><!--Device-AudioCapturer-getAudioTime(callback: AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -91,7 +98,7 @@ Obtains the timestamp of the current recording position, measured in nanoseconds
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the number of nanoseconds obtained; otherwise, **err** is an errorobject. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the number of nanoseconds obtained; otherwise, **err** is an error object. |
 
 ## getAudioTime
 
@@ -99,10 +106,11 @@ Obtains the timestamp of the current recording position, measured in nanoseconds
 getAudioTime(): Promise<number>
 ```
 
-Obtains the timestamp of the current recording position, measured in nanoseconds from the Unix epoch (January 1,
-1970). This API uses a promise to return the result.
+Obtains the timestamp of the current recording position, measured in nanoseconds from the Unix epoch (January 1,1970). This API uses a promise to return the result.
 
 **Since:** 8
+
+<!--Device-AudioCapturer-getAudioTime(): Promise<long>--><!--Device-AudioCapturer-getAudioTime(): Promise<long>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -110,7 +118,7 @@ Obtains the timestamp of the current recording position, measured in nanoseconds
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return a timestamp representing the number of nanoseconds elapsedsince the Unix epoch (January 1, 1970).<br>The timestamp unit is nanoseconds. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return a timestamp representing the number of nanoseconds elapsed since the Unix epoch (January 1, 1970).<br>The timestamp unit is nanoseconds. |
 
 ## getAudioTimeSync
 
@@ -118,10 +126,11 @@ Obtains the timestamp of the current recording position, measured in nanoseconds
 getAudioTimeSync(): number
 ```
 
-Obtains the timestamp of the current recording position, measured in nanoseconds from the Unix epoch (January 1,
-1970). This API returns the result synchronously.
+Obtains the timestamp of the current recording position, measured in nanoseconds from the Unix epoch (January 1,1970). This API returns the result synchronously.
 
 **Since:** 10
+
+<!--Device-AudioCapturer-getAudioTimeSync(): long--><!--Device-AudioCapturer-getAudioTimeSync(): long-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -139,10 +148,11 @@ getAudioTimestampInfo(): Promise<AudioTimestampInfo>
 
 Obtains the timestamp and position information of an input audio stream.
 
-This API obtains the actual recording position (specified by **framePos**) of the audio channel and the timestamp
-when recording to that position (specified by **timestamp**, in nanoseconds).
+This API obtains the actual recording position (specified by **framePos**) of the audio channel and the timestamp when recording to that position (specified by **timestamp**, in nanoseconds).
 
 **Since:** 19
+
+<!--Device-AudioCapturer-getAudioTimestampInfo(): Promise<AudioTimestampInfo>--><!--Device-AudioCapturer-getAudioTimestampInfo(): Promise<AudioTimestampInfo>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -150,7 +160,7 @@ when recording to that position (specified by **timestamp**, in nanoseconds).
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioTimestampInfo&gt; | Promise used to return the timestamp and position information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AudioTimestampInfo> | Promise used to return the timestamp and position information. |
 
 **Error codes:**
 
@@ -164,10 +174,11 @@ when recording to that position (specified by **timestamp**, in nanoseconds).
 getAudioTimestampInfoSync(): AudioTimestampInfo
 ```
 
-Obtains the timestamp and position information of an input audio stream. This API returns the result
-synchronously.
+Obtains the timestamp and position information of an input audio stream. This API returns the result synchronously.
 
 **Since:** 19
+
+<!--Device-AudioCapturer-getAudioTimestampInfoSync(): AudioTimestampInfo--><!--Device-AudioCapturer-getAudioTimestampInfoSync(): AudioTimestampInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -175,7 +186,7 @@ synchronously.
 
 | Type | Description |
 | --- | --- |
-| AudioTimestampInfo | Information about the timestamp and position information. |
+| [AudioTimestampInfo](arkts-audio-audiotimestampinfo-i.md) | Information about the timestamp and position information. |
 
 **Error codes:**
 
@@ -189,10 +200,11 @@ synchronously.
 getBufferSize(callback: AsyncCallback<number>): void
 ```
 
-Obtains a reasonable minimum buffer size in bytes for capturing. This API uses an asynchronous callback to return
-the result.
+Obtains a reasonable minimum buffer size in bytes for capturing. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
+
+<!--Device-AudioCapturer-getBufferSize(callback: AsyncCallback<long>): void--><!--Device-AudioCapturer-getBufferSize(callback: AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -200,7 +212,7 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the minimum buffer size obtained; otherwise, **err** is an errorobject.<br>The unit is bytes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the minimum buffer size obtained; otherwise, **err** is an error object.<br>The unit is bytes. |
 
 ## getBufferSize
 
@@ -212,13 +224,15 @@ Obtains a reasonable minimum buffer size in bytes for capturing. This API uses a
 
 **Since:** 8
 
+<!--Device-AudioCapturer-getBufferSize(): Promise<long>--><!--Device-AudioCapturer-getBufferSize(): Promise<long>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the buffer size.<br>The unit is bytes. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the buffer size.<br>The unit is bytes. |
 
 ## getBufferSizeSync
 
@@ -229,6 +243,8 @@ getBufferSizeSync(): number
 Obtains a reasonable minimum buffer size in bytes for capturing. This API returns the result synchronously.
 
 **Since:** 10
+
+<!--Device-AudioCapturer-getBufferSizeSync(): long--><!--Device-AudioCapturer-getBufferSizeSync(): long-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -248,13 +264,15 @@ Obtains the audio capturer information. This API uses an asynchronous callback t
 
 **Since:** 8
 
+<!--Device-AudioCapturer-getCapturerInfo(callback: AsyncCallback<AudioCapturerInfo>): void--><!--Device-AudioCapturer-getCapturerInfo(callback: AsyncCallback<AudioCapturerInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;AudioCapturerInfo&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined** and **data** is the capturer information obtained; otherwise, **err** isan error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AudioCapturerInfo> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the capturer information obtained; otherwise, **err** is an error object. |
 
 ## getCapturerInfo
 
@@ -266,13 +284,15 @@ Obtains the audio capturer information. This API uses a promise to return the re
 
 **Since:** 8
 
+<!--Device-AudioCapturer-getCapturerInfo(): Promise<AudioCapturerInfo>--><!--Device-AudioCapturer-getCapturerInfo(): Promise<AudioCapturerInfo>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioCapturerInfo&gt; | Promise used to return the audio capturer information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AudioCapturerInfo> | Promise used to return the audio capturer information. |
 
 ## getCapturerInfoSync
 
@@ -284,13 +304,15 @@ Obtains the audio capturer information. This API returns the result synchronousl
 
 **Since:** 10
 
+<!--Device-AudioCapturer-getCapturerInfoSync(): AudioCapturerInfo--><!--Device-AudioCapturer-getCapturerInfoSync(): AudioCapturerInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AudioCapturerInfo | Audio capturer information. |
+| [AudioCapturerInfo](arkts-audio-audiocapturerinfo-i.md) | Audio capturer information. |
 
 ## getCurrentAudioCapturerChangeInfo
 
@@ -302,13 +324,15 @@ Obtains the configuration changes of the current audio capturer. This API return
 
 **Since:** 11
 
+<!--Device-AudioCapturer-getCurrentAudioCapturerChangeInfo(): AudioCapturerChangeInfo--><!--Device-AudioCapturer-getCurrentAudioCapturerChangeInfo(): AudioCapturerChangeInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AudioCapturerChangeInfo | Configuration changes of the audio capturer. |
+| [AudioCapturerChangeInfo](arkts-audio-audiocapturerchangeinfo-i.md) | Configuration changes of the audio capturer. |
 
 ## getCurrentInputDevices
 
@@ -320,13 +344,15 @@ Obtains the information of the current input devices. This API returns the resul
 
 **Since:** 11
 
+<!--Device-AudioCapturer-getCurrentInputDevices(): AudioDeviceDescriptors--><!--Device-AudioCapturer-getCurrentInputDevices(): AudioDeviceDescriptors-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AudioDeviceDescriptors | An array of the audio device descriptors. |
+| [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | An array of the audio device descriptors. |
 
 ## getNoiseReductionMode
 
@@ -334,13 +360,13 @@ Obtains the information of the current input devices. This API returns the resul
 getNoiseReductionMode(): NoiseReductionMode
 ```
 
-Gets the noise reduction mode for current audio capturer.
-The mode will only consider the default and setted status, audio input device and stream concurrency will
-not be considered.
+Gets the noise reduction mode for current audio capturer.The mode will only consider the default and setted status, audio input device and stream concurrency will not be considered.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioCapturer-getNoiseReductionMode(): NoiseReductionMode--><!--Device-AudioCapturer-getNoiseReductionMode(): NoiseReductionMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -348,7 +374,7 @@ not be considered.
 
 | Type | Description |
 | --- | --- |
-| NoiseReductionMode | The noise reduction mode for current audio capturer,the default value is {@link NoiseReductionMode#FIDELITY}. |
+| [NoiseReductionMode](arkts-audio-noisereductionmode-e.md) | The noise reduction mode for current audio capturer,the default value is {@link NoiseReductionMode#FIDELITY}. |
 
 ## getOverflowCount
 
@@ -356,10 +382,11 @@ not be considered.
 getOverflowCount(): Promise<number>
 ```
 
-Obtains the number of overflow audio frames in the audio stream that is being captured. This API uses a promise
-to return the result.
+Obtains the number of overflow audio frames in the audio stream that is being captured. This API uses a promise to return the result.
 
 **Since:** 12
+
+<!--Device-AudioCapturer-getOverflowCount(): Promise<long>--><!--Device-AudioCapturer-getOverflowCount(): Promise<long>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -367,7 +394,7 @@ to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the number of overflow audio frames. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the number of overflow audio frames. |
 
 ## getOverflowCountSync
 
@@ -375,10 +402,11 @@ to return the result.
 getOverflowCountSync(): number
 ```
 
-Obtains the number of overflow audio frames in the audio stream that is being captured. This API returns the
-result synchronously.
+Obtains the number of overflow audio frames in the audio stream that is being captured. This API returns the result synchronously.
 
 **Since:** 12
+
+<!--Device-AudioCapturer-getOverflowCountSync(): long--><!--Device-AudioCapturer-getOverflowCountSync(): long-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -394,10 +422,11 @@ result synchronously.
 getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void
 ```
 
-Obtains the stream information of this audio capturer. This API uses an asynchronous callback to return the
-result.
+Obtains the stream information of this audio capturer. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
+
+<!--Device-AudioCapturer-getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void--><!--Device-AudioCapturer-getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -405,7 +434,7 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;AudioStreamInfo&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined** and **data** is the stream information obtained; otherwise, **err** isan error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AudioStreamInfo> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream information obtained; otherwise, **err** is an error object. |
 
 ## getStreamInfo
 
@@ -417,13 +446,15 @@ Obtains the stream information of this audio capturer. This API uses a promise t
 
 **Since:** 8
 
+<!--Device-AudioCapturer-getStreamInfo(): Promise<AudioStreamInfo>--><!--Device-AudioCapturer-getStreamInfo(): Promise<AudioStreamInfo>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioStreamInfo&gt; | Promise used to return the stream information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AudioStreamInfo> | Promise used to return the stream information. |
 
 ## getStreamInfoSync
 
@@ -435,13 +466,15 @@ Obtains the stream information of this audio capturer. This API returns the resu
 
 **Since:** 10
 
+<!--Device-AudioCapturer-getStreamInfoSync(): AudioStreamInfo--><!--Device-AudioCapturer-getStreamInfoSync(): AudioStreamInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AudioStreamInfo | Stream information. |
+| [AudioStreamInfo](arkts-audio-audiostreaminfo-i.md) | Stream information. |
 
 ## getSupportedNoiseReductionModes
 
@@ -449,15 +482,13 @@ Obtains the stream information of this audio capturer. This API returns the resu
 getSupportedNoiseReductionModes(): Array<NoiseReductionMode>
 ```
 
-Gets all the supported noise reduction modes for current device platform.
-Currently the noise reduction effect is only supported when using
-{@link SourceType#SOURCE_TYPE_VOICE_MESSAGE}, other supported usage may be extened later.
-The supported modes will only consider the audio format and device platform,
-audio input device and stream concurrency will not be considered.
+Gets all the supported noise reduction modes for current device platform.Currently the noise reduction effect is only supported when using{@link SourceType#SOURCE_TYPE_VOICE_MESSAGE}, other supported usage may be extened later.The supported modes will only consider the audio format and device platform,audio input device and stream concurrency will not be considered.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioCapturer-getSupportedNoiseReductionModes(): Array<NoiseReductionMode>--><!--Device-AudioCapturer-getSupportedNoiseReductionModes(): Array<NoiseReductionMode>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -465,7 +496,7 @@ audio input device and stream concurrency will not be considered.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;NoiseReductionMode&gt; | The supported noise reduction mode array, at least{@link NoiseReductionMode#FIDELITY} is supported. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<NoiseReductionMode> | The supported noise reduction mode array, at least{@link NoiseReductionMode#FIDELITY} is supported. |
 
 **Error codes:**
 
@@ -483,14 +514,16 @@ Unsubscribes from the mark reached event. This API uses an asynchronous callback
 
 **Since:** 8
 
+<!--Device-AudioCapturer-off(type: 'markReach', callback?: Callback<long>): void--><!--Device-AudioCapturer-off(type: 'markReach', callback?: Callback<long>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'markReach' | Yes | Event type. The event **'markReach'** is triggered when the number of framescaptured reaches the value of the **frame** parameter. |
-| callback | Callback&lt;number&gt; | No | Callback used to return the value of the **frame** parameter.<br>**Since:** 18 |
+| type | 'markReach' | Yes | Event type. The event **'markReach'** is triggered when the number of frames captured reaches the value of the **frame** parameter. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | No | Callback used to return the value of the **frame** parameter.<br>**Since:** 18 |
 
 ## off('periodReach')
 
@@ -502,14 +535,16 @@ Unsubscribes from the period reached event. This API uses an asynchronous callba
 
 **Since:** 8
 
+<!--Device-AudioCapturer-off(type: 'periodReach', callback?: Callback<long>): void--><!--Device-AudioCapturer-off(type: 'periodReach', callback?: Callback<long>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'periodReach' | Yes | Event type. The event **'periodReach'** is triggered each time the number offrames captured reaches the value of the **frame** parameter. |
-| callback | Callback&lt;number&gt; | No | Callback used to return the value of the **frame** parameter.<br>**Since:** 18 |
+| type | 'periodReach' | Yes | Event type. The event **'periodReach'** is triggered each time the number of frames captured reaches the value of the **frame** parameter. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | No | Callback used to return the value of the **frame** parameter.<br>**Since:** 18 |
 
 ## off('stateChange')
 
@@ -517,10 +552,11 @@ Unsubscribes from the period reached event. This API uses an asynchronous callba
 off(type: 'stateChange', callback?: Callback<AudioState>): void
 ```
 
-Unsubscribes from the audio capturer state change event. This API uses an asynchronous callback to return the
-result.
+Unsubscribes from the audio capturer state change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 18
+
+<!--Device-AudioCapturer-off(type: 'stateChange', callback?: Callback<AudioState>): void--><!--Device-AudioCapturer-off(type: 'stateChange', callback?: Callback<AudioState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -528,8 +564,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the listening for audiocapturer state change event is canceled. |
-| callback | Callback&lt;AudioState&gt; | No | Callback used to return the audio status. |
+| type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the listening for audio capturer state change event is canceled. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioState> | No | Callback used to return the audio status. |
 
 **Error codes:**
 
@@ -547,13 +583,15 @@ Unsubscribes from the audio interruption event.
 
 **Since:** 10
 
+<!--Device-AudioCapturer-off(type: 'audioInterrupt'): void--><!--Device-AudioCapturer-off(type: 'audioInterrupt'): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focusis changed. |
+| type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus is changed. |
 
 **Error codes:**
 
@@ -568,10 +606,11 @@ Unsubscribes from the audio interruption event.
 off(type: 'inputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void
 ```
 
-Unsubscribes from the audio input device change event. This API uses an asynchronous callback to return the
-result.
+Unsubscribes from the audio input device change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+<!--Device-AudioCapturer-off(type: 'inputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioCapturer-off(type: 'inputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -579,8 +618,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'inputDeviceChange' | Yes | Event type. The event **'inputDeviceChange'** is triggered when an audioinput device is changed. |
-| callback | Callback&lt;AudioDeviceDescriptors&gt; | No | Callback used to return the information about the audioinput device. |
+| type | 'inputDeviceChange' | Yes | Event type. The event **'inputDeviceChange'** is triggered when an audio input device is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioDeviceDescriptors> | No | Callback used to return the information about the audio input device. |
 
 **Error codes:**
 
@@ -595,10 +634,11 @@ result.
 off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfo>): void
 ```
 
-Unsubscribes from the audio capturer configuration change event. This API uses an asynchronous callback to return
-the result.
+Unsubscribes from the audio capturer configuration change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+<!--Device-AudioCapturer-off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfo>): void--><!--Device-AudioCapturer-off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -606,8 +646,8 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioCapturerChange' | Yes | Event type. The event **'audioCapturerChange'** is triggered when theaudio capturer configuration is changed. |
-| callback | Callback&lt;AudioCapturerChangeInfo&gt; | No | Callback used for unsubscription. |
+| type | 'audioCapturerChange' | Yes | Event type. The event **'audioCapturerChange'** is triggered when the audio capturer configuration is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioCapturerChangeInfo> | No | Callback used for unsubscription. |
 
 **Error codes:**
 
@@ -626,14 +666,16 @@ Unsubscribes from the audio data read event. This API uses an asynchronous callb
 
 **Since:** 11
 
+<!--Device-AudioCapturer-off(type: 'readData', callback?: Callback<ArrayBuffer>): void--><!--Device-AudioCapturer-off(type: 'readData', callback?: Callback<ArrayBuffer>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'readData' | Yes | Event type. The event **'readData'** is triggered when audio stream data needs to beread. |
-| callback | Callback&lt;ArrayBuffer&gt; | No | Callback used to return the buffer from which the data is read. |
+| type | 'readData' | Yes | Event type. The event **'readData'** is triggered when audio stream data needs to be read. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ArrayBuffer> | No | Callback used to return the buffer from which the data is read. |
 
 **Error codes:**
 
@@ -648,13 +690,13 @@ Unsubscribes from the audio data read event. This API uses an asynchronous callb
 on(type: 'markReach', frame: number, callback: Callback<number>): void
 ```
 
-Subscribes to the mark reached event, which is triggered (only once) when the number of frames captured reaches
-the value of the **frame** parameter. This API uses an asynchronous callback to return the result.
+Subscribes to the mark reached event, which is triggered (only once) when the number of frames captured reaches the value of the **frame** parameter. This API uses an asynchronous callback to return the result.
 
-For example, if **frame** is set to **100**, the callback is invoked when the number of captured frames reaches
-the 100th frame.
+For example, if **frame** is set to **100**, the callback is invoked when the number of captured frames reaches the 100th frame.
 
 **Since:** 8
+
+<!--Device-AudioCapturer-on(type: 'markReach', frame: long, callback: Callback<long>): void--><!--Device-AudioCapturer-on(type: 'markReach', frame: long, callback: Callback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -662,9 +704,9 @@ the 100th frame.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'markReach' | Yes | Event type. The event **'markReach'** is triggered when the number of framescaptured reaches the value of the **frame** parameter. |
+| type | 'markReach' | Yes | Event type. The event **'markReach'** is triggered when the number of frames captured reaches the value of the **frame** parameter. |
 | frame | number | Yes | Number of frames to trigger the event. The value must be greater than **0**. |
-| callback | Callback&lt;number&gt; | Yes | Callback used to return the value of the **frame** parameter. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | Yes | Callback used to return the value of the **frame** parameter. |
 
 ## on('periodReach')
 
@@ -672,14 +714,13 @@ the 100th frame.
 on(type: 'periodReach', frame: number, callback: Callback<number>): void
 ```
 
-Subscribes to the period reached event, which is triggered each time the number of frames captured reaches the
-value of the **frame** parameter. In other words, the information is reported periodically. This API uses an
-asynchronous callback to return the result.
+Subscribes to the period reached event, which is triggered each time the number of frames captured reaches the value of the **frame** parameter. In other words, the information is reported periodically. This API uses an asynchronous callback to return the result.
 
-For example, if **frame** is set to **10**, the callback is invoked each time 10 frames are captured, for example
-, when the number of frames captured reaches the 10th frame, 20th frame, and 30th frame.
+For example, if **frame** is set to **10**, the callback is invoked each time 10 frames are captured, for example, when the number of frames captured reaches the 10th frame, 20th frame, and 30th frame.
 
 **Since:** 8
+
+<!--Device-AudioCapturer-on(type: 'periodReach', frame: long, callback: Callback<long>): void--><!--Device-AudioCapturer-on(type: 'periodReach', frame: long, callback: Callback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -687,9 +728,9 @@ For example, if **frame** is set to **10**, the callback is invoked each time 10
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'periodReach' | Yes | Event type. The event **'periodReach'** is triggered each time the number offrames captured reaches the value of the **frame** parameter. |
+| type | 'periodReach' | Yes | Event type. The event **'periodReach'** is triggered each time the number of frames captured reaches the value of the **frame** parameter. |
 | frame | number | Yes | Number of frames to trigger the event. The value must be greater than **0**. |
-| callback | Callback&lt;number&gt; | Yes | Callback used to return the value of the **frame** parameter. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | Yes | Callback used to return the value of the **frame** parameter. |
 
 ## on('stateChange')
 
@@ -697,10 +738,11 @@ For example, if **frame** is set to **10**, the callback is invoked each time 10
 on(type: 'stateChange', callback: Callback<AudioState>): void
 ```
 
-Subscribes to the audio capturer state change event, which is triggered when the state of the audio capturer is
-changed. This API uses an asynchronous callback to return the result.
+Subscribes to the audio capturer state change event, which is triggered when the state of the audio capturer is changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
+
+<!--Device-AudioCapturer-on(type: 'stateChange', callback: Callback<AudioState>): void--><!--Device-AudioCapturer-on(type: 'stateChange', callback: Callback<AudioState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -708,8 +750,8 @@ changed. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the state of the audiocapturer is changed. |
-| callback | Callback&lt;AudioState&gt; | Yes | Callback used to return the audio status. |
+| type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the state of the audio capturer is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioState> | Yes | Callback used to return the audio status. |
 
 ## on('audioInterrupt')
 
@@ -717,19 +759,15 @@ changed. This API uses an asynchronous callback to return the result.
 on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void
 ```
 
-Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an
-asynchronous callback to return the result.
+Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result.
 
-The AudioCapturer instance proactively gains the focus when the **start** event occurs and releases the focus
-when the **pause** or **stop** event occurs. Therefore, you do not need to request to gain or release the focus.
+The AudioCapturer instance proactively gains the focus when the **start** event occurs and releases the focus when the **pause** or **stop** event occurs. Therefore, you do not need to request to gain or release the focus.
 
-After this API is called, an [InterruptEvent](arkts-audio-interruptevent-i.md) is received when
-the AudioCapturer instance fails to obtain the focus or an audio interruption event occurs (for example, the
-audio stream is interrupted by others). It is recommended that the application perform further processing based
-on the **InterruptEvent** information. For details, see
-[Introduction to Audio Focus](../../../../media/audio/audio-playback-concurrency.md).
+After this API is called, an [InterruptEvent](arkts-audio-interruptevent-i.md) is received when the AudioCapturer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see [Introduction to Audio Focus](../../../../media/audio/audio-playback-concurrency.md).
 
 **Since:** 10
+
+<!--Device-AudioCapturer-on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void--><!--Device-AudioCapturer-on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
 
@@ -737,8 +775,8 @@ on the **InterruptEvent** information. For details, see
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focusis changed. |
-| callback | Callback&lt;InterruptEvent&gt; | Yes | Callback used to return the event information. |
+| type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<InterruptEvent> | Yes | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -753,10 +791,11 @@ on the **InterruptEvent** information. For details, see
 on(type: 'inputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void
 ```
 
-Subscribes to the audio input device change event, which is triggered when an audio input device is changed. This
-API uses an asynchronous callback to return the result.
+Subscribes to the audio input device change event, which is triggered when an audio input device is changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+<!--Device-AudioCapturer-on(type: 'inputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioCapturer-on(type: 'inputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -764,8 +803,8 @@ API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'inputDeviceChange' | Yes | Event type. The event **'inputDeviceChange'** is triggered when an audioinput device is changed. |
-| callback | Callback&lt;AudioDeviceDescriptors&gt; | Yes | Callback used to return the updated information about theaudio input device. |
+| type | 'inputDeviceChange' | Yes | Event type. The event **'inputDeviceChange'** is triggered when an audio input device is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioDeviceDescriptors> | Yes | Callback used to return the updated information about the audio input device. |
 
 **Error codes:**
 
@@ -780,12 +819,11 @@ API uses an asynchronous callback to return the result.
 on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfo>): void
 ```
 
-Subscribes to the audio capturer configuration change event, which is triggered when the audio recording stream
-status or device is changed. This API uses an asynchronous callback to return the result. The subscription is
-implemented asynchronously and the callback, which is triggered when the audio capturer configuration changes,
-may fail to reflect the actual condition.
+Subscribes to the audio capturer configuration change event, which is triggered when the audio recording stream status or device is changed. This API uses an asynchronous callback to return the result. The subscription is implemented asynchronously and the callback, which is triggered when the audio capturer configuration changes,may fail to reflect the actual condition.
 
 **Since:** 11
+
+<!--Device-AudioCapturer-on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfo>): void--><!--Device-AudioCapturer-on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -793,8 +831,8 @@ may fail to reflect the actual condition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioCapturerChange' | Yes | Event type. The event **'audioCapturerChange'** is triggered when theaudio recording stream status or device is changed. |
-| callback | Callback&lt;AudioCapturerChangeInfo&gt; | Yes | Callback used to return the current configuration andstatus information of the audio capturer. |
+| type | 'audioCapturerChange' | Yes | Event type. The event **'audioCapturerChange'** is triggered when the audio recording stream status or device is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioCapturerChangeInfo> | Yes | Callback used to return the current configuration and status information of the audio capturer. |
 
 **Error codes:**
 
@@ -809,15 +847,15 @@ may fail to reflect the actual condition.
 on(type: 'readData', callback: Callback<ArrayBuffer>): void
 ```
 
-Subscribes to the audio data read event, which is triggered when audio stream data needs to be read. This API
-uses an asynchronous callback to return the result.
+Subscribes to the audio data read event, which is triggered when audio stream data needs to be read. This API uses an asynchronous callback to return the result.
 
 The callback function is used only to read audio data. Do not call AudioCapturer APIs in it.
 
-To eliminate power-on noise caused by the microphone hardware design, the first 100 ms of data after recording
-starts is typically muted.
+To eliminate power-on noise caused by the microphone hardware design, the first 100 ms of data after recording starts is typically muted.
 
 **Since:** 11
+
+<!--Device-AudioCapturer-on(type: 'readData', callback: Callback<ArrayBuffer>): void--><!--Device-AudioCapturer-on(type: 'readData', callback: Callback<ArrayBuffer>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -825,8 +863,8 @@ starts is typically muted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'readData' | Yes | Event type. The event **'readData'** is triggered when audio stream data needs to beread. |
-| callback | Callback&lt;ArrayBuffer&gt; | Yes | Callback used to return the buffer from which the data is read. |
+| type | 'readData' | Yes | Event type. The event **'readData'** is triggered when audio stream data needs to be read. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ArrayBuffer> | Yes | Callback used to return the buffer from which the data is read. |
 
 **Error codes:**
 
@@ -849,6 +887,8 @@ Reads the buffer from the audio capturer. This method uses an asynchronous callb
 
 **Substitutes:** event:readData
 
+<!--Device-AudioCapturer-read(size: number, isBlockingRead: boolean, callback: AsyncCallback<ArrayBuffer>): void--><!--Device-AudioCapturer-read(size: number, isBlockingRead: boolean, callback: AsyncCallback<ArrayBuffer>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **Parameters:**
@@ -857,7 +897,7 @@ Reads the buffer from the audio capturer. This method uses an asynchronous callb
 | --- | --- | --- | --- |
 | size | number | Yes | Number of bytes to read. |
 | isBlockingRead | boolean | Yes | Whether to block the read operation. **true** to block, **false** otherwise. |
-| callback | AsyncCallback&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined** and **data** is the buffer read; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ArrayBuffer> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the buffer read; otherwise, **err** is an error object. |
 
 ## read
 
@@ -873,6 +913,8 @@ Reads the buffer. This API uses a promise to return the result.
 
 **Substitutes:** event:readData
 
+<!--Device-AudioCapturer-read(size: number, isBlockingRead: boolean): Promise<ArrayBuffer>--><!--Device-AudioCapturer-read(size: number, isBlockingRead: boolean): Promise<ArrayBuffer>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **Parameters:**
@@ -886,7 +928,7 @@ Reads the buffer. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise used to return the data read from the buffer. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ArrayBuffer> | Promise used to return the data read from the buffer. |
 
 ## release
 
@@ -898,13 +940,15 @@ Releases this audio capturer. This API uses an asynchronous callback to return t
 
 **Since:** 8
 
+<!--Device-AudioCapturer-release(callback: AsyncCallback<void>): void--><!--Device-AudioCapturer-release(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 ## release
 
@@ -916,13 +960,15 @@ Releases this audio capturer. This API uses a promise to return the result.
 
 **Since:** 8
 
+<!--Device-AudioCapturer-release(): Promise<void>--><!--Device-AudioCapturer-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## requestPlaybackCaptureStart
 
@@ -930,13 +976,13 @@ Releases this audio capturer. This API uses a promise to return the result.
 requestPlaybackCaptureStart(callback: Callback<PlaybackCaptureStartState>): void
 ```
 
-Asynchronously request to start the playback capture stream.
-This function is non-blocking, which means system will continue to process user authorization and
-stream starting when receiving the start request. And the final result will be returned by callback.
+Asynchronously request to start the playback capture stream.This function is non-blocking, which means system will continue to process user authorization and stream starting when receiving the start request. And the final result will be returned by callback.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioCapturer-requestPlaybackCaptureStart(callback: Callback<PlaybackCaptureStartState>): void--><!--Device-AudioCapturer-requestPlaybackCaptureStart(callback: Callback<PlaybackCaptureStartState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 
@@ -944,7 +990,7 @@ stream starting when receiving the start request. And the final result will be r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;PlaybackCaptureStartState&gt; | Yes | Callback function used to receive the finalresult of start request. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<PlaybackCaptureStartState> | Yes | Callback function used to receive the final result of start request. |
 
 ## setIndependentAudioSessionStrategy
 
@@ -954,15 +1000,17 @@ setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: num
 
 Sets the independent audio session strategy and behavior parameters.
 
-> **NOTE**
->
-> If this API is called while an audio capturer is running, you must call the
-> [start](arkts-audio-audiocapturer-i.md#start-1) API again for
+> **NOTE**  
+>  
+> If this API is called while an audio capturer is running, you must call the  
+> [start](arkts-audio-audiocapturer-i.md#start-1) API again for  
 > the settings to take effect.
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioCapturer-setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: int): void--><!--Device-AudioCapturer-setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: int): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -970,8 +1018,8 @@ Sets the independent audio session strategy and behavior parameters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategy | AudioSessionStrategy | Yes | Audio session strategy. |
-| behavior | number | Yes | Specifies the audio session behavior.<br>This can be a single flag or a bitwise ORcombination of multiple flags.<br>For details about the supported audio session behaviors, see[AudioSessionBehaviorFlags](arkts-audio-audiosessionbehaviorflags-e.md). |
+| strategy | [AudioSessionStrategy](arkts-audio-audiosessionstrategy-i.md) | Yes | Audio session strategy. |
+| behavior | number | Yes | Specifies the audio session behavior.<br>This can be a single flag or a bitwise OR combination of multiple flags.<br>For details about the supported audio session behaviors, see [AudioSessionBehaviorFlags](arkts-audio-audiosessionbehaviorflags-e.md). |
 
 **Error codes:**
 
@@ -986,12 +1034,13 @@ Sets the independent audio session strategy and behavior parameters.
 setMuteHint(mute: boolean): Promise<void>
 ```
 
-Set mute hint for this capturer, this method is used as a hint for power optimization
-it does not mute the recording stream, only affects internal processing strategy.
+Set mute hint for this capturer, this method is used as a hint for power optimization it does not mute the recording stream, only affects internal processing strategy.
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioCapturer-setMuteHint(mute: boolean): Promise<void>--><!--Device-AudioCapturer-setMuteHint(mute: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -1005,7 +1054,7 @@ it does not mute the recording stream, only affects internal processing strategy
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1019,15 +1068,13 @@ it does not mute the recording stream, only affects internal processing strategy
 setNoiseReductionMode(noiseReductionMode: NoiseReductionMode): void
 ```
 
-Sets noise reduction mode for current audio capturer.
-The supported mode should be obtained by {@link #getSupportedNoiseReductionModes}.
-The actual effect may vary from different audio devices, and will be invalid when there are multiple
-recording streams running simultaneously.
-The mode can only be changed in created and stopped state.
+Sets noise reduction mode for current audio capturer.The supported mode should be obtained by {@link #getSupportedNoiseReductionModes}.The actual effect may vary from different audio devices, and will be invalid when there are multiple recording streams running simultaneously.The mode can only be changed in created and stopped state.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioCapturer-setNoiseReductionMode(noiseReductionMode: NoiseReductionMode): void--><!--Device-AudioCapturer-setNoiseReductionMode(noiseReductionMode: NoiseReductionMode): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -1035,7 +1082,7 @@ The mode can only be changed in created and stopped state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| noiseReductionMode | NoiseReductionMode | Yes | The noise reduction mode to set. |
+| noiseReductionMode | [NoiseReductionMode](arkts-audio-noisereductionmode-e.md) | Yes | The noise reduction mode to set. |
 
 **Error codes:**
 
@@ -1052,11 +1099,11 @@ The mode can only be changed in created and stopped state.
 setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>
 ```
 
-Sets whether to
-[mute the current audio recording stream when an audio interruption occurs](../../../../media/audio/using-audiocapturer-for-recording.md#setting-the-mute-interruption-mode)
-. This API uses a promise to return the result.
+Sets whether to [mute the current audio recording stream when an audio interruption occurs](../../../../media/audio/using-audiocapturer-for-recording.md#setting-the-mute-interruption-mode). This API uses a promise to return the result.
 
 **Since:** 20
+
+<!--Device-AudioCapturer-setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>--><!--Device-AudioCapturer-setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -1064,13 +1111,13 @@ Sets whether to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| muteWhenInterrupted | boolean | Yes | Whether to mute the current audio recording stream during an audiointerruption. **true** to mute, **false** otherwise. |
+| muteWhenInterrupted | boolean | Yes | Whether to mute the current audio recording stream during an audio interruption. **true** to mute, **false** otherwise. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1084,10 +1131,11 @@ Sets whether to
 start(callback: AsyncCallback<void>): void
 ```
 
-Starts this audio capturer to start capturing audio data. This API uses an asynchronous callback to return the
-result.
+Starts this audio capturer to start capturing audio data. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
+
+<!--Device-AudioCapturer-start(callback: AsyncCallback<void>): void--><!--Device-AudioCapturer-start(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -1095,7 +1143,7 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. If the operation fails, an error object withthe following error code is returned:<br>Error code 6800301: indicates abnormal status, focus preemptionfailure, and abnormal system processing. For details, see system logs. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. If the operation fails, an error object with the following error code is returned:<br>Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. For details, see system logs. |
 
 ## start
 
@@ -1107,13 +1155,15 @@ Starts this audio capturer to start capturing audio data. This API uses a promis
 
 **Since:** 8
 
+<!--Device-AudioCapturer-start(): Promise<void>--><!--Device-AudioCapturer-start(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise object, which indicates that the capturer is started successfully. If theoperation fails, an error object with the following error code is returned:<br>Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. Fordetails, see system logs. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise object, which indicates that the capturer is started successfully. If the operation fails, an error object with the following error code is returned:<br>Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. For details, see system logs. |
 
 ## stop
 
@@ -1121,10 +1171,11 @@ Starts this audio capturer to start capturing audio data. This API uses a promis
 stop(callback: AsyncCallback<void>): void
 ```
 
-Stops this audio capturer, ceasing the input audio stream. This API uses an asynchronous callback to return the
-result.
+Stops this audio capturer, ceasing the input audio stream. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
+
+<!--Device-AudioCapturer-stop(callback: AsyncCallback<void>): void--><!--Device-AudioCapturer-stop(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -1132,7 +1183,7 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 ## stop
 
@@ -1144,13 +1195,15 @@ Stops this audio capturer, ceasing the input audio stream. This API uses a promi
 
 **Since:** 8
 
+<!--Device-AudioCapturer-stop(): Promise<void>--><!--Device-AudioCapturer-stop(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## state
 
@@ -1163,6 +1216,8 @@ Audio capturer state.
 **Type:** AudioState
 
 **Since:** 8
+
+<!--Device-AudioCapturer-readonly state: AudioState--><!--Device-AudioCapturer-readonly state: AudioState-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 

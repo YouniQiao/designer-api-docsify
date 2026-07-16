@@ -4,6 +4,8 @@ Defines the options for acquiring the authorization.
 
 **Since:** 24
 
+<!--Device-osAccount-interface AcquireAuthorizationOptions--><!--Device-osAccount-interface AcquireAuthorizationOptions-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -20,8 +22,7 @@ import { osAccount } from '@kit.BasicServicesKit';
 challenge?: Uint8Array
 ```
 
-Random challenge value, which prevents replay attacks. The value contains a maximum of 32 bytes. The default
-value is **undefined**.
+Random challenge value, which prevents replay attacks. The value contains a maximum of 32 bytes. The default value is **undefined**.
 
 **Type:** Uint8Array
 
@@ -30,6 +31,8 @@ value is **undefined**.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AcquireAuthorizationOptions-challenge?: Uint8Array--><!--Device-AcquireAuthorizationOptions-challenge?: Uint8Array-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -43,10 +46,8 @@ interactionContext?: Context
 
 User interaction context configuration. The default value is **undefined**.
 
-- If no context is specified, the authorization dialog box is displayed in modal system mode.
-- If [UIAbilityContext](../apis-ability-kit/js-apis-inner-application-uiAbilityContext.md) or
-[UIExtensionContext](../apis-ability-kit/js-apis-inner-application-uiExtensionContext.md) is specified, the
-authorization dialog box is displayed in modal application mode.
+- If no context is specified, the authorization dialog box is displayed in modal system mode.  
+- If [UIAbilityContext](../apis-ability-kit/js-apis-inner-application-uiAbilityContext.md) or [UIExtensionContext](../apis-ability-kit/js-apis-inner-application-uiExtensionContext.md) is specified, the authorization dialog box is displayed in modal application mode.  
 - If no valid context is provided, the authorization dialog box cannot be displayed.
 
 Note: This parameter is valid only when **isInteractionAllowed** is set to **true**.
@@ -58,6 +59,8 @@ Note: This parameter is valid only when **isInteractionAllowed** is set to **tru
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AcquireAuthorizationOptions-interactionContext?: Context--><!--Device-AcquireAuthorizationOptions-interactionContext?: Context-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -71,11 +74,9 @@ isInteractionAllowed?: boolean
 
 Whether user interaction is allowed. The default value is **true**.
 
-If the value is **true**, the authorization dialog box can be displayed in the interaction context. If the value
-is **false**, the authorization dialog box cannot be displayed.
+If the value is **true**, the authorization dialog box can be displayed in the interaction context. If the value is **false**, the authorization dialog box cannot be displayed.
 
-Note: This option is valid only when the caller is in the foreground. If the caller is in the background, user
-interaction is not allowed.
+Note: This option is valid only when the caller is in the foreground. If the caller is in the background, user interaction is not allowed.
 
 **Type:** boolean
 
@@ -84,6 +85,8 @@ interaction is not allowed.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AcquireAuthorizationOptions-isInteractionAllowed?: boolean--><!--Device-AcquireAuthorizationOptions-isInteractionAllowed?: boolean-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -97,8 +100,7 @@ isReuseNeeded?: boolean
 
 Whether to reuse the previous authorization. The default value is **true**.
 
-If the value is **true** and the authorization result is valid, the result will be reused. Otherwise, a new
-authorization will be executed.
+If the value is **true** and the authorization result is valid, the result will be reused. Otherwise, a new authorization will be executed.
 
 **Type:** boolean
 
@@ -107,6 +109,8 @@ authorization will be executed.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AcquireAuthorizationOptions-isReuseNeeded?: boolean--><!--Device-AcquireAuthorizationOptions-isReuseNeeded?: boolean-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 

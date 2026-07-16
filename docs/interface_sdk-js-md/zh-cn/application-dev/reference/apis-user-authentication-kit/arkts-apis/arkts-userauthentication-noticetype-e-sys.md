@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-userAuth-enum NoticeType--><!--Device-userAuth-enum NoticeType-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -17,6 +19,8 @@ WIDGET_NOTICE = 1
 表示该通知由系统统一身份认证控件发出，用于通知用户认证框架相关事件。
 
 **起始版本：** 10
+
+<!--Device-NoticeType-WIDGET_NOTICE = 1--><!--Device-NoticeType-WIDGET_NOTICE = 1-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

@@ -18,6 +18,8 @@ Set the policy to access the network of the specified application.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function setNetworkAccessPolicy(uid: number, policy: NetworkAccessPolicy, isReconfirmed?: boolean): Promise<void>--><!--Device-policy-function setNetworkAccessPolicy(uid: number, policy: NetworkAccessPolicy, isReconfirmed?: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -27,14 +29,14 @@ Set the policy to access the network of the specified application.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | number | Yes | The specified UID of application. |
-| policy | NetworkAccessPolicy | Yes | The network access policy of application. For details, see {@link NetworkAccessPolicy}. |
+| policy | [NetworkAccessPolicy](arkts-network-networkaccesspolicy-i-sys.md) | Yes | The network access policy of application. For details, see {@link NetworkAccessPolicy}. |
 | isReconfirmed | boolean | No | Whether this operation is reconfirmed by user or not. Default false. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

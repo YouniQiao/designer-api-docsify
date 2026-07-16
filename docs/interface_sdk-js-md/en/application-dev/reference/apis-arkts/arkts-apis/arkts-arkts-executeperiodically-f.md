@@ -12,13 +12,13 @@ import { taskpool } from '@kit.ArkTS';
 function executePeriodically(period: number, task: Task, priority?: Priority): void
 ```
 
-Executes a task periodically. In this execution mode, you can set the task priority and call **cancel()** to cancel
-the execution. A periodic task cannot be a task in a task group, serial queue, or asynchronous queue. It cannot
-call **execute()** again or have a dependency relationship.
+Executes a task periodically. In this execution mode, you can set the task priority and call **cancel()** to cancel the execution. A periodic task cannot be a task in a task group, serial queue, or asynchronous queue. It cannot call **execute()** again or have a dependency relationship.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-taskpool-function executePeriodically(period: number, task: Task, priority?: Priority): void--><!--Device-taskpool-function executePeriodically(period: number, task: Task, priority?: Priority): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,8 +27,8 @@ call **execute()** again or have a dependency relationship.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | period | number | Yes | Execution period, in ms. The value must be greater than or equal to 0.The value should be an integer.<br>Unit:milliseconds. |
-| task | Task | Yes | Task to be executed. |
-| priority | Priority | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
+| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-task-i.md) | Yes | Task to be executed. |
+| priority | [Priority](arkts-arkts-priority-e.md) | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Error codes:**
 
@@ -89,13 +89,13 @@ taskpoolTest();
 function executePeriodically<A extends Array<Object>, R>(period: number, task: GenericsTask<A, R>, priority?: Priority): void
 ```
 
-Executes a generic task periodically, without verifying the parameter type and return value type of the task.
-The verification of the **executePeriodically** task works in conjunction with **new GenericsTask**, requiring that
-the parameter and return value types match those specified in **new GenericsTask**.
+Executes a generic task periodically, without verifying the parameter type and return value type of the task.The verification of the **executePeriodically** task works in conjunction with **new GenericsTask**, requiring that the parameter and return value types match those specified in **new GenericsTask**.
 
 **Since:** 13
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-taskpool-function executePeriodically<A extends Array<Object>, R>(period: number, task: GenericsTask<A, R>, priority?: Priority): void--><!--Device-taskpool-function executePeriodically<A extends Array<Object>, R>(period: number, task: GenericsTask<A, R>, priority?: Priority): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -104,8 +104,8 @@ the parameter and return value types match those specified in **new GenericsTask
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | period | number | Yes | Execution period, in ms. The value must be greater than or equal to 0.The value should be an integer.<br>Unit:milliseconds. |
-| task | GenericsTask&lt;A, R&gt; | Yes | Generic task to be executed periodically. |
-| priority | Priority | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
+| task | [GenericsTask](arkts-arkts-genericstask-c.md)<A, R> | Yes | Generic task to be executed periodically. |
+| priority | [Priority](arkts-arkts-priority-e.md) | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Error codes:**
 

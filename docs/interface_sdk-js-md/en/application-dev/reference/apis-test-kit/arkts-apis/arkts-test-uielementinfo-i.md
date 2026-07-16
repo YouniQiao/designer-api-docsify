@@ -4,6 +4,8 @@ Provides information about the UI event.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface UIElementInfo--><!--Device-unnamed-declare interface UIElementInfo-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Bundle name of the application.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-UIElementInfo-readonly bundleName: string--><!--Device-UIElementInfo-readonly bundleName: string-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 ## componentEventType
@@ -34,14 +38,15 @@ Bundle name of the application.
 readonly componentEventType?: ComponentEventType
 ```
 
-Component operation event type.
-If it is not a component operation event, {@link ComponentEventType.COMPONENT_UNDEFINED} is returned.
+Component operation event type.If it is not a component operation event, {@link ComponentEventType.COMPONENT_UNDEFINED} is returned.
 
 **Type:** ComponentEventType
 
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-UIElementInfo-readonly componentEventType?: ComponentEventType--><!--Device-UIElementInfo-readonly componentEventType?: ComponentEventType-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -59,6 +64,8 @@ Component ID. If it is not a component operation event, an empty string is retur
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-UIElementInfo-readonly componentId?: string--><!--Device-UIElementInfo-readonly componentId?: string-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 ## componentRect
@@ -74,6 +81,8 @@ The rect of the component, set all attributes of rect to 0 if it's a window.
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-UIElementInfo-readonly componentRect?: Rect--><!--Device-UIElementInfo-readonly componentRect?: Rect-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -91,6 +100,8 @@ Text information of the component or window.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-UIElementInfo-readonly text: string--><!--Device-UIElementInfo-readonly text: string-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 ## type
@@ -107,6 +118,8 @@ Component or window type.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-UIElementInfo-readonly type: string--><!--Device-UIElementInfo-readonly type: string-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 ## windowChangeType
@@ -115,14 +128,15 @@ Component or window type.
 readonly windowChangeType?: WindowChangeType
 ```
 
-Window change event type.
-If the event is not a window change event, {@link WindowChangeType.WINDOW_UNDEFINED} is returned.
+Window change event type.If the event is not a window change event, {@link WindowChangeType.WINDOW_UNDEFINED} is returned.
 
 **Type:** WindowChangeType
 
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-UIElementInfo-readonly windowChangeType?: WindowChangeType--><!--Device-UIElementInfo-readonly windowChangeType?: WindowChangeType-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -139,6 +153,8 @@ ID of the window where the component belongs.
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-UIElementInfo-readonly windowId?: int--><!--Device-UIElementInfo-readonly windowId?: int-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 

@@ -8,7 +8,15 @@
 
 **起始版本：** 14
 
+<!--Device-unnamed-export interface SuffixImageIconOptions extends IconOptions--><!--Device-unnamed-export interface SuffixImageIconOptions extends IconOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixImageIconOptions, IconGroupSuffix, IconItemOptions, ChipItemStyle, ChipGroupItemOptions, ChipGroup, IconOptions } from '@kit.ArkUI';
+```
 
 ## accessibilityDescription
 
@@ -16,8 +24,7 @@
 accessibilityDescription?: ResourceStr
 ```
 
-后缀图标的无障碍描述。此描述用于向用户详细解释后缀图标，开发人员应为后缀图标的这一属性提供较为详尽的文本说明，以协助用户理解即将执行的操作及其可能产生的后果。特别是当这些后果无法仅从后缀图标的属性和无障碍文本中直接获知时。如果后缀
-图标同时具备文本属性和无障碍说明属性，当后缀图标被选中时，系统将首先播报后缀图标的文本属性，随后播报无障碍说明属性的内容。
+后缀图标的无障碍描述。此描述用于向用户详细解释后缀图标，开发人员应为后缀图标的这一属性提供较为详尽的文本说明，以协助用户理解即将执行的操作及其可能产生的后果。特别是当这些后果无法仅从后缀图标的属性和无障碍文本中直接获知时。如果后缀图标同时具备文本属性和无障碍说明属性，当后缀图标被选中时，系统将首先播报后缀图标的文本属性，随后播报无障碍说明属性的内容。
 
 默认值：空字符串。
 
@@ -29,7 +36,9 @@ accessibilityDescription?: ResourceStr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SuffixImageIconOptions-accessibilityDescription?: ResourceStr--><!--Device-SuffixImageIconOptions-accessibilityDescription?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -63,7 +72,9 @@ accessibilityLevel?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SuffixImageIconOptions-accessibilityLevel?: string--><!--Device-SuffixImageIconOptions-accessibilityLevel?: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,8 +84,7 @@ accessibilityLevel?: string
 accessibilityText?: ResourceStr
 ```
 
-后缀图标的无障碍文本属性。用于为用户进一步说明后缀图标，开发人员可为后缀图标的该属性设置相对较详细的解释文本，帮助用户理解将要执行的操作。如帮助用户理解将要执行的操作可能导致什么后果，尤其是当这些后果无法从后缀图标本身属性与无障碍
-文本中了解到时。若后缀图标既拥有文本属性又拥有无障碍说明属性，则后缀图标被选中时，先播报后缀图标的文本属性，再播报无障碍说明属性的内容。
+后缀图标的无障碍文本属性。用于为用户进一步说明后缀图标，开发人员可为后缀图标的该属性设置相对较详细的解释文本，帮助用户理解将要执行的操作。如帮助用户理解将要执行的操作可能导致什么后果，尤其是当这些后果无法从后缀图标本身属性与无障碍文本中了解到时。若后缀图标既拥有文本属性又拥有无障碍说明属性，则后缀图标被选中时，先播报后缀图标的文本属性，再播报无障碍说明属性的内容。
 
 默认值：空字符串。
 
@@ -86,7 +96,9 @@ accessibilityText?: ResourceStr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SuffixImageIconOptions-accessibilityText?: ResourceStr--><!--Device-SuffixImageIconOptions-accessibilityText?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -106,7 +118,9 @@ action?: VoidCallback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SuffixImageIconOptions-action?: VoidCallback--><!--Device-SuffixImageIconOptions-action?: VoidCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

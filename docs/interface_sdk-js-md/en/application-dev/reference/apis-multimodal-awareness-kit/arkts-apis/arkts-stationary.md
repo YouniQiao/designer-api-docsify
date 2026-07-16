@@ -2,11 +2,13 @@
 
 The **stationary** module provides APIs to report the device status, including absolute still and relative still.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > This module does not support x86 emulators.
 
 **Since:** 9
+
+<!--Device-unnamed-declare namespace stationary--><!--Device-unnamed-declare namespace stationary-End-->
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
 

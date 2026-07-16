@@ -1,5 +1,11 @@
 # createMouseController
 
+## 导入模块
+
+```TypeScript
+import { inputEventClient } from '@kit.InputKit';
+```
+
 ## createMouseController
 
 ```TypeScript
@@ -14,13 +20,15 @@ function createMouseController(): Promise<MouseController>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-inputEventClient-function createMouseController(): Promise<MouseController>--><!--Device-inputEventClient-function createMouseController(): Promise<MouseController>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;MouseController&gt; | Promise对象，返回鼠标控制器实例。 |
+| Promise<MouseController> | Promise对象，返回鼠标控制器实例。 |
 
 **错误码：**
 

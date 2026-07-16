@@ -13,14 +13,17 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: Extensi
     extensionAbilityFlags: number, userId?: number): Array<ExtensionAbilityInfo>
 ```
 
-Obtains the ExtensionAbility information based on the given want, ExtensionAbility type, ExtensionAbility flags,
-and user ID. This API returns the result synchronously.
+Obtains the ExtensionAbility information based on the given want, ExtensionAbility type, ExtensionAbility flags,and user ID. This API returns the result synchronously.
 
 No permission is required for obtaining the caller's own information.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: ExtensionAbilityType,
+    extensionAbilityFlags: int, userId?: int): Array<ExtensionAbilityInfo>--><!--Device-bundleManager-function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: ExtensionAbilityType,
+    extensionAbilityFlags: int, userId?: int): Array<ExtensionAbilityInfo>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -30,16 +33,16 @@ No permission is required for obtaining the caller's own information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want containing the bundle name to query. |
-| extensionAbilityType | ExtensionAbilityType | Yes | Type of the ExtensionAbility. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want containing the bundle name to query. |
+| extensionAbilityType | [ExtensionAbilityType](arkts-ability-extensionabilitytype-e.md) | Yes | Type of the ExtensionAbility. |
 | extensionAbilityFlags | number | Yes | Type of the ExtensionAbility information to obtain. |
-| userId | number | No | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ExtensionAbilityInfo&gt; | An array of ExtensionAbility information. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ExtensionAbilityInfo> | An array of ExtensionAbility information. |
 
 **Error codes:**
 
@@ -47,7 +50,7 @@ No permission is required for obtaining the caller's own information.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicitquery. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified extensionAbility is not found. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified userId is invalid. |
@@ -112,14 +115,17 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,
     extensionAbilityFlags: number, userId?: number): Array<ExtensionAbilityInfo>
 ```
 
-Obtains the ExtensionAbility information based on the given Want, ExtensionAbility type, ExtensionAbility flags,
-and user ID. This API returns the result synchronously.
+Obtains the ExtensionAbility information based on the given Want, ExtensionAbility type, ExtensionAbility flags,and user ID. This API returns the result synchronously.
 
 No permission is required for obtaining the caller's own information.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,
+    extensionAbilityFlags: int, userId?: int): Array<ExtensionAbilityInfo>--><!--Device-bundleManager-function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,
+    extensionAbilityFlags: int, userId?: int): Array<ExtensionAbilityInfo>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -129,16 +135,16 @@ No permission is required for obtaining the caller's own information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want containing the bundle name to query. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want containing the bundle name to query. |
 | extensionAbilityType | string | Yes | Type of the custom ExtensionAbility. |
-| extensionAbilityFlags | number | Yes | Information flags to be contained in the returned ExtensionAbilityInfoobject. |
-| userId | number | No | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| extensionAbilityFlags | number | Yes | Information flags to be contained in the returned ExtensionAbilityInfo object. |
+| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ExtensionAbilityInfo&gt; | An array of ExtensionAbility information obtained. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ExtensionAbilityInfo> | An array of ExtensionAbility information obtained. |
 
 **Error codes:**
 
@@ -146,7 +152,7 @@ No permission is required for obtaining the caller's own information.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicitquery. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified extensionAbility is not found. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified userId is invalid. |
@@ -211,14 +217,17 @@ function queryExtensionAbilityInfoSync(extensionAbilityType: string, extensionAb
     userId?: number): Array<ExtensionAbilityInfo>
 ```
 
-Obtains the ExtensionAbility information based on the given ExtensionAbility type, ExtensionAbility flags, and user
-ID.
+Obtains the ExtensionAbility information based on the given ExtensionAbility type, ExtensionAbility flags, and user ID.
 
 No permission is required for obtaining the caller's own information.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function queryExtensionAbilityInfoSync(extensionAbilityType: string, extensionAbilityFlags: int,
+    userId?: int): Array<ExtensionAbilityInfo>--><!--Device-bundleManager-function queryExtensionAbilityInfoSync(extensionAbilityType: string, extensionAbilityFlags: int,
+    userId?: int): Array<ExtensionAbilityInfo>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -229,14 +238,14 @@ No permission is required for obtaining the caller's own information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | extensionAbilityType | string | Yes | Type of the custom ExtensionAbility. |
-| extensionAbilityFlags | number | Yes | Information flags to be contained in the returned ExtensionAbilityInfoobject. |
-| userId | number | No | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| extensionAbilityFlags | number | Yes | Information flags to be contained in the returned ExtensionAbilityInfo object. |
+| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ExtensionAbilityInfo&gt; | An array of ExtensionAbility information obtained. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ExtensionAbilityInfo> | An array of ExtensionAbility information obtained. |
 
 **Error codes:**
 

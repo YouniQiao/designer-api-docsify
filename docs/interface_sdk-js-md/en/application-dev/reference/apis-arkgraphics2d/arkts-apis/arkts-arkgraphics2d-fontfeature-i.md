@@ -4,6 +4,8 @@ Describes a font feature.
 
 **Since:** 12
 
+<!--Device-text-interface FontFeature--><!--Device-text-interface FontFeature-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
@@ -26,6 +28,8 @@ String identified by the keyword in the font feature key-value pair.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-FontFeature-name: string--><!--Device-FontFeature-name: string-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## value
@@ -41,6 +45,8 @@ Value in the font feature key-value pair.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FontFeature-value: int--><!--Device-FontFeature-value: int-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

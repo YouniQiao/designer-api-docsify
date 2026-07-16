@@ -1,10 +1,10 @@
 # BaseGestureHandlingProposal
 
-Base class for smart gesture handling. When dynamically customizing smart gesture behavior through the
-[registerMonitor](arkts-arkui-smartgesturecontroller-c.md#registermonitor-1) API, the callback parameter type is an instance of a
-specific subclass type.
+Base class for smart gesture handling. When dynamically customizing smart gesture behavior through the [registerMonitor](arkts-arkui-smartgesturecontroller-c.md#registermonitor-1) API, the callback parameter type is an instance of a specific subclass type.
 
 **Since:** 26.0.0
+
+<!--Device-unnamed-export abstract class BaseGestureHandlingProposal--><!--Device-unnamed-export abstract class BaseGestureHandlingProposal-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,6 +30,8 @@ Final action of the smart gesture.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-BaseGestureHandlingProposal-action: SmartGestureAction--><!--Device-BaseGestureHandlingProposal-action: SmartGestureAction-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## operateIntention
@@ -47,6 +49,8 @@ Underlying operation intention of the smart gesture.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-BaseGestureHandlingProposal-operateIntention: OperateIntention--><!--Device-BaseGestureHandlingProposal-operateIntention: OperateIntention-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

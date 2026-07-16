@@ -1,9 +1,10 @@
 # DisplayOrientation
 
-Enumerates the display orientations of the ability. It is applicable only to
-[PageAbility](../../../../application-models/pageability-overview.md) in the FA model.
+Enumerates the display orientations of the ability. It is applicable only to [PageAbility](../../../../application-models/pageability-overview.md) in the FA model.
 
 **Since:** 9
+
+<!--Device-bundleManager-export enum DisplayOrientation--><!--Device-bundleManager-export enum DisplayOrientation-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -19,6 +20,8 @@ Unspecified. The orientation is determined by the system.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DisplayOrientation-UNSPECIFIED = 0--><!--Device-DisplayOrientation-UNSPECIFIED = 0-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## LANDSCAPE
@@ -32,6 +35,8 @@ Landscape.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DisplayOrientation-LANDSCAPE = 1--><!--Device-DisplayOrientation-LANDSCAPE = 1-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -47,6 +52,8 @@ Portrait.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DisplayOrientation-PORTRAIT = 2--><!--Device-DisplayOrientation-PORTRAIT = 2-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## FOLLOW_RECENT
@@ -60,6 +67,8 @@ The last display orientation is used.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DisplayOrientation-FOLLOW_RECENT = 3--><!--Device-DisplayOrientation-FOLLOW_RECENT = 3-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -75,6 +84,8 @@ Reverse landscape.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DisplayOrientation-LANDSCAPE_INVERTED = 4--><!--Device-DisplayOrientation-LANDSCAPE_INVERTED = 4-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## PORTRAIT_INVERTED
@@ -88,6 +99,8 @@ Reverse portrait.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DisplayOrientation-PORTRAIT_INVERTED = 5--><!--Device-DisplayOrientation-PORTRAIT_INVERTED = 5-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -103,6 +116,8 @@ Automatically rotates when the sensor changes to landscape or portrait mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DisplayOrientation-AUTO_ROTATION = 6--><!--Device-DisplayOrientation-AUTO_ROTATION = 6-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## AUTO_ROTATION_LANDSCAPE
@@ -116,6 +131,8 @@ Automatically rotates when the sensor changes to landscape mode.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DisplayOrientation-AUTO_ROTATION_LANDSCAPE = 7--><!--Device-DisplayOrientation-AUTO_ROTATION_LANDSCAPE = 7-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -131,6 +148,8 @@ Automatically rotates when the sensor changes to portrait mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DisplayOrientation-AUTO_ROTATION_PORTRAIT = 8--><!--Device-DisplayOrientation-AUTO_ROTATION_PORTRAIT = 8-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## AUTO_ROTATION_RESTRICTED
@@ -144,6 +163,8 @@ Switched-determined auto rotation.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DisplayOrientation-AUTO_ROTATION_RESTRICTED = 9--><!--Device-DisplayOrientation-AUTO_ROTATION_RESTRICTED = 9-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -159,6 +180,8 @@ Switched-determined auto rotation in the horizontal direction.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DisplayOrientation-AUTO_ROTATION_LANDSCAPE_RESTRICTED = 10--><!--Device-DisplayOrientation-AUTO_ROTATION_LANDSCAPE_RESTRICTED = 10-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## AUTO_ROTATION_PORTRAIT_RESTRICTED
@@ -172,6 +195,8 @@ Switched-determined auto rotation in the vertical direction.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DisplayOrientation-AUTO_ROTATION_PORTRAIT_RESTRICTED = 11--><!--Device-DisplayOrientation-AUTO_ROTATION_PORTRAIT_RESTRICTED = 11-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -187,6 +212,8 @@ Locked.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DisplayOrientation-LOCKED = 12--><!--Device-DisplayOrientation-LOCKED = 12-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## AUTO_ROTATION_UNSPECIFIED
@@ -201,6 +228,8 @@ Auto rotation controlled by the switch and determined by the system.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DisplayOrientation-AUTO_ROTATION_UNSPECIFIED = 13--><!--Device-DisplayOrientation-AUTO_ROTATION_UNSPECIFIED = 13-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## FOLLOW_DESKTOP
@@ -214,6 +243,8 @@ Following the orientation of the home screen.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DisplayOrientation-FOLLOW_DESKTOP = 14--><!--Device-DisplayOrientation-FOLLOW_DESKTOP = 14-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

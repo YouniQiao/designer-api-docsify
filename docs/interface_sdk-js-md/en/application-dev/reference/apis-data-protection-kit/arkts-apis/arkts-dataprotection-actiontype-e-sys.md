@@ -1,9 +1,10 @@
 # ActionType (System API)
 
-Enumerates the actions to be performed when the file's permission expiration time is reached. The default value
-is **NOT_OPEN**.
+Enumerates the actions to be performed when the file's permission expiration time is reached. The default value is **NOT_OPEN**.
 
 **Since:** 21
+
+<!--Device-dlpPermission-export enum ActionType--><!--Device-dlpPermission-export enum ActionType-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -19,6 +20,8 @@ Users are not allowed to open the DLP file when the file's permission expiration
 
 **Since:** 21
 
+<!--Device-ActionType-NOT_OPEN = 0--><!--Device-ActionType-NOT_OPEN = 0-End-->
+
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **System API:** This is a system API.
@@ -29,10 +32,11 @@ Users are not allowed to open the DLP file when the file's permission expiration
 OPEN = 1
 ```
 
-Logged-in accounts can still open and edit the DLP file when the file's permission expiration time is
-reached.
+Logged-in accounts can still open and edit the DLP file when the file's permission expiration time is reached.
 
 **Since:** 21
+
+<!--Device-ActionType-OPEN = 1--><!--Device-ActionType-OPEN = 1-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 

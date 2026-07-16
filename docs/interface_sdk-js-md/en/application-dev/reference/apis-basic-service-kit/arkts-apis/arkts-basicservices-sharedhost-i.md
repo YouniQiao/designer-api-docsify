@@ -4,6 +4,8 @@ Interface defining shared device information
 
 **Since:** 24
 
+<!--Device-print-interface SharedHost--><!--Device-print-interface SharedHost-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## Modules to Import
@@ -26,6 +28,8 @@ IP address of the shared device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SharedHost-ip: string--><!--Device-SharedHost-ip: string-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## shareName
@@ -42,6 +46,8 @@ Share name of the shared device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SharedHost-shareName: string--><!--Device-SharedHost-shareName: string-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## workgroupName
@@ -57,6 +63,8 @@ Workgroup name of the shared device.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SharedHost-workgroupName: string--><!--Device-SharedHost-workgroupName: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 

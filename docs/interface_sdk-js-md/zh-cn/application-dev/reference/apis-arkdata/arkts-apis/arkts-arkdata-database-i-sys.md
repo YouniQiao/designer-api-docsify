@@ -4,9 +4,17 @@
 
 **起始版本：** 11
 
+<!--Device-cloudExtension-export interface Database--><!--Device-cloudExtension-export interface Database-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { cloudExtension } from '@kit.ArkData';
+```
 
 ## alias
 
@@ -19,6 +27,8 @@ alias: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-Database-alias: string--><!--Device-Database-alias: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -36,6 +46,8 @@ name: string
 
 **起始版本：** 11
 
+<!--Device-Database-name: string--><!--Device-Database-name: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +63,8 @@ tables: Array<Table>
 **类型：** Array<Table>
 
 **起始版本：** 11
+
+<!--Device-Database-tables: Array<Table>--><!--Device-Database-tables: Array<Table>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 

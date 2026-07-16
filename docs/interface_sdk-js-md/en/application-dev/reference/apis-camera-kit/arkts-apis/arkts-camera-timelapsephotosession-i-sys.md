@@ -1,14 +1,12 @@
 # TimeLapsePhotoSession (System API)
 
-TimeLapsePhotoSession extends Session, Focus, ManualFocus, AutoExposure, ManualExposure, ManualIso, WhiteBalance,
-Zoom, ColorEffect
-Implements a time-lapse photo session, which sets the parameters of the time-lapse photo mode and saves all
-[CameraInput](arkts-camera-camerainput-i.md) and [CameraOutput](arkts-camera-cameraoutput-i.md)
-instances required to run the camera. It inherits from [Session](arkts-camera-session-i.md).
+TimeLapsePhotoSession extends Session, Focus, ManualFocus, AutoExposure, ManualExposure, ManualIso, WhiteBalance,Zoom, ColorEffect Implements a time-lapse photo session, which sets the parameters of the time-lapse photo mode and saves all [CameraInput](arkts-camera-camerainput-i.md) and [CameraOutput](arkts-camera-cameraoutput-i.md)instances required to run the camera. It inherits from [Session](arkts-camera-session-i.md).
 
-**Inheritance/Implementation:** TimeLapsePhotoSession extends [Session](arkts-camera-session-i.md), [Focus](arkts-camera-focus-i.md), [ManualFocus](arkts-camera-manualfocus-i-sys.md), [AutoExposure](arkts-camera-autoexposure-i.md), [ManualExposure](arkts-camera-manualexposure-i.md), [ManualIso](arkts-camera-manualiso-i-sys.md), [WhiteBalance](arkts-camera-whitebalance-i.md), [Zoom](arkts-camera-zoom-i.md), [ColorEffect](arkts-camera-coloreffect-i-sys.md)
+**Inheritance/Implementation:** TimeLapsePhotoSession extends [Session](arkts-camera-session-i.md), [Focus](arkts-camera-focus-i.md), [ManualFocus](arkts-camera-manualfocus-i-sys.md), [AutoExposure](arkts-camera-autoexposure-i.md), [ManualExposure](arkts-camera-manualexposure-i-sys.md), [ManualIso](arkts-camera-manualiso-i-sys.md), [WhiteBalance](arkts-camera-whitebalance-i-sys.md), [Zoom](arkts-camera-zoom-i.md), [ColorEffect](arkts-camera-coloreffect-i-sys.md)
 
 **Since:** 12
+
+<!--Device-camera-interface TimeLapsePhotoSession extends Session, Focus, ManualFocus, AutoExposure, ManualExposure, ManualIso, WhiteBalance, Zoom, ColorEffect--><!--Device-camera-interface TimeLapsePhotoSession extends Session, Focus, ManualFocus, AutoExposure, ManualExposure, ManualIso, WhiteBalance, Zoom, ColorEffect-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -30,6 +28,8 @@ Obtains the supported time-lapse shooting interval range.
 
 **Since:** 12
 
+<!--Device-TimeLapsePhotoSession-getSupportedTimeLapseIntervalRange(): Array<int>--><!--Device-TimeLapsePhotoSession-getSupportedTimeLapseIntervalRange(): Array<int>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -38,7 +38,7 @@ Obtains the supported time-lapse shooting interval range.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Interval range, in ms. The value depends on the underlying capability. If the operationfails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) isreturned. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Interval range, in ms. The value depends on the underlying capability. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -75,6 +75,8 @@ getTimeLapseInterval(): number
 Obtains the current time-lapse shooting interval.
 
 **Since:** 12
+
+<!--Device-TimeLapsePhotoSession-getTimeLapseInterval(): int--><!--Device-TimeLapsePhotoSession-getTimeLapseInterval(): int-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -122,6 +124,8 @@ Obtains the time-lapse preview type.
 
 **Since:** 12
 
+<!--Device-TimeLapsePhotoSession-getTimeLapsePreviewType(): TimeLapsePreviewType--><!--Device-TimeLapsePhotoSession-getTimeLapsePreviewType(): TimeLapsePreviewType-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -130,7 +134,7 @@ Obtains the time-lapse preview type.
 
 | Type | Description |
 | --- | --- |
-| TimeLapsePreviewType | Preview type. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [TimeLapsePreviewType](arkts-camera-timelapsepreviewtype-e-sys.md) | Preview type. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -168,6 +172,8 @@ Obtains the time-lapse shooting state.
 
 **Since:** 12
 
+<!--Device-TimeLapsePhotoSession-getTimeLapseRecordState(): TimeLapseRecordState--><!--Device-TimeLapsePhotoSession-getTimeLapseRecordState(): TimeLapseRecordState-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -176,7 +182,7 @@ Obtains the time-lapse shooting state.
 
 | Type | Description |
 | --- | --- |
-| TimeLapseRecordState | Shooting state. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [TimeLapseRecordState](arkts-camera-timelapserecordstate-e-sys.md) | Shooting state. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -214,6 +220,8 @@ Checks whether Try AE is required.
 
 **Since:** 12
 
+<!--Device-TimeLapsePhotoSession-isTryAENeeded(): boolean--><!--Device-TimeLapsePhotoSession-isTryAENeeded(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -222,7 +230,7 @@ Checks whether Try AE is required.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether Try AE is required. **true** if required, **false** otherwise. Theerror code type is defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
+| boolean | Check result for whether Try AE is required. **true** if required, **false** otherwise. The error code type is defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -260,6 +268,8 @@ Unsubscribes from HighResolutionPhotoSession error events.
 
 **Since:** 12
 
+<!--Device-TimeLapsePhotoSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-TimeLapsePhotoSession-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -268,8 +278,8 @@ Unsubscribes from HighResolutionPhotoSession error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when asession is created. |
-| callback | ErrorCallback | No | Callback used to return the result. This parameter is optional. If thisparameter is specified, the subscription to the specified event **on('error')** with the specified callbackis canceled. (The callback object cannot be an anonymous function.) |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('error')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
 
@@ -296,6 +306,8 @@ Unsubscribes from focus state change events.
 
 **Since:** 12
 
+<!--Device-TimeLapsePhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-TimeLapsePhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -304,8 +316,8 @@ Unsubscribes from focus state change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can belistened for when a session is created. |
-| callback | AsyncCallback&lt;FocusState&gt; | No | Callback used to return the result. This parameter is optional.If this parameter is specified, the subscription to the specified event **on('focusStateChange')** with thespecified callback is canceled. (The callback object cannot be an anonymous function.) |
+| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FocusState> | No | Callback used to return the result. This parameter is optional.If this parameter is specified, the subscription to the specified event **on('focusStateChange')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
 
@@ -332,6 +344,8 @@ Unsubscribes from automatic ISO change events.
 
 **Since:** 12
 
+<!--Device-TimeLapsePhotoSession-off(type: 'isoInfoChange', callback?: AsyncCallback<IsoInfo>): void--><!--Device-TimeLapsePhotoSession-off(type: 'isoInfoChange', callback?: AsyncCallback<IsoInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -341,7 +355,7 @@ Unsubscribes from automatic ISO change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'isoInfoChange' | Yes | Event type. The value is fixed at **'isoInfoChange'**. |
-| callback | AsyncCallback&lt;IsoInfo&gt; | No | Callback, which is optional and is used to match **callback** in**on('isoInfoChange')**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<IsoInfo> | No | Callback, which is optional and is used to match **callback** in **on('isoInfoChange')**. |
 
 **Error codes:**
 
@@ -368,6 +382,8 @@ Unsubscribes from exposure information change events.
 
 **Since:** 12
 
+<!--Device-TimeLapsePhotoSession-off(type: 'exposureInfoChange', callback?: AsyncCallback<ExposureInfo>): void--><!--Device-TimeLapsePhotoSession-off(type: 'exposureInfoChange', callback?: AsyncCallback<ExposureInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -377,7 +393,7 @@ Unsubscribes from exposure information change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'exposureInfoChange' | Yes | Event type. The value is fixed at **'exposureInfoChange'**. |
-| callback | AsyncCallback&lt;ExposureInfo&gt; | No | Callback, which is optional and is used to match **callback**in **on('exposureInfoChange')**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ExposureInfo> | No | Callback, which is optional and is used to match **callback** in **on('exposureInfoChange')**. |
 
 **Error codes:**
 
@@ -404,6 +420,8 @@ Unsubscribes from illumination change events.
 
 **Since:** 12
 
+<!--Device-TimeLapsePhotoSession-off(type: 'luminationInfoChange', callback?: AsyncCallback<LuminationInfo>): void--><!--Device-TimeLapsePhotoSession-off(type: 'luminationInfoChange', callback?: AsyncCallback<LuminationInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -413,7 +431,7 @@ Unsubscribes from illumination change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'luminationInfoChange' | Yes | Event type. The value is fixed at **'luminationInfoChange'**. |
-| callback | AsyncCallback&lt;LuminationInfo&gt; | No | Callback, which is optional and is used to match **callback**in **on('luminationInfoChange')**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<LuminationInfo> | No | Callback, which is optional and is used to match **callback** in **on('luminationInfoChange')**. |
 
 **Error codes:**
 
@@ -440,6 +458,8 @@ Unsubscribes from Try AE change events.
 
 **Since:** 12
 
+<!--Device-TimeLapsePhotoSession-off(type: 'tryAEInfoChange', callback?: AsyncCallback<TryAEInfo>): void--><!--Device-TimeLapsePhotoSession-off(type: 'tryAEInfoChange', callback?: AsyncCallback<TryAEInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -449,7 +469,7 @@ Unsubscribes from Try AE change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'tryAEInfoChange' | Yes | Event type. The value is fixed at **'tryAEInfoChange'**. |
-| callback | AsyncCallback&lt;TryAEInfo&gt; | No | Callback, which is optional and is used to match **callback** in**on('tryAEInfoChange')**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<TryAEInfo> | No | Callback, which is optional and is used to match **callback** in **on('tryAEInfoChange')**. |
 
 **Error codes:**
 
@@ -472,10 +492,11 @@ function unregisterTryAEInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSe
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to HighResolutionPhotoSession error events. This API uses an asynchronous callback to return the
-result.
+Subscribes to HighResolutionPhotoSession error events. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
+
+<!--Device-TimeLapsePhotoSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-TimeLapsePhotoSession-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -485,8 +506,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when asession is created. This event is triggered and the error message is returned when an error occurs during thecalling of a session-related API such as[beginConfig](arkts-camera-session-i.md#beginconfig-1),[commitConfig](arkts-camera-session-i.md#commitconfig-2), and[addInput](arkts-camera-session-i.md#addinput-1). |
-| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. This event is triggered and the error message is returned when an error occurs during the calling of a session-related API such as [beginConfig](arkts-camera-session-i.md#beginconfig-1),[commitConfig](arkts-camera-session-i.md#commitconfig-2), and [addInput](arkts-camera-session-i.md#addinput-1). |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -519,6 +540,8 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 
 **Since:** 12
 
+<!--Device-TimeLapsePhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-TimeLapsePhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -527,8 +550,8 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can belistened for when a session is created. This event is triggered only when the camera focus state changes inauto focus mode. |
-| callback | AsyncCallback&lt;FocusState&gt; | Yes | Callback used to return the focus state change. |
+| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. This event is triggered only when the camera focus state changes in auto focus mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FocusState> | Yes | Callback used to return the focus state change. |
 
 **Error codes:**
 
@@ -561,10 +584,11 @@ function registerFocusStateChange(timeLapsePhotoSession: camera.TimeLapsePhotoSe
 on(type: 'isoInfoChange', callback: AsyncCallback<IsoInfo>): void
 ```
 
-Subscribes to automatic ISO change events to obtain real-time ISO information. This API uses an asynchronous
-callback to return the result.
+Subscribes to automatic ISO change events to obtain real-time ISO information. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
+
+<!--Device-TimeLapsePhotoSession-on(type: 'isoInfoChange', callback: AsyncCallback<IsoInfo>): void--><!--Device-TimeLapsePhotoSession-on(type: 'isoInfoChange', callback: AsyncCallback<IsoInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -575,7 +599,7 @@ callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'isoInfoChange' | Yes | Event type. The value is fixed at **'isoInfoChange'**. |
-| callback | AsyncCallback&lt;IsoInfo&gt; | Yes | Callback used to return the ISO information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<IsoInfo> | Yes | Callback used to return the ISO information. |
 
 **Error codes:**
 
@@ -608,10 +632,11 @@ function registerIsoInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSessio
 on(type: 'exposureInfoChange', callback: AsyncCallback<ExposureInfo>): void
 ```
 
-Subscribes to exposure information change events to obtain the exposure information. This API uses an
-asynchronous callback to return the result.
+Subscribes to exposure information change events to obtain the exposure information. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
+
+<!--Device-TimeLapsePhotoSession-on(type: 'exposureInfoChange', callback: AsyncCallback<ExposureInfo>): void--><!--Device-TimeLapsePhotoSession-on(type: 'exposureInfoChange', callback: AsyncCallback<ExposureInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -622,7 +647,7 @@ asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'exposureInfoChange' | Yes | Event type. The value is fixed at **'exposureInfoChange'**. |
-| callback | AsyncCallback&lt;ExposureInfo&gt; | Yes | Callback used to return the exposure information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ExposureInfo> | Yes | Callback used to return the exposure information. |
 
 **Error codes:**
 
@@ -655,10 +680,11 @@ function registerExposureInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoS
 on(type: 'luminationInfoChange', callback: AsyncCallback<LuminationInfo>): void
 ```
 
-Subscribes to illumination change events to obtain real-time illumination information. This API uses an
-asynchronous callback to return the result.
+Subscribes to illumination change events to obtain real-time illumination information. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
+
+<!--Device-TimeLapsePhotoSession-on(type: 'luminationInfoChange', callback: AsyncCallback<LuminationInfo>): void--><!--Device-TimeLapsePhotoSession-on(type: 'luminationInfoChange', callback: AsyncCallback<LuminationInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -669,7 +695,7 @@ asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'luminationInfoChange' | Yes | Event type. The value is fixed at **'luminationInfoChange'**. |
-| callback | AsyncCallback&lt;LuminationInfo&gt; | Yes | Callback used to return the illumination information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<LuminationInfo> | Yes | Callback used to return the illumination information. |
 
 **Error codes:**
 
@@ -702,10 +728,11 @@ function registerLuminationInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhot
 on(type: 'tryAEInfoChange', callback: AsyncCallback<TryAEInfo>): void
 ```
 
-Subscribes to Try AE change events to obtain real-time Try AE parameters. This API uses an asynchronous callback
-to return the result.
+Subscribes to Try AE change events to obtain real-time Try AE parameters. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
+
+<!--Device-TimeLapsePhotoSession-on(type: 'tryAEInfoChange', callback: AsyncCallback<TryAEInfo>): void--><!--Device-TimeLapsePhotoSession-on(type: 'tryAEInfoChange', callback: AsyncCallback<TryAEInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -716,7 +743,7 @@ to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'tryAEInfoChange' | Yes | Event type. The value is fixed at **'tryAEInfoChange'**. |
-| callback | AsyncCallback&lt;TryAEInfo&gt; | Yes | Callback used to return the Try AE parameters. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<TryAEInfo> | Yes | Callback used to return the Try AE parameters. |
 
 **Error codes:**
 
@@ -753,6 +780,8 @@ Sets a time-lapse shooting interval.
 
 **Since:** 12
 
+<!--Device-TimeLapsePhotoSession-setTimeLapseInterval(interval: int): void--><!--Device-TimeLapsePhotoSession-setTimeLapseInterval(interval: int): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -761,7 +790,7 @@ Sets a time-lapse shooting interval.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| interval | number | Yes | Shooting interval, in units of ms, the supported range can be obtained by calling[getSupportedTimeLapseIntervalRange](arkts-camera-timelapsephotosession-i-sys.md#getsupportedtimelapseintervalrange-1) |
+| interval | number | Yes | Shooting interval, in units of ms, the supported range can be obtained by calling [getSupportedTimeLapseIntervalRange](arkts-camera-timelapsephotosession-i-sys.md#getsupportedtimelapseintervalrange-1) |
 
 **Error codes:**
 
@@ -799,6 +828,8 @@ Sets the time-lapse preview type.
 
 **Since:** 12
 
+<!--Device-TimeLapsePhotoSession-setTimeLapsePreviewType(type: TimeLapsePreviewType): void--><!--Device-TimeLapsePhotoSession-setTimeLapsePreviewType(type: TimeLapsePreviewType): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -807,7 +838,7 @@ Sets the time-lapse preview type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | TimeLapsePreviewType | Yes | Preview type. |
+| type | [TimeLapsePreviewType](arkts-camera-timelapsepreviewtype-e-sys.md) | Yes | Preview type. |
 
 **Error codes:**
 
@@ -844,6 +875,8 @@ Sets the time-lapse shooting state.
 
 **Since:** 12
 
+<!--Device-TimeLapsePhotoSession-setTimeLapseRecordState(state: TimeLapseRecordState): void--><!--Device-TimeLapsePhotoSession-setTimeLapseRecordState(state: TimeLapseRecordState): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -852,7 +885,7 @@ Sets the time-lapse shooting state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | TimeLapseRecordState | Yes | Shooting state. |
+| state | [TimeLapseRecordState](arkts-camera-timelapserecordstate-e-sys.md) | Yes | Shooting state. |
 
 **Error codes:**
 
@@ -888,6 +921,8 @@ startTryAE(): void
 Starts to execute Try AE.
 
 **Since:** 12
+
+<!--Device-TimeLapsePhotoSession-startTryAE(): void--><!--Device-TimeLapsePhotoSession-startTryAE(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -927,6 +962,8 @@ stopTryAE(): void
 Stops the execution of Try AE.
 
 **Since:** 12
+
+<!--Device-TimeLapsePhotoSession-stopTryAE(): void--><!--Device-TimeLapsePhotoSession-stopTryAE(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

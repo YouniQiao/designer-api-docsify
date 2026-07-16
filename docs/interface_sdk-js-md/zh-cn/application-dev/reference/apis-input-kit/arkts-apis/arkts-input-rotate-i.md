@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-export declare interface Rotate--><!--Device-unnamed-export declare interface Rotate-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+## 导入模块
+
+```TypeScript
+import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersTap, ThreeFingersSwipe, TouchGestureEvent } from '@kit.InputKit';
+```
 
 ## angle
 
@@ -17,6 +25,8 @@ angle: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-Rotate-angle: double--><!--Device-Rotate-angle: double-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -31,6 +41,8 @@ type: ActionType
 **类型：** ActionType
 
 **起始版本：** 11
+
+<!--Device-Rotate-type: ActionType--><!--Device-Rotate-type: ActionType-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 

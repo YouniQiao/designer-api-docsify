@@ -1,5 +1,11 @@
 # unsubscribeReminderState
 
+## 导入模块
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+```
+
 ## unsubscribeReminderState
 
 ```TypeScript
@@ -12,19 +18,21 @@ function unsubscribeReminderState(callback?: Callback<Array<ReminderState>>): Pr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-reminderAgentManager-function unsubscribeReminderState(callback?: Callback<Array<ReminderState>>): Promise<void>--><!--Device-reminderAgentManager-function unsubscribeReminderState(callback?: Callback<Array<ReminderState>>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;Array&lt;ReminderState&gt;&gt; | 否 | 回调函数。如果不传参数callback，则取消所有订阅。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<ReminderState>> | 否 | 回调函数。如果不传参数callback，则取消所有订阅。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

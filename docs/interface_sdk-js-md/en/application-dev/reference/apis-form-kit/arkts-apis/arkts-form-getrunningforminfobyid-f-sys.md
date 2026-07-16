@@ -20,6 +20,8 @@ Obtains the RunningFormInfo object by formId.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-formObserver-function getRunningFormInfoById(formId: string): Promise<formInfo.RunningFormInfo>--><!--Device-formObserver-function getRunningFormInfoById(formId: string): Promise<formInfo.RunningFormInfo>-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -34,7 +36,7 @@ Obtains the RunningFormInfo object by formId.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;formInfo.RunningFormInfo&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<formInfo.RunningFormInfo> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -62,6 +64,8 @@ Obtains the RunningFormInfo object by formId.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-formObserver-function getRunningFormInfoById(formId: string, isUnusedIncluded: boolean): Promise<formInfo.RunningFormInfo>--><!--Device-formObserver-function getRunningFormInfoById(formId: string, isUnusedIncluded: boolean): Promise<formInfo.RunningFormInfo>-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -77,7 +81,7 @@ Obtains the RunningFormInfo object by formId.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;formInfo.RunningFormInfo&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<formInfo.RunningFormInfo> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -105,6 +109,8 @@ Obtains the RunningFormInfo object by formId.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-formObserver-function getRunningFormInfoById(formId: string, callback: AsyncCallback<formInfo.RunningFormInfo>): void--><!--Device-formObserver-function getRunningFormInfoById(formId: string, callback: AsyncCallback<formInfo.RunningFormInfo>): void-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -114,7 +120,7 @@ Obtains the RunningFormInfo object by formId.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Indicates the form provider formId. |
-| callback | AsyncCallback&lt;formInfo.RunningFormInfo&gt; | Yes | The callback of getFormInstancesById. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<formInfo.RunningFormInfo> | Yes | The callback of getFormInstancesById. |
 
 **Error codes:**
 
@@ -146,6 +152,16 @@ Obtains the RunningFormInfo object by formId.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-formObserver-function getRunningFormInfoById(
+    formId: string,
+    isUnusedIncluded: boolean,
+    callback: AsyncCallback<formInfo.RunningFormInfo>
+  ): void--><!--Device-formObserver-function getRunningFormInfoById(
+    formId: string,
+    isUnusedIncluded: boolean,
+    callback: AsyncCallback<formInfo.RunningFormInfo>
+  ): void-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -156,7 +172,7 @@ Obtains the RunningFormInfo object by formId.
 | --- | --- | --- | --- |
 | formId | string | Yes | Indicates the form provider formId. |
 | isUnusedIncluded | boolean | Yes | Indicates whether to include unused form. |
-| callback | AsyncCallback&lt;formInfo.RunningFormInfo&gt; | Yes | The callback of getFormInstancesById. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<formInfo.RunningFormInfo> | Yes | The callback of getFormInstancesById. |
 
 **Error codes:**
 

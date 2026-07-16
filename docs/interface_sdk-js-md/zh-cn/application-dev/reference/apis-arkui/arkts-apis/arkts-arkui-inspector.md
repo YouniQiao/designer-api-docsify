@@ -4,7 +4,15 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace inspector--><!--Device-unnamed-declare namespace inspector-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { inspector } from '@kit.ArkUI';
+```
 
 ## 汇总
 

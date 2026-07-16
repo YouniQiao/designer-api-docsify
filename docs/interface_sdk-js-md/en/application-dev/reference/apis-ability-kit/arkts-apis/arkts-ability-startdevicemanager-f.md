@@ -12,8 +12,7 @@ import { continuationManager } from '@kit.AbilityKit';
 function startDeviceManager(token: number, callback: AsyncCallback<void>): void
 ```
 
-Starts the device selection module to show the list of available devices on the network. This API does not involve
-any filter parameters and uses an asynchronous callback to return the result.
+Starts the device selection module to show the list of available devices on the network. This API does not involve any filter parameters and uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -23,6 +22,8 @@ any filter parameters and uses an asynchronous callback to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-continuationManager-function startDeviceManager(token: number, callback: AsyncCallback<void>): void--><!--Device-continuationManager-function startDeviceManager(token: number, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 **Parameters:**
@@ -30,7 +31,7 @@ any filter parameters and uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | token | number | Yes | Token obtained after the registration of the continuation management service. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the module is started, **err** is**undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the module is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Example**
 
@@ -55,8 +56,7 @@ continuationManager.startDeviceManager(token, (err) => {
 function startDeviceManager(token: number, options: ContinuationExtraParams, callback: AsyncCallback<void>): void
 ```
 
-Starts the device selection module to show the list of available devices on the network. This API uses an
-asynchronous callback to return the result.
+Starts the device selection module to show the list of available devices on the network. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -66,6 +66,8 @@ asynchronous callback to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-continuationManager-function startDeviceManager(token: number, options: ContinuationExtraParams, callback: AsyncCallback<void>): void--><!--Device-continuationManager-function startDeviceManager(token: number, options: ContinuationExtraParams, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 **Parameters:**
@@ -73,8 +75,8 @@ asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | token | number | Yes | Token obtained after the registration of the continuation management service. |
-| options | ContinuationExtraParams | Yes | Extra parameters used to filter the list of available devices. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the module is started, **err** is**undefined**; otherwise, **err** is an error object. |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-i.md) | Yes | Extra parameters used to filter the list of available devices. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the module is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Example**
 
@@ -104,8 +106,7 @@ continuationManager.startDeviceManager(
 function startDeviceManager(token: number, options?: ContinuationExtraParams): Promise<void>
 ```
 
-Starts the device selection module to show the list of available devices on the network. This API uses a promise to
-return the result.
+Starts the device selection module to show the list of available devices on the network. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -115,6 +116,8 @@ return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-continuationManager-function startDeviceManager(token: number, options?: ContinuationExtraParams): Promise<void>--><!--Device-continuationManager-function startDeviceManager(token: number, options?: ContinuationExtraParams): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 **Parameters:**
@@ -122,13 +125,13 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | token | number | Yes | Token obtained after the registration of the continuation management service. |
-| options | ContinuationExtraParams | No | Extra parameters used to filter the list of available devices. Thisparameter can be null. |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-i.md) | No | Extra parameters used to filter the list of available devices. This parameter can be null. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Example**
 

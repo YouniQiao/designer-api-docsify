@@ -6,5 +6,7 @@
 
 **起始版本：** 18
 
+<!--Device-unnamed-export interface MeshResource extends SceneResource--><!--Device-unnamed-export interface MeshResource extends SceneResource-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

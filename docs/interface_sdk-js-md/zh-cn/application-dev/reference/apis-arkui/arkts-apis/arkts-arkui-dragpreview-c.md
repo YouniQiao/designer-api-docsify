@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-dragController-export class DragPreview--><!--Device-dragController-export class DragPreview-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { dragController } from '@kit.ArkUI';
+```
 
 ## animate
 
@@ -12,15 +20,15 @@
 animate(options: AnimationOptions, handler: () =>void): void
 ```
 
-设置背板蒙版颜色变化动效，在OnDrop和OnDragEnd回调中使用不生效，仅支持通过
-[getDragPreview()](arkts-arkui-dragcontroller-c.md#getdragpreview-1)方法获取到的
-对象上使用。
+设置背板蒙版颜色变化动效，在OnDrop和OnDragEnd回调中使用不生效，仅支持通过[getDragPreview()](arkts-arkui-dragcontroller-c.md#getdragpreview-1)方法获取到的对象上使用。
 
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DragPreview-animate(options: AnimationOptions, handler: () =>void): void--><!--Device-DragPreview-animate(options: AnimationOptions, handler: () =>void): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,8 +36,8 @@ animate(options: AnimationOptions, handler: () =>void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | AnimationOptions | 是 | 动效参数。 |
-| handler | () =&gt;void | 是 | 用于修改背板蒙版颜色等属性的回调方法。 |
+| options | [AnimationOptions](arkts-arkui-animationoptions-i.md) | 是 | 动效参数。 |
+| handler | () =>void | 是 | 用于修改背板蒙版颜色等属性的回调方法。 |
 
 **示例：**
 
@@ -189,15 +197,15 @@ struct DragControllerPage {
 setForegroundColor(color: ResourceColor): void
 ```
 
-设置背板蒙版颜色，在OnDrop和OnDragEnd回调中使用不生效，仅支持通过
-[getDragPreview()](arkts-arkui-dragcontroller-c.md#getdragpreview-1)方法获取到的
-对象上使用。
+设置背板蒙版颜色，在OnDrop和OnDragEnd回调中使用不生效，仅支持通过[getDragPreview()](arkts-arkui-dragcontroller-c.md#getdragpreview-1)方法获取到的对象上使用。
 
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DragPreview-setForegroundColor(color: ResourceColor): void--><!--Device-DragPreview-setForegroundColor(color: ResourceColor): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -205,7 +213,7 @@ setForegroundColor(color: ResourceColor): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | ResourceColor | 是 | 背板蒙版颜色。 |
+| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 | 背板蒙版颜色。 |
 
 **示例：**
 

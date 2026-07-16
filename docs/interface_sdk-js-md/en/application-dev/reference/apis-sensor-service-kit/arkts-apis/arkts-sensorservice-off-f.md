@@ -16,6 +16,8 @@ Disables listening for vibrator status changes.
 
 **Since:** 19
 
+<!--Device-vibrator-function off(type: 'vibratorStateChange', callback?: Callback<VibratorStatusEvent>): void--><!--Device-vibrator-function off(type: 'vibratorStateChange', callback?: Callback<VibratorStatusEvent>): void-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Parameters:**
@@ -23,7 +25,7 @@ Disables listening for vibrator status changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'vibratorStateChange' | Yes | Event type. The value **vibratorStateChange** indicates a vibrator online/offline event. |
-| callback | Callback&lt;VibratorStatusEvent&gt; | No | Callback used to return the vibrator status change event. Ifthis parameter is not specified, all callbacks of vibrator status change events will be unregistered. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VibratorStatusEvent> | No | Callback used to return the vibrator status change event. If this parameter is not specified, all callbacks of vibrator status change events will be unregistered. |
 
 **Error codes:**
 

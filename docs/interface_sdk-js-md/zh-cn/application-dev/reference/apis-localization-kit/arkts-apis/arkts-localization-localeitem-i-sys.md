@@ -4,9 +4,17 @@
 
 **起始版本：** 10
 
+<!--Device-i18n-export interface LocaleItem--><!--Device-i18n-export interface LocaleItem-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
 
 ## displayName
 
@@ -19,6 +27,8 @@ id在SystemLocaleManager的指定区域下的表示。
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-LocaleItem-displayName: string--><!--Device-LocaleItem-displayName: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -36,6 +46,8 @@ id: string
 
 **起始版本：** 10
 
+<!--Device-LocaleItem-id: string--><!--Device-LocaleItem-id: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +64,8 @@ id的本地名称。只有在表示语言相关信息时才存在该选项。
 
 **起始版本：** 10
 
+<!--Device-LocaleItem-localName?: string--><!--Device-LocaleItem-localName?: string-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +81,8 @@ suggestionType: SuggestionType
 **类型：** SuggestionType
 
 **起始版本：** 10
+
+<!--Device-LocaleItem-suggestionType: SuggestionType--><!--Device-LocaleItem-suggestionType: SuggestionType-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

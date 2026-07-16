@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-webview-enum SourceType--><!--Device-webview-enum SourceType-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## URL
@@ -16,7 +18,9 @@ URL = 0
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SourceType-URL = 0--><!--Device-SourceType-URL = 0-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -30,7 +34,9 @@ MSE = 1
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SourceType-MSE = 1--><!--Device-SourceType-MSE = 1-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

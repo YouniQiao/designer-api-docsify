@@ -1,11 +1,12 @@
 # TabSegmentButtonOptions
 
-Provides configuration options for tab-style segmented buttons. Inherits from
-[TabSegmentButtonConstructionOptions](arkts-arkui-tabsegmentbuttonconstructionoptions-i.md).
+Provides configuration options for tab-style segmented buttons. Inherits from [TabSegmentButtonConstructionOptions](arkts-arkui-tabsegmentbuttonconstructionoptions-i.md).
 
 **Inheritance/Implementation:** TabSegmentButtonOptions extends [TabSegmentButtonConstructionOptions](arkts-arkui-tabsegmentbuttonconstructionoptions-i.md)
 
 **Since:** 11
+
+<!--Device-unnamed-interface TabSegmentButtonOptions extends TabSegmentButtonConstructionOptions--><!--Device-unnamed-interface TabSegmentButtonOptions extends TabSegmentButtonConstructionOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +37,8 @@ Type of the **SegmentButton** component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TabSegmentButtonOptions-type: "tab"--><!--Device-TabSegmentButtonOptions-type: "tab"-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

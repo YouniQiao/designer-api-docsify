@@ -18,6 +18,8 @@ Checks whether the silent reminder is enabled. This API uses a promise to return
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isSilentReminderEnabled(bundle: BundleOption): Promise<SwitchState>--><!--Device-notificationManager-function isSilentReminderEnabled(bundle: BundleOption): Promise<SwitchState>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Checks whether the silent reminder is enabled. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SwitchState&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SwitchState> | Promise used to return the result. |
 
 **Error codes:**
 

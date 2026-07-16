@@ -8,7 +8,15 @@ NumberStyleOptions定义了列表型和紧凑型Counter的属性和事件。
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare class NumberStyleOptions extends InlineStyleOptions--><!--Device-unnamed-declare class NumberStyleOptions extends InlineStyleOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { CounterType, DateData, CounterComponent, CounterOptions } from '@kit.ArkUI';
+```
 
 ## label
 
@@ -28,7 +36,9 @@ label?: ResourceStr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberStyleOptions-label?: ResourceStr--><!--Device-NumberStyleOptions-label?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,7 +60,9 @@ onBlurDecrease?: () => void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberStyleOptions-onBlurDecrease?: () => void--><!--Device-NumberStyleOptions-onBlurDecrease?: () => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,7 +84,9 @@ onBlurIncrease?: () => void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberStyleOptions-onBlurIncrease?: () => void--><!--Device-NumberStyleOptions-onBlurIncrease?: () => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,7 +108,9 @@ onFocusDecrease?: () => void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberStyleOptions-onFocusDecrease?: () => void--><!--Device-NumberStyleOptions-onFocusDecrease?: () => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,7 +132,9 @@ onFocusIncrease?: () => void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberStyleOptions-onFocusIncrease?: () => void--><!--Device-NumberStyleOptions-onFocusIncrease?: () => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

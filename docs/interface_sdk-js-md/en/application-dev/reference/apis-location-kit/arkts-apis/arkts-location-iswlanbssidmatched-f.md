@@ -21,27 +21,31 @@ Check whether the WLAN scan results match the WLAN BSSID list.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-geoLocationManager-function isWlanBssidMatched(
+      wlanBssidArray: Array<string>, rssiThreshold: int, needStartScan: boolean): Promise<boolean>--><!--Device-geoLocationManager-function isWlanBssidMatched(
+      wlanBssidArray: Array<string>, rssiThreshold: int, needStartScan: boolean): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wlanBssidArray | Array&lt;string&gt; | Yes | Indicates the list of WLAN BSSIDs that need to be matched. |
-| rssiThreshold | number | Yes | Indicates the WLAN RSSI threshold, only matching WLAN BSSID withRSSI greater than this threshold. |
+| wlanBssidArray | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Indicates the list of WLAN BSSIDs that need to be matched. |
+| rssiThreshold | number | Yes | Indicates the WLAN RSSI threshold, only matching WLAN BSSID with RSSI greater than this threshold. |
 | needStartScan | boolean | Yes | Indicate whether a WLAN scan needs to be initiated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call${geoLocationManager.isWlanBssidMatched} due to limited device capabilities. |
 | [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
 | [3301800](../errorcode-geoLocationManager.md#3301800-failed-to-start-wifi-or-bluetooth-scanning) | Failed to start WiFi scanning. |

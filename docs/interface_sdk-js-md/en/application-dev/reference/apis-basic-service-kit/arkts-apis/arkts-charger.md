@@ -2,11 +2,13 @@
 
 The **charger** module enumerates charging types.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > The APIs provided by this module are system APIs.
 
 **Since:** 10
+
+<!--Device-unnamed-declare namespace charger--><!--Device-unnamed-declare namespace charger-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 

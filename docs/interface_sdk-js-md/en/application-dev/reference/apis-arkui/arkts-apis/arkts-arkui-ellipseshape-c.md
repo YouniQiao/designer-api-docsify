@@ -8,6 +8,8 @@ This API inherits from [BaseShape](arkts-arkui-baseshape-c.md).
 
 **Since:** 12
 
+<!--Device-unnamed-export declare class EllipseShape extends BaseShape<EllipseShape>--><!--Device-unnamed-export declare class EllipseShape extends BaseShape<EllipseShape>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,11 +34,13 @@ A constructor used to create a **EllipseShape** object.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-EllipseShape-constructor(options?: ShapeSize)--><!--Device-EllipseShape-constructor(options?: ShapeSize)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ShapeSize | No | Size of the shape. |
+| options | [ShapeSize](arkts-arkui-shapesize-i.md) | No | Size of the shape. |
 

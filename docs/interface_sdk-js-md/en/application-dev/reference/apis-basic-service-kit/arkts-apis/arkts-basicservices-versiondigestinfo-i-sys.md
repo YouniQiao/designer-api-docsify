@@ -4,6 +4,8 @@ Represents version digest information.
 
 **Since:** 9
 
+<!--Device-update-export interface VersionDigestInfo--><!--Device-update-export interface VersionDigestInfo-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -25,6 +27,8 @@ Version digest information.
 **Type:** string
 
 **Since:** 9
+
+<!--Device-VersionDigestInfo-versionDigest: string--><!--Device-VersionDigestInfo-versionDigest: string-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 

@@ -20,6 +20,8 @@ If an incoming call is ringing, the phone stops ringing. Otherwise, this method 
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function muteRinger(callback: AsyncCallback<void>): void--><!--Device-call-function muteRinger(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ If an incoming call is ringing, the phone stops ringing. Otherwise, this method 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of muteRinger. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of muteRinger. |
 
 **Error codes:**
 
@@ -72,6 +74,8 @@ If an incoming call is ringing, the phone stops ringing. Otherwise, this method 
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function muteRinger(): Promise<void>--><!--Device-call-function muteRinger(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -80,7 +84,7 @@ If an incoming call is ringing, the phone stops ringing. Otherwise, this method 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the muteRinger. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the muteRinger. |
 
 **Error codes:**
 

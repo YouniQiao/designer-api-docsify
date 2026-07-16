@@ -12,6 +12,8 @@ function getWallpaperByState(wallpaperType: WallpaperType, foldState: FoldState,
 
 **需要权限：** ohos.permission.GET_WALLPAPER
 
+<!--Device-wallpaper-function getWallpaperByState(wallpaperType: WallpaperType, foldState: FoldState, rotateState: RotateState): Promise<image.PixelMap>--><!--Device-wallpaper-function getWallpaperByState(wallpaperType: WallpaperType, foldState: FoldState, rotateState: RotateState): Promise<image.PixelMap>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **系统接口：** 此接口为系统接口。
@@ -20,15 +22,15 @@ function getWallpaperByState(wallpaperType: WallpaperType, foldState: FoldState,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wallpaperType | WallpaperType | 是 | 壁纸类型。 |
-| foldState | FoldState | 是 | 折展状态类型。 |
-| rotateState | RotateState | 是 | 横竖屏状态类型。 |
+| wallpaperType | [WallpaperType](arkts-na-wallpapertype-e.md) | 是 | 壁纸类型。 |
+| foldState | [FoldState](arkts-na-foldstate-e-sys.md) | 是 | 折展状态类型。 |
+| rotateState | [RotateState](arkts-na-rotatestate-e-sys.md) | 是 | 横竖屏状态类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | 调用成功则返回壁纸图片的像素图对象，调用失败则返回error信息。 |
+| Promise<image.PixelMap> | 调用成功则返回壁纸图片的像素图对象，调用失败则返回error信息。 |
 
 **错误码：**
 
@@ -36,7 +38,7 @@ function getWallpaperByState(wallpaperType: WallpaperType, foldState: FoldState,
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter error. Possible causes:1.Mandatory parameters are left unspecified.2.The type must be WallpaperType, parameter range must be WALLPAPER_LOCKSCREEN or WALLPAPER_SYSTEM.3.The type must be FoldState, parameter range must be NORMAL or UNFOLD_ONCE_STATE or UNFOLD_TWICE_STATE.4.The type must be RotateState, parameter range must be PORTRAIT or LANDSCAPE. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | permission verification failed, application which is not a system application usessystem API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | permission verification failed, application which is not a system application uses system API. |
 
 **示例：**
 

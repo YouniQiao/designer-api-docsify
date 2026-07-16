@@ -12,8 +12,7 @@ import { zlib } from '@kit.BasicServicesKit';
 function zipFile(inFile: string, outFile: string, options: Options): Promise<void>
 ```
 
-Zips a file. The execution result is returned after the compression is complete. This API uses a promise to return
-the result.
+Zips a file. The execution result is returned after the compression is complete. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -21,21 +20,23 @@ the result.
 
 **Substitutes:** compressFile(inFile:
 
+<!--Device-zlib-function zipFile(inFile: string, outFile: string, options: Options): Promise<void>--><!--Device-zlib-function zipFile(inFile: string, outFile: string, options: Options): Promise<void>-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inFile | string | Yes | Path of the folder or file to zip. The path must be an application sandbox path, whichcan be obtained from the context. For details about the context, see [FA Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md) and[Stage Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md). |
+| inFile | string | Yes | Path of the folder or file to zip. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see [FA Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md) and [Stage Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md). |
 | outFile | string | Yes | Path of the zipped file. The file name extension is .zip. |
-| options | Options | Yes | Optional parameters for the zip operation. |
+| options | [Options](arkts-basicservices-options-i.md) | Yes | Optional parameters for the zip operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 

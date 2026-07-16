@@ -4,6 +4,8 @@ Camera parameters struct.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare interface DepthCameraParams--><!--Device-unnamed-declare interface DepthCameraParams-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -23,6 +25,8 @@ Camera buffer crop parameters.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DepthCameraParams-cameraBufferCrop?: CameraBufferCrop--><!--Device-DepthCameraParams-cameraBufferCrop?: CameraBufferCrop-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ Camera position in 3D space.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-DepthCameraParams-position: DepthVector3--><!--Device-DepthCameraParams-position: DepthVector3-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -54,8 +60,7 @@ Camera position in 3D space.
 quaternion: DepthVector4
 ```
 
-Camera rotation as quaternion (x, y, z, w).
-Represents the orientation of the camera in 3D space.
+Camera rotation as quaternion (x, y, z, w).Represents the orientation of the camera in 3D space.
 
 **Type:** DepthVector4
 
@@ -64,6 +69,8 @@ Represents the orientation of the camera in 3D space.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DepthCameraParams-quaternion: DepthVector4--><!--Device-DepthCameraParams-quaternion: DepthVector4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,6 +92,8 @@ Vertical field of view in radians.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-DepthCameraParams-yFov: double--><!--Device-DepthCameraParams-yFov: double-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -105,6 +114,8 @@ Far clipping plane distance.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-DepthCameraParams-zFar: double--><!--Device-DepthCameraParams-zFar: double-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -124,6 +135,8 @@ Near clipping plane distance.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DepthCameraParams-zNear: double--><!--Device-DepthCameraParams-zNear: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

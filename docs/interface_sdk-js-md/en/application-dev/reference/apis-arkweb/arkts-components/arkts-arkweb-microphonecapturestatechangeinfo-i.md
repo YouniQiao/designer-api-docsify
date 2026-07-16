@@ -4,6 +4,8 @@ Defines the state information of the microphone before and after the callback is
 
 **Since:** 23
 
+<!--Device-unnamed-declare interface MicrophoneCaptureStateChangeInfo--><!--Device-unnamed-declare interface MicrophoneCaptureStateChangeInfo-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## newState
@@ -18,6 +20,8 @@ New state.
 
 **Since:** 23
 
+<!--Device-MicrophoneCaptureStateChangeInfo-newState: MicrophoneCaptureState--><!--Device-MicrophoneCaptureStateChangeInfo-newState: MicrophoneCaptureState-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## originalState
@@ -31,6 +35,8 @@ Original state.
 **Type:** MicrophoneCaptureState
 
 **Since:** 23
+
+<!--Device-MicrophoneCaptureStateChangeInfo-originalState: MicrophoneCaptureState--><!--Device-MicrophoneCaptureStateChangeInfo-originalState: MicrophoneCaptureState-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

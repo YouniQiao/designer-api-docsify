@@ -12,14 +12,15 @@ import { notificationManager } from '@kit.NotificationKit';
 function setSyncNotificationEnabledWithoutApp(userId: number, enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to enable the notification sync feature for devices where the application is not installed. This API
-uses an asynchronous callback to return the result.
+Sets whether to enable the notification sync feature for devices where the application is not installed. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function setSyncNotificationEnabledWithoutApp(userId: int, enable: boolean, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function setSyncNotificationEnabledWithoutApp(userId: int, enable: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -30,8 +31,8 @@ uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
-| enable | boolean | Yes | Whether to enable the notification sync feature. The value **true** means to enable thefeature, and **false** means the opposite. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| enable | boolean | Yes | Whether to enable the notification sync feature. The value **true** means to enable the feature, and **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -72,14 +73,15 @@ notificationManager.setSyncNotificationEnabledWithoutApp(userId, enable, setSync
 function setSyncNotificationEnabledWithoutApp(userId: number, enable: boolean): Promise<void>
 ```
 
-Sets whether to enable the notification sync feature for devices where the application is not installed. This API
-uses a promise to return the result.
+Sets whether to enable the notification sync feature for devices where the application is not installed. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function setSyncNotificationEnabledWithoutApp(userId: int, enable: boolean): Promise<void>--><!--Device-notificationManager-function setSyncNotificationEnabledWithoutApp(userId: int, enable: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -90,13 +92,13 @@ uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
-| enable | boolean | Yes | Whether to enable the notification sync feature. The value **true** means to enable thefeature, and **false** means the opposite. |
+| enable | boolean | Yes | Whether to enable the notification sync feature. The value **true** means to enable the feature, and **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 

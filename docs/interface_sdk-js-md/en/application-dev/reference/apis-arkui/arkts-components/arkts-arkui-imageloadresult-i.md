@@ -4,6 +4,8 @@ Describes the object returned after the callback is triggered when an image is s
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface ImageLoadResult--><!--Device-unnamed-declare interface ImageLoadResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## componentHeight
@@ -24,6 +26,8 @@ Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ImageLoadResult-componentHeight: number--><!--Device-ImageLoadResult-componentHeight: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## componentWidth
@@ -43,6 +47,8 @@ Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ImageLoadResult-componentWidth: number--><!--Device-ImageLoadResult-componentWidth: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +74,8 @@ This parameter is valid only when the return value of **loadingStatus** is **1**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ImageLoadResult-contentHeight: number--><!--Device-ImageLoadResult-contentHeight: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## contentOffsetX
@@ -91,6 +99,8 @@ This parameter is valid only when the return value of **loadingStatus** is **1**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ImageLoadResult-contentOffsetX: number--><!--Device-ImageLoadResult-contentOffsetX: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,6 +126,8 @@ This parameter is valid only when the return value of **loadingStatus** is **1**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ImageLoadResult-contentOffsetY: number--><!--Device-ImageLoadResult-contentOffsetY: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## contentWidth
@@ -140,6 +152,8 @@ This parameter is valid only when the return value of **loadingStatus** is **1**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ImageLoadResult-contentWidth: number--><!--Device-ImageLoadResult-contentWidth: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## height
@@ -160,6 +174,8 @@ Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ImageLoadResult-height: number--><!--Device-ImageLoadResult-height: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## loadingStatus
@@ -172,8 +188,7 @@ Loading status of the image.
 
 **NOTE**
 
-If the return value is **0**, the image is successfully loaded. If the return value is **1**, the image is
-successfully decoded.
+If the return value is **0**, the image is successfully loaded. If the return value is **1**, the image is successfully decoded.
 
 **Type:** number
 
@@ -182,6 +197,8 @@ successfully decoded.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ImageLoadResult-loadingStatus: number--><!--Device-ImageLoadResult-loadingStatus: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -202,6 +219,8 @@ Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ImageLoadResult-width: number--><!--Device-ImageLoadResult-width: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

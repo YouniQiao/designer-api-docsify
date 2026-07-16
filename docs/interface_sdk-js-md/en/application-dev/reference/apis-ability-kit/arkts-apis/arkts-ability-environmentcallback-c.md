@@ -4,6 +4,8 @@ The EnvironmentCallback module provides capabilities to listen for system enviro
 
 **Since:** 9
 
+<!--Device-unnamed-export default class EnvironmentCallback--><!--Device-unnamed-export default class EnvironmentCallback-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
@@ -18,9 +20,7 @@ import { EnvironmentCallback } from '@kit.AbilityKit';
 onConfigurationUpdated(config: Configuration): void
 ```
 
-Called when the system configuration changes, after
-[a listener has been registered for such events](arkts-ability-applicationcontext-c.md#on-2)
-.
+Called when the system configuration changes, after [a listener has been registered for such events](arkts-ability-applicationcontext-c.md#on-2).
 
 **Since:** 9
 
@@ -28,13 +28,15 @@ Called when the system configuration changes, after
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-EnvironmentCallback-onConfigurationUpdated(config: Configuration): void--><!--Device-EnvironmentCallback-onConfigurationUpdated(config: Configuration): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | Configuration | Yes | Configuration object after the change. |
+| config | [Configuration](../../apis-arkui/arkts-components/arkts-arkui-configuration-i.md) | Yes | Configuration object after the change. |
 
 **Example**
 
@@ -46,15 +48,15 @@ See [Usage of EnvironmentCallback](#usage-of-environmentcallback).
 onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 ```
 
-Called when the system memory level changes, after
-[a listener has been registered for such events](arkts-ability-applicationcontext-c.md#on-2)
-.
+Called when the system memory level changes, after [a listener has been registered for such events](arkts-ability-applicationcontext-c.md#on-2).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-EnvironmentCallback-onMemoryLevel(level: AbilityConstant.MemoryLevel): void--><!--Device-EnvironmentCallback-onMemoryLevel(level: AbilityConstant.MemoryLevel): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

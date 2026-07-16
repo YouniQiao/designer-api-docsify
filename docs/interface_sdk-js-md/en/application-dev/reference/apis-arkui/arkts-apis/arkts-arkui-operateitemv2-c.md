@@ -4,6 +4,8 @@ Declare OperateItemV2
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class OperateItemV2--><!--Device-unnamed-export declare class OperateItemV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,13 +28,15 @@ The constructor of OperateItemV2.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-OperateItemV2-constructor(options?: OperateItemV2Options)--><!--Device-OperateItemV2-constructor(options?: OperateItemV2Options)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | OperateItemV2Options | No | The options of OperateItemV2 |
+| options | [OperateItemV2Options](arkts-arkui-operateitemv2options-i.md) | No | The options of OperateItemV2 |
 
 ## arrow
 
@@ -49,6 +53,8 @@ Sets the arrow.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateItemV2-public arrow?: OperateIconV2--><!--Device-OperateItemV2-public arrow?: OperateIconV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +74,8 @@ Sets the button.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-OperateItemV2-public button?: OperateButtonV2--><!--Device-OperateItemV2-public button?: OperateButtonV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## checkbox
@@ -85,6 +93,8 @@ Sets the checkBox.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateItemV2-public checkbox?: OperateCheckV2--><!--Device-OperateItemV2-public checkbox?: OperateCheckV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,6 +114,8 @@ Sets the icon.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-OperateItemV2-public icon?: OperateIconV2--><!--Device-OperateItemV2-public icon?: OperateIconV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## image
@@ -121,6 +133,8 @@ Sets the image.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateItemV2-public image?: ResourceStr--><!--Device-OperateItemV2-public image?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -140,6 +154,8 @@ Sets the radio.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-OperateItemV2-public radio?: OperateCheckV2--><!--Device-OperateItemV2-public radio?: OperateCheckV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## subIcon
@@ -157,6 +173,8 @@ Sets the subIcon.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateItemV2-public subIcon?: OperateIconV2--><!--Device-OperateItemV2-public subIcon?: OperateIconV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -176,6 +194,8 @@ Sets the symbolStyle.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-OperateItemV2-public symbolStyle?: SymbolGlyphModifier--><!--Device-OperateItemV2-public symbolStyle?: SymbolGlyphModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## text
@@ -194,6 +214,8 @@ Sets the text.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-OperateItemV2-public text?: ResourceStr--><!--Device-OperateItemV2-public text?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## toggle
@@ -211,6 +233,8 @@ Sets the toggle.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateItemV2-public toggle?: OperateCheckV2--><!--Device-OperateItemV2-public toggle?: OperateCheckV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

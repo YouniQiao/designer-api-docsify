@@ -4,6 +4,8 @@ The module provides the capability to configure [AppStartup](../../../../applica
 
 **Since:** 12
 
+<!--Device-unnamed-declare class StartupConfigEntry--><!--Device-unnamed-declare class StartupConfigEntry-End-->
+
 **System capability:** SystemCapability.Ability.AppStartup
 
 ## Modules to Import
@@ -18,17 +20,15 @@ import { StartupConfigEntry } from '@kit.AbilityKit';
 onConfig?(): StartupConfig
 ```
 
-Called if the HAP of the AbilityStage has
-[defined the AppStartup configuration file](../../../../application-models/app-startup.md#defining-startup-parameter-configuration)
-. This callback is triggered before
-[AbilityStage.onCreate](arkts-ability-abilitystage-c.md#oncreate-1).
+Called if the HAP of the AbilityStage has [defined the AppStartup configuration file](../../../../application-models/app-startup.md#defining-startup-parameter-configuration). This callback is triggered before [AbilityStage.onCreate](arkts-ability-abilitystage-c.md#oncreate-1).
 
-You can set the AppStartup configuration within this callback. For details, see
-[Setting Startup Parameters](../../../../application-models/app-startup.md#setting-startup-parameters).
+You can set the AppStartup configuration within this callback. For details, see [Setting Startup Parameters](../../../../application-models/app-startup.md#setting-startup-parameters).
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StartupConfigEntry-onConfig?(): StartupConfig--><!--Device-StartupConfigEntry-onConfig?(): StartupConfig-End-->
 
 **System capability:** SystemCapability.Ability.AppStartup
 
@@ -36,7 +36,7 @@ You can set the AppStartup configuration within this callback. For details, see
 
 | Type | Description |
 | --- | --- |
-| StartupConfig | AppStartup configuration. |
+| [StartupConfig](arkts-ability-startupconfig-i.md) | AppStartup configuration. |
 
 **Example**
 
@@ -76,23 +76,17 @@ export default class MyStartupConfigEntry extends StartupConfigEntry {
 onRequestCustomMatchRule(want: Want): string
 ```
 
-Called if the HAP of the AbilityStage has
-[defined the AppStartup configuration file](../../../../application-models/app-startup.md#defining-startup-parameter-configuration)
-. This callback is triggered after [StartupConfigEntry.onConfig](arkts-ability-startupconfigentry-c.md#onconfig-1) but before
-[AbilityStage.onCreate](arkts-ability-abilitystage-c.md#oncreate-1).
+Called if the HAP of the AbilityStage has [defined the AppStartup configuration file](../../../../application-models/app-startup.md#defining-startup-parameter-configuration). This callback is triggered after [StartupConfigEntry.onConfig](arkts-ability-startupconfigentry-c.md#onconfig-1) but before [AbilityStage.onCreate](arkts-ability-abilitystage-c.md#oncreate-1).
 
-You can use this callback to return different custom matching rules based on parameters in the Want object passed
-by the caller to start the UIAbility. . AppStartup matches these rules with the **customization** field in
-**matchRules** of the startup task configuration. If a match is successful, the task is executed automatically. For
-details about the matching rules, see
-[Adding Task Matching Rules](../../../../application-models/app-startup.md#adding-task-matching-rules).
+You can use this callback to return different custom matching rules based on parameters in the Want object passed by the caller to start the UIAbility. . AppStartup matches these rules with the **customization** field in **matchRules** of the startup task configuration. If a match is successful, the task is executed automatically. For details about the matching rules, see [Adding Task Matching Rules](../../../../application-models/app-startup.md#adding-task-matching-rules).
 
-This API is typically used in scenarios where tasks cannot be matched directly using URI, action, or intent name
-rules. It allows for further refinement of matching rules.
+This API is typically used in scenarios where tasks cannot be matched directly using URI, action, or intent name rules. It allows for further refinement of matching rules.
 
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StartupConfigEntry-onRequestCustomMatchRule(want: Want): string--><!--Device-StartupConfigEntry-onRequestCustomMatchRule(want: Want): string-End-->
 
 **System capability:** SystemCapability.Ability.AppStartup
 
@@ -100,7 +94,7 @@ rules. It allows for further refinement of matching rules.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information about the target UIAbility. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information about the target UIAbility. |
 
 **Return value:**
 

@@ -12,8 +12,7 @@ import { fileAccess } from '@kit.CoreFileKit';
 function getFileAccessAbilityInfo(callback: AsyncCallback<Array<Want>>): void
 ```
 
-Obtains information about all Wants with **extension** set to **fileAccess** in the system. A Want contains
-information for starting an ability. This API uses an asynchronous callback to return the result.
+Obtains information about all Wants with **extension** set to **fileAccess** in the system. A Want contains information for starting an ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -23,6 +22,8 @@ information for starting an ability. This API uses an asynchronous callback to r
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-fileAccess-function getFileAccessAbilityInfo(callback: AsyncCallback<Array<Want>>): void--><!--Device-fileAccess-function getFileAccessAbilityInfo(callback: AsyncCallback<Array<Want>>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -31,7 +32,7 @@ information for starting an ability. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;Want&gt;&gt; | Yes | The callback is used to return a Array&lt;Want&gt; object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Want>> | Yes | The callback is used to return a Array&lt;Want&gt; object. |
 
 **Error codes:**
 
@@ -97,8 +98,7 @@ async function getFileAccessAbilityInfo() {
 function getFileAccessAbilityInfo(): Promise<Array<Want>>
 ```
 
-Obtains information about all Wants with **extension** set to **fileAccess** in the system. A Want contains
-information for starting an ability. This API uses a promise to return the result.
+Obtains information about all Wants with **extension** set to **fileAccess** in the system. A Want contains information for starting an ability. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -108,6 +108,8 @@ information for starting an ability. This API uses a promise to return the resul
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-fileAccess-function getFileAccessAbilityInfo(): Promise<Array<Want>>--><!--Device-fileAccess-function getFileAccessAbilityInfo(): Promise<Array<Want>>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -116,7 +118,7 @@ information for starting an ability. This API uses a promise to return the resul
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Want&gt;&gt; | Returns the wants. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Want>> | Returns the wants. |
 
 **Error codes:**
 

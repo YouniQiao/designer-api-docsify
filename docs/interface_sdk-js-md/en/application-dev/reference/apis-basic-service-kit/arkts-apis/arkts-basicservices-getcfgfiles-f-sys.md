@@ -12,13 +12,11 @@ import { configPolicy } from '@kit.BasicServicesKit';
 function getCfgFiles(relPath: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains a list of all files with the specified names, in ascending order of priority. This API uses an asynchronous
-callback to return the result.
-For example, if the paths of **config.xml** on the device are **\/system/etc/config.xml** and
-**\/sys_pod/etc/config.xml** in ascending order of priority,
-**\/system/etc/config.xml, /sys_pod/etc/config.xml** is returned.
+Obtains a list of all files with the specified names, in ascending order of priority. This API uses an asynchronous callback to return the result.For example, if the paths of **config.xml** on the device are **\/system/etc/config.xml** and **\/sys_pod/etc/config.xml** in ascending order of priority,**\/system/etc/config.xml, /sys_pod/etc/config.xml** is returned.
 
 **Since:** 8
+
+<!--Device-configPolicy-function getCfgFiles(relPath: string, callback: AsyncCallback<Array<string>>): void--><!--Device-configPolicy-function getCfgFiles(relPath: string, callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Customization.ConfigPolicy
 
@@ -29,7 +27,7 @@ For example, if the paths of **config.xml** on the device are **\/system/etc/con
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | relPath | string | Yes | Name of the configuration file. |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the file list issuccessfully obtained, **err** is **undefined**, and **data** is the obtained file list. Otherwise, **err** isan error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback used to return the result. If the file list is successfully obtained, **err** is **undefined**, and **data** is the obtained file list. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -44,15 +42,11 @@ For example, if the paths of **config.xml** on the device are **\/system/etc/con
 function getCfgFiles(relPath: string, followMode: FollowXMode, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains a list of all files of a specified file name based on the provided follow mode, in ascending order of
-priority. This API uses an asynchronous callback to return the result.
-For example, if the paths of **config.xml** on the device are **\/system/etc/config.xml**,
-**\/sys_pod/etc/config.xml**, and **\/sys_pod/etc/carrier/46060/etc/config.xml** in
-ascending order of priority, the default opkey of the device is **46060**, and **followMode** is set to
-**configPolicy.FollowXMode.SIM_DEFAULT**, the return value is
-**\/system/etc/config.xml, /sys_pod/etc/config.xml, /sys_pod/etc/carrier/46060/etc/config.xml**.
+Obtains a list of all files of a specified file name based on the provided follow mode, in ascending order of priority. This API uses an asynchronous callback to return the result.For example, if the paths of **config.xml** on the device are **\/system/etc/config.xml**,**\/sys_pod/etc/config.xml**, and **\/sys_pod/etc/carrier/46060/etc/config.xml** in ascending order of priority, the default opkey of the device is **46060**, and **followMode** is set to **configPolicy.FollowXMode.SIM_DEFAULT**, the return value is **\/system/etc/config.xml, /sys_pod/etc/config.xml, /sys_pod/etc/carrier/46060/etc/config.xml**.
 
 **Since:** 11
+
+<!--Device-configPolicy-function getCfgFiles(relPath: string, followMode: FollowXMode, callback: AsyncCallback<Array<string>>): void--><!--Device-configPolicy-function getCfgFiles(relPath: string, followMode: FollowXMode, callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Customization.ConfigPolicy
 
@@ -63,8 +57,8 @@ ascending order of priority, the default opkey of the device is **46060**, and *
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | relPath | string | Yes | Name of the configuration file. |
-| followMode | FollowXMode | Yes | Follow mode. |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the file list issuccessfully obtained, **err** is **undefined**, and **data** is the obtained file list. Otherwise, **err** isan error object. |
+| followMode | [FollowXMode](arkts-basicservices-followxmode-e-sys.md) | Yes | Follow mode. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback used to return the result. If the file list is successfully obtained, **err** is **undefined**, and **data** is the obtained file list. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -79,16 +73,11 @@ ascending order of priority, the default opkey of the device is **46060**, and *
 function getCfgFiles(relPath: string, followMode: FollowXMode, extra: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains a list of all files of a specified file name based on the provided follow mode, in ascending order of
-priority. This API uses an asynchronous callback to return the result.
-For example, if the paths of **config.xml** on the device are **\/system/etc/config.xml**,
-**\/sys_pod/etc/config.xml**, and **\/sys_pod/etc/carrier/46060/etc/config.xml** in
-ascending order of priority, the opkey of the device card 1 is **46060**, **followMode** is set to
-**configPolicy.FollowXMode.USER_DEFINED**, and the custom follow rule is
-**"etc/carrier/${telephony.sim.opkey0}"**, the return value is
-**\/system/etc/config.xml, /sys_pod/etc/config.xml, /sys_pod/etc/carrier/46060/etc/config.xml**.
+Obtains a list of all files of a specified file name based on the provided follow mode, in ascending order of priority. This API uses an asynchronous callback to return the result.For example, if the paths of **config.xml** on the device are **\/system/etc/config.xml**,**\/sys_pod/etc/config.xml**, and **\/sys_pod/etc/carrier/46060/etc/config.xml** in ascending order of priority, the opkey of the device card 1 is **46060**, **followMode** is set to **configPolicy.FollowXMode.USER_DEFINED**, and the custom follow rule is **"etc/carrier/${telephony.sim.opkey0}"**, the return value is **\/system/etc/config.xml, /sys_pod/etc/config.xml, /sys_pod/etc/carrier/46060/etc/config.xml**.
 
 **Since:** 11
+
+<!--Device-configPolicy-function getCfgFiles(relPath: string, followMode: FollowXMode, extra: string, callback: AsyncCallback<Array<string>>): void--><!--Device-configPolicy-function getCfgFiles(relPath: string, followMode: FollowXMode, extra: string, callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Customization.ConfigPolicy
 
@@ -99,9 +88,9 @@ ascending order of priority, the opkey of the device card 1 is **46060**, **foll
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | relPath | string | Yes | Name of the configuration file. |
-| followMode | FollowXMode | Yes | Follow mode. |
-| extra | string | Yes | Custom follow rule. This parameter is valid only when **followMode** is set to[USER_DEFINED](arkts-basicservices-followxmode-e-sys.md#user_defined). |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the file list issuccessfully obtained, **err** is **undefined**, and **data** is the obtained file list. Otherwise, **err** isan error object. |
+| followMode | [FollowXMode](arkts-basicservices-followxmode-e-sys.md) | Yes | Follow mode. |
+| extra | string | Yes | Custom follow rule. This parameter is valid only when **followMode** is set to [USER_DEFINED](arkts-basicservices-followxmode-e-sys.md#user_defined). |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback used to return the result. If the file list is successfully obtained, **err** is **undefined**, and **data** is the obtained file list. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -116,10 +105,11 @@ ascending order of priority, the opkey of the device card 1 is **46060**, **foll
 function getCfgFiles(relPath: string): Promise<Array<string>>
 ```
 
-Obtains a list of all files with the specified names, in ascending order of priority. This API uses a promise to
-return the result.
+Obtains a list of all files with the specified names, in ascending order of priority. This API uses a promise to return the result.
 
 **Since:** 8
+
+<!--Device-configPolicy-function getCfgFiles(relPath: string): Promise<Array<string>>--><!--Device-configPolicy-function getCfgFiles(relPath: string): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Customization.ConfigPolicy
 
@@ -135,7 +125,7 @@ return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the file list. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return the file list. |
 
 **Error codes:**
 
@@ -150,10 +140,11 @@ return the result.
 function getCfgFiles(relPath: string, followMode: FollowXMode, extra?: string): Promise<Array<string>>
 ```
 
-Obtains a list of all files of a specified file name based on the provided follow mode, in ascending order of
-priority. This API uses a promise to return the result.
+Obtains a list of all files of a specified file name based on the provided follow mode, in ascending order of priority. This API uses a promise to return the result.
 
 **Since:** 11
+
+<!--Device-configPolicy-function getCfgFiles(relPath: string, followMode: FollowXMode, extra?: string): Promise<Array<string>>--><!--Device-configPolicy-function getCfgFiles(relPath: string, followMode: FollowXMode, extra?: string): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Customization.ConfigPolicy
 
@@ -164,14 +155,14 @@ priority. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | relPath | string | Yes | Name of the configuration file. |
-| followMode | FollowXMode | Yes | Follow mode. |
-| extra | string | No | Custom follow rule. This parameter is valid only when **followMode** is set to[USER_DEFINED](arkts-basicservices-followxmode-e-sys.md#user_defined). |
+| followMode | [FollowXMode](arkts-basicservices-followxmode-e-sys.md) | Yes | Follow mode. |
+| extra | string | No | Custom follow rule. This parameter is valid only when **followMode** is set to [USER_DEFINED](arkts-basicservices-followxmode-e-sys.md#user_defined). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the file list. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return the file list. |
 
 **Error codes:**
 

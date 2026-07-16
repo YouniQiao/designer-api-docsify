@@ -6,8 +6,7 @@
 function getActiveNotificationCount(callback: AsyncCallback<number>): void
 ```
 
-Obtains the number of active notifications of this application. This API uses an asynchronous callback to return
-the result.
+Obtains the number of active notifications of this application. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -15,13 +14,15 @@ the result.
 
 **Substitutes:** getActiveNotificationCount
 
+<!--Device-notification-function getActiveNotificationCount(callback: AsyncCallback<number>): void--><!--Device-notification-function getActiveNotificationCount(callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. |
 
 
 ## getActiveNotificationCount
@@ -38,11 +39,13 @@ Obtains the number of active notifications of this application. This API uses a 
 
 **Substitutes:** getActiveNotificationCount
 
+<!--Device-notification-function getActiveNotificationCount(): Promise<number>--><!--Device-notification-function getActiveNotificationCount(): Promise<number>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result. |
 

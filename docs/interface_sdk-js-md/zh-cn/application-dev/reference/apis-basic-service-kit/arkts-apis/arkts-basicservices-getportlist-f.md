@@ -1,5 +1,11 @@
 # getPortList
 
+## 导入模块
+
+```TypeScript
+import { serialManager } from '@kit.BasicServicesKit';
+```
+
 ## getPortList
 
 ```TypeScript
@@ -10,13 +16,15 @@ function getPortList(): Readonly<SerialPort>[]
 
 **起始版本：** 19
 
+<!--Device-serialManager-function getPortList(): Readonly<SerialPort>[]--><!--Device-serialManager-function getPortList(): Readonly<SerialPort>[]-End-->
+
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Readonly&lt;SerialPort&gt;[] | Serial port information list. |
+| Readonly<SerialPort>[] | Serial port information list. |
 
 **示例：**
 

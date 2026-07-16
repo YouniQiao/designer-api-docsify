@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-componentSnapshot-interface SnapshotOptions--><!--Device-componentSnapshot-interface SnapshotOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { componentSnapshot } from '@kit.ArkUI';
+```
 
 ## colorMode
 
@@ -22,7 +30,9 @@ colorMode?: ColorModeOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SnapshotOptions-colorMode?: ColorModeOptions--><!--Device-SnapshotOptions-colorMode?: ColorModeOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,7 +52,9 @@ dynamicRangeMode?: DynamicRangeModeOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SnapshotOptions-dynamicRangeMode?: DynamicRangeModeOptions--><!--Device-SnapshotOptions-dynamicRangeMode?: DynamicRangeModeOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,7 +72,9 @@ region?: SnapshotRegionType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SnapshotOptions-region?: SnapshotRegionType--><!--Device-SnapshotOptions-region?: SnapshotRegionType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,7 +100,9 @@ scale?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SnapshotOptions-scale?: number--><!--Device-SnapshotOptions-scale?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,8 +112,7 @@ scale?: number
 waitUntilRenderFinished?: boolean
 ```
 
-设置是否强制系统在截图前等待所有绘制指令执行完毕。true表示强制系统在截图前等待所有绘制指令执行完毕，false表示不强制系统在截图前等待所有绘制指令执行完毕。该选项可尽可能确保截图内容是最新的状态，应尽量开启。需要注意的
-是，开启后接口可能需要更长的时间返回，具体的时间依赖页面当时时刻需要重绘区域的大小。
+设置是否强制系统在截图前等待所有绘制指令执行完毕。true表示强制系统在截图前等待所有绘制指令执行完毕，false表示不强制系统在截图前等待所有绘制指令执行完毕。该选项可尽可能确保截图内容是最新的状态，应尽量开启。需要注意的是，开启后接口可能需要更长的时间返回，具体的时间依赖页面当时时刻需要重绘区域的大小。
 
 默认值：false
 
@@ -107,7 +122,9 @@ waitUntilRenderFinished?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SnapshotOptions-waitUntilRenderFinished?: boolean--><!--Device-SnapshotOptions-waitUntilRenderFinished?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

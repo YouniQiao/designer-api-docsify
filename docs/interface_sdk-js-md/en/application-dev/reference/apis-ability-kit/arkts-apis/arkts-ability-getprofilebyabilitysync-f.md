@@ -12,14 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getProfileByAbilitySync(moduleName: string, abilityName: string, metadataName?: string): Array<string>
 ```
 
-Obtains the JSON string array of the current application's configuration file based on the given module name,
-ability name, and metadata name (name configured in
-[metadata](../../../../quick-start/module-configuration-file.md#metadata) of the **module.json5** file). This API
-returns the result synchronously. The result value is a string array.
+Obtains the JSON string array of the current application's configuration file based on the given module name,ability name, and metadata name (name configured in [metadata](../../../../quick-start/module-configuration-file.md#metadata) of the **module.json5** file). This API returns the result synchronously. The result value is a string array.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-bundleManager-function getProfileByAbilitySync(moduleName: string, abilityName: string, metadataName?: string): Array<string>--><!--Device-bundleManager-function getProfileByAbilitySync(moduleName: string, abilityName: string, metadataName?: string): Array<string>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -29,13 +28,13 @@ returns the result synchronously. The result value is a string array.
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Module name. |
 | abilityName | string | Yes | Name of the UIAbility component. |
-| metadataName | string | No | Metadata name of the UIAbility component, that is, **name** of the **metadata**tag under [abilities](../../../../quick-start/module-configuration-file.md#abilities) in the **module.json5**file. The default value is null. |
+| metadataName | string | No | Metadata name of the UIAbility component, that is, **name** of the **metadata** tag under [abilities](../../../../quick-start/module-configuration-file.md#abilities) in the **module.json5** file. The default value is null. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | An array of JSON strings. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | An array of JSON strings. |
 
 **Error codes:**
 

@@ -12,6 +12,8 @@ Indicates possible value types
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-photoAccessHelper-export type OperationValueType = long | double | string | boolean--><!--Device-photoAccessHelper-export type OperationValueType = long | double | string | boolean-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 | Type | Description |

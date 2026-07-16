@@ -12,6 +12,8 @@ Defines an OnFontWeightScaleUpdatedFn function.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-systemConfiguration-type OnFontWeightScaleUpdatedFn = (fontWeightScale: double) => void--><!--Device-systemConfiguration-type OnFontWeightScaleUpdatedFn = (fontWeightScale: double) => void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**

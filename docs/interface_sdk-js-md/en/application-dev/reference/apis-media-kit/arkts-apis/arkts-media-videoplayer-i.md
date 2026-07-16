@@ -1,15 +1,14 @@
 # VideoPlayer
 
-VideoPlayer is a class for video playback management. It provides APIs to manage and play videos. Before calling
-any API in VideoPlayer, you must use
-[createVideoPlayer()](arkts-media-createvideoplayer-f.md#createvideoplayer-1)
-to create a VideoPlayer instance.
+VideoPlayer is a class for video playback management. It provides APIs to manage and play videos. Before calling any API in VideoPlayer, you must use [createVideoPlayer()](arkts-media-createvideoplayer-f.md#createvideoplayer-1)to create a VideoPlayer instance.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** [media:media](arkts-multimedia-media.md)
+
+<!--Device-media-interface VideoPlayer--><!--Device-media-interface VideoPlayer-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -33,13 +32,15 @@ Obtains the video track information. This API uses an asynchronous callback to r
 
 **Substitutes:** getTrackDescription(callback:
 
+<!--Device-VideoPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void--><!--Device-VideoPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;MediaDescription&gt;&gt; | Yes | Callback used to return the result. If the operationis successful, **err** is **undefined** and **data** is the MediaDescription array obtained; otherwise,**err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<MediaDescription>> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the MediaDescription array obtained; otherwise,**err** is an error object. |
 
 ## getTrackDescription
 
@@ -55,13 +56,15 @@ Obtains the video track information. This API uses a promise to return the resul
 
 **Substitutes:** [getTrackDescription()](arkts-media-avplayer-i.md#gettrackdescription-2)
 
+<!--Device-VideoPlayer-getTrackDescription(): Promise<Array<MediaDescription>>--><!--Device-VideoPlayer-getTrackDescription(): Promise<Array<MediaDescription>>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;MediaDescription&gt;&gt; | Promise used to return the MediaDescription array that holds thevideo track information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<MediaDescription>> | Promise used to return the MediaDescription array that holds the video track information. |
 
 ## on('playbackCompleted')
 
@@ -77,6 +80,8 @@ Subscribes to the video playback completion event.
 
 **Substitutes:** on(type:
 
+<!--Device-VideoPlayer-on(type: 'playbackCompleted', callback: Callback<void>): void--><!--Device-VideoPlayer-on(type: 'playbackCompleted', callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Parameters:**
@@ -84,7 +89,7 @@ Subscribes to the video playback completion event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playbackCompleted' | Yes | Event type, which is **'playbackCompleted'** in this case. |
-| callback | Callback&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Callback invoked when the event is triggered. |
 
 ## on('bufferingUpdate')
 
@@ -100,6 +105,8 @@ Subscribes to the video buffering update event. This API works only under online
 
 **Substitutes:** on(type:
 
+<!--Device-VideoPlayer-on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void--><!--Device-VideoPlayer-on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Parameters:**
@@ -107,7 +114,7 @@ Subscribes to the video buffering update event. This API works only under online
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bufferingUpdate' | Yes | Event type, which is **'bufferingUpdate'** in this case. |
-| callback | (infoType: BufferingInfoType, value: number) =&gt; void | Yes | Callback invoked when the event is triggered.<br>The value of[BufferingInfoType](arkts-media-bufferinginfotype-e.md) is fixed at **0**. |
+| callback | (infoType: BufferingInfoType, value: number) => void | Yes | Callback invoked when the event is triggered.<br>The value of [BufferingInfoType](arkts-media-bufferinginfotype-e.md) is fixed at **0**. |
 
 ## on('startRenderFrame')
 
@@ -123,6 +130,8 @@ Subscribes to the frame rendering start event.
 
 **Substitutes:** on(type:
 
+<!--Device-VideoPlayer-on(type: 'startRenderFrame', callback: Callback<void>): void--><!--Device-VideoPlayer-on(type: 'startRenderFrame', callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Parameters:**
@@ -130,7 +139,7 @@ Subscribes to the frame rendering start event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'startRenderFrame' | Yes | Event type, which is **'startRenderFrame'** in this case. |
-| callback | Callback&lt;void&gt; | Yes | Callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Callback invoked when the event is triggered. |
 
 ## on('videoSizeChanged')
 
@@ -146,6 +155,8 @@ Subscribes to the video width and height change event.
 
 **Substitutes:** on(type:
 
+<!--Device-VideoPlayer-on(type: 'videoSizeChanged', callback: (width: number, height: number) => void): void--><!--Device-VideoPlayer-on(type: 'videoSizeChanged', callback: (width: number, height: number) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Parameters:**
@@ -153,7 +164,7 @@ Subscribes to the video width and height change event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'videoSizeChanged' | Yes | Event type, which is **'videoSizeChanged'** in this case. |
-| callback | (width: number, height: number) =&gt; void | Yes | Callback invoked when the event is triggered. **width** indicates the video width,and **height** indicates the video height, in px. |
+| callback | (width: number, height: number) => void | Yes | Callback invoked when the event is triggered. **width** indicates the video width,and **height** indicates the video height, in px. |
 
 ## on('audioInterrupt')
 
@@ -161,14 +172,15 @@ Subscribes to the video width and height change event.
 on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void
 ```
 
-Subscribes to the audio interruption event. For details, see
-[audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-interruptevent-i.md).
+Subscribes to the audio interruption event. For details, see [audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-interruptevent-i.md).
 
 **Since:** 9
 
 **Deprecated since:** 9
 
 **Substitutes:** on(type:
+
+<!--Device-VideoPlayer-on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void--><!--Device-VideoPlayer-on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -177,7 +189,7 @@ Subscribes to the audio interruption event. For details, see
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioInterrupt' | Yes | Event type, which is **'audioInterrupt'** in this case. |
-| callback | (info: audio.InterruptEvent) =&gt; void | Yes | Callback invoked when the event is triggered. |
+| callback | (info: audio.InterruptEvent) => void | Yes | Callback invoked when the event is triggered. |
 
 ## on('error')
 
@@ -185,8 +197,7 @@ Subscribes to the audio interruption event. For details, see
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to video playback error events. After an error event is reported, you must handle the event and exit
-the playback.
+Subscribes to video playback error events. After an error event is reported, you must handle the event and exit the playback.
 
 **Since:** 8
 
@@ -194,14 +205,16 @@ the playback.
 
 **Substitutes:** on(type:
 
+<!--Device-VideoPlayer-on(type: 'error', callback: ErrorCallback): void--><!--Device-VideoPlayer-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type, which is **'error'** in this case.<br>This event is triggered when an erroroccurs during video playback. |
-| callback | ErrorCallback | Yes | Callback invoked when the event is triggered. |
+| type | 'error' | Yes | Event type, which is **'error'** in this case.<br>This event is triggered when an error occurs during video playback. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback invoked when the event is triggered. |
 
 ## pause
 
@@ -217,13 +230,15 @@ Pauses video playback. This API uses an asynchronous callback to return the resu
 
 **Substitutes:** pause(callback:
 
+<!--Device-VideoPlayer-pause(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-pause(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 ## pause
 
@@ -239,13 +254,15 @@ Pauses video playback. This API uses a promise to return the result.
 
 **Substitutes:** [pause()](arkts-media-avplayer-i.md#pause-2)
 
+<!--Device-VideoPlayer-pause(): Promise<void>--><!--Device-VideoPlayer-pause(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## play
 
@@ -261,13 +278,15 @@ Starts video playback. This API uses an asynchronous callback to return the resu
 
 **Substitutes:** play(callback:
 
+<!--Device-VideoPlayer-play(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-play(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 ## play
 
@@ -283,13 +302,15 @@ Starts video playback. This API uses a promise to return the result.
 
 **Substitutes:** [play()](arkts-media-avplayer-i.md#play-2)
 
+<!--Device-VideoPlayer-play(): Promise<void>--><!--Device-VideoPlayer-play(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## prepare
 
@@ -305,13 +326,15 @@ Prepares for video playback. This API uses an asynchronous callback to return th
 
 **Substitutes:** prepare(callback:
 
+<!--Device-VideoPlayer-prepare(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-prepare(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 ## prepare
 
@@ -327,13 +350,15 @@ Prepares for video playback. This API uses a promise to return the result.
 
 **Substitutes:** [prepare()](arkts-media-avplayer-i.md#prepare-2)
 
+<!--Device-VideoPlayer-prepare(): Promise<void>--><!--Device-VideoPlayer-prepare(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## release
 
@@ -349,13 +374,15 @@ Releases the video playback resources. This API uses an asynchronous callback to
 
 **Substitutes:** release(callback:
 
+<!--Device-VideoPlayer-release(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-release(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 ## release
 
@@ -371,13 +398,15 @@ Releases the video playback resources. This API uses a promise to return the res
 
 **Substitutes:** [release()](arkts-media-avplayer-i.md#release-2)
 
+<!--Device-VideoPlayer-release(): Promise<void>--><!--Device-VideoPlayer-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## reset
 
@@ -393,13 +422,15 @@ Resets video playback. This API uses an asynchronous callback to return the resu
 
 **Substitutes:** reset(callback:
 
+<!--Device-VideoPlayer-reset(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-reset(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 ## reset
 
@@ -415,13 +446,15 @@ Resets video playback. This API uses a promise to return the result.
 
 **Substitutes:** [reset()](arkts-media-avplayer-i.md#reset-2)
 
+<!--Device-VideoPlayer-reset(): Promise<void>--><!--Device-VideoPlayer-reset(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## seek
 
@@ -429,14 +462,15 @@ Resets video playback. This API uses a promise to return the result.
 seek(timeMs: number, callback: AsyncCallback<number>): void
 ```
 
-Seeks to the specified playback position. The previous key frame at the specified position is played. This API
-uses an asynchronous callback to return the result.
+Seeks to the specified playback position. The previous key frame at the specified position is played. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** [seek](arkts-media-avplayer-i.md#seek-1)
+
+<!--Device-VideoPlayer-seek(timeMs: number, callback: AsyncCallback<number>): void--><!--Device-VideoPlayer-seek(timeMs: number, callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -445,7 +479,7 @@ uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | timeMs | number | Yes | Position to seek to, in ms. The value range is [0, duration]. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the new playback position; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the new playback position; otherwise, **err** is an error object. |
 
 ## seek
 
@@ -461,6 +495,8 @@ Seeks to the specified playback position. This API uses an asynchronous callback
 
 **Substitutes:** [seek](arkts-media-avplayer-i.md#seek-1)
 
+<!--Device-VideoPlayer-seek(timeMs: number, mode: SeekMode, callback: AsyncCallback<number>): void--><!--Device-VideoPlayer-seek(timeMs: number, mode: SeekMode, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Parameters:**
@@ -468,8 +504,8 @@ Seeks to the specified playback position. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | timeMs | number | Yes | Position to seek to, in ms. The value range is [0, duration]. |
-| mode | SeekMode | Yes | Seek mode. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the new playback position; otherwise, **err** is an error object. |
+| mode | [SeekMode](arkts-media-seekmode-e.md) | Yes | Seek mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the new playback position; otherwise, **err** is an error object. |
 
 ## seek
 
@@ -477,14 +513,15 @@ Seeks to the specified playback position. This API uses an asynchronous callback
 seek(timeMs: number, mode?: SeekMode): Promise<number>
 ```
 
-Seeks to the specified playback position. If **mode** is not specified, the previous key frame at the specified
-position is played. This API uses a promise to return the result.
+Seeks to the specified playback position. If **mode** is not specified, the previous key frame at the specified position is played. This API uses a promise to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** [seek](arkts-media-avplayer-i.md#seek-1)
+
+<!--Device-VideoPlayer-seek(timeMs: number, mode?: SeekMode): Promise<number>--><!--Device-VideoPlayer-seek(timeMs: number, mode?: SeekMode): Promise<number>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -493,13 +530,13 @@ position is played. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | timeMs | number | Yes | Position to seek to, in ms. The value range is [0, duration]. |
-| mode | SeekMode | No | Seek mode based on the video I frame. The default value is **SEEK_PREV_SYNC**. |
+| mode | [SeekMode](arkts-media-seekmode-e.md) | No | Seek mode based on the video I frame. The default value is **SEEK_PREV_SYNC**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the playback position, in ms. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the playback position, in ms. |
 
 ## setDisplaySurface
 
@@ -509,9 +546,9 @@ setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void
 
 Sets a surface ID. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> - **SetDisplaySurface** must be called between the URL setting and the calling of **prepare**. A surface must
+> **NOTE**  
+>  
+> - **SetDisplaySurface** must be called between the URL setting and the calling of **prepare**. A surface must  
 > be set for video streams without audio. Otherwise, the calling of **prepare** fails.
 
 **Since:** 8
@@ -520,14 +557,16 @@ Sets a surface ID. This API uses an asynchronous callback to return the result.
 
 **Substitutes:** [null]
 
+<!--Device-VideoPlayer-setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| surfaceId | string | Yes | Surface ID, which is obtained from the **XComponent**. For details about how toobtain it, see [XComponent](./@internal/component/ets/xcomponent). |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the setting is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| surfaceId | string | Yes | Surface ID, which is obtained from the **XComponent**. For details about how to obtain it, see [XComponent](./@internal/component/ets/xcomponent). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the setting is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## setDisplaySurface
 
@@ -537,9 +576,9 @@ setDisplaySurface(surfaceId: string): Promise<void>
 
 Sets a surface ID. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - **SetDisplaySurface** must be called between the URL setting and the calling of **prepare**. A surface must
+> **NOTE**  
+>  
+> - **SetDisplaySurface** must be called between the URL setting and the calling of **prepare**. A surface must  
 > be set for video streams without audio. Otherwise, the calling of **prepare** fails.
 
 **Since:** 8
@@ -548,19 +587,21 @@ Sets a surface ID. This API uses a promise to return the result.
 
 **Substitutes:** [null]
 
+<!--Device-VideoPlayer-setDisplaySurface(surfaceId: string): Promise<void>--><!--Device-VideoPlayer-setDisplaySurface(surfaceId: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| surfaceId | string | Yes | Surface ID, which is obtained from the **XComponent**. For details about how toobtain it, see [XComponent](./@internal/component/ets/xcomponent). |
+| surfaceId | string | Yes | Surface ID, which is obtained from the **XComponent**. For details about how to obtain it, see [XComponent](./@internal/component/ets/xcomponent). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## setSpeed
 
@@ -576,14 +617,16 @@ Sets the playback speed. This API uses an asynchronous callback to return the re
 
 **Substitutes:** [setSpeed](arkts-media-avplayer-i.md#setspeed-1)
 
+<!--Device-VideoPlayer-setSpeed(speed: number, callback: AsyncCallback<number>): void--><!--Device-VideoPlayer-setSpeed(speed: number, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | number | Yes | Video playback speed. For details, see[PlaybackSpeed](arkts-media-playbackspeed-e.md). |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the playback speed; otherwise, **err** is an error object. |
+| speed | number | Yes | Video playback speed. For details, see [PlaybackSpeed](arkts-media-playbackspeed-e.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the playback speed; otherwise, **err** is an error object. |
 
 ## setSpeed
 
@@ -599,19 +642,21 @@ Sets the playback speed. This API uses a promise to return the result.
 
 **Substitutes:** [setSpeed](arkts-media-avplayer-i.md#setspeed-1)
 
+<!--Device-VideoPlayer-setSpeed(speed: number): Promise<number>--><!--Device-VideoPlayer-setSpeed(speed: number): Promise<number>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | number | Yes | Video playback speed. For details, see[PlaybackSpeed](arkts-media-playbackspeed-e.md). |
+| speed | number | Yes | Video playback speed. For details, see [PlaybackSpeed](arkts-media-playbackspeed-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the playback speed. For details, see[PlaybackSpeed](arkts-media-playbackspeed-e.md). |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the playback speed. For details, see [PlaybackSpeed](arkts-media-playbackspeed-e.md). |
 
 ## setVolume
 
@@ -627,14 +672,16 @@ Sets the volume. This API uses an asynchronous callback to return the result.
 
 **Substitutes:** [setVolume](arkts-media-avplayer-i.md#setvolume-1)
 
+<!--Device-VideoPlayer-setVolume(vol: number, callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-setVolume(vol: number, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| vol | number | Yes | Relative volume. The value ranges from 0.00 to 1.00. The value **1.00** indicates themaximum volume (100%). |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the setting is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| vol | number | Yes | Relative volume. The value ranges from 0.00 to 1.00. The value **1.00** indicates the maximum volume (100%). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the setting is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## setVolume
 
@@ -650,19 +697,21 @@ Sets the volume. This API uses a promise to return the result.
 
 **Substitutes:** [setVolume](arkts-media-avplayer-i.md#setvolume-1)
 
+<!--Device-VideoPlayer-setVolume(vol: number): Promise<void>--><!--Device-VideoPlayer-setVolume(vol: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| vol | number | Yes | Relative volume. The value ranges from 0.00 to 1.00. The value **1.00** indicates themaximum volume (100%). |
+| vol | number | Yes | Relative volume. The value ranges from 0.00 to 1.00. The value **1.00** indicates the maximum volume (100%). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## stop
 
@@ -678,13 +727,15 @@ Stops video playback. This API uses an asynchronous callback to return the resul
 
 **Substitutes:** stop(callback:
 
+<!--Device-VideoPlayer-stop(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-stop(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 ## stop
 
@@ -700,13 +751,15 @@ Stops video playback. This API uses a promise to return the result.
 
 **Substitutes:** [stop()](arkts-media-avplayer-i.md#stop-2)
 
+<!--Device-VideoPlayer-stop(): Promise<void>--><!--Device-VideoPlayer-stop(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## audioInterruptMode
 
@@ -723,6 +776,8 @@ Audio interruption mode.
 **Deprecated since:** 9
 
 **Substitutes:** audioInterruptMode
+
+<!--Device-VideoPlayer-audioInterruptMode?: audio.InterruptMode--><!--Device-VideoPlayer-audioInterruptMode?: audio.InterruptMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -742,6 +797,8 @@ Current video playback position, in ms.
 
 **Substitutes:** currentTime
 
+<!--Device-VideoPlayer-readonly currentTime: number--><!--Device-VideoPlayer-readonly currentTime: number-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 ## duration
@@ -760,6 +817,8 @@ Video duration, in ms. The value **-1** indicates the live mode.
 
 **Substitutes:** duration
 
+<!--Device-VideoPlayer-readonly duration: number--><!--Device-VideoPlayer-readonly duration: number-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 ## fdSrc
@@ -768,8 +827,7 @@ Video duration, in ms. The value **-1** indicates the live mode.
 fdSrc: AVFileDescriptor
 ```
 
-Description of a video file. This property is required when video assets of an application are continuously
-stored in a file.
+Description of a video file. This property is required when video assets of an application are continuously stored in a file.
 
 Assume that a music file that stores continuous music assets consists of the following:
 
@@ -779,9 +837,7 @@ Video 2 (address offset: 101; byte length: 50)
 
 Video 3 (address offset: 151, byte length: 150)
 
-1. To play video 1: AVFileDescriptor { fd = resource handle; offset = 0; length = 100; }
-2. To play video 2: AVFileDescriptor { fd = resource handle; offset = 101; length = 50; }
-3. To play video 3: AVFileDescriptor { fd = resource handle; offset = 151; length = 150; }
+1. To play video 1: AVFileDescriptor { fd = resource handle; offset = 0; length = 100; }2. To play video 2: AVFileDescriptor { fd = resource handle; offset = 101; length = 50; }3. To play video 3: AVFileDescriptor { fd = resource handle; offset = 151; length = 150; }
 
 To play an independent video file, use **src=fd://xx**.
 
@@ -792,6 +848,8 @@ To play an independent video file, use **src=fd://xx**.
 **Deprecated since:** 9
 
 **Substitutes:** fdSrc
+
+<!--Device-VideoPlayer-fdSrc: AVFileDescriptor--><!--Device-VideoPlayer-fdSrc: AVFileDescriptor-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -811,6 +869,8 @@ Video height, in px.
 
 **Substitutes:** height
 
+<!--Device-VideoPlayer-readonly height: number--><!--Device-VideoPlayer-readonly height: number-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 ## loop
@@ -828,6 +888,8 @@ Whether to loop video playback. **true** to loop, **false** otherwise.
 **Deprecated since:** 9
 
 **Substitutes:** loop
+
+<!--Device-VideoPlayer-loop: boolean--><!--Device-VideoPlayer-loop: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -847,6 +909,8 @@ Video playback state.
 
 **Substitutes:** state
 
+<!--Device-VideoPlayer-readonly state: VideoPlayState--><!--Device-VideoPlayer-readonly state: VideoPlayState-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 ## url
@@ -863,10 +927,7 @@ Video URL. The video formats MP4, MPEG-TS, and MKV are supported.
 
 ![](../../../../reference/apis-media-kit/figures/en-us_image_url.png)
 
-2. HTTP: http://xx
-3. HTTPS: https://xx
-4. HLS: http://xx or https://xx
-5. File type: file://xx
+2. HTTP: http://xx3. HTTPS: https://xx4. HLS: http://xx or https://xx5. File type: file://xx
 
 **NOTE**
 
@@ -879,6 +940,8 @@ WebM is no longer supported since API version 11.
 **Deprecated since:** 9
 
 **Substitutes:** url
+
+<!--Device-VideoPlayer-url: string--><!--Device-VideoPlayer-url: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -898,6 +961,8 @@ Video scale type. The default value is **VIDEO_SCALE_TYPE_FIT**.
 
 **Substitutes:** videoScaleType
 
+<!--Device-VideoPlayer-videoScaleType?: VideoScaleType--><!--Device-VideoPlayer-videoScaleType?: VideoScaleType-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 ## width
@@ -915,6 +980,8 @@ Video width, in px.
 **Deprecated since:** 9
 
 **Substitutes:** width
+
+<!--Device-VideoPlayer-readonly width: number--><!--Device-VideoPlayer-readonly width: number-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 

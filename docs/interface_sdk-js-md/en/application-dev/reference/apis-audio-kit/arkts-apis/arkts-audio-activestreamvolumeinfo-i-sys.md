@@ -4,6 +4,8 @@ Volume information for active audio streams.
 
 **Since:** 24
 
+<!--Device-audio-interface ActiveStreamVolumeInfo--><!--Device-audio-interface ActiveStreamVolumeInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Volume of the application.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ActiveStreamVolumeInfo-appVolume: int--><!--Device-ActiveStreamVolumeInfo-appVolume: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -46,6 +50,8 @@ UID of the application.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ActiveStreamVolumeInfo-clientUid: int--><!--Device-ActiveStreamVolumeInfo-clientUid: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -63,6 +69,8 @@ Volume type of the current stream.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ActiveStreamVolumeInfo-volumeType: AudioVolumeType--><!--Device-ActiveStreamVolumeInfo-volumeType: AudioVolumeType-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 

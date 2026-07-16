@@ -4,6 +4,8 @@ Enumerates the result codes for blinking operations.
 
 **Since:** 26.0.0
 
+<!--Device-config-export enum BlinkResultCode--><!--Device-config-export enum BlinkResultCode-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -19,6 +21,8 @@ Success.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BlinkResultCode-SUCCESS = 0--><!--Device-BlinkResultCode-SUCCESS = 0-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -36,6 +40,8 @@ Currently flashing.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BlinkResultCode-ALREADY_FLASHING = 1--><!--Device-BlinkResultCode-ALREADY_FLASHING = 1-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -51,6 +57,8 @@ Device is in use.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BlinkResultCode-DEVICE_IN_USE = 2--><!--Device-BlinkResultCode-DEVICE_IN_USE = 2-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -68,6 +76,8 @@ Flash blinking is unsupported.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BlinkResultCode-FLASH_BLINKING_UNSUPPORTED = 3--><!--Device-BlinkResultCode-FLASH_BLINKING_UNSUPPORTED = 3-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -84,6 +94,8 @@ Screen blinking is unsupported.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BlinkResultCode-SCREEN_BLINKING_UNSUPPORTED = 4--><!--Device-BlinkResultCode-SCREEN_BLINKING_UNSUPPORTED = 4-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -99,6 +111,8 @@ Feature switch is disabled.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BlinkResultCode-FEATURE_DISABLED = 5--><!--Device-BlinkResultCode-FEATURE_DISABLED = 5-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 

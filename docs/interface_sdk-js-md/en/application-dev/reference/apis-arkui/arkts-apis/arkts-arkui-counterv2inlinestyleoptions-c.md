@@ -6,6 +6,8 @@ Defines the inline style options.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare class CounterV2InlineStyleOptions extends CounterV2CommonOptions--><!--Device-unnamed-declare class CounterV2InlineStyleOptions extends CounterV2CommonOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,6 +34,8 @@ Set maximum value of the counter component
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CounterV2InlineStyleOptions-max?: int--><!--Device-CounterV2InlineStyleOptions-max?: int-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## min
@@ -52,6 +56,8 @@ Set minimum value of the counter component
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CounterV2InlineStyleOptions-min?: int--><!--Device-CounterV2InlineStyleOptions-min?: int-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onChange
@@ -70,6 +76,8 @@ Trigger an event when the value of the counter has been changed.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CounterV2InlineStyleOptions-onChange?: OnInlineCounterV2Change--><!--Device-CounterV2InlineStyleOptions-onChange?: OnInlineCounterV2Change-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## textWidth
@@ -78,8 +86,7 @@ Trigger an event when the value of the counter has been changed.
 textWidth?: number
 ```
 
-Set text width of the counter component, ranges greater than or equal to 0.
-If undefined is passed, the text width will adapt to the text content.
+Set text width of the counter component, ranges greater than or equal to 0.If undefined is passed, the text width will adapt to the text content.
 
 **Type:** number
 
@@ -90,6 +97,8 @@ If undefined is passed, the text width will adapt to the text content.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CounterV2InlineStyleOptions-textWidth?: double--><!--Device-CounterV2InlineStyleOptions-textWidth?: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -110,6 +119,8 @@ Set initial value of the counter component, ranges from min to max.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CounterV2InlineStyleOptions-value?: int--><!--Device-CounterV2InlineStyleOptions-value?: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

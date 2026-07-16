@@ -1,9 +1,10 @@
 # CameraManager
 
-Implements camera management. Before calling any API in CameraManager, you must use
-[getCameraManager](arkts-camera-getcameramanager-f.md#getcameramanager-1) to obtain a CameraManager instance.
+Implements camera management. Before calling any API in CameraManager, you must use [getCameraManager](arkts-camera-getcameramanager-f.md#getcameramanager-1) to obtain a CameraManager instance.
 
 **Since:** 10
+
+<!--Device-camera-interface CameraManager--><!--Device-camera-interface CameraManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -21,16 +22,15 @@ createCameraInputWithTokenId(camera: CameraDevice, tokenId: number): CameraInput
 
 Creates a CameraInput instance by camera and calling token.
 
-Before using this interface, first through the getSupportedCameras interface to query the current list of camera
-devices supported by the device, the developer needs to be based on specific scenarios to choose the camera
-device
-that meets the needs of the developer, and then use this interface to create a CameraInput instance.
+Before using this interface, first through the getSupportedCameras interface to query the current list of camera devices supported by the device, the developer needs to be based on specific scenarios to choose the camera device that meets the needs of the developer, and then use this interface to create a CameraInput instance.
 
 **Since:** 24
 
 **Required permissions:** ohos.permission.CAMERA
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CameraManager-createCameraInputWithTokenId(camera: CameraDevice, tokenId: int): CameraInput--><!--Device-CameraManager-createCameraInputWithTokenId(camera: CameraDevice, tokenId: int): CameraInput-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -40,14 +40,14 @@ that meets the needs of the developer, and then use this interface to create a C
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| camera | CameraDevice | Yes | Camera device used to create the instance. |
+| camera | [CameraDevice](arkts-camera-cameradevice-i-sys.md) | Yes | Camera device used to create the instance. |
 | tokenId | number | Yes | The calling token id. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CameraInput | Returns a CameraInput instance. Failure of an interface call returns the correspondingerror code, which is of type CameraErrorCode. |
+| [CameraInput](arkts-camera-camerainput-i-sys.md) | Returns a CameraInput instance. Failure of an interface call returns the corresponding error code, which is of type CameraErrorCode. |
 
 **Error codes:**
 
@@ -70,6 +70,8 @@ Create a ControlCenterSession instance.
 
 **Required permissions:** ohos.permission.CAMERA_CONTROL
 
+<!--Device-CameraManager-createControlCenterSession(): ControlCenterSession--><!--Device-CameraManager-createControlCenterSession(): ControlCenterSession-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -78,7 +80,7 @@ Create a ControlCenterSession instance.
 
 | Type | Description |
 | --- | --- |
-| ControlCenterSession | the ControlCenterSession instance. |
+| [ControlCenterSession](arkts-camera-controlcentersession-i-sys.md) | the ControlCenterSession instance. |
 
 **Error codes:**
 
@@ -99,6 +101,8 @@ Creates a deferred PreviewOutput instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-CameraManager-createDeferredPreviewOutput(profile: Profile): PreviewOutput--><!--Device-CameraManager-createDeferredPreviewOutput(profile: Profile): PreviewOutput-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -107,13 +111,13 @@ Creates a deferred PreviewOutput instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | Profile | Yes | Preview output profile. |
+| profile | [Profile](arkts-camera-profile-i.md) | Yes | Preview output profile. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PreviewOutput | the PreviewOutput instance. |
+| [PreviewOutput](arkts-camera-previewoutput-i-sys.md) | the PreviewOutput instance. |
 
 **Error codes:**
 
@@ -133,6 +137,8 @@ Creates a DepthDataOutput instance. This API returns the result synchronously.
 
 **Since:** 13
 
+<!--Device-CameraManager-createDepthDataOutput(profile: DepthProfile): DepthDataOutput--><!--Device-CameraManager-createDepthDataOutput(profile: DepthProfile): DepthDataOutput-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -141,13 +147,13 @@ Creates a DepthDataOutput instance. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | DepthProfile | Yes | Supported preview profile, which is obtained through[getSupportedOutputCapability](arkts-camera-cameramanager-i.md#getsupportedoutputcapability-2). |
+| profile | [DepthProfile](arkts-camera-depthprofile-i-sys.md) | Yes | Supported preview profile, which is obtained through [getSupportedOutputCapability](arkts-camera-cameramanager-i.md#getsupportedoutputcapability-2). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DepthDataOutput | DepthDataOutput instance. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [DepthDataOutput](arkts-camera-depthdataoutput-i-sys.md) | DepthDataOutput instance. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -186,6 +192,8 @@ Checks whether the camera device can be muted.
 
 **Since:** 10
 
+<!--Device-CameraManager-isCameraMuteSupported(): boolean--><!--Device-CameraManager-isCameraMuteSupported(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -222,6 +230,8 @@ Check if the control center active.
 
 **Since:** 20
 
+<!--Device-CameraManager-isControlCenterActive(): boolean--><!--Device-CameraManager-isControlCenterActive(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -248,6 +258,8 @@ Checks whether a camera device supports prelaunch.
 
 **Since:** 10
 
+<!--Device-CameraManager-isPrelaunchSupported(camera: CameraDevice): boolean--><!--Device-CameraManager-isPrelaunchSupported(camera: CameraDevice): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -256,7 +268,7 @@ Checks whether a camera device supports prelaunch.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| camera | CameraDevice | Yes | Camera device. |
+| camera | [CameraDevice](arkts-camera-cameradevice-i-sys.md) | Yes | Camera device. |
 
 **Return value:**
 
@@ -304,6 +316,8 @@ Checks whether the device supports flashlight brightness control.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CameraManager-isTorchLevelControlSupported(): boolean--><!--Device-CameraManager-isTorchLevelControlSupported(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -333,6 +347,8 @@ Mutes or unmutes the camera device.
 **Deprecated since:** 12
 
 **Substitutes:** [muteCameraPersistent](arkts-camera-cameramanager-i-sys.md#mutecamerapersistent-1)
+
+<!--Device-CameraManager-muteCamera(mute: boolean): void--><!--Device-CameraManager-muteCamera(mute: boolean): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -366,6 +382,8 @@ Mutes the camera device permanently.
 
 **Required permissions:** ohos.permission.CAMERA_CONTROL
 
+<!--Device-CameraManager-muteCameraPersistent(mute: boolean, type: PolicyType): void--><!--Device-CameraManager-muteCameraPersistent(mute: boolean, type: PolicyType): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -375,7 +393,7 @@ Mutes the camera device permanently.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mute | boolean | Yes | Mutes or unmutes the camera device. **true** to mute, **false** otherwise. |
-| type | PolicyType | Yes | Policy type. For details about the available options, see[PolicyType](arkts-camera-policytype-e-sys.md). |
+| type | [PolicyType](../../apis-mdm-kit/arkts-apis/arkts-mdm-policytype-e.md) | Yes | Policy type. For details about the available options, see [PolicyType](arkts-camera-policytype-e-sys.md). |
 
 **Error codes:**
 
@@ -405,6 +423,8 @@ Unsubscribes from camera mute status events.
 
 **Since:** 10
 
+<!--Device-CameraManager-off(type: 'cameraMute', callback?: AsyncCallback<boolean>): void--><!--Device-CameraManager-off(type: 'cameraMute', callback?: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -413,8 +433,8 @@ Unsubscribes from camera mute status events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cameraMute' | Yes | Event type. The value is fixed at **'cameraMute'**, indicating the camera mutestatus. The event can be listened for when a CameraManager instance is obtained. |
-| callback | AsyncCallback&lt;boolean&gt; | No | Callback used to return the camera mute status. **true** if muted,**false** otherwise. This parameter is optional. If this parameter is specified, the subscription to thespecified event **on('cameraMute')** with the specified callback is canceled. (The callback object cannot bean anonymous function.) |
+| type | 'cameraMute' | Yes | Event type. The value is fixed at **'cameraMute'**, indicating the camera mute status. The event can be listened for when a CameraManager instance is obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | No | Callback used to return the camera mute status. **true** if muted,**false** otherwise. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('cameraMute')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
 
@@ -447,6 +467,8 @@ Unsubscribes control center status change event callback.
 
 **Since:** 20
 
+<!--Device-CameraManager-off(type: 'controlCenterStatusChange', callback?: AsyncCallback<boolean>): void--><!--Device-CameraManager-off(type: 'controlCenterStatusChange', callback?: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -456,7 +478,7 @@ Unsubscribes control center status change event callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'controlCenterStatusChange' | Yes | Event type. |
-| callback | AsyncCallback&lt;boolean&gt; | No | Callback used to get the control center status change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | No | Callback used to get the control center status change. |
 
 **Error codes:**
 
@@ -474,6 +496,8 @@ Subscribes to camera mute status events. This API uses an asynchronous callback 
 
 **Since:** 10
 
+<!--Device-CameraManager-on(type: 'cameraMute', callback: AsyncCallback<boolean>): void--><!--Device-CameraManager-on(type: 'cameraMute', callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -482,8 +506,8 @@ Subscribes to camera mute status events. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cameraMute' | Yes | Event type. The value is fixed at **'cameraMute'**, indicating the camera mutestatus. The event can be listened for when a CameraManager instance is obtained. This event is triggered andthe status is returned when the camera device is muted or unmuted. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the camera mute status. **true** if muted,**false** otherwise. |
+| type | 'cameraMute' | Yes | Event type. The value is fixed at **'cameraMute'**, indicating the camera mute status. The event can be listened for when a CameraManager instance is obtained. This event is triggered and the status is returned when the camera device is muted or unmuted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the camera mute status. **true** if muted,**false** otherwise. |
 
 **Error codes:**
 
@@ -521,6 +545,8 @@ Subscribes control center status change event callback.
 
 **Since:** 20
 
+<!--Device-CameraManager-on(type: 'controlCenterStatusChange', callback: AsyncCallback<boolean>): void--><!--Device-CameraManager-on(type: 'controlCenterStatusChange', callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -530,7 +556,7 @@ Subscribes control center status change event callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'controlCenterStatusChange' | Yes | Event type. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to get the control center status change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to get the control center status change. |
 
 **Error codes:**
 
@@ -547,6 +573,8 @@ preSwitchCamera(cameraId: string): void
 Pre-switches a camera device to speed up its startup.
 
 **Since:** 11
+
+<!--Device-CameraManager-preSwitchCamera(cameraId: string): void--><!--Device-CameraManager-preSwitchCamera(cameraId: string): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -590,10 +618,11 @@ function preSwitch(cameraDevice: camera.CameraDevice, context: common.BaseContex
 prelaunch(): void
 ```
 
-Prelaunches the camera device. This API is called when a user clicks the system camera icon to start the camera
-application.
+Prelaunches the camera device. This API is called when a user clicks the system camera icon to start the camera application.
 
 **Since:** 10
+
+<!--Device-CameraManager-prelaunch(): void--><!--Device-CameraManager-prelaunch(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -630,13 +659,13 @@ function preLaunch(context: common.BaseContext): void {
 setPrelaunchConfig(prelaunchConfig: PrelaunchConfig): void
 ```
 
-Sets prelaunch configuration.
-Before the setting, call [isPrelaunchSupported](arkts-camera-cameramanager-i-sys.md#isprelaunchsupported-1) to check whether
-the camera device supports prelaunch.
+Sets prelaunch configuration.Before the setting, call [isPrelaunchSupported](arkts-camera-cameramanager-i-sys.md#isprelaunchsupported-1) to check whether the camera device supports prelaunch.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.CAMERA
+
+<!--Device-CameraManager-setPrelaunchConfig(prelaunchConfig: PrelaunchConfig): void--><!--Device-CameraManager-setPrelaunchConfig(prelaunchConfig: PrelaunchConfig): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -646,7 +675,7 @@ the camera device supports prelaunch.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| prelaunchConfig | PrelaunchConfig | Yes | Prelaunch configuration. |
+| prelaunchConfig | [PrelaunchConfig](arkts-camera-prelaunchconfig-i-sys.md) | Yes | Prelaunch configuration. |
 
 **Error codes:**
 
@@ -694,6 +723,8 @@ Sets the torch mode to {@link camera.TorchMode.ON} with the specified torch leve
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CameraManager-setTorchModeOnWithLevel(torchLevel: double): void--><!--Device-CameraManager-setTorchModeOnWithLevel(torchLevel: double): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

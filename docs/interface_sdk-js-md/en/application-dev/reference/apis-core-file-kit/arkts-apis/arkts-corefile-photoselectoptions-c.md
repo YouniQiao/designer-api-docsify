@@ -8,6 +8,8 @@ Defines the options for selecting images or videos.
 
 **Substitutes:** [PhotoSelectOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoselectoptions-c.md)
 
+<!--Device-picker-class PhotoSelectOptions--><!--Device-picker-class PhotoSelectOptions-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 ## Modules to Import
@@ -36,6 +38,8 @@ Media file types to select. If this parameter is not specified, **IMAGE_VIDEO_TY
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PhotoSelectOptions-MIMEType?: PhotoViewMIMETypes--><!--Device-PhotoSelectOptions-MIMEType?: PhotoViewMIMETypes-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 ## maxSelectNumber
@@ -44,8 +48,7 @@ Media file types to select. If this parameter is not specified, **IMAGE_VIDEO_TY
 maxSelectNumber?: number
 ```
 
-Maximum number of media files that can be selected. The default value is **50**,
-and the maximum value is **500**.
+Maximum number of media files that can be selected. The default value is **50**,and the maximum value is **500**.
 
 **Type:** number
 
@@ -56,6 +59,8 @@ and the maximum value is **500**.
 **Substitutes:** maxSelectNumber
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PhotoSelectOptions-maxSelectNumber?: number--><!--Device-PhotoSelectOptions-maxSelectNumber?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 

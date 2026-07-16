@@ -1,15 +1,22 @@
 # isDefaultApplication
 
+## 导入模块
+
+```TypeScript
+import { defaultAppManager } from '@kit.AbilityKit';
+```
+
 ## isDefaultApplication
 
 ```TypeScript
 function isDefaultApplication(type: string, callback: AsyncCallback<boolean>) : void
 ```
 
-根据系统已定义的应用类型或者[UniformDataType](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md)类型判断当前应用是否是该类型的默认应用。使用
-callback异步回调。
+根据系统已定义的应用类型或者[UniformDataType](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md)类型判断当前应用是否是该类型的默认应用。使用callback异步回调。
 
 **起始版本：** 9
+
+<!--Device-defaultAppManager-function isDefaultApplication(type: string, callback: AsyncCallback<boolean>) : void--><!--Device-defaultAppManager-function isDefaultApplication(type: string, callback: AsyncCallback<boolean>) : void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
@@ -18,7 +25,7 @@ callback异步回调。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 要查询的应用类型，取[ApplicationType](arkts-ability-applicationtype-e.md)或者[UniformDataType](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md)类型中的值。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为bool值，true表示是默认应用，false表示不是默认应用；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为bool值，true表示是默认应用，false表示不是默认应用；否则为错误对象。 |
 
 **错误码：**
 
@@ -50,10 +57,11 @@ defaultAppManager.isDefaultApplication(defaultAppManager.ApplicationType.BROWSER
 function isDefaultApplication(type: string) : Promise<boolean>
 ```
 
-根据系统已定义的应用类型或者[UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformdatatype-e.md)类型判断当前
-应用是否是该类型的默认应用。使用Promise异步回调。
+根据系统已定义的应用类型或者[UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformdatatype-e.md)类型判断当前应用是否是该类型的默认应用。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-defaultAppManager-function isDefaultApplication(type: string) : Promise<boolean>--><!--Device-defaultAppManager-function isDefaultApplication(type: string) : Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
@@ -67,7 +75,7 @@ function isDefaultApplication(type: string) : Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回当前应用是否是默认应用，true表示是默认应用，false表示不是默认应用。 |
+| Promise<boolean> | Promise对象，返回当前应用是否是默认应用，true表示是默认应用，false表示不是默认应用。 |
 
 **错误码：**
 

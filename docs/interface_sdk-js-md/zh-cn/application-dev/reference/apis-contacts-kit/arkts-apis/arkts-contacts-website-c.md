@@ -4,7 +4,15 @@
 
 **起始版本：** 7
 
+<!--Device-contact-class Website--><!--Device-contact-class Website-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
+
+## 导入模块
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+```
 
 ## website
 
@@ -18,7 +26,9 @@ website: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Website-website: string--><!--Device-Website-website: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 

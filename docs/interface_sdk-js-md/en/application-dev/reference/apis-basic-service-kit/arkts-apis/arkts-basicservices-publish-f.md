@@ -18,6 +18,8 @@ Publishes a common event. This API uses an asynchronous callback to return the r
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-commonEventManager-function publish(event: string, callback: AsyncCallback<void>): void--><!--Device-commonEventManager-function publish(event: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Parameters:**
@@ -25,7 +27,7 @@ Publishes a common event. This API uses an asynchronous callback to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Name of the common event to publish. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -70,6 +72,8 @@ Publishes a common event. This API uses an asynchronous callback to return the r
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-commonEventManager-function publish(event: string, options: CommonEventPublishData, callback: AsyncCallback<void>): void--><!--Device-commonEventManager-function publish(event: string, options: CommonEventPublishData, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Parameters:**
@@ -77,8 +81,8 @@ Publishes a common event. This API uses an asynchronous callback to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Name of the common event to publish. |
-| options | CommonEventPublishData | Yes | Properties of the common event to publish. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-i.md) | Yes | Properties of the common event to publish. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

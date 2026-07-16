@@ -1,5 +1,11 @@
 # setAdditionalInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## setAdditionalInfo
 
 ```TypeScript
@@ -11,6 +17,8 @@ function setAdditionalInfo(bundleName: string, additionalInfo: string): void
 **起始版本：** 11
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function setAdditionalInfo(bundleName: string, additionalInfo: string): void--><!--Device-bundleManager-function setAdditionalInfo(bundleName: string, additionalInfo: string): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

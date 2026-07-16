@@ -4,6 +4,8 @@ Describes enroll callback information.
 
 **Since:** 10
 
+<!--Device-intelligentVoice-interface EnrollCallbackInfo--><!--Device-intelligentVoice-interface EnrollCallbackInfo-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Describes enroll event context.
 
 **Since:** 10
 
+<!--Device-EnrollCallbackInfo-context: string--><!--Device-EnrollCallbackInfo-context: string-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Result.
 **Type:** EnrollResult
 
 **Since:** 10
+
+<!--Device-EnrollCallbackInfo-result: EnrollResult--><!--Device-EnrollCallbackInfo-result: EnrollResult-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 

@@ -4,9 +4,17 @@
 
 **起始版本：** 9
 
+<!--Device-update-export interface LocalUpdater--><!--Device-update-export interface LocalUpdater-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { update } from '@kit.BasicServicesKit';
+```
 
 ## applyNewVersion
 
@@ -20,6 +28,8 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>)
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-LocalUpdater-applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>): void--><!--Device-LocalUpdater-applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -28,8 +38,8 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| upgradeFiles | Array&lt;UpgradeFile&gt; | 是 | 升级文件。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当安装升级包执行成功时，err为undefined，否则为错误对象。 |
+| upgradeFiles | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<UpgradeFile> | 是 | 升级文件。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当安装升级包执行成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -79,6 +89,8 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>): Promise<void>
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-LocalUpdater-applyNewVersion(upgradeFiles: Array<UpgradeFile>): Promise<void>--><!--Device-LocalUpdater-applyNewVersion(upgradeFiles: Array<UpgradeFile>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -87,13 +99,13 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| upgradeFiles | Array&lt;UpgradeFile&gt; | 是 | 升级文件。 |
+| upgradeFiles | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<UpgradeFile> | 是 | 升级文件。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -139,6 +151,8 @@ off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): v
 
 **起始版本：** 9
 
+<!--Device-LocalUpdater-off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): void--><!--Device-LocalUpdater-off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -147,8 +161,8 @@ off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventClassifyInfo | EventClassifyInfo | 是 | 事件信息。 |
-| taskCallback | UpgradeTaskCallback | 否 | 事件回调。 |
+| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-eventclassifyinfo-i-sys.md) | 是 | 事件信息。 |
+| taskCallback | [UpgradeTaskCallback](arkts-basicservices-upgradetaskcallback-t-sys.md) | 否 | 事件回调。 |
 
 **错误码：**
 
@@ -189,6 +203,8 @@ on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): voi
 
 **起始版本：** 9
 
+<!--Device-LocalUpdater-on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): void--><!--Device-LocalUpdater-on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -197,8 +213,8 @@ on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventClassifyInfo | EventClassifyInfo | 是 | 事件信息。 |
-| taskCallback | UpgradeTaskCallback | 是 | 事件回调。 |
+| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-eventclassifyinfo-i-sys.md) | 是 | 事件信息。 |
+| taskCallback | [UpgradeTaskCallback](arkts-basicservices-upgradetaskcallback-t-sys.md) | 是 | 事件回调。 |
 
 **错误码：**
 
@@ -241,6 +257,8 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: Asyn
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-LocalUpdater-verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: AsyncCallback<void>): void--><!--Device-LocalUpdater-verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -249,9 +267,9 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: Asyn
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| upgradeFile | UpgradeFile | 是 | 升级文件。 |
+| upgradeFile | [UpgradeFile](arkts-basicservices-upgradefile-i-sys.md) | 是 | 升级文件。 |
 | certsFile | string | 是 | 证书文件路径。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当校验成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当校验成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -304,6 +322,8 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string): Promise<void>
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-LocalUpdater-verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string): Promise<void>--><!--Device-LocalUpdater-verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -312,14 +332,14 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| upgradeFile | UpgradeFile | 是 | 升级文件。 |
+| upgradeFile | [UpgradeFile](arkts-basicservices-upgradefile-i-sys.md) | 是 | 升级文件。 |
 | certsFile | string | 是 | 证书文件路径。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

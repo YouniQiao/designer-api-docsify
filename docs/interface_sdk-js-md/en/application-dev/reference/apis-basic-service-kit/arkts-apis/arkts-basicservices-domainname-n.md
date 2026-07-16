@@ -4,6 +4,8 @@ Provide domain name for query.
 
 **Since:** 11
 
+<!--Device-settings-namespace domainName--><!--Device-settings-namespace domainName-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 ## Modules to Import

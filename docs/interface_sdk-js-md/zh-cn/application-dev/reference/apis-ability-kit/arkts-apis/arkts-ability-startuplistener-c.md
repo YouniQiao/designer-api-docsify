@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare class StartupListener--><!--Device-unnamed-declare class StartupListener-End-->
+
 **系统能力：** SystemCapability.Ability.AppStartup
+
+## 导入模块
+
+```TypeScript
+import { StartupListener } from '@kit.AbilityKit';
+```
 
 ## onCompleted
 
@@ -18,13 +26,15 @@ onCompleted?(error: BusinessError<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StartupListener-onCompleted?(error: BusinessError<void>): void--><!--Device-StartupListener-onCompleted?(error: BusinessError<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AppStartup
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| error | BusinessError&lt;void&gt; | 是 | 错误信息。 |
+| error | [BusinessError](../../apis-arkui/arkts-components/arkts-arkui-businesserror-t.md)<void> | 是 | 错误信息。 |
 
 **示例：**
 

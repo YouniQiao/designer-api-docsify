@@ -22,19 +22,21 @@ Obtains the connection state of profile.
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
+<!--Device-bluetooth-function getProfileConnState(profileId: ProfileId): ProfileConnectionState--><!--Device-bluetooth-function getProfileConnState(profileId: ProfileId): ProfileConnectionState-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profileId | ProfileId | Yes | The profile id. |
+| profileId | [ProfileId](arkts-connectivity-profileid-e.md) | Yes | The profile id. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ProfileConnectionState | Returns the connection state. |
+| [ProfileConnectionState](arkts-connectivity-profileconnectionstate-e.md) | Returns the connection state. |
 
 **Example**
 

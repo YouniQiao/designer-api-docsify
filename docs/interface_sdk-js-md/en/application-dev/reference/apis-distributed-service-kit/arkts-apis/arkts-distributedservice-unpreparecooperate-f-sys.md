@@ -18,6 +18,8 @@ Cancels the preparation for screen hopping. This API uses an asynchronous callba
 
 **Required permissions:** ohos.permission.COOPERATE_MANAGER
 
+<!--Device-cooperate-function unprepareCooperate(callback: AsyncCallback<void>): void--><!--Device-cooperate-function unprepareCooperate(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Cancels the preparation for screen hopping. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the operation result. If the operation issuccessful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -70,6 +72,8 @@ Cancels the preparation for screen hopping. This API uses a promise to return th
 
 **Required permissions:** ohos.permission.COOPERATE_MANAGER
 
+<!--Device-cooperate-function unprepareCooperate(): Promise<void>--><!--Device-cooperate-function unprepareCooperate(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **System API:** This is a system API.
@@ -78,7 +82,7 @@ Cancels the preparation for screen hopping. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

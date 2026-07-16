@@ -1,5 +1,11 @@
 # deletePrinterFromCups（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+```
+
 ## deletePrinterFromCups
 
 ```TypeScript
@@ -13,6 +19,8 @@ function deletePrinterFromCups(printerName: string): Promise<void>
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-print-function deletePrinterFromCups(printerName: string): Promise<void>--><!--Device-print-function deletePrinterFromCups(printerName: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -28,7 +36,7 @@ function deletePrinterFromCups(printerName: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

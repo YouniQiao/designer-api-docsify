@@ -1,9 +1,10 @@
 # DialogSessionInfo (System API)
 
-Provides session information, including the requester information, target ability information list, and other
-parameters.
+Provides session information, including the requester information, target ability information list, and other parameters.
 
 **Since:** 11
+
+<!--Device-dialogSession-export interface DialogSessionInfo--><!--Device-dialogSession-export interface DialogSessionInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -29,6 +30,8 @@ Ability information of the requester.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DialogSessionInfo-callerAbilityInfo: DialogAbilityInfo--><!--Device-DialogSessionInfo-callerAbilityInfo: DialogAbilityInfo-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -47,6 +50,8 @@ Other parameters.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DialogSessionInfo-parameters?: Record<string, Object>--><!--Device-DialogSessionInfo-parameters?: Record<string, Object>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -64,6 +69,8 @@ List of target ability information.
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DialogSessionInfo-targetAbilityInfos: Array<DialogAbilityInfo>--><!--Device-DialogSessionInfo-targetAbilityInfos: Array<DialogAbilityInfo>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

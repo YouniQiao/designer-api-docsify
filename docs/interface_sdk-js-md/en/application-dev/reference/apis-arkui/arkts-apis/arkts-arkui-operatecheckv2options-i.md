@@ -4,6 +4,8 @@ Declare interface OperateCheckV2Options
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export interface OperateCheckV2Options--><!--Device-unnamed-export interface OperateCheckV2Options-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ The accessibilityDescription of the checkbox/switch/radio.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-OperateCheckV2Options-accessibilityDescription?: ResourceStr--><!--Device-OperateCheckV2Options-accessibilityDescription?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityLevel
@@ -48,6 +52,8 @@ The accessibilityLevel of the checkbox/switch/radio.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-OperateCheckV2Options-accessibilityLevel?: string--><!--Device-OperateCheckV2Options-accessibilityLevel?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
@@ -65,6 +71,8 @@ The accessibilityText of the checkbox/switch/radio
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateCheckV2Options-accessibilityText?: ResourceStr--><!--Device-OperateCheckV2Options-accessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,6 +92,8 @@ Whether is checked on default
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-OperateCheckV2Options-isCheck?: boolean--><!--Device-OperateCheckV2Options-isCheck?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onChange
@@ -101,6 +111,8 @@ Callback function when operate the checkbox/switch/radio
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateCheckV2Options-onChange?: OnChangeCallback--><!--Device-OperateCheckV2Options-onChange?: OnChangeCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

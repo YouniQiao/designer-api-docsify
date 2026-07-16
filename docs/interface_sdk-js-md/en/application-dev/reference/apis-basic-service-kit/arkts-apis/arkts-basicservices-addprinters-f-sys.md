@@ -18,6 +18,8 @@ Adds printers. This API uses an asynchronous callback to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function addPrinters(printers: Array<PrinterInfo>, callback: AsyncCallback<void>): void--><!--Device-print-function addPrinters(printers: Array<PrinterInfo>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Adds printers. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printers | Array&lt;PrinterInfo&gt; | Yes | List of printers to add. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| printers | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PrinterInfo> | Yes | List of printers to add. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -75,6 +77,8 @@ Adds printers. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function addPrinters(printers: Array<PrinterInfo>): Promise<void>--><!--Device-print-function addPrinters(printers: Array<PrinterInfo>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -83,13 +87,13 @@ Adds printers. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printers | Array&lt;PrinterInfo&gt; | Yes | List of printers to add. |
+| printers | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PrinterInfo> | Yes | List of printers to add. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

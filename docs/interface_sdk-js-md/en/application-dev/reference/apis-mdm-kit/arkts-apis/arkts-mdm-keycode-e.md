@@ -1,13 +1,10 @@
 # KeyCode
 
-Key code. Key codes are used to map to the actual physical keys on a device in the following scenarios:
-[adding a key event policy](arkts-mdm-addkeyeventpolicies-f.md#addkeyeventpolicies-1),
-[removing a key event policy](arkts-mdm-removekeyeventpolicies-f.md#removekeyeventpolicies-1),
-[querying a key event policy](arkts-mdm-getkeyeventpolicies-f.md#getkeyeventpolicies-1), and
-[invoking the key event callback API](arkts-mdm-enterpriseadminextensionability-c.md#onkeyevent-1)
-.
+Key code. Key codes are used to map to the actual physical keys on a device in the following scenarios:[adding a key event policy](arkts-mdm-addkeyeventpolicies-f.md#addkeyeventpolicies-1),[removing a key event policy](arkts-mdm-removekeyeventpolicies-f.md#removekeyeventpolicies-1),[querying a key event policy](arkts-mdm-getkeyeventpolicies-f.md#getkeyeventpolicies-1), and [invoking the key event callback API](arkts-mdm-enterpriseadminextensionability-c.md#onkeyevent-1).
 
 **Since:** 23
+
+<!--Device-systemManager-enum KeyCode--><!--Device-systemManager-enum KeyCode-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -23,6 +20,8 @@ Power key
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-KeyCode-POWER = 0--><!--Device-KeyCode-POWER = 0-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## VOLUME_UP
@@ -36,6 +35,8 @@ Volume up
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-KeyCode-VOLUME_UP = 1--><!--Device-KeyCode-VOLUME_UP = 1-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -51,6 +52,8 @@ Volume down
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-KeyCode-VOLUME_DOWN = 2--><!--Device-KeyCode-VOLUME_DOWN = 2-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## BACK
@@ -64,6 +67,8 @@ Navigation key - back
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-KeyCode-BACK = 3--><!--Device-KeyCode-BACK = 3-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -79,6 +84,8 @@ Navigation key - home
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-KeyCode-HOME = 4--><!--Device-KeyCode-HOME = 4-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## RECENT
@@ -92,6 +99,8 @@ Navigation key - recently opened
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-KeyCode-RECENT = 5--><!--Device-KeyCode-RECENT = 5-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

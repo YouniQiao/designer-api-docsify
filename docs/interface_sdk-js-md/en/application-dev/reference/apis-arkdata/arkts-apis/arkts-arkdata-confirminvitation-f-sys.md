@@ -12,10 +12,11 @@ import { cloudData } from '@kit.ArkData';
 function confirmInvitation(invitationCode: string, state: State, callback: AsyncCallback<Result<string>>): void
 ```
 
-Confirms the invitation based on the sharing invitation code and obtains the shared resource ID.
-This API uses an asynchronous callback to return the result.
+Confirms the invitation based on the sharing invitation code and obtains the shared resource ID.This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+<!--Device-sharing-function confirmInvitation(invitationCode: string, state: State, callback: AsyncCallback<Result<string>>): void--><!--Device-sharing-function confirmInvitation(invitationCode: string, state: State, callback: AsyncCallback<Result<string>>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -26,8 +27,8 @@ This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | invitationCode | string | Yes | Invitation code of the share. |
-| state | State | Yes | Confirmation state. |
-| callback | AsyncCallback&lt;Result&lt;string&gt;&gt; | Yes | Callback used to return the result. |
+| state | [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-state-e.md) | Yes | Confirmation state. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Result<string>> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -61,10 +62,11 @@ cloudData.sharing.confirmInvitation('sharing_invitation_code_test', cloudData.sh
 function confirmInvitation(invitationCode: string, state: State): Promise<Result<string>>
 ```
 
-Confirms the invitation based on the sharing invitation code and obtains the shared resource ID.
-This API uses a promise to return the result.
+Confirms the invitation based on the sharing invitation code and obtains the shared resource ID.This API uses a promise to return the result.
 
 **Since:** 11
+
+<!--Device-sharing-function confirmInvitation(invitationCode: string, state: State): Promise<Result<string>>--><!--Device-sharing-function confirmInvitation(invitationCode: string, state: State): Promise<Result<string>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -75,13 +77,13 @@ This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | invitationCode | string | Yes | Invitation code of the share. |
-| state | State | Yes | Confirmation state. |
+| state | [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-state-e.md) | Yes | Confirmation state. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;string&gt;&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Result<string>> | Promise used to return the result. |
 
 **Error codes:**
 

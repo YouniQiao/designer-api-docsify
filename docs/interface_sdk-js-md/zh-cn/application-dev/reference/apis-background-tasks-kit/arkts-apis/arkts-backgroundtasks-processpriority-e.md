@@ -4,6 +4,8 @@
 
 **起始版本：** 17
 
+<!--Device-backgroundProcessManager-export enum ProcessPriority--><!--Device-backgroundProcessManager-export enum ProcessPriority-End-->
+
 **系统能力：** SystemCapability.Resourceschedule.BackgroundProcessManager
 
 ## PROCESS_BACKGROUND
@@ -16,6 +18,8 @@ PROCESS_BACKGROUND = 1
 
 **起始版本：** 17
 
+<!--Device-ProcessPriority-PROCESS_BACKGROUND = 1--><!--Device-ProcessPriority-PROCESS_BACKGROUND = 1-End-->
+
 **系统能力：** SystemCapability.Resourceschedule.BackgroundProcessManager
 
 ## PROCESS_INACTIVE
@@ -27,6 +31,8 @@ PROCESS_INACTIVE = 2
 推荐正在执行播放音频、导航等用户可感知业务的后台子进程时设置该档位。
 
 **起始版本：** 17
+
+<!--Device-ProcessPriority-PROCESS_INACTIVE = 2--><!--Device-ProcessPriority-PROCESS_INACTIVE = 2-End-->
 
 **系统能力：** SystemCapability.Resourceschedule.BackgroundProcessManager
 

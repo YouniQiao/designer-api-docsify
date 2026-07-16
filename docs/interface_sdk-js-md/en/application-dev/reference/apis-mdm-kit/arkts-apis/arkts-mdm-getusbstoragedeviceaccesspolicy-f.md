@@ -22,19 +22,21 @@ Obtains the access policy of the USB storage device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-usbManager-function getUsbStorageDeviceAccessPolicy(admin: Want | null): UsbPolicy--><!--Device-usbManager-function getUsbStorageDeviceAccessPolicy(admin: Want | null): UsbPolicy-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application.<br>If the device has multiple MDMapplications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policiesthat actually take effect on the device are returned.<br>**Since:** 26.0.0 |
+| admin | Want \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application.<br>If the device has multiple MDM applications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policies that actually take effect on the device are returned.<br>**Since:** 26.0.0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| UsbPolicy | Access policy of the USB storage device. |
+| [UsbPolicy](arkts-mdm-usbpolicy-e.md) | Access policy of the USB storage device. |
 
 **Error codes:**
 

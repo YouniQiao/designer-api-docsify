@@ -18,13 +18,15 @@ Get the total inodes.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-storageStatistics-function getTotalInodes(): Promise<long>--><!--Device-storageStatistics-function getTotalInodes(): Promise<long>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | return Promise |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | return Promise |
 
 **Error codes:**
 

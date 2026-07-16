@@ -4,6 +4,8 @@ Provides APIs for user authentication.
 
 **Since:** 8
 
+<!--Device-osAccount-class UserAuth--><!--Device-osAccount-class UserAuth-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -31,6 +33,18 @@ Performs authentication of the current user.
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-UserAuth-auth(
+      challenge: Uint8Array,
+      authType: AuthType,
+      authTrustLevel: AuthTrustLevel,
+      callback: IUserAuthCallback
+    ): Uint8Array--><!--Device-UserAuth-auth(
+      challenge: Uint8Array,
+      authType: AuthType,
+      authTrustLevel: AuthTrustLevel,
+      callback: IUserAuthCallback
+    ): Uint8Array-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -39,16 +53,16 @@ Performs authentication of the current user.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| challenge | Uint8Array | Yes | Challenge value, which is a random number used to improve security. |
-| authType | AuthType | Yes | Authentication credential type. |
-| authTrustLevel | AuthTrustLevel | Yes | Trust level of the authentication result. |
-| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
+| challenge | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Challenge value, which is a random number used to improve security. |
+| authType | [AuthType](arkts-basicservices-authtype-e-sys.md) | Yes | Authentication credential type. |
+| authTrustLevel | [AuthTrustLevel](arkts-basicservices-authtrustlevel-e-sys.md) | Yes | Trust level of the authentication result. |
+| callback | [IUserAuthCallback](arkts-basicservices-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | ID of the context for canceling the authentication. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | ID of the context for canceling the authentication. |
 
 **Error codes:**
 
@@ -112,13 +126,25 @@ auth(
     ): Uint8Array
 ```
 
-Starts user authentication based on the specified challenge value, authentication type (PIN, facial, or
-fingerprint authentication), authentication trust level, and optional parameters (such as the account ID and
-authentication intent).
+Starts user authentication based on the specified challenge value, authentication type (PIN, facial, or fingerprint authentication), authentication trust level, and optional parameters (such as the account ID and authentication intent).
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
+
+<!--Device-UserAuth-auth(
+      challenge: Uint8Array,
+      authType: AuthType,
+      authTrustLevel: AuthTrustLevel,
+      options: AuthOptions,
+      callback: IUserAuthCallback
+    ): Uint8Array--><!--Device-UserAuth-auth(
+      challenge: Uint8Array,
+      authType: AuthType,
+      authTrustLevel: AuthTrustLevel,
+      options: AuthOptions,
+      callback: IUserAuthCallback
+    ): Uint8Array-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -128,17 +154,17 @@ authentication intent).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| challenge | Uint8Array | Yes | Challenge value, which is a random number used to preventreplay attacks and improve security. |
-| authType | AuthType | Yes | Authentication credential type. |
-| authTrustLevel | AuthTrustLevel | Yes | Trust level of the authentication result. |
-| options | AuthOptions | Yes | Optional parameters for the authentication. |
-| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
+| challenge | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Challenge value, which is a random number used to prevent replay attacks and improve security. |
+| authType | [AuthType](arkts-basicservices-authtype-e-sys.md) | Yes | Authentication credential type. |
+| authTrustLevel | [AuthTrustLevel](arkts-basicservices-authtrustlevel-e-sys.md) | Yes | Trust level of the authentication result. |
+| options | [AuthOptions](arkts-basicservices-authoptions-i-sys.md) | Yes | Optional parameters for the authentication. |
+| callback | [IUserAuthCallback](arkts-basicservices-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | ID of the context for canceling the authentication. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | ID of the context for canceling the authentication. |
 
 **Error codes:**
 
@@ -212,6 +238,20 @@ Performs authentication of the specified user. This API uses an asynchronous cal
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-UserAuth-authUser(
+      userId: int,
+      challenge: Uint8Array,
+      authType: AuthType,
+      authTrustLevel: AuthTrustLevel,
+      callback: IUserAuthCallback
+    ): Uint8Array--><!--Device-UserAuth-authUser(
+      userId: int,
+      challenge: Uint8Array,
+      authType: AuthType,
+      authTrustLevel: AuthTrustLevel,
+      callback: IUserAuthCallback
+    ): Uint8Array-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -221,16 +261,16 @@ Performs authentication of the specified user. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
-| challenge | Uint8Array | Yes | Challenge value, which is a random number used to improve security. |
-| authType | AuthType | Yes | Authentication credential type. |
-| authTrustLevel | AuthTrustLevel | Yes | Trust level of the authentication result. |
-| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
+| challenge | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Challenge value, which is a random number used to improve security. |
+| authType | [AuthType](arkts-basicservices-authtype-e-sys.md) | Yes | Authentication credential type. |
+| authTrustLevel | [AuthTrustLevel](arkts-basicservices-authtrustlevel-e-sys.md) | Yes | Trust level of the authentication result. |
+| callback | [IUserAuthCallback](arkts-basicservices-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | ID of the context for canceling the authentication. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | ID of the context for canceling the authentication. |
 
 **Error codes:**
 
@@ -296,6 +336,8 @@ Cancels an authentication.
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-UserAuth-cancelAuth(contextID: Uint8Array): void--><!--Device-UserAuth-cancelAuth(contextID: Uint8Array): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -304,7 +346,7 @@ Cancels an authentication.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contextID | Uint8Array | Yes | ID of the authentication context. The context ID is dynamically generated. |
+| contextID | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | ID of the authentication context. The context ID is dynamically generated. |
 
 **Error codes:**
 
@@ -349,6 +391,8 @@ A constructor used to create an instance for user authentication.
 
 **Since:** 8
 
+<!--Device-UserAuth-constructor()--><!--Device-UserAuth-constructor()-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -372,12 +416,13 @@ let userAuth = new osAccount.UserAuth();
 getAvailableStatus(authType: AuthType, authTrustLevel: AuthTrustLevel): number
 ```
 
-Obtains the available status of the authentication capability corresponding to the specified authentication type
-and trust level.
+Obtains the available status of the authentication capability corresponding to the specified authentication type and trust level.
 
 **Since:** 8
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
+
+<!--Device-UserAuth-getAvailableStatus(authType: AuthType, authTrustLevel: AuthTrustLevel): int--><!--Device-UserAuth-getAvailableStatus(authType: AuthType, authTrustLevel: AuthTrustLevel): int-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -387,8 +432,8 @@ and trust level.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | AuthType | Yes | Authentication credential type. |
-| authTrustLevel | AuthTrustLevel | Yes | Trust level of the authentication. |
+| authType | [AuthType](arkts-basicservices-authtype-e-sys.md) | Yes | Authentication credential type. |
+| authTrustLevel | [AuthTrustLevel](arkts-basicservices-authtrustlevel-e-sys.md) | Yes | Trust level of the authentication. |
 
 **Return value:**
 
@@ -437,6 +482,8 @@ Obtains the executor property based on the request. This API uses an asynchronou
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-UserAuth-getProperty(request: GetPropertyRequest, callback: AsyncCallback<ExecutorProperty>): void--><!--Device-UserAuth-getProperty(request: GetPropertyRequest, callback: AsyncCallback<ExecutorProperty>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -445,8 +492,8 @@ Obtains the executor property based on the request. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | GetPropertyRequest | Yes | Request information, including the authenticationcredential type and property list. |
-| callback | AsyncCallback&lt;ExecutorProperty&gt; | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the executor property informationobtained. Otherwise, **err** is an error object. |
+| request | [GetPropertyRequest](arkts-basicservices-getpropertyrequest-i-sys.md) | Yes | Request information, including the authentication credential type and property list. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<ExecutorProperty> | Yes | Callback used to return the result.If the operation is successful, **err** is **null** and **data** is the executor property information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -501,6 +548,8 @@ Obtains the executor property based on the request. This API uses a promise to r
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-UserAuth-getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>--><!--Device-UserAuth-getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -509,13 +558,13 @@ Obtains the executor property based on the request. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | GetPropertyRequest | Yes | Request information, including the authenticationcredential type and property list. |
+| request | [GetPropertyRequest](arkts-basicservices-getpropertyrequest-i-sys.md) | Yes | Request information, including the authentication credential type and property list. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ExecutorProperty&gt; | Promise used to return the executor property. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ExecutorProperty> | Promise used to return the executor property. |
 
 **Error codes:**
 
@@ -562,12 +611,13 @@ try {
 getPropertyByCredentialId(credentialId: Uint8Array, keys: Array<GetPropertyType>): Promise<ExecutorProperty>
 ```
 
-Obtains the specified property information of the associated executor based on the credential ID. This API uses a
-promise to return the result.
+Obtains the specified property information of the associated executor based on the credential ID. This API uses a promise to return the result.
 
 **Since:** 14
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
+
+<!--Device-UserAuth-getPropertyByCredentialId(credentialId: Uint8Array, keys: Array<GetPropertyType>): Promise<ExecutorProperty>--><!--Device-UserAuth-getPropertyByCredentialId(credentialId: Uint8Array, keys: Array<GetPropertyType>): Promise<ExecutorProperty>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -577,14 +627,14 @@ promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| credentialId | Uint8Array | Yes | Credential ID. |
-| keys | Array&lt;GetPropertyType&gt; | Yes | Property type array to be queried. |
+| credentialId | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Credential ID. |
+| keys | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<GetPropertyType> | Yes | Property type array to be queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ExecutorProperty&gt; | Promise used to return the executor attributes. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ExecutorProperty> | Promise used to return the executor attributes. |
 
 **Error codes:**
 
@@ -647,6 +697,8 @@ Obtains this version number.
 
 **Since:** 8
 
+<!--Device-UserAuth-getVersion(): int--><!--Device-UserAuth-getVersion(): int-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -684,6 +736,8 @@ Prepares for remote authentication. This API uses a promise to return the result
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-UserAuth-prepareRemoteAuth(remoteNetworkId: string): Promise<void>--><!--Device-UserAuth-prepareRemoteAuth(remoteNetworkId: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -698,7 +752,7 @@ Prepares for remote authentication. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -750,6 +804,8 @@ Sets the property for the initialization algorithm. This API uses an asynchronou
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-UserAuth-setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void--><!--Device-UserAuth-setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -758,8 +814,8 @@ Sets the property for the initialization algorithm. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | SetPropertyRequest | Yes | Request information, including the authenticationcredential type and the key value to set. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **null**. Otherwise, **err** is an error object. |
+| request | [SetPropertyRequest](arkts-basicservices-setpropertyrequest-i-sys.md) | Yes | Request information, including the authentication credential type and the key value to set. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -809,6 +865,8 @@ Sets the property for the initialization algorithm. This API uses a promise to r
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-UserAuth-setProperty(request: SetPropertyRequest): Promise<void>--><!--Device-UserAuth-setProperty(request: SetPropertyRequest): Promise<void>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -817,13 +875,13 @@ Sets the property for the initialization algorithm. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | SetPropertyRequest | Yes | Request information, including the authenticationcredential type and the key value to set. |
+| request | [SetPropertyRequest](arkts-basicservices-setpropertyrequest-i-sys.md) | Yes | Request information, including the authentication credential type and the key value to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

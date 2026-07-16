@@ -2,13 +2,15 @@
 
 Describes the options of the rectangle.
 
-> **NOTE**
->
-> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer
+> **NOTE**  
+>  
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
+> While historical version information is preserved for anonymous objects, there may be cases where the outer  
 > element's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
+
+<!--Device-unnamed-declare interface RectOptions--><!--Device-unnamed-declare interface RectOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +20,7 @@ Describes the options of the rectangle.
 height?: Length
 ```
 
-Height.
-Unit: vp, The value must be greater than or equal to 0, The **undefined**, **null**, **NaN**, and
-**Infinity** values are invalid and treated as the default value. Default value: **0**.
+Height.Unit: vp, The value must be greater than or equal to 0, The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. Default value: **0**.
 
 **Type:** Length
 
@@ -29,6 +29,8 @@ Unit: vp, The value must be greater than or equal to 0, The **undefined**, **nul
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-RectOptions-height?: Length--><!--Device-RectOptions-height?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,11 +40,7 @@ Unit: vp, The value must be greater than or equal to 0, The **undefined**, **nul
 radius?: Length | Array<any>
 ```
 
-Radius of the rounded corner. You can set separate radii for the four rounded corners. The value must be greater
-than or equal to 0.
-This attribute takes precedence over **radiusWidth** and **radiusHeight** when used together.
-Unit: vp, The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the
-default value. Default value: **0**.
+Radius of the rounded corner. You can set separate radii for the four rounded corners. The value must be greater than or equal to 0.This attribute takes precedence over **radiusWidth** and **radiusHeight** when used together.Unit: vp, The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. Default value: **0**.
 
 **Type:** Length | Array<any>
 
@@ -52,6 +50,8 @@ default value. Default value: **0**.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-RectOptions-radius?: Length | Array<any>--><!--Device-RectOptions-radius?: Length | Array<any>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## width
@@ -60,9 +60,7 @@ default value. Default value: **0**.
 width?: Length
 ```
 
-Width.
-Unit: vp, The value must be greater than or equal to 0, The **undefined**, **null**, **NaN**, and
-**Infinity** values are invalid and treated as the default value. Default value: **0**.
+Width.Unit: vp, The value must be greater than or equal to 0, The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. Default value: **0**.
 
 **Type:** Length
 
@@ -71,6 +69,8 @@ Unit: vp, The value must be greater than or equal to 0, The **undefined**, **nul
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-RectOptions-width?: Length--><!--Device-RectOptions-width?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

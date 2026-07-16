@@ -18,6 +18,8 @@ function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType, callbac
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType, callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,9 +28,9 @@ function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType, callbac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 应用的包信息。 |
-| type | SlotType | 是 | 渠道类型。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 获取渠道使能状态回调函数（true：使能，false：禁止）。 |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 应用的包信息。 |
+| type | [SlotType](arkts-notification-slottype-e-sys.md) | 是 | 渠道类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 获取渠道使能状态回调函数（true：使能，false：禁止）。 |
 
 **错误码：**
 
@@ -77,6 +79,8 @@ function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType): Promis
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType): Promise<boolean>--><!--Device-notificationManager-function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -85,14 +89,14 @@ function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType): Promis
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 应用的包信息。 |
-| type | SlotType | 是 | 渠道类型。 |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 应用的包信息。 |
+| type | [SlotType](arkts-notification-slottype-e-sys.md) | 是 | 渠道类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | 以Promise形式返回指定类型的渠道使能状态（true：使能，false：禁止）。 |
+| Promise<boolean> | 以Promise形式返回指定类型的渠道使能状态（true：使能，false：禁止）。 |
 
 **错误码：**
 

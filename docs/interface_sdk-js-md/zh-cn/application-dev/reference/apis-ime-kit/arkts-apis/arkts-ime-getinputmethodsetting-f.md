@@ -1,5 +1,11 @@
 # getInputMethodSetting
 
+## 导入模块
+
+```TypeScript
+import { inputMethod } from '@kit.IMEKit';
+```
+
 ## getInputMethodSetting
 
 ```TypeScript
@@ -14,13 +20,15 @@ function getInputMethodSetting(): InputMethodSetting
 
 **替代接口：** [getSetting](arkts-ime-getsetting-f.md#getsetting-1)
 
+<!--Device-inputMethod-function getInputMethodSetting(): InputMethodSetting--><!--Device-inputMethod-function getInputMethodSetting(): InputMethodSetting-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| InputMethodSetting | 返回当前客户端设置实例。 |
+| [InputMethodSetting](arkts-ime-inputmethodsetting-i.md) | 返回当前客户端设置实例。 |
 
 **示例：**
 

@@ -1,9 +1,10 @@
 # CameraOutput
 
-CameraOutput implements output information used in [Session](arkts-camera-session-i.md). It is the base
-class of **output**.
+CameraOutput implements output information used in [Session](arkts-camera-session-i.md). It is the base class of **output**.
 
 **Since:** 10
+
+<!--Device-camera-interface CameraOutput--><!--Device-camera-interface CameraOutput-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -25,13 +26,15 @@ Releases output resources. This API uses an asynchronous callback to return the 
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraOutput-release(callback: AsyncCallback<void>): void--><!--Device-CameraOutput-release(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the output resources arereleased successfully, **err** is **undefined**; otherwise, **err** is an error object with an error codedefined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the output resources are released successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -51,13 +54,15 @@ Releases output resources. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraOutput-release(): Promise<void>--><!--Device-CameraOutput-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

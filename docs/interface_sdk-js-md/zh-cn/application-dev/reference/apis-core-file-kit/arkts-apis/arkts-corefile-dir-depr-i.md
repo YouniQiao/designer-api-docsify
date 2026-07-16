@@ -8,6 +8,8 @@
 
 **替代接口：** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
 
+<!--Device-unnamed-declare interface Dir--><!--Device-unnamed-declare interface Dir-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## close
@@ -24,13 +26,15 @@ close(): Promise<void>
 
 **替代接口：** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
 
+<!--Device-Dir-close(): Promise<void>--><!--Device-Dir-close(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | return Promise |
+| Promise<void> | return Promise |
 
 **示例：**
 
@@ -56,13 +60,15 @@ close(callback: AsyncCallback<void>): void
 
 **替代接口：** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
 
+<!--Device-Dir-close(callback: AsyncCallback<void>): void--><!--Device-Dir-close(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | callback. |
 
 **示例：**
 
@@ -88,6 +94,8 @@ closeSync(): void
 
 **替代接口：** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
 
+<!--Device-Dir-closeSync(): void--><!--Device-Dir-closeSync(): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **示例：**
@@ -111,13 +119,15 @@ read(): Promise<Dirent>
 
 **替代接口：** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
 
+<!--Device-Dir-read(): Promise<Dirent>--><!--Device-Dir-read(): Promise<Dirent>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Dirent&gt; | Promise对象。返回表示异步读取目录项的结果。 |
+| Promise<Dirent> | Promise对象。返回表示异步读取目录项的结果。 |
 
 **示例：**
 
@@ -145,13 +155,15 @@ read(callback: AsyncCallback<Dirent>): void
 
 **替代接口：** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
 
+<!--Device-Dir-read(callback: AsyncCallback<Dirent>): void--><!--Device-Dir-read(callback: AsyncCallback<Dirent>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Dirent&gt; | 是 | 异步读取下一个目录项之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Dirent> | 是 | 异步读取下一个目录项之后的回调。 |
 
 **示例：**
 
@@ -180,13 +192,15 @@ readSync(): Dirent
 
 **替代接口：** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
 
+<!--Device-Dir-readSync(): Dirent--><!--Device-Dir-readSync(): Dirent-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Dirent | 表示一个目录项。 |
+| [Dirent](arkts-corefile-dirent-depr-i.md) | 表示一个目录项。 |
 
 **示例：**
 

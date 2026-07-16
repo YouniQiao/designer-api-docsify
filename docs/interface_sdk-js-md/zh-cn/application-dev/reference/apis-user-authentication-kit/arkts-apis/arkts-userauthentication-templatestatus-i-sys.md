@@ -4,9 +4,17 @@
 
 **起始版本：** 23
 
+<!--Device-companionDeviceAuth-interface TemplateStatus--><!--Device-companionDeviceAuth-interface TemplateStatus-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+```
 
 ## addedTime
 
@@ -21,6 +29,8 @@ addedTime: Date
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TemplateStatus-addedTime: Date--><!--Device-TemplateStatus-addedTime: Date-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -40,6 +50,8 @@ deviceStatus: DeviceStatus
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TemplateStatus-deviceStatus: DeviceStatus--><!--Device-TemplateStatus-deviceStatus: DeviceStatus-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -50,14 +62,15 @@ deviceStatus: DeviceStatus
 enabledBusinessIds: number[]
 ```
 
-支持的业务ID列表。该模板已启用的业务场景范围，可通过[updateEnabledBusinessIds](arkts-userauthentication-updateenabledbusinessids-f-sys.md#updateenabledbusinessids-1)接口更
-新。
+支持的业务ID列表。该模板已启用的业务场景范围，可通过[updateEnabledBusinessIds](arkts-userauthentication-updateenabledbusinessids-f-sys.md#updateenabledbusinessids-1)接口更新。
 
 **类型：** number[]
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TemplateStatus-enabledBusinessIds: int[]--><!--Device-TemplateStatus-enabledBusinessIds: int[]-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -77,6 +90,8 @@ isConfirmed: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TemplateStatus-isConfirmed: boolean--><!--Device-TemplateStatus-isConfirmed: boolean-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -94,6 +109,8 @@ isValid: boolean
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TemplateStatus-isValid: boolean--><!--Device-TemplateStatus-isValid: boolean-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -113,6 +130,8 @@ localUserId: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TemplateStatus-localUserId: int--><!--Device-TemplateStatus-localUserId: int-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -130,6 +149,8 @@ templateId: Uint8Array
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TemplateStatus-templateId: Uint8Array--><!--Device-TemplateStatus-templateId: Uint8Array-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 

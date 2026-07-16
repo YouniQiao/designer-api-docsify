@@ -1,14 +1,10 @@
 # PasteData
 
-Implements a **PasteData** object. PasteData contains one or more data records (
-[PasteDataRecord](arkts-basicservices-pastedatarecord-i.md)) and property description objects (
-[PasteDataProperty](arkts-basicservices-pastedataproperty-i.md)).
-Before calling any API in **PasteData**, you must use **
-[createData()](arkts-basicservices-createdata-f.md#createdata-1)** or **
-[getData()](arkts-basicservices-systempasteboard-i.md#getdata-1)** to create a
-**PasteData** object.
+Implements a **PasteData** object. PasteData contains one or more data records ([PasteDataRecord](arkts-basicservices-pastedatarecord-i.md)) and property description objects ([PasteDataProperty](arkts-basicservices-pastedataproperty-i.md)).Before calling any API in **PasteData**, you must use **[createData()](arkts-basicservices-createdata-f.md#createdata-1)** or **[getData()](arkts-basicservices-systempasteboard-i.md#getdata-1)** to create a **PasteData** object.
 
 **Since:** 6
+
+<!--Device-pasteboard-interface PasteData--><!--Device-pasteboard-interface PasteData-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -24,15 +20,15 @@ import { pasteboard } from '@kit.BasicServicesKit';
 addHtmlRecord(htmlText: string): void
 ```
 
-Adds an HTML record to the PasteData, and adds **MIMETYPE_TEXT_HTML** to **mimeTypes** in
-[PasteDataProperty](arkts-basicservices-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation
-fails.
+Adds an HTML record to the PasteData, and adds **MIMETYPE_TEXT_HTML** to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation fails.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
 **Substitutes:** addRecord(mimeType:
+
+<!--Device-PasteData-addHtmlRecord(htmlText: string): void--><!--Device-PasteData-addHtmlRecord(htmlText: string): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -57,13 +53,13 @@ pasteData.addHtmlRecord(html);
 addRecord(record: PasteDataRecord): void
 ```
 
-Adds a data record to the PasteData, and adds its type to **mimeTypes** in
-[PasteDataProperty](arkts-basicservices-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation
-fails.
+Adds a data record to the PasteData, and adds its type to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation fails.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PasteData-addRecord(record: PasteDataRecord): void--><!--Device-PasteData-addRecord(record: PasteDataRecord): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -71,7 +67,7 @@ fails.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| record | PasteDataRecord | Yes | Record to add. |
+| record | [PasteDataRecord](arkts-basicservices-pastedatarecord-i.md) | Yes | Record to add. |
 
 **Example**
 
@@ -93,13 +89,13 @@ pasteData.addRecord(htmlRecord);
 addRecord(mimeType: string, value: ValueType): void
 ```
 
-Adds a data record to the PasteData, and adds its type to **mimeTypes** in
-[PasteDataProperty](arkts-basicservices-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation
-fails.
+Adds a data record to the PasteData, and adds its type to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation fails.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PasteData-addRecord(mimeType: string, value: ValueType): void--><!--Device-PasteData-addRecord(mimeType: string, value: ValueType): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -108,7 +104,7 @@ fails.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mimeType | string | Yes | MIME type of PasteData. The length cannot exceed 1024 bytes. |
-| value | ValueType | Yes | Data content. |
+| value | [ValueType](arkts-basicservices-valuetype-t.md) | Yes | Data content. |
 
 **Error codes:**
 
@@ -133,15 +129,15 @@ pasteData.addRecord('app/xml', dataXml);
 addTextRecord(text: string): void
 ```
 
-Adds a plain text record to the PasteData, and adds **MIMETYPE_TEXT_PLAIN** to **mimeTypes** in
-[PasteDataProperty](arkts-basicservices-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation
-fails.
+Adds a plain text record to the PasteData, and adds **MIMETYPE_TEXT_PLAIN** to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation fails.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
 **Substitutes:** addRecord(mimeType:
+
+<!--Device-PasteData-addTextRecord(text: string): void--><!--Device-PasteData-addTextRecord(text: string): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -165,15 +161,15 @@ pasteData.addTextRecord('good');
 addUriRecord(uri: string): void
 ```
 
-Adds a URI record to the PasteData, and adds **MIMETYPE_TEXT_URI** to **mimeTypes** in
-[PasteDataProperty](arkts-basicservices-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation
-fails.
+Adds a URI record to the PasteData, and adds **MIMETYPE_TEXT_URI** to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation fails.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
 **Substitutes:** addRecord(mimeType:
+
+<!--Device-PasteData-addUriRecord(uri: string): void--><!--Device-PasteData-addUriRecord(uri: string): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -197,9 +193,7 @@ pasteData.addUriRecord('dataability:///com.example.myapplication1/user.txt');
 addWantRecord(want: Want): void
 ```
 
-Adds a Want record to the PasteData, and adds **MIMETYPE_TEXT_WANT** to **mimeTypes** in
-[PasteDataProperty](arkts-basicservices-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation
-fails.
+Adds a Want record to the PasteData, and adds **MIMETYPE_TEXT_WANT** to **mimeTypes** in [PasteDataProperty](arkts-basicservices-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation fails.
 
 **Since:** 7
 
@@ -207,13 +201,15 @@ fails.
 
 **Substitutes:** addRecord(mimeType:
 
+<!--Device-PasteData-addWantRecord(want: Want): void--><!--Device-PasteData-addWantRecord(want: Want): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want object. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want object. |
 
 **Example**
 
@@ -241,13 +237,15 @@ Obtains types of [PasteDataProperty](arkts-basicservices-pastedataproperty-i.md)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PasteData-getMimeTypes(): Array<string>--><!--Device-PasteData-getMimeTypes(): Array<string>-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Data types of the PasteData. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Data types of the PasteData. |
 
 **Example**
 
@@ -268,6 +266,8 @@ Obtains the HTML content of the primary record.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PasteData-getPrimaryHtml(): string--><!--Device-PasteData-getPrimaryHtml(): string-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -303,6 +303,8 @@ Obtains the data type of the primary record in the pasteboard.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PasteData-getPrimaryMimeType(): string--><!--Device-PasteData-getPrimaryMimeType(): string-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Return value:**
@@ -330,6 +332,8 @@ Obtains the PixelMap of the primary record.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PasteData-getPrimaryPixelMap(): image.PixelMap--><!--Device-PasteData-getPrimaryPixelMap(): image.PixelMap-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -374,6 +378,8 @@ Obtains the plain text of the primary record.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PasteData-getPrimaryText(): string--><!--Device-PasteData-getPrimaryText(): string-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Return value:**
@@ -412,6 +418,8 @@ Obtains the URI of the primary record.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PasteData-getPrimaryUri(): string--><!--Device-PasteData-getPrimaryUri(): string-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Return value:**
@@ -446,13 +454,15 @@ Obtains the **Want** object of the primary record.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PasteData-getPrimaryWant(): Want--><!--Device-PasteData-getPrimaryWant(): Want-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Want | Want object. |
+| [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Want object. |
 
 **Example**
 
@@ -481,13 +491,15 @@ Obtains the property of the PasteData.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PasteData-getProperty(): PasteDataProperty--><!--Device-PasteData-getProperty(): PasteDataProperty-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PasteDataProperty | Property of the PasteData. |
+| [PasteDataProperty](arkts-basicservices-pastedataproperty-i.md) | Property of the PasteData. |
 
 **Example**
 
@@ -509,6 +521,8 @@ Obtains the record with a specific index in PasteData.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PasteData-getRecord(index: int): PasteDataRecord--><!--Device-PasteData-getRecord(index: int): PasteDataRecord-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
@@ -521,7 +535,7 @@ Obtains the record with a specific index in PasteData.
 
 | Type | Description |
 | --- | --- |
-| PasteDataRecord | Record with the specified index. |
+| [PasteDataRecord](arkts-basicservices-pastedatarecord-i.md) | Record with the specified index. |
 
 **Error codes:**
 
@@ -552,6 +566,8 @@ Obtains the record with a specific index in PasteData.
 
 **Substitutes:** getRecord(index:
 
+<!--Device-PasteData-getRecordAt(index: number): PasteDataRecord--><!--Device-PasteData-getRecordAt(index: number): PasteDataRecord-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
@@ -564,7 +580,7 @@ Obtains the record with a specific index in PasteData.
 
 | Type | Description |
 | --- | --- |
-| PasteDataRecord | Record with the specified index. |
+| [PasteDataRecord](arkts-basicservices-pastedatarecord-i.md) | Record with the specified index. |
 
 **Error codes:**
 
@@ -591,6 +607,8 @@ Obtains the number of records in a PasteData object.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PasteData-getRecordCount(): int--><!--Device-PasteData-getRecordCount(): int-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -619,6 +637,8 @@ Obtains the custom tag from the PasteData. If no custom tag is set, an empty str
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PasteData-getTag(): string--><!--Device-PasteData-getTag(): string-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -649,6 +669,8 @@ Checks whether the PasteData contains data of the specified type.
 **Deprecated since:** 9
 
 **Substitutes:** hasType(mimeType:
+
+<!--Device-PasteData-hasMimeType(mimeType: string): boolean--><!--Device-PasteData-hasMimeType(mimeType: string): boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -690,13 +712,15 @@ Checks whether the PasteData contains data of the specified MIME type.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PasteData-hasType(mimeType: string): boolean--><!--Device-PasteData-hasType(mimeType: string): boolean-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mimeType | string | Yes | Type of the data to query. The value can be a predefined type listed in[Constants](../../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#constants),including HTML, WANT, plain text, URI, and pixel map, or a custom type. |
+| mimeType | string | Yes | Type of the data to query. The value can be a predefined type listed in [Constants](../../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#constants),including HTML, WANT, plain text, URI, and pixel map, or a custom type. |
 
 **Return value:**
 
@@ -728,6 +752,8 @@ Invoked to notify pasteboard service the utilization of PasteData has completed 
 
 **Since:** 12
 
+<!--Device-PasteData-pasteComplete(): void--><!--Device-PasteData-pasteComplete(): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Example**
@@ -757,6 +783,8 @@ pasteStart(): void
 Notifies the pasteboard service to retain the cross-device channel before reading data from the pasteboard.
 
 **Since:** 12
+
+<!--Device-PasteData-pasteStart(): void--><!--Device-PasteData-pasteStart(): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -789,6 +817,8 @@ Removes the record with a specific index in PasteData.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PasteData-removeRecord(index: int): void--><!--Device-PasteData-removeRecord(index: int): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -826,6 +856,8 @@ Removes the record with a specific index in PasteData.
 **Deprecated since:** 9
 
 **Substitutes:** removeRecord(index:
+
+<!--Device-PasteData-removeRecordAt(index: number): boolean--><!--Device-PasteData-removeRecordAt(index: number): boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -867,6 +899,8 @@ Replaces the record with a specific index in PasteData.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PasteData-replaceRecord(index: int, record: PasteDataRecord): void--><!--Device-PasteData-replaceRecord(index: int, record: PasteDataRecord): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
@@ -874,7 +908,7 @@ Replaces the record with a specific index in PasteData.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | number | Yes | Specified index. |
-| record | PasteDataRecord | Yes | New record. |
+| record | [PasteDataRecord](arkts-basicservices-pastedatarecord-i.md) | Yes | New record. |
 
 **Error codes:**
 
@@ -906,6 +940,8 @@ Replaces the record with a specific index in PasteData.
 
 **Substitutes:** replaceRecord(index:
 
+<!--Device-PasteData-replaceRecordAt(index: number, record: PasteDataRecord): boolean--><!--Device-PasteData-replaceRecordAt(index: number, record: PasteDataRecord): boolean-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
@@ -913,7 +949,7 @@ Replaces the record with a specific index in PasteData.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | number | Yes | Specified index. |
-| record | PasteDataRecord | Yes | New record. |
+| record | [PasteDataRecord](arkts-basicservices-pastedatarecord-i.md) | Yes | New record. |
 
 **Return value:**
 
@@ -942,13 +978,15 @@ Sets a [PasteDataProperty](arkts-basicservices-pastedataproperty-i.md) object.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PasteData-setProperty(property: PasteDataProperty): void--><!--Device-PasteData-setProperty(property: PasteDataProperty): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| property | PasteDataProperty | Yes | Property of the PasteData. |
+| property | [PasteDataProperty](arkts-basicservices-pastedataproperty-i.md) | Yes | Property of the PasteData. |
 
 **Error codes:**
 

@@ -1,10 +1,10 @@
 # DeviceManager
 
-Provides APIs to obtain information about trusted devices and local devices. Before calling any API in
-**DeviceManager**, you must use **createDeviceManager** to create a **DeviceManager** instance, for example,
-**dmInstance**.
+Provides APIs to obtain information about trusted devices and local devices. Before calling any API in **DeviceManager**, you must use **createDeviceManager** to create a **DeviceManager** instance, for example,**dmInstance**.
 
 **Since:** 10
+
+<!--Device-distributedDeviceManager-interface DeviceManager--><!--Device-distributedDeviceManager-interface DeviceManager-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -26,6 +26,8 @@ Binds a device. This API uses an asynchronous callback to return the result.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-bindTarget(deviceId: string, bindParam: { [key: string]: Object; }, callback: AsyncCallback<{deviceId: string;}>): void--><!--Device-DeviceManager-bindTarget(deviceId: string, bindParam: { [key: string]: Object; }, callback: AsyncCallback<{deviceId: string;}>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **Parameters:**
@@ -34,14 +36,14 @@ Binds a device. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Device ID. The value is a string of 1 to 255 characters. |
 | bindParam | { [key: string]: Object; } | Yes | Authentication parameters.You can determine the key-value pair to be passed in. By default, the following keys are carried:<br>**bindType**: binding type, which is mandatory.<br>The value **1** means PIN authentication.<br>**targetPkgName**: bundle name of the target to bind.<br>**appName**: application that attempts to bind the target.<br>**appOperation**: reason for the application to bind the target.<br>**customDescription**: detailed description of the operation. |
-| callback | AsyncCallback&lt;{deviceId: string;}&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<{deviceId: string;}> | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified deviceId is greater than 255. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 | [11600103](../../apis-distributedservice-kit/errorcode-device-manager.md#11600103-authentication-unavailable) | Authentication unavailable. |
 
@@ -93,19 +95,21 @@ Obtains all trusted devices. This API uses an asynchronous callback to return th
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getAvailableDeviceList(callback: AsyncCallback<Array<DeviceBasicInfo>>): void--><!--Device-DeviceManager-getAvailableDeviceList(callback: AsyncCallback<Array<DeviceBasicInfo>>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;DeviceBasicInfo&gt;&gt; | Yes | Callback used to return the list of trusted devices. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<DeviceBasicInfo>> | Yes | Callback used to return the list of trusted devices. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
 **Example**
@@ -142,19 +146,21 @@ Obtains all trusted devices. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getAvailableDeviceList(): Promise<Array<DeviceBasicInfo>>--><!--Device-DeviceManager-getAvailableDeviceList(): Promise<Array<DeviceBasicInfo>>-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DeviceBasicInfo&gt;&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<DeviceBasicInfo>> | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
 **Example**
@@ -184,19 +190,21 @@ Obtains all trusted devices synchronously.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getAvailableDeviceListSync(): Array<DeviceBasicInfo>--><!--Device-DeviceManager-getAvailableDeviceListSync(): Array<DeviceBasicInfo>-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;DeviceBasicInfo&gt; | List of trusted devices obtained. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<DeviceBasicInfo> | List of trusted devices obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
 **Example**
@@ -227,6 +235,8 @@ Obtains the device name based on the network ID of the specified device.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getDeviceName(networkId: string): string--><!--Device-DeviceManager-getDeviceName(networkId: string): string-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **Parameters:**
@@ -245,7 +255,7 @@ Obtains the device name based on the network ID of the specified device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified networkId is greater than 255. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
@@ -280,6 +290,8 @@ Obtains the device type based on the network ID of the specified device.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getDeviceType(networkId: string): int--><!--Device-DeviceManager-getDeviceType(networkId: string): int-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **Parameters:**
@@ -298,7 +310,7 @@ Obtains the device type based on the network ID of the specified device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified networkId is greater than 255. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
@@ -327,12 +339,13 @@ try {
 getLocalDeviceId(): string
 ```
 
-Obtains the local device ID. The value is the result of obfuscating the udid-hash (hash value of the UDID),
-**appid**, and salt using the SHA-256 algorithm.
+Obtains the local device ID. The value is the result of obfuscating the udid-hash (hash value of the UDID),**appid**, and salt using the SHA-256 algorithm.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-getLocalDeviceId(): string--><!--Device-DeviceManager-getLocalDeviceId(): string-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -346,7 +359,7 @@ Obtains the local device ID. The value is the result of obfuscating the udid-has
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
 **Example**
@@ -378,6 +391,8 @@ Obtains the local device name.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getLocalDeviceName(): string--><!--Device-DeviceManager-getLocalDeviceName(): string-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **Return value:**
@@ -390,7 +405,7 @@ Obtains the local device name.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
 **Example**
@@ -422,6 +437,8 @@ Obtains the network ID of the local device.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getLocalDeviceNetworkId(): string--><!--Device-DeviceManager-getLocalDeviceNetworkId(): string-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **Return value:**
@@ -434,7 +451,7 @@ Obtains the network ID of the local device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
 **Example**
@@ -466,6 +483,8 @@ Obtains the local device type.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-getLocalDeviceType(): int--><!--Device-DeviceManager-getLocalDeviceType(): int-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **Return value:**
@@ -478,7 +497,7 @@ Obtains the local device type.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
 **Example**
@@ -510,20 +529,22 @@ Unsubscribes from the device state changes. This API uses an asynchronous callba
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChange; device: DeviceBasicInfo; }>): void--><!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChange; device: DeviceBasicInfo; }>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceStateChange' | Yes | Event type. The value **'deviceStateChange'** indicates device statechanges. |
-| callback | Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | No |  |
+| type | 'deviceStateChange' | Yes | Event type. The value **'deviceStateChange'** indicates device state changes. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ action: DeviceStateChange; device: DeviceBasicInfo; }> | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified type is greater than 255. |
 
 **Example**
@@ -566,6 +587,8 @@ Unsubscribes from the **'discoverSuccess'** event. This API uses an asynchronous
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-off(type: 'discoverSuccess', callback?: Callback<{ device: DeviceBasicInfo; }>): void--><!--Device-DeviceManager-off(type: 'discoverSuccess', callback?: Callback<{ device: DeviceBasicInfo; }>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **Parameters:**
@@ -573,13 +596,13 @@ Unsubscribes from the **'discoverSuccess'** event. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoverSuccess' | Yes | Event type, which has a fixed value of **'discoverSuccess'**. |
-| callback | Callback&lt;{ device: DeviceBasicInfo; }&gt; | No |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ device: DeviceBasicInfo; }> | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified type is greater than 255. |
 
 **Example**
@@ -621,6 +644,8 @@ Unsubscribes from the device name changes. This API uses an asynchronous callbac
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): void--><!--Device-DeviceManager-off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **Parameters:**
@@ -628,13 +653,13 @@ Unsubscribes from the device name changes. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceNameChange' | Yes | Event type, which has a fixed value of **deviceNameChange**. |
-| callback | Callback&lt;{ deviceName: string; }&gt; | No |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ deviceName: string; }> | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified type is greater than 255. |
 
 **Example**
@@ -671,6 +696,8 @@ Unsubscribes from the **'discoverFailure'** event. This API uses an asynchronous
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-off(type: 'discoverFailure', callback?: Callback<{ reason: int; }>): void--><!--Device-DeviceManager-off(type: 'discoverFailure', callback?: Callback<{ reason: int; }>): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **Parameters:**
@@ -678,13 +705,13 @@ Unsubscribes from the **'discoverFailure'** event. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoverFailure' | Yes | Event type, which has a fixed value of **'discoverFailure'**. |
-| callback | Callback&lt;{ reason: number; }&gt; | No |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ reason: number; }> | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified type is greater than 255. |
 
 **Example**
@@ -715,12 +742,13 @@ try {
 off(type: 'serviceDie', callback?: Callback<{}>): void
 ```
 
-Unsubscribes from the dead events of the **DeviceManager** service. This API uses an asynchronous callback to
-return the result.
+Unsubscribes from the dead events of the **DeviceManager** service. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-off(type: 'serviceDie', callback?: Callback<{}>): void--><!--Device-DeviceManager-off(type: 'serviceDie', callback?: Callback<{}>): void-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -729,13 +757,13 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceDie' | Yes | Event type, which has a fixed value of **'serviceDie'**. |
-| callback | Callback&lt;{}&gt; | No |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{}> | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified type is greater than 255. |
 
 **Example**
@@ -762,12 +790,13 @@ try {
 on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChange; device: DeviceBasicInfo; }>): void
 ```
 
-Subscribes to the device state changes. The application (identified by the bundle name) will be notified when the
-device state changes. This API uses an asynchronous callback to return the result.
+Subscribes to the device state changes. The application (identified by the bundle name) will be notified when the device state changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChange; device: DeviceBasicInfo; }>): void--><!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChange; device: DeviceBasicInfo; }>): void-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -775,14 +804,14 @@ device state changes. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceStateChange' | Yes | Event type. The value **'deviceStateChange'** indicates device statechanges. |
-| callback | Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt; | Yes |  |
+| type | 'deviceStateChange' | Yes | Event type. The value **'deviceStateChange'** indicates device state changes. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ action: DeviceStateChange; device: DeviceBasicInfo; }> | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified type is greater than 255. |
 
 **Example**
@@ -819,12 +848,13 @@ try {
 on(type: 'discoverSuccess', callback: Callback<{ device: DeviceBasicInfo; }>): void
 ```
 
-Subscribes to the **'discoverSuccess'** event. The application will be notified when a device is successfully
-discovered. This API uses an asynchronous callback to return the result.
+Subscribes to the **'discoverSuccess'** event. The application will be notified when a device is successfully discovered. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-on(type: 'discoverSuccess', callback: Callback<{ device: DeviceBasicInfo; }>): void--><!--Device-DeviceManager-on(type: 'discoverSuccess', callback: Callback<{ device: DeviceBasicInfo; }>): void-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -833,13 +863,13 @@ discovered. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoverSuccess' | Yes | Event type, which has a fixed value of **'discoverSuccess'**. |
-| callback | Callback&lt;{ device: DeviceBasicInfo; }&gt; | Yes |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ device: DeviceBasicInfo; }> | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified type is greater than 255. |
 
 **Example**
@@ -875,12 +905,13 @@ try {
 on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void
 ```
 
-Subscribes to device name changes. The application will be notified when the name of a device is changed. This
-API uses an asynchronous callback to return the result.
+Subscribes to device name changes. The application will be notified when the name of a device is changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void--><!--Device-DeviceManager-on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -889,13 +920,13 @@ API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceNameChange' | Yes | Event type, which has a fixed value of **deviceNameChange**. |
-| callback | Callback&lt;{ deviceName: string; }&gt; | Yes |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ deviceName: string; }> | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified type is greater than 255. |
 
 **Example**
@@ -926,12 +957,13 @@ try {
 on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void
 ```
 
-Subscribes to the **'discoverFailure'** event. The application will be notified when a device fails to be
-discovered. This API uses an asynchronous callback to return the result.
+Subscribes to the **'discoverFailure'** event. The application will be notified when a device fails to be discovered. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-on(type: 'discoverFailure', callback: Callback<{ reason: int; }>): void--><!--Device-DeviceManager-on(type: 'discoverFailure', callback: Callback<{ reason: int; }>): void-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -940,13 +972,13 @@ discovered. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoverFailure' | Yes | Event type, which has a fixed value of **'discoverFailure'**. |
-| callback | Callback&lt;{ reason: number; }&gt; | Yes |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{ reason: number; }> | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified type is greater than 255. |
 
 **Example**
@@ -977,13 +1009,13 @@ try {
 on(type: 'serviceDie', callback?: Callback<{}>): void
 ```
 
-Subscribes to the dead events of the **DeviceManager** service. The application will be notified when the
-**DeviceManager** service is terminated unexpectedly. This API uses an asynchronous callback to return the
-result.
+Subscribes to the dead events of the **DeviceManager** service. The application will be notified when the **DeviceManager** service is terminated unexpectedly. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-on(type: 'serviceDie', callback?: Callback<{}>): void--><!--Device-DeviceManager-on(type: 'serviceDie', callback?: Callback<{}>): void-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -992,13 +1024,13 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceDie' | Yes | Event type, which has a fixed value of **'serviceDie'**. |
-| callback | Callback&lt;{}&gt; | No |  |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<{}> | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified type is greater than 255. |
 
 **Example**
@@ -1025,12 +1057,13 @@ try {
 startDiscovering(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; }): void
 ```
 
-Starts to discover devices nearby. The discovery process takes 2 minutes. A maximum of 99 devices can be
-discovered. In Wi-Fi scenarios, only the devices in the same LAN can be discovered.
+Starts to discover devices nearby. The discovery process takes 2 minutes. A maximum of 99 devices can be discovered. In Wi-Fi scenarios, only the devices in the same LAN can be discovered.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-startDiscovering(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; }): void--><!--Device-DeviceManager-startDiscovering(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; }): void-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -1038,15 +1071,15 @@ discovered. In Wi-Fi scenarios, only the devices in the same LAN can be discover
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| discoverParam | { [key: string]: Object; } | Yes | Identifier of the device to discover. It specifies the type of the target todiscover.<br>**discoverTargetType**: The default discovery target is device. The value is **1**. |
-| filterOptions | { [key: string]: Object; } | No | Options for filtering the devices to discover. The default value is**undefined**, which means to discover offline devices. The options include the following:<br>- **availableStatus(0-1)**: status of the device to discover.The value **0** means the device is untrusted.<br>- **0**: The device is offline. The client needs to call **bindTarget** to bind the device.<br>- **1**: The device is online and can be connected.<br>**discoverDistance(0-100)**: distance of the device to discover, in cm.This parameter is not used in Wi-Fi scenarios.<br>**authenticationStatus(0-1)**: authentication status of the device to discover.<br>- **0**: The device is not authenticated.<br>The value **1** means the device has been authenticated.<br>- **authorizationType(0-2)**: authorization type of the device to discover.<br>- **0**: The device is authenticated by a temporarily agreed session key.<br>- **1**: The device is authenticated by a key of the same account.<br>- **2**: The device is authenticated by a credential key of different accounts. |
+| discoverParam | { [key: string]: Object; } | Yes | Identifier of the device to discover. It specifies the type of the target to discover.<br>**discoverTargetType**: The default discovery target is device. The value is **1**. |
+| filterOptions | { [key: string]: Object; } | No | Options for filtering the devices to discover. The default value is **undefined**, which means to discover offline devices. The options include the following:<br>- **availableStatus(0-1)**: status of the device to discover.The value **0** means the device is untrusted.<br>- **0**: The device is offline. The client needs to call **bindTarget** to bind the device.<br>- **1**: The device is online and can be connected.<br>**discoverDistance(0-100)**: distance of the device to discover, in cm.This parameter is not used in Wi-Fi scenarios.<br>**authenticationStatus(0-1)**: authentication status of the device to discover.<br>- **0**: The device is not authenticated.<br>The value **1** means the device has been authenticated.<br>- **authorizationType(0-2)**: authorization type of the device to discover.<br>- **0**: The device is authenticated by a temporarily agreed session key.<br>- **1**: The device is authenticated by a key of the same account.<br>- **2**: The device is authenticated by a credential key of different accounts. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-discovery-unavailable) | Discovery unavailable. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
@@ -1096,13 +1129,15 @@ Stops device discovery.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-stopDiscovering(): void--><!--Device-DeviceManager-stopDiscovering(): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
 **Example**
@@ -1133,6 +1168,8 @@ Unbinds a device.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DeviceManager-unbindTarget(deviceId: string): void--><!--Device-DeviceManager-unbindTarget(deviceId: string): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **Parameters:**
@@ -1146,7 +1183,7 @@ Unbinds a device.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter type;3. Parameter verification failed;4. The size of specified deviceId is greater than 255. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
 **Example**

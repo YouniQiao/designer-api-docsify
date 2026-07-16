@@ -1,5 +1,11 @@
 # getBundleInstallerSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+```
+
 ## getBundleInstallerSync
 
 ```TypeScript
@@ -10,6 +16,8 @@ function getBundleInstallerSync(): BundleInstaller
 
 **起始版本：** 10
 
+<!--Device-installer-function getBundleInstallerSync(): BundleInstaller--><!--Device-installer-function getBundleInstallerSync(): BundleInstaller-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -18,7 +26,7 @@ function getBundleInstallerSync(): BundleInstaller
 
 | 类型 | 说明 |
 | --- | --- |
-| BundleInstaller | BundleInstaller object. |
+| [BundleInstaller](arkts-ability-bundleinstaller-i-sys.md) | BundleInstaller object. |
 
 **错误码：**
 

@@ -12,10 +12,11 @@ import { pointer } from '@kit.InputKit';
 function getPointerStyleSync(windowId: number): PointerStyle
 ```
 
-Queries the mouse pointer style type of a specified window, such as east arrow, west arrow, south arrow, and north
-arrow. This API can obtain only the mouse pointer style type of windows within the current application process.
+Queries the mouse pointer style type of a specified window, such as east arrow, west arrow, south arrow, and north arrow. This API can obtain only the mouse pointer style type of windows within the current application process.
 
 **Since:** 10
+
+<!--Device-pointer-function getPointerStyleSync(windowId: int): PointerStyle--><!--Device-pointer-function getPointerStyleSync(windowId: int): PointerStyle-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -23,13 +24,13 @@ arrow. This API can obtain only the mouse pointer style type of windows within t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | number | Yes | Window ID. The value is an integer greater than or equal to **-1**. The value **-1**indicates the global window.<br>If the window ID is valid and the corresponding window exists, the mouse pointer style of the window isreturned.<br>If the window ID is valid but the window does not exist, the global mouse pointer style is returned bydefault.<br>If the mouse pointer style is set for a non-existent window through[setPointerStyleSync](arkts-input-setpointerstylesync-f.md#setpointerstylesync-1), this API can obtain the mouse pointer style properly. |
+| windowId | number | Yes | Window ID. The value is an integer greater than or equal to **-1**. The value **-1** indicates the global window.<br>If the window ID is valid and the corresponding window exists, the mouse pointer style of the window is returned.<br>If the window ID is valid but the window does not exist, the global mouse pointer style is returned by default.<br>If the mouse pointer style is set for a non-existent window through [setPointerStyleSync](arkts-input-setpointerstylesync-f.md#setpointerstylesync-1), this API can obtain the mouse pointer style properly. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PointerStyle | Mouse pointer style. |
+| [PointerStyle](../../apis-arkui/arkts-apis/arkts-arkui-pointerstyle-t.md) | Mouse pointer style. |
 
 **Error codes:**
 

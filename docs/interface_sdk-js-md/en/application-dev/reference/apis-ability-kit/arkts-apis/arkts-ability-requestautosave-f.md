@@ -12,9 +12,7 @@ import { autoFillManager } from '@kit.AbilityKit';
 export function requestAutoSave(context: UIContext, callback?: AutoSaveCallback): void
 ```
 
-Requests to automatically save the widget data. This API uses an asynchronous callback to return the result.
-If the current widget does not support widget switching, you can call this API to save historical widget input
-data. The callback is triggered when the auto-save request is complete.
+Requests to automatically save the widget data. This API uses an asynchronous callback to return the result.If the current widget does not support widget switching, you can call this API to save historical widget input data. The callback is triggered when the auto-save request is complete.
 
 **Since:** 11
 
@@ -22,14 +20,16 @@ data. The callback is triggered when the auto-save request is complete.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-autoFillManager-export function requestAutoSave(context: UIContext, callback?: AutoSaveCallback): void--><!--Device-autoFillManager-export function requestAutoSave(context: UIContext, callback?: AutoSaveCallback): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context in which the auto-save operation will be performed. |
-| callback | AutoSaveCallback | No | Implements callbacks triggered when auto-save is complete. |
+| context | [UIContext](../../apis-arkui/arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context in which the auto-save operation will be performed. |
+| callback | [AutoSaveCallback](arkts-ability-autosavecallback-i.md) | No | Implements callbacks triggered when auto-save is complete. |
 
 **Error codes:**
 
@@ -138,15 +138,17 @@ Trigger an auto save request.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-autoFillManager-export function requestAutoSave(context: UIContext, request: SaveRequest, callback?: AutoSaveCallback): void--><!--Device-autoFillManager-export function requestAutoSave(context: UIContext, request: SaveRequest, callback?: AutoSaveCallback): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | Indicates the ui context where the save operation will be performed. |
-| request | SaveRequest | Yes | Indicates the struct of automatic save request. |
-| callback | AutoSaveCallback | No | Indicates the callback that used to receive the result. |
+| context | [UIContext](../../apis-arkui/arkts-components/arkts-arkui-uicontext-t.md) | Yes | Indicates the ui context where the save operation will be performed. |
+| request | [SaveRequest](arkts-ability-saverequest-i-sys.md) | Yes | Indicates the struct of automatic save request. |
+| callback | [AutoSaveCallback](arkts-ability-autosavecallback-i.md) | No | Indicates the callback that used to receive the result. |
 
 **Error codes:**
 

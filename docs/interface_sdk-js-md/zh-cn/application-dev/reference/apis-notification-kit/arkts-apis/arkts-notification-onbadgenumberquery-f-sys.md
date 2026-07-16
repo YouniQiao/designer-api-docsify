@@ -18,6 +18,8 @@ function onBadgeNumberQuery(callback: (bundle: BundleOption) => Promise<number>)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function onBadgeNumberQuery(callback: (bundle: BundleOption) => Promise<long>): void--><!--Device-notificationManager-function onBadgeNumberQuery(callback: (bundle: BundleOption) => Promise<long>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,7 +28,7 @@ function onBadgeNumberQuery(callback: (bundle: BundleOption) => Promise<number>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (bundle: BundleOption) =&gt; Promise&lt;number&gt; | 是 | 应用角标数量查询函数。 |
+| callback | (bundle: BundleOption) => Promise<number> | 是 | 应用角标数量查询函数。 |
 
 **错误码：**
 

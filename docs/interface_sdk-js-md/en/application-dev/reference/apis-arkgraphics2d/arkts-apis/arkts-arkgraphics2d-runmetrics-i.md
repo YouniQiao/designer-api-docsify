@@ -4,6 +4,8 @@ Describes the layout information and measurement information of a run of text in
 
 **Since:** 12
 
+<!--Device-text-interface RunMetrics--><!--Device-text-interface RunMetrics-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Font measurement information.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-RunMetrics-fontMetrics: drawing.FontMetrics--><!--Device-RunMetrics-fontMetrics: drawing.FontMetrics-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## textStyle
@@ -41,6 +45,8 @@ Text style.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-RunMetrics-textStyle: TextStyle--><!--Device-RunMetrics-textStyle: TextStyle-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

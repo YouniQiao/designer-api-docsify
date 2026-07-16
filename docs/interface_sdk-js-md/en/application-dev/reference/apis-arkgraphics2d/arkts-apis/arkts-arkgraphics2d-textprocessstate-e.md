@@ -4,6 +4,8 @@ Enumerates text processing states.
 
 **Since:** 26.0.0
 
+<!--Device-text-enum TextProcessState--><!--Device-text-enum TextProcessState-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## INIT
@@ -19,6 +21,8 @@ Initial state, indicating that text processing has not started.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TextProcessState-INIT = 0--><!--Device-TextProcessState-INIT = 0-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -36,6 +40,8 @@ Index generated state, indicating that the text index has been generated.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TextProcessState-INDEXED = 1--><!--Device-TextProcessState-INDEXED = 1-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## SHAPED
@@ -51,6 +57,8 @@ Shaped state, indicating that the text has been shaped.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TextProcessState-SHAPED = 2--><!--Device-TextProcessState-SHAPED = 2-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -68,6 +76,8 @@ Line-wrapped state. The text has been line-wrapped.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TextProcessState-LINE_BROKEN = 3--><!--Device-TextProcessState-LINE_BROKEN = 3-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## FORMATTED
@@ -83,6 +93,8 @@ Formatted state, indicating that the text has been formatted.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TextProcessState-FORMATTED = 4--><!--Device-TextProcessState-FORMATTED = 4-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -100,6 +112,8 @@ Drawn state, indicating that the text has been drawn.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TextProcessState-PAINT = 5--><!--Device-TextProcessState-PAINT = 5-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## UPDATE_ATTRIBUTE
@@ -115,6 +129,8 @@ Updated property state. The text properties have been updated.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TextProcessState-UPDATE_ATTRIBUTE = 6--><!--Device-TextProcessState-UPDATE_ATTRIBUTE = 6-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

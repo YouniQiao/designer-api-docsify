@@ -4,6 +4,8 @@ Defines the usage scope of the certificate to be installed.
 
 **Since:** 14
 
+<!--Device-certificateManagerDialog-export enum CertificateScope--><!--Device-certificateManagerDialog-export enum CertificateScope-End-->
+
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 
 ## NOT_SPECIFIED
@@ -17,6 +19,8 @@ No user is specified.
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CertificateScope-NOT_SPECIFIED = 0--><!--Device-CertificateScope-NOT_SPECIFIED = 0-End-->
 
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 
@@ -32,6 +36,8 @@ The installed certificate is accessible only to the current user.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-CertificateScope-CURRENT_USER = 1--><!--Device-CertificateScope-CURRENT_USER = 1-End-->
+
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 
 ## GLOBAL_USER
@@ -45,6 +51,8 @@ The installed certificate is accessible to all users of the device.
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CertificateScope-GLOBAL_USER = 2--><!--Device-CertificateScope-GLOBAL_USER = 2-End-->
 
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 

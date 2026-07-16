@@ -12,15 +12,15 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 function openCertificateManagerDialog(context: common.Context, pageType: CertificateDialogPageType): Promise<void>
 ```
 
-Opens the certificate management dialog box and displays the page of the specified type. After the interface is
-invoked successfully, you can view, install, and uninstall the certificate in the dialog box that is displayed.
-This API uses a promise to return the result.
+Opens the certificate management dialog box and displays the page of the specified type. After the interface is invoked successfully, you can view, install, and uninstall the certificate in the dialog box that is displayed.This API uses a promise to return the result.
 
 **Since:** 13
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-certificateManagerDialog-function openCertificateManagerDialog(context: common.Context, pageType: CertificateDialogPageType): Promise<void>--><!--Device-certificateManagerDialog-function openCertificateManagerDialog(context: common.Context, pageType: CertificateDialogPageType): Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 
@@ -29,19 +29,19 @@ This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | common.Context | Yes | Context of the application. |
-| pageType | CertificateDialogPageType | Yes | Type of the page to display. |
+| pageType | [CertificateDialogPageType](arkts-devicecertificate-certificatedialogpagetype-e.md) | Yes | Type of the page to display. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 

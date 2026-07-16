@@ -16,13 +16,15 @@ Obtains the {@link NetHandle} bound to a process using {@link setAppNet}.
 
 **Since:** 9
 
+<!--Device-connection-function getAppNet(callback: AsyncCallback<NetHandle>): void--><!--Device-connection-function getAppNet(callback: AsyncCallback<NetHandle>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;NetHandle&gt; | Yes | Returns the {@link NetHandle} bound to the process;returns {@code null} if no {@link NetHandle} is bound to the process.For details, see {@link NetHandle}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<NetHandle> | Yes | Returns the {@link NetHandle} bound to the process;returns {@code null} if no {@link NetHandle} is bound to the process.For details, see {@link NetHandle}. |
 
 **Error codes:**
 
@@ -59,13 +61,15 @@ Obtains the {@link NetHandle} bound to a process using {@link setAppNet}.
 
 **Since:** 9
 
+<!--Device-connection-function getAppNet(): Promise<NetHandle>--><!--Device-connection-function getAppNet(): Promise<NetHandle>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetHandle&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetHandle> | the promise returned by the function. |
 
 **Error codes:**
 

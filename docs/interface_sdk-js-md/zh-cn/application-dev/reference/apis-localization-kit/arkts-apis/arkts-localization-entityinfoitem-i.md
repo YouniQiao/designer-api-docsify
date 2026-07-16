@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-i18n-export interface EntityInfoItem--><!--Device-i18n-export interface EntityInfoItem-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
 
 ## begin
 
@@ -18,7 +26,9 @@ begin: number
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EntityInfoItem-begin: int--><!--Device-EntityInfoItem-begin: int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -34,7 +44,9 @@ end: number
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EntityInfoItem-end: int--><!--Device-EntityInfoItem-end: int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -50,7 +62,9 @@ type: string
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-EntityInfoItem-type: string--><!--Device-EntityInfoItem-type: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

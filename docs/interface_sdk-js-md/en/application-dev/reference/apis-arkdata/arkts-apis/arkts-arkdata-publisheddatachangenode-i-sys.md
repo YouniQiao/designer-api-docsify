@@ -4,6 +4,8 @@ Defines the subscription/unsubscription result of the changes in the published d
 
 **Since:** 10
 
+<!--Device-dataShare-interface PublishedDataChangeNode--><!--Device-dataShare-interface PublishedDataChangeNode-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Bundle name of the callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PublishedDataChangeNode-bundleName: string--><!--Device-PublishedDataChangeNode-bundleName: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **System API:** This is a system API.
@@ -45,6 +49,8 @@ Data of the callback.
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PublishedDataChangeNode-data: Array<PublishedItem>--><!--Device-PublishedDataChangeNode-data: Array<PublishedItem>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 

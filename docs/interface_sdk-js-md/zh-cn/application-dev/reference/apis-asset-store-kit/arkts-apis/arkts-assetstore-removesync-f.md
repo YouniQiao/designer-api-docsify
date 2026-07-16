@@ -1,5 +1,11 @@
 # removeSync
 
+## 导入模块
+
+```TypeScript
+import { asset } from '@kit.AssetStoreKit';
+```
+
 ## removeSync
 
 ```TypeScript
@@ -10,7 +16,9 @@ function removeSync(query: AssetMap): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-asset-function removeSync(query: AssetMap): void--><!--Device-asset-function removeSync(query: AssetMap): void-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -18,7 +26,7 @@ function removeSync(query: AssetMap): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | AssetMap | 是 | 待删除关键资产的搜索条件，如别名、访问控制属性、自定义数据等。 |
+| query | [AssetMap](arkts-assetstore-assetmap-t.md) | 是 | 待删除关键资产的搜索条件，如别名、访问控制属性、自定义数据等。 |
 
 **错误码：**
 

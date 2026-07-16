@@ -18,6 +18,8 @@ Set the SIM card number in the specified slot.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function setShowNumber(slotId: int, teleNumber: string, callback: AsyncCallback<void>): void--><!--Device-sim-function setShowNumber(slotId: int, teleNumber: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Set the SIM card number in the specified slot.
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
 | teleNumber | string | Yes | Indicates SIM card number. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of setShowNumber. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of setShowNumber. |
 
 **Error codes:**
 
@@ -69,6 +71,8 @@ Set the SIM card number in the specified slot.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function setShowNumber(slotId: int, teleNumber: string): Promise<void>--><!--Device-sim-function setShowNumber(slotId: int, teleNumber: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -84,7 +88,7 @@ Set the SIM card number in the specified slot.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setShowNumber. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the setShowNumber. |
 
 **Error codes:**
 

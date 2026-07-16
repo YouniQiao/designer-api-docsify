@@ -1,9 +1,10 @@
 # DataAbilityHelper
 
-A DataAbilityHelper object is obtained through
-[acquireDataAbilityHelper](arkts-ability-acquiredataabilityhelper-f.md#acquiredataabilityhelper-1).
+A DataAbilityHelper object is obtained through [acquireDataAbilityHelper](arkts-ability-acquiredataabilityhelper-f.md#acquiredataabilityhelper-1).
 
 **Since:** 7
+
+<!--Device-unnamed-export interface DataAbilityHelper--><!--Device-unnamed-export interface DataAbilityHelper-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -13,12 +14,13 @@ A DataAbilityHelper object is obtained through
 batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>, callback: AsyncCallback<number>): void
 ```
 
-Inserts multiple data records into the database.
-This API uses an asynchronous callback to return the result.
+Inserts multiple data records into the database.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-DataAbilityHelper-batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>, callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -27,8 +29,8 @@ This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to insert. |
-| valuesBuckets | Array&lt;rdb.ValuesBucket&gt; | Yes | Data records to insert. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the number of inserted data records. |
+| valuesBuckets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<rdb.ValuesBucket> | Yes | Data records to insert. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the number of inserted data records. |
 
 ## batchInsert
 
@@ -42,6 +44,8 @@ Inserts multiple data records into the database. This API uses a promise to retu
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-DataAbilityHelper-batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>): Promise<number>--><!--Device-DataAbilityHelper-batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>): Promise<number>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
@@ -49,13 +53,13 @@ Inserts multiple data records into the database. This API uses a promise to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to insert. |
-| valuesBuckets | Array&lt;rdb.ValuesBucket&gt; | Yes | Data records to insert. |
+| valuesBuckets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<rdb.ValuesBucket> | Yes | Data records to insert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the number of inserted data records. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the number of inserted data records. |
 
 ## call
 
@@ -69,6 +73,8 @@ Calls an extended method defined by the DataAbility. This API uses an asynchrono
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-DataAbilityHelper-call(uri: string, method: string, arg: string, extras: PacMap, callback: AsyncCallback<PacMap>): void--><!--Device-DataAbilityHelper-call(uri: string, method: string, arg: string, extras: PacMap, callback: AsyncCallback<PacMap>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
@@ -78,8 +84,8 @@ Calls an extended method defined by the DataAbility. This API uses an asynchrono
 | uri | string | Yes | URI of the DataAbility. Example: 'dataability:///com.example.xxx.xxxx'. |
 | method | string | Yes | Name of the API to call. |
 | arg | string | Yes | Parameter to pass in. |
-| extras | PacMap | Yes | Key-value pair parameter. |
-| callback | AsyncCallback&lt;PacMap&gt; | Yes | Callback used to return the extended parameters in the format ofkey-value pairs. |
+| extras | [PacMap](arkts-ability-pacmap-i.md) | Yes | Key-value pair parameter. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<PacMap> | Yes | Callback used to return the extended parameters in the format of key-value pairs. |
 
 ## call
 
@@ -93,6 +99,8 @@ Calls an extended method defined by the DataAbility. This API uses a promise to 
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-DataAbilityHelper-call(uri: string, method: string, arg: string, extras: PacMap): Promise<PacMap>--><!--Device-DataAbilityHelper-call(uri: string, method: string, arg: string, extras: PacMap): Promise<PacMap>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
@@ -102,13 +110,13 @@ Calls an extended method defined by the DataAbility. This API uses a promise to 
 | uri | string | Yes | URI of the DataAbility. Example: 'dataability:///com.example.xxx.xxxx'. |
 | method | string | Yes | Name of the API to call. |
 | arg | string | Yes | Parameter to pass in. |
-| extras | PacMap | Yes | Key-value pair parameter. |
+| extras | [PacMap](arkts-ability-pacmap-i.md) | Yes | Key-value pair parameter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PacMap&gt; | Promise used to return the extended parameters in the format of key-value pairs. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PacMap> | Promise used to return the extended parameters in the format of key-value pairs. |
 
 ## delete
 
@@ -122,6 +130,8 @@ Deletes one or more data records from the database. This API uses an asynchronou
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-DataAbilityHelper-delete(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-delete(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
@@ -129,8 +139,8 @@ Deletes one or more data records from the database. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to delete. |
-| predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. You should define the processing logicwhen this parameter is null. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the number of deleted data records. |
+| predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. You should define the processing logic when this parameter is null. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the number of deleted data records. |
 
 ## delete
 
@@ -144,6 +154,8 @@ Deletes one or more data records from the database. This API uses a promise to r
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-DataAbilityHelper-delete(uri: string, predicates?: dataAbility.DataAbilityPredicates): Promise<number>--><!--Device-DataAbilityHelper-delete(uri: string, predicates?: dataAbility.DataAbilityPredicates): Promise<number>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
@@ -151,13 +163,13 @@ Deletes one or more data records from the database. This API uses a promise to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to delete. |
-| predicates | dataAbility.DataAbilityPredicates | No | Filter criteria. You should define the processinglogic when this parameter is null. |
+| predicates | dataAbility.DataAbilityPredicates | No | Filter criteria. You should define the processing logic when this parameter is null. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns the number of data records deleted. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Returns the number of data records deleted. |
 
 ## delete
 
@@ -165,12 +177,13 @@ Deletes one or more data records from the database. This API uses a promise to r
 delete(uri: string, callback: AsyncCallback<number>): void
 ```
 
-Uses a custom processing logic to delete data records from the database.
-This API uses an asynchronous callback to return the result.
+Uses a custom processing logic to delete data records from the database.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-DataAbilityHelper-delete(uri: string, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-delete(uri: string, callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -179,7 +192,7 @@ This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to delete. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the number of deleted data records. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the number of deleted data records. |
 
 ## denormalizeUri
 
@@ -187,12 +200,13 @@ This API uses an asynchronous callback to return the result.
 denormalizeUri(uri: string, callback: AsyncCallback<string>): void
 ```
 
-Converts a normalized URI generated by normalizeUri to a denormalized one.
-This API uses an asynchronous callback to return the result.
+Converts a normalized URI generated by normalizeUri to a denormalized one.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-DataAbilityHelper-denormalizeUri(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataAbilityHelper-denormalizeUri(uri: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -201,7 +215,7 @@ This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI object to denormalize. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the denormalized URI object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the denormalized URI object. |
 
 ## denormalizeUri
 
@@ -209,12 +223,13 @@ This API uses an asynchronous callback to return the result.
 denormalizeUri(uri: string): Promise<string>
 ```
 
-Converts a normalized URI generated by normalizeUri to a denormalized one.
-This API uses a promise to return the result.
+Converts a normalized URI generated by normalizeUri to a denormalized one.This API uses a promise to return the result.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-DataAbilityHelper-denormalizeUri(uri: string): Promise<string>--><!--Device-DataAbilityHelper-denormalizeUri(uri: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -228,7 +243,7 @@ This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the denormalized URI object |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the denormalized URI object |
 
 ## executeBatch
 
@@ -246,6 +261,16 @@ Operates data in the database in batches. This API uses an asynchronous callback
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-DataAbilityHelper-executeBatch(
+    uri: string,
+    operations: Array<DataAbilityOperation>,
+    callback: AsyncCallback<Array<DataAbilityResult>>
+  ): void--><!--Device-DataAbilityHelper-executeBatch(
+    uri: string,
+    operations: Array<DataAbilityOperation>,
+    callback: AsyncCallback<Array<DataAbilityResult>>
+  ): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
@@ -253,8 +278,8 @@ Operates data in the database in batches. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the DataAbility. Example: 'dataability:///com.example.xxx.xxxx'. |
-| operations | Array&lt;DataAbilityOperation&gt; | Yes | An array holding the data operations on the database. |
-| callback | AsyncCallback&lt;Array&lt;DataAbilityResult&gt;&gt; | Yes | Callback used to return the result of each operationin the DataAbilityResult array. |
+| operations | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<DataAbilityOperation> | Yes | An array holding the data operations on the database. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<DataAbilityResult>> | Yes | Callback used to return the result of each operation in the DataAbilityResult array. |
 
 ## executeBatch
 
@@ -268,6 +293,8 @@ Operates data in the database in batches. This API uses a promise to return the 
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-DataAbilityHelper-executeBatch(uri: string, operations: Array<DataAbilityOperation>): Promise<Array<DataAbilityResult>>--><!--Device-DataAbilityHelper-executeBatch(uri: string, operations: Array<DataAbilityOperation>): Promise<Array<DataAbilityResult>>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
@@ -275,13 +302,13 @@ Operates data in the database in batches. This API uses a promise to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the DataAbility. Example: 'dataability:///com.example.xxx.xxxx'. |
-| operations | Array&lt;DataAbilityOperation&gt; | Yes | An array holding the data operations on the database. |
+| operations | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<DataAbilityOperation> | Yes | An array holding the data operations on the database. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DataAbilityResult&gt;&gt; | Promise used to return the result of each operation in theDataAbilityResult array. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<DataAbilityResult>> | Promise used to return the result of each operation in the DataAbilityResult array. |
 
 ## getFileTypes
 
@@ -289,12 +316,13 @@ Operates data in the database in batches. This API uses a promise to return the 
 getFileTypes(uri: string, mimeTypeFilter: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains the supported media resource types of a specified file.
-This API uses an asynchronous callback to return the result.
+Obtains the supported media resource types of a specified file.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-DataAbilityHelper-getFileTypes(uri: string, mimeTypeFilter: string, callback: AsyncCallback<Array<string>>): void--><!--Device-DataAbilityHelper-getFileTypes(uri: string, mimeTypeFilter: string, callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -304,7 +332,7 @@ This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file. |
 | mimeTypeFilter | string | Yes | Media resource type of the file to obtain. |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return an array holding the media resourcetypes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback used to return an array holding the media resource types. |
 
 ## getFileTypes
 
@@ -318,6 +346,8 @@ Obtains the supported media resource types of a specified file. This API uses a 
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-DataAbilityHelper-getFileTypes(uri: string, mimeTypeFilter: string): Promise<Array<string>>--><!--Device-DataAbilityHelper-getFileTypes(uri: string, mimeTypeFilter: string): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
@@ -331,7 +361,7 @@ Obtains the supported media resource types of a specified file. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return an array holding the media resource types. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return an array holding the media resource types. |
 
 ## getType
 
@@ -339,12 +369,13 @@ Obtains the supported media resource types of a specified file. This API uses a 
 getType(uri: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the media resource type of the data specified by a given URI.
-This API uses an asynchronous callback to return the result.
+Obtains the media resource type of the data specified by a given URI.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-DataAbilityHelper-getType(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataAbilityHelper-getType(uri: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -353,7 +384,7 @@ This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the media resource type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the media resource type. |
 
 ## getType
 
@@ -361,12 +392,13 @@ This API uses an asynchronous callback to return the result.
 getType(uri: string): Promise<string>
 ```
 
-Obtains the media resource type of the data specified by a given URI.
-This API uses a promise to return the result.
+Obtains the media resource type of the data specified by a given URI.This API uses a promise to return the result.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-DataAbilityHelper-getType(uri: string): Promise<string>--><!--Device-DataAbilityHelper-getType(uri: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -380,7 +412,7 @@ This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the media resource type. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the media resource type. |
 
 ## insert
 
@@ -394,6 +426,8 @@ Inserts a single data record into the database. This API uses an asynchronous ca
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-DataAbilityHelper-insert(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-insert(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
@@ -402,7 +436,7 @@ Inserts a single data record into the database. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to insert. |
 | valuesBucket | rdb.ValuesBucket | Yes | Data record to insert. If this parameter is null, a blank row will be inserted. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the index of the inserted data record. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the index of the inserted data record. |
 
 ## insert
 
@@ -416,6 +450,8 @@ Inserts a single data record into the database. This API uses a promise to retur
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-DataAbilityHelper-insert(uri: string, valuesBucket: rdb.ValuesBucket): Promise<number>--><!--Device-DataAbilityHelper-insert(uri: string, valuesBucket: rdb.ValuesBucket): Promise<number>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
@@ -423,13 +459,13 @@ Inserts a single data record into the database. This API uses a promise to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to insert. |
-| valuesBucket | rdb.ValuesBucket | Yes | Data record to insert. If this parameter is null, a blank row willbe inserted. |
+| valuesBucket | rdb.ValuesBucket | Yes | Data record to insert. If this parameter is null, a blank row will be inserted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the index of the inserted data record. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the index of the inserted data record. |
 
 ## normalizeUri
 
@@ -437,12 +473,13 @@ Inserts a single data record into the database. This API uses a promise to retur
 normalizeUri(uri: string, callback: AsyncCallback<string>): void
 ```
 
-Converts the URI that refers to a DataAbility into a normalized URI.
-This API uses an asynchronous callback to return the result.
+Converts the URI that refers to a DataAbility into a normalized URI.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-DataAbilityHelper-normalizeUri(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataAbilityHelper-normalizeUri(uri: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -451,7 +488,7 @@ This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI object to normalize. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the normalized URI object if the DataAbilitysupports URI normalization. If the DataAbility does not support URI normalization, null is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the normalized URI object if the DataAbility supports URI normalization. If the DataAbility does not support URI normalization, null is returned. |
 
 ## normalizeUri
 
@@ -459,12 +496,13 @@ This API uses an asynchronous callback to return the result.
 normalizeUri(uri: string): Promise<string>
 ```
 
-Converts a normalized URI generated by normalizeUri to a denormalized one.
-This API uses an asynchronous callback to return the result.
+Converts a normalized URI generated by normalizeUri to a denormalized one.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-DataAbilityHelper-normalizeUri(uri: string): Promise<string>--><!--Device-DataAbilityHelper-normalizeUri(uri: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -478,7 +516,7 @@ This API uses an asynchronous callback to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the normalized URI object if the DataAbility supports URInormalization. If the DataAbility does not support URI normalization, null is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the normalized URI object if the DataAbility supports URI normalization. If the DataAbility does not support URI normalization, null is returned. |
 
 ## notifyChange
 
@@ -486,12 +524,13 @@ This API uses an asynchronous callback to return the result.
 notifyChange(uri: string, callback: AsyncCallback<void>): void
 ```
 
-Notifies the registered observer of a change to the data specified by the URI.
-This API uses an asynchronous callback to return the result.
+Notifies the registered observer of a change to the data specified by the URI.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-DataAbilityHelper-notifyChange(uri: string, callback: AsyncCallback<void>): void--><!--Device-DataAbilityHelper-notifyChange(uri: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -500,7 +539,7 @@ This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data that changes. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the observer is registered, erris undefined. Otherwise, err is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the observer is registered, err is undefined. Otherwise, err is an error object. |
 
 ## notifyChange
 
@@ -508,12 +547,13 @@ This API uses an asynchronous callback to return the result.
 notifyChange(uri: string): Promise<void>
 ```
 
-Notifies the registered observer of a change to the data specified by the URI.
-This API uses a promise to return the result.
+Notifies the registered observer of a change to the data specified by the URI.This API uses a promise to return the result.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-DataAbilityHelper-notifyChange(uri: string): Promise<void>--><!--Device-DataAbilityHelper-notifyChange(uri: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -527,7 +567,7 @@ This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## off('dataChange')
 
@@ -535,12 +575,13 @@ This API uses a promise to return the result.
 off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void
 ```
 
-Deregisters the observer that listens for changes in the data specified by a given URI.
-This API uses an asynchronous callback to return the result.
+Deregisters the observer that listens for changes in the data specified by a given URI.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-DataAbilityHelper-off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void--><!--Device-DataAbilityHelper-off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -550,7 +591,7 @@ This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | The value 'dataChange' means data changes. |
 | uri | string | Yes | URI of the data. |
-| callback | AsyncCallback&lt;void&gt; | No | Callback used to return the result. If the observer is deregistered,err is undefined. Otherwise, err is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | No | Callback used to return the result. If the observer is deregistered,err is undefined. Otherwise, err is an error object. |
 
 ## on('dataChange')
 
@@ -558,12 +599,13 @@ This API uses an asynchronous callback to return the result.
 on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
 ```
 
-Registers an observer to listen for changes in the data specified by a given URI.
-This API uses an asynchronous callback to return the result.
+Registers an observer to listen for changes in the data specified by a given URI.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-DataAbilityHelper-on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void--><!--Device-DataAbilityHelper-on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -573,7 +615,7 @@ This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | The value 'dataChange' means data changes. |
 | uri | string | Yes | URI of the data. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the observer is registered, erris undefined. Otherwise, err is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the observer is registered, err is undefined. Otherwise, err is an error object. |
 
 ## openFile
 
@@ -587,6 +629,8 @@ Opens a file with a specified URI. This API uses an asynchronous callback to ret
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-DataAbilityHelper-openFile(uri: string, mode: string, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-openFile(uri: string, mode: string, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
@@ -594,8 +638,8 @@ Opens a file with a specified URI. This API uses an asynchronous callback to ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file to open. |
-| mode | string | Yes | Mode for opening the file. The value r indicates read-only access, w indicates write-onlyaccess, and rw indicates read-write access. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the file descriptor. |
+| mode | string | Yes | Mode for opening the file. The value r indicates read-only access, w indicates write-only access, and rw indicates read-write access. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the file descriptor. |
 
 ## openFile
 
@@ -609,6 +653,8 @@ Opens a file with a specified URI. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-DataAbilityHelper-openFile(uri: string, mode: string): Promise<number>--><!--Device-DataAbilityHelper-openFile(uri: string, mode: string): Promise<number>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
@@ -616,13 +662,13 @@ Opens a file with a specified URI. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file to open. |
-| mode | string | Yes | Mode for opening the file. The value r indicates read-only access, w indicates write-onlyaccess, and rw indicates read-write access. |
+| mode | string | Yes | Mode for opening the file. The value r indicates read-only access, w indicates write-only access, and rw indicates read-write access. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the file descriptor. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the file descriptor. |
 
 ## query
 
@@ -641,6 +687,18 @@ Queries data in the database. This API uses an asynchronous callback to return t
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-DataAbilityHelper-query(
+    uri: string,
+    columns: Array<string>,
+    predicates: dataAbility.DataAbilityPredicates,
+    callback: AsyncCallback<ResultSet>
+  ): void--><!--Device-DataAbilityHelper-query(
+    uri: string,
+    columns: Array<string>,
+    predicates: dataAbility.DataAbilityPredicates,
+    callback: AsyncCallback<ResultSet>
+  ): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
@@ -648,9 +706,9 @@ Queries data in the database. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to query. |
-| columns | Array&lt;string&gt; | Yes | Columns to query. If this parameter is null, all columns will be queried. |
-| predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. When null is passed in, you need tocustomize the logic for querying data in the database. |
-| callback | AsyncCallback&lt;ResultSet&gt; | Yes | Callback used to return the result. |
+| columns | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Columns to query. If this parameter is null, all columns will be queried. |
+| predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. When null is passed in, you need to customize the logic for querying data in the database. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ResultSet> | Yes | Callback used to return the result. |
 
 ## query
 
@@ -664,6 +722,8 @@ Queries data in the database. This API uses an asynchronous callback to return t
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-DataAbilityHelper-query(uri: string, callback: AsyncCallback<ResultSet>): void--><!--Device-DataAbilityHelper-query(uri: string, callback: AsyncCallback<ResultSet>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
@@ -671,7 +731,7 @@ Queries data in the database. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to query. |
-| callback | AsyncCallback&lt;ResultSet&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ResultSet> | Yes | Callback used to return the result. |
 
 ## query
 
@@ -685,6 +745,8 @@ Queries data in the database. This API uses an asynchronous callback to return t
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-DataAbilityHelper-query(uri: string, columns: Array<string>, callback: AsyncCallback<ResultSet>): void--><!--Device-DataAbilityHelper-query(uri: string, columns: Array<string>, callback: AsyncCallback<ResultSet>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
@@ -692,8 +754,8 @@ Queries data in the database. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to query. |
-| columns | Array&lt;string&gt; | Yes | Columns to query. If this parameter is null, all columns will be queried. |
-| callback | AsyncCallback&lt;ResultSet&gt; | Yes | Callback used to return the result. |
+| columns | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Columns to query. If this parameter is null, all columns will be queried. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ResultSet> | Yes | Callback used to return the result. |
 
 ## query
 
@@ -707,6 +769,8 @@ Queries data in the database. This API uses an asynchronous callback to return t
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-DataAbilityHelper-query(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<ResultSet>): void--><!--Device-DataAbilityHelper-query(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<ResultSet>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
@@ -714,8 +778,8 @@ Queries data in the database. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to query. |
-| predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. When null is passed in, you need tocustomize the logic for querying data in the database. |
-| callback | AsyncCallback&lt;ResultSet&gt; | Yes | Callback used to return the result. |
+| predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. When null is passed in, you need to customize the logic for querying data in the database. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ResultSet> | Yes | Callback used to return the result. |
 
 ## query
 
@@ -729,6 +793,8 @@ Queries data in the database. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-DataAbilityHelper-query(uri: string, columns?: Array<string>, predicates?: dataAbility.DataAbilityPredicates): Promise<ResultSet>--><!--Device-DataAbilityHelper-query(uri: string, columns?: Array<string>, predicates?: dataAbility.DataAbilityPredicates): Promise<ResultSet>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
@@ -736,14 +802,14 @@ Queries data in the database. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to query. |
-| columns | Array&lt;string&gt; | No | Columns to query. If this parameter is null, all columns will be queried. |
-| predicates | dataAbility.DataAbilityPredicates | No | Filter criteria. When null is passed in, you need tocustomize the logic for querying data in the database. |
+| columns | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | No | Columns to query. If this parameter is null, all columns will be queried. |
+| predicates | dataAbility.DataAbilityPredicates | No | Filter criteria. When null is passed in, you need to customize the logic for querying data in the database. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultSet&gt; | Returns the query result {@link ResultSet}. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ResultSet> | Returns the query result {@link ResultSet}. |
 
 ## update
 
@@ -756,12 +822,23 @@ update(
   ): void
 ```
 
-Updates data in the database.
-This API uses an asynchronous callback to return the result.
+Updates data in the database.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-DataAbilityHelper-update(
+    uri: string,
+    valuesBucket: rdb.ValuesBucket,
+    predicates: dataAbility.DataAbilityPredicates,
+    callback: AsyncCallback<number>
+  ): void--><!--Device-DataAbilityHelper-update(
+    uri: string,
+    valuesBucket: rdb.ValuesBucket,
+    predicates: dataAbility.DataAbilityPredicates,
+    callback: AsyncCallback<number>
+  ): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -771,8 +848,8 @@ This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to update. |
 | valuesBucket | rdb.ValuesBucket | Yes | New values. |
-| predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. You should define the processing logicwhen this parameter is null. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the number of updated data records. |
+| predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. You should define the processing logic when this parameter is null. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the number of updated data records. |
 
 ## update
 
@@ -786,6 +863,8 @@ Updates data in the database. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-DataAbilityHelper-update(uri: string, valuesBucket: rdb.ValuesBucket, predicates?: dataAbility.DataAbilityPredicates): Promise<number>--><!--Device-DataAbilityHelper-update(uri: string, valuesBucket: rdb.ValuesBucket, predicates?: dataAbility.DataAbilityPredicates): Promise<number>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
@@ -794,13 +873,13 @@ Updates data in the database. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to update. |
 | valuesBucket | rdb.ValuesBucket | Yes | New values. |
-| predicates | dataAbility.DataAbilityPredicates | No | Filter criteria. You should define the processinglogic when this parameter is null. |
+| predicates | dataAbility.DataAbilityPredicates | No | Filter criteria. You should define the processing logic when this parameter is null. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the number of updated data records. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the number of updated data records. |
 
 ## update
 
@@ -808,12 +887,13 @@ Updates data in the database. This API uses a promise to return the result.
 update(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<number>): void
 ```
 
-Uses a custom processing logic to update data records in the database.
-This API uses an asynchronous callback to return the result.
+Uses a custom processing logic to update data records in the database.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-DataAbilityHelper-update(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-update(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -823,5 +903,5 @@ This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to update. |
 | valuesBucket | rdb.ValuesBucket | Yes | New values. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the number of updated data records. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the number of updated data records. |
 

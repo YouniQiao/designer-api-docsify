@@ -18,6 +18,8 @@ Batch sets reminders for specified applications. This API uses a promise to retu
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function setReminderInfoByBundles(reminderInfos: Array<NotificationReminderInfo>) : Promise<void>--><!--Device-notificationManager-function setReminderInfoByBundles(reminderInfos: Array<NotificationReminderInfo>) : Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Batch sets reminders for specified applications. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderInfos | Array&lt;NotificationReminderInfo&gt; | Yes | Reminders to be set. |
+| reminderInfos | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<NotificationReminderInfo> | Yes | Reminders to be set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

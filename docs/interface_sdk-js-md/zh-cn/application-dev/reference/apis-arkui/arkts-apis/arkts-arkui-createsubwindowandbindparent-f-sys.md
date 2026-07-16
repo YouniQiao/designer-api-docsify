@@ -1,5 +1,11 @@
 # createSubWindowAndBindParent（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+```
+
 ## createSubWindowAndBindParent
 
 ```TypeScript
@@ -17,6 +23,10 @@ function createSubWindowAndBindParent(name: string, parentId: number, ctx: BaseC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-window-function createSubWindowAndBindParent(name: string, parentId: int, ctx: BaseContext,
+    parentWindowEventListener: WindowEventListener): Promise<Window>--><!--Device-window-function createSubWindowAndBindParent(name: string, parentId: int, ctx: BaseContext,
+    parentWindowEventListener: WindowEventListener): Promise<Window>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **系统接口：** 此接口为系统接口。
@@ -27,14 +37,14 @@ function createSubWindowAndBindParent(name: string, parentId: number, ctx: BaseC
 | --- | --- | --- | --- |
 | name | string | 是 | Indicates window name. |
 | parentId | number | 是 | Indicates parent window id. The window id is a non-negative number and exists. |
-| ctx | BaseContext | 是 | Indicates the context on which the window depends |
-| parentWindowEventListener | WindowEventListener | 是 | Indicates the event listener of parent window. |
+| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | Indicates the context on which the window depends |
+| parentWindowEventListener | [WindowEventListener](arkts-arkui-windoweventlistener-t.md) | 是 | Indicates the event listener of parent window. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Window&gt; | Promise对象。返回当前创建的子窗口对象。 |
+| Promise<Window> | Promise对象。返回当前创建的子窗口对象。 |
 
 **错误码：**
 

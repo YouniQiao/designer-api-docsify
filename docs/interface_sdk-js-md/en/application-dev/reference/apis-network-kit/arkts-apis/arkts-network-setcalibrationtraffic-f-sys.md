@@ -20,6 +20,8 @@ Set calibration traffic data.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-statistics-function setCalibrationTraffic(simId: int, remainTraffic: long, totalTraffic?: long): Promise<void>--><!--Device-statistics-function setCalibrationTraffic(simId: int, remainTraffic: long, totalTraffic?: long): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -36,7 +38,7 @@ Set calibration traffic data.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

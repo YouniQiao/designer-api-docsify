@@ -18,14 +18,16 @@ Generates a CSR.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-cert-function generateCsr(keyInfo: PrivateKeyInfo, config: CsrGenerationConfig): string | Uint8Array--><!--Device-cert-function generateCsr(keyInfo: PrivateKeyInfo, config: CsrGenerationConfig): string | Uint8Array-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyInfo | PrivateKeyInfo | Yes | Private key information. |
-| config | CsrGenerationConfig | Yes | Configuration for generating the CSR. |
+| keyInfo | [PrivateKeyInfo](arkts-devicecertificate-privatekeyinfo-i.md) | Yes | Private key information. |
+| config | [CsrGenerationConfig](arkts-devicecertificate-csrgenerationconfig-i.md) | Yes | Configuration for generating the CSR. |
 
 **Return value:**
 

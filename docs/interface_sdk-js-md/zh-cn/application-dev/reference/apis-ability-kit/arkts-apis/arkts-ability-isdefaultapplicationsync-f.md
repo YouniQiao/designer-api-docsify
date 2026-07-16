@@ -1,15 +1,22 @@
 # isDefaultApplicationSync
 
+## 导入模块
+
+```TypeScript
+import { defaultAppManager } from '@kit.AbilityKit';
+```
+
 ## isDefaultApplicationSync
 
 ```TypeScript
 function isDefaultApplicationSync(type: string): boolean
 ```
 
-以同步方法根据系统已定义的应用类型或者[UniformDataType](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md)类型判断当前应用是否是该类型的默认
-应用，使用boolean形式返回结果。
+以同步方法根据系统已定义的应用类型或者[UniformDataType](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md)类型判断当前应用是否是该类型的默认应用，使用boolean形式返回结果。
 
 **起始版本：** 10
+
+<!--Device-defaultAppManager-function isDefaultApplicationSync(type: string): boolean--><!--Device-defaultAppManager-function isDefaultApplicationSync(type: string): boolean-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.DefaultApp
 

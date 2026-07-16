@@ -1,5 +1,11 @@
 # setKeyboardRepeatRate（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+```
+
 ## setKeyboardRepeatRate
 
 ```TypeScript
@@ -10,6 +16,8 @@ function setKeyboardRepeatRate(rate: number, callback: AsyncCallback<void>): voi
 
 **起始版本：** 10
 
+<!--Device-inputDevice-function setKeyboardRepeatRate(rate: int, callback: AsyncCallback<void>): void--><!--Device-inputDevice-function setKeyboardRepeatRate(rate: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **系统接口：** 此接口为系统接口。
@@ -19,7 +27,7 @@ function setKeyboardRepeatRate(rate: number, callback: AsyncCallback<void>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rate | number | 是 | 键盘按键重复速率，默认值50ms/次，调节范围[36ms/次，100ms/次]。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当设置键盘按键重复速率成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当设置键盘按键重复速率成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -71,6 +79,8 @@ function setKeyboardRepeatRate(rate: number): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-inputDevice-function setKeyboardRepeatRate(rate: int): Promise<void>--><!--Device-inputDevice-function setKeyboardRepeatRate(rate: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **系统接口：** 此接口为系统接口。
@@ -85,7 +95,7 @@ function setKeyboardRepeatRate(rate: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

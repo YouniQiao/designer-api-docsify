@@ -20,6 +20,8 @@ Queries single- or double-touch mode.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-accessibility-function getTouchModeSync(): string--><!--Device-accessibility-function getTouchModeSync(): string-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Return value:**

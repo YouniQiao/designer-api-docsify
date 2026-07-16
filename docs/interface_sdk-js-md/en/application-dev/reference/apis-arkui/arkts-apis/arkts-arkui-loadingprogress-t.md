@@ -4,14 +4,15 @@
 type LoadingProgress = TypedFrameNode<LoadingProgressInterface, LoadingProgressAttribute>
 ```
 
-Represents a FrameNode of the **LoadingProgress** type. This type of node does not allow child components to be
-added.
+Represents a FrameNode of the **LoadingProgress** type. This type of node does not allow child components to be added.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-typeNode-type LoadingProgress = TypedFrameNode<LoadingProgressInterface, LoadingProgressAttribute>--><!--Device-typeNode-type LoadingProgress = TypedFrameNode<LoadingProgressInterface, LoadingProgressAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

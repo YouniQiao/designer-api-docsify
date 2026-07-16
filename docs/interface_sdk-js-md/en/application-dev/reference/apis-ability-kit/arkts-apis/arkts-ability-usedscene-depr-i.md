@@ -1,8 +1,8 @@
 # UsedScene
 
-> **NOTE**
->
-> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use  
 > [UsedScene](arkts-ability-usedscene-depr-i.md) instead.
 
 Describes the application scenario and timing for using the permission.
@@ -12,6 +12,8 @@ Describes the application scenario and timing for using the permission.
 **Deprecated since:** 9
 
 **Substitutes:** [bundleInfo:UsedScene](arkts-ability-usedscene-depr-i.md)
+
+<!--Device-unnamed-export interface UsedScene--><!--Device-unnamed-export interface UsedScene-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -33,6 +35,8 @@ Abilities that use the permission.
 
 **Substitutes:** abilities
 
+<!--Device-UsedScene-abilities: Array<string>--><!--Device-UsedScene-abilities: Array<string>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## when
@@ -52,6 +56,8 @@ Time when the permission is used.
 **Deprecated since:** 9
 
 **Substitutes:** when
+
+<!--Device-UsedScene-when: string--><!--Device-UsedScene-when: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 

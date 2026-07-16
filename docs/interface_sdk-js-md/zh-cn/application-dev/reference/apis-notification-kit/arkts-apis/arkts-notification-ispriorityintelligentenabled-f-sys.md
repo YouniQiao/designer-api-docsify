@@ -20,6 +20,8 @@ function isPriorityIntelligentEnabled(): Promise<boolean>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-notificationManager-function isPriorityIntelligentEnabled(): Promise<boolean>--><!--Device-notificationManager-function isPriorityIntelligentEnabled(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -28,7 +30,7 @@ function isPriorityIntelligentEnabled(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回包含优先通知智能服务使能状态的Promise对象。<br> - true：优先通知智能服务为打开状态。<br> - false：优先通知智能服务为关闭状态。 |
+| Promise<boolean> | Promise对象，返回包含优先通知智能服务使能状态的Promise对象。<br> - true：优先通知智能服务为打开状态。<br> - false：优先通知智能服务为关闭状态。 |
 
 **错误码：**
 

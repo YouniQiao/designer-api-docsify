@@ -18,6 +18,8 @@ Callback when the network state corresponding to the default sim card is updated
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-observer-function on(type: 'networkStateChange', callback: Callback<NetworkState>): void--><!--Device-observer-function on(type: 'networkStateChange', callback: Callback<NetworkState>): void-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
@@ -25,7 +27,7 @@ Callback when the network state corresponding to the default sim card is updated
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'networkStateChange' | Yes | Event type. Indicates the networkStateChange event to be subscribed to. |
-| callback | Callback&lt;NetworkState&gt; | Yes | Indicates the callback forgetting an instance of the {@code NetworkState} class. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<NetworkState> | Yes | Indicates the callback for getting an instance of the {@code NetworkState} class. |
 
 **Error codes:**
 
@@ -60,6 +62,8 @@ Callback when the network state corresponding to the monitored {@code slotId} is
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-observer-function on(type: 'networkStateChange', options: ObserverOptions, callback: Callback<NetworkState>): void--><!--Device-observer-function on(type: 'networkStateChange', options: ObserverOptions, callback: Callback<NetworkState>): void-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
@@ -67,8 +71,8 @@ Callback when the network state corresponding to the monitored {@code slotId} is
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'networkStateChange' | Yes | Event type. Indicates the networkStateChange event to be subscribed to. |
-| options | ObserverOptions | Yes | Indicates the options for observer. |
-| callback | Callback&lt;NetworkState&gt; | Yes | Indicates the callback for gettingan instance of the {@code NetworkState} class. |
+| options | [ObserverOptions](arkts-telephony-observeroptions-i.md) | Yes | Indicates the options for observer. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<NetworkState> | Yes | Indicates the callback for getting an instance of the {@code NetworkState} class. |
 
 **Error codes:**
 
@@ -104,6 +108,8 @@ Callback when the signal strength corresponding to the default sim card is updat
 
 **Since:** 6
 
+<!--Device-observer-function on(type: 'signalInfoChange', callback: Callback<Array<SignalInformation>>): void--><!--Device-observer-function on(type: 'signalInfoChange', callback: Callback<Array<SignalInformation>>): void-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
@@ -111,7 +117,7 @@ Callback when the signal strength corresponding to the default sim card is updat
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'signalInfoChange' | Yes | Event type. Indicates the signalInfoChange event to be subscribed to. |
-| callback | Callback&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Indicates the callback for gettingan array of instances of the classes derived from {@link SignalInformation}. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<SignalInformation>> | Yes | Indicates the callback for getting an array of instances of the classes derived from {@link SignalInformation}. |
 
 **Error codes:**
 
@@ -145,6 +151,8 @@ Callback when the signal strength corresponding to a monitored {@code slotId} is
 
 **Since:** 11
 
+<!--Device-observer-function on(type: 'signalInfoChange', options: ObserverOptions, callback: Callback<Array<SignalInformation>>): void--><!--Device-observer-function on(type: 'signalInfoChange', options: ObserverOptions, callback: Callback<Array<SignalInformation>>): void-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
@@ -152,8 +160,8 @@ Callback when the signal strength corresponding to a monitored {@code slotId} is
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'signalInfoChange' | Yes | Event type. Indicates the signalInfoChange event to be subscribed to. |
-| options | ObserverOptions | Yes | Indicates the options for observer. |
-| callback | Callback&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Indicates the callback for gettingan array of instances of the classes derived from {@link SignalInformation}. |
+| options | [ObserverOptions](arkts-telephony-observeroptions-i.md) | Yes | Indicates the options for observer. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<SignalInformation>> | Yes | Indicates the callback for getting an array of instances of the classes derived from {@link SignalInformation}. |
 
 **Error codes:**
 
@@ -190,14 +198,16 @@ Callback when the cellular data link connection state corresponding to the defau
 
 **Since:** 11
 
+<!--Device-observer-function on(type: 'cellularDataConnectionStateChange', callback: Callback<DataConnectionStateInfo>): void--><!--Device-observer-function on(type: 'cellularDataConnectionStateChange', callback: Callback<DataConnectionStateInfo>): void-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cellularDataConnectionStateChange' | Yes | Event type. Indicates the cellularDataConnectionStateChangeevent to be subscribed to. |
-| callback | Callback&lt;DataConnectionStateInfo&gt; | Yes | Indicates the callback forgetting the cellular data link connection state, and networkType Indicates the radio access technologyfor cellular data services. |
+| type | 'cellularDataConnectionStateChange' | Yes | Event type. Indicates the cellularDataConnectionStateChange event to be subscribed to. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DataConnectionStateInfo> | Yes | Indicates the callback for getting the cellular data link connection state, and networkType Indicates the radio access technology for cellular data services. |
 
 **Error codes:**
 
@@ -230,15 +240,19 @@ Callback when the cellular data link connection state corresponding to the monit
 
 **Since:** 11
 
+<!--Device-observer-function on(type: 'cellularDataConnectionStateChange', options: ObserverOptions,
+              callback: Callback<DataConnectionStateInfo>): void--><!--Device-observer-function on(type: 'cellularDataConnectionStateChange', options: ObserverOptions,
+              callback: Callback<DataConnectionStateInfo>): void-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cellularDataConnectionStateChange' | Yes | Event type. Indicates the cellularDataConnectionStateChangeevent to be subscribed to. |
-| options | ObserverOptions | Yes | Indicates the options for observer. |
-| callback | Callback&lt;DataConnectionStateInfo&gt; | Yes | Indicates the callback forgetting the cellular data link connection state, and networkType Indicates the radio access technology forcellular data services. |
+| type | 'cellularDataConnectionStateChange' | Yes | Event type. Indicates the cellularDataConnectionStateChange event to be subscribed to. |
+| options | [ObserverOptions](arkts-telephony-observeroptions-i.md) | Yes | Indicates the options for observer. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DataConnectionStateInfo> | Yes | Indicates the callback for getting the cellular data link connection state, and networkType Indicates the radio access technology for cellular data services. |
 
 **Error codes:**
 
@@ -269,10 +283,11 @@ observer.on('cellularDataConnectionStateChange', options, (data: observer.DataCo
 function on(type: 'cellularDataFlowChange', callback: Callback<DataFlowType>): void
 ```
 
-Callback when the uplink and downlink data flow state of cellular data services
-corresponding to the default sim card is updated.
+Callback when the uplink and downlink data flow state of cellular data services corresponding to the default sim card is updated.
 
 **Since:** 7
+
+<!--Device-observer-function on(type: 'cellularDataFlowChange', callback: Callback<DataFlowType>): void--><!--Device-observer-function on(type: 'cellularDataFlowChange', callback: Callback<DataFlowType>): void-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -281,7 +296,7 @@ corresponding to the default sim card is updated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cellularDataFlowChange' | Yes | Event type. Indicates the cellularDataFlowChange event to be subscribed to. |
-| callback | Callback&lt;DataFlowType&gt; | Yes | Indicates the callback for getting the cellular data flow state. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DataFlowType> | Yes | Indicates the callback for getting the cellular data flow state. |
 
 **Error codes:**
 
@@ -311,10 +326,11 @@ observer.on('cellularDataFlowChange', (data: data.DataFlowType) => {
 function on(type: 'cellularDataFlowChange', options: ObserverOptions, callback: Callback<DataFlowType>): void
 ```
 
-Callback when the uplink and downlink data flow state of cellular data services
-corresponding to the monitored {@code slotId} is updated.
+Callback when the uplink and downlink data flow state of cellular data services corresponding to the monitored {@code slotId} is updated.
 
 **Since:** 11
+
+<!--Device-observer-function on(type: 'cellularDataFlowChange', options: ObserverOptions, callback: Callback<DataFlowType>): void--><!--Device-observer-function on(type: 'cellularDataFlowChange', options: ObserverOptions, callback: Callback<DataFlowType>): void-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -323,8 +339,8 @@ corresponding to the monitored {@code slotId} is updated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cellularDataFlowChange' | Yes | Event type. Indicates the cellularDataFlowChange event to be subscribed to. |
-| options | ObserverOptions | Yes | Indicates the options for observer. |
-| callback | Callback&lt;DataFlowType&gt; | Yes | Indicates the callback for getting the cellular data flow state. |
+| options | [ObserverOptions](arkts-telephony-observeroptions-i.md) | Yes | Indicates the options for observer. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DataFlowType> | Yes | Indicates the callback for getting the cellular data flow state. |
 
 **Error codes:**
 
@@ -361,6 +377,8 @@ Callback when the call state corresponding to the default sim card is updated.
 
 **Since:** 11
 
+<!--Device-observer-function on(type: 'callStateChange', callback: Callback<CallStateInfo>): void--><!--Device-observer-function on(type: 'callStateChange', callback: Callback<CallStateInfo>): void-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
@@ -368,7 +386,7 @@ Callback when the call state corresponding to the default sim card is updated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callStateChange' | Yes | Event type. Indicates the callStateChange event to be subscribed to. |
-| callback | Callback&lt;CallStateInfo&gt; | Yes | Indicates the callback forgetting the call state and the called number. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CallStateInfo> | Yes | Indicates the callback for getting the call state and the called number. |
 
 **Error codes:**
 
@@ -400,6 +418,8 @@ Callback when the call state corresponding to the monitored {@code slotId} is up
 
 **Since:** 11
 
+<!--Device-observer-function on(type: 'callStateChange', options: ObserverOptions, callback: Callback<CallStateInfo>): void--><!--Device-observer-function on(type: 'callStateChange', options: ObserverOptions, callback: Callback<CallStateInfo>): void-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
@@ -407,8 +427,8 @@ Callback when the call state corresponding to the monitored {@code slotId} is up
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callStateChange' | Yes | Event type. Indicates the callStateChange event to be subscribed to. |
-| options | ObserverOptions | Yes | Indicates the options for observer. |
-| callback | Callback&lt;CallStateInfo&gt; | Yes | Indicates the callback forgetting the call state and the called number. |
+| options | [ObserverOptions](arkts-telephony-observeroptions-i.md) | Yes | Indicates the options for observer. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CallStateInfo> | Yes | Indicates the callback for getting the call state and the called number. |
 
 **Error codes:**
 
@@ -443,6 +463,8 @@ Callback when the telCall state corresponding to the monitored {@code slotId} is
 
 **Since:** 21
 
+<!--Device-observer-function on(type: 'callStateChangeEx', callback: Callback<TelCallState>, options?: ObserverOptions): void--><!--Device-observer-function on(type: 'callStateChangeEx', callback: Callback<TelCallState>, options?: ObserverOptions): void-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
@@ -450,8 +472,8 @@ Callback when the telCall state corresponding to the monitored {@code slotId} is
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callStateChangeEx' | Yes | Event type. Indicates the callStateChangeEx event to be subscribed to. |
-| callback | Callback&lt;TelCallState&gt; | Yes | Indicates the callback forgetting the telCall state. |
-| options | ObserverOptions | No | Indicates the options for observer. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<TelCallState> | Yes | Indicates the callback for getting the telCall state. |
+| options | [ObserverOptions](arkts-telephony-observeroptions-i.md) | No | Indicates the options for observer. |
 
 **Error codes:**
 
@@ -490,6 +512,8 @@ Callback when the sim state corresponding to the default sim card is updated.
 
 **Since:** 7
 
+<!--Device-observer-function on(type: 'simStateChange', callback: Callback<SimStateData>): void--><!--Device-observer-function on(type: 'simStateChange', callback: Callback<SimStateData>): void-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
@@ -497,7 +521,7 @@ Callback when the sim state corresponding to the default sim card is updated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'simStateChange' | Yes | Event type. Indicates the simStateChange event to be subscribed to. |
-| callback | Callback&lt;SimStateData&gt; | Yes | Indicates the callback for getting the SimStateData object.including state Indicates the sim state, and reason Indicates the cause of the change. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SimStateData> | Yes | Indicates the callback for getting the SimStateData object.including state Indicates the sim state, and reason Indicates the cause of the change. |
 
 **Error codes:**
 
@@ -529,6 +553,8 @@ Callback when the sim state corresponding to the monitored {@code slotId} is upd
 
 **Since:** 11
 
+<!--Device-observer-function on(type: 'simStateChange', options: ObserverOptions, callback: Callback<SimStateData>): void--><!--Device-observer-function on(type: 'simStateChange', options: ObserverOptions, callback: Callback<SimStateData>): void-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
@@ -536,8 +562,8 @@ Callback when the sim state corresponding to the monitored {@code slotId} is upd
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'simStateChange' | Yes | Event type. Indicates the simStateChange event to be subscribed to. |
-| options | ObserverOptions | Yes | Indicates the options for observer. |
-| callback | Callback&lt;SimStateData&gt; | Yes | Indicates the callback for getting the SimStateData object. |
+| options | [ObserverOptions](arkts-telephony-observeroptions-i.md) | Yes | Indicates the options for observer. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SimStateData> | Yes | Indicates the callback for getting the SimStateData object. |
 
 **Error codes:**
 
@@ -568,10 +594,11 @@ observer.on('simStateChange', options, (data: observer.SimStateData) => {
 function on(type: 'iccAccountInfoChange', callback: Callback<void>): void
 ```
 
-Receives an ICC account change. This callback is invoked when the ICC account updates
-and the observer is added to monitor the updates.
+Receives an ICC account change. This callback is invoked when the ICC account updates and the observer is added to monitor the updates.
 
 **Since:** 10
+
+<!--Device-observer-function on(type: 'iccAccountInfoChange', callback: Callback<void>): void--><!--Device-observer-function on(type: 'iccAccountInfoChange', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -580,7 +607,7 @@ and the observer is added to monitor the updates.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'iccAccountInfoChange' | Yes | iccAccountInfoChange |
-| callback | Callback&lt;void&gt; | Yes | including state Indicates the ICC account information,and reason Indicates the cause of the change. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | including state Indicates the ICC account information,and reason Indicates the cause of the change. |
 
 **Error codes:**
 

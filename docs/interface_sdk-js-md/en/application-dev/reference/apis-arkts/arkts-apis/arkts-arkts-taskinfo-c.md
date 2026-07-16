@@ -4,6 +4,8 @@ Describes the internal information about a task.
 
 **Since:** 10
 
+<!--Device-taskpool-class TaskInfo--><!--Device-taskpool-class TaskInfo-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -18,16 +20,15 @@ import { taskpool } from '@kit.ArkTS';
 duration?: number
 ```
 
-Duration that the task has been executed, in ms. The default value is **0**. If the return value is **0**, the
-task is not running. If the return value is empty, no task is running. You are advised not to change the value.<
-br>
-This API can be used in atomic services since API version 11.
+Duration that the task has been executed, in ms. The default value is **0**. If the return value is **0**, the task is not running. If the return value is empty, no task is running. You are advised not to change the value.<br>This API can be used in atomic services since API version 11.
 
 **Type:** number
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TaskInfo-duration?: number--><!--Device-TaskInfo-duration?: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -37,14 +38,15 @@ This API can be used in atomic services since API version 11.
 name: string
 ```
 
-Task name. You are advised not to change the value.<br>
-This API can be used in atomic services since API version 12.
+Task name. You are advised not to change the value.<br>This API can be used in atomic services since API version 12.
 
 **Type:** string
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TaskInfo-name: string--><!--Device-TaskInfo-name: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -54,8 +56,7 @@ This API can be used in atomic services since API version 12.
 state: State
 ```
 
-Task state. You are advised not to change the value.<br>
-This API can be used in atomic services since API version 11.
+Task state. You are advised not to change the value.<br>This API can be used in atomic services since API version 11.
 
 **Type:** State
 
@@ -65,6 +66,8 @@ This API can be used in atomic services since API version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TaskInfo-state: State--><!--Device-TaskInfo-state: State-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## taskId
@@ -73,8 +76,7 @@ This API can be used in atomic services since API version 11.
 taskId: number
 ```
 
-Task ID, which is globally unique by default. You are advised not to change the value.<br>
-This API can be used in atomic services since API version 11.
+Task ID, which is globally unique by default. You are advised not to change the value.<br>This API can be used in atomic services since API version 11.
 
 **Type:** number
 
@@ -83,6 +85,8 @@ This API can be used in atomic services since API version 11.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TaskInfo-taskId: number--><!--Device-TaskInfo-taskId: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

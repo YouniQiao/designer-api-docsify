@@ -20,6 +20,8 @@ Revoke all persistence permissions for the application.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-fileShare-function revokePermission(tokenID: int): Promise<void>--><!--Device-fileShare-function revokePermission(tokenID: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 **System API:** This is a system API.
@@ -34,7 +36,7 @@ Revoke all persistence permissions for the application.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -61,6 +63,8 @@ Revoke persistence permissions for the URI.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-fileShare-function revokePermission(tokenID: int, policies: Array<PolicyInfo>): Promise<void>--><!--Device-fileShare-function revokePermission(tokenID: int, policies: Array<PolicyInfo>): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 **System API:** This is a system API.
@@ -70,13 +74,13 @@ Revoke persistence permissions for the URI.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | tokenID | number | Yes | Token ID of the application. |
-| policies | Array&lt;PolicyInfo&gt; | Yes | Policy information to revoke permission on URIs. |
+| policies | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PolicyInfo> | Yes | Policy information to revoke permission on URIs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 

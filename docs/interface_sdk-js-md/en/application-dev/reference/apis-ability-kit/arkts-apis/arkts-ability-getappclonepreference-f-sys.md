@@ -20,6 +20,8 @@ Obtains the application clone preference configuration based on the given bundle
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-bundleManager-function getAppClonePreference(bundleName: string): Promise<AppClonePreference>--><!--Device-bundleManager-function getAppClonePreference(bundleName: string): Promise<AppClonePreference>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -34,7 +36,7 @@ Obtains the application clone preference configuration based on the given bundle
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AppClonePreference&gt; | Promise used to return the application clone preference configuration. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AppClonePreference> | Promise used to return the application clone preference configuration. |
 
 **Error codes:**
 

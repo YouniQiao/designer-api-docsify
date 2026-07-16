@@ -12,12 +12,13 @@ import { notificationExtensionSubscription } from '@kit.NotificationKit';
 function isUserGranted(): Promise<boolean>
 ```
 
-Checks whether the **Allow access to notifications on this device** switch is toggled on. This API uses a promise
-to return the result.
+Checks whether the **Allow access to notifications on this device** switch is toggled on. This API uses a promise to return the result.
 
 **Since:** 22
 
 **Required permissions:** ohos.permission.SUBSCRIBE_NOTIFICATION
+
+<!--Device-notificationExtensionSubscription-function isUserGranted(): Promise<boolean>--><!--Device-notificationExtensionSubscription-function isUserGranted(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -25,7 +26,7 @@ to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that this feature isenabled, and **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** indicates that this feature is enabled, and **false** indicates the opposite. |
 
 **Error codes:**
 

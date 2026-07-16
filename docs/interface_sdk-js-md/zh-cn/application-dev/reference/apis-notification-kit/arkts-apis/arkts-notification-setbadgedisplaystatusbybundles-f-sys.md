@@ -18,6 +18,8 @@ function setBadgeDisplayStatusByBundles(badges: Map<BundleOption, boolean>) : Pr
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function setBadgeDisplayStatusByBundles(badges: Map<BundleOption, boolean>) : Promise<void>--><!--Device-notificationManager-function setBadgeDisplayStatusByBundles(badges: Map<BundleOption, boolean>) : Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,13 +28,13 @@ function setBadgeDisplayStatusByBundles(badges: Map<BundleOption, boolean>) : Pr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| badges | Map&lt;BundleOption, boolean&gt; | 是 | 应用包名信息和角标显示状态的列表。 |
+| badges | [Map](../../apis-arkts/arkts-apis/arkts-arkts-map-c.md)<BundleOption, boolean> | 是 | 应用包名信息和角标显示状态的列表。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

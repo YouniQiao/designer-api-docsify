@@ -8,6 +8,8 @@ Enumerates the **DefaultChangeUri** subtypes.
 
 **Substitutes:** [DefaultChangeUri](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-defaultchangeuri-e.md)
 
+<!--Device-userFileManager-enum DefaultChangeUri--><!--Device-userFileManager-enum DefaultChangeUri-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -18,14 +20,15 @@ Enumerates the **DefaultChangeUri** subtypes.
 DEFAULT_PHOTO_URI
 ```
 
-Default **PhotoAsset** URI. The **PhotoAsset** change notifications are received based on this parameter and
-**forSubUri{true}**.
+Default **PhotoAsset** URI. The **PhotoAsset** change notifications are received based on this parameter and **forSubUri{true}**.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [DEFAULT_PHOTO_URI](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-defaultchangeuri-e.md#default_photo_uri)
+
+<!--Device-DefaultChangeUri-DEFAULT_PHOTO_URI--><!--Device-DefaultChangeUri-DEFAULT_PHOTO_URI-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -45,6 +48,8 @@ Default album URI. Album change notifications are received based on this paramet
 
 **Substitutes:** [DEFAULT_ALBUM_URI](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-defaultchangeuri-e.md#default_album_uri)
 
+<!--Device-DefaultChangeUri-DEFAULT_ALBUM_URI--><!--Device-DefaultChangeUri-DEFAULT_ALBUM_URI-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -55,12 +60,13 @@ Default album URI. Album change notifications are received based on this paramet
 DEFAULT_AUDIO_URI
 ```
 
-Default **AudioAsset** URI. The **AudioAsset** change notifications are received based on this parameter and
-**forSubUri{true}**.
+Default **AudioAsset** URI. The **AudioAsset** change notifications are received based on this parameter and **forSubUri{true}**.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
+
+<!--Device-DefaultChangeUri-DEFAULT_AUDIO_URI--><!--Device-DefaultChangeUri-DEFAULT_AUDIO_URI-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

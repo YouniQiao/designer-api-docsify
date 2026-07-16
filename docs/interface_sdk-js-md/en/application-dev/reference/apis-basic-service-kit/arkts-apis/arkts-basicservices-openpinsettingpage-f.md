@@ -18,5 +18,7 @@ Opens the password settings page.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-settingsLite-function openPinSettingPage(): void--><!--Device-settingsLite-function openPinSettingPage(): void-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core.Lite
 

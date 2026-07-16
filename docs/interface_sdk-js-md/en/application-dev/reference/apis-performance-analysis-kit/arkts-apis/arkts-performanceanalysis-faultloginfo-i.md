@@ -6,6 +6,8 @@ Defines the data structure of the fault log information.
 
 **Deprecated since:** 18
 
+<!--Device-FaultLogger-interface FaultLogInfo--><!--Device-FaultLogger-interface FaultLogInfo-End-->
+
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Full log text.
 
 **Deprecated since:** 18
 
+<!--Device-FaultLogInfo-fullLog: string--><!--Device-FaultLogInfo-fullLog: string-End-->
+
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
 ## module
@@ -43,6 +47,8 @@ Module on which the fault occurred.
 **Since:** 8
 
 **Deprecated since:** 18
+
+<!--Device-FaultLogInfo-module: string--><!--Device-FaultLogInfo-module: string-End-->
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -60,6 +66,8 @@ Process ID of the faulty process.
 
 **Deprecated since:** 18
 
+<!--Device-FaultLogInfo-pid: number--><!--Device-FaultLogInfo-pid: number-End-->
+
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
 ## reason
@@ -75,6 +83,8 @@ Reason for the fault.
 **Since:** 8
 
 **Deprecated since:** 18
+
+<!--Device-FaultLogInfo-reason: string--><!--Device-FaultLogInfo-reason: string-End-->
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -92,6 +102,8 @@ Summary of the fault.
 
 **Deprecated since:** 18
 
+<!--Device-FaultLogInfo-summary: string--><!--Device-FaultLogInfo-summary: string-End-->
+
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
 ## timestamp
@@ -107,6 +119,8 @@ Millisecond-level timestamp when the log was generated.
 **Since:** 8
 
 **Deprecated since:** 18
+
+<!--Device-FaultLogInfo-timestamp: number--><!--Device-FaultLogInfo-timestamp: number-End-->
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
@@ -124,6 +138,8 @@ Fault type.
 
 **Deprecated since:** 18
 
+<!--Device-FaultLogInfo-type: FaultType--><!--Device-FaultLogInfo-type: FaultType-End-->
+
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
 ## uid
@@ -139,6 +155,8 @@ User ID of the faulty process.
 **Since:** 8
 
 **Deprecated since:** 18
+
+<!--Device-FaultLogInfo-uid: number--><!--Device-FaultLogInfo-uid: number-End-->
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 

@@ -1,5 +1,11 @@
 # createHdrBrightnessBlender（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
+```
+
 ## createHdrBrightnessBlender
 
 ```TypeScript
@@ -10,6 +16,8 @@ function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnes
 
 **起始版本：** 20
 
+<!--Device-uiEffect-function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnessBlender--><!--Device-uiEffect-function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnessBlender-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -18,13 +26,13 @@ function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnes
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | BrightnessBlenderParam | 是 | 实现提亮效果的参数。 |
+| param | [BrightnessBlenderParam](arkts-arkgraphics2d-brightnessblenderparam-i-sys.md) | 是 | 实现提亮效果的参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| HdrBrightnessBlender | 返回具有提亮效果的混合器（支持HDR）。 |
+| [HdrBrightnessBlender](arkts-arkgraphics2d-hdrbrightnessblender-i.md) | 返回具有提亮效果的混合器（支持HDR）。 |
 
 **错误码：**
 

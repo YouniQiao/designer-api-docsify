@@ -4,6 +4,8 @@ Enum for the role of device.
 
 **Since:** 23
 
+<!--Device-connection-enum DeviceRole--><!--Device-connection-enum DeviceRole-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -19,6 +21,8 @@ Only peripheral supported.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DeviceRole-DEVICE_ROLE_PERIPHERAL_ONLY = 0--><!--Device-DeviceRole-DEVICE_ROLE_PERIPHERAL_ONLY = 0-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -36,6 +40,8 @@ Only central supported.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DeviceRole-DEVICE_ROLE_CENTRAL_ONLY = 1--><!--Device-DeviceRole-DEVICE_ROLE_CENTRAL_ONLY = 1-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -52,6 +58,8 @@ Central & peripheral supported, peripheral preferred.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DeviceRole-DEVICE_ROLE_BOTH_PREFER_PERIPHERAL = 2--><!--Device-DeviceRole-DEVICE_ROLE_BOTH_PREFER_PERIPHERAL = 2-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -67,6 +75,8 @@ Central & peripheral supported, central preferred.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DeviceRole-DEVICE_ROLE_BOTH_PREFER_CENTRAL = 3--><!--Device-DeviceRole-DEVICE_ROLE_BOTH_PREFER_CENTRAL = 3-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

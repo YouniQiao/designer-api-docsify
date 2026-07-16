@@ -18,6 +18,8 @@ Get switch state for voice over NR.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-call-function getVoNRState(slotId: int, callback: AsyncCallback<VoNRState>): void--><!--Device-call-function getVoNRState(slotId: int, callback: AsyncCallback<VoNRState>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Get switch state for voice over NR.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;VoNRState&gt; | Yes | Indicates the callback for getVoNRState. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<VoNRState> | Yes | Indicates the callback for getVoNRState. |
 
 **Error codes:**
 
@@ -70,6 +72,8 @@ Get switch state for voice over NR.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-call-function getVoNRState(slotId: int): Promise<VoNRState>--><!--Device-call-function getVoNRState(slotId: int): Promise<VoNRState>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -84,7 +88,7 @@ Get switch state for voice over NR.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;VoNRState&gt; | Returns the VoNR state. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<VoNRState> | Returns the VoNR state. |
 
 **Error codes:**
 

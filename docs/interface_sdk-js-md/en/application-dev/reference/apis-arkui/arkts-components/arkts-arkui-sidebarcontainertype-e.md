@@ -4,6 +4,8 @@ Enumerates the types of sidebar containers.
 
 **Since:** 8
 
+<!--Device-unnamed-declare enum SideBarContainerType--><!--Device-unnamed-declare enum SideBarContainerType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Embed
@@ -14,12 +16,9 @@ Embed = 0
 
 The sidebar is embedded in the component and displayed side by side with the content area.
 
-With the overall container size unchanged, displaying the sidebar reduces the content area, and hiding the sidebar
-expands the content area.
+With the overall container size unchanged, displaying the sidebar reduces the content area, and hiding the sidebar expands the content area.
 
-If the component size is less than the sum of [minContentWidth](SideBarContainerAttribute#minContentWidth)
-and [minSideBarWidth](SideBarContainerAttribute#minSideBarWidth(value: number)), and **showSideBar** is not
-set, the sidebar is automatically hidden.
+If the component size is less than the sum of [minContentWidth](SideBarContainerAttribute#minContentWidth)and [minSideBarWidth](SideBarContainerAttribute#minSideBarWidth(value: number)), and **showSideBar** is not set, the sidebar is automatically hidden.
 
 If **minSideBarWidth** or **minContentWidth** is not set, the default value will be used for calculation.
 
@@ -28,6 +27,8 @@ The user can bring out the sidebar in Overlay mode by clicking the control butto
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SideBarContainerType-Embed = 0--><!--Device-SideBarContainerType-Embed = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,6 +44,8 @@ The sidebar is overlaid on top of the content area, without affecting the size o
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SideBarContainerType-Overlay = 1--><!--Device-SideBarContainerType-Overlay = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## AUTO
@@ -51,19 +54,19 @@ The sidebar is overlaid on top of the content area, without affecting the size o
 AUTO = 2
 ```
 
-The sidebar is displayed in Embed mode when the component size is greater than or equal to the sum of
-**minSideBarWidth** and **minContentWidth**
+The sidebar is displayed in Embed mode when the component size is greater than or equal to the sum of **minSideBarWidth** and **minContentWidth**
 
 and in Overlay mode otherwise.
 
-If **minSideBarWidth** or **minContentWidth** is not set, the default value will be used for calculation. If the
-calculation result is less than 600 vp, 600 vp will be used as the breakpoint value for mode switching.
+If **minSideBarWidth** or **minContentWidth** is not set, the default value will be used for calculation. If the calculation result is less than 600 vp, 600 vp will be used as the breakpoint value for mode switching.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SideBarContainerType-AUTO = 2--><!--Device-SideBarContainerType-AUTO = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -80,6 +83,8 @@ The sideBar Displace. Sidebar is visible, content will offscreen to make space f
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SideBarContainerType-DISPLACE = 3--><!--Device-SideBarContainerType-DISPLACE = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

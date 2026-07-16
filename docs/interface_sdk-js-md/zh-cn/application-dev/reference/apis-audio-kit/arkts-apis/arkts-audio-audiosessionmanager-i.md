@@ -2,16 +2,23 @@
 
 音频会话管理。
 
-在使用AudioSessionManager的接口之前，需先通过[getSessionManager](arkts-audio-audiomanager-i.md#getsessionmanager-1)获取
-AudioSessionManager实例。
+在使用AudioSessionManager的接口之前，需先通过[getSessionManager](arkts-audio-audiomanager-i.md#getsessionmanager-1)获取AudioSessionManager实例。
 
-> **说明：**
->
+> **说明：**  
+>  
 > - 本Interface首批接口从API version 12开始支持。
 
 **起始版本：** 12
 
+<!--Device-audio-interface AudioSessionManager--><!--Device-audio-interface AudioSessionManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## activateAudioSession
 
@@ -23,7 +30,9 @@ activateAudioSession(strategy: AudioSessionStrategy): Promise<void>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AudioSessionManager-activateAudioSession(strategy: AudioSessionStrategy): Promise<void>--><!--Device-AudioSessionManager-activateAudioSession(strategy: AudioSessionStrategy): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -31,13 +40,13 @@ activateAudioSession(strategy: AudioSessionStrategy): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strategy | AudioSessionStrategy | 是 | 音频会话策略。 |
+| strategy | [AudioSessionStrategy](arkts-audio-audiosessionstrategy-i.md) | 是 | 音频会话策略。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -57,13 +66,15 @@ clearSelectedMediaInputDevice(): Promise<void>
 
 **起始版本：** 21
 
+<!--Device-AudioSessionManager-clearSelectedMediaInputDevice(): Promise<void>--><!--Device-AudioSessionManager-clearSelectedMediaInputDevice(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -81,7 +92,9 @@ deactivateAudioSession(): Promise<void>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AudioSessionManager-deactivateAudioSession(): Promise<void>--><!--Device-AudioSessionManager-deactivateAudioSession(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -89,7 +102,7 @@ deactivateAudioSession(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -107,17 +120,17 @@ enableMuteSuggestionWhenMixWithOthers(enable: boolean): void
 
 通常，当使用混音模式时，如果其他应用同时播放音频，会和其他应用进行混音播放。但在某些场景下（如游戏或广播），应用自身会通过静音自身的音频以给用户提供更好的体验。
 
-如果启用此功能，当订阅音频会话状态更改事件后静音建议和取消静音建议提示将通过[AudioSessionStateChangedEvent](arkts-audio-audiosessionstatechangedevent-i.md)回
-调发送。收到静音建议表示其他应用程序开始播放音频，且播放的音频和本应用的音频不能混音。
+如果启用此功能，当订阅音频会话状态更改事件后静音建议和取消静音建议提示将通过[AudioSessionStateChangedEvent](arkts-audio-audiosessionstatechangedevent-i.md)回调发送。收到静音建议表示其他应用程序开始播放音频，且播放的音频和本应用的音频不能混音。
 
-此功能仅支持已设置[AudioSessionScene](arkts-audio-audiosessionscene-e.md)并激活模式模式为CONCURRENCY_MIX_WITH_OTHERS的音频会话使用。并且仅在激活音频会话期
-间生效一次，每次激活音频会话前都必须重新启用。
+此功能仅支持已设置[AudioSessionScene](arkts-audio-audiosessionscene-e.md)并激活模式模式为CONCURRENCY_MIX_WITH_OTHERS的音频会话使用。并且仅在激活音频会话期间生效一次，每次激活音频会话前都必须重新启用。
 
 详细说明请参考[启用混音播放下静音建议通知](../../../../media/audio/audio-session-management.md#启用混音播放下静音建议通知)。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSessionManager-enableMuteSuggestionWhenMixWithOthers(enable: boolean): void--><!--Device-AudioSessionManager-enableMuteSuggestionWhenMixWithOthers(enable: boolean): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -131,7 +144,7 @@ enableMuteSuggestionWhenMixWithOthers(enable: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-状态不支持) | Function is called without setting {@link #AudioSessionScene} orcalled after audio session activation. |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) | Function is called without setting {@link #AudioSessionScene} or called after audio session activation. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, system internal error. |
 
 ## getAvailableDevices
@@ -144,19 +157,21 @@ getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors
 
 **起始版本：** 21
 
+<!--Device-AudioSessionManager-getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors--><!--Device-AudioSessionManager-getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceUsage | DeviceUsage | 是 | 音频设备类型（根据用途分类）。 |
+| deviceUsage | [DeviceUsage](arkts-audio-deviceusage-e.md) | 是 | 音频设备类型（根据用途分类）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AudioDeviceDescriptors | 返回设备列表。 |
+| [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | 返回设备列表。 |
 
 **错误码：**
 
@@ -171,11 +186,11 @@ getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors
 getBluetoothAndNearlinkPreferredRecordCategory(): BluetoothAndNearlinkPreferredRecordCategory
 ```
 
-获取通过
-[setBluetoothAndNearlinkPreferredRecordCategory](arkts-audio-audiosessionmanager-i.md#setbluetoothandnearlinkpreferredrecordcategory-1)
-设置的在使用蓝牙或星闪进行录音时的设备偏好分类。
+获取通过[setBluetoothAndNearlinkPreferredRecordCategory](arkts-audio-audiosessionmanager-i.md#setbluetoothandnearlinkpreferredrecordcategory-1)设置的在使用蓝牙或星闪进行录音时的设备偏好分类。
 
 **起始版本：** 21
+
+<!--Device-AudioSessionManager-getBluetoothAndNearlinkPreferredRecordCategory(): BluetoothAndNearlinkPreferredRecordCategory--><!--Device-AudioSessionManager-getBluetoothAndNearlinkPreferredRecordCategory(): BluetoothAndNearlinkPreferredRecordCategory-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -183,7 +198,7 @@ getBluetoothAndNearlinkPreferredRecordCategory(): BluetoothAndNearlinkPreferredR
 
 | 类型 | 说明 |
 | --- | --- |
-| BluetoothAndNearlinkPreferredRecordCategory | - 在使用蓝牙或星闪进行录音时，应用程序的设备偏好分类。 |
+| [BluetoothAndNearlinkPreferredRecordCategory](arkts-audio-bluetoothandnearlinkpreferredrecordcategory-e.md) | - 在使用蓝牙或星闪进行录音时，应用程序的设备偏好分类。 |
 
 **错误码：**
 
@@ -201,13 +216,15 @@ getDefaultOutputDevice(): DeviceType
 
 **起始版本：** 20
 
+<!--Device-AudioSessionManager-getDefaultOutputDevice(): DeviceType--><!--Device-AudioSessionManager-getDefaultOutputDevice(): DeviceType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DeviceType | - 设备类型。<br>仅支持以下设备：EARPIECE（听筒）、SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
+| [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-devicetype-e.md) | - 设备类型。<br>仅支持以下设备：EARPIECE（听筒）、SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
 
 **错误码：**
 
@@ -222,10 +239,11 @@ getDefaultOutputDevice(): DeviceType
 getSelectedMediaInputDevice(): AudioDeviceDescriptor
 ```
 
-获得通过[selectMediaInputDevice](arkts-audio-audiosessionmanager-i.md#selectmediainputdevice-1)设置的媒体输入设备。如果没有设置，返回一个
-deviceType属性为INVALID的设备。
+获得通过[selectMediaInputDevice](arkts-audio-audiosessionmanager-i.md#selectmediainputdevice-1)设置的媒体输入设备。如果没有设置，返回一个deviceType属性为INVALID的设备。
 
 **起始版本：** 21
+
+<!--Device-AudioSessionManager-getSelectedMediaInputDevice(): AudioDeviceDescriptor--><!--Device-AudioSessionManager-getSelectedMediaInputDevice(): AudioDeviceDescriptor-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -233,7 +251,7 @@ deviceType属性为INVALID的设备。
 
 | 类型 | 说明 |
 | --- | --- |
-| AudioDeviceDescriptor | - 媒体输入设备信息。 |
+| [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i.md) | - 媒体输入设备信息。 |
 
 **错误码：**
 
@@ -251,7 +269,9 @@ isAudioSessionActivated(): boolean
 
 **起始版本：** 12
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AudioSessionManager-isAudioSessionActivated(): boolean--><!--Device-AudioSessionManager-isAudioSessionActivated(): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -273,6 +293,8 @@ isOtherMediaPlaying(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioSessionManager-isOtherMediaPlaying(): boolean--><!--Device-AudioSessionManager-isOtherMediaPlaying(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **返回值：**
@@ -291,7 +313,9 @@ off(type: 'audioSessionDeactivated', callback?: Callback<AudioSessionDeactivated
 
 **起始版本：** 12
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AudioSessionManager-off(type: 'audioSessionDeactivated', callback?: Callback<AudioSessionDeactivatedEvent>): void--><!--Device-AudioSessionManager-off(type: 'audioSessionDeactivated', callback?: Callback<AudioSessionDeactivatedEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -300,7 +324,7 @@ off(type: 'audioSessionDeactivated', callback?: Callback<AudioSessionDeactivated
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioSessionDeactivated' | 是 | 事件回调类型，支持的事件为'audioSessionDeactivated'，当取消监听音频会话停用事件时，触发该事件。 |
-| callback | Callback&lt;AudioSessionDeactivatedEvent&gt; | 否 | 回调函数，返回音频会话停用原因。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioSessionDeactivatedEvent> | 否 | 回调函数，返回音频会话停用原因。 |
 
 **错误码：**
 
@@ -319,6 +343,8 @@ off(type: 'audioSessionStateChanged', callback?: Callback<AudioSessionStateChang
 
 **起始版本：** 20
 
+<!--Device-AudioSessionManager-off(type: 'audioSessionStateChanged', callback?: Callback<AudioSessionStateChangedEvent>): void--><!--Device-AudioSessionManager-off(type: 'audioSessionStateChanged', callback?: Callback<AudioSessionStateChangedEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
@@ -326,7 +352,7 @@ off(type: 'audioSessionStateChanged', callback?: Callback<AudioSessionStateChang
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioSessionStateChanged' | 是 | 事件回调类型，支持的事件为'audioSessionStateChanged'，当音频会话状态变更时，触发该事件。 |
-| callback | Callback&lt;AudioSessionStateChangedEvent&gt; | 否 | 回调函数，返回音频会话变更提示信息。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioSessionStateChangedEvent> | 否 | 回调函数，返回音频会话变更提示信息。 |
 
 **错误码：**
 
@@ -345,6 +371,8 @@ off(type: 'currentOutputDeviceChanged', callback?: Callback<CurrentOutputDeviceC
 
 **起始版本：** 20
 
+<!--Device-AudioSessionManager-off(type: 'currentOutputDeviceChanged', callback?: Callback<CurrentOutputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-off(type: 'currentOutputDeviceChanged', callback?: Callback<CurrentOutputDeviceChangedEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -352,7 +380,7 @@ off(type: 'currentOutputDeviceChanged', callback?: Callback<CurrentOutputDeviceC
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'currentOutputDeviceChanged' | 是 | 事件回调类型，支持的事件为'currentOutputDeviceChanged'，当前输出设备发生变化时，触发该事件。 |
-| callback | Callback&lt;CurrentOutputDeviceChangedEvent&gt; | 否 | 回调函数，用于返回当前输出设备变化的信息。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CurrentOutputDeviceChangedEvent> | 否 | 回调函数，用于返回当前输出设备变化的信息。 |
 
 **错误码：**
 
@@ -371,6 +399,8 @@ off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): voi
 
 **起始版本：** 21
 
+<!--Device-AudioSessionManager-off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): void--><!--Device-AudioSessionManager-off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -378,7 +408,7 @@ off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'availableDeviceChange' | 是 | 事件回调类型，支持的事件为'availableDeviceChange'，当取消监听音频可选设备连接变化事件时，触发该事件。 |
-| callback | Callback&lt;DeviceChangeAction&gt; | 否 | 回调函数，返回可选设备更新详情。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DeviceChangeAction> | 否 | 回调函数，返回可选设备更新详情。 |
 
 **错误码：**
 
@@ -396,6 +426,8 @@ off(type: 'currentInputDeviceChanged', callback?: Callback<CurrentInputDeviceCha
 
 **起始版本：** 21
 
+<!--Device-AudioSessionManager-off(type: 'currentInputDeviceChanged', callback?: Callback<CurrentInputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-off(type: 'currentInputDeviceChanged', callback?: Callback<CurrentInputDeviceChangedEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -403,7 +435,7 @@ off(type: 'currentInputDeviceChanged', callback?: Callback<CurrentInputDeviceCha
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'currentInputDeviceChanged' | 是 | 事件回调类型，支持的事件为'currentInputDeviceChanged'，当前输入设备发生变化时，触发该事件。 |
-| callback | Callback&lt;CurrentInputDeviceChangedEvent&gt; | 否 | 回调函数，用于返回当前输入设备变化的信息。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CurrentInputDeviceChangedEvent> | 否 | 回调函数，用于返回当前输入设备变化的信息。 |
 
 **错误码：**
 
@@ -421,7 +453,9 @@ on(type: 'audioSessionDeactivated', callback: Callback<AudioSessionDeactivatedEv
 
 **起始版本：** 12
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AudioSessionManager-on(type: 'audioSessionDeactivated', callback: Callback<AudioSessionDeactivatedEvent>): void--><!--Device-AudioSessionManager-on(type: 'audioSessionDeactivated', callback: Callback<AudioSessionDeactivatedEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -430,7 +464,7 @@ on(type: 'audioSessionDeactivated', callback: Callback<AudioSessionDeactivatedEv
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioSessionDeactivated' | 是 | 事件回调类型，支持的事件为'audioSessionDeactivated'，当音频会话停用时，触发该事件。 |
-| callback | Callback&lt;AudioSessionDeactivatedEvent&gt; | 是 | 回调函数，返回音频会话停用原因。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioSessionDeactivatedEvent> | 是 | 回调函数，返回音频会话停用原因。 |
 
 **错误码：**
 
@@ -449,6 +483,8 @@ on(type: 'audioSessionStateChanged', callback: Callback<AudioSessionStateChanged
 
 **起始版本：** 20
 
+<!--Device-AudioSessionManager-on(type: 'audioSessionStateChanged', callback: Callback<AudioSessionStateChangedEvent>): void--><!--Device-AudioSessionManager-on(type: 'audioSessionStateChanged', callback: Callback<AudioSessionStateChangedEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
@@ -456,7 +492,7 @@ on(type: 'audioSessionStateChanged', callback: Callback<AudioSessionStateChanged
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioSessionStateChanged' | 是 | 事件回调类型，支持的事件为'audioSessionStateChanged'，当音频会话状态变更时，触发该事件。 |
-| callback | Callback&lt;AudioSessionStateChangedEvent&gt; | 是 | 回调函数，返回音频会话变更提示信息。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioSessionStateChangedEvent> | 是 | 回调函数，返回音频会话变更提示信息。 |
 
 **错误码：**
 
@@ -476,6 +512,8 @@ on(type: 'currentOutputDeviceChanged', callback: Callback<CurrentOutputDeviceCha
 
 **起始版本：** 20
 
+<!--Device-AudioSessionManager-on(type: 'currentOutputDeviceChanged', callback: Callback<CurrentOutputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-on(type: 'currentOutputDeviceChanged', callback: Callback<CurrentOutputDeviceChangedEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -483,7 +521,7 @@ on(type: 'currentOutputDeviceChanged', callback: Callback<CurrentOutputDeviceCha
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'currentOutputDeviceChanged' | 是 | 事件回调类型，支持的事件为'currentOutputDeviceChanged'，当前输出设备变更时触发。 |
-| callback | Callback&lt;CurrentOutputDeviceChangedEvent&gt; | 是 | 回调函数，返回当前输出设备信息。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CurrentOutputDeviceChangedEvent> | 是 | 回调函数，返回当前输出设备信息。 |
 
 **错误码：**
 
@@ -503,6 +541,8 @@ on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<D
 
 **起始版本：** 21
 
+<!--Device-AudioSessionManager-on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void--><!--Device-AudioSessionManager-on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<DeviceChangeAction>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -510,8 +550,8 @@ on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<D
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'availableDeviceChange' | 是 | 事件回调类型，支持的事件为'availableDeviceChange'，当音频可选设备连接状态发生变化时，触发该事件。 |
-| deviceUsage | DeviceUsage | 是 | 音频设备类型（根据用途分类）。 |
-| callback | Callback&lt;DeviceChangeAction&gt; | 是 | 回调函数，返回设备更新详情。 |
+| deviceUsage | [DeviceUsage](arkts-audio-deviceusage-e.md) | 是 | 音频设备类型（根据用途分类）。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DeviceChangeAction> | 是 | 回调函数，返回设备更新详情。 |
 
 **错误码：**
 
@@ -530,6 +570,8 @@ on(type: 'currentInputDeviceChanged', callback: Callback<CurrentInputDeviceChang
 
 **起始版本：** 21
 
+<!--Device-AudioSessionManager-on(type: 'currentInputDeviceChanged', callback: Callback<CurrentInputDeviceChangedEvent>): void--><!--Device-AudioSessionManager-on(type: 'currentInputDeviceChanged', callback: Callback<CurrentInputDeviceChangedEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **参数：**
@@ -537,7 +579,7 @@ on(type: 'currentInputDeviceChanged', callback: Callback<CurrentInputDeviceChang
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'currentInputDeviceChanged' | 是 | 事件回调类型，支持的事件为'currentInputDeviceChanged'，当前输入设备发生变化时，触发该事件。 |
-| callback | Callback&lt;CurrentInputDeviceChangedEvent&gt; | 是 | 回调函数，返回当前输入设备信息。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CurrentInputDeviceChangedEvent> | 是 | 回调函数，返回当前输入设备信息。 |
 
 **错误码：**
 
@@ -554,20 +596,22 @@ selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>
 
 设置媒体输入设备。使用Promise异步回调。
 
-> **说明：**
->
-> - 本接口不适用于VoIP通话录音，即[SourceType](arkts-audio-sourcetype-e.md)为SOURCE_TYPE_VOICE_COMMUNICATION的场景不适用。
->
-> - 本接口调用前需要先调用[getAvailableDevices](arkts-audio-audiosessionmanager-i.md#getavailabledevices-1)接口查询到当前可用输入设备列表，从列表中选择输入
-> 设备。
->
-> - 当系统中存在其他更高优先级的应用录音流时，实际使用的输入设备会跟随其他高优先级应用所选的输入设备。
->
-> - 应用程序可以监听
-> [currentInputDeviceChanged](arkts-audio-audiosessionmanager-i.md#on-5)
+> **说明：**  
+>  
+> - 本接口不适用于VoIP通话录音，即[SourceType](arkts-audio-sourcetype-e.md)为SOURCE_TYPE_VOICE_COMMUNICATION的场景不适用。  
+>  
+> - 本接口调用前需要先调用[getAvailableDevices](arkts-audio-audiosessionmanager-i.md#getavailabledevices-1)接口查询到当前可用输入设备列表，从列表中选择输入  
+> 设备。  
+>  
+> - 当系统中存在其他更高优先级的应用录音流时，实际使用的输入设备会跟随其他高优先级应用所选的输入设备。  
+>  
+> - 应用程序可以监听  
+> [currentInputDeviceChanged](arkts-audio-audiosessionmanager-i.md#on-5)  
 > 事件来获得实际的输入设备。
 
 **起始版本：** 21
+
+<!--Device-AudioSessionManager-selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>--><!--Device-AudioSessionManager-selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -575,13 +619,13 @@ selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inputAudioDevice | AudioDeviceDescriptor | 是 | 媒体输入设备。 |
+| inputAudioDevice | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i.md) | 是 | 媒体输入设备。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -598,13 +642,15 @@ setAudioSessionBehavior(behavior: number): void
 
 设置音频会话行为参数，支持多种标志位的组合使用。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 当音频会话在激活状态时调用此接口后，必须重新调用接口[activateAudioSession](arkts-audio-audiosessionmanager-i.md#activateaudiosession-1)使其生效。
 
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSessionManager-setAudioSessionBehavior(behavior: int): void--><!--Device-AudioSessionManager-setAudioSessionBehavior(behavior: int): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -631,13 +677,15 @@ setAudioSessionScene(scene: AudioSessionScene): void
 
 **起始版本：** 20
 
+<!--Device-AudioSessionManager-setAudioSessionScene(scene: AudioSessionScene): void--><!--Device-AudioSessionManager-setAudioSessionScene(scene: AudioSessionScene): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scene | AudioSessionScene | 是 | 音频会话场景。 |
+| scene | [AudioSessionScene](arkts-audio-audiosessionscene-e.md) | 是 | 音频会话场景。 |
 
 **错误码：**
 
@@ -655,17 +703,19 @@ setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPre
 
 设置在使用蓝牙或星闪进行录音时，应用程序的设备偏好分类。使用Promise异步回调。
 
-> **说明：**
->
-> - 应用程序可以在蓝牙或星闪连接之前设置此分类，系统将在设备连接时优先使用蓝牙或星闪进行录音。
->
-> - 当系统中存在其他更高优先级的应用录音流时，实际使用的输入设备会跟随其他高优先级应用所选的输入设备。
->
-> - 应用程序可以监听
-> [currentInputDeviceChanged](arkts-audio-audiosessionmanager-i.md#on-5)
+> **说明：**  
+>  
+> - 应用程序可以在蓝牙或星闪连接之前设置此分类，系统将在设备连接时优先使用蓝牙或星闪进行录音。  
+>  
+> - 当系统中存在其他更高优先级的应用录音流时，实际使用的输入设备会跟随其他高优先级应用所选的输入设备。  
+>  
+> - 应用程序可以监听  
+> [currentInputDeviceChanged](arkts-audio-audiosessionmanager-i.md#on-5)  
 > 事件来获得实际的输入设备。
 
 **起始版本：** 21
+
+<!--Device-AudioSessionManager-setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPreferredRecordCategory): Promise<void>--><!--Device-AudioSessionManager-setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPreferredRecordCategory): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -673,13 +723,13 @@ setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPre
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| category | BluetoothAndNearlinkPreferredRecordCategory | 是 | 在使用蓝牙或星闪进行录音时，应用程序的设备偏好分类。 |
+| category | [BluetoothAndNearlinkPreferredRecordCategory](arkts-audio-bluetoothandnearlinkpreferredrecordcategory-e.md) | 是 | 在使用蓝牙或星闪进行录音时，应用程序的设备偏好分类。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -696,17 +746,19 @@ setCapturerMuteHint(mute: boolean): Promise<void>
 
 应用将当前音频会话内录音流的自身静音状态传递给系统音频模块。<!--RP1-->该接口不会触发录音流静音，当前仅在部分PC/2in1设备上用于优化设备功耗。<!--RP1End-->使用Promise异步回调。
 
-> **说明：**
->
-> - 该接口用于向系统音频模块上报当前音频会话内录音流的静音状态，不会改变录音流的实际静音状态。
->
-> - 该接口仅在当前音频会话存在运行中的录音流时允许调用，否则返回错误码6800103。
->
+> **说明：**  
+>  
+> - 该接口用于向系统音频模块上报当前音频会话内录音流的静音状态，不会改变录音流的实际静音状态。  
+>  
+> - 该接口仅在当前音频会话存在运行中的录音流时允许调用，否则返回错误码6800103。  
+>  
 > - 若某条录音流同时调用了流级接口[AudioCapturer.setMuteHint](arkts-audio-audiocapturer-i.md#setmutehint-1)和本接口，流级接口设置优先级更高，以流级接口设置值为准。
 
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSessionManager-setCapturerMuteHint(mute: boolean): Promise<void>--><!--Device-AudioSessionManager-setCapturerMuteHint(mute: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -720,13 +772,13 @@ setCapturerMuteHint(mute: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permitted at current state, there is no audiocapturer running. |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permitted at current state, there is no audio capturer running. |
 
 ## setDefaultOutputDevice
 
@@ -736,16 +788,18 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 
 设置默认发声设备。使用Promise方式进行异步回调。
 
-> **说明：**
->
-> - 本接口适用于以下情况：当设置的[AudioSessionScene](arkts-audio-audiosessionscene-e.md)为VoIP场景时，激活AudioSession后立即生效。若
-> [AudioSessionScene](arkts-audio-audiosessionscene-e.md)为非VoIP场景，激活AudioSession时不会生效，仅在启动播放的
-> [StreamUsage](arkts-audio-streamusage-e.md)为语音消息、VoIP语音通话或VoIP视频通话时才生效。支持听筒、扬声器和系统默认设备。
->
-> - 本接口允许在AudioSessionManager创建后随时调用，系统会记录应用设置的默认本机内置发声设备。但只有激活AudioSession后才能生效。应用启动播放时，若外接设备如蓝牙耳机或有线耳机已接入，系统优先从
+> **说明：**  
+>  
+> - 本接口适用于以下情况：当设置的[AudioSessionScene](arkts-audio-audiosessionscene-e.md)为VoIP场景时，激活AudioSession后立即生效。若  
+> [AudioSessionScene](arkts-audio-audiosessionscene-e.md)为非VoIP场景，激活AudioSession时不会生效，仅在启动播放的  
+> [StreamUsage](arkts-audio-streamusage-e.md)为语音消息、VoIP语音通话或VoIP视频通话时才生效。支持听筒、扬声器和系统默认设备。  
+>  
+> - 本接口允许在AudioSessionManager创建后随时调用，系统会记录应用设置的默认本机内置发声设备。但只有激活AudioSession后才能生效。应用启动播放时，若外接设备如蓝牙耳机或有线耳机已接入，系统优先从  
 > 外接设备发声。否则，系统遵循应用设置的默认本机内置发声设备。
 
 **起始版本：** 20
+
+<!--Device-AudioSessionManager-setDefaultOutputDevice(deviceType: DeviceType): Promise<void>--><!--Device-AudioSessionManager-setDefaultOutputDevice(deviceType: DeviceType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -753,13 +807,13 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceType | DeviceType | 是 | 设备类型。<br>仅支持以下设备：EARPIECE（听筒）、SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
+| deviceType | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-devicetype-e.md) | 是 | 设备类型。<br>仅支持以下设备：EARPIECE（听筒）、SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -777,18 +831,20 @@ setMediaOutputDevice(deviceType: DeviceType): Promise<void>
 
 当连接其他音频外设（如蓝牙耳机或有线耳机）时，将媒体输出设备切换为内置扬声器。使用Promise异步回调。
 
-> **说明：**
->
-> - 本接口仅适用于媒体播放场景，并且会作用于应用内发起的所有媒体流。
->
-> - 若存在更高优先级的并发播放流或用户手动选择输出设备，则应用程序实际使用的输出设备将与本接口设置的设备不同。应用程序可通过监听
-> [CurrentOutputDeviceChangedEvent](arkts-audio-currentoutputdevicechangedevent-i.md)事件获取当前活跃的输出设备。
->
+> **说明：**  
+>  
+> - 本接口仅适用于媒体播放场景，并且会作用于应用内发起的所有媒体流。  
+>  
+> - 若存在更高优先级的并发播放流或用户手动选择输出设备，则应用程序实际使用的输出设备将与本接口设置的设备不同。应用程序可通过监听  
+> [CurrentOutputDeviceChangedEvent](arkts-audio-currentoutputdevicechangedevent-i.md)事件获取当前活跃的输出设备。  
+>  
 > - 当应用程序需要清除之前通过接口设置的扬声器输出配置时，可通过调用接口将媒体输出设备设置为DEFAULT（系统默认设备）来实现。该设置仅在应用程序运行期间有效，当应用程序退出时，此接口的设置将自动清除。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSessionManager-setMediaOutputDevice(deviceType: DeviceType): Promise<void>--><!--Device-AudioSessionManager-setMediaOutputDevice(deviceType: DeviceType): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -796,13 +852,13 @@ setMediaOutputDevice(deviceType: DeviceType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceType | DeviceType | 是 | 设备类型。<br>仅支持以下设备：SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
+| deviceType | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-devicetype-e.md) | 是 | 设备类型。<br>仅支持以下设备：SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

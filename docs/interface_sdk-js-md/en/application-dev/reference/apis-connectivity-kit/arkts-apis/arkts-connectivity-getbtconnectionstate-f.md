@@ -12,8 +12,7 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 function getBtConnectionState(): ProfileConnectionState
 ```
 
-Get the local device connection state to any profile of any remote device.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Get the local device connection state to any profile of any remote device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -25,13 +24,15 @@ On API 10 and above, the permission required by this interface is changed from U
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
+<!--Device-bluetoothManager-function getBtConnectionState(): ProfileConnectionState--><!--Device-bluetoothManager-function getBtConnectionState(): ProfileConnectionState-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ProfileConnectionState | One of {@link ProfileConnectionState#STATE_DISCONNECTED},{@link ProfileConnectionState#STATE_CONNECTING}, {@link ProfileConnectionState#STATE_CONNECTED},{@link ProfileConnectionState#STATE_DISCONNECTING}. |
+| [ProfileConnectionState](arkts-connectivity-profileconnectionstate-e.md) | One of {@link ProfileConnectionState#STATE_DISCONNECTED},{@link ProfileConnectionState#STATE_CONNECTING}, {@link ProfileConnectionState#STATE_CONNECTED},{@link ProfileConnectionState#STATE_DISCONNECTING}. |
 
 **Error codes:**
 

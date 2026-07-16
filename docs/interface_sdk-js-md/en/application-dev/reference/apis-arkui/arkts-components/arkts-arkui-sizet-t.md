@@ -12,6 +12,8 @@ Defines the SizeT type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-unnamed-declare type SizeT<T> = import('../api/arkui/Graphics').SizeT<T>--><!--Device-unnamed-declare type SizeT<T> = import('../api/arkui/Graphics').SizeT<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** import('../api/arkui/Graphics').SizeT<T>

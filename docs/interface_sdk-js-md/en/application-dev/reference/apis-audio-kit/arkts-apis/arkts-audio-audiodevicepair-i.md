@@ -4,6 +4,8 @@ Describes an audio device pair including both input and output devices.
 
 **Since:** 26.0.0
 
+<!--Device-audio-interface AudioDevicePair--><!--Device-audio-interface AudioDevicePair-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Input audio device descriptor.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AudioDevicePair-inputDevice: AudioDeviceDescriptor--><!--Device-AudioDevicePair-inputDevice: AudioDeviceDescriptor-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## outputDevice
@@ -41,6 +45,8 @@ Output audio device descriptor.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioDevicePair-outputDevice: AudioDeviceDescriptor--><!--Device-AudioDevicePair-outputDevice: AudioDeviceDescriptor-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 

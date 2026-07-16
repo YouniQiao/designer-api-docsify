@@ -1,5 +1,11 @@
 # @ohos.arkui.components.ArkLazyColumnLayout
 
+## 导入模块
+
+```TypeScript
+import { LazyColumnLayoutAttribute, LazyColumnLayout } from '@kit.ArkUI';
+```
+
 ## 汇总
 
 ### 类

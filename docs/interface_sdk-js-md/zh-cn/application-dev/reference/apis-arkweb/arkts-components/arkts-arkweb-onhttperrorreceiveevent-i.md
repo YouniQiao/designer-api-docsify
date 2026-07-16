@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface OnHttpErrorReceiveEvent--><!--Device-unnamed-declare interface OnHttpErrorReceiveEvent-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## request
@@ -18,7 +20,9 @@ request: WebResourceRequest
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnHttpErrorReceiveEvent-request: WebResourceRequest--><!--Device-OnHttpErrorReceiveEvent-request: WebResourceRequest-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -34,7 +38,9 @@ response: WebResourceResponse
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnHttpErrorReceiveEvent-response: WebResourceResponse--><!--Device-OnHttpErrorReceiveEvent-response: WebResourceResponse-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

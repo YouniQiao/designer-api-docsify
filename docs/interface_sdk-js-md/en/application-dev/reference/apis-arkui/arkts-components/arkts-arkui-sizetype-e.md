@@ -8,6 +8,8 @@ Defines the size type.
 
 **Substitutes:** grid_col/GridColColumnOption
 
+<!--Device-unnamed-declare enum SizeType--><!--Device-unnamed-declare enum SizeType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Auto
@@ -23,6 +25,8 @@ Select a value based on the device type.
 **Deprecated since:** 9
 
 **Substitutes:** grid_col/GridColColumnOption
+
+<!--Device-SizeType-Auto--><!--Device-SizeType-Auto-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ Extra Small width type device.
 
 **Substitutes:** grid_col/GridColColumnOption
 
+<!--Device-SizeType-XS--><!--Device-SizeType-XS-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SM
@@ -55,6 +61,8 @@ Small width type device.
 **Deprecated since:** 9
 
 **Substitutes:** grid_col/GridColColumnOption
+
+<!--Device-SizeType-SM--><!--Device-SizeType-SM-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,6 +80,8 @@ Medium width type device.
 
 **Substitutes:** grid_col/GridColColumnOption
 
+<!--Device-SizeType-MD--><!--Device-SizeType-MD-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## LG
@@ -87,6 +97,8 @@ Large width type device.
 **Deprecated since:** 9
 
 **Substitutes:** grid_col/GridColColumnOption
+
+<!--Device-SizeType-LG--><!--Device-SizeType-LG-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -6,9 +6,7 @@
 function enableFormsUpdate(formIds: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-Instructs the widget framework to make a widget updatable. After this API is called, the widget is in the enabled
-state and can receive updates from the widget provider. This API uses an asynchronous callback to return the
-result.
+Instructs the widget framework to make a widget updatable. After this API is called, the widget is in the enabled state and can receive updates from the widget provider. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -18,6 +16,8 @@ result.
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
+<!--Device-formHost-function enableFormsUpdate(formIds: Array<string>, callback: AsyncCallback<void>): void--><!--Device-formHost-function enableFormsUpdate(formIds: Array<string>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -26,8 +26,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | Yes | List of widget IDs. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If a notification is sent to thewidget framework to make the widget updatable, **error** is undefined; otherwise, **error** is an errorobject. |
+| formIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | List of widget IDs. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If a notification is sent to the widget framework to make the widget updatable, **error** is undefined; otherwise, **error** is an error object. |
 
 
 ## enableFormsUpdate
@@ -36,8 +36,7 @@ result.
 function enableFormsUpdate(formIds: Array<string>): Promise<void>
 ```
 
-Instructs the widget framework to make a widget updatable. After this API is called, the widget is in the enabled
-state and can receive updates from the widget provider. This API uses a promise to return the result.
+Instructs the widget framework to make a widget updatable. After this API is called, the widget is in the enabled state and can receive updates from the widget provider. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -47,6 +46,8 @@ state and can receive updates from the widget provider. This API uses a promise 
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
+<!--Device-formHost-function enableFormsUpdate(formIds: Array<string>): Promise<void>--><!--Device-formHost-function enableFormsUpdate(formIds: Array<string>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -55,11 +56,11 @@ state and can receive updates from the widget provider. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | Yes | List of widget IDs. |
+| formIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | List of widget IDs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 

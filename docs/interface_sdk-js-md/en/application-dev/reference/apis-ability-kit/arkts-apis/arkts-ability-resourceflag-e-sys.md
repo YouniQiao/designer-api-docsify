@@ -4,6 +4,8 @@ Enumerates the resource information flags, which indicate the type of resource i
 
 **Since:** 11
 
+<!--Device-bundleResourceManager-enum ResourceFlag--><!--Device-bundleResourceManager-enum ResourceFlag-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
 **System API:** This is a system API.
@@ -17,6 +19,8 @@ GET_RESOURCE_INFO_ALL = 0x00000001
 Both the application icon and label are obtained.
 
 **Since:** 11
+
+<!--Device-ResourceFlag-GET_RESOURCE_INFO_ALL = 0x00000001--><!--Device-ResourceFlag-GET_RESOURCE_INFO_ALL = 0x00000001-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -32,6 +36,8 @@ Only the application label is obtained.
 
 **Since:** 11
 
+<!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_LABEL = 0x00000002--><!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_LABEL = 0x00000002-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
 **System API:** This is a system API.
@@ -46,6 +52,8 @@ Only the application icon is obtained.
 
 **Since:** 11
 
+<!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_ICON = 0x00000004--><!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_ICON = 0x00000004-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
 **System API:** This is a system API.
@@ -56,10 +64,11 @@ Only the application icon is obtained.
 GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL = 0x00000008
 ```
 
-The obtained information is sorted by label. It must be used together with **GET_RESOURCE_INFO_ALL** or
-**GET_RESOURCE_INFO_WITH_LABEL**.
+The obtained information is sorted by label. It must be used together with **GET_RESOURCE_INFO_ALL** or **GET_RESOURCE_INFO_WITH_LABEL**.
 
 **Since:** 11
+
+<!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL = 0x00000008--><!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL = 0x00000008-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -75,6 +84,8 @@ The [drawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-drawabledescrip
 
 **Since:** 12
 
+<!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_DRAWABLE_DESCRIPTOR = 0x00000010--><!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_DRAWABLE_DESCRIPTOR = 0x00000010-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
 **System API:** This is a system API.
@@ -85,14 +96,11 @@ The [drawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-drawabledescrip
 GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY = 0x00000020
 ```
 
-The resource information about abilities that show icons only on the home screen is obtained. It is valid only in
-the
-[getLauncherAbilityResourceInfo](arkts-ability-getlauncherabilityresourceinfo-f-sys.md#getlauncherabilityresourceinfo-1)
-and
-[getAllLauncherAbilityResourceInfo](arkts-ability-getalllauncherabilityresourceinfo-f-sys.md#getalllauncherabilityresourceinfo-1)
-APIs.
+The resource information about abilities that show icons only on the home screen is obtained. It is valid only in the [getLauncherAbilityResourceInfo](arkts-ability-getlauncherabilityresourceinfo-f-sys.md#getlauncherabilityresourceinfo-1)and [getAllLauncherAbilityResourceInfo](arkts-ability-getalllauncherabilityresourceinfo-f-sys.md#getalllauncherabilityresourceinfo-1)APIs.
 
 **Since:** 20
+
+<!--Device-ResourceFlag-GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY = 0x00000020--><!--Device-ResourceFlag-GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY = 0x00000020-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 

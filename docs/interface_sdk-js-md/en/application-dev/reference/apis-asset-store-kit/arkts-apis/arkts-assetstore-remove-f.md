@@ -18,19 +18,21 @@ Removes one or more assets. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-asset-function remove(query: AssetMap): Promise<void>--><!--Device-asset-function remove(query: AssetMap): Promise<void>-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | AssetMap | Yes | Attributes of the asset to remove, such as the asset alias, access control attributes,and custom data. |
+| query | [AssetMap](arkts-assetstore-assetmap-t.md) | Yes | Attributes of the asset to remove, such as the asset alias, access control attributes,and custom data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

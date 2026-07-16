@@ -2,16 +2,18 @@
 
 Defines options for the save button, including icon, text, and button type.
 
-> **NOTE**
->
-> - You are advised to specify at least one of **icon** or **text**.
-> - If neither **icon** nor **text** is specified, **SaveButton** is created with default styles as follows:
-> **SaveIconStyle** defaults to **FULL_FILLED**, **SaveDescription** to **DOWNLOAD**, and **ButtonType** to
-> **Capsule**.
->
+> **NOTE**  
+>  
+> - You are advised to specify at least one of **icon** or **text**.  
+> - If neither **icon** nor **text** is specified, **SaveButton** is created with default styles as follows:  
+> **SaveIconStyle** defaults to **FULL_FILLED**, **SaveDescription** to **DOWNLOAD**, and **ButtonType** to  
+> **Capsule**.  
+>  
 > - The **icon**, **text**, and **buttonType** parameters do not support dynamic modification.
 
 **Since:** 10
+
+<!--Device-unnamed-declare interface SaveButtonOptions--><!--Device-unnamed-declare interface SaveButtonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,8 +23,7 @@ Defines options for the save button, including icon, text, and button type.
 buttonType?: ButtonType
 ```
 
-Background type of the **SaveButton** component.
-Default value: ButtonType.Capsule.
+Background type of the **SaveButton** component.Default value: ButtonType.Capsule.
 
 **Type:** ButtonType
 
@@ -32,6 +33,8 @@ Default value: ButtonType.Capsule.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SaveButtonOptions-buttonType?: ButtonType--><!--Device-SaveButtonOptions-buttonType?: ButtonType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## icon
@@ -40,9 +43,7 @@ Default value: ButtonType.Capsule.
 icon?: SaveIconStyle
 ```
 
-Icon style of the **SaveButton** component.
-<br>If this parameter is not specified, no icon is displayed. If neither **icon** nor **text** is provided, the
-component uses the default style.
+Icon style of the **SaveButton** component.<br>If this parameter is not specified, no icon is displayed. If neither **icon** nor **text** is provided, the component uses the default style.
 
 **Type:** SaveIconStyle
 
@@ -52,6 +53,8 @@ component uses the default style.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SaveButtonOptions-icon?: SaveIconStyle--><!--Device-SaveButtonOptions-icon?: SaveIconStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## text
@@ -60,9 +63,7 @@ component uses the default style.
 text?: SaveDescription
 ```
 
-Text on the **SaveButton** component.
-<br>If this parameter is not specified, no text is displayed. If neither **text** nor **icon** is provided, the
-component uses the default style.
+Text on the **SaveButton** component.<br>If this parameter is not specified, no text is displayed. If neither **text** nor **icon** is provided, the component uses the default style.
 
 **Type:** SaveDescription
 
@@ -71,6 +72,8 @@ component uses the default style.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SaveButtonOptions-text?: SaveDescription--><!--Device-SaveButtonOptions-text?: SaveDescription-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,6 +4,8 @@ Provides preferred playback settings for player.
 
 **Since:** 12
 
+<!--Device-media-interface PlaybackStrategy--><!--Device-media-interface PlaybackStrategy-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## Modules to Import
@@ -18,14 +20,15 @@ import { media } from '@kit.MediaKit';
 enableSuperResolution?: boolean
 ```
 
-Enable super-resolution feature. default is false.
-Must enable super-resolution feature before calling {@link #setSuperResolution} and {@link #setVideoWindowSize}.
+Enable super-resolution feature. default is false.Must enable super-resolution feature before calling {@link #setSuperResolution} and {@link #setVideoWindowSize}.
 
 **Type:** boolean
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-PlaybackStrategy-enableSuperResolution?: boolean--><!--Device-PlaybackStrategy-enableSuperResolution?: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -35,14 +38,15 @@ Must enable super-resolution feature before calling {@link #setSuperResolution} 
 keepDecodingOnMute?: boolean
 ```
 
-Indicates whether to keep the decoder working when closing the media,
-which is used to facilitate quick opening of the media. Currently only supports video
+Indicates whether to keep the decoder working when closing the media,which is used to facilitate quick opening of the media. Currently only supports video
 
 **Type:** boolean
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PlaybackStrategy-keepDecodingOnMute?: boolean--><!--Device-PlaybackStrategy-keepDecodingOnMute?: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -57,6 +61,8 @@ mute the specified media stream when playing.
 **Type:** MediaType
 
 **Since:** 12
+
+<!--Device-PlaybackStrategy-mutedMediaType?: MediaType--><!--Device-PlaybackStrategy-mutedMediaType?: MediaType-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -74,6 +80,8 @@ Audio language.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-PlaybackStrategy-preferredAudioLanguage?: string--><!--Device-PlaybackStrategy-preferredAudioLanguage?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## preferredBufferDuration
@@ -84,14 +92,15 @@ preferredBufferDuration?: number
 
 Chooses a preferred buffer duration.
 
-<p>The preferred buffer duration in the playback policy, is used to set the buffer size. For details,
-see [Online Video Frame Freezing Optimization Practice](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-online-video-playback-lags-practice).</p>
+<p>The preferred buffer duration in the playback policy, is used to set the buffer size. For details,see [Online Video Frame Freezing Optimization Practice](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-online-video-playback-lags-practice).</p>
 
 **Type:** number
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PlaybackStrategy-preferredBufferDuration?: int--><!--Device-PlaybackStrategy-preferredBufferDuration?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -109,6 +118,8 @@ Customize the buffering threshold for start or restart playing. The unit is seco
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-PlaybackStrategy-preferredBufferDurationForPlaying?: double--><!--Device-PlaybackStrategy-preferredBufferDurationForPlaying?: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## preferredHdr
@@ -124,6 +135,8 @@ If true, the player should choose HDR stream if exist.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PlaybackStrategy-preferredHdr?: boolean--><!--Device-PlaybackStrategy-preferredHdr?: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -141,6 +154,8 @@ Choose a stream with height close to it.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PlaybackStrategy-preferredHeight?: int--><!--Device-PlaybackStrategy-preferredHeight?: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## preferredSubtitleLanguage
@@ -156,6 +171,8 @@ Subtitle language.
 **Since:** 13
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-PlaybackStrategy-preferredSubtitleLanguage?: string--><!--Device-PlaybackStrategy-preferredSubtitleLanguage?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -173,6 +190,8 @@ Choose a stream with width close to it.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PlaybackStrategy-preferredWidth?: int--><!--Device-PlaybackStrategy-preferredWidth?: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## showFirstFrameOnPrepare
@@ -189,6 +208,8 @@ Show first frame on prepare.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
 
+<!--Device-PlaybackStrategy-showFirstFrameOnPrepare?: boolean--><!--Device-PlaybackStrategy-showFirstFrameOnPrepare?: boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## thresholdForAutoQuickPlay
@@ -197,14 +218,15 @@ Show first frame on prepare.
 thresholdForAutoQuickPlay?: number
 ```
 
-set max buffering threshold for liveStreaming or avplayer while change the speed, in s.
-It is recommended that the value be 2 seconds greater than the starting waterline.
+set max buffering threshold for liveStreaming or avplayer while change the speed, in s.It is recommended that the value be 2 seconds greater than the starting waterline.
 
 **Type:** number
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-PlaybackStrategy-thresholdForAutoQuickPlay?: double--><!--Device-PlaybackStrategy-thresholdForAutoQuickPlay?: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 

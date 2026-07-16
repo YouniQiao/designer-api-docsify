@@ -4,6 +4,8 @@ Represents the brief application information.
 
 **Since:** 11
 
+<!--Device-cloudExtension-export interface AppBriefInfo--><!--Device-cloudExtension-export interface AppBriefInfo-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Application ID.
 
 **Since:** 11
 
+<!--Device-AppBriefInfo-appId: string--><!--Device-AppBriefInfo-appId: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ Bundle name of the application.
 
 **Since:** 11
 
+<!--Device-AppBriefInfo-bundleName: string--><!--Device-AppBriefInfo-bundleName: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -52,12 +58,13 @@ Bundle name of the application.
 cloudSwitch: boolean
 ```
 
-Whether the cloud service is enabled for the application.
-The value true means the cloud service is enabled; the value false means the opposite.
+Whether the cloud service is enabled for the application.The value true means the cloud service is enabled; the value false means the opposite.
 
 **Type:** boolean
 
 **Since:** 11
+
+<!--Device-AppBriefInfo-cloudSwitch: boolean--><!--Device-AppBriefInfo-cloudSwitch: boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -69,12 +76,13 @@ The value true means the cloud service is enabled; the value false means the opp
 instanceId: number
 ```
 
-Application twin ID.
-The value 0 indicates the application itself, and the twin ID increases in ascending order.
+Application twin ID.The value 0 indicates the application itself, and the twin ID increases in ascending order.
 
 **Type:** number
 
 **Since:** 11
+
+<!--Device-AppBriefInfo-instanceId: int--><!--Device-AppBriefInfo-instanceId: int-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 

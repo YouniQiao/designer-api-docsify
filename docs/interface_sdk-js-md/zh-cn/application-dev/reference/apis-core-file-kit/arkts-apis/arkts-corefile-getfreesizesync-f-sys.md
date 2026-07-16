@@ -1,5 +1,11 @@
 # getFreeSizeSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { storageStatistics } from '@kit.CoreFileKit';
+```
+
 ## getFreeSizeSync
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getFreeSizeSync(): number
 
 **需要权限：** 
 - API版本10 - 14：ohos.permission.STORAGE_MANAGER
+
+<!--Device-storageStatistics-function getFreeSizeSync(): long--><!--Device-storageStatistics-function getFreeSizeSync(): long-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 

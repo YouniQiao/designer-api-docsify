@@ -4,6 +4,8 @@ Plugin component request event result value.
 
 **Since:** 12
 
+<!--Device-pluginComponentManager-interface RequestEventResult--><!--Device-pluginComponentManager-interface RequestEventResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Defines data.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RequestEventResult-data?: KVObject--><!--Device-RequestEventResult-data?: KVObject-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## extraData
@@ -42,6 +46,8 @@ Defines extraData.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RequestEventResult-extraData?: KVObject--><!--Device-RequestEventResult-extraData?: KVObject-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## template
@@ -57,6 +63,8 @@ Defines template.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RequestEventResult-template?: string--><!--Device-RequestEventResult-template?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

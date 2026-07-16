@@ -12,13 +12,13 @@ import { startupManager } from '@kit.AbilityKit';
 function removeAllStartupTaskResults(): void
 ```
 
-Removes all startup task results.
-If there are preloading tasks for .so files, the corresponding .so files is set to the unloaded state. However, .so
-files that have already been loaded in the cache will not be removed.
+Removes all startup task results.If there are preloading tasks for .so files, the corresponding .so files is set to the unloaded state. However, .so files that have already been loaded in the cache will not be removed.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-startupManager-function removeAllStartupTaskResults(): void--><!--Device-startupManager-function removeAllStartupTaskResults(): void-End-->
 
 **System capability:** SystemCapability.Ability.AppStartup
 

@@ -18,6 +18,8 @@ Set metered network quota policies.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function setNetQuotaPolicies(quotaPolicies: Array<NetQuotaPolicy>, callback: AsyncCallback<void>): void--><!--Device-policy-function setNetQuotaPolicies(quotaPolicies: Array<NetQuotaPolicy>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Set metered network quota policies.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| quotaPolicies | Array&lt;NetQuotaPolicy&gt; | Yes | Indicates {@link NetQuotaPolicy}. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of setNetQuotaPolicies. |
+| quotaPolicies | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<NetQuotaPolicy> | Yes | Indicates {@link NetQuotaPolicy}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of setNetQuotaPolicies. |
 
 **Error codes:**
 
@@ -82,6 +84,8 @@ Set metered network quota policies.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function setNetQuotaPolicies(quotaPolicies: Array<NetQuotaPolicy>): Promise<void>--><!--Device-policy-function setNetQuotaPolicies(quotaPolicies: Array<NetQuotaPolicy>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -90,13 +94,13 @@ Set metered network quota policies.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| quotaPolicies | Array&lt;NetQuotaPolicy&gt; | Yes | Indicates {@link NetQuotaPolicy}. |
+| quotaPolicies | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<NetQuotaPolicy> | Yes | Indicates {@link NetQuotaPolicy}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

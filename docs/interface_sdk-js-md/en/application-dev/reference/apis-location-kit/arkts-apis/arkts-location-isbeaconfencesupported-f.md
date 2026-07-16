@@ -18,6 +18,8 @@ Check whether the BeaconFence service is supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-geoLocationManager-function isBeaconFenceSupported(): boolean--><!--Device-geoLocationManager-function isBeaconFenceSupported(): boolean-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **Return value:**

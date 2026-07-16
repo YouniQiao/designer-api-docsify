@@ -4,6 +4,8 @@ Defines the spacing between the localized text and the left and right icons.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface LocalizedLabelMarginOptions--><!--Device-unnamed-export interface LocalizedLabelMarginOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -40,6 +42,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LocalizedLabelMarginOptions-end?: LengthMetrics--><!--Device-LocalizedLabelMarginOptions-end?: LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## start
@@ -69,6 +73,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LocalizedLabelMarginOptions-start?: LengthMetrics--><!--Device-LocalizedLabelMarginOptions-start?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

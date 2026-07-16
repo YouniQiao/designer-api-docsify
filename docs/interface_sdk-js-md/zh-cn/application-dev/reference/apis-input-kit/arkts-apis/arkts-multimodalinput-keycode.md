@@ -1,5 +1,11 @@
 # @ohos.multimodalInput.keyCode
 
+## 导入模块
+
+```TypeScript
+import { KeyCode } from '@kit.InputKit';
+```
+
 ## 汇总
 
 ### 枚举

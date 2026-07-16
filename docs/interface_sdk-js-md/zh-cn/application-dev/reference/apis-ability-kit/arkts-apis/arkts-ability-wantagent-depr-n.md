@@ -8,6 +8,8 @@ WantAgent模块提供了创建WantAgent实例、获取实例的用户ID、获取
 
 **替代接口：** wantAgent/wantAgent
 
+<!--Device-unnamed-declare namespace wantAgent--><!--Device-unnamed-declare namespace wantAgent-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 汇总

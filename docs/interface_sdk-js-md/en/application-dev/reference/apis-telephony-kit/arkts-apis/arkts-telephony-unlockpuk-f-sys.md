@@ -18,6 +18,8 @@ Unlock the SIM card password in the specified card slot.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function unlockPuk(slotId: int, newPin: string, puk: string, callback: AsyncCallback<LockStatusResponse>): void--><!--Device-sim-function unlockPuk(slotId: int, newPin: string, puk: string, callback: AsyncCallback<LockStatusResponse>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -29,7 +31,7 @@ Unlock the SIM card password in the specified card slot.
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
 | newPin | string | Yes | Indicates to reset the SIM card password. |
 | puk | string | Yes | Indicates the unlock password of the SIM card password. |
-| callback | AsyncCallback&lt;LockStatusResponse&gt; | Yes | Indicates the callback for gettingthe response to obtain the SIM card lock status of the specified card slot. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<LockStatusResponse> | Yes | Indicates the callback for getting the response to obtain the SIM card lock status of the specified card slot. |
 
 **Error codes:**
 
@@ -72,6 +74,8 @@ Unlock the SIM card password in the specified card slot.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function unlockPuk(slotId: int, newPin: string, puk: string): Promise<LockStatusResponse>--><!--Device-sim-function unlockPuk(slotId: int, newPin: string, puk: string): Promise<LockStatusResponse>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -88,7 +92,7 @@ Unlock the SIM card password in the specified card slot.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;LockStatusResponse&gt; | Returns the response to obtainthe SIM card lock status of the specified card slot. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<LockStatusResponse> | Returns the response to obtain the SIM card lock status of the specified card slot. |
 
 **Error codes:**
 

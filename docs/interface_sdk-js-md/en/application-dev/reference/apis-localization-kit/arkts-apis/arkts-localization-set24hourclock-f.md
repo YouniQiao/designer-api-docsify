@@ -20,13 +20,15 @@ Sets the 24-hour clock.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-i18n-export function set24HourClock(option: boolean): boolean--><!--Device-i18n-export function set24HourClock(option: boolean): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | boolean | Yes | Whether to enable the 24-hour clock. The value **true** means to enable the 24-hourclock, and the value **false** means the opposite. |
+| option | boolean | Yes | Whether to enable the 24-hour clock. The value **true** means to enable the 24-hour clock, and the value **false** means the opposite. |
 
 **Return value:**
 

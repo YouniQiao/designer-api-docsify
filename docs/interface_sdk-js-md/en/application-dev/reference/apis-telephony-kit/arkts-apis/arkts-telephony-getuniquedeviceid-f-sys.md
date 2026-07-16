@@ -14,13 +14,13 @@ function getUniqueDeviceId(slotId: number, callback: AsyncCallback<string>): voi
 
 Obtains the unique device ID of a specified card slot of the device.
 
-If the device is registered with a 3GPP-compliant network, the international mobile equipment identity
-(IMEI) is returned. If the device is registered with a 3GPP2-compliant network, the mobile equipment identifier
-(MEID) is returned.
+If the device is registered with a 3GPP-compliant network, the international mobile equipment identity(IMEI) is returned. If the device is registered with a 3GPP2-compliant network, the mobile equipment identifier(MEID) is returned.
 
 **Since:** 8
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-radio-function getUniqueDeviceId(slotId: int, callback: AsyncCallback<string>): void--><!--Device-radio-function getUniqueDeviceId(slotId: int, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -30,8 +30,8 @@ If the device is registered with a 3GPP-compliant network, the international mob
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slotindex number supported by the device. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Indicates the callback for getting the unique device ID.Returns an empty string if the unique device ID does not exist. |
+| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Indicates the callback for getting the unique device ID.Returns an empty string if the unique device ID does not exist. |
 
 **Error codes:**
 
@@ -70,13 +70,13 @@ function getUniqueDeviceId(slotId?: number): Promise<string>
 
 Obtains the unique device ID of a specified card slot of the device.
 
-If the device is registered with a 3GPP-compliant network, the international mobile equipment identity
-(IMEI) is returned. If the device is registered with a 3GPP2-compliant network, the mobile equipment identifier
-(MEID) is returned.
+If the device is registered with a 3GPP-compliant network, the international mobile equipment identity(IMEI) is returned. If the device is registered with a 3GPP2-compliant network, the mobile equipment identifier(MEID) is returned.
 
 **Since:** 8
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-radio-function getUniqueDeviceId(slotId?: int): Promise<string>--><!--Device-radio-function getUniqueDeviceId(slotId?: int): Promise<string>-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -86,13 +86,13 @@ If the device is registered with a 3GPP-compliant network, the international mob
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | No | Indicates the card slot index number, ranging from 0 to the maximum card slotindex number supported by the device. |
+| slotId | number | No | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the unique device ID.Returns an empty string if the unique device ID does not exist. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the unique device ID.Returns an empty string if the unique device ID does not exist. |
 
 **Error codes:**
 
@@ -129,13 +129,13 @@ function getUniqueDeviceId(callback: AsyncCallback<string>): void
 
 Obtains the unique device ID of a specified card slot of the device.
 
-If the device is registered with a 3GPP-compliant network, the international mobile equipment identity
-(IMEI) is returned. If the device is registered with a 3GPP2-compliant network, the mobile equipment identifier
-(MEID) is returned.
+If the device is registered with a 3GPP-compliant network, the international mobile equipment identity(IMEI) is returned. If the device is registered with a 3GPP2-compliant network, the mobile equipment identifier(MEID) is returned.
 
 **Since:** 8
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-radio-function getUniqueDeviceId(callback: AsyncCallback<string>): void--><!--Device-radio-function getUniqueDeviceId(callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -145,7 +145,7 @@ If the device is registered with a 3GPP-compliant network, the international mob
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes | Indicates the callback for getting the unique device ID.Returns an empty string if the unique device ID does not exist. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Indicates the callback for getting the unique device ID.Returns an empty string if the unique device ID does not exist. |
 
 **Error codes:**
 

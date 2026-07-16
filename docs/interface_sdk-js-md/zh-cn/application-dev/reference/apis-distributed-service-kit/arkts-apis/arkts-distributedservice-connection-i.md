@@ -4,7 +4,15 @@
 
 **起始版本：** 20
 
+<!--Device-linkEnhance-interface Connection--><!--Device-linkEnhance-interface Connection-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+## 导入模块
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+```
 
 ## close
 
@@ -19,6 +27,8 @@ close(): void
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-close(): void--><!--Device-Connection-close(): void-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -68,6 +78,8 @@ connect(): void
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-connect(): void--><!--Device-Connection-connect(): void-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -121,6 +133,8 @@ disconnect(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Connection-disconnect(): void--><!--Device-Connection-disconnect(): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **错误码：**
@@ -169,6 +183,8 @@ getPeerDeviceId(): string
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-getPeerDeviceId(): string--><!--Device-Connection-getPeerDeviceId(): string-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -219,6 +235,8 @@ off(type: 'connectResult', callback?: Callback<ConnectResult>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Connection-off(type: 'connectResult', callback?: Callback<ConnectResult>): void--><!--Device-Connection-off(type: 'connectResult', callback?: Callback<ConnectResult>): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**
@@ -226,7 +244,7 @@ off(type: 'connectResult', callback?: Callback<ConnectResult>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectResult' | 是 | 事件回调类型，支持的事件为'connectResult'，完成`connect()`调用，触发该事件。 |
-| callback | Callback&lt;ConnectResult&gt; | 否 | 注册的回调函数。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ConnectResult> | 否 | 注册的回调函数。 |
 
 **错误码：**
 
@@ -276,6 +294,8 @@ off(type: 'disconnected', callback?: Callback<number>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Connection-off(type: 'disconnected', callback?: Callback<number>): void--><!--Device-Connection-off(type: 'disconnected', callback?: Callback<number>): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**
@@ -283,7 +303,7 @@ off(type: 'disconnected', callback?: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'disconnected' | 是 | 事件回调类型，支持的事件为'disconnected'，连接被动断开或底层异常断开时，触发该事件。 |
-| callback | Callback&lt;number&gt; | 否 | 注册的回调函数，number为返回的错误码。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | 否 | 注册的回调函数，number为返回的错误码。 |
 
 **错误码：**
 
@@ -333,6 +353,8 @@ off(type: 'dataReceived', callback?: Callback<ArrayBuffer>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Connection-off(type: 'dataReceived', callback?: Callback<ArrayBuffer>): void--><!--Device-Connection-off(type: 'dataReceived', callback?: Callback<ArrayBuffer>): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**
@@ -340,7 +362,7 @@ off(type: 'dataReceived', callback?: Callback<ArrayBuffer>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'dataReceived' | 是 | 事件回调类型，支持的事件为'dataReceived'，收到数据时，触发该事件。 |
-| callback | Callback&lt;ArrayBuffer&gt; | 否 | 注册的回调函数。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ArrayBuffer> | 否 | 注册的回调函数。 |
 
 **错误码：**
 
@@ -391,6 +413,8 @@ on(type: 'connectResult', callback: Callback<ConnectResult>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Connection-on(type: 'connectResult', callback: Callback<ConnectResult>): void--><!--Device-Connection-on(type: 'connectResult', callback: Callback<ConnectResult>): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**
@@ -398,7 +422,7 @@ on(type: 'connectResult', callback: Callback<ConnectResult>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectResult' | 是 | 事件回调类型，支持的事件为'connectResult'，完成`connect()`调用，触发该事件。 |
-| callback | Callback&lt;ConnectResult&gt; | 是 | 注册的回调函数。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ConnectResult> | 是 | 注册的回调函数。 |
 
 **错误码：**
 
@@ -448,6 +472,8 @@ on(type: 'disconnected', callback: Callback<number>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Connection-on(type: 'disconnected', callback: Callback<number>): void--><!--Device-Connection-on(type: 'disconnected', callback: Callback<number>): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**
@@ -455,7 +481,7 @@ on(type: 'disconnected', callback: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'disconnected' | 是 | 事件回调类型，支持的事件为'disconnected'，连接被动断开或底层异常断开时，触发该事件。 |
-| callback | Callback&lt;number&gt; | 是 | 注册的回调函数，number为返回的错误码。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | 是 | 注册的回调函数，number为返回的错误码。 |
 
 **错误码：**
 
@@ -502,6 +528,8 @@ on(type: 'dataReceived', callback: Callback<ArrayBuffer>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Connection-on(type: 'dataReceived', callback: Callback<ArrayBuffer>): void--><!--Device-Connection-on(type: 'dataReceived', callback: Callback<ArrayBuffer>): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**
@@ -509,7 +537,7 @@ on(type: 'dataReceived', callback: Callback<ArrayBuffer>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'dataReceived' | 是 | 事件回调类型，支持的事件为'dataReceived'，收到数据时，触发该事件。 |
-| callback | Callback&lt;ArrayBuffer&gt; | 是 | 注册的回调函数。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ArrayBuffer> | 是 | 注册的回调函数。 |
 
 **错误码：**
 
@@ -558,13 +586,15 @@ sendData(data: ArrayBuffer): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Connection-sendData(data: ArrayBuffer): void--><!--Device-Connection-sendData(data: ArrayBuffer): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | ArrayBuffer | 是 | 需要发送的数据，最大发送长度为1024字节。 |
+| data | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | 需要发送的数据，最大发送长度为1024字节。 |
 
 **错误码：**
 

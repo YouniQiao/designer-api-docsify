@@ -18,13 +18,15 @@ Query the network access policy of the calling application.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-policy-function getNetAccessPolicy(): Promise<NetAccessPolicy>--><!--Device-policy-function getNetAccessPolicy(): Promise<NetAccessPolicy>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetAccessPolicy&gt; | Returns the network access policy of the application.For details, see {@link NetAccessPolicy}. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetAccessPolicy> | Returns the network access policy of the application.For details, see {@link NetAccessPolicy}. |
 
 **Error codes:**
 

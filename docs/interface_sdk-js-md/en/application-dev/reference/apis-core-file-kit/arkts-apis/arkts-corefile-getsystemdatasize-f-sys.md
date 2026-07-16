@@ -20,6 +20,8 @@ Get the system data size.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-storageStatistics-function getSystemDataSize(): Promise<long>--><!--Device-storageStatistics-function getSystemDataSize(): Promise<long>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Get the system data size.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | return Promise (Unit: Byte) |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | return Promise (Unit: Byte) |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare interface PreviewMenuOptions--><!--Device-unnamed-declare interface PreviewMenuOptions-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## hapticFeedbackMode
@@ -21,6 +23,8 @@ hapticFeedbackMode?: HapticFeedbackMode
 **默认值：** HapticFeedbackMode.DISABLED
 
 **起始版本：** 20
+
+<!--Device-PreviewMenuOptions-hapticFeedbackMode?: HapticFeedbackMode--><!--Device-PreviewMenuOptions-hapticFeedbackMode?: HapticFeedbackMode-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

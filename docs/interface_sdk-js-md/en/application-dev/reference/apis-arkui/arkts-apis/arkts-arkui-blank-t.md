@@ -12,6 +12,8 @@ Represents a FrameNode of the **Blank** type. This type of node does not allow c
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-type Blank = TypedFrameNode<BlankInterface, BlankAttribute>--><!--Device-typeNode-type Blank = TypedFrameNode<BlankInterface, BlankAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** TypedFrameNode<BlankInterface, BlankAttribute>

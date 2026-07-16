@@ -20,13 +20,15 @@ Sets the screen lock disabled for current account.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-securityManager-function setScreenLockDisabledForAccount(admin: Want, disable: boolean): void--><!--Device-securityManager-function setScreenLockDisabledForAccount(admin: Want, disable: boolean): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | admin indicates the administrator ability information. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | admin indicates the administrator ability information. |
 | disable | boolean | Yes | true if disable the screen lock for account, otherwise false. |
 
 **Error codes:**

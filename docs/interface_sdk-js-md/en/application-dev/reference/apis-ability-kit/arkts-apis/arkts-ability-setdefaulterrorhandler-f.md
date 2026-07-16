@@ -12,18 +12,17 @@ import { errorManager } from '@kit.AbilityKit';
 function setDefaultErrorHandler(defaultHandler?: ErrorHandler) : ErrorHandler
 ```
 
-Returns the previously registered handler when a JavaScript crash exception occurs. It can only be used in the main
-thread.
+Returns the previously registered handler when a JavaScript crash exception occurs. It can only be used in the main thread.
 
-If an invalid parameter is passed or the API is called from a child thread, an error code is thrown and
-**undefined** is returned. You are advised to handle it with try-catch logic.
+If an invalid parameter is passed or the API is called from a child thread, an error code is thrown and **undefined** is returned. You are advised to handle it with try-catch logic.
 
-If the API parameter is empty, subsequently registered handlers are not able to establish a connection with
-previously registered handlers, thereby breaking the chain call mechanism.
+If the API parameter is empty, subsequently registered handlers are not able to establish a connection with previously registered handlers, thereby breaking the chain call mechanism.
 
 **Since:** 21
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-errorManager-function setDefaultErrorHandler(defaultHandler?: ErrorHandler) : ErrorHandler--><!--Device-errorManager-function setDefaultErrorHandler(defaultHandler?: ErrorHandler) : ErrorHandler-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -31,13 +30,13 @@ previously registered handlers, thereby breaking the chain call mechanism.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| defaultHandler | ErrorHandler | No | Newly registered error handler. The default value is empty. |
+| defaultHandler | [ErrorHandler](arkts-ability-errorhandler-t.md) | No | Newly registered error handler. The default value is empty. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ErrorHandler | Previously registered error handler. |
+| [ErrorHandler](arkts-ability-errorhandler-t.md) | Previously registered error handler. |
 
 **Error codes:**
 

@@ -1,9 +1,10 @@
 # BreakpointOptions
 
-Defines the breakpoint configuration options for container dimension analysis.
-Specifies threshold values that trigger different layout behaviors based on container size.
+Defines the breakpoint configuration options for container dimension analysis.Specifies threshold values that trigger different layout behaviors based on container size.
 
 **Since:** 26.0.0
+
+<!--Device-unnamed-export interface BreakpointOptions--><!--Device-unnamed-export interface BreakpointOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,8 +20,7 @@ import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from '@k
 height?: Array<number>
 ```
 
-Optional array of height breakpoint values in vp units.
-Defines the height thresholds for container height analysis.
+Optional array of height breakpoint values in vp units.Defines the height thresholds for container height analysis.
 
 **Type:** Array<number>
 
@@ -31,6 +31,8 @@ Defines the height thresholds for container height analysis.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
+
+<!--Device-BreakpointOptions-height?: Array<double>--><!--Device-BreakpointOptions-height?: Array<double>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,8 +42,7 @@ Defines the height thresholds for container height analysis.
 width?: Array<number>
 ```
 
-Optional array of width breakpoint values in vp units.
-Defines the width thresholds for container width analysis.
+Optional array of width breakpoint values in vp units.Defines the width thresholds for container width analysis.
 
 **Type:** Array<number>
 
@@ -52,6 +53,8 @@ Defines the width thresholds for container width analysis.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
+
+<!--Device-BreakpointOptions-width?: Array<double>--><!--Device-BreakpointOptions-width?: Array<double>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

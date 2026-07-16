@@ -13,9 +13,7 @@ function getSkillInfo(bundleName: string, moduleName: string, skillName: string,
     flags: number, userId?: number): Promise<SkillInfo>
 ```
 
-Obtains SkillInfo of a specified application based on bundleName, moduleName and skillName.
-To query information for other local accounts, the permission
-ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted.
+Obtains SkillInfo of a specified application based on bundleName, moduleName and skillName.To query information for other local accounts, the permission ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted.
 
 **Since:** 26.0.0
 
@@ -24,6 +22,10 @@ ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-skillManager-function getSkillInfo(bundleName: string, moduleName: string, skillName: string,
+    flags: int, userId?: int): Promise<SkillInfo>--><!--Device-skillManager-function getSkillInfo(bundleName: string, moduleName: string, skillName: string,
+    flags: int, userId?: int): Promise<SkillInfo>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -41,7 +43,7 @@ ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SkillInfo&gt; | Returns the SkillInfo object of the specified skill. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SkillInfo> | Returns the SkillInfo object of the specified skill. |
 
 **Error codes:**
 

@@ -1,5 +1,11 @@
 # queryDeviceInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { deviceManager } from '@kit.DriverDevelopmentKit';
+```
+
 ## queryDeviceInfo
 
 ```TypeScript
@@ -11,6 +17,8 @@ function queryDeviceInfo(deviceId?: number): Array<Readonly<DeviceInfo>>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
+
+<!--Device-deviceManager-function queryDeviceInfo(deviceId?: long): Array<Readonly<DeviceInfo>>--><!--Device-deviceManager-function queryDeviceInfo(deviceId?: long): Array<Readonly<DeviceInfo>>-End-->
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
@@ -26,7 +34,7 @@ function queryDeviceInfo(deviceId?: number): Array<Readonly<DeviceInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Readonly&lt;DeviceInfo&gt;&gt; | 扩展外设详细信息列表。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Readonly<DeviceInfo>> | 扩展外设详细信息列表。 |
 
 **错误码：**
 

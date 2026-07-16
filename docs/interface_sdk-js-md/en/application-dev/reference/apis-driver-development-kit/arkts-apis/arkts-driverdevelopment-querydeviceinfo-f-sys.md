@@ -12,12 +12,13 @@ import { deviceManager } from '@kit.DriverDevelopmentKit';
 function queryDeviceInfo(deviceId?: number): Array<Readonly<DeviceInfo>>
 ```
 
-Obtains the list of detailed information about peripherals. If the device has no peripheral device connected, an
-empty list is returned.
+Obtains the list of detailed information about peripherals. If the device has no peripheral device connected, an empty list is returned.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
+
+<!--Device-deviceManager-function queryDeviceInfo(deviceId?: long): Array<Readonly<DeviceInfo>>--><!--Device-deviceManager-function queryDeviceInfo(deviceId?: long): Array<Readonly<DeviceInfo>>-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -27,13 +28,13 @@ empty list is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | number | No | Device ID, which is obtained through[queryDevices](arkts-driverdevelopment-querydevices-f.md#querydevices-1). If no device ID is passed, alldevice information is obtained by default. If no external device is connected and no device ID is passed, anempty array is returned. |
+| deviceId | number | No | Device ID, which is obtained through [queryDevices](arkts-driverdevelopment-querydevices-f.md#querydevices-1). If no device ID is passed, all device information is obtained by default. If no external device is connected and no device ID is passed, an empty array is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Readonly&lt;DeviceInfo&gt;&gt; | List of detailed information about peripherals. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Readonly<DeviceInfo>> | List of detailed information about peripherals. |
 
 **Error codes:**
 

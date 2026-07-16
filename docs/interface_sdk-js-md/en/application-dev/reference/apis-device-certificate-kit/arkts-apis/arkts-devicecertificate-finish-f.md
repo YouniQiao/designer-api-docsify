@@ -12,12 +12,13 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 function finish(handle: Uint8Array, callback: AsyncCallback<CMResult>): void
 ```
 
-Finishes the signing operation. This is the last step in the signature process. The init and update interfaces need
-to be invoked first. This API uses an asynchronous callback to return the result.
+Finishes the signing operation. This is the last step in the signature process. The init and update interfaces need to be invoked first. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
+
+<!--Device-certificateManager-function finish(handle: Uint8Array, callback: AsyncCallback<CMResult>): void--><!--Device-certificateManager-function finish(handle: Uint8Array, callback: AsyncCallback<CMResult>): void-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -25,14 +26,14 @@ to be invoked first. This API uses an asynchronous callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | Uint8Array | Yes | Handle of initialization. You need to invoke the init method to obtain the handle. |
-| callback | AsyncCallback&lt;CMResult&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null** and **data** is the signature, that is, **outData** of the[CMResult](arkts-devicecertificate-cmresult-i.md) object. Otherwise, **err** is an error object. |
+| handle | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Handle of initialization. You need to invoke the init method to obtain the handle. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<CMResult> | Yes | Callback used to return the result. If the operation is successful,**err** is **null** and **data** is the signature, that is, **outData** of the [CMResult](arkts-devicecertificate-cmresult-i.md) object. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 
@@ -71,12 +72,13 @@ try {
 function finish(handle: Uint8Array, signature: Uint8Array, callback: AsyncCallback<CMResult>): void
 ```
 
-Finishes the signature verification operation. This is the last step in the signature verification process. The
-init and update interfaces need to be invoked first. This API uses an asynchronous callback to return the result.
+Finishes the signature verification operation. This is the last step in the signature verification process. The init and update interfaces need to be invoked first. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
+
+<!--Device-certificateManager-function finish(handle: Uint8Array, signature: Uint8Array, callback: AsyncCallback<CMResult>): void--><!--Device-certificateManager-function finish(handle: Uint8Array, signature: Uint8Array, callback: AsyncCallback<CMResult>): void-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -84,15 +86,15 @@ init and update interfaces need to be invoked first. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | Uint8Array | Yes | Handle of initialization. You need to invoke the init method to obtain the handle. |
-| signature | Uint8Array | Yes | Data to sign or verify. |
-| callback | AsyncCallback&lt;CMResult&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| handle | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Handle of initialization. You need to invoke the init method to obtain the handle. |
+| signature | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Data to sign or verify. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<CMResult> | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 
@@ -135,26 +137,28 @@ Finishes the signing or signature verification operation. This API uses a promis
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
+<!--Device-certificateManager-function finish(handle: Uint8Array, signature?: Uint8Array): Promise<CMResult>--><!--Device-certificateManager-function finish(handle: Uint8Array, signature?: Uint8Array): Promise<CMResult>-End-->
+
 **System capability:** SystemCapability.Security.CertificateManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | Uint8Array | Yes | Handle of initialization. You need to invoke the init method to obtain the handle. |
-| signature | Uint8Array | No | Signature data used for signature verification. This parameter does not need tobe specified for signature operation. |
+| handle | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Handle of initialization. You need to invoke the init method to obtain the handle. |
+| signature | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | No | Signature data used for signature verification. This parameter does not need to be specified for signature operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the signature of a signing operation, that is, **outData** inthe [CMResult](arkts-devicecertificate-cmresult-i.md) object. For a signature verification operation, the promisereturns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CMResult> | Promise used to return the signature of a signing operation, that is, **outData** in the [CMResult](arkts-devicecertificate-cmresult-i.md) object. For a signature verification operation, the promise returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 

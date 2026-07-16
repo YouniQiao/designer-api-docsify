@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace securityLabel--><!--Device-unnamed-declare namespace securityLabel-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { securityLabel } from '@kit.CoreFileKit';
+```
 
 ## 汇总
 

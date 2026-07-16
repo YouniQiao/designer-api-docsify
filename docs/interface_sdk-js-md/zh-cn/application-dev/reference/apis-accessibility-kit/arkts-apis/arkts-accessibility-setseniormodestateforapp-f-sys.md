@@ -1,5 +1,11 @@
 # setSeniorModeStateForApp（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { config } from '@kit.AccessibilityKit';
+```
+
 ## setSeniorModeStateForApp
 
 ```TypeScript
@@ -14,6 +20,8 @@ Set the senior mode state for app.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-config-function setSeniorModeStateForApp(appSeniorModeInfos: Array<AppSeniorModeInfo>): Promise<void>--><!--Device-config-function setSeniorModeStateForApp(appSeniorModeInfos: Array<AppSeniorModeInfo>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -22,13 +30,13 @@ Set the senior mode state for app.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| appSeniorModeInfos | Array&lt;AppSeniorModeInfo&gt; | 是 | Indicates the list ofapp package names and statuses for which the advanced mode needs to be set. |
+| appSeniorModeInfos | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<AppSeniorModeInfo> | 是 | Indicates the list of app package names and statuses for which the advanced mode needs to be set. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise<void> | The promise returned by the function. |
 
 **错误码：**
 

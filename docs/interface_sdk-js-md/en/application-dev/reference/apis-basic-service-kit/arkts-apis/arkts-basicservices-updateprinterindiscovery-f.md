@@ -18,19 +18,21 @@ Updates the printer capabilities to the printer discovery list. This API uses a 
 
 **Required permissions:** ohos.permission.PRINT
 
+<!--Device-print-function updatePrinterInDiscovery(printerInformation: PrinterInformation): Promise<void>--><!--Device-print-function updatePrinterInDiscovery(printerInformation: PrinterInformation): Promise<void>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerInformation | PrinterInformation | Yes | Printer whose capability is to be updated. |
+| printerInformation | [PrinterInformation](arkts-basicservices-printerinformation-i.md) | Yes | Printer whose capability is to be updated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

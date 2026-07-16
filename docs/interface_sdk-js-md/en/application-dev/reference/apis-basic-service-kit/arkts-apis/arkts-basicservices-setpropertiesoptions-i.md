@@ -4,6 +4,8 @@ Represents the options for setting authenticator properties.
 
 **Since:** 9
 
+<!--Device-appAccount-interface SetPropertiesOptions--><!--Device-appAccount-interface SetPropertiesOptions-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Custom parameter object. By default, no value is passed in.
 
 **Since:** 9
 
+<!--Device-SetPropertiesOptions-parameters?: Record<string, Object>--><!--Device-SetPropertiesOptions-parameters?: Record<string, Object>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 ## properties
@@ -37,6 +41,8 @@ Property object. By default, no value is passed in.
 **Type:** Record<string, Object>
 
 **Since:** 9
+
+<!--Device-SetPropertiesOptions-properties?: Record<string, Object>--><!--Device-SetPropertiesOptions-properties?: Record<string, Object>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 

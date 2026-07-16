@@ -12,5 +12,7 @@ Stop all test cases.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-unnamed-type OnStopFn = () => void--><!--Device-unnamed-type OnStopFn = () => void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

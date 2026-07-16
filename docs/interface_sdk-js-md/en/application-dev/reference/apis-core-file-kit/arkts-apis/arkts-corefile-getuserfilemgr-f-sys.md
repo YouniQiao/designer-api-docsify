@@ -12,8 +12,7 @@ import { userFileManager } from '@kit.CoreFileKit';
 function getUserFileMgr(context: Context): UserFileManager
 ```
 
-Obtains a **UserFileManager** instance. This instance can be used to access and modify user media data (such as
-audio and video assets, images, and documents).
+Obtains a **UserFileManager** instance. This instance can be used to access and modify user media data (such as audio and video assets, images, and documents).
 
 **Since:** 9
 
@@ -23,6 +22,8 @@ audio and video assets, images, and documents).
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-userFileManager-function getUserFileMgr(context: Context): UserFileManager--><!--Device-userFileManager-function getUserFileMgr(context: Context): UserFileManager-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -31,13 +32,13 @@ audio and video assets, images, and documents).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability instance. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the ability instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| UserFileManager | **UserFileManager** instance obtained. |
+| [UserFileManager](arkts-corefile-userfilemanager-i-sys.md) | **UserFileManager** instance obtained. |
 
 **Example**
 

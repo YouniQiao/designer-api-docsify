@@ -14,6 +14,8 @@ function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void
 
 **替代接口：** getWant
 
+<!--Device-wantAgent-function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void--><!--Device-wantAgent-function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -22,8 +24,8 @@ function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| agent | WantAgent | 是 | Indicates the {@link WantAgent} WantAgent信息。 |
-| callback | AsyncCallback&lt;Want&gt; | 是 | 获取WantAgent中的Want的回调方法。 |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | 是 | Indicates the {@link WantAgent} WantAgent信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Want> | 是 | 获取WantAgent中的Want的回调方法。 |
 
 
 ## getWant
@@ -40,6 +42,8 @@ function getWant(agent: WantAgent): Promise<Want>
 
 **替代接口：** getWant
 
+<!--Device-wantAgent-function getWant(agent: WantAgent): Promise<Want>--><!--Device-wantAgent-function getWant(agent: WantAgent): Promise<Want>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -48,11 +52,11 @@ function getWant(agent: WantAgent): Promise<Want>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| agent | WantAgent | 是 | WantAgent信息。 |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | 是 | WantAgent信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Want&gt; | 以Promise形式返回Want。 |
+| Promise<Want> | 以Promise形式返回Want。 |
 

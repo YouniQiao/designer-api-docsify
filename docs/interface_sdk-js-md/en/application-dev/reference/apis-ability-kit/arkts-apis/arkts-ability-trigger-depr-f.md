@@ -16,15 +16,17 @@ Triggers a WantAgent.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-wantAgent-function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: Callback<CompleteData>): void--><!--Device-wantAgent-function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: Callback<CompleteData>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | WantAgent | Yes | to trigger. |
-| triggerInfo | TriggerInfo | Yes | parameters. |
-| callback | Callback&lt;CompleteData&gt; | No | Indicates the callback method to be called afterthe {@link WantAgent} is triggered. |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | to trigger. |
+| triggerInfo | [TriggerInfo](arkts-ability-triggerinfo-t.md) | Yes | parameters. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CompleteData> | No | Indicates the callback method to be called after the {@link WantAgent} is triggered. |
 
 **Example**
 

@@ -4,9 +4,17 @@
 
 **起始版本：** 11
 
+<!--Device-cloudExtension-export interface CloudService--><!--Device-cloudExtension-export interface CloudService-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { cloudExtension } from '@kit.ArkData';
+```
 
 ## connectAssetLoader
 
@@ -18,6 +26,8 @@ connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteOb
 
 **起始版本：** 11
 
+<!--Device-CloudService-connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteObject>--><!--Device-CloudService-connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteObject>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -27,13 +37,13 @@ connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteOb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用包名。 |
-| database | Database | 是 | 需要连接的数据库。 |
+| database | [Database](arkts-arkdata-database-i-sys.md) | 是 | 需要连接的数据库。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回AssetLoader的RemoteObject对象。 |
+| Promise<rpc.RemoteObject> | Promise对象，返回AssetLoader的RemoteObject对象。 |
 
 **示例：**
 
@@ -65,6 +75,8 @@ connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>
 
 **起始版本：** 11
 
+<!--Device-CloudService-connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>--><!--Device-CloudService-connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -74,13 +86,13 @@ connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用包名。 |
-| database | Database | 是 | 需要连接的数据库。 |
+| database | [Database](arkts-arkdata-database-i-sys.md) | 是 | 需要连接的数据库。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回CloudDB的RemoteObject对象。 |
+| Promise<rpc.RemoteObject> | Promise对象，返回CloudDB的RemoteObject对象。 |
 
 **示例：**
 
@@ -112,6 +124,8 @@ connectShareCenter(userId: number, bundleName: string): Promise<rpc.RemoteObject
 
 **起始版本：** 11
 
+<!--Device-CloudService-connectShareCenter(userId: int, bundleName: string): Promise<rpc.RemoteObject>--><!--Device-CloudService-connectShareCenter(userId: int, bundleName: string): Promise<rpc.RemoteObject>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -127,7 +141,7 @@ connectShareCenter(userId: number, bundleName: string): Promise<rpc.RemoteObject
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回ShareCenter的RemoteObject对象。 |
+| Promise<rpc.RemoteObject> | Promise对象，返回ShareCenter的RemoteObject对象。 |
 
 **示例：**
 
@@ -159,6 +173,8 @@ getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>
 
 **起始版本：** 11
 
+<!--Device-CloudService-getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>--><!--Device-CloudService-getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -167,7 +183,7 @@ getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;string, AppBriefInfo&gt;&gt; | Promise对象，返回以bundleName为键、AppBriefInfo为值的键值对。in KV pairs. |
+| Promise<Record<string, AppBriefInfo>> | Promise对象，返回以bundleName为键、AppBriefInfo为值的键值对。in KV pairs. |
 
 **示例：**
 
@@ -202,6 +218,8 @@ getAppSchema(bundleName: string): Promise<Result<AppSchema>>
 
 **起始版本：** 11
 
+<!--Device-CloudService-getAppSchema(bundleName: string): Promise<Result<AppSchema>>--><!--Device-CloudService-getAppSchema(bundleName: string): Promise<Result<AppSchema>>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -216,7 +234,7 @@ getAppSchema(bundleName: string): Promise<Result<AppSchema>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;AppSchema&gt;&gt; | Promise对象，返回数据库的schema信息。 |
+| Promise<Result<AppSchema>> | Promise对象，返回数据库的schema信息。 |
 
 **示例：**
 
@@ -252,6 +270,8 @@ getServiceInfo(): Promise<ServiceInfo>
 
 **起始版本：** 11
 
+<!--Device-CloudService-getServiceInfo(): Promise<ServiceInfo>--><!--Device-CloudService-getServiceInfo(): Promise<ServiceInfo>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -260,7 +280,7 @@ getServiceInfo(): Promise<ServiceInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ServiceInfo&gt; | Promise对象，返回获取的服务器信息。 |
+| Promise<ServiceInfo> | Promise对象，返回获取的服务器信息。 |
 
 **示例：**
 
@@ -301,6 +321,14 @@ subscribe(
 
 **起始版本：** 11
 
+<!--Device-CloudService-subscribe(
+      subInfo: Record<string, Array<Database>>,
+      expirationTime: long
+    ): Promise<Result<SubscribeInfo>>--><!--Device-CloudService-subscribe(
+      subInfo: Record<string, Array<Database>>,
+      expirationTime: long
+    ): Promise<Result<SubscribeInfo>>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -309,14 +337,14 @@ subscribe(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subInfo | Record&lt;string, Array&lt;Database&gt;&gt; | 是 | 需要订阅的数据，由应用包名称和数据库信息组成的键值对。 |
+| subInfo | Record<string, Array<Database>> | 是 | 需要订阅的数据，由应用包名称和数据库信息组成的键值对。 |
 | expirationTime | number | 是 | 表示订阅到期时间（ms）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;SubscribeInfo&gt;&gt; | Promise对象，返回订阅的结果，包含订阅的过期时间和订阅信息。 |
+| Promise<Result<SubscribeInfo>> | Promise对象，返回订阅的结果，包含订阅的过期时间和订阅信息。 |
 
 **示例：**
 
@@ -352,6 +380,8 @@ unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<number>
 
 **起始版本：** 11
 
+<!--Device-CloudService-unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<int>--><!--Device-CloudService-unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<int>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -360,13 +390,13 @@ unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| unsubscribeInfo | Record&lt;string, Array&lt;string&gt;&gt; | 是 | 需要取消订阅的数据信息，由应用包名和数据库名组成的键值对。 |
+| unsubscribeInfo | Record<string, Array<string>> | 是 | 需要取消订阅的数据信息，由应用包名和数据库名组成的键值对。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回取消订阅结果的错误码。 |
+| Promise<number> | Promise对象，返回取消订阅结果的错误码。 |
 
 **示例：**
 

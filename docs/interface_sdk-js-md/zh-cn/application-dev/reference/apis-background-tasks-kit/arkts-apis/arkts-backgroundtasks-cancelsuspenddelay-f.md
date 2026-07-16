@@ -1,5 +1,11 @@
 # cancelSuspendDelay
 
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+```
+
 ## cancelSuspendDelay
 
 ```TypeScript
@@ -9,6 +15,8 @@ function cancelSuspendDelay(requestId: number): void
 取消短时任务。
 
 **起始版本：** 9
+
+<!--Device-backgroundTaskManager-function cancelSuspendDelay(requestId: int): void--><!--Device-backgroundTaskManager-function cancelSuspendDelay(requestId: int): void-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 

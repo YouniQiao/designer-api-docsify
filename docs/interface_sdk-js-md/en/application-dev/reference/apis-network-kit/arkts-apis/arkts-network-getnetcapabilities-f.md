@@ -12,8 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function getNetCapabilities(netHandle: NetHandle, callback: AsyncCallback<NetCapabilities>): void
 ```
 
-Obtains {@link NetCapabilities} of a {@link NetHandle} object.
-To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Obtains {@link NetCapabilities} of a {@link NetHandle} object.To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
 
 **Since:** 11
 
@@ -21,14 +20,16 @@ To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-connection-function getNetCapabilities(netHandle: NetHandle, callback: AsyncCallback<NetCapabilities>): void--><!--Device-connection-function getNetCapabilities(netHandle: NetHandle, callback: AsyncCallback<NetCapabilities>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the handle. See {@link NetHandle}. |
-| callback | AsyncCallback&lt;NetCapabilities&gt; | Yes | the callback of getNetCapabilities.{@link NetCapabilities}. |
+| netHandle | [NetHandle](arkts-network-nethandle-i.md) | Yes | Indicates the handle. See {@link NetHandle}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<NetCapabilities> | Yes | the callback of getNetCapabilities.{@link NetCapabilities}. |
 
 **Error codes:**
 
@@ -71,8 +72,7 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 function getNetCapabilities(netHandle: NetHandle): Promise<NetCapabilities>
 ```
 
-Obtains {@link NetCapabilities} of a {@link NetHandle} object.
-To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Obtains {@link NetCapabilities} of a {@link NetHandle} object.To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
 
 **Since:** 11
 
@@ -80,19 +80,21 @@ To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-connection-function getNetCapabilities(netHandle: NetHandle): Promise<NetCapabilities>--><!--Device-connection-function getNetCapabilities(netHandle: NetHandle): Promise<NetCapabilities>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the handle. See {@link NetHandle}. |
+| netHandle | [NetHandle](arkts-network-nethandle-i.md) | Yes | Indicates the handle. See {@link NetHandle}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetCapabilities&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetCapabilities> | The promise returned by the function. |
 
 **Error codes:**
 

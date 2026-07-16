@@ -4,7 +4,15 @@
 
 **起始版本：** 10
 
+<!--Device-cert-interface CertExtension--><!--Device-cert-interface CertExtension-End-->
+
 **系统能力：** SystemCapability.Security.Cert
+
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
 
 ## checkCA
 
@@ -16,7 +24,9 @@ checkCA(): number
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CertExtension-checkCA(): int--><!--Device-CertExtension-checkCA(): int-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -84,7 +94,9 @@ getEncoded(): EncodingBlob
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CertExtension-getEncoded(): EncodingBlob--><!--Device-CertExtension-getEncoded(): EncodingBlob-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -92,7 +104,7 @@ getEncoded(): EncodingBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| EncodingBlob | 表示证书扩展域段序列化数据。 |
+| [EncodingBlob](arkts-devicecertificate-encodingblob-i.md) | 表示证书扩展域段序列化数据。 |
 
 **错误码：**
 
@@ -153,7 +165,9 @@ getEntry(valueType: ExtensionEntryType, oid: DataBlob): DataBlob
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CertExtension-getEntry(valueType: ExtensionEntryType, oid: DataBlob): DataBlob--><!--Device-CertExtension-getEntry(valueType: ExtensionEntryType, oid: DataBlob): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -161,14 +175,14 @@ getEntry(valueType: ExtensionEntryType, oid: DataBlob): DataBlob
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| valueType | ExtensionEntryType | 是 | 表示证书扩展域段获取的类型。 |
-| oid | DataBlob | 是 | 表示证书扩展域段获取的对象标识符。 |
+| valueType | [ExtensionEntryType](arkts-devicecertificate-extensionentrytype-e.md) | 是 | 表示证书扩展域段获取的类型。 |
+| oid | [DataBlob](arkts-devicecertificate-datablob-i.md) | 是 | 表示证书扩展域段获取的对象标识符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 表示证书扩展域段对象的数据。 |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | 表示证书扩展域段对象的数据。 |
 
 **错误码：**
 
@@ -234,7 +248,9 @@ getOidList(valueType: ExtensionOidType): DataArray
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CertExtension-getOidList(valueType: ExtensionOidType): DataArray--><!--Device-CertExtension-getOidList(valueType: ExtensionOidType): DataArray-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -242,13 +258,13 @@ getOidList(valueType: ExtensionOidType): DataArray
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| valueType | ExtensionOidType | 是 | 表示证书扩展域段对象标识符类型。 |
+| valueType | [ExtensionOidType](arkts-devicecertificate-extensionoidtype-e.md) | 是 | 表示证书扩展域段对象标识符类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DataArray | 表示证书扩展域段对象标识符列表。 |
+| [DataArray](arkts-devicecertificate-dataarray-i.md) | 表示证书扩展域段对象标识符列表。 |
 
 **错误码：**
 
@@ -310,7 +326,9 @@ hasUnsupportedCriticalExtension(): boolean
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CertExtension-hasUnsupportedCriticalExtension(): boolean--><!--Device-CertExtension-hasUnsupportedCriticalExtension(): boolean-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

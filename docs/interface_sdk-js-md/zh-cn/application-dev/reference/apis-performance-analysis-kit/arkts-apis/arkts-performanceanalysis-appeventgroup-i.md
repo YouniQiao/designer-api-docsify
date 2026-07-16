@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-hiAppEvent-interface AppEventGroup--><!--Device-hiAppEvent-interface AppEventGroup-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
+
+## 导入模块
+
+```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+```
 
 ## appEventInfos
 
@@ -18,7 +26,9 @@ appEventInfos: Array<AppEventInfo>
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AppEventGroup-appEventInfos: Array<AppEventInfo>--><!--Device-AppEventGroup-appEventInfos: Array<AppEventInfo>-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -34,7 +44,9 @@ name: string
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AppEventGroup-name: string--><!--Device-AppEventGroup-name: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 

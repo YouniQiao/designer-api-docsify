@@ -12,15 +12,15 @@ import { connection } from '@kit.ConnectivityKit';
 function pairCredibleDevice(deviceId: string, transport: BluetoothTransport, callback: AsyncCallback<void>): void
 ```
 
-Starts pairing with a credible remote Bluetooth device with transport.
-This interface does not trigger a dialog box and does not require user authorization.
-Only specific system application can use this function.
+Starts pairing with a credible remote Bluetooth device with transport.This interface does not trigger a dialog box and does not require user authorization.Only specific system application can use this function.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-connection-function pairCredibleDevice(deviceId: string, transport: BluetoothTransport, callback: AsyncCallback<void>): void--><!--Device-connection-function pairCredibleDevice(deviceId: string, transport: BluetoothTransport, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -31,8 +31,8 @@ Only specific system application can use this function.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| transport | BluetoothTransport | Yes | the transport of the remote device to pair. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of pairCredibleDevice. |
+| transport | [BluetoothTransport](arkts-connectivity-bluetoothtransport-e.md) | Yes | the transport of the remote device to pair. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of pairCredibleDevice. |
 
 **Error codes:**
 
@@ -72,15 +72,15 @@ try {
 function pairCredibleDevice(deviceId: string, transport: BluetoothTransport): Promise<void>
 ```
 
-Starts pairing with a credible remote Bluetooth device with transport.
-This interface does not trigger a dialog box and does not require user authorization.
-Only specific system application can use this function.
+Starts pairing with a credible remote Bluetooth device with transport.This interface does not trigger a dialog box and does not require user authorization.Only specific system application can use this function.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-connection-function pairCredibleDevice(deviceId: string, transport: BluetoothTransport): Promise<void>--><!--Device-connection-function pairCredibleDevice(deviceId: string, transport: BluetoothTransport): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -91,13 +91,13 @@ Only specific system application can use this function.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| transport | BluetoothTransport | Yes | the transport of the remote device to pair. |
+| transport | [BluetoothTransport](arkts-connectivity-bluetoothtransport-e.md) | Yes | the transport of the remote device to pair. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 

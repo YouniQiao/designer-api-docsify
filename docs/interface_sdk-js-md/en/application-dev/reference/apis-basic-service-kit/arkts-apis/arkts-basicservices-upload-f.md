@@ -24,14 +24,16 @@ Uploads a file. This API uses an asynchronous callback to return the result.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-request-function upload(config: UploadConfig, callback: AsyncCallback<UploadTask>): void--><!--Device-request-function upload(config: UploadConfig, callback: AsyncCallback<UploadTask>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Upload
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | UploadConfig | Yes | Upload configurations. |
-| callback | AsyncCallback&lt;UploadTask&gt; | Yes | Callback used to return the **UploadTask** object. If the operationis successful, **err** is **undefined**, and **data** is the **UploadTask** object obtained. Otherwise, **err**is an error object. |
+| config | [UploadConfig](arkts-basicservices-uploadconfig-i.md) | Yes | Upload configurations. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<UploadTask> | Yes | Callback used to return the **UploadTask** object. If the operation is successful, **err** is **undefined**, and **data** is the **UploadTask** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -79,19 +81,21 @@ Uploads a file. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-request-function upload(config: UploadConfig): Promise<UploadTask>--><!--Device-request-function upload(config: UploadConfig): Promise<UploadTask>-End-->
+
 **System capability:** SystemCapability.MiscServices.Upload
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | UploadConfig | Yes | Upload configurations. |
+| config | [UploadConfig](arkts-basicservices-uploadconfig-i.md) | Yes | Upload configurations. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;UploadTask&gt; | Promise used to return the **UploadTask** object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<UploadTask> | Promise used to return the **UploadTask** object. |
 
 **Error codes:**
 

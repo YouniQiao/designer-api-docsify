@@ -4,6 +4,8 @@ Declare CustomDialog ConfirmDialogV2
 
 **Since:** 18
 
+<!--Device-unnamed-export declare struct ConfirmDialogV2--><!--Device-unnamed-export declare struct ConfirmDialogV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Sets the ConfirmDialogV2 checkbox tips.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ConfirmDialogV2-checkTips?: ResourceStr--><!--Device-ConfirmDialogV2-checkTips?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## checked
@@ -45,6 +49,8 @@ Sets the ConfirmDialogV2 checkbox state.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ConfirmDialogV2-checked?: boolean--><!--Device-ConfirmDialogV2-checked?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +70,8 @@ Sets the ConfirmDialogV2 content.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ConfirmDialogV2-content?: ResourceStr--><!--Device-ConfirmDialogV2-content?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onCheckedChange
@@ -81,6 +89,8 @@ Sets the ConfirmDialogV2 CheckBox Callback.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ConfirmDialogV2-onCheckedChange?: AdvancedDialogV2OnCheckedChange--><!--Device-ConfirmDialogV2-onCheckedChange?: AdvancedDialogV2OnCheckedChange-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +110,8 @@ Sets the ConfirmDialogV2 primary button.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ConfirmDialogV2-primaryButton?: AdvancedDialogV2Button--><!--Device-ConfirmDialogV2-primaryButton?: AdvancedDialogV2Button-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## secondaryButton
@@ -118,6 +130,8 @@ Sets the ConfirmDialogV2 secondary button.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ConfirmDialogV2-secondaryButton?: AdvancedDialogV2Button--><!--Device-ConfirmDialogV2-secondaryButton?: AdvancedDialogV2Button-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## title
@@ -135,6 +149,8 @@ Sets the ConfirmDialogV2 title.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ConfirmDialogV2-title: ResourceStr--><!--Device-ConfirmDialogV2-title: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

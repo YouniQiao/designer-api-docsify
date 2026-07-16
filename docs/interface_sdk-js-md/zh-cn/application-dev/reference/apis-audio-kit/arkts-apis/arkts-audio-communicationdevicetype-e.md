@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-audio-enum CommunicationDeviceType--><!--Device-audio-enum CommunicationDeviceType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
 ## SPEAKER
@@ -15,6 +17,8 @@ SPEAKER = 2
 扬声器。
 
 **起始版本：** 12
+
+<!--Device-CommunicationDeviceType-SPEAKER = 2--><!--Device-CommunicationDeviceType-SPEAKER = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 

@@ -1,5 +1,11 @@
 # getMissionInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+```
+
 ## getMissionInfo
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getMissionInfo(deviceId: string, missionId: number, callback: AsyncCall
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-missionManager-function getMissionInfo(deviceId: string, missionId: int, callback: AsyncCallback<MissionInfo>): void--><!--Device-missionManager-function getMissionInfo(deviceId: string, missionId: int, callback: AsyncCallback<MissionInfo>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ function getMissionInfo(deviceId: string, missionId: number, callback: AsyncCall
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备ID，本机默认为空字符串。 |
 | missionId | number | 是 | 任务ID。 |
-| callback | AsyncCallback&lt;MissionInfo&gt; | 是 | 执行结果回调函数，返回任务信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<MissionInfo> | 是 | 执行结果回调函数，返回任务信息。 |
 
 **错误码：**
 
@@ -85,6 +93,8 @@ function getMissionInfo(deviceId: string, missionId: number): Promise<MissionInf
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-missionManager-function getMissionInfo(deviceId: string, missionId: int): Promise<MissionInfo>--><!--Device-missionManager-function getMissionInfo(deviceId: string, missionId: int): Promise<MissionInfo>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -100,7 +110,7 @@ function getMissionInfo(deviceId: string, missionId: number): Promise<MissionInf
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;MissionInfo&gt; | Promise对象，返回任务信息。 |
+| Promise<MissionInfo> | Promise对象，返回任务信息。 |
 
 **错误码：**
 

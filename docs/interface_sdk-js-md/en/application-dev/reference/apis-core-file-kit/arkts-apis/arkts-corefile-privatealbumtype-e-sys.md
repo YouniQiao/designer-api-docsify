@@ -2,14 +2,15 @@
 
 Enumerates the system album types.
 
-This API will be deprecated. Use [AlbumType](arkts-corefile-albumtype-e-sys.md) and
-[AlbumSubType](arkts-corefile-albumsubtype-e-sys.md) instead.
+This API will be deprecated. Use [AlbumType](arkts-corefile-albumtype-e-sys.md) and [AlbumSubType](arkts-corefile-albumsubtype-e-sys.md) instead.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [AlbumSubtype](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumsubtype-e.md)
+
+<!--Device-userFileManager-enum PrivateAlbumType--><!--Device-userFileManager-enum PrivateAlbumType-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -29,6 +30,8 @@ Favorites.
 
 **Substitutes:** [FAVORITE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumsubtype-e.md#favorite)
 
+<!--Device-PrivateAlbumType-TYPE_FAVORITE--><!--Device-PrivateAlbumType-TYPE_FAVORITE-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -46,6 +49,8 @@ Trash.
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [TRASH](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumsubtype-e-sys.md#trash)
+
+<!--Device-PrivateAlbumType-TYPE_TRASH--><!--Device-PrivateAlbumType-TYPE_TRASH-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

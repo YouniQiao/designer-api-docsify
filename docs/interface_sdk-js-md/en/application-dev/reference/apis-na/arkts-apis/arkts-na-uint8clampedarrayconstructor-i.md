@@ -1,10 +1,14 @@
 # Uint8ClampedArrayConstructor
 
+<!--Device-unnamed-interface Uint8ClampedArrayConstructor--><!--Device-unnamed-interface Uint8ClampedArrayConstructor-End-->
+
 ## constructor
 
 ```TypeScript
 new(length: number): Uint8ClampedArray
 ```
+
+<!--Device-Uint8ClampedArrayConstructor-new(length: number): Uint8ClampedArray--><!--Device-Uint8ClampedArrayConstructor-new(length: number): Uint8ClampedArray-End-->
 
 **Parameters:**
 
@@ -16,7 +20,7 @@ new(length: number): Uint8ClampedArray
 
 | Type | Description |
 | --- | --- |
-| Uint8ClampedArray |  |
+| [Uint8ClampedArray](arkts-na-uint8clampedarray-i.md) |  |
 
 ## constructor
 
@@ -24,17 +28,19 @@ new(length: number): Uint8ClampedArray
 new(array: ArrayLike<number> | ArrayBufferLike): Uint8ClampedArray
 ```
 
+<!--Device-Uint8ClampedArrayConstructor-new(array: ArrayLike<number> | ArrayBufferLike): Uint8ClampedArray--><!--Device-Uint8ClampedArrayConstructor-new(array: ArrayLike<number> | ArrayBufferLike): Uint8ClampedArray-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; \| ArrayBufferLike | Yes |  |
+| array | [ArrayLike](arkts-na-arraylike-i.md)<number> \| ArrayBufferLike | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8ClampedArray |  |
+| [Uint8ClampedArray](arkts-na-uint8clampedarray-i.md) |  |
 
 ## constructor
 
@@ -42,11 +48,13 @@ new(array: ArrayLike<number> | ArrayBufferLike): Uint8ClampedArray
 new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint8ClampedArray
 ```
 
+<!--Device-Uint8ClampedArrayConstructor-new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint8ClampedArray--><!--Device-Uint8ClampedArrayConstructor-new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint8ClampedArray-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBufferLike | Yes |  |
+| buffer | [ArrayBufferLike](arkts-na-arraybufferlike-t.md) | Yes |  |
 | byteOffset | number | No |  |
 | length | number | No |  |
 
@@ -54,7 +62,7 @@ new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint8Clamped
 
 | Type | Description |
 | --- | --- |
-| Uint8ClampedArray |  |
+| [Uint8ClampedArray](arkts-na-uint8clampedarray-i.md) |  |
 
 ## from
 
@@ -64,17 +72,19 @@ from(arrayLike: ArrayLike<number>): Uint8ClampedArray
 
 Creates an array from an array-like or iterable object.
 
+<!--Device-Uint8ClampedArrayConstructor-from(arrayLike: ArrayLike<number>): Uint8ClampedArray--><!--Device-Uint8ClampedArrayConstructor-from(arrayLike: ArrayLike<number>): Uint8ClampedArray-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;number&gt; | Yes |  |
+| arrayLike | [ArrayLike](arkts-na-arraylike-i.md)<number> | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8ClampedArray |  |
+| [Uint8ClampedArray](arkts-na-uint8clampedarray-i.md) |  |
 
 ## from
 
@@ -84,19 +94,21 @@ from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: a
 
 Creates an array from an array-like or iterable object.
 
+<!--Device-Uint8ClampedArrayConstructor-from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Uint8ClampedArray--><!--Device-Uint8ClampedArrayConstructor-from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Uint8ClampedArray-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;T&gt; | Yes |  |
-| mapfn | (v: T, k: number) =&gt; number | Yes |  |
+| arrayLike | [ArrayLike](arkts-na-arraylike-i.md)<T> | Yes |  |
+| mapfn | (v: T, k: number) => number | Yes |  |
 | thisArg | any | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8ClampedArray |  |
+| [Uint8ClampedArray](arkts-na-uint8clampedarray-i.md) |  |
 
 ## of
 
@@ -105,6 +117,8 @@ of(...items: number[]): Uint8ClampedArray
 ```
 
 Returns a new array from a set of elements.
+
+<!--Device-Uint8ClampedArrayConstructor-of(...items: number[]): Uint8ClampedArray--><!--Device-Uint8ClampedArrayConstructor-of(...items: number[]): Uint8ClampedArray-End-->
 
 **Parameters:**
 
@@ -116,7 +130,7 @@ Returns a new array from a set of elements.
 
 | Type | Description |
 | --- | --- |
-| Uint8ClampedArray |  |
+| [Uint8ClampedArray](arkts-na-uint8clampedarray-i.md) |  |
 
 ## BYTES_PER_ELEMENT
 
@@ -128,6 +142,8 @@ The size in bytes of each element in the array.
 
 **Type:** number
 
+<!--Device-Uint8ClampedArrayConstructor-readonly BYTES_PER_ELEMENT: number--><!--Device-Uint8ClampedArrayConstructor-readonly BYTES_PER_ELEMENT: number-End-->
+
 ## prototype
 
 ```TypeScript
@@ -135,4 +151,6 @@ readonly prototype: Uint8ClampedArray
 ```
 
 **Type:** Uint8ClampedArray
+
+<!--Device-Uint8ClampedArrayConstructor-readonly prototype: Uint8ClampedArray--><!--Device-Uint8ClampedArrayConstructor-readonly prototype: Uint8ClampedArray-End-->
 

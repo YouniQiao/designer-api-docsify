@@ -19,6 +19,10 @@ Set the type and state for the specified network capability.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-radio-function setNetworkCapability(slotId: int, type: NetworkCapabilityType, state: NetworkCapabilityState,
+    callback: AsyncCallback<void>): void--><!--Device-radio-function setNetworkCapability(slotId: int, type: NetworkCapabilityType, state: NetworkCapabilityState,
+    callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -28,9 +32,9 @@ Set the type and state for the specified network capability.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| type | NetworkCapabilityType | Yes | Indicates the service type of the {@link NetworkCapabilityType}. |
-| state | NetworkCapabilityState | Yes | Indicates the service ability state of the {@link NetworkCapabilityState}. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of setNetworkCapability. |
+| type | [NetworkCapabilityType](arkts-telephony-networkcapabilitytype-e-sys.md) | Yes | Indicates the service type of the {@link NetworkCapabilityType}. |
+| state | [NetworkCapabilityState](arkts-telephony-networkcapabilitystate-e-sys.md) | Yes | Indicates the service ability state of the {@link NetworkCapabilityState}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of setNetworkCapability. |
 
 **Error codes:**
 
@@ -75,6 +79,8 @@ Set the type and state for the specified network capability.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-radio-function setNetworkCapability(slotId: int, type: NetworkCapabilityType, state: NetworkCapabilityState): Promise<void>--><!--Device-radio-function setNetworkCapability(slotId: int, type: NetworkCapabilityType, state: NetworkCapabilityState): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -84,14 +90,14 @@ Set the type and state for the specified network capability.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| type | NetworkCapabilityType | Yes | Indicates the service type of the {@link NetworkCapabilityType}. |
-| state | NetworkCapabilityState | Yes | Indicates the service ability state of the {@link NetworkCapabilityState}. |
+| type | [NetworkCapabilityType](arkts-telephony-networkcapabilitytype-e-sys.md) | Yes | Indicates the service type of the {@link NetworkCapabilityType}. |
+| state | [NetworkCapabilityState](arkts-telephony-networkcapabilitystate-e-sys.md) | Yes | Indicates the service ability state of the {@link NetworkCapabilityState}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setNetworkCapability. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the setNetworkCapability. |
 
 **Error codes:**
 

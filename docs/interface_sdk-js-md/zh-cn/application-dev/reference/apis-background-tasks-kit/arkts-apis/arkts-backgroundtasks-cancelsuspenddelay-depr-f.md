@@ -14,6 +14,8 @@ function cancelSuspendDelay(requestId: number): void
 
 **替代接口：** [cancelSuspendDelay](arkts-backgroundtasks-cancelsuspenddelay-f.md#cancelsuspenddelay-1)
 
+<!--Device-backgroundTaskManager-function cancelSuspendDelay(requestId: number): void--><!--Device-backgroundTaskManager-function cancelSuspendDelay(requestId: number): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **参数：**

@@ -18,6 +18,8 @@ Obtains printer information based on the printer ID. This API uses a promise to 
 
 **Required permissions:** ohos.permission.PRINT
 
+<!--Device-print-function getPrinterInformationById(printerId: string): Promise<PrinterInformation>--><!--Device-print-function getPrinterInformationById(printerId: string): Promise<PrinterInformation>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
@@ -30,7 +32,7 @@ Obtains printer information based on the printer ID. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PrinterInformation&gt; | Promise used to return the printer information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PrinterInformation> | Promise used to return the printer information. |
 
 **Error codes:**
 

@@ -1,5 +1,11 @@
 # getSimIccId（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## getSimIccId
 
 ```TypeScript
@@ -8,12 +14,13 @@ function getSimIccId(slotId: number, callback: AsyncCallback<string>): void
 
 Obtains the ICCID of the SIM card in a specified slot.
 
-<p>The ICCID is a unique identifier of a SIM card. It consists of 20 digits
-and is recorded in the EFICCID file of the SIM card.
+<p>The ICCID is a unique identifier of a SIM card. It consists of 20 digits and is recorded in the EFICCID file of the SIM card.
 
 **起始版本：** 7
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-sim-function getSimIccId(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getSimIccId(slotId: int, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -24,7 +31,7 @@ and is recorded in the EFICCID file of the SIM card.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;string&gt; | 是 | Indicates the callback for getting the ICCID;returns an empty string if no SIM card is inserted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | Indicates the callback for getting the ICCID;returns an empty string if no SIM card is inserted. |
 
 **错误码：**
 
@@ -60,12 +67,13 @@ function getSimIccId(slotId: number): Promise<string>
 
 Obtains the ICCID of the SIM card in a specified slot.
 
-<p>The ICCID is a unique identifier of a SIM card. It consists of 20 digits
-and is recorded in the EFICCID file of the SIM card.
+<p>The ICCID is a unique identifier of a SIM card. It consists of 20 digits and is recorded in the EFICCID file of the SIM card.
 
 **起始版本：** 7
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-sim-function getSimIccId(slotId: int): Promise<string>--><!--Device-sim-function getSimIccId(slotId: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -81,7 +89,7 @@ and is recorded in the EFICCID file of the SIM card.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the ICCID; returns an empty string if no SIM card is inserted. |
+| Promise<string> | Returns the ICCID; returns an empty string if no SIM card is inserted. |
 
 **错误码：**
 

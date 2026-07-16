@@ -4,6 +4,8 @@ The settings item for device.
 
 **Since:** 26.0.0
 
+<!--Device-restrictions-enum SettingsForDevice--><!--Device-restrictions-enum SettingsForDevice-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## SET_APN
@@ -17,6 +19,8 @@ APN configuration.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsForDevice-SET_APN = 0--><!--Device-SettingsForDevice-SET_APN = 0-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -32,6 +36,8 @@ Capability to open the power menu bu long-pressing the power button.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingsForDevice-POWER_LONG_PRESS = 1--><!--Device-SettingsForDevice-POWER_LONG_PRESS = 1-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## SET_ETHERNET_IP
@@ -45,6 +51,8 @@ Ethernet IP address configuration.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsForDevice-SET_ETHERNET_IP = 2--><!--Device-SettingsForDevice-SET_ETHERNET_IP = 2-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -60,6 +68,8 @@ Device name configuration.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingsForDevice-SET_DEVICE_NAME = 3--><!--Device-SettingsForDevice-SET_DEVICE_NAME = 3-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## SET_BIOMETRICS_AND_SCREEN_LOCK
@@ -73,6 +83,8 @@ Screen lock password configuration.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsForDevice-SET_BIOMETRICS_AND_SCREEN_LOCK = 4--><!--Device-SettingsForDevice-SET_BIOMETRICS_AND_SCREEN_LOCK = 4-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

@@ -1,5 +1,11 @@
 # getAuthInstance
 
+## 导入模块
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+```
+
 ## getAuthInstance
 
 ```TypeScript
@@ -8,8 +14,8 @@ function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrus
 
 获取AuthInstance对象，用于执行用户身份认证。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 每个AuthInstance只能进行一次认证，若需要再次进行认证则需重新获取AuthInstance。
 
 **起始版本：** 9
@@ -18,21 +24,23 @@ function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrus
 
 **替代接口：** [getUserAuthInstance](arkts-userauthentication-getuserauthinstance-f.md#getuserauthinstance-1)
 
+<!--Device-userAuth-function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrustLevel: AuthTrustLevel): AuthInstance--><!--Device-userAuth-function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrustLevel: AuthTrustLevel): AuthInstance-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| challenge | Uint8Array | 是 | 挑战值，最大长度为32字节，可以传Uint8Array([])。 |
-| authType | UserAuthType | 是 | 认证类型，当前支持FACE和FINGERPRINT。 |
-| authTrustLevel | AuthTrustLevel | 是 | 认证信任等级。 |
+| challenge | [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 是 | 挑战值，最大长度为32字节，可以传Uint8Array([])。 |
+| authType | [UserAuthType](arkts-userauthentication-userauthtype-e.md) | 是 | 认证类型，当前支持FACE和FINGERPRINT。 |
+| authTrustLevel | [AuthTrustLevel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-authtrustlevel-e-sys.md) | 是 | 认证信任等级。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AuthInstance | 认证器对象。 |
+| [AuthInstance](arkts-userauthentication-authinstance-i.md) | 认证器对象。 |
 
 **错误码：**
 

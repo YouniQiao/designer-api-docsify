@@ -12,10 +12,11 @@ import { pointer } from '@kit.InputKit';
 function setPointerVisible(visible: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether the mouse pointer is visible in the current window. This API uses an asynchronous callback to return
-the result.
+Sets whether the mouse pointer is visible in the current window. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-pointer-function setPointerVisible(visible: boolean, callback: AsyncCallback<void>): void--><!--Device-pointer-function setPointerVisible(visible: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -23,8 +24,8 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| visible | boolean | Yes | Whether the mouse pointer is visible in the current window. The value **true**indicates that the mouse pointer is visible, and the value **false** indicates the opposite. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| visible | boolean | Yes | Whether the mouse pointer is visible in the current window. The value **true** indicates that the mouse pointer is visible, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -76,19 +77,21 @@ Sets whether the mouse pointer is visible in the current window. This API uses a
 
 **Since:** 9
 
+<!--Device-pointer-function setPointerVisible(visible: boolean): Promise<void>--><!--Device-pointer-function setPointerVisible(visible: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| visible | boolean | Yes | Whether the mouse pointer is visible in the current window. The value **true**indicates that the mouse pointer is visible, and the value **false** indicates the opposite. |
+| visible | boolean | Yes | Whether the mouse pointer is visible in the current window. The value **true** indicates that the mouse pointer is visible, and the value **false** indicates the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ EffectSuggestion object.
 
 **Since:** 12
 
+<!--Device-camera-interface EffectSuggestion--><!--Device-camera-interface EffectSuggestion-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -23,6 +25,8 @@ enableEffectSuggestion(enabled: boolean): void
 Enable effect suggestion for session.
 
 **Since:** 12
+
+<!--Device-EffectSuggestion-enableEffectSuggestion(enabled: boolean): void--><!--Device-EffectSuggestion-enableEffectSuggestion(enabled: boolean): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -52,6 +56,8 @@ Gets supported effect suggestion types.
 
 **Since:** 12
 
+<!--Device-EffectSuggestion-getSupportedEffectSuggestionTypes(): Array<EffectSuggestionType>--><!--Device-EffectSuggestion-getSupportedEffectSuggestionTypes(): Array<EffectSuggestionType>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -60,7 +66,7 @@ Gets supported effect suggestion types.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;EffectSuggestionType&gt; | The array of the effect suggestion types. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<EffectSuggestionType> | The array of the effect suggestion types. |
 
 **Error codes:**
 
@@ -78,6 +84,8 @@ isEffectSuggestionSupported(): boolean
 Checks whether effect suggestion is supported.
 
 **Since:** 12
+
+<!--Device-EffectSuggestion-isEffectSuggestionSupported(): boolean--><!--Device-EffectSuggestion-isEffectSuggestionSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -102,10 +110,11 @@ Checks whether effect suggestion is supported.
 setEffectSuggestionStatus(status: Array<EffectSuggestionStatus>): void
 ```
 
-Set the range of effect suggestion type and enable status.
-The application should fully set all data when it starts up.
+Set the range of effect suggestion type and enable status.The application should fully set all data when it starts up.
 
 **Since:** 12
+
+<!--Device-EffectSuggestion-setEffectSuggestionStatus(status: Array<EffectSuggestionStatus>): void--><!--Device-EffectSuggestion-setEffectSuggestionStatus(status: Array<EffectSuggestionStatus>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -115,7 +124,7 @@ The application should fully set all data when it starts up.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| status | Array&lt;EffectSuggestionStatus&gt; | Yes | The array of the effect suggestion status. |
+| status | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<EffectSuggestionStatus> | Yes | The array of the effect suggestion status. |
 
 **Error codes:**
 
@@ -135,6 +144,8 @@ Update the enable status of the effect suggestion type.
 
 **Since:** 12
 
+<!--Device-EffectSuggestion-updateEffectSuggestion(type: EffectSuggestionType, enabled: boolean): void--><!--Device-EffectSuggestion-updateEffectSuggestion(type: EffectSuggestionType, enabled: boolean): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -143,7 +154,7 @@ Update the enable status of the effect suggestion type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | EffectSuggestionType | Yes | The type of effect suggestion. |
+| type | [EffectSuggestionType](arkts-camera-effectsuggestiontype-e-sys.md) | Yes | The type of effect suggestion. |
 | enabled | boolean | Yes | The status of effect suggestion type. |
 
 **Error codes:**

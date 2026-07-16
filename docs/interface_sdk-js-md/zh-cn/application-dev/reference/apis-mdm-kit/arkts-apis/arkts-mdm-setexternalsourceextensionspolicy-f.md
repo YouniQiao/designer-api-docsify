@@ -1,5 +1,11 @@
 # setExternalSourceExtensionsPolicy
 
+## 导入模块
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+```
+
 ## setExternalSourceExtensionsPolicy
 
 ```TypeScript
@@ -10,10 +16,10 @@ function setExternalSourceExtensionsPolicy(admin: Want, policy: common.ManagedPo
 
 - DEFAULT：
 
-默认，表示无管控策略，用户可以通过“设置-隐私与安全-高级”中的“运行外部来源的扩展程序”开关来设置是否允许扩展程序运行。
+默认，表示无管控策略，用户可以通过“设置-隐私与安全-高级”中的“运行外部来源的扩展程序”开关来设置是否允许扩展程序运行。  
 - DISALLOW：
 
-禁用。设置此策略后，禁止运行外部来源的扩展程序，运行中的扩展程序可继续运行，扩展程序关闭后无法启动运行。用户无法开启“设置-隐私和安全-高级”中的“运行外部来源的扩展程序”开关。
+禁用。设置此策略后，禁止运行外部来源的扩展程序，运行中的扩展程序可继续运行，扩展程序关闭后无法启动运行。用户无法开启“设置-隐私和安全-高级”中的“运行外部来源的扩展程序”开关。  
 - FORCE_OPEN：
 
 强制开启。设置此策略后，允许运行外部来源的扩展程序，用户无法关闭“设置-隐私和安全-高级”中的“运行外部来源的扩展程序”开关。
@@ -24,13 +30,15 @@ function setExternalSourceExtensionsPolicy(admin: Want, policy: common.ManagedPo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-securityManager-function setExternalSourceExtensionsPolicy(admin: Want, policy: common.ManagedPolicy): void--><!--Device-securityManager-function setExternalSourceExtensionsPolicy(admin: Want, policy: common.ManagedPolicy): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | policy | common.ManagedPolicy | 是 | 管控策略。 |
 
 **错误码：**

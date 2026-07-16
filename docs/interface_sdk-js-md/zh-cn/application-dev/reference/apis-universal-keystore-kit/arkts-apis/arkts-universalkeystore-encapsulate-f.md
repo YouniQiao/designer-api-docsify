@@ -1,5 +1,11 @@
 # encapsulate
 
+## 导入模块
+
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+```
+
 ## encapsulate
 
 ```TypeScript
@@ -7,13 +13,15 @@ function encapsulate(keyAlias: string, params: HuksParam[],
       sharedKeyAlias?: string, sharedKeyParams?: HuksParam[]): Promise<HuksReturnResult>
 ```
 
-后量子加密密钥封装操作，支持HUKS密钥管理
-或由应用程序本身决定。如果应用程序选择管理密钥，
-对称密钥携带在HuksReturnResult的outData字段中。
+后量子加密密钥封装操作，支持HUKS密钥管理或由应用程序本身决定。如果应用程序选择管理密钥，对称密钥携带在HuksReturnResult的outData字段中。
 
 **起始版本：** 26.0.0
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-huks-function encapsulate(keyAlias: string, params: HuksParam[],
+      sharedKeyAlias?: string, sharedKeyParams?: HuksParam[]): Promise<HuksReturnResult>--><!--Device-huks-function encapsulate(keyAlias: string, params: HuksParam[],
+      sharedKeyAlias?: string, sharedKeyParams?: HuksParam[]): Promise<HuksReturnResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -22,15 +30,15 @@ function encapsulate(keyAlias: string, params: HuksParam[],
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 后量子加密算法的密钥名称 |
-| params | HuksParam[] | 是 | 表示封装属性 |
+| params | [HuksParam](arkts-universalkeystore-huksparam-i.md)[] | 是 | 表示封装属性 |
 | sharedKeyAlias | string | 否 | 封装密钥的密钥别名。如果使用HUKS进行密钥管理，则必须指定该参数。如果应用程序自己管理密钥，则忽略此参数 |
-| sharedKeyParams | HuksParam[] | 否 | 表示封装的密钥的属性。如果使用HUKS进行密钥管理，则必须指定该参数。如果应用程序自己管理密钥，则忽略此参数 |
+| sharedKeyParams | [HuksParam](arkts-universalkeystore-huksparam-i.md)[] | 否 | 表示封装的密钥的属性。如果使用HUKS进行密钥管理，则必须指定该参数。如果应用程序自己管理密钥，则忽略此参数 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | 函数返回的promise。 |
+| Promise<HuksReturnResult> | 函数返回的promise。 |
 
 **错误码：**
 

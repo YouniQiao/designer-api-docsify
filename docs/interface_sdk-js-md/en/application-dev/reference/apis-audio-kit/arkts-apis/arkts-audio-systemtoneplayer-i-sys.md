@@ -1,11 +1,10 @@
 # SystemTonePlayer (System API)
 
-The module provides APIs for playing and configuring SMS tones and notification tones and obtaining related
-information. Before calling any API in SystemTonePlayer, you must use
-[getSystemTonePlayer](arkts-audio-systemsoundmanager-i-sys.md#getsystemtoneplayer-1)
-to create a SystemTonePlayer instance.
+The module provides APIs for playing and configuring SMS tones and notification tones and obtaining related information. Before calling any API in SystemTonePlayer, you must use [getSystemTonePlayer](arkts-audio-systemsoundmanager-i-sys.md#getsystemtoneplayer-1)to create a SystemTonePlayer instance.
 
 **Since:** 11
+
+<!--Device-unnamed-export declare interface SystemTonePlayer--><!--Device-unnamed-export declare interface SystemTonePlayer-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -20,6 +19,8 @@ getAudioVolumeScale(): number
 Obtains the scale of the audio volume. This API returns the result synchronously.
 
 **Since:** 13
+
+<!--Device-SystemTonePlayer-getAudioVolumeScale(): double--><!--Device-SystemTonePlayer-getAudioVolumeScale(): double-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -46,6 +47,8 @@ getHapticsFeature(): systemSoundManager.ToneHapticsFeature
 Obtains the haptics style of the ringtone. This API returns the result synchronously.
 
 **Since:** 13
+
+<!--Device-SystemTonePlayer-getHapticsFeature(): systemSoundManager.ToneHapticsFeature--><!--Device-SystemTonePlayer-getHapticsFeature(): systemSoundManager.ToneHapticsFeature-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -74,6 +77,8 @@ Obtains the supported haptics styles. This API uses a promise to return the resu
 
 **Since:** 13
 
+<!--Device-SystemTonePlayer-getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeature>>--><!--Device-SystemTonePlayer-getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeature>>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -82,7 +87,7 @@ Obtains the supported haptics styles. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;systemSoundManager.ToneHapticsFeature&gt;&gt; | Promise used to return an array of the supportedhaptics styles. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<systemSoundManager.ToneHapticsFeature>> | Promise used to return an array of the supported haptics styles. |
 
 **Error codes:**
 
@@ -101,6 +106,8 @@ Obtains the title of a system tone. This API uses a promise to return the result
 
 **Since:** 11
 
+<!--Device-SystemTonePlayer-getTitle(): Promise<string>--><!--Device-SystemTonePlayer-getTitle(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -109,7 +116,7 @@ Obtains the title of a system tone. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the title obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the title obtained. |
 
 **Error codes:**
 
@@ -124,10 +131,11 @@ Obtains the title of a system tone. This API uses a promise to return the result
 off(type: 'playFinished', callback?: Callback<number>): void
 ```
 
-Unsubscribes from the event indicating that the ringtone playback is finished. This API uses an asynchronous
-callback to return the result.
+Unsubscribes from the event indicating that the ringtone playback is finished. This API uses an asynchronous callback to return the result.
 
 **Since:** 18
+
+<!--Device-SystemTonePlayer-off(type: 'playFinished', callback?: Callback<int>): void--><!--Device-SystemTonePlayer-off(type: 'playFinished', callback?: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -137,8 +145,8 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'playFinished' | Yes | Event type. The event **'playFinished'** is triggered when the playback isfinished. |
-| callback | Callback&lt;number&gt; | No | Callback used to return the ID of the audio stream. If this parameter is notspecified, all the subscriptions to the specified event are canceled. |
+| type | 'playFinished' | Yes | Event type. The event **'playFinished'** is triggered when the playback is finished. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | No | Callback used to return the ID of the audio stream. If this parameter is not specified, all the subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
@@ -153,10 +161,11 @@ callback to return the result.
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-Unsubscribes from error events that occur during ringtone playback. This API uses an asynchronous callback to
-return the result.
+Unsubscribes from error events that occur during ringtone playback. This API uses an asynchronous callback to return the result.
 
 **Since:** 18
+
+<!--Device-SystemTonePlayer-off(type: 'error', callback?: ErrorCallback): void--><!--Device-SystemTonePlayer-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -166,8 +175,8 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The event **'error'** is triggered when an error occurs during ringtoneplayback. |
-| callback | ErrorCallback | No | Callback used to return the error code and error information. If thisparameter is not specified, all the subscriptions to the specified event are canceled. |
+| type | 'error' | Yes | Event type. The event **'error'** is triggered when an error occurs during ringtone playback. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | Callback used to return the error code and error information. If this parameter is not specified, all the subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
@@ -182,13 +191,13 @@ return the result.
 on(type: 'playFinished', streamId: number, callback: Callback<number>): void
 ```
 
-Subscribes to the event indicating that the ringtone playback is finished. This API uses an asynchronous callback
-to return the result.
+Subscribes to the event indicating that the ringtone playback is finished. This API uses an asynchronous callback to return the result.
 
-The object to listen for is an audio stream specified by **streamId**. If **streamId** is set to **0**, this API
-subscribes to the playback complete event of all audio streams of the player.
+The object to listen for is an audio stream specified by **streamId**. If **streamId** is set to **0**, this API subscribes to the playback complete event of all audio streams of the player.
 
 **Since:** 18
+
+<!--Device-SystemTonePlayer-on(type: 'playFinished', streamId: int, callback: Callback<int>): void--><!--Device-SystemTonePlayer-on(type: 'playFinished', streamId: int, callback: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -198,9 +207,9 @@ subscribes to the playback complete event of all audio streams of the player.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'playFinished' | Yes | Event type. The event **'playFinished'** is triggered when the playback isfinished. |
-| streamId | number | Yes | ID of the audio stream. **streamId** is obtained through[start](arkts-audio-systemtoneplayer-i-sys.md#start-1). If **streamId** is set to **0**, the playback complete event of allaudio streams of the player is subscribed to. |
-| callback | Callback&lt;number&gt; | Yes | Callback used to return the stream ID of the audio stream that finishesplaying. |
+| type | 'playFinished' | Yes | Event type. The event **'playFinished'** is triggered when the playback is finished. |
+| streamId | number | Yes | ID of the audio stream. **streamId** is obtained through [start](arkts-audio-systemtoneplayer-i-sys.md#start-1). If **streamId** is set to **0**, the playback complete event of all audio streams of the player is subscribed to. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | Yes | Callback used to return the stream ID of the audio stream that finishes playing. |
 
 **Error codes:**
 
@@ -215,10 +224,11 @@ subscribes to the playback complete event of all audio streams of the player.
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to error events that occur during ringtone playback. This API uses an asynchronous callback to return
-the result.
+Subscribes to error events that occur during ringtone playback. This API uses an asynchronous callback to return the result.
 
 **Since:** 18
+
+<!--Device-SystemTonePlayer-on(type: 'error', callback: ErrorCallback): void--><!--Device-SystemTonePlayer-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -228,8 +238,8 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The event **'error'** is triggered when an error occurs during ringtoneplayback. |
-| callback | ErrorCallback | Yes | Callback used to return the error code and error information. For details aboutthe error codes, see[on('error')](../../apis-media-kit/arkts-apis/arkts-media-avplayer-i.md#on-16) ofthe AVPlayer. |
+| type | 'error' | Yes | Event type. The event **'error'** is triggered when an error occurs during ringtone playback. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback used to return the error code and error information. For details about the error codes, see [on('error')](../../apis-media-kit/arkts-apis/arkts-media-avplayer-i.md#on-16) of the AVPlayer. |
 
 **Error codes:**
 
@@ -248,6 +258,8 @@ Prepares to play a system tone. This API uses a promise to return the result.
 
 **Since:** 11
 
+<!--Device-SystemTonePlayer-prepare(): Promise<void>--><!--Device-SystemTonePlayer-prepare(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -256,7 +268,7 @@ Prepares to play a system tone. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -276,6 +288,8 @@ Releases the system tone player. This API uses a promise to return the result.
 
 **Since:** 11
 
+<!--Device-SystemTonePlayer-release(): Promise<void>--><!--Device-SystemTonePlayer-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -284,7 +298,7 @@ Releases the system tone player. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -301,6 +315,8 @@ setAudioVolumeScale(scale: number): void
 Sets the scale of the audio volume. No result is returned.
 
 **Since:** 13
+
+<!--Device-SystemTonePlayer-setAudioVolumeScale(scale: double): void--><!--Device-SystemTonePlayer-setAudioVolumeScale(scale: double): void-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -329,10 +345,11 @@ setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void
 
 Sets a haptics style of the ringtone.
 
-Before calling this API, call [getSupportedHapticsFeatures](arkts-audio-systemtoneplayer-i-sys.md#getsupportedhapticsfeatures-1) to
-obtain the supported haptics styles. The setting fails if the haptics style to set is not supported.
+Before calling this API, call [getSupportedHapticsFeatures](arkts-audio-systemtoneplayer-i-sys.md#getsupportedhapticsfeatures-1) to obtain the supported haptics styles. The setting fails if the haptics style to set is not supported.
 
 **Since:** 13
+
+<!--Device-SystemTonePlayer-setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void--><!--Device-SystemTonePlayer-setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -359,12 +376,13 @@ obtain the supported haptics styles. The setting fails if the haptics style to s
 start(toneOptions?: SystemToneOptions): Promise<number>
 ```
 
-Start playing the system tone. By default, the audio and haptic will not be muted. Using tone options to mute audio
-or haptics. If haptics is needed, caller should have the permission of ohos.permission.VIBRATE.
+Start playing the system tone. By default, the audio and haptic will not be muted. Using tone options to mute audio or haptics. If haptics is needed, caller should have the permission of ohos.permission.VIBRATE.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.VIBRATE
+
+<!--Device-SystemTonePlayer-start(toneOptions?: SystemToneOptions): Promise<int>--><!--Device-SystemTonePlayer-start(toneOptions?: SystemToneOptions): Promise<int>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -374,13 +392,13 @@ or haptics. If haptics is needed, caller should have the permission of ohos.perm
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| toneOptions | SystemToneOptions | No | Options of the system tone. |
+| toneOptions | [SystemToneOptions](arkts-audio-systemtoneoptions-t-sys.md) | No | Options of the system tone. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the stream ID. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the stream ID. |
 
 **Error codes:**
 
@@ -401,6 +419,8 @@ Stops playing a system tone. This API uses a promise to return the result.
 
 **Since:** 11
 
+<!--Device-SystemTonePlayer-stop(id: int): Promise<void>--><!--Device-SystemTonePlayer-stop(id: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -415,7 +435,7 @@ Stops playing a system tone. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Enum for logical orientation calculated by smart algorithms.
 
 **Since:** 26.0.0
 
+<!--Device-motion-export enum LogicalOrientation--><!--Device-motion-export enum LogicalOrientation-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 **System API:** This is a system API.
@@ -19,6 +21,8 @@ Indicates the orientation is unknown or cannot be determined(e.g., non-grip).
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-LogicalOrientation-UNKNOWN = -1--><!--Device-LogicalOrientation-UNKNOWN = -1-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -36,6 +40,8 @@ Indicates upright.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-LogicalOrientation-UPRIGHT = 0--><!--Device-LogicalOrientation-UPRIGHT = 0-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 **System API:** This is a system API.
@@ -51,6 +57,8 @@ Indicates left.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-LogicalOrientation-LEFT = 1--><!--Device-LogicalOrientation-LEFT = 1-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -68,6 +76,8 @@ Indicates the logical orientation is inverted.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-LogicalOrientation-INVERTED = 2--><!--Device-LogicalOrientation-INVERTED = 2-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 **System API:** This is a system API.
@@ -83,6 +93,8 @@ Indicates right.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-LogicalOrientation-RIGHT = 3--><!--Device-LogicalOrientation-RIGHT = 3-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 

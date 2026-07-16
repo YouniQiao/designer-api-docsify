@@ -18,6 +18,8 @@ function setDistributedEnabled(enable: boolean, deviceType: string): Promise<voi
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function setDistributedEnabled(enable: boolean, deviceType: string): Promise<void>--><!--Device-notificationManager-function setDistributedEnabled(enable: boolean, deviceType: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -33,7 +35,7 @@ function setDistributedEnabled(enable: boolean, deviceType: string): Promise<voi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果。Promise对象。 |
+| Promise<void> | 无返回结果。Promise对象。 |
 
 **错误码：**
 

@@ -1,5 +1,11 @@
 # setApplicationEnabledSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## setApplicationEnabledSync
 
 ```TypeScript
@@ -11,6 +17,8 @@ function setApplicationEnabledSync(bundleName: string, isEnabled: boolean): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
+
+<!--Device-bundleManager-function setApplicationEnabledSync(bundleName: string, isEnabled: boolean): void--><!--Device-bundleManager-function setApplicationEnabledSync(bundleName: string, isEnabled: boolean): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -65,6 +73,8 @@ function setApplicationEnabledSync(bundleName: string, appIndex: number, isEnabl
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-bundleManager-function setApplicationEnabledSync(bundleName: string, appIndex: int, isEnabled: boolean, killProcess: boolean): void--><!--Device-bundleManager-function setApplicationEnabledSync(bundleName: string, appIndex: int, isEnabled: boolean, killProcess: boolean): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

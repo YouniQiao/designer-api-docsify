@@ -4,6 +4,8 @@ Defines enrolled credential information.
 
 **Since:** 8
 
+<!--Device-osAccount-interface EnrolledCredInfo--><!--Device-osAccount-interface EnrolledCredInfo-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Authentication credential subtype.
 
 **Since:** 8
 
+<!--Device-EnrolledCredInfo-authSubType: AuthSubType--><!--Device-EnrolledCredInfo-authSubType: AuthSubType-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Authentication credential type.
 **Type:** AuthType
 
 **Since:** 8
+
+<!--Device-EnrolledCredInfo-authType: AuthType--><!--Device-EnrolledCredInfo-authType: AuthType-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -58,6 +64,8 @@ Credential ID, which is left blank by default.
 
 **Since:** 8
 
+<!--Device-EnrolledCredInfo-credentialId: Uint8Array--><!--Device-EnrolledCredInfo-credentialId: Uint8Array-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -68,13 +76,13 @@ Credential ID, which is left blank by default.
 isAbandoned?: boolean
 ```
 
-Whether the credential is abandoned. The abandoned credential may be stored as a backup credential for a period
-of time. The value **true** indicates that the credential is abandoned, and the value **false** indicates the
-opposite. The default value is **undefined**.
+Whether the credential is abandoned. The abandoned credential may be stored as a backup credential for a period of time. The value **true** indicates that the credential is abandoned, and the value **false** indicates the opposite. The default value is **undefined**.
 
 **Type:** boolean
 
 **Since:** 20
+
+<!--Device-EnrolledCredInfo-isAbandoned?: boolean--><!--Device-EnrolledCredInfo-isAbandoned?: boolean-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -92,6 +100,8 @@ Authentication credential template ID.
 
 **Since:** 8
 
+<!--Device-EnrolledCredInfo-templateId: Uint8Array--><!--Device-EnrolledCredInfo-templateId: Uint8Array-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -107,6 +117,8 @@ Credential validity period, in milliseconds. The default value is **undefined**.
 **Type:** number
 
 **Since:** 20
+
+<!--Device-EnrolledCredInfo-validityPeriod?: long--><!--Device-EnrolledCredInfo-validityPeriod?: long-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 

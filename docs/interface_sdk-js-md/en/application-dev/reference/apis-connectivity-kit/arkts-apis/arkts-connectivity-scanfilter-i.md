@@ -8,6 +8,8 @@ Describes the criteria for filtering scanning results can be set.
 
 **Substitutes:** ScanFilter
 
+<!--Device-bluetoothManager-interface ScanFilter--><!--Device-bluetoothManager-interface ScanFilter-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -32,6 +34,8 @@ The address of a BLE peripheral device
 
 **Substitutes:** deviceId
 
+<!--Device-ScanFilter-deviceId?: string--><!--Device-ScanFilter-deviceId?: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## manufactureData
@@ -49,6 +53,8 @@ Manufacture data.
 **Deprecated since:** 10
 
 **Substitutes:** manufactureData
+
+<!--Device-ScanFilter-manufactureData?: ArrayBuffer--><!--Device-ScanFilter-manufactureData?: ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -68,6 +74,8 @@ Manufacture data mask.
 
 **Substitutes:** manufactureDataMask
 
+<!--Device-ScanFilter-manufactureDataMask?: ArrayBuffer--><!--Device-ScanFilter-manufactureDataMask?: ArrayBuffer-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## manufactureId
@@ -85,6 +93,8 @@ Manufacture id.
 **Deprecated since:** 10
 
 **Substitutes:** manufactureId
+
+<!--Device-ScanFilter-manufactureId?: number--><!--Device-ScanFilter-manufactureId?: number-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -104,6 +114,8 @@ The name of a BLE peripheral device
 
 **Substitutes:** name
 
+<!--Device-ScanFilter-name?: string--><!--Device-ScanFilter-name?: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## serviceData
@@ -121,6 +133,8 @@ Service data.
 **Deprecated since:** 10
 
 **Substitutes:** serviceData
+
+<!--Device-ScanFilter-serviceData?: ArrayBuffer--><!--Device-ScanFilter-serviceData?: ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -140,6 +154,8 @@ Service data mask.
 
 **Substitutes:** serviceDataMask
 
+<!--Device-ScanFilter-serviceDataMask?: ArrayBuffer--><!--Device-ScanFilter-serviceDataMask?: ArrayBuffer-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## serviceSolicitationUuid
@@ -157,6 +173,8 @@ Service solicitation UUID.
 **Deprecated since:** 10
 
 **Substitutes:** serviceSolicitationUuid
+
+<!--Device-ScanFilter-serviceSolicitationUuid?: string--><!--Device-ScanFilter-serviceSolicitationUuid?: string-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -176,6 +194,8 @@ Service solicitation UUID mask.
 
 **Substitutes:** serviceSolicitationUuidMask
 
+<!--Device-ScanFilter-serviceSolicitationUuidMask?: string--><!--Device-ScanFilter-serviceSolicitationUuidMask?: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## serviceUuid
@@ -194,6 +214,8 @@ The service UUID of a BLE peripheral device
 
 **Substitutes:** serviceUuid
 
+<!--Device-ScanFilter-serviceUuid?: string--><!--Device-ScanFilter-serviceUuid?: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## serviceUuidMask
@@ -211,6 +233,8 @@ Service UUID mask.
 **Deprecated since:** 10
 
 **Substitutes:** serviceUuidMask
+
+<!--Device-ScanFilter-serviceUuidMask?: string--><!--Device-ScanFilter-serviceUuidMask?: string-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

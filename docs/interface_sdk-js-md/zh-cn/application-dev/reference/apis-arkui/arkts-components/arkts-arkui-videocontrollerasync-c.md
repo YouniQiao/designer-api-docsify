@@ -1,9 +1,10 @@
 # VideoControllerAsync
 
-Video playback controller class for asynchronous operations.
-Provides methods to control video playback, timing, and display mode.
+Video playback controller class for asynchronous operations.Provides methods to control video playback, timing, and display mode.
 
 **起始版本：** 26.0.0
+
+<!--Device-unnamed-declare class VideoControllerAsync--><!--Device-unnamed-declare class VideoControllerAsync-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,7 +20,9 @@ Creates a VideoControllerAsync instance.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-VideoControllerAsync-constructor()--><!--Device-VideoControllerAsync-constructor()-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -35,7 +38,9 @@ Exits fullscreen display mode.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-VideoControllerAsync-exitFullscreen()--><!--Device-VideoControllerAsync-exitFullscreen()-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,7 +56,9 @@ Pauses video playback asynchronously.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-VideoControllerAsync-pause(): Promise<void>--><!--Device-VideoControllerAsync-pause(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,7 +66,7 @@ Pauses video playback asynchronously.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise<void> | Promise that returns no value. |
 
 ## requestFullscreen
 
@@ -73,7 +80,9 @@ Requests fullscreen display for the video.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-VideoControllerAsync-requestFullscreen(value: boolean)--><!--Device-VideoControllerAsync-requestFullscreen(value: boolean)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -89,14 +98,15 @@ Requests fullscreen display for the video.
 reset(): Promise<void>
 ```
 
-Resets the video controller asynchronously.
-Restores the controller to its initial state.
+Resets the video controller asynchronously.Restores the controller to its initial state.
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-VideoControllerAsync-reset(): Promise<void>--><!--Device-VideoControllerAsync-reset(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,7 +114,7 @@ Restores the controller to its initial state.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise<void> | Promise that returns no value. |
 
 ## setCurrentTime
 
@@ -118,7 +128,9 @@ Sets the current playback time without specifying seek mode.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-VideoControllerAsync-setCurrentTime(value: double)--><!--Device-VideoControllerAsync-setCurrentTime(value: double)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,7 +138,7 @@ Sets the current playback time without specifying seek mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | The target time in seconds<br>Unit: Seconds, The value must be greater than or equal to 0, The maximum value is the total duration of thevideo. If the duration exceeds the maximum value, the system jumps to the end of the video. |
+| value | number | 是 | The target time in seconds<br>Unit: Seconds, The value must be greater than or equal to 0, The maximum value is the total duration of the video. If the duration exceeds the maximum value, the system jumps to the end of the video. |
 
 ## setCurrentTime
 
@@ -140,7 +152,9 @@ Sets the current playback time with specified seek mode.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-VideoControllerAsync-setCurrentTime(value: double, seekMode: SeekMode)--><!--Device-VideoControllerAsync-setCurrentTime(value: double, seekMode: SeekMode)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -148,8 +162,8 @@ Sets the current playback time with specified seek mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | The target time in seconds<br>Unit: Seconds, The value must be greater than or equal to 0, The maximum value is the total duration of thevideo. If the duration exceeds the maximum value, the system jumps to the end of the video. |
-| seekMode | SeekMode | 是 | The seek mode to use for time adjustment. |
+| value | number | 是 | The target time in seconds<br>Unit: Seconds, The value must be greater than or equal to 0, The maximum value is the total duration of the video. If the duration exceeds the maximum value, the system jumps to the end of the video. |
+| seekMode | [SeekMode](../../apis-media-kit/arkts-apis/arkts-media-seekmode-e.md) | 是 | The seek mode to use for time adjustment. |
 
 ## start
 
@@ -163,7 +177,9 @@ Starts video playback asynchronously.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-VideoControllerAsync-start(): Promise<void>--><!--Device-VideoControllerAsync-start(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -171,7 +187,7 @@ Starts video playback asynchronously.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise<void> | Promise that returns no value. |
 
 ## stop
 
@@ -185,7 +201,9 @@ Stops video playback asynchronously.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-VideoControllerAsync-stop(): Promise<void>--><!--Device-VideoControllerAsync-stop(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -193,5 +211,5 @@ Stops video playback asynchronously.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise<void> | Promise that returns no value. |
 

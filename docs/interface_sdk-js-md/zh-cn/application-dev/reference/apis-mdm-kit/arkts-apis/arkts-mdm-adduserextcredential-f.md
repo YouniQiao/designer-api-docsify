@@ -1,5 +1,11 @@
 # addUserExtCredential
 
+## 导入模块
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+```
+
 ## addUserExtCredential
 
 ```TypeScript
@@ -14,21 +20,23 @@ function addUserExtCredential(admin: Want, info: AddCredentialInfo, accountId: n
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-securityManager-function addUserExtCredential(admin: Want, info: AddCredentialInfo, accountId: number): Promise<Uint8Array>--><!--Device-securityManager-function addUserExtCredential(admin: Want, info: AddCredentialInfo, accountId: number): Promise<Uint8Array>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件 |
-| info | AddCredentialInfo | 是 | 添加用户凭据所需信息 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件 |
+| info | [AddCredentialInfo](arkts-mdm-addcredentialinfo-i.md) | 是 | 添加用户凭据所需信息 |
 | accountId | number | 是 | 系统账号ID<br>取值范围:[0, +∞) |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | 用户凭据ID |
+| Promise<Uint8Array> | 用户凭据ID |
 
 **错误码：**
 

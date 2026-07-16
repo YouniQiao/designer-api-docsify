@@ -1,11 +1,12 @@
 # RatingConfiguration
 
-You need a custom class to implement the **ContentModifier** API. Inherits from
-[CommonConfiguration](arkts-arkui-commonconfiguration-i.md).
+You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md).
 
 **Inheritance/Implementation:** RatingConfiguration extends [CommonConfiguration<RatingConfiguration>](CommonConfiguration<RatingConfiguration>)
 
 **Since:** 12
+
+<!--Device-unnamed-declare interface RatingConfiguration extends CommonConfiguration<RatingConfiguration>--><!--Device-unnamed-declare interface RatingConfiguration extends CommonConfiguration<RatingConfiguration>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,8 +16,7 @@ You need a custom class to implement the **ContentModifier** API. Inherits from
 indicator: boolean
 ```
 
-Whether the rating bar is used as an indicator. **true**: used as an indicator. **false**: not used as an
-indicator.
+Whether the rating bar is used as an indicator. **true**: used as an indicator. **false**: not used as an indicator.
 
 Default value: **false**
 
@@ -27,6 +27,8 @@ Default value: **false**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RatingConfiguration-indicator: boolean--><!--Device-RatingConfiguration-indicator: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,13 +44,11 @@ Default value: **0**
 
 Value range: [0, stars]
 
-Values less than 0 are treated as **0**, and values greater than the value of
-[stars](RatingAttribute#stars(value: number)) are treated as the value of **stars**.
+Values less than 0 are treated as **0**, and values greater than the value of [stars](RatingAttribute#stars(value: number)) are treated as the value of **stars**.
 
 This parameter supports two-way binding through [$$](../../../../ui/state-management/arkts-two-way-sync.md).
 
-This parameter supports two-way binding through
-[!!](../../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
+This parameter supports two-way binding through [!!](../../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
 **Type:** number
 
@@ -57,6 +57,8 @@ This parameter supports two-way binding through
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RatingConfiguration-rating: number--><!--Device-RatingConfiguration-rating: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,6 +80,8 @@ Default value: **5**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RatingConfiguration-stars: number--><!--Device-RatingConfiguration-stars: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## stepSize
@@ -98,6 +102,8 @@ Default value: **0.5**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RatingConfiguration-stepSize: number--><!--Device-RatingConfiguration-stepSize: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## triggerChange
@@ -115,6 +121,8 @@ Callback triggered when the rating value changes.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RatingConfiguration-triggerChange: Callback<number>--><!--Device-RatingConfiguration-triggerChange: Callback<number>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

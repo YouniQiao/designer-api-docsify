@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface Vec4--><!--Device-unnamed-export interface Vec4-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## w
@@ -17,6 +19,8 @@ vec4的W分量.
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-Vec4-w: double--><!--Device-Vec4-w: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -32,6 +36,8 @@ vec4的X分量.
 
 **起始版本：** 12
 
+<!--Device-Vec4-x: double--><!--Device-Vec4-x: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## y
@@ -46,6 +52,8 @@ vec4的Y分量.
 
 **起始版本：** 12
 
+<!--Device-Vec4-y: double--><!--Device-Vec4-y: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## z
@@ -59,6 +67,8 @@ vec4的Z分量.
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-Vec4-z: double--><!--Device-Vec4-z: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

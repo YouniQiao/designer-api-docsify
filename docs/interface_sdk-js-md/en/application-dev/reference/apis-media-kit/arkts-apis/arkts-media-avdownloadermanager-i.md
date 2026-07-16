@@ -4,6 +4,8 @@ Definition of the Offline Download Management Interface
 
 **Since:** 26.0.0
 
+<!--Device-media-interface AVDownloaderManager--><!--Device-media-interface AVDownloaderManager-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Create a download task based on the media description.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVDownloaderManager-addAVDownloadTask(source: MediaSource): string--><!--Device-AVDownloaderManager-addAVDownloadTask(source: MediaSource): string-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | MediaSource | Yes | Media description, including at least the resource URL.<br>Value constraint:The value cannot be null. |
+| source | [MediaSource](arkts-media-mediasource-i.md) | Yes | Media description, including at least the resource URL.<br>Value constraint:The value cannot be null. |
 
 **Return value:**
 
@@ -49,6 +53,8 @@ Set the network environment for the download. By default, the download is perfor
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVDownloaderManager-allowsCellularAccess(value: boolean): void--><!--Device-AVDownloaderManager-allowsCellularAccess(value: boolean): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -70,13 +76,15 @@ Obtains all offline download tasks in the Task Manager. Ended download tasks are
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVDownloaderManager-getDownloadTasks(): Array<string>--><!--Device-AVDownloaderManager-getDownloadTasks(): Array<string>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | If a task exists in the task manager, the taskID array is returned. Otherwise null. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | If a task exists in the task manager, the taskID array is returned. Otherwise null. |
 
 ## getTaskCacheDirectory
 
@@ -89,6 +97,8 @@ Obtains the offline download cache directory of a specified task.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVDownloaderManager-getTaskCacheDirectory(taskId: string): string--><!--Device-AVDownloaderManager-getTaskCacheDirectory(taskId: string): string-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -122,6 +132,8 @@ Remove a download task from the offline download manager
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVDownloaderManager-getTaskProgress(taskId: string): double--><!--Device-AVDownloaderManager-getTaskProgress(taskId: string): double-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 **Parameters:**
@@ -154,6 +166,8 @@ Obtains the status of a specified offline download task. For details, see #AVDow
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVDownloaderManager-getTaskStatus(taskId: string): AVDownloadTaskState--><!--Device-AVDownloaderManager-getTaskStatus(taskId: string): AVDownloadTaskState-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 **Parameters:**
@@ -166,7 +180,7 @@ Obtains the status of a specified offline download task. For details, see #AVDow
 
 | Type | Description |
 | --- | --- |
-| AVDownloadTaskState | Returns the task status of a specified task. |
+| [AVDownloadTaskState](arkts-media-avdownloadtaskstate-t.md) | Returns the task status of a specified task. |
 
 **Error codes:**
 
@@ -186,13 +200,15 @@ Deregisters a specified function's listening on task progress change events.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVDownloaderManager-offProgressChange(callback?: OnAVDownloadProgressChangeHandle): void--><!--Device-AVDownloaderManager-offProgressChange(callback?: OnAVDownloadProgressChangeHandle): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnAVDownloadProgressChangeHandle | No | Prototype of the function called by the event.The first parameter indicates the offline download task ID.The second parameter indicates the progress of an offline download task.The progress value ranges from 0.0 to 1.0,If the value is -1, the size of the resource is unknown.<br>Default value: If no parameter is set, all listening functions for the event are canceled. |
+| callback | [OnAVDownloadProgressChangeHandle](arkts-media-onavdownloadprogresschangehandle-t.md) | No | Prototype of the function called by the event.The first parameter indicates the offline download task ID.The second parameter indicates the progress of an offline download task.The progress value ranges from 0.0 to 1.0,If the value is -1, the size of the resource is unknown.<br>Default value: If no parameter is set, all listening functions for the event are canceled. |
 
 ## offStatusChange
 
@@ -206,13 +222,15 @@ Deregisters a specified function's listening on task status change events.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVDownloaderManager-offStatusChange(callback?: OnAVDownloadTaskStateHandle): void--><!--Device-AVDownloaderManager-offStatusChange(callback?: OnAVDownloadTaskStateHandle): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnAVDownloadTaskStateHandle | No | Prototype of the function invoked by the event.The first parameter indicates the ID of the offline download task.The second parameter indicates the latest status of the offline download task.<br>Default value: If no parameter is set, all listening functions for the event are canceled. |
+| callback | [OnAVDownloadTaskStateHandle](arkts-media-onavdownloadtaskstatehandle-t.md) | No | Prototype of the function invoked by the event.The first parameter indicates the ID of the offline download task.The second parameter indicates the latest status of the offline download task.<br>Default value: If no parameter is set, all listening functions for the event are canceled. |
 
 ## onProgressChange
 
@@ -220,13 +238,13 @@ Deregisters a specified function's listening on task status change events.
 onProgressChange(callback: OnAVDownloadProgressChangeHandle): void
 ```
 
-Registers a function to listen to the progress change value of an offline download task.
-The progress change of the offline download task exceeds 1% compared with that of the last time.
-The event is triggered after the interval exceeds 500 ms.
+Registers a function to listen to the progress change value of an offline download task.The progress change of the offline download task exceeds 1% compared with that of the last time.The event is triggered after the interval exceeds 500 ms.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVDownloaderManager-onProgressChange(callback: OnAVDownloadProgressChangeHandle): void--><!--Device-AVDownloaderManager-onProgressChange(callback: OnAVDownloadProgressChangeHandle): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -234,7 +252,7 @@ The event is triggered after the interval exceeds 500 ms.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnAVDownloadProgressChangeHandle | Yes | Prototype of the function called by the event.The first parameter indicates the offline download task ID.The second parameter indicates the progress of an offline download task.The progress value ranges from 0.0 to 1.0,If the value is -1, the size of the resource is unknown. |
+| callback | [OnAVDownloadProgressChangeHandle](arkts-media-onavdownloadprogresschangehandle-t.md) | Yes | Prototype of the function called by the event.The first parameter indicates the offline download task ID.The second parameter indicates the progress of an offline download task.The progress value ranges from 0.0 to 1.0,If the value is -1, the size of the resource is unknown. |
 
 ## onStatusChange
 
@@ -248,13 +266,15 @@ Registering a Function for Listening on Status Changes of Offline Download Tasks
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVDownloaderManager-onStatusChange(callback: OnAVDownloadTaskStateHandle): void--><!--Device-AVDownloaderManager-onStatusChange(callback: OnAVDownloadTaskStateHandle): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnAVDownloadTaskStateHandle | Yes | Prototype of the function invoked by the event.The first parameter indicates the ID of the task whose status changes.The second parameter indicates the new status of the task switchover. |
+| callback | [OnAVDownloadTaskStateHandle](arkts-media-onavdownloadtaskstatehandle-t.md) | Yes | Prototype of the function invoked by the event.The first parameter indicates the ID of the task whose status changes.The second parameter indicates the new status of the task switchover. |
 
 ## pauseDownloadTask
 
@@ -267,6 +287,8 @@ Suspending the download of a specified task
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVDownloaderManager-pauseDownloadTask(taskId?: string): void--><!--Device-AVDownloaderManager-pauseDownloadTask(taskId?: string): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -295,6 +317,8 @@ Release resources used for AVDownloaderManager.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVDownloaderManager-release(): void--><!--Device-AVDownloaderManager-release(): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## removeDownloadTask
@@ -308,6 +332,8 @@ Remove a download task from the offline download manager
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVDownloaderManager-removeDownloadTask(taskId?: string): void--><!--Device-AVDownloaderManager-removeDownloadTask(taskId?: string): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -335,6 +361,8 @@ Resuming Offline download of a Specified Task
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVDownloaderManager-resumeDownloadTask(taskId?: string): void--><!--Device-AVDownloaderManager-resumeDownloadTask(taskId?: string): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 **Parameters:**
@@ -361,6 +389,8 @@ Sets the network timeout interval for HTTP requests. If the timeout interval is 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVDownloaderManager-setRequestTimeout(expired: int): void--><!--Device-AVDownloaderManager-setRequestTimeout(expired: int): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 

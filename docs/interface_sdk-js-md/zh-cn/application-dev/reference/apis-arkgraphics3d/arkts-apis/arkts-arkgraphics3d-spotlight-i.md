@@ -6,6 +6,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface SpotLight extends Light--><!--Device-unnamed-export interface SpotLight extends Light-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## innerAngle
@@ -22,6 +24,8 @@ innerAngle?: number
 
 **起始版本：** 23
 
+<!--Device-SpotLight-innerAngle?: double--><!--Device-SpotLight-innerAngle?: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## outerAngle
@@ -37,6 +41,8 @@ outerAngle?: number
 **默认值：** PI / 4.0 π/4 弧度
 
 **起始版本：** 23
+
+<!--Device-SpotLight-outerAngle?: double--><!--Device-SpotLight-outerAngle?: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

@@ -4,6 +4,8 @@ Describes the measurement result.
 
 **Since:** 26.0.0
 
+<!--Device-ranging-interface RangingMeasurement--><!--Device-ranging-interface RangingMeasurement-End-->
+
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Confidence level of measurement results.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RangingMeasurement-confidence: RangingConfidence--><!--Device-RangingMeasurement-confidence: RangingConfidence-End-->
+
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 ## value
@@ -41,6 +45,8 @@ Measurement result value. The value is expressed in centimeters.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RangingMeasurement-value: int--><!--Device-RangingMeasurement-value: int-End-->
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 

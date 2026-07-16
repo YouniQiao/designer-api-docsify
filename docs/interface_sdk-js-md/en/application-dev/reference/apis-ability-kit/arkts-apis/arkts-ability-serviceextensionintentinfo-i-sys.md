@@ -1,9 +1,10 @@
 # ServiceExtensionIntentInfo (System API)
 
-Describes the information of the ServiceExtensionAbility bound to the
-[intent developed using a configuration file](../../../../application-models/insight-intent-config-development.md).
+Describes the information of the ServiceExtensionAbility bound to the [intent developed using a configuration file](../../../../application-models/insight-intent-config-development.md).
 
 **Since:** 23
+
+<!--Device-insightIntentDriver-interface ServiceExtensionIntentInfo--><!--Device-insightIntentDriver-interface ServiceExtensionIntentInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -28,6 +29,8 @@ Name of the UIAbility bound to the intent.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ServiceExtensionIntentInfo-readonly abilityName: string--><!--Device-ServiceExtensionIntentInfo-readonly abilityName: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

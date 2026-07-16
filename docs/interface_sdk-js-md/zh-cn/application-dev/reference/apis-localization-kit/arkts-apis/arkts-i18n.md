@@ -1,25 +1,29 @@
 # @ohos.i18n
 
-本模块提供系统相关的以及增强的[国际化](../../../../internationalization/i18n-l10n.md)能力，包括区域管理、电话号码处理、日历等，相关接口为
-[ECMA 402](https://dev.ecma-international.org/publications-and-standards/standards/ecma-402/)标准中未定义的补充接口。
-[国际化-Intl](arkts-intl.md)模块提供了ECMA 402标准定义的基础国际化接口，与本模块共同使用可提供完整的国际化能力。接口中使用的名词定义如下：
+本模块提供系统相关的以及增强的[国际化](../../../../internationalization/i18n-l10n.md)能力，包括区域管理、电话号码处理、日历等，相关接口为[ECMA 402](https://dev.ecma-international.org/publications-and-standards/standards/ecma-402/)标准中未定义的补充接口。[国际化-Intl](arkts-intl.md)模块提供了ECMA 402标准定义的基础国际化接口，与本模块共同使用可提供完整的国际化能力。接口中使用的名词定义如下：
 
-- 模式字符串：由[Unicode日期字段符号](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)和单引号包裹的自定义文本自由组
-合而成的字符串。
-- 框架字符串：由[Unicode日期字段符号](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)自由组合而成的字符串，不支持自
-定义文本。
+- 模式字符串：由[Unicode日期字段符号](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)和单引号包裹的自定义文本自由组合而成的字符串。  
+- 框架字符串：由[Unicode日期字段符号](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)自由组合而成的字符串，不支持自定义文本。
 
-> **说明：**
->
-> - 本模块接口基于[CLDR](https://cldr.unicode.org)国际化数据库实现，随着CLDR标准的迭代演进，接口处理结果可能会相应调整。例如时间日期格式化接口，其返回值仅适用于界面展示场景，开发者请勿对返回格式
-> 进行硬编码或假设性判断，否则可能导致版本兼容问题。其中，API version 12 对应[CLDR 42](https://cldr.unicode.org/downloads/cldr-42)版本，具体数据变更详情可查阅
-> [CLDR官方文档](https://cldr.unicode.org/)。
->
+> **说明：**  
+>  
+> - 本模块接口基于[CLDR](https://cldr.unicode.org)国际化数据库实现，随着CLDR标准的迭代演进，接口处理结果可能会相应调整。例如时间日期格式化接口，其返回值仅适用于界面展示场景，开发者请勿对返回格式  
+> 进行硬编码或假设性判断，否则可能导致版本兼容问题。其中，API version 12 对应[CLDR 42](https://cldr.unicode.org/downloads/cldr-42)版本，具体数据变更详情可查阅  
+> [CLDR官方文档](https://cldr.unicode.org/)。  
+>  
 > - 从API version 11开始，本模块部分接口支持在ArkTS卡片中使用。
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace i18n--><!--Device-unnamed-declare namespace i18n-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
 
 ## 汇总
 
@@ -43,7 +47,7 @@
 | [getSimpleNumberFormatBySkeleton](arkts-localization-getsimplenumberformatbyskeleton-f.md#getsimplenumberformatbyskeleton-1) | 通过框架字符串获取SimpleNumberFormat对象。 |
 | [getSimpleNumberFormatBySkeleton](arkts-localization-getsimplenumberformatbyskeleton-f.md#getsimplenumberformatbyskeleton-2) | 通过框架字符串获取SimpleNumberFormat对象。 |
 | [getSystemLanguage](arkts-localization-getsystemlanguage-f.md#getsystemlanguage-1) | 获取系统语言。 |
-| [getSystemLocale](arkts-localization-getsystemlocale-f.md#getsystemlocale-1) | &gt; [System.getSystemLocale](arkts-localization-system-c.md#getsystemlocaleinstance-1)代替。&gt; 获取系统区域ID。 |
+| [getSystemLocale](arkts-localization-getsystemlocale-f.md#getsystemlocale-1) | &gt; [System.getSystemLocale](arkts-localization-system-c.md#getsystemlocaleinstance-1)代替。 &gt; 获取系统区域ID。 |
 | [getSystemRegion](arkts-localization-getsystemregion-f.md#getsystemregion-1) | 获取系统地区。 |
 | [getTimeZone](arkts-localization-gettimezone-f.md#gettimezone-1) | 获取时区ID对应的时区对象。 |
 | [is24HourClock](arkts-localization-is24hourclock-f.md#is24hourclock-1) | 判断系统时间是否为24小时制。 |

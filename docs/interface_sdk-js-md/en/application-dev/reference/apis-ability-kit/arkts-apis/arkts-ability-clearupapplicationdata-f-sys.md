@@ -18,6 +18,8 @@ Clears application data by bundle name. This API uses a promise to return the re
 
 **Required permissions:** ohos.permission.CLEAN_APPLICATION_DATA
 
+<!--Device-appManager-function clearUpApplicationData(bundleName: string): Promise<void>--><!--Device-appManager-function clearUpApplicationData(bundleName: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -32,7 +34,7 @@ Clears application data by bundle name. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the API call result. You can perform error handling or customprocessing in this callback. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the API call result. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 
@@ -78,6 +80,8 @@ Clears application data by bundle name. This API uses an asynchronous callback t
 
 **Required permissions:** ohos.permission.CLEAN_APPLICATION_DATA
 
+<!--Device-appManager-function clearUpApplicationData(bundleName: string, callback: AsyncCallback<void>): void--><!--Device-appManager-function clearUpApplicationData(bundleName: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -87,7 +91,7 @@ Clears application data by bundle name. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the API call result. You can perform error handling orcustom processing in this callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the API call result. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 

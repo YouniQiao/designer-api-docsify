@@ -1,11 +1,12 @@
 # ImageReceiver
 
-Image receiver class. You can use it to obtain the surface ID of a component, read the latest image and the next
-image, and release **ImageReceiver** instances.
+Image receiver class. You can use it to obtain the surface ID of a component, read the latest image and the next image, and release **ImageReceiver** instances.
 
 Before calling any APIs in ImageReceiver, you must create an ImageReceiver instance.
 
 **Since:** 12
+
+<!--Device-sendableImage-interface ImageReceiver--><!--Device-sendableImage-interface ImageReceiver-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
 
@@ -25,13 +26,15 @@ Obtains a surface ID for the camera or other components. This API uses a promise
 
 **Since:** 12
 
+<!--Device-ImageReceiver-getReceivingSurfaceId(): Promise<string>--><!--Device-ImageReceiver-getReceivingSurfaceId(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Asynchronously returns the surface ID. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Asynchronously returns the surface ID. |
 
 **Example**
 
@@ -65,14 +68,16 @@ Listens for image arrival events. This API uses an asynchronous callback to retu
 
 **Since:** 12
 
+<!--Device-ImageReceiver-on(type: 'imageArrival', callback: AsyncCallback<void>): void--><!--Device-ImageReceiver-on(type: 'imageArrival', callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'imageArrival' | Yes | Type of event to listen for. The value is fixed at **'imageArrival'**, which istriggered when an image is received. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback invoked for the event. |
+| type | 'imageArrival' | Yes | Type of event to listen for. The value is fixed at **'imageArrival'**, which is triggered when an image is received. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback invoked for the event. |
 
 **Example**
 
@@ -101,14 +106,16 @@ readLatestImage(): Promise<Image>
 
 Reads the latest image from the ImageReceiver instance. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API can be called to receive data only after the [on](sendableImage.ImageReceiver.on) callback is
-> triggered. When the [Image](arkts-image-imagesource-i.md) object returned by this API is no longer needed,
-> call [release](arkts-image-pixelmap-i.md#release-1) to release the object. New data can be received only after
+> **NOTE**  
+>  
+> This API can be called to receive data only after the [on](sendableImage.ImageReceiver.on) callback is  
+> triggered. When the [Image](arkts-image-imagesource-i.md) object returned by this API is no longer needed,  
+> call [release](arkts-image-pixelmap-i.md#release-1) to release the object. New data can be received only after  
 > the release.
 
 **Since:** 12
+
+<!--Device-ImageReceiver-readLatestImage(): Promise<Image>--><!--Device-ImageReceiver-readLatestImage(): Promise<Image>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
 
@@ -116,7 +123,7 @@ Reads the latest image from the ImageReceiver instance. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Image&gt; | Promise used to return the latest image. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Image> | Promise used to return the latest image. |
 
 **Example**
 
@@ -148,14 +155,16 @@ readNextImage(): Promise<Image>
 
 Reads the next image from the ImageReceiver instance. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API can be called to receive data only after the [on](sendableImage.ImageReceiver.on) callback is
-> triggered. When the [Image](arkts-image-imagesource-i.md) object returned by this API is no longer needed,
-> call [release](arkts-image-pixelmap-i.md#release-1) to release the object. New data can be received only after
+> **NOTE**  
+>  
+> This API can be called to receive data only after the [on](sendableImage.ImageReceiver.on) callback is  
+> triggered. When the [Image](arkts-image-imagesource-i.md) object returned by this API is no longer needed,  
+> call [release](arkts-image-pixelmap-i.md#release-1) to release the object. New data can be received only after  
 > the release.
 
 **Since:** 12
+
+<!--Device-ImageReceiver-readNextImage(): Promise<Image>--><!--Device-ImageReceiver-readNextImage(): Promise<Image>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
 
@@ -163,7 +172,7 @@ Reads the next image from the ImageReceiver instance. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Image&gt; | Promise used to return the next image. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Image> | Promise used to return the next image. |
 
 **Example**
 
@@ -193,13 +202,11 @@ async function Demo() {
 release(): Promise<void>
 ```
 
-Releases this ImageReceiver instance. This API uses a promise to return the result.
-Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call this API to free
-the memory promptly.
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished
-and the instance is no longer needed.
+Releases this ImageReceiver instance. This API uses a promise to return the result.Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call this API to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 12
+
+<!--Device-ImageReceiver-release(): Promise<void>--><!--Device-ImageReceiver-release(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
 
@@ -207,7 +214,7 @@ and the instance is no longer needed.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Example**
 
@@ -245,6 +252,8 @@ The actual capacity is determined by the device hardware.
 
 **Since:** 12
 
+<!--Device-ImageReceiver-readonly capacity: number--><!--Device-ImageReceiver-readonly capacity: number-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
 
 ## format
@@ -259,6 +268,8 @@ Image format.
 
 **Since:** 12
 
+<!--Device-ImageReceiver-readonly format: image.ImageFormat--><!--Device-ImageReceiver-readonly format: image.ImageFormat-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
 
 ## size
@@ -272,6 +283,8 @@ Image size.
 **Type:** image.Size
 
 **Since:** 12
+
+<!--Device-ImageReceiver-readonly size: image.Size--><!--Device-ImageReceiver-readonly size: image.Size-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
 

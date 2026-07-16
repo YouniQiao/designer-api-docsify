@@ -4,6 +4,8 @@ Declare CustomDialog TipsDialogV2
 
 **Since:** 18
 
+<!--Device-unnamed-export declare struct TipsDialogV2--><!--Device-unnamed-export declare struct TipsDialogV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Sets the TipsDialogV2 checkbox tips.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TipsDialogV2-checkTips?: ResourceStr--><!--Device-TipsDialogV2-checkTips?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## checked
@@ -45,6 +49,8 @@ Sets the TipsDialogV2 checkbox check state.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TipsDialogV2-checked?: boolean--><!--Device-TipsDialogV2-checked?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +70,8 @@ Sets the TipsDialogV2 content.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TipsDialogV2-content?: ResourceStr--><!--Device-TipsDialogV2-content?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## imageBorderColor
@@ -81,6 +89,8 @@ Sets the borderColor of TipsDialogV2 image.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TipsDialogV2-imageBorderColor?: ColorMetrics--><!--Device-TipsDialogV2-imageBorderColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +110,8 @@ Sets the borderWidth of TipsDialogV2 image.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TipsDialogV2-imageBorderWidth?: LengthMetrics--><!--Device-TipsDialogV2-imageBorderWidth?: LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## imageRes
@@ -117,6 +129,8 @@ Sets the TipsDialogV2 imageRes.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TipsDialogV2-imageRes: ResourceStr | PixelMap--><!--Device-TipsDialogV2-imageRes: ResourceStr | PixelMap-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -136,6 +150,8 @@ Sets the TipsDialogV2 image size.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TipsDialogV2-imageSize?: SizeOptions--><!--Device-TipsDialogV2-imageSize?: SizeOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onCheckedChange
@@ -153,6 +169,8 @@ Sets the TipsDialogV2 CheckBox Callback.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TipsDialogV2-onCheckedChange?: AdvancedDialogV2OnCheckedChange--><!--Device-TipsDialogV2-onCheckedChange?: AdvancedDialogV2OnCheckedChange-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -172,6 +190,8 @@ Sets the TipsDialogV2 primary button.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TipsDialogV2-primaryButton?: AdvancedDialogV2Button--><!--Device-TipsDialogV2-primaryButton?: AdvancedDialogV2Button-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## secondaryButton
@@ -190,6 +210,8 @@ Sets the TipsDialogV2 secondary button.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TipsDialogV2-secondaryButton?: AdvancedDialogV2Button--><!--Device-TipsDialogV2-secondaryButton?: AdvancedDialogV2Button-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## title
@@ -207,6 +229,8 @@ Sets the TipsDialogV2 title.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TipsDialogV2-title?: ResourceStr--><!--Device-TipsDialogV2-title?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,6 +4,8 @@ Indicates the camera capabilities.
 
 **Since:** 11
 
+<!--Device-call-export interface CameraCapabilities--><!--Device-call-export interface CameraCapabilities-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Indicates the id of call.
 
 **Since:** 11
 
+<!--Device-CameraCapabilities-callId: int--><!--Device-CameraCapabilities-callId: int-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ Indicates the the camera height.
 
 **Since:** 11
 
+<!--Device-CameraCapabilities-height: int--><!--Device-CameraCapabilities-height: int-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ Indicates the camera width.
 **Type:** number
 
 **Since:** 11
+
+<!--Device-CameraCapabilities-width: int--><!--Device-CameraCapabilities-width: int-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 

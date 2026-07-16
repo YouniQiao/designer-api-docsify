@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare interface BlurStyleOptions--><!--Device-unnamed-declare interface BlurStyleOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## adaptiveColor
@@ -24,7 +26,9 @@ adaptiveColor?: AdaptiveColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BlurStyleOptions-adaptiveColor?: AdaptiveColor--><!--Device-BlurStyleOptions-adaptiveColor?: AdaptiveColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,7 +50,9 @@ blurOptions?: BlurOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BlurStyleOptions-blurOptions?: BlurOptions--><!--Device-BlurStyleOptions-blurOptions?: BlurOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,7 +74,9 @@ colorMode?: ThemeColorMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BlurStyleOptions-colorMode?: ThemeColorMode--><!--Device-BlurStyleOptions-colorMode?: ThemeColorMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,7 +104,9 @@ scale?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BlurStyleOptions-scale?: number--><!--Device-BlurStyleOptions-scale?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

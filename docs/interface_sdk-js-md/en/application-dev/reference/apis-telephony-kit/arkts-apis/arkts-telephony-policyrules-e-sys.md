@@ -4,6 +4,8 @@ The policy rules of the profile.
 
 **Since:** 18
 
+<!--Device-eSIM-export enum PolicyRules--><!--Device-eSIM-export enum PolicyRules-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -17,6 +19,8 @@ POLICY_RULE_DISABLE_NOT_ALLOWED = 1
 Disabling of this Profile is not allowed.
 
 **Since:** 18
+
+<!--Device-PolicyRules-POLICY_RULE_DISABLE_NOT_ALLOWED = 1--><!--Device-PolicyRules-POLICY_RULE_DISABLE_NOT_ALLOWED = 1-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -32,6 +36,8 @@ Deletion of this Profile is not allowed.
 
 **Since:** 18
 
+<!--Device-PolicyRules-POLICY_RULE_DELETE_NOT_ALLOWED = 1 << 1--><!--Device-PolicyRules-POLICY_RULE_DELETE_NOT_ALLOWED = 1 << 1-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -45,6 +51,8 @@ POLICY_RULE_DISABLE_AND_DELETE = 1 << 2
 This profile should be deleted when disabled.
 
 **Since:** 18
+
+<!--Device-PolicyRules-POLICY_RULE_DISABLE_AND_DELETE = 1 << 2--><!--Device-PolicyRules-POLICY_RULE_DISABLE_AND_DELETE = 1 << 2-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 

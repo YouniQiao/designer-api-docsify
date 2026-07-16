@@ -18,6 +18,8 @@ function removeAll(bundle: BundleOption, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationSubscribe-function removeAll(bundle: BundleOption, callback: AsyncCallback<void>): void--><!--Device-notificationSubscribe-function removeAll(bundle: BundleOption, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,8 +28,8 @@ function removeAll(bundle: BundleOption, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 指定应用的包信息。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 删除指定应用的所有通知回调函数。 |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 指定应用的包信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 删除指定应用的所有通知回调函数。 |
 
 **错误码：**
 
@@ -73,6 +75,8 @@ function removeAll(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationSubscribe-function removeAll(callback: AsyncCallback<void>): void--><!--Device-notificationSubscribe-function removeAll(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -81,7 +85,7 @@ function removeAll(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 删除所有通知回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 删除所有通知回调函数。 |
 
 **错误码：**
 
@@ -123,6 +127,8 @@ function removeAll(userId: number, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationSubscribe-function removeAll(userId: int, callback: AsyncCallback<void>): void--><!--Device-notificationSubscribe-function removeAll(userId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -132,7 +138,7 @@ function removeAll(userId: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 删除指定用户所有通知回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 删除指定用户所有通知回调函数。 |
 
 **错误码：**
 
@@ -177,6 +183,8 @@ function removeAll(userId: number): Promise<void>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationSubscribe-function removeAll(userId: int): Promise<void>--><!--Device-notificationSubscribe-function removeAll(userId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -191,7 +199,7 @@ function removeAll(userId: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -232,6 +240,8 @@ function removeAll(bundle?: BundleOption): Promise<void>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationSubscribe-function removeAll(bundle?: BundleOption): Promise<void>--><!--Device-notificationSubscribe-function removeAll(bundle?: BundleOption): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -240,13 +250,13 @@ function removeAll(bundle?: BundleOption): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 否 | 指定应用的包信息。默认为空，表示删除所有通知。 |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | 否 | 指定应用的包信息。默认为空，表示删除所有通知。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

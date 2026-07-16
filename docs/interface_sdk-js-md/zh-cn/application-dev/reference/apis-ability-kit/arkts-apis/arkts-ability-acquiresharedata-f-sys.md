@@ -1,16 +1,22 @@
 # acquireShareData（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
+```
+
 ## acquireShareData
 
 ```TypeScript
 function acquireShareData(missionId: number, callback: AsyncCallback<Record<string, Object>>): void
 ```
 
-系统弹框通过该接口发起原子化服务分享，触发目标UIAbility的
-[onShare](arkts-ability-uiability-c.md#onshare-1)回调并返回分享数据。使用
-callback异步回调。
+系统弹框通过该接口发起原子化服务分享，触发目标UIAbility的[onShare](arkts-ability-uiability-c.md#onshare-1)回调并返回分享数据。使用callback异步回调。
 
 **起始版本：** 10
+
+<!--Device-abilityManager-function acquireShareData(missionId: int, callback: AsyncCallback<Record<string, Object>>): void--><!--Device-abilityManager-function acquireShareData(missionId: int, callback: AsyncCallback<Record<string, Object>>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -21,7 +27,7 @@ callback异步回调。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | missionId | number | 是 | 目标应用的missionId，最大为2&lt;sup&gt;31&lt;/sup&gt;-1。 |
-| callback | AsyncCallback&lt;Record&lt;string, Object&gt;&gt; | 是 | 回调函数。当接口调用成功，err为undefined，data为获取到的分享数据；否则为错误对象。可进行错误处理或其他自定义处理。<br>**起始版本：** 11 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Record<string, Object>> | 是 | 回调函数。当接口调用成功，err为undefined，data为获取到的分享数据；否则为错误对象。可进行错误处理或其他自定义处理。<br>**起始版本：** 11 |
 
 **错误码：**
 
@@ -38,11 +44,11 @@ callback异步回调。
 function acquireShareData(missionId: number): Promise<Record<string, Object>>
 ```
 
-系统弹框通过该接口发起原子化服务分享，触发目标UIAbility的
-[onShare](arkts-ability-uiability-c.md#onshare-1)回调并返回分享数据。使用
-Promise异步回调。
+系统弹框通过该接口发起原子化服务分享，触发目标UIAbility的[onShare](arkts-ability-uiability-c.md#onshare-1)回调并返回分享数据。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-abilityManager-function acquireShareData(missionId: int): Promise<Record<string, Object>>--><!--Device-abilityManager-function acquireShareData(missionId: int): Promise<Record<string, Object>>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -58,7 +64,7 @@ Promise异步回调。
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;string, Object&gt;&gt; | Promise used to return the API call result and the shared data. You canperform error handling or other custom processing. |
+| Promise<Record<string, Object>> | Promise used to return the API call result and the shared data. You can perform error handling or other custom processing. |
 
 **错误码：**
 

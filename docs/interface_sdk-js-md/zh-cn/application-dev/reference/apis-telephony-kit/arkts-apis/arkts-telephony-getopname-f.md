@@ -1,5 +1,11 @@
 # getOpName
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## getOpName
 
 ```TypeScript
@@ -10,6 +16,8 @@ Obtains the operator name of the SIM card in a specified slot.
 
 **起始版本：** 9
 
+<!--Device-sim-function getOpName(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getOpName(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -17,7 +25,7 @@ Obtains the operator name of the SIM card in a specified slot.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;string&gt; | 是 | Indicates the callback for getting the operator name;Returns an empty string if no SIM card is inserted or no operator name matched. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | Indicates the callback for getting the operator name;Returns an empty string if no SIM card is inserted or no operator name matched. |
 
 **错误码：**
 
@@ -61,6 +69,8 @@ Obtains the operator name of the SIM card in a specified slot.
 
 **起始版本：** 9
 
+<!--Device-sim-function getOpName(slotId: int): Promise<string>--><!--Device-sim-function getOpName(slotId: int): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -73,7 +83,7 @@ Obtains the operator name of the SIM card in a specified slot.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the operator name; returns an empty string if no SIM card is inserted orno operator name matched. |
+| Promise<string> | Returns the operator name; returns an empty string if no SIM card is inserted or no operator name matched. |
 
 **错误码：**
 

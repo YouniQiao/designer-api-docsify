@@ -6,6 +6,8 @@ PCF软阴影配置参数
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-export declare class PCFConfig extends SoftShadowConfig--><!--Device-unnamed-export declare class PCFConfig extends SoftShadowConfig-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## shadowSampleCount
@@ -24,6 +26,8 @@ set shadowSampleCount(value: number | undefined)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PCFConfig-set shadowSampleCount(value: int | undefined)--><!--Device-PCFConfig-set shadowSampleCount(value: int | undefined)-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## shadowSampleRadius
@@ -41,6 +45,8 @@ set shadowSampleRadius(value: number | undefined)
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PCFConfig-set shadowSampleRadius(value: double | undefined)--><!--Device-PCFConfig-set shadowSampleRadius(value: double | undefined)-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

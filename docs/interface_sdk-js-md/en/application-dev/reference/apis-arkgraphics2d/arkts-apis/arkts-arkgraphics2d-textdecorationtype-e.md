@@ -4,6 +4,8 @@ Enumerates the text decoration types.
 
 **Since:** 12
 
+<!--Device-text-enum TextDecorationType--><!--Device-text-enum TextDecorationType-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## NONE
@@ -17,6 +19,8 @@ No decoration is used.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TextDecorationType-NONE = 0--><!--Device-TextDecorationType-NONE = 0-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -32,6 +36,8 @@ An underline is used for decoration.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TextDecorationType-UNDERLINE = 1--><!--Device-TextDecorationType-UNDERLINE = 1-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## OVERLINE
@@ -46,6 +52,8 @@ An overline is used for decoration.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TextDecorationType-OVERLINE = 2--><!--Device-TextDecorationType-OVERLINE = 2-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## LINE_THROUGH
@@ -59,6 +67,8 @@ A strikethrough is used for decoration.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TextDecorationType-LINE_THROUGH = 4--><!--Device-TextDecorationType-LINE_THROUGH = 4-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

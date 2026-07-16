@@ -4,6 +4,8 @@ module的api版本。
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface ApiVersion--><!--Device-unnamed-export interface ApiVersion-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -19,6 +21,8 @@ readonly compatible: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-ApiVersion-readonly compatible: int--><!--Device-ApiVersion-readonly compatible: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -36,6 +40,8 @@ readonly releaseType: string
 
 **起始版本：** 9
 
+<!--Device-ApiVersion-readonly releaseType: string--><!--Device-ApiVersion-readonly releaseType: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +57,8 @@ readonly target: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-ApiVersion-readonly target: int--><!--Device-ApiVersion-readonly target: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 

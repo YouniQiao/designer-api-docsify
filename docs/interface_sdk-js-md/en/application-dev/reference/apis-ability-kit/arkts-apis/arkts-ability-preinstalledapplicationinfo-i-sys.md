@@ -4,6 +4,8 @@ Indicates the information of preinstalled application.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface PreinstalledApplicationInfo--><!--Device-unnamed-export interface PreinstalledApplicationInfo-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -19,6 +21,8 @@ Bundle name of the application.
 **Type:** string
 
 **Since:** 12
+
+<!--Device-PreinstalledApplicationInfo-readonly bundleName: string--><!--Device-PreinstalledApplicationInfo-readonly bundleName: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -38,6 +42,8 @@ App description ID.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PreinstalledApplicationInfo-readonly descriptionId?: long--><!--Device-PreinstalledApplicationInfo-readonly descriptionId?: long-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -53,6 +59,8 @@ Icon ID of the application.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-PreinstalledApplicationInfo-readonly iconId: long--><!--Device-PreinstalledApplicationInfo-readonly iconId: long-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -70,6 +78,8 @@ Label ID of the application.
 
 **Since:** 12
 
+<!--Device-PreinstalledApplicationInfo-readonly labelId: long--><!--Device-PreinstalledApplicationInfo-readonly labelId: long-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -80,12 +90,13 @@ Label ID of the application.
 readonly moduleName: string
 ```
 
-Module name of the application. The value is **moduleName** configured for the entry module. If the entry module
-does not exist, the value is **moduleName** configured for the feature module.
+Module name of the application. The value is **moduleName** configured for the entry module. If the entry module does not exist, the value is **moduleName** configured for the feature module.
 
 **Type:** string
 
 **Since:** 12
+
+<!--Device-PreinstalledApplicationInfo-readonly moduleName: string--><!--Device-PreinstalledApplicationInfo-readonly moduleName: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

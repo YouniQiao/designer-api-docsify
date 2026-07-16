@@ -2,6 +2,8 @@
 
 **Since:** 7
 
+<!--Device-unnamed-interface PermissionRequestResult--><!--Device-unnamed-interface PermissionRequestResult-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## authResults
@@ -19,6 +21,8 @@ Permission request result.
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-PermissionRequestResult-authResults: Array<number>--><!--Device-PermissionRequestResult-authResults: Array<number>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -38,6 +42,8 @@ Permissions requested.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-PermissionRequestResult-permissions: Array<string>--><!--Device-PermissionRequestResult-permissions: Array<string>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## requestCode
@@ -55,6 +61,8 @@ Request code passed.
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-PermissionRequestResult-requestCode: number--><!--Device-PermissionRequestResult-requestCode: number-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

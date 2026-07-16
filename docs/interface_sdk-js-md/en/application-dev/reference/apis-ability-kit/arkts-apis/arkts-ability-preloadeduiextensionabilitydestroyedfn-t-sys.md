@@ -4,12 +4,13 @@
 export type PreloadedUIExtensionAbilityDestroyedFn = (preloadId: number) => void
 ```
 
-Defines the callback function when the preloaded
-[UIExtensionAbility](arkts-ability-uiextensionability-c.md) instance is destroyed.
+Defines the callback function when the preloaded [UIExtensionAbility](arkts-ability-uiextensionability-c.md) instance is destroyed.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-abilityManager-export type PreloadedUIExtensionAbilityDestroyedFn = (preloadId: int) => void--><!--Device-abilityManager-export type PreloadedUIExtensionAbilityDestroyedFn = (preloadId: int) => void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

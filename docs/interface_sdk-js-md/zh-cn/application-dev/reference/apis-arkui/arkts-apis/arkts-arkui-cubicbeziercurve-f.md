@@ -1,5 +1,11 @@
 # cubicBezierCurve
 
+## 导入模块
+
+```TypeScript
+import { curves } from '@kit.ArkUI';
+```
+
 ## cubicBezierCurve
 
 ```TypeScript
@@ -10,7 +16,9 @@ function cubicBezierCurve(x1: number, y1: number, x2: number, y2: number): ICurv
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-curves-function cubicBezierCurve(x1: number, y1: number, x2: number, y2: number): ICurve--><!--Device-curves-function cubicBezierCurve(x1: number, y1: number, x2: number, y2: number): ICurve-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,7 +35,7 @@ function cubicBezierCurve(x1: number, y1: number, x2: number, y2: number): ICurv
 
 | 类型 | 说明 |
 | --- | --- |
-| ICurve | 曲线的插值对象。 |
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) | 曲线的插值对象。 |
 
 **示例：**
 

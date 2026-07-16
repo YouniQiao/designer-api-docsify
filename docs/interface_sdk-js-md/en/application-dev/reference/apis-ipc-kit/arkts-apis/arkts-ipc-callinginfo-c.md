@@ -1,9 +1,10 @@
 # CallingInfo
 
-Defines the IPC context, including the PID and UID, local and remote device IDs, and whether the API is invoked on
-the same device.
+Defines the IPC context, including the PID and UID, local and remote device IDs, and whether the API is invoked on the same device.
 
 **Since:** 23
+
+<!--Device-rpc-class CallingInfo--><!--Device-rpc-class CallingInfo-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -19,14 +20,15 @@ import { rpc } from '@kit.IPCKit';
 readonly callerPid: number
 ```
 
-PID of the caller.
-callerPid is valid only when the {@link isLocalCalling} is true. Otherwise callerPid is invalid
+PID of the caller.callerPid is valid only when the {@link isLocalCalling} is true. Otherwise callerPid is invalid
 
 **Type:** number
 
 **Default:** -1
 
 **Since:** 23
+
+<!--Device-CallingInfo-readonly callerPid: number--><!--Device-CallingInfo-readonly callerPid: number-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -36,14 +38,15 @@ callerPid is valid only when the {@link isLocalCalling} is true. Otherwise calle
 readonly callerTokenId: number
 ```
 
-Token ID of the caller.
-callerTokenId is valid only when the {@link isLocalCalling} is true. Otherwise callerTokenId is invalid.
+Token ID of the caller.callerTokenId is valid only when the {@link isLocalCalling} is true. Otherwise callerTokenId is invalid.
 
 **Type:** number
 
 **Default:** -1
 
 **Since:** 23
+
+<!--Device-CallingInfo-readonly callerTokenId: number--><!--Device-CallingInfo-readonly callerTokenId: number-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -53,14 +56,15 @@ callerTokenId is valid only when the {@link isLocalCalling} is true. Otherwise c
 readonly callerUid: number
 ```
 
-UID of the caller.
-callerUid is valid only when the {@link isLocalCalling} is true. Otherwise callerUid is invalid.
+UID of the caller.callerUid is valid only when the {@link isLocalCalling} is true. Otherwise callerUid is invalid.
 
 **Type:** number
 
 **Default:** -1
 
 **Since:** 23
+
+<!--Device-CallingInfo-readonly callerUid: number--><!--Device-CallingInfo-readonly callerUid: number-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -70,14 +74,15 @@ callerUid is valid only when the {@link isLocalCalling} is true. Otherwise calle
 readonly isLocalCalling: boolean
 ```
 
-Whether the peer end of the current communication is a process on the local device. Returns **true** if the local
-and peer processes are on the same device; returns **false** otherwise.
+Whether the peer end of the current communication is a process on the local device. Returns **true** if the local and peer processes are on the same device; returns **false** otherwise.
 
 **Type:** boolean
 
 **Default:** true
 
 **Since:** 23
+
+<!--Device-CallingInfo-readonly isLocalCalling: boolean--><!--Device-CallingInfo-readonly isLocalCalling: boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -87,8 +92,7 @@ and peer processes are on the same device; returns **false** otherwise.
 readonly localDeviceId: string
 ```
 
-Local device ID. This parameter is valid only in RPC scenarios.
-localDeviceId is valid only when the {@link isLocalCalling} is false. Otherwise localDeviceId is invalid.
+Local device ID. This parameter is valid only in RPC scenarios.localDeviceId is valid only when the {@link isLocalCalling} is false. Otherwise localDeviceId is invalid.
 
 **Type:** string
 
@@ -96,6 +100,8 @@ localDeviceId is valid only when the {@link isLocalCalling} is false. Otherwise 
 @FaAndStageModel
 
 **Since:** 23
+
+<!--Device-CallingInfo-readonly localDeviceId: string--><!--Device-CallingInfo-readonly localDeviceId: string-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -105,8 +111,7 @@ localDeviceId is valid only when the {@link isLocalCalling} is false. Otherwise 
 readonly remoteDeviceId: string
 ```
 
-Remote device ID. This parameter is valid only in RPC scenarios.
-remoteDeviceId is valid only when the {@link isLocalCalling} is false. Otherwise remoteDeviceId is invalid.
+Remote device ID. This parameter is valid only in RPC scenarios.remoteDeviceId is valid only when the {@link isLocalCalling} is false. Otherwise remoteDeviceId is invalid.
 
 **Type:** string
 
@@ -114,6 +119,8 @@ remoteDeviceId is valid only when the {@link isLocalCalling} is false. Otherwise
 @FaAndStageModel
 
 **Since:** 23
+
+<!--Device-CallingInfo-readonly remoteDeviceId: string--><!--Device-CallingInfo-readonly remoteDeviceId: string-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 

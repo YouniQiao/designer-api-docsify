@@ -4,6 +4,8 @@ Defines chip group space.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class ChipGroupV2Space--><!--Device-unnamed-export declare class ChipGroupV2Space-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,13 +28,15 @@ The constructor of ChipGroupV2SpaceConfig
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipGroupV2Space-constructor(config: ChipGroupV2SpaceConfig)--><!--Device-ChipGroupV2Space-constructor(config: ChipGroupV2SpaceConfig)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | ChipGroupV2SpaceConfig | Yes | config of chip group space |
+| config | [ChipGroupV2SpaceConfig](arkts-arkui-chipgroupv2spaceconfig-i.md) | Yes | config of chip group space |
 
 ## endSpace
 
@@ -49,6 +53,8 @@ End space.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2Space-public endSpace?: Length--><!--Device-ChipGroupV2Space-public endSpace?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +74,8 @@ Space between items.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipGroupV2Space-public itemSpace?: string | number--><!--Device-ChipGroupV2Space-public itemSpace?: string | number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## startSpace
@@ -85,6 +93,8 @@ Start space.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2Space-public startSpace?: Length--><!--Device-ChipGroupV2Space-public startSpace?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

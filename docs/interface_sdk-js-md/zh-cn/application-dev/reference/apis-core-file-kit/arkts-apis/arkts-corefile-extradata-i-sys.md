@@ -4,9 +4,17 @@
 
 **起始版本：** 11
 
+<!--Device-cloudSyncManager-interface ExtraData--><!--Device-cloudSyncManager-interface ExtraData-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { cloudSyncManager } from '@kit.CoreFileKit';
+```
 
 ## eventId
 
@@ -19,6 +27,8 @@ eventId: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-ExtraData-eventId: string--><!--Device-ExtraData-eventId: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -35,6 +45,8 @@ extraData: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-ExtraData-extraData: string--><!--Device-ExtraData-extraData: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 

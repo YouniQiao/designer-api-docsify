@@ -18,6 +18,8 @@ Get the transport of the bluetooth device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function getRemoteDeviceTransport(deviceId: string): BluetoothTransport--><!--Device-connection-function getRemoteDeviceTransport(deviceId: string): BluetoothTransport-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -30,7 +32,7 @@ Get the transport of the bluetooth device.
 
 | Type | Description |
 | --- | --- |
-| BluetoothTransport | The transport of bluetooth device. |
+| [BluetoothTransport](arkts-connectivity-bluetoothtransport-e.md) | The transport of bluetooth device. |
 
 **Error codes:**
 

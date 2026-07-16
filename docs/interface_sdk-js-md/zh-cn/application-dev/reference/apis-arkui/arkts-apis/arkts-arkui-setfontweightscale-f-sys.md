@@ -1,5 +1,11 @@
 # setFontWeightScale（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { uiAppearance } from '@kit.ArkUI';
+```
+
 ## setFontWeightScale
 
 ```TypeScript
@@ -11,6 +17,8 @@ function setFontWeightScale(fontWeightScale: number): Promise<void>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
+
+<!--Device-uiAppearance-function setFontWeightScale(fontWeightScale: number): Promise<void>--><!--Device-uiAppearance-function setFontWeightScale(fontWeightScale: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.UiAppearance
 
@@ -26,7 +34,7 @@ function setFontWeightScale(fontWeightScale: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function |
+| Promise<void> | the promise returned by the function |
 
 **错误码：**
 

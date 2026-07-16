@@ -4,6 +4,8 @@ Enumerates the PiP states.
 
 **Since:** 11
 
+<!--Device-PiPWindow-enum PiPState--><!--Device-PiPWindow-enum PiPState-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## ABOUT_TO_START
@@ -17,6 +19,8 @@ PiP is about to start.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PiPState-ABOUT_TO_START = 1--><!--Device-PiPState-ABOUT_TO_START = 1-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -32,6 +36,8 @@ PiP is started.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PiPState-STARTED = 2--><!--Device-PiPState-STARTED = 2-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## ABOUT_TO_STOP
@@ -45,6 +51,8 @@ PiP is about to stop.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PiPState-ABOUT_TO_STOP = 3--><!--Device-PiPState-ABOUT_TO_STOP = 3-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -60,6 +68,8 @@ PiP is stopped.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PiPState-STOPPED = 4--><!--Device-PiPState-STOPPED = 4-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## ABOUT_TO_RESTORE
@@ -74,6 +84,8 @@ The original page is about to restore.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PiPState-ABOUT_TO_RESTORE = 5--><!--Device-PiPState-ABOUT_TO_RESTORE = 5-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## ERROR
@@ -87,6 +99,8 @@ An error occurs during the execution of the PiP lifecycle.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PiPState-ERROR = 6--><!--Device-PiPState-ERROR = 6-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

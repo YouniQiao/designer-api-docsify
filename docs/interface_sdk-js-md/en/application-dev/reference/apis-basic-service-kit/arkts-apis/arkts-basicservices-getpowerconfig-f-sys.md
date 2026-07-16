@@ -20,6 +20,8 @@ Query the power configuration value for a given scene name.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-power-function getPowerConfig(sceneName: string): string--><!--Device-power-function getPowerConfig(sceneName: string): string-End-->
+
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 **System API:** This is a system API.
@@ -40,7 +42,7 @@ Query the power configuration value for a given scene name.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
 | [4900400](../../apis-basic-services-kit/errorcode-power.md#4900400-incorrect-input-parameter) | Invalid parameter. Possible causes:1. The sceneName parameter is an empty string;2. The length of sceneName parameter exceeds 128 bytes. |

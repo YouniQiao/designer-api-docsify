@@ -6,5 +6,7 @@ type OmitThisParameter<T> = unknown extends ThisParameterType<T> ? T : T extends
 
 Removes the 'this' parameter from a function type.
 
+<!--Device-unnamed-type OmitThisParameter<T> = unknown extends ThisParameterType<T> ? T : T extends (...args: infer A) => infer R ? (...args: A) => R : T--><!--Device-unnamed-type OmitThisParameter<T> = unknown extends ThisParameterType<T> ? T : T extends (...args: infer A) => infer R ? (...args: A) => R : T-End-->
+
 **Property type:** unknown extends ThisParameterType<T> ? T : T extends (...args: infer A) => infer R ? (...args: A) => R : T
 

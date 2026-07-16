@@ -4,6 +4,8 @@ Defines the web keyboard callback info related to the {@link onInterceptKeyboard
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface WebKeyboardCallbackInfo--><!--Device-unnamed-declare interface WebKeyboardCallbackInfo-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## attributes
@@ -18,7 +20,9 @@ The attributes of web input element.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebKeyboardCallbackInfo-attributes: Record<string, string>--><!--Device-WebKeyboardCallbackInfo-attributes: Record<string, string>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -34,7 +38,9 @@ The web keyboard controller.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebKeyboardCallbackInfo-controller: WebKeyboardController--><!--Device-WebKeyboardCallbackInfo-controller: WebKeyboardController-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

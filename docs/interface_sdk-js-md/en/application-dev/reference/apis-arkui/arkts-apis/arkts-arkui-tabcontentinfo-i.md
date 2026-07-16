@@ -4,6 +4,8 @@ Provides the **TabContent** switching information.
 
 **Since:** 12
 
+<!--Device-uiObserver-export interface TabContentInfo--><!--Device-uiObserver-export interface TabContentInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ ID of the **Tabs** component.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TabContentInfo-id: string--><!--Device-TabContentInfo-id: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## index
@@ -46,6 +50,8 @@ Index of the **TabContent** component. The index is zero-based.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TabContentInfo-index: number--><!--Device-TabContentInfo-index: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## lastIndex
@@ -54,9 +60,7 @@ Index of the **TabContent** component. The index is zero-based.
 lastIndex?: number
 ```
 
-Index of the previously focused **TabContent** component. The index is zero-based. This parameter is available
-only in the callback of [on('tabChange')](@ohos.arkui.UIContext:UIObserver#on(type: 'tabChange', callback:
-Callback<observer.TabContentInfo>)).
+Index of the previously focused **TabContent** component. The index is zero-based. This parameter is available only in the callback of [on('tabChange')](arkts-arkui-uiobserver-c.md#on-23).
 
 **Type:** number
 
@@ -65,6 +69,8 @@ Callback<observer.TabContentInfo>)).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TabContentInfo-lastIndex?: number--><!--Device-TabContentInfo-lastIndex?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,6 +90,8 @@ Enumerates the **TabContent** component states.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TabContentInfo-state: TabContentState--><!--Device-TabContentInfo-state: TabContentState-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## tabContentId
@@ -101,6 +109,8 @@ ID of the **TabContent** component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TabContentInfo-tabContentId: string--><!--Device-TabContentInfo-tabContentId: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -120,6 +130,8 @@ Unique ID of the **TabContent** component.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TabContentInfo-tabContentUniqueId: number--><!--Device-TabContentInfo-tabContentUniqueId: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## uniqueId
@@ -137,6 +149,8 @@ Unique ID of the **Tabs** component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TabContentInfo-uniqueId: number--><!--Device-TabContentInfo-uniqueId: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

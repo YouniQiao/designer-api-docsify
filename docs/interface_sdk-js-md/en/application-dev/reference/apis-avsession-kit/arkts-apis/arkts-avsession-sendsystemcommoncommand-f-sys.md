@@ -20,6 +20,8 @@ Send system control command. The system automatically selects the recipient.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-avSession-function sendSystemCommonCommand(command: string, args: ExtraInfo): Promise<string>--><!--Device-avSession-function sendSystemCommonCommand(command: string, args: ExtraInfo): Promise<string>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -29,13 +31,13 @@ Send system control command. The system automatically selects the recipient.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | command | string | Yes | The command name to be sent. |
-| args | ExtraInfo | Yes | The parameters of command info |
+| args | [ExtraInfo](arkts-avsession-extrainfo-t.md) | Yes | The parameters of command info |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | callback info for sync command |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | callback info for sync command |
 
 **Error codes:**
 

@@ -20,6 +20,8 @@ function subscribeNotification(subscriber: NotificationSubscriber): Promise<void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-notificationSubscribe-function subscribeNotification(subscriber: NotificationSubscriber): Promise<void>--><!--Device-notificationSubscribe-function subscribeNotification(subscriber: NotificationSubscriber): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -28,13 +30,13 @@ function subscribeNotification(subscriber: NotificationSubscriber): Promise<void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriber | NotificationSubscriber | 是 | 通知订阅者。 |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-i-sys.md) | 是 | 通知订阅者。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -80,6 +82,8 @@ function subscribeNotification(subscriber: NotificationSubscriber, info: Notific
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-notificationSubscribe-function subscribeNotification(subscriber: NotificationSubscriber, info: NotificationSubscribeInfo): Promise<void>--><!--Device-notificationSubscribe-function subscribeNotification(subscriber: NotificationSubscriber, info: NotificationSubscribeInfo): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -88,14 +92,14 @@ function subscribeNotification(subscriber: NotificationSubscriber, info: Notific
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriber | NotificationSubscriber | 是 | 通知订阅者。 |
-| info | NotificationSubscribeInfo | 是 | 通知订阅信息。 |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-i-sys.md) | 是 | 通知订阅者。 |
+| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-i-sys.md) | 是 | 通知订阅信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

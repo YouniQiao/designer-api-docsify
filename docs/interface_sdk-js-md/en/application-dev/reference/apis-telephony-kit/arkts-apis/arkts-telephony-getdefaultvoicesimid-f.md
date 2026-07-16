@@ -16,13 +16,15 @@ Obtains the default SIM ID for the voice service.
 
 **Since:** 10
 
+<!--Device-sim-function getDefaultVoiceSimId(callback: AsyncCallback<int>): void--><!--Device-sim-function getDefaultVoiceSimId(callback: AsyncCallback<int>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Returns the SIM ID of the default voice simand SIM ID will increase from 1. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Returns the SIM ID of the default voice sim and SIM ID will increase from 1. |
 
 **Error codes:**
 
@@ -59,13 +61,15 @@ Obtains the default SIM ID for the voice service.
 
 **Since:** 10
 
+<!--Device-sim-function getDefaultVoiceSimId(): Promise<int>--><!--Device-sim-function getDefaultVoiceSimId(): Promise<int>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns the SIM ID of the default voice simand SIM ID will increase from 1. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Returns the SIM ID of the default voice sim and SIM ID will increase from 1. |
 
 **Error codes:**
 

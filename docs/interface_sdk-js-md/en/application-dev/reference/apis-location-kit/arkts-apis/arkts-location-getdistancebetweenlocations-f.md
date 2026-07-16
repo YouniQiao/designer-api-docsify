@@ -18,14 +18,16 @@ Obtains the distance between two locations.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-geoLocationManager-function getDistanceBetweenLocations(location1: Location, location2: Location): double--><!--Device-geoLocationManager-function getDistanceBetweenLocations(location1: Location, location2: Location): double-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location1 | Location | Yes | Indicates first location. |
-| location2 | Location | Yes | Indicates second location. |
+| location1 | [Location](arkts-location-location-i.md) | Yes | Indicates first location. |
+| location2 | [Location](arkts-location-location-i.md) | Yes | Indicates second location. |
 
 **Return value:**
 

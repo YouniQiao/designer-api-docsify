@@ -1,5 +1,11 @@
 # getSwitchStatus
 
+## 导入模块
+
+```TypeScript
+import { deviceSettings } from '@kit.MDMKit';
+```
+
 ## getSwitchStatus
 
 ```TypeScript
@@ -14,20 +20,22 @@ function getSwitchStatus(admin: Want, key: SwitchKey): SwitchStatus
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-deviceSettings-function getSwitchStatus(admin: Want, key: SwitchKey): SwitchStatus--><!--Device-deviceSettings-function getSwitchStatus(admin: Want, key: SwitchKey): SwitchStatus-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件 |
-| key | SwitchKey | 是 | 开关名称 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件 |
+| key | [SwitchKey](arkts-mdm-switchkey-e.md) | 是 | 开关名称 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| SwitchStatus | 9200001 - 应用没有激活成设备管理器 |
+| [SwitchStatus](arkts-mdm-switchstatus-e.md) | 9200001 - 应用没有激活成设备管理器 |
 
 **错误码：**
 

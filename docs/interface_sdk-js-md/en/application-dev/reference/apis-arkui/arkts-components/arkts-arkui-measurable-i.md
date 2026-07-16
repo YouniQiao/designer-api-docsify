@@ -4,6 +4,8 @@ Provides the child component position information.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface Measurable--><!--Device-unnamed-declare interface Measurable-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## getBorderWidth
@@ -20,13 +22,15 @@ Obtains the border widths of the child component.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Measurable-getBorderWidth() : DirectionalEdgesT<number>--><!--Device-Measurable-getBorderWidth() : DirectionalEdgesT<number>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DirectionalEdgesT&lt;number&gt; | Border widths of the child component. |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)<number> | Border widths of the child component. |
 
 ## getMargin
 
@@ -42,13 +46,15 @@ Obtains the margin values of the child component.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Measurable-getMargin() : DirectionalEdgesT<number>--><!--Device-Measurable-getMargin() : DirectionalEdgesT<number>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DirectionalEdgesT&lt;number&gt; | Margin values of the child component. |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)<number> | Margin values of the child component. |
 
 ## getPadding
 
@@ -64,13 +70,15 @@ Obtains the padding values of the child component.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Measurable-getPadding() : DirectionalEdgesT<number>--><!--Device-Measurable-getPadding() : DirectionalEdgesT<number>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DirectionalEdgesT&lt;number&gt; | Padding values of the child component. |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)<number> | Padding values of the child component. |
 
 ## measure
 
@@ -86,19 +94,21 @@ Imposes size constraints on the child component.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Measurable-measure(constraint: ConstraintSizeOptions) : MeasureResult--><!--Device-Measurable-measure(constraint: ConstraintSizeOptions) : MeasureResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| constraint | ConstraintSizeOptions | Yes | Size constraint. |
+| constraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | Size constraint. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MeasureResult | Provides the measurement result of the component. |
+| [MeasureResult](arkts-arkui-measureresult-i.md) | Provides the measurement result of the component. |
 
 ## uniqueId
 
@@ -106,8 +116,7 @@ Imposes size constraints on the child component.
 uniqueId?: number
 ```
 
-Unique ID that the system assigns to the child component.
-The value range is all integers.
+Unique ID that the system assigns to the child component.The value range is all integers.
 
 **Type:** number
 
@@ -116,6 +125,8 @@ The value range is all integers.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-Measurable-uniqueId?: number--><!--Device-Measurable-uniqueId?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

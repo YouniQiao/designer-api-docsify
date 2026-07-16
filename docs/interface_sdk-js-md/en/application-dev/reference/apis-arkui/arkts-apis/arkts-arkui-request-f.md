@@ -18,14 +18,16 @@ Plugin component request method.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-pluginComponentManager-function request(param: RequestParameters, callback: AsyncCallback<RequestCallbackParameters>): void--><!--Device-pluginComponentManager-function request(param: RequestParameters, callback: AsyncCallback<RequestCallbackParameters>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | RequestParameters | Yes |  |
-| callback | AsyncCallback&lt;RequestCallbackParameters&gt; | Yes |  |
+| param | [RequestParameters](arkts-arkui-requestparameters-i.md) | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<RequestCallbackParameters> | Yes |  |
 
 **Example**
 

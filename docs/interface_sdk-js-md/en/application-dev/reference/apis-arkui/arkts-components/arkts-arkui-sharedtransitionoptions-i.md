@@ -2,17 +2,19 @@
 
 Parameters of the shared element transition animation.
 
-> **NOTE**
->
-> **motionPath** is effective only when **type** is set to **SharedTransitionEffectType.Exchange**.
->
-> When **type** is set to **SharedTransitionEffectType.Exchange**, the effect focuses on smooth transition of the
-> position and size of matching shared elements, which can be visually observed through the component's border. The
-> transition, however, does not involve content properties, which will abruptly change to the target page's values at
-> the end of the animation. For example, if a **Text** component has different **fontSize** values on two pages, the
+> **NOTE**  
+>  
+> **motionPath** is effective only when **type** is set to **SharedTransitionEffectType.Exchange**.  
+>  
+> When **type** is set to **SharedTransitionEffectType.Exchange**, the effect focuses on smooth transition of the  
+> position and size of matching shared elements, which can be visually observed through the component's border. The  
+> transition, however, does not involve content properties, which will abruptly change to the target page's values at  
+> the end of the animation. For example, if a **Text** component has different **fontSize** values on two pages, the  
 > font size will snap to the target page's value once the shared transition animation completes.
 
 **Since:** 7
+
+<!--Device-unnamed-declare interface sharedTransitionOptions--><!--Device-unnamed-declare interface sharedTransitionOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,8 +28,7 @@ Animation curve.
 
 You are advised to specify the curve using the **Curve** or **ICurve** type.
 
-For the string type, this parameter indicates an animation interpolation curve. For available values, see the
-**curve** parameter in [AnimateParam](arkts-arkui-animateparam-i.md).
+For the string type, this parameter indicates an animation interpolation curve. For available values, see the **curve** parameter in [AnimateParam](arkts-arkui-animateparam-i.md).
 
 Default value: **Curve.Linear**
 
@@ -38,6 +39,8 @@ Default value: **Curve.Linear**
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-sharedTransitionOptions-curve?: Curve | string | ICurve--><!--Device-sharedTransitionOptions-curve?: Curve | string | ICurve-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,6 +63,8 @@ Unit: ms
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-sharedTransitionOptions-delay?: number--><!--Device-sharedTransitionOptions-delay?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,6 +90,8 @@ Value range: [0, +∞)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-sharedTransitionOptions-duration?: number--><!--Device-sharedTransitionOptions-duration?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## motionPath
@@ -100,6 +107,8 @@ Motion path.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-sharedTransitionOptions-motionPath?: MotionPathOptions--><!--Device-sharedTransitionOptions-motionPath?: MotionPathOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -121,6 +130,8 @@ Default value: **SharedTransitionEffectType.Exchange**
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-sharedTransitionOptions-type?: SharedTransitionEffectType--><!--Device-sharedTransitionOptions-type?: SharedTransitionEffectType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## zIndex
@@ -140,6 +151,8 @@ Default value: **0**
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-sharedTransitionOptions-zIndex?: number--><!--Device-sharedTransitionOptions-zIndex?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

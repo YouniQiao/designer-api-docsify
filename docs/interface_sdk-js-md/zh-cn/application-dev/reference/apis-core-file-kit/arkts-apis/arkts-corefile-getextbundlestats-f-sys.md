@@ -1,5 +1,11 @@
 # getExtBundleStats（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { storageStatistics } from '@kit.CoreFileKit';
+```
+
 ## getExtBundleStats
 
 ```TypeScript
@@ -13,6 +19,8 @@ function getExtBundleStats(userId: number, businessName: string): Promise<ExtBun
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-storageStatistics-function getExtBundleStats(userId: int, businessName: string): Promise<ExtBundleStats>--><!--Device-storageStatistics-function getExtBundleStats(userId: int, businessName: string): Promise<ExtBundleStats>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -29,7 +37,7 @@ function getExtBundleStats(userId: number, businessName: string): Promise<ExtBun
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ExtBundleStats&gt; | Promise对象，返回指定用户、指定系统应用包名或系统服务名称的空间占用详情。 |
+| Promise<ExtBundleStats> | Promise对象，返回指定用户、指定系统应用包名或系统服务名称的空间占用详情。 |
 
 **错误码：**
 

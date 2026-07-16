@@ -10,6 +10,8 @@ TLS1.0 cipher suite.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-http-export type TlsV10CipherSuite = TlsV10SpecificCipherSuite--><!--Device-http-export type TlsV10CipherSuite = TlsV10SpecificCipherSuite-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Property type:** TlsV10SpecificCipherSuite

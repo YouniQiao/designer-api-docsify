@@ -4,6 +4,8 @@ Enumerates the submenu expanding modes.
 
 **Since:** 12
 
+<!--Device-unnamed-declare enum SubMenuExpandingMode--><!--Device-unnamed-declare enum SubMenuExpandingMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SIDE_EXPAND
@@ -19,6 +21,8 @@ Default mode. Submenus are expanded on the side on the same plane.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SubMenuExpandingMode-SIDE_EXPAND = 0--><!--Device-SubMenuExpandingMode-SIDE_EXPAND = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ Embedded mode. Submenus are expanded while embedded within the main menu.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SubMenuExpandingMode-EMBEDDED_EXPAND = 1--><!--Device-SubMenuExpandingMode-EMBEDDED_EXPAND = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## STACK_EXPAND
@@ -51,6 +57,8 @@ Stack mode. Submenus are expanded above the main menu.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SubMenuExpandingMode-STACK_EXPAND = 2--><!--Device-SubMenuExpandingMode-STACK_EXPAND = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

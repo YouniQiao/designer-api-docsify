@@ -1,5 +1,11 @@
 # publishFormToDesktop
 
+## 导入模块
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+```
+
 ## publishFormToDesktop
 
 ```TypeScript
@@ -14,13 +20,15 @@ function publishFormToDesktop(admin: Want, formInfo: FormInfo, accountId: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function publishFormToDesktop(admin: Want, formInfo: FormInfo, accountId: number): void--><!--Device-applicationManager-function publishFormToDesktop(admin: Want, formInfo: FormInfo, accountId: number): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备扩展组件 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备扩展组件 |
 | formInfo | FormInfo | 是 | 卡片信息 |
 | accountId | number | 是 | 系统账号ID<br>取值范围:[0, +∞) |
 

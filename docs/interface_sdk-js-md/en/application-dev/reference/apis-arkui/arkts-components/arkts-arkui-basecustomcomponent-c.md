@@ -6,6 +6,8 @@ Custom Component base class and it is migrated from class CustomComponent.
 
 **Since:** 18
 
+<!--Device-unnamed-declare class BaseCustomComponent extends CommonAttribute--><!--Device-unnamed-declare class BaseCustomComponent extends CommonAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## aboutToAppear
@@ -14,17 +16,15 @@ Custom Component base class and it is migrated from class CustomComponent.
 aboutToAppear?(): void
 ```
 
-Invoked after a new instance of the custom component is created
-and before its build() function is executed. You can change state variables in aboutToAppear.
-The change will take effect when you execute the build() function next time.
-The aboutToAppear lifecycle callback of a custom component with a custom layout
-is invoked during the layout process.
+Invoked after a new instance of the custom component is created and before its build() function is executed. You can change state variables in aboutToAppear.The change will take effect when you execute the build() function next time.The aboutToAppear lifecycle callback of a custom component with a custom layout is invoked during the layout process.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-BaseCustomComponent-aboutToAppear?(): void--><!--Device-BaseCustomComponent-aboutToAppear?(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,15 +34,15 @@ is invoked during the layout process.
 aboutToDisappear?(): void
 ```
 
-Invoked when this component is about to disappear.
-Do not change state variables in the aboutToDisappear function as doing this can cause unexpected errors.
-For example, the modification of the @Link decorated variable may cause unstable application running.
+Invoked when this component is about to disappear.Do not change state variables in the aboutToDisappear function as doing this can cause unexpected errors.For example, the modification of the @Link decorated variable may cause unstable application running.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-BaseCustomComponent-aboutToDisappear?(): void--><!--Device-BaseCustomComponent-aboutToDisappear?(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,6 +60,8 @@ aboutToRecycle Method and it is migrated from class CustomComponent.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-BaseCustomComponent-aboutToRecycle?(): void--><!--Device-BaseCustomComponent-aboutToRecycle?(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## build
@@ -75,6 +77,8 @@ Customize the pop-up content constructor and it is migrated from class CustomCom
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-BaseCustomComponent-build(): void--><!--Device-BaseCustomComponent-build(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,13 +96,15 @@ The dialog controller of the custom component.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-BaseCustomComponent-getDialogController(): PromptActionDialogController | undefined--><!--Device-BaseCustomComponent-getDialogController(): PromptActionDialogController | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PromptActionDialogController | The controller of dialog, or undefined if it is not available |
+| [PromptActionDialogController](arkts-arkui-promptactiondialogcontroller-t.md) | The controller of dialog, or undefined if it is not available |
 
 ## getUIContext
 
@@ -114,13 +120,15 @@ Get current UIContext and it is migrated from class CustomComponent.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-BaseCustomComponent-getUIContext(): UIContext--><!--Device-BaseCustomComponent-getUIContext(): UIContext-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| UIContext | The UIContext that the custom component belongs to. |
+| [UIContext](arkts-arkui-uicontext-t.md) | The UIContext that the custom component belongs to. |
 
 ## getUniqueId
 
@@ -128,16 +136,15 @@ Get current UIContext and it is migrated from class CustomComponent.
 getUniqueId(): number
 ```
 
-Get uniqueId of the custom component and it is migrated from class CustomComponent.
-This unique ID is assigned by the system to each component.
-If this API is called before the component's corresponding node is created or after it has been destroyed, an
-invalid unique ID, which is -1, will be returned.
+Get uniqueId of the custom component and it is migrated from class CustomComponent.This unique ID is assigned by the system to each component.If this API is called before the component's corresponding node is created or after it has been destroyed, an invalid unique ID, which is -1, will be returned.
 
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-BaseCustomComponent-getUniqueId(): number--><!--Device-BaseCustomComponent-getUniqueId(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -153,13 +160,13 @@ invalid unique ID, which is -1, will be returned.
 onBackPress?(): void | boolean
 ```
 
-Invoked when a user clicks the back button on a router-managed page (a custom component decorated with
-[\@Entry](../../../../ui/state-management/arkts-create-custom-components.md#entry)). The value **true** means that
-the page executes its own return logic, and **false** (default) means that the default return logic is used.
+Invoked when a user clicks the back button on a router-managed page (a custom component decorated with [\@Entry](../../../../ui/state-management/arkts-create-custom-components.md#entry)). The value **true** means that the page executes its own return logic, and **false** (default) means that the default return logic is used.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-BaseCustomComponent-onBackPress?(): void | boolean--><!--Device-BaseCustomComponent-onBackPress?(): void | boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -179,6 +186,8 @@ Triggered when the custom component has been built.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-BaseCustomComponent-onDidBuild?(): void--><!--Device-BaseCustomComponent-onDidBuild?(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onFormRecover
@@ -197,6 +206,8 @@ onFormRecover Method, this is only for ArkTS form, it is migrated from class Cus
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-BaseCustomComponent-onFormRecover?(statusData: string): void--><!--Device-BaseCustomComponent-onFormRecover?(statusData: string): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -211,9 +222,7 @@ onFormRecover Method, this is only for ArkTS form, it is migrated from class Cus
 onFormRecycle?(): string
 ```
 
-onFormRecycle Method, this is only for ArkTS form, if form was marked recyclable by form user, when system memory is low,
-it will be recycled after calling this method, you should return a string of params that you wish to be saved, it will be
-passed back as params in onFormRecover, in which you can recover the form, it is migrated from class CustomComponent.
+onFormRecycle Method, this is only for ArkTS form, if form was marked recyclable by form user, when system memory is low,it will be recycled after calling this method, you should return a string of params that you wish to be saved, it will be passed back as params in onFormRecover, in which you can recover the form, it is migrated from class CustomComponent.
 
 **Since:** 18
 
@@ -222,6 +231,8 @@ passed back as params in onFormRecover, in which you can recover the form, it is
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-BaseCustomComponent-onFormRecycle?(): string--><!--Device-BaseCustomComponent-onFormRecycle?(): string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -237,9 +248,7 @@ passed back as params in onFormRecover, in which you can recover the form, it is
 onMeasureSize?(selfLayoutInfo: GeometryInfo, children: Array<Measurable>, constraint: ConstraintSizeOptions): SizeResult
 ```
 
-Invoked when the custom component needs to determine its size. Through this callback the component
-receives its layout information and size constraints from the ArkUI framework. State variables should
-not be changed in this callback.
+Invoked when the custom component needs to determine its size. Through this callback the component receives its layout information and size constraints from the ArkUI framework. State variables should not be changed in this callback.
 
 **Since:** 18
 
@@ -247,21 +256,23 @@ not be changed in this callback.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-BaseCustomComponent-onMeasureSize?(selfLayoutInfo: GeometryInfo, children: Array<Measurable>, constraint: ConstraintSizeOptions): SizeResult--><!--Device-BaseCustomComponent-onMeasureSize?(selfLayoutInfo: GeometryInfo, children: Array<Measurable>, constraint: ConstraintSizeOptions): SizeResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selfLayoutInfo | GeometryInfo | Yes | Information about the component's computed layout properties aftermeasurement.<br>During the first layout, the component will use its own set attributes as the basis for layout. |
-| children | Array&lt;Measurable&gt; | Yes | Array containing layout information for all child components aftermeasurement. <br>When a child component does not have its layout information set, it retains the previous layoutsettings or, if no previous layout settings are available, stays at the default size of 0. |
-| constraint | ConstraintSizeOptions | Yes | Layout constraints applied to the component. |
+| selfLayoutInfo | [GeometryInfo](arkts-arkui-geometryinfo-i.md) | Yes | Information about the component's computed layout properties after measurement.<br>During the first layout, the component will use its own set attributes as the basis for layout. |
+| children | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Measurable> | Yes | Array containing layout information for all child components after measurement. <br>When a child component does not have its layout information set, it retains the previous layout settings or, if no previous layout settings are available, stays at the default size of 0. |
+| constraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | Layout constraints applied to the component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SizeResult | Component size information. |
+| [SizeResult](arkts-arkui-sizeresult-i.md) | Component size information. |
 
 ## onNewParam
 
@@ -277,13 +288,15 @@ Triggered when the Entry custom component has been pushed with singleton mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-BaseCustomComponent-onNewParam?(param: ESObject): void--><!--Device-BaseCustomComponent-onNewParam?(param: ESObject): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | ESObject | Yes | New parameters pushed with singleton mode. |
+| param | [ESObject](../../apis-na/arkts-apis/arkts-na-esobject-t.md) | Yes | New parameters pushed with singleton mode. |
 
 ## onPageHide
 
@@ -291,20 +304,20 @@ Triggered when the Entry custom component has been pushed with singleton mode.
 onPageHide?(): void
 ```
 
-Invoked each time a router-managed page (a custom component decorated with
-[\@Entry](../../../../ui/state-management/arkts-create-custom-components.md#entry)) is hidden, including scenarios
-such as route navigation and the application moving to the background.
+Invoked each time a router-managed page (a custom component decorated with [\@Entry](../../../../ui/state-management/arkts-create-custom-components.md#entry)) is hidden, including scenarios such as route navigation and the application moving to the background.
 
 > **NOTE**
 
-> To ensure smooth UI responsiveness, avoid executing time-consuming operations within the callback function that
-> may block the main thread. For resource-intensive tasks such as camera resource deallocation, consider
-> implementing asynchronous solutions. For best practices, see
+> To ensure smooth UI responsiveness, avoid executing time-consuming operations within the callback function that  
+> may block the main thread. For resource-intensive tasks such as camera resource deallocation, consider  
+> implementing asynchronous solutions. For best practices, see  
 > [Reducing Application Latency: Postponing Resource Release](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-application-latency-optimization-cases#section8783201923819).
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-BaseCustomComponent-onPageHide?(): void--><!--Device-BaseCustomComponent-onPageHide?(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -314,13 +327,13 @@ such as route navigation and the application moving to the background.
 onPageShow?(): void
 ```
 
-Invoked each time a router-managed page (a custom component decorated with
-[\@Entry](../../../../ui/state-management/arkts-create-custom-components.md#entry)) is displayed, including scenarios
-such as route navigation and the application returning to the foreground.
+Invoked each time a router-managed page (a custom component decorated with [\@Entry](../../../../ui/state-management/arkts-create-custom-components.md#entry)) is displayed, including scenarios such as route navigation and the application returning to the foreground.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-BaseCustomComponent-onPageShow?(): void--><!--Device-BaseCustomComponent-onPageShow?(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -330,9 +343,7 @@ such as route navigation and the application returning to the foreground.
 onPlaceChildren?(selfLayoutInfo: GeometryInfo, children: Array<Layoutable>, constraint: ConstraintSizeOptions): void
 ```
 
-Invoked when the custom component needs to determine the positions of its child components. Through this
-callback the component receives its child component size constraints from the ArkUI framework.
-State variables should not be changed in this callback.
+Invoked when the custom component needs to determine the positions of its child components. Through this callback the component receives its child component size constraints from the ArkUI framework.State variables should not be changed in this callback.
 
 **Since:** 18
 
@@ -340,15 +351,17 @@ State variables should not be changed in this callback.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-BaseCustomComponent-onPlaceChildren?(selfLayoutInfo: GeometryInfo, children: Array<Layoutable>, constraint: ConstraintSizeOptions): void--><!--Device-BaseCustomComponent-onPlaceChildren?(selfLayoutInfo: GeometryInfo, children: Array<Layoutable>, constraint: ConstraintSizeOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selfLayoutInfo | GeometryInfo | Yes | Information about the component's computed layout propertiesafter measurement. |
-| children | Array&lt;Layoutable&gt; | Yes | Array containing layout information for all child componentsafter measurement. |
-| constraint | ConstraintSizeOptions | Yes | Layout constraints applied to the component. |
+| selfLayoutInfo | [GeometryInfo](arkts-arkui-geometryinfo-i.md) | Yes | Information about the component's computed layout properties after measurement. |
+| children | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Layoutable> | Yes | Array containing layout information for all child components after measurement. |
+| constraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | Layout constraints applied to the component. |
 
 ## onWillApplyTheme
 
@@ -356,11 +369,9 @@ State variables should not be changed in this callback.
 onWillApplyTheme?(theme: Theme): void
 ```
 
-Invoked before the **build()** function of a new instance of the custom component is executed, to obtain the
-**Theme** object of the component context. You can change state variables in **onWillApplyTheme**. The change will
-take effect when you execute the **build()** function next time.
+Invoked before the **build()** function of a new instance of the custom component is executed, to obtain the **Theme** object of the component context. You can change state variables in **onWillApplyTheme**. The change will take effect when you execute the **build()** function next time.
 
-> * * Note: * *
+> * * Note: * *  
 > Since API version 18, this API can be used in the status management V2 component.
 
 > **NOTE**
@@ -373,13 +384,15 @@ take effect when you execute the **build()** function next time.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BaseCustomComponent-onWillApplyTheme?(theme: Theme): void--><!--Device-BaseCustomComponent-onWillApplyTheme?(theme: Theme): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| theme | Theme | Yes | Current theme object of the custom component. |
+| theme | [Theme](arkts-arkui-theme-t.md) | Yes | Current theme object of the custom component. |
 
 ## pageTransition
 
@@ -387,12 +400,13 @@ take effect when you execute the **build()** function next time.
 pageTransition?(): void
 ```
 
-PageTransition Method and it is migrated from class CustomComponent.
-Implement Animation when enter this page or move to other pages.
+PageTransition Method and it is migrated from class CustomComponent.Implement Animation when enter this page or move to other pages.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-BaseCustomComponent-pageTransition?(): void--><!--Device-BaseCustomComponent-pageTransition?(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -402,8 +416,7 @@ Implement Animation when enter this page or move to other pages.
 queryNavDestinationInfo(): NavDestinationInfo | undefined
 ```
 
-Queries the **NavDestination** information of this custom component. This API has effect only when the component is
-contained within a **NavDestination** component.
+Queries the **NavDestination** information of this custom component. This API has effect only when the component is contained within a **NavDestination** component.
 
 **Since:** 11
 
@@ -411,13 +424,15 @@ contained within a **NavDestination** component.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BaseCustomComponent-queryNavDestinationInfo(): NavDestinationInfo | undefined--><!--Device-BaseCustomComponent-queryNavDestinationInfo(): NavDestinationInfo | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| NavDestinationInfo | **NavDestinationInfo** instance obtained. |
+| [NavDestinationInfo](../arkts-apis/arkts-arkui-navdestinationinfo-i.md) | **NavDestinationInfo** instance obtained. |
 
 ## queryNavDestinationInfo
 
@@ -425,9 +440,7 @@ contained within a **NavDestination** component.
 queryNavDestinationInfo(isInner: Optional<boolean>): NavDestinationInfo | undefined
 ```
 
-Queries the information of the nearest **NavDestination** component (a navigation page or subpage of the
-**Navigation** component) associated with this custom component. The search direction is controlled by **isInner**:
-**true** for inward search and **false** for outward search.
+Queries the information of the nearest **NavDestination** component (a navigation page or subpage of the **Navigation** component) associated with this custom component. The search direction is controlled by **isInner**:**true** for inward search and **false** for outward search.
 
 **Since:** 18
 
@@ -435,19 +448,21 @@ Queries the information of the nearest **NavDestination** component (a navigatio
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-BaseCustomComponent-queryNavDestinationInfo(isInner: Optional<boolean>): NavDestinationInfo | undefined--><!--Device-BaseCustomComponent-queryNavDestinationInfo(isInner: Optional<boolean>): NavDestinationInfo | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isInner | Optional&lt;boolean&gt; | Yes | Whether to search inward for the nearest **NavDestination** component inthe navigation stack.<br>**true**: Search inward.<br>**false**: Search outward. |
+| isInner | [Optional](arkts-arkui-optional-t.md)<boolean> | Yes | Whether to search inward for the nearest **NavDestination** component in the navigation stack.<br>**true**: Search inward.<br>**false**: Search outward. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| NavDestinationInfo | **NavDestinationInfo** instance obtained. |
+| [NavDestinationInfo](../arkts-apis/arkts-arkui-navdestinationinfo-i.md) | **NavDestinationInfo** instance obtained. |
 
 ## queryNavigationInfo
 
@@ -463,13 +478,15 @@ Queries the **Navigation** information of this custom component.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BaseCustomComponent-queryNavigationInfo(): NavigationInfo | undefined--><!--Device-BaseCustomComponent-queryNavigationInfo(): NavigationInfo | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| NavigationInfo | **NavigationInfo** instance obtained. |
+| [NavigationInfo](arkts-arkui-navigationinfo-t.md) | **NavigationInfo** instance obtained. |
 
 ## queryRouterPageInfo
 
@@ -485,11 +502,13 @@ Obtains a **RouterPageInfo** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BaseCustomComponent-queryRouterPageInfo(): RouterPageInfo | undefined--><!--Device-BaseCustomComponent-queryRouterPageInfo(): RouterPageInfo | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RouterPageInfo | **RouterPageInfo** instance obtained. |
+| [RouterPageInfo](arkts-arkui-routerpageinfo-t.md) | **RouterPageInfo** instance obtained. |
 

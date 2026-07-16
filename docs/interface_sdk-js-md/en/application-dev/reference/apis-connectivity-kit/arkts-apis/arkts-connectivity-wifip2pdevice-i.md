@@ -4,6 +4,8 @@ P2P device information.
 
 **Since:** 9
 
+<!--Device-wifiManager-interface WifiP2pDevice--><!--Device-wifiManager-interface WifiP2pDevice-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Device mac address
 
 **Since:** 9
 
+<!--Device-WifiP2pDevice-deviceAddress: string--><!--Device-WifiP2pDevice-deviceAddress: string-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 ## deviceAddressType
@@ -37,6 +41,8 @@ Device mac address type
 **Type:** DeviceAddressType
 
 **Since:** 10
+
+<!--Device-WifiP2pDevice-deviceAddressType?: DeviceAddressType--><!--Device-WifiP2pDevice-deviceAddressType?: DeviceAddressType-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -52,6 +58,8 @@ Device name
 
 **Since:** 9
 
+<!--Device-WifiP2pDevice-deviceName: string--><!--Device-WifiP2pDevice-deviceName: string-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 ## deviceStatus
@@ -65,6 +73,8 @@ Device status
 **Type:** P2pDeviceStatus
 
 **Since:** 9
+
+<!--Device-WifiP2pDevice-deviceStatus: P2pDeviceStatus--><!--Device-WifiP2pDevice-deviceStatus: P2pDeviceStatus-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -80,6 +90,8 @@ Device group capabilities
 
 **Since:** 9
 
+<!--Device-WifiP2pDevice-groupCapabilities: int--><!--Device-WifiP2pDevice-groupCapabilities: int-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 ## primaryDeviceType
@@ -93,6 +105,8 @@ Primary device type
 **Type:** string
 
 **Since:** 9
+
+<!--Device-WifiP2pDevice-primaryDeviceType: string--><!--Device-WifiP2pDevice-primaryDeviceType: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 

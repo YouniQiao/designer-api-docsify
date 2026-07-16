@@ -1,5 +1,11 @@
 # sendMessage
 
+## 导入模块
+
+```TypeScript
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+```
+
 ## sendMessage
 
 ```TypeScript
@@ -11,6 +17,8 @@ function sendMessage(sessionId: number, msg: string): Promise<void>
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-abilityConnectionManager-function sendMessage(sessionId: int, msg: string): Promise<void>--><!--Device-abilityConnectionManager-function sendMessage(sessionId: int, msg: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -25,7 +33,7 @@ function sendMessage(sessionId: number, msg: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的promise对象。 |
+| Promise<void> | 无返回结果的promise对象。 |
 
 **错误码：**
 

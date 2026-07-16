@@ -13,15 +13,17 @@ function interact(capability: OnscreenAwarenessCap,
                    options?: OnscreenAwarenessOptions): Promise<OnscreenAwarenessInfo[]>
 ```
 
-Proactively triggers screen behavior interaction to identify screen behaviors and return behavior receipts. For
-<br> example, after a link is clicked, the system accurately jumps to the specified paragraph and
-<br> highlights the text based on the receipt information.
+Proactively triggers screen behavior interaction to identify screen behaviors and return behavior receipts. For<br> example, after a link is clicked, the system accurately jumps to the specified paragraph and<br> highlights the text based on the receipt information.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.GET_SCREEN_CONTENT
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-onScreen-function interact(capability: OnscreenAwarenessCap, 
+                   options?: OnscreenAwarenessOptions): Promise<OnscreenAwarenessInfo[]>--><!--Device-onScreen-function interact(capability: OnscreenAwarenessCap, 
+                   options?: OnscreenAwarenessOptions): Promise<OnscreenAwarenessInfo[]>-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -31,14 +33,14 @@ Proactively triggers screen behavior interaction to identify screen behaviors an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| capability | OnscreenAwarenessCap | Yes | Onscreen awareness capability list. For details, see the following<br> supported capability list. |
-| options | OnscreenAwarenessOptions | No | Onscreen awareness parameter list. |
+| capability | [OnscreenAwarenessCap](arkts-multimodalawareness-onscreenawarenesscap-i-sys.md) | Yes | Onscreen awareness capability list. For details, see the following<br> supported capability list. |
+| options | [OnscreenAwarenessOptions](arkts-multimodalawareness-onscreenawarenessoptions-i-sys.md) | No | Onscreen awareness parameter list. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OnscreenAwarenessInfo[]&gt; | Promise used to return the onscreen awareness result. The returned<br> onscreen awareness information list **OnscreenAwarenessInfo[]** contains a maximum of two awareness<br> information items. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<OnscreenAwarenessInfo[]> | Promise used to return the onscreen awareness result. The returned<br> onscreen awareness information list **OnscreenAwarenessInfo[]** contains a maximum of two awareness<br> information items. |
 
 **Error codes:**
 

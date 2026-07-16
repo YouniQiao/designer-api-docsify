@@ -16,6 +16,8 @@ Obtains the current primary mouse button. This API uses an asynchronous callback
 
 **Since:** 10
 
+<!--Device-pointer-function getMousePrimaryButton(callback: AsyncCallback<PrimaryButton>): void--><!--Device-pointer-function getMousePrimaryButton(callback: AsyncCallback<PrimaryButton>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Obtains the current primary mouse button. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;PrimaryButton&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined**, and **PrimaryButton** is the obtained key value. Otherwise, **err** is anerror object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<PrimaryButton> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **PrimaryButton** is the obtained key value. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -76,6 +78,8 @@ Obtains the current primary mouse button. This API uses a promise to return the 
 
 **Since:** 10
 
+<!--Device-pointer-function getMousePrimaryButton(): Promise<PrimaryButton>--><!--Device-pointer-function getMousePrimaryButton(): Promise<PrimaryButton>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **System API:** This is a system API.
@@ -84,7 +88,7 @@ Obtains the current primary mouse button. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PrimaryButton&gt; | Promise used to return the primary mouse button. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PrimaryButton> | Promise used to return the primary mouse button. |
 
 **Error codes:**
 

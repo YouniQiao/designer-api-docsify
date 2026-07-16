@@ -4,6 +4,8 @@ Implements event listeners for print jobs.
 
 **Since:** 10
 
+<!--Device-print-interface PrintTask--><!--Device-print-interface PrintTask-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## Modules to Import
@@ -24,14 +26,16 @@ Unsubscribes from the block events of a print job. This API uses an asynchronous
 
 **Required permissions:** ohos.permission.PRINT
 
+<!--Device-PrintTask-off(type: 'block', callback?: Callback<void>): void--><!--Device-PrintTask-off(type: 'block', callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'block' | Yes | Listening type.<br>The value is fixed at **'block'**.<br>It means that the print job isblocked. |
-| callback | Callback&lt;void&gt; | No | Callback used to unsubscribe from the block events of a specified print job. |
+| type | 'block' | Yes | Listening type.<br>The value is fixed at **'block'**.<br>It means that the print job is blocked. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | Callback used to unsubscribe from the block events of a specified print job. |
 
 **Error codes:**
 
@@ -88,14 +92,16 @@ Unsubscribes from the success events of a print job. This API uses an asynchrono
 
 **Required permissions:** ohos.permission.PRINT
 
+<!--Device-PrintTask-off(type: 'succeed', callback?: Callback<void>): void--><!--Device-PrintTask-off(type: 'succeed', callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'succeed' | Yes | Listening type.<br>The value is fixed at **'succeed'**.<br>It means that the printjob is successful. |
-| callback | Callback&lt;void&gt; | No | Callback used to unsubscribe from the success events of a specified printjob. |
+| type | 'succeed' | Yes | Listening type.<br>The value is fixed at **'succeed'**.<br>It means that the print job is successful. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | Callback used to unsubscribe from the success events of a specified print job. |
 
 **Error codes:**
 
@@ -152,14 +158,16 @@ Unsubscribes from the failure events of a print job. This API uses an asynchrono
 
 **Required permissions:** ohos.permission.PRINT
 
+<!--Device-PrintTask-off(type: 'fail', callback?: Callback<void>): void--><!--Device-PrintTask-off(type: 'fail', callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'fail' | Yes | Listening type.<br>The value is fixed at **'fail'**.<br>It means that the print job isfailed. |
-| callback | Callback&lt;void&gt; | No | Callback used to unsubscribe from the failure events of a specified printjob. |
+| type | 'fail' | Yes | Listening type.<br>The value is fixed at **'fail'**.<br>It means that the print job is failed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | Callback used to unsubscribe from the failure events of a specified print job. |
 
 **Error codes:**
 
@@ -210,12 +218,13 @@ struct Index {
 off(type: 'cancel', callback?: Callback<void>): void
 ```
 
-Unsubscribes from the cancellation events of a print job. This API uses an asynchronous callback to return the
-result.
+Unsubscribes from the cancellation events of a print job. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.PRINT
+
+<!--Device-PrintTask-off(type: 'cancel', callback?: Callback<void>): void--><!--Device-PrintTask-off(type: 'cancel', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -223,8 +232,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cancel' | Yes | Listening type.<br>The value is fixed at **'cancel'**.<br>It means that the print jobis canceled. |
-| callback | Callback&lt;void&gt; | No | Callback used to unsubscribe from the cancellation events of a specifiedprint job. |
+| type | 'cancel' | Yes | Listening type.<br>The value is fixed at **'cancel'**.<br>It means that the print job is canceled. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | Callback used to unsubscribe from the cancellation events of a specified print job. |
 
 **Error codes:**
 
@@ -281,14 +290,16 @@ Subscribes to the block events of a print job. This API uses an asynchronous cal
 
 **Required permissions:** ohos.permission.PRINT
 
+<!--Device-PrintTask-on(type: 'block', callback: Callback<void>): void--><!--Device-PrintTask-on(type: 'block', callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'block' | Yes | Listening type.<br>The value is fixed at **'block'**.<br>It means that the print job isblocked. |
-| callback | Callback&lt;void&gt; | Yes | Callback used to notify the caller that the print job is blocked. |
+| type | 'block' | Yes | Listening type.<br>The value is fixed at **'block'**.<br>It means that the print job is blocked. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Callback used to notify the caller that the print job is blocked. |
 
 **Error codes:**
 
@@ -345,14 +356,16 @@ Subscribes to the success events of a print job. This API uses an asynchronous c
 
 **Required permissions:** ohos.permission.PRINT
 
+<!--Device-PrintTask-on(type: 'succeed', callback: Callback<void>): void--><!--Device-PrintTask-on(type: 'succeed', callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'succeed' | Yes | Listening type.<br>The value is fixed at **'succeed'**.<br>It means that the printjob is successful. |
-| callback | Callback&lt;void&gt; | Yes | Callback used to notify the caller that the print job is successful. |
+| type | 'succeed' | Yes | Listening type.<br>The value is fixed at **'succeed'**.<br>It means that the print job is successful. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Callback used to notify the caller that the print job is successful. |
 
 **Error codes:**
 
@@ -409,14 +422,16 @@ Subscribes to the failure events of a print job. This API uses an asynchronous c
 
 **Required permissions:** ohos.permission.PRINT
 
+<!--Device-PrintTask-on(type: 'fail', callback: Callback<void>): void--><!--Device-PrintTask-on(type: 'fail', callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'fail' | Yes | Listening type.<br>The value is fixed at **'fail'**.<br>It means that the print job isfailed. |
-| callback | Callback&lt;void&gt; | Yes | Callback used to notify the caller that the print job is failed. |
+| type | 'fail' | Yes | Listening type.<br>The value is fixed at **'fail'**.<br>It means that the print job is failed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Callback used to notify the caller that the print job is failed. |
 
 **Error codes:**
 
@@ -467,12 +482,13 @@ struct Index {
 on(type: 'cancel', callback: Callback<void>): void
 ```
 
-Subscribes to the cancellation events of a print job. This API uses an asynchronous callback to return the
-result.
+Subscribes to the cancellation events of a print job. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.PRINT
+
+<!--Device-PrintTask-on(type: 'cancel', callback: Callback<void>): void--><!--Device-PrintTask-on(type: 'cancel', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -480,8 +496,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cancel' | Yes | Listening type.<br>The value is fixed at **'cancel'**.<br>It means that the print jobis canceled. |
-| callback | Callback&lt;void&gt; | Yes | Callback used to notify the caller that the print job is canceled. |
+| type | 'cancel' | Yes | Listening type.<br>The value is fixed at **'cancel'**.<br>It means that the print job is canceled. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Callback used to notify the caller that the print job is canceled. |
 
 **Error codes:**
 

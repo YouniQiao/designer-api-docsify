@@ -18,6 +18,8 @@ Set the specified network interface parameters.
 
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
+<!--Device-eap-function startEthEap(netId: number, profile: EthEapProfile): void--><!--Device-eap-function startEthEap(netId: number, profile: EthEapProfile): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 **Parameters:**
@@ -25,7 +27,7 @@ Set the specified network interface parameters.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | netId | number | Yes | Indicates the eth network id to start EAP authentication. |
-| profile | EthEapProfile | Yes | Indicates the eap profile. |
+| profile | [EthEapProfile](arkts-network-etheapprofile-i.md) | Yes | Indicates the eap profile. |
 
 **Error codes:**
 

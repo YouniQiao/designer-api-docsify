@@ -15,10 +15,17 @@ function queryParticipantsByInvitation(
     ): void
 ```
 
-Queries the participants based on the sharing invitation code.
-This API uses an asynchronous callback to return the result.
+Queries the participants based on the sharing invitation code.This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+<!--Device-sharing-function queryParticipantsByInvitation(
+      invitationCode: string,
+      callback: AsyncCallback<Result<Array<Participant>>>
+    ): void--><!--Device-sharing-function queryParticipantsByInvitation(
+      invitationCode: string,
+      callback: AsyncCallback<Result<Array<Participant>>>
+    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -29,7 +36,7 @@ This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | invitationCode | string | Yes | Invitation code of the share. |
-| callback | AsyncCallback&lt;Result&lt;Array&lt;Participant&gt;&gt;&gt; | Yes | Callback used to return the participants obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Result<Array<Participant>>> | Yes | Callback used to return the participants obtained. |
 
 **Error codes:**
 
@@ -61,10 +68,11 @@ cloudData.sharing.queryParticipantsByInvitation('sharing_invitation_code_test', 
 function queryParticipantsByInvitation(invitationCode: string): Promise<Result<Array<Participant>>>
 ```
 
-Queries the participants based on the sharing invitation code.
-This API uses a promise to return the result.
+Queries the participants based on the sharing invitation code.This API uses a promise to return the result.
 
 **Since:** 11
+
+<!--Device-sharing-function queryParticipantsByInvitation(invitationCode: string): Promise<Result<Array<Participant>>>--><!--Device-sharing-function queryParticipantsByInvitation(invitationCode: string): Promise<Result<Array<Participant>>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -80,7 +88,7 @@ This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;Participant&gt;&gt;&gt; | Promise used to return the participants obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Result<Array<Participant>>> | Promise used to return the participants obtained. |
 
 **Error codes:**
 

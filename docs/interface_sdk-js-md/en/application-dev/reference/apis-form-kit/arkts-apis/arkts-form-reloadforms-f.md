@@ -12,12 +12,7 @@ import { formProvider } from '@kit.FormKit';
 function reloadForms(context: UIAbilityContext, moduleName: string, abilityName: string, formName: string): Promise<number>
 ```
 
-Reloads widgets. For widgets with the same **moduleName**, **abilityName**, and **formName** of the current
-application, each widget has a different widget ID after being added to the home screen for multiple times. Widget
-providers can use this API to batch update widgets that have different IDs but share the same **moduleName**,
-**abilityName**, and **formName**. Invoked in the main process of the application, this API notifies the
-FormExtension process to perform batch updates. It can only be called within a
-[UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md) and uses a promise to return the result.
+Reloads widgets. For widgets with the same **moduleName**, **abilityName**, and **formName** of the current application, each widget has a different widget ID after being added to the home screen for multiple times. Widget providers can use this API to batch update widgets that have different IDs but share the same **moduleName**,**abilityName**, and **formName**. Invoked in the main process of the application, this API notifies the FormExtension process to perform batch updates. It can only be called within a [UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md) and uses a promise to return the result.
 
 **Since:** 22
 
@@ -25,22 +20,24 @@ FormExtension process to perform batch updates. It can only be called within a
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-formProvider-function reloadForms(context: UIAbilityContext, moduleName: string, abilityName: string, formName: string): Promise<int>--><!--Device-formProvider-function reloadForms(context: UIAbilityContext, moduleName: string, abilityName: string, formName: string): Promise<int>-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIAbilityContext | Yes | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md) context, which is used forverification. |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-t.md) | Yes | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md) context, which is used for verification. |
 | moduleName | string | Yes | Module name of the widget. |
 | abilityName | string | Yes | Ability name of the widget. |
-| formName | string | Yes | Name of the widget configured in[form_config.json](../../../../form/arkts-ui-widget-configuration.md#fields-in-configuration-file). |
+| formName | string | Yes | Name of the widget configured in [form_config.json](../../../../form/arkts-ui-widget-configuration.md#fields-in-configuration-file). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the number of widgets requested for update. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the number of widgets requested for update. |
 
 **Error codes:**
 

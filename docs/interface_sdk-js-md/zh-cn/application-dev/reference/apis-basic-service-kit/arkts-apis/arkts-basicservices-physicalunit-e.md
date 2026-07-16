@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+<!--Device-scan-enum PhysicalUnit--><!--Device-scan-enum PhysicalUnit-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## SCAN_UNIT_NONE
@@ -15,6 +17,8 @@ SCAN_UNIT_NONE = 0
 无单位。
 
 **起始版本：** 20
+
+<!--Device-PhysicalUnit-SCAN_UNIT_NONE = 0--><!--Device-PhysicalUnit-SCAN_UNIT_NONE = 0-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -28,6 +32,8 @@ SCAN_UNIT_PIXEL = 1
 
 **起始版本：** 20
 
+<!--Device-PhysicalUnit-SCAN_UNIT_PIXEL = 1--><!--Device-PhysicalUnit-SCAN_UNIT_PIXEL = 1-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## SCAN_UNIT_BIT
@@ -39,6 +45,8 @@ SCAN_UNIT_BIT = 2
 位单位。
 
 **起始版本：** 20
+
+<!--Device-PhysicalUnit-SCAN_UNIT_BIT = 2--><!--Device-PhysicalUnit-SCAN_UNIT_BIT = 2-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -52,6 +60,8 @@ SCAN_UNIT_MM = 3
 
 **起始版本：** 20
 
+<!--Device-PhysicalUnit-SCAN_UNIT_MM = 3--><!--Device-PhysicalUnit-SCAN_UNIT_MM = 3-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## SCAN_UNIT_DPI
@@ -63,6 +73,8 @@ SCAN_UNIT_DPI = 4
 DPI单位。
 
 **起始版本：** 20
+
+<!--Device-PhysicalUnit-SCAN_UNIT_DPI = 4--><!--Device-PhysicalUnit-SCAN_UNIT_DPI = 4-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -76,6 +88,8 @@ SCAN_UNIT_PERCENT = 5
 
 **起始版本：** 20
 
+<!--Device-PhysicalUnit-SCAN_UNIT_PERCENT = 5--><!--Device-PhysicalUnit-SCAN_UNIT_PERCENT = 5-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## SCAN_UNIT_MICROSECOND
@@ -87,6 +101,8 @@ SCAN_UNIT_MICROSECOND = 6
 微秒单位。
 
 **起始版本：** 20
+
+<!--Device-PhysicalUnit-SCAN_UNIT_MICROSECOND = 6--><!--Device-PhysicalUnit-SCAN_UNIT_MICROSECOND = 6-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

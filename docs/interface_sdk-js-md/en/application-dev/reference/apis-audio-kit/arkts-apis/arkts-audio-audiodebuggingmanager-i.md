@@ -4,6 +4,8 @@ Provides audio debug management capabilities.
 
 **Since:** 26.0.0
 
+<!--Device-audio-interface AudioDebuggingManager--><!--Device-audio-interface AudioDebuggingManager-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## Modules to Import
@@ -18,15 +20,13 @@ import { audio } from '@kit.AudioKit';
 printAppInfo(fd: number): void
 ```
 
-Prints full audio runtime snapshot for current app process.
-The snapshot will contain all audio renderers, capturers, audio session information.
-Note that the information details and format may vary from different version, it can only be used for
-manual debugging, user should not rely on the information for actual function realization or file
-content extraction.
+Prints full audio runtime snapshot for current app process.The snapshot will contain all audio renderers, capturers, audio session information.Note that the information details and format may vary from different version, it can only be used for manual debugging, user should not rely on the information for actual function realization or file content extraction.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioDebuggingManager-printAppInfo(fd: int): void--><!--Device-AudioDebuggingManager-printAppInfo(fd: int): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -34,7 +34,7 @@ content extraction.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | fd is a file descriptor, indicates the location that the snapshot information will bewritten to. If the fd is less than 0 or no writable, the snapshot information will be printed into therunning log, otherwise the snapshot will be written into the file. |
+| fd | number | Yes | fd is a file descriptor, indicates the location that the snapshot information will be written to. If the fd is less than 0 or no writable, the snapshot information will be printed into the running log, otherwise the snapshot will be written into the file. |
 
 ## printCapturerInfo
 
@@ -42,15 +42,13 @@ content extraction.
 printCapturerInfo(capturer: AudioCapturer, fd: number): void
 ```
 
-Prints full audio runtime snapshot for target audio capturer instance.
-The snapshot will contain the stream, pipe, volume and device information.
-Note that the information details and format may vary from different version, it can only be used for
-manual debugging, user should not rely on the information for actual function realization or file
-content extraction.
+Prints full audio runtime snapshot for target audio capturer instance.The snapshot will contain the stream, pipe, volume and device information.Note that the information details and format may vary from different version, it can only be used for manual debugging, user should not rely on the information for actual function realization or file content extraction.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioDebuggingManager-printCapturerInfo(capturer: AudioCapturer, fd: int): void--><!--Device-AudioDebuggingManager-printCapturerInfo(capturer: AudioCapturer, fd: int): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -58,8 +56,8 @@ content extraction.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| capturer | AudioCapturer | Yes | target audio capturer instance to print snapshot. |
-| fd | number | Yes | fd is a file descriptor, indicates the location that the snapshot information will bewritten to. If the fd is less than 0 or no writable, the snapshot information will be printed into therunning log, otherwise the snapshot will be written into the file. |
+| capturer | [AudioCapturer](arkts-audio-audiocapturer-i.md) | Yes | target audio capturer instance to print snapshot. |
+| fd | number | Yes | fd is a file descriptor, indicates the location that the snapshot information will be written to. If the fd is less than 0 or no writable, the snapshot information will be printed into the running log, otherwise the snapshot will be written into the file. |
 
 ## printLoopbackInfo
 
@@ -67,15 +65,13 @@ content extraction.
 printLoopbackInfo(loopback: AudioLoopback, fd: number): void
 ```
 
-Prints full audio runtime snapshot for target audio loopback instance.
-The snapshot will contain the loopback status, device and effect information.
-Note that the information details and format may vary from different version, it can only be used for
-manual debugging, user should not rely on the information for actual function realization or file
-content extraction.
+Prints full audio runtime snapshot for target audio loopback instance.The snapshot will contain the loopback status, device and effect information.Note that the information details and format may vary from different version, it can only be used for manual debugging, user should not rely on the information for actual function realization or file content extraction.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioDebuggingManager-printLoopbackInfo(loopback: AudioLoopback, fd: int): void--><!--Device-AudioDebuggingManager-printLoopbackInfo(loopback: AudioLoopback, fd: int): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -83,8 +79,8 @@ content extraction.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| loopback | AudioLoopback | Yes | target audio loopback instance to print snapshot. |
-| fd | number | Yes | fd is a file descriptor, indicates the location that the snapshot information will bewritten to. If the fd is less than 0 or no writable, the snapshot information will be printed into therunning log, otherwise the snapshot will be written into the file. |
+| loopback | [AudioLoopback](arkts-audio-audioloopback-i.md) | Yes | target audio loopback instance to print snapshot. |
+| fd | number | Yes | fd is a file descriptor, indicates the location that the snapshot information will be written to. If the fd is less than 0 or no writable, the snapshot information will be printed into the running log, otherwise the snapshot will be written into the file. |
 
 ## printRendererInfo
 
@@ -92,15 +88,13 @@ content extraction.
 printRendererInfo(renderer: AudioRenderer, fd: number): void
 ```
 
-Prints full audio runtime snapshot for target audio renderer instance.
-The snapshot will contain the stream, pipe, volume and device information.
-Note that the information details and format may vary from different version, it can only be used for
-manual debugging, user should not rely on the information for actual function realization or file
-content extraction.
+Prints full audio runtime snapshot for target audio renderer instance.The snapshot will contain the stream, pipe, volume and device information.Note that the information details and format may vary from different version, it can only be used for manual debugging, user should not rely on the information for actual function realization or file content extraction.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioDebuggingManager-printRendererInfo(renderer: AudioRenderer, fd: int): void--><!--Device-AudioDebuggingManager-printRendererInfo(renderer: AudioRenderer, fd: int): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -108,8 +102,8 @@ content extraction.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| renderer | AudioRenderer | Yes | target audio renderer instance to print snapshot. |
-| fd | number | Yes | fd is a file descriptor, indicates the location that the snapshot information will bewritten to. If the fd is less than 0 or no writable, the snapshot information will be printed into therunning log, otherwise the snapshot will be written into the file. |
+| renderer | [AudioRenderer](arkts-audio-audiorenderer-i.md) | Yes | target audio renderer instance to print snapshot. |
+| fd | number | Yes | fd is a file descriptor, indicates the location that the snapshot information will be written to. If the fd is less than 0 or no writable, the snapshot information will be printed into the running log, otherwise the snapshot will be written into the file. |
 
 ## printSessionInfo
 
@@ -117,15 +111,13 @@ content extraction.
 printSessionInfo(session: AudioSessionManager, fd: number): void
 ```
 
-Prints full audio runtime snapshot for target audio session manager instance.
-The snapshot will contain the session status, scene, strategy and device information.
-Note that the information details and format may vary from different version, it can only be used for
-manual debugging, user should not rely on the information for actual function realization or file
-content extraction.
+Prints full audio runtime snapshot for target audio session manager instance.The snapshot will contain the session status, scene, strategy and device information.Note that the information details and format may vary from different version, it can only be used for manual debugging, user should not rely on the information for actual function realization or file content extraction.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioDebuggingManager-printSessionInfo(session: AudioSessionManager, fd: int): void--><!--Device-AudioDebuggingManager-printSessionInfo(session: AudioSessionManager, fd: int): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -133,6 +125,6 @@ content extraction.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| session | AudioSessionManager | Yes | target audio session manager instance to print snapshot. |
-| fd | number | Yes | fd is a file descriptor, indicates the location that the snapshot information will bewritten to. If the fd is less than 0 or no writable, the snapshot information will be printed into therunning log, otherwise the snapshot will be written into the file. |
+| session | [AudioSessionManager](arkts-audio-audiosessionmanager-i.md) | Yes | target audio session manager instance to print snapshot. |
+| fd | number | Yes | fd is a file descriptor, indicates the location that the snapshot information will be written to. If the fd is less than 0 or no writable, the snapshot information will be printed into the running log, otherwise the snapshot will be written into the file. |
 

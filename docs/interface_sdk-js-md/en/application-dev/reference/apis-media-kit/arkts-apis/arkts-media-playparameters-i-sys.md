@@ -6,6 +6,8 @@ These parameters are used to control the playback volume, number of loops, and p
 
 **Since:** 10
 
+<!--Device-unnamed-export interface PlayParameters--><!--Device-unnamed-export interface PlayParameters-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 ## parallelPlayFlag
@@ -14,14 +16,15 @@ These parameters are used to control the playback volume, number of loops, and p
 parallelPlayFlag?: boolean
 ```
 
-Whether the sound can be played in parallel with other active audio streams, without preempting the audio focus.
-**true** if yes, **false** otherwise. The default value is **false**.
+Whether the sound can be played in parallel with other active audio streams, without preempting the audio focus.**true** if yes, **false** otherwise. The default value is **false**.
 
 This is a system API.
 
 **Type:** boolean
 
 **Since:** 10
+
+<!--Device-PlayParameters-parallelPlayFlag?: boolean--><!--Device-PlayParameters-parallelPlayFlag?: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare interface NativeEmbedMouseInfo--><!--Device-unnamed-declare interface NativeEmbedMouseInfo-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## embedId
@@ -17,6 +19,8 @@ embedId?: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-NativeEmbedMouseInfo-embedId?: string--><!--Device-NativeEmbedMouseInfo-embedId?: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -32,6 +36,8 @@ mouseEvent?: MouseEvent
 
 **起始版本：** 20
 
+<!--Device-NativeEmbedMouseInfo-mouseEvent?: MouseEvent--><!--Device-NativeEmbedMouseInfo-mouseEvent?: MouseEvent-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## result
@@ -45,6 +51,8 @@ result?: EventResult
 **类型：** EventResult
 
 **起始版本：** 20
+
+<!--Device-NativeEmbedMouseInfo-result?: EventResult--><!--Device-NativeEmbedMouseInfo-result?: EventResult-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

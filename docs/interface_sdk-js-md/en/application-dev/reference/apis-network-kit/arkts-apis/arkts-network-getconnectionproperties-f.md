@@ -12,12 +12,13 @@ import { connection } from '@kit.NetworkKit';
 function getConnectionProperties(netHandle: NetHandle, callback: AsyncCallback<ConnectionProperties>): void
 ```
 
-Queries the connection properties of a network.
-This method requires the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Queries the connection properties of a network.This method requires the {@code ohos.permission.GET_NETWORK_INFO} permission.
 
 **Since:** 8
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-connection-function getConnectionProperties(netHandle: NetHandle, callback: AsyncCallback<ConnectionProperties>): void--><!--Device-connection-function getConnectionProperties(netHandle: NetHandle, callback: AsyncCallback<ConnectionProperties>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -25,8 +26,8 @@ This method requires the {@code ohos.permission.GET_NETWORK_INFO} permission.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the network to be queried. |
-| callback | AsyncCallback&lt;ConnectionProperties&gt; | Yes | the callback of getConnectionProperties.{@link ConnectionProperties}. |
+| netHandle | [NetHandle](arkts-network-nethandle-i.md) | Yes | Indicates the network to be queried. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ConnectionProperties> | Yes | the callback of getConnectionProperties.{@link ConnectionProperties}. |
 
 **Error codes:**
 
@@ -68,12 +69,13 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 function getConnectionProperties(netHandle: NetHandle): Promise<ConnectionProperties>
 ```
 
-Queries the connection properties of a network.
-This method requires the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Queries the connection properties of a network.This method requires the {@code ohos.permission.GET_NETWORK_INFO} permission.
 
 **Since:** 8
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-connection-function getConnectionProperties(netHandle: NetHandle): Promise<ConnectionProperties>--><!--Device-connection-function getConnectionProperties(netHandle: NetHandle): Promise<ConnectionProperties>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -81,13 +83,13 @@ This method requires the {@code ohos.permission.GET_NETWORK_INFO} permission.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the network to be queried. |
+| netHandle | [NetHandle](arkts-network-nethandle-i.md) | Yes | Indicates the network to be queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ConnectionProperties&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ConnectionProperties> | The promise returned by the function. |
 
 **Error codes:**
 

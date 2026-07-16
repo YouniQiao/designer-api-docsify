@@ -16,13 +16,15 @@ Creates an AVScreenCaptureRecorder instance. This API uses a promise to return t
 
 **Since:** 12
 
+<!--Device-media-function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder>--><!--Device-media-function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVScreenCaptureRecorder&gt; | Promise used to return the result. If the operation is successful, anAVScreenCaptureRecorder instance is returned; otherwise, **null** is returned. The instance can be used forscreen capture. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AVScreenCaptureRecorder> | Promise used to return the result. If the operation is successful, an AVScreenCaptureRecorder instance is returned; otherwise, **null** is returned. The instance can be used for screen capture. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-drawing-enum JoinStyle--><!--Device-drawing-enum JoinStyle-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## MITER_JOIN
@@ -15,6 +17,8 @@ MITER_JOIN = 0
 转角类型为尖角，如果折线角度比较小，则尖角会很长，需要使用限制值（miter limit）进行限制。
 
 **起始版本：** 12
+
+<!--Device-JoinStyle-MITER_JOIN = 0--><!--Device-JoinStyle-MITER_JOIN = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -28,6 +32,8 @@ ROUND_JOIN = 1
 
 **起始版本：** 12
 
+<!--Device-JoinStyle-ROUND_JOIN = 1--><!--Device-JoinStyle-ROUND_JOIN = 1-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## BEVEL_JOIN
@@ -39,6 +45,8 @@ BEVEL_JOIN = 2
 转角类型为平头。
 
 **起始版本：** 12
+
+<!--Device-JoinStyle-BEVEL_JOIN = 2--><!--Device-JoinStyle-BEVEL_JOIN = 2-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

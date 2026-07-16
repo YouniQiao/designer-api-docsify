@@ -4,6 +4,8 @@ provides a push method for the target page in the routing table.
 
 **Since:** 12
 
+<!--Device-unnamed-export declare class NavPushPathHelper--><!--Device-unnamed-export declare class NavPushPathHelper-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,13 +26,15 @@ The constructor used to create a NavPushPathHelper object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPushPathHelper-constructor(navPathStack: NavPathStack)--><!--Device-NavPushPathHelper-constructor(navPathStack: NavPathStack)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| navPathStack | NavPathStack | Yes | The stack of the route table. |
+| navPathStack | [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md) | Yes | The stack of the route table. |
 
 ## pushDestination
 
@@ -44,6 +48,8 @@ Pushes the route page into the stack.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPushPathHelper-pushDestination(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<void>--><!--Device-NavPushPathHelper-pushDestination(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -51,14 +57,14 @@ Pushes the route page into the stack.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Module name |
-| info | NavPathInfo | Yes | Indicates the route page to be pushed. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the route page to be pushed. |
 | animated | boolean | No | Indicates whether the transition is animated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -82,6 +88,8 @@ Pushes the NavDestination into the stack.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPushPathHelper-pushDestination(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>--><!--Device-NavPushPathHelper-pushDestination(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -89,14 +97,14 @@ Pushes the NavDestination into the stack.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Module name |
-| info | NavPathInfo | Yes | Indicates the NavDestination to be pushed. |
-| options | NavigationOptions | No | Indicates options of stack operation. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the NavDestination to be pushed. |
+| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No | Indicates options of stack operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -120,6 +128,8 @@ Pushes the specified route page into the stack.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPushPathHelper-pushDestinationByName(moduleName: string, name: string, param: Object, animated?: boolean): Promise<void>--><!--Device-NavPushPathHelper-pushDestinationByName(moduleName: string, name: string, param: Object, animated?: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -128,14 +138,14 @@ Pushes the specified route page into the stack.
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Module name |
 | name | string | Yes | Indicates the name of the route page to be pushed. |
-| param | Object | Yes | Indicates the detailed parameter of the route page to be pushed. |
+| param | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Indicates the detailed parameter of the route page to be pushed. |
 | animated | boolean | No | Indicates whether the transition is animated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -160,6 +170,10 @@ Pushes the specified route page into the stack.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPushPathHelper-pushDestinationByName(moduleName: string, name: string, param: Object,
+    onPop: Callback<PopInfo>, animated?: boolean): Promise<void>--><!--Device-NavPushPathHelper-pushDestinationByName(moduleName: string, name: string, param: Object,
+    onPop: Callback<PopInfo>, animated?: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -168,15 +182,15 @@ Pushes the specified route page into the stack.
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Module name |
 | name | string | Yes | Indicates the name of the route page to be pushed. |
-| param | Object | Yes | Indicates the detailed parameter of the route page to be pushed. |
-| onPop | Callback&lt;PopInfo&gt; | Yes | The callback when next page returns. |
+| param | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Indicates the detailed parameter of the route page to be pushed. |
+| onPop | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<PopInfo> | Yes | The callback when next page returns. |
 | animated | boolean | No | Indicates whether the transition is animated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -200,6 +214,8 @@ Pushes the route page into the stack.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPushPathHelper-pushPath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<void>--><!--Device-NavPushPathHelper-pushPath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -207,14 +223,14 @@ Pushes the route page into the stack.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Module name |
-| info | NavPathInfo | Yes | Indicates the route page to be pushed. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the route page to be pushed. |
 | animated | boolean | No | Indicates whether the transition is animated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -234,6 +250,8 @@ Pushes the NavDestination into the stack.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPushPathHelper-pushPath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>--><!--Device-NavPushPathHelper-pushPath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -241,14 +259,14 @@ Pushes the NavDestination into the stack.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Module name |
-| info | NavPathInfo | Yes | Indicates the NavDestination to be pushed. |
-| options | NavigationOptions | No | Indicates options of stack operation. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the NavDestination to be pushed. |
+| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No | Indicates options of stack operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -268,6 +286,8 @@ Pushes the specified route page into the stack.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPushPathHelper-pushPathByName(moduleName: string, name: string, param: Object, animated?: boolean): Promise<void>--><!--Device-NavPushPathHelper-pushPathByName(moduleName: string, name: string, param: Object, animated?: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -276,14 +296,14 @@ Pushes the specified route page into the stack.
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Module name |
 | name | string | Yes | Indicates the name of the route page to be pushed. |
-| param | Object | Yes | Indicates the detailed parameter of the route page to be pushed. |
+| param | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Indicates the detailed parameter of the route page to be pushed. |
 | animated | boolean | No | Indicates whether the transition is animated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -304,6 +324,10 @@ Pushes the specified route page into the stack.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPushPathHelper-pushPathByName(moduleName: string, name: string, param: Object,
+    onPop: Callback<PopInfo>, animated?: boolean): Promise<void>--><!--Device-NavPushPathHelper-pushPathByName(moduleName: string, name: string, param: Object,
+    onPop: Callback<PopInfo>, animated?: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -312,15 +336,15 @@ Pushes the specified route page into the stack.
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Module name |
 | name | string | Yes | Indicates the name of the route page to be pushed. |
-| param | Object | Yes | Indicates the detailed parameter of the route page to be pushed. |
-| onPop | Callback&lt;PopInfo&gt; | Yes | The callback when next page returns. |
+| param | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Indicates the detailed parameter of the route page to be pushed. |
+| onPop | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<PopInfo> | Yes | The callback when next page returns. |
 | animated | boolean | No | Indicates whether the transition is animated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -340,6 +364,8 @@ replace the current page with the specific one.The current page will be destroye
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPushPathHelper-replacePath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<void>--><!--Device-NavPushPathHelper-replacePath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -347,14 +373,14 @@ replace the current page with the specific one.The current page will be destroye
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Module name |
-| info | NavPathInfo | Yes | Indicates the the new route page in top of the stack. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the the new route page in top of the stack. |
 | animated | boolean | No | Indicates whether the transition is animated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -374,6 +400,8 @@ Replace the current NavDestination with the specific one.The current NavDestinat
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPushPathHelper-replacePath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>--><!--Device-NavPushPathHelper-replacePath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -381,14 +409,14 @@ Replace the current NavDestination with the specific one.The current NavDestinat
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Module name |
-| info | NavPathInfo | Yes | Indicates the new NavDestination in top of the stack. |
-| options | NavigationOptions | No | Indicates options of stack operation. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the new NavDestination in top of the stack. |
+| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No | Indicates options of stack operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -408,6 +436,8 @@ replace the current page with the specific one.The current page will be destroye
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPushPathHelper-replacePathByName(moduleName: string, name: string, param: Object, animated?: boolean): Promise<void>--><!--Device-NavPushPathHelper-replacePathByName(moduleName: string, name: string, param: Object, animated?: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -416,14 +446,14 @@ replace the current page with the specific one.The current page will be destroye
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Module name |
 | name | string | Yes | Indicates name of the new route page in top of stack. |
-| param | Object | Yes | Indicates the detailed parameter of the new route page in top of the stack. |
+| param | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Indicates the detailed parameter of the new route page in top of the stack. |
 | animated | boolean | No | Indicates whether the transition is animated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

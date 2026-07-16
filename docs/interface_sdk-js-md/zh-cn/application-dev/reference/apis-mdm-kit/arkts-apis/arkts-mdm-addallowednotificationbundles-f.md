@@ -1,5 +1,11 @@
 # addAllowedNotificationBundles
 
+## 导入模块
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+```
+
 ## addAllowedNotificationBundles
 
 ```TypeScript
@@ -8,12 +14,12 @@ function addAllowedNotificationBundles(admin: Want, bundleNames: Array<string>, 
 
 添加允许发送通知的应用名单。设置通知白名单后，不在此名单内的应用无法发送通知。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 1.如果Kiosk模式与通知白名单策略同时设置，那么设置Kiosk模式的应用与通知白名单中的应用都可以发送通知。
 
-> 2.当已经通过
-> [setDisallowedPolicy](arkts-mdm-setdisallowedpolicy-f.md#setdisallowedpolicy-1)
+> 2.当已经通过  
+> [setDisallowedPolicy](arkts-mdm-setdisallowedpolicy-f.md#setdisallowedpolicy-1)  
 > 设置了禁用设备通知能力时，再通过本接口设置通知白名单，会抛出错误码9200010。
 
 > 3.通知白名单对系统服务不生效，系统服务始终可以发送通知。系统应用受通知白名单管控。
@@ -26,14 +32,16 @@ function addAllowedNotificationBundles(admin: Want, bundleNames: Array<string>, 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function addAllowedNotificationBundles(admin: Want, bundleNames: Array<string>, accountId: number): void--><!--Device-applicationManager-function addAllowedNotificationBundles(admin: Want, bundleNames: Array<string>, accountId: number): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| bundleNames | Array&lt;string&gt; | 是 | 应用包名数组，指定允许发送通知的应用。最多支持200个应用。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| bundleNames | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 应用包名数组，指定允许发送通知的应用。最多支持200个应用。 |
 | accountId | number | 是 | 用户ID，取值范围：大于等于0。<br>accountId可以通过@ohos.account.osAccount中的[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2)等接口来获取。 |
 
 **错误码：**

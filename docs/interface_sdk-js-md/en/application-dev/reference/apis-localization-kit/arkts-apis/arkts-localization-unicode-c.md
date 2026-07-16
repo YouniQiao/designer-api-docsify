@@ -1,9 +1,10 @@
 # Unicode
 
-Provides character attribute management capabilities, such as checking whether a character is a space, digit, or
-letter.
+Provides character attribute management capabilities, such as checking whether a character is a space, digit, or letter.
 
 **Since:** 9
+
+<!--Device-i18n-export class Unicode--><!--Device-i18n-export class Unicode-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -27,19 +28,21 @@ Detects the encoding information of the input byte stream.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-Unicode-static detectEncoding(bytes: Uint8Array): EncodingInfo--><!--Device-Unicode-static detectEncoding(bytes: Uint8Array): EncodingInfo-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bytes | Uint8Array | Yes | Input byte stream. To detect the encoding of a text string,convert the text to a byte stream first while preserving its original format.<br>Byte stream to be identified and encoded |
+| bytes | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Input byte stream. To detect the encoding of a text string,convert the text to a byte stream first while preserving its original format.<br>Byte stream to be identified and encoded |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| EncodingInfo | An object containing the detected encoding name and detection confidence level. |
+| [EncodingInfo](arkts-localization-encodinginfo-i.md) | An object containing the detected encoding name and detection confidence level. |
 
 **Example**
 
@@ -63,19 +66,21 @@ Obtains the type of the input character.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Unicode-static getType(ch: string): string--><!--Device-Unicode-static getType(ch: string): string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character ischecked.<br>**Since:** 12 |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Type of the input character.U_UNASSIGNED： Non-category for unassigned and non-character codepoints. The value can beU_GENERAL_OTHER_TYPES： Same as **U_UNASSIGNED**.U_UPPERCASE_LETTER： Uppercase letter.U_LOWERCASE_LETTER： Lowercase letter.U_TITLECASE_LETTER： Title case letter.U_MODIFIER_LETTER： Modifier letter.U_OTHER_LETTER： Letters other than the uppercase letter, lowercase letter, title case letter, and modifierletter.U_NON_SPACING_MARK： Non-spacing mark, such as the accent symbol **'** and the variable symbol **#**.U_ENCLOSING_MARK： Enclosing mark, for example, a circle or a box.U_COMBINING_SPACING_MARK： Spacing mark, for example, the vowel symbol **[]**.U_DECIMAL_DIGIT_NUMBER： Decimal number.U_LETTER_NUMBER： Letter and number (including Roman numeral).U_OTHER_NUMBER： Other numbers, which are used as encryption symbols, marker symbols, or non-Arabic numerals,such as **@**, **#**, **(1)**, and **①**.U_SPACE_SEPARATOR： Space separator, for example, a space character, uninterrupted space character, or spacecharacter with a fixed width.U_LINE_SEPARATOR： Line separator.U_PARAGRAPH_SEPARATOR： Paragraph separator.U_CONTROL_CHAR： Control character.U_FORMAT_CHAR： Format character.U_PRIVATE_USE_CHAR： Privately used character, for example, a company logo.U_SURROGATE： Surrogate, which is used to represent supplementary characters in UTF-16.U_DASH_PUNCTUATION： Dash punctuation.U_START_PUNCTUATION： Start punctuation, for example, the left parenthesis.U_END_PUNCTUATION： End punctuation, for example, the right parenthesis.U_INITIAL_PUNCTUATION ： Initial punctuation, for example, the left double quotation mark or left singlequotation mark.U_FINAL_PUNCTUATION： Final punctuation, for example, the right double quotation mark or right singlequotation mark.U_CONNECTOR_PUNCTUATION： Connector punctuation.U_OTHER_PUNCTUATION： Other punctuations.U_MATH_SYMBOL： Mathematical symbol.U_CURRENCY_SYMBOL： Currency symbol.U_MODIFIER_SYMBOL： Modifier symbol.U_OTHER_SYMBOL： Other symbols.For details, see Unicode standard. |
+| string | Type of the input character.U_UNASSIGNED： Non-category for unassigned and non-character code points. The value can be * U_GENERAL_OTHER_TYPES： Same as **U_UNASSIGNED**.* U_UPPERCASE_LETTER： Uppercase letter.* U_LOWERCASE_LETTER： Lowercase letter.* U_TITLECASE_LETTER： Title case letter.* U_MODIFIER_LETTER： Modifier letter.* U_OTHER_LETTER： Letters other than the uppercase letter, lowercase letter, title case letter, and modifier letter.* U_NON_SPACING_MARK： Non-spacing mark, such as the accent symbol **'** and the variable symbol **#**.* U_ENCLOSING_MARK： Enclosing mark, for example, a circle or a box.* U_COMBINING_SPACING_MARK： Spacing mark, for example, the vowel symbol **[]**.* U_DECIMAL_DIGIT_NUMBER： Decimal number.* U_LETTER_NUMBER： Letter and number (including Roman numeral).* U_OTHER_NUMBER： Other numbers, which are used as encryption symbols, marker symbols, or non-Arabic numerals,such as **@**, **#**, **(1)**, and **①**.* U_SPACE_SEPARATOR： Space separator, for example, a space character, uninterrupted space character, or space character with a fixed width.* U_LINE_SEPARATOR： Line separator.* U_PARAGRAPH_SEPARATOR： Paragraph separator.* U_CONTROL_CHAR： Control character.* U_FORMAT_CHAR： Format character.* U_PRIVATE_USE_CHAR： Privately used character, for example, a company logo.* U_SURROGATE： Surrogate, which is used to represent supplementary characters in UTF-16.* U_DASH_PUNCTUATION： Dash punctuation.* U_START_PUNCTUATION： Start punctuation, for example, the left parenthesis.* U_END_PUNCTUATION： End punctuation, for example, the right parenthesis.* U_INITIAL_PUNCTUATION ： Initial punctuation, for example, the left double quotation mark or left single quotation mark.* U_FINAL_PUNCTUATION： Final punctuation, for example, the right double quotation mark or right single quotation mark.* U_CONNECTOR_PUNCTUATION： Connector punctuation.* U_OTHER_PUNCTUATION： Other punctuations.* U_MATH_SYMBOL： Mathematical symbol.* U_CURRENCY_SYMBOL： Currency symbol.* U_MODIFIER_SYMBOL： Modifier symbol.* U_OTHER_SYMBOL： Other symbols.* For details, see Unicode standard. |
 
 **Example**
 
@@ -98,13 +103,15 @@ Checks whether the input character is a digit.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Unicode-static isDigit(ch: string): boolean--><!--Device-Unicode-static isDigit(ch: string): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character ischecked.<br>**Since:** 12 |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -133,13 +140,15 @@ Checks whether the input character is an ideographic character.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Unicode-static isIdeograph(ch: string): boolean--><!--Device-Unicode-static isIdeograph(ch: string): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character ischecked.<br>**Since:** 12 |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -168,13 +177,15 @@ Checks whether the input character is a letter.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Unicode-static isLetter(ch: string): boolean--><!--Device-Unicode-static isLetter(ch: string): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character ischecked.<br>**Since:** 12 |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -203,13 +214,15 @@ Checks whether the input character is a lowercase letter.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Unicode-static isLowerCase(ch: string): boolean--><!--Device-Unicode-static isLowerCase(ch: string): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character ischecked.<br>**Since:** 12 |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -238,13 +251,15 @@ Checks whether the input character is of the right to left (RTL) language.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Unicode-static isRTL(ch: string): boolean--><!--Device-Unicode-static isRTL(ch: string): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character ischecked.<br>**Since:** 12 |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -273,13 +288,15 @@ Checks whether the input character is a space.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Unicode-static isSpaceChar(ch: string): boolean--><!--Device-Unicode-static isSpaceChar(ch: string): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character ischecked.<br>**Since:** 12 |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -308,13 +325,15 @@ Checks whether the input character is an uppercase letter.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Unicode-static isUpperCase(ch: string): boolean--><!--Device-Unicode-static isUpperCase(ch: string): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character ischecked.<br>**Since:** 12 |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -343,13 +362,15 @@ Checks whether the input character is a whitespace.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Unicode-static isWhitespace(ch: string): boolean--><!--Device-Unicode-static isWhitespace(ch: string): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ch | string | Yes | Input character. If the input is a string, only the type of the first character ischecked.<br>**Since:** 12 |
+| ch | string | Yes | Input character. If the input is a string, only the type of the first character is checked.<br>**Since:** 12 |
 
 **Return value:**
 

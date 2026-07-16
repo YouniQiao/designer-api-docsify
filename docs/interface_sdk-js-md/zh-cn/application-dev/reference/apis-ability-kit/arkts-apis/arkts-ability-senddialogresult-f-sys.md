@@ -1,5 +1,11 @@
 # sendDialogResult（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { dialogSession } from '@kit.AbilityKit';
+```
+
 ## sendDialogResult
 
 ```TypeScript
@@ -12,6 +18,8 @@ function sendDialogResult(dialogSessionId: string, targetWant: Want, isAllowed: 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-dialogSession-function sendDialogResult(dialogSessionId: string, targetWant: Want, isAllowed: boolean): Promise<void>--><!--Device-dialogSession-function sendDialogResult(dialogSessionId: string, targetWant: Want, isAllowed: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -21,14 +29,14 @@ function sendDialogResult(dialogSessionId: string, targetWant: Want, isAllowed: 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | dialogSessionId | string | 是 | 用户请求会话ID。 |
-| targetWant | Want | 是 | 用户请求目标。 |
+| targetWant | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 用户请求目标。 |
 | isAllowed | boolean | 是 | 是否允许拉起目标Ability。true表示允许，false表示不允许。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -53,6 +61,8 @@ function sendDialogResult(dialogSessionId: string, targetWant: Want, isAllowed: 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-dialogSession-function sendDialogResult(dialogSessionId: string, targetWant: Want, isAllowed: boolean, callback: AsyncCallback<void>): void--><!--Device-dialogSession-function sendDialogResult(dialogSessionId: string, targetWant: Want, isAllowed: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -62,9 +72,9 @@ function sendDialogResult(dialogSessionId: string, targetWant: Want, isAllowed: 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | dialogSessionId | string | 是 | 用户请求会话ID。 |
-| targetWant | Want | 是 | 用户请求目标。 |
+| targetWant | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 用户请求目标。 |
 | isAllowed | boolean | 是 | 是否允许拉起目标Ability。true表示允许，false表示不允许。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当发送用户请求成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当发送用户请求成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

@@ -4,6 +4,8 @@ Provides TCP and UDP Socket APIs.
 
 **Since:** 10
 
+<!--Device-unnamed-declare namespace socket--><!--Device-unnamed-declare namespace socket-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import

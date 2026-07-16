@@ -4,7 +4,15 @@ USB设备信息。
 
 **起始版本：** 9
 
+<!--Device-usbManager-interface USBDevice--><!--Device-usbManager-interface USBDevice-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
+
+## 导入模块
+
+```TypeScript
+import { usbManager } from '@kit.BasicServicesKit';
+```
 
 ## busNum
 
@@ -17,6 +25,8 @@ busNum: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-USBDevice-busNum: int--><!--Device-USBDevice-busNum: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -32,6 +42,8 @@ clazz: number
 
 **起始版本：** 9
 
+<!--Device-USBDevice-clazz: int--><!--Device-USBDevice-clazz: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## configs
@@ -45,6 +57,8 @@ configs: Array<USBConfiguration>
 **类型：** Array<USBConfiguration>
 
 **起始版本：** 9
+
+<!--Device-USBDevice-configs: Array<USBConfiguration>--><!--Device-USBDevice-configs: Array<USBConfiguration>-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -60,6 +74,8 @@ devAddress: number
 
 **起始版本：** 9
 
+<!--Device-USBDevice-devAddress: int--><!--Device-USBDevice-devAddress: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## manufacturerName
@@ -73,6 +89,8 @@ manufacturerName: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-USBDevice-manufacturerName: string--><!--Device-USBDevice-manufacturerName: string-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -88,6 +106,8 @@ name: string
 
 **起始版本：** 9
 
+<!--Device-USBDevice-name: string--><!--Device-USBDevice-name: string-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## productId
@@ -101,6 +121,8 @@ productId: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-USBDevice-productId: int--><!--Device-USBDevice-productId: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -116,6 +138,8 @@ productName: string
 
 **起始版本：** 9
 
+<!--Device-USBDevice-productName: string--><!--Device-USBDevice-productName: string-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## protocol
@@ -129,6 +153,8 @@ protocol: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-USBDevice-protocol: int--><!--Device-USBDevice-protocol: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -144,6 +170,8 @@ serial: string
 
 **起始版本：** 9
 
+<!--Device-USBDevice-serial: string--><!--Device-USBDevice-serial: string-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## subClass
@@ -157,6 +185,8 @@ subClass: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-USBDevice-subClass: int--><!--Device-USBDevice-subClass: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -172,6 +202,8 @@ vendorId: number
 
 **起始版本：** 9
 
+<!--Device-USBDevice-vendorId: int--><!--Device-USBDevice-vendorId: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## version
@@ -185,6 +217,8 @@ version: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-USBDevice-version: string--><!--Device-USBDevice-version: string-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 

@@ -14,10 +14,11 @@ function deleteGroup(gid: string): Promise<void>
 
 Deletes a specified group. No task ID can be added to the group. This API uses a promise to return the result.
 
-When all tasks in a group are succeeded, failed, or removed and the group is deleted, the completion and failure
-notifications of this group are displayed.
+When all tasks in a group are succeeded, failed, or removed and the group is deleted, the completion and failure notifications of this group are displayed.
 
 **Since:** 15
+
+<!--Device-agent-function deleteGroup(gid: string): Promise<void>--><!--Device-agent-function deleteGroup(gid: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -25,13 +26,13 @@ notifications of this group are displayed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gid | string | Yes | Target group ID. The value must be the same as the ID of the created task group, that is,the return value of the task group created using the[request.agent.createGroup](arkts-basicservices-creategroup-f.md#creategroup-1)API. |
+| gid | string | Yes | Target group ID. The value must be the same as the ID of the created task group, that is,the return value of the task group created using the [request.agent.createGroup](arkts-basicservices-creategroup-f.md#creategroup-1)API. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

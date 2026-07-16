@@ -4,6 +4,8 @@ Enum for distance measurement result reporting modes.
 
 **Since:** 23
 
+<!--Device-spatialAwareness-export enum ReportingMode--><!--Device-spatialAwareness-export enum ReportingMode-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **System API:** This is a system API.
@@ -20,6 +22,8 @@ indicates periodic reporting
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ReportingMode-REPORT_MODE_PERIODIC_REPORTING = 0--><!--Device-ReportingMode-REPORT_MODE_PERIODIC_REPORTING = 0-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **System API:** This is a system API.
@@ -35,6 +39,8 @@ indicates triggered reporting
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ReportingMode-REPORT_MODE_TRIGGERED_REPORTING = 1--><!--Device-ReportingMode-REPORT_MODE_TRIGGERED_REPORTING = 1-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 

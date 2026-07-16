@@ -6,7 +6,15 @@ ChipGroupV2Items定义了芯片组项的数组类，继承自Array<[ChipGroupV2I
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-export declare class ChipGroupV2Items extends Array<ChipGroupV2Item>--><!--Device-unnamed-export declare class ChipGroupV2Items extends Array<ChipGroupV2Item>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { ChipGroupV2ItemConfig, ChipGroupV2ItemStyleConfig, ChipGroupV2SpaceConfig, ChipGroupV2IconGroupSuffix, ChipGroupV2Items, ChipGroupV2Padding, ChipGroupV2Item, ChipGroupV2ItemStyle, ChipGroupV2, ChipGroupV2PaddingConfig, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2Space } from '@kit.ArkUI';
+```
 
 ## constructor
 
@@ -20,7 +28,9 @@ ChipGroupV2Items的构造函数。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroupV2Items-constructor(items: ChipGroupV2ItemConfig[])--><!--Device-ChipGroupV2Items-constructor(items: ChipGroupV2ItemConfig[])-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,5 +38,5 @@ ChipGroupV2Items的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| items | ChipGroupV2ItemConfig[] | 是 | 芯片组项配置数组。 |
+| items | [ChipGroupV2ItemConfig](arkts-arkui-chipgroupv2itemconfig-i.md)[] | 是 | 芯片组项配置数组。 |
 

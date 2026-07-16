@@ -4,6 +4,8 @@ UDMF已经支持的数据通路枚举类型。其主要用途是标识各种UDMF
 
 **起始版本：** 10
 
+<!--Device-unifiedDataChannel-enum Intention--><!--Device-unifiedDataChannel-enum Intention-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## DRAG
@@ -19,6 +21,8 @@ DRAG = 'Drag'
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Intention-DRAG = 'Drag'--><!--Device-Intention-DRAG = 'Drag'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 

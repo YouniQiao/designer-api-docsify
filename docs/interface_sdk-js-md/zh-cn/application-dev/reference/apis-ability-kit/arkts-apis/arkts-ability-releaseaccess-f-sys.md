@@ -1,5 +1,11 @@
 # releaseAccess（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { screenLockFileManager } from '@kit.AbilityKit';
+```
+
 ## releaseAccess
 
 ```TypeScript
@@ -14,6 +20,8 @@ function releaseAccess(dataType: DataType): ReleaseStatus
 
 **需要权限：** ohos.permission.ACCESS_SCREEN_LOCK_MEDIA_DATA or ohos.permission.ACCESS_SCREEN_LOCK_ALL_DATA
 
+<!--Device-screenLockFileManager-function releaseAccess(dataType: DataType): ReleaseStatus--><!--Device-screenLockFileManager-function releaseAccess(dataType: DataType): ReleaseStatus-End-->
+
 **系统能力：** SystemCapability.Security.ScreenLockFileManager
 
 **系统接口：** 此接口为系统接口。
@@ -22,13 +30,13 @@ function releaseAccess(dataType: DataType): ReleaseStatus
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dataType | DataType | 是 | 锁屏下访问的敏感数据类型。dataType需要与acquireAccess接口使用的dataType保持一致。 |
+| dataType | [DataType](arkts-ability-datatype-e.md) | 是 | 锁屏下访问的敏感数据类型。dataType需要与acquireAccess接口使用的dataType保持一致。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ReleaseStatus | 锁屏下敏感数据访问权限的释放状态。 |
+| [ReleaseStatus](arkts-ability-releasestatus-e.md) | 锁屏下敏感数据访问权限的释放状态。 |
 
 **错误码：**
 

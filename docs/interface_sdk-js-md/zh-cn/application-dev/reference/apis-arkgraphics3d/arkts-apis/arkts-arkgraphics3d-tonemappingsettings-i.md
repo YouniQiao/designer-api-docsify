@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface ToneMappingSettings--><!--Device-unnamed-export interface ToneMappingSettings-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## exposure
@@ -18,6 +20,8 @@ exposure?: number
 
 **起始版本：** 12
 
+<!--Device-ToneMappingSettings-exposure?: double--><!--Device-ToneMappingSettings-exposure?: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## type
@@ -31,6 +35,8 @@ type?: ToneMappingType
 **类型：** ToneMappingType
 
 **起始版本：** 12
+
+<!--Device-ToneMappingSettings-type?: ToneMappingType--><!--Device-ToneMappingSettings-type?: ToneMappingType-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

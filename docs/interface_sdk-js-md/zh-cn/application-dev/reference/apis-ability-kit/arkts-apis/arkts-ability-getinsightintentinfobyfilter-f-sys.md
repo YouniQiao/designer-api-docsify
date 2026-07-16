@@ -1,19 +1,26 @@
 # getInsightIntentInfoByFilter（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { insightIntentDriver } from '@kit.AbilityKit';
+```
+
 ## getInsightIntentInfoByFilter
 
 ```TypeScript
 function getInsightIntentInfoByFilter(filter: InsightIntentInfoFilter): Promise<Array<InsightIntentInfo>>
 ```
 
-Obtains the intent information on the current device based on the given intent filter. This API uses a promise to
-return the result.<br>If the user ID of the calling application is different from the user ID of the intent, the
+Obtains the intent information on the current device based on the given intent filter. This API uses a promise to return the result.<br>If the user ID of the calling application is different from the user ID of the intent, the
 
 **起始版本：** 23
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-insightIntentDriver-function getInsightIntentInfoByFilter(filter: InsightIntentInfoFilter): Promise<Array<InsightIntentInfo>>--><!--Device-insightIntentDriver-function getInsightIntentInfoByFilter(filter: InsightIntentInfoFilter): Promise<Array<InsightIntentInfo>>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -23,13 +30,13 @@ return the result.<br>If the user ID of the calling application is different fro
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | InsightIntentInfoFilter | 是 | Intent filter, which specifies the criteria for selecting a targetintent. It is used to filter intents on the device that meet these criteria. |
+| filter | [InsightIntentInfoFilter](arkts-ability-insightintentinfofilter-i-sys.md) | 是 | Intent filter, which specifies the criteria for selecting a target intent. It is used to filter intents on the device that meet these criteria. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;InsightIntentInfo&gt;&gt; | Promise used to return an array holding InsightIntentInfo objects. |
+| Promise<Array<InsightIntentInfo>> | Promise used to return an array holding InsightIntentInfo objects. |
 
 **错误码：**
 

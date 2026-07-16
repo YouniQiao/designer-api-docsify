@@ -4,6 +4,8 @@ Defines the measurement unit information.
 
 **Since:** 8
 
+<!--Device-i18n-export interface UnitInfo--><!--Device-i18n-export interface UnitInfo-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Measurement system. The value can be **SI**, **US**, or **UK**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UnitInfo-measureSystem: string--><!--Device-UnitInfo-measureSystem: string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## unit
@@ -41,6 +45,8 @@ Name of the measurement unit, for example, **meter**, **inch**, or **cup**.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UnitInfo-unit: string--><!--Device-UnitInfo-unit: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 

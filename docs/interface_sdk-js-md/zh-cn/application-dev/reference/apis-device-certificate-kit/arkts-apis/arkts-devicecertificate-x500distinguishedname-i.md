@@ -4,7 +4,15 @@ X509定义的Name类型的对象。
 
 **起始版本：** 12
 
+<!--Device-cert-interface X500DistinguishedName--><!--Device-cert-interface X500DistinguishedName-End-->
+
 **系统能力：** SystemCapability.Security.Cert
+
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
 
 ## getEncoded
 
@@ -16,7 +24,9 @@ getEncoded(): EncodingBlob
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X500DistinguishedName-getEncoded(): EncodingBlob--><!--Device-X500DistinguishedName-getEncoded(): EncodingBlob-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -24,7 +34,7 @@ getEncoded(): EncodingBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| EncodingBlob | X.500可分辨名称的DER编码数据。 |
+| [EncodingBlob](arkts-devicecertificate-encodingblob-i.md) | X.500可分辨名称的DER编码数据。 |
 
 **错误码：**
 
@@ -44,7 +54,9 @@ getName(): string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X500DistinguishedName-getName(): string--><!--Device-X500DistinguishedName-getName(): string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -72,7 +84,9 @@ getName(encodingType: EncodingType): string
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X500DistinguishedName-getName(encodingType: EncodingType): string--><!--Device-X500DistinguishedName-getName(encodingType: EncodingType): string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -80,7 +94,7 @@ getName(encodingType: EncodingType): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| encodingType | EncodingType | 是 | 表示编码格式。 |
+| encodingType | [EncodingType](arkts-devicecertificate-encodingtype-e.md) | 是 | 表示编码格式。 |
 
 **返回值：**
 
@@ -107,7 +121,9 @@ getName(type: string): Array<string>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X500DistinguishedName-getName(type: string): Array<string>--><!--Device-X500DistinguishedName-getName(type: string): Array<string>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -121,7 +137,7 @@ getName(type: string): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 相对可分辨名称的字符串数组。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 相对可分辨名称的字符串数组。 |
 
 **错误码：**
 
@@ -144,7 +160,9 @@ getName(type: string, encodingType: EncodingType): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X500DistinguishedName-getName(type: string, encodingType: EncodingType): Array<string>--><!--Device-X500DistinguishedName-getName(type: string, encodingType: EncodingType): Array<string>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -153,13 +171,13 @@ getName(type: string, encodingType: EncodingType): Array<string>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 指定类型的名称。如"CN"、"OU"等。 |
-| encodingType | EncodingType | 是 | 表示编码格式。 |
+| encodingType | [EncodingType](arkts-devicecertificate-encodingtype-e.md) | 是 | 表示编码格式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 相对可分辨名称的字符串数组。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 相对可分辨名称的字符串数组。 |
 
 **错误码：**
 

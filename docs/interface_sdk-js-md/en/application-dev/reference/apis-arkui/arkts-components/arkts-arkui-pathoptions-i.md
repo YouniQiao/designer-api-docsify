@@ -2,13 +2,15 @@
 
 Describes the options of the path.
 
-> **NOTE**
->
-> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> **NOTE**  
+>  
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element  
 > 's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
+
+<!--Device-unnamed-declare interface PathOptions--><!--Device-unnamed-declare interface PathOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,9 +20,7 @@ Describes the options of the path.
 commands?: ResourceStr
 ```
 
-Command string for drawing the path.
-If the value is invalid or the default value is used, the width and height required for the content are used. The
-default value is an empty string. An invalid value is handled as the default value.
+Command string for drawing the path.If the value is invalid or the default value is used, the width and height required for the content are used. The default value is an empty string. An invalid value is handled as the default value.
 
 **Type:** ResourceStr
 
@@ -30,6 +30,8 @@ default value is an empty string. An invalid value is handled as the default val
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-PathOptions-commands?: ResourceStr--><!--Device-PathOptions-commands?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## height
@@ -38,10 +40,7 @@ default value is an empty string. An invalid value is handled as the default val
 height?: Length
 ```
 
-Height of the rectangle where the path is located.
-If the value is invalid or the default value is used, the height required for the content is used.
-Default
-Unit: vp.
+Height of the rectangle where the path is located.If the value is invalid or the default value is used, the height required for the content is used.Default Unit: vp.
 
 **Type:** Length
 
@@ -50,6 +49,8 @@ Unit: vp.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-PathOptions-height?: Length--><!--Device-PathOptions-height?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,10 +60,7 @@ Unit: vp.
 width?: Length
 ```
 
-Width of the rectangle where the path is located.
-If the value is invalid or the default value is used, the width required for the content is used.
-Default
-Unit: vp.
+Width of the rectangle where the path is located.If the value is invalid or the default value is used, the width required for the content is used.Default Unit: vp.
 
 **Type:** Length
 
@@ -71,6 +69,8 @@ Unit: vp.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-PathOptions-width?: Length--><!--Device-PathOptions-width?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

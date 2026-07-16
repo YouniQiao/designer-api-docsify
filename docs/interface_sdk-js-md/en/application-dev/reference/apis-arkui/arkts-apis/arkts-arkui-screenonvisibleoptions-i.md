@@ -4,6 +4,8 @@ Defines the options of the visible interface on the screen.
 
 **Since:** 3
 
+<!--Device-unnamed-export interface ScreenOnVisibleOptions--><!--Device-unnamed-export interface ScreenOnVisibleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Called when the API call is complete.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScreenOnVisibleOptions-complete?: () => void--><!--Device-ScreenOnVisibleOptions-complete?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fail
@@ -41,6 +45,8 @@ Callback upon failure.
 **Since:** 3
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScreenOnVisibleOptions-fail?: (data: string, code: number) => void--><!--Device-ScreenOnVisibleOptions-fail?: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,6 +64,8 @@ Callback upon success.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScreenOnVisibleOptions-success?: () => void--><!--Device-ScreenOnVisibleOptions-success?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## visible
@@ -73,6 +81,8 @@ Whether to keep the application visible. The default value is **false**.
 **Since:** 3
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScreenOnVisibleOptions-visible?: boolean--><!--Device-ScreenOnVisibleOptions-visible?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

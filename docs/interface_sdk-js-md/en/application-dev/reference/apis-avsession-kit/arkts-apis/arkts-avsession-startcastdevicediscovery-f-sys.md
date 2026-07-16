@@ -16,6 +16,8 @@ Start device discovery.
 
 **Since:** 10
 
+<!--Device-avSession-function startCastDeviceDiscovery(callback: AsyncCallback<void>): void--><!--Device-avSession-function startCastDeviceDiscovery(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Start device discovery.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | a callback function |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | a callback function |
 
 **Error codes:**
 
@@ -53,6 +55,8 @@ Start device discovery.
 
 **Since:** 10
 
+<!--Device-avSession-function startCastDeviceDiscovery(filter: int, callback: AsyncCallback<void>): void--><!--Device-avSession-function startCastDeviceDiscovery(filter: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -62,7 +66,7 @@ Start device discovery.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filter | number | Yes | device filter when discovering, can be an union of { |
-| callback | AsyncCallback&lt;void&gt; | Yes | a callback function |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | a callback function |
 
 **Error codes:**
 
@@ -93,6 +97,8 @@ Start device discovery.
 
 **Since:** 10
 
+<!--Device-avSession-function startCastDeviceDiscovery(filter?: int, drmSchemes?: Array<string>): Promise<void>--><!--Device-avSession-function startCastDeviceDiscovery(filter?: int, drmSchemes?: Array<string>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -102,13 +108,13 @@ Start device discovery.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filter | number | No | device filter when discovering, can be an union of {@link ProtocolType}<br>**Since:** 12 |
-| drmSchemes | Array&lt;string&gt; | No | filter drm-enabled devices which are represented by uuid.It is effective when protocol type is TYPE_CAST_PLUS_STREAM.<br>**Since:** 12 |
+| drmSchemes | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | No | filter drm-enabled devices which are represented by uuid.It is effective when protocol type is TYPE_CAST_PLUS_STREAM.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise for the result |
 
 **Error codes:**
 

@@ -1,5 +1,11 @@
 # getPreferences
 
+## 导入模块
+
+```TypeScript
+import { sendablePreferences } from '@kit.ArkData';
+```
+
 ## getPreferences
 
 ```TypeScript
@@ -12,7 +18,9 @@ function getPreferences(context: Context, options: Options): Promise<Preferences
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-sendablePreferences-function getPreferences(context: Context, options: Options): Promise<Preferences>--><!--Device-sendablePreferences-function getPreferences(context: Context, options: Options): Promise<Preferences>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -20,14 +28,14 @@ function getPreferences(context: Context, options: Options): Promise<Preferences
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文。 |
-| options | Options | 是 | 与Preferences实例相关的配置选项。name字段为必填字段，名称长度需大于零且小于等于255字节，名称中不能包含'/'且不能以'/'结尾。dataGroupId为可选字段。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文。 |
+| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-options-i.md) | 是 | 与Preferences实例相关的配置选项。name字段为必填字段，名称长度需大于零且小于等于255字节，名称中不能包含'/'且不能以'/'结尾。dataGroupId为可选字段。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Preferences&gt; | Promise对象，返回Preferences实例。 |
+| Promise<Preferences> | Promise对象，返回Preferences实例。 |
 
 **错误码：**
 

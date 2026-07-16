@@ -4,6 +4,8 @@ Represents the configuration for generating a CMS message.
 
 **Since:** 18
 
+<!--Device-cert-interface CmsGeneratorOptions--><!--Device-cert-interface CmsGeneratorOptions-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Format of the content. The default value is **CmsContentDataFormat.BINARY**.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-CmsGeneratorOptions-contentDataFormat?: CmsContentDataFormat--><!--Device-CmsGeneratorOptions-contentDataFormat?: CmsContentDataFormat-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## isDetached
@@ -36,8 +40,7 @@ Format of the content. The default value is **CmsContentDataFormat.BINARY**.
 isDetached?: boolean
 ```
 
-Whether the final CMS message does not contain the raw data. The default value is **false**. **true**: raw data is
-not contained; **false**: raw data is contained.
+Whether the final CMS message does not contain the raw data. The default value is **false**. **true**: raw data is not contained; **false**: raw data is contained.
 
 **Type:** boolean
 
@@ -46,6 +49,8 @@ not contained; **false**: raw data is contained.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CmsGeneratorOptions-isDetached?: boolean--><!--Device-CmsGeneratorOptions-isDetached?: boolean-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -64,6 +69,8 @@ Format of the CMS message generated. The default value is **DER**.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CmsGeneratorOptions-outFormat?: CmsFormat--><!--Device-CmsGeneratorOptions-outFormat?: CmsFormat-End-->
 
 **System capability:** SystemCapability.Security.Cert
 

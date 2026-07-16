@@ -12,10 +12,11 @@ import { vibrator } from '@kit.SensorServiceKit';
 function getEffectInfoSync(effectId: string, param?: VibratorInfoParam): EffectInfo
 ```
 
-Obtains the preset vibration effect based on the device ID and vibrator ID to determine whether the preset
-vibration effect is supported.
+Obtains the preset vibration effect based on the device ID and vibrator ID to determine whether the preset vibration effect is supported.
 
 **Since:** 19
+
+<!--Device-vibrator-function getEffectInfoSync(effectId: string, param?: VibratorInfoParam): EffectInfo--><!--Device-vibrator-function getEffectInfoSync(effectId: string, param?: VibratorInfoParam): EffectInfo-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -24,13 +25,13 @@ vibration effect is supported.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | effectId | string | Yes | Effect ID. The value is a string of a maximum of 64 characters. If the length exceeds64 characters, the first 64 characters are used. |
-| param | VibratorInfoParam | No | Device ID and vibrator ID. If this parameter is left unspecified, this APIapplies to the local device by default. |
+| param | [VibratorInfoParam](arkts-sensorservice-vibratorinfoparam-i.md) | No | Device ID and vibrator ID. If this parameter is left unspecified, this API applies to the local device by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| EffectInfo | Whether the preset vibration effect is supported. |
+| [EffectInfo](arkts-sensorservice-effectinfo-i.md) | Whether the preset vibration effect is supported. |
 
 **Error codes:**
 

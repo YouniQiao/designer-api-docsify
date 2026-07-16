@@ -16,6 +16,8 @@ Obtains the proportion of the power consumption of a hardware unit according to 
 
 **Since:** 8
 
+<!--Device-batteryStats-function getHardwareUnitPowerPercent(type: ConsumptionType): double--><!--Device-batteryStats-function getHardwareUnitPowerPercent(type: ConsumptionType): double-End-->
+
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
 
 **System API:** This is a system API.
@@ -24,13 +26,13 @@ Obtains the proportion of the power consumption of a hardware unit according to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | ConsumptionType | Yes | Power consumption type. The value must be an enum. |
+| type | [ConsumptionType](arkts-basicservices-consumptiontype-e-sys.md) | Yes | Power consumption type. The value must be an enum. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Proportion of the power consumption of the hardware unit corresponding to the power consumptiontype, which ranges from 0.00 to 1.00. |
+| number | Proportion of the power consumption of the hardware unit corresponding to the power consumption type, which ranges from 0.00 to 1.00. |
 
 **Error codes:**
 

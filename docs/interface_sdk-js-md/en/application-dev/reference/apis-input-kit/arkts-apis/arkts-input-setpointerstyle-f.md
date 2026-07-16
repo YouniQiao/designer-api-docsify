@@ -12,13 +12,11 @@ import { pointer } from '@kit.InputKit';
 function setPointerStyle(windowId: number, pointerStyle: PointerStyle, callback: AsyncCallback<void>): void
 ```
 
-Sets the mouse pointer style type for a specified window. This API can set only the mouse pointer style type of
-windows within the current application process. For details about how to set the mouse pointer style type of the
-host window through the **UIExtensionAbility** process, see
-[setCursor](../../apis-arkui/arkts-apis/arkts-arkui-cursorcontroller-c.md#setcursor-1). This API uses an asynchronous callback to
-return the result.
+Sets the mouse pointer style type for a specified window. This API can set only the mouse pointer style type of windows within the current application process. For details about how to set the mouse pointer style type of the host window through the **UIExtensionAbility** process, see [setCursor](../../apis-arkui/arkts-apis/arkts-arkui-cursorcontroller-c.md#setcursor-1). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-pointer-function setPointerStyle(windowId: int, pointerStyle: PointerStyle, callback: AsyncCallback<void>): void--><!--Device-pointer-function setPointerStyle(windowId: int, pointerStyle: PointerStyle, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -26,16 +24,16 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | number | Yes | Window ID. The value is an integer greater than or equal to 0.<br>If the window ID is valid and the corresponding window exists, the mouse pointer style of the window can beset properly.<br>If the window ID is valid but the window does not exist, the mouse pointer style can also be set properly.<br>The result can be obtained through [getPointerStyle](arkts-input-getpointerstyle-f.md#getpointerstyle-1). |
-| pointerStyle | PointerStyle | Yes | Pointer style. Do not pass **DEVELOPER_DEFINED_ICON**. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| windowId | number | Yes | Window ID. The value is an integer greater than or equal to 0.<br>If the window ID is valid and the corresponding window exists, the mouse pointer style of the window can be set properly.<br>If the window ID is valid but the window does not exist, the mouse pointer style can also be set properly.<br>The result can be obtained through [getPointerStyle](arkts-input-getpointerstyle-f.md#getpointerstyle-1). |
+| pointerStyle | [PointerStyle](../../apis-arkui/arkts-apis/arkts-arkui-pointerstyle-t.md) | Yes | Pointer style. Do not pass **DEVELOPER_DEFINED_ICON**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. <br> When the windowId value is -1, the system permission is required to set the global style.**ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br> When the windowId value is -1, the system permission is required to set the global style.**ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 **Example**
 
@@ -85,12 +83,11 @@ struct Index {
 function setPointerStyle(windowId: number, pointerStyle: PointerStyle): Promise<void>
 ```
 
-Sets the mouse pointer style type for a specified window. This API can set only the mouse pointer style type of
-windows within the current application process. For details about how to set the mouse pointer style type of the
-host window through the **UIExtensionAbility** process, see
-[setCursor](../../apis-arkui/arkts-apis/arkts-arkui-cursorcontroller-c.md#setcursor-1). This uses a promise to return the result.
+Sets the mouse pointer style type for a specified window. This API can set only the mouse pointer style type of windows within the current application process. For details about how to set the mouse pointer style type of the host window through the **UIExtensionAbility** process, see [setCursor](../../apis-arkui/arkts-apis/arkts-arkui-cursorcontroller-c.md#setcursor-1). This uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-pointer-function setPointerStyle(windowId: int, pointerStyle: PointerStyle): Promise<void>--><!--Device-pointer-function setPointerStyle(windowId: int, pointerStyle: PointerStyle): Promise<void>-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -98,21 +95,21 @@ host window through the **UIExtensionAbility** process, see
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | number | Yes | Window ID. The value is an integer greater than or equal to 0.<br>If the window ID is valid and the corresponding window exists, the mouse pointer style of the window can beset properly.<br>If the window ID is valid but the window does not exist, the mouse pointer style can also be set properly.<br>The result can be obtained through [getPointerStyle](arkts-input-getpointerstyle-f.md#getpointerstyle-1). |
-| pointerStyle | PointerStyle | Yes | Pointer style. |
+| windowId | number | Yes | Window ID. The value is an integer greater than or equal to 0.<br>If the window ID is valid and the corresponding window exists, the mouse pointer style of the window can be set properly.<br>If the window ID is valid but the window does not exist, the mouse pointer style can also be set properly.<br>The result can be obtained through [getPointerStyle](arkts-input-getpointerstyle-f.md#getpointerstyle-1). |
+| pointerStyle | [PointerStyle](../../apis-arkui/arkts-apis/arkts-arkui-pointerstyle-t.md) | Yes | Pointer style. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. <br> When the windowId value is -1, the system permission is required to set the global style.**ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br> When the windowId value is -1, the system permission is required to set the global style.**ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 **Example**
 

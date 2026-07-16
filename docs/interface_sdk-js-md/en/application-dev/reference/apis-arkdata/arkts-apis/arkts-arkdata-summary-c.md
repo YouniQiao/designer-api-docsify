@@ -4,6 +4,8 @@ Summarizes the data information of the **unifiedData** object, including the dat
 
 **Since:** 10
 
+<!--Device-unifiedDataChannel-class Summary--><!--Device-unifiedDataChannel-class Summary-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Indicates the overview information of unifiedData.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Summary-get overview(): Record<string, long>--><!--Device-Summary-get overview(): Record<string, long>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## summary
@@ -46,6 +50,8 @@ A map for each type and data size, key is data type, value is the corresponding 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Summary-set summary(value: Record<string, long>)--><!--Device-Summary-set summary(value: Record<string, long>)-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## totalSize
@@ -63,6 +69,8 @@ Total data size of data in Bytes
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Summary-set totalSize(value: long)--><!--Device-Summary-set totalSize(value: long)-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 

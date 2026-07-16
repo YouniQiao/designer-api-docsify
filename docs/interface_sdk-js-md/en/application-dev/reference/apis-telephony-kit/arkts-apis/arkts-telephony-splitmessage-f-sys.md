@@ -14,12 +14,13 @@ function splitMessage(content: string, callback: AsyncCallback<Array<string>>): 
 
 Splits a long SMS message into multiple fragments.
 
-<p>If the length of an SMS message exceeds the maximum length allowed (140 bytes),
-the SMS message is split into multiple segments for processing.
+<p>If the length of an SMS message exceeds the maximum length allowed (140 bytes),the SMS message is split into multiple segments for processing.
 
 **Since:** 8
 
 **Required permissions:** ohos.permission.SEND_MESSAGES
+
+<!--Device-sms-function splitMessage(content: string, callback: AsyncCallback<Array<string>>): void--><!--Device-sms-function splitMessage(content: string, callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -30,7 +31,7 @@ the SMS message is split into multiple segments for processing.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | string | Yes | Indicates the short message content, which cannot be {@code null}. |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Indicates the callback for getting a list of split segments,which can be combined into a complete SMS message;Returns an empty string if no permission is granted or the short message content is {@code null}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Indicates the callback for getting a list of split segments,which can be combined into a complete SMS message;Returns an empty string if no permission is granted or the short message content is {@code null}. |
 
 **Error codes:**
 
@@ -66,12 +67,13 @@ function splitMessage(content: string): Promise<Array<string>>
 
 Splits a long SMS message into multiple fragments.
 
-<p>If the length of an SMS message exceeds the maximum length allowed (140 bytes),
-the SMS message is split into multiple segments for processing.
+<p>If the length of an SMS message exceeds the maximum length allowed (140 bytes),the SMS message is split into multiple segments for processing.
 
 **Since:** 8
 
 **Required permissions:** ohos.permission.SEND_MESSAGES
+
+<!--Device-sms-function splitMessage(content: string): Promise<Array<string>>--><!--Device-sms-function splitMessage(content: string): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -87,7 +89,7 @@ the SMS message is split into multiple segments for processing.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Returns a list of split segments, which can be combined into a complete SMSmessage; Returns an empty string if no permission is granted or the short message content is {@code null}. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Returns a list of split segments, which can be combined into a complete SMS message; Returns an empty string if no permission is granted or the short message content is {@code null}. |
 
 **Error codes:**
 

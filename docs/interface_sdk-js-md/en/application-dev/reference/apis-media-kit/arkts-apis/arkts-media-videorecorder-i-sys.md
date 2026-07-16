@@ -1,10 +1,10 @@
 # VideoRecorder (System API)
 
-The maintenance of this interface has been stopped since version api 9. Please use AVRecorder.
-Manages and record video. Before calling an VideoRecorder method, you must use createVideoRecorder()
-to create an VideoRecorder instance.
+The maintenance of this interface has been stopped since version api 9. Please use AVRecorder.Manages and record video. Before calling an VideoRecorder method, you must use createVideoRecorder()to create an VideoRecorder instance.
 
 **Since:** 9
+
+<!--Device-media-interface VideoRecorder--><!--Device-media-interface VideoRecorder-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -26,6 +26,8 @@ get input surface.it must be called between prepare completed and start.
 
 **Since:** 9
 
+<!--Device-VideoRecorder-getInputSurface(callback: AsyncCallback<string>): void--><!--Device-VideoRecorder-getInputSurface(callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
@@ -34,7 +36,7 @@ get input surface.it must be called between prepare completed and start.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the input surface id in string. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the input surface id in string. |
 
 **Error codes:**
 
@@ -73,6 +75,8 @@ get input surface. it must be called between prepare completed and start.
 
 **Since:** 9
 
+<!--Device-VideoRecorder-getInputSurface(): Promise<string>--><!--Device-VideoRecorder-getInputSurface(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
@@ -81,7 +85,7 @@ get input surface. it must be called between prepare completed and start.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | A Promise instance used to return the input surface id in string. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | A Promise instance used to return the input surface id in string. |
 
 **Error codes:**
 
@@ -118,6 +122,8 @@ Listens for video recording error events.
 
 **Since:** 9
 
+<!--Device-VideoRecorder-on(type: 'error', callback: ErrorCallback): void--><!--Device-VideoRecorder-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
@@ -127,7 +133,7 @@ Listens for video recording error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Type of the video recording error event to listen for. |
-| callback | ErrorCallback | Yes | Callback used to listen for the video recording error event. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback used to listen for the video recording error event. |
 
 **Error codes:**
 
@@ -160,6 +166,8 @@ Pauses video recording.
 
 **Since:** 9
 
+<!--Device-VideoRecorder-pause(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-pause(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
@@ -168,7 +176,7 @@ Pauses video recording.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | A callback instance used to return when pause completed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | A callback instance used to return when pause completed. |
 
 **Error codes:**
 
@@ -205,6 +213,8 @@ Pauses video recording.
 
 **Since:** 9
 
+<!--Device-VideoRecorder-pause(): Promise<void>--><!--Device-VideoRecorder-pause(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
@@ -213,7 +223,7 @@ Pauses video recording.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return when pause completed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return when pause completed. |
 
 **Error codes:**
 
@@ -250,6 +260,8 @@ Prepares for recording.
 
 **Required permissions:** ohos.permission.MICROPHONE
 
+<!--Device-VideoRecorder-prepare(config: VideoRecorderConfig, callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-prepare(config: VideoRecorderConfig, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
@@ -258,8 +270,8 @@ Prepares for recording.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | VideoRecorderConfig | Yes | Recording parameters. |
-| callback | AsyncCallback&lt;void&gt; | Yes | A callback instance used to return when prepare completed. |
+| config | [VideoRecorderConfig](arkts-media-videorecorderconfig-i-sys.md) | Yes | Recording parameters. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | A callback instance used to return when prepare completed. |
 
 **Error codes:**
 
@@ -322,6 +334,8 @@ Prepares for recording.
 
 **Required permissions:** ohos.permission.MICROPHONE
 
+<!--Device-VideoRecorder-prepare(config: VideoRecorderConfig): Promise<void>--><!--Device-VideoRecorder-prepare(config: VideoRecorderConfig): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
@@ -330,13 +344,13 @@ Prepares for recording.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | VideoRecorderConfig | Yes | Recording parameters. |
+| config | [VideoRecorderConfig](arkts-media-videorecorderconfig-i-sys.md) | Yes | Recording parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return when prepare completed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return when prepare completed. |
 
 **Error codes:**
 
@@ -395,6 +409,8 @@ Releases resources used for video recording.
 
 **Since:** 9
 
+<!--Device-VideoRecorder-release(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-release(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
@@ -403,7 +419,7 @@ Releases resources used for video recording.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | A callback instance used to return when release completed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | A callback instance used to return when release completed. |
 
 **Error codes:**
 
@@ -438,6 +454,8 @@ Releases resources used for video recording.
 
 **Since:** 9
 
+<!--Device-VideoRecorder-release(): Promise<void>--><!--Device-VideoRecorder-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
@@ -446,7 +464,7 @@ Releases resources used for video recording.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return when release completed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return when release completed. |
 
 **Error codes:**
 
@@ -475,11 +493,11 @@ videoRecorder.release().then(() => {
 reset(callback: AsyncCallback<void>): void
 ```
 
-Resets video recording.
-Before resetting video recording, you must call stop() to stop recording. After video recording is reset,
-you must call prepare() to set the recording configurations for another recording.
+Resets video recording.Before resetting video recording, you must call stop() to stop recording. After video recording is reset,you must call prepare() to set the recording configurations for another recording.
 
 **Since:** 9
+
+<!--Device-VideoRecorder-reset(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-reset(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -489,7 +507,7 @@ you must call prepare() to set the recording configurations for another recordin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | A callback instance used to return when reset completed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | A callback instance used to return when reset completed. |
 
 **Error codes:**
 
@@ -521,11 +539,11 @@ videoRecorder.reset((err: BusinessError) => {
 reset(): Promise<void>
 ```
 
-Resets video recording.
-Before resetting video recording, you must call stop() to stop recording. After video recording is reset,
-you must call prepare() to set the recording configurations for another recording.
+Resets video recording.Before resetting video recording, you must call stop() to stop recording. After video recording is reset,you must call prepare() to set the recording configurations for another recording.
 
 **Since:** 9
+
+<!--Device-VideoRecorder-reset(): Promise<void>--><!--Device-VideoRecorder-reset(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -535,7 +553,7 @@ you must call prepare() to set the recording configurations for another recordin
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return when reset completed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return when reset completed. |
 
 **Error codes:**
 
@@ -569,6 +587,8 @@ Resumes video recording.
 
 **Since:** 9
 
+<!--Device-VideoRecorder-resume(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-resume(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
@@ -577,7 +597,7 @@ Resumes video recording.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | A callback instance used to return when resume completed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | A callback instance used to return when resume completed. |
 
 **Error codes:**
 
@@ -614,6 +634,8 @@ Resumes video recording.
 
 **Since:** 9
 
+<!--Device-VideoRecorder-resume(): Promise<void>--><!--Device-VideoRecorder-resume(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
@@ -622,7 +644,7 @@ Resumes video recording.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return when resume completed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return when resume completed. |
 
 **Error codes:**
 
@@ -657,6 +679,8 @@ Starts video recording.
 
 **Since:** 9
 
+<!--Device-VideoRecorder-start(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-start(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
@@ -665,7 +689,7 @@ Starts video recording.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | A callback instance used to return when start completed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | A callback instance used to return when start completed. |
 
 **Error codes:**
 
@@ -702,6 +726,8 @@ Starts video recording.
 
 **Since:** 9
 
+<!--Device-VideoRecorder-start(): Promise<void>--><!--Device-VideoRecorder-start(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
@@ -710,7 +736,7 @@ Starts video recording.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return when start completed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return when start completed. |
 
 **Error codes:**
 
@@ -745,6 +771,8 @@ Stops video recording.
 
 **Since:** 9
 
+<!--Device-VideoRecorder-stop(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-stop(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
@@ -753,7 +781,7 @@ Stops video recording.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | A callback instance used to return when stop completed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | A callback instance used to return when stop completed. |
 
 **Error codes:**
 
@@ -790,6 +818,8 @@ Stops video recording.
 
 **Since:** 9
 
+<!--Device-VideoRecorder-stop(): Promise<void>--><!--Device-VideoRecorder-stop(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
@@ -798,7 +828,7 @@ Stops video recording.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return when stop completed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return when stop completed. |
 
 **Error codes:**
 
@@ -834,6 +864,8 @@ video recorder state.
 **Type:** VideoRecordState
 
 **Since:** 9
+
+<!--Device-VideoRecorder-readonly state: VideoRecordState--><!--Device-VideoRecorder-readonly state: VideoRecordState-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 

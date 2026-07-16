@@ -8,6 +8,8 @@ Describes the spp parameters.
 
 **Substitutes:** SppOptions
 
+<!--Device-bluetoothManager-interface SppOption--><!--Device-bluetoothManager-interface SppOption-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -32,6 +34,8 @@ Indicates secure channel or not
 
 **Substitutes:** secure
 
+<!--Device-SppOption-secure: boolean--><!--Device-SppOption-secure: boolean-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## type
@@ -50,6 +54,8 @@ Spp link type {@link SppType}
 
 **Substitutes:** type
 
+<!--Device-SppOption-type: SppType--><!--Device-SppOption-type: SppType-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## uuid
@@ -67,6 +73,8 @@ Indicates the UUID in the SDP record.
 **Deprecated since:** 10
 
 **Substitutes:** uuid
+
+<!--Device-SppOption-uuid: string--><!--Device-SppOption-uuid: string-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

@@ -12,6 +12,8 @@ Defines the context of the current ability.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-unnamed-export type Context = common.Context--><!--Device-unnamed-export type Context = common.Context-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Property type:** common.Context

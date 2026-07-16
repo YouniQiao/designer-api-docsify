@@ -12,14 +12,15 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 function grantPublicCertificate(keyUri: string, clientAppUid: number) : Promise<CMResult>
 ```
 
-Grants the permission for an application to use the public credentials of a user. This API is called only by the
-certificate management application. This API uses a promise to return the result.
+Grants the permission for an application to use the public credentials of a user. This API is called only by the certificate management application. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-certificateManager-function grantPublicCertificate(keyUri: string, clientAppUid: int) : Promise<CMResult>--><!--Device-certificateManager-function grantPublicCertificate(keyUri: string, clientAppUid: int) : Promise<CMResult>-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -36,7 +37,7 @@ certificate management application. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **uri** in the[CMResult](arkts-devicecertificate-cmresult-i.md) object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CMResult> | Promise used to return the operation result, that is, **uri** in the [CMResult](arkts-devicecertificate-cmresult-i.md) object. |
 
 **Error codes:**
 

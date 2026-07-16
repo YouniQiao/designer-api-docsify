@@ -18,31 +18,33 @@ Installs a user CA certificate.
 
 **Required permissions:** ohos.permission.ACCESS_ENTERPRISE_USER_TRUSTED_CERT or ohos.permission.ACCESS_USER_TRUSTED_CERT
 
+<!--Device-certificateManager-function installUserTrustedCertificateSync(cert: Uint8Array, certScope: CertScope): CMResult--><!--Device-certificateManager-function installUserTrustedCertificateSync(cert: Uint8Array, certScope: CertScope): CMResult-End-->
+
 **System capability:** SystemCapability.Security.CertificateManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | Uint8Array | Yes | CA certificate data. The value contains up to 8196 bytes. |
-| certScope | CertScope | Yes | Scope of the CA certificate. |
+| cert | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | CA certificate data. The value contains up to 8196 bytes. |
+| certScope | [CertScope](arkts-devicecertificate-certscope-e.md) | Yes | Scope of the CA certificate. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CMResult | CA certificate installation result. The **uri** property in **CMResult** is returned if thecertificate is installed successfully. |
+| [CMResult](arkts-devicecertificate-cmresult-i.md) | CA certificate installation result. The **uri** property in **CMResult** is returned if the certificate is installed successfully. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 | [17500003](../errorcode-certManager.md#17500003-invalid-certificate-or-credential) | Indicates that the certificate is in an invalid format. |
 | [17500004](../errorcode-certManager.md#17500004-the-number-of-certificates-or-credentials-reaches-the-limit) | Indicates that the number of certificates reaches the maximum allowed. |
-| [17500007](../errorcode-certManager.md#17500007-device-in-advanced-security-mode) | Indicates that the device enters advanced security mode. In this mode, theuser CA certificate cannot be installed. |
+| [17500007](../errorcode-certManager.md#17500007-device-in-advanced-security-mode) | Indicates that the device enters advanced security mode. In this mode, the user CA certificate cannot be installed. |
 
 **Example**
 

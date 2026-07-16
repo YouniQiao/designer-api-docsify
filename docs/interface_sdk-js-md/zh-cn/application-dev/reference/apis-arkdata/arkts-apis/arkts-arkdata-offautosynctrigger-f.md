@@ -1,5 +1,11 @@
 # offAutoSyncTrigger
 
+## 导入模块
+
+```TypeScript
+import { cloudData } from '@kit.ArkData';
+```
+
 ## offAutoSyncTrigger
 
 ```TypeScript
@@ -12,13 +18,15 @@ function offAutoSyncTrigger(observer?: Callback<AutoSyncTriggerInfo>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-cloudData-function offAutoSyncTrigger(observer?: Callback<AutoSyncTriggerInfo>): void--><!--Device-cloudData-function offAutoSyncTrigger(observer?: Callback<AutoSyncTriggerInfo>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| observer | Callback&lt;AutoSyncTriggerInfo&gt; | 否 | 回调函数。 若传入observer，则取消指定回调函数的订阅；若不传入observer，则取消所有已注册的订阅。 |
+| observer | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AutoSyncTriggerInfo> | 否 | 回调函数。 若传入observer，则取消指定回调函数的订阅；若不传入observer，则取消所有已注册的订阅。 |
 
 **错误码：**
 

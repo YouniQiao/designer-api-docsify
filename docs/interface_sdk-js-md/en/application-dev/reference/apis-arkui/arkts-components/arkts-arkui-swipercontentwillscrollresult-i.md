@@ -1,9 +1,10 @@
 # SwiperContentWillScrollResult
 
-Provides information related to the upcoming scroll action, including the index of the current page, the index of the
-page that will be displayed in the scroll direction, and the displacement of the scroll action.
+Provides information related to the upcoming scroll action, including the index of the current page, the index of the page that will be displayed in the scroll direction, and the displacement of the scroll action.
 
 **Since:** 15
+
+<!--Device-unnamed-declare interface SwiperContentWillScrollResult--><!--Device-unnamed-declare interface SwiperContentWillScrollResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +26,8 @@ Index of the page that will be displayed in the scroll direction.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 15.
 
+<!--Device-SwiperContentWillScrollResult-comingIndex: number--><!--Device-SwiperContentWillScrollResult-comingIndex: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## currentIndex
@@ -33,8 +36,7 @@ Index of the page that will be displayed in the scroll direction.
 currentIndex: number
 ```
 
-Index of the current page. During a finger swipe, this value remains constant as long as the finger is on the
-screen, even if the page has completely moved out of view.
+Index of the current page. During a finger swipe, this value remains constant as long as the finger is on the screen, even if the page has completely moved out of view.
 
 **Type:** number
 
@@ -45,6 +47,8 @@ screen, even if the page has completely moved out of view.
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 15.
+
+<!--Device-SwiperContentWillScrollResult-currentIndex: number--><!--Device-SwiperContentWillScrollResult-currentIndex: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +58,9 @@ screen, even if the page has completely moved out of view.
 offset: number
 ```
 
-Displacement of the scroll action, which is signed to indicate different swipe directions. A positive value
-indicates a swipe from index=1 to index=0, while a negative value indicates a swipe from index=0 to index=1.
+Displacement of the scroll action, which is signed to indicate different swipe directions. A positive value indicates a swipe from index=1 to index=0, while a negative value indicates a swipe from index=0 to index=1.
 
-This value represents the offset for each frame during a finger swipe and the distance for page turning when the
-mouse wheel or keyboard navigation is used.
+This value represents the offset for each frame during a finger swipe and the distance for page turning when the mouse wheel or keyboard navigation is used.
 
 **Type:** number
 
@@ -69,6 +71,8 @@ mouse wheel or keyboard navigation is used.
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 15.
+
+<!--Device-SwiperContentWillScrollResult-offset: number--><!--Device-SwiperContentWillScrollResult-offset: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

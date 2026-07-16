@@ -4,6 +4,8 @@ Sets the image span style.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface RichEditorImageSpanStyle--><!--Device-unnamed-declare interface RichEditorImageSpanStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## layoutStyle
@@ -21,6 +23,8 @@ Image layout style. Default value: **{"borderRadius":"","margin":""}**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RichEditorImageSpanStyle-layoutStyle?: RichEditorLayoutStyle--><!--Device-RichEditorImageSpanStyle-layoutStyle?: RichEditorLayoutStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ Scale mode of the image.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-RichEditorImageSpanStyle-objectFit?: ImageFit--><!--Device-RichEditorImageSpanStyle-objectFit?: ImageFit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## size
@@ -48,9 +54,7 @@ Scale mode of the image.
 size?: [Dimension, Dimension]
 ```
 
-Width and height of the image, in px. Default value: varies by the value of **objectFit**. If the value of
-**objectFit** is **Cover**, the image height is the component height minus the top and bottom paddings, and the
-image width is the component width minus the left and right paddings.
+Width and height of the image, in px. Default value: varies by the value of **objectFit**. If the value of **objectFit** is **Cover**, the image height is the component height minus the top and bottom paddings, and the image width is the component width minus the left and right paddings.
 
 **Type:** [Dimension, Dimension]
 
@@ -59,6 +63,8 @@ image width is the component width minus the left and right paddings.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RichEditorImageSpanStyle-size?: [Dimension, Dimension]--><!--Device-RichEditorImageSpanStyle-size?: [Dimension, Dimension]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -77,6 +83,8 @@ Vertical alignment mode of the image.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RichEditorImageSpanStyle-verticalAlign?: ImageSpanAlignment--><!--Device-RichEditorImageSpanStyle-verticalAlign?: ImageSpanAlignment-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

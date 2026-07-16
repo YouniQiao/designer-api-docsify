@@ -4,6 +4,8 @@ Provides configuration for decimal.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface DecimalConfig--><!--Device-unnamed-export interface DecimalConfig-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -18,14 +20,15 @@ import { Decimal } from '@kit.ArkTS';
 crypto?: boolean
 ```
 
-The value that determines whether cryptographically-secure pseudo-random number generation is used.
-Default value: false
+The value that determines whether cryptographically-secure pseudo-random number generation is used.Default value: false
 
 **Type:** boolean
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DecimalConfig-crypto?: boolean--><!--Device-DecimalConfig-crypto?: boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -35,14 +38,15 @@ Default value: false
 defaults?: boolean
 ```
 
-If object has a 'defaults' property with value true then the new constructor will use the default configuration.
-Default value: false
+If object has a 'defaults' property with value true then the new constructor will use the default configuration.Default value: false
 
 **Type:** boolean
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DecimalConfig-defaults?: boolean--><!--Device-DecimalConfig-defaults?: boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -52,14 +56,15 @@ Default value: false
 maxE?: number
 ```
 
-The positive exponent limit, i.e. the exponent value above which overflow to Infinity occurs.
-Default value: 9e15
+The positive exponent limit, i.e. the exponent value above which overflow to Infinity occurs.Default value: 9e15
 
 **Type:** number
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DecimalConfig-maxE?: double--><!--Device-DecimalConfig-maxE?: double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -69,14 +74,15 @@ Default value: 9e15
 minE?: number
 ```
 
-The negative exponent limit, i.e. the exponent value below which underflow to zero occurs.
-Default value: -9e15
+The negative exponent limit, i.e. the exponent value below which underflow to zero occurs.Default value: -9e15
 
 **Type:** number
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DecimalConfig-minE?: double--><!--Device-DecimalConfig-minE?: double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -86,14 +92,15 @@ Default value: -9e15
 modulo?: Modulo
 ```
 
-The modulo mode used when calculating the modulus: a mod n.
-Default value: 1 (ROUND_DOWN)
+The modulo mode used when calculating the modulus: a mod n.Default value: 1 (ROUND_DOWN)
 
 **Type:** Modulo
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DecimalConfig-modulo?: Modulo--><!--Device-DecimalConfig-modulo?: Modulo-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -103,14 +110,15 @@ Default value: 1 (ROUND_DOWN)
 precision?: number
 ```
 
-The maximum number of significant digits of the result of an operation.
-Default value: 20
+The maximum number of significant digits of the result of an operation.Default value: 20
 
 **Type:** number
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DecimalConfig-precision?: double--><!--Device-DecimalConfig-precision?: double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -120,16 +128,15 @@ Default value: 20
 rounding?: Rounding
 ```
 
-The default rounding mode used when rounding the result of an operation to precision significant digits,
-and when rounding the return value of the round, toBinary, toDecimalPlaces, toExponential, toFixed,
-toHexadecimal, toNearest, toOctal, toPrecision and toSignificantDigits methods.
-Default value: 4 (ROUND_HALF_UP)
+The default rounding mode used when rounding the result of an operation to precision significant digits,and when rounding the return value of the round, toBinary, toDecimalPlaces, toExponential, toFixed,toHexadecimal, toNearest, toOctal, toPrecision and toSignificantDigits methods.Default value: 4 (ROUND_HALF_UP)
 
 **Type:** Rounding
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DecimalConfig-rounding?: Rounding--><!--Device-DecimalConfig-rounding?: Rounding-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -139,14 +146,15 @@ Default value: 4 (ROUND_HALF_UP)
 toExpNeg?: number
 ```
 
-The negative exponent value at and below which toString returns exponential notation.
-Default value: -7
+The negative exponent value at and below which toString returns exponential notation.Default value: -7
 
 **Type:** number
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DecimalConfig-toExpNeg?: double--><!--Device-DecimalConfig-toExpNeg?: double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -156,14 +164,15 @@ Default value: -7
 toExpPos?: number
 ```
 
-The positive exponent value at and above which toString returns exponential notation.
-Default value: 21
+The positive exponent value at and above which toString returns exponential notation.Default value: 21
 
 **Type:** number
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DecimalConfig-toExpPos?: double--><!--Device-DecimalConfig-toExpPos?: double-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

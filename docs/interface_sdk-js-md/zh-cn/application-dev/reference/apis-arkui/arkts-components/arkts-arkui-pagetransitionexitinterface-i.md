@@ -6,6 +6,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-interface PageTransitionExitInterface extends CommonTransition<PageTransitionExitInterface>--><!--Device-unnamed-interface PageTransitionExitInterface extends CommonTransition<PageTransitionExitInterface>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -18,7 +20,9 @@
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PageTransitionExitInterface-(value: PageTransitionOptions): PageTransitionExitInterface--><!--Device-PageTransitionExitInterface-(value: PageTransitionOptions): PageTransitionExitInterface-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,13 +30,13 @@
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | PageTransitionOptions | 是 | 配置退场动效的参数。 |
+| value | [PageTransitionOptions](arkts-arkui-pagetransitionoptions-i.md) | 是 | 配置退场动效的参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| PageTransitionExitInterface | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform |
+| [PageTransitionExitInterface](arkts-arkui-pagetransitionexitinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform |
 
 ## onExit
 
@@ -44,7 +48,9 @@ onExit(event: PageTransitionCallback): PageTransitionExitInterface
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PageTransitionExitInterface-onExit(event: PageTransitionCallback): PageTransitionExitInterface--><!--Device-PageTransitionExitInterface-onExit(event: PageTransitionCallback): PageTransitionExitInterface-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,11 +58,11 @@ onExit(event: PageTransitionCallback): PageTransitionExitInterface
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | PageTransitionCallback | 是 | 出场动画的逐帧回调直到出场动画结束，progress从0变化到1。<br>**起始版本：** 18 |
+| event | [PageTransitionCallback](arkts-arkui-pagetransitioncallback-t.md) | 是 | 出场动画的逐帧回调直到出场动画结束，progress从0变化到1。<br>**起始版本：** 18 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| PageTransitionExitInterface | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform |
+| [PageTransitionExitInterface](arkts-arkui-pagetransitionexitinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform |
 

@@ -18,14 +18,16 @@ Creates a certificate extension object. This API uses an asynchronous callback t
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-cert-function createCertExtension(inStream: EncodingBlob, callback: AsyncCallback<CertExtension>): void--><!--Device-cert-function createCertExtension(inStream: EncodingBlob, callback: AsyncCallback<CertExtension>): void-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inStream | EncodingBlob | Yes | Serialized certificate extension data. |
-| callback | AsyncCallback&lt;CertExtension&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined**, and **data** is the **CertExtension** instance created. Otherwise,**err** is an error object. |
+| inStream | [EncodingBlob](arkts-devicecertificate-encodingblob-i.md) | Yes | Serialized certificate extension data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<CertExtension> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the **CertExtension** instance created. Otherwise,**err** is an error object. |
 
 **Error codes:**
 
@@ -83,19 +85,21 @@ Creates a certificate extension object. This API uses a promise to return the re
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-cert-function createCertExtension(inStream: EncodingBlob): Promise<CertExtension>--><!--Device-cert-function createCertExtension(inStream: EncodingBlob): Promise<CertExtension>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inStream | EncodingBlob | Yes | Serialized certificate extension data. |
+| inStream | [EncodingBlob](arkts-devicecertificate-encodingblob-i.md) | Yes | Serialized certificate extension data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CertExtension&gt; | Promise used to return the **CertExtension** instance created. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CertExtension> | Promise used to return the **CertExtension** instance created. |
 
 **Error codes:**
 

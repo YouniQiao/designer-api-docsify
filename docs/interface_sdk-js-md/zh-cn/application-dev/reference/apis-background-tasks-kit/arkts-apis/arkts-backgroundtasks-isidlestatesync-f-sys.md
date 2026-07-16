@@ -1,5 +1,11 @@
 # isIdleStateSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+```
+
 ## isIdleStateSync
 
 ```TypeScript
@@ -11,6 +17,8 @@ function isIdleStateSync(bundleName: string): boolean
 **起始版本：** 10
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
+
+<!--Device-usageStatistics-function isIdleStateSync(bundleName: string): boolean--><!--Device-usageStatistics-function isIdleStateSync(bundleName: string): boolean-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 

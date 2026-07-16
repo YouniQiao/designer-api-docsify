@@ -19,6 +19,10 @@ Create an HdrDarkenBlender, which is used to apply HDR-adaptive darken blender o
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-uiEffect-function createHdrDarkenBlender(hdrBrightnessRatio: double,
+    grayscaleFactor?: [double, double, double]): HdrDarkenBlender--><!--Device-uiEffect-function createHdrDarkenBlender(hdrBrightnessRatio: double,
+    grayscaleFactor?: [double, double, double]): HdrDarkenBlender-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -28,11 +32,11 @@ Create an HdrDarkenBlender, which is used to apply HDR-adaptive darken blender o
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hdrBrightnessRatio | number | Yes | The HDR brightness ratio of the src. |
-| grayscaleFactor | [number, number, number] | No | The grayscale factor for converting dst's RGB channels tograyscale. Formula: grayscale = dot(grayscaleFactor, dst). |
+| grayscaleFactor | [number, number, number] | No | The grayscale factor for converting dst's RGB channels to grayscale. Formula: grayscale = dot(grayscaleFactor, dst). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| HdrDarkenBlender | Returns the blender. |
+| [HdrDarkenBlender](arkts-arkgraphics2d-hdrdarkenblender-i-sys.md) | Returns the blender. |
 

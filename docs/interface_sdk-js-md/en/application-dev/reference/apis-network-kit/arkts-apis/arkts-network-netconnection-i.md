@@ -4,6 +4,8 @@ Represents the network connection handle.
 
 **Since:** 11
 
+<!--Device-connection-export interface NetConnection--><!--Device-connection-export interface NetConnection-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Registers a listener for netAvailable events.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-NetConnection-on(type: 'netAvailable', callback: Callback<NetHandle>): void--><!--Device-NetConnection-on(type: 'netAvailable', callback: Callback<NetHandle>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -31,7 +35,7 @@ Registers a listener for netAvailable events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netAvailable' | Yes | Indicates Event name. |
-| callback | Callback&lt;NetHandle&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<NetHandle> | Yes | the callback used to return the result. |
 
 **Example**
 
@@ -69,6 +73,8 @@ Registers a listener for netBlockStatusChange events.
 
 **Since:** 11
 
+<!--Device-NetConnection-on(type: 'netBlockStatusChange', callback: Callback<NetBlockStatusInfo>): void--><!--Device-NetConnection-on(type: 'netBlockStatusChange', callback: Callback<NetBlockStatusInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -76,7 +82,7 @@ Registers a listener for netBlockStatusChange events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netBlockStatusChange' | Yes | Indicates Event name. |
-| callback | Callback&lt;NetBlockStatusInfo&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<NetBlockStatusInfo> | Yes | the callback used to return the result. |
 
 **Example**
 
@@ -116,6 +122,8 @@ Registers a listener for **netCapabilitiesChange** events.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-NetConnection-on(type: 'netCapabilitiesChange', callback: Callback<NetCapabilityInfo>): void--><!--Device-NetConnection-on(type: 'netCapabilitiesChange', callback: Callback<NetCapabilityInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -123,7 +131,7 @@ Registers a listener for **netCapabilitiesChange** events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netCapabilitiesChange' | Yes | Indicates Event name. |
-| callback | Callback&lt;NetCapabilityInfo&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<NetCapabilityInfo> | Yes | the callback used to return the result. |
 
 **Example**
 
@@ -161,6 +169,8 @@ Registers a listener for netConnectionPropertiesChange events.
 
 **Since:** 11
 
+<!--Device-NetConnection-on(type: 'netConnectionPropertiesChange', callback: Callback<NetConnectionPropertyInfo>): void--><!--Device-NetConnection-on(type: 'netConnectionPropertiesChange', callback: Callback<NetConnectionPropertyInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -168,7 +178,7 @@ Registers a listener for netConnectionPropertiesChange events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netConnectionPropertiesChange' | Yes | Indicates Event name. |
-| callback | Callback&lt;NetConnectionPropertyInfo&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<NetConnectionPropertyInfo> | Yes | the callback used to return the result. |
 
 **Example**
 
@@ -208,6 +218,8 @@ Registers a listener for **netLost** events.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-NetConnection-on(type: 'netLost', callback: Callback<NetHandle>): void--><!--Device-NetConnection-on(type: 'netLost', callback: Callback<NetHandle>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -215,7 +227,7 @@ Registers a listener for **netLost** events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netLost' | Yes | Indicates Event name. |
-| callback | Callback&lt;NetHandle&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<NetHandle> | Yes | the callback used to return the result. |
 
 **Example**
 
@@ -255,6 +267,8 @@ Registers a listener for netUnavailable events.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-NetConnection-on(type: 'netUnavailable', callback: Callback<void>): void--><!--Device-NetConnection-on(type: 'netUnavailable', callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -262,7 +276,7 @@ Registers a listener for netUnavailable events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netUnavailable' | Yes | Indicates Event name. |
-| callback | Callback&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | the callback used to return the result. |
 
 **Example**
 
@@ -304,13 +318,15 @@ Receives status change notifications of a specified network.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-NetConnection-register(callback: AsyncCallback<void>): void--><!--Device-NetConnection-register(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of register. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of register. |
 
 **Error codes:**
 
@@ -348,13 +364,15 @@ Cancels listening for network status changes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NetConnection-unregister(callback: AsyncCallback<void>): void--><!--Device-NetConnection-unregister(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of unregister. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of unregister. |
 
 **Error codes:**
 

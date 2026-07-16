@@ -1,14 +1,12 @@
 # RotationChangeResult
 
-Describes the information returned by the application during window rotation changes. The system uses the
-information to adjust the size of the current window rectangle. If the returned information is about the rotation
-change of the main window, the system does not change the size of the main window.
+Describes the information returned by the application during window rotation changes. The system uses the information to adjust the size of the current window rectangle. If the returned information is about the rotation change of the main window, the system does not change the size of the main window.
 
-There are limitations on the size of application windows and system windows. For details about specific
-restrictions and rules, see
-[resize](arkts-arkui-window-i.md#resize-2).
+There are limitations on the size of application windows and system windows. For details about specific restrictions and rules, see [resize](arkts-arkui-window-i.md#resize-2).
 
 **Since:** 19
+
+<!--Device-window-interface RotationChangeResult--><!--Device-window-interface RotationChangeResult-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -32,6 +30,8 @@ Type of window rectangle coordinate system.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-RotationChangeResult-rectType: RectType--><!--Device-RotationChangeResult-rectType: RectType-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## windowRect
@@ -47,6 +47,8 @@ Information about the window's rectangle relative to the screen or parent window
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-RotationChangeResult-windowRect: Rect--><!--Device-RotationChangeResult-windowRect: Rect-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

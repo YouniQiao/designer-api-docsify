@@ -2,15 +2,23 @@
 
 本模块提供企业设备设置能力，包括设置、获取设备息屏时间等。
 
-> **说明：**
->
-> 本模块接口仅可在Stage模型下使用。
->
+> **说明：**  
+>  
+> 本模块接口仅可在Stage模型下使用。  
+>  
 > 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../../mdm/mdm-kit-guide.md)。
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace deviceSettings--><!--Device-unnamed-declare namespace deviceSettings-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { deviceSettings } from '@kit.MDMKit';
+```
 
 ## 汇总
 

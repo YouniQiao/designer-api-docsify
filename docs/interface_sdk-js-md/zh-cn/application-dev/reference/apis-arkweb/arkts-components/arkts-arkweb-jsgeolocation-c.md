@@ -4,6 +4,8 @@ Defines the js geolocation request.
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare class JsGeolocation--><!--Device-unnamed-declare class JsGeolocation-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## constructor
@@ -16,7 +18,9 @@ Constructor.
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-JsGeolocation-constructor()--><!--Device-JsGeolocation-constructor()-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -30,7 +34,9 @@ Report the geolocation permission status from users.
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-JsGeolocation-invoke(origin: string, allow: boolean, retain: boolean): void--><!--Device-JsGeolocation-invoke(origin: string, allow: boolean, retain: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -40,5 +46,5 @@ Report the geolocation permission status from users.
 | --- | --- | --- | --- |
 | origin | string | 是 | Index of the origin. |
 | allow | boolean | 是 | Geolocation permission status. {@code true} means to allow geolocation permission;{@code false} means to disallow geolocation permission. |
-| retain | boolean | 是 | Whether the geolocation permission status can be saved to the system.{@code true} means to allow the geolocation permission status to be saved tothe system; {@code false} means to disallow the geolocation permission status tobe saved to the system. You can manage the geolocation permissions savedto the system through {@link GeolocationPermissions}. |
+| retain | boolean | 是 | Whether the geolocation permission status can be saved to the system.{@code true} means to allow the geolocation permission status to be saved to the system; {@code false} means to disallow the geolocation permission status to be saved to the system. You can manage the geolocation permissions saved to the system through {@link GeolocationPermissions}. |
 

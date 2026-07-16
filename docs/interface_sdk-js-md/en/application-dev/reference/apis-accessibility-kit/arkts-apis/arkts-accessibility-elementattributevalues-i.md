@@ -4,6 +4,8 @@ Provides attribute names and value types of a node element.
 
 **Since:** 9
 
+<!--Device-unnamed-export interface ElementAttributeValues--><!--Device-unnamed-export interface ElementAttributeValues-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## accessibilityFocused
@@ -12,14 +14,15 @@ Provides attribute names and value types of a node element.
 accessibilityFocused: boolean
 ```
 
-Whether the element is focused for accessibility purposes. The value **true** indicates that the element is focused
-, and **false** indicates the opposite.
+Whether the element is focused for accessibility purposes. The value **true** indicates that the element is focused, and **false** indicates the opposite.
 
 Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-accessibilityFocused: boolean--><!--Device-ElementAttributeValues-accessibilityFocused: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -29,14 +32,15 @@ Default value: **false**.
 accessibilityNextFocusId?: number
 ```
 
-ID of the next component to be focused on. You can use **findElement('elementId')** to obtain the value of this
-attribute set on the component from the **AccessibilityElementInfo** object.
+ID of the next component to be focused on. You can use **findElement('elementId')** to obtain the value of this attribute set on the component from the **AccessibilityElementInfo** object.
 
 Default value: **-1**.
 
 **Type:** number
 
 **Since:** 18
+
+<!--Device-ElementAttributeValues-accessibilityNextFocusId?: long--><!--Device-ElementAttributeValues-accessibilityNextFocusId?: long-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -46,14 +50,15 @@ Default value: **-1**.
 accessibilityPreviousFocusId?: number
 ```
 
-ID of the previous component to be focused on. You can use **findElement('elementId')** to obtain the value of this
-attribute set on the component from the **AccessibilityElementInfo** object.
+ID of the previous component to be focused on. You can use **findElement('elementId')** to obtain the value of this attribute set on the component from the **AccessibilityElementInfo** object.
 
 Default value: **-1**.
 
 **Type:** number
 
 **Since:** 18
+
+<!--Device-ElementAttributeValues-accessibilityPreviousFocusId?: long--><!--Device-ElementAttributeValues-accessibilityPreviousFocusId?: long-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -65,12 +70,14 @@ accessibilityScrollable?: boolean
 
 Whether an element is scrollable for accessibility. This attribute has a higher priority than **scrollable**.
 
-- **true** (default): the element is scrollable.
+- **true** (default): the element is scrollable.  
 - **false**: the element is not scrollable.
 
 **Type:** boolean
 
 **Since:** 18
+
+<!--Device-ElementAttributeValues-accessibilityScrollable?: boolean--><!--Device-ElementAttributeValues-accessibilityScrollable?: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -86,6 +93,8 @@ Accessibility text information of an element.
 
 **Since:** 12
 
+<!--Device-ElementAttributeValues-accessibilityText: string--><!--Device-ElementAttributeValues-accessibilityText: string-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## bundleName
@@ -100,6 +109,8 @@ Bundle name.
 
 **Since:** 9
 
+<!--Device-ElementAttributeValues-bundleName: string--><!--Device-ElementAttributeValues-bundleName: string-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## checkable
@@ -108,14 +119,15 @@ Bundle name.
 checkable: boolean
 ```
 
-Whether the element is checkable. The value **true** indicates that the element is checkable, and **false**
-indicates the opposite.
+Whether the element is checkable. The value **true** indicates that the element is checkable, and **false** indicates the opposite.
 
 Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-checkable: boolean--><!--Device-ElementAttributeValues-checkable: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -125,14 +137,15 @@ Default value: **false**.
 checked: boolean
 ```
 
-Whether the element is checked. The value **true** indicates that the element is checked, and **false** indicates
-the opposite.
+Whether the element is checked. The value **true** indicates that the element is checked, and **false** indicates the opposite.
 
 Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-checked: boolean--><!--Device-ElementAttributeValues-checked: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -148,6 +161,8 @@ All child elements.
 
 **Since:** 9
 
+<!--Device-ElementAttributeValues-children: Array<AccessibilityElement>--><!--Device-ElementAttributeValues-children: Array<AccessibilityElement>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## clickable
@@ -156,14 +171,15 @@ All child elements.
 clickable: boolean
 ```
 
-Whether the element is clickable. The value **true** indicates that the element is clickable, and **false**
-indicates the opposite.
+Whether the element is clickable. The value **true** indicates that the element is clickable, and **false** indicates the opposite.
 
 Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-clickable: boolean--><!--Device-ElementAttributeValues-clickable: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -181,6 +197,8 @@ Default value: **-1**.
 
 **Since:** 9
 
+<!--Device-ElementAttributeValues-componentId: long--><!--Device-ElementAttributeValues-componentId: long-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## componentType
@@ -189,12 +207,13 @@ Default value: **-1**.
 componentType: string
 ```
 
-Type of the component to which the element belongs, for example, **Button** for the button component and **Image**
-for the image component.
+Type of the component to which the element belongs, for example, **Button** for the button component and **Image** for the image component.
 
 **Type:** string
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-componentType: string--><!--Device-ElementAttributeValues-componentType: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -209,6 +228,8 @@ List of contents. Set this parameter based on site requirements. No special rest
 **Type:** Array<string>
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-contents: Array<string>--><!--Device-ElementAttributeValues-contents: Array<string>-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -226,6 +247,8 @@ Default value: **0**.
 
 **Since:** 9
 
+<!--Device-ElementAttributeValues-currentIndex: int--><!--Device-ElementAttributeValues-currentIndex: int-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## customComponentType
@@ -234,13 +257,13 @@ Default value: **0**.
 customComponentType?: string
 ```
 
-Custom component type. It corresponds to
-[AccessibilityRoleType Enumeration Description](../../apis-arkui/arkts-components/arkts-arkui-accessibilityroletype-e.md) of
-the element.
+Custom component type. It corresponds to [AccessibilityRoleType Enumeration Description](../../apis-arkui/arkts-components/arkts-arkui-accessibilityroletype-e.md) of the element.
 
 **Type:** string
 
 **Since:** 18
+
+<!--Device-ElementAttributeValues-customComponentType?: string--><!--Device-ElementAttributeValues-customComponentType?: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -256,6 +279,8 @@ Description of the element. Set this parameter based on site requirements. No sp
 
 **Since:** 9
 
+<!--Device-ElementAttributeValues-description: string--><!--Device-ElementAttributeValues-description: string-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## editable
@@ -264,14 +289,15 @@ Description of the element. Set this parameter based on site requirements. No sp
 editable: boolean
 ```
 
-Whether the element is editable. The value **true** indicates that the element is editable, and **false** indicates
-the opposite.
+Whether the element is editable. The value **true** indicates that the element is editable, and **false** indicates the opposite.
 
 Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-editable: boolean--><!--Device-ElementAttributeValues-editable: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -289,6 +315,8 @@ Default value: **0**.
 
 **Since:** 9
 
+<!--Device-ElementAttributeValues-endIndex: int--><!--Device-ElementAttributeValues-endIndex: int-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## error
@@ -302,6 +330,8 @@ Error status.
 **Type:** string
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-error: string--><!--Device-ElementAttributeValues-error: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -321,11 +351,10 @@ Extended attributes, which are used to define the attributes of specific compone
 
 **2**: not selected
 
-- **Row**: row where a focused item is located in **Grid**.
-- **Column**: column where a focused item is located in **Grid**.
-- **ListItemIndex**: row where a focused item is located in **List**.
-- **SideBarContainerStates**: expansion state of the expandable components (such as **SideBarContainer** and
-**Select**). The options are as follows:
+- **Row**: row where a focused item is located in **Grid**.  
+- **Column**: column where a focused item is located in **Grid**.  
+- **ListItemIndex**: row where a focused item is located in **List**.  
+- **SideBarContainerStates**: expansion state of the expandable components (such as **SideBarContainer** and **Select**). The options are as follows:
 
 **0**: collapsed
 
@@ -347,16 +376,16 @@ Extended attributes, which are used to define the attributes of specific compone
 
 **2**: low
 
-- **hasRegisteredHover**: whether the component has registered the **onAccessibilityHover** event callback. The
-value **1** indicates that the component has registered the event callback; otherwise, this field is not used.
-- **direction**: layout direction of the **List** component. The value can be **vertical** or **horizontal**.
-- **expandedState**: expanded state of list items in the **List** component. The value can be **expanded** or
-**collapsed**.
+- **hasRegisteredHover**: whether the component has registered the **onAccessibilityHover** event callback. The value **1** indicates that the component has registered the event callback; otherwise, this field is not used.  
+- **direction**: layout direction of the **List** component. The value can be **vertical** or **horizontal**.  
+- **expandedState**: expanded state of list items in the **List** component. The value can be **expanded** or **collapsed**.  
 - **componentTypeDescription**: detailed information about the component type.
 
 **Type:** string
 
 **Since:** 18
+
+<!--Device-ElementAttributeValues-extraInfo?: string--><!--Device-ElementAttributeValues-extraInfo?: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -366,14 +395,15 @@ value **1** indicates that the component has registered the event callback; othe
 focusable: boolean
 ```
 
-Whether the element is focusable. The value **true** indicates that the element is focusable, and **false**
-indicates the opposite.
+Whether the element is focusable. The value **true** indicates that the element is focusable, and **false** indicates the opposite.
 
 Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-focusable: boolean--><!--Device-ElementAttributeValues-focusable: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -389,6 +419,8 @@ Hint text.
 
 **Since:** 9
 
+<!--Device-ElementAttributeValues-hintText: string--><!--Device-ElementAttributeValues-hintText: string-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## hotArea
@@ -402,6 +434,8 @@ Touchable area of an element.
 **Type:** Rect
 
 **Since:** 12
+
+<!--Device-ElementAttributeValues-hotArea: Rect--><!--Device-ElementAttributeValues-hotArea: Rect-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -419,6 +453,8 @@ Default value: **0**.
 
 **Since:** 9
 
+<!--Device-ElementAttributeValues-inputType: int--><!--Device-ElementAttributeValues-inputType: int-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## inspectorKey
@@ -433,6 +469,8 @@ Alias of the element.
 
 **Since:** 9
 
+<!--Device-ElementAttributeValues-inspectorKey: string--><!--Device-ElementAttributeValues-inspectorKey: string-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## isActive
@@ -441,14 +479,15 @@ Alias of the element.
 isActive: boolean
 ```
 
-Whether the element is active. The value **true** indicates that the element is active and **false** indicates the
-opposite.
+Whether the element is active. The value **true** indicates that the element is active and **false** indicates the opposite.
 
 Default value: **true**.
 
 **Type:** boolean
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-isActive: boolean--><!--Device-ElementAttributeValues-isActive: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -458,14 +497,15 @@ Default value: **true**.
 isEnable: boolean
 ```
 
-Whether the element is enabled. The value **true** indicates that the element is enabled, and **false** indicates
-the opposite.
+Whether the element is enabled. The value **true** indicates that the element is enabled, and **false** indicates the opposite.
 
 Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-isEnable: boolean--><!--Device-ElementAttributeValues-isEnable: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -475,14 +515,15 @@ Default value: **false**.
 isFocused: boolean
 ```
 
-Whether the element is focused. The value **true** indicates that the element is focused, and **false** indicates
-the opposite.
+Whether the element is focused. The value **true** indicates that the element is focused, and **false** indicates the opposite.
 
 Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-isFocused: boolean--><!--Device-ElementAttributeValues-isFocused: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -492,14 +533,15 @@ Default value: **false**.
 isHint: boolean
 ```
 
-Whether the element is a hint. The value **true** indicates that the element is a hint, and **false** indicates the
-opposite.
+Whether the element is a hint. The value **true** indicates that the element is a hint, and **false** indicates the opposite.
 
 Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-isHint: boolean--><!--Device-ElementAttributeValues-isHint: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -509,14 +551,15 @@ Default value: **false**.
 isPassword: boolean
 ```
 
-Whether the element is a password. The value **true** indicates that the element is a password, and **false**
-indicates the opposite.
+Whether the element is a password. The value **true** indicates that the element is a password, and **false** indicates the opposite.
 
 Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-isPassword: boolean--><!--Device-ElementAttributeValues-isPassword: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -526,14 +569,15 @@ Default value: **false**.
 isVisible: boolean
 ```
 
-Whether the element is visible. The value **true** indicates that the element is visible, and **false** indicates
-the opposite.
+Whether the element is visible. The value **true** indicates that the element is visible, and **false** indicates the opposite.
 
 Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-isVisible: boolean--><!--Device-ElementAttributeValues-isVisible: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -551,6 +595,8 @@ Default value: **0**.
 
 **Since:** 9
 
+<!--Device-ElementAttributeValues-itemCount: int--><!--Device-ElementAttributeValues-itemCount: int-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## lastContent
@@ -564,6 +610,8 @@ Last content.
 **Type:** string
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-lastContent: string--><!--Device-ElementAttributeValues-lastContent: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -579,6 +627,8 @@ Display layer of the element.
 
 **Since:** 9
 
+<!--Device-ElementAttributeValues-layer: int--><!--Device-ElementAttributeValues-layer: int-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## longClickable
@@ -587,14 +637,15 @@ Display layer of the element.
 longClickable: boolean
 ```
 
-Whether the element is long-clickable. The value **true** indicates that the element is long-clickable, and
-**false** indicates the opposite.
+Whether the element is long-clickable. The value **true** indicates that the element is long-clickable, and **false** indicates the opposite.
 
 Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-longClickable: boolean--><!--Device-ElementAttributeValues-longClickable: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -604,14 +655,15 @@ Default value: **false**.
 offset: number
 ```
 
-For scrollable components such as **List** and **Grid**, this attribute indicates the pixel offset of the content
-area relative to the top coordinate of the component. The unit is pixel (px).
+For scrollable components such as **List** and **Grid**, this attribute indicates the pixel offset of the content area relative to the top coordinate of the component. The unit is pixel (px).
 
 Default value: **0**.
 
 **Type:** number
 
 **Since:** 12
+
+<!--Device-ElementAttributeValues-offset: double--><!--Device-ElementAttributeValues-offset: double-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -629,6 +681,8 @@ Default value: **-1**.
 
 **Since:** 9
 
+<!--Device-ElementAttributeValues-pageId: int--><!--Device-ElementAttributeValues-pageId: int-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## parent
@@ -643,6 +697,8 @@ Parent element of the element.
 
 **Since:** 9
 
+<!--Device-ElementAttributeValues-parent: AccessibilityElement--><!--Device-ElementAttributeValues-parent: AccessibilityElement-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## pluralLineSupported
@@ -651,14 +707,15 @@ Parent element of the element.
 pluralLineSupported: boolean
 ```
 
-Whether the element supports multiple lines of text. The value **true** indicates that the element supports
-multiple lines of text, and **false** indicates the opposite.
+Whether the element supports multiple lines of text. The value **true** indicates that the element supports multiple lines of text, and **false** indicates the opposite.
 
 Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-pluralLineSupported: boolean--><!--Device-ElementAttributeValues-pluralLineSupported: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -674,6 +731,8 @@ Area of the element.
 
 **Since:** 9
 
+<!--Device-ElementAttributeValues-rect: Rect--><!--Device-ElementAttributeValues-rect: Rect-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## resourceName
@@ -687,6 +746,8 @@ Resource name of the element.
 **Type:** string
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-resourceName: string--><!--Device-ElementAttributeValues-resourceName: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -702,6 +763,8 @@ Root element of the window element.
 
 **Since:** 9
 
+<!--Device-ElementAttributeValues-rootElement: AccessibilityElement--><!--Device-ElementAttributeValues-rootElement: AccessibilityElement-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## screenRect
@@ -716,6 +779,8 @@ Display area of the element.
 
 **Since:** 9
 
+<!--Device-ElementAttributeValues-screenRect: Rect--><!--Device-ElementAttributeValues-screenRect: Rect-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## scrollable
@@ -724,14 +789,15 @@ Display area of the element.
 scrollable: boolean
 ```
 
-Whether the element is scrollable. The value **true** indicates that the element is scrollable, and **false**
-indicates the opposite.
+Whether the element is scrollable. The value **true** indicates that the element is scrollable, and **false** indicates the opposite.
 
 Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-scrollable: boolean--><!--Device-ElementAttributeValues-scrollable: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -741,14 +807,15 @@ Default value: **false**.
 selected: boolean
 ```
 
-Whether the element is selected. The value **true** indicates that the element is selected, and **false** indicates
-the opposite.
+Whether the element is selected. The value **true** indicates that the element is selected, and **false** indicates the opposite.
 
 Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-selected: boolean--><!--Device-ElementAttributeValues-selected: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -766,6 +833,8 @@ Default value: **0**.
 
 **Since:** 9
 
+<!--Device-ElementAttributeValues-startIndex: int--><!--Device-ElementAttributeValues-startIndex: int-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## text
@@ -779,6 +848,8 @@ Text of the element.
 **Type:** string
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-text: string--><!--Device-ElementAttributeValues-text: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -794,6 +865,8 @@ Maximum text length of the element.
 
 **Since:** 9
 
+<!--Device-ElementAttributeValues-textLengthLimit: int--><!--Device-ElementAttributeValues-textLengthLimit: int-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## textMoveUnit
@@ -808,6 +881,8 @@ Granularity of movement when the text is read.
 
 **Since:** 9
 
+<!--Device-ElementAttributeValues-textMoveUnit: accessibility.TextMoveUnit--><!--Device-ElementAttributeValues-textMoveUnit: accessibility.TextMoveUnit-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## textType
@@ -816,12 +891,13 @@ Granularity of movement when the text is read.
 textType: string
 ```
 
-Accessibility text type of an element, which is configured by the **accessibilityTextHint** attribute of the
-component.
+Accessibility text type of an element, which is configured by the **accessibilityTextHint** attribute of the component.
 
 **Type:** string
 
 **Since:** 12
+
+<!--Device-ElementAttributeValues-textType: string--><!--Device-ElementAttributeValues-textType: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -837,6 +913,8 @@ Action that triggers the element event.
 
 **Since:** 9
 
+<!--Device-ElementAttributeValues-triggerAction: accessibility.Action--><!--Device-ElementAttributeValues-triggerAction: accessibility.Action-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## type
@@ -850,6 +928,8 @@ Window type of the element.
 **Type:** WindowType
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-type: WindowType--><!--Device-ElementAttributeValues-type: WindowType-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -867,6 +947,8 @@ Default value: **0**.
 
 **Since:** 9
 
+<!--Device-ElementAttributeValues-valueMax: double--><!--Device-ElementAttributeValues-valueMax: double-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## valueMin
@@ -882,6 +964,8 @@ Default value: **0**.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-valueMin: double--><!--Device-ElementAttributeValues-valueMin: double-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -899,6 +983,8 @@ Default value: **0**.
 
 **Since:** 9
 
+<!--Device-ElementAttributeValues-valueNow: double--><!--Device-ElementAttributeValues-valueNow: double-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## windowId
@@ -914,6 +1000,8 @@ Default value: **-1**.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-ElementAttributeValues-windowId: int--><!--Device-ElementAttributeValues-windowId: int-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 

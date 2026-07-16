@@ -4,6 +4,8 @@
 
 **起始版本：** 14
 
+<!--Device-unnamed-export interface AppCloneIdentity--><!--Device-unnamed-export interface AppCloneIdentity-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## appIndex
@@ -18,6 +20,8 @@ readonly appIndex: number
 
 **起始版本：** 14
 
+<!--Device-AppCloneIdentity-readonly appIndex: int--><!--Device-AppCloneIdentity-readonly appIndex: int-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## bundleName
@@ -31,6 +35,8 @@ readonly bundleName: string
 **类型：** string
 
 **起始版本：** 14
+
+<!--Device-AppCloneIdentity-readonly bundleName: string--><!--Device-AppCloneIdentity-readonly bundleName: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

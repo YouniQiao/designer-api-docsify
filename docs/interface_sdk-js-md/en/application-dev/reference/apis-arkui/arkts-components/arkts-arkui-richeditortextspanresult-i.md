@@ -4,6 +4,8 @@ Provides the text span information.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface RichEditorTextSpanResult--><!--Device-unnamed-declare interface RichEditorTextSpanResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## offsetInSpan
@@ -21,6 +23,8 @@ Start and end positions of the valid content in the text span.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RichEditorTextSpanResult-offsetInSpan: [number, number]--><!--Device-RichEditorTextSpanResult-offsetInSpan: [number, number]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ Paragraph style.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RichEditorTextSpanResult-paragraphStyle?: RichEditorParagraphStyle--><!--Device-RichEditorTextSpanResult-paragraphStyle?: RichEditorParagraphStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## previewText
@@ -57,6 +63,8 @@ Content of the preview text.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RichEditorTextSpanResult-previewText?: string--><!--Device-RichEditorTextSpanResult-previewText?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,6 +84,8 @@ Span position.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-RichEditorTextSpanResult-spanPosition: RichEditorSpanPosition--><!--Device-RichEditorTextSpanResult-spanPosition: RichEditorSpanPosition-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## symbolSpanStyle
@@ -94,6 +104,8 @@ Style of the **SymbolSpan** component.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RichEditorTextSpanResult-symbolSpanStyle?: RichEditorSymbolSpanStyle--><!--Device-RichEditorTextSpanResult-symbolSpanStyle?: RichEditorSymbolSpanStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## textStyle
@@ -111,6 +123,8 @@ Text span style.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RichEditorTextSpanResult-textStyle: RichEditorTextStyleResult--><!--Device-RichEditorTextSpanResult-textStyle: RichEditorTextStyleResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -132,6 +146,8 @@ Default value: **undefined**
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-RichEditorTextSpanResult-urlStyle?: RichEditorUrlStyle--><!--Device-RichEditorTextSpanResult-urlStyle?: RichEditorUrlStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -150,6 +166,8 @@ Content of the text span or symbol ID.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-RichEditorTextSpanResult-value: string--><!--Device-RichEditorTextSpanResult-value: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## valueResource
@@ -167,6 +185,8 @@ Content of the **SymbolSpan** component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RichEditorTextSpanResult-valueResource?: Resource--><!--Device-RichEditorTextSpanResult-valueResource?: Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

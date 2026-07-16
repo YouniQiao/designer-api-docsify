@@ -4,7 +4,15 @@
 
 **起始版本：** 22
 
+<!--Device-hiAppEvent-interface MainThreadJankPolicy--><!--Device-hiAppEvent-interface MainThreadJankPolicy-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
+
+## 导入模块
+
+```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+```
 
 ## autoStopSampling
 
@@ -24,7 +32,9 @@ false：达到设置的采样次数时停止采样。
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MainThreadJankPolicy-autoStopSampling?: boolean--><!--Device-MainThreadJankPolicy-autoStopSampling?: boolean-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -40,7 +50,9 @@ ignoreStartupTime?: number
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MainThreadJankPolicy-ignoreStartupTime?: int--><!--Device-MainThreadJankPolicy-ignoreStartupTime?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -60,14 +72,16 @@ logType=2：仅采集trace。
 
 **说明**：
 
-- logType=0时，仅需配置autoStopSampling参数，其他参数均取默认值，无需设置。
+- logType=0时，仅需配置autoStopSampling参数，其他参数均取默认值，无需设置。  
 - logType=2时，其他参数均不生效，无需设置。
 
 **类型：** number
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MainThreadJankPolicy-logType?: int--><!--Device-MainThreadJankPolicy-logType?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -87,7 +101,9 @@ reportTimesPerApp?: number
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MainThreadJankPolicy-reportTimesPerApp?: int--><!--Device-MainThreadJankPolicy-reportTimesPerApp?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -103,15 +119,17 @@ sampleCount?: number
 
 **说明**：
 
-- 2500的含义：根据系统规定，主线程超时事件从检测到上报的时间不可以超过2.5s（即：2500ms）。因此sampleCount的设置值不能超过系统按计算公式得出的最大值。
-- 4的含义：第一次超时间隔检测时间 + 第二次超时间隔（系统提供两次再次发生超时事件的检测机会）时间 + 收集并上报堆栈信息的时间。
+- 2500的含义：根据系统规定，主线程超时事件从检测到上报的时间不可以超过2.5s（即：2500ms）。因此sampleCount的设置值不能超过系统按计算公式得出的最大值。  
+- 4的含义：第一次超时间隔检测时间 + 第二次超时间隔（系统提供两次再次发生超时事件的检测机会）时间 + 收集并上报堆栈信息的时间。  
 - 开发者要结合需求场景，进行合理的设置。
 
 **类型：** number
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MainThreadJankPolicy-sampleCount?: int--><!--Device-MainThreadJankPolicy-sampleCount?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -127,7 +145,9 @@ sampleInterval?: number
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MainThreadJankPolicy-sampleInterval?: int--><!--Device-MainThreadJankPolicy-sampleInterval?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 

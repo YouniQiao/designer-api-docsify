@@ -6,7 +6,15 @@ GesturePath表示手势路径信息。
 
 **起始版本：** 9
 
+<!--Device-unnamed-export declare class GesturePath--><!--Device-unnamed-export declare class GesturePath-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
+
+## 导入模块
+
+```TypeScript
+import { GesturePath } from '@kit.AccessibilityKit';
+```
 
 ## constructor
 
@@ -19,6 +27,8 @@ constructor(durationTime: number)
 **起始版本：** 9
 
 **废弃版本：** 12
+
+<!--Device-GesturePath-constructor(durationTime: long)--><!--Device-GesturePath-constructor(durationTime: long)-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -49,6 +59,8 @@ durationTime: number
 
 **起始版本：** 9
 
+<!--Device-GesturePath-durationTime: long--><!--Device-GesturePath-durationTime: long-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## points
@@ -62,6 +74,8 @@ points: Array<GesturePoint>
 **类型：** Array<GesturePoint>
 
 **起始版本：** 9
+
+<!--Device-GesturePath-points: Array<GesturePoint>--><!--Device-GesturePath-points: Array<GesturePoint>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

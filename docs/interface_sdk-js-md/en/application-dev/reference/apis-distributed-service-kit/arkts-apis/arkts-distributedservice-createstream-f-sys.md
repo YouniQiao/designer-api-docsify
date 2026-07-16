@@ -18,6 +18,8 @@ Creating a Stream.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-abilityConnectionManager-function createStream(sessionId: int, param: StreamParam): Promise<int>--><!--Device-abilityConnectionManager-function createStream(sessionId: int, param: StreamParam): Promise<int>-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **System API:** This is a system API.
@@ -27,13 +29,13 @@ Creating a Stream.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sessionId | number | Yes | Ability connection Session id. |
-| param | StreamParam | Yes | Transport Stream Parameters |
+| param | [StreamParam](arkts-distributedservice-streamparam-i-sys.md) | Yes | Transport Stream Parameters |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The promise returned by the function, contain the ID of a transport stream. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | The promise returned by the function, contain the ID of a transport stream. |
 
 **Error codes:**
 

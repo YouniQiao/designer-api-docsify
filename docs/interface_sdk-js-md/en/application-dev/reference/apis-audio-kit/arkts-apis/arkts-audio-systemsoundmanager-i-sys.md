@@ -4,6 +4,8 @@ System sound manager object.
 
 **Since:** 10
 
+<!--Device-systemSoundManager-interface SystemSoundManager--><!--Device-systemSoundManager-interface SystemSoundManager-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Add customized tone into ringtone library.
 
 **Required permissions:** ohos.permission.WRITE_RINGTONE
 
+<!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, externalUri: string): Promise<string>--><!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, externalUri: string): Promise<string>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -34,15 +38,15 @@ Add customized tone into ringtone library.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
-| toneAttr | ToneAttrs | Yes | Tone attributes created by {@link createCustomizedToneAttrs}. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
+| toneAttr | [ToneAttrs](arkts-audio-toneattrs-i-sys.md) | Yes | Tone attributes created by {@link createCustomizedToneAttrs}. |
 | externalUri | string | Yes | Tone uri in external storage. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Tone uri after adding into ringtone library. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Tone uri after adding into ringtone library. |
 
 **Error codes:**
 
@@ -98,6 +102,10 @@ Add customized tone into ringtone library.
 
 **Required permissions:** ohos.permission.WRITE_RINGTONE
 
+<!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: int, offset?: long, length?: long)
+      : Promise<string>--><!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: int, offset?: long, length?: long)
+      : Promise<string>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -106,17 +114,17 @@ Add customized tone into ringtone library.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
-| toneAttr | ToneAttrs | Yes | Tone attributes created by {@link createCustomizedToneAttrs}. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
+| toneAttr | [ToneAttrs](arkts-audio-toneattrs-i-sys.md) | Yes | Tone attributes created by {@link createCustomizedToneAttrs}. |
 | fd | number | Yes | File descriptor. |
-| offset | number | No | The offset in the file where the data to be read, in bytes. By default, the offsetis zero. |
-| length | number | No | The length in bytes of the data to be read. By default, the length is the rest ofbytes in the file from the offset. |
+| offset | number | No | The offset in the file where the data to be read, in bytes. By default, the offset is zero. |
+| length | number | No | The length in bytes of the data to be read. By default, the length is the rest of bytes in the file from the offset. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Tone uri after adding into ringtone library. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Tone uri after adding into ringtone library. |
 
 **Error codes:**
 
@@ -171,6 +179,8 @@ Close fd.
 
 **Since:** 12
 
+<!--Device-SystemSoundManager-close(fd: int): Promise<void>--><!--Device-SystemSoundManager-close(fd: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -185,7 +195,7 @@ Close fd.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result of close fd. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result of close fd. |
 
 **Error codes:**
 
@@ -224,6 +234,8 @@ Gets attribute list of alarm tones.
 
 **Since:** 12
 
+<!--Device-SystemSoundManager-getAlarmToneAttrList(context: BaseContext): Promise<ToneAttrsArray>--><!--Device-SystemSoundManager-getAlarmToneAttrList(context: BaseContext): Promise<ToneAttrsArray>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -232,13 +244,13 @@ Gets attribute list of alarm tones.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ToneAttrsArray&gt; | Promise used to return attribute list of system tone. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ToneAttrsArray> | Promise used to return attribute list of system tone. |
 
 **Error codes:**
 
@@ -276,6 +288,8 @@ Gets uri of the current alarm tone.
 
 **Since:** 12
 
+<!--Device-SystemSoundManager-getAlarmToneUri(context: BaseContext): Promise<string>--><!--Device-SystemSoundManager-getAlarmToneUri(context: BaseContext): Promise<string>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -284,13 +298,13 @@ Gets uri of the current alarm tone.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return uri of current alarm tone. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return uri of current alarm tone. |
 
 **Error codes:**
 
@@ -328,6 +342,8 @@ Gets the ringtone attribute which is in use.
 
 **Since:** 20
 
+<!--Device-SystemSoundManager-getCurrentRingtoneAttribute(type: RingtoneType): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getCurrentRingtoneAttribute(type: RingtoneType): Promise<ToneAttrs>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -336,13 +352,13 @@ Gets the ringtone attribute which is in use.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | RingtoneType | Yes | Ringtone type to get. |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | Yes | Ringtone type to get. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ToneAttrs&gt; | Promise used to return the ringtone attribute in system. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ToneAttrs> | Promise used to return the ringtone attribute in system. |
 
 **Error codes:**
 
@@ -377,6 +393,8 @@ Gets attributes of the default alarm tone.
 
 **Since:** 12
 
+<!--Device-SystemSoundManager-getDefaultAlarmToneAttrs(context: BaseContext): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getDefaultAlarmToneAttrs(context: BaseContext): Promise<ToneAttrs>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -385,13 +403,13 @@ Gets attributes of the default alarm tone.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ToneAttrs&gt; | Promise used to return attributes of the default alarm tone. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ToneAttrs> | Promise used to return attributes of the default alarm tone. |
 
 **Error codes:**
 
@@ -429,6 +447,8 @@ Gets attributes of the default ringtone.
 
 **Since:** 12
 
+<!--Device-SystemSoundManager-getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneAttrs>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -437,14 +457,14 @@ Gets attributes of the default ringtone.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
-| type | RingtoneType | Yes | Ringtone type to get. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | Yes | Ringtone type to get. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ToneAttrs&gt; | Promise used to return attributes of the default ringtone. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ToneAttrs> | Promise used to return attributes of the default ringtone. |
 
 **Error codes:**
 
@@ -483,6 +503,8 @@ Gets attributes of the default system tone.
 
 **Since:** 12
 
+<!--Device-SystemSoundManager-getDefaultSystemToneAttrs(context: BaseContext, type: SystemToneType): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getDefaultSystemToneAttrs(context: BaseContext, type: SystemToneType): Promise<ToneAttrs>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -491,14 +513,14 @@ Gets attributes of the default system tone.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
-| type | SystemToneType | Yes | system tone type to get. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
+| type | [SystemToneType](arkts-audio-systemtonetype-e-sys.md) | Yes | system tone type to get. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ToneAttrs&gt; | Promise used to return attributes of the default system tone. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ToneAttrs> | Promise used to return attributes of the default system tone. |
 
 **Error codes:**
 
@@ -533,10 +555,11 @@ systemSoundManagerInstance.getDefaultSystemToneAttrs(context, type).then((value:
 getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<ToneHapticsAttrs>
 ```
 
-Get attributes of haptics which is synchronized with one tone. If no haptics is found, then the attributes in
-the returned ToneHapticsAttrs is empty.
+Get attributes of haptics which is synchronized with one tone. If no haptics is found, then the attributes in the returned ToneHapticsAttrs is empty.
 
 **Since:** 14
+
+<!--Device-SystemSoundManager-getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<ToneHapticsAttrs>--><!--Device-SystemSoundManager-getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<ToneHapticsAttrs>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -546,14 +569,14 @@ the returned ToneHapticsAttrs is empty.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
 | toneUri | string | Yes | Uri of tone to query. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ToneHapticsAttrs&gt; | Promise used to return ToneHapticsAttrs. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ToneHapticsAttrs> | Promise used to return ToneHapticsAttrs. |
 
 **Error codes:**
 
@@ -590,16 +613,13 @@ systemSoundManagerInstance.getHapticsAttrsSyncedWithTone(context, toneUri).then(
 getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<RingtonePlayer | null>
 ```
 
-Obtains a mock haptic ringtone player for playing vibration files and their corresponding mock haptic
-sound files. This API uses a promise to return the result.
-Before calling this interface, ensure that the incoming hapticUri actually exists in the system.
-Otherwise, exceptions and errors will occur, such as failure to play the matched haptic sound file.
-After obtaining the instance through this interface, actively call {@link RingtonePlayer#release} method
-of the ringtone player to release player resources when the service is terminated.
+Obtains a mock haptic ringtone player for playing vibration files and their corresponding mock haptic sound files. This API uses a promise to return the result.Before calling this interface, ensure that the incoming hapticUri actually exists in the system.Otherwise, exceptions and errors will occur, such as failure to play the matched haptic sound file.After obtaining the instance through this interface, actively call {@link RingtonePlayer#release} method of the ringtone player to release player resources when the service is terminated.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SystemSoundManager-getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<RingtonePlayer | null>--><!--Device-SystemSoundManager-getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<RingtonePlayer | null>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -609,21 +629,21 @@ of the ringtone player to release player resources when the service is terminate
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
 | hapticUri | string | Yes | Haptic uri to get. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RingtonePlayer \| null&gt; | Promise used to return a ringtone player instance,or null when an error happens. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<RingtonePlayer \| null> | Promise used to return a ringtone player instance,or null when an error happens. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter verification failed. The hapticUri does not exist or isincorrectly formatted. Ensure it is a JSON file and that it exists in the system's file system. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter verification failed. The hapticUri does not exist or is incorrectly formatted. Ensure it is a JSON file and that it exists in the system's file system. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. The ringtone database access timed out or encountered an error.It is recommended to restart your phone. |
 
 ## getMockHapticRingtonePlayer
@@ -632,16 +652,13 @@ of the ringtone player to release player resources when the service is terminate
 getMockHapticRingtonePlayer(context: BaseContext, type: RingtoneType, ringtoneUri: string): Promise<RingtonePlayer | null>
 ```
 
-Obtains a mock haptic ringtone player for playing vibration files and their corresponding mock haptic
-sound files. This API uses a promise to return the result.
-Before calling this interface, ensure that the incoming ringtoneUri actually exists in the system.
-Otherwise, exceptions and errors will occur, such as failure to play the matched haptic sound file.
-After obtaining the instance through this interface, actively call {@link RingtonePlayer#release} method
-of the ringtone player to release player resources when the service is terminated.
+Obtains a mock haptic ringtone player for playing vibration files and their corresponding mock haptic sound files. This API uses a promise to return the result.Before calling this interface, ensure that the incoming ringtoneUri actually exists in the system.Otherwise, exceptions and errors will occur, such as failure to play the matched haptic sound file.After obtaining the instance through this interface, actively call {@link RingtonePlayer#release} method of the ringtone player to release player resources when the service is terminated.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SystemSoundManager-getMockHapticRingtonePlayer(context: BaseContext, type: RingtoneType, ringtoneUri: string): Promise<RingtonePlayer | null>--><!--Device-SystemSoundManager-getMockHapticRingtonePlayer(context: BaseContext, type: RingtoneType, ringtoneUri: string): Promise<RingtonePlayer | null>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -651,22 +668,22 @@ of the ringtone player to release player resources when the service is terminate
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
-| type | RingtoneType | Yes | Ringtone type to get. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | Yes | Ringtone type to get. |
 | ringtoneUri | string | Yes | Ringtone uri to get. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RingtonePlayer \| null&gt; | Promise used to return a ringtone player instance,or null when an error happens. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<RingtonePlayer \| null> | Promise used to return a ringtone player instance,or null when an error happens. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter verification failed. Possible causes:1.The type exceeds the valid range, please use the RingtoneType enum for input.2.The ringtoneUri does not exist or is incorrectly formatted, please use the ringtoneUri returned bythe {@link SystemSoundManager#addCustomizedTone}. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter verification failed. Possible causes:1.The type exceeds the valid range, please use the RingtoneType enum for input.2.The ringtoneUri does not exist or is incorrectly formatted, please use the ringtoneUri returned by the {@link SystemSoundManager#addCustomizedTone}. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. The ringtone database access timed out or encountered an error.It is recommended to restart your phone. |
 
 ## getRingtoneAttrList
@@ -679,6 +696,8 @@ Gets attribute list of ringtones.
 
 **Since:** 12
 
+<!--Device-SystemSoundManager-getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrsArray>--><!--Device-SystemSoundManager-getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrsArray>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -687,14 +706,14 @@ Gets attribute list of ringtones.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
-| type | RingtoneType | Yes | Ringtone type to get. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | Yes | Ringtone type to get. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ToneAttrsArray&gt; | Promise used to return attribute list of ringtone. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ToneAttrsArray> | Promise used to return attribute list of ringtone. |
 
 **Error codes:**
 
@@ -733,6 +752,8 @@ Gets the ringtone player.
 
 **Since:** 11
 
+<!--Device-SystemSoundManager-getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePlayer>--><!--Device-SystemSoundManager-getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePlayer>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -741,14 +762,14 @@ Gets the ringtone player.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
-| type | RingtoneType | Yes | Ringtone type to get. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | Yes | Ringtone type to get. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RingtonePlayer&gt; | Promise used to return a ringtone player instance. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<RingtonePlayer> | Promise used to return a ringtone player instance. |
 
 **Error codes:**
 
@@ -788,6 +809,8 @@ Gets the ringtone uri.
 
 **Since:** 11
 
+<!--Device-SystemSoundManager-getRingtoneUri(context: BaseContext, type: RingtoneType): Promise<string>--><!--Device-SystemSoundManager-getRingtoneUri(context: BaseContext, type: RingtoneType): Promise<string>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -796,14 +819,14 @@ Gets the ringtone uri.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
-| type | RingtoneType | Yes | Ringtone type to get. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | Yes | Ringtone type to get. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the ringtone uri maintained in system. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the ringtone uri maintained in system. |
 
 **Error codes:**
 
@@ -846,6 +869,8 @@ Gets the ringtone player.
 
 **Substitutes:** [getRingtonePlayer](arkts-audio-systemsoundmanager-i-sys.md#getringtoneplayer-1)
 
+<!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCallback<RingtonePlayer>): void--><!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCallback<RingtonePlayer>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -854,9 +879,9 @@ Gets the ringtone player.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Current application context. |
-| type | RingtoneType | Yes | Ringtone type to get. |
-| callback | AsyncCallback&lt;RingtonePlayer&gt; | Yes | Callback used to return a ringtone player instance. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Current application context. |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | Yes | Ringtone type to get. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<RingtonePlayer> | Yes | Callback used to return a ringtone player instance. |
 
 **Example**
 
@@ -895,6 +920,8 @@ Gets the ringtone player.
 
 **Substitutes:** [getRingtonePlayer](arkts-audio-systemsoundmanager-i-sys.md#getringtoneplayer-1)
 
+<!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtonePlayer>--><!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtonePlayer>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -903,14 +930,14 @@ Gets the ringtone player.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Current application context. |
-| type | RingtoneType | Yes | Ringtone type to get. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Current application context. |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | Yes | Ringtone type to get. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RingtonePlayer&gt; | Promise used to return a ringtone player instance. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<RingtonePlayer> | Promise used to return a ringtone player instance. |
 
 **Example**
 
@@ -947,6 +974,8 @@ Gets the ringtone uri.
 
 **Substitutes:** [getRingtoneUri](arkts-audio-systemsoundmanager-i-sys.md#getringtoneuri-1)
 
+<!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallback<string>): void--><!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -955,9 +984,9 @@ Gets the ringtone uri.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Current application context. |
-| type | RingtoneType | Yes | Ringtone type to get. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the ringtone uri maintained in system. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Current application context. |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | Yes | Ringtone type to get. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the ringtone uri maintained in system. |
 
 **Example**
 
@@ -994,6 +1023,8 @@ Gets the ringtone uri.
 
 **Substitutes:** [getRingtoneUri](arkts-audio-systemsoundmanager-i-sys.md#getringtoneuri-1)
 
+<!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>--><!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1002,14 +1033,14 @@ Gets the ringtone uri.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Current application context. |
-| type | RingtoneType | Yes | Ringtone type to get. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Current application context. |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | Yes | Ringtone type to get. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the ringtone uri maintained in system. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the ringtone uri maintained in system. |
 
 **Example**
 
@@ -1040,6 +1071,8 @@ Gets attribute list of alarm tones.
 
 **Since:** 12
 
+<!--Device-SystemSoundManager-getSystemToneAttrList(context: BaseContext, type: SystemToneType): Promise<ToneAttrsArray>--><!--Device-SystemSoundManager-getSystemToneAttrList(context: BaseContext, type: SystemToneType): Promise<ToneAttrsArray>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1048,14 +1081,14 @@ Gets attribute list of alarm tones.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
-| type | SystemToneType | Yes | System tone type to get. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
+| type | [SystemToneType](arkts-audio-systemtonetype-e-sys.md) | Yes | System tone type to get. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ToneAttrsArray&gt; | Promise used to return attribute list of system tone. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ToneAttrsArray> | Promise used to return attribute list of system tone. |
 
 **Error codes:**
 
@@ -1094,6 +1127,8 @@ Gets the system tone player.
 
 **Since:** 11
 
+<!--Device-SystemSoundManager-getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemTonePlayer>--><!--Device-SystemSoundManager-getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemTonePlayer>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1102,14 +1137,14 @@ Gets the system tone player.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
-| type | SystemToneType | Yes | System tone type to get. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
+| type | [SystemToneType](arkts-audio-systemtonetype-e-sys.md) | Yes | System tone type to get. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SystemTonePlayer&gt; | Promise used to return the SystemTonePlayer. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SystemTonePlayer> | Promise used to return the SystemTonePlayer. |
 
 **Error codes:**
 
@@ -1149,6 +1184,8 @@ Gets the system tone uri.
 
 **Since:** 11
 
+<!--Device-SystemSoundManager-getSystemToneUri(context: BaseContext, type: SystemToneType): Promise<string>--><!--Device-SystemSoundManager-getSystemToneUri(context: BaseContext, type: SystemToneType): Promise<string>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1157,14 +1194,14 @@ Gets the system tone uri.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
-| type | SystemToneType | Yes | System tone type to get. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
+| type | [SystemToneType](arkts-audio-systemtonetype-e-sys.md) | Yes | System tone type to get. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the system tone maintained in system. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the system tone maintained in system. |
 
 **Error codes:**
 
@@ -1203,6 +1240,8 @@ Get haptics list.
 
 **Since:** 14
 
+<!--Device-SystemSoundManager-getToneHapticsList(context: BaseContext, isSynced: boolean): Promise<ToneHapticsAttrsArray>--><!--Device-SystemSoundManager-getToneHapticsList(context: BaseContext, isSynced: boolean): Promise<ToneHapticsAttrsArray>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1211,14 +1250,14 @@ Get haptics list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
 | isSynced | boolean | Yes | The queried haptics is synchronized with tone or not. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ToneHapticsAttrsArray&gt; | Promise used to return ToneHapticsAttrsArray. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ToneHapticsAttrsArray> | Promise used to return ToneHapticsAttrsArray. |
 
 **Error codes:**
 
@@ -1257,6 +1296,8 @@ Get haptics settings.
 
 **Since:** 14
 
+<!--Device-SystemSoundManager-getToneHapticsSettings(context: BaseContext, type: ToneHapticsType): Promise<ToneHapticsSettings>--><!--Device-SystemSoundManager-getToneHapticsSettings(context: BaseContext, type: ToneHapticsType): Promise<ToneHapticsSettings>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1265,14 +1306,14 @@ Get haptics settings.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
-| type | ToneHapticsType | Yes | Tone haptics type. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
+| type | [ToneHapticsType](arkts-audio-tonehapticstype-e-sys.md) | Yes | Tone haptics type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ToneHapticsSettings&gt; | Promise used to return results of this call. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ToneHapticsSettings> | Promise used to return results of this call. |
 
 **Error codes:**
 
@@ -1312,6 +1353,8 @@ Open alarm tone file.
 
 **Since:** 12
 
+<!--Device-SystemSoundManager-openAlarmTone(context: BaseContext, uri: string): Promise<int>--><!--Device-SystemSoundManager-openAlarmTone(context: BaseContext, uri: string): Promise<int>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1320,14 +1363,14 @@ Open alarm tone file.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
 | uri | string | Yes | Uri of alarm tone to open. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return fd. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return fd. |
 
 **Error codes:**
 
@@ -1367,6 +1410,8 @@ Open haptics.
 
 **Since:** 14
 
+<!--Device-SystemSoundManager-openToneHaptics(context: BaseContext, hapticsUri: string): Promise<int>--><!--Device-SystemSoundManager-openToneHaptics(context: BaseContext, hapticsUri: string): Promise<int>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1375,14 +1420,14 @@ Open haptics.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
 | hapticsUri | string | Yes | Uri of haptics to open. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return fd. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return fd. |
 
 **Error codes:**
 
@@ -1423,6 +1468,8 @@ Open tone list in batch.
 
 **Since:** 20
 
+<!--Device-SystemSoundManager-openToneList(uriList: Array<string>): Promise<Array<[string, long, SystemSoundError]>>--><!--Device-SystemSoundManager-openToneList(uriList: Array<string>): Promise<Array<[string, long, SystemSoundError]>>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1431,13 +1478,13 @@ Open tone list in batch.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uriList | Array&lt;string&gt; | Yes | List of uri to open. The length must be no more than 1024. |
+| uriList | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | List of uri to open. The length must be no more than 1024. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[string, number, SystemSoundError]&gt;&gt; | Promise used to return results of thisoperation. In each returned array number, the first item is uri of tone, the second item is fd, and thethird item is error code. If the uri open failed, the fd will be -1, and the reason is indicated by theerror code. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<[string, number, SystemSoundError]>> | Promise used to return results of this operation. In each returned array number, the first item is uri of tone, the second item is fd, and the third item is error code. If the uri open failed, the fd will be -1, and the reason is indicated by the error code. |
 
 **Error codes:**
 
@@ -1479,6 +1526,8 @@ Remove customized tone in ringtone library.
 
 **Required permissions:** ohos.permission.WRITE_RINGTONE
 
+<!--Device-SystemSoundManager-removeCustomizedTone(context: BaseContext, uri:string): Promise<void>--><!--Device-SystemSoundManager-removeCustomizedTone(context: BaseContext, uri:string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1487,14 +1536,14 @@ Remove customized tone in ringtone library.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
 | uri | string | Yes | Tone uri. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return removing result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return removing result. |
 
 **Error codes:**
 
@@ -1537,6 +1586,8 @@ Remove customized tone list in batch.
 
 **Required permissions:** ohos.permission.WRITE_RINGTONE
 
+<!--Device-SystemSoundManager-removeCustomizedToneList(uriList: Array<string>): Promise<Array<[string, SystemSoundError]>>--><!--Device-SystemSoundManager-removeCustomizedToneList(uriList: Array<string>): Promise<Array<[string, SystemSoundError]>>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1545,13 +1596,13 @@ Remove customized tone list in batch.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uriList | Array&lt;string&gt; | Yes | Uri list to remove. The length must be no more than 1024. |
+| uriList | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Uri list to remove. The length must be no more than 1024. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[string, SystemSoundError]&gt;&gt; | Promise used to return removing result array.In each array memeber, the first item is the tone uri, and the second item is the error code. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<[string, SystemSoundError]>> | Promise used to return removing result array.In each array memeber, the first item is the tone uri, and the second item is the error code. |
 
 **Error codes:**
 
@@ -1592,6 +1643,8 @@ Sets uri of the current alarm tone.
 
 **Since:** 12
 
+<!--Device-SystemSoundManager-setAlarmToneUri(context: BaseContext, uri: string): Promise<void>--><!--Device-SystemSoundManager-setAlarmToneUri(context: BaseContext, uri: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1600,14 +1653,14 @@ Sets uri of the current alarm tone.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
 | uri | string | Yes | Alarm tone uri. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return result of set alarm tone. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return result of set alarm tone. |
 
 **Error codes:**
 
@@ -1647,6 +1700,8 @@ Sets the ringtone uri to system.
 
 **Since:** 11
 
+<!--Device-SystemSoundManager-setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<void>--><!--Device-SystemSoundManager-setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1655,15 +1710,15 @@ Sets the ringtone uri to system.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
 | uri | string | Yes | Ringtone uri to set. |
-| type | RingtoneType | Yes | Ringtone type to set. |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | Yes | Ringtone type to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the set uri result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the set uri result. |
 
 **Error codes:**
 
@@ -1707,6 +1762,8 @@ Sets the ringtone uri to system.
 
 **Substitutes:** [setRingtoneUri](arkts-audio-systemsoundmanager-i-sys.md#setringtoneuri-1)
 
+<!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback: AsyncCallback<void>): void--><!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1715,10 +1772,10 @@ Sets the ringtone uri to system.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Current application context. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Current application context. |
 | uri | string | Yes | Ringtone uri to set. |
-| type | RingtoneType | Yes | Ringtone type to set. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the set uri result. |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | Yes | Ringtone type to set. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the set uri result. |
 
 **Example**
 
@@ -1756,6 +1813,8 @@ Sets the ringtone uri to system.
 
 **Substitutes:** [setRingtoneUri](arkts-audio-systemsoundmanager-i-sys.md#setringtoneuri-1)
 
+<!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise<void>--><!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1764,15 +1823,15 @@ Sets the ringtone uri to system.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Current application context. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Current application context. |
 | uri | string | Yes | Ringtone uri to set. |
-| type | RingtoneType | Yes | Ringtone type to set. |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | Yes | Ringtone type to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the set uri result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the set uri result. |
 
 **Example**
 
@@ -1804,6 +1863,8 @@ Sets the system tone uri to system.
 
 **Since:** 11
 
+<!--Device-SystemSoundManager-setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promise<void>--><!--Device-SystemSoundManager-setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1812,15 +1873,15 @@ Sets the system tone uri to system.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
 | uri | string | Yes | Ringtone uri to set. |
-| type | SystemToneType | Yes | System tone type to set. |
+| type | [SystemToneType](arkts-audio-systemtonetype-e-sys.md) | Yes | System tone type to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result of set system tone uri. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result of set system tone uri. |
 
 **Error codes:**
 
@@ -1860,6 +1921,8 @@ Set haptics settings.
 
 **Since:** 14
 
+<!--Device-SystemSoundManager-setToneHapticsSettings(context: BaseContext, type: ToneHapticsType, settings: ToneHapticsSettings): Promise<void>--><!--Device-SystemSoundManager-setToneHapticsSettings(context: BaseContext, type: ToneHapticsType, settings: ToneHapticsSettings): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -1868,15 +1931,15 @@ Set haptics settings.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Current application context. |
-| type | ToneHapticsType | Yes | Tone haptics type. |
-| settings | ToneHapticsSettings | Yes | Tone haptics settings. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
+| type | [ToneHapticsType](arkts-audio-tonehapticstype-e-sys.md) | Yes | Tone haptics type. |
+| settings | [ToneHapticsSettings](arkts-audio-tonehapticssettings-i-sys.md) | Yes | Tone haptics settings. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return results of this call. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return results of this call. |
 
 **Error codes:**
 

@@ -1,5 +1,11 @@
 # setSandboxAppConfig
 
+## 导入模块
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+```
+
 ## setSandboxAppConfig
 
 ```TypeScript
@@ -11,6 +17,8 @@ function setSandboxAppConfig(configInfo: string): Promise<void>
 该接口用于设置沙箱应用的配置信息，以便应用按需传递自定义参数。
 
 **起始版本：** 11
+
+<!--Device-dlpPermission-function setSandboxAppConfig(configInfo: string): Promise<void>--><!--Device-dlpPermission-function setSandboxAppConfig(configInfo: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -24,7 +32,7 @@ function setSandboxAppConfig(configInfo: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

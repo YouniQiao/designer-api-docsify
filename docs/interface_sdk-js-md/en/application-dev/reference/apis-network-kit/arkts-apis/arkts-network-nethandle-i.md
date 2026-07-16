@@ -4,6 +4,8 @@ Defines the handle of the data network.
 
 **Since:** 11
 
+<!--Device-connection-export interface NetHandle--><!--Device-connection-export interface NetHandle-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import
@@ -18,11 +20,11 @@ import { connection } from '@kit.NetworkKit';
 bindSocket(socketParam: TCPSocket | UDPSocket, callback: AsyncCallback<void>): void
 ```
 
-<p>Binds a TCPSocket or UDPSocket to the current network. All data flows from
-the socket will use this network, without being subject to {@link setAppNet}.</p>
-Before using this method, ensure that the socket is disconnected.
+<p>Binds a TCPSocket or UDPSocket to the current network. All data flows from the socket will use this network, without being subject to {@link setAppNet}.</p>Before using this method, ensure that the socket is disconnected.
 
 **Since:** 9
+
+<!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket, callback: AsyncCallback<void>): void--><!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -31,7 +33,7 @@ Before using this method, ensure that the socket is disconnected.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | socketParam | TCPSocket \| UDPSocket | Yes | Indicates the TCPSocket or UDPSocket object. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of bindSocket. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of bindSocket. |
 
 **Error codes:**
 
@@ -111,11 +113,11 @@ interface Data {
 bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>
 ```
 
-<p>Binds a TCPSocket or UDPSocket to the current network. All data flows from
-the socket will use this network, without being subject to {@link setAppNet}.</p>
-Before using this method, ensure that the socket is disconnected.
+<p>Binds a TCPSocket or UDPSocket to the current network. All data flows from the socket will use this network, without being subject to {@link setAppNet}.</p>Before using this method, ensure that the socket is disconnected.
 
 **Since:** 9
+
+<!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>--><!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -129,7 +131,7 @@ Before using this method, ensure that the socket is disconnected.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -210,6 +212,8 @@ Resolves a host name to obtain the first IP address based on the specified NetHa
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-NetHandle-getAddressByName(host: string, callback: AsyncCallback<NetAddress>): void--><!--Device-NetHandle-getAddressByName(host: string, callback: AsyncCallback<NetAddress>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -217,7 +221,7 @@ Resolves a host name to obtain the first IP address based on the specified NetHa
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | host | string | Yes | Indicates the host name or the domain. |
-| callback | AsyncCallback&lt;NetAddress&gt; | Yes | the callback of getAddressByName. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<NetAddress> | Yes | the callback of getAddressByName. |
 
 **Error codes:**
 
@@ -264,6 +268,8 @@ Resolves a host name to obtain the first IP address based on the specified NetHa
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-NetHandle-getAddressByName(host: string): Promise<NetAddress>--><!--Device-NetHandle-getAddressByName(host: string): Promise<NetAddress>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -276,7 +282,7 @@ Resolves a host name to obtain the first IP address based on the specified NetHa
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetAddress> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -320,6 +326,8 @@ Resolves a host name to obtain all IP addresses based on the specified NetHandle
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-NetHandle-getAddressesByName(host: string, callback: AsyncCallback<Array<NetAddress>>): void--><!--Device-NetHandle-getAddressesByName(host: string, callback: AsyncCallback<Array<NetAddress>>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -327,7 +335,7 @@ Resolves a host name to obtain all IP addresses based on the specified NetHandle
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | host | string | Yes | Indicates the host name or the domain. |
-| callback | AsyncCallback&lt;Array&lt;NetAddress&gt;&gt; | Yes | the callback of getAddressesByName. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<NetAddress>> | Yes | the callback of getAddressesByName. |
 
 **Error codes:**
 
@@ -376,6 +384,8 @@ Resolves a host name to obtain all IP addresses based on the specified NetHandle
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-NetHandle-getAddressesByName(host: string): Promise<Array<NetAddress>>--><!--Device-NetHandle-getAddressesByName(host: string): Promise<Array<NetAddress>>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -388,7 +398,7 @@ Resolves a host name to obtain all IP addresses based on the specified NetHandle
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NetAddress&gt;&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<NetAddress>> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -432,6 +442,8 @@ Resolves a host name to obtain all IP addresses based on the specified NetHandle
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-NetHandle-getAddressesByNameWithOptions(host: string, option?: QueryOptions): Promise<Array<NetAddress>>--><!--Device-NetHandle-getAddressesByNameWithOptions(host: string, option?: QueryOptions): Promise<Array<NetAddress>>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -439,13 +451,13 @@ Resolves a host name to obtain all IP addresses based on the specified NetHandle
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | host | string | Yes | Indicates the host name or the domain. |
-| option | QueryOptions | No | Indicates the query option. |
+| option | [QueryOptions](arkts-network-queryoptions-i.md) | No | Indicates the query option. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NetAddress&gt;&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<NetAddress>> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -493,6 +505,8 @@ Network ID, a value of 0 means that there is no default network, and the other v
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NetHandle-netId: int--><!--Device-NetHandle-netId: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

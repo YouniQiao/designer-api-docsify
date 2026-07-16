@@ -1,5 +1,11 @@
 # updatePrinterState（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+```
+
 ## updatePrinterState
 
 ```TypeScript
@@ -12,6 +18,8 @@ function updatePrinterState(printerId: string, state: PrinterState, callback: As
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function updatePrinterState(printerId: string, state: PrinterState, callback: AsyncCallback<void>): void--><!--Device-print-function updatePrinterState(printerId: string, state: PrinterState, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -21,8 +29,8 @@ function updatePrinterState(printerId: string, state: PrinterState, callback: As
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | printerId | string | 是 | 表示打印机ID。 |
-| state | PrinterState | 是 | 表示打印机状态。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 异步更新打印机状态之后的回调。 |
+| state | [PrinterState](arkts-basicservices-printerstate-e.md) | 是 | 表示打印机状态。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 异步更新打印机状态之后的回调。 |
 
 **错误码：**
 
@@ -63,6 +71,8 @@ function updatePrinterState(printerId: string, state: PrinterState): Promise<voi
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function updatePrinterState(printerId: string, state: PrinterState): Promise<void>--><!--Device-print-function updatePrinterState(printerId: string, state: PrinterState): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -72,13 +82,13 @@ function updatePrinterState(printerId: string, state: PrinterState): Promise<voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | printerId | string | 是 | 表示打印机ID。 |
-| state | PrinterState | 是 | 表示打印机状态。 |
+| state | [PrinterState](arkts-basicservices-printerstate-e.md) | 是 | 表示打印机状态。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

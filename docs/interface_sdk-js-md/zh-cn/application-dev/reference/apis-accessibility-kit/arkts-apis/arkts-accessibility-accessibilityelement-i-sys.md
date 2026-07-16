@@ -1,11 +1,10 @@
 # AccessibilityElement
 
-无障碍节点元素。在调用 **AccessibilityElement** 的 API 之前，应该调用
-[AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement-1)
-或 [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow-1)
-来获取一个 **AccessibilityElement** 实例。
+无障碍节点元素。在调用 **AccessibilityElement** 的 API 之前，应该调用[AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement-1)或 [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow-1)来获取一个 **AccessibilityElement** 实例。
 
 **起始版本：** 9
+
+<!--Device-unnamed-export declare interface AccessibilityElement--><!--Device-unnamed-export declare interface AccessibilityElement-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -18,6 +17,8 @@ enableScreenCurtain(isEnable: boolean): void
 提供开启/关闭幕帘屏的能力。
 
 **起始版本：** 12
+
+<!--Device-AccessibilityElement-enableScreenCurtain(isEnable: boolean): void--><!--Device-AccessibilityElement-enableScreenCurtain(isEnable: boolean): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -49,6 +50,8 @@ executeAction(action: AccessibilityAction, parameters?: Parameter): Promise<void
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
+<!--Device-AccessibilityElement-executeAction(action: AccessibilityAction, parameters?: Parameter): Promise<void>--><!--Device-AccessibilityElement-executeAction(action: AccessibilityAction, parameters?: Parameter): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -57,20 +60,20 @@ executeAction(action: AccessibilityAction, parameters?: Parameter): Promise<void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| action | AccessibilityAction | 是 | 无障碍节点可执行的操作。 |
-| parameters | Parameter | 否 | 执行操作时设置的参数值，默认为空。 |
+| action | [AccessibilityAction](../../apis-arkui/arkts-components/arkts-arkui-accessibilityaction-e.md) | 是 | 无障碍节点可执行的操作。 |
+| parameters | [Parameter](arkts-accessibility-parameter-t-sys.md) | 否 | 执行操作时设置的参数值，默认为空。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [9300005](../errorcode-accessibility.md#9300005-不支持该操作) | This action is not supported. |
 
@@ -83,6 +86,8 @@ findElement(type: 'textType', condition: string): Promise<Array<AccessibilityEle
 根据节点配置的accessibilityTextHint无障碍文本类型查询所有节点元素，使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-AccessibilityElement-findElement(type: 'textType', condition: string): Promise<Array<AccessibilityElement>>--><!--Device-AccessibilityElement-findElement(type: 'textType', condition: string): Promise<Array<AccessibilityElement>>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -99,7 +104,7 @@ findElement(type: 'textType', condition: string): Promise<Array<AccessibilityEle
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;AccessibilityElement&gt;&gt; | Promise对象，返回满足指定查询关键字的所有节点元素。 |
+| Promise<Array<AccessibilityElement>> | Promise对象，返回满足指定查询关键字的所有节点元素。 |
 
 **错误码：**
 
@@ -117,6 +122,8 @@ findElement(type: 'elementId', condition: number): Promise<AccessibilityElement>
 
 **起始版本：** 12
 
+<!--Device-AccessibilityElement-findElement(type: 'elementId', condition: long): Promise<AccessibilityElement>--><!--Device-AccessibilityElement-findElement(type: 'elementId', condition: long): Promise<AccessibilityElement>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -132,7 +139,7 @@ findElement(type: 'elementId', condition: number): Promise<AccessibilityElement>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AccessibilityElement&gt; | Promise对象，返回满足指定查询条件的节点元素。 |
+| Promise<AccessibilityElement> | Promise对象，返回满足指定查询条件的节点元素。 |
 
 **错误码：**
 
@@ -152,6 +159,8 @@ findElementByContent(condition: string): Promise<Array<AccessibilityElement>>
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
+<!--Device-AccessibilityElement-findElementByContent(condition: string): Promise<Array<AccessibilityElement>>--><!--Device-AccessibilityElement-findElementByContent(condition: string): Promise<Array<AccessibilityElement>>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -166,13 +175,13 @@ findElementByContent(condition: string): Promise<Array<AccessibilityElement>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;AccessibilityElement&gt;&gt; | Promise对象，返回包含指定内容的元素列表。 |
+| Promise<Array<AccessibilityElement>> | Promise对象，返回包含指定内容的元素列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
 
@@ -188,6 +197,8 @@ findElementByFocusDirection(condition: FocusDirection): Promise<AccessibilityEle
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
+<!--Device-AccessibilityElement-findElementByFocusDirection(condition: FocusDirection): Promise<AccessibilityElement>--><!--Device-AccessibilityElement-findElementByFocusDirection(condition: FocusDirection): Promise<AccessibilityElement>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -196,19 +207,19 @@ findElementByFocusDirection(condition: FocusDirection): Promise<AccessibilityEle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| condition | FocusDirection | 是 | 焦点方向。 |
+| condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | 是 | 焦点方向。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AccessibilityElement&gt; | Promise对象，返回指定焦点方向的元素。 |
+| Promise<AccessibilityElement> | Promise对象，返回指定焦点方向的元素。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
 
@@ -224,6 +235,8 @@ findElementById(condition: number): Promise<AccessibilityElement>
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
+<!--Device-AccessibilityElement-findElementById(condition: long): Promise<AccessibilityElement>--><!--Device-AccessibilityElement-findElementById(condition: long): Promise<AccessibilityElement>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -238,13 +251,13 @@ findElementById(condition: number): Promise<AccessibilityElement>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AccessibilityElement&gt; | Promise对象，返回指定 ID 的元素。 |
+| Promise<AccessibilityElement> | Promise对象，返回指定 ID 的元素。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
 
@@ -260,6 +273,8 @@ findElementsByAccessibilityHintText(condition: string): Promise<Array<Accessibil
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
+<!--Device-AccessibilityElement-findElementsByAccessibilityHintText(condition: string): Promise<Array<AccessibilityElement>>--><!--Device-AccessibilityElement-findElementsByAccessibilityHintText(condition: string): Promise<Array<AccessibilityElement>>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -274,13 +289,13 @@ findElementsByAccessibilityHintText(condition: string): Promise<Array<Accessibil
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;AccessibilityElement&gt;&gt; | Promise对象，返回包含指定提示文本的元素列表。 |
+| Promise<Array<AccessibilityElement>> | Promise对象，返回包含指定提示文本的元素列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
 
@@ -296,6 +311,8 @@ findElementsByCondition(rule: FocusRule, condition: FocusCondition): Promise<Foc
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
+<!--Device-AccessibilityElement-findElementsByCondition(rule: FocusRule, condition: FocusCondition): Promise<FocusMoveResult>--><!--Device-AccessibilityElement-findElementsByCondition(rule: FocusRule, condition: FocusCondition): Promise<FocusMoveResult>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -304,14 +321,14 @@ findElementsByCondition(rule: FocusRule, condition: FocusCondition): Promise<Foc
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rule | FocusRule | 是 | 检查当前节点及其子节点的规则。 |
-| condition | FocusCondition | 是 | 表示查询可聚焦节点方式。 |
+| rule | [FocusRule](arkts-accessibility-focusrule-t-sys.md) | 是 | 检查当前节点及其子节点的规则。 |
+| condition | [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | 是 | 表示查询可聚焦节点方式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;FocusMoveResult&gt; | Promise对象，返回查询结果对象。 |
+| Promise<FocusMoveResult> | Promise对象，返回查询结果对象。 |
 
 **错误码：**
 
@@ -332,6 +349,8 @@ getChildren(): Promise<Array<AccessibilityElement>>
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
+<!--Device-AccessibilityElement-getChildren(): Promise<Array<AccessibilityElement>>--><!--Device-AccessibilityElement-getChildren(): Promise<Array<AccessibilityElement>>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -340,13 +359,13 @@ getChildren(): Promise<Array<AccessibilityElement>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;AccessibilityElement&gt;&gt; | Promise对象，返回当前元素的子元素列表。 |
+| Promise<Array<AccessibilityElement>> | Promise对象，返回当前元素的子元素列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## getCursorPosition
@@ -359,6 +378,8 @@ getCursorPosition(callback: AsyncCallback<number>): void
 
 **起始版本：** 12
 
+<!--Device-AccessibilityElement-getCursorPosition(callback: AsyncCallback<int>): void--><!--Device-AccessibilityElement-getCursorPosition(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -367,7 +388,7 @@ getCursorPosition(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数，表示文本组件中光标位置。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数，表示文本组件中光标位置。 |
 
 ## getCursorPosition
 
@@ -379,6 +400,8 @@ getCursorPosition(): Promise<number>
 
 **起始版本：** 12
 
+<!--Device-AccessibilityElement-getCursorPosition(): Promise<int>--><!--Device-AccessibilityElement-getCursorPosition(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -387,7 +410,7 @@ getCursorPosition(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回当前光标所处位置。 |
+| Promise<number> | Promise对象，返回当前光标所处位置。 |
 
 ## getParent
 
@@ -401,6 +424,8 @@ getParent(): Promise<AccessibilityElement>
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
+<!--Device-AccessibilityElement-getParent(): Promise<AccessibilityElement>--><!--Device-AccessibilityElement-getParent(): Promise<AccessibilityElement>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -409,13 +434,13 @@ getParent(): Promise<AccessibilityElement>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AccessibilityElement&gt; | Promise对象，返回当前元素的父元素。 |
+| Promise<AccessibilityElement> | Promise对象，返回当前元素的父元素。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## getRoot
@@ -430,6 +455,8 @@ getRoot(): Promise<AccessibilityElement>
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
+<!--Device-AccessibilityElement-getRoot(): Promise<AccessibilityElement>--><!--Device-AccessibilityElement-getRoot(): Promise<AccessibilityElement>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -438,13 +465,13 @@ getRoot(): Promise<AccessibilityElement>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AccessibilityElement&gt; | Promise对象，返回活动窗口中的根元素。 |
+| Promise<AccessibilityElement> | Promise对象，返回活动窗口中的根元素。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## accessibilityFocused
@@ -460,6 +487,8 @@ accessibilityFocused?: boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-accessibilityFocused?: boolean--><!--Device-AccessibilityElement-accessibilityFocused?: boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -478,6 +507,8 @@ accessibilityGroup?: boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-accessibilityGroup?: boolean--><!--Device-AccessibilityElement-accessibilityGroup?: boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -503,6 +534,8 @@ accessibilityLevel?: string
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-accessibilityLevel?: string--><!--Device-AccessibilityElement-accessibilityLevel?: string-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -521,6 +554,8 @@ accessibilityNextFocusId?: number
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-accessibilityNextFocusId?: long--><!--Device-AccessibilityElement-accessibilityNextFocusId?: long-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -538,6 +573,8 @@ accessibilityPreviousFocusId?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-accessibilityPreviousFocusId?: long--><!--Device-AccessibilityElement-accessibilityPreviousFocusId?: long-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -559,6 +596,8 @@ true表示元素可滚动，false表示元素不可滚动。
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-accessibilityScrollable?: boolean--><!--Device-AccessibilityElement-accessibilityScrollable?: boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -577,6 +616,8 @@ accessibilityStateDescription?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AccessibilityElement-accessibilityStateDescription?: string--><!--Device-AccessibilityElement-accessibilityStateDescription?: string-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -593,6 +634,8 @@ accessibilityText?: string
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-accessibilityText?: string--><!--Device-AccessibilityElement-accessibilityText?: string-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -608,6 +651,8 @@ accessibilityVisible?: boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-accessibilityVisible?: boolean--><!--Device-AccessibilityElement-accessibilityVisible?: boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -627,6 +672,8 @@ belongTreeId?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AccessibilityElement-belongTreeId?: int--><!--Device-AccessibilityElement-belongTreeId?: int-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -642,6 +689,8 @@ bundleName?: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-bundleName?: string--><!--Device-AccessibilityElement-bundleName?: string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -661,6 +710,8 @@ checkable?: boolean
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-checkable?: boolean--><!--Device-AccessibilityElement-checkable?: boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -679,6 +730,8 @@ checked?: boolean
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-checked?: boolean--><!--Device-AccessibilityElement-checked?: boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -694,6 +747,8 @@ childrenIds?: Array<number>
 **类型：** Array<number>
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-childrenIds?: Array<long>--><!--Device-AccessibilityElement-childrenIds?: Array<long>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -713,6 +768,8 @@ childrenTreeId?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AccessibilityElement-childrenTreeId?: int--><!--Device-AccessibilityElement-childrenTreeId?: int-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -731,6 +788,8 @@ clickable?: boolean
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-clickable?: boolean--><!--Device-AccessibilityElement-clickable?: boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -746,6 +805,8 @@ clip?: boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-clip?: boolean--><!--Device-AccessibilityElement-clip?: boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -765,6 +826,8 @@ componentId?: number
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-componentId?: long--><!--Device-AccessibilityElement-componentId?: long-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -781,6 +844,8 @@ componentType?: string
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-componentType?: string--><!--Device-AccessibilityElement-componentType?: string-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -796,6 +861,8 @@ contents?: Array<string>
 **类型：** Array<string>
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-contents?: Array<string>--><!--Device-AccessibilityElement-contents?: Array<string>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -815,6 +882,8 @@ currentIndex?: number
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-currentIndex?: int--><!--Device-AccessibilityElement-currentIndex?: int-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -830,6 +899,8 @@ currentItem?: AccessibilityGrid
 **类型：** AccessibilityGrid
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-currentItem?: AccessibilityGrid--><!--Device-AccessibilityElement-currentItem?: AccessibilityGrid-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -849,6 +920,8 @@ Indicates the custom actions supported by the component.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AccessibilityElement-customActions?: Array<string>--><!--Device-AccessibilityElement-customActions?: Array<string>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -865,6 +938,8 @@ customComponentType?: string
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-customComponentType?: string--><!--Device-AccessibilityElement-customComponentType?: string-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -880,6 +955,8 @@ description?: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-description?: string--><!--Device-AccessibilityElement-description?: string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -899,6 +976,8 @@ editable?: boolean
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-editable?: boolean--><!--Device-AccessibilityElement-editable?: boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -917,6 +996,8 @@ endIndex?: number
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-endIndex?: int--><!--Device-AccessibilityElement-endIndex?: int-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -933,6 +1014,8 @@ error?: string
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-error?: string--><!--Device-AccessibilityElement-error?: string-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -948,6 +1031,8 @@ extraInfo?: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-extraInfo?: string--><!--Device-AccessibilityElement-extraInfo?: string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -967,6 +1052,8 @@ focusable?: boolean
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-focusable?: boolean--><!--Device-AccessibilityElement-focusable?: boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -983,6 +1070,8 @@ hintText?: string
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-hintText?: string--><!--Device-AccessibilityElement-hintText?: string-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -998,6 +1087,8 @@ hotArea?: Rect
 **类型：** Rect
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-hotArea?: Rect--><!--Device-AccessibilityElement-hotArea?: Rect-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1017,6 +1108,8 @@ inputType?: number
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-inputType?: int--><!--Device-AccessibilityElement-inputType?: int-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1032,6 +1125,8 @@ inspectorKey?: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-inspectorKey?: string--><!--Device-AccessibilityElement-inspectorKey?: string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1051,6 +1146,8 @@ isActive?: boolean
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-isActive?: boolean--><!--Device-AccessibilityElement-isActive?: boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1068,6 +1165,8 @@ isEnable?: boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-isEnable?: boolean--><!--Device-AccessibilityElement-isEnable?: boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1087,6 +1186,8 @@ isEssential?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AccessibilityElement-isEssential?: boolean--><!--Device-AccessibilityElement-isEssential?: boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1104,6 +1205,8 @@ isFocused?: boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-isFocused?: boolean--><!--Device-AccessibilityElement-isFocused?: boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1123,6 +1226,8 @@ isHint?: boolean
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-isHint?: boolean--><!--Device-AccessibilityElement-isHint?: boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1140,6 +1245,8 @@ isPassword?: boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-isPassword?: boolean--><!--Device-AccessibilityElement-isPassword?: boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1159,6 +1266,8 @@ isVisible?: boolean
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-isVisible?: boolean--><!--Device-AccessibilityElement-isVisible?: boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1177,6 +1286,8 @@ itemCount?: number
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-itemCount?: int--><!--Device-AccessibilityElement-itemCount?: int-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1193,6 +1304,8 @@ lastContent?: string
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-lastContent?: string--><!--Device-AccessibilityElement-lastContent?: string-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1208,6 +1321,8 @@ layer?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-layer?: int--><!--Device-AccessibilityElement-layer?: int-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1227,6 +1342,8 @@ longClickable?: boolean
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-longClickable?: boolean--><!--Device-AccessibilityElement-longClickable?: boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1243,6 +1360,8 @@ mainWindowId?: number
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-mainWindowId?: int--><!--Device-AccessibilityElement-mainWindowId?: int-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1258,6 +1377,8 @@ navDestinationId?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-navDestinationId?: long--><!--Device-AccessibilityElement-navDestinationId?: long-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1277,6 +1398,8 @@ offset?: number
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-offset?: double--><!--Device-AccessibilityElement-offset?: double-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1295,6 +1418,8 @@ pageId?: number
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-pageId?: int--><!--Device-AccessibilityElement-pageId?: int-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1310,6 +1435,8 @@ parentId?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-parentId?: long--><!--Device-AccessibilityElement-parentId?: long-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1329,6 +1456,8 @@ pluralLineSupported?: boolean
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-pluralLineSupported?: boolean--><!--Device-AccessibilityElement-pluralLineSupported?: boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1344,6 +1473,8 @@ rect?: Rect
 **类型：** Rect
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-rect?: Rect--><!--Device-AccessibilityElement-rect?: Rect-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1361,6 +1492,8 @@ resourceName?: string
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-resourceName?: string--><!--Device-AccessibilityElement-resourceName?: string-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1376,6 +1509,8 @@ screenRect?: Rect
 **类型：** Rect
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-screenRect?: Rect--><!--Device-AccessibilityElement-screenRect?: Rect-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1395,6 +1530,8 @@ scrollable?: boolean
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-scrollable?: boolean--><!--Device-AccessibilityElement-scrollable?: boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1413,6 +1550,8 @@ selected?: boolean
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-selected?: boolean--><!--Device-AccessibilityElement-selected?: boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1428,6 +1567,8 @@ spans?: AccessibilitySpan[]
 **类型：** AccessibilitySpan[]
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-spans?: AccessibilitySpan[]--><!--Device-AccessibilityElement-spans?: AccessibilitySpan[]-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1447,6 +1588,8 @@ startIndex?: number
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-startIndex?: int--><!--Device-AccessibilityElement-startIndex?: int-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1462,6 +1605,8 @@ supportedActionNames?: Array<string>
 **类型：** Array<string>
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-supportedActionNames?: Array<string>--><!--Device-AccessibilityElement-supportedActionNames?: Array<string>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1479,6 +1624,8 @@ text?: string
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-text?: string--><!--Device-AccessibilityElement-text?: string-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1494,6 +1641,8 @@ textLengthLimit?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-textLengthLimit?: int--><!--Device-AccessibilityElement-textLengthLimit?: int-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1513,6 +1662,8 @@ textMoveUnit?: accessibility.TextMoveUnit
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-textMoveUnit?: accessibility.TextMoveUnit--><!--Device-AccessibilityElement-textMoveUnit?: accessibility.TextMoveUnit-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1528,6 +1679,8 @@ textType?: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-textType?: string--><!--Device-AccessibilityElement-textType?: string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1545,6 +1698,8 @@ triggerAction?: AccessibilityAction
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-triggerAction?: AccessibilityAction--><!--Device-AccessibilityElement-triggerAction?: AccessibilityAction-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1560,6 +1715,8 @@ type?: WindowType
 **类型：** WindowType
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-type?: WindowType--><!--Device-AccessibilityElement-type?: WindowType-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1579,6 +1736,8 @@ valueMax?: number
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-valueMax?: double--><!--Device-AccessibilityElement-valueMax?: double-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1596,6 +1755,8 @@ valueMin?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-valueMin?: double--><!--Device-AccessibilityElement-valueMin?: double-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1615,6 +1776,8 @@ valueNow?: number
 
 **起始版本：** 20
 
+<!--Device-AccessibilityElement-valueNow?: double--><!--Device-AccessibilityElement-valueNow?: double-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1632,6 +1795,8 @@ windowId?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-AccessibilityElement-windowId?: int--><!--Device-AccessibilityElement-windowId?: int-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

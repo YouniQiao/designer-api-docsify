@@ -1,5 +1,11 @@
 # prepareCooperate（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { cooperate } from '@kit.DistributedServiceKit';
+```
+
 ## prepareCooperate
 
 ```TypeScript
@@ -12,6 +18,8 @@ function prepareCooperate(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.COOPERATE_MANAGER
 
+<!--Device-cooperate-function prepareCooperate(callback: AsyncCallback<void>): void--><!--Device-cooperate-function prepareCooperate(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function prepareCooperate(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，准备键鼠穿越成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，准备键鼠穿越成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -64,6 +72,8 @@ function prepareCooperate(): Promise<void>
 
 **需要权限：** ohos.permission.COOPERATE_MANAGER
 
+<!--Device-cooperate-function prepareCooperate(): Promise<void>--><!--Device-cooperate-function prepareCooperate(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **系统接口：** 此接口为系统接口。
@@ -72,7 +82,7 @@ function prepareCooperate(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

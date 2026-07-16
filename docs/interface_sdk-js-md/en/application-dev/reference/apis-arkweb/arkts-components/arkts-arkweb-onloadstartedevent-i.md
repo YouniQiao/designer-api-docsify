@@ -4,6 +4,8 @@ Defines the triggered function at the begin of web page loading.
 
 **Since:** 20
 
+<!--Device-unnamed-declare interface OnLoadStartedEvent--><!--Device-unnamed-declare interface OnLoadStartedEvent-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## url
@@ -17,6 +19,8 @@ The url to be loaded.
 **Type:** string
 
 **Since:** 20
+
+<!--Device-OnLoadStartedEvent-url: string--><!--Device-OnLoadStartedEvent-url: string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

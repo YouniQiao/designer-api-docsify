@@ -4,6 +4,8 @@ Provides utilities for ECC key parameter generation and point conversion based o
 
 **Since:** 11
 
+<!--Device-cryptoFramework-class ECCKeyUtil--><!--Device-cryptoFramework-class ECCKeyUtil-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 11: SystemCapability.Security.CryptoFramework
@@ -20,20 +22,21 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 static convertPoint(curveName: string, encodedPoint: Uint8Array): Point
 ```
 
-Converts the specified point data into a **Point** object based on the curve name (NID). Currently, compressed
-and uncompressed point data is supported.
+Converts the specified point data into a **Point** object based on the curve name (NID). Currently, compressed and uncompressed point data is supported.
 
-> **NOTE**
->
-> According to section 2.2 in RFC 5480:
-> 1. The uncompressed point data is represented as **0x04**|x coordinate|y coordinate.
-> 2. The compressed point data in the **Fp** field (the **F2m** field is not supported currently) is represented
-> as follows: **0x03**|x coordinate (when the coordinate y is an odd number); **0x02**|x coordinate (when the
+> **NOTE**  
+>  
+> According to section 2.2 in RFC 5480:  
+> 1. The uncompressed point data is represented as **0x04**|x coordinate|y coordinate.  
+> 2. The compressed point data in the **Fp** field (the **F2m** field is not supported currently) is represented  
+> as follows: **0x03**|x coordinate (when the coordinate y is an odd number); **0x02**|x coordinate (when the  
 > coordinate y is an even number).
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ECCKeyUtil-static convertPoint(curveName: string, encodedPoint: Uint8Array): Point--><!--Device-ECCKeyUtil-static convertPoint(curveName: string, encodedPoint: Uint8Array): Point-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -42,13 +45,13 @@ and uncompressed point data is supported.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | curveName | string | Yes | Elliptic curve name, that is, the NID. |
-| encodedPoint | Uint8Array | Yes | Data of the point on the ECC elliptic curve to convert. |
+| encodedPoint | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Data of the point on the ECC elliptic curve to convert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Point | **Point** object obtained. |
+| [Point](../../apis-test-kit/arkts-apis/arkts-test-point-i.md) | **Point** object obtained. |
 
 **Error codes:**
 
@@ -79,14 +82,13 @@ console.info('returnPoint: ' + returnPoint.x.toString(16));
 static genECCCommonParamsSpec(curveName: string): ECCCommonParamsSpec
 ```
 
-Generates common parameters for an asymmetric key pair based on the specified name identifier (NID) of an
-elliptic curve. For details, see
-[ECC](../../../../security/CryptoArchitectureKit/crypto-asym-key-generation-conversion-spec.md#ecc) and
-[SM2](../../../../security/CryptoArchitectureKit/crypto-asym-key-generation-conversion-spec.md#sm2).
+Generates common parameters for an asymmetric key pair based on the specified name identifier (NID) of an elliptic curve. For details, see [ECC](../../../../security/CryptoArchitectureKit/crypto-asym-key-generation-conversion-spec.md#ecc) and [SM2](../../../../security/CryptoArchitectureKit/crypto-asym-key-generation-conversion-spec.md#sm2).
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ECCKeyUtil-static genECCCommonParamsSpec(curveName: string): ECCCommonParamsSpec--><!--Device-ECCKeyUtil-static genECCCommonParamsSpec(curveName: string): ECCCommonParamsSpec-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -102,7 +104,7 @@ elliptic curve. For details, see
 
 | Type | Description |
 | --- | --- |
-| ECCCommonParamsSpec | ECC common parameters generated. |
+| [ECCCommonParamsSpec](arkts-cryptoarchitecture-ecccommonparamsspec-i.md) | ECC common parameters generated. |
 
 **Error codes:**
 
@@ -133,12 +135,13 @@ try {
 static getEncodedPoint(curveName: string, point: Point, format: string): Uint8Array
 ```
 
-Obtains the point data in the specified format from a **Point** object. Currently, compressed and uncompressed
-point data is supported.
+Obtains the point data in the specified format from a **Point** object. Currently, compressed and uncompressed point data is supported.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ECCKeyUtil-static getEncodedPoint(curveName: string, point: Point, format: string): Uint8Array--><!--Device-ECCKeyUtil-static getEncodedPoint(curveName: string, point: Point, format: string): Uint8Array-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -147,14 +150,14 @@ point data is supported.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | curveName | string | Yes | Elliptic curve name, that is, the NID. |
-| point | Point | Yes | **Point** object of the elliptic curve. |
-| format | string | Yes | Format of the point data to obtain. Currently, the value can be **COMPRESSED** or**UNCOMPRESSED** only. |
+| point | [Point](../../apis-test-kit/arkts-apis/arkts-test-point-i.md) | Yes | **Point** object of the elliptic curve. |
+| format | string | Yes | Format of the point data to obtain. Currently, the value can be **COMPRESSED** or **UNCOMPRESSED** only. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Point data in the specified format. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Point data in the specified format. |
 
 **Error codes:**
 

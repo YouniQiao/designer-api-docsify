@@ -18,13 +18,15 @@ Obtains all Display objects. This API uses an asynchronous callback to return th
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-display-function getAllDisplays(callback: AsyncCallback<Array<Display>>): void--><!--Device-display-function getAllDisplays(callback: AsyncCallback<Array<Display>>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;Display&gt;&gt; | Yes | Callback used to return all the Display objects. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Display>> | Yes | Callback used to return all the Display objects. |
 
 **Error codes:**
 
@@ -63,13 +65,15 @@ Obtains all Display objects. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-display-function getAllDisplays(): Promise<Array<Display>>--><!--Device-display-function getAllDisplays(): Promise<Array<Display>>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Display&gt;&gt; | Promise used to return all the Display objects. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Display>> | Promise used to return all the Display objects. |
 
 **Error codes:**
 

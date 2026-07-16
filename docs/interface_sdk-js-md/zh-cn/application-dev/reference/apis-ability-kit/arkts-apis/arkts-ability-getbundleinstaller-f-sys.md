@@ -1,5 +1,11 @@
 # getBundleInstaller（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+```
+
 ## getBundleInstaller
 
 ```TypeScript
@@ -10,6 +16,8 @@ function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void
 
 **起始版本：** 9
 
+<!--Device-installer-function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void--><!--Device-installer-function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -18,7 +26,7 @@ function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;BundleInstaller&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，获取BundleInstaller对象，err为undefined，data为获取到的BundleInstaller对象；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<BundleInstaller> | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，获取BundleInstaller对象，err为undefined，data为获取到的BundleInstaller对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -38,6 +46,8 @@ function getBundleInstaller(): Promise<BundleInstaller>
 
 **起始版本：** 9
 
+<!--Device-installer-function getBundleInstaller(): Promise<BundleInstaller>--><!--Device-installer-function getBundleInstaller(): Promise<BundleInstaller>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -46,7 +56,7 @@ function getBundleInstaller(): Promise<BundleInstaller>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;BundleInstaller&gt; | BundleInstaller object. |
+| Promise<BundleInstaller> | BundleInstaller object. |
 
 **错误码：**
 

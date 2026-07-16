@@ -2,11 +2,13 @@
 
 The **batteryStatistics** module provides APIs for querying software and hardware power consumption statistics.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > - The APIs provided by this module are system APIs.
 
 **Since:** 8
+
+<!--Device-unnamed-declare namespace batteryStats--><!--Device-unnamed-declare namespace batteryStats-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
 

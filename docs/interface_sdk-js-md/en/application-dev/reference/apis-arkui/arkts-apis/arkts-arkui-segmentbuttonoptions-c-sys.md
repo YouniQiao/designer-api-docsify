@@ -1,12 +1,14 @@
 # SegmentButtonOptions
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > The component does not support custom font type settings.
 
 Provides initial data and custom properties for the **SegmentButton** component.
 
 **Since:** 11
+
+<!--Device-unnamed-declare class SegmentButtonOptions--><!--Device-unnamed-declare class SegmentButtonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,8 +24,7 @@ import { CommonSegmentButtonOptions, SegmentButtonItemOptionsConstructorOptions,
 backgroundSystemMaterial?: uiMaterial.Material
 ```
 
-Set system-styled materials for the component. Different materials have different effects, which can influence
-the backgroundColor, border, shadow, and other visual attributes of the component.
+Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
 
 **Type:** uiMaterial.Material
 
@@ -32,6 +33,8 @@ the backgroundColor, border, shadow, and other visual attributes of the componen
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SegmentButtonOptions-backgroundSystemMaterial?: uiMaterial.Material--><!--Device-SegmentButtonOptions-backgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

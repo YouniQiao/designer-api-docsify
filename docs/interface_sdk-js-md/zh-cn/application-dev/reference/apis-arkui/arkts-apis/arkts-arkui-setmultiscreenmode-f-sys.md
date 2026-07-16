@@ -1,5 +1,11 @@
 # setMultiScreenMode（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { screen } from '@kit.ArkUI';
+```
+
 ## setMultiScreenMode
 
 ```TypeScript
@@ -11,6 +17,10 @@ function setMultiScreenMode(primaryScreenId: number, secondaryScreenId: number,
 
 **起始版本：** 13
 
+<!--Device-screen-function setMultiScreenMode(primaryScreenId: long, secondaryScreenId: long,
+    secondaryScreenMode: MultiScreenMode): Promise<void>--><!--Device-screen-function setMultiScreenMode(primaryScreenId: long, secondaryScreenId: long,
+    secondaryScreenMode: MultiScreenMode): Promise<void>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -21,13 +31,13 @@ function setMultiScreenMode(primaryScreenId: number, secondaryScreenId: number,
 | --- | --- | --- | --- |
 | primaryScreenId | number | 是 | 主屏的id，该参数应为非负整数。如果输入的数字包含小数部分，向下取整。 |
 | secondaryScreenId | number | 是 | 扩展屏幕的id，该参数应为非负整数。如果输入的数字包含小数部分，向下取整。 |
-| secondaryScreenMode | MultiScreenMode | 是 | 扩展屏幕的显示模式。 |
+| secondaryScreenMode | [MultiScreenMode](arkts-arkui-multiscreenmode-e-sys.md) | 是 | 扩展屏幕的显示模式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

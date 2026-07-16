@@ -18,6 +18,8 @@ Cast resource to remote device.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function startCasting(session: SessionToken, device: OutputDeviceInfo, callback: AsyncCallback<void>): void--><!--Device-avSession-function startCasting(session: SessionToken, device: OutputDeviceInfo, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -26,9 +28,9 @@ Cast resource to remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| session | SessionToken | Yes | Specifies the sessionId which is to be casted. |
-| device | OutputDeviceInfo | Yes | Specifies the device to cast. |
-| callback | AsyncCallback&lt;void&gt; | Yes | A callback instance used to return when start casting. |
+| session | [SessionToken](arkts-avsession-sessiontoken-i-sys.md) | Yes | Specifies the sessionId which is to be casted. |
+| device | [OutputDeviceInfo](arkts-avsession-outputdeviceinfo-i.md) | Yes | Specifies the device to cast. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | A callback instance used to return when start casting. |
 
 **Error codes:**
 
@@ -73,6 +75,8 @@ Cast resource to remote device.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function startCasting(session: SessionToken, device: OutputDeviceInfo): Promise<void>--><!--Device-avSession-function startCasting(session: SessionToken, device: OutputDeviceInfo): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -81,14 +85,14 @@ Cast resource to remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| session | SessionToken | Yes | Specifies the sessionId which is to be casted. |
-| device | OutputDeviceInfo | Yes | Specifies the device to cast. |
+| session | [SessionToken](arkts-avsession-sessiontoken-i-sys.md) | Yes | Specifies the sessionId which is to be casted. |
+| device | [OutputDeviceInfo](arkts-avsession-outputdeviceinfo-i.md) | Yes | Specifies the device to cast. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise for the result |
 
 **Error codes:**
 

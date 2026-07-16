@@ -1,5 +1,11 @@
 # @ohos.selectionInput.SelectionExtensionAbility
 
+## 导入模块
+
+```TypeScript
+import { SelectionExtensionAbility } from '@kit.BasicServicesKit';
+```
+
 ## 汇总
 
 <!--Del-->

@@ -4,6 +4,8 @@ Enumerates the printer states.
 
 **Since:** 14
 
+<!--Device-print-enum PrinterStatus--><!--Device-print-enum PrinterStatus-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## PRINTER_IDLE
@@ -15,6 +17,8 @@ PRINTER_IDLE = 0
 The printer is idle.
 
 **Since:** 14
+
+<!--Device-PrinterStatus-PRINTER_IDLE = 0--><!--Device-PrinterStatus-PRINTER_IDLE = 0-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -28,6 +32,8 @@ The printer is busy.
 
 **Since:** 14
 
+<!--Device-PrinterStatus-PRINTER_BUSY = 1--><!--Device-PrinterStatus-PRINTER_BUSY = 1-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## PRINTER_UNAVAILABLE
@@ -39,6 +45,8 @@ PRINTER_UNAVAILABLE = 2
 The printer is unavailable.
 
 **Since:** 14
+
+<!--Device-PrinterStatus-PRINTER_UNAVAILABLE = 2--><!--Device-PrinterStatus-PRINTER_UNAVAILABLE = 2-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 

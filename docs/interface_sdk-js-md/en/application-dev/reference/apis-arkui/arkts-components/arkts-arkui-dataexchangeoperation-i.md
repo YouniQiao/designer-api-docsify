@@ -4,6 +4,8 @@ Represents an operation for exchanging data.
 
 **Since:** 12
 
+<!--Device-unnamed-interface DataExchangeOperation--><!--Device-unnamed-interface DataExchangeOperation-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## index
@@ -21,6 +23,8 @@ Positions for the exchange. The value range is [0, data source length - 1].
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DataExchangeOperation-index: ExchangeIndex--><!--Device-DataExchangeOperation-index: ExchangeIndex-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ New keys to assign to the exchanged data. The original keys are used by default.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DataExchangeOperation-key?: ExchangeKey--><!--Device-DataExchangeOperation-key?: ExchangeKey-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## type
@@ -57,6 +63,8 @@ Type of data exchange.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DataExchangeOperation-type: DataOperationType.EXCHANGE--><!--Device-DataExchangeOperation-type: DataOperationType.EXCHANGE-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

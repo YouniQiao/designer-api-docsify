@@ -4,6 +4,8 @@ Provides APIs for managing the **X500DistinguishedName** instance.
 
 **Since:** 12
 
+<!--Device-cert-interface X500DistinguishedName--><!--Device-cert-interface X500DistinguishedName-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Obtains the DER-encoded data of the X.500 Distinguished Name.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X500DistinguishedName-getEncoded(): EncodingBlob--><!--Device-X500DistinguishedName-getEncoded(): EncodingBlob-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| EncodingBlob | DER-encoded X.500 Distinguished Name data obtained. |
+| [EncodingBlob](arkts-devicecertificate-encodingblob-i.md) | DER-encoded X.500 Distinguished Name data obtained. |
 
 **Error codes:**
 
@@ -51,6 +55,8 @@ Obtains the DN in the form of a string.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X500DistinguishedName-getName(): string--><!--Device-X500DistinguishedName-getName(): string-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -80,13 +86,15 @@ Obtains RDN strings based on the specified encoding format.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-X500DistinguishedName-getName(encodingType: EncodingType): string--><!--Device-X500DistinguishedName-getName(encodingType: EncodingType): string-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encodingType | EncodingType | Yes | Encoding format. |
+| encodingType | [EncodingType](arkts-devicecertificate-encodingtype-e.md) | Yes | Encoding format. |
 
 **Return value:**
 
@@ -115,6 +123,8 @@ Obtains relative distinguished name (RDN) strings of the specified type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X500DistinguishedName-getName(type: string): Array<string>--><!--Device-X500DistinguishedName-getName(type: string): Array<string>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
@@ -127,7 +137,7 @@ Obtains relative distinguished name (RDN) strings of the specified type.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Array of RDN strings. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Array of RDN strings. |
 
 **Error codes:**
 
@@ -152,6 +162,8 @@ Obtains an array of RDN strings based on the specified type and encoding format.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-X500DistinguishedName-getName(type: string, encodingType: EncodingType): Array<string>--><!--Device-X500DistinguishedName-getName(type: string, encodingType: EncodingType): Array<string>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
@@ -159,13 +171,13 @@ Obtains an array of RDN strings based on the specified type and encoding format.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the RDNs to obtain. For example, **CN** and **OU**. |
-| encodingType | EncodingType | Yes | Encoding format. |
+| encodingType | [EncodingType](arkts-devicecertificate-encodingtype-e.md) | Yes | Encoding format. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Array of RDN strings. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Array of RDN strings. |
 
 **Error codes:**
 

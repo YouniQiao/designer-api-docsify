@@ -1,5 +1,11 @@
 # on
 
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+```
+
 ## on('continuousTaskCancel')
 
 ```TypeScript
@@ -12,6 +18,8 @@ function on(type: 'continuousTaskCancel', callback: Callback<ContinuousTaskCance
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
+<!--Device-backgroundTaskManager-function on(type: 'continuousTaskCancel', callback: Callback<ContinuousTaskCancelInfo>): void--><!--Device-backgroundTaskManager-function on(type: 'continuousTaskCancel', callback: Callback<ContinuousTaskCancelInfo>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **参数：**
@@ -19,7 +27,7 @@ function on(type: 'continuousTaskCancel', callback: Callback<ContinuousTaskCance
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'continuousTaskCancel' | 是 | 事件回调类型，固定取值为'continuousTaskCancel'，表示长时任务取消。 |
-| callback | Callback&lt;ContinuousTaskCancelInfo&gt; | 是 | 回调函数，返回长时任务取消原因等信息。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ContinuousTaskCancelInfo> | 是 | 回调函数，返回长时任务取消原因等信息。 |
 
 **错误码：**
 
@@ -67,6 +75,8 @@ function on(type: 'continuousTaskSuspend', callback: Callback<ContinuousTaskSusp
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
+<!--Device-backgroundTaskManager-function on(type: 'continuousTaskSuspend', callback: Callback<ContinuousTaskSuspendInfo>): void--><!--Device-backgroundTaskManager-function on(type: 'continuousTaskSuspend', callback: Callback<ContinuousTaskSuspendInfo>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **参数：**
@@ -74,7 +84,7 @@ function on(type: 'continuousTaskSuspend', callback: Callback<ContinuousTaskSusp
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'continuousTaskSuspend' | 是 | 事件回调类型，固定取值为'continuousTaskSuspend'，表示长时任务暂停。 |
-| callback | Callback&lt;ContinuousTaskSuspendInfo&gt; | 是 | 回调函数，返回长时任务暂停原因等信息。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ContinuousTaskSuspendInfo> | 是 | 回调函数，返回长时任务暂停原因等信息。 |
 
 **错误码：**
 
@@ -121,6 +131,8 @@ function on(type: 'continuousTaskActive', callback: Callback<ContinuousTaskActiv
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
+<!--Device-backgroundTaskManager-function on(type: 'continuousTaskActive', callback: Callback<ContinuousTaskActiveInfo>): void--><!--Device-backgroundTaskManager-function on(type: 'continuousTaskActive', callback: Callback<ContinuousTaskActiveInfo>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **参数：**
@@ -128,7 +140,7 @@ function on(type: 'continuousTaskActive', callback: Callback<ContinuousTaskActiv
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'continuousTaskActive' | 是 | 事件回调类型，固定取值为'continuousTaskActive'，表示长时任务激活。 |
-| callback | Callback&lt;ContinuousTaskActiveInfo&gt; | 是 | 回调函数，返回长时任务激活相关信息。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ContinuousTaskActiveInfo> | 是 | 回调函数，返回长时任务激活相关信息。 |
 
 **错误码：**
 

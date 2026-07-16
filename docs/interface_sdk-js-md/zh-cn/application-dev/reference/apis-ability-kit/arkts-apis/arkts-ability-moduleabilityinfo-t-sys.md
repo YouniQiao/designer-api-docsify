@@ -8,6 +8,8 @@ module包含的ability组件信息。
 
 **起始版本：** 9
 
+<!--Device-freeInstall-export type ModuleAbilityInfo = _PackInfo.ModuleAbilityInfo--><!--Device-freeInstall-export type ModuleAbilityInfo = _PackInfo.ModuleAbilityInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。

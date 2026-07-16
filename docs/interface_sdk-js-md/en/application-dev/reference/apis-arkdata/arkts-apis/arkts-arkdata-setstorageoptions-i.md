@@ -4,6 +4,8 @@
 
 **Deprecated since:** 6
 
+<!--Device-unnamed-export interface SetStorageOptions--><!--Device-unnamed-export interface SetStorageOptions-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 ## complete
@@ -21,6 +23,8 @@ Called when the execution is completed.
 **Deprecated since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SetStorageOptions-complete?: () => void--><!--Device-SetStorageOptions-complete?: () => void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
@@ -40,6 +44,8 @@ Called when the stored content fails to be modified.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-SetStorageOptions-fail?: (data: string, code: number) => void--><!--Device-SetStorageOptions-fail?: (data: string, code: number) => void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 ## key
@@ -48,8 +54,7 @@ Called when the stored content fails to be modified.
 key: string
 ```
 
-Index of the stored content to be modified.
-the value contains a maximum of 32 characters and cannot contain special characters such as \/"*+,:;<=>?[]|\x7F.
+Index of the stored content to be modified.the value contains a maximum of 32 characters and cannot contain special characters such as \/"*+,:;<=>?[]|\x7F.
 
 **Type:** string
 
@@ -58,6 +63,8 @@ the value contains a maximum of 32 characters and cannot contain special charact
 **Deprecated since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SetStorageOptions-key: string--><!--Device-SetStorageOptions-key: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
@@ -77,6 +84,8 @@ Called when the stored content is modified successfully.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-SetStorageOptions-success?: () => void--><!--Device-SetStorageOptions-success?: () => void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 ## value
@@ -94,6 +103,8 @@ Target storage content.
 **Deprecated since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SetStorageOptions-value: string--><!--Device-SetStorageOptions-value: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 

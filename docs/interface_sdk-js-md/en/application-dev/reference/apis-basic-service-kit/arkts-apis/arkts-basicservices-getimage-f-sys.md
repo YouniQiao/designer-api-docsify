@@ -12,12 +12,13 @@ import { wallpaper } from '@kit.BasicServicesKit';
 function getImage(wallpaperType: WallpaperType, callback: AsyncCallback<image.PixelMap>): void
 ```
 
-Obtains the default pixel map of a wallpaper of the specified type. Returns the default pixel map.
-Only the static wallpaper set by using setImage can be obtained.
+Obtains the default pixel map of a wallpaper of the specified type. Returns the default pixel map.Only the static wallpaper set by using setImage can be obtained.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_WALLPAPER
+
+<!--Device-wallpaper-function getImage(wallpaperType: WallpaperType, callback: AsyncCallback<image.PixelMap>): void--><!--Device-wallpaper-function getImage(wallpaperType: WallpaperType, callback: AsyncCallback<image.PixelMap>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -27,8 +28,8 @@ Only the static wallpaper set by using setImage can be obtained.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | WallpaperType | Yes | indicates the wallpaper type. |
-| callback | AsyncCallback&lt;image.PixelMap&gt; | Yes | the callback of getImage. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<image.PixelMap> | Yes | the callback of getImage. |
 
 **Error codes:**
 
@@ -61,12 +62,13 @@ wallpaper.getImage(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessErr
 function getImage(wallpaperType: WallpaperType): Promise<image.PixelMap>
 ```
 
-Obtains the default pixel map of a wallpaper of the specified type. Returns the default pixel map.
-Only the static wallpaper set by using setImage can be obtained.
+Obtains the default pixel map of a wallpaper of the specified type. Returns the default pixel map.Only the static wallpaper set by using setImage can be obtained.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_WALLPAPER
+
+<!--Device-wallpaper-function getImage(wallpaperType: WallpaperType): Promise<image.PixelMap>--><!--Device-wallpaper-function getImage(wallpaperType: WallpaperType): Promise<image.PixelMap>-End-->
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -76,13 +78,13 @@ Only the static wallpaper set by using setImage can be obtained.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | WallpaperType | Yes | indicates the wallpaper type. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<image.PixelMap> | the promise returned by the function. |
 
 **Error codes:**
 

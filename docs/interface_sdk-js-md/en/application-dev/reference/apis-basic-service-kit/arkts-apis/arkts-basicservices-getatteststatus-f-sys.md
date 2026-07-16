@@ -16,6 +16,8 @@ Obtains the AttestResultInfo object.
 
 **Since:** 9
 
+<!--Device-deviceAttest-function getAttestStatus(callback: AsyncCallback<AttestResultInfo>): void--><!--Device-deviceAttest-function getAttestStatus(callback: AsyncCallback<AttestResultInfo>): void-End-->
+
 **System capability:** SystemCapability.XTS.DeviceAttest
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Obtains the AttestResultInfo object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;AttestResultInfo&gt; | Yes | Indicates the callback containing the AttestResultInfo object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<AttestResultInfo> | Yes | Indicates the callback containing the AttestResultInfo object. |
 
 **Error codes:**
 
@@ -71,6 +73,8 @@ Obtains the AttestResultInfo object.
 
 **Since:** 9
 
+<!--Device-deviceAttest-function getAttestStatus(): Promise<AttestResultInfo>--><!--Device-deviceAttest-function getAttestStatus(): Promise<AttestResultInfo>-End-->
+
 **System capability:** SystemCapability.XTS.DeviceAttest
 
 **System API:** This is a system API.
@@ -79,7 +83,7 @@ Obtains the AttestResultInfo object.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AttestResultInfo&gt; | Returns that the AttestResultInfo object is returned in Promise mode. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AttestResultInfo> | Returns that the AttestResultInfo object is returned in Promise mode. |
 
 **Error codes:**
 

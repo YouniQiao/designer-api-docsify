@@ -1,5 +1,11 @@
 # getMouseScrollDirection（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+```
+
 ## getMouseScrollDirection
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getMouseScrollDirection(): Promise<boolean>
 
 **需要权限：** ohos.permission.INPUT_DEVICE_CONTROLLER
 
+<!--Device-pointer-function getMouseScrollDirection(): Promise<boolean>--><!--Device-pointer-function getMouseScrollDirection(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function getMouseScrollDirection(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示鼠标滚轮滚动方向与手指方向一致；返回false表示鼠标滚轮滚动方向与手指方向相反。默认为true。 |
+| Promise<boolean> | Promise对象。返回true表示鼠标滚轮滚动方向与手指方向一致；返回false表示鼠标滚轮滚动方向与手指方向相反。默认为true。 |
 
 **错误码：**
 

@@ -4,6 +4,8 @@ Provides the API to obtain the equivalent focal length information list in the c
 
 **Since:** 12
 
+<!--Device-camera-interface ZoomQuery--><!--Device-camera-interface ZoomQuery-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
@@ -26,13 +28,15 @@ Gets supported zoom ratio range during raw-capture.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-ZoomQuery-getRAWCaptureZoomRatioRange(): Array<double>--><!--Device-ZoomQuery-getRAWCaptureZoomRatioRange(): Array<double>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | The zoom ratio range. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | The zoom ratio range. |
 
 **Error codes:**
 
@@ -53,13 +57,15 @@ Obtains the supported zoom ratio range.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-ZoomQuery-getZoomRatioRange(): Array<double>--><!--Device-ZoomQuery-getZoomRatioRange(): Array<double>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Array containing the minimum and maximum zoom ratios. If the operation fails,undefined is returned and an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is thrown. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Array containing the minimum and maximum zoom ratios. If the operation fails,undefined is returned and an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is thrown. |
 
 **Error codes:**
 

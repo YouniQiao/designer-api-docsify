@@ -4,7 +4,15 @@ CounterOptions定义Counter类型及样式。
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare class CounterOptions--><!--Device-unnamed-declare class CounterOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { CounterType, DateData, CounterComponent, CounterOptions } from '@kit.ArkUI';
+```
 
 ## dateOptions
 
@@ -24,7 +32,9 @@ dateOptions?: DateStyleOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CounterOptions-dateOptions?: DateStyleOptions--><!--Device-CounterOptions-dateOptions?: DateStyleOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,7 +56,9 @@ direction?: Direction
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CounterOptions-direction?: Direction--><!--Device-CounterOptions-direction?: Direction-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,7 +80,9 @@ inlineOptions?: InlineStyleOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CounterOptions-inlineOptions?: InlineStyleOptions--><!--Device-CounterOptions-inlineOptions?: InlineStyleOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,7 +104,9 @@ numberOptions?: NumberStyleOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CounterOptions-numberOptions?: NumberStyleOptions--><!--Device-CounterOptions-numberOptions?: NumberStyleOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,7 +124,9 @@ type: CounterType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CounterOptions-type: CounterType--><!--Device-CounterOptions-type: CounterType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

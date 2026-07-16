@@ -4,6 +4,8 @@ Provides APIs for encapsulating a set of data records.
 
 **Since:** 10
 
+<!--Device-unifiedDataChannel-class UnifiedData--><!--Device-unifiedDataChannel-class UnifiedData-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## Modules to Import
@@ -26,13 +28,15 @@ Adds a data record to this **UnifiedRecord** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-UnifiedData-addRecord(record: UnifiedRecord): void--><!--Device-UnifiedData-addRecord(record: UnifiedRecord): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| record | UnifiedRecord | Yes | Data record to add. It is a **UnifiedRecord** child class object. |
+| record | [UnifiedRecord](arkts-arkdata-unifiedrecord-c.md) | Yes | Data record to add. It is a **UnifiedRecord** child class object. |
 
 **Error codes:**
 
@@ -76,13 +80,15 @@ Defines a constructor used to create a **UnifiedData** object with a data record
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-UnifiedData-constructor(record: UnifiedRecord)--><!--Device-UnifiedData-constructor(record: UnifiedRecord)-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| record | UnifiedRecord | Yes | Data record in the **UnifiedData** object. It is a **UnifiedRecord** object orits child class object. |
+| record | [UnifiedRecord](arkts-arkdata-unifiedrecord-c.md) | Yes | Data record in the **UnifiedData** object. It is a **UnifiedRecord** object or its child class object. |
 
 **Error codes:**
 
@@ -118,6 +124,8 @@ Defines a constructor used to create a **UnifiedData** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UnifiedData-constructor()--><!--Device-UnifiedData-constructor()-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 **Example**
@@ -133,9 +141,7 @@ let unifiedData = new unifiedDataChannel.UnifiedData();
 getRecords(): Array<UnifiedRecord>
 ```
 
-Obtains all data records from this **UnifiedData** object. The data obtained is of the **UnifiedRecord** type.
-Before using the data, you need to use [getType](arkts-arkdata-unifieddata-c.md#gettypes-1) to obtain the
-data type and convert the data type to a child class.
+Obtains all data records from this **UnifiedData** object. The data obtained is of the **UnifiedRecord** type.Before using the data, you need to use [getType](arkts-arkdata-unifieddata-c.md#gettypes-1) to obtain the data type and convert the data type to a child class.
 
 **Since:** 10
 
@@ -143,13 +149,15 @@ data type and convert the data type to a child class.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-UnifiedData-getRecords(): Array<UnifiedRecord>--><!--Device-UnifiedData-getRecords(): Array<UnifiedRecord>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;UnifiedRecord&gt; | Records in the **UnifiedData** object obtained. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<UnifiedRecord> | Records in the **UnifiedData** object obtained. |
 
 **Example**
 
@@ -201,13 +209,15 @@ Obtains the types of all data records in this **UnifiedData** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UnifiedData-getTypes(): Array<string>--><!--Device-UnifiedData-getTypes(): Array<string>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Array of the[UniformDataType](arkts-arkdata-uniformdatatype-e.md) typesobtained. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Array of the [UniformDataType](arkts-arkdata-uniformdatatype-e.md) types obtained. |
 
 **Example**
 
@@ -240,12 +250,9 @@ let types = unifiedData.getTypes();
 hasType(type: string): boolean
 ```
 
-Checks whether this **UnifiedData** object contains the specified data type, including the data types added by
-using the [addEntry](arkts-arkdata-unifiedrecord-c.md#addentry-1) function.
+Checks whether this **UnifiedData** object contains the specified data type, including the data types added by using the [addEntry](arkts-arkdata-unifiedrecord-c.md#addentry-1) function.
 
-For file types, if the type set of **UnifiedData** includes **general.jpeg**, calling the **hasType** API to
-check for the **general.image** type will return **true**. This is because the **general.jpeg** type belongs to
-the **general.image** type.
+For file types, if the type set of **UnifiedData** includes **general.jpeg**, calling the **hasType** API to check for the **general.image** type will return **true**. This is because the **general.jpeg** type belongs to the **general.image** type.
 
 **Since:** 12
 
@@ -253,13 +260,15 @@ the **general.image** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UnifiedData-hasType(type: string): boolean--><!--Device-UnifiedData-hasType(type: string): boolean-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Data type to check. For details, see[UniformDataType](arkts-arkdata-uniformdatatype-e.md). |
+| type | string | Yes | Data type to check. For details, see [UniformDataType](arkts-arkdata-uniformdatatype-e.md). |
 
 **Return value:**
 
@@ -314,6 +323,8 @@ UnifiedData properties.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UnifiedData-set properties(value: UnifiedDataProperties)--><!--Device-UnifiedData-set properties(value: UnifiedDataProperties)-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 

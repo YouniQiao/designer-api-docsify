@@ -16,20 +16,22 @@ Create PixelMap by data buffer.
 
 **Since:** 12
 
+<!--Device-sendableImage-function createPixelMapSync(colors: ArrayBuffer, options: image.InitializationOptions): PixelMap--><!--Device-sendableImage-function createPixelMapSync(colors: ArrayBuffer, options: image.InitializationOptions): PixelMap-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colors | ArrayBuffer | Yes | The image color buffer. |
+| colors | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | The image color buffer. |
 | options | image.InitializationOptions | Yes | Initialization options for PixelMap. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PixelMap | Returns the instance if the operation is successful;Otherwise, return undefined. |
+| [PixelMap](arkts-image-pixelmap-i.md) | Returns the instance if the operation is successful;Otherwise, return undefined. |
 
 **Error codes:**
 

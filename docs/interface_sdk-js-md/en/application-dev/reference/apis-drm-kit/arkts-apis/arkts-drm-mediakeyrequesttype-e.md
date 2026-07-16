@@ -4,6 +4,8 @@ Enumerates media key request types.
 
 **Since:** 12
 
+<!--Device-drm-enum MediaKeyRequestType--><!--Device-drm-enum MediaKeyRequestType-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## MEDIA_KEY_REQUEST_TYPE_UNKNOWN
@@ -17,6 +19,8 @@ Media key request type unknown.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -32,6 +36,8 @@ Media key request type initial.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_INITIAL = 1--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_INITIAL = 1-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## MEDIA_KEY_REQUEST_TYPE_RENEWAL
@@ -45,6 +51,8 @@ Media key request type renewal.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_RENEWAL = 2--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_RENEWAL = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -60,6 +68,8 @@ Media key request type release.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_RELEASE = 3--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_RELEASE = 3-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## MEDIA_KEY_REQUEST_TYPE_NONE
@@ -74,6 +84,8 @@ Media key request type none.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_NONE = 4--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_NONE = 4-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## MEDIA_KEY_REQUEST_TYPE_UPDATE
@@ -87,6 +99,8 @@ Media key request type update.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_UPDATE = 5--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_UPDATE = 5-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 

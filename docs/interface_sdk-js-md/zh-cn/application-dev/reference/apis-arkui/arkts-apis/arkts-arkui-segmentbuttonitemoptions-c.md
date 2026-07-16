@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare class SegmentButtonItemOptions--><!--Device-unnamed-declare class SegmentButtonItemOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { CommonSegmentButtonOptions, SegmentButtonItemOptionsConstructorOptions, SegmentButtonIconTextItem, SegmentButtonItemOptions, SegmentButtonTextItem, CapsuleSegmentButtonOptions, SegmentButtonOptions, CapsuleSegmentButtonConstructionOptions, SegmentButtonItemTuple, SegmentButton, SegmentButtonItemArray, SegmentButtonItemOptionsArray, SegmentButtonIconItem, BorderRadiusMode, TabSegmentButtonConstructionOptions, TabSegmentButtonOptions, ItemRestriction, DimensionNoPercentage } from '@kit.ArkUI';
+```
 
 ## constructor
 
@@ -18,7 +26,9 @@ constructor(options: SegmentButtonItemOptionsConstructorOptions)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SegmentButtonItemOptions-constructor(options: SegmentButtonItemOptionsConstructorOptions)--><!--Device-SegmentButtonItemOptions-constructor(options: SegmentButtonItemOptionsConstructorOptions)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,7 +36,7 @@ constructor(options: SegmentButtonItemOptionsConstructorOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | SegmentButtonItemOptionsConstructorOptions | 是 | 单个分段按钮的配置选项，包含图标、文本、无障碍属性等配置信息。 |
+| options | [SegmentButtonItemOptionsConstructorOptions](arkts-arkui-segmentbuttonitemoptionsconstructoroptions-i.md) | 是 | 单个分段按钮的配置选项，包含图标、文本、无障碍属性等配置信息。 |
 
 ## accessibilityDescription
 
@@ -48,7 +58,9 @@ accessibilityDescription?: ResourceStr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本13开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SegmentButtonItemOptions-accessibilityDescription?: ResourceStr--><!--Device-SegmentButtonItemOptions-accessibilityDescription?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,7 +94,9 @@ accessibilityLevel?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本13开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SegmentButtonItemOptions-accessibilityLevel?: string--><!--Device-SegmentButtonItemOptions-accessibilityLevel?: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,7 +118,9 @@ icon?: ResourceStr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SegmentButtonItemOptions-icon?: ResourceStr--><!--Device-SegmentButtonItemOptions-icon?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -128,7 +144,9 @@ iconAccessibilityText?: ResourceStr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本13开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SegmentButtonItemOptions-iconAccessibilityText?: ResourceStr--><!--Device-SegmentButtonItemOptions-iconAccessibilityText?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -150,7 +168,9 @@ selectedIcon?: ResourceStr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SegmentButtonItemOptions-selectedIcon?: ResourceStr--><!--Device-SegmentButtonItemOptions-selectedIcon?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -174,7 +194,9 @@ selectedIconAccessibilityText?: ResourceStr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本13开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SegmentButtonItemOptions-selectedIconAccessibilityText?: ResourceStr--><!--Device-SegmentButtonItemOptions-selectedIconAccessibilityText?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -196,7 +218,9 @@ text?: ResourceStr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SegmentButtonItemOptions-text?: ResourceStr--><!--Device-SegmentButtonItemOptions-text?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

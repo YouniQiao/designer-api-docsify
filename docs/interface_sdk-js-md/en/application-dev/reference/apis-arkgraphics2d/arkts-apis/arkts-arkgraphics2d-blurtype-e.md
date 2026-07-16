@@ -1,18 +1,16 @@
 # BlurType
 
-Enumerates the blur types of a mask filter.
-| Name | Value| Description | Diagram |
-| ------ | - | ------------------ | -------- |
-| NORMAL | 0 | Both the outer edges and the inner solid parts are blurred.|
-![image_BlueType_Normal.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Normal.png)|
-| SOLID | 1 | The inner solid part remains unchanged, while only the outer edges are blurred.|
-![image_BlueType_Solid.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Solid.png)|
-| OUTER | 2 | Only the outer edges are blurred, with the inner solid part being fully transparent.|
-![image_BlueType_Outer.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Outer.png)|
-| INNER | 3 | Only the inner solid part is blurred, while the outer edges remain sharp.|
-![image_BlueType_Inner.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Inner.png)|
+Enumerates the blur types of a mask filter.  
+| Name | Value| Description | Diagram |  
+| ------ | - | ------------------ | -------- |  
+| NORMAL | 0 | Both the outer edges and the inner solid parts are blurred.|![image_BlueType_Normal.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Normal.png)|  
+| SOLID | 1 | The inner solid part remains unchanged, while only the outer edges are blurred.|![image_BlueType_Solid.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Solid.png)|  
+| OUTER | 2 | Only the outer edges are blurred, with the inner solid part being fully transparent.|![image_BlueType_Outer.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Outer.png)|  
+| INNER | 3 | Only the inner solid part is blurred, while the outer edges remain sharp.|![image_BlueType_Inner.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Inner.png)|
 
 **Since:** 12
+
+<!--Device-drawing-enum BlurType--><!--Device-drawing-enum BlurType-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -26,6 +24,8 @@ Both the outer edges and the inner solid parts are blurred.
 
 **Since:** 12
 
+<!--Device-BlurType-NORMAL = 0--><!--Device-BlurType-NORMAL = 0-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## SOLID
@@ -37,6 +37,8 @@ SOLID = 1
 The inner solid part remains unchanged, while only the outer edges are blurred.
 
 **Since:** 12
+
+<!--Device-BlurType-SOLID = 1--><!--Device-BlurType-SOLID = 1-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -50,6 +52,8 @@ Only the outer edges are blurred, with the inner solid part being fully transpar
 
 **Since:** 12
 
+<!--Device-BlurType-OUTER = 2--><!--Device-BlurType-OUTER = 2-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## INNER
@@ -61,6 +65,8 @@ INNER = 3
 Only the inner solid part is blurred, while the outer edges remain sharp.
 
 **Since:** 12
+
+<!--Device-BlurType-INNER = 3--><!--Device-BlurType-INNER = 3-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

@@ -4,6 +4,8 @@ Describes the frame shutter information.
 
 **Since:** 10
 
+<!--Device-camera-interface FrameShutterInfo--><!--Device-camera-interface FrameShutterInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ ID of this capture action.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-FrameShutterInfo-captureId: int--><!--Device-FrameShutterInfo-captureId: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## timestamp
@@ -41,6 +45,8 @@ Timestamp of the shutter, in milliseconds.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-FrameShutterInfo-timestamp: long--><!--Device-FrameShutterInfo-timestamp: long-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

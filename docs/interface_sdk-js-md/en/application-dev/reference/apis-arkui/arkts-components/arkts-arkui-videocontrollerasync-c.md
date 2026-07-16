@@ -1,9 +1,10 @@
 # VideoControllerAsync
 
-Video playback controller class for asynchronous operations.
-Provides methods to control video playback, timing, and display mode.
+Video playback controller class for asynchronous operations.Provides methods to control video playback, timing, and display mode.
 
 **Since:** 26.0.0
+
+<!--Device-unnamed-declare class VideoControllerAsync--><!--Device-unnamed-declare class VideoControllerAsync-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,6 +22,8 @@ Creates a VideoControllerAsync instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-VideoControllerAsync-constructor()--><!--Device-VideoControllerAsync-constructor()-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## exitFullscreen
@@ -36,6 +39,8 @@ Exits fullscreen display mode.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-VideoControllerAsync-exitFullscreen()--><!--Device-VideoControllerAsync-exitFullscreen()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -53,13 +58,15 @@ Pauses video playback asynchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-VideoControllerAsync-pause(): Promise<void>--><!--Device-VideoControllerAsync-pause(): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## requestFullscreen
 
@@ -75,6 +82,8 @@ Requests fullscreen display for the video.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-VideoControllerAsync-requestFullscreen(value: boolean)--><!--Device-VideoControllerAsync-requestFullscreen(value: boolean)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -89,8 +98,7 @@ Requests fullscreen display for the video.
 reset(): Promise<void>
 ```
 
-Resets the video controller asynchronously.
-Restores the controller to its initial state.
+Resets the video controller asynchronously.Restores the controller to its initial state.
 
 **Since:** 26.0.0
 
@@ -98,13 +106,15 @@ Restores the controller to its initial state.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-VideoControllerAsync-reset(): Promise<void>--><!--Device-VideoControllerAsync-reset(): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## setCurrentTime
 
@@ -120,14 +130,16 @@ Sets the current playback time with specified seek mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-VideoControllerAsync-setCurrentTime(value: double, seekMode?: SeekMode)--><!--Device-VideoControllerAsync-setCurrentTime(value: double, seekMode?: SeekMode)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | The target time in seconds.<br>Unit: Seconds. The value must be greater than or equal to 0. Value constraint: The maximum value is thetotal duration of the video. If the duration exceeds the maximum value, the system jumps to the end of thevideo. |
-| seekMode | SeekMode | No | The seek mode to use for time adjustment. |
+| value | number | Yes | The target time in seconds.<br>Unit: Seconds. The value must be greater than or equal to 0. Value constraint: The maximum value is the total duration of the video. If the duration exceeds the maximum value, the system jumps to the end of the video. |
+| seekMode | [SeekMode](../../apis-media-kit/arkts-apis/arkts-media-seekmode-e.md) | No | The seek mode to use for time adjustment. |
 
 ## start
 
@@ -143,13 +155,15 @@ Starts video playback asynchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-VideoControllerAsync-start(): Promise<void>--><!--Device-VideoControllerAsync-start(): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## stop
 
@@ -165,11 +179,13 @@ Stops video playback asynchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-VideoControllerAsync-stop(): Promise<void>--><!--Device-VideoControllerAsync-stop(): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 

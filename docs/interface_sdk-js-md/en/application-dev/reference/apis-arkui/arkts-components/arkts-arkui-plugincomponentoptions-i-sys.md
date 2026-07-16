@@ -1,9 +1,10 @@
 # PluginComponentOptions (System API)
 
-Define options used to construct a plugin component.
-AnonyMous Object Rectification
+Define options used to construct a plugin component.AnonyMous Object Rectification
 
 **Since:** 18
+
+<!--Device-unnamed-declare interface PluginComponentOptions--><!--Device-unnamed-declare interface PluginComponentOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,12 +16,13 @@ AnonyMous Object Rectification
 data: any
 ```
 
-Plugin component data.
-AnonyMous Object Rectification
+Plugin component data.AnonyMous Object Rectification
 
 **Type:** any
 
 **Since:** 18
+
+<!--Device-PluginComponentOptions-data: any--><!--Device-PluginComponentOptions-data: any-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,12 +34,13 @@ AnonyMous Object Rectification
 template: PluginComponentTemplate
 ```
 
-Plugin component template.
-AnonyMous Object Rectification
+Plugin component template.AnonyMous Object Rectification
 
 **Type:** PluginComponentTemplate
 
 **Since:** 18
+
+<!--Device-PluginComponentOptions-template: PluginComponentTemplate--><!--Device-PluginComponentOptions-template: PluginComponentTemplate-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

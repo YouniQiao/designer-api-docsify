@@ -1,5 +1,11 @@
 # setActivationLockDisabled
 
+## 导入模块
+
+```TypeScript
+import { systemManager } from '@kit.MDMKit';
+```
+
 ## setActivationLockDisabled
 
 ```TypeScript
@@ -14,13 +20,15 @@ function setActivationLockDisabled(admin: Want, isDisabled: boolean, credential?
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-systemManager-function setActivationLockDisabled(admin: Want, isDisabled: boolean, credential?: string): Promise<void>--><!--Device-systemManager-function setActivationLockDisabled(admin: Want, isDisabled: boolean, credential?: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | isDisabled | boolean | 是 | 是否禁用激活锁。true表示禁用，false表示启用。 |
 | credential | string | 否 | 禁用凭据。当设置禁用时该参数必须填写有效凭据&lt;!--RP6--&gt;&lt;!--RP6End--&gt;，设置启用时为空。 |
 
@@ -28,7 +36,7 @@ function setActivationLockDisabled(admin: Want, isDisabled: boolean, credential?
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。当设置禁用/启用失败时，会抛出错误对象。 |
+| Promise<void> | 无返回结果的Promise对象。当设置禁用/启用失败时，会抛出错误对象。 |
 
 **错误码：**
 

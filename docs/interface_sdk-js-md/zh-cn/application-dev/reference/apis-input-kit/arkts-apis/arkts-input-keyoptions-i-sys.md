@@ -4,9 +4,17 @@
 
 **起始版本：** 8
 
+<!--Device-inputConsumer-interface KeyOptions--><!--Device-inputConsumer-interface KeyOptions-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { inputConsumer } from '@kit.InputKit';
+```
 
 ## finalKey
 
@@ -22,6 +30,8 @@ finalKey: number
 
 **起始版本：** 8
 
+<!--Device-KeyOptions-finalKey: int--><!--Device-KeyOptions-finalKey: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **系统接口：** 此接口为系统接口。
@@ -36,12 +46,13 @@ finalKeyDownDuration: number
 
 当finalKeyDownDuration为0时，立即触发回调函数。
 
-当finalKeyDownDuration大于0时，isFinalKeyDown为true，则最终按键按下超过设置时长后触发回调函数；isFinalKeyDown为false，则最终按键按下到抬起时间小于设置时长时触发回调函
-数。
+当finalKeyDownDuration大于0时，isFinalKeyDown为true，则最终按键按下超过设置时长后触发回调函数；isFinalKeyDown为false，则最终按键按下到抬起时间小于设置时长时触发回调函数。
 
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-KeyOptions-finalKeyDownDuration: int--><!--Device-KeyOptions-finalKeyDownDuration: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -61,6 +72,8 @@ true表示按键按下，false表示按键抬起。
 
 **起始版本：** 8
 
+<!--Device-KeyOptions-isFinalKeyDown: boolean--><!--Device-KeyOptions-isFinalKeyDown: boolean-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **系统接口：** 此接口为系统接口。
@@ -76,6 +89,8 @@ isRepeat?: boolean
 **类型：** boolean
 
 **起始版本：** 18
+
+<!--Device-KeyOptions-isRepeat?: boolean--><!--Device-KeyOptions-isRepeat?: boolean-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -95,6 +110,8 @@ preKeys: Array<number>
 
 **起始版本：** 8
 
+<!--Device-KeyOptions-preKeys: Array<int>--><!--Device-KeyOptions-preKeys: Array<int>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **系统接口：** 此接口为系统接口。
@@ -105,16 +122,15 @@ preKeys: Array<number>
 triggerType?: KeyCommandTriggerType
 ```
 
-触发模式。取值为PRESSED(1)、REPEAT_PRESSED(2)或ALL_RELEASED(3)。启用命令触发模式。一旦设置此值，isFinalKeyDown和isRepeat将被忽略。对于
-[inputConsumer.on('key')](arkts-input-on-f-sys.md#on-1)
-接口该参数是可选参数，对于
-[inputConsumer.onKey](arkts-input-onkey-f-sys.md#onkey-2)接口该参数是必填参数。
+触发模式。取值为PRESSED(1)、REPEAT_PRESSED(2)或ALL_RELEASED(3)。启用命令触发模式。一旦设置此值，isFinalKeyDown和isRepeat将被忽略。对于[inputConsumer.on('key')](arkts-input-on-f-sys.md#on-1)接口该参数是可选参数，对于[inputConsumer.onKey](arkts-input-onkey-f-sys.md#onkey-2)接口该参数是必填参数。
 
 **类型：** KeyCommandTriggerType
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyOptions-triggerType?: KeyCommandTriggerType--><!--Device-KeyOptions-triggerType?: KeyCommandTriggerType-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 

@@ -1,9 +1,10 @@
 # IRemoteObject
 
-Provides methods to query of obtain interface descriptors, add or delete death notifications, dump object status to
-specific files, and send messages.
+Provides methods to query of obtain interface descriptors, add or delete death notifications, dump object status to specific files, and send messages.
 
 **Since:** 7
+
+<!--Device-rpc-abstract class IRemoteObject--><!--Device-rpc-abstract class IRemoteObject-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -27,13 +28,15 @@ Adds a callback for receiving death notifications of the remote object.
 
 **Substitutes:** registerDeathRecipient(recipient:
 
+<!--Device-IRemoteObject-addDeathRecipient(recipient: DeathRecipient, flags: number): boolean--><!--Device-IRemoteObject-addDeathRecipient(recipient: DeathRecipient, flags: number): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recipient | DeathRecipient | Yes | Callback to register. |
+| recipient | [DeathRecipient](arkts-ipc-deathrecipient-i.md) | Yes | Callback to register. |
 | flags | number | Yes | Flag of the death notification. |
 
 **Return value:**
@@ -51,6 +54,8 @@ getDescriptor(): string
 Obtains the interface descriptor (which is a string) of this object.
 
 **Since:** 9
+
+<!--Device-IRemoteObject-getDescriptor(): string--><!--Device-IRemoteObject-getDescriptor(): string-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -80,6 +85,8 @@ Obtains the interface descriptor (which is a string) of this object.
 
 **Substitutes:** [getDescriptor()](arkts-ipc-iremoteobject-c.md#getdescriptor-1)
 
+<!--Device-IRemoteObject-getInterfaceDescriptor(): string--><!--Device-IRemoteObject-getInterfaceDescriptor(): string-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -98,6 +105,8 @@ Obtains the string of the interface descriptor.
 
 **Since:** 9
 
+<!--Device-IRemoteObject-getLocalInterface(descriptor: string): IRemoteBroker--><!--Device-IRemoteObject-getLocalInterface(descriptor: string): IRemoteBroker-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -110,7 +119,7 @@ Obtains the string of the interface descriptor.
 
 | Type | Description |
 | --- | --- |
-| IRemoteBroker | **IRemoteBroker** object bound to the specified interface token. |
+| [IRemoteBroker](arkts-ipc-iremotebroker-i.md) | **IRemoteBroker** object bound to the specified interface token. |
 
 **Error codes:**
 
@@ -127,6 +136,8 @@ isObjectDead(): boolean
 Checks whether this object is dead.
 
 **Since:** 7
+
+<!--Device-IRemoteObject-isObjectDead(): boolean--><!--Device-IRemoteObject-isObjectDead(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -150,6 +161,8 @@ Obtains the string of the interface descriptor.
 
 **Substitutes:** getLocalInterface(descriptor:
 
+<!--Device-IRemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker--><!--Device-IRemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -162,7 +175,7 @@ Obtains the string of the interface descriptor.
 
 | Type | Description |
 | --- | --- |
-| IRemoteBroker | **IRemoteBroker** object bound to the specified interface token. |
+| [IRemoteBroker](arkts-ipc-iremotebroker-i.md) | **IRemoteBroker** object bound to the specified interface token. |
 
 ## registerDeathRecipient
 
@@ -174,13 +187,15 @@ Registers a callback for receiving death notifications of the remote object.
 
 **Since:** 9
 
+<!--Device-IRemoteObject-registerDeathRecipient(recipient: DeathRecipient, flags: int): void--><!--Device-IRemoteObject-registerDeathRecipient(recipient: DeathRecipient, flags: int): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recipient | DeathRecipient | Yes | Callback to register. |
+| recipient | [DeathRecipient](arkts-ipc-deathrecipient-i.md) | Yes | Callback to register. |
 | flags | number | Yes | Flag of the death notification. |
 
 **Error codes:**
@@ -205,13 +220,15 @@ Removes the callback used to receive death notifications of the remote object.
 
 **Substitutes:** unregisterDeathRecipient(recipient:
 
+<!--Device-IRemoteObject-removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean--><!--Device-IRemoteObject-removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recipient | DeathRecipient | Yes | Callback to unregister. |
+| recipient | [DeathRecipient](arkts-ipc-deathrecipient-i.md) | Yes | Callback to unregister. |
 | flags | number | Yes | Flag of the death notification. |
 
 **Return value:**
@@ -231,13 +248,21 @@ sendMessageRequest(
     ): Promise<RequestResult>
 ```
 
-Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous
-mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The
-specific reply needs to be obtained from the callback on the service side. If synchronous mode is set
-in **options**, a promise will be fulfilled when the response to **sendMessageRequest** is returned, and the
-reply message contains the returned information.
+Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendMessageRequest** is returned, and the reply message contains the returned information.
 
 **Since:** 9
+
+<!--Device-IRemoteObject-sendMessageRequest(
+      code: int,
+      data: MessageSequence,
+      reply: MessageSequence,
+      options: MessageOption
+    ): Promise<RequestResult>--><!--Device-IRemoteObject-sendMessageRequest(
+      code: int,
+      data: MessageSequence,
+      reply: MessageSequence,
+      options: MessageOption
+    ): Promise<RequestResult>-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -245,16 +270,16 @@ reply message contains the returned information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | Message code [1-16777215] called by the request, which is determined by the communicationparties. If the method is generated by an IDL tool, the message code is automatically generated by the IDLtool. |
-| data | MessageSequence | Yes | **MessageSequence** object holding the data to send. |
-| reply | MessageSequence | Yes | **MessageSequence** object that receives the response. |
-| options | MessageOption | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
+| code | number | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
+| data | [MessageSequence](arkts-ipc-messagesequence-c.md) | Yes | **MessageSequence** object holding the data to send. |
+| reply | [MessageSequence](arkts-ipc-messagesequence-c.md) | Yes | **MessageSequence** object that receives the response. |
+| options | [MessageOption](arkts-ipc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RequestResult&gt; | Promise used to return a **requestResult** instance. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<RequestResult> | Promise used to return a **requestResult** instance. |
 
 **Error codes:**
 
@@ -274,13 +299,23 @@ sendMessageRequest(
     ): void
 ```
 
-Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous
-mode is set in **options**, a callback will be called immediately, and the reply message is empty. The
-specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in
-**options**, a callback will be invoked when the response to **sendRequest** is returned, and the reply
-message contains the returned information.
+Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a callback will be called immediately, and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a callback will be invoked when the response to **sendRequest** is returned, and the reply message contains the returned information.
 
 **Since:** 9
+
+<!--Device-IRemoteObject-sendMessageRequest(
+      code: int,
+      data: MessageSequence,
+      reply: MessageSequence,
+      options: MessageOption,
+      callback: AsyncCallback<RequestResult>
+    ): void--><!--Device-IRemoteObject-sendMessageRequest(
+      code: int,
+      data: MessageSequence,
+      reply: MessageSequence,
+      options: MessageOption,
+      callback: AsyncCallback<RequestResult>
+    ): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -288,11 +323,11 @@ message contains the returned information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | Message code [1-16777215] called by the request, which is determined by the communicationparties. If the method is generated by an IDL tool, the message code is automatically generated by the IDLtool. |
-| data | MessageSequence | Yes | **MessageSequence** object holding the data to send. |
-| reply | MessageSequence | Yes | **MessageSequence** object that receives the response. |
-| options | MessageOption | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
-| callback | AsyncCallback&lt;RequestResult&gt; | Yes | Callback for receiving the sending result. |
+| code | number | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
+| data | [MessageSequence](arkts-ipc-messagesequence-c.md) | Yes | **MessageSequence** object holding the data to send. |
+| reply | [MessageSequence](arkts-ipc-messagesequence-c.md) | Yes | **MessageSequence** object that receives the response. |
+| options | [MessageOption](arkts-ipc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<RequestResult> | Yes | Callback for receiving the sending result. |
 
 **Error codes:**
 
@@ -306,10 +341,7 @@ message contains the returned information.
 sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean
 ```
 
-Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode
-is set in **options**, a promise will be fulfilled immediately and the reply message does not contain any
-content. If synchronous mode is set in **options**, a promise will be fulfilled when the response to
-**sendRequest** is returned, and the reply message contains the returned information.
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a promise will be fulfilled immediately and the reply message does not contain any content. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains the returned information.
 
 **Since:** 7
 
@@ -317,16 +349,18 @@ content. If synchronous mode is set in **options**, a promise will be fulfilled 
 
 **Substitutes:** sendMessageRequest(code:
 
+<!--Device-IRemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean--><!--Device-IRemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | Message code [1-16777215] called by the request, which is determined by thecommunication parties. If the method is generated by an IDL tool, the message code is automatically generatedby the IDL tool. |
-| data | MessageParcel | Yes | **MessageParcel** object holding the data to send. |
-| reply | MessageParcel | Yes | **MessageParcel** object that receives the response. |
-| options | MessageOption | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
+| code | number | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
+| data | [MessageParcel](arkts-ipc-messageparcel-c.md) | Yes | **MessageParcel** object holding the data to send. |
+| reply | [MessageParcel](arkts-ipc-messageparcel-c.md) | Yes | **MessageParcel** object that receives the response. |
+| options | [MessageOption](arkts-ipc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
 
 **Return value:**
 
@@ -345,11 +379,7 @@ sendRequest(
     ): Promise<SendRequestResult>
 ```
 
-Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode
-is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific
-reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**,
-a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains
-the returned information.
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**,a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains the returned information.
 
 **Since:** 8
 
@@ -357,22 +387,34 @@ the returned information.
 
 **Substitutes:** sendMessageRequest(code:
 
+<!--Device-IRemoteObject-sendRequest(
+      code: number,
+      data: MessageParcel,
+      reply: MessageParcel,
+      options: MessageOption
+    ): Promise<SendRequestResult>--><!--Device-IRemoteObject-sendRequest(
+      code: number,
+      data: MessageParcel,
+      reply: MessageParcel,
+      options: MessageOption
+    ): Promise<SendRequestResult>-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | Message code [1-16777215] called by the request, which is determined by thecommunication parties. If the method is generated by an IDL tool, the message code is automatically generatedby the IDL tool. |
-| data | MessageParcel | Yes | **MessageParcel** object holding the data to send. |
-| reply | MessageParcel | Yes | **MessageParcel** object that receives the response. |
-| options | MessageOption | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
+| code | number | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
+| data | [MessageParcel](arkts-ipc-messageparcel-c.md) | Yes | **MessageParcel** object holding the data to send. |
+| reply | [MessageParcel](arkts-ipc-messageparcel-c.md) | Yes | **MessageParcel** object that receives the response. |
+| options | [MessageOption](arkts-ipc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SendRequestResult&gt; | Promise used to return a **sendRequestResult** instance. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SendRequestResult> | Promise used to return a **sendRequestResult** instance. |
 
 ## sendRequest
 
@@ -386,11 +428,7 @@ sendRequest(
     ): void
 ```
 
-Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode
-is set in **options**, a callback will be called immediately, and the reply message is empty. The specific
-reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**,
-a callback will be invoked when the response to **sendRequest** is returned, and the reply message contains
-the returned information.
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a callback will be called immediately, and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**,a callback will be invoked when the response to **sendRequest** is returned, and the reply message contains the returned information.
 
 **Since:** 8
 
@@ -398,17 +436,31 @@ the returned information.
 
 **Substitutes:** sendMessageRequest(code:
 
+<!--Device-IRemoteObject-sendRequest(
+      code: number,
+      data: MessageParcel,
+      reply: MessageParcel,
+      options: MessageOption,
+      callback: AsyncCallback<SendRequestResult>
+    ): void--><!--Device-IRemoteObject-sendRequest(
+      code: number,
+      data: MessageParcel,
+      reply: MessageParcel,
+      options: MessageOption,
+      callback: AsyncCallback<SendRequestResult>
+    ): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | Message code [1-16777215] called by the request, which is determined by thecommunication parties. If the method is generated by an IDL tool, the message code is automatically generatedby the IDL tool. |
-| data | MessageParcel | Yes | **MessageParcel** object holding the data to send. |
-| reply | MessageParcel | Yes | **MessageParcel** object that receives the response. |
-| options | MessageOption | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
-| callback | AsyncCallback&lt;SendRequestResult&gt; | Yes | Callback for receiving the sending result. |
+| code | number | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
+| data | [MessageParcel](arkts-ipc-messageparcel-c.md) | Yes | **MessageParcel** object holding the data to send. |
+| reply | [MessageParcel](arkts-ipc-messageparcel-c.md) | Yes | **MessageParcel** object that receives the response. |
+| options | [MessageOption](arkts-ipc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<SendRequestResult> | Yes | Callback for receiving the sending result. |
 
 ## unregisterDeathRecipient
 
@@ -420,13 +472,15 @@ Unregisters from the callback used to receive death notifications of the remote 
 
 **Since:** 9
 
+<!--Device-IRemoteObject-unregisterDeathRecipient(recipient: DeathRecipient, flags: int): void--><!--Device-IRemoteObject-unregisterDeathRecipient(recipient: DeathRecipient, flags: int): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recipient | DeathRecipient | Yes | Callback to unregister. |
+| recipient | [DeathRecipient](arkts-ipc-deathrecipient-i.md) | Yes | Callback to unregister. |
 | flags | number | Yes | Flag of the death notification. |
 
 **Error codes:**

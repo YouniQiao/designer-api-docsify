@@ -1,10 +1,10 @@
 # LinkedList
 
-LinkedList is implemented based on the doubly linked list. Each node of the doubly linked list has
-references pointing to the previous element and the next element. When querying an element,
-the system traverses the list from the beginning or end.
+LinkedList is implemented based on the doubly linked list. Each node of the doubly linked list has references pointing to the previous element and the next element. When querying an element,the system traverses the list from the beginning or end.
 
 **Since:** 8
+
+<!--Device-unnamed-declare class LinkedList<T>--><!--Device-unnamed-declare class LinkedList<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,13 +26,15 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LinkedList-[Symbol.iterator](): IterableIterator<T>--><!--Device-LinkedList-[Symbol.iterator](): IterableIterator<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;T&gt; | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<T> | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
 
 **Error codes:**
 
@@ -84,6 +86,8 @@ Adds an element at the end of this LinkedList.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LinkedList-add(element: T): boolean--><!--Device-LinkedList-add(element: T): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -96,7 +100,7 @@ Adds an element at the end of this LinkedList.
 
 | Type | Description |
 | --- | --- |
-| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false**is returned. |
+| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -134,6 +138,8 @@ Adds an element at the top of this LinkedList.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LinkedList-addFirst(element: T): void--><!--Device-LinkedList-addFirst(element: T): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -181,6 +187,8 @@ Clears this LinkedList and sets its length to **0**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LinkedList-clear(): void--><!--Device-LinkedList-clear(): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
@@ -209,12 +217,13 @@ console.info("result:", result);  // result: false
 clone(): LinkedList<T>
 ```
 
-Clones an instance identical to this **LinkedList** and returns it. The modification to the copy does not affect
-the original instance.
+Clones an instance identical to this **LinkedList** and returns it. The modification to the copy does not affect the original instance.
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LinkedList-clone(): LinkedList<T>--><!--Device-LinkedList-clone(): LinkedList<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -222,7 +231,7 @@ the original instance.
 
 | Type | Description |
 | --- | --- |
-| LinkedList&lt;T&gt; | New **LinkedList** instance obtained. |
+| [LinkedList](arkts-arkts-linkedlist-c.md)<T> | New **LinkedList** instance obtained. |
 
 **Error codes:**
 
@@ -255,6 +264,8 @@ A constructor used to create a **LinkedList** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LinkedList-constructor()--><!--Device-LinkedList-constructor()-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
@@ -282,13 +293,15 @@ Converts this LinkedList into an array and returns the array.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LinkedList-convertToArray(): Array<T>--><!--Device-LinkedList-convertToArray(): Array<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | Array obtained. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<T> | Array obtained. |
 
 **Error codes:**
 
@@ -321,14 +334,16 @@ Uses a callback to traverse the elements in this LinkedList and obtain their ind
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LinkedList-forEach(callbackFn: (value: T, index?: number, LinkedList?: LinkedList<T>) => void, thisArg?: Object): void--><!--Device-LinkedList-forEach(callbackFn: (value: T, index?: number, LinkedList?: LinkedList<T>) => void, thisArg?: Object): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, LinkedList?: LinkedList&lt;T&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the LinkedList. |
-| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is thisinstance. |
+| callbackFn | (value: T, index?: number, LinkedList?: LinkedList<T>) => void | Yes | Callback invoked to traverse the elements in the LinkedList. |
+| thisArg | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
 
@@ -365,6 +380,8 @@ Obtains an element at the specified position in this LinkedList.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LinkedList-get(index: int): T--><!--Device-LinkedList-get(index: int): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -415,6 +432,8 @@ Obtains the first element in this LinkedList.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LinkedList-getFirst(): T--><!--Device-LinkedList-getFirst(): T-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -454,6 +473,8 @@ Obtains the index of the first occurrence of the specified element in this Linke
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LinkedList-getIndexOf(element: T): int--><!--Device-LinkedList-getIndexOf(element: T): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -503,6 +524,8 @@ Obtains the last element in this LinkedList.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LinkedList-getLast(): T--><!--Device-LinkedList-getLast(): T-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -542,6 +565,8 @@ Obtains the index of the last occurrence of the specified element in this Linked
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LinkedList-getLastIndexOf(element: T): int--><!--Device-LinkedList-getLastIndexOf(element: T): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -591,6 +616,8 @@ Checks whether this LinkedList has the specified element.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LinkedList-has(element: T): boolean--><!--Device-LinkedList-has(element: T): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -633,13 +660,15 @@ Inserts an element at the specified position in this LinkedList.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LinkedList-insert(index: int, element: T): void--><!--Device-LinkedList-insert(index: int, element: T): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the position where the element is to be inserted. The value must be less than orequal to int32_max, that is, 2147483647. |
+| index | number | Yes | Index of the position where the element is to be inserted. The value must be less than or equal to int32_max, that is, 2147483647. |
 | element | T | Yes | Target element. |
 
 **Error codes:**
@@ -672,6 +701,8 @@ Removes the first occurrence of the specified element from this LinkedList.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LinkedList-remove(element: T): boolean--><!--Device-LinkedList-remove(element: T): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -717,6 +748,8 @@ Searches for an element based on its index and then removes it.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LinkedList-removeByIndex(index: number): T--><!--Device-LinkedList-removeByIndex(index: number): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -765,6 +798,8 @@ Removes the first element from this LinkedList.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LinkedList-removeFirst(): T--><!--Device-LinkedList-removeFirst(): T-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -806,6 +841,8 @@ Removes the first occurrence of the specified element from this LinkedList.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LinkedList-removeFirstFound(element: T): boolean--><!--Device-LinkedList-removeFirstFound(element: T): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -818,7 +855,7 @@ Removes the first occurrence of the specified element from this LinkedList.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the element is removed; returns **false** if the element fails to beremoved or does not exist. |
+| boolean | Returns **true** if the element is removed; returns **false** if the element fails to be removed or does not exist. |
 
 **Error codes:**
 
@@ -852,6 +889,8 @@ Removes the last element from this LinkedList.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LinkedList-removeLast(): T--><!--Device-LinkedList-removeLast(): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -894,6 +933,8 @@ Removes the last occurrence of the specified element from this LinkedList.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LinkedList-removeLastFound(element: T): boolean--><!--Device-LinkedList-removeLastFound(element: T): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -906,7 +947,7 @@ Removes the last occurrence of the specified element from this LinkedList.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the element is removed; returns **false** if the element fails to beremoved or does not exist. |
+| boolean | Returns **true** if the element is removed; returns **false** if the element fails to be removed or does not exist. |
 
 **Error codes:**
 
@@ -940,6 +981,8 @@ Replaces an element at the specified position in this LinkedList with a given el
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LinkedList-set(index: int, element: T): T--><!--Device-LinkedList-set(index: int, element: T): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -990,6 +1033,8 @@ Number of elements in a LinkedList.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LinkedList-length: number--><!--Device-LinkedList-length: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

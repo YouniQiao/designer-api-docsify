@@ -4,6 +4,8 @@ Enumerates the tags used to invoke parameters.
 
 **Since:** 8
 
+<!--Device-huks-export enum HuksTag--><!--Device-huks-export enum HuksTag-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_TAG_INVALID
@@ -20,6 +22,8 @@ Note: This parameter is supported since API version 8 and deprecated since API v
 
 **Deprecated since:** 9
 
+<!--Device-HuksTag-HUKS_TAG_INVALID = HuksTagType.HUKS_TAG_TYPE_INVALID | 0--><!--Device-HuksTag-HUKS_TAG_INVALID = HuksTagType.HUKS_TAG_TYPE_INVALID | 0-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_TAG_ALGORITHM
@@ -33,6 +37,8 @@ Algorithm.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-HuksTag-HUKS_TAG_ALGORITHM = HuksTagType.HUKS_TAG_TYPE_UINT | 1--><!--Device-HuksTag-HUKS_TAG_ALGORITHM = HuksTagType.HUKS_TAG_TYPE_UINT | 1-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -48,6 +54,8 @@ Purpose of the key.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HuksTag-HUKS_TAG_PURPOSE = HuksTagType.HUKS_TAG_TYPE_UINT | 2--><!--Device-HuksTag-HUKS_TAG_PURPOSE = HuksTagType.HUKS_TAG_TYPE_UINT | 2-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_TAG_KEY_SIZE
@@ -62,6 +70,8 @@ Key size, in bits.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HuksTag-HUKS_TAG_KEY_SIZE = HuksTagType.HUKS_TAG_TYPE_UINT | 3--><!--Device-HuksTag-HUKS_TAG_KEY_SIZE = HuksTagType.HUKS_TAG_TYPE_UINT | 3-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_TAG_DIGEST
@@ -75,6 +85,8 @@ Digest algorithm.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksTag-HUKS_TAG_DIGEST = HuksTagType.HUKS_TAG_TYPE_UINT | 4--><!--Device-HuksTag-HUKS_TAG_DIGEST = HuksTagType.HUKS_TAG_TYPE_UINT | 4-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -92,6 +104,8 @@ Padding mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HuksTag-HUKS_TAG_PADDING = HuksTagType.HUKS_TAG_TYPE_UINT | 5--><!--Device-HuksTag-HUKS_TAG_PADDING = HuksTagType.HUKS_TAG_TYPE_UINT | 5-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_TAG_BLOCK_MODE
@@ -105,6 +119,8 @@ Cipher mode.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-HuksTag-HUKS_TAG_BLOCK_MODE = HuksTagType.HUKS_TAG_TYPE_UINT | 6--><!--Device-HuksTag-HUKS_TAG_BLOCK_MODE = HuksTagType.HUKS_TAG_TYPE_UINT | 6-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -120,6 +136,8 @@ Key type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_KEY_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 7--><!--Device-HuksTag-HUKS_TAG_KEY_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 7-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_TAG_ASSOCIATED_DATA
@@ -133,6 +151,8 @@ Associated authentication data.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-HuksTag-HUKS_TAG_ASSOCIATED_DATA = HuksTagType.HUKS_TAG_TYPE_BYTES | 8--><!--Device-HuksTag-HUKS_TAG_ASSOCIATED_DATA = HuksTagType.HUKS_TAG_TYPE_BYTES | 8-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -148,6 +168,8 @@ Nonce for key encryption and decryption.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HuksTag-HUKS_TAG_NONCE = HuksTagType.HUKS_TAG_TYPE_BYTES | 9--><!--Device-HuksTag-HUKS_TAG_NONCE = HuksTagType.HUKS_TAG_TYPE_BYTES | 9-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_TAG_IV
@@ -161,6 +183,8 @@ IV.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksTag-HUKS_TAG_IV = HuksTagType.HUKS_TAG_TYPE_BYTES | 10--><!--Device-HuksTag-HUKS_TAG_IV = HuksTagType.HUKS_TAG_TYPE_BYTES | 10-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -176,6 +200,8 @@ Information generated during key derivation.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_INFO = HuksTagType.HUKS_TAG_TYPE_BYTES | 11--><!--Device-HuksTag-HUKS_TAG_INFO = HuksTagType.HUKS_TAG_TYPE_BYTES | 11-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_TAG_SALT
@@ -189,6 +215,8 @@ Salt value used for key derivation.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksTag-HUKS_TAG_SALT = HuksTagType.HUKS_TAG_TYPE_BYTES | 12--><!--Device-HuksTag-HUKS_TAG_SALT = HuksTagType.HUKS_TAG_TYPE_BYTES | 12-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -208,6 +236,8 @@ Note: This parameter is supported since API version 8 and deprecated since API v
 
 **Deprecated since:** 9
 
+<!--Device-HuksTag-HUKS_TAG_PWD = HuksTagType.HUKS_TAG_TYPE_BYTES | 13--><!--Device-HuksTag-HUKS_TAG_PWD = HuksTagType.HUKS_TAG_TYPE_BYTES | 13-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_TAG_ITERATION
@@ -221,6 +251,8 @@ Number of iterations for key derivation.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksTag-HUKS_TAG_ITERATION = HuksTagType.HUKS_TAG_TYPE_UINT | 14--><!--Device-HuksTag-HUKS_TAG_ITERATION = HuksTagType.HUKS_TAG_TYPE_UINT | 14-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -238,6 +270,8 @@ Key generation type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_KEY_GENERATE_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 15--><!--Device-HuksTag-HUKS_TAG_KEY_GENERATE_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 15-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_TAG_DERIVE_MAIN_KEY
@@ -253,6 +287,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-HuksTag-HUKS_TAG_DERIVE_MAIN_KEY = HuksTagType.HUKS_TAG_TYPE_BYTES | 16--><!--Device-HuksTag-HUKS_TAG_DERIVE_MAIN_KEY = HuksTagType.HUKS_TAG_TYPE_BYTES | 16-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -270,6 +306,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Deprecated since:** 9
 
+<!--Device-HuksTag-HUKS_TAG_DERIVE_FACTOR = HuksTagType.HUKS_TAG_TYPE_BYTES | 17--><!--Device-HuksTag-HUKS_TAG_DERIVE_FACTOR = HuksTagType.HUKS_TAG_TYPE_BYTES | 17-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_DERIVE_ALG
@@ -286,6 +324,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Deprecated since:** 9
 
+<!--Device-HuksTag-HUKS_TAG_DERIVE_ALG = HuksTagType.HUKS_TAG_TYPE_UINT | 18--><!--Device-HuksTag-HUKS_TAG_DERIVE_ALG = HuksTagType.HUKS_TAG_TYPE_UINT | 18-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_AGREE_ALG
@@ -299,6 +339,8 @@ Type of the algorithm used for key agreement.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksTag-HUKS_TAG_AGREE_ALG = HuksTagType.HUKS_TAG_TYPE_UINT | 19--><!--Device-HuksTag-HUKS_TAG_AGREE_ALG = HuksTagType.HUKS_TAG_TYPE_UINT | 19-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -316,6 +358,8 @@ Public key alias used in key agreement.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BOOL | 20--><!--Device-HuksTag-HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BOOL | 20-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
 - API version 8 to 11: SystemCapability.Security.Huks.Extension
@@ -331,6 +375,8 @@ Private key alias used in key agreement.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksTag-HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BYTES | 21--><!--Device-HuksTag-HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BYTES | 21-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -348,6 +394,8 @@ Public key used in key agreement.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_AGREE_PUBLIC_KEY = HuksTagType.HUKS_TAG_TYPE_BYTES | 22--><!--Device-HuksTag-HUKS_TAG_AGREE_PUBLIC_KEY = HuksTagType.HUKS_TAG_TYPE_BYTES | 22-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
 - API version 8 to 11: SystemCapability.Security.Huks.Extension
@@ -364,6 +412,8 @@ Key alias.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HuksTag-HUKS_TAG_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BYTES | 23--><!--Device-HuksTag-HUKS_TAG_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BYTES | 23-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_TAG_DERIVE_KEY_SIZE
@@ -377,6 +427,8 @@ Size of the derived key, in bytes.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksTag-HUKS_TAG_DERIVE_KEY_SIZE = HuksTagType.HUKS_TAG_TYPE_UINT | 24--><!--Device-HuksTag-HUKS_TAG_DERIVE_KEY_SIZE = HuksTagType.HUKS_TAG_TYPE_UINT | 24-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -394,6 +446,8 @@ Type of the imported key.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_IMPORT_KEY_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 25--><!--Device-HuksTag-HUKS_TAG_IMPORT_KEY_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 25-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
 - API version 9 to 11: SystemCapability.Security.Huks.Extension
@@ -409,6 +463,8 @@ Suite for securely importing a key.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksTag-HUKS_TAG_UNWRAP_ALGORITHM_SUITE = HuksTagType.HUKS_TAG_TYPE_UINT | 26--><!--Device-HuksTag-HUKS_TAG_UNWRAP_ALGORITHM_SUITE = HuksTagType.HUKS_TAG_TYPE_UINT | 26-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -426,6 +482,8 @@ Storage type of the derived key or agreed key.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG = HuksTagType.HUKS_TAG_TYPE_UINT | 29--><!--Device-HuksTag-HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG = HuksTagType.HUKS_TAG_TYPE_UINT | 29-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
 - API version 10 to 11: SystemCapability.Security.Huks.Extension
@@ -442,6 +500,8 @@ Type of the **rsa_pss_salt_length**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_RSA_PSS_SALT_LEN_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 30--><!--Device-HuksTag-HUKS_TAG_RSA_PSS_SALT_LEN_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 30-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
 - API version 10 to 11: SystemCapability.Security.Huks.Extension
@@ -452,14 +512,15 @@ Type of the **rsa_pss_salt_length**.
 HUKS_TAG_ACTIVE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 201
 ```
 
-Parameter originally reserved for certificate management. It is deprecated because certificate management is no
-longer implemented in this module.
+Parameter originally reserved for certificate management. It is deprecated because certificate management is no longer implemented in this module.
 
 Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-HuksTag-HUKS_TAG_ACTIVE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 201--><!--Device-HuksTag-HUKS_TAG_ACTIVE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 201-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -469,14 +530,15 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_ORIGINATION_EXPIRE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 202
 ```
 
-Parameter originally reserved for certificate management. It is deprecated because certificate management is no
-longer implemented in this module.
+Parameter originally reserved for certificate management. It is deprecated because certificate management is no longer implemented in this module.
 
 Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-HuksTag-HUKS_TAG_ORIGINATION_EXPIRE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 202--><!--Device-HuksTag-HUKS_TAG_ORIGINATION_EXPIRE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 202-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -486,14 +548,15 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_USAGE_EXPIRE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 203
 ```
 
-Parameter originally reserved for certificate management. It is deprecated because certificate management is no
-longer implemented in this module.
+Parameter originally reserved for certificate management. It is deprecated because certificate management is no longer implemented in this module.
 
 Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-HuksTag-HUKS_TAG_USAGE_EXPIRE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 203--><!--Device-HuksTag-HUKS_TAG_USAGE_EXPIRE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 203-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -503,14 +566,15 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 HUKS_TAG_CREATION_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 204
 ```
 
-Parameter originally reserved for certificate management. It is deprecated because certificate management is no
-longer implemented in this module.
+Parameter originally reserved for certificate management. It is deprecated because certificate management is no longer implemented in this module.
 
 Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-HuksTag-HUKS_TAG_CREATION_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 204--><!--Device-HuksTag-HUKS_TAG_CREATION_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 204-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -525,6 +589,8 @@ Reserved.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksTag-HUKS_TAG_ALL_USERS = HuksTagType.HUKS_TAG_TYPE_BOOL | 301--><!--Device-HuksTag-HUKS_TAG_ALL_USERS = HuksTagType.HUKS_TAG_TYPE_BOOL | 301-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -542,6 +608,8 @@ ID of the user to which the key belongs.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_USER_ID = HuksTagType.HUKS_TAG_TYPE_UINT | 302--><!--Device-HuksTag-HUKS_TAG_USER_ID = HuksTagType.HUKS_TAG_TYPE_UINT | 302-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
 - API version 8 to 11: SystemCapability.Security.Huks.Extension
@@ -558,6 +626,8 @@ Reserved.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_NO_AUTH_REQUIRED = HuksTagType.HUKS_TAG_TYPE_BOOL | 303--><!--Device-HuksTag-HUKS_TAG_NO_AUTH_REQUIRED = HuksTagType.HUKS_TAG_TYPE_BOOL | 303-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
 - API version 8 to 11: SystemCapability.Security.Huks.Extension
@@ -568,15 +638,13 @@ Reserved.
 HUKS_TAG_USER_AUTH_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 304
 ```
 
-User authentication type. For details, see [HuksUserAuthType](arkts-universalkeystore-huksuserauthtype-e.md). This parameter must
-be set together with [HuksAuthAccessType](arkts-universalkeystore-huksauthaccesstype-e.md). You can set a maximum of two user
-authentication types at a time. For example, if **HuksAuthAccessType** is
-**HUKS_AUTH_ACCESS_INVALID_NEW_BIO_ENROLL**, you can set two of **HUKS_USER_AUTH_TYPE_FACE**,
-**HUKS_USER_AUTH_TYPE_FINGERPRINT**, and **HUKS_USER_AUTH_TYPE_FACE | HUKS_USER_AUTH_TYPE_FINGERPRINT**.
+User authentication type. For details, see [HuksUserAuthType](arkts-universalkeystore-huksuserauthtype-e.md). This parameter must be set together with [HuksAuthAccessType](arkts-universalkeystore-huksauthaccesstype-e.md). You can set a maximum of two user authentication types at a time. For example, if **HuksAuthAccessType** is **HUKS_AUTH_ACCESS_INVALID_NEW_BIO_ENROLL**, you can set two of **HUKS_USER_AUTH_TYPE_FACE**,**HUKS_USER_AUTH_TYPE_FINGERPRINT**, and **HUKS_USER_AUTH_TYPE_FACE | HUKS_USER_AUTH_TYPE_FINGERPRINT**.
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksTag-HUKS_TAG_USER_AUTH_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 304--><!--Device-HuksTag-HUKS_TAG_USER_AUTH_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 304-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -592,6 +660,8 @@ One-time validity period of the authentication token, in seconds.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_AUTH_TIMEOUT = HuksTagType.HUKS_TAG_TYPE_UINT | 305--><!--Device-HuksTag-HUKS_TAG_AUTH_TIMEOUT = HuksTagType.HUKS_TAG_TYPE_UINT | 305-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_AUTH_TOKEN
@@ -606,6 +676,8 @@ Authentication token.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_AUTH_TOKEN = HuksTagType.HUKS_TAG_TYPE_BYTES | 306--><!--Device-HuksTag-HUKS_TAG_AUTH_TOKEN = HuksTagType.HUKS_TAG_TYPE_BYTES | 306-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_KEY_AUTH_ACCESS_TYPE
@@ -614,12 +686,13 @@ Authentication token.
 HUKS_TAG_KEY_AUTH_ACCESS_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 307
 ```
 
-Access control type. For details, see [HuksAuthAccessType](arkts-universalkeystore-huksauthaccesstype-e.md). This parameter must be
-set together with [HuksUserAuthType](arkts-universalkeystore-huksuserauthtype-e.md).
+Access control type. For details, see [HuksAuthAccessType](arkts-universalkeystore-huksauthaccesstype-e.md). This parameter must be set together with [HuksUserAuthType](arkts-universalkeystore-huksuserauthtype-e.md).
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksTag-HUKS_TAG_KEY_AUTH_ACCESS_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 307--><!--Device-HuksTag-HUKS_TAG_KEY_AUTH_ACCESS_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 307-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -635,6 +708,8 @@ Signature type of the key generated or imported.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_KEY_SECURE_SIGN_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 308--><!--Device-HuksTag-HUKS_TAG_KEY_SECURE_SIGN_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 308-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_CHALLENGE_TYPE
@@ -649,6 +724,8 @@ Type of the challenge generated for a key. For details, see [HuksChallengeType](
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_CHALLENGE_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 309--><!--Device-HuksTag-HUKS_TAG_CHALLENGE_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 309-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_CHALLENGE_POS
@@ -657,12 +734,13 @@ Type of the challenge generated for a key. For details, see [HuksChallengeType](
 HUKS_TAG_CHALLENGE_POS = HuksTagType.HUKS_TAG_TYPE_UINT | 310
 ```
 
-Position of the 8-byte valid value in a custom challenge. For details, see
-[HuksChallengePosition](arkts-universalkeystore-hukschallengeposition-e.md).
+Position of the 8-byte valid value in a custom challenge. For details, see [HuksChallengePosition](arkts-universalkeystore-hukschallengeposition-e.md).
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksTag-HUKS_TAG_CHALLENGE_POS = HuksTagType.HUKS_TAG_TYPE_UINT | 310--><!--Device-HuksTag-HUKS_TAG_CHALLENGE_POS = HuksTagType.HUKS_TAG_TYPE_UINT | 310-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -678,6 +756,8 @@ Key authentication purpose.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_KEY_AUTH_PURPOSE = HuksTagType.HUKS_TAG_TYPE_UINT | 311--><!--Device-HuksTag-HUKS_TAG_KEY_AUTH_PURPOSE = HuksTagType.HUKS_TAG_TYPE_UINT | 311-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_AUTH_STORAGE_LEVEL
@@ -691,6 +771,8 @@ Key storage security level, which is a value of [HuksAuthStorageLevel](arkts-uni
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksTag-HUKS_TAG_AUTH_STORAGE_LEVEL = HuksTagType.HUKS_TAG_TYPE_UINT | 316--><!--Device-HuksTag-HUKS_TAG_AUTH_STORAGE_LEVEL = HuksTagType.HUKS_TAG_TYPE_UINT | 316-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -706,6 +788,8 @@ User authentication mode. It is a value of [HuksUserAuthMode](arkts-universalkey
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_USER_AUTH_MODE = HuksTagType.HUKS_TAG_TYPE_UINT | 319--><!--Device-HuksTag-HUKS_TAG_USER_AUTH_MODE = HuksTagType.HUKS_TAG_TYPE_UINT | 319-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_ATTESTATION_CHALLENGE
@@ -720,6 +804,8 @@ Challenge value used in the attestation.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_ATTESTATION_CHALLENGE = HuksTagType.HUKS_TAG_TYPE_BYTES | 501--><!--Device-HuksTag-HUKS_TAG_ATTESTATION_CHALLENGE = HuksTagType.HUKS_TAG_TYPE_BYTES | 501-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_ATTESTATION_APPLICATION_ID
@@ -733,6 +819,8 @@ Application ID used in the attestation.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksTag-HUKS_TAG_ATTESTATION_APPLICATION_ID = HuksTagType.HUKS_TAG_TYPE_BYTES | 502--><!--Device-HuksTag-HUKS_TAG_ATTESTATION_APPLICATION_ID = HuksTagType.HUKS_TAG_TYPE_BYTES | 502-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -750,6 +838,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Deprecated since:** 9
 
+<!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_BRAND = HuksTagType.HUKS_TAG_TYPE_BYTES | 503--><!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_BRAND = HuksTagType.HUKS_TAG_TYPE_BYTES | 503-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_ATTESTATION_ID_DEVICE
@@ -765,6 +855,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_DEVICE = HuksTagType.HUKS_TAG_TYPE_BYTES | 504--><!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_DEVICE = HuksTagType.HUKS_TAG_TYPE_BYTES | 504-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -782,6 +874,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Deprecated since:** 9
 
+<!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_PRODUCT = HuksTagType.HUKS_TAG_TYPE_BYTES | 505--><!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_PRODUCT = HuksTagType.HUKS_TAG_TYPE_BYTES | 505-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_ATTESTATION_ID_SERIAL
@@ -797,6 +891,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_SERIAL = HuksTagType.HUKS_TAG_TYPE_BYTES | 506--><!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_SERIAL = HuksTagType.HUKS_TAG_TYPE_BYTES | 506-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -814,6 +910,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Deprecated since:** 9
 
+<!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_IMEI = HuksTagType.HUKS_TAG_TYPE_BYTES | 507--><!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_IMEI = HuksTagType.HUKS_TAG_TYPE_BYTES | 507-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_ATTESTATION_ID_MEID
@@ -829,6 +927,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_MEID = HuksTagType.HUKS_TAG_TYPE_BYTES | 508--><!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_MEID = HuksTagType.HUKS_TAG_TYPE_BYTES | 508-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -846,6 +946,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Deprecated since:** 9
 
+<!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_MANUFACTURER = HuksTagType.HUKS_TAG_TYPE_BYTES | 509--><!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_MANUFACTURER = HuksTagType.HUKS_TAG_TYPE_BYTES | 509-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_ATTESTATION_ID_MODEL
@@ -862,6 +964,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Deprecated since:** 9
 
+<!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_MODEL = HuksTagType.HUKS_TAG_TYPE_BYTES | 510--><!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_MODEL = HuksTagType.HUKS_TAG_TYPE_BYTES | 510-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_ATTESTATION_ID_ALIAS
@@ -875,6 +979,8 @@ Key alias used in the attestation.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_ALIAS = HuksTagType.HUKS_TAG_TYPE_BYTES | 511--><!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_ALIAS = HuksTagType.HUKS_TAG_TYPE_BYTES | 511-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -892,6 +998,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Deprecated since:** 9
 
+<!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_SOCID = HuksTagType.HUKS_TAG_TYPE_BYTES | 512--><!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_SOCID = HuksTagType.HUKS_TAG_TYPE_BYTES | 512-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_ATTESTATION_ID_UDID
@@ -908,6 +1016,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Deprecated since:** 9
 
+<!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_UDID = HuksTagType.HUKS_TAG_TYPE_BYTES | 513--><!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_UDID = HuksTagType.HUKS_TAG_TYPE_BYTES | 513-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_ATTESTATION_ID_SEC_LEVEL_INFO
@@ -921,6 +1031,8 @@ Security level used in the attestation.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_SEC_LEVEL_INFO = HuksTagType.HUKS_TAG_TYPE_BYTES | 514--><!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_SEC_LEVEL_INFO = HuksTagType.HUKS_TAG_TYPE_BYTES | 514-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -936,6 +1048,8 @@ Version information used in the attestation.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_VERSION_INFO = HuksTagType.HUKS_TAG_TYPE_BYTES | 515--><!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_VERSION_INFO = HuksTagType.HUKS_TAG_TYPE_BYTES | 515-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_KEY_OVERRIDE
@@ -949,6 +1063,8 @@ Whether to overwrite the key with the same name.
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-HuksTag-HUKS_TAG_KEY_OVERRIDE = HuksTagType.HUKS_TAG_TYPE_BOOL | 520--><!--Device-HuksTag-HUKS_TAG_KEY_OVERRIDE = HuksTagType.HUKS_TAG_TYPE_BOOL | 520-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -964,6 +1080,8 @@ Length of the specified AEAD tag, in bytes.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-HuksTag-HUKS_TAG_AE_TAG_LEN = HuksTagType.HUKS_TAG_TYPE_UINT | 521--><!--Device-HuksTag-HUKS_TAG_AE_TAG_LEN = HuksTagType.HUKS_TAG_TYPE_UINT | 521-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_TAG_KEY_CLASS
@@ -975,6 +1093,8 @@ HUKS_TAG_KEY_CLASS = HuksTagType.HUKS_TAG_TYPE_UINT | 522
 Key source.
 
 **Since:** 22
+
+<!--Device-HuksTag-HUKS_TAG_KEY_CLASS = HuksTagType.HUKS_TAG_TYPE_UINT | 522--><!--Device-HuksTag-HUKS_TAG_KEY_CLASS = HuksTagType.HUKS_TAG_TYPE_UINT | 522-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -990,6 +1110,8 @@ Information about the specified group.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-HuksTag-HUKS_TAG_KEY_ACCESS_GROUP = HuksTagType.HUKS_TAG_TYPE_BYTES | 523--><!--Device-HuksTag-HUKS_TAG_KEY_ACCESS_GROUP = HuksTagType.HUKS_TAG_TYPE_BYTES | 523-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_KEY_SECURITY_LEVEL
@@ -1003,6 +1125,8 @@ Security level of the key.
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-HuksTag-HUKS_TAG_KEY_SECURITY_LEVEL = HuksTagType.HUKS_TAG_TYPE_UINT | 526--><!--Device-HuksTag-HUKS_TAG_KEY_SECURITY_LEVEL = HuksTagType.HUKS_TAG_TYPE_UINT | 526-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -1018,6 +1142,8 @@ Additional verification data indicating the GCM or CCM mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-HuksTag-HUKS_TAG_AAD = HuksTagType.HUKS_TAG_TYPE_BYTES | 527--><!--Device-HuksTag-HUKS_TAG_AAD = HuksTagType.HUKS_TAG_TYPE_BYTES | 527-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_TAG_CONTEXT
@@ -1031,6 +1157,8 @@ The tag indicates the context for crypto operations, such as ML-DSA, etc.
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-HuksTag-HUKS_TAG_CONTEXT = HuksTagType.HUKS_TAG_TYPE_BYTES | 528--><!--Device-HuksTag-HUKS_TAG_CONTEXT = HuksTagType.HUKS_TAG_TYPE_BYTES | 528-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -1046,6 +1174,8 @@ Whether to use the alias passed in during key generation.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_IS_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BOOL | 1001--><!--Device-HuksTag-HUKS_TAG_IS_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BOOL | 1001-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_TAG_KEY_STORAGE_FLAG
@@ -1060,6 +1190,8 @@ Key storage mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_KEY_STORAGE_FLAG = HuksTagType.HUKS_TAG_TYPE_UINT | 1002--><!--Device-HuksTag-HUKS_TAG_KEY_STORAGE_FLAG = HuksTagType.HUKS_TAG_TYPE_UINT | 1002-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_TAG_IS_ALLOWED_WRAP
@@ -1073,6 +1205,8 @@ Reserved.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksTag-HUKS_TAG_IS_ALLOWED_WRAP = HuksTagType.HUKS_TAG_TYPE_BOOL | 1003--><!--Device-HuksTag-HUKS_TAG_IS_ALLOWED_WRAP = HuksTagType.HUKS_TAG_TYPE_BOOL | 1003-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -1090,6 +1224,8 @@ Reserved.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_KEY_WRAP_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 1004--><!--Device-HuksTag-HUKS_TAG_KEY_WRAP_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 1004-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
 - API version 8 to 11: SystemCapability.Security.Huks.Extension
@@ -1106,6 +1242,8 @@ Reserved.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_KEY_AUTH_ID = HuksTagType.HUKS_TAG_TYPE_BYTES | 1005--><!--Device-HuksTag-HUKS_TAG_KEY_AUTH_ID = HuksTagType.HUKS_TAG_TYPE_BYTES | 1005-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_KEY_ROLE
@@ -1119,6 +1257,8 @@ Reserved.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksTag-HUKS_TAG_KEY_ROLE = HuksTagType.HUKS_TAG_TYPE_UINT | 1006--><!--Device-HuksTag-HUKS_TAG_KEY_ROLE = HuksTagType.HUKS_TAG_TYPE_UINT | 1006-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -1136,6 +1276,8 @@ Flag of the key.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_KEY_FLAG = HuksTagType.HUKS_TAG_TYPE_UINT | 1007--><!--Device-HuksTag-HUKS_TAG_KEY_FLAG = HuksTagType.HUKS_TAG_TYPE_UINT | 1007-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_TAG_IS_ASYNCHRONIZED
@@ -1149,6 +1291,8 @@ Reserved.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksTag-HUKS_TAG_IS_ASYNCHRONIZED = HuksTagType.HUKS_TAG_TYPE_UINT | 1008--><!--Device-HuksTag-HUKS_TAG_IS_ASYNCHRONIZED = HuksTagType.HUKS_TAG_TYPE_UINT | 1008-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -1168,6 +1312,8 @@ Note: This parameter is supported since API version 8 and deprecated since API v
 
 **Deprecated since:** 9
 
+<!--Device-HuksTag-HUKS_TAG_SECURE_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BOOL | 1009--><!--Device-HuksTag-HUKS_TAG_SECURE_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BOOL | 1009-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_TAG_SECURE_KEY_UUID
@@ -1184,6 +1330,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Deprecated since:** 9
 
+<!--Device-HuksTag-HUKS_TAG_SECURE_KEY_UUID = HuksTagType.HUKS_TAG_TYPE_BYTES | 1010--><!--Device-HuksTag-HUKS_TAG_SECURE_KEY_UUID = HuksTagType.HUKS_TAG_TYPE_BYTES | 1010-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_KEY_DOMAIN
@@ -1198,6 +1346,8 @@ Reserved.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_KEY_DOMAIN = HuksTagType.HUKS_TAG_TYPE_UINT | 1011--><!--Device-HuksTag-HUKS_TAG_KEY_DOMAIN = HuksTagType.HUKS_TAG_TYPE_UINT | 1011-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_TAG_IS_DEVICE_PASSWORD_SET
@@ -1211,6 +1361,8 @@ Whether the key is accessible only when the user sets a lock screen password.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksTag-HUKS_TAG_IS_DEVICE_PASSWORD_SET = HuksTagType.HUKS_TAG_TYPE_BOOL | 1012--><!--Device-HuksTag-HUKS_TAG_IS_DEVICE_PASSWORD_SET = HuksTagType.HUKS_TAG_TYPE_BOOL | 1012-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -1228,6 +1380,8 @@ Note: This parameter is supported since API version 8 and deprecated since API v
 
 **Deprecated since:** 9
 
+<!--Device-HuksTag-HUKS_TAG_PROCESS_NAME = HuksTagType.HUKS_TAG_TYPE_BYTES | 10001--><!--Device-HuksTag-HUKS_TAG_PROCESS_NAME = HuksTagType.HUKS_TAG_TYPE_BYTES | 10001-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_TAG_PACKAGE_NAME
@@ -1243,6 +1397,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-HuksTag-HUKS_TAG_PACKAGE_NAME = HuksTagType.HUKS_TAG_TYPE_BYTES | 10002--><!--Device-HuksTag-HUKS_TAG_PACKAGE_NAME = HuksTagType.HUKS_TAG_TYPE_BYTES | 10002-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -1260,6 +1416,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Deprecated since:** 9
 
+<!--Device-HuksTag-HUKS_TAG_ACCESS_TIME = HuksTagType.HUKS_TAG_TYPE_UINT | 10003--><!--Device-HuksTag-HUKS_TAG_ACCESS_TIME = HuksTagType.HUKS_TAG_TYPE_UINT | 10003-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_USES_TIME
@@ -1275,6 +1433,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-HuksTag-HUKS_TAG_USES_TIME = HuksTagType.HUKS_TAG_TYPE_UINT | 10004--><!--Device-HuksTag-HUKS_TAG_USES_TIME = HuksTagType.HUKS_TAG_TYPE_UINT | 10004-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -1292,6 +1452,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Deprecated since:** 9
 
+<!--Device-HuksTag-HUKS_TAG_CRYPTO_CTX = HuksTagType.HUKS_TAG_TYPE_ULONG | 10005--><!--Device-HuksTag-HUKS_TAG_CRYPTO_CTX = HuksTagType.HUKS_TAG_TYPE_ULONG | 10005-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_KEY
@@ -1305,6 +1467,8 @@ Reserved.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksTag-HUKS_TAG_KEY = HuksTagType.HUKS_TAG_TYPE_BYTES | 10006--><!--Device-HuksTag-HUKS_TAG_KEY = HuksTagType.HUKS_TAG_TYPE_BYTES | 10006-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -1322,6 +1486,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Deprecated since:** 9
 
+<!--Device-HuksTag-HUKS_TAG_KEY_VERSION = HuksTagType.HUKS_TAG_TYPE_UINT | 10007--><!--Device-HuksTag-HUKS_TAG_KEY_VERSION = HuksTagType.HUKS_TAG_TYPE_UINT | 10007-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_PAYLOAD_LEN
@@ -1338,6 +1504,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Deprecated since:** 9
 
+<!--Device-HuksTag-HUKS_TAG_PAYLOAD_LEN = HuksTagType.HUKS_TAG_TYPE_UINT | 10008--><!--Device-HuksTag-HUKS_TAG_PAYLOAD_LEN = HuksTagType.HUKS_TAG_TYPE_UINT | 10008-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_AE_TAG
@@ -1351,6 +1519,8 @@ Used to pass in the AEAD in GCM mode.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-HuksTag-HUKS_TAG_AE_TAG = HuksTagType.HUKS_TAG_TYPE_BYTES | 10009--><!--Device-HuksTag-HUKS_TAG_AE_TAG = HuksTagType.HUKS_TAG_TYPE_BYTES | 10009-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -1368,6 +1538,8 @@ Note: This parameter is supported since API version 8 and deprecated since API v
 
 **Deprecated since:** 9
 
+<!--Device-HuksTag-HUKS_TAG_IS_KEY_HANDLE = HuksTagType.HUKS_TAG_TYPE_ULONG | 10010--><!--Device-HuksTag-HUKS_TAG_IS_KEY_HANDLE = HuksTagType.HUKS_TAG_TYPE_ULONG | 10010-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_TAG_OS_VERSION
@@ -1383,6 +1555,8 @@ Note: This parameter is supported since API version 8 and deprecated since API v
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-HuksTag-HUKS_TAG_OS_VERSION = HuksTagType.HUKS_TAG_TYPE_UINT | 10101--><!--Device-HuksTag-HUKS_TAG_OS_VERSION = HuksTagType.HUKS_TAG_TYPE_UINT | 10101-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -1400,6 +1574,8 @@ Note: This parameter is supported since API version 8 and deprecated since API v
 
 **Deprecated since:** 9
 
+<!--Device-HuksTag-HUKS_TAG_OS_PATCHLEVEL = HuksTagType.HUKS_TAG_TYPE_UINT | 10102--><!--Device-HuksTag-HUKS_TAG_OS_PATCHLEVEL = HuksTagType.HUKS_TAG_TYPE_UINT | 10102-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_TAG_SYMMETRIC_KEY_DATA
@@ -1414,6 +1590,8 @@ Reserved.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksTag-HUKS_TAG_SYMMETRIC_KEY_DATA = HuksTagType.HUKS_TAG_TYPE_BYTES | 20001--><!--Device-HuksTag-HUKS_TAG_SYMMETRIC_KEY_DATA = HuksTagType.HUKS_TAG_TYPE_BYTES | 20001-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_TAG_ASYMMETRIC_PUBLIC_KEY_DATA
@@ -1427,6 +1605,8 @@ Reserved.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksTag-HUKS_TAG_ASYMMETRIC_PUBLIC_KEY_DATA = HuksTagType.HUKS_TAG_TYPE_BYTES | 20002--><!--Device-HuksTag-HUKS_TAG_ASYMMETRIC_PUBLIC_KEY_DATA = HuksTagType.HUKS_TAG_TYPE_BYTES | 20002-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -1443,6 +1623,8 @@ Reserved.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksTag-HUKS_TAG_ASYMMETRIC_PRIVATE_KEY_DATA = HuksTagType.HUKS_TAG_TYPE_BYTES | 20003--><!--Device-HuksTag-HUKS_TAG_ASYMMETRIC_PRIVATE_KEY_DATA = HuksTagType.HUKS_TAG_TYPE_BYTES | 20003-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core

@@ -4,6 +4,8 @@
 
 **起始版本：** 21
 
+<!--Device-audio-enum AudioLoopbackEqualizerPreset--><!--Device-audio-enum AudioLoopbackEqualizerPreset-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 ## FLAT
@@ -15,6 +17,8 @@ FLAT = 1
 保持原始声音，不进行均衡调节。
 
 **起始版本：** 21
+
+<!--Device-AudioLoopbackEqualizerPreset-FLAT = 1--><!--Device-AudioLoopbackEqualizerPreset-FLAT = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -28,6 +32,8 @@ FULL = 2
 
 **起始版本：** 21
 
+<!--Device-AudioLoopbackEqualizerPreset-FULL = 2--><!--Device-AudioLoopbackEqualizerPreset-FULL = 2-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 ## BRIGHT
@@ -39,6 +45,8 @@ BRIGHT = 3
 使人声更明亮。
 
 **起始版本：** 21
+
+<!--Device-AudioLoopbackEqualizerPreset-BRIGHT = 3--><!--Device-AudioLoopbackEqualizerPreset-BRIGHT = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 

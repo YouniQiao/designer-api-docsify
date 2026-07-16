@@ -4,6 +4,8 @@ Represents a board style object.
 
 **Since:** 10
 
+<!--Device-unnamed-interface BoardStyle--><!--Device-unnamed-interface BoardStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## borderRadius
@@ -29,6 +31,8 @@ Value range: [0, +∞)
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-BoardStyle-borderRadius?: Length--><!--Device-BoardStyle-borderRadius?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

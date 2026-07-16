@@ -1,9 +1,10 @@
 # AuthOptions (System API)
 
-Represents a set of optional parameters for
-[auth](arkts-basicservices-userauth-c-sys.md#auth-2).
+Represents a set of optional parameters for [auth](arkts-basicservices-userauth-c-sys.md#auth-2).
 
 **Since:** 12
+
+<!--Device-osAccount-interface AuthOptions--><!--Device-osAccount-interface AuthOptions-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -27,6 +28,8 @@ OS account ID, which is **undefined** by default.
 
 **Since:** 12
 
+<!--Device-AuthOptions-accountId?: int--><!--Device-AuthOptions-accountId?: int-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -45,6 +48,8 @@ Indicates the additional information about the authentication options.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AuthOptions-additionalInfo?: string--><!--Device-AuthOptions-additionalInfo?: string-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -61,6 +66,8 @@ Authentication intent, which is **undefined** by default.
 
 **Since:** 12
 
+<!--Device-AuthOptions-authIntent?: AuthIntent--><!--Device-AuthOptions-authIntent?: AuthIntent-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -76,6 +83,8 @@ Remote authentication options, which is **undefined** by default.
 **Type:** RemoteAuthOptions
 
 **Since:** 12
+
+<!--Device-AuthOptions-remoteAuthOptions?: RemoteAuthOptions--><!--Device-AuthOptions-remoteAuthOptions?: RemoteAuthOptions-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 

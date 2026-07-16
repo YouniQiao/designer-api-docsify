@@ -4,6 +4,8 @@ Indicates the options for VCard export.
 
 **Since:** 23
 
+<!--Device-vcard-export interface VCardBuilderOptions--><!--Device-vcard-export interface VCardBuilderOptions-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Indicates the VCard types.
 
 **Since:** 23
 
+<!--Device-VCardBuilderOptions-cardType?: VCardType--><!--Device-VCardBuilderOptions-cardType?: VCardType-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## charset
@@ -37,6 +41,8 @@ Indicates the Encoding format.
 **Type:** string
 
 **Since:** 23
+
+<!--Device-VCardBuilderOptions-charset?: string--><!--Device-VCardBuilderOptions-charset?: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 

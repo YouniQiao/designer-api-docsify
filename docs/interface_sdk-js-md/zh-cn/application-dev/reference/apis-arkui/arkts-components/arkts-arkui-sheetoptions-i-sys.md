@@ -8,6 +8,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare interface SheetOptions extends BindOptions--><!--Device-unnamed-declare interface SheetOptions extends BindOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## edgeLightMode
@@ -30,6 +32,8 @@ edgeLightMode?: EdgeLightMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SheetOptions-edgeLightMode?: EdgeLightMode--><!--Device-SheetOptions-edgeLightMode?: EdgeLightMode-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -40,9 +44,7 @@ edgeLightMode?: EdgeLightMode
 enableBlurSnapshot?: boolean
 ```
 
-指定是否对半模态启用模糊优化。
-启用后，将使用模糊快照渲染半模态背景。
-该属性在半模态显示后不能动态切换。
+指定是否对半模态启用模糊优化。启用后，将使用模糊快照渲染半模态背景。该属性在半模态显示后不能动态切换。
 
 **类型：** boolean
 
@@ -52,7 +54,9 @@ enableBlurSnapshot?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SheetOptions-enableBlurSnapshot?: boolean--><!--Device-SheetOptions-enableBlurSnapshot?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -75,6 +79,8 @@ offset?: Position
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SheetOptions-offset?: Position--><!--Device-SheetOptions-offset?: Position-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

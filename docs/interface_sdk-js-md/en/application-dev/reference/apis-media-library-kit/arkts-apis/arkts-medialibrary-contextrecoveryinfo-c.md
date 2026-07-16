@@ -1,9 +1,10 @@
 # ContextRecoveryInfo
 
-Describes the information about the context of exiting the PhotoPicker. It can be used during the subsequent launch
-of the PhotoPicker to restore the state from the previous exit.
+Describes the information about the context of exiting the PhotoPicker. It can be used during the subsequent launch of the PhotoPicker to restore the state from the previous exit.
 
 **Since:** 21
+
+<!--Device-photoAccessHelper-export class ContextRecoveryInfo--><!--Device-photoAccessHelper-export class ContextRecoveryInfo-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -21,9 +22,8 @@ albumUri: string
 
 URI of the album in the media library when the user selects an image and exits.
 
-- If the user selects from all images, **albumUri** is a fixed **"allPhotos"** string.
-- If the user exits after selecting from search results, text recommendations, or avatar recommendations, the
-next restoration is not supported, and the returned **albumUri** is an empty string.
+- If the user selects from all images, **albumUri** is a fixed **"allPhotos"** string.  
+- If the user exits after selecting from search results, text recommendations, or avatar recommendations, the next restoration is not supported, and the returned **albumUri** is an empty string.
 
 The default value is an empty string.
 
@@ -33,6 +33,8 @@ The default value is an empty string.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-ContextRecoveryInfo-albumUri: string--><!--Device-ContextRecoveryInfo-albumUri: string-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## displayName
@@ -41,14 +43,15 @@ The default value is an empty string.
 displayName: string
 ```
 
-File name of the top-left image in the grid interface when the user last selected an image. The default value is
-an empty string.
+File name of the top-left image in the grid interface when the user last selected an image. The default value is an empty string.
 
 **Type:** string
 
 **Since:** 21
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-ContextRecoveryInfo-displayName: string--><!--Device-ContextRecoveryInfo-displayName: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -58,9 +61,7 @@ an empty string.
 fileSize?: number
 ```
 
-File size of the top-left image in the grid interface when the user last selected an image. The default value is
-**0**.
-Unit: Byte, The value must be an integer greater than or equal to 0.
+File size of the top-left image in the grid interface when the user last selected an image. The default value is **0**.Unit: Byte, The value must be an integer greater than or equal to 0.
 
 **Type:** number
 
@@ -69,6 +70,8 @@ Unit: Byte, The value must be an integer greater than or equal to 0.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-ContextRecoveryInfo-fileSize?: int--><!--Device-ContextRecoveryInfo-fileSize?: int-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -88,6 +91,8 @@ Level of the grid when the user exits last time.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-ContextRecoveryInfo-gridLevel?: GridLevel--><!--Device-ContextRecoveryInfo-gridLevel?: GridLevel-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## recommendationType
@@ -96,8 +101,7 @@ Level of the grid when the user exits last time.
 recommendationType: number
 ```
 
-Enumerated value of the recommended content set by the user during the last selection. For details, see
-[RecommendationType](arkts-medialibrary-recommendationtype-e.md).
+Enumerated value of the recommended content set by the user during the last selection. For details, see [RecommendationType](arkts-medialibrary-recommendationtype-e.md).
 
 If no recommendation was set during the last selection, the default value is **0**.
 
@@ -107,6 +111,8 @@ If no recommendation was set during the last selection, the default value is **0
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-ContextRecoveryInfo-recommendationType: int--><!--Device-ContextRecoveryInfo-recommendationType: int-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## selectedRecommendationType
@@ -115,8 +121,7 @@ If no recommendation was set during the last selection, the default value is **0
 selectedRecommendationType: number
 ```
 
-Enumerated value of the recommended content selected by the user during the last selection. For details, see
-[RecommendationType](arkts-medialibrary-recommendationtype-e.md).
+Enumerated value of the recommended content selected by the user during the last selection. For details, see [RecommendationType](arkts-medialibrary-recommendationtype-e.md).
 
 If no recommendation was selected during the last selection or **All** was selected, the default value is **0**.
 
@@ -125,6 +130,8 @@ If no recommendation was selected during the last selection or **All** was selec
 **Since:** 21
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-ContextRecoveryInfo-selectedRecommendationType: int--><!--Device-ContextRecoveryInfo-selectedRecommendationType: int-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -144,6 +151,8 @@ Sorting rule of the grid interface when the user last selected an image. The def
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-ContextRecoveryInfo-sortRule?: string--><!--Device-ContextRecoveryInfo-sortRule?: string-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## time
@@ -154,7 +163,7 @@ time: number
 
 Time of the top-left image in the grid interface when the user last selected an image.
 
-- For albums sorted by capture time, the capture time is returned.
+- For albums sorted by capture time, the capture time is returned.  
 - For albums sorted by save time, the save time is returned. The default value is **0**.
 
 Unit: ms, The value must be greater than or equal to 0.
@@ -165,6 +174,8 @@ Unit: ms, The value must be greater than or equal to 0.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-ContextRecoveryInfo-time: long--><!--Device-ContextRecoveryInfo-time: long-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## version
@@ -173,8 +184,7 @@ Unit: ms, The value must be greater than or equal to 0.
 version: number
 ```
 
-Version number of the state data, used to verify the compatibility of the state information data with the state
-recovery capability.
+Version number of the state data, used to verify the compatibility of the state information data with the state recovery capability.
 
 The version number must be greater than or equal to 1.0.
 
@@ -183,6 +193,8 @@ The version number must be greater than or equal to 1.0.
 **Since:** 21
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-ContextRecoveryInfo-version: int--><!--Device-ContextRecoveryInfo-version: int-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -1,9 +1,10 @@
 # @ohos.security.securityGuard
 
-Provides security event management and security model management.
-Based on event information, you will be able to analyze the running status of devices.
+Provides security event management and security model management.Based on event information, you will be able to analyze the running status of devices.
 
 **Since:** 12
+
+<!--Device-unnamed-declare namespace securityGuard--><!--Device-unnamed-declare namespace securityGuard-End-->
 
 **System capability:** SystemCapability.Security.SecurityGuard
 

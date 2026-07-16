@@ -16,6 +16,8 @@ Unmute during a call.
 
 **Since:** 8
 
+<!--Device-call-function cancelMuted(callback: AsyncCallback<void>): void--><!--Device-call-function cancelMuted(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Unmute during a call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of cancelMuted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of cancelMuted. |
 
 **Error codes:**
 
@@ -63,6 +65,8 @@ Unmute during a call.
 
 **Since:** 8
 
+<!--Device-call-function cancelMuted(): Promise<void>--><!--Device-call-function cancelMuted(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -71,7 +75,7 @@ Unmute during a call.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the cancelMuted. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the cancelMuted. |
 
 **Error codes:**
 

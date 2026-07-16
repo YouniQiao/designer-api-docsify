@@ -4,6 +4,8 @@ Defines the popup button
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export interface PopupV2Button--><!--Device-unnamed-export interface PopupV2Button-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Set the button callback.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-PopupV2Button-action?: Callback<void>--><!--Device-PopupV2Button-action?: Callback<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## buttonTextModifier
@@ -44,6 +48,8 @@ The button text attributes of Popup.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-PopupV2Button-buttonTextModifier?: TextModifier--><!--Device-PopupV2Button-buttonTextModifier?: TextModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## text
@@ -59,6 +65,8 @@ Set the button display content.
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-PopupV2Button-text: ResourceStr--><!--Device-PopupV2Button-text: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

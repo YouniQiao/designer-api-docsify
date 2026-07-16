@@ -12,13 +12,13 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 function sendNotice(noticeType: NoticeType, eventData: string): void
 ```
 
-Sends a notification from the user authentication widget. When the unified authentication widget is used for user
-authentication, this API is used to receive notifications from the unified authentication widget and send the
-notifications to the user authentication framework.
+Sends a notification from the user authentication widget. When the unified authentication widget is used for user authentication, this API is used to receive notifications from the unified authentication widget and send the notifications to the user authentication framework.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.SUPPORT_USER_AUTH
+
+<!--Device-userAuth-function sendNotice(noticeType: NoticeType, eventData: string): void--><!--Device-userAuth-function sendNotice(noticeType: NoticeType, eventData: string): void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -28,8 +28,8 @@ notifications to the user authentication framework.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| noticeType | NoticeType | Yes | Notification type. It identifies the source of a notification. Currently,**WIDGET_NOTICE (1)** is supported, indicating that the notification is from the authentication widget. |
-| eventData | string | Yes | Event data. It is a string in JSON format, containing the notification details, suchas the authentication type and ready event. The data length ranges from 0 to 65536 bytes. |
+| noticeType | [NoticeType](arkts-userauthentication-noticetype-e-sys.md) | Yes | Notification type. It identifies the source of a notification. Currently,**WIDGET_NOTICE (1)** is supported, indicating that the notification is from the authentication widget. |
+| eventData | string | Yes | Event data. It is a string in JSON format, containing the notification details, such as the authentication type and ready event. The data length ranges from 0 to 65536 bytes. |
 
 **Error codes:**
 

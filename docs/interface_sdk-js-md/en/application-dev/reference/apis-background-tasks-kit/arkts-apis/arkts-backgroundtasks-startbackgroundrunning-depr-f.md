@@ -16,16 +16,18 @@ Requests a continuous task from the system. This API uses an asynchronous callba
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
+<!--Device-backgroundTaskManager-function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent, callback: AsyncCallback<void>): void--><!--Device-backgroundTaskManager-function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
-| bgMode | BackgroundMode | Yes | Background mode requested. |
-| wantAgent | WantAgent | Yes | Notification parameter, which is used to specify the target page that isredirected to when a continuous task notification is clicked. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context.<br>For details about the application context of the FA model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
+| bgMode | [BackgroundMode](arkts-backgroundtasks-backgroundmode-e.md) | Yes | Background mode requested. |
+| wantAgent | [WantAgent](arkts-backgroundtasks-wantagent-i.md) | Yes | Notification parameter, which is used to specify the target page that is redirected to when a continuous task notification is clicked. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -123,21 +125,23 @@ Requests a continuous task from the system. This API uses a promise to return th
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
+<!--Device-backgroundTaskManager-function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent): Promise<void>--><!--Device-backgroundTaskManager-function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent): Promise<void>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
-| bgMode | BackgroundMode | Yes | Background mode requested. |
-| wantAgent | WantAgent | Yes | Notification parameter, which is used to specify the target page that isredirected to when a continuous task notification is clicked. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context.<br>For details about the application context of the FA model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
+| bgMode | [BackgroundMode](arkts-backgroundtasks-backgroundmode-e.md) | Yes | Background mode requested. |
+| wantAgent | [WantAgent](arkts-backgroundtasks-wantagent-i.md) | Yes | Notification parameter, which is used to specify the target page that is redirected to when a continuous task notification is clicked. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 

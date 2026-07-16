@@ -20,6 +20,8 @@ Notifies the application of the assertion result. This API uses a promise to ret
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-abilityManager-function notifyDebugAssertResult(sessionId: string, status: UserStatus): Promise<void>--><!--Device-abilityManager-function notifyDebugAssertResult(sessionId: string, status: UserStatus): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -29,13 +31,13 @@ Notifies the application of the assertion result. This API uses a promise to ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sessionId | string | Yes | Session ID of the AssertFault. |
-| status | UserStatus | Yes | Assertion result of the user operation. |
+| status | [UserStatus](arkts-ability-userstatus-e-sys.md) | Yes | Assertion result of the user operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

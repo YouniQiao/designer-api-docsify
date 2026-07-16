@@ -16,6 +16,8 @@ function registerMissionListener(listener: MissionListener): number
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-missionManager-function registerMissionListener(listener: MissionListener): number--><!--Device-missionManager-function registerMissionListener(listener: MissionListener): number-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -24,7 +26,7 @@ function registerMissionListener(listener: MissionListener): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| listener | MissionListener | 是 | 系统任务监听器。 |
+| listener | [MissionListener](arkts-ability-missionlistener-t-sys.md) | 是 | 系统任务监听器。 |
 
 **返回值：**
 

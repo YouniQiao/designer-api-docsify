@@ -4,6 +4,8 @@ Provides methods related to advertising. Nearby devices can scan and discover th
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare namespace advertising--><!--Device-unnamed-declare namespace advertising-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import

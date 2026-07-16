@@ -18,6 +18,16 @@ function setWallpaper(
 
 **需要权限：** ohos.permission.SET_WALLPAPER
 
+<!--Device-wallpaper-function setWallpaper(
+    source: string | image.PixelMap,
+    wallpaperType: WallpaperType,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-wallpaper-function setWallpaper(
+    source: string | image.PixelMap,
+    wallpaperType: WallpaperType,
+    callback: AsyncCallback<void>
+  ): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **参数：**
@@ -25,8 +35,8 @@ function setWallpaper(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | source | string \| image.PixelMap | 是 |  |
-| wallpaperType | WallpaperType | 是 |  |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，设置壁纸成功，error为undefined，否则返回error信息。 |
+| wallpaperType | [WallpaperType](arkts-na-wallpapertype-e.md) | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，设置壁纸成功，error为undefined，否则返回error信息。 |
 
 **示例：**
 
@@ -81,6 +91,8 @@ function setWallpaper(source: string | image.PixelMap, wallpaperType: WallpaperT
 
 **需要权限：** ohos.permission.SET_WALLPAPER
 
+<!--Device-wallpaper-function setWallpaper(source: string | image.PixelMap, wallpaperType: WallpaperType): Promise<void>--><!--Device-wallpaper-function setWallpaper(source: string | image.PixelMap, wallpaperType: WallpaperType): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **参数：**
@@ -88,13 +100,13 @@ function setWallpaper(source: string | image.PixelMap, wallpaperType: WallpaperT
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | source | string \| image.PixelMap | 是 |  |
-| wallpaperType | WallpaperType | 是 |  |
+| wallpaperType | [WallpaperType](arkts-na-wallpapertype-e.md) | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise<void> | the promise returned by the function. |
 
 **示例：**
 

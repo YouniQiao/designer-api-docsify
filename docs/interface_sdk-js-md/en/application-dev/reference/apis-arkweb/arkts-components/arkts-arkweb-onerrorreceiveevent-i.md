@@ -4,6 +4,8 @@ Defines the triggered function when the web page receives a web resource loading
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface OnErrorReceiveEvent--><!--Device-unnamed-declare interface OnErrorReceiveEvent-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## error
@@ -20,6 +22,8 @@ The information of error.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-OnErrorReceiveEvent-error: WebResourceError--><!--Device-OnErrorReceiveEvent-error: WebResourceError-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## request
@@ -35,6 +39,8 @@ The information of request.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-OnErrorReceiveEvent-request: WebResourceRequest--><!--Device-OnErrorReceiveEvent-request: WebResourceRequest-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

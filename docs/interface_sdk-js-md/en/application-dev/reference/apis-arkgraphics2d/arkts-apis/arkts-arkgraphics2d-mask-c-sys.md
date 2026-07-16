@@ -4,6 +4,8 @@ Defines the mask for Filter or VisualEffect.
 
 **Since:** 20
 
+<!--Device-uiEffect-class Mask--><!--Device-uiEffect-class Mask-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -25,6 +27,10 @@ Create a Mask of pixelmap.
 
 **Since:** 20
 
+<!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap, srcRect: common2D.Rect, dstRect: common2D.Rect,
+      fillColor?: Color): Mask--><!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap, srcRect: common2D.Rect, dstRect: common2D.Rect,
+      fillColor?: Color): Mask-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -36,13 +42,13 @@ Create a Mask of pixelmap.
 | pixelMap | image.PixelMap | Yes |  |
 | srcRect | common2D.Rect | Yes |  |
 | dstRect | common2D.Rect | Yes |  |
-| fillColor | Color | No |  |
+| fillColor | [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Mask | @throws { BusinessError } 202 - Permission verification failed. A non-system application calls a system API. |
+| [Mask](arkts-arkgraphics2d-mask-c-sys.md) | @throws { BusinessError } 202 - Permission verification failed. A non-system application calls a system API. |
 
 **Error codes:**
 
@@ -102,6 +108,8 @@ Create a Mask of pixelMap to use directly.
 
 **Since:** 22
 
+<!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap): Mask--><!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap): Mask-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -116,7 +124,7 @@ Create a Mask of pixelMap to use directly.
 
 | Type | Description |
 | --- | --- |
-| Mask | - Returns pixelMap mask. |
+| [Mask](arkts-arkgraphics2d-mask-c-sys.md) | - Returns pixelMap mask. |
 
 **Error codes:**
 
@@ -215,6 +223,10 @@ Create a Mask of radial gradient.
 
 **Since:** 20
 
+<!--Device-Mask-static createRadialGradientMask(center: common2D.Point, radiusX: double, radiusY: double,
+      gradients: Array<[double, double]>): Mask--><!--Device-Mask-static createRadialGradientMask(center: common2D.Point, radiusX: double, radiusY: double,
+      gradients: Array<[double, double]>): Mask-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -226,13 +238,13 @@ Create a Mask of radial gradient.
 | center | common2D.Point | Yes |  |
 | radiusX | number | Yes |  |
 | radiusY | number | Yes |  |
-| gradients | Array&lt;[number, number]&gt; | Yes |  |
+| gradients | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<[number, number]> | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Mask | @throws { BusinessError } 202 - Permission verification failed. A non-system application calls a system API. |
+| [Mask](arkts-arkgraphics2d-mask-c-sys.md) | @throws { BusinessError } 202 - Permission verification failed. A non-system application calls a system API. |
 
 **Error codes:**
 
@@ -249,6 +261,8 @@ static createRippleMask(center: common2D.Point, radius: number, width: number, o
 Create a Mask of ripple.
 
 **Since:** 20
+
+<!--Device-Mask-static createRippleMask(center: common2D.Point, radius: double, width: double, offset?: double): Mask--><!--Device-Mask-static createRippleMask(center: common2D.Point, radius: double, width: double, offset?: double): Mask-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -267,7 +281,7 @@ Create a Mask of ripple.
 
 | Type | Description |
 | --- | --- |
-| Mask | @throws { BusinessError } 202 - Permission verification failed. A non-system application calls a system API. |
+| [Mask](arkts-arkgraphics2d-mask-c-sys.md) | @throws { BusinessError } 202 - Permission verification failed. A non-system application calls a system API. |
 
 **Error codes:**
 
@@ -292,6 +306,8 @@ Create a Mask of use effect.
 
 **Since:** 22
 
+<!--Device-Mask-static createUseEffectMask(useEffect: boolean): Mask--><!--Device-Mask-static createUseEffectMask(useEffect: boolean): Mask-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -306,7 +322,7 @@ Create a Mask of use effect.
 
 | Type | Description |
 | --- | --- |
-| Mask | - Returns use effect mask. |
+| [Mask](arkts-arkgraphics2d-mask-c-sys.md) | - Returns use effect mask. |
 
 **Error codes:**
 
@@ -384,6 +400,10 @@ Create a Mask of single wave gradient.
 
 **Since:** 20
 
+<!--Device-Mask-static createWaveGradientMask(center: common2D.Point, width: double, propagationRadius: double,
+      blurRadius: double, turbulenceStrength?: double): Mask--><!--Device-Mask-static createWaveGradientMask(center: common2D.Point, width: double, propagationRadius: double,
+      blurRadius: double, turbulenceStrength?: double): Mask-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -402,7 +422,7 @@ Create a Mask of single wave gradient.
 
 | Type | Description |
 | --- | --- |
-| Mask | - Returns wave gradient mask. |
+| [Mask](arkts-arkgraphics2d-mask-c-sys.md) | - Returns wave gradient mask. |
 
 **Error codes:**
 

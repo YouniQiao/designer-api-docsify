@@ -24,6 +24,8 @@ Sets the browsing policy for a specified browser. This API uses an asynchronous 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-browser-function setPolicies(admin: Want, appId: string, policies: string, callback: AsyncCallback<void>): void--><!--Device-browser-function setPolicies(admin: Want, appId: string, policies: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -32,10 +34,10 @@ Sets the browsing policy for a specified browser. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | appId | string | Yes | Application ID, which is used to specify the browser. |
-| policies | string | Yes | Policies to set. If this parameter is set to an empty string, the policies of thespecified browser are canceled. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| policies | string | Yes | Policies to set. If this parameter is set to an empty string, the policies of the specified browser are canceled. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback invoked to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -43,7 +45,7 @@ Sets the browsing policy for a specified browser. This API uses an asynchronous 
 | --- | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 
@@ -90,6 +92,8 @@ Sets the browsing policy for a specified browser. This API uses a promise to ret
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-browser-function setPolicies(admin: Want, appId: string, policies: string): Promise<void>--><!--Device-browser-function setPolicies(admin: Want, appId: string, policies: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -98,15 +102,15 @@ Sets the browsing policy for a specified browser. This API uses a promise to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | appId | string | Yes | Application ID, which is used to specify the browser. |
-| policies | string | Yes | Policies to set. If this parameter is set to an empty string, the policies of thespecified browser are canceled. |
+| policies | string | Yes | Policies to set. If this parameter is set to an empty string, the policies of the specified browser are canceled. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. An error object is thrown when the browser policy failsto be set. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. An error object is thrown when the browser policy fails to be set. |
 
 **Error codes:**
 
@@ -114,7 +118,7 @@ Sets the browsing policy for a specified browser. This API uses a promise to ret
 | --- | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 

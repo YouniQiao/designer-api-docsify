@@ -12,14 +12,15 @@ import { hichecker } from '@kit.PerformanceAnalysisKit';
 function contains(rule: bigint): boolean
 ```
 
-Checks whether the specified rule exists in the collection of added rules. If the rule is of the thread level, this
-operation is performed only on the current thread.
+Checks whether the specified rule exists in the collection of added rules. If the rule is of the thread level, this operation is performed only on the current thread.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** [containsCheckRule](arkts-performanceanalysis-containscheckrule-f.md#containscheckrule-1)
+
+<!--Device-hichecker-function contains(rule: bigint): boolean--><!--Device-hichecker-function contains(rule: bigint): boolean-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 

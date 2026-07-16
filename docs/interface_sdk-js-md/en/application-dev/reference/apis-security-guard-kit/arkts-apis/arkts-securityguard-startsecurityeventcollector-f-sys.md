@@ -18,6 +18,8 @@ start the collector to collect data
 
 **Required permissions:** ohos.permission.QUERY_SECURITY_EVENT
 
+<!--Device-securityGuard-function startSecurityEventCollector(rule: CollectorRule): void--><!--Device-securityGuard-function startSecurityEventCollector(rule: CollectorRule): void-End-->
+
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ start the collector to collect data
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rule | CollectorRule | Yes | rule of collect security event information. |
+| rule | [CollectorRule](arkts-securityguard-collectorrule-i-sys.md) | Yes | rule of collect security event information. |
 
 **Error codes:**
 

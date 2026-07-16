@@ -1,11 +1,18 @@
 # @ohos.reminderAgentManager
 
-本模块提供后台代理提醒的能力，即当应用被冻结或应用退出时，定时提醒功能将被系统服务代理。开发者可以调用本模块接口创建定时提醒，提醒类型支持倒计时、日历、闹钟三种。开发指导请参考
-[代理提醒开发指南](../../../../task-management/agent-powered-reminder.md)。
+本模块提供后台代理提醒的能力，即当应用被冻结或应用退出时，定时提醒功能将被系统服务代理。开发者可以调用本模块接口创建定时提醒，提醒类型支持倒计时、日历、闹钟三种。开发指导请参考[代理提醒开发指南](../../../../task-management/agent-powered-reminder.md)。
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace reminderAgentManager--><!--Device-unnamed-declare namespace reminderAgentManager-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
+
+## 导入模块
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+```
 
 ## 汇总
 
@@ -26,8 +33,8 @@
 | [getExcludeDates](arkts-backgroundtasks-getexcludedates-f.md#getexcludedates-1) | 为指定id的周期性的日历提醒，查询设置的所有不提醒日期。使用Promise异步回调。 |
 | [getValidReminders](arkts-backgroundtasks-getvalidreminders-f.md#getvalidreminders-1) | 获取当前应用设置的所有[有效（未过期）的代理提醒](../../../../task-management/agent-powered-reminder.md#约束与限制)。使用callback异步回调。 |
 | [getValidReminders](arkts-backgroundtasks-getvalidreminders-f.md#getvalidreminders-2) | 获取当前应用设置的所有[有效（未过期）的代理提醒](../../../../task-management/agent-powered-reminder.md#约束与限制)。使用Promise异步回调。 |
-| [publishReminder](arkts-backgroundtasks-publishreminder-f.md#publishreminder-1) | 发布后台代理提醒。使用callback异步回调。@link @ohos.notificationManager:notificationManager.requestEnableNotification(context: UIAbilityContext, callback: AsyncCallback&lt;void&gt;)}&gt; 后调用。&gt; |
-| [publishReminder](arkts-backgroundtasks-publishreminder-f.md#publishreminder-2) | 发布后台代理提醒。使用Promise异步回调。@link @ohos.notificationManager:notificationManager.requestEnableNotification(context: UIAbilityContext, callback: AsyncCallback&lt;void&gt;)}&gt; 后调用。&gt; |
+| [publishReminder](arkts-backgroundtasks-publishreminder-f.md#publishreminder-1) | 发布后台代理提醒。使用callback异步回调。 |
+| [publishReminder](arkts-backgroundtasks-publishreminder-f.md#publishreminder-2) | 发布后台代理提醒。使用Promise异步回调。 |
 | [removeNotificationSlot](arkts-backgroundtasks-removenotificationslot-f.md#removenotificationslot-1) | 删除指定的通知渠道类型，使用callback异步回调。 |
 | [removeNotificationSlot](arkts-backgroundtasks-removenotificationslot-f.md#removenotificationslot-2) | 删除指定的通知渠道类型，使用Promise异步回调。 |
 | [subscribeReminderState](arkts-backgroundtasks-subscribereminderstate-f.md#subscribereminderstate-1) | 订阅代理提醒状态。使用Promise异步回调。 |

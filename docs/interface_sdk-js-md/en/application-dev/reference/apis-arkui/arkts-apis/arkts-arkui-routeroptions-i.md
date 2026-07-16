@@ -8,6 +8,8 @@ Defines the page routing parameters.
 
 **Substitutes:** RouterOptions
 
+<!--Device-unnamed-export interface RouterOptions--><!--Device-unnamed-export interface RouterOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 ## Modules to Import
@@ -22,10 +24,7 @@ import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, Ro
 params?: Object
 ```
 
-Data that needs to be passed to the target page during redirection. The target page can use **router.getParams()**
-to obtain the passed parameters, for example, **this.keyValue** (**keyValue** is the value of a key in **params**).
-In the web-like paradigm, these parameters can be directly used on the target page. If the field specified by
-**key** already exists on the target page, the passed value of the key will be displayed.
+Data that needs to be passed to the target page during redirection. The target page can use **router.getParams()** to obtain the passed parameters, for example, **this.keyValue** (**keyValue** is the value of a key in **params**).In the web-like paradigm, these parameters can be directly used on the target page. If the field specified by **key** already exists on the target page, the passed value of the key will be displayed.
 
 **Type:** Object
 
@@ -34,6 +33,8 @@ In the web-like paradigm, these parameters can be directly used on the target pa
 **Deprecated since:** 8
 
 **Substitutes:** params
+
+<!--Device-RouterOptions-params?: Object--><!--Device-RouterOptions-params?: Object-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -47,7 +48,7 @@ URI of the target page, in either of the following formats:
 
 1. Absolute path, which is provided by the page list in the **config.json** file. Examples:
 
-- pages/index/index
+- pages/index/index  
 - pages/detail/detail
 
 2. Specific path. If the URI is a slash (/), the home page is displayed.
@@ -59,6 +60,8 @@ URI of the target page, in either of the following formats:
 **Deprecated since:** 8
 
 **Substitutes:** url
+
+<!--Device-RouterOptions-uri: string--><!--Device-RouterOptions-uri: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 

@@ -12,12 +12,13 @@ import { workScheduler } from '@kit.BackgroundTasksKit';
 function startWork(work: WorkInfo): void
 ```
 
-Requests a deferred task. Upon successful request, the deferred task is added to the execution queue and will be
-executed by the system once the trigger conditions are met.
+Requests a deferred task. Upon successful request, the deferred task is added to the execution queue and will be executed by the system once the trigger conditions are met.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-workScheduler-function startWork(work: WorkInfo): void--><!--Device-workScheduler-function startWork(work: WorkInfo): void-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -25,7 +26,7 @@ executed by the system once the trigger conditions are met.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| work | WorkInfo | Yes | The info of work. |
+| work | [WorkInfo](arkts-backgroundtasks-workinfo-i.md) | Yes | The info of work. |
 
 **Error codes:**
 

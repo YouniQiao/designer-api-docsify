@@ -4,6 +4,8 @@ Represents the pinch mode of the grid in the picker.
 
 **Since:** 23
 
+<!--Device-photoAccessHelper-export class GridPinchMode--><!--Device-photoAccessHelper-export class GridPinchMode-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Grid level after the picker is started. The default value is **STANDARD**.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-GridPinchMode-defaultGridLevel?: GridLevel--><!--Device-GridPinchMode-defaultGridLevel?: GridLevel-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## gridPinchModeType
@@ -36,8 +40,7 @@ Grid level after the picker is started. The default value is **STANDARD**.
 gridPinchModeType?: GridPinchModeType
 ```
 
-Grid pinch mode. If this parameter is set, the pinch function is supported. Otherwise, the pinch function is not
-supported.
+Grid pinch mode. If this parameter is set, the pinch function is supported. Otherwise, the pinch function is not supported.
 
 **Type:** GridPinchModeType
 
@@ -46,6 +49,8 @@ supported.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-GridPinchMode-gridPinchModeType?: GridPinchModeType--><!--Device-GridPinchMode-gridPinchModeType?: GridPinchModeType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

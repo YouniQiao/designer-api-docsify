@@ -16,14 +16,16 @@ Cancel a WantAgent. Only the application that creates the WantAgent can cancel i
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-wantAgent-function cancel(agent: WantAgent, callback: AsyncCallback<void>): void--><!--Device-wantAgent-function cancel(agent: WantAgent, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | WantAgent | Yes | to cancel. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Cancel the callback method for Want in WantAgent. |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | to cancel. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Cancel the callback method for Want in WantAgent. |
 
 **Example**
 
@@ -97,19 +99,21 @@ Cancel a WantAgent. Only the application that creates the WantAgent can cancel i
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-wantAgent-function cancel(agent: WantAgent): Promise<void>--><!--Device-wantAgent-function cancel(agent: WantAgent): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | WantAgent | Yes | to cancel. |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | to cancel. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Example**
 

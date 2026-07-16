@@ -1,5 +1,11 @@
 # removeBackupBundleData（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## removeBackupBundleData
 
 ```TypeScript
@@ -11,6 +17,8 @@ function removeBackupBundleData(bundleName: string, userId: number, appIndex: nu
 **起始版本：** 21
 
 **需要权限：** ohos.permission.CLEAN_APPLICATION_DATA
+
+<!--Device-bundleManager-function removeBackupBundleData(bundleName: string, userId: int, appIndex: int): Promise<void>--><!--Device-bundleManager-function removeBackupBundleData(bundleName: string, userId: int, appIndex: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -28,7 +36,7 @@ function removeBackupBundleData(bundleName: string, userId: number, appIndex: nu
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

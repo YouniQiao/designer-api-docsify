@@ -14,11 +14,11 @@ function getStateByIndex(index: number): RouterState | undefined
 
 Obtains the status information about a page by its index.
 
-> **NOTE**
->
-> - Since API version 12, you can use the
-> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> **NOTE**  
+>  
+> - Since API version 12, you can use the  
+> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in  
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated  
 > with the current UI context.
 
 **Since:** 12
@@ -31,19 +31,21 @@ Obtains the status information about a page by its index.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-router-function getStateByIndex(index: number): RouterState | undefined--><!--Device-router-function getStateByIndex(index: number): RouterState | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the target page. The index starts from 1 from the bottom to the top of thestack. |
+| index | number | Yes | Index of the target page. The index starts from 1 from the bottom to the top of the stack. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RouterState | State information about the target page; **undefined** if the specified indexdoes not exist. |
+| [RouterState](arkts-arkui-routerstate-i.md) | State information about the target page; **undefined** if the specified index does not exist. |
 
 **Example**
 

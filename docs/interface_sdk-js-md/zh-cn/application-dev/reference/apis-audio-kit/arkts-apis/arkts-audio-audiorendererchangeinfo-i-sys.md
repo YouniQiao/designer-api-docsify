@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-audio-interface AudioRendererChangeInfo--><!--Device-audio-interface AudioRendererChangeInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## clientUid
 
@@ -17,6 +25,8 @@ Uid for audio renderer client application.
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-AudioRendererChangeInfo-readonly clientUid: int--><!--Device-AudioRendererChangeInfo-readonly clientUid: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -31,6 +41,8 @@ readonly rendererState: AudioState
 **类型：** AudioState
 
 **起始版本：** 9
+
+<!--Device-AudioRendererChangeInfo-readonly rendererState: AudioState--><!--Device-AudioRendererChangeInfo-readonly rendererState: AudioState-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 

@@ -18,6 +18,8 @@ Obtains information about a volume based on the UUID. This API uses an asynchron
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
+<!--Device-volumeManager-function getVolumeByUuid(uuid: string, callback: AsyncCallback<Volume>): void--><!--Device-volumeManager-function getVolumeByUuid(uuid: string, callback: AsyncCallback<Volume>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Obtains information about a volume based on the UUID. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uuid | string | Yes | UUID of the volume. |
-| callback | AsyncCallback&lt;Volume&gt; | Yes | Callback used to return the volume information obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Volume> | Yes | Callback used to return the volume information obtained. |
 
 **Error codes:**
 
@@ -47,12 +49,13 @@ Obtains information about a volume based on the UUID. This API uses an asynchron
 function getVolumeByUuid(uuid: string): Promise<Volume>
 ```
 
-Obtains information about a volume based on the universally unique identifier (UUID). This API uses a promise to
-return the result.
+Obtains information about a volume based on the universally unique identifier (UUID). This API uses a promise to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
+
+<!--Device-volumeManager-function getVolumeByUuid(uuid: string): Promise<Volume>--><!--Device-volumeManager-function getVolumeByUuid(uuid: string): Promise<Volume>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -68,7 +71,7 @@ return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Volume&gt; | Promise used to return the volume information of the current UUID. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Volume> | Promise used to return the volume information of the current UUID. |
 
 **Error codes:**
 

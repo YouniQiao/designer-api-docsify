@@ -4,6 +4,8 @@ Define the edges for expanding the safe area in layout.
 
 **Since:** 12
 
+<!--Device-unnamed-declare enum LayoutSafeAreaEdge--><!--Device-unnamed-declare enum LayoutSafeAreaEdge-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TOP
@@ -19,6 +21,8 @@ Top edge.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LayoutSafeAreaEdge-TOP = 0--><!--Device-LayoutSafeAreaEdge-TOP = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ Bottom edge.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LayoutSafeAreaEdge-BOTTOM = 1--><!--Device-LayoutSafeAreaEdge-BOTTOM = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## START
@@ -51,6 +57,8 @@ Start edge. This represents the left edge in LTR mode and the right edge in RTL 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-LayoutSafeAreaEdge-START = 2--><!--Device-LayoutSafeAreaEdge-START = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +76,8 @@ End edge. This represents the right edge in LTR mode and the left edge in RTL mo
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-LayoutSafeAreaEdge-END = 3--><!--Device-LayoutSafeAreaEdge-END = 3-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## VERTICAL
@@ -83,6 +93,8 @@ Vertical edge of the safe area.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-LayoutSafeAreaEdge-VERTICAL = 4--><!--Device-LayoutSafeAreaEdge-VERTICAL = 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +112,8 @@ Horizontal edge of the safe area.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-LayoutSafeAreaEdge-HORIZONTAL = 5--><!--Device-LayoutSafeAreaEdge-HORIZONTAL = 5-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ALL
@@ -115,6 +129,8 @@ All edges of the safe area.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-LayoutSafeAreaEdge-ALL = 6--><!--Device-LayoutSafeAreaEdge-ALL = 6-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

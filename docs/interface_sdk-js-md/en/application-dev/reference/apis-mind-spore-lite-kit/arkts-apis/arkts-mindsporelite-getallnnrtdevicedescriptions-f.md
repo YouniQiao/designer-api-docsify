@@ -18,13 +18,15 @@ Obtain the all device descriptions in NNRT.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-mindSporeLite-function getAllNNRTDeviceDescriptions() : NNRTDeviceDescription[]--><!--Device-mindSporeLite-function getAllNNRTDeviceDescriptions() : NNRTDeviceDescription[]-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| NNRTDeviceDescription[] | the array of NNRTDeviceDescription |
+| [NNRTDeviceDescription](arkts-mindsporelite-nnrtdevicedescription-i.md)[] | the array of NNRTDeviceDescription |
 
 **Example**
 

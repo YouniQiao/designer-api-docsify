@@ -4,6 +4,8 @@ Class to be override for backup extension ability.
 
 **Since:** 10
 
+<!--Device-unnamed-declare class BackupExtensionAbility--><!--Device-unnamed-declare class BackupExtensionAbility-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 ## Modules to Import
@@ -18,12 +20,13 @@ import { BundleVersion } from '@kit.CoreFileKit';
 getBackupCompatibilityInfo(extInfo: string) : Promise<string>
 ```
 
-Callback to be called when getting application backup compatibilityInfo.
-Developer could override this method to provide the backup compatibilityInfo.
+Callback to be called when getting application backup compatibilityInfo.Developer could override this method to provide the backup compatibilityInfo.
 
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BackupExtensionAbility-getBackupCompatibilityInfo(extInfo: string) : Promise<string>--><!--Device-BackupExtensionAbility-getBackupCompatibilityInfo(extInfo: string) : Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -39,7 +42,7 @@ Developer could override this method to provide the backup compatibilityInfo.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Return backup compatibilityInfo, support promise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Return backup compatibilityInfo, support promise. |
 
 ## getBackupInfo
 
@@ -47,12 +50,13 @@ Developer could override this method to provide the backup compatibilityInfo.
 getBackupInfo(): string
 ```
 
-Callback to be called when getting application backupInfo.
-Developer could override this method to provide the backupInfo.
+Callback to be called when getting application backupInfo.Developer could override this method to provide the backupInfo.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BackupExtensionAbility-getBackupInfo(): string--><!--Device-BackupExtensionAbility-getBackupInfo(): string-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -70,12 +74,13 @@ Developer could override this method to provide the backupInfo.
 getRestoreCompatibilityInfo(extInfo: string) : Promise<string>
 ```
 
-Callback to be called when getting application restore compatibilityInfo.
-Developer could override this method to provide the restore compatibilityInfo.
+Callback to be called when getting application restore compatibilityInfo.Developer could override this method to provide the restore compatibilityInfo.
 
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BackupExtensionAbility-getRestoreCompatibilityInfo(extInfo: string) : Promise<string>--><!--Device-BackupExtensionAbility-getRestoreCompatibilityInfo(extInfo: string) : Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -91,5 +96,5 @@ Developer could override this method to provide the restore compatibilityInfo.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Return restore compatibilityInfo, support promise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Return restore compatibilityInfo, support promise. |
 

@@ -20,6 +20,8 @@ Obtains all SkillInfo objects of the calling application.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-skillManager-function getSkillInfosForSelf(flags: int): Promise<Array<SkillInfo>>--><!--Device-skillManager-function getSkillInfosForSelf(flags: int): Promise<Array<SkillInfo>>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **Parameters:**
@@ -32,7 +34,7 @@ Obtains all SkillInfo objects of the calling application.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;SkillInfo&gt;&gt; | Returns the list of SkillInfo objects. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<SkillInfo>> | Returns the list of SkillInfo objects. |
 
 **Error codes:**
 

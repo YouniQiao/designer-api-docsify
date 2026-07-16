@@ -4,6 +4,8 @@ Enumerates the key storage modes.
 
 **Since:** 8
 
+<!--Device-huks-export enum HuksKeyStorageType--><!--Device-huks-export enum HuksKeyStorageType-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_STORAGE_TEMP
@@ -14,13 +16,13 @@ HUKS_STORAGE_TEMP = 0
 
 The key is managed locally.
 
-Note: This tag is supported since API version 8 and deprecated since API version 10. No substitute is provided
-because this tag is not used in key management. In key derivation scenarios, use
-**HUKS_STORAGE_ONLY_USED_IN_HUKS** or **HUKS_STORAGE_KEY_EXPORT_ALLOWED**.
+Note: This tag is supported since API version 8 and deprecated since API version 10. No substitute is provided because this tag is not used in key management. In key derivation scenarios, use **HUKS_STORAGE_ONLY_USED_IN_HUKS** or **HUKS_STORAGE_KEY_EXPORT_ALLOWED**.
 
 **Since:** 8
 
 **Deprecated since:** 10
+
+<!--Device-HuksKeyStorageType-HUKS_STORAGE_TEMP = 0--><!--Device-HuksKeyStorageType-HUKS_STORAGE_TEMP = 0-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -32,13 +34,13 @@ HUKS_STORAGE_PERSISTENT = 1
 
 The key is managed by the HUKS service.
 
-Note: This tag is supported since API version 8 and deprecated since API version 10. No substitute is provided
-because this tag is not used in key management. In key derivation scenarios, use
-**HUKS_STORAGE_ONLY_USED_IN_HUKS** or **HUKS_STORAGE_KEY_EXPORT_ALLOWED**.
+Note: This tag is supported since API version 8 and deprecated since API version 10. No substitute is provided because this tag is not used in key management. In key derivation scenarios, use **HUKS_STORAGE_ONLY_USED_IN_HUKS** or **HUKS_STORAGE_KEY_EXPORT_ALLOWED**.
 
 **Since:** 8
 
 **Deprecated since:** 10
+
+<!--Device-HuksKeyStorageType-HUKS_STORAGE_PERSISTENT = 1--><!--Device-HuksKeyStorageType-HUKS_STORAGE_PERSISTENT = 1-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -53,6 +55,8 @@ The key derived from the master key is stored in the HUKS and managed by the HUK
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksKeyStorageType-HUKS_STORAGE_ONLY_USED_IN_HUKS = 2--><!--Device-HuksKeyStorageType-HUKS_STORAGE_ONLY_USED_IN_HUKS = 2-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -69,6 +73,8 @@ The key derived from the master key is exported to the service, and not managed 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksKeyStorageType-HUKS_STORAGE_KEY_EXPORT_ALLOWED = 3--><!--Device-HuksKeyStorageType-HUKS_STORAGE_KEY_EXPORT_ALLOWED = 3-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core

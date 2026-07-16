@@ -18,6 +18,8 @@ Enables device-cloud sync. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
+<!--Device-cloudSyncManager-function enableCloud(accountId: string, switches: Record<string, boolean>): Promise<void>--><!--Device-cloudSyncManager-function enableCloud(accountId: string, switches: Record<string, boolean>): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **System API:** This is a system API.
@@ -27,13 +29,13 @@ Enables device-cloud sync. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountId | string | Yes | Account ID. |
-| switches | Record&lt;string, boolean&gt; | Yes | Whether to enable the device-cloud sync feature. The applicationbundle name is a string. The switch status is a Boolean value. The value **true** means to enable this function; the value **false** means the opposite. |
+| switches | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, boolean> | Yes | Whether to enable the device-cloud sync feature. The application bundle name is a string. The switch status is a Boolean value. The value **true** means to enable this function; the value **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -41,7 +43,7 @@ Enables device-cloud sync. This API uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are leftunspecified;<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
 **Example**
 
@@ -78,6 +80,16 @@ Enables device-cloud sync. This API uses an asynchronous callback to return the 
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
+<!--Device-cloudSyncManager-function enableCloud(
+    accountId: string,
+    switches: Record<string, boolean>,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-cloudSyncManager-function enableCloud(
+    accountId: string,
+    switches: Record<string, boolean>,
+    callback: AsyncCallback<void>
+  ): void-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **System API:** This is a system API.
@@ -87,8 +99,8 @@ Enables device-cloud sync. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountId | string | Yes | Account ID. |
-| switches | Record&lt;string, boolean&gt; | Yes | Whether to enable the device-cloud sync feature. The applicationbundle name is a string. The switch status is a Boolean value. The value **true** means to enable this function; the value **false** means the opposite. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result of enabling device-cloud sync. |
+| switches | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, boolean> | Yes | Whether to enable the device-cloud sync feature. The application bundle name is a string. The switch status is a Boolean value. The value **true** means to enable this function; the value **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result of enabling device-cloud sync. |
 
 **Error codes:**
 
@@ -96,7 +108,7 @@ Enables device-cloud sync. This API uses an asynchronous callback to return the 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are leftunspecified;<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
 **Example**
 

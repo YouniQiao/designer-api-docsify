@@ -16,6 +16,8 @@ Gets system sound manager for all type sound.
 
 **Since:** 10
 
+<!--Device-systemSoundManager-function getSystemSoundManager(): SystemSoundManager--><!--Device-systemSoundManager-function getSystemSoundManager(): SystemSoundManager-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Gets system sound manager for all type sound.
 
 | Type | Description |
 | --- | --- |
-| SystemSoundManager | SystemSoundManager instance. |
+| [SystemSoundManager](arkts-audio-systemsoundmanager-i-sys.md) | SystemSoundManager instance. |
 
 **Example**
 

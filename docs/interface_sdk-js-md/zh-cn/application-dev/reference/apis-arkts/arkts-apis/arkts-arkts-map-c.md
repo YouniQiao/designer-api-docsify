@@ -2,22 +2,27 @@
 
 一种基于键值对存储的非线性数据结构。
 
-> **说明**
->
-> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
+> **说明**  
+>  
+> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。  
 > 本节使用以下标识符来表示泛型的使用：
 
-- K：键。
-- V：值。
-K和V类型都需为
-[Sendable支持的数据类型](../../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。
-**装饰器类型**：\@Sendable
+- K：键。  
+- V：值。K和V类型都需为[Sendable支持的数据类型](../../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。**装饰器类型**：\@Sendable
 
 **起始版本：** 12
 
 **装饰器类型：** @Sendable
 
+<!--Device-collections-class Map<K, V>--><!--Device-collections-class Map<K, V>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { collections } from '@kit.ArkTS';
+```
 
 ## [Symbol.iterator]
 
@@ -25,13 +30,13 @@ K和V类型都需为
 [Symbol.iterator](): IterableIterator<[K, V]>
 ```
 
-返回一个迭代器，迭代器的每一项都是一个JavaScript对象。
-说明：
-本接口不支持在.ets文件中使用。
+返回一个迭代器，迭代器的每一项都是一个JavaScript对象。说明：本接口不支持在.ets文件中使用。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Map-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-Map-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -39,7 +44,7 @@ K和V类型都需为
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | 返回一个迭代器对象，该对象包含键值对。 |
+| IterableIterator<[K, V]> | 返回一个迭代器对象，该对象包含键值对。 |
 
 **错误码：**
 
@@ -57,7 +62,9 @@ clear(): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Map-clear(): void--><!--Device-Map-clear(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -78,7 +85,9 @@ constructor(entries?: readonly (readonly [K, V])[] | null)
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Map-constructor(entries?: readonly (readonly [K, V])[] | null)--><!--Device-Map-constructor(entries?: readonly (readonly [K, V])[] | null)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -104,7 +113,9 @@ constructor(iterable: Iterable<readonly [K, V]>)
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Map-constructor(iterable: Iterable<readonly [K, V]>)--><!--Device-Map-constructor(iterable: Iterable<readonly [K, V]>)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -112,7 +123,7 @@ constructor(iterable: Iterable<readonly [K, V]>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| iterable | Iterable&lt;readonly [K, V]&gt; | 是 | 用于构造ArkTS Map的对象。 |
+| iterable | Iterable<readonly [K, V]> | 是 | 用于构造ArkTS Map的对象。 |
 
 **错误码：**
 
@@ -130,7 +141,9 @@ delete(key: K): boolean
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Map-delete(key: K): boolean--><!--Device-Map-delete(key: K): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -163,7 +176,9 @@ entries(): IterableIterator<[K, V]>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Map-entries(): IterableIterator<[K, V]>--><!--Device-Map-entries(): IterableIterator<[K, V]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -171,7 +186,7 @@ entries(): IterableIterator<[K, V]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | Map迭代器对象。 |
+| IterableIterator<[K, V]> | Map迭代器对象。 |
 
 **错误码：**
 
@@ -190,7 +205,9 @@ forEach(callbackFn: (value: V, key: K, map: Map<K, V>) => void): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Map-forEach(callbackFn: (value: V, key: K, map: Map<K, V>) => void): void--><!--Device-Map-forEach(callbackFn: (value: V, key: K, map: Map<K, V>) => void): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -198,7 +215,7 @@ forEach(callbackFn: (value: V, key: K, map: Map<K, V>) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | (value: V, key: K, map: Map&lt;K, V&gt;) =&gt; void | 是 | 对每个键值对运行的回调函数。 |
+| callbackFn | (value: V, key: K, map: Map<K, V>) => void | 是 | 对每个键值对运行的回调函数。 |
 
 **错误码：**
 
@@ -217,7 +234,9 @@ get(key: K): V | undefined
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Map-get(key: K): V | undefined--><!--Device-Map-get(key: K): V | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -250,7 +269,9 @@ has(key: K): boolean
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Map-has(key: K): boolean--><!--Device-Map-has(key: K): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -283,7 +304,9 @@ keys(): IterableIterator<K>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Map-keys(): IterableIterator<K>--><!--Device-Map-keys(): IterableIterator<K>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -291,7 +314,7 @@ keys(): IterableIterator<K>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;K&gt; | Map迭代器对象。 |
+| IterableIterator<K> | Map迭代器对象。 |
 
 **错误码：**
 
@@ -310,7 +333,9 @@ set(key: K, value: V): Map<K, V>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Map-set(key: K, value: V): Map<K, V>--><!--Device-Map-set(key: K, value: V): Map<K, V>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -325,7 +350,7 @@ set(key: K, value: V): Map<K, V>
 
 | 类型 | 说明 |
 | --- | --- |
-| Map&lt;K, V&gt; | 新的Map对象。 |
+| [Map](arkts-arkts-map-c.md)<K, V> | 新的Map对象。 |
 
 **错误码：**
 
@@ -344,7 +369,9 @@ values(): IterableIterator<V>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Map-values(): IterableIterator<V>--><!--Device-Map-values(): IterableIterator<V>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -352,7 +379,7 @@ values(): IterableIterator<V>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;V&gt; | Map迭代器对象。 |
+| IterableIterator<V> | Map迭代器对象。 |
 
 **错误码：**
 
@@ -373,7 +400,9 @@ Map的元素个数。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Map-readonly size: number--><!--Device-Map-readonly size: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

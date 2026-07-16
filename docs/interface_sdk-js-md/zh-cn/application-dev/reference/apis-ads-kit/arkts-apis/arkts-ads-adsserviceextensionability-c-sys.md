@@ -4,9 +4,17 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-export default class AdsServiceExtensionAbility--><!--Device-unnamed-export default class AdsServiceExtensionAbility-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { RespCallback } from '@kit.AdsKit';
+```
 
 ## onLoadAd
 
@@ -18,6 +26,8 @@ onLoadAd(adParam: advertising.AdRequestParams, adOptions: advertising.AdOptions,
 
 **起始版本：** 11
 
+<!--Device-AdsServiceExtensionAbility-onLoadAd(adParam: advertising.AdRequestParams, adOptions: advertising.AdOptions, respCallback: RespCallback)--><!--Device-AdsServiceExtensionAbility-onLoadAd(adParam: advertising.AdRequestParams, adOptions: advertising.AdOptions, respCallback: RespCallback)-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 **系统接口：** 此接口为系统接口。
@@ -28,7 +38,7 @@ onLoadAd(adParam: advertising.AdRequestParams, adOptions: advertising.AdOptions,
 | --- | --- | --- | --- |
 | adParam | advertising.AdRequestParams | 是 | 广告请求参数。 |
 | adOptions | advertising.AdOptions | 是 | 广告配置参数。 |
-| respCallback | RespCallback | 是 | 广告请求回调。 |
+| respCallback | [RespCallback](arkts-ads-respcallback-i.md) | 是 | 广告请求回调。 |
 
 **示例：**
 
@@ -57,6 +67,10 @@ onLoadAdWithMultiSlots(adParams: advertising.AdRequestParams[], adOptions: adver
 
 **起始版本：** 11
 
+<!--Device-AdsServiceExtensionAbility-onLoadAdWithMultiSlots(adParams: advertising.AdRequestParams[], adOptions: advertising.AdOptions, 
+    respCallback: RespCallback)--><!--Device-AdsServiceExtensionAbility-onLoadAdWithMultiSlots(adParams: advertising.AdRequestParams[], adOptions: advertising.AdOptions, 
+    respCallback: RespCallback)-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 **系统接口：** 此接口为系统接口。
@@ -67,7 +81,7 @@ onLoadAdWithMultiSlots(adParams: advertising.AdRequestParams[], adOptions: adver
 | --- | --- | --- | --- |
 | adParams | advertising.AdRequestParams[] | 是 | 广告请求参数。 |
 | adOptions | advertising.AdOptions | 是 | 广告配置参数。 |
-| respCallback | RespCallback | 是 | 广告请求回调。 |
+| respCallback | [RespCallback](arkts-ads-respcallback-i.md) | 是 | 广告请求回调。 |
 
 **示例：**
 

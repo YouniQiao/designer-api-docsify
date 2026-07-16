@@ -1,11 +1,18 @@
 # VisualEffect
 
-VisualEffect效果类，用于将相应的效果添加到指定的组件上。
-在调用VisualEffect的方法前，需要先通过createEffect创建一个VisualEffect实例。
+VisualEffect效果类，用于将相应的效果添加到指定的组件上。在调用VisualEffect的方法前，需要先通过createEffect创建一个VisualEffect实例。
 
 **起始版本：** 12
 
+<!--Device-uiEffect-interface VisualEffect--><!--Device-uiEffect-interface VisualEffect-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
+
+## 导入模块
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
+```
 
 ## backgroundColorBlender
 
@@ -19,6 +26,8 @@ backgroundColorBlender(blender: BrightnessBlender): VisualEffect
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-VisualEffect-backgroundColorBlender(blender: BrightnessBlender): VisualEffect--><!--Device-VisualEffect-backgroundColorBlender(blender: BrightnessBlender): VisualEffect-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -27,13 +36,13 @@ backgroundColorBlender(blender: BrightnessBlender): VisualEffect
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| blender | BrightnessBlender | 是 | 用于混合背景颜色的blender。 |
+| blender | [BrightnessBlender](arkts-arkgraphics2d-brightnessblender-i-sys.md) | 是 | 用于混合背景颜色的blender。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| VisualEffect | 返回添加了背景颜色更改效果的VisualEffect。 |
+| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | 返回添加了背景颜色更改效果的VisualEffect。 |
 
 **示例：**
 
@@ -59,6 +68,10 @@ borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIn
 
 **起始版本：** 20
 
+<!--Device-VisualEffect-borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,
+      borderWidth: double): VisualEffect--><!--Device-VisualEffect-borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,
+      borderWidth: double): VisualEffect-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -76,7 +89,7 @@ borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIn
 
 | 类型 | 说明 |
 | --- | --- |
-| VisualEffect | - 返回了具有边框光照效果的VisualEffect。 |
+| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | - 返回了具有边框光照效果的VisualEffect。 |
 
 **错误码：**
 
@@ -139,6 +152,10 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 
 **起始版本：** 20
 
+<!--Device-VisualEffect-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,
+      alphaMask?: Mask): VisualEffect--><!--Device-VisualEffect-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,
+      alphaMask?: Mask): VisualEffect-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -147,16 +164,16 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colors | Array&lt;Color&gt; | 是 | 颜色数组，用于实现多颜色渐变。数组长度范围0到12，每个颜色值大于等于0。数组长度为0或大于12，或colors、positions和strengths的数组长度不一致，则无颜色渐变效果。 |
-| positions | Array&lt;common2D.Point&gt; | 是 | 位置数组，颜色对应的位置。数组长度范围为0到12。数组长度为0或大于12，或colors、positions和strengths的数组长度不一致，则无颜色渐变效果。 |
-| strengths | Array&lt;number&gt; | 是 | 强度数组，表示颜色对应的强度。数组长度范围为0到12，每一个强度值大于等于0。数组长度为0或大于12，或colors、positions和strengths的数组长度不一致时，则无颜色渐变效果。 |
-| alphaMask | Mask | 否 | 遮罩alpha，颜色对应的alpha遮罩。不设置时，颜色渐变效果的透明度完全由colors参数决定。 |
+| colors | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Color> | 是 | 颜色数组，用于实现多颜色渐变。数组长度范围0到12，每个颜色值大于等于0。数组长度为0或大于12，或colors、positions和strengths的数组长度不一致，则无颜色渐变效果。 |
+| positions | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<common2D.Point> | 是 | 位置数组，颜色对应的位置。数组长度范围为0到12。数组长度为0或大于12，或colors、positions和strengths的数组长度不一致，则无颜色渐变效果。 |
+| strengths | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<number> | 是 | 强度数组，表示颜色对应的强度。数组长度范围为0到12，每一个强度值大于等于0。数组长度为0或大于12，或colors、positions和strengths的数组长度不一致时，则无颜色渐变效果。 |
+| alphaMask | [Mask](arkts-arkgraphics2d-mask-c-sys.md) | 否 | 遮罩alpha，颜色对应的alpha遮罩。不设置时，颜色渐变效果的透明度完全由colors参数决定。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| VisualEffect | - 返回具有颜色渐变效果的VisualEffect。 |
+| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | - 返回具有颜色渐变效果的VisualEffect。 |
 
 **错误码：**
 
@@ -212,15 +229,13 @@ distortionCollapse(distortionParam: DistortionParam): VisualEffect
 
 此方法为组件添加非线性形变效果。
 
-1. 该视效支持控件范围外的绘制，但仍会受到父控件Clip的影响。
-2. 因包含前景Filter，未与EffectComponent组合使用时不兼容组件自身及子组件的部分视效（如BrightnessBlender或systemMaterial）。
-3. 支持对系统材质进行扭曲，但是与EffectComponent组合使用时，会导致系统材质的背景扭曲。
-4. 调用distortionCollapse时，会创建与形变后区域等大的离屏画布，再将当前组件（含子组件）的内容绘制到离屏画布上，再对画布上的已有内容进行形变绘制。
-5. 使用该实现方式时，如果不与EffectComponent组合使用，将导致systemMaterial、backgroundEffect、brightness、blur等需要截屏的接口无法截取到正确的画面。
+1. 该视效支持控件范围外的绘制，但仍会受到父控件Clip的影响。2. 因包含前景Filter，未与EffectComponent组合使用时不兼容组件自身及子组件的部分视效（如BrightnessBlender或systemMaterial）。3. 支持对系统材质进行扭曲，但是与EffectComponent组合使用时，会导致系统材质的背景扭曲。4. 调用distortionCollapse时，会创建与形变后区域等大的离屏画布，再将当前组件（含子组件）的内容绘制到离屏画布上，再对画布上的已有内容进行形变绘制。5. 使用该实现方式时，如果不与EffectComponent组合使用，将导致systemMaterial、backgroundEffect、brightness、blur等需要截屏的接口无法截取到正确的画面。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-VisualEffect-distortionCollapse(distortionParam: DistortionParam): VisualEffect--><!--Device-VisualEffect-distortionCollapse(distortionParam: DistortionParam): VisualEffect-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -230,13 +245,13 @@ distortionCollapse(distortionParam: DistortionParam): VisualEffect
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| distortionParam | DistortionParam | 是 | 非线性形变效果的参数。 |
+| distortionParam | [DistortionParam](../../apis-arkui/arkts-components/arkts-arkui-distortionparam-i-sys.md) | 是 | 非线性形变效果的参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| VisualEffect | - 返回添加了非线性形变效果的VisualEffect。 |
+| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | - 返回添加了非线性形变效果的VisualEffect。 |
 
 **示例：**
 
@@ -278,6 +293,10 @@ liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMa
 
 **起始版本：** 22
 
+<!--Device-VisualEffect-liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMask?: Mask,
+      brightnessParam?: BrightnessParam): VisualEffect--><!--Device-VisualEffect-liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMask?: Mask,
+      brightnessParam?: BrightnessParam): VisualEffect-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -286,16 +305,16 @@ liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMa
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | LiquidMaterialEffectParam | 是 | 材质所需相关变量，用于控制材质显示，包含材质开关、折射系数、反射系数和扰动系数。 |
-| useEffectMask | Mask | 是 | 声明是否使用模糊缓存。使用createUseEffectMask(true)创建的Mask实例使用模糊缓存；使用createUseEffectMask(false)创建的Mask实例不使用模糊缓存。 |
-| distortMask | Mask | 否 | 材质扰动效果需要的扰动纹理，由使用pixelMap创建Mask实例时的图片纹理决定。当材质的扰动系数不为0时，需要为材质扰动预先设置一张纹理，否则无扰动效果。当材质的扰动系数为0或者此参数不填时，无扰动效果。 |
-| brightnessParam | BrightnessParam | 否 | 为材质增加提亮效果。默认不添加提亮效果。 |
+| param | [LiquidMaterialEffectParam](arkts-arkgraphics2d-liquidmaterialeffectparam-i-sys.md) | 是 | 材质所需相关变量，用于控制材质显示，包含材质开关、折射系数、反射系数和扰动系数。 |
+| useEffectMask | [Mask](arkts-arkgraphics2d-mask-c-sys.md) | 是 | 声明是否使用模糊缓存。使用createUseEffectMask(true)创建的Mask实例使用模糊缓存；使用createUseEffectMask(false)创建的Mask实例不使用模糊缓存。 |
+| distortMask | [Mask](arkts-arkgraphics2d-mask-c-sys.md) | 否 | 材质扰动效果需要的扰动纹理，由使用pixelMap创建Mask实例时的图片纹理决定。当材质的扰动系数不为0时，需要为材质扰动预先设置一张纹理，否则无扰动效果。当材质的扰动系数为0或者此参数不填时，无扰动效果。 |
+| brightnessParam | [BrightnessParam](arkts-arkgraphics2d-brightnessparam-i-sys.md) | 否 | 为材质增加提亮效果。默认不添加提亮效果。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| VisualEffect | - 返回具有材质效果的VisualEffect。 |
+| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | - 返回具有材质效果的VisualEffect。 |
 
 **错误码：**
 

@@ -12,9 +12,7 @@ import { intelligentScene } from '@kit.BasicServicesKit';
 function isDoNotDisturbEnabled(): Promise<boolean>
 ```
 
-Checks whether Do Not Disturb is enabled on this device.
-The Do Not Disturb state defines if notifications are allowed to interrupt
-the user (e.g. via sound & vibration) and is applied globally.
+Checks whether Do Not Disturb is enabled on this device.The Do Not Disturb state defines if notifications are allowed to interrupt the user (e.g. via sound & vibration) and is applied globally.
 
 **Since:** 23
 
@@ -22,13 +20,15 @@ the user (e.g. via sound & vibration) and is applied globally.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-intelligentScene-function isDoNotDisturbEnabled(): Promise<boolean>--><!--Device-intelligentScene-function isDoNotDisturbEnabled(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Applications.IntelligentScene
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns whether Do Not Disturb is enabled. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns whether Do Not Disturb is enabled. |
 
 **Error codes:**
 

@@ -4,14 +4,15 @@
 type GridRow = TypedFrameNode<GridRowInterface, GridRowAttribute>
 ```
 
-Represents a FrameNode of the **GridRow** type. This type of node only allows child components of the **GridCol**
-type.
+Represents a FrameNode of the **GridRow** type. This type of node only allows child components of the **GridCol** type.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-typeNode-type GridRow = TypedFrameNode<GridRowInterface, GridRowAttribute>--><!--Device-typeNode-type GridRow = TypedFrameNode<GridRowInterface, GridRowAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

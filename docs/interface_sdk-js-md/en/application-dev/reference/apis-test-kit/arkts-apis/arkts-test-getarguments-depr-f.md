@@ -14,13 +14,15 @@ Obtains the **AbilityDelegatorArgs** object of the application.
 
 **Substitutes:** [getArguments](arkts-test-getarguments-f.md#getarguments-1)
 
+<!--Device-abilityDelegatorRegistry-function getArguments(): AbilityDelegatorArgs--><!--Device-abilityDelegatorRegistry-function getArguments(): AbilityDelegatorArgs-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AbilityDelegatorArgs | [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-i.md) object, which can be usedto obtain test parameters. |
+| [AbilityDelegatorArgs](arkts-test-abilitydelegatorargs-t.md) | [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-i.md) object, which can be used to obtain test parameters. |
 
 **Example**
 

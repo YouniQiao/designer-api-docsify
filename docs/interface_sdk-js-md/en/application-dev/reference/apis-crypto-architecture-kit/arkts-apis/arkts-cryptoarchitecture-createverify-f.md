@@ -18,6 +18,8 @@ Creates a **Verify** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-cryptoFramework-function createVerify(algName: string): Verify--><!--Device-cryptoFramework-function createVerify(algName: string): Verify-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
@@ -26,13 +28,13 @@ Creates a **Verify** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algName | string | Yes | Signature verification algorithm to use. Currently, RSA, ECC, DSA, SM2&lt;sup&gt;10+&lt;/sup&gt;,Ed25519&lt;sup&gt;11+&lt;/sup&gt; and ML-DSA&lt;sup&gt;26.0.0+&lt;/sup&gt; are supported.<br>If RSA PKCS1 is used, you must set the digest. If RSA PSS is used, you must set the digest and mask digest.When the RSA algorithm is used for signature verification, you can use **recover** to verify and recover thesigned data.<br>For details about the supported specifications, see[Signing and Signature Verification Overview and Algorithm Specifications](../../../../security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md). |
+| algName | string | Yes | Signature verification algorithm to use. Currently, RSA, ECC, DSA, SM2&lt;sup&gt;10+&lt;/sup&gt;,Ed25519&lt;sup&gt;11+&lt;/sup&gt; and ML-DSA&lt;sup&gt;26.0.0+&lt;/sup&gt; are supported.<br>If RSA PKCS1 is used, you must set the digest. If RSA PSS is used, you must set the digest and mask digest.When the RSA algorithm is used for signature verification, you can use **recover** to verify and recover the signed data.<br>For details about the supported specifications, see [Signing and Signature Verification Overview and Algorithm Specifications](../../../../security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Verify | Returns the **Verify** instance created. |
+| [Verify](arkts-cryptoarchitecture-verify-i.md) | Returns the **Verify** instance created. |
 
 **Error codes:**
 

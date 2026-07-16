@@ -20,6 +20,8 @@ Obtains a screenshot. This API uses an asynchronous callback to return the resul
 - API version 22+: ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
 - API version 7 - 21: ohos.permission.CAPTURE_SCREEN
 
+<!--Device-screenshot-function save(options: ScreenshotOptions, callback: AsyncCallback<image.PixelMap>): void--><!--Device-screenshot-function save(options: ScreenshotOptions, callback: AsyncCallback<image.PixelMap>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -28,15 +30,15 @@ Obtains a screenshot. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ScreenshotOptions | Yes | Information about the snapshot. If the screen to capture is a virtual screen, the snapshot is a white screen. |
-| callback | AsyncCallback&lt;image.PixelMap&gt; | Yes | Callback used to return a PixelMap object. The size of thePixelMap object is **imageSize**. If **imageSize** is not specified, the size of the logical screen associatedwith the specified display ID is used. |
+| options | [ScreenshotOptions](arkts-arkui-screenshotoptions-i-sys.md) | Yes | Information about the snapshot. If the screen to capture is a virtual screen, the snapshot is a white screen. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<image.PixelMap> | Yes | Callback used to return a PixelMap object. The size of the PixelMap object is **imageSize**. If **imageSize** is not specified, the size of the logical screen associated with the specified display ID is used. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 11 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 11 and later |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen.<br>**Applicable version:** 11 and later |
 
 **Example**
@@ -86,6 +88,8 @@ Obtains a screenshot. This API uses an asynchronous callback to return the resul
 - API version 22+: ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
 - API version 7 - 21: ohos.permission.CAPTURE_SCREEN
 
+<!--Device-screenshot-function save(callback: AsyncCallback<image.PixelMap>): void--><!--Device-screenshot-function save(callback: AsyncCallback<image.PixelMap>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -94,13 +98,13 @@ Obtains a screenshot. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;image.PixelMap&gt; | Yes | Callback used to return a PixelMap object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<image.PixelMap> | Yes | Callback used to return a PixelMap object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 **Example**
@@ -136,6 +140,8 @@ Obtains a screenshot. This API uses a promise to return the result.
 - API version 22+: ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
 - API version 7 - 21: ohos.permission.CAPTURE_SCREEN
 
+<!--Device-screenshot-function save(options?: ScreenshotOptions): Promise<image.PixelMap>--><!--Device-screenshot-function save(options?: ScreenshotOptions): Promise<image.PixelMap>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -144,13 +150,13 @@ Obtains a screenshot. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ScreenshotOptions | No | Information about the snapshot. If the screen to capture is a virtualscreen, the snapshot is a white screen.<br>**Since:** 22 |
+| options | [ScreenshotOptions](arkts-arkui-screenshotoptions-i-sys.md) | No | Information about the snapshot. If the screen to capture is a virtual screen, the snapshot is a white screen.<br>**Since:** 22 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return a PixelMap object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<image.PixelMap> | Promise used to return a PixelMap object. |
 
 **Error codes:**
 

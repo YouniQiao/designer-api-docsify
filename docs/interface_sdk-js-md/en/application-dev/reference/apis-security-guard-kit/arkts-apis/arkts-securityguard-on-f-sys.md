@@ -18,6 +18,8 @@ Subscribe the security event.
 
 **Required permissions:** ohos.permission.QUERY_SECURITY_EVENT
 
+<!--Device-securityGuard-function on(type: 'securityEventOccur', securityEventInfo: SecurityEventInfo, callback: Callback<SecurityEvent>): void--><!--Device-securityGuard-function on(type: 'securityEventOccur', securityEventInfo: SecurityEventInfo, callback: Callback<SecurityEvent>): void-End-->
+
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
@@ -27,8 +29,8 @@ Subscribe the security event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'securityEventOccur' | Yes |  |
-| securityEventInfo | SecurityEventInfo | Yes | Indicates the subscribed event information. |
-| callback | Callback&lt;SecurityEvent&gt; | Yes | Indicates the listener when the security event occurs. |
+| securityEventInfo | [SecurityEventInfo](arkts-securityguard-securityeventinfo-i-sys.md) | Yes | Indicates the subscribed event information. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<SecurityEvent> | Yes | Indicates the listener when the security event occurs. |
 
 **Error codes:**
 

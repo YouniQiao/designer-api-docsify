@@ -12,12 +12,13 @@ import { notificationManager } from '@kit.NotificationKit';
 function isBadgeDisplayed(bundle: BundleOption, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the notification badge is enabled for a specified application. This API uses an asynchronous
-callback to return the result.
+Checks whether the notification badge is enabled for a specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function isBadgeDisplayed(bundle: BundleOption, callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isBadgeDisplayed(bundle: BundleOption, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -27,8 +28,8 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that thebadge is enabled, and **false** means the opposite. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means that the badge is enabled, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -69,12 +70,13 @@ notificationManager.isBadgeDisplayed(bundle, isBadgeDisplayedCallback);
 function isBadgeDisplayed(bundle: BundleOption): Promise<boolean>
 ```
 
-Checks whether the notification badge is enabled for a specified application. This API uses a promise to return the
-result.
+Checks whether the notification badge is enabled for a specified application. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function isBadgeDisplayed(bundle: BundleOption): Promise<boolean>--><!--Device-notificationManager-function isBadgeDisplayed(bundle: BundleOption): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -84,13 +86,13 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the badge is enabled, and **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means that the badge is enabled, and **false** means the opposite. |
 
 **Error codes:**
 

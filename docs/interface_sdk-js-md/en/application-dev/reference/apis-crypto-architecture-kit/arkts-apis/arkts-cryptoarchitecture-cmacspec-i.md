@@ -1,15 +1,16 @@
 # CmacSpec
 
-Represents the child class of [MacSpec](arkts-cryptoarchitecture-macspec-i.md). It is used as an input parameter for CMAC
-computation.
+Represents the child class of [MacSpec](arkts-cryptoarchitecture-macspec-i.md). It is used as an input parameter for CMAC computation.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > **cipherName** specifies the symmetric cipher algorithm used by CMAC. It is mandatory.
 
 **Inheritance/Implementation:** CmacSpec extends [MacSpec](arkts-cryptoarchitecture-macspec-i.md)
 
 **Since:** 18
+
+<!--Device-cryptoFramework-interface CmacSpec extends MacSpec--><!--Device-cryptoFramework-interface CmacSpec extends MacSpec-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Mac
 
@@ -32,6 +33,8 @@ Symmetric cipher algorithm used by CMAC.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CmacSpec-cipherName: string--><!--Device-CmacSpec-cipherName: string-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Mac
 

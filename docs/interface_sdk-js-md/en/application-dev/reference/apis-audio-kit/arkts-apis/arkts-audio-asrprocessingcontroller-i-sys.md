@@ -4,6 +4,8 @@ ASR processing controller.
 
 **Since:** 12
 
+<!--Device-audio-interface AsrProcessingController--><!--Device-audio-interface AsrProcessingController-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
@@ -24,6 +26,8 @@ Get ASR AEC mode.
 
 **Since:** 12
 
+<!--Device-AsrProcessingController-getAsrAecMode(): AsrAecMode--><!--Device-AsrProcessingController-getAsrAecMode(): AsrAecMode-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
@@ -32,7 +36,7 @@ Get ASR AEC mode.
 
 | Type | Description |
 | --- | --- |
-| AsrAecMode | ASR AEC Mode. |
+| [AsrAecMode](arkts-audio-asraecmode-e-sys.md) | ASR AEC Mode. |
 
 **Error codes:**
 
@@ -58,6 +62,8 @@ Get ASR noise suppression mode.
 
 **Since:** 12
 
+<!--Device-AsrProcessingController-getAsrNoiseSuppressionMode(): AsrNoiseSuppressionMode--><!--Device-AsrProcessingController-getAsrNoiseSuppressionMode(): AsrNoiseSuppressionMode-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
@@ -66,7 +72,7 @@ Get ASR noise suppression mode.
 
 | Type | Description |
 | --- | --- |
-| AsrNoiseSuppressionMode | ASR noise suppression mode. |
+| [AsrNoiseSuppressionMode](arkts-audio-asrnoisesuppressionmode-e-sys.md) | ASR noise suppression mode. |
 
 **Error codes:**
 
@@ -92,6 +98,8 @@ Get ASR whisper detection mode.
 
 **Since:** 12
 
+<!--Device-AsrProcessingController-getAsrWhisperDetectionMode(): AsrWhisperDetectionMode--><!--Device-AsrProcessingController-getAsrWhisperDetectionMode(): AsrWhisperDetectionMode-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
@@ -100,7 +108,7 @@ Get ASR whisper detection mode.
 
 | Type | Description |
 | --- | --- |
-| AsrWhisperDetectionMode | ASR whisper detection mode. |
+| [AsrWhisperDetectionMode](arkts-audio-asrwhisperdetectionmode-e-sys.md) | ASR whisper detection mode. |
 
 **Error codes:**
 
@@ -125,6 +133,8 @@ isWhispering(): boolean
 Query whether user is whispering.
 
 **Since:** 12
+
+<!--Device-AsrProcessingController-isWhispering(): boolean--><!--Device-AsrProcessingController-isWhispering(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -160,6 +170,8 @@ Set ASR AEC mode.
 
 **Since:** 12
 
+<!--Device-AsrProcessingController-setAsrAecMode(mode: AsrAecMode): boolean--><!--Device-AsrProcessingController-setAsrAecMode(mode: AsrAecMode): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
@@ -168,7 +180,7 @@ Set ASR AEC mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | AsrAecMode | Yes | ASR AEC Mode. |
+| mode | [AsrAecMode](arkts-audio-asraecmode-e-sys.md) | Yes | ASR AEC Mode. |
 
 **Return value:**
 
@@ -202,6 +214,8 @@ Set ASR noise suppression mode.
 
 **Since:** 12
 
+<!--Device-AsrProcessingController-setAsrNoiseSuppressionMode(mode: AsrNoiseSuppressionMode): boolean--><!--Device-AsrProcessingController-setAsrNoiseSuppressionMode(mode: AsrNoiseSuppressionMode): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
@@ -210,7 +224,7 @@ Set ASR noise suppression mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | AsrNoiseSuppressionMode | Yes | ASR noise suppression mode. |
+| mode | [AsrNoiseSuppressionMode](arkts-audio-asrnoisesuppressionmode-e-sys.md) | Yes | ASR noise suppression mode. |
 
 **Return value:**
 
@@ -244,6 +258,8 @@ Set ASR voice control mode.
 
 **Since:** 12
 
+<!--Device-AsrProcessingController-setAsrVoiceControlMode(mode: AsrVoiceControlMode, enable: boolean): boolean--><!--Device-AsrProcessingController-setAsrVoiceControlMode(mode: AsrVoiceControlMode, enable: boolean): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
@@ -252,7 +268,7 @@ Set ASR voice control mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | AsrVoiceControlMode | Yes | ASR voice control mode. |
+| mode | [AsrVoiceControlMode](arkts-audio-asrvoicecontrolmode-e-sys.md) | Yes | ASR voice control mode. |
 | enable | boolean | Yes | Indicates whether to switch on/off this mode. |
 
 **Return value:**
@@ -287,6 +303,8 @@ Set ASR voice mute mode.
 
 **Since:** 12
 
+<!--Device-AsrProcessingController-setAsrVoiceMuteMode(mode: AsrVoiceMuteMode, enable: boolean): boolean--><!--Device-AsrProcessingController-setAsrVoiceMuteMode(mode: AsrVoiceMuteMode, enable: boolean): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
@@ -295,7 +313,7 @@ Set ASR voice mute mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | AsrVoiceMuteMode | Yes | ASR voice mute mode. |
+| mode | [AsrVoiceMuteMode](arkts-audio-asrvoicemutemode-e-sys.md) | Yes | ASR voice mute mode. |
 | enable | boolean | Yes | Indicates whether to switch on/off this mode. |
 
 **Return value:**
@@ -330,6 +348,8 @@ Set ASR whisper detection mode.
 
 **Since:** 12
 
+<!--Device-AsrProcessingController-setAsrWhisperDetectionMode(mode: AsrWhisperDetectionMode): boolean--><!--Device-AsrProcessingController-setAsrWhisperDetectionMode(mode: AsrWhisperDetectionMode): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
@@ -338,7 +358,7 @@ Set ASR whisper detection mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | AsrWhisperDetectionMode | Yes | ASR whisper detection mode. |
+| mode | [AsrWhisperDetectionMode](arkts-audio-asrwhisperdetectionmode-e-sys.md) | Yes | ASR whisper detection mode. |
 
 **Return value:**
 

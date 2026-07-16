@@ -1,5 +1,11 @@
 # getCurrentFoldCreaseRegion
 
+## 导入模块
+
+```TypeScript
+import { display } from '@kit.ArkUI';
+```
+
 ## getCurrentFoldCreaseRegion
 
 ```TypeScript
@@ -10,7 +16,9 @@ function getCurrentFoldCreaseRegion(): FoldCreaseRegion
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-display-function getCurrentFoldCreaseRegion(): FoldCreaseRegion--><!--Device-display-function getCurrentFoldCreaseRegion(): FoldCreaseRegion-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -18,7 +26,7 @@ function getCurrentFoldCreaseRegion(): FoldCreaseRegion
 
 | 类型 | 说明 |
 | --- | --- |
-| FoldCreaseRegion | FoldCreaseRegion对象，返回设备在当前显示模式下的折叠折痕区域。 |
+| [FoldCreaseRegion](arkts-arkui-foldcreaseregion-i.md) | FoldCreaseRegion对象，返回设备在当前显示模式下的折叠折痕区域。 |
 
 **错误码：**
 

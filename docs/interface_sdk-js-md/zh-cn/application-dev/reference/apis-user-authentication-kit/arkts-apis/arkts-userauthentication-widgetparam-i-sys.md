@@ -4,7 +4,15 @@
 
 **起始版本：** 10
 
+<!--Device-userAuth-interface WidgetParam--><!--Device-userAuth-interface WidgetParam-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
+
+## 导入模块
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+```
 
 ## appWindow
 
@@ -12,8 +20,7 @@
 appWindow?: window.Window
 ```
 
-是否在模应用模式下显示鉴权对话框。该模式仅适用于平板电脑和二合一设备。如果未使用此模式或使用其他类型的设备，则身份验证对话框以模系统模式显示。默认情况下，身份验证对话框以模系统方式显示。如果提供了uiContext，则该参数将
-被忽略。
+是否在模应用模式下显示鉴权对话框。该模式仅适用于平板电脑和二合一设备。如果未使用此模式或使用其他类型的设备，则身份验证对话框以模系统模式显示。默认情况下，身份验证对话框以模系统方式显示。如果提供了uiContext，则该参数将被忽略。
 
 **类型：** window.Window
 
@@ -21,7 +28,9 @@ appWindow?: window.Window
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WidgetParam-appWindow?: window.Window--><!--Device-WidgetParam-appWindow?: window.Window-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -40,6 +49,8 @@ windowMode?: WindowModeType
 **默认值：** WindowModeType.DIALOG_BOX
 
 **起始版本：** 10
+
+<!--Device-WidgetParam-windowMode?: WindowModeType--><!--Device-WidgetParam-windowMode?: WindowModeType-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

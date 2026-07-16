@@ -18,14 +18,16 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-emitter-function once(event: InnerEvent, callback: Callback<EventData>): void--><!--Device-emitter-function once(event: InnerEvent, callback: Callback<EventData>): void-End-->
+
 **System capability:** SystemCapability.Notification.Emitter
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | InnerEvent | Yes | Event to subscribe to in one-shot manner. The[EventPriority](arkts-basicservices-eventpriority-e.md) parameter is not required and does not take effect. |
-| callback | Callback&lt;EventData&gt; | Yes | Callback to be invoked when the event is received. |
+| event | [InnerEvent](arkts-basicservices-innerevent-i.md) | Yes | Event to subscribe to in one-shot manner. The [EventPriority](arkts-basicservices-eventpriority-e.md) parameter is not required and does not take effect. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<EventData> | Yes | Callback to be invoked when the event is received. |
 
 **Example**
 
@@ -57,14 +59,16 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-emitter-function once(eventId: string, callback: Callback<EventData>): void--><!--Device-emitter-function once(eventId: string, callback: Callback<EventData>): void-End-->
+
 **System capability:** SystemCapability.Notification.Emitter
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | Event ID, which is a custom string with a maximum of 10240 bytes. The value cannot beempty. |
-| callback | Callback&lt;EventData&gt; | Yes | Callback to be invoked when the event is received. |
+| eventId | string | Yes | Event ID, which is a custom string with a maximum of 10240 bytes. The value cannot be empty. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<EventData> | Yes | Callback to be invoked when the event is received. |
 
 **Example**
 
@@ -92,14 +96,16 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-emitter-function once<T>(eventId: string, callback: Callback<GenericEventData<T>>): void--><!--Device-emitter-function once<T>(eventId: string, callback: Callback<GenericEventData<T>>): void-End-->
+
 **System capability:** SystemCapability.Notification.Emitter
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | Event ID, which is a custom string with a maximum of 10240 bytes. The value cannot beempty. |
-| callback | Callback&lt;GenericEventData&lt;T&gt;&gt; | Yes | Callback to be invoked when the event is received. |
+| eventId | string | Yes | Event ID, which is a custom string with a maximum of 10240 bytes. The value cannot be empty. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<GenericEventData<T>> | Yes | Callback to be invoked when the event is received. |
 
 **Example**
 

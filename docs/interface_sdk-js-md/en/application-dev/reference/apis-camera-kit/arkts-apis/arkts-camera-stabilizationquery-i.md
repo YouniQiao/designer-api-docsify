@@ -2,14 +2,16 @@
 
 StabilizationQuery provides APIs to check the support for video stabilization.
 
-> **NOTE**
->
-> - This interface was first introduced in API version 12. In this version, a compatibility change was made that
-> preserved the initial version information of inner elements. As a result, you might see outer element's @since
-> version number being higher than that of the inner elements. However, this discrepancy does not affect the
+> **NOTE**  
+>  
+> - This interface was first introduced in API version 12. In this version, a compatibility change was made that  
+> preserved the initial version information of inner elements. As a result, you might see outer element's @since  
+> version number being higher than that of the inner elements. However, this discrepancy does not affect the  
 > functionality of the interface.
 
 **Since:** 12
+
+<!--Device-camera-interface StabilizationQuery--><!--Device-camera-interface StabilizationQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -31,19 +33,21 @@ Checks whether a video stabilization mode is supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-StabilizationQuery-isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean--><!--Device-StabilizationQuery-isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| vsMode | VideoStabilizationMode | Yes | Video stabilization mode. |
+| vsMode | [VideoStabilizationMode](arkts-camera-videostabilizationmode-e.md) | Yes | Video stabilization mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the video stabilization mode. **true** if supported,**false** otherwise. If the operation fails, undefined is returned and an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is thrown. |
+| boolean | Check result for the support of the video stabilization mode. **true** if supported,**false** otherwise. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is thrown. |
 
 **Error codes:**
 

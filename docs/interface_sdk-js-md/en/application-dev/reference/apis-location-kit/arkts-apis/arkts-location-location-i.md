@@ -10,6 +10,8 @@ Provides information about geographic locations
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-export interface Location--><!--Device-geolocation-export interface Location-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## Modules to Import
@@ -36,6 +38,8 @@ Indicates location accuracy, in meters.
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-Location-accuracy: number--><!--Device-Location-accuracy: number-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## additionSize
@@ -55,6 +59,8 @@ Indicates the amount of additional descriptive information.
 **Substitutes:** additionSize
 
 **Required permissions:** ohos.permission.LOCATION
+
+<!--Device-Location-additionSize?: number--><!--Device-Location-additionSize?: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -76,6 +82,8 @@ Indicates additional information.
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-Location-additions?: Array<string>--><!--Device-Location-additions?: Array<string>-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## altitude
@@ -95,6 +103,8 @@ Indicates location altitude, in meters.
 **Substitutes:** altitude
 
 **Required permissions:** ohos.permission.LOCATION
+
+<!--Device-Location-altitude: number--><!--Device-Location-altitude: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -116,6 +126,8 @@ Indicates direction information.
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-Location-direction: number--><!--Device-Location-direction: number-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## latitude
@@ -124,9 +136,7 @@ Indicates direction information.
 latitude: number
 ```
 
-Indicates latitude information.
-A positive value indicates north latitude,
-and a negative value indicates south latitude.
+Indicates latitude information.A positive value indicates north latitude,and a negative value indicates south latitude.
 
 **Type:** number
 
@@ -138,6 +148,8 @@ and a negative value indicates south latitude.
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-Location-latitude: number--><!--Device-Location-latitude: number-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## longitude
@@ -146,9 +158,7 @@ and a negative value indicates south latitude.
 longitude: number
 ```
 
-Indicates Longitude information.
-A positive value indicates east longitude ,
-and a negative value indicates west longitude .
+Indicates Longitude information.A positive value indicates east longitude ,and a negative value indicates west longitude .
 
 **Type:** number
 
@@ -159,6 +169,8 @@ and a negative value indicates west longitude .
 **Substitutes:** longitude
 
 **Required permissions:** ohos.permission.LOCATION
+
+<!--Device-Location-longitude: number--><!--Device-Location-longitude: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -180,6 +192,8 @@ Indicates speed, in m/s.
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-Location-speed: number--><!--Device-Location-speed: number-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## timeSinceBoot
@@ -200,6 +214,8 @@ Indicates location timestamp since boot.
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-Location-timeSinceBoot: number--><!--Device-Location-timeSinceBoot: number-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## timeStamp
@@ -219,6 +235,8 @@ Indicates location timestamp in the UTC format.
 **Substitutes:** timeStamp
 
 **Required permissions:** ohos.permission.LOCATION
+
+<!--Device-Location-timeStamp: number--><!--Device-Location-timeStamp: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 

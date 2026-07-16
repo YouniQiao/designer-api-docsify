@@ -1,13 +1,20 @@
 # VideoRecorder（系统接口）
 
-该接口自API version 9起停止维护，建议使用AVRecorder。
-视频录制管理类，用于视频录制。在调用VideoRecorder的方法前，必须先通过createVideoRecorder()创建一个VideoRecorder实例。
+该接口自API version 9起停止维护，建议使用AVRecorder。视频录制管理类，用于视频录制。在调用VideoRecorder的方法前，必须先通过createVideoRecorder()创建一个VideoRecorder实例。
 
 **起始版本：** 9
+
+<!--Device-unnamed-interface VideoRecorder--><!--Device-unnamed-interface VideoRecorder-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { media } from '@kit.MediaKit';
+```
 
 ## getInputSurface
 
@@ -19,6 +26,8 @@ getInputSurface(callback: AsyncCallback<string>): void
 
 **起始版本：** 9
 
+<!--Device-VideoRecorder-getInputSurface(callback: AsyncCallback<string>): void--><!--Device-VideoRecorder-getInputSurface(callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -27,7 +36,7 @@ getInputSurface(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | 是 | 回调函数，返回输入surface id字符串。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | 回调函数，返回输入surface id字符串。 |
 
 **错误码：**
 
@@ -66,6 +75,8 @@ getInputSurface(): Promise<string>
 
 **起始版本：** 9
 
+<!--Device-VideoRecorder-getInputSurface(): Promise<string>--><!--Device-VideoRecorder-getInputSurface(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -74,7 +85,7 @@ getInputSurface(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回输入surface id字符串。 |
+| Promise<string> | Promise对象，返回输入surface id字符串。 |
 
 **错误码：**
 
@@ -111,6 +122,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 **起始版本：** 9
 
+<!--Device-VideoRecorder-on(type: 'error', callback: ErrorCallback): void--><!--Device-VideoRecorder-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -120,7 +133,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 视频录制错误事件的类型。 |
-| callback | ErrorCallback | 是 | 回调函数，监听视频录制错误事件。 |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | 是 | 回调函数，监听视频录制错误事件。 |
 
 **错误码：**
 
@@ -153,6 +166,8 @@ pause(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-VideoRecorder-pause(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-pause(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -161,7 +176,7 @@ pause(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，暂停录制完成时返回。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，暂停录制完成时返回。 |
 
 **错误码：**
 
@@ -198,6 +213,8 @@ pause(): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-VideoRecorder-pause(): Promise<void>--><!--Device-VideoRecorder-pause(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -206,7 +223,7 @@ pause(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，暂停录制完成时返回。 |
+| Promise<void> | Promise对象，暂停录制完成时返回。 |
 
 **错误码：**
 
@@ -243,6 +260,8 @@ prepare(config: VideoRecorderConfig, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.MICROPHONE
 
+<!--Device-VideoRecorder-prepare(config: VideoRecorderConfig, callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-prepare(config: VideoRecorderConfig, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -251,8 +270,8 @@ prepare(config: VideoRecorderConfig, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | VideoRecorderConfig | 是 | 录制参数。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，准备录制完成时返回。 |
+| config | [VideoRecorderConfig](arkts-media-videorecorderconfig-i-sys.md) | 是 | 录制参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，准备录制完成时返回。 |
 
 **错误码：**
 
@@ -315,6 +334,8 @@ Prepares for recording.
 
 **需要权限：** ohos.permission.MICROPHONE
 
+<!--Device-VideoRecorder-prepare(config: VideoRecorderConfig): Promise<void>--><!--Device-VideoRecorder-prepare(config: VideoRecorderConfig): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -323,13 +344,13 @@ Prepares for recording.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | VideoRecorderConfig | 是 | 录制参数。 |
+| config | [VideoRecorderConfig](arkts-media-videorecorderconfig-i-sys.md) | 是 | 录制参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，准备录制完成时返回。 |
+| Promise<void> | Promise对象，准备录制完成时返回。 |
 
 **错误码：**
 
@@ -388,6 +409,8 @@ release(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-VideoRecorder-release(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-release(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -396,7 +419,7 @@ release(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，释放资源完成时返回。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，释放资源完成时返回。 |
 
 **错误码：**
 
@@ -431,6 +454,8 @@ release(): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-VideoRecorder-release(): Promise<void>--><!--Device-VideoRecorder-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -439,7 +464,7 @@ release(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，释放资源完成时返回。 |
+| Promise<void> | Promise对象，释放资源完成时返回。 |
 
 **错误码：**
 
@@ -468,10 +493,11 @@ videoRecorder.release().then(() => {
 reset(callback: AsyncCallback<void>): void
 ```
 
-重置视频录制。
-在重置之前，必须先调用stop()停止录制。重置后，必须调用prepare()设置录制配置以进行下一次录制。
+重置视频录制。在重置之前，必须先调用stop()停止录制。重置后，必须调用prepare()设置录制配置以进行下一次录制。
 
 **起始版本：** 9
+
+<!--Device-VideoRecorder-reset(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-reset(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -481,7 +507,7 @@ reset(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，重置完成时返回。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，重置完成时返回。 |
 
 **错误码：**
 
@@ -513,10 +539,11 @@ videoRecorder.reset((err: BusinessError) => {
 reset(): Promise<void>
 ```
 
-重置视频录制。
-在重置之前，必须先调用stop()停止录制。重置后，必须调用prepare()设置录制配置以进行下一次录制。
+重置视频录制。在重置之前，必须先调用stop()停止录制。重置后，必须调用prepare()设置录制配置以进行下一次录制。
 
 **起始版本：** 9
+
+<!--Device-VideoRecorder-reset(): Promise<void>--><!--Device-VideoRecorder-reset(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -526,7 +553,7 @@ reset(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，重置完成时返回。 |
+| Promise<void> | Promise对象，重置完成时返回。 |
 
 **错误码：**
 
@@ -560,6 +587,8 @@ resume(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-VideoRecorder-resume(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-resume(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -568,7 +597,7 @@ resume(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，恢复录制完成时返回。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，恢复录制完成时返回。 |
 
 **错误码：**
 
@@ -605,6 +634,8 @@ resume(): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-VideoRecorder-resume(): Promise<void>--><!--Device-VideoRecorder-resume(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -613,7 +644,7 @@ resume(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，恢复录制完成时返回。 |
+| Promise<void> | Promise对象，恢复录制完成时返回。 |
 
 **错误码：**
 
@@ -648,6 +679,8 @@ start(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-VideoRecorder-start(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-start(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -656,7 +689,7 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，开始录制完成时返回。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，开始录制完成时返回。 |
 
 **错误码：**
 
@@ -693,6 +726,8 @@ start(): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-VideoRecorder-start(): Promise<void>--><!--Device-VideoRecorder-start(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -701,7 +736,7 @@ start(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，开始录制完成时返回。 |
+| Promise<void> | Promise对象，开始录制完成时返回。 |
 
 **错误码：**
 
@@ -736,6 +771,8 @@ stop(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-VideoRecorder-stop(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-stop(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -744,7 +781,7 @@ stop(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，停止录制完成时返回。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，停止录制完成时返回。 |
 
 **错误码：**
 
@@ -781,6 +818,8 @@ stop(): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-VideoRecorder-stop(): Promise<void>--><!--Device-VideoRecorder-stop(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -789,7 +828,7 @@ stop(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，停止录制完成时返回。 |
+| Promise<void> | Promise对象，停止录制完成时返回。 |
 
 **错误码：**
 
@@ -825,6 +864,8 @@ readonly state: VideoRecordState
 **类型：** VideoRecordState
 
 **起始版本：** 9
+
+<!--Device-VideoRecorder-readonly state: VideoRecordState--><!--Device-VideoRecorder-readonly state: VideoRecordState-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 

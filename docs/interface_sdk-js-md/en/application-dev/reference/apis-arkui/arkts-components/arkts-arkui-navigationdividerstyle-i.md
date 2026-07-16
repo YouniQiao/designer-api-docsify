@@ -4,6 +4,8 @@ Color of the navigation divider and the upper and lower margins of the **Navigat
 
 **Since:** 23
 
+<!--Device-unnamed-declare interface NavigationDividerStyle--><!--Device-unnamed-declare interface NavigationDividerStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## color
@@ -23,6 +25,8 @@ Default value: **#33000000**, indicating gray
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-NavigationDividerStyle-color?: ResourceColor--><!--Device-NavigationDividerStyle-color?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +52,8 @@ Value range: [0, +��)
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-NavigationDividerStyle-endMargin?: Length--><!--Device-NavigationDividerStyle-endMargin?: Length-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## startMargin
@@ -71,6 +77,8 @@ Value range: [0, +��)
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-NavigationDividerStyle-startMargin?: Length--><!--Device-NavigationDividerStyle-startMargin?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

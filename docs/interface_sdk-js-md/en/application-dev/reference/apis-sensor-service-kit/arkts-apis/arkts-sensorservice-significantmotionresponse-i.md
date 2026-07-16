@@ -6,6 +6,8 @@ Describes the significant motion sensor data. It extends from [Response](arkts-s
 
 **Since:** 8
 
+<!--Device-sensor-interface SignificantMotionResponse extends Response--><!--Device-sensor-interface SignificantMotionResponse extends Response-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
@@ -20,12 +22,13 @@ import { sensor } from '@kit.SensorServiceKit';
 scalar: number
 ```
 
-Intensity of a motion. This parameter specifies whether a device has a significant motion on three physical axes
-(X, Y, and Z). The value **1** is reported when the device has a significant motion.
+Intensity of a motion. This parameter specifies whether a device has a significant motion on three physical axes(X, Y, and Z). The value **1** is reported when the device has a significant motion.
 
 **Type:** number
 
 **Since:** 8
+
+<!--Device-SignificantMotionResponse-scalar: double--><!--Device-SignificantMotionResponse-scalar: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 

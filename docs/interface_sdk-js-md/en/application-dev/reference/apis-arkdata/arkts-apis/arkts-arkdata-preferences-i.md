@@ -1,14 +1,12 @@
 # Preferences
 
-Provides APIs for obtaining and modifying **Preferences** instances. **Preferences** inherits from
-[ISendable](../../../../arkts-utils/arkts-sendable.md#isendable) and can be passed between concurrent ArkTS
-instances (including the main thread and the TaskPool or Worker threads) by reference.
-Before calling any API of **Preferences**, obtain a **Preferences** instance by using
-[sendablePreferences.getPreferences](arkts-arkdata-getpreferences-f.md#getpreferences-1).
+Provides APIs for obtaining and modifying **Preferences** instances. **Preferences** inherits from [ISendable](../../../../arkts-utils/arkts-sendable.md#isendable) and can be passed between concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads) by reference.Before calling any API of **Preferences**, obtain a **Preferences** instance by using [sendablePreferences.getPreferences](arkts-arkdata-getpreferences-f.md#getpreferences-1).
 
 **Inheritance/Implementation:** Preferences extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-isendable-i.md)
 
 **Since:** 12
+
+<!--Device-sendablePreferences-interface Preferences extends lang.ISendable--><!--Device-sendablePreferences-interface Preferences extends lang.ISendable-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -24,12 +22,13 @@ import { sendablePreferences } from '@kit.ArkData';
 clear(): Promise<void>
 ```
 
-Clears this **Preferences** instance. This API uses a promise to return the result. You can use
-[flush](arkts-arkdata-preferences-i.md#flush-1) to persist the **Preferences** instance.
+Clears this **Preferences** instance. This API uses a promise to return the result. You can use [flush](arkts-arkdata-preferences-i.md#flush-1) to persist the **Preferences** instance.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Preferences-clear(): Promise<void>--><!--Device-Preferences-clear(): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -37,7 +36,7 @@ Clears this **Preferences** instance. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -65,12 +64,13 @@ promise.then(() => {
 clearSync(): void
 ```
 
-Clears this **Preferences** instance. This API returns the result synchronously. You can use
-[flush](arkts-arkdata-preferences-i.md#flush-1) to persist the **Preferences** instance.
+Clears this **Preferences** instance. This API returns the result synchronously. You can use [flush](arkts-arkdata-preferences-i.md#flush-1) to persist the **Preferences** instance.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Preferences-clearSync(): void--><!--Device-Preferences-clearSync(): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -93,12 +93,13 @@ preferences.clearSync();
 delete(key: string): Promise<void>
 ```
 
-Deletes a KV pair from this **Preferences** instance. This API uses a promise to return the result. You can use
-[flush](arkts-arkdata-preferences-i.md#flush-1) to persist the **Preferences** instance.
+Deletes a KV pair from this **Preferences** instance. This API uses a promise to return the result. You can use [flush](arkts-arkdata-preferences-i.md#flush-1) to persist the **Preferences** instance.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Preferences-delete(key: string): Promise<void>--><!--Device-Preferences-delete(key: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -106,13 +107,13 @@ Deletes a KV pair from this **Preferences** instance. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be deleted. The value cannot be empty, and the maximum length is 1024 bytes. Fordetails,see [MAX_KEY_LENGTH](../../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| key | string | Yes | Key to be deleted. The value cannot be empty, and the maximum length is 1024 bytes. For details,see [MAX_KEY_LENGTH](../../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -141,12 +142,13 @@ promise.then(() => {
 deleteSync(key: string): void
 ```
 
-Deletes a KV pair from this **Preferences** instance. This API returns the result synchronously. You can use
-[flush](arkts-arkdata-preferences-i.md#flush-1) to persist the **Preferences** instance.
+Deletes a KV pair from this **Preferences** instance. This API returns the result synchronously. You can use [flush](arkts-arkdata-preferences-i.md#flush-1) to persist the **Preferences** instance.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Preferences-deleteSync(key: string): void--><!--Device-Preferences-deleteSync(key: string): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -154,7 +156,7 @@ Deletes a KV pair from this **Preferences** instance. This API returns the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be deleted. The value cannot be empty, and the maximum length is 1024 bytes. Fordetails,see [MAX_KEY_LENGTH](../../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| key | string | Yes | Key to be deleted. The value cannot be empty, and the maximum length is 1024 bytes. For details,see [MAX_KEY_LENGTH](../../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
 
 **Error codes:**
 
@@ -176,12 +178,13 @@ preferences.deleteSync('startup');
 flush(): Promise<void>
 ```
 
-Flushes the data in this **Preferences** instance to the persistent file. This API uses a promise to return the
-result.
+Flushes the data in this **Preferences** instance to the persistent file. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Preferences-flush(): Promise<void>--><!--Device-Preferences-flush(): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -189,7 +192,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -223,6 +226,8 @@ Flushes the data in the cached **Preferences** instance to the persistent file.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-Preferences-flushSync(): void--><!--Device-Preferences-flushSync(): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Error codes:**
@@ -244,12 +249,13 @@ preferences.flushSync();
 get(key: string, defValue: lang.ISendable): Promise<lang.ISendable>
 ```
 
-Obtains the value of a key from this **Preferences** instance. This API uses a promise to return the result. If
-the value is null or is not of the default value type, **defValue** is returned.
+Obtains the value of a key from this **Preferences** instance. This API uses a promise to return the result. If the value is null or is not of the default value type, **defValue** is returned.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Preferences-get(key: string, defValue: lang.ISendable): Promise<lang.ISendable>--><!--Device-Preferences-get(key: string, defValue: lang.ISendable): Promise<lang.ISendable>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -257,14 +263,14 @@ the value is null or is not of the default value type, **defValue** is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be obtained. The value cannot be empty, and the maximum length is 1024 bytes. Fordetails,see [MAX_KEY_LENGTH](../../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| key | string | Yes | Key to be obtained. The value cannot be empty, and the maximum length is 1024 bytes. For details,see [MAX_KEY_LENGTH](../../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
 | defValue | lang.ISendable | Yes | Default value to be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;lang.ISendable&gt; | Promise used to return the value obtained.This instance inherits from [ISendable](../../arkts-utils/arkts-sendable.md#isendable) and can be passedbetween concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads)by reference. For details, see [Using Sendable Objects](../../arkts-utils/sendable-guide.md). |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<lang.ISendable> | Promise used to return the value obtained.* This instance inherits from [ISendable](../../arkts-utils/arkts-sendable.md#isendable) and can be passed between concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads)by reference. For details, see [Using Sendable Objects](../../arkts-utils/sendable-guide.md). |
 
 **Error codes:**
 
@@ -301,13 +307,15 @@ Obtains all KV pairs from this **Preferences** instance. This API uses a promise
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Preferences-getAll(): Promise<lang.ISendable>--><!--Device-Preferences-getAll(): Promise<lang.ISendable>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;lang.ISendable&gt; | Promise used to return the KV pairs obtained.This object inherits from [ISendable](../../arkts-utils/arkts-sendable.md#isendable) and can be passedbetween concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads)by reference. For details, see [Using Sendable Objects](../../arkts-utils/sendable-guide.md). |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<lang.ISendable> | Promise used to return the KV pairs obtained.* This object inherits from [ISendable](../../arkts-utils/arkts-sendable.md#isendable) and can be passed between concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads)by reference. For details, see [Using Sendable Objects](../../arkts-utils/sendable-guide.md). |
 
 **Error codes:**
 
@@ -344,13 +352,15 @@ Obtains all KV pairs from this **Preferences** instance. This API returns the re
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Preferences-getAllSync(): lang.ISendable--><!--Device-Preferences-getAllSync(): lang.ISendable-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| lang.ISendable | All KV pairs obtained.This object inherits from [ISendable](../../arkts-utils/arkts-sendable.md#isendable) and can be passedbetween concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads)by reference. For details, see [Using Sendable Objects](../../arkts-utils/sendable-guide.md). |
+| lang.ISendable | All KV pairs obtained.* This object inherits from [ISendable](../../arkts-utils/arkts-sendable.md#isendable) and can be passed between concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads)by reference. For details, see [Using Sendable Objects](../../arkts-utils/sendable-guide.md). |
 
 **Error codes:**
 
@@ -376,12 +386,13 @@ for (let value of Object.keys(keyValues)) {
 getSync(key: string, defValue: lang.ISendable): lang.ISendable
 ```
 
-Obtains the value of a key from this **Preferences** instance. This API returns the result synchronously. If the
-value is null or is not of the default value type, **defValue** is returned.
+Obtains the value of a key from this **Preferences** instance. This API returns the result synchronously. If the value is null or is not of the default value type, **defValue** is returned.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Preferences-getSync(key: string, defValue: lang.ISendable): lang.ISendable--><!--Device-Preferences-getSync(key: string, defValue: lang.ISendable): lang.ISendable-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -389,14 +400,14 @@ value is null or is not of the default value type, **defValue** is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be obtained. The value cannot be empty, and the maximum length is 1024 bytes. Fordetails, see [MAX_KEY_LENGTH](../../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| key | string | Yes | Key to be obtained. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](../../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
 | defValue | lang.ISendable | Yes | Default value to be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| lang.ISendable | Value obtained.This instance inherits from [ISendable](../../arkts-utils/arkts-sendable.md#isendable) and can be passedbetween concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads)by reference. For details, see [Using Sendable Objects](../../arkts-utils/sendable-guide.md). |
+| lang.ISendable | Value obtained.* This instance inherits from [ISendable](../../arkts-utils/arkts-sendable.md#isendable) and can be passed between concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads)by reference. For details, see [Using Sendable Objects](../../arkts-utils/sendable-guide.md). |
 
 **Error codes:**
 
@@ -419,12 +430,13 @@ let value: lang.ISendable = preferences.getSync('startup', 'default');
 has(key: string): Promise<boolean>
 ```
 
-Checks whether this **Preferences** instance contains the KV pair of the given key. This API uses a promise to
-return the result.
+Checks whether this **Preferences** instance contains the KV pair of the given key. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Preferences-has(key: string): Promise<boolean>--><!--Device-Preferences-has(key: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -432,13 +444,13 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be checked. The value cannot be empty, and the maximum length is 1024 bytes. Fordetails,see [MAX_KEY_LENGTH](../../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| key | string | Yes | Key to be checked. The value cannot be empty, and the maximum length is 1024 bytes. For details,see [MAX_KEY_LENGTH](../../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the **Preferences**instance contains the KV pair; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means the **Preferences** instance contains the KV pair; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -471,12 +483,13 @@ promise.then((val: boolean) => {
 hasSync(key: string): boolean
 ```
 
-Checks whether this **Preferences** instance contains the KV pair of the given key. This API returns the result
-synchronously.
+Checks whether this **Preferences** instance contains the KV pair of the given key. This API returns the result synchronously.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Preferences-hasSync(key: string): boolean--><!--Device-Preferences-hasSync(key: string): boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -484,13 +497,13 @@ synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be checked. The value cannot be empty, and the maximum length is 1024 bytes. Fordetails,see [MAX_KEY_LENGTH](../../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| key | string | Yes | Key to be checked. The value cannot be empty, and the maximum length is 1024 bytes. For details,see [MAX_KEY_LENGTH](../../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The value **true** means the **Preferences** instance contains the KV pair; the value**false** means the opposite. |
+| boolean | The value **true** means the **Preferences** instance contains the KV pair; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -523,6 +536,8 @@ Unsubscribes from data changes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Preferences-off(type: 'change', callback?: Callback<string>): void--><!--Device-Preferences-off(type: 'change', callback?: Callback<string>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Parameters:**
@@ -530,7 +545,7 @@ Unsubscribes from data changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. The value is **'change'**, which indicates data changes. |
-| callback | Callback&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this APIunregisters all callbacks for data changes. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<string> | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
 
 **Error codes:**
 
@@ -564,14 +579,13 @@ preferences.flush().then(() => {
 off(type: 'multiProcessChange', callback?: Callback<string>): void
 ```
 
-Unsubscribes from inter-process data changes.
-This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-options-i.md).
-Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in
-multiple process may damage the persistent files and cause data loss.
+Unsubscribes from inter-process data changes.This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-options-i.md).Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Preferences-off(type: 'multiProcessChange', callback?: Callback<string>): void--><!--Device-Preferences-off(type: 'multiProcessChange', callback?: Callback<string>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -580,7 +594,7 @@ multiple process may damage the persistent files and cause data loss.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'multiProcessChange' | Yes | Event type. The value is **'multiProcessChange'**, which indicates inter-process data changes. |
-| callback | Callback&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this APIunregisters all callbacks for data changes. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<string> | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
 
 **Error codes:**
 
@@ -620,6 +634,8 @@ Unsubscribes from changes of specific data.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Preferences-off(type: 'dataChange', keys: Array<string>, callback?: Callback<lang.ISendable>): void--><!--Device-Preferences-off(type: 'dataChange', keys: Array<string>, callback?: Callback<lang.ISendable>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Parameters:**
@@ -627,8 +643,8 @@ Unsubscribes from changes of specific data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | Event type. The value is **'dataChange'**, which indicates data changes. |
-| keys | Array&lt;string&gt; | Yes | Keys to be unsubscribed from. If this parameter is not specified, this APIunsubscribes from the changes of all keys. |
-| callback | Callback&lt;lang.ISendable&gt; | No | Callback to unregister. If this parameter is not specified, thisAPI unregisters all callbacks for the changes of the specified data. |
+| keys | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Keys to be unsubscribed from. If this parameter is not specified, this API unsubscribes from the changes of all keys. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<lang.ISendable> | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the changes of the specified data. |
 
 **Error codes:**
 
@@ -665,12 +681,13 @@ preferences.flush().then(() => {
 on(type: 'change', callback: Callback<string>): void
 ```
 
-Subscribes to data changes. The registered callback will be invoked to return the new value if the data change
-is [flushed](arkts-arkdata-preferences-i.md#flush-1).
+Subscribes to data changes. The registered callback will be invoked to return the new value if the data change is [flushed](arkts-arkdata-preferences-i.md#flush-1).
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Preferences-on(type: 'change', callback: Callback<string>): void--><!--Device-Preferences-on(type: 'change', callback: Callback<string>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -679,7 +696,7 @@ is [flushed](arkts-arkdata-preferences-i.md#flush-1).
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. The value is **'change'**, which indicates data changes. |
-| callback | Callback&lt;string&gt; | Yes | Callback used to return the key whose value is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<string> | Yes | Callback used to return the key whose value is changed. |
 
 **Error codes:**
 
@@ -712,16 +729,13 @@ preferences.flush().then(() => {
 on(type: 'multiProcessChange', callback: Callback<string>): void
 ```
 
-Subscribes to data changes between processes. When multiple processes hold the same preference file, calling
-[flush](arkts-arkdata-preferences-i.md#flush-1) in any process (including the current process) will trigger
-the callback in this API.
-This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-options-i.md).
-Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in
-multiple process may damage the persistent files and cause data loss.
+Subscribes to data changes between processes. When multiple processes hold the same preference file, calling [flush](arkts-arkdata-preferences-i.md#flush-1) in any process (including the current process) will trigger the callback in this API.This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-options-i.md).Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Preferences-on(type: 'multiProcessChange', callback: Callback<string>): void--><!--Device-Preferences-on(type: 'multiProcessChange', callback: Callback<string>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -730,7 +744,7 @@ multiple process may damage the persistent files and cause data loss.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'multiProcessChange' | Yes | Event type. The value is **'multiProcessChange'**, which indicates inter-process data changes. |
-| callback | Callback&lt;string&gt; | Yes | Callback used to return the key whose value is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<string> | Yes | Callback used to return the key whose value is changed. |
 
 **Error codes:**
 
@@ -764,12 +778,13 @@ preferences.flush().then(() => {
 on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>): void
 ```
 
-Subscribes to changes of specific data. The registered callback will be invoked only after the values of the
-specified keys are changed and [flushed](arkts-arkdata-preferences-i.md#flush-1).
+Subscribes to changes of specific data. The registered callback will be invoked only after the values of the specified keys are changed and [flushed](arkts-arkdata-preferences-i.md#flush-1).
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Preferences-on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>): void--><!--Device-Preferences-on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -778,8 +793,8 @@ specified keys are changed and [flushed](arkts-arkdata-preferences-i.md#flush-1)
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | Event type. The value is **'dataChange'**, which indicates data changes. |
-| keys | Array&lt;string&gt; | Yes | Keys to be observed. |
-| callback | Callback&lt;lang.ISendable&gt; | Yes | Callback used to return the KV pairs changed. The keys are thekeys observed, and the values are the new values. The values support the following types: number, string,boolean, bigint, and serializable object. |
+| keys | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Keys to be observed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<lang.ISendable> | Yes | Callback used to return the KV pairs changed. The keys are the keys observed, and the values are the new values. The values support the following types: number, string,boolean, bigint, and serializable object. |
 
 **Error codes:**
 
@@ -815,12 +830,13 @@ preferences.flush().then(() => {
 put(key: string, value: lang.ISendable): Promise<void>
 ```
 
-Writes data to this **Preferences** instance. This API uses a promise to return the result. You can use
-[flush](arkts-arkdata-preferences-i.md#flush-1) to persist the **Preferences** instance.
+Writes data to this **Preferences** instance. This API uses a promise to return the result. You can use [flush](arkts-arkdata-preferences-i.md#flush-1) to persist the **Preferences** instance.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Preferences-put(key: string, value: lang.ISendable): Promise<void>--><!--Device-Preferences-put(key: string, value: lang.ISendable): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -828,14 +844,14 @@ Writes data to this **Preferences** instance. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be modified. The value cannot be empty, and the maximum length is 1024 bytes. Fordetails,see [MAX_KEY_LENGTH](../../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| key | string | Yes | Key to be modified. The value cannot be empty, and the maximum length is 1024 bytes. For details,see [MAX_KEY_LENGTH](../../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
 | value | lang.ISendable | Yes | Value to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -864,12 +880,13 @@ promise.then(() => {
 putSync(key: string, value: lang.ISendable): void
 ```
 
-Writes data to this **Preferences** instance. This API returns the result synchronously. You can use
-[flush](arkts-arkdata-preferences-i.md#flush-1) to persist the **Preferences** instance.
+Writes data to this **Preferences** instance. This API returns the result synchronously. You can use [flush](arkts-arkdata-preferences-i.md#flush-1) to persist the **Preferences** instance.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Preferences-putSync(key: string, value: lang.ISendable): void--><!--Device-Preferences-putSync(key: string, value: lang.ISendable): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -877,7 +894,7 @@ Writes data to this **Preferences** instance. This API returns the result synchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be modified. The value cannot be empty, and the maximum length is 1024 bytes. Fordetails,see [MAX_KEY_LENGTH](../../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| key | string | Yes | Key to be modified. The value cannot be empty, and the maximum length is 1024 bytes. For details,see [MAX_KEY_LENGTH](../../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
 | value | lang.ISendable | Yes | Value to write. |
 
 **Error codes:**

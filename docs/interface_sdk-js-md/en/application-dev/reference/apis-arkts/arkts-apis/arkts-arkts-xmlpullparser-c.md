@@ -4,6 +4,8 @@ The XmlPullParser interface is used to parse the existing xml file.
 
 **Since:** 8
 
+<!--Device-xml-class XmlPullParser--><!--Device-xml-class XmlPullParser-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -23,6 +25,8 @@ Creates and returns an XmlPullParser object.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-XmlPullParser-constructor(buffer: ArrayBuffer | DataView, encoding?: string)--><!--Device-XmlPullParser-constructor(buffer: ArrayBuffer | DataView, encoding?: string)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -61,13 +65,15 @@ Starts parsing the XML file.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-XmlPullParser-parse(option: ParseOptions): void--><!--Device-XmlPullParser-parse(option: ParseOptions): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | ParseOptions | Yes | Parse options for XmlPullParser, the interface includingtwo Boolean variables and three callback functions. |
+| option | [ParseOptions](arkts-arkts-parseoptions-i.md) | Yes | Parse options for XmlPullParser, the interface including two Boolean variables and three callback functions. |
 
 **Example**
 
@@ -114,11 +120,13 @@ Parses XML information.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-XmlPullParser-parseXml(option: ParseOptions): void--><!--Device-XmlPullParser-parseXml(option: ParseOptions): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | ParseOptions | Yes | XML parsing options. |
+| option | [ParseOptions](arkts-arkts-parseoptions-i.md) | Yes | XML parsing options. |
 

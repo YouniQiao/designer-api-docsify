@@ -1,12 +1,10 @@
 # AccessibilityElement
 
-Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElement**, you must call
-[AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getfocuselement-2)
-or
-[AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getwindowrootelement-2)
-to obtain an **AccessibilityElement** instance.
+Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElement**, you must call [AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getfocuselement-2)or [AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getwindowrootelement-2)to obtain an **AccessibilityElement** instance.
 
 **Since:** 9
+
+<!--Device-unnamed-export declare interface AccessibilityElement--><!--Device-unnamed-export declare interface AccessibilityElement-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -16,12 +14,13 @@ to obtain an **AccessibilityElement** instance.
 actionNames(callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains the names of all actions supported by this element. This API uses an asynchronous callback to return the
-result.
+Obtains the names of all actions supported by this element. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Deprecated since:** 12
+
+<!--Device-AccessibilityElement-actionNames(callback: AsyncCallback<Array<string>>): void--><!--Device-AccessibilityElement-actionNames(callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -29,7 +28,7 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the names of all actions supported bythe element. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback used to return the names of all actions supported by the element. |
 
 ## actionNames
 
@@ -43,13 +42,15 @@ Obtains the names of all actions supported by this element. This API uses a prom
 
 **Deprecated since:** 12
 
+<!--Device-AccessibilityElement-actionNames(): Promise<Array<string>>--><!--Device-AccessibilityElement-actionNames(): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the names of all actions supported by the element. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return the names of all actions supported by the element. |
 
 ## attributeNames
 
@@ -63,13 +64,15 @@ Obtains all attribute names of this element. This API uses an asynchronous callb
 
 **Deprecated since:** 12
 
+<!--Device-AccessibilityElement-attributeNames<T extends keyof ElementAttributeValues>(callback: AsyncCallback<Array<T>>): void--><!--Device-AccessibilityElement-attributeNames<T extends keyof ElementAttributeValues>(callback: AsyncCallback<Array<T>>): void-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;T&gt;&gt; | Yes | Callback used to return all attribute names of the element. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<T>> | Yes | Callback used to return all attribute names of the element. |
 
 ## attributeNames
 
@@ -83,13 +86,15 @@ Obtains all attribute names of this element. This API uses a promise to return t
 
 **Deprecated since:** 12
 
+<!--Device-AccessibilityElement-attributeNames<T extends keyof ElementAttributeValues>(): Promise<Array<T>>--><!--Device-AccessibilityElement-attributeNames<T extends keyof ElementAttributeValues>(): Promise<Array<T>>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;T&gt;&gt; | Promise used to return all attribute names of the element. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<T>> | Promise used to return all attribute names of the element. |
 
 ## attributeValue
 
@@ -100,12 +105,19 @@ attributeValue<T extends keyof ElementAttributeValues>(
   ): void
 ```
 
-Obtains the attribute value based on an attribute name. This API uses an asynchronous callback to return the
-result.
+Obtains the attribute value based on an attribute name. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Deprecated since:** 12
+
+<!--Device-AccessibilityElement-attributeValue<T extends keyof ElementAttributeValues>(
+    attributeName: T,
+    callback: AsyncCallback<ElementAttributeValues[T]>
+  ): void--><!--Device-AccessibilityElement-attributeValue<T extends keyof ElementAttributeValues>(
+    attributeName: T,
+    callback: AsyncCallback<ElementAttributeValues[T]>
+  ): void-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -114,7 +126,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | attributeName | T | Yes | Attribute name. |
-| callback | AsyncCallback&lt;ElementAttributeValues[T]&gt; | Yes | Callback used to return the attribute value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ElementAttributeValues[T]> | Yes | Callback used to return the attribute value. |
 
 **Error codes:**
 
@@ -135,6 +147,8 @@ Obtains the attribute value based on an attribute name. This API uses a promise 
 
 **Deprecated since:** 12
 
+<!--Device-AccessibilityElement-attributeValue<T extends keyof ElementAttributeValues>(attributeName: T): Promise<ElementAttributeValues[T]>--><!--Device-AccessibilityElement-attributeValue<T extends keyof ElementAttributeValues>(attributeName: T): Promise<ElementAttributeValues[T]>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
@@ -147,7 +161,7 @@ Obtains the attribute value based on an attribute name. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ElementAttributeValues[T]&gt; | Promise used to return the attribute value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ElementAttributeValues[T]> | Promise used to return the attribute value. |
 
 **Error codes:**
 
@@ -168,6 +182,8 @@ Finds an element based on the content type. This API uses an asynchronous callba
 
 **Deprecated since:** 12
 
+<!--Device-AccessibilityElement-findElement(type: 'content', condition: string, callback: AsyncCallback<Array<AccessibilityElement>>): void--><!--Device-AccessibilityElement-findElement(type: 'content', condition: string, callback: AsyncCallback<Array<AccessibilityElement>>): void-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
@@ -176,7 +192,7 @@ Finds an element based on the content type. This API uses an asynchronous callba
 | --- | --- | --- | --- |
 | type | 'content' | Yes | Type of element finding. The value is fixed at **'content'**. |
 | condition | string | Yes | Search criteria. |
-| callback | AsyncCallback&lt;Array&lt;AccessibilityElement&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<AccessibilityElement>> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -196,6 +212,8 @@ Finds an element based on the content type. This API uses a promise to return th
 
 **Deprecated since:** 12
 
+<!--Device-AccessibilityElement-findElement(type: 'content', condition: string): Promise<Array<AccessibilityElement>>--><!--Device-AccessibilityElement-findElement(type: 'content', condition: string): Promise<Array<AccessibilityElement>>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
@@ -209,7 +227,7 @@ Finds an element based on the content type. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AccessibilityElement&gt;&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AccessibilityElement>> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -229,6 +247,8 @@ Finds an element based on the focus type. This API uses an asynchronous callback
 
 **Deprecated since:** 12
 
+<!--Device-AccessibilityElement-findElement(type: 'focusType', condition: FocusType, callback: AsyncCallback<AccessibilityElement>): void--><!--Device-AccessibilityElement-findElement(type: 'focusType', condition: FocusType, callback: AsyncCallback<AccessibilityElement>): void-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
@@ -236,8 +256,8 @@ Finds an element based on the focus type. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'focusType' | Yes | Type of element finding. The value is fixed at **'focusType'**. |
-| condition | FocusType | Yes | Focus type. |
-| callback | AsyncCallback&lt;AccessibilityElement&gt; | Yes | Callback used to return the result. |
+| condition | [FocusType](arkts-accessibility-focustype-t.md) | Yes | Focus type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AccessibilityElement> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -257,6 +277,8 @@ Finds an element based on the focus type. This API uses a promise to return the 
 
 **Deprecated since:** 12
 
+<!--Device-AccessibilityElement-findElement(type: 'focusType', condition: FocusType): Promise<AccessibilityElement>--><!--Device-AccessibilityElement-findElement(type: 'focusType', condition: FocusType): Promise<AccessibilityElement>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
@@ -264,13 +286,13 @@ Finds an element based on the focus type. This API uses a promise to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'focusType' | Yes | Type of element finding. The value is fixed at **'focusType'**. |
-| condition | FocusType | Yes | Focus type. |
+| condition | [FocusType](arkts-accessibility-focustype-t.md) | Yes | Focus type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AccessibilityElement&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AccessibilityElement> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -290,6 +312,8 @@ Finds an element based on the focus direction. This API uses an asynchronous cal
 
 **Deprecated since:** 12
 
+<!--Device-AccessibilityElement-findElement(type: 'focusDirection', condition: FocusDirection, callback: AsyncCallback<AccessibilityElement>): void--><!--Device-AccessibilityElement-findElement(type: 'focusDirection', condition: FocusDirection, callback: AsyncCallback<AccessibilityElement>): void-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
@@ -297,8 +321,8 @@ Finds an element based on the focus direction. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'focusDirection' | Yes | Type of element finding. The value is fixed at **'focusDirection'**. |
-| condition | FocusDirection | Yes | Direction of the next focus element. |
-| callback | AsyncCallback&lt;AccessibilityElement&gt; | Yes | Callback used to return the result. |
+| condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | Yes | Direction of the next focus element. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AccessibilityElement> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -318,6 +342,8 @@ Finds an element based on the focus direction. This API uses a promise to return
 
 **Deprecated since:** 12
 
+<!--Device-AccessibilityElement-findElement(type: 'focusDirection', condition: FocusDirection): Promise<AccessibilityElement>--><!--Device-AccessibilityElement-findElement(type: 'focusDirection', condition: FocusDirection): Promise<AccessibilityElement>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
@@ -325,13 +351,13 @@ Finds an element based on the focus direction. This API uses a promise to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'focusDirection' | Yes | Type of element finding. The value is fixed at **'focusDirection'**. |
-| condition | FocusDirection | Yes | Focus direction. |
+| condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | Yes | Focus direction. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AccessibilityElement&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AccessibilityElement> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -351,15 +377,17 @@ Performs an action based on the specified action name. This API uses an asynchro
 
 **Deprecated since:** 12
 
+<!--Device-AccessibilityElement-performAction(actionName: string, parameters: object, callback: AsyncCallback<void>): void--><!--Device-AccessibilityElement-performAction(actionName: string, parameters: object, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionName | string | Yes | Action name. For details, see[Action](arkts-accessibility-action-t.md). |
+| actionName | string | Yes | Action name. For details, see [Action](arkts-accessibility-action-t.md). |
 | parameters | object | Yes | Parameters required for performing the target action. Empty by default. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -380,20 +408,22 @@ Performs an action based on the specified action name. This API uses a promise t
 
 **Deprecated since:** 12
 
+<!--Device-AccessibilityElement-performAction(actionName: string, parameters?: object): Promise<void>--><!--Device-AccessibilityElement-performAction(actionName: string, parameters?: object): Promise<void>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionName | string | Yes | Action name. For details, see[Action](arkts-accessibility-action-t.md). |
+| actionName | string | Yes | Action name. For details, see [Action](arkts-accessibility-action-t.md). |
 | parameters | object | No | Parameters required for performing the target action. Empty by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -414,14 +444,16 @@ Performs an action based on the specified action name. This API uses an asynchro
 
 **Deprecated since:** 12
 
+<!--Device-AccessibilityElement-performAction(actionName: string, callback: AsyncCallback<void>): void--><!--Device-AccessibilityElement-performAction(actionName: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionName | string | Yes | Action name. For details, see[Action](arkts-accessibility-action-t.md). |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| actionName | string | Yes | Action name. For details, see [Action](arkts-accessibility-action-t.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 

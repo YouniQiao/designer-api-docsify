@@ -20,6 +20,8 @@ Updates network interface statistics data.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-statistics-function updateIfacesStats(iface: string, start: int, end: int, stats: NetStatsInfo): Promise<void>--><!--Device-statistics-function updateIfacesStats(iface: string, start: int, end: int, stats: NetStatsInfo): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -31,13 +33,13 @@ Updates network interface statistics data.
 | iface | string | Yes | Network interface name. |
 | start | number | Yes | Start timestamp for the statistics data to update. |
 | end | number | Yes | End timestamp for the statistics data to update. |
-| stats | NetStatsInfo | Yes | Network statistics information. |
+| stats | [NetStatsInfo](arkts-network-netstatsinfo-i.md) | Yes | Network statistics information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

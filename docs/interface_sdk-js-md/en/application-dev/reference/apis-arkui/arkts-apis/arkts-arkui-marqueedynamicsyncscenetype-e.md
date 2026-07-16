@@ -4,6 +4,8 @@ Enum of scene type for Marquee
 
 **Since:** 14
 
+<!--Device-unnamed-export const enum MarqueeDynamicSyncSceneType--><!--Device-unnamed-export const enum MarqueeDynamicSyncSceneType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ANIMATION
@@ -19,6 +21,8 @@ Scene type is ANIMATION.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-MarqueeDynamicSyncSceneType-ANIMATION = 1--><!--Device-MarqueeDynamicSyncSceneType-ANIMATION = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

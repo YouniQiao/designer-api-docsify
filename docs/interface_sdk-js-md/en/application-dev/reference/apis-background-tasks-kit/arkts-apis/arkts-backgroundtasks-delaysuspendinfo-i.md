@@ -4,6 +4,8 @@ Defines the information about the transient task.
 
 **Since:** 9
 
+<!--Device-backgroundTaskManager-interface DelaySuspendInfo--><!--Device-backgroundTaskManager-interface DelaySuspendInfo-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 ## Modules to Import
@@ -18,16 +20,15 @@ import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 actualDelayTime: number
 ```
 
-Actual duration of the transient task requested by the application, in milliseconds.
-<br>Unit:ms
+Actual duration of the transient task requested by the application, in milliseconds.<br>Unit:ms
 
-Note: The maximum duration of a transient task is 3 minutes in normal cases. In the case of a low battery (
-[BatteryCapacityLevel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-batterycapacitylevel-e.md) set to **LEVEL_LOW**), the
-maximum duration is decreased to 1 minute.
+Note: The maximum duration of a transient task is 3 minutes in normal cases. In the case of a low battery ([BatteryCapacityLevel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-batterycapacitylevel-e.md) set to **LEVEL_LOW**), the maximum duration is decreased to 1 minute.
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-DelaySuspendInfo-actualDelayTime: int--><!--Device-DelaySuspendInfo-actualDelayTime: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
@@ -42,6 +43,8 @@ Request ID of the transient task.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-DelaySuspendInfo-requestId: int--><!--Device-DelaySuspendInfo-requestId: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 

@@ -6,8 +6,7 @@
 function getAppMemorySize(): Promise<number>
 ```
 
-Obtains the maximum memory (RAM allocation) available to the current application. This API uses a promise to return
-the result.
+Obtains the maximum memory (RAM allocation) available to the current application. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -15,13 +14,15 @@ the result.
 
 **Substitutes:** getAppMemorySize
 
+<!--Device-appManager-function getAppMemorySize(): Promise<number>--><!--Device-appManager-function getAppMemorySize(): Promise<number>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the maximum memory (RAM allocation) size, in MB. You can performerror processing or other custom processing based on the size. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the maximum memory (RAM allocation) size, in MB. You can perform error processing or other custom processing based on the size. |
 
 **Example**
 
@@ -44,8 +45,7 @@ appManager.getAppMemorySize().then((data) => {
 function getAppMemorySize(callback: AsyncCallback<number>): void
 ```
 
-Obtains the maximum memory (RAM allocation) available to the current application. This API uses an asynchronous
-callback to return the result.
+Obtains the maximum memory (RAM allocation) available to the current application. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -53,13 +53,15 @@ callback to return the result.
 
 **Substitutes:** getAppMemorySize
 
+<!--Device-appManager-function getAppMemorySize(callback: AsyncCallback<number>): void--><!--Device-appManager-function getAppMemorySize(callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the maximum memory (RAM allocation) size, in MB. Youcan perform error processing or other custom processing based on the size. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the maximum memory (RAM allocation) size, in MB. You can perform error processing or other custom processing based on the size. |
 
 **Example**
 

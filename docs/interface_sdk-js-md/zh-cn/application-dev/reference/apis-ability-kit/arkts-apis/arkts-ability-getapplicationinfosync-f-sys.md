@@ -1,5 +1,11 @@
 # getApplicationInfoSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getApplicationInfoSync
 
 ```TypeScript
@@ -13,6 +19,8 @@ function getApplicationInfoSync(bundleName: string, applicationFlags: number, us
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getApplicationInfoSync(bundleName: string, applicationFlags: int, userId: int) : ApplicationInfo--><!--Device-bundleManager-function getApplicationInfoSync(bundleName: string, applicationFlags: int, userId: int) : ApplicationInfo-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -30,7 +38,7 @@ function getApplicationInfoSync(bundleName: string, applicationFlags: number, us
 
 | 类型 | 说明 |
 | --- | --- |
-| ApplicationInfo | 返回ApplicationInfo对象。 |
+| [ApplicationInfo](arkts-ability-applicationinfo-t.md) | 返回ApplicationInfo对象。 |
 
 **错误码：**
 
@@ -79,6 +87,8 @@ function getApplicationInfoSync(bundleName: string, applicationFlags: number) : 
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundleManager-function getApplicationInfoSync(bundleName: string, applicationFlags: int) : ApplicationInfo--><!--Device-bundleManager-function getApplicationInfoSync(bundleName: string, applicationFlags: int) : ApplicationInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -94,7 +104,7 @@ function getApplicationInfoSync(bundleName: string, applicationFlags: number) : 
 
 | 类型 | 说明 |
 | --- | --- |
-| ApplicationInfo | 返回ApplicationInfo对象。 |
+| [ApplicationInfo](arkts-ability-applicationinfo-t.md) | 返回ApplicationInfo对象。 |
 
 **错误码：**
 

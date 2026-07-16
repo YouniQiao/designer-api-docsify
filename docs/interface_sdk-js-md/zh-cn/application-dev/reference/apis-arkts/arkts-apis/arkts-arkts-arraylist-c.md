@@ -1,11 +1,18 @@
 # ArrayList
 
-ArrayList是一种线性数据结构，底层基于数组实现。
-ArrayList会根据实际需要动态调整容量，每次扩容增加50%。
+ArrayList是一种线性数据结构，底层基于数组实现。ArrayList会根据实际需要动态调整容量，每次扩容增加50%。
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare class ArrayList<T>--><!--Device-unnamed-declare class ArrayList<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { ArrayList } from '@kit.ArkTS';
+```
 
 ## [Symbol.iterator]
 
@@ -17,7 +24,9 @@ ArrayList会根据实际需要动态调整容量，每次扩容增加50%。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayList-[Symbol.iterator](): IterableIterator<T>--><!--Device-ArrayList-[Symbol.iterator](): IterableIterator<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,7 +34,7 @@ ArrayList会根据实际需要动态调整容量，每次扩容增加50%。
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
+| IterableIterator<T> | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
 
 **错误码：**
 
@@ -75,7 +84,9 @@ add(element: T): boolean
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayList-add(element: T): boolean--><!--Device-ArrayList-add(element: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -128,7 +139,9 @@ clear(): void
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayList-clear(): void--><!--Device-ArrayList-clear(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -160,7 +173,9 @@ clone(): ArrayList<T>
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayList-clone(): ArrayList<T>--><!--Device-ArrayList-clone(): ArrayList<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -168,7 +183,7 @@ clone(): ArrayList<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArrayList&lt;T&gt; | 返回ArrayList对象实例。 |
+| [ArrayList](arkts-arkts-arraylist-c.md)<T> | 返回ArrayList对象实例。 |
 
 **错误码：**
 
@@ -199,7 +214,9 @@ ArrayList的构造函数。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayList-constructor()--><!--Device-ArrayList-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -226,7 +243,9 @@ convertToArray(): Array<T>
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayList-convertToArray(): Array<T>--><!--Device-ArrayList-convertToArray(): Array<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -234,7 +253,7 @@ convertToArray(): Array<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;T&gt; | 返回数组类型。 |
+| [Array](arkts-arkts-array-c.md)<T> | 返回数组类型。 |
 
 **错误码：**
 
@@ -265,7 +284,9 @@ forEach(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => void, 
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayList-forEach(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => void, thisArg?: Object): void--><!--Device-ArrayList-forEach(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => void, thisArg?: Object): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -273,7 +294,7 @@ forEach(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => void, 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, arrlist?: ArrayList&lt;T&gt;) =&gt; void | 是 | 回调函数。 |
+| callbackFn | (value: T, index?: number, arrlist?: ArrayList<T>) => void | 是 | 回调函数。 |
 | thisArg | Object | 否 | callbackFn被调用时用作this值，默认值为当前实例对象。 |
 
 **错误码：**
@@ -310,7 +331,9 @@ getCapacity(): number
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayList-getCapacity(): int--><!--Device-ArrayList-getCapacity(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -349,7 +372,9 @@ getIndexOf(element: T): number
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayList-getIndexOf(element: T): int--><!--Device-ArrayList-getIndexOf(element: T): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -397,7 +422,9 @@ getLastIndexOf(element: T): number
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayList-getLastIndexOf(element: T): int--><!--Device-ArrayList-getLastIndexOf(element: T): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -445,7 +472,9 @@ has(element: T): boolean
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayList-has(element: T): boolean--><!--Device-ArrayList-has(element: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -487,7 +516,9 @@ increaseCapacityTo(newCapacity: number): void
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayList-increaseCapacityTo(newCapacity: int): void--><!--Device-ArrayList-increaseCapacityTo(newCapacity: int): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -527,7 +558,9 @@ insert(element: T, index: number): void
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayList-insert(element: T, index: int): void--><!--Device-ArrayList-insert(element: T, index: int): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -566,7 +599,9 @@ isEmpty(): boolean
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayList-isEmpty(): boolean--><!--Device-ArrayList-isEmpty(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -605,7 +640,9 @@ remove(element: T): boolean
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayList-remove(element: T): boolean--><!--Device-ArrayList-remove(element: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -650,7 +687,9 @@ removeByIndex(index: number): T
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayList-removeByIndex(index: int): T--><!--Device-ArrayList-removeByIndex(index: int): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -697,7 +736,9 @@ removeByRange(fromIndex: number, toIndex: number): void
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayList-removeByRange(fromIndex: int, toIndex: int): void--><!--Device-ArrayList-removeByRange(fromIndex: int, toIndex: int): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -737,7 +778,9 @@ replaceAllElements(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayList-replaceAllElements(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => T, thisArg?: Object): void--><!--Device-ArrayList-replaceAllElements(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => T, thisArg?: Object): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -745,7 +788,7 @@ replaceAllElements(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, arrlist?: ArrayList&lt;T&gt;) =&gt; T | 是 | 回调函数。 |
+| callbackFn | (value: T, index?: number, arrlist?: ArrayList<T>) => T | 是 | 回调函数。 |
 | thisArg | Object | 否 | callbackFn被调用时用作this值，默认值为当前实例对象。 |
 
 **错误码：**
@@ -779,7 +822,9 @@ sort(comparator?: ArrayListComparatorFn<T>): void
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayList-sort(comparator?: ArrayListComparatorFn<T>): void--><!--Device-ArrayList-sort(comparator?: ArrayListComparatorFn<T>): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -787,7 +832,7 @@ sort(comparator?: ArrayListComparatorFn<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| comparator | ArrayListComparatorFn&lt;T&gt; | 否 | 回调函数，默认为升序排序的回调函数。<br> API version 23开始发生兼容性变更，在API version 22及之前的版本其类型为：`(firstValue: T, secondValue: T) =&gt; number`。<br>**起始版本：** 23 |
+| comparator | [ArrayListComparatorFn](arkts-arkts-arraylistcomparatorfn-t.md)<T> | 否 | 回调函数，默认为升序排序的回调函数。<br> API version 23开始发生兼容性变更，在API version 22及之前的版本其类型为：`(firstValue: T, secondValue: T) =&gt; number`。<br>**起始版本：** 23 |
 
 **错误码：**
 
@@ -815,12 +860,13 @@ arrayList.sort();
 subArrayList(fromIndex: number, toIndex: number): ArrayList<T>
 ```
 
-根据下标截取ArrayList中的一段元素，并返回这一段ArrayList实例，区间包含fromIndex，但不包含toIndex，
-即左闭右开区间[fromIndex, toIndex)。
+根据下标截取ArrayList中的一段元素，并返回这一段ArrayList实例，区间包含fromIndex，但不包含toIndex，即左闭右开区间[fromIndex, toIndex)。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayList-subArrayList(fromIndex: int, toIndex: int): ArrayList<T>--><!--Device-ArrayList-subArrayList(fromIndex: int, toIndex: int): ArrayList<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -835,7 +881,7 @@ subArrayList(fromIndex: number, toIndex: number): ArrayList<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArrayList&lt;T&gt; | 返回ArrayList对象实例。 |
+| [ArrayList](arkts-arkts-arraylist-c.md)<T> | 返回ArrayList对象实例。 |
 
 **错误码：**
 
@@ -867,7 +913,9 @@ trimToCurrentLength(): void
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayList-trimToCurrentLength(): void--><!--Device-ArrayList-trimToCurrentLength(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -902,7 +950,9 @@ console.info("result = ", arrayList.length); // result = 4
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayList-[index: int]: T--><!--Device-ArrayList-[index: int]: T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -918,7 +968,9 @@ ArrayList的元素个数。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArrayList-length: number--><!--Device-ArrayList-length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

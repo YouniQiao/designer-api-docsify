@@ -2,13 +2,15 @@
 
 Provides parameter name constants.
 
-| Name | Type | Read Only | Description |
-| ------------------------------- | ------ | ------ | ------------------ |
-| USER_ID | string | Yes| Custom user ID. |
-| DISTRIBUTED_SERVICE_NAME | string | Yes| Distributed service name. |
+| Name | Type | Read Only | Description |  
+| ------------------------------- | ------ | ------ | ------------------ |  
+| USER_ID | string | Yes| Custom user ID. |  
+| DISTRIBUTED_SERVICE_NAME | string | Yes| Distributed service name. |  
 | DISTRIBUTED_SERVICE_INSTANCE_ID | string | Yes| Distributed service instance ID.|
 
 **Since:** 9
+
+<!--Device-hiAppEvent-namespace param--><!--Device-hiAppEvent-namespace param-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 

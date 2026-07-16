@@ -4,6 +4,8 @@ Represents the configuration for parsing P12.
 
 **Since:** 18
 
+<!--Device-cert-interface Pkcs12ParsingConfig--><!--Device-cert-interface Pkcs12ParsingConfig-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Whether to obtain the certificate. The default value is **true**. **true**: yes;
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Pkcs12ParsingConfig-needsCert?: boolean--><!--Device-Pkcs12ParsingConfig-needsCert?: boolean-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## needsOtherCerts
@@ -45,6 +49,8 @@ Whether to obtain other certificates. The default value is **false**. **true**: 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-Pkcs12ParsingConfig-needsOtherCerts?: boolean--><!--Device-Pkcs12ParsingConfig-needsOtherCerts?: boolean-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -66,6 +72,8 @@ Whether to obtain the private key. The default value is **true**.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Pkcs12ParsingConfig-needsPrivateKey?: boolean--><!--Device-Pkcs12ParsingConfig-needsPrivateKey?: boolean-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## password
@@ -82,6 +90,8 @@ Password.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Pkcs12ParsingConfig-password: string--><!--Device-Pkcs12ParsingConfig-password: string-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## privateKeyFormat
@@ -90,11 +100,10 @@ Password.
 privateKeyFormat?: EncodingBaseFormat
 ```
 
-Format of the private key to be obtained. Currently, the PEM and DER formats are supported. If this parameter is
-not specified, the PEM format is used by default.
+Format of the private key to be obtained. Currently, the PEM and DER formats are supported. If this parameter is not specified, the PEM format is used by default.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > This parameter is valid only when **needsPrivateKey** is set to **true**.
 
 **Type:** EncodingBaseFormat
@@ -104,6 +113,8 @@ not specified, the PEM format is used by default.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-Pkcs12ParsingConfig-privateKeyFormat?: EncodingBaseFormat--><!--Device-Pkcs12ParsingConfig-privateKeyFormat?: EncodingBaseFormat-End-->
 
 **System capability:** SystemCapability.Security.Cert
 

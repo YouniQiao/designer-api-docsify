@@ -1,11 +1,12 @@
 # USBDeviceInfo (System API)
 
-Defines detailed information about the USB device. It is inherited from
-[DeviceInfo](arkts-driverdevelopment-deviceinfo-i-sys.md).
+Defines detailed information about the USB device. It is inherited from [DeviceInfo](arkts-driverdevelopment-deviceinfo-i-sys.md).
 
 **Inheritance/Implementation:** USBDeviceInfo extends [DeviceInfo](arkts-driverdevelopment-deviceinfo-i-sys.md)
 
 **Since:** 12
+
+<!--Device-deviceManager-interface USBDeviceInfo extends DeviceInfo--><!--Device-deviceManager-interface USBDeviceInfo extends DeviceInfo-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -29,6 +30,8 @@ List of interface descriptors of the USB device.
 
 **Since:** 12
 
+<!--Device-USBDeviceInfo-interfaceDescList: Array<Readonly<USBInterfaceDesc>>--><!--Device-USBDeviceInfo-interfaceDescList: Array<Readonly<USBInterfaceDesc>>-End-->
+
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **System API:** This is a system API.
@@ -45,6 +48,8 @@ Product ID of the USB device.
 
 **Since:** 12
 
+<!--Device-USBDeviceInfo-productId: int--><!--Device-USBDeviceInfo-productId: int-End-->
+
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **System API:** This is a system API.
@@ -60,6 +65,8 @@ Vendor ID of the USB device.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-USBDeviceInfo-vendorId: int--><!--Device-USBDeviceInfo-vendorId: int-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 

@@ -12,12 +12,13 @@ import { connection } from '@kit.NetworkKit';
 function disableAirplaneMode(callback: AsyncCallback<void>): void
 ```
 
-Disables the airplane mode for a device.
-To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission.
+Disables the airplane mode for a device.To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission.
 
 **Since:** 8
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
+
+<!--Device-connection-function disableAirplaneMode(callback: AsyncCallback<void>): void--><!--Device-connection-function disableAirplaneMode(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -27,7 +28,7 @@ To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INT
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of disableAirplaneMode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of disableAirplaneMode. |
 
 **Error codes:**
 
@@ -58,12 +59,13 @@ connection.disableAirplaneMode((error: BusinessError) => {
 function disableAirplaneMode(): Promise<void>
 ```
 
-Disables the airplane mode for a device.
-To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission.
+Disables the airplane mode for a device.To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission.
 
 **Since:** 8
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
+
+<!--Device-connection-function disableAirplaneMode(): Promise<void>--><!--Device-connection-function disableAirplaneMode(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -73,7 +75,7 @@ To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INT
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

@@ -1,9 +1,10 @@
 # TestRunner
 
-Base class for the test framework.
-If you want to implement your own unit test framework, you must inherit this class and overrides all its methods.
+Base class for the test framework.If you want to implement your own unit test framework, you must inherit this class and overrides all its methods.
 
 **Since:** 8
+
+<!--Device-unnamed-interface TestRunner--><!--Device-unnamed-interface TestRunner-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -24,6 +25,8 @@ Prepare the unit testing environment for running test cases.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TestRunner-onPrepare(): void--><!--Device-TestRunner-onPrepare(): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -54,6 +57,8 @@ Run all test cases.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TestRunner-onRun(): void--><!--Device-TestRunner-onRun(): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -88,6 +93,8 @@ Stop all test cases.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TestRunner-onStop?: OnStopFn--><!--Device-TestRunner-onStop?: OnStopFn-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

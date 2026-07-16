@@ -4,6 +4,8 @@ Enumerates event types.
 
 **Since:** 9
 
+<!--Device-hiAppEvent-enum EventType--><!--Device-hiAppEvent-enum EventType-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## FAULT
@@ -17,6 +19,8 @@ Fault event.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-EventType-FAULT = 1--><!--Device-EventType-FAULT = 1-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -32,6 +36,8 @@ Statistic event.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-EventType-STATISTIC = 2--><!--Device-EventType-STATISTIC = 2-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## SECURITY
@@ -46,6 +52,8 @@ Security event.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-EventType-SECURITY = 3--><!--Device-EventType-SECURITY = 3-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## BEHAVIOR
@@ -59,6 +67,8 @@ Behavior event.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-EventType-BEHAVIOR = 4--><!--Device-EventType-BEHAVIOR = 4-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 

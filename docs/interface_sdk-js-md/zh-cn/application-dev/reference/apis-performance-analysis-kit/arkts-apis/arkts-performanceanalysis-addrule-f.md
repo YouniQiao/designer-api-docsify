@@ -1,13 +1,19 @@
 # addRule
 
+## 导入模块
+
+```TypeScript
+import { hichecker } from '@kit.PerformanceAnalysisKit';
+```
+
 ## addRule
 
 ```TypeScript
 function addRule(rule: bigint): void
 ```
 
-> **˵����**
->
+> **˵����**  
+>  
 > ��API version 8��ʼ֧�֣���API version 9��ʼ����������ʹ��[hichecker.addCheckRule](arkts-performanceanalysis-addcheckrule-f.md#addcheckrule-1)�����
 
 ����һ�����������ϵͳ��ϵͳ�������ӵĹ�����м�������
@@ -17,6 +23,8 @@ function addRule(rule: bigint): void
 **废弃版本：** 9
 
 **替代接口：** [addCheckRule](arkts-performanceanalysis-addcheckrule-f.md#addcheckrule-1)
+
+<!--Device-hichecker-function addRule(rule: bigint): void--><!--Device-hichecker-function addRule(rule: bigint): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 

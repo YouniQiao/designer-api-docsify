@@ -1,5 +1,11 @@
 # generateCsr
 
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
+
 ## generateCsr
 
 ```TypeScript
@@ -10,7 +16,9 @@ function generateCsr(keyInfo: PrivateKeyInfo, config: CsrGenerationConfig): stri
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cert-function generateCsr(keyInfo: PrivateKeyInfo, config: CsrGenerationConfig): string | Uint8Array--><!--Device-cert-function generateCsr(keyInfo: PrivateKeyInfo, config: CsrGenerationConfig): string | Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -18,8 +26,8 @@ function generateCsr(keyInfo: PrivateKeyInfo, config: CsrGenerationConfig): stri
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyInfo | PrivateKeyInfo | 是 | 包含私钥跟口令的配置参数。 |
-| config | CsrGenerationConfig | 是 | 包含生成CSR的配置参数。 |
+| keyInfo | [PrivateKeyInfo](arkts-devicecertificate-privatekeyinfo-i.md) | 是 | 包含私钥跟口令的配置参数。 |
+| config | [CsrGenerationConfig](arkts-devicecertificate-csrgenerationconfig-i.md) | 是 | 包含生成CSR的配置参数。 |
 
 **返回值：**
 

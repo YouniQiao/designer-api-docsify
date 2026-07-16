@@ -12,10 +12,11 @@ import { storageStatistics } from '@kit.CoreFileKit';
 function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void
 ```
 
-Obtains the storage space (in bytes) of this application. This API uses an asynchronous callback to return the
-result.
+Obtains the storage space (in bytes) of this application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-storageStatistics-function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void--><!--Device-storageStatistics-function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -23,13 +24,13 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;BundleStats&gt; | Yes | Callback used to return the application space obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<BundleStats> | Yes | Callback used to return the application space obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:Mandatoryparameters are left unspecified; |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:Mandatory parameters are left unspecified; |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
@@ -59,19 +60,21 @@ Obtains the storage space (in bytes) of this application. This API uses a promis
 
 **Since:** 9
 
+<!--Device-storageStatistics-function getCurrentBundleStats(): Promise<BundleStats>--><!--Device-storageStatistics-function getCurrentBundleStats(): Promise<BundleStats>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BundleStats&gt; | Promise used to return the application storage space obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<BundleStats> | Promise used to return the application storage space obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:Mandatoryparameters are left unspecified; |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:Mandatory parameters are left unspecified; |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 

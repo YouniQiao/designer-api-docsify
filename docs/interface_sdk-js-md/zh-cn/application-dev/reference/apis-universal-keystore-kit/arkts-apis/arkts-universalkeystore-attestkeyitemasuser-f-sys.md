@@ -1,5 +1,11 @@
 # attestKeyItemAsUser（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+```
+
 ## attestKeyItemAsUser
 
 ```TypeScript
@@ -12,6 +18,8 @@ function attestKeyItemAsUser(userId: number, keyAlias: string, huksOptions: Huks
 
 **需要权限：** ohos.permission.ATTEST_KEY and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-huks-function attestKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<HuksReturnResult>--><!--Device-huks-function attestKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<HuksReturnResult>-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **系统接口：** 此接口为系统接口。
@@ -22,13 +30,13 @@ function attestKeyItemAsUser(userId: number, keyAlias: string, huksOptions: Huks
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID。 |
 | keyAlias | string | 是 | 密钥别名，存放待获取证书密钥的别名。 |
-| huksOptions | HuksOptions | 是 | 用于获取证书时指定所需参数与数据。 |
+| huksOptions | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | 是 | 用于获取证书时指定所需参数与数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | Promise对象。当调用成功时，HuksReturnResult的certChains成员非空，为获取到的证书链，否则为失败。 |
+| Promise<HuksReturnResult> | Promise对象。当调用成功时，HuksReturnResult的certChains成员非空，为获取到的证书链，否则为失败。 |
 
 **错误码：**
 

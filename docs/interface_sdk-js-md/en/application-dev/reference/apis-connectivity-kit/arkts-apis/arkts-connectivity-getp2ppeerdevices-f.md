@@ -18,13 +18,15 @@ Obtain the information about the found devices.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function getP2pPeerDevices(): Promise<WifiP2pDevice[]>--><!--Device-wifiManager-function getP2pPeerDevices(): Promise<WifiP2pDevice[]>-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WifiP2pDevice[]&gt; | Returns p2p device information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<WifiP2pDevice[]> | Returns p2p device information. |
 
 **Error codes:**
 
@@ -47,13 +49,15 @@ Obtain the information about the found devices.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function getP2pPeerDevices(callback: AsyncCallback<WifiP2pDevice[]>): void--><!--Device-wifiManager-function getP2pPeerDevices(callback: AsyncCallback<WifiP2pDevice[]>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;WifiP2pDevice[]&gt; | Yes | Indicates callback of function. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<WifiP2pDevice[]> | Yes | Indicates callback of function. |
 
 **Error codes:**
 

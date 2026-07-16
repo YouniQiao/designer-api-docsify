@@ -1,9 +1,10 @@
 # DeviceSelectResult (System API)
 
-Returns the result of companion device selection. It is used to return the device information and extended
-context selected by the user in the device selection callback.
+Returns the result of companion device selection. It is used to return the device information and extended context selected by the user in the device selection callback.
 
 **Since:** 23
+
+<!--Device-companionDeviceAuth-interface DeviceSelectResult--><!--Device-companionDeviceAuth-interface DeviceSelectResult-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -21,15 +22,15 @@ import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 deviceKeys: DeviceKey[]
 ```
 
-Device information list. It contains the device service identifier information selected by the user. Each
-**DeviceKey** contains the device ID type, device ID, and device user ID. The system will perform subsequent
-operations such as adding a template or performing authentication based on this information.
+Device information list. It contains the device service identifier information selected by the user. Each **DeviceKey** contains the device ID type, device ID, and device user ID. The system will perform subsequent operations such as adding a template or performing authentication based on this information.
 
 **Type:** DeviceKey[]
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DeviceSelectResult-deviceKeys: DeviceKey[]--><!--Device-DeviceSelectResult-deviceKeys: DeviceKey[]-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -41,15 +42,15 @@ operations such as adding a template or performing authentication based on this 
 selectionContext?: Uint8Array
 ```
 
-Device selection context. It carries extension information in JSON format and can be used to pass additional
-parameters in the device selection process, such as authentication configuration and service scenario
-identifier.
+Device selection context. It carries extension information in JSON format and can be used to pass additional parameters in the device selection process, such as authentication configuration and service scenario identifier.
 
 **Type:** Uint8Array
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DeviceSelectResult-selectionContext?: Uint8Array--><!--Device-DeviceSelectResult-selectionContext?: Uint8Array-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 

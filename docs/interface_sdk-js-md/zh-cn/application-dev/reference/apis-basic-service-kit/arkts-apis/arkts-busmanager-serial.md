@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-declare namespace serial--><!--Device-unnamed-declare namespace serial-End-->
+
 **系统能力：** SystemCapability.BusManager.Serial
+
+## 导入模块
+
+```TypeScript
+import { serial } from '@kit.BasicServicesKit';
+```
 
 ## 汇总
 

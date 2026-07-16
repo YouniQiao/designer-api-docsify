@@ -1,10 +1,14 @@
 # BooleanConstructor
 
+<!--Device-unnamed-interface BooleanConstructor--><!--Device-unnamed-interface BooleanConstructor-End-->
+
 ## constructor
 
 ```TypeScript
 new(value?: any): Boolean
 ```
+
+<!--Device-BooleanConstructor-new(value?: any): Boolean--><!--Device-BooleanConstructor-new(value?: any): Boolean-End-->
 
 **Parameters:**
 
@@ -16,13 +20,15 @@ new(value?: any): Boolean
 
 | Type | Description |
 | --- | --- |
-| Boolean |  |
+| [Boolean](arkts-na-boolean-i.md) |  |
 
 ## constructor
 
 ```TypeScript
 <T>(value?: T): boolean
 ```
+
+<!--Device-BooleanConstructor-<T>(value?: T): boolean--><!--Device-BooleanConstructor-<T>(value?: T): boolean-End-->
 
 **Parameters:**
 
@@ -43,4 +49,6 @@ readonly prototype: Boolean
 ```
 
 **Type:** Boolean
+
+<!--Device-BooleanConstructor-readonly prototype: Boolean--><!--Device-BooleanConstructor-readonly prototype: Boolean-End-->
 

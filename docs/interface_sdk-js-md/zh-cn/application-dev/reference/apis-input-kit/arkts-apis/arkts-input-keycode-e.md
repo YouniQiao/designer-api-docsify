@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-export declare enum KeyCode--><!--Device-unnamed-export declare enum KeyCode-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_FN
@@ -15,6 +17,8 @@ KEYCODE_FN = 0
 功能（Fn）键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_FN = 0--><!--Device-KeyCode-KEYCODE_FN = 0-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -28,6 +32,8 @@ KEYCODE_UNKNOWN = -1
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_UNKNOWN = -1--><!--Device-KeyCode-KEYCODE_UNKNOWN = -1-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_HOME
@@ -39,6 +45,8 @@ KEYCODE_HOME = 1
 功能（Home）键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_HOME = 1--><!--Device-KeyCode-KEYCODE_HOME = 1-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -52,6 +60,8 @@ KEYCODE_BACK = 2
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_BACK = 2--><!--Device-KeyCode-KEYCODE_BACK = 2-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_SEARCH
@@ -63,6 +73,8 @@ KEYCODE_SEARCH = 9
 搜索键。
 
 **起始版本：** 13
+
+<!--Device-KeyCode-KEYCODE_SEARCH = 9--><!--Device-KeyCode-KEYCODE_SEARCH = 9-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -80,7 +92,9 @@ KEYCODE_PLAYPAUSE是较早的定义，KEYCODE_MEDIA_PLAY_PAUSE为现代媒体键
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-KeyCode-KEYCODE_MEDIA_PLAY_PAUSE = 10--><!--Device-KeyCode-KEYCODE_MEDIA_PLAY_PAUSE = 10-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -94,7 +108,9 @@ KEYCODE_MEDIA_STOP = 11
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-KeyCode-KEYCODE_MEDIA_STOP = 11--><!--Device-KeyCode-KEYCODE_MEDIA_STOP = 11-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -108,7 +124,9 @@ KEYCODE_MEDIA_NEXT = 12
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-KeyCode-KEYCODE_MEDIA_NEXT = 12--><!--Device-KeyCode-KEYCODE_MEDIA_NEXT = 12-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -122,7 +140,9 @@ KEYCODE_MEDIA_PREVIOUS = 13
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-KeyCode-KEYCODE_MEDIA_PREVIOUS = 13--><!--Device-KeyCode-KEYCODE_MEDIA_PREVIOUS = 13-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -136,7 +156,9 @@ KEYCODE_MEDIA_REWIND = 14
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-KeyCode-KEYCODE_MEDIA_REWIND = 14--><!--Device-KeyCode-KEYCODE_MEDIA_REWIND = 14-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -150,7 +172,9 @@ KEYCODE_MEDIA_FAST_FORWARD = 15
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-KeyCode-KEYCODE_MEDIA_FAST_FORWARD = 15--><!--Device-KeyCode-KEYCODE_MEDIA_FAST_FORWARD = 15-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -164,6 +188,8 @@ KEYCODE_VOLUME_UP = 16
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_VOLUME_UP = 16--><!--Device-KeyCode-KEYCODE_VOLUME_UP = 16-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_VOLUME_DOWN
@@ -175,6 +201,8 @@ KEYCODE_VOLUME_DOWN = 17
 音量减小键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_VOLUME_DOWN = 17--><!--Device-KeyCode-KEYCODE_VOLUME_DOWN = 17-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -188,6 +216,8 @@ KEYCODE_POWER = 18
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_POWER = 18--><!--Device-KeyCode-KEYCODE_POWER = 18-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_CAMERA
@@ -199,6 +229,8 @@ KEYCODE_CAMERA = 19
 拍照键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_CAMERA = 19--><!--Device-KeyCode-KEYCODE_CAMERA = 19-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -212,6 +244,8 @@ KEYCODE_VOLUME_MUTE = 22
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_VOLUME_MUTE = 22--><!--Device-KeyCode-KEYCODE_VOLUME_MUTE = 22-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_MUTE
@@ -223,6 +257,8 @@ KEYCODE_MUTE = 23
 话筒静音键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_MUTE = 23--><!--Device-KeyCode-KEYCODE_MUTE = 23-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -236,6 +272,8 @@ KEYCODE_BRIGHTNESS_UP = 40
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_BRIGHTNESS_UP = 40--><!--Device-KeyCode-KEYCODE_BRIGHTNESS_UP = 40-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_BRIGHTNESS_DOWN
@@ -247,6 +285,8 @@ KEYCODE_BRIGHTNESS_DOWN = 41
 亮度调节按键：调暗。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_BRIGHTNESS_DOWN = 41--><!--Device-KeyCode-KEYCODE_BRIGHTNESS_DOWN = 41-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -260,6 +300,8 @@ KEYCODE_0 = 2000
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_0 = 2000--><!--Device-KeyCode-KEYCODE_0 = 2000-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_1
@@ -271,6 +313,8 @@ KEYCODE_1 = 2001
 按键'1'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_1 = 2001--><!--Device-KeyCode-KEYCODE_1 = 2001-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -284,6 +328,8 @@ KEYCODE_2 = 2002
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_2 = 2002--><!--Device-KeyCode-KEYCODE_2 = 2002-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_3
@@ -295,6 +341,8 @@ KEYCODE_3 = 2003
 按键'3'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_3 = 2003--><!--Device-KeyCode-KEYCODE_3 = 2003-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -308,6 +356,8 @@ KEYCODE_4 = 2004
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_4 = 2004--><!--Device-KeyCode-KEYCODE_4 = 2004-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_5
@@ -319,6 +369,8 @@ KEYCODE_5 = 2005
 按键'5'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_5 = 2005--><!--Device-KeyCode-KEYCODE_5 = 2005-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -332,6 +384,8 @@ KEYCODE_6 = 2006
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_6 = 2006--><!--Device-KeyCode-KEYCODE_6 = 2006-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_7
@@ -343,6 +397,8 @@ KEYCODE_7 = 2007
 按键'7'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_7 = 2007--><!--Device-KeyCode-KEYCODE_7 = 2007-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -356,6 +412,8 @@ KEYCODE_8 = 2008
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_8 = 2008--><!--Device-KeyCode-KEYCODE_8 = 2008-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_9
@@ -367,6 +425,8 @@ KEYCODE_9 = 2009
 按键'9'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_9 = 2009--><!--Device-KeyCode-KEYCODE_9 = 2009-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -380,6 +440,8 @@ KEYCODE_STAR = 2010
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_STAR = 2010--><!--Device-KeyCode-KEYCODE_STAR = 2010-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_POUND
@@ -391,6 +453,8 @@ KEYCODE_POUND = 2011
 按键'*'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_POUND = 2011--><!--Device-KeyCode-KEYCODE_POUND = 2011-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -404,6 +468,8 @@ KEYCODE_DPAD_UP = 2012
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_DPAD_UP = 2012--><!--Device-KeyCode-KEYCODE_DPAD_UP = 2012-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_DPAD_DOWN
@@ -415,6 +481,8 @@ KEYCODE_DPAD_DOWN = 2013
 导航键：向下。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_DPAD_DOWN = 2013--><!--Device-KeyCode-KEYCODE_DPAD_DOWN = 2013-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -428,6 +496,8 @@ KEYCODE_DPAD_LEFT = 2014
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_DPAD_LEFT = 2014--><!--Device-KeyCode-KEYCODE_DPAD_LEFT = 2014-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_DPAD_RIGHT
@@ -439,6 +509,8 @@ KEYCODE_DPAD_RIGHT = 2015
 导航键：向右。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_DPAD_RIGHT = 2015--><!--Device-KeyCode-KEYCODE_DPAD_RIGHT = 2015-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -452,6 +524,8 @@ KEYCODE_DPAD_CENTER = 2016
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_DPAD_CENTER = 2016--><!--Device-KeyCode-KEYCODE_DPAD_CENTER = 2016-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_A
@@ -463,6 +537,8 @@ KEYCODE_A = 2017
 按键'A'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_A = 2017--><!--Device-KeyCode-KEYCODE_A = 2017-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -476,6 +552,8 @@ KEYCODE_B = 2018
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_B = 2018--><!--Device-KeyCode-KEYCODE_B = 2018-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_C
@@ -487,6 +565,8 @@ KEYCODE_C = 2019
 按键'C'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_C = 2019--><!--Device-KeyCode-KEYCODE_C = 2019-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -500,6 +580,8 @@ KEYCODE_D = 2020
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_D = 2020--><!--Device-KeyCode-KEYCODE_D = 2020-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_E
@@ -511,6 +593,8 @@ KEYCODE_E = 2021
 按键'E'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_E = 2021--><!--Device-KeyCode-KEYCODE_E = 2021-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -524,6 +608,8 @@ KEYCODE_F = 2022
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_F = 2022--><!--Device-KeyCode-KEYCODE_F = 2022-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_G
@@ -535,6 +621,8 @@ KEYCODE_G = 2023
 按键'G'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_G = 2023--><!--Device-KeyCode-KEYCODE_G = 2023-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -548,6 +636,8 @@ KEYCODE_H = 2024
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_H = 2024--><!--Device-KeyCode-KEYCODE_H = 2024-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_I
@@ -559,6 +649,8 @@ KEYCODE_I = 2025
 按键'I'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_I = 2025--><!--Device-KeyCode-KEYCODE_I = 2025-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -572,6 +664,8 @@ KEYCODE_J = 2026
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_J = 2026--><!--Device-KeyCode-KEYCODE_J = 2026-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_K
@@ -583,6 +677,8 @@ KEYCODE_K = 2027
 按键'K'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_K = 2027--><!--Device-KeyCode-KEYCODE_K = 2027-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -596,6 +692,8 @@ KEYCODE_L = 2028
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_L = 2028--><!--Device-KeyCode-KEYCODE_L = 2028-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_M
@@ -607,6 +705,8 @@ KEYCODE_M = 2029
 按键'M'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_M = 2029--><!--Device-KeyCode-KEYCODE_M = 2029-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -620,6 +720,8 @@ KEYCODE_N = 2030
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_N = 2030--><!--Device-KeyCode-KEYCODE_N = 2030-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_O
@@ -631,6 +733,8 @@ KEYCODE_O = 2031
 按键'O'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_O = 2031--><!--Device-KeyCode-KEYCODE_O = 2031-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -644,6 +748,8 @@ KEYCODE_P = 2032
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_P = 2032--><!--Device-KeyCode-KEYCODE_P = 2032-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_Q
@@ -655,6 +761,8 @@ KEYCODE_Q = 2033
 按键'Q'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_Q = 2033--><!--Device-KeyCode-KEYCODE_Q = 2033-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -668,6 +776,8 @@ KEYCODE_R = 2034
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_R = 2034--><!--Device-KeyCode-KEYCODE_R = 2034-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_S
@@ -679,6 +789,8 @@ KEYCODE_S = 2035
 按键'S'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_S = 2035--><!--Device-KeyCode-KEYCODE_S = 2035-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -692,6 +804,8 @@ KEYCODE_T = 2036
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_T = 2036--><!--Device-KeyCode-KEYCODE_T = 2036-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_U
@@ -703,6 +817,8 @@ KEYCODE_U = 2037
 按键'U'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_U = 2037--><!--Device-KeyCode-KEYCODE_U = 2037-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -716,6 +832,8 @@ KEYCODE_V = 2038
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_V = 2038--><!--Device-KeyCode-KEYCODE_V = 2038-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_W
@@ -727,6 +845,8 @@ KEYCODE_W = 2039
 按键'W'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_W = 2039--><!--Device-KeyCode-KEYCODE_W = 2039-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -740,6 +860,8 @@ KEYCODE_X = 2040
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_X = 2040--><!--Device-KeyCode-KEYCODE_X = 2040-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_Y
@@ -751,6 +873,8 @@ KEYCODE_Y = 2041
 按键'Y'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_Y = 2041--><!--Device-KeyCode-KEYCODE_Y = 2041-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -764,6 +888,8 @@ KEYCODE_Z = 2042
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_Z = 2042--><!--Device-KeyCode-KEYCODE_Z = 2042-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_COMMA
@@ -775,6 +901,8 @@ KEYCODE_COMMA = 2043
 按键','。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_COMMA = 2043--><!--Device-KeyCode-KEYCODE_COMMA = 2043-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -788,6 +916,8 @@ KEYCODE_PERIOD = 2044
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_PERIOD = 2044--><!--Device-KeyCode-KEYCODE_PERIOD = 2044-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_ALT_LEFT
@@ -799,6 +929,8 @@ KEYCODE_ALT_LEFT = 2045
 左Alt键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_ALT_LEFT = 2045--><!--Device-KeyCode-KEYCODE_ALT_LEFT = 2045-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -812,6 +944,8 @@ KEYCODE_ALT_RIGHT = 2046
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_ALT_RIGHT = 2046--><!--Device-KeyCode-KEYCODE_ALT_RIGHT = 2046-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_SHIFT_LEFT
@@ -823,6 +957,8 @@ KEYCODE_SHIFT_LEFT = 2047
 左Shift键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_SHIFT_LEFT = 2047--><!--Device-KeyCode-KEYCODE_SHIFT_LEFT = 2047-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -836,6 +972,8 @@ KEYCODE_SHIFT_RIGHT = 2048
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_SHIFT_RIGHT = 2048--><!--Device-KeyCode-KEYCODE_SHIFT_RIGHT = 2048-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_TAB
@@ -847,6 +985,8 @@ KEYCODE_TAB = 2049
 Tab键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_TAB = 2049--><!--Device-KeyCode-KEYCODE_TAB = 2049-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -860,6 +1000,8 @@ KEYCODE_SPACE = 2050
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_SPACE = 2050--><!--Device-KeyCode-KEYCODE_SPACE = 2050-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_SYM
@@ -871,6 +1013,8 @@ KEYCODE_SYM = 2051
 符号修改器按键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_SYM = 2051--><!--Device-KeyCode-KEYCODE_SYM = 2051-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -884,6 +1028,8 @@ KEYCODE_EXPLORER = 2052
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_EXPLORER = 2052--><!--Device-KeyCode-KEYCODE_EXPLORER = 2052-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_ENVELOPE
@@ -895,6 +1041,8 @@ KEYCODE_ENVELOPE = 2053
 电子邮件功能键，此键用于启动电子邮件应用程序。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_ENVELOPE = 2053--><!--Device-KeyCode-KEYCODE_ENVELOPE = 2053-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -908,6 +1056,8 @@ KEYCODE_ENTER = 2054
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_ENTER = 2054--><!--Device-KeyCode-KEYCODE_ENTER = 2054-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_DEL
@@ -919,6 +1069,8 @@ KEYCODE_DEL = 2055
 退格键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_DEL = 2055--><!--Device-KeyCode-KEYCODE_DEL = 2055-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -932,6 +1084,8 @@ KEYCODE_GRAVE = 2056
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_GRAVE = 2056--><!--Device-KeyCode-KEYCODE_GRAVE = 2056-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_MINUS
@@ -943,6 +1097,8 @@ KEYCODE_MINUS = 2057
 按键'-'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_MINUS = 2057--><!--Device-KeyCode-KEYCODE_MINUS = 2057-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -956,6 +1112,8 @@ KEYCODE_EQUALS = 2058
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_EQUALS = 2058--><!--Device-KeyCode-KEYCODE_EQUALS = 2058-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_LEFT_BRACKET
@@ -967,6 +1125,8 @@ KEYCODE_LEFT_BRACKET = 2059
 按键'['。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_LEFT_BRACKET = 2059--><!--Device-KeyCode-KEYCODE_LEFT_BRACKET = 2059-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -980,6 +1140,8 @@ KEYCODE_RIGHT_BRACKET = 2060
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_RIGHT_BRACKET = 2060--><!--Device-KeyCode-KEYCODE_RIGHT_BRACKET = 2060-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_BACKSLASH
@@ -991,6 +1153,8 @@ KEYCODE_BACKSLASH = 2061
 按键'\'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_BACKSLASH = 2061--><!--Device-KeyCode-KEYCODE_BACKSLASH = 2061-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1004,6 +1168,8 @@ KEYCODE_SEMICOLON = 2062
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_SEMICOLON = 2062--><!--Device-KeyCode-KEYCODE_SEMICOLON = 2062-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_APOSTROPHE
@@ -1015,6 +1181,8 @@ KEYCODE_APOSTROPHE = 2063
 按键''' (单引号)。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_APOSTROPHE = 2063--><!--Device-KeyCode-KEYCODE_APOSTROPHE = 2063-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1028,6 +1196,8 @@ KEYCODE_SLASH = 2064
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_SLASH = 2064--><!--Device-KeyCode-KEYCODE_SLASH = 2064-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_AT
@@ -1039,6 +1209,8 @@ KEYCODE_AT = 2065
 按键'*'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_AT = 2065--><!--Device-KeyCode-KEYCODE_AT = 2065-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1052,6 +1224,8 @@ KEYCODE_PLUS = 2066
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_PLUS = 2066--><!--Device-KeyCode-KEYCODE_PLUS = 2066-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_MENU
@@ -1063,6 +1237,8 @@ KEYCODE_MENU = 2067
 菜单键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_MENU = 2067--><!--Device-KeyCode-KEYCODE_MENU = 2067-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1076,6 +1252,8 @@ KEYCODE_PAGE_UP = 2068
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_PAGE_UP = 2068--><!--Device-KeyCode-KEYCODE_PAGE_UP = 2068-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_PAGE_DOWN
@@ -1087,6 +1265,8 @@ KEYCODE_PAGE_DOWN = 2069
 向下翻页键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_PAGE_DOWN = 2069--><!--Device-KeyCode-KEYCODE_PAGE_DOWN = 2069-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1100,6 +1280,8 @@ Esc键。
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_ESCAPE = 2070--><!--Device-KeyCode-KEYCODE_ESCAPE = 2070-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_FORWARD_DEL
@@ -1111,6 +1293,8 @@ KEYCODE_FORWARD_DEL = 2071
 删除键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_FORWARD_DEL = 2071--><!--Device-KeyCode-KEYCODE_FORWARD_DEL = 2071-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1124,6 +1308,8 @@ KEYCODE_CTRL_LEFT = 2072
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_CTRL_LEFT = 2072--><!--Device-KeyCode-KEYCODE_CTRL_LEFT = 2072-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_CTRL_RIGHT
@@ -1135,6 +1321,8 @@ KEYCODE_CTRL_RIGHT = 2073
 右Ctrl键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_CTRL_RIGHT = 2073--><!--Device-KeyCode-KEYCODE_CTRL_RIGHT = 2073-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1148,6 +1336,8 @@ KEYCODE_CAPS_LOCK = 2074
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_CAPS_LOCK = 2074--><!--Device-KeyCode-KEYCODE_CAPS_LOCK = 2074-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_SCROLL_LOCK
@@ -1159,6 +1349,8 @@ KEYCODE_SCROLL_LOCK = 2075
 滚动锁定键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_SCROLL_LOCK = 2075--><!--Device-KeyCode-KEYCODE_SCROLL_LOCK = 2075-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1172,6 +1364,8 @@ KEYCODE_META_LEFT = 2076
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_META_LEFT = 2076--><!--Device-KeyCode-KEYCODE_META_LEFT = 2076-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_META_RIGHT
@@ -1183,6 +1377,8 @@ KEYCODE_META_RIGHT = 2077
 右Meta键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_META_RIGHT = 2077--><!--Device-KeyCode-KEYCODE_META_RIGHT = 2077-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1196,6 +1392,8 @@ KEYCODE_FUNCTION = 2078
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_FUNCTION = 2078--><!--Device-KeyCode-KEYCODE_FUNCTION = 2078-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_SYSRQ
@@ -1207,6 +1405,8 @@ KEYCODE_SYSRQ = 2079
 系统请求/打印屏幕键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_SYSRQ = 2079--><!--Device-KeyCode-KEYCODE_SYSRQ = 2079-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1220,6 +1420,8 @@ Break/Pause键。
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_BREAK = 2080--><!--Device-KeyCode-KEYCODE_BREAK = 2080-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_MOVE_HOME
@@ -1231,6 +1433,8 @@ KEYCODE_MOVE_HOME = 2081
 光标移动到开始键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_MOVE_HOME = 2081--><!--Device-KeyCode-KEYCODE_MOVE_HOME = 2081-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1244,6 +1448,8 @@ KEYCODE_MOVE_END = 2082
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_MOVE_END = 2082--><!--Device-KeyCode-KEYCODE_MOVE_END = 2082-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_INSERT
@@ -1255,6 +1461,8 @@ KEYCODE_INSERT = 2083
 插入键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_INSERT = 2083--><!--Device-KeyCode-KEYCODE_INSERT = 2083-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1268,6 +1476,8 @@ KEYCODE_FORWARD = 2084
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_FORWARD = 2084--><!--Device-KeyCode-KEYCODE_FORWARD = 2084-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_MEDIA_PLAY
@@ -1280,7 +1490,9 @@ KEYCODE_MEDIA_PLAY = 2085
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-KeyCode-KEYCODE_MEDIA_PLAY = 2085--><!--Device-KeyCode-KEYCODE_MEDIA_PLAY = 2085-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1294,7 +1506,9 @@ KEYCODE_MEDIA_PAUSE = 2086
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-KeyCode-KEYCODE_MEDIA_PAUSE = 2086--><!--Device-KeyCode-KEYCODE_MEDIA_PAUSE = 2086-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1308,6 +1522,8 @@ KEYCODE_MEDIA_CLOSE = 2087
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_MEDIA_CLOSE = 2087--><!--Device-KeyCode-KEYCODE_MEDIA_CLOSE = 2087-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_MEDIA_EJECT
@@ -1319,6 +1535,8 @@ KEYCODE_MEDIA_EJECT = 2088
 光盘弹出键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_MEDIA_EJECT = 2088--><!--Device-KeyCode-KEYCODE_MEDIA_EJECT = 2088-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1332,6 +1550,8 @@ KEYCODE_MEDIA_RECORD = 2089
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_MEDIA_RECORD = 2089--><!--Device-KeyCode-KEYCODE_MEDIA_RECORD = 2089-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_F1
@@ -1343,6 +1563,8 @@ KEYCODE_F1 = 2090
 按键'F1'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_F1 = 2090--><!--Device-KeyCode-KEYCODE_F1 = 2090-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1356,6 +1578,8 @@ KEYCODE_F2 = 2091
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_F2 = 2091--><!--Device-KeyCode-KEYCODE_F2 = 2091-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_F3
@@ -1367,6 +1591,8 @@ KEYCODE_F3 = 2092
 按键'F3'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_F3 = 2092--><!--Device-KeyCode-KEYCODE_F3 = 2092-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1380,6 +1606,8 @@ KEYCODE_F4 = 2093
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_F4 = 2093--><!--Device-KeyCode-KEYCODE_F4 = 2093-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_F5
@@ -1391,6 +1619,8 @@ KEYCODE_F5 = 2094
 按键'F5'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_F5 = 2094--><!--Device-KeyCode-KEYCODE_F5 = 2094-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1404,6 +1634,8 @@ KEYCODE_F6 = 2095
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_F6 = 2095--><!--Device-KeyCode-KEYCODE_F6 = 2095-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_F7
@@ -1415,6 +1647,8 @@ KEYCODE_F7 = 2096
 按键'F7'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_F7 = 2096--><!--Device-KeyCode-KEYCODE_F7 = 2096-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1428,6 +1662,8 @@ KEYCODE_F8 = 2097
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_F8 = 2097--><!--Device-KeyCode-KEYCODE_F8 = 2097-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_F9
@@ -1439,6 +1675,8 @@ KEYCODE_F9 = 2098
 按键'F9'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_F9 = 2098--><!--Device-KeyCode-KEYCODE_F9 = 2098-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1452,6 +1690,8 @@ KEYCODE_F10 = 2099
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_F10 = 2099--><!--Device-KeyCode-KEYCODE_F10 = 2099-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_F11
@@ -1463,6 +1703,8 @@ KEYCODE_F11 = 2100
 按键'F11'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_F11 = 2100--><!--Device-KeyCode-KEYCODE_F11 = 2100-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1476,6 +1718,8 @@ KEYCODE_F12 = 2101
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_F12 = 2101--><!--Device-KeyCode-KEYCODE_F12 = 2101-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_NUM_LOCK
@@ -1487,6 +1731,8 @@ KEYCODE_NUM_LOCK = 2102
 小键盘锁。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_NUM_LOCK = 2102--><!--Device-KeyCode-KEYCODE_NUM_LOCK = 2102-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1500,6 +1746,8 @@ KEYCODE_NUMPAD_0 = 2103
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_NUMPAD_0 = 2103--><!--Device-KeyCode-KEYCODE_NUMPAD_0 = 2103-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_NUMPAD_1
@@ -1511,6 +1759,8 @@ KEYCODE_NUMPAD_1 = 2104
 小键盘按键'1'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_NUMPAD_1 = 2104--><!--Device-KeyCode-KEYCODE_NUMPAD_1 = 2104-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1524,6 +1774,8 @@ KEYCODE_NUMPAD_2 = 2105
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_NUMPAD_2 = 2105--><!--Device-KeyCode-KEYCODE_NUMPAD_2 = 2105-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_NUMPAD_3
@@ -1535,6 +1787,8 @@ KEYCODE_NUMPAD_3 = 2106
 小键盘按键'3'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_NUMPAD_3 = 2106--><!--Device-KeyCode-KEYCODE_NUMPAD_3 = 2106-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1548,6 +1802,8 @@ KEYCODE_NUMPAD_4 = 2107
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_NUMPAD_4 = 2107--><!--Device-KeyCode-KEYCODE_NUMPAD_4 = 2107-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_NUMPAD_5
@@ -1559,6 +1815,8 @@ KEYCODE_NUMPAD_5 = 2108
 小键盘按键'5'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_NUMPAD_5 = 2108--><!--Device-KeyCode-KEYCODE_NUMPAD_5 = 2108-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1572,6 +1830,8 @@ KEYCODE_NUMPAD_6 = 2109
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_NUMPAD_6 = 2109--><!--Device-KeyCode-KEYCODE_NUMPAD_6 = 2109-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_NUMPAD_7
@@ -1583,6 +1843,8 @@ KEYCODE_NUMPAD_7 = 2110
 小键盘按键'7'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_NUMPAD_7 = 2110--><!--Device-KeyCode-KEYCODE_NUMPAD_7 = 2110-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1596,6 +1858,8 @@ KEYCODE_NUMPAD_8 = 2111
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_NUMPAD_8 = 2111--><!--Device-KeyCode-KEYCODE_NUMPAD_8 = 2111-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_NUMPAD_9
@@ -1607,6 +1871,8 @@ KEYCODE_NUMPAD_9 = 2112
 小键盘按键'9'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_NUMPAD_9 = 2112--><!--Device-KeyCode-KEYCODE_NUMPAD_9 = 2112-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1620,6 +1886,8 @@ KEYCODE_NUMPAD_DIVIDE = 2113
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_NUMPAD_DIVIDE = 2113--><!--Device-KeyCode-KEYCODE_NUMPAD_DIVIDE = 2113-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_NUMPAD_MULTIPLY
@@ -1631,6 +1899,8 @@ KEYCODE_NUMPAD_MULTIPLY = 2114
 小键盘按键'*'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_NUMPAD_MULTIPLY = 2114--><!--Device-KeyCode-KEYCODE_NUMPAD_MULTIPLY = 2114-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1644,6 +1914,8 @@ KEYCODE_NUMPAD_SUBTRACT = 2115
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_NUMPAD_SUBTRACT = 2115--><!--Device-KeyCode-KEYCODE_NUMPAD_SUBTRACT = 2115-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_NUMPAD_ADD
@@ -1655,6 +1927,8 @@ KEYCODE_NUMPAD_ADD = 2116
 小键盘按键'+'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_NUMPAD_ADD = 2116--><!--Device-KeyCode-KEYCODE_NUMPAD_ADD = 2116-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1668,6 +1942,8 @@ KEYCODE_NUMPAD_DOT = 2117
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_NUMPAD_DOT = 2117--><!--Device-KeyCode-KEYCODE_NUMPAD_DOT = 2117-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_NUMPAD_COMMA
@@ -1679,6 +1955,8 @@ KEYCODE_NUMPAD_COMMA = 2118
 小键盘按键','。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_NUMPAD_COMMA = 2118--><!--Device-KeyCode-KEYCODE_NUMPAD_COMMA = 2118-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1692,6 +1970,8 @@ KEYCODE_NUMPAD_ENTER = 2119
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_NUMPAD_ENTER = 2119--><!--Device-KeyCode-KEYCODE_NUMPAD_ENTER = 2119-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_NUMPAD_EQUALS
@@ -1703,6 +1983,8 @@ KEYCODE_NUMPAD_EQUALS = 2120
 小键盘按键'='。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_NUMPAD_EQUALS = 2120--><!--Device-KeyCode-KEYCODE_NUMPAD_EQUALS = 2120-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1716,6 +1998,8 @@ KEYCODE_NUMPAD_LEFT_PAREN = 2121
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_NUMPAD_LEFT_PAREN = 2121--><!--Device-KeyCode-KEYCODE_NUMPAD_LEFT_PAREN = 2121-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_NUMPAD_RIGHT_PAREN
@@ -1727,6 +2011,8 @@ KEYCODE_NUMPAD_RIGHT_PAREN = 2122
 小键盘按键')'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_NUMPAD_RIGHT_PAREN = 2122--><!--Device-KeyCode-KEYCODE_NUMPAD_RIGHT_PAREN = 2122-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1740,6 +2026,8 @@ KEYCODE_VIRTUAL_MULTITASK = 2210
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_VIRTUAL_MULTITASK = 2210--><!--Device-KeyCode-KEYCODE_VIRTUAL_MULTITASK = 2210-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_BUTTON_A
@@ -1751,6 +2039,8 @@ KEYCODE_BUTTON_A = 2301
 游戏手柄按键'A'。
 
 **起始版本：** 15
+
+<!--Device-KeyCode-KEYCODE_BUTTON_A = 2301--><!--Device-KeyCode-KEYCODE_BUTTON_A = 2301-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1764,6 +2054,8 @@ KEYCODE_BUTTON_B = 2302
 
 **起始版本：** 15
 
+<!--Device-KeyCode-KEYCODE_BUTTON_B = 2302--><!--Device-KeyCode-KEYCODE_BUTTON_B = 2302-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_BUTTON_X
@@ -1775,6 +2067,8 @@ KEYCODE_BUTTON_X = 2304
 游戏手柄按键'X'。
 
 **起始版本：** 15
+
+<!--Device-KeyCode-KEYCODE_BUTTON_X = 2304--><!--Device-KeyCode-KEYCODE_BUTTON_X = 2304-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1788,6 +2082,8 @@ KEYCODE_BUTTON_Y = 2305
 
 **起始版本：** 15
 
+<!--Device-KeyCode-KEYCODE_BUTTON_Y = 2305--><!--Device-KeyCode-KEYCODE_BUTTON_Y = 2305-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_BUTTON_L1
@@ -1799,6 +2095,8 @@ KEYCODE_BUTTON_L1 = 2307
 游戏手柄按键'L1'。
 
 **起始版本：** 15
+
+<!--Device-KeyCode-KEYCODE_BUTTON_L1 = 2307--><!--Device-KeyCode-KEYCODE_BUTTON_L1 = 2307-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1812,6 +2110,8 @@ KEYCODE_BUTTON_R1 = 2308
 
 **起始版本：** 15
 
+<!--Device-KeyCode-KEYCODE_BUTTON_R1 = 2308--><!--Device-KeyCode-KEYCODE_BUTTON_R1 = 2308-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_BUTTON_L2
@@ -1823,6 +2123,8 @@ KEYCODE_BUTTON_L2 = 2309
 游戏手柄按键'L2'。
 
 **起始版本：** 15
+
+<!--Device-KeyCode-KEYCODE_BUTTON_L2 = 2309--><!--Device-KeyCode-KEYCODE_BUTTON_L2 = 2309-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1836,6 +2138,8 @@ KEYCODE_BUTTON_R2 = 2310
 
 **起始版本：** 15
 
+<!--Device-KeyCode-KEYCODE_BUTTON_R2 = 2310--><!--Device-KeyCode-KEYCODE_BUTTON_R2 = 2310-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_BUTTON_SELECT
@@ -1847,6 +2151,8 @@ KEYCODE_BUTTON_SELECT = 2311
 游戏手柄按键'Select'。
 
 **起始版本：** 15
+
+<!--Device-KeyCode-KEYCODE_BUTTON_SELECT = 2311--><!--Device-KeyCode-KEYCODE_BUTTON_SELECT = 2311-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1860,6 +2166,8 @@ KEYCODE_BUTTON_START = 2312
 
 **起始版本：** 15
 
+<!--Device-KeyCode-KEYCODE_BUTTON_START = 2312--><!--Device-KeyCode-KEYCODE_BUTTON_START = 2312-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_BUTTON_MODE
@@ -1871,6 +2179,8 @@ KEYCODE_BUTTON_MODE = 2313
 游戏手柄按键'Mode'。
 
 **起始版本：** 15
+
+<!--Device-KeyCode-KEYCODE_BUTTON_MODE = 2313--><!--Device-KeyCode-KEYCODE_BUTTON_MODE = 2313-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1884,6 +2194,8 @@ KEYCODE_BUTTON_THUMBL = 2314
 
 **起始版本：** 15
 
+<!--Device-KeyCode-KEYCODE_BUTTON_THUMBL = 2314--><!--Device-KeyCode-KEYCODE_BUTTON_THUMBL = 2314-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_BUTTON_THUMBR
@@ -1895,6 +2207,8 @@ KEYCODE_BUTTON_THUMBR = 2315
 游戏手柄按键'THUMBR'。
 
 **起始版本：** 15
+
+<!--Device-KeyCode-KEYCODE_BUTTON_THUMBR = 2315--><!--Device-KeyCode-KEYCODE_BUTTON_THUMBR = 2315-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1908,6 +2222,8 @@ KEYCODE_SLEEP = 2600
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_SLEEP = 2600--><!--Device-KeyCode-KEYCODE_SLEEP = 2600-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_ZENKAKU_HANKAKU
@@ -1919,6 +2235,8 @@ KEYCODE_ZENKAKU_HANKAKU = 2601
 日文全宽/半宽键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_ZENKAKU_HANKAKU = 2601--><!--Device-KeyCode-KEYCODE_ZENKAKU_HANKAKU = 2601-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1932,6 +2250,8 @@ KEYCODE_102ND = 2602
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_102ND = 2602--><!--Device-KeyCode-KEYCODE_102ND = 2602-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_RO
@@ -1943,6 +2263,8 @@ KEYCODE_RO = 2603
 日文Ro键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_RO = 2603--><!--Device-KeyCode-KEYCODE_RO = 2603-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1956,6 +2278,8 @@ KEYCODE_KATAKANA = 2604
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_KATAKANA = 2604--><!--Device-KeyCode-KEYCODE_KATAKANA = 2604-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_HIRAGANA
@@ -1967,6 +2291,8 @@ KEYCODE_HIRAGANA = 2605
 日文平假名键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_HIRAGANA = 2605--><!--Device-KeyCode-KEYCODE_HIRAGANA = 2605-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -1980,6 +2306,8 @@ KEYCODE_HENKAN = 2606
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_HENKAN = 2606--><!--Device-KeyCode-KEYCODE_HENKAN = 2606-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_KATAKANA_HIRAGANA
@@ -1991,6 +2319,8 @@ KEYCODE_KATAKANA_HIRAGANA = 2607
 日语片假名/平假名键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_KATAKANA_HIRAGANA = 2607--><!--Device-KeyCode-KEYCODE_KATAKANA_HIRAGANA = 2607-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2004,6 +2334,8 @@ KEYCODE_MUHENKAN = 2608
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_MUHENKAN = 2608--><!--Device-KeyCode-KEYCODE_MUHENKAN = 2608-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_LINEFEED
@@ -2015,6 +2347,8 @@ KEYCODE_LINEFEED = 2609
 换行键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_LINEFEED = 2609--><!--Device-KeyCode-KEYCODE_LINEFEED = 2609-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2028,6 +2362,8 @@ KEYCODE_MACRO = 2610
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_MACRO = 2610--><!--Device-KeyCode-KEYCODE_MACRO = 2610-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_NUMPAD_PLUSMINUS
@@ -2039,6 +2375,8 @@ KEYCODE_NUMPAD_PLUSMINUS = 2611
 数字键盘上的加号/减号键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_NUMPAD_PLUSMINUS = 2611--><!--Device-KeyCode-KEYCODE_NUMPAD_PLUSMINUS = 2611-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2052,6 +2390,8 @@ KEYCODE_SCALE = 2612
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_SCALE = 2612--><!--Device-KeyCode-KEYCODE_SCALE = 2612-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_HANGUEL
@@ -2063,6 +2403,8 @@ KEYCODE_HANGUEL = 2613
 日文韩语键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_HANGUEL = 2613--><!--Device-KeyCode-KEYCODE_HANGUEL = 2613-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2076,6 +2418,8 @@ KEYCODE_HANJA = 2614
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_HANJA = 2614--><!--Device-KeyCode-KEYCODE_HANJA = 2614-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_YEN
@@ -2087,6 +2431,8 @@ KEYCODE_YEN = 2615
 日元键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_YEN = 2615--><!--Device-KeyCode-KEYCODE_YEN = 2615-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2100,6 +2446,8 @@ KEYCODE_STOP = 2616
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_STOP = 2616--><!--Device-KeyCode-KEYCODE_STOP = 2616-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_AGAIN
@@ -2111,6 +2459,8 @@ KEYCODE_AGAIN = 2617
 重复键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_AGAIN = 2617--><!--Device-KeyCode-KEYCODE_AGAIN = 2617-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2124,6 +2474,8 @@ KEYCODE_PROPS = 2618
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_PROPS = 2618--><!--Device-KeyCode-KEYCODE_PROPS = 2618-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_UNDO
@@ -2135,6 +2487,8 @@ KEYCODE_UNDO = 2619
 撤消键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_UNDO = 2619--><!--Device-KeyCode-KEYCODE_UNDO = 2619-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2148,6 +2502,8 @@ KEYCODE_COPY = 2620
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_COPY = 2620--><!--Device-KeyCode-KEYCODE_COPY = 2620-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_OPEN
@@ -2159,6 +2515,8 @@ KEYCODE_OPEN = 2621
 打开键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_OPEN = 2621--><!--Device-KeyCode-KEYCODE_OPEN = 2621-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2172,6 +2530,8 @@ KEYCODE_PASTE = 2622
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_PASTE = 2622--><!--Device-KeyCode-KEYCODE_PASTE = 2622-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_FIND
@@ -2183,6 +2543,8 @@ KEYCODE_FIND = 2623
 查找键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_FIND = 2623--><!--Device-KeyCode-KEYCODE_FIND = 2623-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2196,6 +2558,8 @@ KEYCODE_CUT = 2624
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_CUT = 2624--><!--Device-KeyCode-KEYCODE_CUT = 2624-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_HELP
@@ -2207,6 +2571,8 @@ KEYCODE_HELP = 2625
 帮助键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_HELP = 2625--><!--Device-KeyCode-KEYCODE_HELP = 2625-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2220,6 +2586,8 @@ KEYCODE_CALC = 2626
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_CALC = 2626--><!--Device-KeyCode-KEYCODE_CALC = 2626-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_FILE
@@ -2231,6 +2599,8 @@ KEYCODE_FILE = 2627
 文件按键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_FILE = 2627--><!--Device-KeyCode-KEYCODE_FILE = 2627-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2244,6 +2614,8 @@ KEYCODE_BOOKMARKS = 2628
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_BOOKMARKS = 2628--><!--Device-KeyCode-KEYCODE_BOOKMARKS = 2628-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_NEXT
@@ -2255,6 +2627,8 @@ KEYCODE_NEXT = 2629
 向下翻页键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_NEXT = 2629--><!--Device-KeyCode-KEYCODE_NEXT = 2629-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2272,6 +2646,8 @@ KEYCODE_PLAYPAUSE是较早的定义，KEYCODE_MEDIA_PLAY_PAUSE为现代媒体键
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_PLAYPAUSE = 2630--><!--Device-KeyCode-KEYCODE_PLAYPAUSE = 2630-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_PREVIOUS
@@ -2283,6 +2659,8 @@ KEYCODE_PREVIOUS = 2631
 向上翻页键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_PREVIOUS = 2631--><!--Device-KeyCode-KEYCODE_PREVIOUS = 2631-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2296,6 +2674,8 @@ CD停止键。
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_STOPCD = 2632--><!--Device-KeyCode-KEYCODE_STOPCD = 2632-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_CONFIG
@@ -2307,6 +2687,8 @@ KEYCODE_CONFIG = 2634
 配置键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_CONFIG = 2634--><!--Device-KeyCode-KEYCODE_CONFIG = 2634-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2320,6 +2702,8 @@ KEYCODE_REFRESH = 2635
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_REFRESH = 2635--><!--Device-KeyCode-KEYCODE_REFRESH = 2635-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_EXIT
@@ -2331,6 +2715,8 @@ KEYCODE_EXIT = 2636
 退出键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_EXIT = 2636--><!--Device-KeyCode-KEYCODE_EXIT = 2636-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2344,6 +2730,8 @@ KEYCODE_EDIT = 2637
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_EDIT = 2637--><!--Device-KeyCode-KEYCODE_EDIT = 2637-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_SCROLLUP
@@ -2355,6 +2743,8 @@ KEYCODE_SCROLLUP = 2638
 向上滚动键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_SCROLLUP = 2638--><!--Device-KeyCode-KEYCODE_SCROLLUP = 2638-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2368,6 +2758,8 @@ KEYCODE_SCROLLDOWN = 2639
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_SCROLLDOWN = 2639--><!--Device-KeyCode-KEYCODE_SCROLLDOWN = 2639-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_NEW
@@ -2379,6 +2771,8 @@ KEYCODE_NEW = 2640
 新建键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_NEW = 2640--><!--Device-KeyCode-KEYCODE_NEW = 2640-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2392,6 +2786,8 @@ KEYCODE_REDO = 2641
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_REDO = 2641--><!--Device-KeyCode-KEYCODE_REDO = 2641-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_CLOSE
@@ -2403,6 +2799,8 @@ KEYCODE_CLOSE = 2642
 关闭键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_CLOSE = 2642--><!--Device-KeyCode-KEYCODE_CLOSE = 2642-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2416,6 +2814,8 @@ KEYCODE_PLAY = 2643
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_PLAY = 2643--><!--Device-KeyCode-KEYCODE_PLAY = 2643-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_BASSBOOST
@@ -2427,6 +2827,8 @@ KEYCODE_BASSBOOST = 2644
 低音增强键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_BASSBOOST = 2644--><!--Device-KeyCode-KEYCODE_BASSBOOST = 2644-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2440,6 +2842,8 @@ KEYCODE_PRINT = 2645
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_PRINT = 2645--><!--Device-KeyCode-KEYCODE_PRINT = 2645-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_CHAT
@@ -2451,6 +2855,8 @@ KEYCODE_CHAT = 2646
 聊天键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_CHAT = 2646--><!--Device-KeyCode-KEYCODE_CHAT = 2646-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2464,6 +2870,8 @@ KEYCODE_FINANCE = 2647
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_FINANCE = 2647--><!--Device-KeyCode-KEYCODE_FINANCE = 2647-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_CANCEL
@@ -2475,6 +2883,8 @@ KEYCODE_CANCEL = 2648
 取消键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_CANCEL = 2648--><!--Device-KeyCode-KEYCODE_CANCEL = 2648-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2488,6 +2898,8 @@ KEYCODE_KBDILLUM_TOGGLE = 2649
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_KBDILLUM_TOGGLE = 2649--><!--Device-KeyCode-KEYCODE_KBDILLUM_TOGGLE = 2649-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_KBDILLUM_DOWN
@@ -2499,6 +2911,8 @@ KEYCODE_KBDILLUM_DOWN = 2650
 键盘灯光调暗键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_KBDILLUM_DOWN = 2650--><!--Device-KeyCode-KEYCODE_KBDILLUM_DOWN = 2650-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2512,6 +2926,8 @@ KEYCODE_KBDILLUM_UP = 2651
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_KBDILLUM_UP = 2651--><!--Device-KeyCode-KEYCODE_KBDILLUM_UP = 2651-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_SEND
@@ -2523,6 +2939,8 @@ KEYCODE_SEND = 2652
 发送键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_SEND = 2652--><!--Device-KeyCode-KEYCODE_SEND = 2652-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2536,6 +2954,8 @@ KEYCODE_REPLY = 2653
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_REPLY = 2653--><!--Device-KeyCode-KEYCODE_REPLY = 2653-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_FORWARDMAIL
@@ -2547,6 +2967,8 @@ KEYCODE_FORWARDMAIL = 2654
 邮件转发键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_FORWARDMAIL = 2654--><!--Device-KeyCode-KEYCODE_FORWARDMAIL = 2654-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2560,6 +2982,8 @@ KEYCODE_SAVE = 2655
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_SAVE = 2655--><!--Device-KeyCode-KEYCODE_SAVE = 2655-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_DOCUMENTS
@@ -2571,6 +2995,8 @@ KEYCODE_DOCUMENTS = 2656
 文件键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_DOCUMENTS = 2656--><!--Device-KeyCode-KEYCODE_DOCUMENTS = 2656-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2584,6 +3010,8 @@ KEYCODE_VIDEO_NEXT = 2657
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_VIDEO_NEXT = 2657--><!--Device-KeyCode-KEYCODE_VIDEO_NEXT = 2657-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_VIDEO_PREV
@@ -2595,6 +3023,8 @@ KEYCODE_VIDEO_PREV = 2658
 上一个视频键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_VIDEO_PREV = 2658--><!--Device-KeyCode-KEYCODE_VIDEO_PREV = 2658-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2608,6 +3038,8 @@ KEYCODE_BRIGHTNESS_CYCLE = 2659
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_BRIGHTNESS_CYCLE = 2659--><!--Device-KeyCode-KEYCODE_BRIGHTNESS_CYCLE = 2659-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_BRIGHTNESS_ZERO
@@ -2619,6 +3051,8 @@ KEYCODE_BRIGHTNESS_ZERO = 2660
 亮度调节为0键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_BRIGHTNESS_ZERO = 2660--><!--Device-KeyCode-KEYCODE_BRIGHTNESS_ZERO = 2660-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2632,6 +3066,8 @@ KEYCODE_DISPLAY_OFF = 2661
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_DISPLAY_OFF = 2661--><!--Device-KeyCode-KEYCODE_DISPLAY_OFF = 2661-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_BTN_MISC
@@ -2643,6 +3079,8 @@ KEYCODE_BTN_MISC = 2662
 游戏手柄上的各种按键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_BTN_MISC = 2662--><!--Device-KeyCode-KEYCODE_BTN_MISC = 2662-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2656,6 +3094,8 @@ KEYCODE_GOTO = 2663
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_GOTO = 2663--><!--Device-KeyCode-KEYCODE_GOTO = 2663-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_INFO
@@ -2667,6 +3107,8 @@ KEYCODE_INFO = 2664
 信息查看键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_INFO = 2664--><!--Device-KeyCode-KEYCODE_INFO = 2664-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2680,6 +3122,8 @@ KEYCODE_PROGRAM = 2665
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_PROGRAM = 2665--><!--Device-KeyCode-KEYCODE_PROGRAM = 2665-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_PVR
@@ -2691,6 +3135,8 @@ KEYCODE_PVR = 2666
 个人录像机（PVR）键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_PVR = 2666--><!--Device-KeyCode-KEYCODE_PVR = 2666-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2704,6 +3150,8 @@ KEYCODE_SUBTITLE = 2667
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_SUBTITLE = 2667--><!--Device-KeyCode-KEYCODE_SUBTITLE = 2667-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_FULL_SCREEN
@@ -2715,6 +3163,8 @@ KEYCODE_FULL_SCREEN = 2668
 全屏键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_FULL_SCREEN = 2668--><!--Device-KeyCode-KEYCODE_FULL_SCREEN = 2668-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2728,6 +3178,8 @@ KEYCODE_KEYBOARD = 2669
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_KEYBOARD = 2669--><!--Device-KeyCode-KEYCODE_KEYBOARD = 2669-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_ASPECT_RATIO
@@ -2739,6 +3191,8 @@ KEYCODE_ASPECT_RATIO = 2670
 屏幕纵横比调节键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_ASPECT_RATIO = 2670--><!--Device-KeyCode-KEYCODE_ASPECT_RATIO = 2670-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2752,6 +3206,8 @@ KEYCODE_PC = 2671
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_PC = 2671--><!--Device-KeyCode-KEYCODE_PC = 2671-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_TV
@@ -2763,6 +3219,8 @@ KEYCODE_TV = 2672
 TV键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_TV = 2672--><!--Device-KeyCode-KEYCODE_TV = 2672-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2776,6 +3234,8 @@ TV键2。
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_TV2 = 2673--><!--Device-KeyCode-KEYCODE_TV2 = 2673-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_VCR
@@ -2787,6 +3247,8 @@ KEYCODE_VCR = 2674
 录像机开启键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_VCR = 2674--><!--Device-KeyCode-KEYCODE_VCR = 2674-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2800,6 +3262,8 @@ KEYCODE_VCR2 = 2675
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_VCR2 = 2675--><!--Device-KeyCode-KEYCODE_VCR2 = 2675-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_SAT
@@ -2811,6 +3275,8 @@ KEYCODE_SAT = 2676
 SIM卡应用工具包（SAT）键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_SAT = 2676--><!--Device-KeyCode-KEYCODE_SAT = 2676-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2824,6 +3290,8 @@ CD键。
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_CD = 2677--><!--Device-KeyCode-KEYCODE_CD = 2677-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_TAPE
@@ -2835,6 +3303,8 @@ KEYCODE_TAPE = 2678
 磁带键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_TAPE = 2678--><!--Device-KeyCode-KEYCODE_TAPE = 2678-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2848,6 +3318,8 @@ KEYCODE_TUNER = 2679
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_TUNER = 2679--><!--Device-KeyCode-KEYCODE_TUNER = 2679-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_PLAYER
@@ -2859,6 +3331,8 @@ KEYCODE_PLAYER = 2680
 播放器键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_PLAYER = 2680--><!--Device-KeyCode-KEYCODE_PLAYER = 2680-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2872,6 +3346,8 @@ DVD键。
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_DVD = 2681--><!--Device-KeyCode-KEYCODE_DVD = 2681-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_AUDIO
@@ -2883,6 +3359,8 @@ KEYCODE_AUDIO = 2682
 音频键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_AUDIO = 2682--><!--Device-KeyCode-KEYCODE_AUDIO = 2682-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2896,6 +3374,8 @@ KEYCODE_VIDEO = 2683
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_VIDEO = 2683--><!--Device-KeyCode-KEYCODE_VIDEO = 2683-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_MEMO
@@ -2907,6 +3387,8 @@ KEYCODE_MEMO = 2684
 备忘录键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_MEMO = 2684--><!--Device-KeyCode-KEYCODE_MEMO = 2684-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2920,6 +3402,8 @@ KEYCODE_CALENDAR = 2685
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_CALENDAR = 2685--><!--Device-KeyCode-KEYCODE_CALENDAR = 2685-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_RED
@@ -2931,6 +3415,8 @@ KEYCODE_RED = 2686
 红色指示器。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_RED = 2686--><!--Device-KeyCode-KEYCODE_RED = 2686-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2944,6 +3430,8 @@ KEYCODE_GREEN = 2687
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_GREEN = 2687--><!--Device-KeyCode-KEYCODE_GREEN = 2687-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_YELLOW
@@ -2955,6 +3443,8 @@ KEYCODE_YELLOW = 2688
 黄色指示器。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_YELLOW = 2688--><!--Device-KeyCode-KEYCODE_YELLOW = 2688-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2968,6 +3458,8 @@ KEYCODE_BLUE = 2689
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_BLUE = 2689--><!--Device-KeyCode-KEYCODE_BLUE = 2689-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_CHANNELUP
@@ -2979,6 +3471,8 @@ KEYCODE_CHANNELUP = 2690
 频道向上键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_CHANNELUP = 2690--><!--Device-KeyCode-KEYCODE_CHANNELUP = 2690-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -2992,6 +3486,8 @@ KEYCODE_CHANNELDOWN = 2691
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_CHANNELDOWN = 2691--><!--Device-KeyCode-KEYCODE_CHANNELDOWN = 2691-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_LAST
@@ -3003,6 +3499,8 @@ KEYCODE_LAST = 2692
 末尾键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_LAST = 2692--><!--Device-KeyCode-KEYCODE_LAST = 2692-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3016,6 +3514,8 @@ KEYCODE_RESTART = 2693
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_RESTART = 2693--><!--Device-KeyCode-KEYCODE_RESTART = 2693-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_SLOW
@@ -3027,6 +3527,8 @@ KEYCODE_SLOW = 2694
 慢速键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_SLOW = 2694--><!--Device-KeyCode-KEYCODE_SLOW = 2694-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3040,6 +3542,8 @@ KEYCODE_SHUFFLE = 2695
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_SHUFFLE = 2695--><!--Device-KeyCode-KEYCODE_SHUFFLE = 2695-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_VIDEOPHONE
@@ -3051,6 +3555,8 @@ KEYCODE_VIDEOPHONE = 2696
 可视电话键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_VIDEOPHONE = 2696--><!--Device-KeyCode-KEYCODE_VIDEOPHONE = 2696-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3064,6 +3570,8 @@ KEYCODE_GAMES = 2697
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_GAMES = 2697--><!--Device-KeyCode-KEYCODE_GAMES = 2697-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_ZOOMIN
@@ -3075,6 +3583,8 @@ KEYCODE_ZOOMIN = 2698
 放大键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_ZOOMIN = 2698--><!--Device-KeyCode-KEYCODE_ZOOMIN = 2698-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3088,6 +3598,8 @@ KEYCODE_ZOOMOUT = 2699
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_ZOOMOUT = 2699--><!--Device-KeyCode-KEYCODE_ZOOMOUT = 2699-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_ZOOMRESET
@@ -3099,6 +3611,8 @@ KEYCODE_ZOOMRESET = 2700
 缩放重置键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_ZOOMRESET = 2700--><!--Device-KeyCode-KEYCODE_ZOOMRESET = 2700-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3112,6 +3626,8 @@ KEYCODE_WORDPROCESSOR = 2701
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_WORDPROCESSOR = 2701--><!--Device-KeyCode-KEYCODE_WORDPROCESSOR = 2701-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_EDITOR
@@ -3123,6 +3639,8 @@ KEYCODE_EDITOR = 2702
 编辑器键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_EDITOR = 2702--><!--Device-KeyCode-KEYCODE_EDITOR = 2702-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3136,6 +3654,8 @@ KEYCODE_SPREADSHEET = 2703
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_SPREADSHEET = 2703--><!--Device-KeyCode-KEYCODE_SPREADSHEET = 2703-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_GRAPHICSEDITOR
@@ -3147,6 +3667,8 @@ KEYCODE_GRAPHICSEDITOR = 2704
 图形编辑器键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_GRAPHICSEDITOR = 2704--><!--Device-KeyCode-KEYCODE_GRAPHICSEDITOR = 2704-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3160,6 +3682,8 @@ KEYCODE_PRESENTATION = 2705
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_PRESENTATION = 2705--><!--Device-KeyCode-KEYCODE_PRESENTATION = 2705-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_DATABASE
@@ -3171,6 +3695,8 @@ KEYCODE_DATABASE = 2706
 数据库键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_DATABASE = 2706--><!--Device-KeyCode-KEYCODE_DATABASE = 2706-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3184,6 +3710,8 @@ KEYCODE_NEWS = 2707
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_NEWS = 2707--><!--Device-KeyCode-KEYCODE_NEWS = 2707-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_VOICEMAIL
@@ -3195,6 +3723,8 @@ KEYCODE_VOICEMAIL = 2708
 语音信箱。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_VOICEMAIL = 2708--><!--Device-KeyCode-KEYCODE_VOICEMAIL = 2708-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3208,6 +3738,8 @@ KEYCODE_ADDRESSBOOK = 2709
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_ADDRESSBOOK = 2709--><!--Device-KeyCode-KEYCODE_ADDRESSBOOK = 2709-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_MESSENGER
@@ -3219,6 +3751,8 @@ KEYCODE_MESSENGER = 2710
 通信键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_MESSENGER = 2710--><!--Device-KeyCode-KEYCODE_MESSENGER = 2710-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3232,6 +3766,8 @@ KEYCODE_BRIGHTNESS_TOGGLE = 2711
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_BRIGHTNESS_TOGGLE = 2711--><!--Device-KeyCode-KEYCODE_BRIGHTNESS_TOGGLE = 2711-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_SPELLCHECK
@@ -3243,6 +3779,8 @@ KEYCODE_SPELLCHECK = 2712
 拼写检查键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_SPELLCHECK = 2712--><!--Device-KeyCode-KEYCODE_SPELLCHECK = 2712-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3256,6 +3794,8 @@ KEYCODE_COFFEE = 2713
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_COFFEE = 2713--><!--Device-KeyCode-KEYCODE_COFFEE = 2713-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_MEDIA_REPEAT
@@ -3267,6 +3807,8 @@ KEYCODE_MEDIA_REPEAT = 2714
 媒体循环键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_MEDIA_REPEAT = 2714--><!--Device-KeyCode-KEYCODE_MEDIA_REPEAT = 2714-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3280,6 +3822,8 @@ KEYCODE_IMAGES = 2715
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_IMAGES = 2715--><!--Device-KeyCode-KEYCODE_IMAGES = 2715-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_BUTTONCONFIG
@@ -3291,6 +3835,8 @@ KEYCODE_BUTTONCONFIG = 2716
 按键配置键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_BUTTONCONFIG = 2716--><!--Device-KeyCode-KEYCODE_BUTTONCONFIG = 2716-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3304,6 +3850,8 @@ KEYCODE_TASKMANAGER = 2717
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_TASKMANAGER = 2717--><!--Device-KeyCode-KEYCODE_TASKMANAGER = 2717-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_JOURNAL
@@ -3315,6 +3863,8 @@ KEYCODE_JOURNAL = 2718
 日志按键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_JOURNAL = 2718--><!--Device-KeyCode-KEYCODE_JOURNAL = 2718-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3328,6 +3878,8 @@ KEYCODE_CONTROLPANEL = 2719
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_CONTROLPANEL = 2719--><!--Device-KeyCode-KEYCODE_CONTROLPANEL = 2719-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_APPSELECT
@@ -3339,6 +3891,8 @@ KEYCODE_APPSELECT = 2720
 应用程序选择键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_APPSELECT = 2720--><!--Device-KeyCode-KEYCODE_APPSELECT = 2720-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3352,6 +3906,8 @@ KEYCODE_SCREENSAVER = 2721
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_SCREENSAVER = 2721--><!--Device-KeyCode-KEYCODE_SCREENSAVER = 2721-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_ASSISTANT
@@ -3363,6 +3919,8 @@ KEYCODE_ASSISTANT = 2722
 智慧键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_ASSISTANT = 2722--><!--Device-KeyCode-KEYCODE_ASSISTANT = 2722-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3376,6 +3934,8 @@ KEYCODE_KBD_LAYOUT_NEXT = 2723
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_KBD_LAYOUT_NEXT = 2723--><!--Device-KeyCode-KEYCODE_KBD_LAYOUT_NEXT = 2723-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_BRIGHTNESS_MIN
@@ -3387,6 +3947,8 @@ KEYCODE_BRIGHTNESS_MIN = 2724
 最小亮度键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_BRIGHTNESS_MIN = 2724--><!--Device-KeyCode-KEYCODE_BRIGHTNESS_MIN = 2724-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3400,6 +3962,8 @@ KEYCODE_BRIGHTNESS_MAX = 2725
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_BRIGHTNESS_MAX = 2725--><!--Device-KeyCode-KEYCODE_BRIGHTNESS_MAX = 2725-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_KBDINPUTASSIST_PREV
@@ -3411,6 +3975,8 @@ KEYCODE_KBDINPUTASSIST_PREV = 2726
 键盘输入Assist_Previous，查看输入法输入记录。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_PREV = 2726--><!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_PREV = 2726-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3424,6 +3990,8 @@ KEYCODE_KBDINPUTASSIST_NEXT = 2727
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_NEXT = 2727--><!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_NEXT = 2727-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_KBDINPUTASSIST_PREVGROUP
@@ -3435,6 +4003,8 @@ KEYCODE_KBDINPUTASSIST_PREVGROUP = 2728
 键盘输入Assist_Previous，切换输入组中上一个输入法。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_PREVGROUP = 2728--><!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_PREVGROUP = 2728-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3448,6 +4018,8 @@ KEYCODE_KBDINPUTASSIST_NEXTGROUP = 2729
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_NEXTGROUP = 2729--><!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_NEXTGROUP = 2729-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_KBDINPUTASSIST_ACCEPT
@@ -3460,6 +4032,8 @@ KEYCODE_KBDINPUTASSIST_ACCEPT = 2730
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_ACCEPT = 2730--><!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_ACCEPT = 2730-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_KBDINPUTASSIST_CANCEL
@@ -3471,6 +4045,8 @@ KEYCODE_KBDINPUTASSIST_CANCEL = 2731
 键盘输入Assist_Cancel。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_CANCEL = 2731--><!--Device-KeyCode-KEYCODE_KBDINPUTASSIST_CANCEL = 2731-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3486,6 +4062,8 @@ KEYCODE_MOUSE_ASSISTANT = 2732
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KeyCode-KEYCODE_MOUSE_ASSISTANT = 2732--><!--Device-KeyCode-KEYCODE_MOUSE_ASSISTANT = 2732-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_MOUSE_INTELLIGENCE_SELECTION
@@ -3499,6 +4077,8 @@ KEYCODE_MOUSE_INTELLIGENCE_SELECTION = 2733
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyCode-KEYCODE_MOUSE_INTELLIGENCE_SELECTION = 2733--><!--Device-KeyCode-KEYCODE_MOUSE_INTELLIGENCE_SELECTION = 2733-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3514,6 +4094,8 @@ KEYCODE_AOD_SINGLE_CLICK = 2740
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KeyCode-KEYCODE_AOD_SINGLE_CLICK = 2740--><!--Device-KeyCode-KEYCODE_AOD_SINGLE_CLICK = 2740-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_FRONT
@@ -3525,6 +4107,8 @@ KEYCODE_FRONT = 2800
 挡风玻璃除雾器开关。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_FRONT = 2800--><!--Device-KeyCode-KEYCODE_FRONT = 2800-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3538,6 +4122,8 @@ KEYCODE_SETUP = 2801
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_SETUP = 2801--><!--Device-KeyCode-KEYCODE_SETUP = 2801-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_WAKEUP
@@ -3549,6 +4135,8 @@ KEYCODE_WAKEUP = 2802
 唤醒键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_WAKEUP = 2802--><!--Device-KeyCode-KEYCODE_WAKEUP = 2802-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3562,6 +4150,8 @@ KEYCODE_SENDFILE = 2803
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_SENDFILE = 2803--><!--Device-KeyCode-KEYCODE_SENDFILE = 2803-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_DELETEFILE
@@ -3573,6 +4163,8 @@ KEYCODE_DELETEFILE = 2804
 删除文件按键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_DELETEFILE = 2804--><!--Device-KeyCode-KEYCODE_DELETEFILE = 2804-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3586,6 +4178,8 @@ KEYCODE_XFER = 2805
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_XFER = 2805--><!--Device-KeyCode-KEYCODE_XFER = 2805-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_PROG1
@@ -3597,6 +4191,8 @@ KEYCODE_PROG1 = 2806
 程序键1。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_PROG1 = 2806--><!--Device-KeyCode-KEYCODE_PROG1 = 2806-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3610,6 +4206,8 @@ KEYCODE_PROG2 = 2807
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_PROG2 = 2807--><!--Device-KeyCode-KEYCODE_PROG2 = 2807-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_MSDOS
@@ -3621,6 +4219,8 @@ KEYCODE_MSDOS = 2808
 DOS面板键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_MSDOS = 2808--><!--Device-KeyCode-KEYCODE_MSDOS = 2808-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3634,6 +4234,8 @@ KEYCODE_SCREENLOCK = 2809
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_SCREENLOCK = 2809--><!--Device-KeyCode-KEYCODE_SCREENLOCK = 2809-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_DIRECTION_ROTATE_DISPLAY
@@ -3645,6 +4247,8 @@ KEYCODE_DIRECTION_ROTATE_DISPLAY = 2810
 方向旋转显示键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_DIRECTION_ROTATE_DISPLAY = 2810--><!--Device-KeyCode-KEYCODE_DIRECTION_ROTATE_DISPLAY = 2810-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3658,6 +4262,8 @@ KEYCODE_CYCLEWINDOWS = 2811
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_CYCLEWINDOWS = 2811--><!--Device-KeyCode-KEYCODE_CYCLEWINDOWS = 2811-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_COMPUTER
@@ -3669,6 +4275,8 @@ KEYCODE_COMPUTER = 2812
 按键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_COMPUTER = 2812--><!--Device-KeyCode-KEYCODE_COMPUTER = 2812-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3682,6 +4290,8 @@ KEYCODE_EJECTCLOSECD = 2813
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_EJECTCLOSECD = 2813--><!--Device-KeyCode-KEYCODE_EJECTCLOSECD = 2813-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_ISO
@@ -3693,6 +4303,8 @@ KEYCODE_ISO = 2814
 ISO键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_ISO = 2814--><!--Device-KeyCode-KEYCODE_ISO = 2814-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3706,6 +4318,8 @@ KEYCODE_MOVE = 2815
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_MOVE = 2815--><!--Device-KeyCode-KEYCODE_MOVE = 2815-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_F13
@@ -3717,6 +4331,8 @@ KEYCODE_F13 = 2816
 按键'F13'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_F13 = 2816--><!--Device-KeyCode-KEYCODE_F13 = 2816-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3730,6 +4346,8 @@ KEYCODE_F14 = 2817
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_F14 = 2817--><!--Device-KeyCode-KEYCODE_F14 = 2817-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_F15
@@ -3741,6 +4359,8 @@ KEYCODE_F15 = 2818
 按键'F15'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_F15 = 2818--><!--Device-KeyCode-KEYCODE_F15 = 2818-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3754,6 +4374,8 @@ KEYCODE_F16 = 2819
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_F16 = 2819--><!--Device-KeyCode-KEYCODE_F16 = 2819-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_F17
@@ -3765,6 +4387,8 @@ KEYCODE_F17 = 2820
 按键'F17'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_F17 = 2820--><!--Device-KeyCode-KEYCODE_F17 = 2820-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3778,6 +4402,8 @@ KEYCODE_F18 = 2821
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_F18 = 2821--><!--Device-KeyCode-KEYCODE_F18 = 2821-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_F19
@@ -3789,6 +4415,8 @@ KEYCODE_F19 = 2822
 按键'F19'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_F19 = 2822--><!--Device-KeyCode-KEYCODE_F19 = 2822-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3802,6 +4430,8 @@ KEYCODE_F20 = 2823
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_F20 = 2823--><!--Device-KeyCode-KEYCODE_F20 = 2823-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_F21
@@ -3813,6 +4443,8 @@ KEYCODE_F21 = 2824
 按键'F21'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_F21 = 2824--><!--Device-KeyCode-KEYCODE_F21 = 2824-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3826,6 +4458,8 @@ KEYCODE_F22 = 2825
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_F22 = 2825--><!--Device-KeyCode-KEYCODE_F22 = 2825-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_F23
@@ -3837,6 +4471,8 @@ KEYCODE_F23 = 2826
 按键'F23'。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_F23 = 2826--><!--Device-KeyCode-KEYCODE_F23 = 2826-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3850,6 +4486,8 @@ KEYCODE_F24 = 2827
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_F24 = 2827--><!--Device-KeyCode-KEYCODE_F24 = 2827-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_PROG3
@@ -3861,6 +4499,8 @@ KEYCODE_PROG3 = 2828
 程序键3。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_PROG3 = 2828--><!--Device-KeyCode-KEYCODE_PROG3 = 2828-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3874,6 +4514,8 @@ KEYCODE_PROG4 = 2829
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_PROG4 = 2829--><!--Device-KeyCode-KEYCODE_PROG4 = 2829-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_DASHBOARD
@@ -3885,6 +4527,8 @@ KEYCODE_DASHBOARD = 2830
 仪表板。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_DASHBOARD = 2830--><!--Device-KeyCode-KEYCODE_DASHBOARD = 2830-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3898,6 +4542,8 @@ KEYCODE_SUSPEND = 2831
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_SUSPEND = 2831--><!--Device-KeyCode-KEYCODE_SUSPEND = 2831-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_HP
@@ -3909,6 +4555,8 @@ KEYCODE_HP = 2832
 高阶路径键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_HP = 2832--><!--Device-KeyCode-KEYCODE_HP = 2832-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3922,6 +4570,8 @@ KEYCODE_SOUND = 2833
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_SOUND = 2833--><!--Device-KeyCode-KEYCODE_SOUND = 2833-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_QUESTION
@@ -3933,6 +4583,8 @@ KEYCODE_QUESTION = 2834
 疑问按键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_QUESTION = 2834--><!--Device-KeyCode-KEYCODE_QUESTION = 2834-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3946,6 +4598,8 @@ KEYCODE_CONNECT = 2836
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_CONNECT = 2836--><!--Device-KeyCode-KEYCODE_CONNECT = 2836-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_SPORT
@@ -3957,6 +4611,8 @@ KEYCODE_SPORT = 2837
 运动按键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_SPORT = 2837--><!--Device-KeyCode-KEYCODE_SPORT = 2837-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3970,6 +4626,8 @@ KEYCODE_SHOP = 2838
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_SHOP = 2838--><!--Device-KeyCode-KEYCODE_SHOP = 2838-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_ALTERASE
@@ -3981,6 +4639,8 @@ KEYCODE_ALTERASE = 2839
 交替键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_ALTERASE = 2839--><!--Device-KeyCode-KEYCODE_ALTERASE = 2839-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -3994,6 +4654,8 @@ KEYCODE_SWITCHVIDEOMODE = 2841
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_SWITCHVIDEOMODE = 2841--><!--Device-KeyCode-KEYCODE_SWITCHVIDEOMODE = 2841-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_BATTERY
@@ -4005,6 +4667,8 @@ KEYCODE_BATTERY = 2842
 电池按键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_BATTERY = 2842--><!--Device-KeyCode-KEYCODE_BATTERY = 2842-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -4018,6 +4682,8 @@ KEYCODE_BLUETOOTH = 2843
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_BLUETOOTH = 2843--><!--Device-KeyCode-KEYCODE_BLUETOOTH = 2843-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_WLAN
@@ -4029,6 +4695,8 @@ KEYCODE_WLAN = 2844
 无线局域网。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_WLAN = 2844--><!--Device-KeyCode-KEYCODE_WLAN = 2844-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -4042,6 +4710,8 @@ KEYCODE_UWB = 2845
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_UWB = 2845--><!--Device-KeyCode-KEYCODE_UWB = 2845-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_WWAN_WIMAX
@@ -4053,6 +4723,8 @@ KEYCODE_WWAN_WIMAX = 2846
 移动网络控制键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_WWAN_WIMAX = 2846--><!--Device-KeyCode-KEYCODE_WWAN_WIMAX = 2846-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -4066,6 +4738,8 @@ KEYCODE_RFKILL = 2847
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_RFKILL = 2847--><!--Device-KeyCode-KEYCODE_RFKILL = 2847-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_CHANNEL
@@ -4077,6 +4751,8 @@ KEYCODE_CHANNEL = 3001
 向上频道键。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_CHANNEL = 3001--><!--Device-KeyCode-KEYCODE_CHANNEL = 3001-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -4090,6 +4766,8 @@ KEYCODE_BTN_0 = 3100
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_BTN_0 = 3100--><!--Device-KeyCode-KEYCODE_BTN_0 = 3100-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_BTN_1
@@ -4101,6 +4779,8 @@ KEYCODE_BTN_1 = 3101
 按键1。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_BTN_1 = 3101--><!--Device-KeyCode-KEYCODE_BTN_1 = 3101-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -4114,6 +4794,8 @@ KEYCODE_BTN_2 = 3102
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_BTN_2 = 3102--><!--Device-KeyCode-KEYCODE_BTN_2 = 3102-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_BTN_3
@@ -4125,6 +4807,8 @@ KEYCODE_BTN_3 = 3103
 按键3。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_BTN_3 = 3103--><!--Device-KeyCode-KEYCODE_BTN_3 = 3103-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -4138,6 +4822,8 @@ KEYCODE_BTN_4 = 3104
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_BTN_4 = 3104--><!--Device-KeyCode-KEYCODE_BTN_4 = 3104-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_BTN_5
@@ -4149,6 +4835,8 @@ KEYCODE_BTN_5 = 3105
 按键5。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_BTN_5 = 3105--><!--Device-KeyCode-KEYCODE_BTN_5 = 3105-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -4162,6 +4850,8 @@ KEYCODE_BTN_6 = 3106
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_BTN_6 = 3106--><!--Device-KeyCode-KEYCODE_BTN_6 = 3106-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_BTN_7
@@ -4173,6 +4863,8 @@ KEYCODE_BTN_7 = 3107
 按键7。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_BTN_7 = 3107--><!--Device-KeyCode-KEYCODE_BTN_7 = 3107-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -4186,6 +4878,8 @@ KEYCODE_BTN_8 = 3108
 
 **起始版本：** 9
 
+<!--Device-KeyCode-KEYCODE_BTN_8 = 3108--><!--Device-KeyCode-KEYCODE_BTN_8 = 3108-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_BTN_9
@@ -4197,6 +4891,8 @@ KEYCODE_BTN_9 = 3109
 按键9。
 
 **起始版本：** 9
+
+<!--Device-KeyCode-KEYCODE_BTN_9 = 3109--><!--Device-KeyCode-KEYCODE_BTN_9 = 3109-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -4210,6 +4906,8 @@ KEYCODE_DAGGER_CLICK = 3211
 
 **起始版本：** 18
 
+<!--Device-KeyCode-KEYCODE_DAGGER_CLICK = 3211--><!--Device-KeyCode-KEYCODE_DAGGER_CLICK = 3211-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_DAGGER_DOUBLE_CLICK
@@ -4221,6 +4919,8 @@ KEYCODE_DAGGER_DOUBLE_CLICK = 3212
 智能手表智感窗按键双击。
 
 **起始版本：** 18
+
+<!--Device-KeyCode-KEYCODE_DAGGER_DOUBLE_CLICK = 3212--><!--Device-KeyCode-KEYCODE_DAGGER_DOUBLE_CLICK = 3212-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -4234,6 +4934,8 @@ KEYCODE_DAGGER_LONG_PRESS = 3213
 
 **起始版本：** 18
 
+<!--Device-KeyCode-KEYCODE_DAGGER_LONG_PRESS = 3213--><!--Device-KeyCode-KEYCODE_DAGGER_LONG_PRESS = 3213-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_DIV
@@ -4245,6 +4947,8 @@ KEYCODE_DIV = 3220
 智能手表左按键。
 
 **起始版本：** 20
+
+<!--Device-KeyCode-KEYCODE_DIV = 3220--><!--Device-KeyCode-KEYCODE_DIV = 3220-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -4260,6 +4964,8 @@ KEYCODE_XKEY = 3232
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KeyCode-KEYCODE_XKEY = 3232--><!--Device-KeyCode-KEYCODE_XKEY = 3232-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_FINGERPRINT_SLIDE_UP
@@ -4274,6 +4980,8 @@ KEYCODE_FINGERPRINT_SLIDE_UP = 3233
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KeyCode-KEYCODE_FINGERPRINT_SLIDE_UP = 3233--><!--Device-KeyCode-KEYCODE_FINGERPRINT_SLIDE_UP = 3233-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## KEYCODE_FINGERPRINT_SLIDE_DOWN
@@ -4287,6 +4995,8 @@ KEYCODE_FINGERPRINT_SLIDE_DOWN = 3234
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyCode-KEYCODE_FINGERPRINT_SLIDE_DOWN = 3234--><!--Device-KeyCode-KEYCODE_FINGERPRINT_SLIDE_DOWN = 3234-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 

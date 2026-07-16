@@ -4,6 +4,8 @@ Remote device operation methods.
 
 **Since:** 26.0.0
 
+<!--Device-remoteDevice-interface RemoteDevice--><!--Device-remoteDevice-interface RemoteDevice-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import
@@ -26,13 +28,15 @@ Gets the ACB connection state.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RemoteDevice-getAcbState(): AcbState--><!--Device-RemoteDevice-getAcbState(): AcbState-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AcbState | Returns the ACB connection state. |
+| [AcbState](arkts-connectivity-acbstate-e.md) | Returns the ACB connection state. |
 
 **Error codes:**
 
@@ -56,13 +60,15 @@ Gets the profile connection state.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RemoteDevice-getConnectionState(): ConnectionState--><!--Device-RemoteDevice-getConnectionState(): ConnectionState-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ConnectionState | Returns the connection state. |
+| [ConnectionState](arkts-connectivity-connectionstate-t.md) | Returns the connection state. |
 
 **Error codes:**
 
@@ -86,13 +92,15 @@ Gets the type of the NearLink device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RemoteDevice-getDeviceClass(): DeviceClass--><!--Device-RemoteDevice-getDeviceClass(): DeviceClass-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DeviceClass | Indicates the type of the NearLink device. |
+| [DeviceClass](arkts-connectivity-deviceclass-i.md) | Indicates the type of the NearLink device. |
 
 **Error codes:**
 
@@ -116,13 +124,15 @@ Obtains the remote device information.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RemoteDevice-getDeviceInformation(): DeviceInformation--><!--Device-RemoteDevice-getDeviceInformation(): DeviceInformation-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DeviceInformation | Returns the remote device information. |
+| [DeviceInformation](arkts-connectivity-deviceinformation-i.md) | Returns the remote device information. |
 
 **Error codes:**
 
@@ -145,6 +155,8 @@ Gets the name of the NearLink device.
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RemoteDevice-getDeviceName(): string--><!--Device-RemoteDevice-getDeviceName(): string-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -176,13 +188,15 @@ Gets the pairing state.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RemoteDevice-getPairingState(): PairingState--><!--Device-RemoteDevice-getPairingState(): PairingState-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PairingState | Returns the pairing state. |
+| [PairingState](arkts-connectivity-pairingstate-t.md) | Returns the pairing state. |
 
 **Error codes:**
 
@@ -206,13 +220,15 @@ Initiate pairing to remote NearLink device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RemoteDevice-startPairing(): Promise<void>--><!--Device-RemoteDevice-startPairing(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 

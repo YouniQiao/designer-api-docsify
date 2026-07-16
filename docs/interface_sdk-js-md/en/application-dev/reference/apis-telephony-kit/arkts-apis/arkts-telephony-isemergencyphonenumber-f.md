@@ -16,6 +16,8 @@ Checks whether a phone number is on the emergency number list.
 
 **Since:** 7
 
+<!--Device-call-function isEmergencyPhoneNumber(phoneNumber: string, options: EmergencyNumberOptions, callback: AsyncCallback<boolean>): void--><!--Device-call-function isEmergencyPhoneNumber(phoneNumber: string, options: EmergencyNumberOptions, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **Parameters:**
@@ -23,8 +25,8 @@ Checks whether a phone number is on the emergency number list.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Indicates the phone number to check. |
-| options | EmergencyNumberOptions | Yes | Indicates the additional information for emergency numbers. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Indicates the callback for isEmergencyPhoneNumber.Returns {@code true} if the phone number is on the emergency number list. Returns {@code false} otherwise. |
+| options | [EmergencyNumberOptions](arkts-telephony-emergencynumberoptions-i.md) | Yes | Indicates the additional information for emergency numbers. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Indicates the callback for isEmergencyPhoneNumber.Returns {@code true} if the phone number is on the emergency number list. Returns {@code false} otherwise. |
 
 **Error codes:**
 
@@ -63,6 +65,8 @@ Checks whether a phone number is on the emergency number list.
 
 **Since:** 7
 
+<!--Device-call-function isEmergencyPhoneNumber(phoneNumber: string, options?: EmergencyNumberOptions): Promise<boolean>--><!--Device-call-function isEmergencyPhoneNumber(phoneNumber: string, options?: EmergencyNumberOptions): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **Parameters:**
@@ -70,13 +74,13 @@ Checks whether a phone number is on the emergency number list.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Indicates the phone number to check. |
-| options | EmergencyNumberOptions | No | Indicates the additional information for emergency numbers. |
+| options | [EmergencyNumberOptions](arkts-telephony-emergencynumberoptions-i.md) | No | Indicates the additional information for emergency numbers. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns {@code true} if the phone number is on the emergency number list.Returns {@code false} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns {@code true} if the phone number is on the emergency number list.Returns {@code false} otherwise. |
 
 **Error codes:**
 
@@ -113,6 +117,8 @@ Checks whether a phone number is on the emergency number list.
 
 **Since:** 7
 
+<!--Device-call-function isEmergencyPhoneNumber(phoneNumber: string, callback: AsyncCallback<boolean>): void--><!--Device-call-function isEmergencyPhoneNumber(phoneNumber: string, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **Parameters:**
@@ -120,7 +126,7 @@ Checks whether a phone number is on the emergency number list.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Indicates the phone number to check. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Indicates the callback for isEmergencyPhoneNumber.Returns {@code true} if the phone number is on the emergency number list. Returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Indicates the callback for isEmergencyPhoneNumber.Returns {@code true} if the phone number is on the emergency number list. Returns {@code false} otherwise. |
 
 **Error codes:**
 

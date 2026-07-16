@@ -12,17 +12,15 @@ import { privacyManager } from '@kit.AbilityKit';
 function checkPermissionInUse(permissionName: Permissions): boolean
 ```
 
-Queries whether a specified sensitive permission is currently being used. It can be used in scenarios such as
-displaying the real-time permission usage status on the permission management interface. The judgment is based on
-whether there is currently an active call that has been marked as started by
-[startUsingPermission](arkts-ability-startusingpermission-f-sys.md#startusingpermission-1) and has not yet been marked as stopped by
-[stopUsingPermission](arkts-ability-stopusingpermission-f-sys.md#stopusingpermission-1).
+Queries whether a specified sensitive permission is currently being used. It can be used in scenarios such as displaying the real-time permission usage status on the permission management interface. The judgment is based on whether there is currently an active call that has been marked as started by [startUsingPermission](arkts-ability-startusingpermission-f-sys.md#startusingpermission-1) and has not yet been marked as stopped by [stopUsingPermission](arkts-ability-stopusingpermission-f-sys.md#stopusingpermission-1).
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-privacyManager-function checkPermissionInUse(permissionName: Permissions): boolean--><!--Device-privacyManager-function checkPermissionInUse(permissionName: Permissions): boolean-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -32,13 +30,13 @@ whether there is currently an active call that has been marked as started by
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permissionName | Permissions | Yes | Name of the permission to query. The permission name cannot be empty andits length cannot exceed 256 characters. An invalid value returns error code 12100001. |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to query. The permission name cannot be empty and its length cannot exceed 256 characters. An invalid value returns error code 12100001. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the specified sensitive permission is in use. true: The specified sensitive permissionis in use. false: The specified sensitive permission is not in use. |
+| boolean | Whether the specified sensitive permission is in use. true: The specified sensitive permission is in use. false: The specified sensitive permission is not in use. |
 
 **Error codes:**
 

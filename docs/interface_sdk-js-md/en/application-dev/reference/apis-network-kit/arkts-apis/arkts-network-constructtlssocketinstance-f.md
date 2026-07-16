@@ -16,13 +16,15 @@ Creates a TLSSocket object.
 
 **Since:** 10
 
+<!--Device-socket-function constructTLSSocketInstance(): TLSSocket--><!--Device-socket-function constructTLSSocketInstance(): TLSSocket-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TLSSocket | the TLSSocket of the constructTLSSocketInstance. |
+| [TLSSocket](arkts-network-tlssocket-i.md) | the TLSSocket of the constructTLSSocketInstance. |
 
 **Example**
 
@@ -44,19 +46,21 @@ Creates a TLSSocket object with a TCPSocket object.
 
 **Since:** 24
 
+<!--Device-socket-function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket--><!--Device-socket-function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tcpSocket | TCPSocket | Yes | Parameter for creating a TLSSocket object. |
+| tcpSocket | [TCPSocket](arkts-network-tcpsocket-i.md) | Yes | Parameter for creating a TLSSocket object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TLSSocket | the TLSSocket of the constructTLSSocketInstance. |
+| [TLSSocket](arkts-network-tlssocket-i.md) | the TLSSocket of the constructTLSSocketInstance. |
 
 **Error codes:**
 

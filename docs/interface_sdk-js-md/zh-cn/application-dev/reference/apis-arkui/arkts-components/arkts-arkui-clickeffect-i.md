@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare interface ClickEffect--><!--Device-unnamed-declare interface ClickEffect-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## level
@@ -28,7 +30,9 @@ level: ClickEffectLevel
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ClickEffect-level: ClickEffectLevel--><!--Device-ClickEffect-level: ClickEffectLevel-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,7 +60,9 @@ scale?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ClickEffect-scale?: number--><!--Device-ClickEffect-scale?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

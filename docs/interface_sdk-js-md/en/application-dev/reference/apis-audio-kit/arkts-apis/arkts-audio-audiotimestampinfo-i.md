@@ -4,6 +4,8 @@ Describes the information about the audio stream timestamp and the current data 
 
 **Since:** 19
 
+<!--Device-audio-interface AudioTimestampInfo--><!--Device-audio-interface AudioTimestampInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Position of the current data frame for playback or recording.
 
 **Since:** 19
 
+<!--Device-AudioTimestampInfo-readonly framePos: long--><!--Device-AudioTimestampInfo-readonly framePos: long-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## timestamp
@@ -37,6 +41,8 @@ Timestamp corresponding to the current data frame position during playback or re
 **Type:** number
 
 **Since:** 19
+
+<!--Device-AudioTimestampInfo-readonly timestamp: long--><!--Device-AudioTimestampInfo-readonly timestamp: long-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 

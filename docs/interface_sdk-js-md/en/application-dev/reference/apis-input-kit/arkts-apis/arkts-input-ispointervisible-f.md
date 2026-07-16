@@ -16,13 +16,15 @@ Obtains the visible status of the mouse pointer. This API uses an asynchronous c
 
 **Since:** 9
 
+<!--Device-pointer-function isPointerVisible(callback: AsyncCallback<boolean>): void--><!--Device-pointer-function isPointerVisible(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the visible status of the mouse pointer (**true** if visible and**false** if invisible). Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the visible status of the mouse pointer (**true** if visible and **false** if invisible). Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -73,13 +75,15 @@ Obtains the visible status of the mouse pointer. This API uses a promise to retu
 
 **Since:** 9
 
+<!--Device-pointer-function isPointerVisible(): Promise<boolean>--><!--Device-pointer-function isPointerVisible(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** is returned if the mouse pointer isvisible; **false** is returned if the mouse pointer is hidden. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. **true** is returned if the mouse pointer is visible; **false** is returned if the mouse pointer is hidden. |
 
 **Example**
 

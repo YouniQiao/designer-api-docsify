@@ -14,6 +14,8 @@ Obtains the {@link Want} of an {@link WantAgent}.
 
 **Substitutes:** getWant
 
+<!--Device-wantAgent-function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void--><!--Device-wantAgent-function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -22,8 +24,8 @@ Obtains the {@link Want} of an {@link WantAgent}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | WantAgent | Yes | Indicates the {@link WantAgent} whose UID is to be obtained. |
-| callback | AsyncCallback&lt;Want&gt; | Yes | Obtain the callback method for Want in WantAgent. |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | Indicates the {@link WantAgent} whose UID is to be obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Want> | Yes | Obtain the callback method for Want in WantAgent. |
 
 
 ## getWant
@@ -40,6 +42,8 @@ Obtains the {@link Want} of an {@link WantAgent}.
 
 **Substitutes:** getWant
 
+<!--Device-wantAgent-function getWant(agent: WantAgent): Promise<Want>--><!--Device-wantAgent-function getWant(agent: WantAgent): Promise<Want>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -48,11 +52,11 @@ Obtains the {@link Want} of an {@link WantAgent}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | WantAgent | Yes | Indicates the {@link WantAgent} whose UID is to be obtained. |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | Indicates the {@link WantAgent} whose UID is to be obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Want&gt; | Returns the {@link Want} of the {@link WantAgent}. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Want> | Returns the {@link Want} of the {@link WantAgent}. |
 

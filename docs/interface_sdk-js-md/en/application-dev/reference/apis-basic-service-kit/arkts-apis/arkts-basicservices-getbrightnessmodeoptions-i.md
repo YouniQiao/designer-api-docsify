@@ -6,6 +6,8 @@ Options for obtaining the screen brightness mode.
 
 **Deprecated since:** 7
 
+<!--Device-unnamed-export interface GetBrightnessModeOptions--><!--Device-unnamed-export interface GetBrightnessModeOptions-End-->
+
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Called when an API call is complete.
 
 **Deprecated since:** 7
 
+<!--Device-GetBrightnessModeOptions-complete?: () => void--><!--Device-GetBrightnessModeOptions-complete?: () => void-End-->
+
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 ## fail
@@ -36,14 +40,15 @@ Called when an API call is complete.
 fail?: (data: string, code: number) => void
 ```
 
-Called when an API call has failed. **data** indicates the error information, and **code** indicates the error
-code.
+Called when an API call has failed. **data** indicates the error information, and **code** indicates the error code.
 
 **Type:** (data: string, code: number) => void
 
 **Since:** 3
 
 **Deprecated since:** 7
+
+<!--Device-GetBrightnessModeOptions-fail?: (data: string, code: number) => void--><!--Device-GetBrightnessModeOptions-fail?: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -53,14 +58,15 @@ code.
 success?: (data: BrightnessModeResponse) => void
 ```
 
-Called when an API call is successful. **data** is a return value of the
-[BrightnessModeResponse](arkts-basicservices-brightnessmoderesponse-i.md) type.
+Called when an API call is successful. **data** is a return value of the [BrightnessModeResponse](arkts-basicservices-brightnessmoderesponse-i.md) type.
 
 **Type:** (data: BrightnessModeResponse) => void
 
 **Since:** 3
 
 **Deprecated since:** 7
+
+<!--Device-GetBrightnessModeOptions-success?: (data: BrightnessModeResponse) => void--><!--Device-GetBrightnessModeOptions-success?: (data: BrightnessModeResponse) => void-End-->
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 

@@ -8,9 +8,17 @@
 
 **替代接口：** [CertBlob](arkts-mdm-certblob-i.md)
 
+<!--Device-deviceSettings-export interface CertBlob--><!--Device-deviceSettings-export interface CertBlob-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { deviceSettings } from '@kit.MDMKit';
+```
 
 ## alias
 
@@ -29,6 +37,8 @@ alias: string
 **替代接口：** alias
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CertBlob-alias: string--><!--Device-CertBlob-alias: string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -51,6 +61,8 @@ inData: Uint8Array
 **替代接口：** inData
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CertBlob-inData: Uint8Array--><!--Device-CertBlob-inData: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

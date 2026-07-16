@@ -4,6 +4,8 @@ Provides back and forward history list information method. related to {@link His
 
 **Since:** 9
 
+<!--Device-webview-interface BackForwardList--><!--Device-webview-interface BackForwardList-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Get history entry at given index.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-BackForwardList-getItemAtIndex(index: number): HistoryItem--><!--Device-BackForwardList-getItemAtIndex(index: number): HistoryItem-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -36,7 +40,7 @@ Get history entry at given index.
 
 | Type | Description |
 | --- | --- |
-| HistoryItem | HistoryItem at given index in back forward list. |
+| [HistoryItem](arkts-arkweb-historyitem-i.md) | HistoryItem at given index in back forward list. |
 
 **Error codes:**
 
@@ -58,6 +62,8 @@ Current index in BackForwardList.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-BackForwardList-currentIndex: number--><!--Device-BackForwardList-currentIndex: number-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## size
@@ -73,6 +79,8 @@ Size of in BackForwardList.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-BackForwardList-size: number--><!--Device-BackForwardList-size: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

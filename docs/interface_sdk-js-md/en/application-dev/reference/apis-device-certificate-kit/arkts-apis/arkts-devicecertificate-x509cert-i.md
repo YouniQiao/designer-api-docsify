@@ -4,6 +4,8 @@ Provides APIs for X.509 certificate operations.
 
 **Since:** 9
 
+<!--Device-cert-interface X509Cert--><!--Device-cert-interface X509Cert-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
@@ -23,6 +25,8 @@ Checks the validity period of this X.509 certificate.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509Cert-checkValidityWithDate(date: string): void--><!--Device-X509Cert-checkValidityWithDate(date: string): void-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -54,6 +58,8 @@ Obtains the basic constraints of this X.509 certificate.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509Cert-getBasicConstraints(): int--><!--Device-X509Cert-getBasicConstraints(): int-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
@@ -74,13 +80,15 @@ Obtains the CRL distribution points of this X.509 certificate.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509Cert-getCRLDistributionPoint(): DataArray--><!--Device-X509Cert-getCRLDistributionPoint(): DataArray-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataArray | URIs of the CRL distribution points from this X.509 certificate obtained. |
+| [DataArray](arkts-devicecertificate-dataarray-i.md) | URIs of the CRL distribution points from this X.509 certificate obtained. |
 
 **Error codes:**
 
@@ -101,6 +109,8 @@ Obtains the X.509 certificate serial number.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509Cert-getCertSerialNumber(): bigint--><!--Device-X509Cert-getCertSerialNumber(): bigint-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -128,13 +138,15 @@ Obtains the serialized X.509 certificate data. This API uses an asynchronous cal
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509Cert-getEncoded(callback: AsyncCallback<EncodingBlob>): void--><!--Device-X509Cert-getEncoded(callback: AsyncCallback<EncodingBlob>): void-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;EncodingBlob&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined**, and **data** is the serialized X.509 certificate data obtained.Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<EncodingBlob> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the serialized X.509 certificate data obtained.Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -157,13 +169,15 @@ Obtains the serialized X.509 certificate data. This API uses a promise to return
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509Cert-getEncoded(): Promise<EncodingBlob>--><!--Device-X509Cert-getEncoded(): Promise<EncodingBlob>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;EncodingBlob&gt; | Promise used to return the serialized X.509 certificate data obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<EncodingBlob> | Promise used to return the serialized X.509 certificate data obtained. |
 
 **Error codes:**
 
@@ -186,13 +200,15 @@ Obtains the usage of the extended key of this X.509 certificate.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509Cert-getExtKeyUsage(): DataArray--><!--Device-X509Cert-getExtKeyUsage(): DataArray-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataArray | Usage of the extended key obtained. |
+| [DataArray](arkts-devicecertificate-dataarray-i.md) | Usage of the extended key obtained. |
 
 **Error codes:**
 
@@ -214,13 +230,15 @@ Obtains the certificate extensions in DER format.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509Cert-getExtensionsObject(): CertExtension--><!--Device-X509Cert-getExtensionsObject(): CertExtension-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CertExtension | Certificate extensions object obtained. |
+| [CertExtension](arkts-devicecertificate-certextension-i.md) | Certificate extensions object obtained. |
 
 **Error codes:**
 
@@ -238,13 +256,15 @@ getIssuerAltNames(): DataArray
 
 Obtains the Issuer Alternative Names (IANs) of this X.509 certificate.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > The obtained IANs contain a string terminator.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509Cert-getIssuerAltNames(): DataArray--><!--Device-X509Cert-getIssuerAltNames(): DataArray-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -252,7 +272,7 @@ Obtains the Issuer Alternative Names (IANs) of this X.509 certificate.
 
 | Type | Description |
 | --- | --- |
-| DataArray | IANs obtained. |
+| [DataArray](arkts-devicecertificate-dataarray-i.md) | IANs obtained. |
 
 **Error codes:**
 
@@ -270,13 +290,15 @@ getIssuerName(): DataBlob
 
 Obtains the X.509 certificate issuer.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > The obtained X.509 certificate issuer name contains a string terminator.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509Cert-getIssuerName(): DataBlob--><!--Device-X509Cert-getIssuerName(): DataBlob-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -284,7 +306,7 @@ Obtains the X.509 certificate issuer.
 
 | Type | Description |
 | --- | --- |
-| DataBlob | X.509 certificate issuer obtained. |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | X.509 certificate issuer obtained. |
 
 **Error codes:**
 
@@ -306,13 +328,15 @@ Obtains the issuer name of an X.509 certificate based on the encoding type.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-X509Cert-getIssuerName(encodingType: EncodingType): string--><!--Device-X509Cert-getIssuerName(encodingType: EncodingType): string-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encodingType | EncodingType | Yes | Encoding type. |
+| encodingType | [EncodingType](arkts-devicecertificate-encodingtype-e.md) | Yes | Encoding type. |
 
 **Return value:**
 
@@ -341,13 +365,15 @@ Obtains the X.500 distinguished name object of the X.509 certificate issuer.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509Cert-getIssuerX500DistinguishedName(): X500DistinguishedName--><!--Device-X509Cert-getIssuerX500DistinguishedName(): X500DistinguishedName-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| X500DistinguishedName | X.500 distinguished name object. |
+| [X500DistinguishedName](arkts-devicecertificate-x500distinguishedname-i.md) | X.500 distinguished name object. |
 
 **Error codes:**
 
@@ -369,19 +395,21 @@ Obtains the fields in the X.509 certificate.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509Cert-getItem(itemType: CertItemType): DataBlob--><!--Device-X509Cert-getItem(itemType: CertItemType): DataBlob-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| itemType | CertItemType | Yes | Certificate field to obtain. |
+| itemType | [CertItemType](arkts-devicecertificate-certitemtype-e.md) | Yes | Certificate field to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataBlob | Fields in DER format. |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | Fields in DER format. |
 
 **Error codes:**
 
@@ -404,13 +432,15 @@ Obtains the key usage of this X.509 certificate.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509Cert-getKeyUsage(): DataBlob--><!--Device-X509Cert-getKeyUsage(): DataBlob-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataBlob | Key usage of the X.509 certificate obtained. |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | Key usage of the X.509 certificate obtained. |
 
 **Error codes:**
 
@@ -430,6 +460,8 @@ Obtains the expiration time of this X.509 certificate.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509Cert-getNotAfterTime(): string--><!--Device-X509Cert-getNotAfterTime(): string-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -459,6 +491,8 @@ Obtains the start time of this X.509 certificate.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509Cert-getNotBeforeTime(): string--><!--Device-X509Cert-getNotBeforeTime(): string-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
@@ -487,13 +521,15 @@ Obtains the public key of this X.509 certificate.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509Cert-getPublicKey(): cryptoFramework.PubKey--><!--Device-X509Cert-getPublicKey(): cryptoFramework.PubKey-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| cryptoFramework.PubKey | Public key of the X.509 certificate obtained. This object is used only for**verify()** of **X509Cert**. |
+| cryptoFramework.PubKey | Public key of the X.509 certificate obtained. This object is used only for **verify()** of **X509Cert**. |
 
 **Error codes:**
 
@@ -510,9 +546,9 @@ getSerialNumber(): number
 
 Obtains the X.509 certificate serial number.
 
-> **NOTE**
->
-> This API is supported since API version 9 and deprecated since API version 10. Use
+> **NOTE**  
+>  
+> This API is supported since API version 9 and deprecated since API version 10. Use  
 > [X509Cert.getCertSerialNumber()](arkts-devicecertificate-x509cert-i.md#getcertserialnumber-1) instead.
 
 **Since:** 9
@@ -520,6 +556,8 @@ Obtains the X.509 certificate serial number.
 **Deprecated since:** 10
 
 **Substitutes:** getCertSerialNumber
+
+<!--Device-X509Cert-getSerialNumber(): number--><!--Device-X509Cert-getSerialNumber(): number-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -541,13 +579,15 @@ Obtains the signature data of this X.509 certificate.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509Cert-getSignature(): DataBlob--><!--Device-X509Cert-getSignature(): DataBlob-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataBlob | Signature data obtained. |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | Signature data obtained. |
 
 **Error codes:**
 
@@ -568,6 +608,8 @@ Obtains the signing algorithm of this X.509 certificate.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509Cert-getSignatureAlgName(): string--><!--Device-X509Cert-getSignatureAlgName(): string-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -591,12 +633,13 @@ Obtains the signing algorithm of this X.509 certificate.
 getSignatureAlgOid(): string
 ```
 
-Obtains the object identifier (OID) of the X.509 certificate signing algorithm. OIDs are allocated by the
-International Organization for Standardization (ISO).
+Obtains the object identifier (OID) of the X.509 certificate signing algorithm. OIDs are allocated by the International Organization for Standardization (ISO).
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509Cert-getSignatureAlgOid(): string--><!--Device-X509Cert-getSignatureAlgOid(): string-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -626,13 +669,15 @@ Obtains the signing algorithm parameters of this X.509 certificate.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509Cert-getSignatureAlgParams(): DataBlob--><!--Device-X509Cert-getSignatureAlgParams(): DataBlob-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataBlob | X.509 certificate signing algorithm parameters obtained. |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | X.509 certificate signing algorithm parameters obtained. |
 
 **Error codes:**
 
@@ -651,13 +696,15 @@ getSubjectAltNames(): DataArray
 
 Obtains the Subject Alternative Names (SANs) of this X.509 certificate.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > The obtained SANs contain a string terminator.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509Cert-getSubjectAltNames(): DataArray--><!--Device-X509Cert-getSubjectAltNames(): DataArray-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -665,7 +712,7 @@ Obtains the Subject Alternative Names (SANs) of this X.509 certificate.
 
 | Type | Description |
 | --- | --- |
-| DataArray | SANs obtained. |
+| [DataArray](arkts-devicecertificate-dataarray-i.md) | SANs obtained. |
 
 **Error codes:**
 
@@ -683,13 +730,15 @@ getSubjectName(encodingType?: EncodingType): DataBlob
 
 Obtains the subject of this X.509 certificate.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > The obtained X.509 certificate subject name contains a string terminator.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509Cert-getSubjectName(encodingType?: EncodingType): DataBlob--><!--Device-X509Cert-getSubjectName(encodingType?: EncodingType): DataBlob-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -697,13 +746,13 @@ Obtains the subject of this X.509 certificate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encodingType | EncodingType | No | Encoding type. If this parameter is set, the subject name in UTF-8format is to be obtained. If this parameter is not set, the subject name in ASCII encoding format is obtainedby default.<br>This parameter is available since API version 12.<br>**Since:** 12 |
+| encodingType | [EncodingType](arkts-devicecertificate-encodingtype-e.md) | No | Encoding type. If this parameter is set, the subject name in UTF-8format is to be obtained. If this parameter is not set, the subject name in ASCII encoding format is obtained by default.<br>This parameter is available since API version 12.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataBlob | Represents the subject name of an X.509 certificate. If the encodingType parameter is notset, relative distinguished names are separated by slashes (/) after the data is converted into a string. Ifthe encodingType parameter is set to EncodingType.ENCODING_UTF8, relative distinguished names are separatedby commas (,) after the data is converted into a string. |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | Represents the subject name of an X.509 certificate. If the encodingType parameter is not set, relative distinguished names are separated by slashes (/) after the data is converted into a string. If the encodingType parameter is set to EncodingType.ENCODING_UTF8, relative distinguished names are separated by commas (,) after the data is converted into a string. |
 
 **Error codes:**
 
@@ -726,13 +775,15 @@ Obtains the X.500 distinguished name object of the X.509 certificate subject.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509Cert-getSubjectX500DistinguishedName(): X500DistinguishedName--><!--Device-X509Cert-getSubjectX500DistinguishedName(): X500DistinguishedName-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| X500DistinguishedName | X.500 distinguished name object. |
+| [X500DistinguishedName](arkts-devicecertificate-x500distinguishedname-i.md) | X.500 distinguished name object. |
 
 **Error codes:**
 
@@ -754,6 +805,8 @@ Obtains the X.509 certificate version.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509Cert-getVersion(): int--><!--Device-X509Cert-getVersion(): int-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
@@ -774,13 +827,15 @@ Obtains the hash value of the data in DER format.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509Cert-hashCode(): Uint8Array--><!--Device-X509Cert-hashCode(): Uint8Array-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Hash value obtained. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Hash value obtained. |
 
 **Error codes:**
 
@@ -802,19 +857,21 @@ Checks whether this certificate matches the specified parameters.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509Cert-match(param: X509CertMatchParameters): boolean--><!--Device-X509Cert-match(param: X509CertMatchParameters): boolean-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | X509CertMatchParameters | Yes | Parameters specified for matching the certificate. |
+| param | [X509CertMatchParameters](arkts-devicecertificate-x509certmatchparameters-i.md) | Yes | Parameters specified for matching the certificate. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the certificate matches the parameters specified; returns **false**otherwise. |
+| boolean | Returns **true** if the certificate matches the parameters specified; returns **false** otherwise. |
 
 **Error codes:**
 
@@ -835,6 +892,8 @@ Converts the object data into a string.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509Cert-toString(): string--><!--Device-X509Cert-toString(): string-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -864,13 +923,15 @@ Converts this object into a string in the specified encoding format.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-X509Cert-toString(encodingType: EncodingType): string--><!--Device-X509Cert-toString(encodingType: EncodingType): string-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encodingType | EncodingType | Yes | Encoding type. |
+| encodingType | [EncodingType](arkts-devicecertificate-encodingtype-e.md) | Yes | Encoding type. |
 
 **Return value:**
 
@@ -899,6 +960,8 @@ Verifies the certificate signature. This API uses an asynchronous callback to re
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509Cert-verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void--><!--Device-X509Cert-verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
@@ -906,7 +969,7 @@ Verifies the certificate signature. This API uses an asynchronous callback to re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | cryptoFramework.PubKey | Yes | Public key used for signature verification. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -927,6 +990,8 @@ Verifies the certificate signature. This API uses a promise to return the result
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509Cert-verify(key: cryptoFramework.PubKey): Promise<void>--><!--Device-X509Cert-verify(key: cryptoFramework.PubKey): Promise<void>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
@@ -939,7 +1004,7 @@ Verifies the certificate signature. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

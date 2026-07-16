@@ -1,5 +1,11 @@
 # deleteDisposedStatusSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appControl } from '@kit.AbilityKit';
+```
+
 ## deleteDisposedStatusSync
 
 ```TypeScript
@@ -11,6 +17,8 @@ function deleteDisposedStatusSync(appId: string, appIndex?: number): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS
+
+<!--Device-appControl-function deleteDisposedStatusSync(appId: string, appIndex?: int): void--><!--Device-appControl-function deleteDisposedStatusSync(appId: string, appIndex?: int): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 

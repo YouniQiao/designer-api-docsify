@@ -1,5 +1,11 @@
 # selectContacts
 
+## 导入模块
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+```
+
 ## selectContacts
 
 ```TypeScript
@@ -10,7 +16,9 @@ function selectContacts(callback: AsyncCallback<Array<Contact>>): void
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-contact-function selectContacts(callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function selectContacts(callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -18,7 +26,7 @@ function selectContacts(callback: AsyncCallback<Array<Contact>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Contact>> | 是 | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
 
 **错误码：**
 
@@ -54,7 +62,9 @@ function selectContacts(): Promise<Array<Contact>>
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-contact-function selectContacts(): Promise<Array<Contact>>--><!--Device-contact-function selectContacts(): Promise<Array<Contact>>-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -62,7 +72,7 @@ function selectContacts(): Promise<Array<Contact>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Contact&gt;&gt; | Promise对象。返回选择的联系人数组对象。 |
+| Promise<Array<Contact>> | Promise对象。返回选择的联系人数组对象。 |
 
 **示例：**
 
@@ -88,7 +98,9 @@ function selectContacts(options: ContactSelectionOptions, callback: AsyncCallbac
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-contact-function selectContacts(options: ContactSelectionOptions, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function selectContacts(options: ContactSelectionOptions, callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -96,8 +108,8 @@ function selectContacts(options: ContactSelectionOptions, callback: AsyncCallbac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | ContactSelectionOptions | 是 | 选择联系人时的筛选条件，表示单选或多选。 |
-| callback | AsyncCallback&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
+| options | [ContactSelectionOptions](arkts-contacts-contactselectionoptions-i.md) | 是 | 选择联系人时的筛选条件，表示单选或多选。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Contact>> | 是 | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
 
 **错误码：**
 
@@ -135,7 +147,9 @@ function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-contact-function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact>>--><!--Device-contact-function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact>>-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -143,13 +157,13 @@ function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | ContactSelectionOptions | 是 | 选择联系人时的筛选条件，用于指定是单选还是多选。 |
+| options | [ContactSelectionOptions](arkts-contacts-contactselectionoptions-i.md) | 是 | 选择联系人时的筛选条件，用于指定是单选还是多选。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Contact&gt;&gt; | Promise对象。返回选择的联系人数组对象。 |
+| Promise<Array<Contact>> | Promise对象。返回选择的联系人数组对象。 |
 
 **错误码：**
 

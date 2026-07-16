@@ -4,6 +4,8 @@ Enumerates user status detection features.
 
 **Since:** 26.0.0
 
+<!--Device-userStatus-export enum UserStatusFeature--><!--Device-userStatus-export enum UserStatusFeature-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
@@ -19,6 +21,8 @@ Gesture recognition feature (100ms reporting interval).
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UserStatusFeature-GESTURES_RECOGNITION = 5--><!--Device-UserStatusFeature-GESTURES_RECOGNITION = 5-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -36,6 +40,8 @@ Anti-mistouch detection feature.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UserStatusFeature-ANTI_MISTOUCH = 6--><!--Device-UserStatusFeature-ANTI_MISTOUCH = 6-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
@@ -51,6 +57,8 @@ Quick gesture recognition feature (20ms reporting interval).
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UserStatusFeature-QUICK_GESTURES_RECOGNITION = 7--><!--Device-UserStatusFeature-QUICK_GESTURES_RECOGNITION = 7-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -68,6 +76,8 @@ Face relative position recognition feature (100ms reporting interval).
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UserStatusFeature-FACE_RELATIVE_POSITION_RECOGNITION = 8--><!--Device-UserStatusFeature-FACE_RELATIVE_POSITION_RECOGNITION = 8-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
@@ -83,6 +93,8 @@ Quick face relative position recognition feature (20ms reporting interval).
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UserStatusFeature-QUICK_FACE_RELATIVE_POSITION_RECOGNITION = 9--><!--Device-UserStatusFeature-QUICK_FACE_RELATIVE_POSITION_RECOGNITION = 9-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -100,6 +112,8 @@ Hand-eye coordination (attention) recognition feature.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UserStatusFeature-HAND_GAZE_COORDINATION = 11--><!--Device-UserStatusFeature-HAND_GAZE_COORDINATION = 11-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
@@ -115,6 +129,8 @@ User blowing status detection feature.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UserStatusFeature-USER_BLOWING_STATUS = 12--><!--Device-UserStatusFeature-USER_BLOWING_STATUS = 12-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -132,6 +148,8 @@ User mood detection feature.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UserStatusFeature-USER_MOOD = 13--><!--Device-UserStatusFeature-USER_MOOD = 13-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
@@ -147,6 +165,8 @@ Comfort reminder detection feature.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UserStatusFeature-COMFORT_REMINDER = 15--><!--Device-UserStatusFeature-COMFORT_REMINDER = 15-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -164,6 +184,8 @@ Environmental sound detection feature.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UserStatusFeature-ENV_SOUND = 17--><!--Device-UserStatusFeature-ENV_SOUND = 17-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
@@ -179,6 +201,8 @@ External screen anti-mistouch detection feature.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UserStatusFeature-EXT_SCREEN_ANTI_MISTOUCH = 19--><!--Device-UserStatusFeature-EXT_SCREEN_ANTI_MISTOUCH = 19-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 

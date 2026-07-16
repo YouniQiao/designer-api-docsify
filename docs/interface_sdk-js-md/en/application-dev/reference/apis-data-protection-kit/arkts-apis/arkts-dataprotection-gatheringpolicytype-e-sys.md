@@ -1,10 +1,10 @@
 # GatheringPolicyType (System API)
 
-Enumerates the DLP sandbox gathering policy types. **GATHERING** allows the DLP files of the same permission type
-to be opened in a sandbox. For example, open different tab pages in a sandbox. **NON_GATHERING** allows different
-DLP files to be opened in different sandboxes.
+Enumerates the DLP sandbox gathering policy types. **GATHERING** allows the DLP files of the same permission type to be opened in a sandbox. For example, open different tab pages in a sandbox. **NON_GATHERING** allows different DLP files to be opened in different sandboxes.
 
 **Since:** 10
+
+<!--Device-dlpPermission-export enum GatheringPolicyType--><!--Device-dlpPermission-export enum GatheringPolicyType-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -16,10 +16,11 @@ DLP files to be opened in different sandboxes.
 GATHERING = 1
 ```
 
-Allows the DLP files of the same permission type to be opened in a sandbox. For example, the files of the
-same permission type can be opened in tab pages of a window.
+Allows the DLP files of the same permission type to be opened in a sandbox. For example, the files of the same permission type can be opened in tab pages of a window.
 
 **Since:** 10
+
+<!--Device-GatheringPolicyType-GATHERING = 1--><!--Device-GatheringPolicyType-GATHERING = 1-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -34,6 +35,8 @@ NON_GATHERING = 2
 Allows the DLP files of different permission types to be opened in different sandboxes.
 
 **Since:** 10
+
+<!--Device-GatheringPolicyType-NON_GATHERING = 2--><!--Device-GatheringPolicyType-NON_GATHERING = 2-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 

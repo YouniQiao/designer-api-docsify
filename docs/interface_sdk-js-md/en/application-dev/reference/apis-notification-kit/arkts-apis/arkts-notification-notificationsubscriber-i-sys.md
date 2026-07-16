@@ -4,6 +4,8 @@ Provides callback methods for subscribers to receive and cancel notifications.
 
 **Since:** 7
 
+<!--Device-unnamed-export interface NotificationSubscriber--><!--Device-unnamed-export interface NotificationSubscriber-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -19,6 +21,8 @@ Callback used to return the listened application information.
 **Type:** (data: BadgeNumberCallbackData) => void
 
 **Since:** 10
+
+<!--Device-NotificationSubscriber-onBadgeChanged?:(data: BadgeNumberCallbackData) => void--><!--Device-NotificationSubscriber-onBadgeChanged?:(data: BadgeNumberCallbackData) => void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -36,6 +40,8 @@ Returns the changes of the enabling state of the application's badge.
 
 **Since:** 12
 
+<!--Device-NotificationSubscriber-onBadgeEnabledChanged?: BadgeEnabledChangedCallback--><!--Device-NotificationSubscriber-onBadgeEnabledChanged?: BadgeEnabledChangedCallback-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -51,6 +57,8 @@ Notification information of batch deletion.
 **Type:** (data: Array<SubscribeCallbackData>) => void
 
 **Since:** 11
+
+<!--Device-NotificationSubscriber-onBatchCancel?: (data: Array<SubscribeCallbackData>) => void--><!--Device-NotificationSubscriber-onBatchCancel?: (data: Array<SubscribeCallbackData>) => void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -68,6 +76,8 @@ Information about the notification to cancel.
 
 **Since:** 7
 
+<!--Device-NotificationSubscriber-onCancel?:(data: SubscribeCallbackData) => void--><!--Device-NotificationSubscriber-onCancel?:(data: SubscribeCallbackData) => void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -83,6 +93,8 @@ Callback invoked when subscription is complete.
 **Type:** () => void
 
 **Since:** 7
+
+<!--Device-NotificationSubscriber-onConnect?:() => void--><!--Device-NotificationSubscriber-onConnect?:() => void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -100,6 +112,8 @@ Information about the notification received.
 
 **Since:** 7
 
+<!--Device-NotificationSubscriber-onConsume?:(data: SubscribeCallbackData) => void--><!--Device-NotificationSubscriber-onConsume?:(data: SubscribeCallbackData) => void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -115,6 +129,8 @@ Callback to be invoked when the service is disconnected.
 **Type:** () => void
 
 **Since:** 7
+
+<!--Device-NotificationSubscriber-onDestroy?:() => void--><!--Device-NotificationSubscriber-onDestroy?:() => void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -132,6 +148,8 @@ Callback invoked when unsubscription is complete.
 
 **Since:** 7
 
+<!--Device-NotificationSubscriber-onDisconnect?:() => void--><!--Device-NotificationSubscriber-onDisconnect?:() => void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -147,6 +165,8 @@ Callback used to return DND time setting updates.
 **Type:** (mode: notificationManager.DoNotDisturbDate) => void
 
 **Since:** 11
+
+<!--Device-NotificationSubscriber-onDoNotDisturbChanged?: (mode: notificationManager.DoNotDisturbDate) => void--><!--Device-NotificationSubscriber-onDoNotDisturbChanged?: (mode: notificationManager.DoNotDisturbDate) => void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -168,6 +188,8 @@ Callback used to return DND time setting updates.
 
 **Substitutes:** [onDoNotDisturbChanged](arkts-notification-notificationsubscriber-i-sys.md#ondonotdisturbchanged)
 
+<!--Device-NotificationSubscriber-onDoNotDisturbDateChange?: (mode: notification.DoNotDisturbDate) => void--><!--Device-NotificationSubscriber-onDoNotDisturbDateChange?: (mode: notification.DoNotDisturbDate) => void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -183,6 +205,8 @@ Callback used to return the listened application information.
 **Type:** (callbackData: EnabledNotificationCallbackData) => void
 
 **Since:** 8
+
+<!--Device-NotificationSubscriber-onEnabledNotificationChanged?:(callbackData: EnabledNotificationCallbackData) => void--><!--Device-NotificationSubscriber-onEnabledNotificationChanged?:(callbackData: EnabledNotificationCallbackData) => void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -200,6 +224,8 @@ Callback used to return the result.
 
 **Since:** 23
 
+<!--Device-NotificationSubscriber-onEnabledPriorityByBundleChanged?: (callbackData: EnabledPriorityNotificationByBundleCallbackData) => void--><!--Device-NotificationSubscriber-onEnabledPriorityByBundleChanged?: (callbackData: EnabledPriorityNotificationByBundleCallbackData) => void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -215,6 +241,8 @@ Callback used to return the result.
 **Type:** (callbackData: EnabledPriorityNotificationCallbackData) => void
 
 **Since:** 23
+
+<!--Device-NotificationSubscriber-onEnabledPriorityChanged?: (callbackData: EnabledPriorityNotificationCallbackData) => void--><!--Device-NotificationSubscriber-onEnabledPriorityChanged?: (callbackData: EnabledPriorityNotificationCallbackData) => void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -234,6 +262,8 @@ Returns the changes of the enabling state of the application's silent reminder.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-NotificationSubscriber-onEnabledSilentReminderChanged?: EnabledSilentReminderChangedCallback--><!--Device-NotificationSubscriber-onEnabledSilentReminderChanged?: EnabledSilentReminderChangedCallback-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -244,14 +274,15 @@ Returns the changes of the enabling state of the application's silent reminder.
 onNotificationSwitchChanged?: NotificationSwitchChangedCallback
 ```
 
-Returns the notification switch state change set by the interface of
-[notificationManager.setNotificationSwitch](arkts-notification-setnotificationswitch-f-sys.md#setnotificationswitch-1).
+Returns the notification switch state change set by the interface of [notificationManager.setNotificationSwitch](arkts-notification-setnotificationswitch-f-sys.md#setnotificationswitch-1).
 
 **Type:** NotificationSwitchChangedCallback
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-NotificationSubscriber-onNotificationSwitchChanged?: NotificationSwitchChangedCallback--><!--Device-NotificationSubscriber-onNotificationSwitchChanged?: NotificationSwitchChangedCallback-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -271,6 +302,8 @@ Returns notification information containing the system property value.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-NotificationSubscriber-onSystemUpdate?: SystemUpdateCallback--><!--Device-NotificationSubscriber-onSystemUpdate?: SystemUpdateCallback-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -286,6 +319,8 @@ Latest notification sorting list.
 **Type:** (data: NotificationSortingMap) => void
 
 **Since:** 7
+
+<!--Device-NotificationSubscriber-onUpdate?:(data: NotificationSortingMap) => void--><!--Device-NotificationSubscriber-onUpdate?:(data: NotificationSortingMap) => void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

@@ -4,6 +4,8 @@ Provides unified dialog APIs.
 
 **Since:** 26.1.0
 
+<!--Device-unnamed-declare namespace dialog--><!--Device-unnamed-declare namespace dialog-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

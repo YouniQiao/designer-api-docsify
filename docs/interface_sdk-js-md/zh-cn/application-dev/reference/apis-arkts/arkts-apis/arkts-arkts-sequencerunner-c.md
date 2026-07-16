@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-taskpool-class SequenceRunner--><!--Device-taskpool-class SequenceRunner-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { taskpool } from '@kit.ArkTS';
+```
 
 ## constructor
 
@@ -16,7 +24,9 @@ SequenceRunner的构造函数，用于创建一个**SequenceRunner**实例。
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SequenceRunner-constructor(priority?: Priority)--><!--Device-SequenceRunner-constructor(priority?: Priority)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -24,7 +34,7 @@ SequenceRunner的构造函数，用于创建一个**SequenceRunner**实例。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| priority | Priority | 否 | 指定任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
+| priority | [Priority](arkts-arkts-priority-e.md) | 否 | 指定任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
 
 **示例：**
 
@@ -39,18 +49,19 @@ let runner: taskpool.SequenceRunner = new taskpool.SequenceRunner();
 constructor(name: string, priority?: Priority)
 ```
 
-SequenceRunner的构造函数，用于创建一个**SequenceRunner**实例。该实例表示一个全局串行队列。如果传入的名字与已有名字相同，
-将返回同一个串行队列。
+SequenceRunner的构造函数，用于创建一个**SequenceRunner**实例。该实例表示一个全局串行队列。如果传入的名字与已有名字相同，将返回同一个串行队列。
 
-> **说明**
->
-> - 底层通过单例模式保证了：创建同名串行队列时，获取到同一个实例。
->
+> **说明**  
+>  
+> - 底层通过单例模式保证了：创建同名串行队列时，获取到同一个实例。  
+>  
 > - 无法修改串行队列的优先级。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SequenceRunner-constructor(name: string, priority?: Priority)--><!--Device-SequenceRunner-constructor(name: string, priority?: Priority)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -59,7 +70,7 @@ SequenceRunner的构造函数，用于创建一个**SequenceRunner**实例。该
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 串行队列的名字。 |
-| priority | Priority | 否 | 指定任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
+| priority | [Priority](arkts-arkts-priority-e.md) | 否 | 指定任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
 
 **示例：**
 
@@ -74,18 +85,19 @@ let runner:taskpool.SequenceRunner = new taskpool.SequenceRunner("runner1", task
 execute(task: Task): Promise<Object>
 ```
 
-执行串行任务。使用该方法前需先构造**SequenceRunner**实例。串行队列不能执行任务组任务、其他串行队列任务、异步队列任务、
-有依赖关系的任务和已执行的任务。使用Promise异步回调。
+执行串行任务。使用该方法前需先构造**SequenceRunner**实例。串行队列不能执行任务组任务、其他串行队列任务、异步队列任务、有依赖关系的任务和已执行的任务。使用Promise异步回调。
 
-> **说明**
->
-> - 不支持加入存在依赖的任务。
->
+> **说明**  
+>  
+> - 不支持加入存在依赖的任务。  
+>  
 > - 前面的任务执行失败或取消不会影响后续任务的执行。
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SequenceRunner-execute(task: Task): Promise<Object>--><!--Device-SequenceRunner-execute(task: Task): Promise<Object>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -93,13 +105,13 @@ execute(task: Task): Promise<Object>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| task | Task | 是 | 需要添加到串行任务队列中的任务。 |
+| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-task-i.md) | 是 | 需要添加到串行任务队列中的任务。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Object&gt; | Promise对象，返回任务执行的结果。 |
+| Promise<Object> | Promise对象，返回任务执行的结果。 |
 
 **错误码：**
 

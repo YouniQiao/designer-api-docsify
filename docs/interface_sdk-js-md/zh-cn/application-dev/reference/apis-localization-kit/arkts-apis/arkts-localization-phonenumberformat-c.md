@@ -4,7 +4,15 @@
 
 **起始版本：** 8
 
+<!--Device-i18n-export class PhoneNumberFormat--><!--Device-i18n-export class PhoneNumberFormat-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
 
 ## constructor
 
@@ -16,7 +24,9 @@ constructor(country: string, options?: PhoneNumberFormatOptions)
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumberFormat-constructor(country: string, options?: PhoneNumberFormatOptions)--><!--Device-PhoneNumberFormat-constructor(country: string, options?: PhoneNumberFormatOptions)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -25,7 +35,7 @@ constructor(country: string, options?: PhoneNumberFormatOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | country | string | 是 | 表示电话号码所属的国家地区代码，要求是[合法的国家地区码](../../../../internationalization/i18n-locale-culture.md#实现原理)。 |
-| options | PhoneNumberFormatOptions | 否 | 电话号码格式化时设置的配置项。默认值：NATIONAL。 |
+| options | [PhoneNumberFormatOptions](arkts-localization-phonenumberformatoptions-i.md) | 否 | 电话号码格式化时设置的配置项。默认值：NATIONAL。 |
 
 **示例：**
 
@@ -45,13 +55,15 @@ format(phoneNumber: string): string
 
 对电话号码进行格式化。
 
-> **说明**
->
+> **说明**  
+>  
 > 从API version 12开始，支持对拨号中的电话号码进行格式化。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumberFormat-format(phoneNumber: string): string--><!--Device-PhoneNumberFormat-format(phoneNumber: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -96,13 +108,15 @@ getLocationName(phoneNumber: string, locale: string): string
 
 获取电话号码归属地。
 
-> **说明**
->
+> **说明**  
+>  
 > 从API version 23开始，支持对拨号中的电话号码实时获取归属地。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumberFormat-getLocationName(phoneNumber: string, locale: string): string--><!--Device-PhoneNumberFormat-getLocationName(phoneNumber: string, locale: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -151,7 +165,9 @@ isValidNumber(phoneNumber: string): boolean
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhoneNumberFormat-isValidNumber(phoneNumber: string): boolean--><!--Device-PhoneNumberFormat-isValidNumber(phoneNumber: string): boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

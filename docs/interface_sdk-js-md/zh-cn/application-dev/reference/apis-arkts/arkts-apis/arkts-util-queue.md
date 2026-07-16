@@ -1,5 +1,11 @@
 # @ohos.util.Queue
 
+## 导入模块
+
+```TypeScript
+import { Queue } from '@kit.ArkTS';
+```
+
 ## 汇总
 
 ### 类

@@ -4,6 +4,8 @@ Defines the SIM card label.
 
 **Since:** 20
 
+<!--Device-sim-export interface SimLabel--><!--Device-sim-export interface SimLabel-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Represents the SIM card index.
 
 **Since:** 20
 
+<!--Device-SimLabel-index: int--><!--Device-SimLabel-index: int-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## simType
@@ -37,6 +41,8 @@ Represents the SIM card type.
 **Type:** SimType
 
 **Since:** 20
+
+<!--Device-SimLabel-simType: SimType--><!--Device-SimLabel-simType: SimType-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 

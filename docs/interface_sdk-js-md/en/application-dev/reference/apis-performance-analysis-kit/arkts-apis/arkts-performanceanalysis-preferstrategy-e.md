@@ -4,6 +4,8 @@ Enumerates the preference strategies.
 
 **Since:** 21
 
+<!--Device-hilog-enum PreferStrategy--><!--Device-hilog-enum PreferStrategy-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiLog
 
 ## UNSET_LOGLEVEL
@@ -17,6 +19,8 @@ The setting is cleared. The system-controlled minimum log level takes effect.
 **Since:** 21
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-PreferStrategy-UNSET_LOGLEVEL = 0--><!--Device-PreferStrategy-UNSET_LOGLEVEL = 0-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiLog
 
@@ -32,6 +36,8 @@ The larger value of the new log level and the system-controlled minimum log leve
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-PreferStrategy-PREFER_CLOSE_LOG = 1--><!--Device-PreferStrategy-PREFER_CLOSE_LOG = 1-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiLog
 
 ## PREFER_OPEN_LOG
@@ -45,6 +51,8 @@ The smaller value of the new log level and the system-controlled minimum log lev
 **Since:** 21
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-PreferStrategy-PREFER_OPEN_LOG = 2--><!--Device-PreferStrategy-PREFER_OPEN_LOG = 2-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiLog
 

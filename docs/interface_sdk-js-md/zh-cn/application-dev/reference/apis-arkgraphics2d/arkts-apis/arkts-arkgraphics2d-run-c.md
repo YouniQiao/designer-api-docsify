@@ -2,12 +2,19 @@
 
 文本排版单元。
 
-下列API示例中都需先使用[TextLine](arkts-arkgraphics2d-textline-c.md)类的[getGlyphRuns()](arkts-arkgraphics2d-textline-c.md#getglyphruns-1)接口获取Run对象实例，再通过此实例调
-用对应方法。
+下列API示例中都需先使用[TextLine](arkts-arkgraphics2d-textline-c.md)类的[getGlyphRuns()](arkts-arkgraphics2d-textline-c.md#getglyphruns-1)接口获取Run对象实例，再通过此实例调用对应方法。
 
 **起始版本：** 12
 
+<!--Device-text-class Run--><!--Device-text-class Run-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
+
+## 导入模块
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D';
+```
 
 ## getAdvances
 
@@ -19,7 +26,9 @@ getAdvances(range: Range): Array<common2D.Point>
 
 **起始版本：** 20
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Run-getAdvances(range: Range): Array<common2D.Point>--><!--Device-Run-getAdvances(range: Range): Array<common2D.Point>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -27,13 +36,13 @@ getAdvances(range: Range): Array<common2D.Point>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | Range | 是 | 要获取的字形位置范围。range.start表示范围开始的位置，range.end表示范围的长度。如果长度是0表示从range.start开始获取到渲染块结束。当range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | 是 | 要获取的字形位置范围。range.start表示范围开始的位置，range.end表示范围的长度。如果长度是0表示从range.start开始获取到渲染块结束。当range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Returns the glyph width array of each glyph in the run unit relative to thehorizontal direction. In [common2D.Point](arkts-arkgraphics2d-point-i.md), the x valuerepresents the glyph width of each glyph relative to the horizontal direction, in physical pixels (px). The yvalue is a reserved field and returns **0** by default. |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<common2D.Point> | Returns the glyph width array of each glyph in the run unit relative to the horizontal direction. In [common2D.Point](arkts-arkgraphics2d-point-i.md), the x value represents the glyph width of each glyph relative to the horizontal direction, in physical pixels (px). The y value is a reserved field and returns **0** by default. |
 
 **示例：**
 
@@ -55,7 +64,9 @@ getFont(): drawing.Font
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Run-getFont(): drawing.Font--><!--Device-Run-getFont(): drawing.Font-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -82,7 +93,9 @@ getGlyphCount(): number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Run-getGlyphCount(): int--><!--Device-Run-getGlyphCount(): int-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -109,7 +122,9 @@ getGlyphs(): Array<number>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Run-getGlyphs(): Array<int>--><!--Device-Run-getGlyphs(): Array<int>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -117,7 +132,7 @@ getGlyphs(): Array<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;number&gt; | 该排版单元中每个字符对应的字形序号。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<number> | 该排版单元中每个字符对应的字形序号。 |
 
 **示例：**
 
@@ -136,7 +151,9 @@ getGlyphs(range: Range): Array<number>
 
 **起始版本：** 18
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Run-getGlyphs(range: Range): Array<int>--><!--Device-Run-getGlyphs(range: Range): Array<int>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -144,13 +161,13 @@ getGlyphs(range: Range): Array<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | Range | 是 | 要获取的字形序号范围，range.start表示范围开始的位置，range.end表示范围的长度，当range.end为0时表示从range.start开始获取到渲染块结束。当range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | 是 | 要获取的字形序号范围，range.start表示范围开始的位置，range.end表示范围的长度，当range.end为0时表示从range.start开始获取到渲染块结束。当range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;number&gt; | 该排版单元中每个字符对应的字形序号。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<number> | 该排版单元中每个字符对应的字形序号。 |
 
 **示例：**
 
@@ -187,23 +204,24 @@ struct Index {
 getImageBounds(): common2D.Rect
 ```
 
-获取该排版单元的图像边界，图像边界与排版字体、排版字号、字符本身都有关，相当于视觉边界，例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，用户在界面上只能看到"a b"，图像边界即为不包括带行首和
-末尾空格的边界。
+获取该排版单元的图像边界，图像边界与排版字体、排版字号、字符本身都有关，相当于视觉边界，例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，用户在界面上只能看到"a b"，图像边界即为不包括带行首和末尾空格的边界。
 
-> **说明：**
->
-> 示意图展示了字符串为" a b "的图像边界。
->
-> ![zh-ch_image_ImageBounds.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_ImageBounds.png)
->
-> 示意图展示了字符串为"j"或"E"的图像边界。
->
-> !
+> **说明：**  
+>  
+> 示意图展示了字符串为" a b "的图像边界。  
+>  
+> ![zh-ch_image_ImageBounds.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_ImageBounds.png)  
+>  
+> 示意图展示了字符串为"j"或"E"的图像边界。  
+>  
+> !  
 > [zh-ch_image_ImageBounds_Character.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_ImageBounds_Character.png)
 
 **起始版本：** 18
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Run-getImageBounds(): common2D.Rect--><!--Device-Run-getImageBounds(): common2D.Rect-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -230,7 +248,9 @@ getOffsets(): Array<common2D.Point>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Run-getOffsets(): Array<common2D.Point>--><!--Device-Run-getOffsets(): Array<common2D.Point>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -238,7 +258,7 @@ getOffsets(): Array<common2D.Point>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Array holding the offset of each glyph in the run relative to its index. |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<common2D.Point> | Array holding the offset of each glyph in the run relative to its index. |
 
 **示例：**
 
@@ -257,7 +277,9 @@ getPositions(): Array<common2D.Point>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Run-getPositions(): Array<common2D.Point>--><!--Device-Run-getPositions(): Array<common2D.Point>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -265,7 +287,7 @@ getPositions(): Array<common2D.Point>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Array holding the position of each glyph relative to the respective line inthe run. |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<common2D.Point> | Array holding the position of each glyph relative to the respective line in the run. |
 
 **示例：**
 
@@ -284,7 +306,9 @@ getPositions(range: Range): Array<common2D.Point>
 
 **起始版本：** 18
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Run-getPositions(range: Range): Array<common2D.Point>--><!--Device-Run-getPositions(range: Range): Array<common2D.Point>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -292,13 +316,13 @@ getPositions(range: Range): Array<common2D.Point>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | Range | 是 | 要获取的字形位置范围，range.start表示范围开始的位置，range.end表示范围的长度，如果长度是0表示从范围range.start开始获取到渲染块结束。当range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | 是 | 要获取的字形位置范围，range.start表示范围开始的位置，range.end表示范围的长度，如果长度是0表示从范围range.start开始获取到渲染块结束。当range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Array holding the position of each glyph relative to the respective line inthe run. |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<common2D.Point> | Array holding the position of each glyph relative to the respective line in the run. |
 
 **示例：**
 
@@ -339,7 +363,9 @@ getStringIndices(range?: Range): Array<number>
 
 **起始版本：** 18
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Run-getStringIndices(range?: Range): Array<int>--><!--Device-Run-getStringIndices(range?: Range): Array<int>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -347,13 +373,13 @@ getStringIndices(range?: Range): Array<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | Range | 否 | 要获取的字符索引范围，range.start表示范围开始的位置，range.end表示范围的长度，如果长度是0表示从范围range.start开始获取到渲染块结束。当range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。不传该参数时，默认获取整个渲染块。 |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | 否 | 要获取的字符索引范围，range.start表示范围开始的位置，range.end表示范围的长度，如果长度是0表示从范围range.start开始获取到渲染块结束。当range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。不传该参数时，默认获取整个渲染块。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;number&gt; | 返回每个字符的索引。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<number> | 返回每个字符的索引。 |
 
 **示例：**
 
@@ -394,7 +420,9 @@ getStringRange(): Range
 
 **起始版本：** 18
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Run-getStringRange(): Range--><!--Device-Run-getStringRange(): Range-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -402,7 +430,7 @@ getStringRange(): Range
 
 | 类型 | 说明 |
 | --- | --- |
-| Range | 排版单元生成字形的字符范围，Range类型中的start表示字符范围的开始位置，该位置是相对于整个段落的索引，Range类型中的end表示字符范围的长度。 |
+| [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | 排版单元生成字形的字符范围，Range类型中的start表示字符范围的开始位置，该位置是相对于整个段落的索引，Range类型中的end表示字符范围的长度。 |
 
 **示例：**
 
@@ -423,7 +451,9 @@ getTextDirection(): TextDirection
 
 **起始版本：** 20
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Run-getTextDirection(): TextDirection--><!--Device-Run-getTextDirection(): TextDirection-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -431,7 +461,7 @@ getTextDirection(): TextDirection
 
 | 类型 | 说明 |
 | --- | --- |
-| TextDirection | 返回该排版单元的文本方向。 |
+| [TextDirection](arkts-arkgraphics2d-textdirection-e.md) | 返回该排版单元的文本方向。 |
 
 **示例：**
 
@@ -452,7 +482,9 @@ getTextStyle(): TextStyle
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Run-getTextStyle(): TextStyle--><!--Device-Run-getTextStyle(): TextStyle-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -460,7 +492,7 @@ getTextStyle(): TextStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| TextStyle | 当前绘制单元的样式属性对象 |
+| [TextStyle](arkts-arkgraphics2d-textstyle-i.md) | 当前绘制单元的样式属性对象 |
 
 **示例：**
 
@@ -530,21 +562,23 @@ getTypographicBounds(): TypographicBounds
 
 获取该排版单元的排版边界，排版边界与排版字体、排版字号有关，与字符本身无关，例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，排版边界就包括行首和末尾空格的边界。
 
-> **说明：**
->
-> 示意图展示了字符串为" a b "的排版边界。
->
-> !
-> [zh-ch_image_TypographicBounds.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_TypographicBounds.png)
->
-> 示意图展示了字符串为"j"或"E"的排版边界。
->
-> !
+> **说明：**  
+>  
+> 示意图展示了字符串为" a b "的排版边界。  
+>  
+> !  
+> [zh-ch_image_TypographicBounds.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_TypographicBounds.png)  
+>  
+> 示意图展示了字符串为"j"或"E"的排版边界。  
+>  
+> !  
 > [zh-ch_image_TypographicBounds_Character.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_TypographicBounds_Character.png)
 
 **起始版本：** 18
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Run-getTypographicBounds(): TypographicBounds--><!--Device-Run-getTypographicBounds(): TypographicBounds-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -552,7 +586,7 @@ getTypographicBounds(): TypographicBounds
 
 | 类型 | 说明 |
 | --- | --- |
-| TypographicBounds | 该排版单元的排版边界。 |
+| [TypographicBounds](arkts-arkgraphics2d-typographicbounds-i.md) | 该排版单元的排版边界。 |
 
 **示例：**
 
@@ -571,7 +605,9 @@ paint(canvas: drawing.Canvas, x: number, y: number): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Run-paint(canvas: drawing.Canvas, x: double, y: double): void--><!--Device-Run-paint(canvas: drawing.Canvas, x: double, y: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

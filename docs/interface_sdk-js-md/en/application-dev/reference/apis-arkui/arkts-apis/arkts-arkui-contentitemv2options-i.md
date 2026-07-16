@@ -4,6 +4,8 @@ Declare interface ContentItemV2Options
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export interface ContentItemV2Options--><!--Device-unnamed-export interface ContentItemV2Options-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Sets the description.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ContentItemV2Options-description?: ResourceStr--><!--Device-ContentItemV2Options-description?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## icon
@@ -45,6 +49,8 @@ Sets the icon
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ContentItemV2Options-icon?: ResourceStr--><!--Device-ContentItemV2Options-icon?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +70,8 @@ The type of icon
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ContentItemV2Options-iconStyle?: IconTypeV2--><!--Device-ContentItemV2Options-iconStyle?: IconTypeV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## primaryText
@@ -81,6 +89,8 @@ Sets the primaryText.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ContentItemV2Options-primaryText?: ResourceStr--><!--Device-ContentItemV2Options-primaryText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +110,8 @@ Sets the secondaryText.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ContentItemV2Options-secondaryText?: ResourceStr--><!--Device-ContentItemV2Options-secondaryText?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## symbolStyle
@@ -117,6 +129,8 @@ Sets the symbol
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ContentItemV2Options-symbolStyle?: SymbolGlyphModifier--><!--Device-ContentItemV2Options-symbolStyle?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

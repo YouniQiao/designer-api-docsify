@@ -4,6 +4,8 @@ This module provides the DRM capability to multimedia player.
 
 **Since:** 12
 
+<!--Device-unnamed-declare namespace drm--><!--Device-unnamed-declare namespace drm-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## Modules to Import
@@ -32,9 +34,9 @@ import { drm } from '@kit.DrmKit';
 | [EventInfo](arkts-drm-eventinfo-i.md) | Used to indicate the event info attached to specific event type. |
 | [KeysInfo](arkts-drm-keysinfo-i.md) | Used to indicate the media key status with a key and its value. |
 | [MediaKeyRequest](arkts-drm-mediakeyrequest-i.md) | Provides the drm media key request definitions. |
-| [MediaKeySession](arkts-drm-mediakeysession-i.md) | Provide functions and keep a decrypt module. Before calling an MediaKeySession method, we mustuse MediaKeySystem's createMediaKeySession to get a MediaKeySession instance. |
+| [MediaKeySession](arkts-drm-mediakeysession-i.md) | Provide functions and keep a decrypt module. Before calling an MediaKeySession method, we must use MediaKeySystem's createMediaKeySession to get a MediaKeySession instance. |
 | [MediaKeyStatus](arkts-drm-mediakeystatus-i.md) | Used to indicate the media key status. |
-| [MediaKeySystem](arkts-drm-mediakeysystem-i.md) | Manages and record MediaKeySessions. Before calling an MediaKeySystem method, we must use getMediaKeySystemto get a MediaKeySystem instance, then we can call functions. |
+| [MediaKeySystem](arkts-drm-mediakeysystem-i.md) | Manages and record MediaKeySessions. Before calling an MediaKeySystem method, we must use getMediaKeySystem to get a MediaKeySystem instance, then we can call functions. |
 | [MediaKeySystemDescription](arkts-drm-mediakeysystemdescription-i.md) | Name and UUID of DRM plugin. |
 | [MediaKeySystemInfo](arkts-drm-mediakeysysteminfo-i.md) | Used to indicate the media key system info of media source. |
 | [OptionsData](arkts-drm-optionsdata-i.md) | Provides the drm media key request info optional data. |

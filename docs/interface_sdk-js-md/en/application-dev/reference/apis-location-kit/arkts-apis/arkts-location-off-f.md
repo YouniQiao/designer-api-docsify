@@ -22,6 +22,8 @@ Unsubscribe location changed
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function off(type: 'locationChange', callback?: Callback<Location>): void--><!--Device-geolocation-function off(type: 'locationChange', callback?: Callback<Location>): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **Parameters:**
@@ -29,7 +31,7 @@ Unsubscribe location changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'locationChange' | Yes | Indicates the location service event to be subscribed to. |
-| callback | Callback&lt;Location&gt; | No | Indicates the callback for reporting the location result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Location> | No | Indicates the callback for reporting the location result. |
 
 **Example**
 
@@ -61,6 +63,8 @@ Unsubscribe location switch changed
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function off(type: 'locationServiceState', callback?: Callback<boolean>): void--><!--Device-geolocation-function off(type: 'locationServiceState', callback?: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **Parameters:**
@@ -68,7 +72,7 @@ Unsubscribe location switch changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'locationServiceState' | Yes | Indicates the location service event to be subscribed to. |
-| callback | Callback&lt;boolean&gt; | No | Indicates the callback for reporting the location result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | No | Indicates the callback for reporting the location result. |
 
 **Example**
 
@@ -99,6 +103,8 @@ Unsubscribe to cache GNSS locations update messages
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function off(type: 'cachedGnssLocationsReporting', callback?: Callback<Array<Location>>): void--><!--Device-geolocation-function off(type: 'cachedGnssLocationsReporting', callback?: Callback<Array<Location>>): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Gnss
 
 **Parameters:**
@@ -106,7 +112,7 @@ Unsubscribe to cache GNSS locations update messages
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cachedGnssLocationsReporting' | Yes | Indicates the location service event to be subscribed to. |
-| callback | Callback&lt;Array&lt;Location&gt;&gt; | No | Indicates the callback for reporting the cached gnss locations. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<Location>> | No | Indicates the callback for reporting the cached gnss locations. |
 
 **Example**
 
@@ -138,6 +144,8 @@ Unsubscribe gnss status changed
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function off(type: 'gnssStatusChange', callback?: Callback<SatelliteStatusInfo>): void--><!--Device-geolocation-function off(type: 'gnssStatusChange', callback?: Callback<SatelliteStatusInfo>): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Gnss
 
 **Parameters:**
@@ -145,7 +153,7 @@ Unsubscribe gnss status changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'gnssStatusChange' | Yes | Indicates the location service event to be subscribed to. |
-| callback | Callback&lt;SatelliteStatusInfo&gt; | No | Indicates the callback for reporting the gnss status change. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SatelliteStatusInfo> | No | Indicates the callback for reporting the gnss status change. |
 
 **Example**
 
@@ -176,6 +184,8 @@ Unsubscribe nmea message changed
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function off(type: 'nmeaMessageChange', callback?: Callback<string>): void--><!--Device-geolocation-function off(type: 'nmeaMessageChange', callback?: Callback<string>): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Gnss
 
 **Parameters:**
@@ -183,7 +193,7 @@ Unsubscribe nmea message changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'nmeaMessageChange' | Yes | Indicates the location service event to be subscribed to. |
-| callback | Callback&lt;string&gt; | No | Indicates the callback for reporting the nmea message. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<string> | No | Indicates the callback for reporting the nmea message. |
 
 **Example**
 
@@ -214,6 +224,8 @@ Remove a geofence and unsubscribe geo fence status changed
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function off(type: 'fenceStatusChange', request: GeofenceRequest, want: WantAgent): void--><!--Device-geolocation-function off(type: 'fenceStatusChange', request: GeofenceRequest, want: WantAgent): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **Parameters:**
@@ -221,8 +233,8 @@ Remove a geofence and unsubscribe geo fence status changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fenceStatusChange' | Yes | Indicates the location service event to be subscribed to. |
-| request | GeofenceRequest | Yes | Indicates the Geo-fence configuration parameters. |
-| want | WantAgent | Yes | Indicates which ability to start when the geofence event is triggered. |
+| request | [GeofenceRequest](arkts-location-geofencerequest-i.md) | Yes | Indicates the Geo-fence configuration parameters. |
+| want | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | Indicates which ability to start when the geofence event is triggered. |
 
 **Example**
 

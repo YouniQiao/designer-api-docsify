@@ -4,6 +4,8 @@ Processes worker listening events.
 
 **Since:** 9
 
+<!--Device-unnamed-export interface WorkerEventTarget--><!--Device-unnamed-export interface WorkerEventTarget-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Adds an event listener for the Worker thread. This API provides the same functio
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WorkerEventTarget-addEventListener(type: string, listener: WorkerEventListener): void--><!--Device-WorkerEventTarget-addEventListener(type: string, listener: WorkerEventListener): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -31,7 +35,7 @@ Adds an event listener for the Worker thread. This API provides the same functio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the event to listen for. |
-| listener | WorkerEventListener | Yes | listener Callback to invoke when an event of the specified type occurs. |
+| listener | [WorkerEventListener](arkts-arkts-workereventlistener-i.md) | Yes | listener Callback to invoke when an event of the specified type occurs. |
 
 **Error codes:**
 
@@ -68,13 +72,15 @@ Dispatches the event defined for the Worker thread.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WorkerEventTarget-dispatchEvent(event: Event): boolean--><!--Device-WorkerEventTarget-dispatchEvent(event: Event): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Event | Yes | Event to dispatch. |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-event-c.md) | Yes | Event to dispatch. |
 
 **Return value:**
 
@@ -118,6 +124,8 @@ Removes all event listeners for the Worker thread.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WorkerEventTarget-removeAllListener(): void--><!--Device-WorkerEventTarget-removeAllListener(): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
@@ -156,6 +164,8 @@ Removes an event listener for the Worker thread. This API provides the same func
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WorkerEventTarget-removeEventListener(type: string, callback?: WorkerEventListener): void--><!--Device-WorkerEventTarget-removeEventListener(type: string, callback?: WorkerEventListener): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -163,7 +173,7 @@ Removes an event listener for the Worker thread. This API provides the same func
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the event for which the event listener is to be removed. |
-| callback | WorkerEventListener | No | Callback to invoke when the listener is removed. |
+| callback | [WorkerEventListener](arkts-arkts-workereventlistener-i.md) | No | Callback to invoke when the listener is removed. |
 
 **Error codes:**
 

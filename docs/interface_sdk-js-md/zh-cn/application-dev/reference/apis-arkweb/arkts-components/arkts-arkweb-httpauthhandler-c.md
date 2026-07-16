@@ -4,6 +4,8 @@ Defines the http auth request result, related to {@link onHttpAuthRequest} metho
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class HttpAuthHandler--><!--Device-unnamed-declare class HttpAuthHandler-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## cancel
@@ -16,7 +18,9 @@ cancel(): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HttpAuthHandler-cancel(): void--><!--Device-HttpAuthHandler-cancel(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -30,7 +34,9 @@ confirm(userName: string, password: string): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HttpAuthHandler-confirm(userName: string, password: string): boolean--><!--Device-HttpAuthHandler-confirm(userName: string, password: string): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -57,7 +63,9 @@ Constructor.
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HttpAuthHandler-constructor()--><!--Device-HttpAuthHandler-constructor()-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -71,7 +79,9 @@ isHttpAuthInfoSaved(): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HttpAuthHandler-isHttpAuthInfoSaved(): boolean--><!--Device-HttpAuthHandler-isHttpAuthInfoSaved(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

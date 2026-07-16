@@ -12,10 +12,11 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): void
 ```
 
-Obtains all [valid (not yet expired) reminders](../../../../task-management/agent-powered-reminder.md#constraints)
-set by the current application. This API uses an asynchronous callback to return the result.
+Obtains all [valid (not yet expired) reminders](../../../../task-management/agent-powered-reminder.md#constraints)set by the current application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-reminderAgentManager-function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): void--><!--Device-reminderAgentManager-function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): void-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -23,7 +24,7 @@ set by the current application. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;ReminderRequest&gt;&gt; | Yes | Callback used to return the result.If the agent-powered reminder is queried, **err** is **undefined**, and **data** contains all valid (not yetexpired) reminders set by the current application. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<ReminderRequest>> | Yes | Callback used to return the result.If the agent-powered reminder is queried, **err** is **undefined**, and **data** contains all valid (not yet expired) reminders set by the current application. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -75,10 +76,11 @@ reminderAgentManager.getValidReminders((err: BusinessError, reminders: Array<rem
 function getValidReminders(): Promise<Array<ReminderRequest>>
 ```
 
-Obtains all [valid (not yet expired) reminders](../../../../task-management/agent-powered-reminder.md#constraints)
-set by the current application. This API uses a promise to return the result.
+Obtains all [valid (not yet expired) reminders](../../../../task-management/agent-powered-reminder.md#constraints)set by the current application. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-reminderAgentManager-function getValidReminders(): Promise<Array<ReminderRequest>>--><!--Device-reminderAgentManager-function getValidReminders(): Promise<Array<ReminderRequest>>-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -86,7 +88,7 @@ set by the current application. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ReminderRequest&gt;&gt; | Promise used to return all the valid reminders. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ReminderRequest>> | Promise used to return all the valid reminders. |
 
 **Error codes:**
 

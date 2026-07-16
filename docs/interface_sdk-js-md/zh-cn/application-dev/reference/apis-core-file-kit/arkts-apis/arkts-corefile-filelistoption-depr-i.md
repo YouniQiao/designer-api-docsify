@@ -6,6 +6,8 @@
 
 **废弃版本：** 10
 
+<!--Device-unnamed-export interface FileListOption--><!--Device-unnamed-export interface FileListOption-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## complete
@@ -21,6 +23,8 @@ complete?: () => void
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileListOption-complete?: () => void--><!--Device-FileListOption-complete?: () => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -38,6 +42,8 @@ fail?: (data: string, code: number) => void
 
 **废弃版本：** 10
 
+<!--Device-FileListOption-fail?: (data: string, code: number) => void--><!--Device-FileListOption-fail?: (data: string, code: number) => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## success
@@ -54,6 +60,8 @@ success?: (data: FileListResponse) => void
 
 **废弃版本：** 10
 
+<!--Device-FileListOption-success?: (data: FileListResponse) => void--><!--Device-FileListOption-success?: (data: FileListResponse) => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## uri
@@ -62,15 +70,15 @@ success?: (data: FileListResponse) => void
 uri: string
 ```
 
-目录URI。由于轻量级穿戴设备底层文件系统的限制，该值必须满足以下要求：
-1. URI 中不得包含以下特殊字符：\"*+,:;<=>?[]|\x7F等。
-2. 最大允许字符长度为128个字符。
+目录URI。由于轻量级穿戴设备底层文件系统的限制，该值必须满足以下要求：1. URI 中不得包含以下特殊字符：\"*+,:;<=>?[]|\x7F等。2. 最大允许字符长度为128个字符。
 
 **类型：** string
 
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileListOption-uri: string--><!--Device-FileListOption-uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 

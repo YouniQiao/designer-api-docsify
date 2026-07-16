@@ -18,6 +18,8 @@ Listens for global touchscreen input events. This API uses an asynchronous callb
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'touch', receiver: TouchEventReceiver): void--><!--Device-inputMonitor-function on(type: 'touch', receiver: TouchEventReceiver): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Listens for global touchscreen input events. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'touch' | Yes | Event type. This field has a fixed value of **touch**. |
-| receiver | TouchEventReceiver | Yes | Callback used to return touchscreen input events. |
+| receiver | [TouchEventReceiver](arkts-input-toucheventreceiver-t-sys.md) | Yes | Callback used to return touchscreen input events. |
 
 **Error codes:**
 
@@ -79,6 +81,8 @@ Enables listening for global mouse events. This API uses an asynchronous callbac
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'mouse', receiver: Callback<MouseEvent>): void--><!--Device-inputMonitor-function on(type: 'mouse', receiver: Callback<MouseEvent>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **System API:** This is a system API.
@@ -88,7 +92,7 @@ Enables listening for global mouse events. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'mouse' | Yes | Event type. This field has a fixed value of **mouse**. |
-| receiver | Callback&lt;MouseEvent&gt; | Yes | Callback used to return the mouse input event. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<MouseEvent> | Yes | Callback used to return the mouse input event. |
 
 **Error codes:**
 
@@ -134,12 +138,13 @@ struct Index {
 function on(type: 'mouse', rect: display.Rect[], receiver: Callback<MouseEvent>): void
 ```
 
-Enables listening for mouse events. When the mouse pointer moves to the specified rectangular area, a callback is
-triggered. This API uses an asynchronous callback to return the result.
+Enables listening for mouse events. When the mouse pointer moves to the specified rectangular area, a callback is triggered. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
+
+<!--Device-inputMonitor-function on(type: 'mouse', rect: display.Rect[], receiver: Callback<MouseEvent>): void--><!--Device-inputMonitor-function on(type: 'mouse', rect: display.Rect[], receiver: Callback<MouseEvent>): void-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
@@ -150,8 +155,8 @@ triggered. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'mouse' | Yes | Event type. This field has a fixed value of **mouse**. |
-| rect | display.Rect[] | Yes | Rectangular area where a callback is triggered. One or two rectangular areas canbe specified. |
-| receiver | Callback&lt;MouseEvent&gt; | Yes | Callback used to return the mouse input event. |
+| rect | display.Rect[] | Yes | Rectangular area where a callback is triggered. One or two rectangular areas can be specified. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<MouseEvent> | Yes | Callback used to return the mouse input event. |
 
 **Error codes:**
 
@@ -227,6 +232,8 @@ Enables listening for global touchpad pinch events. This API uses an asynchronou
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'pinch', receiver: Callback<Pinch>): void--><!--Device-inputMonitor-function on(type: 'pinch', receiver: Callback<Pinch>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **System API:** This is a system API.
@@ -236,7 +243,7 @@ Enables listening for global touchpad pinch events. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pinch' | Yes | Event type. This field has a fixed value of **pinch**. |
-| receiver | Callback&lt;Pinch&gt; | Yes | Callback used to return pinch input event. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Pinch> | Yes | Callback used to return pinch input event. |
 
 **Error codes:**
 
@@ -287,6 +294,8 @@ Enables listening for global touchpad pinch events. This API uses an asynchronou
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'pinch', fingers: number, receiver: Callback<Pinch>): void--><!--Device-inputMonitor-function on(type: 'pinch', fingers: number, receiver: Callback<Pinch>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **System API:** This is a system API.
@@ -296,8 +305,8 @@ Enables listening for global touchpad pinch events. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pinch' | Yes | Event type. This field has a fixed value of **pinch**. |
-| fingers | number | Yes | Number of fingers that trigger the pinch. The value must be greater than or equal to**2**. |
-| receiver | Callback&lt;Pinch&gt; | Yes | Callback used to return the pinch input event. |
+| fingers | number | Yes | Number of fingers that trigger the pinch. The value must be greater than or equal to **2**. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Pinch> | Yes | Callback used to return the pinch input event. |
 
 **Error codes:**
 
@@ -349,6 +358,8 @@ Enables listening for rotation events of the touchpad. This API uses an asynchro
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'rotate', fingers: number, receiver: Callback<Rotate>): void--><!--Device-inputMonitor-function on(type: 'rotate', fingers: number, receiver: Callback<Rotate>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **System API:** This is a system API.
@@ -359,7 +370,7 @@ Enables listening for rotation events of the touchpad. This API uses an asynchro
 | --- | --- | --- | --- |
 | type | 'rotate' | Yes | Event type. This field has a fixed value of **rotate**. |
 | fingers | number | Yes | Number of fingers that trigger a rotation. The value must not be greater than **2**. |
-| receiver | Callback&lt;Rotate&gt; | Yes | Callback used to return the rotation input event. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Rotate> | Yes | Callback used to return the rotation input event. |
 
 **Error codes:**
 
@@ -411,6 +422,8 @@ Enables listening for three-finger swipe events. This API uses an asynchronous c
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'threeFingersSwipe', receiver: Callback<ThreeFingersSwipe>): void--><!--Device-inputMonitor-function on(type: 'threeFingersSwipe', receiver: Callback<ThreeFingersSwipe>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **System API:** This is a system API.
@@ -420,7 +433,7 @@ Enables listening for three-finger swipe events. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'threeFingersSwipe' | Yes | Event type. This field has a fixed value of **threeFingersSwipe**. |
-| receiver | Callback&lt;ThreeFingersSwipe&gt; | Yes | Callback used to return the three-finger swipe input event. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ThreeFingersSwipe> | Yes | Callback used to return the three-finger swipe input event. |
 
 **Error codes:**
 
@@ -471,6 +484,8 @@ Enables listening for four-finger swipe events. This API uses an asynchronous ca
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'fourFingersSwipe', receiver: Callback<FourFingersSwipe>): void--><!--Device-inputMonitor-function on(type: 'fourFingersSwipe', receiver: Callback<FourFingersSwipe>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **System API:** This is a system API.
@@ -480,7 +495,7 @@ Enables listening for four-finger swipe events. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fourFingersSwipe' | Yes | Event type. This field has a fixed value of **fourFingersSwipe**. |
-| receiver | Callback&lt;FourFingersSwipe&gt; | Yes | Callback used to return the four-finger swipe input event. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<FourFingersSwipe> | Yes | Callback used to return the four-finger swipe input event. |
 
 **Error codes:**
 
@@ -531,6 +546,8 @@ Enables listening for three-finger tap events. This API uses an asynchronous cal
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'threeFingersTap', receiver: Callback<ThreeFingersTap>): void--><!--Device-inputMonitor-function on(type: 'threeFingersTap', receiver: Callback<ThreeFingersTap>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **System API:** This is a system API.
@@ -540,7 +557,7 @@ Enables listening for three-finger tap events. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'threeFingersTap' | Yes | Event type. This field has a fixed value of **threeFingersTap**. |
-| receiver | Callback&lt;ThreeFingersTap&gt; | Yes | Callback used to return the three-finger tap input event. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ThreeFingersTap> | Yes | Callback used to return the three-finger tap input event. |
 
 **Error codes:**
 
@@ -585,12 +602,13 @@ struct Index {
 function on(type: 'fingerprint', receiver: Callback<FingerprintEvent>): void
 ```
 
-Enables listening for fingerprint gesture input events. This API uses an asynchronous callback to return the
-result.
+Enables listening for fingerprint gesture input events. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
+
+<!--Device-inputMonitor-function on(type: 'fingerprint', receiver: Callback<FingerprintEvent>): void--><!--Device-inputMonitor-function on(type: 'fingerprint', receiver: Callback<FingerprintEvent>): void-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
@@ -601,7 +619,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fingerprint' | Yes | Input event type. The value is unique and is **fingerprint**. |
-| receiver | Callback&lt;FingerprintEvent&gt; | Yes | Callback used to return the fingerprint device gesture inputevent. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<FingerprintEvent> | Yes | Callback used to return the fingerprint device gesture input event. |
 
 **Error codes:**
 
@@ -652,6 +670,8 @@ Listens for inward swipe events. This API uses an asynchronous callback to retur
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'swipeInward', receiver: Callback<SwipeInward>): void--><!--Device-inputMonitor-function on(type: 'swipeInward', receiver: Callback<SwipeInward>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **System API:** This is a system API.
@@ -661,7 +681,7 @@ Listens for inward swipe events. This API uses an asynchronous callback to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'swipeInward' | Yes | Input event type. The value is fixed at **SwipeInward**. |
-| receiver | Callback&lt;SwipeInward&gt; | Yes | Callback used to return the inward swipe event. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SwipeInward> | Yes | Callback used to return the inward swipe event. |
 
 **Error codes:**
 
@@ -712,6 +732,8 @@ Enables listening for touchscreen swipe events. This API uses an asynchronous ca
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'touchscreenSwipe', fingers: number, receiver: Callback<TouchGestureEvent>): void--><!--Device-inputMonitor-function on(type: 'touchscreenSwipe', fingers: number, receiver: Callback<TouchGestureEvent>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **System API:** This is a system API.
@@ -722,7 +744,7 @@ Enables listening for touchscreen swipe events. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | type | 'touchscreenSwipe' | Yes | Event type. This field has a fixed value of **touchscreenSwipe**. |
 | fingers | number | Yes | Number of fingers that trigger the swipe. The value range is [3, 5]. |
-| receiver | Callback&lt;TouchGestureEvent&gt; | Yes | Callback used to return the touchscreen swipe event. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<TouchGestureEvent> | Yes | Callback used to return the touchscreen swipe event. |
 
 **Error codes:**
 
@@ -774,6 +796,8 @@ Enables listening for touchscreen pinch events. This API uses an asynchronous ca
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'touchscreenPinch', fingers: number, receiver: Callback<TouchGestureEvent>): void--><!--Device-inputMonitor-function on(type: 'touchscreenPinch', fingers: number, receiver: Callback<TouchGestureEvent>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **System API:** This is a system API.
@@ -784,7 +808,7 @@ Enables listening for touchscreen pinch events. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | type | 'touchscreenPinch' | Yes | Event type. This field has a fixed value of **touchscreenPinch**. |
 | fingers | number | Yes | Number of fingers that trigger the pinch. The value range is [4, 5]. |
-| receiver | Callback&lt;TouchGestureEvent&gt; | Yes | Callback used to return the touchscreen pinch event. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<TouchGestureEvent> | Yes | Callback used to return the touchscreen pinch event. |
 
 **Error codes:**
 
@@ -830,12 +854,13 @@ struct Index {
 function on(type: 'keyPressed', keys: Array<KeyCode>, receiver: Callback<KeyEvent>): void
 ```
 
-Listens for the press and release events of the specified key, which can be the **META_LEFT**, **META_RIGHT**,
-power, or volume key. This API uses an asynchronous callback to return the result.
+Listens for the press and release events of the specified key, which can be the **META_LEFT**, **META_RIGHT**,power, or volume key. This API uses an asynchronous callback to return the result.
 
 **Since:** 15
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
+
+<!--Device-inputMonitor-function on(type: 'keyPressed', keys: Array<KeyCode>, receiver: Callback<KeyEvent>): void--><!--Device-inputMonitor-function on(type: 'keyPressed', keys: Array<KeyCode>, receiver: Callback<KeyEvent>): void-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
@@ -846,8 +871,8 @@ power, or volume key. This API uses an asynchronous callback to return the resul
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyPressed' | Yes | Event type. This parameter has a fixed value of **keyPressed**. |
-| keys | Array&lt;KeyCode&gt; | Yes | Key value. The following key values are supported: KEYCODE_META_LEFT,KEYCODE_META_RIGHT, KEYCODE_POWER, KEYCODE_VOLUME_DOWN, and KEYCODE_VOLUME_UP. |
-| receiver | Callback&lt;KeyEvent&gt; | Yes | Callback used to return the key input event. |
+| keys | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<KeyCode> | Yes | Key value. The following key values are supported: KEYCODE_META_LEFT,KEYCODE_META_RIGHT, KEYCODE_POWER, KEYCODE_VOLUME_DOWN, and KEYCODE_VOLUME_UP. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<KeyEvent> | Yes | Callback used to return the key input event. |
 
 **Error codes:**
 

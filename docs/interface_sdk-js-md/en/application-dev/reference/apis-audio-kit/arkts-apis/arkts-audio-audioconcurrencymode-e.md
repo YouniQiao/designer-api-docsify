@@ -4,6 +4,8 @@ Enumerates the audio concurrency modes.
 
 **Since:** 12
 
+<!--Device-audio-enum AudioConcurrencyMode--><!--Device-audio-enum AudioConcurrencyMode-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## CONCURRENCY_DEFAULT
@@ -17,6 +19,8 @@ Uses the system strategy by default.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AudioConcurrencyMode-CONCURRENCY_DEFAULT = 0--><!--Device-AudioConcurrencyMode-CONCURRENCY_DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -32,6 +36,8 @@ Concurrent with other audio streams, that is, audio mixing.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-AudioConcurrencyMode-CONCURRENCY_MIX_WITH_OTHERS = 1--><!--Device-AudioConcurrencyMode-CONCURRENCY_MIX_WITH_OTHERS = 1-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## CONCURRENCY_DUCK_OTHERS
@@ -46,6 +52,8 @@ Ducks other audio streams.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-AudioConcurrencyMode-CONCURRENCY_DUCK_OTHERS = 2--><!--Device-AudioConcurrencyMode-CONCURRENCY_DUCK_OTHERS = 2-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## CONCURRENCY_PAUSE_OTHERS
@@ -59,6 +67,8 @@ Pauses other audio streams.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AudioConcurrencyMode-CONCURRENCY_PAUSE_OTHERS = 3--><!--Device-AudioConcurrencyMode-CONCURRENCY_PAUSE_OTHERS = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 

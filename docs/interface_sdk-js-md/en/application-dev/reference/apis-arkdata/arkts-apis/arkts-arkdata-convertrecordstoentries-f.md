@@ -12,13 +12,11 @@ import { unifiedDataChannel } from '@kit.ArkData';
 function convertRecordsToEntries(data: UnifiedData): void
 ```
 
-Converts the provided data into a multi-style data structure, which is useful when the original data uses multiple
-records to represent different styles of the same data.
+Converts the provided data into a multi-style data structure, which is useful when the original data uses multiple records to represent different styles of the same data.
 
 This API is used only when the following rules are met:
 
-1. The number of records in data is greater than 1.
-2. The value of **unifiedData.properties.tag** is **records_to_entries_data_format**.
+1. The number of records in data is greater than 1.2. The value of **unifiedData.properties.tag** is **records_to_entries_data_format**.
 
 **Since:** 17
 
@@ -26,13 +24,15 @@ This API is used only when the following rules are met:
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
 
+<!--Device-unifiedDataChannel-function convertRecordsToEntries(data: UnifiedData): void--><!--Device-unifiedDataChannel-function convertRecordsToEntries(data: UnifiedData): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | UnifiedData | Yes | Data to convert. |
+| data | [UnifiedData](../../apis-arkui/arkts-components/arkts-arkui-unifieddata-t.md) | Yes | Data to convert. |
 
 **Error codes:**
 

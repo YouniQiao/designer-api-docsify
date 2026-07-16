@@ -1,9 +1,10 @@
 # FontMetricsFlags
 
-Enumerates the font measurement flags, which is used to specify whether a field in the
-[FontMetrics](arkts-arkgraphics2d-fontmetrics-i.md) struct is valid.
+Enumerates the font measurement flags, which is used to specify whether a field in the [FontMetrics](arkts-arkgraphics2d-fontmetrics-i.md) struct is valid.
 
 **Since:** 12
+
+<!--Device-drawing-enum FontMetricsFlags--><!--Device-drawing-enum FontMetricsFlags-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -19,6 +20,8 @@ The **underlineThickness** field is valid.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-FontMetricsFlags-UNDERLINE_THICKNESS_VALID = 1 << 0--><!--Device-FontMetricsFlags-UNDERLINE_THICKNESS_VALID = 1 << 0-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## UNDERLINE_POSITION_VALID
@@ -32,6 +35,8 @@ The **underlinePosition** field is valid.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FontMetricsFlags-UNDERLINE_POSITION_VALID = 1 << 1--><!--Device-FontMetricsFlags-UNDERLINE_POSITION_VALID = 1 << 1-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -47,6 +52,8 @@ The **strikethroughThickness** field is valid.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-FontMetricsFlags-STRIKETHROUGH_THICKNESS_VALID = 1 << 2--><!--Device-FontMetricsFlags-STRIKETHROUGH_THICKNESS_VALID = 1 << 2-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## STRIKETHROUGH_POSITION_VALID
@@ -61,6 +68,8 @@ The **strikethroughPosition** field is valid.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-FontMetricsFlags-STRIKETHROUGH_POSITION_VALID = 1 << 3--><!--Device-FontMetricsFlags-STRIKETHROUGH_POSITION_VALID = 1 << 3-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## BOUNDS_INVALID
@@ -74,6 +83,8 @@ The boundary measurement values (such as **top**, **bottom**, **xMin**, and **xM
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FontMetricsFlags-BOUNDS_INVALID = 1 << 4--><!--Device-FontMetricsFlags-BOUNDS_INVALID = 1 << 4-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

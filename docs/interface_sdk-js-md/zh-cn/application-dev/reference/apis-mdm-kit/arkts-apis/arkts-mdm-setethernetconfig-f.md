@@ -1,5 +1,11 @@
 # setEthernetConfig
 
+## 导入模块
+
+```TypeScript
+import { networkManager } from '@kit.MDMKit';
+```
+
 ## setEthernetConfig
 
 ```TypeScript
@@ -14,15 +20,17 @@ function setEthernetConfig(admin: Want, networkInterface: string, config: Interf
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-networkManager-function setEthernetConfig(admin: Want, networkInterface: string, config: InterfaceConfig): void--><!--Device-networkManager-function setEthernetConfig(admin: Want, networkInterface: string, config: InterfaceConfig): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。 |
 | networkInterface | string | 是 | 要设置的网络接口名。 |
-| config | InterfaceConfig | 是 | 要设置的网络接口配置信息。 |
+| config | [InterfaceConfig](arkts-mdm-interfaceconfig-i.md) | 是 | 要设置的网络接口配置信息。 |
 
 **错误码：**
 

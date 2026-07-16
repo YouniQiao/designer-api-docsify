@@ -12,14 +12,13 @@ import { appManager } from '@kit.AbilityKit';
 function killProcessesInBatch(pids: Array<number>): Promise<void>
 ```
 
-Kills processes in batches. This API uses a promise to return the result.
-This API can be properly called on PCs/2-in-1 devices. If it is called on other devices, error code 801 is
-returned.
-**Required permissions**: ohos.permission.KILL_APP_PROCESSES
+Kills processes in batches. This API uses a promise to return the result.This API can be properly called on PCs/2-in-1 devices. If it is called on other devices, error code 801 is returned.**Required permissions**: ohos.permission.KILL_APP_PROCESSES
 
 **Since:** 14
 
 **Required permissions:** ohos.permission.KILL_APP_PROCESSES
+
+<!--Device-appManager-function killProcessesInBatch(pids: Array<int>): Promise<void>--><!--Device-appManager-function killProcessesInBatch(pids: Array<int>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -29,13 +28,13 @@ returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pids | Array&lt;number&gt; | Yes | Array of process IDs. |
+| pids | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Array of process IDs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

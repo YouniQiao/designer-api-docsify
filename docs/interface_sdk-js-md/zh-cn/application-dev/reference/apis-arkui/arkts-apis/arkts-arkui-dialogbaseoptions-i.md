@@ -4,7 +4,15 @@
 
 **起始版本：** 26.1.0
 
+<!--Device-dialog-declare interface DialogBaseOptions--><!--Device-dialog-declare interface DialogBaseOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from '@kit.ArkUI';
+```
 
 ## alignment
 
@@ -20,7 +28,9 @@ alignment?: DialogBaseAlignment
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-alignment?: DialogBaseAlignment--><!--Device-DialogBaseOptions-alignment?: DialogBaseAlignment-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,7 +50,9 @@ autoCancel?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-autoCancel?: boolean--><!--Device-DialogBaseOptions-autoCancel?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,8 +62,7 @@ autoCancel?: boolean
 backgroundBlurStyle?: BlurStyle
 ```
 
-对话框的背景模糊样式。
-<br>设置为BlurStyle.NONE将禁用背景模糊。
+对话框的背景模糊样式。<br>设置为BlurStyle.NONE将禁用背景模糊。
 
 **类型：** BlurStyle
 
@@ -61,7 +72,9 @@ backgroundBlurStyle?: BlurStyle
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-backgroundBlurStyle?: BlurStyle--><!--Device-DialogBaseOptions-backgroundBlurStyle?: BlurStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -79,7 +92,9 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions--><!--Device-DialogBaseOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -89,8 +104,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 backgroundColor?: ResourceColor
 ```
 
-对话框的背景颜色。
-<br>当backgroundColor设置为非透明色时，backgroundBlurStyle必须设置为BlurStyle.NONE。
+对话框的背景颜色。<br>当backgroundColor设置为非透明色时，backgroundBlurStyle必须设置为BlurStyle.NONE。
 
 **类型：** ResourceColor
 
@@ -100,7 +114,9 @@ backgroundColor?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-backgroundColor?: ResourceColor--><!--Device-DialogBaseOptions-backgroundColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -118,7 +134,9 @@ backgroundEffect?: BackgroundEffectOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-backgroundEffect?: BackgroundEffectOptions--><!--Device-DialogBaseOptions-backgroundEffect?: BackgroundEffectOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -138,7 +156,9 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors--><!--Device-DialogBaseOptions-borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -158,7 +178,9 @@ borderRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-borderRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses--><!--Device-DialogBaseOptions-borderRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -178,7 +200,9 @@ borderStyle?: BorderStyle | EdgeStyles
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-borderStyle?: BorderStyle | EdgeStyles--><!--Device-DialogBaseOptions-borderStyle?: BorderStyle | EdgeStyles-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -198,7 +222,9 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths--><!--Device-DialogBaseOptions-borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -216,7 +242,9 @@ Dialog 控制器。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-controller?: DialogBaseController--><!--Device-DialogBaseOptions-controller?: DialogBaseController-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -234,7 +262,9 @@ dialogTransition?: TransitionEffect
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-dialogTransition?: TransitionEffect--><!--Device-DialogBaseOptions-dialogTransition?: TransitionEffect-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -254,7 +284,9 @@ displayModeInSubWindow?: DialogDisplayMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-displayModeInSubWindow?: DialogDisplayMode--><!--Device-DialogBaseOptions-displayModeInSubWindow?: DialogDisplayMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -274,7 +306,9 @@ enableHoverMode?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-enableHoverMode?: boolean--><!--Device-DialogBaseOptions-enableHoverMode?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -294,7 +328,9 @@ focusable?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-focusable?: boolean--><!--Device-DialogBaseOptions-focusable?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -312,7 +348,9 @@ height?: Dimension
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-height?: Dimension--><!--Device-DialogBaseOptions-height?: Dimension-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -332,7 +370,9 @@ hoverModeArea?: HoverModeAreaType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-hoverModeArea?: HoverModeAreaType--><!--Device-DialogBaseOptions-hoverModeArea?: HoverModeAreaType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -352,7 +392,9 @@ immersiveMode?: ImmersiveMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-immersiveMode?: ImmersiveMode--><!--Device-DialogBaseOptions-immersiveMode?: ImmersiveMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -372,7 +414,9 @@ isModal?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-isModal?: boolean--><!--Device-DialogBaseOptions-isModal?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -390,7 +434,9 @@ keyboardAvoidDistance?: LengthMetrics
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-keyboardAvoidDistance?: LengthMetrics--><!--Device-DialogBaseOptions-keyboardAvoidDistance?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -410,7 +456,9 @@ keyboardAvoidMode?: KeyboardAvoidMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-keyboardAvoidMode?: KeyboardAvoidMode--><!--Device-DialogBaseOptions-keyboardAvoidMode?: KeyboardAvoidMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -430,7 +478,9 @@ levelMode?: LevelMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-levelMode?: LevelMode--><!--Device-DialogBaseOptions-levelMode?: LevelMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -450,7 +500,9 @@ levelOrder?: LevelOrder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-levelOrder?: LevelOrder--><!--Device-DialogBaseOptions-levelOrder?: LevelOrder-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -460,9 +512,7 @@ levelOrder?: LevelOrder
 levelUniqueId?: number
 ```
 
-页面级对话框显示层下节点的唯一标识。
-取值限定为整数。
-<br>该参数仅在levelMode为LevelMode.EMBEDDED时生效。
+页面级对话框显示层下节点的唯一标识。取值限定为整数。<br>该参数仅在levelMode为LevelMode.EMBEDDED时生效。
 
 **类型：** number
 
@@ -470,7 +520,9 @@ levelUniqueId?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-levelUniqueId?: int--><!--Device-DialogBaseOptions-levelUniqueId?: int-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -488,7 +540,9 @@ maskColor?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-maskColor?: ResourceColor--><!--Device-DialogBaseOptions-maskColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -508,7 +562,9 @@ maskRect?: Rectangle
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-maskRect?: Rectangle--><!--Device-DialogBaseOptions-maskRect?: Rectangle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -526,7 +582,9 @@ maskTransition?: TransitionEffect
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-maskTransition?: TransitionEffect--><!--Device-DialogBaseOptions-maskTransition?: TransitionEffect-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -544,7 +602,9 @@ offset?: Offset
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-offset?: Offset--><!--Device-DialogBaseOptions-offset?: Offset-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -562,7 +622,9 @@ onDidAppear?: VoidCallback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-onDidAppear?: VoidCallback--><!--Device-DialogBaseOptions-onDidAppear?: VoidCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -580,7 +642,9 @@ onDidDisappear?: VoidCallback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-onDidDisappear?: VoidCallback--><!--Device-DialogBaseOptions-onDidDisappear?: VoidCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -598,7 +662,9 @@ onWillAppear?: VoidCallback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-onWillAppear?: VoidCallback--><!--Device-DialogBaseOptions-onWillAppear?: VoidCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -616,7 +682,9 @@ onWillDisappear?: VoidCallback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-onWillDisappear?: VoidCallback--><!--Device-DialogBaseOptions-onWillDisappear?: VoidCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -626,10 +694,7 @@ onWillDisappear?: VoidCallback
 onWillDismiss?: Callback<DialogDismissal>
 ```
 
-对话框交互关闭的回调。
-<br>如果注册了此回调，则用户点击后对话框不会立即关闭
-遮罩或返回按钮。
-回调中的reason参数用于判断是否可以关闭对话框。
+对话框交互关闭的回调。<br>如果注册了此回调，则用户点击后对话框不会立即关闭遮罩或返回按钮。回调中的reason参数用于判断是否可以关闭对话框。
 
 **类型：** Callback<DialogDismissal>
 
@@ -637,7 +702,9 @@ onWillDismiss?: Callback<DialogDismissal>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-onWillDismiss?: Callback<DialogDismissal>--><!--Device-DialogBaseOptions-onWillDismiss?: Callback<DialogDismissal>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -655,7 +722,9 @@ shadow?: ShadowOptions | ShadowStyle
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-shadow?: ShadowOptions | ShadowStyle--><!--Device-DialogBaseOptions-shadow?: ShadowOptions | ShadowStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -665,8 +734,7 @@ shadow?: ShadowOptions | ShadowStyle
 showInSubWindow?: boolean
 ```
 
-是否在子窗口中显示。
-<br>isModal = true和showInSubWindow = true不能同时使用。
+是否在子窗口中显示。<br>isModal = true和showInSubWindow = true不能同时使用。
 
 **类型：** boolean
 
@@ -676,7 +744,9 @@ showInSubWindow?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-showInSubWindow?: boolean--><!--Device-DialogBaseOptions-showInSubWindow?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -694,7 +764,9 @@ systemMaterial?: SystemUiMaterial
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-systemMaterial?: SystemUiMaterial--><!--Device-DialogBaseOptions-systemMaterial?: SystemUiMaterial-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -712,7 +784,9 @@ width?: Dimension
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.1.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DialogBaseOptions-width?: Dimension--><!--Device-DialogBaseOptions-width?: Dimension-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

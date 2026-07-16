@@ -4,9 +4,17 @@
 
 **起始版本：** 20
 
+<!--Device-cooperate-interface CooperateOptions--><!--Device-cooperate-interface CooperateOptions-End-->
+
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { cooperate } from '@kit.DistributedServiceKit';
+```
 
 ## displayId
 
@@ -19,6 +27,8 @@ displayId: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-CooperateOptions-displayId: long--><!--Device-CooperateOptions-displayId: long-End-->
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -36,6 +46,8 @@ displayX: number
 
 **起始版本：** 20
 
+<!--Device-CooperateOptions-displayX: int--><!--Device-CooperateOptions-displayX: int-End-->
+
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +63,8 @@ displayY: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-CooperateOptions-displayY: int--><!--Device-CooperateOptions-displayY: int-End-->
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 

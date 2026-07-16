@@ -20,13 +20,15 @@ Gets the window states of the application.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function getApplicationWindowStates(admin: Want, bundleName: string, appIndex: number): Array<WindowStateInfo>--><!--Device-applicationManager-function getApplicationWindowStates(admin: Want, bundleName: string, appIndex: number): Array<WindowStateInfo>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | admin indicates the enterprise admin extension ability information. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | admin indicates the enterprise admin extension ability information. |
 | bundleName | string | Yes | bundleName indicates the bundle name of the application. |
 | appIndex | number | Yes | appIndex indicates the index of bundle.<br>The value must be an integer greater than or equal to 0. |
 
@@ -34,7 +36,7 @@ Gets the window states of the application.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;WindowStateInfo&gt; | Returns the window states information of application. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<WindowStateInfo> | Returns the window states information of application. |
 
 **Error codes:**
 

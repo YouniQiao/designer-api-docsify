@@ -2,13 +2,21 @@
 
 本模块定义了一些2D图形领域的通用数据类型。
 
-> **说明：**
->
+> **说明：**  
+>  
 > - 本模块使用屏幕物理像素单位px。
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace common2D--><!--Device-unnamed-declare namespace common2D-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
+
+## 导入模块
+
+```TypeScript
+import { common2D } from '@kit.ArkGraphics2D';
+```
 
 ## 汇总
 

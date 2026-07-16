@@ -14,12 +14,13 @@ function finishSyncTrace(level: HiTraceOutputLevel): void
 
 Stops a synchronous trace with the trace output level specified.
 
-The **level** used in **finishSyncTrace** must be the same as that of
-[startSyncTrace()](arkts-performanceanalysis-startsynctrace-f.md#startsynctrace-1).
+The **level** used in **finishSyncTrace** must be the same as that of [startSyncTrace()](arkts-performanceanalysis-startsynctrace-f.md#startsynctrace-1).
 
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-hiTraceMeter-function finishSyncTrace(level: HiTraceOutputLevel): void--><!--Device-hiTraceMeter-function finishSyncTrace(level: HiTraceOutputLevel): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
@@ -27,7 +28,7 @@ The **level** used in **finishSyncTrace** must be the same as that of
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | HiTraceOutputLevel | Yes | Trace output level. |
+| level | [HiTraceOutputLevel](arkts-performanceanalysis-hitraceoutputlevel-e.md) | Yes | Trace output level. |
 
 **Example**
 

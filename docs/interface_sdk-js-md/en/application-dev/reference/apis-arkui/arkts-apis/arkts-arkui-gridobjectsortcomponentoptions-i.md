@@ -4,6 +4,8 @@ Provides configuration options for the **GridObjectSortComponent** component.
 
 **Since:** 11
 
+<!--Device-unnamed-export interface GridObjectSortComponentOptions--><!--Device-unnamed-export interface GridObjectSortComponentOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Default value: **Tap to add**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GridObjectSortComponentOptions-addAreaTitle?: ResourceStr--><!--Device-GridObjectSortComponentOptions-addAreaTitle?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## editTitle
@@ -49,6 +53,8 @@ Default value: **Edit**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GridObjectSortComponentOptions-editTitle?: ResourceStr--><!--Device-GridObjectSortComponentOptions-editTitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,6 +78,8 @@ Default value: **56vp**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GridObjectSortComponentOptions-imageSize?: number | Resource--><!--Device-GridObjectSortComponentOptions-imageSize?: number | Resource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## normalTitle
@@ -92,6 +100,8 @@ Default value: **Channel**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GridObjectSortComponentOptions-normalTitle?: ResourceStr--><!--Device-GridObjectSortComponentOptions-normalTitle?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## showAreaTitle
@@ -111,6 +121,8 @@ Default value: **Drag to sort**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GridObjectSortComponentOptions-showAreaTitle?: ResourceStr--><!--Device-GridObjectSortComponentOptions-showAreaTitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -133,6 +145,8 @@ Default value: **GridObjectSortComponentType.TEXT**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GridObjectSortComponentOptions-type?: GridObjectSortComponentType--><!--Device-GridObjectSortComponentOptions-type?: GridObjectSortComponentType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

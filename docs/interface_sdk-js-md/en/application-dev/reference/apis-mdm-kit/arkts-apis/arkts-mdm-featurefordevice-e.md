@@ -4,6 +4,8 @@ Enumerates device features.
 
 **Since:** 24
 
+<!--Device-restrictions-enum FeatureForDevice--><!--Device-restrictions-enum FeatureForDevice-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## WIFI_P2P
@@ -12,13 +14,13 @@ Enumerates device features.
 WIFI_P2P = 0
 ```
 
-Wi-Fi P2P (peer-to-peer connection), which allows devices to directly connect to each other without an access
-point. Once this feature is disallowed, devices cannot be connected through Wi-Fi P2P, affecting application
-functions that require direct Wi-Fi connections, such as file transfer, online gaming, and screen sharing.
+Wi-Fi P2P (peer-to-peer connection), which allows devices to directly connect to each other without an access point. Once this feature is disallowed, devices cannot be connected through Wi-Fi P2P, affecting application functions that require direct Wi-Fi connections, such as file transfer, online gaming, and screen sharing.
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-WIFI_P2P = 0--><!--Device-FeatureForDevice-WIFI_P2P = 0-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -34,6 +36,8 @@ X key.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-X_KEY = 1--><!--Device-FeatureForDevice-X_KEY = 1-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## LOCAL_INPUT
@@ -47,6 +51,8 @@ Local input.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-LOCAL_INPUT = 2--><!--Device-FeatureForDevice-LOCAL_INPUT = 2-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -62,6 +68,8 @@ Network packet filtering.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-PACKET_FILTERING = 3--><!--Device-FeatureForDevice-PACKET_FILTERING = 3-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## SUDO
@@ -75,6 +83,8 @@ Super user do.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-SUDO = 4--><!--Device-FeatureForDevice-SUDO = 4-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -90,6 +100,8 @@ Traffic redirection.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-TRAFFIC_REDIRECTION = 5--><!--Device-FeatureForDevice-TRAFFIC_REDIRECTION = 5-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## CORE_DUMP
@@ -103,6 +115,8 @@ Core dump.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-CORE_DUMP = 6--><!--Device-FeatureForDevice-CORE_DUMP = 6-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -118,6 +132,8 @@ RS232.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-RS232 = 7--><!--Device-FeatureForDevice-RS232 = 7-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## DISK_ERASURE
@@ -131,6 +147,8 @@ Disk erasure.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-DISK_ERASURE = 8--><!--Device-FeatureForDevice-DISK_ERASURE = 8-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -146,6 +164,8 @@ Device Bluetooth capability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-BLUETOOTH = 9--><!--Device-FeatureForDevice-BLUETOOTH = 9-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MODIFY_DATE_TIME
@@ -159,6 +179,8 @@ Device capability to modify system time.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-MODIFY_DATE_TIME = 10--><!--Device-FeatureForDevice-MODIFY_DATE_TIME = 10-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -174,6 +196,8 @@ Device printing capability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-PRINTER = 11--><!--Device-FeatureForDevice-PRINTER = 11-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## HDC
@@ -187,6 +211,8 @@ Capability for other devices to connect to and debug this device via HDC.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-HDC = 12--><!--Device-FeatureForDevice-HDC = 12-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -202,6 +228,8 @@ Device microphone capability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-MICROPHONE = 13--><!--Device-FeatureForDevice-MICROPHONE = 13-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## FINGERPRINT
@@ -215,6 +243,8 @@ Device fingerprint authentication capability.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-FINGERPRINT = 14--><!--Device-FeatureForDevice-FINGERPRINT = 14-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -230,6 +260,8 @@ Device USB capability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-USB = 15--><!--Device-FeatureForDevice-USB = 15-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## WIFI
@@ -244,6 +276,8 @@ Device Wi-Fi capability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-WIFI = 16--><!--Device-FeatureForDevice-WIFI = 16-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## TETHERING
@@ -252,12 +286,13 @@ Device Wi-Fi capability.
 TETHERING = 17
 ```
 
-Network tethering capability. The ability to share the device's internet connection with other devices,
-that is, hotspot sharing.
+Network tethering capability. The ability to share the device's internet connection with other devices,that is, hotspot sharing.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-TETHERING = 17--><!--Device-FeatureForDevice-TETHERING = 17-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -273,6 +308,8 @@ Capability of freezing inactive users.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-INACTIVE_USER_FREEZE = 18--><!--Device-FeatureForDevice-INACTIVE_USER_FREEZE = 18-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## CAMERA
@@ -286,6 +323,8 @@ Device camera capability.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-CAMERA = 19--><!--Device-FeatureForDevice-CAMERA = 19-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -301,6 +340,8 @@ Media Transfer Protocol (MTP) client capability, including read and write capabi
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-MTP_CLIENT = 20--><!--Device-FeatureForDevice-MTP_CLIENT = 20-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MTP_SERVER
@@ -314,6 +355,8 @@ MTP server capability.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-MTP_SERVER = 21--><!--Device-FeatureForDevice-MTP_SERVER = 21-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -329,6 +372,8 @@ Samba client capability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-SAMBA_CLIENT = 22--><!--Device-FeatureForDevice-SAMBA_CLIENT = 22-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## SAMBA_SERVER
@@ -342,6 +387,8 @@ Samba server capability.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-SAMBA_SERVER = 23--><!--Device-FeatureForDevice-SAMBA_SERVER = 23-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -357,6 +404,8 @@ Backup and restore capability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-BACKUP_AND_RESTORE = 24--><!--Device-FeatureForDevice-BACKUP_AND_RESTORE = 24-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MAINTENANCE_MODE
@@ -370,6 +419,8 @@ Device maintenance mode capability.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-MAINTENANCE_MODE = 25--><!--Device-FeatureForDevice-MAINTENANCE_MODE = 25-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -385,6 +436,8 @@ Multimedia Messaging Service (MMS) capability to receive and send multimedia mes
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-MMS = 26--><!--Device-FeatureForDevice-MMS = 26-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## SMS
@@ -398,6 +451,8 @@ Short Messaging Service (SMS) capability to receive and send SMS messages.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-SMS = 27--><!--Device-FeatureForDevice-SMS = 27-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -413,6 +468,8 @@ Cellular data capability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-MOBILE_DATA = 28--><!--Device-FeatureForDevice-MOBILE_DATA = 28-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## AIRPLANE_MODE
@@ -426,6 +483,8 @@ Airplane mode capability.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-AIRPLANE_MODE = 29--><!--Device-FeatureForDevice-AIRPLANE_MODE = 29-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -441,6 +500,8 @@ Virtual Private Network (VPN) capability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-VPN = 30--><!--Device-FeatureForDevice-VPN = 30-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## NOTIFICATION
@@ -454,6 +515,8 @@ Device notification capability.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-NOTIFICATION = 31--><!--Device-FeatureForDevice-NOTIFICATION = 31-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -469,6 +532,8 @@ Near Field Communication (NFC) capability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-NFC = 32--><!--Device-FeatureForDevice-NFC = 32-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## PRIVATE_SPACE
@@ -482,6 +547,8 @@ Privacy space creation capability.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-PRIVATE_SPACE = 33--><!--Device-FeatureForDevice-PRIVATE_SPACE = 33-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -497,6 +564,8 @@ Call capability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-TELEPHONE_CALL = 34--><!--Device-FeatureForDevice-TELEPHONE_CALL = 34-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## APP_CLONE
@@ -510,6 +579,8 @@ Application clone capability.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-APP_CLONE = 35--><!--Device-FeatureForDevice-APP_CLONE = 35-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -525,6 +596,8 @@ External storage capability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-EXTERNAL_STORAGE_CARD = 36--><!--Device-FeatureForDevice-EXTERNAL_STORAGE_CARD = 36-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## RANDOM_MAC
@@ -538,6 +611,8 @@ Random MAC address capability for Wi-Fi connections.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-RANDOM_MAC = 37--><!--Device-FeatureForDevice-RANDOM_MAC = 37-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -553,6 +628,8 @@ Device audio playback capability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-UNMUTE_DEVICE = 38--><!--Device-FeatureForDevice-UNMUTE_DEVICE = 38-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## HDC_REMOTE
@@ -567,6 +644,8 @@ Capability of the device to debug other devices through HDC.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-HDC_REMOTE = 39--><!--Device-FeatureForDevice-HDC_REMOTE = 39-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## VIRTUAL_SERVICE
@@ -575,13 +654,13 @@ Capability of the device to debug other devices through HDC.
 VIRTUAL_SERVICE = 40
 ```
 
-Device virtualization service capability, which refers to the system capability of running other operating system
-platforms (such as Linux and Windows) through virtualization technology by leveraging the redundancy of the
-device's hardware resources.
+Device virtualization service capability, which refers to the system capability of running other operating system platforms (such as Linux and Windows) through virtualization technology by leveraging the redundancy of the device's hardware resources.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-VIRTUAL_SERVICE = 40--><!--Device-FeatureForDevice-VIRTUAL_SERVICE = 40-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -597,6 +676,8 @@ Device USB-to-serial port capability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-USB_SERIAL = 41--><!--Device-FeatureForDevice-USB_SERIAL = 41-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## SCREEN_SHOT
@@ -610,6 +691,8 @@ Device screen capture capability.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-SCREEN_SHOT = 42--><!--Device-FeatureForDevice-SCREEN_SHOT = 42-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -625,6 +708,8 @@ Device screen recording capability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-SCREEN_RECORD = 43--><!--Device-FeatureForDevice-SCREEN_RECORD = 43-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## DISK_RECOVERY_KEY
@@ -638,6 +723,8 @@ Recovery key export capability.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-DISK_RECOVERY_KEY = 44--><!--Device-FeatureForDevice-DISK_RECOVERY_KEY = 44-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -653,6 +740,8 @@ Device NearLink capability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-NEAR_LINK = 45--><!--Device-FeatureForDevice-NEAR_LINK = 45-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## DEVELOPER_MODE
@@ -666,6 +755,8 @@ Developer mode, which takes effect after the device is restarted.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-DEVELOPER_MODE = 46--><!--Device-FeatureForDevice-DEVELOPER_MODE = 46-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -681,6 +772,8 @@ Factory reset capability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-RESET_FACTORY = 47--><!--Device-FeatureForDevice-RESET_FACTORY = 47-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## REMOTE_DESK
@@ -694,6 +787,8 @@ Remote desktop capability.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-REMOTE_DESK = 48--><!--Device-FeatureForDevice-REMOTE_DESK = 48-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -709,6 +804,8 @@ Remote diagnosis capability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForDevice-REMOTE_DIAGNOSIS = 49--><!--Device-FeatureForDevice-REMOTE_DIAGNOSIS = 49-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## OTA_UPDATE
@@ -722,6 +819,8 @@ System upgrade capability on public networks.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-OTA_UPDATE = 50--><!--Device-FeatureForDevice-OTA_UPDATE = 50-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

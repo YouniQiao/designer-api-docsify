@@ -4,7 +4,15 @@
 
 **起始版本：** 7
 
+<!--Device-emitter-export interface InnerEvent--><!--Device-emitter-export interface InnerEvent-End-->
+
 **系统能力：** SystemCapability.Notification.Emitter
+
+## 导入模块
+
+```TypeScript
+import { emitter } from '@kit.BasicServicesKit';
+```
 
 ## eventId
 
@@ -18,7 +26,9 @@ eventId: number
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-InnerEvent-eventId: long--><!--Device-InnerEvent-eventId: long-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 
@@ -34,7 +44,9 @@ priority?: EventPriority
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-InnerEvent-priority?: EventPriority--><!--Device-InnerEvent-priority?: EventPriority-End-->
 
 **系统能力：** SystemCapability.Notification.Emitter
 

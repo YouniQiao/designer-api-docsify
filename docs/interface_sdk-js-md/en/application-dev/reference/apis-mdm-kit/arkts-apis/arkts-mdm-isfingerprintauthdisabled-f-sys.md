@@ -24,6 +24,8 @@ Queries whether fingerprint authentication is disabled.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-restrictions-function isFingerprintAuthDisabled(admin: Want): boolean--><!--Device-restrictions-function isFingerprintAuthDisabled(admin: Want): boolean-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -32,7 +34,7 @@ Queries whether fingerprint authentication is disabled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 
 **Return value:**
 

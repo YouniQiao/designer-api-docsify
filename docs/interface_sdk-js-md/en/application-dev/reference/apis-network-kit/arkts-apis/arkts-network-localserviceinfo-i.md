@@ -4,6 +4,8 @@ Defines the mDNS service information.
 
 **Since:** 11
 
+<!--Device-mdns-export interface LocalServiceInfo--><!--Device-mdns-export interface LocalServiceInfo-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
 ## Modules to Import
@@ -26,6 +28,8 @@ IP address of the host.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-LocalServiceInfo-host?: NetAddress--><!--Device-LocalServiceInfo-host?: NetAddress-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
 ## port
@@ -41,6 +45,8 @@ Port number.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-LocalServiceInfo-port?: number--><!--Device-LocalServiceInfo-port?: number-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
@@ -58,6 +64,8 @@ DNS-SD TXT record pairs.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-LocalServiceInfo-serviceAttribute?: Array<ServiceAttribute>--><!--Device-LocalServiceInfo-serviceAttribute?: Array<ServiceAttribute>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
 ## serviceName
@@ -74,6 +82,8 @@ Service name.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-LocalServiceInfo-serviceName: string--><!--Device-LocalServiceInfo-serviceName: string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
 ## serviceType
@@ -89,6 +99,8 @@ Service type. Use an underscore (_) as the prefix, for example, _http._tcp.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-LocalServiceInfo-serviceType: string--><!--Device-LocalServiceInfo-serviceType: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 

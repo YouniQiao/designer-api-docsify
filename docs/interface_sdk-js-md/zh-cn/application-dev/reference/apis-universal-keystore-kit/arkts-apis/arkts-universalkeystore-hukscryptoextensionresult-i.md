@@ -4,7 +4,15 @@
 
 **起始版本：** 22
 
+<!--Device-unnamed-export interface HuksCryptoExtensionResult--><!--Device-unnamed-export interface HuksCryptoExtensionResult-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
+
+## 导入模块
+
+```TypeScript
+import { HuksCryptoExtensionCertInfo, HuksCryptoExtensionResultCode, HuksCryptoExtensionParams, HuksCryptoExtensionParam, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
+```
 
 ## authState
 
@@ -18,6 +26,8 @@ authState?: number
 
 **起始版本：** 22
 
+<!--Device-HuksCryptoExtensionResult-authState?: int--><!--Device-HuksCryptoExtensionResult-authState?: int-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## certs
@@ -26,12 +36,13 @@ authState?: number
 certs?: Array<HuksCryptoExtensionCertInfo>
 ```
 
-/**
-证书。
+/**证书。
 
 **类型：** Array<HuksCryptoExtensionCertInfo>
 
 **起始版本：** 22
+
+<!--Device-HuksCryptoExtensionResult-certs?: Array<HuksCryptoExtensionCertInfo>--><!--Device-HuksCryptoExtensionResult-certs?: Array<HuksCryptoExtensionCertInfo>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -49,6 +60,8 @@ errInfo?: huksExternalCrypto.HuksExternalErrorInfo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HuksCryptoExtensionResult-errInfo?: huksExternalCrypto.HuksExternalErrorInfo--><!--Device-HuksCryptoExtensionResult-errInfo?: huksExternalCrypto.HuksExternalErrorInfo-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## handle
@@ -62,6 +75,8 @@ handle?: string
 **类型：** string
 
 **起始版本：** 22
+
+<!--Device-HuksCryptoExtensionResult-handle?: string--><!--Device-HuksCryptoExtensionResult-handle?: string-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -77,6 +92,8 @@ outData?: Uint8Array
 
 **起始版本：** 22
 
+<!--Device-HuksCryptoExtensionResult-outData?: Uint8Array--><!--Device-HuksCryptoExtensionResult-outData?: Uint8Array-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## property
@@ -90,6 +107,8 @@ property?: Array<huksExternalCrypto.HuksExternalCryptoParam>
 **类型：** Array<huksExternalCrypto.HuksExternalCryptoParam>
 
 **起始版本：** 22
+
+<!--Device-HuksCryptoExtensionResult-property?: Array<huksExternalCrypto.HuksExternalCryptoParam>--><!--Device-HuksCryptoExtensionResult-property?: Array<huksExternalCrypto.HuksExternalCryptoParam>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -111,6 +130,8 @@ resourceId?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HuksCryptoExtensionResult-resourceId?: string--><!--Device-HuksCryptoExtensionResult-resourceId?: string-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## resultCode
@@ -125,6 +146,8 @@ resultCode: number
 
 **起始版本：** 22
 
+<!--Device-HuksCryptoExtensionResult-resultCode: int--><!--Device-HuksCryptoExtensionResult-resultCode: int-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## retryCount
@@ -138,6 +161,8 @@ retryCount?: number
 **类型：** number
 
 **起始版本：** 22
+
+<!--Device-HuksCryptoExtensionResult-retryCount?: int--><!--Device-HuksCryptoExtensionResult-retryCount?: int-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 

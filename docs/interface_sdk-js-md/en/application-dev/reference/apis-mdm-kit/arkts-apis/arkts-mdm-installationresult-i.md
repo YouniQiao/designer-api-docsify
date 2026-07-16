@@ -2,11 +2,11 @@
 
 An object that holds the application installation result.
 
-This object is used as a callback parameter in
-[EnterpriseAdminExtensionAbility.onMarketAppInstallResult](arkts-mdm-enterpriseadminextensionability-c.md#onmarketappinstallresult-1)
-.
+This object is used as a callback parameter in [EnterpriseAdminExtensionAbility.onMarketAppInstallResult](arkts-mdm-enterpriseadminextensionability-c.md#onmarketappinstallresult-1).
 
 **Since:** 22
+
+<!--Device-common-export interface InstallationResult--><!--Device-common-export interface InstallationResult-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -30,6 +30,8 @@ Application installation result message.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-InstallationResult-message: string--><!--Device-InstallationResult-message: string-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## result
@@ -45,6 +47,8 @@ Application installation result.
 **Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-InstallationResult-result: Result--><!--Device-InstallationResult-result: Result-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

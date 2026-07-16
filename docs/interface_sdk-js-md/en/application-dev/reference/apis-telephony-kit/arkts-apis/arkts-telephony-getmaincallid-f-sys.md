@@ -16,6 +16,8 @@ Get the main call Id.
 
 **Since:** 7
 
+<!--Device-call-function getMainCallId(callId: int, callback: AsyncCallback<int>): void--><!--Device-call-function getMainCallId(callId: int, callback: AsyncCallback<int>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -25,7 +27,7 @@ Get the main call Id.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | number | Yes | Indicates the identifier of the call. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Indicates the callback for getting the main call id. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Indicates the callback for getting the main call id. |
 
 **Error codes:**
 
@@ -64,6 +66,8 @@ Get the main call Id.
 
 **Since:** 7
 
+<!--Device-call-function getMainCallId(callId: int): Promise<int>--><!--Device-call-function getMainCallId(callId: int): Promise<int>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -78,7 +82,7 @@ Get the main call Id.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns the main call id. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Returns the main call id. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-screen-enum ScreenSourceMode--><!--Device-screen-enum ScreenSourceMode-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -17,6 +19,8 @@ SCREEN_MAIN = 0
 表示屏幕为默认主屏。
 
 **起始版本：** 10
+
+<!--Device-ScreenSourceMode-SCREEN_MAIN = 0--><!--Device-ScreenSourceMode-SCREEN_MAIN = 0-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -32,6 +36,8 @@ SCREEN_MIRROR = 1
 
 **起始版本：** 10
 
+<!--Device-ScreenSourceMode-SCREEN_MIRROR = 1--><!--Device-ScreenSourceMode-SCREEN_MIRROR = 1-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +52,8 @@ SCREEN_EXTEND = 2
 
 **起始版本：** 10
 
+<!--Device-ScreenSourceMode-SCREEN_EXTEND = 2--><!--Device-ScreenSourceMode-SCREEN_EXTEND = 2-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -59,6 +67,8 @@ SCREEN_ALONE = 3
 表示屏幕为未指定来源。
 
 **起始版本：** 10
+
+<!--Device-ScreenSourceMode-SCREEN_ALONE = 3--><!--Device-ScreenSourceMode-SCREEN_ALONE = 3-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 

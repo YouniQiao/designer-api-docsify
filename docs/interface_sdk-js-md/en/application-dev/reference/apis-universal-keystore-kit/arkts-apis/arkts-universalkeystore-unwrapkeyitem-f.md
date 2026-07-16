@@ -14,9 +14,9 @@ function unwrapKeyItem(keyAlias: string, params: HuksOptions, wrappedKey: Uint8A
 
 Unwraps a key. This API uses a promise to return the result.
 
-> **NOTE**
->
-> Unwrapping SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)
+> **NOTE**  
+>  
+> Unwrapping SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)  
 > requires the ohos.permission.ACCESS_SE_KEY permission.
 
 <!--Del-->This feature is not supported currently.<!--DelEnd-->
@@ -25,6 +25,8 @@ Unwraps a key. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-huks-function unwrapKeyItem(keyAlias: string, params: HuksOptions, wrappedKey: Uint8Array): Promise<HuksReturnResult>--><!--Device-huks-function unwrapKeyItem(keyAlias: string, params: HuksOptions, wrappedKey: Uint8Array): Promise<HuksReturnResult>-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 **Parameters:**
@@ -32,20 +34,20 @@ Unwraps a key. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key to be unwrapped. |
-| params | HuksOptions | Yes | Encryption type of the key to be imported. |
-| wrappedKey | Uint8Array | Yes | Ciphertext of the key to be exported. |
+| params | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Encryption type of the key to be imported. |
+| wrappedKey | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Ciphertext of the key to be exported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | Promise that returns the operation result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HuksReturnResult> | Promise that returns the operation result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly becausethe ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
 | [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
 | [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |

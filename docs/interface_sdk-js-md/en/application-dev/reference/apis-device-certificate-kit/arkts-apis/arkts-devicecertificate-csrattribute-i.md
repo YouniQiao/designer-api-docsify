@@ -2,10 +2,11 @@
 
 Defines the CSR attribute representation.
 
-CSR attribute field. Currently, only character string attribute fields are supported. The attribute value added to
-the CSR is encoded in UTF-8 format. The common type is challengePassword.
+CSR attribute field. Currently, only character string attribute fields are supported. The attribute value added to the CSR is encoded in UTF-8 format. The common type is challengePassword.
 
 **Since:** 18
+
+<!--Device-cert-interface CsrAttribute--><!--Device-cert-interface CsrAttribute-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -29,6 +30,8 @@ Attribute type defined in PKCS #9.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-CsrAttribute-type: string--><!--Device-CsrAttribute-type: string-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## value
@@ -44,6 +47,8 @@ Attribute value.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CsrAttribute-value: string--><!--Device-CsrAttribute-value: string-End-->
 
 **System capability:** SystemCapability.Security.Cert
 

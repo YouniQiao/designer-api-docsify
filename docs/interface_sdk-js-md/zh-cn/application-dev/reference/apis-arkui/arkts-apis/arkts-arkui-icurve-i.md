@@ -1,12 +1,18 @@
 # ICurve
 
-曲线对象，支持通过本模块中的[curves.cubicBezierCurve](arkts-arkui-cubicbeziercurve-f.md#cubicbeziercurve-1)、
-[curves.interpolatingSpring](arkts-arkui-interpolatingspring-f.md#interpolatingspring-1)等方法创建不同类型的曲线对象，并可通过曲线对象调用其
-[interpolate](arkts-arkui-icurve-i.md#interpolate-1)的成员方法。
+曲线对象，支持通过本模块中的[curves.cubicBezierCurve](arkts-arkui-cubicbeziercurve-f.md#cubicbeziercurve-1)、[curves.interpolatingSpring](arkts-arkui-interpolatingspring-f.md#interpolatingspring-1)等方法创建不同类型的曲线对象，并可通过曲线对象调用其[interpolate](arkts-arkui-icurve-i.md#interpolate-1)的成员方法。
 
 **起始版本：** 9
 
+<!--Device-curves-interface ICurve--><!--Device-curves-interface ICurve-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { curves } from '@kit.ArkUI';
+```
 
 ## interpolate
 
@@ -18,7 +24,9 @@ interpolate(fraction : number) : number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ICurve-interpolate(fraction : number) : number--><!--Device-ICurve-interpolate(fraction : number) : number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

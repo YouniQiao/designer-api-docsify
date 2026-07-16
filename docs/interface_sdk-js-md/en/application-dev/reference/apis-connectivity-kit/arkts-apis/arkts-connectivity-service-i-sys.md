@@ -4,6 +4,8 @@ Describes the SSAP service.
 
 **Since:** 26.0.0
 
+<!--Device-ssap-interface Service--><!--Device-ssap-interface Service-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import
@@ -18,14 +20,15 @@ import { ssap } from '@kit.ConnectivityKit';
 events?: Event[]
 ```
 
-The events belong to this service.
-<br>This field is not supported in [addService](arkts-connectivity-server-i.md#addservice-1) method.
+The events belong to this service.<br>This field is not supported in [addService](arkts-connectivity-server-i.md#addservice-1) method.
 
 **Type:** Event[]
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Service-events?: Event[]--><!--Device-Service-events?: Event[]-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -37,14 +40,15 @@ The events belong to this service.
 methods?: Method[]
 ```
 
-The methods belong to this service.
-<br>This field is not supported in [addService](arkts-connectivity-server-i.md#addservice-1) method.
+The methods belong to this service.<br>This field is not supported in [addService](arkts-connectivity-server-i.md#addservice-1) method.
 
 **Type:** Method[]
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Service-methods?: Method[]--><!--Device-Service-methods?: Method[]-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 

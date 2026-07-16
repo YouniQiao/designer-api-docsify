@@ -8,6 +8,8 @@ type Assets = Array<Asset>
 
 **起始版本：** 11
 
+<!--Device-commonType-type Assets = Array<Asset>--><!--Device-commonType-type Assets = Array<Asset>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CommonType
 
 **属性类型：** Array<Asset>

@@ -1,9 +1,10 @@
 # AudioViewPicker
 
-Provides APIs for selecting and saving audio clips. Before using the APIs of **AudioViewPicker**, you need to
-create an **AudioViewPicker** instance.
+Provides APIs for selecting and saving audio clips. Before using the APIs of **AudioViewPicker**, you need to create an **AudioViewPicker** instance.
 
 **Since:** 9
+
+<!--Device-picker-class AudioViewPicker--><!--Device-picker-class AudioViewPicker-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -19,12 +20,13 @@ import { picker } from '@kit.CoreFileKit';
 constructor()
 ```
 
-A constructor used to create an **AudioViewPicker** instance. This constructor is not recommended due to the
-potential risk of operation failure.
+A constructor used to create an **AudioViewPicker** instance. This constructor is not recommended due to the potential risk of operation failure.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AudioViewPicker-constructor()--><!--Device-AudioViewPicker-constructor()-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -41,13 +43,13 @@ let audioPicker = new picker.AudioViewPicker(); // Construction without paramete
 constructor(context: Context)
 ```
 
-A constructor used to create an **AudioViewPicker** instance. This constructor is recommended. For details about
-how to obtain the context, see
-[getHostContext](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#gethostcontext12).
+A constructor used to create an **AudioViewPicker** instance. This constructor is recommended. For details about how to obtain the context, see [getHostContext](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#gethostcontext12).
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AudioViewPicker-constructor(context: Context)--><!--Device-AudioViewPicker-constructor(context: Context)-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -55,7 +57,7 @@ how to obtain the context, see
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context (only **UIAbilityContext** is supported). For details about theapplication context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md). |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context (only **UIAbilityContext** is supported). For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md). |
 
 **Example**
 
@@ -92,12 +94,13 @@ struct Index {
 save(option?: AudioSaveOptions): Promise<Array<string>>
 ```
 
-Starts an **audioPicker** page (currently, a **documentPicker** page is displayed) for the user to save one or
-more audio clips. This API uses a promise to return the result.
+Starts an **audioPicker** page (currently, a **documentPicker** page is displayed) for the user to save one or more audio clips. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AudioViewPicker-save(option?: AudioSaveOptions): Promise<Array<string>>--><!--Device-AudioViewPicker-save(option?: AudioSaveOptions): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -105,13 +108,13 @@ more audio clips. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | AudioSaveOptions | No | Options for saving audio clips. If this parameter is not specified, an**audioPicker** page will be displayed for the user to enter the names of the files to save. |
+| option | [AudioSaveOptions](arkts-corefile-audiosaveoptions-c.md) | No | Options for saving audio clips. If this parameter is not specified, an **audioPicker** page will be displayed for the user to enter the names of the files to save. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URIs of the audio clips saved.<br>**Note**: For details about how to use the returned URIs, see[Using a Document URI](../../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return the URIs of the audio clips saved.<br>**Note**: For details about how to use the returned URIs, see [Using a Document URI](../../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 **Example**
 
@@ -143,10 +146,11 @@ async function example16(context: common.UIAbilityContext) { // Ensure that cont
 save(option: AudioSaveOptions, callback: AsyncCallback<Array<string>>): void
 ```
 
-Starts an **audioPicker** page (currently, a **documentPicker** page is displayed) for the user to save one or
-more audio clips. This API uses an asynchronous callback to return the result.
+Starts an **audioPicker** page (currently, a **documentPicker** page is displayed) for the user to save one or more audio clips. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AudioViewPicker-save(option: AudioSaveOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-AudioViewPicker-save(option: AudioSaveOptions, callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -154,8 +158,8 @@ more audio clips. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | AudioSaveOptions | Yes | Options for saving audio clips. |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the audio clips saved.<br>**Note**: For details about how to use the returned URIs, see[Using a Document URI](../../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
+| option | [AudioSaveOptions](arkts-corefile-audiosaveoptions-c.md) | Yes | Options for saving audio clips. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback invoked to return the URIs of the audio clips saved.<br>**Note**: For details about how to use the returned URIs, see [Using a Document URI](../../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 **Example**
 
@@ -189,10 +193,11 @@ async function example17(context: common.UIAbilityContext) { // Ensure that cont
 save(callback: AsyncCallback<Array<string>>): void
 ```
 
-Starts an **audioPicker** page (currently, a **documentPicker** page is displayed) for the user to save one or
-more audio clips. This API uses an asynchronous callback to return the result.
+Starts an **audioPicker** page (currently, a **documentPicker** page is displayed) for the user to save one or more audio clips. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AudioViewPicker-save(callback: AsyncCallback<Array<string>>): void--><!--Device-AudioViewPicker-save(callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -200,7 +205,7 @@ more audio clips. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the audio clips saved.<br>**Note**: For details about how to use the returned URIs, see[Using a Document URI](../../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback invoked to return the URIs of the audio clips saved.<br>**Note**: For details about how to use the returned URIs, see [Using a Document URI](../../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 **Example**
 
@@ -232,12 +237,13 @@ async function example18(context: common.UIAbilityContext) { // Ensure that cont
 select(option?: AudioSelectOptions): Promise<Array<string>>
 ```
 
-Starts an **audioPicker** page for the user to select one or more audio clips. This API uses a promise to return
-the result.
+Starts an **audioPicker** page for the user to select one or more audio clips. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AudioViewPicker-select(option?: AudioSelectOptions): Promise<Array<string>>--><!--Device-AudioViewPicker-select(option?: AudioSelectOptions): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -245,13 +251,13 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | AudioSelectOptions | No | Options for selecting audio clips. If this parameter is not specified, the**audioPicker** page is displayed by default. |
+| option | [AudioSelectOptions](arkts-corefile-audioselectoptions-c.md) | No | Options for selecting audio clips. If this parameter is not specified, the **audioPicker** page is displayed by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URIs of the audio clips selected.<br>**Note**: For details about how to use the returned URIs, see[Using a Media File URI](../../../../file-management/user-file-uri-intro.md#using-a-media-file-uri). |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return the URIs of the audio clips selected.<br>**Note**: For details about how to use the returned URIs, see [Using a Media File URI](../../../../file-management/user-file-uri-intro.md#using-a-media-file-uri). |
 
 **Example**
 
@@ -282,10 +288,11 @@ async function example13(context: common.UIAbilityContext) { // Ensure that cont
 select(option: AudioSelectOptions, callback: AsyncCallback<Array<string>>): void
 ```
 
-Starts an **audioPicker** page for the user to select one or more audio clips. This API uses an asynchronous
-callback to return the result.
+Starts an **audioPicker** page for the user to select one or more audio clips. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AudioViewPicker-select(option: AudioSelectOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-AudioViewPicker-select(option: AudioSelectOptions, callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -293,8 +300,8 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | AudioSelectOptions | Yes | Options for selecting audio clips. |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the audio clipsselected.<br>**Note**: For details about how to use the returned URIs, see[Using a Media File URI](../../../../file-management/user-file-uri-intro.md#using-a-media-file-uri). |
+| option | [AudioSelectOptions](arkts-corefile-audioselectoptions-c.md) | Yes | Options for selecting audio clips. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback invoked to return the URIs of the audio clips selected.<br>**Note**: For details about how to use the returned URIs, see [Using a Media File URI](../../../../file-management/user-file-uri-intro.md#using-a-media-file-uri). |
 
 **Example**
 
@@ -327,11 +334,11 @@ async function example14(context: common.UIAbilityContext) { // Ensure that cont
 select(callback: AsyncCallback<Array<string>>): void
 ```
 
-Starts an **audioPicker** page for the user to select one or more audio clips. This API uses an asynchronous
-callback to return the result.
-**System capability**: SystemCapability.FileManagement.UserFileService
+Starts an **audioPicker** page for the user to select one or more audio clips. This API uses an asynchronous callback to return the result.**System capability**: SystemCapability.FileManagement.UserFileService
 
 **Since:** 9
+
+<!--Device-AudioViewPicker-select(callback: AsyncCallback<Array<string>>): void--><!--Device-AudioViewPicker-select(callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -339,7 +346,7 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the audio clipsselected.<br>**Note**: For details about how to use the returned URIs, see[Using a Media File URI](../../../../file-management/user-file-uri-intro.md#using-a-media-file-uri). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback invoked to return the URIs of the audio clips selected.<br>**Note**: For details about how to use the returned URIs, see [Using a Media File URI](../../../../file-management/user-file-uri-intro.md#using-a-media-file-uri). |
 
 **Example**
 

@@ -1,9 +1,10 @@
 # FormExtensionAbility
 
-Widget extension class. It provides APIs to notify the widget provider that a widget is being created or the widget
-visibility status is being changed.
+Widget extension class. It provides APIs to notify the widget provider that a widget is being created or the widget visibility status is being changed.
 
 **Since:** 9
+
+<!--Device-unnamed-declare class FormExtensionAbility--><!--Device-unnamed-declare class FormExtensionAbility-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -19,8 +20,7 @@ import { FormExtensionAbility } from '@kit.FormKit';
 onAcquireFormState?(want: Want): formInfo.FormState
 ```
 
-Called to notify the widget provider that the widget host is requesting the widget state. By default, the initial
-widget state is returned. (You can override this API as required.)
+Called to notify the widget provider that the widget host is requesting the widget state. By default, the initial widget state is returned. (You can override this API as required.)
 
 **Since:** 9
 
@@ -28,13 +28,15 @@ widget state is returned. (You can override this API as required.)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-FormExtensionAbility-onAcquireFormState?(want: Want): formInfo.FormState--><!--Device-FormExtensionAbility-onAcquireFormState?(want: Want): formInfo.FormState-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Description of the widget state, including the bundle name, ability name, module name, and widgetname. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Description of the widget state, including the bundle name, ability name, module name, and widget name. |
 
 **Return value:**
 
@@ -71,19 +73,21 @@ Called to notify the widget provider that a widget is being created.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-FormExtensionAbility-onAddForm(want: Want): formBindingData.FormBindingData--><!--Device-FormExtensionAbility-onAddForm(want: Want): formBindingData.FormBindingData-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information of the widget. You can set the **parameters** field to one or more valuesenumerated in [widget parameters](arkts-form-formparam-e.md), such as widget ID, widget name,and widget style. The information must be managed as persistent data to facilitate subsequent widget update anddeletion. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information of the widget. You can set the **parameters** field to one or more values enumerated in [widget parameters](arkts-form-formparam-e.md), such as widget ID, widget name,and widget style. The information must be managed as persistent data to facilitate subsequent widget update and deletion. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| formBindingData.FormBindingData | A **formBindingData.FormBindingData** object containing the data to bedisplayed on the widget. |
+| formBindingData.FormBindingData | A **formBindingData.FormBindingData** object containing the data to be displayed on the widget. |
 
 **Example**
 
@@ -112,17 +116,15 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 onCastToNormalForm(formId: string): void
 ```
 
-Called to notify the widget provider that a temporary widget has been converted to a normal one. Temporary widgets
-and normal widgets are concepts of the widget host. Temporary widgets have a brief existence, appearing following
-particular events or user interactions and vanishing automatically upon task completion. Normal widgets maintain a
-lasting presence, continuing to exist unless explicitly removed or altered by the user. Function widgets developed
-in normal cases are normal widgets. Currently, the widget host does not use temporary widgets.
+Called to notify the widget provider that a temporary widget has been converted to a normal one. Temporary widgets and normal widgets are concepts of the widget host. Temporary widgets have a brief existence, appearing following particular events or user interactions and vanishing automatically upon task completion. Normal widgets maintain a lasting presence, continuing to exist unless explicitly removed or altered by the user. Function widgets developed in normal cases are normal widgets. Currently, the widget host does not use temporary widgets.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-FormExtensionAbility-onCastToNormalForm(formId: string): void--><!--Device-FormExtensionAbility-onCastToNormalForm(formId: string): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -152,12 +154,13 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 onChangeFormVisibility(newStatus: Record<string, number>): void
 ```
 
-Called to notify the widget provider that the widget visibility status is being changed.
-This API is valid only for system applications when **formVisibleNotify** is set to **true**.
+Called to notify the widget provider that the widget visibility status is being changed.This API is valid only for system applications when **formVisibleNotify** is set to **true**.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FormExtensionAbility-onChangeFormVisibility(newStatus: Record<string, int>): void--><!--Device-FormExtensionAbility-onChangeFormVisibility(newStatus: Record<string, int>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -165,7 +168,7 @@ This API is valid only for system applications when **formVisibleNotify** is set
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newStatus | Record&lt;string, number&gt; | Yes | ID and visibility status of the widget to be changed.<br>**Since:** 11 |
+| newStatus | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, number> | Yes | ID and visibility status of the widget to be changed.<br>**Since:** 11 |
 
 **Example**
 
@@ -210,10 +213,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 onConfigurationUpdate(newConfig: Configuration): void
 ```
 
-Called when system configuration items change. The **onConfigurationUpdate** callback is triggered only when the
-FormExtensionAbility is alive. <!--Del-->Since API version 20, for system applications, the
-**onConfigurationUpdate** callback within the FormExtensionAbility will be triggered when the system language
-changes.<!--DelEnd-->
+Called when system configuration items change. The **onConfigurationUpdate** callback is triggered only when the FormExtensionAbility is alive. <!--Del-->Since API version 20, for system applications, the **onConfigurationUpdate** callback within the FormExtensionAbility will be triggered when the system language changes.<!--DelEnd-->
 
 **Since:** 9
 
@@ -221,13 +221,15 @@ changes.<!--DelEnd-->
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-FormExtensionAbility-onConfigurationUpdate(newConfig: Configuration): void--><!--Device-FormExtensionAbility-onConfigurationUpdate(newConfig: Configuration): void-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newConfig | Configuration | Yes | New configuration. |
+| newConfig | [Configuration](../../apis-arkui/arkts-components/arkts-arkui-configuration-i.md) | Yes | New configuration. |
 
 **Example**
 
@@ -258,6 +260,8 @@ Called to instruct the widget provider to process the widget event.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-FormExtensionAbility-onFormEvent(formId: string, message: string): void--><!--Device-FormExtensionAbility-onFormEvent(formId: string, message: string): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -294,6 +298,8 @@ Called when the widget location changes.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FormExtensionAbility-onFormLocationChanged(formId: string, newFormLocation: formInfo.FormLocation): void--><!--Device-FormExtensionAbility-onFormLocationChanged(formId: string, newFormLocation: formInfo.FormLocation): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -338,6 +344,8 @@ Called to notify the widget provider that a widget is being destroyed.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-FormExtensionAbility-onRemoveForm(formId: string): void--><!--Device-FormExtensionAbility-onRemoveForm(formId: string): void-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
@@ -372,6 +380,8 @@ Called when the widget size changes.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FormExtensionAbility-onSizeChanged(formId: string, newDimension: formInfo.FormDimension, newRect: formInfo.Rect): void--><!--Device-FormExtensionAbility-onSizeChanged(formId: string, newDimension: formInfo.FormDimension, newRect: formInfo.Rect): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -410,6 +420,8 @@ Called when the widget process of the widget provider exits.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FormExtensionAbility-onStop?(): void--><!--Device-FormExtensionAbility-onStop?(): void-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **Example**
@@ -431,16 +443,15 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 onUpdateForm(formId: string, wantParams?: Record<string, Object>): void
 ```
 
-Called to notify the widget provider that a widget is being updated, with update parameters carried. After
-obtaining the latest data, your application should call
-[updateForm](arkts-form-updateform-f.md#updateform-1)
-of **formProvider** to update the widget data.
+Called to notify the widget provider that a widget is being updated, with update parameters carried. After obtaining the latest data, your application should call [updateForm](arkts-form-updateform-f.md#updateform-1)of **formProvider** to update the widget data.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-FormExtensionAbility-onUpdateForm(formId: string, wantParams?: Record<string, Object>): void--><!--Device-FormExtensionAbility-onUpdateForm(formId: string, wantParams?: Record<string, Object>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -449,7 +460,7 @@ of **formProvider** to update the widget data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | ID of the widget that requests to be updated. |
-| wantParams | Record&lt;string, Object&gt; | No | Parameters used for the update. |
+| wantParams | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Object> | No | Parameters used for the update. |
 
 **Example**
 
@@ -482,8 +493,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 context: FormExtensionContext
 ```
 
-Context of the FormExtensionAbility. This context is inherited from
-[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
+Context of the FormExtensionAbility. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
 
 This API can be used in atomic services since API version 11.
 
@@ -494,6 +504,8 @@ This API can be used in atomic services since API version 11.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-FormExtensionAbility-context: FormExtensionContext--><!--Device-FormExtensionAbility-context: FormExtensionContext-End-->
 
 **System capability:** SystemCapability.Ability.Form
 

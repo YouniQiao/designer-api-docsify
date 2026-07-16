@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+<!--Device-abilityConnectionManager-enum DisconnectReason--><!--Device-abilityConnectionManager-enum DisconnectReason-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## PEER_APP_CLOSE_COLLABORATION
@@ -17,6 +19,8 @@ PEER_APP_CLOSE_COLLABORATION = 0
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DisconnectReason-PEER_APP_CLOSE_COLLABORATION = 0--><!--Device-DisconnectReason-PEER_APP_CLOSE_COLLABORATION = 0-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -32,6 +36,8 @@ PEER_APP_EXIT = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DisconnectReason-PEER_APP_EXIT = 1--><!--Device-DisconnectReason-PEER_APP_EXIT = 1-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## NETWORK_DISCONNECTED
@@ -45,6 +51,8 @@ NETWORK_DISCONNECTED = 2
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DisconnectReason-NETWORK_DISCONNECTED = 2--><!--Device-DisconnectReason-NETWORK_DISCONNECTED = 2-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 

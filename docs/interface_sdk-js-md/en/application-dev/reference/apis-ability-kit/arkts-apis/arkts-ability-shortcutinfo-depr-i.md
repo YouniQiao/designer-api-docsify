@@ -1,8 +1,8 @@
 # ShortcutInfo
 
-> **NOTE**
->
-> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use  
 > [bundleManager-ShortcutInfo](arkts-ability-shortcutinfo-depr-i.md) instead.
 
 **Since:** 7
@@ -10,6 +10,8 @@
 **Deprecated since:** 9
 
 **Substitutes:** [shortcutInfo:ShortcutInfo](arkts-ability-shortcutinfo-depr-i.md)
+
+<!--Device-unnamed-export interface ShortcutInfo--><!--Device-unnamed-export interface ShortcutInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -29,6 +31,8 @@ Name of the bundle that contains the shortcut.
 
 **Substitutes:** bundleName
 
+<!--Device-ShortcutInfo-readonly bundleName: string--><!--Device-ShortcutInfo-readonly bundleName: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## disableMessage
@@ -44,6 +48,8 @@ Message displayed when the shortcut is disabled.
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-ShortcutInfo-readonly disableMessage: string--><!--Device-ShortcutInfo-readonly disableMessage: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -63,6 +69,8 @@ Local ability information of the shortcut.
 
 **Substitutes:** hostAbility
 
+<!--Device-ShortcutInfo-readonly hostAbility: string--><!--Device-ShortcutInfo-readonly hostAbility: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## icon
@@ -80,6 +88,8 @@ Icon of the shortcut.
 **Deprecated since:** 9
 
 **Substitutes:** icon
+
+<!--Device-ShortcutInfo-readonly icon: string--><!--Device-ShortcutInfo-readonly icon: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -99,6 +109,8 @@ Icon ID of the shortcut.
 
 **Substitutes:** iconId
 
+<!--Device-ShortcutInfo-readonly iconId: number--><!--Device-ShortcutInfo-readonly iconId: number-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## id
@@ -116,6 +128,8 @@ ID of the application to which the shortcut belongs.
 **Deprecated since:** 9
 
 **Substitutes:** id
+
+<!--Device-ShortcutInfo-readonly id: string--><!--Device-ShortcutInfo-readonly id: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -137,6 +151,8 @@ Whether the shortcut is enabled. **true** if enabled, **false** otherwise.
 
 **Substitutes:** visible
 
+<!--Device-ShortcutInfo-readonly isEnabled?: boolean--><!--Device-ShortcutInfo-readonly isEnabled?: boolean-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## isHomeShortcut
@@ -156,6 +172,8 @@ Whether the shortcut is static. **true** if static, **false** otherwise.
 **Deprecated since:** 9
 
 **Substitutes:** sourceType
+
+<!--Device-ShortcutInfo-readonly isHomeShortcut?: boolean--><!--Device-ShortcutInfo-readonly isHomeShortcut?: boolean-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -177,6 +195,8 @@ Whether the shortcut is static. **true** if static, **false** otherwise.
 
 **Substitutes:** sourceType
 
+<!--Device-ShortcutInfo-readonly isStatic?: boolean--><!--Device-ShortcutInfo-readonly isStatic?: boolean-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## label
@@ -194,6 +214,8 @@ Name of the shortcut.
 **Deprecated since:** 9
 
 **Substitutes:** label
+
+<!--Device-ShortcutInfo-readonly label: string--><!--Device-ShortcutInfo-readonly label: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -213,6 +235,8 @@ Name ID of the shortcut.
 
 **Substitutes:** labelId
 
+<!--Device-ShortcutInfo-readonly labelId: number--><!--Device-ShortcutInfo-readonly labelId: number-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## wants
@@ -230,6 +254,8 @@ Want list for the shortcut.
 **Deprecated since:** 9
 
 **Substitutes:** wants
+
+<!--Device-ShortcutInfo-readonly wants: Array<ShortcutWant>--><!--Device-ShortcutInfo-readonly wants: Array<ShortcutWant>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 

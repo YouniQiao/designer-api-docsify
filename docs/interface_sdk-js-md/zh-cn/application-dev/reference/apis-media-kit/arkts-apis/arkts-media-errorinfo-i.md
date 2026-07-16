@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+<!--Device-unnamed-export interface ErrorInfo<T extends Error = BusinessError>--><!--Device-unnamed-export interface ErrorInfo<T extends Error = BusinessError>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 ## errorCode
@@ -17,6 +19,8 @@ errorCode: T
 **类型：** T
 
 **起始版本：** 20
+
+<!--Device-ErrorInfo-errorCode: T--><!--Device-ErrorInfo-errorCode: T-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -32,6 +36,8 @@ errorType?: ErrorType
 
 **起始版本：** 20
 
+<!--Device-ErrorInfo-errorType?: ErrorType--><!--Device-ErrorInfo-errorType?: ErrorType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 ## soundId
@@ -46,6 +52,8 @@ soundId?: number
 
 **起始版本：** 20
 
+<!--Device-ErrorInfo-soundId?: int--><!--Device-ErrorInfo-soundId?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 ## streamId
@@ -59,6 +67,8 @@ streamId?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-ErrorInfo-streamId?: int--><!--Device-ErrorInfo-streamId?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 

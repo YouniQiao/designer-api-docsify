@@ -10,6 +10,8 @@ Defines prefix icon option.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-unnamed-export interface ChipV2PrefixImageIconConfig extends ChipV2ImageIconConfig--><!--Device-unnamed-export interface ChipV2PrefixImageIconConfig extends ChipV2ImageIconConfig-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

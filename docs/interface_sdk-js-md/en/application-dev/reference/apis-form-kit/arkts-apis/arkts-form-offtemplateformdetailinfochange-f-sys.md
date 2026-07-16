@@ -12,14 +12,15 @@ import { formHost } from '@kit.FormKit';
 function offTemplateFormDetailInfoChange(callback?: formInfo.TemplateFormDetailInfoCallback): void
 ```
 
-Unsubscribes from changes in the static configuration information of template widgets. This API uses an
-asynchronous callback to return the result.
+Unsubscribes from changes in the static configuration information of template widgets. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-formHost-function offTemplateFormDetailInfoChange(callback?: formInfo.TemplateFormDetailInfoCallback): void--><!--Device-formHost-function offTemplateFormDetailInfoChange(callback?: formInfo.TemplateFormDetailInfoCallback): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -29,7 +30,7 @@ asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | formInfo.TemplateFormDetailInfoCallback | No | Callback function used to listen for changesin the static configuration information of template widgets. |
+| callback | formInfo.TemplateFormDetailInfoCallback | No | Callback function used to listen for changes in the static configuration information of template widgets. |
 
 **Error codes:**
 

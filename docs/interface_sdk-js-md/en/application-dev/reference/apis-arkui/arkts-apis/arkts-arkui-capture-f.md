@@ -14,9 +14,8 @@ function capture(options?: CaptureOption): Promise<image.PixelMap>
 
 Takes a screenshot of the entire screen. This API uses a promise to return the result.
 
-This API allows you to take screenshots of different screens by setting various **displayId** values, but only full
--screen captures are supported. The [pick](arkts-arkui-pick-f.md#pick-1) API allows you to take screenshots of a specified
-region.
+This API allows you to take screenshots of different screens by setting various **displayId** values, but only full  
+-screen captures are supported. The [pick](arkts-arkui-pick-f.md#pick-1) API allows you to take screenshots of a specified region.
 
 **Since:** 14
 
@@ -26,19 +25,21 @@ region.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-screenshot-function capture(options?: CaptureOption): Promise<image.PixelMap>--><!--Device-screenshot-function capture(options?: CaptureOption): Promise<image.PixelMap>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | CaptureOption | No | Capture options. If this parameter is left blank, the display with ID 0 iscaptured by default.<br>**Since:** 22 |
+| options | [CaptureOption](arkts-arkui-captureoption-i.md) | No | Capture options. If this parameter is left blank, the display with ID 0 is captured by default.<br>**Since:** 22 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return a PixelMap object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<image.PixelMap> | Promise used to return a PixelMap object. |
 
 **Error codes:**
 

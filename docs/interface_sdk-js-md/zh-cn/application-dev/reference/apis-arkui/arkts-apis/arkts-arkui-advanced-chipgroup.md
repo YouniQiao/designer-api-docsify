@@ -1,5 +1,11 @@
 # @ohos.arkui.advanced.ChipGroup
 
+## 导入模块
+
+```TypeScript
+import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixImageIconOptions, IconGroupSuffix, IconItemOptions, ChipItemStyle, ChipGroupItemOptions, ChipGroup, IconOptions } from '@kit.ArkUI';
+```
+
 ## 汇总
 
 ### 结构体
@@ -7,7 +13,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [ChipGroup](arkts-arkui-chipgroup-s.md) |  |
-| [IconGroupSuffix](arkts-arkui-icongroupsuffix-s.md) | @link SymbolGlyphAttribute#effectStrategy}设置动效。 |
+| [IconGroupSuffix](arkts-arkui-icongroupsuffix-s.md) |  |
 
 ### 接口
 

@@ -4,6 +4,8 @@ Represents the name of a holiday in different languages.
 
 **Since:** 11
 
+<!--Device-i18n-export interface HolidayLocalName--><!--Device-i18n-export interface HolidayLocalName-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Language, for example, **ar**, **en**, or **tr**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HolidayLocalName-language: string--><!--Device-HolidayLocalName-language: string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## name
@@ -41,6 +45,8 @@ Local name of a holiday. For example, the Turkish name of Sacrifice Feast is Kur
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HolidayLocalName-name: string--><!--Device-HolidayLocalName-name: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 

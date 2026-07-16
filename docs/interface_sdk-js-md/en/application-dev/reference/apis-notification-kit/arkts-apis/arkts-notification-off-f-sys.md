@@ -21,6 +21,14 @@ Unsubscribes from notification events.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
+<!--Device-notificationManager-function off(
+    type: 'checkNotification',
+    callback?: (checkInfo: NotificationCheckInfo) => NotificationCheckResult
+  ): void--><!--Device-notificationManager-function off(
+    type: 'checkNotification',
+    callback?: (checkInfo: NotificationCheckInfo) => NotificationCheckResult
+  ): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -30,7 +38,7 @@ Unsubscribes from notification events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'checkNotification' | Yes | Event type. The value is fixed to **'checkNotification'**. |
-| callback | (checkInfo: NotificationCheckInfo) =&gt; NotificationCheckResult | No | Pointer to the notification verification function. |
+| callback | (checkInfo: NotificationCheckInfo) => NotificationCheckResult | No | Pointer to the notification verification function. |
 
 **Error codes:**
 

@@ -10,6 +10,8 @@ Configuring parameters in location requests
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-export interface LocationRequest--><!--Device-geolocation-export interface LocationRequest-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## Modules to Import
@@ -32,6 +34,8 @@ distanceInterval?: number
 
 **Substitutes:** distanceInterval
 
+<!--Device-LocationRequest-distanceInterval?: number--><!--Device-LocationRequest-distanceInterval?: number-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## maxAccuracy
@@ -47,6 +51,8 @@ maxAccuracy?: number
 **Deprecated since:** 9
 
 **Substitutes:** maxAccuracy
+
+<!--Device-LocationRequest-maxAccuracy?: number--><!--Device-LocationRequest-maxAccuracy?: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -64,6 +70,8 @@ priority?: LocationRequestPriority
 
 **Substitutes:** priority
 
+<!--Device-LocationRequest-priority?: LocationRequestPriority--><!--Device-LocationRequest-priority?: LocationRequestPriority-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## scenario
@@ -80,6 +88,8 @@ scenario?: LocationRequestScenario
 
 **Substitutes:** scenario
 
+<!--Device-LocationRequest-scenario?: LocationRequestScenario--><!--Device-LocationRequest-scenario?: LocationRequestScenario-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## timeInterval
@@ -95,6 +105,8 @@ timeInterval?: number
 **Deprecated since:** 9
 
 **Substitutes:** timeInterval
+
+<!--Device-LocationRequest-timeInterval?: number--><!--Device-LocationRequest-timeInterval?: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 

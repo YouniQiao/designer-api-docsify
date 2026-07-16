@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-text-enum RectHeightStyle--><!--Device-text-enum RectHeightStyle-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## TIGHT
@@ -16,7 +18,9 @@ TIGHT = 0
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RectHeightStyle-TIGHT = 0--><!--Device-RectHeightStyle-TIGHT = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -30,7 +34,9 @@ MAX = 1
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RectHeightStyle-MAX = 1--><!--Device-RectHeightStyle-MAX = 1-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -44,7 +50,9 @@ INCLUDE_LINE_SPACE_MIDDLE = 2
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RectHeightStyle-INCLUDE_LINE_SPACE_MIDDLE = 2--><!--Device-RectHeightStyle-INCLUDE_LINE_SPACE_MIDDLE = 2-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -58,7 +66,9 @@ INCLUDE_LINE_SPACE_TOP = 3
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RectHeightStyle-INCLUDE_LINE_SPACE_TOP = 3--><!--Device-RectHeightStyle-INCLUDE_LINE_SPACE_TOP = 3-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -72,7 +82,9 @@ INCLUDE_LINE_SPACE_BOTTOM = 4
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RectHeightStyle-INCLUDE_LINE_SPACE_BOTTOM = 4--><!--Device-RectHeightStyle-INCLUDE_LINE_SPACE_BOTTOM = 4-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -86,7 +98,9 @@ STRUT = 5
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RectHeightStyle-STRUT = 5--><!--Device-RectHeightStyle-STRUT = 5-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

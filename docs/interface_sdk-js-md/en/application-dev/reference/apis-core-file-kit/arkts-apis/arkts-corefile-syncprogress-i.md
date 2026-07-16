@@ -4,6 +4,8 @@ Represents information about the device-cloud sync progress.
 
 **Since:** 12
 
+<!--Device-cloudSync-interface SyncProgress--><!--Device-cloudSync-interface SyncProgress-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Sync error.
 
 **Since:** 12
 
+<!--Device-SyncProgress-error: ErrorType--><!--Device-SyncProgress-error: ErrorType-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## state
@@ -37,6 +41,8 @@ Device-cloud sync state.
 **Type:** SyncState
 
 **Since:** 12
+
+<!--Device-SyncProgress-state: SyncState--><!--Device-SyncProgress-state: SyncState-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

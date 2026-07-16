@@ -20,13 +20,15 @@ Obtains the system time zone. This API uses an asynchronous callback to return t
 
 **Substitutes:** getTimezone(callback:
 
+<!--Device-systemTime-function getTimezone(callback: AsyncCallback<string>): void--><!--Device-systemTime-function getTimezone(callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the system time zone. For details, see[Supported System Time Zones](../../../../reference/apis-basic-services-kit/js-apis-system-time.md#supported-system-time-zones). |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the system time zone. For details, see [Supported System Time Zones](../../../../reference/apis-basic-services-kit/js-apis-system-time.md#supported-system-time-zones). |
 
 **Error codes:**
 
@@ -69,13 +71,15 @@ Obtains the system time zone. This API uses a promise to return the result.
 
 **Substitutes:** [getTimezone()](arkts-basicservices-gettimezone-f.md#gettimezone-2)
 
+<!--Device-systemTime-function getTimezone(): Promise<string>--><!--Device-systemTime-function getTimezone(): Promise<string>-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the system time zone. For details, see[Supported System Time Zones](../../../../reference/apis-basic-services-kit/js-apis-system-time.md#supported-system-time-zones). |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the system time zone. For details, see [Supported System Time Zones](../../../../reference/apis-basic-services-kit/js-apis-system-time.md#supported-system-time-zones). |
 
 **Error codes:**
 

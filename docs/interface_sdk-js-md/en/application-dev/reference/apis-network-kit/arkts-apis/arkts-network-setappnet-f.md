@@ -12,13 +12,13 @@ import { connection } from '@kit.NetworkKit';
 function setAppNet(netHandle: NetHandle, callback: AsyncCallback<void>): void
 ```
 
-Binds a process to {@code NetHandle}.
-<p>All the sockets created from the process will be bound to the {@code NetHandle},
-and the resolution of all host names will be managed by the {@code NetHandle}.</p>
+Binds a process to {@code NetHandle}.<p>All the sockets created from the process will be bound to the {@code NetHandle},and the resolution of all host names will be managed by the {@code NetHandle}.</p>
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-connection-function setAppNet(netHandle: NetHandle, callback: AsyncCallback<void>): void--><!--Device-connection-function setAppNet(netHandle: NetHandle, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -26,8 +26,8 @@ and the resolution of all host names will be managed by the {@code NetHandle}.</
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the handle. For details, see {@link NetHandle}. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of setAppNet. |
+| netHandle | [NetHandle](arkts-network-nethandle-i.md) | Yes | Indicates the handle. For details, see {@link NetHandle}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of setAppNet. |
 
 **Error codes:**
 
@@ -98,13 +98,13 @@ netCon.register((error: BusinessError) => {
 function setAppNet(netHandle: NetHandle): Promise<void>
 ```
 
-Binds a process to {@code NetHandle}.
-<p>All the sockets created from the process will be bound to the {@code NetHandle},
-and the resolution of all host names will be managed by the {@code NetHandle}.</p>
+Binds a process to {@code NetHandle}.<p>All the sockets created from the process will be bound to the {@code NetHandle},and the resolution of all host names will be managed by the {@code NetHandle}.</p>
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-connection-function setAppNet(netHandle: NetHandle): Promise<void>--><!--Device-connection-function setAppNet(netHandle: NetHandle): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -112,13 +112,13 @@ and the resolution of all host names will be managed by the {@code NetHandle}.</
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the handle. For details, see {@link NetHandle}. |
+| netHandle | [NetHandle](arkts-network-nethandle-i.md) | Yes | Indicates the handle. For details, see {@link NetHandle}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 

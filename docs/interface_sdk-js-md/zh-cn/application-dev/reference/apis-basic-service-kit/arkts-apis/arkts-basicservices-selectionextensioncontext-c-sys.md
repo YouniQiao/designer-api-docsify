@@ -1,21 +1,25 @@
 # SelectionExtensionContext（系统接口）
 
-SelectionExtensionContext是
-[SelectionExtensionAbility](arkts-basicservices-selectionextensionability-c-sys.md)的上下文，继承自
-[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。
-每个SelectionExtensionAbility组件实例化时，系统都会自动创建对应的SelectionExtensionContext。开发者可以通过SelectionExtensionContext拉起同应用内其他
-Ability。
+SelectionExtensionContext是[SelectionExtensionAbility](arkts-basicservices-selectionextensionability-c-sys.md)的上下文，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。每个SelectionExtensionAbility组件实例化时，系统都会自动创建对应的SelectionExtensionContext。开发者可以通过SelectionExtensionContext拉起同应用内其他Ability。
 
-> **说明：**
+> **说明：**  
 > - 本模块仅支持PC/2in1设备。
 
 **继承/实现关系：** SelectionExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **起始版本：** 24
 
+<!--Device-unnamed-declare class SelectionExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class SelectionExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { SelectionExtensionContext } from '@kit.BasicServicesKit';
+```
 
 ## startAbility
 
@@ -29,6 +33,8 @@ startAbility(want: Want): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SelectionExtensionContext-startAbility(want: Want): Promise<void>--><!--Device-SelectionExtensionContext-startAbility(want: Want): Promise<void>-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
@@ -37,13 +43,13 @@ startAbility(want: Want): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | Want | 是 | 想要被拉起的应用信息，包括Ability名称、Bundle名称等。 |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 想要被拉起的应用信息，包括Ability名称、Bundle名称等。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

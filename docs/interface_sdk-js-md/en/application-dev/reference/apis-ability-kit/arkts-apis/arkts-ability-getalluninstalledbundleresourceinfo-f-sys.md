@@ -12,12 +12,13 @@ import { bundleResourceManager } from '@kit.AbilityKit';
 function getAllUninstalledBundleResourceInfo(resourceFlags: number): Promise<Array<BundleResourceInfo>>
 ```
 
-Obtains the bundle resource information of all uninstalled applications that have retained data based on the given
-resource flags. This API uses a promise to return the result.
+Obtains the bundle resource information of all uninstalled applications that have retained data based on the given resource flags. This API uses a promise to return the result.
 
 **Since:** 21
 
 **Required permissions:** ohos.permission.GET_BUNDLE_RESOURCES
+
+<!--Device-bundleResourceManager-function getAllUninstalledBundleResourceInfo(resourceFlags: int): Promise<Array<BundleResourceInfo>>--><!--Device-bundleResourceManager-function getAllUninstalledBundleResourceInfo(resourceFlags: int): Promise<Array<BundleResourceInfo>>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -27,13 +28,13 @@ resource flags. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceFlags | number | Yes | Type of the resource information to obtain. For details, see[ResourceFlag](arkts-ability-resourceflag-e-sys.md). |
+| resourceFlags | number | Yes | Type of the resource information to obtain. For details, see [ResourceFlag](arkts-ability-resourceflag-e-sys.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleResourceInfo&gt;&gt; | Promise used to return the BundleResourceInfo array. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<BundleResourceInfo>> | Promise used to return the BundleResourceInfo array. |
 
 **Error codes:**
 

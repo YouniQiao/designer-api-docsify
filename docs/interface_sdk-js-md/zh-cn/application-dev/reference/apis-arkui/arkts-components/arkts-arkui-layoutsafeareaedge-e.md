@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare enum LayoutSafeAreaEdge--><!--Device-unnamed-declare enum LayoutSafeAreaEdge-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## TOP
@@ -18,7 +20,9 @@ TOP = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LayoutSafeAreaEdge-TOP = 0--><!--Device-LayoutSafeAreaEdge-TOP = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,7 +38,9 @@ BOTTOM = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LayoutSafeAreaEdge-BOTTOM = 1--><!--Device-LayoutSafeAreaEdge-BOTTOM = 1-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,7 +56,9 @@ START = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LayoutSafeAreaEdge-START = 2--><!--Device-LayoutSafeAreaEdge-START = 2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,7 +74,9 @@ END = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LayoutSafeAreaEdge-END = 3--><!--Device-LayoutSafeAreaEdge-END = 3-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,7 +92,9 @@ VERTICAL = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LayoutSafeAreaEdge-VERTICAL = 4--><!--Device-LayoutSafeAreaEdge-VERTICAL = 4-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,7 +110,9 @@ HORIZONTAL = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LayoutSafeAreaEdge-HORIZONTAL = 5--><!--Device-LayoutSafeAreaEdge-HORIZONTAL = 5-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -114,7 +128,9 @@ ALL = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LayoutSafeAreaEdge-ALL = 6--><!--Device-LayoutSafeAreaEdge-ALL = 6-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

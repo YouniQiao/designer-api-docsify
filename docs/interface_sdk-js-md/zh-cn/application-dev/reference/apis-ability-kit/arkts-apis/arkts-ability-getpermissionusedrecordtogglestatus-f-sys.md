@@ -1,5 +1,11 @@
 # getPermissionUsedRecordToggleStatus（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+```
+
 ## getPermissionUsedRecordToggleStatus
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getPermissionUsedRecordToggleStatus(): Promise<boolean>
 
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
+<!--Device-privacyManager-function getPermissionUsedRecordToggleStatus(): Promise<boolean>--><!--Device-privacyManager-function getPermissionUsedRecordToggleStatus(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function getPermissionUsedRecordToggleStatus(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回true，表示当前用户的开关状态值为开启。返回false，表示当前用户的开关状态值为关闭。 |
+| Promise<boolean> | Promise对象，返回true，表示当前用户的开关状态值为开启。返回false，表示当前用户的开关状态值为关闭。 |
 
 **错误码：**
 

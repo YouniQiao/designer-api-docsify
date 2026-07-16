@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+<!--Device-unnamed-export interface DistributedOptions--><!--Device-unnamed-export interface DistributedOptions-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## isDistributed
@@ -14,7 +16,7 @@ isDistributed?: boolean
 
 是否支持跨设备协同通知。默认为true。
 
-- true：支持跨设备协同通知。
+- true：支持跨设备协同通知。  
 - false：不支持跨设备协同通知。
 
 **类型：** boolean
@@ -22,6 +24,8 @@ isDistributed?: boolean
 **默认值：** true
 
 **起始版本：** 8
+
+<!--Device-DistributedOptions-isDistributed?: boolean--><!--Device-DistributedOptions-isDistributed?: boolean-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -37,6 +41,8 @@ supportDisplayDevices?: Array<string>
 
 **起始版本：** 8
 
+<!--Device-DistributedOptions-supportDisplayDevices?: Array<string>--><!--Device-DistributedOptions-supportDisplayDevices?: Array<string>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## supportOperateDevices
@@ -50,6 +56,8 @@ supportOperateDevices?: Array<string>
 **类型：** Array<string>
 
 **起始版本：** 8
+
+<!--Device-DistributedOptions-supportOperateDevices?: Array<string>--><!--Device-DistributedOptions-supportOperateDevices?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

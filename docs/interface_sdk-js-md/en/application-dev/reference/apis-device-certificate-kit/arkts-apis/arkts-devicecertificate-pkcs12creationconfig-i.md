@@ -4,6 +4,8 @@ Represents the configuration for creating .p12 files.
 
 **Since:** 21
 
+<!--Device-cert-interface Pkcs12CreationConfig--><!--Device-cert-interface Pkcs12CreationConfig-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Algorithm parameters for encrypting the certificate.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-Pkcs12CreationConfig-certEncParams?: PbesParams--><!--Device-Pkcs12CreationConfig-certEncParams?: PbesParams-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## encryptCert
@@ -34,8 +38,7 @@ Algorithm parameters for encrypting the certificate.
 encryptCert?: boolean
 ```
 
-Whether to encrypt the certificate. The default value is **true**. **true** means to encrypt the certificate;
-**false** otherwise.
+Whether to encrypt the certificate. The default value is **true**. **true** means to encrypt the certificate;**false** otherwise.
 
 **Type:** boolean
 
@@ -44,6 +47,8 @@ Whether to encrypt the certificate. The default value is **true**. **true** mean
 **Since:** 21
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-Pkcs12CreationConfig-encryptCert?: boolean--><!--Device-Pkcs12CreationConfig-encryptCert?: boolean-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -60,6 +65,8 @@ Algorithm parameters for encrypting the private key.
 **Since:** 21
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-Pkcs12CreationConfig-keyEncParams?: PbesParams--><!--Device-Pkcs12CreationConfig-keyEncParams?: PbesParams-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -79,6 +86,8 @@ MAC digest algorithm for the P12. The default value is **SHA256**.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-Pkcs12CreationConfig-macDigestAlgorithm?: Pkcs12MacDigestAlgorithm--><!--Device-Pkcs12CreationConfig-macDigestAlgorithm?: Pkcs12MacDigestAlgorithm-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## macIterations
@@ -87,8 +96,7 @@ MAC digest algorithm for the P12. The default value is **SHA256**.
 macIterations?: number
 ```
 
-Number of P12 MAC iterations. The default value is **2048**.
-The value must be a positive integer.
+Number of P12 MAC iterations. The default value is **2048**.The value must be a positive integer.
 
 **Type:** number
 
@@ -98,6 +106,8 @@ The value must be a positive integer.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-Pkcs12CreationConfig-macIterations?: int--><!--Device-Pkcs12CreationConfig-macIterations?: int-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## macSaltLen
@@ -106,8 +116,7 @@ The value must be a positive integer.
 macSaltLen?: number
 ```
 
-Length of the salt value of the P12 MAC. The minimum value is **8**, and the default value is **16**.
-The value must be an integer greater than or equal to 8.
+Length of the salt value of the P12 MAC. The minimum value is **8**, and the default value is **16**.The value must be an integer greater than or equal to 8.
 
 **Type:** number
 
@@ -116,6 +125,8 @@ The value must be an integer greater than or equal to 8.
 **Since:** 21
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-Pkcs12CreationConfig-macSaltLen?: int--><!--Device-Pkcs12CreationConfig-macSaltLen?: int-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -132,6 +143,8 @@ Password of the .p12 file. The minimum length is 4.
 **Since:** 21
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-Pkcs12CreationConfig-password: string--><!--Device-Pkcs12CreationConfig-password: string-End-->
 
 **System capability:** SystemCapability.Security.Cert
 

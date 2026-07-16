@@ -4,6 +4,8 @@ Describes the event received by the application when the volume is changed.
 
 **Since:** 9
 
+<!--Device-audio-interface VolumeEvent--><!--Device-audio-interface VolumeEvent-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Device network id
 
 **Since:** 9
 
+<!--Device-VolumeEvent-networkId: string--><!--Device-VolumeEvent-networkId: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -40,6 +44,8 @@ Volume percentage, which is an integer ranging from [0, 100].
 
 **Since:** 23
 
+<!--Device-VolumeEvent-percentage?: int--><!--Device-VolumeEvent-percentage?: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -55,6 +61,8 @@ volumeGroup id
 **Type:** number
 
 **Since:** 9
+
+<!--Device-VolumeEvent-volumeGroupId: int--><!--Device-VolumeEvent-volumeGroupId: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 

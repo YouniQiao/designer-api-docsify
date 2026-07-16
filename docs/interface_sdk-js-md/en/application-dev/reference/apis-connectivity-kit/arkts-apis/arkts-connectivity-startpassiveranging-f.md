@@ -14,8 +14,7 @@ function startPassiveRanging(capabilityType: RangingTypes): Promise<number>
 
 Starts passive ranging mode.
 
-Upon successful startup, returns a handle identifier for the passive ranging session
-and begins broadcasting ranging packets.
+Upon successful startup, returns a handle identifier for the passive ranging session and begins broadcasting ranging packets.
 
 The returned handle can be used to stop the passive ranging broadcast via stopPassiveRanging.
 
@@ -25,19 +24,21 @@ The returned handle can be used to stop the passive ranging broadcast via stopPa
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ranging-function startPassiveRanging(capabilityType: RangingTypes): Promise<int>--><!--Device-ranging-function startPassiveRanging(capabilityType: RangingTypes): Promise<int>-End-->
+
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| capabilityType | RangingTypes | Yes | Indicates the capability type for ranging. |
+| capabilityType | [RangingTypes](arkts-connectivity-rangingtypes-e.md) | Yes | Indicates the capability type for ranging. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the handle for starts ranging listening. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the handle for starts ranging listening. |
 
 **Error codes:**
 

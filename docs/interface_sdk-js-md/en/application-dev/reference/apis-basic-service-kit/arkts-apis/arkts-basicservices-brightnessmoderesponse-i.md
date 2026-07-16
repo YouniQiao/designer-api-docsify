@@ -6,6 +6,8 @@ Defines a response that returns the screen brightness mode.
 
 **Deprecated since:** 7
 
+<!--Device-unnamed-export interface BrightnessModeResponse--><!--Device-unnamed-export interface BrightnessModeResponse-End-->
+
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 ## Modules to Import
@@ -27,6 +29,8 @@ The value **0** indicates the manual adjustment mode, and the value **1** indica
 **Since:** 3
 
 **Deprecated since:** 7
+
+<!--Device-BrightnessModeResponse-mode: number--><!--Device-BrightnessModeResponse-mode: number-End-->
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 

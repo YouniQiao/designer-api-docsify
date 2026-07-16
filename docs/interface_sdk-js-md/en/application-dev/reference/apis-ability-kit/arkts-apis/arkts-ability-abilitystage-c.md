@@ -1,21 +1,14 @@
 # AbilityStage
 
-AbilityStage is a [module](../../../../quick-start/application-package-overview.md#multi-module-design-mechanism)-level
-component manager. It is used for initializing operations such as resource preloading and thread creation at the
-module level, as well as maintaining the application state under the module. An AbilityStage instance corresponds to
-a module.
+AbilityStage is a [module](../../../../quick-start/application-package-overview.md#multi-module-design-mechanism)-level component manager. It is used for initializing operations such as resource preloading and thread creation at the module level, as well as maintaining the application state under the module. An AbilityStage instance corresponds to a module.
 
-When the [HAP](../../../../quick-start/hap-package.md) or [HSP](../../../../quick-start/in-app-hsp.md) of an application
-is first loaded, an AbilityStage instance is created. If a module contains both AbilityStage and other components (
-like UIAbility or ExtensionAbility), the AbilityStage instance is created before the other component instances.
+When the [HAP](../../../../quick-start/hap-package.md) or [HSP](../../../../quick-start/in-app-hsp.md) of an application is first loaded, an AbilityStage instance is created. If a module contains both AbilityStage and other components (like UIAbility or ExtensionAbility), the AbilityStage instance is created before the other component instances.
 
-An AbilityStage has the lifecycle callbacks [onCreate()](arkts-ability-abilitystage-c.md#oncreate-1) and
-[onDestroy()](arkts-ability-abilitystage-c.md#ondestroy-1), and the event callbacks
-[onAcceptWant()](arkts-ability-abilitystage-c.md#onacceptwant-1),
-[onConfigurationUpdate()](arkts-ability-abilitystage-c.md#onconfigurationupdate-1), and
-[onMemoryLevel()](arkts-ability-abilitystage-c.md#onmemorylevel-1).
+An AbilityStage has the lifecycle callbacks [onCreate()](arkts-ability-abilitystage-c.md#oncreate-1) and [onDestroy()](arkts-ability-abilitystage-c.md#ondestroy-1), and the event callbacks [onAcceptWant()](arkts-ability-abilitystage-c.md#onacceptwant-1),[onConfigurationUpdate()](arkts-ability-abilitystage-c.md#onconfigurationupdate-1), and [onMemoryLevel()](arkts-ability-abilitystage-c.md#onmemorylevel-1).
 
 **Since:** 9
+
+<!--Device-unnamed-declare class AbilityStage--><!--Device-unnamed-declare class AbilityStage-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -31,13 +24,13 @@ import { AbilityStage } from '@kit.AbilityKit';
 onAboutToCreateAbility(): void
 ```
 
-Called when the ability stage is about to create the first ability.
-If both this method and {@link onAboutToCreateAbilityAsync} are overridden,
-only {@link onAboutToCreateAbilityAsync} takes effect.
+Called when the ability stage is about to create the first ability.If both this method and {@link onAboutToCreateAbilityAsync} are overridden,only {@link onAboutToCreateAbilityAsync} takes effect.
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AbilityStage-onAboutToCreateAbility(): void--><!--Device-AbilityStage-onAboutToCreateAbility(): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -47,13 +40,13 @@ only {@link onAboutToCreateAbilityAsync} takes effect.
 onAboutToCreateAbilityAsync(): Promise<void>
 ```
 
-Called when the ability stage is about to create the first ability. This API uses a promise to return the result.
-Subsequent lifecycle callbacks will be suspended until the returned Promise is resolved.
-If both {@link onAboutToCreateAbility} and this method are overridden, only this method takes effect.
+Called when the ability stage is about to create the first ability. This API uses a promise to return the result.Subsequent lifecycle callbacks will be suspended until the returned Promise is resolved.If both {@link onAboutToCreateAbility} and this method are overridden, only this method takes effect.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AbilityStage-onAboutToCreateAbilityAsync(): Promise<void>--><!--Device-AbilityStage-onAboutToCreateAbilityAsync(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -61,7 +54,7 @@ If both {@link onAboutToCreateAbility} and this method are overridden, only this
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## onAcceptWant
 
@@ -69,17 +62,13 @@ If both {@link onAboutToCreateAbility} and this method are overridden, only this
 onAcceptWant(want: Want): string
 ```
 
-Called when a UIAbility with the launch mode set to
-[specified](../../../../application-models/uiability-launch-type.md#specified) is launched. This API returns a string
-representing the unique ID of the UIAbility instance. This API returns the result synchronously and does not
-support asynchronous callbacks.
+Called when a UIAbility with the launch mode set to [specified](../../../../application-models/uiability-launch-type.md#specified) is launched. This API returns a string representing the unique ID of the UIAbility instance. This API returns the result synchronously and does not support asynchronous callbacks.
 
-If a UIAbility instance with the same ID already exists in the system, that instance is reused. Otherwise, a new
-instance is created.
+If a UIAbility instance with the same ID already exists in the system, that instance is reused. Otherwise, a new instance is created.
 
-> **NOTE**
->
-> Starting from API version 20, this callback is not triggered when
+> **NOTE**  
+>  
+> Starting from API version 20, this callback is not triggered when  
 > [AbilityStage.onAcceptWantAsync](arkts-ability-abilitystage-c.md#onacceptwantasync-1) is implemented.
 
 **Since:** 9
@@ -88,19 +77,21 @@ instance is created.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AbilityStage-onAcceptWant(want: Want): string--><!--Device-AbilityStage-onAcceptWant(want: Want): string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want type parameter that includes the launch parameters provided by the caller, such as theability name and bundle name. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want type parameter that includes the launch parameters provided by the caller, such as the ability name and bundle name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | ID of the UIAbility. If a UIAbility with the same ID has been launched, that UIAbility isreused. Otherwise, a new instance is created and launched. |
+| string | ID of the UIAbility. If a UIAbility with the same ID has been launched, that UIAbility is reused. Otherwise, a new instance is created and launched. |
 
 **Example**
 
@@ -122,12 +113,9 @@ export default class MyAbilityStage extends AbilityStage {
 onAcceptWantAsync(want: Want): Promise<string>
 ```
 
-Called when a UIAbility with the launch mode set to
-[specified](../../../../application-models/uiability-launch-type.md#specified) is launched. This API returns a string
-representing the unique ID of the UIAbility instance. This API uses a promise to return the result.
+Called when a UIAbility with the launch mode set to [specified](../../../../application-models/uiability-launch-type.md#specified) is launched. This API returns a string representing the unique ID of the UIAbility instance. This API uses a promise to return the result.
 
-If a UIAbility instance with the same ID already exists in the system, that instance is reused. Otherwise, a new
-instance is created.
+If a UIAbility instance with the same ID already exists in the system, that instance is reused. Otherwise, a new instance is created.
 
 **Since:** 20
 
@@ -135,19 +123,21 @@ instance is created.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-AbilityStage-onAcceptWantAsync(want: Want): Promise<string>--><!--Device-AbilityStage-onAcceptWantAsync(want: Want): Promise<string>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information about the target UIAbility, such as the UIAbility name and bundle name. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information about the target UIAbility, such as the UIAbility name and bundle name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return a string that uniquely identifies the UIAbility instancelaunched. If a UIAbility instance with the same ID already exists in the system, that instance is reused.Otherwise, a new instance is created. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return a string that uniquely identifies the UIAbility instance launched. If a UIAbility instance with the same ID already exists in the system, that instance is reused.Otherwise, a new instance is created. |
 
 **Example**
 
@@ -171,15 +161,13 @@ class MyAbilityStage extends AbilityStage {
 onConfigurationUpdate(newConfig: Configuration): void
 ```
 
-Called when the system global configuration (such as the system language and dark/light color mode) changes. All
-the configuration items are defined in the [Configuration](arkts-ability-configuration-i.md)
-class. This API returns the result synchronously and does not support asynchronous callbacks.
+Called when the system global configuration (such as the system language and dark/light color mode) changes. All the configuration items are defined in the [Configuration](arkts-ability-configuration-i.md)class. This API returns the result synchronously and does not support asynchronous callbacks.
 
-> **NOTE**
->
-> There are certain restrictions when this callback is actually triggered. For example, if you set the application
-> language by calling [setLanguage](arkts-ability-applicationcontext-c.md#setlanguage-1), the
-> system does not trigger the **onConfigurationUpdate** callback even if the system language changes. For details,
+> **NOTE**  
+>  
+> There are certain restrictions when this callback is actually triggered. For example, if you set the application  
+> language by calling [setLanguage](arkts-ability-applicationcontext-c.md#setlanguage-1), the  
+> system does not trigger the **onConfigurationUpdate** callback even if the system language changes. For details,  
 > see [When to Use](../../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
 
 **Since:** 9
@@ -188,13 +176,15 @@ class. This API returns the result synchronously and does not support asynchrono
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AbilityStage-onConfigurationUpdate(newConfig: Configuration): void--><!--Device-AbilityStage-onConfigurationUpdate(newConfig: Configuration): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newConfig | Configuration | Yes | Callback invoked when the global configuration is updated. The globalconfiguration indicates the configuration of the environment where the application is running and includes thelanguage and color mode. |
+| newConfig | [Configuration](../../apis-arkui/arkts-components/arkts-arkui-configuration-i.md) | Yes | Callback invoked when the global configuration is updated. The global configuration indicates the configuration of the environment where the application is running and includes the language and color mode. |
 
 **Example**
 
@@ -215,17 +205,17 @@ export default class MyAbilityStage extends AbilityStage {
 onCreate(): void
 ```
 
-Called when an AbilityStage instance is created. Such an instance is automatically created by the system before it
-loads the first Ability instance of the module.
+Called when an AbilityStage instance is created. Such an instance is automatically created by the system before it loads the first Ability instance of the module.
 
-You can initialize the module (for example, preload resources or create threads) in this callback. This API returns
-the result synchronously and does not support asynchronous callbacks.
+You can initialize the module (for example, preload resources or create threads) in this callback. This API returns the result synchronously and does not support asynchronous callbacks.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityStage-onCreate(): void--><!--Device-AbilityStage-onCreate(): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -248,15 +238,15 @@ export default class MyAbilityStage extends AbilityStage {
 onDestroy(): void
 ```
 
-Called when the last Ability instance of the corresponding module exits. This API is called during the normal
-lifecycle. If the application exits abnormally or is terminated, this API is not called. This API returns the
-result synchronously and does not support asynchronous callbacks.
+Called when the last Ability instance of the corresponding module exits. This API is called during the normal lifecycle. If the application exits abnormally or is terminated, this API is not called. This API returns the result synchronously and does not support asynchronous callbacks.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AbilityStage-onDestroy(): void--><!--Device-AbilityStage-onDestroy(): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -285,6 +275,8 @@ Called when the process is launched from HyperSnap.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AbilityStage-onLaunchFromHyperSnap(): void--><!--Device-AbilityStage-onLaunchFromHyperSnap(): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## onMemoryLevel
@@ -293,16 +285,13 @@ Called when the process is launched from HyperSnap.
 onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 ```
 
-Listens for changes in the system memory level status. Called when the available memory of the entire device
-changes to a specified level. You can implement this callback to promptly release non-essential resources (such as
-cached data or temporary objects) upon receiving a memory shortage event, thereby preventing the application
-process from being forcibly terminated by the system.
+Listens for changes in the system memory level status. Called when the available memory of the entire device changes to a specified level. You can implement this callback to promptly release non-essential resources (such as cached data or temporary objects) upon receiving a memory shortage event, thereby preventing the application process from being forcibly terminated by the system.
 
 This API returns the result synchronously and does not support asynchronous callbacks.
 
-> **NOTE**
->
-> Releasing UI components in the **onMemoryLevel** callback may block the main thread tasks of the current process.
+> **NOTE**  
+>  
+> Releasing UI components in the **onMemoryLevel** callback may block the main thread tasks of the current process.  
 > Therefore, you are advised not to release UI components in this callback.
 
 **Since:** 9
@@ -311,13 +300,15 @@ This API returns the result synchronously and does not support asynchronous call
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AbilityStage-onMemoryLevel(level: AbilityConstant.MemoryLevel): void--><!--Device-AbilityStage-onMemoryLevel(level: AbilityConstant.MemoryLevel): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | AbilityConstant.MemoryLevel | Yes | Memory level that indicates the memory usage status. When thespecified memory level is reached, a callback will be invoked and the system will start adjustment.<br>**NOTE**<br>The trigger conditions may differ across various devices. For example, on a standard device with 12 GB ofmemory:<br>- A callback with value 0 is triggered when available memory drops between 1700 MB and 1800 MB.<br>-A callback with value 1 is triggered when available memory drops between 1600 MB and 1700 MB.<br>- A callbackwith value 2 is triggered when available memory falls below 1600 MB. |
+| level | AbilityConstant.MemoryLevel | Yes | Memory level that indicates the memory usage status. When the specified memory level is reached, a callback will be invoked and the system will start adjustment.<br>**NOTE**<br>The trigger conditions may differ across various devices. For example, on a standard device with 12 GB of memory:<br>- A callback with value 0 is triggered when available memory drops between 1700 MB and 1800 MB.<br>-A callback with value 1 is triggered when available memory drops between 1600 MB and 1700 MB.<br>- A callback with value 2 is triggered when available memory falls below 1600 MB. |
 
 **Example**
 
@@ -338,37 +329,32 @@ export default class MyAbilityStage extends AbilityStage {
 onNewProcessRequest(want: Want): string
 ```
 
-Called when a UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd-->, which is configured to run in an independent
-process (with **isolationProcess** set to **true** in the
-[module.json5](../../../../quick-start/module-configuration-file.md) file), is launched. This API returns a string
-representing the unique process ID. This API returns the result synchronously and does not support asynchronous
-callbacks.
+Called when a UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd-->, which is configured to run in an independent process (with **isolationProcess** set to **true** in the [module.json5](../../../../quick-start/module-configuration-file.md) file), is launched. This API returns a string representing the unique process ID. This API returns the result synchronously and does not support asynchronous callbacks.
 
-If the application already has a process with the same ID, the UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd-
+If the application already has a process with the same ID, the UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd-  
 -> runs in that process. Otherwise, a new process is created.
 
-If you implement both **onNewProcessRequest** and [onAcceptWant](arkts-ability-abilitystage-c.md#onacceptwant-1), the system first
-invokes the **onNewProcessRequest** callback, and then the **onAcceptWant** callback.
+If you implement both **onNewProcessRequest** and [onAcceptWant](arkts-ability-abilitystage-c.md#onacceptwant-1), the system first invokes the **onNewProcessRequest** callback, and then the **onAcceptWant** callback.
 
 <!--Del-->
 
-The **isolationProcess** field can be set to **true** in the
-[module.json5](../../../../quick-start/module-configuration-file.md) file, but only for the UIExtensionAbility of the
-sys/commonUI type.
+The **isolationProcess** field can be set to **true** in the [module.json5](../../../../quick-start/module-configuration-file.md) file, but only for the UIExtensionAbility of the sys/commonUI type.
 
 <!--DelEnd-->
 
-> **NOTE**
->
-> - In API version 19 and earlier, only a UIAbility can be launched in the specified process. <!--Del-->Starting
-> from API version 20, a UIExtensionAbility can also be launched in the specified process.<!--DelEnd-->
->
-> - Starting from API version 20, this callback is not executed when
+> **NOTE**  
+>  
+> - In API version 19 and earlier, only a UIAbility can be launched in the specified process. <!--Del-->Starting  
+> from API version 20, a UIExtensionAbility can also be launched in the specified process.<!--DelEnd-->  
+>  
+> - Starting from API version 20, this callback is not executed when  
 > [AbilityStage.onNewProcessRequestAsync](arkts-ability-abilitystage-c.md#onnewprocessrequestasync-1) is implemented.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AbilityStage-onNewProcessRequest(want: Want): string--><!--Device-AbilityStage-onNewProcessRequest(want: Want): string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -376,13 +362,13 @@ sys/commonUI type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want type parameter that includes the launch parameters provided by the caller, such as theUIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd--&gt; name and bundle name. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want type parameter that includes the launch parameters provided by the caller, such as the UIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd--&gt; name and bundle name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Custom process identifier. If the process with this identifier has been created, the abilityruns in the process. Otherwise, a new process is created and the ability runs in it. |
+| string | Custom process identifier. If the process with this identifier has been created, the ability runs in the process. Otherwise, a new process is created and the ability runs in it. |
 
 **Example**
 
@@ -404,19 +390,14 @@ export default class MyAbilityStage extends AbilityStage {
 onNewProcessRequestAsync(want: Want): Promise<string>
 ```
 
-Called when a UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd-->, which is configured to run in an independent
-process (with **isolationProcess** set to **true** in the
-[module.json5](../../../../quick-start/module-configuration-file.md) file), is launched. This API returns a string
-representing the unique process ID. This API uses a promise to return the result.
+Called when a UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd-->, which is configured to run in an independent process (with **isolationProcess** set to **true** in the [module.json5](../../../../quick-start/module-configuration-file.md) file), is launched. This API returns a string representing the unique process ID. This API uses a promise to return the result.
 
-If the application already has a process with the same ID, the UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd-
+If the application already has a process with the same ID, the UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd-  
 -> runs in that process. Otherwise, a new process is created.
 
 <!--Del-->
 
-The **isolationProcess** field can be set to **true** in the
-[module.json5](../../../../quick-start/module-configuration-file.md) file, but only for the UIExtensionAbility of the
-sys/commonUI type.
+The **isolationProcess** field can be set to **true** in the [module.json5](../../../../quick-start/module-configuration-file.md) file, but only for the UIExtensionAbility of the sys/commonUI type.
 
 <!--DelEnd-->
 
@@ -426,19 +407,21 @@ sys/commonUI type.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-AbilityStage-onNewProcessRequestAsync(want: Want): Promise<string>--><!--Device-AbilityStage-onNewProcessRequestAsync(want: Want): Promise<string>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want type parameter that includes the launch parameters provided by the caller, such as theUIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd--&gt; name and bundle name. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want type parameter that includes the launch parameters provided by the caller, such as the UIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd--&gt; name and bundle name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return a string representing the process ID. If the applicationalready has a process with the same ID, the UIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd--&gt; runs in thatprocess. Otherwise, a new process is created. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return a string representing the process ID. If the application already has a process with the same ID, the UIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd--&gt; runs in that process. Otherwise, a new process is created. |
 
 **Example**
 
@@ -462,16 +445,15 @@ class MyAbilityStage extends AbilityStage {
 onPrepareTermination(): AbilityConstant.PrepareTermination
 ```
 
-Called when the application is closed by the user, allowing the user to choose between immediate termination or
-cancellation. This API returns the result synchronously and does not support asynchronous callbacks.
+Called when the application is closed by the user, allowing the user to choose between immediate termination or cancellation. This API returns the result synchronously and does not support asynchronous callbacks.
 
-> **NOTE**
->
-> - The API is called only when the application exits under normal circumstances (for example, when the application
-> is closed through the doc bar or tray, or when the application shuts down along with the device). It will not be
-> called if the application is terminated forcibly.
->
-> - This API is not executed when
+> **NOTE**  
+>  
+> - The API is called only when the application exits under normal circumstances (for example, when the application  
+> is closed through the doc bar or tray, or when the application shuts down along with the device). It will not be  
+> called if the application is terminated forcibly.  
+>  
+> - This API is not executed when  
 > [AbilityStage.onPrepareTerminationAsync](arkts-ability-abilitystage-c.md#onprepareterminationasync-1) is implemented.
 
 **Since:** 15
@@ -481,6 +463,8 @@ cancellation. This API returns the result synchronously and does not support asy
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-AbilityStage-onPrepareTermination(): AbilityConstant.PrepareTermination--><!--Device-AbilityStage-onPrepareTermination(): AbilityConstant.PrepareTermination-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -510,16 +494,15 @@ export default class MyAbilityStage extends AbilityStage {
 onPrepareTerminationAsync(): Promise<AbilityConstant.PrepareTermination>
 ```
 
-Called when the application is closed by the user, allowing the user to choose between immediate termination or
-cancellation. This API uses a promise to return the result.
+Called when the application is closed by the user, allowing the user to choose between immediate termination or cancellation. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - The API is called only when the application exits under normal circumstances (for example, when the application
-> is closed through the doc bar or tray, or when the application shuts down along with the device). It will not be
-> called if the application is terminated forcibly.
->
-> - If an asynchronous callback crashes, it will be handled as a timeout. If the application does not respond
+> **NOTE**  
+>  
+> - The API is called only when the application exits under normal circumstances (for example, when the application  
+> is closed through the doc bar or tray, or when the application shuts down along with the device). It will not be  
+> called if the application is terminated forcibly.  
+>  
+> - If an asynchronous callback crashes, it will be handled as a timeout. If the application does not respond  
 > within 10 seconds, it will be terminated forcibly.
 
 **Since:** 15
@@ -530,13 +513,15 @@ cancellation. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-AbilityStage-onPrepareTerminationAsync(): Promise<AbilityConstant.PrepareTermination>--><!--Device-AbilityStage-onPrepareTerminationAsync(): Promise<AbilityConstant.PrepareTermination>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AbilityConstant.PrepareTermination&gt; | Promise used to return the user's choice. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AbilityConstant.PrepareTermination> | Promise used to return the user's choice. |
 
 **Example**
 
@@ -569,6 +554,8 @@ Context of an AbilityStage.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityStage-context: AbilityStageContext--><!--Device-AbilityStage-context: AbilityStageContext-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

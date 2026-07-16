@@ -4,6 +4,8 @@ Defines the Web resource request.
 
 **Since:** 8
 
+<!--Device-unnamed-declare class WebResourceRequest--><!--Device-unnamed-declare class WebResourceRequest-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## constructor
@@ -17,6 +19,8 @@ Constructor.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebResourceRequest-constructor()--><!--Device-WebResourceRequest-constructor()-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,13 +36,15 @@ Gets request headers.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebResourceRequest-getRequestHeader(): Array<Header>--><!--Device-WebResourceRequest-getRequestHeader(): Array<Header>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Header&gt; | Return the request headers |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Header> | Return the request headers |
 
 ## getRequestMethod
 
@@ -51,6 +57,8 @@ Get request method.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebResourceRequest-getRequestMethod(): string--><!--Device-WebResourceRequest-getRequestMethod(): string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -72,6 +80,8 @@ Gets the request URL.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebResourceRequest-getRequestUrl(): string--><!--Device-WebResourceRequest-getRequestUrl(): string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -91,6 +101,8 @@ Check whether the request is for getting the main frame.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebResourceRequest-isMainFrame(): boolean--><!--Device-WebResourceRequest-isMainFrame(): boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -112,6 +124,8 @@ Check whether the request redirects.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebResourceRequest-isRedirect(): boolean--><!--Device-WebResourceRequest-isRedirect(): boolean-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -131,6 +145,8 @@ Check whether the request is associated with gesture.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebResourceRequest-isRequestGesture(): boolean--><!--Device-WebResourceRequest-isRequestGesture(): boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

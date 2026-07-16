@@ -12,6 +12,8 @@ Defines the PositionT type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-unnamed-declare type PositionT<T> = import('../api/arkui/Graphics').PositionT<T>--><!--Device-unnamed-declare type PositionT<T> = import('../api/arkui/Graphics').PositionT<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** import('../api/arkui/Graphics').PositionT<T>

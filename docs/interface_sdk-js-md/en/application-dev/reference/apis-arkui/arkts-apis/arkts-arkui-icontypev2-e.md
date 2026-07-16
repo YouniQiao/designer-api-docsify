@@ -4,6 +4,8 @@ Declare enum IconTypeV2
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare enum IconTypeV2--><!--Device-unnamed-export declare enum IconTypeV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BADGE
@@ -19,6 +21,8 @@ Badge type.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-IconTypeV2-BADGE = 1--><!--Device-IconTypeV2-BADGE = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ Normal icon type.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-IconTypeV2-NORMAL_ICON = 2--><!--Device-IconTypeV2-NORMAL_ICON = 2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SYSTEM_ICON
@@ -51,6 +57,8 @@ System icon type.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-IconTypeV2-SYSTEM_ICON = 3--><!--Device-IconTypeV2-SYSTEM_ICON = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +76,8 @@ HeadSculpture type.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-IconTypeV2-HEAD_SCULPTURE = 4--><!--Device-IconTypeV2-HEAD_SCULPTURE = 4-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## APP_ICON
@@ -83,6 +93,8 @@ App icon type.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-IconTypeV2-APP_ICON = 5--><!--Device-IconTypeV2-APP_ICON = 5-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +112,8 @@ Preview type.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-IconTypeV2-PREVIEW = 6--><!--Device-IconTypeV2-PREVIEW = 6-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## LONGITUDINAL
@@ -116,6 +130,8 @@ Longitudinal type.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-IconTypeV2-LONGITUDINAL = 7--><!--Device-IconTypeV2-LONGITUDINAL = 7-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## VERTICAL
@@ -131,6 +147,8 @@ Vertical type.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-IconTypeV2-VERTICAL = 8--><!--Device-IconTypeV2-VERTICAL = 8-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

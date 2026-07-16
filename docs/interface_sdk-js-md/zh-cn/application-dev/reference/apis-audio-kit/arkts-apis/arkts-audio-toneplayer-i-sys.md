@@ -2,9 +2,17 @@
 
 **起始版本：** 9
 
+<!--Device-audio-interface TonePlayer--><!--Device-audio-interface TonePlayer-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## load
 
@@ -16,6 +24,8 @@ Loads tone. This method uses an asynchronous callback to return the result.
 
 **起始版本：** 9
 
+<!--Device-TonePlayer-load(type: ToneType, callback: AsyncCallback<void>): void--><!--Device-TonePlayer-load(type: ToneType, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -24,8 +34,8 @@ Loads tone. This method uses an asynchronous callback to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | ToneType | 是 | Tone type to play. |
-| callback | AsyncCallback&lt;void&gt; | 是 | Callback used to return the result. |
+| type | [ToneType](arkts-audio-tonetype-e-sys.md) | 是 | Tone type to play. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | Callback used to return the result. |
 
 **示例：**
 
@@ -53,6 +63,8 @@ Loads tone. This method uses a promise to return the result.
 
 **起始版本：** 9
 
+<!--Device-TonePlayer-load(type: ToneType): Promise<void>--><!--Device-TonePlayer-load(type: ToneType): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -61,13 +73,13 @@ Loads tone. This method uses a promise to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | ToneType | 是 | Tone type to play. |
+| type | [ToneType](arkts-audio-tonetype-e-sys.md) | 是 | Tone type to play. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise<void> | Promise used to return the result. |
 
 **示例：**
 
@@ -90,6 +102,8 @@ Releases the player. This method uses an asynchronous callback to return the res
 
 **起始版本：** 9
 
+<!--Device-TonePlayer-release(callback: AsyncCallback<void>): void--><!--Device-TonePlayer-release(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -98,7 +112,7 @@ Releases the player. This method uses an asynchronous callback to return the res
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | Callback used to return the result. |
 
 **示例：**
 
@@ -126,6 +140,8 @@ Releases the player. This method uses a promise to return the result.
 
 **起始版本：** 9
 
+<!--Device-TonePlayer-release(): Promise<void>--><!--Device-TonePlayer-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -134,7 +150,7 @@ Releases the player. This method uses a promise to return the result.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise<void> | Promise used to return the result. |
 
 **示例：**
 
@@ -157,6 +173,8 @@ Starts player. This method uses an asynchronous callback to return the result.
 
 **起始版本：** 9
 
+<!--Device-TonePlayer-start(callback: AsyncCallback<void>): void--><!--Device-TonePlayer-start(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -165,7 +183,7 @@ Starts player. This method uses an asynchronous callback to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | Callback used to return the result. |
 
 **示例：**
 
@@ -193,6 +211,8 @@ Starts player. This method uses a promise to return the result.
 
 **起始版本：** 9
 
+<!--Device-TonePlayer-start(): Promise<void>--><!--Device-TonePlayer-start(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -201,7 +221,7 @@ Starts player. This method uses a promise to return the result.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; |  |
+| Promise<void> |  |
 
 **示例：**
 
@@ -224,6 +244,8 @@ Stops player. This method uses an asynchronous callback to return the result.
 
 **起始版本：** 9
 
+<!--Device-TonePlayer-stop(callback: AsyncCallback<void>): void--><!--Device-TonePlayer-stop(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -232,7 +254,7 @@ Stops player. This method uses an asynchronous callback to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | Callback used to return the result. |
 
 **示例：**
 
@@ -260,6 +282,8 @@ Stops player. This method uses a promise to return the result.
 
 **起始版本：** 9
 
+<!--Device-TonePlayer-stop(): Promise<void>--><!--Device-TonePlayer-stop(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -268,7 +292,7 @@ Stops player. This method uses a promise to return the result.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise<void> | Promise used to return the result. |
 
 **示例：**
 

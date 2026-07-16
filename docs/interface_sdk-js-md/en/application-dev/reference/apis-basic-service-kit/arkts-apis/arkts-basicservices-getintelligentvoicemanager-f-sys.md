@@ -18,6 +18,8 @@ Obtains an {@link IntelligentVoiceManager} instance.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-intelligentVoice-function getIntelligentVoiceManager(): IntelligentVoiceManager--><!--Device-intelligentVoice-function getIntelligentVoiceManager(): IntelligentVoiceManager-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Obtains an {@link IntelligentVoiceManager} instance.
 
 | Type | Description |
 | --- | --- |
-| IntelligentVoiceManager | this {@link IntelligentVoiceManager} object. |
+| [IntelligentVoiceManager](arkts-basicservices-intelligentvoicemanager-i-sys.md) | this {@link IntelligentVoiceManager} object. |
 
 **Error codes:**
 

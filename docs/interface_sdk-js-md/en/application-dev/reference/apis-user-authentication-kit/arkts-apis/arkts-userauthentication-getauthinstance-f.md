@@ -24,21 +24,23 @@ Obtains an **AuthInstance** instance for user authentication.
 
 **Substitutes:** [getUserAuthInstance](arkts-userauthentication-getuserauthinstance-f.md#getuserauthinstance-1)
 
+<!--Device-userAuth-function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrustLevel: AuthTrustLevel): AuthInstance--><!--Device-userAuth-function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrustLevel: AuthTrustLevel): AuthInstance-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| challenge | Uint8Array | Yes | Challenge value. It cannot exceed 32 bytes and can be passed in Uint8Array([])format. |
-| authType | UserAuthType | Yes | Authentication type. Currently, **FACE** and **FINGERPRINT** are supported. |
-| authTrustLevel | AuthTrustLevel | Yes | Authentication trust level. |
+| challenge | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Challenge value. It cannot exceed 32 bytes and can be passed in Uint8Array([])format. |
+| authType | [UserAuthType](arkts-userauthentication-userauthtype-e.md) | Yes | Authentication type. Currently, **FACE** and **FINGERPRINT** are supported. |
+| authTrustLevel | [AuthTrustLevel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-authtrustlevel-e-sys.md) | Yes | Authentication trust level. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AuthInstance | **AuthInstance** instance obtained. |
+| [AuthInstance](arkts-userauthentication-authinstance-i.md) | **AuthInstance** instance obtained. |
 
 **Error codes:**
 

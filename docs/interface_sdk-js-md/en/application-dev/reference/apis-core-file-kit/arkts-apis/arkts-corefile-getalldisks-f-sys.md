@@ -20,6 +20,8 @@ Querying Information About All Disks.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-volumeManager-function getAllDisks(): Promise<Array<Disk>>--><!--Device-volumeManager-function getAllDisks(): Promise<Array<Disk>>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Querying Information About All Disks.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Disk&gt;&gt; | return Promise |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Disk>> | return Promise |
 
 **Error codes:**
 

@@ -20,6 +20,8 @@ Add a custom {@link host} and corresponding {@link ip} mapping for current appli
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-connection-function addCustomDnsRule(host: string, ip: Array<string>, callback: AsyncCallback<void>): void--><!--Device-connection-function addCustomDnsRule(host: string, ip: Array<string>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -27,8 +29,8 @@ Add a custom {@link host} and corresponding {@link ip} mapping for current appli
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | host | string | Yes | Indicates the host name or the domain. |
-| ip | Array&lt;string&gt; | Yes | List of IP addresses mapped to the host name. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Returns the callback of addCustomDnsRule. |
+| ip | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | List of IP addresses mapped to the host name. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Returns the callback of addCustomDnsRule. |
 
 **Error codes:**
 
@@ -71,6 +73,8 @@ Add a custom {@link host} and corresponding {@link ip} mapping for current appli
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-connection-function addCustomDnsRule(host: string, ip: Array<string>): Promise<void>--><!--Device-connection-function addCustomDnsRule(host: string, ip: Array<string>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -78,13 +82,13 @@ Add a custom {@link host} and corresponding {@link ip} mapping for current appli
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | host | string | Yes | Indicates the host name or the domain. |
-| ip | Array&lt;string&gt; | Yes | List of IP addresses mapped to the host name. |
+| ip | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | List of IP addresses mapped to the host name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 

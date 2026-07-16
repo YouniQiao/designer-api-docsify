@@ -16,15 +16,17 @@ Transforms pixelmap from unpremultiplied alpha format to premultiplied alpha for
 
 **Since:** 12
 
+<!--Device-image-function createPremultipliedPixelMap(src: PixelMap, dst: PixelMap, callback: AsyncCallback<void>): void--><!--Device-image-function createPremultipliedPixelMap(src: PixelMap, dst: PixelMap, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | PixelMap | Yes | The source pixelmap. |
-| dst | PixelMap | Yes | The destination pixelmap. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the operation result. |
+| src | [PixelMap](arkts-image-pixelmap-i.md) | Yes | The source pixelmap. |
+| dst | [PixelMap](arkts-image-pixelmap-i.md) | Yes | The destination pixelmap. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the operation result. |
 
 **Error codes:**
 
@@ -76,20 +78,22 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 
 **Since:** 12
 
+<!--Device-image-function createPremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<void>--><!--Device-image-function createPremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | PixelMap | Yes | The source pixelMap. |
-| dst | PixelMap | Yes | The destination pixelmap. |
+| src | [PixelMap](arkts-image-pixelmap-i.md) | Yes | The source pixelMap. |
+| dst | [PixelMap](arkts-image-pixelmap-i.md) | Yes | The destination pixelmap. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **Error codes:**
 

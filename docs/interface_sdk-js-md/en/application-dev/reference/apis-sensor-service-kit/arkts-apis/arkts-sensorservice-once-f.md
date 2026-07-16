@@ -18,6 +18,8 @@ Obtains data of the acceleration sensor once.
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
+<!--Device-sensor-function once(type: SensorId.ACCELEROMETER, callback: Callback<AccelerometerResponse>): void--><!--Device-sensor-function once(type: SensorId.ACCELEROMETER, callback: Callback<AccelerometerResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -25,7 +27,7 @@ Obtains data of the acceleration sensor once.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.ACCELEROMETER | Yes | Sensor type. The value is fixed at **SensorId.ACCELEROMETER**. |
-| callback | Callback&lt;AccelerometerResponse&gt; | Yes | Callback used to report the sensor data, which is an**AccelerometerResponse** object. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AccelerometerResponse> | Yes | Callback used to report the sensor data, which is an **AccelerometerResponse** object. |
 
 **Error codes:**
 
@@ -68,14 +70,16 @@ Obtains data of the uncalibrated acceleration sensor once.
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
+<!--Device-sensor-function once(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>): void--><!--Device-sensor-function once(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.ACCELEROMETER_UNCALIBRATED | Yes | Sensor type. The value is fixed at**SensorId.ACCELEROMETER_UNCALIBRATED**. |
-| callback | Callback&lt;AccelerometerUncalibratedResponse&gt; | Yes | Callback used to report the sensor data, which isan **AccelerometerUncalibratedResponse** object. |
+| type | SensorId.ACCELEROMETER_UNCALIBRATED | Yes | Sensor type. The value is fixed at **SensorId.ACCELEROMETER_UNCALIBRATED**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AccelerometerUncalibratedResponse> | Yes | Callback used to report the sensor data, which is an **AccelerometerUncalibratedResponse** object. |
 
 **Error codes:**
 
@@ -119,6 +123,8 @@ Obtains data of the ambient light sensor once.
 
 **Since:** 9
 
+<!--Device-sensor-function once(type: SensorId.AMBIENT_LIGHT, callback: Callback<LightResponse>): void--><!--Device-sensor-function once(type: SensorId.AMBIENT_LIGHT, callback: Callback<LightResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -126,7 +132,7 @@ Obtains data of the ambient light sensor once.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.AMBIENT_LIGHT | Yes | Sensor type. The value is fixed at **SensorId.AMBIENT_LIGHT**. |
-| callback | Callback&lt;LightResponse&gt; | Yes | Callback used to report the sensor data, which is a **LightResponse**object. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<LightResponse> | Yes | Callback used to report the sensor data, which is a **LightResponse** object. |
 
 **Error codes:**
 
@@ -164,6 +170,8 @@ Obtains data of the temperature sensor once.
 
 **Since:** 9
 
+<!--Device-sensor-function once(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>): void--><!--Device-sensor-function once(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -171,7 +179,7 @@ Obtains data of the temperature sensor once.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.AMBIENT_TEMPERATURE | Yes | Sensor type. The value is fixed at **SensorId.AMBIENT_TEMPERATURE**. |
-| callback | Callback&lt;AmbientTemperatureResponse&gt; | Yes | Callback used to report the sensor data, which is an**AmbientTemperatureResponse** object. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AmbientTemperatureResponse> | Yes | Callback used to report the sensor data, which is an **AmbientTemperatureResponse** object. |
 
 **Error codes:**
 
@@ -209,6 +217,8 @@ Obtains data of the barometer sensor once.
 
 **Since:** 9
 
+<!--Device-sensor-function once(type: SensorId.BAROMETER, callback: Callback<BarometerResponse>): void--><!--Device-sensor-function once(type: SensorId.BAROMETER, callback: Callback<BarometerResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -216,7 +226,7 @@ Obtains data of the barometer sensor once.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.BAROMETER | Yes | Sensor type. The value is fixed at **SensorId.BAROMETER**. |
-| callback | Callback&lt;BarometerResponse&gt; | Yes | Callback used to report the sensor data, which is a**BarometerResponse** object. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<BarometerResponse> | Yes | Callback used to report the sensor data, which is a **BarometerResponse** object. |
 
 **Error codes:**
 
@@ -254,6 +264,8 @@ Obtains data of the gravity sensor once.
 
 **Since:** 9
 
+<!--Device-sensor-function once(type: SensorId.GRAVITY, callback: Callback<GravityResponse>): void--><!--Device-sensor-function once(type: SensorId.GRAVITY, callback: Callback<GravityResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -261,7 +273,7 @@ Obtains data of the gravity sensor once.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.GRAVITY | Yes | Sensor type. The value is fixed at **SensorId.GRAVITY**. |
-| callback | Callback&lt;GravityResponse&gt; | Yes | Callback used to report the sensor data, which is a**GravityResponse** object. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<GravityResponse> | Yes | Callback used to report the sensor data, which is a **GravityResponse** object. |
 
 **Error codes:**
 
@@ -303,6 +315,8 @@ Obtains data of the gyroscope sensor once.
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
+<!--Device-sensor-function once(type: SensorId.GYROSCOPE, callback: Callback<GyroscopeResponse>): void--><!--Device-sensor-function once(type: SensorId.GYROSCOPE, callback: Callback<GyroscopeResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -310,7 +324,7 @@ Obtains data of the gyroscope sensor once.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.GYROSCOPE | Yes | Sensor type. The value is fixed at **SensorId.GYROSCOPE**. |
-| callback | Callback&lt;GyroscopeResponse&gt; | Yes | Callback used to report the sensor data, which is a**GyroscopeResponse** object. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<GyroscopeResponse> | Yes | Callback used to report the sensor data, which is a **GyroscopeResponse** object. |
 
 **Error codes:**
 
@@ -353,14 +367,16 @@ Obtains data of the uncalibrated gyroscope sensor once.
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
+<!--Device-sensor-function once(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>): void--><!--Device-sensor-function once(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.GYROSCOPE_UNCALIBRATED | Yes | Sensor type. The value is fixed at**SensorId.GYROSCOPE_UNCALIBRATED**. |
-| callback | Callback&lt;GyroscopeUncalibratedResponse&gt; | Yes | Callback used to report the sensor data, which is a**GyroscopeUncalibratedResponse** object. |
+| type | SensorId.GYROSCOPE_UNCALIBRATED | Yes | Sensor type. The value is fixed at **SensorId.GYROSCOPE_UNCALIBRATED**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<GyroscopeUncalibratedResponse> | Yes | Callback used to report the sensor data, which is a **GyroscopeUncalibratedResponse** object. |
 
 **Error codes:**
 
@@ -404,6 +420,8 @@ Obtains data of the Hall effect sensor once.
 
 **Since:** 9
 
+<!--Device-sensor-function once(type: SensorId.HALL, callback: Callback<HallResponse>): void--><!--Device-sensor-function once(type: SensorId.HALL, callback: Callback<HallResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -411,7 +429,7 @@ Obtains data of the Hall effect sensor once.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.HALL | Yes | Sensor type. The value is fixed at **SensorId.HALL**. |
-| callback | Callback&lt;HallResponse&gt; | Yes | Callback used to report the sensor data, which is a **HallResponse**object. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<HallResponse> | Yes | Callback used to report the sensor data, which is a **HallResponse** object. |
 
 **Error codes:**
 
@@ -451,6 +469,8 @@ Obtains data of the heart rate sensor once.
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
+<!--Device-sensor-function once(type: SensorId.HEART_RATE, callback: Callback<HeartRateResponse>): void--><!--Device-sensor-function once(type: SensorId.HEART_RATE, callback: Callback<HeartRateResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -458,7 +478,7 @@ Obtains data of the heart rate sensor once.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.HEART_RATE | Yes | Sensor type. The value is fixed at **SensorId.HEART_RATE**. |
-| callback | Callback&lt;HeartRateResponse&gt; | Yes | Callback used to report the sensor data, which is a**HeartRateResponse** object. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<HeartRateResponse> | Yes | Callback used to report the sensor data, which is a **HeartRateResponse** object. |
 
 **Error codes:**
 
@@ -497,6 +517,8 @@ Obtains data of the humidity sensor once.
 
 **Since:** 9
 
+<!--Device-sensor-function once(type: SensorId.HUMIDITY, callback: Callback<HumidityResponse>): void--><!--Device-sensor-function once(type: SensorId.HUMIDITY, callback: Callback<HumidityResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -504,7 +526,7 @@ Obtains data of the humidity sensor once.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.HUMIDITY | Yes | Sensor type. The value is fixed at **SensorId.HUMIDITY**. |
-| callback | Callback&lt;HumidityResponse&gt; | Yes | Callback used to report the sensor data, which is a**HumidityResponse** object. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<HumidityResponse> | Yes | Callback used to report the sensor data, which is a **HumidityResponse** object. |
 
 **Error codes:**
 
@@ -544,14 +566,16 @@ Obtains data of the linear acceleration sensor once.
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
+<!--Device-sensor-function once(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback<LinearAccelerometerResponse>): void--><!--Device-sensor-function once(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback<LinearAccelerometerResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.LINEAR_ACCELEROMETER | Yes | Sensor type. The value is fixed at**SensorId.LINEAR_ACCELEROMETER**. |
-| callback | Callback&lt;LinearAccelerometerResponse&gt; | Yes | Callback used to report the sensor data, which is a**LinearAccelerometerResponse** object. |
+| type | SensorId.LINEAR_ACCELEROMETER | Yes | Sensor type. The value is fixed at **SensorId.LINEAR_ACCELEROMETER**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<LinearAccelerometerResponse> | Yes | Callback used to report the sensor data, which is a **LinearAccelerometerResponse** object. |
 
 **Error codes:**
 
@@ -592,6 +616,8 @@ Obtains data of the magnetic field sensor once.
 
 **Since:** 9
 
+<!--Device-sensor-function once(type: SensorId.MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>): void--><!--Device-sensor-function once(type: SensorId.MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -599,7 +625,7 @@ Obtains data of the magnetic field sensor once.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.MAGNETIC_FIELD | Yes | Sensor type. The value is fixed at **SensorId.MAGNETIC_FIELD**. |
-| callback | Callback&lt;MagneticFieldResponse&gt; | Yes | Callback used to report the sensor data, which is a**MagneticFieldResponse** object. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<MagneticFieldResponse> | Yes | Callback used to report the sensor data, which is a **MagneticFieldResponse** object. |
 
 **Error codes:**
 
@@ -639,14 +665,16 @@ Obtains data of the uncalibrated magnetic field sensor once.
 
 **Since:** 9
 
+<!--Device-sensor-function once(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>): void--><!--Device-sensor-function once(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.MAGNETIC_FIELD_UNCALIBRATED | Yes | Sensor type. The value is fixed at**SensorId.MAGNETIC_FIELD_UNCALIBRATED**. |
-| callback | Callback&lt;MagneticFieldUncalibratedResponse&gt; | Yes | Callback used to report the sensor data, which isa **MagneticFieldUncalibratedResponse** object. |
+| type | SensorId.MAGNETIC_FIELD_UNCALIBRATED | Yes | Sensor type. The value is fixed at **SensorId.MAGNETIC_FIELD_UNCALIBRATED**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<MagneticFieldUncalibratedResponse> | Yes | Callback used to report the sensor data, which is a **MagneticFieldUncalibratedResponse** object. |
 
 **Error codes:**
 
@@ -689,6 +717,8 @@ Obtains data of the orientation sensor once.
 
 **Since:** 9
 
+<!--Device-sensor-function once(type: SensorId.ORIENTATION, callback: Callback<OrientationResponse>): void--><!--Device-sensor-function once(type: SensorId.ORIENTATION, callback: Callback<OrientationResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -696,7 +726,7 @@ Obtains data of the orientation sensor once.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.ORIENTATION | Yes | Sensor type. The value is fixed at **SensorId.ORIENTATION**. |
-| callback | Callback&lt;OrientationResponse&gt; | Yes | Callback used to report the sensor data, which is a**OrientationResponse** object. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<OrientationResponse> | Yes | Callback used to report the sensor data, which is a **OrientationResponse** object. |
 
 **Error codes:**
 
@@ -732,12 +762,13 @@ try {
 function once(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>): void
 ```
 
-Obtains data of the pedometer sensor once. The step counter sensor's data reporting is subject to some delay, and
-the delay is determined by specific product implementations.
+Obtains data of the pedometer sensor once. The step counter sensor's data reporting is subject to some delay, and the delay is determined by specific product implementations.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
+
+<!--Device-sensor-function once(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>): void--><!--Device-sensor-function once(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -746,7 +777,7 @@ the delay is determined by specific product implementations.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.PEDOMETER | Yes | Sensor type. The value is fixed at **SensorId.PEDOMETER**. |
-| callback | Callback&lt;PedometerResponse&gt; | Yes | Callback used to report the sensor data, which is a**PedometerResponse** object. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<PedometerResponse> | Yes | Callback used to report the sensor data, which is a **PedometerResponse** object. |
 
 **Error codes:**
 
@@ -787,6 +818,8 @@ Obtains data of the pedometer sensor once.
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
+<!--Device-sensor-function once(type: SensorId.PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>): void--><!--Device-sensor-function once(type: SensorId.PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -794,7 +827,7 @@ Obtains data of the pedometer sensor once.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.PEDOMETER_DETECTION | Yes | Sensor type. The value is fixed at **SensorId.PEDOMETER_DETECTION**. |
-| callback | Callback&lt;PedometerDetectionResponse&gt; | Yes | Callback used to report the sensor data, which is a**PedometerDetectionResponse** object. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<PedometerDetectionResponse> | Yes | Callback used to report the sensor data, which is a **PedometerDetectionResponse** object. |
 
 **Error codes:**
 
@@ -833,6 +866,8 @@ Obtains data of the proximity sensor once.
 
 **Since:** 9
 
+<!--Device-sensor-function once(type: SensorId.PROXIMITY, callback: Callback<ProximityResponse>): void--><!--Device-sensor-function once(type: SensorId.PROXIMITY, callback: Callback<ProximityResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -840,7 +875,7 @@ Obtains data of the proximity sensor once.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.PROXIMITY | Yes | Sensor type. The value is fixed at **SensorId.PROXIMITY**. |
-| callback | Callback&lt;ProximityResponse&gt; | Yes | Callback used to report the sensor data, which is a**ProximityResponse** object. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ProximityResponse> | Yes | Callback used to report the sensor data, which is a **ProximityResponse** object. |
 
 **Error codes:**
 
@@ -878,6 +913,8 @@ Obtains data of the rotation vector sensor once.
 
 **Since:** 9
 
+<!--Device-sensor-function once(type: SensorId.ROTATION_VECTOR, callback: Callback<RotationVectorResponse>): void--><!--Device-sensor-function once(type: SensorId.ROTATION_VECTOR, callback: Callback<RotationVectorResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -885,7 +922,7 @@ Obtains data of the rotation vector sensor once.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.ROTATION_VECTOR | Yes | Sensor type. The value is fixed at **SensorId.ROTATION_VECTOR**. |
-| callback | Callback&lt;RotationVectorResponse&gt; | Yes | Callback used to report the sensor data, which is a**RotationVectorResponse** object. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<RotationVectorResponse> | Yes | Callback used to report the sensor data, which is a **RotationVectorResponse** object. |
 
 **Error codes:**
 
@@ -926,6 +963,8 @@ Obtains the significant motion sensor data once.
 
 **Since:** 9
 
+<!--Device-sensor-function once(type: SensorId.SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>): void--><!--Device-sensor-function once(type: SensorId.SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -933,7 +972,7 @@ Obtains the significant motion sensor data once.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.SIGNIFICANT_MOTION | Yes | Sensor type. The value is fixed at **SensorId.SIGNIFICANT_MOTION**. |
-| callback | Callback&lt;SignificantMotionResponse&gt; | Yes | Callback used to report the sensor data, which is a**SignificantMotionResponse** object. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SignificantMotionResponse> | Yes | Callback used to report the sensor data, which is a **SignificantMotionResponse** object. |
 
 **Error codes:**
 
@@ -971,6 +1010,8 @@ Obtains data of the wear detection sensor once.
 
 **Since:** 9
 
+<!--Device-sensor-function once(type: SensorId.WEAR_DETECTION, callback: Callback<WearDetectionResponse>): void--><!--Device-sensor-function once(type: SensorId.WEAR_DETECTION, callback: Callback<WearDetectionResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -978,7 +1019,7 @@ Obtains data of the wear detection sensor once.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.WEAR_DETECTION | Yes | Sensor type. The value is fixed at **SensorId.WEAR_DETECTION**. |
-| callback | Callback&lt;WearDetectionResponse&gt; | Yes | Callback used to report the sensor data, which is a**WearDetectionResponse** object. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<WearDetectionResponse> | Yes | Callback used to report the sensor data, which is a **WearDetectionResponse** object. |
 
 **Error codes:**
 
@@ -1022,14 +1063,16 @@ Subscribes to only one data change of the acceleration sensor.
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback<AccelerometerResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback<AccelerometerResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_ACCELEROMETER | Yes | Type of the sensor to subscribe to, which is**SENSOR_TYPE_ID_ACCELEROMETER**. |
-| callback | Callback&lt;AccelerometerResponse&gt; | Yes | One-shot callback used to return the acceleration sensordata. The reported data type in the callback is **AccelerometerResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_ACCELEROMETER | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_ACCELEROMETER**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AccelerometerResponse> | Yes | One-shot callback used to return the acceleration sensor data. The reported data type in the callback is **AccelerometerResponse**. |
 
 **Example**
 
@@ -1061,14 +1104,16 @@ Subscribes to only one data change of the uncalibrated acceleration sensor.
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED | Yes | Type of the sensor to subscribe to, which is**SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED**. |
-| callback | Callback&lt;AccelerometerUncalibratedResponse&gt; | Yes | One-shot callback used to return the uncalibratedacceleration sensor data. The reported data type in the callback is **AccelerometerUncalibratedResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AccelerometerUncalibratedResponse> | Yes | One-shot callback used to return the uncalibrated acceleration sensor data. The reported data type in the callback is **AccelerometerUncalibratedResponse**. |
 
 **Example**
 
@@ -1101,14 +1146,16 @@ Subscribes to only one data change of the ambient light sensor.
 
 **Substitutes:** once(type:
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<LightResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<LightResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT | Yes | Type of the sensor to subscribe to, which is**SENSOR_TYPE_ID_AMBIENT_LIGHT**. |
-| callback | Callback&lt;LightResponse&gt; | Yes | One-shot callback used to return the ambient light sensor data. Thereported data type in the callback is **LightResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_AMBIENT_LIGHT**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<LightResponse> | Yes | One-shot callback used to return the ambient light sensor data. The reported data type in the callback is **LightResponse**. |
 
 **Example**
 
@@ -1136,14 +1183,16 @@ Subscribes to only one data change of the ambient temperature sensor.
 
 **Substitutes:** once(type:
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE | Yes | Type of the sensor to subscribe to, which is**SENSOR_TYPE_ID_AMBIENT_TEMPERATURE**. |
-| callback | Callback&lt;AmbientTemperatureResponse&gt; | Yes | One-shot callback used to return the ambient temperaturesensor data. The reported data type in the callback is **AmbientTemperatureResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_AMBIENT_TEMPERATURE**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AmbientTemperatureResponse> | Yes | One-shot callback used to return the ambient temperature sensor data. The reported data type in the callback is **AmbientTemperatureResponse**. |
 
 **Example**
 
@@ -1171,14 +1220,16 @@ Subscribes to only one data change of the barometer sensor.
 
 **Substitutes:** once(type:
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<BarometerResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<BarometerResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_BAROMETER | Yes | Type of the sensor to subscribe to, which is**SENSOR_TYPE_ID_BAROMETER**. |
-| callback | Callback&lt;BarometerResponse&gt; | Yes | One-shot callback used to return the barometer sensor data. Thereported data type in the callback is **BarometerResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_BAROMETER | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_BAROMETER**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<BarometerResponse> | Yes | One-shot callback used to return the barometer sensor data. The reported data type in the callback is **BarometerResponse**. |
 
 **Example**
 
@@ -1206,14 +1257,16 @@ Subscribes to only one data change of the gravity sensor.
 
 **Substitutes:** once(type:
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_GRAVITY | Yes | Type of the sensor to subscribe to, which is**SENSOR_TYPE_ID_GRAVITY**. |
-| callback | Callback&lt;GravityResponse&gt; | Yes | One-shot callback used to return the gravity sensor data. Thereported data type in the callback is **GravityResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_GRAVITY | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_GRAVITY**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<GravityResponse> | Yes | One-shot callback used to return the gravity sensor data. The reported data type in the callback is **GravityResponse**. |
 
 **Example**
 
@@ -1245,14 +1298,16 @@ Subscribes to only one data change of the gyroscope sensor.
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<GyroscopeResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<GyroscopeResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_GYROSCOPE | Yes | Type of the sensor to subscribe to, which is**SENSOR_TYPE_ID_GYROSCOPE**. |
-| callback | Callback&lt;GyroscopeResponse&gt; | Yes | One-shot callback used to return the gyroscope sensor data. Thereported data type in the callback is **GyroscopeResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_GYROSCOPE | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_GYROSCOPE**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<GyroscopeResponse> | Yes | One-shot callback used to return the gyroscope sensor data. The reported data type in the callback is **GyroscopeResponse**. |
 
 **Example**
 
@@ -1284,14 +1339,16 @@ Subscribes to only one data change of the uncalibrated gyroscope sensor.
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED | Yes | Type of the sensor to subscribe to, which is**SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED**. |
-| callback | Callback&lt;GyroscopeUncalibratedResponse&gt; | Yes | One-shot callback used to return the uncalibratedgyroscope sensor data. The reported data type in the callback is **GyroscopeUncalibratedResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<GyroscopeUncalibratedResponse> | Yes | One-shot callback used to return the uncalibrated gyroscope sensor data. The reported data type in the callback is **GyroscopeUncalibratedResponse**. |
 
 **Example**
 
@@ -1324,14 +1381,16 @@ Subscribes to only one data change of the Hall effect sensor.
 
 **Substitutes:** once(type:
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_HALL | Yes | Type of the sensor to subscribe to, which is**SENSOR_TYPE_ID_HALL**. |
-| callback | Callback&lt;HallResponse&gt; | Yes | One-shot callback used to return the Hall effect sensor data. Thereported data type in the callback is **HallResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_HALL | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_HALL**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<HallResponse> | Yes | One-shot callback used to return the Hall effect sensor data. The reported data type in the callback is **HallResponse**. |
 
 **Example**
 
@@ -1361,14 +1420,16 @@ Subscribes to only one data change of the heart rate sensor.
 
 **Required permissions:** ohos.permission.HEART_RATE
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<HeartRateResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<HeartRateResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_HEART_RATE | Yes | Type of the sensor to subscribe to, which is**SENSOR_TYPE_ID_HEART_RATE**. |
-| callback | Callback&lt;HeartRateResponse&gt; | Yes | One-shot callback used to return the heart rate sensor data. Thereported data type in the callback is **HeartRateResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_HEART_RATE | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_HEART_RATE**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<HeartRateResponse> | Yes | One-shot callback used to return the heart rate sensor data. The reported data type in the callback is **HeartRateResponse**. |
 
 **Example**
 
@@ -1396,14 +1457,16 @@ Subscribes to only one data change of the humidity sensor.
 
 **Substitutes:** once(type:
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<HumidityResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<HumidityResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_HUMIDITY | Yes | Type of the sensor to subscribe to, which is**SENSOR_TYPE_ID_HUMIDITY**. |
-| callback | Callback&lt;HumidityResponse&gt; | Yes | One-shot callback used to return the humidity sensor data. Thereported data type in the callback is **HumidityResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_HUMIDITY | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_HUMIDITY**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<HumidityResponse> | Yes | One-shot callback used to return the humidity sensor data. The reported data type in the callback is **HumidityResponse**. |
 
 **Example**
 
@@ -1433,14 +1496,16 @@ Subscribes to only one data change of the linear acceleration sensor.
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Callback<LinearAccelerometerResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Callback<LinearAccelerometerResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION | Yes | Type of the sensor to subscribe to, which is**SENSOR_TYPE_ID_LINEAR_ACCELERATION**. |
-| callback | Callback&lt;LinearAccelerometerResponse&gt; | Yes | One-shot callback used to return the linearacceleration sensor data. The reported data type in the callback is **LinearAccelerometerResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_LINEAR_ACCELERATION**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<LinearAccelerometerResponse> | Yes | One-shot callback used to return the linear acceleration sensor data. The reported data type in the callback is **LinearAccelerometerResponse**. |
 
 
 ## once
@@ -1457,14 +1522,16 @@ Subscribes to only one data change of the magnetic field sensor.
 
 **Substitutes:** once(type:
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD | Yes | Type of the sensor to subscribe to, which is**SENSOR_TYPE_ID_MAGNETIC_FIELD**. |
-| callback | Callback&lt;MagneticFieldResponse&gt; | Yes | One-shot callback used to return the magnetic field sensordata. The reported data type in the callback is **MagneticFieldResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_MAGNETIC_FIELD**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<MagneticFieldResponse> | Yes | One-shot callback used to return the magnetic field sensor data. The reported data type in the callback is **MagneticFieldResponse**. |
 
 **Example**
 
@@ -1494,14 +1561,16 @@ Subscribes to only one data change of the uncalibrated magnetic field sensor.
 
 **Substitutes:** once(type:
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED | Yes | Type of the sensor to subscribe to, whichis **SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED**. |
-| callback | Callback&lt;MagneticFieldUncalibratedResponse&gt; | Yes | One-shot callback used to return the uncalibratedmagnetic field sensor data. The reported data type in the callback is **MagneticFieldUncalibratedResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<MagneticFieldUncalibratedResponse> | Yes | One-shot callback used to return the uncalibrated magnetic field sensor data. The reported data type in the callback is **MagneticFieldUncalibratedResponse**. |
 
 **Example**
 
@@ -1534,14 +1603,16 @@ Subscribes to only one data change of the orientation sensor.
 
 **Substitutes:** once(type:
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<OrientationResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<OrientationResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_ORIENTATION | Yes | Type of the sensor to subscribe to, which is**SENSOR_TYPE_ID_ORIENTATION**. |
-| callback | Callback&lt;OrientationResponse&gt; | Yes | One-shot callback used to return the orientation sensor data.The reported data type in the callback is **OrientationResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_ORIENTATION | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_ORIENTATION**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<OrientationResponse> | Yes | One-shot callback used to return the orientation sensor data.The reported data type in the callback is **OrientationResponse**. |
 
 **Example**
 
@@ -1573,14 +1644,16 @@ Subscribes to only one data change of the pedometer sensor.
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<PedometerResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<PedometerResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_PEDOMETER | Yes | Type of the sensor to subscribe to, which is**SENSOR_TYPE_ID_PEDOMETER**. |
-| callback | Callback&lt;PedometerResponse&gt; | Yes | One-shot callback used to return the pedometer sensor data. Thereported data type in the callback is **PedometerResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_PEDOMETER | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_PEDOMETER**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<PedometerResponse> | Yes | One-shot callback used to return the pedometer sensor data. The reported data type in the callback is **PedometerResponse**. |
 
 **Example**
 
@@ -1610,14 +1683,16 @@ Subscribes to only one data change of the pedometer detection sensor.
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION | Yes | Type of the sensor to subscribe to, which is**SENSOR_TYPE_ID_PEDOMETER_DETECTION**. |
-| callback | Callback&lt;PedometerDetectionResponse&gt; | Yes | One-shot callback used to return the pedometer detectionsensor data. The reported data type in the callback is **PedometerDetectionResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_PEDOMETER_DETECTION**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<PedometerDetectionResponse> | Yes | One-shot callback used to return the pedometer detection sensor data. The reported data type in the callback is **PedometerDetectionResponse**. |
 
 **Example**
 
@@ -1645,14 +1720,16 @@ Subscribes to only one data change of the proximity sensor.
 
 **Substitutes:** once(type:
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<ProximityResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<ProximityResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_PROXIMITY | Yes | Type of the sensor to subscribe to, which is**SENSOR_TYPE_ID_PROXIMITY**. |
-| callback | Callback&lt;ProximityResponse&gt; | Yes | One-shot callback used to return the proximity sensor data. Thereported data type in the callback is **ProximityResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_PROXIMITY | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_PROXIMITY**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ProximityResponse> | Yes | One-shot callback used to return the proximity sensor data. The reported data type in the callback is **ProximityResponse**. |
 
 **Example**
 
@@ -1681,14 +1758,16 @@ Subscribes to only one data change of the rotation vector sensor.
 
 **Substitutes:** once(type:
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<RotationVectorResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<RotationVectorResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR | Yes | Type of the sensor to subscribe to, which is**SENSOR_TYPE_ID_ROTATION_VECTOR**. |
-| callback | Callback&lt;RotationVectorResponse&gt; | Yes | One-shot callback used to return the rotation vector sensordata. The reported data type in the callback is **RotationVectorResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_ROTATION_VECTOR**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<RotationVectorResponse> | Yes | One-shot callback used to return the rotation vector sensor data. The reported data type in the callback is **RotationVectorResponse**. |
 
 **Example**
 
@@ -1719,14 +1798,16 @@ Subscribes to only one data change of the significant motion sensor.
 
 **Substitutes:** once(type:
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION | Yes | Type of the sensor to subscribe to, which is**SENSOR_TYPE_ID_SIGNIFICANT_MOTION**. |
-| callback | Callback&lt;SignificantMotionResponse&gt; | Yes | One-shot callback used to return the significant motionsensor data. The reported data type in the callback is **SignificantMotionResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_SIGNIFICANT_MOTION**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SignificantMotionResponse> | Yes | One-shot callback used to return the significant motion sensor data. The reported data type in the callback is **SignificantMotionResponse**. |
 
 **Example**
 
@@ -1754,14 +1835,16 @@ Subscribes to only one data change of the wear detection sensor.
 
 **Substitutes:** once(type:
 
+<!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<WearDetectionResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<WearDetectionResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_WEAR_DETECTION | Yes | Type of the sensor to subscribe to, which is**SENSOR_TYPE_ID_WEAR_DETECTION**. |
-| callback | Callback&lt;WearDetectionResponse&gt; | Yes | One-shot callback used to return the wear detection sensordata. The reported data type in the callback is **WearDetectionResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_WEAR_DETECTION | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_WEAR_DETECTION**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<WearDetectionResponse> | Yes | One-shot callback used to return the wear detection sensor data. The reported data type in the callback is **WearDetectionResponse**. |
 
 **Example**
 

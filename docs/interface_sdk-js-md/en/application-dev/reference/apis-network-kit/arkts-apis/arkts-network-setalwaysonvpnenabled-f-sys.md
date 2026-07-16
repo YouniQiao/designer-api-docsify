@@ -20,6 +20,8 @@ Set the Enable/Disable Always on VPN mode for a device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-vpnExtension-function setAlwaysOnVpnEnabled(enable: boolean, bundleName: string): Promise<void>--><!--Device-vpnExtension-function setAlwaysOnVpnEnabled(enable: boolean, bundleName: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -35,7 +37,7 @@ Set the Enable/Disable Always on VPN mode for a device.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

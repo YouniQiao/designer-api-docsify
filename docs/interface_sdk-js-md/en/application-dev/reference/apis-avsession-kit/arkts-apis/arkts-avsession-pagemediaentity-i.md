@@ -6,6 +6,8 @@ The definition of pagination object.
 
 **Since:** 23
 
+<!--Device-avMusicTemplate-interface PageMediaEntity extends OperResult--><!--Device-avMusicTemplate-interface PageMediaEntity extends OperResult-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Query data content (pass corresponding structure data according to the type).
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PageMediaEntity-elements: MediaEntity[]--><!--Device-PageMediaEntity-elements: MediaEntity[]-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## episodeRange
@@ -43,6 +47,8 @@ Episode Range
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PageMediaEntity-episodeRange?: EpisodeRange--><!--Device-PageMediaEntity-episodeRange?: EpisodeRange-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -60,6 +66,8 @@ Have next page data.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PageMediaEntity-hasMoreData: boolean--><!--Device-PageMediaEntity-hasMoreData: boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## memberMediaType
@@ -75,6 +83,8 @@ Media type.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PageMediaEntity-memberMediaType: EntityType--><!--Device-PageMediaEntity-memberMediaType: EntityType-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -92,6 +102,8 @@ Pagination query page number.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PageMediaEntity-pageIndex: int--><!--Device-PageMediaEntity-pageIndex: int-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## pageSize
@@ -107,6 +119,8 @@ Size of per page.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PageMediaEntity-pageSize: int--><!--Device-PageMediaEntity-pageSize: int-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -124,6 +138,8 @@ Data Sorting
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PageMediaEntity-sort?: Sort--><!--Device-PageMediaEntity-sort?: Sort-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## totalSize
@@ -139,6 +155,8 @@ Total size of data.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PageMediaEntity-totalSize: int--><!--Device-PageMediaEntity-totalSize: int-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 

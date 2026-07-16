@@ -4,6 +4,8 @@ Defines the display order of a dialog box.
 
 **Since:** 18
 
+<!--Device-unnamed-export class LevelOrder--><!--Device-unnamed-export class LevelOrder-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Creates a dialog box level with the specified order.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-LevelOrder-static clamp(order: number): LevelOrder--><!--Device-LevelOrder-static clamp(order: number): LevelOrder-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -38,7 +42,7 @@ Creates a dialog box level with the specified order.
 
 | Type | Description |
 | --- | --- |
-| LevelOrder | Current instance. |
+| [LevelOrder](arkts-arkui-levelorder-c.md) | Current instance. |
 
 ## getOrder
 
@@ -53,6 +57,8 @@ Obtains the display order of this dialog box.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-LevelOrder-getOrder(): number--><!--Device-LevelOrder-getOrder(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

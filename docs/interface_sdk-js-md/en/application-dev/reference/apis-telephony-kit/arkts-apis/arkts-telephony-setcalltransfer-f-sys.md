@@ -18,6 +18,8 @@ Set call forwarding information.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function setCallTransfer(slotId: int, info: CallTransferInfo, callback: AsyncCallback<void>): void--><!--Device-call-function setCallTransfer(slotId: int, info: CallTransferInfo, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -27,8 +29,8 @@ Set call forwarding information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| info | CallTransferInfo | Yes | Indicates the set call forwarding information. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of setCallTransfer. |
+| info | [CallTransferInfo](arkts-telephony-calltransferinfo-i-sys.md) | Yes | Indicates the set call forwarding information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of setCallTransfer. |
 
 **Error codes:**
 
@@ -75,6 +77,8 @@ Set call forwarding information.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function setCallTransfer(slotId: int, info: CallTransferInfo): Promise<void>--><!--Device-call-function setCallTransfer(slotId: int, info: CallTransferInfo): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -84,13 +88,13 @@ Set call forwarding information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| info | CallTransferInfo | Yes | Indicates the set call forwarding information. |
+| info | [CallTransferInfo](arkts-telephony-calltransferinfo-i-sys.md) | Yes | Indicates the set call forwarding information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setCallTransfer. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the setCallTransfer. |
 
 **Error codes:**
 

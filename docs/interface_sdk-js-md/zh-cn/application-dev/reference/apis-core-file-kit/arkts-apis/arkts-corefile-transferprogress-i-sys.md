@@ -4,9 +4,17 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-cloudSyncManager-interface TransferProgress--><!--Device-cloudSyncManager-interface TransferProgress-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { cloudSyncManager } from '@kit.CoreFileKit';
+```
 
 ## failedCount
 
@@ -21,6 +29,8 @@ failedCount: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TransferProgress-failedCount: int--><!--Device-TransferProgress-failedCount: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -40,6 +50,8 @@ state: TransferState
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TransferProgress-state: TransferState--><!--Device-TransferProgress-state: TransferState-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **系统接口：** 此接口为系统接口。
@@ -57,6 +69,8 @@ stopReason: TransferStopReason
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TransferProgress-stopReason: TransferStopReason--><!--Device-TransferProgress-stopReason: TransferStopReason-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -76,6 +90,8 @@ successfulCount: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TransferProgress-successfulCount: int--><!--Device-TransferProgress-successfulCount: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +109,8 @@ totalCount: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TransferProgress-totalCount: int--><!--Device-TransferProgress-totalCount: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -112,6 +130,8 @@ totalSize: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-TransferProgress-totalSize: long--><!--Device-TransferProgress-totalSize: long-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **系统接口：** 此接口为系统接口。
@@ -129,6 +149,8 @@ transferredSize: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TransferProgress-transferredSize: long--><!--Device-TransferProgress-transferredSize: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 

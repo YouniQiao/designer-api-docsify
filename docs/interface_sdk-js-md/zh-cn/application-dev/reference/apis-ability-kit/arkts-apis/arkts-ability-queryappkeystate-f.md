@@ -1,5 +1,11 @@
 # queryAppKeyState
 
+## 导入模块
+
+```TypeScript
+import { screenLockFileManager } from '@kit.AbilityKit';
+```
+
 ## queryAppKeyState
 
 ```TypeScript
@@ -10,13 +16,15 @@ function queryAppKeyState(): KeyStatus
 
 **起始版本：** 18
 
+<!--Device-screenLockFileManager-function queryAppKeyState(): KeyStatus--><!--Device-screenLockFileManager-function queryAppKeyState(): KeyStatus-End-->
+
 **系统能力：** SystemCapability.Security.ScreenLockFileManager
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| KeyStatus | 锁屏下敏感数据密钥的状态。 |
+| [KeyStatus](arkts-ability-keystatus-e.md) | 锁屏下敏感数据密钥的状态。 |
 
 **错误码：**
 

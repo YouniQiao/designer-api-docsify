@@ -4,6 +4,8 @@ Represents the word selection panel.
 
 **Since:** 24
 
+<!--Device-selectionManager-interface Panel--><!--Device-selectionManager-interface Panel-End-->
+
 **System capability:** SystemCapability.SelectionInput.Selection
 
 **System API:** This is a system API.
@@ -24,6 +26,8 @@ Hides the word selection panel. This API uses a promise to return the result.
 
 **Since:** 24
 
+<!--Device-Panel-hide(): Promise<void>--><!--Device-Panel-hide(): Promise<void>-End-->
+
 **System capability:** SystemCapability.SelectionInput.Selection
 
 **System API:** This is a system API.
@@ -32,7 +36,7 @@ Hides the word selection panel. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -60,14 +64,15 @@ selectionPanel.hide().then(() => {
 moveTo(x: number, y: number): Promise<void>
 ```
 
-Moves the word selection panel to the specified coordinates on the screen. This API uses a promise to return the
-result.
+Moves the word selection panel to the specified coordinates on the screen. This API uses a promise to return the result.
 
 **Since:** 20
 
 **Deprecated since:** 24
 
 **Substitutes:** [moveToGlobalDisplay](arkts-basicservices-panel-i.md#movetoglobaldisplay-1)
+
+<!--Device-Panel-moveTo(x: int, y: int): Promise<void>--><!--Device-Panel-moveTo(x: int, y: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.SelectionInput.Selection
 
@@ -84,7 +89,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -116,10 +121,11 @@ try {
 off(type: 'destroyed', callback?: Callback<void>): void
 ```
 
-Unregisters the callback used to listen for the destroy event of the word selection panel. This API uses an
-asynchronous callback to return the result.
+Unregisters the callback used to listen for the destroy event of the word selection panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 24
+
+<!--Device-Panel-off(type: 'destroyed', callback?: Callback<void>): void--><!--Device-Panel-off(type: 'destroyed', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.SelectionInput.Selection
 
@@ -130,7 +136,7 @@ asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'destroyed' | Yes | Event type, which is **'destroyed'**. |
-| callback | Callback&lt;void&gt; | No | Callback function that returns no value. If this parameter is notspecified, this API unregisters all callbacks for the specified type. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | Callback function that returns no value. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Example**
 
@@ -151,10 +157,11 @@ try {
 off(type: 'hidden', callback?: Callback<void>): void
 ```
 
-Unregisters the callback used to listen for the hide event of the word selection panel. This API uses an
-asynchronous callback to return the result.
+Unregisters the callback used to listen for the hide event of the word selection panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 24
+
+<!--Device-Panel-off(type: 'hidden', callback?: Callback<void>): void--><!--Device-Panel-off(type: 'hidden', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.SelectionInput.Selection
 
@@ -165,7 +172,7 @@ asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hidden' | Yes | Event type, which is **'hidden'**. |
-| callback | Callback&lt;void&gt; | No | Callback function that returns no value. If this parameter is notspecified, this API unregisters all callbacks for the specified type. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | Callback function that returns no value. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Example**
 
@@ -186,10 +193,11 @@ try {
 on(type: 'destroyed', callback: Callback<void>): void
 ```
 
-Registers a callback to listen for the destroy event of the word selection panel. This API uses an asynchronous
-callback to return the result.
+Registers a callback to listen for the destroy event of the word selection panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 24
+
+<!--Device-Panel-on(type: 'destroyed', callback: Callback<void>): void--><!--Device-Panel-on(type: 'destroyed', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.SelectionInput.Selection
 
@@ -200,7 +208,7 @@ callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'destroyed' | Yes | Event type, which is **'destroyed'**. |
-| callback | Callback&lt;void&gt; | Yes | Callback function that returns no value. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Callback function that returns no value. |
 
 **Example**
 
@@ -223,10 +231,11 @@ try {
 on(type: 'hidden', callback: Callback<void>): void
 ```
 
-Registers a callback to listen for the hide event of the word selection panel. This API uses an asynchronous
-callback to return the result.
+Registers a callback to listen for the hide event of the word selection panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 24
+
+<!--Device-Panel-on(type: 'hidden', callback: Callback<void>): void--><!--Device-Panel-on(type: 'hidden', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.SelectionInput.Selection
 
@@ -237,7 +246,7 @@ callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hidden' | Yes | Event type, which is **'hidden'**. |
-| callback | Callback&lt;void&gt; | Yes | Callback function that returns no value. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Callback function that returns no value. |
 
 **Example**
 
@@ -266,6 +275,8 @@ Sets the page content for the word selection panel. This API uses a promise to r
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Panel-setUiContent(path: string): Promise<void>--><!--Device-Panel-setUiContent(path: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.SelectionInput.Selection
 
 **System API:** This is a system API.
@@ -274,13 +285,13 @@ Sets the page content for the word selection panel. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the page content to be set. This path is configured in the**resources/base/profile/main_pages.json** file of the project in the stage model. The FA model is notsupported. |
+| path | string | Yes | Path of the page content to be set. This path is configured in the **resources/base/profile/main_pages.json** file of the project in the stage model. The FA model is not supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -318,6 +329,8 @@ Shows the word selection panel. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Panel-show(): Promise<void>--><!--Device-Panel-show(): Promise<void>-End-->
+
 **System capability:** SystemCapability.SelectionInput.Selection
 
 **System API:** This is a system API.
@@ -326,7 +339,7 @@ Shows the word selection panel. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -354,12 +367,13 @@ selectionPanel.show().then(() => {
 startMoving(): Promise<void>
 ```
 
-Moves the word selection panel by dragging. This API uses a promise to return the result. This API must be
-written in the **onTouch** callback and the event type must be **TouchType.Down**.
+Moves the word selection panel by dragging. This API uses a promise to return the result. This API must be written in the **onTouch** callback and the event type must be **TouchType.Down**.
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Panel-startMoving(): Promise<void>--><!--Device-Panel-startMoving(): Promise<void>-End-->
 
 **System capability:** SystemCapability.SelectionInput.Selection
 
@@ -369,7 +383,7 @@ written in the **onTouch** callback and the event type must be **TouchType.Down*
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -18,13 +18,15 @@ Obtains the fold status of this foldable device.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-display-function getFoldStatus(): FoldStatus--><!--Device-display-function getFoldStatus(): FoldStatus-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| FoldStatus | Fold status of the device. |
+| [FoldStatus](arkts-arkui-foldstatus-e.md) | Fold status of the device. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Enum for physical orientation detected by the sensor.
 
 **Since:** 26.0.0
 
+<!--Device-motion-export enum PhysicalOrientation--><!--Device-motion-export enum PhysicalOrientation-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 **System API:** This is a system API.
@@ -19,6 +21,8 @@ Indicates upright.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PhysicalOrientation-UPRIGHT = 0--><!--Device-PhysicalOrientation-UPRIGHT = 0-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -36,6 +40,8 @@ Indicates left.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhysicalOrientation-LEFT = 1--><!--Device-PhysicalOrientation-LEFT = 1-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 **System API:** This is a system API.
@@ -51,6 +57,8 @@ Indicates the physical orientation is inverted.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PhysicalOrientation-INVERTED = 2--><!--Device-PhysicalOrientation-INVERTED = 2-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -68,6 +76,8 @@ Indicates right.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhysicalOrientation-RIGHT = 3--><!--Device-PhysicalOrientation-RIGHT = 3-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 **System API:** This is a system API.
@@ -84,6 +94,8 @@ Indicates face up.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhysicalOrientation-FACE_UP = 4--><!--Device-PhysicalOrientation-FACE_UP = 4-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 **System API:** This is a system API.
@@ -99,6 +111,8 @@ Indicates face down.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PhysicalOrientation-FACE_DOWN = 5--><!--Device-PhysicalOrientation-FACE_DOWN = 5-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 

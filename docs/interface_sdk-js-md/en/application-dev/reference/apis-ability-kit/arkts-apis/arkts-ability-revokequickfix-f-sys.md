@@ -18,6 +18,8 @@ Revokes quick fix. This API uses an asynchronous callback to return the result.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INSTALL_BUNDLE
 
+<!--Device-quickFixManager-function revokeQuickFix(bundleName: string, callback: AsyncCallback<void>): void--><!--Device-quickFixManager-function revokeQuickFix(bundleName: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Revokes quick fix. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the bundle for which the patch needs to be revoked. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If quick fix is revoked, **err** is**undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If quick fix is revoked, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -67,6 +69,8 @@ Revokes quick fix. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INSTALL_BUNDLE
 
+<!--Device-quickFixManager-function revokeQuickFix(bundleName: string): Promise<void>--><!--Device-quickFixManager-function revokeQuickFix(bundleName: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
 
 **System API:** This is a system API.
@@ -81,7 +85,7 @@ Revokes quick fix. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

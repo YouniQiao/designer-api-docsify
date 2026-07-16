@@ -18,6 +18,8 @@ Obtains the mission information. This API uses an asynchronous callback to retur
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-missionManager-function getMissionInfo(deviceId: string, missionId: int, callback: AsyncCallback<MissionInfo>): void--><!--Device-missionManager-function getMissionInfo(deviceId: string, missionId: int, callback: AsyncCallback<MissionInfo>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Obtains the mission information. This API uses an asynchronous callback to retur
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
 | missionId | number | Yes | Mission ID. |
-| callback | AsyncCallback&lt;MissionInfo&gt; | Yes | Callback used to return the mission information obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<MissionInfo> | Yes | Callback used to return the mission information obtained. |
 
 **Error codes:**
 
@@ -90,6 +92,8 @@ Obtains the mission information. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-missionManager-function getMissionInfo(deviceId: string, missionId: int): Promise<MissionInfo>--><!--Device-missionManager-function getMissionInfo(deviceId: string, missionId: int): Promise<MissionInfo>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
@@ -105,7 +109,7 @@ Obtains the mission information. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MissionInfo&gt; | Promise used to return the mission information obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<MissionInfo> | Promise used to return the mission information obtained. |
 
 **Error codes:**
 

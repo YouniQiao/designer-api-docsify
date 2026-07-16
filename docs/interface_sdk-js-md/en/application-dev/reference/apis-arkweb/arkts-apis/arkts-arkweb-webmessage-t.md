@@ -10,6 +10,8 @@ Defines the data types supported by {@link onMessageEventExt}.
 
 **Atomic service API:** This API can be used in atomic services since API version 9.
 
+<!--Device-webview-type WebMessage = ArrayBuffer | string--><!--Device-webview-type WebMessage = ArrayBuffer | string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 | Type | Description |

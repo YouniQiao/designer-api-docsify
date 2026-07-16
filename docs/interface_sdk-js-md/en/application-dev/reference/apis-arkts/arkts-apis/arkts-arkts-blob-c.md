@@ -4,6 +4,8 @@ Process data as blob type
 
 **Since:** 9
 
+<!--Device-buffer-class Blob--><!--Device-buffer-class Blob-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Puts the **Blob** data into an **ArrayBuffer** object. This API uses a promise t
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Blob-arrayBuffer(): Promise<ArrayBuffer>--><!--Device-Blob-arrayBuffer(): Promise<ArrayBuffer>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | @syscap SystemCapability.Utils.Lang@crossplatform |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ArrayBuffer> | @syscap SystemCapability.Utils.Lang@crossplatform |
 
 **Example**
 
@@ -59,14 +63,16 @@ A constructor used to create a **Blob** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Blob-constructor(sources: string[] | ArrayBuffer[] | TypedArray[] | DataView[] | Blob[], options?: Object)--><!--Device-Blob-constructor(sources: string[] | ArrayBuffer[] | TypedArray[] | DataView[] | Blob[], options?: Object)-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sources | string[] \| ArrayBuffer[] \| TypedArray[] \| DataView[] \| Blob[] | Yes | Data sources of the **Blob**object. |
-| options | Object | No | options:<br>- **endings**: specifies how the terminator **'\n'** is output. Thevalue can be **'native'** or **'transparent'**. **'native'** means that the terminator follows the system.**'transparent'** means that the terminator stored in the **Blob** object remains unchanged. The defaultvalue is **'transparent'**.<br>- **type**: type of the data in the **Blob** object. This type represents theMIME type of the data. However, it is not used for type format validation. The default value is **''**. |
+| sources | string[] \| ArrayBuffer[] \| TypedArray[] \| DataView[] \| Blob[] | Yes | Data sources of the **Blob** object. |
+| options | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | No | options:<br>- **endings**: specifies how the terminator **'\n'** is output. The value can be **'native'** or **'transparent'**. **'native'** means that the terminator follows the system.**'transparent'** means that the terminator stored in the **Blob** object remains unchanged. The default value is **'transparent'**.<br>- **type**: type of the data in the **Blob** object. This type represents the MIME type of the data. However, it is not used for type format validation. The default value is **''**. |
 
 **Example**
 
@@ -96,6 +102,8 @@ Creates and returns a **Blob** object that contains specified data from this **B
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Blob-slice(start?: int, end?: int, type?: string): Blob--><!--Device-Blob-slice(start?: int, end?: int, type?: string): Blob-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -103,14 +111,14 @@ Creates and returns a **Blob** object that contains specified data from this **B
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | start | number | No | Offset to the start position of data. The default value is **0**. |
-| end | number | No | Offset to the end position of data. The default value is the data length in the original**Blob** object. |
+| end | number | No | Offset to the end position of data. The default value is the data length in the original **Blob** object. |
 | type | string | No | Type of the data in the new **Blob** object. The default value is **''**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Blob | @syscap SystemCapability.Utils.Lang@crossplatform |
+| [Blob](arkts-arkts-blob-c.md) | @syscap SystemCapability.Utils.Lang@crossplatform |
 
 **Example**
 
@@ -136,13 +144,15 @@ Decodes data using UTF-8 and returns a string. This API uses a promise to return
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Blob-text(): Promise<string>--><!--Device-Blob-text(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | @syscap SystemCapability.Utils.Lang@crossplatform |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | @syscap SystemCapability.Utils.Lang@crossplatform |
 
 **Example**
 
@@ -172,6 +182,8 @@ Total size of the Blob instance, in bytes.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Blob-get size(): int--><!--Device-Blob-get size(): int-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## type
@@ -187,6 +199,8 @@ Type of the data in the Blob instance.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Blob-get type(): string--><!--Device-Blob-get type(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

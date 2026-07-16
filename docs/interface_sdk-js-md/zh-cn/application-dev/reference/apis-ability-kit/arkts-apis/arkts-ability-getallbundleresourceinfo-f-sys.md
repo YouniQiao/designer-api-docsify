@@ -1,5 +1,11 @@
 # getAllBundleResourceInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleResourceManager } from '@kit.AbilityKit';
+```
+
 ## getAllBundleResourceInfo
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getAllBundleResourceInfo(resourceFlags: number, callback: AsyncCallback
 
 **需要权限：** ohos.permission.GET_INSTALLED_BUNDLE_LIST and ohos.permission.GET_BUNDLE_RESOURCES
 
+<!--Device-bundleResourceManager-function getAllBundleResourceInfo(resourceFlags: int, callback: AsyncCallback<Array<BundleResourceInfo>>): void--><!--Device-bundleResourceManager-function getAllBundleResourceInfo(resourceFlags: int, callback: AsyncCallback<Array<BundleResourceInfo>>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
 **系统接口：** 此接口为系统接口。
@@ -21,7 +29,7 @@ function getAllBundleResourceInfo(resourceFlags: number, callback: AsyncCallback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resourceFlags | number | 是 | 指定返回的BundleResourceInfo所包含的信息。 |
-| callback | AsyncCallback&lt;Array&lt;BundleResourceInfo&gt;&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的BundleResourceInfo数组；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<BundleResourceInfo>> | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的BundleResourceInfo数组；否则为错误对象。 |
 
 **错误码：**
 
@@ -44,6 +52,8 @@ function getAllBundleResourceInfo(resourceFlags: number): Promise<Array<BundleRe
 
 **需要权限：** ohos.permission.GET_INSTALLED_BUNDLE_LIST and ohos.permission.GET_BUNDLE_RESOURCES
 
+<!--Device-bundleResourceManager-function getAllBundleResourceInfo(resourceFlags: int): Promise<Array<BundleResourceInfo>>--><!--Device-bundleResourceManager-function getAllBundleResourceInfo(resourceFlags: int): Promise<Array<BundleResourceInfo>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
 **系统接口：** 此接口为系统接口。
@@ -58,7 +68,7 @@ function getAllBundleResourceInfo(resourceFlags: number): Promise<Array<BundleRe
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;BundleResourceInfo&gt;&gt; | Promise对象，返回BundleResourceInfo数组。 |
+| Promise<Array<BundleResourceInfo>> | Promise对象，返回BundleResourceInfo数组。 |
 
 **错误码：**
 

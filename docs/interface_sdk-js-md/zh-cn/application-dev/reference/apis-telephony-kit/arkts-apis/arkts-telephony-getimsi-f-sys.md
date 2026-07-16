@@ -1,5 +1,11 @@
 # getIMSI（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## getIMSI
 
 ```TypeScript
@@ -12,6 +18,8 @@ Get the international mobile subscriber ID.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getIMSI(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getIMSI(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -21,7 +29,7 @@ Get the international mobile subscriber ID.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;string&gt; | 是 | Indicates the callback for gettingthe international mobile subscriber ID. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | Indicates the callback for getting the international mobile subscriber ID. |
 
 **错误码：**
 
@@ -61,6 +69,8 @@ Get the international mobile subscriber ID.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getIMSI(slotId: int): Promise<string>--><!--Device-sim-function getIMSI(slotId: int): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -75,7 +85,7 @@ Get the international mobile subscriber ID.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the international mobile subscriber ID. |
+| Promise<string> | Returns the international mobile subscriber ID. |
 
 **错误码：**
 

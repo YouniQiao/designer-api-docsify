@@ -1,5 +1,11 @@
 # setMouseScrollDirection（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+```
+
 ## setMouseScrollDirection
 
 ```TypeScript
@@ -11,6 +17,8 @@ function setMouseScrollDirection(inverted: boolean): Promise<void>
 **起始版本：** 24
 
 **需要权限：** ohos.permission.INPUT_DEVICE_CONTROLLER
+
+<!--Device-pointer-function setMouseScrollDirection(inverted: boolean): Promise<void>--><!--Device-pointer-function setMouseScrollDirection(inverted: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -26,7 +34,7 @@ function setMouseScrollDirection(inverted: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

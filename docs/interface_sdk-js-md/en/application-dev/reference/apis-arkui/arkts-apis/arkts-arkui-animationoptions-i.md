@@ -1,9 +1,10 @@
 # AnimationOptions
 
-Provides the configuration options for animation playback, including the playback duration, number of playback times,
-and autoplay behavior.
+Provides the configuration options for animation playback, including the playback duration, number of playback times,and autoplay behavior.
 
 **Since:** 12
+
+<!--Device-unnamed-declare interface AnimationOptions--><!--Device-unnamed-declare interface AnimationOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -35,6 +36,8 @@ The default value is **true**.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-AnimationOptions-autoPlay?: boolean--><!--Device-AnimationOptions-autoPlay?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## duration
@@ -45,8 +48,7 @@ duration?: number
 
 Total playback duration for the image sequence.
 
-For **PixelMap** arrays, the default value is 1s per image. For local or application resources, the duration is
-determined by the playback delay embedded in the image resource.
+For **PixelMap** arrays, the default value is 1s per image. For local or application resources, the duration is determined by the playback delay embedded in the image resource.
 
 Unit: ms.
 
@@ -62,6 +64,8 @@ Negative values are treated as the default value.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AnimationOptions-duration?: number--><!--Device-AnimationOptions-duration?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## frameDurations
@@ -74,8 +78,7 @@ Per-frame playback duration. The setting overrides **duration** if specified.
 
 If **duration** and **frameDurations** are set, **duration** is ignored.
 
-If the value of **frameDurations** is inconsistent with the image count, animation timing distributes across the
-total duration.
+If the value of **frameDurations** is inconsistent with the image count, animation timing distributes across the total duration.
 
 Unit: ms.
 
@@ -87,6 +90,8 @@ Unit: ms.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-AnimationOptions-frameDurations?: Array<number>--><!--Device-AnimationOptions-frameDurations?: Array<number>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## iterations
@@ -97,8 +102,7 @@ iterations?: number
 
 Number of playback times for the image sequence.
 
-A value of **-1** indicates infinite playback, **0** indicates no playback, and a value greater than 0 represents
-the number of playback times.
+A value of **-1** indicates infinite playback, **0** indicates no playback, and a value greater than 0 represents the number of playback times.
 
 The default value is **1**.
 
@@ -110,6 +114,8 @@ The default value is **1**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AnimationOptions-iterations?: number--><!--Device-AnimationOptions-iterations?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## stopMode
@@ -120,8 +126,7 @@ stopMode?: AnimationStopMode
 
 Sets the stop mode for an animation.
 
-The default value is **AnimationStopMode.FIRST_FRAME**, indicating that the animation returns to the first frame
-when it stops.
+The default value is **AnimationStopMode.FIRST_FRAME**, indicating that the animation returns to the first frame when it stops.
 
 **Type:** AnimationStopMode
 
@@ -132,6 +137,8 @@ when it stops.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-AnimationOptions-stopMode?: AnimationStopMode--><!--Device-AnimationOptions-stopMode?: AnimationStopMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -12,14 +12,13 @@ import { kioskManager } from '@kit.AbilityKit';
 function exitKioskMode(context: UIAbilityContext): Promise<void>
 ```
 
-Exits kiosk mode. This API uses a promise to return the result.
-This API takes effect only for applications that have entered kiosk mode.
-This API can be properly called only on phones, PC/2-in-1 devices, and tablets. On other devices, it returns the
-error code 801.
+Exits kiosk mode. This API uses a promise to return the result.This API takes effect only for applications that have entered kiosk mode.This API can be properly called only on phones, PC/2-in-1 devices, and tablets. On other devices, it returns the error code 801.
 
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-kioskManager-function exitKioskMode(context: UIAbilityContext): Promise<void>--><!--Device-kioskManager-function exitKioskMode(context: UIAbilityContext): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -27,13 +26,13 @@ error code 801.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIAbilityContext | Yes | Context of the UIAbility that needs to exit kiosk mode. |
+| context | [UIAbilityContext](arkts-ability-uiabilitycontext-t.md) | Yes | Context of the UIAbility that needs to exit kiosk mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -1,9 +1,10 @@
 # FileSync
 
-Provides APIs for the file manager application to perform device-cloud sync of the files stored in the Drive Kit.
-Before using the APIs of this class, you need to create a **FileSync** instance.
+Provides APIs for the file manager application to perform device-cloud sync of the files stored in the Drive Kit.Before using the APIs of this class, you need to create a **FileSync** instance.
 
 **Since:** 12
+
+<!--Device-cloudSync-class FileSync--><!--Device-cloudSync-class FileSync-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -23,6 +24,8 @@ A constructor used to create a **FileSync** instance.
 
 **Since:** 12
 
+<!--Device-FileSync-constructor(bundleName: string)--><!--Device-FileSync-constructor(bundleName: string)-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
@@ -37,8 +40,8 @@ A constructor used to create a **FileSync** instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are leftunspecified;<br>2.Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
 **Example**
 
@@ -61,6 +64,8 @@ Query the upload state of the cloud file list.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FileSync-getUploadList(uris: Array<string>): Promise<Array<UploadProgress>>--><!--Device-FileSync-getUploadList(uris: Array<string>): Promise<Array<UploadProgress>>-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
@@ -69,13 +74,13 @@ Query the upload state of the cloud file list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uris | Array&lt;string&gt; | Yes | uris of queryed files. |
+| uris | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | uris of queryed files. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;UploadProgress&gt;&gt; | - Return Promise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<UploadProgress>> | - Return Promise. |
 
 **Error codes:**
 
@@ -99,6 +104,8 @@ Pause the upload of the cloud file.
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FileSync-pauseUpload(uri: string): void--><!--Device-FileSync-pauseUpload(uri: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -134,6 +141,8 @@ Registers to cloud file upload progress change. This method uses a callback to g
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FileSync-registerUploadProgress(callback: Callback<UploadProgress>): void--><!--Device-FileSync-registerUploadProgress(callback: Callback<UploadProgress>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
@@ -142,7 +151,7 @@ Registers to cloud file upload progress change. This method uses a callback to g
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;UploadProgress&gt; | Yes | Callback function. The callback will be triggered when the upload progress changes, including state updates, processed size changes, and error occurrences. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<UploadProgress> | Yes | Callback function. The callback will be triggered when the upload progress changes, including state updates, processed size changes, and error occurrences. |
 
 **Error codes:**
 
@@ -166,6 +175,8 @@ Resume the upload of the cloud file.
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FileSync-resumeUpload(uri: string): void--><!--Device-FileSync-resumeUpload(uri: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -200,6 +211,8 @@ Unregisters from cloud file upload progress change.
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FileSync-unregisterUploadProgress(): void--><!--Device-FileSync-unregisterUploadProgress(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

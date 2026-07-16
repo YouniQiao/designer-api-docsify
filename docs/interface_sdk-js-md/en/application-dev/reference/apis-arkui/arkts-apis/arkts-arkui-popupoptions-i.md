@@ -4,6 +4,8 @@ Defines the style parameters of the popup.
 
 **Since:** 11
 
+<!--Device-unnamed-export interface PopupOptions--><!--Device-unnamed-export interface PopupOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,6 +32,8 @@ By default, no buttons are displayed.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PopupOptions-buttons?: [PopupButtonOptions?, PopupButtonOptions?]--><!--Device-PopupOptions-buttons?: [PopupButtonOptions?, PopupButtonOptions?]-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## direction
@@ -49,6 +53,8 @@ Default value: **Direction.Auto**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupOptions-direction?: Direction--><!--Device-PopupOptions-direction?: Direction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,6 +80,8 @@ By default, no icon is displayed.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PopupOptions-icon?: PopupIconOptions--><!--Device-PopupOptions-icon?: PopupIconOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## maxWidth
@@ -86,9 +94,7 @@ Maximum width of the popup. This API allows the popup to display with a custom w
 
 **NOTE**
 
-1. When using resource references, ensure that the parameter type matches the attribute method type.
-2. **maxWidth** accepts numeric values (both floating-point and integer values), such as **$r('app.float.maxWidth')** and **$r('app.integer.maxWidth')**.
-3. When the type is Resource, values default to px units if no unit is explicitly specified.
+1. When using resource references, ensure that the parameter type matches the attribute method type.2. **maxWidth** accepts numeric values (both floating-point and integer values), such as **$r('app.float.maxWidth')** and **$r('app.integer.maxWidth')**.3. When the type is Resource, values default to px units if no unit is explicitly specified.
 
 Default value: **400vp**
 
@@ -99,6 +105,8 @@ Default value: **400vp**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-PopupOptions-maxWidth?: Dimension--><!--Device-PopupOptions-maxWidth?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -124,6 +132,8 @@ By default, no message is displayed.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PopupOptions-message: PopupTextOptions--><!--Device-PopupOptions-message: PopupTextOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onClose
@@ -143,6 +153,8 @@ By default, the callback for the close button is not set.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupOptions-onClose?: () => void--><!--Device-PopupOptions-onClose?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -168,6 +180,8 @@ Default value: **true**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PopupOptions-showClose?: boolean | Resource--><!--Device-PopupOptions-showClose?: boolean | Resource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## title
@@ -187,6 +201,8 @@ By default, no title is displayed.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupOptions-title?: PopupTextOptions--><!--Device-PopupOptions-title?: PopupTextOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

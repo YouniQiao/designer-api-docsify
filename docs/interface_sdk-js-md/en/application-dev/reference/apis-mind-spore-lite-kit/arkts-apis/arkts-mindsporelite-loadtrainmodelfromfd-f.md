@@ -21,6 +21,14 @@ Load train model from file description
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-mindSporeLite-function loadTrainModelFromFd(
+    model: int,
+    trainCfg?: TrainCfg,
+    context?: Context): Promise<Model>--><!--Device-mindSporeLite-function loadTrainModelFromFd(
+    model: int,
+    trainCfg?: TrainCfg,
+    context?: Context): Promise<Model>-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Parameters:**
@@ -28,21 +36,21 @@ Load train model from file description
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | model | number | Yes | model file description |
-| trainCfg | TrainCfg | No | model train configuration |
-| context | Context | No | model build context |
+| trainCfg | [TrainCfg](arkts-mindsporelite-traincfg-i.md) | No | model train configuration |
+| context | [Context](arkts-mindsporelite-context-i.md) | No | model build context |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Model&gt; | the promise of the built model |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Model> | the promise of the built model |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. Thedevice information is incorrect.**ArkTS mode:** This error code applies only to ArkTS-Sta. |
-| 1000012 | Failed to create native training model from file descriptor (fd). Possiblecauses: 1. The model file or file descriptor (fd) is incorrect; 2. The training configuration isincorrect.**ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 1000001 | Invalid context. Possible causes: 1. The context target is incorrect; 2. The device information is incorrect.**ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 1000012 | Failed to create native training model from file descriptor (fd). Possible causes: 1. The model file or file descriptor (fd) is incorrect; 2. The training configuration is incorrect.**ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 **Example**
 

@@ -1,5 +1,11 @@
 # addDockApp
 
+## 导入模块
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+```
+
 ## addDockApp
 
 ```TypeScript
@@ -8,20 +14,20 @@ function addDockApp(admin: Want, bundleName: string, abilityName: string, index?
 
 根据位置索引添加应用到PC/2in1设备的底部快捷栏，添加后用户可以通过点击快捷栏的应用图标直接启动应用，应用图标为应用在桌面上显示的默认图标。
 
-> **说明：**
->
-> 1.若位置0或1上已存在“应用中心”或“任务中心”，则尝试向该位置添加应用会返回错误码9201019；若该位置为其他应用，则可正常添加。
->
-> 2.以下应用不可通过本接口添加到快捷栏：“应用中心”、“任务中心”、“文件管理”、“回收站”。
->
-> 3.仅支持添加具有应用程序入口（即有图标）的应用，无图标的应用不支持添加。
->
-> 4.仅支持配置当前用户下的快捷栏，每个用户的快捷栏最多可容纳100个应用。
->
-> 5.在已有应用的位置插入新应用时，新应用将直接占用该位置，原应用及其后的应用依次向后顺移一位。
->
-> 6.若不传index参数，或传入的index值大于快捷栏当前应用数量，则新应用默认追加到快捷栏末尾。
->
+> **说明：**  
+>  
+> 1.若位置0或1上已存在“应用中心”或“任务中心”，则尝试向该位置添加应用会返回错误码9201019；若该位置为其他应用，则可正常添加。  
+>  
+> 2.以下应用不可通过本接口添加到快捷栏：“应用中心”、“任务中心”、“文件管理”、“回收站”。  
+>  
+> 3.仅支持添加具有应用程序入口（即有图标）的应用，无图标的应用不支持添加。  
+>  
+> 4.仅支持配置当前用户下的快捷栏，每个用户的快捷栏最多可容纳100个应用。  
+>  
+> 5.在已有应用的位置插入新应用时，新应用将直接占用该位置，原应用及其后的应用依次向后顺移一位。  
+>  
+> 6.若不传index参数，或传入的index值大于快捷栏当前应用数量，则新应用默认追加到快捷栏末尾。  
+>  
 > 7.通过本接口添加应用到快捷栏后，用户可以手动移除或调整应用的位置。
 
 **起始版本：** 24
@@ -30,13 +36,15 @@ function addDockApp(admin: Want, bundleName: string, abilityName: string, index?
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function addDockApp(admin: Want, bundleName: string, abilityName: string, index?: number): void--><!--Device-applicationManager-function addDockApp(admin: Want, bundleName: string, abilityName: string, index?: number): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | bundleName | string | 是 | 应用的包名。 |
 | abilityName | string | 是 | 应用的Ability名称，仅支持应用程序入口Ability。 |
 | index | number | 否 | 应用在快捷栏中的位置索引，<br>取值应为[0,99]内的整数，默认值为99。 默认值： 99。 |

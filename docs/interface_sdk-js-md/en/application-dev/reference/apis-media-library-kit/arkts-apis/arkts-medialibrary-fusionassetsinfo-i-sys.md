@@ -4,6 +4,8 @@ Fusion assets information.
 
 **Since:** 22
 
+<!--Device-photoAccessHelper-interface FusionAssetsInfo--><!--Device-photoAccessHelper-interface FusionAssetsInfo-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Assets count.
 
 **Since:** 22
 
+<!--Device-FusionAssetsInfo-assetsCount: int--><!--Device-FusionAssetsInfo-assetsCount: int-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ Assets path.
 
 **Since:** 22
 
+<!--Device-FusionAssetsInfo-assetsPath: string--><!--Device-FusionAssetsInfo-assetsPath: string-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ Assets type.
 **Type:** FusionAssetType
 
 **Since:** 22
+
+<!--Device-FusionAssetsInfo-assetsType: FusionAssetType--><!--Device-FusionAssetsInfo-assetsType: FusionAssetType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

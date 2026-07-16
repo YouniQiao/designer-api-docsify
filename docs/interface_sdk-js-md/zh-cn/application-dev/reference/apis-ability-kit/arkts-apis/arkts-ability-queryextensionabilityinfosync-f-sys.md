@@ -1,5 +1,11 @@
 # queryExtensionAbilityInfoSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## queryExtensionAbilityInfoSync
 
 ```TypeScript
@@ -15,6 +21,10 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: Extensi
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundleManager-function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: ExtensionAbilityType,
+    extensionAbilityFlags: int, userId?: int): Array<ExtensionAbilityInfo>--><!--Device-bundleManager-function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: ExtensionAbilityType,
+    extensionAbilityFlags: int, userId?: int): Array<ExtensionAbilityInfo>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,8 +33,8 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: Extensi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | Want | 是 | 表示包含要查询的应用Bundle名称的Want。 |
-| extensionAbilityType | ExtensionAbilityType | 是 | 标识extensionAbility的类型。 |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 表示包含要查询的应用Bundle名称的Want。 |
+| extensionAbilityType | [ExtensionAbilityType](arkts-ability-extensionabilitytype-e.md) | 是 | 标识extensionAbility的类型。 |
 | extensionAbilityFlags | number | 是 | 表示用于指定将返回的ExtensionInfo对象中包含的信息的标志，具体取值及不同含义参考[ExtensionAbilityFlag](arkts-ability-extensionabilityflag-e-sys.md)。 |
 | userId | number | 否 | 表示用户ID，可以通过[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)获取，默认值：调用方所在用户，取值范围：大于等于0。 |
 
@@ -32,7 +42,7 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: Extensi
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;ExtensionAbilityInfo&gt; | Array&lt;ExtensionAbilityInfo&gt;信息。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<ExtensionAbilityInfo> | Array&lt;ExtensionAbilityInfo&gt;信息。 |
 
 **错误码：**
 
@@ -40,7 +50,7 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: Extensi
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicitquery. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified extensionAbility is not found. |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified userId is invalid. |
@@ -113,6 +123,10 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundleManager-function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,
+    extensionAbilityFlags: int, userId?: int): Array<ExtensionAbilityInfo>--><!--Device-bundleManager-function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,
+    extensionAbilityFlags: int, userId?: int): Array<ExtensionAbilityInfo>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -121,7 +135,7 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | Want | 是 | 表示包含要查询的应用Bundle名称的Want。 |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 表示包含要查询的应用Bundle名称的Want。 |
 | extensionAbilityType | string | 是 | 表示自定义extensionAbility的类型。 |
 | extensionAbilityFlags | number | 是 | 表示返回的ExtensionInfo对象中需要包含的信息标志，具体取值及不同含义参考[ExtensionAbilityFlag](arkts-ability-extensionabilityflag-e-sys.md)。 |
 | userId | number | 否 | 表示用户ID，可以通过[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)获取，默认值：调用方所在用户，取值范围：大于等于0。 |
@@ -130,7 +144,7 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;ExtensionAbilityInfo&gt; | 同步返回Array&lt;ExtensionAbilityInfo&gt;。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<ExtensionAbilityInfo> | 同步返回Array&lt;ExtensionAbilityInfo&gt;。 |
 
 **错误码：**
 
@@ -138,7 +152,7 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicitquery. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified extensionAbility is not found. |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified userId is invalid. |
@@ -211,6 +225,10 @@ function queryExtensionAbilityInfoSync(extensionAbilityType: string, extensionAb
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundleManager-function queryExtensionAbilityInfoSync(extensionAbilityType: string, extensionAbilityFlags: int,
+    userId?: int): Array<ExtensionAbilityInfo>--><!--Device-bundleManager-function queryExtensionAbilityInfoSync(extensionAbilityType: string, extensionAbilityFlags: int,
+    userId?: int): Array<ExtensionAbilityInfo>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -227,7 +245,7 @@ function queryExtensionAbilityInfoSync(extensionAbilityType: string, extensionAb
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;ExtensionAbilityInfo&gt; | 同步返回Array&lt;ExtensionAbilityInfo&gt;。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<ExtensionAbilityInfo> | 同步返回Array&lt;ExtensionAbilityInfo&gt;。 |
 
 **错误码：**
 

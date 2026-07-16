@@ -18,6 +18,8 @@ start ManualNetworkScan , Real-time report.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-radio-function startManualNetworkScan(slotId: int, callback: Callback<NetworkSearchRealTimeResult>): void--><!--Device-radio-function startManualNetworkScan(slotId: int, callback: Callback<NetworkSearchRealTimeResult>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ start ManualNetworkScan , Real-time report.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number. |
-| callback | Callback&lt;NetworkSearchRealTimeResult&gt; | Yes | Indicates the callback for manual network scan |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<NetworkSearchRealTimeResult> | Yes | Indicates the callback for manual network scan |
 
 **Error codes:**
 

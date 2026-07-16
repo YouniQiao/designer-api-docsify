@@ -12,8 +12,7 @@ import { bundle } from '@kit.AbilityKit';
 function getBundleInfos(bundleFlag: BundleFlag, userId: number, callback: AsyncCallback<Array<BundleInfo>>): void
 ```
 
-Obtains all BundleInfo for a specified user in the system.
-This API uses an asynchronous callback to return the result.
+Obtains all BundleInfo for a specified user in the system.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -23,6 +22,8 @@ This API uses an asynchronous callback to return the result.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundle-function getBundleInfos(bundleFlag: BundleFlag, userId: number, callback: AsyncCallback<Array<BundleInfo>>): void--><!--Device-bundle-function getBundleInfos(bundleFlag: BundleFlag, userId: number, callback: AsyncCallback<Array<BundleInfo>>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **System API:** This is a system API.
@@ -31,9 +32,9 @@ This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlag | BundleFlag | Yes | Flag used to specify the information contained in the returned bundleinformation object. Value range: see the bundle information related flagsin [BundleFlag](arkts-ability-bundleflag-e.md). |
+| bundleFlag | [BundleFlag](arkts-ability-bundleflag-e.md) | Yes | Flag used to specify the information contained in the returned bundle information object. Value range: see the bundle information related flags in [BundleFlag](arkts-ability-bundleflag-e.md). |
 | userId | number | Yes | User ID. Value range: greater than or equal to 0. |
-| callback | AsyncCallback&lt;Array&lt;BundleInfo&gt;&gt; | Yes | Callback used to return the result. If getBundleInfosis successful, **err** is **undefined**, and the BundleInfo of allbundles under the specified user as the input parameter at program startup.Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<BundleInfo>> | Yes | Callback used to return the result. If getBundleInfos is successful, **err** is **undefined**, and the BundleInfo of all bundles under the specified user as the input parameter at program startup.Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -70,6 +71,8 @@ Obtains all BundleInfo for the current user. This API uses an asynchronous callb
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundle-function getBundleInfos(bundleFlag: BundleFlag, callback: AsyncCallback<Array<BundleInfo>>): void--><!--Device-bundle-function getBundleInfos(bundleFlag: BundleFlag, callback: AsyncCallback<Array<BundleInfo>>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **System API:** This is a system API.
@@ -78,8 +81,8 @@ Obtains all BundleInfo for the current user. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlag | BundleFlag | Yes | Flag used to specify the information contained in the returned bundleinformation object. Value range: see the bundle information related flagsin [BundleFlag](arkts-ability-bundleflag-e.md). |
-| callback | AsyncCallback&lt;Array&lt;BundleInfo&gt;&gt; | Yes | Callback used to return the result. If getBundleInfosis successful, **err** is **undefined**, and all available BundleInfo as the input parameter atprogram startup. Otherwise, **err** is an error object. |
+| bundleFlag | [BundleFlag](arkts-ability-bundleflag-e.md) | Yes | Flag used to specify the information contained in the returned bundle information object. Value range: see the bundle information related flags in [BundleFlag](arkts-ability-bundleflag-e.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<BundleInfo>> | Yes | Callback used to return the result. If getBundleInfos is successful, **err** is **undefined**, and all available BundleInfo as the input parameter at program startup. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -115,6 +118,8 @@ Obtains all BundleInfo for a specified user. This API uses a promise to return t
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundle-function getBundleInfos(bundleFlag: BundleFlag, userId?: number): Promise<Array<BundleInfo>>--><!--Device-bundle-function getBundleInfos(bundleFlag: BundleFlag, userId?: number): Promise<Array<BundleInfo>>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **System API:** This is a system API.
@@ -123,14 +128,14 @@ Obtains all BundleInfo for a specified user. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlag | BundleFlag | Yes | Flag used to specify the information contained in thereturned bundle information object. Value range: see the bundle information related flagsin [BundleFlag](arkts-ability-bundleflag-e.md). |
+| bundleFlag | [BundleFlag](arkts-ability-bundleflag-e.md) | Yes | Flag used to specify the information contained in the returned bundle information object. Value range: see the bundle information related flags in [BundleFlag](arkts-ability-bundleflag-e.md). |
 | userId | number | No | User ID.Default value: the user to which the caller belongs.Value range: greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleInfo&gt;&gt; | Promise used to return all available BundleInfo. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<BundleInfo>> | Promise used to return all available BundleInfo. |
 
 **Example**
 

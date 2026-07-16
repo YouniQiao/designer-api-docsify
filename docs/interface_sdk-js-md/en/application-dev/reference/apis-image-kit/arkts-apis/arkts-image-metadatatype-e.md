@@ -4,6 +4,8 @@ Enumerates image metadata types.
 
 **Since:** 13
 
+<!--Device-image-enum MetadataType--><!--Device-image-enum MetadataType-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## EXIF_METADATA
@@ -15,6 +17,8 @@ EXIF_METADATA = 1
 Exif data.
 
 **Since:** 13
+
+<!--Device-MetadataType-EXIF_METADATA = 1--><!--Device-MetadataType-EXIF_METADATA = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -28,6 +32,8 @@ Fragment map metadata.
 
 **Since:** 13
 
+<!--Device-MetadataType-FRAGMENT_METADATA = 2--><!--Device-MetadataType-FRAGMENT_METADATA = 2-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## GIF_METADATA
@@ -39,6 +45,8 @@ GIF_METADATA = 5
 GIF image metadata.
 
 **Since:** 20
+
+<!--Device-MetadataType-GIF_METADATA = 5--><!--Device-MetadataType-GIF_METADATA = 5-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -54,6 +62,8 @@ Metadata of a HEIFS image.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MetadataType-HEIFS_METADATA = 15--><!--Device-MetadataType-HEIFS_METADATA = 15-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## DNG_METADATA
@@ -67,6 +77,8 @@ Metadata of a DNG image.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MetadataType-DNG_METADATA = 16--><!--Device-MetadataType-DNG_METADATA = 16-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -82,6 +94,8 @@ Metadata of a WebP image.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MetadataType-WEBP_METADATA = 17--><!--Device-MetadataType-WEBP_METADATA = 17-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## PNG_METADATA
@@ -95,6 +109,8 @@ Metadata of a PNG image.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MetadataType-PNG_METADATA = 19--><!--Device-MetadataType-PNG_METADATA = 19-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -110,6 +126,8 @@ Metadata of a JFIF image.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MetadataType-JFIF_METADATA = 20--><!--Device-MetadataType-JFIF_METADATA = 20-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## TIFF_METADATA
@@ -123,6 +141,8 @@ Metadata of a TIFF image.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MetadataType-TIFF_METADATA = 21--><!--Device-MetadataType-TIFF_METADATA = 21-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -138,6 +158,8 @@ XMP metadata.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MetadataType-XMP_METADATA = 22--><!--Device-MetadataType-XMP_METADATA = 22-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## AVIS_METADATA
@@ -151,6 +173,8 @@ Metadata of a Avis image.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MetadataType-AVIS_METADATA = 23--><!--Device-MetadataType-AVIS_METADATA = 23-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

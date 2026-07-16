@@ -16,6 +16,8 @@ Queries the data traffic (including all TCP and UDP data packets) sent through a
 
 **Since:** 11
 
+<!--Device-statistics-function getSockfdTxBytes(sockfd: int, callback: AsyncCallback<long>): void--><!--Device-statistics-function getSockfdTxBytes(sockfd: int, callback: AsyncCallback<long>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -23,7 +25,7 @@ Queries the data traffic (including all TCP and UDP data packets) sent through a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sockfd | number | Yes | Indicates the file descriptor of the given socket. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Returns the data traffic bytes sent by the specified sockfd. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Returns the data traffic bytes sent by the specified sockfd. |
 
 **Error codes:**
 
@@ -62,6 +64,8 @@ Queries the data traffic (including all TCP and UDP data packets) sent through a
 
 **Since:** 11
 
+<!--Device-statistics-function getSockfdTxBytes(sockfd: int): Promise<long>--><!--Device-statistics-function getSockfdTxBytes(sockfd: int): Promise<long>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -74,7 +78,7 @@ Queries the data traffic (including all TCP and UDP data packets) sent through a
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns the data traffic bytes sent by the specified sockfd. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Returns the data traffic bytes sent by the specified sockfd. |
 
 **Error codes:**
 

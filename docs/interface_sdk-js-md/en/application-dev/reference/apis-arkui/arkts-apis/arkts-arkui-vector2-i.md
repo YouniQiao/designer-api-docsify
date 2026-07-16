@@ -4,6 +4,8 @@ Defines a vector that contains the x and y coordinate values.
 
 **Since:** 11
 
+<!--Device-unnamed-interface Vector2--><!--Device-unnamed-interface Vector2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## x
@@ -24,6 +26,8 @@ Value range: (-∞, +∞).
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Vector2-x: number--><!--Device-Vector2-x: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
@@ -43,6 +47,8 @@ Value range: (-∞, +∞).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Vector2-y: number--><!--Device-Vector2-y: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

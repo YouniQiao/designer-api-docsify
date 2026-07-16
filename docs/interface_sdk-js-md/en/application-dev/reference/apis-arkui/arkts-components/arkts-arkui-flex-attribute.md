@@ -8,5 +8,7 @@ The [universal events](arkts-arkui-commonmethod-c.md) are supported.
 
 **Since:** 7
 
+<!--Device-unnamed-declare class FlexAttribute extends CommonMethod<FlexAttribute>--><!--Device-unnamed-declare class FlexAttribute extends CommonMethod<FlexAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

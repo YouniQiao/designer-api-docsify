@@ -1,11 +1,18 @@
 # AudioRecordingManager
 
-提供录像策略管理，包括协同录音
-和录制控制能力。
+提供录像策略管理，包括协同录音和录制控制能力。
 
 **起始版本：** 26.0.0
 
+<!--Device-audio-interface AudioRecordingManager--><!--Device-audio-interface AudioRecordingManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## offSystemRecordControllerEnabledChange
 
@@ -19,6 +26,8 @@ offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControlle
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioRecordingManager-offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControllerChangeInfo>): void--><!--Device-AudioRecordingManager-offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControllerChangeInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -27,7 +36,7 @@ offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControlle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;SystemRecordControllerChangeInfo&gt; | 否 | 订阅中使用的回调取消订阅功能。如果不使用此参数，则当前订阅的所有回调之前的流程将被取消订阅 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SystemRecordControllerChangeInfo> | 否 | 订阅中使用的回调取消订阅功能。如果不使用此参数，则当前订阅的所有回调之前的流程将被取消订阅 |
 
 **错误码：**
 
@@ -49,6 +58,8 @@ onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioRecordingManager-onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerChangeInfo>): void--><!--Device-AudioRecordingManager-onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerChangeInfo>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -57,7 +68,7 @@ onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerC
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;SystemRecordControllerChangeInfo&gt; | 是 | 用于监听的回调系统记录控制器面板启用状态更改事件 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SystemRecordControllerChangeInfo> | 是 | 用于监听的回调系统记录控制器面板启用状态更改事件 |
 
 **错误码：**
 

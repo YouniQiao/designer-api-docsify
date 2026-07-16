@@ -18,6 +18,8 @@ Obtains the policy version of a specified browser.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-browser-function getSelfManagedBrowserPolicyVersion(): string--><!--Device-browser-function getSelfManagedBrowserPolicyVersion(): string-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Return value:**

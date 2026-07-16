@@ -1,10 +1,14 @@
 # PropertyDescriptor
 
+<!--Device-unnamed-interface PropertyDescriptor--><!--Device-unnamed-interface PropertyDescriptor-End-->
+
 ## get
 
 ```TypeScript
 get?(): any
 ```
+
+<!--Device-PropertyDescriptor-get?(): any--><!--Device-PropertyDescriptor-get?(): any-End-->
 
 **Return value:**
 
@@ -17,6 +21,8 @@ get?(): any
 ```TypeScript
 set?(v: any): void
 ```
+
+<!--Device-PropertyDescriptor-set?(v: any): void--><!--Device-PropertyDescriptor-set?(v: any): void-End-->
 
 **Parameters:**
 
@@ -32,6 +38,8 @@ configurable?: boolean
 
 **Type:** boolean
 
+<!--Device-PropertyDescriptor-configurable?: boolean--><!--Device-PropertyDescriptor-configurable?: boolean-End-->
+
 ## enumerable
 
 ```TypeScript
@@ -39,6 +47,8 @@ enumerable?: boolean
 ```
 
 **Type:** boolean
+
+<!--Device-PropertyDescriptor-enumerable?: boolean--><!--Device-PropertyDescriptor-enumerable?: boolean-End-->
 
 ## value
 
@@ -48,6 +58,8 @@ value?: any
 
 **Type:** any
 
+<!--Device-PropertyDescriptor-value?: any--><!--Device-PropertyDescriptor-value?: any-End-->
+
 ## writable
 
 ```TypeScript
@@ -55,4 +67,6 @@ writable?: boolean
 ```
 
 **Type:** boolean
+
+<!--Device-PropertyDescriptor-writable?: boolean--><!--Device-PropertyDescriptor-writable?: boolean-End-->
 

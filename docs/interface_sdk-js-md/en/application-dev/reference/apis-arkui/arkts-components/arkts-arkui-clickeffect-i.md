@@ -4,6 +4,8 @@ Defines the click effect.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface ClickEffect--><!--Device-unnamed-declare interface ClickEffect-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## level
@@ -18,8 +20,7 @@ Default value: **ClickEffectLevel.LIGHT**
 
 **NOTE**
 
-When **level** is **undefined** or **null**, **ClickEffect** uses the effect corresponding to
-**ClickEffectLevel.LIGHT** with a scaling ratio as described below.
+When **level** is **undefined** or **null**, **ClickEffect** uses the effect corresponding to **ClickEffectLevel.LIGHT** with a scaling ratio as described below.
 
 **Type:** ClickEffectLevel
 
@@ -30,6 +31,8 @@ When **level** is **undefined** or **null**, **ClickEffect** uses the effect cor
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ClickEffect-level: ClickEffectLevel--><!--Device-ClickEffect-level: ClickEffectLevel-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,6 +63,8 @@ When **scale** is set to **undefined** or **null**, the default scaling ratio fo
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ClickEffect-scale?: number--><!--Device-ClickEffect-scale?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

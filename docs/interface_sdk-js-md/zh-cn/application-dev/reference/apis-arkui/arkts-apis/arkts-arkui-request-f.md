@@ -1,5 +1,11 @@
 # request
 
+## 导入模块
+
+```TypeScript
+import { PluginComponentTemplate } from '@kit.ArkUI';
+```
+
 ## request
 
 ```TypeScript
@@ -10,7 +16,9 @@ function request(param: RequestParameters, callback: AsyncCallback<RequestCallba
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-pluginComponentManager-function request(param: RequestParameters, callback: AsyncCallback<RequestCallbackParameters>): void--><!--Device-pluginComponentManager-function request(param: RequestParameters, callback: AsyncCallback<RequestCallbackParameters>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,8 +26,8 @@ function request(param: RequestParameters, callback: AsyncCallback<RequestCallba
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | RequestParameters | 是 |  |
-| callback | AsyncCallback&lt;RequestCallbackParameters&gt; | 是 |  |
+| param | [RequestParameters](arkts-arkui-requestparameters-i.md) | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<RequestCallbackParameters> | 是 |  |
 
 **示例：**
 

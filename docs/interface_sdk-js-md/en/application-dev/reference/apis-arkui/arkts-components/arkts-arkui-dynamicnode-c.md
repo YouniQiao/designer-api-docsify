@@ -4,6 +4,8 @@ Define DynamicNode.
 
 **Since:** 12
 
+<!--Device-unnamed-declare class DynamicNode<T> {  /**   * Invoked when data is moved during drag and drop sorting.   * This callback is only applicable in a List component.   * where each ForEach iteration generates a ListItem component.   * It allows you to define custom drag actions and handle various drag events.   *   ********/  onMove(handler: Optional<OnMoveHandler>): T;  /**   * Set the move action.   *   *********/  onMove(handler: Optional<OnMoveHandler>, eventHandler: ItemDragEventHandler): T--><!--Device-unnamed-declare class DynamicNode<T> {  /**   * Invoked when data is moved during drag and drop sorting.   * This callback is only applicable in a List component.   * where each ForEach iteration generates a ListItem component.   * It allows you to define custom drag actions and handle various drag events.   *   ********/  onMove(handler: Optional<OnMoveHandler>): T;  /**   * Set the move action.   *   *********/  onMove(handler: Optional<OnMoveHandler>, eventHandler: ItemDragEventHandler): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onMove
@@ -12,10 +14,7 @@ Define DynamicNode.
 onMove(handler: Optional<OnMoveHandler>): T
 ```
 
-Invoked when data is moved during drag and drop sorting.
-This callback is only applicable in a List component.
-where each ForEach iteration generates a ListItem component.
-It allows you to define custom drag actions and handle various drag events.
+Invoked when data is moved during drag and drop sorting.This callback is only applicable in a List component.where each ForEach iteration generates a ListItem component.It allows you to define custom drag actions and handle various drag events.
 
 **Since:** 12
 
@@ -23,13 +22,15 @@ It allows you to define custom drag actions and handle various drag events.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DynamicNode-onMove(handler: Optional<OnMoveHandler>): T--><!--Device-DynamicNode-onMove(handler: Optional<OnMoveHandler>): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | Optional&lt;OnMoveHandler&gt; | Yes |  |
+| handler | [Optional](arkts-arkui-optional-t.md)<OnMoveHandler> | Yes |  |
 
 **Return value:**
 
@@ -51,14 +52,16 @@ Set the move action.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-DynamicNode-onMove(handler: Optional<OnMoveHandler>, eventHandler: ItemDragEventHandler): T--><!--Device-DynamicNode-onMove(handler: Optional<OnMoveHandler>, eventHandler: ItemDragEventHandler): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | Optional&lt;OnMoveHandler&gt; | Yes |  |
-| eventHandler | ItemDragEventHandler | Yes |  |
+| handler | [Optional](arkts-arkui-optional-t.md)<OnMoveHandler> | Yes |  |
+| eventHandler | [ItemDragEventHandler](arkts-arkui-itemdrageventhandler-i.md) | Yes |  |
 
 **Return value:**
 

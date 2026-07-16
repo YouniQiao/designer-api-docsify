@@ -4,6 +4,8 @@ Defines the Localized align rule options of relative container.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface LocalizedAlignRuleOptions--><!--Device-unnamed-declare interface LocalizedAlignRuleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## bias
@@ -12,8 +14,7 @@ Defines the Localized align rule options of relative container.
 bias?: Bias
 ```
 
-Offset of the component under the anchor constraints.
-<br>The value is the ratio of the distance to the left/upper anchor to the total distance between anchors.
+Offset of the component under the anchor constraints.<br>The value is the ratio of the distance to the left/upper anchor to the total distance between anchors.
 
 **Type:** Bias
 
@@ -24,6 +25,8 @@ Offset of the component under the anchor constraints.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LocalizedAlignRuleOptions-bias?: Bias--><!--Device-LocalizedAlignRuleOptions-bias?: Bias-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,6 +46,8 @@ Bottom alignment in the vertical direction.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LocalizedAlignRuleOptions-bottom?: LocalizedVerticalAlignParam--><!--Device-LocalizedAlignRuleOptions-bottom?: LocalizedVerticalAlignParam-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## center
@@ -61,6 +66,8 @@ Center alignment in the vertical direction.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LocalizedAlignRuleOptions-center?: LocalizedVerticalAlignParam--><!--Device-LocalizedAlignRuleOptions-center?: LocalizedVerticalAlignParam-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## end
@@ -69,8 +76,7 @@ Center alignment in the vertical direction.
 end?: LocalizedHorizontalAlignParam
 ```
 
-Right alignment with left-to-right scripts and left alignment with right-to-left scripts in the horizontal
-direction.
+Right alignment with left-to-right scripts and left alignment with right-to-left scripts in the horizontal direction.
 
 **Type:** LocalizedHorizontalAlignParam
 
@@ -79,6 +85,8 @@ direction.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LocalizedAlignRuleOptions-end?: LocalizedHorizontalAlignParam--><!--Device-LocalizedAlignRuleOptions-end?: LocalizedHorizontalAlignParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,6 +106,8 @@ Center alignment in the horizontal direction.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LocalizedAlignRuleOptions-middle?: LocalizedHorizontalAlignParam--><!--Device-LocalizedAlignRuleOptions-middle?: LocalizedHorizontalAlignParam-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## start
@@ -106,8 +116,7 @@ Center alignment in the horizontal direction.
 start?: LocalizedHorizontalAlignParam
 ```
 
-Left alignment with left-to-right scripts and right alignment with right-to-left scripts in the horizontal
-direction.
+Left alignment with left-to-right scripts and right alignment with right-to-left scripts in the horizontal direction.
 
 **Type:** LocalizedHorizontalAlignParam
 
@@ -116,6 +125,8 @@ direction.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LocalizedAlignRuleOptions-start?: LocalizedHorizontalAlignParam--><!--Device-LocalizedAlignRuleOptions-start?: LocalizedHorizontalAlignParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -134,6 +145,8 @@ Top alignment in the vertical direction.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LocalizedAlignRuleOptions-top?: LocalizedVerticalAlignParam--><!--Device-LocalizedAlignRuleOptions-top?: LocalizedVerticalAlignParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

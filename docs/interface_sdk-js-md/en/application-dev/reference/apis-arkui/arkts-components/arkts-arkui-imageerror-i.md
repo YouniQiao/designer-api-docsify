@@ -2,10 +2,11 @@
 
 Describes the object returned by the image loading error callback.
 
-This event is not triggered if the parameter type of the component is
-[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md).
+This event is not triggered if the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md).
 
 **Since:** 9
+
+<!--Device-unnamed-declare interface ImageError--><!--Device-unnamed-declare interface ImageError-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +28,8 @@ Unit: px
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ImageError-componentHeight: number--><!--Device-ImageError-componentHeight: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## componentWidth
@@ -47,6 +50,8 @@ Unit: px
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ImageError-componentWidth: number--><!--Device-ImageError-componentWidth: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## downloadInfo
@@ -55,8 +60,7 @@ Unit: px
 downloadInfo?: RequestDownloadInfo
 ```
 
-Detailed information about online image download, including download resources, network, and performance. This
-field is carried when the image source is an online image and the download fails.
+Detailed information about online image download, including download resources, network, and performance. This field is carried when the image source is an online image and the download fails.
 
 Default value: **null**
 
@@ -70,6 +74,8 @@ Default value: **null**
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-ImageError-downloadInfo?: RequestDownloadInfo--><!--Device-ImageError-downloadInfo?: RequestDownloadInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## error
@@ -78,8 +84,7 @@ Default value: **null**
 error?: BusinessError<void>
 ```
 
-Error information returned when an error occurs during image loading, where **code** represents the error code and
-**message** indicates the error message. For details, see the error code reference below.
+Error information returned when an error occurs during image loading, where **code** represents the error code and **message** indicates the error message. For details, see the error code reference below.
 
 Default value: **{ code : -1, message : "" }**
 
@@ -92,6 +97,8 @@ Default value: **{ code : -1, message : "" }**
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
+
+<!--Device-ImageError-error?: BusinessError<void>--><!--Device-ImageError-error?: BusinessError<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -112,6 +119,8 @@ Error information.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-ImageError-message: string--><!--Device-ImageError-message: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

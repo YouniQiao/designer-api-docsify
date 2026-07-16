@@ -12,13 +12,13 @@ import { privacyManager } from '@kit.AbilityKit';
 function getPermissionUsedRecordToggleStatus(): Promise<boolean>
 ```
 
-A system application can call this API to obtain the current user's permission usage record toggle status, for
-example, to display the current toggle setting status on the permission management interface. This API uses a
-promise to return the result.
+A system application can call this API to obtain the current user's permission usage record toggle status, for example, to display the current toggle setting status on the permission management interface. This API uses a promise to return the result.
 
 **Since:** 18
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
+
+<!--Device-privacyManager-function getPermissionUsedRecordToggleStatus(): Promise<boolean>--><!--Device-privacyManager-function getPermissionUsedRecordToggleStatus(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -28,7 +28,7 @@ promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the switchstatus value of the current user is on, and **false** indicates that the switch status value ofthe current user is off. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** indicates that the switch status value of the current user is on, and **false** indicates that the switch status value of the current user is off. |
 
 **Error codes:**
 

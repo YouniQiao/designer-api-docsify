@@ -4,6 +4,8 @@ Describes the configuration for window animation.
 
 **Since:** 20
 
+<!--Device-window-interface WindowAnimationConfig--><!--Device-window-interface WindowAnimationConfig-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Type of animation curve.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-WindowAnimationConfig-curve: WindowAnimationCurve--><!--Device-WindowAnimationConfig-curve: WindowAnimationCurve-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## duration
@@ -46,6 +50,8 @@ Whether it is required depends on the animation curve type.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-WindowAnimationConfig-duration?: long--><!--Device-WindowAnimationConfig-duration?: long-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## param
@@ -61,6 +67,8 @@ Parameters for the animation curve. Whether it is required depends on the animat
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-WindowAnimationConfig-param?: WindowAnimationCurveParam--><!--Device-WindowAnimationConfig-param?: WindowAnimationCurveParam-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

@@ -4,6 +4,8 @@ Enumerates the types of gestures to be listened for.
 
 **Since:** 20
 
+<!--Device-unnamed-export const enum GestureListenerType--><!--Device-unnamed-export const enum GestureListenerType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TAP
@@ -19,6 +21,8 @@ The tap gesture.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-GestureListenerType-TAP = 0--><!--Device-GestureListenerType-TAP = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ The long press gesture.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-GestureListenerType-LONG_PRESS = 1--><!--Device-GestureListenerType-LONG_PRESS = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PAN
@@ -51,6 +57,8 @@ The pan gesture.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-GestureListenerType-PAN = 2--><!--Device-GestureListenerType-PAN = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +76,8 @@ The pinch gesture.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-GestureListenerType-PINCH = 3--><!--Device-GestureListenerType-PINCH = 3-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SWIPE
@@ -84,6 +94,8 @@ The swipe gesture.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-GestureListenerType-SWIPE = 4--><!--Device-GestureListenerType-SWIPE = 4-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ROTATION
@@ -99,6 +111,8 @@ The rotation gesture.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-GestureListenerType-ROTATION = 5--><!--Device-GestureListenerType-ROTATION = 5-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

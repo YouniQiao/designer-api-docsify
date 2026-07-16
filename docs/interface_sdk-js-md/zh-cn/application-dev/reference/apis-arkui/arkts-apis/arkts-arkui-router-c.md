@@ -8,7 +8,15 @@
 
 **替代接口：** router
 
+<!--Device-unnamed-export default class Router--><!--Device-unnamed-export default class Router-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
+
+## 导入模块
+
+```TypeScript
+import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, RouterState, EnableAlertBeforeBackPageOptions } from '@kit.ArkUI';
+```
 
 ## back
 
@@ -24,13 +32,15 @@ static back(options?: BackRouterOptions): void
 
 **替代接口：** back
 
+<!--Device-Router-static back(options?: BackRouterOptions): void--><!--Device-Router-static back(options?: BackRouterOptions): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | BackRouterOptions | 否 | 详细请参考BackRouterOptions。 |
+| options | [BackRouterOptions](arkts-arkui-backrouteroptions-i.md) | 否 | 详细请参考BackRouterOptions。 |
 
 ## clear
 
@@ -45,6 +55,8 @@ static clear(): void
 **废弃版本：** 8
 
 **替代接口：** clear
+
+<!--Device-Router-static clear(): void--><!--Device-Router-static clear(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,13 +74,15 @@ static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): 
 
 **替代接口：** hideAlertBeforeBackPage
 
+<!--Device-Router-static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): void--><!--Device-Router-static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | DisableAlertBeforeBackPageOptions | 否 | 详细请参见DisableAlertBeforeBackPageOptions。 |
+| options | [DisableAlertBeforeBackPageOptions](arkts-arkui-disablealertbeforebackpageoptions-i.md) | 否 | 详细请参见DisableAlertBeforeBackPageOptions。 |
 
 ## enableAlertBeforeBackPage
 
@@ -84,13 +98,15 @@ static enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): voi
 
 **替代接口：** showAlertBeforeBackPage
 
+<!--Device-Router-static enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): void--><!--Device-Router-static enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | EnableAlertBeforeBackPageOptions | 是 | 详细请参见EnableAlertBeforeBackPageOptions。 |
+| options | [EnableAlertBeforeBackPageOptions](arkts-arkui-enablealertbeforebackpageoptions-i.md) | 是 | 详细请参见EnableAlertBeforeBackPageOptions。 |
 
 ## getLength
 
@@ -105,6 +121,8 @@ static getLength(): string
 **废弃版本：** 8
 
 **替代接口：** getLength
+
+<!--Device-Router-static getLength(): string--><!--Device-Router-static getLength(): string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -128,13 +146,15 @@ static getParams(): ParamsInterface
 
 **替代接口：** getParams
 
+<!--Device-Router-static getParams(): ParamsInterface--><!--Device-Router-static getParams(): ParamsInterface-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ParamsInterface | 详细请参见ParamsInterface。 |
+| [ParamsInterface](arkts-arkui-paramsinterface-t.md) | 详细请参见ParamsInterface。 |
 
 ## getState
 
@@ -150,13 +170,15 @@ static getState(): RouterState
 
 **替代接口：** getState
 
+<!--Device-Router-static getState(): RouterState--><!--Device-Router-static getState(): RouterState-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| RouterState | 详细请参见RouterState。 |
+| [RouterState](arkts-arkui-routerstate-i.md) | 详细请参见RouterState。 |
 
 ## push
 
@@ -166,8 +188,8 @@ static push(options: RouterOptions): void
 
 跳转到应用内的指定页面。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 页面路由栈支持的最大Page数量为32。
 
 **起始版本：** 3
@@ -176,13 +198,15 @@ static push(options: RouterOptions): void
 
 **替代接口：** push
 
+<!--Device-Router-static push(options: RouterOptions): void--><!--Device-Router-static push(options: RouterOptions): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | RouterOptions | 是 | 页面路由参数，详细请参考RouterOptions。 |
+| options | [RouterOptions](arkts-arkui-routeroptions-i.md) | 是 | 页面路由参数，详细请参考RouterOptions。 |
 
 ## replace
 
@@ -198,11 +222,13 @@ static replace(options: RouterOptions): void
 
 **替代接口：** replace
 
+<!--Device-Router-static replace(options: RouterOptions): void--><!--Device-Router-static replace(options: RouterOptions): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | RouterOptions | 是 | 页面路由参数，详细请参考RouterOptions。 |
+| options | [RouterOptions](arkts-arkui-routeroptions-i.md) | 是 | 页面路由参数，详细请参考RouterOptions。 |
 

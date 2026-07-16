@@ -4,6 +4,8 @@ Indicates the voip call detail information.
 
 **Since:** 11
 
+<!--Device-call-export interface VoipCallAttribute--><!--Device-call-export interface VoipCallAttribute-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Indicates the third-party application UI extension ability name.
 
 **Since:** 11
 
+<!--Device-VoipCallAttribute-abilityName: string--><!--Device-VoipCallAttribute-abilityName: string-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Indicates the third-party application process specific identifier.
 **Type:** string
 
 **Since:** 11
+
+<!--Device-VoipCallAttribute-extensionId: string--><!--Device-VoipCallAttribute-extensionId: string-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -58,6 +64,8 @@ Indicates whether the VoIP call is a conference call. Default value is false.
 
 **Since:** 12
 
+<!--Device-VoipCallAttribute-isConferenceCall?: boolean--><!--Device-VoipCallAttribute-isConferenceCall?: boolean-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Indicates whether the VoIP incoming video call is support voice answer. Default 
 **Type:** boolean
 
 **Since:** 12
+
+<!--Device-VoipCallAttribute-isVoiceAnswerSupported?: boolean--><!--Device-VoipCallAttribute-isVoiceAnswerSupported?: boolean-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -90,6 +100,8 @@ Indicates whether the VoIP incoming call default show live call banner. Default 
 
 **Since:** 12
 
+<!--Device-VoipCallAttribute-showBannerForIncomingCall?: boolean--><!--Device-VoipCallAttribute-showBannerForIncomingCall?: boolean-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -105,6 +117,8 @@ Indicates the user name of the VoIP call.
 **Type:** string
 
 **Since:** 11
+
+<!--Device-VoipCallAttribute-userName: string--><!--Device-VoipCallAttribute-userName: string-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -122,6 +136,8 @@ Indicates the user profile photo of the VoIP call.
 
 **Since:** 11
 
+<!--Device-VoipCallAttribute-userProfile: image.PixelMap--><!--Device-VoipCallAttribute-userProfile: image.PixelMap-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -138,6 +154,8 @@ Indicates the third-party application bundle name.
 
 **Since:** 11
 
+<!--Device-VoipCallAttribute-voipBundleName: string--><!--Device-VoipCallAttribute-voipBundleName: string-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -153,6 +171,8 @@ Indicates the identifier of the voip call.
 **Type:** string
 
 **Since:** 11
+
+<!--Device-VoipCallAttribute-voipCallId: string--><!--Device-VoipCallAttribute-voipCallId: string-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 

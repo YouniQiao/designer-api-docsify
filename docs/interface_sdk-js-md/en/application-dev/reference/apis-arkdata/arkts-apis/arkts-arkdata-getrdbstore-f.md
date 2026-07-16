@@ -12,25 +12,22 @@ import { relationalStore } from '@kit.ArkData';
 function getRdbStore(context: Context, config: StoreConfig, callback: AsyncCallback<RdbStore>): void
 ```
 
-Obtains an RdbStore instance. You can set the **config** parameter as required and use **RdbStore** APIs to perform
-data operations. This API uses an asynchronous callback to return the result.
+Obtains an RdbStore instance. You can set the **config** parameter as required and use **RdbStore** APIs to perform data operations. This API uses an asynchronous callback to return the result.
 
-If no database file exists in the corresponding sandbox directory, a database file is created. For details, see
-[StoreConfig](arkts-arkdata-storeconfig-i.md). If a database file exists in the
-corresponding directory, the existing database file is opened.
+If no database file exists in the corresponding sandbox directory, a database file is created. For details, see [StoreConfig](arkts-arkdata-storeconfig-i.md). If a database file exists in the corresponding directory, the existing database file is opened.
 
-When creating a database, you should consider whether to configure the
-[encrypt](arkts-arkdata-storeconfig-i.md) parameter. Once the database is created,
-you are not allowed to change this parameter.
+When creating a database, you should consider whether to configure the [encrypt](arkts-arkdata-storeconfig-i.md) parameter. Once the database is created,you are not allowed to change this parameter.
 
-| Encryption Type When the RDB Store Is Opened | Encryption Type When the RDB Store Is Created | Result|
-| ------- | -------------------------------- | ---- |
-| Non-encryption| Encryption | The RDB store is opened in encrypted mode. |
+| Encryption Type When the RDB Store Is Opened | Encryption Type When the RDB Store Is Created | Result|  
+| ------- | -------------------------------- | ---- |  
+| Non-encryption| Encryption | The RDB store is opened in encrypted mode. |  
 | Encryption| Non-encryption | The RDB store is opened in non-encrypted mode. |
 
 Currently, **getRdbStore()** does not support multi-thread concurrent operations.
 
 **Since:** 9
+
+<!--Device-relationalStore-function getRdbStore(context: Context, config: StoreConfig, callback: AsyncCallback<RdbStore>): void--><!--Device-relationalStore-function getRdbStore(context: Context, config: StoreConfig, callback: AsyncCallback<RdbStore>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -38,9 +35,9 @@ Currently, **getRdbStore()** does not support multi-thread concurrent operations
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
-| config | StoreConfig | Yes | Configuration of the RDB store. |
-| callback | AsyncCallback&lt;RdbStore&gt; | Yes | Callback invoked to return the RDB store obtained. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context.<br>For details about the application context of the FA model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
+| config | [StoreConfig](arkts-arkdata-storeconfig-i.md) | Yes | Configuration of the RDB store. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<RdbStore> | Yes | Callback invoked to return the RDB store obtained. |
 
 **Error codes:**
 
@@ -127,25 +124,22 @@ class EntryAbility extends UIAbility {
 function getRdbStore(context: Context, config: StoreConfig): Promise<RdbStore>
 ```
 
-Obtains an RdbStore instance. You can set the **config** parameter as required and use **RdbStore** APIs to perform
-data operations. This API uses a promise to return the result.
+Obtains an RdbStore instance. You can set the **config** parameter as required and use **RdbStore** APIs to perform data operations. This API uses a promise to return the result.
 
-If no database file exists in the corresponding sandbox directory, a database file is created. For details, see
-[StoreConfig](arkts-arkdata-storeconfig-i.md). If a database file exists in the
-corresponding directory, the existing database file is opened.
+If no database file exists in the corresponding sandbox directory, a database file is created. For details, see [StoreConfig](arkts-arkdata-storeconfig-i.md). If a database file exists in the corresponding directory, the existing database file is opened.
 
-When creating a database, you should consider whether to configure the
-[encrypt](arkts-arkdata-storeconfig-i.md) parameter. Once the database is created,
-you are not allowed to change this parameter.
+When creating a database, you should consider whether to configure the [encrypt](arkts-arkdata-storeconfig-i.md) parameter. Once the database is created,you are not allowed to change this parameter.
 
-| Encryption Type When the RDB Store Is Opened | Encryption Type When the RDB Store Is Created | Result|
-| ------- | -------------------------------- | ---- |
-| Non-encryption| Encryption | The RDB store is opened in encrypted mode. |
+| Encryption Type When the RDB Store Is Opened | Encryption Type When the RDB Store Is Created | Result|  
+| ------- | -------------------------------- | ---- |  
+| Non-encryption| Encryption | The RDB store is opened in encrypted mode. |  
 | Encryption| Non-encryption | The RDB store is opened in non-encrypted mode. |
 
 Currently, **getRdbStore()** does not support multi-thread concurrent operations.
 
 **Since:** 9
+
+<!--Device-relationalStore-function getRdbStore(context: Context, config: StoreConfig): Promise<RdbStore>--><!--Device-relationalStore-function getRdbStore(context: Context, config: StoreConfig): Promise<RdbStore>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -153,14 +147,14 @@ Currently, **getRdbStore()** does not support multi-thread concurrent operations
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
-| config | StoreConfig | Yes | Configuration of the RDB store. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context.<br>For details about the application context of the FA model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
+| config | [StoreConfig](arkts-arkdata-storeconfig-i.md) | Yes | Configuration of the RDB store. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RdbStore&gt; | Promise used to return the **RdbStore** object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<RdbStore> | Promise used to return the **RdbStore** object. |
 
 **Error codes:**
 

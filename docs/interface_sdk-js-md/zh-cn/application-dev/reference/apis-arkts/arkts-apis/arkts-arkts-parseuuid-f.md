@@ -1,17 +1,24 @@
 # parseUUID
 
+## 导入模块
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+```
+
 ## parseUUID
 
 ```TypeScript
 function parseUUID(uuid: string): Uint8Array
 ```
 
-将 **generateRandomUUID** 生成的字符串类型的 UUID 转换为 **generateRandomBinaryUUID** 生成的 UUID，如 RFC 4122
-所述。
+将 **generateRandomUUID** 生成的字符串类型的 UUID 转换为 **generateRandomBinaryUUID** 生成的 UUID，如 RFC 4122所述。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-util-function parseUUID(uuid: string): Uint8Array--><!--Device-util-function parseUUID(uuid: string): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,7 +32,7 @@ function parseUUID(uuid: string): Uint8Array
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 表示解析后 UUID 的 Uint8Array 值。如果解析失败，则抛出 **SyntaxError**。 |
+| [Uint8Array](arkts-arkts-uint8array-c.md) | 表示解析后 UUID 的 Uint8Array 值。如果解析失败，则抛出 **SyntaxError**。 |
 
 **错误码：**
 

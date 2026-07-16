@@ -4,6 +4,8 @@ Attribute of Input.
 
 **Since:** 10
 
+<!--Device-inputMethod-export interface InputAttribute--><!--Device-inputMethod-export interface InputAttribute-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Modules to Import
@@ -24,6 +26,8 @@ The name of the ability where the edit box is located.
 
 **Since:** 20
 
+<!--Device-InputAttribute-abilityName?: string--><!--Device-InputAttribute-abilityName?: string-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## consumeKeyEvents
@@ -42,6 +46,8 @@ Whether the editor supports consuming key events.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-InputAttribute-consumeKeyEvents?: boolean--><!--Device-InputAttribute-consumeKeyEvents?: boolean-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## enterKeyType
@@ -55,6 +61,8 @@ Indicates the enter key type of the input method.
 **Type:** EnterKeyType
 
 **Since:** 10
+
+<!--Device-InputAttribute-enterKeyType: EnterKeyType--><!--Device-InputAttribute-enterKeyType: EnterKeyType-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -70,6 +78,8 @@ Placeholder text in the edit box.
 
 **Since:** 20
 
+<!--Device-InputAttribute-placeholder?: string--><!--Device-InputAttribute-placeholder?: string-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## textInputType
@@ -83,6 +93,8 @@ Indicates the text input type of the input method.
 **Type:** TextInputType
 
 **Since:** 10
+
+<!--Device-InputAttribute-textInputType: TextInputType--><!--Device-InputAttribute-textInputType: TextInputType-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 

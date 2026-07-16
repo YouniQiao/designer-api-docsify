@@ -18,6 +18,8 @@ Obtains the transmission surface.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-abilityConnectionManager-function getSurfaceId(streamId: int, param: SurfaceParam): string--><!--Device-abilityConnectionManager-function getSurfaceId(streamId: int, param: SurfaceParam): string-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Obtains the transmission surface.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | streamId | number | Yes | Indicates the ID of a transport stream. |
-| param | SurfaceParam | Yes | Surface Parameters |
+| param | [SurfaceParam](arkts-distributedservice-surfaceparam-i-sys.md) | Yes | Surface Parameters |
 
 **Return value:**
 

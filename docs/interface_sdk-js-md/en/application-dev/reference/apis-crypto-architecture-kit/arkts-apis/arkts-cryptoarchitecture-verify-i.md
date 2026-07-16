@@ -1,30 +1,20 @@
 # Verify
 
-Provides APIs for signature verification. Before using any API of the **Verify** class, you must create a
-**Verify** instance by using [createVerify(algName: string): Verify](arkts-cryptoarchitecture-createverify-f.md#createverify-1). Invoke
-**init()**, **update()**, and **verify()** in this class in sequence to complete the signature verification. For
-details about the sample code, see
-[Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md)
-.
+Provides APIs for signature verification. Before using any API of the **Verify** class, you must create a **Verify** instance by using [createVerify(algName: string): Verify](arkts-cryptoarchitecture-createverify-f.md#createverify-1). Invoke **init()**, **update()**, and **verify()** in this class in sequence to complete the signature verification. For details about the sample code, see [Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md).
 
-The **Verify** class does not support repeated initialization. When a new key is used for signature verification,
-you must create a new **Verify** instance and call **init()** for initialization.
+The **Verify** class does not support repeated initialization. When a new key is used for signature verification,you must create a new **Verify** instance and call **init()** for initialization.
 
 The signature verification mode is determined in **createVerify()**, and the key is set by **init()**.
 
-If the signed message is short, you can call **verify()** to pass in the signed message and signature (
-**signatureData**) for signature verification after **init()**. That is, you do not need to use **update()**.
+If the signed message is short, you can call **verify()** to pass in the signed message and signature (**signatureData**) for signature verification after **init()**. That is, you do not need to use **update()**.
 
-If the signed message is too long, you can call **update()** multiple times to pass in the signed message by
-segment, and then call **verify()** to verify the full text of the message. In versions earlier than API version 10
-, the input parameter **data** of **verify()** supports only **DataBlob**. Since API version 10, **data** also
-supports **null**. After all the data is passed in by using **update()**, **verify()** can be called to verify the
-signature data.
+If the signed message is too long, you can call **update()** multiple times to pass in the signed message by segment, and then call **verify()** to verify the full text of the message. In versions earlier than API version 10, the input parameter **data** of **verify()** supports only **DataBlob**. Since API version 10, **data** also supports **null**. After all the data is passed in by using **update()**, **verify()** can be called to verify the signature data.
 
-If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is not
-supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
+If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
 **Since:** 9
+
+<!--Device-cryptoFramework-interface Verify--><!--Device-cryptoFramework-interface Verify-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
@@ -48,6 +38,8 @@ Obtains signature verification specifications. Currently, only RSA is supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Verify-getVerifySpec(itemType: SignSpecItem): string | int--><!--Device-Verify-getVerifySpec(itemType: SignSpecItem): string | int-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
 - API version 10 to 11: SystemCapability.Security.CryptoFramework
@@ -56,7 +48,7 @@ Obtains signature verification specifications. Currently, only RSA is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| itemType | SignSpecItem | Yes | Signature verification parameter to obtain. |
+| itemType | [SignSpecItem](arkts-cryptoarchitecture-signspecitem-e.md) | Yes | Signature verification parameter to obtain. |
 
 **Return value:**
 
@@ -94,13 +86,13 @@ function testGetVerifySpec() {
 init(pubKey: PubKey, callback: AsyncCallback<void>): void
 ```
 
-Initializes the **Verify** object using a public key. This API uses an asynchronous callback to return the
-result. **init**, **update**, and **verify** must be used together. **init** and **verify** are mandatory, and
-**update** is optional.
+Initializes the **Verify** object using a public key. This API uses an asynchronous callback to return the result. **init**, **update**, and **verify** must be used together. **init** and **verify** are mandatory, and **update** is optional.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Verify-init(pubKey: PubKey, callback: AsyncCallback<void>): void--><!--Device-Verify-init(pubKey: PubKey, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
@@ -110,8 +102,8 @@ result. **init**, **update**, and **verify** must be used together. **init** and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | PubKey | Yes | Public key used to initialize the **Verify** instance. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| pubKey | [PubKey](arkts-cryptoarchitecture-pubkey-i.md) | Yes | Public key used to initialize the **Verify** instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -129,13 +121,13 @@ result. **init**, **update**, and **verify** must be used together. **init** and
 init(pubKey: PubKey): Promise<void>
 ```
 
-Initializes the **Verify** object using a public key. This API uses a promise to return the result. **init**,
-**update**, and **verify** must be used together. **init** and **verify** are mandatory, and **update** is
-optional.
+Initializes the **Verify** object using a public key. This API uses a promise to return the result. **init**,**update**, and **verify** must be used together. **init** and **verify** are mandatory, and **update** is optional.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Verify-init(pubKey: PubKey): Promise<void>--><!--Device-Verify-init(pubKey: PubKey): Promise<void>-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
@@ -145,13 +137,13 @@ optional.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | PubKey | Yes | Public key used to initialize the **Verify** instance. |
+| pubKey | [PubKey](arkts-cryptoarchitecture-pubkey-i.md) | Yes | Public key used to initialize the **Verify** instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -169,18 +161,15 @@ optional.
 initSync(pubKey: PubKey): void
 ```
 
-Initializes the **Verify** instance with a public key. This API returns the result synchronously. **initSync**,
-**updateSync**, and **verifySync** must be used together. **initSync** and **verifySync** are mandatory, and
-**updateSync** is optional.
+Initializes the **Verify** instance with a public key. This API returns the result synchronously. **initSync**,**updateSync**, and **verifySync** must be used together. **initSync** and **verifySync** are mandatory, and **updateSync** is optional.
 
-<br><br>**NOTE**
-<br>It is recommended to prioritize the use of asynchronous API, {@link init}. Synchronous API may
-take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,
-it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link init}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Verify-initSync(pubKey: PubKey): void--><!--Device-Verify-initSync(pubKey: PubKey): void-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Signature
 
@@ -188,7 +177,7 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | PubKey | Yes | Public key used to initialize the **Verify** instance. |
+| pubKey | [PubKey](arkts-cryptoarchitecture-pubkey-i.md) | Yes | Public key used to initialize the **Verify** instance. |
 
 **Error codes:**
 
@@ -208,13 +197,15 @@ recover(signatureData: DataBlob): Promise<DataBlob | null>
 
 Recovers the original data from a signature. This API uses a promise to return the result.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > - Currently, only RSA is supported.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Verify-recover(signatureData: DataBlob): Promise<DataBlob | null>--><!--Device-Verify-recover(signatureData: DataBlob): Promise<DataBlob | null>-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Signature
 
@@ -222,13 +213,13 @@ Recovers the original data from a signature. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| signatureData | DataBlob | Yes | Signature data. |
+| signatureData | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | Signature data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob \| null&gt; | Promise used to return the raw data recovered from the signature. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DataBlob \| null> | Promise used to return the raw data recovered from the signature. |
 
 **Error codes:**
 
@@ -327,18 +318,17 @@ recoverSync(signatureData: DataBlob): DataBlob | null
 
 Recovers the original data from a signature. This API returns the result synchronously.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > - Currently, only RSA is supported.
 
-<br><br>**NOTE**
-<br>It is recommended to prioritize the use of asynchronous API, {@link recover}. Synchronous API may
-take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,
-it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link recover}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Verify-recoverSync(signatureData: DataBlob): DataBlob | null--><!--Device-Verify-recoverSync(signatureData: DataBlob): DataBlob | null-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Signature
 
@@ -346,13 +336,13 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| signatureData | DataBlob | Yes | Signature data. |
+| signatureData | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | Signature data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataBlob | Data restored. |
+| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Data restored. |
 
 **Error codes:**
 
@@ -370,8 +360,7 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 setVerifySpec(itemType: SignSpecItem, itemValue: number): void
 ```
 
-Sets signature verification specifications. You can use this API to set signature verification parameters that
-cannot be set by [createVerify](arkts-cryptoarchitecture-createverify-f.md#createverify-1).
+Sets signature verification specifications. You can use this API to set signature verification parameters that cannot be set by [createVerify](arkts-cryptoarchitecture-createverify-f.md#createverify-1).
 
 Currently, only RSA and SM2 are supported. Since API version 11, SM2 signature verification parameters can be set.
 
@@ -381,6 +370,8 @@ The parameters for signature verification must be the same as those for signing.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Verify-setVerifySpec(itemType: SignSpecItem, itemValue: int): void--><!--Device-Verify-setVerifySpec(itemType: SignSpecItem, itemValue: int): void-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
 - API version 10 to 11: SystemCapability.Security.CryptoFramework
@@ -389,7 +380,7 @@ The parameters for signature verification must be the same as those for signing.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| itemType | SignSpecItem | Yes | Signature verification parameter to set. |
+| itemType | [SignSpecItem](arkts-cryptoarchitecture-signspecitem-e.md) | Yes | Signature verification parameter to set. |
 | itemValue | number | Yes | Value of the signature verification parameter to set. |
 
 **Error codes:**
@@ -431,6 +422,8 @@ The parameters for signature verification must be the same as those for signing.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Verify-setVerifySpec(itemType: SignSpecItem, itemValue: int | Uint8Array): void--><!--Device-Verify-setVerifySpec(itemType: SignSpecItem, itemValue: int | Uint8Array): void-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
 - API version 11: SystemCapability.Security.CryptoFramework
@@ -439,7 +432,7 @@ The parameters for signature verification must be the same as those for signing.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| itemType | SignSpecItem | Yes | Indicates the specified parameter type. |
+| itemType | [SignSpecItem](arkts-cryptoarchitecture-signspecitem-e.md) | Yes | Indicates the specified parameter type. |
 | itemValue | number \| Uint8Array | Yes | The value of the specified parameter. |
 
 **Error codes:**
@@ -462,8 +455,7 @@ setVerifySpec(itemType: SignSpecItem, itemValue: number | Uint8Array | boolean):
 
 Sets the specified parameter for the Verify object.
 
-Currently, only PSS_SALT_LEN in RSA, USER_ID in SM2, and ML_DSA_DETERMINISTIC, ML_DSA_MU and ML_DSA_CONTEXT in
-ML-DSA are supported.
+Currently, only PSS_SALT_LEN in RSA, USER_ID in SM2, and ML_DSA_DETERMINISTIC, ML_DSA_MU and ML_DSA_CONTEXT in ML-DSA are supported.
 
 The parameters for signature verification must be the same as those for signing.
 
@@ -473,13 +465,15 @@ The parameters for signature verification must be the same as those for signing.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-Verify-setVerifySpec(itemType: SignSpecItem, itemValue: int | Uint8Array | boolean): void--><!--Device-Verify-setVerifySpec(itemType: SignSpecItem, itemValue: int | Uint8Array | boolean): void-End-->
+
 **System capability:** SystemCapability.Security.CryptoFramework.Signature
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| itemType | SignSpecItem | Yes | Indicates the specified parameter type. |
+| itemType | [SignSpecItem](arkts-cryptoarchitecture-signspecitem-e.md) | Yes | Indicates the specified parameter type. |
 | itemValue | number \| Uint8Array \| boolean | Yes | The value of the specified parameter. |
 
 **Error codes:**
@@ -513,33 +507,34 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 
 Updates the data for signature verification. This API uses an asynchronous callback to return the result.
 
-This API can be called only after the [Verify](arkts-cryptoarchitecture-verify-i.md) instance is initialized using
-[init](arkts-cryptoarchitecture-verify-i.md#init-1) or [initSync](arkts-cryptoarchitecture-verify-i.md#initsync-1).
+This API can be called only after the [Verify](arkts-cryptoarchitecture-verify-i.md) instance is initialized using [init](arkts-cryptoarchitecture-verify-i.md#init-1) or [initSync](arkts-cryptoarchitecture-verify-i.md#initsync-1).
 
-> **NOTE**
->
-> You can call **update** multiple times or do not use **update** (call
-> [verify](arkts-cryptoarchitecture-verify-i.md#verify-2)
-> after [init](arkts-cryptoarchitecture-verify-i.md#init-1)), depending on
-> the data volume.
->
-> The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a
-> large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This
-> prevents too much memory from being requested at a time.
->
-> For details about the sample code for calling **update()** multiple times in signature verification, see
-> [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1-by-segment.md)
-> . The operations of other algorithms are similar.
->
-> **OnlyVerify** cannot be used with **update()**. If **OnlyVerify** is specified, use **verify()** to pass in
-> data.
->
-> If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is
+> **NOTE**  
+>  
+> You can call **update** multiple times or do not use **update** (call  
+> [verify](arkts-cryptoarchitecture-verify-i.md#verify-2)  
+> after [init](arkts-cryptoarchitecture-verify-i.md#init-1)), depending on  
+> the data volume.  
+>  
+> The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a  
+> large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This  
+> prevents too much memory from being requested at a time.  
+>  
+> For details about the sample code for calling **update()** multiple times in signature verification, see  
+> [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1-by-segment.md)  
+> . The operations of other algorithms are similar.  
+>  
+> **OnlyVerify** cannot be used with **update()**. If **OnlyVerify** is specified, use **verify()** to pass in  
+> data.  
+>  
+> If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is  
 > not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Verify-update(data: DataBlob, callback: AsyncCallback<void>): void--><!--Device-Verify-update(data: DataBlob, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
@@ -549,8 +544,8 @@ This API can be called only after the [Verify](arkts-cryptoarchitecture-verify-i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob | Yes | Data to pass in. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| data | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | Data to pass in. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -570,32 +565,33 @@ update(data: DataBlob): Promise<void>
 
 Updates the data for signature verification. This API uses a promise to return the result.
 
-This API can be called only after the [Verify](arkts-cryptoarchitecture-verify-i.md) instance is initialized using
-[init()](arkts-cryptoarchitecture-verify-i.md#init-1).
+This API can be called only after the [Verify](arkts-cryptoarchitecture-verify-i.md) instance is initialized using [init()](arkts-cryptoarchitecture-verify-i.md#init-1).
 
-> **NOTE**
->
-> You can call **update** multiple times or do not use **update** (call
-> [verify](arkts-cryptoarchitecture-verify-i.md#verify-4) after
+> **NOTE**  
+>  
+> You can call **update** multiple times or do not use **update** (call  
+> [verify](arkts-cryptoarchitecture-verify-i.md#verify-4) after  
 > [init](arkts-cryptoarchitecture-verify-i.md#init-1)), depending on the data volume.
 
-> The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a
-> large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This
+> The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a  
+> large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This  
 > prevents too much memory from being requested at a time.
 
-> For details about the sample code for calling **update()** multiple times in signature verification, see
-> [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1-by-segment.md)
+> For details about the sample code for calling **update()** multiple times in signature verification, see  
+> [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1-by-segment.md)  
 > . The operations of other algorithms are similar.
 
-> **OnlyVerify** cannot be used with **update()**. If **OnlyVerify** is specified, use **verify()** to pass in
+> **OnlyVerify** cannot be used with **update()**. If **OnlyVerify** is specified, use **verify()** to pass in  
 > data.
 
-> If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is
+> If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is  
 > not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Verify-update(data: DataBlob): Promise<void>--><!--Device-Verify-update(data: DataBlob): Promise<void>-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
@@ -605,13 +601,13 @@ This API can be called only after the [Verify](arkts-cryptoarchitecture-verify-i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob | Yes | Data to pass in. |
+| data | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | Data to pass in. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -631,37 +627,35 @@ updateSync(data: DataBlob): void
 
 Updates the data for signature verification. This API returns the result synchronously.
 
-This API can be called only after the [Verify](arkts-cryptoarchitecture-verify-i.md) instance is initialized by using
-[initSync()](arkts-cryptoarchitecture-verify-i.md#initsync-1).
+This API can be called only after the [Verify](arkts-cryptoarchitecture-verify-i.md) instance is initialized by using [initSync()](arkts-cryptoarchitecture-verify-i.md#initsync-1).
 
-> **NOTE**
->
-> You can call **updateSync** multiple times or do not use **updateSync** (call
-> [verifySync](arkts-cryptoarchitecture-verify-i.md#verifysync-1) after [initSync](arkts-cryptoarchitecture-verify-i.md#initsync-1)),
+> **NOTE**  
+>  
+> You can call **updateSync** multiple times or do not use **updateSync** (call  
+> [verifySync](arkts-cryptoarchitecture-verify-i.md#verifysync-1) after [initSync](arkts-cryptoarchitecture-verify-i.md#initsync-1)),  
 > depending on the data volume.
 
-> The amount of the data to be passed in by **updateSync** (one-time or accumulative) is not limited. If there is
-> a large amount of data, you are advised to call **updateSync** multiple times to pass in the data by segment.
+> The amount of the data to be passed in by **updateSync** (one-time or accumulative) is not limited. If there is  
+> a large amount of data, you are advised to call **updateSync** multiple times to pass in the data by segment.  
 > This prevents too much memory from being requested at a time.
 
-> For details about the sample code for calling **updateSync** multiple times in signature verification, see
-> [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1-by-segment.md)
+> For details about the sample code for calling **updateSync** multiple times in signature verification, see  
+> [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1-by-segment.md)  
 > . The operations of other algorithms are similar.
 
-> **OnlyVerify** cannot be used with **updateSync()**. If **OnlyVerify** is specified, use **verifySync()** to pass
+> **OnlyVerify** cannot be used with **updateSync()**. If **OnlyVerify** is specified, use **verifySync()** to pass  
 > in data.
 
-> If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **updateSync**
+> If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **updateSync**  
 > is not supported. If **updateSync** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
-<br><br>**NOTE**
-<br>It is recommended to prioritize the use of asynchronous API, {@link update}. Synchronous API may
-take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,
-it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link update}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Verify-updateSync(data: DataBlob): void--><!--Device-Verify-updateSync(data: DataBlob): void-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Signature
 
@@ -669,7 +663,7 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob | Yes | Data to pass in. |
+| data | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | Data to pass in. |
 
 **Error codes:**
 
@@ -693,6 +687,8 @@ Verifies the message, including the update data. This API uses an asynchronous c
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Verify-verify(data: DataBlob, signatureData: DataBlob, callback: AsyncCallback<boolean>): void--><!--Device-Verify-verify(data: DataBlob, signatureData: DataBlob, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
@@ -701,9 +697,9 @@ Verifies the message, including the update data. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob | Yes | Data to be verified. |
-| signatureData | DataBlob | Yes | The signature data. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicatesthat the signature verification is successful, and **false** indicates the opposite. |
+| data | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | Data to be verified. |
+| signatureData | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | The signature data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** indicates that the signature verification is successful, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -727,6 +723,8 @@ Verifies the signature of the data. This API uses an asynchronous callback to re
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Verify-verify(data: DataBlob | null, signatureData: DataBlob, callback: AsyncCallback<boolean>): void--><!--Device-Verify-verify(data: DataBlob | null, signatureData: DataBlob, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
 - API version 10 to 11: SystemCapability.Security.CryptoFramework
@@ -735,9 +733,9 @@ Verifies the signature of the data. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob \| null | Yes | Data to pass in. In versions earlier than API version 10, only **DataBlob** issupported. Since API version 10, **null** is also supported. |
-| signatureData | DataBlob | Yes | Signature data. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true**indicates that the signature verification is successful, and **false** indicates the opposite. |
+| data | DataBlob \| null | Yes | Data to pass in. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| signatureData | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | Signature data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** indicates that the signature verification is successful, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -761,6 +759,8 @@ Verifies the message, including the update data. This API uses a promise to retu
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Verify-verify(data: DataBlob, signatureData: DataBlob): Promise<boolean>--><!--Device-Verify-verify(data: DataBlob, signatureData: DataBlob): Promise<boolean>-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
@@ -769,14 +769,14 @@ Verifies the message, including the update data. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob | Yes | Data to be verified. |
-| signatureData | DataBlob | Yes | The signature data. |
+| data | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | Data to be verified. |
+| signatureData | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | The signature data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the signatureverification is successful, and **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** indicates that the signature verification is successful, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -800,6 +800,8 @@ Verifies the signature of the data. This API uses a promise to return the result
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Verify-verify(data: DataBlob | null, signatureData: DataBlob): Promise<boolean>--><!--Device-Verify-verify(data: DataBlob | null, signatureData: DataBlob): Promise<boolean>-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
 - API version 10 to 11: SystemCapability.Security.CryptoFramework
@@ -808,14 +810,14 @@ Verifies the signature of the data. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | DataBlob \| null | Yes | Data to pass in. In versions earlier than API version 10, only **DataBlob** issupported. Since API version 10, **null** is also supported. |
-| signatureData | DataBlob | Yes | Signature data. |
+| data | DataBlob \| null | Yes | Data to pass in. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| signatureData | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | Signature data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the signatureverification is successful, and **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** indicates that the signature verification is successful, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -835,14 +837,13 @@ verifySync(data: DataBlob | null, signatureData: DataBlob): boolean
 
 Verifies the signature. This API returns the verification result synchronously.
 
-<br><br>**NOTE**
-<br>It is recommended to prioritize the use of asynchronous API, {@link verify}. Synchronous API may
-take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,
-it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link verify}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Verify-verifySync(data: DataBlob | null, signatureData: DataBlob): boolean--><!--Device-Verify-verifySync(data: DataBlob | null, signatureData: DataBlob): boolean-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Signature
 
@@ -851,7 +852,7 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | DataBlob \| null | Yes | Data to pass in. |
-| signatureData | DataBlob | Yes | Signature data. |
+| signatureData | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | Signature data. |
 
 **Return value:**
 
@@ -1107,6 +1108,8 @@ Indicates the algorithm name of the Verify object.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Verify-readonly algName: string--><!--Device-Verify-readonly algName: string-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature

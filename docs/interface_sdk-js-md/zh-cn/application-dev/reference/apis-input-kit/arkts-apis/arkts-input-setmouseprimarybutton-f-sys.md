@@ -1,5 +1,11 @@
 # setMousePrimaryButton（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+```
+
 ## setMousePrimaryButton
 
 ```TypeScript
@@ -10,6 +16,8 @@ function setMousePrimaryButton(primary: PrimaryButton, callback: AsyncCallback<v
 
 **起始版本：** 10
 
+<!--Device-pointer-function setMousePrimaryButton(primary: PrimaryButton, callback: AsyncCallback<void>): void--><!--Device-pointer-function setMousePrimaryButton(primary: PrimaryButton, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -18,8 +26,8 @@ function setMousePrimaryButton(primary: PrimaryButton, callback: AsyncCallback<v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| primary | PrimaryButton | 是 | 鼠标主键类型。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当设置鼠标主键成功，err为undefined，否则为错误对象。 |
+| primary | [PrimaryButton](arkts-input-primarybutton-e.md) | 是 | 鼠标主键类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当设置鼠标主键成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -71,6 +79,8 @@ function setMousePrimaryButton(primary: PrimaryButton): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-pointer-function setMousePrimaryButton(primary: PrimaryButton): Promise<void>--><!--Device-pointer-function setMousePrimaryButton(primary: PrimaryButton): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -79,13 +89,13 @@ function setMousePrimaryButton(primary: PrimaryButton): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| primary | PrimaryButton | 是 | 鼠标主键类型。 |
+| primary | [PrimaryButton](arkts-input-primarybutton-e.md) | 是 | 鼠标主键类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

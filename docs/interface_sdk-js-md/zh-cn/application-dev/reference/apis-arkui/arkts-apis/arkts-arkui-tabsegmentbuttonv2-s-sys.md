@@ -2,7 +2,15 @@
 
 **起始版本：** 18
 
+<!--Device-unnamed-export declare struct TabSegmentButtonV2--><!--Device-unnamed-export declare struct TabSegmentButtonV2-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { OnSelectedIndexesChange, TabSegmentButtonV2, SegmentButtonV2Items, MultiCapsuleSegmentButtonV2, OnSelectedIndexChange, SegmentButtonV2ItemOptions, SegmentButtonV2Item, CapsuleSegmentButtonV2 } from '@kit.ArkUI';
+```
 
 ## backgroundSystemMaterial
 
@@ -22,7 +30,9 @@ readonly backgroundSystemMaterial?: uiMaterial.Material
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TabSegmentButtonV2-readonly backgroundSystemMaterial?: uiMaterial.Material--><!--Device-TabSegmentButtonV2-readonly backgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

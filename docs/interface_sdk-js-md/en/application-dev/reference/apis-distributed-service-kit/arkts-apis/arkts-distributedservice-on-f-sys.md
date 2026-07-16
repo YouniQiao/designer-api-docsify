@@ -19,6 +19,10 @@ Registers receiveImage event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-abilityConnectionManager-function on(type: 'receiveImage', sessionId: number,
+        callback: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function on(type: 'receiveImage', sessionId: number,
+        callback: Callback<EventCallbackInfo>): void-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **System API:** This is a system API.
@@ -29,7 +33,7 @@ Registers receiveImage event.
 | --- | --- | --- | --- |
 | type | 'receiveImage' | Yes | Registration Type, 'receiveImage'. |
 | sessionId | number | Yes | Ability connection Session id. |
-| callback | Callback&lt;EventCallbackInfo&gt; | Yes | Used to handle ('receiveImage') command. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<EventCallbackInfo> | Yes | Used to handle ('receiveImage') command. |
 
 **Error codes:**
 
@@ -64,6 +68,10 @@ Registers collaborateEvent event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-abilityConnectionManager-function on(type: 'collaborateEvent', sessionId: number,
+        callback: Callback<CollaborateEventInfo>): void--><!--Device-abilityConnectionManager-function on(type: 'collaborateEvent', sessionId: number,
+        callback: Callback<CollaborateEventInfo>): void-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **System API:** This is a system API.
@@ -74,7 +82,7 @@ Registers collaborateEvent event.
 | --- | --- | --- | --- |
 | type | 'collaborateEvent' | Yes | Registration Type, 'collaborateEvent'. |
 | sessionId | number | Yes | Ability connection Session id. |
-| callback | Callback&lt;CollaborateEventInfo&gt; | Yes | Called when an error event comes. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CollaborateEventInfo> | Yes | Called when an error event comes. |
 
 **Error codes:**
 

@@ -20,15 +20,17 @@ Adds the applications that are not allowed to be uninstalled by the current or s
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-bundleManager-function addDisallowedUninstallBundlesSync(admin: Want, appIds: Array<string>, accountId?: number): void--><!--Device-bundleManager-function addDisallowedUninstallBundlesSync(admin: Want, appIds: Array<string>, accountId?: number): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| appIds | Array&lt;string&gt; | Yes | Application IDs.<br>Value range: The total number of entries in this list for asingle user must not exceed 200. For example, if user 100 already has 50 entries and user 101 has none, user 100 can add up to 150 more entries, while user 101 can add up to 200 entries. You are advised to configure amaximum of 50 entries at a time to prevent potential performance problems.<br>Note: From API version 21 onwards, the **appId** and **appIdentifier** of the app can be passed. **appIdentifier** is recommended. In APIversion 20 and earlier versions, only **appId** can be passed. |
-| accountId | number | No | Account ID, which must be greater than or equal to 0.<br> You can call[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2) of**@ohos.account.osAccount** to obtain the account ID.<br> - If **accountId** is passed in, this API applies to thespecified user.<br> - If **accountId** is not passed in, this API applies to the current user. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| appIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Application IDs.<br>Value range: The total number of entries in this list for a single user must not exceed 200. For example, if user 100 already has 50 entries and user 101 has none, user 100 can add up to 150 more entries, while user 101 can add up to 200 entries. You are advised to configure a maximum of 50 entries at a time to prevent potential performance problems.<br>Note: From API version 21 onwards, the **appId** and **appIdentifier** of the app can be passed. **appIdentifier** is recommended. In API version 20 and earlier versions, only **appId** can be passed. |
+| accountId | number | No | Account ID, which must be greater than or equal to 0.<br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2) of **@ohos.account.osAccount** to obtain the account ID.<br> - If **accountId** is passed in, this API applies to the specified user.<br> - If **accountId** is not passed in, this API applies to the current user. |
 
 **Error codes:**
 

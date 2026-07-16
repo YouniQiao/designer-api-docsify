@@ -4,7 +4,15 @@
 
 **起始版本：** 6
 
+<!--Device-intl-export interface NumberOptions--><!--Device-intl-export interface NumberOptions-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+```
 
 ## compactDisplay
 
@@ -22,7 +30,9 @@ compactDisplay?: string
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberOptions-compactDisplay?: string--><!--Device-NumberOptions-compactDisplay?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -40,7 +50,9 @@ currency?: string
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberOptions-currency?: string--><!--Device-NumberOptions-currency?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -60,7 +72,9 @@ currencyDisplay?: string
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberOptions-currencyDisplay?: string--><!--Device-NumberOptions-currencyDisplay?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -80,7 +94,9 @@ currencySign?: string
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberOptions-currencySign?: string--><!--Device-NumberOptions-currencySign?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -98,7 +114,9 @@ locale?: string
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberOptions-locale?: string--><!--Device-NumberOptions-locale?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -116,7 +134,9 @@ localeMatcher?: string
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberOptions-localeMatcher?: string--><!--Device-NumberOptions-localeMatcher?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -136,7 +156,9 @@ maximumFractionDigits?: number
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberOptions-maximumFractionDigits?: int--><!--Device-NumberOptions-maximumFractionDigits?: int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -156,7 +178,9 @@ maximumSignificantDigits?: number
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberOptions-maximumSignificantDigits?: int--><!--Device-NumberOptions-maximumSignificantDigits?: int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -176,7 +200,9 @@ minimumFractionDigits?: number
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberOptions-minimumFractionDigits?: int--><!--Device-NumberOptions-minimumFractionDigits?: int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -196,7 +222,9 @@ minimumIntegerDigits?: number
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberOptions-minimumIntegerDigits?: int--><!--Device-NumberOptions-minimumIntegerDigits?: int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -216,7 +244,9 @@ minimumSignificantDigits?: number
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberOptions-minimumSignificantDigits?: int--><!--Device-NumberOptions-minimumSignificantDigits?: int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -236,7 +266,9 @@ notation?: string
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberOptions-notation?: string--><!--Device-NumberOptions-notation?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -248,12 +280,7 @@ numberingSystem?: string
 
 数字系统，取值包括：
 
-"adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide",
-"gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham",
-"laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong",
-"mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment",
-"shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii",
-"wara", "wcho"。
+"adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide","gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham","laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong","mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment","shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii","wara", "wcho"。
 
 默认值：区域的默认数字系统。
 
@@ -261,7 +288,9 @@ numberingSystem?: string
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberOptions-numberingSystem?: string--><!--Device-NumberOptions-numberingSystem?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -279,7 +308,9 @@ roundingIncrement?: number
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberOptions-roundingIncrement?: int--><!--Device-NumberOptions-roundingIncrement?: int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -315,7 +346,9 @@ roundingMode?: string
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberOptions-roundingMode?: string--><!--Device-NumberOptions-roundingMode?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -333,7 +366,9 @@ roundingPriority?: string
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberOptions-roundingPriority?: string--><!--Device-NumberOptions-roundingPriority?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -359,7 +394,9 @@ signDisplay?: string
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberOptions-signDisplay?: string--><!--Device-NumberOptions-signDisplay?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -377,7 +414,9 @@ style?: string
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberOptions-style?: string--><!--Device-NumberOptions-style?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -389,15 +428,15 @@ unit?: string
 
 单位名称（需设置style为unit），如："meter"，"inch"，“hectare”等。
 
-从API version 18开始新增支持的组合单位有： "beat-per-minute", "body-weight-per-second", "breath-per-minute", "foot-per-hour",
-"jump-rope-per-minute", "meter-per-hour", "milliliter-per-minute-per-kilogram", "rotation-per-minute", "step-per-minute",
-"stroke-per-minute"。
+从API version 18开始新增支持的组合单位有： "beat-per-minute", "body-weight-per-second", "breath-per-minute", "foot-per-hour","jump-rope-per-minute", "meter-per-hour", "milliliter-per-minute-per-kilogram", "rotation-per-minute", "step-per-minute","stroke-per-minute"。
 
 **类型：** string
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberOptions-unit?: string--><!--Device-NumberOptions-unit?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -417,7 +456,9 @@ unitDisplay?: string
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberOptions-unitDisplay?: string--><!--Device-NumberOptions-unitDisplay?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -427,11 +468,7 @@ unitDisplay?: string
 unitUsage?: string
 ```
 
-单位的使用场景（需设置style为unit），取值包括："default", "area-land-agricult", "area-land-commercl", "area-land-residntl",
-"length-person", "length-person-small", "length-rainfall", "length-road", "length-road-small", "length-snowfall",
-"length-vehicle", "length-visiblty", "length-visiblty-small", "length-person-informal", "length-person-small-informal",
-"length-road-informal", "speed-road-travel", "speed-wind", "temperature-person", "temperature-weather",
-"volume-vehicle-fuel", "elapsed-time-second", "size-file-byte", "size-shortfile-byte"。
+单位的使用场景（需设置style为unit），取值包括："default", "area-land-agricult", "area-land-commercl", "area-land-residntl","length-person", "length-person-small", "length-rainfall", "length-road", "length-road-small", "length-snowfall","length-vehicle", "length-visiblty", "length-visiblty-small", "length-person-informal", "length-person-small-informal","length-road-informal", "speed-road-travel", "speed-wind", "temperature-person", "temperature-weather","volume-vehicle-fuel", "elapsed-time-second", "size-file-byte", "size-shortfile-byte"。
 
 默认值：default。
 
@@ -441,7 +478,9 @@ unitUsage?: string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberOptions-unitUsage?: string--><!--Device-NumberOptions-unitUsage?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -461,7 +500,9 @@ true表示分组显示，false表示不分组显示。
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NumberOptions-useGrouping?: boolean--><!--Device-NumberOptions-useGrouping?: boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

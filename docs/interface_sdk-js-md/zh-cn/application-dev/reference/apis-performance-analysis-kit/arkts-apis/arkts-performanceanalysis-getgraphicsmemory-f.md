@@ -1,5 +1,11 @@
 # getGraphicsMemory
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+```
+
 ## getGraphicsMemory
 
 ```TypeScript
@@ -10,7 +16,9 @@ function getGraphicsMemory(): Promise<number>
 
 **起始版本：** 14
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-hidebug-function getGraphicsMemory(): Promise<int>--><!--Device-hidebug-function getGraphicsMemory(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -18,7 +26,7 @@ function getGraphicsMemory(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | promise���󣬷���Ӧ���Դ��ܴ�С����λΪKB�� |
+| Promise<number> | promise���󣬷���Ӧ���Դ��ܴ�С����λΪKB�� |
 
 **错误码：**
 

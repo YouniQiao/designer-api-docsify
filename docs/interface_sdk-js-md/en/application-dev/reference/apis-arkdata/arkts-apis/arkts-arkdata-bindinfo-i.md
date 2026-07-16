@@ -1,9 +1,10 @@
 # BindInfo
 
-Represents the information about the joint asset in the RDB store to bind. Currently, only the RDB stores are
-supported.
+Represents the information about the joint asset in the RDB store to bind. Currently, only the RDB stores are supported.
 
 **Since:** 11
+
+<!--Device-distributedDataObject-interface BindInfo--><!--Device-distributedDataObject-interface BindInfo-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -25,6 +26,8 @@ Name of the target asset in the RDB store.
 
 **Since:** 11
 
+<!--Device-BindInfo-assetName: string--><!--Device-BindInfo-assetName: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## field
@@ -38,6 +41,8 @@ Column in which the target asset is located in the RDB store.
 **Type:** string
 
 **Since:** 11
+
+<!--Device-BindInfo-field: string--><!--Device-BindInfo-field: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -53,6 +58,8 @@ Primary key of the target asset in the RDB store.
 
 **Since:** 11
 
+<!--Device-BindInfo-primaryKey: commonType.ValuesBucket--><!--Device-BindInfo-primaryKey: commonType.ValuesBucket-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## storeName
@@ -67,6 +74,8 @@ RDB store to which the target asset (asset to bind) belongs.
 
 **Since:** 11
 
+<!--Device-BindInfo-storeName: string--><!--Device-BindInfo-storeName: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## tableName
@@ -80,6 +89,8 @@ Table to which the target asset is located in the RDB store.
 **Type:** string
 
 **Since:** 11
+
+<!--Device-BindInfo-tableName: string--><!--Device-BindInfo-tableName: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 

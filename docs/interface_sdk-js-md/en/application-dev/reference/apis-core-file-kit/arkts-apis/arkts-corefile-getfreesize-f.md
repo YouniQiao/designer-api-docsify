@@ -16,13 +16,15 @@ Get the free size.
 
 **Since:** 15
 
+<!--Device-storageStatistics-function getFreeSize(): Promise<long>--><!--Device-storageStatistics-function getFreeSize(): Promise<long>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | return Promise (Unit: Byte) |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | return Promise (Unit: Byte) |
 
 **Error codes:**
 

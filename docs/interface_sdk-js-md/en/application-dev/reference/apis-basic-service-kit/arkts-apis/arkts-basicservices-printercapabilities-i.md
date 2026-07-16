@@ -4,6 +4,8 @@ Defines the printer capabilities.
 
 **Since:** 14
 
+<!--Device-print-interface PrinterCapabilities--><!--Device-print-interface PrinterCapabilities-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Printer capability details.
 
 **Since:** 14
 
+<!--Device-PrinterCapabilities-options?: string--><!--Device-PrinterCapabilities-options?: string-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## supportedColorModes
@@ -37,6 +41,8 @@ List of color modes supported by the printer.
 **Type:** Array<PrintColorMode>
 
 **Since:** 14
+
+<!--Device-PrinterCapabilities-supportedColorModes: Array<PrintColorMode>--><!--Device-PrinterCapabilities-supportedColorModes: Array<PrintColorMode>-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -52,6 +58,8 @@ List of single- and double-sided modes supported by the printer.
 
 **Since:** 14
 
+<!--Device-PrinterCapabilities-supportedDuplexModes: Array<PrintDuplexMode>--><!--Device-PrinterCapabilities-supportedDuplexModes: Array<PrintDuplexMode>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## supportedMediaTypes
@@ -65,6 +73,8 @@ List of paper types supported by the printer.
 **Type:** Array<string>
 
 **Since:** 14
+
+<!--Device-PrinterCapabilities-supportedMediaTypes?: Array<string>--><!--Device-PrinterCapabilities-supportedMediaTypes?: Array<string>-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -80,6 +90,8 @@ List of print directions supported by the printer.
 
 **Since:** 14
 
+<!--Device-PrinterCapabilities-supportedOrientations?: Array<PrintOrientationMode>--><!--Device-PrinterCapabilities-supportedOrientations?: Array<PrintOrientationMode>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## supportedPageSizes
@@ -94,6 +106,8 @@ List of paper sizes supported by the printer.
 
 **Since:** 14
 
+<!--Device-PrinterCapabilities-supportedPageSizes: Array<PrintPageSize>--><!--Device-PrinterCapabilities-supportedPageSizes: Array<PrintPageSize>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## supportedQualities
@@ -107,6 +121,8 @@ List of print quality supported by the printer.
 **Type:** Array<PrintQuality>
 
 **Since:** 14
+
+<!--Device-PrinterCapabilities-supportedQualities?: Array<PrintQuality>--><!--Device-PrinterCapabilities-supportedQualities?: Array<PrintQuality>-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -124,6 +140,8 @@ Ability to configure job vendor-specific attributes.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PrinterCapabilities-vendorJobAttrAbility?: string--><!--Device-PrinterCapabilities-vendorJobAttrAbility?: string-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## vendorPrinterPrefAbility
@@ -139,6 +157,8 @@ Ability to configure printer vendor-specific preferences.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PrinterCapabilities-vendorPrinterPrefAbility?: string--><!--Device-PrinterCapabilities-vendorPrinterPrefAbility?: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 

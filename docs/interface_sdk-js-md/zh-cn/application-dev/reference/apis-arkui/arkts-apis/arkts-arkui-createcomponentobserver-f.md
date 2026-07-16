@@ -1,5 +1,11 @@
 # createComponentObserver
 
+## 导入模块
+
+```TypeScript
+import { inspector } from '@kit.ArkUI';
+```
+
 ## createComponentObserver
 
 ```TypeScript
@@ -14,7 +20,9 @@ function createComponentObserver(id: string): ComponentObserver
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-inspector-function createComponentObserver(id: string): ComponentObserver--><!--Device-inspector-function createComponentObserver(id: string): ComponentObserver-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,7 +36,7 @@ function createComponentObserver(id: string): ComponentObserver
 
 | 类型 | 说明 |
 | --- | --- |
-| ComponentObserver | 创建用于观察组件事件的监听器。 |
+| [ComponentObserver](arkts-arkui-componentobserver-i.md) | 创建用于观察组件事件的监听器。 |
 
 **示例：**
 

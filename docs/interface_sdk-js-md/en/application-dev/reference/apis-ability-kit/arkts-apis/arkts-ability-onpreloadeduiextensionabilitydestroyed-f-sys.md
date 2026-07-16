@@ -12,15 +12,15 @@ import { abilityManager } from '@kit.AbilityKit';
 function onPreloadedUIExtensionAbilityDestroyed(callback: PreloadedUIExtensionAbilityDestroyedFn): void
 ```
 
-Subscribes to destroyed events of a preloaded
-[UIExtensionAbility](arkts-ability-uiextensionability-c.md) instance in the current
-process.
+Subscribes to destroyed events of a preloaded [UIExtensionAbility](arkts-ability-uiextensionability-c.md) instance in the current process.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.PRELOAD_UI_EXTENSION_ABILITY
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-abilityManager-function onPreloadedUIExtensionAbilityDestroyed(callback: PreloadedUIExtensionAbilityDestroyedFn): void--><!--Device-abilityManager-function onPreloadedUIExtensionAbilityDestroyed(callback: PreloadedUIExtensionAbilityDestroyedFn): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -30,7 +30,7 @@ process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | PreloadedUIExtensionAbilityDestroyedFn | Yes | Callback used to receive the ID of the preloaded[UIExtensionAbility](arkts-ability-uiextensionability-c.md) instance that is destroyed. |
+| callback | [PreloadedUIExtensionAbilityDestroyedFn](arkts-ability-preloadeduiextensionabilitydestroyedfn-t-sys.md) | Yes | Callback used to receive the ID of the preloaded [UIExtensionAbility](arkts-ability-uiextensionability-c.md) instance that is destroyed. |
 
 **Error codes:**
 

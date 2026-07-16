@@ -4,9 +4,17 @@ missionManager模块提供系统任务管理能力，包括对系统任务执行
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace missionManager--><!--Device-unnamed-declare namespace missionManager-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+```
 
 ## 汇总
 

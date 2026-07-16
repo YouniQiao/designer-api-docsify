@@ -18,6 +18,8 @@ Sets the scroll direction of the mouse wheel. This API uses a promise to return 
 
 **Required permissions:** ohos.permission.INPUT_DEVICE_CONTROLLER
 
+<!--Device-pointer-function setMouseScrollDirection(inverted: boolean): Promise<void>--><!--Device-pointer-function setMouseScrollDirection(inverted: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Sets the scroll direction of the mouse wheel. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inverted | boolean | Yes | Scroll direction of the mouse wheel.<br>The value **true** indicates that scroll direction matches the finger movement on the wheel, and the value**false** indicates that the scroll direction is opposite to the finger movement.<br>The default value is **true**. |
+| inverted | boolean | Yes | Scroll direction of the mouse wheel.<br>The value **true** indicates that scroll direction matches the finger movement on the wheel, and the value **false** indicates that the scroll direction is opposite to the finger movement.<br>The default value is **true**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

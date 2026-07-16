@@ -4,6 +4,8 @@ Defines the detailed permission usage information.
 
 **Since:** 9
 
+<!--Device-privacyManager-interface ActiveChangeResponse--><!--Device-privacyManager-interface ActiveChangeResponse-End-->
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Permission usage status.
 
 **Since:** 9
 
+<!--Device-ActiveChangeResponse-activeStatus: PermissionActiveStatus--><!--Device-ActiveChangeResponse-activeStatus: PermissionActiveStatus-End-->
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -44,6 +48,8 @@ Default value: **0**.
 
 **Since:** 18
 
+<!--Device-ActiveChangeResponse-callingTokenId?: int--><!--Device-ActiveChangeResponse-callingTokenId?: int-End-->
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -60,6 +66,8 @@ ID of the device where the permission usage status change occurred.
 
 **Since:** 9
 
+<!--Device-ActiveChangeResponse-deviceId: string--><!--Device-ActiveChangeResponse-deviceId: string-End-->
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -70,16 +78,15 @@ ID of the device where the permission usage status change occurred.
 enhancedIdentity?: string
 ```
 
-Extension identity, used to identify additional identity information of the caller. This field is returned
-when it is necessary to distinguish permission usage records from different call sources within the same
-application.
-The maximum length is 48. Default value: Empty string.
+Extension identity, used to identify additional identity information of the caller. This field is returned when it is necessary to distinguish permission usage records from different call sources within the same application.The maximum length is 48. Default value: Empty string.
 
 **Type:** string
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ActiveChangeResponse-enhancedIdentity?: string--><!--Device-ActiveChangeResponse-enhancedIdentity?: string-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -97,6 +104,8 @@ Name of the permission whose usage status has changed.
 
 **Since:** 9
 
+<!--Device-ActiveChangeResponse-permissionName: Permissions--><!--Device-ActiveChangeResponse-permissionName: Permissions-End-->
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -112,6 +121,8 @@ Token ID of the application whose permission usage changes are subscribed to.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-ActiveChangeResponse-tokenId: int--><!--Device-ActiveChangeResponse-tokenId: int-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -130,6 +141,8 @@ Default value: NORMAL_TYPE.
 **Type:** PermissionUsedType
 
 **Since:** 18
+
+<!--Device-ActiveChangeResponse-usedType?: PermissionUsedType--><!--Device-ActiveChangeResponse-usedType?: PermissionUsedType-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 

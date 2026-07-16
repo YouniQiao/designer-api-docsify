@@ -1,5 +1,11 @@
 # getSystemFontFullNamesByType
 
+## 导入模块
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D';
+```
+
 ## getSystemFontFullNamesByType
 
 ```TypeScript
@@ -10,7 +16,9 @@ function getSystemFontFullNamesByType(fontType: SystemFontType): Promise<Array<s
 
 **起始版本：** 14
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-text-function getSystemFontFullNamesByType(fontType: SystemFontType): Promise<Array<string>>--><!--Device-text-function getSystemFontFullNamesByType(fontType: SystemFontType): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -18,13 +26,13 @@ function getSystemFontFullNamesByType(fontType: SystemFontType): Promise<Array<s
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fontType | SystemFontType | 是 | 指定的字体类型。 |
+| fontType | [SystemFontType](arkts-arkgraphics2d-systemfonttype-e.md) | 是 | 指定的字体类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回相应字体类型的所有字体的fullName。 |
+| Promise<Array<string>> | Promise对象，返回相应字体类型的所有字体的fullName。 |
 
 **错误码：**
 

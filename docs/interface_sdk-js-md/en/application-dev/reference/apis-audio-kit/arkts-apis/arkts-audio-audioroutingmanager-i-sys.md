@@ -2,15 +2,15 @@
 
 This interface implements audio routing management.
 
-Before calling any API in AudioRoutingManager, you must use
-[getRoutingManager](arkts-audio-audiomanager-i.md#getroutingmanager-1) to obtain an
-AudioRoutingManager instance.
+Before calling any API in AudioRoutingManager, you must use [getRoutingManager](arkts-audio-audiomanager-i.md#getroutingmanager-1) to obtain an AudioRoutingManager instance.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > - The initial APIs of this interface are supported since API version 9.
 
 **Since:** 9
+
+<!--Device-audio-interface AudioRoutingManager--><!--Device-audio-interface AudioRoutingManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -26,14 +26,14 @@ import { audio } from '@kit.AudioKit';
 excludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Promise<void>
 ```
 
-Exclude output devices. After calling this function successfully, audio will not be played on the specified
-devices. Note that only the external ouput device can be excluded by this function. Local output devices is not
-accepted.
+Exclude output devices. After calling this function successfully, audio will not be played on the specified devices. Note that only the external ouput device can be excluded by this function. Local output devices is not accepted.
 
 **Since:** 18
 
 **Required permissions:** 
 - API version 18 - 22: ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioRoutingManager-excludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-excludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -43,14 +43,14 @@ accepted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| usage | DeviceUsage | Yes | Device usage, only output device usages can be accepted. |
-| devices | AudioDeviceDescriptors | Yes | The devices to be excluded. |
+| usage | [DeviceUsage](arkts-audio-deviceusage-e.md) | Yes | Device usage, only output device usages can be accepted. |
+| devices | [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | Yes | The devices to be excluded. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return result. |
 
 **Error codes:**
 
@@ -99,12 +99,13 @@ async function excludeOutputDevices(){
 getActiveOutputDeviceDescriptors(): Promise<AudioDeviceDescriptors>
 ```
 
-Gets the active output device descriptors for the current audio device.
-The activation policy is related to the audio device policy of the system.
+Gets the active output device descriptors for the current audio device.The activation policy is related to the audio device policy of the system.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioRoutingManager-getActiveOutputDeviceDescriptors(): Promise<AudioDeviceDescriptors>--><!--Device-AudioRoutingManager-getActiveOutputDeviceDescriptors(): Promise<AudioDeviceDescriptors>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -114,7 +115,7 @@ The activation policy is related to the audio device policy of the system.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioDeviceDescriptors&gt; | Promise used to get the output device descriptors. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AudioDeviceDescriptors> | Promise used to get the output device descriptors. |
 
 **Error codes:**
 
@@ -132,6 +133,8 @@ Get excluded devices by filter.
 
 **Since:** 18
 
+<!--Device-AudioRoutingManager-getExcludedDevices(usage: DeviceUsage): AudioDeviceDescriptors--><!--Device-AudioRoutingManager-getExcludedDevices(usage: DeviceUsage): AudioDeviceDescriptors-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
@@ -140,13 +143,13 @@ Get excluded devices by filter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| usage | DeviceUsage | Yes | Device usage, only output device usages can be accepted. |
+| usage | [DeviceUsage](arkts-audio-deviceusage-e.md) | Yes | Device usage, only output device usages can be accepted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AudioDeviceDescriptors | Exclueded devices. |
+| [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | Exclueded devices. |
 
 **Error codes:**
 
@@ -179,6 +182,8 @@ Get the preferred input device for the target audio capturer filter.
 
 **Since:** 18
 
+<!--Device-AudioRoutingManager-getPreferredInputDeviceByFilter(filter: AudioCapturerFilter): AudioDeviceDescriptors--><!--Device-AudioRoutingManager-getPreferredInputDeviceByFilter(filter: AudioCapturerFilter): AudioDeviceDescriptors-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
@@ -187,13 +192,13 @@ Get the preferred input device for the target audio capturer filter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | AudioCapturerFilter | Yes | Audio capturer filter. |
+| filter | [AudioCapturerFilter](arkts-audio-audiocapturerfilter-i-sys.md) | Yes | Audio capturer filter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AudioDeviceDescriptors | The preferred devices. |
+| [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | The preferred devices. |
 
 **Error codes:**
 
@@ -235,6 +240,8 @@ Get the preferred output devices by the target audio renderer filter.
 
 **Since:** 18
 
+<!--Device-AudioRoutingManager-getPreferredOutputDeviceByFilter(filter: AudioRendererFilter): AudioDeviceDescriptors--><!--Device-AudioRoutingManager-getPreferredOutputDeviceByFilter(filter: AudioRendererFilter): AudioDeviceDescriptors-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
@@ -243,13 +250,13 @@ Get the preferred output devices by the target audio renderer filter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | AudioRendererFilter | Yes | Audio renderer filter. |
+| filter | [AudioRendererFilter](arkts-audio-audiorendererfilter-i-sys.md) | Yes | Audio renderer filter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AudioDeviceDescriptors | The preferred devices. |
+| [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | The preferred devices. |
 
 **Error codes:**
 
@@ -292,6 +299,8 @@ UnSubscribes to prefer output device change events.
 
 **Since:** 21
 
+<!--Device-AudioRoutingManager-off(type: 'preferredOutputDeviceChangeByFilter', callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-off(type: 'preferredOutputDeviceChangeByFilter', callback?: Callback<AudioDeviceDescriptors>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
@@ -300,8 +309,8 @@ UnSubscribes to prefer output device change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'preferredOutputDeviceChangeByFilter' | Yes | Type of the event to listen for. Only thepreferredOutputDeviceChangeByFilter event is supported. |
-| callback | Callback&lt;AudioDeviceDescriptors&gt; | No | Callback used in subscribe. |
+| type | 'preferredOutputDeviceChangeByFilter' | Yes | Type of the event to listen for. Only the preferredOutputDeviceChangeByFilter event is supported. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioDeviceDescriptors> | No | Callback used in subscribe. |
 
 **Error codes:**
 
@@ -347,6 +356,8 @@ Unsubscribes to preferred input device change events.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AudioRoutingManager-offPreferredInputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-offPreferredInputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
@@ -355,7 +366,7 @@ Unsubscribes to preferred input device change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AudioDeviceDescriptors&gt; | No | Callback used in subscribe. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioDeviceDescriptors> | No | Callback used in subscribe. |
 
 **Error codes:**
 
@@ -370,10 +381,11 @@ Unsubscribes to preferred input device change events.
 on(type: 'preferredOutputDeviceChangeByFilter', filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void
 ```
 
-Subscribes to prefer output device change events. When preferred device for target audio renderer
-filter changes, registered clients will receive the callback.
+Subscribes to prefer output device change events. When preferred device for target audio renderer filter changes, registered clients will receive the callback.
 
 **Since:** 21
+
+<!--Device-AudioRoutingManager-on(type: 'preferredOutputDeviceChangeByFilter', filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-on(type: 'preferredOutputDeviceChangeByFilter', filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -383,9 +395,9 @@ filter changes, registered clients will receive the callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'preferredOutputDeviceChangeByFilter' | Yes | Type of the event to listen for. Only thepreferredOutputDeviceChangeByFilter event is supported. |
-| filter | AudioRendererFilter | Yes | Filter for AudioRenderer. |
-| callback | Callback&lt;AudioDeviceDescriptors&gt; | Yes | Callback used to obtain the changed prefer devicesinformation. |
+| type | 'preferredOutputDeviceChangeByFilter' | Yes | Type of the event to listen for. Only the preferredOutputDeviceChangeByFilter event is supported. |
+| filter | [AudioRendererFilter](arkts-audio-audiorendererfilter-i-sys.md) | Yes | Filter for AudioRenderer. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioDeviceDescriptors> | Yes | Callback used to obtain the changed prefer devices information. |
 
 **Error codes:**
 
@@ -418,12 +430,13 @@ audioRoutingManager.on('preferredOutputDeviceChangeByFilter', outputAudioRendere
 onPreferredInputDeviceChangeByFilter(filter: AudioCapturerFilter, callback: Callback<AudioDeviceDescriptors>): void
 ```
 
-Subscribes to preferred input device change events. When the preferred device for target audio
-capturer filter changes, registered clients will receive a callback.
+Subscribes to preferred input device change events. When the preferred device for target audio capturer filter changes, registered clients will receive a callback.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioRoutingManager-onPreferredInputDeviceChangeByFilter(filter: AudioCapturerFilter, callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-onPreferredInputDeviceChangeByFilter(filter: AudioCapturerFilter, callback: Callback<AudioDeviceDescriptors>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -433,8 +446,8 @@ capturer filter changes, registered clients will receive a callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | AudioCapturerFilter | Yes | Filter for capturer. |
-| callback | Callback&lt;AudioDeviceDescriptors&gt; | Yes | Callback to receive information aboutthe changed preferred devices. |
+| filter | [AudioCapturerFilter](arkts-audio-audiocapturerfilter-i-sys.md) | Yes | Filter for capturer. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioDeviceDescriptors> | Yes | Callback to receive information about the changed preferred devices. |
 
 **Error codes:**
 
@@ -456,6 +469,8 @@ Restores the output device for the specified audio renderer filter to the defaul
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AudioRoutingManager-restoreOutputDeviceByFilter(filter: AudioRendererFilter): Promise<void>--><!--Device-AudioRoutingManager-restoreOutputDeviceByFilter(filter: AudioRendererFilter): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
@@ -464,13 +479,13 @@ Restores the output device for the specified audio renderer filter to the defaul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | AudioRendererFilter | Yes | Filter of audio renderer to restore. |
+| filter | [AudioRendererFilter](arkts-audio-audiorendererfilter-i-sys.md) | Yes | Filter of audio renderer to restore. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return result. |
 
 **Error codes:**
 
@@ -489,6 +504,8 @@ Select the input device. This method uses an asynchronous callback to return the
 
 **Since:** 9
 
+<!--Device-AudioRoutingManager-selectInputDevice(inputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void--><!--Device-AudioRoutingManager-selectInputDevice(inputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
@@ -497,8 +514,8 @@ Select the input device. This method uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputAudioDevices | AudioDeviceDescriptors | Yes | Audio device description |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| inputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | Yes | Audio device description |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -543,6 +560,8 @@ Select the input device. This method uses a promise to return the result.
 
 **Since:** 9
 
+<!--Device-AudioRoutingManager-selectInputDevice(inputAudioDevices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-selectInputDevice(inputAudioDevices: AudioDeviceDescriptors): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
@@ -551,13 +570,13 @@ Select the input device. This method uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputAudioDevices | AudioDeviceDescriptors | Yes | Audio device description |
+| inputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | Yes | Audio device description |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Example**
 
@@ -600,6 +619,8 @@ Select the input device with desired AudioCapturer. This method uses a promise t
 
 **Since:** 18
 
+<!--Device-AudioRoutingManager-selectInputDeviceByFilter(filter: AudioCapturerFilter, inputAudioDevices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-selectInputDeviceByFilter(filter: AudioCapturerFilter, inputAudioDevices: AudioDeviceDescriptors): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
@@ -608,14 +629,14 @@ Select the input device with desired AudioCapturer. This method uses a promise t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | AudioCapturerFilter | Yes | Filter for AudioCapturer. |
-| inputAudioDevices | AudioDeviceDescriptors | Yes | Audio device descriptions |
+| filter | [AudioCapturerFilter](arkts-audio-audiocapturerfilter-i-sys.md) | Yes | Filter for AudioCapturer. |
+| inputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | Yes | Audio device descriptions |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -675,6 +696,8 @@ Select the output device. This method uses an asynchronous callback to return th
 
 **Since:** 9
 
+<!--Device-AudioRoutingManager-selectOutputDevice(outputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void--><!--Device-AudioRoutingManager-selectOutputDevice(outputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
@@ -683,8 +706,8 @@ Select the output device. This method uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| outputAudioDevices | AudioDeviceDescriptors | Yes | Audio device description |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | Yes | Audio device description |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -728,6 +751,8 @@ Select the output device. This method uses a promise to return the result.
 
 **Since:** 9
 
+<!--Device-AudioRoutingManager-selectOutputDevice(outputAudioDevices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-selectOutputDevice(outputAudioDevices: AudioDeviceDescriptors): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
@@ -736,13 +761,13 @@ Select the output device. This method uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| outputAudioDevices | AudioDeviceDescriptors | Yes | Audio device description |
+| outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | Yes | Audio device description |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Example**
 
@@ -781,10 +806,11 @@ async function selectOutputDevice(){
 selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void
 ```
 
-Select the output device with desired AudioRenderer. This method uses an asynchronous callback to return the
-result.
+Select the output device with desired AudioRenderer. This method uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void--><!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -794,9 +820,9 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | AudioRendererFilter | Yes | Filter for AudioRenderer. |
-| outputAudioDevices | AudioDeviceDescriptors | Yes | Audio device description. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| filter | [AudioRendererFilter](arkts-audio-audiorendererfilter-i-sys.md) | Yes | Filter for AudioRenderer. |
+| outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | Yes | Audio device description. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -849,6 +875,8 @@ Select the output device with desired AudioRenderer. This method uses a promise 
 
 **Since:** 9
 
+<!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
@@ -857,14 +885,14 @@ Select the output device with desired AudioRenderer. This method uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | AudioRendererFilter | Yes | Filter for AudioRenderer. |
-| outputAudioDevices | AudioDeviceDescriptors | Yes | Audio device description |
+| filter | [AudioRendererFilter](arkts-audio-audiorendererfilter-i-sys.md) | Yes | Filter for AudioRenderer. |
+| outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | Yes | Audio device description |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Example**
 
@@ -916,6 +944,8 @@ Select the output device with desired AudioRenderer. This method uses a promise 
 
 **Since:** 21
 
+<!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors, strategy: AudioDevcieSelectStrategy): Promise<void>--><!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors, strategy: AudioDevcieSelectStrategy): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
@@ -924,15 +954,15 @@ Select the output device with desired AudioRenderer. This method uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | AudioRendererFilter | Yes | Filter for affected AudioRenderer. |
-| outputAudioDevices | AudioDeviceDescriptors | Yes | Audio device to select. |
-| strategy | AudioDevcieSelectStrategy | Yes | Target audio device select strategy. |
+| filter | [AudioRendererFilter](arkts-audio-audiorendererfilter-i-sys.md) | Yes | Filter for affected AudioRenderer. |
+| outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | Yes | Audio device to select. |
+| strategy | [AudioDevcieSelectStrategy](arkts-audio-audiodevcieselectstrategy-e-sys.md) | Yes | Target audio device select strategy. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -992,6 +1022,8 @@ Unexclude output devices. This function will unexclude target output devices bel
 **Required permissions:** 
 - API version 18 - 22: ohos.permission.MANAGE_AUDIO_CONFIG
 
+<!--Device-AudioRoutingManager-unexcludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-unexcludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
@@ -1000,14 +1032,14 @@ Unexclude output devices. This function will unexclude target output devices bel
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| usage | DeviceUsage | Yes | Device usage, only output device usages can be accepted. |
-| devices | AudioDeviceDescriptors | Yes | The devices to be unexcluded. |
+| usage | [DeviceUsage](arkts-audio-deviceusage-e.md) | Yes | Device usage, only output device usages can be accepted. |
+| devices | [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | Yes | The devices to be unexcluded. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return result. |
 
 **Error codes:**
 
@@ -1063,6 +1095,8 @@ Unexclude output devices. This function will unexclude all output devices belong
 **Required permissions:** 
 - API version 18 - 22: ohos.permission.MANAGE_AUDIO_CONFIG
 
+<!--Device-AudioRoutingManager-unexcludeOutputDevices(usage: DeviceUsage): Promise<void>--><!--Device-AudioRoutingManager-unexcludeOutputDevices(usage: DeviceUsage): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
@@ -1071,13 +1105,13 @@ Unexclude output devices. This function will unexclude all output devices belong
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| usage | DeviceUsage | Yes | Device usage, only output device usages can be accepted. |
+| usage | [DeviceUsage](arkts-audio-deviceusage-e.md) | Yes | Device usage, only output device usages can be accepted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return result. |
 
 **Error codes:**
 

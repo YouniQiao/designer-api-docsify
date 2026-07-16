@@ -18,6 +18,8 @@ Batch obtains the display statuses of application badges. This API uses a promis
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getBadgeDisplayStatusByBundles(bundles: Array<BundleOption>) : Promise<Map<BundleOption, boolean>>--><!--Device-notificationManager-function getBadgeDisplayStatusByBundles(bundles: Array<BundleOption>) : Promise<Map<BundleOption, boolean>>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Batch obtains the display statuses of application badges. This API uses a promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundles | Array&lt;BundleOption&gt; | Yes | Bundles whose badge display statuses are to be obtained. |
+| bundles | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<BundleOption> | Yes | Bundles whose badge display statuses are to be obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Map&lt;BundleOption, boolean&gt;&gt; | Promise used to return the bundles and the badge display statusesobtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Map<BundleOption, boolean>> | Promise used to return the bundles and the badge display statuses obtained. |
 
 **Error codes:**
 

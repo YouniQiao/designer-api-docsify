@@ -4,6 +4,8 @@ This module provides settings data access abilities.
 
 **Since:** 18
 
+<!--Device-unnamed-declare namespace settings--><!--Device-unnamed-declare namespace settings-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 ## Modules to Import
@@ -22,24 +24,24 @@ import { settings } from '@kit.BasicServicesKit';
 | [date](arkts-basicservices-date-n.md) | Provides methods for setting time and date formats. |
 | [display](arkts-basicservices-display-n.md) | Provides methods for setting the display effect, including the font size, screen brightness, screen rotation,animation factor, and display color. |
 | [general](arkts-basicservices-general-n.md) | Provides methods for setting general information about devices, including the device name, startup wizard,airplane mode, debugging information, accessibility feature switch, and touch exploration status. |
-| [input](arkts-basicservices-input-n.md) | Provides methods for setting information about input methods, including automatic capitalization, automaticpunctuation, autocorrect, password presentation, input method engine, and input method subtypes. |
+| [input](arkts-basicservices-input-n.md) | Provides methods for setting information about input methods, including automatic capitalization, automatic punctuation, autocorrect, password presentation, input method engine, and input method subtypes. |
 | [network](arkts-basicservices-network-n.md) | Provides methods for setting network information, including the data roaming status, HTTP proxy configurations,and preferred networks. |
 | [phone](arkts-basicservices-phone-n.md) | Provides methods for setting the answering mode of incoming and outgoing calls. |
 | [sound](arkts-basicservices-sound-n.md) | Provides methods for setting the sound effect, including the ringtone, dial tone, alarm sound, notification tone,and haptic feedback. |
 | [TTS](arkts-basicservices-tts-n.md) | Provides methods for setting information about text-to-speech (TTS) conversion, including the pitch, speech rate,engine, and plug-ins. |
-| [wireless](arkts-basicservices-wireless-n.md) | Provides methods for setting radio network information, including information about Bluetooth, Wi-Fi, Near FieldCommunication (NFC), and the airplane mode. |
+| [wireless](arkts-basicservices-wireless-n.md) | Provides methods for setting radio network information, including information about Bluetooth, Wi-Fi, Near Field Communication (NFC), and the airplane mode. |
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [getURI](arkts-basicservices-geturi-f.md#geturi-1) | Constructs a URI for a specific name-value pair for monitoring data of the ability that uses the Datatemplate. |
-| [getURI](arkts-basicservices-geturi-f.md#geturi-2) | Constructs a URI for a specific name-value pair for monitoring data of the ability that uses the Datatemplate. |
+| [getURI](arkts-basicservices-geturi-f.md#geturi-1) | Constructs a URI for a specific name-value pair for monitoring data of the ability that uses the Data template. |
+| [getURI](arkts-basicservices-geturi-f.md#geturi-2) | Constructs a URI for a specific name-value pair for monitoring data of the ability that uses the Data template. |
 | [getValue](arkts-basicservices-getvalue-f.md#getvalue-1) | Obtains the value of a specified character string in the database. |
 | [getValue](arkts-basicservices-getvalue-f.md#getvalue-2) | Obtains the value of a specified character string in the database. |
 | [getValue](arkts-basicservices-getvalue-f.md#getvalue-3) | Get value from settingsdata |
 | [getValue](arkts-basicservices-getvalue-f.md#getvalue-4) | Get value from settingsdata |
-| [getValue](arkts-basicservices-getvalue-f.md#getvalue-5) | Get value from settingsdata[USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
+| [getValue](arkts-basicservices-getvalue-f.md#getvalue-5) | Get value from settingsdata [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
 | [setValue](arkts-basicservices-setvalue-f.md#setvalue-3) | Set settingsdata value. |
 | [setValue](arkts-basicservices-setvalue-f.md#setvalue-4) | Set settingsdata value. |
 | [setValue](arkts-basicservices-setvalue-f.md#setvalue-5) | Set settingsdata value.[DEVICE_SHARED, USER_PROPERTY] domain need ohos.permission.MANAGE_SETTINGS permission.[USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |

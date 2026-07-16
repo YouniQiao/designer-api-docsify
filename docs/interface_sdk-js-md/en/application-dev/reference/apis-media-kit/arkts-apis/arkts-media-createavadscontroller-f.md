@@ -18,19 +18,21 @@ Create an ad playback controller associated with the player instance.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-media-function createAVAdsController(player: AVPlayer): Promise<AVAdsController | undefined>--><!--Device-media-function createAVAdsController(player: AVPlayer): Promise<AVAdsController | undefined>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| player | AVPlayer | Yes | Created player instance. |
+| player | [AVPlayer](arkts-media-avplayer-i.md) | Yes | Created player instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVAdsController \| undefined&gt; | If success, an Controller is returned. Otherwise returns null. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AVAdsController \| undefined> | If success, an Controller is returned. Otherwise returns null. |
 
 **Error codes:**
 

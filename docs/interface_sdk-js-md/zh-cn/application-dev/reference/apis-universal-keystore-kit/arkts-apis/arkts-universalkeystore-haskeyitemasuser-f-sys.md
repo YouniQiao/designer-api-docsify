@@ -1,5 +1,11 @@
 # hasKeyItemAsUser（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+```
+
 ## hasKeyItemAsUser
 
 ```TypeScript
@@ -12,6 +18,8 @@ function hasKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOpt
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-huks-function hasKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<boolean>--><!--Device-huks-function hasKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **系统接口：** 此接口为系统接口。
@@ -22,13 +30,13 @@ function hasKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOpt
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID。 |
 | keyAlias | string | 是 | 所需查找的密钥的别名。 |
-| huksOptions | HuksOptions | 是 | 用于查询时指定密钥的属性TAG，如使用[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md)指定需查询密钥的安全级别，<br>可传空，当API version ≥12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
+| huksOptions | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | 是 | 用于查询时指定密钥的属性TAG，如使用[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md)指定需查询密钥的安全级别，<br>可传空，当API version ≥12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。若密钥存在，返回值为true，若密钥不存在，返回值为false。 |
+| Promise<boolean> | Promise对象。若密钥存在，返回值为true，若密钥不存在，返回值为false。 |
 
 **错误码：**
 

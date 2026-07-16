@@ -4,6 +4,8 @@ Represents data of the file URI type.
 
 **Since:** 15
 
+<!--Device-uniformDataStruct-interface FileUri--><!--Device-uniformDataStruct-interface FileUri-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## Modules to Import
@@ -18,14 +20,15 @@ import { uniformDataStruct } from '@kit.ArkData';
 details?: Record<string, number | number | number | string | Uint8Array>
 ```
 
-Object of the dictionary type used to describe the icon. The key is of the string type, and the value can be a
-number, a string, or a Uint8Array. By default, it is an empty dictionary object.
+Object of the dictionary type used to describe the icon. The key is of the string type, and the value can be a number, a string, or a Uint8Array. By default, it is an empty dictionary object.
 
 **Type:** Record<string, number | number | number | string | Uint8Array>
 
 **Since:** 15
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FileUri-details?: Record<string, int | long | double | string | Uint8Array>--><!--Device-FileUri-details?: Record<string, int | long | double | string | Uint8Array>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -35,14 +38,15 @@ number, a string, or a Uint8Array. By default, it is an empty dictionary object.
 fileType: string
 ```
 
-File type, which must be UTD. For details, see [Prebuilt UTDs]. The
-maximum length of the value is 1024 bytes.
+File type, which must be UTD. For details, see [Prebuilt UTDs]. The maximum length of the value is 1024 bytes.
 
 **Type:** string
 
 **Since:** 15
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FileUri-fileType: string--><!--Device-FileUri-fileType: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -60,6 +64,8 @@ File path.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FileUri-oriUri: string--><!--Device-FileUri-oriUri: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## uniformDataType
@@ -68,14 +74,15 @@ File path.
 readonly uniformDataType: 'general.file-uri'
 ```
 
-Uniform data type, which has a fixed value of **general.file-uri**. For details, see
-[UniformDataType](arkts-arkdata-uniformdatatype-e.md).
+Uniform data type, which has a fixed value of **general.file-uri**. For details, see [UniformDataType](arkts-arkdata-uniformdatatype-e.md).
 
 **Type:** 'general.file-uri'
 
 **Since:** 15
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FileUri-readonly uniformDataType: 'general.file-uri'--><!--Device-FileUri-readonly uniformDataType: 'general.file-uri'-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -92,6 +99,8 @@ Defines URI authorization policies for drag intention.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FileUri-uriAuthorizationPolicies?: Array<int>--><!--Device-FileUri-uriAuthorizationPolicies?: Array<int>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 

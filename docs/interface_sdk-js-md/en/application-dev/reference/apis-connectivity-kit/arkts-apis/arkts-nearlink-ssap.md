@@ -4,6 +4,8 @@ Provides methods to operate or manage service of NearLink.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare namespace ssap--><!--Device-unnamed-declare namespace ssap-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import

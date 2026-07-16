@@ -4,6 +4,8 @@ Defines the position of a guideline.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface GuideLinePosition--><!--Device-unnamed-declare interface GuideLinePosition-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## end
@@ -12,8 +14,7 @@ Defines the position of a guideline.
 end? : Dimension
 ```
 
-Distance between the guideline and the right or bottom of the container.
-Unit: vp.
+Distance between the guideline and the right or bottom of the container.Unit: vp.
 
 **Type:** Dimension
 
@@ -22,6 +23,8 @@ Unit: vp.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GuideLinePosition-end? : Dimension--><!--Device-GuideLinePosition-end? : Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,8 +34,7 @@ Unit: vp.
 start? : Dimension
 ```
 
-Distance between the guideline and the left or top of the container.
-Unit: vp.
+Distance between the guideline and the left or top of the container.Unit: vp.
 
 **Type:** Dimension
 
@@ -41,6 +43,8 @@ Unit: vp.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GuideLinePosition-start? : Dimension--><!--Device-GuideLinePosition-start? : Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

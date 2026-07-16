@@ -1,5 +1,11 @@
 # createShareServiceStub（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { cloudExtension } from '@kit.ArkData';
+```
+
 ## createShareServiceStub
 
 ```TypeScript
@@ -10,6 +16,8 @@ function createShareServiceStub(instance: ShareCenter): Promise<rpc.RemoteObject
 
 **起始版本：** 11
 
+<!--Device-cloudExtension-function createShareServiceStub(instance: ShareCenter): Promise<rpc.RemoteObject>--><!--Device-cloudExtension-function createShareServiceStub(instance: ShareCenter): Promise<rpc.RemoteObject>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -18,13 +26,13 @@ function createShareServiceStub(instance: ShareCenter): Promise<rpc.RemoteObject
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| instance | ShareCenter | 是 | ShareCenter类的实例。 |
+| instance | [ShareCenter](arkts-arkdata-sharecenter-i-sys.md) | 是 | ShareCenter类的实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回ShareCenter的RemoteObject对象。 |
+| Promise<rpc.RemoteObject> | Promise对象，返回ShareCenter的RemoteObject对象。 |
 
 **示例：**
 

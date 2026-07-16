@@ -4,6 +4,8 @@ Manages text chunk process configurations.
 
 **Since:** 15
 
+<!--Device-intelligence-interface SplitConfig--><!--Device-intelligence-interface SplitConfig-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ The ratio of overlap between adjacent chunks.
 
 **Since:** 15
 
+<!--Device-SplitConfig-overlapRatio: double--><!--Device-SplitConfig-overlapRatio: double-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 ## size
@@ -37,6 +41,8 @@ The maximun size of chunks.
 **Type:** number
 
 **Since:** 15
+
+<!--Device-SplitConfig-size: int--><!--Device-SplitConfig-size: int-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 

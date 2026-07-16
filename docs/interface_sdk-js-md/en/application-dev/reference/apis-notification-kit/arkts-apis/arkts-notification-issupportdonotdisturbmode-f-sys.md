@@ -14,12 +14,13 @@ function isSupportDoNotDisturbMode(callback: AsyncCallback<boolean>): void
 
 Checks whether DND mode is supported. This API uses an asynchronous callback to return the result.
 
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,
-error code 801 is returned.
+This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function isSupportDoNotDisturbMode(callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isSupportDoNotDisturbMode(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -29,7 +30,7 @@ error code 801 is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that DNDmode is supported, and **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means that DND mode is supported, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -69,12 +70,13 @@ function isSupportDoNotDisturbMode(): Promise<boolean>
 
 Checks whether DND mode is supported. This API uses a promise to return the result.
 
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,
-error code 801 is returned.
+This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function isSupportDoNotDisturbMode(): Promise<boolean>--><!--Device-notificationManager-function isSupportDoNotDisturbMode(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -84,7 +86,7 @@ error code 801 is returned.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that DND mode issupported, and **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means that DND mode is supported, and **false** means the opposite. |
 
 **Error codes:**
 

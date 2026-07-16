@@ -4,6 +4,8 @@ Text change event info
 
 **Since:** 22
 
+<!--Device-uiObserver-export interface TextChangeEventInfo--><!--Device-uiObserver-export interface TextChangeEventInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Current content of text field component .
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TextChangeEventInfo-content: string--><!--Device-TextChangeEventInfo-content: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## id
@@ -46,6 +50,8 @@ The id of text input component.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TextChangeEventInfo-id: string--><!--Device-TextChangeEventInfo-id: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## uniqueId
@@ -63,6 +69,8 @@ The uniqueId of the text input component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TextChangeEventInfo-uniqueId: number--><!--Device-TextChangeEventInfo-uniqueId: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

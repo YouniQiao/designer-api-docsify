@@ -20,14 +20,16 @@ This API uses an asynchronous callback to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-observer-function onCommunicationStateChange(callback: Callback<boolean>, options?: ObserverOptions): void--><!--Device-observer-function onCommunicationStateChange(callback: Callback<boolean>, options?: ObserverOptions): void-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;boolean&gt; | Yes | Callback used to return the result.The value **true** indicates 5A state, and **false** indicates not 5A state. |
-| options | ObserverOptions | No | Indicates the options for observer. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | Yes | Callback used to return the result.The value **true** indicates 5A state, and **false** indicates not 5A state. |
+| options | [ObserverOptions](arkts-telephony-observeroptions-i.md) | No | Indicates the options for observer. |
 
 **Error codes:**
 

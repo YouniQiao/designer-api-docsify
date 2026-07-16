@@ -4,6 +4,8 @@ Implements a common controller for managing components related to **promptAction
 
 **Since:** 18
 
+<!--Device-promptAction-class CommonController--><!--Device-promptAction-class CommonController-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Closes the custom dialog box. If the dialog box is already closed, this API has 
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-CommonController-close(): void--><!--Device-CommonController-close(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -41,6 +45,8 @@ A constructor used to create a controller instance.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CommonController-constructor()--><!--Device-CommonController-constructor()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,11 +64,13 @@ Obtains the state of the custom dialog box.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-CommonController-getState(): CommonState--><!--Device-CommonController-getState(): CommonState-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CommonState | State of the custom dialog box. |
+| [CommonState](arkts-arkui-commonstate-e.md) | State of the custom dialog box. |
 

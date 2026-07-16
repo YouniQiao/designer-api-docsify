@@ -1,10 +1,10 @@
 # @ohos.inputMethodEngine
 
-The **inputMethodEngine** module is oriented to input method applications (including system and third-party input
-method applications). With the APIs of this module, input method applications are able to create soft keyboard
-windows, insert or delete characters, select text, and listen for physical keyboard events.
+The **inputMethodEngine** module is oriented to input method applications (including system and third-party input method applications). With the APIs of this module, input method applications are able to create soft keyboard windows, insert or delete characters, select text, and listen for physical keyboard events.
 
 **Since:** 8
+
+<!--Device-unnamed-declare namespace inputMethodEngine--><!--Device-unnamed-declare namespace inputMethodEngine-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -21,7 +21,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 | Name | Description |
 | --- | --- |
 | [createKeyboardDelegate](arkts-ime-createkeyboarddelegate-f.md#createkeyboarddelegate-1) | Obtains a [KeyboardDelegate](arkts-ime-keyboarddelegate-i.md) instance for the input method. The input method can use the obtained instance to subscribe to a physical keyboard event, text selection change event, and more. |
-| [getInputMethodAbility](arkts-ime-getinputmethodability-f.md#getinputmethodability-1) | Obtains an [InputMethodAbility](arkts-ime-inputmethodability-i.md) instance for the input method. This APIcan be called only by an input method.The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event, create/destroy an input method panel, and the like. |
+| [getInputMethodAbility](arkts-ime-getinputmethodability-f.md#getinputmethodability-1) | Obtains an [InputMethodAbility](arkts-ime-inputmethodability-i.md) instance for the input method. This API can be called only by an input method.The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event, create/destroy an input method panel, and the like. |
 | [getInputMethodEngine](arkts-ime-getinputmethodengine-f.md#getinputmethodengine-1) | Obtains an [InputMethodEngine](arkts-ime-inputmethodengine-i.md) instance for the input method.The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event. |
 | [getKeyboardDelegate](arkts-ime-getkeyboarddelegate-f.md#getkeyboarddelegate-1) | Obtains a [KeyboardDelegate](arkts-ime-keyboarddelegate-i.md) instance for the input method.The input method can use the obtained instance to subscribe to a physical keyboard event, text selection change event, and more. |
 
@@ -30,17 +30,17 @@ import { inputMethodEngine } from '@kit.IMEKit';
 | Name | Description |
 | --- | --- |
 | [AttachOptions](arkts-ime-attachoptions-i.md) | Defines additional options for binding an input method. |
-| [EditorAttribute](arkts-ime-editorattribute-i.md) | In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-getkeyboarddelegate-f.md#getkeyboarddelegate-1) to obtain a **KeyboardDelegate** instance, andthen call the APIs using the obtained instance. |
+| [EditorAttribute](arkts-ime-editorattribute-i.md) | In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-getkeyboarddelegate-f.md#getkeyboarddelegate-1) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance. |
 | [EnhancedPanelRect](arkts-ime-enhancedpanelrect-i.md) | Indicates the size of the enhanced input method panel, including the custom avoid area and touch area. |
 | [ImmersiveEffect](arkts-ime-immersiveeffect-i.md) | Describes the immersive effect. |
 | [InputClient](arkts-ime-inputclient-i.md) | You must first use [on('inputStart')](inputMethodEngine.InputMethodAbility. on(type: 'inputStart', callback:(kbController: KeyboardController, inputClient: InputClient) =&gt; void): void;) to obtain a **InputClient** instance, and then use this instance to call the following APIs. |
 | [InputMethodAbility](arkts-ime-inputmethodability-i.md) | In the following API examples, you must first use [getInputMethodAbility](arkts-ime-getinputmethodability-f.md#getinputmethodability-1) to obtain an **InputMethodAbility** instance, and then call the APIs using the obtained instance. |
-| [InputMethodEngine](arkts-ime-inputmethodengine-i.md) | In the following API examples, you must first use [getInputMethodEngine](arkts-ime-getinputmethodengine-f.md#getinputmethodengine-1) to obtain an **InputMethodEngine** instance, and then call the APIs using the obtained instance. |
-| [KeyEvent](arkts-ime-keyevent-i.md) | In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-getkeyboarddelegate-f.md#getkeyboarddelegate-1) to obtain a **KeyboardDelegate** instance, andthen call the APIs using the obtained instance. |
+| [InputMethodEngine](arkts-ime-inputmethodengine-i.md) | In the following API examples, you must first use [getInputMethodEngine](arkts-ime-getinputmethodengine-f.md#getinputmethodengine-1) to obtain an **InputMethodEngine** instance,and then call the APIs using the obtained instance. |
+| [KeyEvent](arkts-ime-keyevent-i.md) | In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-getkeyboarddelegate-f.md#getkeyboarddelegate-1) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance. |
 | [KeyboardArea](arkts-ime-keyboardarea-i.md) | Represents the keyboard area on the panel. |
-| [KeyboardController](arkts-ime-keyboardcontroller-i.md) | In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-getkeyboarddelegate-f.md#getkeyboarddelegate-1) to obtain a **KeyboardDelegate** instance, andthen call the APIs using the obtained instance. |
-| [KeyboardDelegate](arkts-ime-keyboarddelegate-i.md) | In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-getkeyboarddelegate-f.md#getkeyboarddelegate-1) to obtain a **KeyboardDelegate** instance, andthen call the APIs using the obtained instance. |
-| [MessageHandler](arkts-ime-messagehandler-i.md) | Represents a custom communication object.&gt; **NOTE**&gt;&gt; You can register this object to receive custom communication data sent by the edit box application attached to &gt; the input method application. When the custom communication data is received, the &gt; [onMessage](arkts-ime-messagehandler-i.md#onmessage-1) callback in &gt; this object is triggered.&gt;&gt; This object is globally unique. After multiple registrations, only the last registered object is valid and &gt; retained, and the [onTerminated](arkts-ime-messagehandler-i.md#onterminated-1) callback of the &gt; penultimate registered object is triggered.&gt;&gt; If this object is unregistered, its [onTerminated](arkts-ime-messagehandler-i.md#onterminated-1) &gt; callback will be triggered. |
+| [KeyboardController](arkts-ime-keyboardcontroller-i.md) | In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-getkeyboarddelegate-f.md#getkeyboarddelegate-1) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance. |
+| [KeyboardDelegate](arkts-ime-keyboarddelegate-i.md) | In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-getkeyboarddelegate-f.md#getkeyboarddelegate-1) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance. |
+| [MessageHandler](arkts-ime-messagehandler-i.md) | Represents a custom communication object. |
 | [Movement](arkts-ime-movement-i.md) | Describes the direction in which the cursor moves when the text is selected. |
 | [Panel](arkts-ime-panel-i.md) | In the following API examples, you must first use [createPanel](arkts-ime-inputmethodability-i.md#createpanel-1)to obtain a **Panel** instance, and then call the APIs using the obtained instance. |
 | [PanelInfo](arkts-ime-panelinfo-i.md) | Describes the attributes of the input method panel. |
@@ -54,7 +54,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 
 | Name | Description |
 | --- | --- |
-| [EditorAttribute](arkts-ime-editorattribute-i-sys.md) | In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-getkeyboarddelegate-f.md#getkeyboarddelegate-1) to obtain a **KeyboardDelegate** instance, andthen call the APIs using the obtained instance. |
+| [EditorAttribute](arkts-ime-editorattribute-i-sys.md) | In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-getkeyboarddelegate-f.md#getkeyboarddelegate-1) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance. |
 | [ImmersiveEffect](arkts-ime-immersiveeffect-i-sys.md) | Describes the immersive effect. |
 | [Panel](arkts-ime-panel-i-sys.md) | In the following API examples, you must first use [createPanel](arkts-ime-inputmethodability-i.md#createpanel-1)to obtain a **Panel** instance, and then call the APIs using the obtained instance. |
 | [SystemPanelInsets](arkts-ime-systempanelinsets-i.md) | Defines the offset area between the input method soft keyboard and the system panel. |

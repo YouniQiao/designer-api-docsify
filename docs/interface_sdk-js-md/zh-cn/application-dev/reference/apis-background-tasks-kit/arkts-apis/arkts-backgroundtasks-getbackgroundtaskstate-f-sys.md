@@ -1,5 +1,11 @@
 # getBackgroundTaskState（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+```
+
 ## getBackgroundTaskState
 
 ```TypeScript
@@ -14,6 +20,8 @@ function getBackgroundTaskState(stateInfo: BackgroundTaskStateInfo): UserAuthRes
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-backgroundTaskManager-function getBackgroundTaskState(stateInfo: BackgroundTaskStateInfo): UserAuthResult--><!--Device-backgroundTaskManager-function getBackgroundTaskState(stateInfo: BackgroundTaskStateInfo): UserAuthResult-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **系统接口：** 此接口为系统接口。
@@ -22,13 +30,13 @@ function getBackgroundTaskState(stateInfo: BackgroundTaskStateInfo): UserAuthRes
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| stateInfo | BackgroundTaskStateInfo | 是 | 授权的必要信息，包括用户ID、应用包名、应用分身ID等。 |
+| stateInfo | [BackgroundTaskStateInfo](arkts-backgroundtasks-backgroundtaskstateinfo-i-sys.md) | 是 | 授权的必要信息，包括用户ID、应用包名、应用分身ID等。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| UserAuthResult | 授权结果。 |
+| [UserAuthResult](arkts-backgroundtasks-userauthresult-e.md) | 授权结果。 |
 
 **错误码：**
 

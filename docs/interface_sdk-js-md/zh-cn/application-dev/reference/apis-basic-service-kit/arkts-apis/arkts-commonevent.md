@@ -8,6 +8,8 @@
 
 **替代接口：** [commonEventManager:commonEventManager](arkts-commoneventmanager.md)
 
+<!--Device-unnamed-declare namespace commonEvent--><!--Device-unnamed-declare namespace commonEvent-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## 汇总

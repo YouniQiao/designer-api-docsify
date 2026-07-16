@@ -23,6 +23,18 @@ Publishes a notification through the reminder agent. This API uses an asynchrono
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
+<!--Device-notificationManager-function publishAsBundle(
+    request: NotificationRequest,
+    representativeBundle: string,
+    userId: int,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-notificationManager-function publishAsBundle(
+    request: NotificationRequest,
+    representativeBundle: string,
+    userId: int,
+    callback: AsyncCallback<void>
+  ): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -31,10 +43,10 @@ Publishes a notification through the reminder agent. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | NotificationRequest | Yes | Content and related configuration of the notification to publish. |
-| representativeBundle | string | Yes | Bundle name of the application whose notification function is taken overby the reminder agent. |
+| request | [NotificationRequest](arkts-notification-notificationrequest-t.md) | Yes | Content and related configuration of the notification to publish. |
+| representativeBundle | string | Yes | Bundle name of the application whose notification function is taken over by the reminder agent. |
 | userId | number | Yes | User ID. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -56,11 +68,11 @@ Publishes a notification through the reminder agent. This API uses an asynchrono
 | [1600014](../errorcode-notification.md#1600014-no-related-permission) | The right of liveView is not enabled.<br>**Applicable version:** 26.0.0 and later |
 | [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) | The current notification status does not support duplicate configurations. |
 | [1600016](../errorcode-notification.md#1600016-updated-notification-version-outdated) | The notification version for this update is too low. |
-| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-is-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permissionsettings. |
+| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-is-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permission settings. |
 | [1600025](../errorcode-notification.md#1600025-geofencing-disabled) | Geofencing disabled.<br>**Applicable version:** 23 and later |
 | [1600026](../errorcode-notification.md#1600026-location-disabled) | The location switch is off.<br>**Applicable version:** 23 and later |
-| [1600027](../errorcode-notification.md#1600027-awareness-suggestions-switch-of-the-location-service-disabled) | The "Awareness & suggestions" switch of the location-based service isoff.<br>**Applicable version:** 23 and later |
-| 1600029 | The system failed to find the ExtensionAbility instance for thecustom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
+| [1600027](../errorcode-notification.md#1600027-awareness-suggestions-switch-of-the-location-service-disabled) | The "Awareness & suggestions" switch of the location-based service is off.<br>**Applicable version:** 23 and later |
+| 1600029 | The system failed to find the ExtensionAbility instance for the custom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Network unreachable. |
 
 **Example**
@@ -109,6 +121,8 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
+<!--Device-notificationManager-function publishAsBundle(request: NotificationRequest, representativeBundle: string, userId: int): Promise<void>--><!--Device-notificationManager-function publishAsBundle(request: NotificationRequest, representativeBundle: string, userId: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -117,15 +131,15 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | NotificationRequest | Yes | Content and related configuration of the notification to publish. |
-| representativeBundle | string | Yes | Bundle name of the application whose notification function is taken overby the reminder agent. |
+| request | [NotificationRequest](arkts-notification-notificationrequest-t.md) | Yes | Content and related configuration of the notification to publish. |
+| representativeBundle | string | Yes | Bundle name of the application whose notification function is taken over by the reminder agent. |
 | userId | number | Yes | User ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -147,11 +161,11 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 | [1600014](../errorcode-notification.md#1600014-no-related-permission) | The right of liveView is not enabled.<br>**Applicable version:** 26.0.0 and later |
 | [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) | The current notification status does not support duplicate configurations. |
 | [1600016](../errorcode-notification.md#1600016-updated-notification-version-outdated) | The notification version for this update is too low. |
-| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-is-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permissionsettings. |
+| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-is-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permission settings. |
 | [1600025](../errorcode-notification.md#1600025-geofencing-disabled) | Geofencing disabled.<br>**Applicable version:** 23 and later |
 | [1600026](../errorcode-notification.md#1600026-location-disabled) | The location switch is off.<br>**Applicable version:** 23 and later |
-| [1600027](../errorcode-notification.md#1600027-awareness-suggestions-switch-of-the-location-service-disabled) | The "Awareness & suggestions" switch of the location-based service isoff.<br>**Applicable version:** 23 and later |
-| 1600029 | The system failed to find the ExtensionAbility instance for thecustom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
+| [1600027](../errorcode-notification.md#1600027-awareness-suggestions-switch-of-the-location-service-disabled) | The "Awareness & suggestions" switch of the location-based service is off.<br>**Applicable version:** 23 and later |
+| 1600029 | The system failed to find the ExtensionAbility instance for the custom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Network unreachable. |
 
 **Example**
@@ -196,6 +210,8 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
+<!--Device-notificationManager-function publishAsBundle(representativeBundle: BundleOption, request: NotificationRequest): Promise<void>--><!--Device-notificationManager-function publishAsBundle(representativeBundle: BundleOption, request: NotificationRequest): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -204,14 +220,14 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| representativeBundle | BundleOption | Yes | Bundle information of the application whose notification function istaken over by the reminder agent. |
-| request | NotificationRequest | Yes | Content and related configuration of the notification to publish. |
+| representativeBundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application whose notification function is taken over by the reminder agent. |
+| request | [NotificationRequest](arkts-notification-notificationrequest-t.md) | Yes | Content and related configuration of the notification to publish. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -233,11 +249,11 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 | [1600014](../errorcode-notification.md#1600014-no-related-permission) | The right of liveView is not enabled.<br>**Applicable version:** 26.0.0 and later |
 | [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) | The current notification status does not support duplicate configurations. |
 | [1600016](../errorcode-notification.md#1600016-updated-notification-version-outdated) | The notification version for this update is too low. |
-| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-is-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permissionsettings. |
+| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-is-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permission settings. |
 | [1600025](../errorcode-notification.md#1600025-geofencing-disabled) | Geofencing disabled.<br>**Applicable version:** 23 and later |
 | [1600026](../errorcode-notification.md#1600026-location-disabled) | The location switch is off.<br>**Applicable version:** 23 and later |
-| [1600027](../errorcode-notification.md#1600027-awareness-suggestions-switch-of-the-location-service-disabled) | The "Awareness & suggestions" switch of the location-based service isoff.<br>**Applicable version:** 23 and later |
-| 1600029 | The system failed to find the ExtensionAbility instance for thecustom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
+| [1600027](../errorcode-notification.md#1600027-awareness-suggestions-switch-of-the-location-service-disabled) | The "Awareness & suggestions" switch of the location-based service is off.<br>**Applicable version:** 23 and later |
+| 1600029 | The system failed to find the ExtensionAbility instance for the custom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Network unreachable. |
 
 **Example**

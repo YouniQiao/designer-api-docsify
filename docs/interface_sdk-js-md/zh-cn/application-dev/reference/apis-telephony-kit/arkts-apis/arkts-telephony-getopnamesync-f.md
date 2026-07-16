@@ -1,5 +1,11 @@
 # getOpNameSync
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## getOpNameSync
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getOpNameSync(slotId: number): string
 Obtains the operator name of the SIM card in a specified slot.
 
 **起始版本：** 10
+
+<!--Device-sim-function getOpNameSync(slotId: int): string--><!--Device-sim-function getOpNameSync(slotId: int): string-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -22,7 +30,7 @@ Obtains the operator name of the SIM card in a specified slot.
 
 | 类型 | 说明 |
 | --- | --- |
-| string | Returns the operator name; returns an empty string if no SIM card is inserted orno operator name is matched. |
+| string | Returns the operator name; returns an empty string if no SIM card is inserted or no operator name is matched. |
 
 **示例：**
 

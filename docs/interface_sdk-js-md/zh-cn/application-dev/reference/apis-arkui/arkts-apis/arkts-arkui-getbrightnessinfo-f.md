@@ -1,17 +1,24 @@
 # getBrightnessInfo
 
+## 导入模块
+
+```TypeScript
+import { display } from '@kit.ArkUI';
+```
+
 ## getBrightnessInfo
 
 ```TypeScript
 function getBrightnessInfo(displayId: number): BrightnessInfo
 ```
 
-获取指定displayId对应屏幕的亮度信息。如果屏幕不支持HDR，返回的[BrightnessInfo](arkts-arkui-brightnessinfo-i.md)对象中的currentHeadroom和maxHeadroom
-为默认值。虚拟屏的BrightnessInfo对象中sdrNits为默认值。
+获取指定displayId对应屏幕的亮度信息。如果屏幕不支持HDR，返回的[BrightnessInfo](arkts-arkui-brightnessinfo-i.md)对象中的currentHeadroom和maxHeadroom为默认值。虚拟屏的BrightnessInfo对象中sdrNits为默认值。
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-display-function getBrightnessInfo(displayId: long): BrightnessInfo--><!--Device-display-function getBrightnessInfo(displayId: long): BrightnessInfo-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -25,7 +32,7 @@ function getBrightnessInfo(displayId: number): BrightnessInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| BrightnessInfo | 返回displayId对应屏幕的亮度信息。 |
+| [BrightnessInfo](arkts-arkui-brightnessinfo-i.md) | 返回displayId对应屏幕的亮度信息。 |
 
 **错误码：**
 

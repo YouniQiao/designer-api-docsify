@@ -4,13 +4,13 @@
 export type EnterpriseAdminExtensionContext = _EnterpriseAdminExtensionContext.default
 ```
 
-EnterpriseAdminExtensionContext is the context of
-[EnterpriseAdminExtensionAbility](arkts-mdm-enterpriseadminextensionability-c.md)
-and inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
+EnterpriseAdminExtensionContext is the context of [EnterpriseAdminExtensionAbility](arkts-mdm-enterpriseadminextensionability-c.md)and inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-common-export type EnterpriseAdminExtensionContext = _EnterpriseAdminExtensionContext.default--><!--Device-common-export type EnterpriseAdminExtensionContext = _EnterpriseAdminExtensionContext.default-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

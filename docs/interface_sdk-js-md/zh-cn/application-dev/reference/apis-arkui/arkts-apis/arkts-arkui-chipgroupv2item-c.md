@@ -4,7 +4,15 @@ ChipGroupV2Item定义了芯片组中单个芯片项。
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-export declare class ChipGroupV2Item--><!--Device-unnamed-export declare class ChipGroupV2Item-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { ChipGroupV2ItemConfig, ChipGroupV2ItemStyleConfig, ChipGroupV2SpaceConfig, ChipGroupV2IconGroupSuffix, ChipGroupV2Items, ChipGroupV2Padding, ChipGroupV2Item, ChipGroupV2ItemStyle, ChipGroupV2, ChipGroupV2PaddingConfig, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2Space } from '@kit.ArkUI';
+```
 
 ## constructor
 
@@ -18,7 +26,9 @@ ChipGroupV2Item的构造函数。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroupV2Item-constructor(config: ChipGroupV2ItemConfig)--><!--Device-ChipGroupV2Item-constructor(config: ChipGroupV2ItemConfig)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,7 +36,7 @@ ChipGroupV2Item的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | ChipGroupV2ItemConfig | 是 | 芯片组项配置。 |
+| config | [ChipGroupV2ItemConfig](arkts-arkui-chipgroupv2itemconfig-i.md) | 是 | 芯片组项配置。 |
 
 ## accessibilityDescription
 
@@ -34,8 +44,7 @@ ChipGroupV2Item的构造函数。
 public accessibilityDescription?: ResourceStr
 ```
 
-无障碍描述。此描述用于向用户详细解释当前组件，开发人员应为组件的这一属性提供较为详尽的文本说明，以协助用户理解即将执行的操作及其可能产生的结果。特别是当这些结果无法仅从组件的属性和无障碍文本中直接获知时。如果组件同时具备文本属
-性和无障碍说明属性，当组件被选中时，系统将首先播报组件的文本属性，随后播报无障碍说明属性的内容。
+无障碍描述。此描述用于向用户详细解释当前组件，开发人员应为组件的这一属性提供较为详尽的文本说明，以协助用户理解即将执行的操作及其可能产生的结果。特别是当这些结果无法仅从组件的属性和无障碍文本中直接获知时。如果组件同时具备文本属性和无障碍说明属性，当组件被选中时，系统将首先播报组件的文本属性，随后播报无障碍说明属性的内容。
 
 默认值：空字符串。
 
@@ -47,7 +56,9 @@ public accessibilityDescription?: ResourceStr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroupV2Item-public accessibilityDescription?: ResourceStr--><!--Device-ChipGroupV2Item-public accessibilityDescription?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -81,7 +92,9 @@ public accessibilityLevel?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroupV2Item-public accessibilityLevel?: string--><!--Device-ChipGroupV2Item-public accessibilityLevel?: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -105,7 +118,9 @@ true表示删除图标显示，false表示删除图标不显示。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroupV2Item-public allowClose?: boolean--><!--Device-ChipGroupV2Item-public allowClose?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -119,8 +134,7 @@ public closeIcon?: ChipV2CloseConfig
 
 默认值：
 
-- 尺寸默认值：size为ChipV2Size.SMALL时，默认值为`$r('sys.float.chip_small_font_size')`；其他情况默认值为
-`$r('sys.float.chip_normal_font_size')`。
+- 尺寸默认值：size为ChipV2Size.SMALL时，默认值为`$r('sys.float.chip_small_font_size')`；其他情况默认值为`$r('sys.float.chip_normal_font_size')`。  
 - 无障碍默认值：无无障碍描述。
 
 值为undefined时，按默认值处理。
@@ -131,7 +145,9 @@ public closeIcon?: ChipV2CloseConfig
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroupV2Item-public closeIcon?: ChipV2CloseConfig--><!--Device-ChipGroupV2Item-public closeIcon?: ChipV2CloseConfig-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -149,7 +165,9 @@ ChipV2文本属性。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroupV2Item-public label: ChipV2Label--><!--Device-ChipGroupV2Item-public label: ChipV2Label-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -171,7 +189,9 @@ public prefixIcon?: ChipV2PrefixImageIcon
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroupV2Item-public prefixIcon?: ChipV2PrefixImageIcon--><!--Device-ChipGroupV2Item-public prefixIcon?: ChipV2PrefixImageIcon-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -193,7 +213,9 @@ public prefixSymbolIcon?: ChipV2PrefixSymbolIcon
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroupV2Item-public prefixSymbolIcon?: ChipV2PrefixSymbolIcon--><!--Device-ChipGroupV2Item-public prefixSymbolIcon?: ChipV2PrefixSymbolIcon-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -215,7 +237,9 @@ public suffixIcon?: ChipV2SuffixImageIcon
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroupV2Item-public suffixIcon?: ChipV2SuffixImageIcon--><!--Device-ChipGroupV2Item-public suffixIcon?: ChipV2SuffixImageIcon-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -237,7 +261,9 @@ public suffixSymbolIcon?: ChipV2SuffixSymbolIcon
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroupV2Item-public suffixSymbolIcon?: ChipV2SuffixSymbolIcon--><!--Device-ChipGroupV2Item-public suffixSymbolIcon?: ChipV2SuffixSymbolIcon-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

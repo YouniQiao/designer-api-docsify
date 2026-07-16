@@ -4,6 +4,8 @@ Describe the context of GATT responses.
 
 **Since:** 23
 
+<!--Device-ble-interface GattRspContext--><!--Device-ble-interface GattRspContext-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -27,6 +29,8 @@ Timestamp of when Bluetooth received the response command.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GattRspContext-timestamp: long--><!--Device-GattRspContext-timestamp: long-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

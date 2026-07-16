@@ -4,6 +4,8 @@ Serial port management.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare namespace serial--><!--Device-unnamed-declare namespace serial-End-->
+
 **System capability:** SystemCapability.BusManager.Serial
 
 ## Modules to Import

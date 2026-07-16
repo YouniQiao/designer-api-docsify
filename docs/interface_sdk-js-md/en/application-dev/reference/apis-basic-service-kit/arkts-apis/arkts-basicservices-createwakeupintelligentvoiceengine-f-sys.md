@@ -18,6 +18,8 @@ Obtains an {@link WakeupIntelligentVoiceEngine} instance. This method uses an as
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-intelligentVoice-function createWakeupIntelligentVoiceEngine(descriptor: WakeupIntelligentVoiceEngineDescriptor, callback: AsyncCallback<WakeupIntelligentVoiceEngine>): void--><!--Device-intelligentVoice-function createWakeupIntelligentVoiceEngine(descriptor: WakeupIntelligentVoiceEngineDescriptor, callback: AsyncCallback<WakeupIntelligentVoiceEngine>): void-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Obtains an {@link WakeupIntelligentVoiceEngine} instance. This method uses an as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | WakeupIntelligentVoiceEngineDescriptor | Yes | descriptor indicates wakeup intelligent voice engine descriptor. |
-| callback | AsyncCallback&lt;WakeupIntelligentVoiceEngine&gt; | Yes | the callback used to return the WakeupIntelligentVoiceEngine instance. |
+| descriptor | [WakeupIntelligentVoiceEngineDescriptor](arkts-basicservices-wakeupintelligentvoiceenginedescriptor-i-sys.md) | Yes | descriptor indicates wakeup intelligent voice engine descriptor. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<WakeupIntelligentVoiceEngine> | Yes | the callback used to return the WakeupIntelligentVoiceEngine instance. |
 
 **Error codes:**
 
@@ -73,6 +75,8 @@ Obtains an {@link WakeupIntelligentVoiceEngine} instance. This method uses a pro
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-intelligentVoice-function createWakeupIntelligentVoiceEngine(descriptor: WakeupIntelligentVoiceEngineDescriptor): Promise<WakeupIntelligentVoiceEngine>--><!--Device-intelligentVoice-function createWakeupIntelligentVoiceEngine(descriptor: WakeupIntelligentVoiceEngineDescriptor): Promise<WakeupIntelligentVoiceEngine>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -81,13 +85,13 @@ Obtains an {@link WakeupIntelligentVoiceEngine} instance. This method uses a pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | WakeupIntelligentVoiceEngineDescriptor | Yes | descriptor indicates wakeup intelligent voice engine descriptor. |
+| descriptor | [WakeupIntelligentVoiceEngineDescriptor](arkts-basicservices-wakeupintelligentvoiceenginedescriptor-i-sys.md) | Yes | descriptor indicates wakeup intelligent voice engine descriptor. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WakeupIntelligentVoiceEngine&gt; | the promise used to return the WakeupIntelligentVoiceEngine instance. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<WakeupIntelligentVoiceEngine> | the promise used to return the WakeupIntelligentVoiceEngine instance. |
 
 **Error codes:**
 

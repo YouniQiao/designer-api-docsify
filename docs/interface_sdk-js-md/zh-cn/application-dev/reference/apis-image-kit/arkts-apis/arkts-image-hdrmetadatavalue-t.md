@@ -8,6 +8,8 @@ PixelMap使用的HDR元数据值类型，与[HdrMetadataKey](arkts-image-hdrmeta
 
 **起始版本：** 12
 
+<!--Device-image-type HdrMetadataValue = HdrMetadataType | HdrStaticMetadata | ArrayBuffer | HdrGainmapMetadata--><!--Device-image-type HdrMetadataValue = HdrMetadataType | HdrStaticMetadata | ArrayBuffer | HdrGainmapMetadata-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 | 类型 | 说明 |

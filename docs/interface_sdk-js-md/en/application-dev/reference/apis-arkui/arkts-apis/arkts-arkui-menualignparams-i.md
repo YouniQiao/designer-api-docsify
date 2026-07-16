@@ -4,6 +4,8 @@ Defines the MenuAlign parameters.
 
 **Since:** 18
 
+<!--Device-unnamed-export interface MenuAlignParams--><!--Device-unnamed-export interface MenuAlignParams-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Indicates the fontSize and fontColor of the search button.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-MenuAlignParams-alignType: MenuAlignType--><!--Device-MenuAlignParams-alignType: MenuAlignType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## offset
@@ -34,14 +38,15 @@ Indicates the fontSize and fontColor of the search button.
 offset?: Offset
 ```
 
-Offset of the drop-down menu relative to the drop-down button.
-after alignment based on the alignment type.
+Offset of the drop-down menu relative to the drop-down button.after alignment based on the alignment type.
 
 **Type:** Offset
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-MenuAlignParams-offset?: Offset--><!--Device-MenuAlignParams-offset?: Offset-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

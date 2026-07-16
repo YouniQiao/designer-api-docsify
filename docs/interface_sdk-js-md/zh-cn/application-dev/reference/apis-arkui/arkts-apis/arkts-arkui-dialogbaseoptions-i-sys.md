@@ -4,7 +4,15 @@
 
 **起始版本：** 26.1.0
 
+<!--Device-dialog-declare interface DialogBaseOptions--><!--Device-dialog-declare interface DialogBaseOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from '@kit.ArkUI';
+```
 
 ## distortionMode
 
@@ -21,6 +29,8 @@ distortionMode?: DistortionMode
 **起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DialogBaseOptions-distortionMode?: DistortionMode--><!--Device-DialogBaseOptions-distortionMode?: DistortionMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -41,6 +51,8 @@ edgeLightMode?: EdgeLightMode
 **起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DialogBaseOptions-edgeLightMode?: EdgeLightMode--><!--Device-DialogBaseOptions-edgeLightMode?: EdgeLightMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -20,6 +20,8 @@ Checks whether screen reader mode is enabled.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-accessibility-function isScreenReaderOpenSync(): boolean--><!--Device-accessibility-function isScreenReaderOpenSync(): boolean-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Vision
 
 **Return value:**

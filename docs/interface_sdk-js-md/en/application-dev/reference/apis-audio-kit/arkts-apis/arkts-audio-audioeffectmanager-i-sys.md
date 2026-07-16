@@ -4,6 +4,8 @@ Implements audio effect management.
 
 **Since:** 18
 
+<!--Device-audio-interface AudioEffectManager--><!--Device-audio-interface AudioEffectManager-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Gets current audio effect properties.
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
+<!--Device-AudioEffectManager-getAudioEffectProperty(): Array<AudioEffectProperty>--><!--Device-AudioEffectManager-getAudioEffectProperty(): Array<AudioEffectProperty>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
@@ -34,7 +38,7 @@ Gets current audio effect properties.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;AudioEffectProperty&gt; | Array of current audio effect properties. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<AudioEffectProperty> | Array of current audio effect properties. |
 
 **Error codes:**
 
@@ -71,6 +75,8 @@ Gets supported audio effect properties based on current devices.
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
+<!--Device-AudioEffectManager-getSupportedAudioEffectProperty(): Array<AudioEffectProperty>--><!--Device-AudioEffectManager-getSupportedAudioEffectProperty(): Array<AudioEffectProperty>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
@@ -79,7 +85,7 @@ Gets supported audio effect properties based on current devices.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;AudioEffectProperty&gt; | Array of supported audio effect properties. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<AudioEffectProperty> | Array of supported audio effect properties. |
 
 **Error codes:**
 
@@ -116,6 +122,8 @@ Checks whether the current device supports audio separation effect in system.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AudioEffectManager-isAudioSeparationEffectSupported(): boolean--><!--Device-AudioEffectManager-isAudioSeparationEffectSupported(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **System API:** This is a system API.
@@ -144,6 +152,8 @@ Unsubscribes from the system audio separation effect enabled state change event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AudioEffectManager-offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void--><!--Device-AudioEffectManager-offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **System API:** This is a system API.
@@ -152,7 +162,7 @@ Unsubscribes from the system audio separation effect enabled state change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;boolean&gt; | No | The callback used in subscription function for unsubscribing.If not using this parameter, all callbacks subscribed in current process before will be unsubscribed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | No | The callback used in subscription function for unsubscribing.If not using this parameter, all callbacks subscribed in current process before will be unsubscribed. |
 
 **Error codes:**
 
@@ -167,13 +177,13 @@ Unsubscribes from the system audio separation effect enabled state change event.
 onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void
 ```
 
-Subscribes to system audio separation effect enabled state change event.
-The audio separation effect state in system can be set by system playback controller application,
-other applications can use this function to listen the change event.
+Subscribes to system audio separation effect enabled state change event.The audio separation effect state in system can be set by system playback controller application,other applications can use this function to listen the change event.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioEffectManager-onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void--><!--Device-AudioEffectManager-onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -183,7 +193,7 @@ other applications can use this function to listen the change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;boolean&gt; | Yes | Callback used to listen the system audio separation effectenabled state change event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | Yes | Callback used to listen the system audio separation effect enabled state change event. |
 
 **Error codes:**
 
@@ -203,6 +213,8 @@ Sets current audio effect properties.
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
+<!--Device-AudioEffectManager-setAudioEffectProperty(propertyArray: Array<AudioEffectProperty>): void--><!--Device-AudioEffectManager-setAudioEffectProperty(propertyArray: Array<AudioEffectProperty>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
@@ -211,7 +223,7 @@ Sets current audio effect properties.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propertyArray | Array&lt;AudioEffectProperty&gt; | Yes | array of audio effect property to be set.Notice that only one effect property name in each effect property category should be set. |
+| propertyArray | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<AudioEffectProperty> | Yes | array of audio effect property to be set.Notice that only one effect property name in each effect property category should be set. |
 
 **Error codes:**
 
@@ -244,15 +256,15 @@ try {
 setAudioSeparationEffectEnabled(enabled: boolean, uid: number, streamId?: number): Promise<void>
 ```
 
-Sets audio separation effect enable or disable for specific application process,
-or for specific audio playback stream.
-This API uses a promise to return the result.
+Sets audio separation effect enable or disable for specific application process,or for specific audio playback stream.This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioEffectManager-setAudioSeparationEffectEnabled(enabled: boolean, uid: int, streamId?: long): Promise<void>--><!--Device-AudioEffectManager-setAudioSeparationEffectEnabled(enabled: boolean, uid: int, streamId?: long): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -264,13 +276,13 @@ This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | enabled | boolean | Yes | The required effect state, true for enabled, false for disabled. |
 | uid | number | Yes | The uid of target application process to add effect.<br>The value should be an integer. |
-| streamId | number | No | The id of target audio playback stream to add effect, the playback applicationcan use {@link AudioRenderer#getAudioStreamId} to obtain it. |
+| streamId | number | No | The id of target audio playback stream to add effect, the playback application can use {@link AudioRenderer#getAudioStreamId} to obtain it. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -288,14 +300,15 @@ This API uses a promise to return the result.
 setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: number): Promise<void>
 ```
 
-Sets audio separation effect volume for specific volume type.
-This API uses a promise to return the result.
+Sets audio separation effect volume for specific volume type.This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioEffectManager-setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: double): Promise<void>--><!--Device-AudioEffectManager-setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: double): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -305,14 +318,14 @@ This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | AudioSeparationVolumeType | Yes | The type to set volume. |
+| type | [AudioSeparationVolumeType](arkts-audio-audioseparationvolumetype-e-sys.md) | Yes | The type to set volume. |
 | volume | number | Yes | The target volume value.<br>Value range: [0,1]. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

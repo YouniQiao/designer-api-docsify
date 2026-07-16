@@ -6,6 +6,8 @@ Provides progress indicator configuration. Inherits from [CommonConfiguration](a
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface ProgressConfiguration extends CommonConfiguration<ProgressConfiguration>--><!--Device-unnamed-declare interface ProgressConfiguration extends CommonConfiguration<ProgressConfiguration>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## total
@@ -30,6 +32,8 @@ If the value of **total** is a negative number, it is treated as 100.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ProgressConfiguration-total: number--><!--Device-ProgressConfiguration-total: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -38,8 +42,7 @@ If the value of **total** is a negative number, it is treated as 100.
 value: number
 ```
 
-Current progress. Values less than 0 are adjusted to **0**. Values greater than the value of **total** are capped
-at the value of **total**.
+Current progress. Values less than 0 are adjusted to **0**. Values greater than the value of **total** are capped at the value of **total**.
 
 Default value: **0**
 
@@ -52,6 +55,8 @@ Value range: [0, total]
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ProgressConfiguration-value: number--><!--Device-ProgressConfiguration-value: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

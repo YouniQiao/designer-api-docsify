@@ -6,6 +6,8 @@ Provides methods for accessing MifareClassic tag.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface MifareClassicTag extends TagSession--><!--Device-unnamed-export interface MifareClassicTag extends TagSession-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## authenticateSector
@@ -22,6 +24,8 @@ Authenticates a sector with the key. Only successful authentication sector can b
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MifareClassicTag-authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean): Promise<void>--><!--Device-MifareClassicTag-authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -36,7 +40,7 @@ Authenticates a sector with the key. Only successful authentication sector can b
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The void |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The void |
 
 **Error codes:**
 
@@ -61,6 +65,8 @@ Authenticates a sector with the key. Only successful authentication sector can b
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MifareClassicTag-authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -70,7 +76,7 @@ Authenticates a sector with the key. Only successful authentication sector can b
 | sectorIndex | number | Yes | Index of sector to authenticate. |
 | key | number[] | Yes | The key(6-bytes) to authenticate. |
 | isKeyA | boolean | Yes | KeyA flag. true means KeyA, otherwise KeyB. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback. |
 
 **Error codes:**
 
@@ -95,6 +101,8 @@ Decreases the contents of a block, and stores the result in the internal transfe
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MifareClassicTag-decrementBlock(blockIndex: int, value: int): Promise<void>--><!--Device-MifareClassicTag-decrementBlock(blockIndex: int, value: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -108,7 +116,7 @@ Decreases the contents of a block, and stores the result in the internal transfe
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The void |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The void |
 
 **Error codes:**
 
@@ -133,6 +141,8 @@ Decreases the contents of a block, and stores the result in the internal transfe
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MifareClassicTag-decrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-decrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -141,7 +151,7 @@ Decreases the contents of a block, and stores the result in the internal transfe
 | --- | --- | --- | --- |
 | blockIndex | number | Yes | The index of block to decrease. |
 | value | number | Yes | The value to decrease, non-negative. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback. |
 
 **Error codes:**
 
@@ -163,6 +173,8 @@ Gets the number of blocks in the sector.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MifareClassicTag-getBlockCountInSector(sectorIndex: int): int--><!--Device-MifareClassicTag-getBlockCountInSector(sectorIndex: int): int-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -196,6 +208,8 @@ Gets the first block of the specific sector.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MifareClassicTag-getBlockIndex(sectorIndex: int): int--><!--Device-MifareClassicTag-getBlockIndex(sectorIndex: int): int-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -228,6 +242,8 @@ Gets the number of sectors in MifareClassic tag.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MifareClassicTag-getSectorCount(): int--><!--Device-MifareClassicTag-getSectorCount(): int-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
@@ -247,6 +263,8 @@ Gets the sector index, that the sector contains the specific block.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MifareClassicTag-getSectorIndex(blockIndex: int): int--><!--Device-MifareClassicTag-getSectorIndex(blockIndex: int): int-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -280,6 +298,8 @@ Gets size of the tag in bytes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MifareClassicTag-getTagSize(): int--><!--Device-MifareClassicTag-getTagSize(): int-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
@@ -299,6 +319,8 @@ Gets the type of the MifareClassic tag.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MifareClassicTag-getType(): tag.MifareClassicType--><!--Device-MifareClassicTag-getType(): tag.MifareClassicType-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -322,6 +344,8 @@ Increments the contents of a block, and stores the result in the internal transf
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MifareClassicTag-incrementBlock(blockIndex: int, value: int): Promise<void>--><!--Device-MifareClassicTag-incrementBlock(blockIndex: int, value: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -335,7 +359,7 @@ Increments the contents of a block, and stores the result in the internal transf
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The void |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The void |
 
 **Error codes:**
 
@@ -360,6 +384,8 @@ Increments the contents of a block, and stores the result in the internal transf
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MifareClassicTag-incrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-incrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -368,7 +394,7 @@ Increments the contents of a block, and stores the result in the internal transf
 | --- | --- | --- | --- |
 | blockIndex | number | Yes | The index of block to increment. |
 | value | number | Yes | The value to increment, non-negative. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback. |
 
 **Error codes:**
 
@@ -390,6 +416,8 @@ Checks if the tag is emulated or not.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MifareClassicTag-isEmulatedTag(): boolean--><!--Device-MifareClassicTag-isEmulatedTag(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -413,6 +441,8 @@ Reads a block, one block size is 16 bytes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MifareClassicTag-readSingleBlock(blockIndex: int): Promise<int[]>--><!--Device-MifareClassicTag-readSingleBlock(blockIndex: int): Promise<int[]>-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -425,7 +455,7 @@ Reads a block, one block size is 16 bytes.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number[]&gt; | Returns the block data. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number[]> | Returns the block data. |
 
 **Error codes:**
 
@@ -450,6 +480,8 @@ Reads a block, one block size is 16 bytes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MifareClassicTag-readSingleBlock(blockIndex: int, callback: AsyncCallback<int[]>): void--><!--Device-MifareClassicTag-readSingleBlock(blockIndex: int, callback: AsyncCallback<int[]>): void-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -457,7 +489,7 @@ Reads a block, one block size is 16 bytes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | blockIndex | number | Yes | The index of block to read. |
-| callback | AsyncCallback&lt;number[]&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number[]> | Yes | The callback. |
 
 **Error codes:**
 
@@ -482,6 +514,8 @@ Moves the contents of a block into the internal transfer buffer.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MifareClassicTag-restoreFromBlock(blockIndex: int): Promise<void>--><!--Device-MifareClassicTag-restoreFromBlock(blockIndex: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -494,7 +528,7 @@ Moves the contents of a block into the internal transfer buffer.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The void |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The void |
 
 **Error codes:**
 
@@ -519,6 +553,8 @@ Moves the contents of a block into the internal transfer buffer.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MifareClassicTag-restoreFromBlock(blockIndex: int, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-restoreFromBlock(blockIndex: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -526,7 +562,7 @@ Moves the contents of a block into the internal transfer buffer.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | blockIndex | number | Yes | The index of value block to be moved from. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback. |
 
 **Error codes:**
 
@@ -551,6 +587,8 @@ Writes the contents of the internal transfer buffer to a value block.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MifareClassicTag-transferToBlock(blockIndex: int): Promise<void>--><!--Device-MifareClassicTag-transferToBlock(blockIndex: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -563,7 +601,7 @@ Writes the contents of the internal transfer buffer to a value block.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The void |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The void |
 
 **Error codes:**
 
@@ -588,6 +626,8 @@ Writes the contents of the internal transfer buffer to a value block.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MifareClassicTag-transferToBlock(blockIndex: int, callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-transferToBlock(blockIndex: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -595,7 +635,7 @@ Writes the contents of the internal transfer buffer to a value block.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | blockIndex | number | Yes | The index of value block to be written. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback. |
 
 **Error codes:**
 
@@ -620,6 +660,8 @@ Writes a block, one block size is 16 bytes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MifareClassicTag-writeSingleBlock(blockIndex: int, data: int[]): Promise<void>--><!--Device-MifareClassicTag-writeSingleBlock(blockIndex: int, data: int[]): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -633,7 +675,7 @@ Writes a block, one block size is 16 bytes.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The void |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The void |
 
 **Error codes:**
 
@@ -658,6 +700,8 @@ Writes a block, one block size is 16 bytes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MifareClassicTag-writeSingleBlock(blockIndex: int, data: int[], callback: AsyncCallback<void>): void--><!--Device-MifareClassicTag-writeSingleBlock(blockIndex: int, data: int[], callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -666,7 +710,7 @@ Writes a block, one block size is 16 bytes.
 | --- | --- | --- | --- |
 | blockIndex | number | Yes | The index of block to write. |
 | data | number[] | Yes | The block data to write. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback. |
 
 **Error codes:**
 

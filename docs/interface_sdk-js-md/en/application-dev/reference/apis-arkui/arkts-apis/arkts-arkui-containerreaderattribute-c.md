@@ -1,11 +1,12 @@
 # ContainerReaderAttribute
 
-Defines the ContainerReader attribute functions.
-Provides methods for configuring container reading parameters and breakpoint analysis properties.
+Defines the ContainerReader attribute functions.Provides methods for configuring container reading parameters and breakpoint analysis properties.
 
 **Inheritance/Implementation:** ContainerReaderAttribute extends [CommonMethod<ContainerReaderAttribute>](CommonMethod<ContainerReaderAttribute>)
 
 **Since:** 26.0.0
+
+<!--Device-unnamed-export declare class ContainerReaderAttribute extends CommonMethod<ContainerReaderAttribute>--><!--Device-unnamed-export declare class ContainerReaderAttribute extends CommonMethod<ContainerReaderAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,8 +22,7 @@ import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from '@k
 breakpointConfig(value?: BreakpointOptions): ContainerReaderAttribute
 ```
 
-Sets the breakpoint configuration for container dimension analysis.
-Defines a set of threshold values that trigger different layout behaviors based on container size.
+Sets the breakpoint configuration for container dimension analysis.Defines a set of threshold values that trigger different layout behaviors based on container size.
 
 **Since:** 26.0.0
 
@@ -32,17 +32,19 @@ Defines a set of threshold values that trigger different layout behaviors based 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
+<!--Device-ContainerReaderAttribute-breakpointConfig(value?: BreakpointOptions): ContainerReaderAttribute--><!--Device-ContainerReaderAttribute-breakpointConfig(value?: BreakpointOptions): ContainerReaderAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | BreakpointOptions | No | An array of breakpoint values in vp |
+| value | [BreakpointOptions](arkts-arkui-breakpointoptions-i.md) | No | An array of breakpoint values in vp |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ContainerReaderAttribute | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@form@atomicservice |
+| [ContainerReaderAttribute](arkts-arkui-containerreaderattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@form@atomicservice |
 

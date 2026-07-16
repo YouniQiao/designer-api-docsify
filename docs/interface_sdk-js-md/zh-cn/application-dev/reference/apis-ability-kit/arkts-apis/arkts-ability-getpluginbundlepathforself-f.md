@@ -1,5 +1,11 @@
 # getPluginBundlePathForSelf
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getPluginBundlePathForSelf
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getPluginBundlePathForSelf(pluginBundleName: string): string
 获取指定插件在当前[应用沙箱](../../../../file-management/app-sandbox-directory.md)内的安装路径。
 
 **起始版本：** 22
+
+<!--Device-bundleManager-function getPluginBundlePathForSelf(pluginBundleName: string): string--><!--Device-bundleManager-function getPluginBundlePathForSelf(pluginBundleName: string): string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

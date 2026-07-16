@@ -20,19 +20,21 @@ Obtains a CalendarManager object based on the context.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-calendarManager-function getCalendarManager(context: Context) : CalendarManager--><!--Device-calendarManager-function getCalendarManager(context: Context) : CalendarManager-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. For details about the application contextof the stage model, see Context. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. For details about the application context of the stage model, see Context. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CalendarManager | CalendarManager object obtained. |
+| [CalendarManager](arkts-calendar-calendarmanager-i.md) | CalendarManager object obtained. |
 
 **Example**
 

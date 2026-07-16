@@ -6,8 +6,7 @@
 function removeGroupByBundle(bundle: BundleOption, groupName: string, callback: AsyncCallback<void>): void
 ```
 
-Removes notifications under a notification group of a specified application.
-This API uses an asynchronous callback to return the result.
+Removes notifications under a notification group of a specified application.This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -17,6 +16,8 @@ This API uses an asynchronous callback to return the result.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function removeGroupByBundle(bundle: BundleOption, groupName: string, callback: AsyncCallback<void>): void--><!--Device-notification-function removeGroupByBundle(bundle: BundleOption, groupName: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -25,9 +26,9 @@ This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
 | groupName | string | Yes | Name of the notification group. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 
 ## removeGroupByBundle
@@ -36,8 +37,7 @@ This API uses an asynchronous callback to return the result.
 function removeGroupByBundle(bundle: BundleOption, groupName: string): Promise<void>
 ```
 
-Removes notifications under a notification group of a specified application.
-This API uses a promise to return the result.
+Removes notifications under a notification group of a specified application.This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -47,6 +47,8 @@ This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function removeGroupByBundle(bundle: BundleOption, groupName: string): Promise<void>--><!--Device-notification-function removeGroupByBundle(bundle: BundleOption, groupName: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -55,12 +57,12 @@ This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
 | groupName | string | Yes | Name of the notification group. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 

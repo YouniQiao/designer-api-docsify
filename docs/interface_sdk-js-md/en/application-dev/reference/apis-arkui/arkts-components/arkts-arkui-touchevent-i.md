@@ -1,12 +1,12 @@
 # TouchEvent
 
-Inherits from [BaseEvent](arkts-arkui-baseevent-i.md). In non-event injection scenarios, **changedTouches** contains points
-resampled at the screen refresh rate, while **touches** contains points reported at the device's refresh rate. As
-such, **changedTouches** data may differ from **touches**.
+Inherits from [BaseEvent](arkts-arkui-baseevent-i.md). In non-event injection scenarios, **changedTouches** contains points resampled at the screen refresh rate, while **touches** contains points reported at the device's refresh rate. As such, **changedTouches** data may differ from **touches**.
 
 **Inheritance/Implementation:** TouchEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
 
 **Since:** 7
+
+<!--Device-unnamed-declare interface TouchEvent extends BaseEvent--><!--Device-unnamed-declare interface TouchEvent extends BaseEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,13 +16,7 @@ such, **changedTouches** data may differ from **touches**.
 getHistoricalPoints(): Array<HistoricalPoint>
 ```
 
-Obtains all historical touch points for the current frame. The touch event frequency per frame varies by device.
-This API can be called only in [TouchEvent](arkts-arkui-touchevent-i.md). This API is only available within
-[TouchEvent](arkts-arkui-touchevent-i.md) during [onTouch](arkts-arkui-commonmethod-c.md#ontouch-1) invocations. Typically,
-[onTouch](arkts-arkui-commonmethod-c.md#ontouch-1) is invoked once per frame. If multiple [TouchEvent](arkts-arkui-touchevent-i.md)
-instances are received in a single frame, the last point is returned through **onTouch**, and the remaining points
-are stored as historical points. For multi-touch events within the same frame, multiple** onTouch** calls may
-occur.
+Obtains all historical touch points for the current frame. The touch event frequency per frame varies by device.This API can be called only in [TouchEvent](arkts-arkui-touchevent-i.md). This API is only available within [TouchEvent](arkts-arkui-touchevent-i.md) during [onTouch](arkts-arkui-commonmethod-c.md#ontouch-1) invocations. Typically,[onTouch](arkts-arkui-commonmethod-c.md#ontouch-1) is invoked once per frame. If multiple [TouchEvent](arkts-arkui-touchevent-i.md)instances are received in a single frame, the last point is returned through **onTouch**, and the remaining points are stored as historical points. For multi-touch events within the same frame, multiple** onTouch** calls may occur.
 
 **Since:** 10
 
@@ -30,13 +24,15 @@ occur.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TouchEvent-getHistoricalPoints(): Array<HistoricalPoint>--><!--Device-TouchEvent-getHistoricalPoints(): Array<HistoricalPoint>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;HistoricalPoint&gt; | Array of historical points. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<HistoricalPoint> | Array of historical points. |
 
 ## changedTouches
 
@@ -44,14 +40,15 @@ occur.
 changedTouches: TouchObject[]
 ```
 
-Information about touch points that changed and triggered the event. When using this property, you need to check
-whether it is empty.
+Information about touch points that changed and triggered the event. When using this property, you need to check whether it is empty.
 
 **Type:** TouchObject[]
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TouchEvent-changedTouches: TouchObject[]--><!--Device-TouchEvent-changedTouches: TouchObject[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,12 +64,9 @@ Value range: [0, +∞)
 
 **NOTE**
 
-This field is used when dispatching events using the
-[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postinputeventwithstrategy-1) API. Each time an event is
-dispatched, this field is increased by 100000.
+This field is used when dispatching events using the [postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postinputeventwithstrategy-1) API. Each time an event is dispatched, this field is increased by 100000.
 
-Using the same **eventHandleId** for multiple event dispatches will cause abnormal event responses. This field only
-needs to be assigned when constructing an event; developers do not need to handle it in other cases.
+Using the same **eventHandleId** for multiple event dispatches will cause abnormal event responses. This field only needs to be assigned when constructing an event; developers do not need to handle it in other cases.
 
 **Type:** number
 
@@ -81,6 +75,8 @@ needs to be assigned when constructing an event; developers do not need to handl
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-TouchEvent-eventHandleId?: number--><!--Device-TouchEvent-eventHandleId?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,8 +90,7 @@ Blocks the default event.
 
 **NOTE**
 
-This API is only supported by the [Hyperlink](arkts-arkui-hyperlink.md) component. Using it with unsupported
-components throws an exception. Asynchronous calls and **Modifier** API integration are not yet supported.
+This API is only supported by the [Hyperlink](arkts-arkui-hyperlink.md) component. Using it with unsupported components throws an exception. Asynchronous calls and **Modifier** API integration are not yet supported.
 
 **Type:** () => void
 
@@ -104,6 +99,8 @@ components throws an exception. Asynchronous calls and **Modifier** API integrat
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TouchEvent-preventDefault: () => void--><!--Device-TouchEvent-preventDefault: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -121,6 +118,8 @@ Disables [event bubbling](../../../../ui/arkts-interaction-basic-principles.md#e
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TouchEvent-stopPropagation: () => void--><!--Device-TouchEvent-stopPropagation: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## touches
@@ -129,14 +128,15 @@ Disables [event bubbling](../../../../ui/arkts-interaction-basic-principles.md#e
 touches: TouchObject[]
 ```
 
-Information about all touch points (for multi-touch). Each element represents one touch point. When using this
-property, you need to check whether it is empty.
+Information about all touch points (for multi-touch). Each element represents one touch point. When using this property, you need to check whether it is empty.
 
 **Type:** TouchObject[]
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TouchEvent-touches: TouchObject[]--><!--Device-TouchEvent-touches: TouchObject[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -153,6 +153,8 @@ Type of the touch event.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TouchEvent-type: TouchType--><!--Device-TouchEvent-type: TouchType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

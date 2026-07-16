@@ -6,6 +6,8 @@ Control center session object.
 
 **Since:** 20
 
+<!--Device-camera-interface ControlCenterSession extends Beauty, Aperture, ColorEffect--><!--Device-camera-interface ControlCenterSession extends Beauty, Aperture, ColorEffect-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -25,6 +27,8 @@ enableAutoFraming(enabled: boolean): void
 Enable auto-framing effect.
 
 **Since:** 24
+
+<!--Device-ControlCenterSession-enableAutoFraming(enabled: boolean): void--><!--Device-ControlCenterSession-enableAutoFraming(enabled: boolean): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -54,6 +58,8 @@ Gets the status of auto-framing effect.
 
 **Since:** 24
 
+<!--Device-ControlCenterSession-getAutoFramingStatus(): boolean--><!--Device-ControlCenterSession-getAutoFramingStatus(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -81,6 +87,8 @@ Gets the control center height.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ControlCenterSession-getControlCenterHeight(): double--><!--Device-ControlCenterSession-getControlCenterHeight(): double-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -110,6 +118,8 @@ Gets the current camera device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ControlCenterSession-getCurrentDevice(): CameraDevice--><!--Device-ControlCenterSession-getCurrentDevice(): CameraDevice-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -118,7 +128,7 @@ Gets the current camera device.
 
 | Type | Description |
 | --- | --- |
-| CameraDevice | the current camera device. |
+| [CameraDevice](arkts-camera-cameradevice-i-sys.md) | the current camera device. |
 
 **Error codes:**
 
@@ -136,6 +146,8 @@ isAutoFramingSupported(): boolean
 Checks whether auto-framing is supported.
 
 **Since:** 24
+
+<!--Device-ControlCenterSession-isAutoFramingSupported(): boolean--><!--Device-ControlCenterSession-isAutoFramingSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -163,6 +175,8 @@ Release control center session object.
 
 **Since:** 20
 
+<!--Device-ControlCenterSession-release(): Promise<void>--><!--Device-ControlCenterSession-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -171,7 +185,7 @@ Release control center session object.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -191,6 +205,8 @@ Sets the camera to be used as a camera at the specified position.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ControlCenterSession-usedAsPosition(position: CameraPosition): void--><!--Device-ControlCenterSession-usedAsPosition(position: CameraPosition): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -199,7 +215,7 @@ Sets the camera to be used as a camera at the specified position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | CameraPosition | Yes | The positon used for the camera. |
+| position | [CameraPosition](arkts-camera-cameraposition-e.md) | Yes | The positon used for the camera. |
 
 **Error codes:**
 

@@ -12,6 +12,8 @@ Theme.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-unnamed-declare type Theme = import('../api/@ohos.arkui.theme').Theme--><!--Device-unnamed-declare type Theme = import('../api/@ohos.arkui.theme').Theme-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** import('../api/@ohos.arkui.theme').Theme

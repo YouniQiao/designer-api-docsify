@@ -4,6 +4,8 @@ Declare type SelectOption
 
 **Since:** 18
 
+<!--Device-unnamed-export declare class SelectOptions--><!--Device-unnamed-export declare class SelectOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Sets the default focus state of select.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SelectOptions-defaultFocus?: boolean--><!--Device-SelectOptions-defaultFocus?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## id
@@ -47,6 +51,8 @@ Set the id for the select.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-SelectOptions-id?: string--><!--Device-SelectOptions-id?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,6 +72,8 @@ Callback when the select is selected.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SelectOptions-onSelect?: (index: number, value?: string) => void--><!--Device-SelectOptions-onSelect?: (index: number, value?: string) => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## options
@@ -83,6 +91,8 @@ SubOption array of the select.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SelectOptions-options: Array<SelectOption>--><!--Device-SelectOptions-options: Array<SelectOption>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -102,6 +112,8 @@ The default selected index.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SelectOptions-selected?: number--><!--Device-SelectOptions-selected?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -119,6 +131,8 @@ The default text value.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SelectOptions-value?: ResourceStr--><!--Device-SelectOptions-value?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

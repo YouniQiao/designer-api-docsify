@@ -1,15 +1,14 @@
 # LayeredDrawableDescriptor
 
-Creates a **LayeredDrawableDescriptor** object when the passed resource ID or name belongs to a JSON file that
-contains foreground and background resources. Inherits from
-[DrawableDescriptor](arkts-arkui-drawabledescriptorloadedresult-i.md).
+Creates a **LayeredDrawableDescriptor** object when the passed resource ID or name belongs to a JSON file that contains foreground and background resources. Inherits from [DrawableDescriptor](arkts-arkui-drawabledescriptorloadedresult-i.md).
 
-The **drawable.json** file is located under **entry/src/main/resources/base/media** in the project directory. Below
-shows the file content:
+The **drawable.json** file is located under **entry/src/main/resources/base/media** in the project directory. Below shows the file content:
 
 **Inheritance/Implementation:** LayeredDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-drawabledescriptor-c.md)
 
 **Since:** 10
+
+<!--Device-unnamed-export class LayeredDrawableDescriptor extends DrawableDescriptor--><!--Device-unnamed-export class LayeredDrawableDescriptor extends DrawableDescriptor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -37,15 +36,25 @@ A constructor used to create a **LayeredDrawableDescriptor** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LayeredDrawableDescriptor-constructor(
+    foreground?: DrawableDescriptor,
+    background?: DrawableDescriptor,
+    mask?: DrawableDescriptor
+  )--><!--Device-LayeredDrawableDescriptor-constructor(
+    foreground?: DrawableDescriptor,
+    background?: DrawableDescriptor,
+    mask?: DrawableDescriptor
+  )-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| foreground | DrawableDescriptor | No | Options for the foreground image of the layered drawable. |
-| background | DrawableDescriptor | No | Options for the background image of the layered drawable. |
-| mask | DrawableDescriptor | No | Options for the mask of the layered drawable. |
+| foreground | [DrawableDescriptor](arkts-arkui-drawabledescriptor-c.md) | No | Options for the foreground image of the layered drawable. |
+| background | [DrawableDescriptor](arkts-arkui-drawabledescriptor-c.md) | No | Options for the background image of the layered drawable. |
+| mask | [DrawableDescriptor](arkts-arkui-drawabledescriptor-c.md) | No | Options for the mask of the layered drawable. |
 
 ## getBackground
 
@@ -61,19 +70,21 @@ Obtains the **DrawableDescriptor** object of the background.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-LayeredDrawableDescriptor-getBackground(): DrawableDescriptor--><!--Device-LayeredDrawableDescriptor-getBackground(): DrawableDescriptor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DrawableDescriptor | **DrawableDescriptor** object. |
+| [DrawableDescriptor](arkts-arkui-drawabledescriptor-c.md) | **DrawableDescriptor** object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced bythe drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
+| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced by the drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 
@@ -129,19 +140,21 @@ Obtains the **DrawableDescriptor** object of the foreground.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-LayeredDrawableDescriptor-getForeground(): DrawableDescriptor--><!--Device-LayeredDrawableDescriptor-getForeground(): DrawableDescriptor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DrawableDescriptor | **DrawableDescriptor** object. |
+| [DrawableDescriptor](arkts-arkui-drawabledescriptor-c.md) | **DrawableDescriptor** object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced bythe drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
+| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced by the drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 
@@ -202,19 +215,21 @@ Obtains the **DrawableDescriptor** object of the mask.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-LayeredDrawableDescriptor-getMask(): DrawableDescriptor--><!--Device-LayeredDrawableDescriptor-getMask(): DrawableDescriptor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DrawableDescriptor | **DrawableDescriptor** object. |
+| [DrawableDescriptor](arkts-arkui-drawabledescriptor-c.md) | **DrawableDescriptor** object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced bythe drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
+| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced by the drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 
@@ -262,14 +277,15 @@ struct Index {
 static getMaskClipPath(): string
 ```
 
-Obtains the built-in clipping path parameters of the system. It is a static method of
-**LayeredDrawableDescriptor**.
+Obtains the built-in clipping path parameters of the system. It is a static method of **LayeredDrawableDescriptor**.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-LayeredDrawableDescriptor-static getMaskClipPath(): string--><!--Device-LayeredDrawableDescriptor-static getMaskClipPath(): string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -312,17 +328,15 @@ struct Index {
 setBlendMode(mode: drawing.BlendMode): void
 ```
 
-Sets the blend mode of **LayeredDrawableDescriptor**. If this API is called for multiple times on the same
-**LayeredDrawableDescriptor** object, only the last call before the drawing completion takes effect. This API does
-not support dynamic switching. The default drawing order of **LayeredDrawableDescriptor** is background, mask, and
-foreground. After the blend mode is set, the drawing order changes to background, foreground, and mask. If the
-specified value is invalid, the default drawing order is used.
+Sets the blend mode of **LayeredDrawableDescriptor**. If this API is called for multiple times on the same **LayeredDrawableDescriptor** object, only the last call before the drawing completion takes effect. This API does not support dynamic switching. The default drawing order of **LayeredDrawableDescriptor** is background, mask, and foreground. After the blend mode is set, the drawing order changes to background, foreground, and mask. If the specified value is invalid, the default drawing order is used.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-LayeredDrawableDescriptor-setBlendMode(mode: drawing.BlendMode): void--><!--Device-LayeredDrawableDescriptor-setBlendMode(mode: drawing.BlendMode): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

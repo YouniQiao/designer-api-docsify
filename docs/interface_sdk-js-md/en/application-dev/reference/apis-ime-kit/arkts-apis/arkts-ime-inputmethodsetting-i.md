@@ -1,9 +1,10 @@
 # InputMethodSetting
 
-In the following API examples, you must first use [getSetting](arkts-ime-getsetting-f.md#getsetting-1) to
-obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [getSetting](arkts-ime-getsetting-f.md#getsetting-1) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
+
+<!--Device-inputMethod-interface InputMethodSetting--><!--Device-inputMethod-interface InputMethodSetting-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -25,13 +26,15 @@ displayOptionalInputMethod(callback: AsyncCallback<void>): void
 
 **Substitutes:** inputMethodList/InputMethodListDialog
 
+<!--Device-InputMethodSetting-displayOptionalInputMethod(callback: AsyncCallback<void>): void--><!--Device-InputMethodSetting-displayOptionalInputMethod(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of displayOptionalInputMethod. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of displayOptionalInputMethod. |
 
 **Example**
 
@@ -60,13 +63,15 @@ displayOptionalInputMethod(): Promise<void>
 
 **Substitutes:** inputMethodList/InputMethodListDialog
 
+<!--Device-InputMethodSetting-displayOptionalInputMethod(): Promise<void>--><!--Device-InputMethodSetting-displayOptionalInputMethod(): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Example**
 
@@ -91,13 +96,15 @@ List all input methods
 
 **Since:** 11
 
+<!--Device-InputMethodSetting-getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void--><!--Device-InputMethodSetting-getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;InputMethodProperty&gt;&gt; | Yes | the callback of getInputMethods. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<InputMethodProperty>> | Yes | the callback of getInputMethods. |
 
 **Error codes:**
 
@@ -131,13 +138,15 @@ List all input methods
 
 **Since:** 11
 
+<!--Device-InputMethodSetting-getAllInputMethods(): Promise<Array<InputMethodProperty>>--><!--Device-InputMethodSetting-getAllInputMethods(): Promise<Array<InputMethodProperty>>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;InputMethodProperty&gt;&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<InputMethodProperty>> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -169,13 +178,15 @@ List all input methods sync
 
 **Since:** 11
 
+<!--Device-InputMethodSetting-getAllInputMethodsSync(): Array<InputMethodProperty>--><!--Device-InputMethodSetting-getAllInputMethodsSync(): Array<InputMethodProperty>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;InputMethodProperty&gt; | the list of all inputmethod. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<InputMethodProperty> | the list of all inputmethod. |
 
 **Error codes:**
 
@@ -201,13 +212,15 @@ The input method application calls this interface to obtain its own enabled stat
 
 **Since:** 15
 
+<!--Device-InputMethodSetting-getInputMethodState(): Promise<EnabledState>--><!--Device-InputMethodSetting-getInputMethodState(): Promise<EnabledState>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;EnabledState&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<EnabledState> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -239,6 +252,8 @@ List input methods
 
 **Since:** 9
 
+<!--Device-InputMethodSetting-getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProperty>>): void--><!--Device-InputMethodSetting-getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProperty>>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -246,7 +261,7 @@ List input methods
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | If true, collect enabled input methods.If false, collect disabled input methods. |
-| callback | AsyncCallback&lt;Array&lt;InputMethodProperty&gt;&gt; | Yes | the callback of getInputMethods. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<InputMethodProperty>> | Yes | the callback of getInputMethods. |
 
 **Error codes:**
 
@@ -281,6 +296,8 @@ List input methods
 
 **Since:** 9
 
+<!--Device-InputMethodSetting-getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>--><!--Device-InputMethodSetting-getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -293,7 +310,7 @@ List input methods
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;InputMethodProperty&gt;&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<InputMethodProperty>> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -327,6 +344,8 @@ List enabled or disabled input methods sync
 
 **Since:** 11
 
+<!--Device-InputMethodSetting-getInputMethodsSync(enable: boolean): Array<InputMethodProperty>--><!--Device-InputMethodSetting-getInputMethodsSync(enable: boolean): Array<InputMethodProperty>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -339,7 +358,7 @@ List enabled or disabled input methods sync
 
 | Type | Description |
 | --- | --- |
-| Array&lt;InputMethodProperty&gt; | the list of inputmethod. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<InputMethodProperty> | the list of inputmethod. |
 
 **Error codes:**
 
@@ -366,13 +385,15 @@ List subtype of current input method
 
 **Since:** 9
 
+<!--Device-InputMethodSetting-listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>): void--><!--Device-InputMethodSetting-listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;InputMethodSubtype&gt;&gt; | Yes | the callback of listCurrentInputMethodSubtype. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<InputMethodSubtype>> | Yes | the callback of listCurrentInputMethodSubtype. |
 
 **Error codes:**
 
@@ -408,13 +429,15 @@ List subtype of current input method
 
 **Since:** 9
 
+<!--Device-InputMethodSetting-listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>--><!--Device-InputMethodSetting-listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;InputMethodSubtype&gt;&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<InputMethodSubtype>> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -452,13 +475,15 @@ listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void
 
 **Substitutes:** [getInputMethods](arkts-ime-inputmethodsetting-i.md#getinputmethods-1)
 
+<!--Device-InputMethodSetting-listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void--><!--Device-InputMethodSetting-listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;InputMethodProperty&gt;&gt; | Yes | the callback of listInputMethod. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<InputMethodProperty>> | Yes | the callback of listInputMethod. |
 
 **Example**
 
@@ -487,13 +512,15 @@ listInputMethod(): Promise<Array<InputMethodProperty>>
 
 **Substitutes:** [getInputMethods](arkts-ime-inputmethodsetting-i.md#getinputmethods-1)
 
+<!--Device-InputMethodSetting-listInputMethod(): Promise<Array<InputMethodProperty>>--><!--Device-InputMethodSetting-listInputMethod(): Promise<Array<InputMethodProperty>>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;InputMethodProperty&gt;&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<InputMethodProperty>> | the promise returned by the function. |
 
 **Example**
 
@@ -521,14 +548,22 @@ List subtype of the specified input method.
 
 **Since:** 9
 
+<!--Device-InputMethodSetting-listInputMethodSubtype(
+      inputMethodProperty: InputMethodProperty,
+      callback: AsyncCallback<Array<InputMethodSubtype>>
+    ): void--><!--Device-InputMethodSetting-listInputMethodSubtype(
+      inputMethodProperty: InputMethodProperty,
+      callback: AsyncCallback<Array<InputMethodSubtype>>
+    ): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputMethodProperty | InputMethodProperty | Yes | the property of the specified inputmethod. |
-| callback | AsyncCallback&lt;Array&lt;InputMethodSubtype&gt;&gt; | Yes | the callback of listInputMethodSubtype. |
+| inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethodproperty-i.md) | Yes | the property of the specified inputmethod. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<InputMethodSubtype>> | Yes | the callback of listInputMethodSubtype. |
 
 **Error codes:**
 
@@ -573,19 +608,21 @@ List subtype of the specified input method.
 
 **Since:** 9
 
+<!--Device-InputMethodSetting-listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<InputMethodSubtype>>--><!--Device-InputMethodSetting-listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<InputMethodSubtype>>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputMethodProperty | InputMethodProperty | Yes | Indicates the specified input method. |
+| inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethodproperty-i.md) | Yes | Indicates the specified input method. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;InputMethodSubtype&gt;&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<InputMethodSubtype>> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -630,6 +667,14 @@ Unsubscribe input method or subtype change.
 
 **Since:** 9
 
+<!--Device-InputMethodSetting-off(
+      type: 'imeChange',
+      callback?: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void
+    ): void--><!--Device-InputMethodSetting-off(
+      type: 'imeChange',
+      callback?: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void
+    ): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -637,7 +682,7 @@ Unsubscribe input method or subtype change.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'imeChange' | Yes | Indicates the event type. |
-| callback | (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) =&gt; void | No | the callback of 'imeChange',when subscriber unsubscribes all callback functions of event 'imeChange', this parameter can be left blank. |
+| callback | (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void | No | the callback of 'imeChange',when subscriber unsubscribes all callback functions of event 'imeChange', this parameter can be left blank. |
 
 **Example**
 
@@ -659,6 +704,14 @@ Subscribe input method or subtype change.
 
 **Since:** 9
 
+<!--Device-InputMethodSetting-on(
+      type: 'imeChange',
+      callback: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void
+    ): void--><!--Device-InputMethodSetting-on(
+      type: 'imeChange',
+      callback: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void
+    ): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -666,7 +719,7 @@ Subscribe input method or subtype change.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'imeChange' | Yes | Indicates the event type. |
-| callback | (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) =&gt; void | Yes | the callback of 'imeChange' |
+| callback | (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void | Yes | the callback of 'imeChange' |
 
 **Example**
 
@@ -695,13 +748,15 @@ Show input method setting extension dialog
 
 **Substitutes:** inputMethodList/InputMethodListDialog
 
+<!--Device-InputMethodSetting-showOptionalInputMethods(callback: AsyncCallback<boolean>): void--><!--Device-InputMethodSetting-showOptionalInputMethods(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | the callback of showOptionalInputMethods. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | the callback of showOptionalInputMethods. |
 
 **Error codes:**
 
@@ -742,13 +797,15 @@ Show input method setting extension dialog
 
 **Substitutes:** inputMethodList/InputMethodListDialog
 
+<!--Device-InputMethodSetting-showOptionalInputMethods(): Promise<boolean>--><!--Device-InputMethodSetting-showOptionalInputMethods(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | the promise returned by the function. |
 
 **Error codes:**
 

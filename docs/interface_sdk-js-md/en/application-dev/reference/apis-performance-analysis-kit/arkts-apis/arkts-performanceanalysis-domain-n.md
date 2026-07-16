@@ -2,11 +2,13 @@
 
 Provides domain name constants.
 
-| Name| Type | Read Only | Description |
-| --- | ------ | ------ | ---------- |
+| Name| Type | Read Only | Description |  
+| --- | ------ | ------ | ---------- |  
 | OS | string | Yes| System domain.|
 
 **Since:** 11
+
+<!--Device-hiAppEvent-namespace domain--><!--Device-hiAppEvent-namespace domain-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 

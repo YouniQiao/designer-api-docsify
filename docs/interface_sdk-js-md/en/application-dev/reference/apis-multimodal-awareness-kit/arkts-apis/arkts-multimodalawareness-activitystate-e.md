@@ -4,6 +4,8 @@ Enumerates the device statuses.
 
 **Since:** 9
 
+<!--Device-stationary-enum ActivityState--><!--Device-stationary-enum ActivityState-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
 
 ## ENTER
@@ -16,6 +18,8 @@ Enter state.
 
 **Since:** 9
 
+<!--Device-ActivityState-ENTER = 1--><!--Device-ActivityState-ENTER = 1-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
 
 ## EXIT
@@ -27,6 +31,8 @@ EXIT = 2
 Exit state.
 
 **Since:** 9
+
+<!--Device-ActivityState-EXIT = 2--><!--Device-ActivityState-EXIT = 2-End-->
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
 

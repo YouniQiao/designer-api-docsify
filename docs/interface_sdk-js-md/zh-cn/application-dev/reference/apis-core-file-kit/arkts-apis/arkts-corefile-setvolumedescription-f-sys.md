@@ -1,17 +1,24 @@
 # setVolumeDescription（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { volumeManager } from '@kit.CoreFileKit';
+```
+
 ## setVolumeDescription
 
 ```TypeScript
 function setVolumeDescription(uuid: string, description: string, callback: AsyncCallback<void>): void
 ```
 
-修改指定卷设备描述，使用callback异步回调。当前仅支持修改ntfs和exfat两种文件系统类型的设备描述，
-只有处于卸载状态的卷设备可以修改设备描述。
+修改指定卷设备描述，使用callback异步回调。当前仅支持修改ntfs和exfat两种文件系统类型的设备描述，只有处于卸载状态的卷设备可以修改设备描述。
 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MOUNT_UNMOUNT_MANAGER
+
+<!--Device-volumeManager-function setVolumeDescription(uuid: string, description: string, callback: AsyncCallback<void>): void--><!--Device-volumeManager-function setVolumeDescription(uuid: string, description: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
@@ -23,7 +30,7 @@ function setVolumeDescription(uuid: string, description: string, callback: Async
 | --- | --- | --- | --- |
 | uuid | string | 是 | 卷设备uuid。 |
 | description | string | 是 | 卷设备描述。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 设置卷描述之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 设置卷描述之后的回调。 |
 
 **错误码：**
 
@@ -45,12 +52,13 @@ function setVolumeDescription(uuid: string, description: string, callback: Async
 function setVolumeDescription(uuid: string, description: string): Promise<void>
 ```
 
-修改指定卷设备描述，使用Promise异步回调。当前仅支持修改ntfs和exfat两种文件系统类型的设备描述，
-只有处于卸载状态的卷设备可以修改设备描述。
+修改指定卷设备描述，使用Promise异步回调。当前仅支持修改ntfs和exfat两种文件系统类型的设备描述，只有处于卸载状态的卷设备可以修改设备描述。
 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MOUNT_UNMOUNT_MANAGER
+
+<!--Device-volumeManager-function setVolumeDescription(uuid: string, description: string): Promise<void>--><!--Device-volumeManager-function setVolumeDescription(uuid: string, description: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
@@ -67,7 +75,7 @@ function setVolumeDescription(uuid: string, description: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

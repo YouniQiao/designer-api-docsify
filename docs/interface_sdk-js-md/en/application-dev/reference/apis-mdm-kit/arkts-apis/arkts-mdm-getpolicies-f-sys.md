@@ -22,6 +22,8 @@ Obtains the policy of the specified browser. This API uses an asynchronous callb
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-browser-function getPolicies(admin: Want, appId: string, callback: AsyncCallback<string>): void--><!--Device-browser-function getPolicies(admin: Want, appId: string, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -30,9 +32,9 @@ Obtains the policy of the specified browser. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | appId | string | Yes | Application ID, which is used to specify the browser. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback invoked to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback invoked to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -82,6 +84,8 @@ Obtains the policy of the specified browser. This API uses a promise to return t
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-browser-function getPolicies(admin: Want, appId: string): Promise<string>--><!--Device-browser-function getPolicies(admin: Want, appId: string): Promise<string>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -90,14 +94,14 @@ Obtains the policy of the specified browser. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | appId | string | Yes | Application ID, which is used to specify the browser. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the browser policies obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the browser policies obtained. |
 
 **Error codes:**
 

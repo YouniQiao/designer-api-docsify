@@ -18,19 +18,21 @@ Set persistence permissions for the URI
 
 **Required permissions:** ohos.permission.FILE_ACCESS_PERSIST
 
+<!--Device-fileShare-function persistPermission(policies: Array<PolicyInfo>): Promise<void>--><!--Device-fileShare-function persistPermission(policies: Array<PolicyInfo>): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policies | Array&lt;PolicyInfo&gt; | Yes | Policy information to grant permission on URIs. |
+| policies | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PolicyInfo> | Yes | Policy information to grant permission on URIs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 

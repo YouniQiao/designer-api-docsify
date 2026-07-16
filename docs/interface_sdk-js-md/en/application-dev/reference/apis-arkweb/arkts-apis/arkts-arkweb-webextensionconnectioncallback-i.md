@@ -1,9 +1,10 @@
 # WebExtensionConnectionCallback
 
-As an input parameter when connecting a web native messaging extension, it is used to receive
-state changes during the connection.
+As an input parameter when connecting a web native messaging extension, it is used to receive state changes during the connection.
 
 **Since:** 21
+
+<!--Device-webNativeMessagingExtensionManager-interface WebExtensionConnectionCallback--><!--Device-webNativeMessagingExtensionManager-interface WebExtensionConnectionCallback-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -25,13 +26,15 @@ Called when a connection is set up.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WebExtensionConnectionCallback-onConnect(connection: ConnectionNativeInfo): void--><!--Device-WebExtensionConnectionCallback-onConnect(connection: ConnectionNativeInfo): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | ConnectionNativeInfo | Yes | Connection information. |
+| connection | [ConnectionNativeInfo](arkts-arkweb-connectionnativeinfo-i.md) | Yes | Connection information. |
 
 **Example**
 
@@ -91,13 +94,15 @@ Called when a connection is interrupted.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WebExtensionConnectionCallback-onDisconnect(connection: ConnectionNativeInfo): void--><!--Device-WebExtensionConnectionCallback-onDisconnect(connection: ConnectionNativeInfo): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | ConnectionNativeInfo | Yes | Connection information. |
+| connection | [ConnectionNativeInfo](arkts-arkweb-connectionnativeinfo-i.md) | Yes | Connection information. |
 
 **Example**
 
@@ -157,13 +162,15 @@ Called when the connection fails.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WebExtensionConnectionCallback-onFailed(code: NmErrorCode, errMsg: string): void--><!--Device-WebExtensionConnectionCallback-onFailed(code: NmErrorCode, errMsg: string): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | NmErrorCode | Yes | Error code. |
+| code | [NmErrorCode](arkts-arkweb-nmerrorcode-e.md) | Yes | Error code. |
 | errMsg | string | Yes | Error message. |
 
 **Example**

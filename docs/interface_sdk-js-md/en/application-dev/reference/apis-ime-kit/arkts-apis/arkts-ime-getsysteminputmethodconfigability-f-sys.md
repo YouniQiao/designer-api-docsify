@@ -18,6 +18,8 @@ Get the system input method config ability of a specified user.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-inputMethod-function getSystemInputMethodConfigAbility(userId?: int): ElementName--><!--Device-inputMethod-function getSystemInputMethodConfigAbility(userId?: int): ElementName-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **System API:** This is a system API.
@@ -32,7 +34,7 @@ Get the system input method config ability of a specified user.
 
 | Type | Description |
 | --- | --- |
-| ElementName | the information of system input method config ability. |
+| [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-t.md) | the information of system input method config ability. |
 
 **Error codes:**
 

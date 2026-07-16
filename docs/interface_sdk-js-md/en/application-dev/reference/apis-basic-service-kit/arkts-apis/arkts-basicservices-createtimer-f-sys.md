@@ -14,13 +14,15 @@ function createTimer(options: TimerOptions, callback: AsyncCallback<number>): vo
 
 Creates a timer. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API must be used together with
-> [systemTimer.destroyTimer](arkts-basicservices-destroytimer-f-sys.md#destroytimer-1). Otherwise
+> **NOTE**  
+>  
+> This API must be used together with  
+> [systemTimer.destroyTimer](arkts-basicservices-destroytimer-f-sys.md#destroytimer-1). Otherwise  
 > , memory leakage occurs.
 
 **Since:** 7
+
+<!--Device-systemTimer-function createTimer(options: TimerOptions, callback: AsyncCallback<long>): void--><!--Device-systemTimer-function createTimer(options: TimerOptions, callback: AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -30,8 +32,8 @@ Creates a timer. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | TimerOptions | Yes | Timer initialization options, including the timer type, whether the timer is arepeating timer, interval, and **WantAgent** options. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the timer ID. |
+| options | [TimerOptions](arkts-basicservices-timeroptions-i-sys.md) | Yes | Timer initialization options, including the timer type, whether the timer is a repeating timer, interval, and **WantAgent** options. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the timer ID. |
 
 **Error codes:**
 
@@ -73,13 +75,15 @@ function createTimer(options: TimerOptions): Promise<number>
 
 Creates a timer. This API uses a promise to return the timer ID.
 
-> **NOTE**
->
-> This API must be used together with
-> [systemTimer.destroyTimer](arkts-basicservices-destroytimer-f-sys.md#destroytimer-1). Otherwise
+> **NOTE**  
+>  
+> This API must be used together with  
+> [systemTimer.destroyTimer](arkts-basicservices-destroytimer-f-sys.md#destroytimer-1). Otherwise  
 > , memory leakage occurs.
 
 **Since:** 7
+
+<!--Device-systemTimer-function createTimer(options: TimerOptions): Promise<long>--><!--Device-systemTimer-function createTimer(options: TimerOptions): Promise<long>-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -89,13 +93,13 @@ Creates a timer. This API uses a promise to return the timer ID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | TimerOptions | Yes | Timer initialization options, including the timer type, whether the timer is arepeating timer, interval, and **WantAgent** options. |
+| options | [TimerOptions](arkts-basicservices-timeroptions-i-sys.md) | Yes | Timer initialization options, including the timer type, whether the timer is a repeating timer, interval, and **WantAgent** options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the timer ID. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the timer ID. |
 
 **Error codes:**
 

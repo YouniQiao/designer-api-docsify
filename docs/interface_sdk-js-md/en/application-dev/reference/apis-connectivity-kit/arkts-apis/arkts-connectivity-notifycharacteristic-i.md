@@ -8,6 +8,8 @@ Describes the value of the indication or notification sent by the Gatt server.
 
 **Substitutes:** NotifyCharacteristic
 
+<!--Device-bluetoothManager-interface NotifyCharacteristic--><!--Device-bluetoothManager-interface NotifyCharacteristic-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -32,6 +34,8 @@ The UUID of a NotifyCharacteristic instance
 
 **Substitutes:** characteristicUuid
 
+<!--Device-NotifyCharacteristic-characteristicUuid: string--><!--Device-NotifyCharacteristic-characteristicUuid: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## characteristicValue
@@ -50,6 +54,8 @@ The value of a NotifyCharacteristic instance
 
 **Substitutes:** characteristicValue
 
+<!--Device-NotifyCharacteristic-characteristicValue: ArrayBuffer--><!--Device-NotifyCharacteristic-characteristicValue: ArrayBuffer-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## confirm
@@ -58,8 +64,7 @@ The value of a NotifyCharacteristic instance
 confirm: boolean
 ```
 
-Specifies whether to request confirmation from the BLE peripheral device (indication) or
-send a notification. Value {@code true} indicates the former and {@code false} indicates the latter.
+Specifies whether to request confirmation from the BLE peripheral device (indication) or send a notification. Value {@code true} indicates the former and {@code false} indicates the latter.
 
 **Type:** boolean
 
@@ -68,6 +73,8 @@ send a notification. Value {@code true} indicates the former and {@code false} i
 **Deprecated since:** 10
 
 **Substitutes:** confirm
+
+<!--Device-NotifyCharacteristic-confirm: boolean--><!--Device-NotifyCharacteristic-confirm: boolean-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -86,6 +93,8 @@ The UUID of the {@link GattService} instance to which the characteristic belongs
 **Deprecated since:** 10
 
 **Substitutes:** serviceUuid
+
+<!--Device-NotifyCharacteristic-serviceUuid: string--><!--Device-NotifyCharacteristic-serviceUuid: string-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

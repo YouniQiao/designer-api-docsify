@@ -12,12 +12,11 @@ import { call } from '@kit.TelephonyKit';
 function formatPhoneNumber(phoneNumber: string, options: NumberFormatOptions, callback: AsyncCallback<string>): void
 ```
 
-Formats a phone number according to the Chinese Telephone Code Plan. Before the formatting,
-a phone number is in the format of country code (if any) + 3-digit service provider code
-+ 4-digit area code + 4-digit subscriber number. After the formatting,
-each part is separated by a space.
+Formats a phone number according to the Chinese Telephone Code Plan. Before the formatting,a phone number is in the format of country code (if any) + 3-digit service provider code+ 4-digit area code + 4-digit subscriber number. After the formatting,each part is separated by a space.
 
 **Since:** 7
+
+<!--Device-call-function formatPhoneNumber(phoneNumber: string, options: NumberFormatOptions, callback: AsyncCallback<string>): void--><!--Device-call-function formatPhoneNumber(phoneNumber: string, options: NumberFormatOptions, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -26,8 +25,8 @@ each part is separated by a space.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Indicates the phone number to format. |
-| options | NumberFormatOptions | Yes | Indicates the country code option. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Indicates the callback to obtain a formatted phone number.Returns an empty string if the input phone number is invalid. |
+| options | [NumberFormatOptions](arkts-telephony-numberformatoptions-i.md) | Yes | Indicates the country code option. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Indicates the callback to obtain a formatted phone number.Returns an empty string if the input phone number is invalid. |
 
 **Error codes:**
 
@@ -64,12 +63,11 @@ call.formatPhoneNumber("138xxxxxxxx", options, (err: BusinessError, data: string
 function formatPhoneNumber(phoneNumber: string, options?: NumberFormatOptions): Promise<string>
 ```
 
-Formats a phone number according to the Chinese Telephone Code Plan. Before the formatting,
-a phone number is in the format of country code (if any) + 3-digit service provider code
-+ 4-digit area code + 4-digit subscriber number. After the formatting,
-each part is separated by a space.
+Formats a phone number according to the Chinese Telephone Code Plan. Before the formatting,a phone number is in the format of country code (if any) + 3-digit service provider code+ 4-digit area code + 4-digit subscriber number. After the formatting,each part is separated by a space.
 
 **Since:** 7
+
+<!--Device-call-function formatPhoneNumber(phoneNumber: string, options?: NumberFormatOptions): Promise<string>--><!--Device-call-function formatPhoneNumber(phoneNumber: string, options?: NumberFormatOptions): Promise<string>-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -78,13 +76,13 @@ each part is separated by a space.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Indicates the phone number to format. |
-| options | NumberFormatOptions | No | Indicates the country code option. |
+| options | [NumberFormatOptions](arkts-telephony-numberformatoptions-i.md) | No | Indicates the country code option. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the phone number after being formatted. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the phone number after being formatted. |
 
 **Error codes:**
 
@@ -119,12 +117,11 @@ call.formatPhoneNumber("138xxxxxxxx", options).then((data: string) => {
 function formatPhoneNumber(phoneNumber: string, callback: AsyncCallback<string>): void
 ```
 
-Formats a phone number according to the Chinese Telephone Code Plan. Before the formatting,
-a phone number is in the format of country code (if any) + 3-digit service provider code
-+ 4-digit area code + 4-digit subscriber number. After the formatting,
-each part is separated by a space.
+Formats a phone number according to the Chinese Telephone Code Plan. Before the formatting,a phone number is in the format of country code (if any) + 3-digit service provider code+ 4-digit area code + 4-digit subscriber number. After the formatting,each part is separated by a space.
 
 **Since:** 7
+
+<!--Device-call-function formatPhoneNumber(phoneNumber: string, callback: AsyncCallback<string>): void--><!--Device-call-function formatPhoneNumber(phoneNumber: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -133,7 +130,7 @@ each part is separated by a space.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Indicates the phone number to format. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Indicates the callback to obtain a formatted phone number.Returns an empty string if the input phone number is invalid. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Indicates the callback to obtain a formatted phone number.Returns an empty string if the input phone number is invalid. |
 
 **Error codes:**
 

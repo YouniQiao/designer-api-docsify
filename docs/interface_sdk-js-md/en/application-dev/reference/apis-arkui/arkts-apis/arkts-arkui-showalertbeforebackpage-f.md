@@ -14,11 +14,11 @@ function showAlertBeforeBackPage(options: EnableAlertOptions): void
 
 Enables the display of a confirm dialog box before returning to the previous page.
 
-> **NOTE**
->
-> - Since API version 10, you can use the
-> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> **NOTE**  
+>  
+> - Since API version 10, you can use the  
+> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in  
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated  
 > with the current UI context.
 
 **Since:** 9
@@ -29,13 +29,15 @@ Enables the display of a confirm dialog box before returning to the previous pag
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-router-function showAlertBeforeBackPage(options: EnableAlertOptions): void--><!--Device-router-function showAlertBeforeBackPage(options: EnableAlertOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | EnableAlertOptions | Yes | Description of the dialog box. |
+| options | [EnableAlertOptions](arkts-arkui-enablealertoptions-i.md) | Yes | Description of the dialog box. |
 
 **Error codes:**
 

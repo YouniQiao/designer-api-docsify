@@ -18,6 +18,8 @@ Get history avsession records. These sessions have been destroyed.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function getHistoricalSessionDescriptors(maxSize: int, callback: AsyncCallback<Array<Readonly<AVSessionDescriptor>>>): void--><!--Device-avSession-function getHistoricalSessionDescriptors(maxSize: int, callback: AsyncCallback<Array<Readonly<AVSessionDescriptor>>>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Get history avsession records. These sessions have been destroyed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | maxSize | number | Yes | Specifies the maximum size of the returned value array. |
-| callback | AsyncCallback&lt;Array&lt;Readonly&lt;AVSessionDescriptor&gt;&gt;&gt; | Yes | async callback for an array ofAVSessionDescriptors.If provided '0' or not provided, the maximum value is determined by the system. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Readonly<AVSessionDescriptor>>> | Yes | async callback for an array of AVSessionDescriptors.If provided '0' or not provided, the maximum value is determined by the system. |
 
 **Error codes:**
 
@@ -35,7 +37,7 @@ Get history avsession records. These sessions have been destroyed.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. Possible causes: 1.Mandatory parameters are leftunspecified.2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
 **Example**
@@ -67,6 +69,8 @@ Get history avsession records. These sessions have been destroyed.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function getHistoricalSessionDescriptors(maxSize?: int): Promise<Array<Readonly<AVSessionDescriptor>>>--><!--Device-avSession-function getHistoricalSessionDescriptors(maxSize?: int): Promise<Array<Readonly<AVSessionDescriptor>>>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -81,7 +85,7 @@ Get history avsession records. These sessions have been destroyed.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Readonly&lt;AVSessionDescriptor&gt;&gt;&gt; | Promise for an array of AVSessionDescriptors |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Readonly<AVSessionDescriptor>>> | Promise for an array of AVSessionDescriptors |
 
 **Error codes:**
 

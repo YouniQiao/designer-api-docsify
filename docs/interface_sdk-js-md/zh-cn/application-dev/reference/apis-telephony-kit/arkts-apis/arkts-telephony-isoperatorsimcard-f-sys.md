@@ -1,5 +1,11 @@
 # isOperatorSimCard（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## isOperatorSimCard
 
 ```TypeScript
@@ -10,6 +16,8 @@ Indicates whether the SIM card in a specified slot is a specified operator.
 
 **起始版本：** 11
 
+<!--Device-sim-function isOperatorSimCard(slotId: int, operator: OperatorSimCard): boolean--><!--Device-sim-function isOperatorSimCard(slotId: int, operator: OperatorSimCard): boolean-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -19,7 +27,7 @@ Indicates whether the SIM card in a specified slot is a specified operator.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| operator | OperatorSimCard | 是 | Indicates the operator of sim. |
+| operator | [OperatorSimCard](arkts-telephony-operatorsimcard-e-sys.md) | 是 | Indicates the operator of sim. |
 
 **返回值：**
 

@@ -20,14 +20,16 @@ Adds an access point name (APN).
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-networkManager-function addApn(admin: Want, apnInfo: Record<string, string>): void--><!--Device-networkManager-function addApn(admin: Want, apnInfo: Record<string, string>): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| apnInfo | Record&lt;string, string&gt; | Yes | APN information to be added.<br>- **apnName**: APN identifier, which ismandatory.<br>- **mcc**: 3-digit mobile country code (MCC), which is mandatory.<br>- **mnc**: 2-digit or 3-digit mobile network code (MNC), which is mandatory.<br>- **apn**: access point name, which is mandatory.<br>-**type**: APN service type, which is optional.<br>- **user**: user name for APN authentication, which isoptional.<br>- **password**: password for APN authentication, which is optional.<br>- **proxy**: address of theproxy server for a common data connection, which is optional.<br>- **mmsproxy**: dedicated proxy address of theMMS service, which is optional.<br>- **authType**: authentication protocol type of the APN, which is optional. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| apnInfo | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, string> | Yes | APN information to be added.<br>- **apnName**: APN identifier, which is mandatory.<br>- **mcc**: 3-digit mobile country code (MCC), which is mandatory.<br>- **mnc**: 2-digit or 3-digit mobile network code (MNC), which is mandatory.<br>- **apn**: access point name, which is mandatory.<br>-**type**: APN service type, which is optional.<br>- **user**: user name for APN authentication, which is optional.<br>- **password**: password for APN authentication, which is optional.<br>- **proxy**: address of the proxy server for a common data connection, which is optional.<br>- **mmsproxy**: dedicated proxy address of the MMS service, which is optional.<br>- **authType**: authentication protocol type of the APN, which is optional. |
 
 **Error codes:**
 
@@ -35,7 +37,7 @@ Adds an access point name (APN).
 | --- | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 **Example**
 

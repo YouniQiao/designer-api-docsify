@@ -12,12 +12,13 @@ import { formProvider } from '@kit.FormKit';
 function updateTemplateFormDetailInfo(templateFormInfo: Array<formInfo.TemplateFormDetailInfo>): Promise<void>
 ```
 
-Updates the static configuration information of a specified template widget on the current device. This API uses a
-promise to return the result.
+Updates the static configuration information of a specified template widget on the current device. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-formProvider-function updateTemplateFormDetailInfo(templateFormInfo: Array<formInfo.TemplateFormDetailInfo>): Promise<void>--><!--Device-formProvider-function updateTemplateFormDetailInfo(templateFormInfo: Array<formInfo.TemplateFormDetailInfo>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -27,13 +28,13 @@ promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templateFormInfo | Array&lt;formInfo.TemplateFormDetailInfo&gt; | Yes | Static configuration information of a specifiedtemplate widget. |
+| templateFormInfo | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<formInfo.TemplateFormDetailInfo> | Yes | Static configuration information of a specified template widget. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

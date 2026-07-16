@@ -1,5 +1,11 @@
 # createVerify
 
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+```
+
 ## createVerify
 
 ```TypeScript
@@ -10,7 +16,9 @@ function createVerify(algName: string): Verify
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cryptoFramework-function createVerify(algName: string): Verify--><!--Device-cryptoFramework-function createVerify(algName: string): Verify-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -26,7 +34,7 @@ function createVerify(algName: string): Verify
 
 | 类型 | 说明 |
 | --- | --- |
-| Verify | 返回由输入算法指定生成的Verify对象。 |
+| [Verify](arkts-cryptoarchitecture-verify-i.md) | 返回由输入算法指定生成的Verify对象。 |
 
 **错误码：**
 

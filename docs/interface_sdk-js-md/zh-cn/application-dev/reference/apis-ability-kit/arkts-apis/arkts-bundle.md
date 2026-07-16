@@ -1,10 +1,9 @@
 # @ohos.bundle
 
-本模块提供应用信息查询能力，支持[包信息](arkts-ability-bundleinfo-depr-i.md)、[应用信息](arkts-ability-applicationinfo-depr-i.md)、
-[Ability组件信息](arkts-ability-abilityinfo-depr-i.md)等信息的查询，以及应用禁用状态的查询、设置等。
+本模块提供应用信息查询能力，支持[包信息](arkts-ability-bundleinfo-depr-i.md)、[应用信息](arkts-ability-applicationinfo-depr-i.md)、[Ability组件信息](arkts-ability-abilityinfo-depr-i.md)等信息的查询，以及应用禁用状态的查询、设置等。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 9开始，该模块不再维护，建议使用[@ohos.bundle.bundleManager](arkts-bundle-bundlemanager.md)替代。
 
 **起始版本：** 7
@@ -13,7 +12,15 @@
 
 **替代接口：** [bundleManager:bundleManager](arkts-bundle-bundlemanager.md)
 
+<!--Device-unnamed-declare namespace bundle--><!--Device-unnamed-declare namespace bundle-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
+
+## 导入模块
+
+```TypeScript
+import { bundle } from '@kit.AbilityKit';
+```
 
 ## 汇总
 
@@ -81,11 +88,11 @@
 | 名称 | 说明 |
 | --- | --- |
 | [AbilitySubType](arkts-ability-abilitysubtype-e.md) |  |
-| [AbilityType](arkts-ability-abilitytype-e.md) | @link @ohos.bundle.bundleManager:bundleManager.AbilityType}替代。Ability组件类型。 |
-| [BundleFlag](arkts-ability-bundleflag-e.md) | @link @ohos.bundle.bundleManager:bundleManager.BundleFlag}替代。包信息标志，指示需要获取的包信息的内容。当接口与标志不匹配时，该标志会被忽略，例如获取application时使用GET_ABILITY_INFO_WITH_PERMISSION对结果不会产生影响。标志可以叠加使用，例如使用GET_APPLICATION_INFO_WITH_PERMISSION + GET_APPLICATION_INFO_WITH_DISABLE可以使结果同时包含应用权限信息和被禁用的应用信息。 |
+| [AbilityType](arkts-ability-abilitytype-e.md) |  |
+| [BundleFlag](arkts-ability-bundleflag-e.md) |  |
 | [ColorMode](arkts-ability-colormode-e.md) |  |
-| [DisplayOrientation](arkts-ability-displayorientation-e.md) | @link @ohos.bundle.bundleManager:bundleManager.DisplayOrientation}替代。屏幕显示方向。 |
-| [GrantStatus](arkts-ability-grantstatus-e.md) | @link @ohos.bundle.bundleManager:bundleManager.PermissionGrantState}替代。权限授予状态。 |
+| [DisplayOrientation](arkts-ability-displayorientation-e.md) |  |
+| [GrantStatus](arkts-ability-grantstatus-e.md) |  |
 | [InstallErrorCode](arkts-ability-installerrorcode-e.md) |  |
-| [LaunchMode](arkts-ability-launchmode-e.md) | @link @ohos.bundle.bundleManager:bundleManager.LaunchType}替代。Ability组件的启动模式。 |
+| [LaunchMode](arkts-ability-launchmode-e.md) |  |
 

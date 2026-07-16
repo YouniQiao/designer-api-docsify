@@ -12,15 +12,15 @@ import { manager } from '@kit.ConnectivityKit';
 function getPairedDevices(): string[]
 ```
 
-Gets the list of devices that have been paired with the current device.
-If the user has the ohos.permission.GET_NEARLINK_PEER_MAC permission, the real device address is returned.
-Otherwise, a random device address is returned.
+Gets the list of devices that have been paired with the current device.If the user has the ohos.permission.GET_NEARLINK_PEER_MAC permission, the real device address is returned.Otherwise, a random device address is returned.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-manager-function getPairedDevices(): string[]--><!--Device-manager-function getPairedDevices(): string[]-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 

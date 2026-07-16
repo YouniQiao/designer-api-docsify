@@ -4,6 +4,8 @@ Defines the date data.
 
 **Since:** 11
 
+<!--Device-unnamed-declare class DateData--><!--Device-unnamed-declare class DateData-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,6 +27,8 @@ Constructor of the DateData.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DateData-constructor(year: number, month: number, day: number)--><!--Device-DateData-constructor(year: number, month: number, day: number)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,6 +54,8 @@ Convert the date data to string.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DateData-toString(): string--><!--Device-DateData-toString(): string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -74,6 +80,8 @@ The day of the DateData.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DateData-day: number--><!--Device-DateData-day: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## month
@@ -92,6 +100,8 @@ The month of the DateData.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DateData-month: number--><!--Device-DateData-month: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## year
@@ -109,6 +119,8 @@ The year of the DateData, ranges from 1 to 5000.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DateData-year: number--><!--Device-DateData-year: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,6 +4,8 @@ Defines progress bar options.
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface ProgressOptions<Type extends keyof ProgressStyleMap>--><!--Device-unnamed-declare interface ProgressOptions<Type extends keyof ProgressStyleMap>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## style
@@ -26,6 +28,8 @@ Default value: **ProgressStyle.Linear**
 
 **Substitutes:** [type](arkts-arkui-progressoptions-i.md#type)
 
+<!--Device-ProgressOptions-style?: ProgressStyle--><!--Device-ProgressOptions-style?: ProgressStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## total
@@ -45,6 +49,8 @@ Default value: **100**
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ProgressOptions-total?: number--><!--Device-ProgressOptions-total?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,6 +72,8 @@ Default value: **ProgressType.Linear**
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ProgressOptions-type?: Type--><!--Device-ProgressOptions-type?: Type-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -74,8 +82,7 @@ Default value: **ProgressType.Linear**
 value: number
 ```
 
-Current progress. Values less than 0 are adjusted to **0**, and values greater than the **total** value are capped
-at the **total** value.
+Current progress. Values less than 0 are adjusted to **0**, and values greater than the **total** value are capped at the **total** value.
 
 Default value: **0**
 
@@ -88,6 +95,8 @@ Value range: [0, total]
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ProgressOptions-value: number--><!--Device-ProgressOptions-value: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

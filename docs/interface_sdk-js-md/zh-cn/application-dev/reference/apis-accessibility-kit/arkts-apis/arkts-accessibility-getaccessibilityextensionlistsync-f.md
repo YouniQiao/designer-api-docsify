@@ -1,5 +1,11 @@
 # getAccessibilityExtensionListSync
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+```
+
 ## getAccessibilityExtensionListSync
 
 ```TypeScript
@@ -13,9 +19,17 @@ function getAccessibilityExtensionListSync(
 
 **起始版本：** 12
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-accessibility-function getAccessibilityExtensionListSync(
+    abilityType: AbilityType,
+    stateType: AbilityState
+  ): Array<AccessibilityAbilityInfo>--><!--Device-accessibility-function getAccessibilityExtensionListSync(
+    abilityType: AbilityType,
+    stateType: AbilityState
+  ): Array<AccessibilityAbilityInfo>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -23,14 +37,14 @@ function getAccessibilityExtensionListSync(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| abilityType | AbilityType | 是 | 辅助应用的类型。 |
-| stateType | AbilityState | 是 | 辅助应用的状态。 |
+| abilityType | [AbilityType](arkts-accessibility-abilitytype-t.md) | 是 | 辅助应用的类型。 |
+| stateType | [AbilityState](arkts-accessibility-abilitystate-t.md) | 是 | 辅助应用的状态。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;AccessibilityAbilityInfo&gt; | 返回辅助应用信息列表。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<AccessibilityAbilityInfo> | 返回辅助应用信息列表。 |
 
 **示例：**
 

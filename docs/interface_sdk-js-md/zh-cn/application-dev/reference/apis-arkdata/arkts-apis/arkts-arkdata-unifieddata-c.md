@@ -4,7 +4,15 @@
 
 **起始版本：** 10
 
+<!--Device-unifiedDataChannel-class UnifiedData--><!--Device-unifiedDataChannel-class UnifiedData-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+## 导入模块
+
+```TypeScript
+import { unifiedDataChannel } from '@kit.ArkData';
+```
 
 ## addRecord
 
@@ -18,7 +26,9 @@ addRecord(record: UnifiedRecord): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnifiedData-addRecord(record: UnifiedRecord): void--><!--Device-UnifiedData-addRecord(record: UnifiedRecord): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -26,7 +36,7 @@ addRecord(record: UnifiedRecord): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| record | UnifiedRecord | 是 | 要添加到统一数据对象中的数据记录，该记录为UnifiedRecord或其子类对象。 |
+| record | [UnifiedRecord](arkts-arkdata-unifiedrecord-c.md) | 是 | 要添加到统一数据对象中的数据记录，该记录为UnifiedRecord或其子类对象。 |
 
 **错误码：**
 
@@ -69,7 +79,9 @@ constructor(record: UnifiedRecord)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnifiedData-constructor(record: UnifiedRecord)--><!--Device-UnifiedData-constructor(record: UnifiedRecord)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -77,7 +89,7 @@ constructor(record: UnifiedRecord)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| record | UnifiedRecord | 是 | 要添加到统一数据对象中的数据记录，该记录为UnifiedRecord或其子类对象。 |
+| record | [UnifiedRecord](arkts-arkdata-unifiedrecord-c.md) | 是 | 要添加到统一数据对象中的数据记录，该记录为UnifiedRecord或其子类对象。 |
 
 **错误码：**
 
@@ -111,7 +123,9 @@ constructor()
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnifiedData-constructor()--><!--Device-UnifiedData-constructor()-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -128,14 +142,15 @@ let unifiedData = new unifiedDataChannel.UnifiedData();
 getRecords(): Array<UnifiedRecord>
 ```
 
-将当前统一数据对象中的所有数据记录取出。通过本接口取出的数据为UnifiedRecord类型，需通过[getType](arkts-arkdata-unifiedrecord-c.md#gettype-1)获取数据类型
-后转为子类再使用。
+将当前统一数据对象中的所有数据记录取出。通过本接口取出的数据为UnifiedRecord类型，需通过[getType](arkts-arkdata-unifiedrecord-c.md#gettype-1)获取数据类型后转为子类再使用。
 
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnifiedData-getRecords(): Array<UnifiedRecord>--><!--Device-UnifiedData-getRecords(): Array<UnifiedRecord>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -143,7 +158,7 @@ getRecords(): Array<UnifiedRecord>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;UnifiedRecord&gt; | 当前统一数据对象中包含的所有数据记录数组，每条记录可通过getType获取类型后转换为具体子类使用，用于读取和处理统一数据中的各种类型数据。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<UnifiedRecord> | 当前统一数据对象中包含的所有数据记录数组，每条记录可通过getType获取类型后转换为具体子类使用，用于读取和处理统一数据中的各种类型数据。 |
 
 **示例：**
 
@@ -193,7 +208,9 @@ getTypes(): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnifiedData-getTypes(): Array<string>--><!--Device-UnifiedData-getTypes(): Array<string>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -201,7 +218,7 @@ getTypes(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | [UniformDataType](arkts-arkdata-uniformdatatype-e.md)类型的数组，表示当前记录的数据类型集合，元素值如'general.plain-text'、'general.hyperlink'、'openharmony.form'等。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | [UniformDataType](arkts-arkdata-uniformdatatype-e.md)类型的数组，表示当前记录的数据类型集合，元素值如'general.plain-text'、'general.hyperlink'、'openharmony.form'等。 |
 
 **示例：**
 
@@ -236,14 +253,15 @@ hasType(type: string): boolean
 
 检查当前统一数据对象中是否有指定的数据类型，检查范围包括使用[addEntry](arkts-arkdata-unifiedrecord-c.md#addentry-1)函数添加的数据类型。
 
-针对文件类型，若UnifiedData的类型集合中包含"general.jpeg"，在调用hasType接口判断是否包括"general.image"类型时，结果返回true（类型"general.jpeg"归属于类型"
-general.image"）。
+针对文件类型，若UnifiedData的类型集合中包含"general.jpeg"，在调用hasType接口判断是否包括"general.image"类型时，结果返回true（类型"general.jpeg"归属于类型"general.image"）。
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnifiedData-hasType(type: string): boolean--><!--Device-UnifiedData-hasType(type: string): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -305,7 +323,9 @@ set properties(value: UnifiedDataProperties)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnifiedData-set properties(value: UnifiedDataProperties)--><!--Device-UnifiedData-set properties(value: UnifiedDataProperties)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 

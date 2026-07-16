@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare namespace systemLoad--><!--Device-unnamed-declare namespace systemLoad-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.SystemLoad
+
+## 导入模块
+
+```TypeScript
+import { systemLoad } from '@kit.BasicServicesKit';
+```
 
 ## 汇总
 

@@ -6,6 +6,8 @@ Defines ReplaceSymbolEffect class, which inherits from **SymbolEffect**.
 
 **Since:** 12
 
+<!--Device-unnamed-declare class ReplaceSymbolEffect extends SymbolEffect--><!--Device-unnamed-declare class ReplaceSymbolEffect extends SymbolEffect-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -24,13 +26,15 @@ A constructor used to create an **AppearSymbolEffect** instance, which comes wit
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-ReplaceSymbolEffect-constructor(scope?: EffectScope)--><!--Device-ReplaceSymbolEffect-constructor(scope?: EffectScope)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | EffectScope | No | Effect scope.<br>Default value: **EffectScope.LAYER** |
+| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | Effect scope.<br>Default value: **EffectScope.LAYER** |
 
 ## constructor
 
@@ -38,8 +42,7 @@ A constructor used to create an **AppearSymbolEffect** instance, which comes wit
 constructor(scope?: EffectScope, replaceType?: ReplaceEffectType)
 ```
 
-A constructor used to create a **ReplaceSymbolEffect** instance, which comes with a replace animation effect. The
-replace effect type can be specified.
+A constructor used to create a **ReplaceSymbolEffect** instance, which comes with a replace animation effect. The replace effect type can be specified.
 
 **Since:** 20
 
@@ -49,14 +52,16 @@ replace effect type can be specified.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
 
+<!--Device-ReplaceSymbolEffect-constructor(scope?: EffectScope, replaceType?: ReplaceEffectType)--><!--Device-ReplaceSymbolEffect-constructor(scope?: EffectScope, replaceType?: ReplaceEffectType)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | EffectScope | No | Effect scope.<br>Default value: **EffectScope.LAYER** |
-| replaceType | ReplaceEffectType | No | Replacement effect type.<br>Default value:**ReplaceEffectType.SEQUENTIAL** |
+| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | Effect scope.<br>Default value: **EffectScope.LAYER** |
+| replaceType | [ReplaceEffectType](arkts-arkui-replaceeffecttype-e.md) | No | Replacement effect type.<br>Default value:**ReplaceEffectType.SEQUENTIAL** |
 
 ## replaceType
 
@@ -77,6 +82,8 @@ Default value: **ReplaceEffectType.SEQUENTIAL**.
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
+
+<!--Device-ReplaceSymbolEffect-replaceType?: ReplaceEffectType--><!--Device-ReplaceSymbolEffect-replaceType?: ReplaceEffectType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -99,6 +106,8 @@ Default value: **EffectScope.LAYER**
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-ReplaceSymbolEffect-scope?: EffectScope--><!--Device-ReplaceSymbolEffect-scope?: EffectScope-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

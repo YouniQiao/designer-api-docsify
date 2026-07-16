@@ -14,13 +14,13 @@ function getAllBundleCacheSize(): Promise<number>
 
 Obtains the global cache size. This API uses a promise to return the result.
 
-It is not possible to obtain the cache of applications that are currently running or have been granted the "
-AllowAppDataNotCleared" privilege as specified in the
-[application configuration guide](../../../../../device-dev/subsystems/subsys-app-privilege-config-guide.md).
+It is not possible to obtain the cache of applications that are currently running or have been granted the "AllowAppDataNotCleared" privilege as specified in the [application configuration guide](../../../../../device-dev/subsystems/subsys-app-privilege-config-guide.md).
 
 **Since:** 15
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getAllBundleCacheSize(): Promise<long>--><!--Device-bundleManager-function getAllBundleCacheSize(): Promise<long>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -30,7 +30,7 @@ AllowAppDataNotCleared" privilege as specified in the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the size of the global cache, in bytes. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the size of the global cache, in bytes. |
 
 **Error codes:**
 

@@ -1,10 +1,14 @@
 # NumberConstructor
 
+<!--Device-unnamed-interface NumberConstructor--><!--Device-unnamed-interface NumberConstructor-End-->
+
 ## constructor
 
 ```TypeScript
 new(value?: any): Number
 ```
+
+<!--Device-NumberConstructor-new(value?: any): Number--><!--Device-NumberConstructor-new(value?: any): Number-End-->
 
 **Parameters:**
 
@@ -16,13 +20,15 @@ new(value?: any): Number
 
 | Type | Description |
 | --- | --- |
-| Number |  |
+| [Number](arkts-na-number-i.md) |  |
 
 ## constructor
 
 ```TypeScript
 (value?: any): number
 ```
+
+<!--Device-NumberConstructor-(value?: any): number--><!--Device-NumberConstructor-(value?: any): number-End-->
 
 **Parameters:**
 
@@ -46,6 +52,8 @@ The largest number that can be represented in JavaScript. Equal to approximately
 
 **Type:** number
 
+<!--Device-NumberConstructor-readonly MAX_VALUE: number--><!--Device-NumberConstructor-readonly MAX_VALUE: number-End-->
+
 ## MIN_VALUE
 
 ```TypeScript
@@ -56,16 +64,19 @@ The closest number to zero that can be represented in JavaScript. Equal to appro
 
 **Type:** number
 
+<!--Device-NumberConstructor-readonly MIN_VALUE: number--><!--Device-NumberConstructor-readonly MIN_VALUE: number-End-->
+
 ## NEGATIVE_INFINITY
 
 ```TypeScript
 readonly NEGATIVE_INFINITY: number
 ```
 
-A value that is less than the largest negative number that can be represented in JavaScript.
-JavaScript displays NEGATIVE_INFINITY values as -infinity.
+A value that is less than the largest negative number that can be represented in JavaScript.JavaScript displays NEGATIVE_INFINITY values as -infinity.
 
 **Type:** number
+
+<!--Device-NumberConstructor-readonly NEGATIVE_INFINITY: number--><!--Device-NumberConstructor-readonly NEGATIVE_INFINITY: number-End-->
 
 ## NaN
 
@@ -73,10 +84,11 @@ JavaScript displays NEGATIVE_INFINITY values as -infinity.
 readonly NaN: number
 ```
 
-A value that is not a number.
-In equality comparisons, NaN does not equal any value, including itself. To test whether a value is equivalent to NaN, use the isNaN function.
+A value that is not a number.In equality comparisons, NaN does not equal any value, including itself. To test whether a value is equivalent to NaN, use the isNaN function.
 
 **Type:** number
+
+<!--Device-NumberConstructor-readonly NaN: number--><!--Device-NumberConstructor-readonly NaN: number-End-->
 
 ## POSITIVE_INFINITY
 
@@ -84,10 +96,11 @@ In equality comparisons, NaN does not equal any value, including itself. To test
 readonly POSITIVE_INFINITY: number
 ```
 
-A value greater than the largest number that can be represented in JavaScript.
-JavaScript displays POSITIVE_INFINITY values as infinity.
+A value greater than the largest number that can be represented in JavaScript.JavaScript displays POSITIVE_INFINITY values as infinity.
 
 **Type:** number
+
+<!--Device-NumberConstructor-readonly POSITIVE_INFINITY: number--><!--Device-NumberConstructor-readonly POSITIVE_INFINITY: number-End-->
 
 ## prototype
 
@@ -96,4 +109,6 @@ readonly prototype: Number
 ```
 
 **Type:** Number
+
+<!--Device-NumberConstructor-readonly prototype: Number--><!--Device-NumberConstructor-readonly prototype: Number-End-->
 

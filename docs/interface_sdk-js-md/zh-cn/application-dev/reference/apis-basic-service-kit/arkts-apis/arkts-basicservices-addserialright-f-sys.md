@@ -1,18 +1,24 @@
 # addSerialRight（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { serialManager } from '@kit.BasicServicesKit';
+```
+
 ## addSerialRight
 
 ```TypeScript
 function addSerialRight(tokenId: number, portId: number): void
 ```
 
-为应用程序添加访问串口设备权限。
-serialManager.requestSerialRight会触发弹窗请求用户授权；addSerialRight不会触发弹窗，而是直接添加应用程序访问设备的权限。应用退出自动移除对串口设备的访问权限，在应用重启后需要重新申请授
-权。
+为应用程序添加访问串口设备权限。serialManager.requestSerialRight会触发弹窗请求用户授权；addSerialRight不会触发弹窗，而是直接添加应用程序访问设备的权限。应用退出自动移除对串口设备的访问权限，在应用重启后需要重新申请授权。
 
 **起始版本：** 19
 
 **需要权限：** ohos.permission.MANAGE_USB_CONFIG
+
+<!--Device-serialManager-function addSerialRight(tokenId: int, portId: int): void--><!--Device-serialManager-function addSerialRight(tokenId: int, portId: int): void-End-->
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 

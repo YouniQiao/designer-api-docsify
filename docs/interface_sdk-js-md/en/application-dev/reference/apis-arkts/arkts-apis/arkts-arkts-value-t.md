@@ -10,6 +10,8 @@ The type used to denote decimal value
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-unnamed-type Value = string | double | Decimal--><!--Device-unnamed-type Value = string | double | Decimal-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 | Type | Description |

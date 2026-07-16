@@ -12,12 +12,13 @@ import { adminManager } from '@kit.MDMKit';
 function getEnterpriseInfo(admin: Want, callback: AsyncCallback<EnterpriseInfo>): void
 ```
 
-Obtains the enterprise information of the device administrator application. This API uses an asynchronous callback
-to return the result.
+Obtains the enterprise information of the device administrator application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-adminManager-function getEnterpriseInfo(admin: Want, callback: AsyncCallback<EnterpriseInfo>): void--><!--Device-adminManager-function getEnterpriseInfo(admin: Want, callback: AsyncCallback<EnterpriseInfo>): void-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -27,8 +28,8 @@ to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| callback | AsyncCallback&lt;EnterpriseInfo&gt; | Yes | Callback invoked to return the result. If the operation issuccessful, **err** is **null** and **data** is the enterprise information of the device administratorapplication obtained. If the operation fails, **err** is an error object. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<EnterpriseInfo> | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null** and **data** is the enterprise information of the device administrator application obtained. If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -67,12 +68,13 @@ adminManager.getEnterpriseInfo(wantTemp, (err, result) => {
 function getEnterpriseInfo(admin: Want): Promise<EnterpriseInfo>
 ```
 
-Obtains the enterprise information of the device administrator application. This API uses a promise to return the
-result.
+Obtains the enterprise information of the device administrator application. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-adminManager-function getEnterpriseInfo(admin: Want): Promise<EnterpriseInfo>--><!--Device-adminManager-function getEnterpriseInfo(admin: Want): Promise<EnterpriseInfo>-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -82,13 +84,13 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;EnterpriseInfo&gt; | Promise used to return the enterprise information of the device administratorapplication. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<EnterpriseInfo> | Promise used to return the enterprise information of the device administrator application. |
 
 **Error codes:**
 

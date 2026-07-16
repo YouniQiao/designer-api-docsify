@@ -4,7 +4,15 @@
 
 **起始版本：** 15
 
+<!--Device-contact-interface FilterOptions--><!--Device-contact-interface FilterOptions-End-->
+
 **系统能力：** SystemCapability.Applications.Contacts
+
+## 导入模块
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+```
 
 ## filterCondition
 
@@ -18,7 +26,9 @@ filterCondition: FilterCondition
 
 **起始版本：** 15
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FilterOptions-filterCondition: FilterCondition--><!--Device-FilterOptions-filterCondition: FilterCondition-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -34,7 +44,9 @@ value?: string | ValueType[]
 
 **起始版本：** 15
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FilterOptions-value?: string | ValueType[]--><!--Device-FilterOptions-value?: string | ValueType[]-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 

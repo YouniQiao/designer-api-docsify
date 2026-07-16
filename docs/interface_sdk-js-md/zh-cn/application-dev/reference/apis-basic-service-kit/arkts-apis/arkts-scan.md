@@ -2,12 +2,20 @@
 
 该模块为扫描框架的js-api接口文档，提供发现和连接扫描仪的能力。
 
-> **说明：**
+> **说明：**  
 > > 当前界面仅包含本模块的公开接口。
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare namespace scan--><!--Device-unnamed-declare namespace scan-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
+
+## 导入模块
+
+```TypeScript
+import { scan } from '@kit.BasicServicesKit';
+```
 
 ## 汇总
 

@@ -4,7 +4,15 @@ ARGB格式的颜色描述。
 
 **起始版本：** 20
 
+<!--Device-common2D-interface Color4f--><!--Device-common2D-interface Color4f-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
+
+## 导入模块
+
+```TypeScript
+import { common2D } from '@kit.ArkGraphics2D';
+```
 
 ## alpha
 
@@ -17,6 +25,8 @@ alpha: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-Color4f-alpha: double--><!--Device-Color4f-alpha: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -32,6 +42,8 @@ blue: number
 
 **起始版本：** 20
 
+<!--Device-Color4f-blue: double--><!--Device-Color4f-blue: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## green
@@ -46,6 +58,8 @@ green: number
 
 **起始版本：** 20
 
+<!--Device-Color4f-green: double--><!--Device-Color4f-green: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## red
@@ -59,6 +73,8 @@ red: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-Color4f-red: double--><!--Device-Color4f-red: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

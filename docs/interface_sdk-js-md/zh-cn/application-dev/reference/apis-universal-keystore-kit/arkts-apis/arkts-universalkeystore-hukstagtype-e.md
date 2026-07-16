@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+<!--Device-huks-export enum HuksTagType--><!--Device-huks-export enum HuksTagType-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Core
 
 ## HUKS_TAG_TYPE_INVALID
@@ -16,7 +18,9 @@ HUKS_TAG_TYPE_INVALID = 0 << 28
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HuksTagType-HUKS_TAG_TYPE_INVALID = 0 << 28--><!--Device-HuksTagType-HUKS_TAG_TYPE_INVALID = 0 << 28-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -30,7 +34,9 @@ HUKS_TAG_TYPE_INT = 1 << 28
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HuksTagType-HUKS_TAG_TYPE_INT = 1 << 28--><!--Device-HuksTagType-HUKS_TAG_TYPE_INT = 1 << 28-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -44,7 +50,9 @@ HUKS_TAG_TYPE_UINT = 2 << 28
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HuksTagType-HUKS_TAG_TYPE_UINT = 2 << 28--><!--Device-HuksTagType-HUKS_TAG_TYPE_UINT = 2 << 28-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -58,7 +66,9 @@ HUKS_TAG_TYPE_ULONG = 3 << 28
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HuksTagType-HUKS_TAG_TYPE_ULONG = 3 << 28--><!--Device-HuksTagType-HUKS_TAG_TYPE_ULONG = 3 << 28-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -72,7 +82,9 @@ HUKS_TAG_TYPE_BOOL = 4 << 28
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HuksTagType-HUKS_TAG_TYPE_BOOL = 4 << 28--><!--Device-HuksTagType-HUKS_TAG_TYPE_BOOL = 4 << 28-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -86,7 +98,9 @@ HUKS_TAG_TYPE_BYTES = 5 << 28
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HuksTagType-HUKS_TAG_TYPE_BYTES = 5 << 28--><!--Device-HuksTagType-HUKS_TAG_TYPE_BYTES = 5 << 28-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core
 

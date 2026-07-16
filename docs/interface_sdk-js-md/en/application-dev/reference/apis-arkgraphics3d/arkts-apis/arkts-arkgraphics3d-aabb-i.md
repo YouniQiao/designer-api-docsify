@@ -4,6 +4,8 @@ Axis aligned bounding box.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface Aabb--><!--Device-unnamed-export interface Aabb-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## aabbMax
@@ -18,6 +20,8 @@ Coordinates of the AABB maximum corner, the unit is the scene unit in the world 
 
 **Since:** 12
 
+<!--Device-Aabb-aabbMax: Vec3--><!--Device-Aabb-aabbMax: Vec3-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## aabbMin
@@ -31,6 +35,8 @@ Coordinates of the AABB minimum corner, the unit is the scene unit in the world 
 **Type:** Vec3
 
 **Since:** 12
+
+<!--Device-Aabb-aabbMin: Vec3--><!--Device-Aabb-aabbMin: Vec3-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

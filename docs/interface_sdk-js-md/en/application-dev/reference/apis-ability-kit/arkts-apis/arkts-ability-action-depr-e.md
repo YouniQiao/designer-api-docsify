@@ -6,6 +6,8 @@ Enumerates the action constants of the Want object. **action** specifies the ope
 
 **Deprecated since:** 9
 
+<!--Device-wantConstant-export enum Action--><!--Device-wantConstant-export enum Action-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## ACTION_HOME
@@ -19,6 +21,8 @@ Action of returning to the home page.
 **Since:** 6
 
 **Deprecated since:** 9
+
+<!--Device-Action-ACTION_HOME = 'ohos.want.action.home'--><!--Device-Action-ACTION_HOME = 'ohos.want.action.home'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -34,6 +38,8 @@ Action of launching the numeric keypad.
 
 **Deprecated since:** 9
 
+<!--Device-Action-ACTION_DIAL = 'ohos.want.action.dial'--><!--Device-Action-ACTION_DIAL = 'ohos.want.action.dial'-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## ACTION_SEARCH
@@ -47,6 +53,8 @@ Action of launching the search function.
 **Since:** 6
 
 **Deprecated since:** 9
+
+<!--Device-Action-ACTION_SEARCH = 'ohos.want.action.search'--><!--Device-Action-ACTION_SEARCH = 'ohos.want.action.search'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -62,6 +70,8 @@ Action of launching the UI that provides wireless network settings, for example,
 
 **Deprecated since:** 9
 
+<!--Device-Action-ACTION_WIRELESS_SETTINGS = 'ohos.settings.wireless'--><!--Device-Action-ACTION_WIRELESS_SETTINGS = 'ohos.settings.wireless'-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## ACTION_MANAGE_APPLICATIONS_SETTINGS
@@ -75,6 +85,8 @@ Action of launching the UI for managing installed applications.
 **Since:** 6
 
 **Deprecated since:** 9
+
+<!--Device-Action-ACTION_MANAGE_APPLICATIONS_SETTINGS = 'ohos.settings.manage.applications'--><!--Device-Action-ACTION_MANAGE_APPLICATIONS_SETTINGS = 'ohos.settings.manage.applications'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -90,6 +102,8 @@ Action of launching the UI that displays the details of an application.
 
 **Deprecated since:** 9
 
+<!--Device-Action-ACTION_APPLICATION_DETAILS_SETTINGS = 'ohos.settings.application.details'--><!--Device-Action-ACTION_APPLICATION_DETAILS_SETTINGS = 'ohos.settings.application.details'-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## ACTION_SET_ALARM
@@ -103,6 +117,8 @@ Action of launching the UI for setting the alarm clock.
 **Since:** 6
 
 **Deprecated since:** 9
+
+<!--Device-Action-ACTION_SET_ALARM = 'ohos.want.action.setAlarm'--><!--Device-Action-ACTION_SET_ALARM = 'ohos.want.action.setAlarm'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -118,6 +134,8 @@ Action of launching the UI that displays all alarms.
 
 **Deprecated since:** 9
 
+<!--Device-Action-ACTION_SHOW_ALARMS = 'ohos.want.action.showAlarms'--><!--Device-Action-ACTION_SHOW_ALARMS = 'ohos.want.action.showAlarms'-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## ACTION_SNOOZE_ALARM
@@ -131,6 +149,8 @@ Action of launching the UI for snoozing an alarm.
 **Since:** 6
 
 **Deprecated since:** 9
+
+<!--Device-Action-ACTION_SNOOZE_ALARM = 'ohos.want.action.snoozeAlarm'--><!--Device-Action-ACTION_SNOOZE_ALARM = 'ohos.want.action.snoozeAlarm'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -146,6 +166,8 @@ Action of launching the UI for deleting an alarm.
 
 **Deprecated since:** 9
 
+<!--Device-Action-ACTION_DISMISS_ALARM = 'ohos.want.action.dismissAlarm'--><!--Device-Action-ACTION_DISMISS_ALARM = 'ohos.want.action.dismissAlarm'-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## ACTION_DISMISS_TIMER
@@ -159,6 +181,8 @@ Action of launching the UI for dismissing a timer.
 **Since:** 6
 
 **Deprecated since:** 9
+
+<!--Device-Action-ACTION_DISMISS_TIMER = 'ohos.want.action.dismissTimer'--><!--Device-Action-ACTION_DISMISS_TIMER = 'ohos.want.action.dismissTimer'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -174,6 +198,8 @@ Action of launching the UI for sending an SMS message.
 
 **Deprecated since:** 9
 
+<!--Device-Action-ACTION_SEND_SMS = 'ohos.want.action.sendSms'--><!--Device-Action-ACTION_SEND_SMS = 'ohos.want.action.sendSms'-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## ACTION_CHOOSE
@@ -187,6 +213,8 @@ Action of launching the UI for opening a contact or picture.
 **Since:** 6
 
 **Deprecated since:** 9
+
+<!--Device-Action-ACTION_CHOOSE = 'ohos.want.action.choose'--><!--Device-Action-ACTION_CHOOSE = 'ohos.want.action.choose'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -202,6 +230,8 @@ Action of launching the UI for photographing.
 
 **Deprecated since:** 9
 
+<!--Device-Action-ACTION_IMAGE_CAPTURE = 'ohos.want.action.imageCapture'--><!--Device-Action-ACTION_IMAGE_CAPTURE = 'ohos.want.action.imageCapture'-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## ACTION_VIDEO_CAPTURE
@@ -215,6 +245,8 @@ Action of launching the UI for shooting a video.
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-Action-ACTION_VIDEO_CAPTURE = 'ohos.want.action.videoCapture'--><!--Device-Action-ACTION_VIDEO_CAPTURE = 'ohos.want.action.videoCapture'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -230,6 +262,8 @@ Action of launching the UI for application selection.
 
 **Deprecated since:** 9
 
+<!--Device-Action-ACTION_SELECT = 'ohos.want.action.select'--><!--Device-Action-ACTION_SELECT = 'ohos.want.action.select'-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## ACTION_SEND_DATA
@@ -243,6 +277,8 @@ Action of launching the UI for sending a single data record.
 **Since:** 6
 
 **Deprecated since:** 9
+
+<!--Device-Action-ACTION_SEND_DATA = 'ohos.want.action.sendData'--><!--Device-Action-ACTION_SEND_DATA = 'ohos.want.action.sendData'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -258,6 +294,8 @@ Action of launching the UI for sending multiple data records.
 
 **Deprecated since:** 9
 
+<!--Device-Action-ACTION_SEND_MULTIPLE_DATA = 'ohos.want.action.sendMultipleData'--><!--Device-Action-ACTION_SEND_MULTIPLE_DATA = 'ohos.want.action.sendMultipleData'-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## ACTION_SCAN_MEDIA_FILE
@@ -271,6 +309,8 @@ Action of requesting a media scanner to scan a file and add the file to the medi
 **Since:** 6
 
 **Deprecated since:** 9
+
+<!--Device-Action-ACTION_SCAN_MEDIA_FILE = 'ohos.want.action.scanMediaFile'--><!--Device-Action-ACTION_SCAN_MEDIA_FILE = 'ohos.want.action.scanMediaFile'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -286,6 +326,8 @@ Action of viewing data.
 
 **Deprecated since:** 9
 
+<!--Device-Action-ACTION_VIEW_DATA = 'ohos.want.action.viewData'--><!--Device-Action-ACTION_VIEW_DATA = 'ohos.want.action.viewData'-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## ACTION_EDIT_DATA
@@ -299,6 +341,8 @@ Action of editing data.
 **Since:** 6
 
 **Deprecated since:** 9
+
+<!--Device-Action-ACTION_EDIT_DATA = 'ohos.want.action.editData'--><!--Device-Action-ACTION_EDIT_DATA = 'ohos.want.action.editData'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -314,6 +358,8 @@ Action of displaying selection options with an action selector.
 
 **Deprecated since:** 9
 
+<!--Device-Action-INTENT_PARAMS_INTENT = 'ability.want.params.INTENT'--><!--Device-Action-INTENT_PARAMS_INTENT = 'ability.want.params.INTENT'-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## INTENT_PARAMS_TITLE
@@ -327,6 +373,8 @@ Title of the character sequence dialog box used with the action selector.
 **Since:** 6
 
 **Deprecated since:** 9
+
+<!--Device-Action-INTENT_PARAMS_TITLE = 'ability.want.params.TITLE'--><!--Device-Action-INTENT_PARAMS_TITLE = 'ability.want.params.TITLE'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -342,6 +390,8 @@ Action of selecting a file.
 
 **Deprecated since:** 9
 
+<!--Device-Action-ACTION_FILE_SELECT = 'ohos.action.fileSelect'--><!--Device-Action-ACTION_FILE_SELECT = 'ohos.action.fileSelect'-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## PARAMS_STREAM
@@ -350,12 +400,13 @@ Action of selecting a file.
 PARAMS_STREAM = 'ability.params.stream'
 ```
 
-URI of the data stream associated with the target when the data is sent. The value must be an array of the string
-type.
+URI of the data stream associated with the target when the data is sent. The value must be an array of the string type.
 
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-Action-PARAMS_STREAM = 'ability.params.stream'--><!--Device-Action-PARAMS_STREAM = 'ability.params.stream'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -370,6 +421,8 @@ Action of providing the OAuth service.
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-Action-ACTION_APP_ACCOUNT_OAUTH = 'ohos.account.appAccount.action.oauth'--><!--Device-Action-ACTION_APP_ACCOUNT_OAUTH = 'ohos.account.appAccount.action.oauth'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 

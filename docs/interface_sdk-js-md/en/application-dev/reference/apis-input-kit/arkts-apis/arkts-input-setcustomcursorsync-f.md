@@ -12,12 +12,11 @@ import { pointer } from '@kit.InputKit';
 function setCustomCursorSync(windowId: number, pixelMap: image.PixelMap, focusX?: number, focusY?: number): void
 ```
 
-Sets a custom pointer style for a specified window synchronously. This API can set only the custom pointer style of
-windows within the current application process. For details about how to set the custom pointer style of the host
-window through the **UIExtensionAbility** process, see
-[setCustomCursor](../../apis-arkui/arkts-apis/arkts-arkui-cursorcontroller-c.md#setcustomcursor-1).
+Sets a custom pointer style for a specified window synchronously. This API can set only the custom pointer style of windows within the current application process. For details about how to set the custom pointer style of the host window through the **UIExtensionAbility** process, see [setCustomCursor](../../apis-arkui/arkts-apis/arkts-arkui-cursorcontroller-c.md#setcustomcursor-1).
 
 **Since:** 11
+
+<!--Device-pointer-function setCustomCursorSync(windowId: int, pixelMap: image.PixelMap, focusX?: int, focusY?: int): void--><!--Device-pointer-function setCustomCursorSync(windowId: int, pixelMap: image.PixelMap, focusX?: int, focusY?: int): void-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -27,8 +26,8 @@ window through the **UIExtensionAbility** process, see
 | --- | --- | --- | --- |
 | windowId | number | Yes | Window ID. The value must be an integer greater than 0. |
 | pixelMap | image.PixelMap | Yes | Custom cursor resource. |
-| focusX | number | No | Custom pointer focus X, in px. The value must be greater than or equal to 0. The defaultvalue is **0**. |
-| focusY | number | No | Custom pointer focus Y, in px. The value must be greater than or equal to 0. The defaultvalue is **0**. |
+| focusX | number | No | Custom pointer focus X, in px. The value must be greater than or equal to 0. The default value is **0**. |
+| focusY | number | No | Custom pointer focus Y, in px. The value must be greater than or equal to 0. The default value is **0**. |
 
 **Error codes:**
 

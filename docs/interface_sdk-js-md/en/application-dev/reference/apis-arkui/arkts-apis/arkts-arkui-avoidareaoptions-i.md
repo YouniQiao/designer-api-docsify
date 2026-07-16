@@ -1,9 +1,10 @@
 # AvoidAreaOptions
 
-Describes the new area where the window cannot be displayed. The new area is returned when the corresponding event
-is triggered.
+Describes the new area where the window cannot be displayed. The new area is returned when the corresponding event is triggered.
 
 **Since:** 12
+
+<!--Device-window-interface AvoidAreaOptions--><!--Device-window-interface AvoidAreaOptions-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -27,6 +28,8 @@ New area returned.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AvoidAreaOptions-area: AvoidArea--><!--Device-AvoidAreaOptions-area: AvoidArea-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## type
@@ -42,6 +45,8 @@ Type of the new area returned.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AvoidAreaOptions-type: AvoidAreaType--><!--Device-AvoidAreaOptions-type: AvoidAreaType-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

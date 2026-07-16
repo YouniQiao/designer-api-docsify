@@ -4,6 +4,8 @@ Defines the dynamic layout container.
 
 **Since:** 24
 
+<!--Device-unnamed-export interface DynamicLayoutInterface--><!--Device-unnamed-export interface DynamicLayoutInterface-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,17 +30,19 @@ Defines the dynamic layout container.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
+<!--Device-DynamicLayoutInterface-(algorithm: LayoutAlgorithm): DynamicLayoutAttribute--><!--Device-DynamicLayoutInterface-(algorithm: LayoutAlgorithm): DynamicLayoutAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algorithm | LayoutAlgorithm | Yes | Layout algorithm of the dynamic layout component. If an invalid value isused, the child components are stacked and arranged according to[StackLayoutAlgorithm](../../../../reference/apis-arkui/js-apis-arkui-layoutAlgorithm.md#stacklayoutalgorithm). |
+| algorithm | [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md) | Yes | Layout algorithm of the dynamic layout component. If an invalid value is used, the child components are stacked and arranged according to [StackLayoutAlgorithm](../../../../reference/apis-arkui/js-apis-arkui-layoutAlgorithm.md#stacklayoutalgorithm). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DynamicLayoutAttribute | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@form@atomicservice |
+| [DynamicLayoutAttribute](arkts-arkui-dynamiclayoutattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@form@atomicservice |
 

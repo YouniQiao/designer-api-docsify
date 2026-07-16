@@ -4,9 +4,17 @@
 
 **起始版本：** 12
 
+<!--Device-privacyManager-interface PermissionUsedTypeInfo--><!--Device-privacyManager-interface PermissionUsedTypeInfo-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+```
 
 ## permissionName
 
@@ -19,6 +27,8 @@ permissionName: Permissions
 **类型：** Permissions
 
 **起始版本：** 12
+
+<!--Device-PermissionUsedTypeInfo-permissionName: Permissions--><!--Device-PermissionUsedTypeInfo-permissionName: Permissions-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -36,6 +46,8 @@ tokenId: number
 
 **起始版本：** 12
 
+<!--Device-PermissionUsedTypeInfo-tokenId: int--><!--Device-PermissionUsedTypeInfo-tokenId: int-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +63,8 @@ usedType: PermissionUsedType
 **类型：** PermissionUsedType
 
 **起始版本：** 12
+
+<!--Device-PermissionUsedTypeInfo-usedType: PermissionUsedType--><!--Device-PermissionUsedTypeInfo-usedType: PermissionUsedType-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

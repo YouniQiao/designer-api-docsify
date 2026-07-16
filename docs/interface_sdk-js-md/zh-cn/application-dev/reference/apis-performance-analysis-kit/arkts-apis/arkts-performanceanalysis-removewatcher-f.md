@@ -1,5 +1,11 @@
 # removeWatcher
 
+## 导入模块
+
+```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+```
+
 ## removeWatcher
 
 ```TypeScript
@@ -10,7 +16,9 @@ function removeWatcher(watcher: Watcher): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-hiAppEvent-function removeWatcher(watcher: Watcher): void--><!--Device-hiAppEvent-function removeWatcher(watcher: Watcher): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -18,7 +26,7 @@ function removeWatcher(watcher: Watcher): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| watcher | Watcher | 是 | 事件观察者。 |
+| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-watcher-i.md) | 是 | 事件观察者。 |
 
 **错误码：**
 

@@ -10,6 +10,8 @@ Enum for location scenario
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-export enum LocationRequestScenario--><!--Device-geolocation-export enum LocationRequestScenario-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## UNSET
@@ -23,6 +25,8 @@ UNSET = 0x300
 **Deprecated since:** 9
 
 **Substitutes:** UNSET
+
+<!--Device-LocationRequestScenario-UNSET = 0x300--><!--Device-LocationRequestScenario-UNSET = 0x300-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -38,6 +42,8 @@ NAVIGATION
 
 **Substitutes:** NAVIGATION
 
+<!--Device-LocationRequestScenario-NAVIGATION--><!--Device-LocationRequestScenario-NAVIGATION-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## TRAJECTORY_TRACKING
@@ -51,6 +57,8 @@ TRAJECTORY_TRACKING
 **Deprecated since:** 9
 
 **Substitutes:** TRAJECTORY_TRACKING
+
+<!--Device-LocationRequestScenario-TRAJECTORY_TRACKING--><!--Device-LocationRequestScenario-TRAJECTORY_TRACKING-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -66,6 +74,8 @@ CAR_HAILING
 
 **Substitutes:** CAR_HAILING
 
+<!--Device-LocationRequestScenario-CAR_HAILING--><!--Device-LocationRequestScenario-CAR_HAILING-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## DAILY_LIFE_SERVICE
@@ -80,6 +90,8 @@ DAILY_LIFE_SERVICE
 
 **Substitutes:** DAILY_LIFE_SERVICE
 
+<!--Device-LocationRequestScenario-DAILY_LIFE_SERVICE--><!--Device-LocationRequestScenario-DAILY_LIFE_SERVICE-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## NO_POWER
@@ -93,6 +105,8 @@ NO_POWER
 **Deprecated since:** 9
 
 **Substitutes:** NO_POWER
+
+<!--Device-LocationRequestScenario-NO_POWER--><!--Device-LocationRequestScenario-NO_POWER-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 

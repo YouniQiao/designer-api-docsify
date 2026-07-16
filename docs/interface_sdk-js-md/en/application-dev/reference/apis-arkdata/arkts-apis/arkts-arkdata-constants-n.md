@@ -8,6 +8,8 @@ Defines the KV store constants.
 
 **Substitutes:** Constants
 
+<!--Device-distributedData-namespace Constants--><!--Device-distributedData-namespace Constants-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## Summary

@@ -13,10 +13,13 @@ function setMultiScreenRelativePosition(mainScreenOptions: MultiScreenPositionOp
     secondaryScreenOptions: MultiScreenPositionOptions): Promise<void>
 ```
 
-Sets the positions of the primary and secondary screens in extend mode. This API uses a promise to return the
-result.
+Sets the positions of the primary and secondary screens in extend mode. This API uses a promise to return the result.
 
 **Since:** 13
+
+<!--Device-screen-function setMultiScreenRelativePosition(mainScreenOptions: MultiScreenPositionOptions,
+    secondaryScreenOptions: MultiScreenPositionOptions): Promise<void>--><!--Device-screen-function setMultiScreenRelativePosition(mainScreenOptions: MultiScreenPositionOptions,
+    secondaryScreenOptions: MultiScreenPositionOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -26,14 +29,14 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mainScreenOptions | MultiScreenPositionOptions | Yes | Position of the primary screen. |
-| secondaryScreenOptions | MultiScreenPositionOptions | Yes | Position of the secondary screen. |
+| mainScreenOptions | [MultiScreenPositionOptions](arkts-arkui-multiscreenpositionoptions-i-sys.md) | Yes | Position of the primary screen. |
+| secondaryScreenOptions | [MultiScreenPositionOptions](arkts-arkui-multiscreenpositionoptions-i-sys.md) | Yes | Position of the secondary screen. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

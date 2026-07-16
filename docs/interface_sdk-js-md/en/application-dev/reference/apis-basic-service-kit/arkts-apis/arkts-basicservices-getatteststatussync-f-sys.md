@@ -16,6 +16,8 @@ Obtains the AttestResultInfo object.
 
 **Since:** 9
 
+<!--Device-deviceAttest-function getAttestStatusSync(): AttestResultInfo--><!--Device-deviceAttest-function getAttestStatusSync(): AttestResultInfo-End-->
+
 **System capability:** SystemCapability.XTS.DeviceAttest
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Obtains the AttestResultInfo object.
 
 | Type | Description |
 | --- | --- |
-| AttestResultInfo | Obtains the AttestResultInfo object synchronously. |
+| [AttestResultInfo](arkts-basicservices-attestresultinfo-i-sys.md) | Obtains the AttestResultInfo object synchronously. |
 
 **Error codes:**
 

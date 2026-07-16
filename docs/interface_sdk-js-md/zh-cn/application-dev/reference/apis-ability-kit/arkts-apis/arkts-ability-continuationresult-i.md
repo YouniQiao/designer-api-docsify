@@ -8,6 +8,8 @@
 
 **替代接口：** [distributedDeviceManager:distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md)
 
+<!--Device-unnamed-export interface ContinuationResult--><!--Device-unnamed-export interface ContinuationResult-End-->
+
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
 ## id
@@ -26,7 +28,9 @@ id: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ContinuationResult-id: string--><!--Device-ContinuationResult-id: string-End-->
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
@@ -46,7 +50,9 @@ name: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ContinuationResult-name: string--><!--Device-ContinuationResult-name: string-End-->
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
@@ -66,7 +72,9 @@ type: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ContinuationResult-type: string--><!--Device-ContinuationResult-type: string-End-->
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 

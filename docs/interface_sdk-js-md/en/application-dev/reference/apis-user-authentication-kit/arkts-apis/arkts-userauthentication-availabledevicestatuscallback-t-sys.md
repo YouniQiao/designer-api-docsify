@@ -4,13 +4,13 @@
 type AvailableDeviceStatusCallback = (deviceStatusList: DeviceStatus[]) => void
 ```
 
-Defines the callback triggered for receiving notifications of available device status changes. When the list of
-available devices changes (for example, a new device goes online or a device goes offline), the system notifies
-the application through this callback.
+Defines the callback triggered for receiving notifications of available device status changes. When the list of available devices changes (for example, a new device goes online or a device goes offline), the system notifies the application through this callback.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-companionDeviceAuth-type AvailableDeviceStatusCallback = (deviceStatusList: DeviceStatus[]) => void--><!--Device-companionDeviceAuth-type AvailableDeviceStatusCallback = (deviceStatusList: DeviceStatus[]) => void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 

@@ -6,14 +6,13 @@
 export function requestToolPermissions(permissionQuery: PermissionQuery): Promise<PermissionQueryResult>
 ```
 
-Queries tool permissions based on the specified operations.
-This function checks the permission status for CLI commands or APIs specified in permissionQuery.operationInfo.
-For each operation, it returns the permission status, authorization status, and whether a user dialog is required.
-When needTicket is set to true, a ticket will be generated for remote authorization.
+Queries tool permissions based on the specified operations.This function checks the permission status for CLI commands or APIs specified in permissionQuery.operationInfo.For each operation, it returns the permission status, authorization status, and whether a user dialog is required.When needTicket is set to true, a ticket will be generated for remote authorization.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.QUERY_TOOL_PERMISSIONS
+
+<!--Device-abilityToolAccessCtrl-export function requestToolPermissions(permissionQuery: PermissionQuery): Promise<PermissionQueryResult>--><!--Device-abilityToolAccessCtrl-export function requestToolPermissions(permissionQuery: PermissionQuery): Promise<PermissionQueryResult>-End-->
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -23,13 +22,13 @@ When needTicket is set to true, a ticket will be generated for remote authorizat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permissionQuery | PermissionQuery | Yes | Permission query information. |
+| permissionQuery | [PermissionQuery](arkts-ability-permissionquery-i-sys.md) | Yes | Permission query information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PermissionQueryResult&gt; | Promise used to return ${PermissionQueryResult}. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PermissionQueryResult> | Promise used to return ${PermissionQueryResult}. |
 
 **Error codes:**
 
@@ -41,5 +40,5 @@ When needTicket is set to true, a ticket will be generated for remote authorizat
 | 24010001 | Service is abnormal. possible cause: IPC failed. |
 | 24010002 | Common internal error. possible cause: dependent service unavailable,resource access failure, etc. |
 | 24010003 | The account is not logged in, network is unavailable, timeout, etc. |
-| 24010006 | The requested operation is not allowed to be executedwhile the device is locked. |
+| 24010006 | The requested operation is not allowed to be executed while the device is locked. |
 

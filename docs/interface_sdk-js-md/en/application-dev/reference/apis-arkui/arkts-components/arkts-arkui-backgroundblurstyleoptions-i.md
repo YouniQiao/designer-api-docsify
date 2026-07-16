@@ -6,6 +6,8 @@ Defines the options of backgroundBlurStyle
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface BackgroundBlurStyleOptions extends BlurStyleOptions--><!--Device-unnamed-declare interface BackgroundBlurStyleOptions extends BlurStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## inactiveColor
@@ -14,9 +16,7 @@ Defines the options of backgroundBlurStyle
 inactiveColor?: ResourceColor
 ```
 
-Background color when the blur effect does not take effect. This parameter must be used together with the
-**policy** parameter. When **policy** is set to a value that disables the blur effect, the blur effect on the
-components is removed. If **inactiveColor** is specified, it is applied as the component background color.
+Background color when the blur effect does not take effect. This parameter must be used together with the **policy** parameter. When **policy** is set to a value that disables the blur effect, the blur effect on the components is removed. If **inactiveColor** is specified, it is applied as the component background color.
 
 **Type:** ResourceColor
 
@@ -27,6 +27,8 @@ components is removed. If **inactiveColor** is specified, it is applied as the c
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-BackgroundBlurStyleOptions-inactiveColor?: ResourceColor--><!--Device-BackgroundBlurStyleOptions-inactiveColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,6 +49,8 @@ Blur activation policy.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-BackgroundBlurStyleOptions-policy?: BlurStyleActivePolicy--><!--Device-BackgroundBlurStyleOptions-policy?: BlurStyleActivePolicy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,6 +4,8 @@ Enumerates the config names that can be obtained.
 
 **Since:** 14
 
+<!--Device-drm-enum PreDefinedConfigName--><!--Device-drm-enum PreDefinedConfigName-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## CONFIG_DEVICE_VENDOR
@@ -17,6 +19,8 @@ Config name vendor
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-PreDefinedConfigName-CONFIG_DEVICE_VENDOR = 'vendor'--><!--Device-PreDefinedConfigName-CONFIG_DEVICE_VENDOR = 'vendor'-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -32,6 +36,8 @@ Config name version
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-PreDefinedConfigName-CONFIG_DEVICE_VERSION = 'version'--><!--Device-PreDefinedConfigName-CONFIG_DEVICE_VERSION = 'version'-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## CONFIG_DEVICE_DESCRIPTION
@@ -45,6 +51,8 @@ Config name description
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-PreDefinedConfigName-CONFIG_DEVICE_DESCRIPTION = 'description'--><!--Device-PreDefinedConfigName-CONFIG_DEVICE_DESCRIPTION = 'description'-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -60,6 +68,8 @@ Config name algorithms
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-PreDefinedConfigName-CONFIG_DEVICE_ALGORITHMS = 'algorithms'--><!--Device-PreDefinedConfigName-CONFIG_DEVICE_ALGORITHMS = 'algorithms'-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## CONFIG_DEVICE_UNIQUE_ID
@@ -73,6 +83,8 @@ Config name deviceUniqueId
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-PreDefinedConfigName-CONFIG_DEVICE_UNIQUE_ID = 'deviceUniqueId'--><!--Device-PreDefinedConfigName-CONFIG_DEVICE_UNIQUE_ID = 'deviceUniqueId'-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -88,6 +100,8 @@ Config name maxSessionNum
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-PreDefinedConfigName-CONFIG_SESSION_MAX = 'maxSessionNum'--><!--Device-PreDefinedConfigName-CONFIG_SESSION_MAX = 'maxSessionNum'-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## CONFIG_SESSION_CURRENT
@@ -101,6 +115,8 @@ Config name currentSessionNum
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-PreDefinedConfigName-CONFIG_SESSION_CURRENT = 'currentSessionNum'--><!--Device-PreDefinedConfigName-CONFIG_SESSION_CURRENT = 'currentSessionNum'-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 

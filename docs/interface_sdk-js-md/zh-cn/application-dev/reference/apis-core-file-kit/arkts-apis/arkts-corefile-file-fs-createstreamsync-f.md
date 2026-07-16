@@ -1,5 +1,11 @@
 # createStreamSync
 
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+```
+
 ## createStreamSync
 
 ```TypeScript
@@ -10,7 +16,9 @@ declare function createStreamSync(path: string, mode: string): Stream
 
 **起始版本：** 9
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-unnamed-declare function createStreamSync(path: string, mode: string): Stream--><!--Device-unnamed-declare function createStreamSync(path: string, mode: string): Stream-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -25,7 +33,7 @@ declare function createStreamSync(path: string, mode: string): Stream
 
 | 类型 | 说明 |
 | --- | --- |
-| Stream | 返回文件流的结果。 |
+| [Stream](arkts-corefile-stream-i.md) | 返回文件流的结果。 |
 
 **错误码：**
 

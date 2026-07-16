@@ -6,6 +6,8 @@ Manager MAP MSE profile.
 
 **Since:** 11
 
+<!--Device-map-interface MapMseProfile extends BaseProfile--><!--Device-map-interface MapMseProfile extends BaseProfile-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -25,6 +27,8 @@ Disconnect the map connection with the remote device.
 **Since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
+
+<!--Device-MapMseProfile-disconnect(deviceId: string): void--><!--Device-MapMseProfile-disconnect(deviceId: string): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -61,6 +65,8 @@ Get the message access authorization.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
+<!--Device-MapMseProfile-getMessageAccessAuthorization(deviceId: string): Promise<AccessAuthorization>--><!--Device-MapMseProfile-getMessageAccessAuthorization(deviceId: string): Promise<AccessAuthorization>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -75,7 +81,7 @@ Get the message access authorization.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AccessAuthorization&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AccessAuthorization> | Returns the promise object. |
 
 **Error codes:**
 
@@ -102,6 +108,8 @@ Set the message access authorization.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
+<!--Device-MapMseProfile-setMessageAccessAuthorization(deviceId: string, authorization: AccessAuthorization): Promise<void>--><!--Device-MapMseProfile-setMessageAccessAuthorization(deviceId: string, authorization: AccessAuthorization): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -111,13 +119,13 @@ Set the message access authorization.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| authorization | AccessAuthorization | Yes | Indicates the permission. |
+| authorization | [AccessAuthorization](arkts-connectivity-accessauthorization-t-sys.md) | Yes | Indicates the permission. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 

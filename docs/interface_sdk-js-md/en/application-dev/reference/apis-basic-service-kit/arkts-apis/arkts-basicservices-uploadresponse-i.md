@@ -6,6 +6,8 @@
 
 **Substitutes:** [UploadConfig](arkts-basicservices-uploadconfig-i.md)
 
+<!--Device-unnamed-export interface UploadResponse--><!--Device-unnamed-export interface UploadResponse-End-->
+
 **System capability:** SystemCapability.MiscServices.Upload
 
 ## Modules to Import
@@ -30,6 +32,8 @@ HTTP status code returned by the server.
 
 **Substitutes:** statusCode
 
+<!--Device-UploadResponse-code: number--><!--Device-UploadResponse-code: number-End-->
+
 **System capability:** SystemCapability.MiscServices.Upload
 
 ## data
@@ -48,6 +52,8 @@ Content returned by the server. The value type is determined by the type in the 
 
 **Substitutes:** extras
 
+<!--Device-UploadResponse-data: string--><!--Device-UploadResponse-data: string-End-->
+
 **System capability:** SystemCapability.MiscServices.Upload
 
 ## headers
@@ -65,6 +71,8 @@ Headers returned by the server.
 **Deprecated since:** 9
 
 **Substitutes:** headers
+
+<!--Device-UploadResponse-headers: Object--><!--Device-UploadResponse-headers: Object-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 

@@ -24,16 +24,18 @@ Sets restrictions on specified user behaviors.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-restrictions-function setUserRestrictionForAccount(admin: Want, settingsItem: string, accountId: int, restricted: boolean): void--><!--Device-restrictions-function setUserRestrictionForAccount(admin: Want, settingsItem: string, accountId: int, restricted: boolean): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | settingsItem | string | Yes | User behavior.<br>- **modifyWallpaper**: Modify the wallpaper, including the lock screen wallpaper and home screen wallpaper. |
-| accountId | number | Yes | Account ID.<br>The value must be an integer greater than or equal to 0.<br>You can call [getOsAccountLocalId]{@linkv @ohos.account.osAccount:osAccount.AccountManager.getOsAccountLocalId(callback: AsyncCallback&lt;int&gt;)}to obtain the user ID. |
-| restricted | boolean | Yes | Whether to disable the action. The value **true** means to disable the action, and**false** means the opposite. |
+| accountId | number | Yes | Account ID.<br>The value must be an integer greater than or equal to 0.<br>You can call [getOsAccountLocalId](v @ohos.account.osAccount:osAccount.AccountManager.getOsAccountLocalId(callback: AsyncCallback&lt;int&gt;))to obtain the user ID. |
+| restricted | boolean | Yes | Whether to disable the action. The value **true** means to disable the action, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -82,14 +84,16 @@ Restricting users from changing specified settings item for account on the devic
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-restrictions-function setUserRestrictionForAccount(admin: Want, settingsItem: SettingsForAccount, accountId: int, restricted: boolean): void--><!--Device-restrictions-function setUserRestrictionForAccount(admin: Want, settingsItem: SettingsForAccount, accountId: int, restricted: boolean): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | admin indicates the enterprise admin extension ability information. |
-| settingsItem | SettingsForAccount | Yes | settingsItem indicates the specific settings item to be restricted. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md) | Yes | admin indicates the enterprise admin extension ability information. |
+| settingsItem | [SettingsForAccount](arkts-mdm-settingsforaccount-e.md) | Yes | settingsItem indicates the specific settings item to be restricted. |
 | accountId | number | Yes | accountId indicates the account ID to be restricted.<br>Value range:[0, +∞). |
 | restricted | boolean | Yes | true if restrict the specific settings item of the device, otherwise false. |
 

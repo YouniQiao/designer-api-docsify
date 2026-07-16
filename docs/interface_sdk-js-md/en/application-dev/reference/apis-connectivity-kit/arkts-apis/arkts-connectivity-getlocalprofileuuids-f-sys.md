@@ -20,6 +20,8 @@ Obtains the profile UUIDs supported by the local device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function getLocalProfileUuids(callback: AsyncCallback<Array<ProfileUuids>>): void--><!--Device-connection-function getLocalProfileUuids(callback: AsyncCallback<Array<ProfileUuids>>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Obtains the profile UUIDs supported by the local device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;ProfileUuids&gt;&gt; | Yes | the callback of getLocalProfileUuids. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<ProfileUuids>> | Yes | the callback of getLocalProfileUuids. |
 
 **Error codes:**
 
@@ -71,6 +73,8 @@ Obtains the profile UUIDs supported by the local device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function getLocalProfileUuids(): Promise<Array<ProfileUuids>>--><!--Device-connection-function getLocalProfileUuids(): Promise<Array<ProfileUuids>>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -79,7 +83,7 @@ Obtains the profile UUIDs supported by the local device.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ProfileUuids&gt;&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ProfileUuids>> | Returns the promise object. |
 
 **Error codes:**
 

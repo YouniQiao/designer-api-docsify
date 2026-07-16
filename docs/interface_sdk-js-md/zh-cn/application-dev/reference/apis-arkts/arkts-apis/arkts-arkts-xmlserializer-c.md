@@ -4,7 +4,15 @@ XmlSerializer接口用于生成XML文件。
 
 **起始版本：** 8
 
+<!--Device-xml-class XmlSerializer--><!--Device-xml-class XmlSerializer-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { xml } from '@kit.ArkTS';
+```
 
 ## addEmptyElement
 
@@ -14,13 +22,15 @@ addEmptyElement(name: string): void
 
 添加一个空元素。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 该接口对所添加数据不做标准XML校验处理，确保所添加的数据符合标准XML规范。例如不允许添加数字开头的元素名称。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlSerializer-addEmptyElement(name: string): void--><!--Device-XmlSerializer-addEmptyElement(name: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -52,13 +62,15 @@ constructor(buffer: ArrayBuffer | DataView, encoding?: string)
 
 XmlSerializer的构造函数。
 
-> **说明：**
->
+> **说明：**  
+>  
 > buffer是开发者根据需要自定义大小的缓存区域，用于临时存储生成的XML文本。在使用过程中必须确保缓存区域足以容纳生成的文本内容。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlSerializer-constructor(buffer: ArrayBuffer | DataView, encoding?: string)--><!--Device-XmlSerializer-constructor(buffer: ArrayBuffer | DataView, encoding?: string)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -85,13 +97,15 @@ endElement(): void
 
 添加元素结束标记。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 调用该接口前必须先调用[startElement](arkts-arkts-xmlserializer-c.md#startelement-1)接口写入元素开始标记。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlSerializer-endElement(): void--><!--Device-XmlSerializer-endElement(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -120,13 +134,15 @@ setAttributes(name: string, value: string): void
 
 添加元素的属性和属性值。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 该接口对所添加数据不做标准XML校验处理，确保所添加的数据符合标准XML规范。例如不允许添加数字开头的属性名称以及添加多个同名的属性名称。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlSerializer-setAttributes(name: string, value: string): void--><!--Device-XmlSerializer-setAttributes(name: string, value: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -161,13 +177,15 @@ setCDATA(text: string): void
 
 提供在CDATA标签中添加数据的能力，所生成的CDATA标签结构为："\<!\[CDATA\[" + 所添加的数据 + "\]\]\>"。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许在CDATA标签中添加包含"\]\]\>"字符串的数据。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlSerializer-setCDATA(text: string): void--><!--Device-XmlSerializer-setCDATA(text: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -201,7 +219,9 @@ setComment(text: string): void
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlSerializer-setComment(text: string): void--><!--Device-XmlSerializer-setComment(text: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -235,7 +255,9 @@ setDeclaration(): void
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlSerializer-setDeclaration(): void--><!--Device-XmlSerializer-setDeclaration(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -264,7 +286,9 @@ setDocType(text: string): void
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlSerializer-setDocType(text: string): void--><!--Device-XmlSerializer-setDocType(text: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -296,13 +320,15 @@ setNamespace(prefix: string, namespace: string): void
 
 添加当前元素标记的命名空间。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。例如禁止添加数字开头的前缀以及为同一个元素设置多个命名空间。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlSerializer-setNamespace(prefix: string, namespace: string): void--><!--Device-XmlSerializer-setNamespace(prefix: string, namespace: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -340,7 +366,9 @@ setText(text: string): void
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlSerializer-setText(text: string): void--><!--Device-XmlSerializer-setText(text: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -375,15 +403,17 @@ startElement(name: string): void
 
 根据给定名称添加元素开始标记。
 
-> **说明：**
->
-> - 调用该接口后须调用[endElement](arkts-arkts-xmlserializer-c.md#endelement-1)写入元素结束标记，以确保节点正确闭合。
->
+> **说明：**  
+>  
+> - 调用该接口后须调用[endElement](arkts-arkts-xmlserializer-c.md#endelement-1)写入元素结束标记，以确保节点正确闭合。  
+>  
 > - 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的元素名称。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlSerializer-startElement(name: string): void--><!--Device-XmlSerializer-startElement(name: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

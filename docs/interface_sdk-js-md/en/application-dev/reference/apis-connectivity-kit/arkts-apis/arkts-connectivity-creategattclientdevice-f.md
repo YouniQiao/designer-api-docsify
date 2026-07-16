@@ -20,6 +20,8 @@ create a JavaScript Gatt client device instance.
 
 **Substitutes:** createGattClientDevice
 
+<!--Device-BLE-function createGattClientDevice(deviceId: string): GattClientDevice--><!--Device-BLE-function createGattClientDevice(deviceId: string): GattClientDevice-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -32,7 +34,7 @@ create a JavaScript Gatt client device instance.
 
 | Type | Description |
 | --- | --- |
-| GattClientDevice | Returns a JavaScript Gatt client device instance {@code GattClientDevice}. |
+| [GattClientDevice](arkts-connectivity-gattclientdevice-i.md) | Returns a JavaScript Gatt client device instance {@code GattClientDevice}. |
 
 **Error codes:**
 

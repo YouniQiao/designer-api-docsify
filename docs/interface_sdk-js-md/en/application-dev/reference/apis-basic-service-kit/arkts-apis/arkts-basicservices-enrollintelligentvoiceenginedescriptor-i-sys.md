@@ -4,6 +4,8 @@ Describes enroll intelligent voice engine.
 
 **Since:** 10
 
+<!--Device-intelligentVoice-interface EnrollIntelligentVoiceEngineDescriptor--><!--Device-intelligentVoice-interface EnrollIntelligentVoiceEngineDescriptor-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -25,6 +27,8 @@ Wakeup phrase.
 **Type:** string
 
 **Since:** 10
+
+<!--Device-EnrollIntelligentVoiceEngineDescriptor-wakeupPhrase: string--><!--Device-EnrollIntelligentVoiceEngineDescriptor-wakeupPhrase: string-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 

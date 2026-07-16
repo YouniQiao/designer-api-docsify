@@ -18,6 +18,8 @@ Remove surface for the virtual screen.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-display-function removeVirtualScreenSurface(screenId: long, surfaceId: string): Promise<void>--><!--Device-display-function removeVirtualScreenSurface(screenId: long, surfaceId: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
@@ -27,20 +29,20 @@ Remove surface for the virtual screen.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | screenId | number | Yes | Indicates the screen id of the virtual screen. |
-| surfaceId | string | Yes | ID of the surface bound to the virtual screen. You can specify the ID of an existingsurface. The maximum length for this parameter is 4096 bytes. If it goes beyond that, only the first 4096 bytesare used. |
+| surfaceId | string | Yes | ID of the surface bound to the virtual screen. You can specify the ID of an existing surface. The maximum length for this parameter is 4096 bytes. If it goes beyond that, only the first 4096 bytes are used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function removeVirtualScreenSurfacecan not work correctly due to limited device capabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function removeVirtualScreenSurface can not work correctly due to limited device capabilities. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 | [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |

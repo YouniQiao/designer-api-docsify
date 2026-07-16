@@ -4,6 +4,8 @@ Defines a scene object container.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface Container<T>--><!--Device-unnamed-export interface Container<T>-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## append
@@ -15,6 +17,8 @@ append(item: T): void
 Append an item to the container.
 
 **Since:** 12
+
+<!--Device-Container-append(item: T): void--><!--Device-Container-append(item: T): void-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -34,6 +38,8 @@ Clear all children.
 
 **Since:** 12
 
+<!--Device-Container-clear(): void--><!--Device-Container-clear(): void-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## count
@@ -45,6 +51,8 @@ count(): number
 Returns the number of items in the container.
 
 **Since:** 12
+
+<!--Device-Container-count(): int--><!--Device-Container-count(): int-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -63,6 +71,8 @@ get(index: number): T | null
 Returns a child at given index from this Container's child list.
 
 **Since:** 12
+
+<!--Device-Container-get(index: int): T | null--><!--Device-Container-get(index: int): T | null-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -88,6 +98,8 @@ Insert an item.
 
 **Since:** 12
 
+<!--Device-Container-insertAfter(item: T, sibling: T | null): void--><!--Device-Container-insertAfter(item: T, sibling: T | null): void-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
@@ -106,6 +118,8 @@ remove(item: T): void
 Remove an item from Container's children.
 
 **Since:** 12
+
+<!--Device-Container-remove(item: T): void--><!--Device-Container-remove(item: T): void-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

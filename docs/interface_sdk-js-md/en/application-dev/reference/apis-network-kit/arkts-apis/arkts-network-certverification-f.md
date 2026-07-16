@@ -16,20 +16,22 @@ Certificate verification to the server.
 
 **Since:** 12
 
+<!--Device-networkSecurity-export function certVerification(cert: CertBlob, caCert?: CertBlob): Promise<int>--><!--Device-networkSecurity-export function certVerification(cert: CertBlob, caCert?: CertBlob): Promise<int>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | CertBlob | Yes | Certificates to be verified. |
-| caCert | CertBlob | No | Incoming custom CA cert. |
+| cert | [CertBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certblob-i.md) | Yes | Certificates to be verified. |
+| caCert | [CertBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certblob-i.md) | No | Incoming custom CA cert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The promise returned by the function.Number equals 0 if verify of certification from server succeed, else verify failed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | The promise returned by the function.Number equals 0 if verify of certification from server succeed, else verify failed. |
 
 **Error codes:**
 

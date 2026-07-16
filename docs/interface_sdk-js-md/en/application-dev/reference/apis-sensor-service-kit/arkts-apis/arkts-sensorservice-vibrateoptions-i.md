@@ -10,6 +10,8 @@ Defines the vibration options.
 
 **Required permissions:** ohos.permission.VIBRATE
 
+<!--Device-unnamed-export interface VibrateOptions--><!--Device-unnamed-export interface VibrateOptions-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice.Lite
 
 ## Modules to Import
@@ -38,6 +40,8 @@ Called when the API call is complete.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-VibrateOptions-complete?: () => void--><!--Device-VibrateOptions-complete?: () => void-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice.Lite
 
 ## fail
@@ -60,6 +64,8 @@ Called when the API call fails.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-VibrateOptions-fail?: (data: string, code: number) => void--><!--Device-VibrateOptions-fail?: (data: string, code: number) => void-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice.Lite
 
 ## mode
@@ -68,8 +74,7 @@ Called when the API call fails.
 mode?: 'number' | 'short'
 ```
 
-Vibration mode. The value **long** indicates long vibration, and **short** indicates short vibration. The default
-value is **long**.
+Vibration mode. The value **long** indicates long vibration, and **short** indicates short vibration. The default value is **long**.
 
 **Type:** 'number' | 'short'
 
@@ -82,6 +87,8 @@ value is **long**.
 **Required permissions:** ohos.permission.VIBRATE
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-VibrateOptions-mode?: 'long' | 'short'--><!--Device-VibrateOptions-mode?: 'long' | 'short'-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice.Lite
 
@@ -104,6 +111,8 @@ Called when the vibrator data changes.
 **Required permissions:** ohos.permission.VIBRATE
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-VibrateOptions-success: () => void--><!--Device-VibrateOptions-success: () => void-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice.Lite
 

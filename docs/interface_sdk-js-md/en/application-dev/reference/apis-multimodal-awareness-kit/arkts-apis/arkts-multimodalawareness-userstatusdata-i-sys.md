@@ -4,6 +4,8 @@ Defines user status data.
 
 **Since:** 26.0.0
 
+<!--Device-userStatus-export interface UserStatusData--><!--Device-userStatus-export interface UserStatusData-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
@@ -20,14 +22,15 @@ import { userStatus } from '@kit.MultimodalAwarenessKit';
 errCode: number
 ```
 
-Business error code.
-The value `0` indicates success, and other values indicate failure.
+Business error code.The value `0` indicates success, and other values indicate failure.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UserStatusData-errCode: int--><!--Device-UserStatusData-errCode: int-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -47,6 +50,8 @@ User status detection feature type.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UserStatusData-feature: UserStatusFeature--><!--Device-UserStatusData-feature: UserStatusFeature-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
@@ -57,14 +62,15 @@ User status detection feature type.
 result: number
 ```
 
-User status detection result.
-The value `0` indicates success, and other values indicate failure.
+User status detection result.The value `0` indicates success, and other values indicate failure.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UserStatusData-result: int--><!--Device-UserStatusData-result: int-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -83,6 +89,8 @@ Multi-stage detection states under a single perception feature.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UserStatusData-status: string--><!--Device-UserStatusData-status: string-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 

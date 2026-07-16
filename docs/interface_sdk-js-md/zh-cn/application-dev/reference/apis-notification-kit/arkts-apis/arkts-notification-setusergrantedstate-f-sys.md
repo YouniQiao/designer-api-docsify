@@ -18,6 +18,8 @@ function setUserGrantedState(targetBundle: BundleOption, enabled: boolean): Prom
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationExtensionSubscription-function setUserGrantedState(targetBundle: BundleOption, enabled: boolean): Promise<void>--><!--Device-notificationExtensionSubscription-function setUserGrantedState(targetBundle: BundleOption, enabled: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,14 +28,14 @@ function setUserGrantedState(targetBundle: BundleOption, enabled: boolean): Prom
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| targetBundle | BundleOption | 是 | 需要设置的目标应用信息。应用需要具有ohos.permission.SUBSCRIBE_NOTIFICATION权限，并且实现[NotificationSubscriberExtensionAbility](arkts-notification-notificationsubscriberextensionability-c.md)，否则返回1600022错误码。 |
+| targetBundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 需要设置的目标应用信息。应用需要具有ohos.permission.SUBSCRIBE_NOTIFICATION权限，并且实现[NotificationSubscriberExtensionAbility](arkts-notification-notificationsubscriberextensionability-c.md)，否则返回1600022错误码。 |
 | enabled | boolean | 是 | 表示应用的“允许获取本机通知”的开关状态，true表示启用，false表示未启用。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

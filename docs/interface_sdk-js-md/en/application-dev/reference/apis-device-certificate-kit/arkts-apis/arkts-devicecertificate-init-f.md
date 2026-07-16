@@ -12,13 +12,13 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 function init(authUri: string, spec: CMSignatureSpec, callback: AsyncCallback<CMHandle>): void
 ```
 
-Indicates the initialization of signature and signature verification using credentials. This is the first step in
-the signature verification process. Later, the update and finish interfaces need to be invoked in sequence to
-complete the operations. Use Callback to return the result asynchronously.
+Indicates the initialization of signature and signature verification using credentials. This is the first step in the signature verification process. Later, the update and finish interfaces need to be invoked in sequence to complete the operations. Use Callback to return the result asynchronously.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
+
+<!--Device-certificateManager-function init(authUri: string, spec: CMSignatureSpec, callback: AsyncCallback<CMHandle>): void--><!--Device-certificateManager-function init(authUri: string, spec: CMSignatureSpec, callback: AsyncCallback<CMHandle>): void-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -27,14 +27,14 @@ complete the operations. Use Callback to return the result asynchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | authUri | string | Yes | Unique identifier of the credential to be used. The value contains up to 256 bytes. |
-| spec | CMSignatureSpec | Yes | Parameters for the signing or signature verification operation. |
-| callback | AsyncCallback&lt;CMHandle&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null** and **data** is the obtained **CMHandle**. Otherwise, **err** is an error object. |
+| spec | [CMSignatureSpec](arkts-devicecertificate-cmsignaturespec-i.md) | Yes | Parameters for the signing or signature verification operation. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<CMHandle> | Yes | Callback used to return the result. If the operation is successful,**err** is **null** and **data** is the obtained **CMHandle**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 | [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |
@@ -72,12 +72,13 @@ try {
 function init(authUri: string, spec: CMSignatureSpec): Promise<CMHandle>
 ```
 
-Initializes the signing or signature verification operation using the specified credential. This API uses a promise
-to return the result.
+Initializes the signing or signature verification operation using the specified credential. This API uses a promise to return the result.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
+
+<!--Device-certificateManager-function init(authUri: string, spec: CMSignatureSpec): Promise<CMHandle>--><!--Device-certificateManager-function init(authUri: string, spec: CMSignatureSpec): Promise<CMHandle>-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -86,19 +87,19 @@ to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | authUri | string | Yes | Unique identifier of the credential to be used. The value contains up to 256 bytes. |
-| spec | CMSignatureSpec | Yes | Parameters for the signing or signature verification operation. |
+| spec | [CMSignatureSpec](arkts-devicecertificate-cmsignaturespec-i.md) | Yes | Parameters for the signing or signature verification operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMHandle&gt; | Promise used to return the operation result, that is, the **CMHandle** object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CMHandle> | Promise used to return the operation result, that is, the **CMHandle** object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 | [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |

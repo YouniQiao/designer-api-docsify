@@ -8,6 +8,8 @@ Describes the class of a bluetooth device.
 
 **Substitutes:** BondStateParam
 
+<!--Device-bluetoothManager-interface BondStateParam--><!--Device-bluetoothManager-interface BondStateParam-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -32,6 +34,8 @@ Address of a Bluetooth device.
 
 **Substitutes:** deviceId
 
+<!--Device-BondStateParam-deviceId: string--><!--Device-BondStateParam-deviceId: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## state
@@ -49,6 +53,8 @@ Profile connection state of the device.
 **Deprecated since:** 10
 
 **Substitutes:** state
+
+<!--Device-BondStateParam-state: BondState--><!--Device-BondStateParam-state: BondState-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

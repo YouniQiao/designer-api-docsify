@@ -12,12 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAppCloneIdentity(uid: number): Promise<AppCloneIdentity>
 ```
 
-Obtains the bundle name and clone index of a cloned application based on the given UID. This API uses a promise to
-return the result.
+Obtains the bundle name and clone index of a cloned application based on the given UID. This API uses a promise to return the result.
 
 **Since:** 14
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getAppCloneIdentity(uid: int): Promise<AppCloneIdentity>--><!--Device-bundleManager-function getAppCloneIdentity(uid: int): Promise<AppCloneIdentity>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -31,7 +32,7 @@ return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AppCloneIdentity&gt; | Promise used to return the application clone index. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AppCloneIdentity> | Promise used to return the application clone index. |
 
 **Error codes:**
 

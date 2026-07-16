@@ -8,6 +8,8 @@ Sub component info passed from framework when layout and measure happens.
 
 **Substitutes:** Measurable/Layoutable
 
+<!--Device-unnamed-declare interface LayoutChild--><!--Device-unnamed-declare interface LayoutChild-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## layout
@@ -26,13 +28,15 @@ Call this layout method in onLayout callback to assign layout info to sub compon
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-LayoutChild-layout(childLayoutInfo: LayoutInfo)--><!--Device-LayoutChild-layout(childLayoutInfo: LayoutInfo)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| childLayoutInfo | LayoutInfo | Yes |  |
+| childLayoutInfo | [LayoutInfo](arkts-arkui-layoutinfo-i.md) | Yes |  |
 
 ## measure
 
@@ -50,13 +54,15 @@ Call this measure method in onMeasure callback to supply sub component size.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-LayoutChild-measure(childConstraint: ConstraintSizeOptions)--><!--Device-LayoutChild-measure(childConstraint: ConstraintSizeOptions)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| childConstraint | ConstraintSizeOptions | Yes |  |
+| childConstraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes |  |
 
 ## borderInfo
 
@@ -75,6 +81,8 @@ Sub component border info.
 **Substitutes:** Measurable/Layoutable
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-LayoutChild-borderInfo: LayoutBorderInfo--><!--Device-LayoutChild-borderInfo: LayoutBorderInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,6 +104,8 @@ Sub component constraint.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-LayoutChild-constraint: ConstraintSizeOptions--><!--Device-LayoutChild-constraint: ConstraintSizeOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## id
@@ -115,6 +125,8 @@ Sub component id.
 **Substitutes:** Measurable/Layoutable
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-LayoutChild-id: string--><!--Device-LayoutChild-id: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -136,6 +148,8 @@ Sub component name.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-LayoutChild-name: string--><!--Device-LayoutChild-name: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## position
@@ -155,6 +169,8 @@ Sub component position.
 **Substitutes:** Measurable/Layoutable
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-LayoutChild-position: Position--><!--Device-LayoutChild-position: Position-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

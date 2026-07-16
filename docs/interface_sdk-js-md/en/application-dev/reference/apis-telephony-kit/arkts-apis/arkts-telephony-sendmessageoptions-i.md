@@ -4,6 +4,8 @@ Provides the options (including callbacks) for sending an SMS message.
 
 **Since:** 6
 
+<!--Device-sms-export interface SendMessageOptions--><!--Device-sms-export interface SendMessageOptions-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 ## Modules to Import
@@ -24,6 +26,8 @@ If the content is a string, this is a short message. If the content is a byte ar
 
 **Since:** 6
 
+<!--Device-SendMessageOptions-content: string | Array<int>--><!--Device-SendMessageOptions-content: string | Array<int>-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 ## deliveryCallback
@@ -37,6 +41,8 @@ Indicates the callback invoked after the SMS message is delivered.
 **Type:** AsyncCallback<IDeliveryShortMessageCallback>
 
 **Since:** 6
+
+<!--Device-SendMessageOptions-deliveryCallback?: AsyncCallback<IDeliveryShortMessageCallback>--><!--Device-SendMessageOptions-deliveryCallback?: AsyncCallback<IDeliveryShortMessageCallback>-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -52,6 +58,8 @@ Indicates the address to which the SMS message is sent.
 
 **Since:** 6
 
+<!--Device-SendMessageOptions-destinationHost: string--><!--Device-SendMessageOptions-destinationHost: string-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 ## destinationPort
@@ -65,6 +73,8 @@ If send data message, destinationPort is mandatory. Otherwise is optional.
 **Type:** number
 
 **Since:** 6
+
+<!--Device-SendMessageOptions-destinationPort?: int--><!--Device-SendMessageOptions-destinationPort?: int-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -80,6 +90,8 @@ Indicates the callback invoked after the SMS message is sent.
 
 **Since:** 6
 
+<!--Device-SendMessageOptions-sendCallback?: AsyncCallback<ISendShortMessageCallback>--><!--Device-SendMessageOptions-sendCallback?: AsyncCallback<ISendShortMessageCallback>-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 ## serviceCenter
@@ -94,6 +106,8 @@ Indicates the SMSC address. If the value is {@code null}, the default SMSC addre
 
 **Since:** 6
 
+<!--Device-SendMessageOptions-serviceCenter?: string--><!--Device-SendMessageOptions-serviceCenter?: string-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 ## slotId
@@ -107,6 +121,8 @@ Indicates the ID of the SIM card slot used for sending the SMS message.
 **Type:** number
 
 **Since:** 6
+
+<!--Device-SendMessageOptions-slotId: int--><!--Device-SendMessageOptions-slotId: int-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 

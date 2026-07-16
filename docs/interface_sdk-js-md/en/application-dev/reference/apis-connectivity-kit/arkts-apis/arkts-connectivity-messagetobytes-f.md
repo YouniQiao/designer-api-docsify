@@ -18,13 +18,15 @@ Parses an NDEF message into raw bytes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ndef-function messageToBytes(ndefMessage: NdefMessage): int[]--><!--Device-ndef-function messageToBytes(ndefMessage: NdefMessage): int[]-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ndefMessage | NdefMessage | Yes | An NDEF message to parse. |
+| ndefMessage | [NdefMessage](arkts-connectivity-ndefmessage-i.md) | Yes | An NDEF message to parse. |
 
 **Return value:**
 

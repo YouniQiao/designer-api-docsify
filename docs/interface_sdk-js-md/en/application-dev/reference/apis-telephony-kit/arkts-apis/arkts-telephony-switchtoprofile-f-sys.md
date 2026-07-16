@@ -19,6 +19,10 @@ Switch to (enable) the given profile on the eUICC.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE
 
+<!--Device-eSIM-function switchToProfile(slotId: int, portIndex: int, iccid: string,
+                           forceDisableProfile: boolean): Promise<ResultCode>--><!--Device-eSIM-function switchToProfile(slotId: int, portIndex: int, iccid: string,
+                           forceDisableProfile: boolean): Promise<ResultCode>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -30,13 +34,13 @@ Switch to (enable) the given profile on the eUICC.
 | slotId | number | Yes | Indicates the card slot index number. |
 | portIndex | number | Yes | Index of the port for the slot. |
 | iccid | string | Yes | The iccid of the profile to switch to. |
-| forceDisableProfile | boolean | Yes | If true, the active profile must be disabled in order to perform theoperation. Otherwise, the resultCode should return {@link RESULT_MUST_DISABLE_PROFILE} to allowthe user to agree to this operation first. |
+| forceDisableProfile | boolean | Yes | If true, the active profile must be disabled in order to perform the operation. Otherwise, the resultCode should return {@link RESULT_MUST_DISABLE_PROFILE} to allow the user to agree to this operation first. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultCode&gt; | Returns the response to switch profile. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ResultCode> | Returns the response to switch profile. |
 
 **Error codes:**
 

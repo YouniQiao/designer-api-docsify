@@ -16,6 +16,8 @@ Rotate in place according to the speed.
 
 **Since:** 26.0.0
 
+<!--Device-mechanicManager-function turnBySpeed(mechId: int, angleSpeed: double, duration: int): Promise<Result>--><!--Device-mechanicManager-function turnBySpeed(mechId: int, angleSpeed: double, duration: int): Promise<Result>-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -32,7 +34,7 @@ Rotate in place according to the speed.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | Promise that returns the execution result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Result> | Promise that returns the execution result. |
 
 **Error codes:**
 

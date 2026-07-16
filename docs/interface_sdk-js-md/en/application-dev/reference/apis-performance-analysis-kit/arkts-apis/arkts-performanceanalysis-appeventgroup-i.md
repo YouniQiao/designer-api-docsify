@@ -1,10 +1,10 @@
 # AppEventGroup
 
-Defines parameters of the event group returned by the subscription. This API can be used to obtain detail
-information about an event group, which is often used in the **onReceive** callback of
-[Watcher](arkts-performanceanalysis-watcher-i.md).
+Defines parameters of the event group returned by the subscription. This API can be used to obtain detail information about an event group, which is often used in the **onReceive** callback of [Watcher](arkts-performanceanalysis-watcher-i.md).
 
 **Since:** 11
+
+<!--Device-hiAppEvent-interface AppEventGroup--><!--Device-hiAppEvent-interface AppEventGroup-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -28,6 +28,8 @@ Event object group.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AppEventGroup-appEventInfos: Array<AppEventInfo>--><!--Device-AppEventGroup-appEventInfos: Array<AppEventInfo>-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## name
@@ -43,6 +45,8 @@ Event name.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AppEventGroup-name: string--><!--Device-AppEventGroup-name: string-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 

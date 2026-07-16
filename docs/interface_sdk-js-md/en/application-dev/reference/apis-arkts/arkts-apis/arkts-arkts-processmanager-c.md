@@ -6,6 +6,8 @@ Construct a **ProcessManager** object.
 
 **Since:** 9
 
+<!--Device-process-export class ProcessManager--><!--Device-process-export class ProcessManager-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -22,12 +24,13 @@ exit(code: number): void
 
 Terminates this process.
 
-Exercise caution when using this API. After this API is called, the application exits. If the input parameter
-is not 0, data loss or exceptions may occur.
+Exercise caution when using this API. After this API is called, the application exits. If the input parameter is not 0, data loss or exceptions may occur.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ProcessManager-exit(code: number): void--><!--Device-ProcessManager-exit(code: number): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -53,14 +56,16 @@ getEnvironmentVar(name: string): string
 
 Obtains the value of an environment variable.
 
-> **NOTE**
->
-> Obtains the value of an environment variable. If the environment variable does not exist, **undefined** is
+> **NOTE**  
+>  
+> Obtains the value of an environment variable. If the environment variable does not exist, **undefined** is  
 > returned.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ProcessManager-getEnvironmentVar(name: string): string--><!--Device-ProcessManager-getEnvironmentVar(name: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -95,6 +100,8 @@ Obtains the system configuration.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ProcessManager-getSystemConfig(name: number): number--><!--Device-ProcessManager-getSystemConfig(name: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -131,6 +138,8 @@ Obtains the thread priority based on the specified TID.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ProcessManager-getThreadPriority(v: number): number--><!--Device-ProcessManager-getThreadPriority(v: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -166,6 +175,8 @@ Obtains the UID of a user from the user database of the system based on the spec
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ProcessManager-getUidForName(v: string): number--><!--Device-ProcessManager-getUidForName(v: string): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -199,6 +210,8 @@ Checks whether a UID belongs to this application.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ProcessManager-isAppUid(v: number): boolean--><!--Device-ProcessManager-isAppUid(v: number): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -236,6 +249,8 @@ Sends a signal to the specified process to terminate it. Only the current proces
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ProcessManager-kill(signal: number, pid: number): boolean--><!--Device-ProcessManager-kill(signal: number, pid: number): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

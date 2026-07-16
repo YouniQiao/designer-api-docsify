@@ -1,5 +1,11 @@
 # getAbilityLabelSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getAbilityLabelSync
 
 ```TypeScript
@@ -13,6 +19,8 @@ function getAbilityLabelSync(bundleName: string, moduleName: string, abilityName
 **起始版本：** 10
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getAbilityLabelSync(bundleName: string, moduleName: string, abilityName: string): string--><!--Device-bundleManager-function getAbilityLabelSync(bundleName: string, moduleName: string, abilityName: string): string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 

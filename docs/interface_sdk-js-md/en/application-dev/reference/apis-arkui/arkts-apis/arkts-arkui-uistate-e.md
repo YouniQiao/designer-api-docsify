@@ -4,6 +4,8 @@ Enumerates polymorphic style states, which are used to process polymorphic style
 
 **Since:** 20
 
+<!--Device-unnamed-export enum UIState--><!--Device-unnamed-export enum UIState-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NORMAL
@@ -19,6 +21,8 @@ Normal state.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-UIState-NORMAL = 0--><!--Device-UIState-NORMAL = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ Pressed state.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-UIState-PRESSED = 1 << 0--><!--Device-UIState-PRESSED = 1 << 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FOCUSED
@@ -52,6 +58,8 @@ Focused state.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-UIState-FOCUSED = 1 << 1--><!--Device-UIState-FOCUSED = 1 << 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DISABLED
@@ -67,6 +75,8 @@ Disabled state.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-UIState-DISABLED = 1 << 2--><!--Device-UIState-DISABLED = 1 << 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,6 +96,8 @@ Only supported by specific components: **Checkbox**, **Radio**, **Toggle**, **Li
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-UIState-SELECTED = 1 << 3--><!--Device-UIState-SELECTED = 1 << 3-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## HOVERED
@@ -101,6 +113,8 @@ The hovered state.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-UIState-HOVERED = 1 << 4--><!--Device-UIState-HOVERED = 1 << 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

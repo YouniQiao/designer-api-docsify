@@ -4,6 +4,8 @@ Describes the capability of a partner device.
 
 **Since:** 23
 
+<!--Device-partnerAgent-interface DeviceCapability--><!--Device-partnerAgent-interface DeviceCapability-End-->
+
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Whether the partner device supports the Bluetooth Basic Rate (BR) capability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DeviceCapability-supportBR?: boolean--><!--Device-DeviceCapability-supportBR?: boolean-End-->
+
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 ## supportBleAdvertiser
@@ -41,6 +45,8 @@ Whether the partner device supports the Bluetooth Low Energy (BLE) advertiser ca
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DeviceCapability-supportBleAdvertiser?: boolean--><!--Device-DeviceCapability-supportBleAdvertiser?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 

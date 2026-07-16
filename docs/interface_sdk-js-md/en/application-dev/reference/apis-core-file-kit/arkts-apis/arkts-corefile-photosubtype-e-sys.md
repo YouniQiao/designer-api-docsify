@@ -8,6 +8,8 @@ Enumerates the [FileAsset](arkts-corefile-fileasset-i-sys.md) types.
 
 **Substitutes:** PhotoSubType
 
+<!--Device-userFileManager-enum PhotoSubType--><!--Device-userFileManager-enum PhotoSubType-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -25,6 +27,8 @@ Default (photo) type.
 **Deprecated since:** 26.0.0
 
 **Substitutes:** DEFAULT
+
+<!--Device-PhotoSubType-DEFAULT--><!--Device-PhotoSubType-DEFAULT-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -44,6 +48,8 @@ Screenshots and screen recording files.
 
 **Substitutes:** SCREENSHOT
 
+<!--Device-PhotoSubType-SCREENSHOT--><!--Device-PhotoSubType-SCREENSHOT-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -61,6 +67,8 @@ Photos and videos taken by a camera.
 **Deprecated since:** 26.0.0
 
 **Substitutes:** SOURCE_GENERIC
+
+<!--Device-PhotoSubType-CAMERA--><!--Device-PhotoSubType-CAMERA-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

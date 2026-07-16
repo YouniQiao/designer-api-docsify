@@ -1,5 +1,11 @@
 # getSysResourceManager
 
+## 导入模块
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+```
+
 ## getSysResourceManager
 
 ```TypeScript
@@ -10,7 +16,9 @@ export function getSysResourceManager(): ResourceManager
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-resourceManager-export function getSysResourceManager(): ResourceManager--><!--Device-resourceManager-export function getSysResourceManager(): ResourceManager-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -18,7 +26,7 @@ export function getSysResourceManager(): ResourceManager
 
 | 类型 | 说明 |
 | --- | --- |
-| ResourceManager | 系统资源管理对象。 |
+| [ResourceManager](arkts-localization-resourcemanager-i.md) | 系统资源管理对象。 |
 
 **错误码：**
 

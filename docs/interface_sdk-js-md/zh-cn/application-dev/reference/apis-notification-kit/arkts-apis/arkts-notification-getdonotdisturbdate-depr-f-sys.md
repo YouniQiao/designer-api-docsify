@@ -16,6 +16,8 @@ function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void--><!--Device-notification-function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -24,7 +26,7 @@ function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;DoNotDisturbDate&gt; | 是 | 查询免打扰时间回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DoNotDisturbDate> | 是 | 查询免打扰时间回调函数。 |
 
 
 ## getDoNotDisturbDate
@@ -43,6 +45,8 @@ function getDoNotDisturbDate(): Promise<DoNotDisturbDate>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function getDoNotDisturbDate(): Promise<DoNotDisturbDate>--><!--Device-notification-function getDoNotDisturbDate(): Promise<DoNotDisturbDate>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -51,7 +55,7 @@ function getDoNotDisturbDate(): Promise<DoNotDisturbDate>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DoNotDisturbDate&gt; | 以Promise形式返回查询到的免打扰时间。 |
+| Promise<DoNotDisturbDate> | 以Promise形式返回查询到的免打扰时间。 |
 
 
 ## getDoNotDisturbDate
@@ -70,6 +74,8 @@ function getDoNotDisturbDate(userId: number, callback: AsyncCallback<DoNotDistur
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function getDoNotDisturbDate(userId: number, callback: AsyncCallback<DoNotDisturbDate>): void--><!--Device-notification-function getDoNotDisturbDate(userId: number, callback: AsyncCallback<DoNotDisturbDate>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -79,7 +85,7 @@ function getDoNotDisturbDate(userId: number, callback: AsyncCallback<DoNotDistur
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID。 |
-| callback | AsyncCallback&lt;DoNotDisturbDate&gt; | 是 | 查询免打扰时间回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DoNotDisturbDate> | 是 | 查询免打扰时间回调函数。 |
 
 
 ## getDoNotDisturbDate
@@ -98,6 +104,8 @@ function getDoNotDisturbDate(userId: number): Promise<DoNotDisturbDate>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function getDoNotDisturbDate(userId: number): Promise<DoNotDisturbDate>--><!--Device-notification-function getDoNotDisturbDate(userId: number): Promise<DoNotDisturbDate>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -112,5 +120,5 @@ function getDoNotDisturbDate(userId: number): Promise<DoNotDisturbDate>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DoNotDisturbDate&gt; | 以Promise形式返回查询到的免打扰时间。 |
+| Promise<DoNotDisturbDate> | 以Promise形式返回查询到的免打扰时间。 |
 

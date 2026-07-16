@@ -1,10 +1,10 @@
 # UserAgentBrandVersion
 
-Class that holds brand name, major version and full version. Brand name and major version used to generated
-User-Agent client hints sec-cu-ua. Brand name and full version used to generated user-agent client hint
-sec-ch-ua-full-version-list.
+Class that holds brand name, major version and full version. Brand name and major version used to generated User-Agent client hints sec-cu-ua. Brand name and full version used to generated user-agent client hint sec-ch-ua-full-version-list.
 
 **Since:** 24
+
+<!--Device-webview-class UserAgentBrandVersion--><!--Device-webview-class UserAgentBrandVersion-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -26,6 +26,8 @@ Get the brand info.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UserAgentBrandVersion-getBrand(): string--><!--Device-UserAgentBrandVersion-getBrand(): string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -45,6 +47,8 @@ Get the full version.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UserAgentBrandVersion-getFullVersion(): string--><!--Device-UserAgentBrandVersion-getFullVersion(): string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -66,6 +70,8 @@ Get the major version.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UserAgentBrandVersion-getMajorVersion(): string--><!--Device-UserAgentBrandVersion-getMajorVersion(): string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -85,6 +91,8 @@ Sets the brand. Should not be blank.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UserAgentBrandVersion-setBrand(brand: string): void--><!--Device-UserAgentBrandVersion-setBrand(brand: string): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -106,6 +114,8 @@ Sets the full version. Should not be blank.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UserAgentBrandVersion-setFullVersion(fullVersion: string): void--><!--Device-UserAgentBrandVersion-setFullVersion(fullVersion: string): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -125,6 +135,8 @@ Sets the major version. Should not be blank.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UserAgentBrandVersion-setMajorVersion(majorVersion: string): void--><!--Device-UserAgentBrandVersion-setMajorVersion(majorVersion: string): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

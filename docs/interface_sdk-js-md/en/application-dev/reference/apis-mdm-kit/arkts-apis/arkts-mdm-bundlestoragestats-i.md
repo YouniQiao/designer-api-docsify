@@ -4,6 +4,8 @@ Statistics of the bundle.
 
 **Since:** 26.0.0
 
+<!--Device-bundleManager-interface BundleStorageStats--><!--Device-bundleManager-interface BundleStorageStats-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## Modules to Import
@@ -26,6 +28,8 @@ The size of the application's installation data.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BundleStorageStats-appSize: number--><!--Device-BundleStorageStats-appSize: number-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## bundleName
@@ -42,6 +46,8 @@ The bundle name of the application.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BundleStorageStats-bundleName: string--><!--Device-BundleStorageStats-bundleName: string-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## dataSize
@@ -57,6 +63,8 @@ The size of the application's local data, distributed data, and database data.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BundleStorageStats-dataSize: number--><!--Device-BundleStorageStats-dataSize: number-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

@@ -1,5 +1,11 @@
 # exportKeyItemAsUser（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+```
+
 ## exportKeyItemAsUser
 
 ```TypeScript
@@ -12,6 +18,8 @@ function exportKeyItemAsUser(userId: number, keyAlias: string, huksOptions: Huks
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-huks-function exportKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<HuksReturnResult>--><!--Device-huks-function exportKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<HuksReturnResult>-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **系统接口：** 此接口为系统接口。
@@ -22,13 +30,13 @@ function exportKeyItemAsUser(userId: number, keyAlias: string, huksOptions: Huks
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID。 |
 | keyAlias | string | 是 | 密钥别名，应与所用密钥生成时使用的别名相同。 |
-| huksOptions | HuksOptions | 是 | 空对象（此处传空即可）。 |
+| huksOptions | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | 是 | 空对象（此处传空即可）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | Promise对象。 当调用成功时，HuksReturnResult的outData成员非空，为从密钥中导出的公钥，否则为失败。 |
+| Promise<HuksReturnResult> | Promise对象。 当调用成功时，HuksReturnResult的outData成员非空，为从密钥中导出的公钥，否则为失败。 |
 
 **错误码：**
 

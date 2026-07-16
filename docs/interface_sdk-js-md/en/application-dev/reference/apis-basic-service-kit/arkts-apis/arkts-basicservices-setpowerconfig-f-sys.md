@@ -20,6 +20,8 @@ Update the power configuration value for a given scene name.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-power-function setPowerConfig(sceneName: string, value: string): void--><!--Device-power-function setPowerConfig(sceneName: string, value: string): void-End-->
+
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 **System API:** This is a system API.
@@ -29,13 +31,13 @@ Update the power configuration value for a given scene name.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sceneName | string | Yes | Indicates the scene name of the power configuration.sceneName parameter must be a string and its length cannot exceed 128 bytes. |
-| value | string | Yes | Indicates the power configuration value. value parameter must be a string andits length cannot exceed 128 bytes. |
+| value | string | Yes | Indicates the power configuration value. value parameter must be a string and its length cannot exceed 128 bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
 | [4900400](../../apis-basic-services-kit/errorcode-power.md#4900400-incorrect-input-parameter) | Invalid parameter. Possible causes:1. The sceneName or value parameter is an empty string;2. The length of sceneName parameter exceeds 128 bytes;3. The length of value parameter exceeds 128 bytes. |

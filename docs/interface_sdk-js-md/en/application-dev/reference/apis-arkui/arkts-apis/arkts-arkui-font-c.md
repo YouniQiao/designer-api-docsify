@@ -2,15 +2,17 @@
 
 Provides APIs for registering custom fonts.
 
-> **NOTE**
->
-> - In the following API examples, you must first use [getFont()](arkts-arkui-uicontext-c.md#getfont-1) in **UIContext** to obtain
-> a **Font** instance, and then call the APIs using the obtained instance.
->
-> - You are advised to use the [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-fontcollection-c.md#loadfontsync-1) API of the
+> **NOTE**  
+>  
+> - In the following API examples, you must first use [getFont()](arkts-arkui-uicontext-c.md#getfont-1) in **UIContext** to obtain  
+> a **Font** instance, and then call the APIs using the obtained instance.  
+>  
+> - You are advised to use the [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-fontcollection-c.md#loadfontsync-1) API of the  
 > font engine to register custom fonts.
 
 **Since:** 10
+
+<!--Device-unnamed-export class Font--><!--Device-unnamed-export class Font-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,6 +35,8 @@ Obtains information about a system font based on the font name.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Font-getFontByName(fontName: string): font.FontInfo--><!--Device-Font-getFontByName(fontName: string): font.FontInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,9 +62,7 @@ Obtains the list of supported fonts.
 
 This API only takes effect on PCs/2-in-1 devices and returns an empty array on other devices.
 
-You are advised to use the
-[getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype-1) API to obtain the
-latest system-supported font list data.
+You are advised to use the [getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype-1) API to obtain the latest system-supported font list data.
 
 **Since:** 10
 
@@ -68,13 +70,15 @@ latest system-supported font list data.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Font-getSystemFontList(): Array<string>--><!--Device-Font-getSystemFontList(): Array<string>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | List of supported fonts. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | List of supported fonts. |
 
 ## registerFont
 
@@ -92,11 +96,13 @@ This API is asynchronous and does not support concurrent calls.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Font-registerFont(options: font.FontOptions): void--><!--Device-Font-registerFont(options: font.FontOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | font.FontOptions | Yes | Information about the custom font to register.<br>**NOTE**<br>When settingthe path to the font file, you are advised to use a string with the **file://** path prefix for resourceswithin the system sandbox path. Ensure that the file exists in the sandbox directory path and has readpermissions. |
+| options | font.FontOptions | Yes | Information about the custom font to register.<br>**NOTE**<br>When setting the path to the font file, you are advised to use a string with the **file://** path prefix for resources within the system sandbox path. Ensure that the file exists in the sandbox directory path and has read permissions. |
 

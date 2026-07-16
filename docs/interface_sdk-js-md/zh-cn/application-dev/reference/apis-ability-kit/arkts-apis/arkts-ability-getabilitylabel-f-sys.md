@@ -1,5 +1,11 @@
 # getAbilityLabel（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getAbilityLabel
 
 ```TypeScript
@@ -14,6 +20,8 @@ function getAbilityLabel(bundleName: string, moduleName: string, abilityName: st
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundleManager-function getAbilityLabel(bundleName: string, moduleName: string, abilityName: string, callback: AsyncCallback<string>): void--><!--Device-bundleManager-function getAbilityLabel(bundleName: string, moduleName: string, abilityName: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
 **系统接口：** 此接口为系统接口。
@@ -25,7 +33,7 @@ function getAbilityLabel(bundleName: string, moduleName: string, abilityName: st
 | bundleName | string | 是 | 表示应用程序的bundleName。 |
 | moduleName | string | 是 | 表示Module名称。 |
 | abilityName | string | 是 | 表示UIAbility组件的名称。 |
-| callback | AsyncCallback&lt;string&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获指定组件的Label值；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获指定组件的Label值；否则为错误对象。 |
 
 **错误码：**
 
@@ -82,6 +90,8 @@ function getAbilityLabel(bundleName: string, moduleName: string, abilityName: st
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundleManager-function getAbilityLabel(bundleName: string, moduleName: string, abilityName: string): Promise<string>--><!--Device-bundleManager-function getAbilityLabel(bundleName: string, moduleName: string, abilityName: string): Promise<string>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
 **系统接口：** 此接口为系统接口。
@@ -98,7 +108,7 @@ function getAbilityLabel(bundleName: string, moduleName: string, abilityName: st
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回指定组件的label值。 |
+| Promise<string> | Promise对象，返回指定组件的label值。 |
 
 **错误码：**
 

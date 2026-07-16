@@ -1,9 +1,10 @@
 # FillRequestCallback (System API)
 
-Implements callbacks for an auto-fill request, which is used to automatically fill in or generate a password. The
-callbacks can be used to notify the client of the success or failure of the request.
+Implements callbacks for an auto-fill request, which is used to automatically fill in or generate a password. The callbacks can be used to notify the client of the success or failure of the request.
 
 **Since:** 11
+
+<!--Device-unnamed-export interface FillRequestCallback--><!--Device-unnamed-export interface FillRequestCallback-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -21,6 +22,8 @@ Called when an auto-fill request is canceled.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FillRequestCallback-onCancel(fillContent?: string): void--><!--Device-FillRequestCallback-onCancel(fillContent?: string): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
@@ -29,7 +32,7 @@ Called when an auto-fill request is canceled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillContent | string | No | Content returned to the input method framework when the auto-fill request iscanceled.<br>**Since:** 12 |
+| fillContent | string | No | Content returned to the input method framework when the auto-fill request is canceled.<br>**Since:** 12 |
 
 **Error codes:**
 
@@ -50,6 +53,8 @@ Called when an auto-fill request fails to be processed.
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FillRequestCallback-onFailure(): void--><!--Device-FillRequestCallback-onFailure(): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -74,6 +79,8 @@ Called when an auto-fill request is successfully processed.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FillRequestCallback-onSuccess(response: FillResponse): void--><!--Device-FillRequestCallback-onSuccess(response: FillResponse): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
@@ -82,7 +89,7 @@ Called when an auto-fill request is successfully processed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| response | FillResponse | Yes | Information about the response to the auto-fill request. |
+| response | [FillResponse](arkts-ability-fillresponse-i-sys.md) | Yes | Information about the response to the auto-fill request. |
 
 **Error codes:**
 
@@ -104,6 +111,8 @@ Sets the size and position of an auto-fill pop-up.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FillRequestCallback-setAutoFillPopupConfig(autoFillPopupConfig: AutoFillPopupConfig): void--><!--Device-FillRequestCallback-setAutoFillPopupConfig(autoFillPopupConfig: AutoFillPopupConfig): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
@@ -112,7 +121,7 @@ Sets the size and position of an auto-fill pop-up.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| autoFillPopupConfig | AutoFillPopupConfig | Yes | Size and position of the auto-fill pop-up. |
+| autoFillPopupConfig | [AutoFillPopupConfig](arkts-ability-autofillpopupconfig-i-sys.md) | Yes | Size and position of the auto-fill pop-up. |
 
 **Error codes:**
 

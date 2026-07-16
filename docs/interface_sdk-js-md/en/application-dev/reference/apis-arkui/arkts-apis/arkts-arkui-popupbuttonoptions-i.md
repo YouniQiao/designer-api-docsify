@@ -4,6 +4,8 @@ Defines the button attributes and events.
 
 **Since:** 11
 
+<!--Device-unnamed-export interface PopupButtonOptions--><!--Device-unnamed-export interface PopupButtonOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,6 +32,8 @@ By default, no operation is performed.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PopupButtonOptions-action?: () => void--><!--Device-PopupButtonOptions-action?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontColor
@@ -50,6 +54,8 @@ Default value: **$r('sys.color.ohos_id_color_text_primary_activated')**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PopupButtonOptions-fontColor?: ResourceColor--><!--Device-PopupButtonOptions-fontColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontSize
@@ -62,8 +68,7 @@ Font size of the button text.
 
 Default value: **$r('sys.float.ohos_id_text_size_button2')**
 
-The string value must be convertible to a number (for example, **'10'**) or include a length unit (for example,
-**'10px'**); percentage-based strings are not supported.
+The string value must be convertible to a number (for example, **'10'**) or include a length unit (for example,**'10px'**); percentage-based strings are not supported.
 
 Invalid values are handled as default values.
 
@@ -74,6 +79,8 @@ Invalid values are handled as default values.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupButtonOptions-fontSize?: number | string | Resource--><!--Device-PopupButtonOptions-fontSize?: number | string | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,6 +99,8 @@ Text of the button.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupButtonOptions-text: ResourceStr--><!--Device-PopupButtonOptions-text: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,5 +1,11 @@
 # getDialogSessionInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { dialogSession } from '@kit.AbilityKit';
+```
+
 ## getDialogSessionInfo
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getDialogSessionInfo(dialogSessionId: string): DialogSessionInfo
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-dialogSession-function getDialogSessionInfo(dialogSessionId: string): DialogSessionInfo--><!--Device-dialogSession-function getDialogSessionInfo(dialogSessionId: string): DialogSessionInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -26,7 +34,7 @@ function getDialogSessionInfo(dialogSessionId: string): DialogSessionInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| DialogSessionInfo | 同步返回会话信息。 |
+| [DialogSessionInfo](arkts-ability-dialogsessioninfo-i-sys.md) | 同步返回会话信息。 |
 
 **错误码：**
 

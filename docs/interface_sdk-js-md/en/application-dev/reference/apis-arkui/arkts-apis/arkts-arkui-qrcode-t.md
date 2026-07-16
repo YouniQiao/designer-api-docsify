@@ -12,6 +12,8 @@ Represents a FrameNode of the **QRCode** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-typeNode-type QRCode = TypedFrameNode<QRCodeInterface, QRCodeAttribute>--><!--Device-typeNode-type QRCode = TypedFrameNode<QRCodeInterface, QRCodeAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** TypedFrameNode<QRCodeInterface, QRCodeAttribute>

@@ -2,9 +2,17 @@
 
 **起始版本：** 12
 
+<!--Device-audio-interface AsrProcessingController--><!--Device-audio-interface AsrProcessingController-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## getAsrAecMode
 
@@ -16,6 +24,8 @@ Get ASR AEC mode.
 
 **起始版本：** 12
 
+<!--Device-AsrProcessingController-getAsrAecMode(): AsrAecMode--><!--Device-AsrProcessingController-getAsrAecMode(): AsrAecMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -24,7 +34,7 @@ Get ASR AEC mode.
 
 | 类型 | 说明 |
 | --- | --- |
-| AsrAecMode | ASR AEC Mode. |
+| [AsrAecMode](arkts-audio-asraecmode-e-sys.md) | ASR AEC Mode. |
 
 **错误码：**
 
@@ -50,6 +60,8 @@ Get ASR noise suppression mode.
 
 **起始版本：** 12
 
+<!--Device-AsrProcessingController-getAsrNoiseSuppressionMode(): AsrNoiseSuppressionMode--><!--Device-AsrProcessingController-getAsrNoiseSuppressionMode(): AsrNoiseSuppressionMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -58,7 +70,7 @@ Get ASR noise suppression mode.
 
 | 类型 | 说明 |
 | --- | --- |
-| AsrNoiseSuppressionMode | ASR noise suppression mode. |
+| [AsrNoiseSuppressionMode](arkts-audio-asrnoisesuppressionmode-e-sys.md) | ASR noise suppression mode. |
 
 **错误码：**
 
@@ -84,6 +96,8 @@ Get ASR whisper detection mode.
 
 **起始版本：** 12
 
+<!--Device-AsrProcessingController-getAsrWhisperDetectionMode(): AsrWhisperDetectionMode--><!--Device-AsrProcessingController-getAsrWhisperDetectionMode(): AsrWhisperDetectionMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -92,7 +106,7 @@ Get ASR whisper detection mode.
 
 | 类型 | 说明 |
 | --- | --- |
-| AsrWhisperDetectionMode | ASR whisper detection mode. |
+| [AsrWhisperDetectionMode](arkts-audio-asrwhisperdetectionmode-e-sys.md) | ASR whisper detection mode. |
 
 **错误码：**
 
@@ -117,6 +131,8 @@ isWhispering(): boolean
 Query whether user is whispering.
 
 **起始版本：** 12
+
+<!--Device-AsrProcessingController-isWhispering(): boolean--><!--Device-AsrProcessingController-isWhispering(): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -152,6 +168,8 @@ Set ASR AEC mode.
 
 **起始版本：** 12
 
+<!--Device-AsrProcessingController-setAsrAecMode(mode: AsrAecMode): boolean--><!--Device-AsrProcessingController-setAsrAecMode(mode: AsrAecMode): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -160,7 +178,7 @@ Set ASR AEC mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | AsrAecMode | 是 | ASR AEC Mode. |
+| mode | [AsrAecMode](arkts-audio-asraecmode-e-sys.md) | 是 | ASR AEC Mode. |
 
 **返回值：**
 
@@ -194,6 +212,8 @@ Set ASR noise suppression mode.
 
 **起始版本：** 12
 
+<!--Device-AsrProcessingController-setAsrNoiseSuppressionMode(mode: AsrNoiseSuppressionMode): boolean--><!--Device-AsrProcessingController-setAsrNoiseSuppressionMode(mode: AsrNoiseSuppressionMode): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -202,7 +222,7 @@ Set ASR noise suppression mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | AsrNoiseSuppressionMode | 是 | ASR noise suppression mode. |
+| mode | [AsrNoiseSuppressionMode](arkts-audio-asrnoisesuppressionmode-e-sys.md) | 是 | ASR noise suppression mode. |
 
 **返回值：**
 
@@ -236,6 +256,8 @@ Set ASR voice control mode.
 
 **起始版本：** 12
 
+<!--Device-AsrProcessingController-setAsrVoiceControlMode(mode: AsrVoiceControlMode, enable: boolean): boolean--><!--Device-AsrProcessingController-setAsrVoiceControlMode(mode: AsrVoiceControlMode, enable: boolean): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -244,7 +266,7 @@ Set ASR voice control mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | AsrVoiceControlMode | 是 | ASR voice control mode. |
+| mode | [AsrVoiceControlMode](arkts-audio-asrvoicecontrolmode-e-sys.md) | 是 | ASR voice control mode. |
 | enable | boolean | 是 | Indicates whether to switch on/off this mode. |
 
 **返回值：**
@@ -279,6 +301,8 @@ Set ASR voice mute mode.
 
 **起始版本：** 12
 
+<!--Device-AsrProcessingController-setAsrVoiceMuteMode(mode: AsrVoiceMuteMode, enable: boolean): boolean--><!--Device-AsrProcessingController-setAsrVoiceMuteMode(mode: AsrVoiceMuteMode, enable: boolean): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -287,7 +311,7 @@ Set ASR voice mute mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | AsrVoiceMuteMode | 是 | ASR voice mute mode. |
+| mode | [AsrVoiceMuteMode](arkts-audio-asrvoicemutemode-e-sys.md) | 是 | ASR voice mute mode. |
 | enable | boolean | 是 | Indicates whether to switch on/off this mode. |
 
 **返回值：**
@@ -322,6 +346,8 @@ Set ASR whisper detection mode.
 
 **起始版本：** 12
 
+<!--Device-AsrProcessingController-setAsrWhisperDetectionMode(mode: AsrWhisperDetectionMode): boolean--><!--Device-AsrProcessingController-setAsrWhisperDetectionMode(mode: AsrWhisperDetectionMode): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -330,7 +356,7 @@ Set ASR whisper detection mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | AsrWhisperDetectionMode | 是 | ASR whisper detection mode. |
+| mode | [AsrWhisperDetectionMode](arkts-audio-asrwhisperdetectionmode-e-sys.md) | 是 | ASR whisper detection mode. |
 
 **返回值：**
 

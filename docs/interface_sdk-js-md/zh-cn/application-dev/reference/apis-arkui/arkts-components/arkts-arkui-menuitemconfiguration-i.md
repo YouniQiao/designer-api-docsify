@@ -6,6 +6,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface MenuItemConfiguration extends CommonConfiguration<MenuItemConfiguration>--><!--Device-unnamed-declare interface MenuItemConfiguration extends CommonConfiguration<MenuItemConfiguration>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## triggerSelect
@@ -18,15 +20,15 @@ triggerSelect(index: number, value: string): void
 
 <br/>**说明：**
 
-<br/>index会赋值给事件[onSelect](SelectAttribute#onSelect(callback: (index: number, value: string) => void))
-回调中的索引参数； value会返回给Select组件显示，同时会赋值给事件
-[onSelect](SelectAttribute#onSelect(callback: (index: number, value: string) => void))回调中的文本参数。
+<br/>index会赋值给事件[onSelect](SelectAttribute#onSelect(callback: (index: number, value: string) => void))回调中的索引参数； value会返回给Select组件显示，同时会赋值给事件[onSelect](SelectAttribute#onSelect(callback: (index: number, value: string) => void))回调中的文本参数。
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MenuItemConfiguration-triggerSelect(index: number, value: string): void--><!--Device-MenuItemConfiguration-triggerSelect(index: number, value: string): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -55,7 +57,9 @@ string格式可用于加载网络图片和本地图片。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MenuItemConfiguration-icon?: ResourceStr--><!--Device-MenuItemConfiguration-icon?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,7 +77,9 @@ index: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MenuItemConfiguration-index: number--><!--Device-MenuItemConfiguration-index: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -93,7 +99,9 @@ selected: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MenuItemConfiguration-selected: boolean--><!--Device-MenuItemConfiguration-selected: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -113,7 +121,9 @@ symbolIcon优先级高于icon。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MenuItemConfiguration-symbolIcon?: SymbolGlyphModifier--><!--Device-MenuItemConfiguration-symbolIcon?: SymbolGlyphModifier-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -135,7 +145,9 @@ value: ResourceStr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MenuItemConfiguration-value: ResourceStr--><!--Device-MenuItemConfiguration-value: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

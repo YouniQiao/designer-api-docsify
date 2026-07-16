@@ -16,6 +16,8 @@ Unregister a listener for axis state changes.
 
 **Since:** 20
 
+<!--Device-mechanicManager-function off(type: 'rotationAxesStatusChange', callback?: Callback<RotationAxesStateChangeInfo>): void--><!--Device-mechanicManager-function off(type: 'rotationAxesStatusChange', callback?: Callback<RotationAxesStateChangeInfo>): void-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -25,7 +27,7 @@ Unregister a listener for axis state changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'rotationAxesStatusChange' | Yes | Event type. |
-| callback | Callback&lt;RotationAxesStateChangeInfo&gt; | No | Rotate axis state changes callback. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<RotationAxesStateChangeInfo> | No | Rotate axis state changes callback. |
 
 **Error codes:**
 

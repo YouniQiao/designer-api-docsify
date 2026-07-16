@@ -18,6 +18,8 @@ Instructs the widgets to make themselves visible. This API uses an asynchronous 
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
+<!--Device-formHost-function notifyFormsVisible(formIds: Array<string>, isVisible: boolean, callback: AsyncCallback<void>): void--><!--Device-formHost-function notifyFormsVisible(formIds: Array<string>, isVisible: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -26,9 +28,9 @@ Instructs the widgets to make themselves visible. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | Yes | List of widget IDs. |
+| formIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | List of widget IDs. |
 | isVisible | boolean | Yes | Whether the widget is visible.<br>**true**: The widget is visible.<br>**false**: The widget is invisible. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the notification is sent,**error** is undefined; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the notification is sent,**error** is undefined; otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -55,6 +57,8 @@ Instructs the widgets to make themselves visible. This API uses a promise to ret
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
+<!--Device-formHost-function notifyFormsVisible(formIds: Array<string>, isVisible: boolean): Promise<void>--><!--Device-formHost-function notifyFormsVisible(formIds: Array<string>, isVisible: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -63,14 +67,14 @@ Instructs the widgets to make themselves visible. This API uses a promise to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | Yes | List of widget IDs. |
+| formIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | List of widget IDs. |
 | isVisible | boolean | Yes | Whether the widget is visible.<br>**true**: The widget is visible.<br>**false**: The widget is invisible. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -12,13 +12,13 @@ import { inputDevice } from '@kit.InputKit';
 function setInputDeviceEnabled(deviceId: number, enabled: boolean): Promise<void>
 ```
 
-Sets the input switch status of an input device. Take the touchscreen as an example. If the input switch is off,
-the touchscreen does not respond when being touched. If the input switch is on, the touchscreen wakes up when being
-touched. This API uses a promise to return the result.
+Sets the input switch status of an input device. Take the touchscreen as an example. If the input switch is off,the touchscreen does not respond when being touched. If the input switch is on, the touchscreen wakes up when being touched. This API uses a promise to return the result.
 
 **Since:** 18
 
 **Required permissions:** ohos.permission.INPUT_DEVICE_CONTROLLER
+
+<!--Device-inputDevice-function setInputDeviceEnabled(deviceId: int, enabled: boolean): Promise<void>--><!--Device-inputDevice-function setInputDeviceEnabled(deviceId: int, enabled: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -28,14 +28,14 @@ touched. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | number | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled orrestarted, its ID may change. |
-| enabled | boolean | Yes | Switch status of the input device. The value **true** indicates that the input deviceis enabled, and the value **false** indicates the opposite. |
+| deviceId | number | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change. |
+| enabled | boolean | Yes | Switch status of the input device. The value **true** indicates that the input device is enabled, and the value **false** indicates the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

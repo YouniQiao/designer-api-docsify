@@ -16,13 +16,15 @@ create the instance of hfp profile.
 
 **Since:** 10
 
+<!--Device-hfp-function createHfpAgProfile(): HandsFreeAudioGatewayProfile--><!--Device-hfp-function createHfpAgProfile(): HandsFreeAudioGatewayProfile-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| HandsFreeAudioGatewayProfile | Returns the instance of profile. |
+| [HandsFreeAudioGatewayProfile](arkts-connectivity-handsfreeaudiogatewayprofile-i.md) | Returns the instance of profile. |
 
 **Error codes:**
 

@@ -1,5 +1,11 @@
 # @ohos.multimodalInput.mouseEvent
 
+## 导入模块
+
+```TypeScript
+import { MouseAction, AxisValue, MouseEvent, Button, MouseToolType, Axis } from '@kit.InputKit';
+```
+
 ## 汇总
 
 ### 接口

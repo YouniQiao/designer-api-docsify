@@ -20,19 +20,21 @@ Queries the number of all contacts. This API uses a promise to return the result
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-contact-function queryContactsCount(context: Context): Promise<int>--><!--Device-contact-function queryContactsCount(context: Context): Promise<int>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result, which is the number of queried contacts. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result, which is the number of queried contacts. |
 
 **Error codes:**
 

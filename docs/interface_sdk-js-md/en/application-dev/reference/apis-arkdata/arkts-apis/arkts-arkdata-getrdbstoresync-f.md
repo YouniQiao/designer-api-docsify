@@ -12,13 +12,13 @@ import { relationalStore } from '@kit.ArkData';
 function getRdbStoreSync(context: Context, config: StoreConfig): RdbStore
 ```
 
-Obtains a RDB store.
-You can set parameters of the RDB store as required. This is a synchronous method
-that blocks the thread until the RDB store is obtained.
+Obtains a RDB store.You can set parameters of the RDB store as required. This is a synchronous method that blocks the thread until the RDB store is obtained.
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-relationalStore-function getRdbStoreSync(context: Context, config: StoreConfig): RdbStore--><!--Device-relationalStore-function getRdbStoreSync(context: Context, config: StoreConfig): RdbStore-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -26,14 +26,14 @@ that blocks the thread until the RDB store is obtained.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of an application or ability. |
-| config | StoreConfig | Yes | Indicates the {@link StoreConfig} configuration of the database related tothis RDB store. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of an application or ability. |
+| config | [StoreConfig](arkts-arkdata-storeconfig-i.md) | Yes | Indicates the {@link StoreConfig} configuration of the database related to this RDB store. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbStore | The RDB store {@link RdbStore}. |
+| [RdbStore](arkts-arkdata-rdbstore-i.md) | The RDB store {@link RdbStore}. |
 
 **Error codes:**
 

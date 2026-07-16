@@ -4,6 +4,8 @@ ConvertXML representation refers to extensible markup language.
 
 **Since:** 8
 
+<!--Device-xml-class ConvertXML--><!--Device-xml-class ConvertXML-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Converts an XML text to a JavaScript object.
 
 **Substitutes:** [fastConvertToJSObject](arkts-arkts-convertxml-c.md#fastconverttojsobject-1)
 
+<!--Device-ConvertXML-convert(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-convert(xml: string, options?: ConvertOptions): Object-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -33,13 +37,13 @@ Converts an XML text to a JavaScript object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | xml | string | Yes | Input XML text. |
-| options | ConvertOptions | No | Options for conversion. The default value is a **ConvertOptions** object,which consists of the default values of the attributes in the object. |
+| options | [ConvertOptions](arkts-arkts-convertoptions-i.md) | No | Options for conversion. The default value is a **ConvertOptions** object,which consists of the default values of the attributes in the object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Object | JavaScript object. |
+| [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | JavaScript object. |
 
 **Example**
 
@@ -89,20 +93,22 @@ Converts an XML text to an object of the object type.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ConvertXML-convertToJSObject(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-convertToJSObject(xml: string, options?: ConvertOptions): Object-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| xml | string | Yes | If the XML text to convert contains the ampersand (&), replace it with the entityreference **&amp;**. |
-| options | ConvertOptions | No | Options for conversion. The default value is a **ConvertOptions** object,which consists of the default values of the attributes in the object. |
+| xml | string | Yes | If the XML text to convert contains the ampersand (&), replace it with the entity reference **&amp;**. |
+| options | [ConvertOptions](arkts-arkts-convertoptions-i.md) | No | Options for conversion. The default value is a **ConvertOptions** object,which consists of the default values of the attributes in the object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Object | JavaScript object. |
+| [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | JavaScript object. |
 
 **Error codes:**
 
@@ -154,17 +160,19 @@ fastConvertToJSObject(xml: string, options?: ConvertOptions): Object
 
 Converts an XML text to an object of the object type.
 
-> **NOTE**
->
-> - This API cannot parse XML files with a large amount of data. If the text content of a single element exceeds
-> 10 MB, an error message is displayed and an object that contains only the XML tag header will be returned.
->
-> - In Windows, a newline is usually represented by the carriage return (CR) followed by the line feed (LF).
+> **NOTE**  
+>  
+> - This API cannot parse XML files with a large amount of data. If the text content of a single element exceeds  
+> 10 MB, an error message is displayed and an object that contains only the XML tag header will be returned.  
+>  
+> - In Windows, a newline is usually represented by the carriage return (CR) followed by the line feed (LF).  
 > However, the object obtained by calling this API uses only the LF to indicate a new line.
 
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ConvertXML-fastConvertToJSObject(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-fastConvertToJSObject(xml: string, options?: ConvertOptions): Object-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -172,14 +180,14 @@ Converts an XML text to an object of the object type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| xml | string | Yes | XML text to convert. If the XML text contains the ampersand (&), replace it with theentity reference **&amp;**. |
-| options | ConvertOptions | No | Options for conversion. The default value is a **ConvertOptions** object,which consists of the default values of the attributes in the object. |
+| xml | string | Yes | XML text to convert. If the XML text contains the ampersand (&), replace it with the entity reference **&amp;**. |
+| options | [ConvertOptions](arkts-arkts-convertoptions-i.md) | No | Options for conversion. The default value is a **ConvertOptions** object,which consists of the default values of the attributes in the object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Object | JavaScript object. |
+| [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | JavaScript object. |
 
 **Error codes:**
 
@@ -228,8 +236,7 @@ try {
 largeConvertToJSObject(xml: string, options?: ConvertOptions): Object
 ```
 
-Convert XML text to JavaScript objects, this method supports parsing large XML texts
-with a single node size exceeding 10M.
+Convert XML text to JavaScript objects, this method supports parsing large XML texts with a single node size exceeding 10M.
 
 **Since:** 23
 
@@ -237,20 +244,22 @@ with a single node size exceeding 10M.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-ConvertXML-largeConvertToJSObject(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-largeConvertToJSObject(xml: string, options?: ConvertOptions): Object-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| xml | string | Yes | XML text to convert. If the XML text contains the ampersand (&), replace it with theentity reference &amp;. |
-| options | ConvertOptions | No | Options for conversion. The default value is a ConvertOptions object,which consists of the default values of the attributes in the object. |
+| xml | string | Yes | XML text to convert. If the XML text contains the ampersand (&), replace it with the entity reference &amp;. |
+| options | [ConvertOptions](arkts-arkts-convertoptions-i.md) | No | Options for conversion. The default value is a ConvertOptions object,which consists of the default values of the attributes in the object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Object | Returns a JavaScript object converting from XML text. |
+| [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Returns a JavaScript object converting from XML text. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Defines the cell broadcast configuration list configs.
 
 **Since:** 23
 
+<!--Device-sms-export interface CBConfigListConfigs--><!--Device-sms-export interface CBConfigListConfigs-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Indicates the messageIDs for the cell broadcast configuration list configs.
 
 **Since:** 23
 
+<!--Device-CBConfigListConfigs-messageIds: int[]--><!--Device-CBConfigListConfigs-messageIds: int[]-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ Indicates the RAN type for the cell broadcast configuration list configs.
 
 **Since:** 23
 
+<!--Device-CBConfigListConfigs-ranType: RanType--><!--Device-CBConfigListConfigs-ranType: RanType-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ Indicates the card slot ID for the cell broadcast configuration list configs.
 **Type:** number
 
 **Since:** 23
+
+<!--Device-CBConfigListConfigs-slotId: int--><!--Device-CBConfigListConfigs-slotId: int-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 

@@ -16,6 +16,8 @@ Execute an action sequence.
 
 **Since:** 26.0.0
 
+<!--Device-mechanicManager-function doAction(mechId: int, actionType: ActionType): Promise<Result>--><!--Device-mechanicManager-function doAction(mechId: int, actionType: ActionType): Promise<Result>-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -25,13 +27,13 @@ Execute an action sequence.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mechId | number | Yes | ID of the mechanical device.<br>The value should be an integer. |
-| actionType | ActionType | Yes | Type of action sequence. |
+| actionType | [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-actiontype-t.md) | Yes | Type of action sequence. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | Promise that returns the execution result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Result> | Promise that returns the execution result. |
 
 **Error codes:**
 

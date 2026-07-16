@@ -4,6 +4,8 @@ JS cross-thread communication tool
 
 **Since:** 7
 
+<!--Device-unnamed-declare namespace worker--><!--Device-unnamed-declare namespace worker-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -18,7 +20,7 @@ import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventT
 
 | Name | Description |
 | --- | --- |
-| [ThreadWorker](arkts-arkts-threadworker-c.md) | Before using the following APIs, you must create a ThreadWorker instance. The ThreadWorker class inherits fromWorkerEventTarget. |
+| [ThreadWorker](arkts-arkts-threadworker-c.md) | Before using the following APIs, you must create a ThreadWorker instance. The ThreadWorker class inherits from WorkerEventTarget. |
 | [Worker](arkts-arkts-worker-c.md) | The Worker class contains all Worker functions. |
 
 <!--Del-->

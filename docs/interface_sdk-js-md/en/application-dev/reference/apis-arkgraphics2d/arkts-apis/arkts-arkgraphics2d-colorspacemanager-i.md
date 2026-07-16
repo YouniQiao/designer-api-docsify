@@ -1,13 +1,12 @@
 # ColorSpaceManager
 
-Implements management of color space objects.
-Before calling any of the following APIs, you must use
-[create()](arkts-arkgraphics2d-create-f.md#create-1) to create a color
-space manager.
+Implements management of color space objects.Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-create-f.md#create-1) to create a color space manager.
 
 **Inheritance/Implementation:** ColorSpaceManager extends [ISendable](arkts-arkgraphics2d-isendable-t.md)
 
 **Since:** 12
+
+<!--Device-sendableColorSpaceManager-interface ColorSpaceManager extends ISendable--><!--Device-sendableColorSpaceManager-interface ColorSpaceManager extends ISendable-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -26,6 +25,8 @@ getColorSpaceName(): colorSpaceManager.ColorSpace
 Obtains the color space type.
 
 **Since:** 12
+
+<!--Device-ColorSpaceManager-getColorSpaceName(): colorSpaceManager.ColorSpace--><!--Device-ColorSpaceManager-getColorSpaceName(): colorSpaceManager.ColorSpace-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -59,6 +60,8 @@ Obtains the gamma of the color space.
 
 **Since:** 12
 
+<!--Device-ColorSpaceManager-getGamma(): number--><!--Device-ColorSpaceManager-getGamma(): number-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **Return value:**
@@ -91,13 +94,15 @@ Obtains the coordinates of the white point in the color space.
 
 **Since:** 12
 
+<!--Device-ColorSpaceManager-getWhitePoint(): collections.Array<number>--><!--Device-ColorSpaceManager-getWhitePoint(): collections.Array<number>-End-->
+
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| collections.Array&lt;number&gt; | Coordinates [x, y] of the white point. |
+| collections.Array<number> | Coordinates [x, y] of the white point. |
 
 **Error codes:**
 

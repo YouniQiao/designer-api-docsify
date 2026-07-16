@@ -8,6 +8,8 @@ In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-ap
 
 **Since:** 18
 
+<!--Device-unnamed-declare class ArcAlphabetIndexerAttribute extends CommonMethod<ArcAlphabetIndexerAttribute>--><!--Device-unnamed-declare class ArcAlphabetIndexerAttribute extends CommonMethod<ArcAlphabetIndexerAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
@@ -28,19 +30,21 @@ Sets whether to enable the adaptive collapse behavior for the indexer.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcAlphabetIndexerAttribute-autoCollapse(enable: Optional<boolean>): ArcAlphabetIndexerAttribute--><!--Device-ArcAlphabetIndexerAttribute-autoCollapse(enable: Optional<boolean>): ArcAlphabetIndexerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | Optional&lt;boolean&gt; | Yes | Whether to enable the adaptive collapse behavior for the indexer.<br>Defaultvalue: **true**.<br>**true**: Enable the adaptive collapse behavior.<br>**false**: Disable the adaptivecollapse behavior. |
+| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)<boolean> | Yes | Whether to enable the adaptive collapse behavior for the indexer.<br>Default value: **true**.<br>**true**: Enable the adaptive collapse behavior.<br>**false**: Disable the adaptive collapse behavior. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArcAlphabetIndexerAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## color
 
@@ -54,19 +58,21 @@ Sets the text color of the index items in the normal state.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcAlphabetIndexerAttribute-color(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute--><!--Device-ArcAlphabetIndexerAttribute-color(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Optional&lt;ColorMetrics&gt; | Yes | Text color.<br>Default value: **0xFFFFFF**, displayed as white |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)<ColorMetrics> | Yes | Text color.<br>Default value: **0xFFFFFF**, displayed as white |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArcAlphabetIndexerAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## font
 
@@ -80,19 +86,21 @@ Sets the default font style of the index items.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcAlphabetIndexerAttribute-font(font: Optional<Font>): ArcAlphabetIndexerAttribute--><!--Device-ArcAlphabetIndexerAttribute-font(font: Optional<Font>): ArcAlphabetIndexerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| font | Optional&lt;Font&gt; | Yes | Default font style of the index items.<br>Default value:<br>{<br>size:'13.0fp',<br> style:FontStyle.Normal,<br> weight:500,<br> family:'HarmonyOS Sans'<br>} |
+| font | [Optional](../arkts-components/arkts-arkui-optional-t.md)<Font> | Yes | Default font style of the index items.<br>Default value:<br>{<br>size:'13.0fp',<br  > style:FontStyle.Normal,<br> weight:500,<br> family:'HarmonyOS Sans'<br>} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArcAlphabetIndexerAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## itemSize
 
@@ -106,19 +114,21 @@ Sets the size of the index item area.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcAlphabetIndexerAttribute-itemSize(size: Optional<LengthMetrics>): ArcAlphabetIndexerAttribute--><!--Device-ArcAlphabetIndexerAttribute-itemSize(size: Optional<LengthMetrics>): ArcAlphabetIndexerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | Optional&lt;LengthMetrics&gt; | Yes | Size of the index item area. For the circular item area, this representsthe diameter of the circle. Percentage values are not supported.<br>Default value: **24.0**<br>Unit: vp |
+| size | [Optional](../arkts-components/arkts-arkui-optional-t.md)<LengthMetrics> | Yes | Size of the index item area. For the circular item area, this represents the diameter of the circle. Percentage values are not supported.<br>Default value: **24.0**<br>Unit: vp |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArcAlphabetIndexerAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## onSelect
 
@@ -132,19 +142,21 @@ Triggered when an index item is selected. The return value is the index of the s
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcAlphabetIndexerAttribute-onSelect(handler: Optional<OnSelectCallback>): ArcAlphabetIndexerAttribute--><!--Device-ArcAlphabetIndexerAttribute-onSelect(handler: Optional<OnSelectCallback>): ArcAlphabetIndexerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | Optional&lt;OnSelectCallback&gt; | Yes | Callback used to return the result. |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)<OnSelectCallback> | Yes | Callback used to return the result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArcAlphabetIndexerAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## popupBackground
 
@@ -158,19 +170,21 @@ Sets the background color of the pop-up window.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcAlphabetIndexerAttribute-popupBackground(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute--><!--Device-ArcAlphabetIndexerAttribute-popupBackground(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Optional&lt;ColorMetrics&gt; | Yes | Background color of the pop-up window.<br>Default value: **0xD8404040**,displayed as dark gray with slight transparency |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)<ColorMetrics> | Yes | Background color of the pop-up window.<br>Default value: **0xD8404040**,displayed as dark gray with slight transparency |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArcAlphabetIndexerAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## popupBackgroundBlurStyle
 
@@ -178,17 +192,18 @@ Sets the background color of the pop-up window.
 popupBackgroundBlurStyle(style: Optional<BlurStyle>): ArcAlphabetIndexerAttribute
 ```
 
-Sets the background blur style of the pop-up window. If this API is not used, the blur is disabled by default. The
-corresponding value is **NONE** in **BlurStyle**.
+Sets the background blur style of the pop-up window. If this API is not used, the blur is disabled by default. The corresponding value is **NONE** in **BlurStyle**.
 
 > **NOTE**
 
-> After configuring the pop-up window background blur style with **popupBackgroundBlurStyle**, avoid applying
+> After configuring the pop-up window background blur style with **popupBackgroundBlurStyle**, avoid applying  
 > background colors via [popupBackground](arkts-arkui-arcalphabetindexerattribute-c.md#popupbackground-1).
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcAlphabetIndexerAttribute-popupBackgroundBlurStyle(style: Optional<BlurStyle>): ArcAlphabetIndexerAttribute--><!--Device-ArcAlphabetIndexerAttribute-popupBackgroundBlurStyle(style: Optional<BlurStyle>): ArcAlphabetIndexerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -196,13 +211,13 @@ corresponding value is **NONE** in **BlurStyle**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | Optional&lt;BlurStyle&gt; | Yes | Background blur style of the pop-up window. |
+| style | [Optional](../arkts-components/arkts-arkui-optional-t.md)<BlurStyle> | Yes | Background blur style of the pop-up window. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArcAlphabetIndexerAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## popupColor
 
@@ -216,19 +231,21 @@ Sets the text color for the pop-up window.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcAlphabetIndexerAttribute-popupColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute--><!--Device-ArcAlphabetIndexerAttribute-popupColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Optional&lt;ColorMetrics&gt; | Yes | Text color of the pop-up window.<br>Default value: **0xFFFFFF**,displayed as white |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)<ColorMetrics> | Yes | Text color of the pop-up window.<br>Default value: **0xFFFFFF**,displayed as white |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArcAlphabetIndexerAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## popupFont
 
@@ -242,19 +259,21 @@ Sets the font style of the pop-up window.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcAlphabetIndexerAttribute-popupFont(font: Optional<Font>): ArcAlphabetIndexerAttribute--><!--Device-ArcAlphabetIndexerAttribute-popupFont(font: Optional<Font>): ArcAlphabetIndexerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| font | Optional&lt;Font&gt; | Yes | Font style of the pop-up window.<br>Default value:<br>{<br>size:'19.0fp',<br>style:FontStyle.Normal,<br> weight:500,<br> family:'HarmonyOS Sans'<br>} |
+| font | [Optional](../arkts-components/arkts-arkui-optional-t.md)<Font> | Yes | Font style of the pop-up window.<br>Default value:<br>{<br>size:'19.0fp',<br>style:FontStyle.Normal,<br> weight:500,<br> family:'HarmonyOS Sans'<br>} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArcAlphabetIndexerAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## selected
 
@@ -268,19 +287,21 @@ Sets the index of the selected item.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcAlphabetIndexerAttribute-selected(index: Optional<number>): ArcAlphabetIndexerAttribute--><!--Device-ArcAlphabetIndexerAttribute-selected(index: Optional<number>): ArcAlphabetIndexerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | Optional&lt;number&gt; | Yes | Index of the selected item.<br>Default value: **0**<br>This parameter supportstwo-way binding through [!!](../../../../ui/state-management/arkts-new-binding.md). |
+| index | [Optional](../arkts-components/arkts-arkui-optional-t.md)<number> | Yes | Index of the selected item.<br>Default value: **0**<br>This parameter supports two-way binding through [!!](../../../../ui/state-management/arkts-new-binding.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArcAlphabetIndexerAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## selectedBackgroundColor
 
@@ -294,19 +315,21 @@ Sets the background color of the selected item.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcAlphabetIndexerAttribute-selectedBackgroundColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute--><!--Device-ArcAlphabetIndexerAttribute-selectedBackgroundColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Optional&lt;ColorMetrics&gt; | Yes | Background color of the selected item.<br>Default value: **0x1F71FF**,displayed as dark blue |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)<ColorMetrics> | Yes | Background color of the selected item.<br>Default value: **0x1F71FF**,displayed as dark blue |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArcAlphabetIndexerAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## selectedColor
 
@@ -320,19 +343,21 @@ Sets the text color of the selected item.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcAlphabetIndexerAttribute-selectedColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute--><!--Device-ArcAlphabetIndexerAttribute-selectedColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Optional&lt;ColorMetrics&gt; | Yes | Text color of the selected item.<br>Default value: **0xFFFFFF**,displayed as white |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)<ColorMetrics> | Yes | Text color of the selected item.<br>Default value: **0xFFFFFF**,displayed as white |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArcAlphabetIndexerAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## selectedFont
 
@@ -346,19 +371,21 @@ Sets the font style of the selected item, including size, weight, style, and fon
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcAlphabetIndexerAttribute-selectedFont(font: Optional<Font>): ArcAlphabetIndexerAttribute--><!--Device-ArcAlphabetIndexerAttribute-selectedFont(font: Optional<Font>): ArcAlphabetIndexerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| font | Optional&lt;Font&gt; | Yes | Font style of the selected item.<br>Default value: {<br>size:'13.0fp',<br> style:FontStyle.Normal,<br> weight:500,<br> family:'HarmonyOS Sans'<br>} |
+| font | [Optional](../arkts-components/arkts-arkui-optional-t.md)<Font> | Yes | Font style of the selected item.<br>Default value: {<br>size:'13.0fp',<br> style:FontStyle.Normal,<br> weight:500,<br> family:'HarmonyOS Sans'<br>} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArcAlphabetIndexerAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## usePopup
 
@@ -372,17 +399,19 @@ Sets whether to display the pop-up window.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcAlphabetIndexerAttribute-usePopup(enabled: Optional<boolean>): ArcAlphabetIndexerAttribute--><!--Device-ArcAlphabetIndexerAttribute-usePopup(enabled: Optional<boolean>): ArcAlphabetIndexerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | Optional&lt;boolean&gt; | Yes | Whether to display the pop-up window.<br>**true**: yes; **false**: no<br>Default value: **false** |
+| enabled | [Optional](../arkts-components/arkts-arkui-optional-t.md)<boolean> | Yes | Whether to display the pop-up window.<br>**true**: yes; **false**: no<br>Default value: **false** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArcAlphabetIndexerAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 

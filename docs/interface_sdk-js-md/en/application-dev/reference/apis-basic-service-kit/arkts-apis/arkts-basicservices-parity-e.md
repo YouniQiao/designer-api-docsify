@@ -4,6 +4,8 @@ Enumerates the parity check modes.
 
 **Since:** 19
 
+<!--Device-serialManager-enum Parity--><!--Device-serialManager-enum Parity-End-->
+
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## PARITY_NONE
@@ -15,6 +17,8 @@ PARITY_NONE = 0
 No parity.
 
 **Since:** 19
+
+<!--Device-Parity-PARITY_NONE = 0--><!--Device-Parity-PARITY_NONE = 0-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -28,6 +32,8 @@ Odd parity.
 
 **Since:** 19
 
+<!--Device-Parity-PARITY_ODD = 1--><!--Device-Parity-PARITY_ODD = 1-End-->
+
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## PARITY_EVEN
@@ -39,6 +45,8 @@ PARITY_EVEN = 2
 Even parity.
 
 **Since:** 19
+
+<!--Device-Parity-PARITY_EVEN = 2--><!--Device-Parity-PARITY_EVEN = 2-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -52,6 +60,8 @@ Mark parity, whose parity bit is fixed at **1**.
 
 **Since:** 19
 
+<!--Device-Parity-PARITY_MARK = 3--><!--Device-Parity-PARITY_MARK = 3-End-->
+
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## PARITY_SPACE
@@ -63,6 +73,8 @@ PARITY_SPACE = 4
 Space parity, whose parity bit is fixed at **0**.
 
 **Since:** 19
+
+<!--Device-Parity-PARITY_SPACE = 4--><!--Device-Parity-PARITY_SPACE = 4-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 

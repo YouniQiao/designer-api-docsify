@@ -4,6 +4,8 @@ Represents a **File** object opened by **open()**.
 
 **Since:** 9
 
+<!--Device-unnamed-declare interface File--><!--Device-unnamed-declare interface File-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## Modules to Import
@@ -21,6 +23,8 @@ getParent(): string
 Obtains the parent directory of this file object.
 
 **Since:** 11
+
+<!--Device-File-getParent(): string--><!--Device-File-getParent(): string-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -54,10 +58,11 @@ fileIo.closeSync(file);
 lock(exclusive?: boolean): Promise<void>
 ```
 
-Applies an exclusive lock or a shared lock on this file in blocking mode. This API uses a promise to return the
-result.
+Applies an exclusive lock or a shared lock on this file in blocking mode. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-File-lock(exclusive?: boolean): Promise<void>--><!--Device-File-lock(exclusive?: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -65,13 +70,13 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclusive | boolean | No | Lock to apply.<br> The value **true** means an exclusive lock, and the value**false** (default) means a shared lock. |
+| exclusive | boolean | No | Lock to apply.<br> The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -107,10 +112,11 @@ file.lock(true).then(() => {
 lock(callback: AsyncCallback<void>): void
 ```
 
-Applies an exclusive lock or a shared lock on this file in blocking mode. This API uses an asynchronous callback to
-return the result.
+Applies an exclusive lock or a shared lock on this file in blocking mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-File-lock(callback: AsyncCallback<void>): void--><!--Device-File-lock(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -118,7 +124,7 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -155,10 +161,11 @@ file.lock((err: BusinessError) => {
 lock(exclusive: boolean, callback: AsyncCallback<void>): void
 ```
 
-Applies an exclusive lock or a shared lock on this file in blocking mode. This API uses an asynchronous callback to
-return the result.
+Applies an exclusive lock or a shared lock on this file in blocking mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-File-lock(exclusive: boolean, callback: AsyncCallback<void>): void--><!--Device-File-lock(exclusive: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -166,8 +173,8 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclusive | boolean | Yes | Lock to apply.<br> The value **true** means an exclusive lock, and the value**false** (default) means a shared lock. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| exclusive | boolean | Yes | Lock to apply.<br> The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -208,13 +215,15 @@ Applies an exclusive lock or a shared lock on this file in non-blocking mode.
 
 **Since:** 9
 
+<!--Device-File-tryLock(exclusive?: boolean): void--><!--Device-File-tryLock(exclusive?: boolean): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclusive | boolean | No | Lock to apply.<br> The value **true** means an exclusive lock, and the value**false** (default) means a shared lock. |
+| exclusive | boolean | No | Lock to apply.<br> The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
 
 **Error codes:**
 
@@ -247,6 +256,8 @@ unlock(): void
 Unlocks a file. This API returns the result synchronously.
 
 **Since:** 9
+
+<!--Device-File-unlock(): void--><!--Device-File-unlock(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -287,6 +298,8 @@ FD of the file.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-File-readonly fd: number--><!--Device-File-readonly fd: number-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## name
@@ -301,6 +314,8 @@ Name of the file.
 
 **Since:** 10
 
+<!--Device-File-readonly name: string--><!--Device-File-readonly name: string-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## path
@@ -314,6 +329,8 @@ Path of the file.
 **Type:** string
 
 **Since:** 10
+
+<!--Device-File-readonly path: string--><!--Device-File-readonly path: string-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

@@ -8,6 +8,8 @@ Inherited from [DatePickerOptions](arkts-arkui-datepickeroptions-i.md).
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface DatePickerDialogOptions extends DatePickerOptions--><!--Device-unnamed-declare interface DatePickerDialogOptions extends DatePickerOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## acceptButtonStyle
@@ -20,11 +22,7 @@ Style of the accept button.
 
 **NOTE**
 
-1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**。
-If both are set to **true**, the **primary** field will remain at the default value of **false**.
-2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes.
-In addition, even if the button style is set to [ROUNDED_RECTANGLE](arkts-arkui-buttontype-e.md),
-the displayed effect is still a capsule button ([Capsule](arkts-arkui-buttontype-e.md)).
+1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**。If both are set to **true**, the **primary** field will remain at the default value of **false**.2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes.In addition, even if the button style is set to [ROUNDED_RECTANGLE](arkts-arkui-buttontype-e.md),the displayed effect is still a capsule button ([Capsule](arkts-arkui-buttontype-e.md)).
 
 **Type:** PickerDialogButtonStyle
 
@@ -33,6 +31,8 @@ the displayed effect is still a capsule button ([Capsule](arkts-arkui-buttontype
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DatePickerDialogOptions-acceptButtonStyle?: PickerDialogButtonStyle--><!--Device-DatePickerDialogOptions-acceptButtonStyle?: PickerDialogButtonStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,6 +56,8 @@ Default value: **DialogAlignment.Default**
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DatePickerDialogOptions-alignment?: DialogAlignment--><!--Device-DatePickerDialogOptions-alignment?: DialogAlignment-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundBlurStyle
@@ -70,9 +72,7 @@ Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
 **NOTE**
 
-Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a
-value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the
-expected visual effect.
+Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
 **Type:** BlurStyle
 
@@ -83,6 +83,8 @@ expected visual effect.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DatePickerDialogOptions-backgroundBlurStyle?: BlurStyle--><!--Device-DatePickerDialogOptions-backgroundBlurStyle?: BlurStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -102,6 +104,8 @@ Options for customizing the background blur style.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-DatePickerDialogOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions--><!--Device-DatePickerDialogOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundColor
@@ -116,8 +120,7 @@ Default value: **Color.Transparent**
 
 **NOTE**
 
-When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyle** must be set to
-**BlurStyle.NONE**; otherwise, the color display may not meet the expected effect.
+When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyle** must be set to **BlurStyle.NONE**; otherwise, the color display may not meet the expected effect.
 
 **Type:** ResourceColor
 
@@ -128,6 +131,8 @@ When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyl
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DatePickerDialogOptions-backgroundColor?: ResourceColor--><!--Device-DatePickerDialogOptions-backgroundColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -147,6 +152,8 @@ Options for customizing the background effect.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-DatePickerDialogOptions-backgroundEffect?: BackgroundEffectOptions--><!--Device-DatePickerDialogOptions-backgroundEffect?: BackgroundEffectOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## canLoop
@@ -161,11 +168,9 @@ Default value: **true**
 
 **NOTE**
 
-**true**: Cyclic scrolling is enabled, where the year values increment or decrement with month cycling, and month
-values increment or decrement with day cycling.
+**true**: Cyclic scrolling is enabled, where the year values increment or decrement with month cycling, and month values increment or decrement with day cycling.
 
-**false**: Cyclic scrolling is disabled, preventing out-of-bounds scrolling in year, month, and day columns and
-cross-column value synchronization.
+**false**: Cyclic scrolling is disabled, preventing out-of-bounds scrolling in year, month, and day columns and cross-column value synchronization.
 
 **Type:** boolean
 
@@ -176,6 +181,8 @@ cross-column value synchronization.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-DatePickerDialogOptions-canLoop?: boolean--><!--Device-DatePickerDialogOptions-canLoop?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -189,11 +196,7 @@ Style of the cancel button.
 
 **NOTE**
 
-1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**.
-If both are set to **true**, the **primary** field will remain at the default value of **false**.
-2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes.
-In addition, even if the button style is set to [ROUNDED_RECTANGLE](arkts-arkui-buttontype-e.md),
-the displayed effect is still a capsule button ([Capsule](arkts-arkui-buttontype-e.md)).
+1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**.If both are set to **true**, the **primary** field will remain at the default value of **false**.2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes.In addition, even if the button style is set to [ROUNDED_RECTANGLE](arkts-arkui-buttontype-e.md),the displayed effect is still a capsule button ([Capsule](arkts-arkui-buttontype-e.md)).
 
 **Type:** PickerDialogButtonStyle
 
@@ -203,6 +206,8 @@ the displayed effect is still a capsule button ([Capsule](arkts-arkui-buttontype
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DatePickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle--><!--Device-DatePickerDialogOptions-cancelButtonStyle?: PickerDialogButtonStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## dateTimeOptions
@@ -211,17 +216,13 @@ the displayed effect is still a capsule button ([Capsule](arkts-arkui-buttontype
 dateTimeOptions?: DateTimeOptions
 ```
 
-Whether to display a leading zero for the hours and minutes. Currently only the configuration of the **hour** and
-**minute** parameters is supported.
+Whether to display a leading zero for the hours and minutes. Currently only the configuration of the **hour** and **minute** parameters is supported.
 
 Default value:
 
-**hour**: For the 24-hour format, the default value is **"2-digit"**, meaning the hour is displayed as a two-digit
-number. If the actual value is less than 10, a leading zero is added, displayed as "0X". For the 12-hour format,
-the default value is **"numeric"**, meaning no leading zero.
+**hour**: For the 24-hour format, the default value is **"2-digit"**, meaning the hour is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X". For the 12-hour format,the default value is **"numeric"**, meaning no leading zero.
 
-**minute**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the
-actual value is less than 10, a leading zero is added, displayed as "0X".
+**minute**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".
 
 **Type:** DateTimeOptions
 
@@ -234,6 +235,8 @@ actual value is less than 10, a leading zero is added, displayed as "0X".
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DatePickerDialogOptions-dateTimeOptions?: DateTimeOptions--><!--Device-DatePickerDialogOptions-dateTimeOptions?: DateTimeOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -257,6 +260,8 @@ Default value: { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Re
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DatePickerDialogOptions-disappearTextStyle?: PickerTextStyle--><!--Device-DatePickerDialogOptions-disappearTextStyle?: PickerTextStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableHapticFeedback
@@ -267,16 +272,14 @@ enableHapticFeedback?: boolean
 
 Whether to enable haptic feedback.
 
-- **true**: Enable haptic feedback.
+- **true**: Enable haptic feedback.  
 - **false**: Disable haptic feedback.
 
 Default value: **true**
 
 **NOTE**
 
-1. Whether this parameter takes effect after being set to **true** depends on hardware support.
-2. To enable haptic feedback, you must declare the following permission under **requestPermissions** in **module**
-in **src/main/module.json5** of the project:
+1. Whether this parameter takes effect after being set to **true** depends on hardware support.2. To enable haptic feedback, you must declare the following permission under **requestPermissions** in **module** in **src/main/module.json5** of the project:
 
 "requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
 
@@ -290,6 +293,8 @@ in **src/main/module.json5** of the project:
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-DatePickerDialogOptions-enableHapticFeedback?: boolean--><!--Device-DatePickerDialogOptions-enableHapticFeedback?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableHoverMode
@@ -300,7 +305,7 @@ enableHoverMode?: boolean
 
 Whether to respond when the device is in semi-folded mode.
 
-- **true**: Respond when the device is in semi-folded mode.
+- **true**: Respond when the device is in semi-folded mode.  
 - **false**: Do not respond when the device is in semi-folded mode.
 
 Default value: **false**
@@ -314,6 +319,8 @@ Default value: **false**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-DatePickerDialogOptions-enableHoverMode?: boolean--><!--Device-DatePickerDialogOptions-enableHoverMode?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -337,6 +344,8 @@ Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-DatePickerDialogOptions-hoverModeArea?: HoverModeAreaType--><!--Device-DatePickerDialogOptions-hoverModeArea?: HoverModeAreaType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## lunar
@@ -347,15 +356,14 @@ lunar?: boolean
 
 Whether to display dates in lunar calendar format.
 
-- **true**: Display dates in lunar calendar format.
+- **true**: Display dates in lunar calendar format.  
 - **false**: Do not display dates in lunar calendar format.
 
 Default value: **false**
 
 **NOTE**
 
-This attribute takes effect only in Simplified Chinese and Traditional Chinese locales; it has no effect in other
-locales.
+This attribute takes effect only in Simplified Chinese and Traditional Chinese locales; it has no effect in other locales.
 
 **Type:** boolean
 
@@ -364,6 +372,8 @@ locales.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DatePickerDialogOptions-lunar?: boolean--><!--Device-DatePickerDialogOptions-lunar?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -375,15 +385,14 @@ lunarSwitch?: boolean
 
 Whether to display the lunar calendar switch.
 
-- **true**: Display the lunar calendar switch.
+- **true**: Display the lunar calendar switch.  
 - **false**: Do not display the lunar calendar switch.
 
 Default value: **false**
 
 **NOTE**
 
-After being enabled, this attribute takes effect only in Simplified Chinese and Traditional Chinese; it has no
-effect in other locales. Therefore, you are advised to set this attribute to **false** in other locales.
+After being enabled, this attribute takes effect only in Simplified Chinese and Traditional Chinese; it has no effect in other locales. Therefore, you are advised to set this attribute to **false** in other locales.
 
 **Type:** boolean
 
@@ -394,6 +403,8 @@ effect in other locales. Therefore, you are advised to set this attribute to **f
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DatePickerDialogOptions-lunarSwitch?: boolean--><!--Device-DatePickerDialogOptions-lunarSwitch?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -427,6 +438,8 @@ strokeColor: Color.White }.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-DatePickerDialogOptions-lunarSwitchStyle?: LunarSwitchStyle--><!--Device-DatePickerDialogOptions-lunarSwitchStyle?: LunarSwitchStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## maskRect
@@ -435,8 +448,7 @@ strokeColor: Color.White }.
 maskRect?: Rectangle
 ```
 
-Mask area of the dialog box. Events outside the mask area are transparently transmitted, and events within the mask
-area are not.
+Mask area of the dialog box. Events outside the mask area are transparently transmitted, and events within the mask area are not.
 
 Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**
 
@@ -449,6 +461,8 @@ Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DatePickerDialogOptions-maskRect?: Rectangle--><!--Device-DatePickerDialogOptions-maskRect?: Rectangle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -472,6 +486,8 @@ Default value: **{ dx: 0 , dy: 0 }**
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DatePickerDialogOptions-offset?: Offset--><!--Device-DatePickerDialogOptions-offset?: Offset-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onAccept
@@ -484,8 +500,7 @@ Callback invoked when the OK button in the dialog box is clicked.
 
 **NOTE**
 
-This API is supported since API version 8 and deprecated since API version 10. You are advised to use
-**onDateAccept** instead.
+This API is supported since API version 8 and deprecated since API version 10. You are advised to use **onDateAccept** instead.
 
 **Type:** (value: DatePickerResult) => void
 
@@ -494,6 +509,8 @@ This API is supported since API version 8 and deprecated since API version 10. Y
 **Deprecated since:** 10
 
 **Substitutes:** onDateAccept
+
+<!--Device-DatePickerDialogOptions-onAccept?: (value: DatePickerResult) => void--><!--Device-DatePickerDialogOptions-onAccept?: (value: DatePickerResult) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -511,6 +528,8 @@ Callback invoked when the Cancel button in the dialog box is clicked.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DatePickerDialogOptions-onCancel?: VoidCallback--><!--Device-DatePickerDialogOptions-onCancel?: VoidCallback-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onChange
@@ -523,8 +542,7 @@ Callback invoked when the selected item in the picker changes.
 
 **NOTE**
 
-This API is supported since API version 8 and deprecated since API version 10. You are advised to use
-**onDateChange** instead.
+This API is supported since API version 8 and deprecated since API version 10. You are advised to use **onDateChange** instead.
 
 **Type:** (value: DatePickerResult) => void
 
@@ -533,6 +551,8 @@ This API is supported since API version 8 and deprecated since API version 10. Y
 **Deprecated since:** 10
 
 **Substitutes:** onDateChange
+
+<!--Device-DatePickerDialogOptions-onChange?: (value: DatePickerResult) => void--><!--Device-DatePickerDialogOptions-onChange?: (value: DatePickerResult) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -546,8 +566,7 @@ Callback invoked when the OK button in the dialog box is clicked.
 
 **NOTE**
 
-When **showTime** is set to **true**, the hour and minute in the value returned by the callback are the hour and
-minute selected in the picker. Otherwise, the hour and minute are the hour and minute of the system time.
+When **showTime** is set to **true**, the hour and minute in the value returned by the callback are the hour and minute selected in the picker. Otherwise, the hour and minute are the hour and minute of the system time.
 
 **Type:** Callback<Date>
 
@@ -556,6 +575,8 @@ minute selected in the picker. Otherwise, the hour and minute are the hour and m
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DatePickerDialogOptions-onDateAccept?: Callback<Date>--><!--Device-DatePickerDialogOptions-onDateAccept?: Callback<Date>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -569,8 +590,7 @@ Callback triggered when date selection changes through scrolling in the dialog b
 
 **NOTE**
 
-When **showTime** is set to **true**, the hour and minute in the value returned by the callback are the hour and
-minute selected in the picker. Otherwise, the hour and minute are the hour and minute of the system time.
+When **showTime** is set to **true**, the hour and minute in the value returned by the callback are the hour and minute selected in the picker. Otherwise, the hour and minute are the hour and minute of the system time.
 
 **Type:** Callback<Date>
 
@@ -579,6 +599,8 @@ minute selected in the picker. Otherwise, the hour and minute are the hour and m
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DatePickerDialogOptions-onDateChange?: Callback<Date>--><!--Device-DatePickerDialogOptions-onDateChange?: Callback<Date>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -592,13 +614,7 @@ Event callback after the dialog box appears.
 
 **NOTE**
 
-1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) >
-onWillDisappear > onDidDisappear.
-2. You can set the callback event for changing the dialog box display effect in **onDidAppear**.
-The settings take effect next time the dialog box appears.
-3. If the user closes the dialog box immediately after it appears, **onWillDisappear** is
-invoked before **onDidAppear**.
-4. If the dialog box is closed before its entrance animation is finished, this callback is not invoked.
+1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) >onWillDisappear > onDidDisappear.2. You can set the callback event for changing the dialog box display effect in **onDidAppear**.The settings take effect next time the dialog box appears.3. If the user closes the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.4. If the dialog box is closed before its entrance animation is finished, this callback is not invoked.
 
 **Type:** VoidCallback
 
@@ -607,6 +623,8 @@ invoked before **onDidAppear**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DatePickerDialogOptions-onDidAppear?: VoidCallback--><!--Device-DatePickerDialogOptions-onDidAppear?: VoidCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -620,8 +638,7 @@ Event callback after the dialog box disappears.
 
 **NOTE**
 
-1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) >
-onWillDisappear > onDidDisappear.
+1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) >onWillDisappear > onDidDisappear.
 
 **Type:** VoidCallback
 
@@ -630,6 +647,8 @@ onWillDisappear > onDidDisappear.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DatePickerDialogOptions-onDidDisappear?: VoidCallback--><!--Device-DatePickerDialogOptions-onDidDisappear?: VoidCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -643,10 +662,7 @@ Event callback when the dialog box is about to appear.
 
 **NOTE**
 
-1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) >
-onWillDisappear > onDidDisappear.
-2. You can set the callback event for changing the dialog box display effect in **onWillAppear**.
-The settings take effect next time the dialog box appears.
+1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) >onWillDisappear > onDidDisappear.2. You can set the callback event for changing the dialog box display effect in **onWillAppear**.The settings take effect next time the dialog box appears.
 
 **Type:** VoidCallback
 
@@ -655,6 +671,8 @@ The settings take effect next time the dialog box appears.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DatePickerDialogOptions-onWillAppear?: VoidCallback--><!--Device-DatePickerDialogOptions-onWillAppear?: VoidCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -668,9 +686,7 @@ Event callback when the dialog box is about to disappear.
 
 **NOTE**
 
-1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) >
-onWillDisappear > onDidDisappear.
-2. If the user closes the dialog box immediately after it appears, onWillDisappear is invoked before onDidAppear.
+1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) >onWillDisappear > onDidDisappear.2. If the user closes the dialog box immediately after it appears, onWillDisappear is invoked before onDidAppear.
 
 **Type:** VoidCallback
 
@@ -679,6 +695,8 @@ onWillDisappear > onDidDisappear.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DatePickerDialogOptions-onWillDisappear?: VoidCallback--><!--Device-DatePickerDialogOptions-onWillDisappear?: VoidCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -702,6 +720,8 @@ Default value: { color: '#ff007dff', font: { size: '20vp', weight: FontWeight.Me
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DatePickerDialogOptions-selectedTextStyle?: PickerTextStyle--><!--Device-DatePickerDialogOptions-selectedTextStyle?: PickerTextStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## shadow
@@ -712,8 +732,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Shadow of the dialog box.
 
-Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and
-**ShadowStyle.OUTER_FLOATING_SM** otherwise
+Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and **ShadowStyle.OUTER_FLOATING_SM** otherwise
 
 **Type:** ShadowOptions | ShadowStyle
 
@@ -722,6 +741,8 @@ Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dial
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DatePickerDialogOptions-shadow?: ShadowOptions | ShadowStyle--><!--Device-DatePickerDialogOptions-shadow?: ShadowOptions | ShadowStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -733,16 +754,14 @@ showTime?: boolean
 
 Whether to display the time picker in the dialog box.
 
-- **true**: Display the time picker.
+- **true**: Display the time picker.  
 - **false**: Do not display the time picker.
 
 Default value: **false**
 
 **NOTE**
 
-1. When showTime is true, clicking the date in the dialog box header toggles between date-only and date+time views.
-2. When showTime is true, the mode parameter is ignored, meaning the date picker always shows year, month,
-and day columns.
+1. When showTime is true, clicking the date in the dialog box header toggles between date-only and date+time views.2. When showTime is true, the mode parameter is ignored, meaning the date picker always shows year, month,and day columns.
 
 **Type:** boolean
 
@@ -754,6 +773,8 @@ and day columns.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DatePickerDialogOptions-showTime?: boolean--><!--Device-DatePickerDialogOptions-showTime?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## systemMaterial
@@ -762,8 +783,7 @@ and day columns.
 systemMaterial?: SystemUiMaterial
 ```
 
-Set system-styled materials for dialog. Different materials have different effects,
-which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
+Set system-styled materials for dialog. Different materials have different effects,which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
 
 **Type:** SystemUiMaterial
 
@@ -773,6 +793,8 @@ which can influence backgroundColor, border, shadow, and other visual attributes
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-DatePickerDialogOptions-systemMaterial?: SystemUiMaterial--><!--Device-DatePickerDialogOptions-systemMaterial?: SystemUiMaterial-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## textStyle
@@ -781,8 +803,7 @@ which can influence backgroundColor, border, shadow, and other visual attributes
 textStyle?: PickerTextStyle
 ```
 
-Text color, font size, and font weight of candidate items (the first item immediately above or below the selected
-item).
+Text color, font size, and font weight of candidate items (the first item immediately above or below the selected item).
 
 Default value: { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } }
 
@@ -796,6 +817,8 @@ Default value: { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Re
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DatePickerDialogOptions-textStyle?: PickerTextStyle--><!--Device-DatePickerDialogOptions-textStyle?: PickerTextStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## useMilitaryTime
@@ -804,18 +827,16 @@ Default value: { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Re
 useMilitaryTime?: boolean
 ```
 
-Whether the time picker in the dialog box is in 24-hour format. This parameter has effect only when **showTime** is
-**true**.
+Whether the time picker in the dialog box is in 24-hour format. This parameter has effect only when **showTime** is **true**.
 
-- **true**: 24-hour format.
+- **true**: 24-hour format.  
 - **false**: 12-hour format.
 
 Default value: **false**
 
 **NOTE**
 
-When 12-hour format is used in the time picker, the AM/PM indicator does not automatically update when the hour
-value changes.
+When 12-hour format is used in the time picker, the AM/PM indicator does not automatically update when the hour value changes.
 
 **Type:** boolean
 
@@ -826,6 +847,8 @@ value changes.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DatePickerDialogOptions-useMilitaryTime?: boolean--><!--Device-DatePickerDialogOptions-useMilitaryTime?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

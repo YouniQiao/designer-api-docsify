@@ -6,6 +6,8 @@ Represents the plain text data. It is a child class of [Text](arkts-arkdata-text
 
 **Since:** 10
 
+<!--Device-unifiedDataChannel-class PlainText extends Text--><!--Device-unifiedDataChannel-class PlainText extends Text-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Indicates the abstract of text
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PlainText-abstract?: string--><!--Device-PlainText-abstract?: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## textContent
@@ -47,6 +51,8 @@ Indicates the content of text
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PlainText-set textContent(value: string)--><!--Device-PlainText-set textContent(value: string)-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 

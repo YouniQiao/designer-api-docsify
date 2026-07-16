@@ -12,12 +12,13 @@ import { notificationManager } from '@kit.NotificationKit';
 function setDistributedEnabledBySlot(slot: SlotType, deviceType: string, enabled: boolean): Promise<void>
 ```
 
-Sets whether notifications of a specified slot can be sent to devices of a specified type through cross-device
-collaboration. This API uses a promise to return the result.
+Sets whether notifications of a specified slot can be sent to devices of a specified type through cross-device collaboration. This API uses a promise to return the result.
 
 **Since:** 18
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function setDistributedEnabledBySlot(slot: SlotType, deviceType: string, enabled: boolean): Promise<void>--><!--Device-notificationManager-function setDistributedEnabledBySlot(slot: SlotType, deviceType: string, enabled: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -27,15 +28,15 @@ collaboration. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slot | SlotType | Yes | Types of the notification slot. |
-| deviceType | string | Yes | Device type.<br>Since API version 18, the following device types are supported:<br>-**headset**: wearable audio device<br>- **liteWearable**: lite wearable<br>- **wearable**: wearable<br>SinceAPI version 20, the following device types are supported:<br>- **headset**: wearable audio device<br>-**liteWearable**: lite wearable<br>- **wearable**: wearable<br>- **current**: current device<br>- **2in1**: PC&lt;br&gt;- **tablet**: tablet |
-| enabled | boolean | Yes | Whether to enable cross-device collaboration for notifications. The value **true**means to enable cross-device collaboration, and **false** means the opposite. |
+| slot | [SlotType](arkts-notification-slottype-e-sys.md) | Yes | Types of the notification slot. |
+| deviceType | string | Yes | Device type.<br>Since API version 18, the following device types are supported:<br>-**headset**: wearable audio device<br>- **liteWearable**: lite wearable<br>- **wearable**: wearable<br>Since API version 20, the following device types are supported:<br>- **headset**: wearable audio device<br>-**liteWearable**: lite wearable<br>- **wearable**: wearable<br>- **current**: current device<br>- **2in1**: PC<br>- **tablet**: tablet |
+| enabled | boolean | Yes | Whether to enable cross-device collaboration for notifications. The value **true** means to enable cross-device collaboration, and **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -1,5 +1,11 @@
 # listAliases
 
+## 导入模块
+
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+```
+
 ## listAliases
 
 ```TypeScript
@@ -10,7 +16,9 @@ function listAliases(options: HuksOptions): Promise<HuksListAliasesReturnResult>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-huks-function listAliases(options: HuksOptions): Promise<HuksListAliasesReturnResult>--><!--Device-huks-function listAliases(options: HuksOptions): Promise<HuksListAliasesReturnResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
@@ -18,13 +26,13 @@ function listAliases(options: HuksOptions): Promise<HuksListAliasesReturnResult>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | HuksOptions | 是 | listAliases操作的参数集合。 |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | 是 | listAliases操作的参数集合。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;HuksListAliasesReturnResult&gt; | Promise对象，返回调用接口的结果。当调用成功时，HuksListAliasesReturnResult的成员keyAliases为获取的密钥别名集。 |
+| Promise<HuksListAliasesReturnResult> | Promise对象，返回调用接口的结果。当调用成功时，HuksListAliasesReturnResult的成员keyAliases为获取的密钥别名集。 |
 
 **错误码：**
 

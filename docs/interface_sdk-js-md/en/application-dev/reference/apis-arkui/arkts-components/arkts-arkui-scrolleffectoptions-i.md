@@ -4,6 +4,8 @@ Defines the scroll effect options for the title bar.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare interface ScrollEffectOptions--><!--Device-unnamed-declare interface ScrollEffectOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## blurEffectiveEndOffset
@@ -12,8 +14,7 @@ Defines the scroll effect options for the title bar.
 blurEffectiveEndOffset?: LengthMetrics
 ```
 
-The maximum sliding distance of the content area to enable the final blur style of the title bar.
-Default value: 8vp.
+The maximum sliding distance of the content area to enable the final blur style of the title bar.Default value: 8vp.
 
 **Type:** LengthMetrics
 
@@ -22,6 +23,8 @@ Default value: 8vp.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ScrollEffectOptions-blurEffectiveEndOffset?: LengthMetrics--><!--Device-ScrollEffectOptions-blurEffectiveEndOffset?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,8 +34,7 @@ Default value: 8vp.
 blurEffectiveStartOffset?: LengthMetrics
 ```
 
-The minimum sliding distance of the content area to enable the title bar sliding blur effect.
-Default value: 0vp.
+The minimum sliding distance of the content area to enable the title bar sliding blur effect.Default value: 0vp.
 
 **Type:** LengthMetrics
 
@@ -42,6 +44,8 @@ Default value: 0vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ScrollEffectOptions-blurEffectiveStartOffset?: LengthMetrics--><!--Device-ScrollEffectOptions-blurEffectiveStartOffset?: LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## scrollEffectType
@@ -50,8 +54,7 @@ Default value: 0vp.
 scrollEffectType?: ScrollEffectType
 ```
 
-Title bar scroll blur style.
-Default value: ScrollEffectType.COMMON_BLUR.
+Title bar scroll blur style.Default value: ScrollEffectType.COMMON_BLUR.
 
 **Type:** ScrollEffectType
 
@@ -60,6 +63,8 @@ Default value: ScrollEffectType.COMMON_BLUR.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ScrollEffectOptions-scrollEffectType?: ScrollEffectType--><!--Device-ScrollEffectOptions-scrollEffectType?: ScrollEffectType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

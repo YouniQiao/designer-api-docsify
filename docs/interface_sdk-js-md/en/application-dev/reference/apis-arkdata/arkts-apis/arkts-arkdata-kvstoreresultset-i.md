@@ -1,19 +1,14 @@
 # KVStoreResultSet
 
-Provides APIs for obtaining the distributed KV store result sets. A maximum of eight result sets can be opened at a
-time.
-The **KVStoreResultSet** instance is not refreshed in real time. After using the result set, if the data in the
-database is changed (by being added, deleted, or modified), you need to query the result set again to obtain the
-latest data.
-Before calling any API in **KVStoreResultSet**, you must use **
-[getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-1)
-** to construct a **SingleKVStore** or **DeviceKVStore** instance.
+Provides APIs for obtaining the distributed KV store result sets. A maximum of eight result sets can be opened at a time.The **KVStoreResultSet** instance is not refreshed in real time. After using the result set, if the data in the database is changed (by being added, deleted, or modified), you need to query the result set again to obtain the latest data.Before calling any API in **KVStoreResultSet**, you must use **[getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-1)** to construct a **SingleKVStore** or **DeviceKVStore** instance.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > The cursor start position of **KVStoreResultSet** is **-1**.
 
 **Since:** 9
+
+<!--Device-distributedKVStore-interface KVStoreResultSet--><!--Device-distributedKVStore-interface KVStoreResultSet-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -34,6 +29,8 @@ Obtains the total number of rows in the result set.
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-KVStoreResultSet-getCount(): int--><!--Device-KVStoreResultSet-getCount(): int-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -78,13 +75,15 @@ Obtains the KV pair from the current position.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-KVStoreResultSet-getEntry(): Entry--><!--Device-KVStoreResultSet-getEntry(): Entry-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Entry | KV pair obtained. |
+| [Entry](arkts-arkdata-entry-i.md) | KV pair obtained. |
 
 **Example**
 
@@ -114,13 +113,13 @@ try {
 getPosition(): number
 ```
 
-Obtains the current data read position (position from which data is read) in the result set. The read position
-changes with the operations, such as [moveToFirst](arkts-arkdata-kvstoreresultset-i.md#movetofirst-1) and
-[moveToLast](arkts-arkdata-kvstoreresultset-i.md#movetolast-1).
+Obtains the current data read position (position from which data is read) in the result set. The read position changes with the operations, such as [moveToFirst](arkts-arkdata-kvstoreresultset-i.md#movetofirst-1) and [moveToLast](arkts-arkdata-kvstoreresultset-i.md#movetolast-1).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-KVStoreResultSet-getPosition(): int--><!--Device-KVStoreResultSet-getPosition(): int-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -165,6 +164,8 @@ Checks whether the data read position is after the last row.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-KVStoreResultSet-isAfterLast(): boolean--><!--Device-KVStoreResultSet-isAfterLast(): boolean-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
@@ -207,6 +208,8 @@ Checks whether the data read position is before the first row.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-KVStoreResultSet-isBeforeFirst(): boolean--><!--Device-KVStoreResultSet-isBeforeFirst(): boolean-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
@@ -248,6 +251,8 @@ Checks whether the data read position is the first row.
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-KVStoreResultSet-isFirst(): boolean--><!--Device-KVStoreResultSet-isFirst(): boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -292,6 +297,8 @@ Checks whether the data read position is the last row.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-KVStoreResultSet-isLast(): boolean--><!--Device-KVStoreResultSet-isLast(): boolean-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
@@ -329,12 +336,13 @@ try {
 move(offset: number): boolean
 ```
 
-Moves the data read position with the specified offset from the current position. That is, moves the number of
-rows specified by **offset** from the current position.
+Moves the data read position with the specified offset from the current position. That is, moves the number of rows specified by **offset** from the current position.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-KVStoreResultSet-move(offset: int): boolean--><!--Device-KVStoreResultSet-move(offset: int): boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -342,7 +350,7 @@ rows specified by **offset** from the current position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | Offset to move the data read position. A positive value means to move forward; a negative valuemeans to move backward. If the cursor is beyond the start or end position of the result set, **false** is returned. |
+| offset | number | Yes | Offset to move the data read position. A positive value means to move forward; a negative value means to move backward. If the cursor is beyond the start or end position of the result set, **false** is returned. |
 
 **Return value:**
 
@@ -391,6 +399,8 @@ Moves the data read position to the first row. If the result set is empty, **fal
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-KVStoreResultSet-moveToFirst(): boolean--><!--Device-KVStoreResultSet-moveToFirst(): boolean-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
@@ -434,6 +444,8 @@ Moves the data read position to the last row. If the result set is empty, **fals
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-KVStoreResultSet-moveToLast(): boolean--><!--Device-KVStoreResultSet-moveToLast(): boolean-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
@@ -471,12 +483,13 @@ try {
 moveToNext(): boolean
 ```
 
-Moves the data read position to the next row. If the result set is empty, **false** will be returned. This API
-applies when the whole result set is obtained.
+Moves the data read position to the next row. If the result set is empty, **false** will be returned. This API applies when the whole result set is obtained.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-KVStoreResultSet-moveToNext(): boolean--><!--Device-KVStoreResultSet-moveToNext(): boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -523,13 +536,15 @@ Moves the data read position from 0 to an absolute position.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-KVStoreResultSet-moveToPosition(position: int): boolean--><!--Device-KVStoreResultSet-moveToPosition(position: int): boolean-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | number | Yes | Absolute position to move to. If the absolute position exceeds the start or end position ofthe result set, **false** is returned. |
+| position | number | Yes | Absolute position to move to. If the absolute position exceeds the start or end position of the result set, **false** is returned. |
 
 **Return value:**
 
@@ -572,12 +587,13 @@ try {
 moveToPrevious(): boolean
 ```
 
-Moves the data read position to the previous row. If the result set is empty, **false** will be returned. This
-API applies when the whole result set is obtained.
+Moves the data read position to the previous row. If the result set is empty, **false** will be returned. This API applies when the whole result set is obtained.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-KVStoreResultSet-moveToPrevious(): boolean--><!--Device-KVStoreResultSet-moveToPrevious(): boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 

@@ -1,5 +1,11 @@
 # getAppMemoryLimit
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+```
+
 ## getAppMemoryLimit
 
 ```TypeScript
@@ -10,13 +16,15 @@ function getAppMemoryLimit(): MemoryLimit
 
 **起始版本：** 12
 
+<!--Device-hidebug-function getAppMemoryLimit(): MemoryLimit--><!--Device-hidebug-function getAppMemoryLimit(): MemoryLimit-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| MemoryLimit | Ӧ�ó�������ڴ����ơ� |
+| [MemoryLimit](arkts-performanceanalysis-memorylimit-i.md) | Ӧ�ó�������ڴ����ơ� |
 
 **示例：**
 

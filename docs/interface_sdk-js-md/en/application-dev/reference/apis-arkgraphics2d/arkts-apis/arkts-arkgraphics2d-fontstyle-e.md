@@ -4,6 +4,8 @@ Enumerates the font styles.
 
 **Since:** 12
 
+<!--Device-text-enum FontStyle--><!--Device-text-enum FontStyle-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## NORMAL
@@ -17,6 +19,8 @@ Normal.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FontStyle-NORMAL = 0--><!--Device-FontStyle-NORMAL = 0-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -32,6 +36,8 @@ Italic. If no italic version is available for the current font, the oblique vers
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-FontStyle-ITALIC = 1--><!--Device-FontStyle-ITALIC = 1-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## OBLIQUE
@@ -45,6 +51,8 @@ Oblique. If no oblique version is available for the current font, the italic ver
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FontStyle-OBLIQUE = 2--><!--Device-FontStyle-OBLIQUE = 2-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

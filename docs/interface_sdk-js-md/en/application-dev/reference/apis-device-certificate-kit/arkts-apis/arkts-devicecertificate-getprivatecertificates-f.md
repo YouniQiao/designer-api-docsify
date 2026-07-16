@@ -12,12 +12,13 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 function getPrivateCertificates(): Promise<CMResult>
 ```
 
-Obtains the credentials for installing the application. This API uses a promise to return the result
-asynchronously.
+Obtains the credentials for installing the application. This API uses a promise to return the result asynchronously.
 
 **Since:** 13
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
+
+<!--Device-certificateManager-function getPrivateCertificates(): Promise<CMResult>--><!--Device-certificateManager-function getPrivateCertificates(): Promise<CMResult>-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -25,13 +26,13 @@ asynchronously.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return credentials obtained, which is **credentialList** in[CMResult](arkts-devicecertificate-cmresult-i.md). |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CMResult> | Promise used to return credentials obtained, which is **credentialList** in [CMResult](arkts-devicecertificate-cmresult-i.md). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 
 **Example**

@@ -4,6 +4,8 @@ Style types supported by AI image generation models, like Graffiti, Watercolor.
 
 **Since:** 23
 
+<!--Device-imageGeneration-interface ImageStyle--><!--Device-imageGeneration-interface ImageStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ The style icon information which will display in style list.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ImageStyle-icon: image.PixelMap | string | Resource--><!--Device-ImageStyle-icon: image.PixelMap | string | Resource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -45,6 +49,8 @@ The style name information which will display in style list.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ImageStyle-name: ResourceStr--><!--Device-ImageStyle-name: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

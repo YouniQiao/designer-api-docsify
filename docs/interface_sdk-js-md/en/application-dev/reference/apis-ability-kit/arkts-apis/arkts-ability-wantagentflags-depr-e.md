@@ -8,6 +8,8 @@ Enumerates flags for using a WantAgent.
 
 **Substitutes:** WantAgentFlags
 
+<!--Device-wantAgent-export enum WantAgentFlags--><!--Device-wantAgent-export enum WantAgentFlags-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## ONE_TIME_FLAG
@@ -16,8 +18,7 @@ Enumerates flags for using a WantAgent.
 ONE_TIME_FLAG = 0
 ```
 
-Indicates that the WantAgent can be used only once.
-This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
+Indicates that the WantAgent can be used only once.This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
 
 **Since:** 7
 
@@ -27,6 +28,8 @@ This flag is valid only when OperationType is set to START_ABILITY, START_SERVIC
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WantAgentFlags-ONE_TIME_FLAG = 0--><!--Device-WantAgentFlags-ONE_TIME_FLAG = 0-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## NO_BUILD_FLAG
@@ -35,8 +38,7 @@ This flag is valid only when OperationType is set to START_ABILITY, START_SERVIC
 NO_BUILD_FLAG
 ```
 
-Indicates that null is returned if the WantAgent does not exist.
-This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
+Indicates that null is returned if the WantAgent does not exist.This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
 
 **Since:** 7
 
@@ -46,6 +48,8 @@ This flag is valid only when OperationType is set to START_ABILITY, START_SERVIC
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WantAgentFlags-NO_BUILD_FLAG--><!--Device-WantAgentFlags-NO_BUILD_FLAG-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## CANCEL_PRESENT_FLAG
@@ -54,8 +58,7 @@ This flag is valid only when OperationType is set to START_ABILITY, START_SERVIC
 CANCEL_PRESENT_FLAG
 ```
 
-Indicates that the existing WantAgent should be canceled before a new object is generated.
-This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
+Indicates that the existing WantAgent should be canceled before a new object is generated.This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
 
 **Since:** 7
 
@@ -65,6 +68,8 @@ This flag is valid only when OperationType is set to START_ABILITY, START_SERVIC
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WantAgentFlags-CANCEL_PRESENT_FLAG--><!--Device-WantAgentFlags-CANCEL_PRESENT_FLAG-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## UPDATE_PRESENT_FLAG
@@ -73,8 +78,7 @@ This flag is valid only when OperationType is set to START_ABILITY, START_SERVIC
 UPDATE_PRESENT_FLAG
 ```
 
-Indicates that the system only replaces the extra data of the existing WantAgent with that of the new object.
-This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
+Indicates that the system only replaces the extra data of the existing WantAgent with that of the new object.This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
 
 **Since:** 7
 
@@ -83,6 +87,8 @@ This flag is valid only when OperationType is set to START_ABILITY, START_SERVIC
 **Substitutes:** UPDATE_PRESENT_FLAG
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WantAgentFlags-UPDATE_PRESENT_FLAG--><!--Device-WantAgentFlags-UPDATE_PRESENT_FLAG-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -102,6 +108,8 @@ Indicates that the created WantAgent should be immutable.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WantAgentFlags-CONSTANT_FLAG--><!--Device-WantAgentFlags-CONSTANT_FLAG-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## REPLACE_ELEMENT
@@ -119,6 +127,8 @@ Indicates that the current value of element can be replaced when the WantAgent i
 **Substitutes:** REPLACE_ELEMENT
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WantAgentFlags-REPLACE_ELEMENT--><!--Device-WantAgentFlags-REPLACE_ELEMENT-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -138,6 +148,8 @@ Indicates that the current value of action can be replaced when the WantAgent is
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WantAgentFlags-REPLACE_ACTION--><!--Device-WantAgentFlags-REPLACE_ACTION-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## REPLACE_URI
@@ -155,6 +167,8 @@ Indicates that the current value of uri can be replaced when the WantAgent is tr
 **Substitutes:** REPLACE_URI
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WantAgentFlags-REPLACE_URI--><!--Device-WantAgentFlags-REPLACE_URI-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -174,6 +188,8 @@ Indicates that the current value of entities can be replaced when the WantAgent 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WantAgentFlags-REPLACE_ENTITIES--><!--Device-WantAgentFlags-REPLACE_ENTITIES-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## REPLACE_BUNDLE
@@ -191,6 +207,8 @@ Indicates that the current value of packageName can be replaced when the WantAge
 **Substitutes:** REPLACE_BUNDLE
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WantAgentFlags-REPLACE_BUNDLE--><!--Device-WantAgentFlags-REPLACE_BUNDLE-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

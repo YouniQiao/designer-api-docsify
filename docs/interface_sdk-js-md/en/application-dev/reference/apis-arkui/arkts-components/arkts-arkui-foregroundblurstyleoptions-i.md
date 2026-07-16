@@ -10,5 +10,7 @@ Inherits from [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md) to define th
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-unnamed-declare interface ForegroundBlurStyleOptions extends BlurStyleOptions--><!--Device-unnamed-declare interface ForegroundBlurStyleOptions extends BlurStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

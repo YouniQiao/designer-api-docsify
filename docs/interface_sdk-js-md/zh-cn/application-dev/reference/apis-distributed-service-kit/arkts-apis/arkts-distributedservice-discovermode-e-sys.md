@@ -6,6 +6,8 @@
 
 **废弃版本：** 11
 
+<!--Device-deviceManager-enum DiscoverMode--><!--Device-deviceManager-enum DiscoverMode-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -22,6 +24,8 @@ DISCOVER_MODE_PASSIVE = 0x55
 
 **废弃版本：** 11
 
+<!--Device-DiscoverMode-DISCOVER_MODE_PASSIVE = 0x55--><!--Device-DiscoverMode-DISCOVER_MODE_PASSIVE = 0x55-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -37,6 +41,8 @@ DISCOVER_MODE_ACTIVE = 0xAA
 **起始版本：** 7
 
 **废弃版本：** 11
+
+<!--Device-DiscoverMode-DISCOVER_MODE_ACTIVE = 0xAA--><!--Device-DiscoverMode-DISCOVER_MODE_ACTIVE = 0xAA-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 

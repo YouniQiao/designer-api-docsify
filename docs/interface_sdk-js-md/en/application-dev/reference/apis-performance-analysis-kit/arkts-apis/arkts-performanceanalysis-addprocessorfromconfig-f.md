@@ -12,12 +12,13 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 function addProcessorFromConfig(processorName: string, configName?: string): Promise<number>
 ```
 
-Adds the configuration information of the data processor. The configuration file contains information such as the
-name of the event received by the data processor. This API uses a promise to return the result.
+Adds the configuration information of the data processor. The configuration file contains information such as the name of the event received by the data processor. This API uses a promise to return the result.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-hiAppEvent-function addProcessorFromConfig(processorName: string, configName?: string): Promise<long>--><!--Device-hiAppEvent-function addProcessorFromConfig(processorName: string, configName?: string): Promise<long>-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -26,13 +27,13 @@ name of the event received by the data processor. This API uses a promise to ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | processorName | string | Yes | Name of a data processor. It can contain only letters, digits,underscores (_), and dollar signs ($). It cannot start with a digit and cannot exceed 256 characters. |
-| configName | string | No | Name of the data processor configuration. The correspondingconfiguration can be loaded from the configuration file. The default value is **SDK_OCG**. It can contain onlyletters, digits, underscores (_), and dollar signs ($). It cannot start with a digit and cannot exceed 256characters. |
+| configName | string | No | Name of the data processor configuration. The corresponding configuration can be loaded from the configuration file. The default value is **SDK_OCG**. It can contain only letters, digits, underscores (_), and dollar signs ($). It cannot start with a digit and cannot exceed 256characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise that returns the unique ID of the added event data processor, which can be usedto remove the data processor. If the adding fails, error code **11105001** is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise that returns the unique ID of the added event data processor, which can be used to remove the data processor. If the adding fails, error code **11105001** is returned. |
 
 **Error codes:**
 

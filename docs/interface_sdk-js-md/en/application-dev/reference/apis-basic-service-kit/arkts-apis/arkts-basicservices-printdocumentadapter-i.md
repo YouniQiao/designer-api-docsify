@@ -4,6 +4,8 @@ Provides information about the document to print. This API must be implemented b
 
 **Since:** 11
 
+<!--Device-print-interface PrintDocumentAdapter--><!--Device-print-interface PrintDocumentAdapter-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Registers a listener for print job state changes.
 
 **Required permissions:** ohos.permission.PRINT
 
+<!--Device-PrintDocumentAdapter-onJobStateChanged(jobId: string, state: PrintDocumentAdapterState): void--><!--Device-PrintDocumentAdapter-onJobStateChanged(jobId: string, state: PrintDocumentAdapterState): void-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
@@ -31,7 +35,7 @@ Registers a listener for print job state changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | jobId | string | Yes | ID of the print job. |
-| state | PrintDocumentAdapterState | Yes | New state of the print job. |
+| state | [PrintDocumentAdapterState](arkts-basicservices-printdocumentadapterstate-e.md) | Yes | New state of the print job. |
 
 **Error codes:**
 
@@ -75,12 +79,15 @@ onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttr
       writeResultCallback: (jobId: string, writeResult: PrintFileCreationState) => void): void
 ```
 
-Sends an empty PDF file descriptor to a third-party application. The third-party application updates the file
-with the new print attributes and then calls **writeResultCallback** to print the file.
+Sends an empty PDF file descriptor to a third-party application. The third-party application updates the file with the new print attributes and then calls **writeResultCallback** to print the file.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.PRINT
+
+<!--Device-PrintDocumentAdapter-onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttributes, fd: int,
+      writeResultCallback: (jobId: string, writeResult: PrintFileCreationState) => void): void--><!--Device-PrintDocumentAdapter-onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttributes, fd: int,
+      writeResultCallback: (jobId: string, writeResult: PrintFileCreationState) => void): void-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -89,10 +96,10 @@ with the new print attributes and then calls **writeResultCallback** to print th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | jobId | string | Yes | ID of the print job. |
-| oldAttrs | PrintAttributes | Yes | Old print attributes. |
-| newAttrs | PrintAttributes | Yes | New print attributes. |
+| oldAttrs | [PrintAttributes](arkts-basicservices-printattributes-i.md) | Yes | Old print attributes. |
+| newAttrs | [PrintAttributes](arkts-basicservices-printattributes-i.md) | Yes | New print attributes. |
 | fd | number | Yes | PDF file descriptor sent to the API caller. |
-| writeResultCallback | (jobId: string, writeResult: PrintFileCreationState) =&gt; void | Yes | Callback used to print the updated file. |
+| writeResultCallback | (jobId: string, writeResult: PrintFileCreationState) => void | Yes | Callback used to print the updated file. |
 
 **Error codes:**
 

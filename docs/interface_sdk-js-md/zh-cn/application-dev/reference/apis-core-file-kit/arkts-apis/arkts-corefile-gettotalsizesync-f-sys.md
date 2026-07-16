@@ -1,5 +1,11 @@
 # getTotalSizeSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { storageStatistics } from '@kit.CoreFileKit';
+```
+
 ## getTotalSizeSync
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getTotalSizeSync(): number
 
 **需要权限：** 
 - API版本10 - 14：ohos.permission.STORAGE_MANAGER
+
+<!--Device-storageStatistics-function getTotalSizeSync(): long--><!--Device-storageStatistics-function getTotalSizeSync(): long-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 

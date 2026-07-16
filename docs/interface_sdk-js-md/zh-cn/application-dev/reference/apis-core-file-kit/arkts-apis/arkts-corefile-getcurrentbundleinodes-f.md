@@ -1,5 +1,11 @@
 # getCurrentBundleInodes
 
+## 导入模块
+
+```TypeScript
+import { storageStatistics } from '@kit.CoreFileKit';
+```
+
 ## getCurrentBundleInodes
 
 ```TypeScript
@@ -12,13 +18,15 @@ function getCurrentBundleInodes(): Promise<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-storageStatistics-function getCurrentBundleInodes(): Promise<long>--><!--Device-storageStatistics-function getCurrentBundleInodes(): Promise<long>-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回当前应用的inode占用量。 |
+| Promise<number> | Promise对象，返回当前应用的inode占用量。 |
 
 **错误码：**
 

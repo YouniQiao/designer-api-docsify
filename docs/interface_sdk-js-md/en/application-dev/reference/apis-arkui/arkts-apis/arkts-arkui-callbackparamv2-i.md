@@ -4,6 +4,8 @@ Declare CallbackParamV2
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export interface CallbackParamV2--><!--Device-unnamed-export interface CallbackParamV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Get the childIndex.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CallbackParamV2-childIndex?: number--><!--Device-CallbackParamV2-childIndex?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## currentNodeId
@@ -46,6 +50,8 @@ Get the currentNodeId.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CallbackParamV2-currentNodeId: number--><!--Device-CallbackParamV2-currentNodeId: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## parentNodeId
@@ -63,6 +69,8 @@ Get the parentNodeId.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CallbackParamV2-parentNodeId?: number--><!--Device-CallbackParamV2-parentNodeId?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

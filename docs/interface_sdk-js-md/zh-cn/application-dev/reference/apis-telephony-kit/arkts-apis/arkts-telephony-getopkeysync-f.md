@@ -1,5 +1,11 @@
 # getOpKeySync
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## getOpKeySync
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getOpKeySync(slotId: number): string
 Obtains the operator key of the SIM card in a specified slot.
 
 **起始版本：** 10
+
+<!--Device-sim-function getOpKeySync(slotId: int): string--><!--Device-sim-function getOpKeySync(slotId: int): string-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -22,7 +30,7 @@ Obtains the operator key of the SIM card in a specified slot.
 
 | 类型 | 说明 |
 | --- | --- |
-| string | Returns the operator key; returns an empty string if no SIM card is inserted orno operator key is matched. |
+| string | Returns the operator key; returns an empty string if no SIM card is inserted or no operator key is matched. |
 
 **示例：**
 

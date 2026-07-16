@@ -1,5 +1,11 @@
 # off（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { inputMonitor } from '@kit.InputKit';
+```
+
 ## off('touch')
 
 ```TypeScript
@@ -12,6 +18,8 @@ function off(type: 'touch', receiver?: TouchEventReceiver): void
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'touch', receiver?: TouchEventReceiver): void--><!--Device-inputMonitor-function off(type: 'touch', receiver?: TouchEventReceiver): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -21,7 +29,7 @@ function off(type: 'touch', receiver?: TouchEventReceiver): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'touch' | 是 | 输入设备事件类型，取值'touch'。 |
-| receiver | TouchEventReceiver | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
+| receiver | [TouchEventReceiver](arkts-input-toucheventreceiver-t-sys.md) | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
 
 **错误码：**
 
@@ -112,6 +120,8 @@ function off(type: 'mouse', receiver?: Callback<MouseEvent>): void
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'mouse', receiver?: Callback<MouseEvent>): void--><!--Device-inputMonitor-function off(type: 'mouse', receiver?: Callback<MouseEvent>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -121,7 +131,7 @@ function off(type: 'mouse', receiver?: Callback<MouseEvent>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'mouse' | 是 | 输入设备事件类型，取值'mouse'。 |
-| receiver | Callback&lt;MouseEvent&gt; | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<MouseEvent> | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
 
 **错误码：**
 
@@ -212,6 +222,8 @@ function off(type: 'pinch', receiver?: Callback<Pinch>): void
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'pinch', receiver?: Callback<Pinch>): void--><!--Device-inputMonitor-function off(type: 'pinch', receiver?: Callback<Pinch>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -221,7 +233,7 @@ function off(type: 'pinch', receiver?: Callback<Pinch>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'pinch' | 是 | 输入设备事件类型，取值'pinch'。 |
-| receiver | Callback&lt;Pinch&gt; | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Pinch> | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
 
 **错误码：**
 
@@ -312,6 +324,8 @@ function off(type: 'pinch', fingers: number, receiver?: Callback<Pinch>): void
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'pinch', fingers: number, receiver?: Callback<Pinch>): void--><!--Device-inputMonitor-function off(type: 'pinch', fingers: number, receiver?: Callback<Pinch>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -322,7 +336,7 @@ function off(type: 'pinch', fingers: number, receiver?: Callback<Pinch>): void
 | --- | --- | --- | --- |
 | type | 'pinch' | 是 | 输入设备事件类型，取值'pinch'。 |
 | fingers | number | 是 | 捏合的手指数，取值范围：大于等于2。 |
-| receiver | Callback&lt;Pinch&gt; | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Pinch> | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
 
 **错误码：**
 
@@ -413,6 +427,8 @@ function off(type: 'rotate', fingers: number, receiver?: Callback<Rotate>): void
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'rotate', fingers: number, receiver?: Callback<Rotate>): void--><!--Device-inputMonitor-function off(type: 'rotate', fingers: number, receiver?: Callback<Rotate>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -423,7 +439,7 @@ function off(type: 'rotate', fingers: number, receiver?: Callback<Rotate>): void
 | --- | --- | --- | --- |
 | type | 'rotate' | 是 | 输入设备事件类型，取值'rotate'。 |
 | fingers | number | 是 | 旋转的手指数，目前支持监听手指数是2。 |
-| receiver | Callback&lt;Rotate&gt; | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Rotate> | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
 
 **错误码：**
 
@@ -514,6 +530,8 @@ function off(type: 'threeFingersSwipe', receiver?: Callback<ThreeFingersSwipe>):
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'threeFingersSwipe', receiver?: Callback<ThreeFingersSwipe>): void--><!--Device-inputMonitor-function off(type: 'threeFingersSwipe', receiver?: Callback<ThreeFingersSwipe>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -523,7 +541,7 @@ function off(type: 'threeFingersSwipe', receiver?: Callback<ThreeFingersSwipe>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'threeFingersSwipe' | 是 | 输入设备事件类型，取值'threeFingersSwipe'。 |
-| receiver | Callback&lt;ThreeFingersSwipe&gt; | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ThreeFingersSwipe> | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
 
 **错误码：**
 
@@ -614,6 +632,8 @@ function off(type: 'fourFingersSwipe', receiver?: Callback<FourFingersSwipe>): v
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'fourFingersSwipe', receiver?: Callback<FourFingersSwipe>): void--><!--Device-inputMonitor-function off(type: 'fourFingersSwipe', receiver?: Callback<FourFingersSwipe>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -623,7 +643,7 @@ function off(type: 'fourFingersSwipe', receiver?: Callback<FourFingersSwipe>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'fourFingersSwipe' | 是 | 输入设备事件类型，取值'fourFingersSwipe'。 |
-| receiver | Callback&lt;FourFingersSwipe&gt; | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<FourFingersSwipe> | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
 
 **错误码：**
 
@@ -714,6 +734,8 @@ function off(type: 'threeFingersTap', receiver?: Callback<ThreeFingersTap>): voi
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'threeFingersTap', receiver?: Callback<ThreeFingersTap>): void--><!--Device-inputMonitor-function off(type: 'threeFingersTap', receiver?: Callback<ThreeFingersTap>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -723,7 +745,7 @@ function off(type: 'threeFingersTap', receiver?: Callback<ThreeFingersTap>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'threeFingersTap' | 是 | 输入设备事件类型，取值'threeFingersTap'。 |
-| receiver | Callback&lt;ThreeFingersTap&gt; | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ThreeFingersTap> | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
 
 **错误码：**
 
@@ -814,6 +836,8 @@ function off(type: 'fingerprint', receiver?: Callback<FingerprintEvent>): void
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'fingerprint', receiver?: Callback<FingerprintEvent>): void--><!--Device-inputMonitor-function off(type: 'fingerprint', receiver?: Callback<FingerprintEvent>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -823,7 +847,7 @@ function off(type: 'fingerprint', receiver?: Callback<FingerprintEvent>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'fingerprint' | 是 | 输入事件类型，取值'fingerprint'。 |
-| receiver | Callback&lt;FingerprintEvent&gt; | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<FingerprintEvent> | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
 
 **错误码：**
 
@@ -914,6 +938,8 @@ function off(type: 'swipeInward', receiver?: Callback<SwipeInward>): void
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'swipeInward', receiver?: Callback<SwipeInward>): void--><!--Device-inputMonitor-function off(type: 'swipeInward', receiver?: Callback<SwipeInward>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -923,7 +949,7 @@ function off(type: 'swipeInward', receiver?: Callback<SwipeInward>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'swipeInward' | 是 | 输入事件类型，取值'swipeInward'。 |
-| receiver | Callback&lt;SwipeInward&gt; | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SwipeInward> | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
 
 **错误码：**
 
@@ -1012,6 +1038,8 @@ function off(type: 'touchscreenSwipe', fingers: number, receiver?: Callback<Touc
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'touchscreenSwipe', fingers: number, receiver?: Callback<TouchGestureEvent>): void--><!--Device-inputMonitor-function off(type: 'touchscreenSwipe', fingers: number, receiver?: Callback<TouchGestureEvent>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -1022,7 +1050,7 @@ function off(type: 'touchscreenSwipe', fingers: number, receiver?: Callback<Touc
 | --- | --- | --- | --- |
 | type | 'touchscreenSwipe' | 是 | 输入设备事件类型，取值'touchscreenSwipe'。 |
 | fingers | number | 是 | 滑动手势的手指数，取值范围：[3,5]。 |
-| receiver | Callback&lt;TouchGestureEvent&gt; | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<TouchGestureEvent> | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
 
 **错误码：**
 
@@ -1110,6 +1138,8 @@ function off(type: 'touchscreenPinch', fingers: number, receiver?: Callback<Touc
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'touchscreenPinch', fingers: number, receiver?: Callback<TouchGestureEvent>): void--><!--Device-inputMonitor-function off(type: 'touchscreenPinch', fingers: number, receiver?: Callback<TouchGestureEvent>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -1120,7 +1150,7 @@ function off(type: 'touchscreenPinch', fingers: number, receiver?: Callback<Touc
 | --- | --- | --- | --- |
 | type | 'touchscreenPinch' | 是 | 输入设备事件类型，取值'touchscreenPinch'。 |
 | fingers | number | 是 | 捏合手势的手指数，取值范围：[4,5]。 |
-| receiver | Callback&lt;TouchGestureEvent&gt; | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<TouchGestureEvent> | 否 | 需要取消监听的回调函数。若不填，则取消当前应用监听的所有回调函数。 |
 
 **错误码：**
 
@@ -1208,6 +1238,8 @@ function off(type: 'keyPressed', receiver?: Callback<KeyEvent>): void
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'keyPressed', receiver?: Callback<KeyEvent>): void--><!--Device-inputMonitor-function off(type: 'keyPressed', receiver?: Callback<KeyEvent>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -1217,7 +1249,7 @@ function off(type: 'keyPressed', receiver?: Callback<KeyEvent>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'keyPressed' | 是 | 按键事件类型，取唯一值'keyPressed'。 |
-| receiver | Callback&lt;KeyEvent&gt; | 否 | 需要取消监听的回调函数。若不填，取消应用所有按键监听的回调函数。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<KeyEvent> | 否 | 需要取消监听的回调函数。若不填，取消应用所有按键监听的回调函数。 |
 
 **错误码：**
 

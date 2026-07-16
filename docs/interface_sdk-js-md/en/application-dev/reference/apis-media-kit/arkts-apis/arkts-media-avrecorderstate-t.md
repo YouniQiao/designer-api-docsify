@@ -10,6 +10,8 @@ Enumerates the AVRecorder states. You can obtain the state through the **state**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-media-type AVRecorderState = 'idle' | 'prepared' | 'started' | 'paused' | 'stopped' | 'released' | 'error'--><!--Device-media-type AVRecorderState = 'idle' | 'prepared' | 'started' | 'paused' | 'stopped' | 'released' | 'error'-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 | Type | Description |

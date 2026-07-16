@@ -1,9 +1,10 @@
 # AbilityWindowConfiguration
 
-Defines the window configuration corresponding to this ability. The configuration is obtained through
-**featureAbility.AbilityWindowConfiguration**.
+Defines the window configuration corresponding to this ability. The configuration is obtained through **featureAbility.AbilityWindowConfiguration**.
 
 **Since:** 7
+
+<!--Device-featureAbility-export enum AbilityWindowConfiguration--><!--Device-featureAbility-export enum AbilityWindowConfiguration-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -19,6 +20,8 @@ The PageAbility is in an undefined window display mode.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-AbilityWindowConfiguration-WINDOW_MODE_UNDEFINED = 0--><!--Device-AbilityWindowConfiguration-WINDOW_MODE_UNDEFINED = 0-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## WINDOW_MODE_FULLSCREEN
@@ -32,6 +35,8 @@ The PageAbility is in full screen mode.
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-AbilityWindowConfiguration-WINDOW_MODE_FULLSCREEN = 1--><!--Device-AbilityWindowConfiguration-WINDOW_MODE_FULLSCREEN = 1-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -47,6 +52,8 @@ The left screen in horizontal direction or the upper screen in vertical directio
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-AbilityWindowConfiguration-WINDOW_MODE_SPLIT_PRIMARY = 100--><!--Device-AbilityWindowConfiguration-WINDOW_MODE_SPLIT_PRIMARY = 100-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## WINDOW_MODE_SPLIT_SECONDARY
@@ -61,6 +68,8 @@ The right screen in horizontal direction or the lower screen in vertical directi
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-AbilityWindowConfiguration-WINDOW_MODE_SPLIT_SECONDARY = 101--><!--Device-AbilityWindowConfiguration-WINDOW_MODE_SPLIT_SECONDARY = 101-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## WINDOW_MODE_FLOATING
@@ -74,6 +83,8 @@ The PageAbility is displayed in floating window mode.
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-AbilityWindowConfiguration-WINDOW_MODE_FLOATING = 102--><!--Device-AbilityWindowConfiguration-WINDOW_MODE_FLOATING = 102-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 

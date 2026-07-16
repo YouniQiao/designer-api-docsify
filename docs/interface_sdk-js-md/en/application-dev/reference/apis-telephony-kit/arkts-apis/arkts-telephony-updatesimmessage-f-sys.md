@@ -18,6 +18,8 @@ Update a SIM SMS of SIM card.
 
 **Required permissions:** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
 
+<!--Device-sms-function updateSimMessage(options: UpdateSimMessageOptions, callback: AsyncCallback<void>): void--><!--Device-sms-function updateSimMessage(options: UpdateSimMessageOptions, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Update a SIM SMS of SIM card.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | UpdateSimMessageOptions | Yes | Indicates update SIM message options. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of updateSimMessage. |
+| options | [UpdateSimMessageOptions](arkts-telephony-updatesimmessageoptions-i-sys.md) | Yes | Indicates update SIM message options. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of updateSimMessage. |
 
 **Error codes:**
 
@@ -73,6 +75,8 @@ Update a SIM SMS of SIM card.
 
 **Required permissions:** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
 
+<!--Device-sms-function updateSimMessage(options: UpdateSimMessageOptions): Promise<void>--><!--Device-sms-function updateSimMessage(options: UpdateSimMessageOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -81,13 +85,13 @@ Update a SIM SMS of SIM card.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | UpdateSimMessageOptions | Yes | Indicates update SIM message options. |
+| options | [UpdateSimMessageOptions](arkts-telephony-updatesimmessageoptions-i-sys.md) | Yes | Indicates update SIM message options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the updateSimMessage. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the updateSimMessage. |
 
 **Error codes:**
 

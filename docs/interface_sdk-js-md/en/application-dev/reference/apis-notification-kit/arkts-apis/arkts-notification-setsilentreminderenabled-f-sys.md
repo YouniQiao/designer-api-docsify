@@ -18,6 +18,8 @@ Sets the enabling status of the silent reminder. This API uses a promise to retu
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function setSilentReminderEnabled(bundle: BundleOption, enabled: boolean): Promise<void>--><!--Device-notificationManager-function setSilentReminderEnabled(bundle: BundleOption, enabled: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -26,14 +28,14 @@ Sets the enabling status of the silent reminder. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
-| enabled | boolean | Yes | Whether to enable the silent reminder. The value **true** means to enable the silentreminder, and **false** means the opposite. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
+| enabled | boolean | Yes | Whether to enable the silent reminder. The value **true** means to enable the silent reminder, and **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

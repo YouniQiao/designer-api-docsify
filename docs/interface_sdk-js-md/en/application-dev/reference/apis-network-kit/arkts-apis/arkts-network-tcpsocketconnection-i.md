@@ -4,6 +4,8 @@ Defines the connection of the TCPSocket client and server.
 
 **Since:** 24
 
+<!--Device-socket-export interface TCPSocketConnection--><!--Device-socket-export interface TCPSocketConnection-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Closes a TCPSocket client connection.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-TCPSocketConnection-close(callback: AsyncCallback<void>): void--><!--Device-TCPSocketConnection-close(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of close. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of close. |
 
 **Error codes:**
 
@@ -72,13 +76,15 @@ Closes a TCPSocket client connection.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-TCPSocketConnection-close(): Promise<void>--><!--Device-TCPSocketConnection-close(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -114,13 +120,15 @@ Obtains the local address of a TCPSocketServer connection.
 
 **Since:** 24
 
+<!--Device-TCPSocketConnection-getLocalAddress(): Promise<NetAddress>--><!--Device-TCPSocketConnection-getLocalAddress(): Promise<NetAddress>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetAddress> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -182,13 +190,15 @@ Obtains the peer address of a TCPSocketServer connection.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-TCPSocketConnection-getRemoteAddress(callback: AsyncCallback<NetAddress>): void--><!--Device-TCPSocketConnection-getRemoteAddress(callback: AsyncCallback<NetAddress>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;NetAddress&gt; | Yes | The callback of getRemoteAddress. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<NetAddress> | Yes | The callback of getRemoteAddress. |
 
 **Error codes:**
 
@@ -230,13 +240,15 @@ Obtains the peer address of a TCPSocketServer connection.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-TCPSocketConnection-getRemoteAddress(): Promise<NetAddress>--><!--Device-TCPSocketConnection-getRemoteAddress(): Promise<NetAddress>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetAddress> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -275,13 +287,15 @@ Obtains the file descriptor of the TCPSocketConnection.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-TCPSocketConnection-getSocketFd(): Promise<int>--><!--Device-TCPSocketConnection-getSocketFd(): Promise<int>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The promise returns the file descriptor of the TCP socket connection. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | The promise returns the file descriptor of the TCP socket connection. |
 
 **Error codes:**
 
@@ -325,6 +339,8 @@ Cancels listening for message receiving events of the TCPSocketConnection.
 
 **Since:** 12
 
+<!--Device-TCPSocketConnection-off(type: 'message', callback?: Callback<SocketMessageInfo>): void--><!--Device-TCPSocketConnection-off(type: 'message', callback?: Callback<SocketMessageInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -332,7 +348,7 @@ Cancels listening for message receiving events of the TCPSocketConnection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Indicates Event name. |
-| callback | Callback&lt;SocketMessageInfo&gt; | No | The callback of off. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SocketMessageInfo> | No | The callback of off. |
 
 **Error codes:**
 
@@ -377,6 +393,8 @@ Cancels listening for close events of the TCPSocketConnection.
 
 **Since:** 24
 
+<!--Device-TCPSocketConnection-off(type: 'close', callback?: Callback<void>): void--><!--Device-TCPSocketConnection-off(type: 'close', callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -384,7 +402,7 @@ Cancels listening for close events of the TCPSocketConnection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'close' | Yes | Indicates Event name. |
-| callback | Callback&lt;void&gt; | No | The callback of off. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | The callback of off. |
 
 **Error codes:**
 
@@ -420,6 +438,8 @@ Cancels listening for error events of the TCPSocketConnection.
 
 **Since:** 10
 
+<!--Device-TCPSocketConnection-off(type: 'error', callback?: ErrorCallback): void--><!--Device-TCPSocketConnection-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -427,7 +447,7 @@ Cancels listening for error events of the TCPSocketConnection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Indicates Event name. |
-| callback | ErrorCallback | No | The callback of off. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | The callback of off. |
 
 **Error codes:**
 
@@ -464,6 +484,8 @@ Listens for message receiving events of the TCPSocketConnection.
 
 **Since:** 12
 
+<!--Device-TCPSocketConnection-on(type: 'message', callback: Callback<SocketMessageInfo>): void--><!--Device-TCPSocketConnection-on(type: 'message', callback: Callback<SocketMessageInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -471,7 +493,7 @@ Listens for message receiving events of the TCPSocketConnection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Indicates Event name. |
-| callback | Callback&lt;SocketMessageInfo&gt; | Yes | The callback of on. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SocketMessageInfo> | Yes | The callback of on. |
 
 **Error codes:**
 
@@ -513,6 +535,8 @@ Listens for close events of the TCPSocketConnection.
 
 **Since:** 24
 
+<!--Device-TCPSocketConnection-on(type: 'close', callback: Callback<void>): void--><!--Device-TCPSocketConnection-on(type: 'close', callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -520,7 +544,7 @@ Listens for close events of the TCPSocketConnection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'close' | Yes | Indicates Event name. |
-| callback | Callback&lt;void&gt; | Yes | The callback of on. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | The callback of on. |
 
 **Error codes:**
 
@@ -553,6 +577,8 @@ Listens for error events of the TCPSocketConnection.
 
 **Since:** 10
 
+<!--Device-TCPSocketConnection-on(type: 'error', callback: ErrorCallback): void--><!--Device-TCPSocketConnection-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -560,7 +586,7 @@ Listens for error events of the TCPSocketConnection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Indicates Event name. |
-| callback | ErrorCallback | Yes | The callback of on. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | The callback of on. |
 
 **Error codes:**
 
@@ -595,14 +621,16 @@ Sends data over a TCPSocketServer connection to client.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-TCPSocketConnection-send(options: TCPSendOptions, callback: AsyncCallback<void>): void--><!--Device-TCPSocketConnection-send(options: TCPSendOptions, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | TCPSendOptions | Yes | Parameters for sending data {@link TCPSendOptions}. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of send. |
+| options | [TCPSendOptions](arkts-network-tcpsendoptions-i.md) | Yes | Parameters for sending data {@link TCPSendOptions}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of send. |
 
 **Error codes:**
 
@@ -642,19 +670,21 @@ Sends data over a TCPSocketServer connection to client.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-TCPSocketConnection-send(options: TCPSendOptions): Promise<void>--><!--Device-TCPSocketConnection-send(options: TCPSendOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | TCPSendOptions | Yes | Parameters for sending data {@link TCPSendOptions}. |
+| options | [TCPSendOptions](arkts-network-tcpsendoptions-i.md) | Yes | Parameters for sending data {@link TCPSendOptions}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -696,6 +726,8 @@ The id of a client connects to the TCPSocketServer.
 **Type:** number
 
 **Since:** 24
+
+<!--Device-TCPSocketConnection-clientId: int--><!--Device-TCPSocketConnection-clientId: int-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

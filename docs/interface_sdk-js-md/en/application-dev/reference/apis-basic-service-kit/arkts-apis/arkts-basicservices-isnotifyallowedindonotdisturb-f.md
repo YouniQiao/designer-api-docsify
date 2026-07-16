@@ -12,8 +12,7 @@ import { intelligentScene } from '@kit.BasicServicesKit';
 function isNotifyAllowedInDoNotDisturb(): Promise<boolean>
 ```
 
-Checks whether calling bundle is allow notify(e.g. sound & vibration) when system
-Do Not Disturb is on.
+Checks whether calling bundle is allow notify(e.g. sound & vibration) when system Do Not Disturb is on.
 
 **Since:** 23
 
@@ -21,13 +20,15 @@ Do Not Disturb is on.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-intelligentScene-function isNotifyAllowedInDoNotDisturb(): Promise<boolean>--><!--Device-intelligentScene-function isNotifyAllowedInDoNotDisturb(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Applications.IntelligentScene
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns whether notify in Do Not Disturb mode is Allowed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns whether notify in Do Not Disturb mode is Allowed. |
 
 **Error codes:**
 

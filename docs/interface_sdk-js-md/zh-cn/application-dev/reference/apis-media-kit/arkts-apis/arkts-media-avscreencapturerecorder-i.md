@@ -1,16 +1,22 @@
 # AVScreenCaptureRecorder
 
-屏幕录制管理类，用于进行屏幕录制。在调用AVScreenCaptureRecorder的方法前，需要先通过
-[createAVScreenCaptureRecorder()](arkts-media-createavscreencapturerecorder-f.md#createavscreencapturerecorder-1)创建一个
-AVScreenCaptureRecorder实例。
+屏幕录制管理类，用于进行屏幕录制。在调用AVScreenCaptureRecorder的方法前，需要先通过[createAVScreenCaptureRecorder()](arkts-media-createavscreencapturerecorder-f.md#createavscreencapturerecorder-1)创建一个AVScreenCaptureRecorder实例。
 
-> **说明：**
->
+> **说明：**  
+>  
 > - 本Interface首批接口从API version 12开始支持。
 
 **起始版本：** 12
 
+<!--Device-unnamed-interface AVScreenCaptureRecorder--><!--Device-unnamed-interface AVScreenCaptureRecorder-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
+
+## 导入模块
+
+```TypeScript
+import { media } from '@kit.MediaKit';
+```
 
 ## excludePickerWindows
 
@@ -22,19 +28,21 @@ excludePickerWindows(excludedWindows: Array<number>): Promise<void>
 
 **起始版本：** 22
 
+<!--Device-AVScreenCaptureRecorder-excludePickerWindows(excludedWindows: Array<int>): Promise<void>--><!--Device-AVScreenCaptureRecorder-excludePickerWindows(excludedWindows: Array<int>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| excludedWindows | Array&lt;number&gt; | 是 | 需要在Picker中隐藏的窗口列表，窗口属性获取方法可以参考[getWindowProperties](../../../../reference/apis-arkui/arkts-apis-window-Window.md#getwindowproperties9)。 |
+| excludedWindows | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<number> | 是 | 需要在Picker中隐藏的窗口列表，窗口属性获取方法可以参考[getWindowProperties](../../../../reference/apis-arkui/arkts-apis-window-Window.md#getwindowproperties9)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -54,19 +62,21 @@ init(config: AVScreenCaptureRecordConfig): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureRecorder-init(config: AVScreenCaptureRecordConfig): Promise<void>--><!--Device-AVScreenCaptureRecorder-init(config: AVScreenCaptureRecordConfig): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | AVScreenCaptureRecordConfig | 是 | 配置屏幕录制的相关参数。 |
+| config | [AVScreenCaptureRecordConfig](arkts-media-avscreencapturerecordconfig-i.md) | 是 | 配置屏幕录制的相关参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -86,6 +96,8 @@ off(type: 'stateChange', callback?: Callback<AVScreenCaptureStateCode>): void
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureRecorder-off(type: 'stateChange', callback?: Callback<AVScreenCaptureStateCode>): void--><!--Device-AVScreenCaptureRecorder-off(type: 'stateChange', callback?: Callback<AVScreenCaptureStateCode>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **参数：**
@@ -93,7 +105,7 @@ off(type: 'stateChange', callback?: Callback<AVScreenCaptureStateCode>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'stateChange' | 是 | 状态切换事件回调类型，支持的事件：'stateChange'。 |
-| callback | Callback&lt;AVScreenCaptureStateCode&gt; | 否 | 状态切换事件回调方法，[AVScreenCaptureStateCode](@ohos.multimedia.media:media.AVScreenCaptureStateCode)表示切换到的状态，不填此参数则会取消最后一次订阅事件。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AVScreenCaptureStateCode> | 否 | 状态切换事件回调方法，[AVScreenCaptureStateCode](@ohos.multimedia.media:media.AVScreenCaptureStateCode)表示切换到的状态，不填此参数则会取消最后一次订阅事件。 |
 
 ## off('error')
 
@@ -105,6 +117,8 @@ off(type: 'error', callback?: ErrorCallback): void
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureRecorder-off(type: 'error', callback?: ErrorCallback): void--><!--Device-AVScreenCaptureRecorder-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **参数：**
@@ -112,7 +126,7 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 状态切换事件回调类型，支持的事件：'error'。 |
-| callback | ErrorCallback | 否 | 录屏错误事件回调方法，不填此参数则会取消最后一次订阅事件。 |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | 否 | 录屏错误事件回调方法，不填此参数则会取消最后一次订阅事件。 |
 
 ## on('stateChange')
 
@@ -124,6 +138,8 @@ on(type: 'stateChange', callback: Callback<AVScreenCaptureStateCode>): void
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureRecorder-on(type: 'stateChange', callback: Callback<AVScreenCaptureStateCode>): void--><!--Device-AVScreenCaptureRecorder-on(type: 'stateChange', callback: Callback<AVScreenCaptureStateCode>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **参数：**
@@ -131,7 +147,7 @@ on(type: 'stateChange', callback: Callback<AVScreenCaptureStateCode>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'stateChange' | 是 | 状态切换事件回调类型，支持的事件：'stateChange'。 |
-| callback | Callback&lt;AVScreenCaptureStateCode&gt; | 是 | 状态切换事件回调方法，[AVScreenCaptureStateCode](@ohos.multimedia.media:media.AVScreenCaptureStateCode)表示切换到的状态。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AVScreenCaptureStateCode> | 是 | 状态切换事件回调方法，[AVScreenCaptureStateCode](@ohos.multimedia.media:media.AVScreenCaptureStateCode)表示切换到的状态。 |
 
 ## on('error')
 
@@ -143,6 +159,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureRecorder-on(type: 'error', callback: ErrorCallback): void--><!--Device-AVScreenCaptureRecorder-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **参数：**
@@ -150,7 +168,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 错误事件回调类型，支持的事件：'error'。 |
-| callback | ErrorCallback | 是 | 录屏错误事件回调方法。 |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | 是 | 录屏错误事件回调方法。 |
 
 **错误码：**
 
@@ -172,13 +190,15 @@ pauseRecording(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVScreenCaptureRecorder-pauseRecording(): Promise<void>--><!--Device-AVScreenCaptureRecorder-pauseRecording(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -196,13 +216,15 @@ presentPicker(): Promise<void>
 
 录屏开始后，调用该接口再次弹出Picker，可动态更新录制源（窗口、屏幕）。使用Promise异步回调。
 
-> **说明：**
->
-> - 更新录制源过程中，原录制流程不中断。
->
+> **说明：**  
+>  
+> - 更新录制源过程中，原录制流程不中断。  
+>  
 > - 通过picker动态更新录制源后，按照新的录制源进行录制。
 
 **起始版本：** 22
+
+<!--Device-AVScreenCaptureRecorder-presentPicker(): Promise<void>--><!--Device-AVScreenCaptureRecorder-presentPicker(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -210,7 +232,7 @@ presentPicker(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -230,13 +252,15 @@ release(): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureRecorder-release(): Promise<void>--><!--Device-AVScreenCaptureRecorder-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -257,13 +281,15 @@ resumeRecording(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVScreenCaptureRecorder-resumeRecording(): Promise<void>--><!--Device-AVScreenCaptureRecorder-resumeRecording(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -283,6 +309,8 @@ setMicEnabled(enable: boolean): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureRecorder-setMicEnabled(enable: boolean): Promise<void>--><!--Device-AVScreenCaptureRecorder-setMicEnabled(enable: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **参数：**
@@ -295,7 +323,7 @@ setMicEnabled(enable: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -314,19 +342,21 @@ setPickerMode(pickerMode: PickerMode): Promise<void>
 
 **起始版本：** 22
 
+<!--Device-AVScreenCaptureRecorder-setPickerMode(pickerMode: PickerMode): Promise<void>--><!--Device-AVScreenCaptureRecorder-setPickerMode(pickerMode: PickerMode): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pickerMode | PickerMode | 是 | 选择Picker模式。<br>定义了在Picker中显示的内容类型：<br>- SCREEN_ONLY：仅显示屏幕列表。<br>- WINDOW_ONLY：仅显示窗口列表。<br>- SCREEN_AND_WINDOW：同时显示屏幕列表和窗口列表（默认值）。 |
+| pickerMode | [PickerMode](arkts-media-pickermode-e.md) | 是 | 选择Picker模式。<br>定义了在Picker中显示的内容类型：<br>- SCREEN_ONLY：仅显示屏幕列表。<br>- WINDOW_ONLY：仅显示窗口列表。<br>- SCREEN_AND_WINDOW：同时显示屏幕列表和窗口列表（默认值）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -348,19 +378,21 @@ skipPrivacyMode(windowIDs: Array<number>): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureRecorder-skipPrivacyMode(windowIDs: Array<int>): Promise<void>--><!--Device-AVScreenCaptureRecorder-skipPrivacyMode(windowIDs: Array<int>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowIDs | Array&lt;number&gt; | 是 | 需要豁免隐私的窗口列表，包括主窗口id和子窗口id，窗口属性获取方法可以参考[getWindowProperties](../../../../reference/apis-arkui/arkts-apis-window-Window.md#getwindowproperties9)。 |
+| windowIDs | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<number> | 是 | 需要豁免隐私的窗口列表，包括主窗口id和子窗口id，窗口属性获取方法可以参考[getWindowProperties](../../../../reference/apis-arkui/arkts-apis-window-Window.md#getwindowproperties9)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -379,13 +411,15 @@ startRecording(): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureRecorder-startRecording(): Promise<void>--><!--Device-AVScreenCaptureRecorder-startRecording(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -404,13 +438,15 @@ stopRecording(): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureRecorder-stopRecording(): Promise<void>--><!--Device-AVScreenCaptureRecorder-stopRecording(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

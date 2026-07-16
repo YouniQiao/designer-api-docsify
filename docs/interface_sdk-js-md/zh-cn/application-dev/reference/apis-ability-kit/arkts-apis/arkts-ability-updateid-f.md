@@ -1,5 +1,11 @@
 # updateId
 
+## 导入模块
+
+```TypeScript
+import { dataUriUtils } from '@kit.AbilityKit';
+```
+
 ## updateId
 
 ```TypeScript
@@ -9,6 +15,8 @@ function updateId(uri: string, id: number): string
 更新指定uri中的ID。
 
 **起始版本：** 9
+
+<!--Device-dataUriUtils-function updateId(uri: string, id: double): string--><!--Device-dataUriUtils-function updateId(uri: string, id: double): string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

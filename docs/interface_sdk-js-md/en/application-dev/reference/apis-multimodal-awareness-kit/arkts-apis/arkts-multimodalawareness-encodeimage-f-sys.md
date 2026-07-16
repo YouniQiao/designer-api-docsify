@@ -16,6 +16,8 @@ Encodes metadata into an image. This API uses a promise to return the result.
 
 **Since:** 18
 
+<!--Device-metadataBinding-function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.PixelMap>--><!--Device-metadataBinding-function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.PixelMap>-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.MetadataBinding
 
 **System API:** This is a system API.
@@ -31,7 +33,7 @@ Encodes metadata into an image. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise object, which is used to return the image with encoded metadata. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<image.PixelMap> | Promise object, which is used to return the image with encoded metadata. |
 
 **Error codes:**
 

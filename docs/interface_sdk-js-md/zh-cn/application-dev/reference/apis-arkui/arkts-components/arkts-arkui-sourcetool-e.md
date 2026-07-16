@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare enum SourceTool--><!--Device-unnamed-declare enum SourceTool-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## Unknown
@@ -16,7 +18,9 @@ Unknown
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SourceTool-Unknown--><!--Device-SourceTool-Unknown-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,7 +34,9 @@ Finger
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SourceTool-Finger--><!--Device-SourceTool-Finger-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,7 +50,9 @@ Pen
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SourceTool-Pen--><!--Device-SourceTool-Pen-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,7 +68,9 @@ MOUSE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SourceTool-MOUSE--><!--Device-SourceTool-MOUSE-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,7 +86,9 @@ TOUCHPAD
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SourceTool-TOUCHPAD--><!--Device-SourceTool-TOUCHPAD-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,7 +104,9 @@ JOYSTICK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SourceTool-JOYSTICK--><!--Device-SourceTool-JOYSTICK-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

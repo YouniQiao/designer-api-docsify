@@ -1,5 +1,11 @@
 # switchInputMethodWithUserId（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { inputMethod } from '@kit.IMEKit';
+```
+
 ## switchInputMethodWithUserId
 
 ```TypeScript
@@ -13,6 +19,8 @@ function switchInputMethodWithUserId(bundleName: string, subtypeId?: string, use
 **需要权限：** ohos.permission.CONNECT_IME_ABILITY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-inputMethod-function switchInputMethodWithUserId(bundleName: string, subtypeId?: string, userId?: int): Promise<void>--><!--Device-inputMethod-function switchInputMethodWithUserId(bundleName: string, subtypeId?: string, userId?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -30,7 +38,7 @@ function switchInputMethodWithUserId(bundleName: string, subtypeId?: string, use
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

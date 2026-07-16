@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare class CanvasPath--><!--Device-unnamed-declare class CanvasPath-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## arc
@@ -16,9 +18,11 @@ arc(x: number, y: number, radius: number, startAngle: number, endAngle: number, 
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasPath-arc(x: number, y: number, radius: number, startAngle: number, endAngle: number, counterclockwise?: boolean): void--><!--Device-CanvasPath-arc(x: number, y: number, radius: number, startAngle: number, endAngle: number, counterclockwise?: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,9 +47,11 @@ arcTo(x1: number, y1: number, x2: number, y2: number, radius: number): void
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasPath-arcTo(x1: number, y1: number, x2: number, y2: number, radius: number): void--><!--Device-CanvasPath-arcTo(x1: number, y1: number, x2: number, y2: number, radius: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,9 +75,11 @@ bezierCurveTo(cp1x: number, cp1y: number, cp2x: number, cp2y: number, x: number,
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasPath-bezierCurveTo(cp1x: number, cp1y: number, cp2x: number, cp2y: number, x: number, y: number): void--><!--Device-CanvasPath-bezierCurveTo(cp1x: number, cp1y: number, cp2x: number, cp2y: number, x: number, y: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,9 +104,11 @@ closePath(): void
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasPath-closePath(): void--><!--Device-CanvasPath-closePath(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -121,9 +131,29 @@ ellipse(
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasPath-ellipse(
+    x: number,
+    y: number,
+    radiusX: number,
+    radiusY: number,
+    rotation: number,
+    startAngle: number,
+    endAngle: number,
+    counterclockwise?: boolean,
+  ): void--><!--Device-CanvasPath-ellipse(
+    x: number,
+    y: number,
+    radiusX: number,
+    radiusY: number,
+    rotation: number,
+    startAngle: number,
+    endAngle: number,
+    counterclockwise?: boolean,
+  ): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -150,9 +180,11 @@ lineTo(x: number, y: number): void
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasPath-lineTo(x: number, y: number): void--><!--Device-CanvasPath-lineTo(x: number, y: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -173,9 +205,11 @@ moveTo(x: number, y: number): void
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasPath-moveTo(x: number, y: number): void--><!--Device-CanvasPath-moveTo(x: number, y: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -184,7 +218,7 @@ moveTo(x: number, y: number): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | x | number | 是 | 目标点X轴坐标。<br>API version 18之前，设置NaN或Infinity时，整条路径不显示；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp |
-| y | number | 是 | 目标点Y轴坐标。<br>API version 18之前，设置NaN或Infinity时，整条路径不显示；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp&gt; **说明：**&gt;&gt; API version 18之前，如果没有调用**moveTo**接口或传入无效参数，路径从(0,0)开始。&gt;&gt; API version 18及以后，如果没有调用**moveTo**接口或传入无效参数，路径将从第一个有效调用的&gt; **lineTo**、**arcTo**、**bezierCurveTo**或**quadraticCurveTo**的起始点开始。 |
+| y | number | 是 | 目标点Y轴坐标。<br>API version 18之前，设置NaN或Infinity时，整条路径不显示；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的路径方法正常绘制。默认单位：vp * &gt; **说明：**  &gt;  &gt; API version 18之前，如果没有调用**moveTo**接口或传入无效参数，路径从(0,0)开始。  &gt;  &gt; API version 18及以后，如果没有调用**moveTo**接口或传入无效参数，路径将从第一个有效调用的  &gt; **lineTo**、**arcTo**、**bezierCurveTo**或**quadraticCurveTo**的起始点开始。* |
 
 ## quadraticCurveTo
 
@@ -196,9 +230,11 @@ quadraticCurveTo(cpx: number, cpy: number, x: number, y: number): void
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasPath-quadraticCurveTo(cpx: number, cpy: number, x: number, y: number): void--><!--Device-CanvasPath-quadraticCurveTo(cpx: number, cpy: number, x: number, y: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -221,9 +257,11 @@ rect(x: number, y: number, w: number, h: number): void
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasPath-rect(x: number, y: number, w: number, h: number): void--><!--Device-CanvasPath-rect(x: number, y: number, w: number, h: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -248,9 +286,11 @@ roundRect(x: number, y: number, w: number, h: number, radii?: number | Array<num
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本20开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasPath-roundRect(x: number, y: number, w: number, h: number, radii?: number | Array<number>): void--><!--Device-CanvasPath-roundRect(x: number, y: number, w: number, h: number, radii?: number | Array<number>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -262,7 +302,7 @@ roundRect(x: number, y: number, w: number, h: number, radii?: number | Array<num
 | y | number | 是 | 矩形左上角y坐标值。<br>设置**null**时，按照**0**处理；设置**undefined**时，按无效值处理，不进行绘制。<br>绘制完整矩形时，取值范围为[0, 画布高度)。<br>默认单位：vp |
 | w | number | 是 | 矩形的宽度。负值表示从右向左绘制矩形。<br>设置**null**时，按照**0**处理；设置**undefined**时，按无效值处理，不进行绘制。<br>绘制完整矩形时，取值范围为[-x, 画布宽度 - x]。<br>默认单位：vp |
 | h | number | 是 | 矩形的高度。负值表示向上绘制。<br>设置**null**时，按照**0**处理；设置**undefined**时，按无效值处理，不进行绘制。<br>绘制完整矩形时，取值范围为[-y, 画布高度 - y]。<br>默认单位：vp |
-| radii | number \| Array&lt;number&gt; | 否 | 矩形圆角的圆弧半径值或半径值列表。<br>参数类型为number时，表示矩形四个角的圆弧半径。<br>参数类型为Array&lt;number&gt;时，数组包含1到4个数字，含义如下：<br>[矩形四个角的圆弧半径]<br>[矩形左上角和右下角的圆弧半径，矩形右上角和左下角的圆弧半径]<br>[矩形左上角的圆弧半径，矩形右上角和左下角的圆弧半径，矩形右下角的圆弧半径]<br>[矩形左上角的圆弧半径，矩形右上角的圆弧半径，矩形右下角的圆弧半径，矩形左下角的圆弧半径]<br>如果**radii**中包含负数或数组元素个数不在[1,4]范围内，则上报错误码103701。<br>默认值：**0**。设置**null**或**undefined**时按默认值处理。<br>如果圆弧半径超过矩形的宽度和高度，将按比例缩小以匹配对应尺寸。<br>默认单位：vp |
+| radii | number \| Array<number> | 否 | 矩形圆角的圆弧半径值或半径值列表。<br>参数类型为number时，表示矩形四个角的圆弧半径。<br>参数类型为Array&lt;number&gt;时，数组包含1到4个数字，含义如下：<br>[矩形四个角的圆弧半径]<br>[矩形左上角和右下角的圆弧半径，矩形右上角和左下角的圆弧半径]<br>[矩形左上角的圆弧半径，矩形右上角和左下角的圆弧半径，矩形右下角的圆弧半径]<br>[矩形左上角的圆弧半径，矩形右上角的圆弧半径，矩形右下角的圆弧半径，矩形左下角的圆弧半径]<br>如果**radii**中包含负数或数组元素个数不在[1,4]范围内，则上报错误码103701。<br>默认值：**0**。设置**null**或**undefined**时按默认值处理。<br>如果圆弧半径超过矩形的宽度和高度，将按比例缩小以匹配对应尺寸。<br>默认单位：vp |
 
 **错误码：**
 

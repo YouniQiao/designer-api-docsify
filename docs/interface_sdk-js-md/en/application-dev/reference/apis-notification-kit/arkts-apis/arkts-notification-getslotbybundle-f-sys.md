@@ -14,12 +14,13 @@ function getSlotByBundle(bundle: BundleOption, slotType: SlotType): Promise<Noti
 
 Obtains a notification slot of a specified application. This API uses a promise to return the result.
 
-Before obtaining the notification slot, create a slot through
-[addSlot](arkts-notification-addslot-f-sys.md#addslot-1).
+Before obtaining the notification slot, create a slot through [addSlot](arkts-notification-addslot-f-sys.md#addslot-1).
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function getSlotByBundle(bundle: BundleOption, slotType: SlotType): Promise<NotificationSlot>--><!--Device-notificationManager-function getSlotByBundle(bundle: BundleOption, slotType: SlotType): Promise<NotificationSlot>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -29,14 +30,14 @@ Before obtaining the notification slot, create a slot through
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
-| slotType | SlotType | Yes | Notification slot type. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
+| slotType | [SlotType](arkts-notification-slottype-e-sys.md) | Yes | Notification slot type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NotificationSlot&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NotificationSlot> | Promise used to return the result. |
 
 **Error codes:**
 

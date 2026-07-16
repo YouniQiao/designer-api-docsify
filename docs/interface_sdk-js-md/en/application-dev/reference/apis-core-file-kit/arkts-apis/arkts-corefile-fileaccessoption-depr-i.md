@@ -6,6 +6,8 @@ Defines the options used in access().
 
 **Deprecated since:** 10
 
+<!--Device-unnamed-export interface FileAccessOption--><!--Device-unnamed-export interface FileAccessOption-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## complete
@@ -22,6 +24,8 @@ Callback invoked when the API call is complete.
 
 **Deprecated since:** 10
 
+<!--Device-FileAccessOption-complete?: () => void--><!--Device-FileAccessOption-complete?: () => void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## fail
@@ -30,18 +34,15 @@ Callback invoked when the API call is complete.
 fail?: (data: string, code: number) => void
 ```
 
-Callback invoked when the API call fails.
-**data** indicates the error information.
-**code** indicates the returned error code:
-**202**: invalid parameter
-**300**: I/O error
-**301**: file or directory not found
+Callback invoked when the API call fails.**data** indicates the error information.**code** indicates the returned error code:**202**: invalid parameter **300**: I/O error **301**: file or directory not found
 
 **Type:** (data: string, code: number) => void
 
 **Since:** 3
 
 **Deprecated since:** 10
+
+<!--Device-FileAccessOption-fail?: (data: string, code: number) => void--><!--Device-FileAccessOption-fail?: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -59,6 +60,8 @@ Callback invoked when the API call is successful.
 
 **Deprecated since:** 10
 
+<!--Device-FileAccessOption-success?: () => void--><!--Device-FileAccessOption-success?: () => void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## uri
@@ -67,16 +70,15 @@ Callback invoked when the API call is successful.
 uri: string
 ```
 
-URI of the directory or file. Restricted by the underlying file system of lite wearables, the value must meet the
-following requirements:
-1. The URI cannot contain the following special characters: \"*+,:;<=>?[]|\x7F.
-2. The value can contain a maximum of 128 characters.
+URI of the directory or file. Restricted by the underlying file system of lite wearables, the value must meet the following requirements:1. The URI cannot contain the following special characters: \"*+,:;<=>?[]|\x7F.2. The value can contain a maximum of 128 characters.
 
 **Type:** string
 
 **Since:** 3
 
 **Deprecated since:** 10
+
+<!--Device-FileAccessOption-uri: string--><!--Device-FileAccessOption-uri: string-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 

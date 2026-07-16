@@ -18,6 +18,8 @@ Requests a widget update. This API uses an asynchronous callback to return the r
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
+<!--Device-formHost-function requestForm(formId: string, callback: AsyncCallback<void>): void--><!--Device-formHost-function requestForm(formId: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Requests a widget update. This API uses an asynchronous callback to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the widget is updated, **error**is undefined; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the widget is updated, **error** is undefined; otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -55,6 +57,8 @@ Requests a widget update. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
+<!--Device-formHost-function requestForm(formId: string): Promise<void>--><!--Device-formHost-function requestForm(formId: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -69,7 +73,7 @@ Requests a widget update. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

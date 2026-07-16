@@ -12,11 +12,11 @@ import { cloudExtension } from '@kit.ArkData';
 function createShareServiceStub(instance: ShareCenter): Promise<rpc.RemoteObject>
 ```
 
-Creates a RemoteObject instance based on a ShareCenter instance.
-The system uses this object to call the APIs of the ShareCenter instance.
-This API uses a promise to return the result.
+Creates a RemoteObject instance based on a ShareCenter instance.The system uses this object to call the APIs of the ShareCenter instance.This API uses a promise to return the result.
 
 **Since:** 11
+
+<!--Device-cloudExtension-function createShareServiceStub(instance: ShareCenter): Promise<rpc.RemoteObject>--><!--Device-cloudExtension-function createShareServiceStub(instance: ShareCenter): Promise<rpc.RemoteObject>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -26,13 +26,13 @@ This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instance | ShareCenter | Yes | Instance of the ShareCenter class. |
+| instance | [ShareCenter](arkts-arkdata-sharecenter-i-sys.md) | Yes | Instance of the ShareCenter class. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of ShareCenter. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<rpc.RemoteObject> | Promise used to return the RemoteObject instance of ShareCenter. |
 
 **Example**
 

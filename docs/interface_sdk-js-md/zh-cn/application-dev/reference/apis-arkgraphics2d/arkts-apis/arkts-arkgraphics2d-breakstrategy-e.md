@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-text-enum BreakStrategy--><!--Device-text-enum BreakStrategy-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## GREEDY
@@ -16,7 +18,9 @@ GREEDY = 0
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BreakStrategy-GREEDY = 0--><!--Device-BreakStrategy-GREEDY = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -30,7 +34,9 @@ HIGH_QUALITY = 1
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BreakStrategy-HIGH_QUALITY = 1--><!--Device-BreakStrategy-HIGH_QUALITY = 1-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -44,7 +50,9 @@ BALANCED = 2
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BreakStrategy-BALANCED = 2--><!--Device-BreakStrategy-BALANCED = 2-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

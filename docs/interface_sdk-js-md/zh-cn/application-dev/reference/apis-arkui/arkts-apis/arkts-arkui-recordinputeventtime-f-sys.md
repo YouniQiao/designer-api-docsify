@@ -1,5 +1,11 @@
 # recordInputEventTime（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { performanceMonitor } from '@kit.ArkUI';
+```
+
 ## recordInputEventTime
 
 ```TypeScript
@@ -12,6 +18,8 @@ function recordInputEventTime(type: ActionType, sourceType: SourceType, time: nu
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-performanceMonitor-function recordInputEventTime(type: ActionType, sourceType: SourceType, time: number): void--><!--Device-performanceMonitor-function recordInputEventTime(type: ActionType, sourceType: SourceType, time: number): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +28,8 @@ function recordInputEventTime(type: ActionType, sourceType: SourceType, time: nu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | ActionType | 是 | 用户场景触发模式。 |
-| sourceType | SourceType | 是 | 用户场景触发源。 |
+| type | [ActionType](../../apis-input-kit/arkts-apis/arkts-input-actiontype-e.md) | 是 | 用户场景触发模式。 |
+| sourceType | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-sourcetype-e.md) | 是 | 用户场景触发源。 |
 | time | number | 是 | 场景触发时间（ms），时间戳，例如1751508570794。若传零或负值将自动转化为当前系统时间，若传正值则正常使用。不正确的传参会导致用户操作响应时延指标异常。 |
 
 **错误码：**

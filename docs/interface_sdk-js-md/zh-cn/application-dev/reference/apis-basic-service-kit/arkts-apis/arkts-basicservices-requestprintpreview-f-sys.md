@@ -1,5 +1,11 @@
 # requestPrintPreview（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+```
+
 ## requestPrintPreview
 
 ```TypeScript
@@ -12,6 +18,8 @@ function requestPrintPreview(jobInfo: PrintJob, callback: Callback<number>): voi
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function requestPrintPreview(jobInfo: PrintJob, callback: Callback<int>): void--><!--Device-print-function requestPrintPreview(jobInfo: PrintJob, callback: Callback<int>): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +28,8 @@ function requestPrintPreview(jobInfo: PrintJob, callback: Callback<number>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| jobInfo | PrintJob | 是 | 打印任务信息。 |
-| callback | Callback&lt;number&gt; | 是 | 请求预览打印数据之后的回调。 |
+| jobInfo | [PrintJob](arkts-basicservices-printjob-i-sys.md) | 是 | 打印任务信息。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | 是 | 请求预览打印数据之后的回调。 |
 
 **错误码：**
 
@@ -73,6 +81,8 @@ function requestPrintPreview(jobInfo: PrintJob): Promise<number>
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function requestPrintPreview(jobInfo: PrintJob): Promise<int>--><!--Device-print-function requestPrintPreview(jobInfo: PrintJob): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -81,13 +91,13 @@ function requestPrintPreview(jobInfo: PrintJob): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| jobInfo | PrintJob | 是 | 打印任务信息。 |
+| jobInfo | [PrintJob](arkts-basicservices-printjob-i-sys.md) | 是 | 打印任务信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回预览结果。 |
+| Promise<number> | Promise对象，返回预览结果。 |
 
 **错误码：**
 

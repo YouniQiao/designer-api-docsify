@@ -1,5 +1,11 @@
 # remove
 
+## 导入模块
+
+```TypeScript
+import { request } from '@kit.BasicServicesKit';
+```
+
 ## remove
 
 ```TypeScript
@@ -10,7 +16,9 @@ function remove(id: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-agent-function remove(id: string, callback: AsyncCallback<void>): void--><!--Device-agent-function remove(id: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -19,7 +27,7 @@ function remove(id: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | string | 是 | 任务id。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当移除指定任务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当移除指定任务成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -40,7 +48,9 @@ function remove(id: string): Promise<void>
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-agent-function remove(id: string): Promise<void>--><!--Device-agent-function remove(id: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -54,7 +64,7 @@ function remove(id: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

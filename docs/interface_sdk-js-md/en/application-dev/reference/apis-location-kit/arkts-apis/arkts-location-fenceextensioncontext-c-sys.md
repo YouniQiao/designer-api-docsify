@@ -6,6 +6,8 @@ class of static subscriber extension context.
 
 **Since:** 14
 
+<!--Device-unnamed-export default class FenceExtensionContext extends ExtensionContext--><!--Device-unnamed-export default class FenceExtensionContext extends ExtensionContext-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## Modules to Import
@@ -20,15 +22,13 @@ import { FenceExtensionContext } from '@kit.LocationKit';
 startAbility(want: Want): Promise<void>
 ```
 
-Starts a new service extension ability.
-If the target service extension ability is visible, you can start the target service extension ability;
-If the target service extension ability is invisible,
-you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible service extension ability.
-If the target service extension ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
+Starts a new service extension ability.If the target service extension ability is visible, you can start the target service extension ability;If the target service extension ability is invisible,you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible service extension ability.If the target service extension ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
 
 **Since:** 14
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FenceExtensionContext-startAbility(want: Want): Promise<void>--><!--Device-FenceExtensionContext-startAbility(want: Want): Promise<void>-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -38,13 +38,13 @@ If the target service extension ability is in cross-device, you need to apply fo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Indicates the want info to start. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Indicates the want info to start. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

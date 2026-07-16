@@ -6,7 +6,9 @@ Enumerates the file location.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [PositionType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-positiontype-e.md)
+**Substitutes:** [PositionType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-positiontype-e-sys.md)
+
+<!--Device-userFileManager-enum PositionType--><!--Device-userFileManager-enum PositionType-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -26,6 +28,8 @@ Stored only on a local device.
 
 **Substitutes:** [LOCAL](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-positiontype-e-sys.md#local)
 
+<!--Device-PositionType-LOCAL = 1--><!--Device-PositionType-LOCAL = 1-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -44,6 +48,8 @@ Stored only on the cloud.
 
 **Substitutes:** [CLOUD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-positiontype-e-sys.md#cloud)
 
+<!--Device-PositionType-CLOUD--><!--Device-PositionType-CLOUD-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -61,6 +67,8 @@ Stored both on a local device and the cloud.
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [LOCAL_AND_CLOUD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-positiontype-e.md#local_and_cloud)
+
+<!--Device-PositionType-BOTH--><!--Device-PositionType-BOTH-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

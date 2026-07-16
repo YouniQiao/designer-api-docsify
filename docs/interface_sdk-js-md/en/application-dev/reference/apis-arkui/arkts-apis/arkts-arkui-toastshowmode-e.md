@@ -4,6 +4,8 @@ Enumerates display modes for toasts. By default, the toast is displayed within t
 
 **Since:** 11
 
+<!--Device-promptAction-export enum ToastShowMode--><!--Device-promptAction-export enum ToastShowMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DEFAULT
@@ -20,6 +22,8 @@ The toast is displayed within the application.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ToastShowMode-DEFAULT = 0--><!--Device-ToastShowMode-DEFAULT = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TOP_MOST
@@ -35,6 +39,8 @@ The toast is displayed in a subwindow.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ToastShowMode-TOP_MOST = 1--><!--Device-ToastShowMode-TOP_MOST = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

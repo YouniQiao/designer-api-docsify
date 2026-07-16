@@ -10,6 +10,8 @@ Satellite status information
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-export interface SatelliteStatusInfo--><!--Device-geolocation-export interface SatelliteStatusInfo-End-->
+
 **System capability:** SystemCapability.Location.Location.Gnss
 
 ## Modules to Import
@@ -32,6 +34,8 @@ altitudes: Array<number>
 
 **Substitutes:** altitudes
 
+<!--Device-SatelliteStatusInfo-altitudes: Array<number>--><!--Device-SatelliteStatusInfo-altitudes: Array<number>-End-->
+
 **System capability:** SystemCapability.Location.Location.Gnss
 
 ## azimuths
@@ -47,6 +51,8 @@ azimuths: Array<number>
 **Deprecated since:** 9
 
 **Substitutes:** azimuths
+
+<!--Device-SatelliteStatusInfo-azimuths: Array<number>--><!--Device-SatelliteStatusInfo-azimuths: Array<number>-End-->
 
 **System capability:** SystemCapability.Location.Location.Gnss
 
@@ -64,6 +70,8 @@ carrierFrequencies: Array<number>
 
 **Substitutes:** carrierFrequencies
 
+<!--Device-SatelliteStatusInfo-carrierFrequencies: Array<number>--><!--Device-SatelliteStatusInfo-carrierFrequencies: Array<number>-End-->
+
 **System capability:** SystemCapability.Location.Location.Gnss
 
 ## carrierToNoiseDensitys
@@ -79,6 +87,8 @@ carrierToNoiseDensitys: Array<number>
 **Deprecated since:** 9
 
 **Substitutes:** carrierToNoiseDensitys
+
+<!--Device-SatelliteStatusInfo-carrierToNoiseDensitys: Array<number>--><!--Device-SatelliteStatusInfo-carrierToNoiseDensitys: Array<number>-End-->
 
 **System capability:** SystemCapability.Location.Location.Gnss
 
@@ -96,6 +106,8 @@ satelliteIds: Array<number>
 
 **Substitutes:** satelliteIds
 
+<!--Device-SatelliteStatusInfo-satelliteIds: Array<number>--><!--Device-SatelliteStatusInfo-satelliteIds: Array<number>-End-->
+
 **System capability:** SystemCapability.Location.Location.Gnss
 
 ## satellitesNumber
@@ -111,6 +123,8 @@ satellitesNumber: number
 **Deprecated since:** 9
 
 **Substitutes:** satellitesNumber
+
+<!--Device-SatelliteStatusInfo-satellitesNumber: number--><!--Device-SatelliteStatusInfo-satellitesNumber: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Gnss
 

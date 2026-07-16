@@ -1,5 +1,11 @@
 # getOriginalSize
 
+## 导入模块
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+```
+
 ## getOriginalSize
 
 ```TypeScript
@@ -10,7 +16,9 @@ function getOriginalSize(compressedFile: string): Promise<number>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-zlib-function getOriginalSize(compressedFile: string): Promise<long>--><!--Device-zlib-function getOriginalSize(compressedFile: string): Promise<long>-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -24,13 +32,13 @@ function getOriginalSize(compressedFile: string): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回压缩文件的原始大小，单位字节。 |
+| Promise<number> | Promise对象，返回压缩文件的原始大小，单位字节。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are leftunspecified; 2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-传入的源文件错误) | The input source file is invalid. |
 | [900003](../../apis-basic-services-kit/errorcode-zlib.md#900003-传入的源文件格式错误或者已损坏) | The input source file is not in ZIP format or is damaged. |
 

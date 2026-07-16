@@ -1,5 +1,11 @@
 # unbindDriverWithDeviceId
 
+## 导入模块
+
+```TypeScript
+import { deviceManager } from '@kit.DriverDevelopmentKit';
+```
+
 ## unbindDriverWithDeviceId
 
 ```TypeScript
@@ -11,6 +17,8 @@ function unbindDriverWithDeviceId(deviceId: number): Promise<number>
 **起始版本：** 19
 
 **需要权限：** ohos.permission.ACCESS_DDK_DRIVERS
+
+<!--Device-deviceManager-function unbindDriverWithDeviceId(deviceId: long): Promise<int>--><!--Device-deviceManager-function unbindDriverWithDeviceId(deviceId: long): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
@@ -24,7 +32,7 @@ function unbindDriverWithDeviceId(deviceId: number): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回解除绑定的设备ID。 |
+| Promise<number> | Promise对象，返回解除绑定的设备ID。 |
 
 **错误码：**
 

@@ -4,6 +4,8 @@ AlbumPickerOptions Object
 
 **Since:** 12
 
+<!--Device-unnamed-export declare class AlbumPickerOptions--><!--Device-unnamed-export declare class AlbumPickerOptions-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ The type of the content displayed in the album
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-AlbumPickerOptions-filterType?: photoAccessHelper.PhotoViewMIMETypes--><!--Device-AlbumPickerOptions-filterType?: photoAccessHelper.PhotoViewMIMETypes-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## fontSize
@@ -42,6 +46,8 @@ The size of the font displayed in the album. When `fontSize` is a number type, m
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-AlbumPickerOptions-fontSize?: number | string--><!--Device-AlbumPickerOptions-fontSize?: number | string-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## themeColorMode
@@ -57,6 +63,8 @@ AlbumPickerComponent theme color
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AlbumPickerOptions-themeColorMode?: PickerColorMode--><!--Device-AlbumPickerOptions-themeColorMode?: PickerColorMode-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

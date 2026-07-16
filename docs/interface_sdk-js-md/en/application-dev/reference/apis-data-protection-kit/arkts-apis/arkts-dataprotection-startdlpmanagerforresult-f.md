@@ -12,20 +12,19 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function startDLPManagerForResult(context: common.UIAbilityContext, want: Want): Promise<DLPManagerResult>
 ```
 
-Starts the DLP manager application on the current
-[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-uiability-c.md) page in borderless
-mode. This API uses a promise to return the result.
+Starts the DLP manager application on the current [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-uiability-c.md) page in borderless mode. This API uses a promise to return the result.
 
-This API starts the DLP manager application to configure file permissions and return the user operation result to
-the caller.
+This API starts the DLP manager application to configure file permissions and return the user operation result to the caller.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > This API can be called only by domain accounts.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-dlpPermission-function startDLPManagerForResult(context: common.UIAbilityContext, want: Want): Promise<DLPManagerResult>--><!--Device-dlpPermission-function startDLPManagerForResult(context: common.UIAbilityContext, want: Want): Promise<DLPManagerResult>-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -34,13 +33,13 @@ the caller.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | common.UIAbilityContext | Yes | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-uiability-c.md) context. |
-| want | Want | Yes | Request object, which must contain the **uri** and **displayName** fields. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Request object, which must contain the **uri** and **displayName** fields. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DLPManagerResult&gt; | Promise used to return the **DLPManagerResult** object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DLPManagerResult> | Promise used to return the **DLPManagerResult** object. |
 
 **Error codes:**
 

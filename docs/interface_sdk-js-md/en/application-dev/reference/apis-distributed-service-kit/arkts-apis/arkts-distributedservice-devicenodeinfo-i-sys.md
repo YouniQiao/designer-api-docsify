@@ -1,9 +1,10 @@
 # DeviceNodeInfo (System API)
 
-Represents the device node information, including the networkId, device name, device type, nearby status
-and udid.
+Represents the device node information, including the networkId, device name, device type, nearby status and udid.
 
 **Since:** 26.1.0
+
+<!--Device-conversation-interface DeviceNodeInfo--><!--Device-conversation-interface DeviceNodeInfo-End-->
 
 **System capability:** SystemCapability.Communication.SoftBus.Core
 
@@ -29,6 +30,8 @@ Name of the device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DeviceNodeInfo-deviceName: string--><!--Device-DeviceNodeInfo-deviceName: string-End-->
+
 **System capability:** SystemCapability.Communication.SoftBus.Core
 
 **System API:** This is a system API.
@@ -39,14 +42,15 @@ Name of the device.
 deviceTypeId: number
 ```
 
-Device type identifier. This numeric value represents the category of the device (e.g., phone, tablet, TV,
-wearable, etc.).
+Device type identifier. This numeric value represents the category of the device (e.g., phone, tablet, TV,wearable, etc.).
 
 **Type:** number
 
 **Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DeviceNodeInfo-deviceTypeId: int--><!--Device-DeviceNodeInfo-deviceTypeId: int-End-->
 
 **System capability:** SystemCapability.Communication.SoftBus.Core
 
@@ -66,6 +70,8 @@ Indicates whether the device is nearby.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DeviceNodeInfo-nearby: boolean--><!--Device-DeviceNodeInfo-nearby: boolean-End-->
+
 **System capability:** SystemCapability.Communication.SoftBus.Core
 
 **System API:** This is a system API.
@@ -76,14 +82,15 @@ Indicates whether the device is nearby.
 networkId: string
 ```
 
-NetworkId of the device. This ID uniquely identifies a device within the distributed network and is used
-for device addressing when sending messages.
+NetworkId of the device. This ID uniquely identifies a device within the distributed network and is used for device addressing when sending messages.
 
 **Type:** string
 
 **Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DeviceNodeInfo-networkId: string--><!--Device-DeviceNodeInfo-networkId: string-End-->
 
 **System capability:** SystemCapability.Communication.SoftBus.Core
 
@@ -95,14 +102,15 @@ for device addressing when sending messages.
 udid: string
 ```
 
-UDID of the device. This ID uniquely identifies a device and is used for device addressing when sending
-messages.
+UDID of the device. This ID uniquely identifies a device and is used for device addressing when sending messages.
 
 **Type:** string
 
 **Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DeviceNodeInfo-udid: string--><!--Device-DeviceNodeInfo-udid: string-End-->
 
 **System capability:** SystemCapability.Communication.SoftBus.Core
 

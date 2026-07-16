@@ -4,6 +4,8 @@ Defines ripple field options.
 
 **Since:** 22
 
+<!--Device-unnamed-declare interface RippleFieldOptions--><!--Device-unnamed-declare interface RippleFieldOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## amplitude
@@ -12,8 +14,7 @@ Defines ripple field options.
 amplitude?: number
 ```
 
-The amplitude of the ripple field. The greater the amplitude, the stronger the force of the ripple field.
-Range of values:[0, +∞)
+The amplitude of the ripple field. The greater the amplitude, the stronger the force of the ripple field.Range of values:[0, +∞)
 
 **Type:** number
 
@@ -24,6 +25,8 @@ Range of values:[0, +∞)
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-RippleFieldOptions-amplitude?: number--><!--Device-RippleFieldOptions-amplitude?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,8 +36,7 @@ Range of values:[0, +∞)
 attenuation?: number
 ```
 
-The attenuation coefficient of the ripple field. The larger the attenuation coefficient, the faster the wave
-attenuates over time. Range of values:[0,1]
+The attenuation coefficient of the ripple field. The larger the attenuation coefficient, the faster the wave attenuates over time. Range of values:[0,1]
 
 **Type:** number
 
@@ -46,6 +48,8 @@ attenuates over time. Range of values:[0,1]
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-RippleFieldOptions-attenuation?: number--><!--Device-RippleFieldOptions-attenuation?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## center
@@ -54,8 +58,7 @@ attenuates over time. Range of values:[0,1]
 center?: PositionT<number>
 ```
 
-The central point where the ripple field generates force. The top-left corner of the component is the origin of
-coordinates. The coordinate unit is vp.
+The central point where the ripple field generates force. The top-left corner of the component is the origin of coordinates. The coordinate unit is vp.
 
 **Type:** PositionT<number>
 
@@ -66,6 +69,8 @@ coordinates. The coordinate unit is vp.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-RippleFieldOptions-center?: PositionT<number>--><!--Device-RippleFieldOptions-center?: PositionT<number>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -87,6 +92,8 @@ The region influenced by the ripple field.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-RippleFieldOptions-region?: FieldRegion--><!--Device-RippleFieldOptions-region?: FieldRegion-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## waveSpeed
@@ -95,8 +102,7 @@ The region influenced by the ripple field.
 waveSpeed?: number
 ```
 
-Wave speed. The greater the wave speed, the faster the wave changes over time, and the more pronounced the wave
-motion. Range of values:[0, +∞)
+Wave speed. The greater the wave speed, the faster the wave changes over time, and the more pronounced the wave motion. Range of values:[0, +∞)
 
 **Type:** number
 
@@ -107,6 +113,8 @@ motion. Range of values:[0, +∞)
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-RippleFieldOptions-waveSpeed?: number--><!--Device-RippleFieldOptions-waveSpeed?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,9 +124,7 @@ motion. Range of values:[0, +∞)
 wavelength?: number
 ```
 
-Wavelength, which is the distance over which a wave cycle changes. The larger
-the wavelength, the slower the wave changes with distance, and the less pronounced the wave fluctiations.
-Range of values:[0, +∞)
+Wavelength, which is the distance over which a wave cycle changes. The larger the wavelength, the slower the wave changes with distance, and the less pronounced the wave fluctiations.Range of values:[0, +∞)
 
 **Type:** number
 
@@ -129,6 +135,8 @@ Range of values:[0, +∞)
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-RippleFieldOptions-wavelength?: number--><!--Device-RippleFieldOptions-wavelength?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

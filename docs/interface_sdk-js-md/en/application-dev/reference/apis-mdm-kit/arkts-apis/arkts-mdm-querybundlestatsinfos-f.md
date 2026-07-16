@@ -20,13 +20,15 @@ Queries bundle statistics information of applications.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function queryBundleStatsInfos(admin: Want, startTime: number, endTime: number, accountId: number): Array<BundleStatsInfo>--><!--Device-applicationManager-function queryBundleStatsInfos(admin: Want, startTime: number, endTime: number, accountId: number): Array<BundleStatsInfo>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | admin indicates the enterprise admin extension ability information. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | admin indicates the enterprise admin extension ability information. |
 | startTime | number | Yes | startTime indicates the start time of the query period.<br>Unit: milliseconds, The value must be an integer greater than or equal to 0. |
 | endTime | number | Yes | endTime indicates the end time of the query period.<br>Unit: milliseconds, The value must be an integer greater than or equal to 0. |
 | accountId | number | Yes | accountId indicates the local ID of the OS account.<br>The value must be an integer greater than or equal to 0. |
@@ -35,7 +37,7 @@ Queries bundle statistics information of applications.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;BundleStatsInfo&gt; | returns the bundle statistics information of the applications. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<BundleStatsInfo> | returns the bundle statistics information of the applications. |
 
 **Error codes:**
 

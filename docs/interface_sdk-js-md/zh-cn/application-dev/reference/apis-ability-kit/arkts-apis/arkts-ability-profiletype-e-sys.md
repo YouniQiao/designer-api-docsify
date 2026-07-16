@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-bundleManager-export enum ProfileType--><!--Device-bundleManager-export enum ProfileType-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -18,6 +20,8 @@ INTENT_PROFILE = 1
 
 **起始版本：** 11
 
+<!--Device-ProfileType-INTENT_PROFILE = 1--><!--Device-ProfileType-INTENT_PROFILE = 1-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -28,12 +32,13 @@ INTENT_PROFILE = 1
 CLOUD_PROFILE = 8
 ```
 
-[端云同步](../../apis-core-file-kit/arkts-apis/arkts-file-cloudsync.md)配置文件。
-26.0.0
+[端云同步](../../apis-core-file-kit/arkts-apis/arkts-file-cloudsync.md)配置文件。26.0.0
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ProfileType-CLOUD_PROFILE = 8--><!--Device-ProfileType-CLOUD_PROFILE = 8-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

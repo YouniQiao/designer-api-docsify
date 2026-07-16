@@ -12,12 +12,13 @@ import { formHost } from '@kit.FormKit';
 function notifyInvisibleForms(formIds: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-Instructs the widget framework to make a widget invisible. After this API is called, **onVisibilityChange** is
-invoked to notify the widget provider. This API uses an asynchronous callback to return the result.
+Instructs the widget framework to make a widget invisible. After this API is called, **onVisibilityChange** is invoked to notify the widget provider. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
+
+<!--Device-formHost-function notifyInvisibleForms(formIds: Array<string>, callback: AsyncCallback<void>): void--><!--Device-formHost-function notifyInvisibleForms(formIds: Array<string>, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -27,8 +28,8 @@ invoked to notify the widget provider. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | Yes | List of widget IDs. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If a notification is sent to thewidget framework to make the widget invisible, **error** is undefined; otherwise, **error** is an error object. |
+| formIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | List of widget IDs. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If a notification is sent to the widget framework to make the widget invisible, **error** is undefined; otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -48,12 +49,13 @@ invoked to notify the widget provider. This API uses an asynchronous callback to
 function notifyInvisibleForms(formIds: Array<string>): Promise<void>
 ```
 
-Instructs the widget framework to make a widget invisible. After this API is called, **onVisibilityChange** is
-invoked to notify the widget provider. This API uses a promise to return the result.
+Instructs the widget framework to make a widget invisible. After this API is called, **onVisibilityChange** is invoked to notify the widget provider. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
+
+<!--Device-formHost-function notifyInvisibleForms(formIds: Array<string>): Promise<void>--><!--Device-formHost-function notifyInvisibleForms(formIds: Array<string>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -63,13 +65,13 @@ invoked to notify the widget provider. This API uses a promise to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | Yes | List of widget IDs. |
+| formIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | List of widget IDs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Firewall rule direction enumeration.
 
 **Since:** 15
 
+<!--Device-netFirewall-enum NetFirewallRuleDirection--><!--Device-netFirewall-enum NetFirewallRuleDirection-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## RULE_IN
@@ -16,6 +18,8 @@ Inbound.
 
 **Since:** 15
 
+<!--Device-NetFirewallRuleDirection-RULE_IN = 1--><!--Device-NetFirewallRuleDirection-RULE_IN = 1-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## RULE_OUT
@@ -27,6 +31,8 @@ RULE_OUT = 2
 Outbound.
 
 **Since:** 15
+
+<!--Device-NetFirewallRuleDirection-RULE_OUT = 2--><!--Device-NetFirewallRuleDirection-RULE_OUT = 2-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 

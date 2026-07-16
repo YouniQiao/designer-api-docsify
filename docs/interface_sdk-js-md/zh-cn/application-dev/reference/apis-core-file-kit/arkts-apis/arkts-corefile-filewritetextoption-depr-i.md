@@ -6,6 +6,8 @@
 
 **废弃版本：** 10
 
+<!--Device-unnamed-export interface FileWriteTextOption--><!--Device-unnamed-export interface FileWriteTextOption-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## append
@@ -21,6 +23,8 @@ append?: boolean
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileWriteTextOption-append?: boolean--><!--Device-FileWriteTextOption-append?: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -38,6 +42,8 @@ complete?: () => void
 
 **废弃版本：** 10
 
+<!--Device-FileWriteTextOption-complete?: () => void--><!--Device-FileWriteTextOption-complete?: () => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## encoding
@@ -53,6 +59,8 @@ encoding?: string
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileWriteTextOption-encoding?: string--><!--Device-FileWriteTextOption-encoding?: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -70,6 +78,8 @@ fail?: (data: string, code: number) => void
 
 **废弃版本：** 10
 
+<!--Device-FileWriteTextOption-fail?: (data: string, code: number) => void--><!--Device-FileWriteTextOption-fail?: (data: string, code: number) => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## success
@@ -85,6 +95,8 @@ success?: () => void
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileWriteTextOption-success?: () => void--><!--Device-FileWriteTextOption-success?: () => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -102,6 +114,8 @@ text: string
 
 **废弃版本：** 10
 
+<!--Device-FileWriteTextOption-text: string--><!--Device-FileWriteTextOption-text: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## uri
@@ -110,15 +124,15 @@ text: string
 uri: string
 ```
 
-本地文件URI，如果文件不存在会创建文件。由于轻量级穿戴设备底层文件系统的限制，该值必须满足以下要求：
-1. URI 中不得包含以下特殊字符：\"*+,:;<=>?[]|\x7F等。
-2. 最大允许字符长度为128个字符。
+本地文件URI，如果文件不存在会创建文件。由于轻量级穿戴设备底层文件系统的限制，该值必须满足以下要求：1. URI 中不得包含以下特殊字符：\"*+,:;<=>?[]|\x7F等。2. 最大允许字符长度为128个字符。
 
 **类型：** string
 
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileWriteTextOption-uri: string--><!--Device-FileWriteTextOption-uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 

@@ -16,6 +16,8 @@ Registers a listener to observe the mission status.
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-missionManager-function registerMissionListener(listener: MissionListener): number--><!--Device-missionManager-function registerMissionListener(listener: MissionListener): number-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
@@ -24,13 +26,13 @@ Registers a listener to observe the mission status.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listener | MissionListener | Yes | Mission status listener to register. |
+| listener | [MissionListener](arkts-ability-missionlistener-t-sys.md) | Yes | Mission status listener to register. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Index of the mission status listener, which is created by the system and allocated when the listeneris registered. |
+| number | Index of the mission status listener, which is created by the system and allocated when the listener is registered. |
 
 **Example**
 

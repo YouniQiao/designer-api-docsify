@@ -1,5 +1,11 @@
 # isAbilityEnabled（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## isAbilityEnabled
 
 ```TypeScript
@@ -10,6 +16,8 @@ function isAbilityEnabled(info: AbilityInfo, appIndex: number): Promise<boolean>
 
 **起始版本：** 12
 
+<!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo, appIndex: int): Promise<boolean>--><!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo, appIndex: int): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -18,14 +26,14 @@ function isAbilityEnabled(info: AbilityInfo, appIndex: number): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | AbilityInfo | 是 | 表示关于检查ability的信息。 |
+| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | 是 | 表示关于检查ability的信息。 |
 | appIndex | number | 是 | 表示分身应用的索引。 <br> appIndex为0时，表示获取主应用组件的禁用或使能状态。appIndex大于0时，表示获取指定分身应用组件的禁用或使能状态。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回true表示当前应用组件为使能状态，返回false表示当前应用组件为禁用状态。 |
+| Promise<boolean> | Promise对象，返回true表示当前应用组件为使能状态，返回false表示当前应用组件为禁用状态。 |
 
 **错误码：**
 
@@ -83,6 +91,8 @@ function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): 
 
 **起始版本：** 9
 
+<!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): void--><!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -91,8 +101,8 @@ function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | AbilityInfo | 是 | 表示关于检查ability的信息。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，返回true表示当前应用组件为使能状态，返回false表示应用组件为禁用状态。 |
+| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | 是 | 表示关于检查ability的信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，返回true表示当前应用组件为使能状态，返回false表示应用组件为禁用状态。 |
 
 **错误码：**
 
@@ -151,6 +161,8 @@ function isAbilityEnabled(info: AbilityInfo): Promise<boolean>
 
 **起始版本：** 9
 
+<!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo): Promise<boolean>--><!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -159,13 +171,13 @@ function isAbilityEnabled(info: AbilityInfo): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | AbilityInfo | 是 | 表示关于检查ability的信息。 |
+| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | 是 | 表示关于检查ability的信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回true表示当前应用组件为使能状态，返回false表示当前应用组件为禁用状态。 |
+| Promise<boolean> | Promise对象，返回true表示当前应用组件为使能状态，返回false表示当前应用组件为禁用状态。 |
 
 **错误码：**
 

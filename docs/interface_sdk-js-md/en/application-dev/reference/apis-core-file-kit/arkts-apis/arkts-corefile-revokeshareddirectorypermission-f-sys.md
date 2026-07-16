@@ -20,6 +20,8 @@ Revokes permission for application-shared directories
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-fileShare-function revokeSharedDirectoryPermission(): Promise<void>--><!--Device-fileShare-function revokeSharedDirectoryPermission(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Revokes permission for application-shared directories
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 

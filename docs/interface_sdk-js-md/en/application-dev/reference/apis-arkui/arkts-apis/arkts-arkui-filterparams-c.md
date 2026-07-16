@@ -4,6 +4,8 @@ This parameter is used to define the input of each filtering dimension.
 
 **Since:** 22
 
+<!--Device-unnamed-export declare class FilterParams--><!--Device-unnamed-export declare class FilterParams-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ filter item name.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-FilterParams-name: ResourceStr--><!--Device-FilterParams-name: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## options
@@ -45,6 +49,8 @@ filter options.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FilterParams-options: Array<ResourceStr>--><!--Device-FilterParams-options: Array<ResourceStr>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

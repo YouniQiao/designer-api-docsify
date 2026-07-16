@@ -4,9 +4,17 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-osAccount-interface OsAccountSubProfileManager--><!--Device-osAccount-interface OsAccountSubProfileManager-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+```
 
 ## createOsAccountSubProfile
 
@@ -22,6 +30,8 @@ createOsAccountSubProfile(osAccountLocalId: number): Promise<OsAccountSubProfile
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OsAccountSubProfileManager-createOsAccountSubProfile(osAccountLocalId: int): Promise<OsAccountSubProfile>--><!--Device-OsAccountSubProfileManager-createOsAccountSubProfile(osAccountLocalId: int): Promise<OsAccountSubProfile>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -36,7 +46,7 @@ createOsAccountSubProfile(osAccountLocalId: number): Promise<OsAccountSubProfile
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;OsAccountSubProfile&gt; | Promise对象，返回创建的子身份资料。 |
+| Promise<OsAccountSubProfile> | Promise对象，返回创建的子身份资料。 |
 
 **错误码：**
 
@@ -47,7 +57,7 @@ createOsAccountSubProfile(osAccountLocalId: number): Promise<OsAccountSubProfile
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | The OS account not found. |
 | [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-受限的账号) | Restricted OS account. |
-| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target OS account is beingoperated. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target OS account is being operated. |
 | [12300402](../../apis-basic-services-kit/errorcode-account.md#12300402-系统账号下的子身份资料数量已达到上限) | The number of sub-profiles under the OS account has reached limit. |
 
 **示例：**
@@ -86,6 +96,8 @@ deleteOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OsAccountSubProfileManager-deleteOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<void>--><!--Device-OsAccountSubProfileManager-deleteOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -101,7 +113,7 @@ deleteOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -110,7 +122,7 @@ deleteOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promi
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The OS account or sub-profile is beingoperated. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The OS account or sub-profile is being operated. |
 | [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) | Sub-profile not found. |
 | [12300403](../../apis-basic-services-kit/errorcode-account.md#12300403-受限的系统账号子身份资料) | Restricted sub-profile cannot be deleted. |
 | [12300404](../../apis-basic-services-kit/errorcode-account.md#12300404-系统账号的前台子身份资料不允许被删除) | The foreground sub-profile cannot be deleted. |
@@ -150,6 +162,8 @@ getOsAccountForegroundSubProfileId(): Promise<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(): Promise<int>--><!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -158,7 +172,7 @@ getOsAccountForegroundSubProfileId(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回系统账号的前台子身份资料标识符。 |
+| Promise<number> | Promise对象，返回系统账号的前台子身份资料标识符。 |
 
 **错误码：**
 
@@ -199,6 +213,8 @@ getOsAccountForegroundSubProfileId(osAccountLocalId: number): Promise<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(osAccountLocalId: int): Promise<int>--><!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(osAccountLocalId: int): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -213,7 +229,7 @@ getOsAccountForegroundSubProfileId(osAccountLocalId: number): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回系统账号前台子身份资料的标识符。 |
+| Promise<number> | Promise对象，返回系统账号前台子身份资料的标识符。 |
 
 **错误码：**
 
@@ -258,6 +274,8 @@ getOsAccountLocalIdForSubProfile(subProfileId: number): Promise<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OsAccountSubProfileManager-getOsAccountLocalIdForSubProfile(subProfileId: int): Promise<int>--><!--Device-OsAccountSubProfileManager-getOsAccountLocalIdForSubProfile(subProfileId: int): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -272,7 +290,7 @@ getOsAccountLocalIdForSubProfile(subProfileId: number): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回子身份资料所属系统账号的本地ID。 |
+| Promise<number> | Promise对象，返回子身份资料所属系统账号的本地ID。 |
 
 **错误码：**
 
@@ -318,6 +336,8 @@ getOsAccountSubProfile(subProfileId: number): Promise<OsAccountSubProfile>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OsAccountSubProfileManager-getOsAccountSubProfile(subProfileId: int): Promise<OsAccountSubProfile>--><!--Device-OsAccountSubProfileManager-getOsAccountSubProfile(subProfileId: int): Promise<OsAccountSubProfile>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -332,7 +352,7 @@ getOsAccountSubProfile(subProfileId: number): Promise<OsAccountSubProfile>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;OsAccountSubProfile&gt; | Promise对象，返回子身份资料对象信息。 |
+| Promise<OsAccountSubProfile> | Promise对象，返回子身份资料对象信息。 |
 
 **错误码：**
 
@@ -379,6 +399,8 @@ getOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promise<
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OsAccountSubProfileManager-getOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<OsAccountSubProfile>--><!--Device-OsAccountSubProfileManager-getOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<OsAccountSubProfile>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -394,7 +416,7 @@ getOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promise<
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;OsAccountSubProfile&gt; | Promise对象，返回子身份资料对象信息。 |
+| Promise<OsAccountSubProfile> | Promise对象，返回子身份资料对象信息。 |
 
 **错误码：**
 
@@ -442,6 +464,8 @@ getOsAccountSubProfileIds(): Promise<number[]>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OsAccountSubProfileManager-getOsAccountSubProfileIds(): Promise<int[]>--><!--Device-OsAccountSubProfileManager-getOsAccountSubProfileIds(): Promise<int[]>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -450,7 +474,7 @@ getOsAccountSubProfileIds(): Promise<number[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number[]&gt; | Promise used to return the ID list of sub-profile. |
+| Promise<number[]> | Promise used to return the ID list of sub-profile. |
 
 **错误码：**
 
@@ -493,6 +517,8 @@ getOsAccountSubProfileIds(osAccountLocalId: number): Promise<number[]>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OsAccountSubProfileManager-getOsAccountSubProfileIds(osAccountLocalId: int): Promise<int[]>--><!--Device-OsAccountSubProfileManager-getOsAccountSubProfileIds(osAccountLocalId: int): Promise<int[]>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -507,7 +533,7 @@ getOsAccountSubProfileIds(osAccountLocalId: number): Promise<number[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number[]&gt; | Promise used to return the ID list of sub-profile. |
+| Promise<number[]> | Promise used to return the ID list of sub-profile. |
 
 **错误码：**
 
@@ -552,6 +578,8 @@ offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OsAccountSubProfileManager-offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): void--><!--Device-OsAccountSubProfileManager-offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -560,7 +588,7 @@ offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;OsAccountSubProfileEventData&gt; | 否 | 需要取消订阅的回调。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<OsAccountSubProfileEventData> | 否 | 需要取消订阅的回调。 |
 
 **错误码：**
 
@@ -598,6 +626,12 @@ onOsAccountSubProfileEvent(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OsAccountSubProfileManager-onOsAccountSubProfileEvent(
+      events: OsAccountSubProfileEvent[],
+      callback: Callback<OsAccountSubProfileEventData>): void--><!--Device-OsAccountSubProfileManager-onOsAccountSubProfileEvent(
+      events: OsAccountSubProfileEvent[],
+      callback: Callback<OsAccountSubProfileEventData>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -606,8 +640,8 @@ onOsAccountSubProfileEvent(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| events | OsAccountSubProfileEvent[] | 是 | 要订阅的事件数组 |
-| callback | Callback&lt;OsAccountSubProfileEventData&gt; | 是 | 事件发生时调用的回调。 |
+| events | [OsAccountSubProfileEvent](arkts-basicservices-osaccountsubprofileevent-e-sys.md)[] | 是 | 要订阅的事件数组 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<OsAccountSubProfileEventData> | 是 | 事件发生时调用的回调。 |
 
 **错误码：**
 
@@ -651,6 +685,8 @@ switchOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OsAccountSubProfileManager-switchOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<void>--><!--Device-OsAccountSubProfileManager-switchOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -666,7 +702,7 @@ switchOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -675,10 +711,10 @@ switchOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promi
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The OS account or sub-profile is beingoperated. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The OS account or sub-profile is being operated. |
 | [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) | Sub-profile not found. |
 | [12300403](../../apis-basic-services-kit/errorcode-account.md#12300403-受限的系统账号子身份资料) | Restricted sub-profile cannot be switched to foreground. |
-| [12300405](../../apis-basic-services-kit/errorcode-account.md#12300405-已登录分布式账号的前台子身份不可直接切换到后台) | The foreground sub-profile bound with a logged-in distributed accountcannot be directly switched to background. |
+| [12300405](../../apis-basic-services-kit/errorcode-account.md#12300405-已登录分布式账号的前台子身份不可直接切换到后台) | The foreground sub-profile bound with a logged-in distributed account cannot be directly switched to background. |
 
 **示例：**
 

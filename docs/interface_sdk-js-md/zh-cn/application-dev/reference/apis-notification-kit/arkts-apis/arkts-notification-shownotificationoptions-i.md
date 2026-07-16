@@ -4,6 +4,8 @@
 
 **废弃版本：** 7
 
+<!--Device-unnamed-export interface ShowNotificationOptions--><!--Device-unnamed-export interface ShowNotificationOptions-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## 导入模块
@@ -28,6 +30,8 @@ clickAction?: ActionResult
 
 **废弃版本：** 7
 
+<!--Device-ShowNotificationOptions-clickAction?: ActionResult--><!--Device-ShowNotificationOptions-clickAction?: ActionResult-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## contentText
@@ -44,6 +48,8 @@ contentText?: string
 
 **废弃版本：** 7
 
+<!--Device-ShowNotificationOptions-contentText?: string--><!--Device-ShowNotificationOptions-contentText?: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## contentTitle
@@ -59,6 +65,8 @@ contentTitle?: string
 **起始版本：** 3
 
 **废弃版本：** 7
+
+<!--Device-ShowNotificationOptions-contentTitle?: string--><!--Device-ShowNotificationOptions-contentTitle?: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

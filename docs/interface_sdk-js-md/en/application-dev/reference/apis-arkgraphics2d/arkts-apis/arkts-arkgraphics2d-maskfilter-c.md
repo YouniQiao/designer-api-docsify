@@ -2,16 +2,18 @@
 
 Implements a mask filter.
 
-> **NOTE**
->
-> - The initial APIs of this class are supported since API version 12.
->
-> - This module uses the physical pixel unit, px.
->
-> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
+> **NOTE**  
+>  
+> - The initial APIs of this class are supported since API version 12.  
+>  
+> - This module uses the physical pixel unit, px.  
+>  
+> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state  
 > transitions.
 
 **Since:** 12
+
+<!--Device-drawing-class MaskFilter--><!--Device-drawing-class MaskFilter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -31,20 +33,22 @@ Creates a mask filter with a blur effect.
 
 **Since:** 12
 
+<!--Device-MaskFilter-static createBlurMaskFilter(blurType: BlurType, sigma: number): MaskFilter--><!--Device-MaskFilter-static createBlurMaskFilter(blurType: BlurType, sigma: number): MaskFilter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blurType | BlurType | Yes | Blur type. |
-| sigma | number | Yes | Standard deviation of the Gaussian blur to apply. The value must be a floating pointnumber greater than 0. |
+| blurType | [BlurType](arkts-arkgraphics2d-blurtype-e.md) | Yes | Blur type. |
+| sigma | number | Yes | Standard deviation of the Gaussian blur to apply. The value must be a floating point number greater than 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MaskFilter | **Maskfilter** object created. |
+| [MaskFilter](arkts-arkgraphics2d-maskfilter-c.md) | **Maskfilter** object created. |
 
 **Error codes:**
 

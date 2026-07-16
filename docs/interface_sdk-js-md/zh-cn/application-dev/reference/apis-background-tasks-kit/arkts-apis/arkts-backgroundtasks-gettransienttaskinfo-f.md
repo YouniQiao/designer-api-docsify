@@ -1,5 +1,11 @@
 # getTransientTaskInfo
 
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+```
+
 ## getTransientTaskInfo
 
 ```TypeScript
@@ -10,13 +16,15 @@ function getTransientTaskInfo(): Promise<TransientTaskInfo>
 
 **起始版本：** 20
 
+<!--Device-backgroundTaskManager-function getTransientTaskInfo(): Promise<TransientTaskInfo>--><!--Device-backgroundTaskManager-function getTransientTaskInfo(): Promise<TransientTaskInfo>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;TransientTaskInfo&gt; | Promise对象，返回所有短时任务信息。 |
+| Promise<TransientTaskInfo> | Promise对象，返回所有短时任务信息。 |
 
 **错误码：**
 

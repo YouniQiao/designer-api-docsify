@@ -4,6 +4,8 @@ Enumerates the modules from which information is obtained.
 
 **Since:** 8
 
+<!--Device-osAccount-enum Module--><!--Device-osAccount-enum Module-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -17,6 +19,8 @@ FACE_AUTH = 1
 Facial authentication module.
 
 **Since:** 8
+
+<!--Device-Module-FACE_AUTH = 1--><!--Device-Module-FACE_AUTH = 1-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 

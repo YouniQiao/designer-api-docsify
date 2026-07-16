@@ -1,12 +1,12 @@
 # UIListEvent
 
-Represents the return value of the
-[getEvent('List')](FrameNode:typeNode.getEvent(node: FrameNode, nodeType: 'List')) method in **frameNode**,
-which can be used to set scroll events for a **List** node.
+Represents the return value of the [getEvent('List')](FrameNode:typeNode.getEvent(node: FrameNode, nodeType: 'List')) method in **frameNode**,which can be used to set scroll events for a **List** node.
 
 **Inheritance/Implementation:** UIListEvent extends [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md)
 
 **Since:** 19
+
+<!--Device-unnamed-declare interface UIListEvent extends UIScrollableCommonEvent--><!--Device-unnamed-declare interface UIListEvent extends UIScrollableCommonEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,8 +16,7 @@ which can be used to set scroll events for a **List** node.
 setOnDidScroll(callback: OnScrollCallback | undefined): void
 ```
 
-Sets the callback for the
-[onDidScroll](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12) event.
+Sets the callback for the [onDidScroll](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12) event.
 
 If the input parameter is **undefined**, the event callback is reset.
 
@@ -26,6 +25,8 @@ If the input parameter is **undefined**, the event callback is reset.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-UIListEvent-setOnDidScroll(callback: OnScrollCallback | undefined): void--><!--Device-UIListEvent-setOnDidScroll(callback: OnScrollCallback | undefined): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -41,8 +42,7 @@ If the input parameter is **undefined**, the event callback is reset.
 setOnScrollIndex(callback: OnListScrollIndexCallback | undefined): void
 ```
 
-Sets the callback of the
-[onScrollIndex](../../../../reference/apis-arkui/arkui-ts/ts-container-list.md#onscrollindex) event.
+Sets the callback of the [onScrollIndex](../../../../reference/apis-arkui/arkui-ts/ts-container-list.md#onscrollindex) event.
 
 If the input parameter is **undefined**, the event callback is reset.
 
@@ -51,6 +51,8 @@ If the input parameter is **undefined**, the event callback is reset.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-UIListEvent-setOnScrollIndex(callback: OnListScrollIndexCallback | undefined): void--><!--Device-UIListEvent-setOnScrollIndex(callback: OnListScrollIndexCallback | undefined): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,13 +78,15 @@ If the input parameter is **undefined**, the event callback is reset.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-UIListEvent-setOnScrollVisibleContentChange(callback: OnScrollVisibleContentChangeCallback | undefined): void--><!--Device-UIListEvent-setOnScrollVisibleContentChange(callback: OnScrollVisibleContentChangeCallback | undefined): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnScrollVisibleContentChangeCallback \| undefined | Yes | Callback for the**onScrollVisibleContentChange** event. |
+| callback | OnScrollVisibleContentChangeCallback \| undefined | Yes | Callback for the **onScrollVisibleContentChange** event. |
 
 ## setOnWillScroll
 
@@ -90,8 +94,7 @@ If the input parameter is **undefined**, the event callback is reset.
 setOnWillScroll(callback: OnWillScrollCallback | undefined): void
 ```
 
-Sets the callback for the
-[onWillScroll](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onwillscroll12) event.
+Sets the callback for the [onWillScroll](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onwillscroll12) event.
 
 If the input parameter is **undefined**, the event callback is reset.
 
@@ -100,6 +103,8 @@ If the input parameter is **undefined**, the event callback is reset.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-UIListEvent-setOnWillScroll(callback: OnWillScrollCallback | undefined): void--><!--Device-UIListEvent-setOnWillScroll(callback: OnWillScrollCallback | undefined): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

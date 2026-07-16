@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+<!--Device-window-enum RotationInfoType--><!--Device-window-enum RotationInfoType-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## WINDOW_ORIENTATION
@@ -17,6 +19,8 @@ WINDOW_ORIENTATION = 0
 开发者在使用时，需要注意该方向表示[RotationChangeInfo](arkts-arkui-rotationchangeinfo-i.md)中的orientation参数。
 
 **起始版本：** 23
+
+<!--Device-RotationInfoType-WINDOW_ORIENTATION = 0--><!--Device-RotationInfoType-WINDOW_ORIENTATION = 0-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -32,6 +36,8 @@ DISPLAY_ORIENTATION = 1
 
 **起始版本：** 23
 
+<!--Device-RotationInfoType-DISPLAY_ORIENTATION = 1--><!--Device-RotationInfoType-DISPLAY_ORIENTATION = 1-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## DISPLAY_ROTATION
@@ -45,6 +51,8 @@ DISPLAY_ROTATION = 2
 开发者在使用时，需要注意该方向表示[display](arkts-arkui-displaystate-e.md)对象的rotation属性。
 
 **起始版本：** 23
+
+<!--Device-RotationInfoType-DISPLAY_ROTATION = 2--><!--Device-RotationInfoType-DISPLAY_ROTATION = 2-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 

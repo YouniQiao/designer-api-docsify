@@ -18,13 +18,15 @@ Creates the instance of HID device profile.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-hid-function createHidDeviceProfile(): HidDeviceProfile--><!--Device-hid-function createHidDeviceProfile(): HidDeviceProfile-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| HidDeviceProfile | Returns the instance of HID device profile. |
+| [HidDeviceProfile](arkts-connectivity-hiddeviceprofile-i.md) | Returns the instance of HID device profile. |
 
 **Error codes:**
 

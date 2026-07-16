@@ -8,7 +8,15 @@
 
 **替代接口：** org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat)
 
+<!--Device-intl-export class RelativeTimeFormat--><!--Device-intl-export class RelativeTimeFormat-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+```
 
 ## constructor
 
@@ -24,7 +32,9 @@ constructor()
 
 **替代接口：** org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RelativeTimeFormat-constructor()--><!--Device-RelativeTimeFormat-constructor()-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -52,7 +62,9 @@ constructor(locale: string | Array<string>, options?: RelativeTimeFormatInputOpt
 
 **替代接口：** org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RelativeTimeFormat-constructor(locale: string | Array<string>, options?: RelativeTimeFormatInputOptions)--><!--Device-RelativeTimeFormat-constructor(locale: string | Array<string>, options?: RelativeTimeFormatInputOptions)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -60,8 +72,8 @@ constructor(locale: string | Array<string>, options?: RelativeTimeFormatInputOpt
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
-| options | RelativeTimeFormatInputOptions | 否 | 创建相对时间格式化对象时的配置项。<br>默认值：所有属性都取默认值时的配置项。 |
+| locale | string \| Array<string> | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
+| options | [RelativeTimeFormatInputOptions](arkts-localization-relativetimeformatinputoptions-i.md) | 否 | 创建相对时间格式化对象时的配置项。<br>默认值：所有属性都取默认值时的配置项。 |
 
 **示例：**
 
@@ -91,7 +103,9 @@ format(value: number, unit: string): string
 
 **替代接口：** org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RelativeTimeFormat-format(value: double, unit: string): string--><!--Device-RelativeTimeFormat-format(value: double, unit: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -134,7 +148,9 @@ formatToParts(value: number, unit: string): Array<object>
 
 **替代接口：** org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RelativeTimeFormat-formatToParts(value: double, unit: string): Array<object>--><!--Device-RelativeTimeFormat-formatToParts(value: double, unit: string): Array<object>-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -149,7 +165,7 @@ formatToParts(value: number, unit: string): Array<object>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;object&gt; | 格式化结果中各个部分的对象数组。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<object> | 格式化结果中各个部分的对象数组。 |
 
 **示例：**
 
@@ -176,7 +192,9 @@ resolvedOptions(): RelativeTimeFormatResolvedOptions
 
 **替代接口：** org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RelativeTimeFormat-resolvedOptions(): RelativeTimeFormatResolvedOptions--><!--Device-RelativeTimeFormat-resolvedOptions(): RelativeTimeFormatResolvedOptions-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -184,7 +202,7 @@ resolvedOptions(): RelativeTimeFormatResolvedOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| RelativeTimeFormatResolvedOptions | 相对时间格式化对象的格式化配置项。 |
+| [RelativeTimeFormatResolvedOptions](arkts-localization-relativetimeformatresolvedoptions-i.md) | 相对时间格式化对象的格式化配置项。 |
 
 **示例：**
 

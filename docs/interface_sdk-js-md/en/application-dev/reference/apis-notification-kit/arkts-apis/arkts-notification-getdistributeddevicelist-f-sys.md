@@ -18,6 +18,8 @@ Obtains the device types that enable cross-device notification. This API uses a 
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getDistributedDeviceList(): Promise<Array<string>>--><!--Device-notificationManager-function getDistributedDeviceList(): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Obtains the device types that enable cross-device notification. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return the result. |
 
 **Error codes:**
 

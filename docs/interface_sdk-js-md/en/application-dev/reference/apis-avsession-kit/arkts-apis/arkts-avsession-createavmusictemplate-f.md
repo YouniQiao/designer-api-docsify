@@ -18,24 +18,26 @@ Create an AVMusicTemplate instance.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-avMusicTemplate-function createAVMusicTemplate(accessType: AVMusicTemplateType): AVMusicTemplate--><!--Device-avMusicTemplate-function createAVMusicTemplate(accessType: AVMusicTemplateType): AVMusicTemplate-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accessType | AVMusicTemplateType | Yes | type of access, default is 'smartCar' |
+| accessType | [AVMusicTemplateType](arkts-avsession-avmusictemplatetype-e.md) | Yes | type of access, default is 'smartCar' |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AVMusicTemplate | an AVMusicTemplate instance |
+| [AVMusicTemplate](arkts-avsession-avmusictemplate-c.md) | an AVMusicTemplate instance |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function createAVMusicTemplatecan not work correctly due to limited device capabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function createAVMusicTemplate can not work correctly due to limited device capabilities. |
 | [35000001](../errorcode-avmusictemplate.md#35000001-audio-template-creation-failure) | Failed to create the AVMusicTemplate. |
 

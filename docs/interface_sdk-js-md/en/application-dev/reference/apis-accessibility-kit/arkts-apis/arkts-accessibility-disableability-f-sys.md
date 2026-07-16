@@ -18,6 +18,8 @@ Disables an accessibility extension ability. This API uses a promise to return t
 
 **Required permissions:** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
+<!--Device-config-function disableAbility(name: string): Promise<void>--><!--Device-config-function disableAbility(name: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -32,7 +34,7 @@ Disables an accessibility extension ability. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -56,6 +58,8 @@ Disables an accessibility extension ability. This API uses an asynchronous callb
 
 **Required permissions:** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
+<!--Device-config-function disableAbility(name: string, callback: AsyncCallback<void>): void--><!--Device-config-function disableAbility(name: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -65,7 +69,7 @@ Disables an accessibility extension ability. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the accessibility extension ability, in the format of 'bundleName/abilityName'. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 

@@ -6,6 +6,8 @@ Describes the SAR sensor data. It extends from [Response](arkts-sensorservice-re
 
 **Since:** 10
 
+<!--Device-sensor-interface SarResponse extends Response--><!--Device-sensor-interface SarResponse extends Response-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **System API:** This is a system API.
@@ -27,6 +29,8 @@ Absorption ratio, in W/kg.
 **Type:** number
 
 **Since:** 10
+
+<!--Device-SarResponse-absorptionRatio: double--><!--Device-SarResponse-absorptionRatio: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 

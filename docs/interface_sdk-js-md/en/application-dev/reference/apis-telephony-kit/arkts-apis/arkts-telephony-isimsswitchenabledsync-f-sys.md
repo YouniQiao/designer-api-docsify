@@ -16,6 +16,8 @@ Judge whether the Ims switch is enabled.
 
 **Since:** 12
 
+<!--Device-call-function isImsSwitchEnabledSync(slotId: int): boolean--><!--Device-call-function isImsSwitchEnabledSync(slotId: int): boolean-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.

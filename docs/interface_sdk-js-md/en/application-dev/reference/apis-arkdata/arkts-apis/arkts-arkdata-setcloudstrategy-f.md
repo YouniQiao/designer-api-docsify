@@ -16,20 +16,22 @@ Sets the cloud sync strategy of an application. This API uses a promise to retur
 
 **Since:** 12
 
+<!--Device-cloudData-function setCloudStrategy(strategy: StrategyType, param?: Array<commonType.ValueType>): Promise<void>--><!--Device-cloudData-function setCloudStrategy(strategy: StrategyType, param?: Array<commonType.ValueType>): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategy | StrategyType | Yes | Type of the strategy to set. |
-| param | Array&lt;commonType.ValueType&gt; | No | Strategy parameters to set.Currently, only network strategies can be set. By default, Wi-Fi and cellular network are supported. |
+| strategy | [StrategyType](arkts-arkdata-strategytype-e.md) | Yes | Type of the strategy to set. |
+| param | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<commonType.ValueType> | No | Strategy parameters to set.Currently, only network strategies can be set. By default, Wi-Fi and cellular network are supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

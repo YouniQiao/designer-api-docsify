@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-text-interface TextShadow--><!--Device-text-interface TextShadow-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
+
+## 导入模块
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D';
+```
 
 ## blurRadius
 
@@ -18,7 +26,9 @@ blurRadius?: number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextShadow-blurRadius?: double--><!--Device-TextShadow-blurRadius?: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -34,7 +44,9 @@ color?: common2D.Color
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextShadow-color?: common2D.Color--><!--Device-TextShadow-color?: common2D.Color-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -50,7 +62,9 @@ point?: common2D.Point
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextShadow-point?: common2D.Point--><!--Device-TextShadow-point?: common2D.Point-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

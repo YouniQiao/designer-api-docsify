@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface OnFirstContentfulPaintEvent--><!--Device-unnamed-declare interface OnFirstContentfulPaintEvent-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## firstContentfulPaintMs
@@ -18,7 +20,9 @@ firstContentfulPaintMs: number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnFirstContentfulPaintEvent-firstContentfulPaintMs: number--><!--Device-OnFirstContentfulPaintEvent-firstContentfulPaintMs: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -34,7 +38,9 @@ navigationStartTick: number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnFirstContentfulPaintEvent-navigationStartTick: number--><!--Device-OnFirstContentfulPaintEvent-navigationStartTick: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

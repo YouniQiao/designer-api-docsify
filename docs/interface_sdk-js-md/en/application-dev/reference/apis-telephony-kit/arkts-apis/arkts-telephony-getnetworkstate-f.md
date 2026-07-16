@@ -18,6 +18,8 @@ Obtains the network state of the registered network.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-radio-function getNetworkState(slotId: int, callback: AsyncCallback<NetworkState>): void--><!--Device-radio-function getNetworkState(slotId: int, callback: AsyncCallback<NetworkState>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -25,7 +27,7 @@ Obtains the network state of the registered network.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;NetworkState&gt; | Yes | Indicates the callback for getting network registration state. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<NetworkState> | Yes | Indicates the callback for getting network registration state. |
 
 **Error codes:**
 
@@ -67,6 +69,8 @@ Obtains the network state of the registered network.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-radio-function getNetworkState(slotId?: int): Promise<NetworkState>--><!--Device-radio-function getNetworkState(slotId?: int): Promise<NetworkState>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -79,7 +83,7 @@ Obtains the network state of the registered network.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetworkState&gt; | Returns the NetworkState object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetworkState> | Returns the NetworkState object. |
 
 **Error codes:**
 
@@ -119,13 +123,15 @@ Obtains the network state of the registered network.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-radio-function getNetworkState(callback: AsyncCallback<NetworkState>): void--><!--Device-radio-function getNetworkState(callback: AsyncCallback<NetworkState>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;NetworkState&gt; | Yes | Indicates the callback for getting network registration state. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<NetworkState> | Yes | Indicates the callback for getting network registration state. |
 
 **Error codes:**
 

@@ -16,6 +16,8 @@ Obtains the ISO-defined country code of the country where the registered network
 
 **Since:** 7
 
+<!--Device-radio-function getISOCountryCodeForNetwork(slotId: int, callback: AsyncCallback<string>): void--><!--Device-radio-function getISOCountryCodeForNetwork(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -23,7 +25,7 @@ Obtains the ISO-defined country code of the country where the registered network
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Indicates the callback for getting the country codedefined in ISO 3166-2; returns an empty string if the device is not registered with any network. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Indicates the callback for getting the country code defined in ISO 3166-2; returns an empty string if the device is not registered with any network. |
 
 **Error codes:**
 
@@ -62,6 +64,8 @@ Obtains the ISO-defined country code of the country where the registered network
 
 **Since:** 7
 
+<!--Device-radio-function getISOCountryCodeForNetwork(slotId: int): Promise<string>--><!--Device-radio-function getISOCountryCodeForNetwork(slotId: int): Promise<string>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -74,7 +78,7 @@ Obtains the ISO-defined country code of the country where the registered network
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the country code defined in ISO 3166-2.Returns an empty string if the device is not registered with any network. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the country code defined in ISO 3166-2.Returns an empty string if the device is not registered with any network. |
 
 **Error codes:**
 

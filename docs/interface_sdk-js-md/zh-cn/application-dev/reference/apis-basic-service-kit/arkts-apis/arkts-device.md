@@ -1,5 +1,11 @@
 # @system.device
 
+## 导入模块
+
+```TypeScript
+import { DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit';
+```
+
 ## 汇总
 
 ### 类

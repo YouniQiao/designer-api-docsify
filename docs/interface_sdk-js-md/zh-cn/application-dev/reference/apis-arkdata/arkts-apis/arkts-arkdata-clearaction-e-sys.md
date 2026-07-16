@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-cloudData-enum ClearAction--><!--Device-cloudData-enum ClearAction-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -17,6 +19,8 @@ CLEAR_CLOUD_INFO = 0
 清除从云端下载的数据的云标识（即数据来源于云端的标记信息），相关数据作为本地数据保存。
 
 **起始版本：** 10
+
+<!--Device-ClearAction-CLEAR_CLOUD_INFO = 0--><!--Device-ClearAction-CLEAR_CLOUD_INFO = 0-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -32,6 +36,8 @@ CLEAR_CLOUD_DATA_AND_INFO = 1
 
 **起始版本：** 10
 
+<!--Device-ClearAction-CLEAR_CLOUD_DATA_AND_INFO = 1--><!--Device-ClearAction-CLEAR_CLOUD_DATA_AND_INFO = 1-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +51,8 @@ CLEAR_CLOUD_NONE = 2
 不执行任何清除操作。
 
 **起始版本：** 23
+
+<!--Device-ClearAction-CLEAR_CLOUD_NONE = 2--><!--Device-ClearAction-CLEAR_CLOUD_NONE = 2-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 

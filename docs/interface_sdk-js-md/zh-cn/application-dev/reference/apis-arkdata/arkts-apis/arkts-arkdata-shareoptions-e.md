@@ -4,6 +4,8 @@ UDMF支持的设备内使用范围类型枚举。
 
 **起始版本：** 12
 
+<!--Device-unifiedDataChannel-enum ShareOptions--><!--Device-unifiedDataChannel-enum ShareOptions-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## IN_APP
@@ -18,7 +20,9 @@ IN_APP = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ShareOptions-IN_APP = 0--><!--Device-ShareOptions-IN_APP = 0-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -34,7 +38,9 @@ CROSS_APP = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ShareOptions-CROSS_APP = 1--><!--Device-ShareOptions-CROSS_APP = 1-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 

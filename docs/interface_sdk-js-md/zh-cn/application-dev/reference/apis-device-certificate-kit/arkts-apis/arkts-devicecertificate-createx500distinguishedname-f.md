@@ -1,5 +1,11 @@
 # createX500DistinguishedName
 
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
+
 ## createX500DistinguishedName
 
 ```TypeScript
@@ -10,7 +16,9 @@ function createX500DistinguishedName(nameStr: string): Promise<X500Distinguished
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cert-function createX500DistinguishedName(nameStr: string): Promise<X500DistinguishedName>--><!--Device-cert-function createX500DistinguishedName(nameStr: string): Promise<X500DistinguishedName>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -24,7 +32,7 @@ function createX500DistinguishedName(nameStr: string): Promise<X500Distinguished
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;X500DistinguishedName&gt; | Promise对象，返回X500DistinguishedName实例。 |
+| Promise<X500DistinguishedName> | Promise对象，返回X500DistinguishedName实例。 |
 
 **错误码：**
 
@@ -85,7 +93,9 @@ function createX500DistinguishedName(nameDer: Uint8Array): Promise<X500Distingui
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cert-function createX500DistinguishedName(nameDer: Uint8Array): Promise<X500DistinguishedName>--><!--Device-cert-function createX500DistinguishedName(nameDer: Uint8Array): Promise<X500DistinguishedName>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -93,13 +103,13 @@ function createX500DistinguishedName(nameDer: Uint8Array): Promise<X500Distingui
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| nameDer | Uint8Array | 是 | DER格式的X.500可分辨名称。 |
+| nameDer | [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 是 | DER格式的X.500可分辨名称。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;X500DistinguishedName&gt; | Promise对象，返回X500DistinguishedName实例。 |
+| Promise<X500DistinguishedName> | Promise对象，返回X500DistinguishedName实例。 |
 
 **错误码：**
 

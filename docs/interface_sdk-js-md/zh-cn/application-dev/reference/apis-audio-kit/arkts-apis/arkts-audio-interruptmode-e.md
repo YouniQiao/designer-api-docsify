@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-audio-enum InterruptMode--><!--Device-audio-enum InterruptMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Interrupt
 
 ## SHARE_MODE
@@ -16,7 +18,9 @@ SHARE_MODE = 0
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-InterruptMode-SHARE_MODE = 0--><!--Device-InterruptMode-SHARE_MODE = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Interrupt
 
@@ -30,7 +34,9 @@ INDEPENDENT_MODE = 1
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-InterruptMode-INDEPENDENT_MODE = 1--><!--Device-InterruptMode-INDEPENDENT_MODE = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Interrupt
 

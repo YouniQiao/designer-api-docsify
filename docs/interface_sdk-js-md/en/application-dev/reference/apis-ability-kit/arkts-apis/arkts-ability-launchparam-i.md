@@ -1,10 +1,10 @@
 # LaunchParam
 
-Describes the launch parameters, which mainly include the ability launch reasons and reasons for the last exit. The
-parameter values are automatically passed in by the system when the ability is launched. You do not need to change
-the values.
+Describes the launch parameters, which mainly include the ability launch reasons and reasons for the last exit. The parameter values are automatically passed in by the system when the ability is launched. You do not need to change the values.
 
 **Since:** 9
+
+<!--Device-AbilityConstant-export interface LaunchParam--><!--Device-AbilityConstant-export interface LaunchParam-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -20,8 +20,7 @@ import { AbilityConstant } from '@kit.AbilityKit';
 lastExitDetailInfo?: LastExitDetailInfo
 ```
 
-Key runtime information for the last exit of the ability (including process ID, exit timestamp, and RSS memory
-value).
+Key runtime information for the last exit of the ability (including process ID, exit timestamp, and RSS memory value).
 
 **Type:** LastExitDetailInfo
 
@@ -30,6 +29,8 @@ value).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-LaunchParam-lastExitDetailInfo?: LastExitDetailInfo--><!--Device-LaunchParam-lastExitDetailInfo?: LastExitDetailInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -49,6 +50,8 @@ Detailed message that describes the reason for the last exit of the ability.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LaunchParam-lastExitMessage: string--><!--Device-LaunchParam-lastExitMessage: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## lastExitReason
@@ -67,6 +70,8 @@ An enumerated value indicating the reason for the last exit of the ability.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-LaunchParam-lastExitReason: LastExitReason--><!--Device-LaunchParam-lastExitReason: LastExitReason-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## launchReason
@@ -75,8 +80,7 @@ An enumerated value indicating the reason for the last exit of the ability.
 launchReason: LaunchReason
 ```
 
-An enumerated value indicating the reason for ability launch (for example, recovery from a fault, intent
-invocation, or atomic service sharing). For details, see [LaunchReason](arkts-ability-launchreason-e.md).
+An enumerated value indicating the reason for ability launch (for example, recovery from a fault, intent invocation, or atomic service sharing). For details, see [LaunchReason](arkts-ability-launchreason-e.md).
 
 **Type:** LaunchReason
 
@@ -85,6 +89,8 @@ invocation, or atomic service sharing). For details, see [LaunchReason](arkts-ab
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-LaunchParam-launchReason: LaunchReason--><!--Device-LaunchParam-launchReason: LaunchReason-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -104,6 +110,8 @@ Detailed message that describes the reason for the ability launch.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-LaunchParam-launchReasonMessage?: string--><!--Device-LaunchParam-launchReasonMessage?: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## launchUTCTime
@@ -118,8 +126,7 @@ This API can be used in atomic services since API version 23.
 
 **Constraints**:
 
-This feature takes effect only when the UIAbility is started. For other types of abilities (for example,
-UIExtensionAbility), the obtained start time is the default value **0**.
+This feature takes effect only when the UIAbility is started. For other types of abilities (for example,UIExtensionAbility), the obtained start time is the default value **0**.
 
 **Type:** number
 
@@ -128,6 +135,8 @@ UIExtensionAbility), the obtained start time is the default value **0**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-LaunchParam-launchUTCTime?: long--><!--Device-LaunchParam-launchUTCTime?: long-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -141,8 +150,7 @@ System uptime (the time elapsed since the system booted up) when the UIAbility s
 
 **Constraints**:
 
-This feature takes effect only when the UIAbility is started. For other types of abilities (for example,
-UIExtensionAbility), the obtained start time is the default value **0**.
+This feature takes effect only when the UIAbility is started. For other types of abilities (for example,UIExtensionAbility), the obtained start time is the default value **0**.
 
 **Type:** number
 
@@ -151,6 +159,8 @@ UIExtensionAbility), the obtained start time is the default value **0**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-LaunchParam-launchUptime?: long--><!--Device-LaunchParam-launchUptime?: long-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

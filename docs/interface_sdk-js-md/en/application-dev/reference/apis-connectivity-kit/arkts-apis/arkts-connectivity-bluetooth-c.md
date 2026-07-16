@@ -4,6 +4,8 @@ Provides methods to manage BLE scan.
 
 **Since:** 6
 
+<!--Device-unnamed-export default class Bluetooth--><!--Device-unnamed-export default class Bluetooth-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Start BLE scan
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Bluetooth-static startBLEScan(options: StartBLEScanOptions): void--><!--Device-Bluetooth-static startBLEScan(options: StartBLEScanOptions): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | StartBLEScanOptions | Yes | Options |
+| options | [StartBLEScanOptions](arkts-connectivity-startblescanoptions-i.md) | Yes | Options |
 
 ## stopBLEScan
 
@@ -44,13 +48,15 @@ Stop BLE scan
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Bluetooth-static stopBLEScan(options: StopBLEScanOptions): void--><!--Device-Bluetooth-static stopBLEScan(options: StopBLEScanOptions): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | StopBLEScanOptions | Yes | Options |
+| options | [StopBLEScanOptions](arkts-connectivity-stopblescanoptions-i.md) | Yes | Options |
 
 ## subscribeBLEFound
 
@@ -64,13 +70,15 @@ Subscribe BLE found
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Bluetooth-static subscribeBLEFound(options: SubscribeBLEFoundOptions): void--><!--Device-Bluetooth-static subscribeBLEFound(options: SubscribeBLEFoundOptions): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SubscribeBLEFoundOptions | Yes | Options |
+| options | [SubscribeBLEFoundOptions](arkts-connectivity-subscribeblefoundoptions-i.md) | Yes | Options |
 
 ## unsubscribeBLEFound
 
@@ -83,6 +91,8 @@ Stop the subscription of BLE found
 **Since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-Bluetooth-static unsubscribeBLEFound(): void--><!--Device-Bluetooth-static unsubscribeBLEFound(): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 

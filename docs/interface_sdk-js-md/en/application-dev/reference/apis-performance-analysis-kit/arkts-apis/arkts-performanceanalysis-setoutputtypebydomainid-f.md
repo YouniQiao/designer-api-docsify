@@ -18,21 +18,23 @@ Sets the output type for hilog for the domainID list.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-hilog-function setOutputTypeByDomainID(type: OutputType, domainIDs: Array<int>, isExclude: boolean): OutputType--><!--Device-hilog-function setOutputTypeByDomainID(type: OutputType, domainIDs: Array<int>, isExclude: boolean): OutputType-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiLog
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | OutputType | Yes | output type for hilog. |
-| domainIDs | Array&lt;number&gt; | Yes | domainID list, if isExclude is true, the output type for the domainIDlist is set to DEFAULT, and the output type for the remaining domainIDs is set to the currentlyspecified output type; if isExclude is false, the output type for the domainID list is set to thecurrently specified output type, and the output type for the remaining domainIDs is set to DEFAULT |
+| type | [OutputType](arkts-performanceanalysis-outputtype-e.md) | Yes | output type for hilog. |
+| domainIDs | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | domainID list, if isExclude is true, the output type for the domainID list is set to DEFAULT, and the output type for the remaining domainIDs is set to the currently specified output type; if isExclude is false, the output type for the domainID list is set to the currently specified output type, and the output type for the remaining domainIDs is set to DEFAULT |
 | isExclude | boolean | Yes | determine whether the domainIDs take effect for the currently specified output type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| OutputType | previous value of output type. |
+| [OutputType](arkts-performanceanalysis-outputtype-e.md) | previous value of output type. |
 
 **Example**
 

@@ -4,6 +4,8 @@ The module provides all level-2 module APIs for developers to export.
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace ability--><!--Device-unnamed-declare namespace ability-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## Modules to Import

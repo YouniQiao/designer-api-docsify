@@ -18,13 +18,15 @@ Create a VPN observer.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-vpnExtension-function createVpnObserver(): VpnObserver--><!--Device-vpnExtension-function createVpnObserver(): VpnObserver-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| VpnObserver | The VpnObserver instance. |
+| [VpnObserver](arkts-network-vpnobserver-i.md) | The VpnObserver instance. |
 
 **Example**
 

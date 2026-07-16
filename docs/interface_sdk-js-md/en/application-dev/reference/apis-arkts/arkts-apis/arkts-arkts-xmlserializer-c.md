@@ -4,6 +4,8 @@ The XmlSerializer interface is used to generate an xml file.
 
 **Since:** 8
 
+<!--Device-xml-class XmlSerializer--><!--Device-xml-class XmlSerializer-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -23,6 +25,8 @@ Adds an empty element.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-XmlSerializer-addEmptyElement(name: string): void--><!--Device-XmlSerializer-addEmptyElement(name: string): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -58,6 +62,8 @@ A constructor used to create an XmlSerializer instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-XmlSerializer-constructor(buffer: ArrayBuffer | DataView, encoding?: string)--><!--Device-XmlSerializer-constructor(buffer: ArrayBuffer | DataView, encoding?: string)-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -86,6 +92,8 @@ Writes the end tag of the element.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-XmlSerializer-endElement(): void--><!--Device-XmlSerializer-endElement(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -117,6 +125,8 @@ Sets an attribute.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-XmlSerializer-setAttributes(name: string, value: string): void--><!--Device-XmlSerializer-setAttributes(name: string, value: string): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -155,6 +165,8 @@ Adds data to the CDATA tag. The structure of the generated CDATA tag is "<! <![C
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-XmlSerializer-setCDATA(text: string): void--><!--Device-XmlSerializer-setCDATA(text: string): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -188,6 +200,8 @@ Sets a comment.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-XmlSerializer-setComment(text: string): void--><!--Device-XmlSerializer-setComment(text: string): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -223,6 +237,8 @@ Sets a file declaration with encoding.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-XmlSerializer-setDeclaration(): void--><!--Device-XmlSerializer-setDeclaration(): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Example**
@@ -251,6 +267,8 @@ Sets a document type.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-XmlSerializer-setDocType(text: string): void--><!--Device-XmlSerializer-setDocType(text: string): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -285,6 +303,8 @@ Sets the namespace for an element tag.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-XmlSerializer-setNamespace(prefix: string, namespace: string): void--><!--Device-XmlSerializer-setNamespace(prefix: string, namespace: string): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -324,6 +344,8 @@ Sets a tag value.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-XmlSerializer-setText(text: string): void--><!--Device-XmlSerializer-setText(text: string): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -360,6 +382,8 @@ Writes the start tag based on the given element name.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-XmlSerializer-startElement(name: string): void--><!--Device-XmlSerializer-startElement(name: string): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

@@ -22,14 +22,16 @@ Adds a contact. This API uses an asynchronous callback to return the result.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function addContact(contact: Contact, callback: AsyncCallback<number>): void--><!--Device-contact-function addContact(contact: Contact, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contact | Contact | Yes | Indicates the contact information. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, theID of the added contact is returned. If the operation fails, an error code is returned. |
+| contact | [Contact](arkts-contacts-contact-c.md) | Yes | Indicates the contact information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the added contact is returned. If the operation fails, an error code is returned. |
 
 **Example**
 
@@ -72,15 +74,17 @@ Adds a contact. This API uses an asynchronous callback to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-contact-function addContact(context: Context, contact: Contact, callback: AsyncCallback<number>): void--><!--Device-contact-function addContact(context: Context, contact: Contact, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| contact | Contact | Yes | Indicates the contact information. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, theID of the added contact is returned. If the operation fails, an error code is returned. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| contact | [Contact](arkts-contacts-contact-c.md) | Yes | Indicates the contact information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the added contact is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -134,19 +138,21 @@ Adds a contact. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function addContact(contact: Contact): Promise<number>--><!--Device-contact-function addContact(contact: Contact): Promise<number>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contact | Contact | Yes | Indicates the contact information. |
+| contact | [Contact](arkts-contacts-contact-c.md) | Yes | Indicates the contact information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result, which is the ID of the added contact. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result, which is the ID of the added contact. |
 
 **Example**
 
@@ -184,20 +190,22 @@ Adds a contact. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-contact-function addContact(context: Context, contact: Contact): Promise<number>--><!--Device-contact-function addContact(context: Context, contact: Contact): Promise<number>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| contact | Contact | Yes | Indicates the contact information. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| contact | [Contact](arkts-contacts-contact-c.md) | Yes | Indicates the contact information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result, which is the ID of the added contact. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result, which is the ID of the added contact. |
 
 **Error codes:**
 

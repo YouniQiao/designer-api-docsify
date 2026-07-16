@@ -4,6 +4,8 @@ You can trigger download manually through this interface, or resume failed or ca
 
 **Since:** 11
 
+<!--Device-webview-class WebDownloadManager--><!--Device-webview-class WebDownloadManager-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Resume the canceled or failed download.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebDownloadManager-static resumeDownload(webDownloadItem: WebDownloadItem): void--><!--Device-WebDownloadManager-static resumeDownload(webDownloadItem: WebDownloadItem): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| webDownloadItem | WebDownloadItem | Yes | Download that need to be resume. |
+| webDownloadItem | [WebDownloadItem](arkts-arkweb-webdownloaditem-c.md) | Yes | Download that need to be resume. |
 
 **Error codes:**
 
@@ -50,11 +54,13 @@ Set a delegate used to receive the progress of the download triggered from WebDo
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebDownloadManager-static setDownloadDelegate(delegate: WebDownloadDelegate): void--><!--Device-WebDownloadManager-static setDownloadDelegate(delegate: WebDownloadDelegate): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| delegate | WebDownloadDelegate | Yes | Delegate used for download triggered from WebDownloadManager. |
+| delegate | [WebDownloadDelegate](arkts-arkweb-webdownloaddelegate-c.md) | Yes | Delegate used for download triggered from WebDownloadManager. |
 

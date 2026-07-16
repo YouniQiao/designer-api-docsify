@@ -18,6 +18,8 @@ Get all SMS records in SIM.
 
 **Required permissions:** ohos.permission.RECEIVE_SMS
 
+<!--Device-sms-function getAllSimMessages(slotId: int, callback: AsyncCallback<Array<SimShortMessage>>): void--><!--Device-sms-function getAllSimMessages(slotId: int, callback: AsyncCallback<Array<SimShortMessage>>): void-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Get all SMS records in SIM.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot indexnumber supported by the device. |
-| callback | AsyncCallback&lt;Array&lt;SimShortMessage&gt;&gt; | Yes | Indicates the callback for getting a{@code SimShortMessage} object. |
+| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<SimShortMessage>> | Yes | Indicates the callback for getting a{@code SimShortMessage} object. |
 
 **Error codes:**
 
@@ -67,6 +69,8 @@ Get all SMS records in SIM.
 
 **Required permissions:** ohos.permission.RECEIVE_SMS
 
+<!--Device-sms-function getAllSimMessages(slotId: int): Promise<Array<SimShortMessage>>--><!--Device-sms-function getAllSimMessages(slotId: int): Promise<Array<SimShortMessage>>-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -75,13 +79,13 @@ Get all SMS records in SIM.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot indexnumber supported by the device. |
+| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;SimShortMessage&gt;&gt; | Returns a {@code SimShortMessage} object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<SimShortMessage>> | Returns a {@code SimShortMessage} object. |
 
 **Error codes:**
 

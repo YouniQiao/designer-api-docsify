@@ -12,15 +12,13 @@ import { serialManager } from '@kit.BasicServicesKit';
 function addSerialRight(tokenId: number, portId: number): void
 ```
 
-Adds the permission to an application for accessing the serial port device.
-serialManager.requestSerialRight triggers a dialog box to request user authorization. addSerialRight does not
-trigger a dialog box but directly adds the device access permission for the application. After the application
-exits, the access permission on the serial port device is automatically removed. After the application is restarted
-, you need to request the permission again.
+Adds the permission to an application for accessing the serial port device.serialManager.requestSerialRight triggers a dialog box to request user authorization. addSerialRight does not trigger a dialog box but directly adds the device access permission for the application. After the application exits, the access permission on the serial port device is automatically removed. After the application is restarted, you need to request the permission again.
 
 **Since:** 19
 
 **Required permissions:** ohos.permission.MANAGE_USB_CONFIG
+
+<!--Device-serialManager-function addSerialRight(tokenId: int, portId: int): void--><!--Device-serialManager-function addSerialRight(tokenId: int, portId: int): void-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -31,7 +29,7 @@ exits, the access permission on the serial port device is automatically removed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | tokenId | number | Yes | ID of the token that requires the access permission. |
-| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPortreturned by [getPortList](arkts-basicservices-getportlist-f.md#getportlist-1). |
+| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-getportlist-f.md#getportlist-1). |
 
 **Error codes:**
 

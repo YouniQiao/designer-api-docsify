@@ -4,6 +4,8 @@ Enumerates the types of profiles (also called application files).
 
 **Since:** 11
 
+<!--Device-bundleManager-export enum ProfileType--><!--Device-bundleManager-export enum ProfileType-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -17,6 +19,8 @@ INTENT_PROFILE = 1
 Profile of the InsightIntent framework.
 
 **Since:** 11
+
+<!--Device-ProfileType-INTENT_PROFILE = 1--><!--Device-ProfileType-INTENT_PROFILE = 1-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -33,6 +37,8 @@ Device-Cloud Sync configuration file.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ProfileType-CLOUD_PROFILE = 8--><!--Device-ProfileType-CLOUD_PROFILE = 8-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

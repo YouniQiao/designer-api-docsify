@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-notificationManager-export interface BundleNotificationStatistics--><!--Device-notificationManager-export interface BundleNotificationStatistics-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,6 +28,8 @@ bundle: BundleOption
 
 **起始版本：** 26.0.0
 
+<!--Device-BundleNotificationStatistics-bundle: BundleOption--><!--Device-BundleNotificationStatistics-bundle: BundleOption-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -42,6 +46,8 @@ lastTime: number
 
 **起始版本：** 26.0.0
 
+<!--Device-BundleNotificationStatistics-lastTime: number--><!--Device-BundleNotificationStatistics-lastTime: number-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -57,6 +63,8 @@ recentCount: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+<!--Device-BundleNotificationStatistics-recentCount: number--><!--Device-BundleNotificationStatistics-recentCount: number-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

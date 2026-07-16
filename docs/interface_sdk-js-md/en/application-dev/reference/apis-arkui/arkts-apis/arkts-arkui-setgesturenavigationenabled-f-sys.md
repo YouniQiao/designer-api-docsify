@@ -12,12 +12,11 @@ import { window } from '@kit.ArkUI';
 function setGestureNavigationEnabled(enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Enables or disables gesture navigation. This API uses an asynchronous callback to return the result. For security
-purposes, the system does not interfere with the disabling and enabling of gesture navigation. If an application
-exits abnormally after it disables gesture navigation and wants to restore gesture navigation, it must implement
-automatic launch and call this API again to enable gesture navigation.
+Enables or disables gesture navigation. This API uses an asynchronous callback to return the result. For security purposes, the system does not interfere with the disabling and enabling of gesture navigation. If an application exits abnormally after it disables gesture navigation and wants to restore gesture navigation, it must implement automatic launch and call this API again to enable gesture navigation.
 
 **Since:** 10
+
+<!--Device-window-function setGestureNavigationEnabled(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-window-function setGestureNavigationEnabled(enable: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -28,7 +27,7 @@ automatic launch and call this API again to enable gesture navigation.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Whether to enable gesture navigation. **true** to enable, **false** otherwise.Currently, only the pull-down gesture is disabled. Other gestures remain enabled. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -66,12 +65,11 @@ try {
 function setGestureNavigationEnabled(enable: boolean): Promise<void>
 ```
 
-Enables or disables gesture navigation. This API uses a promise to return the result. For security purposes, the
-system does not interfere with the disabling and enabling of gesture navigation. If an application exits abnormally
-after it disables gesture navigation and wants to restore gesture navigation, it must implement automatic launch
-and call this API again to enable gesture navigation.
+Enables or disables gesture navigation. This API uses a promise to return the result. For security purposes, the system does not interfere with the disabling and enabling of gesture navigation. If an application exits abnormally after it disables gesture navigation and wants to restore gesture navigation, it must implement automatic launch and call this API again to enable gesture navigation.
 
 **Since:** 10
+
+<!--Device-window-function setGestureNavigationEnabled(enable: boolean): Promise<void>--><!--Device-window-function setGestureNavigationEnabled(enable: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -87,7 +85,7 @@ and call this API again to enable gesture navigation.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

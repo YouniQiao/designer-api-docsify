@@ -18,6 +18,8 @@ Turn on Cell BroadCast by list.
 
 **Required permissions:** ohos.permission.RECEIVE_SMS
 
+<!--Device-sms-function setCBConfigList(configs: CBConfigListConfigs): Promise<void>--><!--Device-sms-function setCBConfigList(configs: CBConfigListConfigs): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Turn on Cell BroadCast by list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configs | CBConfigListConfigs | Yes | Indicates cell broadcast configuration list configs. |
+| configs | [CBConfigListConfigs](arkts-telephony-cbconfiglistconfigs-i-sys.md) | Yes | Indicates cell broadcast configuration list configs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setCBConfigList. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the setCBConfigList. |
 
 **Error codes:**
 

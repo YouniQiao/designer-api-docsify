@@ -4,6 +4,8 @@ Defines the switch information of a device-cloud synergy database.
 
 **Since:** 23
 
+<!--Device-cloudData-interface DBSwitchInfo--><!--Device-cloudData-interface DBSwitchInfo-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -20,12 +22,13 @@ import { cloudData } from '@kit.ArkData';
 enable: boolean
 ```
 
-Whether to enable device-cloud synergy for the database. The value **true** indicates that device-cloud synergy
-is enabled, and the value **false** indicates the opposite.
+Whether to enable device-cloud synergy for the database. The value **true** indicates that device-cloud synergy is enabled, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 23
+
+<!--Device-DBSwitchInfo-enable: boolean--><!--Device-DBSwitchInfo-enable: boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -37,14 +40,13 @@ is enabled, and the value **false** indicates the opposite.
 tableInfo?: Record<string, boolean>
 ```
 
-Device-cloud synergy configuration of a table. The key is the table name, and the value is the switch status of
-the table. The value **true** indicates that device-cloud synergy is enabled for the table, and the value
-**false** indicates the opposite. If this parameter is not set, the device-cloud synergy is enabled for the
-database by default.
+Device-cloud synergy configuration of a table. The key is the table name, and the value is the switch status of the table. The value **true** indicates that device-cloud synergy is enabled for the table, and the value **false** indicates the opposite. If this parameter is not set, the device-cloud synergy is enabled for the database by default.
 
 **Type:** Record<string, boolean>
 
 **Since:** 23
+
+<!--Device-DBSwitchInfo-tableInfo?: Record<string, boolean>--><!--Device-DBSwitchInfo-tableInfo?: Record<string, boolean>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 

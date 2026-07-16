@@ -12,10 +12,11 @@ import { inputDevice } from '@kit.InputKit';
 function isFunctionKeyEnabled(functionKey: FunctionKey): Promise<boolean>
 ```
 
-Checks whether the specified function key (for example, **CapsLock**) is enabled. This API uses a promise to return
-the result.
+Checks whether the specified function key (for example, **CapsLock**) is enabled. This API uses a promise to return the result.
 
 **Since:** 15
+
+<!--Device-inputDevice-function isFunctionKeyEnabled(functionKey: FunctionKey): Promise<boolean>--><!--Device-inputDevice-function isFunctionKeyEnabled(functionKey: FunctionKey): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -23,13 +24,13 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| functionKey | FunctionKey | Yes | Type of the function key. |
+| functionKey | [FunctionKey](arkts-input-functionkey-e.md) | Yes | Type of the function key. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the function keyis enabled, and the value **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** indicates that the function key is enabled, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

@@ -2,15 +2,15 @@
 
 This interface provides APIs for audio rendering.
 
-Before calling any API in AudioRenderer, you must use
-[createAudioRenderer](arkts-audio-createaudiorenderer-f.md#createaudiorenderer-1)
-to create an AudioRenderer instance.
+Before calling any API in AudioRenderer, you must use [createAudioRenderer](arkts-audio-createaudiorenderer-f.md#createaudiorenderer-1)to create an AudioRenderer instance.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > - The initial APIs of this interface are supported since API version 8.
 
 **Since:** 8
+
+<!--Device-audio-interface AudioRenderer--><!--Device-audio-interface AudioRenderer-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -30,13 +30,15 @@ Drains the playback buffer. This API uses an asynchronous callback to return the
 
 **Since:** 8
 
+<!--Device-AudioRenderer-drain(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-drain(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 ## drain
 
@@ -48,13 +50,15 @@ Drains the playback buffer. This API uses a promise to return the result.
 
 **Since:** 8
 
+<!--Device-AudioRenderer-drain(): Promise<void>--><!--Device-AudioRenderer-drain(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## flush
 
@@ -62,10 +66,11 @@ Drains the playback buffer. This API uses a promise to return the result.
 flush(): Promise<void>
 ```
 
-Flushes the buffer. This API is available when [AudioState](arkts-audio-audiostate-e.md) is
-**STATE_RUNNING**, **STATE_PAUSED**, or **STATE_STOPPED**. This API uses a promise to return the result.
+Flushes the buffer. This API is available when [AudioState](arkts-audio-audiostate-e.md) is **STATE_RUNNING**, **STATE_PAUSED**, or **STATE_STOPPED**. This API uses a promise to return the result.
 
 **Since:** 11
+
+<!--Device-AudioRenderer-flush(): Promise<void>--><!--Device-AudioRenderer-flush(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -73,7 +78,7 @@ Flushes the buffer. This API is available when [AudioState](arkts-audio-audiosta
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -91,13 +96,15 @@ Obtains the audio effect mode in use. This API uses an asynchronous callback to 
 
 **Since:** 10
 
+<!--Device-AudioRenderer-getAudioEffectMode(callback: AsyncCallback<AudioEffectMode>): void--><!--Device-AudioRenderer-getAudioEffectMode(callback: AsyncCallback<AudioEffectMode>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;AudioEffectMode&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined** and **data** is the audio effect mode obtained; otherwise, **err** is anerror object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AudioEffectMode> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio effect mode obtained; otherwise, **err** is an error object. |
 
 ## getAudioEffectMode
 
@@ -109,13 +116,15 @@ Obtains the audio effect mode in use. This API uses a promise to return the resu
 
 **Since:** 10
 
+<!--Device-AudioRenderer-getAudioEffectMode(): Promise<AudioEffectMode>--><!--Device-AudioRenderer-getAudioEffectMode(): Promise<AudioEffectMode>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioEffectMode&gt; | Promise used to return the audio effect mode. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AudioEffectMode> | Promise used to return the audio effect mode. |
 
 ## getAudioStreamId
 
@@ -127,13 +136,15 @@ Obtains the stream ID of this audio renderer. This API uses an asynchronous call
 
 **Since:** 9
 
+<!--Device-AudioRenderer-getAudioStreamId(callback: AsyncCallback<long>): void--><!--Device-AudioRenderer-getAudioStreamId(callback: AsyncCallback<long>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the stream ID obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the stream ID obtained; otherwise, **err** is an error object. |
 
 ## getAudioStreamId
 
@@ -145,13 +156,15 @@ Obtains the stream ID of this audio renderer. This API uses a promise to return 
 
 **Since:** 9
 
+<!--Device-AudioRenderer-getAudioStreamId(): Promise<long>--><!--Device-AudioRenderer-getAudioStreamId(): Promise<long>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the stream ID. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the stream ID. |
 
 ## getAudioStreamIdSync
 
@@ -162,6 +175,8 @@ getAudioStreamIdSync(): number
 Obtains the stream ID of this audio renderer. This API returns the result synchronously.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-getAudioStreamIdSync(): long--><!--Device-AudioRenderer-getAudioStreamIdSync(): long-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -177,10 +192,11 @@ Obtains the stream ID of this audio renderer. This API returns the result synchr
 getAudioTime(callback: AsyncCallback<number>): void
 ```
 
-Obtains the timestamp of the current playback position, measured in nanoseconds from the Unix epoch (January 1, 1
-970). This API uses an asynchronous callback to return the result.
+Obtains the timestamp of the current playback position, measured in nanoseconds from the Unix epoch (January 1, 1970). This API uses an asynchronous callback to return the result.
 
 **Since:** 8
+
+<!--Device-AudioRenderer-getAudioTime(callback: AsyncCallback<long>): void--><!--Device-AudioRenderer-getAudioTime(callback: AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -188,7 +204,7 @@ Obtains the timestamp of the current playback position, measured in nanoseconds 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the number of nanoseconds obtained; otherwise, **err** is an errorobject. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the number of nanoseconds obtained; otherwise, **err** is an error object. |
 
 ## getAudioTime
 
@@ -196,10 +212,11 @@ Obtains the timestamp of the current playback position, measured in nanoseconds 
 getAudioTime(): Promise<number>
 ```
 
-Obtains the timestamp of the current playback position, measured in nanoseconds from the Unix epoch (January 1, 1
-970). This API uses a promise to return the result.
+Obtains the timestamp of the current playback position, measured in nanoseconds from the Unix epoch (January 1, 1970). This API uses a promise to return the result.
 
 **Since:** 8
+
+<!--Device-AudioRenderer-getAudioTime(): Promise<long>--><!--Device-AudioRenderer-getAudioTime(): Promise<long>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -207,7 +224,7 @@ Obtains the timestamp of the current playback position, measured in nanoseconds 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the timestamp. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the timestamp. |
 
 ## getAudioTimeSync
 
@@ -215,10 +232,11 @@ Obtains the timestamp of the current playback position, measured in nanoseconds 
 getAudioTimeSync(): number
 ```
 
-Obtains the timestamp of the current playback position, measured in nanoseconds from the Unix epoch (January 1, 1
-970). This API returns the result synchronously.
+Obtains the timestamp of the current playback position, measured in nanoseconds from the Unix epoch (January 1, 1970). This API returns the result synchronously.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-getAudioTimeSync(): long--><!--Device-AudioRenderer-getAudioTimeSync(): long-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -234,21 +252,17 @@ Obtains the timestamp of the current playback position, measured in nanoseconds 
 getAudioTimestampInfo(): Promise<AudioTimestampInfo>
 ```
 
-Obtains the timestamp and position information of an output audio stream. It adapts to the speed adjustment
-interface. This API uses a promise to return the result.
+Obtains the timestamp and position information of an output audio stream. It adapts to the speed adjustment interface. This API uses a promise to return the result.
 
 This information is commonly used for audio and video synchronization.
 
-Note that when the actual playback position (**framePosition**) is 0, the timestamp remains fixed until the
-stream begins to play. The playback position is also reset when **Flush** is called.
+Note that when the actual playback position (**framePosition**) is 0, the timestamp remains fixed until the stream begins to play. The playback position is also reset when **Flush** is called.
 
-Additionally, changes in the audio stream route, such as switching devices or output types, will reset the
-playback position, whereas the timestamp keeps increasing. You are advised to call this API to obtain the
-corresponding value only when the actual playback position and timestamp are stable. This API adapts to the speed
-adjustment interface. For example, if the playback speed is set to 2x, the rate at which the playback position
-increases is also twice the normal speed.
+Additionally, changes in the audio stream route, such as switching devices or output types, will reset the playback position, whereas the timestamp keeps increasing. You are advised to call this API to obtain the corresponding value only when the actual playback position and timestamp are stable. This API adapts to the speed adjustment interface. For example, if the playback speed is set to 2x, the rate at which the playback position increases is also twice the normal speed.
 
 **Since:** 19
+
+<!--Device-AudioRenderer-getAudioTimestampInfo(): Promise<AudioTimestampInfo>--><!--Device-AudioRenderer-getAudioTimestampInfo(): Promise<AudioTimestampInfo>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -256,7 +270,7 @@ increases is also twice the normal speed.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioTimestampInfo&gt; | Promise used to return the audio stream timestamp and the current dataframe position. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AudioTimestampInfo> | Promise used to return the audio stream timestamp and the current data frame position. |
 
 **Error codes:**
 
@@ -270,21 +284,17 @@ increases is also twice the normal speed.
 getAudioTimestampInfoSync(): AudioTimestampInfo
 ```
 
-Obtains the timestamp and position information of an output audio stream. It adapts to the speed adjustment
-interface. This API returns the result synchronously.
+Obtains the timestamp and position information of an output audio stream. It adapts to the speed adjustment interface. This API returns the result synchronously.
 
 This information is commonly used for audio and video synchronization.
 
-Note that when the actual playback position (**framePosition**) is 0, the timestamp remains fixed until the
-stream begins to play. The playback position is also reset when **Flush** is called.
+Note that when the actual playback position (**framePosition**) is 0, the timestamp remains fixed until the stream begins to play. The playback position is also reset when **Flush** is called.
 
-Additionally, changes in the audio stream route, such as switching devices or output types, will reset the
-playback position, whereas the timestamp keeps increasing. You are advised to call this API to obtain the
-corresponding value only when the actual playback position and timestamp are stable. This API adapts to the speed
-adjustment interface. For example, if the playback speed is set to 2x, the rate at which the playback position
-increases is also twice the normal speed.
+Additionally, changes in the audio stream route, such as switching devices or output types, will reset the playback position, whereas the timestamp keeps increasing. You are advised to call this API to obtain the corresponding value only when the actual playback position and timestamp are stable. This API adapts to the speed adjustment interface. For example, if the playback speed is set to 2x, the rate at which the playback position increases is also twice the normal speed.
 
 **Since:** 19
+
+<!--Device-AudioRenderer-getAudioTimestampInfoSync(): AudioTimestampInfo--><!--Device-AudioRenderer-getAudioTimestampInfoSync(): AudioTimestampInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -292,7 +302,7 @@ increases is also twice the normal speed.
 
 | Type | Description |
 | --- | --- |
-| AudioTimestampInfo | Information about the audio stream timestamp and the current data frame position. |
+| [AudioTimestampInfo](arkts-audio-audiotimestampinfo-i.md) | Information about the audio stream timestamp and the current data frame position. |
 
 **Error codes:**
 
@@ -306,10 +316,11 @@ increases is also twice the normal speed.
 getBufferSize(callback: AsyncCallback<number>): void
 ```
 
-Obtains a reasonable minimum buffer size in bytes for rendering. This API uses an asynchronous callback to return
-the result.
+Obtains a reasonable minimum buffer size in bytes for rendering. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
+
+<!--Device-AudioRenderer-getBufferSize(callback: AsyncCallback<long>): void--><!--Device-AudioRenderer-getBufferSize(callback: AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -317,7 +328,7 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the minimum buffer size obtained; otherwise, **err** is an errorobject.<br>The unit is bytes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the minimum buffer size obtained; otherwise, **err** is an error object.<br>The unit is bytes. |
 
 ## getBufferSize
 
@@ -329,13 +340,15 @@ Obtains a reasonable minimum buffer size in bytes for rendering. This API uses a
 
 **Since:** 8
 
+<!--Device-AudioRenderer-getBufferSize(): Promise<long>--><!--Device-AudioRenderer-getBufferSize(): Promise<long>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the buffer size.<br>The unit is bytes. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the buffer size.<br>The unit is bytes. |
 
 ## getBufferSizeSync
 
@@ -346,6 +359,8 @@ getBufferSizeSync(): number
 Obtains a reasonable minimum buffer size in bytes for rendering. This API returns the result synchronously.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-getBufferSizeSync(): long--><!--Device-AudioRenderer-getBufferSizeSync(): long-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -361,10 +376,11 @@ Obtains a reasonable minimum buffer size in bytes for rendering. This API return
 getCurrentOutputDevices(callback: AsyncCallback<AudioDeviceDescriptors>): void
 ```
 
-Obtains the output device information of the audio stream. This API uses an asynchronous callback to return the
-result.
+Obtains the output device information of the audio stream. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-getCurrentOutputDevices(callback: AsyncCallback<AudioDeviceDescriptors>): void--><!--Device-AudioRenderer-getCurrentOutputDevices(callback: AsyncCallback<AudioDeviceDescriptors>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -372,7 +388,7 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;AudioDeviceDescriptors&gt; | Yes | Callback used to return the result. If the operationis successful, **err** is **undefined** and **data** is the output device information obtained; otherwise,**err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AudioDeviceDescriptors> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the output device information obtained; otherwise,**err** is an error object. |
 
 ## getCurrentOutputDevices
 
@@ -384,13 +400,15 @@ Obtains the output device information of the audio stream. This API uses a promi
 
 **Since:** 10
 
+<!--Device-AudioRenderer-getCurrentOutputDevices(): Promise<AudioDeviceDescriptors>--><!--Device-AudioRenderer-getCurrentOutputDevices(): Promise<AudioDeviceDescriptors>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioDeviceDescriptors&gt; | Promise used to return the output device information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AudioDeviceDescriptors> | Promise used to return the output device information. |
 
 ## getCurrentOutputDevicesSync
 
@@ -402,13 +420,15 @@ Obtains the output device information of the audio stream. This API returns the 
 
 **Since:** 10
 
+<!--Device-AudioRenderer-getCurrentOutputDevicesSync(): AudioDeviceDescriptors--><!--Device-AudioRenderer-getCurrentOutputDevicesSync(): AudioDeviceDescriptors-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AudioDeviceDescriptors | Output device information. |
+| [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | Output device information. |
 
 ## getLatency
 
@@ -418,20 +438,22 @@ getLatency(type: AudioLatencyType): number
 
 Obtains the estimated latency of the current audio route.
 
-> **NOTE**
->
-> - The estimated latency of a wireless audio device may be inaccurate. The result is for reference only.
->
-> - Since the latency is not counted in the real-time buffer, you are advised to obtain the latency only when the
-> audio playback starts to avoid frequent calls. Otherwise, the API call may be blocked due to route switching.
->
-> - You are advised to use [getAudioTimestampInfo](arkts-audio-audiorenderer-i.md#getaudiotimestampinfo-1) or
-> [getAudioTimestampInfoSync](arkts-audio-audiorenderer-i.md#getaudiotimestampinfosync-1) to implement audio and video
+> **NOTE**  
+>  
+> - The estimated latency of a wireless audio device may be inaccurate. The result is for reference only.  
+>  
+> - Since the latency is not counted in the real-time buffer, you are advised to obtain the latency only when the  
+> audio playback starts to avoid frequent calls. Otherwise, the API call may be blocked due to route switching.  
+>  
+> - You are advised to use [getAudioTimestampInfo](arkts-audio-audiorenderer-i.md#getaudiotimestampinfo-1) or  
+> [getAudioTimestampInfoSync](arkts-audio-audiorenderer-i.md#getaudiotimestampinfosync-1) to implement audio and video  
 > synchronization after the audio is output to the hardware.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioRenderer-getLatency(type: AudioLatencyType): int--><!--Device-AudioRenderer-getLatency(type: AudioLatencyType): int-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -439,7 +461,7 @@ Obtains the estimated latency of the current audio route.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | AudioLatencyType | Yes | Obtains the latency type. |
+| type | [AudioLatencyType](arkts-audio-audiolatencytype-e.md) | Yes | Obtains the latency type. |
 
 **Return value:**
 
@@ -465,6 +487,8 @@ Gets loudness gain of this stream.
 
 **Since:** 20
 
+<!--Device-AudioRenderer-getLoudnessGain(): double--><!--Device-AudioRenderer-getLoudnessGain(): double-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
@@ -483,13 +507,15 @@ Obtains the maximum volume of the audio stream. This API uses an asynchronous ca
 
 **Since:** 10
 
+<!--Device-AudioRenderer-getMaxStreamVolume(callback: AsyncCallback<double>): void--><!--Device-AudioRenderer-getMaxStreamVolume(callback: AsyncCallback<double>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the maximum volume obtained; otherwise, **err** is an error object.&lt;br&gt;The volume range is [0.0, 1.0]. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the maximum volume obtained; otherwise, **err** is an error object.<br>The volume range is [0.0, 1.0]. |
 
 ## getMaxStreamVolume
 
@@ -501,13 +527,15 @@ Obtains the maximum volume of the audio stream. This API uses a promise to retur
 
 **Since:** 10
 
+<!--Device-AudioRenderer-getMaxStreamVolume(): Promise<double>--><!--Device-AudioRenderer-getMaxStreamVolume(): Promise<double>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the maximum volume of the audio stream.<br>The volume range is [0.0, 1.0]. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the maximum volume of the audio stream.<br>The volume range is [0.0, 1.0]. |
 
 ## getMaxStreamVolumeSync
 
@@ -518,6 +546,8 @@ getMaxStreamVolumeSync(): number
 Obtains the maximum volume of the audio stream. This API returns the result synchronously.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-getMaxStreamVolumeSync(): double--><!--Device-AudioRenderer-getMaxStreamVolumeSync(): double-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -537,13 +567,15 @@ Obtains the minimum volume of the audio stream. This API uses an asynchronous ca
 
 **Since:** 10
 
+<!--Device-AudioRenderer-getMinStreamVolume(callback: AsyncCallback<double>): void--><!--Device-AudioRenderer-getMinStreamVolume(callback: AsyncCallback<double>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the minimum volume obtained; otherwise, **err** is an error object.&lt;br&gt;The volume range is [0.0, 1.0]. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the minimum volume obtained; otherwise, **err** is an error object.<br>The volume range is [0.0, 1.0]. |
 
 ## getMinStreamVolume
 
@@ -555,13 +587,15 @@ Obtains the minimum volume of the audio stream. This API uses a promise to retur
 
 **Since:** 10
 
+<!--Device-AudioRenderer-getMinStreamVolume(): Promise<double>--><!--Device-AudioRenderer-getMinStreamVolume(): Promise<double>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the minimum volume of the audio stream.<br>The volume range is [0.0, 1.0]. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the minimum volume of the audio stream.<br>The volume range is [0.0, 1.0]. |
 
 ## getMinStreamVolumeSync
 
@@ -572,6 +606,8 @@ getMinStreamVolumeSync(): number
 Obtains the minimum volume of the audio stream. This API returns the result synchronously.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-getMinStreamVolumeSync(): double--><!--Device-AudioRenderer-getMinStreamVolumeSync(): double-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -595,13 +631,15 @@ Obtains the audio renderer rate. This API uses an asynchronous callback to retur
 
 **Substitutes:** getSpeed
 
+<!--Device-AudioRenderer-getRenderRate(callback: AsyncCallback<AudioRendererRate>): void--><!--Device-AudioRenderer-getRenderRate(callback: AsyncCallback<AudioRendererRate>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;AudioRendererRate&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined** and **data** is the render rate obtained; otherwise, **err** is an errorobject. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AudioRendererRate> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the render rate obtained; otherwise, **err** is an error object. |
 
 ## getRenderRate
 
@@ -617,13 +655,15 @@ Obtains the audio renderer rate. This API uses a promise to return the result.
 
 **Substitutes:** getSpeed
 
+<!--Device-AudioRenderer-getRenderRate(): Promise<AudioRendererRate>--><!--Device-AudioRenderer-getRenderRate(): Promise<AudioRendererRate>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioRendererRate&gt; | Promise used to return the render rate. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AudioRendererRate> | Promise used to return the render rate. |
 
 ## getRenderRateSync
 
@@ -639,13 +679,15 @@ Obtains the audio renderer rate. This API returns the result synchronously.
 
 **Substitutes:** getSpeed
 
+<!--Device-AudioRenderer-getRenderRateSync(): AudioRendererRate--><!--Device-AudioRenderer-getRenderRateSync(): AudioRendererRate-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AudioRendererRate | Audio render rate. |
+| [AudioRendererRate](arkts-audio-audiorendererrate-e.md) | Audio render rate. |
 
 ## getRendererInfo
 
@@ -657,13 +699,15 @@ Obtains the information about this audio renderer. This API uses an asynchronous
 
 **Since:** 8
 
+<!--Device-AudioRenderer-getRendererInfo(callback: AsyncCallback<AudioRendererInfo>): void--><!--Device-AudioRenderer-getRendererInfo(callback: AsyncCallback<AudioRendererInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;AudioRendererInfo&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined** and **data** is the audio renderer information obtained; otherwise,**err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AudioRendererInfo> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio renderer information obtained; otherwise,**err** is an error object. |
 
 ## getRendererInfo
 
@@ -675,13 +719,15 @@ Obtains the information about this audio renderer. This API uses a promise to re
 
 **Since:** 8
 
+<!--Device-AudioRenderer-getRendererInfo(): Promise<AudioRendererInfo>--><!--Device-AudioRenderer-getRendererInfo(): Promise<AudioRendererInfo>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioRendererInfo&gt; | Promise used to return the audio renderer information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AudioRendererInfo> | Promise used to return the audio renderer information. |
 
 ## getRendererInfoSync
 
@@ -693,13 +739,15 @@ Obtains the information about this audio renderer. This API returns the result s
 
 **Since:** 10
 
+<!--Device-AudioRenderer-getRendererInfoSync(): AudioRendererInfo--><!--Device-AudioRenderer-getRendererInfoSync(): AudioRendererInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AudioRendererInfo | Audio renderer information. |
+| [AudioRendererInfo](arkts-audio-audiorendererinfo-i.md) | Audio renderer information. |
 
 ## getSilentModeAndMixWithOthers
 
@@ -711,13 +759,15 @@ Obtains the silent mode in concurrent playback for the audio stream.
 
 **Since:** 12
 
+<!--Device-AudioRenderer-getSilentModeAndMixWithOthers(): boolean--><!--Device-AudioRenderer-getSilentModeAndMixWithOthers(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Enabled status of the silent mode in concurrent playback. **true** if enabled, **false**otherwise. |
+| boolean | Enabled status of the silent mode in concurrent playback. **true** if enabled, **false** otherwise. |
 
 ## getSpeed
 
@@ -728,6 +778,8 @@ getSpeed(): number
 Obtains the playback speed.
 
 **Since:** 11
+
+<!--Device-AudioRenderer-getSpeed(): double--><!--Device-AudioRenderer-getSpeed(): double-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -743,10 +795,11 @@ Obtains the playback speed.
 getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void
 ```
 
-Obtains the stream information of this audio renderer. This API uses an asynchronous callback to return the
-result.
+Obtains the stream information of this audio renderer. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
+
+<!--Device-AudioRenderer-getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void--><!--Device-AudioRenderer-getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -754,7 +807,7 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;AudioStreamInfo&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined** and **data** is the stream information obtained; otherwise, **err** isan error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AudioStreamInfo> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream information obtained; otherwise, **err** is an error object. |
 
 ## getStreamInfo
 
@@ -766,13 +819,15 @@ Obtains the stream information of this audio renderer. This API uses a promise t
 
 **Since:** 8
 
+<!--Device-AudioRenderer-getStreamInfo(): Promise<AudioStreamInfo>--><!--Device-AudioRenderer-getStreamInfo(): Promise<AudioStreamInfo>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioStreamInfo&gt; | Promise used to return the stream information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AudioStreamInfo> | Promise used to return the stream information. |
 
 ## getStreamInfoSync
 
@@ -784,13 +839,15 @@ Obtains the stream information of this audio renderer. This API returns the resu
 
 **Since:** 10
 
+<!--Device-AudioRenderer-getStreamInfoSync(): AudioStreamInfo--><!--Device-AudioRenderer-getStreamInfoSync(): AudioStreamInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AudioStreamInfo | Stream information. |
+| [AudioStreamInfo](arkts-audio-audiostreaminfo-i.md) | Stream information. |
 
 ## getUnderflowCount
 
@@ -798,10 +855,11 @@ Obtains the stream information of this audio renderer. This API returns the resu
 getUnderflowCount(callback: AsyncCallback<number>): void
 ```
 
-Obtains the number of underflow audio frames in the audio stream that is being played. This API uses an
-asynchronous callback to return the result.
+Obtains the number of underflow audio frames in the audio stream that is being played. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-getUnderflowCount(callback: AsyncCallback<long>): void--><!--Device-AudioRenderer-getUnderflowCount(callback: AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -809,7 +867,7 @@ asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the number of underloaded audio frames obtained; otherwise, **err**is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the number of underloaded audio frames obtained; otherwise, **err** is an error object. |
 
 ## getUnderflowCount
 
@@ -817,10 +875,11 @@ asynchronous callback to return the result.
 getUnderflowCount(): Promise<number>
 ```
 
-Obtains the number of underflow audio frames in the audio stream that is being played. This API uses a promise to
-return the result.
+Obtains the number of underflow audio frames in the audio stream that is being played. This API uses a promise to return the result.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-getUnderflowCount(): Promise<long>--><!--Device-AudioRenderer-getUnderflowCount(): Promise<long>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -828,7 +887,7 @@ return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the number of underflow audio frames. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the number of underflow audio frames. |
 
 ## getUnderflowCountSync
 
@@ -836,10 +895,11 @@ return the result.
 getUnderflowCountSync(): number
 ```
 
-Obtains the number of underflow audio frames in the audio stream that is being played. This API returns the
-result synchronously.
+Obtains the number of underflow audio frames in the audio stream that is being played. This API returns the result synchronously.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-getUnderflowCountSync(): long--><!--Device-AudioRenderer-getUnderflowCountSync(): long-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -859,6 +919,8 @@ Obtains the volume of the audio stream. This API returns the result synchronousl
 
 **Since:** 12
 
+<!--Device-AudioRenderer-getVolume(): double--><!--Device-AudioRenderer-getVolume(): double-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
@@ -877,14 +939,16 @@ Unsubscribes from the audio interruption event. This API uses an asynchronous ca
 
 **Since:** 18
 
+<!--Device-AudioRenderer-off(type: 'audioInterrupt', callback?: Callback<InterruptEvent>): void--><!--Device-AudioRenderer-off(type: 'audioInterrupt', callback?: Callback<InterruptEvent>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focusis changed. |
-| callback | Callback&lt;InterruptEvent&gt; | No | Callback used to return the event information. |
+| type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<InterruptEvent> | No | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -902,14 +966,16 @@ Unsubscribes from the mark reached event. This API uses an asynchronous callback
 
 **Since:** 8
 
+<!--Device-AudioRenderer-off(type: 'markReach', callback?: Callback<long>): void--><!--Device-AudioRenderer-off(type: 'markReach', callback?: Callback<long>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'markReach' | Yes | Event type. The event **'markReach'** is triggered when the number of framesrendered reaches the value of the **frame** parameter. |
-| callback | Callback&lt;number&gt; | No | Callback used to return the value of the **frame** parameter.<br>**Since:** 18 |
+| type | 'markReach' | Yes | Event type. The event **'markReach'** is triggered when the number of frames rendered reaches the value of the **frame** parameter. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | No | Callback used to return the value of the **frame** parameter.<br>**Since:** 18 |
 
 ## off('periodReach')
 
@@ -921,14 +987,16 @@ Unsubscribes from the period reached event. This API uses an asynchronous callba
 
 **Since:** 8
 
+<!--Device-AudioRenderer-off(type: 'periodReach', callback?: Callback<long>): void--><!--Device-AudioRenderer-off(type: 'periodReach', callback?: Callback<long>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'periodReach' | Yes | Event type. The event **'periodReach'** is triggered each time the number offrames rendered reaches the value of the **frame** parameter. |
-| callback | Callback&lt;number&gt; | No | Callback used to return the value of the **frame** parameter.<br>**Since:** 18 |
+| type | 'periodReach' | Yes | Event type. The event **'periodReach'** is triggered each time the number of frames rendered reaches the value of the **frame** parameter. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | No | Callback used to return the value of the **frame** parameter.<br>**Since:** 18 |
 
 ## off('stateChange')
 
@@ -936,10 +1004,11 @@ Unsubscribes from the period reached event. This API uses an asynchronous callba
 off(type: 'stateChange', callback?: Callback<AudioState>): void
 ```
 
-Unsubscribes from the audio renderer state change event. This API uses an asynchronous callback to return the
-result.
+Unsubscribes from the audio renderer state change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 18
+
+<!--Device-AudioRenderer-off(type: 'stateChange', callback?: Callback<AudioState>): void--><!--Device-AudioRenderer-off(type: 'stateChange', callback?: Callback<AudioState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -947,8 +1016,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the listening for audiorenderer state change event is canceled. |
-| callback | Callback&lt;AudioState&gt; | No | Callback used to return the audio status. |
+| type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the listening for audio renderer state change event is canceled. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioState> | No | Callback used to return the audio status. |
 
 **Error codes:**
 
@@ -962,10 +1031,11 @@ result.
 off(type: 'outputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void
 ```
 
-Unsubscribes from the audio output device change event. This API uses an asynchronous callback to return the
-result.
+Unsubscribes from the audio output device change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-off(type: 'outputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRenderer-off(type: 'outputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -973,8 +1043,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'outputDeviceChange' | Yes | Event type. The event **'outputDeviceChange'** is triggered when an audiooutput device is changed. |
-| callback | Callback&lt;AudioDeviceDescriptors&gt; | No | Callback used to return the output device descriptor ofthe current audio stream. |
+| type | 'outputDeviceChange' | Yes | Event type. The event **'outputDeviceChange'** is triggered when an audio output device is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioDeviceDescriptors> | No | Callback used to return the output device descriptor of the current audio stream. |
 
 **Error codes:**
 
@@ -989,10 +1059,11 @@ result.
 off(type: 'outputDeviceChangeWithInfo', callback?: Callback<AudioStreamDeviceChangeInfo>): void
 ```
 
-Unsubscribes from the change event of audio output devices and reasons. This API uses an asynchronous callback to
-return the result.
+Unsubscribes from the change event of audio output devices and reasons. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+<!--Device-AudioRenderer-off(type: 'outputDeviceChangeWithInfo', callback?: Callback<AudioStreamDeviceChangeInfo>): void--><!--Device-AudioRenderer-off(type: 'outputDeviceChangeWithInfo', callback?: Callback<AudioStreamDeviceChangeInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -1000,8 +1071,8 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'outputDeviceChangeWithInfo' | Yes | Event type. The event **'outputDeviceChangeWithInfo'** istriggered when an audio output device is changed, and the change reason is reported. |
-| callback | Callback&lt;AudioStreamDeviceChangeInfo&gt; | No | Callback used to return the output device descriptorof the current audio stream and the change reason. |
+| type | 'outputDeviceChangeWithInfo' | Yes | Event type. The event **'outputDeviceChangeWithInfo'** is triggered when an audio output device is changed, and the change reason is reported. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioStreamDeviceChangeInfo> | No | Callback used to return the output device descriptor of the current audio stream and the change reason. |
 
 **Error codes:**
 
@@ -1020,14 +1091,16 @@ Unsubscribes from the audio data write event. This API uses an asynchronous call
 
 **Since:** 11
 
+<!--Device-AudioRenderer-off(type: 'writeData', callback?: AudioRendererWriteDataCallback): void--><!--Device-AudioRenderer-off(type: 'writeData', callback?: AudioRendererWriteDataCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'writeData' | Yes | Event type. The event **'writeData'** is triggered when audio data needs to bewritten. |
-| callback | AudioRendererWriteDataCallback | No | Callback used to write the data to the buffer.<br>APIversion 11 does not support the return of the callback result. API version 12 and later support the return ofthe callback result [AudioDataCallbackResult](arkts-audio-audiodatacallbackresult-e.md).<br>**Since:** 12 |
+| type | 'writeData' | Yes | Event type. The event **'writeData'** is triggered when audio data needs to be written. |
+| callback | [AudioRendererWriteDataCallback](arkts-audio-audiorendererwritedatacallback-t.md) | No | Callback used to write the data to the buffer.<br>API version 11 does not support the return of the callback result. API version 12 and later support the return of the callback result [AudioDataCallbackResult](arkts-audio-audiodatacallbackresult-e.md).<br>**Since:** 12 |
 
 **Error codes:**
 
@@ -1042,19 +1115,15 @@ Unsubscribes from the audio data write event. This API uses an asynchronous call
 on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void
 ```
 
-Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an
-asynchronous callback to return the result.
+Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result.
 
-The AudioRenderer instance proactively gains the focus when the **start** event occurs and releases the focus
-when the **pause** or **stop** event occurs. Therefore, you do not need to request to gain or release the focus.
+The AudioRenderer instance proactively gains the focus when the **start** event occurs and releases the focus when the **pause** or **stop** event occurs. Therefore, you do not need to request to gain or release the focus.
 
-After this API is called, an [InterruptEvent](arkts-audio-interruptevent-i.md) is received when
-the AudioRenderer instance fails to obtain the focus or an audio interruption event occurs (for example, the
-audio stream is interrupted by others). It is recommended that the application perform further processing based
-on the **InterruptEvent** information. For details, see
-[Introduction to Audio Focus](../../../../media/audio/audio-playback-concurrency.md).
+After this API is called, an [InterruptEvent](arkts-audio-interruptevent-i.md) is received when the AudioRenderer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see [Introduction to Audio Focus](../../../../media/audio/audio-playback-concurrency.md).
 
 **Since:** 9
+
+<!--Device-AudioRenderer-on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void--><!--Device-AudioRenderer-on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
 
@@ -1062,8 +1131,8 @@ on the **InterruptEvent** information. For details, see
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focusis changed. |
-| callback | Callback&lt;InterruptEvent&gt; | Yes | Callback used to return the event information. |
+| type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<InterruptEvent> | Yes | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -1078,13 +1147,13 @@ on the **InterruptEvent** information. For details, see
 on(type: 'markReach', frame: number, callback: Callback<number>): void
 ```
 
-Subscribes to the mark reached event, which is triggered (only once) when the number of frames rendered reaches
-the value of the **frame** parameter. This API uses an asynchronous callback to return the result.
+Subscribes to the mark reached event, which is triggered (only once) when the number of frames rendered reaches the value of the **frame** parameter. This API uses an asynchronous callback to return the result.
 
-For example, if **frame** is set to **100**, the callback is invoked when the number of rendered frames reaches
-the 100th frame.
+For example, if **frame** is set to **100**, the callback is invoked when the number of rendered frames reaches the 100th frame.
 
 **Since:** 8
+
+<!--Device-AudioRenderer-on(type: 'markReach', frame: long, callback: Callback<long>): void--><!--Device-AudioRenderer-on(type: 'markReach', frame: long, callback: Callback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1092,9 +1161,9 @@ the 100th frame.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'markReach' | Yes | Event type. The event **'markReach'** is triggered when the number of framesrendered reaches the value of the **frame** parameter. |
+| type | 'markReach' | Yes | Event type. The event **'markReach'** is triggered when the number of frames rendered reaches the value of the **frame** parameter. |
 | frame | number | Yes | Number of frames to trigger the event. The value must be greater than **0**. |
-| callback | Callback&lt;number&gt; | Yes | Callback used to return the value of the **frame** parameter. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | Yes | Callback used to return the value of the **frame** parameter. |
 
 ## on('periodReach')
 
@@ -1102,14 +1171,13 @@ the 100th frame.
 on(type: 'periodReach', frame: number, callback: Callback<number>): void
 ```
 
-Subscribes to the period reached event, which is triggered each time the number of frames rendered reaches the
-value of the **frame** parameter. In other words, the information is reported periodically. This API uses an
-asynchronous callback to return the result.
+Subscribes to the period reached event, which is triggered each time the number of frames rendered reaches the value of the **frame** parameter. In other words, the information is reported periodically. This API uses an asynchronous callback to return the result.
 
-For example, if **frame** is set to **10**, the callback is invoked each time 10 frames are rendered, for example
-, when the number of frames rendered reaches the 10th frame, 20th frame, and 30th frame.
+For example, if **frame** is set to **10**, the callback is invoked each time 10 frames are rendered, for example, when the number of frames rendered reaches the 10th frame, 20th frame, and 30th frame.
 
 **Since:** 8
+
+<!--Device-AudioRenderer-on(type: 'periodReach', frame: long, callback: Callback<long>): void--><!--Device-AudioRenderer-on(type: 'periodReach', frame: long, callback: Callback<long>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1117,9 +1185,9 @@ For example, if **frame** is set to **10**, the callback is invoked each time 10
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'periodReach' | Yes | Event type. The event **'periodReach'** is triggered each time the number offrames rendered reaches the value of the **frame** parameter. |
+| type | 'periodReach' | Yes | Event type. The event **'periodReach'** is triggered each time the number of frames rendered reaches the value of the **frame** parameter. |
 | frame | number | Yes | Number of frames to trigger the event. The value must be greater than **0**. |
-| callback | Callback&lt;number&gt; | Yes | Callback used to return the value of the **frame** parameter. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | Yes | Callback used to return the value of the **frame** parameter. |
 
 ## on('stateChange')
 
@@ -1127,10 +1195,11 @@ For example, if **frame** is set to **10**, the callback is invoked each time 10
 on(type: 'stateChange', callback: Callback<AudioState>): void
 ```
 
-Subscribes to the audio renderer state change event, which is triggered when the state of the audio renderer is
-changed. This API uses an asynchronous callback to return the result.
+Subscribes to the audio renderer state change event, which is triggered when the state of the audio renderer is changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
+
+<!--Device-AudioRenderer-on(type: 'stateChange', callback: Callback<AudioState>): void--><!--Device-AudioRenderer-on(type: 'stateChange', callback: Callback<AudioState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1138,8 +1207,8 @@ changed. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the state of the audiorenderer is changed. |
-| callback | Callback&lt;AudioState&gt; | Yes | Callback used to return the audio status. |
+| type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the state of the audio renderer is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioState> | Yes | Callback used to return the audio status. |
 
 ## on('outputDeviceChange')
 
@@ -1147,10 +1216,11 @@ changed. This API uses an asynchronous callback to return the result.
 on(type: 'outputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void
 ```
 
-Subscribes to the audio output device change event, which is triggered when an audio output device is changed.
-This API uses an asynchronous callback to return the result.
+Subscribes to the audio output device change event, which is triggered when an audio output device is changed.This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-AudioRenderer-on(type: 'outputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRenderer-on(type: 'outputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -1158,8 +1228,8 @@ This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'outputDeviceChange' | Yes | Event type. The event **'outputDeviceChange'** is triggered when an audiooutput device is changed. |
-| callback | Callback&lt;AudioDeviceDescriptors&gt; | Yes | Callback used to return the output device descriptor ofthe current audio stream. |
+| type | 'outputDeviceChange' | Yes | Event type. The event **'outputDeviceChange'** is triggered when an audio output device is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioDeviceDescriptors> | Yes | Callback used to return the output device descriptor of the current audio stream. |
 
 **Error codes:**
 
@@ -1174,11 +1244,11 @@ This API uses an asynchronous callback to return the result.
 on(type: 'outputDeviceChangeWithInfo', callback: Callback<AudioStreamDeviceChangeInfo>): void
 ```
 
-Subscribes to the change event of audio output devices and reasons, which is triggered when an audio output
-device is changed, and the change reason is reported. This API uses an asynchronous callback to return the
-result.
+Subscribes to the change event of audio output devices and reasons, which is triggered when an audio output device is changed, and the change reason is reported. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+<!--Device-AudioRenderer-on(type: 'outputDeviceChangeWithInfo', callback: Callback<AudioStreamDeviceChangeInfo>): void--><!--Device-AudioRenderer-on(type: 'outputDeviceChangeWithInfo', callback: Callback<AudioStreamDeviceChangeInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -1186,8 +1256,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'outputDeviceChangeWithInfo' | Yes | Event type. The event **'outputDeviceChangeWithInfo'** istriggered when an audio output device is changed, and the change reason is reported. |
-| callback | Callback&lt;AudioStreamDeviceChangeInfo&gt; | Yes | Callback used to return the output device descriptorof the current audio stream and the change reason. |
+| type | 'outputDeviceChangeWithInfo' | Yes | Event type. The event **'outputDeviceChangeWithInfo'** is triggered when an audio output device is changed, and the change reason is reported. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioStreamDeviceChangeInfo> | Yes | Callback used to return the output device descriptor of the current audio stream and the change reason. |
 
 **Error codes:**
 
@@ -1202,12 +1272,13 @@ result.
 on(type: 'writeData', callback: AudioRendererWriteDataCallback): void
 ```
 
-Subscribes to the audio data write event, which is triggered when audio data needs to be written. This API uses
-an asynchronous callback to return the result.
+Subscribes to the audio data write event, which is triggered when audio data needs to be written. This API uses an asynchronous callback to return the result.
 
 The callback function is used only to write audio data. Do not call AudioRenderer APIs in it.
 
 **Since:** 11
+
+<!--Device-AudioRenderer-on(type: 'writeData', callback: AudioRendererWriteDataCallback): void--><!--Device-AudioRenderer-on(type: 'writeData', callback: AudioRendererWriteDataCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1215,8 +1286,8 @@ The callback function is used only to write audio data. Do not call AudioRendere
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'writeData' | Yes | Event type. The event **'writeData'** is triggered when audio data needs to bewritten. |
-| callback | AudioRendererWriteDataCallback | Yes | Callback used to write the data to the buffer.<br>APIversion 11 does not support the return of the callback result. API version 12 and later support the return ofthe callback result [AudioDataCallbackResult](arkts-audio-audiodatacallbackresult-e.md).<br>**Since:** 12 |
+| type | 'writeData' | Yes | Event type. The event **'writeData'** is triggered when audio data needs to be written. |
+| callback | [AudioRendererWriteDataCallback](arkts-audio-audiorendererwritedatacallback-t.md) | Yes | Callback used to write the data to the buffer.<br>API version 11 does not support the return of the callback result. API version 12 and later support the return of the callback result [AudioDataCallbackResult](arkts-audio-audiodatacallbackresult-e.md).<br>**Since:** 12 |
 
 **Error codes:**
 
@@ -1235,13 +1306,15 @@ Pauses this audio renderer. This API uses an asynchronous callback to return the
 
 **Since:** 8
 
+<!--Device-AudioRenderer-pause(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-pause(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 ## pause
 
@@ -1253,13 +1326,15 @@ Pauses this audio renderer. This API uses a promise to return the result.
 
 **Since:** 8
 
+<!--Device-AudioRenderer-pause(): Promise<void>--><!--Device-AudioRenderer-pause(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## release
 
@@ -1271,13 +1346,15 @@ Releases the renderer. This API uses an asynchronous callback to return the resu
 
 **Since:** 8
 
+<!--Device-AudioRenderer-release(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-release(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 ## release
 
@@ -1289,13 +1366,15 @@ Releases the renderer. This API uses a promise to return the result.
 
 **Since:** 8
 
+<!--Device-AudioRenderer-release(): Promise<void>--><!--Device-AudioRenderer-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## setAudioEffectMode
 
@@ -1307,14 +1386,16 @@ Sets an audio effect mode. This API uses an asynchronous callback to return the 
 
 **Since:** 10
 
+<!--Device-AudioRenderer-setAudioEffectMode(mode: AudioEffectMode, callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-setAudioEffectMode(mode: AudioEffectMode, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | AudioEffectMode | Yes | Audio effect mode to set. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| mode | [AudioEffectMode](arkts-audio-audioeffectmode-e.md) | Yes | Audio effect mode to set. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1333,19 +1414,21 @@ Sets an audio effect mode. This API uses a promise to return the result.
 
 **Since:** 10
 
+<!--Device-AudioRenderer-setAudioEffectMode(mode: AudioEffectMode): Promise<void>--><!--Device-AudioRenderer-setAudioEffectMode(mode: AudioEffectMode): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | AudioEffectMode | Yes | Audio effect mode to set. |
+| mode | [AudioEffectMode](arkts-audio-audioeffectmode-e.md) | Yes | Audio effect mode to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1364,13 +1447,15 @@ Sets the audio channel blending mode. This API returns the result synchronously.
 
 **Since:** 11
 
+<!--Device-AudioRenderer-setChannelBlendMode(mode: ChannelBlendMode): void--><!--Device-AudioRenderer-setChannelBlendMode(mode: ChannelBlendMode): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | ChannelBlendMode | Yes | Audio channel blending mode. |
+| mode | [ChannelBlendMode](arkts-audio-channelblendmode-e.md) | Yes | Audio channel blending mode. |
 
 **Error codes:**
 
@@ -1386,12 +1471,11 @@ Sets the audio channel blending mode. This API returns the result synchronously.
 setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 ```
 
-Temporarily changes the current audio device
-This function applies on audiorenderers whose StreamUsage are
-STREAM_USAGE_VOICE_COMMUNICATION/STREAM_USAGE_VIDEO_COMMUNICATION/STREAM_USAGE_VOICE_MESSAGE.
-Setting the device will only takes effect if no other accessory such as headphones are in use
+Temporarily changes the current audio device This function applies on audiorenderers whose StreamUsage are STREAM_USAGE_VOICE_COMMUNICATION/STREAM_USAGE_VIDEO_COMMUNICATION/STREAM_USAGE_VOICE_MESSAGE.Setting the device will only takes effect if no other accessory such as headphones are in use
 
 **Since:** 12
+
+<!--Device-AudioRenderer-setDefaultOutputDevice(deviceType: DeviceType): Promise<void>--><!--Device-AudioRenderer-setDefaultOutputDevice(deviceType: DeviceType): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1399,13 +1483,13 @@ Setting the device will only takes effect if no other accessory such as headphon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceType | DeviceType | Yes | the available deviceTypes areEARPIECE: Built-in earpieceSPEAKER: Built-in speakerDEFAULT: System default output device |
+| deviceType | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-devicetype-e.md) | Yes | the available deviceTypes are EARPIECE: Built-in earpiece SPEAKER: Built-in speaker DEFAULT: System default output device |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1423,15 +1507,17 @@ setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: num
 
 Sets the independent audio session strategy and behavior parameters.
 
-> **NOTE**
->
-> If this API is called while an audio renderer is running, you must call the
-> [start](arkts-audio-audiorenderer-i.md#start-1) API again for
+> **NOTE**  
+>  
+> If this API is called while an audio renderer is running, you must call the  
+> [start](arkts-audio-audiorenderer-i.md#start-1) API again for  
 > the settings to take effect.
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioRenderer-setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: int): void--><!--Device-AudioRenderer-setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: int): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1439,8 +1525,8 @@ Sets the independent audio session strategy and behavior parameters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategy | AudioSessionStrategy | Yes | Audio session strategy. |
-| behavior | number | Yes | Specifies the audio session behavior.<br>This can be a single flag or a bitwise ORcombination of multiple flags.<br>For details about the supported audio session behaviors, see[AudioSessionBehaviorFlags](arkts-audio-audiosessionbehaviorflags-e.md). |
+| strategy | [AudioSessionStrategy](arkts-audio-audiosessionstrategy-i.md) | Yes | Audio session strategy. |
+| behavior | number | Yes | Specifies the audio session behavior.<br>This can be a single flag or a bitwise OR combination of multiple flags.<br>For details about the supported audio session behaviors, see [AudioSessionBehaviorFlags](arkts-audio-audiosessionbehaviorflags-e.md). |
 
 **Error codes:**
 
@@ -1455,10 +1541,11 @@ Sets the independent audio session strategy and behavior parameters.
 setInterruptMode(mode: InterruptMode, callback: AsyncCallback<void>): void
 ```
 
-Sets the audio interruption mode for the application. This API uses an asynchronous callback to return the
-result.
+Sets the audio interruption mode for the application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-AudioRenderer-setInterruptMode(mode: InterruptMode, callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-setInterruptMode(mode: InterruptMode, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
 
@@ -1466,8 +1553,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | InterruptMode | Yes | Audio interruption mode. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| mode | [InterruptMode](arkts-audio-interruptmode-e.md) | Yes | Audio interruption mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 ## setInterruptMode
 
@@ -1479,19 +1566,21 @@ Sets the audio interruption mode for the application. This API uses a promise to
 
 **Since:** 9
 
+<!--Device-AudioRenderer-setInterruptMode(mode: InterruptMode): Promise<void>--><!--Device-AudioRenderer-setInterruptMode(mode: InterruptMode): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | InterruptMode | Yes | Audio interruption mode. |
+| mode | [InterruptMode](arkts-audio-interruptmode-e.md) | Yes | Audio interruption mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## setInterruptModeSync
 
@@ -1503,13 +1592,15 @@ Sets the audio interruption mode for the application. This API returns the resul
 
 **Since:** 10
 
+<!--Device-AudioRenderer-setInterruptModeSync(mode: InterruptMode): void--><!--Device-AudioRenderer-setInterruptModeSync(mode: InterruptMode): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | InterruptMode | Yes | Audio interruption mode. |
+| mode | [InterruptMode](arkts-audio-interruptmode-e.md) | Yes | Audio interruption mode. |
 
 **Error codes:**
 
@@ -1524,12 +1615,11 @@ Sets the audio interruption mode for the application. This API returns the resul
 setLoudnessGain(loudnessGain: number): Promise<void>
 ```
 
-Sets the loudness gain of this stream. The default loudness gain is 0.0dB.
-The stream usage of the audio renderer must be {@link StreamUsage#STREAM_USAGE_MUSIC},
-{@link StreamUsage#STREAM_USAGE_MOVIE} or {@link StreamUsage#STREAM_USAGE_AUDIOBOOK}.
-After calling this interface, the adjustment of loundness gain will take effect immediately.
+Sets the loudness gain of this stream. The default loudness gain is 0.0dB.The stream usage of the audio renderer must be {@link StreamUsage#STREAM_USAGE_MUSIC},{@link StreamUsage#STREAM_USAGE_MOVIE} or {@link StreamUsage#STREAM_USAGE_AUDIOBOOK}.After calling this interface, the adjustment of loundness gain will take effect immediately.
 
 **Since:** 20
+
+<!--Device-AudioRenderer-setLoudnessGain(loudnessGain: double): Promise<void>--><!--Device-AudioRenderer-setLoudnessGain(loudnessGain: double): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1543,14 +1633,14 @@ After calling this interface, the adjustment of loundness gain will take effect 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation is not supported on this renderer, e.g. the stream usage of thisrenderer is not one of {@link StreamUsage#STREAM_USAGE_MUSIC}, {@link StreamUsage#STREAM_USAGE_MOVIE} or{@link StreamUsage#STREAM_USAGE_AUDIOBOOK}, or this renderer is routed through the high-resolution playback path. |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation is not supported on this renderer, e.g. the stream usage of this renderer is not one of {@link StreamUsage#STREAM_USAGE_MUSIC}, {@link StreamUsage#STREAM_USAGE_MOVIE} or{@link StreamUsage#STREAM_USAGE_AUDIOBOOK}, or this renderer is routed through the high-resolution playback path. |
 
 ## setRenderRate
 
@@ -1566,14 +1656,16 @@ Sets the render rate. This API uses an asynchronous callback to return the resul
 
 **Substitutes:** setSpeed
 
+<!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate, callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rate | AudioRendererRate | Yes | Audio render rate. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| rate | [AudioRendererRate](arkts-audio-audiorendererrate-e.md) | Yes | Audio render rate. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 ## setRenderRate
 
@@ -1589,19 +1681,21 @@ Sets the render rate. This API uses a promise to return the result.
 
 **Substitutes:** setSpeed
 
+<!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate): Promise<void>--><!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rate | AudioRendererRate | Yes | Audio render rate. |
+| rate | [AudioRendererRate](arkts-audio-audiorendererrate-e.md) | Yes | Audio render rate. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## setSilentModeAndMixWithOthers
 
@@ -1611,11 +1705,11 @@ setSilentModeAndMixWithOthers(on: boolean): void
 
 Sets the silent mode in concurrent playback for the audio stream.
 
-If the silent mode in concurrent playback is enabled, the system mutes the audio stream and does not interrupt
-other audio streams. If the silent mode in concurrent playback is disabled, the audio stream can gain focus based
-on the system focus strategy.
+If the silent mode in concurrent playback is enabled, the system mutes the audio stream and does not interrupt other audio streams. If the silent mode in concurrent playback is disabled, the audio stream can gain focus based on the system focus strategy.
 
 **Since:** 12
+
+<!--Device-AudioRenderer-setSilentModeAndMixWithOthers(on: boolean): void--><!--Device-AudioRenderer-setSilentModeAndMixWithOthers(on: boolean): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1634,6 +1728,8 @@ setSpeed(speed: number): void
 Sets the playback speed.
 
 **Since:** 11
+
+<!--Device-AudioRenderer-setSpeed(speed: double): void--><!--Device-AudioRenderer-setSpeed(speed: double): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1660,6 +1756,8 @@ Sets the volume for the audio stream. This API uses an asynchronous callback to 
 
 **Since:** 9
 
+<!--Device-AudioRenderer-setVolume(volume: double, callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-setVolume(volume: double, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
@@ -1667,7 +1765,7 @@ Sets the volume for the audio stream. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volume | number | Yes | Volume to set, which is in the range [0.0, 1.0]. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 ## setVolume
 
@@ -1678,6 +1776,8 @@ setVolume(volume: number): Promise<void>
 Sets the volume for the audio stream. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AudioRenderer-setVolume(volume: double): Promise<void>--><!--Device-AudioRenderer-setVolume(volume: double): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1691,7 +1791,7 @@ Sets the volume for the audio stream. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## setVolumeWithRamp
 
@@ -1702,6 +1802,8 @@ setVolumeWithRamp(volume: number, duration: number): void
 Sets a volume ramp. This API returns the result synchronously.
 
 **Since:** 11
+
+<!--Device-AudioRenderer-setVolumeWithRamp(volume: double, duration: int): void--><!--Device-AudioRenderer-setVolumeWithRamp(volume: double, duration: int): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -1729,13 +1831,15 @@ Starts this audio renderer. This API uses an asynchronous callback to return the
 
 **Since:** 8
 
+<!--Device-AudioRenderer-start(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-start(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. If the operation fails, an error object withone of the following error codes is returned:<br>Error code 6800301: indicates abnormal status, focuspreemption failure, and abnormal system processing. For details, see system logs. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. If the operation fails, an error object with one of the following error codes is returned:<br>Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. For details, see system logs. |
 
 ## start
 
@@ -1747,13 +1851,15 @@ Starts this audio renderer. This API uses a promise to return the result.
 
 **Since:** 8
 
+<!--Device-AudioRenderer-start(): Promise<void>--><!--Device-AudioRenderer-start(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise object, which indicates that the renderer is started successfully. If theoperation fails, an error object with one of the following error codes is returned:<br>Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. Fordetails, see system logs. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise object, which indicates that the renderer is started successfully. If the operation fails, an error object with one of the following error codes is returned:<br>Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. For details, see system logs. |
 
 ## stop
 
@@ -1765,13 +1871,15 @@ Stops this audio renderer. This API uses an asynchronous callback to return the 
 
 **Since:** 8
 
+<!--Device-AudioRenderer-stop(callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-stop(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 ## stop
 
@@ -1783,13 +1891,15 @@ Stops this audio renderer. This API uses a promise to return the result.
 
 **Since:** 8
 
+<!--Device-AudioRenderer-stop(): Promise<void>--><!--Device-AudioRenderer-stop(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## write
 
@@ -1805,14 +1915,16 @@ Writes the buffer. This API uses an asynchronous callback to return the result.
 
 **Substitutes:** event:writeData
 
+<!--Device-AudioRenderer-write(buffer: ArrayBuffer, callback: AsyncCallback<number>): void--><!--Device-AudioRenderer-write(buffer: ArrayBuffer, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Data to be written to the buffer. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the number of bytes written; otherwise, **err** is an error object. |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Data to be written to the buffer. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the number of bytes written; otherwise, **err** is an error object. |
 
 ## write
 
@@ -1828,19 +1940,21 @@ Writes the buffer. This API uses a promise to return the result.
 
 **Substitutes:** event:writeData
 
+<!--Device-AudioRenderer-write(buffer: ArrayBuffer): Promise<number>--><!--Device-AudioRenderer-write(buffer: ArrayBuffer): Promise<number>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Data to be written to the buffer. |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Data to be written to the buffer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the number of written bytes. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the number of written bytes. |
 
 ## state
 
@@ -1853,6 +1967,8 @@ Audio renderer state.
 **Type:** AudioState
 
 **Since:** 8
+
+<!--Device-AudioRenderer-readonly state: AudioState--><!--Device-AudioRenderer-readonly state: AudioState-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 

@@ -4,6 +4,8 @@ Defines the result of the operation for subscribing to or unsubscribing from the
 
 **Since:** 10
 
+<!--Device-dataShare-interface OperationResult--><!--Device-dataShare-interface OperationResult-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Key of the operation result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OperationResult-key: string--><!--Device-OperationResult-key: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **System API:** This is a system API.
@@ -45,6 +49,8 @@ Operation result. If the operation is successful, **0** is returned; otherwise, 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OperationResult-result: int--><!--Device-OperationResult-result: int-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 

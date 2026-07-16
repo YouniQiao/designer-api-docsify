@@ -12,12 +12,13 @@ import { wallpaper } from '@kit.BasicServicesKit';
 function getWallpaperByState(wallpaperType: WallpaperType, foldState: FoldState, rotateState: RotateState): Promise<image.PixelMap>
 ```
 
-Obtains the default pixel map of a wallpaper of the specified device type. Returns the default pixel map.
-Only the static wallpaper set by using setAllWallpapers can be obtained.
+Obtains the default pixel map of a wallpaper of the specified device type. Returns the default pixel map.Only the static wallpaper set by using setAllWallpapers can be obtained.
 
 **Since:** 14
 
 **Required permissions:** ohos.permission.GET_WALLPAPER
+
+<!--Device-wallpaper-function getWallpaperByState(wallpaperType: WallpaperType, foldState: FoldState, rotateState: RotateState): Promise<image.PixelMap>--><!--Device-wallpaper-function getWallpaperByState(wallpaperType: WallpaperType, foldState: FoldState, rotateState: RotateState): Promise<image.PixelMap>-End-->
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -27,15 +28,15 @@ Only the static wallpaper set by using setAllWallpapers can be obtained.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | WallpaperType | Yes | indicates the wallpaper type. |
-| foldState | FoldState | Yes | indicates the folding status for wallpaper. |
-| rotateState | RotateState | Yes | indicates the rotation status for wallpaper. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
+| foldState | [FoldState](arkts-basicservices-foldstate-e-sys.md) | Yes | indicates the folding status for wallpaper. |
+| rotateState | [RotateState](arkts-basicservices-rotatestate-e-sys.md) | Yes | indicates the rotation status for wallpaper. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<image.PixelMap> | the promise returned by the function. |
 
 **Error codes:**
 

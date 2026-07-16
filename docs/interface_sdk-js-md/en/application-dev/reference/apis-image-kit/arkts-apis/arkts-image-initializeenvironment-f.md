@@ -18,13 +18,15 @@ Initialize global environment for image processing.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-videoProcessingEngine-function initializeEnvironment(): Promise<void>--><!--Device-videoProcessingEngine-function initializeEnvironment(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **Error codes:**
 

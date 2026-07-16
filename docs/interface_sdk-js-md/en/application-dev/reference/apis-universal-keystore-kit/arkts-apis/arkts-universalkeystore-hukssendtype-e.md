@@ -4,6 +4,8 @@ Enumerates the tag transfer modes.
 
 **Since:** 8
 
+<!--Device-huks-export enum HuksSendType--><!--Device-huks-export enum HuksSendType-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
 - API version 8 to 11: SystemCapability.Security.Huks.Extension
@@ -20,6 +22,8 @@ The tag is sent asynchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksSendType-HUKS_SEND_TYPE_ASYNC = 0--><!--Device-HuksSendType-HUKS_SEND_TYPE_ASYNC = 0-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
 - API version 8 to 11: SystemCapability.Security.Huks.Extension
@@ -35,6 +39,8 @@ The tag is sent synchronously.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksSendType-HUKS_SEND_TYPE_SYNC = 1--><!--Device-HuksSendType-HUKS_SEND_TYPE_SYNC = 1-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core

@@ -18,6 +18,8 @@ Check whether the wearing detection is enabled.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
+<!--Device-wearDetection-function isWearDetectionEnabled(deviceId: string, callback: AsyncCallback<boolean>): void--><!--Device-wearDetection-function isWearDetectionEnabled(deviceId: string, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Check whether the wearing detection is enabled.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID.For example, "11:22:33:AA:BB:FF", |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | the Callback result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | the Callback result. |
 
 **Error codes:**
 
@@ -67,6 +69,8 @@ Check whether the wearing detection is enabled.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
+<!--Device-wearDetection-function isWearDetectionEnabled(deviceId: string): Promise<boolean>--><!--Device-wearDetection-function isWearDetectionEnabled(deviceId: string): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -81,7 +85,7 @@ Check whether the wearing detection is enabled.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns the promise object. |
 
 **Error codes:**
 

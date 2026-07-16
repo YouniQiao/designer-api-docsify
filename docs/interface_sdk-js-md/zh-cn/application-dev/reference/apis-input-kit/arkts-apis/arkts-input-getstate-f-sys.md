@@ -1,5 +1,11 @@
 # getState（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { inputDeviceCooperate } from '@kit.InputKit';
+```
+
 ## getState
 
 ```TypeScript
@@ -8,10 +14,10 @@ function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boo
 
 获取键鼠穿越开关的状态，使用callback异步回调。
 
-> **说明：**
->
-> 从 API version 9开始支持，从API version 23开始废弃。建议使用
-> [cooperate.getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-getcooperateswitchstate-f-sys.md#getcooperateswitchstate-1)
+> **说明：**  
+>  
+> 从 API version 9开始支持，从API version 23开始废弃。建议使用  
+> [cooperate.getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-getcooperateswitchstate-f-sys.md#getcooperateswitchstate-1)  
 > 替代。
 
 **起始版本：** 9
@@ -19,6 +25,8 @@ function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boo
 **废弃版本：** 23
 
 **替代接口：** getCooperateSwitchState
+
+<!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boolean }>): void--><!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boolean }>): void-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Cooperator
 
@@ -29,7 +37,7 @@ function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceDescriptor | string | 是 | 键鼠穿越目标设备描述符。 |
-| callback | AsyncCallback&lt;{ state: boolean }&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<{ state: boolean }> | 是 |  |
 
 **错误码：**
 
@@ -79,10 +87,10 @@ function getState(deviceDescriptor: string): Promise<{ state: boolean }>
 
 获取键鼠穿越开关的状态，使用Promise异步回调。
 
-> **说明：**
->
-> 从 API version 9开始支持，从API version 23开始废弃。建议使用
-> [cooperate.getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-getcooperateswitchstate-f-sys.md#getcooperateswitchstate-2)替
+> **说明：**  
+>  
+> 从 API version 9开始支持，从API version 23开始废弃。建议使用  
+> [cooperate.getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-getcooperateswitchstate-f-sys.md#getcooperateswitchstate-2)替  
 > 代。
 
 **起始版本：** 9
@@ -90,6 +98,8 @@ function getState(deviceDescriptor: string): Promise<{ state: boolean }>
 **废弃版本：** 23
 
 **替代接口：** getCooperateSwitchState
+
+<!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string): Promise<{ state: boolean }>--><!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string): Promise<{ state: boolean }>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Cooperator
 
@@ -105,7 +115,7 @@ function getState(deviceDescriptor: string): Promise<{ state: boolean }>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;{ state: boolean }&gt; |  |
+| Promise<{ state: boolean }> |  |
 
 **错误码：**
 

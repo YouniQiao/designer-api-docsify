@@ -1,5 +1,11 @@
 # setStaticSubscriberState（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { commonEventManager } from '@kit.BasicServicesKit';
+```
+
 ## setStaticSubscriberState
 
 ```TypeScript
@@ -12,6 +18,8 @@ function setStaticSubscriberState(enable: boolean, callback: AsyncCallback<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-commonEventManager-function setStaticSubscriberState(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-commonEventManager-function setStaticSubscriberState(enable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -21,7 +29,7 @@ function setStaticSubscriberState(enable: boolean, callback: AsyncCallback<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | 表示静态订阅事件使能状态。 true：使能 false：去使能。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当设置静态订阅事件使能状态成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当设置静态订阅事件使能状态成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -60,6 +68,8 @@ function setStaticSubscriberState(enable: boolean): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-commonEventManager-function setStaticSubscriberState(enable: boolean): Promise<void>--><!--Device-commonEventManager-function setStaticSubscriberState(enable: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -74,7 +84,7 @@ function setStaticSubscriberState(enable: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -111,6 +121,8 @@ function setStaticSubscriberState(enable: boolean, events?: Array<string>): Prom
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-commonEventManager-function setStaticSubscriberState(enable: boolean, events?: Array<string>): Promise<void>--><!--Device-commonEventManager-function setStaticSubscriberState(enable: boolean, events?: Array<string>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -120,13 +132,13 @@ function setStaticSubscriberState(enable: boolean, events?: Array<string>): Prom
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | 表示静态订阅事件使能状态。 true：使能 false：去使能。 |
-| events | Array&lt;string&gt; | 否 | 表示记录事件名称。 |
+| events | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 否 | 表示记录事件名称。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

@@ -6,6 +6,8 @@ Describes the axis event object. Inherits from [BaseEvent](arkts-arkui-baseevent
 
 **Since:** 17
 
+<!--Device-unnamed-declare interface AxisEvent extends BaseEvent--><!--Device-unnamed-declare interface AxisEvent extends BaseEvent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## getCurrentLocalPosition
@@ -22,13 +24,15 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-AxisEvent-getCurrentLocalPosition?(): Coordinate2D--><!--Device-AxisEvent-getCurrentLocalPosition?(): Coordinate2D-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Coordinate2D | - return the coordinates of the top-left corner of the current component based on itsreal-time position. |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | - return the coordinates of the top-left corner of the current component based on its real-time position. |
 
 ## getHorizontalAxisValue
 
@@ -43,6 +47,8 @@ Obtains the horizontal axis value of this axis event.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
+
+<!--Device-AxisEvent-getHorizontalAxisValue(): number--><!--Device-AxisEvent-getHorizontalAxisValue(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,13 +72,15 @@ Obtains the two-finger pinch zoom ratio from the axis event.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-AxisEvent-getPinchAxisScaleValue(): number--><!--Device-AxisEvent-getPinchAxisScaleValue(): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Two-finger pinch zoom ratio.<br> Note: This ratio is calculated as the current distance between two fingers during a touchpad pinch eventdivided by the initial distance when the fingers first made contact.<br>Default value: **0**.<br>Value range: [0, +∞).<br> |
+| number | Two-finger pinch zoom ratio.<br> Note: This ratio is calculated as the current distance between two fingers during a touchpad pinch event divided by the initial distance when the fingers first made contact.<br>Default value: **0**.<br>Value range: [0, +∞).<br> |
 
 ## getVerticalAxisValue
 
@@ -87,6 +95,8 @@ Obtains the vertical axis value of this axis event.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
+
+<!--Device-AxisEvent-getVerticalAxisValue(): number--><!--Device-AxisEvent-getVerticalAxisValue(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -110,13 +120,15 @@ Checks whether this axis event contains the specified axis type.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-AxisEvent-hasAxis(axisType: AxisType): boolean--><!--Device-AxisEvent-hasAxis(axisType: AxisType): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| axisType | AxisType | Yes | Axis type to check for. |
+| axisType | [AxisType](../arkts-apis/arkts-arkui-axistype-e.md) | Yes | Axis type to check for. |
 
 **Return value:**
 
@@ -140,6 +152,8 @@ Action type of the axis event.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
 
+<!--Device-AxisEvent-action: AxisAction--><!--Device-AxisEvent-action: AxisAction-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## displayX
@@ -159,6 +173,8 @@ Unit: vp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
+
+<!--Device-AxisEvent-displayX: number--><!--Device-AxisEvent-displayX: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -180,6 +196,8 @@ Unit: vp
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
 
+<!--Device-AxisEvent-displayY: number--><!--Device-AxisEvent-displayY: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## eventHandleId
@@ -194,12 +212,9 @@ Value range: [0, +∞)
 
 **NOTE**
 
-This field is used when dispatching events using the
-[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postinputeventwithstrategy-1) API. Each time an event is
-dispatched, this field is increased by 100000.
+This field is used when dispatching events using the [postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postinputeventwithstrategy-1) API. Each time an event is dispatched, this field is increased by 100000.
 
-Using the same **eventHandleId** for multiple event dispatches will cause abnormal event responses. This field only
-needs to be assigned when constructing an event; developers do not need to handle it in other cases.
+Using the same **eventHandleId** for multiple event dispatches will cause abnormal event responses. This field only needs to be assigned when constructing an event; developers do not need to handle it in other cases.
 
 **Type:** number
 
@@ -209,6 +224,8 @@ needs to be assigned when constructing an event; developers do not need to handl
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-AxisEvent-eventHandleId?: number--><!--Device-AxisEvent-eventHandleId?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## globalDisplayX
@@ -217,8 +234,7 @@ needs to be assigned when constructing an event; developers do not need to handl
 globalDisplayX?: number
 ```
 
-X coordinate of the cursor in the
-[global coordinate system](../../../../windowmanager/window-terminology.md#global-coordinate-system).
+X coordinate of the cursor in the [global coordinate system](../../../../windowmanager/window-terminology.md#global-coordinate-system).
 
 Unit: vp
 
@@ -231,6 +247,8 @@ Value range: (-∞, +∞).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-AxisEvent-globalDisplayX?: number--><!--Device-AxisEvent-globalDisplayX?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -240,8 +258,7 @@ Value range: (-∞, +∞).
 globalDisplayY?: number
 ```
 
-Y coordinate of the cursor in the
-[global coordinate system](../../../../windowmanager/window-terminology.md#global-coordinate-system).
+Y coordinate of the cursor in the [global coordinate system](../../../../windowmanager/window-terminology.md#global-coordinate-system).
 
 Unit: vp
 
@@ -254,6 +271,8 @@ Value range: (-∞, +∞).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-AxisEvent-globalDisplayY?: number--><!--Device-AxisEvent-globalDisplayY?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -272,6 +291,8 @@ Enables [event bubbling](../../../../ui/arkts-interaction-basic-principles.md#ev
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
+
+<!--Device-AxisEvent-propagation: Callback<void>--><!--Device-AxisEvent-propagation: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -293,6 +314,8 @@ Note: Only the mouse wheel is supported. The value ranges from 0 to 65535.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
 
+<!--Device-AxisEvent-scrollStep?: number--><!--Device-AxisEvent-scrollStep?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## windowX
@@ -312,6 +335,8 @@ Unit: vp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
+
+<!--Device-AxisEvent-windowX: number--><!--Device-AxisEvent-windowX: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -333,6 +358,8 @@ Unit: vp
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
 
+<!--Device-AxisEvent-windowY: number--><!--Device-AxisEvent-windowY: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## x
@@ -341,9 +368,7 @@ Unit: vp
 x: number
 ```
 
-X coordinate of the cursor in the
-[component coordinate system](../../../../ui/arkui-glossary.md#component-coordinate-system) based on the clicked
-element.
+X coordinate of the cursor in the [component coordinate system](../../../../ui/arkui-glossary.md#component-coordinate-system) based on the clicked element.
 
 Unit: vp
 
@@ -354,6 +379,8 @@ Unit: vp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
+
+<!--Device-AxisEvent-x: number--><!--Device-AxisEvent-x: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -363,9 +390,7 @@ Unit: vp
 y: number
 ```
 
-Y coordinate of the cursor in the
-[component coordinate system](../../../../ui/arkui-glossary.md#component-coordinate-system) based on the clicked
-element.
+Y coordinate of the cursor in the [component coordinate system](../../../../ui/arkui-glossary.md#component-coordinate-system) based on the clicked element.
 
 Unit: vp
 
@@ -376,6 +401,8 @@ Unit: vp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
+
+<!--Device-AxisEvent-y: number--><!--Device-AxisEvent-y: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

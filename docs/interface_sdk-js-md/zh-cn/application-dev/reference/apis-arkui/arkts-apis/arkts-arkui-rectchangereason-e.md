@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-window-enum RectChangeReason--><!--Device-window-enum RectChangeReason-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## UNDEFINED
@@ -16,7 +18,9 @@ UNDEFINED = 0
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RectChangeReason-UNDEFINED = 0--><!--Device-RectChangeReason-UNDEFINED = 0-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -30,7 +34,9 @@ MAXIMIZE = 1
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RectChangeReason-MAXIMIZE = 1--><!--Device-RectChangeReason-MAXIMIZE = 1-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -44,7 +50,9 @@ RECOVER = 2
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RectChangeReason-RECOVER = 2--><!--Device-RectChangeReason-RECOVER = 2-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -58,7 +66,9 @@ MOVE = 3
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RectChangeReason-MOVE = 3--><!--Device-RectChangeReason-MOVE = 3-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -72,7 +82,9 @@ DRAG = 4
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RectChangeReason-DRAG = 4--><!--Device-RectChangeReason-DRAG = 4-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -86,7 +98,9 @@ DRAG_START = 5
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RectChangeReason-DRAG_START = 5--><!--Device-RectChangeReason-DRAG_START = 5-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -100,7 +114,9 @@ DRAG_END = 6
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RectChangeReason-DRAG_END = 6--><!--Device-RectChangeReason-DRAG_END = 6-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 

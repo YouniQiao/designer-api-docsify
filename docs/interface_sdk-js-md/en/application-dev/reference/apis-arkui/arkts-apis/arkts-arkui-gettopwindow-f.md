@@ -22,13 +22,15 @@ Obtains the top window of the current application. This API uses an asynchronous
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-window-function getTopWindow(callback: AsyncCallback<Window>): void--><!--Device-window-function getTopWindow(callback: AsyncCallback<Window>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Window&gt; | Yes | Callback used to return the top window obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Window> | Yes | Callback used to return the top window obtained. |
 
 **Example**
 
@@ -65,13 +67,15 @@ Obtains the top window of the current application. This API uses a promise to re
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-window-function getTopWindow(): Promise<Window>--><!--Device-window-function getTopWindow(): Promise<Window>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Window&gt; | Promise used to return the top window obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Window> | Promise used to return the top window obtained. |
 
 **Example**
 
@@ -104,19 +108,21 @@ Obtains the top window of the current application. This API uses a promise to re
 
 **Substitutes:** getLastWindow(ctx:
 
+<!--Device-window-function getTopWindow(ctx: BaseContext): Promise<Window>--><!--Device-window-function getTopWindow(ctx: BaseContext): Promise<Window>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ctx | BaseContext | Yes | Current application context. |
+| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Window&gt; | Promise used to return the top window obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Window> | Promise used to return the top window obtained. |
 
 **Example**
 
@@ -156,14 +162,16 @@ Obtains the top window of the current application. This API uses an asynchronous
 
 **Substitutes:** getLastWindow(ctx:
 
+<!--Device-window-function getTopWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void--><!--Device-window-function getTopWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ctx | BaseContext | Yes | Current application context. |
-| callback | AsyncCallback&lt;Window&gt; | Yes | Callback used to return the top window obtained. |
+| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current application context. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Window> | Yes | Callback used to return the top window obtained. |
 
 **Example**
 

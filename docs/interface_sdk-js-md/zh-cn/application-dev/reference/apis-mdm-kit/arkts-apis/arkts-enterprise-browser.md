@@ -4,15 +4,23 @@
 
 浏览器策略指通过配置或管理浏览器行为的一系列规则和设置，以确保安全性、合规性、性能优化和用户体验的一致性。
 
-> **说明：**
->
-> 本模块接口仅可在Stage模型下使用。
->
+> **说明：**  
+>  
+> 本模块接口仅可在Stage模型下使用。  
+>  
 > 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../../mdm/mdm-kit-guide.md)。
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace browser--><!--Device-unnamed-declare namespace browser-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { browser } from '@kit.MDMKit';
+```
 
 ## 汇总
 

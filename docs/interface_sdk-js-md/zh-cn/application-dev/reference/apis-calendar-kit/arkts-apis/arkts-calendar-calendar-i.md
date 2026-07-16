@@ -1,13 +1,18 @@
 # Calendar
 
-下列API示例中需先通过
-[createCalendar()](arkts-calendar-calendarmanager-i.md#createcalendar-2)
-、[getCalendar()](arkts-calendar-calendarmanager-i.md#getcalendar-3)中任一方法获取
-Calendar对象，再通过此对象调用对应方法，对该Calendar下的日程进行创建、删除、修改、查询等操作。
+下列API示例中需先通过[createCalendar()](arkts-calendar-calendarmanager-i.md#createcalendar-2)、[getCalendar()](arkts-calendar-calendarmanager-i.md#getcalendar-3)中任一方法获取Calendar对象，再通过此对象调用对应方法，对该Calendar下的日程进行创建、删除、修改、查询等操作。
 
 **起始版本：** 10
 
+<!--Device-calendarManager-export interface Calendar--><!--Device-calendarManager-export interface Calendar-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
+
+## 导入模块
+
+```TypeScript
+import { calendarManager } from '@kit.CalendarKit';
+```
 
 ## addEvent
 
@@ -22,7 +27,9 @@ addEvent(event: Event): Promise<number>
 **需要权限：** 
 - API版本23+：ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Calendar-addEvent(event: Event): Promise<number>--><!--Device-Calendar-addEvent(event: Event): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -30,13 +37,13 @@ addEvent(event: Event): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Event | 是 | Event对象。 |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-event-c.md) | 是 | Event对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回日程的id，id大于0。 |
+| Promise<number> | Promise对象，返回日程的id，id大于0。 |
 
 **错误码：**
 
@@ -91,7 +98,9 @@ addEvent(event: Event, callback: AsyncCallback<number>): void
 **需要权限：** 
 - API版本23+：ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Calendar-addEvent(event: Event, callback: AsyncCallback<number>): void--><!--Device-Calendar-addEvent(event: Event, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -99,8 +108,8 @@ addEvent(event: Event, callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Event | 是 | Event对象。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数，当添加日程成功时，err为undefined，data为日程id；否则为错误对象。 |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-event-c.md) | 是 | Event对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数，当添加日程成功时，err为undefined，data为日程id；否则为错误对象。 |
 
 **错误码：**
 
@@ -155,19 +164,21 @@ addEvents(events: Event[]): Promise<void>
 **需要权限：** 
 - API版本23+：ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 
+<!--Device-Calendar-addEvents(events: Event[]): Promise<void>--><!--Device-Calendar-addEvents(events: Event[]): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| events | Event[] | 是 | Event对象数组。 |
+| events | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-event-c.md)[] | 是 | Event对象数组。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -229,14 +240,16 @@ addEvents(events: Event[], callback: AsyncCallback<void>): void
 **需要权限：** 
 - API版本23+：ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 
+<!--Device-Calendar-addEvents(events: Event[], callback: AsyncCallback<void>): void--><!--Device-Calendar-addEvents(events: Event[], callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| events | Event[] | 是 | Event对象数组。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，当添加日程成功时，err为undefined；否则为错误对象。 |
+| events | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-event-c.md)[] | 是 | Event对象数组。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，当添加日程成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -297,6 +310,8 @@ deleteEvent(id: number): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-Calendar-deleteEvent(id: number): Promise<void>--><!--Device-Calendar-deleteEvent(id: number): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
@@ -309,7 +324,7 @@ deleteEvent(id: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **示例：**
 
@@ -362,7 +377,9 @@ deleteEvent(id: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Calendar-deleteEvent(id: number, callback: AsyncCallback<void>): void--><!--Device-Calendar-deleteEvent(id: number, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -371,7 +388,7 @@ deleteEvent(id: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | number | 是 | 日程id，传入的日程id为整数，表示已创建日程的id，是日程的唯一标识符。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，当删除日程成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，当删除日程成功时，err为undefined；否则为错误对象。 |
 
 **示例：**
 
@@ -426,6 +443,8 @@ deleteEvents(ids: number[]): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-Calendar-deleteEvents(ids: number[]): Promise<void>--><!--Device-Calendar-deleteEvents(ids: number[]): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
@@ -438,7 +457,7 @@ deleteEvents(ids: number[]): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **示例：**
 
@@ -504,7 +523,9 @@ deleteEvents(ids: number[], callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Calendar-deleteEvents(ids: number[], callback: AsyncCallback<void>): void--><!--Device-Calendar-deleteEvents(ids: number[], callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -513,7 +534,7 @@ deleteEvents(ids: number[], callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ids | number[] | 是 | 日程id数组。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，当删除多个日程成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，当删除多个日程成功时，err为undefined；否则为错误对象。 |
 
 **示例：**
 
@@ -581,13 +602,15 @@ getAccount(): CalendarAccount
 
 **起始版本：** 10
 
+<!--Device-Calendar-getAccount(): CalendarAccount--><!--Device-Calendar-getAccount(): CalendarAccount-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| CalendarAccount | 日历账户信息。 |
+| [CalendarAccount](arkts-calendar-calendaraccount-i.md) | 日历账户信息。 |
 
 **示例：**
 
@@ -622,13 +645,15 @@ getConfig(): CalendarConfig
 
 **起始版本：** 10
 
+<!--Device-Calendar-getConfig(): CalendarConfig--><!--Device-Calendar-getConfig(): CalendarConfig-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| CalendarConfig | 日历配置信息。 |
+| [CalendarConfig](arkts-calendar-calendarconfig-i.md) | 日历配置信息。 |
 
 **示例：**
 
@@ -659,13 +684,14 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[]>
 ```
 
-获取Calendar下符合查询条件的Event，使用Promise异步回调。只有一个入参时，参数必须为查询条件，对应参数类型为EventFilter。当没有入参时，
-可查询指定日历账户下的所有日程。
+获取Calendar下符合查询条件的Event，使用Promise异步回调。只有一个入参时，参数必须为查询条件，对应参数类型为EventFilter。当没有入参时，可查询指定日历账户下的所有日程。
 
 **起始版本：** 10
 
 **需要权限：** 
 - API版本23+：ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+
+<!--Device-Calendar-getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[]>--><!--Device-Calendar-getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[]>-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -673,14 +699,14 @@ getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventFilter | EventFilter | 否 | 查询条件。 |
+| eventFilter | [EventFilter](arkts-calendar-eventfilter-c.md) | 否 | 查询条件。 |
 | eventKey | (keyof Event)[] | 否 | 查询字段。API version 20之前，不填时默认查询字段包括id、type、title、startTime、endTime、isAllDay、description、timeZone、location、service、attendee、reminderTime；从API version 20开始，不填时默认查询字段包括id、type、title、startTime、endTime、isAllDay、description、timeZone、location、service、attendee、reminderTime、identifier。若查询字段为空，则不返回该字段。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Event[]&gt; | Promise对象，返回的是Event对象数组。 |
+| Promise<Event[]> | Promise对象，返回的是Event对象数组。 |
 
 **错误码：**
 
@@ -744,15 +770,17 @@ getEvents(eventFilter: EventFilter, eventKey: (keyof Event)[], callback: AsyncCa
 **需要权限：** 
 - API版本23+：ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 
+<!--Device-Calendar-getEvents(eventFilter: EventFilter, eventKey: (keyof Event)[], callback: AsyncCallback<Event[]>):void--><!--Device-Calendar-getEvents(eventFilter: EventFilter, eventKey: (keyof Event)[], callback: AsyncCallback<Event[]>):void-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventFilter | EventFilter | 是 | 查询条件。 |
+| eventFilter | [EventFilter](arkts-calendar-eventfilter-c.md) | 是 | 查询条件。 |
 | eventKey | (keyof Event)[] | 是 | 查询字段。 |
-| callback | AsyncCallback&lt;Event[]&gt; | 是 | 回调函数，当查询日程成功时，err为undefined，data为查询到的Event数组；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Event[]> | 是 | 回调函数，当查询日程成功时，err为undefined，data为查询到的Event数组；否则为错误对象。 |
 
 **错误码：**
 
@@ -822,15 +850,14 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
 getEvents(callback: AsyncCallback<Event[]>):void
 ```
 
-查询当前日历下所有日程，使用callback异步回调。
-API version 20之前，默认查询字段包括id、type、title、startTime、endTime、isAllDay、description、timeZone、location、service、attendee、reminderTime。
-从API version 20开始，默认查询字段包括id、type、title、startTime、endTime、isAllDay、description、timeZone、location、service、attendee、reminderTime、identifier。
-若查询字段为空，则不返回该字段。
+查询当前日历下所有日程，使用callback异步回调。API version 20之前，默认查询字段包括id、type、title、startTime、endTime、isAllDay、description、timeZone、location、service、attendee、reminderTime。从API version 20开始，默认查询字段包括id、type、title、startTime、endTime、isAllDay、description、timeZone、location、service、attendee、reminderTime、identifier。若查询字段为空，则不返回该字段。
 
 **起始版本：** 10
 
 **需要权限：** 
 - API版本23+：ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+
+<!--Device-Calendar-getEvents(callback: AsyncCallback<Event[]>):void--><!--Device-Calendar-getEvents(callback: AsyncCallback<Event[]>):void-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -838,7 +865,7 @@ API version 20之前，默认查询字段包括id、type、title、startTime、e
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Event[]&gt; | 是 | 回调函数，当查询日程成功时，err为undefined，data为查询到的Event数组；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Event[]> | 是 | 回调函数，当查询日程成功时，err为undefined，data为查询到的Event数组；否则为错误对象。 |
 
 **错误码：**
 
@@ -887,7 +914,9 @@ Opens the event edit page.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Calendar-openEventEditPage(id: number): Promise<void>--><!--Device-Calendar-openEventEditPage(id: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -901,7 +930,7 @@ Opens the event edit page.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -975,7 +1004,9 @@ queryEventInstances(start: number, end: number, ids?: number[], eventKey?: (keyo
 **需要权限：** 
 - API版本23+：ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Calendar-queryEventInstances(start: number, end: number, ids?: number[], eventKey?: (keyof Event)[]): Promise<Event[]>--><!--Device-Calendar-queryEventInstances(start: number, end: number, ids?: number[], eventKey?: (keyof Event)[]): Promise<Event[]>-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -992,7 +1023,7 @@ queryEventInstances(start: number, end: number, ids?: number[], eventKey?: (keyo
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Event[]&gt; | Promise对象，返回的是Event对象数组。 |
+| Promise<Event[]> | Promise对象，返回的是Event对象数组。 |
 
 **错误码：**
 
@@ -1053,19 +1084,21 @@ setConfig(config: CalendarConfig): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-Calendar-setConfig(config: CalendarConfig): Promise<void>--><!--Device-Calendar-setConfig(config: CalendarConfig): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | CalendarConfig | 是 | 日历配置信息。 |
+| config | [CalendarConfig](arkts-calendar-calendarconfig-i.md) | 是 | 日历配置信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1114,14 +1147,16 @@ setConfig(config: CalendarConfig, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-Calendar-setConfig(config: CalendarConfig, callback: AsyncCallback<void>): void--><!--Device-Calendar-setConfig(config: CalendarConfig, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | CalendarConfig | 是 | 日历配置信息。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，当设置Config成功时，err为undefined；否则为错误对象。 |
+| config | [CalendarConfig](arkts-calendar-calendarconfig-i.md) | 是 | 日历配置信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，当设置Config成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -1172,19 +1207,21 @@ updateEvent(event: Event): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-Calendar-updateEvent(event: Event): Promise<void>--><!--Device-Calendar-updateEvent(event: Event): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Event | 是 | Event对象。 |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-event-c.md) | 是 | Event对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **示例：**
 
@@ -1239,14 +1276,16 @@ updateEvent(event: Event, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-Calendar-updateEvent(event: Event, callback: AsyncCallback<void>): void--><!--Device-Calendar-updateEvent(event: Event, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Event | 是 | Event对象。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，当更新日程成功时，err为undefined；否则为错误对象。 |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-event-c.md) | 是 | Event对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，当更新日程成功时，err为undefined；否则为错误对象。 |
 
 **示例：**
 
@@ -1305,7 +1344,9 @@ readonly id: number
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Calendar-readonly id: number--><!--Device-Calendar-readonly id: number-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 

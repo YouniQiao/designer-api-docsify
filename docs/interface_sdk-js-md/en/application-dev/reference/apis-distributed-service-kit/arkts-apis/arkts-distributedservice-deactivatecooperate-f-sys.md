@@ -18,6 +18,8 @@ Stops screen hopping. This API uses an asynchronous callback to return the resul
 
 **Required permissions:** ohos.permission.COOPERATE_MANAGER
 
+<!--Device-cooperate-function deactivateCooperate(isUnchained: boolean, callback: AsyncCallback<void>): void--><!--Device-cooperate-function deactivateCooperate(isUnchained: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Stops screen hopping. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isUnchained | boolean | Yes | Whether to disable the cross-device link. The value **true** means to disable thecross-device link, and the value **false** means the opposite. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the operation result. If the operation issuccessful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| isUnchained | boolean | Yes | Whether to disable the cross-device link. The value **true** means to disable the cross-device link, and the value **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -69,6 +71,8 @@ Stops screen hopping. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.COOPERATE_MANAGER
 
+<!--Device-cooperate-function deactivateCooperate(isUnchained: boolean): Promise<void>--><!--Device-cooperate-function deactivateCooperate(isUnchained: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **System API:** This is a system API.
@@ -77,13 +81,13 @@ Stops screen hopping. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isUnchained | boolean | Yes | Whether to disable the cross-device link. The value **true** means to disable thecross-device link, and the value **false** means the opposite. |
+| isUnchained | boolean | Yes | Whether to disable the cross-device link. The value **true** means to disable the cross-device link, and the value **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

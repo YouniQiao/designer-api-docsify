@@ -4,6 +4,8 @@ Events and styles supported by the search area.
 
 **Since:** 18
 
+<!--Device-unnamed-export interface SearchParams--><!--Device-unnamed-export interface SearchParams-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Set the cancel button style.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SearchParams-cancelIcon?: IconOptions--><!--Device-SearchParams-cancelIcon?: IconOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## caretStyle
@@ -41,6 +45,8 @@ Set the cursor style.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SearchParams-caretStyle?: CaretStyle--><!--Device-SearchParams-caretStyle?: CaretStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,6 +64,8 @@ Indicates the background color of a component.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SearchParams-componentBackgroundColor?: ResourceColor--><!--Device-SearchParams-componentBackgroundColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## copyOptions
@@ -73,6 +81,8 @@ Called when the copy option is set.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SearchParams-copyOptions?: CopyOptions--><!--Device-SearchParams-copyOptions?: CopyOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,6 +100,8 @@ Called when the text decoration of the text is set.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SearchParams-decoration?: TextDecorationOptions--><!--Device-SearchParams-decoration?: TextDecorationOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## editMenuOptions
@@ -105,6 +117,8 @@ Set the custom text menu.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SearchParams-editMenuOptions?: EditMenuOptions--><!--Device-SearchParams-editMenuOptions?: EditMenuOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -122,6 +136,8 @@ Enable or disable haptic feedback.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SearchParams-enableHapticFeedback?: boolean--><!--Device-SearchParams-enableHapticFeedback?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableKeyboardOnFocus
@@ -137,6 +153,8 @@ Sets whether request keyboard or not when on focus.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SearchParams-enableKeyboardOnFocus?: boolean--><!--Device-SearchParams-enableKeyboardOnFocus?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -154,6 +172,8 @@ Define the preview text mode of the text input.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SearchParams-enablePreviewText?: boolean--><!--Device-SearchParams-enablePreviewText?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enterKeyType
@@ -169,6 +189,8 @@ Set enter key type of soft keyboard.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SearchParams-enterKeyType?: EnterKeyType--><!--Device-SearchParams-enterKeyType?: EnterKeyType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -186,6 +208,8 @@ Set the SearchButton fontColor.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SearchParams-fontColor?: ResourceColor--><!--Device-SearchParams-fontColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontFeature
@@ -194,17 +218,15 @@ Set the SearchButton fontColor.
 fontFeature?: ResourceStr
 ```
 
-Set font feature.
-normal | <feature-tag-value>,
-where <feature-tag-value> = <string> [ <integer> | on | off ], like: "ss01" 0
-the values of <feature-tag-value> reference to doc of search component
-number of <feature-tag-value> can be single or multiple, and separated by comma ','.
+Set font feature.normal | <feature-tag-value>,where <feature-tag-value> = <string> [ <integer> | on | off ], like: "ss01" 0the values of <feature-tag-value> reference to doc of search component number of <feature-tag-value> can be single or multiple, and separated by comma ','.
 
 **Type:** ResourceStr
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SearchParams-fontFeature?: ResourceStr--><!--Device-SearchParams-fontFeature?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -222,6 +244,8 @@ Controls whether the selection menu pops up.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SearchParams-hideSelectionMenu?: boolean--><!--Device-SearchParams-hideSelectionMenu?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## inputFilter
@@ -237,6 +261,8 @@ Called when the inputFilter of text is set.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SearchParams-inputFilter?: InputFilterParams--><!--Device-SearchParams-inputFilter?: InputFilterParams-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -254,6 +280,8 @@ Called when the distance between text fonts is set.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SearchParams-letterSpacing?: number | string | Resource--><!--Device-SearchParams-letterSpacing?: number | string | Resource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## maxFontSize
@@ -269,6 +297,8 @@ Called when the maximum font size of the font is set.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SearchParams-maxFontSize?: number | string | Resource--><!--Device-SearchParams-maxFontSize?: number | string | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -286,6 +316,8 @@ Called when the input of maximum text length is set.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SearchParams-maxLength?: number--><!--Device-SearchParams-maxLength?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## minFontSize
@@ -301,6 +333,8 @@ Called when the minimum font size of the font is set.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SearchParams-minFontSize?: number | string | Resource--><!--Device-SearchParams-minFontSize?: number | string | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -318,6 +352,8 @@ Call the function when editing the input text.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SearchParams-onChange?: EditableTextOnChangeCallback--><!--Device-SearchParams-onChange?: EditableTextOnChangeCallback-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onContentScroll
@@ -333,6 +369,8 @@ Called when the content scrolls.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SearchParams-onContentScroll?: OnContentScrollCallback--><!--Device-SearchParams-onContentScroll?: OnContentScrollCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -350,6 +388,8 @@ Called when using the Clipboard menu.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SearchParams-onCopy?: Callback<string>--><!--Device-SearchParams-onCopy?: Callback<string>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onCut
@@ -365,6 +405,8 @@ Called when using the Clipboard menu.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SearchParams-onCut?: Callback<string>--><!--Device-SearchParams-onCut?: Callback<string>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -382,6 +424,8 @@ Get text value information when the deletion has been completed.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SearchParams-onDidDelete?: Callback<DeleteValue>--><!--Device-SearchParams-onDidDelete?: Callback<DeleteValue>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onDidInsert
@@ -397,6 +441,8 @@ Get text value information when completed input.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SearchParams-onDidInsert?: Callback<InsertValue>--><!--Device-SearchParams-onDidInsert?: Callback<InsertValue>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -414,6 +460,8 @@ Called when judging whether the text editing change finished.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SearchParams-onEditChange?: Callback<boolean>--><!--Device-SearchParams-onEditChange?: Callback<boolean>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onPaste
@@ -429,6 +477,8 @@ Called when using the Clipboard menu.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SearchParams-onPaste?: OnPasteCallback--><!--Device-SearchParams-onPaste?: OnPasteCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -446,6 +496,8 @@ Call the function when clicked the search button.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SearchParams-onSubmit?: Callback<string> | SearchSubmitCallback--><!--Device-SearchParams-onSubmit?: Callback<string> | SearchSubmitCallback-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onTextSelectionChange
@@ -461,6 +513,8 @@ Called when the text selection changes.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SearchParams-onTextSelectionChange?: OnTextSelectionChangeCallback--><!--Device-SearchParams-onTextSelectionChange?: OnTextSelectionChangeCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -478,6 +532,8 @@ Get text value information when about to delete.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SearchParams-onWillDelete?: Callback<DeleteValue, boolean>--><!--Device-SearchParams-onWillDelete?: Callback<DeleteValue, boolean>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onWillInsert
@@ -493,6 +549,8 @@ Get text value information when about to input.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SearchParams-onWillInsert?: Callback<InsertValue, boolean>--><!--Device-SearchParams-onWillInsert?: Callback<InsertValue, boolean>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -510,6 +568,8 @@ Set the place hold text color.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SearchParams-placeholderColor?: ResourceColor--><!--Device-SearchParams-placeholderColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## placeholderFont
@@ -525,6 +585,8 @@ Set the font used for place holder text.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SearchParams-placeholderFont?: Font--><!--Device-SearchParams-placeholderFont?: Font-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -542,6 +604,8 @@ Background color when pressed.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SearchParams-pressedBackgroundColor?: ResourceColor--><!--Device-SearchParams-pressedBackgroundColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## searchButton
@@ -557,6 +621,8 @@ Set the search button text, fontSize and fontColor.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SearchParams-searchButton?: SearchButtonParams--><!--Device-SearchParams-searchButton?: SearchButtonParams-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -574,6 +640,8 @@ Set the search icon style.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SearchParams-searchIcon?: IconOptions | SymbolGlyphModifier--><!--Device-SearchParams-searchIcon?: IconOptions | SymbolGlyphModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## searchKey
@@ -589,6 +657,8 @@ Used to identify a unique search component.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SearchParams-searchKey?: ResourceStr--><!--Device-SearchParams-searchKey?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -606,6 +676,8 @@ Define the text selected background color of the text input.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SearchParams-selectedBackgroundColor?: ResourceColor--><!--Device-SearchParams-selectedBackgroundColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## textAlign
@@ -621,6 +693,8 @@ Called when the text align is set.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SearchParams-textAlign?: TextAlign--><!--Device-SearchParams-textAlign?: TextAlign-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -638,6 +712,8 @@ Set enter key type of soft keyboard.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SearchParams-textFont?: Font--><!--Device-SearchParams-textFont?: Font-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## textIndent
@@ -654,6 +730,8 @@ Specify the indentation of the first line in a text-block.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SearchParams-textIndent?: Dimension--><!--Device-SearchParams-textIndent?: Dimension-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## type
@@ -669,6 +747,8 @@ Called when the search type is set.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SearchParams-type?: SearchType--><!--Device-SearchParams-type?: SearchType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

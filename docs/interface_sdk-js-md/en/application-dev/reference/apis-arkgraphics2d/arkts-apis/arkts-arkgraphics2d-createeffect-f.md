@@ -18,13 +18,15 @@ Create a VisualEffect to add multiple effects to the component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
+<!--Device-uiEffect-function createEffect(): VisualEffect--><!--Device-uiEffect-function createEffect(): VisualEffect-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| VisualEffect | Returns the head node of visualEffect. |
+| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | Returns the head node of visualEffect. |
 
 **Example**
 

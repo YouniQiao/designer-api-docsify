@@ -20,20 +20,22 @@ Adds a normal OS account using the name.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-accountManager-function createNormalOsAccount(admin: Want, name: string): Promise<osAccount.OsAccountInfo>--><!--Device-accountManager-function createNormalOsAccount(admin: Want, name: string): Promise<osAccount.OsAccountInfo>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | admin indicates the enterprise admin extension ability information. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | admin indicates the enterprise admin extension ability information. |
 | name | string | Yes | the OS account name. It cannot be empty. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;osAccount.OsAccountInfo&gt; | Returns the information about the added OS account. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<osAccount.OsAccountInfo> | Returns the information about the added OS account. |
 
 **Error codes:**
 

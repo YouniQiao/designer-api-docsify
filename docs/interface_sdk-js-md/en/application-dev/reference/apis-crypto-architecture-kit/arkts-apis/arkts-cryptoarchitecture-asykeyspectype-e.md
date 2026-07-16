@@ -4,6 +4,8 @@ Enumerates the key parameter types.
 
 **Since:** 10
 
+<!--Device-cryptoFramework-enum AsyKeySpecType--><!--Device-cryptoFramework-enum AsyKeySpecType-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 10 to 11: SystemCapability.Security.CryptoFramework
@@ -14,13 +16,13 @@ Enumerates the key parameter types.
 COMMON_PARAMS_SPEC = 0
 ```
 
-Common parameters of the public and private keys. You can use
-[generateKeyPair](arkts-cryptoarchitecture-asykeygeneratorbyspec-i.md#generatekeypair-1)
-to randomly generate a key pair based on the parameters of this type.
+Common parameters of the public and private keys. You can use [generateKeyPair](arkts-cryptoarchitecture-asykeygeneratorbyspec-i.md#generatekeypair-1)to randomly generate a key pair based on the parameters of this type.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeySpecType-COMMON_PARAMS_SPEC = 0--><!--Device-AsyKeySpecType-COMMON_PARAMS_SPEC = 0-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -32,13 +34,13 @@ to randomly generate a key pair based on the parameters of this type.
 PRIVATE_KEY_SPEC = 1
 ```
 
-Parameter of the private key. You can use
-[generatePriKey](arkts-cryptoarchitecture-asykeygeneratorbyspec-i.md#generateprikey-1) to
-generate a private key based on the parameters of this type.
+Parameter of the private key. You can use [generatePriKey](arkts-cryptoarchitecture-asykeygeneratorbyspec-i.md#generateprikey-1) to generate a private key based on the parameters of this type.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeySpecType-PRIVATE_KEY_SPEC = 1--><!--Device-AsyKeySpecType-PRIVATE_KEY_SPEC = 1-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -50,13 +52,13 @@ generate a private key based on the parameters of this type.
 PUBLIC_KEY_SPEC = 2
 ```
 
-Parameter of the public key. You can use
-[generatePubKey](arkts-cryptoarchitecture-asykeygeneratorbyspec-i.md#generatepubkey-1) to
-generate a public key based on the parameters of this type.
+Parameter of the public key. You can use [generatePubKey](arkts-cryptoarchitecture-asykeygeneratorbyspec-i.md#generatepubkey-1) to generate a public key based on the parameters of this type.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeySpecType-PUBLIC_KEY_SPEC = 2--><!--Device-AsyKeySpecType-PUBLIC_KEY_SPEC = 2-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -68,13 +70,13 @@ generate a public key based on the parameters of this type.
 KEY_PAIR_SPEC = 3
 ```
 
-Full parameters of the public and private keys. You can use
-[generateKeyPair](arkts-cryptoarchitecture-asykeygeneratorbyspec-i.md#generatekeypair-1)
-to generate a key pair based on the parameters of this type.
+Full parameters of the public and private keys. You can use [generateKeyPair](arkts-cryptoarchitecture-asykeygeneratorbyspec-i.md#generatekeypair-1)to generate a key pair based on the parameters of this type.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeySpecType-KEY_PAIR_SPEC = 3--><!--Device-AsyKeySpecType-KEY_PAIR_SPEC = 3-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey

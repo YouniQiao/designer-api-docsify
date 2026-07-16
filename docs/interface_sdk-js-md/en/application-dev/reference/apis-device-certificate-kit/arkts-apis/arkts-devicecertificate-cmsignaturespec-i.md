@@ -1,9 +1,10 @@
 # CMSignatureSpec
 
-Represents a set of parameters used for signing or signature verification, including the key usage purpose, padding
-mode, and digest algorithm.
+Represents a set of parameters used for signing or signature verification, including the key usage purpose, padding mode, and digest algorithm.
 
 **Since:** 11
+
+<!--Device-certificateManager-export interface CMSignatureSpec--><!--Device-certificateManager-export interface CMSignatureSpec-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -19,12 +20,13 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 digest?: CmKeyDigest
 ```
 
-Digest algorithm.
-Default value: CM_DIGEST_SHA256: indicates that the SHA256 digest algorithm is used.
+Digest algorithm.Default value: CM_DIGEST_SHA256: indicates that the SHA256 digest algorithm is used.
 
 **Type:** CmKeyDigest
 
 **Since:** 11
+
+<!--Device-CMSignatureSpec-digest?: CmKeyDigest--><!--Device-CMSignatureSpec-digest?: CmKeyDigest-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -34,12 +36,13 @@ Default value: CM_DIGEST_SHA256: indicates that the SHA256 digest algorithm is u
 padding?: CmKeyPadding
 ```
 
-Enumeration representing the padding mode.
-Default value: CM_PADDING_PSS: indicates that the PSS filling mode is used.
+Enumeration representing the padding mode.Default value: CM_PADDING_PSS: indicates that the PSS filling mode is used.
 
 **Type:** CmKeyPadding
 
 **Since:** 11
+
+<!--Device-CMSignatureSpec-padding?: CmKeyPadding--><!--Device-CMSignatureSpec-padding?: CmKeyPadding-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -54,6 +57,8 @@ Purpose of using the key.
 **Type:** CmKeyPurpose
 
 **Since:** 11
+
+<!--Device-CMSignatureSpec-purpose: CmKeyPurpose--><!--Device-CMSignatureSpec-purpose: CmKeyPurpose-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 

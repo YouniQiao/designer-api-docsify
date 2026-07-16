@@ -12,20 +12,20 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>
 ```
 
-Decrypts a DLP file to generate a plaintext file. This API can be called only by enterprise accounts. This API
-uses a promise to return the result.
+Decrypts a DLP file to generate a plaintext file. This API can be called only by enterprise accounts. This API uses a promise to return the result.
 
-This API decrypts DLP files into plaintext files, which is applicable to exporting or migrating files by users
-with owner permissions.
+This API decrypts DLP files into plaintext files, which is applicable to exporting or migrating files by users with owner permissions.
 
-> **NOTE**
->
-> This API can be called only by enterprise accounts. Enterprises need to set up their own enterprise account
+> **NOTE**  
+>  
+> This API can be called only by enterprise accounts. Enterprises need to set up their own enterprise account  
 > servers. The enterprise server determines whether an account is authorized to decrypt DLP files.
 
 **Since:** 21
 
 **Required permissions:** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
+
+<!--Device-dlpPermission-function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>--><!--Device-dlpPermission-function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -35,14 +35,14 @@ with owner permissions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dlpFd | number | Yes | FD of the DLP file to be decrypted. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If thevalue of **fd** is less than 0, n error log is generated, and the function stops running. If the value of**fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
-| plaintextFd | number | Yes | FD of the decrypted file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the valueof **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd**is greater than 2&lt;sup&gt;31&lt;/sup&gt;, the excess part will be truncated. |
+| dlpFd | number | Yes | FD of the DLP file to be decrypted. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, n error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
+| plaintextFd | number | Yes | FD of the decrypted file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;, the excess part will be truncated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -4,7 +4,15 @@ Defines the screen capture parameters.
 
 **起始版本：** 12
 
+<!--Device-unnamed-interface AVScreenCaptureRecordConfig--><!--Device-unnamed-interface AVScreenCaptureRecordConfig-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
+
+## 导入模块
+
+```TypeScript
+import { media } from '@kit.MediaKit';
+```
 
 ## audioBitrate
 
@@ -12,12 +20,13 @@ Defines the screen capture parameters.
 audioBitrate?: number
 ```
 
-Audio bit rate, in bit/s. This value is used for both internal capture and external capture (using microphones).
-The default value is **96000**.
+Audio bit rate, in bit/s. This value is used for both internal capture and external capture (using microphones).The default value is **96000**.
 
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-AVScreenCaptureRecordConfig-audioBitrate?: int--><!--Device-AVScreenCaptureRecordConfig-audioBitrate?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -27,12 +36,13 @@ The default value is **96000**.
 audioChannelCount?: number
 ```
 
-Number of audio channels. This value is used for both internal capture and external capture (using microphones).
-Only **1** and **2** (default) are supported.
+Number of audio channels. This value is used for both internal capture and external capture (using microphones).Only **1** and **2** (default) are supported.
 
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-AVScreenCaptureRecordConfig-audioChannelCount?: int--><!--Device-AVScreenCaptureRecordConfig-audioChannelCount?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -42,12 +52,13 @@ Only **1** and **2** (default) are supported.
 audioSampleRate?: number
 ```
 
-Audio sampling rate, in Hz. This value is used for both internal capture
-and external capture (using microphones), in Hz. Only **48000** (default value) and **16000** are supported.
+Audio sampling rate, in Hz. This value is used for both internal capture and external capture (using microphones), in Hz. Only **48000** (default value) and **16000** are supported.
 
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-AVScreenCaptureRecordConfig-audioSampleRate?: int--><!--Device-AVScreenCaptureRecordConfig-audioSampleRate?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -63,6 +74,8 @@ ID of the display used for screen capture. By default, the main screen is captur
 
 **起始版本：** 15
 
+<!--Device-AVScreenCaptureRecordConfig-displayId?: int--><!--Device-AVScreenCaptureRecordConfig-displayId?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## fd
@@ -76,6 +89,8 @@ FD of the file output.
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-AVScreenCaptureRecordConfig-fd: int--><!--Device-AVScreenCaptureRecordConfig-fd: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -91,6 +106,8 @@ Video fill mode during screen capture.
 
 **起始版本：** 18
 
+<!--Device-AVScreenCaptureRecordConfig-fillMode?: AVScreenCaptureFillMode--><!--Device-AVScreenCaptureRecordConfig-fillMode?: AVScreenCaptureFillMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## frameHeight
@@ -104,6 +121,8 @@ Video height, in px. The default value varies according to the display in use.
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-AVScreenCaptureRecordConfig-frameHeight?: int--><!--Device-AVScreenCaptureRecordConfig-frameHeight?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -119,6 +138,8 @@ Video width, in px. The default value varies according to the display in use.
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureRecordConfig-frameWidth?: int--><!--Device-AVScreenCaptureRecordConfig-frameWidth?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## preset
@@ -132,6 +153,8 @@ Encoding and container format used. The default value is **SCREEN_RECORD_PRESET_
 **类型：** AVScreenCaptureRecordPreset
 
 **起始版本：** 12
+
+<!--Device-AVScreenCaptureRecordConfig-preset?: AVScreenCaptureRecordPreset--><!--Device-AVScreenCaptureRecordConfig-preset?: AVScreenCaptureRecordPreset-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -149,6 +172,8 @@ Screen Capture Policy Configuration Fields
 
 **起始版本：** 20
 
+<!--Device-AVScreenCaptureRecordConfig-strategy?: AVScreenCaptureStrategy--><!--Device-AVScreenCaptureRecordConfig-strategy?: AVScreenCaptureStrategy-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## videoBitrate
@@ -162,6 +187,8 @@ Video bit rate, in bit/s. The default value is **10000000**.
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-AVScreenCaptureRecordConfig-videoBitrate?: int--><!--Device-AVScreenCaptureRecordConfig-videoBitrate?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 

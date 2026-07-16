@@ -16,6 +16,8 @@ function subscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<v
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function subscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<void>): void--><!--Device-notification-function subscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -24,8 +26,8 @@ function subscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriber | NotificationSubscriber | 是 | 通知订阅对象。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 订阅动作回调函数。 |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-i-sys.md) | 是 | 通知订阅对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 订阅动作回调函数。 |
 
 
 ## subscribe
@@ -48,6 +50,16 @@ function subscribe(
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function subscribe(
+    subscriber: NotificationSubscriber,
+    info: NotificationSubscribeInfo,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-notification-function subscribe(
+    subscriber: NotificationSubscriber,
+    info: NotificationSubscribeInfo,
+    callback: AsyncCallback<void>
+  ): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -56,9 +68,9 @@ function subscribe(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriber | NotificationSubscriber | 是 | 通知订阅对象。 |
-| info | NotificationSubscribeInfo | 是 | 通知订阅信息。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 订阅动作回调函数。 |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-i-sys.md) | 是 | 通知订阅对象。 |
+| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-i-sys.md) | 是 | 通知订阅信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 订阅动作回调函数。 |
 
 
 ## subscribe
@@ -77,6 +89,8 @@ function subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscr
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscribeInfo): Promise<void>--><!--Device-notification-function subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscribeInfo): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -85,12 +99,12 @@ function subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriber | NotificationSubscriber | 是 | 通知订阅对象。 |
-| info | NotificationSubscribeInfo | 否 | 通知订阅信息，默认为空（当为空时，表示订阅当前用户下所有应用的通知，否则表示订阅通知并指定订阅信息）。 |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-i-sys.md) | 是 | 通知订阅对象。 |
+| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-i-sys.md) | 否 | 通知订阅信息，默认为空（当为空时，表示订阅当前用户下所有应用的通知，否则表示订阅通知并指定订阅信息）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 

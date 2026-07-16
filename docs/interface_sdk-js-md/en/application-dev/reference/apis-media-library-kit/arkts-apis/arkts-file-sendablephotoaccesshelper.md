@@ -1,9 +1,10 @@
 # @ohos.file.sendablePhotoAccessHelper
 
-The module provides APIs for album management, including creating an album and accessing and modifying media data in
-an album, based on a [Sendable](../../../../arkts-utils/arkts-sendable.md) object.
+The module provides APIs for album management, including creating an album and accessing and modifying media data in an album, based on a [Sendable](../../../../arkts-utils/arkts-sendable.md) object.
 
 **Since:** 12
+
+<!--Device-unnamed-declare namespace sendablePhotoAccessHelper--><!--Device-unnamed-declare namespace sendablePhotoAccessHelper-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -1,5 +1,11 @@
 # identity
 
+## 导入模块
+
+```TypeScript
+import { matrix4 } from '@kit.ArkUI';
+```
+
 ## identity
 
 ```TypeScript
@@ -10,7 +16,9 @@ Matrix的初始化函数，可以返回一个单位矩阵对象。
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-matrix4-function identity(): Matrix4Transit--><!--Device-matrix4-function identity(): Matrix4Transit-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,5 +26,5 @@ Matrix的初始化函数，可以返回一个单位矩阵对象。
 
 | 类型 | 说明 |
 | --- | --- |
-| Matrix4Transit | 单位矩阵对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4transit-i.md) | 单位矩阵对象。 |
 

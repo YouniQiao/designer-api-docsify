@@ -1,5 +1,11 @@
 # setDragSwitchState（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { dragInteraction } from '@kit.ArkUI';
+```
+
 ## setDragSwitchState
 
 ```TypeScript
@@ -9,6 +15,8 @@ function setDragSwitchState(enabled: boolean): void
 控制统一拖拽功能总开关。
 
 **起始版本：** 18
+
+<!--Device-dragInteraction-function setDragSwitchState(enabled: boolean): void--><!--Device-dragInteraction-function setDragSwitchState(enabled: boolean): void-End-->
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Drag
 

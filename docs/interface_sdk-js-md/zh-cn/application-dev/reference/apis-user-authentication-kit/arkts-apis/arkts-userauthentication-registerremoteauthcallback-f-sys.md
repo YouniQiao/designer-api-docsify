@@ -1,5 +1,11 @@
 # registerRemoteAuthCallback（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+```
+
 ## registerRemoteAuthCallback
 
 ```TypeScript
@@ -14,6 +20,8 @@ function registerRemoteAuthCallback(callback: IRemoteAuthCallback): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-userAuth-function registerRemoteAuthCallback(callback: IRemoteAuthCallback): void--><!--Device-userAuth-function registerRemoteAuthCallback(callback: IRemoteAuthCallback): void-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ function registerRemoteAuthCallback(callback: IRemoteAuthCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | IRemoteAuthCallback | 是 | 用于获取远程身份验证WidgetParam并返回结果的回调 |
+| callback | [IRemoteAuthCallback](arkts-userauthentication-iremoteauthcallback-i-sys.md) | 是 | 用于获取远程身份验证WidgetParam并返回结果的回调 |
 
 **错误码：**
 

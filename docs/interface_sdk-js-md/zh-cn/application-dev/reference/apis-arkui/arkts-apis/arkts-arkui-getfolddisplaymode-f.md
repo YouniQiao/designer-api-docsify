@@ -1,5 +1,11 @@
 # getFoldDisplayMode
 
+## 导入模块
+
+```TypeScript
+import { display } from '@kit.ArkUI';
+```
+
 ## getFoldDisplayMode
 
 ```TypeScript
@@ -10,7 +16,9 @@ function getFoldDisplayMode(): FoldDisplayMode
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-display-function getFoldDisplayMode(): FoldDisplayMode--><!--Device-display-function getFoldDisplayMode(): FoldDisplayMode-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -18,7 +26,7 @@ function getFoldDisplayMode(): FoldDisplayMode
 
 | 类型 | 说明 |
 | --- | --- |
-| FoldDisplayMode | FoldDisplayMode对象，返回可折叠设备当前的显示模式。 |
+| [FoldDisplayMode](arkts-arkui-folddisplaymode-e.md) | FoldDisplayMode对象，返回可折叠设备当前的显示模式。 |
 
 **错误码：**
 

@@ -4,6 +4,8 @@ Enumerates the digest algorithms.
 
 **Since:** 8
 
+<!--Device-huks-export enum HuksKeyDigest--><!--Device-huks-export enum HuksKeyDigest-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
 - API version 8 to 11: SystemCapability.Security.Huks.Extension
@@ -19,6 +21,8 @@ No digest algorithm
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksKeyDigest-HUKS_DIGEST_NONE = 0--><!--Device-HuksKeyDigest-HUKS_DIGEST_NONE = 0-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -36,6 +40,8 @@ MD5
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksKeyDigest-HUKS_DIGEST_MD5 = 1--><!--Device-HuksKeyDigest-HUKS_DIGEST_MD5 = 1-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
 - API version 8 to 11: SystemCapability.Security.Huks.Extension
@@ -51,6 +57,8 @@ SM3
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksKeyDigest-HUKS_DIGEST_SM3 = 2--><!--Device-HuksKeyDigest-HUKS_DIGEST_SM3 = 2-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -68,6 +76,8 @@ SHA-1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksKeyDigest-HUKS_DIGEST_SHA1 = 10--><!--Device-HuksKeyDigest-HUKS_DIGEST_SHA1 = 10-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
 - API version 8 to 11: SystemCapability.Security.Huks.Extension
@@ -83,6 +93,8 @@ SHA-224
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksKeyDigest-HUKS_DIGEST_SHA224 = 11--><!--Device-HuksKeyDigest-HUKS_DIGEST_SHA224 = 11-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -100,6 +112,8 @@ SHA-256
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksKeyDigest-HUKS_DIGEST_SHA256 = 12--><!--Device-HuksKeyDigest-HUKS_DIGEST_SHA256 = 12-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
 - API version 8 to 11: SystemCapability.Security.Huks.Extension
@@ -116,6 +130,8 @@ SHA-384
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksKeyDigest-HUKS_DIGEST_SHA384 = 13--><!--Device-HuksKeyDigest-HUKS_DIGEST_SHA384 = 13-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
 - API version 8 to 11: SystemCapability.Security.Huks.Extension
@@ -131,6 +147,8 @@ SHA-512
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksKeyDigest-HUKS_DIGEST_SHA512 = 14--><!--Device-HuksKeyDigest-HUKS_DIGEST_SHA512 = 14-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core

@@ -18,6 +18,8 @@ Determine whether the current manual network scan is in progress.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-radio-function isManualNetworkScanning(slotId: int): Promise<boolean>--><!--Device-radio-function isManualNetworkScanning(slotId: int): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -32,7 +34,7 @@ Determine whether the current manual network scan is in progress.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | the promise return ManualNetworkScanState. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | the promise return ManualNetworkScanState. |
 
 **Error codes:**
 

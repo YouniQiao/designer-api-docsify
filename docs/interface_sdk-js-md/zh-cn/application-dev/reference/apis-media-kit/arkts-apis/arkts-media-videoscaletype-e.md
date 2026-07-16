@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-enum VideoScaleType--><!--Device-unnamed-enum VideoScaleType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
 ## VIDEO_SCALE_TYPE_FIT
@@ -16,7 +18,9 @@ VIDEO_SCALE_TYPE_FIT = 0
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-VideoScaleType-VIDEO_SCALE_TYPE_FIT = 0--><!--Device-VideoScaleType-VIDEO_SCALE_TYPE_FIT = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -30,7 +34,9 @@ VIDEO_SCALE_TYPE_FIT_CROP = 1
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-VideoScaleType-VIDEO_SCALE_TYPE_FIT_CROP = 1--><!--Device-VideoScaleType-VIDEO_SCALE_TYPE_FIT_CROP = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
@@ -44,7 +50,9 @@ VIDEO_SCALE_TYPE_SCALED_ASPECT = 2
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-VideoScaleType-VIDEO_SCALE_TYPE_SCALED_ASPECT = 2--><!--Device-VideoScaleType-VIDEO_SCALE_TYPE_SCALED_ASPECT = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 

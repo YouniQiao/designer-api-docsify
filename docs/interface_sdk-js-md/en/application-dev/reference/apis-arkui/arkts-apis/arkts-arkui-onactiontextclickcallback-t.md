@@ -12,5 +12,7 @@ Declare the callback function type to be called when clicking the icon button.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-unnamed-declare type OnActionTextClickCallback = () => void--><!--Device-unnamed-declare type OnActionTextClickCallback = () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

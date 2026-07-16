@@ -4,6 +4,8 @@ Defines the configuration for the trailing builder, with constraints applied to 
 
 **Since:** 12
 
+<!--Device-unnamed-export interface IconItemOptions--><!--Device-unnamed-export interface IconItemOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -18,10 +20,7 @@ import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixI
 accessibilityDescription?: ResourceStr
 ```
 
-Accessible description of the suffix icon. You can provide comprehensive text explanations to help users understand
-the operation they are about to perform and its potential consequences, especially when these cannot be inferred
-from the component's attributes and accessibility text alone. If an icon contains both text information and the
-accessible description, the text is announced first and then the accessible description, when the icon is selected.
+Accessible description of the suffix icon. You can provide comprehensive text explanations to help users understand the operation they are about to perform and its potential consequences, especially when these cannot be inferred from the component's attributes and accessibility text alone. If an icon contains both text information and the accessible description, the text is announced first and then the accessible description, when the icon is selected.
 
 The default value is an empty string.
 
@@ -34,6 +33,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-IconItemOptions-accessibilityDescription?: ResourceStr--><!--Device-IconItemOptions-accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,6 +70,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-IconItemOptions-accessibilityLevel?: string--><!--Device-IconItemOptions-accessibilityLevel?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
@@ -77,11 +80,7 @@ If the value is **undefined**, the default value is used.
 accessibilityText?: ResourceStr
 ```
 
-Accessibility text, that is, accessibility label name, of the suffix icon. If an icon does not contain text
-information, it will not be announced by the screen reader when selected. In this case, the screen reader user
-cannot know which icon is selected. To solve this problem, you can set accessibility text for icons without text
-information. When such an icon is selected, the screen reader announces the specified accessibility text, informing
-the user which icon is selected.
+Accessibility text, that is, accessibility label name, of the suffix icon. If an icon does not contain text information, it will not be announced by the screen reader when selected. In this case, the screen reader user cannot know which icon is selected. To solve this problem, you can set accessibility text for icons without text information. When such an icon is selected, the screen reader announces the specified accessibility text, informing the user which icon is selected.
 
 The default value is an empty string.
 
@@ -94,6 +93,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-IconItemOptions-accessibilityText?: ResourceStr--><!--Device-IconItemOptions-accessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -115,6 +116,8 @@ If the value is **undefined**, the event is unbound.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-IconItemOptions-action: Callback<void>--><!--Device-IconItemOptions-action: Callback<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## icon
@@ -129,9 +132,7 @@ When the chip size is **ChipSize.SMALL**, the suffix is at {width: 16, height: 1
 
 When the chip size is **ChipSize.NORMAL**, the suffix is at {width: 24, height: 24} by default.
 
-To dynamically change the size, you must use the
-[SymbolGlyphModifier](./arkui/SymbolGlyphModifier:SymbolGlyphModifier) type when importing the
-[IconGroupSuffix](arkts-arkui-icongroupsuffix-s.md) API.
+To dynamically change the size, you must use the [SymbolGlyphModifier](./arkui/SymbolGlyphModifier:SymbolGlyphModifier) type when importing the [IconGroupSuffix](arkts-arkui-icongroupsuffix-s.md) API.
 
 If the value is **undefined**, the default value is used.
 
@@ -142,6 +143,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-IconItemOptions-icon: IconOptions--><!--Device-IconItemOptions-icon: IconOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

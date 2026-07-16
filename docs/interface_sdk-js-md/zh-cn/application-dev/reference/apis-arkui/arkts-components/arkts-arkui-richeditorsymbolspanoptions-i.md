@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare interface RichEditorSymbolSpanOptions--><!--Device-unnamed-declare interface RichEditorSymbolSpanOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## offset
@@ -22,7 +24,9 @@ offset?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RichEditorSymbolSpanOptions-offset?: number--><!--Device-RichEditorSymbolSpanOptions-offset?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,7 +44,9 @@ SymbolSpan样式信息。当需要自定义SymbolSpan的颜色、大小、粗细
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RichEditorSymbolSpanOptions-style?: RichEditorSymbolSpanStyle--><!--Device-RichEditorSymbolSpanOptions-style?: RichEditorSymbolSpanStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -14,11 +14,11 @@ function getCallStateSync(): CallState
 
 Obtains the call state.
 
-If an incoming call is ringing or waiting, the system returns {@code CallState#CALL_STATE_RINGING}.
-If at least one call is in the active, hold, or dialing state, the system returns
-{@code CallState#CALL_STATE_OFFHOOK}. In other cases, the system returns {@code CallState#CALL_STATE_IDLE}.
+If an incoming call is ringing or waiting, the system returns {@code CallState#CALL_STATE_RINGING}.If at least one call is in the active, hold, or dialing state, the system returns{@code CallState#CALL_STATE_OFFHOOK}. In other cases, the system returns {@code CallState#CALL_STATE_IDLE}.
 
 **Since:** 10
+
+<!--Device-call-function getCallStateSync(): CallState--><!--Device-call-function getCallStateSync(): CallState-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -26,7 +26,7 @@ If at least one call is in the active, hold, or dialing state, the system return
 
 | Type | Description |
 | --- | --- |
-| CallState | Returns the call state. |
+| [CallState](arkts-telephony-callstate-e.md) | Returns the call state. |
 
 **Example**
 

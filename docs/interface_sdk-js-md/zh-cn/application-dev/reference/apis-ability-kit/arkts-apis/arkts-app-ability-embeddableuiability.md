@@ -1,5 +1,11 @@
 # @ohos.app.ability.EmbeddableUIAbility
 
+## 导入模块
+
+```TypeScript
+import { EmbeddableUIAbility } from '@kit.AbilityKit';
+```
+
 ## 汇总
 
 ### 类

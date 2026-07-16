@@ -2,11 +2,13 @@
 
 The advertising module provides APIs for requesting and displaying ads.
 
-> **NOTE**
-> The initial APIs of this module are supported since API version 11.
+> **NOTE**  
+> The initial APIs of this module are supported since API version 11.  
 > Newly added APIs will be marked with a superscript to indicate their earliest API version.
 
 **Since:** 11
+
+<!--Device-unnamed-declare namespace advertising--><!--Device-unnamed-declare namespace advertising-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 

@@ -4,6 +4,8 @@ Defines the options of BackgroundEffect
 
 **Since:** 11
 
+<!--Device-unnamed-declare interface BackgroundEffectOptions--><!--Device-unnamed-declare interface BackgroundEffectOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## adaptiveColor
@@ -12,8 +14,7 @@ Defines the options of BackgroundEffect
 adaptiveColor?: AdaptiveColor
 ```
 
-Adaptive color mode used for the background blur effect. Default value: **DEFAULT** . When set to **AVERAGE**, the
-adaptive color mode takes effect only when the color has transparency.
+Adaptive color mode used for the background blur effect. Default value: **DEFAULT** . When set to **AVERAGE**, the adaptive color mode takes effect only when the color has transparency.
 
 **Type:** AdaptiveColor
 
@@ -24,6 +25,8 @@ adaptive color mode takes effect only when the color has transparency.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BackgroundEffectOptions-adaptiveColor?: AdaptiveColor--><!--Device-BackgroundEffectOptions-adaptiveColor?: AdaptiveColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,6 +49,8 @@ Grayscale blur.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BackgroundEffectOptions-blurOptions?: BlurOptions--><!--Device-BackgroundEffectOptions-blurOptions?: BlurOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## brightness
@@ -54,9 +59,7 @@ Grayscale blur.
 brightness?: number
 ```
 
-Brightness.
-<br>Value range: [0, +∞).
-<br>Default value: **1** Recommended value range: [0, 2].
+Brightness.<br>Value range: [0, +∞).<br>Default value: **1** Recommended value range: [0, 2].
 
 **Type:** number
 
@@ -67,6 +70,8 @@ Brightness.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BackgroundEffectOptions-brightness?: number--><!--Device-BackgroundEffectOptions-brightness?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -88,6 +93,8 @@ Color.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BackgroundEffectOptions-color?: ResourceColor--><!--Device-BackgroundEffectOptions-color?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## inactiveColor
@@ -96,9 +103,7 @@ Color.
 inactiveColor?: ResourceColor
 ```
 
-Background color when the blur effect does not take effect. This parameter must be used together with the
-**policy** parameter. When **policy** is set to a value that disables the blur effect, the blur effect on the
-components is removed. If **inactiveColor** is specified, it is applied as the component background color.
+Background color when the blur effect does not take effect. This parameter must be used together with the **policy** parameter. When **policy** is set to a value that disables the blur effect, the blur effect on the components is removed. If **inactiveColor** is specified, it is applied as the component background color.
 
 **Type:** ResourceColor
 
@@ -109,6 +114,8 @@ components is removed. If **inactiveColor** is specified, it is applied as the c
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-BackgroundEffectOptions-inactiveColor?: ResourceColor--><!--Device-BackgroundEffectOptions-inactiveColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -130,6 +137,8 @@ Blur activation policy.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-BackgroundEffectOptions-policy?: BlurStyleActivePolicy--><!--Device-BackgroundEffectOptions-policy?: BlurStyleActivePolicy-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## radius
@@ -138,9 +147,7 @@ Blur activation policy.
 radius: number
 ```
 
-Blur radius.
-Value range: [0, +∞).
-Default value: **0**.
+Blur radius.Value range: [0, +∞).Default value: **0**.
 
 **Type:** number
 
@@ -150,6 +157,8 @@ Default value: **0**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BackgroundEffectOptions-radius: number--><!--Device-BackgroundEffectOptions-radius: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## saturation
@@ -158,9 +167,7 @@ Default value: **0**.
 saturation?: number
 ```
 
-Saturation.
-Value range: [0, +∞).
-Recommended value range: [0, 50].
+Saturation.Value range: [0, +∞).Recommended value range: [0, 50].
 
 **Type:** number
 
@@ -171,6 +178,8 @@ Recommended value range: [0, 50].
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BackgroundEffectOptions-saturation?: number--><!--Device-BackgroundEffectOptions-saturation?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

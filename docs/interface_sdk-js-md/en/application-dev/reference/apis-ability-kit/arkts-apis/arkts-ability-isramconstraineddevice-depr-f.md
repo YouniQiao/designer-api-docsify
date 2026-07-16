@@ -6,8 +6,7 @@
 function isRamConstrainedDevice(): Promise<boolean>
 ```
 
-Checks whether the current device is a RAM-constrained device (a device with severely limited memory resources).
-This API uses a promise to return the result.
+Checks whether the current device is a RAM-constrained device (a device with severely limited memory resources).This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -15,13 +14,15 @@ This API uses a promise to return the result.
 
 **Substitutes:** isRamConstrainedDevice
 
+<!--Device-appManager-function isRamConstrainedDevice(): Promise<boolean>--><!--Device-appManager-function isRamConstrainedDevice(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the API call result and the result indicating whether the device isRAM-constrained. You can perform error handling or custom processing in this callback. **true** if the device is RAM-constrained, **false** otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the API call result and the result indicating whether the device is RAM-constrained. You can perform error handling or custom processing in this callback. **true** if the device is RAM  -constrained, **false** otherwise. |
 
 **Example**
 
@@ -44,8 +45,7 @@ appManager.isRamConstrainedDevice().then((data) => {
 function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the current device is a RAM-constrained device (a device with severely limited memory resources).
-This API uses an asynchronous callback to return the result.
+Checks whether the current device is a RAM-constrained device (a device with severely limited memory resources).This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -53,13 +53,15 @@ This API uses an asynchronous callback to return the result.
 
 **Substitutes:** isRamConstrainedDevice
 
+<!--Device-appManager-function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void--><!--Device-appManager-function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the API call result and the result indicatingwhether the device is RAM-constrained. You can perform error handling or custom processing in this callback.**true** if the device is RAM-constrained, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the API call result and the result indicating whether the device is RAM-constrained. You can perform error handling or custom processing in this callback.**true** if the device is RAM-constrained, **false** otherwise. |
 
 **Example**
 

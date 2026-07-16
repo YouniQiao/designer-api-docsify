@@ -20,6 +20,8 @@ Obtains detailed information about a system error code.
 
 **Substitutes:** [errnoToString](arkts-arkts-errnotostring-f.md#errnotostring-1)
 
+<!--Device-util-function getErrorString(errno: number): string--><!--Device-util-function getErrorString(errno: number): string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**

@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-util-class ScopeHelper--><!--Device-util-class ScopeHelper-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+```
 
 ## clamp
 
@@ -16,7 +24,9 @@ clamp(value: ScopeType): ScopeType
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScopeHelper-clamp(value: ScopeType): ScopeType--><!--Device-ScopeHelper-clamp(value: ScopeType): ScopeType-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -24,13 +34,13 @@ clamp(value: ScopeType): ScopeType
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ScopeType | 是 | 指定的值。 |
+| value | [ScopeType](arkts-arkts-scopetype-t.md) | 是 | 指定的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ScopeType | 如果指定值小于下限，则返回 **lowerObj**；如果指定值大于上限，则返回 **upperObj**；如果在此 **Scope** 范围内，则返回指定值。 |
+| [ScopeType](arkts-arkts-scopetype-t.md) | 如果指定值小于下限，则返回 **lowerObj**；如果指定值大于上限，则返回 **upperObj**；如果在此 **Scope** 范围内，则返回指定值。 |
 
 **示例：**
 
@@ -75,7 +85,9 @@ constructor(lowerObj: ScopeType, upperObj: ScopeType)
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScopeHelper-constructor(lowerObj: ScopeType, upperObj: ScopeType)--><!--Device-ScopeHelper-constructor(lowerObj: ScopeType, upperObj: ScopeType)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -83,8 +95,8 @@ constructor(lowerObj: ScopeType, upperObj: ScopeType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lowerObj | ScopeType | 是 | **Scope** 对象的下限。 |
-| upperObj | ScopeType | 是 | **Scope** 对象的上限。 |
+| lowerObj | [ScopeType](arkts-arkts-scopetype-t.md) | 是 | **Scope** 对象的下限。 |
+| upperObj | [ScopeType](arkts-arkts-scopetype-t.md) | 是 | **Scope** 对象的上限。 |
 
 **示例：**
 
@@ -126,7 +138,9 @@ contains(value: ScopeType): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScopeHelper-contains(value: ScopeType): boolean--><!--Device-ScopeHelper-contains(value: ScopeType): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -134,7 +148,7 @@ contains(value: ScopeType): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ScopeType | 是 | 指定的值。 |
+| value | [ScopeType](arkts-arkts-scopetype-t.md) | 是 | 指定的值。 |
 
 **返回值：**
 
@@ -185,7 +199,9 @@ contains(range: ScopeHelper): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScopeHelper-contains(range: ScopeHelper): boolean--><!--Device-ScopeHelper-contains(range: ScopeHelper): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -193,7 +209,7 @@ contains(range: ScopeHelper): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | ScopeHelper | 是 | 指定的 **Scope**。 |
+| range | [ScopeHelper](arkts-arkts-scopehelper-c.md) | 是 | 指定的 **Scope**。 |
 
 **返回值：**
 
@@ -246,7 +262,9 @@ expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScopeHelper-expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper--><!--Device-ScopeHelper-expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -254,14 +272,14 @@ expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lowerObj | ScopeType | 是 | 下限。 |
-| upperObj | ScopeType | 是 | 上限。 |
+| lowerObj | [ScopeType](arkts-arkts-scopetype-t.md) | 是 | 下限。 |
+| upperObj | [ScopeType](arkts-arkts-scopetype-t.md) | 是 | 上限。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ScopeHelper | 此 **Scope** 与给定上下限的并集。 |
+| [ScopeHelper](arkts-arkts-scopehelper-c.md) | 此 **Scope** 与给定上下限的并集。 |
 
 **示例：**
 
@@ -307,7 +325,9 @@ expand(range: ScopeHelper): ScopeHelper
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScopeHelper-expand(range: ScopeHelper): ScopeHelper--><!--Device-ScopeHelper-expand(range: ScopeHelper): ScopeHelper-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -315,13 +335,13 @@ expand(range: ScopeHelper): ScopeHelper
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | ScopeHelper | 是 | 指定的 **Scope**。 |
+| range | [ScopeHelper](arkts-arkts-scopehelper-c.md) | 是 | 指定的 **Scope**。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ScopeHelper | 此 **Scope** 与给定 **Scope** 的并集。 |
+| [ScopeHelper](arkts-arkts-scopehelper-c.md) | 此 **Scope** 与给定 **Scope** 的并集。 |
 
 **示例：**
 
@@ -368,7 +388,9 @@ expand(value: ScopeType): ScopeHelper
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScopeHelper-expand(value: ScopeType): ScopeHelper--><!--Device-ScopeHelper-expand(value: ScopeType): ScopeHelper-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -376,13 +398,13 @@ expand(value: ScopeType): ScopeHelper
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ScopeType | 是 | 指定的值。 |
+| value | [ScopeType](arkts-arkts-scopetype-t.md) | 是 | 指定的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ScopeHelper | 此 **Scope** 与给定值的并集。 |
+| [ScopeHelper](arkts-arkts-scopehelper-c.md) | 此 **Scope** 与给定值的并集。 |
 
 **示例：**
 
@@ -427,7 +449,9 @@ getLower(): ScopeType
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScopeHelper-getLower(): ScopeType--><!--Device-ScopeHelper-getLower(): ScopeType-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -435,7 +459,7 @@ getLower(): ScopeType
 
 | 类型 | 说明 |
 | --- | --- |
-| ScopeType | 此 **Scope** 的下限。 |
+| [ScopeType](arkts-arkts-scopetype-t.md) | 此 **Scope** 的下限。 |
 
 **示例：**
 
@@ -479,7 +503,9 @@ getUpper(): ScopeType
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScopeHelper-getUpper(): ScopeType--><!--Device-ScopeHelper-getUpper(): ScopeType-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -487,7 +513,7 @@ getUpper(): ScopeType
 
 | 类型 | 说明 |
 | --- | --- |
-| ScopeType | 此 **Scope** 的上限。 |
+| [ScopeType](arkts-arkts-scopetype-t.md) | 此 **Scope** 的上限。 |
 
 **示例：**
 
@@ -531,7 +557,9 @@ intersect(range: ScopeHelper): ScopeHelper
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScopeHelper-intersect(range: ScopeHelper): ScopeHelper--><!--Device-ScopeHelper-intersect(range: ScopeHelper): ScopeHelper-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -539,13 +567,13 @@ intersect(range: ScopeHelper): ScopeHelper
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | ScopeHelper | 是 | 指定的 **Scope**。 |
+| range | [ScopeHelper](arkts-arkts-scopehelper-c.md) | 是 | 指定的 **Scope**。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ScopeHelper | 此 **Scope** 与给定 **Scope** 的交集。 |
+| [ScopeHelper](arkts-arkts-scopehelper-c.md) | 此 **Scope** 与给定 **Scope** 的交集。 |
 
 **示例：**
 
@@ -592,7 +620,9 @@ intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScopeHelper-intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper--><!--Device-ScopeHelper-intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -600,14 +630,14 @@ intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lowerObj | ScopeType | 是 | 下限。 |
-| upperObj | ScopeType | 是 | 上限。 |
+| lowerObj | [ScopeType](arkts-arkts-scopetype-t.md) | 是 | 下限。 |
+| upperObj | [ScopeType](arkts-arkts-scopetype-t.md) | 是 | 上限。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ScopeHelper | 此 **Scope** 与给定上下限的交集。 |
+| [ScopeHelper](arkts-arkts-scopehelper-c.md) | 此 **Scope** 与给定上下限的交集。 |
 
 **示例：**
 
@@ -653,7 +683,9 @@ toString(): string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScopeHelper-toString(): string--><!--Device-ScopeHelper-toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

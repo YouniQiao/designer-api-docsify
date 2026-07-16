@@ -2,17 +2,25 @@
 
 Web组件数据库管理对象。
 
-> **说明：**
->
-> - 本Class首批接口从API version 9开始支持。
->
-> - 示例效果请以真机运行为准。
->
+> **说明：**  
+>  
+> - 本Class首批接口从API version 9开始支持。  
+>  
+> - 示例效果请以真机运行为准。  
+>  
 > - 目前调用WebDataBase下的方法，都需要先加载Web组件。
 
 **起始版本：** 9
 
+<!--Device-webview-class WebDataBase--><!--Device-webview-class WebDataBase-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
+
+## 导入模块
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+```
 
 ## deleteHttpAuthCredentials
 
@@ -24,7 +32,9 @@ static deleteHttpAuthCredentials(): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebDataBase-static deleteHttpAuthCredentials(): void--><!--Device-WebDataBase-static deleteHttpAuthCredentials(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -38,7 +48,9 @@ static existHttpAuthCredentials(): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebDataBase-static existHttpAuthCredentials(): boolean--><!--Device-WebDataBase-static existHttpAuthCredentials(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -58,7 +70,9 @@ static getHttpAuthCredentials(host: string, realm: string): Array<string>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebDataBase-static getHttpAuthCredentials(host: string, realm: string): Array<string>--><!--Device-WebDataBase-static getHttpAuthCredentials(host: string, realm: string): Array<string>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -73,7 +87,7 @@ static getHttpAuthCredentials(host: string, realm: string): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 包含用户名和密码的数组，检索失败返回空数组。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 包含用户名和密码的数组，检索失败返回空数组。 |
 
 **错误码：**
 
@@ -91,7 +105,9 @@ static saveHttpAuthCredentials(host: string, realm: string, username: string, pa
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebDataBase-static saveHttpAuthCredentials(host: string, realm: string, username: string, password: string): void--><!--Device-WebDataBase-static saveHttpAuthCredentials(host: string, realm: string, username: string, password: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

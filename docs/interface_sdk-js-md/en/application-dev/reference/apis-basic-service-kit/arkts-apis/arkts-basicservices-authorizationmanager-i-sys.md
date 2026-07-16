@@ -4,6 +4,8 @@ Defines the OS account authorization manager class.
 
 **Since:** 24
 
+<!--Device-osAccount-interface AuthorizationManager--><!--Device-osAccount-interface AuthorizationManager-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Acquires an authorization for a process.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AuthorizationManager-acquireAuthorization(privilege: string, options?: AcquireAuthorizationOptions): Promise<AcquireAuthorizationResult>--><!--Device-AuthorizationManager-acquireAuthorization(privilege: string, options?: AcquireAuthorizationOptions): Promise<AcquireAuthorizationResult>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -36,14 +40,14 @@ Acquires an authorization for a process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| privilege | string | Yes | Target permission. For details, see[configuration file](https://gitcode.com/openharmony/account_os_account/blob/master/services/accountmgr/authorization_manager/config/privileges.json). |
-| options | AcquireAuthorizationOptions | No | Authorization options.This parameter is left empty by default. |
+| privilege | string | Yes | Target permission. For details, see [configuration file](https://gitcode.com/openharmony/account_os_account/blob/master/services/accountmgr/authorization_manager/config/privileges.json). |
+| options | [AcquireAuthorizationOptions](arkts-basicservices-acquireauthorizationoptions-i-sys.md) | No | Authorization options.This parameter is left empty by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AcquireAuthorizationResult&gt; | Promise used to return the authorization result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AcquireAuthorizationResult> | Promise used to return the authorization result. |
 
 **Error codes:**
 
@@ -91,6 +95,8 @@ Checks whether the current process has specified authorization.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AuthorizationManager-hasAuthorization(privilege: string): Promise<boolean>--><!--Device-AuthorizationManager-hasAuthorization(privilege: string): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -99,13 +105,13 @@ Checks whether the current process has specified authorization.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| privilege | string | Yes | Target permission. For details, see[configuration file](https://gitcode.com/openharmony/account_os_account/blob/master/services/accountmgr/authorization_manager/config/privileges.json). |
+| privilege | string | Yes | Target permission. For details, see [configuration file](https://gitcode.com/openharmony/account_os_account/blob/master/services/accountmgr/authorization_manager/config/privileges.json). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates thatthe current process has specified authorization, and **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** indicates that the current process has specified authorization, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -149,6 +155,8 @@ Releases the specified authorization for the current process.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AuthorizationManager-releaseAuthorization(privilege: string): Promise<void>--><!--Device-AuthorizationManager-releaseAuthorization(privilege: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -157,13 +165,13 @@ Releases the specified authorization for the current process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| privilege | string | Yes | Target permission. For details, see[configuration file](https://gitcode.com/openharmony/account_os_account/blob/master/services/accountmgr/authorization_manager/config/privileges.json). |
+| privilege | string | Yes | Target permission. For details, see [configuration file](https://gitcode.com/openharmony/account_os_account/blob/master/services/accountmgr/authorization_manager/config/privileges.json). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

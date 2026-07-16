@@ -4,6 +4,8 @@ Notification request proxy.
 
 **Since:** 26.0.0
 
+<!--Device-reminderAgentManager-interface NotificationRequestProxy--><!--Device-reminderAgentManager-interface NotificationRequestProxy-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## Modules to Import
@@ -18,15 +20,15 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 appMessageId?: string
 ```
 
-Unique ID carried in a notification sent by an application, which is used for notification deduplication.
-This parameter is left empty by default. For details, see
-[NotificationRequest.appMessageId](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-i.md).
+Unique ID carried in a notification sent by an application, which is used for notification deduplication.This parameter is left empty by default. For details, see [NotificationRequest.appMessageId](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-i.md).
 
 **Type:** string
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-NotificationRequestProxy-appMessageId?: string--><!--Device-NotificationRequestProxy-appMessageId?: string-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -36,12 +38,9 @@ This parameter is left empty by default. For details, see
 isAlertOnce?: boolean
 ```
 
-Whether to send a notification alert only once when a notification is published or updated. The default value is
-**false**. For details, see
-[NotificationRequest.isAlertOnce](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-i.md).
+Whether to send a notification alert only once when a notification is published or updated. The default value is **false**. For details, see [NotificationRequest.isAlertOnce](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-i.md).
 
-- **true**: An alert is sent only when the notification is published for the first time. For subsequent update,
-the alert mode is changed to [LEVEL_LOW](../../apis-notification-kit/arkts-apis/arkts-notification-slotlevel-e.md).
+- **true**: An alert is sent only when the notification is published for the first time. For subsequent update,the alert mode is changed to [LEVEL_LOW](../../apis-notification-kit/arkts-apis/arkts-notification-slotlevel-e.md).  
 - **false**: The alert is sent in the configured alert mode.
 
 **Type:** boolean
@@ -49,6 +48,8 @@ the alert mode is changed to [LEVEL_LOW](../../apis-notification-kit/arkts-apis/
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-NotificationRequestProxy-isAlertOnce?: boolean--><!--Device-NotificationRequestProxy-isAlertOnce?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 

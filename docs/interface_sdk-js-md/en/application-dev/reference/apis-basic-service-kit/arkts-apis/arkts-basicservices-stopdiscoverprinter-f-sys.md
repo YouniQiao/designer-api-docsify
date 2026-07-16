@@ -20,6 +20,8 @@ Stops discovering printers. This API uses an asynchronous callback to return the
 - API version 20+: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
 - API version 10 - 19: ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function stopDiscoverPrinter(callback: AsyncCallback<void>): void--><!--Device-print-function stopDiscoverPrinter(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Stops discovering printers. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback to be invoked when printer discovery is stopped. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback to be invoked when printer discovery is stopped. |
 
 **Error codes:**
 
@@ -68,6 +70,8 @@ Stops discovering printers. This API uses a promise to return the result.
 - API version 20+: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
 - API version 10 - 19: ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function stopDiscoverPrinter(): Promise<void>--><!--Device-print-function stopDiscoverPrinter(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -76,7 +80,7 @@ Stops discovering printers. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

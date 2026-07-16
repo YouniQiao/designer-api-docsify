@@ -4,6 +4,8 @@ Enum for scheduling priority
 
 **Since:** 12
 
+<!--Device-mindSporeLite-export enum Priority--><!--Device-mindSporeLite-export enum Priority-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 ## PRIORITY_NONE
@@ -17,6 +19,8 @@ No priority preference
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Priority-PRIORITY_NONE = 0--><!--Device-Priority-PRIORITY_NONE = 0-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -32,6 +36,8 @@ Low priority
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Priority-PRIORITY_LOW = 1--><!--Device-Priority-PRIORITY_LOW = 1-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 ## PRIORITY_MEDIUM
@@ -46,6 +52,8 @@ Medium priority
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Priority-PRIORITY_MEDIUM = 2--><!--Device-Priority-PRIORITY_MEDIUM = 2-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 ## PRIORITY_HIGH
@@ -59,6 +67,8 @@ High priority
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Priority-PRIORITY_HIGH = 3--><!--Device-Priority-PRIORITY_HIGH = 3-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 

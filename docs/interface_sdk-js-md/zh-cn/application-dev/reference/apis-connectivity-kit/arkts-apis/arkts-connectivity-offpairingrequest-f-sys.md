@@ -1,5 +1,11 @@
 # offPairingRequest（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { remoteDevice } from '@kit.ConnectivityKit';
+```
+
 ## offPairingRequest
 
 ```TypeScript
@@ -12,6 +18,8 @@ function offPairingRequest(callback?: Callback<PairingRequestParam>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-remoteDevice-function offPairingRequest(callback?: Callback<PairingRequestParam>): void--><!--Device-remoteDevice-function offPairingRequest(callback?: Callback<PairingRequestParam>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function offPairingRequest(callback?: Callback<PairingRequestParam>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;PairingRequestParam&gt; | 否 | 用于监听配对请求事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<PairingRequestParam> | 否 | 用于监听配对请求事件的回调。 |
 
 **错误码：**
 

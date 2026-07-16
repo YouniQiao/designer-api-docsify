@@ -4,6 +4,8 @@ Describes the initialization options of the **TextArea** component.
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface TextAreaOptions--><!--Device-unnamed-declare interface TextAreaOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## controller
@@ -20,6 +22,8 @@ Text area controller.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextAreaOptions-controller?: TextAreaController--><!--Device-TextAreaOptions-controller?: TextAreaController-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## placeholder
@@ -30,14 +34,15 @@ placeholder?: ResourceStr
 
 Text displayed when there is no input.
 
-When only the **placeholder** attribute is set, the text selection handle is still available; the caret stays at
-the beginning of the placeholder text when the handle is released.
+When only the **placeholder** attribute is set, the text selection handle is still available; the caret stays at the beginning of the placeholder text when the handle is released.
 
 **Type:** ResourceStr
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextAreaOptions-placeholder?: ResourceStr--><!--Device-TextAreaOptions-placeholder?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,20 +54,19 @@ text?: ResourceStr
 
 Current text input.
 
-You are advised to bind the state variable to the text in real time through the **onChange** event, so as to
-prevent display errors when the component is updated.
+You are advised to bind the state variable to the text in real time through the **onChange** event, so as to prevent display errors when the component is updated.
 
-Since API version 10, this parameter supports two-way binding through
-[$$](../../../../ui/state-management/arkts-two-way-sync.md).
+Since API version 10, this parameter supports two-way binding through [$$](../../../../ui/state-management/arkts-two-way-sync.md).
 
-Since API version 18, this parameter supports two-way binding through
-[!!](../../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
+Since API version 18, this parameter supports two-way binding through [!!](../../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
 **Type:** ResourceStr
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextAreaOptions-text?: ResourceStr--><!--Device-TextAreaOptions-text?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

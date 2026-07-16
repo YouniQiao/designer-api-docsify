@@ -20,6 +20,8 @@ Subscribe the event of battery state changed from a remote device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-bas-function onBatteryChange(callback: Callback<BatteryInfo>): void--><!--Device-bas-function onBatteryChange(callback: Callback<BatteryInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Subscribe the event of battery state changed from a remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;BatteryInfo&gt; | Yes | Callback used to listen. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<BatteryInfo> | Yes | Callback used to listen. |
 
 **Error codes:**
 

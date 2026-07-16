@@ -4,6 +4,8 @@ Defines ChipGroupV2 item style.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export interface ChipGroupV2ItemStyleConfig--><!--Device-unnamed-export interface ChipGroupV2ItemStyleConfig-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ ChipV2 item background color.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipGroupV2ItemStyleConfig-backgroundColor?: ColorMetrics--><!--Device-ChipGroupV2ItemStyleConfig-backgroundColor?: ColorMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundSystemMaterial
@@ -36,8 +40,7 @@ ChipV2 item background color.
 backgroundSystemMaterial?: uiMaterial.Material
 ```
 
-Set system-styled materials for the component. Different materials have different effects, which can influence
-the backgroundColor, border, shadow, and other visual attributes of the component.
+Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
 
 **Type:** uiMaterial.Material
 
@@ -46,6 +49,8 @@ the backgroundColor, border, shadow, and other visual attributes of the componen
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2ItemStyleConfig-backgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipGroupV2ItemStyleConfig-backgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,6 +70,8 @@ Text font color.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipGroupV2ItemStyleConfig-fontColor?: ColorMetrics--><!--Device-ChipGroupV2ItemStyleConfig-fontColor?: ColorMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectedBackgroundColor
@@ -83,6 +90,8 @@ Selected ChipV2 item background color.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipGroupV2ItemStyleConfig-selectedBackgroundColor?: ColorMetrics--><!--Device-ChipGroupV2ItemStyleConfig-selectedBackgroundColor?: ColorMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectedBackgroundSystemMaterial
@@ -91,8 +100,7 @@ Selected ChipV2 item background color.
 selectedBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
-Set system-styled materials for the component when selected. Different materials have different effects,
-which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
+Set system-styled materials for the component when selected. Different materials have different effects,which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
 
 **Type:** uiMaterial.Material
 
@@ -101,6 +109,8 @@ which can influence the backgroundColor, border, shadow, and other visual attrib
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2ItemStyleConfig-selectedBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipGroupV2ItemStyleConfig-selectedBackgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -120,6 +130,8 @@ Selected Text font color.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipGroupV2ItemStyleConfig-selectedFontColor?: ColorMetrics--><!--Device-ChipGroupV2ItemStyleConfig-selectedFontColor?: ColorMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## size
@@ -137,6 +149,8 @@ ChipV2 size.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2ItemStyleConfig-size?: ChipV2Size | SizeT<LengthMetrics>--><!--Device-ChipGroupV2ItemStyleConfig-size?: ChipV2Size | SizeT<LengthMetrics>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

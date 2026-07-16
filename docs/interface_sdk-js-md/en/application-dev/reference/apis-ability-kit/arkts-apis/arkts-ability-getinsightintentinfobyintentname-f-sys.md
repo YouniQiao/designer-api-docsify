@@ -12,14 +12,15 @@ import { insightIntentDriver } from '@kit.AbilityKit';
 function getInsightIntentInfoByIntentName(bundleName: string, moduleName: string, intentName: string, intentFlags: number): Promise<InsightIntentInfo>
 ```
 
-Obtains the intent information on the current device based on the bundle name, module name, and intent name. This
-API uses a promise to return the result.
+Obtains the intent information on the current device based on the bundle name, module name, and intent name. This API uses a promise to return the result.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-insightIntentDriver-function getInsightIntentInfoByIntentName(bundleName: string, moduleName: string, intentName: string, intentFlags: int): Promise<InsightIntentInfo>--><!--Device-insightIntentDriver-function getInsightIntentInfoByIntentName(bundleName: string, moduleName: string, intentName: string, intentFlags: int): Promise<InsightIntentInfo>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -29,16 +30,16 @@ API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application.<br>**NOTE**<br> If the bundle name does not exist, anempty object is returned. |
-| moduleName | string | Yes | Module name.<br>**NOTE**<br> If the module name does not exist, an empty object isreturned. |
-| intentName | string | Yes | Intent name.<br>**NOTE**<br> If the intent name does not exist, an empty object isreturned. |
-| intentFlags | number | Yes | Flag of the intent information ([InsightIntentInfo](arkts-ability-insightintentinfo-i-sys.md)). It is used to query full or brief intentinformation. For details, see [GetInsightIntentFlag](arkts-ability-getinsightintentflag-e-sys.md). |
+| bundleName | string | Yes | Bundle name of the application.<br>**NOTE**<br> If the bundle name does not exist, an empty object is returned. |
+| moduleName | string | Yes | Module name.<br>**NOTE**<br> If the module name does not exist, an empty object is returned. |
+| intentName | string | Yes | Intent name.<br>**NOTE**<br> If the intent name does not exist, an empty object is returned. |
+| intentFlags | number | Yes | Flag of the intent information ([InsightIntentInfo](arkts-ability-insightintentinfo-i-sys.md)). It is used to query full or brief intent information. For details, see [GetInsightIntentFlag](arkts-ability-getinsightintentflag-e-sys.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;InsightIntentInfo&gt; | Promise used to return the InsightIntentInfo object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<InsightIntentInfo> | Promise used to return the InsightIntentInfo object. |
 
 **Error codes:**
 

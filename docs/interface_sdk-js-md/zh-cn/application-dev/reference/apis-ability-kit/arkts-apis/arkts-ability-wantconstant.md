@@ -8,6 +8,8 @@ wantConstant模块提供want中操作want常数和解释Flags说明的能力。
 
 **替代接口：** wantConstant/wantConstant
 
+<!--Device-unnamed-declare namespace wantConstant--><!--Device-unnamed-declare namespace wantConstant-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## 汇总

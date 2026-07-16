@@ -18,6 +18,8 @@ Set the SIM card display name of the specified card slot.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function setShowName(slotId: int, name: string, callback: AsyncCallback<void>): void--><!--Device-sim-function setShowName(slotId: int, name: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Set the SIM card display name of the specified card slot.
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
 | name | string | Yes | Indicates SIM card name. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of setShowName. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of setShowName. |
 
 **Error codes:**
 
@@ -69,6 +71,8 @@ Set the SIM card display name of the specified card slot.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function setShowName(slotId: int, name: string): Promise<void>--><!--Device-sim-function setShowName(slotId: int, name: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -84,7 +88,7 @@ Set the SIM card display name of the specified card slot.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setShowName. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the setShowName. |
 
 **Error codes:**
 

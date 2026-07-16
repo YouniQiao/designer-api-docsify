@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-cert-interface CertChainValidationParameters--><!--Device-cert-interface CertChainValidationParameters-End-->
+
 **系统能力：** SystemCapability.Security.Cert
+
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
 
 ## allowDownloadIntermediateCa
 
@@ -12,10 +20,7 @@
 allowDownloadIntermediateCa?: boolean
 ```
 
-表示是否允许尝试从网络下载缺失的中间CA证书。
-true表示允许；false表示不允许。默认值为false。
-下载地址将从证书AIA扩展中获取，仅支持http，如需使用网络下载，需申请ohos.permission.INTERNET权限。配置方式请参见
-[声明权限](../../../../security/AccessToken/declare-permissions.md)。
+表示是否允许尝试从网络下载缺失的中间CA证书。true表示允许；false表示不允许。默认值为false。下载地址将从证书AIA扩展中获取，仅支持http，如需使用网络下载，需申请ohos.permission.INTERNET权限。配置方式请参见[声明权限](../../../../security/AccessToken/declare-permissions.md)。
 
 **类型：** boolean
 
@@ -23,7 +28,9 @@ true表示允许；false表示不允许。默认值为false。
 
 **起始版本：** 23
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CertChainValidationParameters-allowDownloadIntermediateCa?: boolean--><!--Device-CertChainValidationParameters-allowDownloadIntermediateCa?: boolean-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -39,7 +46,9 @@ certCRLs?: Array<CertCRLCollection>
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CertChainValidationParameters-certCRLs?: Array<CertCRLCollection>--><!--Device-CertChainValidationParameters-certCRLs?: Array<CertCRLCollection>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -55,7 +64,9 @@ date?: string
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CertChainValidationParameters-date?: string--><!--Device-CertChainValidationParameters-date?: string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -71,7 +82,9 @@ keyUsage?: Array<KeyUsageType>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CertChainValidationParameters-keyUsage?: Array<KeyUsageType>--><!--Device-CertChainValidationParameters-keyUsage?: Array<KeyUsageType>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -87,7 +100,9 @@ policy?: ValidationPolicyType
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CertChainValidationParameters-policy?: ValidationPolicyType--><!--Device-CertChainValidationParameters-policy?: ValidationPolicyType-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -103,7 +118,9 @@ revocationCheckParam?: RevocationCheckParameter
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CertChainValidationParameters-revocationCheckParam?: RevocationCheckParameter--><!--Device-CertChainValidationParameters-revocationCheckParam?: RevocationCheckParameter-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -119,7 +136,9 @@ sslHostname?: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CertChainValidationParameters-sslHostname?: string--><!--Device-CertChainValidationParameters-sslHostname?: string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -135,7 +154,9 @@ trustAnchors: Array<X509TrustAnchor>
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CertChainValidationParameters-trustAnchors: Array<X509TrustAnchor>--><!--Device-CertChainValidationParameters-trustAnchors: Array<X509TrustAnchor>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -153,7 +174,9 @@ trustSystemCa?: boolean
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CertChainValidationParameters-trustSystemCa?: boolean--><!--Device-CertChainValidationParameters-trustSystemCa?: boolean-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

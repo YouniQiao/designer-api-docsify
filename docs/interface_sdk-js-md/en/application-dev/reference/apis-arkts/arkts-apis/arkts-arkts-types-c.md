@@ -1,9 +1,10 @@
 # types
 
-Provides APIs to check different types of built-in objects, such as ArrayBuffer, Map, and Set, so as to avoid
-exceptions caused by type errors.
+Provides APIs to check different types of built-in objects, such as ArrayBuffer, Map, and Set, so as to avoid exceptions caused by type errors.
 
 **Since:** 8
+
+<!--Device-util-class types--><!--Device-util-class types-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -24,6 +25,8 @@ A constructor used to create a **Types** object.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-types-constructor()--><!--Device-types-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -46,19 +49,21 @@ Checks whether the value is of the ArrayBuffer or SharedArrayBuffer type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isAnyArrayBuffer(value: Object): boolean--><!--Device-types-isAnyArrayBuffer(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the value is of the ArrayBuffer orSharedArrayBuffer type; otherwise, **false** is returned. |
+| boolean | Check result. The value **true** is returned if the value is of the ArrayBuffer or SharedArrayBuffer type; otherwise, **false** is returned. |
 
 **Example**
 
@@ -82,13 +87,15 @@ Checks whether the value is an **arguments** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isArgumentsObject(value: Object): boolean--><!--Device-types-isArgumentsObject(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -121,13 +128,15 @@ Checks whether the value is of the ArrayBuffer type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isArrayBuffer(value: Object): boolean--><!--Device-types-isArrayBuffer(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -157,13 +166,15 @@ Checks whether the value is of the ArrayBufferView type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isArrayBufferView(value: Object): boolean--><!--Device-types-isArrayBufferView(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -193,13 +204,15 @@ Checks whether the value is an asynchronous function.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isAsyncFunction(value: Object): boolean--><!--Device-types-isAsyncFunction(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -229,13 +242,15 @@ Checks whether the value is of the BigInt64Array type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isBigInt64Array(value: Object): boolean--><!--Device-types-isBigInt64Array(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -265,13 +280,15 @@ Checks whether the value is of the BigUint64Array type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isBigUint64Array(value: Object): boolean--><!--Device-types-isBigUint64Array(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -297,8 +314,8 @@ isBooleanObject(value: Object): boolean
 
 Checks whether the value is of the Boolean type.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
 **Since:** 8
@@ -307,13 +324,15 @@ Checks whether the value is of the Boolean type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isBooleanObject(value: Object): boolean--><!--Device-types-isBooleanObject(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -339,8 +358,8 @@ isBoxedPrimitive(value: Object): boolean
 
 Checks whether the value is of the Boolean, Number, String, or Symbol type.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
 **Since:** 8
@@ -349,13 +368,15 @@ Checks whether the value is of the Boolean, Number, String, or Symbol type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isBoxedPrimitive(value: Object): boolean--><!--Device-types-isBoxedPrimitive(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -385,13 +406,15 @@ Checks whether the value is of the DataView type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isDataView(value: Object): boolean--><!--Device-types-isDataView(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -422,13 +445,15 @@ Checks whether the value is of the Date type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isDate(value: Object): boolean--><!--Device-types-isDate(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -458,13 +483,15 @@ Checks whether the value is of the native external type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isExternal(value: Object): boolean--><!--Device-types-isExternal(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -534,13 +561,15 @@ Checks whether the value is of the Float32Array type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isFloat32Array(value: Object): boolean--><!--Device-types-isFloat32Array(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -570,13 +599,15 @@ Checks whether the value is of the Float64Array type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isFloat64Array(value: Object): boolean--><!--Device-types-isFloat64Array(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -606,13 +637,15 @@ Checks whether the value is a generator function.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isGeneratorFunction(value: Object): boolean--><!--Device-types-isGeneratorFunction(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -650,13 +683,15 @@ Checks whether the value is a generator object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isGeneratorObject(value: Object): boolean--><!--Device-types-isGeneratorObject(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -695,13 +730,15 @@ Checks whether the value is of the Int16Array type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isInt16Array(value: Object): boolean--><!--Device-types-isInt16Array(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -731,13 +768,15 @@ Checks whether the value is of the Int32Array type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isInt32Array(value: Object): boolean--><!--Device-types-isInt32Array(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -767,13 +806,15 @@ Checks whether the value is of the Int8Array type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isInt8Array(value: Object): boolean--><!--Device-types-isInt8Array(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -803,13 +844,15 @@ Checks whether the value is of the Map type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isMap(value: Object): boolean--><!--Device-types-isMap(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -839,13 +882,15 @@ Checks whether the value is of the MapIterator type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isMapIterator(value: Object): boolean--><!--Device-types-isMapIterator(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -876,13 +921,15 @@ Checks whether the value is a module namespace object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isModuleNamespaceObject(value: Object): boolean--><!--Device-types-isModuleNamespaceObject(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -922,13 +969,15 @@ Checks whether the value is of the Error type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isNativeError(value: Object): boolean--><!--Device-types-isNativeError(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -954,8 +1003,8 @@ isNumberObject(value: Object): boolean
 
 Checks whether the value is of the Number type.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
 **Since:** 8
@@ -964,13 +1013,15 @@ Checks whether the value is of the Number type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isNumberObject(value: Object): boolean--><!--Device-types-isNumberObject(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -1000,19 +1051,21 @@ Checks whether the value is a promise.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isPromise(value: Object): boolean--><!--Device-types-isPromise(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the value is a promise; otherwise, **false**is returned. |
+| boolean | Check result. The value **true** is returned if the value is a promise; otherwise, **false** is returned. |
 
 **Example**
 
@@ -1036,19 +1089,21 @@ Checks whether the value is a proxy.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isProxy(value: Object): boolean--><!--Device-types-isProxy(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the value is a proxy; otherwise, **false**is returned. |
+| boolean | Check result. The value **true** is returned if the value is a proxy; otherwise, **false** is returned. |
 
 **Example**
 
@@ -1076,13 +1131,15 @@ Checks whether the value is of the RegExp type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isRegExp(value: Object): boolean--><!--Device-types-isRegExp(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -1112,13 +1169,15 @@ Checks whether the value is of the Set type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isSet(value: Object): boolean--><!--Device-types-isSet(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -1149,13 +1208,15 @@ Checks whether the value is of the SetIterator type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isSetIterator(value: Object): boolean--><!--Device-types-isSetIterator(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -1186,13 +1247,15 @@ Checks whether the value is of the SharedArrayBuffer type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isSharedArrayBuffer(value: Object): boolean--><!--Device-types-isSharedArrayBuffer(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -1218,8 +1281,8 @@ isStringObject(value: Object): boolean
 
 Checks whether the value is a string object.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
 **Since:** 8
@@ -1228,13 +1291,15 @@ Checks whether the value is a string object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isStringObject(value: Object): boolean--><!--Device-types-isStringObject(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -1260,8 +1325,8 @@ isSymbolObject(value: Object): boolean
 
 Checks whether the value is a symbol object.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
 **Since:** 8
@@ -1270,13 +1335,15 @@ Checks whether the value is a symbol object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isSymbolObject(value: Object): boolean--><!--Device-types-isSymbolObject(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -1314,13 +1381,15 @@ Checks whether the value is of the TypedArray type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isTypedArray(value: Object): boolean--><!--Device-types-isTypedArray(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -1350,13 +1419,15 @@ Checks whether the value is of the Uint16Array type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isUint16Array(value: Object): boolean--><!--Device-types-isUint16Array(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -1386,13 +1457,15 @@ Checks whether the value is of the Uint32Array type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isUint32Array(value: Object): boolean--><!--Device-types-isUint32Array(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -1422,13 +1495,15 @@ Checks whether the value is of the Uint8Array type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isUint8Array(value: Object): boolean--><!--Device-types-isUint8Array(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -1458,13 +1533,15 @@ Checks whether the value is of the Uint8ClampedArray type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isUint8ClampedArray(value: Object): boolean--><!--Device-types-isUint8ClampedArray(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -1494,13 +1571,15 @@ Checks whether the value is of the WeakMap type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isWeakMap(value: Object): boolean--><!--Device-types-isWeakMap(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 
@@ -1531,13 +1610,15 @@ Checks whether the value is of the WeakSet type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-types-isWeakSet(value: Object): boolean--><!--Device-types-isWeakSet(value: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
+| value | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to check. |
 
 **Return value:**
 

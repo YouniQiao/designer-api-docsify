@@ -6,6 +6,8 @@ The scene resource factory.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface SceneResourceFactory extends RenderResourceFactory--><!--Device-unnamed-export interface SceneResourceFactory extends RenderResourceFactory-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## createCamera
@@ -18,19 +20,21 @@ Create a camera.
 
 **Since:** 12
 
+<!--Device-SceneResourceFactory-createCamera(params: SceneNodeParameters): Promise<Camera>--><!--Device-SceneResourceFactory-createCamera(params: SceneNodeParameters): Promise<Camera>-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | SceneNodeParameters | Yes | the param of creating a camera |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scenenodeparameters-i.md) | Yes | the param of creating a camera |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Camera&gt; | promise a camera |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Camera> | promise a camera |
 
 ## createCamera
 
@@ -42,20 +46,22 @@ Create a camera.
 
 **Since:** 21
 
+<!--Device-SceneResourceFactory-createCamera(params: SceneNodeParameters, cameraParams: CameraParameters): Promise<Camera>--><!--Device-SceneResourceFactory-createCamera(params: SceneNodeParameters, cameraParams: CameraParameters): Promise<Camera>-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | SceneNodeParameters | Yes | the param of creating a camera |
-| cameraParams | CameraParameters | Yes | camera specific extra parameters |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scenenodeparameters-i.md) | Yes | the param of creating a camera |
+| cameraParams | [CameraParameters](arkts-arkgraphics3d-cameraparameters-i.md) | Yes | camera specific extra parameters |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Camera&gt; | promise a camera |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Camera> | promise a camera |
 
 ## createEffect
 
@@ -67,19 +73,21 @@ Create an effect.
 
 **Since:** 21
 
+<!--Device-SceneResourceFactory-createEffect(params: EffectParameters): Promise<Effect>--><!--Device-SceneResourceFactory-createEffect(params: EffectParameters): Promise<Effect>-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | EffectParameters | Yes | the params of creating an effect. |
+| params | [EffectParameters](arkts-arkgraphics3d-effectparameters-i.md) | Yes | the params of creating an effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Effect&gt; | promise an effect. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Effect> | promise an effect. |
 
 ## createEnvironment
 
@@ -91,19 +99,21 @@ Create an environment.
 
 **Since:** 12
 
+<!--Device-SceneResourceFactory-createEnvironment(params: SceneResourceParameters): Promise<Environment>--><!--Device-SceneResourceFactory-createEnvironment(params: SceneResourceParameters): Promise<Environment>-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | SceneResourceParameters | Yes | the param of creating an environment object |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-sceneresourceparameters-i.md) | Yes | the param of creating an environment object |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Environment&gt; | promise an environment |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Environment> | promise an environment |
 
 ## createGeometry
 
@@ -115,20 +125,22 @@ Create a geometry node.
 
 **Since:** 18
 
+<!--Device-SceneResourceFactory-createGeometry(params: SceneNodeParameters, mesh:MeshResource): Promise<Geometry>--><!--Device-SceneResourceFactory-createGeometry(params: SceneNodeParameters, mesh:MeshResource): Promise<Geometry>-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | SceneNodeParameters | Yes | the param of creating a geometry |
-| mesh | MeshResource | Yes | resource - The mesh data for the geometry |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scenenodeparameters-i.md) | Yes | the param of creating a geometry |
+| mesh | [MeshResource](arkts-arkgraphics3d-meshresource-i.md) | Yes | resource - The mesh data for the geometry |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Geometry&gt; | promise a geometry |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Geometry> | promise a geometry |
 
 ## createLight
 
@@ -140,20 +152,22 @@ Create a light.
 
 **Since:** 12
 
+<!--Device-SceneResourceFactory-createLight(params: SceneNodeParameters, lightType: LightType): Promise<Light>--><!--Device-SceneResourceFactory-createLight(params: SceneNodeParameters, lightType: LightType): Promise<Light>-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | SceneNodeParameters | Yes | the param of creating a light |
-| lightType | LightType | Yes | the type of the light |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scenenodeparameters-i.md) | Yes | the param of creating a light |
+| lightType | [LightType](arkts-arkgraphics3d-lighttype-e.md) | Yes | the type of the light |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Light&gt; | promise a light |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Light> | promise a light |
 
 ## createMaterial
 
@@ -165,20 +179,22 @@ Create a material.
 
 **Since:** 12
 
+<!--Device-SceneResourceFactory-createMaterial(params: SceneResourceParameters, materialType: MaterialType): Promise<Material>--><!--Device-SceneResourceFactory-createMaterial(params: SceneResourceParameters, materialType: MaterialType): Promise<Material>-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | SceneResourceParameters | Yes | the param of creating a material |
-| materialType | MaterialType | Yes | the type of the material |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-sceneresourceparameters-i.md) | Yes | the param of creating a material |
+| materialType | [MaterialType](../../apis-arkui/arkts-apis/arkts-arkui-materialtype-e.md) | Yes | the type of the material |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Material&gt; | promise a material |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Material> | promise a material |
 
 ## createNode
 
@@ -190,17 +206,19 @@ Create a node.
 
 **Since:** 12
 
+<!--Device-SceneResourceFactory-createNode(params: SceneNodeParameters): Promise<Node>--><!--Device-SceneResourceFactory-createNode(params: SceneNodeParameters): Promise<Node>-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | SceneNodeParameters | Yes | the param of creating a node |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scenenodeparameters-i.md) | Yes | the param of creating a node |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Node&gt; | promise a node |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Node> | promise a node |
 

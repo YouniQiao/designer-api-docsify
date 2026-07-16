@@ -8,6 +8,8 @@ The **Router** module provides APIs to access pages through URIs.
 
 **Substitutes:** router
 
+<!--Device-unnamed-export default class Router--><!--Device-unnamed-export default class Router-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 ## Modules to Import
@@ -24,9 +26,9 @@ static back(options?: BackRouterOptions): void
 
 Returns to the previous or a specified page.
 
-> **NOTE**
->
-> In the example, the **uri** field indicates the page route, which is specified by the **pages** list in the
+> **NOTE**  
+>  
+> In the example, the **uri** field indicates the page route, which is specified by the **pages** list in the  
 > configuration file.
 
 **Since:** 3
@@ -35,13 +37,15 @@ Returns to the previous or a specified page.
 
 **Substitutes:** back
 
+<!--Device-Router-static back(options?: BackRouterOptions): void--><!--Device-Router-static back(options?: BackRouterOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | BackRouterOptions | No | For details, see **BackRouterOptions**. |
+| options | [BackRouterOptions](arkts-arkui-backrouteroptions-i.md) | No | For details, see **BackRouterOptions**. |
 
 ## clear
 
@@ -56,6 +60,8 @@ Clears all historical pages in the stack and retains only the current page at th
 **Deprecated since:** 8
 
 **Substitutes:** clear
+
+<!--Device-Router-static clear(): void--><!--Device-Router-static clear(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,13 +79,15 @@ Disables the display of a confirm dialog box before returning to the previous pa
 
 **Substitutes:** hideAlertBeforeBackPage
 
+<!--Device-Router-static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): void--><!--Device-Router-static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | DisableAlertBeforeBackPageOptions | No | For details, see **DisableAlertBeforeBackPageOptions**. |
+| options | [DisableAlertBeforeBackPageOptions](arkts-arkui-disablealertbeforebackpageoptions-i.md) | No | For details, see **DisableAlertBeforeBackPageOptions**. |
 
 ## enableAlertBeforeBackPage
 
@@ -95,13 +103,15 @@ Enables the display of a confirm dialog box before returning to the previous pag
 
 **Substitutes:** showAlertBeforeBackPage
 
+<!--Device-Router-static enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): void--><!--Device-Router-static enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | EnableAlertBeforeBackPageOptions | Yes | For details, see **EnableAlertBeforeBackPageOptions**. |
+| options | [EnableAlertBeforeBackPageOptions](arkts-arkui-enablealertbeforebackpageoptions-i.md) | Yes | For details, see **EnableAlertBeforeBackPageOptions**. |
 
 ## getLength
 
@@ -116,6 +126,8 @@ Obtains the number of pages in the current stack.
 **Deprecated since:** 8
 
 **Substitutes:** getLength
+
+<!--Device-Router-static getLength(): string--><!--Device-Router-static getLength(): string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -139,13 +151,15 @@ Obtains parameter information about the current page.
 
 **Substitutes:** getParams
 
+<!--Device-Router-static getParams(): ParamsInterface--><!--Device-Router-static getParams(): ParamsInterface-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ParamsInterface | For details, see **ParamsInterface**. |
+| [ParamsInterface](arkts-arkui-paramsinterface-t.md) | For details, see **ParamsInterface**. |
 
 ## getState
 
@@ -161,13 +175,15 @@ Obtains state information about the current page.
 
 **Substitutes:** getState
 
+<!--Device-Router-static getState(): RouterState--><!--Device-Router-static getState(): RouterState-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RouterState | For details, see **RouterState**. |
+| [RouterState](arkts-arkui-routerstate-i.md) | For details, see **RouterState**. |
 
 ## push
 
@@ -177,8 +193,8 @@ static push(options: RouterOptions): void
 
 Navigates to a specified page in the application.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > The page routing stack supports a maximum of 32 pages.
 
 **Since:** 3
@@ -187,13 +203,15 @@ Navigates to a specified page in the application.
 
 **Substitutes:** push
 
+<!--Device-Router-static push(options: RouterOptions): void--><!--Device-Router-static push(options: RouterOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | RouterOptions | Yes | Page routing parameters. For details, see **RouterOptions**. |
+| options | [RouterOptions](arkts-arkui-routeroptions-i.md) | Yes | Page routing parameters. For details, see **RouterOptions**. |
 
 ## replace
 
@@ -209,11 +227,13 @@ Replaces the current page with another one in the application and destroys the c
 
 **Substitutes:** replace
 
+<!--Device-Router-static replace(options: RouterOptions): void--><!--Device-Router-static replace(options: RouterOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | RouterOptions | Yes | Page routing parameters. For details, see **RouterOptions**. |
+| options | [RouterOptions](arkts-arkui-routeroptions-i.md) | Yes | Page routing parameters. For details, see **RouterOptions**. |
 

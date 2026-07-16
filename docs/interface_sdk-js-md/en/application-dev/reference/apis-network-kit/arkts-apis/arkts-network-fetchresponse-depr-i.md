@@ -4,6 +4,8 @@ This module provides the Fetch Response.
 
 **Since:** 3
 
+<!--Device-unnamed-export interface FetchResponse--><!--Device-unnamed-export interface FetchResponse-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## code
@@ -17,6 +19,8 @@ Server status code.
 **Type:** number
 
 **Since:** 3
+
+<!--Device-FetchResponse-code: number--><!--Device-FetchResponse-code: number-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -32,6 +36,8 @@ Data returned by the success function.
 
 **Since:** 3
 
+<!--Device-FetchResponse-data: string | object--><!--Device-FetchResponse-data: string | object-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## headers
@@ -45,6 +51,8 @@ All headers in the response from the server.
 **Type:** Object
 
 **Since:** 3
+
+<!--Device-FetchResponse-headers: Object--><!--Device-FetchResponse-headers: Object-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

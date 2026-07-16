@@ -6,6 +6,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-interface SendableResource extends lang.ISendable--><!--Device-unnamed-interface SendableResource extends lang.ISendable-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 ## bundleName
@@ -20,7 +22,9 @@ bundleName: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SendableResource-bundleName: string--><!--Device-SendableResource-bundleName: string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -30,15 +34,15 @@ bundleName: string
 id: number
 ```
 
-资源的id值，取值如下：
-<br>- 应用资源区间：[0x01000000, 0x06FFFFFF] 和 [0x08000000, 0xFFFFFFFF]
-<br>- 系统资源区间：[0x07000000, 0x07FFFFFF]
+资源的id值，取值如下：<br>- 应用资源区间：[0x01000000, 0x06FFFFFF] 和 [0x08000000, 0xFFFFFFFF]<br>- 系统资源区间：[0x07000000, 0x07FFFFFF]
 
 **类型：** number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SendableResource-id: number--><!--Device-SendableResource-id: number-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -54,7 +58,9 @@ moduleName: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SendableResource-moduleName: string--><!--Device-SendableResource-moduleName: string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -70,7 +76,9 @@ params?: collections.Array <string | number>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SendableResource-params?: collections.Array <string | number>--><!--Device-SendableResource-params?: collections.Array <string | number>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -80,25 +88,15 @@ params?: collections.Array <string | number>
 type?: number
 ```
 
-资源的类型，取值如下：
-<br>- 10001：color
-<br>- 10002：float
-<br>- 10003：string
-<br>- 10004：plural
-<br>- 10005：boolean
-<br>- 10006：intarray
-<br>- 10007：integer
-<br>- 10008：pattern
-<br>- 10009：strarray
-<br>- 20000：media
-<br>- 30000：rawfile
-<br>- 40000：symbol
+资源的类型，取值如下：<br>- 10001：color<br>- 10002：float<br>- 10003：string<br>- 10004：plural<br>- 10005：boolean<br>- 10006：intarray<br>- 10007：integer<br>- 10008：pattern<br>- 10009：strarray<br>- 20000：media<br>- 30000：rawfile<br>- 40000：symbol
 
 **类型：** number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SendableResource-type?: number--><!--Device-SendableResource-type?: number-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 

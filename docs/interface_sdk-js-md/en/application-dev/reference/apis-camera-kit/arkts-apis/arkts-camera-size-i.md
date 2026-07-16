@@ -4,6 +4,8 @@ Describes the image dimensions.
 
 **Since:** 10
 
+<!--Device-camera-interface Size--><!--Device-camera-interface Size-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Image height, in pixels.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Size-height: int--><!--Device-Size-height: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## width
@@ -41,6 +45,8 @@ Image width, in pixels.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-Size-width: int--><!--Device-Size-width: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

@@ -4,6 +4,8 @@ Describes the window parameters during application startup.
 
 **Since:** 20
 
+<!--Device-window-interface WindowCreateParams--><!--Device-window-interface WindowCreateParams-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
@@ -18,8 +20,7 @@ import { window } from '@kit.ArkUI';
 isWindowLimitsForcible?: boolean
 ```
 
-Whether to override system window limits.
-If true, the main window of the current ability can set a window limit that exceeds system restrictions.
+Whether to override system window limits.If true, the main window of the current ability can set a window limit that exceeds system restrictions.
 
 **Type:** boolean
 
@@ -28,6 +29,8 @@ If true, the main window of the current ability can set a window limit that exce
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WindowCreateParams-isWindowLimitsForcible?: boolean--><!--Device-WindowCreateParams-isWindowLimitsForcible?: boolean-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -41,12 +44,13 @@ systemAnimationParams?: StartAnimationSystemParams
 
 Describes the start animation configuration. This API works only for full-screen applications.
 
-The configuration does not take effect for inter-application transitions, where the default animation of the
-system is used.
+The configuration does not take effect for inter-application transitions, where the default animation of the system is used.
 
 **Type:** StartAnimationSystemParams
 
 **Since:** 20
+
+<!--Device-WindowCreateParams-systemAnimationParams?: StartAnimationSystemParams--><!--Device-WindowCreateParams-systemAnimationParams?: StartAnimationSystemParams-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

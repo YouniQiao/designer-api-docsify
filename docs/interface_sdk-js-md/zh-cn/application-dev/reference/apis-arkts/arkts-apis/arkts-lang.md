@@ -2,6 +2,12 @@
 
 ArkTS语言。
 
+## 导入模块
+
+```TypeScript
+import { Retention, RetentionPolicy } from '@kit.ArkTS';
+```
+
 ## 汇总
 
 ### 命名空间

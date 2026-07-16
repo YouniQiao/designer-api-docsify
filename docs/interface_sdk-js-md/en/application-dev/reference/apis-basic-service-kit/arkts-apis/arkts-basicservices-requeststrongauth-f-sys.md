@@ -18,6 +18,8 @@ Request strong authentication for os account local userId.
 
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK
 
+<!--Device-screenLock-function requestStrongAuth(reasonFlag: StrongAuthReasonFlags, userId: int): Promise<void>--><!--Device-screenLock-function requestStrongAuth(reasonFlag: StrongAuthReasonFlags, userId: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 **System API:** This is a system API.
@@ -26,14 +28,14 @@ Request strong authentication for os account local userId.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reasonFlag | StrongAuthReasonFlags | Yes | The strong authentication reason flag. |
+| reasonFlag | [StrongAuthReasonFlags](arkts-basicservices-strongauthreasonflags-e-sys.md) | Yes | The strong authentication reason flag. |
 | userId | number | Yes | Os account local userId. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 

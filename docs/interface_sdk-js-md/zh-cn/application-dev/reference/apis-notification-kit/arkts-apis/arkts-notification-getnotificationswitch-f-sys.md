@@ -20,6 +20,8 @@ function getNotificationSwitch(switchName: string, userId: number): Promise<Swit
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-notificationManager-function getNotificationSwitch(switchName: string, userId: int): Promise<SwitchState>--><!--Device-notificationManager-function getNotificationSwitch(switchName: string, userId: int): Promise<SwitchState>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -35,7 +37,7 @@ function getNotificationSwitch(switchName: string, userId: number): Promise<Swit
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;SwitchState&gt; | Promise对象，返回通知开关状态。 |
+| Promise<SwitchState> | Promise对象，返回通知开关状态。 |
 
 **错误码：**
 

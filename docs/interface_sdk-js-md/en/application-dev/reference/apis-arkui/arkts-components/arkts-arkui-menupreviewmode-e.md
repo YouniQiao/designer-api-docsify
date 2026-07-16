@@ -4,6 +4,8 @@ Defines the preview style of a menu.
 
 **Since:** 11
 
+<!--Device-unnamed-declare enum MenuPreviewMode--><!--Device-unnamed-declare enum MenuPreviewMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NONE
@@ -20,6 +22,8 @@ No preview is displayed.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MenuPreviewMode-NONE = 0--><!--Device-MenuPreviewMode-NONE = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## IMAGE
@@ -35,6 +39,8 @@ The preview is a screenshot of the component on which a long-press triggers the 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MenuPreviewMode-IMAGE = 1--><!--Device-MenuPreviewMode-IMAGE = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,5 +1,11 @@
 # startProfiling
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+```
+
 ## startProfiling
 
 ```TypeScript
@@ -13,6 +19,8 @@ function startProfiling(filename: string): void
 **废弃版本：** 9
 
 **替代接口：** [startJsCpuProfiling](arkts-performanceanalysis-startjscpuprofiling-f.md#startjscpuprofiling-1)
+
+<!--Device-hidebug-function startProfiling(filename: string): void--><!--Device-hidebug-function startProfiling(filename: string): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 

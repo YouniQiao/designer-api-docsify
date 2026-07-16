@@ -4,6 +4,8 @@ Search Suggestion Type.
 
 **Since:** 26.0.0
 
+<!--Device-photoAccessHelper-enum SearchSuggestionType--><!--Device-photoAccessHelper-enum SearchSuggestionType-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -21,6 +23,8 @@ Searching for recommended words by time, location, and label.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SearchSuggestionType-TIME_GEO_LABEL = 0--><!--Device-SearchSuggestionType-TIME_GEO_LABEL = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -40,6 +44,8 @@ Searching for recommended words by time and location.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SearchSuggestionType-TIME_GEO = 1--><!--Device-SearchSuggestionType-TIME_GEO = 1-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ Searching for recommended words by time and label.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SearchSuggestionType-TIME_LABEL = 2--><!--Device-SearchSuggestionType-TIME_LABEL = 2-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -76,6 +84,8 @@ Searching for recommended words by time, people, location and label.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SearchSuggestionType-TIME_PEOPLE_GEO_LABEL = 3--><!--Device-SearchSuggestionType-TIME_PEOPLE_GEO_LABEL = 3-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -93,6 +103,8 @@ Searching for recommended words by time, people and label.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SearchSuggestionType-TIME_PEOPLE_GEO = 4--><!--Device-SearchSuggestionType-TIME_PEOPLE_GEO = 4-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -112,6 +124,8 @@ Searching for recommended words by time, people and label.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SearchSuggestionType-TIME_PEOPLE_LABEL = 5--><!--Device-SearchSuggestionType-TIME_PEOPLE_LABEL = 5-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -129,6 +143,8 @@ Searching for recommended words by time and people.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SearchSuggestionType-TIME_PEOPLE = 6--><!--Device-SearchSuggestionType-TIME_PEOPLE = 6-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface Color--><!--Device-unnamed-export interface Color-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## a
@@ -17,6 +19,8 @@ a: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-Color-a: double--><!--Device-Color-a: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -32,6 +36,8 @@ b: number
 
 **起始版本：** 12
 
+<!--Device-Color-b: double--><!--Device-Color-b: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## g
@@ -46,6 +52,8 @@ g: number
 
 **起始版本：** 12
 
+<!--Device-Color-g: double--><!--Device-Color-g: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## r
@@ -59,6 +67,8 @@ r: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-Color-r: double--><!--Device-Color-r: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

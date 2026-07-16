@@ -22,14 +22,16 @@ Sets the system date. This API uses an asynchronous callback to return the resul
 
 **Required permissions:** ohos.permission.SET_TIME
 
+<!--Device-systemTime-function setDate(date: Date, callback: AsyncCallback<void>): void--><!--Device-systemTime-function setDate(date: Date, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | Yes | Target date to set. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| date | [Date](../../apis-na/arkts-apis/arkts-na-date-i.md) | Yes | Target date to set. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -75,19 +77,21 @@ Sets the system date. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.SET_TIME
 
+<!--Device-systemTime-function setDate(date: Date): Promise<void>--><!--Device-systemTime-function setDate(date: Date): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | Yes | Target date to set. |
+| date | [Date](../../apis-na/arkts-apis/arkts-na-date-i.md) | Yes | Target date to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

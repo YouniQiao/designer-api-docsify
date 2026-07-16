@@ -4,6 +4,8 @@ Provides methods to operate or manage NFC card emulation.
 
 **Since:** 12
 
+<!--Device-unnamed-declare namespace cardEmulation--><!--Device-unnamed-declare namespace cardEmulation-End-->
+
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
 ## Modules to Import
@@ -34,7 +36,7 @@ import { cardEmulation } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [HceService](arkts-connectivity-hceservice-c.md) | A class for NFC host application.&lt;p&gt;The NFC host application use this class, then Nfc service can access the applicationinstallation information and connect to services of the application. |
+| [HceService](arkts-connectivity-hceservice-c.md) | A class for NFC host application.&lt;p&gt;The NFC host application use this class, then Nfc service can access the application installation information and connect to services of the application. |
 
 ### Enums
 

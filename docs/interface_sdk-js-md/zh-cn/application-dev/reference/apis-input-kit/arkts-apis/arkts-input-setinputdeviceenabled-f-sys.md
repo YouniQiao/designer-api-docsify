@@ -1,5 +1,11 @@
 # setInputDeviceEnabled（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+```
+
 ## setInputDeviceEnabled
 
 ```TypeScript
@@ -11,6 +17,8 @@ function setInputDeviceEnabled(deviceId: number, enabled: boolean): Promise<void
 **起始版本：** 18
 
 **需要权限：** ohos.permission.INPUT_DEVICE_CONTROLLER
+
+<!--Device-inputDevice-function setInputDeviceEnabled(deviceId: int, enabled: boolean): Promise<void>--><!--Device-inputDevice-function setInputDeviceEnabled(deviceId: int, enabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -27,7 +35,7 @@ function setInputDeviceEnabled(deviceId: number, enabled: boolean): Promise<void
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

@@ -4,6 +4,8 @@ Enum for DownloadDescription
 
 **Since:** 12
 
+<!--Device-unnamed-export declare enum DownloadDescription--><!--Device-unnamed-export declare enum DownloadDescription-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DOWNLOAD
@@ -17,6 +19,8 @@ Description is DOWNLOAD.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DownloadDescription-DOWNLOAD = 1--><!--Device-DownloadDescription-DOWNLOAD = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,6 +36,8 @@ Description is DOWNLOAD_FILE.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DownloadDescription-DOWNLOAD_FILE = 2--><!--Device-DownloadDescription-DOWNLOAD_FILE = 2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SAVE
@@ -45,6 +51,8 @@ Description is SAVE.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DownloadDescription-SAVE = 3--><!--Device-DownloadDescription-SAVE = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,6 +68,8 @@ Description is SAVE_IMAGE.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DownloadDescription-SAVE_IMAGE = 4--><!--Device-DownloadDescription-SAVE_IMAGE = 4-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SAVE_FILE
@@ -73,6 +83,8 @@ Description is SAVE_FILE.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DownloadDescription-SAVE_FILE = 5--><!--Device-DownloadDescription-SAVE_FILE = 5-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -88,6 +100,8 @@ Description is DOWNLOAD_AND_SHARE.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DownloadDescription-DOWNLOAD_AND_SHARE = 6--><!--Device-DownloadDescription-DOWNLOAD_AND_SHARE = 6-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## RECEIVE
@@ -102,6 +116,8 @@ Description is RECEIVE.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DownloadDescription-RECEIVE = 7--><!--Device-DownloadDescription-RECEIVE = 7-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CONTINUE_TO_RECEIVE
@@ -115,6 +131,8 @@ Description is CONTINUE_TO_RECEIVE.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DownloadDescription-CONTINUE_TO_RECEIVE = 8--><!--Device-DownloadDescription-CONTINUE_TO_RECEIVE = 8-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

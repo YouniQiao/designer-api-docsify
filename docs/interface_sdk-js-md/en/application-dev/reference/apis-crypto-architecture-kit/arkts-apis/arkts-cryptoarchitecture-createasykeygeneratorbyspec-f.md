@@ -18,6 +18,8 @@ Obtains an asymmetric key generator instance with the specified key parameters.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-cryptoFramework-function createAsyKeyGeneratorBySpec(asyKeySpec: AsyKeySpec): AsyKeyGeneratorBySpec--><!--Device-cryptoFramework-function createAsyKeyGeneratorBySpec(asyKeySpec: AsyKeySpec): AsyKeyGeneratorBySpec-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 10 to 11: SystemCapability.Security.CryptoFramework
@@ -26,13 +28,13 @@ Obtains an asymmetric key generator instance with the specified key parameters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| asyKeySpec | AsyKeySpec | Yes | Key parameters. The **AsyKeyGeneratorBySpec** generates the public/private key basedon the specified parameters.<br>For details about the supported specifications, see[Asymmetric Key Generation and Conversion Specifications](../../../../security/CryptoArchitectureKit/crypto-asym-key-generation-conversion-spec.md). |
+| asyKeySpec | [AsyKeySpec](arkts-cryptoarchitecture-asykeyspec-i.md) | Yes | Key parameters. The **AsyKeyGeneratorBySpec** generates the public/private key based on the specified parameters.<br>For details about the supported specifications, see [Asymmetric Key Generation and Conversion Specifications](../../../../security/CryptoArchitectureKit/crypto-asym-key-generation-conversion-spec.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AsyKeyGeneratorBySpec | Returns the **AsyKeyGeneratorBySpec** instance created. |
+| [AsyKeyGeneratorBySpec](arkts-cryptoarchitecture-asykeygeneratorbyspec-i.md) | Returns the **AsyKeyGeneratorBySpec** instance created. |
 
 **Error codes:**
 

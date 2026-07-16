@@ -22,6 +22,8 @@ Creates a **Random** instance for generating random numbers and setting seeds.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-cryptoFramework-function createRandom(): Random--><!--Device-cryptoFramework-function createRandom(): Random-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Rand
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
@@ -30,7 +32,7 @@ Creates a **Random** instance for generating random numbers and setting seeds.
 
 | Type | Description |
 | --- | --- |
-| Random | Returns the [Random](arkts-cryptoarchitecture-random-i.md) instance created.<br>For details about the supported specifications, see[Supported Algorithms and Specifications](../../../../security/CryptoArchitectureKit/crypto-generate-random-number.md#supported-algorithms-and-specifications). |
+| [Random](arkts-cryptoarchitecture-random-i.md) | Returns the [Random](arkts-cryptoarchitecture-random-i.md) instance created.<br>For details about the supported specifications, see [Supported Algorithms and Specifications](../../../../security/CryptoArchitectureKit/crypto-generate-random-number.md#supported-algorithms-and-specifications). |
 
 **Error codes:**
 

@@ -12,17 +12,15 @@ import { privacyManager } from '@kit.AbilityKit';
 function startUsingPermission(tokenID: number, permissionName: Permissions): Promise<void>
 ```
 
-A system application can call this API to report the application's permission usage status in the foreground or
-background to the system. The privacy service notifies all subscribers of this permission usage status change event
-(refer to [on](privacyManager.on) for the subscription method). This API uses a promise to return the
-result.
+A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event(refer to [on](privacyManager.on) for the subscription method). This API uses a promise to return the result.
 
-After starting to use a permission, [stopUsingPermission](arkts-ability-stopusingpermission-f-sys.md#stopusingpermission-1) must be called
-to stop using the permission when the usage ends.
+After starting to use a permission, [stopUsingPermission](arkts-ability-stopusingpermission-f-sys.md#stopusingpermission-1) must be called to stop using the permission when the usage ends.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
+
+<!--Device-privacyManager-function startUsingPermission(tokenID: int, permissionName: Permissions): Promise<void>--><!--Device-privacyManager-function startUsingPermission(tokenID: int, permissionName: Permissions): Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -32,14 +30,14 @@ to stop using the permission when the usage ends.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | number | Yes | Identity identifier of the target application. It can be obtained through the[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfoof BundleInfo. Passing an invalid value returns error code 12100001.<br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0.<br>For BundleInfo acquisition, please refer to:[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1). |
-| permissionName | Permissions | Yes | Name of the permission to be used. Passing an invalid value returns errorcode 12100001.<br>Value constraint: The permission name length cannot exceed 256 characters. |
+| tokenID | number | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001.<br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0.<br>For BundleInfo acquisition, please refer to:[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1). |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be used. Passing an invalid value returns error code 12100001.<br>Value constraint: The permission name length cannot exceed 256 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -48,8 +46,8 @@ to stop using the permission when the usage ends.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission"ohos.permission.PERMISSION_USED_STATS". |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionNameexceeds 256 characters, or the type of the specified tokenID is not of the application type. |
-| [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) | (Deprecated in 12) The specified tokenID does not exist or refer to anapplication process. |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, or the type of the specified tokenID is not of the application type. |
+| [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) | (Deprecated in 12) The specified tokenID does not exist or refer to an application process. |
 | [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist or is not a user_grant permission. |
 | [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | The API is used repeatedly with the same input.It means the application specified by the tokenID has been using the specified permission. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
@@ -83,17 +81,25 @@ function startUsingPermission(
   ): Promise<void>
 ```
 
-A system application can call this API to report the application's permission usage status in the foreground or
-background to the system. The privacy service notifies all subscribers of this permission usage status change event
-(refer to [on](privacyManager.on) for the subscription method). This API uses a promise to return the
-result.
+A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event(refer to [on](privacyManager.on) for the subscription method). This API uses a promise to return the result.
 
-After starting to use a permission, [stopUsingPermission](arkts-ability-stopusingpermission-f-sys.md#stopusingpermission-1) must be called
-to stop using the permission when the usage ends.
+After starting to use a permission, [stopUsingPermission](arkts-ability-stopusingpermission-f-sys.md#stopusingpermission-1) must be called to stop using the permission when the usage ends.
 
 **Since:** 18
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
+
+<!--Device-privacyManager-function startUsingPermission(
+    tokenID: int,
+    permissionName: Permissions,
+    pid?: int,
+    usedType?: PermissionUsedType
+  ): Promise<void>--><!--Device-privacyManager-function startUsingPermission(
+    tokenID: int,
+    permissionName: Permissions,
+    pid?: int,
+    usedType?: PermissionUsedType
+  ): Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -103,16 +109,16 @@ to stop using the permission when the usage ends.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | number | Yes | Identity identifier of the target application. It can be obtained through the[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfoof BundleInfo. Passing an invalid value returns error code 12100001.<br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0.<br>For BundleInfo acquisition, please refer to:[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1). |
-| permissionName | Permissions | Yes | Name of the permission to be used. Passing an invalid value returns errorcode 12100001.<br>Value constraint: The permission name length cannot exceed 256 characters. |
-| pid | number | No | Process PID of the caller, used to manage the permission usage status based on the processlifecycle. Pass this parameter when you need to precisely control the permission usage status of a specificprocess (for example, automatically stopping permission usage when the process exits). It must be the same asthe pid passed to [stopUsingPermission](arkts-ability-stopusingpermission-f-sys.md#stopusingpermission-1).<br>The value should be an integer. Default value: -1, indicating no response based on the process lifecycle. |
-| usedType | PermissionUsedType | No | Access mode for the sensitive permission.<br>Default value: NORMAL_TYPE. |
+| tokenID | number | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001.<br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0.<br>For BundleInfo acquisition, please refer to:[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1). |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be used. Passing an invalid value returns error code 12100001.<br>Value constraint: The permission name length cannot exceed 256 characters. |
+| pid | number | No | Process PID of the caller, used to manage the permission usage status based on the process lifecycle. Pass this parameter when you need to precisely control the permission usage status of a specific process (for example, automatically stopping permission usage when the process exits). It must be the same as the pid passed to [stopUsingPermission](arkts-ability-stopusingpermission-f-sys.md#stopusingpermission-1).<br>The value should be an integer. Default value: -1, indicating no response based on the process lifecycle. |
+| usedType | [PermissionUsedType](arkts-ability-permissionusedtype-e-sys.md) | No | Access mode for the sensitive permission.<br>Default value: NORMAL_TYPE. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -178,23 +184,31 @@ function startUsingPermission(
    ): Promise<void>
 ```
 
-A system application can call this API to report the application's permission usage status in the foreground or
-background to the system. The privacy service notifies all subscribers of this permission usage status change event
-(refer to [on](privacyManager.on) for the subscription method). This API uses a promise to return the
-result.
+A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event(refer to [on](privacyManager.on) for the subscription method). This API uses a promise to return the result.
 
-After starting to use a permission, [stopUsingPermission](arkts-ability-stopusingpermission-f-sys.md#stopusingpermission-1) must be called
-to stop using the permission when the usage ends.
+After starting to use a permission, [stopUsingPermission](arkts-ability-stopusingpermission-f-sys.md#stopusingpermission-1) must be called to stop using the permission when the usage ends.
 
-When a pid is passed in, the pid must be the same as the pid passed into
-[stopUsingPermission](arkts-ability-stopusingpermission-f-sys.md#stopusingpermission-1). If the pairing relationship is not satisfied,
-error code 12100004 is returned.
+When a pid is passed in, the pid must be the same as the pid passed into [stopUsingPermission](arkts-ability-stopusingpermission-f-sys.md#stopusingpermission-1). If the pairing relationship is not satisfied,error code 12100004 is returned.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-privacyManager-function startUsingPermission(
+     tokenID: int,
+     permissionName: Permissions,
+     pid?: int,
+     usedType?: PermissionUsedType,
+     options?: PermissionUsingOptions
+   ): Promise<void>--><!--Device-privacyManager-function startUsingPermission(
+     tokenID: int,
+     permissionName: Permissions,
+     pid?: int,
+     usedType?: PermissionUsedType,
+     options?: PermissionUsingOptions
+   ): Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -204,17 +218,17 @@ error code 12100004 is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | number | Yes | Identity identifier of the target application. It can be obtained through the[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfoof BundleInfo. Passing an invalid value returns error code 12100001.<br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0.<br>For BundleInfo acquisition, please refer to:[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1). |
-| permissionName | Permissions | Yes | Name of the permission to be used. Passing an invalid value returns errorcode 12100001.<br>Value constraint: The permission name length cannot exceed 256 characters. |
-| pid | number | No | Process PID of the caller, used to manage the permission usage status based on the processlifecycle. Pass this parameter when you need to precisely control the permission usage status of a specificprocess (for example, automatically stopping permission usage when the process exits). It must be the same asthe pid passed to [stopUsingPermission](arkts-ability-stopusingpermission-f-sys.md#stopusingpermission-1).<br>The value should be an integer. Default value: -1, indicating no response based on the process lifecycle. |
-| usedType | PermissionUsedType | No | Access mode for the sensitive permission.<br>Default value: NORMAL_TYPE. |
-| options | PermissionUsingOptions | No | Optional parameter for permission usage, used to specify theextension identity. This parameter is passed in when the caller's extension identity information needs to beidentified.<br>Default value: Please refer to [PermissionUsingOptions](arkts-ability-permissionusingoptions-i-sys.md) forthe default values of each property in the structure. |
+| tokenID | number | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001.<br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0.<br>For BundleInfo acquisition, please refer to:[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1). |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be used. Passing an invalid value returns error code 12100001.<br>Value constraint: The permission name length cannot exceed 256 characters. |
+| pid | number | No | Process PID of the caller, used to manage the permission usage status based on the process lifecycle. Pass this parameter when you need to precisely control the permission usage status of a specific process (for example, automatically stopping permission usage when the process exits). It must be the same as the pid passed to [stopUsingPermission](arkts-ability-stopusingpermission-f-sys.md#stopusingpermission-1).<br>The value should be an integer. Default value: -1, indicating no response based on the process lifecycle. |
+| usedType | [PermissionUsedType](arkts-ability-permissionusedtype-e-sys.md) | No | Access mode for the sensitive permission.<br>Default value: NORMAL_TYPE. |
+| options | [PermissionUsingOptions](arkts-ability-permissionusingoptions-i-sys.md) | No | Optional parameter for permission usage, used to specify the extension identity. This parameter is passed in when the caller's extension identity information needs to be identified.<br>Default value: Please refer to [PermissionUsingOptions](arkts-ability-permissionusingoptions-i-sys.md) for the default values of each property in the structure. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -283,17 +297,23 @@ function startUsingPermission(
   ): void
 ```
 
-A system application can call this API to report the application's permission usage status in the foreground or
-background to the system. The privacy service notifies all subscribers of this permission usage status change event
-(refer to [on](privacyManager.on) for the subscription method). This API uses an asynchronous callback to
-return the result.
+A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event(refer to [on](privacyManager.on) for the subscription method). This API uses an asynchronous callback to return the result.
 
-After starting to use a permission, [stopUsingPermission](arkts-ability-stopusingpermission-f-sys.md#stopusingpermission-1) must be called
-to stop using the permission when the usage ends.
+After starting to use a permission, [stopUsingPermission](arkts-ability-stopusingpermission-f-sys.md#stopusingpermission-1) must be called to stop using the permission when the usage ends.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
+
+<!--Device-privacyManager-function startUsingPermission(
+    tokenID: int,
+    permissionName: Permissions,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-privacyManager-function startUsingPermission(
+    tokenID: int,
+    permissionName: Permissions,
+    callback: AsyncCallback<void>
+  ): void-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -303,9 +323,9 @@ to stop using the permission when the usage ends.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | number | Yes | Identity identifier of the target application. It can be obtained through the[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfoof BundleInfo. Passing an invalid value returns error code 12100001.<br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0.<br>For BundleInfo acquisition, please refer to:[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1). |
-| permissionName | Permissions | Yes | Name of the permission to be used. Passing an invalid value returns errorcode 12100001.<br>Value constraint: The permission name length cannot exceed 256 characters. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| tokenID | number | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001.<br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0.<br>For BundleInfo acquisition, please refer to:[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1). |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be used. Passing an invalid value returns error code 12100001.<br>Value constraint: The permission name length cannot exceed 256 characters. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -315,7 +335,7 @@ to stop using the permission when the usage ends.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission"ohos.permission.PERMISSION_USED_STATS". |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
 | [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256characters, or the type of the specified tokenID is not of the application type. |
-| [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) | (Deprecated in 12) The specified tokenID does not exist or refer to anapplication process. |
+| [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) | (Deprecated in 12) The specified tokenID does not exist or refer to an application process. |
 | [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist or is not a user_grant permission. |
 | [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | The API is used repeatedly with the same input.It means the application specified by the tokenID has been using the specified permission. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |

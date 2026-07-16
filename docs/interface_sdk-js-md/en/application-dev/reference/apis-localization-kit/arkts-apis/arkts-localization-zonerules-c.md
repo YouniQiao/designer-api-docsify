@@ -4,6 +4,8 @@ Queries the time zone transition rule.
 
 **Since:** 20
 
+<!--Device-i18n-export class ZoneRules--><!--Device-i18n-export class ZoneRules-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Obtains the **nextTransition** object for the specified time.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-ZoneRules-public nextTransition(date?: double): ZoneOffsetTransition--><!--Device-ZoneRules-public nextTransition(date?: double): ZoneOffsetTransition-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -36,5 +40,5 @@ Obtains the **nextTransition** object for the specified time.
 
 | Type | Description |
 | --- | --- |
-| ZoneOffsetTransition | **ZoneOffsetTransition** object for next transition. |
+| [ZoneOffsetTransition](arkts-localization-zoneoffsettransition-c.md) | **ZoneOffsetTransition** object for next transition. |
 

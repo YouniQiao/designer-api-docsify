@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-cert-enum OcspDigest--><!--Device-cert-enum OcspDigest-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 ## SHA1
@@ -18,7 +20,9 @@ SHA1摘要算法。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OcspDigest-SHA1 = 0--><!--Device-OcspDigest-SHA1 = 0-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -34,7 +38,9 @@ SHA224摘要算法。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OcspDigest-SHA224 = 1--><!--Device-OcspDigest-SHA224 = 1-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -50,7 +56,9 @@ SHA256摘要算法。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OcspDigest-SHA256 = 2--><!--Device-OcspDigest-SHA256 = 2-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -66,7 +74,9 @@ SHA384摘要算法。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OcspDigest-SHA384 = 3--><!--Device-OcspDigest-SHA384 = 3-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -82,7 +92,9 @@ SHA512摘要算法。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OcspDigest-SHA512 = 4--><!--Device-OcspDigest-SHA512 = 4-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

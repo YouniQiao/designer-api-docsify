@@ -1,27 +1,26 @@
 # NavPathStack
 
-A navigation controller that manages all child pages in the **Navigation** component with a stack data structure and
-provides stack operation methods for controlling page transitions.
+A navigation controller that manages all child pages in the **Navigation** component with a stack data structure and provides stack operation methods for controlling page transitions.
 
-Starting from API version 12, **NavPathStack** is inheritable. Objects of a derived class can replace those of the
-base class. For details, see
-[Example 10](../../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-10-defining-a-derived-class-of-navpathstack).
+Starting from API version 12, **NavPathStack** is inheritable. Objects of a derived class can replace those of the base class. For details, see [Example 10](../../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-10-defining-a-derived-class-of-navpathstack).
 
-> **NOTE**
->
-> 1. When multiple navigation controller operations are triggered in succession, the intermediate states are
+> **NOTE**  
+>  
+> 1. When multiple navigation controller operations are triggered in succession, the intermediate states are  
 > bypassed, and only the final result of the operations is rendered.
 
-> For example, if a Page1 is popped and then immediately pushed back, the system considers that the states before and
-> after these operations are identical, leading to no actual change in the stack. To ensure that a new instance of
-> Page1 is pushed onto the stack despite the consecutive operations, use the **NEW_INSTANCE** mode.
->
-> 2. Avoid relying on lifecycle event listeners as a means to manage the navigation controller.
->
-> 3. When the application is in the background, calling stack operation APIs of **NavPathStack** will trigger a
+> For example, if a Page1 is popped and then immediately pushed back, the system considers that the states before and  
+> after these operations are identical, leading to no actual change in the stack. To ensure that a new instance of  
+> Page1 is pushed onto the stack despite the consecutive operations, use the **NEW_INSTANCE** mode.  
+>  
+> 2. Avoid relying on lifecycle event listeners as a means to manage the navigation controller.  
+>  
+> 3. When the application is in the background, calling stack operation APIs of **NavPathStack** will trigger a  
 > refresh upon the application's return to the foreground.
 
 **Since:** 10
+
+<!--Device-unnamed-declare class NavPathStack--><!--Device-unnamed-declare class NavPathStack-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,6 +37,8 @@ Clears the routing stack.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NavPathStack-clear(animated?: boolean): void--><!--Device-NavPathStack-clear(animated?: boolean): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,6 +62,8 @@ Creates a **NavPathStack** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-NavPathStack-constructor()--><!--Device-NavPathStack-constructor()-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## disableAnimation
@@ -76,6 +79,8 @@ Disables or enables the transition animation in the **Navigation** component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NavPathStack-disableAnimation(value: boolean): void--><!--Device-NavPathStack-disableAnimation(value: boolean): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -99,13 +104,15 @@ Obtains the names of all navigation destination pages in the routing stack.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-NavPathStack-getAllPathName(): Array<string>--><!--Device-NavPathStack-getAllPathName(): Array<string>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Names of all navigation destination pages in the routing stack. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Names of all navigation destination pages in the routing stack. |
 
 ## getIndexByName
 
@@ -121,6 +128,8 @@ Obtains the indexes of all the navigation destination pages that match **name**.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-NavPathStack-getIndexByName(name: string): Array<number>--><!--Device-NavPathStack-getIndexByName(name: string): Array<number>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -133,7 +142,7 @@ Obtains the indexes of all the navigation destination pages that match **name**.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Indexes of all the matching navigation destination pages. If no pages with the specifiedname exist in the routing stack, an empty array is returned. The index range is [0, routing stack size - 1]. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Indexes of all the matching navigation destination pages. If no pages with the specified name exist in the routing stack, an empty array is returned. The index range is [0, routing stack size - 1]. |
 
 ## getParamByIndex
 
@@ -149,6 +158,8 @@ Obtains the parameter information of the navigation destination page specified b
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-NavPathStack-getParamByIndex(index: number): unknown | undefined--><!--Device-NavPathStack-getParamByIndex(index: number): unknown | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -161,7 +172,7 @@ Obtains the parameter information of the navigation destination page specified b
 
 | Type | Description |
 | --- | --- |
-| unknown | **unknown**: parameter information of the corresponding navigation destinationpage. **unknown** can represent a user-defined type.<br>**undefined**: an invalid index is provided. |
+| unknown | **unknown**: parameter information of the corresponding navigation destination page. **unknown** can represent a user-defined type.<br>**undefined**: an invalid index is provided. |
 
 ## getParamByName
 
@@ -169,14 +180,15 @@ Obtains the parameter information of the navigation destination page specified b
 getParamByName(name: string): Array<unknown>
 ```
 
-Obtains the parameter information of all **NavDestination** pages with the specified name, and sorts the
-information in ascending order by page index.
+Obtains the parameter information of all **NavDestination** pages with the specified name, and sorts the information in ascending order by page index.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NavPathStack-getParamByName(name: string): Array<unknown>--><!--Device-NavPathStack-getParamByName(name: string): Array<unknown>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -190,7 +202,7 @@ information in ascending order by page index.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;unknown&gt; | Parameter information of all **NavDestination** pages with the specified name.**unknown** can represent a user-defined type. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<unknown> | Parameter information of all **NavDestination** pages with the specified name.**unknown** can represent a user-defined type. |
 
 ## getParent
 
@@ -200,8 +212,7 @@ getParent(): NavPathStack | null
 
 Obtains the parent navigation path stack.
 
-When a **Navigation** component is nested (directly or indirectly) inside another **Navigation** component, the
-**NavPathStack** of the inner component can obtain the **NavPathStack** of the outer component.
+When a **Navigation** component is nested (directly or indirectly) inside another **Navigation** component, the **NavPathStack** of the inner component can obtain the **NavPathStack** of the outer component.
 
 **Since:** 11
 
@@ -209,13 +220,15 @@ When a **Navigation** component is nested (directly or indirectly) inside anothe
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-NavPathStack-getParent(): NavPathStack | null--><!--Device-NavPathStack-getParent(): NavPathStack | null-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| NavPathStack | Navigation path stack of the outer **Navigation** component in which the current**Navigation** component is nested. If there is no outer **Navigation** component., **null** is returned. |
+| [NavPathStack](arkts-arkui-navpathstack-c.md) | Navigation path stack of the outer **Navigation** component in which the current **Navigation** component is nested. If there is no outer **Navigation** component., **null** is returned. |
 
 ## getPathStack
 
@@ -231,13 +244,15 @@ Obtains the array of route page information from this routing stack.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-NavPathStack-getPathStack(): Array<NavPathInfo>--><!--Device-NavPathStack-getPathStack(): Array<NavPathInfo>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;NavPathInfo&gt; | Array of route page information in the current routing stack. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<NavPathInfo> | Array of route page information in the current routing stack. |
 
 ## moveIndexToTop
 
@@ -252,6 +267,8 @@ Moves to the top of the routing stack the navigation destination page specified 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NavPathStack-moveIndexToTop(index: number, animated?: boolean): void--><!--Device-NavPathStack-moveIndexToTop(index: number, animated?: boolean): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -268,14 +285,15 @@ Moves to the top of the routing stack the navigation destination page specified 
 moveToTop(name: string, animated?: boolean): number
 ```
 
-Moves the first navigation destination page that matches **name** from the bottom of the routing stack to the top
-of the stack.
+Moves the first navigation destination page that matches **name** from the bottom of the routing stack to the top of the stack.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NavPathStack-moveToTop(name: string, animated?: boolean): number--><!--Device-NavPathStack-moveToTop(name: string, animated?: boolean): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -290,7 +308,7 @@ of the stack.
 
 | Type | Description |
 | --- | --- |
-| number | Returns the index of the first navigation destination page that matches **name** from thebottom of the routing stack; returns **-1** if such a page does not exist. |
+| number | Returns the index of the first navigation destination page that matches **name** from the bottom of the routing stack; returns **-1** if such a page does not exist. |
 
 ## pop
 
@@ -300,10 +318,10 @@ pop(animated?: boolean): NavPathInfo | undefined
 
 Pops the top element out of the routing stack.
 
-> **NOTE**
->
-> When multiple navigation controller methods are called consecutively, any pages popped during the sequence are
-> cached. If a page with the same name is later pushed, the system reuses the cached instance instead of
+> **NOTE**  
+>  
+> When multiple navigation controller methods are called consecutively, any pages popped during the sequence are  
+> cached. If a page with the same name is later pushed, the system reuses the cached instance instead of  
 > instantiating a new page.
 
 > Example:
@@ -328,6 +346,8 @@ Pops the top element out of the routing stack.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-NavPathStack-pop(animated?: boolean): NavPathInfo | undefined--><!--Device-NavPathStack-pop(animated?: boolean): NavPathInfo | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -340,7 +360,7 @@ Pops the top element out of the routing stack.
 
 | Type | Description |
 | --- | --- |
-| NavPathInfo | **NavPathInfo**: information about the navigation destination page at the topof the stack.<br>**undefined**: the routing stack is empty. |
+| [NavPathInfo](arkts-arkui-navpathinfo-c.md) | **NavPathInfo**: information about the navigation destination page at the top of the stack.<br>**undefined**: the routing stack is empty. |
 
 ## pop
 
@@ -348,13 +368,12 @@ Pops the top element out of the routing stack.
 pop(result: Object, animated?: boolean): NavPathInfo | undefined
 ```
 
-Pops the top element out of the routing stack and invokes the **onPop** callback to pass the page processing
-result.
+Pops the top element out of the routing stack and invokes the **onPop** callback to pass the page processing result.
 
-> **NOTE**
->
-> When multiple navigation controller methods are called consecutively, any pages popped during the sequence are
-> cached. If a page with the same name is later pushed, the system reuses the cached instance instead of
+> **NOTE**  
+>  
+> When multiple navigation controller methods are called consecutively, any pages popped during the sequence are  
+> cached. If a page with the same name is later pushed, the system reuses the cached instance instead of  
 > instantiating a new page.
 
 > Example:
@@ -379,20 +398,22 @@ result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPathStack-pop(result: Object, animated?: boolean): NavPathInfo | undefined--><!--Device-NavPathStack-pop(result: Object, animated?: boolean): NavPathInfo | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | Object | Yes | Custom processing result on the page. The boolean type is not supported. |
+| result | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Custom processing result on the page. The boolean type is not supported. |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>Default value: **true** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| NavPathInfo | **NavPathInfo**: information about the navigation destination page at the topof the stack.<br>**undefined**: the routing stack is empty. |
+| [NavPathInfo](arkts-arkui-navpathinfo-c.md) | **NavPathInfo**: information about the navigation destination page at the top of the stack.<br>**undefined**: the routing stack is empty. |
 
 ## popToIndex
 
@@ -407,6 +428,8 @@ Returns the routing stack to the page specified by **index**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NavPathStack-popToIndex(index: number, animated?: boolean): void--><!--Device-NavPathStack-popToIndex(index: number, animated?: boolean): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -423,14 +446,15 @@ Returns the routing stack to the page specified by **index**.
 popToIndex(index: number, result: Object, animated?: boolean): void
 ```
 
-Returns the routing stack to the page specified by **index** and invokes the **onPop** callback to pass the page
-processing result.
+Returns the routing stack to the page specified by **index** and invokes the **onPop** callback to pass the page processing result.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NavPathStack-popToIndex(index: number, result: Object, animated?: boolean): void--><!--Device-NavPathStack-popToIndex(index: number, result: Object, animated?: boolean): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -439,7 +463,7 @@ processing result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | number | Yes | Index of the navigation destination page. The index is zero-based. |
-| result | Object | Yes | Custom processing result on the page. The boolean type is not supported. |
+| result | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Custom processing result on the page. The boolean type is not supported. |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>Default value: **true** |
 
 ## popToName
@@ -448,14 +472,15 @@ processing result.
 popToName(name: string, animated?: boolean): number
 ```
 
-Pops pages until the first navigation destination page that matches **name** from the bottom of the routing stack
-is at the top of the stack.
+Pops pages until the first navigation destination page that matches **name** from the bottom of the routing stack is at the top of the stack.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NavPathStack-popToName(name: string, animated?: boolean): number--><!--Device-NavPathStack-popToName(name: string, animated?: boolean): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -470,7 +495,7 @@ is at the top of the stack.
 
 | Type | Description |
 | --- | --- |
-| number | Returns the index of the first navigation destination page that matches **name** from thebottom of the routing stack; returns **-1** if such a page does not exist. |
+| number | Returns the index of the first navigation destination page that matches **name** from the bottom of the routing stack; returns **-1** if such a page does not exist. |
 
 ## popToName
 
@@ -478,14 +503,15 @@ is at the top of the stack.
 popToName(name: string, result: Object, animated?: boolean): number
 ```
 
-Pops pages until the first navigation destination page that matches **name** from the bottom of the routing stack
-is at the top of the stack. This API uses the **onPop** callback to pass in the page processing result.
+Pops pages until the first navigation destination page that matches **name** from the bottom of the routing stack is at the top of the stack. This API uses the **onPop** callback to pass in the page processing result.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NavPathStack-popToName(name: string, result: Object, animated?: boolean): number--><!--Device-NavPathStack-popToName(name: string, result: Object, animated?: boolean): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -494,14 +520,14 @@ is at the top of the stack. This API uses the **onPop** callback to pass in the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
-| result | Object | Yes | Custom processing result on the page. The boolean type is not supported. |
+| result | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Custom processing result on the page. The boolean type is not supported. |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>Default value: **true** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Returns the index of the first navigation destination page that matches **name** from thebottom of the routing stack; returns **-1** if such a page does not exist. |
+| number | Returns the index of the first navigation destination page that matches **name** from the bottom of the routing stack; returns **-1** if such a page does not exist. |
 
 ## pushDestination
 
@@ -509,13 +535,12 @@ is at the top of the stack. This API uses the **onPop** callback to pass in the 
 pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>
 ```
 
-Pushes the navigation destination page specified by **info** onto the routing stack. This API uses a promise to
-return the result.
+Pushes the navigation destination page specified by **info** onto the routing stack. This API uses a promise to return the result.
 
-> **NOTE**
->
-> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear-1), as the
-> page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
+> **NOTE**  
+>  
+> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear-1), as the  
+> page has not yet finished building at this stage, which may lead to issues such as white screens or navigation  
 > failures.
 
 **Since:** 11
@@ -524,20 +549,22 @@ return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPathStack-pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>--><!--Device-NavPathStack-pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | NavPathInfo | Yes | Information about the navigation destination page. |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>Default value: **true** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -554,14 +581,12 @@ return the result.
 pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-Pushes the navigation destination page specified by **info** onto the routing stack. This API uses a promise to
-return the result. Depending on the [LaunchMode](arkts-arkui-launchmode-e.md) specified in the **options** parameter,
-different behaviors will be implemented.
+Pushes the navigation destination page specified by **info** onto the routing stack. This API uses a promise to return the result. Depending on the [LaunchMode](arkts-arkui-launchmode-e.md) specified in the **options** parameter,different behaviors will be implemented.
 
-> **NOTE**
->
-> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear-1), as the
-> page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
+> **NOTE**  
+>  
+> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear-1), as the  
+> page has not yet finished building at this stage, which may lead to issues such as white screens or navigation  
 > failures.
 
 **Since:** 12
@@ -570,20 +595,22 @@ different behaviors will be implemented.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPathStack-pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>--><!--Device-NavPathStack-pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | NavPathInfo | Yes | Information about the navigation destination page. |
-| options | NavigationOptions | No | Routing stack operation options. |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
+| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | No | Routing stack operation options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -600,13 +627,12 @@ different behaviors will be implemented.
 pushDestinationByName(name: string, param: Object, animated?: boolean): Promise<void>
 ```
 
-Pushes the navigation destination page specified by **name**, with the data specified by **param**, to the routing
-stack. This API uses a promise to return the result.
+Pushes the navigation destination page specified by **name**, with the data specified by **param**, to the routing stack. This API uses a promise to return the result.
 
-> **NOTE**
->
-> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear-1), as the
-> page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
+> **NOTE**  
+>  
+> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear-1), as the  
+> page has not yet finished building at this stage, which may lead to issues such as white screens or navigation  
 > failures.
 
 **Since:** 11
@@ -615,6 +641,8 @@ stack. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPathStack-pushDestinationByName(name: string, param: Object, animated?: boolean): Promise<void>--><!--Device-NavPathStack-pushDestinationByName(name: string, param: Object, animated?: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -622,14 +650,14 @@ stack. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
-| param | Object | Yes | Detailed parameters for the custom **NavDestination** page. |
+| param | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Detailed parameters for the custom **NavDestination** page. |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>Default value: **true** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -646,14 +674,12 @@ stack. This API uses a promise to return the result.
 pushDestinationByName(name: string, param: Object, onPop: import('../api/@ohos.base').Callback<PopInfo>, animated?: boolean): Promise<void>
 ```
 
-Pushes the navigation destination page specified by **name**, with the data specified by **param**, to the routing
-stack. This API uses the **onPop** callback to handle the result returned when the page is popped out of the stack.
-It uses a promise to return the result.
+Pushes the navigation destination page specified by **name**, with the data specified by **param**, to the routing stack. This API uses the **onPop** callback to handle the result returned when the page is popped out of the stack.It uses a promise to return the result.
 
-> **NOTE**
->
-> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear-1), as the
-> page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
+> **NOTE**  
+>  
+> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear-1), as the  
+> page has not yet finished building at this stage, which may lead to issues such as white screens or navigation  
 > failures.
 
 **Since:** 11
@@ -662,6 +688,8 @@ It uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPathStack-pushDestinationByName(name: string, param: Object, onPop: import('../api/@ohos.base').Callback<PopInfo>, animated?: boolean): Promise<void>--><!--Device-NavPathStack-pushDestinationByName(name: string, param: Object, onPop: import('../api/@ohos.base').Callback<PopInfo>, animated?: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -669,15 +697,15 @@ It uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
-| param | Object | Yes | Detailed parameters for the custom **NavDestination** page. |
-| onPop | import('../api/@ohos.base').Callback&lt;PopInfo&gt; | Yes | Callback used to handle the result returned whenthe page is popped out of the stack. It is triggered only when the **result** parameter is set in[pop](NavPathStack#pop(result: Object, animated?: boolean)),[popToName](arkts-arkui-navpathstack-c.md#poptoname-2), or[popToIndex](arkts-arkui-navpathstack-c.md#poptoindex-2). |
+| param | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Detailed parameters for the custom **NavDestination** page. |
+| onPop | import('../api/@ohos.base').Callback<PopInfo> | Yes | Callback used to handle the result returned when the page is popped out of the stack. It is triggered only when the **result** parameter is set in [pop](NavPathStack#pop(result: Object, animated?: boolean)),[popToName](arkts-arkui-navpathstack-c.md#poptoname-2), or [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex-2). |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>Default value: **true** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -702,14 +730,16 @@ Pushes the navigation destination page specified by **info** onto the routing st
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-NavPathStack-pushPath(info: NavPathInfo, animated?: boolean): void--><!--Device-NavPathStack-pushPath(info: NavPathInfo, animated?: boolean): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | NavPathInfo | Yes | Information about the navigation destination page. |
-| animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>Ifthe input parameter is invalid, the value **true** is used.<br>**Since:** 11 |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
+| animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>If the input parameter is invalid, the value **true** is used.<br>**Since:** 11 |
 
 ## pushPath
 
@@ -717,8 +747,7 @@ Pushes the navigation destination page specified by **info** onto the routing st
 pushPath(info: NavPathInfo, options?: NavigationOptions): void
 ```
 
-Pushes the navigation destination page specified by **info** onto the routing stack. Depending on the
-[LaunchMode](arkts-arkui-launchmode-e.md) specified in the **options** parameter, different behaviors will be implemented.
+Pushes the navigation destination page specified by **info** onto the routing stack. Depending on the [LaunchMode](arkts-arkui-launchmode-e.md) specified in the **options** parameter, different behaviors will be implemented.
 
 **Since:** 12
 
@@ -726,14 +755,16 @@ Pushes the navigation destination page specified by **info** onto the routing st
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPathStack-pushPath(info: NavPathInfo, options?: NavigationOptions): void--><!--Device-NavPathStack-pushPath(info: NavPathInfo, options?: NavigationOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | NavPathInfo | Yes | Information about the navigation destination page. |
-| options | NavigationOptions | No | Routing stack operation options. |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
+| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | No | Routing stack operation options. |
 
 ## pushPathByName
 
@@ -741,14 +772,15 @@ Pushes the navigation destination page specified by **info** onto the routing st
 pushPathByName(name: string, param: unknown, animated?: boolean): void
 ```
 
-Pushes the navigation destination page specified by **name**, with the data specified by **param**, to the routing
-stack.
+Pushes the navigation destination page specified by **name**, with the data specified by **param**, to the routing stack.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NavPathStack-pushPathByName(name: string, param: unknown, animated?: boolean): void--><!--Device-NavPathStack-pushPathByName(name: string, param: unknown, animated?: boolean): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -757,7 +789,7 @@ stack.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
-| param | unknown | Yes | Detailed parameters for the custom **NavDestination** page. The **unknown** type can bereplaced with a user-defined type. |
+| param | unknown | Yes | Detailed parameters for the custom **NavDestination** page. The **unknown** type can be replaced with a user-defined type. |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>Default value: **true**<br>**Since:** 11 |
 
 ## pushPathByName
@@ -766,15 +798,15 @@ stack.
 pushPathByName(name: string, param: Object, onPop: import('../api/@ohos.base').Callback<PopInfo>, animated?: boolean): void
 ```
 
-Pushes the navigation destination page specified by **name**, with the data specified by **param**, to the routing
-stack. This API uses the **onPop** callback to receive the result returned when the page is popped out of the
-stack.
+Pushes the navigation destination page specified by **name**, with the data specified by **param**, to the routing stack. This API uses the **onPop** callback to receive the result returned when the page is popped out of the stack.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NavPathStack-pushPathByName(name: string, param: Object, onPop: import('../api/@ohos.base').Callback<PopInfo>, animated?: boolean): void--><!--Device-NavPathStack-pushPathByName(name: string, param: Object, onPop: import('../api/@ohos.base').Callback<PopInfo>, animated?: boolean): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -783,8 +815,8 @@ stack.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
-| param | Object | Yes | Detailed parameters for the custom **NavDestination** page. |
-| onPop | import('../api/@ohos.base').Callback&lt;PopInfo&gt; | Yes | Callback used to receive the result. It istriggered only when the **result** parameter is set in[pop](NavPathStack#pop(result: Object, animated?: boolean)),[popToName](arkts-arkui-navpathstack-c.md#poptoname-2), or[popToIndex](arkts-arkui-navpathstack-c.md#poptoindex-2). |
+| param | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Detailed parameters for the custom **NavDestination** page. |
+| onPop | import('../api/@ohos.base').Callback<PopInfo> | Yes | Callback used to receive the result. It is triggered only when the **result** parameter is set in [pop](NavPathStack#pop(result: Object, animated?: boolean)),[popToName](arkts-arkui-navpathstack-c.md#poptoname-2), or [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex-2). |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>Default value: **true** |
 
 ## removeByIndexes
@@ -801,13 +833,15 @@ Removes the navigation destination pages specified by **indexes** from the routi
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPathStack-removeByIndexes(indexes: Array<number>): number--><!--Device-NavPathStack-removeByIndexes(indexes: Array<number>): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indexes | Array&lt;number&gt; | Yes | Array of indexes of the navigation destination pages to remove. The index iszero-based. |
+| indexes | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Array of indexes of the navigation destination pages to remove. The index is zero-based. |
 
 **Return value:**
 
@@ -829,6 +863,8 @@ Removes the navigation destination page specified by **name** from the routing s
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPathStack-removeByName(name: string): number--><!--Device-NavPathStack-removeByName(name: string): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -849,15 +885,15 @@ Removes the navigation destination page specified by **name** from the routing s
 removeByNavDestinationId(navDestinationId: string): boolean
 ```
 
-Removes the navigation destination page specified by **navDestinationId** from the routing stack.
-**navDestinationId** can be obtained from the [onReady](NavDestinationAttribute#onReady) callback of
-**NavDestination** or from [NavDestinationInfo](../arkts-apis/arkts-arkui-navdestinationinfo-i.md).
+Removes the navigation destination page specified by **navDestinationId** from the routing stack.**navDestinationId** can be obtained from the [onReady](NavDestinationAttribute#onReady) callback of **NavDestination** or from [NavDestinationInfo](../arkts-apis/arkts-arkui-navdestinationinfo-i.md).
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NavPathStack-removeByNavDestinationId(navDestinationId: string): boolean--><!--Device-NavPathStack-removeByNavDestinationId(navDestinationId: string): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -879,8 +915,7 @@ Removes the navigation destination page specified by **navDestinationId** from t
 replaceDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-Performs a replacement operation on the routing stack. This API uses a promise to return the result. Its behavior
-varies depending on the value of [LaunchMode](arkts-arkui-launchmode-e.md) specified in **options**.
+Performs a replacement operation on the routing stack. This API uses a promise to return the result. Its behavior varies depending on the value of [LaunchMode](arkts-arkui-launchmode-e.md) specified in **options**.
 
 **Since:** 18
 
@@ -888,20 +923,22 @@ varies depending on the value of [LaunchMode](arkts-arkui-launchmode-e.md) speci
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-NavPathStack-replaceDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>--><!--Device-NavPathStack-replaceDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | NavPathInfo | Yes | Information about the navigation destination page. |
-| options | NavigationOptions | No | Routing stack operation options. |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
+| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | No | Routing stack operation options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -926,13 +963,15 @@ Replaces the top of the routing stack with the navigation destination page speci
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPathStack-replacePath(info: NavPathInfo, animated?: boolean): void--><!--Device-NavPathStack-replacePath(info: NavPathInfo, animated?: boolean): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | NavPathInfo | Yes | Parameters for the new top page of the routing stack. |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Parameters for the new top page of the routing stack. |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>Default value: **true** |
 
 ## replacePath
@@ -941,8 +980,7 @@ Replaces the top of the routing stack with the navigation destination page speci
 replacePath(info: NavPathInfo, options?: NavigationOptions): void
 ```
 
-Replaces the top page on the routing stack. Depending on the [LaunchMode](arkts-arkui-launchmode-e.md) specified in the
-**options** parameter, different behaviors will be implemented.
+Replaces the top page on the routing stack. Depending on the [LaunchMode](arkts-arkui-launchmode-e.md) specified in the **options** parameter, different behaviors will be implemented.
 
 **Since:** 12
 
@@ -950,14 +988,16 @@ Replaces the top page on the routing stack. Depending on the [LaunchMode](arkts-
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPathStack-replacePath(info: NavPathInfo, options?: NavigationOptions): void--><!--Device-NavPathStack-replacePath(info: NavPathInfo, options?: NavigationOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | NavPathInfo | Yes | Parameters for the new top page of the routing stack. |
-| options | NavigationOptions | No | Routing stack operation options. |
+| info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Parameters for the new top page of the routing stack. |
+| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | No | Routing stack operation options. |
 
 ## replacePathByName
 
@@ -973,6 +1013,8 @@ Replaces the top of the routing stack with the page specified by **name**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPathStack-replacePathByName(name: string, param: Object, animated?: boolean): void--><!--Device-NavPathStack-replacePathByName(name: string, param: Object, animated?: boolean): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -980,7 +1022,7 @@ Replaces the top of the routing stack with the page specified by **name**.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
-| param | Object | Yes | Detailed parameters for the custom **NavDestination** page. |
+| param | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Detailed parameters for the custom **NavDestination** page. |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>Default value: **true** |
 
 ## setInterception
@@ -997,13 +1039,15 @@ Sets the interception callback for navigation page redirection.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavPathStack-setInterception(interception: NavigationInterception): void--><!--Device-NavPathStack-setInterception(interception: NavigationInterception): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| interception | NavigationInterception | Yes | Object to be intercepted during navigation redirection. |
+| interception | [NavigationInterception](arkts-arkui-navigationinterception-i.md) | Yes | Object to be intercepted during navigation redirection. |
 
 ## setPathStack
 
@@ -1011,23 +1055,22 @@ Sets the interception callback for navigation page redirection.
 setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void
 ```
 
-Updates the array of route page information in this routing stack to the specified content and performs route
-transitions.
+Updates the array of route page information in this routing stack to the specified content and performs route transitions.
 
-> **NOTE**
->
-> 1. You can add or remove pages in batches based on the existing stack. Among the pages added in batches, only the
-> visible pages will trigger creation; other pages, although added to the stack, will not be created immediately.
-> They will only be created when they become visible.
->
-> 2. For routing stacks updated through the batch push functionality, the lifecycle events of each page are
-> triggered from the top to the bottom of the stack. This differs from the triggering order of other push APIs,
-> which are triggered from the bottom to the top of the stack.
->
-> 3. You can operate existing pages using **navDestinationId** (unique ID) in [NavPathInfo](arkts-arkui-navpathinfo-c.md).
-> This ID is system-generated and globally unique (it can be obtained using the
-> [getPathStack](arkts-arkui-navpathstack-c.md#getpathstack-1) API and should not be manually reassigned). If the specified ID
-> does not exist in the current routing stack, it indicates a new page. If it exists and the corresponding name is
+> **NOTE**  
+>  
+> 1. You can add or remove pages in batches based on the existing stack. Among the pages added in batches, only the  
+> visible pages will trigger creation; other pages, although added to the stack, will not be created immediately.  
+> They will only be created when they become visible.  
+>  
+> 2. For routing stacks updated through the batch push functionality, the lifecycle events of each page are  
+> triggered from the top to the bottom of the stack. This differs from the triggering order of other push APIs,  
+> which are triggered from the bottom to the top of the stack.  
+>  
+> 3. You can operate existing pages using **navDestinationId** (unique ID) in [NavPathInfo](arkts-arkui-navpathinfo-c.md).  
+> This ID is system-generated and globally unique (it can be obtained using the  
+> [getPathStack](arkts-arkui-navpathstack-c.md#getpathstack-1) API and should not be manually reassigned). If the specified ID  
+> does not exist in the current routing stack, it indicates a new page. If it exists and the corresponding name is  
 > the same, it indicates reuse of an existing page.
 
 **Since:** 19
@@ -1036,13 +1079,15 @@ transitions.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-NavPathStack-setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void--><!--Device-NavPathStack-setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathStack | Array&lt;NavPathInfo&gt; | Yes | Array of route page information in the current routing stack.<br>**NOTE**<br>The array length is not limited. |
+| pathStack | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<NavPathInfo> | Yes | Array of route page information in the current routing stack.<br>**NOTE**<br>The array length is not limited. |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>Default value: **true** |
 
 ## size
@@ -1058,6 +1103,8 @@ Obtains the stack size.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NavPathStack-size(): number--><!--Device-NavPathStack-size(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

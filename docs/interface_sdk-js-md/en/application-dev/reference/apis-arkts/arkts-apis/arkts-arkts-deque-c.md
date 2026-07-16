@@ -1,10 +1,10 @@
 # Deque
 
-Double-ended queue (deque) is a sequence container implemented based on the queue data structure that
-follows the principles of First In First Out (FIFO) and Last In First Out (LIFO).
-It allows insertion and removal of elements at both the ends.
+Double-ended queue (deque) is a sequence container implemented based on the queue data structure that follows the principles of First In First Out (FIFO) and Last In First Out (LIFO).It allows insertion and removal of elements at both the ends.
 
 **Since:** 8
+
+<!--Device-unnamed-declare class Deque<T>--><!--Device-unnamed-declare class Deque<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,13 +26,15 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Deque-[Symbol.iterator](): IterableIterator<T>--><!--Device-Deque-[Symbol.iterator](): IterableIterator<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;T&gt; | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<T> | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
 
 **Error codes:**
 
@@ -88,6 +90,8 @@ A constructor used to create a **Deque** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Deque-constructor()--><!--Device-Deque-constructor()-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
@@ -115,14 +119,16 @@ Uses a callback to traverse each element in the **Deque** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Deque-forEach(callbackFn: (value: T, index?: number, deque?: Deque<T>) => void, thisArg?: Object): void--><!--Device-Deque-forEach(callbackFn: (value: T, index?: number, deque?: Deque<T>) => void, thisArg?: Object): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, deque?: Deque&lt;T&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the Deque. |
-| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is thisinstance. |
+| callbackFn | (value: T, index?: number, deque?: Deque<T>) => void | Yes | Callback invoked to traverse the elements in the Deque. |
+| thisArg | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
 
@@ -161,6 +167,8 @@ Obtains the first element of this Deque.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Deque-getFirst(): T--><!--Device-Deque-getFirst(): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -202,6 +210,8 @@ Obtains the last element of this Deque.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Deque-getLast(): T--><!--Device-Deque-getLast(): T-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -241,6 +251,8 @@ Checks whether this Deque has the specified element.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Deque-has(element: T): boolean--><!--Device-Deque-has(element: T): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -283,6 +295,8 @@ Inserts an element at the end of this Deque.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Deque-insertEnd(element: T): void--><!--Device-Deque-insertEnd(element: T): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -330,6 +344,8 @@ Inserts an element at the front of this Deque.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Deque-insertFront(element: T): void--><!--Device-Deque-insertFront(element: T): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -376,6 +392,8 @@ Removes the first element of this Deque.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Deque-popFirst(): T--><!--Device-Deque-popFirst(): T-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -416,6 +434,8 @@ Removes the last element of this Deque.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Deque-popLast(): T--><!--Device-Deque-popLast(): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -459,6 +479,8 @@ Number of elements in a Deque.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Deque-length: number--><!--Device-Deque-length: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

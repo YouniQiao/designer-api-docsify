@@ -4,6 +4,8 @@ Enumerates the types of changes that trigger the media asset or album change eve
 
 **Since:** 20
 
+<!--Device-photoAccessHelper-enum NotifyChangeType--><!--Device-photoAccessHelper-enum NotifyChangeType-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## NOTIFY_CHANGE_ADD
@@ -15,6 +17,8 @@ NOTIFY_CHANGE_ADD = 0
 A media asset or an album is created.
 
 **Since:** 20
+
+<!--Device-NotifyChangeType-NOTIFY_CHANGE_ADD = 0--><!--Device-NotifyChangeType-NOTIFY_CHANGE_ADD = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -28,6 +32,8 @@ A media asset or an album is modified.
 
 **Since:** 20
 
+<!--Device-NotifyChangeType-NOTIFY_CHANGE_UPDATE = 1--><!--Device-NotifyChangeType-NOTIFY_CHANGE_UPDATE = 1-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## NOTIFY_CHANGE_REMOVE
@@ -39,6 +45,8 @@ NOTIFY_CHANGE_REMOVE = 2
 A media asset or an album is deleted.
 
 **Since:** 20
+
+<!--Device-NotifyChangeType-NOTIFY_CHANGE_REMOVE = 2--><!--Device-NotifyChangeType-NOTIFY_CHANGE_REMOVE = 2-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

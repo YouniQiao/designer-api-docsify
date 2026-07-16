@@ -18,6 +18,8 @@ Records the trigger event type and time before the start of the animation scene.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-performanceMonitor-function recordInputEventTime(type: ActionType, sourceType: SourceType, time: number): void--><!--Device-performanceMonitor-function recordInputEventTime(type: ActionType, sourceType: SourceType, time: number): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -26,9 +28,9 @@ Records the trigger event type and time before the start of the animation scene.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | ActionType | Yes | Trigger mode of the user scene. |
-| sourceType | SourceType | Yes | Trigger source of the user scene. |
-| time | number | Yes | Scenario trigger timestamp (in ms), for example, **1751508570794**. Values equal to orless than 0 will be automatically converted to the current system time, while positive values will be used as-is. Incorrect parameters may cause abnormal response latency metrics. |
+| type | [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-actiontype-t.md) | Yes | Trigger mode of the user scene. |
+| sourceType | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-sourcetype-e.md) | Yes | Trigger source of the user scene. |
+| time | number | Yes | Scenario trigger timestamp (in ms), for example, **1751508570794**. Values equal to or less than 0 will be automatically converted to the current system time, while positive values will be used as-is. Incorrect parameters may cause abnormal response latency metrics. |
 
 **Error codes:**
 

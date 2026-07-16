@@ -1,9 +1,10 @@
 # SubIntentInfoForConfiguration (System API)
 
-Describes the unique information of the
-[intent developed using a configuration file](../../../../application-models/insight-intent-config-development.md).
+Describes the unique information of the [intent developed using a configuration file](../../../../application-models/insight-intent-config-development.md).
 
 **Since:** 23
+
+<!--Device-insightIntentDriver-interface SubIntentInfoForConfiguration--><!--Device-insightIntentDriver-interface SubIntentInfoForConfiguration-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -29,6 +30,8 @@ Entity information contained in the intent.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SubIntentInfoForConfiguration-readonly entities?: Record<string, Object>--><!--Device-SubIntentInfoForConfiguration-readonly entities?: Record<string, Object>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -46,6 +49,8 @@ Information about the widget bound to the intent.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SubIntentInfoForConfiguration-readonly form?: FormIntentInfo--><!--Device-SubIntentInfoForConfiguration-readonly form?: FormIntentInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -65,6 +70,8 @@ Data format of intent parameters, which is used to define the input data format 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SubIntentInfoForConfiguration-readonly inputParams?: Array<Record<string, Object>>--><!--Device-SubIntentInfoForConfiguration-readonly inputParams?: Array<Record<string, Object>>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -82,6 +89,8 @@ Data format for the results returned by intent calls. It defines how the data sh
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SubIntentInfoForConfiguration-readonly outputParams?: Array<Record<string, Object>>--><!--Device-SubIntentInfoForConfiguration-readonly outputParams?: Array<Record<string, Object>>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -101,6 +110,8 @@ Information about the ServiceExtensionAbility bound to the intent.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SubIntentInfoForConfiguration-readonly serviceExtension?: ServiceExtensionIntentInfo--><!--Device-SubIntentInfoForConfiguration-readonly serviceExtension?: ServiceExtensionIntentInfo-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -118,6 +129,8 @@ Relative path of the intent execution file. The value is a string of a maximum o
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SubIntentInfoForConfiguration-readonly srcEntry: string--><!--Device-SubIntentInfoForConfiguration-readonly srcEntry: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -137,6 +150,8 @@ Information about the UIAbility bound to the intent, including the **ability** a
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SubIntentInfoForConfiguration-readonly uiAbility?: UIAbilityIntentInfo--><!--Device-SubIntentInfoForConfiguration-readonly uiAbility?: UIAbilityIntentInfo-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -154,6 +169,8 @@ Information about the UIExtensionAbility bound to the intent.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SubIntentInfoForConfiguration-readonly uiExtension?: UIExtensionIntentInfo--><!--Device-SubIntentInfoForConfiguration-readonly uiExtension?: UIExtensionIntentInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

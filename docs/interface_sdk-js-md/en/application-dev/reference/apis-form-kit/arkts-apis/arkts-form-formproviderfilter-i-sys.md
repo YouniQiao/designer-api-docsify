@@ -4,6 +4,8 @@ Information about a running form.
 
 **Since:** 10
 
+<!--Device-formInfo-interface FormProviderFilter--><!--Device-formInfo-interface FormProviderFilter-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Obtains the ability name of the provider application module.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FormProviderFilter-abilityName ?: string--><!--Device-FormProviderFilter-abilityName ?: string-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -46,6 +50,8 @@ Obtains the bundle name of the provider application.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FormProviderFilter-bundleName: string--><!--Device-FormProviderFilter-bundleName: string-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -63,6 +69,8 @@ Obtains the form name of the provider application form.
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FormProviderFilter-formName ?: string--><!--Device-FormProviderFilter-formName ?: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -84,6 +92,8 @@ Indicates whether to include unused form.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FormProviderFilter-isUnusedIncluded?: boolean--><!--Device-FormProviderFilter-isUnusedIncluded?: boolean-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -101,6 +111,8 @@ Obtains the module name of the provider application module.
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FormProviderFilter-moduleName ?: string--><!--Device-FormProviderFilter-moduleName ?: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 

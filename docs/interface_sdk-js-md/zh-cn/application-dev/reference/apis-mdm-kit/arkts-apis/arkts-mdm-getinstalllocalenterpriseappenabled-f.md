@@ -1,5 +1,11 @@
 # getInstallLocalEnterpriseAppEnabled
 
+## 导入模块
+
+```TypeScript
+import { systemManager } from '@kit.MDMKit';
+```
+
 ## getInstallLocalEnterpriseAppEnabled
 
 ```TypeScript
@@ -13,6 +19,8 @@ function getInstallLocalEnterpriseAppEnabled(admin: Want | null): boolean
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-systemManager-function getInstallLocalEnterpriseAppEnabled(admin: Want | null): boolean--><!--Device-systemManager-function getInstallLocalEnterpriseAppEnabled(admin: Want | null): boolean-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

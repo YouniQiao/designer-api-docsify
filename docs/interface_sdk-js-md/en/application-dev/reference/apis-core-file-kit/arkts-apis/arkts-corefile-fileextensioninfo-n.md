@@ -1,11 +1,12 @@
 # fileExtensionInfo
 
-The **fileExtensionInfo** module defines attributes in **RootInfo** and **FileInfo** of the user file access and
-management module.
+The **fileExtensionInfo** module defines attributes in **RootInfo** and **FileInfo** of the user file access and management module.
 
 **Since:** 9
 
 **Deprecated since:** 23
+
+<!--Device-unnamed-declare namespace fileExtensionInfo--><!--Device-unnamed-declare namespace fileExtensionInfo-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 

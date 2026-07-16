@@ -4,6 +4,8 @@ Defines the callback used when a web page triggers **prompt()**.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface OnPromptEvent--><!--Device-unnamed-declare interface OnPromptEvent-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## message
@@ -19,6 +21,8 @@ Information displayed in the dialog box.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-OnPromptEvent-message: string--><!--Device-OnPromptEvent-message: string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -36,6 +40,8 @@ User operation result that is notified to the **Web** component.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-OnPromptEvent-result: JsResult--><!--Device-OnPromptEvent-result: JsResult-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## url
@@ -52,6 +58,8 @@ URL of the web page where the dialog box is displayed.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-OnPromptEvent-url: string--><!--Device-OnPromptEvent-url: string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## value
@@ -67,6 +75,8 @@ Default information returned by the dialog box.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-OnPromptEvent-value: string--><!--Device-OnPromptEvent-value: string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

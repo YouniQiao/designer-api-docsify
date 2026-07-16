@@ -4,7 +4,15 @@ animator简易动画参数对象。与AnimatorOptions相比，部分动画参数
 
 **起始版本：** 18
 
+<!--Device-unnamed-export declare class SimpleAnimatorOptions--><!--Device-unnamed-export declare class SimpleAnimatorOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@kit.ArkUI';
+```
 
 ## constructor
 
@@ -18,7 +26,9 @@ SimpleAnimatorOptions的构造函数。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SimpleAnimatorOptions-constructor(begin: number, end: number)--><!--Device-SimpleAnimatorOptions-constructor(begin: number, end: number)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,7 +75,9 @@ delay(delay: number): SimpleAnimatorOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SimpleAnimatorOptions-delay(delay: number): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-delay(delay: number): SimpleAnimatorOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -79,7 +91,7 @@ delay(delay: number): SimpleAnimatorOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| SimpleAnimatorOptions | Animator简易动画参数对象。 |
+| [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
 
 **示例：**
 
@@ -117,7 +129,9 @@ direction(direction: PlayMode): SimpleAnimatorOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SimpleAnimatorOptions-direction(direction: PlayMode): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-direction(direction: PlayMode): SimpleAnimatorOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -125,13 +139,13 @@ direction(direction: PlayMode): SimpleAnimatorOptions
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | PlayMode | 是 | 设置animator动画播放方向。<br/>默认值：PlayMode.Normal |
+| direction | [PlayMode](arkts-arkui-playmode-e.md) | 是 | 设置animator动画播放方向。<br/>默认值：PlayMode.Normal |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| SimpleAnimatorOptions | Animator简易动画参数对象。 |
+| [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
 
 ## duration
 
@@ -145,7 +159,9 @@ duration(duration: number): SimpleAnimatorOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SimpleAnimatorOptions-duration(duration: number): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-duration(duration: number): SimpleAnimatorOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -159,7 +175,7 @@ duration(duration: number): SimpleAnimatorOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| SimpleAnimatorOptions | Animator简易动画参数对象。 |
+| [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
 
 **示例：**
 
@@ -197,7 +213,9 @@ easing(curve: string): SimpleAnimatorOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SimpleAnimatorOptions-easing(curve: string): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-easing(curve: string): SimpleAnimatorOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -211,7 +229,7 @@ easing(curve: string): SimpleAnimatorOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| SimpleAnimatorOptions | Animator简易动画参数对象。 |
+| [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
 
 **示例：**
 
@@ -249,7 +267,9 @@ fill(fillMode: FillMode): SimpleAnimatorOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SimpleAnimatorOptions-fill(fillMode: FillMode): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-fill(fillMode: FillMode): SimpleAnimatorOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -257,13 +277,13 @@ fill(fillMode: FillMode): SimpleAnimatorOptions
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fillMode | FillMode | 是 | 设置animator动画填充方式，影响动画delay期间和结束时的表现。<br/>默认值：FillMode.Forwards |
+| fillMode | [FillMode](arkts-arkui-fillmode-e.md) | 是 | 设置animator动画填充方式，影响动画delay期间和结束时的表现。<br/>默认值：FillMode.Forwards |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| SimpleAnimatorOptions | Animator简易动画参数对象。 |
+| [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
 
 ## iterations
 
@@ -277,7 +297,9 @@ iterations(iterations: number): SimpleAnimatorOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SimpleAnimatorOptions-iterations(iterations: number): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-iterations(iterations: number): SimpleAnimatorOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -291,7 +313,7 @@ iterations(iterations: number): SimpleAnimatorOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| SimpleAnimatorOptions | Animator简易动画参数对象。 |
+| [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
 
 **示例：**
 

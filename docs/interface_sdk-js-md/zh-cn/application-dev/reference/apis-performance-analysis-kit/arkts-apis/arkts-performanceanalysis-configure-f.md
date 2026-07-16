@@ -1,5 +1,11 @@
 # configure
 
+## 导入模块
+
+```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+```
+
 ## configure
 
 ```TypeScript
@@ -10,7 +16,9 @@ function configure(config: ConfigOption): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-hiAppEvent-function configure(config: ConfigOption): void--><!--Device-hiAppEvent-function configure(config: ConfigOption): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -18,7 +26,7 @@ function configure(config: ConfigOption): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | ConfigOption | 是 | 应用事件打点配置项对象。 |
+| config | [ConfigOption](arkts-performanceanalysis-configoption-i.md) | 是 | 应用事件打点配置项对象。 |
 
 **错误码：**
 

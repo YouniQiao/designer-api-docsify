@@ -18,6 +18,8 @@ Get the SMS short code type of the destination address.
 
 **Required permissions:** ohos.permission.SEND_MESSAGES
 
+<!--Device-sms-function getSmsShortCodeType(slotId: int, destAddr: string): Promise<SmsShortCodeType>--><!--Device-sms-function getSmsShortCodeType(slotId: int, destAddr: string): Promise<SmsShortCodeType>-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -33,7 +35,7 @@ Get the SMS short code type of the destination address.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SmsShortCodeType&gt; | Returns the SMS short code type of the sending destination address. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SmsShortCodeType> | Returns the SMS short code type of the sending destination address. |
 
 **Error codes:**
 

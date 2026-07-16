@@ -1,10 +1,10 @@
 # DataSharePredicates (System API)
 
-Provides APIs for setting different **DataSharePredicates** objects. This type is not multi-thread safe. If a
-**DataSharePredicates** instance is operated by multiple threads at the same time in an application, use a lock for
-it.
+Provides APIs for setting different **DataSharePredicates** objects. This type is not multi-thread safe. If a **DataSharePredicates** instance is operated by multiple threads at the same time in an application, use a lock for it.
 
 **Since:** 10
+
+<!--Device-dataSharePredicates-class DataSharePredicates--><!--Device-dataSharePredicates-class DataSharePredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -32,13 +32,15 @@ Currently, both the RDB store and KV store support this predicate.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-DataSharePredicates-and(): DataSharePredicates--><!--Device-DataSharePredicates-and(): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object with the AND operator. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c.md) | **DataSharePredicates** object with the AND operator. |
 
 **Example**
 
@@ -56,8 +58,7 @@ predicates.equalTo("NAME", "lisi")
 equalTo(field: string, value: ValueType): DataSharePredicates
 ```
 
-Creates a **DataSharePredicates** object to search for the records in the specified column that are equal to the
-given value.
+Creates a **DataSharePredicates** object to search for the records in the specified column that are equal to the given value.
 
 Currently, both the RDB store and KV store support this predicate.
 
@@ -67,20 +68,22 @@ Currently, both the RDB store and KV store support this predicate.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-DataSharePredicates-equalTo(field: string, value: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-equalTo(field: string, value: ValueType): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or**null**, the predicate used is invalid. |
-| value | ValueType | Yes | Value to match.If this parameter is set to **undefined** or **null**, thepredicate used is invalid. |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Value to match.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -106,20 +109,22 @@ Currently, both the RDB store and KV store support this predicate.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-DataSharePredicates-in(field: string, value: Array<ValueType>): DataSharePredicates--><!--Device-DataSharePredicates-in(field: string, value: Array<ValueType>): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or**null**, the predicate used is invalid. |
-| value | Array&lt;ValueType&gt; | Yes | Array of the values to match. |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
+| value | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ValueType> | Yes | Array of the values to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -145,20 +150,22 @@ Currently, both the RDB store and KV store support this predicate.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-DataSharePredicates-limit(total: int, offset: int): DataSharePredicates--><!--Device-DataSharePredicates-limit(total: int, offset: int): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| total | number | Yes | Maximum number of records.If the KV store is used and **total** is **undefined** or**null**, the maximum number of records is 0. For details about the value range, see the description of thisparameter in [limit](arkts-arkdata-query-c.md#limit-1).If the RDB storeis used and **total** is **undefined** or **null**, the maximum number of records is not limited. For detailsabout the value range, see the description of this parameter in[limitAs](arkts-arkdata-query-c.md#limit-1). |
-| offset | number | Yes | Start position of the query result.If this parameter is set to **undefined** or**null**, the start position is the beginning of the result set.For details about the value range in a KVstore, see the description of this parameter in[limit](arkts-arkdata-query-c.md#limit-1).For details about the valuerange in an RDB store, see the description of the **rowOffset** parameter in[offsetAs](arkts-arkdata-rdbpredicates-c.md#offsetas-1). |
+| total | number | Yes | Maximum number of records.If the KV store is used and **total** is **undefined** or **null**, the maximum number of records is 0. For details about the value range, see the description of this parameter in [limit](arkts-arkdata-query-c.md#limit-1).If the RDB store is used and **total** is **undefined** or **null**, the maximum number of records is not limited. For details about the value range, see the description of this parameter in [limitAs](arkts-arkdata-query-c.md#limit-1). |
+| offset | number | Yes | Start position of the query result.If this parameter is set to **undefined** or **null**, the start position is the beginning of the result set.For details about the value range in a KV store, see the description of this parameter in [limit](arkts-arkdata-query-c.md#limit-1).For details about the value range in an RDB store, see the description of the **rowOffset** parameter in [offsetAs](arkts-arkdata-rdbpredicates-c.md#offsetas-1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -184,19 +191,21 @@ Currently, both the RDB store and KV store support this predicate.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-DataSharePredicates-orderByAsc(field: string): DataSharePredicates--><!--Device-DataSharePredicates-orderByAsc(field: string): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or**null**, the predicate used is invalid. |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -222,19 +231,21 @@ Currently, both the RDB store and KV store support this predicate.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-DataSharePredicates-orderByDesc(field: string): DataSharePredicates--><!--Device-DataSharePredicates-orderByDesc(field: string): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or**null**, the predicate used is invalid. |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c.md) | **DataSharePredicates** object created. |
 
 **Example**
 

@@ -1,18 +1,160 @@
 # Offset
 
 ```TypeScript
-export type Offset = Vector2
+declare type Offset = {
+  /**
+   * dx property.
+   *
+   *****/
+  /**
+   * dx property.
+   *
+   ******/
+  /**
+   * dx property.
+   *
+   *******/
+  dx: Length;
+
+  /**
+   * dy property.
+   *
+   *****/
+  /**
+   * dy property.
+   *
+   ******/
+  /**
+   * dy property.
+   *
+   *******/
+  dy: Length;
+}
 ```
 
-Sets the offset of the component or effect.
+Defines the offset property.
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+<!--Device-unnamed-declare type Offset = {
+  /**
+   * dx property.
+   *
+   *****/
+  /**
+   * dx property.
+   *
+   ******/
+  /**
+   * dx property.
+   *
+   *******/
+  dx: Length;
+
+  /**
+   * dy property.
+   *
+   *****/
+  /**
+   * dy property.
+   *
+   ******/
+  /**
+   * dy property.
+   *
+   *******/
+  dy: Length;
+}--><!--Device-unnamed-declare type Offset = {
+  /**
+   * dx property.
+   *
+   *****/
+  /**
+   * dx property.
+   *
+   ******/
+  /**
+   * dx property.
+   *
+   *******/
+  dx: Length;
+
+  /**
+   * dy property.
+   *
+   *****/
+  /**
+   * dy property.
+   *
+   ******/
+  /**
+   * dy property.
+   *
+   *******/
+  dy: Length;
+}-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** Vector2
+**Property type:** {
+  /**
+   * dx property.
+   *
+   * @type { Length }
+   * @syscap SystemCapability.ArkUI.ArkUI.Full
+   * @FaAndStageModel
+   * @since 7
+   */
+  /**
+   * dx property.
+   *
+   * @type { Length }
+   * @syscap SystemCapability.ArkUI.ArkUI.Full
+   * @FaAndStageModel
+   * @crossplatform
+   * @since 10
+   */
+  /**
+   * dx property.
+   *
+   * @type { Length }
+   * @syscap SystemCapability.ArkUI.ArkUI.Full
+   * @FaAndStageModel
+   * @crossplatform
+   * @atomicservice
+   * @since 11
+   */
+  dx: Length;
+
+  /**
+   * dy property.
+   *
+   * @type { Length }
+   * @syscap SystemCapability.ArkUI.ArkUI.Full
+   * @FaAndStageModel
+   * @since 7
+   */
+  /**
+   * dy property.
+   *
+   * @type { Length }
+   * @syscap SystemCapability.ArkUI.ArkUI.Full
+   * @FaAndStageModel
+   * @crossplatform
+   * @since 10
+   */
+  /**
+   * dy property.
+   *
+   * @type { Length }
+   * @syscap SystemCapability.ArkUI.ArkUI.Full
+   * @FaAndStageModel
+   * @crossplatform
+   * @atomicservice
+   * @since 11
+   */
+  dy: Length;
+}
 

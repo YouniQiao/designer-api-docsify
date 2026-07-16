@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-i18n-export interface ISO8601DateTimeFormatOptions--><!--Device-i18n-export interface ISO8601DateTimeFormatOptions-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
 
 ## dateFormat
 
@@ -20,8 +28,7 @@ dateFormat?: 'calendar' | 'ordinal' | 'week'
 
 **week**：日期模式为**YYYY-Www-D**。
 
-默认值：**calendar**。模式中字符含义参考
-[日期字段符号表](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)。
+默认值：**calendar**。模式中字符含义参考[日期字段符号表](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)。
 
 **类型：** 'calendar' | 'ordinal' | 'week'
 
@@ -29,7 +36,9 @@ dateFormat?: 'calendar' | 'ordinal' | 'week'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ISO8601DateTimeFormatOptions-dateFormat?: 'calendar' | 'ordinal' | 'week'--><!--Device-ISO8601DateTimeFormatOptions-dateFormat?: 'calendar' | 'ordinal' | 'week'-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -47,7 +56,9 @@ displayTimeZone?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ISO8601DateTimeFormatOptions-displayTimeZone?: boolean--><!--Device-ISO8601DateTimeFormatOptions-displayTimeZone?: boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -71,7 +82,9 @@ separatorStyle?: 'extended' | 'basic'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ISO8601DateTimeFormatOptions-separatorStyle?: 'extended' | 'basic'--><!--Device-ISO8601DateTimeFormatOptions-separatorStyle?: 'extended' | 'basic'-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -101,7 +114,9 @@ timePrecision?: 'dateOnly' | 'hours' | 'minutes' | 'seconds' | 'milliSeconds'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ISO8601DateTimeFormatOptions-timePrecision?: 'dateOnly' | 'hours' | 'minutes' | 'seconds' | 'milliSeconds'--><!--Device-ISO8601DateTimeFormatOptions-timePrecision?: 'dateOnly' | 'hours' | 'minutes' | 'seconds' | 'milliSeconds'-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -119,7 +134,9 @@ timeZone?: TimeZone
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ISO8601DateTimeFormatOptions-timeZone?: TimeZone--><!--Device-ISO8601DateTimeFormatOptions-timeZone?: TimeZone-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

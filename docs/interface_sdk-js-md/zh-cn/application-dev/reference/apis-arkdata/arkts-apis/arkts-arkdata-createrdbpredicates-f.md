@@ -1,5 +1,11 @@
 # createRdbPredicates
 
+## 导入模块
+
+```TypeScript
+import { dataAbility } from '@kit.ArkData';
+```
+
 ## createRdbPredicates
 
 ```TypeScript
@@ -10,6 +16,8 @@ function createRdbPredicates(name: string, dataAbilityPredicates: DataAbilityPre
 
 **起始版本：** 7
 
+<!--Device-dataAbility-function createRdbPredicates(name: string, dataAbilityPredicates: DataAbilityPredicates): rdb.RdbPredicates--><!--Device-dataAbility-function createRdbPredicates(name: string, dataAbilityPredicates: DataAbilityPredicates): rdb.RdbPredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -17,7 +25,7 @@ function createRdbPredicates(name: string, dataAbilityPredicates: DataAbilityPre
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 数据库表中的表名，不能为空字符串。 |
-| dataAbilityPredicates | DataAbilityPredicates | 是 | DataAbility谓词。 |
+| dataAbilityPredicates | [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | 是 | DataAbility谓词。 |
 
 **返回值：**
 

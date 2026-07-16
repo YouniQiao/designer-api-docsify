@@ -6,6 +6,8 @@ Provides methods for accessing NDEF tag.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface NdefTag extends TagSession--><!--Device-unnamed-export interface NdefTag extends TagSession-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## canSetReadOnly
@@ -21,6 +23,8 @@ Checks NDEF tag can be set read-only.
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NdefTag-canSetReadOnly(): boolean--><!--Device-NdefTag-canSetReadOnly(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -49,13 +53,15 @@ Gets the NDEF message that was read from NDEF tag when tag discovery.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NdefTag-getNdefMessage(): NdefMessage--><!--Device-NdefTag-getNdefMessage(): NdefMessage-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| NdefMessage | The instance of NdefMessage. |
+| [NdefMessage](arkts-connectivity-ndefmessage-i.md) | The instance of NdefMessage. |
 
 ## getNdefTagType
 
@@ -68,6 +74,8 @@ Gets the type of NDEF tag.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NdefTag-getNdefTagType(): tag.NfcForumType--><!--Device-NdefTag-getNdefTagType(): tag.NfcForumType-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -88,6 +96,8 @@ Converts the NFC forum type into string defined in NFC forum.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NdefTag-getNdefTagTypeString(type: tag.NfcForumType): string--><!--Device-NdefTag-getNdefTagTypeString(type: tag.NfcForumType): string-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -121,6 +131,8 @@ Checks if NDEF tag is writable.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NdefTag-isNdefWritable(): boolean--><!--Device-NdefTag-isNdefWritable(): boolean-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
@@ -143,13 +155,15 @@ Reads NDEF message on this tag.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NdefTag-readNdef(): Promise<NdefMessage>--><!--Device-NdefTag-readNdef(): Promise<NdefMessage>-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NdefMessage&gt; | The NDEF message in tag. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NdefMessage> | The NDEF message in tag. |
 
 **Error codes:**
 
@@ -174,13 +188,15 @@ Reads NDEF message on this tag.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NdefTag-readNdef(callback: AsyncCallback<NdefMessage>): void--><!--Device-NdefTag-readNdef(callback: AsyncCallback<NdefMessage>): void-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;NdefMessage&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<NdefMessage> | Yes | The callback. |
 
 **Error codes:**
 
@@ -205,13 +221,15 @@ Sets the NDEF tag read-only.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NdefTag-setReadOnly(): Promise<void>--><!--Device-NdefTag-setReadOnly(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The void |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The void |
 
 **Error codes:**
 
@@ -236,13 +254,15 @@ Sets the NDEF tag read-only.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NdefTag-setReadOnly(callback: AsyncCallback<void>): void--><!--Device-NdefTag-setReadOnly(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback. |
 
 **Error codes:**
 
@@ -267,19 +287,21 @@ Writes NDEF message into this tag.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NdefTag-writeNdef(msg: NdefMessage): Promise<void>--><!--Device-NdefTag-writeNdef(msg: NdefMessage): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msg | NdefMessage | Yes | The NDEF message to be written. |
+| msg | [NdefMessage](arkts-connectivity-ndefmessage-i.md) | Yes | The NDEF message to be written. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The void |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The void |
 
 **Error codes:**
 
@@ -304,14 +326,16 @@ Writes NDEF message into this tag.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NdefTag-writeNdef(msg: NdefMessage, callback: AsyncCallback<void>): void--><!--Device-NdefTag-writeNdef(msg: NdefMessage, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msg | NdefMessage | Yes | The NDEF message to be written. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback. |
+| msg | [NdefMessage](arkts-connectivity-ndefmessage-i.md) | Yes | The NDEF message to be written. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback. |
 
 **Error codes:**
 

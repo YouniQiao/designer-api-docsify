@@ -1,10 +1,10 @@
 # AudioHapticPlayer
 
-Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, you must use
-[createPlayer](arkts-audio-audiohapticmanager-i.md#createplayer-1)
-to create an AudioHapticPlayer instance.
+Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, you must use [createPlayer](arkts-audio-audiohapticmanager-i.md#createplayer-1)to create an AudioHapticPlayer instance.
 
 **Since:** 11
+
+<!--Device-audioHaptic-interface AudioHapticPlayer--><!--Device-audioHaptic-interface AudioHapticPlayer-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -20,10 +20,11 @@ import { audioHaptic } from '@kit.AudioKit';
 enableHapticsInSilentMode(enable: boolean): void
 ```
 
-Enable haptics when the ringer mode is silent mode.
-This function should be called before player start or after stop, and before release.
+Enable haptics when the ringer mode is silent mode.This function should be called before player start or after stop, and before release.
 
 **Since:** 20
+
+<!--Device-AudioHapticPlayer-enableHapticsInSilentMode(enable: boolean): void--><!--Device-AudioHapticPlayer-enableHapticsInSilentMode(enable: boolean): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -52,6 +53,8 @@ Check whether the device supports haptics intensity adjustment.
 
 **Since:** 20
 
+<!--Device-AudioHapticPlayer-isHapticsIntensityAdjustmentSupported(): boolean--><!--Device-AudioHapticPlayer-isHapticsIntensityAdjustmentSupported(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
 **System API:** This is a system API.
@@ -78,6 +81,8 @@ Check whether the device supports haptics intensity ramp effect.
 
 **Since:** 20
 
+<!--Device-AudioHapticPlayer-isHapticsRampSupported(): boolean--><!--Device-AudioHapticPlayer-isHapticsRampSupported(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
 **System API:** This is a system API.
@@ -100,10 +105,11 @@ Check whether the device supports haptics intensity ramp effect.
 setHapticsIntensity(intensity: number): Promise<void>
 ```
 
-Set haptics intensity for this player. This method uses a promise to return the result.
-This function should be called before player release, and can only set once for each starting process.
+Set haptics intensity for this player. This method uses a promise to return the result.This function should be called before player release, and can only set once for each starting process.
 
 **Since:** 20
+
+<!--Device-AudioHapticPlayer-setHapticsIntensity(intensity: double): Promise<void>--><!--Device-AudioHapticPlayer-setHapticsIntensity(intensity: double): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -119,7 +125,7 @@ This function should be called before player release, and can only set once for 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -136,10 +142,11 @@ This function should be called before player release, and can only set once for 
 setHapticsRamp(duration: number, startIntensity: number, endIntensity: number): Promise<void>
 ```
 
-Set haptics intensity ramp effect for this player. This method uses a promise to return the result.
-This function should be called before player start or after stop, and before release.
+Set haptics intensity ramp effect for this player. This method uses a promise to return the result.This function should be called before player start or after stop, and before release.
 
 **Since:** 20
+
+<!--Device-AudioHapticPlayer-setHapticsRamp(duration: int, startIntensity: double, endIntensity: double): Promise<void>--><!--Device-AudioHapticPlayer-setHapticsRamp(duration: int, startIntensity: double, endIntensity: double): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -157,7 +164,7 @@ This function should be called before player start or after stop, and before rel
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 

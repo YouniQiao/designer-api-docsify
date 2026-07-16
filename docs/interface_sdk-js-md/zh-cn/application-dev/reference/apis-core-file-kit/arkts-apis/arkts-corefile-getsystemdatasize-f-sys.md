@@ -1,5 +1,11 @@
 # getSystemDataSize（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { storageStatistics } from '@kit.CoreFileKit';
+```
+
 ## getSystemDataSize
 
 ```TypeScript
@@ -14,6 +20,8 @@ function getSystemDataSize(): Promise<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-storageStatistics-function getSystemDataSize(): Promise<long>--><!--Device-storageStatistics-function getSystemDataSize(): Promise<long>-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ function getSystemDataSize(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回系统数据的总空间大小，单位：Byte。 |
+| Promise<number> | Promise对象，返回系统数据的总空间大小，单位：Byte。 |
 
 **错误码：**
 

@@ -12,14 +12,15 @@ import { bundleManager } from '@kit.AbilityKit';
 function queryAbilityInfoSync(want: Want, abilityFlags: number, userId?: number): Array<AbilityInfo>
 ```
 
-Obtains the ability information based on the given want, ability flags, and user ID. This API returns the result
-synchronously.
+Obtains the ability information based on the given want, ability flags, and user ID. This API returns the result synchronously.
 
 No permission is required for obtaining the caller's own information.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function queryAbilityInfoSync(want: Want, abilityFlags: int, userId?: int): Array<AbilityInfo>--><!--Device-bundleManager-function queryAbilityInfoSync(want: Want, abilityFlags: int, userId?: int): Array<AbilityInfo>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -29,15 +30,15 @@ No permission is required for obtaining the caller's own information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want containing the bundle name to query. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want containing the bundle name to query. |
 | abilityFlags | number | Yes | Type of the ability information to obtain. |
-| userId | number | No | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;AbilityInfo&gt; | An array of ability information. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<AbilityInfo> | An array of ability information. |
 
 **Error codes:**
 
@@ -45,7 +46,7 @@ No permission is required for obtaining the caller's own information.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicitquery. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. At least one parameter(action, entity, uri or type) is required for implicit query. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability is not found. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified userId is invalid. |

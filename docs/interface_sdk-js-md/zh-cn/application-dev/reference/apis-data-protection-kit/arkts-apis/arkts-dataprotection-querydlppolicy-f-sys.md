@@ -1,23 +1,30 @@
 # queryDlpPolicy（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+```
+
 ## queryDlpPolicy
 
 ```TypeScript
 function queryDlpPolicy(dlpFd: number): Promise<string>
 ```
 
-在DLP文件中解析文件头，获取DLP明文策略。返回的策略JSON字符串包含[DLPProperty](arkts-dataprotection-dlpproperty-i.md)和
-[CustomProperty](arkts-dataprotection-customproperty-i.md)信息。使用Promise异步回调。
+在DLP文件中解析文件头，获取DLP明文策略。返回的策略JSON字符串包含[DLPProperty](arkts-dataprotection-dlpproperty-i-sys.md)和[CustomProperty](arkts-dataprotection-customproperty-i-sys.md)信息。使用Promise异步回调。
 
 该接口可用于在查看DLP文件权限配置等场景中，获取文件的策略信息以便进行分析。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 该接口仅支持企业账号调用。
 
 **起始版本：** 21
 
 **需要权限：** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
+
+<!--Device-dlpPermission-function queryDlpPolicy(dlpFd: number): Promise<string>--><!--Device-dlpPermission-function queryDlpPolicy(dlpFd: number): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -33,7 +40,7 @@ function queryDlpPolicy(dlpFd: number): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回当前DLP策略的JSON字符串。长度不超过4194304字节。 |
+| Promise<string> | Promise对象，返回当前DLP策略的JSON字符串。长度不超过4194304字节。 |
 
 **错误码：**
 

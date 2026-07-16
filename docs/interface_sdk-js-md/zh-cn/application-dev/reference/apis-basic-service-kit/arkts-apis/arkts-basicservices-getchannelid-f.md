@@ -1,5 +1,11 @@
 # getChannelId
 
+## 导入模块
+
+```TypeScript
+import { customConfig } from '@kit.BasicServicesKit';
+```
+
 ## getChannelId
 
 ```TypeScript
@@ -10,7 +16,9 @@ function getChannelId(): string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本13开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+
+<!--Device-customConfig-function getChannelId(): string--><!--Device-customConfig-function getChannelId(): string-End-->
 
 **系统能力：** SystemCapability.Customization.CustomConfig
 

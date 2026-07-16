@@ -1,9 +1,10 @@
 # InsightIntentInfoFilter (System API)
 
-Defines an intent filter, which specifies the criteria for selecting target intents. It is used to filter intents
-on the device that meet these criteria.
+Defines an intent filter, which specifies the criteria for selecting target intents. It is used to filter intents on the device that meet these criteria.
 
 **Since:** 23
+
+<!--Device-insightIntentDriver-interface InsightIntentInfoFilter--><!--Device-insightIntentDriver-interface InsightIntentInfoFilter-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -29,6 +30,8 @@ Bundle name of the application to which the intent belongs.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-InsightIntentInfoFilter-bundleName?: string--><!--Device-InsightIntentInfoFilter-bundleName?: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -39,15 +42,15 @@ Bundle name of the application to which the intent belongs.
 intentFlags: number
 ```
 
-Flag of the intent information ([InsightIntentInfo](arkts-ability-insightintentinfo-i-sys.md)). It is used to
-query full or brief intent information. For details, see
-[GetInsightIntentFlag](arkts-ability-getinsightintentflag-e-sys.md).
+Flag of the intent information ([InsightIntentInfo](arkts-ability-insightintentinfo-i-sys.md)). It is used to query full or brief intent information. For details, see [GetInsightIntentFlag](arkts-ability-getinsightintentflag-e-sys.md).
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-InsightIntentInfoFilter-intentFlags: int--><!--Device-InsightIntentInfoFilter-intentFlags: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -67,6 +70,8 @@ Intent name.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-InsightIntentInfoFilter-intentName?: string--><!--Device-InsightIntentInfoFilter-intentName?: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -85,6 +90,8 @@ Module name of the application to which the intent belongs.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-InsightIntentInfoFilter-moduleName?: string--><!--Device-InsightIntentInfoFilter-moduleName?: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -99,14 +106,15 @@ ID of the user to which the intent belongs.
 
 **NOTE**
 
-If the user ID of the calling application is different from the user ID of the intent, the calling application
-must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission.
+If the user ID of the calling application is different from the user ID of the intent, the calling application must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-InsightIntentInfoFilter-userId?: int--><!--Device-InsightIntentInfoFilter-userId?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

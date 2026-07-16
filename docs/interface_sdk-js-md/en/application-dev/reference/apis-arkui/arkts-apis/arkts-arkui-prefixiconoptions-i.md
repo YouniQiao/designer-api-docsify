@@ -12,6 +12,8 @@ Inherits from [IconCommonOptions](arkts-arkui-iconcommonoptions-i.md).
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-unnamed-export interface PrefixIconOptions extends IconCommonOptions--><!--Device-unnamed-export interface PrefixIconOptions extends IconCommonOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

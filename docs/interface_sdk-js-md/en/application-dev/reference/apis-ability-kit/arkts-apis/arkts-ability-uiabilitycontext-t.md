@@ -12,6 +12,8 @@ Defines the context environment for the [UIAbility](arkts-app-ability-uiability.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-common-export type UIAbilityContext = _UIAbilityContext.default--><!--Device-common-export type UIAbilityContext = _UIAbilityContext.default-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Property type:** _UIAbilityContext.default

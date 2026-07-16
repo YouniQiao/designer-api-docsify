@@ -1,5 +1,11 @@
 # createColorPicker
 
+## 导入模块
+
+```TypeScript
+import { effectKit } from '@kit.ArkGraphics2D';
+```
+
 ## createColorPicker
 
 ```TypeScript
@@ -10,9 +16,11 @@ function createColorPicker(source: image.PixelMap): Promise<ColorPicker>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-effectKit-function createColorPicker(source: image.PixelMap): Promise<ColorPicker>--><!--Device-effectKit-function createColorPicker(source: image.PixelMap): Promise<ColorPicker>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -26,7 +34,7 @@ function createColorPicker(source: image.PixelMap): Promise<ColorPicker>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ColorPicker&gt; | - Promise对象。返回创建的ColorPicker实例。 |
+| Promise<ColorPicker> | - Promise对象。返回创建的ColorPicker实例。 |
 
 **错误码：**
 
@@ -76,9 +84,11 @@ function createColorPicker(source: image.PixelMap, region: Array<number>): Promi
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-effectKit-function createColorPicker(source: image.PixelMap, region: Array<double>): Promise<ColorPicker>--><!--Device-effectKit-function createColorPicker(source: image.PixelMap, region: Array<double>): Promise<ColorPicker>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -87,13 +97,13 @@ function createColorPicker(source: image.PixelMap, region: Array<number>): Promi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | source | image.PixelMap | 是 | image模块创建的PixelMap实例。 可通过图片解码或直接创建获得，具体可见[Image Kit简介](../../../../media/image/image-overview.md)。 |
-| region | Array&lt;number&gt; | 是 | 指定图片的取色区域。 数组第三个元素需大于第一个元素，第四个元素需大于第二个元素。 |
+| region | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<number> | 是 | 指定图片的取色区域。 数组第三个元素需大于第一个元素，第四个元素需大于第二个元素。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ColorPicker&gt; | - Promise对象。返回创建的ColorPicker实例。 |
+| Promise<ColorPicker> | - Promise对象。返回创建的ColorPicker实例。 |
 
 **错误码：**
 
@@ -143,9 +153,11 @@ function createColorPicker(source: image.PixelMap, callback: AsyncCallback<Color
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-effectKit-function createColorPicker(source: image.PixelMap, callback: AsyncCallback<ColorPicker>): void--><!--Device-effectKit-function createColorPicker(source: image.PixelMap, callback: AsyncCallback<ColorPicker>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -154,7 +166,7 @@ function createColorPicker(source: image.PixelMap, callback: AsyncCallback<Color
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | source | image.PixelMap | 是 | image模块创建的PixelMap实例。 可通过图片解码或直接创建获得，具体可见[Image Kit简介](../../../../media/image/image-overview.md)。 |
-| callback | AsyncCallback&lt;ColorPicker&gt; | 是 | 回调函数。返回创建的ColorPicker实例。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ColorPicker> | 是 | 回调函数。返回创建的ColorPicker实例。 |
 
 **错误码：**
 
@@ -204,9 +216,11 @@ function createColorPicker(source: image.PixelMap, region: Array<number>, callba
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-effectKit-function createColorPicker(source: image.PixelMap, region: Array<double>, callback: AsyncCallback<ColorPicker>): void--><!--Device-effectKit-function createColorPicker(source: image.PixelMap, region: Array<double>, callback: AsyncCallback<ColorPicker>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -215,8 +229,8 @@ function createColorPicker(source: image.PixelMap, region: Array<number>, callba
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | source | image.PixelMap | 是 | image模块创建的PixelMap实例。 可通过图片解码或直接创建获得，具体可见[Image Kit简介](../../../../media/image/image-overview.md)。 |
-| region | Array&lt;number&gt; | 是 | 指定图片的取色区域。 数组第三个元素需大于第一个元素，第四个元素需大于第二个元素。 |
-| callback | AsyncCallback&lt;ColorPicker&gt; | 是 | 回调函数。返回创建的ColorPicker实例。 |
+| region | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<number> | 是 | 指定图片的取色区域。 数组第三个元素需大于第一个元素，第四个元素需大于第二个元素。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ColorPicker> | 是 | 回调函数。返回创建的ColorPicker实例。 |
 
 **错误码：**
 

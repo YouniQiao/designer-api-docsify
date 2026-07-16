@@ -13,14 +13,17 @@ function getTargetOverlayModuleInfosByBundleName(targetBundleName: string,
       callback: AsyncCallback<Array<OverlayModuleInfo>>): void
 ```
 
-Obtains the information about all modules with the overlay feature in another application. This API uses an
-asynchronous callback to return the result.
+Obtains the information about all modules with the overlay feature in another application. This API uses an asynchronous callback to return the result.
 
 No permission is required when the specified application is the caller itself.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-overlay-function getTargetOverlayModuleInfosByBundleName(targetBundleName: string,
+      callback: AsyncCallback<Array<OverlayModuleInfo>>): void--><!--Device-overlay-function getTargetOverlayModuleInfosByBundleName(targetBundleName: string,
+      callback: AsyncCallback<Array<OverlayModuleInfo>>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Overlay
 
@@ -31,7 +34,7 @@ No permission is required when the specified application is the caller itself.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | targetBundleName | string | Yes | Bundle name of the application. |
-| callback | AsyncCallback&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used toreturn the result, which is an array of[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) objects. If the operation issuccessful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<OverlayModuleInfo>> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result, which is an array of [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) objects. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -76,14 +79,15 @@ try {
 function getTargetOverlayModuleInfosByBundleName(targetBundleName: string, moduleName: string, callback: AsyncCallback<Array<OverlayModuleInfo>>): void
 ```
 
-Obtains the information about modules with the overlay feature in another application based on the target module
-name. This API uses an asynchronous callback to return the result.
+Obtains the information about modules with the overlay feature in another application based on the target module name. This API uses an asynchronous callback to return the result.
 
 No permission is required when the specified application is the caller itself.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-overlay-function getTargetOverlayModuleInfosByBundleName(targetBundleName: string, moduleName: string, callback: AsyncCallback<Array<OverlayModuleInfo>>): void--><!--Device-overlay-function getTargetOverlayModuleInfosByBundleName(targetBundleName: string, moduleName: string, callback: AsyncCallback<Array<OverlayModuleInfo>>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Overlay
 
@@ -94,8 +98,8 @@ No permission is required when the specified application is the caller itself.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | targetBundleName | string | Yes | Bundle name of the application. |
-| moduleName | string | Yes | Name of the target module. If this parameter is not specified, the API obtains theinformation associated with all modules in that application. |
-| callback | AsyncCallback&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used toreturn the result, which is an array of[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) objects. If the operation issuccessful, **err** is **null**; otherwise, **err** is an error object. |
+| moduleName | string | Yes | Name of the target module. If this parameter is not specified, the API obtains the information associated with all modules in that application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<OverlayModuleInfo>> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result, which is an array of [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) objects. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -143,14 +147,15 @@ try {
 function getTargetOverlayModuleInfosByBundleName(targetBundleName: string, moduleName?: string): Promise<Array<OverlayModuleInfo>>
 ```
 
-Obtains the information about modules with the overlay feature in another application based on the target module
-name. This API uses a promise to return the result.
+Obtains the information about modules with the overlay feature in another application based on the target module name. This API uses a promise to return the result.
 
 No permission is required when the specified application is the caller itself.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-overlay-function getTargetOverlayModuleInfosByBundleName(targetBundleName: string, moduleName?: string): Promise<Array<OverlayModuleInfo>>--><!--Device-overlay-function getTargetOverlayModuleInfosByBundleName(targetBundleName: string, moduleName?: string): Promise<Array<OverlayModuleInfo>>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Overlay
 
@@ -161,13 +166,13 @@ No permission is required when the specified application is the caller itself.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | targetBundleName | string | Yes | Bundle name of the application. |
-| moduleName | string | No | Name of the target module. By default, no value is passed, and the API obtains theinformation associated with all modules in that application. |
+| moduleName | string | No | Name of the target module. By default, no value is passed, and the API obtains the information associated with all modules in that application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Promise used to return the result, which is an array of[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) objects. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<OverlayModuleInfo>> | Promise used to return the result, which is an array of [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) objects. |
 
 **Error codes:**
 

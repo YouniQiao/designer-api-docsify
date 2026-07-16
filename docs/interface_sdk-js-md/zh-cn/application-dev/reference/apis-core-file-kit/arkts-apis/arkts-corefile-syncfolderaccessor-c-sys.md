@@ -4,9 +4,17 @@
 
 **起始版本：** 21
 
+<!--Device-cloudDiskManager-class SyncFolderAccessor--><!--Device-cloudDiskManager-class SyncFolderAccessor-End-->
+
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { cloudDiskManager } from '@kit.CoreFileKit';
+```
 
 ## constructor
 
@@ -19,6 +27,8 @@ SyncFolderAccessor的构造函数，用于获取SyncFolderAccessor类的实例�
 **起始版本：** 21
 
 **需要权限：** ohos.permission.ACCESS_CLOUD_DISK_INFO
+
+<!--Device-SyncFolderAccessor-constructor()--><!--Device-SyncFolderAccessor-constructor()-End-->
 
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
@@ -70,6 +80,8 @@ getAllSyncFolders(): Promise<Array<SyncFolder>>
 
 **需要权限：** ohos.permission.ACCESS_CLOUD_DISK_INFO
 
+<!--Device-SyncFolderAccessor-getAllSyncFolders(): Promise<Array<SyncFolder>>--><!--Device-SyncFolderAccessor-getAllSyncFolders(): Promise<Array<SyncFolder>>-End-->
+
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
 **系统接口：** 此接口为系统接口。
@@ -78,7 +90,7 @@ getAllSyncFolders(): Promise<Array<SyncFolder>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;SyncFolder&gt;&gt; | Promise对象。返回所有网盘应用的同步根列表。 |
+| Promise<Array<SyncFolder>> | Promise对象。返回所有网盘应用的同步根列表。 |
 
 **错误码：**
 

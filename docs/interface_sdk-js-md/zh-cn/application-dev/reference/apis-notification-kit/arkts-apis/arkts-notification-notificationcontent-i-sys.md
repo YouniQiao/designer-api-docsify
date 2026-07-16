@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface NotificationContent--><!--Device-unnamed-export interface NotificationContent-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## liveView
@@ -17,6 +19,8 @@ liveView?: NotificationLiveViewContent
 **类型：** NotificationLiveViewContent
 
 **起始版本：** 11
+
+<!--Device-NotificationContent-liveView?: NotificationLiveViewContent--><!--Device-NotificationContent-liveView?: NotificationLiveViewContent-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

@@ -4,6 +4,8 @@ Describes the desired display orientation for image content.
 
 **Since:** 14
 
+<!--Device-unnamed-declare enum ImageRotateOrientation--><!--Device-unnamed-declare enum ImageRotateOrientation-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## AUTO
@@ -14,9 +16,7 @@ AUTO = 0
 
 Use EXIF metadata for display orientation, with support for rotation and mirroring.
 
-Images of the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md) and
-[DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) types do not contain header information. When this API is called,
-the image display effect remains unchanged.
+Images of the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md) and [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) types do not contain header information. When this API is called,the image display effect remains unchanged.
 
 ![imageRotateOrientation_0](../../../../reference/apis-arkui/arkui-ts/figures/imageRotateOrientation_0.png)
 
@@ -27,6 +27,8 @@ the image display effect remains unchanged.
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-ImageRotateOrientation-AUTO = 0--><!--Device-ImageRotateOrientation-AUTO = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,6 +47,8 @@ Display original pixel data without transformation.
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-ImageRotateOrientation-UP = 1--><!--Device-ImageRotateOrientation-UP = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,6 +70,8 @@ Display the image after rotating it 90 degrees clockwise.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-ImageRotateOrientation-RIGHT = 2--><!--Device-ImageRotateOrientation-RIGHT = 2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DOWN
@@ -85,6 +91,8 @@ Display the image after rotating it 180 degrees clockwise.
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-ImageRotateOrientation-DOWN = 3--><!--Device-ImageRotateOrientation-DOWN = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -106,6 +114,8 @@ Display the image after rotating it 270 degrees clockwise.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-ImageRotateOrientation-LEFT = 4--><!--Device-ImageRotateOrientation-LEFT = 4-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## UP_MIRRORED
@@ -125,6 +135,8 @@ Display the image after flipping it horizontally.
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-ImageRotateOrientation-UP_MIRRORED = 5--><!--Device-ImageRotateOrientation-UP_MIRRORED = 5-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -146,6 +158,8 @@ Display the image after flipping it horizontally and then rotating it 90 degrees
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-ImageRotateOrientation-RIGHT_MIRRORED = 6--><!--Device-ImageRotateOrientation-RIGHT_MIRRORED = 6-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DOWN_MIRRORED
@@ -166,6 +180,8 @@ Display the image after flipping it vertically.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-ImageRotateOrientation-DOWN_MIRRORED = 7--><!--Device-ImageRotateOrientation-DOWN_MIRRORED = 7-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## LEFT_MIRRORED
@@ -185,6 +201,8 @@ Display the image after flipping it horizontally and then rotating it 270 degree
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-ImageRotateOrientation-LEFT_MIRRORED = 8--><!--Device-ImageRotateOrientation-LEFT_MIRRORED = 8-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

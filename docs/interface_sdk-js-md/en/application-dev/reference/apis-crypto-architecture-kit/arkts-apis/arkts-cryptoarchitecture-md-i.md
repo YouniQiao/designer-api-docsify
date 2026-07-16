@@ -1,9 +1,10 @@
 # Md
 
-Provides APIs for message digest operations. Before using any API of the **Md** class, you must create an
-**Md** instance by using [createMd](arkts-cryptoarchitecture-createmd-f.md#createmd-1).
+Provides APIs for message digest operations. Before using any API of the **Md** class, you must create an **Md** instance by using [createMd](arkts-cryptoarchitecture-createmd-f.md#createmd-1).
 
 **Since:** 9
+
+<!--Device-cryptoFramework-interface Md--><!--Device-cryptoFramework-interface Md-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.MessageDigest
@@ -31,6 +32,8 @@ Generates a message digest. This API uses an asynchronous callback to return the
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Md-digest(callback: AsyncCallback<DataBlob>): void--><!--Device-Md-digest(callback: AsyncCallback<DataBlob>): void-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.MessageDigest
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
@@ -39,7 +42,7 @@ Generates a message digest. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the message digest obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DataBlob> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the message digest obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -80,6 +83,8 @@ Generates a message digest. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Md-digest(): Promise<DataBlob>--><!--Device-Md-digest(): Promise<DataBlob>-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.MessageDigest
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
@@ -88,7 +93,7 @@ Generates a message digest. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise used to return the message digest generated. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DataBlob> | Promise used to return the message digest generated. |
 
 **Error codes:**
 
@@ -210,14 +215,13 @@ digestSync(): DataBlob
 
 Generates a message digest. This API returns the result synchronously.
 
-<br><br>**NOTE**
-<br>It is recommended to prioritize the use of asynchronous API, {@link digest}. Synchronous API may
-take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,
-it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link digest}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Md-digestSync(): DataBlob--><!--Device-Md-digestSync(): DataBlob-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.MessageDigest
 
@@ -225,7 +229,7 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 
 | Type | Description |
 | --- | --- |
-| DataBlob | Message digest generated. |
+| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Message digest generated. |
 
 **Error codes:**
 
@@ -344,6 +348,8 @@ Obtains the message digest length, in bytes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Md-getMdLength(): int--><!--Device-Md-getMdLength(): int-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.MessageDigest
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
@@ -378,13 +384,12 @@ function getLength() {
 update(input: DataBlob, callback: AsyncCallback<void>): void
 ```
 
-Updates the message digest status. This API uses an asynchronous callback to return the result. **update** must
-be used with **digest** together. **digest** is mandatory, and **update** is optional.
+Updates the message digest status. This API uses an asynchronous callback to return the result. **update** must be used with **digest** together. **digest** is mandatory, and **update** is optional.
 
-> **NOTE**
->
-> For details about the code for calling **update** multiple times in a message digest operation, see
-> [Generating an MD by Passing In Data by Segment](../../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#generating-an-md-by-passing-in-data-by-segment)
+> **NOTE**  
+>  
+> For details about the code for calling **update** multiple times in a message digest operation, see  
+> [Generating an MD by Passing In Data by Segment](../../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#generating-an-md-by-passing-in-data-by-segment)  
 > .
 
 **Since:** 9
@@ -395,6 +400,8 @@ be used with **digest** together. **digest** is mandatory, and **update** is opt
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Md-update(input: DataBlob, callback: AsyncCallback<void>): void--><!--Device-Md-update(input: DataBlob, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.MessageDigest
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
@@ -403,8 +410,8 @@ be used with **digest** together. **digest** is mandatory, and **update** is opt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| input | DataBlob | Yes | Data to pass in. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| input | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | Data to pass in. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -420,13 +427,12 @@ be used with **digest** together. **digest** is mandatory, and **update** is opt
 update(input: DataBlob): Promise<void>
 ```
 
-Updates the message digest status. This API uses a promise to return the result. **update** must be used with
-**digest** together. **digest** is mandatory, and **update** is optional.
+Updates the message digest status. This API uses a promise to return the result. **update** must be used with **digest** together. **digest** is mandatory, and **update** is optional.
 
-> **NOTE**
->
-> For details about the code for calling **update** multiple times in a message digest operation, see
-> [Generating an MD by Passing In Data by Segment](../../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#generating-an-md-by-passing-in-data-by-segment)
+> **NOTE**  
+>  
+> For details about the code for calling **update** multiple times in a message digest operation, see  
+> [Generating an MD by Passing In Data by Segment](../../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#generating-an-md-by-passing-in-data-by-segment)  
 > .
 
 **Since:** 9
@@ -434,6 +440,8 @@ Updates the message digest status. This API uses a promise to return the result.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Md-update(input: DataBlob): Promise<void>--><!--Device-Md-update(input: DataBlob): Promise<void>-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.MessageDigest
@@ -443,13 +451,13 @@ Updates the message digest status. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| input | DataBlob | Yes | Data to pass in. |
+| input | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | Data to pass in. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -465,23 +473,21 @@ Updates the message digest status. This API uses a promise to return the result.
 updateSync(input: DataBlob): void
 ```
 
-Updates the message digest status. This API returns the result synchronously. **updateSync** must be used with
-**digestSync** together. **digestSync** is mandatory, and **updateSync** is optional.
+Updates the message digest status. This API returns the result synchronously. **updateSync** must be used with **digestSync** together. **digestSync** is mandatory, and **updateSync** is optional.
 
-> **NOTE**
->
-> For details about the code for calling **updateSync** multiple times in a message digest operation, see
-> [Generating an MD by Passing In Data by Segment](../../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#generating-an-md-by-passing-in-data-by-segment)
+> **NOTE**  
+>  
+> For details about the code for calling **updateSync** multiple times in a message digest operation, see  
+> [Generating an MD by Passing In Data by Segment](../../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#generating-an-md-by-passing-in-data-by-segment)  
 > .
 
-<br><br>**NOTE**
-<br>It is recommended to prioritize the use of asynchronous API, {@link update}. Synchronous API may
-take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,
-it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link update}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Md-updateSync(input: DataBlob): void--><!--Device-Md-updateSync(input: DataBlob): void-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.MessageDigest
 
@@ -489,7 +495,7 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| input | DataBlob | Yes | Data to pass in. |
+| input | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | Data to pass in. |
 
 **Error codes:**
 
@@ -514,6 +520,8 @@ Indicates the algorithm name.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Md-readonly algName: string--><!--Device-Md-readonly algName: string-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.MessageDigest

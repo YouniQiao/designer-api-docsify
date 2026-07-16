@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+<!--Device-unnamed-export declare enum ArcSliderPosition--><!--Device-unnamed-export declare enum ArcSliderPosition-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
 ## LEFT
@@ -16,7 +18,9 @@ LEFT = 0
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSliderPosition-LEFT = 0--><!--Device-ArcSliderPosition-LEFT = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -30,7 +34,9 @@ RIGHT = 1
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSliderPosition-RIGHT = 1--><!--Device-ArcSliderPosition-RIGHT = 1-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 

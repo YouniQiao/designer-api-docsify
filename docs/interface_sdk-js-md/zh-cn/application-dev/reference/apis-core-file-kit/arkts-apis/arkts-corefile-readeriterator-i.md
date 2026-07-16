@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare interface ReaderIterator--><!--Device-unnamed-declare interface ReaderIterator-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+```
 
 ## next
 
@@ -16,13 +24,15 @@ next(): ReaderIteratorResult
 
 **起始版本：** 11
 
+<!--Device-ReaderIterator-next(): ReaderIteratorResult--><!--Device-ReaderIterator-next(): ReaderIteratorResult-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ReaderIteratorResult | 文件读取迭代器返回结果。 |
+| [ReaderIteratorResult](arkts-corefile-readeriteratorresult-i.md) | 文件读取迭代器返回结果。 |
 
 **错误码：**
 

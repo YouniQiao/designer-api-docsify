@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface Rect--><!--Device-unnamed-export interface Rect-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## height
@@ -17,6 +19,8 @@ height: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Rect-height: int--><!--Device-Rect-height: int-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -32,6 +36,8 @@ left: number
 
 **起始版本：** 9
 
+<!--Device-Rect-left: int--><!--Device-Rect-left: int-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## top
@@ -46,6 +52,8 @@ top: number
 
 **起始版本：** 9
 
+<!--Device-Rect-top: int--><!--Device-Rect-top: int-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## width
@@ -59,6 +67,8 @@ width: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Rect-width: int--><!--Device-Rect-width: int-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

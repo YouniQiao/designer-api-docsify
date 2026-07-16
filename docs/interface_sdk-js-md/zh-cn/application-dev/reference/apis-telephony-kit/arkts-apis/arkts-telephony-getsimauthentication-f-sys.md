@@ -1,5 +1,11 @@
 # getSimAuthentication（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## getSimAuthentication
 
 ```TypeScript
@@ -12,6 +18,8 @@ Performs SIM card authentication.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getSimAuthentication(slotId: int, authType: AuthType, authData: string): Promise<SimAuthenticationResponse>--><!--Device-sim-function getSimAuthentication(slotId: int, authType: AuthType, authData: string): Promise<SimAuthenticationResponse>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -21,14 +29,14 @@ Performs SIM card authentication.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Sim slot id. |
-| authType | AuthType | 是 | The authentication type. |
+| authType | [AuthType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-authtype-e-sys.md) | 是 | The authentication type. |
 | authData | string | 是 | Ser password or other authentication information. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;SimAuthenticationResponse&gt; | A string the response of authentication.This value will be null inthe following cases: Authentication error, incorrect MAC Authentication error, security context not supported Keyfreshness failure Authentication error, no memory space available Authentication error, no memory space availablein EFMUK. |
+| Promise<SimAuthenticationResponse> | A string the response of authentication.This value will be null in the following cases: Authentication error, incorrect MAC Authentication error, security context not supported Key freshness failure Authentication error, no memory space available Authentication error, no memory space available in EFMUK. |
 
 **错误码：**
 

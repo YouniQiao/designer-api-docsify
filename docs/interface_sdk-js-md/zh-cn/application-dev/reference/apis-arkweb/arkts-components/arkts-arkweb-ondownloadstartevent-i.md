@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface OnDownloadStartEvent--><!--Device-unnamed-declare interface OnDownloadStartEvent-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## contentDisposition
@@ -18,7 +20,9 @@ contentDisposition: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnDownloadStartEvent-contentDisposition: string--><!--Device-OnDownloadStartEvent-contentDisposition: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -34,7 +38,9 @@ contentLength: number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnDownloadStartEvent-contentLength: number--><!--Device-OnDownloadStartEvent-contentLength: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -50,7 +56,9 @@ mimetype: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnDownloadStartEvent-mimetype: string--><!--Device-OnDownloadStartEvent-mimetype: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -66,7 +74,9 @@ url: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnDownloadStartEvent-url: string--><!--Device-OnDownloadStartEvent-url: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -82,7 +92,9 @@ userAgent: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnDownloadStartEvent-userAgent: string--><!--Device-OnDownloadStartEvent-userAgent: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

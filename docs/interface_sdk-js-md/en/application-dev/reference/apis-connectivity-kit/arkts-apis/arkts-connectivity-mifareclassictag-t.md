@@ -10,6 +10,8 @@ Exports type MifareClassicTag.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-tag-export type MifareClassicTag = _MifareClassicTag--><!--Device-tag-export type MifareClassicTag = _MifareClassicTag-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Property type:** _MifareClassicTag

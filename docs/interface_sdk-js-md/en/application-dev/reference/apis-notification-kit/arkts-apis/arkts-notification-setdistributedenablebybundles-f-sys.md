@@ -14,12 +14,13 @@ function setDistributedEnableByBundles(bundleEnableInfos: Array<DistributedBundl
 
 Sets whether applications enable cross-device collaboration. This API uses a promise to return the result.
 
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,
-error code 801 is returned.
+This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function setDistributedEnableByBundles(bundleEnableInfos: Array<DistributedBundleEnableInfo>, deviceType: string): Promise<void>--><!--Device-notificationManager-function setDistributedEnableByBundles(bundleEnableInfos: Array<DistributedBundleEnableInfo>, deviceType: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -29,14 +30,14 @@ error code 801 is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleEnableInfos | Array&lt;DistributedBundleEnableInfo&gt; | Yes | Applications to set. |
+| bundleEnableInfos | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<DistributedBundleEnableInfo> | Yes | Applications to set. |
 | deviceType | string | Yes | Device type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no result. |
 
 **Error codes:**
 

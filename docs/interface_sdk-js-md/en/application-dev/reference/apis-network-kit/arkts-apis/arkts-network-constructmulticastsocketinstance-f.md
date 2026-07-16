@@ -16,13 +16,15 @@ Creates a MulticastSocket object.
 
 **Since:** 12
 
+<!--Device-socket-function constructMulticastSocketInstance(): MulticastSocket--><!--Device-socket-function constructMulticastSocketInstance(): MulticastSocket-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MulticastSocket | the MulticastSocket of the constructMulticastSocketInstance. |
+| [MulticastSocket](arkts-network-multicastsocket-i.md) | the MulticastSocket of the constructMulticastSocketInstance. |
 
 **Example**
 

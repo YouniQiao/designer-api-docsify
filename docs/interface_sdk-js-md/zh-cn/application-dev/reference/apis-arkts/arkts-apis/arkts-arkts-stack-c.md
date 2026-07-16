@@ -4,7 +4,15 @@ Stack基于数组的数据结构实现，特点是先进后出，只能在一端
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare class Stack<T>--><!--Device-unnamed-declare class Stack<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { Stack } from '@kit.ArkTS';
+```
 
 ## [Symbol.iterator]
 
@@ -16,7 +24,9 @@ Stack基于数组的数据结构实现，特点是先进后出，只能在一端
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stack-[Symbol.iterator](): IterableIterator<T>--><!--Device-Stack-[Symbol.iterator](): IterableIterator<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -24,7 +34,7 @@ Stack基于数组的数据结构实现，特点是先进后出，只能在一端
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
+| IterableIterator<T> | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
 
 **错误码：**
 
@@ -77,7 +87,9 @@ Stack的构造函数。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stack-constructor()--><!--Device-Stack-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -106,7 +118,9 @@ forEach(callbackFn: (value: T, index?: number, stack?: Stack<T>) => void, thisAr
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stack-forEach(callbackFn: (value: T, index?: number, stack?: Stack<T>) => void, thisArg?: Object): void--><!--Device-Stack-forEach(callbackFn: (value: T, index?: number, stack?: Stack<T>) => void, thisArg?: Object): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -114,7 +128,7 @@ forEach(callbackFn: (value: T, index?: number, stack?: Stack<T>) => void, thisAr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, stack?: Stack&lt;T&gt;) =&gt; void | 是 | 回调函数。 |
+| callbackFn | (value: T, index?: number, stack?: Stack<T>) => void | 是 | 回调函数。 |
 | thisArg | Object | 否 | callbackFn被调用时用作this值，默认值为当前实例对象。 |
 
 **错误码：**
@@ -152,7 +166,9 @@ isEmpty(): boolean
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stack-isEmpty(): boolean--><!--Device-Stack-isEmpty(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -192,7 +208,9 @@ locate(element: T): number
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stack-locate(element: T): int--><!--Device-Stack-locate(element: T): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -238,7 +256,9 @@ peek(): T
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stack-peek(): T--><!--Device-Stack-peek(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -279,7 +299,9 @@ pop(): T
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stack-pop(): T--><!--Device-Stack-pop(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -321,7 +343,9 @@ push(item: T): T
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stack-push(item: T): T--><!--Device-Stack-push(item: T): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -380,7 +404,9 @@ Stack的元素个数。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stack-length: number--><!--Device-Stack-length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

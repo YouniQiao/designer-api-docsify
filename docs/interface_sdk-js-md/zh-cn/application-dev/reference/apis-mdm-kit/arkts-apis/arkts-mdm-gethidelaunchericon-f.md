@@ -1,5 +1,11 @@
 # getHideLauncherIcon
 
+## 导入模块
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+```
+
 ## getHideLauncherIcon
 
 ```TypeScript
@@ -14,6 +20,8 @@ function getHideLauncherIcon(admin: Want | null): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function getHideLauncherIcon(admin: Want | null): Array<string>--><!--Device-applicationManager-function getHideLauncherIcon(admin: Want | null): Array<string>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -26,7 +34,7 @@ function getHideLauncherIcon(admin: Want | null): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 返回当前用户下的隐藏桌面应用图标名单。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 返回当前用户下的隐藏桌面应用图标名单。 |
 
 **错误码：**
 

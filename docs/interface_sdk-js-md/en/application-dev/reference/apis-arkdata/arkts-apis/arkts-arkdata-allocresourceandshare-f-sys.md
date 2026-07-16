@@ -17,11 +17,21 @@ function allocResourceAndShare(
     ): Promise<relationalStore.ResultSet>
 ```
 
-Allocates a shared resource ID based on the data that matches the specified predicates.
-This API uses a promise to return the result set of the data to share,
-which also includes the column names if they are specified.
+Allocates a shared resource ID based on the data that matches the specified predicates.This API uses a promise to return the result set of the data to share,which also includes the column names if they are specified.
 
 **Since:** 11
+
+<!--Device-sharing-function allocResourceAndShare(
+      storeId: string,
+      predicates: relationalStore.RdbPredicates,
+      participants: Array<Participant>,
+      columns?: Array<string>
+    ): Promise<relationalStore.ResultSet>--><!--Device-sharing-function allocResourceAndShare(
+      storeId: string,
+      predicates: relationalStore.RdbPredicates,
+      participants: Array<Participant>,
+      columns?: Array<string>
+    ): Promise<relationalStore.ResultSet>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -33,14 +43,14 @@ which also includes the column names if they are specified.
 | --- | --- | --- | --- |
 | storeId | string | Yes | Name of the RDB store. |
 | predicates | relationalStore.RdbPredicates | Yes | Predicates for matching the data to share. |
-| participants | Array&lt;Participant&gt; | Yes | Participants of the share. |
-| columns | Array&lt;string&gt; | No | Columns in which the data is located.The default value is undefined, which means column names are not returned. |
+| participants | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Participant> | Yes | Participants of the share. |
+| columns | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | No | Columns in which the data is located.The default value is undefined, which means column names are not returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;relationalStore.ResultSet&gt; | Promise used to return the result set of the data to share. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<relationalStore.ResultSet> | Promise used to return the result set of the data to share. |
 
 **Error codes:**
 
@@ -99,10 +109,21 @@ function allocResourceAndShare(
     ): void
 ```
 
-Allocates a shared resource ID based on the data that matches the specified predicates.
-This API uses an asynchronous callback to return the result.
+Allocates a shared resource ID based on the data that matches the specified predicates.This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+<!--Device-sharing-function allocResourceAndShare(
+      storeId: string,
+      predicates: relationalStore.RdbPredicates,
+      participants: Array<Participant>,
+      callback: AsyncCallback<relationalStore.ResultSet>
+    ): void--><!--Device-sharing-function allocResourceAndShare(
+      storeId: string,
+      predicates: relationalStore.RdbPredicates,
+      participants: Array<Participant>,
+      callback: AsyncCallback<relationalStore.ResultSet>
+    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -114,8 +135,8 @@ This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | storeId | string | Yes | Name of the RDB store. |
 | predicates | relationalStore.RdbPredicates | Yes | Predicates for matching the data to share. |
-| participants | Array&lt;Participant&gt; | Yes | Participants of the share. |
-| callback | AsyncCallback&lt;relationalStore.ResultSet&gt; | Yes | Callback used to return the result. |
+| participants | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Participant> | Yes | Participants of the share. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<relationalStore.ResultSet> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -177,11 +198,23 @@ function allocResourceAndShare(
     ): void
 ```
 
-Allocates a shared resource ID based on the data that matches the specified predicates.
-This API uses an asynchronous callback to return the result set of the data to share,
-which includes the shared resource ID and column names.
+Allocates a shared resource ID based on the data that matches the specified predicates.This API uses an asynchronous callback to return the result set of the data to share,which includes the shared resource ID and column names.
 
 **Since:** 11
+
+<!--Device-sharing-function allocResourceAndShare(
+      storeId: string,
+      predicates: relationalStore.RdbPredicates,
+      participants: Array<Participant>,
+      columns: Array<string>,
+      callback: AsyncCallback<relationalStore.ResultSet>
+    ): void--><!--Device-sharing-function allocResourceAndShare(
+      storeId: string,
+      predicates: relationalStore.RdbPredicates,
+      participants: Array<Participant>,
+      columns: Array<string>,
+      callback: AsyncCallback<relationalStore.ResultSet>
+    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -193,9 +226,9 @@ which includes the shared resource ID and column names.
 | --- | --- | --- | --- |
 | storeId | string | Yes | Name of the RDB store. |
 | predicates | relationalStore.RdbPredicates | Yes | Predicates for matching the data to share. |
-| participants | Array&lt;Participant&gt; | Yes | Participants of the share. |
-| columns | Array&lt;string&gt; | Yes | Columns in which the data is located. |
-| callback | AsyncCallback&lt;relationalStore.ResultSet&gt; | Yes | Callback used to return the result set of the data to share. |
+| participants | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Participant> | Yes | Participants of the share. |
+| columns | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Columns in which the data is located. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<relationalStore.ResultSet> | Yes | Callback used to return the result set of the data to share. |
 
 **Error codes:**
 

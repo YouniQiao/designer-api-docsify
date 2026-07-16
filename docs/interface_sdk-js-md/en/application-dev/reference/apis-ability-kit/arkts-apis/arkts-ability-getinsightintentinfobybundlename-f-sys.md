@@ -12,14 +12,15 @@ import { insightIntentDriver } from '@kit.AbilityKit';
 function getInsightIntentInfoByBundleName(bundleName: string, intentFlags: number): Promise<Array<InsightIntentInfo>>
 ```
 
-Obtains the intent information on the current device based on the given bundle name. This API uses a promise to
-return the result.
+Obtains the intent information on the current device based on the given bundle name. This API uses a promise to return the result.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-insightIntentDriver-function getInsightIntentInfoByBundleName(bundleName: string, intentFlags: int): Promise<Array<InsightIntentInfo>>--><!--Device-insightIntentDriver-function getInsightIntentInfoByBundleName(bundleName: string, intentFlags: int): Promise<Array<InsightIntentInfo>>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -29,14 +30,14 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application.<br>**NOTE**<br> If the bundle name does not exist, anempty array is returned. |
-| intentFlags | number | Yes | Flag of the intent information ([InsightIntentInfo](arkts-ability-insightintentinfo-i-sys.md)). It is used to query full or brief intentinformation. For details, see [GetInsightIntentFlag](arkts-ability-getinsightintentflag-e-sys.md). |
+| bundleName | string | Yes | Bundle name of the application.<br>**NOTE**<br> If the bundle name does not exist, an empty array is returned. |
+| intentFlags | number | Yes | Flag of the intent information ([InsightIntentInfo](arkts-ability-insightintentinfo-i-sys.md)). It is used to query full or brief intent information. For details, see [GetInsightIntentFlag](arkts-ability-getinsightintentflag-e-sys.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;InsightIntentInfo&gt;&gt; | Promise used to return an array holding InsightIntentInfo objects. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<InsightIntentInfo>> | Promise used to return an array holding InsightIntentInfo objects. |
 
 **Error codes:**
 

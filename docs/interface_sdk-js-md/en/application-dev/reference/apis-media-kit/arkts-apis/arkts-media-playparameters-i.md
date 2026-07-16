@@ -6,6 +6,8 @@ These parameters are used to control the playback volume, number of loops, and p
 
 **Since:** 10
 
+<!--Device-unnamed-export interface PlayParameters--><!--Device-unnamed-export interface PlayParameters-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 ## leftVolume
@@ -22,6 +24,8 @@ When the volume exceeds the boundary value, the boundary value is automatically 
 
 **Since:** 10
 
+<!--Device-PlayParameters-leftVolume?: double--><!--Device-PlayParameters-leftVolume?: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 ## loop
@@ -32,8 +36,7 @@ loop?: number
 
 Number of loops.
 
-If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played
-is the value of **loop** plus 1.
+If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played is the value of **loop** plus 1.
 
 If this parameter is set to a value less than 0, the content is played repeatedly.
 
@@ -44,6 +47,8 @@ If this parameter is set to a floating-point number, only the integer part is us
 **Type:** number
 
 **Since:** 10
+
+<!--Device-PlayParameters-loop?: int--><!--Device-PlayParameters-loop?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -61,6 +66,8 @@ Pitch of the sound. The value ranges from 0.25 to 4.0 with a step size of 0.001.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PlayParameters-pitch?: double--><!--Device-PlayParameters-pitch?: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 ## priority
@@ -69,18 +76,17 @@ Pitch of the sound. The value ranges from 0.25 to 4.0 with a step size of 0.001.
 priority?: number
 ```
 
-Priority for playing an audio stream. The value **0** indicates the lowest priority. A larger value indicates a
-higher priority.
+Priority for playing an audio stream. The value **0** indicates the lowest priority. A larger value indicates a higher priority.
 
-The playback priority is determined by comparing the values. The value must be an integer greater than or equal to
-0. The default value is **0**.
+The playback priority is determined by comparing the values. The value must be an integer greater than or equal to0. The default value is **0**.
 
-If this parameter is set to a negative value, it is automatically set to 0. If this parameter is set to a floating
-point number, only the integer part is used.
+If this parameter is set to a negative value, it is automatically set to 0. If this parameter is set to a floating point number, only the integer part is used.
 
 **Type:** number
 
 **Since:** 10
+
+<!--Device-PlayParameters-priority?: int--><!--Device-PlayParameters-priority?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -90,12 +96,13 @@ point number, only the integer part is used.
 rate?: number
 ```
 
-Playback rate. For details, see [AudioRendererRate](../../../../reference/apis-audio-kit/arkts-apis-audio-e.md).
-Default value: **0**
+Playback rate. For details, see [AudioRendererRate](../../../../reference/apis-audio-kit/arkts-apis-audio-e.md).Default value: **0**
 
 **Type:** number
 
 **Since:** 10
+
+<!--Device-PlayParameters-rate?: int--><!--Device-PlayParameters-rate?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -105,14 +112,15 @@ Default value: **0**
 rightVolume?: number
 ```
 
-Volume of the right channel. (Currently, the volume cannot be set separately for the left and right channels. The
-volume set for the left channel is used.) The value range is [0.0, 1.0], and the default value is **1.0**.
+Volume of the right channel. (Currently, the volume cannot be set separately for the left and right channels. The volume set for the left channel is used.) The value range is [0.0, 1.0], and the default value is **1.0**.
 
 When the volume exceeds the boundary value, the boundary value is automatically used.
 
 **Type:** number
 
 **Since:** 10
+
+<!--Device-PlayParameters-rightVolume?: double--><!--Device-PlayParameters-rightVolume?: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 

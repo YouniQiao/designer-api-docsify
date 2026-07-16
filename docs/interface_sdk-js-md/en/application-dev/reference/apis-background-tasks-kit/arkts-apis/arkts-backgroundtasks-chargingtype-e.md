@@ -4,6 +4,8 @@ Enumerates the charging types that trigger deferred task callback.
 
 **Since:** 9
 
+<!--Device-workScheduler-export enum ChargingType--><!--Device-workScheduler-export enum ChargingType-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## CHARGING_PLUGGED_ANY
@@ -17,6 +19,8 @@ Any charging type.
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ChargingType-CHARGING_PLUGGED_ANY = 0--><!--Device-ChargingType-CHARGING_PLUGGED_ANY = 0-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -32,6 +36,8 @@ DC charging.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ChargingType-CHARGING_PLUGGED_AC = 1--><!--Device-ChargingType-CHARGING_PLUGGED_AC = 1-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## CHARGING_PLUGGED_USB
@@ -46,6 +52,8 @@ USB charging.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ChargingType-CHARGING_PLUGGED_USB = 2--><!--Device-ChargingType-CHARGING_PLUGGED_USB = 2-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## CHARGING_PLUGGED_WIRELESS
@@ -59,6 +67,8 @@ Wireless charging.
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ChargingType-CHARGING_PLUGGED_WIRELESS = 3--><!--Device-ChargingType-CHARGING_PLUGGED_WIRELESS = 3-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 

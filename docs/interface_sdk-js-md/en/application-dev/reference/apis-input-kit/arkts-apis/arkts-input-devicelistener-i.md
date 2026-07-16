@@ -4,6 +4,8 @@ Provides hot swap information about an input device.
 
 **Since:** 9
 
+<!--Device-inputDevice-interface DeviceListener--><!--Device-inputDevice-interface DeviceListener-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Unique ID of the input device. If a physical device is repeatedly reinstalled or
 
 **Since:** 9
 
+<!--Device-DeviceListener-deviceId: int--><!--Device-DeviceListener-deviceId: int-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## type
@@ -37,6 +41,8 @@ Device change type, which indicates whether an input device is inserted or remov
 **Type:** ChangedType
 
 **Since:** 9
+
+<!--Device-DeviceListener-type: ChangedType--><!--Device-DeviceListener-type: ChangedType-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 

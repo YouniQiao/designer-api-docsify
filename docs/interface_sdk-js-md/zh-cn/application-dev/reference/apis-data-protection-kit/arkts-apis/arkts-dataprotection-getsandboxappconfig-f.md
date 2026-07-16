@@ -1,5 +1,11 @@
 # getSandboxAppConfig
 
+## 导入模块
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+```
+
 ## getSandboxAppConfig
 
 ```TypeScript
@@ -12,13 +18,15 @@ function getSandboxAppConfig(): Promise<string>
 
 **起始版本：** 11
 
+<!--Device-dlpPermission-function getSandboxAppConfig(): Promise<string>--><!--Device-dlpPermission-function getSandboxAppConfig(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象。返回沙箱应用配置信息。长度小于4194304字节。 |
+| Promise<string> | Promise对象。返回沙箱应用配置信息。长度小于4194304字节。 |
 
 **错误码：**
 

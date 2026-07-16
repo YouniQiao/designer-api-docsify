@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-cloudSync-class CloudFileCache--><!--Device-cloudSync-class CloudFileCache-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+## 导入模块
+
+```TypeScript
+import { cloudSync } from '@kit.CoreFileKit';
+```
 
 ## cleanCache
 
@@ -17,6 +25,8 @@ cleanCache(uri: string): void
 **起始版本：** 11
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
+
+<!--Device-CloudFileCache-cleanCache(uri: string): void--><!--Device-CloudFileCache-cleanCache(uri: string): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -33,8 +43,8 @@ cleanCache(uri: string): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system applicationuses system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are leftunspecified;<br>2.Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error. |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
@@ -71,6 +81,8 @@ A constructor used to create a CloudFileCache object.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CloudFileCache-constructor(bundleName: string)--><!--Device-CloudFileCache-constructor(bundleName: string)-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -79,7 +91,7 @@ A constructor used to create a CloudFileCache object.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleName | string | 是 | Name of the bundle that need to start download task and subscribes downloadprogress. |
+| bundleName | string | 是 | Name of the bundle that need to start download task and subscribes download progress. |
 
 **错误码：**
 
@@ -108,6 +120,8 @@ getDownloadList(uris: Array<string>): Promise<Array<DownloadProgress>>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CloudFileCache-getDownloadList(uris: Array<string>): Promise<Array<DownloadProgress>>--><!--Device-CloudFileCache-getDownloadList(uris: Array<string>): Promise<Array<DownloadProgress>>-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -116,13 +130,13 @@ getDownloadList(uris: Array<string>): Promise<Array<DownloadProgress>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uris | Array&lt;string&gt; | 是 | 待查询下载进度的文件URI数组，数组长度取值范围[1,100]。 |
+| uris | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 待查询下载进度的文件URI数组，数组长度取值范围[1,100]。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;DownloadProgress&gt;&gt; | - Promise对象，返回文件下载进度列表的结果。 |
+| Promise<Array<DownloadProgress>> | - Promise对象，返回文件下载进度列表的结果。 |
 
 **错误码：**
 

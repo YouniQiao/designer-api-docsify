@@ -4,6 +4,8 @@ Used to mix colors.
 
 **Since:** 12
 
+<!--Device-unnamed-declare class ColorMetrics--><!--Device-unnamed-declare class ColorMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## createHDRColor
@@ -12,14 +14,13 @@ Used to mix colors.
 static createHDRColor(colorSpace: ColorSpace, red: number, green: number, blue: number, alpha?: number): ColorMetrics
 ```
 
-Create ColorMetrics class using HDR color with default exposure.
-Create an HDR color value with default exposure (0.0 for logarithmic, 1.0 for linear).
-When no exposure value is specified, RGB channel values can exceed 1.0 to achieve HDR brightness.
-This matches iOS UIColor behavior where RGB values > 1.0 enable HDR rendering.
+Create ColorMetrics class using HDR color with default exposure.Create an HDR color value with default exposure (0.0 for logarithmic, 1.0 for linear).When no exposure value is specified, RGB channel values can exceed 1.0 to achieve HDR brightness.This matches iOS UIColor behavior where RGB values > 1.0 enable HDR rendering.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ColorMetrics-static createHDRColor(colorSpace: ColorSpace, red: double, green: double, blue: double, alpha?: double): ColorMetrics--><!--Device-ColorMetrics-static createHDRColor(colorSpace: ColorSpace, red: double, green: double, blue: double, alpha?: double): ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,7 +30,7 @@ This matches iOS UIColor behavior where RGB values > 1.0 enable HDR rendering.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorSpace | ColorSpace | Yes | Color space of color.Supports SRGB, DISPLAY_P3, and BT2020 color spaces. |
+| colorSpace | [ColorSpace](arkts-arkui-colorspace-e.md) | Yes | Color space of color.Supports SRGB, DISPLAY_P3, and BT2020 color spaces. |
 | red | number | Yes | Red component value. Valid range: [0, +∞). Values greater than 1.0 enable HDR brightness. |
 | green | number | Yes | Green component value. Valid range: [0, +∞).Values greater than 1.0 enable HDR brightness. |
 | blue | number | Yes | Blue component value. Valid range: [0, +∞).Values greater than 1.0 enable HDR brightness. |
@@ -39,7 +40,7 @@ This matches iOS UIColor behavior where RGB values > 1.0 enable HDR rendering.
 
 | Type | Description |
 | --- | --- |
-| ColorMetrics | ColorMetrics class instance with HDR color. |
+| [ColorMetrics](arkts-arkui-colormetrics-c-sys.md) | ColorMetrics class instance with HDR color. |
 
 ## createHDRColorWithLinearExposure
 
@@ -48,14 +49,15 @@ static createHDRColorWithLinearExposure(linearExposure: number, colorSpace: Colo
     red: number, green: number, blue: number, alpha?: number): ColorMetrics
 ```
 
-Create ColorMetrics class using HDR color with linear exposure.
-Create an HDR color value with specified linear exposure.
-The exposure value controls the brightness of the color in a linear color space.
-When using linear exposure, RGB channel values are typically in the range [0, 1].
+Create ColorMetrics class using HDR color with linear exposure.Create an HDR color value with specified linear exposure.The exposure value controls the brightness of the color in a linear color space.When using linear exposure, RGB channel values are typically in the range [0, 1].
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ColorMetrics-static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: ColorSpace,
+    red: double, green: double, blue: double, alpha?: double): ColorMetrics--><!--Device-ColorMetrics-static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: ColorSpace,
+    red: double, green: double, blue: double, alpha?: double): ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,7 +68,7 @@ When using linear exposure, RGB channel values are typically in the range [0, 1]
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | linearExposure | number | Yes | Linear exposure value in exposure value.Valid range:[1, +∞).A value of 1.0 represents standard exposure.Values greater than 1.0 increase brightness linearly. |
-| colorSpace | ColorSpace | Yes | Color space of color.Supports SRGB, DISPLAY_P3, and BT2020 color spaces. |
+| colorSpace | [ColorSpace](arkts-arkui-colorspace-e.md) | Yes | Color space of color.Supports SRGB, DISPLAY_P3, and BT2020 color spaces. |
 | red | number | Yes | Red component value. Valid range: [0, 1]. |
 | green | number | Yes | Green component value. Valid range: [0, 1]. |
 | blue | number | Yes | Blue component value. Valid range: [0, 1]. |
@@ -76,7 +78,7 @@ When using linear exposure, RGB channel values are typically in the range [0, 1]
 
 | Type | Description |
 | --- | --- |
-| ColorMetrics | ColorMetrics class instance with HDR color. |
+| [ColorMetrics](arkts-arkui-colormetrics-c-sys.md) | ColorMetrics class instance with HDR color. |
 
 ## createHDRColorWithLogExposure
 
@@ -85,14 +87,15 @@ static createHDRColorWithLogExposure(exposure: number, colorSpace: ColorSpace,
     red: number, green: number, blue: number, alpha?: number): ColorMetrics
 ```
 
-Create ColorMetrics class using HDR color with linear exposure.
-Create an HDR color value with specified logarithmic exposure (stops).
-The exposure value controls the brightness in a logarithmic (perceptual) color space.
-When using logarithmic exposure, RGB channel values are typically in the range [0, 1].
+Create ColorMetrics class using HDR color with linear exposure.Create an HDR color value with specified logarithmic exposure (stops).The exposure value controls the brightness in a logarithmic (perceptual) color space.When using logarithmic exposure, RGB channel values are typically in the range [0, 1].
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ColorMetrics-static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,
+    red: double, green: double, blue: double, alpha?: double): ColorMetrics--><!--Device-ColorMetrics-static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,
+    red: double, green: double, blue: double, alpha?: double): ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -103,7 +106,7 @@ When using logarithmic exposure, RGB channel values are typically in the range [
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | exposure | number | Yes | Logarithmic exposure value in stops.Valid range:[0, +∞).A value of 0.0 represents standard exposure.Each increment of 1.0 doubles the brightness (one stop). |
-| colorSpace | ColorSpace | Yes | Color space of color.Supports SRGB, DISPLAY_P3, and BT2020 color spaces. |
+| colorSpace | [ColorSpace](arkts-arkui-colorspace-e.md) | Yes | Color space of color.Supports SRGB, DISPLAY_P3, and BT2020 color spaces. |
 | red | number | Yes | Red component value. Valid range: [0, 1]. |
 | green | number | Yes | Green component value. Valid range: [0, 1]. |
 | blue | number | Yes | Blue component value. Valid range: [0, 1]. |
@@ -113,7 +116,7 @@ When using logarithmic exposure, RGB channel values are typically in the range [
 
 | Type | Description |
 | --- | --- |
-| ColorMetrics | ColorMetrics class instance with HDR color. |
+| [ColorMetrics](arkts-arkui-colormetrics-c-sys.md) | ColorMetrics class instance with HDR color. |
 
 ## getBlueValue
 
@@ -121,14 +124,13 @@ When using logarithmic exposure, RGB channel values are typically in the range [
 getBlueValue(): number
 ```
 
-Get blue value.
-Returns blue channel value as a floating-point number.
-For SDR colors, value is in range [0, 1].
-For HDR colors, value can be greater than 1.0 to represent extended brightness.
+Get blue value.Returns blue channel value as a floating-point number.For SDR colors, value is in range [0, 1].For HDR colors, value can be greater than 1.0 to represent extended brightness.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ColorMetrics-getBlueValue(): double--><!--Device-ColorMetrics-getBlueValue(): double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -146,12 +148,13 @@ For HDR colors, value can be greater than 1.0 to represent extended brightness.
 getColorSpace(): ColorSpace
 ```
 
-Get color space of the ColorMetrics.
-Returns the color space used when creating this color.
+Get color space of the ColorMetrics.Returns the color space used when creating this color.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ColorMetrics-getColorSpace(): ColorSpace--><!--Device-ColorMetrics-getColorSpace(): ColorSpace-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -161,7 +164,7 @@ Returns the color space used when creating this color.
 
 | Type | Description |
 | --- | --- |
-| ColorSpace | The color space of the ColorMetrics.Possible value: ColorSpace.SRGB, ColorSpace.DISPLAY_P3, ColorSpace.BT2020. |
+| [ColorSpace](arkts-arkui-colorspace-e.md) | The color space of the ColorMetrics.Possible value: ColorSpace.SRGB, ColorSpace.DISPLAY_P3, ColorSpace.BT2020. |
 
 ## getGreenValue
 
@@ -169,14 +172,13 @@ Returns the color space used when creating this color.
 getGreenValue(): number
 ```
 
-Get green value.
-Returns green channel value as a floating-point number.
-For SDR colors, value is in range [0, 1].
-For HDR colors, value can be greater than 1.0 to represent extended brightness.
+Get green value.Returns green channel value as a floating-point number.For SDR colors, value is in range [0, 1].For HDR colors, value can be greater than 1.0 to represent extended brightness.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ColorMetrics-getGreenValue(): double--><!--Device-ColorMetrics-getGreenValue(): double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -194,14 +196,13 @@ For HDR colors, value can be greater than 1.0 to represent extended brightness.
 getRedValue(): number
 ```
 
-Get red value.
-Returns red channel value as a floating-point number.
-For SDR colors, value is in range [0, 1].
-For HDR colors, value can be greater than 1.0 to represent extended brightness.
+Get red value.Returns red channel value as a floating-point number.For SDR colors, value is in range [0, 1].For HDR colors, value can be greater than 1.0 to represent extended brightness.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ColorMetrics-getRedValue(): double--><!--Device-ColorMetrics-getRedValue(): double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -219,12 +220,13 @@ For HDR colors, value can be greater than 1.0 to represent extended brightness.
 isHDR(): boolean
 ```
 
-Check if ColorMetrics represents an HDR color.
-Returns true if color was created using createHDRColorWithXx or has RGB values > 1.0.
+Check if ColorMetrics represents an HDR color.Returns true if color was created using createHDRColorWithXx or has RGB values > 1.0.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ColorMetrics-isHDR(): boolean--><!--Device-ColorMetrics-isHDR(): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -234,5 +236,5 @@ Returns true if color was created using createHDRColorWithXx or has RGB values >
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether ColorMetrics is an HDR color.Returns true if:- The color was created using createHDRColorWithXx() method.- Any RGB channel value is greater than 1.0. |
+| boolean | Whether ColorMetrics is an HDR color.Returns true if:  - The color was created using createHDRColorWithXx() method.  - Any RGB channel value is greater than 1.0. |
 

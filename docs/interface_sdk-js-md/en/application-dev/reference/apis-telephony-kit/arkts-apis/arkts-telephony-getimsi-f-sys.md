@@ -18,6 +18,8 @@ Get the international mobile subscriber ID.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getIMSI(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getIMSI(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Get the international mobile subscriber ID.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Indicates the callback for gettingthe international mobile subscriber ID. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Indicates the callback for getting the international mobile subscriber ID. |
 
 **Error codes:**
 
@@ -67,6 +69,8 @@ Get the international mobile subscriber ID.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getIMSI(slotId: int): Promise<string>--><!--Device-sim-function getIMSI(slotId: int): Promise<string>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -81,7 +85,7 @@ Get the international mobile subscriber ID.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the international mobile subscriber ID. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the international mobile subscriber ID. |
 
 **Error codes:**
 

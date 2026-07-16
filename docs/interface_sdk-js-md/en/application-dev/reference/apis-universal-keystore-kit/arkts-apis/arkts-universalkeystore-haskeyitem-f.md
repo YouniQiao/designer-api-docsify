@@ -20,6 +20,8 @@ If the key does not exist, **false** is returned through the callback.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-huks-function hasKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void--><!--Device-huks-function hasKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 **Parameters:**
@@ -27,8 +29,8 @@ If the key does not exist, **false** is returned through the callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key to check. |
-| options | HuksOptions | Yes | Attribute tag of the key to be checked. If[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md) is used to specify the security level of the key to bechecked,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** ispassed in. If the API version is earlier than 12, the default value **DE** is passed in. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. If the key exists, **data** is**true**. Otherwise, **data** is **false**. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Attribute tag of the key to be checked. If [HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md) is used to specify the security level of the key to be checked,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. If the key exists, **data** is **true**. Otherwise, **data** is **false**. |
 
 **Error codes:**
 
@@ -83,6 +85,8 @@ If the key does not exist, **false** is returned through the promise.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-huks-function hasKeyItem(keyAlias: string, options: HuksOptions): Promise<boolean>--><!--Device-huks-function hasKeyItem(keyAlias: string, options: HuksOptions): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **Parameters:**
@@ -90,13 +94,13 @@ If the key does not exist, **false** is returned through the promise.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key to check. |
-| options | HuksOptions | Yes | Attribute tag of the key to be checked. If[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md) is used to specify the security level of the key to bechecked,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** ispassed in. If the API version is earlier than 12, the default value **DE** is passed in. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Attribute tag of the key to be checked. If [HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md) is used to specify the security level of the key to be checked,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. If the key exists, **true** is returned. If thekey does not exist, **false** is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. If the key exists, **true** is returned. If the key does not exist, **false** is returned. |
 
 **Error codes:**
 

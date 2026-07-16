@@ -16,6 +16,8 @@ Cancel callback when the network state is updated.
 
 **Since:** 6
 
+<!--Device-observer-function off(type: 'networkStateChange', callback?: Callback<NetworkState>): void--><!--Device-observer-function off(type: 'networkStateChange', callback?: Callback<NetworkState>): void-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
@@ -23,7 +25,7 @@ Cancel callback when the network state is updated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'networkStateChange' | Yes | Event type. Indicates the networkStateChange event to unsubscribe from. |
-| callback | Callback&lt;NetworkState&gt; | No | Indicates the callback for gettingan instance of the {@code NetworkState} class. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<NetworkState> | No | Indicates the callback for getting an instance of the {@code NetworkState} class. |
 
 **Error codes:**
 
@@ -59,6 +61,8 @@ Cancel callback when the signal strength is updated.
 
 **Since:** 6
 
+<!--Device-observer-function off(type: 'signalInfoChange', callback?: Callback<Array<SignalInformation>>): void--><!--Device-observer-function off(type: 'signalInfoChange', callback?: Callback<Array<SignalInformation>>): void-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
@@ -66,7 +70,7 @@ Cancel callback when the signal strength is updated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'signalInfoChange' | Yes | Event type. Indicates the signalInfoChange event to unsubscribe from. |
-| callback | Callback&lt;Array&lt;SignalInformation&gt;&gt; | No | Indicates the callback to unsubscribe fromthe signalInfoChange event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<SignalInformation>> | No | Indicates the callback to unsubscribe from the signalInfoChange event. |
 
 **Error codes:**
 
@@ -104,14 +108,16 @@ Cancel callback when the cellular data link connection state is updated.
 
 **Since:** 11
 
+<!--Device-observer-function off(type: 'cellularDataConnectionStateChange', callback?: Callback<DataConnectionStateInfo>): void--><!--Device-observer-function off(type: 'cellularDataConnectionStateChange', callback?: Callback<DataConnectionStateInfo>): void-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cellularDataConnectionStateChange' | Yes | Event type. Indicates the cellularDataConnectionStateChangeevent to unsubscribe from. |
-| callback | Callback&lt;DataConnectionStateInfo&gt; | No | Indicates the callback to unsubscribefrom the cellularDataConnectionStateChange event. |
+| type | 'cellularDataConnectionStateChange' | Yes | Event type. Indicates the cellularDataConnectionStateChange event to unsubscribe from. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DataConnectionStateInfo> | No | Indicates the callback to unsubscribe from the cellularDataConnectionStateChange event. |
 
 **Error codes:**
 
@@ -147,6 +153,8 @@ Cancel callback when the uplink and downlink data flow state of cellular data se
 
 **Since:** 7
 
+<!--Device-observer-function off(type: 'cellularDataFlowChange', callback?: Callback<DataFlowType>): void--><!--Device-observer-function off(type: 'cellularDataFlowChange', callback?: Callback<DataFlowType>): void-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
@@ -154,7 +162,7 @@ Cancel callback when the uplink and downlink data flow state of cellular data se
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cellularDataFlowChange' | Yes | Event type. Indicates the cellularDataFlowChange event to unsubscribe from. |
-| callback | Callback&lt;DataFlowType&gt; | No | Indicates the callback to unsubscribe fromthe cellularDataFlowChange event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DataFlowType> | No | Indicates the callback to unsubscribe from the cellularDataFlowChange event. |
 
 **Error codes:**
 
@@ -192,6 +200,8 @@ Cancel callback when the call state is updated.
 
 **Since:** 11
 
+<!--Device-observer-function off(type: 'callStateChange', callback?: Callback<CallStateInfo>): void--><!--Device-observer-function off(type: 'callStateChange', callback?: Callback<CallStateInfo>): void-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
@@ -199,7 +209,7 @@ Cancel callback when the call state is updated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callStateChange' | Yes | Event type. Indicates the callStateChange event to unsubscribe from. |
-| callback | Callback&lt;CallStateInfo&gt; | No | Indicates the callback tounsubscribe from the callStateChange event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CallStateInfo> | No | Indicates the callback to unsubscribe from the callStateChange event. |
 
 **Error codes:**
 
@@ -235,6 +245,8 @@ Cancel callback when the telCall state is updated.
 
 **Since:** 21
 
+<!--Device-observer-function off(type: 'callStateChangeEx', callback?: Callback<TelCallState>): void--><!--Device-observer-function off(type: 'callStateChangeEx', callback?: Callback<TelCallState>): void-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
@@ -242,7 +254,7 @@ Cancel callback when the telCall state is updated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callStateChangeEx' | Yes | Event type. Indicates the callStateChangeEx event to unsubscribe from. |
-| callback | Callback&lt;TelCallState&gt; | No | Indicates the callback tounsubscribe from the callStateChangeEx event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<TelCallState> | No | Indicates the callback to unsubscribe from the callStateChangeEx event. |
 
 **Error codes:**
 
@@ -278,6 +290,8 @@ Cancel callback when the sim state is updated.
 
 **Since:** 7
 
+<!--Device-observer-function off(type: 'simStateChange', callback?: Callback<SimStateData>): void--><!--Device-observer-function off(type: 'simStateChange', callback?: Callback<SimStateData>): void-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
@@ -285,7 +299,7 @@ Cancel callback when the sim state is updated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'simStateChange' | Yes | Event type. Indicates the simStateChange event to unsubscribe from. |
-| callback | Callback&lt;SimStateData&gt; | No | Indicates the callback to unsubscribe from the simStateChange event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SimStateData> | No | Indicates the callback to unsubscribe from the simStateChange event. |
 
 **Error codes:**
 
@@ -321,6 +335,8 @@ Cancel to receive an ICC account change.
 
 **Since:** 10
 
+<!--Device-observer-function off(type: 'iccAccountInfoChange', callback?: Callback<void>): void--><!--Device-observer-function off(type: 'iccAccountInfoChange', callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
@@ -328,7 +344,7 @@ Cancel to receive an ICC account change.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'iccAccountInfoChange' | Yes | iccAccountInfoChange |
-| callback | Callback&lt;void&gt; | No | including state Indicates the ICC account information,and reason Indicates the cause of the change. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | including state Indicates the ICC account information,and reason Indicates the cause of the change. |
 
 **Error codes:**
 

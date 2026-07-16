@@ -4,7 +4,15 @@
 
 **起始版本：** 7
 
+<!--Device-contact-class Organization--><!--Device-contact-class Organization-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
+
+## 导入模块
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+```
 
 ## name
 
@@ -18,7 +26,9 @@ name: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Organization-name: string--><!--Device-Organization-name: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -34,7 +44,9 @@ title?: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Organization-title?: string--><!--Device-Organization-title?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 

@@ -2,13 +2,21 @@
 
 XmlDynamicSerializer类用于动态生成XML字符串。当无法确定XML内容长度时，推荐使用该类。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 使用该类构造的对象无需自行创建ArrayBuffer，程序动态扩容，可以不断添加XML元素，最终序列化结果字符串长度上限为100000。
 
 **起始版本：** 20
 
+<!--Device-xml-class XmlDynamicSerializer--><!--Device-xml-class XmlDynamicSerializer-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { xml } from '@kit.ArkTS';
+```
 
 ## addEmptyElement
 
@@ -18,13 +26,15 @@ addEmptyElement(name: string): void
 
 写入一个空元素。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的元素名称。
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlDynamicSerializer-addEmptyElement(name: string): void--><!--Device-XmlDynamicSerializer-addEmptyElement(name: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -65,7 +75,9 @@ XmlDynamicSerializer的构造函数。
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlDynamicSerializer-constructor(encoding?: string)--><!--Device-XmlDynamicSerializer-constructor(encoding?: string)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -96,13 +108,15 @@ endElement(): void
 
 写入元素结束标记。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 调用该接口前必须先调用[startElement](arkts-arkts-xmlserializer-c.md#startelement-1)接口写入元素开始标记。
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlDynamicSerializer-endElement(): void--><!--Device-XmlDynamicSerializer-endElement(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -139,7 +153,9 @@ getOutput(): ArrayBuffer
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlDynamicSerializer-getOutput(): ArrayBuffer--><!--Device-XmlDynamicSerializer-getOutput(): ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -147,7 +163,7 @@ getOutput(): ArrayBuffer
 
 | 类型 | 说明 |
 | --- | --- |
-| ArrayBuffer | 用于接收写入XML信息的ArrayBuffer内存。 |
+| [ArrayBuffer](arkts-arkts-arraybuffer-c.md) | 用于接收写入XML信息的ArrayBuffer内存。 |
 
 **示例：**
 
@@ -173,13 +189,15 @@ setAttributes(name: string, value: string): void
 
 写入元素的属性和属性值。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的属性名称以及添加多个同名的属性名称。
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlDynamicSerializer-setAttributes(name: string, value: string): void--><!--Device-XmlDynamicSerializer-setAttributes(name: string, value: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -222,13 +240,15 @@ setCdata(text: string): void
 
 提供在CDATA标签中添加数据的能力，所生成的CDATA标签结构为："\<!\[CDATA\[" + 所添加的数据 + "\]\]\>"。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许在CDATA标签中添加包含"\]\]\>"字符串的数据。
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlDynamicSerializer-setCdata(text: string): void--><!--Device-XmlDynamicSerializer-setCdata(text: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -269,7 +289,9 @@ setComment(text: string): void
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlDynamicSerializer-setComment(text: string): void--><!--Device-XmlDynamicSerializer-setComment(text: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -310,7 +332,9 @@ setDeclaration(): void
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlDynamicSerializer-setDeclaration(): void--><!--Device-XmlDynamicSerializer-setDeclaration(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -345,7 +369,9 @@ setDocType(text: string): void
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlDynamicSerializer-setDocType(text: string): void--><!--Device-XmlDynamicSerializer-setDocType(text: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -384,13 +410,15 @@ setNamespace(prefix: string, namespace: string): void
 
 写入当前元素标记的命名空间。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的前缀以及对同一个元素设置多个命名空间。
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlDynamicSerializer-setNamespace(prefix: string, namespace: string): void--><!--Device-XmlDynamicSerializer-setNamespace(prefix: string, namespace: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -434,7 +462,9 @@ setText(text: string): void
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlDynamicSerializer-setText(text: string): void--><!--Device-XmlDynamicSerializer-setText(text: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -476,15 +506,17 @@ startElement(name: string): void
 
 写入元素开始标记。
 
-> **说明：**
->
-> - 调用该接口后须调用[endElement](arkts-arkts-xmlserializer-c.md#endelement-1)写入元素结束标记，以确保节点正确闭合。
->
+> **说明：**  
+>  
+> - 调用该接口后须调用[endElement](arkts-arkts-xmlserializer-c.md#endelement-1)写入元素结束标记，以确保节点正确闭合。  
+>  
 > - 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的元素名称。
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlDynamicSerializer-startElement(name: string): void--><!--Device-XmlDynamicSerializer-startElement(name: string): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

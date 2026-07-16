@@ -1,15 +1,22 @@
 # createVideoRecorder（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { media } from '@kit.MediaKit';
+```
+
 ## createVideoRecorder
 
 ```TypeScript
 function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void
 ```
 
-该接口自API version 9起停止维护，建议使用AVRecorder。
-创建视频录制实例。
+该接口自API version 9起停止维护，建议使用AVRecorder。创建视频录制实例。
 
 **起始版本：** 9
+
+<!--Device-media-function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void--><!--Device-media-function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -19,7 +26,7 @@ function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;VideoRecorder&gt; | 是 | 回调函数，返回VideoRecorder实例，失败时返回null。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<VideoRecorder> | 是 | 回调函数，返回VideoRecorder实例，失败时返回null。 |
 
 **错误码：**
 
@@ -52,10 +59,11 @@ media.createVideoRecorder((error: BusinessError, video: media.VideoRecorder) => 
 function createVideoRecorder(): Promise<VideoRecorder>
 ```
 
-该接口自API version 9起停止维护，建议使用AVRecorder。
-创建视频录制实例。
+该接口自API version 9起停止维护，建议使用AVRecorder。创建视频录制实例。
 
 **起始版本：** 9
+
+<!--Device-media-function createVideoRecorder(): Promise<VideoRecorder>--><!--Device-media-function createVideoRecorder(): Promise<VideoRecorder>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -65,7 +73,7 @@ function createVideoRecorder(): Promise<VideoRecorder>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;VideoRecorder&gt; | Promise对象，返回VideoRecorder实例，失败时返回null。 |
+| Promise<VideoRecorder> | Promise对象，返回VideoRecorder实例，失败时返回null。 |
 
 **错误码：**
 

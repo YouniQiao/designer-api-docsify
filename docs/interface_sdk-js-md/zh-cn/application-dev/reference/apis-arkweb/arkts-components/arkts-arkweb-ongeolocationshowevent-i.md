@@ -4,6 +4,8 @@ Defines the triggered function when requesting to show the geolocation permissio
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface OnGeolocationShowEvent--><!--Device-unnamed-declare interface OnGeolocationShowEvent-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## geolocation
@@ -18,7 +20,9 @@ Defines the js geolocation request.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnGeolocationShowEvent-geolocation: JsGeolocation--><!--Device-OnGeolocationShowEvent-geolocation: JsGeolocation-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -34,7 +38,9 @@ Origin of the page.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnGeolocationShowEvent-origin: string--><!--Device-OnGeolocationShowEvent-origin: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

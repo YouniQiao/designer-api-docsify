@@ -1,5 +1,11 @@
 # installSystemAppCertificate（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+```
+
 ## installSystemAppCertificate
 
 ```TypeScript
@@ -14,6 +20,8 @@ function installSystemAppCertificate(keystore: Uint8Array, keystorePwd: string):
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-certificateManager-function installSystemAppCertificate(keystore: Uint8Array, keystorePwd: string): Promise<CMResult>--><!--Device-certificateManager-function installSystemAppCertificate(keystore: Uint8Array, keystorePwd: string): Promise<CMResult>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **系统接口：** 此接口为系统接口。
@@ -22,14 +30,14 @@ function installSystemAppCertificate(keystore: Uint8Array, keystorePwd: string):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keystore | Uint8Array | 是 | 表示带有密钥对和证书的密钥库文件，仅支持P12格式。 |
+| keystore | [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 是 | 表示带有密钥对和证书的密钥库文件，仅支持P12格式。 |
 | keystorePwd | string | 是 | 表示密钥库文件的密码。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise对象，返回安装系统应用凭据的结果，返回值为[CMResult](arkts-devicecertificate-cmresult-i.md)对象中的uri属性。 |
+| Promise<CMResult> | Promise对象，返回安装系统应用凭据的结果，返回值为[CMResult](arkts-devicecertificate-cmresult-i.md)对象中的uri属性。 |
 
 **错误码：**
 

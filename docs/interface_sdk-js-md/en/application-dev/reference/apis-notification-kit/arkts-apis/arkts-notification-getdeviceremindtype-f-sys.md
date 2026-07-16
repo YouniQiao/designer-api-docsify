@@ -20,6 +20,8 @@ Obtains the notification reminder type. This API uses an asynchronous callback t
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getDeviceRemindType(callback: AsyncCallback<DeviceRemindType>): void--><!--Device-notificationManager-function getDeviceRemindType(callback: AsyncCallback<DeviceRemindType>): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Obtains the notification reminder type. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;DeviceRemindType&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DeviceRemindType> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -73,6 +75,8 @@ Obtains the notification reminder type. This API uses a promise to return the re
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getDeviceRemindType(): Promise<DeviceRemindType>--><!--Device-notificationManager-function getDeviceRemindType(): Promise<DeviceRemindType>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -81,7 +85,7 @@ Obtains the notification reminder type. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DeviceRemindType&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DeviceRemindType> | Promise used to return the result. |
 
 **Error codes:**
 

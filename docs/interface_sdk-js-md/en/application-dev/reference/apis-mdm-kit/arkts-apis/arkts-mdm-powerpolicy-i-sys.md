@@ -4,6 +4,8 @@ Represents the power policy.
 
 **Since:** 11
 
+<!--Device-deviceSettings-export interface PowerPolicy--><!--Device-deviceSettings-export interface PowerPolicy-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Delay, in ms.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PowerPolicy-delayTime: number--><!--Device-PowerPolicy-delayTime: number-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -45,6 +49,8 @@ Action to apply the power policy.
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PowerPolicy-powerPolicyAction: PowerPolicyAction--><!--Device-PowerPolicy-powerPolicyAction: PowerPolicyAction-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

@@ -4,6 +4,8 @@ Describes the rectangle information.
 
 **Since:** 19
 
+<!--Device-screen-interface Rect--><!--Device-screen-interface Rect-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Height of the rectangle, in px. The value must be an integer.
 
 **Since:** 19
 
+<!--Device-Rect-height: long--><!--Device-Rect-height: long-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ X coordinate of the vertex in the top-left corner of the rectangle, in px. The v
 **Type:** number
 
 **Since:** 19
+
+<!--Device-Rect-left: long--><!--Device-Rect-left: long-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -58,6 +64,8 @@ Y coordinate of the vertex in the top-left corner of the rectangle, in px. The v
 
 **Since:** 19
 
+<!--Device-Rect-top: long--><!--Device-Rect-top: long-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Width of the rectangle, in px. The value must be an integer.
 **Type:** number
 
 **Since:** 19
+
+<!--Device-Rect-width: long--><!--Device-Rect-width: long-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

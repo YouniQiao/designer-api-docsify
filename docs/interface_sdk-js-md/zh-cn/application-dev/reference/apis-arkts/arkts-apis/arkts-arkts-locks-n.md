@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-utils-namespace locks--><!--Device-utils-namespace locks-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { ArkTSUtils } from '@kit.ArkTS';
+```
 
 ## 汇总
 

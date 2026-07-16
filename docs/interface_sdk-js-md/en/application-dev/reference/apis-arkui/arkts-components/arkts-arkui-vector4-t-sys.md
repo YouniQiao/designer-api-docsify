@@ -4,12 +4,13 @@
 declare type Vector4 = import('../api/arkui/Graphics').Vector4
 ```
 
-Defines the four-dimensional vector, which contains x, y, z, and w coordinates that indicate the barrel distortion
-degree.
+Defines the four-dimensional vector, which contains x, y, z, and w coordinates that indicate the barrel distortion degree.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-unnamed-declare type Vector4 = import('../api/arkui/Graphics').Vector4--><!--Device-unnamed-declare type Vector4 = import('../api/arkui/Graphics').Vector4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

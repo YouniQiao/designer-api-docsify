@@ -1,5 +1,11 @@
 # set24HourClock
 
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
+
 ## set24HourClock
 
 ```TypeScript
@@ -15,6 +21,8 @@ export function set24HourClock(option: boolean): boolean
 **替代接口：** [set24HourClock](arkts-localization-system-c-sys.md#set24hourclock-1)
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
+
+<!--Device-i18n-export function set24HourClock(option: boolean): boolean--><!--Device-i18n-export function set24HourClock(option: boolean): boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

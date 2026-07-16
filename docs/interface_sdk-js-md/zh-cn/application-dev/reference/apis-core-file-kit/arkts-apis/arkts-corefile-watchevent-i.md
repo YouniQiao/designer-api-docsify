@@ -4,7 +4,15 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-export interface WatchEvent--><!--Device-unnamed-export interface WatchEvent-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+```
 
 ## cookie
 
@@ -17,6 +25,8 @@ readonly cookie: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-WatchEvent-readonly cookie: number--><!--Device-WatchEvent-readonly cookie: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -58,6 +68,8 @@ readonly event: number
 
 **起始版本：** 10
 
+<!--Device-WatchEvent-readonly event: number--><!--Device-WatchEvent-readonly event: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## fileName
@@ -71,6 +83,8 @@ readonly fileName: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-WatchEvent-readonly fileName: string--><!--Device-WatchEvent-readonly fileName: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

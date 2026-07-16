@@ -14,12 +14,11 @@ function getCallState(callback: AsyncCallback<CallState>): void
 
 Obtains the call state.
 
-If an incoming call is ringing or waiting, the system returns {@code CallState#CALL_STATE_RINGING}.
-If at least one call is in the active, hold, or dialing state, the system returns
-{@code CallState#CALL_STATE_OFFHOOK}.
-In other cases, the system returns {@code CallState#CALL_STATE_IDLE}.
+If an incoming call is ringing or waiting, the system returns {@code CallState#CALL_STATE_RINGING}.If at least one call is in the active, hold, or dialing state, the system returns{@code CallState#CALL_STATE_OFFHOOK}.In other cases, the system returns {@code CallState#CALL_STATE_IDLE}.
 
 **Since:** 6
+
+<!--Device-call-function getCallState(callback: AsyncCallback<CallState>): void--><!--Device-call-function getCallState(callback: AsyncCallback<CallState>): void-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -27,7 +26,7 @@ In other cases, the system returns {@code CallState#CALL_STATE_IDLE}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;CallState&gt; | Yes | Indicates the callback for getting the call state. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<CallState> | Yes | Indicates the callback for getting the call state. |
 
 **Example**
 
@@ -53,12 +52,11 @@ function getCallState(): Promise<CallState>
 
 Obtains the call state.
 
-If an incoming call is ringing or waiting, the system returns {@code CallState#CALL_STATE_RINGING}.
-If at least one call is in the active, hold, or dialing state, the system returns
-{@code CallState#CALL_STATE_OFFHOOK}.
-In other cases, the system returns {@code CallState#CALL_STATE_IDLE}.
+If an incoming call is ringing or waiting, the system returns {@code CallState#CALL_STATE_RINGING}.If at least one call is in the active, hold, or dialing state, the system returns{@code CallState#CALL_STATE_OFFHOOK}.In other cases, the system returns {@code CallState#CALL_STATE_IDLE}.
 
 **Since:** 6
+
+<!--Device-call-function getCallState(): Promise<CallState>--><!--Device-call-function getCallState(): Promise<CallState>-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -66,7 +64,7 @@ In other cases, the system returns {@code CallState#CALL_STATE_IDLE}.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CallState&gt; | Returns the call state. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CallState> | Returns the call state. |
 
 **Example**
 

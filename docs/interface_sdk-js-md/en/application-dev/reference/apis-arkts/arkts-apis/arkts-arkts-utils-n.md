@@ -2,6 +2,8 @@
 
 **Since:** 12
 
+<!--Device-unnamed-declare namespace utils--><!--Device-unnamed-declare namespace utils-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import

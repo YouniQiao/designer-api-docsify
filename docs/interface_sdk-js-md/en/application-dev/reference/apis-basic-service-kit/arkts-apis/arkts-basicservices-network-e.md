@@ -2,10 +2,11 @@
 
 Defines network options.
 
-If the network does not meet the preset conditions, the tasks that have not been executed will await for
-execution, and the tasks that are being executed will fail or pause.
+If the network does not meet the preset conditions, the tasks that have not been executed will await for execution, and the tasks that are being executed will fail or pause.
 
 **Since:** 10
+
+<!--Device-agent-enum Network--><!--Device-agent-enum Network-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -21,6 +22,8 @@ Network of any type.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Network-ANY--><!--Device-Network-ANY-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## WIFI
@@ -35,6 +38,8 @@ Wi-Fi network.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Network-WIFI--><!--Device-Network-WIFI-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## CELLULAR
@@ -48,6 +53,8 @@ Cellular data network.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Network-CELLULAR--><!--Device-Network-CELLULAR-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 

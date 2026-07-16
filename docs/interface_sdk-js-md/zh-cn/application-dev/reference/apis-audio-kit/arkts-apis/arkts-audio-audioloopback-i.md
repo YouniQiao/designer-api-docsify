@@ -4,18 +4,25 @@
 
 在使用AudioLoopback的接口之前，需先通过[audio.createAudioLoopback](arkts-audio-createaudioloopback-f.md#createaudioloopback-1)获取AudioLoopback实例。
 
-当启用音频返听时，系统会创建低时延渲染器与低时延采集器，实现低时延耳返功能。采集的音频直接通过内部路由返回到渲染器。对于渲染器，其音频焦点策略与
-[STREAM_USAGE_MUSIC](arkts-audio-streamusage-e.md)相匹配。对于采集器，其音频焦点策略与[SOURCE_TYPE_MIC](arkts-audio-sourcetype-e.md)相匹配。
+当启用音频返听时，系统会创建低时延渲染器与低时延采集器，实现低时延耳返功能。采集的音频直接通过内部路由返回到渲染器。对于渲染器，其音频焦点策略与[STREAM_USAGE_MUSIC](arkts-audio-streamusage-e.md)相匹配。对于采集器，其音频焦点策略与[SOURCE_TYPE_MIC](arkts-audio-sourcetype-e.md)相匹配。
 
 输入\输出设备由系统自动选择。如果当前输入\输出不支持低时延，则音频返听无法启用。在运行过程中，如果音频焦点被另一个音频流抢占，输入\输出设备切换到不支持低时延的设备，系统会自动禁用音频返听。
 
-> **说明：**
->
+> **说明：**  
+>  
 > - 本Interface首批接口从API version 20开始支持。
 
 **起始版本：** 20
 
+<!--Device-audio-interface AudioLoopback--><!--Device-audio-interface AudioLoopback-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## enable
 
@@ -29,6 +36,8 @@ enable(enable: boolean): Promise<boolean>
 
 **需要权限：** ohos.permission.MICROPHONE
 
+<!--Device-AudioLoopback-enable(enable: boolean): Promise<boolean>--><!--Device-AudioLoopback-enable(enable: boolean): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
@@ -41,7 +50,7 @@ enable(enable: boolean): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示功能执行成功；返回false表示功能执行失败。 |
+| Promise<boolean> | Promise对象。返回true表示功能执行成功；返回false表示功能执行失败。 |
 
 **错误码：**
 
@@ -60,13 +69,15 @@ getEqualizerPreset(): AudioLoopbackEqualizerPreset
 
 **起始版本：** 21
 
+<!--Device-AudioLoopback-getEqualizerPreset(): AudioLoopbackEqualizerPreset--><!--Device-AudioLoopback-getEqualizerPreset(): AudioLoopbackEqualizerPreset-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AudioLoopbackEqualizerPreset | 返回当前音频返听器的均衡器类型。<br>在没有被修改的情况下，默认的均衡器类型是FULL。 |
+| [AudioLoopbackEqualizerPreset](arkts-audio-audioloopbackequalizerpreset-e.md) | 返回当前音频返听器的均衡器类型。<br>在没有被修改的情况下，默认的均衡器类型是FULL。 |
 
 ## getPreferredDevicePair
 
@@ -80,13 +91,15 @@ getPreferredDevicePair(): AudioDevicePair | null
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioLoopback-getPreferredDevicePair(): AudioDevicePair | null--><!--Device-AudioLoopback-getPreferredDevicePair(): AudioDevicePair | null-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AudioDevicePair | 返回系统推荐的音频输入输出设备组合。<br>如果没有可用的输入输出设备组合，则返回null。 |
+| [AudioDevicePair](arkts-audio-audiodevicepair-i.md) | 返回系统推荐的音频输入输出设备组合。<br>如果没有可用的输入输出设备组合，则返回null。 |
 
 ## getReverbPreset
 
@@ -98,13 +111,15 @@ getReverbPreset(): AudioLoopbackReverbPreset
 
 **起始版本：** 21
 
+<!--Device-AudioLoopback-getReverbPreset(): AudioLoopbackReverbPreset--><!--Device-AudioLoopback-getReverbPreset(): AudioLoopbackReverbPreset-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AudioLoopbackReverbPreset | 返回当前音频返听器的混响模式。<br>在没有被修改的情况下，默认的混响模式是THEATER。 |
+| [AudioLoopbackReverbPreset](arkts-audio-audioloopbackreverbpreset-e.md) | 返回当前音频返听器的混响模式。<br>在没有被修改的情况下，默认的混响模式是THEATER。 |
 
 ## getStatus
 
@@ -116,13 +131,15 @@ getStatus(): Promise<AudioLoopbackStatus>
 
 **起始版本：** 20
 
+<!--Device-AudioLoopback-getStatus(): Promise<AudioLoopbackStatus>--><!--Device-AudioLoopback-getStatus(): Promise<AudioLoopbackStatus>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AudioLoopbackStatus&gt; | Promise对象，返回音频返听状态。 |
+| Promise<AudioLoopbackStatus> | Promise对象，返回音频返听状态。 |
 
 ## getSupportedDevicePairs
 
@@ -136,13 +153,15 @@ getSupportedDevicePairs(): Array<AudioDevicePair>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioLoopback-getSupportedDevicePairs(): Array<AudioDevicePair>--><!--Device-AudioLoopback-getSupportedDevicePairs(): Array<AudioDevicePair>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;AudioDevicePair&gt; | 返回支持返听的音频输入输出设备数组。<br>如果没有可用的输入输出设备组合，则返回空数组。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<AudioDevicePair> | 返回支持返听的音频输入输出设备数组。<br>如果没有可用的输入输出设备组合，则返回空数组。 |
 
 ## getVolume
 
@@ -155,6 +174,8 @@ getVolume(): number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioLoopback-getVolume(): double--><!--Device-AudioLoopback-getVolume(): double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -174,6 +195,8 @@ off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void
 
 **起始版本：** 20
 
+<!--Device-AudioLoopback-off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
@@ -181,7 +204,7 @@ off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'statusChange' | 是 | 事件回调类型，支持的事件为'statusChange'，当取消监听音频状态事件时，触发该事件。 |
-| callback | Callback&lt;AudioLoopbackStatus&gt; | 否 | 回调函数，返回当前音频返听的状态。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioLoopbackStatus> | 否 | 回调函数，返回当前音频返听的状态。 |
 
 **错误码：**
 
@@ -199,6 +222,8 @@ on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void
 
 **起始版本：** 20
 
+<!--Device-AudioLoopback-on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
@@ -206,7 +231,7 @@ on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'statusChange' | 是 | 事件回调类型，支持的事件为'statusChange'，当AudioLoopback的状态发生变化时，触发该事件。 |
-| callback | Callback&lt;AudioLoopbackStatus&gt; | 是 | 回调函数，返回当前音频返听的状态。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioLoopbackStatus> | 是 | 回调函数，返回当前音频返听的状态。 |
 
 **错误码：**
 
@@ -224,13 +249,15 @@ setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean
 
 **起始版本：** 21
 
+<!--Device-AudioLoopback-setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean--><!--Device-AudioLoopback-setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| preset | AudioLoopbackEqualizerPreset | 是 | 均衡器类型。 |
+| preset | [AudioLoopbackEqualizerPreset](arkts-audio-audioloopbackequalizerpreset-e.md) | 是 | 均衡器类型。 |
 
 **返回值：**
 
@@ -254,13 +281,15 @@ setReverbPreset(preset: AudioLoopbackReverbPreset): boolean
 
 **起始版本：** 21
 
+<!--Device-AudioLoopback-setReverbPreset(preset: AudioLoopbackReverbPreset): boolean--><!--Device-AudioLoopback-setReverbPreset(preset: AudioLoopbackReverbPreset): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| preset | AudioLoopbackReverbPreset | 是 | 混响模式。 |
+| preset | [AudioLoopbackReverbPreset](arkts-audio-audioloopbackreverbpreset-e.md) | 是 | 混响模式。 |
 
 **返回值：**
 
@@ -284,6 +313,8 @@ setVolume(volume: number): Promise<void>
 
 **起始版本：** 20
 
+<!--Device-AudioLoopback-setVolume(volume: double): Promise<void>--><!--Device-AudioLoopback-setVolume(volume: double): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
@@ -296,7 +327,7 @@ setVolume(volume: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

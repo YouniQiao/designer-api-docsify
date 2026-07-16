@@ -18,6 +18,8 @@ Query dialing number information on SIM card.
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-sim-function queryIccDiallingNumbers(slotId: int, type: ContactType, callback: AsyncCallback<Array<DiallingNumbersInfo>>): void--><!--Device-sim-function queryIccDiallingNumbers(slotId: int, type: ContactType, callback: AsyncCallback<Array<DiallingNumbersInfo>>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -27,8 +29,8 @@ Query dialing number information on SIM card.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| type | ContactType | Yes | Indicates contact type. |
-| callback | AsyncCallback&lt;Array&lt;DiallingNumbersInfo&gt;&gt; | Yes | Indicates the callback forgetting the dialing number information. |
+| type | [ContactType](arkts-telephony-contacttype-e-sys.md) | Yes | Indicates contact type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<DiallingNumbersInfo>> | Yes | Indicates the callback for getting the dialing number information. |
 
 **Error codes:**
 
@@ -69,6 +71,8 @@ Query dialing number information on SIM card.
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-sim-function queryIccDiallingNumbers(slotId: int, type: ContactType): Promise<Array<DiallingNumbersInfo>>--><!--Device-sim-function queryIccDiallingNumbers(slotId: int, type: ContactType): Promise<Array<DiallingNumbersInfo>>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -78,13 +82,13 @@ Query dialing number information on SIM card.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| type | ContactType | Yes | Indicates contact type. |
+| type | [ContactType](arkts-telephony-contacttype-e-sys.md) | Yes | Indicates contact type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DiallingNumbersInfo&gt;&gt; | Returns the dialing number information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<DiallingNumbersInfo>> | Returns the dialing number information. |
 
 **Error codes:**
 

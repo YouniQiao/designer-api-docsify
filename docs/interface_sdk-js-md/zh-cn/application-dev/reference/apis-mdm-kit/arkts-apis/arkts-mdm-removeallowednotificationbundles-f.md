@@ -1,5 +1,11 @@
 # removeAllowedNotificationBundles
 
+## 导入模块
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+```
+
 ## removeAllowedNotificationBundles
 
 ```TypeScript
@@ -14,14 +20,16 @@ function removeAllowedNotificationBundles(admin: Want, bundleNames: Array<string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function removeAllowedNotificationBundles(admin: Want, bundleNames: Array<string>, accountId: number): void--><!--Device-applicationManager-function removeAllowedNotificationBundles(admin: Want, bundleNames: Array<string>, accountId: number): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| bundleNames | Array&lt;string&gt; | 是 | 应用包名数组，指定需要移除的应用。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| bundleNames | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 应用包名数组，指定需要移除的应用。 |
 | accountId | number | 是 | 用户ID，取值范围：大于等于0。<br> accountId可以通过@ohos.account.osAccount中的[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2)等接口来获取。 |
 
 **错误码：**

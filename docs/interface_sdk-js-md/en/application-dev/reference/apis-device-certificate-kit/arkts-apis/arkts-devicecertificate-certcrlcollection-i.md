@@ -4,6 +4,8 @@ Provides APIs for locating certificates or CRLs in a **CertCRLCollection** objec
 
 **Since:** 11
 
+<!--Device-cert-interface CertCRLCollection--><!--Device-cert-interface CertCRLCollection-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
@@ -24,19 +26,21 @@ Selects CRLs that match the specified parameters. This API uses a promise to ret
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CertCRLCollection-selectCRLs(param: X509CRLMatchParameters): Promise<Array<X509CRL>>--><!--Device-CertCRLCollection-selectCRLs(param: X509CRLMatchParameters): Promise<Array<X509CRL>>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | X509CRLMatchParameters | Yes | Parameters used to match the CRLs. |
+| param | [X509CRLMatchParameters](arkts-devicecertificate-x509crlmatchparameters-i.md) | Yes | Parameters used to match the CRLs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;X509CRL&gt;&gt; | Promise used to return the matched CRLs. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<X509CRL>> | Promise used to return the matched CRLs. |
 
 **Error codes:**
 
@@ -158,14 +162,16 @@ Selects CRLs that match the specified parameters. This API uses an asynchronous 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CertCRLCollection-selectCRLs(param: X509CRLMatchParameters, callback: AsyncCallback<Array<X509CRL>>): void--><!--Device-CertCRLCollection-selectCRLs(param: X509CRLMatchParameters, callback: AsyncCallback<Array<X509CRL>>): void-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | X509CRLMatchParameters | Yes | Parameters used to match the CRLs. |
-| callback | AsyncCallback&lt;Array&lt;X509CRL&gt;&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined**, and **data** is the matched CRLs obtained. Otherwise, **err** is anerror object. |
+| param | [X509CRLMatchParameters](arkts-devicecertificate-x509crlmatchparameters-i.md) | Yes | Parameters used to match the CRLs. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<X509CRL>> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the matched CRLs obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -287,19 +293,21 @@ Selects certificates that match the specified parameters. This API uses a promis
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters): Promise<Array<X509Cert>>--><!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters): Promise<Array<X509Cert>>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | X509CertMatchParameters | Yes | Parameters used to match the certificates. |
+| param | [X509CertMatchParameters](arkts-devicecertificate-x509certmatchparameters-i.md) | Yes | Parameters used to match the certificates. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;X509Cert&gt;&gt; | Promise used to return the matched certificates. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<X509Cert>> | Promise used to return the matched certificates. |
 
 **Error codes:**
 
@@ -379,12 +387,13 @@ async function selectCerts() {
 selectCerts(param: X509CertMatchParameters, callback: AsyncCallback<Array<X509Cert>>): void
 ```
 
-Selects certificates that match the specified parameters. This API uses an asynchronous callback to return the
-result.
+Selects certificates that match the specified parameters. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters, callback: AsyncCallback<Array<X509Cert>>): void--><!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters, callback: AsyncCallback<Array<X509Cert>>): void-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -392,8 +401,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | X509CertMatchParameters | Yes | Parameters used to match the certificates. |
-| callback | AsyncCallback&lt;Array&lt;X509Cert&gt;&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined**, and **data** is the matched certificates obtained. Otherwise, **err** isan error object. |
+| param | [X509CertMatchParameters](arkts-devicecertificate-x509certmatchparameters-i.md) | Yes | Parameters used to match the certificates. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<X509Cert>> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the matched certificates obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

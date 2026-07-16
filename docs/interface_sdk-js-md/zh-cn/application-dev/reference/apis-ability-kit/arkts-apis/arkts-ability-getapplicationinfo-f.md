@@ -1,5 +1,11 @@
 # getApplicationInfo
 
+## 导入模块
+
+```TypeScript
+import { bundle } from '@kit.AbilityKit';
+```
+
 ## getApplicationInfo
 
 ```TypeScript
@@ -17,6 +23,10 @@ function getApplicationInfo(bundleName: string,
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundle-function getApplicationInfo(bundleName: string,
+    bundleFlags: number, userId: number, callback: AsyncCallback<ApplicationInfo>): void--><!--Device-bundle-function getApplicationInfo(bundleName: string,
+    bundleFlags: number, userId: number, callback: AsyncCallback<ApplicationInfo>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **参数：**
@@ -26,7 +36,7 @@ function getApplicationInfo(bundleName: string,
 | bundleName | string | 是 | 要查询的应用Bundle名称。 |
 | bundleFlags | number | 是 | 用于指定返回的应用信息对象中包含信息的标记。取值范围：参考[BundleFlag说明](arkts-ability-bundleflag-e.md)中应用信息相关flag。 |
 | userId | number | 是 | 用户ID。取值范围：大于等于0。 |
-| callback | AsyncCallback&lt;ApplicationInfo&gt; | 是 | 程序启动作为入参的回调函数，返回应用程序信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ApplicationInfo> | 是 | 程序启动作为入参的回调函数，返回应用程序信息。 |
 
 
 ## getApplicationInfo
@@ -45,6 +55,8 @@ function getApplicationInfo(bundleName: string, bundleFlags: number, callback: A
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundle-function getApplicationInfo(bundleName: string, bundleFlags: number, callback: AsyncCallback<ApplicationInfo>): void--><!--Device-bundle-function getApplicationInfo(bundleName: string, bundleFlags: number, callback: AsyncCallback<ApplicationInfo>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **参数：**
@@ -53,7 +65,7 @@ function getApplicationInfo(bundleName: string, bundleFlags: number, callback: A
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 要查询的应用Bundle名称。 |
 | bundleFlags | number | 是 | 用于指定返回的应用信息对象中包含信息的标记。取值范围：参考[BundleFlag说明](arkts-ability-bundleflag-e.md)中应用信息相关flag。 |
-| callback | AsyncCallback&lt;ApplicationInfo&gt; | 是 | 程序启动作为入参的回调函数，返回应用程序信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ApplicationInfo> | 是 | 程序启动作为入参的回调函数，返回应用程序信息。 |
 
 
 ## getApplicationInfo
@@ -72,6 +84,8 @@ function getApplicationInfo(bundleName: string, bundleFlags: number, userId?: nu
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundle-function getApplicationInfo(bundleName: string, bundleFlags: number, userId?: number): Promise<ApplicationInfo>--><!--Device-bundle-function getApplicationInfo(bundleName: string, bundleFlags: number, userId?: number): Promise<ApplicationInfo>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **参数：**
@@ -86,5 +100,5 @@ function getApplicationInfo(bundleName: string, bundleFlags: number, userId?: nu
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ApplicationInfo&gt; | Promise形式返回应用程序信息。 |
+| Promise<ApplicationInfo> | Promise形式返回应用程序信息。 |
 

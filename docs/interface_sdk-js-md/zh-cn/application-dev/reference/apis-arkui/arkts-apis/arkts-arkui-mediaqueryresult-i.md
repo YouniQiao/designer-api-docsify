@@ -4,7 +4,15 @@
 
 **起始版本：** 7
 
+<!--Device-mediaquery-interface MediaQueryResult--><!--Device-mediaquery-interface MediaQueryResult-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { mediaquery } from '@kit.ArkUI';
+```
 
 ## matches
 
@@ -18,9 +26,11 @@ readonly matches: boolean
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-MediaQueryResult-readonly matches: boolean--><!--Device-MediaQueryResult-readonly matches: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,9 +46,11 @@ readonly media: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-MediaQueryResult-readonly media: string--><!--Device-MediaQueryResult-readonly media: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

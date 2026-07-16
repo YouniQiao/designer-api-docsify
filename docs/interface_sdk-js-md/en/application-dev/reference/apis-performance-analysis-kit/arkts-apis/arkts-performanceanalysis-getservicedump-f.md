@@ -12,13 +12,13 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 function getServiceDump(serviceid : number, fd : number, args : Array<string>) : void
 ```
 
-Obtains system service information.
-It need dump permission.
-This API can be called only by system application.
+Obtains system service information.It need dump permission.This API can be called only by system application.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.DUMP
+
+<!--Device-hidebug-function getServiceDump(serviceid : int, fd : int, args : Array<string>) : void--><!--Device-hidebug-function getServiceDump(serviceid : int, fd : int, args : Array<string>) : void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -28,7 +28,7 @@ This API can be called only by system application.
 | --- | --- | --- | --- |
 | serviceid | number | Yes | Service ID used to obtain system service information. |
 | fd | number | Yes | File descriptor to which data is written by the API. |
-| args | Array&lt;string&gt; | Yes | Parameter list of the **Dump** API of the system service. The maximum length of astring is 254 characters. The excess part will be truncated. |
+| args | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Parameter list of the **Dump** API of the system service. The maximum length of a string is 254 characters. The excess part will be truncated. |
 
 **Error codes:**
 

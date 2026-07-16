@@ -4,6 +4,8 @@ Indicates the options for call rejection message.
 
 **Since:** 7
 
+<!--Device-call-export interface RejectMessageOptions--><!--Device-call-export interface RejectMessageOptions-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -25,6 +27,8 @@ Indicates the content of call rejection message.
 **Type:** string
 
 **Since:** 7
+
+<!--Device-RejectMessageOptions-messageContent: string--><!--Device-RejectMessageOptions-messageContent: string-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 

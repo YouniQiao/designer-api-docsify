@@ -20,15 +20,17 @@ Removes the applications that are allowed to distribute ability connection.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function removeAllowedDistributeAbilityConnBundles(admin: Want, appIdentifiers: Array<string>, serviceType: ServiceType, accountId: number): void--><!--Device-applicationManager-function removeAllowedDistributeAbilityConnBundles(admin: Want, appIdentifiers: Array<string>, serviceType: ServiceType, accountId: number): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | admin indicates the enterprise admin extension ability information. |
-| appIdentifiers | Array&lt;string&gt; | Yes | appIdentifiers indicates the list of application appIdentifiers. |
-| serviceType | ServiceType | Yes | serviceType indicates the type of distribute ability. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | admin indicates the enterprise admin extension ability information. |
+| appIdentifiers | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | appIdentifiers indicates the list of application appIdentifiers. |
+| serviceType | [ServiceType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-servicetype-e.md) | Yes | serviceType indicates the type of distribute ability. |
 | accountId | number | Yes | accountId indicates the ID of OS account.<br>The value must be an integer greater than or equal to 0. |
 
 **Error codes:**

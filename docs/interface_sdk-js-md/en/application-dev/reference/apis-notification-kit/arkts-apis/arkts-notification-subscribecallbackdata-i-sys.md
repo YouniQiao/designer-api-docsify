@@ -4,6 +4,8 @@ Returns notification information carrying system property values.
 
 **Since:** 7
 
+<!--Device-unnamed-export interface SubscribeCallbackData--><!--Device-unnamed-export interface SubscribeCallbackData-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -14,14 +16,15 @@ Returns notification information carrying system property values.
 readonly notificationClassification?: NotificationClassification
 ```
 
-Notification classification information. It exists only when enableClassification in
-NotificationSubscribeInfo is true.
+Notification classification information. It exists only when enableClassification in NotificationSubscribeInfo is true.
 
 **Type:** NotificationClassification
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SubscribeCallbackData-readonly notificationClassification?: NotificationClassification--><!--Device-SubscribeCallbackData-readonly notificationClassification?: NotificationClassification-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -35,12 +38,14 @@ readonly reason?: number
 
 Reason for deletion. The options are as follows:
 
-- **1**: The notification is deleted after being tapped.
+- **1**: The notification is deleted after being tapped.  
 - **2**: The notification is deleted by the user.
 
 **Type:** number
 
 **Since:** 7
+
+<!--Device-SubscribeCallbackData-readonly reason?: int--><!--Device-SubscribeCallbackData-readonly reason?: int-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -58,6 +63,8 @@ Notification content.
 
 **Since:** 7
 
+<!--Device-SubscribeCallbackData-readonly request: NotificationRequest--><!--Device-SubscribeCallbackData-readonly request: NotificationRequest-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -73,6 +80,8 @@ Notification sorting information.
 **Type:** NotificationSortingMap
 
 **Since:** 7
+
+<!--Device-SubscribeCallbackData-readonly sortingMap?: NotificationSortingMap--><!--Device-SubscribeCallbackData-readonly sortingMap?: NotificationSortingMap-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -90,6 +99,8 @@ Notification sound.
 
 **Since:** 7
 
+<!--Device-SubscribeCallbackData-readonly sound?: string--><!--Device-SubscribeCallbackData-readonly sound?: string-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -106,6 +117,8 @@ Notification vibration.
 
 **Since:** 7
 
+<!--Device-SubscribeCallbackData-readonly vibrationValues?: Array<long>--><!--Device-SubscribeCallbackData-readonly vibrationValues?: Array<long>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -116,14 +129,15 @@ Notification vibration.
 readonly voiceContent?: VoiceContent
 ```
 
-Voice broadcast content of the notification. It exists only when voiceContentOptions.enabled is true in
-NotificationSubscribeInfo.
+Voice broadcast content of the notification. It exists only when voiceContentOptions.enabled is true in NotificationSubscribeInfo.
 
 **Type:** VoiceContent
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SubscribeCallbackData-readonly voiceContent?: VoiceContent--><!--Device-SubscribeCallbackData-readonly voiceContent?: VoiceContent-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

@@ -12,8 +12,7 @@ import { adminManager } from '@kit.MDMKit';
 function isByodAdmin(admin: Want): boolean
 ```
 
-Checks whether the current application is activated as a BYOD device administrator application based on the
-**EnterpriseAdminExtensionAbility** component.
+Checks whether the current application is activated as a BYOD device administrator application based on the **EnterpriseAdminExtensionAbility** component.
 
 **Since:** 20
 
@@ -21,19 +20,21 @@ Checks whether the current application is activated as a BYOD device administrat
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-adminManager-function isByodAdmin(admin: Want): boolean--><!--Device-adminManager-function isByodAdmin(admin: Want): boolean-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. Only the**EnterpriseAdminExtensionAbility** component of the current application can be passed. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. Only the **EnterpriseAdminExtensionAbility** component of the current application can be passed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The value **true** indicates the application is activated as a BYOD device administratorapplication, and the value **false** indicates the opposite. |
+| boolean | The value **true** indicates the application is activated as a BYOD device administrator application, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

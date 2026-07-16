@@ -10,6 +10,8 @@ Defines a Resource object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-sendableResourceManager-export type Resource = _Resource--><!--Device-sendableResourceManager-export type Resource = _Resource-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Property type:** _Resource

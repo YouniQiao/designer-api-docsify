@@ -4,9 +4,17 @@
 
 **起始版本：** 9
 
+<!--Device-windowAnimationManager-export interface WindowAnimationTarget--><!--Device-windowAnimationManager-export interface WindowAnimationTarget-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { windowAnimationManager } from '@kit.ArkUI';
+```
 
 ## abilityName
 
@@ -19,6 +27,8 @@ readonly abilityName: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-WindowAnimationTarget-readonly abilityName: string--><!--Device-WindowAnimationTarget-readonly abilityName: string-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -36,6 +46,8 @@ readonly bundleName: string
 
 **起始版本：** 9
 
+<!--Device-WindowAnimationTarget-readonly bundleName: string--><!--Device-WindowAnimationTarget-readonly bundleName: string-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +64,8 @@ readonly missionId: number
 
 **起始版本：** 9
 
+<!--Device-WindowAnimationTarget-readonly missionId: int--><!--Device-WindowAnimationTarget-readonly missionId: int-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +81,8 @@ readonly windowBounds: RRect
 **类型：** RRect
 
 **起始版本：** 9
+
+<!--Device-WindowAnimationTarget-readonly windowBounds: RRect--><!--Device-WindowAnimationTarget-readonly windowBounds: RRect-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 

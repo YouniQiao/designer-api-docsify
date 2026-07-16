@@ -4,7 +4,15 @@
 
 **起始版本：** 7
 
+<!--Device-osAccount-interface AccountManager--><!--Device-osAccount-interface AccountManager-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
+
+## 导入模块
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+```
 
 ## checkMultiOsAccountEnabled
 
@@ -16,13 +24,15 @@ checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 9
 
+<!--Device-AccountManager-checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。返回true表示支持多系统账号；返回false表示不支持。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。返回true表示支持多系统账号；返回false表示不支持。 |
 
 **错误码：**
 
@@ -62,13 +72,15 @@ checkMultiOsAccountEnabled(): Promise<boolean>
 
 **起始版本：** 9
 
+<!--Device-AccountManager-checkMultiOsAccountEnabled(): Promise<boolean>--><!--Device-AccountManager-checkMultiOsAccountEnabled(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示支持多系统账号；返回false表示不支持。 |
+| Promise<boolean> | Promise对象。返回true表示支持多系统账号；返回false表示不支持。 |
 
 **错误码：**
 
@@ -103,8 +115,8 @@ checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void
 
 判断指定系统账号是否处于激活状态。使用callback异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
@@ -113,6 +125,8 @@ checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -120,7 +134,7 @@ checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。返回true表示账号已激活；返回false表示账号未激活。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。返回true表示账号已激活；返回false表示账号未激活。 |
 
 **错误码：**
 
@@ -165,8 +179,8 @@ checkOsAccountActivated(localId: number): Promise<boolean>
 
 判断指定系统账号是否处于激活状态。使用Promise异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
@@ -174,6 +188,8 @@ checkOsAccountActivated(localId: number): Promise<boolean>
 **废弃版本：** 11
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-checkOsAccountActivated(localId: number): Promise<boolean>--><!--Device-AccountManager-checkOsAccountActivated(localId: number): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -187,7 +203,7 @@ checkOsAccountActivated(localId: number): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示账号已激活；返回false表示账号未激活。 |
+| Promise<boolean> | Promise对象。返回true表示账号已激活；返回false表示账号未激活。 |
 
 **错误码：**
 
@@ -230,8 +246,8 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: A
 
 判断指定系统账号是否具有指定约束。使用callback异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
@@ -239,6 +255,8 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: A
 **废弃版本：** 11
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -248,7 +266,7 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: A
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
 | constraint | string | 是 | 指定的[约束](../../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)名称。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。返回true表示已使能指定的约束；返回false表示未使能指定的约束。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。返回true表示已使能指定的约束；返回false表示未使能指定的约束。 |
 
 **错误码：**
 
@@ -294,8 +312,8 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<bo
 
 判断指定系统账号是否具有指定约束。使用Promise异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
@@ -303,6 +321,8 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<bo
 **废弃版本：** 11
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<boolean>--><!--Device-AccountManager-checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -317,7 +337,7 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<bo
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示已使能指定的约束；返回false表示未使能指定的约束。 |
+| Promise<boolean> | Promise对象。返回true表示已使能指定的约束；返回false表示未使能指定的约束。 |
 
 **错误码：**
 
@@ -363,13 +383,15 @@ checkOsAccountTestable(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 9
 
+<!--Device-AccountManager-checkOsAccountTestable(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountTestable(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。返回true表示当前账号为测试账号；返回false表示当前账号非测试账号；默认为false。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。返回true表示当前账号为测试账号；返回false表示当前账号非测试账号；默认为false。 |
 
 **错误码：**
 
@@ -409,13 +431,15 @@ checkOsAccountTestable(): Promise<boolean>
 
 **起始版本：** 9
 
+<!--Device-AccountManager-checkOsAccountTestable(): Promise<boolean>--><!--Device-AccountManager-checkOsAccountTestable(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示当前账号为测试账号；返回false表示当前账号非测试账号；默认为false。 |
+| Promise<boolean> | Promise对象。返回true表示当前账号为测试账号；返回false表示当前账号非测试账号；默认为false。 |
 
 **错误码：**
 
@@ -450,9 +474,9 @@ checkOsAccountVerified(callback: AsyncCallback<boolean>): void
 
 检查当前系统账号是否已认证解锁。使用callback异步回调。
 
-> **说明：**
->
-> 从API version 9开始支持，从API version 11开始废弃。建议使用
+> **说明：**  
+>  
+> 从API version 9开始支持，从API version 11开始废弃。建议使用  
 > [isOsAccountUnlocked](arkts-basicservices-accountmanager-i.md#isosaccountunlocked-1)替代。
 
 **起始版本：** 9
@@ -461,13 +485,15 @@ checkOsAccountVerified(callback: AsyncCallback<boolean>): void
 
 **替代接口：** [isOsAccountUnlocked()](arkts-basicservices-accountmanager-i.md#isosaccountunlocked-1)
 
+<!--Device-AccountManager-checkOsAccountVerified(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountVerified(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。返回true表示当前账号已认证解锁；返回false表示当前账号未认证解锁。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。返回true表示当前账号已认证解锁；返回false表示当前账号未认证解锁。 |
 
 **错误码：**
 
@@ -504,9 +530,9 @@ checkOsAccountVerified(): Promise<boolean>
 
 检查当前系统账号是否已认证解锁。使用Promise异步回调。
 
-> **说明：**
->
-> 从API version 9开始支持，从API version 11开始废弃。建议使用
+> **说明：**  
+>  
+> 从API version 9开始支持，从API version 11开始废弃。建议使用  
 > [isOsAccountUnlocked](arkts-basicservices-accountmanager-i.md#isosaccountunlocked-1)替代。
 
 **起始版本：** 9
@@ -515,13 +541,15 @@ checkOsAccountVerified(): Promise<boolean>
 
 **替代接口：** [isOsAccountUnlocked()](arkts-basicservices-accountmanager-i.md#isosaccountunlocked-1)
 
+<!--Device-AccountManager-checkOsAccountVerified(): Promise<boolean>--><!--Device-AccountManager-checkOsAccountVerified(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示当前账号已认证解锁；返回false表示当前账号未认证解锁。 |
+| Promise<boolean> | Promise对象。返回true表示当前账号已认证解锁；返回false表示当前账号未认证解锁。 |
 
 **错误码：**
 
@@ -556,8 +584,8 @@ checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 
 检查指定系统账号是否已验证。使用callback异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
@@ -566,6 +594,8 @@ checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -573,7 +603,7 @@ checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。返回true表示当前账号已认证解锁；返回false表示当前账号未认证解锁。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。返回true表示当前账号已认证解锁；返回false表示当前账号未认证解锁。 |
 
 **错误码：**
 
@@ -616,8 +646,8 @@ checkOsAccountVerified(localId: number): Promise<boolean>
 
 检查指定系统账号是否已验证。使用Promise异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
@@ -625,6 +655,8 @@ checkOsAccountVerified(localId: number): Promise<boolean>
 **废弃版本：** 11
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-checkOsAccountVerified(localId: number): Promise<boolean>--><!--Device-AccountManager-checkOsAccountVerified(localId: number): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -638,7 +670,7 @@ checkOsAccountVerified(localId: number): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示当前账号已认证解锁；返回false表示当前账号未认证解锁。 |
+| Promise<boolean> | Promise对象。返回true表示当前账号已认证解锁；返回false表示当前账号未认证解锁。 |
 
 **错误码：**
 
@@ -681,13 +713,15 @@ getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<number>>): void
 
 **起始版本：** 9
 
+<!--Device-AccountManager-getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<int>>): void--><!--Device-AccountManager-getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<int>>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;number&gt;&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前处于激活状态的系统账号的ID列表；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<number>> | 是 | 回调函数。如果查询成功，err为null，data为当前处于激活状态的系统账号的ID列表；否则为错误对象。 |
 
 **错误码：**
 
@@ -730,13 +764,15 @@ getActivatedOsAccountLocalIds(): Promise<Array<number>>
 
 **起始版本：** 9
 
+<!--Device-AccountManager-getActivatedOsAccountLocalIds(): Promise<Array<int>>--><!--Device-AccountManager-getActivatedOsAccountLocalIds(): Promise<Array<int>>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Promise对象，返回当前处于激活状态的系统账号的ID列表。 |
+| Promise<Array<number>> | Promise对象，返回当前处于激活状态的系统账号的ID列表。 |
 
 **错误码：**
 
@@ -771,9 +807,9 @@ getCreatedOsAccountsCount(callback: AsyncCallback<number>): void
 
 获取已创建的系统账号数量。使用callback异步回调。
 
-> **说明：**
->
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> **说明：**  
+>  
+> 从API version 7开始支持，从API version 9开始废弃。建议使用  
 > [getOsAccountCount](arkts-basicservices-accountmanager-i.md#getosaccountcount-1)替代。
 
 **起始版本：** 7
@@ -784,13 +820,15 @@ getCreatedOsAccountsCount(callback: AsyncCallback<number>): void
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getCreatedOsAccountsCount(callback: AsyncCallback<number>): void--><!--Device-AccountManager-getCreatedOsAccountsCount(callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。如果获取成功，err为null，data为已创建的系统账号的数量；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。如果获取成功，err为null，data为已创建的系统账号的数量；否则为错误对象。 |
 
 **示例：**
 
@@ -816,9 +854,9 @@ getCreatedOsAccountsCount(): Promise<number>
 
 获取已创建的系统账号数量。使用Promise异步回调。
 
-> **说明：**
->
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> **说明：**  
+>  
+> 从API version 7开始支持，从API version 9开始废弃。建议使用  
 > [getOsAccountCount](arkts-basicservices-accountmanager-i.md#getosaccountcount-2)替代。
 
 **起始版本：** 7
@@ -829,13 +867,15 @@ getCreatedOsAccountsCount(): Promise<number>
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getCreatedOsAccountsCount(): Promise<number>--><!--Device-AccountManager-getCreatedOsAccountsCount(): Promise<number>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回已创建的系统账号的数量。 |
+| Promise<number> | Promise对象，返回已创建的系统账号的数量。 |
 
 **示例：**
 
@@ -859,8 +899,8 @@ getCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 
 查询当前进程所属的系统账号的信息。使用callback异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
@@ -871,13 +911,15 @@ getCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 - API版本10+：ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.GET_LOCAL_ACCOUNTS
 - API版本9：ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void--><!--Device-AccountManager-getCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;OsAccountInfo&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号信息；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<OsAccountInfo> | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号信息；否则为错误对象。 |
 
 **错误码：**
 
@@ -915,8 +957,8 @@ getCurrentOsAccount(): Promise<OsAccountInfo>
 
 查询当前进程所属的系统账号的信息。使用Promise异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
@@ -927,13 +969,15 @@ getCurrentOsAccount(): Promise<OsAccountInfo>
 - API版本10+：ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.GET_LOCAL_ACCOUNTS
 - API版本9：ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getCurrentOsAccount(): Promise<OsAccountInfo>--><!--Device-AccountManager-getCurrentOsAccount(): Promise<OsAccountInfo>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;OsAccountInfo&gt; | Promise对象，返回当前进程所属的系统账号信息。 |
+| Promise<OsAccountInfo> | Promise对象，返回当前进程所属的系统账号信息。 |
 
 **错误码：**
 
@@ -969,10 +1013,10 @@ getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 
 获取分布式虚拟设备ID。使用callback异步回调。
 
-> **说明：**
->
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [queryDistributedVirtualDeviceId](arkts-basicservices-accountmanager-i.md#querydistributedvirtualdeviceid-1)
+> **说明：**  
+>  
+> 从API version 7开始支持，从API version 9开始废弃。建议使用  
+> [queryDistributedVirtualDeviceId](arkts-basicservices-accountmanager-i.md#querydistributedvirtualdeviceid-1)  
 > 替代。
 
 **起始版本：** 7
@@ -983,13 +1027,15 @@ getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void--><!--Device-AccountManager-getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | 是 | 回调函数。如果获取成功，err为null，data为分布式虚拟设备ID；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | 是 | 回调函数。如果获取成功，err为null，data为分布式虚拟设备ID；否则为错误对象。 |
 
 **示例：**
 
@@ -1015,9 +1061,9 @@ getDistributedVirtualDeviceId(): Promise<string>
 
 获取分布式虚拟设备ID。使用Promise异步回调。
 
-> **说明：**
->
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> **说明：**  
+>  
+> 从API version 7开始支持，从API version 9开始废弃。建议使用  
 > [queryDistributedVirtualDeviceId](arkts-basicservices-accountmanager-i.md#querydistributedvirtualdeviceid-2)替代。
 
 **起始版本：** 7
@@ -1028,13 +1074,15 @@ getDistributedVirtualDeviceId(): Promise<string>
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getDistributedVirtualDeviceId(): Promise<string>--><!--Device-AccountManager-getDistributedVirtualDeviceId(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回分布式虚拟设备ID。 |
+| Promise<string> | Promise对象，返回分布式虚拟设备ID。 |
 
 **示例：**
 
@@ -1060,13 +1108,15 @@ getForegroundOsAccountLocalId(): Promise<number>
 
 **起始版本：** 15
 
+<!--Device-AccountManager-getForegroundOsAccountLocalId(): Promise<int>--><!--Device-AccountManager-getForegroundOsAccountLocalId(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回前台系统账号的ID。 |
+| Promise<number> | Promise对象。返回前台系统账号的ID。 |
 
 **错误码：**
 
@@ -1101,8 +1151,8 @@ getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string
 
 获取指定系统账号的全部约束。使用callback异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
@@ -1113,6 +1163,8 @@ getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string>>): void--><!--Device-AccountManager-getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -1120,7 +1172,7 @@ getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。如果获取成功，err为null，data为指定系统账号的全部[约束](../../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<string>> | 是 | 回调函数。如果获取成功，err为null，data为指定系统账号的全部[约束](../../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)；否则为错误对象。 |
 
 **示例：**
 
@@ -1150,8 +1202,8 @@ getOsAccountAllConstraints(localId: number): Promise<Array<string>>
 
 获取指定系统账号的全部约束。使用Promise异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
@@ -1161,6 +1213,8 @@ getOsAccountAllConstraints(localId: number): Promise<Array<string>>
 **替代接口：** getOsAccountConstraints(localId:
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountAllConstraints(localId: number): Promise<Array<string>>--><!--Device-AccountManager-getOsAccountAllConstraints(localId: number): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1174,7 +1228,7 @@ getOsAccountAllConstraints(localId: number): Promise<Array<string>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回指定系统账号的全部[约束](../../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)。 |
+| Promise<Array<string>> | Promise对象，返回指定系统账号的全部[约束](../../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)。 |
 
 **示例：**
 
@@ -1202,8 +1256,8 @@ getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>)
 
 获取指定系统账号的全部约束。使用callback异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
@@ -1212,6 +1266,8 @@ getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>): void--><!--Device-AccountManager-getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -1219,7 +1275,7 @@ getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，如果获取成功，err为null，data为该系统账号的全部[约束](../../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<string>> | 是 | 回调函数，如果获取成功，err为null，data为该系统账号的全部[约束](../../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)；否则为错误对象。 |
 
 **错误码：**
 
@@ -1264,8 +1320,8 @@ getOsAccountConstraints(localId: number): Promise<Array<string>>
 
 获取指定系统账号的全部约束。使用Promise异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
@@ -1273,6 +1329,8 @@ getOsAccountConstraints(localId: number): Promise<Array<string>>
 **废弃版本：** 11
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountConstraints(localId: number): Promise<Array<string>>--><!--Device-AccountManager-getOsAccountConstraints(localId: number): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1286,7 +1344,7 @@ getOsAccountConstraints(localId: number): Promise<Array<string>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回指定系统账号的全部[约束](../../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)。 |
+| Promise<Array<string>> | Promise对象，返回指定系统账号的全部[约束](../../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)。 |
 
 **错误码：**
 
@@ -1327,12 +1385,13 @@ try {
 getOsAccountCount(callback: AsyncCallback<number>): void
 ```
 
-获取已创建的系统账号数量。使用callback异步回调。
-该接口仅限系统应用调用。
+获取已创建的系统账号数量。使用callback异步回调。该接口仅限系统应用调用。
 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountCount(callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountCount(callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1340,7 +1399,7 @@ getOsAccountCount(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。如果获取成功，err为null，data为已创建的系统账号的数量；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。如果获取成功，err为null，data为已创建的系统账号的数量；否则为错误对象。 |
 
 **错误码：**
 
@@ -1377,12 +1436,13 @@ try {
 getOsAccountCount(): Promise<number>
 ```
 
-获取已创建的系统账号数量。使用Promise异步回调。
-该接口仅限系统应用调用。
+获取已创建的系统账号数量。使用Promise异步回调。该接口仅限系统应用调用。
 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountCount(): Promise<int>--><!--Device-AccountManager-getOsAccountCount(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1390,7 +1450,7 @@ getOsAccountCount(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回已创建的系统账号的数量。 |
+| Promise<number> | Promise对象，返回已创建的系统账号的数量。 |
 
 **错误码：**
 
@@ -1430,6 +1490,8 @@ getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>
 
 **需要权限：** ohos.permission.GET_DOMAIN_ACCOUNTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>--><!--Device-AccountManager-getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -1442,7 +1504,7 @@ getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DomainAccountInfo&gt; | Promise对象。返回与指定系统账号关联的域账号信息。 |
+| Promise<DomainAccountInfo> | Promise对象。返回与指定系统账号关联的域账号信息。 |
 
 **错误码：**
 
@@ -1484,13 +1546,15 @@ getOsAccountLocalId(callback: AsyncCallback<number>): void
 
 **起始版本：** 9
 
+<!--Device-AccountManager-getOsAccountLocalId(callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalId(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。如果获取成功，err为null，data为当前进程所属的系统账号ID；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。如果获取成功，err为null，data为当前进程所属的系统账号ID；否则为错误对象。 |
 
 **错误码：**
 
@@ -1530,13 +1594,15 @@ getOsAccountLocalId(): Promise<number>
 
 **起始版本：** 9
 
+<!--Device-AccountManager-getOsAccountLocalId(): Promise<int>--><!--Device-AccountManager-getOsAccountLocalId(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回当前进程所属的系统账号ID。 |
+| Promise<number> | Promise对象，返回当前进程所属的系统账号ID。 |
 
 **错误码：**
 
@@ -1571,10 +1637,10 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<
 
 通过SN码查询与其关联的系统账号的账号ID。使用callback异步回调。
 
-> **说明：**
->
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForSerialNumber](arkts-basicservices-accountmanager-i.md#getosaccountlocalidforserialnumber-1)
+> **说明：**  
+>  
+> 从API version 8开始支持，从API version 9开始废弃。建议使用  
+> [getOsAccountLocalIdForSerialNumber](arkts-basicservices-accountmanager-i.md#getosaccountlocalidforserialnumber-1)  
 > 替代。
 
 **起始版本：** 8
@@ -1583,6 +1649,8 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<
 
 **替代接口：** getOsAccountLocalIdForSerialNumber(serialNumber:
 
+<!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -1590,7 +1658,7 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | serialNumber | number | 是 | 账号SN码。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。如果查询成功，err为null，data为与SN码关联的系统账号的账号ID；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。如果查询成功，err为null，data为与SN码关联的系统账号的账号ID；否则为错误对象。 |
 
 **示例：**
 
@@ -1619,10 +1687,10 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>
 
 通过SN码查询与其关联的系统账号的账号ID。使用Promise异步回调。
 
-> **说明：**
->
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForSerialNumber](arkts-basicservices-accountmanager-i.md#getosaccountlocalidforserialnumber-2)
+> **说明：**  
+>  
+> 从API version 8开始支持，从API version 9开始废弃。建议使用  
+> [getOsAccountLocalIdForSerialNumber](arkts-basicservices-accountmanager-i.md#getosaccountlocalidforserialnumber-2)  
 > 替代。
 
 **起始版本：** 8
@@ -1630,6 +1698,8 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>
 **废弃版本：** 9
 
 **替代接口：** getOsAccountLocalIdForSerialNumber(serialNumber:
+
+<!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1643,7 +1713,7 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回与SN码关联的系统账号的账号ID。 |
+| Promise<number> | Promise对象，返回与SN码关联的系统账号的账号ID。 |
 
 **示例：**
 
@@ -1668,12 +1738,13 @@ accountManager.getOsAccountLocalIdBySerialNumber(serialNumber).then((localId: nu
 getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<number>): void
 ```
 
-根据域账号信息，获取与其关联的系统账号ID。使用callback异步回调。
-该接口仅限系统应用调用。
+根据域账号信息，获取与其关联的系统账号ID。使用callback异步回调。该接口仅限系统应用调用。
 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1681,8 +1752,8 @@ getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo, callback: AsyncCallb
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| domainInfo | DomainAccountInfo | 是 | 域账号信息。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。如果查询成功，err为null，data为域账号关联的系统账号ID；否则为错误对象。 |
+| domainInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i.md) | 是 | 域账号信息。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。如果查询成功，err为null，data为域账号关联的系统账号ID；否则为错误对象。 |
 
 **错误码：**
 
@@ -1721,12 +1792,13 @@ try {
 getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo): Promise<number>
 ```
 
-根据域账号信息，获取与其关联的系统账号的账号ID。使用Promise异步回调。
-该接口仅限系统应用调用。
+根据域账号信息，获取与其关联的系统账号的账号ID。使用Promise异步回调。该接口仅限系统应用调用。
 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo): Promise<int>--><!--Device-AccountManager-getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -1734,13 +1806,13 @@ getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| domainInfo | DomainAccountInfo | 是 | 域账号信息。 |
+| domainInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i.md) | 是 | 域账号信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回域账号关联的系统账号ID。 |
+| Promise<number> | Promise对象，返回域账号关联的系统账号ID。 |
 
 **错误码：**
 
@@ -1781,6 +1853,8 @@ getOsAccountLocalIdForSerialNumber(serialNumber: number, callback: AsyncCallback
 
 **起始版本：** 9
 
+<!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long, callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -1788,7 +1862,7 @@ getOsAccountLocalIdForSerialNumber(serialNumber: number, callback: AsyncCallback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | serialNumber | number | 是 | 账号SN码。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。如果成功，err为null，data为与SN码关联的系统账号的账号ID；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。如果成功，err为null，data为与SN码关联的系统账号的账号ID；否则为错误对象。 |
 
 **错误码：**
 
@@ -1834,6 +1908,8 @@ getOsAccountLocalIdForSerialNumber(serialNumber: number): Promise<number>
 
 **起始版本：** 9
 
+<!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long): Promise<int>--><!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -1846,7 +1922,7 @@ getOsAccountLocalIdForSerialNumber(serialNumber: number): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回与SN码关联的系统账号的账号ID。 |
+| Promise<number> | Promise对象，返回与SN码关联的系统账号的账号ID。 |
 
 **错误码：**
 
@@ -1890,6 +1966,8 @@ getOsAccountLocalIdForUid(uid: number, callback: AsyncCallback<number>): void
 
 **起始版本：** 9
 
+<!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int, callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -1897,7 +1975,7 @@ getOsAccountLocalIdForUid(uid: number, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uid | number | 是 | 进程uid。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。如果查询成功，err为null，data为对应的系统账号ID；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。如果查询成功，err为null，data为对应的系统账号ID；否则为错误对象。 |
 
 **错误码：**
 
@@ -1942,6 +2020,8 @@ getOsAccountLocalIdForUid(uid: number): Promise<number>
 
 **起始版本：** 9
 
+<!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int): Promise<int>--><!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -1954,7 +2034,7 @@ getOsAccountLocalIdForUid(uid: number): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回指定uid对应的系统账号ID。 |
+| Promise<number> | Promise对象，返回指定uid对应的系统账号ID。 |
 
 **错误码：**
 
@@ -1996,6 +2076,8 @@ getOsAccountLocalIdForUidSync(uid: number): number
 根据uid查询对应的系统账号ID。使用同步方式返回结果。
 
 **起始版本：** 10
+
+<!--Device-AccountManager-getOsAccountLocalIdForUidSync(uid: int): int--><!--Device-AccountManager-getOsAccountLocalIdForUidSync(uid: int): int-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2046,10 +2128,10 @@ getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCall
 
 根据域账号信息，获取与其关联的系统账号的账号ID。使用callback异步回调。
 
-> **说明：**
->
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForDomain](arkts-basicservices-accountmanager-i.md#getosaccountlocalidfordomain-1)
+> **说明：**  
+>  
+> 从API version 8开始支持，从API version 9开始废弃。建议使用  
+> [getOsAccountLocalIdForDomain](arkts-basicservices-accountmanager-i.md#getosaccountlocalidfordomain-1)  
 > 替代。
 
 **起始版本：** 8
@@ -2060,14 +2142,16 @@ getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCall
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| domainInfo | DomainAccountInfo | 是 | 域账号信息。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数，如果获取成功，err为null，data为域账号关联的系统账号ID；否则为错误对象。 |
+| domainInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i.md) | 是 | 域账号信息。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数，如果获取成功，err为null，data为域账号关联的系统账号ID；否则为错误对象。 |
 
 **示例：**
 
@@ -2094,10 +2178,10 @@ getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>
 
 根据域账号信息，获取与其关联的系统账号的账号ID。使用Promise异步回调。
 
-> **说明：**
->
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForDomain](arkts-basicservices-accountmanager-i.md#getosaccountlocalidfordomain-2)
+> **说明：**  
+>  
+> 从API version 8开始支持，从API version 9开始废弃。建议使用  
+> [getOsAccountLocalIdForDomain](arkts-basicservices-accountmanager-i.md#getosaccountlocalidfordomain-2)  
 > 替代。
 
 **起始版本：** 8
@@ -2108,19 +2192,21 @@ getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| domainInfo | DomainAccountInfo | 是 | 域账号信息。 |
+| domainInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i.md) | 是 | 域账号信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回域账号关联的系统账号ID。 |
+| Promise<number> | Promise对象，返回域账号关联的系统账号ID。 |
 
 **示例：**
 
@@ -2145,9 +2231,9 @@ getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void
 
 获取当前进程所属的系统账号ID。使用callback异步回调。
 
-> **说明：**
->
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> **说明：**  
+>  
+> 从API version 7开始支持，从API version 9开始废弃。建议使用  
 > [getOsAccountLocalId](arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)替代。
 
 **起始版本：** 7
@@ -2156,13 +2242,15 @@ getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void
 
 **替代接口：** getOsAccountLocalId(callback:
 
+<!--Device-AccountManager-getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。如果获取成功，err为null，data为当前进程所属的系统账号ID；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。如果获取成功，err为null，data为当前进程所属的系统账号ID；否则为错误对象。 |
 
 **示例：**
 
@@ -2188,9 +2276,9 @@ getOsAccountLocalIdFromProcess(): Promise<number>
 
 获取当前进程所属的系统账号ID。使用Promise异步回调。
 
-> **说明：**
->
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> **说明：**  
+>  
+> 从API version 7开始支持，从API version 9开始废弃。建议使用  
 > [getOsAccountLocalId](arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2)替代。
 
 **起始版本：** 7
@@ -2199,13 +2287,15 @@ getOsAccountLocalIdFromProcess(): Promise<number>
 
 **替代接口：** [getOsAccountLocalId()](arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2)
 
+<!--Device-AccountManager-getOsAccountLocalIdFromProcess(): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdFromProcess(): Promise<number>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回当前进程所属的系统账号ID。 |
+| Promise<number> | Promise对象，返回当前进程所属的系统账号ID。 |
 
 **示例：**
 
@@ -2229,10 +2319,10 @@ getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void
 
 根据uid查询对应的系统账号ID。使用callback异步回调。
 
-> **说明：**
->
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForUid](arkts-basicservices-accountmanager-i.md#getosaccountlocalidforuid-1)
+> **说明：**  
+>  
+> 从API version 7开始支持，从API version 9开始废弃。建议使用  
+> [getOsAccountLocalIdForUid](arkts-basicservices-accountmanager-i.md#getosaccountlocalidforuid-1)  
 > 替代。
 
 **起始版本：** 7
@@ -2241,6 +2331,8 @@ getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void
 
 **替代接口：** getOsAccountLocalIdForUid(uid:
 
+<!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -2248,7 +2340,7 @@ getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uid | number | 是 | 进程uid。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。如果查询成功，err为null，data为对应的系统账号ID；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。如果查询成功，err为null，data为对应的系统账号ID；否则为错误对象。 |
 
 **示例：**
 
@@ -2277,9 +2369,9 @@ getOsAccountLocalIdFromUid(uid: number): Promise<number>
 
 根据uid查询对应的系统账号ID。使用Promise异步回调。
 
-> **说明：**
->
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> **说明：**  
+>  
+> 从API version 7开始支持，从API version 9开始废弃。建议使用  
 > [getOsAccountLocalIdForUid](arkts-basicservices-accountmanager-i.md#getosaccountlocalidforuid-2)替代。
 
 **起始版本：** 7
@@ -2287,6 +2379,8 @@ getOsAccountLocalIdFromUid(uid: number): Promise<number>
 **废弃版本：** 9
 
 **替代接口：** getOsAccountLocalIdForUid(uid:
+
+<!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2300,7 +2394,7 @@ getOsAccountLocalIdFromUid(uid: number): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回uid对应的系统账号ID。 |
+| Promise<number> | Promise对象，返回uid对应的系统账号ID。 |
 
 **示例：**
 
@@ -2333,13 +2427,15 @@ getOsAccountLocalIds(): Promise<number[]>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AccountManager-getOsAccountLocalIds(): Promise<int[]>--><!--Device-AccountManager-getOsAccountLocalIds(): Promise<int[]>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number[]&gt; | Promise对象，返回所有非系统级的操作系统账号的本地ID。 |
+| Promise<number[]> | Promise对象，返回所有非系统级的操作系统账号的本地ID。 |
 
 **错误码：**
 
@@ -2377,13 +2473,15 @@ getOsAccountName(): Promise<string>
 
 **起始版本：** 12
 
+<!--Device-AccountManager-getOsAccountName(): Promise<string>--><!--Device-AccountManager-getOsAccountName(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回调用方所属系统账号的名称。 |
+| Promise<string> | Promise对象，返回调用方所属系统账号的名称。 |
 
 **错误码：**
 
@@ -2424,6 +2522,8 @@ getOsAccountNameByLocalId(localId: number): Promise<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AccountManager-getOsAccountNameByLocalId(localId: int): Promise<string>--><!--Device-AccountManager-getOsAccountNameByLocalId(localId: int): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -2436,7 +2536,7 @@ getOsAccountNameByLocalId(localId: number): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回目标系统账号的名称。 |
+| Promise<string> | Promise对象，返回目标系统账号的名称。 |
 
 **错误码：**
 
@@ -2476,13 +2576,15 @@ getOsAccountType(callback: AsyncCallback<OsAccountType>): void
 
 **起始版本：** 9
 
+<!--Device-AccountManager-getOsAccountType(callback: AsyncCallback<OsAccountType>): void--><!--Device-AccountManager-getOsAccountType(callback: AsyncCallback<OsAccountType>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;OsAccountType&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号的账号类型；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<OsAccountType> | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号的账号类型；否则为错误对象。 |
 
 **错误码：**
 
@@ -2522,13 +2624,15 @@ getOsAccountType(): Promise<OsAccountType>
 
 **起始版本：** 9
 
+<!--Device-AccountManager-getOsAccountType(): Promise<OsAccountType>--><!--Device-AccountManager-getOsAccountType(): Promise<OsAccountType>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;OsAccountType&gt; | Promise对象，返回当前进程所属的系统账号的账号类型。 |
+| Promise<OsAccountType> | Promise对象，返回当前进程所属的系统账号的账号类型。 |
 
 **错误码：**
 
@@ -2563,9 +2667,9 @@ getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void
 
 查询当前进程所属的系统账号的账号类型。使用callback异步回调。
 
-> **说明：**
->
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> **说明：**  
+>  
+> 从API version 7开始支持，从API version 9开始废弃。建议使用  
 > [getOsAccountType](arkts-basicservices-accountmanager-i.md#getosaccounttype-1)替代。
 
 **起始版本：** 7
@@ -2574,13 +2678,15 @@ getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void
 
 **替代接口：** getOsAccountType(callback:
 
+<!--Device-AccountManager-getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void--><!--Device-AccountManager-getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;OsAccountType&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号的账号类型；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<OsAccountType> | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号的账号类型；否则为错误对象。 |
 
 **示例：**
 
@@ -2606,9 +2712,9 @@ getOsAccountTypeFromProcess(): Promise<OsAccountType>
 
 查询当前进程所属的系统账号的账号类型。使用Promise异步回调。
 
-> **说明：**
->
-> 从API version 7开始支持，从API version 9开始废弃。建议使用[getOsAccountType](arkts-basicservices-accountmanager-i.md#getosaccounttype-2)
+> **说明：**  
+>  
+> 从API version 7开始支持，从API version 9开始废弃。建议使用[getOsAccountType](arkts-basicservices-accountmanager-i.md#getosaccounttype-2)  
 > 替代。
 
 **起始版本：** 7
@@ -2617,13 +2723,15 @@ getOsAccountTypeFromProcess(): Promise<OsAccountType>
 
 **替代接口：** [getOsAccountType()](arkts-basicservices-accountmanager-i.md#getosaccounttype-2)
 
+<!--Device-AccountManager-getOsAccountTypeFromProcess(): Promise<OsAccountType>--><!--Device-AccountManager-getOsAccountTypeFromProcess(): Promise<OsAccountType>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;OsAccountType&gt; | Promise对象，返回当前进程所属的系统账号的账号类型。 |
+| Promise<OsAccountType> | Promise对象，返回当前进程所属的系统账号的账号类型。 |
 
 **示例：**
 
@@ -2647,10 +2755,10 @@ getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<numbe
 
 通过系统账号ID获取与该系统账号关联的SN码。使用callback异步回调。
 
-> **说明：**
->
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getSerialNumberForOsAccountLocalId](arkts-basicservices-accountmanager-i.md#getserialnumberforosaccountlocalid-1)
+> **说明：**  
+>  
+> 从API version 8开始支持，从API version 9开始废弃。建议使用  
+> [getSerialNumberForOsAccountLocalId](arkts-basicservices-accountmanager-i.md#getserialnumberforosaccountlocalid-1)  
 > 替代。
 
 **起始版本：** 8
@@ -2659,6 +2767,8 @@ getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<numbe
 
 **替代接口：** getSerialNumberForOsAccountLocalId(localId:
 
+<!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -2666,7 +2776,7 @@ getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<numbe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。如果获取成功，err为null，data为与该系统账号关联的SN码；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。如果获取成功，err为null，data为与该系统账号关联的SN码；否则为错误对象。 |
 
 **示例：**
 
@@ -2696,10 +2806,10 @@ getSerialNumberByOsAccountLocalId(localId: number): Promise<number>
 
 通过系统账号ID获取与该系统账号关联的SN码。使用Promise异步回调。
 
-> **说明：**
->
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getSerialNumberForOsAccountLocalId](arkts-basicservices-accountmanager-i.md#getserialnumberforosaccountlocalid-2)
+> **说明：**  
+>  
+> 从API version 8开始支持，从API version 9开始废弃。建议使用  
+> [getSerialNumberForOsAccountLocalId](arkts-basicservices-accountmanager-i.md#getserialnumberforosaccountlocalid-2)  
 > 替代。
 
 **起始版本：** 8
@@ -2707,6 +2817,8 @@ getSerialNumberByOsAccountLocalId(localId: number): Promise<number>
 **废弃版本：** 9
 
 **替代接口：** getSerialNumberForOsAccountLocalId(localId:
+
+<!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number): Promise<number>--><!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -2720,7 +2832,7 @@ getSerialNumberByOsAccountLocalId(localId: number): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回与该系统账号关联的SN码。 |
+| Promise<number> | Promise对象，返回与该系统账号关联的SN码。 |
 
 **示例：**
 
@@ -2750,6 +2862,8 @@ getSerialNumberForOsAccountLocalId(localId: number, callback: AsyncCallback<numb
 
 **起始版本：** 9
 
+<!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int, callback: AsyncCallback<long>): void--><!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int, callback: AsyncCallback<long>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -2757,7 +2871,7 @@ getSerialNumberForOsAccountLocalId(localId: number, callback: AsyncCallback<numb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。如果获取成功，err为null，data为与该系统账号关联的SN码；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。如果获取成功，err为null，data为与该系统账号关联的SN码；否则为错误对象。 |
 
 **错误码：**
 
@@ -2803,6 +2917,8 @@ getSerialNumberForOsAccountLocalId(localId: number): Promise<number>
 
 **起始版本：** 9
 
+<!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int): Promise<long>--><!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int): Promise<long>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -2815,7 +2931,7 @@ getSerialNumberForOsAccountLocalId(localId: number): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回与该系统账号关联的SN码。 |
+| Promise<number> | Promise对象，返回与该系统账号关联的SN码。 |
 
 **错误码：**
 
@@ -2857,10 +2973,10 @@ isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void
 
 判断是否支持多系统账号。使用callback异步回调。
 
-> **说明：**
->
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkMultiOsAccountEnabled](arkts-basicservices-accountmanager-i.md#checkmultiosaccountenabled-1)
+> **说明：**  
+>  
+> 从API version 7开始支持，从API version 9开始废弃。建议使用  
+> [checkMultiOsAccountEnabled](arkts-basicservices-accountmanager-i.md#checkmultiosaccountenabled-1)  
 > 替代。
 
 **起始版本：** 7
@@ -2869,13 +2985,15 @@ isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void
 
 **替代接口：** checkMultiOsAccountEnabled(callback:
 
+<!--Device-AccountManager-isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。返回true表示支持多系统账号；返回false表示不支持。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。返回true表示支持多系统账号；返回false表示不支持。 |
 
 **示例：**
 
@@ -2901,9 +3019,9 @@ isMultiOsAccountEnable(): Promise<boolean>
 
 判断是否支持多系统账号。使用Promise异步回调。
 
-> **说明：**
->
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> **说明：**  
+>  
+> 从API version 7开始支持，从API version 9开始废弃。建议使用  
 > [checkMultiOsAccountEnabled](arkts-basicservices-accountmanager-i.md#checkmultiosaccountenabled-2)替代。
 
 **起始版本：** 7
@@ -2912,13 +3030,15 @@ isMultiOsAccountEnable(): Promise<boolean>
 
 **替代接口：** [checkMultiOsAccountEnabled()](arkts-basicservices-accountmanager-i.md#checkmultiosaccountenabled-2)
 
+<!--Device-AccountManager-isMultiOsAccountEnable(): Promise<boolean>--><!--Device-AccountManager-isMultiOsAccountEnable(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示支持多系统账号；返回false表示不支持。 |
+| Promise<boolean> | Promise对象。返回true表示支持多系统账号；返回false表示不支持。 |
 
 **示例：**
 
@@ -2942,8 +3062,8 @@ isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void
 
 判断指定系统账号是否处于激活状态。使用callback异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
@@ -2954,6 +3074,8 @@ isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -2961,7 +3083,7 @@ isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。返回true表示账号已激活；返回false表示账号未激活。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。返回true表示账号已激活；返回false表示账号未激活。 |
 
 **示例：**
 
@@ -2991,8 +3113,8 @@ isOsAccountActived(localId: number): Promise<boolean>
 
 判断指定系统账号是否处于激活状态。使用Promise异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
@@ -3002,6 +3124,8 @@ isOsAccountActived(localId: number): Promise<boolean>
 **替代接口：** checkOsAccountActivated(localId:
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-isOsAccountActived(localId: number): Promise<boolean>--><!--Device-AccountManager-isOsAccountActived(localId: number): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3015,7 +3139,7 @@ isOsAccountActived(localId: number): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示账号已激活；返回false表示账号未激活。 |
+| Promise<boolean> | Promise对象。返回true表示账号已激活；返回false表示账号未激活。 |
 
 **示例：**
 
@@ -3043,8 +3167,8 @@ isOsAccountConstraintEnable(localId: number, constraint: string, callback: Async
 
 判断指定系统账号是否具有指定约束。使用callback异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
@@ -3055,6 +3179,8 @@ isOsAccountConstraintEnable(localId: number, constraint: string, callback: Async
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-isOsAccountConstraintEnable(localId: number, constraint: string, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isOsAccountConstraintEnable(localId: number, constraint: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -3063,7 +3189,7 @@ isOsAccountConstraintEnable(localId: number, constraint: string, callback: Async
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
 | constraint | string | 是 | 指定的[约束](../../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)名称。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。返回true表示已使能指定的约束；返回false表示未使能指定的约束。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。返回true表示已使能指定的约束；返回false表示未使能指定的约束。 |
 
 **示例：**
 
@@ -3094,8 +3220,8 @@ isOsAccountConstraintEnable(localId: number, constraint: string): Promise<boolea
 
 判断指定系统账号是否具有指定约束。使用Promise异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
@@ -3105,6 +3231,8 @@ isOsAccountConstraintEnable(localId: number, constraint: string): Promise<boolea
 **替代接口：** checkOsAccountConstraintEnabled(localId:
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-isOsAccountConstraintEnable(localId: number, constraint: string): Promise<boolean>--><!--Device-AccountManager-isOsAccountConstraintEnable(localId: number, constraint: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3119,7 +3247,7 @@ isOsAccountConstraintEnable(localId: number, constraint: string): Promise<boolea
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示已使能指定的约束；返回false表示未使能指定的约束。 |
+| Promise<boolean> | Promise对象。返回true表示已使能指定的约束；返回false表示未使能指定的约束。 |
 
 **示例：**
 
@@ -3150,6 +3278,8 @@ isOsAccountConstraintEnabled(constraint: string): Promise<boolean>
 
 **起始版本：** 11
 
+<!--Device-AccountManager-isOsAccountConstraintEnabled(constraint: string): Promise<boolean>--><!--Device-AccountManager-isOsAccountConstraintEnabled(constraint: string): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -3162,7 +3292,7 @@ isOsAccountConstraintEnabled(constraint: string): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示已使能指定的约束；返回false表示未使能指定的约束。 |
+| Promise<boolean> | Promise对象。返回true表示已使能指定的约束；返回false表示未使能指定的约束。 |
 
 **错误码：**
 
@@ -3203,13 +3333,15 @@ isOsAccountUnlocked(): Promise<boolean>
 
 **起始版本：** 11
 
+<!--Device-AccountManager-isOsAccountUnlocked(): Promise<boolean>--><!--Device-AccountManager-isOsAccountUnlocked(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示当前账号已认证解锁；返回false表示当前账号未认证解锁。 |
+| Promise<boolean> | Promise对象。返回true表示当前账号已认证解锁；返回false表示当前账号未认证解锁。 |
 
 **错误码：**
 
@@ -3244,10 +3376,10 @@ isOsAccountVerified(callback: AsyncCallback<boolean>): void
 
 检查当前系统账号是否已验证。使用callback异步回调。
 
-> **说明：**
->
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkOsAccountVerified](arkts-basicservices-accountmanager-i.md#checkosaccountverified-1)
+> **说明：**  
+>  
+> 从API version 7开始支持，从API version 9开始废弃。建议使用  
+> [checkOsAccountVerified](arkts-basicservices-accountmanager-i.md#checkosaccountverified-1)  
 > 替代。
 
 **起始版本：** 7
@@ -3258,13 +3390,15 @@ isOsAccountVerified(callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-isOsAccountVerified(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isOsAccountVerified(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。返回true表示指定账号已验证；返回false表示指定账号未验证。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。返回true表示指定账号已验证；返回false表示指定账号未验证。 |
 
 **示例：**
 
@@ -3290,8 +3424,8 @@ isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 
 检查指定系统账号是否已验证。使用callback异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
@@ -3302,6 +3436,8 @@ isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -3309,7 +3445,7 @@ isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。返回true表示指定账号已验证；返回false表示指定账号未验证。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。返回true表示指定账号已验证；返回false表示指定账号未验证。 |
 
 **示例：**
 
@@ -3337,8 +3473,8 @@ isOsAccountVerified(localId?: number): Promise<boolean>
 
 检查指定系统账号是否已验证。使用Promise异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
@@ -3348,6 +3484,8 @@ isOsAccountVerified(localId?: number): Promise<boolean>
 **替代接口：** checkOsAccountVerified(localId:
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-isOsAccountVerified(localId?: number): Promise<boolean>--><!--Device-AccountManager-isOsAccountVerified(localId?: number): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -3361,7 +3499,7 @@ isOsAccountVerified(localId?: number): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示指定账号已验证；返回false表示指定账号未验证。 |
+| Promise<boolean> | Promise对象。返回true表示指定账号已验证；返回false表示指定账号未验证。 |
 
 **示例：**
 
@@ -3385,10 +3523,10 @@ isTestOsAccount(callback: AsyncCallback<boolean>): void
 
 检查当前系统账号是否为测试账号。使用callback异步回调。
 
-> **说明：**
->
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkOsAccountTestable](arkts-basicservices-accountmanager-i.md#checkosaccounttestable-1)
+> **说明：**  
+>  
+> 从API version 7开始支持，从API version 9开始废弃。建议使用  
+> [checkOsAccountTestable](arkts-basicservices-accountmanager-i.md#checkosaccounttestable-1)  
 > 替代。
 
 **起始版本：** 7
@@ -3397,13 +3535,15 @@ isTestOsAccount(callback: AsyncCallback<boolean>): void
 
 **替代接口：** checkOsAccountTestable(callback:
 
+<!--Device-AccountManager-isTestOsAccount(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isTestOsAccount(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。返回true表示当前账号为测试账号；返回false表示当前账号非测试账号。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。返回true表示当前账号为测试账号；返回false表示当前账号非测试账号。 |
 
 **示例：**
 
@@ -3429,9 +3569,9 @@ isTestOsAccount(): Promise<boolean>
 
 检查当前系统账号是否为测试账号。使用Promise异步回调。
 
-> **说明：**
->
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> **说明：**  
+>  
+> 从API version 7开始支持，从API version 9开始废弃。建议使用  
 > [checkOsAccountTestable](arkts-basicservices-accountmanager-i.md#checkosaccounttestable-2)替代。
 
 **起始版本：** 7
@@ -3440,13 +3580,15 @@ isTestOsAccount(): Promise<boolean>
 
 **替代接口：** [checkOsAccountTestable()](arkts-basicservices-accountmanager-i.md#checkosaccounttestable-2)
 
+<!--Device-AccountManager-isTestOsAccount(): Promise<boolean>--><!--Device-AccountManager-isTestOsAccount(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示当前账号为测试账号；返回false表示当前账号非测试账号。 |
+| Promise<boolean> | Promise对象。返回true表示当前账号为测试账号；返回false表示当前账号非测试账号。 |
 
 **示例：**
 
@@ -3470,10 +3612,10 @@ queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void
 
 查询当前处于激活状态的系统账号的ID列表。使用callback异步回调。
 
-> **说明：**
->
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getActivatedOsAccountLocalIds](arkts-basicservices-accountmanager-i.md#getactivatedosaccountlocalids-1)
+> **说明：**  
+>  
+> 从API version 8开始支持，从API version 9开始废弃。建议使用  
+> [getActivatedOsAccountLocalIds](arkts-basicservices-accountmanager-i.md#getactivatedosaccountlocalids-1)  
 > 替代。
 
 **起始版本：** 8
@@ -3482,13 +3624,15 @@ queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void
 
 **替代接口：** getActivatedOsAccountLocalIds(callback:
 
+<!--Device-AccountManager-queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void--><!--Device-AccountManager-queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;number&gt;&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前处于激活状态的系统账号的ID列表；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<number>> | 是 | 回调函数。如果查询成功，err为null，data为当前处于激活状态的系统账号的ID列表；否则为错误对象。 |
 
 **示例：**
 
@@ -3517,9 +3661,9 @@ queryActivatedOsAccountIds(): Promise<Array<number>>
 
 查询当前处于激活状态的系统账号的ID列表。使用Promise异步回调。
 
-> **说明：**
->
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> **说明：**  
+>  
+> 从API version 8开始支持，从API version 9开始废弃。建议使用  
 > [getActivatedOsAccountLocalIds](arkts-basicservices-accountmanager-i.md#getactivatedosaccountlocalids-2)替代。
 
 **起始版本：** 8
@@ -3528,13 +3672,15 @@ queryActivatedOsAccountIds(): Promise<Array<number>>
 
 **替代接口：** [getActivatedOsAccountLocalIds()](arkts-basicservices-accountmanager-i.md#getactivatedosaccountlocalids-2)
 
+<!--Device-AccountManager-queryActivatedOsAccountIds(): Promise<Array<number>>--><!--Device-AccountManager-queryActivatedOsAccountIds(): Promise<Array<number>>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Promise对象，返回当前处于激活状态的系统账号的ID列表。 |
+| Promise<Array<number>> | Promise对象，返回当前处于激活状态的系统账号的ID列表。 |
 
 **示例：**
 
@@ -3558,8 +3704,8 @@ queryCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 
 查询当前进程所属的系统账号的信息。使用callback异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
@@ -3570,13 +3716,15 @@ queryCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-queryCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void--><!--Device-AccountManager-queryCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;OsAccountInfo&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号信息；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<OsAccountInfo> | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号信息；否则为错误对象。 |
 
 **示例：**
 
@@ -3602,8 +3750,8 @@ queryCurrentOsAccount(): Promise<OsAccountInfo>
 
 查询当前进程所属的系统账号的信息。使用Promise异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
@@ -3614,13 +3762,15 @@ queryCurrentOsAccount(): Promise<OsAccountInfo>
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-queryCurrentOsAccount(): Promise<OsAccountInfo>--><!--Device-AccountManager-queryCurrentOsAccount(): Promise<OsAccountInfo>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;OsAccountInfo&gt; | Promise对象，返回当前进程所属的系统账号信息。 |
+| Promise<OsAccountInfo> | Promise对象，返回当前进程所属的系统账号信息。 |
 
 **示例：**
 
@@ -3648,13 +3798,15 @@ queryDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-queryDistributedVirtualDeviceId(callback: AsyncCallback<string>): void--><!--Device-AccountManager-queryDistributedVirtualDeviceId(callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | 是 | 回调函数。如果获取成功，err为null，data为分布式虚拟设备ID；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | 是 | 回调函数。如果获取成功，err为null，data为分布式虚拟设备ID；否则为错误对象。 |
 
 **错误码：**
 
@@ -3697,13 +3849,15 @@ queryDistributedVirtualDeviceId(): Promise<string>
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-AccountManager-queryDistributedVirtualDeviceId(): Promise<string>--><!--Device-AccountManager-queryDistributedVirtualDeviceId(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回分布式虚拟设备ID。 |
+| Promise<string> | Promise对象，返回分布式虚拟设备ID。 |
 
 **错误码：**
 

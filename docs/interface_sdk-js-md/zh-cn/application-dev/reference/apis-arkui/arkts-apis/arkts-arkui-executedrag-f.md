@@ -1,5 +1,11 @@
 # executeDrag
 
+## 导入模块
+
+```TypeScript
+import { dragController } from '@kit.ArkUI';
+```
+
 ## executeDrag
 
 ```TypeScript
@@ -17,7 +23,11 @@ Execute a drag event.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-dragController-function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo,
+    callback: AsyncCallback<DragEventParam>): void--><!--Device-dragController-function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo,
+    callback: AsyncCallback<DragEventParam>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,8 +36,8 @@ Execute a drag event.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | custom | CustomBuilder \| DragItemInfo | 是 | Object used for prompts displayed when the object is dragged. |
-| dragInfo | DragInfo | 是 | Information about the drag event. |
-| callback | AsyncCallback&lt;DragEventParam&gt; | 是 | Callback that contains the drag event information. |
+| dragInfo | [DragInfo](arkts-arkui-draginfo-i.md) | 是 | Information about the drag event. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DragEventParam> | 是 | Callback that contains the drag event information. |
 
 **错误码：**
 
@@ -127,10 +137,10 @@ function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo): 
 
 主动发起拖拽能力，传入拖拽发起后跟手效果所拖拽的对象以及携带拖拽信息。使用Promise异步回调。
 
-> **说明：**
->
-> 从API version 11开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [getDragController](arkts-arkui-uicontext-c.md#getdragcontroller-1)方法获取当前UI
+> **说明：**  
+>  
+> 从API version 11开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的  
+> [getDragController](arkts-arkui-uicontext-c.md#getdragcontroller-1)方法获取当前UI  
 > 上下文关联的[DragController](arkts-arkui-dragcontroller-c.md)对象。
 
 **起始版本：** 10
@@ -141,7 +151,9 @@ function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo): 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-dragController-function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo): Promise<DragEventParam>--><!--Device-dragController-function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo): Promise<DragEventParam>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -150,13 +162,13 @@ function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | custom | CustomBuilder \| DragItemInfo | 是 | 拖拽发起后跟手效果所拖拽的对象。 |
-| dragInfo | DragInfo | 是 | 拖拽信息。 |
+| dragInfo | [DragInfo](arkts-arkui-draginfo-i.md) | 是 | 拖拽信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DragEventParam&gt; | A Promise with the drag event information. |
+| Promise<DragEventParam> | A Promise with the drag event information. |
 
 **错误码：**
 

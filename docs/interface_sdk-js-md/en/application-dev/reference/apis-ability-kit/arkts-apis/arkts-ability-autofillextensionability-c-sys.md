@@ -1,11 +1,12 @@
 # AutoFillExtensionAbility (System API)
 
-The AutoFillExtensionAbility module provides APIs for automatically filling in and saving accounts and passwords. It
-inherits from [ExtensionAbility](arkts-ability-extensionability-c.md).
+The AutoFillExtensionAbility module provides APIs for automatically filling in and saving accounts and passwords. It inherits from [ExtensionAbility](arkts-ability-extensionability-c.md).
 
 **Inheritance/Implementation:** AutoFillExtensionAbility extends [ExtensionAbility](arkts-ability-extensionability-c.md)
 
 **Since:** 11
+
+<!--Device-unnamed-declare class AutoFillExtensionAbility extends ExtensionAbility--><!--Device-unnamed-declare class AutoFillExtensionAbility extends ExtensionAbility-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -28,6 +29,8 @@ Called when this AutoFillExtensionAbility is switched from the foreground to the
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AutoFillExtensionAbility-onBackground(): void--><!--Device-AutoFillExtensionAbility-onBackground(): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -59,6 +62,8 @@ Called when an AutoFillExtensionAbility is created.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AutoFillExtensionAbility-onCreate(): void--><!--Device-AutoFillExtensionAbility-onCreate(): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
@@ -83,12 +88,13 @@ class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
 onDestroy(): void | Promise<void>
 ```
 
-Called to clear resources when this AutoFillExtensionAbility is destroyed. This API either returns the result
-directly or uses a promise to return the result.
+Called to clear resources when this AutoFillExtensionAbility is destroyed. This API either returns the result directly or uses a promise to return the result.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AutoFillExtensionAbility-onDestroy(): void | Promise<void>--><!--Device-AutoFillExtensionAbility-onDestroy(): void | Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -120,6 +126,8 @@ Called when an auto-fill request is initiated or a password is generated.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AutoFillExtensionAbility-onFillRequest(session: UIExtensionContentSession, request: FillRequest, callback: FillRequestCallback): void--><!--Device-AutoFillExtensionAbility-onFillRequest(session: UIExtensionContentSession, request: FillRequest, callback: FillRequestCallback): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
@@ -128,9 +136,9 @@ Called when an auto-fill request is initiated or a password is generated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| session | UIExtensionContentSession | Yes | UI content information related to the AutoFillExtensionAbility. |
-| request | FillRequest | Yes | Data to be automatically filled in. |
-| callback | FillRequestCallback | Yes | Callback used for the auto-fill request. |
+| session | [UIExtensionContentSession](arkts-ability-uiextensioncontentsession-c-sys.md) | Yes | UI content information related to the AutoFillExtensionAbility. |
+| request | [FillRequest](arkts-ability-fillrequest-i-sys.md) | Yes | Data to be automatically filled in. |
+| callback | [FillRequestCallback](arkts-ability-fillrequestcallback-i-sys.md) | Yes | Callback used for the auto-fill request. |
 
 **Example**
 
@@ -180,6 +188,8 @@ Called when this AutoFillExtensionAbility is switched from the background to the
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AutoFillExtensionAbility-onForeground(): void--><!--Device-AutoFillExtensionAbility-onForeground(): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
@@ -210,6 +220,8 @@ Called when automatic or manual saving is initiated.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AutoFillExtensionAbility-onSaveRequest(session: UIExtensionContentSession, request: SaveRequest, callback: SaveRequestCallback): void--><!--Device-AutoFillExtensionAbility-onSaveRequest(session: UIExtensionContentSession, request: SaveRequest, callback: SaveRequestCallback): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
@@ -218,9 +230,9 @@ Called when automatic or manual saving is initiated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| session | UIExtensionContentSession | Yes | UI content information related to the AutoFillExtensionAbility. |
-| request | SaveRequest | Yes | Data to be saved. |
-| callback | SaveRequestCallback | Yes | Callback used for the saving request. |
+| session | [UIExtensionContentSession](arkts-ability-uiextensioncontentsession-c-sys.md) | Yes | UI content information related to the AutoFillExtensionAbility. |
+| request | [SaveRequest](arkts-ability-saverequest-i-sys.md) | Yes | Data to be saved. |
+| callback | [SaveRequestCallback](arkts-ability-saverequestcallback-t-sys.md) | Yes | Callback used for the saving request. |
 
 **Example**
 
@@ -268,6 +280,8 @@ Called when a UIExtensionContentSession instance is destroyed for this AutoFillE
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AutoFillExtensionAbility-onSessionDestroy(session: UIExtensionContentSession): void--><!--Device-AutoFillExtensionAbility-onSessionDestroy(session: UIExtensionContentSession): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
@@ -276,7 +290,7 @@ Called when a UIExtensionContentSession instance is destroyed for this AutoFillE
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| session | UIExtensionContentSession | Yes | UI content information related to the AutoFillExtensionAbility. |
+| session | [UIExtensionContentSession](arkts-ability-uiextensioncontentsession-c-sys.md) | Yes | UI content information related to the AutoFillExtensionAbility. |
 
 **Example**
 
@@ -304,6 +318,8 @@ Called when an update request is received.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AutoFillExtensionAbility-onUpdateRequest(request: UpdateRequest): void--><!--Device-AutoFillExtensionAbility-onUpdateRequest(request: UpdateRequest): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
@@ -312,7 +328,7 @@ Called when an update request is received.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | UpdateRequest | Yes | Update request. |
+| request | [UpdateRequest](arkts-ability-updaterequest-i-sys.md) | Yes | Update request. |
 
 **Example**
 
@@ -342,6 +358,8 @@ Context of the AutoFillExtensionAbility. This context inherits from **ExtensionC
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AutoFillExtensionAbility-context: AutoFillExtensionContext--><!--Device-AutoFillExtensionAbility-context: AutoFillExtensionContext-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

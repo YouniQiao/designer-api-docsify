@@ -20,6 +20,8 @@ Send intent result.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-insightIntentProvider-function sendIntentResult(instanceId: int, result: insightIntent.IntentResult<T>): Promise<void>--><!--Device-insightIntentProvider-function sendIntentResult(instanceId: int, result: insightIntent.IntentResult<T>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
@@ -27,13 +29,13 @@ Send intent result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | instanceId | number | Yes | The insight intent instance ID.It is from InsightIntentEntryExecutor.context.instanceId. |
-| result | insightIntent.IntentResult&lt;T&gt; | Yes | The result of insight intent execution. |
+| result | insightIntent.IntentResult<T> | Yes | The result of insight intent execution. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - The promise returned by the function. |
 
 **Error codes:**
 

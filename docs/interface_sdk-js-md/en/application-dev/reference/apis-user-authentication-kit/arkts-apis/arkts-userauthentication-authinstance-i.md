@@ -8,6 +8,8 @@ Implements user authentication.
 
 **Substitutes:** [UserAuthInstance](arkts-userauthentication-userauthinstance-i.md)
 
+<!--Device-userAuth-interface AuthInstance--><!--Device-userAuth-interface AuthInstance-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## Modules to Import
@@ -24,9 +26,9 @@ cancel: () => void
 
 Cancels this authentication.
 
-> **NOTE**
->
-> Use the [AuthInstance](arkts-userauthentication-authinstance-i.md) instance obtained to call this API. The
+> **NOTE**  
+>  
+> Use the [AuthInstance](arkts-userauthentication-authinstance-i.md) instance obtained to call this API. The  
 > [AuthInstance](arkts-userauthentication-authinstance-i.md) instance must be the instance being authenticated.
 
 **Type:** () => void
@@ -39,6 +41,8 @@ Cancels this authentication.
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
+<!--Device-AuthInstance-cancel: () => void--><!--Device-AuthInstance-cancel: () => void-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## off
@@ -49,13 +53,11 @@ off: (name: AuthEventKey) => void
 
 Unsubscribes from the user authentication events of the specified type.
 
-- **name**: indicates the authentication event type. The value **result** means to unsubscribe from the
-authentication result, and the value **tip** means to unsubscribe from the authentication tip information. For
-details, see [AuthEventKey](arkts-userauthentication-autheventkey-t.md).
+- **name**: indicates the authentication event type. The value **result** means to unsubscribe from the authentication result, and the value **tip** means to unsubscribe from the authentication tip information. For details, see [AuthEventKey](arkts-userauthentication-autheventkey-t.md).
 
-> **NOTE**
->
-> The [AuthInstance](arkts-userauthentication-authinstance-i.md) instance used to invoke this API must be the one used to
+> **NOTE**  
+>  
+> The [AuthInstance](arkts-userauthentication-authinstance-i.md) instance used to invoke this API must be the one used to  
 > subscribe to the event.
 
 **Type:** (name: AuthEventKey) => void
@@ -65,6 +67,8 @@ details, see [AuthEventKey](arkts-userauthentication-autheventkey-t.md).
 **Deprecated since:** 10
 
 **Substitutes:** off
+
+<!--Device-AuthInstance-off: (name: AuthEventKey) => void--><!--Device-AuthInstance-off: (name: AuthEventKey) => void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -76,14 +80,11 @@ on: (name: AuthEventKey, callback: AuthEvent) => void
 
 Subscribes to the user authentication events of the specified type.
 
-- **name**: indicates the authentication event type. The value **result** means that the callback returns the
-authentication result, and the value **tip** means that the callback returns the authentication tip information.
-For details, see [AuthEventKey](arkts-userauthentication-autheventkey-t.md).
-- **callback**: callback used to return the authentication result or tip information. For details, see
-[AuthEvent](arkts-userauthentication-authevent-i.md).
+- **name**: indicates the authentication event type. The value **result** means that the callback returns the authentication result, and the value **tip** means that the callback returns the authentication tip information.For details, see [AuthEventKey](arkts-userauthentication-autheventkey-t.md).  
+- **callback**: callback used to return the authentication result or tip information. For details, see [AuthEvent](arkts-userauthentication-authevent-i.md).
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > Use the [AuthInstance](arkts-userauthentication-authinstance-i.md) instance obtained to call this API.
 
 **Type:** (name: AuthEventKey, callback: AuthEvent) => void
@@ -93,6 +94,8 @@ For details, see [AuthEventKey](arkts-userauthentication-autheventkey-t.md).
 **Deprecated since:** 10
 
 **Substitutes:** on
+
+<!--Device-AuthInstance-on: (name: AuthEventKey, callback: AuthEvent) => void--><!--Device-AuthInstance-on: (name: AuthEventKey, callback: AuthEvent) => void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -104,8 +107,8 @@ start: () => void
 
 Starts authentication.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > Use the [AuthInstance](arkts-userauthentication-authinstance-i.md) instance obtained to call this API.
 
 **Type:** () => void
@@ -117,6 +120,8 @@ Starts authentication.
 **Substitutes:** [start](arkts-userauthentication-userauthinstance-i.md#start-1)
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
+
+<!--Device-AuthInstance-start: () => void--><!--Device-AuthInstance-start: () => void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 

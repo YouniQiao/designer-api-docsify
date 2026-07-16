@@ -6,6 +6,8 @@ class of web native messaging extension ability.
 
 **Since:** 21
 
+<!--Device-unnamed-export default class WebNativeMessagingExtensionAbility extends ExtensionAbility--><!--Device-unnamed-export default class WebNativeMessagingExtensionAbility extends ExtensionAbility-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -26,13 +28,15 @@ Called when a web native messaging connection is established.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WebNativeMessagingExtensionAbility-onConnectNative(info: ConnectionInfo): void--><!--Device-WebNativeMessagingExtensionAbility-onConnectNative(info: ConnectionInfo): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | ConnectionInfo | Yes | Indicates connection information about new native connection. |
+| info | [ConnectionInfo](arkts-arkweb-connectioninfo-i.md) | Yes | Indicates connection information about new native connection. |
 
 **Example**
 
@@ -62,6 +66,8 @@ Called when the WebNativeMessagingExtensionAbility is destroyed.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WebNativeMessagingExtensionAbility-onDestroy(): void--><!--Device-WebNativeMessagingExtensionAbility-onDestroy(): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Example**
@@ -90,13 +96,15 @@ Called when a web native messaging connection is disconnected.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WebNativeMessagingExtensionAbility-onDisconnectNative(info: ConnectionInfo): void--><!--Device-WebNativeMessagingExtensionAbility-onDisconnectNative(info: ConnectionInfo): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | ConnectionInfo | Yes | Indicates connection information about new native connection. |
+| info | [ConnectionInfo](arkts-arkweb-connectioninfo-i.md) | Yes | Indicates connection information about new native connection. |
 
 **Example**
 
@@ -126,6 +134,8 @@ Indicates the context of this web native messaging extension ability.
 **Since:** 21
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebNativeMessagingExtensionAbility-context: WebNativeMessagingExtensionContext--><!--Device-WebNativeMessagingExtensionAbility-context: WebNativeMessagingExtensionContext-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

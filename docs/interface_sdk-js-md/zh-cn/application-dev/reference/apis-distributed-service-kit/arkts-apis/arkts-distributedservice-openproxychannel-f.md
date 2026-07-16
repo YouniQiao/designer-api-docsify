@@ -1,5 +1,11 @@
 # openProxyChannel
 
+## 导入模块
+
+```TypeScript
+import { proxyChannelManager } from '@kit.DistributedServiceKit';
+```
+
 ## openProxyChannel
 
 ```TypeScript
@@ -14,26 +20,28 @@ function openProxyChannel(channelInfo: ChannelInfo): Promise<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-proxyChannelManager-function openProxyChannel(channelInfo: ChannelInfo): Promise<int>--><!--Device-proxyChannelManager-function openProxyChannel(channelInfo: ChannelInfo): Promise<int>-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| channelInfo | ChannelInfo | 是 | 对端设备及服务的MAC和UUID信息。 |
+| channelInfo | [ChannelInfo](arkts-distributedservice-channelinfo-i.md) | 是 | 对端设备及服务的MAC和UUID信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | 返回代理通道的channelId，取值范围为1~2147483647。channelId的生命周期和代理通道生命周期相同，不关闭代理时，传入相同入参将返回相同channelId。 |
+| Promise<number> | 返回代理通道的channelId，取值范围为1~2147483647。channelId的生命周期和代理通道生命周期相同，不关闭代理时，传入相同入参将返回相同channelId。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because bluetooth proxy function hasbeen trimmed.<br>**适用版本：** 26.0.0+ |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because bluetooth proxy function has been trimmed.<br>**适用版本：** 26.0.0+ |
 | [32390001](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390001-蓝牙已关闭) | BR is disabled. |
 | [32390002](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390002-设备未配对) | Device not paired. |
 | [32390006](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390006-参数错误) | Parameter error. |

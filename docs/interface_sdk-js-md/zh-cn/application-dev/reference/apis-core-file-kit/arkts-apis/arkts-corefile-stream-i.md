@@ -1,13 +1,18 @@
 # Stream
 
-文件流，在调用Stream的方法前，需要先通过
-[fileIo.createStream](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatestream)方法或者
-[fileIo.fdopenStream](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiofdopenstream)（同步或异步）来构建一个Stream
-实例。
+文件流，在调用Stream的方法前，需要先通过[fileIo.createStream](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatestream)方法或者[fileIo.fdopenStream](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiofdopenstream)（同步或异步）来构建一个Stream实例。
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare interface Stream--><!--Device-unnamed-declare interface Stream-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+```
 
 ## close
 
@@ -19,7 +24,9 @@ close(): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stream-close(): Promise<void>--><!--Device-Stream-close(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -27,7 +34,7 @@ close(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回值。 |
+| Promise<void> | Promise对象。无返回值。 |
 
 **错误码：**
 
@@ -65,7 +72,9 @@ close(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stream-close(callback: AsyncCallback<void>): void--><!--Device-Stream-close(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -73,7 +82,7 @@ close(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 异步关闭文件流之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 异步关闭文件流之后的回调。 |
 
 **错误码：**
 
@@ -113,7 +122,9 @@ closeSync(): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stream-closeSync(): void--><!--Device-Stream-closeSync(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -147,7 +158,9 @@ flush(): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stream-flush(): Promise<void>--><!--Device-Stream-flush(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -155,7 +168,7 @@ flush(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。返回表示异步刷新文件流的结果。 |
+| Promise<void> | Promise对象。返回表示异步刷新文件流的结果。 |
 
 **错误码：**
 
@@ -200,7 +213,9 @@ flush(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stream-flush(callback: AsyncCallback<void>): void--><!--Device-Stream-flush(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -208,7 +223,7 @@ flush(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 异步刷新文件流后的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 异步刷新文件流后的回调函数。 |
 
 **错误码：**
 
@@ -255,7 +270,9 @@ flushSync(): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stream-flushSync(): void--><!--Device-Stream-flushSync(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -299,7 +316,15 @@ read(
 
 **起始版本：** 9
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stream-read(
+      buffer: ArrayBuffer,
+      options?: ReadOptions
+  ): Promise<number>--><!--Device-Stream-read(
+      buffer: ArrayBuffer,
+      options?: ReadOptions
+  ): Promise<number>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -307,14 +332,14 @@ read(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| options | ReadOptions | 否 | 支持如下选项：<br/>- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。<br/>- offset，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。<br>**起始版本：** 11 |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | 用于读取文件的缓冲区。 |
+| options | [ReadOptions](arkts-corefile-readoptions-i.md) | 否 | 支持如下选项：<br/>- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。<br/>- offset，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。<br>**起始版本：** 11 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回读取的结果，单位为Byte。 |
+| Promise<number> | Promise对象。返回读取的结果，单位为Byte。 |
 
 **错误码：**
 
@@ -365,7 +390,9 @@ read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void--><!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -373,8 +400,8 @@ read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 异步读取完成后的回调。返回读取的结果，单位为Byte。 |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | 用于读取文件的缓冲区。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 异步读取完成后的回调。返回读取的结果，单位为Byte。 |
 
 **错误码：**
 
@@ -425,7 +452,17 @@ read(
 
 **起始版本：** 9
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stream-read(
+      buffer: ArrayBuffer,
+      options: ReadOptions,
+      callback: AsyncCallback<number>
+  ): void--><!--Device-Stream-read(
+      buffer: ArrayBuffer,
+      options: ReadOptions,
+      callback: AsyncCallback<number>
+  ): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -433,9 +470,9 @@ read(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| options | ReadOptions | 是 | 支持如下选项：<br/>- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。<br/>- offset，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读取。<br>**起始版本：** 11 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 异步读取完成后的回调。返回读取的结果，单位为Byte。 |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | 用于读取文件的缓冲区。 |
+| options | [ReadOptions](arkts-corefile-readoptions-i.md) | 是 | 支持如下选项：<br/>- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。<br/>- offset，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读取。<br>**起始版本：** 11 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 异步读取完成后的回调。返回读取的结果，单位为Byte。 |
 
 **错误码：**
 
@@ -490,7 +527,15 @@ readSync(
 
 **起始版本：** 9
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stream-readSync(
+      buffer: ArrayBuffer,
+      options?: ReadOptions
+  ): number--><!--Device-Stream-readSync(
+      buffer: ArrayBuffer,
+      options?: ReadOptions
+  ): number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -498,8 +543,8 @@ readSync(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| options | ReadOptions | 否 | 支持如下选项：<br/>- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。<br/>- offset，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。<br/><br>**起始版本：** 11 |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | 用于读取文件的缓冲区。 |
+| options | [ReadOptions](arkts-corefile-readoptions-i.md) | 否 | 支持如下选项：<br/>- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。<br/>- offset，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。<br/><br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -552,7 +597,15 @@ write(
 
 **起始版本：** 9
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stream-write(
+      buffer: ArrayBuffer | string,
+      options?: WriteOptions
+  ): Promise<number>--><!--Device-Stream-write(
+      buffer: ArrayBuffer | string,
+      options?: WriteOptions
+  ): Promise<number>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -561,13 +614,13 @@ write(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | WriteOptions | 否 | 支持如下选项：<br/>- length，number类型，表示期望写入数据的长度，单位为Byte。默认缓冲区长度。<br/>- offset，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。<br/>- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持'utf-8'。<br>**起始版本：** 11 |
+| options | [WriteOptions](arkts-corefile-writeoptions-i.md) | 否 | 支持如下选项：<br/>- length，number类型，表示期望写入数据的长度，单位为Byte。默认缓冲区长度。<br/>- offset，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。<br/>- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持'utf-8'。<br>**起始版本：** 11 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回实际写入的长度，单位为Byte。 |
+| Promise<number> | Promise对象。返回实际写入的长度，单位为Byte。 |
 
 **错误码：**
 
@@ -618,7 +671,9 @@ write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void--><!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -627,7 +682,7 @@ write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 异步写入完成后执行的回调函数。返回实际写入的数据长度，单位为Byte。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 异步写入完成后执行的回调函数。返回实际写入的数据长度，单位为Byte。 |
 
 **错误码：**
 
@@ -680,7 +735,17 @@ write(
 
 **起始版本：** 9
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stream-write(
+      buffer: ArrayBuffer | string,
+      options: WriteOptions,
+      callback: AsyncCallback<number>
+  ): void--><!--Device-Stream-write(
+      buffer: ArrayBuffer | string,
+      options: WriteOptions,
+      callback: AsyncCallback<number>
+  ): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -689,8 +754,8 @@ write(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | WriteOptions | 是 | 支持如下选项：<br/>- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。<br/>- offset，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。<br/>- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持?'utf-8'。<br>**起始版本：** 11 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 异步写入完成后执行的回调函数。返回实际写入的数据长度，单位为Byte。 |
+| options | [WriteOptions](arkts-corefile-writeoptions-i.md) | 是 | 支持如下选项：<br/>- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。<br/>- offset，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。<br/>- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持?'utf-8'。<br>**起始版本：** 11 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 异步写入完成后执行的回调函数。返回实际写入的数据长度，单位为Byte。 |
 
 **错误码：**
 
@@ -748,7 +813,15 @@ writeSync(
 
 **起始版本：** 9
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stream-writeSync(
+      buffer: ArrayBuffer | string,
+      options?: WriteOptions
+  ): number--><!--Device-Stream-writeSync(
+      buffer: ArrayBuffer | string,
+      options?: WriteOptions
+  ): number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -757,7 +830,7 @@ writeSync(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | WriteOptions | 否 | 支持如下选项：<br/>- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。<br/>- offset，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。<br/>- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持?'utf-8'。<br>**起始版本：** 11 |
+| options | [WriteOptions](arkts-corefile-writeoptions-i.md) | 否 | 支持如下选项：<br/>- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。<br/>- offset，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。<br/>- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持?'utf-8'。<br>**起始版本：** 11 |
 
 **返回值：**
 

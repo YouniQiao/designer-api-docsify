@@ -10,6 +10,8 @@ Define the attribute functions of ability component.
 
 **Substitutes:** [UIExtensionComponentAttribute](arkts-arkui-uiextensioncomponent-attribute.md)
 
+<!--Device-unnamed-declare class AbilityComponentAttribute extends CommonMethod<AbilityComponentAttribute>--><!--Device-unnamed-declare class AbilityComponentAttribute extends CommonMethod<AbilityComponentAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.

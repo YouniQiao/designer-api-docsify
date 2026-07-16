@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-appControl-export enum DisposedType--><!--Device-appControl-export enum DisposedType-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -17,6 +19,8 @@ BLOCK_APPLICATION = 1
 应用所有能力都将被禁用。
 
 **起始版本：** 11
+
+<!--Device-DisposedType-BLOCK_APPLICATION = 1--><!--Device-DisposedType-BLOCK_APPLICATION = 1-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -32,6 +36,8 @@ BLOCK_ABILITY = 2
 
 **起始版本：** 11
 
+<!--Device-DisposedType-BLOCK_ABILITY = 2--><!--Device-DisposedType-BLOCK_ABILITY = 2-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +51,8 @@ NON_BLOCK = 3
 应用所有能力不会被禁用。
 
 **起始版本：** 11
+
+<!--Device-DisposedType-NON_BLOCK = 3--><!--Device-DisposedType-NON_BLOCK = 3-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 

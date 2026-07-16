@@ -6,7 +6,15 @@
 
 **起始版本：** 12
 
+<!--Device-sendableImage-interface ImageReceiver--><!--Device-sendableImage-interface ImageReceiver-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
+
+## 导入模块
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+```
 
 ## getReceivingSurfaceId
 
@@ -18,13 +26,15 @@ getReceivingSurfaceId(): Promise<string>
 
 **起始版本：** 12
 
+<!--Device-ImageReceiver-getReceivingSurfaceId(): Promise<string>--><!--Device-ImageReceiver-getReceivingSurfaceId(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | 异步返回Surface ID。 |
+| Promise<string> | 异步返回Surface ID。 |
 
 **示例：**
 
@@ -58,6 +68,8 @@ on(type: 'imageArrival', callback: AsyncCallback<void>): void
 
 **起始版本：** 12
 
+<!--Device-ImageReceiver-on(type: 'imageArrival', callback: AsyncCallback<void>): void--><!--Device-ImageReceiver-on(type: 'imageArrival', callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **参数：**
@@ -65,7 +77,7 @@ on(type: 'imageArrival', callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'imageArrival' | 是 | 注册事件的类型，固定为'imageArrival'，接收图片时触发。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 注册的事件回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 注册的事件回调。 |
 
 **示例：**
 
@@ -94,12 +106,14 @@ readLatestImage(): Promise<Image>
 
 从ImageReceiver读取最新的图片。使用promise异步回调。
 
-> **注意**：
->
-> 此接口需要在[on](sendableImage.ImageReceiver.on)回调触发后调用，才能正常的接收到数据。且此接口返回的[Image](arkts-image-image-i.md)对象使
+> **注意**：  
+>  
+> 此接口需要在[on](sendableImage.ImageReceiver.on)回调触发后调用，才能正常的接收到数据。且此接口返回的[Image](arkts-image-image-i.md)对象使  
 > 用完毕后需要调用[release](arkts-image-pixelmap-i.md#release-1)方法释放，释放后才可以继续接收新的数据。
 
 **起始版本：** 12
+
+<!--Device-ImageReceiver-readLatestImage(): Promise<Image>--><!--Device-ImageReceiver-readLatestImage(): Promise<Image>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
@@ -107,7 +121,7 @@ readLatestImage(): Promise<Image>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Image&gt; | 异步返回最新图片。 |
+| Promise<Image> | 异步返回最新图片。 |
 
 **示例：**
 
@@ -139,12 +153,14 @@ readNextImage(): Promise<Image>
 
 从ImageReceiver读取下一张图片。使用promise异步回调。
 
-> **注意**：
->
-> 此接口需要在[on](sendableImage.ImageReceiver.on)回调触发后调用，才能正常的接收到数据。且此接口返回的[Image](arkts-image-image-i.md)对象使
+> **注意**：  
+>  
+> 此接口需要在[on](sendableImage.ImageReceiver.on)回调触发后调用，才能正常的接收到数据。且此接口返回的[Image](arkts-image-image-i.md)对象使  
 > 用完毕后需要调用[release](arkts-image-pixelmap-i.md#release-1)方法释放，释放后才可以继续接收新的数据。
 
 **起始版本：** 12
+
+<!--Device-ImageReceiver-readNextImage(): Promise<Image>--><!--Device-ImageReceiver-readNextImage(): Promise<Image>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
@@ -152,7 +168,7 @@ readNextImage(): Promise<Image>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Image&gt; | 异步返回下一张图片。 |
+| Promise<Image> | 异步返回下一张图片。 |
 
 **示例：**
 
@@ -190,13 +206,15 @@ release(): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-ImageReceiver-release(): Promise<void>--><!--Device-ImageReceiver-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 异步返回操作结果。 |
+| Promise<void> | 异步返回操作结果。 |
 
 **示例：**
 
@@ -232,6 +250,8 @@ readonly capacity: number
 
 **起始版本：** 12
 
+<!--Device-ImageReceiver-readonly capacity: number--><!--Device-ImageReceiver-readonly capacity: number-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 ## format
@@ -246,6 +266,8 @@ readonly format: image.ImageFormat
 
 **起始版本：** 12
 
+<!--Device-ImageReceiver-readonly format: image.ImageFormat--><!--Device-ImageReceiver-readonly format: image.ImageFormat-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 ## size
@@ -259,6 +281,8 @@ readonly size: image.Size
 **类型：** image.Size
 
 **起始版本：** 12
+
+<!--Device-ImageReceiver-readonly size: image.Size--><!--Device-ImageReceiver-readonly size: image.Size-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 

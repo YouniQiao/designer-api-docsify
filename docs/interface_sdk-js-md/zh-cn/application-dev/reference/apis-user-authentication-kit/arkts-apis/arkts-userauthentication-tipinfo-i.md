@@ -8,7 +8,15 @@
 
 **替代接口：** [AuthTipInfo](arkts-userauthentication-authtipinfo-i.md)
 
+<!--Device-userAuth-interface TipInfo--><!--Device-userAuth-interface TipInfo-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
+
+## 导入模块
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+```
 
 ## module
 
@@ -25,6 +33,8 @@ module: number
 **废弃版本：** 11
 
 **替代接口：** [tipType](arkts-userauthentication-authtipinfo-i.md#tiptype)
+
+<!--Device-TipInfo-module: number--><!--Device-TipInfo-module: number-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -43,6 +53,8 @@ tip: number
 **废弃版本：** 11
 
 **替代接口：** [tipCode](arkts-userauthentication-authtipinfo-i.md#tipcode)
+
+<!--Device-TipInfo-tip: number--><!--Device-TipInfo-tip: number-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

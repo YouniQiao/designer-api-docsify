@@ -18,16 +18,18 @@ Export contact data to a vcf file.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS and ohos.permission.READ_CONTACTS
 
+<!--Device-vcard-function exportVCard(context: Context, predicates: dataSharePredicates.DataSharePredicates, options: VCardBuilderOptions, callback: AsyncCallback<string>): void--><!--Device-vcard-function exportVCard(context: Context, predicates: dataSharePredicates.DataSharePredicates, options: VCardBuilderOptions, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Execute statement. |
-| options | VCardBuilderOptions | Yes | Encoding and version. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Represents the address of the generated vcf file. |
+| options | [VCardBuilderOptions](arkts-telephony-vcardbuilderoptions-i.md) | Yes | Encoding and version. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Represents the address of the generated vcf file. |
 
 **Error codes:**
 
@@ -78,21 +80,23 @@ Export contact data to a vcf file.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS and ohos.permission.READ_CONTACTS
 
+<!--Device-vcard-function exportVCard(context: Context, predicates: dataSharePredicates.DataSharePredicates, options?: VCardBuilderOptions): Promise<string>--><!--Device-vcard-function exportVCard(context: Context, predicates: dataSharePredicates.DataSharePredicates, options?: VCardBuilderOptions): Promise<string>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Execute statement. |
-| options | VCardBuilderOptions | No | Encoding and version. |
+| options | [VCardBuilderOptions](arkts-telephony-vcardbuilderoptions-i.md) | No | Encoding and version. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | the promise represents the address of the generated vcf file.. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | the promise represents the address of the generated vcf file.. |
 
 **Error codes:**
 
@@ -144,15 +148,17 @@ Export contact data to a vcf file.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS and ohos.permission.READ_CONTACTS
 
+<!--Device-vcard-function exportVCard(context: Context, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<string>): void--><!--Device-vcard-function exportVCard(context: Context, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Execute statement. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Represents the address of the generated vcf file. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Represents the address of the generated vcf file. |
 
 **Error codes:**
 

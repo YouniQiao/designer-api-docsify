@@ -4,6 +4,8 @@ Enumerates USB transfer flags.
 
 **Since:** 18
 
+<!--Device-usbManager-export enum UsbTransferFlags--><!--Device-usbManager-export enum UsbTransferFlags-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## USB_TRANSFER_SHORT_NOT_OK
@@ -15,6 +17,8 @@ USB_TRANSFER_SHORT_NOT_OK = 0
 Reports short frames as errors.
 
 **Since:** 18
+
+<!--Device-UsbTransferFlags-USB_TRANSFER_SHORT_NOT_OK = 0--><!--Device-UsbTransferFlags-USB_TRANSFER_SHORT_NOT_OK = 0-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -28,6 +32,8 @@ Automatically releases the transfer buffer.
 
 **Since:** 18
 
+<!--Device-UsbTransferFlags-USB_TRANSFER_FREE_BUFFER = 1--><!--Device-UsbTransferFlags-USB_TRANSFER_FREE_BUFFER = 1-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## USB_TRANSFER_FREE_TRANSFER
@@ -40,6 +46,8 @@ Automatically transfers after the callback is complete.
 
 **Since:** 18
 
+<!--Device-UsbTransferFlags-USB_TRANSFER_FREE_TRANSFER = 2--><!--Device-UsbTransferFlags-USB_TRANSFER_FREE_TRANSFER = 2-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## USB_TRANSFER_ADD_ZERO_PACKET
@@ -51,6 +59,8 @@ USB_TRANSFER_ADD_ZERO_PACKET = 3
 Adds an additional data packet to the transfer.
 
 **Since:** 18
+
+<!--Device-UsbTransferFlags-USB_TRANSFER_ADD_ZERO_PACKET = 3--><!--Device-UsbTransferFlags-USB_TRANSFER_ADD_ZERO_PACKET = 3-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 

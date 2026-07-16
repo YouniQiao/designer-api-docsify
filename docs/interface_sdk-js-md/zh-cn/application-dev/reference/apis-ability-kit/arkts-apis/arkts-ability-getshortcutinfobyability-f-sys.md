@@ -1,5 +1,11 @@
 # getShortcutInfoByAbility（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { shortcutManager } from '@kit.AbilityKit';
+```
+
 ## getShortcutInfoByAbility
 
 ```TypeScript
@@ -13,6 +19,8 @@ function getShortcutInfoByAbility(bundleName: string, moduleName: string, abilit
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or (ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-shortcutManager-function getShortcutInfoByAbility(bundleName: string, moduleName: string, abilityName: string, userId?: int, appIndex?: int): Array<ShortcutInfo>--><!--Device-shortcutManager-function getShortcutInfoByAbility(bundleName: string, moduleName: string, abilityName: string, userId?: int, appIndex?: int): Array<ShortcutInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -32,7 +40,7 @@ function getShortcutInfoByAbility(bundleName: string, moduleName: string, abilit
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;ShortcutInfo&gt; | Array形式返回指定用户下指定UIAbility的[ShortcutInfo](arkts-ability-shortcutinfo-i.md)。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<ShortcutInfo> | Array形式返回指定用户下指定UIAbility的[ShortcutInfo](arkts-ability-shortcutinfo-i-sys.md)。 |
 
 **错误码：**
 

@@ -12,14 +12,15 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAllBundleInstallInfo(): Promise<Array<Record<string, Object>>>
 ```
 
-Obtains the extended install information about all applications in the system.
-This API uses a promise to return the result.
+Obtains the extended install information about all applications in the system.This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.GET_INSTALLED_BUNDLE_LIST
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-bundleManager-function getAllBundleInstallInfo(): Promise<Array<Record<string, Object>>>--><!--Device-bundleManager-function getAllBundleInstallInfo(): Promise<Array<Record<string, Object>>>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -29,7 +30,7 @@ This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Record&lt;string, Object&gt;&gt;&gt; | Promise used to return the list ofextended install information set of all applications. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Record<string, Object>>> | Promise used to return the list of extended install information set of all applications. |
 
 **Error codes:**
 

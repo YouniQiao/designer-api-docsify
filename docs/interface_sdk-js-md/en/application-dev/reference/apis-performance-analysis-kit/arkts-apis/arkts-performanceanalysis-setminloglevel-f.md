@@ -14,16 +14,18 @@ function setMinLogLevel(level: LogLevel): void
 
 Sets the minimum log level.
 
-> **NOTE**
->
-> If the set log level is lower than the
-> [global log level](../../../../dfx/hilog.md#displaying-and-setting-log-levels), the setting does not take effect.
->
+> **NOTE**  
+>  
+> If the set log level is lower than the  
+> [global log level](../../../../dfx/hilog.md#displaying-and-setting-log-levels), the setting does not take effect.  
+>  
 > This function does not take effect for debug applications.
 
 **Since:** 15
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-hilog-function setMinLogLevel(level: LogLevel): void--><!--Device-hilog-function setMinLogLevel(level: LogLevel): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiLog
 
@@ -31,7 +33,7 @@ Sets the minimum log level.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | LogLevel | Yes | Log level. |
+| level | [LogLevel](arkts-performanceanalysis-loglevel-e.md) | Yes | Log level. |
 
 **Example**
 

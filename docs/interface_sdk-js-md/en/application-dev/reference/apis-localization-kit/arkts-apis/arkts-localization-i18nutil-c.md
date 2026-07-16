@@ -1,9 +1,10 @@
 # I18NUtil
 
-Internationalization utility class, which provides the capabilities of unit conversion, date sequence retrieval,
-time segment name retrieval, region matching, and path localization.
+Internationalization utility class, which provides the capabilities of unit conversion, date sequence retrieval,time segment name retrieval, region matching, and path localization.
 
 **Since:** 9
+
+<!--Device-i18n-export class I18NUtil--><!--Device-i18n-export class I18NUtil-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -26,6 +27,8 @@ Adjusts a locale ID to a format that complies with the [BCP47](https://www.rfc-e
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-I18NUtil-static convertCanonicalLocaleIdentifier(locale: string): string--><!--Device-I18NUtil-static convertCanonicalLocaleIdentifier(locale: string): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -53,20 +56,22 @@ Obtains the locale that best matches a region from the specified locale list.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-I18NUtil-static getBestMatchLocale(locale: string, localeList: string[]): string--><!--Device-I18NUtil-static getBestMatchLocale(locale: string, localeList: string[]): string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | [Locale ID](../../../../internationalization/i18n-locale-culture.md#how-it-works), forexample, **zh-Hans-CN**. |
+| locale | string | Yes | [Locale ID](../../../../internationalization/i18n-locale-culture.md#how-it-works), for example, **zh-Hans-CN**. |
 | localeList | string[] | Yes | List of locale IDs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | ID of the locale that best matches a region. If no matching locale is found, an empty stringis returned. |
+| string | ID of the locale that best matches a region. If no matching locale is found, an empty string is returned. |
 
 **Error codes:**
 
@@ -87,19 +92,21 @@ Obtains the sequence of the year, month, and day in the specified locale.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-I18NUtil-static getDateOrder(locale: string): string--><!--Device-I18NUtil-static getDateOrder(locale: string): string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | [Locale ID](../../../../internationalization/i18n-locale-culture.md#how-it-works), whichconsists of the language, script, and country/region, for example, **zh-Hans-CN**. |
+| locale | string | Yes | [Locale ID](../../../../internationalization/i18n-locale-culture.md#how-it-works), which consists of the language, script, and country/region, for example, **zh-Hans-CN**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Sequence of the year, month, and day in the locale. **y** indicates the year, **L** indicatesthe month, and **d** indicates the day. |
+| string | Sequence of the year, month, and day in the locale. **y** indicates the year, **L** indicates the month, and **d** indicates the day. |
 
 ## getThreeLetterLanguage
 
@@ -109,12 +116,13 @@ static getThreeLetterLanguage(locale: string): string
 
 Converts a language code from two letters to three letters.
 
-For example, the two-letter language code of Chinese is **zh**, and the corresponding three-letter language code
-is **zho**. For details, see [ISO 639](https://www.iso.org/iso-639-language-code).
+For example, the two-letter language code of Chinese is **zh**, and the corresponding three-letter language code is **zho**. For details, see [ISO 639](https://www.iso.org/iso-639-language-code).
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-I18NUtil-static getThreeLetterLanguage(locale: string): string--><!--Device-I18NUtil-static getThreeLetterLanguage(locale: string): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -145,12 +153,13 @@ static getThreeLetterRegion(locale: string): string
 
 Converts a region code from two letters to three letters.
 
-For example, the two-letter region code of China is **CN**, and the corresponding three-letter region code is
-**CHN**. For details, see [ISO 3166](https://www.iso.org/iso-3166-country-codes.html).
+For example, the two-letter region code of China is **CN**, and the corresponding three-letter region code is **CHN**. For details, see [ISO 3166](https://www.iso.org/iso-3166-country-codes.html).
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-I18NUtil-static getThreeLetterRegion(locale: string): string--><!--Device-I18NUtil-static getThreeLetterRegion(locale: string): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -184,6 +193,8 @@ Obtains the localized expression of the specified time in the specified locale.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-I18NUtil-static getTimePeriodName(hour:int, locale?: string): string--><!--Device-I18NUtil-static getTimePeriodName(hour:int, locale?: string): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -221,6 +232,8 @@ For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-I18NUtil-static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl.Locale): string--><!--Device-I18NUtil-static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl.Locale): string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -235,7 +248,7 @@ For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
 
 | Type | Description |
 | --- | --- |
-| string | File path after localization. If the specified locale object corresponds to an RTL language,the processed file path contains a direction control character to ensure that the file path is displayed inmirror mode. |
+| string | File path after localization. If the specified locale object corresponds to an RTL language,the processed file path contains a direction control character to ensure that the file path is displayed in mirror mode. |
 
 **Error codes:**
 
@@ -261,6 +274,8 @@ For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-I18NUtil-static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: intl.Locale): string--><!--Device-I18NUtil-static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: intl.Locale): string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -275,7 +290,7 @@ For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
 
 | Type | Description |
 | --- | --- |
-| string | File path after localization. If the specified locale object corresponds to an RTL language,the processed file path contains a direction control character to ensure that the file path is displayed inmirror mode. |
+| string | File path after localization. If the specified locale object corresponds to an RTL language,the processed file path contains a direction control character to ensure that the file path is displayed in mirror mode. |
 
 **Error codes:**
 
@@ -289,15 +304,15 @@ For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
 static setUnicodeWrappedBidiDirection(text: string, direction: 'RTL' | 'LTR'): string
 ```
 
-Sets the text direction for certain text within a paragraph, including RTL (right-to-left) and
-LTR (left-to-right). NOTE: The setting does not take effect within strong characters (characters
-with an intrinsic, unambiguous writing direction).
+Sets the text direction for certain text within a paragraph, including RTL (right-to-left) and LTR (left-to-right). NOTE: The setting does not take effect within strong characters (characters with an intrinsic, unambiguous writing direction).
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-I18NUtil-static setUnicodeWrappedBidiDirection(text: string, direction: 'RTL' | 'LTR'): string--><!--Device-I18NUtil-static setUnicodeWrappedBidiDirection(text: string, direction: 'RTL' | 'LTR'): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -326,17 +341,19 @@ Converts one measurement unit into another and formats the unit based on the spe
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-I18NUtil-static unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string--><!--Device-I18NUtil-static unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromUnit | UnitInfo | Yes | Measurement unit to be converted. |
-| toUnit | UnitInfo | Yes | Measurement unit to be converted to. |
+| fromUnit | [UnitInfo](arkts-localization-unitinfo-i.md) | Yes | Measurement unit to be converted. |
+| toUnit | [UnitInfo](arkts-localization-unitinfo-i.md) | Yes | Measurement unit to be converted to. |
 | value | number | Yes | Value of the measurement unit to be converted. |
-| locale | string | Yes | [Locale ID](../../../../internationalization/i18n-locale-culture.md#how-it-works), whichconsists of the language, script, and country/region, for example, **zh-Hans-CN**. |
-| style | string | No | Style used for formatting. The value can be **long**, **short**, or **narrow**. Thedefault value is **short**.For details about the meaning or display effect of different values, see[Number and Unit of Measurement Formatting](../../../../internationalization/i18n-numbers-weights-measures.md). |
+| locale | string | Yes | [Locale ID](../../../../internationalization/i18n-locale-culture.md#how-it-works), which consists of the language, script, and country/region, for example, **zh-Hans-CN**. |
+| style | string | No | Style used for formatting. The value can be **long**, **short**, or **narrow**. The default value is **short**.For details about the meaning or display effect of different values, see [Number and Unit of Measurement Formatting](../../../../internationalization/i18n-numbers-weights-measures.md). |
 
 **Return value:**
 

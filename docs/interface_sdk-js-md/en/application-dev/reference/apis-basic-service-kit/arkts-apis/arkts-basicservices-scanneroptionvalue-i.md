@@ -4,6 +4,8 @@ Defines the scanner option value.
 
 **Since:** 20
 
+<!--Device-scan-interface ScannerOptionValue--><!--Device-scan-interface ScannerOptionValue-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Value of the Boolean type.
 
 **Since:** 20
 
+<!--Device-ScannerOptionValue-boolValue?: boolean--><!--Device-ScannerOptionValue-boolValue?: boolean-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## numValue
@@ -37,6 +41,8 @@ Value of the number type.
 **Type:** number
 
 **Since:** 20
+
+<!--Device-ScannerOptionValue-numValue?: int--><!--Device-ScannerOptionValue-numValue?: int-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -52,6 +58,8 @@ Value of the string type.
 
 **Since:** 20
 
+<!--Device-ScannerOptionValue-strValue?: string--><!--Device-ScannerOptionValue-strValue?: string-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## valueType
@@ -65,6 +73,8 @@ Value type.
 **Type:** OptionValueType
 
 **Since:** 20
+
+<!--Device-ScannerOptionValue-valueType: OptionValueType--><!--Device-ScannerOptionValue-valueType: OptionValueType-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 

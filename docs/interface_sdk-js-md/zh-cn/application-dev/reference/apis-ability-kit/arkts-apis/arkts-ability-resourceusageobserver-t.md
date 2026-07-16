@@ -4,15 +4,15 @@
 export type ResourceUsageObserver = (resourceType: ResourceType, resourceSize: number, detailInfo?: Record<string, number>) => void
 ```
 
-定义应用资源使用情况的观察者回调函数，作为
-[errorManager.setDefaultResourceUsageObserver](arkts-ability-setdefaultresourceusageobserver-f.md#setdefaultresourceusageobserver-1)的入参，用于监听各类资源占用变化，
-并支持应用执行自定义资源处理逻辑。
+定义应用资源使用情况的观察者回调函数，作为[errorManager.setDefaultResourceUsageObserver](arkts-ability-setdefaultresourceusageobserver-f.md#setdefaultresourceusageobserver-1)的入参，用于监听各类资源占用变化，并支持应用执行自定义资源处理逻辑。
 
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本24开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-errorManager-export type ResourceUsageObserver = (resourceType: ResourceType, resourceSize: long, detailInfo?: Record<string, long>) => void--><!--Device-errorManager-export type ResourceUsageObserver = (resourceType: ResourceType, resourceSize: long, detailInfo?: Record<string, long>) => void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

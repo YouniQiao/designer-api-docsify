@@ -12,6 +12,8 @@ Represents a FrameNode of the **FlowItem** type. This type of node allows only o
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-type FlowItem = TypedFrameNode<FlowItemInterface, FlowItemAttribute>--><!--Device-typeNode-type FlowItem = TypedFrameNode<FlowItemInterface, FlowItemAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** TypedFrameNode<FlowItemInterface, FlowItemAttribute>

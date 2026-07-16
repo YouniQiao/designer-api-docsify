@@ -1,5 +1,11 @@
 # getDarkMode（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { uiAppearance } from '@kit.ArkUI';
+```
+
 ## getDarkMode
 
 ```TypeScript
@@ -12,8 +18,8 @@ function getDarkMode(): DarkMode
 
 > **说明：**
 
-> 该接口在API version 19及之前版本中为系统接口。开发者使用该接口时需要申请
-> [ohos.permission.UPDATE_CONFIGURATION](../../../../security/AccessToken/permissions-for-system-apps.md#ohospermissionupdate_configuration)
+> 该接口在API version 19及之前版本中为系统接口。开发者使用该接口时需要申请  
+> [ohos.permission.UPDATE_CONFIGURATION](../../../../security/AccessToken/permissions-for-system-apps.md#ohospermissionupdate_configuration)  
 > 权限。
 
 <!--DelEnd-->
@@ -23,6 +29,8 @@ function getDarkMode(): DarkMode
 **需要权限：** 
 - API版本10 - 19：ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-uiAppearance-function getDarkMode(): DarkMode--><!--Device-uiAppearance-function getDarkMode(): DarkMode-End-->
+
 **系统能力：** SystemCapability.ArkUI.UiAppearance
 
 **系统接口：** 此接口为系统接口。
@@ -31,7 +39,7 @@ function getDarkMode(): DarkMode
 
 | 类型 | 说明 |
 | --- | --- |
-| DarkMode | current dark-mode. |
+| [DarkMode](arkts-arkui-darkmode-e-sys.md) | current dark-mode. |
 
 **错误码：**
 

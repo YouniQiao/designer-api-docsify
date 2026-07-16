@@ -4,6 +4,8 @@
 
 **起始版本：** 21
 
+<!--Device-notificationManager-export interface NotificationReminderInfo--><!--Device-notificationManager-export interface NotificationReminderInfo-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,6 +28,8 @@ bundle: BundleOption
 
 **起始版本：** 21
 
+<!--Device-NotificationReminderInfo-bundle: BundleOption--><!--Device-NotificationReminderInfo-bundle: BundleOption-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -42,6 +46,8 @@ reminderFlags: number
 
 **起始版本：** 21
 
+<!--Device-NotificationReminderInfo-reminderFlags: long--><!--Device-NotificationReminderInfo-reminderFlags: long-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -57,6 +63,8 @@ silentReminderEnabled: boolean
 **类型：** boolean
 
 **起始版本：** 21
+
+<!--Device-NotificationReminderInfo-silentReminderEnabled: boolean--><!--Device-NotificationReminderInfo-silentReminderEnabled: boolean-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

@@ -18,13 +18,15 @@ Obtain information about the P2P connection.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function getP2pLinkedInfo(): Promise<WifiP2pLinkedInfo>--><!--Device-wifiManager-function getP2pLinkedInfo(): Promise<WifiP2pLinkedInfo>-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WifiP2pLinkedInfo&gt; | Returns p2p linked information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<WifiP2pLinkedInfo> | Returns p2p linked information. |
 
 **Error codes:**
 
@@ -47,13 +49,15 @@ Obtain information about the P2P connection.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function getP2pLinkedInfo(callback: AsyncCallback<WifiP2pLinkedInfo>): void--><!--Device-wifiManager-function getP2pLinkedInfo(callback: AsyncCallback<WifiP2pLinkedInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;WifiP2pLinkedInfo&gt; | Yes | Indicates callback of function. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<WifiP2pLinkedInfo> | Yes | Indicates callback of function. |
 
 **Error codes:**
 

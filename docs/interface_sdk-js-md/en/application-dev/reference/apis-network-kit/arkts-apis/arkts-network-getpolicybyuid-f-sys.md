@@ -18,6 +18,8 @@ Query the policy of the specified UID.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function getPolicyByUid(uid: number, callback: AsyncCallback<NetUidPolicy>): void--><!--Device-policy-function getPolicyByUid(uid: number, callback: AsyncCallback<NetUidPolicy>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Query the policy of the specified UID.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | number | Yes | the specified UID of application. |
-| callback | AsyncCallback&lt;NetUidPolicy&gt; | Yes | the callback of getPolicyByUid. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<NetUidPolicy> | Yes | the callback of getPolicyByUid. |
 
 **Error codes:**
 
@@ -65,6 +67,8 @@ Query the policy of the specified UID.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function getPolicyByUid(uid: number): Promise<NetUidPolicy>--><!--Device-policy-function getPolicyByUid(uid: number): Promise<NetUidPolicy>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -79,7 +83,7 @@ Query the policy of the specified UID.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetUidPolicy&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetUidPolicy> | The promise returned by the function. |
 
 **Error codes:**
 

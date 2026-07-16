@@ -6,9 +6,17 @@ RestrictedWorker类包含所有Worker功能。
 
 **起始版本：** 11
 
+<!--Device-worker-class RestrictedWorker extends ThreadWorker--><!--Device-worker-class RestrictedWorker extends ThreadWorker-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
+```
 
 ## constructor
 
@@ -20,6 +28,8 @@ constructor(scriptURL: string, options?: WorkerOptions)
 
 **起始版本：** 11
 
+<!--Device-RestrictedWorker-constructor(scriptURL: string, options?: WorkerOptions)--><!--Device-RestrictedWorker-constructor(scriptURL: string, options?: WorkerOptions)-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **系统接口：** 此接口为系统接口。
@@ -29,7 +39,7 @@ constructor(scriptURL: string, options?: WorkerOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | scriptURL | string | 是 | scriptURL Worker线程执行的脚本URL。 |
-| options | WorkerOptions | 否 | 可为worker设置的选项。 |
+| options | [WorkerOptions](arkts-arkts-workeroptions-i.md) | 否 | 可为worker设置的选项。 |
 
 **错误码：**
 

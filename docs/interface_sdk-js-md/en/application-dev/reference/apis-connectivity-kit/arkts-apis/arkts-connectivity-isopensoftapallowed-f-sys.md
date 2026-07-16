@@ -12,13 +12,13 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function isOpenSoftApAllowed(): boolean
 ```
 
-Check whether Wi-Fi hotspot is can be operated under some situation. When the airplane mode is turned on
-and does not support the coexistence of softap and sta, nor does it support signal bridge,
-the hotspot switch cannot be operated.
+Check whether Wi-Fi hotspot is can be operated under some situation. When the airplane mode is turned on and does not support the coexistence of softap and sta, nor does it support signal bridge,the hotspot switch cannot be operated.
 
 **Since:** 18
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.MANAGE_WIFI_HOTSPOT
+
+<!--Device-wifiManager-function isOpenSoftApAllowed(): boolean--><!--Device-wifiManager-function isOpenSoftApAllowed(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 

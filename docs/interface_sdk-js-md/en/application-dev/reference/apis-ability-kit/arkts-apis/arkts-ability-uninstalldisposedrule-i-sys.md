@@ -4,6 +4,8 @@ Describes an uninstallation disposed rule.
 
 **Since:** 15
 
+<!--Device-appControl-export interface UninstallDisposedRule--><!--Device-appControl-export interface UninstallDisposedRule-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **System API:** This is a system API.
@@ -20,12 +22,13 @@ import { appControl } from '@kit.AbilityKit';
 priority: number
 ```
 
-Priority of the disposed rule, which is used to sort the query results of the rule list. The value is an integer.
-A smaller value indicates a higher priority.
+Priority of the disposed rule, which is used to sort the query results of the rule list. The value is an integer.A smaller value indicates a higher priority.
 
 **Type:** number
 
 **Since:** 15
+
+<!--Device-UninstallDisposedRule-priority: int--><!--Device-UninstallDisposedRule-priority: int-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -43,6 +46,8 @@ Type of the ability to start during interception.
 
 **Since:** 15
 
+<!--Device-UninstallDisposedRule-uninstallComponentType: UninstallComponentType--><!--Device-UninstallDisposedRule-uninstallComponentType: UninstallComponentType-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **System API:** This is a system API.
@@ -58,6 +63,8 @@ Component displayed when the application is disposed of.
 **Type:** Want
 
 **Since:** 15
+
+<!--Device-UninstallDisposedRule-want: Want--><!--Device-UninstallDisposedRule-want: Want-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 

@@ -12,22 +12,21 @@ import { childProcessManager } from '@kit.AbilityKit';
 function startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, options?: ChildProcessOptions): Promise<number>
 ```
 
-Starts a [native child process](../../../../application-models/ability-terminology.md#native-child-process). This API
-uses a promise to return the result.
-This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 801
-is returned.
+Starts a [native child process](../../../../application-models/ability-terminology.md#native-child-process). This API uses a promise to return the result.This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 801is returned.
 
-> **NOTE**
->
-> The child process started by calling this API does not inherit the resources of the parent process. After the
-> child process is created, its PID is returned, the dynamic link library file specified in the parameters is
-> loaded, and the entry function of the child process is executed. Once the entry function is done, the child
-> process is automatically destroyed. After the process that calls this API is destroyed, the created child process
+> **NOTE**  
+>  
+> The child process started by calling this API does not inherit the resources of the parent process. After the  
+> child process is created, its PID is returned, the dynamic link library file specified in the parameters is  
+> loaded, and the entry function of the child process is executed. Once the entry function is done, the child  
+> process is automatically destroyed. After the process that calls this API is destroyed, the created child process  
 > is also destroyed.
 
 **Since:** 13
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-childProcessManager-function startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, options?: ChildProcessOptions): Promise<int>--><!--Device-childProcessManager-function startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, options?: ChildProcessOptions): Promise<int>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -35,15 +34,15 @@ is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entryPoint | string | Yes | The symbol and entry function of the dynamic link library called in the child process areseparated by a colon (:), for example, **libentry.so:Main**. |
-| args | ChildProcessArgs | Yes | Parameters transferred to the child process. |
-| options | ChildProcessOptions | No | Startup configuration of the child process. |
+| entryPoint | string | Yes | The symbol and entry function of the dynamic link library called in the child process are separated by a colon (:), for example, **libentry.so:Main**. |
+| args | [ChildProcessArgs](arkts-ability-childprocessargs-i.md) | Yes | Parameters transferred to the child process. |
+| options | [ChildProcessOptions](arkts-ability-childprocessoptions-i.md) | No | Startup configuration of the child process. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the PID of the child process. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the PID of the child process. |
 
 **Error codes:**
 

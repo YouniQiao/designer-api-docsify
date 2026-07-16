@@ -4,9 +4,17 @@
 
 **起始版本：** 10
 
+<!--Device-dataSharePredicates-class DataSharePredicates--><!--Device-dataSharePredicates-class DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+```
 
 ## beginWrap
 
@@ -22,6 +30,8 @@ beginWrap(): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-beginWrap(): DataSharePredicates--><!--Device-DataSharePredicates-beginWrap(): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,7 +40,7 @@ beginWrap(): DataSharePredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回带有左括号的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | 返回带有左括号的谓词。 |
 
 **示例：**
 
@@ -59,6 +69,8 @@ beginsWith(field: string, value: string): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-beginsWith(field: string, value: string): DataSharePredicates--><!--Device-DataSharePredicates-beginsWith(field: string, value: string): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -74,7 +86,7 @@ beginsWith(field: string, value: string): DataSharePredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 
@@ -98,6 +110,8 @@ between(field: string, low: ValueType, high: ValueType): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-between(field: string, low: ValueType, high: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-between(field: string, low: ValueType, high: ValueType): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -107,14 +121,14 @@ between(field: string, low: ValueType, high: ValueType): DataSharePredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键值型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
-| low | ValueType | 是 | 指示与谓词匹配的最小值。low为number时，按数值排序指定匹配范围。low为string时，按字典序排序指定匹配范围。low为boolean时，按数值排序指定匹配范围。 |
-| high | ValueType | 是 | 指示与谓词匹配的最大值。high为number时，按数值排序指定匹配范围。high为string时，按字典序排序指定匹配范围。high为boolean时，按数值排序指定匹配范围。 |
+| low | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 指示与谓词匹配的最小值。low为number时，按数值排序指定匹配范围。low为string时，按字典序排序指定匹配范围。low为boolean时，按数值排序指定匹配范围。 |
+| high | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 指示与谓词匹配的最大值。high为number时，按数值排序指定匹配范围。high为string时，按字典序排序指定匹配范围。high为boolean时，按数值排序指定匹配范围。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 
@@ -138,6 +152,8 @@ contains(field: string, value: string): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-contains(field: string, value: string): DataSharePredicates--><!--Device-DataSharePredicates-contains(field: string, value: string): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -153,7 +169,7 @@ contains(field: string, value: string): DataSharePredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 
@@ -177,6 +193,8 @@ distinct(): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-distinct(): DataSharePredicates--><!--Device-DataSharePredicates-distinct(): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -185,7 +203,7 @@ distinct(): DataSharePredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 
@@ -209,6 +227,8 @@ endWrap(): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-endWrap(): DataSharePredicates--><!--Device-DataSharePredicates-endWrap(): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -217,7 +237,7 @@ endWrap(): DataSharePredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回带有右括号的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | 返回带有右括号的谓词。 |
 
 **示例：**
 
@@ -246,6 +266,8 @@ endsWith(field: string, value: string): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-endsWith(field: string, value: string): DataSharePredicates--><!--Device-DataSharePredicates-endsWith(field: string, value: string): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -261,7 +283,7 @@ endsWith(field: string, value: string): DataSharePredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 
@@ -285,6 +307,8 @@ glob(field: string, value: string): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-glob(field: string, value: string): DataSharePredicates--><!--Device-DataSharePredicates-glob(field: string, value: string): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -300,7 +324,7 @@ glob(field: string, value: string): DataSharePredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 
@@ -324,6 +348,8 @@ greaterThan(field: string, value: ValueType): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-greaterThan(field: string, value: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-greaterThan(field: string, value: ValueType): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -333,13 +359,13 @@ greaterThan(field: string, value: ValueType): DataSharePredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键值型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 指示要与谓词匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 
@@ -363,6 +389,8 @@ greaterThanOrEqualTo(field: string, value: ValueType): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-greaterThanOrEqualTo(field: string, value: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-greaterThanOrEqualTo(field: string, value: ValueType): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -372,13 +400,13 @@ greaterThanOrEqualTo(field: string, value: ValueType): DataSharePredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，此次调用接口配置的谓词匹配结果非预期或抛出异常。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 指示要与谓词匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 
@@ -402,6 +430,8 @@ groupBy(fields: Array<string>): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-groupBy(fields: Array<string>): DataSharePredicates--><!--Device-DataSharePredicates-groupBy(fields: Array<string>): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -410,13 +440,13 @@ groupBy(fields: Array<string>): DataSharePredicates
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fields | Array&lt;string&gt; | 是 | 指定分组依赖的列名。 |
+| fields | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 指定分组依赖的列名。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 
@@ -440,6 +470,8 @@ inKeys(keys: Array<string>): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-inKeys(keys: Array<string>): DataSharePredicates--><!--Device-DataSharePredicates-inKeys(keys: Array<string>): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -448,13 +480,13 @@ inKeys(keys: Array<string>): DataSharePredicates
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | 是 | 指定范围的键数组。 |
+| keys | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 指定范围的键数组。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 
@@ -478,6 +510,8 @@ indexedBy(field: string): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-indexedBy(field: string): DataSharePredicates--><!--Device-DataSharePredicates-indexedBy(field: string): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -492,7 +526,7 @@ indexedBy(field: string): DataSharePredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 
@@ -516,6 +550,8 @@ isNotNull(field: string): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-isNotNull(field: string): DataSharePredicates--><!--Device-DataSharePredicates-isNotNull(field: string): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -530,7 +566,7 @@ isNotNull(field: string): DataSharePredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 
@@ -554,6 +590,8 @@ isNull(field: string): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-isNull(field: string): DataSharePredicates--><!--Device-DataSharePredicates-isNull(field: string): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -568,7 +606,7 @@ isNull(field: string): DataSharePredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object created. |
 
 **示例：**
 
@@ -592,6 +630,8 @@ lessThan(field: string, value: ValueType): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-lessThan(field: string, value: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-lessThan(field: string, value: ValueType): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -601,13 +641,13 @@ lessThan(field: string, value: ValueType): DataSharePredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名。当field为null或undefined时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键值型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 指示要与谓词匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 
@@ -631,6 +671,8 @@ lessThanOrEqualTo(field: string, value: ValueType): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-lessThanOrEqualTo(field: string, value: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-lessThanOrEqualTo(field: string, value: ValueType): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -640,13 +682,13 @@ lessThanOrEqualTo(field: string, value: ValueType): DataSharePredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键值型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 指示要与谓词匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 
@@ -670,6 +712,8 @@ like(field: string, value: string): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-like(field: string, value: string): DataSharePredicates--><!--Device-DataSharePredicates-like(field: string, value: string): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -685,7 +729,7 @@ like(field: string, value: string): DataSharePredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 
@@ -709,6 +753,8 @@ notBetween(field: string, low: ValueType, high: ValueType): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-notBetween(field: string, low: ValueType, high: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-notBetween(field: string, low: ValueType, high: ValueType): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -718,14 +764,14 @@ notBetween(field: string, low: ValueType, high: ValueType): DataSharePredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键值型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
-| low | ValueType | 是 | 指示与谓词匹配的最小值。low为number时，按数值排序指定匹配范围。low为string时，按字典序排序指定匹配范围。low为boolean时，按数值排序指定匹配范围。 |
-| high | ValueType | 是 | 指示与谓词匹配的最大值。high为number时，按数值排序指定匹配范围。high为string时，按字典序排序指定匹配范围。high为boolean时，按数值排序指定匹配范围。 |
+| low | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 指示与谓词匹配的最小值。low为number时，按数值排序指定匹配范围。low为string时，按字典序排序指定匹配范围。low为boolean时，按数值排序指定匹配范围。 |
+| high | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 指示与谓词匹配的最大值。high为number时，按数值排序指定匹配范围。high为string时，按字典序排序指定匹配范围。high为boolean时，按数值排序指定匹配范围。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 
@@ -749,6 +795,8 @@ notEqualTo(field: string, value: ValueType): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-notEqualTo(field: string, value: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-notEqualTo(field: string, value: ValueType): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -758,13 +806,13 @@ notEqualTo(field: string, value: ValueType): DataSharePredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名。当field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键值型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 指示要与谓词匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 
@@ -788,6 +836,8 @@ notIn(field: string, value: Array<ValueType>): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-notIn(field: string, value: Array<ValueType>): DataSharePredicates--><!--Device-DataSharePredicates-notIn(field: string, value: Array<ValueType>): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -797,13 +847,13 @@ notIn(field: string, value: Array<ValueType>): DataSharePredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键值型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
-| value | Array&lt;ValueType&gt; | 是 | 以ValueType型数组形式指定的要匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
+| value | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<ValueType> | 是 | 以ValueType型数组形式指定的要匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 
@@ -827,6 +877,8 @@ or(): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-or(): DataSharePredicates--><!--Device-DataSharePredicates-or(): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -835,7 +887,7 @@ or(): DataSharePredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回带有或条件的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | 返回带有或条件的谓词。 |
 
 **示例：**
 
@@ -861,6 +913,8 @@ prefixKey(prefix: string): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-prefixKey(prefix: string): DataSharePredicates--><!--Device-DataSharePredicates-prefixKey(prefix: string): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -875,7 +929,7 @@ prefixKey(prefix: string): DataSharePredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 
@@ -899,6 +953,8 @@ unlike(field: string, value: string): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataSharePredicates-unlike(field: string, value: string): DataSharePredicates--><!--Device-DataSharePredicates-unlike(field: string, value: string): DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -914,7 +970,7 @@ unlike(field: string, value: string): DataSharePredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 

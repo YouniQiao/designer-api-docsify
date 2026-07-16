@@ -4,6 +4,8 @@ Describes the information about the soft keyboard window.
 
 **Since:** 18
 
+<!--Device-window-interface KeyboardInfo--><!--Device-window-interface KeyboardInfo-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Whether there is a show/hide animation. **true** if there is a show/hide animati
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-KeyboardInfo-animated?: boolean--><!--Device-KeyboardInfo-animated?: boolean-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## beginRect
@@ -41,6 +45,8 @@ Position and size of the soft keyboard before the animation starts.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-KeyboardInfo-beginRect: Rect--><!--Device-KeyboardInfo-beginRect: Rect-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -58,6 +64,8 @@ Animation configuration.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-KeyboardInfo-config?: WindowAnimationConfig--><!--Device-KeyboardInfo-config?: WindowAnimationConfig-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## endRect
@@ -73,6 +81,8 @@ Position and size of the soft keyboard after the animation ends.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-KeyboardInfo-endRect: Rect--><!--Device-KeyboardInfo-endRect: Rect-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

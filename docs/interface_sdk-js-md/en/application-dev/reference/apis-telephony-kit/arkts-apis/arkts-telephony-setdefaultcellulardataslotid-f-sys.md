@@ -18,6 +18,8 @@ Switch cellular data services to another card, without changing the default sett
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-data-function setDefaultCellularDataSlotId(slotId: int, callback: AsyncCallback<void>): void--><!--Device-data-function setDefaultCellularDataSlotId(slotId: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CellularData
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Switch cellular data services to another card, without changing the default sett
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the ID of the target card slot.The value {@code 0} indicates card 1, and the value {@code 1} indicates card 2. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of setDefaultCellularDataSlotId. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of setDefaultCellularDataSlotId. |
 
 **Error codes:**
 
@@ -72,6 +74,8 @@ Switch cellular data services to another card, without changing the default sett
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-data-function setDefaultCellularDataSlotId(slotId: int): Promise<void>--><!--Device-data-function setDefaultCellularDataSlotId(slotId: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CellularData
 
 **System API:** This is a system API.
@@ -86,7 +90,7 @@ Switch cellular data services to another card, without changing the default sett
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setDefaultCellularDataSlotId. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the setDefaultCellularDataSlotId. |
 
 **Error codes:**
 

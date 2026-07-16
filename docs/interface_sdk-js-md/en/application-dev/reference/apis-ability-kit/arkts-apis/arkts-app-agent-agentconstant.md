@@ -4,6 +4,8 @@ This module provides constants for agent.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare namespace agentConstant--><!--Device-unnamed-declare namespace agentConstant-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## Modules to Import

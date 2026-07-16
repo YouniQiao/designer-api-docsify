@@ -1,5 +1,11 @@
 # createX509CertChain
 
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
+
 ## createX509CertChain
 
 ```TypeScript
@@ -10,7 +16,9 @@ function createX509CertChain(inStream: EncodingBlob): Promise<X509CertChain>
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cert-function createX509CertChain(inStream: EncodingBlob): Promise<X509CertChain>--><!--Device-cert-function createX509CertChain(inStream: EncodingBlob): Promise<X509CertChain>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -18,13 +26,13 @@ function createX509CertChain(inStream: EncodingBlob): Promise<X509CertChain>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inStream | EncodingBlob | 是 | X509证书序列化数据。 |
+| inStream | [EncodingBlob](arkts-devicecertificate-encodingblob-i.md) | 是 | X509证书序列化数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;X509CertChain&gt; | Promise对象，返回创建的X509CertChain实例。 |
+| Promise<X509CertChain> | Promise对象，返回创建的X509CertChain实例。 |
 
 **错误码：**
 
@@ -136,7 +144,9 @@ function createX509CertChain(inStream: EncodingBlob, callback: AsyncCallback<X50
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cert-function createX509CertChain(inStream: EncodingBlob, callback: AsyncCallback<X509CertChain>): void--><!--Device-cert-function createX509CertChain(inStream: EncodingBlob, callback: AsyncCallback<X509CertChain>): void-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -144,8 +154,8 @@ function createX509CertChain(inStream: EncodingBlob, callback: AsyncCallback<X50
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inStream | EncodingBlob | 是 | X509证书序列化数据。 |
-| callback | AsyncCallback&lt;X509CertChain&gt; | 是 | 回调函数。当创建X509证书链对象成功时，err为undefined，data为获取到的X509CertChain实例；否则为错误对象。 |
+| inStream | [EncodingBlob](arkts-devicecertificate-encodingblob-i.md) | 是 | X509证书序列化数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<X509CertChain> | 是 | 回调函数。当创建X509证书链对象成功时，err为undefined，data为获取到的X509CertChain实例；否则为错误对象。 |
 
 **错误码：**
 
@@ -252,7 +262,9 @@ function createX509CertChain(certs: Array<X509Cert>): X509CertChain
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cert-function createX509CertChain(certs: Array<X509Cert>): X509CertChain--><!--Device-cert-function createX509CertChain(certs: Array<X509Cert>): X509CertChain-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -260,13 +272,13 @@ function createX509CertChain(certs: Array<X509Cert>): X509CertChain
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| certs | Array&lt;X509Cert&gt; | 是 | X509证书对象数组。 |
+| certs | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<X509Cert> | 是 | X509证书对象数组。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| X509CertChain | 表示X509证书链对象。 |
+| [X509CertChain](arkts-devicecertificate-x509certchain-i.md) | 表示X509证书链对象。 |
 
 **错误码：**
 

@@ -16,6 +16,8 @@ Obtains the ISO country code of the SIM card in a specified slot.
 
 **Since:** 6
 
+<!--Device-sim-function getISOCountryCodeForSim(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getISOCountryCodeForSim(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -23,7 +25,7 @@ Obtains the ISO country code of the SIM card in a specified slot.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Indicates the callback for getting the country code definedin ISO 3166-2; returns an empty string if no SIM card is inserted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Indicates the callback for getting the country code defined in ISO 3166-2; returns an empty string if no SIM card is inserted. |
 
 **Error codes:**
 
@@ -59,6 +61,8 @@ Obtains the ISO country code of the SIM card in a specified slot.
 
 **Since:** 6
 
+<!--Device-sim-function getISOCountryCodeForSim(slotId: int): Promise<string>--><!--Device-sim-function getISOCountryCodeForSim(slotId: int): Promise<string>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -71,7 +75,7 @@ Obtains the ISO country code of the SIM card in a specified slot.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the country code defined in ISO 3166-2;returns an empty string if no SIM card is inserted. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the country code defined in ISO 3166-2;returns an empty string if no SIM card is inserted. |
 
 **Error codes:**
 

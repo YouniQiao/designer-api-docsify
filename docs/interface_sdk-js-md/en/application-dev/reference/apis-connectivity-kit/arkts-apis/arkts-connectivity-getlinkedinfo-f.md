@@ -20,13 +20,15 @@ Obtain connection information about the Wi-Fi connection. If does't have the per
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-wifiManager-function getLinkedInfo(): Promise<WifiLinkedInfo>--><!--Device-wifiManager-function getLinkedInfo(): Promise<WifiLinkedInfo>-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WifiLinkedInfo&gt; | Returns Wi-Fi linked information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<WifiLinkedInfo> | Returns Wi-Fi linked information. |
 
 **Error codes:**
 
@@ -50,13 +52,15 @@ Obtain connection information about the Wi-Fi connection.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void--><!--Device-wifiManager-function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;WifiLinkedInfo&gt; | Yes | Indicates callback of function. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<WifiLinkedInfo> | Yes | Indicates callback of function. |
 
 **Error codes:**
 

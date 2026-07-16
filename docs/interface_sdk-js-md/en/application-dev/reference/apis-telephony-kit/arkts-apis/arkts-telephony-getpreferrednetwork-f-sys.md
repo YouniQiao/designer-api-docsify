@@ -18,6 +18,8 @@ Get the preferred network for the specified SIM card slot.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-radio-function getPreferredNetwork(slotId: int, callback: AsyncCallback<PreferredNetworkMode>): void--><!--Device-radio-function getPreferredNetwork(slotId: int, callback: AsyncCallback<PreferredNetworkMode>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Get the preferred network for the specified SIM card slot.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;PreferredNetworkMode&gt; | Yes | Indicates the callback for gettingthe preferred network mode to obtain. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<PreferredNetworkMode> | Yes | Indicates the callback for getting the preferred network mode to obtain. |
 
 **Error codes:**
 
@@ -70,6 +72,8 @@ Get the preferred network for the specified SIM card slot.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-radio-function getPreferredNetwork(slotId: int): Promise<PreferredNetworkMode>--><!--Device-radio-function getPreferredNetwork(slotId: int): Promise<PreferredNetworkMode>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -84,7 +88,7 @@ Get the preferred network for the specified SIM card slot.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PreferredNetworkMode&gt; | Returns the callback for getting the preferred network mode to obtain. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PreferredNetworkMode> | Returns the callback for getting the preferred network mode to obtain. |
 
 **Error codes:**
 

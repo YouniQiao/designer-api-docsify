@@ -6,6 +6,8 @@ Defines the mouse event.
 
 **Since:** 9
 
+<!--Device-unnamed-export declare interface MouseEvent extends InputEvent--><!--Device-unnamed-export declare interface MouseEvent extends InputEvent-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Enumerates mouse event types.
 
 **Since:** 9
 
+<!--Device-MouseEvent-action: Action--><!--Device-MouseEvent-action: Action-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## altKey
@@ -42,6 +46,8 @@ The value **true** indicates that the key is pressed, and the value **false** in
 
 **Since:** 9
 
+<!--Device-MouseEvent-altKey: boolean--><!--Device-MouseEvent-altKey: boolean-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## axes
@@ -56,6 +62,8 @@ Defines the mouse axis type and axis value.
 
 **Since:** 9
 
+<!--Device-MouseEvent-axes: AxisValue[]--><!--Device-MouseEvent-axes: AxisValue[]-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## button
@@ -69,6 +77,8 @@ Enumerates mouse buttons.
 **Type:** Button
 
 **Since:** 9
+
+<!--Device-MouseEvent-button: Button--><!--Device-MouseEvent-button: Button-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -86,6 +96,8 @@ The value **true** indicates that capsLock is enabled, and the value **false** i
 
 **Since:** 9
 
+<!--Device-MouseEvent-capsLock: boolean--><!--Device-MouseEvent-capsLock: boolean-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## ctrlKey
@@ -101,6 +113,8 @@ The value **true** indicates that the key is pressed, and the value **false** in
 **Type:** boolean
 
 **Since:** 9
+
+<!--Device-MouseEvent-ctrlKey: boolean--><!--Device-MouseEvent-ctrlKey: boolean-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -118,6 +132,8 @@ The value **true** indicates that the key is pressed, and the value **false** in
 
 **Since:** 9
 
+<!--Device-MouseEvent-fnKey: boolean--><!--Device-MouseEvent-fnKey: boolean-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## globalX
@@ -126,17 +142,13 @@ The value **true** indicates that the key is pressed, and the value **false** in
 globalX?: number
 ```
 
-X coordinate of the mouse event in the global coordinate system with the upper left corner of the primary screen as
-the origin, in px. When this parameter is used as an input parameter, it is mandatory and supports only integers if
-[MouseEventData.useGlobalCoordinate](arkts-input-mouseeventdata-i-sys.md)
-is set to **true**. If **MouseEventData.useGlobalCoordinate** is set to **false**, this parameter is optional, and
-the X coordinate in the relative coordinate system with the upper left corner of the specified screen as the origin
-is used to calculate the injected event. When this parameter is used as an output parameter, it is reported by the
-system.
+X coordinate of the mouse event in the global coordinate system with the upper left corner of the primary screen as the origin, in px. When this parameter is used as an input parameter, it is mandatory and supports only integers if [MouseEventData.useGlobalCoordinate](arkts-input-mouseeventdata-i-sys.md)is set to **true**. If **MouseEventData.useGlobalCoordinate** is set to **false**, this parameter is optional, and the X coordinate in the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. When this parameter is used as an output parameter, it is reported by the system.
 
 **Type:** number
 
 **Since:** 20
+
+<!--Device-MouseEvent-globalX?: int--><!--Device-MouseEvent-globalX?: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -146,17 +158,13 @@ system.
 globalY?: number
 ```
 
-Y coordinate of the mouse event in the global coordinate system with the upper left corner of the primary screen as
-the origin, in px. When this parameter is used as an input parameter, it is mandatory and supports only integers if
-[MouseEventData.useGlobalCoordinate](arkts-input-mouseeventdata-i-sys.md)
-is set to **true**. If **MouseEventData.useGlobalCoordinate** is set to **false**, this parameter is optional, and
-the Y coordinate in the relative coordinate system with the upper left corner of the specified screen as the origin
-is used to calculate the injected event. When this parameter is used as an output parameter, it is reported by the
-system.
+Y coordinate of the mouse event in the global coordinate system with the upper left corner of the primary screen as the origin, in px. When this parameter is used as an input parameter, it is mandatory and supports only integers if [MouseEventData.useGlobalCoordinate](arkts-input-mouseeventdata-i-sys.md)is set to **true**. If **MouseEventData.useGlobalCoordinate** is set to **false**, this parameter is optional, and the Y coordinate in the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. When this parameter is used as an output parameter, it is reported by the system.
 
 **Type:** number
 
 **Since:** 20
+
+<!--Device-MouseEvent-globalY?: int--><!--Device-MouseEvent-globalY?: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -174,6 +182,8 @@ The value **true** indicates that the key is pressed, and the value **false** in
 
 **Since:** 9
 
+<!--Device-MouseEvent-logoKey: boolean--><!--Device-MouseEvent-logoKey: boolean-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## numLock
@@ -190,6 +200,8 @@ The value **true** indicates that numLock is enabled, and the value **false** in
 
 **Since:** 9
 
+<!--Device-MouseEvent-numLock: boolean--><!--Device-MouseEvent-numLock: boolean-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## pressedButtons
@@ -203,6 +215,8 @@ Button being pressed.
 **Type:** Button[]
 
 **Since:** 9
+
+<!--Device-MouseEvent-pressedButtons: Button[]--><!--Device-MouseEvent-pressedButtons: Button[]-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -218,6 +232,8 @@ List of pressed keys.
 
 **Since:** 9
 
+<!--Device-MouseEvent-pressedKeys: KeyCode[]--><!--Device-MouseEvent-pressedKeys: KeyCode[]-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## rawDeltaX
@@ -226,12 +242,13 @@ List of pressed keys.
 rawDeltaX: number
 ```
 
-X coordinate offset of the current mouse event relative to the previous event, in px. Currently, the value can only
-be an integer.
+X coordinate offset of the current mouse event relative to the previous event, in px. Currently, the value can only be an integer.
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-MouseEvent-rawDeltaX: int--><!--Device-MouseEvent-rawDeltaX: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -241,12 +258,13 @@ be an integer.
 rawDeltaY: number
 ```
 
-Y coordinate offset of the current mouse event relative to the previous event, in px. Currently, the value can only
-be an integer.
+Y coordinate offset of the current mouse event relative to the previous event, in px. Currently, the value can only be an integer.
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-MouseEvent-rawDeltaY: int--><!--Device-MouseEvent-rawDeltaY: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -256,12 +274,13 @@ be an integer.
 screenX: number
 ```
 
-X coordinate of the mouse event in the relative coordinate system with the upper left corner of the specified
-screen as the origin, in px. Currently, the value can only be an integer.
+X coordinate of the mouse event in the relative coordinate system with the upper left corner of the specified screen as the origin, in px. Currently, the value can only be an integer.
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-MouseEvent-screenX: int--><!--Device-MouseEvent-screenX: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -271,12 +290,13 @@ screen as the origin, in px. Currently, the value can only be an integer.
 screenY: number
 ```
 
-Y coordinate of the mouse event in the relative coordinate system with the upper left corner of the specified
-screen as the origin, in px. Currently, the value can only be an integer.
+Y coordinate of the mouse event in the relative coordinate system with the upper left corner of the specified screen as the origin, in px. Currently, the value can only be an integer.
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-MouseEvent-screenY: int--><!--Device-MouseEvent-screenY: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -294,6 +314,8 @@ The value **true** indicates that scrollLock is enabled, and the value **false**
 
 **Since:** 9
 
+<!--Device-MouseEvent-scrollLock: boolean--><!--Device-MouseEvent-scrollLock: boolean-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## shiftKey
@@ -310,6 +332,8 @@ The value **true** indicates that the key is pressed, and the value **false** in
 
 **Since:** 9
 
+<!--Device-MouseEvent-shiftKey: boolean--><!--Device-MouseEvent-shiftKey: boolean-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## toolType
@@ -324,6 +348,8 @@ Tool type.
 
 **Since:** 11
 
+<!--Device-MouseEvent-toolType: ToolType--><!--Device-MouseEvent-toolType: ToolType-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## windowX
@@ -332,12 +358,13 @@ Tool type.
 windowX: number
 ```
 
-X coordinate in the relative coordinate system with the upper left corner of the window where the mouse is located
-as the origin, in px. Currently, the value can only be an integer.
+X coordinate in the relative coordinate system with the upper left corner of the window where the mouse is located as the origin, in px. Currently, the value can only be an integer.
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-MouseEvent-windowX: int--><!--Device-MouseEvent-windowX: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -347,12 +374,13 @@ as the origin, in px. Currently, the value can only be an integer.
 windowY: number
 ```
 
-Y coordinate in the relative coordinate system with the upper left corner of the window where the mouse is located
-as the origin, in px. Currently, the value can only be an integer.
+Y coordinate in the relative coordinate system with the upper left corner of the window where the mouse is located as the origin, in px. Currently, the value can only be an integer.
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-MouseEvent-windowY: int--><!--Device-MouseEvent-windowY: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 

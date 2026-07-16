@@ -1,11 +1,10 @@
 # AbilityInfo
 
-The module provides information about an ability. Unless otherwise specified, the information is obtained through
-[bundle.getAbilityInfo](arkts-ability-getabilityinfo-f.md#getabilityinfo-2).
+The module provides information about an ability. Unless otherwise specified, the information is obtained through [bundle.getAbilityInfo](arkts-ability-getabilityinfo-f.md#getabilityinfo-2).
 
-> **NOTE**
->
-> The APIs of this module have been deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> The APIs of this module have been deprecated since API version 9. You are advised to use  
 > [bundleManager-AbilityInfo](arkts-ability-abilityinfo-depr-i.md) instead.
 
 **Since:** 7
@@ -13,6 +12,8 @@ The module provides information about an ability. Unless otherwise specified, th
 **Deprecated since:** 9
 
 **Substitutes:** [abilityInfo:AbilityInfo](arkts-ability-abilityinfo-depr-i.md)
+
+<!--Device-unnamed-export interface AbilityInfo--><!--Device-unnamed-export interface AbilityInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -24,8 +25,7 @@ readonly applicationInfo: ApplicationInfo
 
 Application configuration information.
 
-The value is obtained by passing in GET_ABILITY_INFO_WITH_APPLICATION to
-[bundle.getAbilityInfo](arkts-ability-getabilityinfo-f.md#getabilityinfo-2).
+The value is obtained by passing in GET_ABILITY_INFO_WITH_APPLICATION to [bundle.getAbilityInfo](arkts-ability-getabilityinfo-f.md#getabilityinfo-2).
 
 **Type:** ApplicationInfo
 
@@ -36,6 +36,8 @@ The value is obtained by passing in GET_ABILITY_INFO_WITH_APPLICATION to
 **Deprecated since:** 9
 
 **Substitutes:** applicationInfo
+
+<!--Device-AbilityInfo-readonly applicationInfo: ApplicationInfo--><!--Device-AbilityInfo-readonly applicationInfo: ApplicationInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -59,6 +61,8 @@ Background service mode of the ability.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-AbilityInfo-readonly backgroundModes: number--><!--Device-AbilityInfo-readonly backgroundModes: number-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## bundleName
@@ -78,6 +82,8 @@ Bundle name.
 **Deprecated since:** 9
 
 **Substitutes:** bundleName
+
+<!--Device-AbilityInfo-readonly bundleName: string--><!--Device-AbilityInfo-readonly bundleName: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -99,6 +105,8 @@ Ability description.
 
 **Substitutes:** description
 
+<!--Device-AbilityInfo-readonly description: string--><!--Device-AbilityInfo-readonly description: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## descriptionId
@@ -119,6 +127,8 @@ ID of the ability description.
 
 **Substitutes:** descriptionId
 
+<!--Device-AbilityInfo-readonly descriptionId: number--><!--Device-AbilityInfo-readonly descriptionId: number-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## deviceCapabilities
@@ -136,6 +146,8 @@ Device capabilities required for the ability.
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-AbilityInfo-readonly deviceCapabilities: Array<string>--><!--Device-AbilityInfo-readonly deviceCapabilities: Array<string>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -157,6 +169,8 @@ Device types supported by the ability.
 
 **Substitutes:** deviceTypes
 
+<!--Device-AbilityInfo-readonly deviceTypes: Array<string>--><!--Device-AbilityInfo-readonly deviceTypes: Array<string>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## enabled
@@ -177,6 +191,8 @@ Whether the ability is enabled. **true** if enabled, **false** otherwise.
 
 **Substitutes:** enabled
 
+<!--Device-AbilityInfo-readonly enabled: boolean--><!--Device-AbilityInfo-readonly enabled: boolean-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## formEnabled
@@ -185,8 +201,7 @@ Whether the ability is enabled. **true** if enabled, **false** otherwise.
 readonly formEnabled: boolean
 ```
 
-Whether the ability provides the service widget capability. **true** if the ability provides the service widget
-capability, **false** otherwise.
+Whether the ability provides the service widget capability. **true** if the ability provides the service widget capability, **false** otherwise.
 
 **Model restriction**: This API can be used only in the FA model.
 
@@ -199,6 +214,8 @@ capability, **false** otherwise.
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-AbilityInfo-readonly formEnabled: boolean--><!--Device-AbilityInfo-readonly formEnabled: boolean-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -220,6 +237,8 @@ Index of the ability icon resource file.
 
 **Substitutes:** icon
 
+<!--Device-AbilityInfo-readonly icon: string--><!--Device-AbilityInfo-readonly icon: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## iconId
@@ -240,6 +259,8 @@ ID of the ability icon.
 
 **Substitutes:** iconId
 
+<!--Device-AbilityInfo-readonly iconId: number--><!--Device-AbilityInfo-readonly iconId: number-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## isVisible
@@ -248,8 +269,7 @@ ID of the ability icon.
 readonly isVisible: boolean
 ```
 
-Whether the ability can be called by other applications. **true** if the ability can be called by other
-applications, **false** otherwise.
+Whether the ability can be called by other applications. **true** if the ability can be called by other applications, **false** otherwise.
 
 **Type:** boolean
 
@@ -260,6 +280,8 @@ applications, **false** otherwise.
 **Deprecated since:** 9
 
 **Substitutes:** exported
+
+<!--Device-AbilityInfo-readonly isVisible: boolean--><!--Device-AbilityInfo-readonly isVisible: boolean-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -281,6 +303,8 @@ Ability name visible to users.
 
 **Substitutes:** label
 
+<!--Device-AbilityInfo-readonly label: string--><!--Device-AbilityInfo-readonly label: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## labelId
@@ -300,6 +324,8 @@ ID of the ability label.
 **Deprecated since:** 9
 
 **Substitutes:** labelId
+
+<!--Device-AbilityInfo-readonly labelId: number--><!--Device-AbilityInfo-readonly labelId: number-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -321,6 +347,8 @@ Ability launch mode.
 
 **Substitutes:** launchType
 
+<!--Device-AbilityInfo-readonly launchMode: bundle.LaunchMode--><!--Device-AbilityInfo-readonly launchMode: bundle.LaunchMode-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## metaData
@@ -331,8 +359,7 @@ readonly metaData: Array<CustomizeData>
 
 Metadata of the ability.
 
-The value is obtained by passing in GET_ABILITY_INFO_WITH_METADATA to
-[bundle.getAbilityInfo](arkts-ability-getabilityinfo-f.md#getabilityinfo-2).
+The value is obtained by passing in GET_ABILITY_INFO_WITH_METADATA to [bundle.getAbilityInfo](arkts-ability-getabilityinfo-f.md#getabilityinfo-2).
 
 **Type:** Array<CustomizeData>
 
@@ -343,6 +370,8 @@ The value is obtained by passing in GET_ABILITY_INFO_WITH_METADATA to
 **Deprecated since:** 9
 
 **Substitutes:** metadata
+
+<!--Device-AbilityInfo-readonly metaData: Array<CustomizeData>--><!--Device-AbilityInfo-readonly metaData: Array<CustomizeData>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -364,6 +393,8 @@ Name of the HAP file to which the ability belongs.
 
 **Substitutes:** moduleName
 
+<!--Device-AbilityInfo-readonly moduleName: string--><!--Device-AbilityInfo-readonly moduleName: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## name
@@ -383,6 +414,8 @@ Ability name.
 **Deprecated since:** 9
 
 **Substitutes:** name
+
+<!--Device-AbilityInfo-readonly name: string--><!--Device-AbilityInfo-readonly name: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -404,6 +437,8 @@ Ability display orientation.
 
 **Substitutes:** orientation
 
+<!--Device-AbilityInfo-readonly orientation: bundle.DisplayOrientation--><!--Device-AbilityInfo-readonly orientation: bundle.DisplayOrientation-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## permissions
@@ -414,8 +449,7 @@ readonly permissions: Array<string>
 
 Permissions required for other applications to call the ability.
 
-The value is obtained by passing in GET_ABILITY_INFO_WITH_PERMISSION to
-[bundle.getAbilityInfo](arkts-ability-getabilityinfo-f.md#getabilityinfo-2).
+The value is obtained by passing in GET_ABILITY_INFO_WITH_PERMISSION to [bundle.getAbilityInfo](arkts-ability-getabilityinfo-f.md#getabilityinfo-2).
 
 **Type:** Array<string>
 
@@ -426,6 +460,8 @@ The value is obtained by passing in GET_ABILITY_INFO_WITH_PERMISSION to
 **Deprecated since:** 9
 
 **Substitutes:** permissions
+
+<!--Device-AbilityInfo-readonly permissions: Array<string>--><!--Device-AbilityInfo-readonly permissions: Array<string>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -446,6 +482,8 @@ Process name of the ability.
 **Deprecated since:** 9
 
 **Substitutes:** process
+
+<!--Device-AbilityInfo-readonly process: string--><!--Device-AbilityInfo-readonly process: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -469,6 +507,8 @@ Permission required for reading the ability data.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-AbilityInfo-readonly readPermission: string--><!--Device-AbilityInfo-readonly readPermission: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## subType
@@ -490,6 +530,8 @@ Subtype of the template that can be used by the ability.
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-AbilityInfo-readonly subType: bundle.AbilitySubType--><!--Device-AbilityInfo-readonly subType: bundle.AbilitySubType-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -513,6 +555,8 @@ Target ability that the ability alias points to.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-AbilityInfo-readonly targetAbility: string--><!--Device-AbilityInfo-readonly targetAbility: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## type
@@ -534,6 +578,8 @@ Ability type.
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-AbilityInfo-readonly type: bundle.AbilityType--><!--Device-AbilityInfo-readonly type: bundle.AbilityType-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -557,6 +603,8 @@ URI of the ability.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-AbilityInfo-readonly uri: string--><!--Device-AbilityInfo-readonly uri: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## writePermission
@@ -578,6 +626,8 @@ Permission required for writing data to the ability.
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-AbilityInfo-readonly writePermission: string--><!--Device-AbilityInfo-readonly writePermission: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 

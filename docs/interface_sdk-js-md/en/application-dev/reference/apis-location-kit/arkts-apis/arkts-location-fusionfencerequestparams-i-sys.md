@@ -4,6 +4,8 @@ Indicates fusion fence request params.
 
 **Since:** 26.0.0
 
+<!--Device-geoLocationManager-export interface FusionFenceRequestParams--><!--Device-geoLocationManager-export interface FusionFenceRequestParams-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Indicates CELL fence array.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FusionFenceRequestParams-cellFences?: Array<CellFence>--><!--Device-FusionFenceRequestParams-cellFences?: Array<CellFence>-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **System API:** This is a system API.
@@ -45,6 +49,8 @@ Indicates expiration of the circular fence.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FusionFenceRequestParams-expirationMs: double--><!--Device-FusionFenceRequestParams-expirationMs: double-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -64,6 +70,8 @@ Indicates the callback for reporting the fence transition status.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FusionFenceRequestParams-fenceTransitionCallback: Callback<FusionFenceTransition>--><!--Device-FusionFenceRequestParams-fenceTransitionCallback: Callback<FusionFenceTransition>-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **System API:** This is a system API.
@@ -74,16 +82,15 @@ Indicates the callback for reporting the fence transition status.
 fenceType: number
 ```
 
-Indicates fusion fence type.
-This field is in bitmap format. Multiple types of fences can be transferred.
-The definition of each bit is as follows: [FusionFenceType](arkts-location-fusionfencetype-e-sys.md).
-The value range is all integers.
+Indicates fusion fence type.This field is in bitmap format. Multiple types of fences can be transferred.The definition of each bit is as follows: [FusionFenceType](arkts-location-fusionfencetype-e-sys.md).The value range is all integers.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FusionFenceRequestParams-fenceType: int--><!--Device-FusionFenceRequestParams-fenceType: int-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -103,6 +110,8 @@ Indicates GNSS fence array.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FusionFenceRequestParams-gnssFences?: Array<GnssFence>--><!--Device-FusionFenceRequestParams-gnssFences?: Array<GnssFence>-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **System API:** This is a system API.
@@ -113,15 +122,15 @@ Indicates GNSS fence array.
 identifier: string
 ```
 
-Identifier of the fusion fence.
-The string format should be a valid unique identifier (e.g., GUID or specific
-alphanumeric pattern).
+Identifier of the fusion fence.The string format should be a valid unique identifier (e.g., GUID or specific alphanumeric pattern).
 
 **Type:** string
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FusionFenceRequestParams-identifier: string--><!--Device-FusionFenceRequestParams-identifier: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -133,16 +142,15 @@ alphanumeric pattern).
 loiterTimeMs: number
 ```
 
-Indicates time for which a device is dwelling in the geofence, in milliseconds.
-If the device dwelling time reaches the value specified by this parameter,
-a GEOFENCE_TRANSITION_EVENT_DWELL event is reported.
-The value range is all integers.
+Indicates time for which a device is dwelling in the geofence, in milliseconds.If the device dwelling time reaches the value specified by this parameter,a GEOFENCE_TRANSITION_EVENT_DWELL event is reported.The value range is all integers.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FusionFenceRequestParams-loiterTimeMs: int--><!--Device-FusionFenceRequestParams-loiterTimeMs: int-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -154,16 +162,15 @@ The value range is all integers.
 monitorTransitionEvents: number
 ```
 
-Indicates geofence transition status monitored.
-This field is in bitmap format.
-The definition of each bit is as follows {@link geoLocationManager.GeofenceTransitionEvent}.
-The value range is all integers.
+Indicates geofence transition status monitored.This field is in bitmap format.The definition of each bit is as follows {@link geoLocationManager.GeofenceTransitionEvent}.The value range is all integers.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FusionFenceRequestParams-monitorTransitionEvents: int--><!--Device-FusionFenceRequestParams-monitorTransitionEvents: int-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -183,6 +190,8 @@ Indicates the location of POI.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FusionFenceRequestParams-poiLocation: Point--><!--Device-FusionFenceRequestParams-poiLocation: Point-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **System API:** This is a system API.
@@ -200,6 +209,8 @@ Indicates the type of POI.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FusionFenceRequestParams-poiType?: string--><!--Device-FusionFenceRequestParams-poiType?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -219,6 +230,8 @@ Indicates fusion fence scene.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FusionFenceRequestParams-scene: FusionFenceScene--><!--Device-FusionFenceRequestParams-scene: FusionFenceScene-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **System API:** This is a system API.
@@ -236,6 +249,8 @@ Indicates Wi-Fi fence array.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FusionFenceRequestParams-wifiFences?: Array<WifiFence>--><!--Device-FusionFenceRequestParams-wifiFences?: Array<WifiFence>-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 

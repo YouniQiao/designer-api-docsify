@@ -1,14 +1,18 @@
 # setDefaultFreezeObserver
 
+## 导入模块
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+```
+
 ## setDefaultFreezeObserver
 
 ```TypeScript
 function setDefaultFreezeObserver(defaultObserver?: FreezeObserver) : FreezeObserver
 ```
 
-设置默认冻屏观测器。此函数将在通过errorManager.on注册的回调函数执行后立即执行。
-可用于替代errorManager.on实现链式调用。
-如果为某个模块设置空观测器，将导致调用链中断。
+设置默认冻屏观测器。此函数将在通过errorManager.on注册的回调函数执行后立即执行。可用于替代errorManager.on实现链式调用。如果为某个模块设置空观测器，将导致调用链中断。
 
 此API必须在主线程中调用。
 
@@ -16,7 +20,9 @@ function setDefaultFreezeObserver(defaultObserver?: FreezeObserver) : FreezeObse
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-errorManager-function setDefaultFreezeObserver(defaultObserver?: FreezeObserver) : FreezeObserver--><!--Device-errorManager-function setDefaultFreezeObserver(defaultObserver?: FreezeObserver) : FreezeObserver-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -24,13 +30,13 @@ function setDefaultFreezeObserver(defaultObserver?: FreezeObserver) : FreezeObse
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| defaultObserver | FreezeObserver | 否 | 默认冻屏观测器。 |
+| defaultObserver | [FreezeObserver](arkts-ability-freezeobserver-t.md) | 否 | 默认冻屏观测器。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| FreezeObserver | - 返回原来的默认冻屏观测器。 |
+| [FreezeObserver](arkts-ability-freezeobserver-t.md) | - 返回原来的默认冻屏观测器。 |
 
 **错误码：**
 

@@ -1,5 +1,11 @@
 # moveDirSync
 
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+```
+
 ## moveDirSync
 
 ```TypeScript
@@ -8,11 +14,13 @@ declare function moveDirSync(src: string, dest: string, mode?: number): void
 
 以同步方法移动源目录至目标路径下。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 该接口不支持在分布式文件路径下操作。
 
 **起始版本：** 10
+
+<!--Device-unnamed-declare function moveDirSync(src: string, dest: string, mode?: number): void--><!--Device-unnamed-declare function moveDirSync(src: string, dest: string, mode?: number): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

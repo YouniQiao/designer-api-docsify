@@ -4,6 +4,8 @@ Implements wakeup intelligent voice engine.
 
 **Since:** 10
 
+<!--Device-intelligentVoice-interface WakeupIntelligentVoiceEngine--><!--Device-intelligentVoice-interface WakeupIntelligentVoiceEngine-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Obtains the value of an intelligent voice parameter. This method uses an asynchr
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-WakeupIntelligentVoiceEngine-getParameter(key: string, callback: AsyncCallback<string>): void--><!--Device-WakeupIntelligentVoiceEngine-getParameter(key: string, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -35,7 +39,7 @@ Obtains the value of an intelligent voice parameter. This method uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | the key of the intelligent voice parameter whose value is to be obtained. |
-| callback | AsyncCallback&lt;string&gt; | Yes | the callback used to return the value of the intelligent voice parameter. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | Yes | the callback used to return the value of the intelligent voice parameter. |
 
 **Error codes:**
 
@@ -76,6 +80,8 @@ Obtains the value of an intelligent voice parameter. This method uses a promise 
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-WakeupIntelligentVoiceEngine-getParameter(key: string): Promise<string>--><!--Device-WakeupIntelligentVoiceEngine-getParameter(key: string): Promise<string>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -90,7 +96,7 @@ Obtains the value of an intelligent voice parameter. This method uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | the promise used to return the value of the intelligent voice parameter. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | the promise used to return the value of the intelligent voice parameter. |
 
 **Error codes:**
 
@@ -129,6 +135,8 @@ Gets pulse-code modulation audio. This method uses a promise to return the resul
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-WakeupIntelligentVoiceEngine-getPcm(): Promise<ArrayBuffer>--><!--Device-WakeupIntelligentVoiceEngine-getPcm(): Promise<ArrayBuffer>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -137,7 +145,7 @@ Gets pulse-code modulation audio. This method uses a promise to return the resul
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | the promise used to return the pulse-code modulation audio. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ArrayBuffer> | the promise used to return the pulse-code modulation audio. |
 
 **Error codes:**
 
@@ -176,6 +184,8 @@ Obtains the supported regions, This method uses an asynchronous callback to retu
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-WakeupIntelligentVoiceEngine-getSupportedRegions(callback: AsyncCallback<Array<string>>): void--><!--Device-WakeupIntelligentVoiceEngine-getSupportedRegions(callback: AsyncCallback<Array<string>>): void-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -184,7 +194,7 @@ Obtains the supported regions, This method uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | the callback used to return the supported regions. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | the callback used to return the supported regions. |
 
 **Error codes:**
 
@@ -223,6 +233,8 @@ Obtains the supported regions, This method uses a promise to return the query re
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-WakeupIntelligentVoiceEngine-getSupportedRegions(): Promise<Array<string>>--><!--Device-WakeupIntelligentVoiceEngine-getSupportedRegions(): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -231,7 +243,7 @@ Obtains the supported regions, This method uses a promise to return the query re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | the promise used to return the supported regions. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | the promise used to return the supported regions. |
 
 **Error codes:**
 
@@ -268,6 +280,8 @@ Unsubscribes wakeup intelligent voice events.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-WakeupIntelligentVoiceEngine-off(type: 'wakeupIntelligentVoiceEvent', callback?: Callback<WakeupIntelligentVoiceEngineCallbackInfo>): void--><!--Device-WakeupIntelligentVoiceEngine-off(type: 'wakeupIntelligentVoiceEvent', callback?: Callback<WakeupIntelligentVoiceEngineCallbackInfo>): void-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -277,7 +291,7 @@ Unsubscribes wakeup intelligent voice events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'wakeupIntelligentVoiceEvent' | Yes | Type of the event to listen for.Only the wakeupIntelligentVoice event is supported. |
-| callback | Callback&lt;WakeupIntelligentVoiceEngineCallbackInfo&gt; | No | the callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<WakeupIntelligentVoiceEngineCallbackInfo> | No | the callback invoked when the event is triggered. |
 
 **Error codes:**
 
@@ -301,12 +315,13 @@ if (wakeupIntelligentVoiceEngine != null) {
 on(type: 'wakeupIntelligentVoiceEvent', callback: Callback<WakeupIntelligentVoiceEngineCallbackInfo>): void
 ```
 
-Subscribes wakeup intelligent voice events. When wakeup intelligent voice events reach,
-the callback is invoked.
+Subscribes wakeup intelligent voice events. When wakeup intelligent voice events reach,the callback is invoked.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
+
+<!--Device-WakeupIntelligentVoiceEngine-on(type: 'wakeupIntelligentVoiceEvent', callback: Callback<WakeupIntelligentVoiceEngineCallbackInfo>): void--><!--Device-WakeupIntelligentVoiceEngine-on(type: 'wakeupIntelligentVoiceEvent', callback: Callback<WakeupIntelligentVoiceEngineCallbackInfo>): void-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -317,7 +332,7 @@ the callback is invoked.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'wakeupIntelligentVoiceEvent' | Yes | Type of the event to listen for.Only the wakeupIntelligentVoice event is supported. |
-| callback | Callback&lt;WakeupIntelligentVoiceEngineCallbackInfo&gt; | Yes | the callback invoked when the event is triggered. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<WakeupIntelligentVoiceEngineCallbackInfo> | Yes | the callback invoked when the event is triggered. |
 
 **Error codes:**
 
@@ -351,6 +366,8 @@ Reads the buffer from wakeup engine. This method uses a promise to return the re
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-WakeupIntelligentVoiceEngine-read(): Promise<ArrayBuffer>--><!--Device-WakeupIntelligentVoiceEngine-read(): Promise<ArrayBuffer>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -359,7 +376,7 @@ Reads the buffer from wakeup engine. This method uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | the promise used to return the buffer. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ArrayBuffer> | the promise used to return the buffer. |
 
 **Error codes:**
 
@@ -399,6 +416,8 @@ Releases the engine, This method uses an asynchronous callback to return the res
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-WakeupIntelligentVoiceEngine-release(callback: AsyncCallback<void>): void--><!--Device-WakeupIntelligentVoiceEngine-release(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -407,7 +426,7 @@ Releases the engine, This method uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -445,6 +464,8 @@ Releases the engine, This method uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-WakeupIntelligentVoiceEngine-release(): Promise<void>--><!--Device-WakeupIntelligentVoiceEngine-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -453,7 +474,7 @@ Releases the engine, This method uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise used to return the result. |
 
 **Error codes:**
 
@@ -489,6 +510,8 @@ Sets an intelligent voice parameter. This method uses an asynchronous callback t
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-WakeupIntelligentVoiceEngine-setParameter(key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-WakeupIntelligentVoiceEngine-setParameter(key: string, value: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -499,7 +522,7 @@ Sets an intelligent voice parameter. This method uses an asynchronous callback t
 | --- | --- | --- | --- |
 | key | string | Yes | the key of the intelligent voice parameter to set. |
 | value | string | Yes | the value of the intelligent voice parameter to set. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -539,6 +562,8 @@ Sets an intelligent voice parameter. This method uses a promise to return the re
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-WakeupIntelligentVoiceEngine-setParameter(key: string, value: string): Promise<void>--><!--Device-WakeupIntelligentVoiceEngine-setParameter(key: string, value: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -554,7 +579,7 @@ Sets an intelligent voice parameter. This method uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise used to return the result. |
 
 **Error codes:**
 
@@ -592,6 +617,8 @@ Sets sensibility, This method uses an asynchronous callback to return the result
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-WakeupIntelligentVoiceEngine-setSensibility(sensibility: SensibilityType, callback: AsyncCallback<void>): void--><!--Device-WakeupIntelligentVoiceEngine-setSensibility(sensibility: SensibilityType, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -600,8 +627,8 @@ Sets sensibility, This method uses an asynchronous callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sensibility | SensibilityType | Yes | sensibility to set. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback used to return the result. |
+| sensibility | [SensibilityType](arkts-basicservices-sensibilitytype-e-sys.md) | Yes | sensibility to set. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -641,6 +668,8 @@ Sets sensibility, This method uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-WakeupIntelligentVoiceEngine-setSensibility(sensibility: SensibilityType): Promise<void>--><!--Device-WakeupIntelligentVoiceEngine-setSensibility(sensibility: SensibilityType): Promise<void>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -649,13 +678,13 @@ Sets sensibility, This method uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sensibility | SensibilityType | Yes | sensibility to set. |
+| sensibility | [SensibilityType](arkts-basicservices-sensibilitytype-e-sys.md) | Yes | sensibility to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise used to return the result. |
 
 **Error codes:**
 
@@ -693,6 +722,8 @@ Sets wakeup hap information, This method uses an asynchronous callback to return
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-WakeupIntelligentVoiceEngine-setWakeupHapInfo(info: WakeupHapInfo, callback: AsyncCallback<void>): void--><!--Device-WakeupIntelligentVoiceEngine-setWakeupHapInfo(info: WakeupHapInfo, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -701,8 +732,8 @@ Sets wakeup hap information, This method uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | WakeupHapInfo | Yes | info indicates wakeup hap information. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback used to return the result. |
+| info | [WakeupHapInfo](arkts-basicservices-wakeuphapinfo-i-sys.md) | Yes | info indicates wakeup hap information. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -747,6 +778,8 @@ Sets wakeup hap information, This method uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-WakeupIntelligentVoiceEngine-setWakeupHapInfo(info: WakeupHapInfo): Promise<void>--><!--Device-WakeupIntelligentVoiceEngine-setWakeupHapInfo(info: WakeupHapInfo): Promise<void>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -755,13 +788,13 @@ Sets wakeup hap information, This method uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | WakeupHapInfo | Yes | info indicates wakeup hap information. |
+| info | [WakeupHapInfo](arkts-basicservices-wakeuphapinfo-i-sys.md) | Yes | info indicates wakeup hap information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise used to return the result. |
 
 **Error codes:**
 
@@ -803,6 +836,8 @@ Starts the capturer. This method uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE and ohos.permission.MICROPHONE
 
+<!--Device-WakeupIntelligentVoiceEngine-startCapturer(channels: int): Promise<void>--><!--Device-WakeupIntelligentVoiceEngine-startCapturer(channels: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -811,13 +846,13 @@ Starts the capturer. This method uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| channels | number | Yes | the channels needed in reading. The channels should begreater than 0 and smaller than 16. |
+| channels | number | Yes | the channels needed in reading. The channels should be greater than 0 and smaller than 16. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise used to return the result. |
 
 **Error codes:**
 
@@ -857,6 +892,8 @@ Stops the capturer. This method uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-WakeupIntelligentVoiceEngine-stopCapturer(): Promise<void>--><!--Device-WakeupIntelligentVoiceEngine-stopCapturer(): Promise<void>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -865,7 +902,7 @@ Stops the capturer. This method uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise used to return the result. |
 
 **Error codes:**
 

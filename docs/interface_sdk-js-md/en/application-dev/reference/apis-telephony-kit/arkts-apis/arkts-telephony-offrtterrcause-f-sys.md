@@ -18,6 +18,8 @@ Unsubscribe from the rtt error report event.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function offRttErrCause(callback?: Callback<RttErrorInfo>): void--><!--Device-call-function offRttErrCause(callback?: Callback<RttErrorInfo>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Unsubscribe from the rtt error report event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;RttErrorInfo&gt; | No | Indicates the callback for getting the rtt error report. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<RttErrorInfo> | No | Indicates the callback for getting the rtt error report. |
 
 **Error codes:**
 

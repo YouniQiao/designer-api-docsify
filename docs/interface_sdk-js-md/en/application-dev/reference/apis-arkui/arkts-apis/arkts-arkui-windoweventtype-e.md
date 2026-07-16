@@ -4,6 +4,8 @@ Enumerates the window lifecycle states.
 
 **Since:** 10
 
+<!--Device-window-enum WindowEventType--><!--Device-window-enum WindowEventType-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## WINDOW_SHOWN
@@ -17,6 +19,8 @@ The window is running in the foreground.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WindowEventType-WINDOW_SHOWN = 1--><!--Device-WindowEventType-WINDOW_SHOWN = 1-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -32,6 +36,8 @@ The window gains focus.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WindowEventType-WINDOW_ACTIVE = 2--><!--Device-WindowEventType-WINDOW_ACTIVE = 2-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## WINDOW_INACTIVE
@@ -45,6 +51,8 @@ The window loses focus.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WindowEventType-WINDOW_INACTIVE = 3--><!--Device-WindowEventType-WINDOW_INACTIVE = 3-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -60,6 +68,8 @@ The window is running in the background.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WindowEventType-WINDOW_HIDDEN = 4--><!--Device-WindowEventType-WINDOW_HIDDEN = 4-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## WINDOW_DESTROYED
@@ -73,6 +83,8 @@ The window is destroyed.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WindowEventType-WINDOW_DESTROYED = 7--><!--Device-WindowEventType-WINDOW_DESTROYED = 7-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

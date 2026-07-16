@@ -4,6 +4,8 @@ Defines network link information.
 
 **Since:** 8
 
+<!--Device-connection-export interface LinkAddress--><!--Device-connection-export interface LinkAddress-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Link address.
 
 **Since:** 8
 
+<!--Device-LinkAddress-address: NetAddress--><!--Device-LinkAddress-address: NetAddress-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## prefixLength
@@ -37,6 +41,8 @@ The length of the link address prefix.
 **Type:** number
 
 **Since:** 8
+
+<!--Device-LinkAddress-prefixLength: int--><!--Device-LinkAddress-prefixLength: int-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

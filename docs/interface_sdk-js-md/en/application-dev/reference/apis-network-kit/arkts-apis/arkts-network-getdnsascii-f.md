@@ -16,6 +16,8 @@ Convert a string from Unicode to ASCII Compatible Encoding (ACE), as defined by 
 
 **Since:** 23
 
+<!--Device-connection-function getDnsAscii(host: string, flag?: ConversionProcess): string--><!--Device-connection-function getDnsAscii(host: string, flag?: ConversionProcess): string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -23,7 +25,7 @@ Convert a string from Unicode to ASCII Compatible Encoding (ACE), as defined by 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | host | string | Yes | Indicates the domain name of the Unicode type. |
-| flag | ConversionProcess | No | Indicates process flag, can be 0 or any logical OR of possible flags.can be ALLOW_UNASSIGNED \| USE_STD3_ASCII_RULES to set all flag. |
+| flag | [ConversionProcess](arkts-network-conversionprocess-e.md) | No | Indicates process flag, can be 0 or any logical OR of possible flags.can be ALLOW_UNASSIGNED \| USE_STD3_ASCII_RULES to set all flag. |
 
 **Return value:**
 

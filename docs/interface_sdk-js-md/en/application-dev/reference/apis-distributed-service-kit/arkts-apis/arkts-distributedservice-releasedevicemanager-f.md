@@ -16,13 +16,15 @@ Releases a **DeviceManager** instance that is no longer used.
 
 **Since:** 10
 
+<!--Device-distributedDeviceManager-function releaseDeviceManager(deviceManager: DeviceManager): void--><!--Device-distributedDeviceManager-function releaseDeviceManager(deviceManager: DeviceManager): void-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceManager | DeviceManager | Yes | **DeviceManager** instance to release. |
+| deviceManager | [DeviceManager](arkts-distributedservice-devicemanager-i.md) | Yes | **DeviceManager** instance to release. |
 
 **Error codes:**
 

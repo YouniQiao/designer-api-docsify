@@ -16,6 +16,8 @@ Register application state observer.
 
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 
+<!--Device-appManager-function registerApplicationStateObserver(observer: ApplicationStateObserver): number--><!--Device-appManager-function registerApplicationStateObserver(observer: ApplicationStateObserver): number-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Register application state observer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | ApplicationStateObserver | Yes | The application state observer. |
+| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | The application state observer. |
 
 **Return value:**
 

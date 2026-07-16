@@ -4,6 +4,8 @@ The maximum length of {@link ProxyData#value}, {@link DataProxyChangeInfo#value}
 
 **Since:** 26.0.0
 
+<!--Device-dataShare-enum DataProxyMaxValueLength--><!--Device-dataShare-enum DataProxyMaxValueLength-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 ## MAX_LENGTH_4K
@@ -18,6 +20,8 @@ The maximum length of value is 4096 bytes.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataProxyMaxValueLength-MAX_LENGTH_4K = 4096--><!--Device-DataProxyMaxValueLength-MAX_LENGTH_4K = 4096-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 ## MAX_LENGTH_100K
@@ -31,6 +35,8 @@ The maximum length of value is 102400 bytes.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataProxyMaxValueLength-MAX_LENGTH_100K = 102400--><!--Device-DataProxyMaxValueLength-MAX_LENGTH_100K = 102400-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 

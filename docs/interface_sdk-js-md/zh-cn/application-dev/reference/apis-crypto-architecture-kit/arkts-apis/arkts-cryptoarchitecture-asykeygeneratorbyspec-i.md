@@ -1,14 +1,20 @@
 # AsyKeyGeneratorBySpec
 
-AsyKeyGeneratorBySpec非对称密钥生成器。在使用该类的方法前，需要先使用
-[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec-1)方法构建一个AsyKeyGeneratorBySpec
-实例。
+AsyKeyGeneratorBySpec非对称密钥生成器。在使用该类的方法前，需要先使用[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec-1)方法构建一个AsyKeyGeneratorBySpec实例。
 
 **起始版本：** 10
+
+<!--Device-cryptoFramework-interface AsyKeyGeneratorBySpec--><!--Device-cryptoFramework-interface AsyKeyGeneratorBySpec-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API版本10-11：SystemCapability.Security.CryptoFramework
+
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+```
 
 ## generateKeyPair
 
@@ -18,13 +24,13 @@ generateKeyPair(callback: AsyncCallback<KeyPair>): void
 
 获取非对称密钥生成器生成的密钥。使用callback异步回调。
 
-当使用[COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到随机生成的密钥对；
-当使用[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到各项数据与密钥参数一致的
-密钥对。
+当使用[COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到随机生成的密钥对；当使用[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到各项数据与密钥参数一致的密钥对。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGeneratorBySpec-generateKeyPair(callback: AsyncCallback<KeyPair>): void--><!--Device-AsyKeyGeneratorBySpec-generateKeyPair(callback: AsyncCallback<KeyPair>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -34,7 +40,7 @@ generateKeyPair(callback: AsyncCallback<KeyPair>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;KeyPair&gt; | 是 | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<KeyPair> | 是 | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则为错误对象。 |
 
 **错误码：**
 
@@ -96,13 +102,13 @@ generateKeyPair(): Promise<KeyPair>
 
 获取该非对称密钥生成器生成的密钥。使用Promise异步回调。
 
-当使用[COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到随机生成的密钥对；
-当使用[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到各项数据与密钥参数一致的
-密钥对。
+当使用[COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到随机生成的密钥对；当使用[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到各项数据与密钥参数一致的密钥对。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGeneratorBySpec-generateKeyPair(): Promise<KeyPair>--><!--Device-AsyKeyGeneratorBySpec-generateKeyPair(): Promise<KeyPair>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -112,7 +118,7 @@ generateKeyPair(): Promise<KeyPair>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;KeyPair&gt; | Promise对象，返回非对称密钥KeyPair。 |
+| Promise<KeyPair> | Promise对象，返回非对称密钥KeyPair。 |
 
 **错误码：**
 
@@ -174,17 +180,15 @@ generateKeyPairSync(): KeyPair
 
 同步获取该非对称密钥生成器生成的密钥。
 
-当使用[COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到随机生成的密钥对；
-当使用[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到各项数据与密钥参数一致的
-密钥对。
+当使用[COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到随机生成的密钥对；当使用[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到各项数据与密钥参数一致的密钥对。
 
-<br><br>**说明：**
-<br>建议优先使用异步API{@link generateKeyPair}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。
-因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：**<br>建议优先使用异步API{@link generateKeyPair}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGeneratorBySpec-generateKeyPairSync(): KeyPair--><!--Device-AsyKeyGeneratorBySpec-generateKeyPairSync(): KeyPair-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -192,7 +196,7 @@ generateKeyPairSync(): KeyPair
 
 | 类型 | 说明 |
 | --- | --- |
-| KeyPair | 非对称密钥。 |
+| [KeyPair](arkts-cryptoarchitecture-keypair-i.md) | 非对称密钥。 |
 
 **错误码：**
 
@@ -259,12 +263,13 @@ generatePriKey(callback: AsyncCallback<PriKey>): void
 
 获取非对称密钥生成器生成的密钥。使用callback异步回调。
 
-使用[PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型密钥参数创建密钥生成器，生成指定私钥。使用
-[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型密钥参数创建密钥生成器，从生成的密钥对中获取指定私钥。
+使用[PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型密钥参数创建密钥生成器，生成指定私钥。使用[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型密钥参数创建密钥生成器，从生成的密钥对中获取指定私钥。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGeneratorBySpec-generatePriKey(callback: AsyncCallback<PriKey>): void--><!--Device-AsyKeyGeneratorBySpec-generatePriKey(callback: AsyncCallback<PriKey>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -274,7 +279,7 @@ generatePriKey(callback: AsyncCallback<PriKey>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;PriKey&gt; | 是 | 回调函数。当生成私钥成功时，err为undefined，data为获取到的私钥；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<PriKey> | 是 | 回调函数。当生成私钥成功时，err为undefined，data为获取到的私钥；否则为错误对象。 |
 
 **错误码：**
 
@@ -336,12 +341,13 @@ generatePriKey(): Promise<PriKey>
 
 获取该非对称密钥生成器生成的密钥。使用Promise异步回调。
 
-当使用[PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到指定的私钥；当使用
-[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的私钥。
+当使用[PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到指定的私钥；当使用[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的私钥。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGeneratorBySpec-generatePriKey(): Promise<PriKey>--><!--Device-AsyKeyGeneratorBySpec-generatePriKey(): Promise<PriKey>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -351,7 +357,7 @@ generatePriKey(): Promise<PriKey>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PriKey&gt; | Promise对象，返回私钥。 |
+| Promise<PriKey> | Promise对象，返回私钥。 |
 
 **错误码：**
 
@@ -413,16 +419,15 @@ generatePriKeySync(): PriKey
 
 使用该非对称密钥生成器生成私钥。该接口以同步方式返回结果。
 
-当使用[PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到指定的私钥；当使用
-[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的私钥。
+当使用[PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到指定的私钥；当使用[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的私钥。
 
-<br><br>**说明：**
-<br>建议优先使用异步API{@link generatePriKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。
-因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：**<br>建议优先使用异步API{@link generatePriKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGeneratorBySpec-generatePriKeySync(): PriKey--><!--Device-AsyKeyGeneratorBySpec-generatePriKeySync(): PriKey-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -430,7 +435,7 @@ generatePriKeySync(): PriKey
 
 | 类型 | 说明 |
 | --- | --- |
-| PriKey | 私钥。 |
+| [PriKey](arkts-cryptoarchitecture-prikey-i.md) | 私钥。 |
 
 **错误码：**
 
@@ -495,12 +500,13 @@ generatePubKey(callback: AsyncCallback<PubKey>): void
 
 获取非对称密钥生成器生成的公钥。使用callback异步回调。
 
-当使用[PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到指定的公钥；当使用
-[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的公钥。
+当使用[PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到指定的公钥；当使用[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的公钥。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGeneratorBySpec-generatePubKey(callback: AsyncCallback<PubKey>): void--><!--Device-AsyKeyGeneratorBySpec-generatePubKey(callback: AsyncCallback<PubKey>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -510,7 +516,7 @@ generatePubKey(callback: AsyncCallback<PubKey>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;PubKey&gt; | 是 | 回调函数。当生成公钥成功时，err为undefined，data为获取到的公钥；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<PubKey> | 是 | 回调函数。当生成公钥成功时，err为undefined，data为获取到的公钥；否则为错误对象。 |
 
 **错误码：**
 
@@ -572,12 +578,13 @@ generatePubKey(): Promise<PubKey>
 
 获取该非对称密钥生成器生成的公钥。使用Promise异步回调。
 
-当使用[PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到指定的公钥；当使用
-[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的公钥。
+当使用[PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到指定的公钥；当使用[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的公钥。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGeneratorBySpec-generatePubKey(): Promise<PubKey>--><!--Device-AsyKeyGeneratorBySpec-generatePubKey(): Promise<PubKey>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -587,7 +594,7 @@ generatePubKey(): Promise<PubKey>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PubKey&gt; | Promise对象，返回非对称密钥的公钥PubKey。 |
+| Promise<PubKey> | Promise对象，返回非对称密钥的公钥PubKey。 |
 
 **错误码：**
 
@@ -649,16 +656,15 @@ generatePubKeySync(): PubKey
 
 同步获取该非对称密钥生成器生成的密钥。
 
-当使用[PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到指定的公钥；使用
-[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数时，可以从生成的密钥对中获取指定的公钥。
+当使用[PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数来创建密钥生成器时，可以得到指定的公钥；使用[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md)类型的密钥参数时，可以从生成的密钥对中获取指定的公钥。
 
-<br><br>**说明：**
-<br>建议优先使用异步API{@link generatePubKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。
-因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：**<br>建议优先使用异步API{@link generatePubKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGeneratorBySpec-generatePubKeySync(): PubKey--><!--Device-AsyKeyGeneratorBySpec-generatePubKeySync(): PubKey-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -666,7 +672,7 @@ generatePubKeySync(): PubKey
 
 | 类型 | 说明 |
 | --- | --- |
-| PubKey | 公钥。 |
+| [PubKey](arkts-cryptoarchitecture-pubkey-i.md) | 公钥。 |
 
 **错误码：**
 
@@ -735,7 +741,9 @@ readonly algName: string
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGeneratorBySpec-readonly algName: string--><!--Device-AsyKeyGeneratorBySpec-readonly algName: string-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey

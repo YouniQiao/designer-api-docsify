@@ -6,9 +6,17 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-export default interface DataShareResultSet--><!--Device-unnamed-export default interface DataShareResultSet-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { DataType } from '@kit.ArkData';
+```
 
 ## close
 
@@ -23,6 +31,8 @@ close(): void
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareResultSet-close(): void--><!--Device-DataShareResultSet-close(): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -51,6 +61,8 @@ getBlob(columnIndex: number): Uint8Array
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareResultSet-getBlob(columnIndex: int): Uint8Array--><!--Device-DataShareResultSet-getBlob(columnIndex: int): Uint8Array-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -65,7 +77,7 @@ getBlob(columnIndex: number): Uint8Array
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 以字节数组的形式返回指定列的值。 |
+| [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 以字节数组的形式返回指定列的值。 |
 
 **示例：**
 
@@ -96,6 +108,8 @@ getColumnIndex(columnName: string): number
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareResultSet-getColumnIndex(columnName: string): int--><!--Device-DataShareResultSet-getColumnIndex(columnName: string): int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -138,6 +152,8 @@ getColumnName(columnIndex: number): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareResultSet-getColumnName(columnIndex: int): string--><!--Device-DataShareResultSet-getColumnName(columnIndex: int): string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -179,6 +195,8 @@ getDataType(columnIndex: number): DataType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareResultSet-getDataType(columnIndex: int): DataType--><!--Device-DataShareResultSet-getDataType(columnIndex: int): DataType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -193,7 +211,7 @@ getDataType(columnIndex: number): DataType
 
 | 类型 | 说明 |
 | --- | --- |
-| DataType | 返回指定列的类型。 |
+| [DataType](../../apis-ability-kit/arkts-apis/arkts-ability-datatype-e.md) | 返回指定列的类型。 |
 
 **示例：**
 
@@ -224,6 +242,8 @@ getDouble(columnIndex: number): number
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareResultSet-getDouble(columnIndex: int): double--><!--Device-DataShareResultSet-getDouble(columnIndex: int): double-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -271,6 +291,8 @@ getLong(columnIndex: number): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareResultSet-getLong(columnIndex: int): long--><!--Device-DataShareResultSet-getLong(columnIndex: int): long-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -317,6 +339,8 @@ getString(columnIndex: number): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareResultSet-getString(columnIndex: int): string--><!--Device-DataShareResultSet-getString(columnIndex: int): string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -361,6 +385,8 @@ goTo(offset: number): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareResultSet-goTo(offset: int): boolean--><!--Device-DataShareResultSet-goTo(offset: int): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -400,6 +426,8 @@ goToFirstRow(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareResultSet-goToFirstRow(): boolean--><!--Device-DataShareResultSet-goToFirstRow(): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -433,6 +461,8 @@ goToLastRow(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareResultSet-goToLastRow(): boolean--><!--Device-DataShareResultSet-goToLastRow(): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -464,6 +494,8 @@ goToNextRow(): boolean
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareResultSet-goToNextRow(): boolean--><!--Device-DataShareResultSet-goToNextRow(): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -497,6 +529,8 @@ goToPreviousRow(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareResultSet-goToPreviousRow(): boolean--><!--Device-DataShareResultSet-goToPreviousRow(): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -528,6 +562,8 @@ goToRow(position: number): boolean
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareResultSet-goToRow(position: int): boolean--><!--Device-DataShareResultSet-goToRow(position: int): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -570,6 +606,8 @@ columnCount: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareResultSet-columnCount: int--><!--Device-DataShareResultSet-columnCount: int-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -587,6 +625,8 @@ columnNames: Array<string>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareResultSet-columnNames: Array<string>--><!--Device-DataShareResultSet-columnNames: Array<string>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -606,6 +646,8 @@ isClosed: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareResultSet-isClosed: boolean--><!--Device-DataShareResultSet-isClosed: boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -623,6 +665,8 @@ rowCount: number
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareResultSet-rowCount: int--><!--Device-DataShareResultSet-rowCount: int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 

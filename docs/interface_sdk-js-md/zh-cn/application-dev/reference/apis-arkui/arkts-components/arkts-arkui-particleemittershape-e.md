@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare enum ParticleEmitterShape--><!--Device-unnamed-declare enum ParticleEmitterShape-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## RECTANGLE
@@ -18,7 +20,9 @@ RECTANGLE = 'rectangle'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ParticleEmitterShape-RECTANGLE = 'rectangle'--><!--Device-ParticleEmitterShape-RECTANGLE = 'rectangle'-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,7 +38,9 @@ CIRCLE = 'circle'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ParticleEmitterShape-CIRCLE = 'circle'--><!--Device-ParticleEmitterShape-CIRCLE = 'circle'-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,7 +56,9 @@ ELLIPSE = 'ellipse'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ParticleEmitterShape-ELLIPSE = 'ellipse'--><!--Device-ParticleEmitterShape-ELLIPSE = 'ellipse'-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,7 +74,9 @@ ANNULUS = 'annulus'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ParticleEmitterShape-ANNULUS = 'annulus'--><!--Device-ParticleEmitterShape-ANNULUS = 'annulus'-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

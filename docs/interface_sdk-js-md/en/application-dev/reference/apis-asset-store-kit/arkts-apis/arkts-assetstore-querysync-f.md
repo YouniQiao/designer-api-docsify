@@ -12,18 +12,15 @@ import { asset } from '@kit.AssetStoreKit';
 function querySync(query: AssetMap): Array<AssetMap>
 ```
 
-Queries one or more assets. If user authentication is required for the access to the asset, call
-[asset.preQuerySync](arkts-assetstore-prequerysync-f.md#prequerysync-1) before this API and call
-[asset.postQuerySync](arkts-assetstore-postquerysync-f.md#postquerysync-1) after this API. For details about the development procedure, see
-[Development Guidance](../../../../security/AssetStoreKit/asset-js-query-auth.md).
-This API returns the result synchronously.
+Queries one or more assets. If user authentication is required for the access to the asset, call [asset.preQuerySync](arkts-assetstore-prequerysync-f.md#prequerysync-1) before this API and call [asset.postQuerySync](arkts-assetstore-postquerysync-f.md#postquerysync-1) after this API. For details about the development procedure, see [Development Guidance](../../../../security/AssetStoreKit/asset-js-query-auth.md).This API returns the result synchronously.
 
-If no asset is found, an exception indicating that no asset is found is thrown instead of returning
-an empty query result list.
+If no asset is found, an exception indicating that no asset is found is thrown instead of returning an empty query result list.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-asset-function querySync(query: AssetMap): Array<AssetMap>--><!--Device-asset-function querySync(query: AssetMap): Array<AssetMap>-End-->
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -31,13 +28,13 @@ an empty query result list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | AssetMap | Yes | Attributes of the asset to query, such as the asset alias, access control attributes,and custom data. |
+| query | [AssetMap](arkts-assetstore-assetmap-t.md) | Yes | Attributes of the asset to query, such as the asset alias, access control attributes,and custom data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;AssetMap&gt; | Array of query results. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<AssetMap> | Array of query results. |
 
 **Error codes:**
 

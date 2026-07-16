@@ -4,7 +4,15 @@
 
 **起始版本：** 7
 
+<!--Device-runningLock-class RunningLock--><!--Device-runningLock-class RunningLock-End-->
+
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
+
+## 导入模块
+
+```TypeScript
+import { runningLock } from '@kit.BasicServicesKit';
+```
 
 ## hold
 
@@ -17,6 +25,8 @@ hold(timeout: number): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.RUNNING_LOCK
+
+<!--Device-RunningLock-hold(timeout: int): void--><!--Device-RunningLock-hold(timeout: int): void-End-->
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
@@ -79,6 +89,8 @@ isHolding(): boolean
 
 **起始版本：** 9
 
+<!--Device-RunningLock-isHolding(): boolean--><!--Device-RunningLock-isHolding(): boolean-End-->
+
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **返回值：**
@@ -129,6 +141,8 @@ isUsed(): boolean
 
 **替代接口：** [isHolding](arkts-basicservices-runninglock-c.md#isholding-1)
 
+<!--Device-RunningLock-isUsed(): boolean--><!--Device-RunningLock-isUsed(): boolean-End-->
+
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **返回值：**
@@ -167,6 +181,8 @@ lock(timeout: number): void
 
 **需要权限：** ohos.permission.RUNNING_LOCK
 
+<!--Device-RunningLock-lock(timeout: number): void--><!--Device-RunningLock-lock(timeout: number): void-End-->
+
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **参数：**
@@ -200,6 +216,8 @@ unhold(): void
 **起始版本：** 9
 
 **需要权限：** ohos.permission.RUNNING_LOCK
+
+<!--Device-RunningLock-unhold(): void--><!--Device-RunningLock-unhold(): void-End-->
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
@@ -260,6 +278,8 @@ unlock(): void
 **替代接口：** [unhold](arkts-basicservices-runninglock-c.md#unhold-1)
 
 **需要权限：** ohos.permission.RUNNING_LOCK
+
+<!--Device-RunningLock-unlock(): void--><!--Device-RunningLock-unlock(): void-End-->
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 

@@ -4,6 +4,8 @@ Defines the options used in **listFile()**.
 
 **Since:** 11
 
+<!--Device-unnamed-export interface ListFileOptions--><!--Device-unnamed-export interface ListFileOptions-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## Modules to Import
@@ -26,6 +28,8 @@ File filtering configuration. This parameter is optional. It specifies the file 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ListFileOptions-filter?: Filter--><!--Device-ListFileOptions-filter?: Filter-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## listNum
@@ -34,14 +38,15 @@ File filtering configuration. This parameter is optional. It specifies the file 
 listNum?: number
 ```
 
-Number of file names to list. This parameter is optional. The default value is **0**, which means to list all
-files.
+Number of file names to list. This parameter is optional. The default value is **0**, which means to list all files.
 
 **Type:** number
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ListFileOptions-listNum?: number--><!--Device-ListFileOptions-listNum?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -51,16 +56,15 @@ files.
 recursion?: boolean
 ```
 
-Whether to list all files in the subdirectories recursively. This parameter is optional. The default value is
-**false**. If **recursion** is **false**, the names of files and directories that meet the filtering requirements
-in the current directory are returned. If **recursion** is **true**, relative paths (starting with"/") of all files
-that meet the specified conditions in the current directory are returned.
+Whether to list all files in the subdirectories recursively. This parameter is optional. The default value is **false**. If **recursion** is **false**, the names of files and directories that meet the filtering requirements in the current directory are returned. If **recursion** is **true**, relative paths (starting with"/") of all files that meet the specified conditions in the current directory are returned.
 
 **Type:** boolean
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ListFileOptions-recursion?: boolean--><!--Device-ListFileOptions-recursion?: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

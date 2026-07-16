@@ -14,11 +14,13 @@ function setPointerColor(color: number, callback: AsyncCallback<void>): void
 
 Sets the mouse pointer color. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.
 
 **Since:** 10
+
+<!--Device-pointer-function setPointerColor(color: int, callback: AsyncCallback<void>): void--><!--Device-pointer-function setPointerColor(color: int, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -29,7 +31,7 @@ Sets the mouse pointer color. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | color | number | Yes | Pointer color. The default value is **black** (0x000000). |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -79,11 +81,13 @@ function setPointerColor(color: number): Promise<void>
 
 Sets the mouse pointer color. This API uses a promise to return the result.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.
 
 **Since:** 10
+
+<!--Device-pointer-function setPointerColor(color: int): Promise<void>--><!--Device-pointer-function setPointerColor(color: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -99,7 +103,7 @@ Sets the mouse pointer color. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

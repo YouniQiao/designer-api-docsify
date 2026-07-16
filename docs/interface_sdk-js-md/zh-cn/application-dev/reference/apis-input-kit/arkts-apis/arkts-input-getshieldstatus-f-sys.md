@@ -1,5 +1,11 @@
 # getShieldStatus（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { inputConsumer } from '@kit.InputKit';
+```
+
 ## getShieldStatus
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getShieldStatus(shieldMode: ShieldMode): boolean
 
 **需要权限：** ohos.permission.INPUT_CONTROL_DISPATCHING
 
+<!--Device-inputConsumer-function getShieldStatus(shieldMode: ShieldMode): boolean--><!--Device-inputConsumer-function getShieldStatus(shieldMode: ShieldMode): boolean-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function getShieldStatus(shieldMode: ShieldMode): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| shieldMode | ShieldMode | 是 | 系统快捷键屏蔽类型，目前仅支持取值为'FACTORY_MODE'，表示屏蔽所有系统快捷键。 |
+| shieldMode | [ShieldMode](arkts-input-shieldmode-e-sys.md) | 是 | 系统快捷键屏蔽类型，目前仅支持取值为'FACTORY_MODE'，表示屏蔽所有系统快捷键。 |
 
 **返回值：**
 

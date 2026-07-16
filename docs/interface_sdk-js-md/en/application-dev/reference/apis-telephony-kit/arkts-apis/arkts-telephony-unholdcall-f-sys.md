@@ -18,6 +18,8 @@ Cancel call hold status.
 
 **Required permissions:** ohos.permission.ANSWER_CALL
 
+<!--Device-call-function unHoldCall(callId: int, callback: AsyncCallback<void>): void--><!--Device-call-function unHoldCall(callId: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Cancel call hold status.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | number | Yes | Indicates the identifier of the call. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of unHoldCall. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of unHoldCall. |
 
 **Error codes:**
 
@@ -69,6 +71,8 @@ Keep a call on hold.
 
 **Required permissions:** ohos.permission.ANSWER_CALL
 
+<!--Device-call-function unHoldCall(callId: int): Promise<void>--><!--Device-call-function unHoldCall(callId: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -83,7 +87,7 @@ Keep a call on hold.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the unHoldCall. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the unHoldCall. |
 
 **Error codes:**
 

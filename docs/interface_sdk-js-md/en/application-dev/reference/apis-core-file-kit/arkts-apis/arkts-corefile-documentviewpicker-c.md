@@ -1,9 +1,10 @@
 # DocumentViewPicker
 
-Provides APIs for selecting and saving documents in different formats. Before using the APIs of
-**DocumentViewPicker**, you need to create a **DocumentViewPicker** instance.
+Provides APIs for selecting and saving documents in different formats. Before using the APIs of **DocumentViewPicker**, you need to create a **DocumentViewPicker** instance.
 
 **Since:** 9
+
+<!--Device-picker-class DocumentViewPicker--><!--Device-picker-class DocumentViewPicker-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -19,12 +20,13 @@ import { picker } from '@kit.CoreFileKit';
 constructor()
 ```
 
-A constructor used to create a **DocumentViewPicker** instance. This constructor is not recommended due to the
-potential risk of operation failure.
+A constructor used to create a **DocumentViewPicker** instance. This constructor is not recommended due to the potential risk of operation failure.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DocumentViewPicker-constructor()--><!--Device-DocumentViewPicker-constructor()-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -41,13 +43,13 @@ let documentPicker = new picker.DocumentViewPicker(); // Construction without pa
 constructor(context: Context)
 ```
 
-A constructor used to create a **DocumentViewPicker** instance. This constructor is recommended. For details
-about how to obtain the context, see
-[getHostContext](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#gethostcontext12).
+A constructor used to create a **DocumentViewPicker** instance. This constructor is recommended. For details about how to obtain the context, see [getHostContext](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#gethostcontext12).
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DocumentViewPicker-constructor(context: Context)--><!--Device-DocumentViewPicker-constructor(context: Context)-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -55,7 +57,7 @@ about how to obtain the context, see
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context (only **UIAbilityContext** is supported). For details about theapplication context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md). |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context (only **UIAbilityContext** is supported). For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md). |
 
 **Example**
 
@@ -92,14 +94,15 @@ struct Index {
 constructor(context: Context, window: window.Window)
 ```
 
-A constructor used to create a **DocumentViewPicker** object in a window created by an application. In other
-scenarios, you are advised to use **constructor(context: Context)** to create a **DocumentViewPicker** object.
+A constructor used to create a **DocumentViewPicker** object in a window created by an application. In other scenarios, you are advised to use **constructor(context: Context)** to create a **DocumentViewPicker** object.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > This method is supported on 2-in-1 devices and tablets since API version 19.
 
 **Since:** 13
+
+<!--Device-DocumentViewPicker-constructor(context: Context, window: window.Window)--><!--Device-DocumentViewPicker-constructor(context: Context, window: window.Window)-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -107,7 +110,7 @@ scenarios, you are advised to use **constructor(context: Context)** to create a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context (only **UIAbilityContext** is supported). For details about theapplication context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md). |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context (only **UIAbilityContext** is supported). For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md). |
 | window | window.Window | Yes | Window instance created by the application. |
 
 **Example**
@@ -148,18 +151,13 @@ struct Index {
 getSelectedIndex(): number
 ```
 
-Obtains the index of the file suffix type of the file saved.
-This method takes effect only when used with
-[save()](arkts-corefile-documentviewpicker-c.md#save-1).
-This method can be used only after [DocumentSaveOptions.fileSuffixChoices](arkts-corefile-documentsaveoptions-c.md) is
-configured.
-The index (number) returned by this method indicates the location of the file suffix specified in
-[DocumentSaveOptions.fileSuffixChoices](arkts-corefile-documentsaveoptions-c.md). If no file suffix is specified,
-**getSelectedIndex()** returns **-1**.
+Obtains the index of the file suffix type of the file saved.This method takes effect only when used with [save()](arkts-corefile-documentviewpicker-c.md#save-1).This method can be used only after [DocumentSaveOptions.fileSuffixChoices](arkts-corefile-documentsaveoptions-c.md) is configured.The index (number) returned by this method indicates the location of the file suffix specified in [DocumentSaveOptions.fileSuffixChoices](arkts-corefile-documentsaveoptions-c.md). If no file suffix is specified,**getSelectedIndex()** returns **-1**.
 
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-DocumentViewPicker-getSelectedIndex(): int--><!--Device-DocumentViewPicker-getSelectedIndex(): int-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService.FolderSelection
 
@@ -167,7 +165,7 @@ The index (number) returned by this method indicates the location of the file su
 
 | Type | Description |
 | --- | --- |
-| number | Subscript (number) of the selected suffix type in[DocumentSaveOptions.fileSuffixChoices](arkts-corefile-documentsaveoptions-c.md). The default value is **-1**. |
+| number | Subscript (number) of the selected suffix type in [DocumentSaveOptions.fileSuffixChoices](arkts-corefile-documentsaveoptions-c.md). The default value is **-1**. |
 
 ## save
 
@@ -175,12 +173,13 @@ The index (number) returned by this method indicates the location of the file su
 save(option?: DocumentSaveOptions): Promise<Array<string>>
 ```
 
-Starts a **documentPicker** page for the user to save one or more documents. This API uses a promise to return
-the result.
+Starts a **documentPicker** page for the user to save one or more documents. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DocumentViewPicker-save(option?: DocumentSaveOptions): Promise<Array<string>>--><!--Device-DocumentViewPicker-save(option?: DocumentSaveOptions): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -188,13 +187,13 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | DocumentSaveOptions | No | Options for saving the documents. If this parameter is not specified, a**documentPicker** page will be displayed for the user to enter the names of the documents to save. |
+| option | [DocumentSaveOptions](arkts-corefile-documentsaveoptions-c.md) | No | Options for saving the documents. If this parameter is not specified, a **documentPicker** page will be displayed for the user to enter the names of the documents to save. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URIs of the documents saved.<br>**Note**: For details about how to use the returned URIs, see[Using a Document URI](../../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return the URIs of the documents saved.<br>**Note**: For details about how to use the returned URIs, see [Using a Document URI](../../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 **Example**
 
@@ -226,12 +225,13 @@ async function example10(context: common.UIAbilityContext) { // Ensure that cont
 save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void
 ```
 
-Starts a **documentPicker** page for the user to save one or more documents. This API uses an asynchronous
-callback to return the result.
+Starts a **documentPicker** page for the user to save one or more documents. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DocumentViewPicker-save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -239,8 +239,8 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | DocumentSaveOptions | Yes | Options for saving the documents. |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents saved.<br>**Note**: For details about how to use the returned URIs, see[Using a Document URI](../../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
+| option | [DocumentSaveOptions](arkts-corefile-documentsaveoptions-c.md) | Yes | Options for saving the documents. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback invoked to return the URIs of the documents saved.<br>**Note**: For details about how to use the returned URIs, see [Using a Document URI](../../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 **Example**
 
@@ -274,12 +274,13 @@ async function example11(context: common.UIAbilityContext) { // Ensure that cont
 save(callback: AsyncCallback<Array<string>>): void
 ```
 
-Starts a **documentPicker** page for the user to save one or more documents. This API uses an asynchronous
-callback to return the result.
+Starts a **documentPicker** page for the user to save one or more documents. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DocumentViewPicker-save(callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-save(callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -287,7 +288,7 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents saved.<br>**Note**: For details about how to use the returned URIs, see[Using a Document URI](../../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback invoked to return the URIs of the documents saved.<br>**Note**: For details about how to use the returned URIs, see [Using a Document URI](../../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 **Example**
 
@@ -319,12 +320,13 @@ async function example12(context: common.UIAbilityContext) { // Ensure that cont
 select(option?: DocumentSelectOptions): Promise<Array<string>>
 ```
 
-Starts a **documentPicker** page for the user to select one or more documents. This API uses a promise to return
-the result.
+Starts a **documentPicker** page for the user to select one or more documents. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DocumentViewPicker-select(option?: DocumentSelectOptions): Promise<Array<string>>--><!--Device-DocumentViewPicker-select(option?: DocumentSelectOptions): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -332,13 +334,13 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | DocumentSelectOptions | No | Options for selecting documents. If this parameter is not specified,the **documentPicker** page is displayed by default. |
+| option | [DocumentSelectOptions](arkts-corefile-documentselectoptions-c.md) | No | Options for selecting documents. If this parameter is not specified,the **documentPicker** page is displayed by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URIs of the documents selected.<br> **Note**: For details about how to use the returned URIs, see[Using a Document URI](../../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return the URIs of the documents selected.<br> **Note**: For details about how to use the returned URIs, see [Using a Document URI](../../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 **Example**
 
@@ -369,12 +371,13 @@ async function example07(context: common.UIAbilityContext) { // Ensure that cont
 select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): void
 ```
 
-Starts a **documentPicker** page for the user to select one or more documents. This API uses an asynchronous
-callback to return the result.
+Starts a **documentPicker** page for the user to select one or more documents. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DocumentViewPicker-select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -382,8 +385,8 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | DocumentSelectOptions | Yes | Options for selecting documents. |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents selected.<br>**Note**: For details about how to use the returned URIs, see[Using a Document URI](../../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
+| option | [DocumentSelectOptions](arkts-corefile-documentselectoptions-c.md) | Yes | Options for selecting documents. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback invoked to return the URIs of the documents selected.<br>**Note**: For details about how to use the returned URIs, see [Using a Document URI](../../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 **Example**
 
@@ -416,12 +419,13 @@ async function example08(context: common.UIAbilityContext) { // Ensure that cont
 select(callback: AsyncCallback<Array<string>>): void
 ```
 
-Starts a **documentPicker** page for the user to select one or more documents. This API uses an asynchronous
-callback to return the result.
+Starts a **documentPicker** page for the user to select one or more documents. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DocumentViewPicker-select(callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-select(callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -429,7 +433,7 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents selected.<br>**Note**: For details about how to use the returned URIs, see[Using a Document URI](../../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback invoked to return the URIs of the documents selected.<br>**Note**: For details about how to use the returned URIs, see [Using a Document URI](../../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 **Example**
 

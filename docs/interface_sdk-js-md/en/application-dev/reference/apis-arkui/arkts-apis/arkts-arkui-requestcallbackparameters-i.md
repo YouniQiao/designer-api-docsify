@@ -4,6 +4,8 @@ Plugin component request callback parameters.
 
 **Since:** 12
 
+<!--Device-pluginComponentManager-interface RequestCallbackParameters--><!--Device-pluginComponentManager-interface RequestCallbackParameters-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Defines componentTemplate.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RequestCallbackParameters-componentTemplate: PluginComponentTemplate--><!--Device-RequestCallbackParameters-componentTemplate: PluginComponentTemplate-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## data
@@ -42,6 +46,8 @@ Defines data.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RequestCallbackParameters-data: KVObject--><!--Device-RequestCallbackParameters-data: KVObject-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## extraData
@@ -57,6 +63,8 @@ Defines extraData.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RequestCallbackParameters-extraData: KVObject--><!--Device-RequestCallbackParameters-extraData: KVObject-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

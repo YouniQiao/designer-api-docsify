@@ -4,6 +4,8 @@ Boids simulation plugin. Provides static methods to manage boids simulation comp
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class BoidsSimPlugin--><!--Device-unnamed-export declare class BoidsSimPlugin-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
@@ -20,6 +22,8 @@ Get the default boids simulation world for the given scene.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BoidsSimPlugin-static getDefaultBoidsSimWorld(scene: Scene): BoidsSimWorld | null--><!--Device-BoidsSimPlugin-static getDefaultBoidsSimWorld(scene: Scene): BoidsSimWorld | null-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
@@ -28,11 +32,11 @@ Get the default boids simulation world for the given scene.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scene | Scene | Yes | the scene to get the boids simulation world from |
+| scene | [Scene](../../apis-arkui/arkts-components/arkts-arkui-scene-t.md) | Yes | the scene to get the boids simulation world from |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| BoidsSimWorld | boids simulation world, or null if the plugin is not loaded |
+| [BoidsSimWorld](arkts-arkgraphics3d-boidssimworld-c-sys.md) | boids simulation world, or null if the plugin is not loaded |
 

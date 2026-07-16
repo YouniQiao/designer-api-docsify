@@ -18,20 +18,22 @@ Obtains a **Preferences** instance. This API returns the result synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-sendablePreferences-function getPreferencesSync(context: Context, options: Options): Preferences--><!--Device-sendablePreferences-function getPreferencesSync(context: Context, options: Options): Preferences-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. |
-| options | Options | Yes | Configuration options of the **Preferences** instance. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. |
+| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-options-i.md) | Yes | Configuration options of the **Preferences** instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Preferences | **Preferences** instance obtained.This instance inherits from [ISendable](../../arkts-utils/arkts-sendable.md#isendable) and can be passedbetween concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads)by reference. For details, see [Using Sendable Objects](../../arkts-utils/sendable-guide.md). |
+| [Preferences](arkts-arkdata-preferences-i.md) | **Preferences** instance obtained.* This instance inherits from [ISendable](../../arkts-utils/arkts-sendable.md#isendable) and can be passed between concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads)by reference. For details, see [Using Sendable Objects](../../arkts-utils/sendable-guide.md). |
 
 **Error codes:**
 

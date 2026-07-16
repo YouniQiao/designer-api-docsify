@@ -4,6 +4,8 @@ Provides the state change information of the float view.
 
 **Since:** 26.0.0
 
+<!--Device-floatView-interface FloatViewStateChangeInfo--><!--Device-floatView-interface FloatViewStateChangeInfo-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
@@ -26,6 +28,8 @@ State of the float view.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FloatViewStateChangeInfo-state: FloatViewState--><!--Device-FloatViewStateChangeInfo-state: FloatViewState-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## stopReason
@@ -34,9 +38,7 @@ State of the float view.
 stopReason: string
 ```
 
-Reason why the float view stops. This parameter is valid only when **state** is set to
-**FloatViewState.STOPPED**. In other states, this parameter is an empty string by default. The stop reasons and
-their meanings are as follows:
+Reason why the float view stops. This parameter is valid only when **state** is set to **FloatViewState.STOPPED**. In other states, this parameter is an empty string by default. The stop reasons and their meanings are as follows:
 
 **"APP_STOP"**: The application proactively stops the float view.
 
@@ -50,14 +52,15 @@ their meanings are as follows:
 
 **"FLOATING_BALL_STOP"**: The float view stops when the bound floating ball stops.
 
-**"MAIN_WINDOW_DESTROY_STOP"**: The float view stops after the main window associated with the context is
-destroyed.
+**"MAIN_WINDOW_DESTROY_STOP"**: The float view stops after the main window associated with the context is destroyed.
 
 **Type:** string
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FloatViewStateChangeInfo-stopReason: string--><!--Device-FloatViewStateChangeInfo-stopReason: string-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

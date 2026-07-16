@@ -12,14 +12,13 @@ import { notificationExtensionSubscription } from '@kit.NotificationKit';
 function subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>
 ```
 
-Subscribes to the notification extension. You can subscribe to the notification extension only after obtaining the
-unique address of the Bluetooth device by calling the APIs related to the
-[Bluetooth modules](../../../../connectivity/connectivity-kit-intro.md#bluetooth). This API uses a promise to return
-the result.
+Subscribes to the notification extension. You can subscribe to the notification extension only after obtaining the unique address of the Bluetooth device by calling the APIs related to the [Bluetooth modules](../../../../connectivity/connectivity-kit-intro.md#bluetooth). This API uses a promise to return the result.
 
 **Since:** 22
 
 **Required permissions:** ohos.permission.SUBSCRIBE_NOTIFICATION
+
+<!--Device-notificationExtensionSubscription-function subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>--><!--Device-notificationExtensionSubscription-function subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -27,13 +26,13 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | NotificationExtensionSubscriptionInfo[] | Yes | List of subscribed notifications (in array). |
+| info | [NotificationExtensionSubscriptionInfo](arkts-notification-notificationextensionsubscriptioninfo-i.md)[] | Yes | List of subscribed notifications (in array). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

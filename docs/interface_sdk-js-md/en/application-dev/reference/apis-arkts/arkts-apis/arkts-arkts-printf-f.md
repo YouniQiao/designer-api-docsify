@@ -20,6 +20,8 @@ Formats a string by replacing the placeholders in it.
 
 **Substitutes:** [format](arkts-arkts-format-f.md#format-1)
 
+<!--Device-util-function printf(format: string, ...args: Object[]): string--><!--Device-util-function printf(format: string, ...args: Object[]): string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -27,7 +29,7 @@ Formats a string by replacing the placeholders in it.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | format | string | Yes | Format string. |
-| args | Object[] | Yes | Data used to replace the placeholders in **format**. If **null** is passed in, the firstargument is returned by default. |
+| args | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md)[] | Yes | Data used to replace the placeholders in **format**. If **null** is passed in, the first argument is returned by default. |
 
 **Return value:**
 

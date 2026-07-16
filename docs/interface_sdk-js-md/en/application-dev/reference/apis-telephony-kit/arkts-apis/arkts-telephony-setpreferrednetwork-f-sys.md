@@ -18,6 +18,8 @@ Set the preferred network for the specified SIM card slot.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-radio-function setPreferredNetwork(slotId: int, networkMode: PreferredNetworkMode, callback: AsyncCallback<void>): void--><!--Device-radio-function setPreferredNetwork(slotId: int, networkMode: PreferredNetworkMode, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -27,8 +29,8 @@ Set the preferred network for the specified SIM card slot.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| networkMode | PreferredNetworkMode | Yes | Indicates that you want to set the preferred network mode. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of setPreferredNetwork. |
+| networkMode | [PreferredNetworkMode](arkts-telephony-preferrednetworkmode-e-sys.md) | Yes | Indicates that you want to set the preferred network mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of setPreferredNetwork. |
 
 **Error codes:**
 
@@ -72,6 +74,8 @@ Set the preferred network for the specified SIM card slot.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-radio-function setPreferredNetwork(slotId: int, networkMode: PreferredNetworkMode): Promise<void>--><!--Device-radio-function setPreferredNetwork(slotId: int, networkMode: PreferredNetworkMode): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -81,13 +85,13 @@ Set the preferred network for the specified SIM card slot.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| networkMode | PreferredNetworkMode | Yes | Indicates that you want to set the preferred network mode. |
+| networkMode | [PreferredNetworkMode](arkts-telephony-preferrednetworkmode-e-sys.md) | Yes | Indicates that you want to set the preferred network mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setPreferredNetwork. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the setPreferredNetwork. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Defines the printer information.
 
 **Since:** 14
 
+<!--Device-print-interface PrinterInformation--><!--Device-print-interface PrinterInformation-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Printer alias.
 
 **Since:** 18
 
+<!--Device-PrinterInformation-alias?: string--><!--Device-PrinterInformation-alias?: string-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## capability
@@ -37,6 +41,8 @@ Printer capabilities.
 **Type:** PrinterCapabilities
 
 **Since:** 14
+
+<!--Device-PrinterInformation-capability?: PrinterCapabilities--><!--Device-PrinterInformation-capability?: PrinterCapabilities-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -52,6 +58,8 @@ Printer description.
 
 **Since:** 14
 
+<!--Device-PrinterInformation-description?: string--><!--Device-PrinterInformation-description?: string-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## options
@@ -65,6 +73,8 @@ Printer details.
 **Type:** string
 
 **Since:** 14
+
+<!--Device-PrinterInformation-options?: string--><!--Device-PrinterInformation-options?: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -80,6 +90,8 @@ Printer preferences.
 
 **Since:** 18
 
+<!--Device-PrinterInformation-preferences?: PrinterPreferences--><!--Device-PrinterInformation-preferences?: PrinterPreferences-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## printerId
@@ -93,6 +105,8 @@ Printer ID.
 **Type:** string
 
 **Since:** 14
+
+<!--Device-PrinterInformation-printerId: string--><!--Device-PrinterInformation-printerId: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -108,6 +122,8 @@ Printer model.
 
 **Since:** 14
 
+<!--Device-PrinterInformation-printerMake?: string--><!--Device-PrinterInformation-printerMake?: string-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## printerName
@@ -122,6 +138,8 @@ Printer name.
 
 **Since:** 14
 
+<!--Device-PrinterInformation-printerName: string--><!--Device-PrinterInformation-printerName: string-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## printerStatus
@@ -135,6 +153,8 @@ Printer state.
 **Type:** PrinterStatus
 
 **Since:** 14
+
+<!--Device-PrinterInformation-printerStatus: PrinterStatus--><!--Device-PrinterInformation-printerStatus: PrinterStatus-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -152,6 +172,8 @@ Information about the selected driver when adding the printer.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PrinterInformation-selectedDriver?: PpdInfo--><!--Device-PrinterInformation-selectedDriver?: PpdInfo-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## selectedProtocol
@@ -168,6 +190,8 @@ Protocol used when adding the printer.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PrinterInformation-selectedProtocol?: string--><!--Device-PrinterInformation-selectedProtocol?: string-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## uri
@@ -181,6 +205,8 @@ Printer URI.
 **Type:** string
 
 **Since:** 14
+
+<!--Device-PrinterInformation-uri?: string--><!--Device-PrinterInformation-uri?: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 

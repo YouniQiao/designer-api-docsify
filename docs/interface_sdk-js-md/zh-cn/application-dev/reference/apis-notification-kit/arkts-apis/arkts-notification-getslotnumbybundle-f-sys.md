@@ -18,6 +18,8 @@ function getSlotNumByBundle(bundle: BundleOption, callback: AsyncCallback<number
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getSlotNumByBundle(bundle: BundleOption, callback: AsyncCallback<long>): void--><!--Device-notificationManager-function getSlotNumByBundle(bundle: BundleOption, callback: AsyncCallback<long>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,8 +28,8 @@ function getSlotNumByBundle(bundle: BundleOption, callback: AsyncCallback<number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 指定应用的包信息。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 获取通知渠道数量回调函数。 |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 指定应用的包信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 获取通知渠道数量回调函数。 |
 
 **错误码：**
 
@@ -76,6 +78,8 @@ function getSlotNumByBundle(bundle: BundleOption): Promise<number>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getSlotNumByBundle(bundle: BundleOption): Promise<long>--><!--Device-notificationManager-function getSlotNumByBundle(bundle: BundleOption): Promise<long>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -84,13 +88,13 @@ function getSlotNumByBundle(bundle: BundleOption): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 指定应用的包信息。 |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 指定应用的包信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | 以Promise形式返回获取指定应用的通知渠道数量。 |
+| Promise<number> | 以Promise形式返回获取指定应用的通知渠道数量。 |
 
 **错误码：**
 

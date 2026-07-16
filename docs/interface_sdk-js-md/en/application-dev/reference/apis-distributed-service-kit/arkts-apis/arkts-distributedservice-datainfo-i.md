@@ -4,6 +4,8 @@ Represents the received data, including the channel ID and data.
 
 **Since:** 20
 
+<!--Device-proxyChannelManager-interface DataInfo--><!--Device-proxyChannelManager-interface DataInfo-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Proxy channel ID.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataInfo-channelId: int--><!--Device-DataInfo-channelId: int-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 ## data
@@ -41,6 +45,8 @@ Received byte array.
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataInfo-data: ArrayBuffer--><!--Device-DataInfo-data: ArrayBuffer-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 

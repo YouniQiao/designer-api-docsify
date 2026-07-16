@@ -4,6 +4,8 @@ TNF types definitions, see NFCForum-TS-NDEF_1.0.
 
 **Since:** 12
 
+<!--Device-tag-enum TnfType--><!--Device-tag-enum TnfType-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## TNF_EMPTY
@@ -17,6 +19,8 @@ Empty
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TnfType-TNF_EMPTY = 0x0--><!--Device-TnfType-TNF_EMPTY = 0x0-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -32,6 +36,8 @@ NFC Forum well-known type [NFC RTD]
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TnfType-TNF_WELL_KNOWN = 0x1--><!--Device-TnfType-TNF_WELL_KNOWN = 0x1-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## TNF_MEDIA
@@ -45,6 +51,8 @@ Media-type as defined in RFC 2046 [RFC 2046]
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TnfType-TNF_MEDIA = 0x2--><!--Device-TnfType-TNF_MEDIA = 0x2-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -60,6 +68,8 @@ Absolute URI as defined in RFC 3986 [RFC 3986]
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TnfType-TNF_ABSOLUTE_URI = 0x3--><!--Device-TnfType-TNF_ABSOLUTE_URI = 0x3-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## TNF_EXT_APP
@@ -73,6 +83,8 @@ NFC Forum external type [NFC RTD]
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TnfType-TNF_EXT_APP = 0x4--><!--Device-TnfType-TNF_EXT_APP = 0x4-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -88,6 +100,8 @@ Unknown
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TnfType-TNF_UNKNOWN = 0x5--><!--Device-TnfType-TNF_UNKNOWN = 0x5-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## TNF_UNCHANGED
@@ -101,6 +115,8 @@ Unchanged (see section 2.3.3)
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TnfType-TNF_UNCHANGED = 0x6--><!--Device-TnfType-TNF_UNCHANGED = 0x6-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 

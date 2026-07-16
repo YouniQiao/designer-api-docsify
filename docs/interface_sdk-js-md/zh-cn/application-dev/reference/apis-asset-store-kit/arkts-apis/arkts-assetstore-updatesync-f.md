@@ -1,5 +1,11 @@
 # updateSync
 
+## 导入模块
+
+```TypeScript
+import { asset } from '@kit.AssetStoreKit';
+```
+
 ## updateSync
 
 ```TypeScript
@@ -10,7 +16,9 @@ function updateSync(query: AssetMap, attributesToUpdate: AssetMap): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-asset-function updateSync(query: AssetMap, attributesToUpdate: AssetMap): void--><!--Device-asset-function updateSync(query: AssetMap, attributesToUpdate: AssetMap): void-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -18,8 +26,8 @@ function updateSync(query: AssetMap, attributesToUpdate: AssetMap): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | AssetMap | 是 | 待更新关键资产的搜索条件，如关键资产别名、访问控制属性、自定义数据等。 |
-| attributesToUpdate | AssetMap | 是 | 待更新关键资产的属性集合，如关键资产明文、自定义数据等。 |
+| query | [AssetMap](arkts-assetstore-assetmap-t.md) | 是 | 待更新关键资产的搜索条件，如关键资产别名、访问控制属性、自定义数据等。 |
+| attributesToUpdate | [AssetMap](arkts-assetstore-assetmap-t.md) | 是 | 待更新关键资产的属性集合，如关键资产明文、自定义数据等。 |
 
 **错误码：**
 

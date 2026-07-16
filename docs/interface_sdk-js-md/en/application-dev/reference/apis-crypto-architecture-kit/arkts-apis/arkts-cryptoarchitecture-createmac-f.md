@@ -14,13 +14,13 @@ function createMac(algName: string): Mac
 
 Creates a **Mac** instance for MAC operations.
 
-For details about the supported specifications, see
-[MAC Overview and Algorithm Specifications](../../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)
-.
+For details about the supported specifications, see [MAC Overview and Algorithm Specifications](../../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md).
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-cryptoFramework-function createMac(algName: string): Mac--><!--Device-cryptoFramework-function createMac(algName: string): Mac-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Mac
@@ -30,13 +30,13 @@ For details about the supported specifications, see
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algName | string | Yes | Specifies the digest algorithm. For details about the supported algorithms, see[MAC Overview and Algorithm Specifications](../../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md). |
+| algName | string | Yes | Specifies the digest algorithm. For details about the supported algorithms, see [MAC Overview and Algorithm Specifications](../../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Mac | Returns the [Mac](arkts-cryptoarchitecture-mac-i.md) instance created. |
+| [Mac](arkts-cryptoarchitecture-mac-i.md) | Returns the [Mac](arkts-cryptoarchitecture-mac-i.md) instance created. |
 
 **Error codes:**
 
@@ -70,13 +70,13 @@ function createMac(macSpec: MacSpec): Mac
 
 Creates a **Mac** instance for message authentication code (MAC) operations.
 
-For details about the supported specifications, see
-[MAC Overview and Algorithm Specifications](../../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)
-.
+For details about the supported specifications, see [MAC Overview and Algorithm Specifications](../../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md).
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-cryptoFramework-function createMac(macSpec: MacSpec): Mac--><!--Device-cryptoFramework-function createMac(macSpec: MacSpec): Mac-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Mac
 
@@ -84,13 +84,13 @@ For details about the supported specifications, see
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| macSpec | MacSpec | Yes | Specifies the input parameter struct based on the MAC algorithm. For details about thesupported algorithms, see[MAC Overview and Algorithm Specifications](../../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md). |
+| macSpec | [MacSpec](arkts-cryptoarchitecture-macspec-i.md) | Yes | Specifies the input parameter struct based on the MAC algorithm. For details about the supported algorithms, see [MAC Overview and Algorithm Specifications](../../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Mac | [Mac](arkts-cryptoarchitecture-mac-i.md) instance created. |
+| [Mac](arkts-cryptoarchitecture-mac-i.md) | [Mac](arkts-cryptoarchitecture-mac-i.md) instance created. |
 
 **Error codes:**
 

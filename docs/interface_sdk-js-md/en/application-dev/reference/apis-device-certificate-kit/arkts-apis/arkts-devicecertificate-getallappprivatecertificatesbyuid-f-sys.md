@@ -12,14 +12,15 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 function getAllAppPrivateCertificatesByUid(appUid: number) : Promise<CMResult>
 ```
 
-Obtains all private credentials of a specified application. This API is called only by the certificate management
-application. This API uses a promise to return the result.
+Obtains all private credentials of a specified application. This API is called only by the certificate management application. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-certificateManager-function getAllAppPrivateCertificatesByUid(appUid: int) : Promise<CMResult>--><!--Device-certificateManager-function getAllAppPrivateCertificatesByUid(appUid: int) : Promise<CMResult>-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -35,7 +36,7 @@ application. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **credentialDetailList** inthe [CMResult](arkts-devicecertificate-cmresult-i.md) object.<br>Note: If the number of private credentials is 0, the returned **CMResult** is **undefined**. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CMResult> | Promise used to return the operation result, that is, **credentialDetailList** in the [CMResult](arkts-devicecertificate-cmresult-i.md) object.<br>Note: If the number of private credentials is 0, the returned **CMResult** is **undefined**. |
 
 **Error codes:**
 

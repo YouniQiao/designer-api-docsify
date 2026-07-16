@@ -1,9 +1,10 @@
 # FormInfoFilter
 
-The optional options used as filters to ask
-getFormsInfo to return formInfos from only forms that match the options.
+The optional options used as filters to ask getFormsInfo to return formInfos from only forms that match the options.
 
 **Since:** 9
+
+<!--Device-formInfo-interface FormInfoFilter--><!--Device-formInfo-interface FormInfoFilter-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -19,14 +20,15 @@ import { formInfo } from '@kit.FormKit';
 moduleName?: string
 ```
 
-optional moduleName that used to ask getFormsInfo to return
-form infos with the same moduleName.
+optional moduleName that used to ask getFormsInfo to return form infos with the same moduleName.
 
 **Type:** string
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-FormInfoFilter-moduleName?: string--><!--Device-FormInfoFilter-moduleName?: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 

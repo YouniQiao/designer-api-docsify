@@ -12,15 +12,15 @@ import { notificationManager } from '@kit.NotificationKit';
 function setDistributedEnabledByBundle(bundle: BundleOption, deviceType: string, enable: boolean): Promise<void>
 ```
 
-Sets whether a specified application enables cross-device collaboration. This API uses a promise to return the
-result.
+Sets whether a specified application enables cross-device collaboration. This API uses a promise to return the result.
 
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,
-error code 801 is returned.
+This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function setDistributedEnabledByBundle(bundle: BundleOption, deviceType: string, enable: boolean): Promise<void>--><!--Device-notificationManager-function setDistributedEnabledByBundle(bundle: BundleOption, deviceType: string, enable: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -30,15 +30,15 @@ error code 801 is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
 | deviceType | string | Yes | Device type. |
-| enable | boolean | Yes | Whether a specified application enables cross-device collaboration. The value **true**indicates that the cross-device collaboration is enabled, and the value **false** indicates the opposite. |
+| enable | boolean | Yes | Whether a specified application enables cross-device collaboration. The value **true** indicates that the cross-device collaboration is enabled, and the value **false** indicates the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

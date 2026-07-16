@@ -12,14 +12,13 @@ import { display } from '@kit.ArkUI';
 function convertGlobalToRelativeCoordinate(position: Position, displayId?: number): RelativePosition
 ```
 
-Converts global coordinates (based on the top-left corner of the primary screen) into relative coordinates (based
-on the top-left corner of the screen specified by **displayId**). If **displayId** is not passed, the coordinates
-are converted relative to the screen where the global coordinates are located. If the global coordinates are not on
-any screen, the coordinates are converted relative to the primary screen by default.
+Converts global coordinates (based on the top-left corner of the primary screen) into relative coordinates (based on the top-left corner of the screen specified by **displayId**). If **displayId** is not passed, the coordinates are converted relative to the screen where the global coordinates are located. If the global coordinates are not on any screen, the coordinates are converted relative to the primary screen by default.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-display-function convertGlobalToRelativeCoordinate(position: Position, displayId?: long): RelativePosition--><!--Device-display-function convertGlobalToRelativeCoordinate(position: Position, displayId?: long): RelativePosition-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -27,14 +26,14 @@ any screen, the coordinates are converted relative to the primary screen by defa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | Position | Yes | Global coordinates to convert. |
-| displayId | number | No | Display ID for the relative coordinates. If this parameter is passed, the coordinatesare converted relative to this screen. If it is not provided, the coordinates are converted to the screen wherethe global coordinates are located, or the primary screen if they are not on any screen. |
+| position | [Position](arkts-arkui-position-i.md) | Yes | Global coordinates to convert. |
+| displayId | number | No | Display ID for the relative coordinates. If this parameter is passed, the coordinates are converted relative to this screen. If it is not provided, the coordinates are converted to the screen where the global coordinates are located, or the primary screen if they are not on any screen. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RelativePosition | Relative coordinates for the specified screen. |
+| [RelativePosition](arkts-arkui-relativeposition-i.md) | Relative coordinates for the specified screen. |
 
 **Error codes:**
 

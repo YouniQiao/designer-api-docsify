@@ -4,6 +4,8 @@ Obtains LTE cell information.
 
 **Since:** 8
 
+<!--Device-radio-export interface LteCellInformation--><!--Device-radio-export interface LteCellInformation-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Indicates the bandwidth.
 
 **Since:** 8
 
+<!--Device-LteCellInformation-bandwidth: int--><!--Device-LteCellInformation-bandwidth: int-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Indicates the cell global identification.
 **Type:** number
 
 **Since:** 8
+
+<!--Device-LteCellInformation-cgi: long--><!--Device-LteCellInformation-cgi: long-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -58,6 +64,8 @@ Indicates the E-UTRA Absolute Radio Frequency Channel Number.
 
 **Since:** 8
 
+<!--Device-LteCellInformation-earfcn: int--><!--Device-LteCellInformation-earfcn: int-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Support for New Radio_Dual Connectivity.
 **Type:** boolean
 
 **Since:** 8
+
+<!--Device-LteCellInformation-isSupportEndc: boolean--><!--Device-LteCellInformation-isSupportEndc: boolean-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -90,6 +100,8 @@ Indicates the mobile country code.
 
 **Since:** 8
 
+<!--Device-LteCellInformation-mcc: string--><!--Device-LteCellInformation-mcc: string-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -105,6 +117,8 @@ Indicates the mobile network code.
 **Type:** string
 
 **Since:** 8
+
+<!--Device-LteCellInformation-mnc: string--><!--Device-LteCellInformation-mnc: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -122,6 +136,8 @@ Indicates the physical cell identification.
 
 **Since:** 8
 
+<!--Device-LteCellInformation-pci: int--><!--Device-LteCellInformation-pci: int-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -137,6 +153,8 @@ Indicates the tracking area code.
 **Type:** number
 
 **Since:** 8
+
+<!--Device-LteCellInformation-tac: int--><!--Device-LteCellInformation-tac: int-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 

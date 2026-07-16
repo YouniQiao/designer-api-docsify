@@ -1,5 +1,11 @@
 # updatePrinterInformation（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+```
+
 ## updatePrinterInformation
 
 ```TypeScript
@@ -14,6 +20,8 @@ function updatePrinterInformation(printerInformation: PrinterInformation): Promi
 - API版本24+：ohos.permission.MANAGE_PRINT_JOB or ohos.permission.ENTERPRISE_MANAGE_PRINT
 - API版本18 - 23：ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function updatePrinterInformation(printerInformation: PrinterInformation): Promise<void>--><!--Device-print-function updatePrinterInformation(printerInformation: PrinterInformation): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -22,13 +30,13 @@ function updatePrinterInformation(printerInformation: PrinterInformation): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| printerInformation | PrinterInformation | 是 | 表示待更新信息的打印机。 |
+| printerInformation | [PrinterInformation](arkts-basicservices-printerinformation-i.md) | 是 | 表示待更新信息的打印机。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

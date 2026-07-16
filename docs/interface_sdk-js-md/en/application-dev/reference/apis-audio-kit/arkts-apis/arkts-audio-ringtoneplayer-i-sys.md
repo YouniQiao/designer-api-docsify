@@ -1,11 +1,10 @@
 # RingtonePlayer (System API)
 
-Provides APIs for setting and obtaining ringtone parameters as well as playing and stopping ringtones. Before calling
-any API in RingtonePlayer, you must use
-[getRingtonePlayer](arkts-audio-systemsoundmanager-i-sys.md#getringtoneplayer-1)
-to obtain a RingtonePlayer instance.
+Provides APIs for setting and obtaining ringtone parameters as well as playing and stopping ringtones. Before calling any API in RingtonePlayer, you must use [getRingtonePlayer](arkts-audio-systemsoundmanager-i-sys.md#getringtoneplayer-1)to obtain a RingtonePlayer instance.
 
 **Since:** 10
+
+<!--Device-unnamed-export interface RingtonePlayer--><!--Device-unnamed-export interface RingtonePlayer-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -21,6 +20,8 @@ Sets ringtone parameters. This API uses an asynchronous callback to return the r
 
 **Since:** 10
 
+<!--Device-RingtonePlayer-configure(options: RingtoneOptions, callback: AsyncCallback<void>): void--><!--Device-RingtonePlayer-configure(options: RingtoneOptions, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -29,8 +30,8 @@ Sets ringtone parameters. This API uses an asynchronous callback to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | RingtoneOptions | Yes | Ringtone parameters. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| options | [RingtoneOptions](arkts-audio-ringtoneoptions-t-sys.md) | Yes | Ringtone parameters. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 ## configure
 
@@ -42,6 +43,8 @@ Sets ringtone parameters. This API uses a promise to return the result.
 
 **Since:** 10
 
+<!--Device-RingtonePlayer-configure(options: RingtoneOptions): Promise<void>--><!--Device-RingtonePlayer-configure(options: RingtoneOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -50,13 +53,13 @@ Sets ringtone parameters. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | RingtoneOptions | Yes | Ringtone parameters. |
+| options | [RingtoneOptions](arkts-audio-ringtoneoptions-t-sys.md) | Yes | Ringtone parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## getAudioRendererInfo
 
@@ -64,10 +67,11 @@ Sets ringtone parameters. This API uses a promise to return the result.
 getAudioRendererInfo(callback: AsyncCallback<audio.AudioRendererInfo>): void
 ```
 
-Obtains the information about the audio renderer used by the ringtone. This API uses an asynchronous callback to
-return the result.
+Obtains the information about the audio renderer used by the ringtone. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-RingtonePlayer-getAudioRendererInfo(callback: AsyncCallback<audio.AudioRendererInfo>): void--><!--Device-RingtonePlayer-getAudioRendererInfo(callback: AsyncCallback<audio.AudioRendererInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -77,7 +81,7 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;audio.AudioRendererInfo&gt; | Yes | Callback used to return the result. If the operationis successful, **err** is **undefined** and **data** is the renderer information obtained; otherwise, **err**is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<audio.AudioRendererInfo> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the renderer information obtained; otherwise, **err** is an error object. |
 
 ## getAudioRendererInfo
 
@@ -85,10 +89,11 @@ return the result.
 getAudioRendererInfo(): Promise<audio.AudioRendererInfo>
 ```
 
-Obtains the information about the audio renderer used by the ringtone. This API uses a promise to return the
-result.
+Obtains the information about the audio renderer used by the ringtone. This API uses a promise to return the result.
 
 **Since:** 10
+
+<!--Device-RingtonePlayer-getAudioRendererInfo(): Promise<audio.AudioRendererInfo>--><!--Device-RingtonePlayer-getAudioRendererInfo(): Promise<audio.AudioRendererInfo>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -98,7 +103,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;audio.AudioRendererInfo&gt; | Promise used to return the renderer information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<audio.AudioRendererInfo> | Promise used to return the renderer information. |
 
 ## getTitle
 
@@ -110,6 +115,8 @@ Obtains the title of the ringtone. This API uses an asynchronous callback to ret
 
 **Since:** 10
 
+<!--Device-RingtonePlayer-getTitle(callback: AsyncCallback<string>): void--><!--Device-RingtonePlayer-getTitle(callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -118,7 +125,7 @@ Obtains the title of the ringtone. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the title obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the title obtained; otherwise, **err** is an error object. |
 
 ## getTitle
 
@@ -130,6 +137,8 @@ Obtains the title of the ringtone. This API uses a promise to return the result.
 
 **Since:** 10
 
+<!--Device-RingtonePlayer-getTitle(): Promise<string>--><!--Device-RingtonePlayer-getTitle(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -138,7 +147,7 @@ Obtains the title of the ringtone. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the title obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the title obtained. |
 
 ## off
 
@@ -150,6 +159,8 @@ Unsubscribes from the audio interruption event.
 
 **Since:** 10
 
+<!--Device-RingtonePlayer-off(type: 'audioInterrupt'): void--><!--Device-RingtonePlayer-off(type: 'audioInterrupt'): void-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -158,7 +169,7 @@ Unsubscribes from the audio interruption event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus ischanged. |
+| type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus is changed. |
 
 **Error codes:**
 
@@ -173,10 +184,11 @@ Unsubscribes from the audio interruption event.
 on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
 ```
 
-Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an
-asynchronous callback to return the result.
+Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-RingtonePlayer-on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void--><!--Device-RingtonePlayer-on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -186,8 +198,8 @@ asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus ischanged. |
-| callback | Callback&lt;audio.InterruptEvent&gt; | Yes | Callback used to return the event information. |
+| type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<audio.InterruptEvent> | Yes | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -206,6 +218,8 @@ Releases the ringtone player. This API uses an asynchronous callback to return t
 
 **Since:** 10
 
+<!--Device-RingtonePlayer-release(callback: AsyncCallback<void>): void--><!--Device-RingtonePlayer-release(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -214,7 +228,7 @@ Releases the ringtone player. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 ## release
 
@@ -226,6 +240,8 @@ Releases the ringtone player. This API uses a promise to return the result.
 
 **Since:** 10
 
+<!--Device-RingtonePlayer-release(): Promise<void>--><!--Device-RingtonePlayer-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -234,7 +250,7 @@ Releases the ringtone player. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## start
 
@@ -246,6 +262,8 @@ Starts playing the ringtone. This API uses an asynchronous callback to return th
 
 **Since:** 10
 
+<!--Device-RingtonePlayer-start(callback: AsyncCallback<void>): void--><!--Device-RingtonePlayer-start(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -254,7 +272,7 @@ Starts playing the ringtone. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 ## start
 
@@ -266,6 +284,8 @@ Starts playing the ringtone. This API uses a promise to return the result.
 
 **Since:** 10
 
+<!--Device-RingtonePlayer-start(): Promise<void>--><!--Device-RingtonePlayer-start(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -274,7 +294,7 @@ Starts playing the ringtone. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## stop
 
@@ -286,6 +306,8 @@ Stops playing the ringtone. This API uses an asynchronous callback to return the
 
 **Since:** 10
 
+<!--Device-RingtonePlayer-stop(callback: AsyncCallback<void>): void--><!--Device-RingtonePlayer-stop(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -294,7 +316,7 @@ Stops playing the ringtone. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 ## stop
 
@@ -306,6 +328,8 @@ Stops playing the ringtone. This API uses a promise to return the result.
 
 **Since:** 10
 
+<!--Device-RingtonePlayer-stop(): Promise<void>--><!--Device-RingtonePlayer-stop(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -314,7 +338,7 @@ Stops playing the ringtone. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## state
 
@@ -327,6 +351,8 @@ Gets player state.
 **Type:** media.AVPlayerState
 
 **Since:** 10
+
+<!--Device-RingtonePlayer-readonly state: media.AVPlayerState--><!--Device-RingtonePlayer-readonly state: media.AVPlayerState-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 

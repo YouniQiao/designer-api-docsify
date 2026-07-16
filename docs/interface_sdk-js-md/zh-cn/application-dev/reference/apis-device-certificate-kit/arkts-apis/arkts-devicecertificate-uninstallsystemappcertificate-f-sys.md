@@ -1,5 +1,11 @@
 # uninstallSystemAppCertificate（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+```
+
 ## uninstallSystemAppCertificate
 
 ```TypeScript
@@ -13,6 +19,8 @@ function uninstallSystemAppCertificate(keyUri: string) : Promise<void>
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_SYSTEM_APP_CERT
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-certificateManager-function uninstallSystemAppCertificate(keyUri: string) : Promise<void>--><!--Device-certificateManager-function uninstallSystemAppCertificate(keyUri: string) : Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -28,7 +36,7 @@ function uninstallSystemAppCertificate(keyUri: string) : Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

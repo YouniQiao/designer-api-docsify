@@ -12,14 +12,15 @@ import { formHost } from '@kit.FormKit';
 function getFormIdsByFormLocation(location: formInfo.FormLocation): Promise<Array<string>>
 ```
 
-Obtains the list of widget IDs at a specified location on the device. This API uses a promise to return the
-result.
+Obtains the list of widget IDs at a specified location on the device. This API uses a promise to return the result.
 
 **Since:** 24
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-formHost-function getFormIdsByFormLocation(location: formInfo.FormLocation): Promise<Array<string>>--><!--Device-formHost-function getFormIdsByFormLocation(location: formInfo.FormLocation): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -35,7 +36,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the obtained widget ID list. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return the obtained widget ID list. |
 
 **Error codes:**
 

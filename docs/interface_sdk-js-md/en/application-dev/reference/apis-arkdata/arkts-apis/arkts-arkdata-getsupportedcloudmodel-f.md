@@ -18,11 +18,13 @@ Obtains the supported cloud embedding models.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-intelligence-function getSupportedCloudModel(): Promise<Array<CloudModelInfo>>--><!--Device-intelligence-function getSupportedCloudModel(): Promise<Array<CloudModelInfo>>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;CloudModelInfo&gt;&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<CloudModelInfo>> | The promise returned by the function. |
 

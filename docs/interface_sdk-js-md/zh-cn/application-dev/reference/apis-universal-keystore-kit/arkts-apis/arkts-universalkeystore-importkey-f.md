@@ -1,5 +1,11 @@
 # importKey
 
+## 导入模块
+
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+```
+
 ## importKey
 
 ```TypeScript
@@ -8,10 +14,10 @@ function importKey(keyAlias: string, options: HuksOptions, callback: AsyncCallba
 
 导入明文密钥，使用Callback方式回调异步返回结果。
 
-> **说明：**
->
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [huks.importKeyItem<sup>9+</sup>](arkts-universalkeystore-importkeyitem-f.md#importkeyitem-1)
+> **说明：**  
+>  
+> 从API version 8开始支持，从API version 9开始废弃，建议使用  
+> [huks.importKeyItem<sup>9+</sup>](arkts-universalkeystore-importkeyitem-f.md#importkeyitem-1)  
 > 替代。
 
 **起始版本：** 8
@@ -20,6 +26,8 @@ function importKey(keyAlias: string, options: HuksOptions, callback: AsyncCallba
 
 **替代接口：** importKeyItem(keyAlias:
 
+<!--Device-huks-function importKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function importKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **参数：**
@@ -27,8 +35,8 @@ function importKey(keyAlias: string, options: HuksOptions, callback: AsyncCallba
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 密钥别名。密钥别名的最大长度为128字节，建议不包含个人信息等敏感词汇。 |
-| options | HuksOptions | 是 | 用于导入时所需TAG和需要导入的密钥。 |
-| callback | AsyncCallback&lt;HuksResult&gt; | 是 | 回调函数。当导入密钥成功时，err为undefined，data为获取到的HuksResult；否则为错误对象。 |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | 是 | 用于导入时所需TAG和需要导入的密钥。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<HuksResult> | 是 | 回调函数。当导入密钥成功时，err为undefined，data为获取到的HuksResult；否则为错误对象。 |
 
 **示例：**
 
@@ -88,9 +96,9 @@ function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
 
 导入明文密钥。使用Promise异步回调。
 
-> **说明：**
->
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> **说明：**  
+>  
+> 从API version 8开始支持，从API version 9开始废弃，建议使用  
 > [huks.importKeyItem<sup>9+</sup>](arkts-universalkeystore-importkeyitem-f.md#importkeyitem-2)替代。
 
 **起始版本：** 8
@@ -99,6 +107,8 @@ function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
 
 **替代接口：** importKeyItem(keyAlias:
 
+<!--Device-huks-function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **参数：**
@@ -106,13 +116,13 @@ function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 密钥别名。密钥别名的最大长度为128字节，建议不包含个人信息等敏感词汇。 |
-| options | HuksOptions | 是 | 用于导入时所需TAG和需要导入的密钥。 |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | 是 | 用于导入时所需TAG和需要导入的密钥。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;HuksResult&gt; | Promise对象，返回HuksResult。 |
+| Promise<HuksResult> | Promise对象，返回HuksResult。 |
 
 **示例：**
 

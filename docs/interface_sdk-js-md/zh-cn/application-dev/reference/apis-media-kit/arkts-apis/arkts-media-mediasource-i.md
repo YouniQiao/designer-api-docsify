@@ -1,16 +1,22 @@
 # MediaSource
 
-媒体数据信息。来源于
-[createMediaSourceWithUrl](arkts-media-createmediasourcewithurl-f.md#createmediasourcewithurl-1)
-。
+媒体数据信息。来源于[createMediaSourceWithUrl](arkts-media-createmediasourcewithurl-f.md#createmediasourcewithurl-1)。
 
-> **说明：**
->
+> **说明：**  
+>  
 > - 本Interface首批接口从API version 12开始支持。
 
 **起始版本：** 12
 
+<!--Device-unnamed-interface MediaSource--><!--Device-unnamed-interface MediaSource-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
+
+## 导入模块
+
+```TypeScript
+import { media } from '@kit.MediaKit';
+```
 
 ## enableOfflineCache
 
@@ -21,6 +27,8 @@ enableOfflineCache(enable: boolean): void
 是否在视频播放期间启用离线缓存。
 
 **起始版本：** 23
+
+<!--Device-MediaSource-enableOfflineCache(enable: boolean): void--><!--Device-MediaSource-enableOfflineCache(enable: boolean): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -42,7 +50,9 @@ getID(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaSource-getID(): string--><!--Device-MediaSource-getID(): string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -64,13 +74,15 @@ Obtains the configured audio and video feature filtering values.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-MediaSource-getTrackSelectionFilter(): TrackSelectionFilter | undefined--><!--Device-MediaSource-getTrackSelectionFilter(): TrackSelectionFilter | undefined-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| TrackSelectionFilter | If the TrackSelectionFilter object exists,the TrackSelectionFilter object is returned. Otherwise, the TrackSelectionFilter object is returned. |
+| [TrackSelectionFilter](arkts-media-trackselectionfilter-i.md) | If the TrackSelectionFilter object exists,the TrackSelectionFilter object is returned. Otherwise, the TrackSelectionFilter object is returned. |
 
 ## setMediaResourceLoaderDelegate
 
@@ -82,7 +94,9 @@ setMediaResourceLoaderDelegate(resourceLoader: MediaSourceLoader): void
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaSource-setMediaResourceLoaderDelegate(resourceLoader: MediaSourceLoader): void--><!--Device-MediaSource-setMediaResourceLoaderDelegate(resourceLoader: MediaSourceLoader): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -90,7 +104,7 @@ setMediaResourceLoaderDelegate(resourceLoader: MediaSourceLoader): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resourceLoader | MediaSourceLoader | 是 | 应用实现的媒体数据获取接口，方便播放器获取数据。 |
+| resourceLoader | [MediaSourceLoader](arkts-media-mediasourceloader-i.md) | 是 | 应用实现的媒体数据获取接口，方便播放器获取数据。 |
 
 ## setMimeType
 
@@ -102,7 +116,9 @@ setMimeType(mimeType: AVMimeTypes): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaSource-setMimeType(mimeType: AVMimeTypes): void--><!--Device-MediaSource-setMimeType(mimeType: AVMimeTypes): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -110,7 +126,7 @@ setMimeType(mimeType: AVMimeTypes): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mimeType | AVMimeTypes | 是 | 媒体MIME类型。 |
+| mimeType | [AVMimeTypes](arkts-media-avmimetypes-e.md) | 是 | 媒体MIME类型。 |
 
 ## setTrackSelectionFilter
 
@@ -118,14 +134,13 @@ setMimeType(mimeType: AVMimeTypes): void
 setTrackSelectionFilter(filter: TrackSelectionFilter): void
 ```
 
-Set the audio and video feature filtering items of the MediaSource,
-After the user defines the audio and video filtering items of the MediaSource,
-When playing or downloading MediaSource data offline,
-Preferentially perform a corresponding operation in the filtering feature.
+Set the audio and video feature filtering items of the MediaSource,After the user defines the audio and video filtering items of the MediaSource,When playing or downloading MediaSource data offline,Preferentially perform a corresponding operation in the filtering feature.
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MediaSource-setTrackSelectionFilter(filter: TrackSelectionFilter): void--><!--Device-MediaSource-setTrackSelectionFilter(filter: TrackSelectionFilter): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -133,5 +148,5 @@ Preferentially perform a corresponding operation in the filtering feature.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | TrackSelectionFilter | 是 | Specifies the audio and video features of the pre-downloaded streamingmedia. |
+| filter | [TrackSelectionFilter](arkts-media-trackselectionfilter-i.md) | 是 | Specifies the audio and video features of the pre-downloaded streaming media. |
 

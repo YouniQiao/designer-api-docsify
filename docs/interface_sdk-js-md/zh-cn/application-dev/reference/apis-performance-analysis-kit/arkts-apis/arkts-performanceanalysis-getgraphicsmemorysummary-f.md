@@ -1,5 +1,11 @@
 # getGraphicsMemorySummary
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+```
+
 ## getGraphicsMemorySummary
 
 ```TypeScript
@@ -10,7 +16,9 @@ function getGraphicsMemorySummary(interval?: number): Promise<GraphicsMemorySumm
 
 **起始版本：** 21
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+<!--Device-hidebug-function getGraphicsMemorySummary(interval?: int): Promise<GraphicsMemorySummary>--><!--Device-hidebug-function getGraphicsMemorySummary(interval?: int): Promise<GraphicsMemorySummary>-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -24,7 +32,7 @@ function getGraphicsMemorySummary(interval?: number): Promise<GraphicsMemorySumm
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;GraphicsMemorySummary&gt; | promise���󣬷���Ӧ���Դ����ݡ� |
+| Promise<GraphicsMemorySummary> | promise���󣬷���Ӧ���Դ����ݡ� |
 
 **错误码：**
 

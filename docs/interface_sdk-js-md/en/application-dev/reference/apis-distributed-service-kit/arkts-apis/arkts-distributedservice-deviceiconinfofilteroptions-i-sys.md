@@ -4,6 +4,8 @@ Defines the device icon information filter options.
 
 **Since:** 18
 
+<!--Device-distributedDeviceManager-interface DeviceIconInfoFilterOptions--><!--Device-distributedDeviceManager-interface DeviceIconInfoFilterOptions-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Image type. This parameter has a fixed value of **ID**, indicating the product's
 
 **Since:** 18
 
+<!--Device-DeviceIconInfoFilterOptions-imageType: string--><!--Device-DeviceIconInfoFilterOptions-imageType: string-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Internal product model. This parameter is left unspecified by default.
 **Type:** string
 
 **Since:** 18
+
+<!--Device-DeviceIconInfoFilterOptions-internalModel?: string--><!--Device-DeviceIconInfoFilterOptions-internalModel?: string-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -58,6 +64,8 @@ Product ID.
 
 **Since:** 18
 
+<!--Device-DeviceIconInfoFilterOptions-productId: string--><!--Device-DeviceIconInfoFilterOptions-productId: string-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -70,12 +78,14 @@ specName: string
 
 Image specification name. Value:
 
-- **lg**: large image (size: 1016064 pixels)
+- **lg**: large image (size: 1016064 pixels)  
 - **sm**: small image (size: 65536 pixels)
 
 **Type:** string
 
 **Since:** 18
+
+<!--Device-DeviceIconInfoFilterOptions-specName: string--><!--Device-DeviceIconInfoFilterOptions-specName: string-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -92,6 +102,8 @@ Sub-product ID. This parameter is left unspecified by default.
 **Type:** string
 
 **Since:** 18
+
+<!--Device-DeviceIconInfoFilterOptions-subProductId?: string--><!--Device-DeviceIconInfoFilterOptions-subProductId?: string-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 

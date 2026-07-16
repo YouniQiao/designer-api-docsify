@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare interface OnLoadStartedEvent--><!--Device-unnamed-declare interface OnLoadStartedEvent-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## url
@@ -17,6 +19,8 @@ url: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-OnLoadStartedEvent-url: string--><!--Device-OnLoadStartedEvent-url: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

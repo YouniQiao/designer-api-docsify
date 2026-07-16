@@ -6,7 +6,15 @@
 
 **起始版本：** 18
 
+<!--Device-unnamed-export declare class ArcListItemAttribute extends CommonMethod<ArcListItemAttribute>--><!--Device-unnamed-export declare class ArcListItemAttribute extends CommonMethod<ArcListItemAttribute>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
+
+## 导入模块
+
+```TypeScript
+import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from '@kit.ArkUI';
+```
 
 ## autoScale
 
@@ -18,7 +26,9 @@ autoScale(enable: Optional<boolean>): ArcListItemAttribute
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcListItemAttribute-autoScale(enable: Optional<boolean>): ArcListItemAttribute--><!--Device-ArcListItemAttribute-autoScale(enable: Optional<boolean>): ArcListItemAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -26,13 +36,13 @@ autoScale(enable: Optional<boolean>): ArcListItemAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | Optional&lt;boolean&gt; | 是 | ArcListItem是否支持自动缩放显示，true表示支持自动缩放显示，false表示不支持自动缩放显示。<br/>默认值：true，支持自动缩放显示。 |
+| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)<boolean> | 是 | ArcListItem是否支持自动缩放显示，true表示支持自动缩放显示，false表示不支持自动缩放显示。<br/>默认值：true，支持自动缩放显示。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArcListItemAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcListItemAttribute](arkts-arkui-arclistitemattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## swipeAction
 
@@ -44,7 +54,9 @@ swipeAction(options: Optional<SwipeActionOptions>): ArcListItemAttribute
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcListItemAttribute-swipeAction(options: Optional<SwipeActionOptions>): ArcListItemAttribute--><!--Device-ArcListItemAttribute-swipeAction(options: Optional<SwipeActionOptions>): ArcListItemAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -52,11 +64,11 @@ swipeAction(options: Optional<SwipeActionOptions>): ArcListItemAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | Optional&lt;SwipeActionOptions&gt; | 是 | ArcListItem的划出组件。 |
+| options | [Optional](../arkts-components/arkts-arkui-optional-t.md)<SwipeActionOptions> | 是 | ArcListItem的划出组件。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArcListItemAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcListItemAttribute](arkts-arkui-arclistitemattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 

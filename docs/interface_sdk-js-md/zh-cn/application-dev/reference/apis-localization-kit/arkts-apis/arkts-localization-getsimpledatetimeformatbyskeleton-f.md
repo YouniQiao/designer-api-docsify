@@ -1,17 +1,24 @@
 # getSimpleDateTimeFormatBySkeleton
 
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
+
 ## getSimpleDateTimeFormatBySkeleton
 
 ```TypeScript
 export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleDateTimeFormat
 ```
 
-通过框架字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatByPattern](arkts-localization-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern-1)接口获
-取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](arkts-localization-simpledatetimeformat-c.md#format-1)的示例。
+通过框架字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatByPattern](arkts-localization-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern-1)接口获取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](arkts-localization-simpledatetimeformat-c.md#format-1)的示例。
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-i18n-export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleDateTimeFormat--><!--Device-i18n-export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleDateTimeFormat-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -26,7 +33,7 @@ export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: Int
 
 | 类型 | 说明 |
 | --- | --- |
-| SimpleDateTimeFormat | SimpleDateTimeFormat对象。 |
+| [SimpleDateTimeFormat](arkts-localization-simpledatetimeformat-c.md) | SimpleDateTimeFormat对象。 |
 
 **错误码：**
 
@@ -41,8 +48,7 @@ export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: Int
 export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: intl.Locale): SimpleDateTimeFormat
 ```
 
-通过框架字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatByPattern](arkts-localization-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern-1)接口获
-取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](arkts-localization-simpledatetimeformat-c.md#format-1)的示例。
+通过框架字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatByPattern](arkts-localization-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern-1)接口获取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](arkts-localization-simpledatetimeformat-c.md#format-1)的示例。
 
 **起始版本：** 18
 
@@ -50,7 +56,9 @@ export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: int
 
 **替代接口：** getSimpleDateTimeFormatBySkeleton(skeleton:
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-i18n-export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: intl.Locale): SimpleDateTimeFormat--><!--Device-i18n-export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: intl.Locale): SimpleDateTimeFormat-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -65,7 +73,7 @@ export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: int
 
 | 类型 | 说明 |
 | --- | --- |
-| SimpleDateTimeFormat | SimpleDateTimeFormat对象。 |
+| [SimpleDateTimeFormat](arkts-localization-simpledatetimeformat-c.md) | SimpleDateTimeFormat对象。 |
 
 **错误码：**
 

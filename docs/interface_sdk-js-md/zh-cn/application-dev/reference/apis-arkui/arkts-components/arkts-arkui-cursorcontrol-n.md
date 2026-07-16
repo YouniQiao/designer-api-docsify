@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace cursorControl--><!--Device-unnamed-declare namespace cursorControl-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 汇总

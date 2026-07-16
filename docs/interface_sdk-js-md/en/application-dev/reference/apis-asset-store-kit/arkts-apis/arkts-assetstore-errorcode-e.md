@@ -4,6 +4,8 @@ Enumerates the error codes.
 
 **Since:** 11
 
+<!--Device-asset-enum ErrorCode--><!--Device-asset-enum ErrorCode-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 ## PERMISSION_DENIED
@@ -16,6 +18,8 @@ The caller does not have the permission.
 
 **Since:** 11
 
+<!--Device-ErrorCode-PERMISSION_DENIED = 201--><!--Device-ErrorCode-PERMISSION_DENIED = 201-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 ## NOT_SYSTEM_APPLICATION
@@ -27,6 +31,8 @@ NOT_SYSTEM_APPLICATION = 202
 The caller is not a system application.
 
 **Since:** 12
+
+<!--Device-ErrorCode-NOT_SYSTEM_APPLICATION = 202--><!--Device-ErrorCode-NOT_SYSTEM_APPLICATION = 202-End-->
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -42,6 +48,8 @@ The argument is invalid.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-ErrorCode-INVALID_ARGUMENT = 401--><!--Device-ErrorCode-INVALID_ARGUMENT = 401-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 ## SERVICE_UNAVAILABLE
@@ -55,6 +63,8 @@ The ASSET service is unavailable.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ErrorCode-SERVICE_UNAVAILABLE = 24000001--><!--Device-ErrorCode-SERVICE_UNAVAILABLE = 24000001-End-->
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -70,6 +80,8 @@ Failed to find the asset.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-ErrorCode-NOT_FOUND = 24000002--><!--Device-ErrorCode-NOT_FOUND = 24000002-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 ## DUPLICATED
@@ -83,6 +95,8 @@ The specified asset already exists.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ErrorCode-DUPLICATED = 24000003--><!--Device-ErrorCode-DUPLICATED = 24000003-End-->
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -98,6 +112,8 @@ The access to the asset is denied.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-ErrorCode-ACCESS_DENIED = 24000004--><!--Device-ErrorCode-ACCESS_DENIED = 24000004-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 ## STATUS_MISMATCH
@@ -111,6 +127,8 @@ The screen lock status does not match.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ErrorCode-STATUS_MISMATCH = 24000005--><!--Device-ErrorCode-STATUS_MISMATCH = 24000005-End-->
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -126,6 +144,8 @@ The system memory is insufficient.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-ErrorCode-OUT_OF_MEMORY = 24000006--><!--Device-ErrorCode-OUT_OF_MEMORY = 24000006-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 ## DATA_CORRUPTED
@@ -139,6 +159,8 @@ The asset is corrupted.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ErrorCode-DATA_CORRUPTED = 24000007--><!--Device-ErrorCode-DATA_CORRUPTED = 24000007-End-->
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -154,6 +176,8 @@ The database operation failed.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-ErrorCode-DATABASE_ERROR = 24000008--><!--Device-ErrorCode-DATABASE_ERROR = 24000008-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 ## CRYPTO_ERROR
@@ -167,6 +191,8 @@ The crypto operation failed.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ErrorCode-CRYPTO_ERROR = 24000009--><!--Device-ErrorCode-CRYPTO_ERROR = 24000009-End-->
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -182,6 +208,8 @@ IPC failed.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-ErrorCode-IPC_ERROR = 24000010--><!--Device-ErrorCode-IPC_ERROR = 24000010-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 ## BMS_ERROR
@@ -195,6 +223,8 @@ The Bundle Manager service is abnormal.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ErrorCode-BMS_ERROR = 24000011--><!--Device-ErrorCode-BMS_ERROR = 24000011-End-->
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -210,6 +240,8 @@ The account service is abnormal.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-ErrorCode-ACCOUNT_ERROR = 24000012--><!--Device-ErrorCode-ACCOUNT_ERROR = 24000012-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 ## ACCESS_TOKEN_ERROR
@@ -223,6 +255,8 @@ The Access Token service is abnormal.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ErrorCode-ACCESS_TOKEN_ERROR = 24000013--><!--Device-ErrorCode-ACCESS_TOKEN_ERROR = 24000013-End-->
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -238,6 +272,8 @@ The file operation failed.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-ErrorCode-FILE_OPERATION_ERROR = 24000014--><!--Device-ErrorCode-FILE_OPERATION_ERROR = 24000014-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 ## GET_SYSTEM_TIME_ERROR
@@ -251,6 +287,8 @@ Failed to obtain the system time.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ErrorCode-GET_SYSTEM_TIME_ERROR = 24000015--><!--Device-ErrorCode-GET_SYSTEM_TIME_ERROR = 24000015-End-->
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -266,6 +304,8 @@ The number of cached records exceeds the upper limit.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-ErrorCode-LIMIT_EXCEEDED = 24000016--><!--Device-ErrorCode-LIMIT_EXCEEDED = 24000016-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 ## UNSUPPORTED
@@ -279,6 +319,8 @@ The feature is not supported.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ErrorCode-UNSUPPORTED = 24000017--><!--Device-ErrorCode-UNSUPPORTED = 24000017-End-->
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -294,6 +336,8 @@ Parameter verification failed.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-ErrorCode-PARAM_VERIFICATION_FAILED = 24000018--><!--Device-ErrorCode-PARAM_VERIFICATION_FAILED = 24000018-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 ## INCONSISTENT_ATTRIBUTE
@@ -307,6 +351,8 @@ The error code indicates that the attributes required to be consistent are incon
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ErrorCode-INCONSISTENT_ATTRIBUTE = 24000019--><!--Device-ErrorCode-INCONSISTENT_ATTRIBUTE = 24000019-End-->
 
 **System capability:** SystemCapability.Security.Asset
 

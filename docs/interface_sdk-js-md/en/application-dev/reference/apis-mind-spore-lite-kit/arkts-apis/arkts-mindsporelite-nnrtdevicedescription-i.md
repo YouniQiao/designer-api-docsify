@@ -4,6 +4,8 @@ Provides the nnrt device description
 
 **Since:** 12
 
+<!--Device-mindSporeLite-interface NNRTDeviceDescription--><!--Device-mindSporeLite-interface NNRTDeviceDescription-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 ## Modules to Import
@@ -23,6 +25,8 @@ Get device id
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-NNRTDeviceDescription-deviceID() : bigint--><!--Device-NNRTDeviceDescription-deviceID() : bigint-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -62,6 +66,8 @@ Get device name.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-NNRTDeviceDescription-deviceName() : string--><!--Device-NNRTDeviceDescription-deviceName() : string-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Return value:**
@@ -100,13 +106,15 @@ Get device type.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-NNRTDeviceDescription-deviceType() : NNRTDeviceType--><!--Device-NNRTDeviceDescription-deviceType() : NNRTDeviceType-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| NNRTDeviceType | the device type |
+| [NNRTDeviceType](arkts-mindsporelite-nnrtdevicetype-e.md) | the device type |
 
 **Example**
 

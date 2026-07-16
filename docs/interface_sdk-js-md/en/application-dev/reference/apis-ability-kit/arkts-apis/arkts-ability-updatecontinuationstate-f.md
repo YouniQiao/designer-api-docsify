@@ -17,8 +17,7 @@ function updateContinuationState(
   ): void
 ```
 
-Instructs the device selection module to update the device connection state. This API uses an asynchronous callback
-to return the result.
+Instructs the device selection module to update the device connection state. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -30,6 +29,18 @@ to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-continuationManager-function updateContinuationState(
+    token: number,
+    deviceId: string,
+    status: DeviceConnectState,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-continuationManager-function updateContinuationState(
+    token: number,
+    deviceId: string,
+    status: DeviceConnectState,
+    callback: AsyncCallback<void>
+  ): void-End-->
+
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 **Parameters:**
@@ -38,8 +49,8 @@ to return the result.
 | --- | --- | --- | --- |
 | token | number | Yes | Token obtained after the registration of the continuation management service. |
 | deviceId | string | Yes | Device ID. |
-| status | DeviceConnectState | Yes | Device connection state. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the state is updated, **err** is**undefined**; otherwise, **err** is an error object. |
+| status | [DeviceConnectState](arkts-ability-deviceconnectstate-e.md) | Yes | Device connection state. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the state is updated, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -78,8 +89,7 @@ try {
 function updateContinuationState(token: number, deviceId: string, status: DeviceConnectState): Promise<void>
 ```
 
-Instructs the device selection module to update the device connection state. This API uses a promise to return the
-result.
+Instructs the device selection module to update the device connection state. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -91,6 +101,8 @@ result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-continuationManager-function updateContinuationState(token: number, deviceId: string, status: DeviceConnectState): Promise<void>--><!--Device-continuationManager-function updateContinuationState(token: number, deviceId: string, status: DeviceConnectState): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 **Parameters:**
@@ -99,13 +111,13 @@ result.
 | --- | --- | --- | --- |
 | token | number | Yes | Token obtained after the registration of the continuation management service. |
 | deviceId | string | Yes | Device ID. |
-| status | DeviceConnectState | Yes | Device connection state. |
+| status | [DeviceConnectState](arkts-ability-deviceconnectstate-e.md) | Yes | Device connection state. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 

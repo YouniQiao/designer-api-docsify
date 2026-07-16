@@ -1,5 +1,11 @@
 # getForegroundApplications（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+```
+
 ## getForegroundApplications
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>)
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
+<!--Device-appManager-function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>): void--><!--Device-appManager-function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;AppStateData&gt;&gt; | 是 | 以回调方式返回接口运行结果及应用状态数据数组，可进行错误处理或其他自定义处理。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<AppStateData>> | 是 | 以回调方式返回接口运行结果及应用状态数据数组，可进行错误处理或其他自定义处理。 |
 
 **错误码：**
 
@@ -68,6 +76,8 @@ function getForegroundApplications(): Promise<Array<AppStateData>>
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
+<!--Device-appManager-function getForegroundApplications(): Promise<Array<AppStateData>>--><!--Device-appManager-function getForegroundApplications(): Promise<Array<AppStateData>>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -76,7 +86,7 @@ function getForegroundApplications(): Promise<Array<AppStateData>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;AppStateData&gt;&gt; | 返回前台进程应用程序的数组。 |
+| Promise<Array<AppStateData>> | 返回前台进程应用程序的数组。 |
 
 **错误码：**
 

@@ -1,19 +1,26 @@
 # stopUsingPermission（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+```
+
 ## stopUsingPermission
 
 ```TypeScript
 function stopUsingPermission(tokenID: number, permissionName: Permissions): Promise<void>
 ```
 
-系统应用调用此接口，标记不再使用指定权限。调用成功后，隐私服务将此状态变化通知所有该权限使用状态变更事件的订阅者。
-适用于应用完成敏感操作后或退出前台时，通知系统权限使用结束。使用Promise异步回调。
+系统应用调用此接口，标记不再使用指定权限。调用成功后，隐私服务将此状态变化通知所有该权限使用状态变更事件的订阅者。适用于应用完成敏感操作后或退出前台时，通知系统权限使用结束。使用Promise异步回调。
 
 该接口需与[startUsingPermission](arkts-ability-startusingpermission-f-sys.md#startusingpermission-1)配套使用。
 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
+
+<!--Device-privacyManager-function stopUsingPermission(tokenID: int, permissionName: Permissions): Promise<void>--><!--Device-privacyManager-function stopUsingPermission(tokenID: int, permissionName: Permissions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -23,14 +30,14 @@ function stopUsingPermission(tokenID: number, permissionName: Permissions): Prom
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | number | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId]{@link./bundleManager/ApplicationInfo:ApplicationInfo.accessTokenId}字段获取。传入无效值时返回错误码12100001。<br>取值限定为整数。取值约束：该参数必须为大于0的整数。<br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1)。 |
+| tokenID | number | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。<br>取值限定为整数。取值约束：该参数必须为大于0的整数。<br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1)。 |
 | permissionName | Permissions | 是 | 需要停止使用的权限名称。传入无效值时返回错误码12100001。<br>取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -68,14 +75,15 @@ privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO').then((
 function stopUsingPermission(tokenID: number, permissionName: Permissions, callback: AsyncCallback<void>): void
 ```
 
-系统应用调用此接口，标记不再使用指定权限。调用成功后，隐私服务将此状态变化通知所有该权限使用状态变更事件的订阅者。
-适用于应用完成敏感操作后或退出前台时，通知系统权限使用结束。使用callback异步回调。
+系统应用调用此接口，标记不再使用指定权限。调用成功后，隐私服务将此状态变化通知所有该权限使用状态变更事件的订阅者。适用于应用完成敏感操作后或退出前台时，通知系统权限使用结束。使用callback异步回调。
 
 该接口需与[startUsingPermission](arkts-ability-startusingpermission-f-sys.md#startusingpermission-1)配套使用。
 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
+
+<!--Device-privacyManager-function stopUsingPermission(tokenID: int, permissionName: Permissions, callback: AsyncCallback<void>): void--><!--Device-privacyManager-function stopUsingPermission(tokenID: int, permissionName: Permissions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -85,9 +93,9 @@ function stopUsingPermission(tokenID: number, permissionName: Permissions, callb
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | number | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId]{@link./bundleManager/ApplicationInfo:ApplicationInfo.accessTokenId}字段获取。传入无效值时返回错误码12100001。<br>取值限定为整数。取值约束：该参数必须为大于0的整数。<br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1)。 |
+| tokenID | number | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。<br>取值限定为整数。取值约束：该参数必须为大于0的整数。<br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1)。 |
 | permissionName | Permissions | 是 | 需要停止使用的权限名称。传入无效值时返回错误码12100001。<br>取值约束：权限名长度不能超过256个字符。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当停止使用权限成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当停止使用权限成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -132,8 +140,7 @@ function stopUsingPermission(
   ): Promise<void>
 ```
 
-系统应用调用此接口，标记不再使用指定权限。调用成功后，隐私服务将此状态变化通知所有该权限使用状态变更事件的订阅者。
-适用于应用完成敏感操作后或退出前台时，通知系统权限使用结束。使用Promise异步回调。
+系统应用调用此接口，标记不再使用指定权限。调用成功后，隐私服务将此状态变化通知所有该权限使用状态变更事件的订阅者。适用于应用完成敏感操作后或退出前台时，通知系统权限使用结束。使用Promise异步回调。
 
 pid需要与[startUsingPermission](arkts-ability-startusingpermission-f-sys.md#startusingpermission-1)传入的pid相同。
 
@@ -143,6 +150,18 @@ pid需要与[startUsingPermission](arkts-ability-startusingpermission-f-sys.md#s
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-privacyManager-function stopUsingPermission(
+    tokenID: int,
+    permissionName: Permissions,
+    pid?: int,
+    options?: PermissionUsingOptions
+  ): Promise<void>--><!--Device-privacyManager-function stopUsingPermission(
+    tokenID: int,
+    permissionName: Permissions,
+    pid?: int,
+    options?: PermissionUsingOptions
+  ): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -151,16 +170,16 @@ pid需要与[startUsingPermission](arkts-ability-startusingpermission-f-sys.md#s
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | number | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId]{@link./bundleManager/ApplicationInfo:ApplicationInfo.accessTokenId}字段获取。传入无效值时返回错误码12100001。<br>取值限定为整数。取值约束：该参数必须为大于0的整数。<br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1)。 |
+| tokenID | number | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。<br>取值限定为整数。取值约束：该参数必须为大于0的整数。<br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1)。 |
 | permissionName | Permissions | 是 | 需要停止使用的权限名称。传入无效值时返回错误码12100001。 |
 | pid | number | 否 | 调用方的进程pid，需与[startUsingPermission](arkts-ability-startusingpermission-f-sys.md#startusingpermission-1)传入的pid相同。不满足配套关系可能导致API调用失败（错误码12100004）。<br>取值限定为整数。默认值：-1，表示不根据进程生命周期响应。 |
-| options | PermissionUsingOptions | 否 | 权限使用可选参数，用于指定扩展身份。当需要标识调用方的扩展身份信息时传入此参数。<br>默认值：结构内每个属性的默认值请参考 [PermissionUsingOptions](arkts-ability-permissionusingoptions-i-sys.md)。 |
+| options | [PermissionUsingOptions](arkts-ability-permissionusingoptions-i-sys.md) | 否 | 权限使用可选参数，用于指定扩展身份。当需要标识调用方的扩展身份信息时传入此参数。<br>默认值：结构内每个属性的默认值请参考 [PermissionUsingOptions](arkts-ability-permissionusingoptions-i-sys.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -168,7 +187,7 @@ pid需要与[startUsingPermission](arkts-ability-startusingpermission-f-sys.md#s
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission"ohos.permission.PERMISSION_USED_STATS". |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system app. Interface caller is not a system app. |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenID is 0, the permissionName exceeds256 characters, the type of the specified tokenID is not of the application type, or the enhancedIdentityin PermissionUsingOptions exceeds 48 characters. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The tokenID is 0, the permissionName exceeds256 characters, the type of the specified tokenID is not of the application type, or the enhancedIdentity in PermissionUsingOptions exceeds 48 characters. |
 | [12100003](../errorcode-access-token.md#12100003-权限名不存在) | The specified permission does not exist or is not a user_grant permission. |
 | [12100004](../errorcode-access-token.md#12100004-接口未配套使用) | The API is not used in pair with 'startUsingPermission'. |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
@@ -220,13 +239,21 @@ function stopUsingPermission(
 
 系统应用调用此接口，标记不再使用指定权限。调用成功后，隐私服务将此状态变化通知所有该权限使用状态变更事件的订阅者。适用于应用完成敏感操作后或退出前台时，通知系统权限使用结束。使用Promise异步回调。
 
-pid需要与
-[startUsingPermission](privacyManager.startUsingPermission(tokenID: int, permissionName: Permissions, pid?: int, usedType?: PermissionUsedType))
-传入的pid相同。
+pid需要与[startUsingPermission](arkts-ability-startusingpermission-f-sys.md#startusingpermission-2)传入的pid相同。
 
 **起始版本：** 18
 
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
+
+<!--Device-privacyManager-function stopUsingPermission(
+    tokenID: int,
+    permissionName: Permissions,
+    pid?: int
+  ): Promise<void>--><!--Device-privacyManager-function stopUsingPermission(
+    tokenID: int,
+    permissionName: Permissions,
+    pid?: int
+  ): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -236,15 +263,15 @@ pid需要与
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | number | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId]{@link./bundleManager/ApplicationInfo:ApplicationInfo.accessTokenId}字段获取。传入无效值时返回错误码12100001。<br>取值限定为整数。取值约束：该参数必须为大于0的整数。<br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1)。 |
+| tokenID | number | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。<br>取值限定为整数。取值约束：该参数必须为大于0的整数。<br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1)。 |
 | permissionName | Permissions | 是 | 需要停止使用的权限名称。传入无效值时返回错误码12100001。<br>取值约束：权限名长度不能超过256个字符。 |
-| pid | number | 否 | 调用方的进程pid。与[startUsingPermission]{@linkprivacyManager.startUsingPermission}传入的pid相同。不满足配套关系可能导致API调用失败(错误码12100004)。<br>取值限定为整数。默认值：-1，表示不根据进程生命周期响应。 |
+| pid | number | 否 | 调用方的进程pid。与[startUsingPermission](arkts-ability-startusingpermission-f-sys.md#startusingpermission-1)传入的pid相同。不满足配套关系可能导致API调用失败(错误码12100004)。<br>取值限定为整数。默认值：-1，表示不根据进程生命周期响应。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

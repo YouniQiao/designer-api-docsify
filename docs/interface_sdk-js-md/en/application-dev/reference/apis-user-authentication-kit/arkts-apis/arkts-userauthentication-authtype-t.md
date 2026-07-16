@@ -12,6 +12,8 @@ Enumerates the authentication types.
 
 **Substitutes:** [UserAuthType](arkts-userauthentication-userauthtype-e.md)
 
+<!--Device-userAuth-type AuthType = 'ALL' | 'FACE_ONLY'--><!--Device-userAuth-type AuthType = 'ALL' | 'FACE_ONLY'-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 | Type | Description |

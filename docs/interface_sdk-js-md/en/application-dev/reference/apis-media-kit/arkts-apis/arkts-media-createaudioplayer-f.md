@@ -20,13 +20,15 @@ Creates an AudioPlayer instance in synchronous mode.
 
 **Substitutes:** createAVPlayer(callback:
 
+<!--Device-media-function createAudioPlayer(): AudioPlayer--><!--Device-media-function createAudioPlayer(): AudioPlayer-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AudioPlayer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AudioPlayer | If the operation is successful, an AudioPlayer instance is returned; otherwise, **null**is returned. After the instance is created, you can start, pause, or stop audio playback. |
+| [AudioPlayer](arkts-media-audioplayer-i.md) | If the operation is successful, an AudioPlayer instance is returned; otherwise, **null** is returned. After the instance is created, you can start, pause, or stop audio playback. |
 
 **Example**
 

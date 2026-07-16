@@ -2,11 +2,13 @@
 
 用于表示订阅者的信息。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 订阅自定义公共事件后，任意应用都可以向订阅者发送潜在的恶意公共事件。通过本模块的publisherPermission和publisherBundleName参数，可以限制公共事件发布方的范围。
 
 **起始版本：** 7
+
+<!--Device-unnamed-export interface CommonEventSubscribeInfo--><!--Device-unnamed-export interface CommonEventSubscribeInfo-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -22,7 +24,9 @@ events: Array<string>
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscribeInfo-events: Array<string>--><!--Device-CommonEventSubscribeInfo-events: Array<string>-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -38,7 +42,9 @@ priority?: number
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscribeInfo-priority?: int--><!--Device-CommonEventSubscribeInfo-priority?: int-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -54,7 +60,9 @@ publisherBundleName?: string
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscribeInfo-publisherBundleName?: string--><!--Device-CommonEventSubscribeInfo-publisherBundleName?: string-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -70,7 +78,9 @@ publisherDeviceId?: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscribeInfo-publisherDeviceId?: string--><!--Device-CommonEventSubscribeInfo-publisherDeviceId?: string-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -86,7 +96,9 @@ publisherPermission?: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscribeInfo-publisherPermission?: string--><!--Device-CommonEventSubscribeInfo-publisherPermission?: string-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -96,15 +108,15 @@ publisherPermission?: string
 userId?: number
 ```
 
-表示用户ID。此参数是可选的，默认值当前用户的ID。如果指定了此参数，则该值必须是系统中现有的用户ID。通过
-[getOsAccountLocalId](arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)
-获取系统账号ID，作为订阅者的用户ID。
+表示用户ID。此参数是可选的，默认值当前用户的ID。如果指定了此参数，则该值必须是系统中现有的用户ID。通过[getOsAccountLocalId](arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)获取系统账号ID，作为订阅者的用户ID。
 
 **类型：** number
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscribeInfo-userId?: int--><!--Device-CommonEventSubscribeInfo-userId?: int-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 

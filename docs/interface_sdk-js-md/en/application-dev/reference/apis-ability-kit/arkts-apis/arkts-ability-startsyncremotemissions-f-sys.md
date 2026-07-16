@@ -20,6 +20,8 @@ Starts to synchronize the remote mission list. This API uses an asynchronous cal
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-distributedMissionManager-function startSyncRemoteMissions(parameter: MissionParameter, callback: AsyncCallback<void>): void--><!--Device-distributedMissionManager-function startSyncRemoteMissions(parameter: MissionParameter, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
@@ -28,8 +30,8 @@ Starts to synchronize the remote mission list. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | MissionParameter | Yes | Parameters required for synchronization. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the synchronization is started, **err**is **undefined**; otherwise, **err** is an error object. |
+| parameter | [MissionParameter](arkts-ability-missionparameter-i-sys.md) | Yes | Parameters required for synchronization. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the synchronization is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -79,6 +81,8 @@ Starts to synchronize the remote mission list. This API uses a promise to return
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-distributedMissionManager-function startSyncRemoteMissions(parameter: MissionParameter): Promise<void>--><!--Device-distributedMissionManager-function startSyncRemoteMissions(parameter: MissionParameter): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
@@ -87,13 +91,13 @@ Starts to synchronize the remote mission list. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | MissionParameter | Yes | Parameters required for synchronization. |
+| parameter | [MissionParameter](arkts-ability-missionparameter-i-sys.md) | Yes | Parameters required for synchronization. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

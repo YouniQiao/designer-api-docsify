@@ -12,12 +12,13 @@ import { cert } from '@kit.DeviceCertificateKit';
 function createTrustAnchorsWithKeyStore(keystore: Uint8Array, pwd: string): Promise<Array<X509TrustAnchor>>
 ```
 
-Creates a [TrustAnchor](arkts-devicecertificate-x509trustanchor-i.md) object array by using the CA certificate parsed from a .p12
-keystore file. This API uses a promise to return the result.
+Creates a [TrustAnchor](arkts-devicecertificate-x509trustanchor-i.md) object array by using the CA certificate parsed from a .p12keystore file. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-cert-function createTrustAnchorsWithKeyStore(keystore: Uint8Array, pwd: string): Promise<Array<X509TrustAnchor>>--><!--Device-cert-function createTrustAnchorsWithKeyStore(keystore: Uint8Array, pwd: string): Promise<Array<X509TrustAnchor>>-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -25,14 +26,14 @@ keystore file. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keystore | Uint8Array | Yes | Raw data of P12 file, in DER format. |
+| keystore | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Raw data of P12 file, in DER format. |
 | pwd | string | Yes | Password. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;X509TrustAnchor&gt;&gt; | Promise used to return the **X509TrustAnchor** object array created. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<X509TrustAnchor>> | Promise used to return the **X509TrustAnchor** object array created. |
 
 **Error codes:**
 

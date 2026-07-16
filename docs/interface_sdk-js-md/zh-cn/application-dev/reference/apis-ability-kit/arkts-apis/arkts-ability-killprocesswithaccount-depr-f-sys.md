@@ -16,6 +16,8 @@ function killProcessWithAccount(bundleName: string, accountId: number): Promise<
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
+<!--Device-appManager-function killProcessWithAccount(bundleName: string, accountId: number): Promise<void>--><!--Device-appManager-function killProcessWithAccount(bundleName: string, accountId: number): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -31,7 +33,7 @@ function killProcessWithAccount(bundleName: string, accountId: number): Promise<
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **示例：**
 
@@ -68,6 +70,8 @@ function killProcessWithAccount(bundleName: string, accountId: number, callback:
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
+<!--Device-appManager-function killProcessWithAccount(bundleName: string, accountId: number, callback: AsyncCallback<void>): void--><!--Device-appManager-function killProcessWithAccount(bundleName: string, accountId: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -78,7 +82,7 @@ function killProcessWithAccount(bundleName: string, accountId: number, callback:
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
 | accountId | number | 是 | 系统账号的账号ID，详情参考[getOsAccountCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountcount-1)。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，当切断account进程成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，当切断account进程成功，err为undefined，否则为错误对象。 |
 
 **示例：**
 

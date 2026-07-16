@@ -1,13 +1,19 @@
 # removeRule
 
+## 导入模块
+
+```TypeScript
+import { hichecker } from '@kit.PerformanceAnalysisKit';
+```
+
 ## removeRule
 
 ```TypeScript
 function removeRule(rule: bigint): void
 ```
 
-> **˵����**
->
+> **˵����**  
+>  
 > ��API version 8��ʼ֧�֣���API version 9��ʼ����������ʹ��[hichecker.removeCheckRule](arkts-performanceanalysis-removecheckrule-f.md#removecheckrule-1)�����
 
 ɾ��һ�����������ɾ���Ĺ��������������Ч��
@@ -17,6 +23,8 @@ function removeRule(rule: bigint): void
 **废弃版本：** 9
 
 **替代接口：** [removeCheckRule](arkts-performanceanalysis-removecheckrule-f.md#removecheckrule-1)
+
+<!--Device-hichecker-function removeRule(rule: bigint): void--><!--Device-hichecker-function removeRule(rule: bigint): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 

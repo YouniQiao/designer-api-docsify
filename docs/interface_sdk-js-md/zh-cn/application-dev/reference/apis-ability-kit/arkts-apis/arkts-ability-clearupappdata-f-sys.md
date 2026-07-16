@@ -1,5 +1,11 @@
 # clearUpAppData（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+```
+
 ## clearUpAppData
 
 ```TypeScript
@@ -11,6 +17,8 @@ function clearUpAppData(bundleName: string, appCloneIndex?: number): Promise<voi
 **起始版本：** 13
 
 **需要权限：** ohos.permission.CLEAN_APPLICATION_DATA
+
+<!--Device-appManager-function clearUpAppData(bundleName: string, appCloneIndex?: int): Promise<void>--><!--Device-appManager-function clearUpAppData(bundleName: string, appCloneIndex?: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -27,7 +35,7 @@ function clearUpAppData(bundleName: string, appCloneIndex?: number): Promise<voi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

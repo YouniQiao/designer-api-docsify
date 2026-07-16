@@ -16,6 +16,8 @@ Writes event information to the event file. This API uses a promise to return th
 
 **Since:** 9
 
+<!--Device-hiSysEvent-function write(info: SysEventInfo): Promise<void>--><!--Device-hiSysEvent-function write(info: SysEventInfo): Promise<void>-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
@@ -24,13 +26,13 @@ Writes event information to the event file. This API uses a promise to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | SysEventInfo | Yes | System event information. |
+| info | [SysEventInfo](arkts-performanceanalysis-syseventinfo-i-sys.md) | Yes | System event information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise used to return the result. Depending on whether event writing is successful, youcan use the **then()** or **catch()** method to process the callback. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise used to return the result. Depending on whether event writing is successful, you can use the **then()** or **catch()** method to process the callback. |
 
 **Error codes:**
 
@@ -92,6 +94,8 @@ Writes event information to the event file. This API uses an asynchronous callba
 
 **Since:** 9
 
+<!--Device-hiSysEvent-function write(info: SysEventInfo, callback: AsyncCallback<void>): void--><!--Device-hiSysEvent-function write(info: SysEventInfo, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
@@ -100,8 +104,8 @@ Writes event information to the event file. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | SysEventInfo | Yes | System event information. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to process the received return value.<br/>- Value **0**: The event verification is successful, and the event will be written to the event file asynchronously.<br/>- A value greater than **0**: Invalid parameters are present in the event, and the event will be written to the event file asynchronously after the invalid parameters are ignored.<br/>- A value smaller than **0**: The event parameter verification fails, and the event will not be written to the event file. |
+| info | [SysEventInfo](arkts-performanceanalysis-syseventinfo-i-sys.md) | Yes | System event information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to process the received return value.<br/>- Value **0**: The event verification is successful, and the event will be written to the event file asynchronously.<br/>- A value greater than **0**: Invalid parameters are present in the event, and the event will be written to the event file asynchronously after the invalid parameters are ignored.<br/>- A value smaller than **0**: The event parameter verification fails, and the event will not be written to the event file. |
 
 **Error codes:**
 

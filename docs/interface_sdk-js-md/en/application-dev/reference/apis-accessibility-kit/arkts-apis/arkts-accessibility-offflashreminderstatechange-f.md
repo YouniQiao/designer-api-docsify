@@ -12,12 +12,13 @@ import { accessibility } from '@kit.AccessibilityKit';
 function offFlashReminderStateChange(callback?: Callback<boolean>): void
 ```
 
-Unsubscribes from the state changes in flash alerts mode. This API uses an asynchronous callback to return the
-result.
+Unsubscribes from the state changes in flash alerts mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-accessibility-function offFlashReminderStateChange(callback?: Callback<boolean>): void--><!--Device-accessibility-function offFlashReminderStateChange(callback?: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -25,7 +26,7 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;boolean&gt; | No | Callback function. Cancels the event response of a specified callbackobject. The value must be the same as the value of callback in[accessibility.onFlashReminderStateChange](arkts-accessibility-onflashreminderstatechange-f.md#onflashreminderstatechange-1). If this parameter is not specified, listening will be disabled for all callbacks corresponding to thespecified type. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | No | Callback function. Cancels the event response of a specified callback object. The value must be the same as the value of callback in [accessibility.onFlashReminderStateChange](arkts-accessibility-onflashreminderstatechange-f.md#onflashreminderstatechange-1). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Example**
 

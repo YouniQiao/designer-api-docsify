@@ -1,5 +1,11 @@
 # getSystemCpuUsage
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+```
+
 ## getSystemCpuUsage
 
 ```TypeScript
@@ -8,11 +14,13 @@ function getSystemCpuUsage(): number
 
 ��ȡϵͳ��CPU��Դռ�������
 
-> **ע��**
->
+> **ע��**  
+>  
 > ���ڸýӿ��漰�����ͨ�ţ���ʱ�ϳ���Ϊ�˱��������������⣬���鲻Ҫ�����߳���ֱ�ӵ��øýӿڡ�
 
 **起始版本：** 12
+
+<!--Device-hidebug-function getSystemCpuUsage(): double--><!--Device-hidebug-function getSystemCpuUsage(): double-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 

@@ -2,8 +2,8 @@
 
 表示查询图片属性的索引。
 
-> **说明：**
->
+> **说明：**  
+>  
 > [ImagePropertyOptions](arkts-image-imagepropertyoptions-i.md)代替。
 
 **起始版本：** 7
@@ -12,7 +12,15 @@
 
 **替代接口：** [ImagePropertyOptions](arkts-image-imagepropertyoptions-i.md)
 
+<!--Device-image-interface GetImagePropertyOptions--><!--Device-image-interface GetImagePropertyOptions-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
+
+## 导入模块
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+```
 
 ## defaultValue
 
@@ -29,6 +37,8 @@ defaultValue?: string
 **废弃版本：** 11
 
 **替代接口：** [defaultValue](arkts-image-imagepropertyoptions-i.md#defaultvalue)
+
+<!--Device-GetImagePropertyOptions-defaultValue?: string--><!--Device-GetImagePropertyOptions-defaultValue?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -47,6 +57,8 @@ index?: number
 **废弃版本：** 11
 
 **替代接口：** [index](arkts-image-imagepropertyoptions-i.md#index)
+
+<!--Device-GetImagePropertyOptions-index?: number--><!--Device-GetImagePropertyOptions-index?: number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 

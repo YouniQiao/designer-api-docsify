@@ -14,8 +14,7 @@ function addUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>
 
 Adds a specified untrusted hotspot configuration.
 
-<p>This method adds one configuration at a time. After this configuration is added,
-your device will determine whether to connect to the hotspot.
+<p>This method adds one configuration at a time. After this configuration is added,your device will determine whether to connect to the hotspot.
 
 **Since:** 7
 
@@ -25,19 +24,21 @@ your device will determine whether to connect to the hotspot.
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO
 
+<!--Device-wifi-function addUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>--><!--Device-wifi-function addUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
+| config | [WifiDeviceConfig](arkts-connectivity-wifideviceconfig-i.md) | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns {@code true} if the untrusted hotspot configuration is added, returns {@code false} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns {@code true} if the untrusted hotspot configuration is added, returns {@code false} otherwise. |
 
 **Example**
 
@@ -82,8 +83,7 @@ function addUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<bo
 
 Adds a specified untrusted hotspot configuration.
 
-<p>This method adds one configuration at a time. After this configuration is added,
-your device will determine whether to connect to the hotspot.
+<p>This method adds one configuration at a time. After this configuration is added,your device will determine whether to connect to the hotspot.
 
 **Since:** 7
 
@@ -93,14 +93,16 @@ your device will determine whether to connect to the hotspot.
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO
 
+<!--Device-wifi-function addUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<boolean>): void--><!--Device-wifi-function addUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes |  |
+| config | [WifiDeviceConfig](arkts-connectivity-wifideviceconfig-i.md) | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes |  |
 
 **Example**
 

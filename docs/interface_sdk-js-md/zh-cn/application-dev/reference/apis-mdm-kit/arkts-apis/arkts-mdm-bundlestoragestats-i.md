@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-bundleManager-interface BundleStorageStats--><!--Device-bundleManager-interface BundleStorageStats-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+```
 
 ## appSize
 
@@ -24,6 +32,8 @@ appSize: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BundleStorageStats-appSize: number--><!--Device-BundleStorageStats-appSize: number-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## bundleName
@@ -39,6 +49,8 @@ bundleName: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BundleStorageStats-bundleName: string--><!--Device-BundleStorageStats-bundleName: string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -69,6 +81,8 @@ dataSize: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BundleStorageStats-dataSize: number--><!--Device-BundleStorageStats-dataSize: number-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

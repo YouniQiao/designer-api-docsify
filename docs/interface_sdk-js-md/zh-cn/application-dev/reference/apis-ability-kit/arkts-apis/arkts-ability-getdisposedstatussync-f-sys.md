@@ -1,5 +1,11 @@
 # getDisposedStatusSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appControl } from '@kit.AbilityKit';
+```
+
 ## getDisposedStatusSync
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getDisposedStatusSync(appId: string): Want
 **起始版本：** 10
 
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS or ohos.permission.GET_DISPOSED_APP_STATUS
+
+<!--Device-appControl-function getDisposedStatusSync(appId: string): Want--><!--Device-appControl-function getDisposedStatusSync(appId: string): Want-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -26,7 +34,7 @@ function getDisposedStatusSync(appId: string): Want
 
 | 类型 | 说明 |
 | --- | --- |
-| Want | 返回应用的处置状态。 |
+| [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 返回应用的处置状态。 |
 
 **错误码：**
 

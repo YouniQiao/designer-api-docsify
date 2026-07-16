@@ -20,19 +20,21 @@ Subscribes to agent-powered reminder state changes. This API uses a promise to r
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-reminderAgentManager-function subscribeReminderState(callback: Callback<Array<ReminderState>>): Promise<void>--><!--Device-reminderAgentManager-function subscribeReminderState(callback: Callback<Array<ReminderState>>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;Array&lt;ReminderState&gt;&gt; | Yes | Callback used to return the agent-powered reminder state. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<ReminderState>> | Yes | Callback used to return the agent-powered reminder state. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

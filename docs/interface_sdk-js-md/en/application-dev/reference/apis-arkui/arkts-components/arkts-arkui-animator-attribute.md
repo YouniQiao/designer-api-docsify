@@ -10,6 +10,8 @@ Defines AnimatorAttribute.
 
 **Substitutes:** createAnimator
 
+<!--Device-unnamed-declare class AnimatorAttribute extends CommonMethod<AnimatorAttribute>--><!--Device-unnamed-declare class AnimatorAttribute extends CommonMethod<AnimatorAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.

@@ -2,15 +2,23 @@
 
 通过USB发送和接收数据的端口。通过[USBInterface](arkts-basicservices-usbinterface-i.md)获取。
 
-> **说明：**
->
-> 主机控制器按照Endpoint类型调度。
->
+> **说明：**  
+>  
+> 主机控制器按照Endpoint类型调度。  
+>  
 > 协议层打包时依赖type决定传输特性。
 
 **起始版本：** 9
 
+<!--Device-usbManager-interface USBEndpoint--><!--Device-usbManager-interface USBEndpoint-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
+
+## 导入模块
+
+```TypeScript
+import { usbManager } from '@kit.BasicServicesKit';
+```
 
 ## address
 
@@ -23,6 +31,8 @@ address: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-USBEndpoint-address: int--><!--Device-USBEndpoint-address: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -38,6 +48,8 @@ attributes: number
 
 **起始版本：** 9
 
+<!--Device-USBEndpoint-attributes: int--><!--Device-USBEndpoint-attributes: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## direction
@@ -51,6 +63,8 @@ direction: USBRequestDirection
 **类型：** USBRequestDirection
 
 **起始版本：** 9
+
+<!--Device-USBEndpoint-direction: USBRequestDirection--><!--Device-USBEndpoint-direction: USBRequestDirection-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -66,6 +80,8 @@ interfaceId: number
 
 **起始版本：** 9
 
+<!--Device-USBEndpoint-interfaceId: int--><!--Device-USBEndpoint-interfaceId: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## interval
@@ -79,6 +95,8 @@ interval: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-USBEndpoint-interval: int--><!--Device-USBEndpoint-interval: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -94,6 +112,8 @@ maxPacketSize: number
 
 **起始版本：** 9
 
+<!--Device-USBEndpoint-maxPacketSize: int--><!--Device-USBEndpoint-maxPacketSize: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## number
@@ -108,6 +128,8 @@ number: number
 
 **起始版本：** 9
 
+<!--Device-USBEndpoint-number: number--><!--Device-USBEndpoint-number: number-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## type
@@ -121,6 +143,8 @@ type: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-USBEndpoint-type: int--><!--Device-USBEndpoint-type: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 

@@ -1,11 +1,10 @@
 # Ashmem
 
-Provides methods related to anonymous shared memory objects, including creating, closing, mapping, and unmapping an
-**Ashmem** object, reading data from and writing data to an **Ashmem** object, obtaining the **Ashmem** size,
-and setting **Ashmem** protection. The shared memory applies only to cross-process communication within the
-local device.
+Provides methods related to anonymous shared memory objects, including creating, closing, mapping, and unmapping an **Ashmem** object, reading data from and writing data to an **Ashmem** object, obtaining the **Ashmem** size,and setting **Ashmem** protection. The shared memory applies only to cross-process communication within the local device.
 
 **Since:** 8
+
+<!--Device-rpc-class Ashmem--><!--Device-rpc-class Ashmem-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -23,11 +22,13 @@ closeAshmem(): void
 
 Closes this **Ashmem** object.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > Before closing the **Ashmem** object, you need to remove the address mapping.
 
 **Since:** 8
+
+<!--Device-Ashmem-closeAshmem(): void--><!--Device-Ashmem-closeAshmem(): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -56,6 +57,8 @@ Creates an **Ashmem** object with the specified name and size. This API is a sta
 
 **Since:** 9
 
+<!--Device-Ashmem-static create(name: string, size: int): Ashmem--><!--Device-Ashmem-static create(name: string, size: int): Ashmem-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -69,7 +72,7 @@ Creates an **Ashmem** object with the specified name and size. This API is a sta
 
 | Type | Description |
 | --- | --- |
-| Ashmem | Returns the **Ashmem** object if it is created successfully; returns null otherwise. |
+| [Ashmem](arkts-ipc-ashmem-c.md) | Returns the **Ashmem** object if it is created successfully; returns null otherwise. |
 
 **Error codes:**
 
@@ -103,10 +106,11 @@ try {
 static create(ashmem: Ashmem): Ashmem
 ```
 
-Creates an **Ashmem** object by copying the file descriptor of an existing **Ashmem** object. The two **Ashmem**
-objects point to the same shared memory region.
+Creates an **Ashmem** object by copying the file descriptor of an existing **Ashmem** object. The two **Ashmem** objects point to the same shared memory region.
 
 **Since:** 9
+
+<!--Device-Ashmem-static create(ashmem: Ashmem): Ashmem--><!--Device-Ashmem-static create(ashmem: Ashmem): Ashmem-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -114,13 +118,13 @@ objects point to the same shared memory region.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ashmem | Ashmem | Yes | Existing **Ashmem** object. |
+| ashmem | [Ashmem](arkts-ipc-ashmem-c.md) | Yes | Existing **Ashmem** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Ashmem | **Ashmem** object created. |
+| [Ashmem](arkts-ipc-ashmem-c.md) | **Ashmem** object created. |
 
 **Error codes:**
 
@@ -162,6 +166,8 @@ Creates an **Ashmem** object with the specified name and size. This API is a sta
 
 **Substitutes:** create()
 
+<!--Device-Ashmem-static createAshmem(name: string, size: number): Ashmem--><!--Device-Ashmem-static createAshmem(name: string, size: number): Ashmem-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -175,7 +181,7 @@ Creates an **Ashmem** object with the specified name and size. This API is a sta
 
 | Type | Description |
 | --- | --- |
-| Ashmem | Returns the **Ashmem** object if it is created successfully; returns null otherwise. |
+| [Ashmem](arkts-ipc-ashmem-c.md) | Returns the **Ashmem** object if it is created successfully; returns null otherwise. |
 
 **Example**
 
@@ -200,8 +206,7 @@ try {
 static createAshmemFromExisting(ashmem: Ashmem): Ashmem
 ```
 
-Creates an **Ashmem** object by copying the file descriptor of an existing **Ashmem** object. The two **Ashmem**
-objects point to the same shared memory region.
+Creates an **Ashmem** object by copying the file descriptor of an existing **Ashmem** object. The two **Ashmem** objects point to the same shared memory region.
 
 **Since:** 8
 
@@ -209,19 +214,21 @@ objects point to the same shared memory region.
 
 **Substitutes:** create()
 
+<!--Device-Ashmem-static createAshmemFromExisting(ashmem: Ashmem): Ashmem--><!--Device-Ashmem-static createAshmemFromExisting(ashmem: Ashmem): Ashmem-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ashmem | Ashmem | Yes | Existing **Ashmem** object. |
+| ashmem | [Ashmem](arkts-ipc-ashmem-c.md) | Yes | Existing **Ashmem** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Ashmem | **Ashmem** object created. |
+| [Ashmem](arkts-ipc-ashmem-c.md) | **Ashmem** object created. |
 
 **Example**
 
@@ -249,6 +256,8 @@ getAshmemSize(): number
 Obtains the memory size of this **Ashmem** object.
 
 **Since:** 8
+
+<!--Device-Ashmem-getAshmemSize(): int--><!--Device-Ashmem-getAshmemSize(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -280,14 +289,15 @@ try {
 mapAshmem(mapType: number): boolean
 ```
 
-Creates the shared file mapping on the virtual address space of this process. The size of the mapping region is
-specified by this **Ashmem** object.
+Creates the shared file mapping on the virtual address space of this process. The size of the mapping region is specified by this **Ashmem** object.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** mapTypedAshmem(mapType:
+
+<!--Device-Ashmem-mapAshmem(mapType: number): boolean--><!--Device-Ashmem-mapAshmem(mapType: number): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -333,6 +343,8 @@ Maps the shared file to the readable and writable virtual address space of the p
 
 **Substitutes:** [mapReadWriteAshmem()](arkts-ipc-ashmem-c.md#mapreadwriteashmem-1)
 
+<!--Device-Ashmem-mapReadAndWriteAshmem(): boolean--><!--Device-Ashmem-mapReadAndWriteAshmem(): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -371,6 +383,8 @@ Maps the shared file to the read-only virtual address space of the process.
 
 **Substitutes:** [mapReadonlyAshmem()](arkts-ipc-ashmem-c.md#mapreadonlyashmem-1)
 
+<!--Device-Ashmem-mapReadOnlyAshmem(): boolean--><!--Device-Ashmem-mapReadOnlyAshmem(): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -404,6 +418,8 @@ mapReadWriteAshmem(): void
 Maps the shared file to the readable and writable virtual address space of the process.
 
 **Since:** 9
+
+<!--Device-Ashmem-mapReadWriteAshmem(): void--><!--Device-Ashmem-mapReadWriteAshmem(): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -441,6 +457,8 @@ Maps the shared file to the read-only virtual address space of the process.
 
 **Since:** 9
 
+<!--Device-Ashmem-mapReadonlyAshmem(): void--><!--Device-Ashmem-mapReadonlyAshmem(): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Error codes:**
@@ -473,10 +491,11 @@ try {
 mapTypedAshmem(mapType: number): void
 ```
 
-Creates the shared file mapping on the virtual address space of this process. The size of the mapping region is
-specified by this **Ashmem** object.
+Creates the shared file mapping on the virtual address space of this process. The size of the mapping region is specified by this **Ashmem** object.
 
 **Since:** 9
+
+<!--Device-Ashmem-mapTypedAshmem(mapType: int): void--><!--Device-Ashmem-mapTypedAshmem(mapType: int): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -519,9 +538,9 @@ readAshmem(size: number, offset: number): number[]
 
 Reads data from the shared file associated with this **Ashmem** object.
 
-> **NOTE**
->
-> - Before writing an **Ashmem** object, you need to call
+> **NOTE**  
+>  
+> - Before writing an **Ashmem** object, you need to call  
 > [mapReadWriteAshmem](arkts-ipc-ashmem-c.md#mapreadwriteashmem-1) for mapping.
 
 **Since:** 9
@@ -530,6 +549,8 @@ Reads data from the shared file associated with this **Ashmem** object.
 
 **Substitutes:** readDataFromAshmem(size:
 
+<!--Device-Ashmem-readAshmem(size: number, offset: number): number[]--><!--Device-Ashmem-readAshmem(size: number, offset: number): number[]-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -537,7 +558,7 @@ Reads data from the shared file associated with this **Ashmem** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | size | number | Yes | Size of the data to read. |
-| offset | number | Yes | Start position of the data to read in the memory region associated with this**Ashmem** object. |
+| offset | number | Yes | Start position of the data to read in the memory region associated with this **Ashmem** object. |
 
 **Return value:**
 
@@ -582,12 +603,14 @@ readDataFromAshmem(size: number, offset: number): ArrayBuffer
 
 Reads data from the shared file associated with this **Ashmem** object.
 
-> **NOTE**
->
-> Before writing an **Ashmem** object, you need to call
+> **NOTE**  
+>  
+> Before writing an **Ashmem** object, you need to call  
 > [mapReadWriteAshmem](arkts-ipc-ashmem-c.md#mapreadwriteashmem-1) for mapping.
 
 **Since:** 11
+
+<!--Device-Ashmem-readDataFromAshmem(size: int, offset: int): ArrayBuffer--><!--Device-Ashmem-readDataFromAshmem(size: int, offset: int): ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -596,13 +619,13 @@ Reads data from the shared file associated with this **Ashmem** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | size | number | Yes | Size of the data to read. |
-| offset | number | Yes | Start position of the data to read in the memory region associated with this **Ashmem**object. |
+| offset | number | Yes | Start position of the data to read in the memory region associated with this **Ashmem** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | Data read. |
+| [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Data read. |
 
 **Error codes:**
 
@@ -647,9 +670,9 @@ readFromAshmem(size: number, offset: number): number[]
 
 Reads data from the shared file associated with this **Ashmem** object.
 
-> **NOTE**
->
-> - Before writing an **Ashmem** object, you need to call
+> **NOTE**  
+>  
+> - Before writing an **Ashmem** object, you need to call  
 > [mapReadWriteAshmem](arkts-ipc-ashmem-c.md#mapreadwriteashmem-1) for mapping.
 
 **Since:** 8
@@ -658,6 +681,8 @@ Reads data from the shared file associated with this **Ashmem** object.
 
 **Substitutes:** readDataFromAshmem(size:
 
+<!--Device-Ashmem-readFromAshmem(size: number, offset: number): number[]--><!--Device-Ashmem-readFromAshmem(size: number, offset: number): number[]-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -665,7 +690,7 @@ Reads data from the shared file associated with this **Ashmem** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | size | number | Yes | Size of the data to read. |
-| offset | number | Yes | Start position of the data to read in the memory region associated with this**Ashmem** object. |
+| offset | number | Yes | Start position of the data to read in the memory region associated with this **Ashmem** object. |
 
 **Return value:**
 
@@ -708,6 +733,8 @@ Sets the protection level of the memory region to which the shared file is mappe
 
 **Substitutes:** setProtectionType(protectionType:
 
+<!--Device-Ashmem-setProtection(protectionType: number): boolean--><!--Device-Ashmem-setProtection(protectionType: number): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -748,6 +775,8 @@ setProtectionType(protectionType: number): void
 Sets the protection level of the memory region to which the shared file is mapped.
 
 **Since:** 9
+
+<!--Device-Ashmem-setProtectionType(protectionType: int): void--><!--Device-Ashmem-setProtectionType(protectionType: int): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -792,6 +821,8 @@ Deletes the mappings for the specified address range of this **Ashmem** object.
 
 **Since:** 8
 
+<!--Device-Ashmem-unmapAshmem(): void--><!--Device-Ashmem-unmapAshmem(): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Example**
@@ -817,9 +848,9 @@ writeAshmem(buf: number[], size: number, offset: number): void
 
 Writes data to the shared file associated with this **Ashmem** object.
 
-> **NOTE**
->
-> - Before writing an **Ashmem** object, you need to call
+> **NOTE**  
+>  
+> - Before writing an **Ashmem** object, you need to call  
 > [mapReadWriteAshmem](arkts-ipc-ashmem-c.md#mapreadwriteashmem-1) for mapping.
 
 **Since:** 9
@@ -827,6 +858,8 @@ Writes data to the shared file associated with this **Ashmem** object.
 **Deprecated since:** 11
 
 **Substitutes:** writeDataToAshmem(buf:
+
+<!--Device-Ashmem-writeAshmem(buf: number[], size: number, offset: number): void--><!--Device-Ashmem-writeAshmem(buf: number[], size: number, offset: number): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -836,7 +869,7 @@ Writes data to the shared file associated with this **Ashmem** object.
 | --- | --- | --- | --- |
 | buf | number[] | Yes | Data to write. |
 | size | number | Yes | Size of the data to write. |
-| offset | number | Yes | Start position of the data to write in the memory region associated with this**Ashmem** object. |
+| offset | number | Yes | Start position of the data to write in the memory region associated with this **Ashmem** object. |
 
 **Error codes:**
 
@@ -873,12 +906,14 @@ writeDataToAshmem(buf: ArrayBuffer, size: number, offset: number): void
 
 Writes data to the shared file associated with this **Ashmem** object.
 
-> **NOTE**
->
-> Before writing an **Ashmem** object, you need to call
+> **NOTE**  
+>  
+> Before writing an **Ashmem** object, you need to call  
 > [mapReadWriteAshmem](arkts-ipc-ashmem-c.md#mapreadwriteashmem-1) for mapping.
 
 **Since:** 11
+
+<!--Device-Ashmem-writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void--><!--Device-Ashmem-writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -886,9 +921,9 @@ Writes data to the shared file associated with this **Ashmem** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Data to write. |
+| buf | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Data to write. |
 | size | number | Yes | Size of the data to write. |
-| offset | number | Yes | Start position of the data to write in the memory region associated with this **Ashmem**object. |
+| offset | number | Yes | Start position of the data to write in the memory region associated with this **Ashmem** object. |
 
 **Error codes:**
 
@@ -930,9 +965,9 @@ writeToAshmem(buf: number[], size: number, offset: number): boolean
 
 Writes data to the shared file associated with this **Ashmem** object.
 
-> **NOTE**
->
-> - Before writing an **Ashmem** object, you need to call
+> **NOTE**  
+>  
+> - Before writing an **Ashmem** object, you need to call  
 > [mapReadWriteAshmem](arkts-ipc-ashmem-c.md#mapreadwriteashmem-1) for mapping.
 
 **Since:** 8
@@ -940,6 +975,8 @@ Writes data to the shared file associated with this **Ashmem** object.
 **Deprecated since:** 9
 
 **Substitutes:** writeDataToAshmem(buf:
+
+<!--Device-Ashmem-writeToAshmem(buf: number[], size: number, offset: number): boolean--><!--Device-Ashmem-writeToAshmem(buf: number[], size: number, offset: number): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -949,7 +986,7 @@ Writes data to the shared file associated with this **Ashmem** object.
 | --- | --- | --- | --- |
 | buf | number[] | Yes | Data to write. |
 | size | number | Yes | Size of the data to write. |
-| offset | number | Yes | Start position of the data to write in the memory region associated with this**Ashmem** object. |
+| offset | number | Yes | Start position of the data to write in the memory region associated with this **Ashmem** object. |
 
 **Return value:**
 
@@ -990,6 +1027,8 @@ Mapped memory protection type, indicating that the mapped memory is executable.
 
 **Since:** 8
 
+<!--Device-Ashmem-static readonly PROT_EXEC: number--><!--Device-Ashmem-static readonly PROT_EXEC: number-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## PROT_NONE
@@ -1005,6 +1044,8 @@ Mapped memory protection type, indicating that the mapped memory cannot be acces
 **Default:** 0
 
 **Since:** 8
+
+<!--Device-Ashmem-static readonly PROT_NONE: number--><!--Device-Ashmem-static readonly PROT_NONE: number-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1022,6 +1063,8 @@ Mapped memory protection type, indicating that the mapped memory is readable.
 
 **Since:** 8
 
+<!--Device-Ashmem-static readonly PROT_READ: number--><!--Device-Ashmem-static readonly PROT_READ: number-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## PROT_WRITE
@@ -1037,6 +1080,8 @@ Mapped memory protection type, indicating that the mapped memory is readable.
 **Default:** 2
 
 **Since:** 8
+
+<!--Device-Ashmem-static readonly PROT_WRITE: number--><!--Device-Ashmem-static readonly PROT_WRITE: number-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 

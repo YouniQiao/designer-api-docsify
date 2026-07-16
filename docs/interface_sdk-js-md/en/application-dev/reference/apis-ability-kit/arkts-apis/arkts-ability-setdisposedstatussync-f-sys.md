@@ -12,12 +12,13 @@ import { appControl } from '@kit.AbilityKit';
 function setDisposedStatusSync(appId: string, disposedWant: Want): void
 ```
 
-Sets the disposed status for an application. This API returns the result synchronously. If the operation is
-successful, **null** is returned. If the operation fails, an error message is returned.
+Sets the disposed status for an application. This API returns the result synchronously. If the operation is successful, **null** is returned. If the operation fails, an error message is returned.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS
+
+<!--Device-appControl-function setDisposedStatusSync(appId: string, disposedWant: Want): void--><!--Device-appControl-function setDisposedStatusSync(appId: string, disposedWant: Want): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -27,8 +28,8 @@ successful, **null** is returned. If the operation fails, an error message is re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appId | string | Yes | ID of the target application.<br> **appId** is the unique identifier of an applicationand is determined by the bundle name and signature information of the application. For details about how toobtain **appId**, see[How do I obtain appId from application information](../../../../quick-start/common_problem_of_application.md#how-do-i-obtain-appid-from-application-information). |
-| disposedWant | Want | Yes | Disposal intent of the application. |
+| appId | string | Yes | ID of the target application.<br> **appId** is the unique identifier of an application and is determined by the bundle name and signature information of the application. For details about how to obtain **appId**, see [How do I obtain appId from application information](../../../../quick-start/common_problem_of_application.md#how-do-i-obtain-appid-from-application-information). |
+| disposedWant | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Disposal intent of the application. |
 
 **Error codes:**
 

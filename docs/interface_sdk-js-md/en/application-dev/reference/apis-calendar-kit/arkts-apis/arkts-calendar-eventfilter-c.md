@@ -2,12 +2,11 @@
 
 Implements an event filter.
 
-You can use [filterById()](arkts-calendar-eventfilter-c.md#filterbyid-1),
-[filterByTime()](arkts-calendar-eventfilter-c.md#filterbytime-1),
-[filterByTitle()](arkts-calendar-eventfilter-c.md#filterbytitle-1) to
-obtain an event filter, and then pass the filter in getEvents() for filtering.
+You can use [filterById()](arkts-calendar-eventfilter-c.md#filterbyid-1),[filterByTime()](arkts-calendar-eventfilter-c.md#filterbytime-1),[filterByTitle()](arkts-calendar-eventfilter-c.md#filterbytitle-1) to obtain an event filter, and then pass the filter in getEvents() for filtering.
 
 **Since:** 10
+
+<!--Device-calendarManager-class EventFilter--><!--Device-calendarManager-class EventFilter-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -27,6 +26,8 @@ Defines a filter based on the event ID.
 
 **Since:** 10
 
+<!--Device-EventFilter-static filterById(ids: number[]): EventFilter--><!--Device-EventFilter-static filterById(ids: number[]): EventFilter-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
@@ -39,7 +40,7 @@ Defines a filter based on the event ID.
 
 | Type | Description |
 | --- | --- |
-| EventFilter | EventFilter object. |
+| [EventFilter](arkts-calendar-eventfilter-c.md) | EventFilter object. |
 
 **Example**
 
@@ -106,6 +107,8 @@ Defines a filter based on the event time.
 
 **Since:** 10
 
+<!--Device-EventFilter-static filterByTime(start: number, end: number): EventFilter--><!--Device-EventFilter-static filterByTime(start: number, end: number): EventFilter-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
@@ -119,7 +122,7 @@ Defines a filter based on the event time.
 
 | Type | Description |
 | --- | --- |
-| EventFilter | EventFilter object. |
+| [EventFilter](arkts-calendar-eventfilter-c.md) | EventFilter object. |
 
 **Example**
 
@@ -181,6 +184,8 @@ Filters events by event title. This API supports fuzzy match.
 
 **Since:** 10
 
+<!--Device-EventFilter-static filterByTitle(title: string): EventFilter--><!--Device-EventFilter-static filterByTitle(title: string): EventFilter-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
@@ -193,7 +198,7 @@ Filters events by event title. This API supports fuzzy match.
 
 | Type | Description |
 | --- | --- |
-| EventFilter | EventFilter object. |
+| [EventFilter](arkts-calendar-eventfilter-c.md) | EventFilter object. |
 
 **Example**
 

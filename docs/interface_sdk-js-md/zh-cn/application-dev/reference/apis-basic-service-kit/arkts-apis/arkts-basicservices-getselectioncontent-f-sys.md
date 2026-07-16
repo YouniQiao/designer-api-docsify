@@ -1,5 +1,11 @@
 # getSelectionContent（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { selectionManager } from '@kit.BasicServicesKit';
+```
+
 ## getSelectionContent
 
 ```TypeScript
@@ -10,6 +16,8 @@ function getSelectionContent(): Promise<string>
 
 **起始版本：** 24
 
+<!--Device-selectionManager-function getSelectionContent(): Promise<string>--><!--Device-selectionManager-function getSelectionContent(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
@@ -18,7 +26,7 @@ function getSelectionContent(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回当前选中文本的内容。 |
+| Promise<string> | Promise对象，返回当前选中文本的内容。 |
 
 **错误码：**
 

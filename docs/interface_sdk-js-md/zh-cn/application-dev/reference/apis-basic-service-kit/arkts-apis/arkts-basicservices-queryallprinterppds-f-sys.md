@@ -1,5 +1,11 @@
 # queryAllPrinterPpds（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+```
+
 ## queryAllPrinterPpds
 
 ```TypeScript
@@ -14,6 +20,8 @@ function queryAllPrinterPpds(): Promise<PpdInfo[]>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-print-function queryAllPrinterPpds(): Promise<PpdInfo[]>--><!--Device-print-function queryAllPrinterPpds(): Promise<PpdInfo[]>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ function queryAllPrinterPpds(): Promise<PpdInfo[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PpdInfo[]&gt; | - Promise that resolves with all printer ppd info. |
+| Promise<PpdInfo[]> | - Promise that resolves with all printer ppd info. |
 
 **错误码：**
 

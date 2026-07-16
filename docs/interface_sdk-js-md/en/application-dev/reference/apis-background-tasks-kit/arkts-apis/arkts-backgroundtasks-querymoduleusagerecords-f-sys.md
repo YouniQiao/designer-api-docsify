@@ -18,6 +18,8 @@ Queries recently module usage records with maxNum.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryModuleUsageRecords(maxNum: int, callback: AsyncCallback<Array<HapModuleInfo>>): void--><!--Device-usageStatistics-function queryModuleUsageRecords(maxNum: int, callback: AsyncCallback<Array<HapModuleInfo>>): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Queries recently module usage records with maxNum.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | maxNum | number | Yes | Indicates max record number in result, max value is 1000, default value is 1000. |
-| callback | AsyncCallback&lt;Array&lt;HapModuleInfo&gt;&gt; | Yes | Callback used to return the result.If the query is successful, **err** is **undefined**, and data is the {@link HapModuleInfo} object Array containingthe usage data of the modules. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<HapModuleInfo>> | Yes | Callback used to return the result.If the query is successful, **err** is **undefined**, and data is the {@link HapModuleInfo} object Array containing the usage data of the modules. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -77,6 +79,8 @@ Queries recently module usage records with maxNum.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryModuleUsageRecords(maxNum: int): Promise<Array<HapModuleInfo>>--><!--Device-usageStatistics-function queryModuleUsageRecords(maxNum: int): Promise<Array<HapModuleInfo>>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -91,7 +95,7 @@ Queries recently module usage records with maxNum.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;HapModuleInfo&gt;&gt; | the promise returned by queryModuleUsageRecords.the {@link HapModuleInfo} object Array containing the usage data of the modules. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<HapModuleInfo>> | the promise returned by queryModuleUsageRecords.the {@link HapModuleInfo} object Array containing the usage data of the modules. |
 
 **Error codes:**
 
@@ -139,6 +143,8 @@ Queries recently module usage records.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryModuleUsageRecords(callback: AsyncCallback<Array<HapModuleInfo>>): void--><!--Device-usageStatistics-function queryModuleUsageRecords(callback: AsyncCallback<Array<HapModuleInfo>>): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -147,7 +153,7 @@ Queries recently module usage records.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;HapModuleInfo&gt;&gt; | Yes | Callback used to return the result.If the query is successful, **err** is **undefined**, and data is the {@link HapModuleInfo} object Array containingthe usage data of the modules. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<HapModuleInfo>> | Yes | Callback used to return the result.If the query is successful, **err** is **undefined**, and data is the {@link HapModuleInfo} object Array containing the usage data of the modules. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -197,6 +203,8 @@ Queries recently module usage records.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryModuleUsageRecords(): Promise<Array<HapModuleInfo>>--><!--Device-usageStatistics-function queryModuleUsageRecords(): Promise<Array<HapModuleInfo>>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -205,7 +213,7 @@ Queries recently module usage records.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;HapModuleInfo&gt;&gt; | the promise returned by queryModuleUsageRecords.the {@link HapModuleInfo} object Array containing the usage data of the modules. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<HapModuleInfo>> | the promise returned by queryModuleUsageRecords.the {@link HapModuleInfo} object Array containing the usage data of the modules. |
 
 **Error codes:**
 

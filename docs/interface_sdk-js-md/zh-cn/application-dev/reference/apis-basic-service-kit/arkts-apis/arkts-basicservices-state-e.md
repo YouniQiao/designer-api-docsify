@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-agent-enum State--><!--Device-agent-enum State-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## INITIALIZED
@@ -12,12 +14,13 @@
 INITIALIZED = 0x00
 ```
 
-表示通过配置信息（[Config](arkts-basicservices-config-i.md)）创建的任务已初始
-化。
+表示通过配置信息（[Config](arkts-basicservices-config-i.md)）创建的任务已初始化。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-State-INITIALIZED = 0x00--><!--Device-State-INITIALIZED = 0x00-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -31,7 +34,9 @@ WAITING = 0x10
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-State-WAITING = 0x10--><!--Device-State-WAITING = 0x10-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -45,7 +50,9 @@ RUNNING = 0x20
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-State-RUNNING = 0x20--><!--Device-State-RUNNING = 0x20-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -59,7 +66,9 @@ RETRYING = 0x21
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-State-RETRYING = 0x21--><!--Device-State-RETRYING = 0x21-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -73,7 +82,9 @@ PAUSED = 0x30
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-State-PAUSED = 0x30--><!--Device-State-PAUSED = 0x30-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -87,7 +98,9 @@ STOPPED = 0x31
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-State-STOPPED = 0x31--><!--Device-State-STOPPED = 0x31-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -101,7 +114,9 @@ COMPLETED = 0x40
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-State-COMPLETED = 0x40--><!--Device-State-COMPLETED = 0x40-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -115,7 +130,9 @@ FAILED = 0x41
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-State-FAILED = 0x41--><!--Device-State-FAILED = 0x41-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -129,7 +146,9 @@ REMOVED = 0x50
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-State-REMOVED = 0x50--><!--Device-State-REMOVED = 0x50-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 

@@ -6,6 +6,8 @@ Provides APIs for managing the media album change request.
 
 **Since:** 11
 
+<!--Device-photoAccessHelper-class MediaAlbumChangeRequest implements MediaChangeRequest--><!--Device-photoAccessHelper-class MediaAlbumChangeRequest implements MediaChangeRequest-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Add assets to the album.
 
 **Since:** 11
 
+<!--Device-MediaAlbumChangeRequest-addAssets(assets: Array<PhotoAsset>): void--><!--Device-MediaAlbumChangeRequest-addAssets(assets: Array<PhotoAsset>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Array of assets to add. |
+| assets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PhotoAsset> | Yes | Array of assets to add. |
 
 **Error codes:**
 
@@ -50,13 +54,15 @@ Constructor used to initialize a new object.
 
 **Since:** 11
 
+<!--Device-MediaAlbumChangeRequest-constructor(album: Album)--><!--Device-MediaAlbumChangeRequest-constructor(album: Album)-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| album | Album | Yes | Album to change. |
+| album | [Album](arkts-medialibrary-album-i.md) | Yes | Album to change. |
 
 **Error codes:**
 
@@ -73,13 +79,15 @@ getAlbum(): Album
 
 Obtains the album in the current album change request.
 
-> **NOTE**
->
-> For the change request for creating an album, this API returns **null** before
-> [applyChanges](arkts-medialibrary-photoaccesshelper-i.md#applychanges-1) is called
+> **NOTE**  
+>  
+> For the change request for creating an album, this API returns **null** before  
+> [applyChanges](arkts-medialibrary-photoaccesshelper-i.md#applychanges-1) is called  
 > to apply the changes.
 
 **Since:** 11
+
+<!--Device-MediaAlbumChangeRequest-getAlbum(): Album--><!--Device-MediaAlbumChangeRequest-getAlbum(): Album-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -87,7 +95,7 @@ Obtains the album in the current album change request.
 
 | Type | Description |
 | --- | --- |
-| Album | Album obtained. |
+| [Album](arkts-medialibrary-album-i.md) | Album obtained. |
 
 **Error codes:**
 
@@ -106,13 +114,15 @@ Removes assets from the album.
 
 **Since:** 11
 
+<!--Device-MediaAlbumChangeRequest-removeAssets(assets: Array<PhotoAsset>): void--><!--Device-MediaAlbumChangeRequest-removeAssets(assets: Array<PhotoAsset>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Array of assets to remove. |
+| assets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PhotoAsset> | Yes | Array of assets to remove. |
 
 **Error codes:**
 
@@ -132,15 +142,17 @@ Sets the album name.
 
 The album name must meet the following requirements:
 
-- The total length of the album name must be between 1 and 255 characters.
+- The total length of the album name must be between 1 and 255 characters.  
 - It must not contain any invalid characters, which are:
 
 . \ / : * ? " ' ` < > | { } [ ]
 
-- It is case-insensitive.
+- It is case-insensitive.  
 - Duplicate album names are not allowed.
 
 **Since:** 11
+
+<!--Device-MediaAlbumChangeRequest-setAlbumName(name: string): void--><!--Device-MediaAlbumChangeRequest-setAlbumName(name: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -170,6 +182,8 @@ A readonly member for type checking.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaAlbumChangeRequest-readonly comment: string--><!--Device-MediaAlbumChangeRequest-readonly comment: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

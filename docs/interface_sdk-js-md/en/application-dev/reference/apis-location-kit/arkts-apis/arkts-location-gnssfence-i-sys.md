@@ -4,6 +4,8 @@ Indicates GNSS fence information.
 
 **Since:** 26.0.0
 
+<!--Device-geoLocationManager-export interface GnssFence--><!--Device-geoLocationManager-export interface GnssFence-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Indicates circular fence.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-GnssFence-circularFence?: Geofence--><!--Device-GnssFence-circularFence?: Geofence-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **System API:** This is a system API.
@@ -38,15 +42,15 @@ Indicates circular fence.
 gnssFenceType: number
 ```
 
-Indicates GNSS fence type.
-The value range of this field is as follows: [GnssFenceType](arkts-location-gnssfencetype-e-sys.md).
-The value range is all integers.
+Indicates GNSS fence type.The value range of this field is as follows: [GnssFenceType](arkts-location-gnssfencetype-e-sys.md).The value range is all integers.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GnssFence-gnssFenceType: int--><!--Device-GnssFence-gnssFenceType: int-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -65,6 +69,8 @@ Indicates polygonal fence.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GnssFence-polygon?: Array<Point>--><!--Device-GnssFence-polygon?: Array<Point>-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 

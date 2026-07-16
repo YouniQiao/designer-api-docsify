@@ -18,6 +18,8 @@ Subscribes to hover hand events and immediately starts detection for five second
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-motion-function onHoverHandChange(detectionArea: HoverHandDetectionArea, callback: Callback<HoverHandAction>): void--><!--Device-motion-function onHoverHandChange(detectionArea: HoverHandDetectionArea, callback: Callback<HoverHandAction>): void-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Subscribes to hover hand events and immediately starts detection for five second
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| detectionArea | HoverHandDetectionArea | Yes | Rectangular detection area for hover hand.<br> Repeated calls will override the previously set detection area.<br> If the area exceeds the screen bounds, it defaults to detecting the overlap. |
-| callback | Callback&lt;HoverHandAction&gt; | Yes | Callback used to return hover hand action. |
+| detectionArea | [HoverHandDetectionArea](arkts-multimodalawareness-hoverhanddetectionarea-i-sys.md) | Yes | Rectangular detection area for hover hand.<br> Repeated calls will override the previously set detection area.<br> If the area exceeds the screen bounds, it defaults to detecting the overlap. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<HoverHandAction> | Yes | Callback used to return hover hand action. |
 
 **Error codes:**
 
@@ -52,6 +54,10 @@ Subscribes to hover hand events and immediately starts detection.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-motion-function onHoverHandChange(
+    detectionArea: HoverHandDetectionArea, duration: int, callback: Callback<HoverHandAction>): void--><!--Device-motion-function onHoverHandChange(
+    detectionArea: HoverHandDetectionArea, duration: int, callback: Callback<HoverHandAction>): void-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 **System API:** This is a system API.
@@ -60,9 +66,9 @@ Subscribes to hover hand events and immediately starts detection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| detectionArea | HoverHandDetectionArea | Yes | Rectangular detection area for hover hand.<br> Repeated calls will override the previously set detection area.<br> If the area exceeds the screen bounds, it defaults to detecting the overlap. |
+| detectionArea | [HoverHandDetectionArea](arkts-multimodalawareness-hoverhanddetectionarea-i-sys.md) | Yes | Rectangular detection area for hover hand.<br> Repeated calls will override the previously set detection area.<br> If the area exceeds the screen bounds, it defaults to detecting the overlap. |
 | duration | number | Yes | Detection duration.<br> Unit: Seconds. The value must be an integer within [1,10].<br> Subscription ends automatically after duration expires. Call again to restart the detection.<br> Hover hand events are high power consumption events, developers are advised to set the duration as needed. |
-| callback | Callback&lt;HoverHandAction&gt; | Yes | Callback used to return hover hand action. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<HoverHandAction> | Yes | Callback used to return hover hand action. |
 
 **Error codes:**
 

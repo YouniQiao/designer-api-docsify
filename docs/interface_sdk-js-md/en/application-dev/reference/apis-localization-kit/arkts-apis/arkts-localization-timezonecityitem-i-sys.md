@@ -4,6 +4,8 @@ Represents a time zone and city combination item.
 
 **Since:** 10
 
+<!--Device-i18n-export interface TimeZoneCityItem--><!--Device-i18n-export interface TimeZoneCityItem-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ City display name in the system locale.
 
 **Since:** 10
 
+<!--Device-TimeZoneCityItem-cityDisplayName: string--><!--Device-TimeZoneCityItem-cityDisplayName: string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ City ID, for example, "Shanghai".
 **Type:** string
 
 **Since:** 10
+
+<!--Device-TimeZoneCityItem-cityId: string--><!--Device-TimeZoneCityItem-cityId: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -58,6 +64,8 @@ Offset of the time zone ID.
 
 **Since:** 10
 
+<!--Device-TimeZoneCityItem-offset: int--><!--Device-TimeZoneCityItem-offset: int-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Fixed offset of the time zone ID.
 **Type:** number
 
 **Since:** 10
+
+<!--Device-TimeZoneCityItem-rawOffset?: int--><!--Device-TimeZoneCityItem-rawOffset?: int-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -90,6 +100,8 @@ Time zone display name in the system locale.
 
 **Since:** 10
 
+<!--Device-TimeZoneCityItem-zoneDisplayName: string--><!--Device-TimeZoneCityItem-zoneDisplayName: string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -105,6 +117,8 @@ Time zone ID, for example, "Asia/Shanghai".
 **Type:** string
 
 **Since:** 10
+
+<!--Device-TimeZoneCityItem-zoneId: string--><!--Device-TimeZoneCityItem-zoneId: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 

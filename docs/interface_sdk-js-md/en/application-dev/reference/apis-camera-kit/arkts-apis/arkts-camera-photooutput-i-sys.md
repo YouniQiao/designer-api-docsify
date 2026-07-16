@@ -1,11 +1,12 @@
 # PhotoOutput
 
-Implements output information used in a photo session. It inherits from
-[CameraOutput](arkts-camera-cameraoutput-i.md).
+Implements output information used in a photo session. It inherits from [CameraOutput](arkts-camera-cameraoutput-i.md).
 
 **Inheritance/Implementation:** PhotoOutput extends [CameraOutput](arkts-camera-cameraoutput-i.md)
 
 **Since:** 10
+
+<!--Device-camera-interface PhotoOutput extends CameraOutput--><!--Device-camera-interface PhotoOutput extends CameraOutput-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -21,12 +22,11 @@ import { camera } from '@kit.CameraKit';
 burstCapture(setting: PhotoCaptureSetting): Promise<void>
 ```
 
-Starts the burst mode, in which users can capture a series of photos in quick succession. This API is generally
-used in photo mode. After the burst mode starts, the bottom layer continues displaying photos. You can call
-[confirmCapture](arkts-camera-photooutput-i-sys.md#confirmcapture-1) to cancel the burst mode. This API uses a promise to
-return the result.
+Starts the burst mode, in which users can capture a series of photos in quick succession. This API is generally used in photo mode. After the burst mode starts, the bottom layer continues displaying photos. You can call [confirmCapture](arkts-camera-photooutput-i-sys.md#confirmcapture-1) to cancel the burst mode. This API uses a promise to return the result.
 
 **Since:** 12
+
+<!--Device-PhotoOutput-burstCapture(setting: PhotoCaptureSetting): Promise<void>--><!--Device-PhotoOutput-burstCapture(setting: PhotoCaptureSetting): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -36,13 +36,13 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| setting | PhotoCaptureSetting | Yes | Shooting parameters. The input of **undefined** is processed as if noparameters were passed. |
+| setting | [PhotoCaptureSetting](arkts-camera-photocapturesetting-i.md) | Yes | Shooting parameters. The input of **undefined** is processed as if no parameters were passed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -85,12 +85,11 @@ function burstCapture(photoOutput: camera.PhotoOutput): void {
 confirmCapture(): void
 ```
 
-Confirms photo capture. This API is generally used in night photo mode when users need to stop the exposure
-countdown and take a photo in advance.
-This API is used to end the burst mode, which is started by calling
-[burstCapture](arkts-camera-photooutput-i-sys.md#burstcapture-1).
+Confirms photo capture. This API is generally used in night photo mode when users need to stop the exposure countdown and take a photo in advance.This API is used to end the burst mode, which is started by calling [burstCapture](arkts-camera-photooutput-i-sys.md#burstcapture-1).
 
 **Since:** 11
+
+<!--Device-PhotoOutput-confirmCapture(): void--><!--Device-PhotoOutput-confirmCapture(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -130,6 +129,8 @@ Enables deferred delivery of a certain type.
 
 **Since:** 11
 
+<!--Device-PhotoOutput-deferImageDelivery(type: DeferredDeliveryImageType): void--><!--Device-PhotoOutput-deferImageDelivery(type: DeferredDeliveryImageType): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -138,7 +139,7 @@ Enables deferred delivery of a certain type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | DeferredDeliveryImageType | Yes | Deferred delivery image type. |
+| type | [DeferredDeliveryImageType](arkts-camera-deferreddeliveryimagetype-e-sys.md) | Yes | Deferred delivery image type. |
 
 **Error codes:**
 
@@ -168,6 +169,8 @@ Enable auto cloud image enhancement
 
 **Since:** 13
 
+<!--Device-PhotoOutput-enableAutoCloudImageEnhancement(enabled: boolean): void--><!--Device-PhotoOutput-enableAutoCloudImageEnhancement(enabled: boolean): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -192,11 +195,11 @@ Enable auto cloud image enhancement
 enableAutoHighQualityPhoto(enabled: boolean): void
 ```
 
-Enables automatic high quality for photos. Before using this API, call
-[isAutoHighQualityPhotoSupported](arkts-camera-photooutput-i-sys.md#isautohighqualityphotosupported-1) to check whether
-automatic high quality is supported.
+Enables automatic high quality for photos. Before using this API, call [isAutoHighQualityPhotoSupported](arkts-camera-photooutput-i-sys.md#isautohighqualityphotosupported-1) to check whether automatic high quality is supported.
 
 **Since:** 13
+
+<!--Device-PhotoOutput-enableAutoHighQualityPhoto(enabled: boolean): void--><!--Device-PhotoOutput-enableAutoHighQualityPhoto(enabled: boolean): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -238,6 +241,8 @@ Enable depth data delivery.
 
 **Since:** 13
 
+<!--Device-PhotoOutput-enableDepthDataDelivery(enabled: boolean): void--><!--Device-PhotoOutput-enableDepthDataDelivery(enabled: boolean): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -267,6 +272,8 @@ Enable offline processing.
 
 **Since:** 18
 
+<!--Device-PhotoOutput-enableOffline(): void--><!--Device-PhotoOutput-enableOffline(): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -291,6 +298,8 @@ Enable original image generation.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoOutput-enableOriginalImageGeneration(enabled: boolean): void--><!--Device-PhotoOutput-enableOriginalImageGeneration(enabled: boolean): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -314,12 +323,11 @@ Enable original image generation.
 enableQuickThumbnail(enabled: boolean): void
 ```
 
-Enables or disables the quick thumbnail feature.
-This API takes effect after [addOutput](arkts-camera-session-i.md#addoutput-1) and
-[addInput](arkts-camera-session-i.md#addinput-1) and before
-[commitConfig](arkts-camera-session-i.md#commitconfig-2).
+Enables or disables the quick thumbnail feature.This API takes effect after [addOutput](arkts-camera-session-i.md#addoutput-1) and [addInput](arkts-camera-session-i.md#addinput-1) and before [commitConfig](arkts-camera-session-i.md#commitconfig-2).
 
 **Since:** 10
+
+<!--Device-PhotoOutput-enableQuickThumbnail(enabled: boolean): void--><!--Device-PhotoOutput-enableQuickThumbnail(enabled: boolean): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -329,7 +337,7 @@ This API takes effect after [addOutput](arkts-camera-session-i.md#addoutput-1) a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable the quick thumbnail feature. **true** to enable, **false**otherwise. |
+| enabled | boolean | Yes | Whether to enable the quick thumbnail feature. **true** to enable, **false** otherwise. |
 
 **Error codes:**
 
@@ -386,6 +394,8 @@ Enable raw image image delivery.
 
 **Since:** 13
 
+<!--Device-PhotoOutput-enableRawDelivery(enabled: boolean): void--><!--Device-PhotoOutput-enableRawDelivery(enabled: boolean): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -415,6 +425,8 @@ Confirm if the auto cloud image enhancement is supported.
 
 **Since:** 13
 
+<!--Device-PhotoOutput-isAutoCloudImageEnhancementSupported(): boolean--><!--Device-PhotoOutput-isAutoCloudImageEnhancementSupported(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -441,6 +453,8 @@ isAutoHighQualityPhotoSupported(): boolean
 Checks whether automatic high quality is supported for photos.
 
 **Since:** 13
+
+<!--Device-PhotoOutput-isAutoHighQualityPhotoSupported(): boolean--><!--Device-PhotoOutput-isAutoHighQualityPhotoSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -481,6 +495,8 @@ Checks whether deferred delivery of a certain type is enabled.
 
 **Since:** 11
 
+<!--Device-PhotoOutput-isDeferredImageDeliveryEnabled(type: DeferredDeliveryImageType): boolean--><!--Device-PhotoOutput-isDeferredImageDeliveryEnabled(type: DeferredDeliveryImageType): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -489,13 +505,13 @@ Checks whether deferred delivery of a certain type is enabled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | DeferredDeliveryImageType | Yes | Deferred delivery image type. |
+| type | [DeferredDeliveryImageType](arkts-camera-deferreddeliveryimagetype-e-sys.md) | Yes | Deferred delivery image type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether deferred delivery is enabled. **true** if enabled, **false**otherwise. |
+| boolean | Check result for whether deferred delivery is enabled. **true** if enabled, **false** otherwise. |
 
 **Error codes:**
 
@@ -527,6 +543,8 @@ Checks whether deferred delivery of a certain type is supported.
 
 **Since:** 11
 
+<!--Device-PhotoOutput-isDeferredImageDeliverySupported(type: DeferredDeliveryImageType): boolean--><!--Device-PhotoOutput-isDeferredImageDeliverySupported(type: DeferredDeliveryImageType): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -535,13 +553,13 @@ Checks whether deferred delivery of a certain type is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | DeferredDeliveryImageType | Yes | Deferred delivery image type. |
+| type | [DeferredDeliveryImageType](arkts-camera-deferreddeliveryimagetype-e-sys.md) | Yes | Deferred delivery image type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of deferred delivery. **true** if supported, **false**otherwise. |
+| boolean | Check result for the support of deferred delivery. **true** if supported, **false** otherwise. |
 
 **Error codes:**
 
@@ -573,6 +591,8 @@ Check if the depth data delivery is supported.
 
 **Since:** 13
 
+<!--Device-PhotoOutput-isDepthDataDeliverySupported(): boolean--><!--Device-PhotoOutput-isDepthDataDeliverySupported(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -600,6 +620,8 @@ isOfflineSupported(): boolean
 Confirm if offline processing is supported.
 
 **Since:** 18
+
+<!--Device-PhotoOutput-isOfflineSupported(): boolean--><!--Device-PhotoOutput-isOfflineSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -630,6 +652,8 @@ Confirm if original image generation supported.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoOutput-isOriginalImageGenerationSupported(): boolean--><!--Device-PhotoOutput-isOriginalImageGenerationSupported(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -653,12 +677,11 @@ Confirm if original image generation supported.
 isQuickThumbnailSupported(): boolean
 ```
 
-Checks whether the quick thumbnail feature is supported.
-This API takes effect after [addOutput](arkts-camera-session-i.md#addoutput-1) and
-[addInput](arkts-camera-session-i.md#addinput-1) and before
-[commitConfig](arkts-camera-session-i.md#commitconfig-2).
+Checks whether the quick thumbnail feature is supported.This API takes effect after [addOutput](arkts-camera-session-i.md#addoutput-1) and [addInput](arkts-camera-session-i.md#addinput-1) and before [commitConfig](arkts-camera-session-i.md#commitconfig-2).
 
 **Since:** 10
+
+<!--Device-PhotoOutput-isQuickThumbnailSupported(): boolean--><!--Device-PhotoOutput-isQuickThumbnailSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -723,6 +746,8 @@ Confirm if the raw image delivery is supported
 
 **Since:** 13
 
+<!--Device-PhotoOutput-isRawDeliverySupported(): boolean--><!--Device-PhotoOutput-isRawDeliverySupported(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -751,6 +776,8 @@ Unsubscribes from events indicating available thumbnail proxies.
 
 **Since:** 11
 
+<!--Device-PhotoOutput-off(type: 'deferredPhotoProxyAvailable', callback?: AsyncCallback<DeferredPhotoProxy>): void--><!--Device-PhotoOutput-off(type: 'deferredPhotoProxyAvailable', callback?: AsyncCallback<DeferredPhotoProxy>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -759,8 +786,8 @@ Unsubscribes from events indicating available thumbnail proxies.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deferredPhotoProxyAvailable' | Yes | Event type. The value is fixed at**'deferredPhotoProxyAvailable'**. The event can be listened for when a photoOutput instance is created. |
-| callback | AsyncCallback&lt;DeferredPhotoProxy&gt; | No | Callback used to return the result. This parameter isoptional. If this parameter is specified, the subscription to the specified event**on('deferredPhotoProxyAvailable')** with the specified callback is canceled. (The callback object cannot bean anonymous function.) |
+| type | 'deferredPhotoProxyAvailable' | Yes | Event type. The value is fixed at **'deferredPhotoProxyAvailable'**. The event can be listened for when a photoOutput instance is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DeferredPhotoProxy> | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('deferredPhotoProxyAvailable')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
 
@@ -800,6 +827,8 @@ Unsubscribes from quick thumbnail output events.
 
 **Since:** 10
 
+<!--Device-PhotoOutput-off(type: 'quickThumbnail', callback?: AsyncCallback<image.PixelMap>): void--><!--Device-PhotoOutput-off(type: 'quickThumbnail', callback?: AsyncCallback<image.PixelMap>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -809,7 +838,7 @@ Unsubscribes from quick thumbnail output events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'quickThumbnail' | Yes | Event type. The value is fixed at **'quickThumbnail'**. |
-| callback | AsyncCallback&lt;image.PixelMap&gt; | No | Callback used to return the result. This parameter isoptional. If this parameter is specified, the subscription to the specified event **on('quickThumbnail')**with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<image.PixelMap> | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('quickThumbnail')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Example**
 
@@ -826,10 +855,11 @@ function unregisterQuickThumbnail(photoOutput: camera.PhotoOutput): void {
 off(type: 'offlineDeliveryFinished', callback?: AsyncCallback<void>): void
 ```
 
-Unsubscribes offline Delivery finished events.
-This method is valid only after enableOffline() is called.
+Unsubscribes offline Delivery finished events.This method is valid only after enableOffline() is called.
 
 **Since:** 18
+
+<!--Device-PhotoOutput-off(type: 'offlineDeliveryFinished', callback?: AsyncCallback<void>): void--><!--Device-PhotoOutput-off(type: 'offlineDeliveryFinished', callback?: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -840,7 +870,7 @@ This method is valid only after enableOffline() is called.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'offlineDeliveryFinished' | Yes | Event type. |
-| callback | AsyncCallback&lt;void&gt; | No | Callback used to get offline Delivery finished events. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | No | Callback used to get offline Delivery finished events. |
 
 **Error codes:**
 
@@ -854,10 +884,11 @@ This method is valid only after enableOffline() is called.
 on(type: 'deferredPhotoProxyAvailable', callback: AsyncCallback<DeferredPhotoProxy>): void
 ```
 
-Subscribes to events indicating available thumbnail proxies. This API uses an asynchronous callback to return the
-result.
+Subscribes to events indicating available thumbnail proxies. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+<!--Device-PhotoOutput-on(type: 'deferredPhotoProxyAvailable', callback: AsyncCallback<DeferredPhotoProxy>): void--><!--Device-PhotoOutput-on(type: 'deferredPhotoProxyAvailable', callback: AsyncCallback<DeferredPhotoProxy>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -867,8 +898,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deferredPhotoProxyAvailable' | Yes | Event type. The value is fixed at**'deferredPhotoProxyAvailable'**. The event can be listened for when a photoOutput instance is created. |
-| callback | AsyncCallback&lt;DeferredPhotoProxy&gt; | Yes | Callback used to return the thumbnail proxy. |
+| type | 'deferredPhotoProxyAvailable' | Yes | Event type. The value is fixed at **'deferredPhotoProxyAvailable'**. The event can be listened for when a photoOutput instance is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DeferredPhotoProxy> | Yes | Callback used to return the thumbnail proxy. |
 
 **Error codes:**
 
@@ -904,10 +935,11 @@ function registerPhotoOutputDeferredPhotoProxyAvailable(photoOutput: camera.Phot
 on(type: 'quickThumbnail', callback: AsyncCallback<image.PixelMap>): void
 ```
 
-Subscribes to quick thumbnail output events. This API uses an asynchronous callback to return the result.
-The listening takes effect after **enableQuickThumbnail(true)** is called.
+Subscribes to quick thumbnail output events. This API uses an asynchronous callback to return the result.The listening takes effect after **enableQuickThumbnail(true)** is called.
 
 **Since:** 10
+
+<!--Device-PhotoOutput-on(type: 'quickThumbnail', callback: AsyncCallback<image.PixelMap>): void--><!--Device-PhotoOutput-on(type: 'quickThumbnail', callback: AsyncCallback<image.PixelMap>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -918,7 +950,7 @@ The listening takes effect after **enableQuickThumbnail(true)** is called.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'quickThumbnail' | Yes | Event type. The value is fixed at **'quickThumbnail'**. |
-| callback | AsyncCallback&lt;image.PixelMap&gt; | Yes | Callback that returns a PixelMap instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<image.PixelMap> | Yes | Callback that returns a PixelMap instance. |
 
 **Example**
 
@@ -974,10 +1006,11 @@ async function registerQuickThumbnail(context: common.BaseContext, mode: camera.
 on(type: 'offlineDeliveryFinished', callback: AsyncCallback<void>): void
 ```
 
-Subscribes offline Delivery finished events.
-This method is valid only after enableOffline() is called.
+Subscribes offline Delivery finished events.This method is valid only after enableOffline() is called.
 
 **Since:** 18
+
+<!--Device-PhotoOutput-on(type: 'offlineDeliveryFinished', callback: AsyncCallback<void>): void--><!--Device-PhotoOutput-on(type: 'offlineDeliveryFinished', callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -988,7 +1021,7 @@ This method is valid only after enableOffline() is called.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'offlineDeliveryFinished' | Yes | Event type. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to get offline Delivery finished events. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to get offline Delivery finished events. |
 
 **Error codes:**
 
@@ -1007,6 +1040,8 @@ Set edit data.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PhotoOutput-setEditData(editData: string): void--><!--Device-PhotoOutput-setEditData(editData: string): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

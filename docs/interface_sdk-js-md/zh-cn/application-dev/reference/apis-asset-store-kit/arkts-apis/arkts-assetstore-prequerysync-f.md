@@ -1,17 +1,24 @@
 # preQuerySync
 
+## 导入模块
+
+```TypeScript
+import { asset } from '@kit.AssetStoreKit';
+```
+
 ## preQuerySync
 
 ```TypeScript
 function preQuerySync(query: AssetMap): Uint8Array
 ```
 
-查询的预处理，用于需要用户认证的关键资产。在用户认证成功后，应当随后调用[asset.querySync](arkts-assetstore-querysync-f.md#querysync-1)、
-[asset.postQuerySync](arkts-assetstore-postquerysync-f.md#postquerysync-1)。使用同步方式返回结果。
+查询的预处理，用于需要用户认证的关键资产。在用户认证成功后，应当随后调用[asset.querySync](arkts-assetstore-querysync-f.md#querysync-1)、[asset.postQuerySync](arkts-assetstore-postquerysync-f.md#postquerysync-1)。使用同步方式返回结果。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-asset-function preQuerySync(query: AssetMap): Uint8Array--><!--Device-asset-function preQuerySync(query: AssetMap): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -19,13 +26,13 @@ function preQuerySync(query: AssetMap): Uint8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | AssetMap | 是 | 关键资产的查询条件，如别名、访问控制属性、自定义数据等。 |
+| query | [AssetMap](arkts-assetstore-assetmap-t.md) | 是 | 关键资产的查询条件，如别名、访问控制属性、自定义数据等。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 挑战值。<br>**说明：** 挑战值用于后续用户认证。 |
+| [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 挑战值。<br>**说明：** 挑战值用于后续用户认证。 |
 
 **错误码：**
 

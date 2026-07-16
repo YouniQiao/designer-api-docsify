@@ -1,5 +1,11 @@
 # getSimStateSync
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## getSimStateSync
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getSimStateSync(slotId: number): SimState
 Obtains the state of the SIM card in a specified slot.
 
 **起始版本：** 10
+
+<!--Device-sim-function getSimStateSync(slotId: int): SimState--><!--Device-sim-function getSimStateSync(slotId: int): SimState-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -22,7 +30,7 @@ Obtains the state of the SIM card in a specified slot.
 
 | 类型 | 说明 |
 | --- | --- |
-| SimState | Returns one of the following SIM card states:&lt;ul&gt;&lt;li&gt;{@code SimState#SIM_STATE_UNKNOWN}&lt;li&gt;{@code SimState#SIM_STATE_NOT_PRESENT}&lt;li&gt;{@code SimState#SIM_STATE_LOCKED}&lt;li&gt;{@code SimState#SIM_STATE_NOT_READY}&lt;li&gt;{@code SimState#SIM_STATE_READY}&lt;li&gt;{@code SimState#SIM_STATE_LOADED}&lt;/ul&gt; |
+| [SimState](arkts-telephony-simstate-e.md) | Returns one of the following SIM card states:&lt;ul&gt;&lt;li&gt;{@code SimState#SIM_STATE_UNKNOWN}&lt;li&gt;{@code SimState#SIM_STATE_NOT_PRESENT}&lt;li&gt;{@code SimState#SIM_STATE_LOCKED}&lt;li&gt;{@code SimState#SIM_STATE_NOT_READY}&lt;li&gt;{@code SimState#SIM_STATE_READY}&lt;li&gt;{@code SimState#SIM_STATE_LOADED}&lt;/ul&gt; |
 
 **示例：**
 

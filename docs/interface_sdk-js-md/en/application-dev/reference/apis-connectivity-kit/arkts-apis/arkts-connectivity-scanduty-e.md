@@ -8,6 +8,8 @@ The enum of scan duty.
 
 **Substitutes:** ScanDuty
 
+<!--Device-bluetoothManager-enum ScanDuty--><!--Device-bluetoothManager-enum ScanDuty-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## SCAN_MODE_LOW_POWER
@@ -23,6 +25,8 @@ low power mode
 **Deprecated since:** 10
 
 **Substitutes:** SCAN_MODE_LOW_POWER
+
+<!--Device-ScanDuty-SCAN_MODE_LOW_POWER = 0--><!--Device-ScanDuty-SCAN_MODE_LOW_POWER = 0-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -40,6 +44,8 @@ balanced power mode
 
 **Substitutes:** SCAN_MODE_BALANCED
 
+<!--Device-ScanDuty-SCAN_MODE_BALANCED = 1--><!--Device-ScanDuty-SCAN_MODE_BALANCED = 1-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## SCAN_MODE_LOW_LATENCY
@@ -55,6 +61,8 @@ Scan using highest duty cycle
 **Deprecated since:** 10
 
 **Substitutes:** SCAN_MODE_LOW_LATENCY
+
+<!--Device-ScanDuty-SCAN_MODE_LOW_LATENCY = 2--><!--Device-ScanDuty-SCAN_MODE_LOW_LATENCY = 2-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

@@ -1,5 +1,11 @@
 # getErrorInfo
 
+## 导入模块
+
+```TypeScript
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
+```
+
 ## getErrorInfo
 
 ```TypeScript
@@ -12,13 +18,15 @@ function getErrorInfo(): HuksExternalErrorInfo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-huksExternalCrypto-function getErrorInfo(): HuksExternalErrorInfo--><!--Device-huksExternalCrypto-function getErrorInfo(): HuksExternalErrorInfo-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| HuksExternalErrorInfo | 返回的详细错误信息。 |
+| [HuksExternalErrorInfo](arkts-universalkeystore-huksexternalerrorinfo-i.md) | 返回的详细错误信息。 |
 
 **示例：**
 

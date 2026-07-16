@@ -20,6 +20,8 @@ Get all persistence permissions for the application.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-fileShare-function getPersistentPolicy(tokenID: int): Promise<Array<PolicyInfo>>--><!--Device-fileShare-function getPersistentPolicy(tokenID: int): Promise<Array<PolicyInfo>>-End-->
+
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 **System API:** This is a system API.
@@ -34,7 +36,7 @@ Get all persistence permissions for the application.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PolicyInfo&gt;&gt; | Returns all persistence policy information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<PolicyInfo>> | Returns all persistence policy information. |
 
 **Error codes:**
 

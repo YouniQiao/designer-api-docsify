@@ -1,5 +1,11 @@
 # startGettingPrintFile（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+```
+
 ## startGettingPrintFile
 
 ```TypeScript
@@ -13,6 +19,10 @@ function startGettingPrintFile(jobId: string, printAttributes: PrintAttributes, 
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function startGettingPrintFile(jobId: string, printAttributes: PrintAttributes, fd: int,
+    onFileStateChanged: Callback<PrintFileCreationState>): void--><!--Device-print-function startGettingPrintFile(jobId: string, printAttributes: PrintAttributes, fd: int,
+    onFileStateChanged: Callback<PrintFileCreationState>): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -22,9 +32,9 @@ function startGettingPrintFile(jobId: string, printAttributes: PrintAttributes, 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | jobId | string | 是 | 表示打印任务ID。 |
-| printAttributes | PrintAttributes | 是 | 表示打印参数。 |
+| printAttributes | [PrintAttributes](arkts-basicservices-printattributes-i.md) | 是 | 表示打印参数。 |
 | fd | number | 是 | 表示打印文件描述符。 |
-| onFileStateChanged | Callback&lt;PrintFileCreationState&gt; | 是 | 表示更新文件状态的回调。 |
+| onFileStateChanged | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<PrintFileCreationState> | 是 | 表示更新文件状态的回调。 |
 
 **错误码：**
 

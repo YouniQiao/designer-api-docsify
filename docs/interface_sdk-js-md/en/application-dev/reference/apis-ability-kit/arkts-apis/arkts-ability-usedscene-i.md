@@ -1,9 +1,10 @@
 # UsedScene
 
-Describes the use scenario and timing of the permission,
-helping developers request and use permissions properly.
+Describes the use scenario and timing of the permission,helping developers request and use permissions properly.
 
 **Since:** 9
+
+<!--Device-unnamed-export interface UsedScene--><!--Device-unnamed-export interface UsedScene-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -21,6 +22,8 @@ Abilities that use the permission.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-UsedScene-abilities: Array<string>--><!--Device-UsedScene-abilities: Array<string>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## when
@@ -36,6 +39,8 @@ Time when the permission is used. The value can be **inuse** or **always**.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-UsedScene-when: string--><!--Device-UsedScene-when: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

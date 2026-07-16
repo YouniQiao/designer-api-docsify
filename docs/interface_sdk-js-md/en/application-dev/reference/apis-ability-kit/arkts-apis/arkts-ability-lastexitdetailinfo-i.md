@@ -4,6 +4,8 @@ Describes the key runtime information of the process where the ability last exit
 
 **Since:** 18
 
+<!--Device-AbilityConstant-export interface LastExitDetailInfo--><!--Device-AbilityConstant-export interface LastExitDetailInfo-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Reason why the process was killed.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-LastExitDetailInfo-exitMsg: string--><!--Device-LastExitDetailInfo-exitMsg: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## exitSubReason
@@ -45,6 +49,8 @@ Specific reason for the last exit of the ability.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-LastExitDetailInfo-exitSubReason: int--><!--Device-LastExitDetailInfo-exitSubReason: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -64,6 +70,8 @@ Indecates kill reason message.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-LastExitDetailInfo-killReason?: string--><!--Device-LastExitDetailInfo-killReason?: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## pid
@@ -81,6 +89,8 @@ ID of the process where the ability last exited.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-LastExitDetailInfo-pid: int--><!--Device-LastExitDetailInfo-pid: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -100,6 +110,8 @@ Name of the process.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-LastExitDetailInfo-processName: string--><!--Device-LastExitDetailInfo-processName: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## processState
@@ -117,6 +129,8 @@ Process status of the ability when it last exited.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-LastExitDetailInfo-processState?: appManager.ProcessState--><!--Device-LastExitDetailInfo-processState?: appManager.ProcessState-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -136,6 +150,8 @@ Actual physical memory usage of the process, in KB.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-LastExitDetailInfo-pss: int--><!--Device-LastExitDetailInfo-pss: int-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## rss
@@ -153,6 +169,8 @@ Actual memory usage of the process, in KB.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-LastExitDetailInfo-rss: int--><!--Device-LastExitDetailInfo-rss: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -172,6 +190,8 @@ Exact time when the ability last exited.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-LastExitDetailInfo-timestamp: long--><!--Device-LastExitDetailInfo-timestamp: long-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## uid
@@ -189,6 +209,8 @@ UID of the application.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-LastExitDetailInfo-uid: int--><!--Device-LastExitDetailInfo-uid: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

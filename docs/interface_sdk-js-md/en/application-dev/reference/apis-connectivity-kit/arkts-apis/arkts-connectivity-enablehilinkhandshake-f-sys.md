@@ -18,6 +18,8 @@ Enable hiLink handshake.
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 
+<!--Device-wifiManager-function enableHiLinkHandshake(isHiLinkEnable: boolean, bssid: string, config: WifiDeviceConfig): void--><!--Device-wifiManager-function enableHiLinkHandshake(isHiLinkEnable: boolean, bssid: string, config: WifiDeviceConfig): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Enable hiLink handshake.
 | --- | --- | --- | --- |
 | isHiLinkEnable | boolean | Yes | Indicates the HiLink enable or not. |
 | bssid | string | Yes | Indicates the Wi-Fi bssid. |
-| config | WifiDeviceConfig | Yes | Indicates the Wi-Fi device config. |
+| config | [WifiDeviceConfig](arkts-connectivity-wifideviceconfig-i-sys.md) | Yes | Indicates the Wi-Fi device config. |
 
 **Error codes:**
 

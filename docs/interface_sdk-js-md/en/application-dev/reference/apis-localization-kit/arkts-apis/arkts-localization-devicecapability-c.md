@@ -4,6 +4,8 @@ Defines the device capability.
 
 **Since:** 6
 
+<!--Device-resourceManager-export class DeviceCapability--><!--Device-resourceManager-export class DeviceCapability-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Device type.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DeviceCapability-deviceType: DeviceType--><!--Device-DeviceCapability-deviceType: DeviceType-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 ## screenDensity
@@ -41,6 +45,8 @@ Screen density of the device.
 **Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DeviceCapability-screenDensity: ScreenDensity--><!--Device-DeviceCapability-screenDensity: ScreenDensity-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 

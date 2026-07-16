@@ -12,6 +12,8 @@ Defines an OnLocaleUpdatedFn function.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-systemConfiguration-type OnLocaleUpdatedFn = (locale: string) => void--><!--Device-systemConfiguration-type OnLocaleUpdatedFn = (locale: string) => void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**

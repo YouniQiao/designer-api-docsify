@@ -2,11 +2,13 @@
 
 Represents recipient information for the CMS message.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > At least one recipient needs to be set.
 
 **Since:** 22
+
+<!--Device-cert-interface CmsRecipientInfo--><!--Device-cert-interface CmsRecipientInfo-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -30,6 +32,8 @@ KeyAgree recipient information.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-CmsRecipientInfo-keyAgreeInfo?: CmsKeyAgreeRecipientInfo--><!--Device-CmsRecipientInfo-keyAgreeInfo?: CmsKeyAgreeRecipientInfo-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## keyTransInfo
@@ -45,6 +49,8 @@ KeyTrans recipient information.
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-CmsRecipientInfo-keyTransInfo?: CmsKeyTransRecipientInfo--><!--Device-CmsRecipientInfo-keyTransInfo?: CmsKeyTransRecipientInfo-End-->
 
 **System capability:** SystemCapability.Security.Cert
 

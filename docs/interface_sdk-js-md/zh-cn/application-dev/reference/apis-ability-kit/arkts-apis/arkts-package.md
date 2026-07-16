@@ -1,5 +1,11 @@
 # @system.package
 
+## 导入模块
+
+```TypeScript
+import { CheckPackageHasInstalledResponse, CheckPackageHasInstalledOptions } from '@kit.AbilityKit';
+```
+
 ## 汇总
 
 ### 类

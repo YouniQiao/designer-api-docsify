@@ -1,15 +1,22 @@
 # enableGwpAsanGrayscale
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+```
+
 ## enableGwpAsanGrayscale
 
 ```TypeScript
 function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: number): void
 ```
 
-ʹ��GWP-ASan�����ڼ����ڴ�ʹ���еķǷ���Ϊ��
-�ýӿ���Ҫ���ڶ�̬���ò�����GWP-ASan��������Ӧ���Զ����GWP-ASan�����ԡ�������Ӧ��������������Ч��
+ʹ��GWP-ASan�����ڼ����ڴ�ʹ���еķǷ���Ϊ���ýӿ���Ҫ���ڶ�̬���ò�����GWP-ASan��������Ӧ���Զ����GWP-ASan�����ԡ�������Ӧ��������������Ч��
 
 **起始版本：** 20
+
+<!--Device-hidebug-function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: int): void--><!--Device-hidebug-function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: int): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -17,7 +24,7 @@ function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: number): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | GwpAsanOptions | 否 | GWP-ASan�����δ����ʱ��ʹ��Ĭ�ϲ����� |
+| options | [GwpAsanOptions](arkts-performanceanalysis-gwpasanoptions-i.md) | 否 | GWP-ASan�����δ����ʱ��ʹ��Ĭ�ϲ����� |
 | duration | number | 否 | GWP-ASan����ʱ�䣬��λΪ�죬Ĭ��ֵΪ7���贫�����0���������� |
 
 **错误码：**
@@ -64,13 +71,15 @@ function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: number): vo
 
 **起始版本：** 20
 
+<!--Device-hidebug-function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: number): void--><!--Device-hidebug-function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: number): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | GwpAsanOptions | 否 | GWP-ASan�����δ����ʱ��ʹ��Ĭ�ϲ����� |
+| options | [GwpAsanOptions](arkts-performanceanalysis-gwpasanoptions-i.md) | 否 | GWP-ASan�����δ����ʱ��ʹ��Ĭ�ϲ����� |
 | duration | number | 否 | GWP-ASan����ʱ�䣬��λΪ�죬Ĭ��ֵΪ7���贫�����0���������� |
 
 **错误码：**

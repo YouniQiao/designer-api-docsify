@@ -14,12 +14,12 @@ function installMarketApps(admin: Want, bundleNames: Array<string>): void
 
 Downloads and installs an application from AppGallery.
 
-> **NOTE**
->
-> After this API is successfully called, an application download task is generated on the home screen. The task is
-> the same as that created during download from AppGallery. Upon completion of the download and installation, the
-> installation result is returned through the
-> [EnterpriseAdminExtensionAbility.onMarketAppInstallResult](arkts-mdm-enterpriseadminextensionability-c.md#onmarketappinstallresult-1)
+> **NOTE**  
+>  
+> After this API is successfully called, an application download task is generated on the home screen. The task is  
+> the same as that created during download from AppGallery. Upon completion of the download and installation, the  
+> installation result is returned through the  
+> [EnterpriseAdminExtensionAbility.onMarketAppInstallResult](arkts-mdm-enterpriseadminextensionability-c.md#onmarketappinstallresult-1)  
 > callback.<!--RP1--><!--RP1End-->
 
 **Since:** 22
@@ -28,14 +28,16 @@ Downloads and installs an application from AppGallery.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-bundleManager-function installMarketApps(admin: Want, bundleNames: Array<string>): void--><!--Device-bundleManager-function installMarketApps(admin: Want, bundleNames: Array<string>): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| bundleNames | Array&lt;string&gt; | Yes | Application bundle name list. A maximum of 10 bundle names can be passed ata time. The bundle name must be the same as that on AppGallery. Otherwise, the download task cannot be created,and error code 9201002 will be reported. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| bundleNames | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Application bundle name list. A maximum of 10 bundle names can be passed at a time. The bundle name must be the same as that on AppGallery. Otherwise, the download task cannot be created,and error code 9201002 will be reported. |
 
 **Error codes:**
 

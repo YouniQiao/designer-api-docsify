@@ -4,6 +4,8 @@ Firewall IP parameters.
 
 **Since:** 15
 
+<!--Device-netFirewall-interface NetFirewallIpParams--><!--Device-netFirewall-interface NetFirewallIpParams-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## Modules to Import
@@ -24,6 +26,8 @@ IP address: Valid when type equals 1, otherwise it will be ignored.
 
 **Since:** 15
 
+<!--Device-NetFirewallIpParams-address?: string--><!--Device-NetFirewallIpParams-address?: string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## endIp
@@ -37,6 +41,8 @@ End IP: valid when type equals 2, otherwise it will be ignored.
 **Type:** string
 
 **Since:** 15
+
+<!--Device-NetFirewallIpParams-endIp?: string--><!--Device-NetFirewallIpParams-endIp?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -52,6 +58,8 @@ family?: number
 
 **Since:** 15
 
+<!--Device-NetFirewallIpParams-family?: number--><!--Device-NetFirewallIpParams-family?: number-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## mask
@@ -65,6 +73,8 @@ IPv4: subnet mask, IPv6: prefix, valid when type equals 1, otherwise it will be 
 **Type:** number
 
 **Since:** 15
+
+<!--Device-NetFirewallIpParams-mask?: number--><!--Device-NetFirewallIpParams-mask?: number-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -80,6 +90,8 @@ Start IP: valid when type equals 2, otherwise it will be ignored.
 
 **Since:** 15
 
+<!--Device-NetFirewallIpParams-startIp?: string--><!--Device-NetFirewallIpParams-startIp?: string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## type
@@ -93,6 +105,8 @@ type: number
 **Type:** number
 
 **Since:** 15
+
+<!--Device-NetFirewallIpParams-type: number--><!--Device-NetFirewallIpParams-type: number-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 

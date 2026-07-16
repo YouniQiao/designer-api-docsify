@@ -18,6 +18,8 @@ Subscribe to pick up sensor event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-motion-function onPickupChange(callback: Callback<PickupEvent>): void--><!--Device-motion-function onPickupChange(callback: Callback<PickupEvent>): void-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Subscribe to pick up sensor event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;PickupEvent&gt; | Yes | The callback to receive pickup status. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<PickupEvent> | Yes | The callback to receive pickup status. |
 
 **Error codes:**
 

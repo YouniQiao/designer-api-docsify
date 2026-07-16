@@ -1,17 +1,24 @@
 # preQuery
 
+## 导入模块
+
+```TypeScript
+import { asset } from '@kit.AssetStoreKit';
+```
+
 ## preQuery
 
 ```TypeScript
 function preQuery(query: AssetMap): Promise<Uint8Array>
 ```
 
-查询的预处理，用于需要用户认证的关键资产。在用户认证成功后，应当随后调用[asset.query](arkts-assetstore-query-f.md#query-1)和[asset.postQuery](arkts-assetstore-postquery-f.md#postquery-1)接口。使用
-Promise异步回调。
+查询的预处理，用于需要用户认证的关键资产。在用户认证成功后，应当随后调用[asset.query](arkts-assetstore-query-f.md#query-1)和[asset.postQuery](arkts-assetstore-postquery-f.md#postquery-1)接口。使用Promise异步回调。
 
 **起始版本：** 11
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-asset-function preQuery(query: AssetMap): Promise<Uint8Array>--><!--Device-asset-function preQuery(query: AssetMap): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -19,13 +26,13 @@ Promise异步回调。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | AssetMap | 是 | 关键资产的查询条件，如别名、访问控制属性、自定义数据等。 |
+| query | [AssetMap](arkts-assetstore-assetmap-t.md) | 是 | 关键资产的查询条件，如别名、访问控制属性、自定义数据等。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回挑战值。<br>**说明：** 挑战值用于后续的用户认证。 |
+| Promise<Uint8Array> | Promise对象，返回挑战值。<br>**说明：** 挑战值用于后续的用户认证。 |
 
 **错误码：**
 

@@ -6,6 +6,8 @@ Defines user blow data.
 
 **Since:** 26.0.0
 
+<!--Device-userStatus-export interface UserBlowData extends UserStatusData--><!--Device-userStatus-export interface UserBlowData extends UserStatusData-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
@@ -22,14 +24,15 @@ import { userStatus } from '@kit.MultimodalAwarenessKit';
 blowDirection?: number
 ```
 
-Blow direction.
-The value ranges from 0 to 2. 0: Not blowing, 1: Blowing from bottom mic, 2: Blowing from top mic.
+Blow direction.The value ranges from 0 to 2. 0: Not blowing, 1: Blowing from bottom mic, 2: Blowing from top mic.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UserBlowData-blowDirection?: int--><!--Device-UserBlowData-blowDirection?: int-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -41,15 +44,15 @@ The value ranges from 0 to 2. 0: Not blowing, 1: Blowing from bottom mic, 2: Blo
 emotion?: number
 ```
 
-User emotion level.
-The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm,
-3: A little unhappy, 4: Angry, 5: Crying.
+User emotion level.The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm,3: A little unhappy, 4: Angry, 5: Crying.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UserBlowData-emotion?: int--><!--Device-UserBlowData-emotion?: int-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -61,14 +64,15 @@ The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm,
 facePosition?: number[]
 ```
 
-Face position relative to screen.
-The normalized coordinate system ranges from 0 to 640.
+Face position relative to screen.The normalized coordinate system ranges from 0 to 640.
 
 **Type:** number[]
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UserBlowData-facePosition?: double[]--><!--Device-UserBlowData-facePosition?: double[]-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -88,6 +92,8 @@ Gravity acceleration of user motion status, in m/s².
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UserBlowData-gravityAcceleration?: double[]--><!--Device-UserBlowData-gravityAcceleration?: double[]-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
@@ -105,6 +111,8 @@ Whether user is gazing at screen.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UserBlowData-isGazeStatus?: boolean--><!--Device-UserBlowData-isGazeStatus?: boolean-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -124,6 +132,8 @@ Linear acceleration of user motion status, in m/s²..
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UserBlowData-linearAcceleration?: double[][]--><!--Device-UserBlowData-linearAcceleration?: double[][]-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
@@ -134,14 +144,15 @@ Linear acceleration of user motion status, in m/s²..
 strengthLevel?: number
 ```
 
-Blow strength level.
-The value must be an integer within [1,12].
+Blow strength level.The value must be an integer within [1,12].
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UserBlowData-strengthLevel?: int--><!--Device-UserBlowData-strengthLevel?: int-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 

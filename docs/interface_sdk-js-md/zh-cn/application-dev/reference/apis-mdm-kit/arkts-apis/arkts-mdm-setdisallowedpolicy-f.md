@@ -1,5 +1,11 @@
 # setDisallowedPolicy
 
+## 导入模块
+
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+```
+
 ## setDisallowedPolicy
 
 ```TypeScript
@@ -19,13 +25,15 @@ function setDisallowedPolicy(admin: Want, feature: string, disallow: boolean): v
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-restrictions-function setDisallowedPolicy(admin: Want, feature: string, disallow: boolean): void--><!--Device-restrictions-function setDisallowedPolicy(admin: Want, feature: string, disallow: boolean): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | feature | string | 是 | 支持设置的特性清单参考表1。<br/> **说明：** 从API version 15开始，应用申请权限ohos.permission.PERSONAL_MANAGE_RESTRICTIONS并通过[startAdminProvision](arkts-mdm-startadminprovision-f.md#startadminprovision-1)激活为[BDA](../../../../mdm/mdm-kit-term.md#bda)，可以使用此接口设置以下特性：bluetooth、hdc、microphone、usb、wifi、tethering、camera&lt;!--RP3--&gt;&lt;!--RP3End--&gt;，从API版本26.0.0开始，新增支持使用此接口设置mtpServer特性。 |
 | disallow | boolean | 是 | true表示禁止使用，false表示允许使用。 |
 
@@ -75,14 +83,16 @@ function setDisallowedPolicy(admin: Want, feature: FeatureForDevice, disallow: b
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-restrictions-function setDisallowedPolicy(admin: Want, feature: FeatureForDevice, disallow: boolean): void--><!--Device-restrictions-function setDisallowedPolicy(admin: Want, feature: FeatureForDevice, disallow: boolean): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| feature | FeatureForDevice | 是 | 指定要禁用或允许的设备特性。<br/> **说明：** 应用申请权限ohos.permission.PERSONAL_MANAGE_RESTRICTIONS并通过[startAdminProvision](arkts-mdm-startadminprovision-f.md#startadminprovision-1)激活为[BDA](../../../../mdm/mdm-kit-term.md#bda)，可以使用此接口设置以下特性：[FeatureForDevice.WIFI_P2P](arkts-mdm-featurefordevice-e.md)。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| feature | [FeatureForDevice](arkts-mdm-featurefordevice-e.md) | 是 | 指定要禁用或允许的设备特性。<br/> **说明：** 应用申请权限ohos.permission.PERSONAL_MANAGE_RESTRICTIONS并通过[startAdminProvision](arkts-mdm-startadminprovision-f.md#startadminprovision-1)激活为[BDA](../../../../mdm/mdm-kit-term.md#bda)，可以使用此接口设置以下特性：[FeatureForDevice.WIFI_P2P](arkts-mdm-featurefordevice-e.md)。 |
 | disallow | boolean | 是 | true表示禁止使用，false表示允许使用。 |
 
 **错误码：**

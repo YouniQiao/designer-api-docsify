@@ -12,15 +12,15 @@ import { appManager } from '@kit.AbilityKit';
 function preloadApplication(bundleName: string, userId: number, mode: PreloadMode, appIndex?: number): Promise<void>
 ```
 
-Preloads an application process. A successful call does not always mean that the preloading is successful. In other
-words, the target application process may not be created even if the API is successfully called. This API uses a
-promise to return the result.
+Preloads an application process. A successful call does not always mean that the preloading is successful. In other words, the target application process may not be created even if the API is successfully called. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.PRELOAD_APPLICATION
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-appManager-function preloadApplication(bundleName: string, userId: int, mode: PreloadMode, appIndex?: int): Promise<void>--><!--Device-appManager-function preloadApplication(bundleName: string, userId: int, mode: PreloadMode, appIndex?: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -32,14 +32,14 @@ promise to return the result.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application to preload. |
 | userId | number | Yes | User ID. |
-| mode | PreloadMode | Yes | Mode used for preloading. |
+| mode | [PreloadMode](arkts-ability-preloadmode-e-sys.md) | Yes | Mode used for preloading. |
 | appIndex | number | No | Application index of the twin application to be preloaded. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

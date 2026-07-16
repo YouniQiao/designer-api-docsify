@@ -4,6 +4,8 @@ Defines accessibility.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class ChipV2Accessibility--><!--Device-unnamed-export declare class ChipV2Accessibility-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,13 +28,15 @@ The constructor of ChipV2Accessibility
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2Accessibility-constructor(config: ChipV2AccessibilityConfig)--><!--Device-ChipV2Accessibility-constructor(config: ChipV2AccessibilityConfig)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | ChipV2AccessibilityConfig | Yes | config of accessibility. config is mandatory. |
+| config | [ChipV2AccessibilityConfig](arkts-arkui-chipv2accessibilityconfig-i.md) | Yes | config of accessibility. config is mandatory. |
 
 ## accessibilityDescription
 
@@ -49,6 +53,8 @@ Set accessibility description.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipV2Accessibility-public accessibilityDescription?: ResourceStr--><!--Device-ChipV2Accessibility-public accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,6 +76,8 @@ Set accessibility level.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2Accessibility-public accessibilityLevel?: string--><!--Device-ChipV2Accessibility-public accessibilityLevel?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
@@ -87,6 +95,8 @@ Set accessibility text.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipV2Accessibility-public accessibilityText?: ResourceStr--><!--Device-ChipV2Accessibility-public accessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

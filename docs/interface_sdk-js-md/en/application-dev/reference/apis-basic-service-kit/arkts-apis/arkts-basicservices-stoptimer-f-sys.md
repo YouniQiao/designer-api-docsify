@@ -16,6 +16,8 @@ Stops the timer. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
+<!--Device-systemTimer-function stopTimer(timer: long, callback: AsyncCallback<void>): void--><!--Device-systemTimer-function stopTimer(timer: long, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **System API:** This is a system API.
@@ -25,7 +27,7 @@ Stops the timer. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | timer | number | Yes | ID of the timer. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -78,6 +80,8 @@ Stops a timer. This API uses a promise to return the result.
 
 **Since:** 7
 
+<!--Device-systemTimer-function stopTimer(timer: long): Promise<void>--><!--Device-systemTimer-function stopTimer(timer: long): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **System API:** This is a system API.
@@ -92,7 +96,7 @@ Stops a timer. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

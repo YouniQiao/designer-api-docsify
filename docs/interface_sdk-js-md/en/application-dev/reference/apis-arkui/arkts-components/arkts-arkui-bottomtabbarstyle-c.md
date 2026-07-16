@@ -4,6 +4,8 @@ Implements the bottom and side tab style.
 
 **Since:** 9
 
+<!--Device-unnamed-declare class BottomTabBarStyle--><!--Device-unnamed-declare class BottomTabBarStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -18,6 +20,8 @@ A constructor used to create a **BottomTabBarStyle** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-BottomTabBarStyle-constructor(icon: ResourceStr | TabBarSymbol, text: ResourceStr)--><!--Device-BottomTabBarStyle-constructor(icon: ResourceStr | TabBarSymbol, text: ResourceStr)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -25,7 +29,7 @@ A constructor used to create a **BottomTabBarStyle** instance.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | icon | ResourceStr \| TabBarSymbol | Yes | Image for the tab.<br>**Since:** 12 |
-| text | ResourceStr | Yes | Text for the tab. |
+| text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Text for the tab. |
 
 ## iconStyle
 
@@ -41,19 +45,21 @@ Sets the style of the label icon on the bottom tab.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BottomTabBarStyle-iconStyle(style: TabBarIconStyle): BottomTabBarStyle--><!--Device-BottomTabBarStyle-iconStyle(style: TabBarIconStyle): BottomTabBarStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | TabBarIconStyle | Yes | Style of the label icon on the bottom tab. |
+| style | [TabBarIconStyle](arkts-arkui-tabbariconstyle-i.md) | Yes | Style of the label icon on the bottom tab. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| BottomTabBarStyle | **BottomTabBarStyle** object. |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | **BottomTabBarStyle** object. |
 
 ## id
 
@@ -69,6 +75,8 @@ Sets the ID of the bottom tab.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BottomTabBarStyle-id(value: string): BottomTabBarStyle--><!--Device-BottomTabBarStyle-id(value: string): BottomTabBarStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -81,7 +89,7 @@ Sets the ID of the bottom tab.
 
 | Type | Description |
 | --- | --- |
-| BottomTabBarStyle | **BottomTabBarStyle** object. |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | **BottomTabBarStyle** object. |
 
 ## labelStyle
 
@@ -97,19 +105,21 @@ Sets the style of the label text and font for the bottom tab.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-BottomTabBarStyle-labelStyle(value: LabelStyle): BottomTabBarStyle--><!--Device-BottomTabBarStyle-labelStyle(value: LabelStyle): BottomTabBarStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | LabelStyle | Yes | Style of the label text and font for the bottom tab. |
+| value | [LabelStyle](arkts-arkui-labelstyle-i.md) | Yes | Style of the label text and font for the bottom tab. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| BottomTabBarStyle | **BottomTabBarStyle** object. |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | **BottomTabBarStyle** object. |
 
 ## layoutMode
 
@@ -125,19 +135,21 @@ Sets the layout mode of the images and texts on the bottom tab.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-BottomTabBarStyle-layoutMode(value: LayoutMode): BottomTabBarStyle--><!--Device-BottomTabBarStyle-layoutMode(value: LayoutMode): BottomTabBarStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | LayoutMode | Yes | Layout mode of the images and text on the bottom tab.<br>Default value:**LayoutMode.VERTICAL** |
+| value | [LayoutMode](arkts-arkui-layoutmode-e.md) | Yes | Layout mode of the images and text on the bottom tab.<br>Default value:**LayoutMode.VERTICAL** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| BottomTabBarStyle | **BottomTabBarStyle** object. |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | **BottomTabBarStyle** object. |
 
 ## of
 
@@ -153,6 +165,8 @@ Static constructor used to create a **BottomTabBarStyle** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-BottomTabBarStyle-static of(icon: ResourceStr | TabBarSymbol, text: ResourceStr): BottomTabBarStyle--><!--Device-BottomTabBarStyle-static of(icon: ResourceStr | TabBarSymbol, text: ResourceStr): BottomTabBarStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -160,13 +174,13 @@ Static constructor used to create a **BottomTabBarStyle** instance.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | icon | ResourceStr \| TabBarSymbol | Yes | Image for the tab.<br>**Since:** 12 |
-| text | ResourceStr | Yes | Text for the tab. |
+| text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Text for the tab. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| BottomTabBarStyle | **BottomTabBarStyle** object created. |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | **BottomTabBarStyle** object created. |
 
 ## padding
 
@@ -174,8 +188,7 @@ Static constructor used to create a **BottomTabBarStyle** instance.
 padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle
 ```
 
-Sets the padding of the bottom tab. It cannot be set in percentage. When the parameter is of the Dimension type,
-the value applies to all sides.
+Sets the padding of the bottom tab. It cannot be set in percentage. When the parameter is of the Dimension type,the value applies to all sides.
 
 **Since:** 10
 
@@ -183,19 +196,21 @@ the value applies to all sides.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-BottomTabBarStyle-padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle--><!--Device-BottomTabBarStyle-padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Padding \| Dimension \| LocalizedPadding | Yes | Padding of the bottom tab.<br>Value range: [0, +∞]<br>Default value: **{left:4.0vp,right:4.0vp,top:0.0vp,bottom:0.0vp}**<br>If of the LocalizedPadding type, thisattribute supports the mirroring capability.<br>Default value:**{start:LengthMetrics.vp(4),end:LengthMetrics.vp(4),**<br>**top:LengthMetrics.vp(0),bottom:LengthMetrics.vp(0)}**<br>**Since:** 12 |
+| value | Padding \| Dimension \| LocalizedPadding | Yes | Padding of the bottom tab.<br>Value range: [0, +∞]<br>Default value: **{left:4.0vp,right:4.0vp,top:0.0vp,bottom:0.0vp}**<br>If of the LocalizedPadding type, this attribute supports the mirroring capability.<br>Default value:**{start:LengthMetrics.vp(4),end:LengthMetrics.vp(4),**<br>**top:LengthMetrics.vp(0),bottom:LengthMetrics.vp(0)}**<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| BottomTabBarStyle | **BottomTabBarStyle** object. |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | **BottomTabBarStyle** object. |
 
 ## symmetricExtensible
 
@@ -203,9 +218,7 @@ the value applies to all sides.
 symmetricExtensible(value: boolean): BottomTabBarStyle
 ```
 
-Sets whether the images and text on the bottom tab can be symmetrically extended by the minimum value of the
-available space on the left and right bottom tabs. This parameter is valid only between bottom tabs in fixed
-horizontal mode.
+Sets whether the images and text on the bottom tab can be symmetrically extended by the minimum value of the available space on the left and right bottom tabs. This parameter is valid only between bottom tabs in fixed horizontal mode.
 
 **Since:** 10
 
@@ -213,19 +226,21 @@ horizontal mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-BottomTabBarStyle-symmetricExtensible(value: boolean): BottomTabBarStyle--><!--Device-BottomTabBarStyle-symmetricExtensible(value: boolean): BottomTabBarStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether the images and text on the bottom tab can be symmetrically extended by theminimum value of the available space on the left and right bottom tabs.<br>Default value: **false**, indicatingthat the images and text on the bottom tab cannot be symmetrically extended by the minimum value of theavailable space on the left and right bottom tabs. |
+| value | boolean | Yes | Whether the images and text on the bottom tab can be symmetrically extended by the minimum value of the available space on the left and right bottom tabs.<br>Default value: **false**, indicating that the images and text on the bottom tab cannot be symmetrically extended by the minimum value of the available space on the left and right bottom tabs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| BottomTabBarStyle | **BottomTabBarStyle** object. |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | **BottomTabBarStyle** object. |
 
 ## verticalAlign
 
@@ -241,17 +256,19 @@ Sets the vertical alignment mode of the images and text on the bottom tab.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-BottomTabBarStyle-verticalAlign(value: VerticalAlign): BottomTabBarStyle--><!--Device-BottomTabBarStyle-verticalAlign(value: VerticalAlign): BottomTabBarStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | VerticalAlign | Yes | Vertical alignment mode of the images and text on the bottom tab.<br>Defaultvalue: **VerticalAlign.Center** |
+| value | [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md) | Yes | Vertical alignment mode of the images and text on the bottom tab.<br>Default value: **VerticalAlign.Center** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| BottomTabBarStyle | **BottomTabBarStyle** object. |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | **BottomTabBarStyle** object. |
 

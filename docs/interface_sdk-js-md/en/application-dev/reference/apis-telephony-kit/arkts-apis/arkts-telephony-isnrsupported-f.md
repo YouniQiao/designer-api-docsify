@@ -16,6 +16,8 @@ Checks whether the device supports 5G New Radio (NR).
 
 **Since:** 9
 
+<!--Device-radio-function isNRSupported(): boolean--><!--Device-radio-function isNRSupported(): boolean-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Return value:**
@@ -43,13 +45,15 @@ Checks whether the device supports 5G New Radio (NR) by according card slot.
 
 **Since:** 9
 
+<!--Device-radio-function isNRSupported(slotId: int): boolean--><!--Device-radio-function isNRSupported(slotId: int): boolean-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the card slot index int, ranging from 0 to the maximum card slotindex number supported by the device. |
+| slotId | number | Yes | Indicates the card slot index int, ranging from 0 to the maximum card slot index number supported by the device. |
 
 **Return value:**
 

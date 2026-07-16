@@ -20,6 +20,8 @@ Unlock Encrypted Volume Device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-encryptedVolumeManager-function unlock(volumeId: string, passWord: string): Promise<void>--><!--Device-encryptedVolumeManager-function unlock(volumeId: string, passWord: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -35,7 +37,7 @@ Unlock Encrypted Volume Device.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | return Promise |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | return Promise |
 
 **Error codes:**
 

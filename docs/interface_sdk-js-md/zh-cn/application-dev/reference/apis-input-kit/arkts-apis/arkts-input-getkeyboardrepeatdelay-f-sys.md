@@ -1,5 +1,11 @@
 # getKeyboardRepeatDelay（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+```
+
 ## getKeyboardRepeatDelay
 
 ```TypeScript
@@ -10,6 +16,8 @@ function getKeyboardRepeatDelay(callback: AsyncCallback<number>): void
 
 **起始版本：** 10
 
+<!--Device-inputDevice-function getKeyboardRepeatDelay(callback: AsyncCallback<int>): void--><!--Device-inputDevice-function getKeyboardRepeatDelay(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **系统接口：** 此接口为系统接口。
@@ -18,7 +26,7 @@ function getKeyboardRepeatDelay(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。当获取成功，err为undefined，data为键盘按键重复延迟时间；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。当获取成功，err为undefined，data为键盘按键重复延迟时间；否则为错误对象。 |
 
 **错误码：**
 
@@ -70,6 +78,8 @@ function getKeyboardRepeatDelay(): Promise<number>
 
 **起始版本：** 10
 
+<!--Device-inputDevice-function getKeyboardRepeatDelay(): Promise<int>--><!--Device-inputDevice-function getKeyboardRepeatDelay(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **系统接口：** 此接口为系统接口。
@@ -78,7 +88,7 @@ function getKeyboardRepeatDelay(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回键盘按键的重复时延。 |
+| Promise<number> | Promise对象，返回键盘按键的重复时延。 |
 
 **错误码：**
 

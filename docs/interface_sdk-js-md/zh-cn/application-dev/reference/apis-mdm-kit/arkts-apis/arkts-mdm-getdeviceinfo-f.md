@@ -1,5 +1,11 @@
 # getDeviceInfo
 
+## 导入模块
+
+```TypeScript
+import { deviceInfo } from '@kit.MDMKit';
+```
+
 ## getDeviceInfo
 
 ```TypeScript
@@ -14,20 +20,22 @@ function getDeviceInfo(admin: Want, label: string): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-deviceInfo-function getDeviceInfo(admin: Want, label: string): string--><!--Device-deviceInfo-function getDeviceInfo(admin: Want, label: string): string-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | label | string | 是 | 支持获取的设备信息标签。<br/>- deviceName：设备名称。<br/>- deviceSerial：设备序列号。<br/>- simInfo：SIM卡信息。 &lt;!--RP1--&gt;&lt;!--RP1End--&gt; |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| string | Device information obtained.<br>If **label** is **simInfo**, the return value is the SIM card information in a JSON string. For example,[{"slotId": 0, "MEID": "", "IMSI": "", "ICCID": "", "IMEI": "", "NUMBER": ""},{"slotId": 1, "MEID": "", "IMSI": "", "ICCID": "", "IMEI": "", "NUMBER": ""}], where **slotId:0** indicates card slot 1, and **slotId:1** indicates card slot 2. **NUMBER** indicates thephone number and is supported since API version 23. The value is in the E.164 international standard format (for example, +8612345678901) that contains the country code. |
+| string | Device information obtained.<br>If **label** is **simInfo**, the return value is the SIM card information in a JSON string. For example,[{"slotId": 0, "MEID": "", "IMSI": "", "ICCID": "", "IMEI": "", "NUMBER": ""},{"slotId": 1, "MEID": "", "IMSI": "", "ICCID": "", "IMEI": "", "NUMBER": ""}], where **slotId:0** indicates card slot 1, and **slotId:1** indicates card slot 2. **NUMBER** indicates the phone number and is supported since API version 23. The value is in the E.164 international standard format (for example, +8612345678901) that contains the country code. |
 
 **错误码：**
 

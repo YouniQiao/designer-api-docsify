@@ -1,5 +1,11 @@
 # startTimer（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { systemTimer } from '@kit.BasicServicesKit';
+```
+
 ## startTimer
 
 ```TypeScript
@@ -9,6 +15,8 @@ function startTimer(timer: number, triggerTime: number, callback: AsyncCallback<
 开启定时器，使用callback异步回调。
 
 **起始版本：** 7
+
+<!--Device-systemTimer-function startTimer(timer: long, triggerTime: long, callback: AsyncCallback<void>): void--><!--Device-systemTimer-function startTimer(timer: long, triggerTime: long, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
 
@@ -20,7 +28,7 @@ function startTimer(timer: number, triggerTime: number, callback: AsyncCallback<
 | --- | --- | --- | --- |
 | timer | number | 是 | 定时器的ID。 |
 | triggerTime | number | 是 | 定时器的触发时间，单位：毫秒。<br/>若定时器类型包含了TIMER_TYPE_REALTIME，该triggerTime应为系统启动时间，建议通过[systemDateTime.getUptime(STARTUP)](arkts-basicservices-getuptime-f.md#getuptime-1)获取；<br/>若定时器类型不包含TIMER_TYPE_REALTIME，该triggerTime应为墙上时间，建议通过[systemDateTime.getTime()](arkts-basicservices-gettime-f.md#gettime-1)获取。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -72,6 +80,8 @@ function startTimer(timer: number, triggerTime: number): Promise<void>
 
 **起始版本：** 7
 
+<!--Device-systemTimer-function startTimer(timer: long, triggerTime: long): Promise<void>--><!--Device-systemTimer-function startTimer(timer: long, triggerTime: long): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **系统接口：** 此接口为系统接口。
@@ -87,7 +97,7 @@ function startTimer(timer: number, triggerTime: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

@@ -18,19 +18,21 @@ Creates a **KVManager** instance for KV store management.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-distributedKVStore-function createKVManager(config: KVManagerConfig): KVManager--><!--Device-distributedKVStore-function createKVManager(config: KVManagerConfig): KVManager-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | KVManagerConfig | Yes | Configuration of the **KVManager** instance, including the bundle name (cannot beempty) of the caller and user information. |
+| config | [KVManagerConfig](arkts-arkdata-kvmanagerconfig-i.md) | Yes | Configuration of the **KVManager** instance, including the bundle name (cannot be empty) of the caller and user information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| KVManager | **KVManager** instance created. |
+| [KVManager](arkts-arkdata-kvmanager-i.md) | **KVManager** instance created. |
 
 **Error codes:**
 

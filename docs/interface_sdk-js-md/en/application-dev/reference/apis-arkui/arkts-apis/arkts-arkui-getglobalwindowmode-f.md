@@ -12,12 +12,13 @@ import { window } from '@kit.ArkUI';
 function getGlobalWindowMode(displayId?: number): Promise<number>
 ```
 
-Obtains the window mode of the window that is in the foreground lifecycle on the specified screen. This API uses a
-promise to return the result.
+Obtains the window mode of the window that is in the foreground lifecycle on the specified screen. This API uses a promise to return the result.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-window-function getGlobalWindowMode(displayId?: long): Promise<int>--><!--Device-window-function getGlobalWindowMode(displayId?: long): Promise<int>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -25,13 +26,13 @@ promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | number | No | Optional display ID, which is used to obtain the window mode information on thecorresponding screen. This parameter must be an integer greater than or equal to 0. If it is less than 0, errorcode 1300016 is returned. If this parameter is not passed or is set to null or undefined, all screens arequeried. If a non-integer is passed, the decimal part is ignored. If the specified screen does not exist, thereturn value is 0. You are advised to call[getWindowProperties()](arkts-arkui-window-i.md#getwindowproperties-1) to obtain the display ID of thewindow. |
+| displayId | number | No | Optional display ID, which is used to obtain the window mode information on the corresponding screen. This parameter must be an integer greater than or equal to 0. If it is less than 0, error code 1300016 is returned. If this parameter is not passed or is set to null or undefined, all screens are queried. If a non-integer is passed, the decimal part is ignored. If the specified screen does not exist, the return value is 0. You are advised to call [getWindowProperties()](arkts-arkui-window-i.md#getwindowproperties-1) to obtain the display ID of the window. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the window mode. Each binary bit represents a window mode. Fordetails about the supported window modes, see [GlobalWindowMode](arkts-arkui-globalwindowmode-e.md).The return value is the result of a bitwise OR operation on the corresponding window mode values. For example,if there are full-screen, floating, and PiP windows on the specified screen, the return value is `0b1\|0b100\|0b1000 = 13`. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the window mode. Each binary bit represents a window mode. For details about the supported window modes, see [GlobalWindowMode](arkts-arkui-globalwindowmode-e.md).The return value is the result of a bitwise OR operation on the corresponding window mode values. For example,if there are full-screen, floating, and PiP windows on the specified screen, the return value is `0b1\|0b100\|0b1000 = 13`. |
 
 **Error codes:**
 

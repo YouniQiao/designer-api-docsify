@@ -1,5 +1,11 @@
 # acceptConnect
 
+## 导入模块
+
+```TypeScript
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+```
+
 ## acceptConnect
 
 ```TypeScript
@@ -11,6 +17,8 @@ function acceptConnect(sessionId: number, token: string): Promise<void>
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-abilityConnectionManager-function acceptConnect(sessionId: int, token: string): Promise<void>--><!--Device-abilityConnectionManager-function acceptConnect(sessionId: int, token: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -25,7 +33,7 @@ function acceptConnect(sessionId: number, token: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

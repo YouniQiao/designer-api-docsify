@@ -12,13 +12,11 @@ import { formProvider } from '@kit.FormKit';
 function deactivateSceneAnimation(formId: string): Promise<void>
 ```
 
-Requests to deactivate a widget. This API takes effect only for
-[scene-based widgets](../../../../form/arkts-ui-widget-configuration.md#sceneanimationparams-field). This API uses a
-promise to return the result. An interactive widget can be in the active or inactive state. In the inactive state,
-the widget is the same as a common widget. In the active state, the widget can start the
-**LiveFormExtensionAbility** process developed by the widget host to implement animations.
+Requests to deactivate a widget. This API takes effect only for [scene-based widgets](../../../../form/arkts-ui-widget-configuration.md#sceneanimationparams-field). This API uses a promise to return the result. An interactive widget can be in the active or inactive state. In the inactive state,the widget is the same as a common widget. In the active state, the widget can start the **LiveFormExtensionAbility** process developed by the widget host to implement animations.
 
 **Since:** 20
+
+<!--Device-formProvider-function deactivateSceneAnimation(formId: string): Promise<void>--><!--Device-formProvider-function deactivateSceneAnimation(formId: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -34,14 +32,14 @@ the widget is the same as a common widget. In the active state, the widget can s
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function deactivateSceneAnimation cannot work correctly due to limited device capabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function deactivateSceneAnimation can not work correctly due to limited device capabilities. |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |

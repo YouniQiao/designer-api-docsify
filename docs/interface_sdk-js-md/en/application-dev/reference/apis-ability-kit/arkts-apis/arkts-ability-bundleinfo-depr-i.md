@@ -1,8 +1,8 @@
 # BundleInfo
 
-> **NOTE**
->
-> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use  
 > [bundleManager-BundleInfo](arkts-ability-bundleinfo-depr-i.md) instead.
 
 **Since:** 7
@@ -10,6 +10,8 @@
 **Deprecated since:** 9
 
 **Substitutes:** [bundleInfo:BundleInfo](arkts-ability-bundleinfo-depr-i.md)
+
+<!--Device-unnamed-export interface BundleInfo--><!--Device-unnamed-export interface BundleInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -21,9 +23,7 @@ readonly abilityInfos: Array<AbilityInfo>
 
 Ability configuration information.
 
-The value is obtained by passing in GET_BUNDLE_WITH_ABILITIES to
-[bundle.getBundleInfo](arkts-ability-getbundleinfo-f.md#getbundleinfo-3)
-.
+The value is obtained by passing in GET_BUNDLE_WITH_ABILITIES to [bundle.getBundleInfo](arkts-ability-getbundleinfo-f.md#getbundleinfo-3).
 
 **Type:** Array<AbilityInfo>
 
@@ -34,6 +34,8 @@ The value is obtained by passing in GET_BUNDLE_WITH_ABILITIES to
 **Deprecated since:** 9
 
 **Substitutes:** abilitiesInfo
+
+<!--Device-BundleInfo-readonly abilityInfos: Array<AbilityInfo>--><!--Device-BundleInfo-readonly abilityInfos: Array<AbilityInfo>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -56,6 +58,8 @@ The application ID uniquely identifies an application. It is determined by the b
 
 **Substitutes:** appId
 
+<!--Device-BundleInfo-readonly appId: string--><!--Device-BundleInfo-readonly appId: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## appInfo
@@ -76,6 +80,8 @@ Application configuration information.
 
 **Substitutes:** appInfo
 
+<!--Device-BundleInfo-readonly appInfo: ApplicationInfo--><!--Device-BundleInfo-readonly appInfo: ApplicationInfo-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## compatibleVersion
@@ -93,6 +99,8 @@ Earliest SDK version required for running the bundle.
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-BundleInfo-readonly compatibleVersion: number--><!--Device-BundleInfo-readonly compatibleVersion: number-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -112,6 +120,8 @@ CPU and ABI information of the bundle.
 
 **Deprecated since:** 9
 
+<!--Device-BundleInfo-readonly cpuAbi: string--><!--Device-BundleInfo-readonly cpuAbi: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## entryInstallationFree
@@ -130,6 +140,8 @@ Whether installation-free is supported for the entry module. **true** if support
 
 **Deprecated since:** 9
 
+<!--Device-BundleInfo-readonly entryInstallationFree: boolean--><!--Device-BundleInfo-readonly entryInstallationFree: boolean-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## entryModuleName
@@ -147,6 +159,8 @@ Name of the entry module.
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-BundleInfo-readonly entryModuleName: string--><!--Device-BundleInfo-readonly entryModuleName: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -168,6 +182,8 @@ Module configuration information.
 
 **Substitutes:** hapModulesInfo
 
+<!--Device-BundleInfo-readonly hapModuleInfos: Array<HapModuleInfo>--><!--Device-BundleInfo-readonly hapModuleInfos: Array<HapModuleInfo>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## installTime
@@ -188,6 +204,8 @@ Time when the HAP file was installed.
 
 **Substitutes:** installTime
 
+<!--Device-BundleInfo-readonly installTime: number--><!--Device-BundleInfo-readonly installTime: number-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## isCompressNativeLibs
@@ -206,6 +224,8 @@ Whether the native libraries in the bundle are compressed. **true** if compresse
 
 **Deprecated since:** 9
 
+<!--Device-BundleInfo-readonly isCompressNativeLibs: boolean--><!--Device-BundleInfo-readonly isCompressNativeLibs: boolean-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## isSilentInstallation
@@ -223,6 +243,8 @@ Whether the application can be installed in silent mode.
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-BundleInfo-readonly isSilentInstallation: string--><!--Device-BundleInfo-readonly isSilentInstallation: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -244,6 +266,8 @@ Earliest version compatible with the bundle in the distributed scenario.
 
 **Substitutes:** minCompatibleVersionCode
 
+<!--Device-BundleInfo-readonly minCompatibleVersionCode: number--><!--Device-BundleInfo-readonly minCompatibleVersionCode: number-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## name
@@ -264,6 +288,8 @@ Bundle name.
 
 **Substitutes:** name
 
+<!--Device-BundleInfo-readonly name: string--><!--Device-BundleInfo-readonly name: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## reqPermissionDetails
@@ -274,9 +300,7 @@ readonly reqPermissionDetails: Array<ReqPermissionDetail>
 
 Detailed information of the permissions to request from the system.
 
-The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to
-[bundle.getBundleInfo](arkts-ability-getbundleinfo-f.md#getbundleinfo-3)
-.
+The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to [bundle.getBundleInfo](arkts-ability-getbundleinfo-f.md#getbundleinfo-3).
 
 **Type:** Array<ReqPermissionDetail>
 
@@ -287,6 +311,8 @@ The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to
 **Deprecated since:** 9
 
 **Substitutes:** reqPermissionDetails
+
+<!--Device-BundleInfo-readonly reqPermissionDetails: Array<ReqPermissionDetail>--><!--Device-BundleInfo-readonly reqPermissionDetails: Array<ReqPermissionDetail>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -308,6 +334,8 @@ Permission grant state. The value **0** means that the request is successful, an
 
 **Substitutes:** permissionGrantStates
 
+<!--Device-BundleInfo-readonly reqPermissionStates: Array<number>--><!--Device-BundleInfo-readonly reqPermissionStates: Array<number>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## reqPermissions
@@ -318,9 +346,7 @@ readonly reqPermissions: Array<string>
 
 Permissions to request from the system for running the application.
 
-The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to
-[bundle.getBundleInfo](arkts-ability-getbundleinfo-f.md#getbundleinfo-3)
-.
+The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to [bundle.getBundleInfo](arkts-ability-getbundleinfo-f.md#getbundleinfo-3).
 
 **Type:** Array<string>
 
@@ -331,6 +357,8 @@ The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to
 **Deprecated since:** 9
 
 **Substitutes:** permissions
+
+<!--Device-BundleInfo-readonly reqPermissions: Array<string>--><!--Device-BundleInfo-readonly reqPermissions: Array<string>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -352,6 +380,8 @@ Latest SDK version required for running the bundle.
 
 **Substitutes:** targetVersion
 
+<!--Device-BundleInfo-readonly targetVersion: number--><!--Device-BundleInfo-readonly targetVersion: number-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## type
@@ -371,6 +401,8 @@ Bundle type.
 **Deprecated since:** 9
 
 **Substitutes:** bundleType
+
+<!--Device-BundleInfo-readonly type: string--><!--Device-BundleInfo-readonly type: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -394,6 +426,8 @@ After an application is installed, its UID remains unchanged unless it is uninst
 
 **Substitutes:** uid
 
+<!--Device-BundleInfo-readonly uid: number--><!--Device-BundleInfo-readonly uid: number-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## updateTime
@@ -413,6 +447,8 @@ Time when the HAP file was updated.
 **Deprecated since:** 9
 
 **Substitutes:** updateTime
+
+<!--Device-BundleInfo-readonly updateTime: number--><!--Device-BundleInfo-readonly updateTime: number-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -434,6 +470,8 @@ Vendor of the bundle.
 
 **Substitutes:** vendor
 
+<!--Device-BundleInfo-readonly vendor: string--><!--Device-BundleInfo-readonly vendor: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## versionCode
@@ -454,6 +492,8 @@ Version number of the bundle.
 
 **Substitutes:** versionCode
 
+<!--Device-BundleInfo-readonly versionCode: number--><!--Device-BundleInfo-readonly versionCode: number-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## versionName
@@ -473,6 +513,8 @@ Version description of the bundle.
 **Deprecated since:** 9
 
 **Substitutes:** versionName
+
+<!--Device-BundleInfo-readonly versionName: string--><!--Device-BundleInfo-readonly versionName: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 

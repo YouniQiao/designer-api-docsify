@@ -18,6 +18,8 @@ Turn on or off Cell BroadCast.
 
 **Required permissions:** ohos.permission.RECEIVE_SMS
 
+<!--Device-sms-function setCBConfig(options: CBConfigOptions, callback: AsyncCallback<void>): void--><!--Device-sms-function setCBConfig(options: CBConfigOptions, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Turn on or off Cell BroadCast.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | CBConfigOptions | Yes | Indicates cell broadcast configuration options. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of setCBConfig. |
+| options | [CBConfigOptions](arkts-telephony-cbconfigoptions-i-sys.md) | Yes | Indicates cell broadcast configuration options. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of setCBConfig. |
 
 **Error codes:**
 
@@ -73,6 +75,8 @@ Turn on or off Cell BroadCast.
 
 **Required permissions:** ohos.permission.RECEIVE_SMS
 
+<!--Device-sms-function setCBConfig(options: CBConfigOptions): Promise<void>--><!--Device-sms-function setCBConfig(options: CBConfigOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -81,13 +85,13 @@ Turn on or off Cell BroadCast.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | CBConfigOptions | Yes | Indicates cell broadcast configuration options. |
+| options | [CBConfigOptions](arkts-telephony-cbconfigoptions-i-sys.md) | Yes | Indicates cell broadcast configuration options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setCBConfig. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the setCBConfig. |
 
 **Error codes:**
 

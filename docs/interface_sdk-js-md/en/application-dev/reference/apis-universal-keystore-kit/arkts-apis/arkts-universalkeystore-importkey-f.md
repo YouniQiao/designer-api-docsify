@@ -20,15 +20,17 @@ Imports a key in plaintext. This API uses an asynchronous callback to return the
 
 **Substitutes:** importKeyItem(keyAlias:
 
+<!--Device-huks-function importKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function importKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not includesensitive data such as personal information. |
-| options | HuksOptions | Yes | Tags required for the import and key to import. |
-| callback | AsyncCallback&lt;HuksResult&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
+| keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not include sensitive data such as personal information. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Tags required for the import and key to import. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<HuksResult> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -94,20 +96,22 @@ Imports a key in plaintext. This API uses a promise to return the result.
 
 **Substitutes:** importKeyItem(keyAlias:
 
+<!--Device-huks-function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not includesensitive data such as personal information. |
-| options | HuksOptions | Yes | Tags required for the import and key to import. |
+| keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not include sensitive data such as personal information. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Tags required for the import and key to import. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksResult&gt; | Promise that returns **HuksResult**. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HuksResult> | Promise that returns **HuksResult**. |
 
 **Example**
 

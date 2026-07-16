@@ -12,14 +12,13 @@ import { defaultAppManager } from '@kit.AbilityKit';
 function getDefaultApplicationSync(type: string, userId?: number): BundleInfo
 ```
 
-Obtains the default application based on a system-defined application type, a file type that complies with the
-media type format (either specified by **type** or **subtype**), or a
-[uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API returns the result
-synchronously.
+Obtains the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API returns the result synchronously.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.GET_DEFAULT_APPLICATION
+
+<!--Device-defaultAppManager-function getDefaultApplicationSync(type: string, userId?: int): BundleInfo--><!--Device-defaultAppManager-function getDefaultApplicationSync(type: string, userId?: int): BundleInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
@@ -29,14 +28,14 @@ synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the target application. It must be set to a value defined by[ApplicationType](arkts-ability-applicationtype-e.md), a file type thatcomplies with the media type format, or a value defined by[UniformDataType](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). |
-| userId | number | No | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. |
+| type | string | Yes | Type of the target application. It must be set to a value defined by [ApplicationType](arkts-ability-applicationtype-e.md), a file type that complies with the media type format, or a value defined by [UniformDataType](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). |
+| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| BundleInfo | Bundle information of the default application. |
+| [BundleInfo](arkts-ability-bundleinfo-i-sys.md) | Bundle information of the default application. |
 
 **Error codes:**
 

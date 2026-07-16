@@ -1,9 +1,10 @@
 # SaveSuccessResponse
 
-Represents the information returned by the callback of save.
-.
+Represents the information returned by the callback of save..
 
 **Since:** 9
+
+<!--Device-distributedDataObject-interface SaveSuccessResponse--><!--Device-distributedDataObject-interface SaveSuccessResponse-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -25,6 +26,8 @@ ID of the device where the distributed data object is stored. The value local in
 
 **Since:** 9
 
+<!--Device-SaveSuccessResponse-deviceId: string--><!--Device-SaveSuccessResponse-deviceId: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## sessionId
@@ -39,6 +42,8 @@ Unique ID for multi-device collaboration.
 
 **Since:** 9
 
+<!--Device-SaveSuccessResponse-sessionId: string--><!--Device-SaveSuccessResponse-sessionId: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## version
@@ -52,6 +57,8 @@ Version of the saved object, which is a non-negative integer.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-SaveSuccessResponse-version: int--><!--Device-SaveSuccessResponse-version: int-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 

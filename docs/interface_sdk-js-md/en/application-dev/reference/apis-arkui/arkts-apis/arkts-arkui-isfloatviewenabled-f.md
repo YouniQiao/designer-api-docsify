@@ -14,13 +14,15 @@ function isFloatViewEnabled(): boolean
 
 Checks whether the device supports the float view.
 
-| Type| Description|
-|------------|------------|
+| Type| Description|  
+|------------|------------|  
 | boolean | Whether the device supports the float view. **true** to support; **false** otherwise.|
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-floatView-function isFloatViewEnabled(): boolean--><!--Device-floatView-function isFloatViewEnabled(): boolean-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

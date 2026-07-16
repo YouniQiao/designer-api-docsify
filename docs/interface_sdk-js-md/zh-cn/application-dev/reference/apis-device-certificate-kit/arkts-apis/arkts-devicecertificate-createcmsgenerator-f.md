@@ -1,5 +1,11 @@
 # createCmsGenerator
 
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
+
 ## createCmsGenerator
 
 ```TypeScript
@@ -10,7 +16,9 @@ function createCmsGenerator(contentType: CmsContentType): CmsGenerator
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cert-function createCmsGenerator(contentType: CmsContentType): CmsGenerator--><!--Device-cert-function createCmsGenerator(contentType: CmsContentType): CmsGenerator-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -18,13 +26,13 @@ function createCmsGenerator(contentType: CmsContentType): CmsGenerator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| contentType | CmsContentType | 是 | 指定CMS内容类型。 |
+| contentType | [CmsContentType](arkts-devicecertificate-cmscontenttype-e.md) | 是 | 指定CMS内容类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| CmsGenerator | CmsGenerator对象。 |
+| [CmsGenerator](arkts-devicecertificate-cmsgenerator-i.md) | CmsGenerator对象。 |
 
 **错误码：**
 

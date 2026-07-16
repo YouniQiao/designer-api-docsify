@@ -1,5 +1,11 @@
 # enableDynamicIcon（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## enableDynamicIcon
 
 ```TypeScript
@@ -11,6 +17,8 @@ function enableDynamicIcon(bundleName: string, moduleName: string): Promise<void
 **起始版本：** 12
 
 **需要权限：** ohos.permission.ACCESS_DYNAMIC_ICON
+
+<!--Device-bundleManager-function enableDynamicIcon(bundleName: string, moduleName: string): Promise<void>--><!--Device-bundleManager-function enableDynamicIcon(bundleName: string, moduleName: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -27,7 +35,7 @@ function enableDynamicIcon(bundleName: string, moduleName: string): Promise<void
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -81,6 +89,8 @@ function enableDynamicIcon(bundleName: string, moduleName: string, option?: Bund
 
 **需要权限：** ohos.permission.ACCESS_DYNAMIC_ICON or (ohos.permission.ACCESS_DYNAMIC_ICON and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
+<!--Device-bundleManager-function enableDynamicIcon(bundleName: string, moduleName: string, option?: BundleOptions): Promise<void>--><!--Device-bundleManager-function enableDynamicIcon(bundleName: string, moduleName: string, option?: BundleOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -91,13 +101,13 @@ function enableDynamicIcon(bundleName: string, moduleName: string, option?: Bund
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 要使能动态图标的应用包名。 |
 | moduleName | string | 是 | 要使能动态图标的模块名。 |
-| option | BundleOptions | 否 | 指定需要使能动态图标的用户和分身索引。缺省时使能应用所有用户和所有分身的动态图标。 |
+| option | [BundleOptions](arkts-ability-bundleoptions-i.md) | 否 | 指定需要使能动态图标的用户和分身索引。缺省时使能应用所有用户和所有分身的动态图标。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

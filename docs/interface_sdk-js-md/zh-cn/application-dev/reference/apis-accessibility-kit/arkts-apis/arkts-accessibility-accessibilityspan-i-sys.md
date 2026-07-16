@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+<!--Device-unnamed-interface AccessibilitySpan--><!--Device-unnamed-interface AccessibilitySpan-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -19,6 +21,8 @@ accessibilityDescription: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-AccessibilitySpan-accessibilityDescription: string--><!--Device-AccessibilitySpan-accessibilityDescription: string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -36,6 +40,8 @@ accessibilityLevel: string
 
 **起始版本：** 20
 
+<!--Device-AccessibilitySpan-accessibilityLevel: string--><!--Device-AccessibilitySpan-accessibilityLevel: string-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +57,8 @@ accessibilityText: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-AccessibilitySpan-accessibilityText: string--><!--Device-AccessibilitySpan-accessibilityText: string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -68,6 +76,8 @@ spanId: number
 
 **起始版本：** 20
 
+<!--Device-AccessibilitySpan-spanId: int--><!--Device-AccessibilitySpan-spanId: int-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -83,6 +93,8 @@ spanText: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-AccessibilitySpan-spanText: string--><!--Device-AccessibilitySpan-spanText: string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

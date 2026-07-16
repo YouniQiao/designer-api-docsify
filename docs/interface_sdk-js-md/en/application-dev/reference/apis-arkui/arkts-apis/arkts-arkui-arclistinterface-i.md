@@ -1,10 +1,10 @@
 # ArcListInterface
 
-The **ArcList** component is a circular layout container that displays a series of list items
-in an arc shape. It is suitable for presenting homogeneous data, such as images and text,
-in a continuous, multi-row format.
+The **ArcList** component is a circular layout container that displays a series of list items in an arc shape. It is suitable for presenting homogeneous data, such as images and text,in a continuous, multi-row format.
 
 **Since:** 18
+
+<!--Device-unnamed-export interface ArcListInterface--><!--Device-unnamed-export interface ArcListInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -26,17 +26,19 @@ Creates an **ArcList** component instance with specified configuration options.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcListInterface-(options?: ArkListOptions): ArcListAttribute--><!--Device-ArcListInterface-(options?: ArkListOptions): ArcListAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ArkListOptions | No |  |
+| options | [ArkListOptions](arkts-arkui-arklistoptions-i.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArcListAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcListAttribute](arkts-arkui-arclistattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 

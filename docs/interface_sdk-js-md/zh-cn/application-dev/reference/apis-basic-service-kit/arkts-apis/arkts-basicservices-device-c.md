@@ -6,7 +6,15 @@ getInfo interface
 
 **废弃版本：** 6
 
+<!--Device-unnamed-export default class Device--><!--Device-unnamed-export default class Device-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
+
+## 导入模块
+
+```TypeScript
+import { DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit';
+```
 
 ## getInfo
 
@@ -20,13 +28,15 @@ Obtains the device information.
 
 **废弃版本：** 6
 
+<!--Device-Device-static getInfo(options?: GetDeviceOptions): void--><!--Device-Device-static getInfo(options?: GetDeviceOptions): void-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | GetDeviceOptions | 否 | Options |
+| options | [GetDeviceOptions](arkts-basicservices-getdeviceoptions-i.md) | 否 | Options |
 
 **示例：**
 

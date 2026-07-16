@@ -4,6 +4,8 @@ The class for PickerController
 
 **Since:** 12
 
+<!--Device-unnamed-export declare class PickerController--><!--Device-unnamed-export declare class PickerController-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -24,14 +26,16 @@ Add data to picker component
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-PickerController-addData(dataType: DataType, data: Object): void--><!--Device-PickerController-addData(dataType: DataType, data: Object): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataType | DataType | Yes | data type |
-| data | Object | Yes | data |
+| dataType | [DataType](arkts-medialibrary-datatype-e.md) | Yes | data type |
+| data | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | data |
 
 ## completed
 
@@ -47,13 +51,15 @@ Call this method to obtain the complete data after a selection operation has fin
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-PickerController-completed(): Promise<CompletedResult>--><!--Device-PickerController-completed(): Promise<CompletedResult>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CompletedResult&gt; | Promise&lt;CompletedResult&gt; |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CompletedResult> | Promise&lt;CompletedResult&gt; |
 
 ## deleteData
 
@@ -67,14 +73,16 @@ Delete data to picker component
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-PickerController-deleteData(dataType: DataType, data: Object): void--><!--Device-PickerController-deleteData(dataType: DataType, data: Object): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataType | DataType | Yes | data type |
-| data | Object | Yes | data |
+| dataType | [DataType](arkts-medialibrary-datatype-e.md) | Yes | data type |
+| data | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | data |
 
 ## exitPhotoBrowser
 
@@ -87,6 +95,8 @@ Exit photo browser.
 **Since:** 13
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-PickerController-exitPhotoBrowser(): void--><!--Device-PickerController-exitPhotoBrowser(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -102,6 +112,8 @@ Display the photo after edit.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-PickerController-replacePhotoPickerPreview(originalUri: string, newUri: string, callback: AsyncCallback<void>): void--><!--Device-PickerController-replacePhotoPickerPreview(originalUri: string, newUri: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -110,7 +122,7 @@ Display the photo after edit.
 | --- | --- | --- | --- |
 | originalUri | string | Yes | Original uri |
 | newUri | string | Yes | New uri after replacement |
-| callback | AsyncCallback&lt;void&gt; | Yes | Returns void |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Returns void |
 
 ## saveTrustedPhotoAssets
 
@@ -125,16 +137,20 @@ Save the photo assets of uris.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-PickerController-saveTrustedPhotoAssets(trustedUris: Array<string>, callback: AsyncCallback<Array<string>>,
+    configs?: Array<photoAccessHelper.PhotoCreationConfig>, saveMode?: SaveMode): void--><!--Device-PickerController-saveTrustedPhotoAssets(trustedUris: Array<string>, callback: AsyncCallback<Array<string>>,
+    configs?: Array<photoAccessHelper.PhotoCreationConfig>, saveMode?: SaveMode): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| trustedUris | Array&lt;string&gt; | Yes | Uris need to be saved |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Returns the uri list |
-| configs | Array&lt;photoAccessHelper.PhotoCreationConfig&gt; | No | Photo asset creation configs |
-| saveMode | SaveMode | No | Mode of save |
+| trustedUris | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Uris need to be saved |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Returns the uri list |
+| configs | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<photoAccessHelper.PhotoCreationConfig> | No | Photo asset creation configs |
+| saveMode | [SaveMode](arkts-medialibrary-savemode-e.md) | No | Mode of save |
 
 ## saveTrustedPhotoAssetsEx
 
@@ -151,21 +167,25 @@ Save the photo assets of uris.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-PickerController-saveTrustedPhotoAssetsEx(trustedUris: Array<string>,settings?: Array<photoAccessHelper.CreationSetting>,
+    saveMode?: SaveMode): Promise<Array<string>>--><!--Device-PickerController-saveTrustedPhotoAssetsEx(trustedUris: Array<string>,settings?: Array<photoAccessHelper.CreationSetting>,
+    saveMode?: SaveMode): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| trustedUris | Array&lt;string&gt; | Yes | Uris need to be saved |
-| settings | Array&lt;photoAccessHelper.CreationSetting&gt; | No | Photo asset creation settings |
-| saveMode | SaveMode | No | Mode of save |
+| trustedUris | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Uris need to be saved |
+| settings | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<photoAccessHelper.CreationSetting> | No | Photo asset creation settings |
+| saveMode | [SaveMode](arkts-medialibrary-savemode-e.md) | No | Mode of save |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | - Returns the media library file uri list to applicationwhich has been authorized |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | - Returns the media library file uri list to application which has been authorized |
 
 ## setData
 
@@ -179,14 +199,16 @@ Set data to picker component
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PickerController-setData(dataType: DataType, data: Object): void--><!--Device-PickerController-setData(dataType: DataType, data: Object): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataType | DataType | Yes | data type |
-| data | Object | Yes | data |
+| dataType | [DataType](arkts-medialibrary-datatype-e.md) | Yes | data type |
+| data | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | data |
 
 ## setMaxSelected
 
@@ -200,13 +222,15 @@ Set max select count to picker component, include max_total_count, max_photo_cou
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PickerController-setMaxSelected(maxSelected: MaxSelected): void--><!--Device-PickerController-setMaxSelected(maxSelected: MaxSelected): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxSelected | MaxSelected | Yes | max select count data |
+| maxSelected | [MaxSelected](arkts-medialibrary-maxselected-c.md) | Yes | max select count data |
 
 ## setMovingPhotoState
 
@@ -214,15 +238,15 @@ Set max select count to picker component, include max_total_count, max_photo_cou
 setMovingPhotoState(movingPhotoState: photoAccessHelper.MovingPhotoBadgeStateType): Promise<void>
 ```
 
-Sets the moving photo effect in the photo browser view.
-This configuration only takes effect for moving photo when viewed in the photo browser.
-Note: Only MOVING_PHOTO_ENABLE and MOVING_PHOTO_DISABLE are supported as values.
+Sets the moving photo effect in the photo browser view.This configuration only takes effect for moving photo when viewed in the photo browser.Note: Only MOVING_PHOTO_ENABLE and MOVING_PHOTO_DISABLE are supported as values.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-PickerController-setMovingPhotoState(movingPhotoState: photoAccessHelper.MovingPhotoBadgeStateType): Promise<void>--><!--Device-PickerController-setMovingPhotoState(movingPhotoState: photoAccessHelper.MovingPhotoBadgeStateType): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -236,13 +260,13 @@ Note: Only MOVING_PHOTO_ENABLE and MOVING_PHOTO_DISABLE are supported as values.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise&lt;void&gt; |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise&lt;void&gt; |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameters validate failed, possible causes:1. An invalid enumeration value was passed. Only MOVING_PHOTO_ENABLE andMOVING_PHOTO_DISABLE are supported for configuration; |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameters validate failed, possible causes:1. An invalid enumeration value was passed. Only MOVING_PHOTO_ENABLE and MOVING_PHOTO_DISABLE are supported for configuration; |
 | [23800202](../errorcode-medialibrary.md#23800202-invalid-scenario-call) | Invalid call context. Possible causes:1. The API is called outside the photo browsing scenario.2. The API is called when isMovingPhotoBadgeShown is already set to true. |
 
 ## setPhotoBrowserItem
@@ -257,6 +281,8 @@ Set photo browser item to picker component.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PickerController-setPhotoBrowserItem(uri: string, photoBrowserRange?: PhotoBrowserRange): void--><!--Device-PickerController-setPhotoBrowserItem(uri: string, photoBrowserRange?: PhotoBrowserRange): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -264,7 +290,7 @@ Set photo browser item to picker component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | specify image uri for photo browsing |
-| photoBrowserRange | PhotoBrowserRange | No | photo browser slide range |
+| photoBrowserRange | [PhotoBrowserRange](arkts-medialibrary-photobrowserrange-e.md) | No | photo browser slide range |
 
 ## setPhotoBrowserUIElementVisibility
 
@@ -278,13 +304,15 @@ Sets whether other elements on the photo browser page are visible.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-PickerController-setPhotoBrowserUIElementVisibility(elements: Array<PhotoBrowserUIElement>, isVisible: boolean): void--><!--Device-PickerController-setPhotoBrowserUIElementVisibility(elements: Array<PhotoBrowserUIElement>, isVisible: boolean): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | Array&lt;PhotoBrowserUIElement&gt; | Yes | other elements on the photo browser page |
+| elements | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PhotoBrowserUIElement> | Yes | other elements on the photo browser page |
 | isVisible | boolean | Yes | visible or not |
 
 ## updatePickerOptions
@@ -299,17 +327,19 @@ Update options of the PhotoPicker component.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-PickerController-updatePickerOptions(updateConfig: UpdatablePickerConfigs): Promise<void>--><!--Device-PickerController-updatePickerOptions(updateConfig: UpdatablePickerConfigs): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| updateConfig | UpdatablePickerConfigs | Yes | Subset of PickerOptions |
+| updateConfig | [UpdatablePickerConfigs](arkts-medialibrary-updatablepickerconfigs-c.md) | Yes | Subset of PickerOptions |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise&lt;void&gt; |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise&lt;void&gt; |
 

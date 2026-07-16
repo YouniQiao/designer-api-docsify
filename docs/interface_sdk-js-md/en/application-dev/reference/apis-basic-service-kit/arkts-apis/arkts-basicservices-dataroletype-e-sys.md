@@ -4,6 +4,8 @@ Enumerates data role types.
 
 **Since:** 9
 
+<!--Device-usbManager-export enum DataRoleType--><!--Device-usbManager-export enum DataRoleType-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 **System API:** This is a system API.
@@ -17,6 +19,8 @@ NONE = 0
 No function.
 
 **Since:** 9
+
+<!--Device-DataRoleType-NONE = 0--><!--Device-DataRoleType-NONE = 0-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -32,6 +36,8 @@ Host mode
 
 **Since:** 9
 
+<!--Device-DataRoleType-HOST = 1--><!--Device-DataRoleType-HOST = 1-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 **System API:** This is a system API.
@@ -45,6 +51,8 @@ DEVICE = 2
 Device mode
 
 **Since:** 9
+
+<!--Device-DataRoleType-DEVICE = 2--><!--Device-DataRoleType-DEVICE = 2-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 

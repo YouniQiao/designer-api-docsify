@@ -14,12 +14,13 @@ function addProcessor(processor: Processor): number
 
 Adds the configuration information of the data processor, such as name of the data processor.
 
-This is a synchronous API and involves time-consuming operations. To ensure performance, you are advised to use the
-asynchronous API [addProcessorFromConfig](arkts-performanceanalysis-addprocessorfromconfig-f.md#addprocessorfromconfig-1) or use a child thread.
+This is a synchronous API and involves time-consuming operations. To ensure performance, you are advised to use the asynchronous API [addProcessorFromConfig](arkts-performanceanalysis-addprocessorfromconfig-f.md#addprocessorfromconfig-1) or use a child thread.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-hiAppEvent-function addProcessor(processor: Processor): long--><!--Device-hiAppEvent-function addProcessor(processor: Processor): long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -27,13 +28,13 @@ asynchronous API [addProcessorFromConfig](arkts-performanceanalysis-addprocessor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| processor | Processor | Yes | Data processor. |
+| processor | [Processor](arkts-performanceanalysis-processor-i.md) | Yes | Data processor. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | ID of the data processor of the reported event, which uniquely identifies the data processor andcan be used to remove the data processor. If the operation fails, **-1** is returned. If the operation issuccessful, a value greater than **0** is returned. |
+| number | ID of the data processor of the reported event, which uniquely identifies the data processor and can be used to remove the data processor. If the operation fails, **-1** is returned. If the operation is successful, a value greater than **0** is returned. |
 
 **Error codes:**
 

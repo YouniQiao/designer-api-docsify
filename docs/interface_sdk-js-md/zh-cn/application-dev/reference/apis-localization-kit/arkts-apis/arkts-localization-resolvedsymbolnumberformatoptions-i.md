@@ -1,13 +1,20 @@
 # ResolvedSymbolNumberFormatOptions
 
-自定义符号数字格式化对象配置项的解析结果。继承自Intl.ResolvedNumberFormatOptions，
-支持Intl.ResolvedNumberFormatOptions的所有配置项，并且功能与其一致。
+自定义符号数字格式化对象配置项的解析结果。继承自Intl.ResolvedNumberFormatOptions，支持Intl.ResolvedNumberFormatOptions的所有配置项，并且功能与其一致。
 
 **继承/实现关系：** ResolvedSymbolNumberFormatOptions extends [Intl.ResolvedNumberFormatOptions](Intl.ResolvedNumberFormatOptions)
 
 **起始版本：** 26.0.0
 
+<!--Device-i18n-export interface ResolvedSymbolNumberFormatOptions extends Intl.ResolvedNumberFormatOptions--><!--Device-i18n-export interface ResolvedSymbolNumberFormatOptions extends Intl.ResolvedNumberFormatOptions-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
 
 ## groupingSeparator
 
@@ -23,7 +30,9 @@ groupingSeparator?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResolvedSymbolNumberFormatOptions-groupingSeparator?: string--><!--Device-ResolvedSymbolNumberFormatOptions-groupingSeparator?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -41,7 +50,9 @@ infinity?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResolvedSymbolNumberFormatOptions-infinity?: string--><!--Device-ResolvedSymbolNumberFormatOptions-infinity?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -59,7 +70,9 @@ minusSign?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResolvedSymbolNumberFormatOptions-minusSign?: string--><!--Device-ResolvedSymbolNumberFormatOptions-minusSign?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -77,7 +90,9 @@ NaN符号。默认值：区域默认的符号。例如："null"。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResolvedSymbolNumberFormatOptions-nan?: string--><!--Device-ResolvedSymbolNumberFormatOptions-nan?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -95,7 +110,9 @@ plusSign?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResolvedSymbolNumberFormatOptions-plusSign?: string--><!--Device-ResolvedSymbolNumberFormatOptions-plusSign?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -113,7 +130,9 @@ zero?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResolvedSymbolNumberFormatOptions-zero?: string--><!--Device-ResolvedSymbolNumberFormatOptions-zero?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

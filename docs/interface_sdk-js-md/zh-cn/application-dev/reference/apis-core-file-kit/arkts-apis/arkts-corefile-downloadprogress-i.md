@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-cloudSync-interface DownloadProgress--><!--Device-cloudSync-interface DownloadProgress-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+## 导入模块
+
+```TypeScript
+import { cloudSync } from '@kit.CoreFileKit';
+```
 
 ## error
 
@@ -17,6 +25,8 @@ error: DownloadErrorType
 **类型：** DownloadErrorType
 
 **起始版本：** 11
+
+<!--Device-DownloadProgress-error: DownloadErrorType--><!--Device-DownloadProgress-error: DownloadErrorType-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -32,6 +42,8 @@ processed: number
 
 **起始版本：** 11
 
+<!--Device-DownloadProgress-processed: long--><!--Device-DownloadProgress-processed: long-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## size
@@ -45,6 +57,8 @@ size: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-DownloadProgress-size: long--><!--Device-DownloadProgress-size: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -60,6 +74,8 @@ state: State
 
 **起始版本：** 11
 
+<!--Device-DownloadProgress-state: State--><!--Device-DownloadProgress-state: State-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## uri
@@ -73,6 +89,8 @@ uri: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-DownloadProgress-uri: string--><!--Device-DownloadProgress-uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

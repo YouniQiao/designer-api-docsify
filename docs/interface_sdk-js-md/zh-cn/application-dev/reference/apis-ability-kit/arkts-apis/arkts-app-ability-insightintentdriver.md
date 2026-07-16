@@ -2,17 +2,25 @@
 
 本模块提供执行意图调用的能力，系统根据用户交互等信息执行意图调用。
 
-> **说明：**
->
-> 本模块从API version 20开始支持通过
-> [@InsightIntentLink](../../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)
+> **说明：**  
+>  
+> 本模块从API version 20开始支持通过  
+> [@InsightIntentLink](../../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)  
 > 装饰器定义的意图来实现应用跳转。
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace insightIntentDriver--><!--Device-unnamed-declare namespace insightIntentDriver-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { insightIntentDriver } from '@kit.AbilityKit';
+```
 
 ## 汇总
 
@@ -25,7 +33,7 @@
 | [execute](arkts-ability-execute-f-sys.md#execute-2) | 执行意图调用的接口。使用Promise异步回调。当调用方在后台时，需要申请`ohos.permission.START_ABILITIES_FROM_BACKGROUND`权限。当意图调用执行模式[ExecuteMode](arkts-ability-executemode-e.md)取值为UI_ABILITY_BACKGROUND时，需要申请`ohos.permission.ABILITY_BACKGROUND_COMMUNICATION`权限。 |
 | [getAllInsightIntentInfo](arkts-ability-getallinsightintentinfo-f-sys.md#getallinsightintentinfo-1) | 查询当前设备上的所有意图信息。使用Promise异步回调。 |
 | [getInsightIntentInfoByBundleName](arkts-ability-getinsightintentinfobybundlename-f-sys.md#getinsightintentinfobybundlename-1) | 根据包名查询当前设备上的意图信息。使用Promise异步回调。 |
-| [getInsightIntentInfoByFilter](arkts-ability-getinsightintentinfobyfilter-f-sys.md#getinsightintentinfobyfilter-1) | Obtains the intent information on the current device based on the given intent filter. This API uses a promise toreturn the result.<br>If the user ID of the calling application is different from the user ID of the intent, the |
+| [getInsightIntentInfoByFilter](arkts-ability-getinsightintentinfobyfilter-f-sys.md#getinsightintentinfobyfilter-1) | Obtains the intent information on the current device based on the given intent filter. This API uses a promise to return the result.<br>If the user ID of the calling application is different from the user ID of the intent, the |
 | [getInsightIntentInfoByIntentName](arkts-ability-getinsightintentinfobyintentname-f-sys.md#getinsightintentinfobyintentname-1) | 根据包名、模块名和意图名查询当前设备上的意图信息。使用Promise异步回调。 |
 | [queryEntityInfo](arkts-ability-queryentityinfo-f-sys.md#queryentityinfo-1) | 查询意图实体信息。 |
 <!--DelEnd-->

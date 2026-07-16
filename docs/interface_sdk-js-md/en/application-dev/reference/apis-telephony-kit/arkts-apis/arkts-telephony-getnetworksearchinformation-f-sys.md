@@ -18,6 +18,8 @@ Get network search information.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-radio-function getNetworkSearchInformation(slotId: int, callback: AsyncCallback<NetworkSearchResult>): void--><!--Device-radio-function getNetworkSearchInformation(slotId: int, callback: AsyncCallback<NetworkSearchResult>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Get network search information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slotindex number supported by the device. |
-| callback | AsyncCallback&lt;NetworkSearchResult&gt; | Yes | Indicates the callback for gettingthe search results of the network. |
+| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<NetworkSearchResult> | Yes | Indicates the callback for getting the search results of the network. |
 
 **Error codes:**
 
@@ -69,6 +71,8 @@ Get network search information.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-radio-function getNetworkSearchInformation(slotId: int): Promise<NetworkSearchResult>--><!--Device-radio-function getNetworkSearchInformation(slotId: int): Promise<NetworkSearchResult>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -77,13 +81,13 @@ Get network search information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slotindex number supported by the device. |
+| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetworkSearchResult&gt; | Returns the search results of the network. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetworkSearchResult> | Returns the search results of the network. |
 
 **Error codes:**
 

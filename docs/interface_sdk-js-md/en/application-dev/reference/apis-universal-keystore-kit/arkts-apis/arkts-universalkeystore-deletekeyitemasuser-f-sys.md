@@ -18,6 +18,8 @@ Deletes a key for the specified user. This API uses a promise to return the resu
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-huks-function deleteKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<void>--><!--Device-huks-function deleteKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **System API:** This is a system API.
@@ -27,14 +29,14 @@ Deletes a key for the specified user. This API uses a promise to return the resu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
-| keyAlias | string | Yes | Alias of the key to delete. It must be the key alias passed in when the key wasgenerated. |
-| huksOptions | HuksOptions | Yes | Attribute tag of the key to be deleted. If[HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md) is used to specify the securitylevel of the key to be deleted,<br>this parameter can be left empty. If the API version is 12 or later, thedefault value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passedin. |
+| keyAlias | string | Yes | Alias of the key to delete. It must be the key alias passed in when the key was generated. |
+| huksOptions | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Attribute tag of the key to be deleted. If [HuksAuthStorageLevel](arkts-universalkeystore-huksauthstoragelevel-e.md) is used to specify the security level of the key to be deleted,<br>this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

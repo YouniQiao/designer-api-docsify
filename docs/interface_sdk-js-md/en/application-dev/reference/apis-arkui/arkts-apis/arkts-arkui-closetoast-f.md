@@ -14,11 +14,11 @@ function closeToast(toastId: number): void
 
 Closes the specified toast.
 
-> **NOTE**
->
-> Directly using **closeToast** can lead to the issue of
-> [ambiguous UI context](../../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the
-> **PromptAction** object using the **getPromptAction** API in **UIContext** and then call the
+> **NOTE**  
+>  
+> Directly using **closeToast** can lead to the issue of  
+> [ambiguous UI context](../../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the  
+> **PromptAction** object using the **getPromptAction** API in **UIContext** and then call the  
 > [closeToast](arkts-arkui-promptaction-c.md#closetoast-1) API through this object.
 
 **Since:** 18
@@ -26,6 +26,8 @@ Closes the specified toast.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-promptAction-function closeToast(toastId: number): void--><!--Device-promptAction-function closeToast(toastId: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

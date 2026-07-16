@@ -1,5 +1,11 @@
 # push
 
+## 导入模块
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+```
+
 ## push
 
 ```TypeScript
@@ -8,9 +14,9 @@ function push(options: RouterOptions): void
 
 跳转到应用内的指定页面。
 
-> **说明：**
->
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> **说明：**  
+>  
+> 从API version 8开始支持，从API version 9开始废弃，建议使用  
 > [pushUrl](arkts-arkui-router-c.md#pushurl-2)替代。
 
 **起始版本：** 8
@@ -19,13 +25,15 @@ function push(options: RouterOptions): void
 
 **替代接口：** pushUrl(options:
 
+<!--Device-router-function push(options: RouterOptions): void--><!--Device-router-function push(options: RouterOptions): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | RouterOptions | 是 | 跳转页面描述信息。 |
+| options | [RouterOptions](arkts-arkui-routeroptions-i.md) | 是 | 跳转页面描述信息。 |
 
 **示例：**
 

@@ -20,6 +20,8 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 
 **Substitutes:** get
 
+<!--Device-systemParameter-function get(key: string, callback: AsyncCallback<string>): void--><!--Device-systemParameter-function get(key: string, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Startup.SystemInfo
 
 **System API:** This is a system API.
@@ -29,7 +31,7 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key to be queried. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -64,6 +66,8 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 
 **Substitutes:** get
 
+<!--Device-systemParameter-function get(key: string, def: string, callback: AsyncCallback<string>): void--><!--Device-systemParameter-function get(key: string, def: string, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Startup.SystemInfo
 
 **System API:** This is a system API.
@@ -74,7 +78,7 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 | --- | --- | --- | --- |
 | key | string | Yes | Key to be queried. |
 | def | string | Yes | Default value. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -110,6 +114,8 @@ Obtains a value of the specified key. This API uses a promise to return the resu
 
 **Substitutes:** get
 
+<!--Device-systemParameter-function get(key: string, def?: string): Promise<string>--><!--Device-systemParameter-function get(key: string, def?: string): Promise<string>-End-->
+
 **System capability:** SystemCapability.Startup.SystemInfo
 
 **System API:** This is a system API.
@@ -119,13 +125,13 @@ Obtains a value of the specified key. This API uses a promise to return the resu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key to be queried. |
-| def | string | No | Default value of the system parameter.<br> It works only when the system parameter doesnot exist.<br> The value can be **undefined** or any custom value. |
+| def | string | No | Default value of the system parameter.<br> It works only when the system parameter does not exist.<br> The value can be **undefined** or any custom value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the execution result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the execution result. |
 
 **Example**
 

@@ -2,13 +2,15 @@
 
 The **file.recent** module provides APIs for managing the list of recently accessed files.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > - Currently, the APIs of this module can be called only by **FileManager**.
 
 **Since:** 10
 
 **Deprecated since:** 23
+
+<!--Device-unnamed-declare namespace recent--><!--Device-unnamed-declare namespace recent-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 

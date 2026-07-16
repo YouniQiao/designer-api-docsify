@@ -1,5 +1,11 @@
 # createKVManager
 
+## 导入模块
+
+```TypeScript
+import { distributedKVStore } from '@kit.ArkData';
+```
+
 ## createKVManager
 
 ```TypeScript
@@ -12,19 +18,21 @@ function createKVManager(config: KVManagerConfig): KVManager
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-distributedKVStore-function createKVManager(config: KVManagerConfig): KVManager--><!--Device-distributedKVStore-function createKVManager(config: KVManagerConfig): KVManager-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | KVManagerConfig | 是 | 提供KVManager实例的配置信息，包括应用的上下文和调用方的包名（不能为空）。 |
+| config | [KVManagerConfig](arkts-arkdata-kvmanagerconfig-i.md) | 是 | 提供KVManager实例的配置信息，包括应用的上下文和调用方的包名（不能为空）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| KVManager | 返回创建的KVManager对象实例。 |
+| [KVManager](arkts-arkdata-kvmanager-i.md) | 返回创建的KVManager对象实例。 |
 
 **错误码：**
 

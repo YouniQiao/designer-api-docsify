@@ -20,13 +20,15 @@ Unsubscribes from the thermal level changes. This API uses an asynchronous callb
 
 **Substitutes:** [unregisterThermalLevelCallback](arkts-basicservices-unregisterthermallevelcallback-f.md#unregisterthermallevelcallback-1)
 
+<!--Device-thermal-function unsubscribeThermalLevel(callback?: AsyncCallback<void>): void--><!--Device-thermal-function unsubscribeThermalLevel(callback?: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.PowerManager.ThermalManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | No | Callback that returns no value. If this parameter is not set, allcallbacks will be unregistered. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | No | Callback that returns no value. If this parameter is not set, all callbacks will be unregistered. |
 
 **Example**
 

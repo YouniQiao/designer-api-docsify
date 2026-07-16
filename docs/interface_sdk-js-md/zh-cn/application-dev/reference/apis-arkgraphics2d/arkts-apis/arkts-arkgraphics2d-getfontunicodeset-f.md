@@ -1,5 +1,11 @@
 # getFontUnicodeSet
 
+## 导入模块
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D';
+```
+
 ## getFontUnicodeSet
 
 ```TypeScript
@@ -12,7 +18,9 @@ function getFontUnicodeSet(path: string | Resource, index: number) : Promise<Arr
 
 **起始版本：** 23
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-text-function getFontUnicodeSet(path: string | Resource, index: int) : Promise<Array<int>>--><!--Device-text-function getFontUnicodeSet(path: string | Resource, index: int) : Promise<Array<int>>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -27,7 +35,7 @@ function getFontUnicodeSet(path: string | Resource, index: number) : Promise<Arr
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Promise对象，返回字体文件对应的unicode码数组。 |
+| Promise<Array<number>> | Promise对象，返回字体文件对应的unicode码数组。 |
 
 **示例：**
 

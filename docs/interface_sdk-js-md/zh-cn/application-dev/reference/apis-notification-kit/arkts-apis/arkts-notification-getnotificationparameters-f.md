@@ -12,12 +12,13 @@ import { notificationManager } from '@kit.NotificationKit';
 function getNotificationParameters(id: number, label?: string): Promise<NotificationParameters>
 ```
 
-获取通知[NotificationRequest](arkts-notification-notificationrequest-i.md)中wantAgent字段的部分信息。使用Promise异
-步回调。
+获取通知[NotificationRequest](arkts-notification-notificationrequest-i.md)中wantAgent字段的部分信息。使用Promise异步回调。
 
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-notificationManager-function getNotificationParameters(id: number, label?: string): Promise<NotificationParameters>--><!--Device-notificationManager-function getNotificationParameters(id: number, label?: string): Promise<NotificationParameters>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -32,7 +33,7 @@ function getNotificationParameters(id: number, label?: string): Promise<Notifica
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;NotificationParameters&gt; | Promise对象，返回wantAgent的部分信息。 |
+| Promise<NotificationParameters> | Promise对象，返回wantAgent的部分信息。 |
 
 **错误码：**
 

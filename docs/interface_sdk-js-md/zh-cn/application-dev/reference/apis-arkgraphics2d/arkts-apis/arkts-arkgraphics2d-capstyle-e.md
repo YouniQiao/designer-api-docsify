@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-drawing-enum CapStyle--><!--Device-drawing-enum CapStyle-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## FLAT_CAP
@@ -15,6 +17,8 @@ FLAT_CAP = 0
 没有线帽样式，线条头尾端点处横切。
 
 **起始版本：** 12
+
+<!--Device-CapStyle-FLAT_CAP = 0--><!--Device-CapStyle-FLAT_CAP = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -28,6 +32,8 @@ SQUARE_CAP = 1
 
 **起始版本：** 12
 
+<!--Device-CapStyle-SQUARE_CAP = 1--><!--Device-CapStyle-SQUARE_CAP = 1-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## ROUND_CAP
@@ -39,6 +45,8 @@ ROUND_CAP = 2
 线帽的样式为圆弧，线条的头尾端点处多出一个半圆弧，半圆的直径与线段宽度一致。
 
 **起始版本：** 12
+
+<!--Device-CapStyle-ROUND_CAP = 2--><!--Device-CapStyle-ROUND_CAP = 2-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

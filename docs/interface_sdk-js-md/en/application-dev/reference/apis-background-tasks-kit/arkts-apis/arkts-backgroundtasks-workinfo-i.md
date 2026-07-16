@@ -4,6 +4,8 @@ Represents the deferred task information, which is used to set the trigger condi
 
 **Since:** 9
 
+<!--Device-workScheduler-export interface WorkInfo--><!--Device-workScheduler-export interface WorkInfo-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Ability name in the bundle.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WorkInfo-abilityName: string--><!--Device-WorkInfo-abilityName: string-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## batteryLevel
@@ -44,6 +48,8 @@ Value range: [0, 100]
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WorkInfo-batteryLevel?: int--><!--Device-WorkInfo-batteryLevel?: int-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## batteryStatus
@@ -59,6 +65,8 @@ Battery status.
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WorkInfo-batteryStatus?: BatteryStatus--><!--Device-WorkInfo-batteryStatus?: BatteryStatus-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -76,6 +84,8 @@ Bundle name of the application where the deferred task is located.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WorkInfo-bundleName: string--><!--Device-WorkInfo-bundleName: string-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## chargerType
@@ -92,6 +102,8 @@ Charging type.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WorkInfo-chargerType?: ChargingType--><!--Device-WorkInfo-chargerType?: ChargingType-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## earliestStartTime
@@ -100,15 +112,15 @@ Charging type.
 earliestStartTime?: number
 ```
 
-Interval between the initial execution time and the request time for a task, in milliseconds. The default value
-is **0**, and the value must be greater than or equal to 0.
-The value range is all integers.
+Interval between the initial execution time and the request time for a task, in milliseconds. The default value is **0**, and the value must be greater than or equal to 0.The value range is all integers.
 
 **Type:** number
 
 **Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WorkInfo-earliestStartTime?: int--><!--Device-WorkInfo-earliestStartTime?: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -126,6 +138,8 @@ Idle wait time, in milliseconds.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WorkInfo-idleWaitTime?: int--><!--Device-WorkInfo-idleWaitTime?: int-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## isCharging
@@ -136,7 +150,7 @@ isCharging?: boolean
 
 Whether the device needs to enter the charging state. The default value is **false**.
 
-- **true**: The device needs to enter the charging state to trigger deferred task scheduling.
+- **true**: The device needs to enter the charging state to trigger deferred task scheduling.  
 - **false**: The device does not need to enter the charging state to trigger deferred task scheduling.
 
 **Type:** boolean
@@ -144,6 +158,8 @@ Whether the device needs to enter the charging state. The default value is **fal
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WorkInfo-isCharging?: boolean--><!--Device-WorkInfo-isCharging?: boolean-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -153,10 +169,9 @@ Whether the device needs to enter the charging state. The default value is **fal
 isDeepIdle?: boolean
 ```
 
-Whether the device needs to enter the idle state to trigger deferred task scheduling. The default value is
-**false**.
+Whether the device needs to enter the idle state to trigger deferred task scheduling. The default value is **false**.
 
-- **true**: The device needs to enter the idle state to trigger deferred task scheduling.
+- **true**: The device needs to enter the idle state to trigger deferred task scheduling.  
 - **false**: The device does not need to enter the idle state to trigger deferred task scheduling.
 
 **Type:** boolean
@@ -164,6 +179,8 @@ Whether the device needs to enter the idle state to trigger deferred task schedu
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WorkInfo-isDeepIdle?: boolean--><!--Device-WorkInfo-isDeepIdle?: boolean-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -175,7 +192,7 @@ isPersisted?: boolean
 
 Whether the registered deferred task can be saved in the system. The default value is **false**.
 
-- **true**: The task can be saved. That is, the task can be restored after the system restarts.
+- **true**: The task can be saved. That is, the task can be restored after the system restarts.  
 - **false**: The task cannot be saved.
 
 **Type:** boolean
@@ -183,6 +200,8 @@ Whether the registered deferred task can be saved in the system. The default val
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WorkInfo-isPersisted?: boolean--><!--Device-WorkInfo-isPersisted?: boolean-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -194,7 +213,7 @@ isRepeat?: boolean
 
 Whether the task is repeated. The default value is **false**.
 
-- **true**: The task is repeated.
+- **true**: The task is repeated.  
 - **false**: The task is not repeated.
 
 **Type:** boolean
@@ -202,6 +221,8 @@ Whether the task is repeated. The default value is **false**.
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WorkInfo-isRepeat?: boolean--><!--Device-WorkInfo-isRepeat?: boolean-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -219,6 +240,8 @@ Network type.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WorkInfo-networkType?: NetworkType--><!--Device-WorkInfo-networkType?: NetworkType-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## parameters
@@ -234,6 +257,8 @@ Carried parameters.
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WorkInfo-parameters?: Record<string, int | double | string | boolean>--><!--Device-WorkInfo-parameters?: Record<string, int | double | string | boolean>-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -251,6 +276,8 @@ Number of repeat times.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WorkInfo-repeatCount?: int--><!--Device-WorkInfo-repeatCount?: int-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## repeatCycleTime
@@ -266,6 +293,8 @@ Repeat interval, in milliseconds.
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WorkInfo-repeatCycleTime?: int--><!--Device-WorkInfo-repeatCycleTime?: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -283,6 +312,8 @@ Storage status.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WorkInfo-storageRequest?: StorageRequest--><!--Device-WorkInfo-storageRequest?: StorageRequest-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## workId
@@ -298,6 +329,8 @@ ID of the deferred task.
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WorkInfo-workId: int--><!--Device-WorkInfo-workId: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 

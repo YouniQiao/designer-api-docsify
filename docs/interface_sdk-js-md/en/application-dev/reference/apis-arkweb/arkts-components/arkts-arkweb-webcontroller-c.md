@@ -8,6 +8,8 @@ Defines the Web controller.
 
 **Substitutes:** WebviewController
 
+<!--Device-unnamed-declare class WebController--><!--Device-unnamed-declare class WebController-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## accessBackward
@@ -23,6 +25,8 @@ Checks whether the web page can go back.
 **Deprecated since:** 9
 
 **Substitutes:** accessBackward
+
+<!--Device-WebController-accessBackward(): boolean--><!--Device-WebController-accessBackward(): boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -46,6 +50,8 @@ Checks whether the web page can go forward.
 
 **Substitutes:** accessForward
 
+<!--Device-WebController-accessForward(): boolean--><!--Device-WebController-accessForward(): boolean-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -67,6 +73,8 @@ Checks whether the web page can go back or forward the given number of steps.
 **Deprecated since:** 9
 
 **Substitutes:** accessStep
+
+<!--Device-WebController-accessStep(step: number): boolean--><!--Device-WebController-accessStep(step: number): boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -96,6 +104,8 @@ Goes back in the history of the web page.
 
 **Substitutes:** backward
 
+<!--Device-WebController-backward()--><!--Device-WebController-backward()-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## clearHistory
@@ -111,6 +121,8 @@ Clears the history in the Web.
 **Deprecated since:** 9
 
 **Substitutes:** clearHistory
+
+<!--Device-WebController-clearHistory(): void--><!--Device-WebController-clearHistory(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -128,6 +140,8 @@ Constructor.
 
 **Substitutes:** constructor
 
+<!--Device-WebController-constructor()--><!--Device-WebController-constructor()-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## deleteJavaScriptRegister
@@ -143,6 +157,8 @@ Deletes a registered JavaScript object with given name.
 **Deprecated since:** 9
 
 **Substitutes:** deleteJavaScriptRegister
+
+<!--Device-WebController-deleteJavaScriptRegister(name: string)--><!--Device-WebController-deleteJavaScriptRegister(name: string)-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -166,6 +182,8 @@ Goes forward in the history of the web page.
 
 **Substitutes:** forward
 
+<!--Device-WebController-forward()--><!--Device-WebController-forward()-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## getCookieManager
@@ -182,13 +200,15 @@ Gets network cookie manager
 
 **Substitutes:** WebCookieManager
 
+<!--Device-WebController-getCookieManager(): WebCookie--><!--Device-WebController-getCookieManager(): WebCookie-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| WebCookie | @syscap SystemCapability.Web.Webview.Core |
+| [WebCookie](arkts-arkweb-webcookie-c.md) | @syscap SystemCapability.Web.Webview.Core |
 
 ## getHitTest
 
@@ -204,13 +224,15 @@ Gets the type of HitTest.
 
 **Substitutes:** [getHitTest](../arkts-apis/arkts-arkweb-webviewcontroller-c.md#gethittest-1)
 
+<!--Device-WebController-getHitTest(): HitTestType--><!--Device-WebController-getHitTest(): HitTestType-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| HitTestType | The type of HitTest. |
+| [HitTestType](arkts-arkweb-hittesttype-e.md) | The type of HitTest. |
 
 ## loadData
 
@@ -225,6 +247,8 @@ Loads the data or URL.
 **Deprecated since:** 9
 
 **Substitutes:** loadData
+
+<!--Device-WebController-loadData(options: { data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string })--><!--Device-WebController-loadData(options: { data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string })-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -248,13 +272,15 @@ Loads the given URL.
 
 **Substitutes:** loadUrl
 
+<!--Device-WebController-loadUrl(options: { url: string | Resource, headers?: Array<Header> })--><!--Device-WebController-loadUrl(options: { url: string | Resource, headers?: Array<Header> })-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | { url: string \| Resource, headers?: Array&lt;Header&gt; } | Yes | The options with the URL and other information. |
+| options | { url: string \| Resource, headers?: Array<Header> } | Yes | The options with the URL and other information. |
 
 ## onActive
 
@@ -262,15 +288,15 @@ Loads the given URL.
 onActive(): void
 ```
 
-Called when the **Web** component enters the active state.
-This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-[onActive<sup>9+</sup>](../arkts-apis/arkts-arkweb-webviewcontroller-c.md#onactive-1) instead.
+Called when the **Web** component enters the active state.This API is supported since API version 8 and deprecated since API version 9. You are advised to use [onActive<sup>9+</sup>](../arkts-apis/arkts-arkweb-webviewcontroller-c.md#onactive-1) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** onActive
+
+<!--Device-WebController-onActive(): void--><!--Device-WebController-onActive(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -280,15 +306,15 @@ This API is supported since API version 8 and deprecated since API version 9. Yo
 onInactive(): void
 ```
 
-Called when the **Web** component enters the inactive state.
-This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-[onInactive<sup>9+</sup>](../arkts-apis/arkts-arkweb-webviewcontroller-c.md#oninactive-1) instead.
+Called when the **Web** component enters the inactive state.This API is supported since API version 8 and deprecated since API version 9. You are advised to use [onInactive<sup>9+</sup>](../arkts-apis/arkts-arkweb-webviewcontroller-c.md#oninactive-1) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** onInactive
+
+<!--Device-WebController-onInactive(): void--><!--Device-WebController-onInactive(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -306,6 +332,8 @@ refreshes the current URL.
 
 **Substitutes:** refresh
 
+<!--Device-WebController-refresh()--><!--Device-WebController-refresh()-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## registerJavaScriptProxy
@@ -322,13 +350,15 @@ Registers the JavaScript object and method list.
 
 **Substitutes:** registerJavaScriptProxy
 
+<!--Device-WebController-registerJavaScriptProxy(options: { object: object, name: string, methodList: Array<string> })--><!--Device-WebController-registerJavaScriptProxy(options: { object: object, name: string, methodList: Array<string> })-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | { object: object, name: string, methodList: Array&lt;string&gt; } | Yes | The option with the JavaScript object and method list. |
+| options | { object: object, name: string, methodList: Array<string> } | Yes | The option with the JavaScript object and method list. |
 
 ## requestFocus
 
@@ -344,6 +374,8 @@ Gets the request focus.
 
 **Substitutes:** requestFocus
 
+<!--Device-WebController-requestFocus()--><!--Device-WebController-requestFocus()-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## runJavaScript
@@ -352,14 +384,7 @@ Gets the request focus.
 runJavaScript(options: { script: string, callback?: (result: string) => void })
 ```
 
-Asynchronously execute JavaScript in the context of the currently displayed page.
-The result of the script execution will be returned through an asynchronous callback.
-This method must be used on the UI thread, and the callback will also be invoked on the UI thread.
-<p><strong>API Note</strong>:<br>
-The state of JavaScript is no longer persisted across navigations like loadUrl.
-For example, global variables and functions defined before calling loadUrl will not exist in the loaded page.
-It is recommended that applications use registerJavaScriptProxy to ensure that the JavaScript state can be persisted across page navigations.
-<p>
+Asynchronously execute JavaScript in the context of the currently displayed page.The result of the script execution will be returned through an asynchronous callback.This method must be used on the UI thread, and the callback will also be invoked on the UI thread.<p><strong>API Note</strong>:<br>The state of JavaScript is no longer persisted across navigations like loadUrl.For example, global variables and functions defined before calling loadUrl will not exist in the loaded page.It is recommended that applications use registerJavaScriptProxy to ensure that the JavaScript state can be persisted across page navigations.<p>
 
 **Since:** 8
 
@@ -367,13 +392,15 @@ It is recommended that applications use registerJavaScriptProxy to ensure that t
 
 **Substitutes:** runJavaScript
 
+<!--Device-WebController-runJavaScript(options: { script: string, callback?: (result: string) => void })--><!--Device-WebController-runJavaScript(options: { script: string, callback?: (result: string) => void })-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | { script: string, callback?: (result: string) =&gt; void } | Yes | The options with a piece of code and a callback. |
+| options | { script: string, callback?: (result: string) => void } | Yes | The options with a piece of code and a callback. |
 
 ## stop
 
@@ -388,6 +415,8 @@ Stops the current load.
 **Deprecated since:** 9
 
 **Substitutes:** stop
+
+<!--Device-WebController-stop()--><!--Device-WebController-stop()-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -404,6 +433,8 @@ Let the Web zoom by.
 **Deprecated since:** 9
 
 **Substitutes:** [zoom](../arkts-apis/arkts-arkweb-webviewcontroller-c.md#zoom-1)
+
+<!--Device-WebController-zoom(factor: number): void--><!--Device-WebController-zoom(factor: number): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

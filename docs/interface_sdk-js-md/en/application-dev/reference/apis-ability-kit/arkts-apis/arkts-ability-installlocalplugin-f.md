@@ -20,19 +20,21 @@ Install the plugin for self application.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-pluginBundleManager-function installLocalPlugin(pluginFilePaths: Array<string>): Promise<void>--><!--Device-pluginBundleManager-function installLocalPlugin(pluginFilePaths: Array<string>): Promise<void>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pluginFilePaths | Array&lt;string&gt; | Yes | Indicates the file paths of plugin. |
+| pluginFilePaths | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Indicates the file paths of plugin. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 

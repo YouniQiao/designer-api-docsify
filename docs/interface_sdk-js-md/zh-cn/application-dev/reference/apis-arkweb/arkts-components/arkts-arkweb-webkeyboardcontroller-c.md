@@ -4,6 +4,8 @@ Define the controller to interact with a custom keyboard, related to the {@link 
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare class WebKeyboardController--><!--Device-unnamed-declare class WebKeyboardController-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## close
@@ -15,6 +17,8 @@ close(): void
 Close the custom keyboard.
 
 **起始版本：** 12
+
+<!--Device-WebKeyboardController-close(): void--><!--Device-WebKeyboardController-close(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -28,7 +32,9 @@ Constructor.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebKeyboardController-constructor()--><!--Device-WebKeyboardController-constructor()-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -41,6 +47,8 @@ deleteBackward(length: number): void
 Delete text from front to back.
 
 **起始版本：** 12
+
+<!--Device-WebKeyboardController-deleteBackward(length: number): void--><!--Device-WebKeyboardController-deleteBackward(length: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -60,6 +68,8 @@ Delete text from back to front.
 
 **起始版本：** 12
 
+<!--Device-WebKeyboardController-deleteForward(length: number): void--><!--Device-WebKeyboardController-deleteForward(length: number): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -78,6 +88,8 @@ Insert text into Editor.
 
 **起始版本：** 12
 
+<!--Device-WebKeyboardController-insertText(text: string): void--><!--Device-WebKeyboardController-insertText(text: string): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -95,6 +107,8 @@ sendFunctionKey(key: number): void
 Send the function of the key.
 
 **起始版本：** 12
+
+<!--Device-WebKeyboardController-sendFunctionKey(key: number): void--><!--Device-WebKeyboardController-sendFunctionKey(key: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

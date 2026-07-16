@@ -12,10 +12,11 @@ import { media } from '@kit.MediaKit';
 function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void
 ```
 
-The maintenance of this interface has been stopped since version api 9. Please use AVRecorder
-Creates an VideoRecorder instance.
+The maintenance of this interface has been stopped since version api 9. Please use AVRecorder Creates an VideoRecorder instance.
 
 **Since:** 9
+
+<!--Device-media-function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void--><!--Device-media-function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -25,7 +26,7 @@ Creates an VideoRecorder instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;VideoRecorder&gt; | Yes | used to return AudioPlayer instance if the operation issuccessful; returns null otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<VideoRecorder> | Yes | used to return AudioPlayer instance if the operation is successful; returns null otherwise. |
 
 **Error codes:**
 
@@ -58,10 +59,11 @@ media.createVideoRecorder((error: BusinessError, video: media.VideoRecorder) => 
 function createVideoRecorder(): Promise<VideoRecorder>
 ```
 
-The maintenance of this interface has been stopped since version api 9. Please use AVRecorder
-Creates an VideoRecorder instance.
+The maintenance of this interface has been stopped since version api 9. Please use AVRecorder Creates an VideoRecorder instance.
 
 **Since:** 9
+
+<!--Device-media-function createVideoRecorder(): Promise<VideoRecorder>--><!--Device-media-function createVideoRecorder(): Promise<VideoRecorder>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -71,7 +73,7 @@ Creates an VideoRecorder instance.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;VideoRecorder&gt; | A Promise instance used to return VideoRecorder instance if the operation issuccessful; returns null otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<VideoRecorder> | A Promise instance used to return VideoRecorder instance if the operation is successful; returns null otherwise. |
 
 **Error codes:**
 

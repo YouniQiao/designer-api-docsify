@@ -1,9 +1,10 @@
 # OnPageVisibleEvent
 
-Represents the callback invoked when the old page is not displayed and the
-new page is about to be visible.
+Represents the callback invoked when the old page is not displayed and the new page is about to be visible.
 
 **Since:** 12
+
+<!--Device-unnamed-declare interface OnPageVisibleEvent--><!--Device-unnamed-declare interface OnPageVisibleEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -20,6 +21,8 @@ URL for the download task.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-OnPageVisibleEvent-url: string--><!--Device-OnPageVisibleEvent-url: string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

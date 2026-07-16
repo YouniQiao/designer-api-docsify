@@ -20,6 +20,12 @@ Obtains information about how a sensitive permission is used by an application.
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
 
+<!--Device-privacyManager-function getPermissionUsedTypeInfos(
+    tokenId?: int | null,
+    permissionName?: Permissions): Promise<Array<PermissionUsedTypeInfo>>--><!--Device-privacyManager-function getPermissionUsedTypeInfos(
+    tokenId?: int | null,
+    permissionName?: Permissions): Promise<Array<PermissionUsedTypeInfo>>-End-->
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -28,14 +34,14 @@ Obtains information about how a sensitive permission is used by an application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenId | number \| null | No | Application identity identifier for accessing sensitive permissions. It can beobtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)field of ApplicationInfo. Pass a specific tokenId when querying the access type information of sensitivepermissions for a particular app; 0 or null indicates querying the access type information of sensitivepermissions for all apps. Starting from API version 20, the null type is newly supported.<br>Default value: 0. |
-| permissionName | Permissions | No | Name of the sensitive permission being accessed. Pass a specificpermission name when querying the access type information of a particular sensitive permission; emptyindicates querying the access type information of all sensitive permissions. Passing an invalid value returnserror code 12100001.<br>Value constraint: The permission name length cannot exceed 256 characters. Default value: Empty string. |
+| tokenId | number \| null | No | Application identity identifier for accessing sensitive permissions. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)field of ApplicationInfo. Pass a specific tokenId when querying the access type information of sensitive permissions for a particular app; 0 or null indicates querying the access type information of sensitive permissions for all apps. Starting from API version 20, the null type is newly supported.<br>Default value: 0. |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | No | Name of the sensitive permission being accessed. Pass a specific permission name when querying the access type information of a particular sensitive permission; empty indicates querying the access type information of all sensitive permissions. Passing an invalid value returns error code 12100001.<br>Value constraint: The permission name length cannot exceed 256 characters. Default value: Empty string. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PermissionUsedTypeInfo&gt;&gt; | Promise used to return the list of permission access typeinformation. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<PermissionUsedTypeInfo>> | Promise used to return the list of permission access type information. |
 
 **Error codes:**
 

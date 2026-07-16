@@ -1,5 +1,11 @@
 # create
 
+## 导入模块
+
+```TypeScript
+import { sendableColorSpaceManager } from '@kit.ArkGraphics2D';
+```
+
 ## create
 
 ```TypeScript
@@ -9,6 +15,8 @@ function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager
 创建标准可共享的色彩管理。
 
 **起始版本：** 12
+
+<!--Device-sendableColorSpaceManager-function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager--><!--Device-sendableColorSpaceManager-function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -22,7 +30,7 @@ function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager
 
 | 类型 | 说明 |
 | --- | --- |
-| ColorSpaceManager | 返回当前创建的可共享的色彩管理实例。<br>该实例继承ISendable，可以在ArkTS并发实例间（包括主线程、TaskPool&Worker工作线程）传递，传递的行为是引用传递，参考[Sendable使用场景](../../../../arkts-utils/sendable-guide.md)。 |
+| [ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-i.md) | 返回当前创建的可共享的色彩管理实例。<br>该实例继承ISendable，可以在ArkTS并发实例间（包括主线程、TaskPool&Worker工作线程）传递，传递的行为是引用传递，参考[Sendable使用场景](../../../../arkts-utils/sendable-guide.md)。 |
 
 **错误码：**
 
@@ -52,6 +60,8 @@ function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number)
 
 **起始版本：** 12
 
+<!--Device-sendableColorSpaceManager-function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number): ColorSpaceManager--><!--Device-sendableColorSpaceManager-function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number): ColorSpaceManager-End-->
+
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **参数：**
@@ -65,7 +75,7 @@ function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number)
 
 | 类型 | 说明 |
 | --- | --- |
-| ColorSpaceManager | 返回当前创建的可共享的色彩管理实例。<br>色域类型定义为[colorSpaceManager.ColorSpace](arkts-arkgraphics2d-colorspace-e.md)枚举值`CUSTOM`。<br>该实例继承ISendable，可以在ArkTS并发实例间（包括主线程、TaskPool&Worker工作线程）传递，传递的行为是引用传递，参考[Sendable使用场景](../../../../arkts-utils/sendable-guide.md)。 |
+| [ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-i.md) | 返回当前创建的可共享的色彩管理实例。<br>色域类型定义为[colorSpaceManager.ColorSpace](arkts-arkgraphics2d-colorspace-e.md)枚举值`CUSTOM`。<br>该实例继承ISendable，可以在ArkTS并发实例间（包括主线程、TaskPool&Worker工作线程）传递，传递的行为是引用传递，参考[Sendable使用场景](../../../../arkts-utils/sendable-guide.md)。 |
 
 **错误码：**
 

@@ -1,11 +1,12 @@
 # Flash
 
-Flash extends [FlashQuery](arkts-camera-flashquery-i.md)
-Provides APIs related to the flash.
+Flash extends [FlashQuery](arkts-camera-flashquery-i.md)Provides APIs related to the flash.
 
 **Inheritance/Implementation:** Flash extends [FlashQuery](arkts-camera-flashquery-i.md)
 
 **Since:** 11
+
+<!--Device-camera-interface Flash extends FlashQuery--><!--Device-camera-interface Flash extends FlashQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -23,10 +24,11 @@ enableLcdFlash(enabled: boolean): void
 
 Enables or disables the LCD flash.
 
-Before the setting, call [isLcdFlashSupported](arkts-camera-flashquery-i-sys.md#islcdflashsupported-1) to check whether the
-device supports the LCD flash.
+Before the setting, call [isLcdFlashSupported](arkts-camera-flashquery-i-sys.md#islcdflashsupported-1) to check whether the device supports the LCD flash.
 
 **Since:** 13
+
+<!--Device-Flash-enableLcdFlash(enabled: boolean): void--><!--Device-Flash-enableLcdFlash(enabled: boolean): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

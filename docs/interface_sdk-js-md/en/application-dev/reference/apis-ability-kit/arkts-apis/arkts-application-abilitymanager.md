@@ -1,13 +1,14 @@
 # @ohos.application.abilityManager
 
-The AbilityManager module provides APIs for obtaining, adding, and modifying ability running information and state
-information.
+The AbilityManager module provides APIs for obtaining, adding, and modifying ability running information and state information.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** abilityManager/abilityManager
+
+<!--Device-unnamed-declare namespace abilityManager--><!--Device-unnamed-declare namespace abilityManager-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

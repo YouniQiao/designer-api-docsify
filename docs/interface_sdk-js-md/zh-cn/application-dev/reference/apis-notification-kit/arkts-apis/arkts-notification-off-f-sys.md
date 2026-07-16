@@ -21,6 +21,14 @@ function off(
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
+<!--Device-notificationManager-function off(
+    type: 'checkNotification',
+    callback?: (checkInfo: NotificationCheckInfo) => NotificationCheckResult
+  ): void--><!--Device-notificationManager-function off(
+    type: 'checkNotification',
+    callback?: (checkInfo: NotificationCheckInfo) => NotificationCheckResult
+  ): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -30,7 +38,7 @@ function off(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'checkNotification' | 是 | 回调函数类型名，固定为'checkNotification'。 |
-| callback | (checkInfo: NotificationCheckInfo) =&gt; NotificationCheckResult | 否 | 消息验证函数指针。 |
+| callback | (checkInfo: NotificationCheckInfo) => NotificationCheckResult | 否 | 消息验证函数指针。 |
 
 **错误码：**
 

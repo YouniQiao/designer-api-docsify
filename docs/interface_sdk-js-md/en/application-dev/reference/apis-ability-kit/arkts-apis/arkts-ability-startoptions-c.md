@@ -1,11 +1,10 @@
 # StartOptions
 
-StartOptions can be used as an input parameter for APIs used to launch a UIAbility (for example,
-[startAbility()](arkts-ability-uiabilitycontext-c.md#startability-2)
-). It specifies the options for starting the target UIAbility, including but not limited to the window mode and the
-display where the target UIAbility is started.
+StartOptions can be used as an input parameter for APIs used to launch a UIAbility (for example,[startAbility()](arkts-ability-uiabilitycontext-c.md#startability-2)). It specifies the options for starting the target UIAbility, including but not limited to the window mode and the display where the target UIAbility is started.
 
 **Since:** 9
+
+<!--Device-unnamed-declare class StartOptions--><!--Device-unnamed-declare class StartOptions-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -31,6 +30,8 @@ Operation class used to handle the result of an application launch request.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-StartOptions-completionHandler?: CompletionHandler--><!--Device-StartOptions-completionHandler?: CompletionHandler-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## displayId
@@ -41,8 +42,8 @@ displayId?: number
 
 Display ID, which is an integer greater than or equal to -1.
 
-- The value **-1** means the current screen.
-- The value **0** means the primary screen.
+- The value **-1** means the current screen.  
+- The value **0** means the primary screen.  
 - A positive integer means a specific screen with that ID.
 
 **NOTE**
@@ -59,6 +60,8 @@ In versions earlier than API version 14, the default value is **0**, indicating 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-StartOptions-displayId?: long--><!--Device-StartOptions-displayId?: long-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## hideStartWindow
@@ -67,20 +70,19 @@ In versions earlier than API version 14, the default value is **0**, indicating 
 hideStartWindow?: boolean
 ```
 
-Whether to hide the starting window for the UIAbility of the current application upon startup. The options include
-**true** (yes) and **false** (no). For details about the starting window and its specifications, see
-[StartWindow](../../../../quick-start/module-configuration-file.md#startwindow).
+Whether to hide the starting window for the UIAbility of the current application upon startup. The options include **true** (yes) and **false** (no). For details about the starting window and its specifications, see [StartWindow](../../../../quick-start/module-configuration-file.md#startwindow).
 
 **Constraints**:
 
-1. This property takes effect only on tablets in free windows mode and 2-in-1 devices.
-2. This property applies only for an attempt to launch the UIAbility of the current application.
+1. This property takes effect only on tablets in free windows mode and 2-in-1 devices.2. This property applies only for an attempt to launch the UIAbility of the current application.
 
 **Type:** boolean
 
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StartOptions-hideStartWindow?: boolean--><!--Device-StartOptions-hideStartWindow?: boolean-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -90,20 +92,19 @@ Whether to hide the starting window for the UIAbility of the current application
 maxWindowHeight?: number
 ```
 
-Maximum height of the window, in vp. You can call
-[getWindowLimitsVP](@ohos.window.d.ts:window.getWindowLimitsVP) to obtain the size limit of the current
-window.
+Maximum height of the window, in vp. You can call [getWindowLimitsVP](@ohos.window.d.ts:window.getWindowLimitsVP) to obtain the size limit of the current window.
 
 **Constraints**:
 
-This function takes effect only in the
-[freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state.
+This function takes effect only in the [freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** number
 
 **Since:** 17
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StartOptions-maxWindowHeight?: int--><!--Device-StartOptions-maxWindowHeight?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -113,20 +114,19 @@ This function takes effect only in the
 maxWindowWidth?: number
 ```
 
-Maximum width of the window, in vp. You can call
-[getWindowLimitsVP](@ohos.window.d.ts:window.getWindowLimitsVP) to obtain the size limit of the current
-window.
+Maximum width of the window, in vp. You can call [getWindowLimitsVP](@ohos.window.d.ts:window.getWindowLimitsVP) to obtain the size limit of the current window.
 
 **Constraints**:
 
-This function takes effect only in the
-[freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state.
+This function takes effect only in the [freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** number
 
 **Since:** 17
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StartOptions-maxWindowWidth?: int--><!--Device-StartOptions-maxWindowWidth?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -136,20 +136,19 @@ This function takes effect only in the
 minWindowHeight?: number
 ```
 
-Minimum height of the window, in vp. You can call
-[getWindowLimitsVP](@ohos.window.d.ts:window.getWindowLimitsVP) to obtain the size limit of the current
-window.
+Minimum height of the window, in vp. You can call [getWindowLimitsVP](@ohos.window.d.ts:window.getWindowLimitsVP) to obtain the size limit of the current window.
 
 **Constraints**:
 
-This function takes effect only in the
-[freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state.
+This function takes effect only in the [freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** number
 
 **Since:** 17
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StartOptions-minWindowHeight?: int--><!--Device-StartOptions-minWindowHeight?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -159,20 +158,19 @@ This function takes effect only in the
 minWindowWidth?: number
 ```
 
-Minimum width of the window, in vp. You can call
-[getWindowLimitsVP](@ohos.window.d.ts:window.getWindowLimitsVP) to obtain the size limit of the current
-window.
+Minimum width of the window, in vp. You can call [getWindowLimitsVP](@ohos.window.d.ts:window.getWindowLimitsVP) to obtain the size limit of the current window.
 
 **Constraints**:
 
-This function takes effect only in the
-[freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state.
+This function takes effect only in the [freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** number
 
 **Since:** 17
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StartOptions-minWindowWidth?: int--><!--Device-StartOptions-minWindowWidth?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -186,16 +184,15 @@ Process mode of the UIAbility after it is started.
 
 **Constraints**:
 
-1. This property takes effect only on 2-in-1 devices and tablets.
-2. This property takes effect only in
-[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability-1).
-3. **processMode** and **startupVisibility** must be set in pair.
+1. This property takes effect only on 2-in-1 devices and tablets.2. This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability-1).3. **processMode** and **startupVisibility** must be set in pair.
 
 **Type:** contextConstant.ProcessMode
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StartOptions-processMode?: contextConstant.ProcessMode--><!--Device-StartOptions-processMode?: contextConstant.ProcessMode-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -213,6 +210,8 @@ The type of split ratio preference.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-StartOptions-splitRatio?: window.SplitRatioPreference--><!--Device-StartOptions-splitRatio?: window.SplitRatioPreference-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## startWindowBackgroundColor
@@ -221,22 +220,21 @@ The type of split ratio preference.
 startWindowBackgroundColor?: string
 ```
 
-Background color of the window for the UIAbility of the current application upon startup. The value is in ARGB
-format, for example, **#E5FFFFFF**. If this property is not set, the value of **startWindowBackground** in the
-**module.json5** file is used by default.
+Background color of the window for the UIAbility of the current application upon startup. The value is in ARGB format, for example, **#E5FFFFFF**. If this property is not set, the value of **startWindowBackground** in the **module.json5** file is used by default.
 
 **Constraints**:
 
-- This property does not take effect for the UIAbility of another application.
-- This property takes effect only on 2-in-1 devices and tablets.
-- This property takes effect only in
-[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability-1).
+- This property does not take effect for the UIAbility of another application.  
+- This property takes effect only on 2-in-1 devices and tablets.  
+- This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability-1).
 
 **Type:** string
 
 **Since:** 14
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StartOptions-startWindowBackgroundColor?: string--><!--Device-StartOptions-startWindowBackgroundColor?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -246,15 +244,13 @@ format, for example, **#E5FFFFFF**. If this property is not set, the value of **
 startWindowIcon?: image.PixelMap
 ```
 
-Icon displayed on the starting window for the UIAbility of the current application upon startup. If this property
-is not set, the value of **startWindowIcon** in the **module.json5** file is used by default.
+Icon displayed on the starting window for the UIAbility of the current application upon startup. If this property is not set, the value of **startWindowIcon** in the **module.json5** file is used by default.
 
 **Constraints**:
 
-- This property does not take effect for the UIAbility of another application.
-- This property takes effect only on 2-in-1 devices and tablets.
-- This property takes effect only in
-[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability-1).
+- This property does not take effect for the UIAbility of another application.  
+- This property takes effect only on 2-in-1 devices and tablets.  
+- This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability-1).  
 - The maximum size of an image used as the startup icon is 600 MB.
 
 **Type:** image.PixelMap
@@ -262,6 +258,8 @@ is not set, the value of **startWindowIcon** in the **module.json5** file is use
 **Since:** 14
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StartOptions-startWindowIcon?: image.PixelMap--><!--Device-StartOptions-startWindowIcon?: image.PixelMap-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -271,22 +269,19 @@ is not set, the value of **startWindowIcon** in the **module.json5** file is use
 startupVisibility?: contextConstant.StartupVisibility
 ```
 
-Visibility status of the UIAbility after it is started. If the target UIAbility is set to invisible, the window of
-the target UIAbility is not displayed in the foreground, there is no icon in the dock, and the **onForeground**
-lifecycle of the target UIAbility is not triggered.
+Visibility status of the UIAbility after it is started. If the target UIAbility is set to invisible, the window of the target UIAbility is not displayed in the foreground, there is no icon in the dock, and the **onForeground** lifecycle of the target UIAbility is not triggered.
 
 **Constraints**:
 
-1. This property takes effect only on 2-in-1 devices and tablets.
-2. This property takes effect only in
-[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability-1).
-3. **processMode** and **startupVisibility** must be set in pair.
+1. This property takes effect only on 2-in-1 devices and tablets.2. This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability-1).3. **processMode** and **startupVisibility** must be set in pair.
 
 **Type:** contextConstant.StartupVisibility
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StartOptions-startupVisibility?: contextConstant.StartupVisibility--><!--Device-StartOptions-startupVisibility?: contextConstant.StartupVisibility-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -296,24 +291,13 @@ lifecycle of the target UIAbility is not triggered.
 supportWindowModes?: Array<bundleManager.SupportWindowMode>
 ```
 
-Window mode supported by the UIAbility when it is started. The supported window mode specifies whether to display
-the maximize, minimize, or split-screen button. If this property is not set, the value of **supportWindowMode**
-configured under [abilities](../../../../quick-start/module-configuration-file.md#abilities) in the
-[module.json5](../../../../quick-start/module-configuration-file.md) file corresponding to the UIAbility is used by
-default.
+Window mode supported by the UIAbility when it is started. The supported window mode specifies whether to display the maximize, minimize, or split-screen button. If this property is not set, the value of **supportWindowMode** configured under [abilities](../../../../quick-start/module-configuration-file.md#abilities) in the [module.json5](../../../../quick-start/module-configuration-file.md) file corresponding to the UIAbility is used by default.
 
-- **FULL_SCREEN**: full-screen mode.
-- **FLOATING**: floating window mode.
-- **SPLIT**: split-screen mode. Generally, **FULL_SCREEN** or **FLOATING** must be used together. You are not
-advised to configure only **SPLIT**. If only **SPLIT** is configured, the window on 2-in-1 devices is in floating
-window mode by default and can transition to the split-screen mode, and the window on tablets is in full-screen
-mode by default and can transition to the split-screen mode.
+- **FULL_SCREEN**: full-screen mode.  
+- **FLOATING**: floating window mode.  
+- **SPLIT**: split-screen mode. Generally, **FULL_SCREEN** or **FLOATING** must be used together. You are not advised to configure only **SPLIT**. If only **SPLIT** is configured, the window on 2-in-1 devices is in floating window mode by default and can transition to the split-screen mode, and the window on tablets is in full-screen mode by default and can transition to the split-screen mode.
 
-When **FULL_SCREEN** and **SPLIT** are both configured for a
-[freeform window](../../../../windowmanager/window-terminology.md#freeform-window), the window will be started in
-floating window mode if the value of
-[targetAPIVersion](../../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) is less than 15
-, and in full-screen mode if the value is greater than or equal to 15.
+When **FULL_SCREEN** and **SPLIT** are both configured for a [freeform window](../../../../windowmanager/window-terminology.md#freeform-window), the window will be started in floating window mode if the value of [targetAPIVersion](../../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) is less than 15, and in full-screen mode if the value is greater than or equal to 15.
 
 **Constraints**:
 
@@ -324,6 +308,8 @@ floating window mode if the value of
 **Since:** 14
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StartOptions-supportWindowModes?: Array<bundleManager.SupportWindowMode>--><!--Device-StartOptions-supportWindowModes?: Array<bundleManager.SupportWindowMode>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -341,6 +327,8 @@ Parameters for the window for the UIAbility upon startup.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-StartOptions-windowCreateParams?: window.WindowCreateParams--><!--Device-StartOptions-windowCreateParams?: window.WindowCreateParams-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## windowHeight
@@ -351,19 +339,19 @@ windowHeight?: number
 
 Window height, in px.
 
-The value range is [**minWindowHeight**, **maxWindowHeight**], with the unit being vp. You can call
-[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-uicontext-c.md#vp2px-1) to convert it to the corresponding px value.
+The value range is [**minWindowHeight**, **maxWindowHeight**], with the unit being vp. You can call [vp2px](../../apis-arkui/arkts-apis/arkts-arkui-uicontext-c.md#vp2px-1) to convert it to the corresponding px value.
 
 **Constraints**:
 
-This function takes effect only in the
-[freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state.
+This function takes effect only in the [freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** number
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StartOptions-windowHeight?: int--><!--Device-StartOptions-windowHeight?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -373,23 +361,19 @@ This function takes effect only in the
 windowLeft?: number
 ```
 
-Distance the window moves along the x-axis, with the top-left vertex of the screen specified by **displayId** as
-the starting point. The unit is px. A positive value means moving to the right, and a negative value means moving
-to the left. The value is an integer. Non-integer values will be rounded down. When the top-left vertex of the
-window exceeds the screen area of the specified **displayId**, the window is restricted to be visible only within
-the screen range of the specified **displayId**. When configuring this field, you are advised to configure
-**windowTop** at the same time.
+Distance the window moves along the x-axis, with the top-left vertex of the screen specified by **displayId** as the starting point. The unit is px. A positive value means moving to the right, and a negative value means moving to the left. The value is an integer. Non-integer values will be rounded down. When the top-left vertex of the window exceeds the screen area of the specified **displayId**, the window is restricted to be visible only within the screen range of the specified **displayId**. When configuring this field, you are advised to configure **windowTop** at the same time.
 
 **Constraints**:
 
-This function takes effect only in the
-[freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state.
+This function takes effect only in the [freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** number
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StartOptions-windowLeft?: int--><!--Device-StartOptions-windowLeft?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -399,14 +383,15 @@ This function takes effect only in the
 windowMode?: number
 ```
 
-Window mode for the UIAbility upon startup. For details, see
-[WindowMode](arkts-ability-windowmode-e.md).
+Window mode for the UIAbility upon startup. For details, see [WindowMode](arkts-ability-windowmode-e.md).
 
 **Type:** number
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StartOptions-windowMode?: int--><!--Device-StartOptions-windowMode?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -416,22 +401,19 @@ Window mode for the UIAbility upon startup. For details, see
 windowTop?: number
 ```
 
-Distance the window moves along the y-axis, with the top-left vertex of the screen specified by **displayId** as
-the starting point. The unit is px. A positive value means moving downward, and a negative value means moving
-upward. The value is an integer. Non-integer values will be rounded down. When the top of the window exceeds the
-screen area of the specified **displayId**, the window is restricted to be visible only within the screen range of
-the specified **displayId**. When configuring this field, you are advised to also configure **windowLeft**.
+Distance the window moves along the y-axis, with the top-left vertex of the screen specified by **displayId** as the starting point. The unit is px. A positive value means moving downward, and a negative value means moving upward. The value is an integer. Non-integer values will be rounded down. When the top of the window exceeds the screen area of the specified **displayId**, the window is restricted to be visible only within the screen range of the specified **displayId**. When configuring this field, you are advised to also configure **windowLeft**.
 
 **Constraints**:
 
-This function takes effect only in the
-[freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state.
+This function takes effect only in the [freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** number
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StartOptions-windowTop?: int--><!--Device-StartOptions-windowTop?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -443,19 +425,19 @@ windowWidth?: number
 
 Window width, in px.
 
-The value range is [**minWindowWidth**, **maxWindowWidth**], with the unit being vp. You can call
-[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-uicontext-c.md#vp2px-1) to convert it to the corresponding px value.
+The value range is [**minWindowWidth**, **maxWindowWidth**], with the unit being vp. You can call [vp2px](../../apis-arkui/arkts-apis/arkts-arkui-uicontext-c.md#vp2px-1) to convert it to the corresponding px value.
 
 **Constraints**:
 
-This function takes effect only in the
-[freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state.
+This function takes effect only in the [freeform window](../../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** number
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StartOptions-windowWidth?: int--><!--Device-StartOptions-windowWidth?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -469,14 +451,15 @@ Whether animation effects are used for the UIAbility upon startup. **true** if u
 
 **Constraints**:
 
-1. This property takes effect only on 2-in-1 devices and tablets.
-2. The caller and target must be the same application.
+1. This property takes effect only on 2-in-1 devices and tablets.2. The caller and target must be the same application.
 
 **Type:** boolean
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StartOptions-withAnimation?: boolean--><!--Device-StartOptions-withAnimation?: boolean-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

@@ -12,12 +12,13 @@ import { featureAbility } from '@kit.AbilityKit';
 function getWant(callback: AsyncCallback<Want>): void
 ```
 
-Obtains the Want corresponding to the ability to start. This API uses an asynchronous callback to return the
-result.
+Obtains the Want corresponding to the ability to start. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-featureAbility-function getWant(callback: AsyncCallback<Want>): void--><!--Device-featureAbility-function getWant(callback: AsyncCallback<Want>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -25,7 +26,7 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Want&gt; | Yes | Callback used to return the Want. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Want> | Yes | Callback used to return the Want. |
 
 **Example**
 
@@ -55,13 +56,15 @@ Obtains the Want corresponding to the ability to start. This API uses a promise 
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-featureAbility-function getWant(): Promise<Want>--><!--Device-featureAbility-function getWant(): Promise<Want>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Want&gt; | Promise used to return the Want. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Want> | Promise used to return the Want. |
 
 **Example**
 

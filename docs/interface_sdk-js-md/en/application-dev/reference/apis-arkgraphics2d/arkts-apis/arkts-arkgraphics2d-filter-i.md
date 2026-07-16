@@ -4,6 +4,8 @@ The Filter for Component.
 
 **Since:** 12
 
+<!--Device-uiEffect-interface Filter--><!--Device-uiEffect-interface Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
@@ -22,6 +24,8 @@ Set blur effect of the Component.
 
 **Since:** 12
 
+<!--Device-Filter-blur(blurRadius: double): Filter--><!--Device-Filter-blur(blurRadius: double): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
@@ -34,7 +38,7 @@ Set blur effect of the Component.
 
 | Type | Description |
 | --- | --- |
-| Filter | @syscap SystemCapability.Graphics.Drawing |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-filter-i.md) | @syscap SystemCapability.Graphics.Drawing |
 
 **Example**
 

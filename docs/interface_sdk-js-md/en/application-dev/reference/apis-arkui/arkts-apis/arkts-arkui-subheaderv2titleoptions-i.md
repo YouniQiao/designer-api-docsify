@@ -4,6 +4,8 @@ Defines the SubHeaderV2TitleOptions.
 
 **Since:** 18
 
+<!--Device-unnamed-export interface SubHeaderV2TitleOptions--><!--Device-unnamed-export interface SubHeaderV2TitleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Set the id of the title.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-SubHeaderV2TitleOptions-id?: string--><!--Device-SubHeaderV2TitleOptions-id?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## primaryTitle
@@ -45,6 +49,8 @@ The first line text of content area.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SubHeaderV2TitleOptions-primaryTitle?: ResourceStr--><!--Device-SubHeaderV2TitleOptions-primaryTitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +70,8 @@ Text modifier for primary title.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SubHeaderV2TitleOptions-primaryTitleModifier?: TextModifier--><!--Device-SubHeaderV2TitleOptions-primaryTitleModifier?: TextModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## secondaryTitle
@@ -81,6 +89,8 @@ The secondary line text of content area.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SubHeaderV2TitleOptions-secondaryTitle?: ResourceStr--><!--Device-SubHeaderV2TitleOptions-secondaryTitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +110,8 @@ Text modifier for secondary title.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SubHeaderV2TitleOptions-secondaryTitleModifier?: TextModifier--><!--Device-SubHeaderV2TitleOptions-secondaryTitleModifier?: TextModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## titleAccessibilityText
@@ -117,6 +129,8 @@ The accessibility text for broadcasting the title.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-SubHeaderV2TitleOptions-titleAccessibilityText?: ResourceStr--><!--Device-SubHeaderV2TitleOptions-titleAccessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

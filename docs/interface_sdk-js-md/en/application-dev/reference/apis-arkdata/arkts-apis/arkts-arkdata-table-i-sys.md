@@ -4,6 +4,8 @@ Represents the table information.
 
 **Since:** 11
 
+<!--Device-cloudExtension-export interface Table--><!--Device-cloudExtension-export interface Table-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Alias of the table in the database.
 
 **Since:** 11
 
+<!--Device-Table-alias: string--><!--Device-Table-alias: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ Field information in the table.
 
 **Since:** 11
 
+<!--Device-Table-fields: Array<Field>--><!--Device-Table-fields: Array<Field>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ Table name.
 **Type:** string
 
 **Since:** 11
+
+<!--Device-Table-name: string--><!--Device-Table-name: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 

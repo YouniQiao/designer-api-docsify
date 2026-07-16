@@ -4,6 +4,8 @@ Implements audio spatialization management.
 
 **Since:** 18
 
+<!--Device-audio-interface AudioSpatializationManager--><!--Device-audio-interface AudioSpatializationManager-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Downloads personalized HRTF data from anonymous file descriptor.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AudioSpatializationManager-downloadPersonalizedHRTF(hrtfDescriptor: AudioHRTFAnonymousDescriptor): Promise<void>--><!--Device-AudioSpatializationManager-downloadPersonalizedHRTF(hrtfDescriptor: AudioHRTFAnonymousDescriptor): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -34,13 +38,13 @@ Downloads personalized HRTF data from anonymous file descriptor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hrtfDescriptor | AudioHRTFAnonymousDescriptor | Yes | Personalized HRTF data descriptor. |
+| hrtfDescriptor | [AudioHRTFAnonymousDescriptor](arkts-audio-audiohrtfanonymousdescriptor-i-sys.md) | Yes | Personalized HRTF data descriptor. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> |  |
 
 **Error codes:**
 
@@ -65,6 +69,8 @@ Gets the current spatial audio source type.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AudioSpatializationManager-getCurrentSpatialAudioSourceType(): SpatialAudioSourceType--><!--Device-AudioSpatializationManager-getCurrentSpatialAudioSourceType(): SpatialAudioSourceType-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -73,7 +79,7 @@ Gets the current spatial audio source type.
 
 | Type | Description |
 | --- | --- |
-| SpatialAudioSourceType | The spatial audio source type on the current device. |
+| [SpatialAudioSourceType](arkts-audio-spatialaudiosourcetype-e-sys.md) | The spatial audio source type on the current device. |
 
 **Error codes:**
 
@@ -91,6 +97,8 @@ Get spatialization rendering scene type.
 
 **Since:** 12
 
+<!--Device-AudioSpatializationManager-getSpatializationSceneType(): AudioSpatializationSceneType--><!--Device-AudioSpatializationManager-getSpatializationSceneType(): AudioSpatializationSceneType-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -99,7 +107,7 @@ Get spatialization rendering scene type.
 
 | Type | Description |
 | --- | --- |
-| AudioSpatializationSceneType | Current spatialization rendering scene type. |
+| [AudioSpatializationSceneType](arkts-audio-audiospatializationscenetype-e-sys.md) | Current spatialization rendering scene type. |
 
 **Error codes:**
 
@@ -133,6 +141,8 @@ Checks whether the adaptive spatial rendering is enabled by the specified device
 
 **Since:** 24
 
+<!--Device-AudioSpatializationManager-isAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -141,7 +151,7 @@ Checks whether the adaptive spatial rendering is enabled by the specified device
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | AudioDeviceDescriptor | Yes | The target deviceto be check whether the adaptive spatial rendering is enabled. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i-sys.md) | Yes | The target device to be check whether the adaptive spatial rendering is enabled. |
 
 **Return value:**
 
@@ -169,6 +179,8 @@ Checks whether the head tracking is enabled.
 **Deprecated since:** 12
 
 **Substitutes:** isHeadTrackingEnabled
+
+<!--Device-AudioSpatializationManager-isHeadTrackingEnabled(): boolean--><!--Device-AudioSpatializationManager-isHeadTrackingEnabled(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -212,6 +224,8 @@ Checks whether the head tracking is enabled by the specified device.
 
 **Since:** 12
 
+<!--Device-AudioSpatializationManager-isHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -220,7 +234,7 @@ Checks whether the head tracking is enabled by the specified device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | AudioDeviceDescriptor | Yes | Audio device description. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i-sys.md) | Yes | Audio device description. |
 
 **Return value:**
 
@@ -277,6 +291,8 @@ Checks whether head tracking is supported by system.
 
 **Since:** 11
 
+<!--Device-AudioSpatializationManager-isHeadTrackingSupported(): boolean--><!--Device-AudioSpatializationManager-isHeadTrackingSupported(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -319,6 +335,8 @@ Checks whether head tracking is supported by the specified device.
 
 **Since:** 11
 
+<!--Device-AudioSpatializationManager-isHeadTrackingSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isHeadTrackingSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -327,7 +345,7 @@ Checks whether head tracking is supported by the specified device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | AudioDeviceDescriptor | Yes | Audio device description. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i-sys.md) | Yes | Audio device description. |
 
 **Return value:**
 
@@ -386,6 +404,8 @@ Checks whether the personalized spatialization is enabled by the specified devic
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AudioSpatializationManager-isPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -394,7 +414,7 @@ Checks whether the personalized spatialization is enabled by the specified devic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectedAudioDevice | AudioDeviceDescriptor | Yes | Audio device description. |
+| selectedAudioDevice | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i-sys.md) | Yes | Audio device description. |
 
 **Return value:**
 
@@ -420,6 +440,8 @@ Checks whether personalized spatialization is supported by system.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioSpatializationManager-isPersonalizedSpatializationSupported(): boolean--><!--Device-AudioSpatializationManager-isPersonalizedSpatializationSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -450,6 +472,8 @@ Checks whether the spatialization is enabled.
 **Deprecated since:** 12
 
 **Substitutes:** isSpatializationEnabled
+
+<!--Device-AudioSpatializationManager-isSpatializationEnabled(): boolean--><!--Device-AudioSpatializationManager-isSpatializationEnabled(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -493,6 +517,8 @@ Checks whether the spatialization is enabled by the specified device.
 
 **Since:** 12
 
+<!--Device-AudioSpatializationManager-isSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -501,7 +527,7 @@ Checks whether the spatialization is enabled by the specified device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | AudioDeviceDescriptor | Yes | Audio device description. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i-sys.md) | Yes | Audio device description. |
 
 **Return value:**
 
@@ -558,6 +584,8 @@ Checks whether spatialization is supported by system.
 
 **Since:** 11
 
+<!--Device-AudioSpatializationManager-isSpatializationSupported(): boolean--><!--Device-AudioSpatializationManager-isSpatializationSupported(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -599,6 +627,8 @@ Checks whether spatialization is supported by the specified device.
 
 **Since:** 11
 
+<!--Device-AudioSpatializationManager-isSpatializationSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isSpatializationSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -607,7 +637,7 @@ Checks whether spatialization is supported by the specified device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | AudioDeviceDescriptor | Yes | Audio device description. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i-sys.md) | Yes | Audio device description. |
 
 **Return value:**
 
@@ -668,6 +698,8 @@ Unsubscribes to the spatialization enable state change events.
 
 **Substitutes:** off
 
+<!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -677,7 +709,7 @@ Unsubscribes to the spatialization enable state change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'spatializationEnabledChange' | Yes | Type of the event to listen for. |
-| callback | Callback&lt;boolean&gt; | No | Callback used to get the spatialization enable state. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | No | Callback used to get the spatialization enable state. |
 
 **Error codes:**
 
@@ -714,6 +746,8 @@ Unsubscribes to the spatialization enable state change events by the specified d
 
 **Since:** 12
 
+<!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -723,7 +757,7 @@ Unsubscribes to the spatialization enable state change events by the specified d
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'spatializationEnabledChangeForAnyDevice' | Yes | Type of the event to listen for. |
-| callback | Callback&lt;AudioSpatialEnabledStateForDevice&gt; | No | Callback used to get the spatialization enablestate by the specified device. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioSpatialEnabledStateForDevice> | No | Callback used to get the spatialization enable state by the specified device. |
 
 **Error codes:**
 
@@ -767,6 +801,8 @@ Unsubscribes to the head tracking enable state change events.
 
 **Substitutes:** off
 
+<!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -776,7 +812,7 @@ Unsubscribes to the head tracking enable state change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChange' | Yes | Type of the event to listen for. |
-| callback | Callback&lt;boolean&gt; | No | Callback used to get the head tracking enable state. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | No | Callback used to get the head tracking enable state. |
 
 **Error codes:**
 
@@ -815,6 +851,8 @@ Unsubscribes to the head tracking enable state change events by the specified de
 
 **Since:** 12
 
+<!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -824,7 +862,7 @@ Unsubscribes to the head tracking enable state change events by the specified de
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChangeForAnyDevice' | Yes | Type of the event to listen for. |
-| callback | Callback&lt;AudioSpatialEnabledStateForDevice&gt; | No | Callback used to get the head tracking enablestate by the specified device. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioSpatialEnabledStateForDevice> | No | Callback used to get the head tracking enable state by the specified device. |
 
 **Error codes:**
 
@@ -864,6 +902,8 @@ Unsubscribes to the adaptive spatial rendering enable state change events by the
 
 **Since:** 24
 
+<!--Device-AudioSpatializationManager-offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -872,7 +912,7 @@ Unsubscribes to the adaptive spatial rendering enable state change events by the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AudioSpatialEnabledStateForDevice&gt; | No | Callback used to get the adaptive spatialrendering enable state by the specified device. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioSpatialEnabledStateForDevice> | No | Callback used to get the adaptive spatial rendering enable state by the specified device. |
 
 **Error codes:**
 
@@ -894,6 +934,10 @@ Unsubscribes to the personalized spatialization enable state change events by th
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AudioSpatializationManager-offPersonalizedSpatializationEnabledChangeForAnyDevice(
+        callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void--><!--Device-AudioSpatializationManager-offPersonalizedSpatializationEnabledChangeForAnyDevice(
+        callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -902,7 +946,7 @@ Unsubscribes to the personalized spatialization enable state change events by th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AudioPersonalizedSpatialEnabledChangeForAnyDevice&gt; | No | Callback used to get the personalizedspatialization enable state by the specified device. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioPersonalizedSpatialEnabledChangeForAnyDevice> | No | Callback used to get the personalized spatialization enable state by the specified device. |
 
 **Error codes:**
 
@@ -922,6 +966,8 @@ Unsubscribes from the spatial audio source type change events.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AudioSpatializationManager-offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): void--><!--Device-AudioSpatializationManager-offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -930,7 +976,7 @@ Unsubscribes from the spatial audio source type change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;SpatialAudioSourceType&gt; | No | Callback used toreceive the current spatial audio source type change. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SpatialAudioSourceType> | No | Callback used to receive the current spatial audio source type change. |
 
 **Error codes:**
 
@@ -945,14 +991,15 @@ Unsubscribes from the spatial audio source type change events.
 on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the spatialization enable state change events. When the spatialization enable state changes,
-registered clients will receive the callback.
+Subscribes to the spatialization enable state change events. When the spatialization enable state changes,registered clients will receive the callback.
 
 **Since:** 11
 
 **Deprecated since:** 12
 
 **Substitutes:** on
+
+<!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -963,7 +1010,7 @@ registered clients will receive the callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'spatializationEnabledChange' | Yes | Type of the event to listen for. |
-| callback | Callback&lt;boolean&gt; | Yes | Callback used to get the spatialization enable state. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | Yes | Callback used to get the spatialization enable state. |
 
 **Error codes:**
 
@@ -990,10 +1037,11 @@ audioSpatializationManager.on('spatializationEnabledChange', (isSpatializationEn
 on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the spatialization enable state change events by the specified device.
-When the spatialization enable state changes, registered clients will receive the callback.
+Subscribes to the spatialization enable state change events by the specified device.When the spatialization enable state changes, registered clients will receive the callback.
 
 **Since:** 12
+
+<!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1004,7 +1052,7 @@ When the spatialization enable state changes, registered clients will receive th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'spatializationEnabledChangeForAnyDevice' | Yes | Type of the event to listen for. |
-| callback | Callback&lt;AudioSpatialEnabledStateForDevice&gt; | Yes | Callback used to get the spatialization enablestate by the specified device. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioSpatialEnabledStateForDevice> | Yes | Callback used to get the spatialization enable state by the specified device. |
 
 **Error codes:**
 
@@ -1032,14 +1080,15 @@ audioSpatializationManager.on('spatializationEnabledChangeForAnyDevice', (audioS
 on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the head tracking enable state change events. When the head tracking enable state changes,
-registered clients will receive the callback.
+Subscribes to the head tracking enable state change events. When the head tracking enable state changes,registered clients will receive the callback.
 
 **Since:** 11
 
 **Deprecated since:** 12
 
 **Substitutes:** on
+
+<!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1050,7 +1099,7 @@ registered clients will receive the callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChange' | Yes | Type of the event to listen for. |
-| callback | Callback&lt;boolean&gt; | Yes | Callback used to get the head tracking enable state. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | Yes | Callback used to get the head tracking enable state. |
 
 **Error codes:**
 
@@ -1077,10 +1126,11 @@ audioSpatializationManager.on('headTrackingEnabledChange', (isHeadTrackingEnable
 on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the head tracking enable state change events by the specified device.
-When the head tracking enable state changes, registered clients will receive the callback.
+Subscribes to the head tracking enable state change events by the specified device.When the head tracking enable state changes, registered clients will receive the callback.
 
 **Since:** 12
+
+<!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1091,7 +1141,7 @@ When the head tracking enable state changes, registered clients will receive the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChangeForAnyDevice' | Yes | Type of the event to listen for. |
-| callback | Callback&lt;AudioSpatialEnabledStateForDevice&gt; | Yes | Callback used to get the head tracking enablestate by the specified device. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioSpatialEnabledStateForDevice> | Yes | Callback used to get the head tracking enable state by the specified device. |
 
 **Error codes:**
 
@@ -1119,10 +1169,11 @@ audioSpatializationManager.on('headTrackingEnabledChangeForAnyDevice', (audioSpa
 onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the adaptive spatial rendering enable state change events by the specified device.
-When the adaptive spatial rendering enable state changes, registered clients will receive the callback.
+Subscribes to the adaptive spatial rendering enable state change events by the specified device.When the adaptive spatial rendering enable state changes, registered clients will receive the callback.
 
 **Since:** 24
+
+<!--Device-AudioSpatializationManager-onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1132,7 +1183,7 @@ When the adaptive spatial rendering enable state changes, registered clients wil
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AudioSpatialEnabledStateForDevice&gt; | Yes | Callback used to get the adaptive spatialrendering enable state by the specified device. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioSpatialEnabledStateForDevice> | Yes | Callback used to get the adaptive spatial rendering enable state by the specified device. |
 
 **Error codes:**
 
@@ -1148,12 +1199,15 @@ onPersonalizedSpatializationEnabledChangeForAnyDevice(
         callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void
 ```
 
-Subscribes to the personalized spatialization enable state change events by the specified device.
-When the state changes, registered clients will receive the callback.
+Subscribes to the personalized spatialization enable state change events by the specified device.When the state changes, registered clients will receive the callback.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioSpatializationManager-onPersonalizedSpatializationEnabledChangeForAnyDevice(
+        callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void--><!--Device-AudioSpatializationManager-onPersonalizedSpatializationEnabledChangeForAnyDevice(
+        callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1163,7 +1217,7 @@ When the state changes, registered clients will receive the callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AudioPersonalizedSpatialEnabledChangeForAnyDevice&gt; | Yes | Callback used to get the personalizedspatialization enable state by the specified device. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioPersonalizedSpatialEnabledChangeForAnyDevice> | Yes | Callback used to get the personalized spatialization enable state by the specified device. |
 
 **Error codes:**
 
@@ -1177,12 +1231,13 @@ When the state changes, registered clients will receive the callback.
 onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void
 ```
 
-Subscribes to the spatial audio source type change events. When the current spatial audio source type changes,
-registered clients will receive callbacks.
+Subscribes to the spatial audio source type change events. When the current spatial audio source type changes,registered clients will receive callbacks.
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioSpatializationManager-onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void--><!--Device-AudioSpatializationManager-onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1192,7 +1247,7 @@ registered clients will receive callbacks.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;SpatialAudioSourceType&gt; | Yes | Callback used toreceive the current spatial audio source type. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SpatialAudioSourceType> | Yes | Callback used to receive the current spatial audio source type. |
 
 **Error codes:**
 
@@ -1207,13 +1262,13 @@ registered clients will receive callbacks.
 setAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>
 ```
 
-Sets the adaptive spatial rendering enabled or disabled by the specified device.
-This method uses a promise to return the result.
-When the adaptive spatial rendering is enabled, spatial audio rendering will not take effect on stereo audio.
+Sets the adaptive spatial rendering enabled or disabled by the specified device.This method uses a promise to return the result.When the adaptive spatial rendering is enabled, spatial audio rendering will not take effect on stereo audio.
 
 **Since:** 24
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
+
+<!--Device-AudioSpatializationManager-setAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>--><!--Device-AudioSpatializationManager-setAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1223,14 +1278,14 @@ When the adaptive spatial rendering is enabled, spatial audio rendering will not
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | AudioDeviceDescriptor | Yes | The target deviceto be set adaptive spatial rendering enabled. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i-sys.md) | Yes | The target device to be set adaptive spatial rendering enabled. |
 | enabled | boolean | Yes | Adaptive spatial rendering enable state. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1257,6 +1312,8 @@ Sets the head tracking enabled or disabled. This method uses an asynchronous cal
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
+<!--Device-AudioSpatializationManager-setHeadTrackingEnabled(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioSpatializationManager-setHeadTrackingEnabled(enable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -1266,7 +1323,7 @@ Sets the head tracking enabled or disabled. This method uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Head tracking enable state. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1311,6 +1368,8 @@ Sets the head tracking enabled or disabled. This method uses a promise to return
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
+<!--Device-AudioSpatializationManager-setHeadTrackingEnabled(enable: boolean): Promise<void>--><!--Device-AudioSpatializationManager-setHeadTrackingEnabled(enable: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -1325,7 +1384,7 @@ Sets the head tracking enabled or disabled. This method uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1357,12 +1416,13 @@ audioSpatializationManager.setHeadTrackingEnabled(enable).then(() => {
 setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>
 ```
 
-Sets the head tracking enabled or disabled by the specified device.
-This method uses a promise to return the result.
+Sets the head tracking enabled or disabled by the specified device.This method uses a promise to return the result.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
+
+<!--Device-AudioSpatializationManager-setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>--><!--Device-AudioSpatializationManager-setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1372,14 +1432,14 @@ This method uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | AudioDeviceDescriptor | Yes | Audio device description. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i-sys.md) | Yes | Audio device description. |
 | enabled | boolean | Yes | Head tracking enable state. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1434,6 +1494,8 @@ Set the personalized spatialization enabled or disabled by the specified device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AudioSpatializationManager-setPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor, enable: boolean): Promise<void>--><!--Device-AudioSpatializationManager-setPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor, enable: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -1442,14 +1504,14 @@ Set the personalized spatialization enabled or disabled by the specified device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectedAudioDevice | AudioDeviceDescriptor | Yes | Audio device description. |
+| selectedAudioDevice | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i-sys.md) | Yes | Audio device description. |
 | enable | boolean | Yes | Whether to enable personalized spatialization. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1475,6 +1537,8 @@ Sets the spatialization enabled or disabled. This method uses an asynchronous ca
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
+<!--Device-AudioSpatializationManager-setSpatializationEnabled(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioSpatializationManager-setSpatializationEnabled(enable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -1484,7 +1548,7 @@ Sets the spatialization enabled or disabled. This method uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Spatialization enable state. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1529,6 +1593,8 @@ Sets the spatialization enabled or disabled. This method uses a promise to retur
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
+<!--Device-AudioSpatializationManager-setSpatializationEnabled(enable: boolean): Promise<void>--><!--Device-AudioSpatializationManager-setSpatializationEnabled(enable: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -1543,7 +1609,7 @@ Sets the spatialization enabled or disabled. This method uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1575,12 +1641,13 @@ audioSpatializationManager.setSpatializationEnabled(enable).then(() => {
 setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>
 ```
 
-Sets the spatialization enabled or disabled by the specified device.
-This method uses a promise to return the result.
+Sets the spatialization enabled or disabled by the specified device.This method uses a promise to return the result.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
+
+<!--Device-AudioSpatializationManager-setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>--><!--Device-AudioSpatializationManager-setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1590,14 +1657,14 @@ This method uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | AudioDeviceDescriptor | Yes | Audio device description. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i-sys.md) | Yes | Audio device description. |
 | enabled | boolean | Yes | Spatialization enable state. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1650,6 +1717,8 @@ Set spatialization rendering scene type.
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
+<!--Device-AudioSpatializationManager-setSpatializationSceneType(spatializationSceneType: AudioSpatializationSceneType): void--><!--Device-AudioSpatializationManager-setSpatializationSceneType(spatializationSceneType: AudioSpatializationSceneType): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -1658,7 +1727,7 @@ Set spatialization rendering scene type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| spatializationSceneType | AudioSpatializationSceneType | Yes | Spatialization scene type. |
+| spatializationSceneType | [AudioSpatializationSceneType](arkts-audio-audiospatializationscenetype-e-sys.md) | Yes | Spatialization scene type. |
 
 **Error codes:**
 
@@ -1697,6 +1766,8 @@ Updates the spatial device state.
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
+<!--Device-AudioSpatializationManager-updateSpatialDeviceState(spatialDeviceState: AudioSpatialDeviceState): void--><!--Device-AudioSpatializationManager-updateSpatialDeviceState(spatialDeviceState: AudioSpatialDeviceState): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -1705,7 +1776,7 @@ Updates the spatial device state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| spatialDeviceState | AudioSpatialDeviceState | Yes | Spatial device state. |
+| spatialDeviceState | [AudioSpatialDeviceState](arkts-audio-audiospatialdevicestate-i-sys.md) | Yes | Spatial device state. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ The **CommonEventSubscriber** module provides APIs for describing the common eve
 
 **Since:** 7
 
+<!--Device-unnamed-export interface CommonEventSubscriber--><!--Device-unnamed-export interface CommonEventSubscriber-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 ## abortCommonEvent
@@ -12,11 +14,11 @@ The **CommonEventSubscriber** module provides APIs for describing the common eve
 abortCommonEvent(callback: AsyncCallback<void>): void
 ```
 
-Aborts an ordered common event. This API is used with
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1). After the abort,
-the common event is not sent to the next subscriber. This API uses an asynchronous callback to return the result.
+Aborts an ordered common event. This API is used with [finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1). After the abort,the common event is not sent to the next subscriber. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
+
+<!--Device-CommonEventSubscriber-abortCommonEvent(callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-abortCommonEvent(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -24,7 +26,7 @@ the common event is not sent to the next subscriber. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -38,11 +40,11 @@ the common event is not sent to the next subscriber. This API uses an asynchrono
 abortCommonEvent(): Promise<void>
 ```
 
-Aborts this ordered common event. This API is used with
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1). After the abort,
-the common event is not sent to the next subscriber. This API uses a promise to return the result.
+Aborts this ordered common event. This API is used with [finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1). After the abort,the common event is not sent to the next subscriber. This API uses a promise to return the result.
 
 **Since:** 7
+
+<!--Device-CommonEventSubscriber-abortCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-abortCommonEvent(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -50,7 +52,7 @@ the common event is not sent to the next subscriber. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## abortCommonEventSync
 
@@ -58,11 +60,11 @@ the common event is not sent to the next subscriber. This API uses a promise to 
 abortCommonEventSync(): void
 ```
 
-Aborts this ordered common event synchronously. This API is used with
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1). After the abort,
-the common event is not sent to the next subscriber.
+Aborts this ordered common event synchronously. This API is used with [finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1). After the abort,the common event is not sent to the next subscriber.
 
 **Since:** 10
+
+<!--Device-CommonEventSubscriber-abortCommonEventSync(): void--><!--Device-CommonEventSubscriber-abortCommonEventSync(): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -72,11 +74,11 @@ the common event is not sent to the next subscriber.
 clearAbortCommonEvent(callback: AsyncCallback<void>): void
 ```
 
-Clears the abort state of an ordered common event. Use this API together with
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1), and the common
-event can be passed to the next subscriber. This API uses an asynchronous callback to return the result.
+Clears the abort state of an ordered common event. Use this API together with [finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1), and the common event can be passed to the next subscriber. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
+
+<!--Device-CommonEventSubscriber-clearAbortCommonEvent(callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-clearAbortCommonEvent(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -84,7 +86,7 @@ event can be passed to the next subscriber. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -98,11 +100,11 @@ event can be passed to the next subscriber. This API uses an asynchronous callba
 clearAbortCommonEvent(): Promise<void>
 ```
 
-Clears the abort state of this ordered common event. Use this API together with
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1), and the common
-event can be passed to the next subscriber. This API uses a promise to return the result.
+Clears the abort state of this ordered common event. Use this API together with [finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1), and the common event can be passed to the next subscriber. This API uses a promise to return the result.
 
 **Since:** 7
+
+<!--Device-CommonEventSubscriber-clearAbortCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-clearAbortCommonEvent(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -110,7 +112,7 @@ event can be passed to the next subscriber. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## clearAbortCommonEventSync
 
@@ -118,11 +120,11 @@ event can be passed to the next subscriber. This API uses a promise to return th
 clearAbortCommonEventSync(): void
 ```
 
-Clears the abort state of this ordered common event. Use this API together with
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1), and the common
-event can be passed to the next subscriber.
+Clears the abort state of this ordered common event. Use this API together with [finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1), and the common event can be passed to the next subscriber.
 
 **Since:** 10
+
+<!--Device-CommonEventSubscriber-clearAbortCommonEventSync(): void--><!--Device-CommonEventSubscriber-clearAbortCommonEventSync(): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -136,13 +138,15 @@ Finishes this ordered common event. This API uses an asynchronous callback to re
 
 **Since:** 9
 
+<!--Device-CommonEventSubscriber-finishCommonEvent(callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-finishCommonEvent(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -160,13 +164,15 @@ Finishes this ordered common event. This API uses a promise to return the result
 
 **Since:** 9
 
+<!--Device-CommonEventSubscriber-finishCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-finishCommonEvent(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 ## getAbortCommonEvent
 
@@ -174,10 +180,11 @@ Finishes this ordered common event. This API uses a promise to return the result
 getAbortCommonEvent(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether this ordered common event should be aborted. This API uses an asynchronous callback to return the
-result.
+Checks whether this ordered common event should be aborted. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
+
+<!--Device-CommonEventSubscriber-getAbortCommonEvent(callback: AsyncCallback<boolean>): void--><!--Device-CommonEventSubscriber-getAbortCommonEvent(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -185,7 +192,7 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. Returns **true** if the orderedcommon event is in the abort state; returns **false** otherwise. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. Returns **true** if the ordered common event is in the abort state; returns **false** otherwise. |
 
 **Error codes:**
 
@@ -203,13 +210,15 @@ Checks whether this ordered common event should be aborted. This API uses a prom
 
 **Since:** 7
 
+<!--Device-CommonEventSubscriber-getAbortCommonEvent(): Promise<boolean>--><!--Device-CommonEventSubscriber-getAbortCommonEvent(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if the ordered common event is inthe abort state; returns **false** otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. Returns **true** if the ordered common event is in the abort state; returns **false** otherwise. |
 
 ## getAbortCommonEventSync
 
@@ -221,13 +230,15 @@ Checks whether this ordered common event should be aborted.
 
 **Since:** 10
 
+<!--Device-CommonEventSubscriber-getAbortCommonEventSync(): boolean--><!--Device-CommonEventSubscriber-getAbortCommonEventSync(): boolean-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the ordered common event is in the abort state; returns **false**otherwise. |
+| boolean | Returns **true** if the ordered common event is in the abort state; returns **false** otherwise. |
 
 ## getCode
 
@@ -235,12 +246,13 @@ Checks whether this ordered common event should be aborted.
 getCode(callback: AsyncCallback<number>): void
 ```
 
-Obtains the result code (number type) of an ordered common event. This API uses an asynchronous callback to return
-the result.
+Obtains the result code (number type) of an ordered common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CommonEventSubscriber-getCode(callback: AsyncCallback<int>): void--><!--Device-CommonEventSubscriber-getCode(callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -248,7 +260,7 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -268,13 +280,15 @@ Obtains the result code (number type) of an ordered common event. This API uses 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CommonEventSubscriber-getCode(): Promise<int>--><!--Device-CommonEventSubscriber-getCode(): Promise<int>-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result. |
 
 ## getCodeSync
 
@@ -287,6 +301,8 @@ Obtains the result code (number type) of an ordered common event.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CommonEventSubscriber-getCodeSync(): int--><!--Device-CommonEventSubscriber-getCodeSync(): int-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -302,12 +318,13 @@ Obtains the result code (number type) of an ordered common event.
 getData(callback: AsyncCallback<string>): void
 ```
 
-Obtains the result data (string type) of an ordered common event. This API uses an asynchronous callback to return
-the result.
+Obtains the result data (string type) of an ordered common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CommonEventSubscriber-getData(callback: AsyncCallback<string>): void--><!--Device-CommonEventSubscriber-getData(callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -315,7 +332,7 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -335,13 +352,15 @@ Obtains the result data (string type) of an ordered common event. This API uses 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CommonEventSubscriber-getData(): Promise<string>--><!--Device-CommonEventSubscriber-getData(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the result. |
 
 ## getDataSync
 
@@ -354,6 +373,8 @@ Obtains the result data (string type) of an ordered common event.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CommonEventSubscriber-getDataSync(): string--><!--Device-CommonEventSubscriber-getDataSync(): string-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -375,13 +396,15 @@ Obtains the subscriber information. This API uses an asynchronous callback to re
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CommonEventSubscriber-getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo>): void--><!--Device-CommonEventSubscriber-getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo>): void-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;CommonEventSubscribeInfo&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<CommonEventSubscribeInfo> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -401,13 +424,15 @@ Obtains the subscriber information. This API uses a promise to return the result
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CommonEventSubscriber-getSubscribeInfo(): Promise<CommonEventSubscribeInfo>--><!--Device-CommonEventSubscriber-getSubscribeInfo(): Promise<CommonEventSubscribeInfo>-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CommonEventSubscribeInfo&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CommonEventSubscribeInfo> | Promise used to return the result. |
 
 ## getSubscribeInfoSync
 
@@ -421,13 +446,15 @@ Obtains the subscriber information.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CommonEventSubscriber-getSubscribeInfoSync(): CommonEventSubscribeInfo--><!--Device-CommonEventSubscriber-getSubscribeInfoSync(): CommonEventSubscribeInfo-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CommonEventSubscribeInfo | Subscriber information. |
+| [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-t.md) | Subscriber information. |
 
 ## isOrderedCommonEvent
 
@@ -435,10 +462,11 @@ Obtains the subscriber information.
 isOrderedCommonEvent(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the current common event is an ordered common event. This API uses an asynchronous callback to
-return the result.
+Checks whether the current common event is an ordered common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
+
+<!--Device-CommonEventSubscriber-isOrderedCommonEvent(callback: AsyncCallback<boolean>): void--><!--Device-CommonEventSubscriber-isOrderedCommonEvent(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -446,7 +474,7 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. Returns **true** if the commonevent is an ordered one; returns **false** if the common event is an unordered one. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. Returns **true** if the common event is an ordered one; returns **false** if the common event is an unordered one. |
 
 **Error codes:**
 
@@ -464,13 +492,15 @@ Checks whether the current common event is an ordered common event. This API use
 
 **Since:** 7
 
+<!--Device-CommonEventSubscriber-isOrderedCommonEvent(): Promise<boolean>--><!--Device-CommonEventSubscriber-isOrderedCommonEvent(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if the common event is an orderedone; returns **false** if the common event is an unordered one. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. Returns **true** if the common event is an ordered one; returns **false** if the common event is an unordered one. |
 
 ## isOrderedCommonEventSync
 
@@ -482,13 +512,15 @@ Checks whether the current common event is an ordered common event.
 
 **Since:** 10
 
+<!--Device-CommonEventSubscriber-isOrderedCommonEventSync(): boolean--><!--Device-CommonEventSubscriber-isOrderedCommonEventSync(): boolean-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the common event is an ordered one; returns **false** if the common eventis an unordered one. |
+| boolean | Returns **true** if the common event is an ordered one; returns **false** if the common event is an unordered one. |
 
 ## isStickyCommonEvent
 
@@ -500,13 +532,15 @@ Checks whether a common event is a sticky one. This API uses an asynchronous cal
 
 **Since:** 7
 
+<!--Device-CommonEventSubscriber-isStickyCommonEvent(callback: AsyncCallback<boolean>): void--><!--Device-CommonEventSubscriber-isStickyCommonEvent(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. Returns **true** if the commonevent is a sticky one; returns **false** otherwise. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. Returns **true** if the common event is a sticky one; returns **false** otherwise. |
 
 **Error codes:**
 
@@ -524,13 +558,15 @@ Checks whether a common event is a sticky one. This API uses a promise to return
 
 **Since:** 7
 
+<!--Device-CommonEventSubscriber-isStickyCommonEvent(): Promise<boolean>--><!--Device-CommonEventSubscriber-isStickyCommonEvent(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if the common event is a stickyone; returns **false** otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. Returns **true** if the common event is a sticky one; returns **false** otherwise. |
 
 ## isStickyCommonEventSync
 
@@ -541,6 +577,8 @@ isStickyCommonEventSync(): boolean
 Checks whether a common event is a sticky one.
 
 **Since:** 10
+
+<!--Device-CommonEventSubscriber-isStickyCommonEventSync(): boolean--><!--Device-CommonEventSubscriber-isStickyCommonEventSync(): boolean-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -556,12 +594,13 @@ Checks whether a common event is a sticky one.
 setCode(code: number, callback: AsyncCallback<void>): void
 ```
 
-Sets the result code (number type) of an ordered common event. This API uses an asynchronous callback to return the
-result.
+Sets the result code (number type) of an ordered common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CommonEventSubscriber-setCode(code: int, callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-setCode(code: int, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -570,7 +609,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | code | number | Yes | Result code of an ordered common event. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -590,6 +629,8 @@ Sets the result code (number type) of an ordered common event. This API uses a p
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CommonEventSubscriber-setCode(code: int): Promise<void>--><!--Device-CommonEventSubscriber-setCode(code: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Parameters:**
@@ -602,7 +643,7 @@ Sets the result code (number type) of an ordered common event. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -616,12 +657,13 @@ Sets the result code (number type) of an ordered common event. This API uses a p
 setCodeAndData(code: number, data: string, callback: AsyncCallback<void>): void
 ```
 
-Sets the result code and data of an ordered common event. This API uses an asynchronous callback to return the
-result.
+Sets the result code and data of an ordered common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CommonEventSubscriber-setCodeAndData(code: int, data: string, callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-setCodeAndData(code: int, data: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -631,7 +673,7 @@ result.
 | --- | --- | --- | --- |
 | code | number | Yes | Result code of an ordered common event. |
 | data | string | Yes | Result data of an ordered common event. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -651,6 +693,8 @@ Sets the result code and data of an ordered common event. This API uses a promis
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CommonEventSubscriber-setCodeAndData(code: int, data: string): Promise<void>--><!--Device-CommonEventSubscriber-setCodeAndData(code: int, data: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Parameters:**
@@ -664,7 +708,7 @@ Sets the result code and data of an ordered common event. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -683,6 +727,8 @@ Sets the result code and data of an ordered common event.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CommonEventSubscriber-setCodeAndDataSync(code: int, data: string): void--><!--Device-CommonEventSubscriber-setCodeAndDataSync(code: int, data: string): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -711,6 +757,8 @@ Sets the result code (number type) of an ordered common event.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CommonEventSubscriber-setCodeSync(code: int): void--><!--Device-CommonEventSubscriber-setCodeSync(code: int): void-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Parameters:**
@@ -731,12 +779,13 @@ Sets the result code (number type) of an ordered common event.
 setData(data: string, callback: AsyncCallback<void>): void
 ```
 
-Sets the result data (string type) of an ordered common event. This API uses an asynchronous callback to return the
-result.
+Sets the result data (string type) of an ordered common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CommonEventSubscriber-setData(data: string, callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-setData(data: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -745,7 +794,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | string | Yes | Result data of an ordered common event. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -765,6 +814,8 @@ Sets the result data (string type) of an ordered common event. This API uses a p
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CommonEventSubscriber-setData(data: string): Promise<void>--><!--Device-CommonEventSubscriber-setData(data: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Parameters:**
@@ -777,7 +828,7 @@ Sets the result data (string type) of an ordered common event. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -796,6 +847,8 @@ Sets the result data (string type) of an ordered common event.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CommonEventSubscriber-setDataSync(data: string): void--><!--Device-CommonEventSubscriber-setDataSync(data: string): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 

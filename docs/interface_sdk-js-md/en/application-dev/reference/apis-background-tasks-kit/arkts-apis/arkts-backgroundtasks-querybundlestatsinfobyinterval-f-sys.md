@@ -23,6 +23,18 @@ Queries usage information about each bundle within a specified period at a speci
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryBundleStatsInfoByInterval(
+    byInterval: IntervalType,
+    begin: long,
+    end: long,
+    callback: AsyncCallback<Array<BundleStatsInfo>>
+  ): void--><!--Device-usageStatistics-function queryBundleStatsInfoByInterval(
+    byInterval: IntervalType,
+    begin: long,
+    end: long,
+    callback: AsyncCallback<Array<BundleStatsInfo>>
+  ): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -31,10 +43,10 @@ Queries usage information about each bundle within a specified period at a speci
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byInterval | IntervalType | Yes | Indicates the interval at which the usage statistics are queried.The value can be {@link #BY_OPTIMIZED}, {@link #BY_DAILY},{@link #BY_WEEKLY}, {@link #BY_MONTHLY}, or {@link #BY_ANNUALLY}. |
+| byInterval | [IntervalType](arkts-backgroundtasks-intervaltype-e.md) | Yes | Indicates the interval at which the usage statistics are queried.The value can be {@link #BY_OPTIMIZED}, {@link #BY_DAILY},{@link #BY_WEEKLY}, {@link #BY_MONTHLY}, or {@link #BY_ANNUALLY}. |
 | begin | number | Yes | Indicates the start time of the query period, in milliseconds.<br> Unit:ms |
 | end | number | Yes | Indicates the end time of the query period, in milliseconds.<br> Unit:ms |
-| callback | AsyncCallback&lt;Array&lt;BundleStatsInfo&gt;&gt; | Yes | Callback used to return the result.If the query is successful, **err** is **undefined**, and data is the list of {@link BundleStatsInfo} objectscontaining the usage information about each bundle. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<BundleStatsInfo>> | Yes | Callback used to return the result.If the query is successful, **err** is **undefined**, and data is the list of {@link BundleStatsInfo} objects containing the usage information about each bundle. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -88,6 +100,16 @@ Queries usage information about each bundle within a specified period at a speci
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryBundleStatsInfoByInterval(
+    byInterval: IntervalType,
+    begin: long,
+    end: long
+  ): Promise<Array<BundleStatsInfo>>--><!--Device-usageStatistics-function queryBundleStatsInfoByInterval(
+    byInterval: IntervalType,
+    begin: long,
+    end: long
+  ): Promise<Array<BundleStatsInfo>>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -96,7 +118,7 @@ Queries usage information about each bundle within a specified period at a speci
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byInterval | IntervalType | Yes | Indicates the interval at which the usage statistics are queried.The value can be {@link #BY_OPTIMIZED}, {@link #BY_DAILY},{@link #BY_WEEKLY}, {@link #BY_MONTHLY}, or {@link #BY_ANNUALLY}. |
+| byInterval | [IntervalType](arkts-backgroundtasks-intervaltype-e.md) | Yes | Indicates the interval at which the usage statistics are queried.The value can be {@link #BY_OPTIMIZED}, {@link #BY_DAILY},{@link #BY_WEEKLY}, {@link #BY_MONTHLY}, or {@link #BY_ANNUALLY}. |
 | begin | number | Yes | Indicates the start time of the query period, in milliseconds.<br> Unit:ms |
 | end | number | Yes | Indicates the end time of the query period, in milliseconds.<br> Unit:ms |
 
@@ -104,7 +126,7 @@ Queries usage information about each bundle within a specified period at a speci
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleStatsInfo&gt;&gt; | Promise used to return the usage information about each bundle. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<BundleStatsInfo>> | Promise used to return the usage information about each bundle. |
 
 **Error codes:**
 

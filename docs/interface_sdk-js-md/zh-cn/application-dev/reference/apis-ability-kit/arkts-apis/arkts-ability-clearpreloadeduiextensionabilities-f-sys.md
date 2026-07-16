@@ -1,5 +1,11 @@
 # clearPreloadedUIExtensionAbilities（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
+```
+
 ## clearPreloadedUIExtensionAbilities
 
 ```TypeScript
@@ -14,6 +20,8 @@ function clearPreloadedUIExtensionAbilities(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-abilityManager-function clearPreloadedUIExtensionAbilities(): Promise<void>--><!--Device-abilityManager-function clearPreloadedUIExtensionAbilities(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ function clearPreloadedUIExtensionAbilities(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

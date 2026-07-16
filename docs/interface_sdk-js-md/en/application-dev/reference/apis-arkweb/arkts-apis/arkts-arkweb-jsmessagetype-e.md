@@ -4,6 +4,8 @@ Enum type supplied to {@link runJavaScriptExt} for indicating the result of Java
 
 **Since:** 10
 
+<!--Device-webview-enum JsMessageType--><!--Device-webview-enum JsMessageType-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## NOT_SUPPORT
@@ -17,6 +19,8 @@ Unsupported data type.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-JsMessageType-NOT_SUPPORT = 0--><!--Device-JsMessageType-NOT_SUPPORT = 0-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,6 +36,8 @@ The string data type.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-JsMessageType-STRING = 1--><!--Device-JsMessageType-STRING = 1-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## NUMBER
@@ -45,6 +51,8 @@ The number data type.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-JsMessageType-NUMBER = 2--><!--Device-JsMessageType-NUMBER = 2-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -60,6 +68,8 @@ The boolean data type.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-JsMessageType-BOOLEAN = 3--><!--Device-JsMessageType-BOOLEAN = 3-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## ARRAY_BUFFER
@@ -74,6 +84,8 @@ The arraybuffer data type.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-JsMessageType-ARRAY_BUFFER = 4--><!--Device-JsMessageType-ARRAY_BUFFER = 4-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## ARRAY
@@ -87,6 +99,8 @@ The array data type.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-JsMessageType-ARRAY = 5--><!--Device-JsMessageType-ARRAY = 5-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

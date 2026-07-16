@@ -18,6 +18,8 @@ Sets live wallpaper of the specified type based on the uri path of the MP4 file.
 
 **Required permissions:** ohos.permission.SET_WALLPAPER
 
+<!--Device-wallpaper-function setVideo(source: string, wallpaperType: WallpaperType, callback: AsyncCallback<void>): void--><!--Device-wallpaper-function setVideo(source: string, wallpaperType: WallpaperType, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **System API:** This is a system API.
@@ -27,8 +29,8 @@ Sets live wallpaper of the specified type based on the uri path of the MP4 file.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | source | string | Yes | indicates the uri path of the MP4 file. |
-| wallpaperType | WallpaperType | Yes | indicates the wallpaper type. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of setVideo. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of setVideo. |
 
 **Error codes:**
 
@@ -72,6 +74,8 @@ Sets live wallpaper of the specified type based on the uri path of the MP4 file.
 
 **Required permissions:** ohos.permission.SET_WALLPAPER
 
+<!--Device-wallpaper-function setVideo(source: string, wallpaperType: WallpaperType): Promise<void>--><!--Device-wallpaper-function setVideo(source: string, wallpaperType: WallpaperType): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **System API:** This is a system API.
@@ -81,13 +85,13 @@ Sets live wallpaper of the specified type based on the uri path of the MP4 file.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | source | string | Yes | indicates the uri path of the MP4 file. |
-| wallpaperType | WallpaperType | Yes | indicates the wallpaper type. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 

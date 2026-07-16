@@ -8,7 +8,15 @@ TimeOptions定义时间选择器的选项。
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-export declare class TimeOptions extends CommonOptions--><!--Device-unnamed-export declare class TimeOptions extends CommonOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerComponentOptions, DatePickerComponentResult } from '@kit.ArkUI';
+```
 
 ## format
 
@@ -28,7 +36,9 @@ format?: TimeFormat
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TimeOptions-format?: TimeFormat--><!--Device-TimeOptions-format?: TimeFormat-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,7 +50,7 @@ useMilitaryTime?: boolean
 
 指定是否使用24小时制显示时间。
 
-- true：时间以24小时制展示。
+- true：时间以24小时制展示。  
 - false：时间以12小时制展示。
 
 默认值：false
@@ -53,7 +63,9 @@ useMilitaryTime?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TimeOptions-useMilitaryTime?: boolean--><!--Device-TimeOptions-useMilitaryTime?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

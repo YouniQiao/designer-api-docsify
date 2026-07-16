@@ -4,6 +4,8 @@ LinearGradient class
 
 **Since:** 10
 
+<!--Device-unnamed-declare class LinearGradient--><!--Device-unnamed-declare class LinearGradient-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -20,11 +22,13 @@ Creates a linear gradient color object.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-LinearGradient-constructor(colorStops: ColorStop[])--><!--Device-LinearGradient-constructor(colorStops: ColorStop[])-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorStops | ColorStop[] | Yes | Gradient colors and color stops. |
+| colorStops | [ColorStop](arkts-arkui-colorstop-i.md)[] | Yes | Gradient colors and color stops. |
 

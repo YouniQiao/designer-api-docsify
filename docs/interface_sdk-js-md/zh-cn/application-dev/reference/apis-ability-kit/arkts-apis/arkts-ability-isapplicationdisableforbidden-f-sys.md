@@ -1,5 +1,11 @@
 # isApplicationDisableForbidden（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## isApplicationDisableForbidden
 
 ```TypeScript
@@ -13,6 +19,8 @@ function isApplicationDisableForbidden(bundleName: string, userId: number, appIn
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or (ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-bundleManager-function isApplicationDisableForbidden(bundleName: string, userId: int, appIndex: int): boolean--><!--Device-bundleManager-function isApplicationDisableForbidden(bundleName: string, userId: int, appIndex: int): boolean-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

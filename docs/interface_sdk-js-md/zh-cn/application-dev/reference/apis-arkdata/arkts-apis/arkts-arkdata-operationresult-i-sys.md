@@ -4,9 +4,17 @@
 
 **起始版本：** 10
 
+<!--Device-dataShare-interface OperationResult--><!--Device-dataShare-interface OperationResult-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { dataShare } from '@kit.ArkData';
+```
 
 ## key
 
@@ -21,6 +29,8 @@ key: string
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OperationResult-key: string--><!--Device-OperationResult-key: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -39,6 +49,8 @@ result: number
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OperationResult-result: int--><!--Device-OperationResult-result: int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 

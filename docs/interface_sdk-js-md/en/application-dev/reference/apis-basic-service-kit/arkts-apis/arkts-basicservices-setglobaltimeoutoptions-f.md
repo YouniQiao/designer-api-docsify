@@ -12,12 +12,13 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 function setGlobalTimeoutOptions(options?: TimeoutOptions): void
 ```
 
-Sets timeout configuration for all tasks.
-Used when task-specific timeout configuration is not configured.
+Sets timeout configuration for all tasks.Used when task-specific timeout configuration is not configured.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-cacheDownload-function setGlobalTimeoutOptions(options?: TimeoutOptions): void--><!--Device-cacheDownload-function setGlobalTimeoutOptions(options?: TimeoutOptions): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -25,7 +26,7 @@ Used when task-specific timeout configuration is not configured.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | TimeoutOptions | No | Task timeout configuration.<br>Default value: Refer to the default value of TimeoutOptions. |
+| options | [TimeoutOptions](arkts-basicservices-timeoutoptions-i.md) | No | Task timeout configuration.<br>Default value: Refer to the default value of TimeoutOptions. |
 
 **Example**
 

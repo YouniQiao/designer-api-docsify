@@ -1,5 +1,11 @@
 # closeScanner
 
+## 导入模块
+
+```TypeScript
+import { scan } from '@kit.BasicServicesKit';
+```
+
 ## closeScanner
 
 ```TypeScript
@@ -11,6 +17,8 @@ function closeScanner(scannerId: string): Promise<void>
 **起始版本：** 20
 
 **需要权限：** ohos.permission.PRINT
+
+<!--Device-scan-function closeScanner(scannerId: string): Promise<void>--><!--Device-scan-function closeScanner(scannerId: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -24,7 +32,7 @@ function closeScanner(scannerId: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

@@ -12,12 +12,13 @@ import { logLibrary } from '@kit.PerformanceAnalysisKit';
 function list(logType: string): LogEntry[]
 ```
 
-Obtains the list of log files of the specified type in synchronous mode. This API accepts objects of the string
-type as input parameters and returns a list log files of the specified type.
+Obtains the list of log files of the specified type in synchronous mode. This API accepts objects of the string type as input parameters and returns a list log files of the specified type.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_HIVIEW_SYSTEM
+
+<!--Device-logLibrary-function list(logType: string): LogEntry[]--><!--Device-logLibrary-function list(logType: string): LogEntry[]-End-->
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.LogLibrary
 
@@ -33,7 +34,7 @@ type as input parameters and returns a list log files of the specified type.
 
 | Type | Description |
 | --- | --- |
-| LogEntry[] | Array of log file objects. |
+| [LogEntry](arkts-performanceanalysis-logentry-i-sys.md)[] | Array of log file objects. |
 
 **Error codes:**
 

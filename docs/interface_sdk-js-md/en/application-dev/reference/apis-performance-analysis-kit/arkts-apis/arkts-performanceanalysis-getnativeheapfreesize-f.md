@@ -12,10 +12,11 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 function getNativeHeapFreeSize() : bigint
 ```
 
-Obtains the total number of bytes occupied by the total free space (**fordblks**, which is obtained from
-**mallinfo**) held by a process, which is measured by the memory allocator.
+Obtains the total number of bytes occupied by the total free space (**fordblks**, which is obtained from **mallinfo**) held by a process, which is measured by the memory allocator.
 
 **Since:** 8
+
+<!--Device-hidebug-function getNativeHeapFreeSize() : bigint--><!--Device-hidebug-function getNativeHeapFreeSize() : bigint-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 

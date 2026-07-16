@@ -12,5 +12,7 @@ Defines the action callback of the SubHeaderV2OperationItem.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-unnamed-export type SubHeaderV2OperationItemAction = () => void--><!--Device-unnamed-export type SubHeaderV2OperationItemAction = () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

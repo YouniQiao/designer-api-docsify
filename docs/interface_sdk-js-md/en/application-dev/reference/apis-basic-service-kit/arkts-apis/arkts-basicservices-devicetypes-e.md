@@ -4,6 +4,8 @@ Enumerates device types, which can be used to verify the return value of **devic
 
 **Since:** 20
 
+<!--Device-deviceInfo-enum DeviceTypes--><!--Device-deviceInfo-enum DeviceTypes-End-->
+
 **System capability:** SystemCapability.Startup.SystemInfo
 
 ## TYPE_DEFAULT
@@ -17,6 +19,8 @@ Default device
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-DeviceTypes-TYPE_DEFAULT = 'default'--><!--Device-DeviceTypes-TYPE_DEFAULT = 'default'-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -32,6 +36,8 @@ Smartphone
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-DeviceTypes-TYPE_PHONE = 'phone'--><!--Device-DeviceTypes-TYPE_PHONE = 'phone'-End-->
+
 **System capability:** SystemCapability.Startup.SystemInfo
 
 ## TYPE_TABLET
@@ -45,6 +51,8 @@ Tablet
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-DeviceTypes-TYPE_TABLET = 'tablet'--><!--Device-DeviceTypes-TYPE_TABLET = 'tablet'-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -60,6 +68,8 @@ PC/2-in-1 device
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-DeviceTypes-TYPE_2IN1 = '2in1'--><!--Device-DeviceTypes-TYPE_2IN1 = '2in1'-End-->
+
 **System capability:** SystemCapability.Startup.SystemInfo
 
 ## TYPE_TV
@@ -73,6 +83,8 @@ Smart TV
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-DeviceTypes-TYPE_TV = 'tv'--><!--Device-DeviceTypes-TYPE_TV = 'tv'-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -88,6 +100,8 @@ Wearable
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-DeviceTypes-TYPE_WEARABLE = 'wearable'--><!--Device-DeviceTypes-TYPE_WEARABLE = 'wearable'-End-->
+
 **System capability:** SystemCapability.Startup.SystemInfo
 
 ## TYPE_CAR
@@ -101,6 +115,8 @@ Head unit
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-DeviceTypes-TYPE_CAR = 'car'--><!--Device-DeviceTypes-TYPE_CAR = 'car'-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo
 

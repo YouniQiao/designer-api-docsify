@@ -12,12 +12,13 @@ import { cloudSyncManager } from '@kit.CoreFileKit';
 function getBundlesLocalFilePresentStatus(bundleNames: Array<string>): Promise<Array<LocalFilePresentStatus>>
 ```
 
-Obtains the existence status of local files for multiple applications and checks whether there are files that
-have not been uploaded to the cloud in the cloud storage space. This API uses a promise to return the result.
+Obtains the existence status of local files for multiple applications and checks whether there are files that have not been uploaded to the cloud in the cloud storage space. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
+
+<!--Device-cloudSyncManager-function getBundlesLocalFilePresentStatus(bundleNames: Array<string>): Promise<Array<LocalFilePresentStatus>>--><!--Device-cloudSyncManager-function getBundlesLocalFilePresentStatus(bundleNames: Array<string>): Promise<Array<LocalFilePresentStatus>>-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -27,13 +28,13 @@ have not been uploaded to the cloud in the cloud storage space. This API uses a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleNames | Array&lt;string&gt; | Yes | Array of application bundle names to be checked. Each element is thebundle name of an application. |
+| bundleNames | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Array of application bundle names to be checked. Each element is the bundle name of an application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;LocalFilePresentStatus&gt;&gt; | Promise used to return an array of objects. Each object inthe array contains the bundle name of the application to be checked and the local file existence status. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<LocalFilePresentStatus>> | Promise used to return an array of objects. Each object in the array contains the bundle name of the application to be checked and the local file existence status. |
 
 **Error codes:**
 

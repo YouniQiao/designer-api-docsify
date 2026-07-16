@@ -16,6 +16,8 @@ Judge whether the Ims switch is enabled.
 
 **Since:** 8
 
+<!--Device-call-function isImsSwitchEnabled(slotId: int, callback: AsyncCallback<boolean>): void--><!--Device-call-function isImsSwitchEnabled(slotId: int, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -25,7 +27,7 @@ Judge whether the Ims switch is enabled.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | The callback of isImsSwitchEnabled.Returns {@code true} If the ims switch is on; returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | The callback of isImsSwitchEnabled.Returns {@code true} If the ims switch is on; returns {@code false} otherwise. |
 
 **Error codes:**
 
@@ -64,6 +66,8 @@ Judge whether the Ims switch is enabled.
 
 **Since:** 8
 
+<!--Device-call-function isImsSwitchEnabled(slotId: int): Promise<boolean>--><!--Device-call-function isImsSwitchEnabled(slotId: int): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -78,7 +82,7 @@ Judge whether the Ims switch is enabled.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns {@code true} If the ims switch is on; returns {@code false} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns {@code true} If the ims switch is on; returns {@code false} otherwise. |
 
 **Error codes:**
 

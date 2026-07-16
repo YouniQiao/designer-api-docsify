@@ -2,6 +2,12 @@
 
 插件组件管理器接口。
 
+## 导入模块
+
+```TypeScript
+import { PluginComponentTemplate } from '@kit.ArkUI';
+```
+
 ## 汇总
 
 ### 命名空间

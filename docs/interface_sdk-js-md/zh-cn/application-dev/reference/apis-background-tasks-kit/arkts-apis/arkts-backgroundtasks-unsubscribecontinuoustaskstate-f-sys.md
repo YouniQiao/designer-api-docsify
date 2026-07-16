@@ -1,5 +1,11 @@
 # unsubscribeContinuousTaskState（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+```
+
 ## unsubscribeContinuousTaskState
 
 ```TypeScript
@@ -14,6 +20,8 @@ function unsubscribeContinuousTaskState(subscriber: BackgroundTaskSubscriber): v
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-backgroundTaskManager-function unsubscribeContinuousTaskState(subscriber: BackgroundTaskSubscriber): void--><!--Device-backgroundTaskManager-function unsubscribeContinuousTaskState(subscriber: BackgroundTaskSubscriber): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ function unsubscribeContinuousTaskState(subscriber: BackgroundTaskSubscriber): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriber | BackgroundTaskSubscriber | 是 | 后台任务监听对象，包含长时任务开始，长时任务更新，长时任务结束。 |
+| subscriber | [BackgroundTaskSubscriber](arkts-backgroundtasks-backgroundtasksubscriber-i-sys.md) | 是 | 后台任务监听对象，包含长时任务开始，长时任务更新，长时任务结束。 |
 
 **错误码：**
 

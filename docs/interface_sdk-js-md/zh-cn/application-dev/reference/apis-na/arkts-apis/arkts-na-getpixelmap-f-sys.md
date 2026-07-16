@@ -8,8 +8,8 @@ function getPixelMap(wallpaperType: WallpaperType, callback: AsyncCallback<image
 
 获取壁纸图片的像素图。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从 API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
@@ -17,6 +17,8 @@ function getPixelMap(wallpaperType: WallpaperType, callback: AsyncCallback<image
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.GET_WALLPAPER
+
+<!--Device-wallpaper-function getPixelMap(wallpaperType: WallpaperType, callback: AsyncCallback<image.PixelMap>): void--><!--Device-wallpaper-function getPixelMap(wallpaperType: WallpaperType, callback: AsyncCallback<image.PixelMap>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
@@ -26,8 +28,8 @@ function getPixelMap(wallpaperType: WallpaperType, callback: AsyncCallback<image
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wallpaperType | WallpaperType | 是 | 壁纸类型。 |
-| callback | AsyncCallback&lt;image.PixelMap&gt; | 是 | 回调函数，调用成功则返回壁纸图片的像素图对象，调用失败则返回error信息。 |
+| wallpaperType | [WallpaperType](arkts-na-wallpapertype-e.md) | 是 | 壁纸类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<image.PixelMap> | 是 | 回调函数，调用成功则返回壁纸图片的像素图对象，调用失败则返回error信息。 |
 
 **示例：**
 
@@ -54,8 +56,8 @@ function getPixelMap(wallpaperType: WallpaperType): Promise<image.PixelMap>
 
 获取壁纸图片的像素图。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从 API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
@@ -63,6 +65,8 @@ function getPixelMap(wallpaperType: WallpaperType): Promise<image.PixelMap>
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.GET_WALLPAPER
+
+<!--Device-wallpaper-function getPixelMap(wallpaperType: WallpaperType): Promise<image.PixelMap>--><!--Device-wallpaper-function getPixelMap(wallpaperType: WallpaperType): Promise<image.PixelMap>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
@@ -72,13 +76,13 @@ function getPixelMap(wallpaperType: WallpaperType): Promise<image.PixelMap>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wallpaperType | WallpaperType | 是 | 壁纸类型。 |
+| wallpaperType | [WallpaperType](arkts-na-wallpapertype-e.md) | 是 | 壁纸类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | 调用成功则返回壁纸图片的像素图对象，调用失败则返回error信息。 |
+| Promise<image.PixelMap> | 调用成功则返回壁纸图片的像素图对象，调用失败则返回error信息。 |
 
 **示例：**
 

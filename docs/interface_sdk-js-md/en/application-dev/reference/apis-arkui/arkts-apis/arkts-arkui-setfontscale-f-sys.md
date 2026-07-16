@@ -20,6 +20,8 @@ Sets the system font scale.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-uiAppearance-function setFontScale(fontScale: number): Promise<void>--><!--Device-uiAppearance-function setFontScale(fontScale: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.UiAppearance
 
 **System API:** This is a system API.
@@ -34,7 +36,7 @@ Sets the system font scale.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function |
 
 **Error codes:**
 

@@ -12,6 +12,8 @@ Sets the translation amount of the component.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-unnamed-export type Translation = Vector2--><!--Device-unnamed-export type Translation = Vector2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** Vector2

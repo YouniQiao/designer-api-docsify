@@ -1,5 +1,11 @@
 # getAbilityIcon（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getAbilityIcon
 
 ```TypeScript
@@ -10,10 +16,10 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 
 获取调用方信息时不需要权限。
 
-> **说明：**
->
-> 从API version 9开始支持，从API version 10开始废弃，建议使用
-> [getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-i.md#getmediacontent-5)
+> **说明：**  
+>  
+> 从API version 9开始支持，从API version 10开始废弃，建议使用  
+> [getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-i.md#getmediacontent-5)  
 > 替代。
 
 **起始版本：** 9
@@ -23,6 +29,8 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 **替代接口：** getMediaContent
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getAbilityIcon(bundleName: string, moduleName: string, abilityName: string, callback: AsyncCallback<image.PixelMap>): void--><!--Device-bundleManager-function getAbilityIcon(bundleName: string, moduleName: string, abilityName: string, callback: AsyncCallback<image.PixelMap>): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -35,7 +43,7 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 | bundleName | string | 是 | 要查询的应用Bundle名称。 |
 | moduleName | string | 是 | 要查询的应用Module名称。 |
 | abilityName | string | 是 | 要查询的Ability组件名。 |
-| callback | AsyncCallback&lt;image.PixelMap&gt; | 是 | 回调函数，返回指定[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)，作为程序启动时的入参。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<image.PixelMap> | 是 | 回调函数，返回指定[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)，作为程序启动时的入参。 |
 
 **错误码：**
 
@@ -61,10 +69,10 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 
 获取调用方信息时不需要权限。
 
-> **说明：**
->
-> 从API version 9开始支持，从API version 10开始废弃，建议使用
-> [getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-i.md#getmediacontent-5)
+> **说明：**  
+>  
+> 从API version 9开始支持，从API version 10开始废弃，建议使用  
+> [getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-i.md#getmediacontent-5)  
 > 替代。
 
 **起始版本：** 9
@@ -74,6 +82,8 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 **替代接口：** getMediaContent
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getAbilityIcon(bundleName: string, moduleName: string, abilityName: string): Promise<image.PixelMap>--><!--Device-bundleManager-function getAbilityIcon(bundleName: string, moduleName: string, abilityName: string): Promise<image.PixelMap>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -91,7 +101,7 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return PixelMap. |
+| Promise<image.PixelMap> | Promise used to return PixelMap. |
 
 **错误码：**
 

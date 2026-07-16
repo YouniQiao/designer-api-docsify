@@ -1,5 +1,11 @@
 # setDisposedRules（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appControl } from '@kit.AbilityKit';
+```
+
 ## setDisposedRules
 
 ```TypeScript
@@ -12,6 +18,8 @@ function setDisposedRules(disposedRuleConfigurations: Array<DisposedRuleConfigur
 
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
+<!--Device-appControl-function setDisposedRules(disposedRuleConfigurations: Array<DisposedRuleConfiguration>): void--><!--Device-appControl-function setDisposedRules(disposedRuleConfigurations: Array<DisposedRuleConfiguration>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function setDisposedRules(disposedRuleConfigurations: Array<DisposedRuleConfigur
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| disposedRuleConfigurations | Array&lt;DisposedRuleConfiguration&gt; | 是 | 表示批量设置拦截规则的配置，包括待拦截应用的appId、分身应用索引及拦截规则。每次设置拦截规则的数组的最大数量为1000。<br/>**说明：**<br/>1.如果数组中存在appId和appIndex相同的DisposedRuleConfiguration时，后面的DisposedRuleConfiguration会覆盖前面的。<br/>2.如果应用已设置过拦截规则，重新为该应用设置拦截规则，会覆盖之前的。appId和appIndex一致则表示同一应用。 |
+| disposedRuleConfigurations | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<DisposedRuleConfiguration> | 是 | 表示批量设置拦截规则的配置，包括待拦截应用的appId、分身应用索引及拦截规则。每次设置拦截规则的数组的最大数量为1000。<br/>**说明：**<br/>1.如果数组中存在appId和appIndex相同的DisposedRuleConfiguration时，后面的DisposedRuleConfiguration会覆盖前面的。<br/>2.如果应用已设置过拦截规则，重新为该应用设置拦截规则，会覆盖之前的。appId和appIndex一致则表示同一应用。 |
 
 **错误码：**
 

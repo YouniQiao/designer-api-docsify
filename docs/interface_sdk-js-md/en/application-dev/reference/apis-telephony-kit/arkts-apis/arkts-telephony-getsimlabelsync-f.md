@@ -16,6 +16,8 @@ Obtains the SIM card label synchronously.
 
 **Since:** 20
 
+<!--Device-sim-function getSimLabelSync(slotId: int): SimLabel--><!--Device-sim-function getSimLabelSync(slotId: int): SimLabel-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -28,7 +30,7 @@ Obtains the SIM card label synchronously.
 
 | Type | Description |
 | --- | --- |
-| SimLabel | SIM card label. |
+| [SimLabel](arkts-telephony-simlabel-i.md) | SIM card label. |
 
 **Example**
 

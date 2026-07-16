@@ -4,6 +4,8 @@ Represents the access records of a permission.
 
 **Since:** 9
 
+<!--Device-privacyManager-interface PermissionUsedRecord--><!--Device-privacyManager-interface PermissionUsedRecord-End-->
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -20,12 +22,13 @@ import { privacyManager } from '@kit.AbilityKit';
 accessCount: number
 ```
 
-Total number of accesses for this permission, indicating the cumulative number of successful uses of this
-permission within the query time window.
+Total number of accesses for this permission, indicating the cumulative number of successful uses of this permission within the query time window.
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-PermissionUsedRecord-accessCount: int--><!--Device-PermissionUsedRecord-accessCount: int-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -45,6 +48,8 @@ Default value: Query the last 10 successful access records.
 
 **Since:** 9
 
+<!--Device-PermissionUsedRecord-accessRecords: Array<UsedRecordDetail>--><!--Device-PermissionUsedRecord-accessRecords: Array<UsedRecordDetail>-End-->
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -63,6 +68,8 @@ Extension identity, with a maximum length of 48 characters.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PermissionUsedRecord-enhancedIdentity?: string--><!--Device-PermissionUsedRecord-enhancedIdentity?: string-End-->
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -73,12 +80,13 @@ Extension identity, with a maximum length of 48 characters.
 lastAccessDuration: number
 ```
 
-Last access duration.
-Unit: milliseconds.
+Last access duration.Unit: milliseconds.
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-PermissionUsedRecord-lastAccessDuration: long--><!--Device-PermissionUsedRecord-lastAccessDuration: long-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -90,12 +98,13 @@ Unit: milliseconds.
 lastAccessTime: number
 ```
 
-Last time when the permission was accessed.
-Unit: milliseconds.
+Last time when the permission was accessed.Unit: milliseconds.
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-PermissionUsedRecord-lastAccessTime: long--><!--Device-PermissionUsedRecord-lastAccessTime: long-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -107,12 +116,13 @@ Unit: milliseconds.
 lastRejectTime: number
 ```
 
-Last time when the access to the permission was rejected.
-Unit: milliseconds.
+Last time when the access to the permission was rejected.Unit: milliseconds.
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-PermissionUsedRecord-lastRejectTime: long--><!--Device-PermissionUsedRecord-lastRejectTime: long-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -130,6 +140,8 @@ Permission name, used to identify the sensitive permission corresponding to the 
 
 **Since:** 9
 
+<!--Device-PermissionUsedRecord-permissionName: Permissions--><!--Device-PermissionUsedRecord-permissionName: Permissions-End-->
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -140,12 +152,13 @@ Permission name, used to identify the sensitive permission corresponding to the 
 rejectCount: number
 ```
 
-Total number of rejections for this permission, indicating the cumulative number of failed or denied permission
-accesses within the query time window.
+Total number of rejections for this permission, indicating the cumulative number of failed or denied permission accesses within the query time window.
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-PermissionUsedRecord-rejectCount: int--><!--Device-PermissionUsedRecord-rejectCount: int-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -164,6 +177,8 @@ Default value: Query the last 10 failed or rejected records.
 **Type:** Array<UsedRecordDetail>
 
 **Since:** 9
+
+<!--Device-PermissionUsedRecord-rejectRecords: Array<UsedRecordDetail>--><!--Device-PermissionUsedRecord-rejectRecords: Array<UsedRecordDetail>-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 

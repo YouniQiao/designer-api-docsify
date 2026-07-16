@@ -6,15 +6,15 @@
 function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a specified template is supported before using
-[NotificationTemplate](@link ./notification/notificationTemplate:NotificationTemplate) to publish a notification.
-This API uses an asynchronous callback to return the result.
+Checks whether a specified template is supported before using [NotificationTemplate](@link ./notification/notificationTemplate:NotificationTemplate) to publish a notification.This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** isSupportTemplate
+
+<!--Device-notification-function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void--><!--Device-notification-function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -23,7 +23,7 @@ This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | templateName | string | Yes | Template name. Currently, only **downloadTemplate** is supported. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. |
 
 
 ## isSupportTemplate
@@ -32,15 +32,15 @@ This API uses an asynchronous callback to return the result.
 function isSupportTemplate(templateName: string): Promise<boolean>
 ```
 
-Checks whether a specified template is supported before using
-[NotificationTemplate](@link ./notification/notificationTemplate:NotificationTemplate) to publish a notification.
-This API uses a promise to return the result.
+Checks whether a specified template is supported before using [NotificationTemplate](@link ./notification/notificationTemplate:NotificationTemplate) to publish a notification.This API uses a promise to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** isSupportTemplate
+
+<!--Device-notification-function isSupportTemplate(templateName: string): Promise<boolean>--><!--Device-notification-function isSupportTemplate(templateName: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -54,5 +54,5 @@ This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. |
 

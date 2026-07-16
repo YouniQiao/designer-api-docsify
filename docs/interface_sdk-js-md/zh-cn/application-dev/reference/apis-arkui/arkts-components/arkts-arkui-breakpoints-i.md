@@ -6,6 +6,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare interface BreakPoints--><!--Device-unnamed-declare interface BreakPoints-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## reference
@@ -24,9 +26,11 @@ reference?: BreakpointsReference
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BreakPoints-reference?: BreakpointsReference--><!--Device-BreakPoints-reference?: BreakpointsReference-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,9 +52,11 @@ value?: Array<string>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BreakPoints-value?: Array<string>--><!--Device-BreakPoints-value?: Array<string>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

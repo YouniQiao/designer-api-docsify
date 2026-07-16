@@ -18,6 +18,8 @@ Plugin component request method used to send a request for the information of th
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-pluginComponentManager-function request(param: RequestParameterForStage, callback: AsyncCallback<RequestCallbackParameters>): void--><!--Device-pluginComponentManager-function request(param: RequestParameterForStage, callback: AsyncCallback<RequestCallbackParameters>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -26,6 +28,6 @@ Plugin component request method used to send a request for the information of th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | RequestParameterForStage | Yes | Plugin component request parameters for stage. |
-| callback | AsyncCallback&lt;RequestCallbackParameters&gt; | Yes | Plugin component request event callback. |
+| param | [RequestParameterForStage](arkts-arkui-requestparameterforstage-i-sys.md) | Yes | Plugin component request parameters for stage. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<RequestCallbackParameters> | Yes | Plugin component request event callback. |
 

@@ -4,6 +4,8 @@ Declare type OperationOption
 
 **Since:** 18
 
+<!--Device-unnamed-export declare class OperationOption--><!--Device-unnamed-export declare class OperationOption-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ The accessibilityDescription of this text or icon.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-OperationOption-accessibilityDescription?: ResourceStr--><!--Device-OperationOption-accessibilityDescription?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityLevel
@@ -48,6 +52,8 @@ The accessibilityLevel of this text or icon.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-OperationOption-accessibilityLevel?: string--><!--Device-OperationOption-accessibilityLevel?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
@@ -66,6 +72,8 @@ Accessible label name for the icon on the right side of the subheader.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-OperationOption-accessibilityText?: ResourceStr--><!--Device-OperationOption-accessibilityText?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## action
@@ -83,6 +91,8 @@ callback function when operate the text or icon.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-OperationOption-action?: () => void--><!--Device-OperationOption-action?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,6 +114,8 @@ Sets the default focus state of the text or icon.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-OperationOption-defaultFocus?: boolean--><!--Device-OperationOption-defaultFocus?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## id
@@ -122,6 +134,8 @@ Set the id for the operation.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-OperationOption-id?: string--><!--Device-OperationOption-id?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -139,6 +153,8 @@ The content of text or the address of icon.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-OperationOption-value: ResourceStr--><!--Device-OperationOption-value: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

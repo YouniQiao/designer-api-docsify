@@ -1,5 +1,11 @@
 # disconnect
 
+## 导入模块
+
+```TypeScript
+import { dataTransfer } from '@kit.ConnectivityKit';
+```
+
 ## disconnect
 
 ```TypeScript
@@ -14,19 +20,21 @@ function disconnect(params: ConnectionParams): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-dataTransfer-function disconnect(params: ConnectionParams): Promise<void>--><!--Device-dataTransfer-function disconnect(params: ConnectionParams): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | ConnectionParams | 是 | 连接参数 |
+| params | [ConnectionParams](arkts-connectivity-connectionparams-i.md) | 是 | 连接参数 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise<void> | 返回promise对象。 |
 
 **错误码：**
 

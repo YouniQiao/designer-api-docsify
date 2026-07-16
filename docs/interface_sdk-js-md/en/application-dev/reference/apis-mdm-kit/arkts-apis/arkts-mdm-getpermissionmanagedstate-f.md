@@ -16,8 +16,7 @@ function getPermissionManagedState(
   ): PermissionManagedState
 ```
 
-Obtains the management policy for the [user_grant permission](../../apis-ability-kit/arkts-apis/arkts-ability-permissions-t.md) of a specified
-application.
+Obtains the management policy for the [user_grant permission](../../apis-ability-kit/arkts-apis/arkts-ability-permissions-t.md) of a specified application.
 
 **Since:** 20
 
@@ -25,21 +24,31 @@ application.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-securityManager-function getPermissionManagedState(
+    admin: Want,
+    applicationInstance: ApplicationInstance,
+    permission: string
+  ): PermissionManagedState--><!--Device-securityManager-function getPermissionManagedState(
+    admin: Want,
+    applicationInstance: ApplicationInstance,
+    permission: string
+  ): PermissionManagedState-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| applicationInstance | ApplicationInstance | Yes | Application instance. |
-| permission | string | Yes | Name of the permission required for obtaining the management policy. Only the**user_grant** permission is supported. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| applicationInstance | [ApplicationInstance](arkts-mdm-applicationinstance-i.md) | Yes | Application instance. |
+| permission | string | Yes | Name of the permission required for obtaining the management policy. Only the **user_grant** permission is supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PermissionManagedState | Management policy for application permissions. |
+| [PermissionManagedState](arkts-mdm-permissionmanagedstate-e.md) | Management policy for application permissions. |
 
 **Error codes:**
 

@@ -6,6 +6,8 @@ Defines accessibility config of suffix symbol.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export interface ChipV2SuffixSymbolIconConfig extends ChipV2SymbolIconConfig--><!--Device-unnamed-export interface ChipV2SuffixSymbolIconConfig extends ChipV2SymbolIconConfig-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Called when suffix symbol is clicked.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2SuffixSymbolIconConfig-action?: VoidCallback--><!--Device-ChipV2SuffixSymbolIconConfig-action?: VoidCallback-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## activatedAccessibility
@@ -48,6 +52,8 @@ Set activated accessibility config for suffix symbol.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2SuffixSymbolIconConfig-activatedAccessibility?: ChipV2AccessibilityConfig--><!--Device-ChipV2SuffixSymbolIconConfig-activatedAccessibility?: ChipV2AccessibilityConfig-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## normalAccessibility
@@ -65,6 +71,8 @@ Set normal accessibility config for suffix symbol.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipV2SuffixSymbolIconConfig-normalAccessibility?: ChipV2AccessibilityConfig--><!--Device-ChipV2SuffixSymbolIconConfig-normalAccessibility?: ChipV2AccessibilityConfig-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -16,6 +16,8 @@ Stop device discovery.
 
 **Since:** 10
 
+<!--Device-avSession-function stopCastDeviceDiscovery(callback: AsyncCallback<void>): void--><!--Device-avSession-function stopCastDeviceDiscovery(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Stop device discovery.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | a callback function |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | a callback function |
 
 **Error codes:**
 
@@ -53,6 +55,8 @@ Stop device discovery.
 
 **Since:** 10
 
+<!--Device-avSession-function stopCastDeviceDiscovery(): Promise<void>--><!--Device-avSession-function stopCastDeviceDiscovery(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -61,7 +65,7 @@ Stop device discovery.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise for the result |
 
 **Error codes:**
 

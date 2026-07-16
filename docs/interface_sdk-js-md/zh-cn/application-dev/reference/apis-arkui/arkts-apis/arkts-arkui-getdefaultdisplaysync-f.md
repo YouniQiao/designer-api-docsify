@@ -1,5 +1,11 @@
 # getDefaultDisplaySync
 
+## 导入模块
+
+```TypeScript
+import { display } from '@kit.ArkUI';
+```
+
 ## getDefaultDisplaySync
 
 ```TypeScript
@@ -10,7 +16,9 @@ function getDefaultDisplaySync(): Display
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-display-function getDefaultDisplaySync(): Display--><!--Device-display-function getDefaultDisplaySync(): Display-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -18,7 +26,7 @@ function getDefaultDisplaySync(): Display
 
 | 类型 | 说明 |
 | --- | --- |
-| Display | 返回默认的Display对象。 |
+| [Display](arkts-arkui-display-i.md) | 返回默认的Display对象。 |
 
 **错误码：**
 

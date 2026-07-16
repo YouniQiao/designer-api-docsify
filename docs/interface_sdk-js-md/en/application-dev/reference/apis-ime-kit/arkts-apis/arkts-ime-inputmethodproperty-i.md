@@ -4,6 +4,8 @@ input method property
 
 **Since:** 8
 
+<!--Device-inputMethod-interface InputMethodProperty--><!--Device-inputMethod-interface InputMethodProperty-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Modules to Import
@@ -24,6 +26,8 @@ The enabledState of input method
 
 **Since:** 20
 
+<!--Device-InputMethodProperty-readonly enabledState?: EnabledState--><!--Device-InputMethodProperty-readonly enabledState?: EnabledState-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## extra
@@ -37,6 +41,8 @@ The extra info of input method
 **Type:** object
 
 **Since:** 9
+
+<!--Device-InputMethodProperty-extra?: object--><!--Device-InputMethodProperty-extra?: object-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -52,6 +58,8 @@ The icon of input method
 
 **Since:** 9
 
+<!--Device-InputMethodProperty-readonly icon?: string--><!--Device-InputMethodProperty-readonly icon?: string-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## iconId
@@ -65,6 +73,8 @@ The icon id of input method
 **Type:** number
 
 **Since:** 9
+
+<!--Device-InputMethodProperty-readonly iconId?: long--><!--Device-InputMethodProperty-readonly iconId?: long-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -80,6 +90,8 @@ The id of input method
 
 **Since:** 9
 
+<!--Device-InputMethodProperty-readonly id: string--><!--Device-InputMethodProperty-readonly id: string-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## label
@@ -94,6 +106,8 @@ The label of input method
 
 **Since:** 9
 
+<!--Device-InputMethodProperty-readonly label?: string--><!--Device-InputMethodProperty-readonly label?: string-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## labelId
@@ -107,6 +121,8 @@ The label id of input method
 **Type:** number
 
 **Since:** 10
+
+<!--Device-InputMethodProperty-readonly labelId?: long--><!--Device-InputMethodProperty-readonly labelId?: long-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -126,6 +142,8 @@ The id of input method
 
 **Substitutes:** [id](arkts-ime-inputmethodproperty-i.md#id)
 
+<!--Device-InputMethodProperty-readonly methodId: string--><!--Device-InputMethodProperty-readonly methodId: string-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## name
@@ -139,6 +157,8 @@ The name of input method
 **Type:** string
 
 **Since:** 9
+
+<!--Device-InputMethodProperty-readonly name: string--><!--Device-InputMethodProperty-readonly name: string-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -157,6 +177,8 @@ The name of input method
 **Deprecated since:** 9
 
 **Substitutes:** [name](arkts-ime-inputmethodproperty-i.md#name)
+
+<!--Device-InputMethodProperty-readonly packageName: string--><!--Device-InputMethodProperty-readonly packageName: string-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 

@@ -10,6 +10,8 @@ Login type queryLoginInfo & refreshLoginInfo, logout.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-avMusicTemplate-type LoginType = 'queryLoginInfo' | 'refreshLoginInfo' | 'cancel' | 'logout'--><!--Device-avMusicTemplate-type LoginType = 'queryLoginInfo' | 'refreshLoginInfo' | 'cancel' | 'logout'-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 | Type | Description |

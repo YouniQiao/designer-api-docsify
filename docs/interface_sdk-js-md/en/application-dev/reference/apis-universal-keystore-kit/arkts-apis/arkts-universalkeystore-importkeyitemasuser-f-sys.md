@@ -18,6 +18,8 @@ Imports a plaintext key for the specified user. This API uses a promise to retur
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-huks-function importKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<void>--><!--Device-huks-function importKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **System API:** This is a system API.
@@ -27,14 +29,14 @@ Imports a plaintext key for the specified user. This API uses a promise to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
-| keyAlias | string | Yes | Key alias. The value can contain up to 128 bytes and should not include sensitive datasuch as personal information. |
-| huksOptions | HuksOptions | Yes | Options for importing the key. The algorithm, key purpose, and key length aremandatory. |
+| keyAlias | string | Yes | Key alias. The value can contain up to 128 bytes and should not include sensitive data such as personal information. |
+| huksOptions | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Options for importing the key. The algorithm, key purpose, and key length are mandatory. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

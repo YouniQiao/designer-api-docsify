@@ -12,11 +12,11 @@ import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
 function setProcessPriority(pid: number, priority: ProcessPriority): Promise<void>
 ```
 
-Sets the child process priority. After a child process is suppressed, the CPU resources that can be obtained will
-be limited. If the scheduling policy of the main process changes, for example, from the background to the
-foreground, the child process changes with the main process. To suppress the child process, call this API again.
+Sets the child process priority. After a child process is suppressed, the CPU resources that can be obtained will be limited. If the scheduling policy of the main process changes, for example, from the background to the foreground, the child process changes with the main process. To suppress the child process, call this API again.
 
 **Since:** 17
+
+<!--Device-backgroundProcessManager-function setProcessPriority(pid: int, priority: ProcessPriority): Promise<void>--><!--Device-backgroundProcessManager-function setProcessPriority(pid: int, priority: ProcessPriority): Promise<void>-End-->
 
 **System capability:** SystemCapability.Resourceschedule.BackgroundProcessManager
 
@@ -24,14 +24,14 @@ foreground, the child process changes with the main process. To suppress the chi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pid | number | Yes | ID of the child process to be suppressed, which is the **pid** parameter after the childprocess is created through the[OH_Ability_StartNativeChildProcess](../../../../reference/apis-ability-kit/capi-native-child-process-h.md#oh_ability_startnativechildprocess)API. |
-| priority | ProcessPriority | Yes | Suppression priority. |
+| pid | number | Yes | ID of the child process to be suppressed, which is the **pid** parameter after the child process is created through the [OH_Ability_StartNativeChildProcess](../../../../reference/apis-ability-kit/capi-native-child-process-h.md#oh_ability_startnativechildprocess)API. |
+| priority | [ProcessPriority](arkts-backgroundtasks-processpriority-e.md) | Yes | Suppression priority. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

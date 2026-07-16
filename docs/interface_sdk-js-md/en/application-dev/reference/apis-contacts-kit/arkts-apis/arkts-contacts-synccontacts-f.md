@@ -24,22 +24,24 @@ A maximum of 400 contacts can be synchronized in batches. The invoking party mus
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-contact-function syncContacts(context: Context, mode: ContactSyncMode, progress: ContactSyncProgress, contacts: Array<Contact>): Promise<Array<int>>--><!--Device-contact-function syncContacts(context: Context, mode: ContactSyncMode, progress: ContactSyncProgress, contacts: Array<Contact>): Promise<Array<int>>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of the application or capability. |
-| mode | ContactSyncMode | Yes | Indicates the type of contact synchronization mode. |
-| progress | ContactSyncProgress | Yes | Indicates the information about the contact synchronization progress. |
-| contacts | Array&lt;Contact&gt; | Yes | Indicates the array of contact information to be synchronized into the database. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of the application or capability. |
+| mode | [ContactSyncMode](arkts-contacts-contactsyncmode-e.md) | Yes | Indicates the type of contact synchronization mode. |
+| progress | [ContactSyncProgress](arkts-contacts-contactsyncprogress-i.md) | Yes | Indicates the information about the contact synchronization progress. |
+| contacts | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Contact> | Yes | Indicates the array of contact information to be synchronized into the database. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Returns the array of contacts creation results. Valid contact ID (which can beobtained by {@link Contact#getId()}) indicates that the creation was successful.{@link Contact#INVALID_CONTACT_ID} indicates the creation failed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | Returns the array of contacts creation results. Valid contact ID (which can be obtained by {@link Contact#getId()}) indicates that the creation was successful.{@link Contact#INVALID_CONTACT_ID} indicates the creation failed. |
 
 **Error codes:**
 

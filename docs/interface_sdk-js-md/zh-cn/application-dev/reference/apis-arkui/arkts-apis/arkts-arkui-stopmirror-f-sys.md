@@ -1,5 +1,11 @@
 # stopMirror（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { screen } from '@kit.ArkUI';
+```
+
 ## stopMirror
 
 ```TypeScript
@@ -10,6 +16,8 @@ function stopMirror(mirrorScreen:Array<number>, callback: AsyncCallback<void>): 
 
 **起始版本：** 10
 
+<!--Device-screen-function stopMirror(mirrorScreen:Array<long>, callback: AsyncCallback<void>): void--><!--Device-screen-function stopMirror(mirrorScreen:Array<long>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -18,8 +26,8 @@ function stopMirror(mirrorScreen:Array<number>, callback: AsyncCallback<void>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mirrorScreen | Array&lt;number&gt; | 是 | 镜像屏幕ID集合，其中ID应为整数。 mirrorScreen数组大小不应超过1000。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当停止屏幕镜像模式成功，err为undefined，否则为错误对象。 |
+| mirrorScreen | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<number> | 是 | 镜像屏幕ID集合，其中ID应为整数。 mirrorScreen数组大小不应超过1000。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当停止屏幕镜像模式成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -59,6 +67,8 @@ function stopMirror(mirrorScreen:Array<number>): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-screen-function stopMirror(mirrorScreen:Array<long>): Promise<void>--><!--Device-screen-function stopMirror(mirrorScreen:Array<long>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -67,13 +77,13 @@ function stopMirror(mirrorScreen:Array<number>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mirrorScreen | Array&lt;number&gt; | 是 | 镜像屏幕ID集合，其中ID应为整数。mirrorScreen数组大小不应超过1000。 |
+| mirrorScreen | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<number> | 是 | 镜像屏幕ID集合，其中ID应为整数。mirrorScreen数组大小不应超过1000。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

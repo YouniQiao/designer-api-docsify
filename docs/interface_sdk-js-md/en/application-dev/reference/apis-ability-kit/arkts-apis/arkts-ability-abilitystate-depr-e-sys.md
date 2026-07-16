@@ -8,6 +8,8 @@ Enumerates the ability states.
 
 **Substitutes:** AbilityState
 
+<!--Device-abilityManager-export enum AbilityState--><!--Device-abilityManager-export enum AbilityState-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -25,6 +27,8 @@ The ability is in the initial state.
 **Deprecated since:** 9
 
 **Substitutes:** INITIAL
+
+<!--Device-AbilityState-INITIAL = 0--><!--Device-AbilityState-INITIAL = 0-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -44,6 +48,8 @@ The ability is running in the foreground.
 
 **Substitutes:** FOREGROUND
 
+<!--Device-AbilityState-FOREGROUND = 9--><!--Device-AbilityState-FOREGROUND = 9-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -61,6 +67,8 @@ The ability is running in the background.
 **Deprecated since:** 9
 
 **Substitutes:** BACKGROUND
+
+<!--Device-AbilityState-BACKGROUND = 10--><!--Device-AbilityState-BACKGROUND = 10-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -80,6 +88,8 @@ The ability is being switched to the foreground.
 
 **Substitutes:** FOREGROUNDING
 
+<!--Device-AbilityState-FOREGROUNDING = 11--><!--Device-AbilityState-FOREGROUNDING = 11-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -97,6 +107,8 @@ The ability is being switched to the background.
 **Deprecated since:** 9
 
 **Substitutes:** BACKGROUNDING
+
+<!--Device-AbilityState-BACKGROUNDING = 12--><!--Device-AbilityState-BACKGROUNDING = 12-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

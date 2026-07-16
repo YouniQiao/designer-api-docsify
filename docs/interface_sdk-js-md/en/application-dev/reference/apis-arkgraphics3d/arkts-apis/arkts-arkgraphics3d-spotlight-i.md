@@ -6,6 +6,8 @@ Defines spot light.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface SpotLight extends Light--><!--Device-unnamed-export interface SpotLight extends Light-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## innerAngle
@@ -22,6 +24,8 @@ The inner angle of the spot light, the unit is radian.
 
 **Since:** 23
 
+<!--Device-SpotLight-innerAngle?: double--><!--Device-SpotLight-innerAngle?: double-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## outerAngle
@@ -37,6 +41,8 @@ The outer angle of the spot light, the unit is radian.
 **Default:** PI / 4.0
 
 **Since:** 23
+
+<!--Device-SpotLight-outerAngle?: double--><!--Device-SpotLight-outerAngle?: double-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

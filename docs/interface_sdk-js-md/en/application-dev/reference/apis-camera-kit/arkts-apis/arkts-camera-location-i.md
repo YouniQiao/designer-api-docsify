@@ -4,6 +4,8 @@ Describes the geolocation information.
 
 **Since:** 10
 
+<!--Device-camera-interface Location--><!--Device-camera-interface Location-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Altitude, in meters.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Location-altitude: double--><!--Device-Location-altitude: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## latitude
@@ -42,6 +46,8 @@ Latitude, in degrees, within the range [-90, 90].
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Location-latitude: double--><!--Device-Location-latitude: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## longitude
@@ -57,6 +63,8 @@ Longitude, in degrees, within the range [-180, 180].
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-Location-longitude: double--><!--Device-Location-longitude: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

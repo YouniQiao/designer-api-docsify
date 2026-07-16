@@ -18,13 +18,15 @@ Checks whether the device's screen content is being captured.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-display-function isCaptured(): boolean--><!--Device-display-function isCaptured(): boolean-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the device's screen content is being captured. **true** is returnedwhen screen content is being captured (including active screen capture, casting, recording, or the creation ofa virtual screen that could be captured). **false** is returned when screen content is no longer beingcaptured. |
+| boolean | Check result for whether the device's screen content is being captured. **true** is returned when screen content is being captured (including active screen capture, casting, recording, or the creation of a virtual screen that could be captured). **false** is returned when screen content is no longer being captured. |
 
 **Error codes:**
 
@@ -56,13 +58,15 @@ Check whether the device is captured, projected, or recorded by any app in the b
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-display-function isCaptured(bundleNameList: Array<string>): boolean--><!--Device-display-function isCaptured(bundleNameList: Array<string>): boolean-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleNameList | Array&lt;string&gt; | Yes | The list of application bundle names that need to be checked.The max size of array is 100. |
+| bundleNameList | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | The list of application bundle names that need to be checked.The max size of array is 100. |
 
 **Return value:**
 

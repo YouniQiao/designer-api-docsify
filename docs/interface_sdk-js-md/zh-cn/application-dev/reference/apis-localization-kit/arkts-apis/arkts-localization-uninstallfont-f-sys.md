@@ -1,5 +1,11 @@
 # uninstallFont（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { fontManager } from '@kit.LocalizationKit';
+```
+
 ## uninstallFont
 
 ```TypeScript
@@ -11,6 +17,8 @@ function uninstallFont(fullName: string): Promise<number>
 **起始版本：** 19
 
 **需要权限：** ohos.permission.UPDATE_FONT
+
+<!--Device-fontManager-function uninstallFont(fullName: string): Promise<int>--><!--Device-fontManager-function uninstallFont(fullName: string): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Global.FontManager
 
@@ -26,7 +34,7 @@ function uninstallFont(fullName: string): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | 返回卸载结果。返回为0表示卸载成功，否则卸载失败。 |
+| Promise<number> | 返回卸载结果。返回为0表示卸载成功，否则卸载失败。 |
 
 **错误码：**
 

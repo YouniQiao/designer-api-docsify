@@ -1,5 +1,11 @@
 # @ohos.multimodalInput.intentionCode
 
+## 导入模块
+
+```TypeScript
+import { IntentionCode } from '@kit.InputKit';
+```
+
 ## 汇总
 
 ### 枚举

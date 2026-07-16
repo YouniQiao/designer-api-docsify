@@ -4,6 +4,8 @@ List scroll to options
 
 **Since:** 4
 
+<!--Device-unnamed-export interface ListScrollToOptions--><!--Device-unnamed-export interface ListScrollToOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 ## index
@@ -19,6 +21,8 @@ specified position.
 **Since:** 4
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-ListScrollToOptions-index: number--><!--Device-ListScrollToOptions-index: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 

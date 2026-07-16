@@ -1,5 +1,11 @@
 # setSecurityLabelSync
 
+## 导入模块
+
+```TypeScript
+import { securityLabel } from '@kit.CoreFileKit';
+```
+
 ## setSecurityLabelSync
 
 ```TypeScript
@@ -10,6 +16,8 @@ function setSecurityLabelSync(path: string, type: DataLevel): void
 
 **起始版本：** 9
 
+<!--Device-securityLabel-function setSecurityLabelSync(path: string, type: DataLevel): void--><!--Device-securityLabel-function setSecurityLabelSync(path: string, type: DataLevel): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -17,7 +25,7 @@ function setSecurityLabelSync(path: string, type: DataLevel): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 文件路径。 |
-| type | DataLevel | 是 | 数据安全等级，只支持"s0","s1","s2","s3","s4"。 |
+| type | [DataLevel](arkts-corefile-datalevel-t.md) | 是 | 数据安全等级，只支持"s0","s1","s2","s3","s4"。 |
 
 **错误码：**
 

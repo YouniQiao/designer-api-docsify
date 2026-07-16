@@ -20,6 +20,8 @@ Disables the screen content access permission monitoring.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-onScreen-function offReadingScreenPermissionListener(callback?: Callback<ReadingScreenPermissionStatus>): void--><!--Device-onScreen-function offReadingScreenPermissionListener(callback?: Callback<ReadingScreenPermissionStatus>): void-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Disables the screen content access permission monitoring.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;ReadingScreenPermissionStatus&gt; | No | Callback to unregister. If this parameter<br> is not passed, all callbacks of the event are unregistered. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ReadingScreenPermissionStatus> | No | Callback to unregister. If this parameter<br> is not passed, all callbacks of the event are unregistered. |
 
 **Error codes:**
 

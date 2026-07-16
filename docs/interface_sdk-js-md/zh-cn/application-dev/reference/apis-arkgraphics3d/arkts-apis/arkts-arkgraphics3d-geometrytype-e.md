@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+<!--Device-unnamed-export enum GeometryType--><!--Device-unnamed-export enum GeometryType-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## CUSTOM
@@ -15,6 +17,8 @@ CUSTOM = 0
 自定义几何形状.
 
 **起始版本：** 18
+
+<!--Device-GeometryType-CUSTOM = 0--><!--Device-GeometryType-CUSTOM = 0-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -28,6 +32,8 @@ CUBE = 1
 
 **起始版本：** 18
 
+<!--Device-GeometryType-CUBE = 1--><!--Device-GeometryType-CUBE = 1-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## PLANE
@@ -39,6 +45,8 @@ PLANE = 2
 平面.
 
 **起始版本：** 18
+
+<!--Device-GeometryType-PLANE = 2--><!--Device-GeometryType-PLANE = 2-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -52,6 +60,8 @@ SPHERE = 3
 
 **起始版本：** 18
 
+<!--Device-GeometryType-SPHERE = 3--><!--Device-GeometryType-SPHERE = 3-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## CYLINDER
@@ -63,6 +73,8 @@ CYLINDER = 4
 圆柱体.
 
 **起始版本：** 23
+
+<!--Device-GeometryType-CYLINDER = 4--><!--Device-GeometryType-CYLINDER = 4-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

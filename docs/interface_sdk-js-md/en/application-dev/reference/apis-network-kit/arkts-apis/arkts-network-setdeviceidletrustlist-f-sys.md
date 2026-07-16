@@ -18,6 +18,8 @@ Set the list of uids that are allowed to access the Internet in hibernation mode
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function setDeviceIdleTrustlist(uids: Array<number>, isAllowed: boolean, callback: AsyncCallback<void>): void--><!--Device-policy-function setDeviceIdleTrustlist(uids: Array<number>, isAllowed: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -26,9 +28,9 @@ Set the list of uids that are allowed to access the Internet in hibernation mode
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uids | Array&lt;number&gt; | Yes | The specified uids of application. |
+| uids | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | The specified uids of application. |
 | isAllowed | boolean | Yes | Whether to allow Uids in the list to access the Internet. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of setDeviceIdleTrustlist. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of setDeviceIdleTrustlist. |
 
 **Error codes:**
 
@@ -65,6 +67,8 @@ Set the list of uids that are allowed to access the Internet in hibernation mode
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function setDeviceIdleTrustlist(uids: Array<number>, isAllowed: boolean): Promise<void>--><!--Device-policy-function setDeviceIdleTrustlist(uids: Array<number>, isAllowed: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -73,14 +77,14 @@ Set the list of uids that are allowed to access the Internet in hibernation mode
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uids | Array&lt;number&gt; | Yes | The specified uids of application. |
+| uids | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | The specified uids of application. |
 | isAllowed | boolean | Yes | Whether to allow Uids in the list to access the Internet. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

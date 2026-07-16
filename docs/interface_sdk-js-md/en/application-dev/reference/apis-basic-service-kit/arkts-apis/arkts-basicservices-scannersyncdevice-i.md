@@ -4,6 +4,8 @@ Defines the device to be synced from the scanner.
 
 **Since:** 20
 
+<!--Device-scan-interface ScannerSyncDevice--><!--Device-scan-interface ScannerSyncDevice-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Discovery mode.
 
 **Since:** 20
 
+<!--Device-ScannerSyncDevice-discoveryMode: ScannerDiscoveryMode--><!--Device-ScannerSyncDevice-discoveryMode: ScannerDiscoveryMode-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## oldScannerId
@@ -37,6 +41,8 @@ Old scanner ID, which is valid only when **syncMode** is set to **update**.
 **Type:** string
 
 **Since:** 20
+
+<!--Device-ScannerSyncDevice-oldScannerId?: string--><!--Device-ScannerSyncDevice-oldScannerId?: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -52,6 +58,8 @@ Scanner ID.
 
 **Since:** 20
 
+<!--Device-ScannerSyncDevice-scannerId: string--><!--Device-ScannerSyncDevice-scannerId: string-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## syncMode
@@ -66,6 +74,8 @@ Sync mode.
 
 **Since:** 20
 
+<!--Device-ScannerSyncDevice-syncMode: ScannerSyncMode--><!--Device-ScannerSyncDevice-syncMode: ScannerSyncMode-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## uniqueId
@@ -79,6 +89,8 @@ Unique ID.
 **Type:** string
 
 **Since:** 20
+
+<!--Device-ScannerSyncDevice-uniqueId: string--><!--Device-ScannerSyncDevice-uniqueId: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 

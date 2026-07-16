@@ -6,6 +6,8 @@ Represents information about a file or directory in the **Recently deleted** lis
 
 **Deprecated since:** 23
 
+<!--Device-trash-interface FileInfo--><!--Device-trash-interface FileInfo-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -22,8 +24,7 @@ import { trash } from '@kit.CoreFileKit';
 readonly ctime: number
 ```
 
-Time when the file or directory was created. It is the number of seconds elapsed since the Unix epoch (00:00:00
-UTC on January 1, 1970).
+Time when the file or directory was created. It is the number of seconds elapsed since the Unix epoch (00:00:00UTC on January 1, 1970).
 
 **Type:** number
 
@@ -32,6 +33,8 @@ UTC on January 1, 1970).
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FileInfo-readonly ctime: number--><!--Device-FileInfo-readonly ctime: number-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -53,6 +56,8 @@ Name of the file or directory.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FileInfo-readonly fileName: string--><!--Device-FileInfo-readonly fileName: string-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -73,6 +78,8 @@ Permission on the file or directory.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FileInfo-readonly mode: number--><!--Device-FileInfo-readonly mode: number-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -83,8 +90,7 @@ Permission on the file or directory.
 readonly mtime: number
 ```
 
-Time when the file or directory was last modified. It is the number of milliseconds elapsed since the Unix epoch
-(00:00:00 UTC on January 1, 1970).
+Time when the file or directory was last modified. It is the number of milliseconds elapsed since the Unix epoch(00:00:00 UTC on January 1, 1970).
 
 **Type:** number
 
@@ -93,6 +99,8 @@ Time when the file or directory was last modified. It is the number of milliseco
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FileInfo-readonly mtime: number--><!--Device-FileInfo-readonly mtime: number-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -114,6 +122,8 @@ Size of a file or directory, in bytes.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FileInfo-readonly size: number--><!--Device-FileInfo-readonly size: number-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -134,6 +144,8 @@ Path of the file or directory before being deleted.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FileInfo-readonly srcPath: string--><!--Device-FileInfo-readonly srcPath: string-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -153,6 +165,8 @@ URI of the file or directory.
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FileInfo-readonly uri: string--><!--Device-FileInfo-readonly uri: string-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 

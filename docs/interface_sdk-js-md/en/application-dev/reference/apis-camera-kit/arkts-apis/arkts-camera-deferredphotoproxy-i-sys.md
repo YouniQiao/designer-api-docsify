@@ -4,6 +4,8 @@ A class object that functions as a thumbnail proxy.
 
 **Since:** 11
 
+<!--Device-camera-interface DeferredPhotoProxy--><!--Device-camera-interface DeferredPhotoProxy-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -24,6 +26,8 @@ Obtains the PixelMap of a thumbnail. This API uses a promise to return the resul
 
 **Since:** 11
 
+<!--Device-DeferredPhotoProxy-getThumbnail(): Promise<image.PixelMap>--><!--Device-DeferredPhotoProxy-getThumbnail(): Promise<image.PixelMap>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -32,7 +36,7 @@ Obtains the PixelMap of a thumbnail. This API uses a promise to return the resul
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | PixelMap of the thumbnail. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<image.PixelMap> | PixelMap of the thumbnail. |
 
 **Error codes:**
 
@@ -63,6 +67,8 @@ Releases depth data output resources. This API uses a promise to return the resu
 
 **Since:** 11
 
+<!--Device-DeferredPhotoProxy-release(): Promise<void>--><!--Device-DeferredPhotoProxy-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -71,7 +77,7 @@ Releases depth data output resources. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

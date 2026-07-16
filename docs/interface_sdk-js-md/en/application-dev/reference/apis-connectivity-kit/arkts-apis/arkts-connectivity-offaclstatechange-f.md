@@ -12,9 +12,7 @@ import { connection } from '@kit.ConnectivityKit';
 function offAclStateChange(callback?: Callback<AclStateResult>): void
 ```
 
-Unsubscribe the event of acl state changed from a remote device.
-If the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real.
-Otherwise, the type of the peer device address is virtual.
+Unsubscribe the event of acl state changed from a remote device.If the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real.Otherwise, the type of the peer device address is virtual.
 
 **Since:** 26.0.0
 
@@ -22,13 +20,15 @@ Otherwise, the type of the peer device address is virtual.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function offAclStateChange(callback?: Callback<AclStateResult>): void--><!--Device-connection-function offAclStateChange(callback?: Callback<AclStateResult>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AclStateResult&gt; | No | Callback used to listen. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AclStateResult> | No | Callback used to listen. |
 
 **Error codes:**
 

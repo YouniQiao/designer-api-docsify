@@ -1,5 +1,11 @@
 # getAllowedNotificationBundles
 
+## 导入模块
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+```
+
 ## getAllowedNotificationBundles
 
 ```TypeScript
@@ -14,6 +20,8 @@ function getAllowedNotificationBundles(admin: Want | null, accountId: number): A
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function getAllowedNotificationBundles(admin: Want | null, accountId: number): Array<string>--><!--Device-applicationManager-function getAllowedNotificationBundles(admin: Want | null, accountId: number): Array<string>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -27,7 +35,7 @@ function getAllowedNotificationBundles(admin: Want | null, accountId: number): A
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 返回允许发送通知的应用包名数组。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 返回允许发送通知的应用包名数组。 |
 
 **错误码：**
 

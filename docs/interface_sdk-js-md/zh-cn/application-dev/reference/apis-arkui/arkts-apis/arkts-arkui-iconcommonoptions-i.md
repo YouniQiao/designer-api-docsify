@@ -2,13 +2,21 @@
 
 IconCommonOptions定义图标的共通属性。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 仅在图片格式为SVG时，fillColor和activatedFillColor属性才生效。
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface IconCommonOptions--><!--Device-unnamed-export interface IconCommonOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { SuffixIconOptions, CloseOptions, ChipSymbolGlyphOptions, Chip, AccessibilitySelectedType, LabelMarginOptions, LabelOptions, PrefixIconOptions, IconCommonOptions, ChipOptions, ChipSuffixSymbolGlyphOptions, ChipSize, AccessibilityOptions } from '@kit.ArkUI';
+```
 
 ## activatedFillColor
 
@@ -28,7 +36,9 @@ activatedFillColor?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-IconCommonOptions-activatedFillColor?: ResourceColor--><!--Device-IconCommonOptions-activatedFillColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,7 +60,9 @@ fillColor?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-IconCommonOptions-fillColor?: ResourceColor--><!--Device-IconCommonOptions-fillColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,10 +76,8 @@ size?: SizeOptions
 
 默认值：
 
-- 当ChipOptions.size为ChipSize.SMALL时，默认值为：{width: $r('sys.float.chip_small_icon_size'), height: $r('
-sys.float.chip_small_icon_size')}
-- 当ChipOptions.size为ChipSize.NORMAL时，默认值为：{width: $r('sys.float.chip_normal_icon_size'), height: $r('
-sys.float.chip_normal_icon_size')}
+- 当ChipOptions.size为ChipSize.SMALL时，默认值为：{width: $r('sys.float.chip_small_icon_size'), height: $r('sys.float.chip_small_icon_size')}  
+- 当ChipOptions.size为ChipSize.NORMAL时，默认值为：{width: $r('sys.float.chip_normal_icon_size'), height: $r('sys.float.chip_normal_icon_size')}
 
 单位：vp
 
@@ -79,7 +89,9 @@ sys.float.chip_normal_icon_size')}
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-IconCommonOptions-size?: SizeOptions--><!--Device-IconCommonOptions-size?: SizeOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -97,7 +109,9 @@ src: ResourceStr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-IconCommonOptions-src: ResourceStr--><!--Device-IconCommonOptions-src: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

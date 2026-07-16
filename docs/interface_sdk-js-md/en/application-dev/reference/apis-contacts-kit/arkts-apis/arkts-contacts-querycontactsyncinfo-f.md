@@ -14,8 +14,7 @@ function queryContactSyncInfo(context: Context): Promise<Array<ContactSyncInfo>>
 
 Queries information about ongoing contact synchronization for the calling application.
 
-If the returned contact synchronization information is empty, the invoking party does not synchronize contacts or
-the contact synchronization is complete.
+If the returned contact synchronization information is empty, the invoking party does not synchronize contacts or the contact synchronization is complete.
 
 **Since:** 26.0.0
 
@@ -25,19 +24,21 @@ the contact synchronization is complete.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-contact-function queryContactSyncInfo(context: Context): Promise<Array<ContactSyncInfo>>--><!--Device-contact-function queryContactSyncInfo(context: Context): Promise<Array<ContactSyncInfo>>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of the application or capability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of the application or capability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ContactSyncInfo&gt;&gt; | Returns the array of contacts synchronization information for thecalling application. Returns null if no contacts are being synchronized. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ContactSyncInfo>> | Returns the array of contacts synchronization information for the calling application. Returns null if no contacts are being synchronized. |
 
 **Error codes:**
 

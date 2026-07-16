@@ -1,5 +1,11 @@
 # releaseAccess
 
+## 导入模块
+
+```TypeScript
+import { screenLockFileManager } from '@kit.AbilityKit';
+```
+
 ## releaseAccess
 
 ```TypeScript
@@ -12,13 +18,15 @@ function releaseAccess(): ReleaseStatus
 
 **起始版本：** 12
 
+<!--Device-screenLockFileManager-function releaseAccess(): ReleaseStatus--><!--Device-screenLockFileManager-function releaseAccess(): ReleaseStatus-End-->
+
 **系统能力：** SystemCapability.Security.ScreenLockFileManager
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ReleaseStatus | 锁屏下敏感数据访问权限的释放状态。 |
+| [ReleaseStatus](arkts-ability-releasestatus-e.md) | 锁屏下敏感数据访问权限的释放状态。 |
 
 **错误码：**
 

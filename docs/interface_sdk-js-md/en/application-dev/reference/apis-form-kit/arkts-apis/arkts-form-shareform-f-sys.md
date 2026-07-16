@@ -18,6 +18,8 @@ Shares a specified widget with a remote device. This API uses an asynchronous ca
 
 **Required permissions:** ohos.permission.REQUIRE_FORM and ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-formHost-function shareForm(formId: string, deviceId: string, callback: AsyncCallback<void>): void--><!--Device-formHost-function shareForm(formId: string, deviceId: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Shares a specified widget with a remote device. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
 | deviceId | string | Yes | Remote device ID. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the widget is shared, **error**is undefined; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the widget is shared, **error** is undefined; otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -55,6 +57,8 @@ Shares a specified widget with a remote device. This API uses a promise to retur
 
 **Required permissions:** ohos.permission.REQUIRE_FORM and ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-formHost-function shareForm(formId: string, deviceId: string): Promise<void>--><!--Device-formHost-function shareForm(formId: string, deviceId: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -70,7 +74,7 @@ Shares a specified widget with a remote device. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

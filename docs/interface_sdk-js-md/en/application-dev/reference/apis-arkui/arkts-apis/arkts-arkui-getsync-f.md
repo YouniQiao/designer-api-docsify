@@ -12,13 +12,11 @@ import { componentSnapshot } from '@kit.ArkUI';
 function getSync(id: string, options?: SnapshotOptions): image.PixelMap
 ```
 
-Obtains the snapshot of a component that has been loaded based on the provided [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md). This
-API synchronously waits for the snapshot to complete and returns a
-[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md) object.
+Obtains the snapshot of a component that has been loaded based on the provided [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md). This API synchronously waits for the snapshot to complete and returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md) object.
 
-> **NOTE**
->
-> The snapshot captures content rendered in the last frame. If this API is called when the component triggers an
+> **NOTE**  
+>  
+> The snapshot captures content rendered in the last frame. If this API is called when the component triggers an  
 > update, the re-rendered content will not be included in the obtained snapshot.
 
 **Since:** 12
@@ -27,6 +25,8 @@ API synchronously waits for the snapshot to complete and returns a
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-componentSnapshot-function getSync(id: string, options?: SnapshotOptions): image.PixelMap--><!--Device-componentSnapshot-function getSync(id: string, options?: SnapshotOptions): image.PixelMap-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -34,7 +34,7 @@ API synchronously waits for the snapshot to complete and returns a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | [ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) of the target component. |
-| options | SnapshotOptions | No | Custom settings of the snapshot. |
+| options | [SnapshotOptions](arkts-arkui-snapshotoptions-i.md) | No | Custom settings of the snapshot. |
 
 **Return value:**
 

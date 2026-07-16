@@ -20,13 +20,15 @@ Stop Bluetooth scanning and searching.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-geoLocationManager-function stopBluetoothSearch(callback?: Callback<BluetoothScanResult>): void--><!--Device-geoLocationManager-function stopBluetoothSearch(callback?: Callback<BluetoothScanResult>): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;BluetoothScanResult&gt; | No | Callback used to return ${BluetoothScanResult}.It should be the same as the callback passed to ${geoLocationManager.startBluetoothSearch}. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<BluetoothScanResult> | No | Callback used to return ${BluetoothScanResult}.It should be the same as the callback passed to ${geoLocationManager.startBluetoothSearch}. |
 
 **Error codes:**
 

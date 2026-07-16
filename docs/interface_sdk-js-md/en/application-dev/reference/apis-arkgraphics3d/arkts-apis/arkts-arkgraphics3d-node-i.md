@@ -6,6 +6,8 @@ Defines Node interface.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface Node extends SceneResource--><!--Device-unnamed-export interface Node extends SceneResource-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## getNodeByPath
@@ -17,6 +19,8 @@ getNodeByPath(path: string): Node | null
 Get node by path.
 
 **Since:** 12
+
+<!--Device-Node-getNodeByPath(path: string): Node | null--><!--Device-Node-getNodeByPath(path: string): Node | null-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -30,7 +34,7 @@ Get node by path.
 
 | Type | Description |
 | --- | --- |
-| Node | @syscap SystemCapability.ArkUi.Graphics3D |
+| [Node](arkts-arkgraphics3d-node-i.md) | @syscap SystemCapability.ArkUi.Graphics3D |
 
 ## children
 
@@ -43,6 +47,8 @@ Children of the node.
 **Type:** Container<Node>
 
 **Since:** 12
+
+<!--Device-Node-readonly children: Container<Node>--><!--Device-Node-readonly children: Container<Node>-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -58,6 +64,8 @@ Layer mask of the node.
 
 **Since:** 12
 
+<!--Device-Node-readonly layerMask: LayerMask--><!--Device-Node-readonly layerMask: LayerMask-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## nodeType
@@ -71,6 +79,8 @@ Type of the node.
 **Type:** NodeType
 
 **Since:** 12
+
+<!--Device-Node-readonly nodeType: NodeType--><!--Device-Node-readonly nodeType: NodeType-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -86,6 +96,8 @@ Parent of the node.
 
 **Since:** 12
 
+<!--Device-Node-readonly parent: Node | null--><!--Device-Node-readonly parent: Node | null-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## path
@@ -99,6 +111,8 @@ Path of the node.
 **Type:** string
 
 **Since:** 12
+
+<!--Device-Node-readonly path: string--><!--Device-Node-readonly path: string-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -114,6 +128,8 @@ position of the node, the unit is the scene unit in the world coordinate system 
 
 **Since:** 12
 
+<!--Device-Node-position: Position3--><!--Device-Node-position: Position3-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## rotation
@@ -127,6 +143,8 @@ Rotation of the node.
 **Type:** Quaternion
 
 **Since:** 12
+
+<!--Device-Node-rotation: Quaternion--><!--Device-Node-rotation: Quaternion-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -142,6 +160,8 @@ Scale of the node.
 
 **Since:** 12
 
+<!--Device-Node-scale: Scale3--><!--Device-Node-scale: Scale3-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## visible
@@ -155,6 +175,8 @@ Visibility flag for the node.
 **Type:** boolean
 
 **Since:** 12
+
+<!--Device-Node-visible: boolean--><!--Device-Node-visible: boolean-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

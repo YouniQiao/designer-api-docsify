@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-text-interface TextBox--><!--Device-text-interface TextBox-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
+
+## 导入模块
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D';
+```
 
 ## direction
 
@@ -18,7 +26,9 @@ direction: TextDirection
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextBox-direction: TextDirection--><!--Device-TextBox-direction: TextDirection-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -34,7 +44,9 @@ rect: common2D.Rect
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextBox-rect: common2D.Rect--><!--Device-TextBox-rect: common2D.Rect-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

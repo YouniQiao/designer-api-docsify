@@ -6,6 +6,8 @@ Defines the authentication parameters.
 
 **Deprecated since:** 11
 
+<!--Device-deviceManager-interface AuthParam--><!--Device-deviceManager-interface AuthParam-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -30,6 +32,8 @@ Authentication type.
 
 **Deprecated since:** 11
 
+<!--Device-AuthParam-authType: number--><!--Device-AuthParam-authType: number-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -47,6 +51,8 @@ Extended field. Optional. The default value is **undefined**.
 **Since:** 7
 
 **Deprecated since:** 11
+
+<!--Device-AuthParam-extraInfo: { [key: string]: any }--><!--Device-AuthParam-extraInfo: { [key: string]: any }-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 

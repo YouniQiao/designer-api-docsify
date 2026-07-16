@@ -1,11 +1,10 @@
 # PermissionActiveStatus (System API)
 
-Enumerates the types of permission usage status changes. It is used to describe the change type of permission
-usage status, returned in the callback of subscribing to permission usage status change events (via
-[on('activeStateChange')](privacyManager.on)), helping system applications sense the status switch of a
-permission from unused to foreground use and background use.
+Enumerates the types of permission usage status changes. It is used to describe the change type of permission usage status, returned in the callback of subscribing to permission usage status change events (via [on('activeStateChange')](privacyManager.on)), helping system applications sense the status switch of a permission from unused to foreground use and background use.
 
 **Since:** 9
+
+<!--Device-privacyManager-enum PermissionActiveStatus--><!--Device-privacyManager-enum PermissionActiveStatus-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -21,6 +20,8 @@ The permission is not used.
 
 **Since:** 9
 
+<!--Device-PermissionActiveStatus-PERM_INACTIVE = 0--><!--Device-PermissionActiveStatus-PERM_INACTIVE = 0-End-->
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -35,6 +36,8 @@ The permission is being used by an application running in the foreground.
 
 **Since:** 9
 
+<!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_FOREGROUND = 1--><!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_FOREGROUND = 1-End-->
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -48,6 +51,8 @@ PERM_ACTIVE_IN_BACKGROUND = 2
 The permission is being used by an application running in the background.
 
 **Since:** 9
+
+<!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_BACKGROUND = 2--><!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_BACKGROUND = 2-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 

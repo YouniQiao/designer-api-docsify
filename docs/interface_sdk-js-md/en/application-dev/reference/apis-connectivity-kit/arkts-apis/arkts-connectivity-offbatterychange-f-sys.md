@@ -20,6 +20,8 @@ Unsubscribe the event of battery state changes from a remote device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-bas-function offBatteryChange(callback?: Callback<BatteryInfo>): void--><!--Device-bas-function offBatteryChange(callback?: Callback<BatteryInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Unsubscribe the event of battery state changes from a remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;BatteryInfo&gt; | No | Callback used to listen. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<BatteryInfo> | No | Callback used to listen. |
 
 **Error codes:**
 

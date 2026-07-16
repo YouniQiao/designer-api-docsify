@@ -8,7 +8,15 @@
 
 **替代接口：** WorkerEventTarget
 
+<!--Device-unnamed-export interface EventTarget--><!--Device-unnamed-export interface EventTarget-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
+```
 
 ## addEventListener
 
@@ -24,6 +32,8 @@ addEventListener(type: string, listener: EventListener): void
 
 **替代接口：** addEventListener
 
+<!--Device-EventTarget-addEventListener(type: string, listener: EventListener): void--><!--Device-EventTarget-addEventListener(type: string, listener: EventListener): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -31,7 +41,7 @@ addEventListener(type: string, listener: EventListener): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 监听的事件类型。 |
-| listener | EventListener | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
+| listener | [EventListener](arkts-arkts-eventlistener-t.md) | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
 
 **示例：**
 
@@ -61,13 +71,15 @@ dispatchEvent(event: Event): boolean
 
 **替代接口：** dispatchEvent
 
+<!--Device-EventTarget-dispatchEvent(event: Event): boolean--><!--Device-EventTarget-dispatchEvent(event: Event): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Event | 是 | 需要分发的事件。 |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-event-c.md) | 是 | 需要分发的事件。 |
 
 **返回值：**
 
@@ -135,6 +147,8 @@ removeAllListener(): void
 
 **替代接口：** removeAllListener
 
+<!--Device-EventTarget-removeAllListener(): void--><!--Device-EventTarget-removeAllListener(): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **示例：**
@@ -167,6 +181,8 @@ removeEventListener(type: string, callback?: EventListener): void
 
 **替代接口：** removeEventListener
 
+<!--Device-EventTarget-removeEventListener(type: string, callback?: EventListener): void--><!--Device-EventTarget-removeEventListener(type: string, callback?: EventListener): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -174,7 +190,7 @@ removeEventListener(type: string, callback?: EventListener): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 需要移除的事件类型。 |
-| callback | EventListener | 否 | 要移除的事件监听的回调函数。 |
+| callback | [EventListener](arkts-arkts-eventlistener-t.md) | 否 | 要移除的事件监听的回调函数。 |
 
 **示例：**
 

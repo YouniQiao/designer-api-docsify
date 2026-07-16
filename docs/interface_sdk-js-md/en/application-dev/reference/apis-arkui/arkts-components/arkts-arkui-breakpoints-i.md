@@ -1,11 +1,12 @@
 # BreakPoints
 
-Sets breakpoints for the responsive grid container. For details about breakpoints, see
-[Breakpoints](../../../../ui/arkts-layout-development-grid-layout.md#breakpoints).
+Sets breakpoints for the responsive grid container. For details about breakpoints, see [Breakpoints](../../../../ui/arkts-layout-development-grid-layout.md#breakpoints).
 
 <!--code_no_check-->
 
 **Since:** 9
+
+<!--Device-unnamed-declare interface BreakPoints--><!--Device-unnamed-declare interface BreakPoints-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,6 +29,8 @@ Invalid values are treated as the default value.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-BreakPoints-reference?: BreakpointsReference--><!--Device-BreakPoints-reference?: BreakpointsReference-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,6 +55,8 @@ Unit: vp.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-BreakPoints-value?: Array<string>--><!--Device-BreakPoints-value?: Array<string>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

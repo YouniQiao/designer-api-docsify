@@ -1,5 +1,11 @@
 # syncContacts
 
+## 导入模块
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+```
+
 ## syncContacts
 
 ```TypeScript
@@ -16,7 +22,9 @@ function syncContacts(context: Context, mode: ContactSyncMode, progress: Contact
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-contact-function syncContacts(context: Context, mode: ContactSyncMode, progress: ContactSyncProgress, contacts: Array<Contact>): Promise<Array<int>>--><!--Device-contact-function syncContacts(context: Context, mode: ContactSyncMode, progress: ContactSyncProgress, contacts: Array<Contact>): Promise<Array<int>>-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -24,16 +32,16 @@ function syncContacts(context: Context, mode: ContactSyncMode, progress: Contact
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文Context。 |
-| mode | ContactSyncMode | 是 | 表示联系人同步模式的类型。 |
-| progress | ContactSyncProgress | 是 | 表示联系人同步进度的相关信息。 |
-| contacts | Array&lt;Contact&gt; | 是 | 表示需要同步至数据库的联系人信息数组。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
+| mode | [ContactSyncMode](arkts-contacts-contactsyncmode-e.md) | 是 | 表示联系人同步模式的类型。 |
+| progress | [ContactSyncProgress](arkts-contacts-contactsyncprogress-i.md) | 是 | 表示联系人同步进度的相关信息。 |
+| contacts | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Contact> | 是 | 表示需要同步至数据库的联系人信息数组。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | 返回联系人创建结果的数组。有效的联系人ID (可为通过 {@link Contact#getId()})获得的值表示创建成功。{@link Contact#INVALID_CONTACT_ID} 表示创建失败。 |
+| Promise<Array<number>> | 返回联系人创建结果的数组。有效的联系人ID (可为通过 {@link Contact#getId()})获得的值表示创建成功。{@link Contact#INVALID_CONTACT_ID} 表示创建失败。 |
 
 **错误码：**
 

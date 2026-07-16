@@ -4,6 +4,8 @@ Defines chip group padding.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class ChipGroupV2Padding--><!--Device-unnamed-export declare class ChipGroupV2Padding-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,13 +28,15 @@ The constructor of ChipGroupV2PaddingConfig
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipGroupV2Padding-constructor(config: ChipGroupV2PaddingConfig)--><!--Device-ChipGroupV2Padding-constructor(config: ChipGroupV2PaddingConfig)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | ChipGroupV2PaddingConfig | Yes | config of ChipGroupV2 padding |
+| config | [ChipGroupV2PaddingConfig](arkts-arkui-chipgroupv2paddingconfig-i.md) | Yes | config of ChipGroupV2 padding |
 
 ## bottom
 
@@ -49,6 +53,8 @@ Bottom of chip group padding.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2Padding-public bottom: Length--><!--Device-ChipGroupV2Padding-public bottom: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,6 +73,8 @@ Top of chip group padding.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2Padding-public top: Length--><!--Device-ChipGroupV2Padding-public top: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

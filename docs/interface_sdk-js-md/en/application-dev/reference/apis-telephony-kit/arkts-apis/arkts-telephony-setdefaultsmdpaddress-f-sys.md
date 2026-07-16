@@ -18,6 +18,8 @@ Set or update the default SM-DP+ address stored in an eUICC.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE
 
+<!--Device-eSIM-function setDefaultSmdpAddress(slotId: int, address: string): Promise<ResultCode>--><!--Device-eSIM-function setDefaultSmdpAddress(slotId: int, address: string): Promise<ResultCode>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -33,7 +35,7 @@ Set or update the default SM-DP+ address stored in an eUICC.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultCode&gt; | Returns the result code. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ResultCode> | Returns the result code. |
 
 **Error codes:**
 

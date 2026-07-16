@@ -20,6 +20,8 @@ Creates a **PasteData** object of the URI type.
 
 **Substitutes:** createData(mimeType:
 
+<!--Device-pasteboard-function createUriData(uri: string): PasteData--><!--Device-pasteboard-function createUriData(uri: string): PasteData-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
@@ -32,7 +34,7 @@ Creates a **PasteData** object of the URI type.
 
 | Type | Description |
 | --- | --- |
-| PasteData | **PasteData** object. |
+| [PasteData](arkts-basicservices-pastedata-i.md) | **PasteData** object. |
 
 **Example**
 

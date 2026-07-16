@@ -4,6 +4,8 @@ Enumerates the certificate types.
 
 **Since:** 18
 
+<!--Device-certificateManager-export enum CertType--><!--Device-certificateManager-export enum CertType-End-->
+
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## CA_CERT_SYSTEM
@@ -16,6 +18,8 @@ System CA certificate.
 
 **Since:** 18
 
+<!--Device-CertType-CA_CERT_SYSTEM = 0--><!--Device-CertType-CA_CERT_SYSTEM = 0-End-->
+
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## CA_CERT_USER
@@ -27,6 +31,8 @@ CA_CERT_USER = 1
 User CA certificate.
 
 **Since:** 18
+
+<!--Device-CertType-CA_CERT_USER = 1--><!--Device-CertType-CA_CERT_USER = 1-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 

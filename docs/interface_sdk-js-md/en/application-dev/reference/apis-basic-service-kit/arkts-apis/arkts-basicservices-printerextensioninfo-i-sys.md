@@ -4,6 +4,8 @@ Provides the printer extension information.
 
 **Since:** 10
 
+<!--Device-print-interface PrinterExtensionInfo--><!--Device-print-interface PrinterExtensionInfo-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ ID of the printer extension.
 
 **Since:** 10
 
+<!--Device-PrinterExtensionInfo-extensionId: string--><!--Device-PrinterExtensionInfo-extensionId: string-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Vendor icon of the printer extension.
 **Type:** number
 
 **Since:** 10
+
+<!--Device-PrinterExtensionInfo-vendorIcon: int--><!--Device-PrinterExtensionInfo-vendorIcon: int-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -58,6 +64,8 @@ Vendor ID of the printer extension.
 
 **Since:** 10
 
+<!--Device-PrinterExtensionInfo-vendorId: string--><!--Device-PrinterExtensionInfo-vendorId: string-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -74,6 +82,8 @@ Vendor name of the printer extension.
 
 **Since:** 10
 
+<!--Device-PrinterExtensionInfo-vendorName: string--><!--Device-PrinterExtensionInfo-vendorName: string-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -89,6 +99,8 @@ Version of the printer extension.
 **Type:** string
 
 **Since:** 10
+
+<!--Device-PrinterExtensionInfo-version: string--><!--Device-PrinterExtensionInfo-version: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 

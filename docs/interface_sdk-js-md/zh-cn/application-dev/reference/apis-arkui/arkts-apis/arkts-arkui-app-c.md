@@ -4,7 +4,15 @@
 
 **起始版本：** 3
 
+<!--Device-unnamed-export default class App--><!--Device-unnamed-export default class App-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
+
+## 导入模块
+
+```TypeScript
+import { AppResponse, ScreenOnVisibleOptions, RequestFullWindowOptions } from '@kit.ArkUI';
+```
 
 ## getInfo
 
@@ -14,13 +22,13 @@ static getInfo(): AppResponse
 
 获取当前应用配置文件中声明的信息。在Stage模型下接口返回值为null。
 
-从API version9开始，推荐使用
-[bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-getbundleinfoforself-f.md#getbundleinfoforself-1)
-。
+从API version9开始，推荐使用[bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-getbundleinfoforself-f.md#getbundleinfoforself-1)。
 
 **起始版本：** 3
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-App-static getInfo(): AppResponse--><!--Device-App-static getInfo(): AppResponse-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -28,7 +36,7 @@ static getInfo(): AppResponse
 
 | 类型 | 说明 |
 | --- | --- |
-| AppResponse | 定义AppResponse信息。 |
+| [AppResponse](arkts-arkui-appresponse-i.md) | 定义AppResponse信息。 |
 
 **示例：**
 
@@ -155,10 +163,7 @@ export default {
 static requestFullWindow(options?: RequestFullWindowOptions): void
 ```
 
-Requests the application to run in full window.
-In some scenarios, such as semi-modal FA, the FA runs in non-full window.
-In this case, you can call this API.
-This API is invalid for an application already in full-window mode.
+Requests the application to run in full window.In some scenarios, such as semi-modal FA, the FA runs in non-full window.In this case, you can call this API.This API is invalid for an application already in full-window mode.
 
 **起始版本：** 3
 
@@ -166,13 +171,15 @@ This API is invalid for an application already in full-window mode.
 
 **替代接口：** startAbility
 
+<!--Device-App-static requestFullWindow(options?: RequestFullWindowOptions): void--><!--Device-App-static requestFullWindow(options?: RequestFullWindowOptions): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | RequestFullWindowOptions | 否 | Transition time from non-full window to full window, in milliseconds. |
+| options | [RequestFullWindowOptions](arkts-arkui-requestfullwindowoptions-i.md) | 否 | Transition time from non-full window to full window, in milliseconds. |
 
 **示例：**
 
@@ -202,13 +209,15 @@ static screenOnVisible(options?: ScreenOnVisibleOptions): void
 
 **废弃版本：** 8
 
+<!--Device-App-static screenOnVisible(options?: ScreenOnVisibleOptions): void--><!--Device-App-static screenOnVisible(options?: ScreenOnVisibleOptions): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | ScreenOnVisibleOptions | 否 | 当启动保活时，锁屏时将阻止系统返回桌面显示，以保持屏幕唤醒时应用可见。 |
+| options | [ScreenOnVisibleOptions](arkts-arkui-screenonvisibleoptions-i.md) | 否 | 当启动保活时，锁屏时将阻止系统返回桌面显示，以保持屏幕唤醒时应用可见。 |
 
 ## setImageCacheCount
 
@@ -216,12 +225,13 @@ static screenOnVisible(options?: ScreenOnVisibleOptions): void
 static setImageCacheCount(value: number): void
 ```
 
-Set image cache capacity of decoded image count.
-if not set, the application will not cache any decoded image.
+Set image cache capacity of decoded image count.if not set, the application will not cache any decoded image.
 
 **起始版本：** 7
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-App-static setImageCacheCount(value: number): void--><!--Device-App-static setImageCacheCount(value: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -273,7 +283,9 @@ static setImageFileCacheSize(value: number): void
 
 **起始版本：** 7
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-App-static setImageFileCacheSize(value: number): void--><!--Device-App-static setImageFileCacheSize(value: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -308,12 +320,13 @@ export default class OnC {
 static setImageRawDataCacheSize(value: number): void
 ```
 
-Set image cache capacity of raw image data size in bytes before decode.
-if not set, the application will not cache any raw image data.
+Set image cache capacity of raw image data size in bytes before decode.if not set, the application will not cache any raw image data.
 
 **起始版本：** 7
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-App-static setImageRawDataCacheSize(value: number): void--><!--Device-App-static setImageRawDataCacheSize(value: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -365,7 +378,9 @@ static terminate(): void
 
 **起始版本：** 3
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-App-static terminate(): void--><!--Device-App-static terminate(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 

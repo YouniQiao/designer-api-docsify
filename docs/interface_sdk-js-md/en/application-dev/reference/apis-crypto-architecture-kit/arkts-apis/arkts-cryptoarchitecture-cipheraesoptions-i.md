@@ -8,6 +8,8 @@ Defines the input parameters of **cipher.aes()**.
 
 **Substitutes:** Cipher
 
+<!--Device-unnamed-export interface CipherAesOptions--><!--Device-unnamed-export interface CipherAesOptions-End-->
+
 **System capability:** SystemCapability.Security.Cipher
 
 ## Modules to Import
@@ -24,8 +26,7 @@ action: string
 
 Action to perform. The options are as follows:
 
-1. **encrypt**: Encrypts data.
-2. **decrypt**: Decrypts data.
+1. **encrypt**: Encrypts data.2. **decrypt**: Decrypts data.
 
 **Type:** string
 
@@ -34,6 +35,8 @@ Action to perform. The options are as follows:
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
+
+<!--Device-CipherAesOptions-action: string--><!--Device-CipherAesOptions-action: string-End-->
 
 **System capability:** SystemCapability.Security.Cipher
 
@@ -53,6 +56,8 @@ Called when the execution is complete.
 
 **Substitutes:** Cipher
 
+<!--Device-CipherAesOptions-complete: () => void--><!--Device-CipherAesOptions-complete: () => void-End-->
+
 **System capability:** SystemCapability.Security.Cipher
 
 ## fail
@@ -71,6 +76,8 @@ Called when data fails to be encrypted or decrypted.
 
 **Substitutes:** Cipher
 
+<!--Device-CipherAesOptions-fail: (data: string, code: number) => void--><!--Device-CipherAesOptions-fail: (data: string, code: number) => void-End-->
+
 **System capability:** SystemCapability.Security.Cipher
 
 ## iv
@@ -79,8 +86,7 @@ Called when data fails to be encrypted or decrypted.
 iv?: string
 ```
 
-Initialization vector (IV) for AES-based encryption and decryption. The value is a string encoded in Base64. The
-default value is the key value.
+Initialization vector (IV) for AES-based encryption and decryption. The value is a string encoded in Base64. The default value is the key value.
 
 **Type:** string
 
@@ -89,6 +95,8 @@ default value is the key value.
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
+
+<!--Device-CipherAesOptions-iv?: string--><!--Device-CipherAesOptions-iv?: string-End-->
 
 **System capability:** SystemCapability.Security.Cipher
 
@@ -108,6 +116,8 @@ Length of the IV, in bytes. This field is reserved. The default value is **16**,
 
 **Substitutes:** Cipher
 
+<!--Device-CipherAesOptions-ivLen?: string--><!--Device-CipherAesOptions-ivLen?: string-End-->
+
 **System capability:** SystemCapability.Security.Cipher
 
 ## ivOffset
@@ -116,8 +126,7 @@ Length of the IV, in bytes. This field is reserved. The default value is **16**,
 ivOffset?: string
 ```
 
-Offset of the IV for AES-based encryption and decryption. The default value is **0**, which is the only value
-supported.
+Offset of the IV for AES-based encryption and decryption. The default value is **0**, which is the only value supported.
 
 **Type:** string
 
@@ -126,6 +135,8 @@ supported.
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
+
+<!--Device-CipherAesOptions-ivOffset?: string--><!--Device-CipherAesOptions-ivOffset?: string-End-->
 
 **System capability:** SystemCapability.Security.Cipher
 
@@ -145,6 +156,8 @@ Key used for encryption or decryption. It is a Base64 encoded string.
 
 **Substitutes:** Cipher
 
+<!--Device-CipherAesOptions-key: string--><!--Device-CipherAesOptions-key: string-End-->
+
 **System capability:** SystemCapability.Security.Cipher
 
 ## success
@@ -163,6 +176,8 @@ Called when data is encrypted or decrypted successfully.
 
 **Substitutes:** Cipher
 
+<!--Device-CipherAesOptions-success: (data: CipherResponse) => void--><!--Device-CipherAesOptions-success: (data: CipherResponse) => void-End-->
+
 **System capability:** SystemCapability.Security.Cipher
 
 ## text
@@ -173,8 +188,7 @@ text: string
 
 Text to be encrypted or decrypted.
 
-The text to be encrypted must be common text. The text to be decrypted must be a binary value encoded in Base64.
-The default format is used for Base64 encoding.
+The text to be encrypted must be common text. The text to be decrypted must be a binary value encoded in Base64.The default format is used for Base64 encoding.
 
 **Type:** string
 
@@ -183,6 +197,8 @@ The default format is used for Base64 encoding.
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
+
+<!--Device-CipherAesOptions-text: string--><!--Device-CipherAesOptions-text: string-End-->
 
 **System capability:** SystemCapability.Security.Cipher
 
@@ -201,6 +217,8 @@ Encryption mode and padding of the AES algorithm. The default value is **AES/CBC
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
+
+<!--Device-CipherAesOptions-transformation?: string--><!--Device-CipherAesOptions-transformation?: string-End-->
 
 **System capability:** SystemCapability.Security.Cipher
 

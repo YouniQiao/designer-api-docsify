@@ -12,12 +12,13 @@ import { bundleResourceManager } from '@kit.AbilityKit';
 function getAllBundleResourceInfo(resourceFlags: number, callback: AsyncCallback<Array<BundleResourceInfo>>): void
 ```
 
-Obtains the bundle resource information of all applications based on the given resource flags. This API uses an
-asynchronous callback to return the result.
+Obtains the bundle resource information of all applications based on the given resource flags. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.GET_INSTALLED_BUNDLE_LIST and ohos.permission.GET_BUNDLE_RESOURCES
+
+<!--Device-bundleResourceManager-function getAllBundleResourceInfo(resourceFlags: int, callback: AsyncCallback<Array<BundleResourceInfo>>): void--><!--Device-bundleResourceManager-function getAllBundleResourceInfo(resourceFlags: int, callback: AsyncCallback<Array<BundleResourceInfo>>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -28,7 +29,7 @@ asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resourceFlags | number | Yes | Type of the resource information to obtain. |
-| callback | AsyncCallback&lt;Array&lt;BundleResourceInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used toreturn the result. If the information is successfully obtained, **err** is **null** and **data** is aBundleResourceInfo array. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<BundleResourceInfo>> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. If the information is successfully obtained, **err** is **null** and **data** is a BundleResourceInfo array. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -45,12 +46,13 @@ asynchronous callback to return the result.
 function getAllBundleResourceInfo(resourceFlags: number): Promise<Array<BundleResourceInfo>>
 ```
 
-Obtains the bundle resource information of all applications based on the given resource flags. This API uses a
-promise to return the result.
+Obtains the bundle resource information of all applications based on the given resource flags. This API uses a promise to return the result.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.GET_INSTALLED_BUNDLE_LIST and ohos.permission.GET_BUNDLE_RESOURCES
+
+<!--Device-bundleResourceManager-function getAllBundleResourceInfo(resourceFlags: int): Promise<Array<BundleResourceInfo>>--><!--Device-bundleResourceManager-function getAllBundleResourceInfo(resourceFlags: int): Promise<Array<BundleResourceInfo>>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -66,7 +68,7 @@ promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleResourceInfo&gt;&gt; | Promise used to return the BundleResourceInfo array. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<BundleResourceInfo>> | Promise used to return the BundleResourceInfo array. |
 
 **Error codes:**
 

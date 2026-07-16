@@ -12,10 +12,11 @@ import { sensor } from '@kit.SensorServiceKit';
 function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: number, callback: AsyncCallback<GeomagneticResponse>): void
 ```
 
-Obtains the geomagnetic field of a geographic location at a certain time. This API uses an asynchronous callback to
-return the result.
+Obtains the geomagnetic field of a geographic location at a certain time. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-sensor-function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: long, callback: AsyncCallback<GeomagneticResponse>): void--><!--Device-sensor-function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: long, callback: AsyncCallback<GeomagneticResponse>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -23,9 +24,9 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locationOptions | LocationOptions | Yes | Geographic location, including the longitude, latitude, and altitude. |
+| locationOptions | [LocationOptions](arkts-sensorservice-locationoptions-i.md) | Yes | Geographic location, including the longitude, latitude, and altitude. |
 | timeMillis | number | Yes | Time when the magnetic declination is obtained. The value is a Unix timestamp, in ms. |
-| callback | AsyncCallback&lt;GeomagneticResponse&gt; | Yes | Callback used to return the geomagnetic field. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<GeomagneticResponse> | Yes | Callback used to return the geomagnetic field. |
 
 **Error codes:**
 
@@ -70,10 +71,11 @@ try {
 function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: number): Promise<GeomagneticResponse>
 ```
 
-Obtains the geomagnetic field of a geographic location at a certain time. This API uses a promise to return the
-result.
+Obtains the geomagnetic field of a geographic location at a certain time. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-sensor-function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: long): Promise<GeomagneticResponse>--><!--Device-sensor-function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: long): Promise<GeomagneticResponse>-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -81,14 +83,14 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locationOptions | LocationOptions | Yes | Geographic location, including the longitude, latitude, and altitude. |
+| locationOptions | [LocationOptions](arkts-sensorservice-locationoptions-i.md) | Yes | Geographic location, including the longitude, latitude, and altitude. |
 | timeMillis | number | Yes | Time when the magnetic declination is obtained. The value is a Unix timestamp, in ms. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GeomagneticResponse&gt; | Promise used to return the geomagnetic field. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<GeomagneticResponse> | Promise used to return the geomagnetic field. |
 
 **Error codes:**
 

@@ -18,6 +18,8 @@ Register system event related to screen lock service.
 
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK_INNER
 
+<!--Device-screenLock-function onSystemEvent(callback: Callback<SystemEvent>): boolean--><!--Device-screenLock-function onSystemEvent(callback: Callback<SystemEvent>): boolean-End-->
+
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Register system event related to screen lock service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;SystemEvent&gt; | Yes | the callback of onSystemEvent. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SystemEvent> | Yes | the callback of onSystemEvent. |
 
 **Return value:**
 

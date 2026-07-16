@@ -4,6 +4,8 @@ Implements a **Matrix4Transit** object.
 
 **Since:** 7
 
+<!--Device-matrix4-interface Matrix4Transit--><!--Device-matrix4-interface Matrix4Transit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -18,12 +20,13 @@ import { matrix4 } from '@kit.ArkUI';
 combine(options: Matrix4Transit): Matrix4Transit
 ```
 
-Combines the effects of two matrices to generate a new matrix object. The matrix that calls this API will be
-changed.
+Combines the effects of two matrices to generate a new matrix object. The matrix that calls this API will be changed.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Matrix4Transit-combine(options: Matrix4Transit): Matrix4Transit--><!--Device-Matrix4Transit-combine(options: Matrix4Transit): Matrix4Transit-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,13 +34,13 @@ changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | Matrix4Transit | Yes | Matrix object to be combined. |
+| options | [Matrix4Transit](arkts-arkui-matrix4transit-i.md) | Yes | Matrix object to be combined. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Object after matrix combination. |
+| [Matrix4Transit](arkts-arkui-matrix4transit-i.md) | Object after matrix combination. |
 
 ## copy
 
@@ -51,13 +54,15 @@ Copies this matrix object.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Matrix4Transit-copy(): Matrix4Transit--><!--Device-Matrix4Transit-copy(): Matrix4Transit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Copy object of the current matrix. |
+| [Matrix4Transit](arkts-arkui-matrix4transit-i.md) | Copy object of the current matrix. |
 
 ## invert
 
@@ -71,13 +76,15 @@ Inverts this matrix object. The matrix that calls this API will be changed.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Matrix4Transit-invert(): Matrix4Transit--><!--Device-Matrix4Transit-invert(): Matrix4Transit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Inverse matrix object of the current matrix. |
+| [Matrix4Transit](arkts-arkui-matrix4transit-i.md) | Inverse matrix object of the current matrix. |
 
 ## rotate
 
@@ -91,19 +98,21 @@ Rotates this matrix object along the x, y, and z axes. The matrix that calls thi
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Matrix4Transit-rotate(options: RotateOption): Matrix4Transit--><!--Device-Matrix4Transit-rotate(options: RotateOption): Matrix4Transit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | RotateOption | Yes | Rotation configuration. |
+| options | [RotateOption](arkts-arkui-rotateoption-i.md) | Yes | Rotation configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Matrix object after the rotation. |
+| [Matrix4Transit](arkts-arkui-matrix4transit-i.md) | Matrix object after the rotation. |
 
 ## scale
 
@@ -117,19 +126,21 @@ Scales this matrix object along the x, y, and z axes. The matrix that calls this
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Matrix4Transit-scale(options: ScaleOption): Matrix4Transit--><!--Device-Matrix4Transit-scale(options: ScaleOption): Matrix4Transit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ScaleOption | Yes | Scaling configuration. |
+| options | [ScaleOption](arkts-arkui-scaleoption-i.md) | Yes | Scaling configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Matrix object after the scaling. |
+| [Matrix4Transit](arkts-arkui-matrix4transit-i.md) | Matrix object after the scaling. |
 
 ## setPolyToPoly
 
@@ -145,19 +156,21 @@ Maps the vertex coordinates of a polygon to those of another polygon.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Matrix4Transit-setPolyToPoly(options: PolyToPolyOptions): Matrix4Transit--><!--Device-Matrix4Transit-setPolyToPoly(options: PolyToPolyOptions): Matrix4Transit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | PolyToPolyOptions | Yes | Parameters for mapping. |
+| options | [PolyToPolyOptions](arkts-arkui-polytopolyoptions-i.md) | Yes | Parameters for mapping. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Matrix object after the mapping. |
+| [Matrix4Transit](arkts-arkui-matrix4transit-i.md) | Matrix object after the mapping. |
 
 ## skew
 
@@ -173,6 +186,8 @@ Skews this matrix object along the x and y axes. The matrix that calls this API 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Matrix4Transit-skew(x: number, y: number): Matrix4Transit--><!--Device-Matrix4Transit-skew(x: number, y: number): Matrix4Transit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -186,7 +201,7 @@ Skews this matrix object along the x and y axes. The matrix that calls this API 
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Matrix object after the skewing. |
+| [Matrix4Transit](arkts-arkui-matrix4transit-i.md) | Matrix object after the skewing. |
 
 ## transformPoint
 
@@ -199,6 +214,8 @@ Applies the current transformation effect to a coordinate point.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Matrix4Transit-transformPoint(options: [number, number]): [number, number]--><!--Device-Matrix4Transit-transformPoint(options: [number, number]): [number, number]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -226,17 +243,19 @@ Translates this matrix object along the x, y, and z axes. The matrix that calls 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Matrix4Transit-translate(options: TranslateOption): Matrix4Transit--><!--Device-Matrix4Transit-translate(options: TranslateOption): Matrix4Transit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | TranslateOption | Yes | Translation configuration. |
+| options | [TranslateOption](arkts-arkui-translateoption-i.md) | Yes | Translation configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Matrix object after the translation. |
+| [Matrix4Transit](arkts-arkui-matrix4transit-i.md) | Matrix object after the translation. |
 

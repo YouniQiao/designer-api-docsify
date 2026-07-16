@@ -12,12 +12,13 @@ import { notificationManager } from '@kit.NotificationKit';
 function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether notification is enabled for the specified application. This API uses an asynchronous callback to
-return the result.
+Checks whether notification is enabled for the specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -27,8 +28,8 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that thenotification is enabled, and **false** means the opposite. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means that the notification is enabled, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -76,6 +77,8 @@ Checks whether notification is enabled for the specified application. This API u
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isNotificationEnabled(bundle: BundleOption): Promise<boolean>--><!--Device-notificationManager-function isNotificationEnabled(bundle: BundleOption): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -84,13 +87,13 @@ Checks whether notification is enabled for the specified application. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the notification isenabled, and **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means that the notification is enabled, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -127,16 +130,16 @@ notificationManager.isNotificationEnabled(bundle).then((data: boolean) => {
 function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 ```
 
-Queries the notification authorization status of the current application. This API uses an asynchronous
-callback to return the result.
+Queries the notification authorization status of the current application. This API uses an asynchronous callback to return the result.
 
-This API is used to check whether the current application is allowed to send notifications before
-publishing, preventing publish failures when notification authorization is disabled.
+This API is used to check whether the current application is allowed to send notifications before publishing, preventing publish failures when notification authorization is disabled.
 
 **Since:** 11
 
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function isNotificationEnabled(callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isNotificationEnabled(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -146,7 +149,7 @@ publishing, preventing publish failures when notification authorization is disab
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that thenotification can be published; **false** means the opposite. If this API call fails, an error object isreturned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means that the notification can be published; **false** means the opposite. If this API call fails, an error object is returned. |
 
 **Error codes:**
 
@@ -185,16 +188,16 @@ notificationManager.isNotificationEnabled(isNotificationEnabledCallback);
 function isNotificationEnabled(): Promise<boolean>
 ```
 
-Queries the notification authorization status of the current application. This API uses a promise to
-return the result.
+Queries the notification authorization status of the current application. This API uses a promise to return the result.
 
-This API is used to check whether the current application is allowed to send notifications before
-publishing, preventing publish failures when notification authorization is disabled.
+This API is used to check whether the current application is allowed to send notifications before publishing, preventing publish failures when notification authorization is disabled.
 
 **Since:** 11
 
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function isNotificationEnabled(): Promise<boolean>--><!--Device-notificationManager-function isNotificationEnabled(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -204,7 +207,7 @@ publishing, preventing publish failures when notification authorization is disab
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the notification isenabled, and **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means that the notification is enabled, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -238,12 +241,13 @@ notificationManager.isNotificationEnabled().then((data: boolean) => {
 function isNotificationEnabled(userId: number, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether notification is enabled for a specified user. This API uses an asynchronous callback to return the
-result.
+Checks whether notification is enabled for a specified user. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function isNotificationEnabled(userId: int, callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isNotificationEnabled(userId: int, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -254,7 +258,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that thenotification is enabled, and **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means that the notification is enabled, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -301,6 +305,8 @@ Checks whether notification is enabled for a specified user. This API uses a pro
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isNotificationEnabled(userId: int): Promise<boolean>--><!--Device-notificationManager-function isNotificationEnabled(userId: int): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -315,7 +321,7 @@ Checks whether notification is enabled for a specified user. This API uses a pro
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the notification isenabled, and **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means that the notification is enabled, and **false** means the opposite. |
 
 **Error codes:**
 

@@ -14,13 +14,15 @@ function getActiveNotifications(callback: AsyncCallback<Array<NotificationReques
 
 **替代接口：** getActiveNotifications
 
+<!--Device-notification-function getActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void--><!--Device-notification-function getActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;NotificationRequest&gt;&gt; | 是 | 获取当前应用通知列表回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<NotificationRequest>> | 是 | 获取当前应用通知列表回调函数。 |
 
 
 ## getActiveNotifications
@@ -37,11 +39,13 @@ function getActiveNotifications(): Promise<Array<NotificationRequest>>
 
 **替代接口：** getActiveNotifications
 
+<!--Device-notification-function getActiveNotifications(): Promise<Array<NotificationRequest>>--><!--Device-notification-function getActiveNotifications(): Promise<Array<NotificationRequest>>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;NotificationRequest&gt;&gt; | 以Promise形式返回获取当前应用通知列表。 |
+| Promise<Array<NotificationRequest>> | 以Promise形式返回获取当前应用通知列表。 |
 

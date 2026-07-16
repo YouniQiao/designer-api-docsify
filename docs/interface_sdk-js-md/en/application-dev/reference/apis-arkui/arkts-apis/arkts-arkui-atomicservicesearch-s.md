@@ -4,6 +4,8 @@ Defines AtomicServiceSearch.
 
 **Since:** 18
 
+<!--Device-unnamed-export declare struct AtomicServiceSearch--><!--Device-unnamed-export declare struct AtomicServiceSearch-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Set the Search component controller.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-AtomicServiceSearch-controller?: SearchController--><!--Device-AtomicServiceSearch-controller?: SearchController-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## operation
@@ -42,6 +46,8 @@ Function settings in the selection area (right).
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-AtomicServiceSearch-operation?: OperationParams--><!--Device-AtomicServiceSearch-operation?: OperationParams-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## placeholder
@@ -50,8 +56,7 @@ Function settings in the selection area (right).
 placeholder?: ResourceStr
 ```
 
-Indicates default prompt text displayed in the search box.
-The default value is Search, which supports globalization.
+Indicates default prompt text displayed in the search box.The default value is Search, which supports globalization.
 
 **Type:** ResourceStr
 
@@ -60,6 +65,8 @@ The default value is Search, which supports globalization.
 **Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-AtomicServiceSearch-placeholder?: ResourceStr--><!--Device-AtomicServiceSearch-placeholder?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -79,6 +86,8 @@ Events and styles supported by the search area.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-AtomicServiceSearch-search?: SearchParams--><!--Device-AtomicServiceSearch-search?: SearchParams-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## select
@@ -97,6 +106,8 @@ Contents, events, and styles of the select area.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-AtomicServiceSearch-select?: SelectParams--><!--Device-AtomicServiceSearch-select?: SelectParams-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -114,6 +125,8 @@ Sets the search text content that is currently displayed.
 **Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-AtomicServiceSearch-value?: ResourceStr--><!--Device-AtomicServiceSearch-value?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

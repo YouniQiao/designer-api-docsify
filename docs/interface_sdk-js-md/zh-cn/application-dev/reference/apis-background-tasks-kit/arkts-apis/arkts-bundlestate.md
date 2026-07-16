@@ -6,7 +6,15 @@
 
 **废弃版本：** 9
 
+<!--Device-unnamed-declare namespace bundleState--><!--Device-unnamed-declare namespace bundleState-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
+
+## 导入模块
+
+```TypeScript
+import { bundleState } from '@kit.BackgroundTasksKit';
+```
 
 ## 汇总
 

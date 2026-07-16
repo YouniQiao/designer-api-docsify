@@ -4,6 +4,8 @@ Defines the event information when a blank screen is detected.
 
 **Since:** 22
 
+<!--Device-unnamed-declare interface BlankScreenDetectionEventInfo--><!--Device-unnamed-declare interface BlankScreenDetectionEventInfo-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## blankScreenDetails
@@ -12,13 +14,13 @@ Defines the event information when a blank screen is detected.
 blankScreenDetails?: BlankScreenDetails
 ```
 
-Details of the blank screen issue detected.
-For example, if a near-blank screen issue is detected, the details contain the number of points that match the
-blank screen issue. Otherwise, this attribute does not exist.
+Details of the blank screen issue detected.For example, if a near-blank screen issue is detected, the details contain the number of points that match the blank screen issue. Otherwise, this attribute does not exist.
 
 **Type:** BlankScreenDetails
 
 **Since:** 22
+
+<!--Device-BlankScreenDetectionEventInfo-blankScreenDetails?: BlankScreenDetails--><!--Device-BlankScreenDetectionEventInfo-blankScreenDetails?: BlankScreenDetails-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -34,6 +36,8 @@ Reason for the blank screen issue, which depends on the detection method.
 
 **Since:** 22
 
+<!--Device-BlankScreenDetectionEventInfo-blankScreenReason: DetectedBlankScreenReason--><!--Device-BlankScreenDetectionEventInfo-blankScreenReason: DetectedBlankScreenReason-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## url
@@ -47,6 +51,8 @@ URL of the page when a blank screen is detected.
 **Type:** string
 
 **Since:** 22
+
+<!--Device-BlankScreenDetectionEventInfo-url: string--><!--Device-BlankScreenDetectionEventInfo-url: string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

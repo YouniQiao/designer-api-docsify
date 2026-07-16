@@ -1,12 +1,14 @@
 # AutoExposureQuery
 
-AutoExposureQuery provides APIs to query the automatic exposure feature of a camera device.
->
-> - In this version, a compatibility change was made that preserved the initial version information of inner
-> elements. As a result, you might see outer element's @since version number being higher than that of the inner
+AutoExposureQuery provides APIs to query the automatic exposure feature of a camera device.  
+>  
+> - In this version, a compatibility change was made that preserved the initial version information of inner  
+> elements. As a result, you might see outer element's @since version number being higher than that of the inner  
 > elements. However, this discrepancy does not affect the functionality of the interface.
 
 **Since:** 12
+
+<!--Device-camera-interface AutoExposureQuery--><!--Device-camera-interface AutoExposureQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -28,13 +30,15 @@ Obtains the exposure compensation values of the camera device.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-AutoExposureQuery-getExposureBiasRange(): Array<double>--><!--Device-AutoExposureQuery-getExposureBiasRange(): Array<double>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Array of compensation values. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Array of compensation values. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -54,19 +58,21 @@ Checks whether an exposure mode is supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-AutoExposureQuery-isExposureModeSupported(aeMode: ExposureMode): boolean--><!--Device-AutoExposureQuery-isExposureModeSupported(aeMode: ExposureMode): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aeMode | ExposureMode | Yes | Exposure mode. If the input parameter is null or undefined, it is treated as 0and exposure is locked. |
+| aeMode | [ExposureMode](arkts-camera-exposuremode-e.md) | Yes | Exposure mode. If the input parameter is null or undefined, it is treated as 0and exposure is locked. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the exposure mode. **true** if supported, **false**otherwise. If the operation fails, undefined is returned and an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is thrown. |
+| boolean | Check result for the support of the exposure mode. **true** if supported, **false** otherwise. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is thrown. |
 
 **Error codes:**
 

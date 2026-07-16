@@ -6,8 +6,7 @@
 function enableDistributed(enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether this device supports distributed notifications.
-This API uses an asynchronous callback to return the result.
+Sets whether this device supports distributed notifications.This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -16,6 +15,8 @@ This API uses an asynchronous callback to return the result.
 **Substitutes:** setDistributedEnable
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notification-function enableDistributed(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-notification-function enableDistributed(enable: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -26,7 +27,7 @@ This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Whether the device supports distributed notifications. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 
 ## enableDistributed
@@ -45,6 +46,8 @@ Sets whether this device supports distributed notifications. This API uses a pro
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function enableDistributed(enable: boolean): Promise<void>--><!--Device-notification-function enableDistributed(enable: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -59,5 +62,5 @@ Sets whether this device supports distributed notifications. This API uses a pro
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 

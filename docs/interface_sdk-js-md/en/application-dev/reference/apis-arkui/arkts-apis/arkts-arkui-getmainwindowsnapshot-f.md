@@ -13,12 +13,15 @@ function getMainWindowSnapshot(windowId: Array<number>, config: WindowSnapshotCo
     Promise<Array<image.PixelMap | undefined>>
 ```
 
-Obtains the screenshots of one or more main windows specified by **windowId**. This API uses a promise to return
-the result.
+Obtains the screenshots of one or more main windows specified by **windowId**. This API uses a promise to return the result.
 
 **Since:** 21
 
 **Required permissions:** ohos.permission.CUSTOM_SCREEN_CAPTURE
+
+<!--Device-window-function getMainWindowSnapshot(windowId: Array<int>, config: WindowSnapshotConfiguration):
+    Promise<Array<image.PixelMap | undefined>>--><!--Device-window-function getMainWindowSnapshot(windowId: Array<int>, config: WindowSnapshotConfiguration):
+    Promise<Array<image.PixelMap | undefined>>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -26,21 +29,21 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | Array&lt;number&gt; | Yes | Array of main window IDs. These IDs can be obtained using[window.getAllMainWindowInfo()](arkts-arkui-getallmainwindowinfo-f.md#getallmainwindowinfo-1). If the array is null or undefined, containsany negative number, includes duplicates, or has more than 512 entries, error code 401 is returned. If thearray contains any positive ID that does not match an existing window, undefined is returned. |
-| config | WindowSnapshotConfiguration | Yes | Configuration for obtaining the window screenshot. |
+| windowId | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Array of main window IDs. These IDs can be obtained using [window.getAllMainWindowInfo()](arkts-arkui-getallmainwindowinfo-f.md#getallmainwindowinfo-1). If the array is null or undefined, contains any negative number, includes duplicates, or has more than 512 entries, error code 401 is returned. If the array contains any positive ID that does not match an existing window, undefined is returned. |
+| config | [WindowSnapshotConfiguration](arkts-arkui-windowsnapshotconfiguration-i.md) | Yes | Configuration for obtaining the window screenshot. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;image.PixelMap \| undefined&gt;&gt; | Promise used to return an array of PixelMap objects of thescreenshots, representing the screenshots, in the order of the provided window ID array. If a window ID isvalid but the corresponding main window cannot be found, undefined is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<image.PixelMap \| undefined>> | Promise used to return an array of PixelMap objects of the screenshots, representing the screenshots, in the order of the provided window ID array. If a window ID is valid but the corresponding main window cannot be found, undefined is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
 **Example**

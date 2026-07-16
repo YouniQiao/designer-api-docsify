@@ -12,13 +12,13 @@ import { window } from '@kit.ArkUI';
 function onApplicationFocusStateChange(callback: Callback<boolean>): void
 ```
 
-Register the callback for application process focus state changes.
-This listener monitors the focus state changes between applications.
-If the focus state changes between windows within the same application, the callback function will not be triggered.
+Register the callback for application process focus state changes.This listener monitors the focus state changes between applications.If the focus state changes between windows within the same application, the callback function will not be triggered.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-window-function onApplicationFocusStateChange(callback: Callback<boolean>): void--><!--Device-window-function onApplicationFocusStateChange(callback: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -26,7 +26,7 @@ If the focus state changes between windows within the same application, the call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;boolean&gt; | Yes | Callback used to return the result whether application processfocused or not.The value true means that the application process becomes focused,and false means that the application process becomes unfocused. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<boolean> | Yes | Callback used to return the result whether application process focused or not.The value true means that the application process becomes focused,and false means that the application process becomes unfocused. |
 
 **Example**
 

@@ -1,15 +1,14 @@
 # UiDriver
 
-The **UiDriver** class is the main entry to the UiTest framework. It provides APIs for features such as component
-matching/search, key injection, coordinate clicking/sliding, and screenshot.
-All APIs provided by this class, except **UiDriver.create()**, use a promise to return the result and must be invoked
-using **await**.
+The **UiDriver** class is the main entry to the UiTest framework. It provides APIs for features such as component matching/search, key injection, coordinate clicking/sliding, and screenshot.All APIs provided by this class, except **UiDriver.create()**, use a promise to return the result and must be invoked using **await**.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** [Driver](arkts-test-driver-c.md)
+
+<!--Device-unnamed-declare class UiDriver--><!--Device-unnamed-declare class UiDriver-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -25,9 +24,7 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 assertComponentExist(by: By): Promise<void>
 ```
 
-Asserts that a component that matches the given attributes exists on the current page. If the component does not
-exist, the API throws a JS exception, causing the current test case to fail. This API uses a promise to return the
-result.
+Asserts that a component that matches the given attributes exists on the current page. If the component does not exist, the API throws a JS exception, causing the current test case to fail. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -35,19 +32,21 @@ result.
 
 **Substitutes:** [assertComponentExist](arkts-test-driver-c.md#assertcomponentexist-1)
 
+<!--Device-UiDriver-assertComponentExist(by: By): Promise<void>--><!--Device-UiDriver-assertComponentExist(by: By): Promise<void>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| by | By | Yes | Attributes of the target component. |
+| by | [By](arkts-test-by-c.md) | Yes | Attributes of the target component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Error codes:**
 
@@ -76,8 +75,7 @@ async function demo() {
 click(x: number, y: number): Promise<void>
 ```
 
-Clicks a specific point of this **UiDriver** object based on the given coordinates. This API uses a promise to
-return the result.
+Clicks a specific point of this **UiDriver** object based on the given coordinates. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -85,20 +83,22 @@ return the result.
 
 **Substitutes:** [click](arkts-test-component-c.md#click-1)
 
+<!--Device-UiDriver-click(x: number, y: number): Promise<void>--><!--Device-UiDriver-click(x: number, y: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | Number, which indicates the horizontal coordinate of the target point. The value is an integergreater than or equal to 0.<br>Unit: px |
-| y | number | Yes | Number, which indicates the vertical coordinate of the target point. The value is an integergreater than or equal to 0.<br>Unit: px |
+| x | number | Yes | Number, which indicates the horizontal coordinate of the target point. The value is an integer greater than or equal to 0.<br>Unit: px |
+| y | number | Yes | Number, which indicates the vertical coordinate of the target point. The value is an integer greater than or equal to 0.<br>Unit: px |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Example**
 
@@ -121,9 +121,9 @@ static create(): UiDriver
 
 Creates a **UiDriver** object and returns the object created. This API is a static API.
 
-> **NOTE**
->
-> This method is supported since API version 8 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This method is supported since API version 8 and deprecated since API version 9. You are advised to use  
 > [create<sup>9+</sup>](arkts-test-driver-c.md#create-1) instead.
 
 **Since:** 8
@@ -132,13 +132,15 @@ Creates a **UiDriver** object and returns the object created. This API is a stat
 
 **Substitutes:** [create](arkts-test-driver-c.md#create-1)
 
+<!--Device-UiDriver-static create(): UiDriver--><!--Device-UiDriver-static create(): UiDriver-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| UiDriver | - **UiDriver** object created. |
+| [UiDriver](arkts-test-uidriver-c.md) | - **UiDriver** object created. |
 
 **Example**
 
@@ -166,6 +168,8 @@ Delays this **UiDriver** object within the specified duration. This API uses a p
 
 **Substitutes:** [delayMs](arkts-test-driver-c.md#delayms-1)
 
+<!--Device-UiDriver-delayMs(duration: number): Promise<void>--><!--Device-UiDriver-delayMs(duration: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -178,7 +182,7 @@ Delays this **UiDriver** object within the specified duration. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Example**
 
@@ -199,8 +203,7 @@ async function demo() {
 doubleClick(x: number, y: number): Promise<void>
 ```
 
-Double-clicks a specific point of this **UiDriver** object based on the given coordinates. This API uses a promise
-to return the result.
+Double-clicks a specific point of this **UiDriver** object based on the given coordinates. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -208,20 +211,22 @@ to return the result.
 
 **Substitutes:** [doubleClick](arkts-test-component-c.md#doubleclick-1)
 
+<!--Device-UiDriver-doubleClick(x: number, y: number): Promise<void>--><!--Device-UiDriver-doubleClick(x: number, y: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | Number, which indicates the horizontal coordinate of the target point. The value is an integergreater than or equal to 0.<br>Unit: px |
-| y | number | Yes | Number, which indicates the vertical coordinate of the target point. The value is an integergreater than or equal to 0.<br>Unit: px |
+| x | number | Yes | Number, which indicates the horizontal coordinate of the target point. The value is an integer greater than or equal to 0.<br>Unit: px |
+| y | number | Yes | Number, which indicates the vertical coordinate of the target point. The value is an integer greater than or equal to 0.<br>Unit: px |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Example**
 
@@ -242,8 +247,7 @@ async function demo() {
 findComponent(by: By): Promise<UiComponent>
 ```
 
-Searches this **UiDriver** object for the target component that matches the given attributes. This API uses a
-promise to return the result.
+Searches this **UiDriver** object for the target component that matches the given attributes. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -251,19 +255,21 @@ promise to return the result.
 
 **Substitutes:** findComponent(on:
 
+<!--Device-UiDriver-findComponent(by: By): Promise<UiComponent>--><!--Device-UiDriver-findComponent(by: By): Promise<UiComponent>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| by | By | Yes | Attributes of the target component. |
+| by | [By](arkts-test-by-c.md) | Yes | Attributes of the target component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;UiComponent&gt; | - Promise used to return the component. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<UiComponent> | - Promise used to return the component. |
 
 **Example**
 
@@ -284,8 +290,7 @@ async function demo() {
 findComponents(by: By): Promise<Array<UiComponent>>
 ```
 
-Searches this **UiDriver** object for all components that match the given attributes. This API uses a promise to
-return the result.
+Searches this **UiDriver** object for all components that match the given attributes. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -293,19 +298,21 @@ return the result.
 
 **Substitutes:** findComponents(on:
 
+<!--Device-UiDriver-findComponents(by: By): Promise<Array<UiComponent>>--><!--Device-UiDriver-findComponents(by: By): Promise<Array<UiComponent>>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| by | By | Yes | Attributes of the target component. |
+| by | [By](arkts-test-by-c.md) | Yes | Attributes of the target component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;UiComponent&gt;&gt; | - Promise used to return the list of components. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<UiComponent>> | - Promise used to return the list of components. |
 
 **Example**
 
@@ -326,8 +333,7 @@ async function demo() {
 longClick(x: number, y: number): Promise<void>
 ```
 
-Long-clicks a specific point of this **UiDriver** object based on the given coordinates. This API uses a promise to
-return the result.
+Long-clicks a specific point of this **UiDriver** object based on the given coordinates. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -335,20 +341,22 @@ return the result.
 
 **Substitutes:** [longClick](arkts-test-component-c.md#longclick-1)
 
+<!--Device-UiDriver-longClick(x: number, y: number): Promise<void>--><!--Device-UiDriver-longClick(x: number, y: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | Number, which indicates the horizontal coordinate of the target point. The value is an integergreater than or equal to 0.<br>Unit: px |
-| y | number | Yes | Number, which indicates the vertical coordinate of the target point. The value is an integergreater than or equal to 0.<br>Unit: px |
+| x | number | Yes | Number, which indicates the horizontal coordinate of the target point. The value is an integer greater than or equal to 0.<br>Unit: px |
+| y | number | Yes | Number, which indicates the vertical coordinate of the target point. The value is an integer greater than or equal to 0.<br>Unit: px |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Example**
 
@@ -377,13 +385,15 @@ Presses the Back button on this **UiDriver** object. This API uses a promise to 
 
 **Substitutes:** [pressBack()](arkts-test-driver-c.md#pressback-1)
 
+<!--Device-UiDriver-pressBack(): Promise<void>--><!--Device-UiDriver-pressBack(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Example**
 
@@ -404,14 +414,15 @@ async function demo() {
 screenCap(savePath: string): Promise<boolean>
 ```
 
-Captures the current screen of this **UiDriver** object and saves it as a PNG image to the given save path. This
-API uses a promise to return the result.
+Captures the current screen of this **UiDriver** object and saves it as a PNG image to the given save path. This API uses a promise to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** screenCap(savePath:
+
+<!--Device-UiDriver-screenCap(savePath: string): Promise<boolean>--><!--Device-UiDriver-screenCap(savePath: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -425,7 +436,7 @@ API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the screenshot operation is successful. The value **true*The value **true** indicates the screenshot operation is successful, and **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | - Promise used to return whether the screenshot operation is successful. The value **true* The value **true** indicates the screenshot operation is successful, and **false** indicates the opposite. |
 
 **Example**
 
@@ -446,8 +457,7 @@ async function demo() {
 swipe(startx: number, starty: number, endx: number, endy: number): Promise<void>
 ```
 
-Swipes on this **UiDriver** object from the start point to the end point based on the given coordinates. This API
-uses a promise to return the result.
+Swipes on this **UiDriver** object from the start point to the end point based on the given coordinates. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -455,22 +465,24 @@ uses a promise to return the result.
 
 **Substitutes:** [swipe](arkts-test-driver-c.md#swipe-1)
 
+<!--Device-UiDriver-swipe(startx: number, starty: number, endx: number, endy: number): Promise<void>--><!--Device-UiDriver-swipe(startx: number, starty: number, endx: number, endy: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startx | number | Yes | Number, which indicates the horizontal coordinate of the start point. The value is an integergreater than or equal to 0.<br>Unit: px |
-| starty | number | Yes | Number, which indicates the vertical coordinate of the start point. The value is an integergreater than or equal to 0.<br>Unit: px |
-| endx | number | Yes | Number, which indicates the horizontal coordinate of the target point. The value is an integergreater than or equal to 0.<br>Unit: px |
-| endy | number | Yes | Number, which indicates the vertical coordinate of the target point. The value is an integergreater than or equal to 0.<br>Unit: px |
+| startx | number | Yes | Number, which indicates the horizontal coordinate of the start point. The value is an integer greater than or equal to 0.<br>Unit: px |
+| starty | number | Yes | Number, which indicates the vertical coordinate of the start point. The value is an integer greater than or equal to 0.<br>Unit: px |
+| endx | number | Yes | Number, which indicates the horizontal coordinate of the target point. The value is an integer greater than or equal to 0.<br>Unit: px |
+| endy | number | Yes | Number, which indicates the vertical coordinate of the target point. The value is an integer greater than or equal to 0.<br>Unit: px |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Example**
 
@@ -491,14 +503,15 @@ async function demo() {
 triggerKey(keyCode: number): Promise<void>
 ```
 
-Triggers the key of this **UiDriver** object that matches the given key code. This API uses a promise to return the
-result.
+Triggers the key of this **UiDriver** object that matches the given key code. This API uses a promise to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** triggerKey(keyCode:
+
+<!--Device-UiDriver-triggerKey(keyCode: number): Promise<void>--><!--Device-UiDriver-triggerKey(keyCode: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -512,7 +525,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Example**
 

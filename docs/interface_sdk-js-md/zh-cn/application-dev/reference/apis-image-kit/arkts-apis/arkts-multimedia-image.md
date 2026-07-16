@@ -4,49 +4,37 @@
 
 本模块包含以下基础类：
 
-- [ImageSource](arkts-image-imagesource-i.md)类，提供获取[图片信息](arkts-image-imageinfo-i.md)、将图片解码为PixelMap或Picture、读取和修改
-[图片属性](arkts-image-propertykey-e.md)的能力。[支持解码的图片格式](../../../../reference/apis-image-kit/arkts-apis-image-ImageSource.md#属性)
-包括png、jpeg、bmp、gif、webp、dng、heic<sup>12+</sup>、wbmp<sup>23+</sup>、heifs<sup>23+</sup>、tiff<sup>23+</sup>。
-- [ImagePacker](arkts-image-imagepacker-i.md)类，提供将图片编码为压缩后的数据流或文件的能力。编码前需获取图片的ImageSource、PixelMap或Picture作为输入。
-[支持编码的图片格式](../../../../reference/apis-image-kit/arkts-apis-image-ImagePacker.md#属性)包括jpeg、webp、png、heic<sup>12+</sup>、
-gif<sup>18+</sup>。
-- [PixelMap](arkts-image-pixelmap-i.md)类，位图对象，包含像素数据以及[图片信息](arkts-image-imageinfo-i.md)。可用于读取或写入像素数据，进行裁剪、缩放、平移、旋转、镜像等操作，并可直接传
-给[Image组件](./@internal/component/ets/image)用于显示。还提供了获取和设置图片色域、HDR元数据的方法。
-- [Picture](arkts-image-picture-i.md)类，多图对象，由主图、辅助图和元数据组成。其中，主图包含了主要图像信息；辅助图用于存储与主图相关的附加信息；元数据用于存储与图片相关的其他信息。Picture提供获取主图
-、合成HDR图、获取辅助图、设置辅助图、获取元数据、设置元数据等方法。
-- [AuxiliaryPicture](arkts-image-auxiliarypicture-i.md)类，辅助图一般用于辅助主图进行特殊信息的展示，使图像包含更丰富的信息。目前支持的辅助图的类型可参考
-[AuxiliaryPictureType](arkts-image-auxiliarypicturetype-e.md)。
-- [Metadata](arkts-image-metadata-i.md)类，以Key-Value的形式存储图像的元数据。目前支持的元数据类型可参考[MetadataType](arkts-image-metadatatype-e.md)，包含
-Exif元数据、水印裁剪图元数据和HEIF序列图像元数据。Exif元数据的Key可参考[PropertyKey](arkts-image-propertykey-e.md)；水印裁剪图元数据的Key可参考
-[FragmentMapPropertyKey](arkts-image-fragmentmappropertykey-e.md)；HEIF序列图像元数据的Key可参考
-[HeifsPropertyKey](arkts-image-heifspropertykey-e.md)。
-- [ExifMetadata](arkts-image-exifmetadata-c.md)类，以Key-Value的形式存储图像的Exif元数据。Exif元数据的Key可参考
-[PropertyKey](arkts-image-propertykey-e.md)。
-- [MakerNoteHuaweiMetadata](arkts-image-makernotehuaweimetadata-c.md)类，以Key-Value的形式存储图像Huawei相机定义的照片元数据。Huawei相机定义的照片元数据的
-Key可参考[PropertyKey](arkts-image-propertykey-e.md)。
-- [HeifsMetadata](arkts-image-heifsmetadata-c.md)类，以Key-Value的形式存储图像的HEIF序列图像元数据。HEIF序列图像元数据的Key可参考
-[HeifsPropertyKey](arkts-image-heifspropertykey-e.md)。
-- [WebPMetadata](../../../../reference/apis-image-kit/arkts-apis-image-WebPMetadata.md)类，以Key-Value的形式存储图像的WebP图像元数据。
-WebP图像元数据的Key可参考[WebPPropertyKey](arkts-image-webppropertykey-e.md)。
-- [GifMetadata](../../../../reference/apis-image-kit/arkts-apis-image-GifMetadata.md)类，以Key-Value的形式存储图像的GIF图像元数据。GIF图像
-元数据的Key可参考[GifPropertyKey](arkts-image-gifpropertykey-e.md)。
-- [JfifMetadata](../../../../reference/apis-image-kit/arkts-apis-image-JfifMetadata.md)类，以Key-Value的形式存储图像的JFIF图像元数据。
-JFIF图像元数据的Key可参考[JfifPropertyKey](arkts-image-jfifpropertykey-e.md)。
-- [TiffMetadata](../../../../reference/apis-image-kit/arkts-apis-image-TiffMetadata.md)类，以Key-Value的形式存储图像的TIFF图像元数据。
-TIFF图像元数据的Key可参考[TiffPropertyKey](arkts-image-tiffpropertykey-e.md)。
-- [PngMetadata](../../../../reference/apis-image-kit/arkts-apis-image-PngMetadata.md)类，以Key-Value的形式存储图像的PNG图像元数据。PNG图像
-元数据的Key可参考[PngPropertyKey](arkts-image-pngpropertykey-e.md)。
-- [AvisMetadata](../../../../reference/apis-image-kit/arkts-apis-image-AvisMetadata.md)类，以Key-Value的形式存储图像的AVIS图像元数据。
-AVIS图像元数据的Key可参考[AvisPropertyKey](arkts-image-avispropertykey-e.md)。
-- [ImageReceiver](arkts-image-imagereceiver-i.md)类，作为图片的消费者，用于从Surface中接收、读取图片。
-- [ImageCreator](arkts-image-imagecreator-i.md)类，作为图片的生产者，用于将图片写入到Surface中。
-- [Image](arkts-image-image-i.md)类，供ImageReceiver和ImageCreator使用，用于传输图片对象，其实际内容由生产者决定。如相机预览流提供的Image对象存储了YUV数据、相机拍照提供的
-Image对象存储了JPEG文件。
+- [ImageSource](arkts-image-imagesource-i.md)类，提供获取[图片信息](arkts-image-imageinfo-i.md)、将图片解码为PixelMap或Picture、读取和修改[图片属性](arkts-image-propertykey-e.md)的能力。[支持解码的图片格式](../../../../reference/apis-image-kit/arkts-apis-image-ImageSource.md#属性)包括png、jpeg、bmp、gif、webp、dng、heic<sup>12+</sup>、wbmp<sup>23+</sup>、heifs<sup>23+</sup>、tiff<sup>23+</sup>。  
+- [ImagePacker](arkts-image-imagepacker-i.md)类，提供将图片编码为压缩后的数据流或文件的能力。编码前需获取图片的ImageSource、PixelMap或Picture作为输入。[支持编码的图片格式](../../../../reference/apis-image-kit/arkts-apis-image-ImagePacker.md#属性)包括jpeg、webp、png、heic<sup>12+</sup>、gif<sup>18+</sup>。  
+- [PixelMap](arkts-image-pixelmap-i.md)类，位图对象，包含像素数据以及[图片信息](arkts-image-imageinfo-i.md)。可用于读取或写入像素数据，进行裁剪、缩放、平移、旋转、镜像等操作，并可直接传给[Image组件](./@internal/component/ets/image)用于显示。还提供了获取和设置图片色域、HDR元数据的方法。  
+- [Picture](arkts-image-picture-i.md)类，多图对象，由主图、辅助图和元数据组成。其中，主图包含了主要图像信息；辅助图用于存储与主图相关的附加信息；元数据用于存储与图片相关的其他信息。Picture提供获取主图、合成HDR图、获取辅助图、设置辅助图、获取元数据、设置元数据等方法。  
+- [AuxiliaryPicture](arkts-image-auxiliarypicture-i.md)类，辅助图一般用于辅助主图进行特殊信息的展示，使图像包含更丰富的信息。目前支持的辅助图的类型可参考[AuxiliaryPictureType](arkts-image-auxiliarypicturetype-e.md)。  
+- [Metadata](arkts-image-metadata-i.md)类，以Key-Value的形式存储图像的元数据。目前支持的元数据类型可参考[MetadataType](arkts-image-metadatatype-e.md)，包含Exif元数据、水印裁剪图元数据和HEIF序列图像元数据。Exif元数据的Key可参考[PropertyKey](arkts-image-propertykey-e.md)；水印裁剪图元数据的Key可参考[FragmentMapPropertyKey](arkts-image-fragmentmappropertykey-e.md)；HEIF序列图像元数据的Key可参考[HeifsPropertyKey](arkts-image-heifspropertykey-e.md)。  
+- [ExifMetadata](arkts-image-exifmetadata-c.md)类，以Key-Value的形式存储图像的Exif元数据。Exif元数据的Key可参考[PropertyKey](arkts-image-propertykey-e.md)。  
+- [MakerNoteHuaweiMetadata](arkts-image-makernotehuaweimetadata-c.md)类，以Key-Value的形式存储图像Huawei相机定义的照片元数据。Huawei相机定义的照片元数据的Key可参考[PropertyKey](arkts-image-propertykey-e.md)。  
+- [HeifsMetadata](arkts-image-heifsmetadata-c.md)类，以Key-Value的形式存储图像的HEIF序列图像元数据。HEIF序列图像元数据的Key可参考[HeifsPropertyKey](arkts-image-heifspropertykey-e.md)。  
+- [WebPMetadata](../../../../reference/apis-image-kit/arkts-apis-image-WebPMetadata.md)类，以Key-Value的形式存储图像的WebP图像元数据。WebP图像元数据的Key可参考[WebPPropertyKey](arkts-image-webppropertykey-e.md)。  
+- [GifMetadata](../../../../reference/apis-image-kit/arkts-apis-image-GifMetadata.md)类，以Key-Value的形式存储图像的GIF图像元数据。GIF图像元数据的Key可参考[GifPropertyKey](arkts-image-gifpropertykey-e.md)。  
+- [JfifMetadata](../../../../reference/apis-image-kit/arkts-apis-image-JfifMetadata.md)类，以Key-Value的形式存储图像的JFIF图像元数据。JFIF图像元数据的Key可参考[JfifPropertyKey](arkts-image-jfifpropertykey-e.md)。  
+- [TiffMetadata](../../../../reference/apis-image-kit/arkts-apis-image-TiffMetadata.md)类，以Key-Value的形式存储图像的TIFF图像元数据。TIFF图像元数据的Key可参考[TiffPropertyKey](arkts-image-tiffpropertykey-e.md)。  
+- [PngMetadata](../../../../reference/apis-image-kit/arkts-apis-image-PngMetadata.md)类，以Key-Value的形式存储图像的PNG图像元数据。PNG图像元数据的Key可参考[PngPropertyKey](arkts-image-pngpropertykey-e.md)。  
+- [AvisMetadata](../../../../reference/apis-image-kit/arkts-apis-image-AvisMetadata.md)类，以Key-Value的形式存储图像的AVIS图像元数据。AVIS图像元数据的Key可参考[AvisPropertyKey](arkts-image-avispropertykey-e.md)。  
+- [ImageReceiver](arkts-image-imagereceiver-i.md)类，作为图片的消费者，用于从Surface中接收、读取图片。  
+- [ImageCreator](arkts-image-imagecreator-i.md)类，作为图片的生产者，用于将图片写入到Surface中。  
+- [Image](arkts-image-image-i.md)类，供ImageReceiver和ImageCreator使用，用于传输图片对象，其实际内容由生产者决定。如相机预览流提供的Image对象存储了YUV数据、相机拍照提供的Image对象存储了JPEG文件。
 
 **起始版本：** 6
 
+<!--Device-unnamed-declare namespace image--><!--Device-unnamed-declare namespace image-End-->
+
 **系统能力：** 
 - API版本11+：SystemCapability.Multimedia.Image.Core
+
+## 导入模块
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+```
 
 ## 汇总
 
@@ -54,15 +42,15 @@ Image对象存储了JPEG文件。
 
 | 名称 | 说明 |
 | --- | --- |
-| [CreateIncrementalSource](arkts-image-createincrementalsource-f.md#createincrementalsource-1) | 通过缓冲区以增量的方式创建ImageSource实例，IncrementalSource不支持读写Exif信息。由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-imagesource-i.md#release-1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。以增量方式创建的ImageSource实例，仅支持使用以下功能，同步、异步callback、异步Promise均支持。- 获取图片信息：指定序号-[getImageInfo](arkts-image-imagesource-i.md#getimageinfo-1)、直接获取-[getImageInfo](arkts-image-imagesource-i.md#getimageinfo-3)- 获取图片中给定索引处图像的指定属性键的值：[getImageProperty](arkts-image-imagesource-i.md#getimageproperty-1)- 批量获取图片中的指定属性键的值：[getImageProperties](arkts-image-imagesource-i.md#getimageproperties-1)- 更新增量数据：[updateData](arkts-image-imagesource-i.md#updatedata-1)- 创建PixelMap对象：通过图片解码参数创建-[createPixelMap](arkts-image-createpixelmap-f.md#createpixelmap-1)、通过默认参数创建-[createPixelMap](arkts-image-createpixelmap-f.md#createpixelmap-1) 、通过图片解码参数-[createPixelMap](arkts-image-createpixelmap-f.md#createpixelmap-1)- 释放ImageSource实例：[release](arkts-image-imagesource-i.md#release-1) |
+| [CreateIncrementalSource](arkts-image-createincrementalsource-f.md#createincrementalsource-1) | 通过缓冲区以增量的方式创建ImageSource实例，IncrementalSource不支持读写Exif信息。由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-imagesource-i.md#release-1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。以增量方式创建的ImageSource实例，仅支持使用以下功能，同步、异步callback、异步Promise均支持。- 获取图片信息：指定序号-[getImageInfo](arkts-image-imagesource-i.md#getimageinfo-1)、直接获取-[getImageInfo](arkts-image-imagesource-i.md#getimageinfo-3) - 获取图片中给定索引处图像的指定属性键的值：[getImageProperty](arkts-image-imagesource-i.md#getimageproperty-1) - 批量获取图片中的指定属性键的值：[getImageProperties](image.ImageSource.getImageProperties(key: Array&lt;PropertyKey&gt;)) - 更新增量数据：[updateData](arkts-image-imagesource-i.md#updatedata-1) - 创建PixelMap对象：通过图片解码参数创建-[createPixelMap](arkts-image-createpixelmap-f.md#createpixelmap-1)、通过默认参数创建-[createPixelMap](arkts-image-createpixelmap-f.md#createpixelmap-1) 、通过图片解码参数-[createPixelMap](arkts-image-createpixelmap-f.md#createpixelmap-1) - 释放ImageSource实例：[release](arkts-image-imagesource-i.md#release-1) |
 | [CreateIncrementalSource](arkts-image-createincrementalsource-f.md#createincrementalsource-2) | 通过缓冲区以增量的方式创建ImageSource实例，IncrementalSource不支持读写Exif信息。此接口支持的功能与[CreateIncrementalSource(buf: ArrayBuffer): ImageSource](arkts-image-createincrementalsource-f.md#createincrementalsource-1)所生成的实例支持的功能相同。由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-imagesource-i.md#release-1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。 |
 | [createAuxiliaryPicture](arkts-image-createauxiliarypicture-f.md#createauxiliarypicture-1) | 通过ArrayBuffer图片数据、辅助图尺寸、辅助图类型创建AuxiliaryPicture实例。该接口仅支持传入BGRA的连续像素数据，会创建出RGBA的辅助图。由于图片占用内存较大，所以当AuxiliaryPicture实例使用完成后，应主动调用[release](arkts-image-auxiliarypicture-i.md#release-1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。 |
 | [createAuxiliaryPictureUsingAllocator](arkts-image-createauxiliarypictureusingallocator-f.md#createauxiliarypictureusingallocator-1) | 使用指定的内存类型，根据辅助图信息和像素数据创建辅助图对象。 |
 | [createEmptyPixelMap](arkts-image-createemptypixelmap-f.md#createemptypixelmap-1) | Creates an empty PixelMap.The following pixel format is not supported for PixelMap creation: ASTC_4x4. |
-| [createImageCreator](arkts-image-createimagecreator-f.md#createimagecreator-1) | 通过宽、高、图片格式、容量创建ImageCreator实例。由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用[release](arkts-image-imagecreator-i.md#release-1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。@link image.createImageCreator}代替。 |
+| [createImageCreator](arkts-image-createimagecreator-f.md#createimagecreator-1) | 通过宽、高、图片格式、容量创建ImageCreator实例。由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用[release](arkts-image-imagecreator-i.md#release-1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。 |
 | [createImageCreator](arkts-image-createimagecreator-f.md#createimagecreator-2) | 通过图片大小、图片格式、容量创建ImageCreator实例。由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用[release](arkts-image-imagecreator-i.md#release-1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。 |
 | [createImagePacker](arkts-image-createimagepacker-f.md#createimagepacker-1) | 创建ImagePacker实例。由于图片占用内存较大，所以当ImagePacker实例使用完成后，应主动调用[release](arkts-image-imagepacker-i.md#release-1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。 |
-| [createImageReceiver](arkts-image-createimagereceiver-f.md#createimagereceiver-1) | 通过宽、高、图片格式、容量创建ImageReceiver实例。ImageReceiver做为图片的接收方、消费者，它的参数属性实际上不会对接收到的图片产生影响。图片属性的配置应在发送方、生产者进行，如相机预览流[createPreviewOutput](@ohos.multimedia.camera:camera.CameraManager.createPreviewOutput(profile: Profile, surfaceId: string))。由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用[release](arkts-image-imagereceiver-i.md#release-1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。@link image.createImageReceiver}代替。 |
+| [createImageReceiver](arkts-image-createimagereceiver-f.md#createimagereceiver-1) | 通过宽、高、图片格式、容量创建ImageReceiver实例。ImageReceiver做为图片的接收方、消费者，它的参数属性实际上不会对接收到的图片产生影响。图片属性的配置应在发送方、生产者进行，如相机预览流[createPreviewOutput](@ohos.multimedia.camera:camera.CameraManager.createPreviewOutput(profile: Profile, surfaceId: string))。由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用[release](arkts-image-imagereceiver-i.md#release-1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。 |
 | [createImageReceiver](arkts-image-createimagereceiver-f.md#createimagereceiver-2) | 通过图片大小、图片格式、容量创建ImageReceiver实例。ImageReceiver作为图片的接收方、消费者，它的参数属性实际上不会对接收到的图片产生影响。图片属性的配置应在发送方、生产者进行，如相机预览流[createPreviewOutput](@ohos.multimedia.camera:camera.CameraManager.createPreviewOutput(profile: Profile, surfaceId: string))。由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用[release](arkts-image-imagereceiver-i.md#release-1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。 |
 | [createImageReceiver](arkts-image-createimagereceiver-f.md#createimagereceiver-3) | 通过ImageReceiverOptions创建ImageReceiver实例。ImageReceiver作为图片的接收方、消费者，其参数属性实际上不会对接收到的图片产生影响。图片属性的配置应在发送方、生产者进行，如相机预览流[createPreviewOutput](@ohos.multimedia.camera:camera.CameraManager.createPreviewOutput(profile: Profile, surfaceId: string))。由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用[release](arkts-image-imagereceiver-i.md#release-1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。 |
 | [createImageSource](arkts-image-createimagesource-f.md#createimagesource-1) | 通过传入的uri创建ImageSource实例。由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-imagesource-i.md#release-1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。 |
@@ -77,8 +65,8 @@ Image对象存储了JPEG文件。
 | [createPixelMap](arkts-image-createpixelmap-f.md#createpixelmap-1) | Create pixelmap by data buffer.Starting from API 26.0.0, it is recommended to use {@link createPixelMapFromPixels} instead for better exception handling capabilities. |
 | [createPixelMap](arkts-image-createpixelmap-f.md#createpixelmap-2) | Create pixelmap by data buffer.Starting from API 26.0.0, it is recommended to use {@link createPixelMapFromPixels} instead for better exception handling capabilities. |
 | [createPixelMapFromParcel](arkts-image-createpixelmapfromparcel-f.md#createpixelmapfromparcel-1) | Creates a PixelMap object based on MessageSequence parameter. |
-| [createPixelMapFromPixels](arkts-image-createpixelmapfrompixels-f.md#createpixelmapfrompixels-1) | Creates a PixelMap from existing pixel data. The pixel data will be copied and converted to the specifiedpixel format to initialize the PixelMap.The following pixel formats are not supported for PixelMap creation:RGBA_1010102, YCBCR_P010, YCRCB_P010, ASTC_4x4. |
-| [createPixelMapFromPixelsSync](arkts-image-createpixelmapfrompixelssync-f.md#createpixelmapfrompixelssync-1) | Creates a PixelMap from existing pixel data. The pixel data will be copied and converted to the specifiedpixel format to initialize the PixelMap.The following pixel formats are not supported for PixelMap creation:RGBA_1010102, YCBCR_P010, YCRCB_P010, ASTC_4x4. |
+| [createPixelMapFromPixels](arkts-image-createpixelmapfrompixels-f.md#createpixelmapfrompixels-1) | Creates a PixelMap from existing pixel data. The pixel data will be copied and converted to the specified pixel format to initialize the PixelMap.The following pixel formats are not supported for PixelMap creation:RGBA_1010102, YCBCR_P010, YCRCB_P010, ASTC_4x4. |
+| [createPixelMapFromPixelsSync](arkts-image-createpixelmapfrompixelssync-f.md#createpixelmapfrompixelssync-1) | Creates a PixelMap from existing pixel data. The pixel data will be copied and converted to the specified pixel format to initialize the PixelMap.The following pixel formats are not supported for PixelMap creation:RGBA_1010102, YCBCR_P010, YCRCB_P010, ASTC_4x4. |
 | [createPixelMapFromSurface](arkts-image-createpixelmapfromsurface-f.md#createpixelmapfromsurface-1) | Creates a PixelMap object from surface id. |
 | [createPixelMapFromSurface](arkts-image-createpixelmapfromsurface-f.md#createpixelmapfromsurface-2) | Creates a PixelMap object from surface id. |
 | [createPixelMapFromSurfaceSync](arkts-image-createpixelmapfromsurfacesync-f.md#createpixelmapfromsurfacesync-1) | Creates a PixelMap object from surface id. |
@@ -87,9 +75,9 @@ Image对象存储了JPEG文件。
 | [createPixelMapFromSurfaceWithTransformationSync](arkts-image-createpixelmapfromsurfacewithtransformationsync-f.md#createpixelmapfromsurfacewithtransformationsync-1) | Creates a PixelMap object based on the ID of a Surface with transformation. |
 | [createPixelMapSync](arkts-image-createpixelmapsync-f.md#createpixelmapsync-1) | Create pixelmap by data buffer.Starting from API 26.0.0, it is recommended to use {@link createPixelMapFromPixelsSync} instead for better exception handling capabilities. |
 | [createPixelMapSync](arkts-image-createpixelmapsync-f.md#createpixelmapsync-2) | Create an empty pixelmap.Starting from API 26.0.0, it is recommended to use {@link createEmptyPixelMap} instead for better exception handling capabilities. |
-| [createPixelMapUsingAllocator](arkts-image-createpixelmapusingallocator-f.md#createpixelmapusingallocator-1) | Create pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specifiedby allocatorType. By default, the system selects the memory type based on the image type, image size,platform capability, etc. When processing the PixelMap returned by this interface, please alwaysconsider the impact of stride. |
-| [createPixelMapUsingAllocatorSync](arkts-image-createpixelmapusingallocatorsync-f.md#createpixelmapusingallocatorsync-1) | Create pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specifiedby allocatorType. By default, the system selects the memory type based on the image type, image size,platform capability, etc. When processing the PixelMap returned by this interface, please alwaysconsider the impact of stride. |
-| [createPixelMapUsingAllocatorSync](arkts-image-createpixelmapusingallocatorsync-f.md#createpixelmapusingallocatorsync-2) | Create an empty pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specifiedby allocatorType. By default, the system selects the memory type based on the image type, image size,platform capability, etc. When processing the PixelMap returned by this interface, please alwaysconsider the impact of stride. |
+| [createPixelMapUsingAllocator](arkts-image-createpixelmapusingallocator-f.md#createpixelmapusingallocator-1) | Create pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size,platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride. |
+| [createPixelMapUsingAllocatorSync](arkts-image-createpixelmapusingallocatorsync-f.md#createpixelmapusingallocatorsync-1) | Create pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size,platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride. |
+| [createPixelMapUsingAllocatorSync](arkts-image-createpixelmapusingallocatorsync-f.md#createpixelmapusingallocatorsync-2) | Create an empty pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size,platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride. |
 | [createPremultipliedPixelMap](arkts-image-createpremultipliedpixelmap-f.md#createpremultipliedpixelmap-1) | Transforms pixelmap from unpremultiplied alpha format to premultiplied alpha format. |
 | [createPremultipliedPixelMap](arkts-image-createpremultipliedpixelmap-f.md#createpremultipliedpixelmap-2) | Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha format. |
 | [createUnpremultipliedPixelMap](arkts-image-createunpremultipliedpixelmap-f.md#createunpremultipliedpixelmap-1) | Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha format. |
@@ -102,8 +90,8 @@ Image对象存储了JPEG文件。
 
 | 名称 | 说明 |
 | --- | --- |
-| [createPictureByHdrAndSdrPixelMap](arkts-image-createpicturebyhdrandsdrpixelmap-f-sys.md#createpicturebyhdrandsdrpixelmap-1) | 根据HDR PixelMap和SDR PixelMap创建Picture对象。系统将使用HDR和SDR PixelMap生成一个增益图（gainmap），返回的Picture对象将包含SDR PixelMap和生成的gainmapPixelMap，像素格式为RGBA8888。使用Promise异步回调。 |
-| [createPictureByHdrAndSdrPixelMap](arkts-image-createpicturebyhdrandsdrpixelmap-f-sys.md#createpicturebyhdrandsdrpixelmap-2) | 根据HDR PixelMap和SDR PixelMap创建Picture对象。系统将使用HDR和SDR PixelMap生成一个Gainmap（增益图），返回的Picture对象将包含SDR PixelMap和生成的GainmapPixelMap，像素格式为RGBA8888。Gainmap PixelMap的尺寸可以通过设置params进行选择。使用Promise异步回调。 |
+| [createPictureByHdrAndSdrPixelMap](arkts-image-createpicturebyhdrandsdrpixelmap-f-sys.md#createpicturebyhdrandsdrpixelmap-1) | 根据HDR PixelMap和SDR PixelMap创建Picture对象。系统将使用HDR和SDR PixelMap生成一个增益图（gainmap），返回的Picture对象将包含SDR PixelMap和生成的gainmap PixelMap，像素格式为RGBA8888。使用Promise异步回调。 |
+| [createPictureByHdrAndSdrPixelMap](arkts-image-createpicturebyhdrandsdrpixelmap-f-sys.md#createpicturebyhdrandsdrpixelmap-2) | 根据HDR PixelMap和SDR PixelMap创建Picture对象。系统将使用HDR和SDR PixelMap生成一个Gainmap（增益图），返回的Picture对象将包含SDR PixelMap和生成的Gainmap PixelMap，像素格式为RGBA8888。Gainmap PixelMap的尺寸可以通过设置params进行选择。使用Promise异步回调。 |
 | [decomposeToPicture](arkts-image-decomposetopicture-f-sys.md#decomposetopicture-1) | 将HDR PixelMap分解为包含SDR PixelMap和增益图（gainmap）的Picture对象。使用Promise异步回调。 |
 <!--DelEnd-->
 
@@ -135,7 +123,7 @@ Image对象存储了JPEG文件。
 | [DecodingOptionsForPicture](arkts-image-decodingoptionsforpicture-i.md) | 图像解码设置选项。 |
 | [DecodingOptionsForThumbnail](arkts-image-decodingoptionsforthumbnail-i.md) | 缩略图解码参数选项。 |
 | [GainmapChannel](arkts-image-gainmapchannel-i.md) | Gainmap图单个通道的数据内容，参考ISO 21496-1。 |
-| [GetImagePropertyOptions](arkts-image-getimagepropertyoptions-i.md) | 表示查询图片属性的索引。@link image.ImagePropertyOptions}代替。 |
+| [GetImagePropertyOptions](arkts-image-getimagepropertyoptions-i.md) | 表示查询图片属性的索引。 |
 | [HdrComposeOptions](arkts-image-hdrcomposeoptions-i.md) | Picture合成HDR时可配置的参数选项。 |
 | [HdrGainmapMetadata](arkts-image-hdrgainmapmetadata-i.md) | Gainmap使用的元数据值，[HdrMetadataKey](arkts-image-hdrmetadatakey-e.md)中HDR_GAINMAP_METADATA关键字对应的值，参考ISO 21496-1。 |
 | [HdrStaticMetadata](arkts-image-hdrstaticmetadata-i.md) | 静态元数据值，[HdrMetadataKey](arkts-image-hdrmetadatakey-e.md)中HDR_STATIC_METADATA关键字对应的值。 |
@@ -157,7 +145,7 @@ Image对象存储了JPEG文件。
 | [PackingOptionsForTiff](arkts-image-packingoptionsfortiff-i.md) | 描述TIFF图像编码参数的选项。 |
 | [PackingSizeLimit](arkts-image-packingsizelimit-i.md) | 图片编码的大小限制。 |
 | [Picture](arkts-image-picture-i.md) | Picture类，一些包含特殊信息的图片可以解码为Picture（也可以称为多图对象）。多图对象一般包含主图、辅助图和元数据。其中主图包含图像的大部分信息，主要用于显示图像内容；辅助图用于存储与主图相关但不同的数据，展示图像更丰富的信息；元数据一般用来存储关于图像文件的信息。多图对象类用于读取或写入多图对象。在调用Picture的方法前，需要先通过[image.createPicture](arkts-image-createpicture-f.md#createpicture-1)创建一个Picture实例。由于图片占用内存较大，所以当Picture实例使用完成后，应主动调用[release](arkts-image-picture-i.md#release-1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。 |
-| [PixelMap](arkts-image-pixelmap-i.md) | The **PixelMap** class provides APIs to read or write image data and obtain image information. Before calling anyAPI in PixelMap, you must use[image.createPixelMap](arkts-image-createpixelmap-f.md#createpixelmap-2)to create a PixelMap object. Currently, the maximum size of a serialized PixelMap is 128 MB. A larger size willcause a display failure. The size is calculated as follows: Width x Height x[Bytes per pixel](arkts-image-pixelmapformat-e.md).Since API version 11, PixelMap supports cross-thread calls through [Worker](../../apis-arkts/arkts-apis/arkts-worker.md). If a PixelMapobject is invoked by another thread through [Worker](../../apis-arkts/arkts-apis/arkts-worker.md), all APIs of the PixelMap object cannot becalled in the original thread. Otherwise, error 501 is reported, indicating that the server cannot complete therequest.Before calling any API in PixelMap, you can use[image.createPixelMap](arkts-image-createpixelmap-f.md#createpixelmap-2)to pass pixel data to create a PixelMap object, or use [ImageSource](arkts-multimedia-image.md) to decodean image to a PixelMap object.To develop an atomic service, use [ImageSource](arkts-multimedia-image.md) to create a PixelMap object.Images occupy a large amount of memory. When you finish using a PixelMap instance, call[release](arkts-image-pixelmap-i.md#release-2) to free the memory promptly. Before releasing the instance, ensure thatall asynchronous operations associated with the instance have finished and the instance is no longer needed. |
+| [PixelMap](arkts-image-pixelmap-i.md) | The **PixelMap** class provides APIs to read or write image data and obtain image information. Before calling any API in PixelMap, you must use [image.createPixelMap](arkts-image-createpixelmap-f.md#createpixelmap-2)to create a PixelMap object. Currently, the maximum size of a serialized PixelMap is 128 MB. A larger size will cause a display failure. The size is calculated as follows: Width x Height x [Bytes per pixel](arkts-image-pixelmapformat-e.md).Since API version 11, PixelMap supports cross-thread calls through [Worker](../../apis-arkts/arkts-apis/arkts-worker.md). If a PixelMap object is invoked by another thread through [Worker](../../apis-arkts/arkts-apis/arkts-worker.md), all APIs of the PixelMap object cannot be called in the original thread. Otherwise, error 501 is reported, indicating that the server cannot complete the request.Before calling any API in PixelMap, you can use [image.createPixelMap](arkts-image-createpixelmap-f.md#createpixelmap-2)to pass pixel data to create a PixelMap object, or use [ImageSource](arkts-multimedia-image.md) to decode an image to a PixelMap object.To develop an atomic service, use [ImageSource](arkts-multimedia-image.md) to create a PixelMap object.Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-pixelmap-i.md#release-2) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. |
 | [PositionArea](arkts-image-positionarea-i.md) | 表示图片指定区域内的数据。 |
 | [Region](arkts-image-region-i.md) | 表示区域信息。 |
 | [Size](arkts-image-size-i.md) | 表示图片尺寸。 |
@@ -189,7 +177,7 @@ Image对象存储了JPEG文件。
 | [ComponentType](arkts-image-componenttype-e.md) | 表示图像的组件类型的枚举。 |
 | [CropAndScaleStrategy](arkts-image-cropandscalestrategy-e.md) | 表示裁剪与缩放的先后策略的枚举。如果在配置解码选项[DecodingOptions](arkts-image-decodingoptions-i.md)时，未填入参数cropAndScaleStrategy，并且同时设置了参数desiredRegion和desiredSize，由于系统对于不同图片格式采用的解码算法不同，最终解码效果将略有差异。例如原始图片大小为200x200，传入desiredSize:{width: 150, height: 150}，desiredRegion:{x: 0, y: 0, width: 100, height: 100}，即预期解码原图左上角1/4区域，最终将pixelMap大小缩放至150x150返回。对于jpeg、webp图片（部分dng图片解码时会优先解码图片中的jpeg预览图，在此场景下也会被视为jpeg图片格式）会先进行下采样，例如按照7/8下采样，再基于175x175的图片大小进行区域裁剪，因此最终的区域内容稍大于原图的左上角1/4区域。对于svg图片，由于是矢量图，可以任意缩放不损失清晰度，在解码时会根据desiredSize与原图Size的比例选择缩放比例，再基于缩放后的图片大小进行区域裁剪，因此最终返回的解码区域会有所差异。针对该场景，建议在解码选项同时设置了desiredRegion与desiredSize时，参数cropAndScaleStrategy应传入CROP_FIRST保证效果一致。 |
 | [DecodingDynamicRange](arkts-image-decodingdynamicrange-e.md) | 描述解码时期望的图像动态范围。 |
-| [DngPropertyKey](arkts-image-dngpropertykey-e.md) | 表示DNG图片信息的枚举。@link image.DngMetadata}。 |
+| [DngPropertyKey](arkts-image-dngpropertykey-e.md) | 表示DNG图片信息的枚举。 |
 | [FocusMode](arkts-image-focusmode-e.md) | 表示焦点模式类型的枚举。 |
 | [FragmentMapPropertyKey](arkts-image-fragmentmappropertykey-e.md) | 表示水印裁剪图图片信息的枚举。 |
 | [GifPropertyKey](arkts-image-gifpropertykey-e.md) | 表示GIF图片信息的枚举。 |
@@ -203,7 +191,7 @@ Image对象存储了JPEG文件。
 | [PackingDynamicRange](arkts-image-packingdynamicrange-e.md) | 描述编码时期望的图像动态范围。 |
 | [PixelMapFormat](arkts-image-pixelmapformat-e.md) | 表示图片像素格式的枚举。 |
 | [PngPropertyKey](arkts-image-pngpropertykey-e.md) | 表示PNG图片信息的枚举。 |
-| [PropertyKey](arkts-image-propertykey-e.md) | 表示Exif（Exchangeable image file format）图像信息的枚举。- 格式示例中的key为：image.PropertyKey.XXX（XXX为枚举的名称，如：image.PropertyKey.NEW_SUBFILE_TYPE） 。- 格式示例仅用于说明修改传值和读取结果的格式。具体接口使用方法请参考：[modifyImageProperty](arkts-image-imagesource-i.md#modifyimageproperty-1)（修改单个Exif字段）、[modifyImageProperties](image.ImageSource.modifyImageProperties(records: Record&lt;PropertyKey, string\|null&gt;))（修改多个Exif字段）、[getImageProperty](arkts-image-imagesource-i.md#getimageproperty-1)（读取单个Exif字段）、[getImageProperties](arkts-image-imagesource-i.md#getimageproperties-1)（读取多个Exif字段）。 |
+| [PropertyKey](arkts-image-propertykey-e.md) | 表示Exif（Exchangeable image file format）图像信息的枚举。- 格式示例中的key为：image.PropertyKey.XXX（XXX为枚举的名称，如：image.PropertyKey.NEW_SUBFILE_TYPE） 。 - 格式示例仅用于说明修改传值和读取结果的格式。具体接口使用方法请参考：[modifyImageProperty](arkts-image-imagesource-i.md#modifyimageproperty-1)（修改单个Exif字段）、[modifyImageProperties](image.ImageSource.modifyImageProperties(records: Record&lt;PropertyKey, string\|null&gt;))（修改多个Exif字段）、[getImageProperty](arkts-image-imagesource-i.md#getimageproperty-1)（读取单个Exif字段）、[getImageProperties](image.ImageSource.getImageProperties(key: Array&lt;PropertyKey&gt;))（读取多个Exif字段）。 |
 | [ScaleMode](arkts-image-scalemode-e.md) | 表示图像的缩放模式的枚举。 |
 | [TiffPropertyKey](arkts-image-tiffpropertykey-e.md) | 表示TIFF图片信息的枚举。 |
 | [WebPPropertyKey](arkts-image-webppropertykey-e.md) | 表示WebP图片信息的枚举。 |
@@ -215,7 +203,7 @@ Image对象存储了JPEG文件。
 
 | 名称 | 说明 |
 | --- | --- |
-| [PropertyKey](arkts-image-propertykey-e-sys.md) | 表示Exif（Exchangeable image file format）图像信息的枚举。- 格式示例中的key为：image.PropertyKey.XXX（XXX为枚举的名称，如：image.PropertyKey.NEW_SUBFILE_TYPE） 。- 格式示例仅用于说明修改传值和读取结果的格式。具体接口使用方法请参考：[modifyImageProperty](arkts-image-imagesource-i.md#modifyimageproperty-1)（修改单个Exif字段）、[modifyImageProperties](image.ImageSource.modifyImageProperties(records: Record&lt;PropertyKey, string\|null&gt;))（修改多个Exif字段）、[getImageProperty](arkts-image-imagesource-i.md#getimageproperty-1)（读取单个Exif字段）、[getImageProperties](arkts-image-imagesource-i.md#getimageproperties-1)（读取多个Exif字段）。 |
+| [PropertyKey](arkts-image-propertykey-e-sys.md) | 表示Exif（Exchangeable image file format）图像信息的枚举。- 格式示例中的key为：image.PropertyKey.XXX（XXX为枚举的名称，如：image.PropertyKey.NEW_SUBFILE_TYPE） 。 - 格式示例仅用于说明修改传值和读取结果的格式。具体接口使用方法请参考：[modifyImageProperty](arkts-image-imagesource-i.md#modifyimageproperty-1)（修改单个Exif字段）、[modifyImageProperties](image.ImageSource.modifyImageProperties(records: Record&lt;PropertyKey, string\|null&gt;))（修改多个Exif字段）、[getImageProperty](arkts-image-imagesource-i.md#getimageproperty-1)（读取单个Exif字段）、[getImageProperties](image.ImageSource.getImageProperties(key: Array&lt;PropertyKey&gt;))（读取多个Exif字段）。 |
 | [ResolutionQuality](arkts-image-resolutionquality-e-sys.md) | 枚举，画质效果等级类型。 |
 <!--DelEnd-->
 

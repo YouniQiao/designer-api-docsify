@@ -4,6 +4,8 @@ Defines the Web resource response used for scheme handler.
 
 **Since:** 12
 
+<!--Device-webview-class WebSchemeHandlerResponse--><!--Device-webview-class WebSchemeHandlerResponse-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Constructor.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WebSchemeHandlerResponse-constructor()--><!--Device-WebSchemeHandlerResponse-constructor()-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## getEncoding
@@ -37,6 +41,8 @@ Get the response encoding.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WebSchemeHandlerResponse-getEncoding(): string--><!--Device-WebSchemeHandlerResponse-getEncoding(): string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -57,6 +63,8 @@ Get the header value by name from the response.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WebSchemeHandlerResponse-getHeaderByName(name: string): string--><!--Device-WebSchemeHandlerResponse-getHeaderByName(name: string): string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -84,6 +92,8 @@ Get mime type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WebSchemeHandlerResponse-getMimeType(): string--><!--Device-WebSchemeHandlerResponse-getMimeType(): string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -104,13 +114,15 @@ Get net error code.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WebSchemeHandlerResponse-getNetErrorCode(): WebNetErrorList--><!--Device-WebSchemeHandlerResponse-getNetErrorCode(): WebNetErrorList-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| WebNetErrorList | Return response error code. |
+| [WebNetErrorList](arkts-arkweb-webneterrorlist-e.md) | Return response error code. |
 
 ## getStatus
 
@@ -123,6 +135,8 @@ Get http status code.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WebSchemeHandlerResponse-getStatus(): number--><!--Device-WebSchemeHandlerResponse-getStatus(): number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -144,6 +158,8 @@ Get status text.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WebSchemeHandlerResponse-getStatusText(): string--><!--Device-WebSchemeHandlerResponse-getStatusText(): string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -164,6 +180,8 @@ Get the resolved URL after redirects or changed as a result of HSTS.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WebSchemeHandlerResponse-getUrl(): string--><!--Device-WebSchemeHandlerResponse-getUrl(): string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -183,6 +201,8 @@ Set the response encoding.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WebSchemeHandlerResponse-setEncoding(encoding: string): void--><!--Device-WebSchemeHandlerResponse-setEncoding(encoding: string): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -209,6 +229,8 @@ Set response hander value by name.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WebSchemeHandlerResponse-setHeaderByName(name: string, value: string, overwrite: boolean): void--><!--Device-WebSchemeHandlerResponse-setHeaderByName(name: string, value: string, overwrite: boolean): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -238,6 +260,8 @@ Set mime type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WebSchemeHandlerResponse-setMimeType(type: string): void--><!--Device-WebSchemeHandlerResponse-setMimeType(type: string): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -264,13 +288,15 @@ Set net error code.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WebSchemeHandlerResponse-setNetErrorCode(code: WebNetErrorList): void--><!--Device-WebSchemeHandlerResponse-setNetErrorCode(code: WebNetErrorList): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | WebNetErrorList | Yes | Set net error code. |
+| code | [WebNetErrorList](arkts-arkweb-webneterrorlist-e.md) | Yes | Set net error code. |
 
 **Error codes:**
 
@@ -289,6 +315,8 @@ Set http status code.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WebSchemeHandlerResponse-setStatus(code: number): void--><!--Device-WebSchemeHandlerResponse-setStatus(code: number): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -316,6 +344,8 @@ Set status text.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WebSchemeHandlerResponse-setStatusText(text: string): void--><!--Device-WebSchemeHandlerResponse-setStatusText(text: string): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -341,6 +371,8 @@ Set the resolved URL after redirects or changed as a result of HSTS.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WebSchemeHandlerResponse-setUrl(url: string): void--><!--Device-WebSchemeHandlerResponse-setUrl(url: string): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

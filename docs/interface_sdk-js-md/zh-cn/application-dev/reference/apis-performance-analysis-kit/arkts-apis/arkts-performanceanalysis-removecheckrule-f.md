@@ -1,5 +1,11 @@
 # removeCheckRule
 
+## 导入模块
+
+```TypeScript
+import { hichecker } from '@kit.PerformanceAnalysisKit';
+```
+
 ## removeCheckRule
 
 ```TypeScript
@@ -9,6 +15,8 @@ function removeCheckRule(rule: bigint) : void
 ɾ��һ�����������ɾ���Ĺ��������������Ч��
 
 **起始版本：** 9
+
+<!--Device-hichecker-function removeCheckRule(rule: bigint) : void--><!--Device-hichecker-function removeCheckRule(rule: bigint) : void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 

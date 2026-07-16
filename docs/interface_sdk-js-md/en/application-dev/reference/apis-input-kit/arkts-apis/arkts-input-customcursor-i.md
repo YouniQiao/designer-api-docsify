@@ -4,6 +4,8 @@ Defines custom cursor resources.
 
 **Since:** 15
 
+<!--Device-pointer-interface CustomCursor--><!--Device-pointer-interface CustomCursor-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## Modules to Import
@@ -18,13 +20,13 @@ import { pointer } from '@kit.InputKit';
 focusX?: number
 ```
 
-Horizontal coordinate of the custom pointer focus, in px. This coordinate is limited by the custom pointer size.
-The minimum value is 0, and the maximum value is the maximum width of the resource image. The default value is
-**0** when this parameter is omitted.
+Horizontal coordinate of the custom pointer focus, in px. This coordinate is limited by the custom pointer size.The minimum value is 0, and the maximum value is the maximum width of the resource image. The default value is **0** when this parameter is omitted.
 
 **Type:** number
 
 **Since:** 15
+
+<!--Device-CustomCursor-focusX?: int--><!--Device-CustomCursor-focusX?: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -34,13 +36,13 @@ The minimum value is 0, and the maximum value is the maximum width of the resour
 focusY?: number
 ```
 
-Vertical coordinate of the custom pointer focus, in px. This coordinate is limited by the custom pointer size.
-The minimum value is 0, and the maximum value is the maximum width of the resource image. The default value is
-**0** when this parameter is omitted.
+Vertical coordinate of the custom pointer focus, in px. This coordinate is limited by the custom pointer size.The minimum value is 0, and the maximum value is the maximum width of the resource image. The default value is **0** when this parameter is omitted.
 
 **Type:** number
 
 **Since:** 15
+
+<!--Device-CustomCursor-focusY?: int--><!--Device-CustomCursor-focusY?: int-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -55,6 +57,8 @@ Pixel map. The minimum size is subject to the minimum limit of the image. The ma
 **Type:** image.PixelMap
 
 **Since:** 15
+
+<!--Device-CustomCursor-pixelMap: image.PixelMap--><!--Device-CustomCursor-pixelMap: image.PixelMap-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 

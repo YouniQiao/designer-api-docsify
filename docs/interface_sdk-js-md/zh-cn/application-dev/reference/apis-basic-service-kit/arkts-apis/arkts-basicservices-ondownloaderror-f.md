@@ -1,5 +1,11 @@
 # onDownloadError
 
+## 导入模块
+
+```TypeScript
+import { cacheDownload } from '@kit.BasicServicesKit';
+```
+
 ## onDownloadError
 
 ```TypeScript
@@ -10,6 +16,8 @@ function onDownloadError(url: string, callback: Callback<DownloadError>): void
 
 **起始版本：** 23
 
+<!--Device-cacheDownload-function onDownloadError(url: string, callback: Callback<DownloadError>): void--><!--Device-cacheDownload-function onDownloadError(url: string, callback: Callback<DownloadError>): void-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**
@@ -17,7 +25,7 @@ function onDownloadError(url: string, callback: Callback<DownloadError>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | 待注册回调的url，URL字符串的最大长度为8192字节。 |
-| callback | Callback&lt;DownloadError&gt; | 是 | 回调函数，返回预下载的错误信息。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DownloadError> | 是 | 回调函数，返回预下载的错误信息。 |
 
 **示例：**
 

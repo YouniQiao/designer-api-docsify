@@ -7,14 +7,21 @@ type Action = 'accessibilityFocus' | 'clearAccessibilityFocus' | 'focus' | 'clea
   'back' | 'recentTask' | 'notificationCenter' | 'controlCenter' | 'common' | 'injectAction' | 'executeCustomAction'
 ```
 
-Target actions supported by the application. The target actions for which parameters need to be set have been
-specified in the description of the following table.
+Target actions supported by the application. The target actions for which parameters need to be set have been specified in the description of the following table.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-accessibility-type Action = 'accessibilityFocus' | 'clearAccessibilityFocus' | 'focus' | 'clearFocus' | 'clearSelection' |
+  'click' | 'longClick' | 'cut' | 'copy' | 'paste' | 'select' | 'setText' | 'delete' |
+  'scrollForward' | 'scrollBackward' | 'setSelection' | 'setCursorPosition' | 'home' |
+  'back' | 'recentTask' | 'notificationCenter' | 'controlCenter' | 'common' | 'injectAction' | 'executeCustomAction'--><!--Device-accessibility-type Action = 'accessibilityFocus' | 'clearAccessibilityFocus' | 'focus' | 'clearFocus' | 'clearSelection' |
+  'click' | 'longClick' | 'cut' | 'copy' | 'paste' | 'select' | 'setText' | 'delete' |
+  'scrollForward' | 'scrollBackward' | 'setSelection' | 'setCursorPosition' | 'home' |
+  'back' | 'recentTask' | 'notificationCenter' | 'controlCenter' | 'common' | 'injectAction' | 'executeCustomAction'-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 

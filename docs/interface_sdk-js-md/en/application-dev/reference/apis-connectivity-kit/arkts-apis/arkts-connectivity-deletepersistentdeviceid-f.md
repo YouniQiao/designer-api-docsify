@@ -20,6 +20,8 @@ Delete a persistent random device address.
 
 **Atomic service API:** This API can be used in atomic services since API version 16.
 
+<!--Device-access-function deletePersistentDeviceId(deviceId: string): Promise<void>--><!--Device-access-function deletePersistentDeviceId(deviceId: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -32,7 +34,7 @@ Delete a persistent random device address.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 

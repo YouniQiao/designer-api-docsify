@@ -12,12 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function enableDynamicIcon(bundleName: string, moduleName: string): Promise<void>
 ```
 
-Enables the dynamic icon based on the given bundle name and module name. This API uses a promise to return the
-result.
+Enables the dynamic icon based on the given bundle name and module name. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.ACCESS_DYNAMIC_ICON
+
+<!--Device-bundleManager-function enableDynamicIcon(bundleName: string, moduleName: string): Promise<void>--><!--Device-bundleManager-function enableDynamicIcon(bundleName: string, moduleName: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -34,7 +35,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -78,18 +79,17 @@ try {
 function enableDynamicIcon(bundleName: string, moduleName: string, option?: BundleOptions): Promise<void>
 ```
 
-Enables the dynamic icon based on the given bundle name, module name, and bundle options. This API uses a promise
-to return the result.
+Enables the dynamic icon based on the given bundle name, module name, and bundle options. This API uses a promise to return the result.
 
-To enable the dynamic icon for the current user, you must request the ohos.permission.ACCESS_DYNAMIC_ICON
-permission.
+To enable the dynamic icon for the current user, you must request the ohos.permission.ACCESS_DYNAMIC_ICON permission.
 
-To enable the dynamic icon for another user, you must request the ohos.permission.ACCESS_DYNAMIC_ICON and
-ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permissions.
+To enable the dynamic icon for another user, you must request the ohos.permission.ACCESS_DYNAMIC_ICON and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permissions.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.ACCESS_DYNAMIC_ICON or (ohos.permission.ACCESS_DYNAMIC_ICON and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
+
+<!--Device-bundleManager-function enableDynamicIcon(bundleName: string, moduleName: string, option?: BundleOptions): Promise<void>--><!--Device-bundleManager-function enableDynamicIcon(bundleName: string, moduleName: string, option?: BundleOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -101,13 +101,13 @@ ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permissions.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name based on which the dynamic icon is to be enabled. |
 | moduleName | string | Yes | Module name based on which the dynamic icon is to be enabled. |
-| option | BundleOptions | No | User and application clone index based on which the dynamic icon is to beenabled. By default, the dynamic icon is enabled for all users and all application clones. |
+| option | [BundleOptions](arkts-ability-bundleoptions-i.md) | No | User and application clone index based on which the dynamic icon is to be enabled. By default, the dynamic icon is enabled for all users and all application clones. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

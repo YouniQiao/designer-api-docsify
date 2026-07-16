@@ -1,5 +1,11 @@
 # makeExpand（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { screen } from '@kit.ArkUI';
+```
+
 ## makeExpand
 
 ```TypeScript
@@ -12,6 +18,8 @@ function makeExpand(options:Array<ExpandOption>, callback: AsyncCallback<number>
 
 **废弃版本：** 20
 
+<!--Device-screen-function makeExpand(options:Array<ExpandOption>, callback: AsyncCallback<long>): void--><!--Device-screen-function makeExpand(options:Array<ExpandOption>, callback: AsyncCallback<long>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +28,8 @@ function makeExpand(options:Array<ExpandOption>, callback: AsyncCallback<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | Array&lt;ExpandOption&gt; | 是 | 设置扩展屏幕的参数集合。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。返回扩展屏幕的群组id，其中id为整数。 |
+| options | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<ExpandOption> | 是 | 设置扩展屏幕的参数集合。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。返回扩展屏幕的群组id，其中id为整数。 |
 
 **错误码：**
 
@@ -71,6 +79,8 @@ function makeExpand(options:Array<ExpandOption>): Promise<number>
 
 **废弃版本：** 20
 
+<!--Device-screen-function makeExpand(options:Array<ExpandOption>): Promise<long>--><!--Device-screen-function makeExpand(options:Array<ExpandOption>): Promise<long>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -79,13 +89,13 @@ function makeExpand(options:Array<ExpandOption>): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | Array&lt;ExpandOption&gt; | 是 | 设置扩展屏幕的参数集合。 |
+| options | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<ExpandOption> | 是 | 设置扩展屏幕的参数集合。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回扩展屏幕的群组id，其中id为整数。 |
+| Promise<number> | Promise对象。返回扩展屏幕的群组id，其中id为整数。 |
 
 **错误码：**
 

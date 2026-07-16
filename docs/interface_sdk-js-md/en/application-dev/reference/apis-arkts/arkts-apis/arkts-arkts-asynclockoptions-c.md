@@ -4,6 +4,8 @@ Lock operation's options
 
 **Since:** 12
 
+<!--Device-locks-class AsyncLockOptions<T>--><!--Device-locks-class AsyncLockOptions<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Default constructor.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AsyncLockOptions-constructor()--><!--Device-AsyncLockOptions-constructor()-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## isAvailable
@@ -39,6 +43,8 @@ If the value is true and lockAsync cannot acquire the lock immediately, the oper
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyncLockOptions-isAvailable: boolean--><!--Device-AsyncLockOptions-isAvailable: boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -56,6 +62,8 @@ The object used to abort the async operation. If signal.aborted is true, the cal
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AsyncLockOptions-signal: AbortSignal<T> | null--><!--Device-AsyncLockOptions-signal: AbortSignal<T> | null-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## timeout
@@ -64,14 +72,15 @@ The object used to abort the async operation. If signal.aborted is true, the cal
 timeout: number
 ```
 
-Lock operation timeout in milliseconds. If it is greater than zero, lockAsync will reject the resulting promise
-when the timeout is exceeded.
+Lock operation timeout in milliseconds. If it is greater than zero, lockAsync will reject the resulting promise when the timeout is exceeded.
 
 **Type:** number
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyncLockOptions-timeout: number--><!--Device-AsyncLockOptions-timeout: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

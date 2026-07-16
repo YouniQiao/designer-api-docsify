@@ -12,12 +12,13 @@ import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 function startSyncTrace(level: HiTraceOutputLevel, name: string, customArgs?: string): void
 ```
 
-Starts a synchronous trace with the trace output level specified. For details, see
-[finishSyncTrace()](arkts-performanceanalysis-finishsynctrace-f.md#finishsynctrace-1).
+Starts a synchronous trace with the trace output level specified. For details, see [finishSyncTrace()](arkts-performanceanalysis-finishsynctrace-f.md#finishsynctrace-1).
 
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-hiTraceMeter-function startSyncTrace(level: HiTraceOutputLevel, name: string, customArgs?: string): void--><!--Device-hiTraceMeter-function startSyncTrace(level: HiTraceOutputLevel, name: string, customArgs?: string): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
@@ -25,9 +26,9 @@ Starts a synchronous trace with the trace output level specified. For details, s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | HiTraceOutputLevel | Yes | Trace output level. |
-| name | string | Yes | Name of the trace to start.<br>The maximum length of a trace record is 512 bytes. Theexcess part will be truncated. It is recommended that the total length of **name** and **customArgs** be lessthan or equal to 420 bytes. |
-| customArgs | string | No | Key-value pair. The format is key=value. Multiple key-value pairs are separated bycommas (,). The default value is an empty string.<br>The maximum length of a trace record is 512 bytes. Theexcess part will be truncated. It is recommended that the total length of **name** and **customArgs** be lessthan or equal to 420 bytes. |
+| level | [HiTraceOutputLevel](arkts-performanceanalysis-hitraceoutputlevel-e.md) | Yes | Trace output level. |
+| name | string | Yes | Name of the trace to start.<br>The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the total length of **name** and **customArgs** be less than or equal to 420 bytes. |
+| customArgs | string | No | Key-value pair. The format is key=value. Multiple key-value pairs are separated by commas (,). The default value is an empty string.<br>The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the total length of **name** and **customArgs** be less than or equal to 420 bytes. |
 
 **Example**
 

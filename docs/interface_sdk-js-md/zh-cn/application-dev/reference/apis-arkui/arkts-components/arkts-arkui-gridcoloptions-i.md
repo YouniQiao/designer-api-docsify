@@ -8,6 +8,8 @@ API version 20之后，`span`的继承规则见[GridColColumnOption](arkts-arkui
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare interface GridColOptions--><!--Device-unnamed-declare interface GridColOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## offset
@@ -26,9 +28,11 @@ offset?: number | GridColColumnOption
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-GridColOptions-offset?: number | GridColColumnOption--><!--Device-GridColOptions-offset?: number | GridColColumnOption-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,9 +58,11 @@ order?: number | GridColColumnOption
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-GridColOptions-order?: number | GridColColumnOption--><!--Device-GridColOptions-order?: number | GridColColumnOption-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,9 +82,11 @@ span?: number | GridColColumnOption
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-GridColOptions-span?: number | GridColColumnOption--><!--Device-GridColOptions-span?: number | GridColColumnOption-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

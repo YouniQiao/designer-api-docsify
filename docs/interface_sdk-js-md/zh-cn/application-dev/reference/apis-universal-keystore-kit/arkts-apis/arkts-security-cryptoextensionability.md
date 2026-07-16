@@ -1,5 +1,11 @@
 # @ohos.security.CryptoExtensionAbility
 
+## 导入模块
+
+```TypeScript
+import { HuksCryptoExtensionCertInfo, HuksCryptoExtensionResultCode, HuksCryptoExtensionParams, HuksCryptoExtensionParam, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
+```
+
 ## 汇总
 
 ### 类

@@ -1,13 +1,20 @@
 # SystemSoundManager（系统接口）
 
-管理系统声音。在调用SystemSoundManager的接口前，需要先
-通过[getSystemSoundManager](arkts-audio-getsystemsoundmanager-f-sys.md#getsystemsoundmanager-1)创建实例。
+管理系统声音。在调用SystemSoundManager的接口前，需要先通过[getSystemSoundManager](arkts-audio-getsystemsoundmanager-f-sys.md#getsystemsoundmanager-1)创建实例。
 
 **起始版本：** 10
+
+<!--Device-systemSoundManager-interface SystemSoundManager--><!--Device-systemSoundManager-interface SystemSoundManager-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { systemSoundManager } from '@kit.AudioKit';
+```
 
 ## addCustomizedTone
 
@@ -21,6 +28,8 @@ addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, externalUri: string
 
 **需要权限：** ohos.permission.WRITE_RINGTONE
 
+<!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, externalUri: string): Promise<string>--><!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, externalUri: string): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -29,15 +38,15 @@ addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, externalUri: string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
-| toneAttr | ToneAttrs | 是 | 铃音属性。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
+| toneAttr | [ToneAttrs](arkts-audio-toneattrs-i-sys.md) | 是 | 铃音属性。 |
 | externalUri | string | 是 | 外部存储器中的铃音uri。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回铃音在铃音库中的uri。 |
+| Promise<string> | Promise对象，返回铃音在铃音库中的uri。 |
 
 **错误码：**
 
@@ -93,6 +102,10 @@ addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: number, offset?
 
 **需要权限：** ohos.permission.WRITE_RINGTONE
 
+<!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: int, offset?: long, length?: long)
+      : Promise<string>--><!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: int, offset?: long, length?: long)
+      : Promise<string>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -101,8 +114,8 @@ addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: number, offset?
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
-| toneAttr | ToneAttrs | 是 | 铃音属性。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
+| toneAttr | [ToneAttrs](arkts-audio-toneattrs-i-sys.md) | 是 | 铃音属性。 |
 | fd | number | 是 | 文件描述符，可通过[fileIo.open](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-open-f.md#open-1)获取。 |
 | offset | number | 否 | 读取数据的偏移量（以字节为单位）。默认情况下为0。 |
 | length | number | 否 | 读取的数据的长度（以字节为单位）。默认情况下，长度为偏移后的剩余全部字节数。 |
@@ -111,7 +124,7 @@ addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: number, offset?
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回铃音在铃音库中的uri。 |
+| Promise<string> | Promise对象，返回铃音在铃音库中的uri。 |
 
 **错误码：**
 
@@ -166,6 +179,8 @@ close(fd: number): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-SystemSoundManager-close(fd: int): Promise<void>--><!--Device-SystemSoundManager-close(fd: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -180,7 +195,7 @@ close(fd: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -219,6 +234,8 @@ getAlarmToneAttrList(context: BaseContext): Promise<ToneAttrsArray>
 
 **起始版本：** 12
 
+<!--Device-SystemSoundManager-getAlarmToneAttrList(context: BaseContext): Promise<ToneAttrsArray>--><!--Device-SystemSoundManager-getAlarmToneAttrList(context: BaseContext): Promise<ToneAttrsArray>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -227,13 +244,13 @@ getAlarmToneAttrList(context: BaseContext): Promise<ToneAttrsArray>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ToneAttrsArray&gt; | Promise对象，返回全部闹铃属性列表。 |
+| Promise<ToneAttrsArray> | Promise对象，返回全部闹铃属性列表。 |
 
 **错误码：**
 
@@ -271,6 +288,8 @@ getAlarmToneUri(context: BaseContext): Promise<string>
 
 **起始版本：** 12
 
+<!--Device-SystemSoundManager-getAlarmToneUri(context: BaseContext): Promise<string>--><!--Device-SystemSoundManager-getAlarmToneUri(context: BaseContext): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -279,13 +298,13 @@ getAlarmToneUri(context: BaseContext): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回系统当前闹铃uri。 |
+| Promise<string> | Promise对象，返回系统当前闹铃uri。 |
 
 **错误码：**
 
@@ -323,6 +342,8 @@ getCurrentRingtoneAttribute(type: RingtoneType): Promise<ToneAttrs>
 
 **起始版本：** 20
 
+<!--Device-SystemSoundManager-getCurrentRingtoneAttribute(type: RingtoneType): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getCurrentRingtoneAttribute(type: RingtoneType): Promise<ToneAttrs>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -331,13 +352,13 @@ getCurrentRingtoneAttribute(type: RingtoneType): Promise<ToneAttrs>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | RingtoneType | 是 | 被设置的系统铃声的类型。 |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ToneAttrs&gt; | Promise对象，返回系统铃声的属性。 |
+| Promise<ToneAttrs> | Promise对象，返回系统铃声的属性。 |
 
 **错误码：**
 
@@ -372,6 +393,8 @@ getDefaultAlarmToneAttrs(context: BaseContext): Promise<ToneAttrs>
 
 **起始版本：** 12
 
+<!--Device-SystemSoundManager-getDefaultAlarmToneAttrs(context: BaseContext): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getDefaultAlarmToneAttrs(context: BaseContext): Promise<ToneAttrs>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -380,13 +403,13 @@ getDefaultAlarmToneAttrs(context: BaseContext): Promise<ToneAttrs>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ToneAttrs&gt; | Promise对象，返回系统闹铃的属性。 |
+| Promise<ToneAttrs> | Promise对象，返回系统闹铃的属性。 |
 
 **错误码：**
 
@@ -424,6 +447,8 @@ getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneA
 
 **起始版本：** 12
 
+<!--Device-SystemSoundManager-getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneAttrs>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -432,14 +457,14 @@ getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneA
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
-| type | RingtoneType | 是 | 被设置的系统铃声的类型。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ToneAttrs&gt; | Promise对象，返回系统铃声的属性。 |
+| Promise<ToneAttrs> | Promise对象，返回系统铃声的属性。 |
 
 **错误码：**
 
@@ -478,6 +503,8 @@ getDefaultSystemToneAttrs(context: BaseContext, type: SystemToneType): Promise<T
 
 **起始版本：** 12
 
+<!--Device-SystemSoundManager-getDefaultSystemToneAttrs(context: BaseContext, type: SystemToneType): Promise<ToneAttrs>--><!--Device-SystemSoundManager-getDefaultSystemToneAttrs(context: BaseContext, type: SystemToneType): Promise<ToneAttrs>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -486,14 +513,14 @@ getDefaultSystemToneAttrs(context: BaseContext, type: SystemToneType): Promise<T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
-| type | SystemToneType | 是 | 待获取播放器的系统提示音的类型。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
+| type | [SystemToneType](arkts-audio-systemtonetype-e-sys.md) | 是 | 待获取播放器的系统提示音的类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ToneAttrs&gt; | Promise对象，返回系统提示音的属性。 |
+| Promise<ToneAttrs> | Promise对象，返回系统提示音的属性。 |
 
 **错误码：**
 
@@ -532,6 +559,8 @@ getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<To
 
 **起始版本：** 14
 
+<!--Device-SystemSoundManager-getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<ToneHapticsAttrs>--><!--Device-SystemSoundManager-getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<ToneHapticsAttrs>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -540,14 +569,14 @@ getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<To
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
 | toneUri | string | 是 | 待获取同步振动的系统铃声Uri,可通过[getRingtoneAttrList](arkts-audio-systemsoundmanager-i-sys.md#getringtoneattrlist-1)或[getSystemToneAttrList](arkts-audio-systemsoundmanager-i-sys.md#getsystemtoneattrlist-1)等获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ToneHapticsAttrs&gt; | Promise对象，返回与指定铃音同步的振动属性。 |
+| Promise<ToneHapticsAttrs> | Promise对象，返回与指定铃音同步的振动属性。 |
 
 **错误码：**
 
@@ -587,16 +616,20 @@ getMockHapticRingtonePlayer(
 
 获取模拟触觉铃声播放器，根据指定的铃声类型和铃音文件URI，播放该铃音文件对应的振动文件及其模拟触觉声音文件。使用Promise异步回调。
 
-> **说明：**
->
-> - 调用该接口前，请确保传入的ringtoneUri在系统中存在，否则会出现异常和错误。例如无法播放匹配的触觉声音文件。
->
-> - 通过该接口获取实例后，在服务终止时需主动调用RingtonePlayer的
+> **说明：**  
+>  
+> - 调用该接口前，请确保传入的ringtoneUri在系统中存在，否则会出现异常和错误。例如无法播放匹配的触觉声音文件。  
+>  
+> - 通过该接口获取实例后，在服务终止时需主动调用RingtonePlayer的  
 > [release](arkts-audio-ringtoneplayer-i-sys.md#release-1)方法释放播放器资源。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SystemSoundManager-getMockHapticRingtonePlayer(
+      context: BaseContext, type: RingtoneType, ringtoneUri: string): Promise<RingtonePlayer | null>--><!--Device-SystemSoundManager-getMockHapticRingtonePlayer(
+      context: BaseContext, type: RingtoneType, ringtoneUri: string): Promise<RingtonePlayer | null>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -606,22 +639,22 @@ getMockHapticRingtonePlayer(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
-| type | RingtoneType | 是 | 待获取播放器的铃声类型。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | 是 | 待获取播放器的铃声类型。 |
 | ringtoneUri | string | 是 | 铃音文件的URI，需确保在系统文件中真实存在。<br>如果为自定义铃声需使用[addCustomizedTone](arkts-audio-systemsoundmanager-i-sys.md#addcustomizedtone-1)接口返回的ringtoneUri，确保铃音文件URI在铃音库中存在。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;RingtonePlayer \| null&gt; | Promise对象，成功返回模拟触觉铃声播放器实例，发生错误时返回null。 |
+| Promise<RingtonePlayer \| null> | Promise对象，成功返回模拟触觉铃声播放器实例，发生错误时返回null。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter verification failed. Possible causes:1.The type exceeds the valid range, please use the RingtoneType enum for input.2.The ringtoneUri does not exist or is incorrectly formatted, please use the ringtoneUri returned bythe {@link SystemSoundManager#addCustomizedTone}. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter verification failed. Possible causes:1.The type exceeds the valid range, please use the RingtoneType enum for input.2.The ringtoneUri does not exist or is incorrectly formatted, please use the ringtoneUri returned by the {@link SystemSoundManager#addCustomizedTone}. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. The ringtone database access timed out or encountered an error.It is recommended to restart your phone. |
 
 **示例：**
@@ -656,16 +689,18 @@ getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<Ri
 
 获取模拟触觉铃声播放器，根据指定的触觉文件URI播放振动文件及其对应的模拟触觉声音文件。使用Promise异步回调。
 
-> **说明：**
->
-> - 调用该接口前，请确保传入的hapticUri在系统中存在，否则会出现异常和错误。例如无法播放匹配的触觉声音文件。
->
-> - 通过该接口获取实例后，在服务终止时需主动调用RingtonePlayer的
+> **说明：**  
+>  
+> - 调用该接口前，请确保传入的hapticUri在系统中存在，否则会出现异常和错误。例如无法播放匹配的触觉声音文件。  
+>  
+> - 通过该接口获取实例后，在服务终止时需主动调用RingtonePlayer的  
 > [release](arkts-audio-ringtoneplayer-i-sys.md#release-1)方法释放播放器资源。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SystemSoundManager-getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<RingtonePlayer | null>--><!--Device-SystemSoundManager-getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<RingtonePlayer | null>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -675,21 +710,21 @@ getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<Ri
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
 | hapticUri | string | 是 | 触觉文件的URI，需确保为JSON文件且在系统文件中真实存在。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;RingtonePlayer \| null&gt; | Promise对象，成功返回模拟触觉铃声播放器实例，发生错误时返回null。 |
+| Promise<RingtonePlayer \| null> | Promise对象，成功返回模拟触觉铃声播放器实例，发生错误时返回null。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter verification failed. The hapticUri does not exist or isincorrectly formatted. Ensure it is a JSON file and that it exists in the system's file system. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter verification failed. The hapticUri does not exist or is incorrectly formatted. Ensure it is a JSON file and that it exists in the system's file system. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. The ringtone database access timed out or encountered an error.It is recommended to restart your phone. |
 
 **示例：**
@@ -725,6 +760,8 @@ getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrs
 
 **起始版本：** 12
 
+<!--Device-SystemSoundManager-getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrsArray>--><!--Device-SystemSoundManager-getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrsArray>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -733,14 +770,14 @@ getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrs
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
-| type | RingtoneType | 是 | 被设置的系统铃声的类型。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ToneAttrsArray&gt; | Promise对象，返回系统铃声的属性列表。 |
+| Promise<ToneAttrsArray> | Promise对象，返回系统铃声的属性列表。 |
 
 **错误码：**
 
@@ -779,6 +816,8 @@ getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePla
 
 **起始版本：** 11
 
+<!--Device-SystemSoundManager-getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePlayer>--><!--Device-SystemSoundManager-getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePlayer>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -787,14 +826,14 @@ getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePla
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
-| type | RingtoneType | 是 | 待获取播放器的系统铃声的类型。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | 是 | 待获取播放器的系统铃声的类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;RingtonePlayer&gt; | Promise对象，返回获取的系统铃声播放器。 |
+| Promise<RingtonePlayer> | Promise对象，返回获取的系统铃声播放器。 |
 
 **错误码：**
 
@@ -834,6 +873,8 @@ getRingtoneUri(context: BaseContext, type: RingtoneType): Promise<string>
 
 **起始版本：** 11
 
+<!--Device-SystemSoundManager-getRingtoneUri(context: BaseContext, type: RingtoneType): Promise<string>--><!--Device-SystemSoundManager-getRingtoneUri(context: BaseContext, type: RingtoneType): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -842,14 +883,14 @@ getRingtoneUri(context: BaseContext, type: RingtoneType): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
-| type | RingtoneType | 是 | 被设置的系统铃声的类型。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回获取的系统铃声uri。 |
+| Promise<string> | Promise对象，返回获取的系统铃声uri。 |
 
 **错误码：**
 
@@ -892,6 +933,8 @@ getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCal
 
 **替代接口：** [getRingtonePlayer](arkts-audio-systemsoundmanager-i-sys.md#getringtoneplayer-1)
 
+<!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCallback<RingtonePlayer>): void--><!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCallback<RingtonePlayer>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -900,9 +943,9 @@ getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 当前应用的上下文。 |
-| type | RingtoneType | 是 | 待获取播放器的系统铃声的类型。 |
-| callback | AsyncCallback&lt;RingtonePlayer&gt; | 是 | 回调函数。当获取系统铃声播放器成功，err为undefineddata为获取到的系统铃声播放器；否则为错误对象。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 当前应用的上下文。 |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | 是 | 待获取播放器的系统铃声的类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<RingtonePlayer> | 是 | 回调函数。当获取系统铃声播放器成功，err为undefined data为获取到的系统铃声播放器；否则为错误对象。 |
 
 **示例：**
 
@@ -941,6 +984,8 @@ getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtoneP
 
 **替代接口：** [getRingtonePlayer](arkts-audio-systemsoundmanager-i-sys.md#getringtoneplayer-1)
 
+<!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtonePlayer>--><!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtonePlayer>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -949,14 +994,14 @@ getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtoneP
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 当前应用的上下文。 |
-| type | RingtoneType | 是 | 待获取播放器的系统铃声的类型。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 当前应用的上下文。 |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | 是 | 待获取播放器的系统铃声的类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;RingtonePlayer&gt; | Promise对象，返回获取的系统铃声播放器。 |
+| Promise<RingtonePlayer> | Promise对象，返回获取的系统铃声播放器。 |
 
 **示例：**
 
@@ -993,6 +1038,8 @@ getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallba
 
 **替代接口：** [getRingtoneUri](arkts-audio-systemsoundmanager-i-sys.md#getringtoneuri-1)
 
+<!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallback<string>): void--><!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1001,9 +1048,9 @@ getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallba
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 当前应用的上下文。 |
-| type | RingtoneType | 是 | 待获取的系统铃声的类型。 |
-| callback | AsyncCallback&lt;string&gt; | 是 | 回调函数。当获取系统铃声uri成功，err为undefined，data为获取到的系统铃声uri；否则为错误对象。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 当前应用的上下文。 |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | 是 | 待获取的系统铃声的类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | 回调函数。当获取系统铃声uri成功，err为undefined，data为获取到的系统铃声uri；否则为错误对象。 |
 
 **示例：**
 
@@ -1040,6 +1087,8 @@ getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>
 
 **替代接口：** [getRingtoneUri](arkts-audio-systemsoundmanager-i-sys.md#getringtoneuri-1)
 
+<!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>--><!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1048,14 +1097,14 @@ getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 当前应用的上下文。 |
-| type | RingtoneType | 是 | 被设置的系统铃声的类型。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 当前应用的上下文。 |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回获取的系统铃声uri。 |
+| Promise<string> | Promise对象，返回获取的系统铃声uri。 |
 
 **示例：**
 
@@ -1086,6 +1135,8 @@ getSystemToneAttrList(context: BaseContext, type: SystemToneType): Promise<ToneA
 
 **起始版本：** 12
 
+<!--Device-SystemSoundManager-getSystemToneAttrList(context: BaseContext, type: SystemToneType): Promise<ToneAttrsArray>--><!--Device-SystemSoundManager-getSystemToneAttrList(context: BaseContext, type: SystemToneType): Promise<ToneAttrsArray>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1094,14 +1145,14 @@ getSystemToneAttrList(context: BaseContext, type: SystemToneType): Promise<ToneA
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
-| type | SystemToneType | 是 | 待获取播放器的系统提示音的类型。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
+| type | [SystemToneType](arkts-audio-systemtonetype-e-sys.md) | 是 | 待获取播放器的系统提示音的类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ToneAttrsArray&gt; | Promise对象，返回系统提示音的属性列表。 |
+| Promise<ToneAttrsArray> | Promise对象，返回系统提示音的属性列表。 |
 
 **错误码：**
 
@@ -1140,6 +1191,8 @@ getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemT
 
 **起始版本：** 11
 
+<!--Device-SystemSoundManager-getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemTonePlayer>--><!--Device-SystemSoundManager-getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemTonePlayer>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1148,14 +1201,14 @@ getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemT
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
-| type | SystemToneType | 是 | 待获取播放器的系统提示音的类型。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
+| type | [SystemToneType](arkts-audio-systemtonetype-e-sys.md) | 是 | 待获取播放器的系统提示音的类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;SystemTonePlayer&gt; | Promise对象，返回获取的系统提示音播放器。 |
+| Promise<SystemTonePlayer> | Promise对象，返回获取的系统提示音播放器。 |
 
 **错误码：**
 
@@ -1195,6 +1248,8 @@ getSystemToneUri(context: BaseContext, type: SystemToneType): Promise<string>
 
 **起始版本：** 11
 
+<!--Device-SystemSoundManager-getSystemToneUri(context: BaseContext, type: SystemToneType): Promise<string>--><!--Device-SystemSoundManager-getSystemToneUri(context: BaseContext, type: SystemToneType): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1203,14 +1258,14 @@ getSystemToneUri(context: BaseContext, type: SystemToneType): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
-| type | SystemToneType | 是 | 被设置的系统提示音的类型。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
+| type | [SystemToneType](arkts-audio-systemtonetype-e-sys.md) | 是 | 被设置的系统提示音的类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回获取的系统提示音uri。 |
+| Promise<string> | Promise对象，返回获取的系统提示音uri。 |
 
 **错误码：**
 
@@ -1249,6 +1304,8 @@ getToneHapticsList(context: BaseContext, isSynced: boolean): Promise<ToneHaptics
 
 **起始版本：** 14
 
+<!--Device-SystemSoundManager-getToneHapticsList(context: BaseContext, isSynced: boolean): Promise<ToneHapticsAttrsArray>--><!--Device-SystemSoundManager-getToneHapticsList(context: BaseContext, isSynced: boolean): Promise<ToneHapticsAttrsArray>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1257,14 +1314,14 @@ getToneHapticsList(context: BaseContext, isSynced: boolean): Promise<ToneHaptics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
 | isSynced | boolean | 是 | 表示待获取的振动是否与某个铃音同步。true表示同步，false表示不同步。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ToneHapticsAttrsArray&gt; | Promise对象，返回同步或者非同步的系统铃音的振动属性列表。 |
+| Promise<ToneHapticsAttrsArray> | Promise对象，返回同步或者非同步的系统铃音的振动属性列表。 |
 
 **错误码：**
 
@@ -1303,6 +1360,8 @@ getToneHapticsSettings(context: BaseContext, type: ToneHapticsType): Promise<Ton
 
 **起始版本：** 14
 
+<!--Device-SystemSoundManager-getToneHapticsSettings(context: BaseContext, type: ToneHapticsType): Promise<ToneHapticsSettings>--><!--Device-SystemSoundManager-getToneHapticsSettings(context: BaseContext, type: ToneHapticsType): Promise<ToneHapticsSettings>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1311,14 +1370,14 @@ getToneHapticsSettings(context: BaseContext, type: ToneHapticsType): Promise<Ton
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
-| type | ToneHapticsType | 是 | 待获取系统铃音的振动类型。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
+| type | [ToneHapticsType](arkts-audio-tonehapticstype-e-sys.md) | 是 | 待获取系统铃音的振动类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ToneHapticsSettings&gt; | Promise对象，返回铃声的振动设置。 |
+| Promise<ToneHapticsSettings> | Promise对象，返回铃声的振动设置。 |
 
 **错误码：**
 
@@ -1358,6 +1417,8 @@ openAlarmTone(context: BaseContext, uri: string): Promise<number>
 
 **起始版本：** 12
 
+<!--Device-SystemSoundManager-openAlarmTone(context: BaseContext, uri: string): Promise<int>--><!--Device-SystemSoundManager-openAlarmTone(context: BaseContext, uri: string): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1366,14 +1427,14 @@ openAlarmTone(context: BaseContext, uri: string): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
 | uri | string | 是 | 被设置的系统闹铃的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-avplayer-i.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回fd。 |
+| Promise<number> | Promise对象，返回fd。 |
 
 **错误码：**
 
@@ -1413,6 +1474,8 @@ openToneHaptics(context: BaseContext, hapticsUri: string): Promise<number>
 
 **起始版本：** 14
 
+<!--Device-SystemSoundManager-openToneHaptics(context: BaseContext, hapticsUri: string): Promise<int>--><!--Device-SystemSoundManager-openToneHaptics(context: BaseContext, hapticsUri: string): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1421,14 +1484,14 @@ openToneHaptics(context: BaseContext, hapticsUri: string): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
 | hapticsUri | string | 是 | 待打开系统铃音的振动的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-avplayer-i.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回fd。 |
+| Promise<number> | Promise对象，返回fd。 |
 
 **错误码：**
 
@@ -1469,6 +1532,8 @@ openToneList(uriList: Array<string>): Promise<Array<[string, number, SystemSound
 
 **起始版本：** 20
 
+<!--Device-SystemSoundManager-openToneList(uriList: Array<string>): Promise<Array<[string, long, SystemSoundError]>>--><!--Device-SystemSoundManager-openToneList(uriList: Array<string>): Promise<Array<[string, long, SystemSoundError]>>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1477,13 +1542,13 @@ openToneList(uriList: Array<string>): Promise<Array<[string, number, SystemSound
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uriList | Array&lt;string&gt; | 是 | 要打开的uri列表，不能超过1024个。 |
+| uriList | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 要打开的uri列表，不能超过1024个。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[string, number, SystemSoundError]&gt;&gt; | Promise对象，Promise用于返回此操作的结果，返回Array内第一个参数uri，第二个参数fd，第三个参数为此uri打开的结果。 |
+| Promise<Array<[string, number, SystemSoundError]>> | Promise对象，Promise用于返回此操作的结果，返回Array内第一个参数uri，第二个参数fd，第三个参数为此uri打开的结果。 |
 
 **错误码：**
 
@@ -1525,6 +1590,8 @@ removeCustomizedTone(context: BaseContext, uri:string): Promise<void>
 
 **需要权限：** ohos.permission.WRITE_RINGTONE
 
+<!--Device-SystemSoundManager-removeCustomizedTone(context: BaseContext, uri:string): Promise<void>--><!--Device-SystemSoundManager-removeCustomizedTone(context: BaseContext, uri:string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1533,14 +1600,14 @@ removeCustomizedTone(context: BaseContext, uri:string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
 | uri | string | 是 | 铃音uri，可通过[addCustomizedTone](arkts-audio-systemsoundmanager-i-sys.md#addcustomizedtone-1)或[getAlarmToneAttrList](arkts-audio-systemsoundmanager-i-sys.md#getalarmtoneattrlist-1)等方法获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1583,6 +1650,8 @@ removeCustomizedToneList(uriList: Array<string>): Promise<Array<[string, SystemS
 
 **需要权限：** ohos.permission.WRITE_RINGTONE
 
+<!--Device-SystemSoundManager-removeCustomizedToneList(uriList: Array<string>): Promise<Array<[string, SystemSoundError]>>--><!--Device-SystemSoundManager-removeCustomizedToneList(uriList: Array<string>): Promise<Array<[string, SystemSoundError]>>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1591,13 +1660,13 @@ removeCustomizedToneList(uriList: Array<string>): Promise<Array<[string, SystemS
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uriList | Array&lt;string&gt; | 是 | 要删除的uri列表，不能超过1024个。 |
+| uriList | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 要删除的uri列表，不能超过1024个。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[string, SystemSoundError]&gt;&gt; | Promise对象，Promise用于返回此操作的结果，返回Array内第一个参数uri，第二个参数为此uri删除结果。 |
+| Promise<Array<[string, SystemSoundError]>> | Promise对象，Promise用于返回此操作的结果，返回Array内第一个参数uri，第二个参数为此uri删除结果。 |
 
 **错误码：**
 
@@ -1638,6 +1707,8 @@ setAlarmToneUri(context: BaseContext, uri: string): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-SystemSoundManager-setAlarmToneUri(context: BaseContext, uri: string): Promise<void>--><!--Device-SystemSoundManager-setAlarmToneUri(context: BaseContext, uri: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1646,14 +1717,14 @@ setAlarmToneUri(context: BaseContext, uri: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
 | uri | string | 是 | 被设置的系统闹铃的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-avplayer-i.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1693,6 +1764,8 @@ setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<v
 
 **起始版本：** 11
 
+<!--Device-SystemSoundManager-setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<void>--><!--Device-SystemSoundManager-setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1701,15 +1774,15 @@ setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
 | uri | string | 是 | 被设置的系统铃声的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-avplayer-i.md)。 |
-| type | RingtoneType | 是 | 被设置的系统铃声的类型。 |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1753,6 +1826,8 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback
 
 **替代接口：** [setRingtoneUri](arkts-audio-systemsoundmanager-i-sys.md#setringtoneuri-1)
 
+<!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback: AsyncCallback<void>): void--><!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1761,10 +1836,10 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 当前应用的上下文。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 当前应用的上下文。 |
 | uri | string | 是 | 被设置的系统铃声的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-avplayer-i.md)。 |
-| type | RingtoneType | 是 | 被设置的系统铃声的类型。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当设置系统铃声uri成功，err为undefined，否则为错误对象。 |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | 是 | 被设置的系统铃声的类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当设置系统铃声uri成功，err为undefined，否则为错误对象。 |
 
 **示例：**
 
@@ -1802,6 +1877,8 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise
 
 **替代接口：** [setRingtoneUri](arkts-audio-systemsoundmanager-i-sys.md#setringtoneuri-1)
 
+<!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise<void>--><!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1810,15 +1887,15 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 当前应用的上下文。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 当前应用的上下文。 |
 | uri | string | 是 | 被设置的系统铃声的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-avplayer-i.md)。 |
-| type | RingtoneType | 是 | 被设置的系统铃声的类型。 |
+| type | [RingtoneType](arkts-audio-ringtonetype-e-sys.md) | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **示例：**
 
@@ -1850,6 +1927,8 @@ setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promi
 
 **起始版本：** 11
 
+<!--Device-SystemSoundManager-setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promise<void>--><!--Device-SystemSoundManager-setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1858,15 +1937,15 @@ setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
 | uri | string | 是 | 被设置的系统提示音的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-avplayer-i.md)。 |
-| type | SystemToneType | 是 | 被设置的系统提示音的类型。 |
+| type | [SystemToneType](arkts-audio-systemtonetype-e-sys.md) | 是 | 被设置的系统提示音的类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1906,6 +1985,8 @@ setToneHapticsSettings(context: BaseContext, type: ToneHapticsType, settings: To
 
 **起始版本：** 14
 
+<!--Device-SystemSoundManager-setToneHapticsSettings(context: BaseContext, type: ToneHapticsType, settings: ToneHapticsSettings): Promise<void>--><!--Device-SystemSoundManager-setToneHapticsSettings(context: BaseContext, type: ToneHapticsType, settings: ToneHapticsSettings): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1914,15 +1995,15 @@ setToneHapticsSettings(context: BaseContext, type: ToneHapticsType, settings: To
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 当前应用的上下文。 |
-| type | ToneHapticsType | 是 | 被设置的系统铃音的振动类型。 |
-| settings | ToneHapticsSettings | 是 | 被设置的系统铃音的振动设置。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用的上下文。 |
+| type | [ToneHapticsType](arkts-audio-tonehapticstype-e-sys.md) | 是 | 被设置的系统铃音的振动类型。 |
+| settings | [ToneHapticsSettings](arkts-audio-tonehapticssettings-i-sys.md) | 是 | 被设置的系统铃音的振动设置。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

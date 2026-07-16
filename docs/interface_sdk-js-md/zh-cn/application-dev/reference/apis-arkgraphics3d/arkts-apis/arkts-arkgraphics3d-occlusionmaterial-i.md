@@ -6,5 +6,7 @@
 
 **起始版本：** 23
 
+<!--Device-unnamed-export interface OcclusionMaterial extends Material--><!--Device-unnamed-export interface OcclusionMaterial extends Material-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

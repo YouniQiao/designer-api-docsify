@@ -4,6 +4,8 @@ Define pattern options of keyboard.
 
 **Since:** 11
 
+<!--Device-unnamed-export interface PatternOptions--><!--Device-unnamed-export interface PatternOptions-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Mandatory. Callback invoked when the pattern option changes.
 
 **Since:** 11
 
+<!--Device-PatternOptions-action: (index: int) => void--><!--Device-PatternOptions-action: (index: int) => void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## defaultSelected
@@ -38,6 +42,8 @@ Optional. Default selected pattern.
 
 **Since:** 11
 
+<!--Device-PatternOptions-defaultSelected?: int--><!--Device-PatternOptions-defaultSelected?: int-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## patterns
@@ -51,6 +57,8 @@ Mandatory. Resource of the pattern option.
 **Type:** Array<Pattern>
 
 **Since:** 11
+
+<!--Device-PatternOptions-patterns: Array<Pattern>--><!--Device-PatternOptions-patterns: Array<Pattern>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 

@@ -4,6 +4,8 @@ Describes the audio capturer change event.
 
 **Since:** 9
 
+<!--Device-audio-interface AudioCapturerChangeInfo--><!--Device-audio-interface AudioCapturerChangeInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Audio capturer information.
 
 **Since:** 9
 
+<!--Device-AudioCapturerChangeInfo-readonly capturerInfo: AudioCapturerInfo--><!--Device-AudioCapturerChangeInfo-readonly capturerInfo: AudioCapturerInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 ## deviceDescriptors
@@ -37,6 +41,8 @@ Audio device information.
 **Type:** AudioDeviceDescriptors
 
 **Since:** 9
+
+<!--Device-AudioCapturerChangeInfo-readonly deviceDescriptors: AudioDeviceDescriptors--><!--Device-AudioCapturerChangeInfo-readonly deviceDescriptors: AudioDeviceDescriptors-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -52,6 +58,8 @@ Whether the audio capturer is muted. **true** if muted, **false** otherwise.
 
 **Since:** 11
 
+<!--Device-AudioCapturerChangeInfo-readonly muted?: boolean--><!--Device-AudioCapturerChangeInfo-readonly muted?: boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 ## streamId
@@ -65,6 +73,8 @@ Unique ID of an audio stream.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-AudioCapturerChangeInfo-readonly streamId: int--><!--Device-AudioCapturerChangeInfo-readonly streamId: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 

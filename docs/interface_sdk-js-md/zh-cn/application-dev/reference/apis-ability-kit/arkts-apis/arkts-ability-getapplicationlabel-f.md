@@ -1,5 +1,11 @@
 # getApplicationLabel
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getApplicationLabel
 
 ```TypeScript
@@ -14,6 +20,8 @@ function getApplicationLabel(bundleName: string, appIndex: number): Promise<stri
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bundleManager-function getApplicationLabel(bundleName: string, appIndex: int): Promise<string>--><!--Device-bundleManager-function getApplicationLabel(bundleName: string, appIndex: int): Promise<string>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
 **参数：**
@@ -27,7 +35,7 @@ function getApplicationLabel(bundleName: string, appIndex: number): Promise<stri
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，调用成功返回应用名称；调用失败返回错误对象。 |
+| Promise<string> | Promise对象，调用成功返回应用名称；调用失败返回错误对象。 |
 
 **错误码：**
 

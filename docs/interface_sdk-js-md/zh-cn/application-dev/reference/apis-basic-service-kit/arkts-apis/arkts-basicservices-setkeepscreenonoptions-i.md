@@ -6,7 +6,15 @@
 
 **废弃版本：** 7
 
+<!--Device-unnamed-export interface SetKeepScreenOnOptions--><!--Device-unnamed-export interface SetKeepScreenOnOptions-End-->
+
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
+
+## 导入模块
+
+```TypeScript
+import { BrightnessResponse, BrightnessModeResponse, SetBrightnessModeOptions, GetBrightnessModeOptions, SetBrightnessOptions, GetBrightnessOptions, SetKeepScreenOnOptions } from '@kit.BasicServicesKit';
+```
 
 ## complete
 
@@ -21,6 +29,8 @@ complete?: () => void
 **起始版本：** 3
 
 **废弃版本：** 7
+
+<!--Device-SetKeepScreenOnOptions-complete?: () => void--><!--Device-SetKeepScreenOnOptions-complete?: () => void-End-->
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -38,6 +48,8 @@ fail?: (data: string, code: number) => void
 
 **废弃版本：** 7
 
+<!--Device-SetKeepScreenOnOptions-fail?: (data: string, code: number) => void--><!--Device-SetKeepScreenOnOptions-fail?: (data: string, code: number) => void-End-->
+
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 ## keepScreenOn
@@ -54,6 +66,8 @@ true表示保持屏幕常亮，false表示取消屏幕常亮。
 
 **废弃版本：** 7
 
+<!--Device-SetKeepScreenOnOptions-keepScreenOn: boolean--><!--Device-SetKeepScreenOnOptions-keepScreenOn: boolean-End-->
+
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 ## success
@@ -69,6 +83,8 @@ success?: () => void
 **起始版本：** 3
 
 **废弃版本：** 7
+
+<!--Device-SetKeepScreenOnOptions-success?: () => void--><!--Device-SetKeepScreenOnOptions-success?: () => void-End-->
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 

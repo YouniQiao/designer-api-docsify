@@ -1,5 +1,11 @@
 # getSecurityLabel
 
+## 导入模块
+
+```TypeScript
+import { securityLabel } from '@kit.CoreFileKit';
+```
+
 ## getSecurityLabel
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getSecurityLabel(path: string): Promise<string>
 获取文件或目录的数据安全等级。若未设置过数据安全等级则默认返回“s3”。使用Promise异步回调。
 
 **起始版本：** 9
+
+<!--Device-securityLabel-function getSecurityLabel(path: string): Promise<string>--><!--Device-securityLabel-function getSecurityLabel(path: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -22,7 +30,7 @@ function getSecurityLabel(path: string): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | 返回数据安全等级。 |
+| Promise<string> | 返回数据安全等级。 |
 
 **错误码：**
 
@@ -61,6 +69,8 @@ function getSecurityLabel(path: string, callback: AsyncCallback<string>): void
 
 **起始版本：** 9
 
+<!--Device-securityLabel-function getSecurityLabel(path: string, callback: AsyncCallback<string>): void--><!--Device-securityLabel-function getSecurityLabel(path: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -68,7 +78,7 @@ function getSecurityLabel(path: string, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 文件路径。 |
-| callback | AsyncCallback&lt;string&gt; | 是 | 异步获取数据安全等级之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | 异步获取数据安全等级之后的回调。 |
 
 **错误码：**
 

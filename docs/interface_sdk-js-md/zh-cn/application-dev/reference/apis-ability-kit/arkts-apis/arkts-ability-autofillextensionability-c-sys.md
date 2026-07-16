@@ -1,15 +1,22 @@
 # AutoFillExtensionAbility（系统接口）
 
-AutoFillExtensionAbility模块支持账号、密码、地址等多种数据类型的自动填充与保存，继承自
-[ExtensionAbility](arkts-ability-extensionability-c.md)。
+AutoFillExtensionAbility模块支持账号、密码、地址等多种数据类型的自动填充与保存，继承自[ExtensionAbility](arkts-ability-extensionability-c.md)。
 
 **继承/实现关系：** AutoFillExtensionAbility extends [ExtensionAbility](arkts-ability-extensionability-c.md)
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare class AutoFillExtensionAbility extends ExtensionAbility--><!--Device-unnamed-declare class AutoFillExtensionAbility extends ExtensionAbility-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { AutoFillExtensionAbility } from '@kit.AbilityKit';
+```
 
 ## onBackground
 
@@ -22,6 +29,8 @@ onBackground(): void
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AutoFillExtensionAbility-onBackground(): void--><!--Device-AutoFillExtensionAbility-onBackground(): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -53,6 +62,8 @@ AutoFillExtensionAbility创建时触发回调函数。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AutoFillExtensionAbility-onCreate(): void--><!--Device-AutoFillExtensionAbility-onCreate(): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -82,6 +93,8 @@ onDestroy(): void | Promise<void>
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AutoFillExtensionAbility-onDestroy(): void | Promise<void>--><!--Device-AutoFillExtensionAbility-onDestroy(): void | Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -113,6 +126,8 @@ onFillRequest(session: UIExtensionContentSession, request: FillRequest, callback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AutoFillExtensionAbility-onFillRequest(session: UIExtensionContentSession, request: FillRequest, callback: FillRequestCallback): void--><!--Device-AutoFillExtensionAbility-onFillRequest(session: UIExtensionContentSession, request: FillRequest, callback: FillRequestCallback): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -121,9 +136,9 @@ onFillRequest(session: UIExtensionContentSession, request: FillRequest, callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| session | UIExtensionContentSession | 是 | AutoFillExtensionAbility界面内容相关信息。 |
-| request | FillRequest | 是 | 自动填充数据。 |
-| callback | FillRequestCallback | 是 | 自动填充请求回调。 |
+| session | [UIExtensionContentSession](arkts-ability-uiextensioncontentsession-c-sys.md) | 是 | AutoFillExtensionAbility界面内容相关信息。 |
+| request | [FillRequest](arkts-ability-fillrequest-i-sys.md) | 是 | 自动填充数据。 |
+| callback | [FillRequestCallback](arkts-ability-fillrequestcallback-i-sys.md) | 是 | 自动填充请求回调。 |
 
 **示例：**
 
@@ -174,6 +189,8 @@ onForeground(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AutoFillExtensionAbility-onForeground(): void--><!--Device-AutoFillExtensionAbility-onForeground(): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -204,6 +221,8 @@ onSaveRequest(session: UIExtensionContentSession, request: SaveRequest, callback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AutoFillExtensionAbility-onSaveRequest(session: UIExtensionContentSession, request: SaveRequest, callback: SaveRequestCallback): void--><!--Device-AutoFillExtensionAbility-onSaveRequest(session: UIExtensionContentSession, request: SaveRequest, callback: SaveRequestCallback): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -212,9 +231,9 @@ onSaveRequest(session: UIExtensionContentSession, request: SaveRequest, callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| session | UIExtensionContentSession | 是 | AutoFillExtensionAbility界面内容相关信息。 |
-| request | SaveRequest | 是 | 保存请求数据。 |
-| callback | SaveRequestCallback | 是 | 保存请求回调。 |
+| session | [UIExtensionContentSession](arkts-ability-uiextensioncontentsession-c-sys.md) | 是 | AutoFillExtensionAbility界面内容相关信息。 |
+| request | [SaveRequest](arkts-ability-saverequest-t.md) | 是 | 保存请求数据。 |
+| callback | [SaveRequestCallback](arkts-ability-saverequestcallback-t-sys.md) | 是 | 保存请求回调。 |
 
 **示例：**
 
@@ -263,6 +282,8 @@ onSessionDestroy(session: UIExtensionContentSession): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AutoFillExtensionAbility-onSessionDestroy(session: UIExtensionContentSession): void--><!--Device-AutoFillExtensionAbility-onSessionDestroy(session: UIExtensionContentSession): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -271,7 +292,7 @@ onSessionDestroy(session: UIExtensionContentSession): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| session | UIExtensionContentSession | 是 | AutoFillExtensionAbility界面内容相关信息。 |
+| session | [UIExtensionContentSession](arkts-ability-uiextensioncontentsession-c-sys.md) | 是 | AutoFillExtensionAbility界面内容相关信息。 |
 
 **示例：**
 
@@ -299,6 +320,8 @@ onUpdateRequest(request: UpdateRequest): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AutoFillExtensionAbility-onUpdateRequest(request: UpdateRequest): void--><!--Device-AutoFillExtensionAbility-onUpdateRequest(request: UpdateRequest): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -307,7 +330,7 @@ onUpdateRequest(request: UpdateRequest): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | UpdateRequest | 是 | 更新请求。 |
+| request | [UpdateRequest](arkts-ability-updaterequest-i-sys.md) | 是 | 更新请求。 |
 
 **示例：**
 
@@ -337,6 +360,8 @@ AutoFillExtension的上下文环境，继承自ExtensionContext。
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AutoFillExtensionAbility-context: AutoFillExtensionContext--><!--Device-AutoFillExtensionAbility-context: AutoFillExtensionContext-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

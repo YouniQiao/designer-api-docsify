@@ -20,6 +20,8 @@ Removes one or more rules. The removed rules will become ineffective.
 
 **Substitutes:** [removeCheckRule](arkts-performanceanalysis-removecheckrule-f.md#removecheckrule-1)
 
+<!--Device-hichecker-function removeRule(rule: bigint): void--><!--Device-hichecker-function removeRule(rule: bigint): void-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 **Parameters:**

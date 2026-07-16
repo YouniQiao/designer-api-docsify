@@ -14,20 +14,22 @@ Creates a FrameNode of the **Text** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Text'): Text--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Text'): Text-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'Text' | Yes | Node type. Set to **'Text'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Text | FrameNode of the **Text** type. |
+| [Text](../../apis-arkdata/arkts-apis/arkts-arkdata-text-c.md) | FrameNode of the **Text** type. |
 
 
 ## createNode
@@ -44,20 +46,22 @@ Creates a FrameNode of the **Column** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Column'): Column--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Column'): Column-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'Column' | Yes | Node type. Set to **'Column'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Column | FrameNode of the **Column** type. |
+| [Column](arkts-arkui-column-t.md) | FrameNode of the **Column** type. |
 
 
 ## createNode
@@ -74,20 +78,22 @@ Creates a FrameNode of the Row type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Row'): Row--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Row'): Row-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'Row' | Yes | Node type. Set to **'Row'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Row | FrameNode of the **Row** type. |
+| [Row](arkts-arkui-row-t.md) | FrameNode of the **Row** type. |
 
 
 ## createNode
@@ -104,20 +110,22 @@ Creates a FrameNode of the **Stack** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Stack'): Stack--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Stack'): Stack-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'Stack' | Yes | Node type. Set to **'Stack'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Stack | FrameNode of the **Stack** type. |
+| [Stack](../../apis-arkts/arkts-apis/arkts-arkts-stack-c.md) | FrameNode of the **Stack** type. |
 
 
 ## createNode
@@ -134,20 +142,22 @@ Creates a FrameNode of the **GridRow** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'GridRow'): GridRow--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'GridRow'): GridRow-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'GridRow' | Yes | Node type. Set to **'GridRow'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| GridRow | FrameNode of the **GridRow** type. |
+| [GridRow](arkts-arkui-gridrow-t.md) | FrameNode of the **GridRow** type. |
 
 
 ## createNode
@@ -164,20 +174,22 @@ Creates a FrameNode of the **GridCol** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'GridCol'): GridCol--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'GridCol'): GridCol-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'GridCol' | Yes | Node type. Set to **'GridCol'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| GridCol | FrameNode of the **GridCol** type. |
+| [GridCol](arkts-arkui-gridcol-t.md) | FrameNode of the **GridCol** type. |
 
 
 ## createNode
@@ -194,20 +206,22 @@ Creates a FrameNode of the Flex type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Flex'): Flex--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Flex'): Flex-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'Flex' | Yes | Node type. Set to **'Flex'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Flex | FrameNode of the **Flex** type. |
+| [Flex](arkts-arkui-flex-t.md) | FrameNode of the **Flex** type. |
 
 
 ## createNode
@@ -224,20 +238,22 @@ Creates a FrameNode of the **Swiper** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Swiper'): Swiper--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Swiper'): Swiper-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'Swiper' | Yes | Node type. Set to **'Swiper'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Swiper | FrameNode of the **Swiper** type. |
+| [Swiper](arkts-arkui-swiper-t.md) | FrameNode of the **Swiper** type. |
 
 
 ## createNode
@@ -254,20 +270,22 @@ Creates a FrameNode of the **Progress** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Progress'): Progress--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Progress'): Progress-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'Progress' | Yes | Node type. Set to **'Progress'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Progress | FrameNode of the **Progress** type. |
+| [Progress](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-progress-i.md) | FrameNode of the **Progress** type. |
 
 
 ## createNode
@@ -284,20 +302,22 @@ Creates a FrameNode of the **Scroll** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Scroll'): Scroll--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Scroll'): Scroll-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'Scroll' | Yes | Node type. Set to **'Scroll'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Scroll | FrameNode of the **Scroll** type. |
+| [Scroll](arkts-arkui-scroll-t.md) | FrameNode of the **Scroll** type. |
 
 
 ## createNode
@@ -314,20 +334,22 @@ Creates a FrameNode of the **RelativeContainer** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'RelativeContainer'): RelativeContainer--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'RelativeContainer'): RelativeContainer-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'RelativeContainer' | Yes | Node type. Set to **'RelativeContainer'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RelativeContainer | FrameNode of the **RelativeContainer** type. |
+| [RelativeContainer](arkts-arkui-relativecontainer-t.md) | FrameNode of the **RelativeContainer** type. |
 
 
 ## createNode
@@ -344,20 +366,22 @@ Creates a FrameNode of the **Divider** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Divider'): Divider--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Divider'): Divider-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'Divider' | Yes | Node type. Set to **'Divider'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Divider | FrameNode of the **Divider** type. |
+| [Divider](arkts-arkui-divider-t.md) | FrameNode of the **Divider** type. |
 
 
 ## createNode
@@ -374,20 +398,22 @@ Creates a FrameNode of the **LoadingProgress** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'LoadingProgress'): LoadingProgress--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'LoadingProgress'): LoadingProgress-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'LoadingProgress' | Yes | Node type. Set to **'LoadingProgress'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| LoadingProgress | FrameNode of the **LoadingProgress** type. |
+| [LoadingProgress](arkts-arkui-loadingprogress-t.md) | FrameNode of the **LoadingProgress** type. |
 
 
 ## createNode
@@ -404,20 +430,22 @@ Creates a FrameNode of the **Search** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Search'): Search--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Search'): Search-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'Search' | Yes | Node type. Set to **'Search'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Search | FrameNode of the **Search** type. |
+| [Search](arkts-arkui-search-t.md) | FrameNode of the **Search** type. |
 
 
 ## createNode
@@ -434,20 +462,22 @@ Creates a FrameNode of the **Blank** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Blank'): Blank--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Blank'): Blank-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'Blank' | Yes | Node type. Set to **'Blank'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Blank | FrameNode of the **Blank** type. |
+| [Blank](arkts-arkui-blank-t.md) | FrameNode of the **Blank** type. |
 
 
 ## createNode
@@ -464,20 +494,22 @@ Creates a FrameNode of the **Image** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Image'): Image--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Image'): Image-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'Image' | Yes | Node type, which is **Image** in this API. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Image | FrameNode of the **Image** type. |
+| [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-image-i.md) | FrameNode of the **Image** type. |
 
 
 ## createNode
@@ -494,20 +526,22 @@ Creates a FrameNode of the **List** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'List'): List--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'List'): List-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'List' | Yes | Node type, which is **List** in this API. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| List | FrameNode of the **List** type. |
+| [List](../../apis-arkts/arkts-apis/arkts-arkts-list-c.md) | FrameNode of the **List** type. |
 
 
 ## createNode
@@ -524,20 +558,22 @@ Creates a FrameNode of the **ListItem** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'ListItem'): ListItem--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'ListItem'): ListItem-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'ListItem' | Yes | Node type. Set to **'ListItem'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ListItem | FrameNode of the **ListItem** type. |
+| [ListItem](arkts-arkui-listitem-t.md) | FrameNode of the **ListItem** type. |
 
 
 ## createNode
@@ -554,20 +590,22 @@ Creates a FrameNode of the **TextInput** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextInput'): TextInput--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextInput'): TextInput-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'TextInput' | Yes | Node type. Set to **'TextInput'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TextInput | FrameNode of the **TextInput** type. |
+| [TextInput](arkts-arkui-textinput-t.md) | FrameNode of the **TextInput** type. |
 
 
 ## createNode
@@ -584,20 +622,22 @@ Creates a FrameNode of the **Button** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Button'): Button--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Button'): Button-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'Button' | Yes | Node type. Set to **'Button'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Button | FrameNode of the **Button** type. |
+| [Button](arkts-arkui-button-i.md) | FrameNode of the **Button** type. |
 
 
 ## createNode
@@ -614,20 +654,22 @@ Creates a FrameNode of the **ListItemGroup** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'ListItemGroup'): ListItemGroup--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'ListItemGroup'): ListItemGroup-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'ListItemGroup' | Yes | Node type. Set to **'ListItemGroup'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ListItemGroup | FrameNode of the **ListItemGroup** type. |
+| [ListItemGroup](arkts-arkui-listitemgroup-t.md) | FrameNode of the **ListItemGroup** type. |
 
 
 ## createNode
@@ -644,20 +686,22 @@ Creates a FrameNode of the **WaterFlow** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'WaterFlow'): WaterFlow--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'WaterFlow'): WaterFlow-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'WaterFlow' | Yes | Node type. Set to **'WaterFlow'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| WaterFlow | FrameNode of the **WaterFlow** type. |
+| [WaterFlow](arkts-arkui-waterflow-t.md) | FrameNode of the **WaterFlow** type. |
 
 
 ## createNode
@@ -674,20 +718,22 @@ Creates a FrameNode of the **FlowItem** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'FlowItem'): FlowItem--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'FlowItem'): FlowItem-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'FlowItem' | Yes | Node type. Set to **'FlowItem'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| FlowItem | FrameNode of the **FlowItem** type. |
+| [FlowItem](arkts-arkui-flowitem-t.md) | FrameNode of the **FlowItem** type. |
 
 
 ## createNode
@@ -704,20 +750,22 @@ Creates a FrameNode of the **XComponent** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'XComponent'): XComponent--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'XComponent'): XComponent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'XComponent' | Yes | Node type. Set to **'XComponent'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| XComponent | FrameNode of the **XComponent** type. |
+| [XComponent](arkts-arkui-xcomponent-t.md) | FrameNode of the **XComponent** type. |
 
 
 ## createNode
@@ -734,21 +782,23 @@ Creates a FrameNode of the **XComponent** type based on the settings specified i
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'XComponent', options: XComponentOptions): XComponent--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'XComponent', options: XComponentOptions): XComponent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'XComponent' | Yes | Node type. Set to **'XComponent'**. |
-| options | XComponentOptions | Yes | Options of the **XComponent**. |
+| options | [XComponentOptions](../arkts-components/arkts-arkui-xcomponentoptions-i.md) | Yes | Options of the **XComponent**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| XComponent | FrameNode of the **XComponent** type. |
+| [XComponent](arkts-arkui-xcomponent-t.md) | FrameNode of the **XComponent** type. |
 
 
 ## createNode
@@ -765,21 +815,23 @@ Creates a FrameNode of the **XComponent** type based on the settings specified i
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'XComponent', parameters: NativeXComponentParameters): XComponent--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'XComponent', parameters: NativeXComponentParameters): XComponent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'XComponent' | Yes | Node type. Set to **'XComponent'**. |
-| parameters | NativeXComponentParameters | Yes | Options of the **XComponent**. |
+| parameters | [NativeXComponentParameters](../arkts-components/arkts-arkui-nativexcomponentparameters-i.md) | Yes | Options of the **XComponent**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| XComponent | FrameNode of the **XComponent** type. |
+| [XComponent](arkts-arkui-xcomponent-t.md) | FrameNode of the **XComponent** type. |
 
 
 ## createNode
@@ -796,20 +848,22 @@ Creates a FrameNode of the **Checkbox** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Checkbox'): Checkbox--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Checkbox'): Checkbox-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'Checkbox' | Yes | Node type. Set to **'Checkbox'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Checkbox | FrameNode of the **Checkbox** type. |
+| [Checkbox](arkts-arkui-checkbox-t.md) | FrameNode of the **Checkbox** type. |
 
 
 ## createNode
@@ -826,20 +880,22 @@ Creates a FrameNode of the **CheckboxGroup** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'CheckboxGroup'): CheckboxGroup--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'CheckboxGroup'): CheckboxGroup-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'CheckboxGroup' | Yes | Node type. Set to **'CheckboxGroup'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CheckboxGroup | FrameNode of the **CheckboxGroup** type. |
+| [CheckboxGroup](arkts-arkui-checkboxgroup-t.md) | FrameNode of the **CheckboxGroup** type. |
 
 
 ## createNode
@@ -856,20 +912,22 @@ Creates a FrameNode of the **Radio** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Radio'): Radio--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Radio'): Radio-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'Radio' | Yes | Node type. Set to **'Radio'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Radio | FrameNode of the **Radio** type. |
+| [Radio](arkts-arkui-radio-t.md) | FrameNode of the **Radio** type. |
 
 
 ## createNode
@@ -886,20 +944,22 @@ Creates a FrameNode of the **Rating** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Rating'): Rating--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Rating'): Rating-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'Rating' | Yes | Node type, which is **Rating** in this API. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Rating | FrameNode of the **Rating** type. |
+| [Rating](arkts-arkui-rating-t.md) | FrameNode of the **Rating** type. |
 
 
 ## createNode
@@ -916,20 +976,22 @@ Creates a FrameNode of the **Select** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Select'): Select--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Select'): Select-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'Select' | Yes | Node type. Set to **'Select'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Select | FrameNode of the **Select** type. |
+| [Select](arkts-arkui-select-t.md) | FrameNode of the **Select** type. |
 
 
 ## createNode
@@ -946,20 +1008,22 @@ Creates a FrameNode of the **Slider** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Slider'): Slider--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Slider'): Slider-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'Slider' | Yes | Node type. Set to **'Slider'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Slider | FrameNode of the **Slider** type. |
+| [Slider](arkts-arkui-slider-t.md) | FrameNode of the **Slider** type. |
 
 
 ## createNode
@@ -976,21 +1040,23 @@ Creates a FrameNode of the **Toggle** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Toggle', options?: ToggleOptions): Toggle--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Toggle', options?: ToggleOptions): Toggle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'Toggle' | Yes | Node type. Set to **'Toggle'**. |
-| options | ToggleOptions | No | Options for configuring the node of the Toggle type, including setting thestyle through the **type** property. |
+| options | [ToggleOptions](../arkts-components/arkts-arkui-toggleoptions-i.md) | No | Options for configuring the node of the Toggle type, including setting the style through the **type** property. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Toggle | FrameNode of the **Toggle** type. |
+| [Toggle](arkts-arkui-toggle-t.md) | FrameNode of the **Toggle** type. |
 
 
 ## createNode
@@ -1007,20 +1073,22 @@ Creates a FrameNode of the **Marquee** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Marquee'): Marquee--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Marquee'): Marquee-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'Marquee' | Yes | Node type. Set to **'Marquee'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Marquee | FrameNode of the **Marquee** type. |
+| [Marquee](arkts-arkui-marquee-t.md) | FrameNode of the **Marquee** type. |
 
 
 ## createNode
@@ -1037,20 +1105,22 @@ Creates a FrameNode of the **TextArea** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextArea'): TextArea--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextArea'): TextArea-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'TextArea' | Yes | Node type. Set to **'TextArea'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TextArea | FrameNode of the **TextArea** type. |
+| [TextArea](arkts-arkui-textarea-t.md) | FrameNode of the **TextArea** type. |
 
 
 ## createNode
@@ -1067,20 +1137,22 @@ Creates a FrameNode of the **SymbolGlyph** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'SymbolGlyph'): SymbolGlyph--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'SymbolGlyph'): SymbolGlyph-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'SymbolGlyph' | Yes | Node type. Set to **'SymbolGlyph'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SymbolGlyph | FrameNode of the **SymbolGlyph** type. |
+| [SymbolGlyph](arkts-arkui-symbolglyph-t.md) | FrameNode of the **SymbolGlyph** type. |
 
 
 ## createNode
@@ -1097,20 +1169,22 @@ Creates a FrameNode of the **QRCode** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'QRCode'): QRCode--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'QRCode'): QRCode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'QRCode' | Yes | Node type, which is **QRCode** in this API. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| QRCode | FrameNode of the **QRCode** type. |
+| [QRCode](arkts-arkui-qrcode-t.md) | FrameNode of the **QRCode** type. |
 
 
 ## createNode
@@ -1127,20 +1201,22 @@ Creates a FrameNode of the **Badge** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Badge'): Badge--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Badge'): Badge-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'Badge' | Yes | Node type. Set to **'Badge'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Badge | FrameNode of the **Badge** type. |
+| [Badge](arkts-arkui-badge-t.md) | FrameNode of the **Badge** type. |
 
 
 ## createNode
@@ -1157,20 +1233,22 @@ Creates a FrameNode of the **TextClock** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextClock'): TextClock--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextClock'): TextClock-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'TextClock' | Yes | Node type. Set to **'TextClock'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TextClock | FrameNode of the **TextClock** type. |
+| [TextClock](arkts-arkui-textclock-t.md) | FrameNode of the **TextClock** type. |
 
 
 ## createNode
@@ -1187,20 +1265,22 @@ Creates a FrameNode of the **TextTimer** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextTimer'): TextTimer--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'TextTimer'): TextTimer-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'TextTimer' | Yes | Node type. Set to **'TextTimer'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TextTimer | FrameNode of the **TextTimer** type. |
+| [TextTimer](arkts-arkui-texttimer-t.md) | FrameNode of the **TextTimer** type. |
 
 
 ## createNode
@@ -1217,20 +1297,22 @@ Creates a FrameNode of the **Grid** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Grid'): Grid--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'Grid'): Grid-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'Grid' | Yes | Node type. Set to **'Grid'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Grid | FrameNode of the **Grid** type. |
+| [Grid](arkts-arkui-grid-t.md) | FrameNode of the **Grid** type. |
 
 
 ## createNode
@@ -1247,18 +1329,20 @@ Creates a FrameNode of the **GridItem** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-typeNode-function createNode(context: UIContext, nodeType: 'GridItem'): GridItem--><!--Device-typeNode-function createNode(context: UIContext, nodeType: 'GridItem'): GridItem-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | UI context for node creation. |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context for node creation. |
 | nodeType | 'GridItem' | Yes | Node type. Set to **'GridItem'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| GridItem | FrameNode of the **GridItem** type. |
+| [GridItem](arkts-arkui-griditem-t.md) | FrameNode of the **GridItem** type. |
 

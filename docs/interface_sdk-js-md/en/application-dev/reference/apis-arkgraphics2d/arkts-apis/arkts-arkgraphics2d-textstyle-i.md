@@ -4,6 +4,8 @@ Describes a text style.
 
 **Since:** 12
 
+<!--Device-text-interface TextStyle--><!--Device-text-interface TextStyle-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Rectangle style.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TextStyle-backgroundRect?: RectStyle--><!--Device-TextStyle-backgroundRect?: RectStyle-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## badgeType
@@ -34,15 +38,15 @@ Rectangle style.
 badgeType?: TextBadgeType
 ```
 
-Sets whether to use superscript or subscript in text layout. **TEXT_SUPERSCRIPT** indicates that superscript is
-enabled, and **TEXT_SUBSCRIPT** indicates that subscript is enabled. The default value is **TEXT_BADGE_NONE**,
-indicating that neither superscript nor subscript is enabled.
+Sets whether to use superscript or subscript in text layout. **TEXT_SUPERSCRIPT** indicates that superscript is enabled, and **TEXT_SUBSCRIPT** indicates that subscript is enabled. The default value is **TEXT_BADGE_NONE**,indicating that neither superscript nor subscript is enabled.
 
 **Type:** TextBadgeType
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TextStyle-badgeType?: TextBadgeType--><!--Device-TextStyle-badgeType?: TextBadgeType-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -60,6 +64,8 @@ Text baseline type. The default value is **ALPHABETIC**.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TextStyle-baseline?: TextBaseline--><!--Device-TextStyle-baseline?: TextBaseline-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## baselineShift
@@ -75,6 +81,8 @@ Underline offset of text, a floating-point value in physical pixels (px), with a
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TextStyle-baselineShift?: double--><!--Device-TextStyle-baselineShift?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -92,6 +100,8 @@ Text color. The default color is white.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TextStyle-color?: common2D.Color--><!--Device-TextStyle-color?: common2D.Color-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## decoration
@@ -107,6 +117,8 @@ Text decoration. By default, no decoration is used.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TextStyle-decoration?: Decoration--><!--Device-TextStyle-decoration?: Decoration-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -124,6 +136,8 @@ Ellipsis content, which will be used to replace the extra content.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TextStyle-ellipsis?: string--><!--Device-TextStyle-ellipsis?: string-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## ellipsisMode
@@ -139,6 +153,8 @@ Ellipsis type. The default value is **END**, indicating that the ellipsis is at 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TextStyle-ellipsisMode?: EllipsisMode--><!--Device-TextStyle-ellipsisMode?: EllipsisMode-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -158,6 +174,8 @@ Edge processing mode for drawing texts. The default value is **ANTI_ALIAS**.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-TextStyle-fontEdging?: drawing.FontEdging--><!--Device-TextStyle-fontEdging?: drawing.FontEdging-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## fontFamilies
@@ -173,6 +191,8 @@ Array of font families. By default, the array is empty, indicating that all syst
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TextStyle-fontFamilies?: Array<string>--><!--Device-TextStyle-fontFamilies?: Array<string>-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -190,6 +210,8 @@ Array of font features.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TextStyle-fontFeatures?: Array<FontFeature>--><!--Device-TextStyle-fontFeatures?: Array<FontFeature>-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## fontSize
@@ -206,6 +228,8 @@ Font size, a floating-point value with a default value of **14.0**, measured in 
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TextStyle-fontSize?: double--><!--Device-TextStyle-fontSize?: double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## fontStyle
@@ -221,6 +245,8 @@ Font style. The default value is **NORMAL**.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TextStyle-fontStyle?: FontStyle--><!--Device-TextStyle-fontStyle?: FontStyle-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -240,6 +266,8 @@ Array of font typefaces
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TextStyle-fontTypefaces?: Array<drawing.Typeface>--><!--Device-TextStyle-fontTypefaces?: Array<drawing.Typeface>-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## fontVariations
@@ -256,6 +284,8 @@ Array of font variations.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TextStyle-fontVariations?: Array<FontVariation>--><!--Device-TextStyle-fontVariations?: Array<FontVariation>-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## fontWeight
@@ -264,15 +294,15 @@ Array of font variations.
 fontWeight?: FontWeight
 ```
 
-Font weight. The default value is **W400**. Currently, only the default system font supports font weight
-adjustment. For other fonts, if the weight is less than semi-bold (W600), there is no variation in stroke
-thickness. If the weight is greater than or equal to semi-bold, it might result in a fake bold effect.
+Font weight. The default value is **W400**. Currently, only the default system font supports font weight adjustment. For other fonts, if the weight is less than semi-bold (W600), there is no variation in stroke thickness. If the weight is greater than or equal to semi-bold, it might result in a fake bold effect.
 
 **Type:** FontWeight
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TextStyle-fontWeight?: FontWeight--><!--Device-TextStyle-fontWeight?: FontWeight-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -290,6 +320,8 @@ Font width. The default value is **NORMAL**.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TextStyle-fontWidth?: FontWidth--><!--Device-TextStyle-fontWidth?: FontWidth-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## halfLeading
@@ -298,15 +330,15 @@ Font width. The default value is **NORMAL**.
 halfLeading?: boolean
 ```
 
-Whether half leading is enabled. Half leading is the leading split in half and applied equally to the top and
-bottom edges. The value **true** means that half leading is enabled, and **false** means the opposite. The
-default value is **false**.
+Whether half leading is enabled. Half leading is the leading split in half and applied equally to the top and bottom edges. The value **true** means that half leading is enabled, and **false** means the opposite. The default value is **false**.
 
 **Type:** boolean
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TextStyle-halfLeading?: boolean--><!--Device-TextStyle-halfLeading?: boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -316,15 +348,15 @@ default value is **false**.
 heightOnly?: boolean
 ```
 
-How the height of the text box is set. The value **true** means that the height of the text box is set based on
-the font size and the value of **heightScale**, and **false** means that the height is set based on the line
-height and line spacing. The default value is **false**.
+How the height of the text box is set. The value **true** means that the height of the text box is set based on the font size and the value of **heightScale**, and **false** means that the height is set based on the line height and line spacing. The default value is **false**.
 
 **Type:** boolean
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TextStyle-heightOnly?: boolean--><!--Device-TextStyle-heightOnly?: boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -334,14 +366,15 @@ height and line spacing. The default value is **false**.
 heightScale?: number
 ```
 
-Scale factor of the line height. The value is a floating point number. The default value is **1.0**. This
-parameter is valid only when **heightOnly** is set to **true**.
+Scale factor of the line height. The value is a floating point number. The default value is **1.0**. This parameter is valid only when **heightOnly** is set to **true**.
 
 **Type:** number
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TextStyle-heightScale?: double--><!--Device-TextStyle-heightScale?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -351,14 +384,15 @@ parameter is valid only when **heightOnly** is set to **true**.
 letterSpacing?: number
 ```
 
-Character spacing, a floating-point value in physical pixels (px) with a default value of **0.0**. A positive
-value widens the character gap, while a negative value narrows it.
+Character spacing, a floating-point value in physical pixels (px) with a default value of **0.0**. A positive value widens the character gap, while a negative value narrows it.
 
 **Type:** number
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TextStyle-letterSpacing?: double--><!--Device-TextStyle-letterSpacing?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -368,15 +402,15 @@ value widens the character gap, while a negative value narrows it.
 lineHeightMaximum?: number
 ```
 
-Maximum line height, in physical pixels (px). If the line height is scaled, the maximum line height takes effect
-when [TextStyle](arkts-arkgraphics2d-textstyle-i.md).heightScale is greater than 0. The value is a positive floating point
-number. The default value is **Number.MAX_VALUE**.
+Maximum line height, in physical pixels (px). If the line height is scaled, the maximum line height takes effect when [TextStyle](arkts-arkgraphics2d-textstyle-i.md).heightScale is greater than 0. The value is a positive floating point number. The default value is **Number.MAX_VALUE**.
 
 **Type:** number
 
 **Since:** 21
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TextStyle-lineHeightMaximum?: double--><!--Device-TextStyle-lineHeightMaximum?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -386,15 +420,15 @@ number. The default value is **Number.MAX_VALUE**.
 lineHeightMinimum?: number
 ```
 
-Minimum line height, in physical pixels (px). If the line height is scaled, the minimum line height takes effect
-when [TextStyle](arkts-arkgraphics2d-textstyle-i.md).heightScale is greater than 0. The value is a non-negative floating point
-number. The default value is **0**.
+Minimum line height, in physical pixels (px). If the line height is scaled, the minimum line height takes effect when [TextStyle](arkts-arkgraphics2d-textstyle-i.md).heightScale is greater than 0. The value is a non-negative floating point number. The default value is **0**.
 
 **Type:** number
 
 **Since:** 21
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TextStyle-lineHeightMinimum?: double--><!--Device-TextStyle-lineHeightMinimum?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -412,6 +446,8 @@ Scaling base style of the line height. The default value is **FONT_SIZE**.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TextStyle-lineHeightStyle?: LineHeightStyle--><!--Device-TextStyle-lineHeightStyle?: LineHeightStyle-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## locale
@@ -420,17 +456,15 @@ Scaling base style of the line height. The default value is **FONT_SIZE**.
 locale?: string
 ```
 
-Language type. For example, **'en-Latn'** indicates English (Latin script), **'zh-Hans'** indicates Simplified
-Chinese, and **'zh-Hant'** indicates Traditional Chinese. Supports two-segment language tags in the language-
-script format, where language complies with the ISO 639-1 standard and script complies with the ISO 15924
-standard. If the locale is not specified, set to an empty string, or set to **undefined**, the default locale is
-**'zh-Hans'**.
+Language type. For example, **'en-Latn'** indicates English (Latin script), **'zh-Hans'** indicates Simplified Chinese, and **'zh-Hant'** indicates Traditional Chinese. Supports two-segment language tags in the language-script format, where language complies with the ISO 639-1 standard and script complies with the ISO 15924standard. If the locale is not specified, set to an empty string, or set to **undefined**, the default locale is **'zh-Hans'**.
 
 **Type:** string
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TextStyle-locale?: string--><!--Device-TextStyle-locale?: string-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -448,6 +482,8 @@ Array of shadows.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TextStyle-textShadows?: Array<TextShadow>--><!--Device-TextStyle-textShadows?: Array<TextShadow>-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## wordSpacing
@@ -463,6 +499,8 @@ Word spacing, a floating-point value in physical pixels (px) with a default valu
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TextStyle-wordSpacing?: double--><!--Device-TextStyle-wordSpacing?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

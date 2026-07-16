@@ -1,11 +1,12 @@
 # VideoOutput
 
-**VideoOutput** implements output information used in a video session. It inherits from
-[CameraOutput](arkts-camera-cameraoutput-i.md).
+**VideoOutput** implements output information used in a video session. It inherits from [CameraOutput](arkts-camera-cameraoutput-i.md).
 
 **Inheritance/Implementation:** VideoOutput extends [CameraOutput](arkts-camera-cameraoutput-i.md)
 
 **Since:** 10
+
+<!--Device-camera-interface VideoOutput extends CameraOutput--><!--Device-camera-interface VideoOutput extends CameraOutput-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -21,13 +22,13 @@ import { camera } from '@kit.CameraKit';
 getActiveFrameRate(): FrameRateRange
 ```
 
-Obtains the configured frame rate range.
-This API is valid only after [setFrameRate](arkts-camera-previewoutput-i.md#setframerate-1) is called to set a frame
-rate range for preview streams.
+Obtains the configured frame rate range.This API is valid only after [setFrameRate](arkts-camera-previewoutput-i.md#setframerate-1) is called to set a frame rate range for preview streams.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-VideoOutput-getActiveFrameRate(): FrameRateRange--><!--Device-VideoOutput-getActiveFrameRate(): FrameRateRange-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -35,7 +36,7 @@ rate range for preview streams.
 
 | Type | Description |
 | --- | --- |
-| FrameRateRange | Frame rate range. |
+| [FrameRateRange](arkts-camera-frameraterange-i.md) | Frame rate range. |
 
 ## getActiveProfile
 
@@ -49,13 +50,15 @@ Obtains the profile that takes effect currently.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-VideoOutput-getActiveProfile(): VideoProfile--><!--Device-VideoOutput-getActiveProfile(): VideoProfile-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| VideoProfile | Profile obtained. |
+| [VideoProfile](arkts-camera-videoprofile-i.md) | Profile obtained. |
 
 **Error codes:**
 
@@ -75,13 +78,15 @@ Obtains the supported frame rates.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-VideoOutput-getSupportedFrameRates(): Array<FrameRateRange>--><!--Device-VideoOutput-getSupportedFrameRates(): Array<FrameRateRange>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;FrameRateRange&gt; | Array of supported frame rates. If the API call fails, undefined is returned. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<FrameRateRange> | Array of supported frame rates. If the API call fails, undefined is returned. |
 
 ## getVideoRotation
 
@@ -91,11 +96,8 @@ getVideoRotation(deviceDegree?: number): ImageRotation
 
 Obtains the video rotation angle.
 
-- Device's natural orientation: the default orientation for using a device. For example, the default orientation
-of the bar-type phone is in portrait mode, with the charging port facing downward.
-- Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's
-natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode.
-Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation.
+- Device's natural orientation: the default orientation for using a device. For example, the default orientation of the bar-type phone is in portrait mode, with the charging port facing downward.  
+- Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode.Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation.
 
 **Since:** 12
 
@@ -103,19 +105,21 @@ Therefore, it needs to be rotated by 90 degrees clockwise to match the device's 
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-VideoOutput-getVideoRotation(deviceDegree?: int): ImageRotation--><!--Device-VideoOutput-getVideoRotation(deviceDegree?: int): ImageRotation-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDegree | number | No | Device rotation angle, measured in degrees, within the range of [0, 360].<br>Since API version 23, the input parameter **deviceDegree** is optional. If no parameter is passed, the systemobtains the **deviceDegree** value to calculate the video rotation angle.<br>**Since:** 23 |
+| deviceDegree | number | No | Device rotation angle, measured in degrees, within the range of [0, 360].<br>Since API version 23, the input parameter **deviceDegree** is optional. If no parameter is passed, the system obtains the **deviceDegree** value to calculate the video rotation angle.<br>**Since:** 23 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ImageRotation | Returns the rotation angle of a video. If the API call fails, undefined is returned. |
+| [ImageRotation](arkts-camera-imagerotation-e.md) | Returns the rotation angle of a video. If the API call fails, undefined is returned. |
 
 **Error codes:**
 
@@ -136,14 +140,16 @@ Unsubscribes from preview frame start events.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-VideoOutput-off(type: 'frameStart', callback?: AsyncCallback<void>): void--><!--Device-VideoOutput-off(type: 'frameStart', callback?: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameStart' | Yes | Event type. The value is fixed at **'frameStart'**. The event can be listened forwhen a previewOutput instance is created. |
-| callback | AsyncCallback&lt;void&gt; | No | Callback used to return the result. If this parameter is specified, thesubscription to the specified event with the specified callback is canceled. (The callback object cannot bean anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks arecanceled. |
+| type | 'frameStart' | Yes | Event type. The value is fixed at **'frameStart'**. The event can be listened for when a previewOutput instance is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## off('frameEnd')
 
@@ -157,14 +163,16 @@ Unsubscribes from preview frame end events.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-VideoOutput-off(type: 'frameEnd', callback?: AsyncCallback<void>): void--><!--Device-VideoOutput-off(type: 'frameEnd', callback?: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameEnd' | Yes | Event type. The value is fixed at **'frameEnd'**. The event can be listened for whena previewOutput instance is created. |
-| callback | AsyncCallback&lt;void&gt; | No | Callback used to return the result. If this parameter is specified, thesubscription to the specified event with the specified callback is canceled. (The callback object cannot bean anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks arecanceled. |
+| type | 'frameEnd' | Yes | Event type. The value is fixed at **'frameEnd'**. The event can be listened for when a previewOutput instance is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## off('error')
 
@@ -178,14 +186,16 @@ Unsubscribes from metadata error events.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-VideoOutput-off(type: 'error', callback?: ErrorCallback): void--><!--Device-VideoOutput-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when ametadataOutput instance is created. |
-| callback | ErrorCallback | No | Callback used to return the result. If this parameter is specified, thesubscription to the specified event with the specified callback is canceled. (The callback object cannot bean anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks arecanceled. |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a metadataOutput instance is created. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## on('frameStart')
 
@@ -195,13 +205,15 @@ on(type: 'frameStart', callback: AsyncCallback<void>): void
 
 Subscribes to preview frame start events. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-VideoOutput-on(type: 'frameStart', callback: AsyncCallback<void>): void--><!--Device-VideoOutput-on(type: 'frameStart', callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -209,8 +221,8 @@ Subscribes to preview frame start events. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameStart' | Yes | Event type. The value is fixed at **'frameStart'**. The event can be listened forwhen a previewOutput instance is created. This event is triggered and returned when the bottom layer startsexposure for the first time. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. The preview starts as long as thisevent is returned. |
+| type | 'frameStart' | Yes | Event type. The value is fixed at **'frameStart'**. The event can be listened for when a previewOutput instance is created. This event is triggered and returned when the bottom layer starts exposure for the first time. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. The preview starts as long as this event is returned. |
 
 ## on('frameEnd')
 
@@ -220,13 +232,15 @@ on(type: 'frameEnd', callback: AsyncCallback<void>): void
 
 Subscribes to preview frame end events. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-VideoOutput-on(type: 'frameEnd', callback: AsyncCallback<void>): void--><!--Device-VideoOutput-on(type: 'frameEnd', callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -234,8 +248,8 @@ Subscribes to preview frame end events. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameEnd' | Yes | Event type. The value is fixed at **'frameEnd'**. The event can be listened for whena previewOutput instance is created. This event is triggered and returned when the last frame of previewends. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. The preview ends as long as thisevent is returned. |
+| type | 'frameEnd' | Yes | Event type. The value is fixed at **'frameEnd'**. The event can be listened for when a previewOutput instance is created. This event is triggered and returned when the last frame of preview ends. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. The preview ends as long as this event is returned. |
 
 ## on('error')
 
@@ -245,13 +259,15 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to metadata error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-VideoOutput-on(type: 'error', callback: ErrorCallback): void--><!--Device-VideoOutput-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -259,8 +275,8 @@ Subscribes to metadata error events. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when ametadataOutput instance is created. This event is triggered and the corresponding error message is returnedwhen an error occurs during the use of a metadata-related API such as[start](arkts-camera-metadataoutput-i.md#start-2) or[CameraOutput.release](arkts-camera-cameraoutput-i.md#release-2). |
-| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a metadataOutput instance is created. This event is triggered and the corresponding error message is returned when an error occurs during the use of a metadata-related API such as [start](arkts-camera-metadataoutput-i.md#start-2) or [CameraOutput.release](arkts-camera-cameraoutput-i.md#release-2). |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 ## setFrameRate
 
@@ -268,17 +284,18 @@ Subscribes to metadata error events. This API uses an asynchronous callback to r
 setFrameRate(minFps: number, maxFps: number): void
 ```
 
-Sets a frame rate range for preview streams. The range must be within the supported frame rate range, which can
-be obtained by calling [getSupportedFrameRates](arkts-camera-previewoutput-i.md#getsupportedframerates-1).
+Sets a frame rate range for preview streams. The range must be within the supported frame rate range, which can be obtained by calling [getSupportedFrameRates](arkts-camera-previewoutput-i.md#getsupportedframerates-1).
 
-> **NOTE**
->
-> This API is valid only in [PhotoSession](arkts-camera-photosession-i.md) or
+> **NOTE**  
+>  
+> This API is valid only in [PhotoSession](arkts-camera-photosession-i.md) or  
 > [VideoSession](arkts-camera-videosession-i.md) mode.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-VideoOutput-setFrameRate(minFps: int, maxFps: int): void--><!--Device-VideoOutput-setFrameRate(minFps: int, maxFps: int): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -286,8 +303,8 @@ be obtained by calling [getSupportedFrameRates](arkts-camera-previewoutput-i.md#
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minFps | number | Yes | Minimum frame rate, in fps. When the maximum value is less than the minimum value, theAPI does not take effect. |
-| maxFps | number | Yes | Maximum frame rate, in fps. When the minimum value is greater than the maximum value, theAPI does not take effect. |
+| minFps | number | Yes | Minimum frame rate, in fps. When the maximum value is less than the minimum value, the API does not take effect. |
+| maxFps | number | Yes | Maximum frame rate, in fps. When the minimum value is greater than the maximum value, the API does not take effect. |
 
 **Error codes:**
 
@@ -308,13 +325,15 @@ Starts video recording. This API uses an asynchronous callback to return the res
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-VideoOutput-start(callback: AsyncCallback<void>): void--><!--Device-VideoOutput-start(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If video recording startssuccessfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If video recording starts successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -335,13 +354,15 @@ Starts video recording. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-VideoOutput-start(): Promise<void>--><!--Device-VideoOutput-start(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -362,13 +383,15 @@ Stops video recording. This API uses an asynchronous callback to return the resu
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-VideoOutput-stop(callback: AsyncCallback<void>): void--><!--Device-VideoOutput-stop(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If video recording stopssuccessfully, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If video recording stops successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## stop
 
@@ -382,11 +405,13 @@ Stops video recording. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-VideoOutput-stop(): Promise<void>--><!--Device-VideoOutput-stop(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 

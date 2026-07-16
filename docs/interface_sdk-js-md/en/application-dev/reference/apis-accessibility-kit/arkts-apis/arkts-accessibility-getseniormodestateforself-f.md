@@ -18,13 +18,15 @@ Check if this application's senior mode is enabled.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-accessibility-function getSeniorModeStateForSelf(): Promise<boolean>--><!--Device-accessibility-function getSeniorModeStateForSelf(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns {@code true} if senior mode is enabled; returns {@code false} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns {@code true} if senior mode is enabled; returns {@code false} otherwise. |
 
 **Error codes:**
 

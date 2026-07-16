@@ -10,6 +10,8 @@ The reasons for destroying partner agent extension ability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-unnamed-type PartnerAgentExtensionAbilityDestroyReason = partnerAgent.PartnerAgentExtensionAbilityDestroyReason--><!--Device-unnamed-type PartnerAgentExtensionAbilityDestroyReason = partnerAgent.PartnerAgentExtensionAbilityDestroyReason-End-->
+
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 **Property type:** partnerAgent.PartnerAgentExtensionAbilityDestroyReason

@@ -20,6 +20,8 @@ Unregisters a mission status listener. This API uses an asynchronous callback to
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-distributedMissionManager-function unRegisterMissionListener(parameter: MissionDeviceInfo, callback: AsyncCallback<void>): void--><!--Device-distributedMissionManager-function unRegisterMissionListener(parameter: MissionDeviceInfo, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
@@ -28,8 +30,8 @@ Unregisters a mission status listener. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | MissionDeviceInfo | Yes | Information about the device to listen for. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the listener is unregistered, **err**is **undefined**; otherwise, **err** is an error object. |
+| parameter | [MissionDeviceInfo](arkts-ability-missiondeviceinfo-i-sys.md) | Yes | Information about the device to listen for. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the listener is unregistered, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -75,6 +77,8 @@ Unregisters a mission status listener. This API uses a promise to return the res
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-distributedMissionManager-function unRegisterMissionListener(parameter: MissionDeviceInfo): Promise<void>--><!--Device-distributedMissionManager-function unRegisterMissionListener(parameter: MissionDeviceInfo): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
@@ -83,13 +87,13 @@ Unregisters a mission status listener. This API uses a promise to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | MissionDeviceInfo | Yes | Information about the device to listen for. |
+| parameter | [MissionDeviceInfo](arkts-ability-missiondeviceinfo-i-sys.md) | Yes | Information about the device to listen for. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

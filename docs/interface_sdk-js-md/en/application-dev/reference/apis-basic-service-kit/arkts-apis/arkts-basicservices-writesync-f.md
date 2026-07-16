@@ -12,10 +12,11 @@ import { serialManager } from '@kit.BasicServicesKit';
 function writeSync(portId: number, buffer: Uint8Array, timeout?: number): number
 ```
 
-Writes data to the serial port device synchronously. The length of data written each time cannot exceed 4 KB;
-otherwise, data loss may occur. You are advised to write long data in multiple packets.
+Writes data to the serial port device synchronously. The length of data written each time cannot exceed 4 KB;otherwise, data loss may occur. You are advised to write long data in multiple packets.
 
 **Since:** 19
+
+<!--Device-serialManager-function writeSync(portId: int, buffer: Uint8Array, timeout?: int): int--><!--Device-serialManager-function writeSync(portId: int, buffer: Uint8Array, timeout?: int): int-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -23,9 +24,9 @@ otherwise, data loss may occur. You are advised to write long data in multiple p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPortreturned by [getPortList](arkts-basicservices-getportlist-f.md#getportlist-1). |
-| buffer | Uint8Array | Yes | Destination buffer for writing data, with a maximum length of 4 KB. |
-| timeout | number | No | Timeout interval.Unit: milliseconds. Whether the buffer of the target port is writable within thespecified time. If yes, the API is processed properly; otherwise, a timeout message is returned after the specifiedtime. The default value **0** indicates that the API returns the result immediately when the target port is notwritable. |
+| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-getportlist-f.md#getportlist-1). |
+| buffer | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Destination buffer for writing data, with a maximum length of 4 KB. |
+| timeout | number | No | Timeout interval.Unit: milliseconds. Whether the buffer of the target port is writable within the specified time. If yes, the API is processed properly; otherwise, a timeout message is returned after the specified time. The default value **0** indicates that the API returns the result immediately when the target port is not writable. |
 
 **Return value:**
 

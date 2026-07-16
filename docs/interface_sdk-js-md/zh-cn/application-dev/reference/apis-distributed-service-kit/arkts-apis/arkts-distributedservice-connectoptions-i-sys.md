@@ -4,7 +4,15 @@
 
 **起始版本：** 18
 
+<!--Device-abilityConnectionManager-interface ConnectOptions--><!--Device-abilityConnectionManager-interface ConnectOptions-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+## 导入模块
+
+```TypeScript
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+```
 
 ## needReceiveStream
 
@@ -19,6 +27,8 @@ Receive Stream Data Configuration Options. WiFi needs to be turned on.
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ConnectOptions-needReceiveStream?: boolean--><!--Device-ConnectOptions-needReceiveStream?: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -37,6 +47,8 @@ Send Stream Data Configuration Options. WiFi needs to be turned on.
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ConnectOptions-needSendStream?: boolean--><!--Device-ConnectOptions-needSendStream?: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 

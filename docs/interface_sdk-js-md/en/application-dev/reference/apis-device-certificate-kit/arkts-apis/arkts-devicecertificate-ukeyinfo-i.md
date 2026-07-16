@@ -4,6 +4,8 @@ Provides USB Key certificate credential attribute information.
 
 **Since:** 22
 
+<!--Device-certificateManager-export interface UkeyInfo--><!--Device-certificateManager-export interface UkeyInfo-End-->
+
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## Modules to Import
@@ -18,12 +20,13 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 certPurpose?: CertificatePurpose
 ```
 
-Credential usage.
-Default value: PURPOSE_DEFAULT.
+Credential usage.Default value: PURPOSE_DEFAULT.
 
 **Type:** CertificatePurpose
 
 **Since:** 22
+
+<!--Device-UkeyInfo-certPurpose?: CertificatePurpose--><!--Device-UkeyInfo-certPurpose?: CertificatePurpose-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 

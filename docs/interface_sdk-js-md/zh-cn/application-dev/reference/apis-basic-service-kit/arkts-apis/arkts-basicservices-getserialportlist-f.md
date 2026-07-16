@@ -1,5 +1,11 @@
 # getSerialPortList
 
+## 导入模块
+
+```TypeScript
+import { serial } from '@kit.BasicServicesKit';
+```
+
 ## getSerialPortList
 
 ```TypeScript
@@ -12,13 +18,15 @@ function getSerialPortList(): Promise<SerialPort[]>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-serial-function getSerialPortList(): Promise<SerialPort[]>--><!--Device-serial-function getSerialPortList(): Promise<SerialPort[]>-End-->
+
 **系统能力：** SystemCapability.BusManager.Serial
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;SerialPort[]&gt; | - Promise used to return the list of serial port devices. |
+| Promise<SerialPort[]> | - Promise used to return the list of serial port devices. |
 
 **错误码：**
 

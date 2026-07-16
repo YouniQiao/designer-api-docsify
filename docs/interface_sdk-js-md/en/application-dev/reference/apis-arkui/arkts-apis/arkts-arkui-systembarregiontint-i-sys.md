@@ -4,6 +4,8 @@ Describes the callback for a single system bar.
 
 **Since:** 8
 
+<!--Device-window-interface SystemBarRegionTint--><!--Device-window-interface SystemBarRegionTint-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -20,12 +22,13 @@ import { window } from '@kit.ArkUI';
 backgroundColor?: string
 ```
 
-Background color of the system bar. The value is a hexadecimal RGB or ARGB color code and is case insensitive,
-for example, **'#00FF00'** or **'#FF00FF00'**. The default value is **'0x66000000'**.
+Background color of the system bar. The value is a hexadecimal RGB or ARGB color code and is case insensitive,for example, **'#00FF00'** or **'#FF00FF00'**. The default value is **'0x66000000'**.
 
 **Type:** string
 
 **Since:** 8
+
+<!--Device-SystemBarRegionTint-backgroundColor?: string--><!--Device-SystemBarRegionTint-backgroundColor?: string-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -43,6 +46,8 @@ Color of the text on the system bar. The default value is **'0xE5FFFFFF'**.
 
 **Since:** 8
 
+<!--Device-SystemBarRegionTint-contentColor?: string--><!--Device-SystemBarRegionTint-contentColor?: string-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -58,6 +63,8 @@ Whether the system bar is displayed. **true** if displayed, **false** otherwise.
 **Type:** boolean
 
 **Since:** 8
+
+<!--Device-SystemBarRegionTint-isEnable?: boolean--><!--Device-SystemBarRegionTint-isEnable?: boolean-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -75,6 +82,8 @@ Current position and size of the system bar. The default value is {0,0,0,0}.
 
 **Since:** 8
 
+<!--Device-SystemBarRegionTint-region?: Rect--><!--Device-SystemBarRegionTint-region?: Rect-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -90,6 +99,8 @@ Type of the system bar whose properties are changed. Only the status bar and nav
 **Type:** WindowType
 
 **Since:** 8
+
+<!--Device-SystemBarRegionTint-type: WindowType--><!--Device-SystemBarRegionTint-type: WindowType-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

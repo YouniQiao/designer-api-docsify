@@ -18,6 +18,8 @@ function getAllNotificationEnabledBundles(): Promise<Array<BundleOption>>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getAllNotificationEnabledBundles(): Promise<Array<BundleOption>>--><!--Device-notificationManager-function getAllNotificationEnabledBundles(): Promise<Array<BundleOption>>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,7 +28,7 @@ function getAllNotificationEnabledBundles(): Promise<Array<BundleOption>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;BundleOption&gt;&gt; | 返回允许通知的应用程序列表。 |
+| Promise<Array<BundleOption>> | 返回允许通知的应用程序列表。 |
 
 **错误码：**
 
@@ -68,6 +70,8 @@ function getAllNotificationEnabledBundles(userId: number): Promise<Array<BundleO
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getAllNotificationEnabledBundles(userId: int): Promise<Array<BundleOption>>--><!--Device-notificationManager-function getAllNotificationEnabledBundles(userId: int): Promise<Array<BundleOption>>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -82,7 +86,7 @@ function getAllNotificationEnabledBundles(userId: number): Promise<Array<BundleO
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;BundleOption&gt;&gt; | 返回允许通知的应用程序列表。 |
+| Promise<Array<BundleOption>> | 返回允许通知的应用程序列表。 |
 
 **错误码：**
 

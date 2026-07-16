@@ -6,7 +6,15 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface ErrorEvent extends Event--><!--Device-unnamed-export interface ErrorEvent extends Event-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
+```
 
 ## colno
 
@@ -20,7 +28,9 @@ readonly colno: number
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ErrorEvent-readonly colno: number--><!--Device-ErrorEvent-readonly colno: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -36,7 +46,9 @@ readonly error: Object
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ErrorEvent-readonly error: Object--><!--Device-ErrorEvent-readonly error: Object-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -52,7 +64,9 @@ readonly filename: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ErrorEvent-readonly filename: string--><!--Device-ErrorEvent-readonly filename: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -68,7 +82,9 @@ readonly lineno: number
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ErrorEvent-readonly lineno: number--><!--Device-ErrorEvent-readonly lineno: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -84,7 +100,9 @@ readonly message: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ErrorEvent-readonly message: string--><!--Device-ErrorEvent-readonly message: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

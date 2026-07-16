@@ -8,6 +8,8 @@ Describes the parameters of the Gatt client's characteristic write request.
 
 **Substitutes:** DescriptorWriteRequest
 
+<!--Device-bluetooth-interface DescriptorWriteReq--><!--Device-bluetooth-interface DescriptorWriteReq-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -32,6 +34,8 @@ The UUID of the characteristic to which the descriptor belongs
 
 **Substitutes:** characteristicUuid
 
+<!--Device-DescriptorWriteReq-characteristicUuid: string--><!--Device-DescriptorWriteReq-characteristicUuid: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## descriptorUuid
@@ -49,6 +53,8 @@ The UUID of a DescriptorWriteReq instance
 **Deprecated since:** 9
 
 **Substitutes:** descriptorUuid
+
+<!--Device-DescriptorWriteReq-descriptorUuid: string--><!--Device-DescriptorWriteReq-descriptorUuid: string-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -68,6 +74,8 @@ Indicates the address of the client that initiates the write request
 
 **Substitutes:** deviceId
 
+<!--Device-DescriptorWriteReq-deviceId: string--><!--Device-DescriptorWriteReq-deviceId: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## isPrep
@@ -85,6 +93,8 @@ Whether this request should be pending for later operation
 **Deprecated since:** 9
 
 **Substitutes:** isPrep
+
+<!--Device-DescriptorWriteReq-isPrep: boolean--><!--Device-DescriptorWriteReq-isPrep: boolean-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -104,6 +114,8 @@ Whether the remote client need a response
 
 **Substitutes:** needRsp
 
+<!--Device-DescriptorWriteReq-needRsp: boolean--><!--Device-DescriptorWriteReq-needRsp: boolean-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## offset
@@ -121,6 +133,8 @@ Indicates the byte offset of the start position for writing characteristic value
 **Deprecated since:** 9
 
 **Substitutes:** offset
+
+<!--Device-DescriptorWriteReq-offset: number--><!--Device-DescriptorWriteReq-offset: number-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -140,6 +154,8 @@ The UUID of the service to which the descriptor belongs
 
 **Substitutes:** serviceUuid
 
+<!--Device-DescriptorWriteReq-serviceUuid: string--><!--Device-DescriptorWriteReq-serviceUuid: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## transId
@@ -158,6 +174,8 @@ The Id of the write request
 
 **Substitutes:** transId
 
+<!--Device-DescriptorWriteReq-transId: number--><!--Device-DescriptorWriteReq-transId: number-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## value
@@ -175,6 +193,8 @@ Indicates the value to be written
 **Deprecated since:** 9
 
 **Substitutes:** value
+
+<!--Device-DescriptorWriteReq-value: ArrayBuffer--><!--Device-DescriptorWriteReq-value: ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

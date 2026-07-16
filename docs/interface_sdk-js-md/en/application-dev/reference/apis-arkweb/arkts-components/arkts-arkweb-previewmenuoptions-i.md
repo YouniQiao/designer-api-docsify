@@ -4,6 +4,8 @@ Represents the options of the preview menu.
 
 **Since:** 20
 
+<!--Device-unnamed-declare interface PreviewMenuOptions--><!--Device-unnamed-declare interface PreviewMenuOptions-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## hapticFeedbackMode
@@ -21,6 +23,8 @@ Default value: **HapticFeedbackMode.DISABLED**, indicating no vibration when the
 **Default:** HapticFeedbackMode.DISABLED
 
 **Since:** 20
+
+<!--Device-PreviewMenuOptions-hapticFeedbackMode?: HapticFeedbackMode--><!--Device-PreviewMenuOptions-hapticFeedbackMode?: HapticFeedbackMode-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

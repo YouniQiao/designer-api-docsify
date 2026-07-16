@@ -1,13 +1,14 @@
 # MacSpec
 
-Represents the message authentication code (MAC) parameters. You need to construct a child class object and use it
-as a parameter when computing an HMAC or a CMAC.
+Represents the message authentication code (MAC) parameters. You need to construct a child class object and use it as a parameter when computing an HMAC or a CMAC.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > **algName** specifies the MAC algorithm to use. It is mandatory.
 
 **Since:** 18
+
+<!--Device-cryptoFramework-interface MacSpec--><!--Device-cryptoFramework-interface MacSpec-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Mac
 
@@ -30,6 +31,8 @@ Algorithm to use.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-MacSpec-algName: string--><!--Device-MacSpec-algName: string-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Mac
 

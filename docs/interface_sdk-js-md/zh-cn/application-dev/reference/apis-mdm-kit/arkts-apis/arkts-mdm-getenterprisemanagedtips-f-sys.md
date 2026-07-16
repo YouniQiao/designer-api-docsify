@@ -1,5 +1,11 @@
 # getEnterpriseManagedTips（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { adminManager } from '@kit.MDMKit';
+```
+
 ## getEnterpriseManagedTips
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getEnterpriseManagedTips(): Promise<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-adminManager-function getEnterpriseManagedTips(): Promise<string>--><!--Device-adminManager-function getEnterpriseManagedTips(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function getEnterpriseManagedTips(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | returns the enterprise message tips. |
+| Promise<string> | returns the enterprise message tips. |
 
 **错误码：**
 

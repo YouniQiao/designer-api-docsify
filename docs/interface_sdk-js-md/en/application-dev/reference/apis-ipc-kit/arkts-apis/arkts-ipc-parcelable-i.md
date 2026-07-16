@@ -4,6 +4,8 @@ Writes an object to a **MessageSequence** and reads it from the **MessageSequenc
 
 **Since:** 9
 
+<!--Device-rpc-interface Parcelable--><!--Device-rpc-interface Parcelable-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## Modules to Import
@@ -22,13 +24,15 @@ Marshals this **Parcelable** object into a **MessageSequence** object.
 
 **Since:** 9
 
+<!--Device-Parcelable-marshalling(dataOut: MessageSequence): boolean--><!--Device-Parcelable-marshalling(dataOut: MessageSequence): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataOut | MessageSequence | Yes | **MessageSequence** object to which the **Parcelable** object is to bemarshaled. |
+| dataOut | [MessageSequence](arkts-ipc-messagesequence-c.md) | Yes | **MessageSequence** object to which the **Parcelable** object is to be marshaled. |
 
 **Return value:**
 
@@ -84,13 +88,15 @@ Unmarshals this **Parcelable** object from a **MessageSequence** object.
 
 **Since:** 9
 
+<!--Device-Parcelable-unmarshalling(dataIn: MessageSequence): boolean--><!--Device-Parcelable-unmarshalling(dataIn: MessageSequence): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | MessageSequence | Yes | **MessageSequence** object from which the **Parcelable** object is to beunmarshaled. |
+| dataIn | [MessageSequence](arkts-ipc-messagesequence-c.md) | Yes | **MessageSequence** object from which the **Parcelable** object is to be unmarshaled. |
 
 **Return value:**
 

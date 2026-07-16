@@ -16,13 +16,15 @@ Queries the data traffic (including all TCP and UDP data packets) received throu
 
 **Since:** 10
 
+<!--Device-statistics-function getCellularRxBytes(callback: AsyncCallback<long>): void--><!--Device-statistics-function getCellularRxBytes(callback: AsyncCallback<long>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Returns the data traffic received through the cellular network. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Returns the data traffic received through the cellular network. |
 
 **Error codes:**
 
@@ -61,13 +63,15 @@ Queries the data traffic (including all TCP and UDP data packets) received throu
 
 **Since:** 10
 
+<!--Device-statistics-function getCellularRxBytes(): Promise<long>--><!--Device-statistics-function getCellularRxBytes(): Promise<long>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | The promise returned by the function. |
 
 **Error codes:**
 

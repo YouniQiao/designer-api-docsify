@@ -1,18 +1,19 @@
 # Tool
 
-A utility class that provides only static methods to convert data structs defined in other modules and
-[common2D](arkts-graphics-common2d.md).
+A utility class that provides only static methods to convert data structs defined in other modules and [common2D](arkts-graphics-common2d.md).
 
-> **NOTE**
->
-> - The initial APIs of this class are supported since API version 15.
->
-> - This module uses the physical pixel unit, px.
->
-> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
+> **NOTE**  
+>  
+> - The initial APIs of this class are supported since API version 15.  
+>  
+> - This module uses the physical pixel unit, px.  
+>  
+> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state  
 > transitions.
 
 **Since:** 15
+
+<!--Device-drawing-class Tool--><!--Device-drawing-class Tool-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -32,13 +33,15 @@ Converts a color value of the **ResourceColor** type to a **common2D.Color** obj
 
 **Since:** 15
 
+<!--Device-Tool-static makeColorFromResourceColor(resourceColor: ResourceColor): common2D.Color--><!--Device-Tool-static makeColorFromResourceColor(resourceColor: ResourceColor): common2D.Color-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceColor | ResourceColor | Yes | Color value of the **ResourceColor** type. (All four types of inputs aresupported. The following provides 13 example inputs.) The fourth type of[Resource](../../apis-arkui/arkts-components/arkts-arkui-resource-t.md) supports only the construction method**$r('belonging.type.name')**. Ensure that the resource has been defined in the**main/resources/base/element** directory. (The types **color**, **string**, and **integer** are availablefor the belonging **app**, whereas only the type **color** is available for the belonging **sys**.) |
+| resourceColor | [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color value of the **ResourceColor** type. (All four types of inputs are supported. The following provides 13 example inputs.) The fourth type of [Resource](../../apis-arkui/arkts-apis/arkts-arkui-resource-t.md) supports only the construction method **$r('belonging.type.name')**. Ensure that the resource has been defined in the **main/resources/base/element** directory. (The types **color**, **string**, and **integer** are available for the belonging **app**, whereas only the type **color** is available for the belonging **sys**.) |
 
 **Return value:**
 

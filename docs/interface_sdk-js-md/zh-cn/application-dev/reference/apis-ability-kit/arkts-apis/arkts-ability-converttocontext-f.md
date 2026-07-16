@@ -1,5 +1,11 @@
 # convertToContext
 
+## 导入模块
+
+```TypeScript
+import { sendableContextManager } from '@kit.AbilityKit';
+```
+
 ## convertToContext
 
 ```TypeScript
@@ -12,7 +18,9 @@ function convertToContext(sendableContext: SendableContext): common.Context
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-sendableContextManager-function convertToContext(sendableContext: SendableContext): common.Context--><!--Device-sendableContextManager-function convertToContext(sendableContext: SendableContext): common.Context-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -20,7 +28,7 @@ function convertToContext(sendableContext: SendableContext): common.Context
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sendableContext | SendableContext | 是 |  |
+| sendableContext | [SendableContext](arkts-ability-sendablecontext-t.md) | 是 |  |
 
 **返回值：**
 

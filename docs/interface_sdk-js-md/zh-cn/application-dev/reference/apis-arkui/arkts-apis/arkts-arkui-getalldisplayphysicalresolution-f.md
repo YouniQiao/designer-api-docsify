@@ -1,5 +1,11 @@
 # getAllDisplayPhysicalResolution
 
+## 导入模块
+
+```TypeScript
+import { display } from '@kit.ArkUI';
+```
+
 ## getAllDisplayPhysicalResolution
 
 ```TypeScript
@@ -10,7 +16,9 @@ function getAllDisplayPhysicalResolution(): Promise<Array<DisplayPhysicalResolut
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-display-function getAllDisplayPhysicalResolution(): Promise<Array<DisplayPhysicalResolution>>--><!--Device-display-function getAllDisplayPhysicalResolution(): Promise<Array<DisplayPhysicalResolution>>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -18,7 +26,7 @@ function getAllDisplayPhysicalResolution(): Promise<Array<DisplayPhysicalResolut
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;DisplayPhysicalResolution&gt;&gt; | Promise对象。返回当前所有的DisplayPhysicalResolution对象。 |
+| Promise<Array<DisplayPhysicalResolution>> | Promise对象。返回当前所有的DisplayPhysicalResolution对象。 |
 
 **错误码：**
 

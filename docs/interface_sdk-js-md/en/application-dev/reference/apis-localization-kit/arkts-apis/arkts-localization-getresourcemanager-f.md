@@ -12,12 +12,13 @@ import { resourceManager } from '@kit.LocalizationKit';
 export function getResourceManager(callback: AsyncCallback<ResourceManager>): void
 ```
 
-Obtains the **ResourceManager** object of this application. This API uses an asynchronous callback to return the
-result.
+Obtains the **ResourceManager** object of this application. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-resourceManager-export function getResourceManager(callback: AsyncCallback<ResourceManager>): void--><!--Device-resourceManager-export function getResourceManager(callback: AsyncCallback<ResourceManager>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -25,7 +26,7 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;ResourceManager&gt; | Yes | Callback used to return the **ResourceManager** object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ResourceManager> | Yes | Callback used to return the **ResourceManager** object. |
 
 **Example**
 
@@ -62,12 +63,13 @@ export default {
 export function getResourceManager(bundleName: string, callback: AsyncCallback<ResourceManager>): void
 ```
 
-Obtains the **ResourceManager** object of the specified application. This API uses an asynchronous callback to
-return the result.
+Obtains the **ResourceManager** object of the specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-resourceManager-export function getResourceManager(bundleName: string, callback: AsyncCallback<ResourceManager>): void--><!--Device-resourceManager-export function getResourceManager(bundleName: string, callback: AsyncCallback<ResourceManager>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -76,7 +78,7 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
-| callback | AsyncCallback&lt;ResourceManager&gt; | Yes | Callback used to return the **ResourceManager** object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ResourceManager> | Yes | Callback used to return the **ResourceManager** object. |
 
 **Example**
 
@@ -121,13 +123,15 @@ Obtains the **ResourceManager** object of this application. This API uses a prom
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-resourceManager-export function getResourceManager(): Promise<ResourceManager>--><!--Device-resourceManager-export function getResourceManager(): Promise<ResourceManager>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResourceManager&gt; | Promise used to return the **ResourceManager** object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ResourceManager> | Promise used to return the **ResourceManager** object. |
 
 **Example**
 
@@ -166,6 +170,8 @@ Obtains the **ResourceManager** object of the specified application. This API us
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-resourceManager-export function getResourceManager(bundleName: string): Promise<ResourceManager>--><!--Device-resourceManager-export function getResourceManager(bundleName: string): Promise<ResourceManager>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -178,7 +184,7 @@ Obtains the **ResourceManager** object of the specified application. This API us
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResourceManager&gt; | Promise used to return the **ResourceManager** object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ResourceManager> | Promise used to return the **ResourceManager** object. |
 
 **Example**
 

@@ -4,6 +4,8 @@ Declaration of the selectable title bar.
 
 **Since:** 20
 
+<!--Device-unnamed-export declare struct SelectTitleBar--><!--Device-unnamed-export declare struct SelectTitleBar-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ The number displayed in a badge.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SelectTitleBar-badgeValue?: number--><!--Device-SelectTitleBar-badgeValue?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## hidesBackButton
@@ -45,6 +49,8 @@ Whether to hide the back arrow at the left side.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SelectTitleBar-hidesBackButton?: boolean--><!--Device-SelectTitleBar-hidesBackButton?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +70,8 @@ Menu items on the right side.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SelectTitleBar-menuItems?: Array<SelectTitleBarMenuItem>--><!--Device-SelectTitleBar-menuItems?: Array<SelectTitleBarMenuItem>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onSelected
@@ -81,6 +89,8 @@ Callback function when an option is selected
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SelectTitleBar-onSelected?: ((index: number) => void)--><!--Device-SelectTitleBar-onSelected?: ((index: number) => void)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +110,8 @@ Options inside the drop-down list.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SelectTitleBar-options: Array<SelectOption>--><!--Device-SelectTitleBar-options: Array<SelectOption>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selected
@@ -108,8 +120,7 @@ Options inside the drop-down list.
 @Prop selected: number
 ```
 
-Selected index of the initial options in the drop-down menu. The index of the first item is 0.
-If this attribute is not set, the default value is -1. Which means, no menu item is selected.
+Selected index of the initial options in the drop-down menu. The index of the first item is 0.If this attribute is not set, the default value is -1. Which means, no menu item is selected.
 
 **Type:** number
 
@@ -120,6 +131,8 @@ If this attribute is not set, the default value is -1. Which means, no menu item
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SelectTitleBar-@Prop selected: number--><!--Device-SelectTitleBar-@Prop selected: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -138,6 +151,8 @@ Sub-title of this title bar.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SelectTitleBar-subtitle?: ResourceStr--><!--Device-SelectTitleBar-subtitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,5 +1,11 @@
 # getOriginalFileName
 
+## 导入模块
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+```
+
 ## getOriginalFileName
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getOriginalFileName(fileName: string): string
 根据原始文件名后缀判断文件类型，选择对应的应用打开。
 
 **起始版本：** 10
+
+<!--Device-dlpPermission-function getOriginalFileName(fileName: string): string--><!--Device-dlpPermission-function getOriginalFileName(fileName: string): string-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

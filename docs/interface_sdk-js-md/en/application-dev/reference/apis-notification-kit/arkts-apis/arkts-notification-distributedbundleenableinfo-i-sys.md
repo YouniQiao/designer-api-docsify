@@ -4,6 +4,8 @@ Describes the bundle information of an application that enables cross-device col
 
 **Since:** 20
 
+<!--Device-notificationManager-export interface DistributedBundleEnableInfo--><!--Device-notificationManager-export interface DistributedBundleEnableInfo-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Bundle name.
 
 **Since:** 20
 
+<!--Device-DistributedBundleEnableInfo-bundleName: string--><!--Device-DistributedBundleEnableInfo-bundleName: string-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -36,12 +40,13 @@ Bundle name.
 enable?: boolean
 ```
 
-Whether the application enables cross-device collaboration. The value **true** indicates that the cross-device
-collaboration is enabled, and the value **false** indicates the opposite.
+Whether the application enables cross-device collaboration. The value **true** indicates that the cross-device collaboration is enabled, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 20
+
+<!--Device-DistributedBundleEnableInfo-enable?: boolean--><!--Device-DistributedBundleEnableInfo-enable?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -58,6 +63,8 @@ UID of the application.
 **Type:** number
 
 **Since:** 20
+
+<!--Device-DistributedBundleEnableInfo-uid: int--><!--Device-DistributedBundleEnableInfo-uid: int-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

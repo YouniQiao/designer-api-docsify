@@ -18,6 +18,8 @@ Obtains information about all preinstalled applications. This API uses a promise
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundleManager-function getAllPreinstalledApplicationInfo(): Promise<Array<PreinstalledApplicationInfo>>--><!--Device-bundleManager-function getAllPreinstalledApplicationInfo(): Promise<Array<PreinstalledApplicationInfo>>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Obtains information about all preinstalled applications. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PreinstalledApplicationInfo&gt;&gt; | Promise used to return the array of preinstalledapplications obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<PreinstalledApplicationInfo>> | Promise used to return the array of preinstalled applications obtained. |
 
 **Error codes:**
 

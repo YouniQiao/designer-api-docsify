@@ -4,6 +4,8 @@ Enumerates contact filter types.
 
 **Since:** 15
 
+<!--Device-contact-enum FilterType--><!--Device-contact-enum FilterType-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## SHOW_FILTER
@@ -17,6 +19,8 @@ Shows only contacts that meet the filter criteria.
 **Since:** 15
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-FilterType-SHOW_FILTER = 0--><!--Device-FilterType-SHOW_FILTER = 0-End-->
 
 **System capability:** SystemCapability.Applications.Contacts
 
@@ -32,6 +36,8 @@ Selects contacts that meet the filter criteria by default.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-FilterType-DEFAULT_SELECT = 1--><!--Device-FilterType-DEFAULT_SELECT = 1-End-->
+
 **System capability:** SystemCapability.Applications.Contacts
 
 ## SHOW_FILTER_AND_DEFAULT_SELECT
@@ -45,6 +51,8 @@ Shows only contacts that meet the filter criteria and selects these contacts by 
 **Since:** 15
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-FilterType-SHOW_FILTER_AND_DEFAULT_SELECT = 2--><!--Device-FilterType-SHOW_FILTER_AND_DEFAULT_SELECT = 2-End-->
 
 **System capability:** SystemCapability.Applications.Contacts
 

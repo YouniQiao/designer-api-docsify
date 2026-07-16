@@ -12,9 +12,7 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 function startBLEScan(filters: Array<ScanFilter>, options?: ScanOptions): void
 ```
 
-Starts scanning for specified BLE devices with filters.
-On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH and
-MANAGE_BLUETOOTH and LOCATION to ACCESS_BLUETOOTH.
+Starts scanning for specified BLE devices with filters.On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH and MANAGE_BLUETOOTH and LOCATION to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -26,14 +24,16 @@ MANAGE_BLUETOOTH and LOCATION to ACCESS_BLUETOOTH.
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.DISCOVER_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH and ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-BLE-function startBLEScan(filters: Array<ScanFilter>, options?: ScanOptions): void--><!--Device-BLE-function startBLEScan(filters: Array<ScanFilter>, options?: ScanOptions): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filters | Array&lt;ScanFilter&gt; | Yes | Indicates the list of filters used to filter out specified devices.If you do not want to use filter, set this parameter to {@code null}. |
-| options | ScanOptions | No | Indicates the parameters for scanning and if the user does not assign a value,the default value will be used.{@link ScanOptions#interval} set to 0, {@link ScanOptions#dutyMode} set to {@link SCAN_MODE_LOW_POWER}and {@link ScanOptions#matchMode} set to {@link MATCH_MODE_AGGRESSIVE}. |
+| filters | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ScanFilter> | Yes | Indicates the list of filters used to filter out specified devices.If you do not want to use filter, set this parameter to {@code null}. |
+| options | [ScanOptions](arkts-connectivity-scanoptions-i.md) | No | Indicates the parameters for scanning and if the user does not assign a value,the default value will be used.{@link ScanOptions#interval} set to 0, {@link ScanOptions#dutyMode} set to {@link SCAN_MODE_LOW_POWER}and {@link ScanOptions#matchMode} set to {@link MATCH_MODE_AGGRESSIVE}. |
 
 **Error codes:**
 

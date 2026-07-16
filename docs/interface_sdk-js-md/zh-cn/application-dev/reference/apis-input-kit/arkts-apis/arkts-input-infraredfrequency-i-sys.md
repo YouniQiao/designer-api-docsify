@@ -4,9 +4,17 @@
 
 **起始版本：** 15
 
+<!--Device-infraredEmitter-interface InfraredFrequency--><!--Device-infraredEmitter-interface InfraredFrequency-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InfraredEmitter
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { infraredEmitter } from '@kit.InputKit';
+```
 
 ## max
 
@@ -19,6 +27,8 @@ max: number
 **类型：** number
 
 **起始版本：** 15
+
+<!--Device-InfraredFrequency-max: long--><!--Device-InfraredFrequency-max: long-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InfraredEmitter
 
@@ -35,6 +45,8 @@ min: number
 **类型：** number
 
 **起始版本：** 15
+
+<!--Device-InfraredFrequency-min: long--><!--Device-InfraredFrequency-min: long-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InfraredEmitter
 

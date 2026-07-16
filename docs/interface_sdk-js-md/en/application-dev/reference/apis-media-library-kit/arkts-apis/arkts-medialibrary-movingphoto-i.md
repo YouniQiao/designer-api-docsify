@@ -4,6 +4,8 @@ MovingPhoto provides APIs for managing a moving photo instance.
 
 **Since:** 12
 
+<!--Device-photoAccessHelper-interface MovingPhoto--><!--Device-photoAccessHelper-interface MovingPhoto-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -23,6 +25,8 @@ Obtains the URI of this moving photo.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MovingPhoto-getUri(): string--><!--Device-MovingPhoto-getUri(): string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -45,14 +49,15 @@ Obtains the URI of this moving photo.
 requestContent(imageFileUri: string, videoFileUri: string): Promise<void>
 ```
 
-Requests the image data and video data of this moving photo and writes them to the specified URIs, respectively.
-This API uses a promise to return the result.
+Requests the image data and video data of this moving photo and writes them to the specified URIs, respectively.This API uses a promise to return the result.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MovingPhoto-requestContent(imageFileUri: string, videoFileUri: string): Promise<void>--><!--Device-MovingPhoto-requestContent(imageFileUri: string, videoFileUri: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -67,7 +72,7 @@ This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -83,8 +88,7 @@ This API uses a promise to return the result.
 requestContent(resourceType: ResourceType, fileUri: string): Promise<void>
 ```
 
-Requests the moving photo content of the specified resource type and writes it to the specified URI. This API
-uses a promise to return the result.
+Requests the moving photo content of the specified resource type and writes it to the specified URI. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -92,20 +96,22 @@ uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MovingPhoto-requestContent(resourceType: ResourceType, fileUri: string): Promise<void>--><!--Device-MovingPhoto-requestContent(resourceType: ResourceType, fileUri: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceType | ResourceType | Yes | Resource type of the moving photo content to request. |
+| resourceType | [ResourceType](../../apis-ability-kit/arkts-apis/arkts-ability-resourcetype-e.md) | Yes | Resource type of the moving photo content to request. |
 | fileUri | string | Yes | URI to which the moving photo content is to be written. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -121,8 +127,7 @@ uses a promise to return the result.
 requestContent(resourceType: ResourceType): Promise<ArrayBuffer>
 ```
 
-Requests the moving photo content of the specified resource type and returns it in ArrayBuffer format. This API
-uses a promise to return the result.
+Requests the moving photo content of the specified resource type and returns it in ArrayBuffer format. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -130,19 +135,21 @@ uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MovingPhoto-requestContent(resourceType: ResourceType): Promise<ArrayBuffer>--><!--Device-MovingPhoto-requestContent(resourceType: ResourceType): Promise<ArrayBuffer>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceType | ResourceType | Yes | Resource type of the moving photo content to request. |
+| resourceType | [ResourceType](../../apis-ability-kit/arkts-apis/arkts-ability-resourcetype-e.md) | Yes | Resource type of the moving photo content to request. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise used to return the requested content in an ArrayBuffer. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ArrayBuffer> | Promise used to return the requested content in an ArrayBuffer. |
 
 **Error codes:**
 

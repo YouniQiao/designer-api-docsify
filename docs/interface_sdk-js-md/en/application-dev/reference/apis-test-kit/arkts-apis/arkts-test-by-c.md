@@ -1,25 +1,20 @@
 # By
 
-The UiTest framework provides a wide range of UI component feature description APIs in the **By** class to filter and
-match components.
+The UiTest framework provides a wide range of UI component feature description APIs in the **By** class to filter and match components.
 
 The APIs provided by the **By** class exhibit the following features:
 
-1. Allow one or more attributes as the match conditions.
-For example, you can specify both the **text** and **id** attributes to find the target component.
-2. Provide multiple match patterns for component attributes.
-3. Support absolute positioning and relative positioning for components.
-APIs such as [By.isBefore<sup>(deprecated)</sup>](arkts-test-by-c.md#isbefore-1) and [By.isAfter<sup>(deprecated)</sup>](arkts-test-by-c.md#isafter-1)
-can be used to specify the features of adjacent components to assist positioning.
+1. Allow one or more attributes as the match conditions.For example, you can specify both the **text** and **id** attributes to find the target component.2. Provide multiple match patterns for component attributes.3. Support absolute positioning and relative positioning for components.APIs such as [By.isBefore<sup>(deprecated)</sup>](arkts-test-by-c.md#isbefore-1) and [By.isAfter<sup>(deprecated)</sup>](arkts-test-by-c.md#isafter-1)can be used to specify the features of adjacent components to assist positioning.
 
-All APIs provided in the **By** class are synchronous. You are advised to use the static constructor **BY** to create
-a **By** object in chain mode.
+All APIs provided in the **By** class are synchronous. You are advised to use the static constructor **BY** to create a **By** object in chain mode.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** [On](arkts-test-on-c.md)
+
+<!--Device-unnamed-declare class By--><!--Device-unnamed-declare class By-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -43,6 +38,8 @@ Specifies the clickable attribute of the target component.
 
 **Substitutes:** [clickable](arkts-test-on-c.md#clickable-1)
 
+<!--Device-By-clickable(b?: boolean): By--><!--Device-By-clickable(b?: boolean): By-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -55,7 +52,7 @@ Specifies the clickable attribute of the target component.
 
 | Type | Description |
 | --- | --- |
-| By | - **By** object that matches the clickable attribute of the target component. |
+| [By](arkts-test-by-c.md) | - **By** object that matches the clickable attribute of the target component. |
 
 **Example**
 
@@ -81,19 +78,21 @@ Specifies the enabled attribute of the target component.
 
 **Substitutes:** [enabled](arkts-test-on-c.md#enabled-1)
 
+<!--Device-By-enabled(b?: boolean): By--><!--Device-By-enabled(b?: boolean): By-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Enabled status of the component. The value **true** indicates that the component is enabled, and**false** indicates the opposite. Default value: **true** |
+| b | boolean | No | Enabled status of the component. The value **true** indicates that the component is enabled, and **false** indicates the opposite. Default value: **true** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| By | - **By** object that matches the enabled attribute of the target component. |
+| [By](arkts-test-by-c.md) | - **By** object that matches the enabled attribute of the target component. |
 
 **Example**
 
@@ -119,19 +118,21 @@ Specifies the focused attribute of the target component.
 
 **Substitutes:** [focused](arkts-test-on-c.md#focused-1)
 
+<!--Device-By-focused(b?: boolean): By--><!--Device-By-focused(b?: boolean): By-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Focused status of the component. The value **true** indicates that the component is focused, and**false** indicates the opposite. Default value: **true** |
+| b | boolean | No | Focused status of the component. The value **true** indicates that the component is focused, and **false** indicates the opposite. Default value: **true** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| By | - **By** object that matches the focused attribute of the target component. |
+| [By](arkts-test-by-c.md) | - **By** object that matches the focused attribute of the target component. |
 
 **Example**
 
@@ -157,6 +158,8 @@ Specifies the ID attribute of the target component.
 
 **Substitutes:** id(id:
 
+<!--Device-By-id(id: number): By--><!--Device-By-id(id: number): By-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -169,7 +172,7 @@ Specifies the ID attribute of the target component.
 
 | Type | Description |
 | --- | --- |
-| By | - **By** object that matches the ID attribute of the target component. |
+| [By](arkts-test-by-c.md) | - **By** object that matches the ID attribute of the target component. |
 
 **Example**
 
@@ -195,19 +198,21 @@ Specifies that the target component is located after the given attribute compone
 
 **Substitutes:** isAfter(on:
 
+<!--Device-By-isAfter(by: By): By--><!--Device-By-isAfter(by: By): By-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| by | By | Yes | Information about the attribute component. |
+| by | [By](arkts-test-by-c.md) | Yes | Information about the attribute component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| By | - **By** object. |
+| [By](arkts-test-by-c.md) | - **By** object. |
 
 **Example**
 
@@ -234,19 +239,21 @@ Specifies that the target component is located before the given attribute compon
 
 **Substitutes:** isBefore(on:
 
+<!--Device-By-isBefore(by: By): By--><!--Device-By-isBefore(by: By): By-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| by | By | Yes | Information about the attribute component. |
+| by | [By](arkts-test-by-c.md) | Yes | Information about the attribute component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| By | - **By** object. |
+| [By](arkts-test-by-c.md) | - **By** object. |
 
 **Example**
 
@@ -273,6 +280,8 @@ Specifies the key attribute of the target component.
 
 **Substitutes:** id(id:
 
+<!--Device-By-key(key: string): By--><!--Device-By-key(key: string): By-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -285,7 +294,7 @@ Specifies the key attribute of the target component.
 
 | Type | Description |
 | --- | --- |
-| By | - **By** object that matches the key attribute of the target component. |
+| [By](arkts-test-by-c.md) | - **By** object that matches the key attribute of the target component. |
 
 **Example**
 
@@ -311,6 +320,8 @@ Specifies the scrollable attribute of the target component.
 
 **Substitutes:** [scrollable](arkts-test-on-c.md#scrollable-1)
 
+<!--Device-By-scrollable(b?: boolean): By--><!--Device-By-scrollable(b?: boolean): By-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -323,7 +334,7 @@ Specifies the scrollable attribute of the target component.
 
 | Type | Description |
 | --- | --- |
-| By | - **By** object that matches the scrollable attribute of the target component. |
+| [By](arkts-test-by-c.md) | - **By** object that matches the scrollable attribute of the target component. |
 
 **Example**
 
@@ -349,6 +360,8 @@ Specifies the selected status of the target component.
 
 **Substitutes:** [selected](arkts-test-on-c.md#selected-1)
 
+<!--Device-By-selected(b?: boolean): By--><!--Device-By-selected(b?: boolean): By-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -361,7 +374,7 @@ Specifies the selected status of the target component.
 
 | Type | Description |
 | --- | --- |
-| By | - **By** object that matches the selected attribute of the target component. |
+| [By](arkts-test-by-c.md) | - **By** object that matches the selected attribute of the target component. |
 
 **Example**
 
@@ -387,6 +400,8 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 
 **Substitutes:** [text](arkts-test-on-c.md#text-1)
 
+<!--Device-By-text(txt: string, pattern?: MatchPattern): By--><!--Device-By-text(txt: string, pattern?: MatchPattern): By-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -394,13 +409,13 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | txt | string | Yes | Component text, used to match the target component. |
-| pattern | MatchPattern | No | Match pattern {@link MatchPattern}.<br>Default value: {@link MatchPattern.EQUALS} |
+| pattern | [MatchPattern](arkts-test-matchpattern-e.md) | No | Match pattern {@link MatchPattern}.<br>Default value: {@link MatchPattern.EQUALS} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| By | - **By** object that matches the text attribute of the target component. |
+| [By](arkts-test-by-c.md) | - **By** object that matches the text attribute of the target component. |
 
 **Example**
 
@@ -426,6 +441,8 @@ Specifies the type attribute of the target component.
 
 **Substitutes:** type(tp:
 
+<!--Device-By-type(tp: string): By--><!--Device-By-type(tp: string): By-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -438,7 +455,7 @@ Specifies the type attribute of the target component.
 
 | Type | Description |
 | --- | --- |
-| By | - **By** object that matches the type attribute of the target component. |
+| [By](arkts-test-by-c.md) | - **By** object that matches the type attribute of the target component. |
 
 **Example**
 

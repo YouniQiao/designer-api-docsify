@@ -20,6 +20,8 @@ Get Wi-Fi capability
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-wifiManager-function getWifiCapability(capability: WifiCapability): boolean--><!--Device-wifiManager-function getWifiCapability(capability: WifiCapability): boolean-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Get Wi-Fi capability
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| capability | WifiCapability | Yes | Identifies the Wi-Fi capability |
+| capability | [WifiCapability](arkts-connectivity-wificapability-e.md) | Yes | Identifies the Wi-Fi capability |
 
 **Return value:**
 

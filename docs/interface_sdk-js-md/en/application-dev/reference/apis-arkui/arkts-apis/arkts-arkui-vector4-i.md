@@ -4,6 +4,8 @@ Defines a vector that contains the x, y, z, and w coordinate values.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-interface Vector4--><!--Device-unnamed-interface Vector4-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## w
@@ -12,8 +14,7 @@ Defines a vector that contains the x, y, z, and w coordinate values.
 w: number
 ```
 
-W coordinate value of the vector.
-Value range: (-∞, +∞).
+W coordinate value of the vector.Value range: (-∞, +∞).
 
 **Type:** number
 
@@ -22,6 +23,8 @@ Value range: (-∞, +∞).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-Vector4-w: double--><!--Device-Vector4-w: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,8 +34,7 @@ Value range: (-∞, +∞).
 x: number
 ```
 
-X coordinate value of the vector.
-Value range: (-∞,+∞).
+X coordinate value of the vector.Value range: (-∞,+∞).
 
 **Type:** number
 
@@ -41,6 +43,8 @@ Value range: (-∞,+∞).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-Vector4-x: double--><!--Device-Vector4-x: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,8 +54,7 @@ Value range: (-∞,+∞).
 y: number
 ```
 
-Y coordinate value of the vector.
-Value range: (-∞, +∞).
+Y coordinate value of the vector.Value range: (-∞, +∞).
 
 **Type:** number
 
@@ -60,6 +63,8 @@ Value range: (-∞, +∞).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-Vector4-y: double--><!--Device-Vector4-y: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,8 +74,7 @@ Value range: (-∞, +∞).
 z: number
 ```
 
-Z coordinate value of the vector.
-Value range: (-∞, +∞).
+Z coordinate value of the vector.Value range: (-∞, +∞).
 
 **Type:** number
 
@@ -79,6 +83,8 @@ Value range: (-∞, +∞).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-Vector4-z: double--><!--Device-Vector4-z: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

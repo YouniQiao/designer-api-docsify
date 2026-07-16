@@ -18,6 +18,8 @@ Enable cellular data roaming.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-data-function enableCellularDataRoaming(slotId: int, callback: AsyncCallback<void>): void--><!--Device-data-function enableCellularDataRoaming(slotId: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CellularData
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Enable cellular data roaming.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the ID of a card slot.The value {@code 0} indicates card 1, and the value {@code 1} indicates card 2. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of enableCellularDataRoaming. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of enableCellularDataRoaming. |
 
 **Error codes:**
 
@@ -70,6 +72,8 @@ Enable cellular data roaming.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-data-function enableCellularDataRoaming(slotId: int): Promise<void>--><!--Device-data-function enableCellularDataRoaming(slotId: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CellularData
 
 **System API:** This is a system API.
@@ -84,7 +88,7 @@ Enable cellular data roaming.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the enableCellularDataRoaming. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the enableCellularDataRoaming. |
 
 **Error codes:**
 

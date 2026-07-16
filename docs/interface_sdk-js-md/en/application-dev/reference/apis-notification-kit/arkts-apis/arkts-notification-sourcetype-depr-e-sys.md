@@ -1,7 +1,7 @@
 # SourceType (System API)
 
-> **NOTE**<br>
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> **NOTE**<br>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
 > notificationManager.SourceType instead.
 
 **Since:** 8
@@ -9,6 +9,8 @@
 **Deprecated since:** 9
 
 **Substitutes:** SourceType
+
+<!--Device-notification-export enum SourceType--><!--Device-notification-export enum SourceType-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -28,6 +30,8 @@ Normal notification.
 
 **Substitutes:** TYPE_NORMAL
 
+<!--Device-SourceType-TYPE_NORMAL = 0--><!--Device-SourceType-TYPE_NORMAL = 0-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -46,6 +50,8 @@ Continuous notification.
 
 **Substitutes:** TYPE_CONTINUOUS
 
+<!--Device-SourceType-TYPE_CONTINUOUS = 1--><!--Device-SourceType-TYPE_CONTINUOUS = 1-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -63,6 +69,8 @@ Timed notification.
 **Deprecated since:** 9
 
 **Substitutes:** TYPE_TIMER
+
+<!--Device-SourceType-TYPE_TIMER = 2--><!--Device-SourceType-TYPE_TIMER = 2-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

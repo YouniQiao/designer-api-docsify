@@ -12,11 +12,11 @@ import { shortcutManager } from '@kit.AbilityKit';
 function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>
 ```
 
-Obtains all the shortcut information defined in the
-[configuration](../../../../quick-start/module-configuration-file.md#shortcuts) file of the current application. This
-API uses a promise to return the result.
+Obtains all the shortcut information defined in the [configuration](../../../../quick-start/module-configuration-file.md#shortcuts) file of the current application. This API uses a promise to return the result.
 
 **Since:** 20
+
+<!--Device-shortcutManager-function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>--><!--Device-shortcutManager-function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -24,7 +24,7 @@ API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ShortcutInfo&gt;&gt; | Promise that returns all the shortcut information defined in theconfiguration file. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ShortcutInfo>> | Promise that returns all the shortcut information defined in the configuration file. |
 
 **Example**
 

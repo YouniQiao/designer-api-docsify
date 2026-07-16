@@ -20,6 +20,8 @@ Checks whether Host Card Emulation(HCE) capability is supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-cardEmulation-function hasHceCapability(): boolean--><!--Device-cardEmulation-function hasHceCapability(): boolean-End-->
+
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
 **Return value:**

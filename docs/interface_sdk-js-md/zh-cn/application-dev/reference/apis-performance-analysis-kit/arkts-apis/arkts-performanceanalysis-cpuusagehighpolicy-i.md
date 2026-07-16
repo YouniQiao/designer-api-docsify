@@ -2,13 +2,21 @@
 
 提供CPU高负载事件配置策略的定义。
 
-> **注意：**
->
+> **注意：**  
+>  
 > 该接口被调用后，会将设置值持久化。后续重复调用该接口时，若不设置对应参数，则取上一次系统取用的值。
 
 **起始版本：** 22
 
+<!--Device-hiAppEvent-interface CpuUsageHighPolicy--><!--Device-hiAppEvent-interface CpuUsageHighPolicy-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
+
+## 导入模块
+
+```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+```
 
 ## backgroundLoadThreshold
 
@@ -24,7 +32,9 @@ backgroundLoadThreshold?: number
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CpuUsageHighPolicy-backgroundLoadThreshold?: int--><!--Device-CpuUsageHighPolicy-backgroundLoadThreshold?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -42,7 +52,9 @@ foregroundLoadThreshold?: number
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CpuUsageHighPolicy-foregroundLoadThreshold?: int--><!--Device-CpuUsageHighPolicy-foregroundLoadThreshold?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -64,15 +76,15 @@ Release版本应用，阈值范围：[0, 20]。
 
 **说明**：
 
-1. 值为-1，表示不限制采集日志次数。
-2. 值为0，表示不采集日志。
-3. 值大于0，表示每日采集次数上限。
+1. 值为-1，表示不限制采集日志次数。2. 值为0，表示不采集日志。3. 值大于0，表示每日采集次数上限。
 
 **类型：** number
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CpuUsageHighPolicy-perfLogCaptureCount?: int--><!--Device-CpuUsageHighPolicy-perfLogCaptureCount?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -90,7 +102,9 @@ threadLoadInterval?: number
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CpuUsageHighPolicy-threadLoadInterval?: int--><!--Device-CpuUsageHighPolicy-threadLoadInterval?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -106,7 +120,9 @@ threadLoadThreshold?: number
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CpuUsageHighPolicy-threadLoadThreshold?: int--><!--Device-CpuUsageHighPolicy-threadLoadThreshold?: int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 

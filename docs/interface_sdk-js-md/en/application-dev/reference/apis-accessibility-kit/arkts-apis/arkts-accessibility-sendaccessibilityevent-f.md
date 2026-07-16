@@ -20,14 +20,16 @@ Sends an accessibility event. This API uses an asynchronous callback to return t
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-accessibility-function sendAccessibilityEvent(event: EventInfo, callback: AsyncCallback<void>): void--><!--Device-accessibility-function sendAccessibilityEvent(event: EventInfo, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | EventInfo | Yes | Accessibility event. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, **err** thatcontains data is returned. |
+| event | [EventInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-eventinfo-i-sys.md) | Yes | Accessibility event. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation fails, **err** that contains data is returned. |
 
 **Error codes:**
 
@@ -133,19 +135,21 @@ Sends an accessibility event. This API uses a promise to return the result.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-accessibility-function sendAccessibilityEvent(event: EventInfo): Promise<void>--><!--Device-accessibility-function sendAccessibilityEvent(event: EventInfo): Promise<void>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | EventInfo | Yes | Accessibility event. |
+| event | [EventInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-eventinfo-i-sys.md) | Yes | Accessibility event. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

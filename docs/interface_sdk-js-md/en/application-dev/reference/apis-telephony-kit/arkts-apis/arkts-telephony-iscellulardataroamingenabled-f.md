@@ -18,6 +18,8 @@ Check whether roaming is enabled for cellular data services.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-data-function isCellularDataRoamingEnabled(slotId: int, callback: AsyncCallback<boolean>): void--><!--Device-data-function isCellularDataRoamingEnabled(slotId: int, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CellularData
 
 **Parameters:**
@@ -25,7 +27,7 @@ Check whether roaming is enabled for cellular data services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the ID of a card slot.The value {@code 0} indicates card 1, and the value {@code 1} indicates card 2. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Indicates the callback for checking whether roaming is enabledfor cellular data services. Returns {@code true} if roaming is enabled for cellular data services;returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Indicates the callback for checking whether roaming is enabled for cellular data services. Returns {@code true} if roaming is enabled for cellular data services;returns {@code false} otherwise. |
 
 **Error codes:**
 
@@ -67,6 +69,8 @@ Check whether roaming is enabled for cellular data services.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-data-function isCellularDataRoamingEnabled(slotId: int): Promise<boolean>--><!--Device-data-function isCellularDataRoamingEnabled(slotId: int): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Telephony.CellularData
 
 **Parameters:**
@@ -79,7 +83,7 @@ Check whether roaming is enabled for cellular data services.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns {@code true} if roaming is enabled for cellular data services.Returns {@code false} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns {@code true} if roaming is enabled for cellular data services.Returns {@code false} otherwise. |
 
 **Error codes:**
 

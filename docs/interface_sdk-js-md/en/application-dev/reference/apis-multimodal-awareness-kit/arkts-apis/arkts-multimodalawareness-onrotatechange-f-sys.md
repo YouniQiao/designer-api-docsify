@@ -18,6 +18,8 @@ Subscribe to rotate sensor event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-motion-function onRotateChange(callback: Callback<RotateEvent>): void--><!--Device-motion-function onRotateChange(callback: Callback<RotateEvent>): void-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Subscribe to rotate sensor event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;RotateEvent&gt; | Yes | The callback to receive rotate orientation. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<RotateEvent> | Yes | The callback to receive rotate orientation. |
 
 **Error codes:**
 

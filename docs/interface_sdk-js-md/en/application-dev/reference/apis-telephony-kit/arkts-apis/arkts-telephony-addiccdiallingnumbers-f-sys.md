@@ -18,6 +18,8 @@ Add dialing number information to SIM card.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
+<!--Device-sim-function addIccDiallingNumbers(slotId: int, type: ContactType, diallingNumbers: DiallingNumbersInfo, callback: AsyncCallback<void>): void--><!--Device-sim-function addIccDiallingNumbers(slotId: int, type: ContactType, diallingNumbers: DiallingNumbersInfo, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -27,9 +29,9 @@ Add dialing number information to SIM card.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| type | ContactType | Yes | Indicates contact type. |
-| diallingNumbers | DiallingNumbersInfo | Yes | Indicates dialing number information. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of addIccDiallingNumbers. |
+| type | [ContactType](arkts-telephony-contacttype-e-sys.md) | Yes | Indicates contact type. |
+| diallingNumbers | [DiallingNumbersInfo](arkts-telephony-diallingnumbersinfo-i-sys.md) | Yes | Indicates dialing number information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of addIccDiallingNumbers. |
 
 **Error codes:**
 
@@ -75,6 +77,8 @@ Add dialing number information to SIM card.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
+<!--Device-sim-function addIccDiallingNumbers(slotId: int, type: ContactType, diallingNumbers: DiallingNumbersInfo): Promise<void>--><!--Device-sim-function addIccDiallingNumbers(slotId: int, type: ContactType, diallingNumbers: DiallingNumbersInfo): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -84,14 +88,14 @@ Add dialing number information to SIM card.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| type | ContactType | Yes | Indicates contact type. |
-| diallingNumbers | DiallingNumbersInfo | Yes | Indicates dialing number information. |
+| type | [ContactType](arkts-telephony-contacttype-e-sys.md) | Yes | Indicates contact type. |
+| diallingNumbers | [DiallingNumbersInfo](arkts-telephony-diallingnumbersinfo-i-sys.md) | Yes | Indicates dialing number information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the addIccDiallingNumbers. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the addIccDiallingNumbers. |
 
 **Error codes:**
 

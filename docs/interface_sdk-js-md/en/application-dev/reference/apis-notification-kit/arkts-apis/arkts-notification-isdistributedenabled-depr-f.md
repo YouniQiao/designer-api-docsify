@@ -6,8 +6,7 @@
 function isDistributedEnabled(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether this device supports distributed notifications. This API uses an asynchronous callback to return the
-result.
+Checks whether this device supports distributed notifications. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -15,13 +14,15 @@ result.
 
 **Substitutes:** isDistributedEnabled
 
+<!--Device-notification-function isDistributedEnabled(callback: AsyncCallback<boolean>): void--><!--Device-notification-function isDistributedEnabled(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. |
 
 
 ## isDistributedEnabled
@@ -38,11 +39,13 @@ Checks whether this device supports distributed notifications. This API uses a p
 
 **Substitutes:** isDistributedEnabled
 
+<!--Device-notification-function isDistributedEnabled(): Promise<boolean>--><!--Device-notification-function isDistributedEnabled(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. |
 

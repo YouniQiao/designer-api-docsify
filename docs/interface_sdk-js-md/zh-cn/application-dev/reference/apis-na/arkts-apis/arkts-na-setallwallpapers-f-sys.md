@@ -12,6 +12,8 @@ function setAllWallpapers(wallpaperInfos: Array<WallpaperInfo>, wallpaperType: W
 
 **需要权限：** ohos.permission.SET_WALLPAPER
 
+<!--Device-wallpaper-function setAllWallpapers(wallpaperInfos: Array<WallpaperInfo>, wallpaperType: WallpaperType): Promise<void>--><!--Device-wallpaper-function setAllWallpapers(wallpaperInfos: Array<WallpaperInfo>, wallpaperType: WallpaperType): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **系统接口：** 此接口为系统接口。
@@ -20,22 +22,22 @@ function setAllWallpapers(wallpaperInfos: Array<WallpaperInfo>, wallpaperType: W
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wallpaperInfos | Array&lt;WallpaperInfo&gt; | 是 | 所有壁纸的信息结构。 |
-| wallpaperType | WallpaperType | 是 | 壁纸类型。 |
+| wallpaperInfos | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<WallpaperInfo> | 是 | 所有壁纸的信息结构。 |
+| wallpaperType | [WallpaperType](arkts-na-wallpapertype-e.md) | 是 | 壁纸类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter error. Possible causes:1.Mandatory parameters are left unspecified.2.The first parameter type must be Array&lt;WallpaperInfo&gt;. The second type must be WallpaperType.3.The first parameter type must be Array&lt;WallpaperInfo&gt;, must include wallpaper with FoldState NORMAL andRotateState PORTRAIT. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter error. Possible causes:1.Mandatory parameters are left unspecified.2.The first parameter type must be Array&lt;WallpaperInfo&gt;. The second type must be WallpaperType.3.The first parameter type must be Array&lt;WallpaperInfo&gt;, must include wallpaper with FoldState NORMAL and RotateState PORTRAIT. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | permission verification failed, application which is not a system application usessystem API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | permission verification failed, application which is not a system application uses system API. |
 
 **示例：**
 

@@ -1,5 +1,11 @@
 # removeGrantedPublicCertificate（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+```
+
 ## removeGrantedPublicCertificate
 
 ```TypeScript
@@ -13,6 +19,8 @@ function removeGrantedPublicCertificate(keyUri: string, clientAppUid: number) : 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-certificateManager-function removeGrantedPublicCertificate(keyUri: string, clientAppUid: int) : Promise<void>--><!--Device-certificateManager-function removeGrantedPublicCertificate(keyUri: string, clientAppUid: int) : Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -29,7 +37,7 @@ function removeGrantedPublicCertificate(keyUri: string, clientAppUid: number) : 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

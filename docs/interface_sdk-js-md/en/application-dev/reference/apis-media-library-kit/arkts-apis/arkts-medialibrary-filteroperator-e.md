@@ -4,6 +4,8 @@ Enumeration type of filter operator.
 
 **Since:** 19
 
+<!--Device-photoAccessHelper-export enum FilterOperator--><!--Device-photoAccessHelper-export enum FilterOperator-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## EQUAL_TO
@@ -17,6 +19,8 @@ Equal to.
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-FilterOperator-EQUAL_TO = 0--><!--Device-FilterOperator-EQUAL_TO = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -32,6 +36,8 @@ Not equal to.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-FilterOperator-NOT_EQUAL_TO = 1--><!--Device-FilterOperator-NOT_EQUAL_TO = 1-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## MORE_THAN
@@ -45,6 +51,8 @@ Greater than.
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-FilterOperator-MORE_THAN = 2--><!--Device-FilterOperator-MORE_THAN = 2-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -60,6 +68,8 @@ Less than.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-FilterOperator-LESS_THAN = 3--><!--Device-FilterOperator-LESS_THAN = 3-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## MORE_THAN_OR_EQUAL_TO
@@ -73,6 +83,8 @@ Greater than or equal to.
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-FilterOperator-MORE_THAN_OR_EQUAL_TO = 4--><!--Device-FilterOperator-MORE_THAN_OR_EQUAL_TO = 4-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -88,6 +100,8 @@ Less than or equal to.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-FilterOperator-LESS_THAN_OR_EQUAL_TO = 5--><!--Device-FilterOperator-LESS_THAN_OR_EQUAL_TO = 5-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## BETWEEN
@@ -101,6 +115,8 @@ Within the specified range.
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-FilterOperator-BETWEEN = 6--><!--Device-FilterOperator-BETWEEN = 6-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

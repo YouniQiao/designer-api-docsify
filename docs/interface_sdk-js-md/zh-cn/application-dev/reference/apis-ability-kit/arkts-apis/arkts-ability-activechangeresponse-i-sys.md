@@ -4,9 +4,17 @@
 
 **起始版本：** 9
 
+<!--Device-privacyManager-interface ActiveChangeResponse--><!--Device-privacyManager-interface ActiveChangeResponse-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+```
 
 ## activeStatus
 
@@ -19,6 +27,8 @@ activeStatus: PermissionActiveStatus
 **类型：** PermissionActiveStatus
 
 **起始版本：** 9
+
+<!--Device-ActiveChangeResponse-activeStatus: PermissionActiveStatus--><!--Device-ActiveChangeResponse-activeStatus: PermissionActiveStatus-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -38,6 +48,8 @@ callingTokenId?: number
 
 **起始版本：** 18
 
+<!--Device-ActiveChangeResponse-callingTokenId?: int--><!--Device-ActiveChangeResponse-callingTokenId?: int-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -54,6 +66,8 @@ deviceId: string
 
 **起始版本：** 9
 
+<!--Device-ActiveChangeResponse-deviceId: string--><!--Device-ActiveChangeResponse-deviceId: string-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -64,14 +78,15 @@ deviceId: string
 enhancedIdentity?: string
 ```
 
-扩展身份，用于标识调用方的附加身份信息。当需要区分同一应用下不同调用来源的权限使用记录时返回此字段。
-最大长度为48。默认值：空字符串。
+扩展身份，用于标识调用方的附加身份信息。当需要区分同一应用下不同调用来源的权限使用记录时返回此字段。最大长度为48。默认值：空字符串。
 
 **类型：** string
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ActiveChangeResponse-enhancedIdentity?: string--><!--Device-ActiveChangeResponse-enhancedIdentity?: string-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -89,6 +104,8 @@ permissionName: Permissions
 
 **起始版本：** 9
 
+<!--Device-ActiveChangeResponse-permissionName: Permissions--><!--Device-ActiveChangeResponse-permissionName: Permissions-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -104,6 +121,8 @@ tokenId: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-ActiveChangeResponse-tokenId: int--><!--Device-ActiveChangeResponse-tokenId: int-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -122,6 +141,8 @@ usedType?: PermissionUsedType
 **类型：** PermissionUsedType
 
 **起始版本：** 18
+
+<!--Device-ActiveChangeResponse-usedType?: PermissionUsedType--><!--Device-ActiveChangeResponse-usedType?: PermissionUsedType-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

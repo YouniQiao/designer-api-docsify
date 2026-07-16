@@ -6,6 +6,8 @@ Extends [FrameNode](arkts-arkui-framenode-c.md) to define a FrameNode with speci
 
 **Since:** 12
 
+<!--Device-unnamed-export interface TypedFrameNode<C, T> extends FrameNode--><!--Device-unnamed-export interface TypedFrameNode<C, T> extends FrameNode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## attribute
@@ -24,6 +26,8 @@ Attribute configuration object for setting or updating common and specific attri
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TypedFrameNode-readonly attribute: T--><!--Device-TypedFrameNode-readonly attribute: T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## initialize
@@ -41,6 +45,8 @@ Construction parameters for creating a component, used to set or update the comp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TypedFrameNode-initialize: C--><!--Device-TypedFrameNode-initialize: C-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

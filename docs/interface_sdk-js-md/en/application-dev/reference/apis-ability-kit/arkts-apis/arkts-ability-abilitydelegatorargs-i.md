@@ -1,13 +1,14 @@
 # AbilityDelegatorArgs
 
-The **AbilityDelegatorArgs** module provides APIs to obtain an **AbilityDelegatorArgs** object during the execution
-of test cases.
+The **AbilityDelegatorArgs** module provides APIs to obtain an **AbilityDelegatorArgs** object during the execution of test cases.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > The APIs of this module can be used only in [JsUnit](../../../../application-test/unittest-guidelines.md).
 
 **Since:** 8
+
+<!--Device-unnamed-export interface AbilityDelegatorArgs--><!--Device-unnamed-export interface AbilityDelegatorArgs-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -25,6 +26,8 @@ Bundle name of the application to test.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AbilityDelegatorArgs-bundleName: string--><!--Device-AbilityDelegatorArgs-bundleName: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## parameters
@@ -40,6 +43,8 @@ Parameters of the unit test that is started currently.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityDelegatorArgs-parameters: Record<string, string>--><!--Device-AbilityDelegatorArgs-parameters: Record<string, string>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -57,6 +62,8 @@ Test case name.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AbilityDelegatorArgs-testCaseNames: string--><!--Device-AbilityDelegatorArgs-testCaseNames: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## testRunnerClassName
@@ -72,6 +79,8 @@ Names of the test case executors.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityDelegatorArgs-testRunnerClassName: string--><!--Device-AbilityDelegatorArgs-testRunnerClassName: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

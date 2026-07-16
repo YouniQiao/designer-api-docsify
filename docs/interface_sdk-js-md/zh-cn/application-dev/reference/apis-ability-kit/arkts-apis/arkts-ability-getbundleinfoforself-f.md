@@ -1,5 +1,11 @@
 # getBundleInfoForSelf
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getBundleInfoForSelf
 
 ```TypeScript
@@ -10,7 +16,9 @@ function getBundleInfoForSelf(bundleFlags: number): Promise<BundleInfo>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-bundleManager-function getBundleInfoForSelf(bundleFlags: int): Promise<BundleInfo>--><!--Device-bundleManager-function getBundleInfoForSelf(bundleFlags: int): Promise<BundleInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -24,7 +32,7 @@ function getBundleInfoForSelf(bundleFlags: number): Promise<BundleInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;BundleInfo&gt; | Promise对象，返回当前应用的BundleInfo。 |
+| Promise<BundleInfo> | Promise对象，返回当前应用的BundleInfo。 |
 
 **错误码：**
 
@@ -67,7 +75,9 @@ function getBundleInfoForSelf(bundleFlags: number, callback: AsyncCallback<Bundl
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-bundleManager-function getBundleInfoForSelf(bundleFlags: int, callback: AsyncCallback<BundleInfo>): void--><!--Device-bundleManager-function getBundleInfoForSelf(bundleFlags: int, callback: AsyncCallback<BundleInfo>): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -76,7 +86,7 @@ function getBundleInfoForSelf(bundleFlags: number, callback: AsyncCallback<Bundl
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleFlags | number | 是 | 指定返回的BundleInfo所包含的信息。 |
-| callback | AsyncCallback&lt;BundleInfo&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的当前应用的BundleInfo；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<BundleInfo> | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的当前应用的BundleInfo；否则为错误对象。 |
 
 **错误码：**
 

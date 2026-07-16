@@ -1,5 +1,11 @@
 # isApplicationEnabledSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## isApplicationEnabledSync
 
 ```TypeScript
@@ -9,6 +15,8 @@ function isApplicationEnabledSync(bundleName: string): boolean
 以同步方法获取指定应用的禁用或使能状态。
 
 **起始版本：** 10
+
+<!--Device-bundleManager-function isApplicationEnabledSync(bundleName: string): boolean--><!--Device-bundleManager-function isApplicationEnabledSync(bundleName: string): boolean-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

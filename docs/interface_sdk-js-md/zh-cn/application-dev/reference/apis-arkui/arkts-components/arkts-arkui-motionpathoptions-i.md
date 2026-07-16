@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare interface MotionPathOptions--><!--Device-unnamed-declare interface MotionPathOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## from
@@ -26,7 +28,9 @@ from?: number
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MotionPathOptions-from?: number--><!--Device-MotionPathOptions-from?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,9 +40,7 @@ from?: number
 path: string
 ```
 
-位移动画的运动路径，使用[svg路径字符串](../../../../reference/apis-arkui/arkui-ts/ts-drawing-components-path.md#svg路径描述规范)。path中支持使用
-start和end进行起点和终点的替代，如：'Mstart.x start.y L50 50 Lend.x end.y Z'，更多说明请参考
-[绘制路径](../../../../ui/ui-js-components-svg-path.md)。
+位移动画的运动路径，使用[svg路径字符串](../../../../reference/apis-arkui/arkui-ts/ts-drawing-components-path.md#svg路径描述规范)。path中支持使用start和end进行起点和终点的替代，如：'Mstart.x start.y L50 50 Lend.x end.y Z'，更多说明请参考[绘制路径](../../../../ui/ui-js-components-svg-path.md)。
 
 设置为空字符串时相当于不设置路径动画。
 
@@ -46,7 +48,9 @@ start和end进行起点和终点的替代，如：'Mstart.x start.y L50 50 Lend.
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MotionPathOptions-path: string--><!--Device-MotionPathOptions-path: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,7 +70,9 @@ rotatable?: boolean
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MotionPathOptions-rotatable?: boolean--><!--Device-MotionPathOptions-rotatable?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,7 +96,9 @@ to?: number
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MotionPathOptions-to?: number--><!--Device-MotionPathOptions-to?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

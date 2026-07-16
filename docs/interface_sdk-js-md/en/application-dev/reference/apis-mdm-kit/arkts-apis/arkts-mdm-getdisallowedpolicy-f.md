@@ -27,14 +27,16 @@ Queries whether a feature is disabled.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-restrictions-function getDisallowedPolicy(admin: Want | null, feature: string): boolean--><!--Device-restrictions-function getDisallowedPolicy(admin: Want | null, feature: string): boolean-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application.<br>**Since:** 20 |
-| feature | string | Yes | For features that can be queried, see Table 2.<br> **Note**: Since API version 15,applications granted with the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and[activated as device administrator applications](arkts-mdm-startadminprovision-f.md#startadminprovision-1)can use this API to obtain the status of following features: **bluetooth**, **hdc**, **microphone**, **usb**,**wifi**, **tethering**, and **camera**&lt;!--RP4--&gt;&lt;!--RP4End--&gt;. Since API version 26.0.0, this API can be usedto obtain the status of the **mtpServer** feature. |
+| admin | Want \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application.<br>**Since:** 20 |
+| feature | string | Yes | For features that can be queried, see Table 2.<br> **Note**: Since API version 15,applications granted with the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and [activated as device administrator applications](arkts-mdm-startadminprovision-f.md#startadminprovision-1)can use this API to obtain the status of following features: **bluetooth**, **hdc**, **microphone**, **usb**,**wifi**, **tethering**, and **camera**&lt;!--RP4--&gt;&lt;!--RP4End--&gt;. Since API version 26.0.0, this API can be used to obtain the status of the **mtpServer** feature. |
 
 **Return value:**
 
@@ -87,20 +89,22 @@ Queries whether a specified device feature is disabled.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-restrictions-function getDisallowedPolicy(admin: Want | null, feature: FeatureForDevice): boolean--><!--Device-restrictions-function getDisallowedPolicy(admin: Want | null, feature: FeatureForDevice): boolean-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| feature | FeatureForDevice | Yes | Device feature to be queried. |
+| admin | Want \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| feature | [FeatureForDevice](arkts-mdm-featurefordevice-e.md) | Yes | Device feature to be queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The value **true** indicates the device feature is disabled, and the value **false** indicatesthe opposite. |
+| boolean | The value **true** indicates the device feature is disabled, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-audio-interface AudioDevicePair--><!--Device-audio-interface AudioDevicePair-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## inputDevice
 
@@ -19,6 +27,8 @@ inputDevice: AudioDeviceDescriptor
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioDevicePair-inputDevice: AudioDeviceDescriptor--><!--Device-AudioDevicePair-inputDevice: AudioDeviceDescriptor-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -35,6 +45,8 @@ outputDevice: AudioDeviceDescriptor
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioDevicePair-outputDevice: AudioDeviceDescriptor--><!--Device-AudioDevicePair-outputDevice: AudioDeviceDescriptor-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 

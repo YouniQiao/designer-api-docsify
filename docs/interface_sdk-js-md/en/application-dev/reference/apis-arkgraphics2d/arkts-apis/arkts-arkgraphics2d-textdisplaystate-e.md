@@ -1,9 +1,10 @@
 # TextDisplayState
 
-Enumerates text display states. Native result after text typesetting, which is irrelevant to external display
-factors such as external canvas cropping and screen overflow.
+Enumerates text display states. Native result after text typesetting, which is irrelevant to external display factors such as external canvas cropping and screen overflow.
 
 **Since:** 26.0.0
+
+<!--Device-text-enum TextDisplayState--><!--Device-text-enum TextDisplayState-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -21,6 +22,8 @@ Unknown display state, which is the default state.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TextDisplayState-UNKNOWN = 0--><!--Device-TextDisplayState-UNKNOWN = 0-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## ALL
@@ -37,6 +40,8 @@ Complete display state, in which the text is not truncated or omitted and all co
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TextDisplayState-ALL = 1--><!--Device-TextDisplayState-ALL = 1-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## CLIP
@@ -45,14 +50,15 @@ Complete display state, in which the text is not truncated or omitted and all co
 CLIP = 2
 ```
 
-Cropping display state, in which the part of the text that exceeds the typesetting area is directly cropped and
-hidden.
+Cropping display state, in which the part of the text that exceeds the typesetting area is directly cropped and hidden.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TextDisplayState-CLIP = 2--><!--Device-TextDisplayState-CLIP = 2-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -62,14 +68,15 @@ hidden.
 OMITTED = 3
 ```
 
-Ellipsized display state, in which part of the content is replaced by specified characters (such as ellipsis '...
-') when the text exceeds the typesetting area.
+Ellipsized display state, in which part of the content is replaced by specified characters (such as ellipsis '...') when the text exceeds the typesetting area.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TextDisplayState-OMITTED = 3--><!--Device-TextDisplayState-OMITTED = 3-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

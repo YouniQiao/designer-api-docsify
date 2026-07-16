@@ -4,6 +4,8 @@ Describes the event indicating that an audio session is deactivated.
 
 **Since:** 12
 
+<!--Device-audio-interface AudioSessionDeactivatedEvent--><!--Device-audio-interface AudioSessionDeactivatedEvent-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## Modules to Import
@@ -23,6 +25,8 @@ Reason for deactivating an audio session.
 **Type:** AudioSessionDeactivatedReason
 
 **Since:** 12
+
+<!--Device-AudioSessionDeactivatedEvent-reason: AudioSessionDeactivatedReason--><!--Device-AudioSessionDeactivatedEvent-reason: AudioSessionDeactivatedReason-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 

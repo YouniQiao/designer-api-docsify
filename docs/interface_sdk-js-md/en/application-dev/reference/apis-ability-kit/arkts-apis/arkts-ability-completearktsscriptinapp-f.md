@@ -20,21 +20,23 @@ complete arkTS script for in-app skills.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-scriptManager-function completeArkTSScriptInApp(context: Context, requestCode: string, result: ExecuteResult): Promise<void>--><!--Device-scriptManager-function completeArkTSScriptInApp(context: Context, requestCode: string, result: ExecuteResult): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Ability context, Used for temporary file authorization. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Ability context, Used for temporary file authorization. |
 | requestCode | string | Yes | Identifying the current operation. It is from ArkTSScriptInfo.requestCode. |
-| result | ExecuteResult | Yes | The result of arkTS script execution. |
+| result | [ExecuteResult](arkts-ability-executeresult-i.md) | Yes | The result of arkTS script execution. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - The promise returned by the function. |
 
 **Error codes:**
 

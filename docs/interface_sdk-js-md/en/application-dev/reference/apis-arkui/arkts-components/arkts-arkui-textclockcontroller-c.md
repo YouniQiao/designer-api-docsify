@@ -1,15 +1,16 @@
 # TextClockController
 
-Implements the controller of the **TextClock** component. You can bind the controller to the component to control its
-start and stop. A **TextClock** component can be bound to only one controller.
+Implements the controller of the **TextClock** component. You can bind the controller to the component to control its start and stop. A **TextClock** component can be bound to only one controller.
 
-###### Objects to Import
+## Objects to Import
 
 ```ts
 controller: TextClockController = new TextClockController()
 ```
 
 **Since:** 8
+
+<!--Device-unnamed-declare class TextClockController--><!--Device-unnamed-declare class TextClockController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +28,8 @@ A constructor used to create a **TextClockController** instance.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-TextClockController-constructor()--><!--Device-TextClockController-constructor()-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## start
@@ -43,6 +46,8 @@ Starts the **<TextClock\>** component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-TextClockController-start()--><!--Device-TextClockController-start()-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## stop
@@ -58,6 +63,8 @@ Stops the **<TextClock\>** component.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-TextClockController-stop()--><!--Device-TextClockController-stop()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,5 +1,11 @@
 # getMousePrimaryButton（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+```
+
 ## getMousePrimaryButton
 
 ```TypeScript
@@ -10,6 +16,8 @@ function getMousePrimaryButton(callback: AsyncCallback<PrimaryButton>): void
 
 **起始版本：** 10
 
+<!--Device-pointer-function getMousePrimaryButton(callback: AsyncCallback<PrimaryButton>): void--><!--Device-pointer-function getMousePrimaryButton(callback: AsyncCallback<PrimaryButton>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -18,7 +26,7 @@ function getMousePrimaryButton(callback: AsyncCallback<PrimaryButton>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;PrimaryButton&gt; | 是 | 回调函数。当获取当前鼠标主键成功，err为undefined，PrimaryButton为获取到的键值；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<PrimaryButton> | 是 | 回调函数。当获取当前鼠标主键成功，err为undefined，PrimaryButton为获取到的键值；否则为错误对象。 |
 
 **错误码：**
 
@@ -70,6 +78,8 @@ function getMousePrimaryButton(): Promise<PrimaryButton>
 
 **起始版本：** 10
 
+<!--Device-pointer-function getMousePrimaryButton(): Promise<PrimaryButton>--><!--Device-pointer-function getMousePrimaryButton(): Promise<PrimaryButton>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -78,7 +88,7 @@ function getMousePrimaryButton(): Promise<PrimaryButton>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PrimaryButton&gt; | Promise对象，返回鼠标主键。 |
+| Promise<PrimaryButton> | Promise对象，返回鼠标主键。 |
 
 **错误码：**
 

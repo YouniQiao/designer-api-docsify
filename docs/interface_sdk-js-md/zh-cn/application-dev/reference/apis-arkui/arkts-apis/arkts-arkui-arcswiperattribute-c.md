@@ -6,7 +6,15 @@
 
 **起始版本：** 18
 
+<!--Device-unnamed-declare class ArcSwiperAttribute extends CommonMethod<ArcSwiperAttribute>--><!--Device-unnamed-declare class ArcSwiperAttribute extends CommonMethod<ArcSwiperAttribute>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
+
+## 导入模块
+
+```TypeScript
+import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from '@kit.ArkUI';
+```
 
 ## customContentTransition
 
@@ -16,12 +24,13 @@ customContentTransition(transition: Optional<SwiperContentAnimatedTransition>): 
 
 自定义ArcSwiper页面切换动画。在页面跟手滑动和离手后执行切换动画的过程中，会对视窗内所有页面逐帧触发回调。开发者可以在回调中设置透明度、缩放比例、位移等属性来自定义切换动画。
 
-在页面跟手滑动和离手后执行切换动画的过程中，会对视窗内所有页面逐帧触发[SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md)回调。例如，当视窗内有下标为
-0、1的两个页面时，会每帧触发两次index值分别为0和1的回调。
+在页面跟手滑动和离手后执行切换动画的过程中，会对视窗内所有页面逐帧触发[SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md)回调。例如，当视窗内有下标为0、1的两个页面时，会每帧触发两次index值分别为0和1的回调。
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSwiperAttribute-customContentTransition(transition: Optional<SwiperContentAnimatedTransition>): ArcSwiperAttribute--><!--Device-ArcSwiperAttribute-customContentTransition(transition: Optional<SwiperContentAnimatedTransition>): ArcSwiperAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -29,13 +38,13 @@ customContentTransition(transition: Optional<SwiperContentAnimatedTransition>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transition | Optional&lt;SwiperContentAnimatedTransition&gt; | 是 | ArcSwiper自定义切换动画相关信息。 |
+| transition | [Optional](../arkts-components/arkts-arkui-optional-t.md)<SwiperContentAnimatedTransition> | 是 | ArcSwiper自定义切换动画相关信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArcSwiperAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcSwiperAttribute](arkts-arkui-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## digitalCrownSensitivity
 
@@ -47,7 +56,9 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): ArcSwiperAttri
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSwiperAttribute-digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): ArcSwiperAttribute--><!--Device-ArcSwiperAttribute-digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): ArcSwiperAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -55,13 +66,13 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): ArcSwiperAttri
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sensitivity | Optional&lt;CrownSensitivity&gt; | 是 | 旋转表冠的灵敏度。<br/>默认值：CrownSensitivity.MEDIUM |
+| sensitivity | [Optional](../arkts-components/arkts-arkui-optional-t.md)<CrownSensitivity> | 是 | 旋转表冠的灵敏度。<br/>默认值：CrownSensitivity.MEDIUM |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArcSwiperAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcSwiperAttribute](arkts-arkui-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## disableSwipe
 
@@ -73,7 +84,9 @@ disableSwipe(disabled: Optional<boolean>): ArcSwiperAttribute
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSwiperAttribute-disableSwipe(disabled: Optional<boolean>): ArcSwiperAttribute--><!--Device-ArcSwiperAttribute-disableSwipe(disabled: Optional<boolean>): ArcSwiperAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -81,13 +94,13 @@ disableSwipe(disabled: Optional<boolean>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| disabled | Optional&lt;boolean&gt; | 是 | 是否禁用组件滑动切换功能。设置为true禁用，false不禁用。<br/>默认值：false |
+| disabled | [Optional](../arkts-components/arkts-arkui-optional-t.md)<boolean> | 是 | 是否禁用组件滑动切换功能。设置为true禁用，false不禁用。<br/>默认值：false |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArcSwiperAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcSwiperAttribute](arkts-arkui-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## disableTransitionAnimation
 
@@ -99,7 +112,9 @@ disableTransitionAnimation(disabled: Optional<boolean>): ArcSwiperAttribute
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSwiperAttribute-disableTransitionAnimation(disabled: Optional<boolean>): ArcSwiperAttribute--><!--Device-ArcSwiperAttribute-disableTransitionAnimation(disabled: Optional<boolean>): ArcSwiperAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -107,13 +122,13 @@ disableTransitionAnimation(disabled: Optional<boolean>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| disabled | Optional&lt;boolean&gt; | 是 | 是否关闭特殊动效效果。<br>true：关闭特殊动效效果；false：不关闭特殊动效效果。<br>传入参数非法时，按false处理。 |
+| disabled | [Optional](../arkts-components/arkts-arkui-optional-t.md)<boolean> | 是 | 是否关闭特殊动效效果。<br>true：关闭特殊动效效果；false：不关闭特殊动效效果。<br>传入参数非法时，按false处理。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArcSwiperAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcSwiperAttribute](arkts-arkui-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## duration
 
@@ -125,7 +140,9 @@ duration(duration: Optional<number>): ArcSwiperAttribute
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSwiperAttribute-duration(duration: Optional<number>): ArcSwiperAttribute--><!--Device-ArcSwiperAttribute-duration(duration: Optional<number>): ArcSwiperAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -133,13 +150,13 @@ duration(duration: Optional<number>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| duration | Optional&lt;number&gt; | 是 | 子组件切换的动画时长。<br/>默认值：400<br/>单位：毫秒 |
+| duration | [Optional](../arkts-components/arkts-arkui-optional-t.md)<number> | 是 | 子组件切换的动画时长。<br/>默认值：400<br/>单位：毫秒 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArcSwiperAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcSwiperAttribute](arkts-arkui-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## effectMode
 
@@ -147,11 +164,13 @@ duration(duration: Optional<number>): ArcSwiperAttribute
 effectMode(edgeEffect: Optional<EdgeEffect>): ArcSwiperAttribute
 ```
 
-设置边缘滑动效果。 目前支持的滑动效果参见[EdgeEffect](../arkts-components/arkts-arkui-edgeeffect-e.md)的。调用控制器接口时回弹不生效。
+设置边缘滑动效果。 目前支持的滑动效果参见[EdgeEffect](arkts-arkui-edgeeffect-e.md)的。调用控制器接口时回弹不生效。
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSwiperAttribute-effectMode(edgeEffect: Optional<EdgeEffect>): ArcSwiperAttribute--><!--Device-ArcSwiperAttribute-effectMode(edgeEffect: Optional<EdgeEffect>): ArcSwiperAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -159,13 +178,13 @@ effectMode(edgeEffect: Optional<EdgeEffect>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| edgeEffect | Optional&lt;EdgeEffect&gt; | 是 | 边缘滑动效果。<br/>默认值：EdgeEffect.Spring |
+| edgeEffect | [Optional](../arkts-components/arkts-arkui-optional-t.md)<EdgeEffect> | 是 | 边缘滑动效果。<br/>默认值：EdgeEffect.Spring |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArcSwiperAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcSwiperAttribute](arkts-arkui-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## index
 
@@ -177,7 +196,9 @@ index(index: Optional<number>): ArcSwiperAttribute
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSwiperAttribute-index(index: Optional<number>): ArcSwiperAttribute--><!--Device-ArcSwiperAttribute-index(index: Optional<number>): ArcSwiperAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -185,13 +206,13 @@ index(index: Optional<number>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | Optional&lt;number&gt; | 是 | 当前在容器中显示的子组件的索引值。<br/>当index值为undefined时，按取值为0处理。 |
+| index | [Optional](../arkts-components/arkts-arkui-optional-t.md)<number> | 是 | 当前在容器中显示的子组件的索引值。<br/>当index值为undefined时，按取值为0处理。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArcSwiperAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcSwiperAttribute](arkts-arkui-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## indicator
 
@@ -203,7 +224,9 @@ indicator(style: Optional<ArcDotIndicator | boolean>): ArcSwiperAttribute
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSwiperAttribute-indicator(style: Optional<ArcDotIndicator | boolean>): ArcSwiperAttribute--><!--Device-ArcSwiperAttribute-indicator(style: Optional<ArcDotIndicator | boolean>): ArcSwiperAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -211,13 +234,13 @@ indicator(style: Optional<ArcDotIndicator | boolean>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | Optional&lt;ArcDotIndicator \| boolean&gt; | 是 | 弧形圆点指示器样式。<br/> - ArcDotIndicator：弧形圆点指示器属性及功能。<br/> -boolean：是否启用弧形圆点指示器。设置为true启用，false不启用。<br/> 默认值：true<br/> 默认类型：ArcDotIndicator |
+| style | [Optional](../arkts-components/arkts-arkui-optional-t.md)<ArcDotIndicator \| boolean> | 是 | 弧形圆点指示器样式。<br/> - ArcDotIndicator：弧形圆点指示器属性及功能。<br/> -boolean：是否启用弧形圆点指示器。设置为true启用，false不启用。<br/> 默认值：true<br/> 默认类型：ArcDotIndicator |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArcSwiperAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcSwiperAttribute](arkts-arkui-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## onAnimationEnd
 
@@ -227,12 +250,13 @@ onAnimationEnd(handler: Optional<AnimationEndHandler>): ArcSwiperAttribute
 
 切换动画结束时触发该回调。
 
-当ArcSwiper切换动效结束时触发，包括动画过程中手势中断，通过[SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md)调用finishAnimation。参数为动画结束后的index值，多列
-ArcSwiper时，index为最左侧组件的索引。
+当ArcSwiper切换动效结束时触发，包括动画过程中手势中断，通过[SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md)调用finishAnimation。参数为动画结束后的index值，多列ArcSwiper时，index为最左侧组件的索引。
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSwiperAttribute-onAnimationEnd(handler: Optional<AnimationEndHandler>): ArcSwiperAttribute--><!--Device-ArcSwiperAttribute-onAnimationEnd(handler: Optional<AnimationEndHandler>): ArcSwiperAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -240,13 +264,13 @@ ArcSwiper时，index为最左侧组件的索引。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | Optional&lt;AnimationEndHandler&gt; | 是 | 切换动画结束时触发该回调。 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)<AnimationEndHandler> | 是 | 切换动画结束时触发该回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArcSwiperAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcSwiperAttribute](arkts-arkui-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## onAnimationStart
 
@@ -258,7 +282,9 @@ onAnimationStart(handler: Optional<AnimationStartHandler>): ArcSwiperAttribute
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSwiperAttribute-onAnimationStart(handler: Optional<AnimationStartHandler>): ArcSwiperAttribute--><!--Device-ArcSwiperAttribute-onAnimationStart(handler: Optional<AnimationStartHandler>): ArcSwiperAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -266,13 +292,13 @@ onAnimationStart(handler: Optional<AnimationStartHandler>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | Optional&lt;AnimationStartHandler&gt; | 是 | 切换动画开始时的回调。 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)<AnimationStartHandler> | 是 | 切换动画开始时的回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArcSwiperAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcSwiperAttribute](arkts-arkui-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## onChange
 
@@ -282,12 +308,13 @@ onChange(handler: Optional<IndexChangedHandler>): ArcSwiperAttribute
 
 当前显示子组件的索引变化时触发该事件，返回值为当前显示子组件的索引值。
 
-ArcSwiper组件结合[LazyForEach](../../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)使用时，不能在onChange事件里
-触发子页面UI的刷新。
+ArcSwiper组件结合[LazyForEach](../../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)使用时，不能在onChange事件里触发子页面UI的刷新。
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSwiperAttribute-onChange(handler: Optional<IndexChangedHandler>): ArcSwiperAttribute--><!--Device-ArcSwiperAttribute-onChange(handler: Optional<IndexChangedHandler>): ArcSwiperAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -295,13 +322,13 @@ ArcSwiper组件结合[LazyForEach](../../../../ui/rendering-control/arkts-render
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | Optional&lt;IndexChangedHandler&gt; | 是 | 当前显示元素的索引回调。 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)<IndexChangedHandler> | 是 | 当前显示元素的索引回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArcSwiperAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcSwiperAttribute](arkts-arkui-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## onGestureSwipe
 
@@ -313,7 +340,9 @@ onGestureSwipe(handler: Optional<GestureSwipeHandler>): ArcSwiperAttribute
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSwiperAttribute-onGestureSwipe(handler: Optional<GestureSwipeHandler>): ArcSwiperAttribute--><!--Device-ArcSwiperAttribute-onGestureSwipe(handler: Optional<GestureSwipeHandler>): ArcSwiperAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -321,13 +350,13 @@ onGestureSwipe(handler: Optional<GestureSwipeHandler>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | Optional&lt;GestureSwipeHandler&gt; | 是 | 在页面跟手滑动过程中，逐帧触发该回调。 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)<GestureSwipeHandler> | 是 | 在页面跟手滑动过程中，逐帧触发该回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArcSwiperAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcSwiperAttribute](arkts-arkui-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## vertical
 
@@ -339,7 +368,9 @@ vertical(isVertical: Optional<boolean>): ArcSwiperAttribute
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcSwiperAttribute-vertical(isVertical: Optional<boolean>): ArcSwiperAttribute--><!--Device-ArcSwiperAttribute-vertical(isVertical: Optional<boolean>): ArcSwiperAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -347,11 +378,11 @@ vertical(isVertical: Optional<boolean>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isVertical | Optional&lt;boolean&gt; | 是 | 是否为纵向滑动。<br/>true: 纵向滑动；false: 横向滑动。<br/>默认值：false |
+| isVertical | [Optional](../arkts-components/arkts-arkui-optional-t.md)<boolean> | 是 | 是否为纵向滑动。<br/>true: 纵向滑动；false: 横向滑动。<br/>默认值：false |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArcSwiperAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcSwiperAttribute](arkts-arkui-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 

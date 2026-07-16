@@ -14,10 +14,11 @@ function getSimSpn(slotId: number, callback: AsyncCallback<string>): void
 
 Obtains the service provider name (SPN) of the SIM card in a specified slot.
 
-<p>The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network
-with which the SIM card is currently registered.
+<p>The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered.
 
 **Since:** 6
+
+<!--Device-sim-function getSimSpn(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getSimSpn(slotId: int, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -26,7 +27,7 @@ with which the SIM card is currently registered.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Indicates the callback for getting the SPN;returns an empty string if no SIM card is inserted or no EFSPN file in the SIM card. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Indicates the callback for getting the SPN;returns an empty string if no SIM card is inserted or no EFSPN file in the SIM card. |
 
 **Error codes:**
 
@@ -60,10 +61,11 @@ function getSimSpn(slotId: number): Promise<string>
 
 Obtains the service provider name (SPN) of the SIM card in a specified slot.
 
-<p>The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network
-with which the SIM card is currently registered.
+<p>The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered.
 
 **Since:** 6
+
+<!--Device-sim-function getSimSpn(slotId: int): Promise<string>--><!--Device-sim-function getSimSpn(slotId: int): Promise<string>-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -77,7 +79,7 @@ with which the SIM card is currently registered.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the SPN; returns an empty string if no SIM card is inserted orno EFSPN file in the SIM card. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the SPN; returns an empty string if no SIM card is inserted or no EFSPN file in the SIM card. |
 
 **Error codes:**
 

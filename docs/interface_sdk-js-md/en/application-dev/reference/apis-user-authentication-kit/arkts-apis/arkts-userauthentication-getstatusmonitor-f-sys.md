@@ -12,15 +12,15 @@ import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 function getStatusMonitor(localUserId: number): StatusMonitor
 ```
 
-Obtains the status monitor. This API is used to obtain the status monitor object of a specified user. The object
-can be used to query and subscribe to the template status, continuous authentication status, and available device
-status of the companion device.
+Obtains the status monitor. This API is used to obtain the status monitor object of a specified user. The object can be used to query and subscribe to the template status, continuous authentication status, and available device status of the companion device.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-companionDeviceAuth-function getStatusMonitor(localUserId: int): StatusMonitor--><!--Device-companionDeviceAuth-function getStatusMonitor(localUserId: int): StatusMonitor-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -30,13 +30,13 @@ status of the companion device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localUserId | number | Yes | Local user ID. User ID on the primary device, which is a positive integer greaterthan or equal to 0. It is used to obtain the status monitor of the companion device corresponding to theuser. |
+| localUserId | number | Yes | Local user ID. User ID on the primary device, which is a positive integer greater than or equal to 0. It is used to obtain the status monitor of the companion device corresponding to the user. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| StatusMonitor | Status monitor object. It can be used to query the template status ([getTemplateStatus](arkts-userauthentication-statusmonitor-i-sys.md#gettemplatestatus-1)), subscribe to templatechanges ([onTemplateChange](arkts-userauthentication-statusmonitor-i-sys.md#ontemplatechange-1)), subscribe to available device status changes ([onAvailableDeviceChange](arkts-userauthentication-statusmonitor-i-sys.md#onavailabledevicechange-1)), and subscribe to continuous authentication status changes ([onContinuousAuthChange](arkts-userauthentication-statusmonitor-i-sys.md#oncontinuousauthchange-1)). |
+| [StatusMonitor](arkts-userauthentication-statusmonitor-i-sys.md) | Status monitor object. It can be used to query the template status ([getTemplateStatus](arkts-userauthentication-statusmonitor-i-sys.md#gettemplatestatus-1)), subscribe to template changes ([onTemplateChange](arkts-userauthentication-statusmonitor-i-sys.md#ontemplatechange-1)), subscribe to available device status changes ([onAvailableDeviceChange](arkts-userauthentication-statusmonitor-i-sys.md#onavailabledevicechange-1)), and subscribe to continuous authentication status changes ([onContinuousAuthChange](arkts-userauthentication-statusmonitor-i-sys.md#oncontinuousauthchange-1)). |
 
 **Error codes:**
 

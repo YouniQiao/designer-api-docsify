@@ -4,6 +4,8 @@ Defines the counter options.
 
 **Since:** 11
 
+<!--Device-unnamed-declare class CounterOptions--><!--Device-unnamed-declare class CounterOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Set the counter attribute of the INLINE_DATE counter component.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CounterOptions-dateOptions?: DateStyleOptions--><!--Device-CounterOptions-dateOptions?: DateStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## direction
@@ -45,6 +49,8 @@ Indicates the attribute of the current counter direction.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CounterOptions-direction?: Direction--><!--Device-CounterOptions-direction?: Direction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +70,8 @@ Set the counter attribute of the INLINE counter component.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CounterOptions-inlineOptions?: InlineStyleOptions--><!--Device-CounterOptions-inlineOptions?: InlineStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## numberOptions
@@ -82,6 +90,8 @@ Set the counter attribute of the LIST or COMPACT counter component.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CounterOptions-numberOptions?: NumberStyleOptions--><!--Device-CounterOptions-numberOptions?: NumberStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## type
@@ -99,6 +109,8 @@ Set the type of the counter component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CounterOptions-type: CounterType--><!--Device-CounterOptions-type: CounterType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

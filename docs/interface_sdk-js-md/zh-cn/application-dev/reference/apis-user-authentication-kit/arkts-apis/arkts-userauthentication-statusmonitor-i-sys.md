@@ -4,9 +4,17 @@
 
 **起始版本：** 23
 
+<!--Device-companionDeviceAuth-interface StatusMonitor--><!--Device-companionDeviceAuth-interface StatusMonitor-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+```
 
 ## getTemplateStatus
 
@@ -22,6 +30,8 @@ getTemplateStatus(): Promise<TemplateStatus[]>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StatusMonitor-getTemplateStatus(): Promise<TemplateStatus[]>--><!--Device-StatusMonitor-getTemplateStatus(): Promise<TemplateStatus[]>-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -30,7 +40,7 @@ getTemplateStatus(): Promise<TemplateStatus[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;TemplateStatus[]&gt; | Promise对象，成功时返回当前用户下全部模板的状态列表，每个模板状态包含模板ID、有效性、设备信息等；失败时抛出相应错误码。 |
+| Promise<TemplateStatus[]> | Promise对象，成功时返回当前用户下全部模板的状态列表，每个模板状态包含模板ID、有效性、设备信息等；失败时抛出相应错误码。 |
 
 **错误码：**
 
@@ -52,6 +62,8 @@ offAvailableDeviceChange(callback?: AvailableDeviceStatusCallback): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StatusMonitor-offAvailableDeviceChange(callback?: AvailableDeviceStatusCallback): void--><!--Device-StatusMonitor-offAvailableDeviceChange(callback?: AvailableDeviceStatusCallback): void-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -60,7 +72,7 @@ offAvailableDeviceChange(callback?: AvailableDeviceStatusCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AvailableDeviceStatusCallback | 否 | 需要取消的目标回调。不传入callback时默认移除当前应用注册的全部相关回调。 |
+| callback | [AvailableDeviceStatusCallback](arkts-userauthentication-availabledevicestatuscallback-t-sys.md) | 否 | 需要取消的目标回调。不传入callback时默认移除当前应用注册的全部相关回调。 |
 
 **错误码：**
 
@@ -82,6 +94,8 @@ offContinuousAuthChange(callback?: ContinuousAuthStatusCallback): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StatusMonitor-offContinuousAuthChange(callback?: ContinuousAuthStatusCallback): void--><!--Device-StatusMonitor-offContinuousAuthChange(callback?: ContinuousAuthStatusCallback): void-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -90,7 +104,7 @@ offContinuousAuthChange(callback?: ContinuousAuthStatusCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | ContinuousAuthStatusCallback | 否 | 指定取消注册的回调函数。若传入此参数，仅取消该特定回调的注册；若不传入此参数，则取消onContinuousAuthChange注册的全部回调。 |
+| callback | [ContinuousAuthStatusCallback](arkts-userauthentication-continuousauthstatuscallback-t-sys.md) | 否 | 指定取消注册的回调函数。若传入此参数，仅取消该特定回调的注册；若不传入此参数，则取消onContinuousAuthChange注册的全部回调。 |
 
 **错误码：**
 
@@ -112,6 +126,8 @@ offTemplateChange(callback?: TemplateStatusCallback): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StatusMonitor-offTemplateChange(callback?: TemplateStatusCallback): void--><!--Device-StatusMonitor-offTemplateChange(callback?: TemplateStatusCallback): void-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -120,7 +136,7 @@ offTemplateChange(callback?: TemplateStatusCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | TemplateStatusCallback | 否 | 指定取消注册的回调函数。若不填此参数，则取消onTemplateChange注册的全部回调。 |
+| callback | [TemplateStatusCallback](arkts-userauthentication-templatestatuscallback-t-sys.md) | 否 | 指定取消注册的回调函数。若不填此参数，则取消onTemplateChange注册的全部回调。 |
 
 **错误码：**
 
@@ -142,6 +158,8 @@ onAvailableDeviceChange(callback: AvailableDeviceStatusCallback): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StatusMonitor-onAvailableDeviceChange(callback: AvailableDeviceStatusCallback): void--><!--Device-StatusMonitor-onAvailableDeviceChange(callback: AvailableDeviceStatusCallback): void-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -150,7 +168,7 @@ onAvailableDeviceChange(callback: AvailableDeviceStatusCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AvailableDeviceStatusCallback | 是 | 处理可选设备更新的回调函数。 |
+| callback | [AvailableDeviceStatusCallback](arkts-userauthentication-availabledevicestatuscallback-t-sys.md) | 是 | 处理可选设备更新的回调函数。 |
 
 **错误码：**
 
@@ -172,6 +190,8 @@ onContinuousAuthChange(param: ContinuousAuthParam, callback: ContinuousAuthStatu
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StatusMonitor-onContinuousAuthChange(param: ContinuousAuthParam, callback: ContinuousAuthStatusCallback): void--><!--Device-StatusMonitor-onContinuousAuthChange(param: ContinuousAuthParam, callback: ContinuousAuthStatusCallback): void-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -180,8 +200,8 @@ onContinuousAuthChange(param: ContinuousAuthParam, callback: ContinuousAuthStatu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | ContinuousAuthParam | 是 | 用于指定订阅的设备。 |
-| callback | ContinuousAuthStatusCallback | 是 | 订阅的设备持续认证状态发生变化时执行此回调。 |
+| param | [ContinuousAuthParam](arkts-userauthentication-continuousauthparam-i-sys.md) | 是 | 用于指定订阅的设备。 |
+| callback | [ContinuousAuthStatusCallback](arkts-userauthentication-continuousauthstatuscallback-t-sys.md) | 是 | 订阅的设备持续认证状态发生变化时执行此回调。 |
 
 **错误码：**
 
@@ -204,6 +224,8 @@ onTemplateChange(callback: TemplateStatusCallback): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-StatusMonitor-onTemplateChange(callback: TemplateStatusCallback): void--><!--Device-StatusMonitor-onTemplateChange(callback: TemplateStatusCallback): void-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -212,7 +234,7 @@ onTemplateChange(callback: TemplateStatusCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | TemplateStatusCallback | 是 | 回调函数，用于接收模板状态。 |
+| callback | [TemplateStatusCallback](arkts-userauthentication-templatestatuscallback-t-sys.md) | 是 | 回调函数，用于接收模板状态。 |
 
 **错误码：**
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface ModuleConfigInfo--><!--Device-unnamed-export interface ModuleConfigInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -19,6 +21,8 @@ module包含的ability组件信息。
 **类型：** Array<ModuleAbilityInfo>
 
 **起始版本：** 9
+
+<!--Device-ModuleConfigInfo-readonly abilities: Array<ModuleAbilityInfo>--><!--Device-ModuleConfigInfo-readonly abilities: Array<ModuleAbilityInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -36,6 +40,8 @@ module的api版本。
 
 **起始版本：** 9
 
+<!--Device-ModuleConfigInfo-readonly apiVersion: ApiVersion--><!--Device-ModuleConfigInfo-readonly apiVersion: ApiVersion-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +57,8 @@ module的设备类型。
 **类型：** Array<string>
 
 **起始版本：** 9
+
+<!--Device-ModuleConfigInfo-readonly deviceTypes: Array<string>--><!--Device-ModuleConfigInfo-readonly deviceTypes: Array<string>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -68,6 +76,8 @@ module发行版信息。
 
 **起始版本：** 9
 
+<!--Device-ModuleConfigInfo-readonly distro: ModuleDistroInfo--><!--Device-ModuleConfigInfo-readonly distro: ModuleDistroInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -84,6 +94,8 @@ readonly extensionAbilities: Array<ExtensionAbility>
 
 **起始版本：** 9
 
+<!--Device-ModuleConfigInfo-readonly extensionAbilities: Array<ExtensionAbility>--><!--Device-ModuleConfigInfo-readonly extensionAbilities: Array<ExtensionAbility>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -99,6 +111,8 @@ readonly mainAbility: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-ModuleConfigInfo-readonly mainAbility: string--><!--Device-ModuleConfigInfo-readonly mainAbility: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 

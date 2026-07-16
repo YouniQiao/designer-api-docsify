@@ -1,5 +1,11 @@
 # @ohos.multimodalInput.keyEvent
 
+## 导入模块
+
+```TypeScript
+import { KeyEvent, Action, Key } from '@kit.InputKit';
+```
+
 ## 汇总
 
 ### 接口

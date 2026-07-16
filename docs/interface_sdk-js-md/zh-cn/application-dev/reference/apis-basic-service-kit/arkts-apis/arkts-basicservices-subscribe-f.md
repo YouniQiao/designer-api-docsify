@@ -1,5 +1,11 @@
 # subscribe
 
+## 导入模块
+
+```TypeScript
+import { commonEventManager } from '@kit.BasicServicesKit';
+```
+
 ## subscribe
 
 ```TypeScript
@@ -10,7 +16,9 @@ function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<Co
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-commonEventManager-function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<CommonEventData>): void--><!--Device-commonEventManager-function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<CommonEventData>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -18,8 +26,8 @@ function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<Co
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriber | CommonEventSubscriber | 是 | 表示订阅者对象。 |
-| callback | AsyncCallback&lt;CommonEventData&gt; | 是 | 回调函数。当公共事件订阅成功后，事件触发时执行的回调函数；否则订阅失败时，err为错误对象。 |
+| subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-i.md) | 是 | 表示订阅者对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<CommonEventData> | 是 | 回调函数。当公共事件订阅成功后，事件触发时执行的回调函数；否则订阅失败时，err为错误对象。 |
 
 **错误码：**
 

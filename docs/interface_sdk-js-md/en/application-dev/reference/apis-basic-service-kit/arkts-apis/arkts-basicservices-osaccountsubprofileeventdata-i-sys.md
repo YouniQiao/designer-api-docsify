@@ -4,6 +4,8 @@ Represents the event data of an OS account sub-profile.
 
 **Since:** 26.0.0
 
+<!--Device-osAccount-interface OsAccountSubProfileEventData--><!--Device-osAccount-interface OsAccountSubProfileEventData-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Event that occurred.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OsAccountSubProfileEventData-event: OsAccountSubProfileEvent--><!--Device-OsAccountSubProfileEventData-event: OsAccountSubProfileEvent-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -45,6 +49,8 @@ OS account local ID.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OsAccountSubProfileEventData-osAccountLocalId: int--><!--Device-OsAccountSubProfileEventData-osAccountLocalId: int-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -64,6 +70,8 @@ Previous OS account sub-profile identifier.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OsAccountSubProfileEventData-previousSubProfileId?: int--><!--Device-OsAccountSubProfileEventData-previousSubProfileId?: int-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -81,6 +89,8 @@ OS account sub-profile identifier.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OsAccountSubProfileEventData-subProfileId: int--><!--Device-OsAccountSubProfileEventData-subProfileId: int-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 

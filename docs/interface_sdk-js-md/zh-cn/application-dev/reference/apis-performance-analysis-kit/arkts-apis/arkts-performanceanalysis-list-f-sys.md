@@ -1,5 +1,11 @@
 # list（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { logLibrary } from '@kit.PerformanceAnalysisKit';
+```
+
 ## list
 
 ```TypeScript
@@ -11,6 +17,8 @@ function list(logType: string): LogEntry[]
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_HIVIEW_SYSTEM
+
+<!--Device-logLibrary-function list(logType: string): LogEntry[]--><!--Device-logLibrary-function list(logType: string): LogEntry[]-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.LogLibrary
 
@@ -26,7 +34,7 @@ function list(logType: string): LogEntry[]
 
 | 类型 | 说明 |
 | --- | --- |
-| LogEntry[] | 日志文件对象的数组。 |
+| [LogEntry](arkts-performanceanalysis-logentry-i-sys.md)[] | 日志文件对象的数组。 |
 
 **错误码：**
 

@@ -1,10 +1,10 @@
 # CanvasPattern
 
-**CanvasPattern** represents an object, created by the
-[createPattern](CanvasRenderingContext2D#createPattern)
-API, describing an image filling pattern based on the image and repetition mode.
+**CanvasPattern** represents an object, created by the [createPattern](CanvasRenderingContext2D#createPattern)API, describing an image filling pattern based on the image and repetition mode.
 
 **Since:** 8
+
+<!--Device-unnamed-declare interface CanvasPattern--><!--Device-unnamed-declare interface CanvasPattern-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -14,8 +14,7 @@ API, describing an image filling pattern based on the image and repetition mode.
 setTransform(transform?: Matrix2D): void
 ```
 
-Uses a **Matrix2D** object as a parameter to perform matrix transformation on the current
-**CanvasPattern** object.
+Uses a **Matrix2D** object as a parameter to perform matrix transformation on the current **CanvasPattern** object.
 
 **Since:** 8
 
@@ -23,11 +22,13 @@ Uses a **Matrix2D** object as a parameter to perform matrix transformation on th
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-CanvasPattern-setTransform(transform?: Matrix2D): void--><!--Device-CanvasPattern-setTransform(transform?: Matrix2D): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transform | Matrix2D | No | Transformation matrix.<br>The **undefined** and **null**values are treated as invalid.<br>Default value: **null**. |
+| transform | [Matrix2D](../arkts-apis/arkts-arkui-matrix2d-c.md) | No | Transformation matrix.<br>The **undefined** and **null** values are treated as invalid.<br>Default value: **null**. |
 

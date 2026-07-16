@@ -1,5 +1,11 @@
 # isOpenAccessibility
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+```
+
 ## isOpenAccessibility
 
 ```TypeScript
@@ -14,13 +20,15 @@ function isOpenAccessibility(callback: AsyncCallback<boolean>): void
 
 **替代接口：** [isOpenAccessibilitySync](arkts-accessibility-isopenaccessibilitysync-f.md#isopenaccessibilitysync-1)
 
+<!--Device-accessibility-function isOpenAccessibility(callback: AsyncCallback<boolean>): void--><!--Device-accessibility-function isOpenAccessibility(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数，如果辅助应用已启用，则返回 true；否则返回 false。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数，如果辅助应用已启用，则返回 true；否则返回 false。 |
 
 **示例：**
 
@@ -53,13 +61,15 @@ function isOpenAccessibility(): Promise<boolean>
 
 **替代接口：** [isOpenAccessibilitySync](arkts-accessibility-isopenaccessibilitysync-f.md#isopenaccessibilitysync-1)
 
+<!--Device-accessibility-function isOpenAccessibility(): Promise<boolean>--><!--Device-accessibility-function isOpenAccessibility(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，如果辅助应用已启用，则返回 true；否则返回 false。 |
+| Promise<boolean> | Promise对象，如果辅助应用已启用，则返回 true；否则返回 false。 |
 
 **示例：**
 

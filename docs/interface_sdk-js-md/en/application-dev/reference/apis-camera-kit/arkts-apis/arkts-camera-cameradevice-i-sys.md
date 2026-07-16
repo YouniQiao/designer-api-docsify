@@ -4,6 +4,8 @@ Describes the camera device information.
 
 **Since:** 10
 
+<!--Device-camera-interface CameraDevice--><!--Device-camera-interface CameraDevice-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Remote device name. If no remote device is available, an empty value is returned
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraDevice-readonly hostDeviceName: string--><!--Device-CameraDevice-readonly hostDeviceName: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -44,6 +48,8 @@ Remote device type.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraDevice-readonly hostDeviceType: HostDeviceType--><!--Device-CameraDevice-readonly hostDeviceType: HostDeviceType-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -59,6 +65,8 @@ Camera device retractable attribute
 **Type:** boolean
 
 **Since:** 18
+
+<!--Device-CameraDevice-readonly isRetractable?: boolean--><!--Device-CameraDevice-readonly isRetractable?: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -77,6 +85,8 @@ Equivalent focal length of the camera lens.
 **Since:** 24
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-CameraDevice-readonly lensEquivalentFocalLength?: Array<int>--><!--Device-CameraDevice-readonly lensEquivalentFocalLength?: Array<int>-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

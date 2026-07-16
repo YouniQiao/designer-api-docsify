@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-asset-enum Accessibility--><!--Device-asset-enum Accessibility-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## DEVICE_POWERED_ON
@@ -16,7 +18,9 @@ DEVICE_POWERED_ON = 0
 
 **起始版本：** 11
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Accessibility-DEVICE_POWERED_ON = 0--><!--Device-Accessibility-DEVICE_POWERED_ON = 0-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -32,7 +36,9 @@ DEVICE_FIRST_UNLOCKED = 1
 
 **起始版本：** 11
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Accessibility-DEVICE_FIRST_UNLOCKED = 1--><!--Device-Accessibility-DEVICE_FIRST_UNLOCKED = 1-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -48,7 +54,9 @@ DEVICE_UNLOCKED = 2
 
 **起始版本：** 11
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Accessibility-DEVICE_UNLOCKED = 2--><!--Device-Accessibility-DEVICE_UNLOCKED = 2-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 

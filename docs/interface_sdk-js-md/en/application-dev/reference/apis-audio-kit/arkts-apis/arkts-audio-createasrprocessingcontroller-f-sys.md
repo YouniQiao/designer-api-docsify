@@ -16,6 +16,8 @@ Create ASR processing controller on one audio capturer.
 
 **Since:** 12
 
+<!--Device-audio-function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController--><!--Device-audio-function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
@@ -24,13 +26,13 @@ Create ASR processing controller on one audio capturer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| audioCapturer | AudioCapturer | Yes | The audio capturer whose ASR processing will be controlled. The sourcetype of this capturer must be {@link SourceType#SOURCE_TYPE_VOICE_RECOGNITION}. |
+| audioCapturer | [AudioCapturer](arkts-audio-audiocapturer-i-sys.md) | Yes | The audio capturer whose ASR processing will be controlled. The source type of this capturer must be {@link SourceType#SOURCE_TYPE_VOICE_RECOGNITION}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AsrProcessingController | ASR Processing Controller. |
+| [AsrProcessingController](arkts-audio-asrprocessingcontroller-i-sys.md) | ASR Processing Controller. |
 
 **Error codes:**
 
@@ -39,7 +41,7 @@ Create ASR processing controller on one audio capturer.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. e.g. the source type of the input audio capturer is not{@link SourceType#SOURCE_TYPE_VOICE_RECOGNITION} or {@link SourceType#SOURCE_TYPE_WAKEUP}, or this audio captureris already released. |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. e.g. the source type of the input audio capturer is not{@link SourceType#SOURCE_TYPE_VOICE_RECOGNITION} or {@link SourceType#SOURCE_TYPE_WAKEUP}, or this audio capturer is already released. |
 
 **Example**
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-bundleManager-interface InstallParam--><!--Device-bundleManager-interface InstallParam-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+```
 
 ## installFlag
 
@@ -19,6 +27,8 @@ installFlag?: number
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InstallParam-installFlag?: number--><!--Device-InstallParam-installFlag?: number-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -36,6 +46,8 @@ parameters?: Record<string, string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InstallParam-parameters?: Record<string, string>--><!--Device-InstallParam-parameters?: Record<string, string>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## userId
@@ -51,6 +63,8 @@ userId?: number
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-InstallParam-userId?: number--><!--Device-InstallParam-userId?: number-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

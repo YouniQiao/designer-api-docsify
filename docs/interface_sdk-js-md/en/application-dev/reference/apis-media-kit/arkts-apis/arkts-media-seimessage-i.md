@@ -4,6 +4,8 @@ Describes the information of an SEI message.
 
 **Since:** 18
 
+<!--Device-media-interface SeiMessage--><!--Device-media-interface SeiMessage-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Payload data of SEI message.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SeiMessage-payload: ArrayBuffer--><!--Device-SeiMessage-payload: ArrayBuffer-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## payloadType
@@ -41,6 +45,8 @@ Payload type of SEI message.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SeiMessage-payloadType: int--><!--Device-SeiMessage-payloadType: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 

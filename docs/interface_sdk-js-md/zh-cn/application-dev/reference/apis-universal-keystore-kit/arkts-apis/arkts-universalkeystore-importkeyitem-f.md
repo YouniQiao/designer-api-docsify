@@ -1,5 +1,11 @@
 # importKeyItem
 
+## 导入模块
+
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+```
+
 ## importKeyItem
 
 ```TypeScript
@@ -10,7 +16,9 @@ Imports a key in plaintext. This API uses an asynchronous callback to return the
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-huks-function importKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<void>): void--><!--Device-huks-function importKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -20,9 +28,9 @@ Imports a key in plaintext. This API uses an asynchronous callback to return the
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyAlias | string | 是 | Alias of the key. The value can contain up to 128 bytes and should not includesensitive data such as personal information. |
-| options | HuksOptions | 是 | Tags required for the import and key to import. The algorithm, key purpose, andkey length are mandatory. |
-| callback | AsyncCallback&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| keyAlias | string | 是 | Alias of the key. The value can contain up to 128 bytes and should not include sensitive data such as personal information. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | 是 | Tags required for the import and key to import. The algorithm, key purpose, and key length are mandatory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **错误码：**
 
@@ -109,7 +117,9 @@ Imports a key in plaintext. This API uses a promise to return the result.
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-huks-function importKeyItem(keyAlias: string, options: HuksOptions): Promise<void>--><!--Device-huks-function importKeyItem(keyAlias: string, options: HuksOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
@@ -117,14 +127,14 @@ Imports a key in plaintext. This API uses a promise to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyAlias | string | 是 | Alias of the key. The value can contain up to 128 bytes and should not includesensitive data such as personal information. |
-| options | HuksOptions | 是 | Tags required for the import and key to import. The algorithm, key purpose, andkey length are mandatory. |
+| keyAlias | string | 是 | Alias of the key. The value can contain up to 128 bytes and should not include sensitive data such as personal information. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | 是 | Tags required for the import and key to import. The algorithm, key purpose, and key length are mandatory. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise<void> | Promise that returns no value. |
 
 **错误码：**
 

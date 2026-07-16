@@ -6,6 +6,8 @@ Defines other properties of the TCPSocket connection.
 
 **Since:** 10
 
+<!--Device-socket-export interface TCPExtraOptions extends ExtraOptionsBase--><!--Device-socket-export interface TCPExtraOptions extends ExtraOptionsBase-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Whether to enable OOBInline. The default value is false.
 
 **Since:** 10
 
+<!--Device-TCPExtraOptions-OOBInline?: boolean--><!--Device-TCPExtraOptions-OOBInline?: boolean-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## TCPNoDelay
@@ -39,6 +43,8 @@ Whether to enable no-delay on the TCPSocket connection. The default value is fal
 **Type:** boolean
 
 **Since:** 10
+
+<!--Device-TCPExtraOptions-TCPNoDelay?: boolean--><!--Device-TCPExtraOptions-TCPNoDelay?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -54,6 +60,8 @@ Whether to keep the connection alive. The default value is false.
 
 **Since:** 10
 
+<!--Device-TCPExtraOptions-keepAlive?: boolean--><!--Device-TCPExtraOptions-keepAlive?: boolean-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## socketLinger
@@ -67,6 +75,8 @@ Socket linger.
 **Type:** { on: boolean, linger: number }
 
 **Since:** 10
+
+<!--Device-TCPExtraOptions-socketLinger?: { on: boolean, linger: number }--><!--Device-TCPExtraOptions-socketLinger?: { on: boolean, linger: number }-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -83,6 +93,8 @@ Whether to enable TCP Fast Open (TFO) on the TCPSocket connection. The default v
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TCPExtraOptions-tcpFastOpen?: boolean--><!--Device-TCPExtraOptions-tcpFastOpen?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

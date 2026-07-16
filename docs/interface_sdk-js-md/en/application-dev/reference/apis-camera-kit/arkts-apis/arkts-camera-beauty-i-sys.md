@@ -1,11 +1,12 @@
 # Beauty (System API)
 
-Beauty extends [BeautyQuery](arkts-camera-beautyquery-i-sys.md)
-Provides APIs to obtain and set the beauty effect.
+Beauty extends [BeautyQuery](arkts-camera-beautyquery-i-sys.md)Provides APIs to obtain and set the beauty effect.
 
 **Inheritance/Implementation:** Beauty extends [BeautyQuery](arkts-camera-beautyquery-i-sys.md)
 
 **Since:** 11
+
+<!--Device-camera-interface Beauty extends BeautyQuery--><!--Device-camera-interface Beauty extends BeautyQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -27,6 +28,8 @@ Obtains the level of the beauty type in use.
 
 **Since:** 11
 
+<!--Device-Beauty-getBeauty(type: BeautyType): int--><!--Device-Beauty-getBeauty(type: BeautyType): int-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -35,7 +38,7 @@ Obtains the level of the beauty type in use.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | BeautyType | Yes | Beauty type. |
+| type | [BeautyType](arkts-camera-beautytype-e-sys.md) | Yes | Beauty type. |
 
 **Return value:**
 
@@ -76,11 +79,11 @@ function getBeauty(portraitPhotoSession: camera.PortraitPhotoSession): number {
 setBeauty(type: BeautyType, value: number): void
 ```
 
-Sets a beauty type and its level. Beauty mode is turned off only when all the
-[beauty types](arkts-camera-beautytype-e-sys.md) obtained through
-[getSupportedBeautyTypes](arkts-camera-beautyquery-i-sys.md#getsupportedbeautytypes-1) are disabled.
+Sets a beauty type and its level. Beauty mode is turned off only when all the [beauty types](arkts-camera-beautytype-e-sys.md) obtained through [getSupportedBeautyTypes](arkts-camera-beautyquery-i-sys.md#getsupportedbeautytypes-1) are disabled.
 
 **Since:** 11
+
+<!--Device-Beauty-setBeauty(type: BeautyType, value: int): void--><!--Device-Beauty-setBeauty(type: BeautyType, value: int): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -90,8 +93,8 @@ Sets a beauty type and its level. Beauty mode is turned off only when all the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | BeautyType | Yes | Beauty type. |
-| value | number | Yes | Beauty level, which is obtained through[getSupportedBeautyRange](arkts-camera-beautyquery-i-sys.md#getsupportedbeautyrange-1). |
+| type | [BeautyType](arkts-camera-beautytype-e-sys.md) | Yes | Beauty type. |
+| value | number | Yes | Beauty level, which is obtained through [getSupportedBeautyRange](arkts-camera-beautyquery-i-sys.md#getsupportedbeautyrange-1). |
 
 **Error codes:**
 
@@ -127,6 +130,8 @@ Sets a portrait theme type for a camera device.
 
 **Since:** 14
 
+<!--Device-Beauty-setPortraitThemeType(type: PortraitThemeType): void--><!--Device-Beauty-setPortraitThemeType(type: PortraitThemeType): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -135,7 +140,7 @@ Sets a portrait theme type for a camera device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | PortraitThemeType | Yes | The type of portrait theme. |
+| type | [PortraitThemeType](arkts-camera-portraitthemetype-e-sys.md) | Yes | The type of portrait theme. |
 
 **Error codes:**
 

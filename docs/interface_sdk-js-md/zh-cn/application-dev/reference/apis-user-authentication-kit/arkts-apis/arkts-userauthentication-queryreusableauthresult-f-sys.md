@@ -1,5 +1,11 @@
 # queryReusableAuthResult（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+```
+
 ## queryReusableAuthResult
 
 ```TypeScript
@@ -12,6 +18,8 @@ function queryReusableAuthResult(authParam: AuthParam): Uint8Array
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
+<!--Device-userAuth-function queryReusableAuthResult(authParam: AuthParam): Uint8Array--><!--Device-userAuth-function queryReusableAuthResult(authParam: AuthParam): Uint8Array-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -20,13 +28,13 @@ function queryReusableAuthResult(authParam: AuthParam): Uint8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| authParam | AuthParam | 是 | 用户认证相关参数。包含挑战值（challenge）、认证类型列表（authType）、认证信任等级（authTrustLevel）以及认证结果复用配置（reuseUnlockResult）。系统会根据这些参数判断是否存在满足条件的可复用认证结果。 |
+| authParam | [AuthParam](arkts-userauthentication-authparam-i-sys.md) | 是 | 用户认证相关参数。包含挑战值（challenge）、认证类型列表（authType）、认证信任等级（authTrustLevel）以及认证结果复用配置（reuseUnlockResult）。系统会根据这些参数判断是否存在满足条件的可复用认证结果。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 可复用的认证令牌（AuthToken）。若存在满足条件的可复用认证结果，返回AuthToken数据，最大长度为1024字节；若不存在，则抛出相应错误码。 |
+| [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 可复用的认证令牌（AuthToken）。若存在满足条件的可复用认证结果，返回AuthToken数据，最大长度为1024字节；若不存在，则抛出相应错误码。 |
 
 **错误码：**
 

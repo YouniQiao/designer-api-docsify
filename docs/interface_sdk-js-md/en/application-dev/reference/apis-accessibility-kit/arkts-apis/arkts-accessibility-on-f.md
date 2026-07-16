@@ -12,17 +12,15 @@ import { accessibility } from '@kit.AccessibilityKit';
 function on(type: 'accessibilityStateChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the state changes of the accessibility application. This API uses an asynchronous callback to return
-the result. To obtain information about accessibility applications in the system, use
-[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync-1).
+Subscribes to the state changes of the accessibility application. This API uses an asynchronous callback to return the result. To obtain information about accessibility applications in the system, use [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync-1).
 
-> **NOTE**
->
-> - The callback parameter for registering a listener must use a named function instead of an anonymous function.
-> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
->
-> - After calling this method, you must use
-> [accessibility.off('accessibilityStateChange')](arkts-accessibility-off-f.md#off-1)
+> **NOTE**  
+>  
+> - The callback parameter for registering a listener must use a named function instead of an anonymous function.  
+> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.  
+>  
+> - After calling this method, you must use  
+> [accessibility.off('accessibilityStateChange')](arkts-accessibility-off-f.md#off-1)  
 > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
 
 **Since:** 7
@@ -31,14 +29,16 @@ the result. To obtain information about accessibility applications in the system
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-accessibility-function on(type: 'accessibilityStateChange', callback: Callback<boolean>): void--><!--Device-accessibility-function on(type: 'accessibilityStateChange', callback: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'accessibilityStateChange' | Yes | Event type, which is set to **'accessibilityStateChange'** in thisAPI. |
-| callback | Callback&lt;boolean&gt; | Yes | Callback invoked when the enabled status of accessibility applicationchanges. The returned result indicates the global enabled status of the accessibility application. The value**true** indicates that the accessibility application is enabled, and **false** indicates that theaccessibility application is disabled. |
+| type | 'accessibilityStateChange' | Yes | Event type, which is set to **'accessibilityStateChange'** in this API. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | Yes | Callback invoked when the enabled status of accessibility application changes. The returned result indicates the global enabled status of the accessibility application. The value **true** indicates that the accessibility application is enabled, and **false** indicates that the accessibility application is disabled. |
 
 **Error codes:**
 
@@ -67,17 +67,15 @@ accessibility.on('accessibilityStateChange', (data: boolean) => {
 function on(type: 'touchGuideStateChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the state changes in touch guide mode. This API uses an asynchronous callback to return the result.
-To obtain information about accessibility applications in the system, use
-[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync-1).
+Subscribes to the state changes in touch guide mode. This API uses an asynchronous callback to return the result.To obtain information about accessibility applications in the system, use [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync-1).
 
-> **NOTE**
->
-> - The callback parameter for registering a listener must use a named function instead of an anonymous function.
-> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
->
-> - After calling this method, you must use
-> [accessibility.off('touchGuideStateChange')](arkts-accessibility-off-f.md#off-2)
+> **NOTE**  
+>  
+> - The callback parameter for registering a listener must use a named function instead of an anonymous function.  
+> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.  
+>  
+> - After calling this method, you must use  
+> [accessibility.off('touchGuideStateChange')](arkts-accessibility-off-f.md#off-2)  
 > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
 
 **Since:** 7
@@ -86,6 +84,8 @@ To obtain information about accessibility applications in the system, use
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-accessibility-function on(type: 'touchGuideStateChange', callback: Callback<boolean>): void--><!--Device-accessibility-function on(type: 'touchGuideStateChange', callback: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Vision
 
 **Parameters:**
@@ -93,7 +93,7 @@ To obtain information about accessibility applications in the system, use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'touchGuideStateChange' | Yes | Event type, which is set to **'touchGuideStateChange'** in this API. |
-| callback | Callback&lt;boolean&gt; | Yes | Callback invoked when the enabling state of touch guide mode changes. Thevalue **true** indicates that the touch guide mode is enabled, and the value **false** indicates that the touchguide mode is disabled. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | Yes | Callback invoked when the enabling state of touch guide mode changes. The value **true** indicates that the touch guide mode is enabled, and the value **false** indicates that the touch guide mode is disabled. |
 
 **Error codes:**
 
@@ -124,13 +124,13 @@ function on(type: 'screenReaderStateChange', callback: Callback<boolean>): void
 
 Subscribes to the state changes of the screen reader. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> - The callback parameter for registering a listener must use a named function instead of an anonymous function.
-> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
->
-> - After calling this method, you must use
-> [accessibility.off('screenReaderStateChange')](arkts-accessibility-off-f.md#off-3)
+> **NOTE**  
+>  
+> - The callback parameter for registering a listener must use a named function instead of an anonymous function.  
+> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.  
+>  
+> - After calling this method, you must use  
+> [accessibility.off('screenReaderStateChange')](arkts-accessibility-off-f.md#off-3)  
 > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
 
 **Since:** 18
@@ -139,6 +139,8 @@ Subscribes to the state changes of the screen reader. This API uses an asynchron
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-accessibility-function on(type: 'screenReaderStateChange', callback: Callback<boolean>): void--><!--Device-accessibility-function on(type: 'screenReaderStateChange', callback: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
@@ -146,7 +148,7 @@ Subscribes to the state changes of the screen reader. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'screenReaderStateChange' | Yes | Event type, which is set to **'screenReaderStateChange'** in this API. |
-| callback | Callback&lt;boolean&gt; | Yes | Callback invoked when the enabling state of screen reader changes. Thevalue **true** indicates that the screen reader is enabled, and the value **false** indicates that the screenreader is disabled. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | Yes | Callback invoked when the enabling state of screen reader changes. The value **true** indicates that the screen reader is enabled, and the value **false** indicates that the screen reader is disabled. |
 
 **Error codes:**
 
@@ -172,16 +174,15 @@ accessibility.on('screenReaderStateChange', (data: boolean) => {
 function on(type: 'touchModeChange', callback: Callback<string>): void
 ```
 
-Subscribes to the single- or double-touch event changes in touch guide mode. This API uses an asynchronous callback
-to return the result.
+Subscribes to the single- or double-touch event changes in touch guide mode. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> - The callback parameter for registering a listener must use a named function instead of an anonymous function.
-> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
->
-> - After calling this method, you must use
-> [accessibility.off('touchModeChange')](arkts-accessibility-off-f.md#off-4)
+> **NOTE**  
+>  
+> - The callback parameter for registering a listener must use a named function instead of an anonymous function.  
+> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.  
+>  
+> - After calling this method, you must use  
+> [accessibility.off('touchModeChange')](arkts-accessibility-off-f.md#off-4)  
 > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
 
 **Since:** 20
@@ -190,6 +191,8 @@ to return the result.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-accessibility-function on(type: 'touchModeChange', callback: Callback<string>): void--><!--Device-accessibility-function on(type: 'touchModeChange', callback: Callback<string>): void-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
@@ -197,7 +200,7 @@ to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'touchModeChange' | Yes | Event type, which is set to **'touchModeChange'** in this API. |
-| callback | Callback&lt;string&gt; | Yes | Callback to be invoked when the single- or double-touch event changes. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<string> | Yes | Callback to be invoked when the single- or double-touch event changes. |
 
 **Error codes:**
 

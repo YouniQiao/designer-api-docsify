@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare enum DisplayRotation--><!--Device-unnamed-declare enum DisplayRotation-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 ## ROTATION_0
@@ -16,7 +18,9 @@ ROTATION_0 = 0
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DisplayRotation-ROTATION_0 = 0--><!--Device-DisplayRotation-ROTATION_0 = 0-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -30,7 +34,9 @@ ROTATION_90 = 1
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DisplayRotation-ROTATION_90 = 1--><!--Device-DisplayRotation-ROTATION_90 = 1-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -44,7 +50,9 @@ ROTATION_180 = 2
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DisplayRotation-ROTATION_180 = 2--><!--Device-DisplayRotation-ROTATION_180 = 2-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -58,7 +66,9 @@ ROTATION_270 = 3
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DisplayRotation-ROTATION_270 = 3--><!--Device-DisplayRotation-ROTATION_270 = 3-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 

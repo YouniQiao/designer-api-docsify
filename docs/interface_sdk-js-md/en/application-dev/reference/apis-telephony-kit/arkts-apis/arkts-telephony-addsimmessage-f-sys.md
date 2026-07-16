@@ -18,6 +18,8 @@ Add an SMS Message to SIM card.
 
 **Required permissions:** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
 
+<!--Device-sms-function addSimMessage(options: SimMessageOptions, callback: AsyncCallback<void>): void--><!--Device-sms-function addSimMessage(options: SimMessageOptions, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Add an SMS Message to SIM card.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SimMessageOptions | Yes | Indicates SIM message options. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of addSimMessage. |
+| options | [SimMessageOptions](arkts-telephony-simmessageoptions-i-sys.md) | Yes | Indicates SIM message options. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of addSimMessage. |
 
 **Error codes:**
 
@@ -72,6 +74,8 @@ Add an SMS Message to SIM card.
 
 **Required permissions:** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
 
+<!--Device-sms-function addSimMessage(options: SimMessageOptions): Promise<void>--><!--Device-sms-function addSimMessage(options: SimMessageOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -80,13 +84,13 @@ Add an SMS Message to SIM card.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SimMessageOptions | Yes | Indicates SIM message options. |
+| options | [SimMessageOptions](arkts-telephony-simmessageoptions-i-sys.md) | Yes | Indicates SIM message options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the addSimMessage. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the addSimMessage. |
 
 **Error codes:**
 

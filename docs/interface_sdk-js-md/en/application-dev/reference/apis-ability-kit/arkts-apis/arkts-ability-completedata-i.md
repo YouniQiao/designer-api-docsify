@@ -4,6 +4,8 @@ Describes the data returned by the operation of proactive triggering a WantAgent
 
 **Since:** 9
 
+<!--Device-wantAgent-export interface CompleteData--><!--Device-wantAgent-export interface CompleteData-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Extra information.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CompleteData-extraInfo?: Record<string, Object>--><!--Device-CompleteData-extraInfo?: Record<string, Object>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## finalCode
@@ -41,6 +45,8 @@ Request code that triggers the WantAgent object.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CompleteData-finalCode: int--><!--Device-CompleteData-finalCode: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -58,6 +64,8 @@ Final data collected by the common event.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CompleteData-finalData: string--><!--Device-CompleteData-finalData: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## info
@@ -74,6 +82,8 @@ WantAgent object that is triggered.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CompleteData-info: WantAgent--><!--Device-CompleteData-info: WantAgent-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## want
@@ -89,6 +99,8 @@ Existing Want that is triggered.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CompleteData-want: Want--><!--Device-CompleteData-want: Want-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

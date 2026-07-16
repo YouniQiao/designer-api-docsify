@@ -18,6 +18,8 @@ Cancels listening for global touchscreen input events. This API uses an asynchro
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'touch', receiver?: TouchEventReceiver): void--><!--Device-inputMonitor-function off(type: 'touch', receiver?: TouchEventReceiver): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Cancels listening for global touchscreen input events. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'touch' | Yes | Event type. This field has a fixed value of **touch**. |
-| receiver | TouchEventReceiver | No | Callback for which listening is disabled. If this parameter is notspecified, listening will be disabled for all callbacks registered by the current application. |
+| receiver | [TouchEventReceiver](arkts-input-toucheventreceiver-t-sys.md) | No | Callback for which listening is disabled. If this parameter is not specified, listening will be disabled for all callbacks registered by the current application. |
 
 **Error codes:**
 
@@ -116,6 +118,8 @@ Disables listening for global mouse events. This API uses an asynchronous callba
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'mouse', receiver?: Callback<MouseEvent>): void--><!--Device-inputMonitor-function off(type: 'mouse', receiver?: Callback<MouseEvent>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **System API:** This is a system API.
@@ -125,7 +129,7 @@ Disables listening for global mouse events. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'mouse' | Yes | Event type. This field has a fixed value of **mouse**. |
-| receiver | Callback&lt;MouseEvent&gt; | No | Callback for which listening is disabled. If this parameter is notspecified, listening will be disabled for all callbacks registered by the current application. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<MouseEvent> | No | Callback for which listening is disabled. If this parameter is not specified, listening will be disabled for all callbacks registered by the current application. |
 
 **Error codes:**
 
@@ -214,6 +218,8 @@ Disables listening for global touchpad pinch events. This API uses an asynchrono
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'pinch', receiver?: Callback<Pinch>): void--><!--Device-inputMonitor-function off(type: 'pinch', receiver?: Callback<Pinch>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **System API:** This is a system API.
@@ -223,7 +229,7 @@ Disables listening for global touchpad pinch events. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pinch' | Yes | Event type. This field has a fixed value of **pinch**. |
-| receiver | Callback&lt;Pinch&gt; | No | Callback for which listening is disabled. If this parameter is not specified,listening will be disabled for all callbacks registered by the current application. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Pinch> | No | Callback for which listening is disabled. If this parameter is not specified,listening will be disabled for all callbacks registered by the current application. |
 
 **Error codes:**
 
@@ -312,6 +318,8 @@ Disables listening for global touchpad pinch events. This API uses an asynchrono
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'pinch', fingers: number, receiver?: Callback<Pinch>): void--><!--Device-inputMonitor-function off(type: 'pinch', fingers: number, receiver?: Callback<Pinch>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **System API:** This is a system API.
@@ -321,8 +329,8 @@ Disables listening for global touchpad pinch events. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pinch' | Yes | Event type. This field has a fixed value of **pinch**. |
-| fingers | number | Yes | Number of fingers that trigger the pinch. The value must be greater than or equal to**2**. |
-| receiver | Callback&lt;Pinch&gt; | No | Callback for which listening is disabled. If this parameter is not specified,listening will be disabled for all callbacks registered by the current application. |
+| fingers | number | Yes | Number of fingers that trigger the pinch. The value must be greater than or equal to **2**. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Pinch> | No | Callback for which listening is disabled. If this parameter is not specified,listening will be disabled for all callbacks registered by the current application. |
 
 **Error codes:**
 
@@ -405,12 +413,13 @@ struct Index {
 function off(type: 'rotate', fingers: number, receiver?: Callback<Rotate>): void
 ```
 
-Disables listening for rotation events of the touchpad. This API uses an asynchronous callback to return the
-result.
+Disables listening for rotation events of the touchpad. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
+
+<!--Device-inputMonitor-function off(type: 'rotate', fingers: number, receiver?: Callback<Rotate>): void--><!--Device-inputMonitor-function off(type: 'rotate', fingers: number, receiver?: Callback<Rotate>): void-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
@@ -422,7 +431,7 @@ result.
 | --- | --- | --- | --- |
 | type | 'rotate' | Yes | Event type. This field has a fixed value of **rotate**. |
 | fingers | number | Yes | Number of fingers that trigger a rotation. The value must not be greater than **2**. |
-| receiver | Callback&lt;Rotate&gt; | No | Callback for which listening is disabled. If this parameter is notspecified, listening will be disabled for all callbacks registered by the current application. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Rotate> | No | Callback for which listening is disabled. If this parameter is not specified, listening will be disabled for all callbacks registered by the current application. |
 
 **Error codes:**
 
@@ -511,6 +520,8 @@ Disables listening for three-finger swipe events. This API uses an asynchronous 
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'threeFingersSwipe', receiver?: Callback<ThreeFingersSwipe>): void--><!--Device-inputMonitor-function off(type: 'threeFingersSwipe', receiver?: Callback<ThreeFingersSwipe>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **System API:** This is a system API.
@@ -520,7 +531,7 @@ Disables listening for three-finger swipe events. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'threeFingersSwipe' | Yes | Event type. This field has a fixed value of **threeFingersSwipe**. |
-| receiver | Callback&lt;ThreeFingersSwipe&gt; | No | Callback for which listening is disabled. If this parameter isnot specified, listening will be disabled for all callbacks registered by the current application. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ThreeFingersSwipe> | No | Callback for which listening is disabled. If this parameter is not specified, listening will be disabled for all callbacks registered by the current application. |
 
 **Error codes:**
 
@@ -609,6 +620,8 @@ Disables listening for four-finger swipe events. This API uses an asynchronous c
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'fourFingersSwipe', receiver?: Callback<FourFingersSwipe>): void--><!--Device-inputMonitor-function off(type: 'fourFingersSwipe', receiver?: Callback<FourFingersSwipe>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **System API:** This is a system API.
@@ -618,7 +631,7 @@ Disables listening for four-finger swipe events. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fourFingersSwipe' | Yes | Event type. This field has a fixed value of **fourFingersSwipe**. |
-| receiver | Callback&lt;FourFingersSwipe&gt; | No | Callback for which listening is disabled. If this parameter is notspecified, listening will be disabled for all callbacks registered by the current application. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<FourFingersSwipe> | No | Callback for which listening is disabled. If this parameter is not specified, listening will be disabled for all callbacks registered by the current application. |
 
 **Error codes:**
 
@@ -707,6 +720,8 @@ Disables listening for three-finger tap events. This API uses an asynchronous ca
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'threeFingersTap', receiver?: Callback<ThreeFingersTap>): void--><!--Device-inputMonitor-function off(type: 'threeFingersTap', receiver?: Callback<ThreeFingersTap>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **System API:** This is a system API.
@@ -716,7 +731,7 @@ Disables listening for three-finger tap events. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'threeFingersTap' | Yes | Event type. This field has a fixed value of **threeFingersTap**. |
-| receiver | Callback&lt;ThreeFingersTap&gt; | No | Callback for which listening is disabled. If this parameter is notspecified, listening will be disabled for all callbacks registered by the current application. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ThreeFingersTap> | No | Callback for which listening is disabled. If this parameter is not specified, listening will be disabled for all callbacks registered by the current application. |
 
 **Error codes:**
 
@@ -799,12 +814,13 @@ struct Index {
 function off(type: 'fingerprint', receiver?: Callback<FingerprintEvent>): void
 ```
 
-Disables listening for fingerprint gesture input events. This API uses an asynchronous callback to return the
-result.
+Disables listening for fingerprint gesture input events. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
+
+<!--Device-inputMonitor-function off(type: 'fingerprint', receiver?: Callback<FingerprintEvent>): void--><!--Device-inputMonitor-function off(type: 'fingerprint', receiver?: Callback<FingerprintEvent>): void-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
@@ -815,7 +831,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fingerprint' | Yes | Input event type. The value is **fingerprint**. |
-| receiver | Callback&lt;FingerprintEvent&gt; | No | Callback for which listening is disabled. If this parameter is notspecified, listening will be disabled for all callbacks registered by the current application. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<FingerprintEvent> | No | Callback for which listening is disabled. If this parameter is not specified, listening will be disabled for all callbacks registered by the current application. |
 
 **Error codes:**
 
@@ -904,6 +920,8 @@ Cancels listening for inward swipe events. This API uses an asynchronous callbac
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'swipeInward', receiver?: Callback<SwipeInward>): void--><!--Device-inputMonitor-function off(type: 'swipeInward', receiver?: Callback<SwipeInward>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **System API:** This is a system API.
@@ -913,7 +931,7 @@ Cancels listening for inward swipe events. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'swipeInward' | Yes | Input event type. The value is fixed at **SwipeInward**. |
-| receiver | Callback&lt;SwipeInward&gt; | No | Callback for which listening is disabled. If this parameter is notspecified, listening will be disabled for all callbacks registered by the current application. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SwipeInward> | No | Callback for which listening is disabled. If this parameter is not specified, listening will be disabled for all callbacks registered by the current application. |
 
 **Error codes:**
 
@@ -1000,6 +1018,8 @@ Disables listening for touchscreen swipe events. This API uses an asynchronous c
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'touchscreenSwipe', fingers: number, receiver?: Callback<TouchGestureEvent>): void--><!--Device-inputMonitor-function off(type: 'touchscreenSwipe', fingers: number, receiver?: Callback<TouchGestureEvent>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **System API:** This is a system API.
@@ -1010,7 +1030,7 @@ Disables listening for touchscreen swipe events. This API uses an asynchronous c
 | --- | --- | --- | --- |
 | type | 'touchscreenSwipe' | Yes | Event type. This field has a fixed value of **touchscreenSwipe**. |
 | fingers | number | Yes | Number of fingers that trigger the swipe. The value range is [3, 5]. |
-| receiver | Callback&lt;TouchGestureEvent&gt; | No | Callback for which listening is disabled. If this parameter isnot specified, listening will be disabled for all callbacks registered by the current application. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<TouchGestureEvent> | No | Callback for which listening is disabled. If this parameter is not specified, listening will be disabled for all callbacks registered by the current application. |
 
 **Error codes:**
 
@@ -1096,6 +1116,8 @@ Disables listening for touchscreen pinch events. This API uses an asynchronous c
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function off(type: 'touchscreenPinch', fingers: number, receiver?: Callback<TouchGestureEvent>): void--><!--Device-inputMonitor-function off(type: 'touchscreenPinch', fingers: number, receiver?: Callback<TouchGestureEvent>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **System API:** This is a system API.
@@ -1106,7 +1128,7 @@ Disables listening for touchscreen pinch events. This API uses an asynchronous c
 | --- | --- | --- | --- |
 | type | 'touchscreenPinch' | Yes | Event type. This field has a fixed value of **touchscreenPinch**. |
 | fingers | number | Yes | Number of fingers that trigger the pinch. The value range is [4, 5]. |
-| receiver | Callback&lt;TouchGestureEvent&gt; | No | Callback for which listening is disabled. If this parameter isnot specified, listening will be disabled for all callbacks registered by the current application. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<TouchGestureEvent> | No | Callback for which listening is disabled. If this parameter is not specified, listening will be disabled for all callbacks registered by the current application. |
 
 **Error codes:**
 
@@ -1186,13 +1208,13 @@ struct Index {
 function off(type: 'keyPressed', receiver?: Callback<KeyEvent>): void
 ```
 
-Cancels listening for the press and release events of the specified key, which can be the **META_LEFT**,
-**META_RIGHT**, power, or volume key. This API must be used together with **inputMonitor.on ('keyPressed')**. This
-API uses an asynchronous callback to return the result.
+Cancels listening for the press and release events of the specified key, which can be the **META_LEFT**,**META_RIGHT**, power, or volume key. This API must be used together with **inputMonitor.on ('keyPressed')**. This API uses an asynchronous callback to return the result.
 
 **Since:** 15
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
+
+<!--Device-inputMonitor-function off(type: 'keyPressed', receiver?: Callback<KeyEvent>): void--><!--Device-inputMonitor-function off(type: 'keyPressed', receiver?: Callback<KeyEvent>): void-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
 
@@ -1203,7 +1225,7 @@ API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyPressed' | Yes | Event type. This parameter has a fixed value of **keyPressed**. |
-| receiver | Callback&lt;KeyEvent&gt; | No | Callback for which listening is disabled. If this parameter is notspecified, listening will be disabled for all callbacks registered by the current application. |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<KeyEvent> | No | Callback for which listening is disabled. If this parameter is not specified, listening will be disabled for all callbacks registered by the current application. |
 
 **Error codes:**
 

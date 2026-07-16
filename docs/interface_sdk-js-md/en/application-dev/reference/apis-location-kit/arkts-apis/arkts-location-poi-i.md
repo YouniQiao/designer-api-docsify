@@ -4,6 +4,8 @@ Describes the information about a single POI.
 
 **Since:** 19
 
+<!--Device-geoLocationManager-export interface Poi--><!--Device-geoLocationManager-export interface Poi-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Additional information about the POI.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-Poi-additionalInfo?: string--><!--Device-Poi-additionalInfo?: string-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## address
@@ -43,6 +47,8 @@ Indicates the detailed address of the POI.
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-Poi-address: string--><!--Device-Poi-address: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -60,6 +66,8 @@ Indicates administrative region name.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Poi-administrativeArea: string--><!--Device-Poi-administrativeArea: string-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## confidence
@@ -75,6 +83,8 @@ Indicates the confidence of POI information.
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-Poi-confidence: double--><!--Device-Poi-confidence: double-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -92,6 +102,8 @@ Indicates the ID of a POI.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Poi-id: string--><!--Device-Poi-id: string-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## latitude
@@ -107,6 +119,8 @@ Indicates the latitude of POI.
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-Poi-latitude: double--><!--Device-Poi-latitude: double-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -124,6 +138,8 @@ Indicates locality information.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Poi-locality: string--><!--Device-Poi-locality: string-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## longitude
@@ -139,6 +155,8 @@ Indicates the longitude of POI.
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-Poi-longitude: double--><!--Device-Poi-longitude: double-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -156,6 +174,8 @@ Indicates the name of the POI.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Poi-name: string--><!--Device-Poi-name: string-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## subAdministrativeArea
@@ -172,6 +192,8 @@ Indicates sub-administrative region name.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Poi-subAdministrativeArea: string--><!--Device-Poi-subAdministrativeArea: string-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## subLocality
@@ -187,6 +209,8 @@ Indicates sub-locality information.
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-Poi-subLocality: string--><!--Device-Poi-subLocality: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 

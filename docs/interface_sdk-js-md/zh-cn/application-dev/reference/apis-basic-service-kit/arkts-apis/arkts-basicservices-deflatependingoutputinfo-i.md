@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-zlib-interface DeflatePendingOutputInfo--><!--Device-zlib-interface DeflatePendingOutputInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.Zlib
+
+## 导入模块
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+```
 
 ## bits
 
@@ -18,7 +26,9 @@ bits: number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DeflatePendingOutputInfo-bits: int--><!--Device-DeflatePendingOutputInfo-bits: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -34,7 +44,9 @@ pending: number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DeflatePendingOutputInfo-pending: int--><!--Device-DeflatePendingOutputInfo-pending: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -50,7 +62,9 @@ status: ReturnStatus
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DeflatePendingOutputInfo-status: ReturnStatus--><!--Device-DeflatePendingOutputInfo-status: ReturnStatus-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 

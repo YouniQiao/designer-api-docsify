@@ -1,5 +1,11 @@
 # grantUriPermission（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { uriPermissionManager } from '@kit.AbilityKit';
+```
+
 ## grantUriPermission
 
 ```TypeScript
@@ -11,20 +17,30 @@ function grantUriPermission(
   ): void
 ```
 
-授权URI给指定应用，授权成功后目标应用将获得该URI的文件访问权限，目标应用退出后权限将被回收。目标应用使用该URI的方法可以参考
-[应用文件分享](../../../../file-management/share-app-file.md)。使用callback异步回调。
-该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
+授权URI给指定应用，授权成功后目标应用将获得该URI的文件访问权限，目标应用退出后权限将被回收。目标应用使用该URI的方法可以参考[应用文件分享](../../../../file-management/share-app-file.md)。使用callback异步回调。该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
 
-> **说明：**
->
-> - 当应用拥有ohos.permission.PROXY_AUTHORIZATION_URI权限时, 可以授权不属于自身但具有访问权限的URI。如果不具备该权限，则仅支持授权属于自身的URI。
->
-> - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](@ohos.file.fileuri:fileUri.getUriFromPath)接口获取。对于应用自行拼接的URI，系统无法保证
+> **说明：**  
+>  
+> - 当应用拥有ohos.permission.PROXY_AUTHORIZATION_URI权限时, 可以授权不属于自身但具有访问权限的URI。如果不具备该权限，则仅支持授权属于自身的URI。  
+>  
+> - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](@ohos.file.fileuri:fileUri.getUriFromPath)接口获取。对于应用自行拼接的URI，系统无法保证  
 > 其功能。
 
 **起始版本：** 10
 
 **需要权限：** ohos.permission.PROXY_AUTHORIZATION_URI
+
+<!--Device-uriPermissionManager-function grantUriPermission(
+    uri: string,
+    flag: wantConstant.Flags,
+    targetBundleName: string,
+    callback: AsyncCallback<number>
+  ): void--><!--Device-uriPermissionManager-function grantUriPermission(
+    uri: string,
+    flag: wantConstant.Flags,
+    targetBundleName: string,
+    callback: AsyncCallback<number>
+  ): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -37,7 +53,7 @@ function grantUriPermission(
 | uri | string | 是 | 指向文件的URI，scheme固定为"file"，参考[FileUri](@ohos.file.fileuri:fileUri.FileUri#constructor)。 |
 | flag | wantConstant.Flags | 是 | URI的读权限或写权限。 |
 | targetBundleName | string | 是 | 被授权URI的应用包名。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。返回0表示有权限，返回-1表示无权限。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。返回0表示有权限，返回-1表示无权限。 |
 
 **错误码：**
 
@@ -86,20 +102,20 @@ fileIo.mkdir(path, (err) => {
 function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string): Promise<number>
 ```
 
-授权URI给指定应用，授权成功后目标应用将获得该URI的文件访问权限，目标应用退出后权限将被回收。目标应用使用该URI的方法可以参考
-[应用文件分享](../../../../file-management/share-app-file.md)。使用Promise异步回调。
-该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
+授权URI给指定应用，授权成功后目标应用将获得该URI的文件访问权限，目标应用退出后权限将被回收。目标应用使用该URI的方法可以参考[应用文件分享](../../../../file-management/share-app-file.md)。使用Promise异步回调。该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
 
-> **说明：**
->
-> - 当应用拥有ohos.permission.PROXY_AUTHORIZATION_URI权限时, 可以授权不属于自身但具有访问权限的URI。如果不具备该权限，则仅支持授权属于自身的URI。
->
-> - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](@ohos.file.fileuri:fileUri.getUriFromPath)接口获取。对于应用自行拼接的URI，系统无法保证
+> **说明：**  
+>  
+> - 当应用拥有ohos.permission.PROXY_AUTHORIZATION_URI权限时, 可以授权不属于自身但具有访问权限的URI。如果不具备该权限，则仅支持授权属于自身的URI。  
+>  
+> - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](@ohos.file.fileuri:fileUri.getUriFromPath)接口获取。对于应用自行拼接的URI，系统无法保证  
 > 其功能。
 
 **起始版本：** 10
 
 **需要权限：** ohos.permission.PROXY_AUTHORIZATION_URI
+
+<!--Device-uriPermissionManager-function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string): Promise<number>--><!--Device-uriPermissionManager-function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -117,7 +133,7 @@ function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleN
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回0表示有权限，返回-1表示无权限。 |
+| Promise<number> | Promise对象。返回0表示有权限，返回-1表示无权限。 |
 
 **错误码：**
 
@@ -166,22 +182,22 @@ fileIo.mkdir(path, (err) => {
 function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string, appCloneIndex: number): Promise<void>
 ```
 
-授权URI给指定应用，授权成功后目标应用将获得该URI的文件访问权限，目标应用退出后权限将被回收。目标应用使用该URI的方法可以参考
-[应用文件分享](../../../../file-management/share-app-file.md)。使用Promise异步回调。
-该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
+授权URI给指定应用，授权成功后目标应用将获得该URI的文件访问权限，目标应用退出后权限将被回收。目标应用使用该URI的方法可以参考[应用文件分享](../../../../file-management/share-app-file.md)。使用Promise异步回调。该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
 
-> **说明：**
->
-> - 当应用拥有ohos.permission.PROXY_AUTHORIZATION_URI权限时, 可以授权不属于自身但具有访问权限的URI。如果不具备该权限，则仅支持授权属于自身的URI。
->
-> - 该接口支持给分身应用授权，需要指定目标应用的应用包名和分身索引。
->
-> - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](@ohos.file.fileuri:fileUri.getUriFromPath)接口获取。对于应用自行拼接的URI，系统无法保证
+> **说明：**  
+>  
+> - 当应用拥有ohos.permission.PROXY_AUTHORIZATION_URI权限时, 可以授权不属于自身但具有访问权限的URI。如果不具备该权限，则仅支持授权属于自身的URI。  
+>  
+> - 该接口支持给分身应用授权，需要指定目标应用的应用包名和分身索引。  
+>  
+> - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](@ohos.file.fileuri:fileUri.getUriFromPath)接口获取。对于应用自行拼接的URI，系统无法保证  
 > 其功能。
 
 **起始版本：** 14
 
 **需要权限：** ohos.permission.PROXY_AUTHORIZATION_URI
+
+<!--Device-uriPermissionManager-function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string, appCloneIndex: int): Promise<void>--><!--Device-uriPermissionManager-function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string, appCloneIndex: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -200,7 +216,7 @@ function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleN
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

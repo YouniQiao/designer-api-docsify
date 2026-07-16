@@ -1,5 +1,11 @@
 # getFileAccessAbilityInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { fileAccess } from '@kit.CoreFileKit';
+```
+
 ## getFileAccessAbilityInfo
 
 ```TypeScript
@@ -16,6 +22,8 @@ function getFileAccessAbilityInfo(callback: AsyncCallback<Array<Want>>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-fileAccess-function getFileAccessAbilityInfo(callback: AsyncCallback<Array<Want>>): void--><!--Device-fileAccess-function getFileAccessAbilityInfo(callback: AsyncCallback<Array<Want>>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -24,7 +32,7 @@ function getFileAccessAbilityInfo(callback: AsyncCallback<Array<Want>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;Want&gt;&gt; | 是 | The callback is used to return a Array&lt;Want&gt; object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Want>> | 是 | The callback is used to return a Array&lt;Want&gt; object. |
 
 **错误码：**
 
@@ -100,6 +108,8 @@ function getFileAccessAbilityInfo(): Promise<Array<Want>>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-fileAccess-function getFileAccessAbilityInfo(): Promise<Array<Want>>--><!--Device-fileAccess-function getFileAccessAbilityInfo(): Promise<Array<Want>>-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -108,7 +118,7 @@ function getFileAccessAbilityInfo(): Promise<Array<Want>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Want&gt;&gt; | Returns the wants. |
+| Promise<Array<Want>> | Returns the wants. |
 
 **错误码：**
 

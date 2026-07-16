@@ -1,5 +1,11 @@
 # createKem
 
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+```
+
 ## createKem
 
 ```TypeScript
@@ -12,7 +18,9 @@ function createKem(algNameId: KemAlgNameId): Kem
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cryptoFramework-function createKem(algNameId: KemAlgNameId): Kem--><!--Device-cryptoFramework-function createKem(algNameId: KemAlgNameId): Kem-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
 
@@ -20,13 +28,13 @@ function createKem(algNameId: KemAlgNameId): Kem
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| algNameId | KemAlgNameId | 是 | KEM的算法名称ID。 |
+| algNameId | [KemAlgNameId](arkts-cryptoarchitecture-kemalgnameid-e.md) | 是 | KEM的算法名称ID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Kem | KEM实例。 |
+| [Kem](arkts-cryptoarchitecture-kem-i.md) | KEM实例。 |
 
 **错误码：**
 

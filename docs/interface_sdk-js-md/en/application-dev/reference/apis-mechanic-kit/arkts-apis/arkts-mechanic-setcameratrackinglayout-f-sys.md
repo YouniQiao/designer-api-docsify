@@ -16,6 +16,8 @@ Sets the camera tracking layout for this mechanical device.
 
 **Since:** 20
 
+<!--Device-mechanicManager-function setCameraTrackingLayout(trackingLayout: CameraTrackingLayout): void--><!--Device-mechanicManager-function setCameraTrackingLayout(trackingLayout: CameraTrackingLayout): void-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Sets the camera tracking layout for this mechanical device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| trackingLayout | CameraTrackingLayout | Yes | Camera tracking layout. |
+| trackingLayout | [CameraTrackingLayout](arkts-mechanic-cameratrackinglayout-e.md) | Yes | Camera tracking layout. |
 
 **Error codes:**
 

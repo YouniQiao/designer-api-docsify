@@ -4,6 +4,8 @@ Declare ToolBarModifier use in ToolBar
 
 **Since:** 18
 
+<!--Device-unnamed-export declare class ToolBarModifier--><!--Device-unnamed-export declare class ToolBarModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,19 +28,21 @@ Sets the backgroundColor of the toolBar.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ToolBarModifier-backgroundColor(backgroundColor: ResourceColor): ToolBarModifier--><!--Device-ToolBarModifier-backgroundColor(backgroundColor: ResourceColor): ToolBarModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| backgroundColor | ResourceColor | Yes | toolBar's backgroundColor. |
+| backgroundColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | toolBar's backgroundColor. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ToolBarModifier | returns the instance of the ToolBarModifier. |
+| [ToolBarModifier](arkts-arkui-toolbarmodifier-c.md) | returns the instance of the ToolBarModifier. |
 
 ## height
 
@@ -54,19 +58,21 @@ Sets the height of the toolBar.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ToolBarModifier-height(height: LengthMetrics): ToolBarModifier--><!--Device-ToolBarModifier-height(height: LengthMetrics): ToolBarModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | LengthMetrics | Yes | toolBar's height. |
+| height | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | toolBar's height. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ToolBarModifier | returns the instance of the ToolBarModifier. |
+| [ToolBarModifier](arkts-arkui-toolbarmodifier-c.md) | returns the instance of the ToolBarModifier. |
 
 ## padding
 
@@ -82,19 +88,21 @@ Sets the left and right padding of the toolbar.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ToolBarModifier-padding(padding: LengthMetrics): ToolBarModifier--><!--Device-ToolBarModifier-padding(padding: LengthMetrics): ToolBarModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| padding | LengthMetrics | Yes | left and right padding. |
+| padding | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | left and right padding. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ToolBarModifier | returns the instance of the ToolBarModifier. |
+| [ToolBarModifier](arkts-arkui-toolbarmodifier-c.md) | returns the instance of the ToolBarModifier. |
 
 ## stateEffect
 
@@ -110,6 +118,8 @@ Sets whether or not to display the press status effect.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ToolBarModifier-stateEffect(stateEffect: boolean): ToolBarModifier--><!--Device-ToolBarModifier-stateEffect(stateEffect: boolean): ToolBarModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -122,5 +132,5 @@ Sets whether or not to display the press status effect.
 
 | Type | Description |
 | --- | --- |
-| ToolBarModifier | returns the instance of the ToolBarModifier. |
+| [ToolBarModifier](arkts-arkui-toolbarmodifier-c.md) | returns the instance of the ToolBarModifier. |
 

@@ -6,6 +6,8 @@
 
 **废弃版本：** 10
 
+<!--Device-unnamed-export interface FileDeleteOption--><!--Device-unnamed-export interface FileDeleteOption-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## complete
@@ -21,6 +23,8 @@ complete?: () => void
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileDeleteOption-complete?: () => void--><!--Device-FileDeleteOption-complete?: () => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -38,6 +42,8 @@ fail?: (data: string, code: number) => void
 
 **废弃版本：** 10
 
+<!--Device-FileDeleteOption-fail?: (data: string, code: number) => void--><!--Device-FileDeleteOption-fail?: (data: string, code: number) => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## success
@@ -54,6 +60,8 @@ success?: () => void
 
 **废弃版本：** 10
 
+<!--Device-FileDeleteOption-success?: () => void--><!--Device-FileDeleteOption-success?: () => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## uri
@@ -62,15 +70,15 @@ success?: () => void
 uri: string
 ```
 
-删除文件的URI，不能是应用资源路径。由于轻量级穿戴设备底层文件系统的限制，该值必须满足以下要求：
-1. URI 中不得包含以下特殊字符：\"*+,:;<=>?[]|\x7F等。
-2. 最大允许字符长度为128个字符。
+删除文件的URI，不能是应用资源路径。由于轻量级穿戴设备底层文件系统的限制，该值必须满足以下要求：1. URI 中不得包含以下特殊字符：\"*+,:;<=>?[]|\x7F等。2. 最大允许字符长度为128个字符。
 
 **类型：** string
 
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileDeleteOption-uri: string--><!--Device-FileDeleteOption-uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 

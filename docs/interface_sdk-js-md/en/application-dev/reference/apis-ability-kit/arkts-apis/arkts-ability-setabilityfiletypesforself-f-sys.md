@@ -18,6 +18,8 @@ Sets the file types that can be opened by the current application.
 
 **Required permissions:** ohos.permission.MANAGE_SELF_SKILLS
 
+<!--Device-bundleManager-function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fileTypes: Array<string>): void--><!--Device-bundleManager-function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fileTypes: Array<string>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Sets the file types that can be opened by the current application.
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Module name. |
 | abilityName | string | Yes | Name of the UIAbility component. |
-| fileTypes | Array&lt;string&gt; | Yes | Array of file types. The array must contain no more than 1024 elements, andeach element must not exceed 512 characters. Valid values must be from[UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformdatatype-e.md). Empty values,wildcard characters, and **general.object** are not allowed. |
+| fileTypes | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Array of file types. The array must contain no more than 1024 elements, and each element must not exceed 512 characters. Valid values must be from [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformdatatype-e.md). Empty values,wildcard characters, and **general.object** are not allowed. |
 
 **Error codes:**
 

@@ -1,5 +1,11 @@
 # generateDlpFileForEnterprise（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+```
+
 ## generateDlpFileForEnterprise
 
 ```TypeScript
@@ -10,13 +16,15 @@ function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, proper
 
 用于将明文文件加密生成企业账号的DLP权限受控文件，实现企业级的文件权限管理。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 该接口仅支持企业账号调用，需要企业自行搭建企业账号服务器配套使用。使用该接口可以将明文文件加密生成权限受控文件，由企业服务器管控账号是否有权限解密该文件。
 
 **起始版本：** 21
 
 **需要权限：** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
+
+<!--Device-dlpPermission-function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, property: DLPProperty, customProperty: CustomProperty): Promise<void>--><!--Device-dlpPermission-function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, property: DLPProperty, customProperty: CustomProperty): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -28,14 +36,14 @@ function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, proper
 | --- | --- | --- | --- |
 | plaintextFd | number | 是 | 明文文件的文件描述符。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2&lt;sup&gt;31&lt;/sup&gt;-1时，fd的值被截断。 |
 | dlpFd | number | 是 | 加密文件的文件描述符。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2&lt;sup&gt;31&lt;/sup&gt;-1时，fd的值被截断。 |
-| property | DLPProperty | 是 | DLP文件通用策略。 |
-| customProperty | CustomProperty | 是 | 企业定制策略。 |
+| property | [DLPProperty](arkts-dataprotection-dlpproperty-i-sys.md) | 是 | DLP文件通用策略。 |
+| customProperty | [CustomProperty](arkts-dataprotection-customproperty-i-sys.md) | 是 | 企业定制策略。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

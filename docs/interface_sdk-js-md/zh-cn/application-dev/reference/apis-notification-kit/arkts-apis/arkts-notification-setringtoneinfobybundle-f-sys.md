@@ -18,6 +18,8 @@ function setRingtoneInfoByBundle(bundle: BundleOption, ringtoneInfo: RingtoneInf
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function setRingtoneInfoByBundle(bundle: BundleOption, ringtoneInfo: RingtoneInfo): Promise<void>--><!--Device-notificationManager-function setRingtoneInfoByBundle(bundle: BundleOption, ringtoneInfo: RingtoneInfo): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,14 +28,14 @@ function setRingtoneInfoByBundle(bundle: BundleOption, ringtoneInfo: RingtoneInf
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 指定应用的包信息。 |
-| ringtoneInfo | RingtoneInfo | 是 | 自定义铃声信息。 |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 指定应用的包信息。 |
+| ringtoneInfo | [RingtoneInfo](arkts-notification-ringtoneinfo-i-sys.md) | 是 | 自定义铃声信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

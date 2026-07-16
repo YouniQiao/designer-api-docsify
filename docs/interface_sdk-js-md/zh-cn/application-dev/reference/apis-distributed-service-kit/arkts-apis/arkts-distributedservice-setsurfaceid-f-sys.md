@@ -1,5 +1,11 @@
 # setSurfaceId（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+```
+
 ## setSurfaceId
 
 ```TypeScript
@@ -12,6 +18,8 @@ Sets the transmission surface.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-abilityConnectionManager-function setSurfaceId(streamId: int, surfaceId: string, param: SurfaceParam): void--><!--Device-abilityConnectionManager-function setSurfaceId(streamId: int, surfaceId: string, param: SurfaceParam): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ Sets the transmission surface.
 | --- | --- | --- | --- |
 | streamId | number | 是 | Indicates the ID of a transport stream. |
 | surfaceId | string | 是 | Surface ID. |
-| param | SurfaceParam | 是 | Surface Parameters |
+| param | [SurfaceParam](arkts-distributedservice-surfaceparam-i-sys.md) | 是 | Surface Parameters |
 
 **错误码：**
 

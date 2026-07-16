@@ -1,15 +1,16 @@
 # IntentDecoratorInfo
 
-Common properties for intent decorators, used to define basic information about an intent (including the intent name
-and version number). It applies to all decorators provided by this module.
+Common properties for intent decorators, used to define basic information about an intent (including the intent name and version number). It applies to all decorators provided by this module.
 
-> **NOTE**
->
-> If a matching intent is found in the standard intent list based on the **schema** and **intentVersion** fields, the
-> system automatically populates the **intentName**, **domain**, **llmDescription**, **keywords**, **parameters**,
+> **NOTE**  
+>  
+> If a matching intent is found in the standard intent list based on the **schema** and **intentVersion** fields, the  
+> system automatically populates the **intentName**, **domain**, **llmDescription**, **keywords**, **parameters**,  
 > and **result** fields with the values from the matching standard intent.
 
 **Since:** 20
+
+<!--Device-unnamed-declare interface IntentDecoratorInfo--><!--Device-unnamed-declare interface IntentDecoratorInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -35,6 +36,8 @@ Description of the intent displayed to users.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-IntentDecoratorInfo-displayDescription?: string--><!--Device-IntentDecoratorInfo-displayDescription?: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## displayName
@@ -53,6 +56,8 @@ Name of the intent displayed to users.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-IntentDecoratorInfo-displayName: string--><!--Device-IntentDecoratorInfo-displayName: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## domain
@@ -61,10 +66,7 @@ Name of the intent displayed to users.
 domain: string
 ```
 
-Vertical domain of the intent. It is used to categorize intents by vertical fields (for example, video, music, and
-games). For details about the value range, see the vertical domain fields in
-[smart distribution features in different vertical domains](https://developer.huawei.com/consumer/en/doc/service/intents-ai-distribution-characteristic-0000001901922213#section2656133582215)
-.
+Vertical domain of the intent. It is used to categorize intents by vertical fields (for example, video, music, and games). For details about the value range, see the vertical domain fields in [smart distribution features in different vertical domains](https://developer.huawei.com/consumer/en/doc/service/intents-ai-distribution-characteristic-0000001901922213#section2656133582215).
 
 **Type:** string
 
@@ -73,6 +75,8 @@ games). For details about the value range, see the vertical domain fields in
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-IntentDecoratorInfo-domain: string--><!--Device-IntentDecoratorInfo-domain: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -84,9 +88,8 @@ icon?: ResourceStr
 
 Icon of the intent. It is displayed in the AI entry point.
 
-- If the value is a string, the icon is read from a network resource.
-- If the value is a [resource](../../reference/apis-localization-kit/js-apis-resource-manager.md), the icon is read
-from a local resource.
+- If the value is a string, the icon is read from a network resource.  
+- If the value is a [resource](../../reference/apis-localization-kit/js-apis-resource-manager.md), the icon is read from a local resource.
 
 **Type:** ResourceStr
 
@@ -95,6 +98,8 @@ from a local resource.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-IntentDecoratorInfo-icon?: ResourceStr--><!--Device-IntentDecoratorInfo-icon?: ResourceStr-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -114,6 +119,8 @@ Intent name, which is the unique identifier of an intent.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-IntentDecoratorInfo-intentName: string--><!--Device-IntentDecoratorInfo-intentName: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## intentVersion
@@ -131,6 +138,8 @@ Version number of the intent. It is used to distinguish and manage intents when 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-IntentDecoratorInfo-intentVersion: string--><!--Device-IntentDecoratorInfo-intentVersion: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -150,6 +159,8 @@ Search keywords for the intent.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-IntentDecoratorInfo-keywords?: string[]--><!--Device-IntentDecoratorInfo-keywords?: string[]-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## llmDescription
@@ -167,6 +178,8 @@ Function of an intent, which helps large language models understand the intent.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-IntentDecoratorInfo-llmDescription?: string--><!--Device-IntentDecoratorInfo-llmDescription?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -186,6 +199,8 @@ Data format of intent parameters, which is used to define the input data format 
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-IntentDecoratorInfo-parameters?: Record<string, Object>--><!--Device-IntentDecoratorInfo-parameters?: Record<string, Object>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## result
@@ -204,6 +219,8 @@ Data format for the results returned by intent calls. It defines how the data sh
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-IntentDecoratorInfo-result?: Record<string, Object>--><!--Device-IntentDecoratorInfo-result?: Record<string, Object>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## schema
@@ -212,13 +229,7 @@ Data format for the results returned by intent calls. It defines how the data sh
 schema?: string
 ```
 
-Name of a standard intent schema. This field is required when you
-[access a standard intent](../../../../application-models/insight-intent-definition.md#accessing-standard-intents).
-It is not required when you
-[create a custom intent](../../../../application-models/insight-intent-definition.md#creating-custom-intents). For
-details about the standard intent list, see
-[Appendix: Standard Intent Access Specifications](../../../../application-models/insight-intent-access-specifications.md)
-.
+Name of a standard intent schema. This field is required when you [access a standard intent](../../../../application-models/insight-intent-definition.md#accessing-standard-intents).It is not required when you [create a custom intent](../../../../application-models/insight-intent-definition.md#creating-custom-intents). For details about the standard intent list, see [Appendix: Standard Intent Access Specifications](../../../../application-models/insight-intent-access-specifications.md).
 
 **Type:** string
 
@@ -227,6 +238,8 @@ details about the standard intent list, see
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-IntentDecoratorInfo-schema?: string--><!--Device-IntentDecoratorInfo-schema?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

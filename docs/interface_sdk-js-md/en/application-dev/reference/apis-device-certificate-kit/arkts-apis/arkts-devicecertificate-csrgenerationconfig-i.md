@@ -1,21 +1,22 @@
 # CsrGenerationConfig
 
-Configuration parameters for generating a CSR, including the subject name, digest algorithm, attribute,
-and output format.
+Configuration parameters for generating a CSR, including the subject name, digest algorithm, attribute,and output format.
 
-> **NOTE**
->
-> - subject is an object of the Name type defined by X509.
->
-> - mdName indicates the digest algorithm name. Currently, SHA1, SHA256, SHA384, and SHA512 are supported.
->
-> - attributes is an optional parameter that specifies the attribute types and attribute values specified in
-> PKCS #9 to generate a CSR. For example, challengePassword.
->
-> - outFormat specifies the format of the output CSR. If the format is not specified, the PEM format is used by
+> **NOTE**  
+>  
+> - subject is an object of the Name type defined by X509.  
+>  
+> - mdName indicates the digest algorithm name. Currently, SHA1, SHA256, SHA384, and SHA512 are supported.  
+>  
+> - attributes is an optional parameter that specifies the attribute types and attribute values specified in  
+> PKCS #9 to generate a CSR. For example, challengePassword.  
+>  
+> - outFormat specifies the format of the output CSR. If the format is not specified, the PEM format is used by  
 > default.
 
 **Since:** 18
+
+<!--Device-cert-interface CsrGenerationConfig--><!--Device-cert-interface CsrGenerationConfig-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -39,6 +40,8 @@ A collection of attributes.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-CsrGenerationConfig-attributes?: Array<CsrAttribute>--><!--Device-CsrGenerationConfig-attributes?: Array<CsrAttribute>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## mdName
@@ -54,6 +57,8 @@ Message digest algorithm name.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CsrGenerationConfig-mdName: string--><!--Device-CsrGenerationConfig-mdName: string-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -73,6 +78,8 @@ Output format.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-CsrGenerationConfig-outFormat?: EncodingBaseFormat--><!--Device-CsrGenerationConfig-outFormat?: EncodingBaseFormat-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## subject
@@ -88,6 +95,8 @@ Subject name.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CsrGenerationConfig-subject: X500DistinguishedName--><!--Device-CsrGenerationConfig-subject: X500DistinguishedName-End-->
 
 **System capability:** SystemCapability.Security.Cert
 

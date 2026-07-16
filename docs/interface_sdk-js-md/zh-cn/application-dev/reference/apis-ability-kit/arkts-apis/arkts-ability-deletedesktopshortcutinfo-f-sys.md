@@ -1,5 +1,11 @@
 # deleteDesktopShortcutInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { shortcutManager } from '@kit.AbilityKit';
+```
+
 ## deleteDesktopShortcutInfo
 
 ```TypeScript
@@ -12,6 +18,8 @@ function deleteDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: number): 
 
 **需要权限：** ohos.permission.MANAGE_SHORTCUTS
 
+<!--Device-shortcutManager-function deleteDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: int): Promise<void>--><!--Device-shortcutManager-function deleteDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **系统接口：** 此接口为系统接口。
@@ -20,14 +28,14 @@ function deleteDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: number): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| shortcutInfo | ShortcutInfo | 是 | 快捷方式信息。 |
+| shortcutInfo | [ShortcutInfo](arkts-ability-shortcutinfo-i-sys.md) | 是 | 快捷方式信息。 |
 | userId | number | 是 | 用户id。可以通过[getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

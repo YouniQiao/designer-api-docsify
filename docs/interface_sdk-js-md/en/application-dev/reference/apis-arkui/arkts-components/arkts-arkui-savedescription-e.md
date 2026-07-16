@@ -4,6 +4,8 @@ Enumerates the text that can be displayed on the save button.
 
 **Since:** 10
 
+<!--Device-unnamed-declare enum SaveDescription--><!--Device-unnamed-declare enum SaveDescription-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DOWNLOAD
@@ -19,6 +21,8 @@ Download
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SaveDescription-DOWNLOAD = 0--><!--Device-SaveDescription-DOWNLOAD = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ Download File
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SaveDescription-DOWNLOAD_FILE = 1--><!--Device-SaveDescription-DOWNLOAD_FILE = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SAVE
@@ -51,6 +57,8 @@ Save
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SaveDescription-SAVE = 2--><!--Device-SaveDescription-SAVE = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +76,8 @@ Save Image
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SaveDescription-SAVE_IMAGE = 3--><!--Device-SaveDescription-SAVE_IMAGE = 3-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SAVE_FILE
@@ -83,6 +93,8 @@ Save File
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SaveDescription-SAVE_FILE = 4--><!--Device-SaveDescription-SAVE_FILE = 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +112,8 @@ Download and Share
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SaveDescription-DOWNLOAD_AND_SHARE = 5--><!--Device-SaveDescription-DOWNLOAD_AND_SHARE = 5-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## RECEIVE
@@ -115,6 +129,8 @@ Receive
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SaveDescription-RECEIVE = 6--><!--Device-SaveDescription-RECEIVE = 6-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -132,6 +148,8 @@ Continue to Receive
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SaveDescription-CONTINUE_TO_RECEIVE = 7--><!--Device-SaveDescription-CONTINUE_TO_RECEIVE = 7-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SAVE_TO_GALLERY
@@ -147,6 +165,8 @@ Save to gallery
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SaveDescription-SAVE_TO_GALLERY = 8--><!--Device-SaveDescription-SAVE_TO_GALLERY = 8-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -164,6 +184,8 @@ Export to gallery
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SaveDescription-EXPORT_TO_GALLERY = 9--><!--Device-SaveDescription-EXPORT_TO_GALLERY = 9-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## QUICK_SAVE_TO_GALLERY
@@ -179,6 +201,8 @@ Quick save to gallery
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SaveDescription-QUICK_SAVE_TO_GALLERY = 10--><!--Device-SaveDescription-QUICK_SAVE_TO_GALLERY = 10-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -196,6 +220,8 @@ Resave to gallery
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SaveDescription-RESAVE_TO_GALLERY = 11--><!--Device-SaveDescription-RESAVE_TO_GALLERY = 11-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SAVE_ALL
@@ -211,6 +237,8 @@ Save all
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SaveDescription-SAVE_ALL = 12--><!--Device-SaveDescription-SAVE_ALL = 12-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

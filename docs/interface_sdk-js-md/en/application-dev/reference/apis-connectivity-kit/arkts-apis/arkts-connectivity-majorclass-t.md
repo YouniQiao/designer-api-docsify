@@ -10,6 +10,8 @@ Indicate the major class of a bluetooth device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-type MajorClass = constant.MajorClass--><!--Device-connection-type MajorClass = constant.MajorClass-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Property type:** constant.MajorClass

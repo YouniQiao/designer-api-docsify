@@ -18,6 +18,8 @@ Registers a listener for wallpaper color changes to receive notifications about 
 
 **Deprecated since:** 9
 
+<!--Device-wallpaper-function on(type: 'colorChange', callback: (colors: Array<RgbaColor>, wallpaperType: WallpaperType) => void): void--><!--Device-wallpaper-function on(type: 'colorChange', callback: (colors: Array<RgbaColor>, wallpaperType: WallpaperType) => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **Parameters:**
@@ -25,7 +27,7 @@ Registers a listener for wallpaper color changes to receive notifications about 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'colorChange' | Yes | the incoming colorChange table open receiver pick a color change wallpaper wallpaper color changes. |
-| callback | (colors: Array&lt;RgbaColor&gt;, wallpaperType: WallpaperType) =&gt; void | Yes | provides dominant colors of the wallpaper. |
+| callback | (colors: Array<RgbaColor>, wallpaperType: WallpaperType) => void | Yes | provides dominant colors of the wallpaper. |
 
 **Example**
 

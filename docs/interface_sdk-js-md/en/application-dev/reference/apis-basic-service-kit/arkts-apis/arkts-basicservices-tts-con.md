@@ -14,6 +14,8 @@ Indicates the default pitch of the text-to-speech (TTS) engine.
 
 **Deprecated since:** 21
 
+<!--Device-TTS-const DEFAULT_TTS_PITCH: string--><!--Device-TTS-const DEFAULT_TTS_PITCH: string-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 ## DEFAULT_TTS_RATE
@@ -27,6 +29,8 @@ Indicates the default speech rate of the TTS engine. 100 = 1x.
 **Since:** 7
 
 **Deprecated since:** 21
+
+<!--Device-TTS-const DEFAULT_TTS_RATE: string--><!--Device-TTS-const DEFAULT_TTS_RATE: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -42,6 +46,8 @@ Indicates the default TTS engine.
 
 **Deprecated since:** 21
 
+<!--Device-TTS-const DEFAULT_TTS_SYNTH: string--><!--Device-TTS-const DEFAULT_TTS_SYNTH: string-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 ## ENABLED_TTS_PLUGINS
@@ -50,12 +56,13 @@ Indicates the default TTS engine.
 const ENABLED_TTS_PLUGINS: string
 ```
 
-Indicates the list of activated plug-in packages used for TTS. Multiple plug-in packages are separated by
-spaces.
+Indicates the list of activated plug-in packages used for TTS. Multiple plug-in packages are separated by spaces.
 
 **Since:** 7
 
 **Deprecated since:** 21
+
+<!--Device-TTS-const ENABLED_TTS_PLUGINS: string--><!--Device-TTS-const ENABLED_TTS_PLUGINS: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 

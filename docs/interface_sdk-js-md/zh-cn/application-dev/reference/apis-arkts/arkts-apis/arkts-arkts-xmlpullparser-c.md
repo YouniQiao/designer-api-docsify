@@ -4,7 +4,15 @@ XmlPullParser接口用于解析现有的XML文件。
 
 **起始版本：** 8
 
+<!--Device-xml-class XmlPullParser--><!--Device-xml-class XmlPullParser-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { xml } from '@kit.ArkTS';
+```
 
 ## constructor
 
@@ -16,7 +24,9 @@ constructor(buffer: ArrayBuffer | DataView, encoding?: string)
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlPullParser-constructor(buffer: ArrayBuffer | DataView, encoding?: string)--><!--Device-XmlPullParser-constructor(buffer: ArrayBuffer | DataView, encoding?: string)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -53,7 +63,9 @@ parse(option: ParseOptions): void
 
 **替代接口：** parseXml
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlPullParser-parse(option: ParseOptions): void--><!--Device-XmlPullParser-parse(option: ParseOptions): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -61,7 +73,7 @@ parse(option: ParseOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | ParseOptions | 是 | XML解析选项。 |
+| option | [ParseOptions](arkts-arkts-parseoptions-i.md) | 是 | XML解析选项。 |
 
 **示例：**
 
@@ -106,7 +118,9 @@ parseXml(option: ParseOptions): void
 
 **起始版本：** 14
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XmlPullParser-parseXml(option: ParseOptions): void--><!--Device-XmlPullParser-parseXml(option: ParseOptions): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -114,5 +128,5 @@ parseXml(option: ParseOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | ParseOptions | 是 | XML解析选项。 |
+| option | [ParseOptions](arkts-arkts-parseoptions-i.md) | 是 | XML解析选项。 |
 

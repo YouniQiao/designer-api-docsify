@@ -1,5 +1,11 @@
 # getCfgFilesSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { configPolicy } from '@kit.BasicServicesKit';
+```
+
 ## getCfgFilesSync
 
 ```TypeScript
@@ -10,6 +16,8 @@ function getCfgFilesSync(relPath: string, followMode?: FollowXMode, extra?: stri
 
 **起始版本：** 11
 
+<!--Device-configPolicy-function getCfgFilesSync(relPath: string, followMode?: FollowXMode, extra?: string): Array<string>--><!--Device-configPolicy-function getCfgFilesSync(relPath: string, followMode?: FollowXMode, extra?: string): Array<string>-End-->
+
 **系统能力：** SystemCapability.Customization.ConfigPolicy
 
 **系统接口：** 此接口为系统接口。
@@ -19,14 +27,14 @@ function getCfgFilesSync(relPath: string, followMode?: FollowXMode, extra?: stri
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | relPath | string | 是 | 配置文件名。 |
-| followMode | FollowXMode | 否 | 跟随模式，不设置时，默认使用[DEFAULT](arkts-basicservices-followxmode-e-sys.md#default)。 |
+| followMode | [FollowXMode](arkts-basicservices-followxmode-e-sys.md) | 否 | 跟随模式，不设置时，默认使用[DEFAULT](arkts-basicservices-followxmode-e-sys.md#default)。 |
 | extra | string | 否 | 用户自定义跟随规则，仅在followMode为[USER_DEFINED](arkts-basicservices-followxmode-e-sys.md#user_defined)时有效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 返回文件列表。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 返回文件列表。 |
 
 **错误码：**
 

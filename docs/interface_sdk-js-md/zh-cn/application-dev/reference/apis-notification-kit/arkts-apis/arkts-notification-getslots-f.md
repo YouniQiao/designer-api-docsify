@@ -14,10 +14,11 @@ function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void
 
 获取当前应用的所有通知渠道。使用callback异步回调。
 
-用于批量查询当前应用已创建的所有通知渠道的配置信息，包括各渠道的类型、提醒方式、级别等设置。
-适用于需要查看所有渠道配置的场景。
+用于批量查询当前应用已创建的所有通知渠道的配置信息，包括各渠道的类型、提醒方式、级别等设置。适用于需要查看所有渠道配置的场景。
 
 **起始版本：** 9
+
+<!--Device-notificationManager-function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void--><!--Device-notificationManager-function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -25,7 +26,7 @@ function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;NotificationSlot&gt;&gt; | 是 | 回调函数。当获取通知渠道成功，err为undefined，data为获取到的NotificationSlot数组，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<NotificationSlot>> | 是 | 回调函数。当获取通知渠道成功，err为undefined，data为获取到的NotificationSlot数组，否则为错误对象。 |
 
 **错误码：**
 
@@ -62,10 +63,11 @@ function getSlots(): Promise<Array<NotificationSlot>>
 
 获取当前应用的所有通知渠道。使用Promise异步回调。
 
-用于批量查询当前应用已创建的所有通知渠道的配置信息，包括各渠道的类型、提醒方式、级别等设置。
-适用于需要查看所有渠道配置的场景。
+用于批量查询当前应用已创建的所有通知渠道的配置信息，包括各渠道的类型、提醒方式、级别等设置。适用于需要查看所有渠道配置的场景。
 
 **起始版本：** 9
+
+<!--Device-notificationManager-function getSlots(): Promise<Array<NotificationSlot>>--><!--Device-notificationManager-function getSlots(): Promise<Array<NotificationSlot>>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -73,7 +75,7 @@ function getSlots(): Promise<Array<NotificationSlot>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;NotificationSlot&gt;&gt; | Promise对象，返回通知渠道对象。 |
+| Promise<Array<NotificationSlot>> | Promise对象，返回通知渠道对象。 |
 
 **错误码：**
 

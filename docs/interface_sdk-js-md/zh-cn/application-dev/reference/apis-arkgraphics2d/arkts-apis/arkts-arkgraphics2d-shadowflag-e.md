@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-drawing-enum ShadowFlag--><!--Device-drawing-enum ShadowFlag-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## NONE
@@ -15,6 +17,8 @@ NONE = 0
 不使用任何阴影处理选项。
 
 **起始版本：** 12
+
+<!--Device-ShadowFlag-NONE = 0--><!--Device-ShadowFlag-NONE = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -28,6 +32,8 @@ TRANSPARENT_OCCLUDER = 1
 
 **起始版本：** 12
 
+<!--Device-ShadowFlag-TRANSPARENT_OCCLUDER = 1--><!--Device-ShadowFlag-TRANSPARENT_OCCLUDER = 1-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## GEOMETRIC_ONLY
@@ -40,6 +46,8 @@ GEOMETRIC_ONLY = 2
 
 **起始版本：** 12
 
+<!--Device-ShadowFlag-GEOMETRIC_ONLY = 2--><!--Device-ShadowFlag-GEOMETRIC_ONLY = 2-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## ALL
@@ -51,6 +59,8 @@ ALL = 3
 使用所有可用的阴影处理选项，以生成组合阴影效果，包括半透明遮挡和几何阴影效果。
 
 **起始版本：** 12
+
+<!--Device-ShadowFlag-ALL = 3--><!--Device-ShadowFlag-ALL = 3-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

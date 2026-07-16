@@ -1,10 +1,10 @@
 # @ohos.buffer
 
-A **Buffer** object represents a byte sequence of a fixed length. It is used to store binary data.
-**Recommended use case**: Use Buffer when you need to process images and a large amount of binary data, and receive
-or upload files.
+A **Buffer** object represents a byte sequence of a fixed length. It is used to store binary data.**Recommended use case**: Use Buffer when you need to process images and a large amount of binary data, and receive or upload files.
 
 **Since:** 9
+
+<!--Device-unnamed-declare namespace buffer--><!--Device-unnamed-declare namespace buffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -21,7 +21,7 @@ import { buffer } from '@kit.ArkTS';
 | Name | Description |
 | --- | --- |
 | [alloc](arkts-arkts-alloc-f.md#alloc-1) | Creates and initializes a **Buffer** object of the specified length. |
-| [allocUninitialized](arkts-arkts-allocuninitialized-f.md#allocuninitialized-1) | Creates a **Buffer** object of the specified size, without initializing it. This API does not allocate memory fromthe buffer pool.You need to use [fill()](arkts-arkts-buffer-c.md#fill-1) to initialize the **Buffer** object created. |
+| [allocUninitialized](arkts-arkts-allocuninitialized-f.md#allocuninitialized-1) | Creates a **Buffer** object of the specified size, without initializing it. This API does not allocate memory from the buffer pool.You need to use [fill()](arkts-arkts-buffer-c.md#fill-1) to initialize the **Buffer** object created. |
 | [allocUninitializedFromPool](arkts-arkts-allocuninitializedfrompool-f.md#allocuninitializedfrompool-1) | Creates a **Buffer** object of the specified size from the buffer pool, without initializing it.You need to use [fill()](arkts-arkts-buffer-c.md#fill-1) to initialize the **Buffer** object created. |
 | [byteLength](arkts-arkts-bytelength-f.md#bytelength-1) | Obtains the number of bytes of a string based on the encoding format. |
 | [compare](arkts-arkts-compare-f.md#compare-1) | Compares two **Buffer** objects. This API is used for sorting **Buffer** objects. |

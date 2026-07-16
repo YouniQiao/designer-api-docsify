@@ -20,6 +20,8 @@ function getPriorityEnabledByBundles(bundles: Array<BundleOption>): Promise<Map<
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-notificationManager-function getPriorityEnabledByBundles(bundles: Array<BundleOption>): Promise<Map<BundleOption, boolean>>--><!--Device-notificationManager-function getPriorityEnabledByBundles(bundles: Array<BundleOption>): Promise<Map<BundleOption, boolean>>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -28,13 +30,13 @@ function getPriorityEnabledByBundles(bundles: Array<BundleOption>): Promise<Map<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundles | Array&lt;BundleOption&gt; | 是 | 应用包信息数组。 |
+| bundles | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<BundleOption> | 是 | 应用包信息数组。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Map&lt;BundleOption, boolean&gt;&gt; | Promise对象，返回应用通知优先级开关状态的键值对集合的Promise对象。 |
+| Promise<Map<BundleOption, boolean>> | Promise对象，返回应用通知优先级开关状态的键值对集合的Promise对象。 |
 
 **错误码：**
 

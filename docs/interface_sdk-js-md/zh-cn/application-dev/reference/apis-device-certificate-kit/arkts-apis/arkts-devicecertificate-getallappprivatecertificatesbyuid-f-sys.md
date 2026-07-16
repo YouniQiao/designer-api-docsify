@@ -1,5 +1,11 @@
 # getAllAppPrivateCertificatesByUid（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+```
+
 ## getAllAppPrivateCertificatesByUid
 
 ```TypeScript
@@ -13,6 +19,8 @@ function getAllAppPrivateCertificatesByUid(appUid: number) : Promise<CMResult>
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-certificateManager-function getAllAppPrivateCertificatesByUid(appUid: int) : Promise<CMResult>--><!--Device-certificateManager-function getAllAppPrivateCertificatesByUid(appUid: int) : Promise<CMResult>-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -28,7 +36,7 @@ function getAllAppPrivateCertificatesByUid(appUid: number) : Promise<CMResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise对象，返回获取指定应用的所有私有凭据的结果，返回值为[CMResult](arkts-devicecertificate-cmresult-i.md)对象中的credentialDetailList属性。<br>**说明**：私有凭据个数为0时，返回CMResult为undefined。 |
+| Promise<CMResult> | Promise对象，返回获取指定应用的所有私有凭据的结果，返回值为[CMResult](arkts-devicecertificate-cmresult-i.md)对象中的credentialDetailList属性。<br>**说明**：私有凭据个数为0时，返回CMResult为undefined。 |
 
 **错误码：**
 

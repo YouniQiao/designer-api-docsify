@@ -27,14 +27,16 @@ Disallows a feature.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-restrictions-function setDisallowedPolicy(admin: Want, feature: string, disallow: boolean): void--><!--Device-restrictions-function setDisallowedPolicy(admin: Want, feature: string, disallow: boolean): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| feature | string | Yes | For features that can be set, see Table 1.<br> **Note**: Since API version 15,applications granted with the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and[activated as device administrator applications](arkts-mdm-startadminprovision-f.md#startadminprovision-1)can use this API to set the following features: **bluetooth**, **hdc**, **microphone**, **usb**, **wifi**,**tethering**, and **camera**&lt;!--RP3--&gt;&lt;!--RP3End--&gt;. Since API version 26.0.0, this API can be used to set the**mtpServer** feature. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| feature | string | Yes | For features that can be set, see Table 1.<br> **Note**: Since API version 15,applications granted with the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and [activated as device administrator applications](arkts-mdm-startadminprovision-f.md#startadminprovision-1)can use this API to set the following features: **bluetooth**, **hdc**, **microphone**, **usb**, **wifi**,**tethering**, and **camera**&lt;!--RP3--&gt;&lt;!--RP3End--&gt;. Since API version 26.0.0, this API can be used to set the **mtpServer** feature. |
 | disallow | boolean | Yes | Whether to disallow the feature. The value **true** means to disallow the feature;the value **false** means the opposite. |
 
 **Error codes:**
@@ -83,14 +85,16 @@ Enables or disables a specified device feature. Once disabled, the feature canno
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-restrictions-function setDisallowedPolicy(admin: Want, feature: FeatureForDevice, disallow: boolean): void--><!--Device-restrictions-function setDisallowedPolicy(admin: Want, feature: FeatureForDevice, disallow: boolean): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| feature | FeatureForDevice | Yes | Device feature to be enabled or disabled.<br> **Note**: An application thathas obtained the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and has been[activated as the built-in device administrator application](arkts-mdm-startadminprovision-f.md#startadminprovision-1)can use this API to set the [FeatureForDevice.WIFI_P2P](arkts-mdm-featurefordevice-e.md) feature. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| feature | [FeatureForDevice](arkts-mdm-featurefordevice-e.md) | Yes | Device feature to be enabled or disabled.<br> **Note**: An application that has obtained the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and has been [activated as the built-in device administrator application](arkts-mdm-startadminprovision-f.md#startadminprovision-1)can use this API to set the [FeatureForDevice.WIFI_P2P](arkts-mdm-featurefordevice-e.md) feature. |
 | disallow | boolean | Yes | Whether to disallow the feature. The value **true** means to disallow the feature;the value **false** means the opposite. |
 
 **Error codes:**

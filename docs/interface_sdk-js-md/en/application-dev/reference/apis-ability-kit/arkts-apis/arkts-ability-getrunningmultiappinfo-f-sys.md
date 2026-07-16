@@ -12,15 +12,15 @@ import { appManager } from '@kit.AbilityKit';
 function getRunningMultiAppInfo(bundleName: string): Promise<RunningMultiAppInfo>
 ```
 
-Obtains the information about running applications in multi-app mode. The multi-app mode means that an application
-can be simultaneously logged in with different accounts on the same device. This API uses a promise to return the
-result.
+Obtains the information about running applications in multi-app mode. The multi-app mode means that an application can be simultaneously logged in with different accounts on the same device. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-appManager-function getRunningMultiAppInfo(bundleName: string): Promise<RunningMultiAppInfo>--><!--Device-appManager-function getRunningMultiAppInfo(bundleName: string): Promise<RunningMultiAppInfo>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -36,7 +36,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RunningMultiAppInfo&gt; | Promise used to return the information about running applications with multi-app mode. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<RunningMultiAppInfo> | Promise used to return the information about running applications with multi-app mode. |
 
 **Error codes:**
 

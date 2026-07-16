@@ -18,6 +18,8 @@ Hang up the foreground call.
 
 **Required permissions:** ohos.permission.ANSWER_CALL or ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function hangUpCall(callId: int, callback: AsyncCallback<void>): void--><!--Device-call-function hangUpCall(callId: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Hang up the foreground call.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | number | Yes | Indicates the identifier of the call to hangup. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of hangUpCall. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of hangUpCall. |
 
 **Error codes:**
 
@@ -69,6 +71,8 @@ Hang up the foreground call.
 
 **Required permissions:** ohos.permission.ANSWER_CALL or ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function hangUpCall(callId?: int): Promise<void>--><!--Device-call-function hangUpCall(callId?: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -83,7 +87,7 @@ Hang up the foreground call.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the hangUpCall. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the hangUpCall. |
 
 **Error codes:**
 
@@ -123,6 +127,8 @@ Hang up the foreground call without callId.
 
 **Required permissions:** ohos.permission.ANSWER_CALL or ohos.permission.SET_TELEPHONY_STATE or ohos.permission.MANAGE_CALL_FOR_DEVICES
 
+<!--Device-call-function hangUpCall(callback: AsyncCallback<void>): void--><!--Device-call-function hangUpCall(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -131,7 +137,7 @@ Hang up the foreground call without callId.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of hangUpCall. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of hangUpCall. |
 
 **Error codes:**
 

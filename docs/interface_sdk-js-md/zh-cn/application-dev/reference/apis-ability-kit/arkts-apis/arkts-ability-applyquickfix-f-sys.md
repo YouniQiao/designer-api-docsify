@@ -1,5 +1,11 @@
 # applyQuickFix（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { quickFixManager } from '@kit.AbilityKit';
+```
+
 ## applyQuickFix
 
 ```TypeScript
@@ -12,6 +18,8 @@ function applyQuickFix(hapModuleQuickFixFiles: Array<string>, callback: AsyncCal
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 
+<!--Device-quickFixManager-function applyQuickFix(hapModuleQuickFixFiles: Array<string>, callback: AsyncCallback<void>): void--><!--Device-quickFixManager-function applyQuickFix(hapModuleQuickFixFiles: Array<string>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.QuickFix
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +28,8 @@ function applyQuickFix(hapModuleQuickFixFiles: Array<string>, callback: AsyncCal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| hapModuleQuickFixFiles | Array&lt;string&gt; | 是 | 快速修复补丁文件（补丁文件需包含有效的文件路径）。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当快速修复的补丁安装成功，err为undefined，否则为错误对象。 |
+| hapModuleQuickFixFiles | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 快速修复补丁文件（补丁文件需包含有效的文件路径）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当快速修复的补丁安装成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -66,6 +74,8 @@ function applyQuickFix(hapModuleQuickFixFiles: Array<string>): Promise<void>
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 
+<!--Device-quickFixManager-function applyQuickFix(hapModuleQuickFixFiles: Array<string>): Promise<void>--><!--Device-quickFixManager-function applyQuickFix(hapModuleQuickFixFiles: Array<string>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.QuickFix
 
 **系统接口：** 此接口为系统接口。
@@ -74,13 +84,13 @@ function applyQuickFix(hapModuleQuickFixFiles: Array<string>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| hapModuleQuickFixFiles | Array&lt;string&gt; | 是 | 快速修复补丁文件（补丁文件需包含有效的文件路径）。 |
+| hapModuleQuickFixFiles | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 快速修复补丁文件（补丁文件需包含有效的文件路径）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

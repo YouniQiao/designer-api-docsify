@@ -4,6 +4,8 @@ Enumerates the anti-aliasing levels.
 
 **Since:** 12
 
+<!--Device-image-enum AntiAliasingLevel--><!--Device-image-enum AntiAliasingLevel-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## NONE
@@ -17,6 +19,8 @@ Nearest neighbor interpolation.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-AntiAliasingLevel-NONE = 0--><!--Device-AntiAliasingLevel-NONE = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -32,6 +36,8 @@ Bilinear interpolation.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-AntiAliasingLevel-LOW = 1--><!--Device-AntiAliasingLevel-LOW = 1-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## MEDIUM
@@ -46,6 +52,8 @@ Bilinear interpolation with mipmap enabled. You are advised to use this value wh
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-AntiAliasingLevel-MEDIUM = 2--><!--Device-AntiAliasingLevel-MEDIUM = 2-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## HIGH
@@ -59,6 +67,8 @@ Cubic interpolation.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-AntiAliasingLevel-HIGH = 3--><!--Device-AntiAliasingLevel-HIGH = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

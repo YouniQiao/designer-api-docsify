@@ -1,8 +1,8 @@
 # UploadRequestOptions
 
-> **NOTE**
->
-> This API has been supported since API version 3 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API has been supported since API version 3 and deprecated since API version 9. You are advised to use  
 > [UploadConfig](arkts-basicservices-config-i.md) instead.
 
 **Since:** 3
@@ -10,6 +10,8 @@
 **Deprecated since:** 9
 
 **Substitutes:** [UploadConfig](arkts-basicservices-uploadconfig-i.md)
+
+<!--Device-unnamed-export interface UploadRequestOptions--><!--Device-unnamed-export interface UploadRequestOptions-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -35,6 +37,8 @@ Called when the execution is completed.
 
 **Substitutes:** on
 
+<!--Device-UploadRequestOptions-complete?: () => void--><!--Device-UploadRequestOptions-complete?: () => void-End-->
+
 **System capability:** SystemCapability.MiscServices.Upload
 
 ## data
@@ -52,6 +56,8 @@ Form data in the request body.
 **Deprecated since:** 9
 
 **Substitutes:** data
+
+<!--Device-UploadRequestOptions-data?: Array<RequestData>--><!--Device-UploadRequestOptions-data?: Array<RequestData>-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -71,6 +77,8 @@ Called when uploading fails.
 
 **Substitutes:** on
 
+<!--Device-UploadRequestOptions-fail?: (data: any, code: number) => void--><!--Device-UploadRequestOptions-fail?: (data: any, code: number) => void-End-->
+
 **System capability:** SystemCapability.MiscServices.Upload
 
 ## files
@@ -88,6 +96,8 @@ List of files to upload, which is submitted through multipart/form-data.
 **Deprecated since:** 9
 
 **Substitutes:** data
+
+<!--Device-UploadRequestOptions-files: Array<RequestFile>--><!--Device-UploadRequestOptions-files: Array<RequestFile>-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -107,6 +117,8 @@ Request header.
 
 **Substitutes:** headers
 
+<!--Device-UploadRequestOptions-header?: Object--><!--Device-UploadRequestOptions-header?: Object-End-->
+
 **System capability:** SystemCapability.MiscServices.Upload
 
 ## method
@@ -124,6 +136,8 @@ Request methods available: POST and PUT. The default value is POST.
 **Deprecated since:** 9
 
 **Substitutes:** method
+
+<!--Device-UploadRequestOptions-method?: string--><!--Device-UploadRequestOptions-method?: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -143,6 +157,8 @@ Called when the files are uploaded successfully.
 
 **Substitutes:** on
 
+<!--Device-UploadRequestOptions-success?: (data: UploadResponse) => void--><!--Device-UploadRequestOptions-success?: (data: UploadResponse) => void-End-->
+
 **System capability:** SystemCapability.MiscServices.Upload
 
 ## url
@@ -160,6 +176,8 @@ Resource URL.
 **Deprecated since:** 9
 
 **Substitutes:** url
+
+<!--Device-UploadRequestOptions-url: string--><!--Device-UploadRequestOptions-url: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 

@@ -1,5 +1,11 @@
 # add（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { recent } from '@kit.CoreFileKit';
+```
+
 ## add
 
 ```TypeScript
@@ -15,6 +21,8 @@ function add(uri: string): void
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-recent-function add(uri: string): void--><!--Device-recent-function add(uri: string): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

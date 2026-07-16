@@ -1,9 +1,10 @@
 # StringDecoder
 
-Provides the capability of decoding binary streams into strings. The following encoding types are supported: utf-8,
-iso-8859-2, koi8-r, macintosh, windows-1250, windows-1251, gbk, gb18030, big5, utf-16be, and UTF-16le.
+Provides the capability of decoding binary streams into strings. The following encoding types are supported: utf-8,iso-8859-2, koi8-r, macintosh, windows-1250, windows-1251, gbk, gb18030, big5, utf-16be, and UTF-16le.
 
 **Since:** 12
+
+<!--Device-util-class StringDecoder--><!--Device-util-class StringDecoder-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -24,6 +25,8 @@ Constructor used to create a **StringDecoder** instance.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-StringDecoder-constructor(encoding?: string)--><!--Device-StringDecoder-constructor(encoding?: string)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -51,6 +54,8 @@ Ends the decoding process and returns any remaining input stored in the internal
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-StringDecoder-end(chunk?: string | Uint8Array): string--><!--Device-StringDecoder-end(chunk?: string | Uint8Array): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -86,12 +91,13 @@ console.info("endString:", endString);
 write(chunk: string | Uint8Array): string
 ```
 
-Decodes a string. Any incomplete multi-byte characters at the end of Uint8Array are filtered out from the
-returned string and stored in an internal buffer for the next call.
+Decodes a string. Any incomplete multi-byte characters at the end of Uint8Array are filtered out from the returned string and stored in an internal buffer for the next call.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-StringDecoder-write(chunk: string | Uint8Array): string--><!--Device-StringDecoder-write(chunk: string | Uint8Array): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

@@ -1,5 +1,11 @@
 # removeAllowedRunningBundles
 
+## 导入模块
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+```
+
 ## removeAllowedRunningBundles
 
 ```TypeScript
@@ -14,15 +20,17 @@ function removeAllowedRunningBundles(admin: Want, appIdentifiers: Array<string>,
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function removeAllowedRunningBundles(admin: Want, appIdentifiers: Array<string>, accountId: number): void--><!--Device-applicationManager-function removeAllowedRunningBundles(admin: Want, appIdentifiers: Array<string>, accountId: number): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| appIdentifiers | Array&lt;string&gt; | 是 | 应用唯一标识符的数组。可以通过接口bundleManager.getInstalledBundleList获取bundleInfo.signatureInfo.appIdentifier。取值范围：数组长度不能超过200。<br>最大长度为200。 |
-| accountId | number | 是 | 用户ID，取值范围：大于等于0。- <br>用户ID，取值范围：大于等于0。accountId可以通过@ohos.account.osAccount中的getOsAccountLocalId等接口来获取。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| appIdentifiers | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 应用唯一标识符的数组。可以通过接口bundleManager.getInstalledBundleList获取bundleInfo.signatureInfo.appIdentifier。取值范围：数组长度不能超过200。<br>最大长度为200。 |
+| accountId | number | 是 | 用户ID，取值范围：大于等于0。  - <br>用户ID，取值范围：大于等于0。accountId可以通过@ohos.account.osAccount中的getOsAccountLocalId等接口来获取。 |
 
 **错误码：**
 

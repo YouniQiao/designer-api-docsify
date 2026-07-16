@@ -4,6 +4,8 @@ Describes options for cross-device notifications. Not supported currently.
 
 **Since:** 8
 
+<!--Device-unnamed-export interface DistributedOptions--><!--Device-unnamed-export interface DistributedOptions-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## isDistributed
@@ -14,7 +16,7 @@ isDistributed?: boolean
 
 Whether cross-device notifications are supported.
 
-- **true**: cross-device notifications are supported.
+- **true**: cross-device notifications are supported.  
 - **false**: cross-device notifications are not supported.
 
 **Type:** boolean
@@ -22,6 +24,8 @@ Whether cross-device notifications are supported.
 **Default:** true
 
 **Since:** 8
+
+<!--Device-DistributedOptions-isDistributed?: boolean--><!--Device-DistributedOptions-isDistributed?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -37,6 +41,8 @@ List of the devices to which the notification can be synchronized.
 
 **Since:** 8
 
+<!--Device-DistributedOptions-supportDisplayDevices?: Array<string>--><!--Device-DistributedOptions-supportDisplayDevices?: Array<string>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## supportOperateDevices
@@ -50,6 +56,8 @@ List of the devices on which the notification can be opened.
 **Type:** Array<string>
 
 **Since:** 8
+
+<!--Device-DistributedOptions-supportOperateDevices?: Array<string>--><!--Device-DistributedOptions-supportOperateDevices?: Array<string>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

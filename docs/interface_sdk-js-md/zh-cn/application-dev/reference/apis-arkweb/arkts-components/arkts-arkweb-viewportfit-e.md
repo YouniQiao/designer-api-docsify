@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare enum ViewportFit--><!--Device-unnamed-declare enum ViewportFit-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## AUTO
@@ -16,7 +18,9 @@ AUTO = 0
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ViewportFit-AUTO = 0--><!--Device-ViewportFit-AUTO = 0-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -30,7 +34,9 @@ CONTAINS = 1
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ViewportFit-CONTAINS = 1--><!--Device-ViewportFit-CONTAINS = 1-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -44,7 +50,9 @@ COVER = 2
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ViewportFit-COVER = 2--><!--Device-ViewportFit-COVER = 2-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

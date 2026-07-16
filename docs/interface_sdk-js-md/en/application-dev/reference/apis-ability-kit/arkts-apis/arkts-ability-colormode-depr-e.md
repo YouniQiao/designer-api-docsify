@@ -8,6 +8,8 @@ Enumerates the color modes.
 
 **Substitutes:** ColorMode
 
+<!--Device-ConfigurationConstant-export enum ColorMode--><!--Device-ConfigurationConstant-export enum ColorMode-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## COLOR_MODE_NOT_SET
@@ -23,6 +25,8 @@ Unspecified color mode.
 **Deprecated since:** 9
 
 **Substitutes:** COLOR_MODE_NOT_SET
+
+<!--Device-ColorMode-COLOR_MODE_NOT_SET = -1--><!--Device-ColorMode-COLOR_MODE_NOT_SET = -1-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -40,6 +44,8 @@ Dark mode.
 
 **Substitutes:** COLOR_MODE_DARK
 
+<!--Device-ColorMode-COLOR_MODE_DARK = 0--><!--Device-ColorMode-COLOR_MODE_DARK = 0-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## COLOR_MODE_LIGHT
@@ -55,6 +61,8 @@ Light mode.
 **Deprecated since:** 9
 
 **Substitutes:** COLOR_MODE_LIGHT
+
+<!--Device-ColorMode-COLOR_MODE_LIGHT = 1--><!--Device-ColorMode-COLOR_MODE_LIGHT = 1-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 

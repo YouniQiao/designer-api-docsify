@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-interface AVRecorderProfile--><!--Device-unnamed-interface AVRecorderProfile-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
+
+## 导入模块
+
+```TypeScript
+import { media } from '@kit.MediaKit';
+```
 
 ## enableStableQualityMode
 
@@ -17,6 +25,8 @@ enableStableQualityMode?: boolean
 **类型：** boolean
 
 **起始版本：** 18
+
+<!--Device-AVRecorderProfile-enableStableQualityMode?: boolean--><!--Device-AVRecorderProfile-enableStableQualityMode?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 

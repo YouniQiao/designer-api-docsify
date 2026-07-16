@@ -2,6 +2,8 @@
 
 **Since:** 7
 
+<!--Device-unnamed-interface PermissionOptions--><!--Device-unnamed-interface PermissionOptions-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## pid
@@ -20,6 +22,8 @@ Process ID.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-PermissionOptions-pid?: number--><!--Device-PermissionOptions-pid?: number-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## uid
@@ -37,6 +41,8 @@ User ID.
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-PermissionOptions-uid?: number--><!--Device-PermissionOptions-uid?: number-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

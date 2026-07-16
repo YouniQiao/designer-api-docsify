@@ -4,6 +4,8 @@ Indicates the causes of call disconnection.
 
 **Since:** 8
 
+<!--Device-call-export enum DisconnectedReason--><!--Device-call-export enum DisconnectedReason-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -17,6 +19,8 @@ UNASSIGNED_NUMBER = 1
 Indicates the call disconnect due to unassigned number.
 
 **Since:** 8
+
+<!--Device-DisconnectedReason-UNASSIGNED_NUMBER = 1--><!--Device-DisconnectedReason-UNASSIGNED_NUMBER = 1-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -32,6 +36,8 @@ Indicates the call disconnect due to no route to destination.
 
 **Since:** 8
 
+<!--Device-DisconnectedReason-NO_ROUTE_TO_DESTINATION = 3--><!--Device-DisconnectedReason-NO_ROUTE_TO_DESTINATION = 3-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -45,6 +51,8 @@ CHANNEL_UNACCEPTABLE = 6
 Indicates the call disconnect due to channel unacceptable.
 
 **Since:** 8
+
+<!--Device-DisconnectedReason-CHANNEL_UNACCEPTABLE = 6--><!--Device-DisconnectedReason-CHANNEL_UNACCEPTABLE = 6-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -60,6 +68,8 @@ Indicates the call disconnect due to operator determined barring.
 
 **Since:** 8
 
+<!--Device-DisconnectedReason-OPERATOR_DETERMINED_BARRING = 8--><!--Device-DisconnectedReason-OPERATOR_DETERMINED_BARRING = 8-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -73,6 +83,8 @@ CALL_COMPLETED_ELSEWHERE = 13
 Indicates the call disconnect due to call completed elsewhere.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-CALL_COMPLETED_ELSEWHERE = 13--><!--Device-DisconnectedReason-CALL_COMPLETED_ELSEWHERE = 13-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -88,6 +100,8 @@ Indicates the call disconnect due to normal call clearing.
 
 **Since:** 8
 
+<!--Device-DisconnectedReason-NORMAL_CALL_CLEARING = 16--><!--Device-DisconnectedReason-NORMAL_CALL_CLEARING = 16-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -101,6 +115,8 @@ USER_BUSY = 17
 Indicates the call disconnect due to user busy.
 
 **Since:** 8
+
+<!--Device-DisconnectedReason-USER_BUSY = 17--><!--Device-DisconnectedReason-USER_BUSY = 17-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -116,6 +132,8 @@ Indicates the call disconnect due to no user responding.
 
 **Since:** 8
 
+<!--Device-DisconnectedReason-NO_USER_RESPONDING = 18--><!--Device-DisconnectedReason-NO_USER_RESPONDING = 18-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -129,6 +147,8 @@ USER_ALERTING_NO_ANSWER = 19
 Indicates the call disconnect due to user alerting, no answer.
 
 **Since:** 8
+
+<!--Device-DisconnectedReason-USER_ALERTING_NO_ANSWER = 19--><!--Device-DisconnectedReason-USER_ALERTING_NO_ANSWER = 19-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -144,6 +164,8 @@ Indicates the call disconnect due to call rejected.
 
 **Since:** 8
 
+<!--Device-DisconnectedReason-CALL_REJECTED = 21--><!--Device-DisconnectedReason-CALL_REJECTED = 21-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -157,6 +179,8 @@ NUMBER_CHANGED = 22
 Indicates the call disconnect due to number changed.
 
 **Since:** 8
+
+<!--Device-DisconnectedReason-NUMBER_CHANGED = 22--><!--Device-DisconnectedReason-NUMBER_CHANGED = 22-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -172,6 +196,8 @@ Indicates the call rejected due to feature at the destination.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-CALL_REJECTED_DUE_TO_FEATURE_AT_THE_DESTINATION = 24--><!--Device-DisconnectedReason-CALL_REJECTED_DUE_TO_FEATURE_AT_THE_DESTINATION = 24-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -185,6 +211,8 @@ FAILED_PRE_EMPTION = 25
 Indicates the call disconnect due to pre-emption.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-FAILED_PRE_EMPTION = 25--><!--Device-DisconnectedReason-FAILED_PRE_EMPTION = 25-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -200,6 +228,8 @@ Indicates the call disconnect due to non selected user clearing.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-NON_SELECTED_USER_CLEARING = 26--><!--Device-DisconnectedReason-NON_SELECTED_USER_CLEARING = 26-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -213,6 +243,8 @@ DESTINATION_OUT_OF_ORDER = 27
 Indicates the call disconnect due to destination out of order.
 
 **Since:** 8
+
+<!--Device-DisconnectedReason-DESTINATION_OUT_OF_ORDER = 27--><!--Device-DisconnectedReason-DESTINATION_OUT_OF_ORDER = 27-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -228,6 +260,8 @@ Indicates the call disconnect due to invalid number format.
 
 **Since:** 8
 
+<!--Device-DisconnectedReason-INVALID_NUMBER_FORMAT = 28--><!--Device-DisconnectedReason-INVALID_NUMBER_FORMAT = 28-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -241,6 +275,8 @@ FACILITY_REJECTED = 29
 Indicates the call disconnect due to facility rejected.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-FACILITY_REJECTED = 29--><!--Device-DisconnectedReason-FACILITY_REJECTED = 29-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -256,6 +292,8 @@ Indicates the call disconnect due to response to status enquiry.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-RESPONSE_TO_STATUS_ENQUIRY = 30--><!--Device-DisconnectedReason-RESPONSE_TO_STATUS_ENQUIRY = 30-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -269,6 +307,8 @@ NORMAL_UNSPECIFIED = 31
 Indicates the call disconnected normally, no specified cause.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-NORMAL_UNSPECIFIED = 31--><!--Device-DisconnectedReason-NORMAL_UNSPECIFIED = 31-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -284,6 +324,8 @@ Indicates the call disconnect due to no circuit/channel available.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-NO_CIRCUIT_CHANNEL_AVAILABLE = 34--><!--Device-DisconnectedReason-NO_CIRCUIT_CHANNEL_AVAILABLE = 34-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -297,6 +339,8 @@ NETWORK_OUT_OF_ORDER = 38
 Indicates the call disconnect due to network out of order.
 
 **Since:** 8
+
+<!--Device-DisconnectedReason-NETWORK_OUT_OF_ORDER = 38--><!--Device-DisconnectedReason-NETWORK_OUT_OF_ORDER = 38-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -312,6 +356,8 @@ Indicates the call disconnect due to temporary failure.
 
 **Since:** 8
 
+<!--Device-DisconnectedReason-TEMPORARY_FAILURE = 41--><!--Device-DisconnectedReason-TEMPORARY_FAILURE = 41-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -325,6 +371,8 @@ SWITCHING_EQUIPMENT_CONGESTION = 42
 Indicates the call disconnect due to switching equipment congestion.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-SWITCHING_EQUIPMENT_CONGESTION = 42--><!--Device-DisconnectedReason-SWITCHING_EQUIPMENT_CONGESTION = 42-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -340,6 +388,8 @@ Indicates the call disconnect due to access information discarded.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-ACCESS_INFORMATION_DISCARDED = 43--><!--Device-DisconnectedReason-ACCESS_INFORMATION_DISCARDED = 43-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -353,6 +403,8 @@ REQUEST_CIRCUIT_CHANNEL_NOT_AVAILABLE = 44
 Indicates the call disconnect due to requested circuit/channel not available.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-REQUEST_CIRCUIT_CHANNEL_NOT_AVAILABLE = 44--><!--Device-DisconnectedReason-REQUEST_CIRCUIT_CHANNEL_NOT_AVAILABLE = 44-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -368,6 +420,8 @@ Indicates the call disconnect due to resources unavailable unspecified.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-RESOURCES_UNAVAILABLE_UNSPECIFIED = 47--><!--Device-DisconnectedReason-RESOURCES_UNAVAILABLE_UNSPECIFIED = 47-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -381,6 +435,8 @@ QUALITY_OF_SERVICE_UNAVAILABLE = 49
 Indicates the call disconnect due to quality of service unavailable.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-QUALITY_OF_SERVICE_UNAVAILABLE = 49--><!--Device-DisconnectedReason-QUALITY_OF_SERVICE_UNAVAILABLE = 49-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -396,6 +452,8 @@ Indicates the call disconnect due to requested facility not subscribed.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-REQUESTED_FACILITY_NOT_SUBSCRIBED = 50--><!--Device-DisconnectedReason-REQUESTED_FACILITY_NOT_SUBSCRIBED = 50-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -409,6 +467,8 @@ INCOMING_CALLS_BARRED_WITHIN_THE_CUG = 55
 Indicates the call disconnect due to incoming calls barred within the CUG.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-INCOMING_CALLS_BARRED_WITHIN_THE_CUG = 55--><!--Device-DisconnectedReason-INCOMING_CALLS_BARRED_WITHIN_THE_CUG = 55-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -424,6 +484,8 @@ Indicates the call disconnect due to bearer capability not authorized.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-BEARER_CAPABILITY_NOT_AUTHORIZED = 57--><!--Device-DisconnectedReason-BEARER_CAPABILITY_NOT_AUTHORIZED = 57-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -437,6 +499,8 @@ BEARER_CAPABILITY_NOT_PRESENTLY_AVAILABLE = 58
 Indicates the call disconnect due to bearer capability not presently available.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-BEARER_CAPABILITY_NOT_PRESENTLY_AVAILABLE = 58--><!--Device-DisconnectedReason-BEARER_CAPABILITY_NOT_PRESENTLY_AVAILABLE = 58-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -452,6 +516,8 @@ Indicates the call disconnect due to service or option not available, unspecifie
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-SERVICE_OR_OPTION_NOT_AVAILABLE_UNSPECIFIED = 63--><!--Device-DisconnectedReason-SERVICE_OR_OPTION_NOT_AVAILABLE_UNSPECIFIED = 63-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -465,6 +531,8 @@ BEARER_SERVICE_NOT_IMPLEMENTED = 65
 Indicates the call disconnect due to bearer service not implemented.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-BEARER_SERVICE_NOT_IMPLEMENTED = 65--><!--Device-DisconnectedReason-BEARER_SERVICE_NOT_IMPLEMENTED = 65-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -480,6 +548,8 @@ Indicates the call disconnect due to ACM equal to or greater than the maximum va
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-ACM_EQUALTO_OR_GREATER_THAN_THE_MAXIMUM_VALUE = 68--><!--Device-DisconnectedReason-ACM_EQUALTO_OR_GREATER_THAN_THE_MAXIMUM_VALUE = 68-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -493,6 +563,8 @@ REQUESTED_FACILITY_NOT_IMPLEMENTED = 69
 Indicates the call disconnect due to requested facility not implemented.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-REQUESTED_FACILITY_NOT_IMPLEMENTED = 69--><!--Device-DisconnectedReason-REQUESTED_FACILITY_NOT_IMPLEMENTED = 69-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -508,6 +580,8 @@ Indicates the call disconnect due to only restricted digital info BC available.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-ONLY_RESTRICTED_DIGITAL_INFO_BEARER_CAPABILITY_IS_AVAILABLE = 70--><!--Device-DisconnectedReason-ONLY_RESTRICTED_DIGITAL_INFO_BEARER_CAPABILITY_IS_AVAILABLE = 70-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -521,6 +595,8 @@ SERVICE_OR_OPTION_NOT_IMPLEMENTED_UNSPECIFIED = 79
 Indicates the call disconnect due to service or option not implemented, unspecified.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-SERVICE_OR_OPTION_NOT_IMPLEMENTED_UNSPECIFIED = 79--><!--Device-DisconnectedReason-SERVICE_OR_OPTION_NOT_IMPLEMENTED_UNSPECIFIED = 79-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -536,6 +612,8 @@ Indicates the call disconnect due to invalid transaction identifier value.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-INVALID_TRANSACTION_IDENTIFIER_VALUE = 81--><!--Device-DisconnectedReason-INVALID_TRANSACTION_IDENTIFIER_VALUE = 81-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -549,6 +627,8 @@ USER_NOT_MEMBER_OF_CUG = 87
 Indicates the call disconnect due to user not member of CUG.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-USER_NOT_MEMBER_OF_CUG = 87--><!--Device-DisconnectedReason-USER_NOT_MEMBER_OF_CUG = 87-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -564,6 +644,8 @@ Indicates the call disconnect due to incompatible destination.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-INCOMPATIBLE_DESTINATION = 88--><!--Device-DisconnectedReason-INCOMPATIBLE_DESTINATION = 88-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -577,6 +659,8 @@ INVALID_TRANSIT_NETWORK_SELECTION = 91
 Indicates the call disconnect due to invalid transit network selection.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-INVALID_TRANSIT_NETWORK_SELECTION = 91--><!--Device-DisconnectedReason-INVALID_TRANSIT_NETWORK_SELECTION = 91-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -592,6 +676,8 @@ Indicates the call disconnect due to semantically incorrect message.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-SEMANTICALLY_INCORRECT_MESSAGE = 95--><!--Device-DisconnectedReason-SEMANTICALLY_INCORRECT_MESSAGE = 95-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -605,6 +691,8 @@ INVALID_MANDATORY_INFORMATION = 96
 Indicates the call disconnect due to invalid mandatory information.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-INVALID_MANDATORY_INFORMATION = 96--><!--Device-DisconnectedReason-INVALID_MANDATORY_INFORMATION = 96-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -620,6 +708,8 @@ Indicates the call disconnect due to msg type non-existent or not implemented.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-MESSAGE_TYPE_NON_EXISTENT_OR_NOT_IMPLEMENTED = 97--><!--Device-DisconnectedReason-MESSAGE_TYPE_NON_EXISTENT_OR_NOT_IMPLEMENTED = 97-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -633,6 +723,8 @@ MESSAGE_TYPE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE = 98
 Indicates the call disconnect due to msg type not compatible with protocol state.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-MESSAGE_TYPE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE = 98--><!--Device-DisconnectedReason-MESSAGE_TYPE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE = 98-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -648,6 +740,8 @@ Indicates the call disconnect due to IE non-existent or not implemented.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-INFORMATION_ELEMENT_NON_EXISTENT_OR_NOT_IMPLEMENTED = 99--><!--Device-DisconnectedReason-INFORMATION_ELEMENT_NON_EXISTENT_OR_NOT_IMPLEMENTED = 99-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -661,6 +755,8 @@ CONDITIONAL_IE_ERROR = 100
 Indicates the call disconnect due to conditional IE error.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-CONDITIONAL_IE_ERROR = 100--><!--Device-DisconnectedReason-CONDITIONAL_IE_ERROR = 100-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -676,6 +772,8 @@ Indicates the call disconnect due to message not compatible with protocol state.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-MESSAGE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE = 101--><!--Device-DisconnectedReason-MESSAGE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE = 101-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -689,6 +787,8 @@ RECOVERY_ON_TIMER_EXPIRED = 102
 Indicates the call disconnect due to recovery on timer expiry timer number.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-RECOVERY_ON_TIMER_EXPIRED = 102--><!--Device-DisconnectedReason-RECOVERY_ON_TIMER_EXPIRED = 102-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -704,6 +804,8 @@ Indicates the call disconnect due to protocol error, unspecified.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-PROTOCOL_ERROR_UNSPECIFIED = 111--><!--Device-DisconnectedReason-PROTOCOL_ERROR_UNSPECIFIED = 111-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -717,6 +819,8 @@ INTERWORKING_UNSPECIFIED = 127
 Indicates the call disconnect due to interworking, unspecified.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-INTERWORKING_UNSPECIFIED = 127--><!--Device-DisconnectedReason-INTERWORKING_UNSPECIFIED = 127-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -732,6 +836,8 @@ Indicates the call disconnect due to call barred.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-CALL_BARRED = 240--><!--Device-DisconnectedReason-CALL_BARRED = 240-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -745,6 +851,8 @@ FDN_BLOCKED = 241
 Indicates the call disconnect due to FDN blocked.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-FDN_BLOCKED = 241--><!--Device-DisconnectedReason-FDN_BLOCKED = 241-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -760,6 +868,8 @@ Indicates the call disconnect due to IMSI in VLR is unknown.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-IMSI_UNKNOWN_IN_VLR = 242--><!--Device-DisconnectedReason-IMSI_UNKNOWN_IN_VLR = 242-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -773,6 +883,8 @@ IMEI_NOT_ACCEPTED = 243
 Indicates the call disconnect due to IMEI not accepted.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-IMEI_NOT_ACCEPTED = 243--><!--Device-DisconnectedReason-IMEI_NOT_ACCEPTED = 243-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -788,6 +900,8 @@ Indicates the call disconnect due to dial modified to USSD.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-DIAL_MODIFIED_TO_USSD = 244--><!--Device-DisconnectedReason-DIAL_MODIFIED_TO_USSD = 244-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -801,6 +915,8 @@ DIAL_MODIFIED_TO_SS = 245
 Indicates the call disconnect due to dial modified to SS.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-DIAL_MODIFIED_TO_SS = 245--><!--Device-DisconnectedReason-DIAL_MODIFIED_TO_SS = 245-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -816,6 +932,8 @@ Indicates the call disconnect due to dial modified to dial.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-DIAL_MODIFIED_TO_DIAL = 246--><!--Device-DisconnectedReason-DIAL_MODIFIED_TO_DIAL = 246-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -829,6 +947,8 @@ RADIO_OFF = 247
 Indicates the call disconnect due to Radio off.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-RADIO_OFF = 247--><!--Device-DisconnectedReason-RADIO_OFF = 247-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -844,6 +964,8 @@ Indicates the call disconnect due to out of service.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-OUT_OF_SERVICE = 248--><!--Device-DisconnectedReason-OUT_OF_SERVICE = 248-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -857,6 +979,8 @@ NO_VALID_SIM = 249
 Indicates the call disconnect due to invalid SIM.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-NO_VALID_SIM = 249--><!--Device-DisconnectedReason-NO_VALID_SIM = 249-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -872,6 +996,8 @@ Indicates the call disconnect due to radio internal error.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-RADIO_INTERNAL_ERROR = 250--><!--Device-DisconnectedReason-RADIO_INTERNAL_ERROR = 250-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -885,6 +1011,8 @@ NETWORK_RESP_TIMEOUT = 251
 Indicates the call disconnect due to network response timeout.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-NETWORK_RESP_TIMEOUT = 251--><!--Device-DisconnectedReason-NETWORK_RESP_TIMEOUT = 251-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -900,6 +1028,8 @@ Indicates the call disconnect due to network reject.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-NETWORK_REJECT = 252--><!--Device-DisconnectedReason-NETWORK_REJECT = 252-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -913,6 +1043,8 @@ RADIO_ACCESS_FAILURE = 253
 Indicates the call disconnect due to radio access failure.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-RADIO_ACCESS_FAILURE = 253--><!--Device-DisconnectedReason-RADIO_ACCESS_FAILURE = 253-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -928,6 +1060,8 @@ Indicates the call disconnect due to radio link failure.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-RADIO_LINK_FAILURE = 254--><!--Device-DisconnectedReason-RADIO_LINK_FAILURE = 254-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -941,6 +1075,8 @@ RADIO_LINK_LOST = 255
 Indicates the call disconnect due to radio link lost.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-RADIO_LINK_LOST = 255--><!--Device-DisconnectedReason-RADIO_LINK_LOST = 255-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -956,6 +1092,8 @@ Indicates the call disconnect due to radio uplink failure.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-RADIO_UPLINK_FAILURE = 256--><!--Device-DisconnectedReason-RADIO_UPLINK_FAILURE = 256-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -969,6 +1107,8 @@ RADIO_SETUP_FAILURE = 257
 Indicates the call disconnect due to radio setup failure.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-RADIO_SETUP_FAILURE = 257--><!--Device-DisconnectedReason-RADIO_SETUP_FAILURE = 257-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -984,6 +1124,8 @@ Indicates the call disconnect due to radio release normal.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-RADIO_RELEASE_NORMAL = 258--><!--Device-DisconnectedReason-RADIO_RELEASE_NORMAL = 258-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -997,6 +1139,8 @@ RADIO_RELEASE_ABNORMAL = 259
 Indicates the call disconnect due to radio release abnormal.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-RADIO_RELEASE_ABNORMAL = 259--><!--Device-DisconnectedReason-RADIO_RELEASE_ABNORMAL = 259-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -1012,6 +1156,8 @@ Indicates the call disconnect due to access class blocked.
 
 **Since:** 9
 
+<!--Device-DisconnectedReason-ACCESS_CLASS_BLOCKED = 260--><!--Device-DisconnectedReason-ACCESS_CLASS_BLOCKED = 260-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -1025,6 +1171,8 @@ NETWORK_DETACH = 261
 Indicates the call disconnect due to network detach.
 
 **Since:** 9
+
+<!--Device-DisconnectedReason-NETWORK_DETACH = 261--><!--Device-DisconnectedReason-NETWORK_DETACH = 261-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -1040,6 +1188,8 @@ Indicates the call disconnect due to invalid parameter.
 
 **Since:** 8
 
+<!--Device-DisconnectedReason-INVALID_PARAMETER = 1025--><!--Device-DisconnectedReason-INVALID_PARAMETER = 1025-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -1053,6 +1203,8 @@ SIM_NOT_EXIT = 1026
 Indicates the call disconnect due to sim not exit.
 
 **Since:** 8
+
+<!--Device-DisconnectedReason-SIM_NOT_EXIT = 1026--><!--Device-DisconnectedReason-SIM_NOT_EXIT = 1026-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -1068,6 +1220,8 @@ Indicates the call disconnect due to sim pin need.
 
 **Since:** 8
 
+<!--Device-DisconnectedReason-SIM_PIN_NEED = 1027--><!--Device-DisconnectedReason-SIM_PIN_NEED = 1027-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -1081,6 +1235,8 @@ CALL_NOT_ALLOW = 1029
 Indicates the call disconnect due to call not allow.
 
 **Since:** 8
+
+<!--Device-DisconnectedReason-CALL_NOT_ALLOW = 1029--><!--Device-DisconnectedReason-CALL_NOT_ALLOW = 1029-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -1096,6 +1252,8 @@ Indicates the call disconnect due to sim invalid.
 
 **Since:** 8
 
+<!--Device-DisconnectedReason-SIM_INVALID = 1045--><!--Device-DisconnectedReason-SIM_INVALID = 1045-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -1109,6 +1267,8 @@ UNKNOWN = 1279
 Indicates the call disconnect due to unknown error.
 
 **Since:** 8
+
+<!--Device-DisconnectedReason-UNKNOWN = 1279--><!--Device-DisconnectedReason-UNKNOWN = 1279-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 

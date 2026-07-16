@@ -16,6 +16,8 @@ Controls whether a watermark image is displayed on the screen. This API uses a p
 
 **Since:** 10
 
+<!--Device-window-function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean): Promise<void>--><!--Device-window-function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -24,14 +26,14 @@ Controls whether a watermark image is displayed on the screen. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | Yes | Watermark image, which can be obtained by calling[createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-createpixelmap-f.md#createpixelmap-2). |
-| enable | boolean | Yes | Whether to display the watermark image. **true** to display, **false** otherwise. Afterthe watermark image is displayed, you need to set this parameter to **false** to disable the watermark display. |
+| pixelMap | image.PixelMap | Yes | Watermark image, which can be obtained by calling [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-createpixelmap-f.md#createpixelmap-2). |
+| enable | boolean | Yes | Whether to display the watermark image. **true** to display, **false** otherwise. After the watermark image is displayed, you need to set this parameter to **false** to disable the watermark display. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -86,6 +88,8 @@ Set watermark image.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-window-function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, priority: int): Promise<void>--><!--Device-window-function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, priority: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -96,13 +100,13 @@ Set watermark image.
 | --- | --- | --- | --- |
 | pixelMap | image.PixelMap | Yes | Watermark image. |
 | enable | boolean | Yes | Show watermark if true. |
-| priority | number | Yes | Specifies the priority level for the incoming watermark image to take effect. A smallervalue of this parameter indicates a higher priority. The value range must be greater than or equal to 0. |
+| priority | number | Yes | Specifies the priority level for the incoming watermark image to take effect. A smaller value of this parameter indicates a higher priority. The value range must be greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Error codes:**
 
@@ -150,10 +154,11 @@ image.createPixelMap(color, initializationOptions).then((pixelMap: image.PixelMa
 function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Controls whether a watermark image is displayed on the screen. This API uses an asynchronous callback to return the
-result.
+Controls whether a watermark image is displayed on the screen. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-window-function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, callback: AsyncCallback<void>): void--><!--Device-window-function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -163,9 +168,9 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | Yes | Watermark image, which can be obtained by calling[createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-createpixelmap-f.md#createpixelmap-2). |
-| enable | boolean | Yes | Whether to display the watermark image. **true** to display, **false** otherwise. Afterthe watermark image is displayed, you need to set this parameter to **false** to disable the watermark display. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| pixelMap | image.PixelMap | Yes | Watermark image, which can be obtained by calling [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-createpixelmap-f.md#createpixelmap-2). |
+| enable | boolean | Yes | Whether to display the watermark image. **true** to display, **false** otherwise. After the watermark image is displayed, you need to set this parameter to **false** to disable the watermark display. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 

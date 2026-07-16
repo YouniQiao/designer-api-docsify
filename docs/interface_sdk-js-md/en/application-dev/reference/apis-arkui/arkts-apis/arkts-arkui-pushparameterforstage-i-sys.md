@@ -4,6 +4,8 @@ Plugin component push parameters which is used in push function.
 
 **Since:** 9
 
+<!--Device-pluginComponentManager-interface PushParameterForStage--><!--Device-pluginComponentManager-interface PushParameterForStage-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Defines data.
 
 **Since:** 9
 
+<!--Device-PushParameterForStage-data: KVObject--><!--Device-PushParameterForStage-data: KVObject-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Defines extraData.
 **Type:** KVObject
 
 **Since:** 9
+
+<!--Device-PushParameterForStage-extraData: KVObject--><!--Device-PushParameterForStage-extraData: KVObject-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,6 +64,8 @@ Defines jsonPath.
 
 **Since:** 9
 
+<!--Device-PushParameterForStage-jsonPath?: string--><!--Device-PushParameterForStage-jsonPath?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Defines name.
 **Type:** string
 
 **Since:** 9
+
+<!--Device-PushParameterForStage-name: string--><!--Device-PushParameterForStage-name: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,6 +100,8 @@ Defines owner.
 
 **Since:** 9
 
+<!--Device-PushParameterForStage-owner: Want--><!--Device-PushParameterForStage-owner: Want-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -105,6 +117,8 @@ Defines target.
 **Type:** Want
 
 **Since:** 9
+
+<!--Device-PushParameterForStage-target: Want--><!--Device-PushParameterForStage-target: Want-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

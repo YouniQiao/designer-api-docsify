@@ -12,14 +12,15 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAppProvisionInfo(bundleName: string, callback: AsyncCallback<AppProvisionInfo>): void
 ```
 
-Obtains the provision profile based on the given bundle name. This API uses an asynchronous callback to return the
-result.
+Obtains the provision profile based on the given bundle name. This API uses an asynchronous callback to return the result.
 
 No permission is required for obtaining the caller's own information.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, callback: AsyncCallback<AppProvisionInfo>): void--><!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, callback: AsyncCallback<AppProvisionInfo>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -30,7 +31,7 @@ No permission is required for obtaining the caller's own information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | AsyncCallback&lt;AppProvisionInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return theresult. If the operation is successful, **err** is **null** and **data** is the provision profile. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AppProvisionInfo> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the provision profile. |
 
 **Error codes:**
 
@@ -72,14 +73,15 @@ try {
 function getAppProvisionInfo(bundleName: string, userId: number, callback: AsyncCallback<AppProvisionInfo>): void
 ```
 
-Obtains the provision profile based on the given bundle name and user ID. This API uses an asynchronous callback to
-return the result.
+Obtains the provision profile based on the given bundle name and user ID. This API uses an asynchronous callback to return the result.
 
 No permission is required for obtaining the caller's own information.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, userId: int, callback: AsyncCallback<AppProvisionInfo>): void--><!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, userId: int, callback: AsyncCallback<AppProvisionInfo>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -90,8 +92,8 @@ No permission is required for obtaining the caller's own information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| userId | number | Yes | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). |
-| callback | AsyncCallback&lt;AppProvisionInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return theresult. If the operation is successful, **err** is **null** and **data** is the provision profile. |
+| userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AppProvisionInfo> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the provision profile. |
 
 **Error codes:**
 
@@ -135,14 +137,15 @@ try {
 function getAppProvisionInfo(bundleName: string, userId?: number): Promise<AppProvisionInfo>
 ```
 
-Obtains the provision profile based on the given bundle name and user ID. This API uses a promise to return the
-result.
+Obtains the provision profile based on the given bundle name and user ID. This API uses a promise to return the result.
 
 No permission is required for obtaining the caller's own information.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, userId?: int): Promise<AppProvisionInfo>--><!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, userId?: int): Promise<AppProvisionInfo>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -153,13 +156,13 @@ No permission is required for obtaining the caller's own information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| userId | number | No | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AppProvisionInfo&gt; | Promise used to return the provision profile obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AppProvisionInfo> | Promise used to return the provision profile obtained. |
 
 **Error codes:**
 

@@ -1,5 +1,11 @@
 # @ohos.arkui.advanced.SegmentButtonV2
 
+## 导入模块
+
+```TypeScript
+import { OnSelectedIndexesChange, TabSegmentButtonV2, SegmentButtonV2Items, MultiCapsuleSegmentButtonV2, OnSelectedIndexChange, SegmentButtonV2ItemOptions, SegmentButtonV2Item, CapsuleSegmentButtonV2 } from '@kit.ArkUI';
+```
+
 ## 汇总
 
 ### 类
@@ -30,7 +36,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [SegmentButtonV2ItemOptions](arkts-arkui-segmentbuttonv2itemoptions-i.md) | 配置分段按钮选项参数。&gt; **说明**&gt;&gt; 1. 当配置`symbol`和`icon`时，`symbol`的显示优先级更高。&gt;&gt; 2. 当`symbol`和`symbolModifier`同时设置HM Symbol资源时，`symbolModifier`设置的资源具有更高的显示优先级。 |
+| [SegmentButtonV2ItemOptions](arkts-arkui-segmentbuttonv2itemoptions-i.md) | 配置分段按钮选项参数。&gt; **说明** &gt; &gt; 1. 当配置`symbol`和`icon`时，`symbol`的显示优先级更高。 &gt; &gt; 2. 当`symbol`和`symbolModifier`同时设置HM Symbol资源时，`symbolModifier`设置的资源具有更高的显示优先级。 |
 
 ### 类型
 

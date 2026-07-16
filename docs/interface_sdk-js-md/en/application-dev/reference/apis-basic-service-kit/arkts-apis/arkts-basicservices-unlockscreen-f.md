@@ -18,13 +18,15 @@ Unlock the screen.
 
 **Deprecated since:** 9
 
+<!--Device-screenLock-function unlockScreen(callback: AsyncCallback<void>): void--><!--Device-screenLock-function unlockScreen(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of unlockScreen. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of unlockScreen. |
 
 **Example**
 
@@ -54,13 +56,15 @@ Unlock the screen.
 
 **Deprecated since:** 9
 
+<!--Device-screenLock-function unlockScreen(): Promise<void>--><!--Device-screenLock-function unlockScreen(): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Example**
 

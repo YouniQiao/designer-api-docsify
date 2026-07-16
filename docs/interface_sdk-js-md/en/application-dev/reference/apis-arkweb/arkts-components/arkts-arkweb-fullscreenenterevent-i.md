@@ -4,6 +4,8 @@ Provides details about the event that the **Web** component to enter the full-sc
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface FullScreenEnterEvent--><!--Device-unnamed-declare interface FullScreenEnterEvent-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## handler
@@ -20,6 +22,8 @@ Function handle for exiting full screen mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FullScreenEnterEvent-handler: FullScreenExitHandler--><!--Device-FullScreenEnterEvent-handler: FullScreenExitHandler-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## videoHeight
@@ -28,15 +32,15 @@ Function handle for exiting full screen mode.
 videoHeight?: number
 ```
 
-Video height, in px. If the element that enters fulls screen mode is a **<video>** element, the value represents its
-height; if the element that enters fulls screen mode contains a **<video>** element, the value represents the height
-of the first sub-video element; in other cases, the value is **0**.
+Video height, in px. If the element that enters fulls screen mode is a **<video>** element, the value represents its height; if the element that enters fulls screen mode contains a **<video>** element, the value represents the height of the first sub-video element; in other cases, the value is **0**.
 
 **Type:** number
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FullScreenEnterEvent-videoHeight?: number--><!--Device-FullScreenEnterEvent-videoHeight?: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -46,15 +50,15 @@ of the first sub-video element; in other cases, the value is **0**.
 videoWidth?: number
 ```
 
-Video width, in px. If the element that enters fulls screen mode is a **<video>** element, the value represents its
-width; if the element that enters fulls screen mode contains a **<video>** element, the value represents the width
-of the first sub-video element; in other cases, the value is **0**.
+Video width, in px. If the element that enters fulls screen mode is a **<video>** element, the value represents its width; if the element that enters fulls screen mode contains a **<video>** element, the value represents the width of the first sub-video element; in other cases, the value is **0**.
 
 **Type:** number
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FullScreenEnterEvent-videoWidth?: number--><!--Device-FullScreenEnterEvent-videoWidth?: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

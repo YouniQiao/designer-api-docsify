@@ -6,6 +6,8 @@ Defines the options used in get().
 
 **Deprecated since:** 10
 
+<!--Device-unnamed-export interface FileGetOption--><!--Device-unnamed-export interface FileGetOption-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## complete
@@ -22,6 +24,8 @@ Callback invoked when the API call is complete.
 
 **Deprecated since:** 10
 
+<!--Device-FileGetOption-complete?: () => void--><!--Device-FileGetOption-complete?: () => void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## fail
@@ -30,18 +34,15 @@ Callback invoked when the API call is complete.
 fail?: (data: string, code: number) => void
 ```
 
-Callback invoked when the API call fails.
-**data** indicates the error information.
-**code** indicates the returned error code:
-**202**: invalid parameter
-**300**: I/O error
-**301**: file or directory not found
+Callback invoked when the API call fails.**data** indicates the error information.**code** indicates the returned error code:**202**: invalid parameter **300**: I/O error **301**: file or directory not found
 
 **Type:** (data: string, code: number) => void
 
 **Since:** 3
 
 **Deprecated since:** 10
+
+<!--Device-FileGetOption-fail?: (data: string, code: number) => void--><!--Device-FileGetOption-fail?: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -51,14 +52,15 @@ Callback invoked when the API call fails.
 recursive?: boolean
 ```
 
-Indicates whether to recursively obtain the file list in a subdirectory. The value **true** indicates to
-recursively obtain the file list, and **false** indicates the opposite. The default value is **false**.
+Indicates whether to recursively obtain the file list in a subdirectory. The value **true** indicates to recursively obtain the file list, and **false** indicates the opposite. The default value is **false**.
 
 **Type:** boolean
 
 **Since:** 3
 
 **Deprecated since:** 10
+
+<!--Device-FileGetOption-recursive?: boolean--><!--Device-FileGetOption-recursive?: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -76,6 +78,8 @@ Callback invoked when the API call is successful. **file** is [FileResponse](ark
 
 **Deprecated since:** 10
 
+<!--Device-FileGetOption-success?: (file: FileResponse) => void--><!--Device-FileGetOption-success?: (file: FileResponse) => void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## uri
@@ -84,16 +88,15 @@ Callback invoked when the API call is successful. **file** is [FileResponse](ark
 uri: string
 ```
 
-URI of the file. Restricted by the underlying file system of lite wearables, the value must meet the following
-requirements:
-1. The URI cannot contain the following special characters: \"*+,:;<=>?[]|\x7F.
-2. The value can contain a maximum of 128 characters.
+URI of the file. Restricted by the underlying file system of lite wearables, the value must meet the following requirements:1. The URI cannot contain the following special characters: \"*+,:;<=>?[]|\x7F.2. The value can contain a maximum of 128 characters.
 
 **Type:** string
 
 **Since:** 3
 
 **Deprecated since:** 10
+
+<!--Device-FileGetOption-uri: string--><!--Device-FileGetOption-uri: string-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 

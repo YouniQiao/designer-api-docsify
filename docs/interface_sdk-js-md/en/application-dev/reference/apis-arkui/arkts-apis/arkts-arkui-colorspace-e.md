@@ -1,36 +1,46 @@
 # ColorSpace
 
-Enumerates the color spaces.
+Enumerates color space types for specifying color rendering modes.
 
-**Since:** 8
+**Since:** 20
 
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
+<!--Device-unnamed-declare enum ColorSpace--><!--Device-unnamed-declare enum ColorSpace-End-->
 
-## DEFAULT
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-```TypeScript
-DEFAULT = 0
-```
-
-Default SRGB gamut.
-
-**Since:** 8
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-## WIDE_GAMUT
+## SRGB
 
 ```TypeScript
-WIDE_GAMUT = 1
+SRGB = 0
 ```
 
-Wide-gamut.
+Standard RGB color space, suitable for most display devices.
 
-**Since:** 8
+**Since:** 20
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Model restriction:** This API can be used only in the stage model.
 
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-ColorSpace-SRGB = 0--><!--Device-ColorSpace-SRGB = 0-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## DISPLAY_P3
+
+```TypeScript
+DISPLAY_P3 = 1
+```
+
+Display P3 color space with wider gamut, designed for high-end display devices.
+
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-ColorSpace-DISPLAY_P3 = 1--><!--Device-ColorSpace-DISPLAY_P3 = 1-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 

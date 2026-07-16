@@ -18,6 +18,8 @@ Obtains an OS account sub-profile manager instance.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-osAccount-function getOsAccountSubProfileManager(): OsAccountSubProfileManager--><!--Device-osAccount-function getOsAccountSubProfileManager(): OsAccountSubProfileManager-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Obtains an OS account sub-profile manager instance.
 
 | Type | Description |
 | --- | --- |
-| OsAccountSubProfileManager | Instance object of the OS account sub-profile manager. |
+| [OsAccountSubProfileManager](arkts-basicservices-osaccountsubprofilemanager-i-sys.md) | Instance object of the OS account sub-profile manager. |
 
 **Error codes:**
 

@@ -12,10 +12,11 @@ import { avSession } from '@kit.AVSessionKit';
 function startDeviceLogging(url: string, maxSize?: number): Promise<void>
 ```
 
-Begin to write device logs into a file descriptor for the purpose of problem locating.
-If the logs exceed max file size, no logs will be written and DEVICE_LOG_FULL event will be omitted.
+Begin to write device logs into a file descriptor for the purpose of problem locating.If the logs exceed max file size, no logs will be written and DEVICE_LOG_FULL event will be omitted.
 
 **Since:** 13
+
+<!--Device-avSession-function startDeviceLogging(url: string, maxSize?: int): Promise<void>--><!--Device-avSession-function startDeviceLogging(url: string, maxSize?: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -32,7 +33,7 @@ If the logs exceed max file size, no logs will be written and DEVICE_LOG_FULL ev
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise for the result |
 
 **Error codes:**
 

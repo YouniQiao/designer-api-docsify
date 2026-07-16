@@ -1,5 +1,11 @@
 # isAnimationReduceEnabledSync
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+```
+
 ## isAnimationReduceEnabledSync
 
 ```TypeScript
@@ -11,6 +17,8 @@ function isAnimationReduceEnabledSync(): boolean
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-accessibility-function isAnimationReduceEnabledSync(): boolean--><!--Device-accessibility-function isAnimationReduceEnabledSync(): boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

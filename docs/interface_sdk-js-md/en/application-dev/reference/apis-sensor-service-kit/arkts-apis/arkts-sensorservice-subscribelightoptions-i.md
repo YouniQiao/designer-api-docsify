@@ -8,6 +8,8 @@ Defines the type of data to return for a subscription to data changes of the amb
 
 **Substitutes:** AMBIENT_LIGHT
 
+<!--Device-unnamed-export interface SubscribeLightOptions--><!--Device-unnamed-export interface SubscribeLightOptions-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -34,6 +36,8 @@ Callback invoked when an API call fails.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-SubscribeLightOptions-fail?: (data: string, code: number) => void--><!--Device-SubscribeLightOptions-fail?: (data: string, code: number) => void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## success
@@ -53,6 +57,8 @@ Callback invoked when the ambient light sensor data changes.
 **Substitutes:** on
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeLightOptions-success: (data: LightResponse) => void--><!--Device-SubscribeLightOptions-success: (data: LightResponse) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 

@@ -1,10 +1,10 @@
 # DataSharePredicates (System API)
 
-Provides APIs for setting different **DataSharePredicates** objects. This type is not multi-thread safe. If a
-**DataSharePredicates** instance is operated by multiple threads at the same time in an application, use a lock for
-it.
+Provides APIs for setting different **DataSharePredicates** objects. This type is not multi-thread safe. If a **DataSharePredicates** instance is operated by multiple threads at the same time in an application, use a lock for it.
 
 **Since:** 10
+
+<!--Device-dataSharePredicates-class DataSharePredicates--><!--Device-dataSharePredicates-class DataSharePredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -22,14 +22,15 @@ import { dataSharePredicates } from '@kit.ArkData';
 beginWrap(): DataSharePredicates
 ```
 
-Adds a left parenthesis to this **DataSharePredicates**. This API is similar to "(" in an SQL statement and must
-be used with the right parenthesis.
+Adds a left parenthesis to this **DataSharePredicates**. This API is similar to "(" in an SQL statement and must be used with the right parenthesis.
 
 Currently, only RDB store supports this predicate.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataSharePredicates-beginWrap(): DataSharePredicates--><!--Device-DataSharePredicates-beginWrap(): DataSharePredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -39,7 +40,7 @@ Currently, only RDB store supports this predicate.
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object with a left parenthesis. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object with a left parenthesis. |
 
 **Example**
 
@@ -68,6 +69,8 @@ Currently, only RDB store supports this predicate.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataSharePredicates-beginsWith(field: string, value: string): DataSharePredicates--><!--Device-DataSharePredicates-beginsWith(field: string, value: string): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -83,7 +86,7 @@ Currently, only RDB store supports this predicate.
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -99,14 +102,15 @@ predicates.beginsWith("NAME", "os");
 between(field: string, low: ValueType, high: ValueType): DataSharePredicates
 ```
 
-Creates a **DataSharePredicates** object to match the data that is within the specified range, including the
-start and end values.
+Creates a **DataSharePredicates** object to match the data that is within the specified range, including the start and end values.
 
 Currently, only RDB store supports this predicate.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataSharePredicates-between(field: string, low: ValueType, high: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-between(field: string, low: ValueType, high: ValueType): DataSharePredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -116,15 +120,15 @@ Currently, only RDB store supports this predicate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or**null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** instring, the matching result may not be as expected or an exception may be thrown when the predicate is usedby the KV store and RDB store APIs. |
-| low | ValueType | Yes | Minimum value of the range to set.If **low** is set to a number, the matchingrange is specified based on the numeric order.If **low** is set to a string, the matching range isspecified based on the lexicographical order.If **low** is set to boolean, the matching range isspecified based on the numeric order. |
-| high | ValueType | Yes | Maximum value to match the **DataAbilityPredicates**.If **high** is set to anumber, the matching range is specified based on the numeric order.If **high** is set to a string, thematching range is specified based on the lexicographical order.If **high** is set to boolean, thematching range is specified based on the numeric order. |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** in string, the matching result may not be as expected or an exception may be thrown when the predicate is used by the KV store and RDB store APIs. |
+| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Minimum value of the range to set.If **low** is set to a number, the matching range is specified based on the numeric order.If **low** is set to a string, the matching range is specified based on the lexicographical order.If **low** is set to boolean, the matching range is specified based on the numeric order. |
+| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Maximum value to match the **DataAbilityPredicates**.If **high** is set to a number, the matching range is specified based on the numeric order.If **high** is set to a string, the matching range is specified based on the lexicographical order.If **high** is set to boolean, the matching range is specified based on the numeric order. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -148,6 +152,8 @@ Currently, only RDB store supports this predicate.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataSharePredicates-contains(field: string, value: string): DataSharePredicates--><!--Device-DataSharePredicates-contains(field: string, value: string): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -163,7 +169,7 @@ Currently, only RDB store supports this predicate.
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -187,6 +193,8 @@ Currently, only RDB store supports this predicate.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataSharePredicates-distinct(): DataSharePredicates--><!--Device-DataSharePredicates-distinct(): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -195,7 +203,7 @@ Currently, only RDB store supports this predicate.
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -211,14 +219,15 @@ predicates.equalTo("NAME", "Rose").distinct();
 endWrap(): DataSharePredicates
 ```
 
-Adds a right parenthesis to this **DataSharePredicates**. This API is similar to ")" in an SQL statement and must
-be used with the left parenthesis.
+Adds a right parenthesis to this **DataSharePredicates**. This API is similar to ")" in an SQL statement and must be used with the left parenthesis.
 
 Currently, only RDB store supports this predicate.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataSharePredicates-endWrap(): DataSharePredicates--><!--Device-DataSharePredicates-endWrap(): DataSharePredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -228,7 +237,7 @@ Currently, only RDB store supports this predicate.
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object with a right parenthesis. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object with a right parenthesis. |
 
 **Example**
 
@@ -257,6 +266,8 @@ Currently, only RDB store supports this predicate.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataSharePredicates-endsWith(field: string, value: string): DataSharePredicates--><!--Device-DataSharePredicates-endsWith(field: string, value: string): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -272,7 +283,7 @@ Currently, only RDB store supports this predicate.
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -296,6 +307,8 @@ Currently, only RDB store supports this predicate.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataSharePredicates-glob(field: string, value: string): DataSharePredicates--><!--Device-DataSharePredicates-glob(field: string, value: string): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -305,13 +318,13 @@ Currently, only RDB store supports this predicate.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | string | Yes | Wildcard expression to match.In the expression, '*' represents zero, one, or moredigits or characters, and '?' represents a single digit or character. It is case sensitive. |
+| value | string | Yes | Wildcard expression to match.In the expression, '*' represents zero, one, or more digits or characters, and '?' represents a single digit or character. It is case sensitive. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -335,6 +348,8 @@ Currently, both the RDB store and KV store support this predicate.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataSharePredicates-greaterThan(field: string, value: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-greaterThan(field: string, value: ValueType): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -343,14 +358,14 @@ Currently, both the RDB store and KV store support this predicate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or**null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** instring, the matching result may not be as expected or an exception may be thrown when the predicate is usedby the KV store and RDB store APIs. |
-| value | ValueType | Yes | Value to match.If this parameter is set to **undefined** or **null**, thepredicate used is invalid. |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** in string, the matching result may not be as expected or an exception may be thrown when the predicate is used by the KV store and RDB store APIs. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Value to match.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -374,6 +389,8 @@ Currently, both the RDB store and KV store support this predicate.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataSharePredicates-greaterThanOrEqualTo(field: string, value: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-greaterThanOrEqualTo(field: string, value: ValueType): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -382,14 +399,14 @@ Currently, both the RDB store and KV store support this predicate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or**null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** instring, the matching result may not be as expected or an exception may be thrown. |
-| value | ValueType | Yes | Value to match.If this parameter is set to **undefined** or **null**, thepredicate used is invalid. |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** in string, the matching result may not be as expected or an exception may be thrown. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Value to match.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -413,6 +430,8 @@ Currently, only RDB store supports this predicate.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataSharePredicates-groupBy(fields: Array<string>): DataSharePredicates--><!--Device-DataSharePredicates-groupBy(fields: Array<string>): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -421,13 +440,13 @@ Currently, only RDB store supports this predicate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fields | Array&lt;string&gt; | Yes | Names of the columns by which the records are grouped. |
+| fields | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Names of the columns by which the records are grouped. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -451,6 +470,8 @@ Currently, only the KVDB supports this **DataSharePredicates** object.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataSharePredicates-inKeys(keys: Array<string>): DataSharePredicates--><!--Device-DataSharePredicates-inKeys(keys: Array<string>): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -459,13 +480,13 @@ Currently, only the KVDB supports this **DataSharePredicates** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | Yes | Array of the keys to match. |
+| keys | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Array of the keys to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -481,14 +502,15 @@ predicates.inKeys(["Lisa", "Rose"]);
 indexedBy(field: string): DataSharePredicates
 ```
 
-Creates a **DataSharePredicates** object to list data by the specified index. Before using this API, ensure that
-the index column exists.
+Creates a **DataSharePredicates** object to list data by the specified index. Before using this API, ensure that the index column exists.
 
 Currently, only RDB store supports this predicate.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataSharePredicates-indexedBy(field: string): DataSharePredicates--><!--Device-DataSharePredicates-indexedBy(field: string): DataSharePredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -504,7 +526,7 @@ Currently, only RDB store supports this predicate.
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -528,6 +550,8 @@ Currently, both the RDB store and KV store support this predicate.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataSharePredicates-isNotNull(field: string): DataSharePredicates--><!--Device-DataSharePredicates-isNotNull(field: string): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -542,7 +566,7 @@ Currently, both the RDB store and KV store support this predicate.
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -566,6 +590,8 @@ Currently, both the RDB store and KV store support this predicate.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataSharePredicates-isNull(field: string): DataSharePredicates--><!--Device-DataSharePredicates-isNull(field: string): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -580,7 +606,7 @@ Currently, both the RDB store and KV store support this predicate.
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -604,6 +630,8 @@ Currently, both the RDB store and KV store support this predicate.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataSharePredicates-lessThan(field: string, value: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-lessThan(field: string, value: ValueType): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -612,14 +640,14 @@ Currently, both the RDB store and KV store support this predicate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table.If field is null or undefined, the predicateconfigured by calling this API is invalid.If this parameter is set to **'null'** or **'undefined'** instring, the matching result may not be as expected or an exception may be thrown when the predicate is usedby the KV store and RDB store APIs. |
-| value | ValueType | Yes | Value to match.If this parameter is set to **undefined** or **null**, thepredicate used is invalid. |
+| field | string | Yes | Column name in the database table.If field is null or undefined, the predicate configured by calling this API is invalid.If this parameter is set to **'null'** or **'undefined'** in string, the matching result may not be as expected or an exception may be thrown when the predicate is used by the KV store and RDB store APIs. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Value to match.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -643,6 +671,8 @@ Currently, both the RDB store and KV store support this predicate.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataSharePredicates-lessThanOrEqualTo(field: string, value: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-lessThanOrEqualTo(field: string, value: ValueType): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -651,14 +681,14 @@ Currently, both the RDB store and KV store support this predicate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or**null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** instring, the matching result may not be as expected or an exception may be thrown when the predicate is usedby the KV store and RDB store APIs. |
-| value | ValueType | Yes | Value to match.If this parameter is set to **undefined** or **null**, thepredicate used is invalid. |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** in string, the matching result may not be as expected or an exception may be thrown when the predicate is used by the KV store and RDB store APIs. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Value to match.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -682,6 +712,8 @@ Currently, both the RDB store and KV store support this predicate.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataSharePredicates-like(field: string, value: string): DataSharePredicates--><!--Device-DataSharePredicates-like(field: string, value: string): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -690,14 +722,14 @@ Currently, both the RDB store and KV store support this predicate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or**null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** instring, the matching result may not be as expected or an exception may be thrown when the predicate is usedby the KV store and RDB store APIs. |
-| value | string | Yes | Wildcard expression to match.In the expression, '%' represents zero, one, or moredigits or characters, and '_' represents a single digit or character. It is case insensitive.If thisparameter is set to **undefined** or **null**, the predicate used is invalid. |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** in string, the matching result may not be as expected or an exception may be thrown when the predicate is used by the KV store and RDB store APIs. |
+| value | string | Yes | Wildcard expression to match.In the expression, '%' represents zero, one, or more digits or characters, and '_' represents a single digit or character. It is case insensitive.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -713,14 +745,15 @@ predicates.like("NAME", "%os%");
 notBetween(field: string, low: ValueType, high: ValueType): DataSharePredicates
 ```
 
-Creates a **DataSharePredicates** object to match the data that is out of the specified range, excluding the
-start and end values.
+Creates a **DataSharePredicates** object to match the data that is out of the specified range, excluding the start and end values.
 
 Currently, only RDB store supports this predicate.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataSharePredicates-notBetween(field: string, low: ValueType, high: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-notBetween(field: string, low: ValueType, high: ValueType): DataSharePredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -730,15 +763,15 @@ Currently, only RDB store supports this predicate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or**null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** instring, the matching result may not be as expected or an exception may be thrown when the predicate is usedby the KV store and RDB store APIs. |
-| low | ValueType | Yes | Minimum value of the range to set.If **low** is set to a number, the matchingrange is specified based on the numeric order.If **low** is set to a string, the matching range isspecified based on the lexicographical order.If **low** is set to boolean, the matching range isspecified based on the numeric order. |
-| high | ValueType | Yes | Maximum value to match the **DataAbilityPredicates**.If **high** is set to anumber, the matching range is specified based on the numeric order.If **high** is set to a string, thematching range is specified based on the lexicographical order.If **high** is set to boolean, thematching range is specified based on the numeric order. |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** in string, the matching result may not be as expected or an exception may be thrown when the predicate is used by the KV store and RDB store APIs. |
+| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Minimum value of the range to set.If **low** is set to a number, the matching range is specified based on the numeric order.If **low** is set to a string, the matching range is specified based on the lexicographical order.If **low** is set to boolean, the matching range is specified based on the numeric order. |
+| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Maximum value to match the **DataAbilityPredicates**.If **high** is set to a number, the matching range is specified based on the numeric order.If **high** is set to a string, the matching range is specified based on the lexicographical order.If **high** is set to boolean, the matching range is specified based on the numeric order. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -762,6 +795,8 @@ Currently, both the RDB store and KV store support this predicate.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataSharePredicates-notEqualTo(field: string, value: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-notEqualTo(field: string, value: ValueType): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -770,14 +805,14 @@ Currently, both the RDB store and KV store support this predicate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or**null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** instring, the matching result may not be as expected or an exception may be thrown when the predicate is usedby the KV store and RDB store APIs. |
-| value | ValueType | Yes | Value to match.If this parameter is set to **undefined** or **null**, thepredicate used is invalid. |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** in string, the matching result may not be as expected or an exception may be thrown when the predicate is used by the KV store and RDB store APIs. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Value to match.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -801,6 +836,8 @@ Currently, both the RDB store and KV store support this predicate.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataSharePredicates-notIn(field: string, value: Array<ValueType>): DataSharePredicates--><!--Device-DataSharePredicates-notIn(field: string, value: Array<ValueType>): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -809,14 +846,14 @@ Currently, both the RDB store and KV store support this predicate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or**null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** instring, the matching result may not be as expected or an exception may be thrown when the predicate is usedby the KV store and RDB store APIs. |
-| value | Array&lt;ValueType&gt; | Yes | Array of the values to match.If this parameter is set to **undefined** or**null**, the predicate used is invalid. |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** in string, the matching result may not be as expected or an exception may be thrown when the predicate is used by the KV store and RDB store APIs. |
+| value | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ValueType> | Yes | Array of the values to match.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -840,6 +877,8 @@ Currently, both the RDB store and KV store support this predicate.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataSharePredicates-or(): DataSharePredicates--><!--Device-DataSharePredicates-or(): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -848,7 +887,7 @@ Currently, both the RDB store and KV store support this predicate.
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object with the OR operator. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object with the OR operator. |
 
 **Example**
 
@@ -874,6 +913,8 @@ Currently, only the KVDB supports this **DataSharePredicates** object.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataSharePredicates-prefixKey(prefix: string): DataSharePredicates--><!--Device-DataSharePredicates-prefixKey(prefix: string): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -888,7 +929,7 @@ Currently, only the KVDB supports this **DataSharePredicates** object.
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object created. |
 
 **Example**
 
@@ -912,6 +953,8 @@ Currently, both the RDB store and KV store support this predicate.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataSharePredicates-unlike(field: string, value: string): DataSharePredicates--><!--Device-DataSharePredicates-unlike(field: string, value: string): DataSharePredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -921,13 +964,13 @@ Currently, both the RDB store and KV store support this predicate.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | string | Yes | Wildcard expression to match.In the expression, '%' represents zero, one, or moredigits or characters, and '_' represents a single digit or character. It is case insensitive. |
+| value | string | Yes | Wildcard expression to match.In the expression, '%' represents zero, one, or more digits or characters, and '_' represents a single digit or character. It is case insensitive. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataSharePredicates | **DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | **DataSharePredicates** object created. |
 
 **Example**
 

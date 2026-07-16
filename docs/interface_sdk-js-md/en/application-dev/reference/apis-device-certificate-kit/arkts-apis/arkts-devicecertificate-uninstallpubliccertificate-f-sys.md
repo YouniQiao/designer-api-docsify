@@ -12,14 +12,15 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 function uninstallPublicCertificate(keyUri: string) : Promise<void>
 ```
 
-Uninstalls the public credential of the user. This API is called only by the certificate management application.
-This API uses a promise to return the result.
+Uninstalls the public credential of the user. This API is called only by the certificate management application.This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-certificateManager-function uninstallPublicCertificate(keyUri: string) : Promise<void>--><!--Device-certificateManager-function uninstallPublicCertificate(keyUri: string) : Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -35,7 +36,7 @@ This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

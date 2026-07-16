@@ -4,7 +4,15 @@
 
 **起始版本：** 15
 
+<!--Device-contact-interface DataFilter--><!--Device-contact-interface DataFilter-End-->
+
 **系统能力：** SystemCapability.Applications.Contacts
+
+## 导入模块
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+```
 
 ## field
 
@@ -18,7 +26,9 @@ field: DataField
 
 **起始版本：** 15
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DataFilter-field: DataField--><!--Device-DataFilter-field: DataField-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -34,7 +44,9 @@ options: Array<FilterOptions>
 
 **起始版本：** 15
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DataFilter-options: Array<FilterOptions>--><!--Device-DataFilter-options: Array<FilterOptions>-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 

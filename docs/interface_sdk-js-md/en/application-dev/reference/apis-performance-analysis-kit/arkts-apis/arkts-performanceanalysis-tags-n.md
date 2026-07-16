@@ -4,6 +4,8 @@ Provide trace tags
 
 **Since:** 12
 
+<!--Device-hidebug-namespace tags--><!--Device-hidebug-namespace tags-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## Modules to Import

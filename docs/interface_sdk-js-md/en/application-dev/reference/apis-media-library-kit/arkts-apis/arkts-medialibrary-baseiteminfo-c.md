@@ -4,6 +4,8 @@ BaseItemInfo
 
 **Since:** 12
 
+<!--Device-unnamed-export declare class BaseItemInfo--><!--Device-unnamed-export declare class BaseItemInfo-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Duration. if the itemType is CAMERA, it will be null; if photos, return -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BaseItemInfo-duration?: number--><!--Device-BaseItemInfo-duration?: number-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## dynamicRangeType
@@ -34,14 +38,15 @@ Duration. if the itemType is CAMERA, it will be null; if photos, return -1
 dynamicRangeType?: photoAccessHelper.DynamicRangeType
 ```
 
-DynamicRangeType. Dynamic range type of media files.
-For movingPhoto, this specifically refers to the dynamic range type of the cover image.
+DynamicRangeType. Dynamic range type of media files.For movingPhoto, this specifically refers to the dynamic range type of the cover image.
 
 **Type:** photoAccessHelper.DynamicRangeType
 
 **Since:** 21
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-BaseItemInfo-dynamicRangeType?: photoAccessHelper.DynamicRangeType--><!--Device-BaseItemInfo-dynamicRangeType?: photoAccessHelper.DynamicRangeType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -59,6 +64,8 @@ Height. if the itemType is CAMERA, it will be null
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BaseItemInfo-height?: number--><!--Device-BaseItemInfo-height?: number-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## mimeType
@@ -74,6 +81,8 @@ MimeType. if the itemType is CAMERA, it will be null
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BaseItemInfo-mimeType?: string--><!--Device-BaseItemInfo-mimeType?: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -91,6 +100,8 @@ MovingPhotoBadgeState. Badge state of moving photo.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-BaseItemInfo-movingPhotoBadgeState?: photoAccessHelper.MovingPhotoBadgeStateType--><!--Device-BaseItemInfo-movingPhotoBadgeState?: photoAccessHelper.MovingPhotoBadgeStateType-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## orientation
@@ -107,6 +118,8 @@ Orientation. Image/Video orientation information.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-BaseItemInfo-orientation?: number--><!--Device-BaseItemInfo-orientation?: number-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## photoSubType
@@ -122,6 +135,8 @@ PhotoSubtype. Asset subtype, non-special type images default to DEFAULT(0).
 **Since:** 21
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-BaseItemInfo-photoSubType?: photoAccessHelper.PhotoSubtype--><!--Device-BaseItemInfo-photoSubType?: photoAccessHelper.PhotoSubtype-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -141,6 +156,8 @@ Size. if the itemType is CAMERA, it will be null
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BaseItemInfo-size?: number--><!--Device-BaseItemInfo-size?: number-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## uri
@@ -156,6 +173,8 @@ Uri. if the itemType is CAMERA, it will be null
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BaseItemInfo-uri?: string--><!--Device-BaseItemInfo-uri?: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -173,6 +192,8 @@ VideoMode. Mode of video.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-BaseItemInfo-videoMode?: photoAccessHelper.VideoMode--><!--Device-BaseItemInfo-videoMode?: photoAccessHelper.VideoMode-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## width
@@ -188,6 +209,8 @@ Width. if the itemType is CAMERA, it will be null
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BaseItemInfo-width?: number--><!--Device-BaseItemInfo-width?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

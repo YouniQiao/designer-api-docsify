@@ -4,6 +4,8 @@ Defines the key information about an image or video file.
 
 **Since:** 10
 
+<!--Device-photoAccessHelper-enum PhotoKeys--><!--Device-photoAccessHelper-enum PhotoKeys-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## URI
@@ -16,13 +18,13 @@ URI of the file.
 
 **Note**:
 
-Only the
-[DataSharePredicates.equalTo](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-c.md#equalto-1)
-predicate can be used for this field during photo query.
+Only the [DataSharePredicates.equalTo](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-c.md#equalto-1)predicate can be used for this field during photo query.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PhotoKeys-URI = 'uri'--><!--Device-PhotoKeys-URI = 'uri'-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -38,6 +40,8 @@ Type of the file.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-PhotoKeys-PHOTO_TYPE = 'media_type'--><!--Device-PhotoKeys-PHOTO_TYPE = 'media_type'-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## DISPLAY_NAME
@@ -48,13 +52,15 @@ DISPLAY_NAME = 'display_name'
 
 File name displayed. The file name must meet the following requirements:
 
-- A valid file name must include a base name and a supported image or video extension.
-- The file name length ranges from 1 to 255.
+- A valid file name must include a base name and a supported image or video extension.  
+- The file name length ranges from 1 to 255.  
 - The base name must not contain any invalid characters, which are:.. \ / : * ? " ' ` < > | { } [ ]
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PhotoKeys-DISPLAY_NAME = 'display_name'--><!--Device-PhotoKeys-DISPLAY_NAME = 'display_name'-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -70,6 +76,8 @@ File size, in bytes. The size of a moving photo includes the total size of the i
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-PhotoKeys-SIZE = 'size'--><!--Device-PhotoKeys-SIZE = 'size'-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## DATE_ADDED
@@ -84,6 +92,8 @@ Unix timestamp when the file was created, in seconds.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-PhotoKeys-DATE_ADDED = 'date_added'--><!--Device-PhotoKeys-DATE_ADDED = 'date_added'-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## DATE_MODIFIED
@@ -92,12 +102,13 @@ Unix timestamp when the file was created, in seconds.
 DATE_MODIFIED = 'date_modified'
 ```
 
-Unix timestamp when the file content (not the file name) was last modified, in seconds. This value is updated
-when the file content is modified, but not when the file name is modified.
+Unix timestamp when the file content (not the file name) was last modified, in seconds. This value is updated when the file content is modified, but not when the file name is modified.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PhotoKeys-DATE_MODIFIED = 'date_modified'--><!--Device-PhotoKeys-DATE_MODIFIED = 'date_modified'-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -113,6 +124,8 @@ Duration, in ms.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-PhotoKeys-DURATION = 'duration'--><!--Device-PhotoKeys-DURATION = 'duration'-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## WIDTH
@@ -126,6 +139,8 @@ Image width, in pixels.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PhotoKeys-WIDTH = 'width'--><!--Device-PhotoKeys-WIDTH = 'width'-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -141,6 +156,8 @@ Image height, in pixels.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-PhotoKeys-HEIGHT = 'height'--><!--Device-PhotoKeys-HEIGHT = 'height'-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## DATE_TAKEN
@@ -154,6 +171,8 @@ Unix timestamp when the photo was taken, in seconds.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PhotoKeys-DATE_TAKEN = 'date_taken'--><!--Device-PhotoKeys-DATE_TAKEN = 'date_taken'-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -169,6 +188,8 @@ Orientation of the file, in degrees.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-PhotoKeys-ORIENTATION = 'orientation'--><!--Device-PhotoKeys-ORIENTATION = 'orientation'-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## FAVORITE
@@ -183,6 +204,8 @@ Whether the file is marked as favorites.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-PhotoKeys-FAVORITE = 'is_favorite'--><!--Device-PhotoKeys-FAVORITE = 'is_favorite'-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## TITLE
@@ -196,6 +219,8 @@ Title of the file.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PhotoKeys-TITLE = 'title'--><!--Device-PhotoKeys-TITLE = 'title'-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -215,6 +240,8 @@ The photos queried cannot be sorted based on this field.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-PhotoKeys-DATE_ADDED_MS = 'date_added_ms'--><!--Device-PhotoKeys-DATE_ADDED_MS = 'date_added_ms'-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## DATE_MODIFIED_MS
@@ -223,8 +250,7 @@ The photos queried cannot be sorted based on this field.
 DATE_MODIFIED_MS = 'date_modified_ms'
 ```
 
-Unix timestamp when the file was modified, in milliseconds. This value is updated when the file content is
-modified, but not when the file name is modified.
+Unix timestamp when the file was modified, in milliseconds. This value is updated when the file content is modified, but not when the file name is modified.
 
 **Note**:
 
@@ -233,6 +259,8 @@ The photos queried cannot be sorted based on this field.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PhotoKeys-DATE_MODIFIED_MS = 'date_modified_ms'--><!--Device-PhotoKeys-DATE_MODIFIED_MS = 'date_modified_ms'-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -248,6 +276,8 @@ Subtype of the media file.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-PhotoKeys-PHOTO_SUBTYPE = 'subtype'--><!--Device-PhotoKeys-PHOTO_SUBTYPE = 'subtype'-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## DYNAMIC_RANGE_TYPE
@@ -261,6 +291,8 @@ Dynamic range type of the media asset.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PhotoKeys-DYNAMIC_RANGE_TYPE = 'dynamic_range_type'--><!--Device-PhotoKeys-DYNAMIC_RANGE_TYPE = 'dynamic_range_type'-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -276,6 +308,8 @@ Position of the moving photo cover, which is the video timestamp (in μs) corres
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-PhotoKeys-COVER_POSITION = 'cover_position'--><!--Device-PhotoKeys-COVER_POSITION = 'cover_position'-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## BURST_KEY
@@ -289,6 +323,8 @@ Unique ID of a group of burst photos.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PhotoKeys-BURST_KEY = 'burst_key'--><!--Device-PhotoKeys-BURST_KEY = 'burst_key'-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -304,6 +340,8 @@ Width and height of an LCD image, in the format of a **width:height** string.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-PhotoKeys-LCD_SIZE = 'lcd_size'--><!--Device-PhotoKeys-LCD_SIZE = 'lcd_size'-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## THM_SIZE
@@ -318,6 +356,8 @@ Width and height of a thumbnail image, in the format of a **width:height** strin
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-PhotoKeys-THM_SIZE = 'thm_size'--><!--Device-PhotoKeys-THM_SIZE = 'thm_size'-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## DETAIL_TIME
@@ -326,12 +366,13 @@ Width and height of a thumbnail image, in the format of a **width:height** strin
 DETAIL_TIME = 'detail_time'
 ```
 
-Detailed time. The value is a string of time when the image or video was taken in the time zone and does not
-change with the time zone.
+Detailed time. The value is a string of time when the image or video was taken in the time zone and does not change with the time zone.
 
 **Since:** 13
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PhotoKeys-DETAIL_TIME = 'detail_time'--><!--Device-PhotoKeys-DETAIL_TIME = 'detail_time'-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -347,6 +388,8 @@ Unix timestamp when the image was captured, in milliseconds.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-PhotoKeys-DATE_TAKEN_MS = 'date_taken_ms'--><!--Device-PhotoKeys-DATE_TAKEN_MS = 'date_taken_ms'-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## MEDIA_SUFFIX
@@ -358,6 +401,8 @@ MEDIA_SUFFIX = 'media_suffix'
 File name extension.
 
 **Since:** 18
+
+<!--Device-PhotoKeys-MEDIA_SUFFIX = 'media_suffix'--><!--Device-PhotoKeys-MEDIA_SUFFIX = 'media_suffix'-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -373,6 +418,8 @@ Aspect ratio of the image or video.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoKeys-ASPECT_RATIO = 'aspect_ratio'--><!--Device-PhotoKeys-ASPECT_RATIO = 'aspect_ratio'-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## CHANGE_TIME
@@ -384,6 +431,8 @@ CHANGE_TIME = 'change_time'
 Time when the photo is changed.
 
 **Since:** 23
+
+<!--Device-PhotoKeys-CHANGE_TIME = 'change_time'--><!--Device-PhotoKeys-CHANGE_TIME = 'change_time'-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -398,6 +447,8 @@ Size of local asset, which well matched the content read by the application.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PhotoKeys-LOCAL_ASSET_SIZE = 'local_asset_size'--><!--Device-PhotoKeys-LOCAL_ASSET_SIZE = 'local_asset_size'-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

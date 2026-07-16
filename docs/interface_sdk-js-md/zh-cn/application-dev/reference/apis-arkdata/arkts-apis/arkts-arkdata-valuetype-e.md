@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-distributedKVStore-enum ValueType--><!--Device-distributedKVStore-enum ValueType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## STRING
@@ -18,6 +20,8 @@ STRING = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ValueType-STRING = 0--><!--Device-ValueType-STRING = 0-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## INTEGER
@@ -30,6 +34,8 @@ INTEGER = 1
 
 **起始版本：** 9
 
+<!--Device-ValueType-INTEGER = 1--><!--Device-ValueType-INTEGER = 1-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## FLOAT
@@ -41,6 +47,8 @@ FLOAT = 2
 表示值类型为浮点数。
 
 **起始版本：** 9
+
+<!--Device-ValueType-FLOAT = 2--><!--Device-ValueType-FLOAT = 2-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -56,6 +64,8 @@ BYTE_ARRAY = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ValueType-BYTE_ARRAY = 3--><!--Device-ValueType-BYTE_ARRAY = 3-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## BOOLEAN
@@ -70,6 +80,8 @@ BOOLEAN = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ValueType-BOOLEAN = 4--><!--Device-ValueType-BOOLEAN = 4-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## DOUBLE
@@ -83,6 +95,8 @@ DOUBLE = 5
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ValueType-DOUBLE = 5--><!--Device-ValueType-DOUBLE = 5-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 

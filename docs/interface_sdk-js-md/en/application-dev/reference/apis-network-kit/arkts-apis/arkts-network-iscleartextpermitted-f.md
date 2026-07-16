@@ -12,12 +12,13 @@ import { networkSecurity } from '@kit.NetworkKit';
 export function isCleartextPermitted(): boolean
 ```
 
-Checks whether the Cleartext traffic is permitted.
-To invoke this method, you must have the {@code ohos.permission.INTERNET} permission.
+Checks whether the Cleartext traffic is permitted.To invoke this method, you must have the {@code ohos.permission.INTERNET} permission.
 
 **Since:** 18
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-networkSecurity-export function isCleartextPermitted(): boolean--><!--Device-networkSecurity-export function isCleartextPermitted(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

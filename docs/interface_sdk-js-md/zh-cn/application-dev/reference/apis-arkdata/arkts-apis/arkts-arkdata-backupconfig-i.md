@@ -4,7 +4,15 @@
 
 **起始版本：** 24
 
+<!--Device-distributedKVStore-interface BackupConfig--><!--Device-distributedKVStore-interface BackupConfig-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+## 导入模块
+
+```TypeScript
+import { distributedKVStore } from '@kit.ArkData';
+```
 
 ## fileName
 
@@ -19,6 +27,8 @@ fileName: string
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BackupConfig-fileName: string--><!--Device-BackupConfig-fileName: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -35,6 +45,8 @@ filePath: string
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BackupConfig-filePath: string--><!--Device-BackupConfig-filePath: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 

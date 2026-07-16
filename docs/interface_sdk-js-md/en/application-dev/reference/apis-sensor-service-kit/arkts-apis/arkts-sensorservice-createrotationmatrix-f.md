@@ -20,14 +20,16 @@ Converts a rotation vector into a rotation matrix. This API uses an asynchronous
 
 **Substitutes:** getRotationMatrix(rotationVector:
 
+<!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotationVector | Array&lt;number&gt; | Yes | Rotation vector to convert. |
-| callback | AsyncCallback&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the rotation matrix. |
+| rotationVector | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Rotation vector to convert. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<number>> | Yes | Callback used to return the rotation matrix. |
 
 **Example**
 
@@ -63,19 +65,21 @@ Converts a rotation vector into a rotation matrix. This API uses a promise to re
 
 **Substitutes:** getRotationMatrix(rotationVector:
 
+<!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>): Promise<Array<number>>--><!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>): Promise<Array<number>>-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotationVector | Array&lt;number&gt; | Yes | Rotation vector to convert. |
+| rotationVector | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Rotation vector to convert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the rotation matrix. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | Promise used to return the rotation matrix. |
 
 **Example**
 
@@ -102,8 +106,7 @@ promise.then((data: Array<number>) => {
 function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>, callback: AsyncCallback<RotationMatrixResponse>): void
 ```
 
-Obtains the rotation matrix based on a gravity vector and geomagnetic vector. This API uses an asynchronous
-callback to return the result.
+Obtains the rotation matrix based on a gravity vector and geomagnetic vector. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -111,15 +114,17 @@ callback to return the result.
 
 **Substitutes:** getRotationMatrix(gravity:
 
+<!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>, callback: AsyncCallback<RotationMatrixResponse>): void--><!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>, callback: AsyncCallback<RotationMatrixResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gravity | Array&lt;number&gt; | Yes | Gravity vector. |
-| geomagnetic | Array&lt;number&gt; | Yes | Geomagnetic vector. |
-| callback | AsyncCallback&lt;RotationMatrixResponse&gt; | Yes | Callback used to return the rotation matrix. |
+| gravity | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Gravity vector. |
+| geomagnetic | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Geomagnetic vector. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<RotationMatrixResponse> | Yes | Callback used to return the rotation matrix. |
 
 **Example**
 
@@ -145,8 +150,7 @@ sensor.createRotationMatrix([-0.27775216, 0.5351276, 9.788099], [210.87253, -78.
 function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>,): Promise<RotationMatrixResponse>
 ```
 
-Obtains the rotation matrix based on a gravity vector and geomagnetic vector. This API uses a promise to return the
-result.
+Obtains the rotation matrix based on a gravity vector and geomagnetic vector. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -154,18 +158,20 @@ result.
 
 **Substitutes:** getRotationMatrix(gravity:
 
+<!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>,): Promise<RotationMatrixResponse>--><!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>,): Promise<RotationMatrixResponse>-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gravity | Array&lt;number&gt; | Yes | Gravity vector. |
-| geomagnetic | Array&lt;number&gt; | Yes | Geomagnetic vector. |
+| gravity | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Gravity vector. |
+| geomagnetic | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Geomagnetic vector. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RotationMatrixResponse&gt; | Promise used to return the rotation matrix. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<RotationMatrixResponse> | Promise used to return the rotation matrix. |
 

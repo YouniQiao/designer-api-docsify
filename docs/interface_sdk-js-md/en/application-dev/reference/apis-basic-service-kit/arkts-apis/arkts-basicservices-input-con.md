@@ -8,14 +8,13 @@ const ACTIVATED_INPUT_METHODS: string
 
 Indicates the list of input methods that have been activated.
 
-<p>The list is a string that contains the IDs of activated input methods. The IDs are separated by colons
-(:), and keyboardTypes of an input method are separated by semicolons (;). An example format is
-{@code ima0:keyboardType0;keyboardType1;ima1:ima2:keyboardTypes0}. The type of <b>imaID</b> is ElementName,
-and the type of <b>keyboard</b> is int.
+<p>The list is a string that contains the IDs of activated input methods. The IDs are separated by colons(:), and keyboardTypes of an input method are separated by semicolons (;). An example format is{@code ima0:keyboardType0;keyboardType1;ima1:ima2:keyboardTypes0}. The type of <b>imaID</b> is ElementName,and the type of <b>keyboard</b> is int.
 
 **Since:** 7
 
 **Deprecated since:** 21
+
+<!--Device-input-const ACTIVATED_INPUT_METHODS: string--><!--Device-input-const ACTIVATED_INPUT_METHODS: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -29,6 +28,8 @@ Indicates the default input method keyboard type and its ID.
 
 **Since:** 7
 
+<!--Device-input-const ACTIVATED_INPUT_METHOD_SUB_MODE: string--><!--Device-input-const ACTIVATED_INPUT_METHOD_SUB_MODE: string-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 ## AUTO_CAPS_TEXT_INPUT
@@ -39,12 +40,13 @@ const AUTO_CAPS_TEXT_INPUT: string
 
 Specifies whether automatic capitalization is enabled for the text editor.
 
-<p>If the value is {@code 0}, automatic capitalization is disabled. If the value {@code 1}, automatic
-capitalization is enabled.
+<p>If the value is {@code 0}, automatic capitalization is disabled. If the value {@code 1}, automatic capitalization is enabled.
 
 **Since:** 7
 
 **Deprecated since:** 21
+
+<!--Device-input-const AUTO_CAPS_TEXT_INPUT: string--><!--Device-input-const AUTO_CAPS_TEXT_INPUT: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -54,15 +56,15 @@ capitalization is enabled.
 const AUTO_PUNCTUATE_TEXT_INPUT: string
 ```
 
-Specifies whether automatic punctuation is enabled for the text editor. Automatic punctuation enables the
-text editor to convert two spaces into a period (.) and a space.
+Specifies whether automatic punctuation is enabled for the text editor. Automatic punctuation enables the text editor to convert two spaces into a period (.) and a space.
 
-<p>If the value is {@code 0}, automatic punctuation is disabled. If the value {@code 1}, automatic
-punctuation is enabled.
+<p>If the value is {@code 0}, automatic punctuation is disabled. If the value {@code 1}, automatic punctuation is enabled.
 
 **Since:** 7
 
 **Deprecated since:** 21
+
+<!--Device-input-const AUTO_PUNCTUATE_TEXT_INPUT: string--><!--Device-input-const AUTO_PUNCTUATE_TEXT_INPUT: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -72,14 +74,15 @@ punctuation is enabled.
 const AUTO_REPLACE_TEXT_INPUT: string
 ```
 
-Specifies whether autocorrect is enabled for the text editor. Autocorrect enables the text editor to correct
-typos.
+Specifies whether autocorrect is enabled for the text editor. Autocorrect enables the text editor to correct typos.
 
 <p>If the value is {@code 0}, autocorrect is disabled. If the value {@code 1}, autocorrect is enabled.
 
 **Since:** 7
 
 **Deprecated since:** 21
+
+<!--Device-input-const AUTO_REPLACE_TEXT_INPUT: string--><!--Device-input-const AUTO_REPLACE_TEXT_INPUT: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -95,6 +98,8 @@ Indicates the default input method and its ID.
 
 **Deprecated since:** 21
 
+<!--Device-input-const DEFAULT_INPUT_METHOD: string--><!--Device-input-const DEFAULT_INPUT_METHOD: string-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 ## SELECTOR_VISIBILITY_FOR_INPUT_METHOD
@@ -105,12 +110,13 @@ const SELECTOR_VISIBILITY_FOR_INPUT_METHOD: string
 
 Specifies whether the input method selector is visible.
 
-<p>If the value is {@code 1}, the input method selector is visible. If the value is {@code 0}, the input
-method selector is invisible.
+<p>If the value is {@code 1}, the input method selector is visible. If the value is {@code 0}, the input method selector is invisible.
 
 **Since:** 7
 
 **Deprecated since:** 21
+
+<!--Device-input-const SELECTOR_VISIBILITY_FOR_INPUT_METHOD: string--><!--Device-input-const SELECTOR_VISIBILITY_FOR_INPUT_METHOD: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -120,15 +126,15 @@ method selector is invisible.
 const SHOW_PASSWORD_TEXT_INPUT: string
 ```
 
-Specifies whether password presentation is enabled in the text editor. Password presentation enables the
-text editor to show password characters when the user types them.
+Specifies whether password presentation is enabled in the text editor. Password presentation enables the text editor to show password characters when the user types them.
 
-<p>If the value is {@code 0}, password presentation is disabled. If the value {@code 1}, password
-presentation is enabled.
+<p>If the value is {@code 0}, password presentation is disabled. If the value {@code 1}, password presentation is enabled.
 
 **Since:** 7
 
 **Deprecated since:** 21
+
+<!--Device-input-const SHOW_PASSWORD_TEXT_INPUT: string--><!--Device-input-const SHOW_PASSWORD_TEXT_INPUT: string-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 

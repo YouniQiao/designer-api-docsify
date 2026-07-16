@@ -1,5 +1,11 @@
 # getUniformDataTypesByMIMEType
 
+## 导入模块
+
+```TypeScript
+import { uniformTypeDescriptor } from '@kit.ArkData';
+```
+
 ## getUniformDataTypesByMIMEType
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getUniformDataTypesByMIMEType(mimeType: string, belongsTo?: string): Ar
 **起始版本：** 13
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-uniformTypeDescriptor-function getUniformDataTypesByMIMEType(mimeType: string, belongsTo?: string): Array<string>--><!--Device-uniformTypeDescriptor-function getUniformDataTypesByMIMEType(mimeType: string, belongsTo?: string): Array<string>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -25,7 +33,7 @@ function getUniformDataTypesByMIMEType(mimeType: string, belongsTo?: string): Ar
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 返回与MIME类型名称以及归属类型ID（如果设置了belongsTo参数）匹配的标准化数据类型ID列表，如果要查询的标准化数据类型不存在则返回根据入参按指定规则生成的动态类型列表。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 返回与MIME类型名称以及归属类型ID（如果设置了belongsTo参数）匹配的标准化数据类型ID列表，如果要查询的标准化数据类型不存在则返回根据入参按指定规则生成的动态类型列表。 |
 
 **错误码：**
 

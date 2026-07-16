@@ -12,8 +12,7 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 function getRemoteDeviceName(deviceId: string): string
 ```
 
-Obtains the name of a peer Bluetooth device.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Obtains the name of a peer Bluetooth device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -24,6 +23,8 @@ On API 10 and above, the permission required by this interface is changed from U
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
+
+<!--Device-bluetoothManager-function getRemoteDeviceName(deviceId: string): string--><!--Device-bluetoothManager-function getRemoteDeviceName(deviceId: string): string-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

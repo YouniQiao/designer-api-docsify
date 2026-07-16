@@ -4,6 +4,8 @@ Enumeration of setting type.
 
 **Since:** 23
 
+<!--Device-avMusicTemplate-enum SettingType--><!--Device-avMusicTemplate-enum SettingType-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## SWITCH
@@ -17,6 +19,8 @@ Switch, the type of setting is used to control the on/off status of a function.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingType-SWITCH = 0--><!--Device-SettingType-SWITCH = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -32,6 +36,8 @@ List, this type of setting is used for selecting one option from multiple choice
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingType-LIST = 1--><!--Device-SettingType-LIST = 1-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## JUMP
@@ -45,6 +51,8 @@ Jump, this type of setting is used to jump to another interface.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingType-JUMP = 2--><!--Device-SettingType-JUMP = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 

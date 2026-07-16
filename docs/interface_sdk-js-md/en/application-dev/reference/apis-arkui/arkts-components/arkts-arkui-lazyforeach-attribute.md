@@ -10,5 +10,7 @@ The [drag-and-drop sorting](../../apis-ability-kit/arkts-apis/arkts-app-ability-
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-unnamed-declare class LazyForEachAttribute extends DynamicNode<LazyForEachAttribute>--><!--Device-unnamed-declare class LazyForEachAttribute extends DynamicNode<LazyForEachAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

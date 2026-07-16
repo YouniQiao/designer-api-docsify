@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+<!--Device-userAccessCtrl-enum AuthTokenType--><!--Device-userAccessCtrl-enum AuthTokenType-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -17,6 +19,8 @@ TOKEN_TYPE_LOCAL_AUTH = 0
 本地认证令牌。基于本地认证结果签发的身份验证令牌，表示用户在本设备上完成了身份认证。
 
 **起始版本：** 18
+
+<!--Device-AuthTokenType-TOKEN_TYPE_LOCAL_AUTH = 0--><!--Device-AuthTokenType-TOKEN_TYPE_LOCAL_AUTH = 0-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -32,6 +36,8 @@ TOKEN_TYPE_LOCAL_RESIGN = 1
 
 **起始版本：** 18
 
+<!--Device-AuthTokenType-TOKEN_TYPE_LOCAL_RESIGN = 1--><!--Device-AuthTokenType-TOKEN_TYPE_LOCAL_RESIGN = 1-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +51,8 @@ TOKEN_TYPE_COAUTH = 2
 协同认证令牌。基于多个设备协同认证结果签发的身份验证令牌，表示用户通过多设备协同完成了身份认证。
 
 **起始版本：** 18
+
+<!--Device-AuthTokenType-TOKEN_TYPE_COAUTH = 2--><!--Device-AuthTokenType-TOKEN_TYPE_COAUTH = 2-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

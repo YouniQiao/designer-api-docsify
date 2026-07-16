@@ -4,6 +4,8 @@ Defines the information about the redirected-to ability.
 
 **Since:** 9
 
+<!--Device-reminderAgentManager-interface WantAgent--><!--Device-reminderAgentManager-interface WantAgent-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Name of the target ability.
 
 **Since:** 9
 
+<!--Device-WantAgent-abilityName: string--><!--Device-WantAgent-abilityName: string-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## parameters
@@ -37,6 +41,8 @@ Parameters to be transferred to the target.
 **Type:** Record<string, Object>
 
 **Since:** 12
+
+<!--Device-WantAgent-parameters?: Record<string, Object>--><!--Device-WantAgent-parameters?: Record<string, Object>-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -52,6 +58,8 @@ Name of the target package.
 
 **Since:** 9
 
+<!--Device-WantAgent-pkgName: string--><!--Device-WantAgent-pkgName: string-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## uri
@@ -65,6 +73,8 @@ URI of the target ability.
 **Type:** string
 
 **Since:** 12
+
+<!--Device-WantAgent-uri?: string--><!--Device-WantAgent-uri?: string-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 

@@ -22,13 +22,15 @@ Requests to cancel a continuous task from the system. This API uses an asynchron
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-particleAbility-function cancelBackgroundRunning(callback: AsyncCallback<void>): void--><!--Device-particleAbility-function cancelBackgroundRunning(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the continuous task is canceled,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the continuous task is canceled,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -65,13 +67,15 @@ Requests to cancel a continuous task from the system. This API uses a promise to
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-particleAbility-function cancelBackgroundRunning(): Promise<void>--><!--Device-particleAbility-function cancelBackgroundRunning(): Promise<void>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. Promise that returns no value. |
 
 **Example**
 

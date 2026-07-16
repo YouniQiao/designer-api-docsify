@@ -20,6 +20,8 @@ Registers a callback to listen for the continuous task change events.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-backgroundTaskManager-function subscribeContinuousTaskState(subscriber: BackgroundTaskSubscriber): void--><!--Device-backgroundTaskManager-function subscribeContinuousTaskState(subscriber: BackgroundTaskSubscriber): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Registers a callback to listen for the continuous task change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | BackgroundTaskSubscriber | Yes | Background task listener that listens for continuous task statechanges, including start, update and stop events. |
+| subscriber | [BackgroundTaskSubscriber](arkts-backgroundtasks-backgroundtasksubscriber-i-sys.md) | Yes | Background task listener that listens for continuous task state changes, including start, update and stop events. |
 
 **Error codes:**
 

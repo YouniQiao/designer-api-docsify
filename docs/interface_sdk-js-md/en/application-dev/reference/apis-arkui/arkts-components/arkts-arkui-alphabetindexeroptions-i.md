@@ -4,11 +4,13 @@ Defines the options of the **AlphabetIndexer** component.
 
 > **NOTE**
 
-> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element  
 > 's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
+
+<!--Device-unnamed-interface AlphabetIndexerOptions--><!--Device-unnamed-interface AlphabetIndexerOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,6 +28,8 @@ Array of index items.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AlphabetIndexerOptions-arrayValue: Array<string>--><!--Device-AlphabetIndexerOptions-arrayValue: Array<string>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selected
@@ -34,9 +38,7 @@ Array of index items.
 selected: number
 ```
 
-Index of the initial selected item. If the value is out of range, the default value **0** is used. When this
-parameter and the [selected](AlphabetIndexerAttribute#selected) property are set at the same time, the
-**selected** property has a higher priority.
+Index of the initial selected item. If the value is out of range, the default value **0** is used. When this parameter and the [selected](AlphabetIndexerAttribute#selected) property are set at the same time, the **selected** property has a higher priority.
 
 Value range: [0, arrayValue.length-1]
 
@@ -47,6 +49,8 @@ This parameter supports two-way binding through [$$](../../../../ui/state-manage
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AlphabetIndexerOptions-selected: number--><!--Device-AlphabetIndexerOptions-selected: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

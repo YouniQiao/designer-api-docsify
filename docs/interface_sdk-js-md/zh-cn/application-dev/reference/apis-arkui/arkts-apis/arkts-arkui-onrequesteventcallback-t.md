@@ -8,7 +8,9 @@ type OnRequestEventCallback = (source: Want, name: string, data: KVObject) => Re
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-pluginComponentManager-type OnRequestEventCallback = (source: Want, name: string, data: KVObject) => RequestEventResult--><!--Device-pluginComponentManager-type OnRequestEventCallback = (source: Want, name: string, data: KVObject) => RequestEventResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,9 +1,10 @@
 # Rect
 
-Describes a rectangle, which can be defined by two coordinate points: upper left corner point and lower right
-corner point.
+Describes a rectangle, which can be defined by two coordinate points: upper left corner point and lower right corner point.
 
 **Since:** 11
+
+<!--Device-common2D-interface Rect--><!--Device-common2D-interface Rect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -27,6 +28,8 @@ Y coordinate of the lower right corner of the rectangle. The value is a floating
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Rect-bottom: double--><!--Device-Rect-bottom: double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## left
@@ -42,6 +45,8 @@ X coordinate of the upper left corner of the rectangle. The value is a floating 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-Rect-left: double--><!--Device-Rect-left: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -59,6 +64,8 @@ X coordinate of the lower right corner of the rectangle. The value is a floating
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Rect-right: double--><!--Device-Rect-right: double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## top
@@ -74,6 +81,8 @@ Y coordinate of the upper left corner of the rectangle. The value is a floating 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-Rect-top: double--><!--Device-Rect-top: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

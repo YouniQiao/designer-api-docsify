@@ -4,6 +4,8 @@ Class to be override for backup extension ability.
 
 **Since:** 10
 
+<!--Device-unnamed-declare class BackupExtensionAbility--><!--Device-unnamed-declare class BackupExtensionAbility-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 ## Modules to Import
@@ -18,12 +20,13 @@ import { BundleVersion } from '@kit.CoreFileKit';
 onBackup(): void
 ```
 
-Callback to be called when the backup procedure is started.
-Developer could override this method to build files to be backup.
+Callback to be called when the backup procedure is started.Developer could override this method to build files to be backup.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BackupExtensionAbility-onBackup(): void--><!--Device-BackupExtensionAbility-onBackup(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -44,12 +47,13 @@ class BackupExt extends BackupExtensionAbility {
 onBackupEx(backupInfo: string): string | Promise<string>
 ```
 
-Callback to be called when the backup procedure is started.
-Developer could override this method to restore.
+Callback to be called when the backup procedure is started.Developer could override this method to restore.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BackupExtensionAbility-onBackupEx(backupInfo: string): string | Promise<string>--><!--Device-BackupExtensionAbility-onBackupEx(backupInfo: string): string | Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -136,12 +140,13 @@ class BackupExt extends BackupExtensionAbility {
 onProcess(): string
 ```
 
-Callback to be called when getting backup/restore process info.
-Developer could override this method to provide the backup/restore process info.
+Callback to be called when getting backup/restore process info.Developer could override this method to provide the backup/restore process info.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BackupExtensionAbility-onProcess(): string--><!--Device-BackupExtensionAbility-onProcess(): string-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -234,12 +239,13 @@ function appJob(progressInfo: MigrateProgressInfo, args: number) : string {
 onRelease(scenario: number): Promise<void>
 ```
 
-Callback to be called before extension ability exits.
-Developer could override this method to clean abnormal data.
+Callback to be called before extension ability exits.Developer could override this method to clean abnormal data.
 
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BackupExtensionAbility-onRelease(scenario: int): Promise<void>--><!--Device-BackupExtensionAbility-onRelease(scenario: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -253,7 +259,7 @@ Developer could override this method to clean abnormal data.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function |
 
 **Example**
 
@@ -295,12 +301,13 @@ class BackupExt extends BackupExtensionAbility {
 onRestore(bundleVersion: BundleVersion): void
 ```
 
-Callback to be called when the restore procedure is started.
-Developer could override this method to restore from copies for various bundle versions.
+Callback to be called when the restore procedure is started.Developer could override this method to restore from copies for various bundle versions.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BackupExtensionAbility-onRestore(bundleVersion: BundleVersion): void--><!--Device-BackupExtensionAbility-onRestore(bundleVersion: BundleVersion): void-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -308,7 +315,7 @@ Developer could override this method to restore from copies for various bundle v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleVersion | BundleVersion | Yes | Bundle version to be restore. |
+| bundleVersion | [BundleVersion](arkts-corefile-bundleversion-i.md) | Yes | Bundle version to be restore. |
 
 **Example**
 
@@ -329,12 +336,13 @@ class BackupExt extends BackupExtensionAbility {
 onRestoreEx(bundleVersion: BundleVersion, restoreInfo: string): string | Promise<string>
 ```
 
-Callback to be called when the restore procedure is started.
-Developer could override this method to restore.
+Callback to be called when the restore procedure is started.Developer could override this method to restore.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BackupExtensionAbility-onRestoreEx(bundleVersion: BundleVersion, restoreInfo: string): string | Promise<string>--><!--Device-BackupExtensionAbility-onRestoreEx(bundleVersion: BundleVersion, restoreInfo: string): string | Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -342,7 +350,7 @@ Developer could override this method to restore.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleVersion | BundleVersion | Yes | Bundle version to be restore. |
+| bundleVersion | [BundleVersion](arkts-corefile-bundleversion-i.md) | Yes | Bundle version to be restore. |
 | restoreInfo | string | Yes | RestoreInfo to be restore, the param is a JSON string, |
 
 **Return value:**
@@ -430,6 +438,8 @@ Indicates backup extension ability context.
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BackupExtensionAbility-context: BackupExtensionContext--><!--Device-BackupExtensionAbility-context: BackupExtensionContext-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 

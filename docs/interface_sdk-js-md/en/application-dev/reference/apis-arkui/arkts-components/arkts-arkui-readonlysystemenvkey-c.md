@@ -10,5 +10,7 @@ Define read-only system environment variable keys.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-unnamed-declare class ReadonlySystemEnvKey<T> extends SystemEnvKey<T>--><!--Device-unnamed-declare class ReadonlySystemEnvKey<T> extends SystemEnvKey<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

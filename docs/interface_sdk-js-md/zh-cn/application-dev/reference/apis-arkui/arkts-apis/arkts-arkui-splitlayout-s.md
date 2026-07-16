@@ -4,19 +4,27 @@
 
 > **说明：**
 
-> - 该组件从API version 10开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。
->
-> - 该组件仅可在Stage模型下使用。
->
+> - 该组件从API version 10开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。  
+>  
+> - 该组件仅可在Stage模型下使用。  
+>  
 > - 如果SplitLayout设置[通用属性](./@internal/component/ets/common)和[通用事件](./@internal/component/ets/common)，编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到SplitLayout本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议SplitLayout设置通用属性和通用事件。
 
-###### 子组件
+## 子组件
 
 无
 
 **起始版本：** 22
 
+<!--Device-unnamed-export declare struct SplitLayout--><!--Device-unnamed-export declare struct SplitLayout-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { SplitLayout } from '@kit.ArkUI';
+```
 
 ## container
 
@@ -34,7 +42,9 @@
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SplitLayout-@BuilderParam container: () => void--><!--Device-SplitLayout-@BuilderParam container: () => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,7 +64,9 @@
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SplitLayout-@State mainImage: ResourceStr--><!--Device-SplitLayout-@State mainImage: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,7 +86,9 @@
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SplitLayout-@Prop primaryText: ResourceStr--><!--Device-SplitLayout-@Prop primaryText: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,7 +108,9 @@
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SplitLayout-@Prop secondaryText?: ResourceStr--><!--Device-SplitLayout-@Prop secondaryText?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -114,7 +130,9 @@
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SplitLayout-@Prop tertiaryText?: ResourceStr--><!--Device-SplitLayout-@Prop tertiaryText?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

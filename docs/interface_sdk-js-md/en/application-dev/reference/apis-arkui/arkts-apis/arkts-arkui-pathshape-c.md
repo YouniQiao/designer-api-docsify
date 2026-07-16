@@ -8,6 +8,8 @@ This API inherits from [CommonShapeMethod](arkts-arkui-commonshapemethod-c.md).
 
 **Since:** 12
 
+<!--Device-unnamed-export declare class PathShape extends CommonShapeMethod<PathShape>--><!--Device-unnamed-export declare class PathShape extends CommonShapeMethod<PathShape>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,6 +34,8 @@ Sets the path drawing commands.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-PathShape-commands(commands: string): PathShape--><!--Device-PathShape-commands(commands: string): PathShape-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -44,7 +48,7 @@ Sets the path drawing commands.
 
 | Type | Description |
 | --- | --- |
-| PathShape | **PathShape** object. |
+| [PathShape](arkts-arkui-pathshape-c.md) | **PathShape** object. |
 
 ## constructor
 
@@ -62,11 +66,13 @@ A constructor used to create a **PathShape** object.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-PathShape-constructor(options?: PathShapeOptions)--><!--Device-PathShape-constructor(options?: PathShapeOptions)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | PathShapeOptions | No | Path parameters. |
+| options | [PathShapeOptions](arkts-arkui-pathshapeoptions-i.md) | No | Path parameters. |
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface Version--><!--Device-unnamed-export interface Version-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -19,6 +21,8 @@ readonly code: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Version-readonly code: int--><!--Device-Version-readonly code: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -36,6 +40,8 @@ readonly minCompatibleVersionCode: number
 
 **起始版本：** 9
 
+<!--Device-Version-readonly minCompatibleVersionCode: int--><!--Device-Version-readonly minCompatibleVersionCode: int-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +57,8 @@ readonly name: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-Version-readonly name: string--><!--Device-Version-readonly name: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 

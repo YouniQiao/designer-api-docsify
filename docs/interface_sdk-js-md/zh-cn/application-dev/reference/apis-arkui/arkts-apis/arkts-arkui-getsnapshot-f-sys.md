@@ -1,16 +1,22 @@
 # getSnapshot（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+```
+
 ## getSnapshot
 
 ```TypeScript
 function getSnapshot(windowId: number): Promise<image.PixelMap>
 ```
 
-获取指定窗口相同尺寸截图，使用Promise异步回调。若当前窗口设置为隐私模式（可通过
-[setWindowPrivacyMode](arkts-arkui-window-i.md#setwindowprivacymode-2)
-接口设置），截图结果为白屏。
+获取指定窗口相同尺寸截图，使用Promise异步回调。若当前窗口设置为隐私模式（可通过[setWindowPrivacyMode](arkts-arkui-window-i.md#setwindowprivacymode-2)接口设置），截图结果为白屏。
 
 **起始版本：** 12
+
+<!--Device-window-function getSnapshot(windowId: int): Promise<image.PixelMap>--><!--Device-window-function getSnapshot(windowId: int): Promise<image.PixelMap>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -26,7 +32,7 @@ function getSnapshot(windowId: number): Promise<image.PixelMap>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | - Promise that returns no value. |
+| Promise<image.PixelMap> | - Promise that returns no value. |
 
 **错误码：**
 

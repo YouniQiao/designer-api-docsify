@@ -12,12 +12,13 @@ import { notificationManager } from '@kit.NotificationKit';
 function getSlotNumByBundle(bundle: BundleOption, callback: AsyncCallback<number>): void
 ```
 
-Obtains the number of notification slots of a specified application. This API uses an asynchronous callback to
-return the result.
+Obtains the number of notification slots of a specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function getSlotNumByBundle(bundle: BundleOption, callback: AsyncCallback<long>): void--><!--Device-notificationManager-function getSlotNumByBundle(bundle: BundleOption, callback: AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -27,8 +28,8 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -77,6 +78,8 @@ Obtains the number of notification slots of a specified application. This API us
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getSlotNumByBundle(bundle: BundleOption): Promise<long>--><!--Device-notificationManager-function getSlotNumByBundle(bundle: BundleOption): Promise<long>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -85,13 +88,13 @@ Obtains the number of notification slots of a specified application. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result. |
 
 **Error codes:**
 

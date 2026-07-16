@@ -1,5 +1,11 @@
 # queryAppKeyState（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { screenLockFileManager } from '@kit.AbilityKit';
+```
+
 ## queryAppKeyState
 
 ```TypeScript
@@ -12,6 +18,8 @@ function queryAppKeyState(dataType: DataType): KeyStatus
 
 **需要权限：** ohos.permission.ACCESS_SCREEN_LOCK_MEDIA_DATA or ohos.permission.ACCESS_SCREEN_LOCK_ALL_DATA
 
+<!--Device-screenLockFileManager-function queryAppKeyState(dataType: DataType): KeyStatus--><!--Device-screenLockFileManager-function queryAppKeyState(dataType: DataType): KeyStatus-End-->
+
 **系统能力：** SystemCapability.Security.ScreenLockFileManager
 
 **系统接口：** 此接口为系统接口。
@@ -20,13 +28,13 @@ function queryAppKeyState(dataType: DataType): KeyStatus
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dataType | DataType | 是 | 锁屏下访问的敏感数据类型。 |
+| dataType | [DataType](arkts-ability-datatype-e.md) | 是 | 锁屏下访问的敏感数据类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| KeyStatus | 锁屏下敏感数据密钥的状态。 |
+| [KeyStatus](arkts-ability-keystatus-e.md) | 锁屏下敏感数据密钥的状态。 |
 
 **错误码：**
 

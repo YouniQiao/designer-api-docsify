@@ -4,6 +4,8 @@
 
 **起始版本：** 22
 
+<!--Device-unnamed-declare interface BlankScreenDetectionConfig--><!--Device-unnamed-declare interface BlankScreenDetectionConfig-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## contentfulNodesCountThreshold
@@ -21,6 +23,8 @@ contentfulNodesCountThreshold?: number
 **类型：** number
 
 **起始版本：** 22
+
+<!--Device-BlankScreenDetectionConfig-contentfulNodesCountThreshold?: number--><!--Device-BlankScreenDetectionConfig-contentfulNodesCountThreshold?: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -41,6 +45,8 @@ detectionMethods?: BlankScreenDetectionMethod[]
 **类型：** BlankScreenDetectionMethod[]
 
 **起始版本：** 22
+
+<!--Device-BlankScreenDetectionConfig-detectionMethods?: BlankScreenDetectionMethod[]--><!--Device-BlankScreenDetectionConfig-detectionMethods?: BlankScreenDetectionMethod[]-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -66,6 +72,8 @@ detectionTiming?: number[]
 
 **起始版本：** 22
 
+<!--Device-BlankScreenDetectionConfig-detectionTiming?: number[]--><!--Device-BlankScreenDetectionConfig-detectionTiming?: number[]-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## enable
@@ -79,6 +87,8 @@ enable: boolean
 **类型：** boolean
 
 **起始版本：** 22
+
+<!--Device-BlankScreenDetectionConfig-enable: boolean--><!--Device-BlankScreenDetectionConfig-enable: boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

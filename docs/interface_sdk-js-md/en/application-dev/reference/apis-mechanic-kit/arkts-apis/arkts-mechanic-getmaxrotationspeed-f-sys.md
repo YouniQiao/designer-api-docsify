@@ -16,6 +16,8 @@ Obtains the maximum rotation speed of a mechanical device.
 
 **Since:** 20
 
+<!--Device-mechanicManager-function getMaxRotationSpeed(mechId: int): RotationSpeed--><!--Device-mechanicManager-function getMaxRotationSpeed(mechId: int): RotationSpeed-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -30,7 +32,7 @@ Obtains the maximum rotation speed of a mechanical device.
 
 | Type | Description |
 | --- | --- |
-| RotationSpeed | Maximum speed. Only the absolute value of the speed is returned. |
+| [RotationSpeed](arkts-mechanic-rotationspeed-i-sys.md) | Maximum speed. Only the absolute value of the speed is returned. |
 
 **Error codes:**
 

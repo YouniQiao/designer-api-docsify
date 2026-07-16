@@ -18,6 +18,8 @@ Checks whether the default data network is activated.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-connection-function hasDefaultNetSync(): boolean--><!--Device-connection-function hasDefaultNetSync(): boolean-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Return value:**

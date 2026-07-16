@@ -1,10 +1,10 @@
 # AVMetadata
 
-Defines the audio and video metadata. Parameters that are not declared as read-only in
-[AVRecorderConfig](#AVRecorderConfig) can be used as input parameters for recording of
-[AVRecorder](#AVRecorder).
+Defines the audio and video metadata. Parameters that are not declared as read-only in [AVRecorderConfig](#AVRecorderConfig) can be used as input parameters for recording of [AVRecorder](#AVRecorder).
 
 **Since:** 11
+
+<!--Device-media-interface AVMetadata--><!--Device-media-interface AVMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -26,6 +26,8 @@ Title of the album. This parameter is not supported in AVRecorder settings.
 
 **Since:** 11
 
+<!--Device-AVMetadata-album?: string--><!--Device-AVMetadata-album?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## albumArtist
@@ -39,6 +41,8 @@ Artist of the album. This parameter is not supported in AVRecorder settings.
 **Type:** string
 
 **Since:** 11
+
+<!--Device-AVMetadata-albumArtist?: string--><!--Device-AVMetadata-albumArtist?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -54,6 +58,8 @@ Artist of the media asset. This parameter is not supported in AVRecorder setting
 
 **Since:** 11
 
+<!--Device-AVMetadata-artist?: string--><!--Device-AVMetadata-artist?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## author
@@ -67,6 +73,8 @@ Author of the media asset. This parameter is not supported in AVRecorder setting
 **Type:** string
 
 **Since:** 11
+
+<!--Device-AVMetadata-author?: string--><!--Device-AVMetadata-author?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -82,6 +90,8 @@ Composer of the media asset. This parameter is not supported in AVRecorder setti
 
 **Since:** 11
 
+<!--Device-AVMetadata-composer?: string--><!--Device-AVMetadata-composer?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## customInfo
@@ -95,6 +105,8 @@ Custom key-value mappings obtained from **moov.meta.list**.
 **Type:** Record<string, string>
 
 **Since:** 12
+
+<!--Device-AVMetadata-customInfo?: Record<string, string>--><!--Device-AVMetadata-customInfo?: Record<string, string>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -110,6 +122,8 @@ Time when the media asset is created. This parameter is not supported in AVRecor
 
 **Since:** 11
 
+<!--Device-AVMetadata-dateTime?: string--><!--Device-AVMetadata-dateTime?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## dateTimeFormat
@@ -118,12 +132,13 @@ Time when the media asset is created. This parameter is not supported in AVRecor
 dateTimeFormat?: string
 ```
 
-Time when the media asset is created. The value is in the YYYY-MM-DD HH:mm:ss format.
-This parameter is not supported in AVRecorder settings.
+Time when the media asset is created. The value is in the YYYY-MM-DD HH:mm:ss format.This parameter is not supported in AVRecorder settings.
 
 **Type:** string
 
 **Since:** 11
+
+<!--Device-AVMetadata-dateTimeFormat?: string--><!--Device-AVMetadata-dateTimeFormat?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -139,6 +154,8 @@ Description of the media asset. This parameter is not supported in AVRecorder se
 
 **Since:** 23
 
+<!--Device-AVMetadata-description?: string--><!--Device-AVMetadata-description?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## duration
@@ -153,6 +170,8 @@ Duration of the media asset. This parameter is not supported in AVRecorder setti
 
 **Since:** 11
 
+<!--Device-AVMetadata-duration?: string--><!--Device-AVMetadata-duration?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## encoder
@@ -161,14 +180,15 @@ Duration of the media asset. This parameter is not supported in AVRecorder setti
 encoder?: string
 ```
 
-The identifier that represents the software or hardware and settings used for encoding.
-This parameter is not supported in AVRecorder settings.
+The identifier that represents the software or hardware and settings used for encoding.This parameter is not supported in AVRecorder settings.
 
 **Type:** string
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVMetadata-encoder?: string--><!--Device-AVMetadata-encoder?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -184,6 +204,8 @@ Type or genre of the media asset.
 
 **Since:** 11
 
+<!--Device-AVMetadata-genre?: string--><!--Device-AVMetadata-genre?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## hasAudio
@@ -197,6 +219,8 @@ Whether the media asset contains audio. This parameter is not supported in AVRec
 **Type:** string
 
 **Since:** 11
+
+<!--Device-AVMetadata-hasAudio?: string--><!--Device-AVMetadata-hasAudio?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -212,6 +236,8 @@ Whether the media asset contains a video. This parameter is not supported in AVR
 
 **Since:** 11
 
+<!--Device-AVMetadata-hasVideo?: string--><!--Device-AVMetadata-hasVideo?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## hdrType
@@ -225,6 +251,8 @@ HDR type of the media asset. This parameter is not supported in AVRecorder setti
 **Type:** HdrType
 
 **Since:** 12
+
+<!--Device-AVMetadata-hdrType?: HdrType--><!--Device-AVMetadata-hdrType?: HdrType-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -240,6 +268,8 @@ Geographical location of the media asset.
 
 **Since:** 12
 
+<!--Device-AVMetadata-location?: Location--><!--Device-AVMetadata-location?: Location-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## mimeType
@@ -248,12 +278,13 @@ Geographical location of the media asset.
 mimeType?: string
 ```
 
-MIME type of the media asset. This parameter is not supported in AVRecorder settings.
-Some example mime types include: "video/mp4", "audio/mp4", "audio/amr-wb".
+MIME type of the media asset. This parameter is not supported in AVRecorder settings.Some example mime types include: "video/mp4", "audio/mp4", "audio/amr-wb".
 
 **Type:** string
 
 **Since:** 11
+
+<!--Device-AVMetadata-mimeType?: string--><!--Device-AVMetadata-mimeType?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -269,6 +300,8 @@ Audio sampling rate, in Hz. This parameter is not supported in AVRecorder settin
 
 **Since:** 11
 
+<!--Device-AVMetadata-sampleRate?: string--><!--Device-AVMetadata-sampleRate?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## title
@@ -277,12 +310,13 @@ Audio sampling rate, in Hz. This parameter is not supported in AVRecorder settin
 title?: string
 ```
 
-Title of the media asset. This parameter is not supported in AVRecorder settings.
-This parameter is read-only in the current version.
+Title of the media asset. This parameter is not supported in AVRecorder settings.This parameter is read-only in the current version.
 
 **Type:** string
 
 **Since:** 11
+
+<!--Device-AVMetadata-title?: string--><!--Device-AVMetadata-title?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -298,6 +332,8 @@ Number of tracks of the media asset. This parameter is not supported in AVRecord
 
 **Since:** 11
 
+<!--Device-AVMetadata-trackCount?: string--><!--Device-AVMetadata-trackCount?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## tracks
@@ -311,6 +347,8 @@ Tracks info of the media asset. This parameter is not supported in AVRecorder se
 **Type:** Array<MediaDescription>
 
 **Since:** 20
+
+<!--Device-AVMetadata-tracks?: Array<MediaDescription>--><!--Device-AVMetadata-tracks?: Array<MediaDescription>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -326,6 +364,8 @@ Video height, in px. This parameter is not supported in AVRecorder settings.
 
 **Since:** 11
 
+<!--Device-AVMetadata-videoHeight?: string--><!--Device-AVMetadata-videoHeight?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## videoOrientation
@@ -340,6 +380,8 @@ Video rotation direction, in degrees.
 
 **Since:** 11
 
+<!--Device-AVMetadata-videoOrientation?: string--><!--Device-AVMetadata-videoOrientation?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## videoWidth
@@ -353,6 +395,8 @@ Video width, in px. This parameter is not supported in AVRecorder settings.
 **Type:** string
 
 **Since:** 11
+
+<!--Device-AVMetadata-videoWidth?: string--><!--Device-AVMetadata-videoWidth?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 

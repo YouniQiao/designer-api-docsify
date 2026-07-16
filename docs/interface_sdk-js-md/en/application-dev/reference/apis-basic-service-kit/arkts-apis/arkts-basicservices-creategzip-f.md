@@ -18,13 +18,15 @@ Creates this **GZip** object. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-zlib-function createGZip(): Promise<GZip>--><!--Device-zlib-function createGZip(): Promise<GZip>-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GZip&gt; | Promise used to return the **GZip** object created. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<GZip> | Promise used to return the **GZip** object created. |
 
 **Example**
 

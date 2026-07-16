@@ -16,6 +16,8 @@ Queries the data traffic (including all TCP and UDP data packets) received throu
 
 **Since:** 10
 
+<!--Device-statistics-function getIfaceRxBytes(nic: string, callback: AsyncCallback<long>): void--><!--Device-statistics-function getIfaceRxBytes(nic: string, callback: AsyncCallback<long>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -23,7 +25,7 @@ Queries the data traffic (including all TCP and UDP data packets) received throu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | nic | string | Yes | Network interface card. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Returns the data traffic received through the specified NIC. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Returns the data traffic received through the specified NIC. |
 
 **Error codes:**
 
@@ -63,6 +65,8 @@ Queries the data traffic (including all TCP and UDP data packets) received throu
 
 **Since:** 10
 
+<!--Device-statistics-function getIfaceRxBytes(nic: string): Promise<long>--><!--Device-statistics-function getIfaceRxBytes(nic: string): Promise<long>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -75,7 +79,7 @@ Queries the data traffic (including all TCP and UDP data packets) received throu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | The promise returned by the function. |
 
 **Error codes:**
 

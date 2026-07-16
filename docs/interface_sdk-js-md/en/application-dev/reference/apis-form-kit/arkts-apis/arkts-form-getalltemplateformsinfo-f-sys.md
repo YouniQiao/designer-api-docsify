@@ -12,12 +12,13 @@ import { formHost } from '@kit.FormKit';
 function getAllTemplateFormsInfo(): Promise<Array<formInfo.FormInfo>>
 ```
 
-Obtains the template widget information provided by all applications on the device. This API uses a promise to
-return the result.
+Obtains the template widget information provided by all applications on the device. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-formHost-function getAllTemplateFormsInfo(): Promise<Array<formInfo.FormInfo>>--><!--Device-formHost-function getAllTemplateFormsInfo(): Promise<Array<formInfo.FormInfo>>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -27,7 +28,7 @@ return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Promise used to return the information obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<formInfo.FormInfo>> | Promise used to return the information obtained. |
 
 **Error codes:**
 

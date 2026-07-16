@@ -1,5 +1,11 @@
 # getPrinterInfoById（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+```
+
 ## getPrinterInfoById
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getPrinterInfoById(printerId: string): Promise<PrinterInfo>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
+
+<!--Device-print-function getPrinterInfoById(printerId: string): Promise<PrinterInfo>--><!--Device-print-function getPrinterInfoById(printerId: string): Promise<PrinterInfo>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -26,7 +34,7 @@ function getPrinterInfoById(printerId: string): Promise<PrinterInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PrinterInfo&gt; | Promise对象，返回查询到的打印机信息。 |
+| Promise<PrinterInfo> | Promise对象，返回查询到的打印机信息。 |
 
 **错误码：**
 

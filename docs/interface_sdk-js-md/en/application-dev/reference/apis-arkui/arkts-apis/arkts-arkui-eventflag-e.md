@@ -4,6 +4,8 @@ Enumerates event types.
 
 **Since:** 18
 
+<!--Device-uiExtension-enum EventFlag--><!--Device-uiExtension-enum EventFlag-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## EVENT_PAN_GESTURE_LEFT
@@ -19,6 +21,8 @@ Pan-left event.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-EventFlag-EVENT_PAN_GESTURE_LEFT = 0x00000001--><!--Device-EventFlag-EVENT_PAN_GESTURE_LEFT = 0x00000001-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ Pan-right event.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-EventFlag-EVENT_PAN_GESTURE_RIGHT = 0x00000002--><!--Device-EventFlag-EVENT_PAN_GESTURE_RIGHT = 0x00000002-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## EVENT_LONG_PRESS
@@ -51,6 +57,8 @@ Long press event.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-EventFlag-EVENT_LONG_PRESS = 0x00000200--><!--Device-EventFlag-EVENT_LONG_PRESS = 0x00000200-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +76,8 @@ Pan-up event.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-EventFlag-EVENT_PAN_GESTURE_UP = 0x00000004--><!--Device-EventFlag-EVENT_PAN_GESTURE_UP = 0x00000004-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## EVENT_CLICK
@@ -83,6 +93,8 @@ Click event.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-EventFlag-EVENT_CLICK = 0x00000100--><!--Device-EventFlag-EVENT_CLICK = 0x00000100-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +112,8 @@ No event.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-EventFlag-EVENT_NONE = 0x00000000--><!--Device-EventFlag-EVENT_NONE = 0x00000000-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## EVENT_PAN_GESTURE_DOWN
@@ -115,6 +129,8 @@ Pan-down event.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-EventFlag-EVENT_PAN_GESTURE_DOWN = 0x00000008--><!--Device-EventFlag-EVENT_PAN_GESTURE_DOWN = 0x00000008-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

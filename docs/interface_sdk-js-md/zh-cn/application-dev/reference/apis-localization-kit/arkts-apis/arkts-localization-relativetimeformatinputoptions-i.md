@@ -10,7 +10,15 @@
 
 **替代接口：** options)
 
+<!--Device-intl-export interface RelativeTimeFormatInputOptions--><!--Device-intl-export interface RelativeTimeFormatInputOptions-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+```
 
 ## localeMatcher
 
@@ -30,7 +38,9 @@ localeMatcher?: string
 
 **替代接口：** localematcher)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RelativeTimeFormatInputOptions-localeMatcher?: string--><!--Device-RelativeTimeFormatInputOptions-localeMatcher?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -54,7 +64,9 @@ numeric?: string
 
 **替代接口：** numeric)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RelativeTimeFormatInputOptions-numeric?: string--><!--Device-RelativeTimeFormatInputOptions-numeric?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -78,7 +90,9 @@ style?: string
 
 **替代接口：** style)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RelativeTimeFormatInputOptions-style?: string--><!--Device-RelativeTimeFormatInputOptions-style?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

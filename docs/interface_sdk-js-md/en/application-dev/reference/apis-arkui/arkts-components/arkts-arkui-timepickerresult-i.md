@@ -4,6 +4,8 @@ Describes a time in 24-hour format.
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface TimePickerResult--><!--Device-unnamed-declare interface TimePickerResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## hour
@@ -22,6 +24,8 @@ Value range: [0-23]
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TimePickerResult-hour: number--><!--Device-TimePickerResult-hour: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## minute
@@ -39,6 +43,8 @@ Value range: [0-59]
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TimePickerResult-minute: number--><!--Device-TimePickerResult-minute: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,6 +65,8 @@ Value range: [0-59]
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TimePickerResult-second: number--><!--Device-TimePickerResult-second: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

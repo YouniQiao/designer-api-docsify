@@ -1,9 +1,10 @@
 # Writable
 
-Stream to which data can be written. A writable stream allows data to be written to a target, which can be a file,
-an HTTP response, a standard output, another stream, or the like.
+Stream to which data can be written. A writable stream allows data to be written to a target, which can be a file,an HTTP response, a standard output, another stream, or the like.
 
 **Since:** 12
+
+<!--Device-stream-export class Writable--><!--Device-stream-export class Writable-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,6 +26,8 @@ A constructor used to create a **Writable** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Writable-constructor()--><!--Device-Writable-constructor()-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Example**
@@ -40,13 +43,13 @@ let writableStream = new stream.Writable();
 cork(): boolean
 ```
 
-Forces subsequent writes to be buffered. This API is called to optimize the performance of continuous write
-operations. After this API is called, the value of **writableCorked** is incremented by one. It is recommended
-that this API be used in pair with [uncork()](arkts-arkts-writable-c.md#uncork-1).
+Forces subsequent writes to be buffered. This API is called to optimize the performance of continuous write operations. After this API is called, the value of **writableCorked** is incremented by one. It is recommended that this API be used in pair with [uncork()](arkts-arkts-writable-c.md#uncork-1).
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Writable-cork(): boolean--><!--Device-Writable-cork(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -81,12 +84,13 @@ console.info("Writable cork result", result); // Writable cork result true
 doInitialize(callback: Function): void
 ```
 
-You need to implement this API but do not call it directly. It is automatically called during the initialization
-of the writable stream. This API uses an asynchronous callback to return the result.
+You need to implement this API but do not call it directly. It is automatically called during the initialization of the writable stream. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Writable-doInitialize(callback: Function): void--><!--Device-Writable-doInitialize(callback: Function): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -94,7 +98,7 @@ of the writable stream. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Function | Yes | Callback function. |
+| callback | [Function](../../apis-na/arkts-apis/arkts-na-function-i.md) | Yes | Callback function. |
 
 **Example**
 
@@ -120,12 +124,13 @@ new MyWritable();
 doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void
 ```
 
-A data write API. You need to implement this API but do not call it directly. This API is automatically called
-when data is written. This API uses an asynchronous callback to return the result.
+A data write API. You need to implement this API but do not call it directly. This API is automatically called when data is written. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Writable-doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void--><!--Device-Writable-doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -134,8 +139,8 @@ when data is written. This API uses an asynchronous callback to return the resul
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | chunk | string \| Uint8Array | Yes | Data to write. |
-| encoding | string | Yes | Encoding format. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'**are supported. |
-| callback | Function | Yes | Callback function. |
+| encoding | string | Yes | Encoding format. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
+| callback | [Function](../../apis-na/arkts-apis/arkts-na-function-i.md) | Yes | Callback function. |
 
 **Example**
 
@@ -162,12 +167,13 @@ writableStream.write('data', 'utf8');
 doWritev(chunks: string[] | Uint8Array[], callback: Function): void
 ```
 
-A batch data write API. You need to implement this API but do not call it directly. This API is automatically
-called when data is written. This API uses an asynchronous callback to return the result.
+A batch data write API. You need to implement this API but do not call it directly. This API is automatically called when data is written. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Writable-doWritev(chunks: string[] | Uint8Array[], callback: Function): void--><!--Device-Writable-doWritev(chunks: string[] | Uint8Array[], callback: Function): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -176,7 +182,7 @@ called when data is written. This API uses an asynchronous callback to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | chunks | string[] \| Uint8Array[] | Yes | Data arrays to write in batches. |
-| callback | Function | Yes | Callback function. |
+| callback | [Function](../../apis-na/arkts-apis/arkts-na-function-i.md) | Yes | Callback function. |
 
 **Example**
 
@@ -208,16 +214,13 @@ writableStream.end();
 end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writable
 ```
 
-Ends the writing process in a writable stream. If the value of **writableCorked** is greater than 0, the value is
-set to **0** and the remaining data in the buffer is output. If the **chunk** parameter is passed, it is treated
-as the final data chunk and written using either the **write** or **doWrite** API, based on the current execution
-context. If **doWrite** is used for writing, the validity check of the **encoding** parameter depends on
-**doWrite**. If **end** is used alone (without **write**) and the **chunk** parameter is passed, the data is
-written through **doWrite**. This API uses an asynchronous callback to return the result.
+Ends the writing process in a writable stream. If the value of **writableCorked** is greater than 0, the value is set to **0** and the remaining data in the buffer is output. If the **chunk** parameter is passed, it is treated as the final data chunk and written using either the **write** or **doWrite** API, based on the current execution context. If **doWrite** is used for writing, the validity check of the **encoding** parameter depends on **doWrite**. If **end** is used alone (without **write**) and the **chunk** parameter is passed, the data is written through **doWrite**. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Writable-end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writable--><!--Device-Writable-end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writable-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -227,13 +230,13 @@ written through **doWrite**. This API uses an asynchronous callback to return th
 | --- | --- | --- | --- |
 | chunk | string \| Uint8Array | No | Data to write. The default value is **undefined**. |
 | encoding | string | No | Encoding format. The default value is **'utf8'**. Currently, **'utf8'**,**'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
-| callback | Function | No | Callback used to return the result. |
+| callback | [Function](../../apis-na/arkts-apis/arkts-na-function-i.md) | No | Callback used to return the result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Writable | Current **Writable** object. |
+| [Writable](arkts-arkts-writable-c.md) | Current **Writable** object. |
 
 **Error codes:**
 
@@ -277,6 +280,8 @@ Unregisters an event processing callback used to listen for different events on 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Writable-off(event: string, callback?: Callback<emitter.EventData>): void--><!--Device-Writable-off(event: string, callback?: Callback<emitter.EventData>): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -284,7 +289,7 @@ Unregisters an event processing callback used to listen for different events on 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Type of the event. The following events are supported: |
-| callback | Callback&lt;emitter.EventData&gt; | No | Callback function. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<emitter.EventData> | No | Callback function. |
 
 **Example**
 
@@ -326,6 +331,8 @@ Registers an event processing callback to listen for different events on the wri
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Writable-on(event: string, callback: Callback<emitter.EventData>): void--><!--Device-Writable-on(event: string, callback: Callback<emitter.EventData>): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -333,7 +340,7 @@ Registers an event processing callback to listen for different events on the wri
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Type of the event. The following events are supported: |
-| callback | Callback&lt;emitter.EventData&gt; | Yes | Callback function used to return the event data. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<emitter.EventData> | Yes | Callback function used to return the event data. |
 
 **Example**
 
@@ -369,6 +376,8 @@ Sets the default encoding format for the writable stream.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Writable-setDefaultEncoding(encoding?: string): boolean--><!--Device-Writable-setDefaultEncoding(encoding?: string): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -409,14 +418,13 @@ console.info("Writable is result", result); // Writable is result true
 uncork(): boolean
 ```
 
-Releases the cork state, flushing the buffered data and writing it to the target location. After this API is
-called, the value of **writableCorked** is decremented by one. If the value reaches **0**, the stream is no
-longer in the cork state. Otherwise, the stream is still in the cork state. It is recommended that this API be
-used in pair with [cork()](arkts-arkts-writable-c.md#cork-1).
+Releases the cork state, flushing the buffered data and writing it to the target location. After this API is called, the value of **writableCorked** is decremented by one. If the value reaches **0**, the stream is no longer in the cork state. Otherwise, the stream is still in the cork state. It is recommended that this API be used in pair with [cork()](arkts-arkts-writable-c.md#cork-1).
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Writable-uncork(): boolean--><!--Device-Writable-uncork(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -463,6 +471,8 @@ Writes data to the buffer of the stream. This API uses an asynchronous callback 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Writable-write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): boolean--><!--Device-Writable-write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -471,13 +481,13 @@ Writes data to the buffer of the stream. This API uses an asynchronous callback 
 | --- | --- | --- | --- |
 | chunk | string \| Uint8Array | No | Data to write. It cannot be **null**, **undefined**, or an empty string. |
 | encoding | string | No | Encoding format. The default value is **'utf8'**. Currently, **'utf8'**,**'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
-| callback | Function | No | Callback used to return the result. It is not called by default. |
+| callback | [Function](../../apis-na/arkts-apis/arkts-na-function-i.md) | No | Callback used to return the result. It is not called by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether there is space in the buffer of the writable stream. The value **true** means thatthere is still space in the buffer. The value **false** means that the buffer is full, and you are notadvised to continue writing data. |
+| boolean | Whether there is space in the buffer of the writable stream. The value **true** means that there is still space in the buffer. The value **false** means that the buffer is full, and you are not advised to continue writing data. |
 
 **Error codes:**
 
@@ -520,6 +530,8 @@ Is true if it is safe to call writable.write(), which means the stream has not b
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Writable-get writable(): boolean--><!--Device-Writable-get writable(): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## writableCorked
@@ -535,6 +547,8 @@ Number of times writable.uncork() needs to be called in order to fully uncork th
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Writable-get writableCorked(): int--><!--Device-Writable-get writableCorked(): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -552,6 +566,8 @@ Whether Writable.end has been called.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Writable-get writableEnded(): boolean--><!--Device-Writable-get writableEnded(): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## writableFinished
@@ -567,6 +583,8 @@ Whether Writable.end has been called and all buffers have been flushed.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Writable-get writableFinished(): boolean--><!--Device-Writable-get writableFinished(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -584,6 +602,8 @@ Value of highWatermark.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Writable-get writableHighWatermark(): int--><!--Device-Writable-get writableHighWatermark(): int-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## writableLength
@@ -600,6 +620,8 @@ Size of data that can be flushed, in bytes or objects.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Writable-get writableLength(): int--><!--Device-Writable-get writableLength(): int-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## writableObjectMode
@@ -615,6 +637,8 @@ Returns boolean indicating whether it is in ObjectMode.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Writable-get writableObjectMode(): boolean--><!--Device-Writable-get writableObjectMode(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

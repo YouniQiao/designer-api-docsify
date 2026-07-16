@@ -4,6 +4,8 @@ RGB color in depth space.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare interface DepthColorRGB--><!--Device-unnamed-declare interface DepthColorRGB-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -23,6 +25,8 @@ Blue component (0-255).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DepthColorRGB-blue: int--><!--Device-DepthColorRGB-blue: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ Green component (0-255).
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-DepthColorRGB-green: int--><!--Device-DepthColorRGB-green: int-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -63,6 +69,8 @@ Red component (0-255).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DepthColorRGB-red: int--><!--Device-DepthColorRGB-red: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

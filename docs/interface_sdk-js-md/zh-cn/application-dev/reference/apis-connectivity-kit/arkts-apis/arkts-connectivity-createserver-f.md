@@ -1,5 +1,11 @@
 # createServer
 
+## 导入模块
+
+```TypeScript
+import { ssap } from '@kit.ConnectivityKit';
+```
+
 ## createServer
 
 ```TypeScript
@@ -14,13 +20,15 @@ function createServer(): Server
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ssap-function createServer(): Server--><!--Device-ssap-function createServer(): Server-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Server | 返回一个SSAP服务端实例{@code Server}。 |
+| [Server](arkts-connectivity-server-i.md) | 返回一个SSAP服务端实例{@code Server}。 |
 
 **错误码：**
 

@@ -12,6 +12,8 @@ This API will be deprecated. Use [Album](arkts-corefile-album-i-sys.md) instead.
 
 **Substitutes:** [Album](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-album-i.md)
 
+<!--Device-userFileManager-interface PrivateAlbum extends AbsAlbum--><!--Device-userFileManager-interface PrivateAlbum extends AbsAlbum-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -28,12 +30,9 @@ import { userFileManager } from '@kit.CoreFileKit';
 delete(uri: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes a file from the system album. Only the files in the trash can be deleted. This API uses an asynchronous
-callback to return the result.
+Deletes a file from the system album. Only the files in the trash can be deleted. This API uses an asynchronous callback to return the result.
 
-This API will be deprecated. Use
-[Album.deletePhotoAssets](arkts-corefile-album-i-sys.md#deletephotoassets-1)
-instead.
+This API will be deprecated. Use [Album.deletePhotoAssets](arkts-corefile-album-i-sys.md#deletephotoassets-1)instead.
 
 **Since:** 9
 
@@ -42,6 +41,8 @@ instead.
 **Substitutes:** deleteAlbumsWithUri
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.READ_AUDIO and ohos.permission.WRITE_AUDIO
+
+<!--Device-PrivateAlbum-delete(uri: string, callback: AsyncCallback<void>): void--><!--Device-PrivateAlbum-delete(uri: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -52,7 +53,7 @@ instead.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | File URI. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback that returns no value. |
 
 **Example**
 
@@ -90,12 +91,9 @@ async function example(mgr: userFileManager.UserFileManager) {
 delete(uri: string): Promise<void>
 ```
 
-Deletes a file from the system album. Only the files in the trash can be deleted. This API uses a promise to
-return the result.
+Deletes a file from the system album. Only the files in the trash can be deleted. This API uses a promise to return the result.
 
-This API will be deprecated. Use
-[Album.deletePhotoAssets](arkts-corefile-album-i-sys.md#deletephotoassets-1)
-instead.
+This API will be deprecated. Use [Album.deletePhotoAssets](arkts-corefile-album-i-sys.md#deletephotoassets-1)instead.
 
 **Since:** 9
 
@@ -104,6 +102,8 @@ instead.
 **Substitutes:** deleteAlbumsWithUri
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.READ_AUDIO and ohos.permission.WRITE_AUDIO
+
+<!--Device-PrivateAlbum-delete(uri: string): Promise<void>--><!--Device-PrivateAlbum-delete(uri: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -119,7 +119,7 @@ instead.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -156,12 +156,9 @@ async function example(mgr: userFileManager.UserFileManager) {
 recover(uri: string, callback: AsyncCallback<void>): void
 ```
 
-Recovers a file in the system album. Only the files in the trash can be recovered. This API uses an asynchronous
-callback to return the result.
+Recovers a file in the system album. Only the files in the trash can be recovered. This API uses an asynchronous callback to return the result.
 
-This API will be deprecated. Use
-[Album.recoverPhotoAssets](arkts-corefile-album-i-sys.md#recoverphotoassets-1)
-instead.
+This API will be deprecated. Use [Album.recoverPhotoAssets](arkts-corefile-album-i-sys.md#recoverphotoassets-1)instead.
 
 **Since:** 9
 
@@ -170,6 +167,8 @@ instead.
 **Substitutes:** recoverAssetsWithUri
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.READ_AUDIO and ohos.permission.WRITE_AUDIO
+
+<!--Device-PrivateAlbum-recover(uri: string, callback: AsyncCallback<void>): void--><!--Device-PrivateAlbum-recover(uri: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -180,7 +179,7 @@ instead.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | File URI. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback that returns no value. |
 
 **Example**
 
@@ -226,12 +225,9 @@ async function example(mgr: userFileManager.UserFileManager) {
 recover(uri: string): Promise<void>
 ```
 
-Recovers a file in the system album. Only the files in the trash can be recovered. This API uses a promise to
-return the result.
+Recovers a file in the system album. Only the files in the trash can be recovered. This API uses a promise to return the result.
 
-This API will be deprecated. Use
-[Album.recoverPhotoAssets](arkts-corefile-album-i-sys.md#recoverphotoassets-1)
-instead.
+This API will be deprecated. Use [Album.recoverPhotoAssets](arkts-corefile-album-i-sys.md#recoverphotoassets-1)instead.
 
 **Since:** 9
 
@@ -240,6 +236,8 @@ instead.
 **Substitutes:** recoverAssetsWithUri
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.READ_AUDIO and ohos.permission.WRITE_AUDIO
+
+<!--Device-PrivateAlbum-recover(uri: string): Promise<void>--><!--Device-PrivateAlbum-recover(uri: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -255,7 +253,7 @@ instead.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 

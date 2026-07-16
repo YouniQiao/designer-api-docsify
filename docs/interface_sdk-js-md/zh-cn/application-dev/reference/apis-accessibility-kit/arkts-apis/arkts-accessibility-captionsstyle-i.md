@@ -4,7 +4,15 @@
 
 **起始版本：** 8
 
+<!--Device-accessibility-interface CaptionsStyle--><!--Device-accessibility-interface CaptionsStyle-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
+
+## 导入模块
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+```
 
 ## backgroundColor
 
@@ -24,9 +32,11 @@ string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CaptionsStyle-backgroundColor: int | string--><!--Device-CaptionsStyle-backgroundColor: int | string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
@@ -48,9 +58,11 @@ string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CaptionsStyle-fontColor: int | string--><!--Device-CaptionsStyle-fontColor: int | string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
@@ -66,9 +78,11 @@ fontEdgeType: CaptionsFontEdgeType
 
 **起始版本：** 8
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CaptionsStyle-fontEdgeType: CaptionsFontEdgeType--><!--Device-CaptionsStyle-fontEdgeType: CaptionsFontEdgeType-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
@@ -84,9 +98,11 @@ fontFamily: CaptionsFontFamily
 
 **起始版本：** 8
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CaptionsStyle-fontFamily: CaptionsFontFamily--><!--Device-CaptionsStyle-fontFamily: CaptionsFontFamily-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
@@ -102,9 +118,11 @@ fontScale: number
 
 **起始版本：** 8
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CaptionsStyle-fontScale: int--><!--Device-CaptionsStyle-fontScale: int-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
@@ -126,9 +144,11 @@ string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CaptionsStyle-windowColor: int | string--><!--Device-CaptionsStyle-windowColor: int | string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 

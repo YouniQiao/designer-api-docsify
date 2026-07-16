@@ -4,6 +4,8 @@ Defines the event callback information.
 
 **Since:** 18
 
+<!--Device-abilityConnectionManager-interface EventCallbackInfo--><!--Device-abilityConnectionManager-interface EventCallbackInfo-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Received byte stream.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-EventCallbackInfo-data?: ArrayBuffer--><!--Device-EventCallbackInfo-data?: ArrayBuffer-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 ## msg
@@ -41,6 +45,8 @@ Received message.
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-EventCallbackInfo-msg?: string--><!--Device-EventCallbackInfo-msg?: string-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -58,6 +64,8 @@ Disconnection reason.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-EventCallbackInfo-reason?: DisconnectReason--><!--Device-EventCallbackInfo-reason?: DisconnectReason-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 ## sessionId
@@ -73,6 +81,8 @@ Collaboration session ID.
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-EventCallbackInfo-sessionId: int--><!--Device-EventCallbackInfo-sessionId: int-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 

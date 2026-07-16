@@ -1,5 +1,11 @@
 # unlockSimLock（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## unlockSimLock
 
 ```TypeScript
@@ -12,6 +18,8 @@ Unlock SIM card.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function unlockSimLock(slotId: int, lockInfo: PersoLockInfo, callback: AsyncCallback<LockStatusResponse>): void--><!--Device-sim-function unlockSimLock(slotId: int, lockInfo: PersoLockInfo, callback: AsyncCallback<LockStatusResponse>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -21,8 +29,8 @@ Unlock SIM card.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| lockInfo | PersoLockInfo | 是 | Indicates customized lock type information. |
-| callback | AsyncCallback&lt;LockStatusResponse&gt; | 是 | Indicates the callback used to obtain a responseto obtain the SIM card lock status for the specified card slot. |
+| lockInfo | [PersoLockInfo](arkts-telephony-persolockinfo-i-sys.md) | 是 | Indicates customized lock type information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<LockStatusResponse> | 是 | Indicates the callback used to obtain a response to obtain the SIM card lock status for the specified card slot. |
 
 **错误码：**
 
@@ -67,6 +75,8 @@ Unlock SIM card.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function unlockSimLock(slotId: int, lockInfo: PersoLockInfo): Promise<LockStatusResponse>--><!--Device-sim-function unlockSimLock(slotId: int, lockInfo: PersoLockInfo): Promise<LockStatusResponse>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -76,13 +86,13 @@ Unlock SIM card.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| lockInfo | PersoLockInfo | 是 | Indicates customized lock type information. |
+| lockInfo | [PersoLockInfo](arkts-telephony-persolockinfo-i-sys.md) | 是 | Indicates customized lock type information. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;LockStatusResponse&gt; | Returns the response to obtainthe SIM card lock status of the specified card slot. |
+| Promise<LockStatusResponse> | Returns the response to obtain the SIM card lock status of the specified card slot. |
 
 **错误码：**
 

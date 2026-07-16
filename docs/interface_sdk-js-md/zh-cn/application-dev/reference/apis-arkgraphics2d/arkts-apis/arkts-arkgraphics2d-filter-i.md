@@ -2,7 +2,15 @@
 
 **起始版本：** 12
 
+<!--Device-uiEffect-interface Filter--><!--Device-uiEffect-interface Filter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
+
+## 导入模块
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
+```
 
 ## blur
 
@@ -13,6 +21,8 @@ blur(blurRadius: number): Filter
 将模糊效果添加至组件上。
 
 **起始版本：** 12
+
+<!--Device-Filter-blur(blurRadius: double): Filter--><!--Device-Filter-blur(blurRadius: double): Filter-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -26,7 +36,7 @@ blur(blurRadius: number): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| Filter | - 返回挂载了模糊效果的Filter。 |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-filter-i.md) | - 返回挂载了模糊效果的Filter。 |
 
 **示例：**
 

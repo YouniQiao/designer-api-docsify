@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-audio-interface InterruptEvent--><!--Device-audio-interface InterruptEvent-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## eventType
 
@@ -18,7 +26,9 @@ eventType: InterruptType
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-InterruptEvent-eventType: InterruptType--><!--Device-InterruptEvent-eventType: InterruptType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -34,7 +44,9 @@ forceType: InterruptForceType
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-InterruptEvent-forceType: InterruptForceType--><!--Device-InterruptEvent-forceType: InterruptForceType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -50,7 +62,9 @@ hintType: InterruptHint
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-InterruptEvent-hintType: InterruptHint--><!--Device-InterruptEvent-hintType: InterruptHint-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 

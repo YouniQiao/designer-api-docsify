@@ -4,6 +4,8 @@ Format options for partition formatting.
 
 **Since:** 26.0.0
 
+<!--Device-volumeManager-export interface FormatParams--><!--Device-volumeManager-export interface FormatParams-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ File system type, Common file systems are **ext4**, **vfat**, and **exfat**.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FormatParams-fsType: string--><!--Device-FormatParams-fsType: string-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -46,6 +50,8 @@ Whether to perform quick format, default value is true.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FormatParams-quickFormat?: boolean--><!--Device-FormatParams-quickFormat?: boolean-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -63,6 +69,8 @@ Volume name after formatting.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FormatParams-volumeName?: string--><!--Device-FormatParams-volumeName?: string-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 

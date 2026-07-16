@@ -4,6 +4,8 @@ Custom icon object in the generation result page of ImageGeneratorDialog.
 
 **Since:** 23
 
+<!--Device-imageGeneration-interface GeneratorResultPageIcon--><!--Device-imageGeneration-interface GeneratorResultPageIcon-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Icon click event callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-GeneratorResultPageIcon-callback: Callback<GeneratorResult>--><!--Device-GeneratorResultPageIcon-callback: Callback<GeneratorResult>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -46,6 +50,8 @@ Icon image information.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-GeneratorResultPageIcon-image: image.PixelMap | string | Resource--><!--Device-GeneratorResultPageIcon-image: image.PixelMap | string | Resource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -63,6 +69,8 @@ Icon text description.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GeneratorResultPageIcon-text: ResourceStr--><!--Device-GeneratorResultPageIcon-text: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

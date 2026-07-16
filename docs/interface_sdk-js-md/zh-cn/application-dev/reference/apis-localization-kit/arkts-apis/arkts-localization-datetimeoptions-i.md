@@ -8,7 +8,15 @@
 
 **替代接口：** options)
 
+<!--Device-intl-export interface DateTimeOptions--><!--Device-intl-export interface DateTimeOptions-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+```
 
 ## dateStyle
 
@@ -30,9 +38,11 @@ dateStyle?: string
 
 **替代接口：** datestyle)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeOptions-dateStyle?: string--><!--Device-DateTimeOptions-dateStyle?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -54,9 +64,11 @@ day?: string
 
 **替代接口：** day)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeOptions-day?: string--><!--Device-DateTimeOptions-day?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -80,9 +92,11 @@ dayPeriod?: string
 
 **替代接口：** dayperiod)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeOptions-dayPeriod?: string--><!--Device-DateTimeOptions-dayPeriod?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -106,9 +120,11 @@ era?: string
 
 **替代接口：** era)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeOptions-era?: string--><!--Device-DateTimeOptions-era?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -132,9 +148,11 @@ formatMatcher?: string
 
 **替代接口：** formatmatcher)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeOptions-formatMatcher?: string--><!--Device-DateTimeOptions-formatMatcher?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -156,9 +174,11 @@ hour?: string
 
 **替代接口：** hour)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeOptions-hour?: string--><!--Device-DateTimeOptions-hour?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -182,9 +202,11 @@ true表示使用12小时制，false表示使用24小时制。
 
 **替代接口：** hour12)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeOptions-hour12?: boolean--><!--Device-DateTimeOptions-hour12?: boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -210,9 +232,11 @@ hourCycle?: string
 
 **替代接口：** hourcycle)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeOptions-hourCycle?: string--><!--Device-DateTimeOptions-hourCycle?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -232,9 +256,11 @@ locale?: string
 
 **废弃版本：** 20
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeOptions-locale?: string--><!--Device-DateTimeOptions-locale?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -258,9 +284,11 @@ localeMatcher?: string
 
 **替代接口：** localematcher)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeOptions-localeMatcher?: string--><!--Device-DateTimeOptions-localeMatcher?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -282,9 +310,11 @@ minute?: string
 
 **替代接口：** minute)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeOptions-minute?: string--><!--Device-DateTimeOptions-minute?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -308,9 +338,11 @@ month?: string
 
 **替代接口：** month)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeOptions-month?: string--><!--Device-DateTimeOptions-month?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -322,12 +354,7 @@ numberingSystem?: string
 
 数字系统，取值包括：
 
-"adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide",
-"gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham",
-"laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong",
-"mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment",
-"shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii",
-"wara", "wcho"。
+"adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide","gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham","laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong","mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment","shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii","wara", "wcho"。
 
 **类型：** string
 
@@ -337,9 +364,11 @@ numberingSystem?: string
 
 **替代接口：** numberingsystem)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeOptions-numberingSystem?: string--><!--Device-DateTimeOptions-numberingSystem?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -361,9 +390,11 @@ second?: string
 
 **替代接口：** second)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeOptions-second?: string--><!--Device-DateTimeOptions-second?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -387,9 +418,11 @@ timeStyle?: string
 
 **替代接口：** timestyle)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeOptions-timeStyle?: string--><!--Device-DateTimeOptions-timeStyle?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -409,9 +442,11 @@ timeZone?: string
 
 **替代接口：** timezone)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeOptions-timeZone?: string--><!--Device-DateTimeOptions-timeZone?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -435,9 +470,11 @@ timeZoneName?: string
 
 **替代接口：** timezonename)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeOptions-timeZoneName?: string--><!--Device-DateTimeOptions-timeZoneName?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -461,9 +498,11 @@ weekday?: string
 
 **替代接口：** weekday)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeOptions-weekday?: string--><!--Device-DateTimeOptions-weekday?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -487,9 +526,11 @@ year?: string
 
 **替代接口：** year)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeOptions-year?: string--><!--Device-DateTimeOptions-year?: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

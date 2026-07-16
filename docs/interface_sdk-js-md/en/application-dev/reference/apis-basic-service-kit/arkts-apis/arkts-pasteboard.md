@@ -1,10 +1,10 @@
 # @ohos.pasteboard
 
-This module provides the capabilities of managing the system pasteboard to support the copy and paste functions. You
-can use the APIs of this module to operate pasteboard content of the plain text, HTML, URI, Want, pixel map, and
-other types.
+This module provides the capabilities of managing the system pasteboard to support the copy and paste functions. You can use the APIs of this module to operate pasteboard content of the plain text, HTML, URI, Want, pixel map, and other types.
 
 **Since:** 6
+
+<!--Device-unnamed-declare namespace pasteboard--><!--Device-unnamed-declare namespace pasteboard-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -37,25 +37,25 @@ import { pasteboard } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [ProgressSignal](arkts-basicservices-progresssignal-c.md) | Defines a function for canceling the paste task. This parameter is valid only when[ProgressIndicator](arkts-basicservices-progressindicator-e.md) is set to **NONE**. |
+| [ProgressSignal](arkts-basicservices-progresssignal-c.md) | Defines a function for canceling the paste task. This parameter is valid only when [ProgressIndicator](arkts-basicservices-progressindicator-e.md) is set to **NONE**. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [GetDataParams](arkts-basicservices-getdataparams-i.md) | Defines parameters when an application obtains the Data from the pasteboard, including thedestination path, file conflict options, and progress indicator types. |
-| [PasteData](arkts-basicservices-pastedata-i.md) | Implements a **PasteData** object. PasteData contains one or more data records ([PasteDataRecord](arkts-basicservices-pastedatarecord-i.md)) and property description objects ([PasteDataProperty](arkts-basicservices-pastedataproperty-i.md)).Before calling any API in **PasteData**, you must use **[createData()](arkts-basicservices-createdata-f.md#createdata-1)** or **[getData()](arkts-basicservices-systempasteboard-i.md#getdata-1)** to create a**PasteData** object. |
-| [PasteDataProperty](arkts-basicservices-pastedataproperty-i.md) | Defines the properties of PasteData in the pasteboard, including the timestamp, data types, pasteable range,and additional data. The defined properties can be applied to the pasteboard only with the[setProperty](arkts-basicservices-pastedata-i.md#setproperty-1) method. |
-| [PasteDataRecord](arkts-basicservices-pastedatarecord-i.md) | Provides **PasteDataRecord** APIs. A **PasteDataRecord** is an abstract definition of the content in thepasteboard. The pasteboard content consists of one or more plain text, HTML, URI, or Want records. |
-| [ProgressInfo](arkts-basicservices-progressinfo-i.md) | Defines the progress information. This information is reported only when[ProgressIndicator](arkts-basicservices-progressindicator-e.md) is set to **NONE**. |
+| [GetDataParams](arkts-basicservices-getdataparams-i.md) | Defines parameters when an application obtains the Data from the pasteboard, including the destination path, file conflict options, and progress indicator types. |
+| [PasteData](arkts-basicservices-pastedata-i.md) | Implements a **PasteData** object. PasteData contains one or more data records ([PasteDataRecord](arkts-basicservices-pastedatarecord-i.md)) and property description objects ([PasteDataProperty](arkts-basicservices-pastedataproperty-i.md)).Before calling any API in **PasteData**, you must use **[createData()](arkts-basicservices-createdata-f.md#createdata-1)** or **[getData()](arkts-basicservices-systempasteboard-i.md#getdata-1)** to create a **PasteData** object. |
+| [PasteDataProperty](arkts-basicservices-pastedataproperty-i.md) | Defines the properties of PasteData in the pasteboard, including the timestamp, data types, pasteable range,and additional data. The defined properties can be applied to the pasteboard only with the [setProperty](arkts-basicservices-pastedata-i.md#setproperty-1) method. |
+| [PasteDataRecord](arkts-basicservices-pastedatarecord-i.md) | Provides **PasteDataRecord** APIs. A **PasteDataRecord** is an abstract definition of the content in the pasteboard. The pasteboard content consists of one or more plain text, HTML, URI, or Want records. |
+| [ProgressInfo](arkts-basicservices-progressinfo-i.md) | Defines the progress information. This information is reported only when [ProgressIndicator](arkts-basicservices-progressindicator-e.md) is set to **NONE**. |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [SystemPasteboard](arkts-basicservices-systempasteboard-i.md) | Provides **SystemPasteboard** APIs.Before calling any **SystemPasteboard** API, you must obtain a **SystemPasteboard** object using[getSystemPasteboard](arkts-basicservices-getsystempasteboard-f.md#getsystempasteboard-1). |
-| [SystemPasteboard](arkts-basicservices-systempasteboard-i-sys.md) | Provides **SystemPasteboard** APIs.Before calling any **SystemPasteboard** API, you must obtain a **SystemPasteboard** object using[getSystemPasteboard](arkts-basicservices-getsystempasteboard-f.md#getsystempasteboard-1). |
+| [SystemPasteboard](arkts-basicservices-systempasteboard-i.md) | Provides **SystemPasteboard** APIs.Before calling any **SystemPasteboard** API, you must obtain a **SystemPasteboard** object using [getSystemPasteboard](arkts-basicservices-getsystempasteboard-f.md#getsystempasteboard-1). |
+| [SystemPasteboard](arkts-basicservices-systempasteboard-i-sys.md) | Provides **SystemPasteboard** APIs.Before calling any **SystemPasteboard** API, you must obtain a **SystemPasteboard** object using [getSystemPasteboard](arkts-basicservices-getsystempasteboard-f.md#getsystempasteboard-1). |
 <!--DelEnd-->
 
 ### Enums
@@ -71,7 +71,7 @@ import { pasteboard } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [ProgressListener](arkts-basicservices-progresslistener-t.md) | Defines a listener for progress data changes. If the default progress indicator is not used, you can set this APIto obtain the paste progress. |
+| [ProgressListener](arkts-basicservices-progresslistener-t.md) | Defines a listener for progress data changes. If the default progress indicator is not used, you can set this API to obtain the paste progress. |
 | [UpdateCallback](arkts-basicservices-updatecallback-t.md) | Callback to be invoked when the pasteboard content changes. |
 | [ValueType](arkts-basicservices-valuetype-t.md) | Indicates type of value. |
 

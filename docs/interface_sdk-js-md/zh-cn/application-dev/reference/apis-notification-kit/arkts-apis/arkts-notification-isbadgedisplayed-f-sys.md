@@ -18,6 +18,8 @@ function isBadgeDisplayed(bundle: BundleOption, callback: AsyncCallback<boolean>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isBadgeDisplayed(bundle: BundleOption, callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isBadgeDisplayed(bundle: BundleOption, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,8 +28,8 @@ function isBadgeDisplayed(bundle: BundleOption, callback: AsyncCallback<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 指定应用的包信息。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 获取角标使能状态回调函数（true：使能，false：禁止）。 |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 指定应用的包信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 获取角标使能状态回调函数（true：使能，false：禁止）。 |
 
 **错误码：**
 
@@ -74,6 +76,8 @@ function isBadgeDisplayed(bundle: BundleOption): Promise<boolean>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isBadgeDisplayed(bundle: BundleOption): Promise<boolean>--><!--Device-notificationManager-function isBadgeDisplayed(bundle: BundleOption): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -82,13 +86,13 @@ function isBadgeDisplayed(bundle: BundleOption): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 指定应用的包信息。 |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 指定应用的包信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | 以Promise形式返回获取指定应用的角标使能状态（true：使能，false：禁止）。 |
+| Promise<boolean> | 以Promise形式返回获取指定应用的角标使能状态（true：使能，false：禁止）。 |
 
 **错误码：**
 

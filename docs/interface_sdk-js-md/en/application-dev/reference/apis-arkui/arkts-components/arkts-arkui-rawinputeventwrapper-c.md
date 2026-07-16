@@ -2,25 +2,24 @@
 
 Raw input event wrapper class.
 
-Provides a unified interface to access different types of input events, ensuring type safety and backward
-compatibility.
+Provides a unified interface to access different types of input events, ensuring type safety and backward compatibility.
 
-This class encapsulates either a raw **MouseEvent**, **TouchEvent**, or **KeyEvent** object and provides type-safe
-methods for access.
+This class encapsulates either a raw **MouseEvent**, **TouchEvent**, or **KeyEvent** object and provides type-safe methods for access.
 
-This class is an abstract class. Developers cannot create instances on their own. The system automatically creates an
-instance and passes it to the callback when the input event listener is triggered.
+This class is an abstract class. Developers cannot create instances on their own. The system automatically creates an instance and passes it to the callback when the input event listener is triggered.
 
-> **NOTE**
->
-> Since the listener is executed before events are dispatched to specific components, some fields in the event will
-> not provide valid values: the trigger object [target](arkts-arkui-eventtarget-i.md), coordinates relative to the component
-> [x](arkts-arkui-mouseevent-i.md#x) and [y](arkts-arkui-mouseevent-i.md#y), [getCurrentLocalPosition](arkts-arkui-touchobject-i.md#getcurrentlocalposition-1)
-> and [stopPropagation](arkts-arkui-touchevent-i.md#stoppropagation) methods, [preventDefault](arkts-arkui-touchevent-i.md#preventdefault) and
-> [getHistoricalPoints](arkts-arkui-touchevent-i.md#gethistoricalpoints-1) methods of **TouchEvent**, as well as the [metaKey](arkts-arkui-keyevent-i.md#metakey)
+> **NOTE**  
+>  
+> Since the listener is executed before events are dispatched to specific components, some fields in the event will  
+> not provide valid values: the trigger object [target](arkts-arkui-eventtarget-i.md), coordinates relative to the component  
+> [x](arkts-arkui-mouseevent-i.md#x) and [y](arkts-arkui-mouseevent-i.md#y), [getCurrentLocalPosition](arkts-arkui-touchobject-i.md#getcurrentlocalposition-1)  
+> and [stopPropagation](arkts-arkui-touchevent-i.md#stoppropagation) methods, [preventDefault](arkts-arkui-touchevent-i.md#preventdefault) and  
+> [getHistoricalPoints](arkts-arkui-touchevent-i.md#gethistoricalpoints-1) methods of **TouchEvent**, as well as the [metaKey](arkts-arkui-keyevent-i.md#metakey)  
 > attribute and [getModifierKeyState](arkts-arkui-keyevent-i.md#getmodifierkeystate-1) method of **KeyEvent**.
 
 **Since:** 26.0.0
+
+<!--Device-unnamed-declare abstract class RawInputEventWrapper--><!--Device-unnamed-declare abstract class RawInputEventWrapper-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,13 +37,15 @@ Obtains the key event.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-RawInputEventWrapper-asKeyEvent(): KeyEvent | null--><!--Device-RawInputEventWrapper-asKeyEvent(): KeyEvent | null-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| KeyEvent | Key event object if it is a key event, or **null** otherwise. |
+| [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-keyevent-i.md) | Key event object if it is a key event, or **null** otherwise. |
 
 ## asMouseEvent
 
@@ -60,13 +61,15 @@ Obtains the mouse event.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-RawInputEventWrapper-asMouseEvent(): MouseEvent | null--><!--Device-RawInputEventWrapper-asMouseEvent(): MouseEvent | null-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MouseEvent | Mouse event object if it is a mouse event, or **null** otherwise. |
+| [MouseEvent](arkts-arkui-mouseevent-i.md) | Mouse event object if it is a mouse event, or **null** otherwise. |
 
 ## asTouchEvent
 
@@ -82,13 +85,15 @@ Obtains the touch event.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-RawInputEventWrapper-asTouchEvent(): TouchEvent | null--><!--Device-RawInputEventWrapper-asTouchEvent(): TouchEvent | null-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TouchEvent | Touch event object if it is a touch event, or **null** otherwise. |
+| [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-touchevent-i.md) | Touch event object if it is a touch event, or **null** otherwise. |
 
 ## isKeyEvent
 
@@ -103,6 +108,8 @@ Checks whether the event is a key event.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-RawInputEventWrapper-isKeyEvent(): boolean--><!--Device-RawInputEventWrapper-isKeyEvent(): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,6 +133,8 @@ Checks whether the event is a mouse event.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-RawInputEventWrapper-isMouseEvent(): boolean--><!--Device-RawInputEventWrapper-isMouseEvent(): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -147,6 +156,8 @@ Checks whether the event is a touch event.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-RawInputEventWrapper-isTouchEvent(): boolean--><!--Device-RawInputEventWrapper-isTouchEvent(): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

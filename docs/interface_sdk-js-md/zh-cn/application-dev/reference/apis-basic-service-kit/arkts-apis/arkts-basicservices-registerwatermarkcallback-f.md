@@ -1,5 +1,11 @@
 # registerWatermarkCallback
 
+## 导入模块
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+```
+
 ## registerWatermarkCallback
 
 ```TypeScript
@@ -14,13 +20,15 @@ function registerWatermarkCallback(callback: WatermarkCallback): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-print-function registerWatermarkCallback(callback: WatermarkCallback): void--><!--Device-print-function registerWatermarkCallback(callback: WatermarkCallback): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | WatermarkCallback | 是 | 表示注册强制水印处理的监听事件时使用的回调类型。 |
+| callback | [WatermarkCallback](arkts-basicservices-watermarkcallback-t.md) | 是 | 表示注册强制水印处理的监听事件时使用的回调类型。 |
 
 **错误码：**
 

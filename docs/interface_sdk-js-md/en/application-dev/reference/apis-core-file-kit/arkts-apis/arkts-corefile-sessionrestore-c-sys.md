@@ -4,6 +4,8 @@ Control class for restore procedure.
 
 **Since:** 10
 
+<!--Device-backup-class SessionRestore--><!--Device-backup-class SessionRestore-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Append new bundles and restoreInfos to be restore up during the restore.
 
 **Required permissions:** ohos.permission.BACKUP
 
+<!--Device-SessionRestore-appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], infos?: string[]): Promise<void>--><!--Device-SessionRestore-appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], infos?: string[]): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -42,7 +46,7 @@ Append new bundles and restoreInfos to be restore up during the restore.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -162,6 +166,8 @@ Append new bundles to be restore up during the restore.
 
 **Required permissions:** ohos.permission.BACKUP
 
+<!--Device-SessionRestore-appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], callback: AsyncCallback<void>): void--><!--Device-SessionRestore-appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -172,7 +178,7 @@ Append new bundles to be restore up during the restore.
 | --- | --- | --- | --- |
 | remoteCapabilitiesFd | number | Yes | Opened JSON file that stores remote device capabilities. |
 | bundlesToBackup | string[] | Yes | Bundles to restore. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Asynchronous callback to be called when appendBundles has finished. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Asynchronous callback to be called when appendBundles has finished. |
 
 **Error codes:**
 
@@ -272,6 +278,8 @@ cancel the application being restore.
 
 **Required permissions:** ohos.permission.BACKUP
 
+<!--Device-SessionRestore-cancel(bundleName: string): int--><!--Device-SessionRestore-cancel(bundleName: string): int-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -369,6 +377,8 @@ Provides an interface for the tool to clear temporary directories
 
 **Required permissions:** ohos.permission.BACKUP
 
+<!--Device-SessionRestore-cleanBundleTempDir(bundleName: string): Promise<boolean>--><!--Device-SessionRestore-cleanBundleTempDir(bundleName: string): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -383,7 +393,7 @@ Provides an interface for the tool to clear temporary directories
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Return clean result, true is success, false is fail. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Return clean result, true is success, false is fail. |
 
 **Error codes:**
 
@@ -471,6 +481,8 @@ Constructor for obtaining the instance of the SessionBackup class.
 
 **Required permissions:** ohos.permission.BACKUP
 
+<!--Device-SessionRestore-constructor(callbacks: GeneralCallbacks)--><!--Device-SessionRestore-constructor(callbacks: GeneralCallbacks)-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -479,7 +491,7 @@ Constructor for obtaining the instance of the SessionBackup class.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbacks | GeneralCallbacks | Yes | Callbacks to be registered for the restore. |
+| callbacks | [GeneralCallbacks](arkts-corefile-generalcallbacks-i-sys.md) | Yes | Callbacks to be registered for the restore. |
 
 **Example**
 
@@ -545,6 +557,8 @@ Get the file handle of an APK file.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SessionRestore-getApkFileHandle(path: string, fileName: string): Promise<FileData>--><!--Device-SessionRestore-getApkFileHandle(path: string, fileName: string): Promise<FileData>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -560,7 +574,7 @@ Get the file handle of an APK file.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FileData&gt; | Promise used to return A FileData holding the file descriptor. The returnedfile is a temporal file that will be deleted automatically when closed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<FileData> | Promise used to return A FileData holding the file descriptor. The returned file is a temporal file that will be deleted automatically when closed. |
 
 **Error codes:**
 
@@ -584,6 +598,8 @@ Provides an interface for the tool to get compatibility info.
 
 **Required permissions:** ohos.permission.BACKUP
 
+<!--Device-SessionRestore-getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>--><!--Device-SessionRestore-getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -599,7 +615,7 @@ Provides an interface for the tool to get compatibility info.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Return compatibility info. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Return compatibility info. |
 
 **Error codes:**
 
@@ -680,13 +696,13 @@ async function getRestoreCompatibilityInfo() {
 getFileHandle(fileMeta: FileMeta): Promise<void>
 ```
 
-Request to get a shared file from the service. This interface is part of the zero-copy feature.
-Developers could get the file through onFileReady callback.
-When the client accomplished the file, use publishFile to publish.
+Request to get a shared file from the service. This interface is part of the zero-copy feature.Developers could get the file through onFileReady callback.When the client accomplished the file, use publishFile to publish.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.BACKUP
+
+<!--Device-SessionRestore-getFileHandle(fileMeta: FileMeta): Promise<void>--><!--Device-SessionRestore-getFileHandle(fileMeta: FileMeta): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -696,13 +712,13 @@ When the client accomplished the file, use publishFile to publish.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fileMeta | FileMeta | Yes | Metadata of the file to be sent. Note that all the files should come |
+| fileMeta | [FileMeta](arkts-corefile-filemeta-i-sys.md) | Yes | Metadata of the file to be sent. Note that all the files should come |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -782,13 +798,13 @@ async function getFileHandle() {
 getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 ```
 
-Request to get a shared file from the service. This interface is part of the zero-copy feature.
-Developers could get the file through onFileReady callback.
-When the client accomplished the file, use publishFile to publish.
+Request to get a shared file from the service. This interface is part of the zero-copy feature.Developers could get the file through onFileReady callback.When the client accomplished the file, use publishFile to publish.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.BACKUP
+
+<!--Device-SessionRestore-getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void--><!--Device-SessionRestore-getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -798,8 +814,8 @@ When the client accomplished the file, use publishFile to publish.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fileMeta | FileMeta | Yes | Metadata of the file to be sent. Note that all the files should come |
-| callback | AsyncCallback&lt;void&gt; | Yes | Asynchronous callback to be called when getFileHandle has finished. |
+| fileMeta | [FileMeta](arkts-corefile-filemeta-i-sys.md) | Yes | Metadata of the file to be sent. Note that all the files should come |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Asynchronous callback to be called when getFileHandle has finished. |
 
 **Error codes:**
 
@@ -876,15 +892,15 @@ sessionRestore.getFileHandle(fileMeta, (err: BusinessError) => {
 getFileHandles(fileMeta: FileMeta): Promise<void>
 ```
 
-Request to get shared files from the service. This interface is part of the zero-copy feature.
-Developers could get the file through onFileReadyBatch callback.
-When the client accomplished the file, use publishFile to publish.
+Request to get shared files from the service. This interface is part of the zero-copy feature.Developers could get the file through onFileReadyBatch callback.When the client accomplished the file, use publishFile to publish.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.BACKUP
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SessionRestore-getFileHandles(fileMeta: FileMeta): Promise<void>--><!--Device-SessionRestore-getFileHandles(fileMeta: FileMeta): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -894,13 +910,13 @@ When the client accomplished the file, use publishFile to publish.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fileMeta | FileMeta | Yes | Metadata of the file to be sent. Note that all the files should comefrom the backup procedure or the getLocalCapabilities method. |
+| fileMeta | [FileMeta](arkts-corefile-filemeta-i-sys.md) | Yes | Metadata of the file to be sent. Note that all the files should come from the backup procedure or the getLocalCapabilities method. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -924,6 +940,8 @@ Obtain a Json file that describes local capabilities.
 
 **Required permissions:** ohos.permission.BACKUP
 
+<!--Device-SessionRestore-getLocalCapabilities(): Promise<FileData>--><!--Device-SessionRestore-getLocalCapabilities(): Promise<FileData>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -932,7 +950,7 @@ Obtain a Json file that describes local capabilities.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FileData&gt; | A FileData holding all the local capabilities. The returned file is a temporal file that will bedeleted automatically when closed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<FileData> | A FileData holding all the local capabilities. The returned file is a temporal file that will be deleted automatically when closed. |
 
 **Error codes:**
 
@@ -1088,6 +1106,8 @@ Migrate file from source path to destination path.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SessionRestore-migrateFile(pathInfo: PathInfo, fileMeta: FileMeta): Promise<void>--><!--Device-SessionRestore-migrateFile(pathInfo: PathInfo, fileMeta: FileMeta): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -1096,14 +1116,14 @@ Migrate file from source path to destination path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathInfo | PathInfo | Yes | Path information containing source and destination paths. |
-| fileMeta | FileMeta | Yes | File metadata containing bundleName and optional fileName. |
+| pathInfo | [PathInfo](arkts-corefile-pathinfo-i-sys.md) | Yes | Path information containing source and destination paths. |
+| fileMeta | [FileMeta](arkts-corefile-filemeta-i-sys.md) | Yes | File metadata containing bundleName and optional fileName. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1121,12 +1141,13 @@ Migrate file from source path to destination path.
 publishFile(fileMeta: FileMeta): Promise<void>
 ```
 
-Publish the file handle to the backup service to make the service aware that the file's content is ready.
-This interface is part of the zero-copy feature.
+Publish the file handle to the backup service to make the service aware that the file's content is ready.This interface is part of the zero-copy feature.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.BACKUP
+
+<!--Device-SessionRestore-publishFile(fileMeta: FileMeta): Promise<void>--><!--Device-SessionRestore-publishFile(fileMeta: FileMeta): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -1136,13 +1157,13 @@ This interface is part of the zero-copy feature.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fileMeta | FileMeta | Yes | Metadata of the file to be sent. Make sure that the backup framework holds |
+| fileMeta | [FileMeta](arkts-corefile-filemeta-i-sys.md) | Yes | Metadata of the file to be sent. Make sure that the backup framework holds |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -1234,12 +1255,13 @@ g_session = createSessionRestore();
 publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 ```
 
-Publish the file handle to the backup service to make the service aware that the file's content is ready.
-This interface is part of the zero-copy feature.
+Publish the file handle to the backup service to make the service aware that the file's content is ready.This interface is part of the zero-copy feature.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.BACKUP
+
+<!--Device-SessionRestore-publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void--><!--Device-SessionRestore-publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -1249,8 +1271,8 @@ This interface is part of the zero-copy feature.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fileMeta | FileMeta | Yes | Metadata of the file to be sent. Make sure that the backup framework holds |
-| callback | AsyncCallback&lt;void&gt; | Yes | Asynchronous callback to be called when publishFile has finished. |
+| fileMeta | [FileMeta](arkts-corefile-filemeta-i-sys.md) | Yes | Metadata of the file to be sent. Make sure that the backup framework holds |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Asynchronous callback to be called when publishFile has finished. |
 
 **Error codes:**
 
@@ -1350,6 +1372,8 @@ End restore process
 
 **Required permissions:** ohos.permission.BACKUP
 
+<!--Device-SessionRestore-release(): Promise<void>--><!--Device-SessionRestore-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -1358,7 +1382,7 @@ End restore process
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

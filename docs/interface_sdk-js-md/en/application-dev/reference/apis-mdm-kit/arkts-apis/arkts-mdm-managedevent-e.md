@@ -4,6 +4,8 @@ Enumerates the system management events that can be subscribed to.
 
 **Since:** 12
 
+<!--Device-adminManager-export enum ManagedEvent--><!--Device-adminManager-export enum ManagedEvent-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MANAGED_EVENT_BUNDLE_ADDED
@@ -15,6 +17,8 @@ MANAGED_EVENT_BUNDLE_ADDED = 0
 An application is installed.
 
 **Since:** 12
+
+<!--Device-ManagedEvent-MANAGED_EVENT_BUNDLE_ADDED = 0--><!--Device-ManagedEvent-MANAGED_EVENT_BUNDLE_ADDED = 0-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -28,6 +32,8 @@ An application is uninstalled.
 
 **Since:** 12
 
+<!--Device-ManagedEvent-MANAGED_EVENT_BUNDLE_REMOVED = 1--><!--Device-ManagedEvent-MANAGED_EVENT_BUNDLE_REMOVED = 1-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MANAGED_EVENT_APP_START
@@ -39,6 +45,8 @@ MANAGED_EVENT_APP_START = 2
 An application is started.
 
 **Since:** 12
+
+<!--Device-ManagedEvent-MANAGED_EVENT_APP_START = 2--><!--Device-ManagedEvent-MANAGED_EVENT_APP_START = 2-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -52,6 +60,8 @@ An application is stopped.
 
 **Since:** 12
 
+<!--Device-ManagedEvent-MANAGED_EVENT_APP_STOP = 3--><!--Device-ManagedEvent-MANAGED_EVENT_APP_STOP = 3-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MANAGED_EVENT_SYSTEM_UPDATE
@@ -63,6 +73,8 @@ MANAGED_EVENT_SYSTEM_UPDATE = 4
 The system is updated.
 
 **Since:** 12
+
+<!--Device-ManagedEvent-MANAGED_EVENT_SYSTEM_UPDATE = 4--><!--Device-ManagedEvent-MANAGED_EVENT_SYSTEM_UPDATE = 4-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -76,6 +88,8 @@ An account is created.
 
 **Since:** 18
 
+<!--Device-ManagedEvent-MANAGED_EVENT_ACCOUNT_ADDED = 5--><!--Device-ManagedEvent-MANAGED_EVENT_ACCOUNT_ADDED = 5-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MANAGED_EVENT_ACCOUNT_SWITCHED
@@ -88,6 +102,8 @@ An account is switched.
 
 **Since:** 18
 
+<!--Device-ManagedEvent-MANAGED_EVENT_ACCOUNT_SWITCHED = 6--><!--Device-ManagedEvent-MANAGED_EVENT_ACCOUNT_SWITCHED = 6-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MANAGED_EVENT_ACCOUNT_REMOVED
@@ -99,6 +115,8 @@ MANAGED_EVENT_ACCOUNT_REMOVED = 7
 An account is removed.
 
 **Since:** 18
+
+<!--Device-ManagedEvent-MANAGED_EVENT_ACCOUNT_REMOVED = 7--><!--Device-ManagedEvent-MANAGED_EVENT_ACCOUNT_REMOVED = 7-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -114,6 +132,8 @@ The startup wizard is complete.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ManagedEvent-MANAGED_EVENT_STARTUP_GUIDE_COMPLETED = 8--><!--Device-ManagedEvent-MANAGED_EVENT_STARTUP_GUIDE_COMPLETED = 8-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MANAGED_EVENT_BOOT_COMPLETED
@@ -128,6 +148,8 @@ Device startup is complete.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ManagedEvent-MANAGED_EVENT_BOOT_COMPLETED = 9--><!--Device-ManagedEvent-MANAGED_EVENT_BOOT_COMPLETED = 9-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MANAGED_EVENT_BUNDLE_UPDATED
@@ -136,12 +158,13 @@ Device startup is complete.
 MANAGED_EVENT_BUNDLE_UPDATED = 10
 ```
 
-Application update events.
-**Since**: 26.0.0
+Application update events.**Since**: 26.0.0
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ManagedEvent-MANAGED_EVENT_BUNDLE_UPDATED = 10--><!--Device-ManagedEvent-MANAGED_EVENT_BUNDLE_UPDATED = 10-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -156,6 +179,8 @@ Event indicating that enterprise device management policies changed.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ManagedEvent-MANAGED_EVENT_POLICIES_CHANGED = 11--><!--Device-ManagedEvent-MANAGED_EVENT_POLICIES_CHANGED = 11-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

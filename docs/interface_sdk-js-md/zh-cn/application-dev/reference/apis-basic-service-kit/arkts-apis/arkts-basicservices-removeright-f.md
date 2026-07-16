@@ -1,5 +1,11 @@
 # removeRight
 
+## 导入模块
+
+```TypeScript
+import { usbManager } from '@kit.BasicServicesKit';
+```
+
 ## removeRight
 
 ```TypeScript
@@ -9,6 +15,8 @@ function removeRight(deviceName: string): boolean
 移除软件包访问设备的权限。系统应用默认拥有访问设备权限，调用此接口不会产生影响。
 
 **起始版本：** 9
+
+<!--Device-usbManager-function removeRight(deviceName: string): boolean--><!--Device-usbManager-function removeRight(deviceName: string): boolean-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -28,7 +36,7 @@ function removeRight(deviceName: string): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified.<br>2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:* <br>1.Mandatory parameters are left unspecified.* <br>2.Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
 **示例：**

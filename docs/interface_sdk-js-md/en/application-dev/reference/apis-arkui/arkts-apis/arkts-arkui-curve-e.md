@@ -1,9 +1,10 @@
 # Curve
 
-Defines an interpolation curve. For details about the curves and animations, see <!--RP1-->
-[Bezier Curve](../../../../../design/ux-design/animation-attributes.md)<!--RP1End-->.
+Enumerates the interpolation curves. For details about the animation, see <!--RP1-->[Bezier Curve](../../../../../design/ux-design/animation-attributes.md)<!--RP1End-->.
 
 **Since:** 7
+
+<!--Device-unnamed-declare enum Curve--><!--Device-unnamed-declare enum Curve-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -13,11 +14,15 @@ Defines an interpolation curve. For details about the curves and animations, see
 Linear
 ```
 
-Linear. Indicates that the animation has the same velocity from start to finish.
+The animation maintains a constant speed throughout the process.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Curve-Linear--><!--Device-Curve-Linear-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,12 +32,15 @@ Linear. Indicates that the animation has the same velocity from start to finish.
 Ease
 ```
 
-Ease. Indicates that the animation starts at a low speed, then speeds up, and slows down before the end,
-CubicBezier(0.25, 0.1, 0.25, 1.0).
+The animation starts slowly, accelerates, and then decelerates before ending. The curve is cubic-bezier(0.25, 0.1,0.25, 1.0).
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Curve-Ease--><!--Device-Curve-Ease-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,11 +50,15 @@ CubicBezier(0.25, 0.1, 0.25, 1.0).
 EaseIn
 ```
 
-EaseIn. Indicates that the animation starts at a low speed, Cubic Bezier (0.42, 0.0, 1.0, 1.0).
+The animation starts at a low speed and then picks up speed until the end. The cubic-bezier(0.42, 0.0, 1.0, 1.0)is used.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Curve-EaseIn--><!--Device-Curve-EaseIn-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,11 +68,15 @@ EaseIn. Indicates that the animation starts at a low speed, Cubic Bezier (0.42, 
 EaseOut
 ```
 
-EaseOut. Indicates that the animation ends at low speed, CubicBezier (0.0, 0.0, 0.58, 1.0).
+The animation ends at a low speed. The cubic-bezier(0.0, 0.0, 0.58, 1.0) is used.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Curve-EaseOut--><!--Device-Curve-EaseOut-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,11 +86,15 @@ EaseOut. Indicates that the animation ends at low speed, CubicBezier (0.0, 0.0, 
 EaseInOut
 ```
 
-EaseInOut. Indicates that the animation starts and ends at low speed, CubicBezier (0.42, 0.0, 0.58, 1.0).
+The animation starts and ends at a low speed. The cubic-bezier curve(0.42, 0.0, 0.58, 1.0) is used.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Curve-EaseInOut--><!--Device-Curve-EaseInOut-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,11 +104,15 @@ EaseInOut. Indicates that the animation starts and ends at low speed, CubicBezie
 FastOutSlowIn
 ```
 
-FastOutSlowIn. Standard curve, cubic-bezier (0.4, 0.0, 0.2, 1.0).
+The animation uses the standard cubic-bezier curve(0.4, 0.0, 0.2, 1.0).
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Curve-FastOutSlowIn--><!--Device-Curve-FastOutSlowIn-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,11 +122,15 @@ FastOutSlowIn. Standard curve, cubic-bezier (0.4, 0.0, 0.2, 1.0).
 LinearOutSlowIn
 ```
 
-LinearOutSlowIn. Deceleration curve, cubic-bezier (0.0, 0.0, 0.2, 1.0).
+The animation uses the deceleration cubic-bezier curve(0.0, 0.0, 0.2, 1.0).
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Curve-LinearOutSlowIn--><!--Device-Curve-LinearOutSlowIn-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -112,11 +140,15 @@ LinearOutSlowIn. Deceleration curve, cubic-bezier (0.0, 0.0, 0.2, 1.0).
 FastOutLinearIn
 ```
 
-FastOutLinearIn. Acceleration curve, cubic-bezier (0.4, 0.0, 1.0, 1.0).
+The animation uses the acceleration cubic-bezier curve(0.4, 0.0, 1.0, 1.0).
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Curve-FastOutLinearIn--><!--Device-Curve-FastOutLinearIn-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,11 +158,15 @@ FastOutLinearIn. Acceleration curve, cubic-bezier (0.4, 0.0, 1.0, 1.0).
 ExtremeDeceleration
 ```
 
-ExtremeDeceleration. Abrupt curve, cubic-bezier (0.0, 0.0, 0.0, 1.0).
+The animation uses the extreme deceleration cubic-bezier curve(0.0, 0.0, 0.0, 1.0).
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Curve-ExtremeDeceleration--><!--Device-Curve-ExtremeDeceleration-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -140,11 +176,15 @@ ExtremeDeceleration. Abrupt curve, cubic-bezier (0.0, 0.0, 0.0, 1.0).
 Sharp
 ```
 
-Sharp. Sharp curves, cubic-bezier (0.33, 0.0, 0.67, 1.0).
+The animation uses the sharp cubic-bezier curve(0.33, 0.0, 0.67, 1.0).
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Curve-Sharp--><!--Device-Curve-Sharp-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -154,11 +194,15 @@ Sharp. Sharp curves, cubic-bezier (0.33, 0.0, 0.67, 1.0).
 Rhythm
 ```
 
-Rhythm. Rhythmic curve, cubic-bezier (0.7, 0.0, 0.2, 1.0).
+The animation uses the rhythm cubic-bezier curve(0.7, 0.0, 0.2, 1.0).
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Curve-Rhythm--><!--Device-Curve-Rhythm-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -168,11 +212,15 @@ Rhythm. Rhythmic curve, cubic-bezier (0.7, 0.0, 0.2, 1.0).
 Smooth
 ```
 
-Smooth. Smooth curves, cubic-bezier (0.4, 0.0, 0.4, 1.0).
+The animation uses the smooth cubic-bezier curve(0.4, 0.0, 0.4, 1.0).
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Curve-Smooth--><!--Device-Curve-Smooth-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -182,11 +230,15 @@ Smooth. Smooth curves, cubic-bezier (0.4, 0.0, 0.4, 1.0).
 Friction
 ```
 
-Friction. Damping curves, CubicBezier (0.2, 0.0, 0.2, 1.0).
+The animation uses the friction cubic-bezier curve(0.2, 0.0, 0.2, 1.0).
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Curve-Friction--><!--Device-Curve-Friction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

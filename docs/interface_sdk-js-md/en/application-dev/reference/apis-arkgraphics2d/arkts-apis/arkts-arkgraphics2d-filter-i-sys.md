@@ -4,6 +4,8 @@ The Filter for Component.
 
 **Since:** 12
 
+<!--Device-uiEffect-interface Filter--><!--Device-uiEffect-interface Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
@@ -22,6 +24,8 @@ Sets the deformation effect controlled by bezier curves of the component.
 
 **Since:** 20
 
+<!--Device-Filter-bezierWarp(controlPoints: Array<common2D.Point>): Filter--><!--Device-Filter-bezierWarp(controlPoints: Array<common2D.Point>): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -30,13 +34,13 @@ Sets the deformation effect controlled by bezier curves of the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controlPoints | Array&lt;common2D.Point&gt; | Yes | The bezier control points, 12 points needed. |
+| controlPoints | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<common2D.Point> | Yes | The bezier control points, 12 points needed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Filter | - Returns the Filter that the current effect have been added. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-filter-i-sys.md) | - Returns the Filter that the current effect have been added. |
 
 **Error codes:**
 
@@ -74,12 +78,13 @@ struct BezierWarpExample {
 blurBubblesRise(param: BlurBubblesRiseEffectParam): Filter
 ```
 
-Applies blur bubbles rise effect to simulate rising bubbles with blur.
-This effect creates a dreamy, bubbly distortion similar to rising bubbles in liquid.
+Applies blur bubbles rise effect to simulate rising bubbles with blur.This effect creates a dreamy, bubbly distortion similar to rising bubbles in liquid.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Filter-blurBubblesRise(param: BlurBubblesRiseEffectParam): Filter--><!--Device-Filter-blurBubblesRise(param: BlurBubblesRiseEffectParam): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -89,13 +94,13 @@ This effect creates a dreamy, bubbly distortion similar to rising bubbles in liq
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | BlurBubblesRiseEffectParam | Yes | the blur bubbles rise effect parameters. |
+| param | [BlurBubblesRiseEffectParam](arkts-arkgraphics2d-blurbubblesriseeffectparam-i-sys.md) | Yes | the blur bubbles rise effect parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Filter | - Returns the blur bubbles rise Filter. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-filter-i-sys.md) | - Returns the blur bubbles rise Filter. |
 
 ## colorGradient
 
@@ -108,6 +113,10 @@ Sets the color gradient filter, may blend with alpha mask.
 
 **Since:** 20
 
+<!--Device-Filter-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,
+        alphaMask?: Mask): Filter--><!--Device-Filter-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,
+        alphaMask?: Mask): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -116,16 +125,16 @@ Sets the color gradient filter, may blend with alpha mask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colors | Array&lt;Color&gt; | Yes |  |
-| positions | Array&lt;common2D.Point&gt; | Yes |  |
-| strengths | Array&lt;number&gt; | Yes |  |
-| alphaMask | Mask | No |  |
+| colors | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Color> | Yes |  |
+| positions | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<common2D.Point> | Yes |  |
+| strengths | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes |  |
+| alphaMask | [Mask](arkts-arkgraphics2d-mask-c-sys.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Filter | - Returns the Filter that the current effect have been added. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-filter-i-sys.md) | - Returns the Filter that the current effect have been added. |
 
 **Error codes:**
 
@@ -175,6 +184,10 @@ Sets the content light filter.
 
 **Since:** 20
 
+<!--Device-Filter-contentLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,
+      displacementMap?: Mask): Filter--><!--Device-Filter-contentLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,
+      displacementMap?: Mask): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -186,13 +199,13 @@ Sets the content light filter.
 | lightPosition | common2D.Point3d | Yes |  |
 | lightColor | common2D.Color | Yes |  |
 | lightIntensity | number | Yes |  |
-| displacementMap | Mask | No |  |
+| displacementMap | [Mask](arkts-arkgraphics2d-mask-c-sys.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Filter | - Returns the Filter that the current effect have been added. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-filter-i-sys.md) | - Returns the Filter that the current effect have been added. |
 
 **Error codes:**
 
@@ -250,6 +263,8 @@ Generates lighting effects from mask and directional light.
 
 **Since:** 20
 
+<!--Device-Filter-directionLight(direction: common2D.Point3d, color: Color, intensity: double, mask?: Mask, factor?: double): Filter--><!--Device-Filter-directionLight(direction: common2D.Point3d, color: Color, intensity: double, mask?: Mask, factor?: double): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -259,16 +274,16 @@ Generates lighting effects from mask and directional light.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | direction | common2D.Point3d | Yes | Direction of light |
-| color | Color | Yes | Color of light |
+| color | [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md) | Yes | Color of light |
 | intensity | number | Yes | Intensity of light |
-| mask | Mask | No | Mask, as a displacement map that affects lighting effects |
+| mask | [Mask](arkts-arkgraphics2d-mask-c-sys.md) | No | Mask, as a displacement map that affects lighting effects |
 | factor | number | No | Mask scale factor, used to scale the mask channel values |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Filter | - Returns the Filter that the current effect have been added. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-filter-i-sys.md) | - Returns the Filter that the current effect have been added. |
 
 **Error codes:**
 
@@ -324,6 +339,8 @@ Sets distort effect with displacement map.
 
 **Since:** 20
 
+<!--Device-Filter-displacementDistort(displacementMap: Mask, factor?: [double, double]): Filter--><!--Device-Filter-displacementDistort(displacementMap: Mask, factor?: [double, double]): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -332,14 +349,14 @@ Sets distort effect with displacement map.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displacementMap | Mask | Yes |  |
+| displacementMap | [Mask](arkts-arkgraphics2d-mask-c-sys.md) | Yes |  |
 | factor | [number, number] | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Filter | - Returns the Filter that the current effect have been added. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-filter-i-sys.md) | - Returns the Filter that the current effect have been added. |
 
 **Error codes:**
 
@@ -380,6 +397,8 @@ Set distort effect of the component.
 
 **Since:** 13
 
+<!--Device-Filter-distort(distortionK: double): Filter--><!--Device-Filter-distort(distortionK: double): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -394,7 +413,7 @@ Set distort effect of the component.
 
 | Type | Description |
 | --- | --- |
-| Filter | - Returns distort Filter. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-filter-i-sys.md) | - Returns distort Filter. |
 
 **Error codes:**
 
@@ -419,6 +438,8 @@ Detects and glows edges of contents.
 
 **Since:** 20
 
+<!--Device-Filter-edgeLight(alpha: double, color?: Color, mask?: Mask, bloom?: boolean): Filter--><!--Device-Filter-edgeLight(alpha: double, color?: Color, mask?: Mask, bloom?: boolean): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -428,15 +449,15 @@ Detects and glows edges of contents.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | alpha | number | Yes |  |
-| color | Color | No |  |
-| mask | Mask | No |  |
+| color | [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md) | No |  |
+| mask | [Mask](arkts-arkgraphics2d-mask-c-sys.md) | No |  |
 | bloom | boolean | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Filter | - Returns the Filter that the current effect have been added. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-filter-i-sys.md) | - Returns the Filter that the current effect have been added. |
 
 **Error codes:**
 
@@ -479,6 +500,8 @@ Set the fly in or fly out effect of the component.
 
 **Since:** 12
 
+<!--Device-Filter-flyInFlyOutEffect(degree: double, flyMode: FlyMode): Filter--><!--Device-Filter-flyInFlyOutEffect(degree: double, flyMode: FlyMode): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -488,13 +511,13 @@ Set the fly in or fly out effect of the component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | degree | number | Yes | set the degree of fly in or fly out effect, value range [0, 1]. |
-| flyMode | FlyMode | Yes | set the location of stretching when fly in or outIf the value is 0, the component keep same, else the value is 1, component are fully fly out or fly in. |
+| flyMode | [FlyMode](arkts-arkgraphics2d-flymode-e-sys.md) | Yes | set the location of stretching when fly in or out If the value is 0, the component keep same, else the value is 1, component are fully fly out or fly in. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Filter | - Returns fly in fly out Filter. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-filter-i-sys.md) | - Returns fly in fly out Filter. |
 
 **Error codes:**
 
@@ -522,6 +545,8 @@ Applies a high dynamic range (HDR) brightness enhancement filter to the componen
 **Required permissions:** 
 - API version 24+: ohos.permission.HDR_BRIGHTNESS
 
+<!--Device-Filter-hdrBrightnessRatio(ratio: double): Filter--><!--Device-Filter-hdrBrightnessRatio(ratio: double): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -536,7 +561,7 @@ Applies a high dynamic range (HDR) brightness enhancement filter to the componen
 
 | Type | Description |
 | --- | --- |
-| Filter | - Returns hdr brightness Filter. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-filter-i-sys.md) | - Returns hdr brightness Filter. |
 
 **Error codes:**
 
@@ -558,12 +583,13 @@ filter.hdrBrightnessRatio(2.0)
 heatDistortion(param: HeatDistortionEffectParam): Filter
 ```
 
-Applies heat distortion effect to simulate hot air distortion.
-This effect creates a wavy distortion similar to heat shimmer or hot air rising.
+Applies heat distortion effect to simulate hot air distortion.This effect creates a wavy distortion similar to heat shimmer or hot air rising.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Filter-heatDistortion(param: HeatDistortionEffectParam): Filter--><!--Device-Filter-heatDistortion(param: HeatDistortionEffectParam): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -573,13 +599,13 @@ This effect creates a wavy distortion similar to heat shimmer or hot air rising.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | HeatDistortionEffectParam | Yes | the heat distortion effect parameters. |
+| param | [HeatDistortionEffectParam](arkts-arkgraphics2d-heatdistortioneffectparam-i-sys.md) | Yes | the heat distortion effect parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Filter | - Returns the heat distortion Filter. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-filter-i-sys.md) | - Returns the heat distortion Filter. |
 
 ## maskDispersion
 
@@ -592,6 +618,10 @@ Sets dispersion effect with mask map.
 
 **Since:** 20
 
+<!--Device-Filter-maskDispersion(dispersionMap: Mask, alpha: double, rFactor?: [double, double], gFactor?: [double, double],
+      bFactor?: [double, double]): Filter--><!--Device-Filter-maskDispersion(dispersionMap: Mask, alpha: double, rFactor?: [double, double], gFactor?: [double, double],
+      bFactor?: [double, double]): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -600,7 +630,7 @@ Sets dispersion effect with mask map.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dispersionMap | Mask | Yes |  |
+| dispersionMap | [Mask](arkts-arkgraphics2d-mask-c-sys.md) | Yes |  |
 | alpha | number | Yes |  |
 | rFactor | [number, number] | No |  |
 | gFactor | [number, number] | No |  |
@@ -610,7 +640,7 @@ Sets dispersion effect with mask map.
 
 | Type | Description |
 | --- | --- |
-| Filter | - Returns the Filter that the current effect have been added. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-filter-i-sys.md) | - Returns the Filter that the current effect have been added. |
 
 **Error codes:**
 
@@ -628,6 +658,8 @@ Applies Transition with alpha mask
 
 **Since:** 20
 
+<!--Device-Filter-maskTransition(alphaMask: Mask, factor?: double, inverse?: boolean): Filter--><!--Device-Filter-maskTransition(alphaMask: Mask, factor?: double, inverse?: boolean): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -636,7 +668,7 @@ Applies Transition with alpha mask
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alphaMask | Mask | Yes | Animatable mask object |
+| alphaMask | [Mask](arkts-arkgraphics2d-mask-c-sys.md) | Yes | Animatable mask object |
 | factor | number | No | The coefficient of the mask, defaulting to 1.0f [0~1] |
 | inverse | boolean | No | Transition mode, default is fasle (true, false) |
 
@@ -644,7 +676,7 @@ Applies Transition with alpha mask
 
 | Type | Description |
 | --- | --- |
-| Filter | - Returns the Filter that the current effect have been added. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-filter-i-sys.md) | - Returns the Filter that the current effect have been added. |
 
 **Error codes:**
 
@@ -708,6 +740,8 @@ Set the edge pixel stretch effect of the Component.
 
 **Since:** 12
 
+<!--Device-Filter-pixelStretch(stretchSizes: Array<double>, tileMode: TileMode): Filter--><!--Device-Filter-pixelStretch(stretchSizes: Array<double>, tileMode: TileMode): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -716,14 +750,14 @@ Set the edge pixel stretch effect of the Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stretchSizes | Array&lt;number&gt; | Yes |  |
-| tileMode | TileMode | Yes |  |
+| stretchSizes | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes |  |
+| tileMode | [TileMode](arkts-arkgraphics2d-tilemode-e.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Filter | @syscap SystemCapability.Graphics.Drawing@systemapi |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-filter-i-sys.md) | @syscap SystemCapability.Graphics.Drawing@systemapi |
 
 **Example**
 
@@ -738,10 +772,11 @@ filter.pixelStretch([0.2, 0.2, 0.2, 0.2], uiEffect.TileMode.CLAMP)
 radiusGradientBlur(radius: number, gradientParam: LinearGradientBlurOptions): Filter
 ```
 
-Adds the content radius gradient blurring effect for the current component.
-The input parameter is the blurring radius.
+Adds the content radius gradient blurring effect for the current component.The input parameter is the blurring radius.
 
 **Since:** 19
+
+<!--Device-Filter-radiusGradientBlur(radius: double, gradientParam: LinearGradientBlurOptions): Filter--><!--Device-Filter-radiusGradientBlur(radius: double, gradientParam: LinearGradientBlurOptions): Filter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -752,13 +787,13 @@ The input parameter is the blurring radius.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | radius | number | Yes | the blurring radius.The larger the blurring radius, the more blurring the content, and if the value is 0,the content blurring effect is not blurring. |
-| gradientParam | LinearGradientBlurOptions | Yes | the radius gradient blur options. |
+| gradientParam | [LinearGradientBlurOptions](../../apis-arkui/arkts-components/arkts-arkui-lineargradientbluroptions-i.md) | Yes | the radius gradient blur options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Filter | - Returns radius gradient blur Filter. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-filter-i-sys.md) | - Returns radius gradient blur Filter. |
 
 **Error codes:**
 
@@ -776,6 +811,8 @@ Sets variable radius blur effect with radius map.
 
 **Since:** 20
 
+<!--Device-Filter-variableRadiusBlur(radius: double, radiusMap: Mask): Filter--><!--Device-Filter-variableRadiusBlur(radius: double, radiusMap: Mask): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -785,13 +822,13 @@ Sets variable radius blur effect with radius map.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | radius | number | Yes | the blurring radius. The larger the blurring radius, the more blurring the content,and if the value is 0, the content blurring effect is not blurring. |
-| radiusMap | Mask | Yes | the alpha of the mask determines the degree of blurring. |
+| radiusMap | [Mask](arkts-arkgraphics2d-mask-c-sys.md) | Yes | the alpha of the mask determines the degree of blurring. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Filter | - Returns the Filter that the current effect have been added. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-filter-i-sys.md) | - Returns the Filter that the current effect have been added. |
 
 **Error codes:**
 
@@ -832,6 +869,8 @@ Set waterRipple effect of the Component.
 
 **Since:** 12
 
+<!--Device-Filter-waterRipple(progress: double, waveCount: int, x: double, y: double, rippleMode: WaterRippleMode): Filter--><!--Device-Filter-waterRipple(progress: double, waveCount: int, x: double, y: double, rippleMode: WaterRippleMode): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -840,17 +879,17 @@ Set waterRipple effect of the Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | number | Yes | Indicates the ripple progress. The value 1 indicates that ripples are displayed onall screens. |
-| waveCount | number | Yes | The number of waves when the water ripples. The maximum count of waves is 3, theminimum value is 1, default is 2. |
-| x | number | Yes | Represents the X-axis position of center point where the water ripple first appears on thescreen. |
-| y | number | Yes | Represents the Y-axis position of center point where the water ripple first appears on thescreen. |
-| rippleMode | WaterRippleMode | Yes | Set the mode of water ripple,0 for mobile to desktop(Receive), 1 for mobile to desktop(Send), 2 for mobile to mobile, 3 for crossplatform. |
+| progress | number | Yes | Indicates the ripple progress. The value 1 indicates that ripples are displayed on all screens. |
+| waveCount | number | Yes | The number of waves when the water ripples. The maximum count of waves is 3, the minimum value is 1, default is 2. |
+| x | number | Yes | Represents the X-axis position of center point where the water ripple first appears on the screen. |
+| y | number | Yes | Represents the Y-axis position of center point where the water ripple first appears on the screen. |
+| rippleMode | [WaterRippleMode](arkts-arkgraphics2d-waterripplemode-e-sys.md) | Yes | Set the mode of water ripple,0 for mobile to desktop(Receive), 1 for mobile to desktop(Send), 2 for mobile to mobile, 3 for cross platform. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Filter | - Returns water ripple Filter. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-filter-i-sys.md) | - Returns water ripple Filter. |
 
 **Error codes:**
 

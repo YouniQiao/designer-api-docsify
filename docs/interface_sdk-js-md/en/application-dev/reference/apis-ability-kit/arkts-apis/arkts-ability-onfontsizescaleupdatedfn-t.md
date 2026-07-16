@@ -12,6 +12,8 @@ Defines an OnFontSizeScaleUpdatedFn function.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-systemConfiguration-type OnFontSizeScaleUpdatedFn = (fontSizeScale: double) => void--><!--Device-systemConfiguration-type OnFontSizeScaleUpdatedFn = (fontSizeScale: double) => void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**

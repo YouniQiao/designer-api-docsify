@@ -12,8 +12,7 @@ import { linkEnhance } from '@kit.DistributedServiceKit';
 function createConnection(deviceId: string, name: string): Connection
 ```
 
-Creates a **Connection** object on the device that functions as the client. The device can then initiate connection
-requests to the device that functions as the server.
+Creates a **Connection** object on the device that functions as the client. The device can then initiate connection requests to the device that functions as the server.
 
 **Since:** 20
 
@@ -21,27 +20,29 @@ requests to the device that functions as the server.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-linkEnhance-function createConnection(deviceId: string, name: string): Connection--><!--Device-linkEnhance-function createConnection(deviceId: string, name: string): Connection-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Device ID of the peer device, that is, the BLE MAC address of the peer device. Fordetails about how to obtain the BLE MAC address, see[BLE Advertising and Scanning](../../../../connectivity/bluetooth/ble-development-guide.md). |
-| name | string | Yes | Server name of the device to be connected. The value is a string of up to 255 bytes. Itcannot be empty. |
+| deviceId | string | Yes | Device ID of the peer device, that is, the BLE MAC address of the peer device. For details about how to obtain the BLE MAC address, see [BLE Advertising and Scanning](../../../../connectivity/bluetooth/ble-development-guide.md). |
+| name | string | Yes | Server name of the device to be connected. The value is a string of up to 255 bytes. It cannot be empty. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Connection | **Connection** object created. |
+| [Connection](arkts-distributedservice-connection-i.md) | **Connection** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supportedbecause the linkEnhance function has been trimmed.<br>**Applicable version:** 26.0.0 and later |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the linkEnhance function has been trimmed.<br>**Applicable version:** 26.0.0 and later |
 | [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
 **Example**

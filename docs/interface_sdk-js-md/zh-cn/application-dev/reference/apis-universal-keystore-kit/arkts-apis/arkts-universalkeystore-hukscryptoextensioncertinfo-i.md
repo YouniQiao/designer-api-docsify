@@ -4,7 +4,15 @@
 
 **起始版本：** 22
 
+<!--Device-unnamed-export interface HuksCryptoExtensionCertInfo--><!--Device-unnamed-export interface HuksCryptoExtensionCertInfo-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
+
+## 导入模块
+
+```TypeScript
+import { HuksCryptoExtensionCertInfo, HuksCryptoExtensionResultCode, HuksCryptoExtensionParams, HuksCryptoExtensionParam, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
+```
 
 ## cert
 
@@ -17,6 +25,8 @@ cert: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 22
+
+<!--Device-HuksCryptoExtensionCertInfo-cert: Uint8Array--><!--Device-HuksCryptoExtensionCertInfo-cert: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -32,6 +42,8 @@ purpose: certificateManager.CertificatePurpose
 
 **起始版本：** 22
 
+<!--Device-HuksCryptoExtensionCertInfo-purpose: certificateManager.CertificatePurpose--><!--Device-HuksCryptoExtensionCertInfo-purpose: certificateManager.CertificatePurpose-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## resourceId
@@ -45,6 +57,8 @@ resourceId: string
 **类型：** string
 
 **起始版本：** 22
+
+<!--Device-HuksCryptoExtensionCertInfo-resourceId: string--><!--Device-HuksCryptoExtensionCertInfo-resourceId: string-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 

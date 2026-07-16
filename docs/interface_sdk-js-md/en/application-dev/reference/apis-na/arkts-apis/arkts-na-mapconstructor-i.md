@@ -1,16 +1,20 @@
 # MapConstructor
 
+<!--Device-unnamed-interface MapConstructor--><!--Device-unnamed-interface MapConstructor-End-->
+
 ## constructor
 
 ```TypeScript
 new(): Map<any, any>
 ```
 
+<!--Device-MapConstructor-new(): Map<any, any>--><!--Device-MapConstructor-new(): Map<any, any>-End-->
+
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Map&lt;any, any&gt; |  |
+| [Map](arkts-na-map-i.md)<any, any> |  |
 
 ## constructor
 
@@ -18,15 +22,17 @@ new(): Map<any, any>
 new <K, V>(iterable?: Iterable<readonly [K, V]> | null): Map<K, V>
 ```
 
+<!--Device-MapConstructor-new <K, V>(iterable?: Iterable<readonly [K, V]> | null): Map<K, V>--><!--Device-MapConstructor-new <K, V>(iterable?: Iterable<readonly [K, V]> | null): Map<K, V>-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iterable | Iterable&lt;readonly [K, V]&gt; \| null | No |  |
+| iterable | [Iterable](arkts-na-iterable-i.md)<readonly [K, V]> \| null | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Map&lt;K, V&gt; |  |
+| [Map](arkts-na-map-i.md)<K, V> |  |
 

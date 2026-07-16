@@ -1,9 +1,10 @@
 # PerfTest
 
-Represents the general entry of the white-box performance test framework.
-It provides capabilities such as test task creation, test code segment execution, data collection, and measurement result obtaining.
+Represents the general entry of the white-box performance test framework.It provides capabilities such as test task creation, test code segment execution, data collection, and measurement result obtaining.
 
 **Since:** 20
+
+<!--Device-unnamed-declare class PerfTest--><!--Device-unnamed-declare class PerfTest-End-->
 
 **System capability:** SystemCapability.Test.PerfTest
 
@@ -25,19 +26,21 @@ Creates a {@link PerfTest} object and returns the object created. This API is a 
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-PerfTest-static create(strategy: PerfTestStrategy): PerfTest--><!--Device-PerfTest-static create(strategy: PerfTestStrategy): PerfTest-End-->
+
 **System capability:** SystemCapability.Test.PerfTest
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategy | PerfTestStrategy | Yes | Performance test strategy. |
+| strategy | [PerfTestStrategy](arkts-test-perfteststrategy-i.md) | Yes | Performance test strategy. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PerfTest | {@link PerfTest} object created. |
+| [PerfTest](arkts-test-perftest-c.md) | {@link PerfTest} object created. |
 
 **Error codes:**
 
@@ -90,6 +93,8 @@ Destroys the {@link PerfTest} object.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-PerfTest-destroy(): void--><!--Device-PerfTest-destroy(): void-End-->
+
 **System capability:** SystemCapability.Test.PerfTest
 
 **Error codes:**
@@ -136,19 +141,21 @@ Obtains the measurement data of a specified performance metric.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-PerfTest-getMeasureResult(metric: PerfMetric): PerfMeasureResult--><!--Device-PerfTest-getMeasureResult(metric: PerfMetric): PerfMeasureResult-End-->
+
 **System capability:** SystemCapability.Test.PerfTest
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| metric | PerfMetric | Yes | Performance metric. |
+| metric | [PerfMetric](arkts-test-perfmetric-e.md) | Yes | Performance metric. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PerfMeasureResult | - Measurement result data corresponding to the performance metric. |
+| [PerfMeasureResult](arkts-test-perfmeasureresult-i.md) | - Measurement result data corresponding to the performance metric. |
 
 **Error codes:**
 
@@ -190,12 +197,13 @@ async function demo() {
 run(): Promise<void>
 ```
 
-Runs a performance test, iteratively executes test code segments, and collects performance data.
-This API uses a promise to return the result.
+Runs a performance test, iteratively executes test code segments, and collects performance data.This API uses a promise to return the result.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PerfTest-run(): Promise<void>--><!--Device-PerfTest-run(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Test.PerfTest
 
@@ -203,7 +211,7 @@ This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | @throws { BusinessError } 32400002 - Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | @throws { BusinessError } 32400002 - Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
 
 **Error codes:**
 
@@ -212,7 +220,7 @@ This API uses a promise to return the result.
 | [32400002](../errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
 | [32400004](../errorcode-perftest.md#32400004-failed-to-execute-the-callback) | Failed to execute the callback. Possible causes: 1. An exception is thrown in the callback. 2. Callback execution timed out. |
 | [32400005](../errorcode-perftest.md#32400005-failed-to-collect-performance-data) | Failed to collect metric data. |
-| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls.* |
 
 **Example**
 

@@ -4,9 +4,17 @@
 
 **起始版本：** 9
 
+<!--Device-privacyManager-interface PermissionUsedRequest--><!--Device-privacyManager-interface PermissionUsedRequest-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+```
 
 ## beginTime
 
@@ -14,14 +22,15 @@
 beginTime?: number
 ```
 
-查询的起始时间。
-单位为：毫秒。默认值：0，表示不限制起始时间。
+查询的起始时间。单位为：毫秒。默认值：0，表示不限制起始时间。
 
 **类型：** number
 
 **默认值：** 0
 
 **起始版本：** 9
+
+<!--Device-PermissionUsedRequest-beginTime?: long--><!--Device-PermissionUsedRequest-beginTime?: long-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -41,6 +50,8 @@ bundleName?: string
 
 **起始版本：** 9
 
+<!--Device-PermissionUsedRequest-bundleName?: string--><!--Device-PermissionUsedRequest-bundleName?: string-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -59,6 +70,8 @@ deviceId?: string
 
 **起始版本：** 9
 
+<!--Device-PermissionUsedRequest-deviceId?: string--><!--Device-PermissionUsedRequest-deviceId?: string-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -69,14 +82,15 @@ deviceId?: string
 endTime?: number
 ```
 
-查询的终止时间，不早于beginTime，否则返回错误码12100001。
-单位为：毫秒。默认值：0，表示不限制终止时间。
+查询的终止时间，不早于beginTime，否则返回错误码12100001。单位为：毫秒。默认值：0，表示不限制终止时间。
 
 **类型：** number
 
 **默认值：** 0
 
 **起始版本：** 9
+
+<!--Device-PermissionUsedRequest-endTime?: long--><!--Device-PermissionUsedRequest-endTime?: long-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -93,6 +107,8 @@ flag: PermissionUsageFlag
 **类型：** PermissionUsageFlag
 
 **起始版本：** 9
+
+<!--Device-PermissionUsedRequest-flag: PermissionUsageFlag--><!--Device-PermissionUsedRequest-flag: PermissionUsageFlag-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -114,6 +130,8 @@ isRemote?: boolean
 
 **起始版本：** 9
 
+<!--Device-PermissionUsedRequest-isRemote?: boolean--><!--Device-PermissionUsedRequest-isRemote?: boolean-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -124,12 +142,13 @@ isRemote?: boolean
 permissionNames?: Array<Permissions>
 ```
 
-需要查询的权限集合。
-默认值：空，表示查询所有权限的使用记录。
+需要查询的权限集合。默认值：空，表示查询所有权限的使用记录。
 
 **类型：** Array<Permissions>
 
 **起始版本：** 9
+
+<!--Device-PermissionUsedRequest-permissionNames?: Array<Permissions>--><!--Device-PermissionUsedRequest-permissionNames?: Array<Permissions>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -141,16 +160,15 @@ permissionNames?: Array<Permissions>
 tokenId?: number
 ```
 
-目标应用的身份标识。目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的
-[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。
-该参数必须为大于0的整数，传入0时返回错误码12100001。
-<br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1)。
+目标应用的身份标识。目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。该参数必须为大于0的整数，传入0时返回错误码12100001。<br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1)。
 
 默认值：0，查询所有应用。
 
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-PermissionUsedRequest-tokenId?: int--><!--Device-PermissionUsedRequest-tokenId?: int-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

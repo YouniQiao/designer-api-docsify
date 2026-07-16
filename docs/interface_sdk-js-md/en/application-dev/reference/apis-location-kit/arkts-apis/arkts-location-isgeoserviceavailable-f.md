@@ -22,13 +22,15 @@ Obtain geocode service status
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function isGeoServiceAvailable(callback: AsyncCallback<boolean>): void--><!--Device-geolocation-function isGeoServiceAvailable(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Indicates the callback for reporting the geocode service status. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Indicates the callback for reporting the geocode service status. |
 
 **Example**
 
@@ -62,13 +64,15 @@ Obtain geocode service status
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function isGeoServiceAvailable(): Promise<boolean>--><!--Device-geolocation-function isGeoServiceAvailable(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | The promise returned by the function. |
 
 **Example**
 

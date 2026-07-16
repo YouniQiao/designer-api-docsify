@@ -12,12 +12,13 @@ import { WantAgent } from '@kit.AbilityKit';
 function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: AsyncCallback<CompleteData>): void
 ```
 
-Proactively triggers a WantAgent object.
-This API uses an asynchronous callback to return the result.
+Proactively triggers a WantAgent object.This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-wantAgent-function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: AsyncCallback<CompleteData>): void--><!--Device-wantAgent-function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: AsyncCallback<CompleteData>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -25,9 +26,9 @@ This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | WantAgent | Yes | Target WantAgent object. |
-| triggerInfo | TriggerInfo | Yes | {@link TriggerInfo} object. |
-| callback | AsyncCallback&lt;CompleteData&gt; | No | Callback used to return the result. |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | Target WantAgent object. |
+| triggerInfo | [TriggerInfo](arkts-ability-triggerinfo-t.md) | Yes | {@link TriggerInfo} object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<CompleteData> | No | Callback used to return the result. |
 
 **Error codes:**
 

@@ -1,5 +1,11 @@
 # getStatusMonitor（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+```
+
 ## getStatusMonitor
 
 ```TypeScript
@@ -13,6 +19,8 @@ function getStatusMonitor(localUserId: number): StatusMonitor
 **需要权限：** ohos.permission.USE_USER_IDM
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-companionDeviceAuth-function getStatusMonitor(localUserId: int): StatusMonitor--><!--Device-companionDeviceAuth-function getStatusMonitor(localUserId: int): StatusMonitor-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -28,7 +36,7 @@ function getStatusMonitor(localUserId: number): StatusMonitor
 
 | 类型 | 说明 |
 | --- | --- |
-| StatusMonitor | 状态监听器对象。可用于查询模板状态（[getTemplateStatus](arkts-userauthentication-statusmonitor-i-sys.md#gettemplatestatus-1)）、订阅模板变化（[onTemplateChange](arkts-userauthentication-statusmonitor-i-sys.md#ontemplatechange-1)）、订阅可添加设备变化（[onAvailableDeviceChange](arkts-userauthentication-statusmonitor-i-sys.md#onavailabledevicechange-1)）、订阅持续认证状态（[onContinuousAuthChange](arkts-userauthentication-statusmonitor-i-sys.md#oncontinuousauthchange-1)）等操作。 |
+| [StatusMonitor](arkts-userauthentication-statusmonitor-i-sys.md) | 状态监听器对象。可用于查询模板状态（[getTemplateStatus](arkts-userauthentication-statusmonitor-i-sys.md#gettemplatestatus-1)）、订阅模板变化（[onTemplateChange](arkts-userauthentication-statusmonitor-i-sys.md#ontemplatechange-1)）、订阅可添加设备变化（[onAvailableDeviceChange](arkts-userauthentication-statusmonitor-i-sys.md#onavailabledevicechange-1)）、订阅持续认证状态（[onContinuousAuthChange](arkts-userauthentication-statusmonitor-i-sys.md#oncontinuousauthchange-1)）等操作。 |
 
 **错误码：**
 

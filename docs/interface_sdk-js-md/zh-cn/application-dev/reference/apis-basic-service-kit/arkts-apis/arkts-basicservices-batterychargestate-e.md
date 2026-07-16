@@ -4,6 +4,8 @@
 
 **起始版本：** 6
 
+<!--Device-batteryInfo-export enum BatteryChargeState--><!--Device-batteryInfo-export enum BatteryChargeState-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## NONE
@@ -16,7 +18,9 @@ NONE
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BatteryChargeState-NONE--><!--Device-BatteryChargeState-NONE-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -30,7 +34,9 @@ ENABLE
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BatteryChargeState-ENABLE--><!--Device-BatteryChargeState-ENABLE-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -44,7 +50,9 @@ DISABLE
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BatteryChargeState-DISABLE--><!--Device-BatteryChargeState-DISABLE-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -58,7 +66,9 @@ FULL
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BatteryChargeState-FULL--><!--Device-BatteryChargeState-FULL-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 

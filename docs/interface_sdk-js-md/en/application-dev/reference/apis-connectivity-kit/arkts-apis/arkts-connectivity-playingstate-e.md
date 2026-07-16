@@ -8,6 +8,8 @@ The enum of a2dp playing state.
 
 **Substitutes:** PlayingState
 
+<!--Device-bluetoothManager-enum PlayingState--><!--Device-bluetoothManager-enum PlayingState-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## STATE_NOT_PLAYING
@@ -24,6 +26,8 @@ Not playing.
 
 **Substitutes:** STATE_NOT_PLAYING
 
+<!--Device-PlayingState-STATE_NOT_PLAYING = 0--><!--Device-PlayingState-STATE_NOT_PLAYING = 0-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## STATE_PLAYING
@@ -39,6 +43,8 @@ Playing.
 **Deprecated since:** 10
 
 **Substitutes:** STATE_PLAYING
+
+<!--Device-PlayingState-STATE_PLAYING = 1--><!--Device-PlayingState-STATE_PLAYING = 1-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

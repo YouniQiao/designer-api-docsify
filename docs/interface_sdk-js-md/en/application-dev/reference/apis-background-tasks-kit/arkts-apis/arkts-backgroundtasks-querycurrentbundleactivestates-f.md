@@ -22,6 +22,16 @@ Queries state data of the current bundle within a specified period.
 
 **Deprecated since:** 9
 
+<!--Device-bundleState-function queryCurrentBundleActiveStates(
+    begin: number,
+    end: number,
+    callback: AsyncCallback<Array<BundleActiveState>>
+  ): void--><!--Device-bundleState-function queryCurrentBundleActiveStates(
+    begin: number,
+    end: number,
+    callback: AsyncCallback<Array<BundleActiveState>>
+  ): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **Parameters:**
@@ -30,7 +40,7 @@ Queries state data of the current bundle within a specified period.
 | --- | --- | --- | --- |
 | begin | number | Yes | Indicates the start time of the query period, in milliseconds. |
 | end | number | Yes | Indicates the end time of the query period, in milliseconds. |
-| callback | AsyncCallback&lt;Array&lt;BundleActiveState&gt;&gt; | Yes | the state data of the current bundle. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<BundleActiveState>> | Yes | the state data of the current bundle. |
 
 **Example**
 
@@ -65,6 +75,8 @@ Queries state data of the current bundle within a specified period.
 
 **Deprecated since:** 9
 
+<!--Device-bundleState-function queryCurrentBundleActiveStates(begin: number, end: number): Promise<Array<BundleActiveState>>--><!--Device-bundleState-function queryCurrentBundleActiveStates(begin: number, end: number): Promise<Array<BundleActiveState>>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **Parameters:**
@@ -78,7 +90,7 @@ Queries state data of the current bundle within a specified period.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleActiveState&gt;&gt; | the state data of the current bundle. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<BundleActiveState>> | the state data of the current bundle. |
 
 **Example**
 

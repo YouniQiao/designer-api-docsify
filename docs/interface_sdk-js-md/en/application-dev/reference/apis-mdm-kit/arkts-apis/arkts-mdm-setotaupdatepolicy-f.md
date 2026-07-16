@@ -12,9 +12,7 @@ import { systemManager } from '@kit.MDMKit';
 function setOtaUpdatePolicy(admin: Want, policy: OtaUpdatePolicy): void
 ```
 
-Sets the update policy. In intranet updates, call
-[systemManager.notifyUpdatePackages](arkts-mdm-notifyupdatepackages-f.md#notifyupdatepackages-1) to notify the system of the update
-packages and then call this API to set the upgrade policy.
+Sets the update policy. In intranet updates, call [systemManager.notifyUpdatePackages](arkts-mdm-notifyupdatepackages-f.md#notifyupdatepackages-1) to notify the system of the update packages and then call this API to set the upgrade policy.
 
 **Since:** 12
 
@@ -22,14 +20,16 @@ packages and then call this API to set the upgrade policy.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-systemManager-function setOtaUpdatePolicy(admin: Want, policy: OtaUpdatePolicy): void--><!--Device-systemManager-function setOtaUpdatePolicy(admin: Want, policy: OtaUpdatePolicy): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| policy | OtaUpdatePolicy | Yes | OTA update policy to set. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| policy | [OtaUpdatePolicy](arkts-mdm-otaupdatepolicy-i.md) | Yes | OTA update policy to set. |
 
 **Error codes:**
 
@@ -37,7 +37,7 @@ packages and then call this API to set the upgrade policy.
 | --- | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Example**

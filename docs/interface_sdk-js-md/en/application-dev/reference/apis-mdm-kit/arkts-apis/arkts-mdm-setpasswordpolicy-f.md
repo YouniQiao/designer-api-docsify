@@ -12,9 +12,7 @@ import { securityManager } from '@kit.MDMKit';
 function setPasswordPolicy(admin: Want, policy: PasswordPolicy): void
 ```
 
-Sets the device screen lock password policy. During screen lock password setting, if the current screen lock
-password does not meet the requirements, a security message will be displayed, prompting the user to reset the
-screen lock password.
+Sets the device screen lock password policy. During screen lock password setting, if the current screen lock password does not meet the requirements, a security message will be displayed, prompting the user to reset the screen lock password.
 
 **Since:** 12
 
@@ -22,14 +20,16 @@ screen lock password.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-securityManager-function setPasswordPolicy(admin: Want, policy: PasswordPolicy): void--><!--Device-securityManager-function setPasswordPolicy(admin: Want, policy: PasswordPolicy): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| policy | PasswordPolicy | Yes | Device screen lock password policy. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| policy | [PasswordPolicy](arkts-mdm-passwordpolicy-i.md) | Yes | Device screen lock password policy. |
 
 **Error codes:**
 
@@ -38,7 +38,7 @@ screen lock password.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [9200007](../errorcode-enterpriseDeviceManager.md#9200007-system-ability-error) | The system ability works abnormally. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Example**

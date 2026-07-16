@@ -6,6 +6,8 @@ Provides APIs to manage albums.
 
 **Since:** 12
 
+<!--Device-sendablePhotoAccessHelper-interface Album extends AbsAlbum--><!--Device-sendablePhotoAccessHelper-interface Album extends AbsAlbum-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -20,12 +22,13 @@ import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 getFaceId(): Promise<string>
 ```
 
-Obtains the face identifier on the cover of a portrait album or group photo album. This API uses a promise to
-return the result.
+Obtains the face identifier on the cover of a portrait album or group photo album. This API uses a promise to return the result.
 
 **Since:** 13
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-Album-getFaceId(): Promise<string>--><!--Device-Album-getFaceId(): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -35,7 +38,7 @@ return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return **tag_id** of the portrait album, **group_tag** of the groupphoto album, or an empty string if no face identifier is found. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return **tag_id** of the portrait album, **group_tag** of the group photo album, or an empty string if no face identifier is found. |
 
 **Error codes:**
 

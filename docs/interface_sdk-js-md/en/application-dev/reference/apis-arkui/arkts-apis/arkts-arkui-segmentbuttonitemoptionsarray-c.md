@@ -2,13 +2,15 @@
 
 Represents an array for storing button information.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > The SegmentButtonItemOptionsArray can save only two to five button information elements.
 
 **Inheritance/Implementation:** SegmentButtonItemOptionsArray extends [Array<SegmentButtonItemOptions>](Array<SegmentButtonItemOptions>)
 
 **Since:** 11
+
+<!--Device-unnamed-declare class SegmentButtonItemOptionsArray extends Array<SegmentButtonItemOptions>--><!--Device-unnamed-declare class SegmentButtonItemOptionsArray extends Array<SegmentButtonItemOptions>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,13 +34,15 @@ Constructor.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SegmentButtonItemOptionsArray-constructor(elements: SegmentButtonItemTuple)--><!--Device-SegmentButtonItemOptionsArray-constructor(elements: SegmentButtonItemTuple)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | SegmentButtonItemTuple | Yes | Button information. |
+| elements | [SegmentButtonItemTuple](arkts-arkui-segmentbuttonitemtuple-t.md) | Yes | Button information. |
 
 ## create
 
@@ -54,19 +58,21 @@ Creates a **SegmentButtonItemOptionsArray** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SegmentButtonItemOptionsArray-static create(elements: SegmentButtonItemTuple): SegmentButtonItemOptionsArray--><!--Device-SegmentButtonItemOptionsArray-static create(elements: SegmentButtonItemTuple): SegmentButtonItemOptionsArray-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | SegmentButtonItemTuple | Yes | Button information. |
+| elements | [SegmentButtonItemTuple](arkts-arkui-segmentbuttonitemtuple-t.md) | Yes | Button information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SegmentButtonItemOptionsArray | Created SegmentButtonItemOptionsArray object. |
+| [SegmentButtonItemOptionsArray](arkts-arkui-segmentbuttonitemoptionsarray-c.md) | Created SegmentButtonItemOptionsArray object. |
 
 ## pop
 
@@ -82,13 +88,15 @@ Removes the last element from this array and returns that element.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SegmentButtonItemOptionsArray-pop(): SegmentButtonItemOptions | undefined--><!--Device-SegmentButtonItemOptionsArray-pop(): SegmentButtonItemOptions | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SegmentButtonItemOptions | Element removed from the array. |
+| [SegmentButtonItemOptions](arkts-arkui-segmentbuttonitemoptions-c.md) | Element removed from the array. |
 
 ## push
 
@@ -104,13 +112,15 @@ Adds the specified elements to the end of this array and returns the new length 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SegmentButtonItemOptionsArray-push(...items: SegmentButtonItemArray): number--><!--Device-SegmentButtonItemOptionsArray-push(...items: SegmentButtonItemArray): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | SegmentButtonItemArray | Yes | Elements to add to the end of the array.<br>Default value: array with 0new button information items |
+| items | [SegmentButtonItemArray](arkts-arkui-segmentbuttonitemarray-t.md) | Yes | Elements to add to the end of the array.<br>Default value: array with 0new button information items |
 
 **Return value:**
 
@@ -132,13 +142,15 @@ Removes the first element from this array and returns that element.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SegmentButtonItemOptionsArray-shift(): SegmentButtonItemOptions | undefined--><!--Device-SegmentButtonItemOptionsArray-shift(): SegmentButtonItemOptions | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SegmentButtonItemOptions | Element removed from the array. |
+| [SegmentButtonItemOptions](arkts-arkui-segmentbuttonitemoptions-c.md) | Element removed from the array. |
 
 ## splice
 
@@ -146,14 +158,15 @@ Removes the first element from this array and returns that element.
 splice(start: number, deleteCount: number, ...items: SegmentButtonItemOptions[]): SegmentButtonItemOptions[]
 ```
 
-Changes the contents of this array by removing the specified number of elements from the specified position and
-adding new elements in place. This API returns an array containing the removed elements.
+Changes the contents of this array by removing the specified number of elements from the specified position and adding new elements in place. This API returns an array containing the removed elements.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SegmentButtonItemOptionsArray-splice(start: number, deleteCount: number, ...items: SegmentButtonItemOptions[]): SegmentButtonItemOptions[]--><!--Device-SegmentButtonItemOptionsArray-splice(start: number, deleteCount: number, ...items: SegmentButtonItemOptions[]): SegmentButtonItemOptions[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -163,13 +176,13 @@ adding new elements in place. This API returns an array containing the removed e
 | --- | --- | --- | --- |
 | start | number | Yes | Index of the position starting from which elements are to be removed. |
 | deleteCount | number | Yes | Number of elements to remove. |
-| items | SegmentButtonItemOptions[] | Yes | Element to be added to the array from start.<br>Default value: If noelement is specified, the element is deleted from the array. |
+| items | [SegmentButtonItemOptions](arkts-arkui-segmentbuttonitemoptions-c.md)[] | Yes | Element to be added to the array from start.<br>Default value: If no element is specified, the element is deleted from the array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SegmentButtonItemOptions[] | An array containing the removed elements. |
+| [SegmentButtonItemOptions](arkts-arkui-segmentbuttonitemoptions-c.md)[] | An array containing the removed elements. |
 
 ## unshift
 
@@ -185,13 +198,15 @@ Adds an element to the beginning of this array and returns the new length of the
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SegmentButtonItemOptionsArray-unshift(...items: SegmentButtonItemArray): number--><!--Device-SegmentButtonItemOptionsArray-unshift(...items: SegmentButtonItemArray): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | SegmentButtonItemArray | Yes | Elements to add to the beginning of the array.<br>Default value: arraywith 0 new button information items |
+| items | [SegmentButtonItemArray](arkts-arkui-segmentbuttonitemarray-t.md) | Yes | Elements to add to the beginning of the array.<br>Default value: array with 0 new button information items |
 
 **Return value:**
 

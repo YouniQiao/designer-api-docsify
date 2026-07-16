@@ -12,12 +12,13 @@ import { util } from '@kit.ArkTS';
 function promisify(original: (err: Object, value: Object) => void): Function
 ```
 
-Receives a function that uses the error-first callback mode, that is, uses `(err, value) => callback` as the last
-parameter, and uses a promise to return the result.
+Receives a function that uses the error-first callback mode, that is, uses `(err, value) => callback` as the last parameter, and uses a promise to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-util-function promisify(original: (err: Object, value: Object) => void): Function--><!--Device-util-function promisify(original: (err: Object, value: Object) => void): Function-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,14 +26,14 @@ parameter, and uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| original | (err: Object, value: Object) =&gt; void | Yes | Function, in which the first parameter **err** indicates the cause of the rejection(the value is **null** if the promise has been resolved) and the second parameter **value** indicates theresolved value. |
+| original | (err: Object, value: Object) => void | Yes | Function, in which the first parameter **err** indicates the cause of the rejection(the value is **null** if the promise has been resolved) and the second parameter **value** indicates the resolved value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
 | function | Return a function that returns promises<br>**Applicable version:** 9 - 11 |
-| Function | Promise function.<br>**Applicable version:** 10 and later |
+| [Function](../../apis-na/arkts-apis/arkts-na-function-i.md) | Promise function.<br>**Applicable version:** 10 and later |
 
 **Example**
 

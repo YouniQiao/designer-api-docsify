@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-declare interface IndicatorIconInfo--><!--Device-unnamed-declare interface IndicatorIconInfo-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## icon
@@ -20,9 +22,11 @@ icon: ResourceStr | SymbolGlyphModifier
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-IndicatorIconInfo-icon: ResourceStr | SymbolGlyphModifier--><!--Device-IndicatorIconInfo-icon: ResourceStr | SymbolGlyphModifier-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,8 +36,7 @@ icon: ResourceStr | SymbolGlyphModifier
 index: number
 ```
 
-指定索引。
-取值限定为整数。
+指定索引。取值限定为整数。
 
 **类型：** number
 
@@ -41,9 +44,11 @@ index: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-IndicatorIconInfo-index: int--><!--Device-IndicatorIconInfo-index: int-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

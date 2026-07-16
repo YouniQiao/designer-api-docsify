@@ -4,6 +4,8 @@ Defines the filter criteria.
 
 **Since:** 10
 
+<!--Device-agent-interface Filter--><!--Device-agent-interface Filter-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## Modules to Import
@@ -20,13 +22,15 @@ action?: Action
 
 Task action.
 
-- **UPLOAD**: Upload tasks.
-- **DOWNLOAD**: Download tasks.
+- **UPLOAD**: Upload tasks.  
+- **DOWNLOAD**: Download tasks.  
 - If this parameter is not set, all tasks are queried.
 
 **Type:** Action
 
 **Since:** 10
+
+<!--Device-Filter-action?: Action--><!--Device-Filter-action?: Action-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -42,6 +46,8 @@ Unix timestamp of the start time, in milliseconds. The default value is the invo
 
 **Since:** 10
 
+<!--Device-Filter-after?: long--><!--Device-Filter-after?: long-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## before
@@ -56,6 +62,8 @@ Unix timestamp of the end time, in milliseconds. The default value is the invoki
 
 **Since:** 10
 
+<!--Device-Filter-before?: long--><!--Device-Filter-before?: long-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## mode
@@ -66,13 +74,15 @@ mode?: Mode
 
 Task mode.
 
-- **FOREGROUND**: foreground task.
-- **BACKGROUND**: background task.
+- **FOREGROUND**: foreground task.  
+- **BACKGROUND**: background task.  
 - If this parameter is not set, all tasks are queried.
 
 **Type:** Mode
 
 **Since:** 10
+
+<!--Device-Filter-mode?: Mode--><!--Device-Filter-mode?: Mode-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -87,6 +97,8 @@ Task state. If this parameter is not set, all tasks are queried.
 **Type:** State
 
 **Since:** 10
+
+<!--Device-Filter-state?: State--><!--Device-Filter-state?: State-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 

@@ -18,19 +18,21 @@ Get all active fences.
 
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-geoLocationManager-function getActiveGeoFences(): Promise<Map<int, Geofence>>--><!--Device-geoLocationManager-function getActiveGeoFences(): Promise<Map<int, Geofence>>-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Map&lt;number, Geofence&gt;&gt; | The promise returned by the function.The key of the map represents the fence ID. The value of the map representsthe detailed information of the fence. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Map<number, Geofence>> | The promise returned by the function.The key of the map represents the fence ID. The value of the map represents the detailed information of the fence. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does nothave the permission required to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call${geoLocationManager.getActiveGeoFences} due to limited device capabilities. |
 
 **Example**

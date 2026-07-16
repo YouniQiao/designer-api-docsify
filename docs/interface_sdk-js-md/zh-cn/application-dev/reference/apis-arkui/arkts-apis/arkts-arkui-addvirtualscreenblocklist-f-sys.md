@@ -1,5 +1,11 @@
 # addVirtualScreenBlocklist（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { display } from '@kit.ArkUI';
+```
+
 ## addVirtualScreenBlocklist
 
 ```TypeScript
@@ -10,6 +16,8 @@ function addVirtualScreenBlocklist(windowIds: Array<number>): Promise<void>
 
 **起始版本：** 18
 
+<!--Device-display-function addVirtualScreenBlocklist(windowIds: Array<int>): Promise<void>--><!--Device-display-function addVirtualScreenBlocklist(windowIds: Array<int>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **系统接口：** 此接口为系统接口。
@@ -18,13 +26,13 @@ function addVirtualScreenBlocklist(windowIds: Array<number>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowIds | Array&lt;number&gt; | 是 | 窗口id列表，传入子窗窗口id时不生效。窗口id为大于0的整数。推荐使用[getWindowProperties()](../../../../reference/apis-arkui/arkts-apis-window-Window.md#getwindowproperties9)方法获取窗口id属性。 |
+| windowIds | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<number> | 是 | 窗口id列表，传入子窗窗口id时不生效。窗口id为大于0的整数。推荐使用[getWindowProperties()](../../../../reference/apis-arkui/arkts-apis-window-Window.md#getwindowproperties9)方法获取窗口id属性。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -32,7 +40,7 @@ function addVirtualScreenBlocklist(windowIds: Array<number>): Promise<void>
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.Function addVirtualScreenBlocklist can not work correctlydue to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.Function addVirtualScreenBlocklist can not work correctly due to limited device capabilities. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 **示例：**

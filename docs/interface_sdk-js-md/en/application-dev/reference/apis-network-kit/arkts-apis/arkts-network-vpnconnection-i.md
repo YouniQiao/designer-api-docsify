@@ -4,6 +4,8 @@ Defines a VPN connection.
 
 **Since:** 11
 
+<!--Device-vpnExtension-export interface VpnConnection--><!--Device-vpnExtension-export interface VpnConnection-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 ## Modules to Import
@@ -22,19 +24,21 @@ Create a VPN network using the VpnConfig.
 
 **Since:** 11
 
+<!--Device-VpnConnection-create(config: VpnConfig): Promise<number>--><!--Device-VpnConnection-create(config: VpnConfig): Promise<number>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | VpnConfig | Yes | Indicates the {@link VpnConfig} configuration of the VPN network. |
+| config | [VpnConfig](arkts-network-vpnconfig-i.md) | Yes | Indicates the {@link VpnConfig} configuration of the VPN network. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The promise returns file descriptor of VPN interface. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | The promise returns file descriptor of VPN interface. |
 
 **Error codes:**
 
@@ -137,13 +141,15 @@ Destroy the VPN network.
 
 **Since:** 11
 
+<!--Device-VpnConnection-destroy(): Promise<void>--><!--Device-VpnConnection-destroy(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -185,6 +191,8 @@ Destroy the VPN network.
 
 **Since:** 20
 
+<!--Device-VpnConnection-destroy(vpnId: string): Promise<void>--><!--Device-VpnConnection-destroy(vpnId: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **Parameters:**
@@ -197,7 +205,7 @@ Destroy the VPN network.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -238,13 +246,15 @@ generate vpn id.
 
 **Since:** 20
 
+<!--Device-VpnConnection-generateVpnId(): Promise<string>--><!--Device-VpnConnection-generateVpnId(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | The promise returns vpn id. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | The promise returns vpn id. |
 
 **Error codes:**
 
@@ -280,10 +290,11 @@ export default class MyVpnExtAbility extends VpnExtensionAbility {
 protect(socketFd: number): Promise<void>
 ```
 
-Protect a socket from VPN connections. After protecting, data sent through this socket will go directly to the
-underlying network so its traffic will not be forwarded through the VPN.
+Protect a socket from VPN connections. After protecting, data sent through this socket will go directly to the underlying network so its traffic will not be forwarded through the VPN.
 
 **Since:** 11
+
+<!--Device-VpnConnection-protect(socketFd: number): Promise<void>--><!--Device-VpnConnection-protect(socketFd: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -297,7 +308,7 @@ underlying network so its traffic will not be forwarded through the VPN.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -348,11 +359,11 @@ export default class MyVpnExtAbility extends VpnExtensionAbility {
 protectProcessNet(): Promise<void>
 ```
 
-Protect all socket of the VPN process. After executing this function,
-all sockets subsequently created by the current process will be protected,
-while previously created sockets will not be protected.
+Protect all socket of the VPN process. After executing this function,all sockets subsequently created by the current process will be protected,while previously created sockets will not be protected.
 
 **Since:** 22
+
+<!--Device-VpnConnection-protectProcessNet(): Promise<void>--><!--Device-VpnConnection-protectProcessNet(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -360,7 +371,7 @@ while previously created sockets will not be protected.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Example**
 

@@ -1,13 +1,20 @@
 # MultiNavPathStack
 
-当前，MultiNavigation的路由栈仅支持由使用方自行创建，不支持通过回调方式获取。请勿使用[NavDestination](../arkts-components/arkts-arkui-navdestination.md)的
-[onReady](NavDestinationAttribute#onReady)等类似事件或接口来获取NavPathStack并进行栈操作，因为这可能会导致不可预知的问题。
+当前，MultiNavigation的路由栈仅支持由使用方自行创建，不支持通过回调方式获取。请勿使用[NavDestination](../arkts-components/arkts-arkui-navdestination.md)的[onReady](NavDestinationAttribute#onReady)等类似事件或接口来获取NavPathStack并进行栈操作，因为这可能会导致不可预知的问题。
 
 **继承/实现关系：** MultiNavPathStack extends [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md)
 
 **起始版本：** 14
 
+<!--Device-unnamed-export declare class MultiNavPathStack extends NavPathStack--><!--Device-unnamed-export declare class MultiNavPathStack extends NavPathStack-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { MultiNavPathStack, MultiNavigation, SplitPolicy } from '@kit.ArkUI';
+```
 
 ## clear
 
@@ -25,7 +32,9 @@ clear(animated?: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-clear(animated?: boolean): void--><!--Device-MultiNavPathStack-clear(animated?: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,7 +56,9 @@ Creates an instance of MultiNavPathStack.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-constructor()--><!--Device-MultiNavPathStack-constructor()-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -63,7 +74,9 @@ disableAnimation(disable: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-disableAnimation(disable: boolean): void--><!--Device-MultiNavPathStack-disableAnimation(disable: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,7 +98,9 @@ getAllPathName(): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-getAllPathName(): Array<string>--><!--Device-MultiNavPathStack-getAllPathName(): Array<string>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -93,7 +108,7 @@ getAllPathName(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 返回栈中所有NavDestination页面的名称。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 返回栈中所有NavDestination页面的名称。 |
 
 ## getIndexByName
 
@@ -107,7 +122,9 @@ getIndexByName(name: string): Array<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-getIndexByName(name: string): Array<number>--><!--Device-MultiNavPathStack-getIndexByName(name: string): Array<number>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -121,7 +138,7 @@ getIndexByName(name: string): Array<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;number&gt; | Indexes of all the matching navigation destination pages.<br>Value range of the number type: [0, +∞). |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<number> | Indexes of all the matching navigation destination pages.<br>Value range of the number type: [0, +∞). |
 
 ## getParamByIndex
 
@@ -135,7 +152,9 @@ getParamByIndex(index: number): Object | undefined
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-getParamByIndex(index: number): Object | undefined--><!--Device-MultiNavPathStack-getParamByIndex(index: number): Object | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -163,7 +182,9 @@ getParamByName(name: string): Array<Object>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-getParamByName(name: string): Array<Object>--><!--Device-MultiNavPathStack-getParamByName(name: string): Array<Object>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -177,7 +198,7 @@ getParamByName(name: string): Array<Object>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Object&gt; | 返回全部名为name的NavDestination页面的参数信息。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Object> | 返回全部名为name的NavDestination页面的参数信息。 |
 
 ## keepBottomPage
 
@@ -189,14 +210,16 @@ keepBottomPage(keepBottom: boolean): void
 
 > **说明：**
 
-> MultiNavigation将主页也当作了NavDestination页面入栈，所以调用pop或clear接口时会将栈底页面也出栈。
+> MultiNavigation将主页也当作了NavDestination页面入栈，所以调用pop或clear接口时会将栈底页面也出栈。  
 > > 应用调用此接口并设置为true时，MultiNavigation会在调用pop和clear接口时保留栈底页面。
 
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-keepBottomPage(keepBottom: boolean): void--><!--Device-MultiNavPathStack-keepBottomPage(keepBottom: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -232,7 +255,9 @@ moveIndexToTop(index: number, animated?: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-moveIndexToTop(index: number, animated?: boolean): void--><!--Device-MultiNavPathStack-moveIndexToTop(index: number, animated?: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -269,7 +294,9 @@ moveToTop(name: string, animated?: boolean): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-moveToTop(name: string, animated?: boolean): number--><!--Device-MultiNavPathStack-moveToTop(name: string, animated?: boolean): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -302,7 +329,9 @@ pop(animated?: boolean): NavPathInfo | undefined
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-pop(animated?: boolean): NavPathInfo | undefined--><!--Device-MultiNavPathStack-pop(animated?: boolean): NavPathInfo | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -316,7 +345,7 @@ pop(animated?: boolean): NavPathInfo | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| NavPathInfo | Information about the navigation destination page at the top of the stack. |
+| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Information about the navigation destination page at the top of the stack. |
 
 ## pop
 
@@ -334,7 +363,9 @@ pop(result?: Object, animated?: boolean): NavPathInfo | undefined
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-pop(result?: Object, animated?: boolean): NavPathInfo | undefined--><!--Device-MultiNavPathStack-pop(result?: Object, animated?: boolean): NavPathInfo | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -349,7 +380,7 @@ pop(result?: Object, animated?: boolean): NavPathInfo | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| NavPathInfo | Information about the navigation destination page at the top of the stack. |
+| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Information about the navigation destination page at the top of the stack. |
 
 ## popToIndex
 
@@ -363,7 +394,9 @@ popToIndex(index: number, animated?: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-popToIndex(index: number, animated?: boolean): void--><!--Device-MultiNavPathStack-popToIndex(index: number, animated?: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -386,7 +419,9 @@ popToIndex(index: number, result: Object, animated?: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-popToIndex(index: number, result: Object, animated?: boolean): void--><!--Device-MultiNavPathStack-popToIndex(index: number, result: Object, animated?: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -410,7 +445,9 @@ popToName(name: string, animated?: boolean): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-popToName(name: string, animated?: boolean): number--><!--Device-MultiNavPathStack-popToName(name: string, animated?: boolean): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -425,7 +462,7 @@ popToName(name: string, animated?: boolean): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | Returns the index of the first navigation destination page that matches **name** from thebottom of the navigation stack; returns **-1** if no such a page is found.<br>Value range: [-1, +∞). |
+| number | Returns the index of the first navigation destination page that matches **name** from the bottom of the navigation stack; returns **-1** if no such a page is found.<br>Value range: [-1, +∞). |
 
 ## popToName
 
@@ -439,7 +476,9 @@ popToName(name: string, result: Object, animated?: boolean): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-popToName(name: string, result: Object, animated?: boolean): number--><!--Device-MultiNavPathStack-popToName(name: string, result: Object, animated?: boolean): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -455,7 +494,7 @@ popToName(name: string, result: Object, animated?: boolean): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | Returns the index of the first navigation destination page that matches **name** from thebottom of the navigation stack; returns **-1** if no such a page is found.<br>Value range: [-1, +∞). |
+| number | Returns the index of the first navigation destination page that matches **name** from the bottom of the navigation stack; returns **-1** if no such a page is found.<br>Value range: [-1, +∞). |
 
 ## pushPath
 
@@ -469,7 +508,9 @@ pushPath(info: NavPathInfo, animated?: boolean, policy?: SplitPolicy): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-pushPath(info: NavPathInfo, animated?: boolean, policy?: SplitPolicy): void--><!--Device-MultiNavPathStack-pushPath(info: NavPathInfo, animated?: boolean, policy?: SplitPolicy): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -477,9 +518,9 @@ pushPath(info: NavPathInfo, animated?: boolean, policy?: SplitPolicy): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | NavPathInfo | 是 | NavDestination页面的信息。 |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
 | animated | boolean | 否 | 是否支持转场动画。<br/>默认值：true<br/>true：支持转场动画。<br/>false：不支持转场动画。 |
-| policy | SplitPolicy | 否 | 当前入栈页面的策略。默认值：DETAIL_PAGE |
+| policy | [SplitPolicy](arkts-arkui-splitpolicy-e.md) | 否 | 当前入栈页面的策略。默认值：DETAIL_PAGE |
 
 ## pushPath
 
@@ -493,7 +534,9 @@ pushPath(info: NavPathInfo, options?: NavigationOptions, policy?: SplitPolicy): 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-pushPath(info: NavPathInfo, options?: NavigationOptions, policy?: SplitPolicy): void--><!--Device-MultiNavPathStack-pushPath(info: NavPathInfo, options?: NavigationOptions, policy?: SplitPolicy): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -501,9 +544,9 @@ pushPath(info: NavPathInfo, options?: NavigationOptions, policy?: SplitPolicy): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | NavPathInfo | 是 | NavDestination页面的信息。 |
-| options | NavigationOptions | 否 | 页面栈操作选项。仅支持其中的animated字段。 |
-| policy | SplitPolicy | 否 | 当前入栈页面的策略。默认值：DETAIL_PAGE |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
+| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | 否 | 页面栈操作选项。仅支持其中的animated字段。 |
+| policy | [SplitPolicy](arkts-arkui-splitpolicy-e.md) | 否 | 当前入栈页面的策略。默认值：DETAIL_PAGE |
 
 ## pushPathByName
 
@@ -517,7 +560,9 @@ pushPathByName(name: string, param: Object, animated?: boolean, policy?: SplitPo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-pushPathByName(name: string, param: Object, animated?: boolean, policy?: SplitPolicy): void--><!--Device-MultiNavPathStack-pushPathByName(name: string, param: Object, animated?: boolean, policy?: SplitPolicy): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -528,7 +573,7 @@ pushPathByName(name: string, param: Object, animated?: boolean, policy?: SplitPo
 | name | string | 是 | NavDestination页面名称。 |
 | param | Object | 是 | NavDestination页面详细参数。 |
 | animated | boolean | 否 | 是否支持转场动画。<br/>默认值：true<br/>true：支持转场动画。<br/>false：不支持转场动画。 |
-| policy | SplitPolicy | 否 | 当前入栈页面的策略。默认值：DETAIL_PAGE |
+| policy | [SplitPolicy](arkts-arkui-splitpolicy-e.md) | 否 | 当前入栈页面的策略。默认值：DETAIL_PAGE |
 
 ## pushPathByName
 
@@ -543,7 +588,11 @@ pushPathByName(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-pushPathByName(
+    name: string, param: Object, onPop?: base.Callback<PopInfo>, animated?: boolean, policy?: SplitPolicy): void--><!--Device-MultiNavPathStack-pushPathByName(
+    name: string, param: Object, onPop?: base.Callback<PopInfo>, animated?: boolean, policy?: SplitPolicy): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -553,9 +602,9 @@ pushPathByName(
 | --- | --- | --- | --- |
 | name | string | 是 | NavDestination页面名称。 |
 | param | Object | 是 | NavDestination页面详细参数。 |
-| onPop | base.Callback&lt;PopInfo&gt; | 否 | Callback回调，用于页面出栈时触发该回调处理返回结果。 |
+| onPop | base.Callback<PopInfo> | 否 | Callback回调，用于页面出栈时触发该回调处理返回结果。 |
 | animated | boolean | 否 | 是否支持转场动画。<br/>默认值：true<br/>true：支持转场动画。<br/>false：不支持转场动画。 |
-| policy | SplitPolicy | 否 | 当前入栈页面的策略。默认值：DETAIL_PAGE |
+| policy | [SplitPolicy](arkts-arkui-splitpolicy-e.md) | 否 | 当前入栈页面的策略。默认值：DETAIL_PAGE |
 
 ## removeByIndexes
 
@@ -569,7 +618,9 @@ removeByIndexes(indexes: Array<number>): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-removeByIndexes(indexes: Array<number>): number--><!--Device-MultiNavPathStack-removeByIndexes(indexes: Array<number>): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -577,7 +628,7 @@ removeByIndexes(indexes: Array<number>): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| indexes | Array&lt;number&gt; | 是 | 待删除NavDestination页面的索引值数组。<br/>number类型的取值范围：[0, +∞) |
+| indexes | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<number> | 是 | 待删除NavDestination页面的索引值数组。<br/>number类型的取值范围：[0, +∞) |
 
 **返回值：**
 
@@ -597,7 +648,9 @@ removeByName(name: string): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-removeByName(name: string): number--><!--Device-MultiNavPathStack-removeByName(name: string): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -625,7 +678,9 @@ replacePath(info: NavPathInfo, animated?: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-replacePath(info: NavPathInfo, animated?: boolean): void--><!--Device-MultiNavPathStack-replacePath(info: NavPathInfo, animated?: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -633,7 +688,7 @@ replacePath(info: NavPathInfo, animated?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | NavPathInfo | 是 | NavDestination页面的信息。 |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
 | animated | boolean | 否 | 是否支持转场动画。<br/>默认值：true<br/>true：支持转场动画。<br/>false：不支持转场动画。 |
 
 ## replacePath
@@ -648,7 +703,9 @@ replacePath(info: NavPathInfo, options?: NavigationOptions): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-replacePath(info: NavPathInfo, options?: NavigationOptions): void--><!--Device-MultiNavPathStack-replacePath(info: NavPathInfo, options?: NavigationOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -656,8 +713,8 @@ replacePath(info: NavPathInfo, options?: NavigationOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | NavPathInfo | 是 | NavDestination页面的信息。 |
-| options | NavigationOptions | 否 | 页面栈操作选项。仅支持其中的animated字段。 |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
+| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | 否 | 页面栈操作选项。仅支持其中的animated字段。 |
 
 ## replacePathByName
 
@@ -671,7 +728,9 @@ replacePathByName(name: string, param: Object, animated?: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-replacePathByName(name: string, param: Object, animated?: boolean): void--><!--Device-MultiNavPathStack-replacePathByName(name: string, param: Object, animated?: boolean): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -695,7 +754,9 @@ setHomeWidthRange(minPercent: number, maxPercent: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-setHomeWidthRange(minPercent: number, maxPercent: number): void--><!--Device-MultiNavPathStack-setHomeWidthRange(minPercent: number, maxPercent: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -718,14 +779,16 @@ setPlaceholderPage(info: NavPathInfo): void
 
 > 占位页面为特殊页面类型，当应用设置后，在一些大屏设备上会和主页默认形成左右分栏的效果，即左边主页，右边占位页。
 
-> 当应用可绘制区域小于600vp、折叠屏由展开态切换为折叠态及平板横屏转竖屏等场景时，会自动将占位页出栈，只显示主页；
+> 当应用可绘制区域小于600vp、折叠屏由展开态切换为折叠态及平板横屏转竖屏等场景时，会自动将占位页出栈，只显示主页；  
 > > 而当应用可绘制区域大于等于600vp、折叠屏由折叠态切换为展开态及平板竖屏转横屏等场景时，会自动补充占位页，形成分栏。
 
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-setPlaceholderPage(info: NavPathInfo): void--><!--Device-MultiNavPathStack-setPlaceholderPage(info: NavPathInfo): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -733,7 +796,7 @@ setPlaceholderPage(info: NavPathInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | NavPathInfo | 是 | 占位页页面信息。 |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | 占位页页面信息。 |
 
 ## size
 
@@ -747,7 +810,9 @@ size(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-size(): number--><!--Device-MultiNavPathStack-size(): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -769,7 +834,9 @@ switchFullScreenState(isFullScreen?: boolean): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MultiNavPathStack-switchFullScreenState(isFullScreen?: boolean): boolean--><!--Device-MultiNavPathStack-switchFullScreenState(isFullScreen?: boolean): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

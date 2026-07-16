@@ -12,6 +12,8 @@ Called when auto fill request is successfully handled.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-autoFillManager-type OnFillSuccessFn = (viewData: ViewData) => void--><!--Device-autoFillManager-type OnFillSuccessFn = (viewData: ViewData) => void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Parameters:**

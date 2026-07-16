@@ -20,15 +20,17 @@ Sets the IP address of a specific Ethernet interface.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-networkManager-function setEthernetConfig(admin: Want, networkInterface: string, config: InterfaceConfig): void--><!--Device-networkManager-function setEthernetConfig(admin: Want, networkInterface: string, config: InterfaceConfig): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. |
 | networkInterface | string | Yes | Network interface name to set. |
-| config | InterfaceConfig | Yes | Network interface configuration to set. |
+| config | [InterfaceConfig](arkts-mdm-interfaceconfig-i.md) | Yes | Network interface configuration to set. |
 
 **Error codes:**
 

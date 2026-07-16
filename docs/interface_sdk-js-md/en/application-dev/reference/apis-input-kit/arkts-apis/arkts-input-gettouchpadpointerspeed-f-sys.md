@@ -16,6 +16,8 @@ Obtains the touchpad pointer speed. This API uses an asynchronous callback to re
 
 **Since:** 10
 
+<!--Device-pointer-function getTouchpadPointerSpeed(callback: AsyncCallback<int>): void--><!--Device-pointer-function getTouchpadPointerSpeed(callback: AsyncCallback<int>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Obtains the touchpad pointer speed. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **number** is the obtained touchpad pointer speed. Otherwise, **err** is an errorobject. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **number** is the obtained touchpad pointer speed. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -76,6 +78,8 @@ Obtains the touchpad pointer speed. This API uses a promise to return the result
 
 **Since:** 10
 
+<!--Device-pointer-function getTouchpadPointerSpeed(): Promise<int>--><!--Device-pointer-function getTouchpadPointerSpeed(): Promise<int>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **System API:** This is a system API.
@@ -84,7 +88,7 @@ Obtains the touchpad pointer speed. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the touchpad pointer speed. The value range is [1,11]. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the touchpad pointer speed. The value range is [1,11]. |
 
 **Error codes:**
 

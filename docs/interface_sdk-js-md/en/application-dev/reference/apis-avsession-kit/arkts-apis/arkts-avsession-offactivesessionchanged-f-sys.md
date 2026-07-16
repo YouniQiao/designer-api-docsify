@@ -18,6 +18,8 @@ Unregister active session changed callback.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function offActiveSessionChanged(callback?: Callback<Array<AVSessionDescriptor>>): void--><!--Device-avSession-function offActiveSessionChanged(callback?: Callback<Array<AVSessionDescriptor>>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Unregister active session changed callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;Array&lt;AVSessionDescriptor&gt;&gt; | No | Used to handle activeSessionChange event |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<AVSessionDescriptor>> | No | Used to handle activeSessionChange event |
 
 **Error codes:**
 

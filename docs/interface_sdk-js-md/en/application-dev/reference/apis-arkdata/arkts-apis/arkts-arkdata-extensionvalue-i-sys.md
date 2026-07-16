@@ -4,6 +4,8 @@ Represents additional information about a data record.
 
 **Since:** 11
 
+<!--Device-cloudExtension-export interface ExtensionValue--><!--Device-cloudExtension-export interface ExtensionValue-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Time when a row of data is created, in ms.
 
 **Since:** 11
 
+<!--Device-ExtensionValue-readonly createTime: long--><!--Device-ExtensionValue-readonly createTime: long-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -36,13 +40,13 @@ Time when a row of data is created, in ms.
 readonly id: string
 ```
 
-ID generated when data is inserted.
-An ID is generated for each row when data is first inserted to the cloud.
-The ID must be unique for each table.
+ID generated when data is inserted.An ID is generated for each row when data is first inserted to the cloud.The ID must be unique for each table.
 
 **Type:** string
 
 **Since:** 11
+
+<!--Device-ExtensionValue-readonly id: string--><!--Device-ExtensionValue-readonly id: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -60,6 +64,8 @@ Time when a row of data is modified, in ms.
 
 **Since:** 11
 
+<!--Device-ExtensionValue-readonly modifyTime: long--><!--Device-ExtensionValue-readonly modifyTime: long-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -75,6 +81,8 @@ Operation performed.
 **Type:** Flag
 
 **Since:** 11
+
+<!--Device-ExtensionValue-readonly operation: Flag--><!--Device-ExtensionValue-readonly operation: Flag-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 

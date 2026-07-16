@@ -18,6 +18,8 @@ Get session descriptors of the system based on different session category.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function getSessionDescriptors(category: SessionCategory): Promise<Array<Readonly<AVSessionDescriptor>>>--><!--Device-avSession-function getSessionDescriptors(category: SessionCategory): Promise<Array<Readonly<AVSessionDescriptor>>>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Get session descriptors of the system based on different session category.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| category | SessionCategory | Yes | Specifies the category of AVSession. |
+| category | [SessionCategory](arkts-avsession-sessioncategory-e-sys.md) | Yes | Specifies the category of AVSession. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Readonly&lt;AVSessionDescriptor&gt;&gt;&gt; | Promise for an array of AVSessionDescriptors |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Readonly<AVSessionDescriptor>>> | Promise for an array of AVSessionDescriptors |
 
 **Error codes:**
 

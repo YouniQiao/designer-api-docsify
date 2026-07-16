@@ -4,6 +4,8 @@ Enumerates the word selection panel types.
 
 **Since:** 24
 
+<!--Device-unnamed-export enum PanelType--><!--Device-unnamed-export enum PanelType-End-->
+
 **System capability:** SystemCapability.SelectionInput.Selection
 
 **System API:** This is a system API.
@@ -14,12 +16,13 @@ Enumerates the word selection panel types.
 MENU_PANEL = 1
 ```
 
-The menu panel can serve as a primary panel to display the functions that the current application can provide,
-such as translation and search.
+The menu panel can serve as a primary panel to display the functions that the current application can provide,such as translation and search.
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PanelType-MENU_PANEL = 1--><!--Device-PanelType-MENU_PANEL = 1-End-->
 
 **System capability:** SystemCapability.SelectionInput.Selection
 
@@ -31,12 +34,13 @@ such as translation and search.
 MAIN_PANEL = 2
 ```
 
-The main panel can serve as a secondary panel that pops up when the user clicks on the function buttons
-on the menu panel, displaying specific translation or search results.
+The main panel can serve as a secondary panel that pops up when the user clicks on the function buttons on the menu panel, displaying specific translation or search results.
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PanelType-MAIN_PANEL = 2--><!--Device-PanelType-MAIN_PANEL = 2-End-->
 
 **System capability:** SystemCapability.SelectionInput.Selection
 

@@ -18,13 +18,15 @@ Unsubscribes from the callback for listening to the carrier call state.
 
 **Required permissions:** ohos.permission.MANAGE_CALL_FOR_DEVICES
 
+<!--Device-observer-function offCCallStateChange(callback?: Callback<CCallStateInfo>): void--><!--Device-observer-function offCCallStateChange(callback?: Callback<CCallStateInfo>): void-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;CCallStateInfo&gt; | No | Indicates the callback to unsubscribe from. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CCallStateInfo> | No | Indicates the callback to unsubscribe from. |
 
 **Error codes:**
 

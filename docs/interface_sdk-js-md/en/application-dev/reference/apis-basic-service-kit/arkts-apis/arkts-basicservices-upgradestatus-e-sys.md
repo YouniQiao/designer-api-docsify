@@ -4,6 +4,8 @@ Enumerates update states.
 
 **Since:** 9
 
+<!--Device-update-export enum UpgradeStatus--><!--Device-update-export enum UpgradeStatus-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -17,6 +19,8 @@ WAITING_DOWNLOAD = 20
 Waiting for download.
 
 **Since:** 9
+
+<!--Device-UpgradeStatus-WAITING_DOWNLOAD = 20--><!--Device-UpgradeStatus-WAITING_DOWNLOAD = 20-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -32,6 +36,8 @@ Downloading.
 
 **Since:** 9
 
+<!--Device-UpgradeStatus-DOWNLOADING = 21--><!--Device-UpgradeStatus-DOWNLOADING = 21-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -45,6 +51,8 @@ DOWNLOAD_PAUSED = 22
 Download paused.
 
 **Since:** 9
+
+<!--Device-UpgradeStatus-DOWNLOAD_PAUSED = 22--><!--Device-UpgradeStatus-DOWNLOAD_PAUSED = 22-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -60,6 +68,8 @@ Download failed.
 
 **Since:** 9
 
+<!--Device-UpgradeStatus-DOWNLOAD_FAIL = 23--><!--Device-UpgradeStatus-DOWNLOAD_FAIL = 23-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -73,6 +83,8 @@ WAITING_INSTALL = 30
 Waiting for installation.
 
 **Since:** 9
+
+<!--Device-UpgradeStatus-WAITING_INSTALL = 30--><!--Device-UpgradeStatus-WAITING_INSTALL = 30-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -88,6 +100,8 @@ Updating.
 
 **Since:** 9
 
+<!--Device-UpgradeStatus-UPDATING = 31--><!--Device-UpgradeStatus-UPDATING = 31-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -101,6 +115,8 @@ WAITING_APPLY = 40
 Waiting for applying the update.
 
 **Since:** 9
+
+<!--Device-UpgradeStatus-WAITING_APPLY = 40--><!--Device-UpgradeStatus-WAITING_APPLY = 40-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -116,6 +132,8 @@ Applying the update.
 
 **Since:** 9
 
+<!--Device-UpgradeStatus-APPLYING = 41--><!--Device-UpgradeStatus-APPLYING = 41-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -130,6 +148,8 @@ Update succeeded.
 
 **Since:** 9
 
+<!--Device-UpgradeStatus-UPGRADE_SUCCESS = 50--><!--Device-UpgradeStatus-UPGRADE_SUCCESS = 50-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -143,6 +163,8 @@ UPGRADE_FAIL = 51
 Update failed.
 
 **Since:** 9
+
+<!--Device-UpgradeStatus-UPGRADE_FAIL = 51--><!--Device-UpgradeStatus-UPGRADE_FAIL = 51-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 

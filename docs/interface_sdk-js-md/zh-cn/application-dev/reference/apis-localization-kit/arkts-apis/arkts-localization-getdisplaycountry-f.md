@@ -1,5 +1,11 @@
 # getDisplayCountry
 
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
+
 ## getDisplayCountry
 
 ```TypeScript
@@ -13,6 +19,8 @@ export function getDisplayCountry(country: string, locale: string, sentenceCase?
 **废弃版本：** 9
 
 **替代接口：** [getDisplayCountry](arkts-localization-system-c.md#getdisplaycountry-1)
+
+<!--Device-i18n-export function getDisplayCountry(country: string, locale: string, sentenceCase?: boolean): string--><!--Device-i18n-export function getDisplayCountry(country: string, locale: string, sentenceCase?: boolean): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

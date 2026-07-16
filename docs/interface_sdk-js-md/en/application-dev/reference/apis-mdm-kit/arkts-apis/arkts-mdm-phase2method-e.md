@@ -4,6 +4,8 @@ Enumerates the Phase 2 authentication methods.
 
 **Since:** 12
 
+<!--Device-wifiManager-enum Phase2Method--><!--Device-wifiManager-enum Phase2Method-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## PHASE2_NONE
@@ -17,6 +19,8 @@ Not specified.
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Phase2Method-PHASE2_NONE = 0--><!--Device-Phase2Method-PHASE2_NONE = 0-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -32,6 +36,8 @@ PAP.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Phase2Method-PHASE2_PAP = 1--><!--Device-Phase2Method-PHASE2_PAP = 1-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## PHASE2_MSCHAP
@@ -45,6 +51,8 @@ MS-CHAP.
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Phase2Method-PHASE2_MSCHAP = 2--><!--Device-Phase2Method-PHASE2_MSCHAP = 2-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -60,6 +68,8 @@ MS-CHAPv2.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Phase2Method-PHASE2_MSCHAPV2 = 3--><!--Device-Phase2Method-PHASE2_MSCHAPV2 = 3-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## PHASE2_GTC
@@ -74,6 +84,8 @@ GTC.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Phase2Method-PHASE2_GTC = 4--><!--Device-Phase2Method-PHASE2_GTC = 4-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## PHASE2_SIM
@@ -82,12 +94,13 @@ GTC.
 PHASE2_SIM = 5
 ```
 
-Subscriber Identity Module (SIM). It performs authentication using the keys and algorithms stored in the SIM card
-of a smartphone.
+Subscriber Identity Module (SIM). It performs authentication using the keys and algorithms stored in the SIM card of a smartphone.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Phase2Method-PHASE2_SIM = 5--><!--Device-Phase2Method-PHASE2_SIM = 5-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -97,12 +110,13 @@ of a smartphone.
 PHASE2_AKA = 6
 ```
 
-Authentication and Key Agreement (AKA). It performs authentication using enhanced keys and algorithms stored in a
-USIM card (applicable to 3G/4G/5G SIM cards).
+Authentication and Key Agreement (AKA). It performs authentication using enhanced keys and algorithms stored in a USIM card (applicable to 3G/4G/5G SIM cards).
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Phase2Method-PHASE2_AKA = 6--><!--Device-Phase2Method-PHASE2_AKA = 6-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -117,6 +131,8 @@ AKA Prime.
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Phase2Method-PHASE2_AKA_PRIME = 7--><!--Device-Phase2Method-PHASE2_AKA_PRIME = 7-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

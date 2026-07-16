@@ -12,14 +12,15 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAbilityLabel(bundleName: string, moduleName: string, abilityName: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the ability label based on the given bundle name, module name, and ability name. This API uses an
-asynchronous callback to return the result.
+Obtains the ability label based on the given bundle name, module name, and ability name. This API uses an asynchronous callback to return the result.
 
 No permission is required for obtaining the caller's own information.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getAbilityLabel(bundleName: string, moduleName: string, abilityName: string, callback: AsyncCallback<string>): void--><!--Device-bundleManager-function getAbilityLabel(bundleName: string, moduleName: string, abilityName: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -32,7 +33,7 @@ No permission is required for obtaining the caller's own information.
 | bundleName | string | Yes | Bundle name. |
 | moduleName | string | Yes | Module name. |
 | abilityName | string | Yes | Name of the UIAbility component. |
-| callback | AsyncCallback&lt;string&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result.If the operation is successful, **err** is **null** and **data** is the label. Otherwise, **err** is an errorobject. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result.If the operation is successful, **err** is **null** and **data** is the label. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -81,14 +82,15 @@ try {
 function getAbilityLabel(bundleName: string, moduleName: string, abilityName: string): Promise<string>
 ```
 
-Obtains the ability label based on the given bundle name, module name, and ability name. This API uses a promise to
-return the result.
+Obtains the ability label based on the given bundle name, module name, and ability name. This API uses a promise to return the result.
 
 No permission is required for obtaining the caller's own information.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getAbilityLabel(bundleName: string, moduleName: string, abilityName: string): Promise<string>--><!--Device-bundleManager-function getAbilityLabel(bundleName: string, moduleName: string, abilityName: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -106,7 +108,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the label. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the label. |
 
 **Error codes:**
 

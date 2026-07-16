@@ -4,7 +4,15 @@ The http body stream of the request.
 
 **起始版本：** 12
 
+<!--Device-webview-class WebHttpBodyStream--><!--Device-webview-class WebHttpBodyStream-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
+
+## 导入模块
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+```
 
 ## getPosition
 
@@ -16,7 +24,9 @@ getPosition(): number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebHttpBodyStream-getPosition(): number--><!--Device-WebHttpBodyStream-getPosition(): number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -36,7 +46,9 @@ getSize(): number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebHttpBodyStream-getSize(): number--><!--Device-WebHttpBodyStream-getSize(): number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -56,7 +68,9 @@ initialize(): Promise<void>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebHttpBodyStream-initialize(): Promise<void>--><!--Device-WebHttpBodyStream-initialize(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -64,7 +78,7 @@ initialize(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise实例，用于获取WebHttpBodyStream是否初始化成功。 |
+| Promise<void> | Promise实例，用于获取WebHttpBodyStream是否初始化成功。 |
 
 **错误码：**
 
@@ -82,7 +96,9 @@ WebHttpBodyStream是否采用分块传输。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebHttpBodyStream-isChunked(): boolean--><!--Device-WebHttpBodyStream-isChunked(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -102,7 +118,9 @@ isEof(): boolean
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebHttpBodyStream-isEof(): boolean--><!--Device-WebHttpBodyStream-isEof(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -122,7 +140,9 @@ isInMemory(): boolean
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebHttpBodyStream-isInMemory(): boolean--><!--Device-WebHttpBodyStream-isInMemory(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -142,7 +162,9 @@ read(size: number): Promise<ArrayBuffer>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebHttpBodyStream-read(size: number): Promise<ArrayBuffer>--><!--Device-WebHttpBodyStream-read(size: number): Promise<ArrayBuffer>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -156,7 +178,7 @@ read(size: number): Promise<ArrayBuffer>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise实例，用于获取WebHttpBodyStream中读取的数据。 |
+| Promise<ArrayBuffer> | Promise实例，用于获取WebHttpBodyStream中读取的数据。 |
 
 **错误码：**
 

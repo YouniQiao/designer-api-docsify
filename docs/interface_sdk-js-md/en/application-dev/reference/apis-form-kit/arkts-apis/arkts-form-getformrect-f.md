@@ -18,6 +18,8 @@ Obtains the position and dimension of a widget. This API uses a promise to retur
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-formProvider-function getFormRect(formId: string): Promise<formInfo.Rect>--><!--Device-formProvider-function getFormRect(formId: string): Promise<formInfo.Rect>-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
@@ -30,13 +32,13 @@ Obtains the position and dimension of a widget. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;formInfo.Rect&gt; | Promise used to return the position and dimension of the widget relative to theupper-left corner of the screen, in vp. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<formInfo.Rect> | Promise used to return the position and dimension of the widget relative to the upper-left corner of the screen, in vp. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function getFormRect cannot work correctlydue to limited device capabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function getFormRect cannot work correctly due to limited device capabilities. |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |

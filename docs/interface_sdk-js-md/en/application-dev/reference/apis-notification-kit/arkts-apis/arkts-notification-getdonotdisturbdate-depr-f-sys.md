@@ -16,6 +16,8 @@ Obtains the DND time. This API uses an asynchronous callback to return the resul
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void--><!--Device-notification-function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Obtains the DND time. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;DoNotDisturbDate&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DoNotDisturbDate> | Yes | Callback used to return the result. |
 
 
 ## getDoNotDisturbDate
@@ -43,6 +45,8 @@ Obtains the DND time. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function getDoNotDisturbDate(): Promise<DoNotDisturbDate>--><!--Device-notification-function getDoNotDisturbDate(): Promise<DoNotDisturbDate>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -51,7 +55,7 @@ Obtains the DND time. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DoNotDisturbDate&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DoNotDisturbDate> | Promise used to return the result. |
 
 
 ## getDoNotDisturbDate
@@ -70,6 +74,8 @@ Obtains the DND time of a specified user. This API uses an asynchronous callback
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function getDoNotDisturbDate(userId: number, callback: AsyncCallback<DoNotDisturbDate>): void--><!--Device-notification-function getDoNotDisturbDate(userId: number, callback: AsyncCallback<DoNotDisturbDate>): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -79,7 +85,7 @@ Obtains the DND time of a specified user. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
-| callback | AsyncCallback&lt;DoNotDisturbDate&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DoNotDisturbDate> | Yes | Callback used to return the result. |
 
 
 ## getDoNotDisturbDate
@@ -98,6 +104,8 @@ Obtains the DND time of a specified user. This API uses a promise to return the 
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function getDoNotDisturbDate(userId: number): Promise<DoNotDisturbDate>--><!--Device-notification-function getDoNotDisturbDate(userId: number): Promise<DoNotDisturbDate>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -112,5 +120,5 @@ Obtains the DND time of a specified user. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DoNotDisturbDate&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DoNotDisturbDate> | Promise used to return the result. |
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+<!--Device-unnamed-declare interface HorizontalAlignParam--><!--Device-unnamed-declare interface HorizontalAlignParam-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## align
@@ -20,9 +22,11 @@ Anonymous Object Rectification
 
 **起始版本：** 23
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-HorizontalAlignParam-align: HorizontalAlign--><!--Device-HorizontalAlignParam-align: HorizontalAlign-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,9 +44,11 @@ Anonymous Object Rectification
 
 **起始版本：** 23
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-HorizontalAlignParam-anchor: string--><!--Device-HorizontalAlignParam-anchor: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

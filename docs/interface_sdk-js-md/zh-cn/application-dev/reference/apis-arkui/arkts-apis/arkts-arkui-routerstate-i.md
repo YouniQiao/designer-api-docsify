@@ -8,7 +8,15 @@
 
 **替代接口：** RouterState
 
+<!--Device-unnamed-export interface RouterState--><!--Device-unnamed-export interface RouterState-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, RouterState, EnableAlertBeforeBackPageOptions } from '@kit.ArkUI';
+```
 
 ## index
 
@@ -25,6 +33,8 @@ index: number
 **废弃版本：** 8
 
 **替代接口：** index
+
+<!--Device-RouterState-index: number--><!--Device-RouterState-index: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +54,8 @@ name: string
 
 **替代接口：** name
 
+<!--Device-RouterState-name: string--><!--Device-RouterState-name: string-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## path
@@ -61,6 +73,8 @@ path: string
 **废弃版本：** 8
 
 **替代接口：** path
+
+<!--Device-RouterState-path: string--><!--Device-RouterState-path: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

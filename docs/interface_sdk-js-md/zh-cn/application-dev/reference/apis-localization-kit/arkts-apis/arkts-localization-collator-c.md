@@ -4,7 +4,15 @@
 
 **起始版本：** 8
 
+<!--Device-intl-export class Collator--><!--Device-intl-export class Collator-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+```
 
 ## compare
 
@@ -16,7 +24,9 @@ compare(first: string, second: string): number
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Collator-compare(first: string, second: string): int--><!--Device-Collator-compare(first: string, second: string): int-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -55,7 +65,9 @@ constructor()
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Collator-constructor()--><!--Device-Collator-constructor()-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -79,7 +91,9 @@ constructor(locale: string | Array<string>, options?: CollatorOptions)
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Collator-constructor(locale: string | Array<string>, options?: CollatorOptions)--><!--Device-Collator-constructor(locale: string | Array<string>, options?: CollatorOptions)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -87,8 +101,8 @@ constructor(locale: string | Array<string>, options?: CollatorOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
-| options | CollatorOptions | 否 | 创建排序对象时可设置的配置项。<br>默认值：所有属性都取默认值时的配置项。 |
+| locale | string \| Array<string> | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
+| options | [CollatorOptions](arkts-localization-collatoroptions-i.md) | 否 | 创建排序对象时可设置的配置项。<br>默认值：所有属性都取默认值时的配置项。 |
 
 **示例：**
 
@@ -110,7 +124,9 @@ resolvedOptions(): CollatorOptions
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Collator-resolvedOptions(): CollatorOptions--><!--Device-Collator-resolvedOptions(): CollatorOptions-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -118,7 +134,7 @@ resolvedOptions(): CollatorOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| CollatorOptions | 返回排序对象的属性。 |
+| [CollatorOptions](arkts-localization-collatoroptions-i.md) | 返回排序对象的属性。 |
 
 **示例：**
 

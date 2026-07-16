@@ -6,7 +6,15 @@
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare class DistributedExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class DistributedExtensionContext extends ExtensionContext-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+## 导入模块
+
+```TypeScript
+import { DistributedExtensionContext } from '@kit.DistributedServiceKit';
+```
 
 ## connectServiceExtensionAbility
 
@@ -16,13 +24,13 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 
 连接到远程服务扩展能力。
 
-此方法连接到远程设备上的服务扩展能力。
-必须实现{@link ConnectOptions}接口才能获取目标的代理
-连接时的服务扩展。
+此方法连接到远程设备上的服务扩展能力。必须实现{@link ConnectOptions}接口才能获取目标的代理连接时的服务扩展。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DistributedExtensionContext-connectServiceExtensionAbility(want: Want, options: ConnectOptions): long--><!--Device-DistributedExtensionContext-connectServiceExtensionAbility(want: Want, options: ConnectOptions): long-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -30,8 +38,8 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | Want | 是 | 指示要连接的服务扩展 |
-| options | ConnectOptions | 是 | 连接回调 |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 指示要连接的服务扩展 |
+| options | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-t.md) | 是 | 连接回调 |
 
 **返回值：**
 
@@ -69,6 +77,8 @@ disconnectServiceExtensionAbility(connection: number): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DistributedExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>--><!--Device-DistributedExtensionContext-disconnectServiceExtensionAbility(connection: long): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**
@@ -81,7 +91,7 @@ disconnectServiceExtensionAbility(connection: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 函数返回的promise。 |
+| Promise<void> | 函数返回的promise。 |
 
 **错误码：**
 

@@ -4,9 +4,17 @@
 
 **起始版本：** 23
 
+<!--Device-backgroundTaskManager-export interface BackgroundTaskSubscriber--><!--Device-backgroundTaskManager-export interface BackgroundTaskSubscriber-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+```
 
 ## onContinuousTaskStart
 
@@ -20,6 +28,8 @@ onContinuousTaskStart(info: ContinuousTaskInfo): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BackgroundTaskSubscriber-onContinuousTaskStart(info: ContinuousTaskInfo): void--><!--Device-BackgroundTaskSubscriber-onContinuousTaskStart(info: ContinuousTaskInfo): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **系统接口：** 此接口为系统接口。
@@ -28,7 +38,7 @@ onContinuousTaskStart(info: ContinuousTaskInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | ContinuousTaskInfo | 是 | 长时任务回调信息，长时任务ID、长时任务类型等。 |
+| info | [ContinuousTaskInfo](arkts-backgroundtasks-continuoustaskinfo-i.md) | 是 | 长时任务回调信息，长时任务ID、长时任务类型等。 |
 
 **示例：**
 
@@ -61,6 +71,8 @@ onContinuousTaskStop(info: ContinuousTaskInfo): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BackgroundTaskSubscriber-onContinuousTaskStop(info: ContinuousTaskInfo): void--><!--Device-BackgroundTaskSubscriber-onContinuousTaskStop(info: ContinuousTaskInfo): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **系统接口：** 此接口为系统接口。
@@ -69,7 +81,7 @@ onContinuousTaskStop(info: ContinuousTaskInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | ContinuousTaskInfo | 是 | 长时任务回调信息，长时任务ID、长时任务类型等。 |
+| info | [ContinuousTaskInfo](arkts-backgroundtasks-continuoustaskinfo-i.md) | 是 | 长时任务回调信息，长时任务ID、长时任务类型等。 |
 
 **示例：**
 
@@ -102,6 +114,8 @@ onContinuousTaskUpdate(info: ContinuousTaskInfo): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BackgroundTaskSubscriber-onContinuousTaskUpdate(info: ContinuousTaskInfo): void--><!--Device-BackgroundTaskSubscriber-onContinuousTaskUpdate(info: ContinuousTaskInfo): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **系统接口：** 此接口为系统接口。
@@ -110,7 +124,7 @@ onContinuousTaskUpdate(info: ContinuousTaskInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | ContinuousTaskInfo | 是 | 长时任务回调信息，长时任务ID、长时任务类型等。 |
+| info | [ContinuousTaskInfo](arkts-backgroundtasks-continuoustaskinfo-i.md) | 是 | 长时任务回调信息，长时任务ID、长时任务类型等。 |
 
 **示例：**
 

@@ -4,6 +4,8 @@ Define followXMode.
 
 **Since:** 11
 
+<!--Device-configPolicy-export enum FollowXMode--><!--Device-configPolicy-export enum FollowXMode-End-->
+
 **System capability:** SystemCapability.Customization.ConfigPolicy
 
 **System API:** This is a system API.
@@ -14,10 +16,11 @@ Define followXMode.
 DEFAULT = 0
 ```
 
-Files are searched based on the follow rules configured in the **followx_file_list.cfg** file at each
-configuration level.
+Files are searched based on the follow rules configured in the **followx_file_list.cfg** file at each configuration level.
 
 **Since:** 11
+
+<!--Device-FollowXMode-DEFAULT = 0--><!--Device-FollowXMode-DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.Customization.ConfigPolicy
 
@@ -33,6 +36,8 @@ No follow rule is used even if the **followx_file_list.cfg** file exists.
 
 **Since:** 11
 
+<!--Device-FollowXMode-NO_RULE_FOLLOWED = 1--><!--Device-FollowXMode-NO_RULE_FOLLOWED = 1-End-->
+
 **System capability:** SystemCapability.Customization.ConfigPolicy
 
 **System API:** This is a system API.
@@ -43,10 +48,11 @@ No follow rule is used even if the **followx_file_list.cfg** file exists.
 SIM_DEFAULT = 10
 ```
 
-Files are searched in **etc/carrier/${opkey}** at each configuration level based on the opkey of the default
-card.
+Files are searched in **etc/carrier/${opkey}** at each configuration level based on the opkey of the default card.
 
 **Since:** 11
+
+<!--Device-FollowXMode-SIM_DEFAULT = 10--><!--Device-FollowXMode-SIM_DEFAULT = 10-End-->
 
 **System capability:** SystemCapability.Customization.ConfigPolicy
 
@@ -62,6 +68,8 @@ Files are searched in **etc/carrier/${opkey}** at each configuration level based
 
 **Since:** 11
 
+<!--Device-FollowXMode-SIM_1 = 11--><!--Device-FollowXMode-SIM_1 = 11-End-->
+
 **System capability:** SystemCapability.Customization.ConfigPolicy
 
 **System API:** This is a system API.
@@ -76,6 +84,8 @@ Files are searched in **etc/carrier/${opkey}** at each configuration level based
 
 **Since:** 11
 
+<!--Device-FollowXMode-SIM_2 = 12--><!--Device-FollowXMode-SIM_2 = 12-End-->
+
 **System capability:** SystemCapability.Customization.ConfigPolicy
 
 **System API:** This is a system API.
@@ -86,10 +96,11 @@ Files are searched in **etc/carrier/${opkey}** at each configuration level based
 USER_DEFINED = 100
 ```
 
-In user-defined mode, configuration files are obtained based on the follow rule provided by **extra**, and the
-**followx_file_list.cfg** file at each configuration level is ignored.
+In user-defined mode, configuration files are obtained based on the follow rule provided by **extra**, and the **followx_file_list.cfg** file at each configuration level is ignored.
 
 **Since:** 11
+
+<!--Device-FollowXMode-USER_DEFINED = 100--><!--Device-FollowXMode-USER_DEFINED = 100-End-->
 
 **System capability:** SystemCapability.Customization.ConfigPolicy
 

@@ -4,6 +4,8 @@ Context type
 
 **Since:** 26.0.0
 
+<!--Device-contextConstant-export enum ContextType--><!--Device-contextConstant-export enum ContextType-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## APPLICATION_CONTEXT
@@ -19,6 +21,8 @@ Application context type.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ContextType-APPLICATION_CONTEXT = 0--><!--Device-ContextType-APPLICATION_CONTEXT = 0-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -36,6 +40,8 @@ Ability stage context type.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ContextType-ABILITY_STAGE_CONTEXT = 1--><!--Device-ContextType-ABILITY_STAGE_CONTEXT = 1-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## UIABILITY_CONTEXT
@@ -51,6 +57,8 @@ UI ability context type.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ContextType-UIABILITY_CONTEXT = 2--><!--Device-ContextType-UIABILITY_CONTEXT = 2-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -68,6 +76,8 @@ Form extension context type.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ContextType-FORM_EXTENSION_CONTEXT = 3--><!--Device-ContextType-FORM_EXTENSION_CONTEXT = 3-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## APP_SERVICE_EXTENSION_CONTEXT
@@ -83,6 +93,8 @@ App service extension context type.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ContextType-APP_SERVICE_EXTENSION_CONTEXT = 4--><!--Device-ContextType-APP_SERVICE_EXTENSION_CONTEXT = 4-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

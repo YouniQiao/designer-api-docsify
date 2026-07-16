@@ -12,5 +12,7 @@ The callback function that will be invoked when the title build.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-unnamed-export type SubHeaderV2TitleBuilder = () => void--><!--Device-unnamed-export type SubHeaderV2TitleBuilder = () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

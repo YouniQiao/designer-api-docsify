@@ -4,6 +4,8 @@ Enumerates fingerprint gesture event types.
 
 **Since:** 12
 
+<!--Device-unnamed-export declare enum FingerprintAction--><!--Device-unnamed-export declare enum FingerprintAction-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 **System API:** This is a system API.
@@ -17,6 +19,8 @@ DOWN = 0
 Pressing down
 
 **Since:** 12
+
+<!--Device-FingerprintAction-DOWN = 0--><!--Device-FingerprintAction-DOWN = 0-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -32,6 +36,8 @@ Lifting up
 
 **Since:** 12
 
+<!--Device-FingerprintAction-UP = 1--><!--Device-FingerprintAction-UP = 1-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 **System API:** This is a system API.
@@ -45,6 +51,8 @@ SLIDE = 2
 Sliding
 
 **Since:** 12
+
+<!--Device-FingerprintAction-SLIDE = 2--><!--Device-FingerprintAction-SLIDE = 2-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -60,6 +68,8 @@ Second pressing down
 
 **Since:** 12
 
+<!--Device-FingerprintAction-RETOUCH = 3--><!--Device-FingerprintAction-RETOUCH = 3-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 **System API:** This is a system API.
@@ -73,6 +83,8 @@ CLICK = 4
 Double-click
 
 **Since:** 12
+
+<!--Device-FingerprintAction-CLICK = 4--><!--Device-FingerprintAction-CLICK = 4-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 

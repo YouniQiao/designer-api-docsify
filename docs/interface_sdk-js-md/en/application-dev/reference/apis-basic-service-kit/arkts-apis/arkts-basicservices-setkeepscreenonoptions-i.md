@@ -6,6 +6,8 @@ Options for setting the screen to be steady on.
 
 **Deprecated since:** 7
 
+<!--Device-unnamed-export interface SetKeepScreenOnOptions--><!--Device-unnamed-export interface SetKeepScreenOnOptions-End-->
+
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Called when an API call is complete.
 
 **Deprecated since:** 7
 
+<!--Device-SetKeepScreenOnOptions-complete?: () => void--><!--Device-SetKeepScreenOnOptions-complete?: () => void-End-->
+
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 ## fail
@@ -36,14 +40,15 @@ Called when an API call is complete.
 fail?: (data: string, code: number) => void
 ```
 
-Called when an API call has failed. **data** indicates the error information, and **code** indicates the error
-code.
+Called when an API call has failed. **data** indicates the error information, and **code** indicates the error code.
 
 **Type:** (data: string, code: number) => void
 
 **Since:** 3
 
 **Deprecated since:** 7
+
+<!--Device-SetKeepScreenOnOptions-fail?: (data: string, code: number) => void--><!--Device-SetKeepScreenOnOptions-fail?: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -61,6 +66,8 @@ The value **true** means to keep the screen steady on, and the value **false** i
 
 **Deprecated since:** 7
 
+<!--Device-SetKeepScreenOnOptions-keepScreenOn: boolean--><!--Device-SetKeepScreenOnOptions-keepScreenOn: boolean-End-->
+
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 ## success
@@ -76,6 +83,8 @@ Called when an API call is successful.
 **Since:** 3
 
 **Deprecated since:** 7
+
+<!--Device-SetKeepScreenOnOptions-success?: () => void--><!--Device-SetKeepScreenOnOptions-success?: () => void-End-->
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 

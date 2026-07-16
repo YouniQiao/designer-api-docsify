@@ -18,6 +18,16 @@ Updates a widget. This API uses an asynchronous callback to return the result.
 
 **Substitutes:** [updateForm](arkts-form-updateform-f.md#updateform-1)
 
+<!--Device-formProvider-function updateForm(
+    formId: string,
+    formBindingData: formBindingData.FormBindingData,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-formProvider-function updateForm(
+    formId: string,
+    formBindingData: formBindingData.FormBindingData,
+    callback: AsyncCallback<void>
+  ): void-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
@@ -26,7 +36,7 @@ Updates a widget. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | formId | string | Yes | ID of the widget to update. |
 | formBindingData | formBindingData.FormBindingData | Yes | Data to be used for the update. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -64,6 +74,8 @@ Updates a widget. This API uses a promise to return the result.
 
 **Substitutes:** [updateForm](arkts-form-updateform-f.md#updateform-1)
 
+<!--Device-formProvider-function updateForm(formId: string, formBindingData: formBindingData.FormBindingData): Promise<void>--><!--Device-formProvider-function updateForm(formId: string, formBindingData: formBindingData.FormBindingData): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
@@ -77,7 +89,7 @@ Updates a widget. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 

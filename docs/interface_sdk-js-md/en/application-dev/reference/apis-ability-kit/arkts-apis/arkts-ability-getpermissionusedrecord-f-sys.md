@@ -12,13 +12,13 @@ import { privacyManager } from '@kit.AbilityKit';
 function getPermissionUsedRecord(request: PermissionUsedRequest): Promise<PermissionUsedResponse>
 ```
 
-Obtains historical permission usage records, which can be used in permission auditing or security monitoring
-scenarios, such as checking an application's usage of sensitive permissions within a specified time period.
-This API uses a promise to return the result.
+Obtains historical permission usage records, which can be used in permission auditing or security monitoring scenarios, such as checking an application's usage of sensitive permissions within a specified time period.This API uses a promise to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
+
+<!--Device-privacyManager-function getPermissionUsedRecord(request: PermissionUsedRequest): Promise<PermissionUsedResponse>--><!--Device-privacyManager-function getPermissionUsedRecord(request: PermissionUsedRequest): Promise<PermissionUsedResponse>-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -28,13 +28,13 @@ This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | PermissionUsedRequest | Yes | Request for querying permission usage records. |
+| request | [PermissionUsedRequest](arkts-ability-permissionusedrequest-i-sys.md) | Yes | Request for querying permission usage records. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PermissionUsedResponse&gt; | Promise used to return the queried permission usage record. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PermissionUsedResponse> | Promise used to return the queried permission usage record. |
 
 **Error codes:**
 
@@ -81,13 +81,17 @@ function getPermissionUsedRecord(
     callback: AsyncCallback<PermissionUsedResponse>): void
 ```
 
-Obtains historical permission usage records, which can be used in permission auditing or security monitoring
-scenarios, such as checking an application's usage of sensitive permissions within a specified time period.
-This API uses an asynchronous callback to return the result.
+Obtains historical permission usage records, which can be used in permission auditing or security monitoring scenarios, such as checking an application's usage of sensitive permissions within a specified time period.This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
+
+<!--Device-privacyManager-function getPermissionUsedRecord(
+    request: PermissionUsedRequest,
+    callback: AsyncCallback<PermissionUsedResponse>): void--><!--Device-privacyManager-function getPermissionUsedRecord(
+    request: PermissionUsedRequest,
+    callback: AsyncCallback<PermissionUsedResponse>): void-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -97,8 +101,8 @@ This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | PermissionUsedRequest | Yes | Request for querying permission usage records. |
-| callback | AsyncCallback&lt;PermissionUsedResponse&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined**, and data is the permission usage record is obtained. Otherwise,**err** is an error object. |
+| request | [PermissionUsedRequest](arkts-ability-permissionusedrequest-i-sys.md) | Yes | Request for querying permission usage records. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<PermissionUsedResponse> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and data is the permission usage record is obtained. Otherwise,**err** is an error object. |
 
 **Error codes:**
 

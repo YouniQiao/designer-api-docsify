@@ -16,6 +16,8 @@ Obtains an **OnlineUpdater** object.
 
 **Since:** 9
 
+<!--Device-update-function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater--><!--Device-update-function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -24,13 +26,13 @@ Obtains an **OnlineUpdater** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| upgradeInfo | UpgradeInfo | Yes | **OnlineUpdater** object information. |
+| upgradeInfo | [UpgradeInfo](arkts-basicservices-upgradeinfo-i-sys.md) | Yes | **OnlineUpdater** object information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Updater | **OnlineUpdater** object. |
+| [Updater](arkts-basicservices-updater-i-sys.md) | **OnlineUpdater** object. |
 
 **Error codes:**
 

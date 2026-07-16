@@ -20,6 +20,8 @@ Obtains bundle name by the given uid.
 
 **Substitutes:** getBundleNameByUid
 
+<!--Device-bundle-function getNameForUid(uid: number, callback: AsyncCallback<string>): void--><!--Device-bundle-function getNameForUid(uid: number, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **Parameters:**
@@ -27,7 +29,7 @@ Obtains bundle name by the given uid.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | number | Yes | Indicates the UID of an application. |
-| callback | AsyncCallback&lt;string&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes |  |
 
 
 ## getNameForUid
@@ -44,6 +46,8 @@ Obtains the bundle name based on a UID. This API uses a promise to return the re
 
 **Substitutes:** [null]
 
+<!--Device-bundle-function getNameForUid(uid: number): Promise<string>--><!--Device-bundle-function getNameForUid(uid: number): Promise<string>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **Parameters:**
@@ -56,5 +60,5 @@ Obtains the bundle name based on a UID. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the bundle name. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the bundle name. |
 

@@ -18,6 +18,8 @@ Obtains the details of a USB Key credential. This API uses a promise to return t
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
+<!--Device-certificateManager-function getUkeyCertificate(keyUri: string, ukeyInfo: UkeyInfo): Promise<CMResult>--><!--Device-certificateManager-function getUkeyCertificate(keyUri: string, ukeyInfo: UkeyInfo): Promise<CMResult>-End-->
+
 **System capability:** SystemCapability.Security.CertificateManager
 
 **Parameters:**
@@ -25,13 +27,13 @@ Obtains the details of a USB Key credential. This API uses a promise to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyUri | string | Yes | Unique identifier of a USB Key credential. The value contains up to 256 bytes |
-| ukeyInfo | UkeyInfo | Yes | Attributes of a USB Key credential |
+| ukeyInfo | [UkeyInfo](arkts-devicecertificate-ukeyinfo-i.md) | Yes | Attributes of a USB Key credential |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the obtained USB Key credential details.The return value is the credentialDetailList attribute of the[CMResult](arkts-devicecertificate-cmresult-i.md) object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CMResult> | Promise used to return the obtained USB Key credential details.The return value is the credentialDetailList attribute of the [CMResult](arkts-devicecertificate-cmresult-i.md) object. |
 
 **Error codes:**
 

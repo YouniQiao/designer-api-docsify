@@ -16,13 +16,15 @@ Obtains information about all sensors on the device. This API returns the result
 
 **Since:** 12
 
+<!--Device-sensor-function getSensorListSync(): Array<Sensor>--><!--Device-sensor-function getSensorListSync(): Array<Sensor>-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Sensor&gt; | List of sensor attributes. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Sensor> | List of sensor attributes. |
 
 **Error codes:**
 

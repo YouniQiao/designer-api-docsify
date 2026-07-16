@@ -18,6 +18,8 @@ Unload callUI.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function unloadCallUI(): Promise<boolean>--><!--Device-call-function unloadCallUI(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Unload callUI.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the unloadCallUI. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | The promise returned by the unloadCallUI. |
 
 **Error codes:**
 

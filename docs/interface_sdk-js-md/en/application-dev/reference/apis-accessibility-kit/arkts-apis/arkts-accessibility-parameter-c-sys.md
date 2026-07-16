@@ -1,10 +1,10 @@
 # Parameter (System API)
 
-Sets the parameter for a specific operation when the accessibility node element executes this operation. For details,
-see [AccessibilityAction](arkts-accessibility-accessibilityaction-e-sys.md) (executable actions for accessibility
-node elements).
+Sets the parameter for a specific operation when the accessibility node element executes this operation. For details,see [AccessibilityAction](arkts-accessibility-accessibilityaction-e-sys.md) (executable actions for accessibility node elements).
 
 **Since:** 20
+
+<!--Device-unnamed-export declare class Parameter--><!--Device-unnamed-export declare class Parameter-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -24,6 +24,8 @@ Indicates the scene for AccessibilityAction.ACCESSIBILITY_FOCUS.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Parameter-accessibilityFocusScene?: AccessibilityFocusScene--><!--Device-Parameter-accessibilityFocusScene?: AccessibilityFocusScene-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -41,6 +43,8 @@ Indicates the action for AccessibilityAction.EXECUTE_CUSTOM_ACTION.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Parameter-customAction?: string--><!--Device-Parameter-customAction?: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -60,6 +64,8 @@ Injection action.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Parameter-injectActionType?: InjectActionType--><!--Device-Parameter-injectActionType?: InjectActionType-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -75,6 +81,8 @@ Cursor offset, for example, **'1'**.
 **Type:** string
 
 **Since:** 20
+
+<!--Device-Parameter-offset?: string--><!--Device-Parameter-offset?: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -92,6 +100,8 @@ Scroll type of the component. The options are **'fullScreen'** and **'halfScreen
 
 **Since:** 20
 
+<!--Device-Parameter-scrollType?: string--><!--Device-Parameter-scrollType?: string-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -107,6 +117,8 @@ Start coordinate of the selected text in the component, for example, **'2'**.
 **Type:** string
 
 **Since:** 20
+
+<!--Device-Parameter-selectTextBegin?: string--><!--Device-Parameter-selectTextBegin?: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -124,6 +136,8 @@ End coordinate of the selected text in the component, for example, **'8'**.
 
 **Since:** 20
 
+<!--Device-Parameter-selectTextEnd?: string--><!--Device-Parameter-selectTextEnd?: string-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -134,12 +148,13 @@ End coordinate of the selected text in the component, for example, **'8'**.
 selectTextInForWard?: boolean
 ```
 
-Whether to forward select the text within the component. The value **true** indicates to forward select the text,
-and the value **false** indicates the opposite.
+Whether to forward select the text within the component. The value **true** indicates to forward select the text,and the value **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 20
+
+<!--Device-Parameter-selectTextInForWard?: boolean--><!--Device-Parameter-selectTextInForWard?: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -157,6 +172,8 @@ Text content of the component.
 
 **Since:** 20
 
+<!--Device-Parameter-setText?: string--><!--Device-Parameter-setText?: string-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -172,6 +189,8 @@ ID of the hyperlink wrapped by the span tag.
 **Type:** string
 
 **Since:** 20
+
+<!--Device-Parameter-spanId?: string--><!--Device-Parameter-spanId?: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 

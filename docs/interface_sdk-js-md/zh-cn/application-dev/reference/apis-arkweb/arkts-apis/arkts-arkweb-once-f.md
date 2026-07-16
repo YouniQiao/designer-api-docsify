@@ -1,5 +1,11 @@
 # once
 
+## 导入模块
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+```
+
 ## once
 
 ```TypeScript
@@ -10,7 +16,9 @@ Subscribe to a callback of a specified type of web event once.
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-webview-function once(type: string, callback: Callback<void>): void--><!--Device-webview-function once(type: string, callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -19,7 +27,7 @@ Subscribe to a callback of a specified type of web event once.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | Types of web event. |
-| callback | Callback&lt;void&gt; | 是 | Indicate callback used to receive the web event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | 是 | Indicate callback used to receive the web event. |
 
 **错误码：**
 

@@ -2,18 +2,18 @@
 
 A non-linear data structure.
 
-> **NOTE**
->
-> - This module can be imported only to ArkTS files (with the file name extension .ets).
+> **NOTE**  
+>  
+> - This module can be imported only to ArkTS files (with the file name extension .ets).  
 > This section uses the following to identify the use of generics:
 
-- T: type, which can be any of the
-[sendable data types](../../../../arkts-utils/arkts-sendable.md#sendable-data-types).
-**Decorator**: \@Sendable
+- T: type, which can be any of the [sendable data types](../../../../arkts-utils/arkts-sendable.md#sendable-data-types).**Decorator**: \@Sendable
 
 **Since:** 12
 
 **Decorator:** @Sendable
+
+<!--Device-collections-class Set<T>--><!--Device-collections-class Set<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -29,13 +29,13 @@ import { collections } from '@kit.ArkTS';
 [Symbol.iterator](): IterableIterator<T>
 ```
 
-Returns an iterator, each item of which is a JavaScript object.
-NOTE:
-This API cannot be used in .ets files.
+Returns an iterator, each item of which is a JavaScript object.NOTE:This API cannot be used in .ets files.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Set-[Symbol.iterator](): IterableIterator<T>--><!--Device-Set-[Symbol.iterator](): IterableIterator<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -43,7 +43,7 @@ This API cannot be used in .ets files.
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;T&gt; | Iterator object. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<T> | Iterator object. |
 
 **Error codes:**
 
@@ -63,6 +63,8 @@ Checks whether a value exists in this ArkTS set, and if not, adds the value to t
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Set-add(value: T): Set<T>--><!--Device-Set-add(value: T): Set<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -75,7 +77,7 @@ Checks whether a value exists in this ArkTS set, and if not, adds the value to t
 
 | Type | Description |
 | --- | --- |
-| Set&lt;T&gt; | Set object. |
+| [Set](../../apis-na/arkts-apis/arkts-na-set-i.md)<T> | Set object. |
 
 **Error codes:**
 
@@ -95,6 +97,8 @@ Removes all elements from this ArkTS set.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Set-clear(): void--><!--Device-Set-clear(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -117,13 +121,15 @@ A constructor used to create an ArkTS set.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Set-constructor(values?: readonly T[] | null)--><!--Device-Set-constructor(values?: readonly T[] | null)-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | readonly T[] \| null | No | Array or iterator object. The default value is **null**, indicatingthat an empty set is created. |
+| values | readonly T[] \| null | No | Array or iterator object. The default value is **null**, indicating that an empty set is created. |
 
 **Error codes:**
 
@@ -143,13 +149,15 @@ A constructor used to create an ArkTS set.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Set-constructor(iterable: Iterable<T>)--><!--Device-Set-constructor(iterable: Iterable<T>)-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iterable | Iterable&lt;T&gt; | Yes | Object used to construct an ArkTS set. |
+| iterable | [Iterable](../../apis-na/arkts-apis/arkts-na-iterable-i.md)<T> | Yes | Object used to construct an ArkTS set. |
 
 **Error codes:**
 
@@ -169,6 +177,8 @@ Deletes an element from this ArkTS set.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Set-delete(value: T): boolean--><!--Device-Set-delete(value: T): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -181,7 +191,7 @@ Deletes an element from this ArkTS set.
 
 | Type | Description |
 | --- | --- |
-| boolean | Operation result. The value **true** is returned if the key is deleted; otherwise, **false**is returned. |
+| boolean | Operation result. The value **true** is returned if the key is deleted; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -202,13 +212,15 @@ Returns a set iterator object that contains the key-value pair of each element i
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Set-entries(): IterableIterator<[T, T]>--><!--Device-Set-entries(): IterableIterator<[T, T]>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;[T, T]&gt; | Returns a set iterator object that contains the key-value pair of eachelement in this ArkTS set. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<[T, T]> | Returns a set iterator object that contains the key-value pair of each element in this ArkTS set. |
 
 **Error codes:**
 
@@ -229,13 +241,15 @@ Calls a callback function for each key-value pair in this ArkTS set.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Set-forEach(callbackFn: (value: T, value2: T, set: Set<T>) => void): void--><!--Device-Set-forEach(callbackFn: (value: T, value2: T, set: Set<T>) => void): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, value2: T, set: Set&lt;T&gt;) =&gt; void | Yes | Callback function to run for each key-value pair. |
+| callbackFn | (value: T, value2: T, set: Set<T>) => void | Yes | Callback function to run for each key-value pair. |
 
 **Error codes:**
 
@@ -256,6 +270,8 @@ Checks whether a value exists in this ArkTS set.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Set-has(value: T): boolean--><!--Device-Set-has(value: T): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -268,7 +284,7 @@ Checks whether a value exists in this ArkTS set.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the value exists; otherwise, **false** isreturned. |
+| boolean | Check result. The value **true** is returned if the value exists; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -289,13 +305,15 @@ Returns a set iterator object that contains the key of each element in this ArkT
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Set-keys(): IterableIterator<T>--><!--Device-Set-keys(): IterableIterator<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;T&gt; | Returns a set iterator object that contains the key of each element in thisArkTS set. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<T> | Returns a set iterator object that contains the key of each element in this ArkTS set. |
 
 **Error codes:**
 
@@ -316,13 +334,15 @@ Returns a set iterator object that contains the value of each element in this Ar
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Set-values(): IterableIterator<T>--><!--Device-Set-values(): IterableIterator<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;T&gt; | Returns a set iterator object that contains the value of each element in thisArkTS set. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<T> | Returns a set iterator object that contains the value of each element in this ArkTS set. |
 
 **Error codes:**
 
@@ -344,6 +364,8 @@ Number of elements in a set.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Set-readonly size: number--><!--Device-Set-readonly size: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

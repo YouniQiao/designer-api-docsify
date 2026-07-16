@@ -6,6 +6,8 @@ Define configuration of the system VPN network.
 
 **Since:** 12
 
+<!--Device-vpn-export interface SysVpnConfig extends VpnConfig--><!--Device-vpn-export interface SysVpnConfig extends VpnConfig-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ The forwarding routes for the VPN network.
 
 **Since:** 12
 
+<!--Device-SysVpnConfig-forwardingRoutes?: string--><!--Device-SysVpnConfig-forwardingRoutes?: string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -46,6 +50,8 @@ The array of local addresses for VPN interface.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SysVpnConfig-localAddresses?: Array<LinkAddress>--><!--Device-SysVpnConfig-localAddresses?: Array<LinkAddress>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -61,6 +67,8 @@ The user password for the VPN network.
 **Type:** string
 
 **Since:** 12
+
+<!--Device-SysVpnConfig-password?: string--><!--Device-SysVpnConfig-password?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -78,6 +86,8 @@ The p12 cert data for the ipsec VPN network.
 
 **Since:** 20
 
+<!--Device-SysVpnConfig-pkcs12FileData?: Uint8Array--><!--Device-SysVpnConfig-pkcs12FileData?: Uint8Array-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -93,6 +103,8 @@ The p12 cert password for the ipsec VPN network.
 **Type:** string
 
 **Since:** 20
+
+<!--Device-SysVpnConfig-pkcs12Password?: string--><!--Device-SysVpnConfig-pkcs12Password?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -110,6 +122,8 @@ The array of addresses for remote server.
 
 **Since:** 20
 
+<!--Device-SysVpnConfig-remoteAddresses?: Array<string>--><!--Device-SysVpnConfig-remoteAddresses?: Array<string>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -125,6 +139,8 @@ Whether the VPN network save login name and password. The default value is false
 **Type:** boolean
 
 **Since:** 12
+
+<!--Device-SysVpnConfig-saveLogin?: boolean--><!--Device-SysVpnConfig-saveLogin?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -142,6 +158,8 @@ The system user id for the VPN network.
 
 **Since:** 12
 
+<!--Device-SysVpnConfig-userId?: number--><!--Device-SysVpnConfig-userId?: number-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -157,6 +175,8 @@ The user name for the VPN network.
 **Type:** string
 
 **Since:** 12
+
+<!--Device-SysVpnConfig-userName?: string--><!--Device-SysVpnConfig-userName?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -174,6 +194,8 @@ The uuid for the VPN network.
 
 **Since:** 12
 
+<!--Device-SysVpnConfig-vpnId?: string--><!--Device-SysVpnConfig-vpnId?: string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -190,6 +212,8 @@ The name for the VPN network.
 
 **Since:** 12
 
+<!--Device-SysVpnConfig-vpnName?: string--><!--Device-SysVpnConfig-vpnName?: string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -205,6 +229,8 @@ The type for the VPN network.
 **Type:** SysVpnType
 
 **Since:** 12
+
+<!--Device-SysVpnConfig-vpnType?: SysVpnType--><!--Device-SysVpnConfig-vpnType?: SysVpnType-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 

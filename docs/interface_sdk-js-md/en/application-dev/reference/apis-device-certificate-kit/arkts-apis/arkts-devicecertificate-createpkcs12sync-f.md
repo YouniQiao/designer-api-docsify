@@ -18,20 +18,22 @@ Creates P12. This API returns the result synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-cert-function createPkcs12Sync(data: Pkcs12Data, config: Pkcs12CreationConfig): Uint8Array--><!--Device-cert-function createPkcs12Sync(data: Pkcs12Data, config: Pkcs12CreationConfig): Uint8Array-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Pkcs12Data | Yes | P12 data object to be packed. |
-| config | Pkcs12CreationConfig | Yes | Configuration for creating the P12 file. |
+| data | [Pkcs12Data](arkts-devicecertificate-pkcs12data-i.md) | Yes | P12 data object to be packed. |
+| config | [Pkcs12CreationConfig](arkts-devicecertificate-pkcs12creationconfig-i.md) | Yes | Configuration for creating the P12 file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | P12 file created, in DER format. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | P12 file created, in DER format. |
 
 **Error codes:**
 

@@ -12,12 +12,13 @@ import { deviceManager } from '@kit.DriverDevelopmentKit';
 function queryDriverInfo(driverUid?: string): Array<Readonly<DriverInfo>>
 ```
 
-Obtains the list of detailed information about peripheral drivers. If the device has no peripheral device
-connected, an empty list is returned.
+Obtains the list of detailed information about peripheral drivers. If the device has no peripheral device connected, an empty list is returned.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
+
+<!--Device-deviceManager-function queryDriverInfo(driverUid?: string): Array<Readonly<DriverInfo>>--><!--Device-deviceManager-function queryDriverInfo(driverUid?: string): Array<Readonly<DriverInfo>>-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -33,7 +34,7 @@ connected, an empty list is returned.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Readonly&lt;DriverInfo&gt;&gt; | List of detailed information about peripheral drivers. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Readonly<DriverInfo>> | List of detailed information about peripheral drivers. |
 
 **Error codes:**
 

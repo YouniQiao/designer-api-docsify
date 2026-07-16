@@ -16,6 +16,8 @@ Obtains a **LocalUpdater** object.
 
 **Since:** 9
 
+<!--Device-update-function getLocalUpdater(): LocalUpdater--><!--Device-update-function getLocalUpdater(): LocalUpdater-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Obtains a **LocalUpdater** object.
 
 | Type | Description |
 | --- | --- |
-| LocalUpdater | **LocalUpdater** object. |
+| [LocalUpdater](arkts-basicservices-localupdater-i-sys.md) | **LocalUpdater** object. |
 
 **Error codes:**
 

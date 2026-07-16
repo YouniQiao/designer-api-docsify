@@ -16,6 +16,8 @@ Obtains the status of the rotation axes.
 
 **Since:** 20
 
+<!--Device-mechanicManager-function getRotationAxesStatus(mechId: int): RotationAxesStatus--><!--Device-mechanicManager-function getRotationAxesStatus(mechId: int): RotationAxesStatus-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -30,7 +32,7 @@ Obtains the status of the rotation axes.
 
 | Type | Description |
 | --- | --- |
-| RotationAxesStatus | Rotation axis status. |
+| [RotationAxesStatus](arkts-mechanic-rotationaxesstatus-i-sys.md) | Rotation axis status. |
 
 **Error codes:**
 

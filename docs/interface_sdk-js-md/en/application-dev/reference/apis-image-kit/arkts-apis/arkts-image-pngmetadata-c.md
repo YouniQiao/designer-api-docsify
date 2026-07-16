@@ -4,6 +4,8 @@ Png metadata.
 
 **Since:** 26.0.0
 
+<!--Device-image-class PngMetadata--><!--Device-image-class PngMetadata-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ PNG author.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PngMetadata-readonly author?: string--><!--Device-PngMetadata-readonly author?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## chromaticities
@@ -41,6 +45,8 @@ PNG color primary/white-point coordinates.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PngMetadata-readonly chromaticities?: double[]--><!--Device-PngMetadata-readonly chromaticities?: double[]-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -58,6 +64,8 @@ PNG comment.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PngMetadata-readonly comment?: string--><!--Device-PngMetadata-readonly comment?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## copyright
@@ -73,6 +81,8 @@ PNG copyright.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PngMetadata-readonly copyright?: string--><!--Device-PngMetadata-readonly copyright?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -90,6 +100,8 @@ PNG creation time.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PngMetadata-readonly creationTime?: string--><!--Device-PngMetadata-readonly creationTime?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## description
@@ -105,6 +117,8 @@ PNG description.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PngMetadata-readonly description?: string--><!--Device-PngMetadata-readonly description?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -122,6 +136,8 @@ PNG disclaimer.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PngMetadata-readonly disclaimer?: string--><!--Device-PngMetadata-readonly disclaimer?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gamma
@@ -138,6 +154,8 @@ PNG gamma.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PngMetadata-readonly gamma?: double--><!--Device-PngMetadata-readonly gamma?: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## interlaceType
@@ -146,14 +164,15 @@ PNG gamma.
 readonly interlaceType?: number
 ```
 
-PNG interlacing mode.
-The value should be an integer.
+PNG interlacing mode.The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PngMetadata-readonly interlaceType?: int--><!--Device-PngMetadata-readonly interlaceType?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -171,6 +190,8 @@ PNG modification time.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PngMetadata-readonly modificationTime?: string--><!--Device-PngMetadata-readonly modificationTime?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## sRGBIntent
@@ -179,14 +200,15 @@ PNG modification time.
 readonly sRGBIntent?: number
 ```
 
-PNG sRGB rendering intent.
-The value should be an integer.
+PNG sRGB rendering intent.The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PngMetadata-readonly sRGBIntent?: int--><!--Device-PngMetadata-readonly sRGBIntent?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -204,6 +226,8 @@ PNG software.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PngMetadata-readonly software?: string--><!--Device-PngMetadata-readonly software?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## title
@@ -219,6 +243,8 @@ PNG title.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PngMetadata-readonly title?: string--><!--Device-PngMetadata-readonly title?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -236,6 +262,8 @@ PNG warning.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PngMetadata-readonly warning?: string--><!--Device-PngMetadata-readonly warning?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## xPixelsPerMeter
@@ -244,14 +272,15 @@ PNG warning.
 readonly xPixelsPerMeter?: number
 ```
 
-PNG x pixels per meter.
-The value should be an integer.
+PNG x pixels per meter.The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PngMetadata-readonly xPixelsPerMeter?: int--><!--Device-PngMetadata-readonly xPixelsPerMeter?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -261,14 +290,15 @@ The value should be an integer.
 readonly yPixelsPerMeter?: number
 ```
 
-PNG y pixels per meter.
-The value should be an integer.
+PNG y pixels per meter.The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PngMetadata-readonly yPixelsPerMeter?: int--><!--Device-PngMetadata-readonly yPixelsPerMeter?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

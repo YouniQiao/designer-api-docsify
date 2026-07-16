@@ -4,6 +4,8 @@ Defines the shared module information.
 
 **Since:** 10
 
+<!--Device-unnamed-export interface SharedModuleInfo--><!--Device-unnamed-export interface SharedModuleInfo-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -19,6 +21,8 @@ Description of the shared bundle.
 **Type:** string
 
 **Since:** 10
+
+<!--Device-SharedModuleInfo-readonly description: string--><!--Device-SharedModuleInfo-readonly description: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -36,6 +40,8 @@ Description ID of the shared bundle.
 
 **Since:** 10
 
+<!--Device-SharedModuleInfo-readonly descriptionId: long--><!--Device-SharedModuleInfo-readonly descriptionId: long-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -51,6 +57,8 @@ Module name of the shared bundle.
 **Type:** string
 
 **Since:** 10
+
+<!--Device-SharedModuleInfo-readonly name: string--><!--Device-SharedModuleInfo-readonly name: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -68,6 +76,8 @@ Version number of the shared bundle.
 
 **Since:** 10
 
+<!--Device-SharedModuleInfo-readonly versionCode: long--><!--Device-SharedModuleInfo-readonly versionCode: long-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -83,6 +93,8 @@ Version description of the shared bundle.
 **Type:** string
 
 **Since:** 10
+
+<!--Device-SharedModuleInfo-readonly versionName: string--><!--Device-SharedModuleInfo-readonly versionName: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

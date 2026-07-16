@@ -4,6 +4,8 @@ Describes the setting status of the notification mode switch.
 
 **Since:** 20
 
+<!--Device-notificationManager-export interface NotificationSetting--><!--Device-notificationManager-export interface NotificationSetting-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## Modules to Import
@@ -20,7 +22,7 @@ badgeNumberEnabled?: boolean
 
 Whether to enable the display of notification badges.
 
-- **true**: enabled.
+- **true**: enabled.  
 - **false**: disable.
 
 **Type:** boolean
@@ -28,6 +30,8 @@ Whether to enable the display of notification badges.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-NotificationSetting-badgeNumberEnabled?: boolean--><!--Device-NotificationSetting-badgeNumberEnabled?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -39,7 +43,7 @@ bannerEnabled?: boolean
 
 Whether to enable banner notification.
 
-- **true**: enabled.
+- **true**: enabled.  
 - **false**: disable.
 
 **Type:** boolean
@@ -47,6 +51,8 @@ Whether to enable banner notification.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-NotificationSetting-bannerEnabled?: boolean--><!--Device-NotificationSetting-bannerEnabled?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -58,7 +64,7 @@ lockScreenEnabled?: boolean
 
 Whether to enable lock screen notification.
 
-- **true**: enabled.
+- **true**: enabled.  
 - **false**: disable.
 
 **Type:** boolean
@@ -66,6 +72,8 @@ Whether to enable lock screen notification.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-NotificationSetting-lockScreenEnabled?: boolean--><!--Device-NotificationSetting-lockScreenEnabled?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -77,7 +85,7 @@ notificationEnabled?: boolean
 
 Whether to enable the application notification.
 
-- **true**: enabled.
+- **true**: enabled.  
 - **false**: disable.
 
 **Type:** boolean
@@ -85,6 +93,8 @@ Whether to enable the application notification.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-NotificationSetting-notificationEnabled?: boolean--><!--Device-NotificationSetting-notificationEnabled?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -96,12 +106,14 @@ soundEnabled: boolean
 
 Whether to enable ringtone.
 
-- **true**: enabled.
+- **true**: enabled.  
 - **false**: disable.
 
 **Type:** boolean
 
 **Since:** 20
+
+<!--Device-NotificationSetting-soundEnabled: boolean--><!--Device-NotificationSetting-soundEnabled: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -113,12 +125,14 @@ vibrationEnabled: boolean
 
 Whether to enable vibration.
 
-- **true**: enabled.
+- **true**: enabled.  
 - **false**: disable.
 
 **Type:** boolean
 
 **Since:** 20
+
+<!--Device-NotificationSetting-vibrationEnabled: boolean--><!--Device-NotificationSetting-vibrationEnabled: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

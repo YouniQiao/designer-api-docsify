@@ -4,6 +4,8 @@ Define edit mode options.
 
 **Since:** 23
 
+<!--Device-unnamed-declare interface EditModeOptions--><!--Device-unnamed-declare interface EditModeOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableGatherSelectedItemsAnimation
@@ -24,6 +26,8 @@ Define whether to gather selected items in grid or list when item is long presse
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-EditModeOptions-enableGatherSelectedItemsAnimation?: boolean--><!--Device-EditModeOptions-enableGatherSelectedItemsAnimation?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableTwoFingerMultiSelect
@@ -32,9 +36,7 @@ Define whether to gather selected items in grid or list when item is long presse
 enableTwoFingerMultiSelect?: boolean
 ```
 
-Enable two-finger swipe multi-selection.
-{@code true} indicates that two-finger swiping can enter edit mode and perform multi-selection.
-{@code false} indicates that two-finger swiping cannot perform multi-selection.
+Enable two-finger swipe multi-selection.{@code true} indicates that two-finger swiping can enter edit mode and perform multi-selection.{@code false} indicates that two-finger swiping cannot perform multi-selection.
 
 **Type:** boolean
 
@@ -45,6 +47,8 @@ Enable two-finger swipe multi-selection.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditModeOptions-enableTwoFingerMultiSelect?: boolean--><!--Device-EditModeOptions-enableTwoFingerMultiSelect?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,11 +58,7 @@ Enable two-finger swipe multi-selection.
 onGetPreviewBadge?: OnGetPreviewBadgeCallback
 ```
 
-Called to return whether to display the number badge or the number displayed on the badge
-for the context menu preview. If not set, the number of selected items within the display range will be used.
-Returning false means not displaying the badge.
-Returning true means using the number of selected items within the display range.
-Returning a number to include selected items outside the display range.
+Called to return whether to display the number badge or the number displayed on the badge for the context menu preview. If not set, the number of selected items within the display range will be used.Returning false means not displaying the badge.Returning true means using the number of selected items within the display range.Returning a number to include selected items outside the display range.
 
 **Type:** OnGetPreviewBadgeCallback
 
@@ -68,6 +68,8 @@ Returning a number to include selected items outside the display range.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-EditModeOptions-onGetPreviewBadge?: OnGetPreviewBadgeCallback--><!--Device-EditModeOptions-onGetPreviewBadge?: OnGetPreviewBadgeCallback-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## useDefaultMultiSelectStyle
@@ -76,10 +78,7 @@ Returning a number to include selected items outside the display range.
 useDefaultMultiSelectStyle?: boolean
 ```
 
-Use default multi-select style.
-{@code true} indicates that the check box is displayed for GridItem or ListItem after entering the
-multi-select state.
-{@code false} indicates that there is no default style after entering the multi-select state.
+Use default multi-select style.{@code true} indicates that the check box is displayed for GridItem or ListItem after entering the multi-select state.{@code false} indicates that there is no default style after entering the multi-select state.
 
 **Type:** boolean
 
@@ -90,6 +89,8 @@ multi-select state.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditModeOptions-useDefaultMultiSelectStyle?: boolean--><!--Device-EditModeOptions-useDefaultMultiSelectStyle?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

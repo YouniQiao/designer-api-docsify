@@ -18,6 +18,8 @@ Send call ui event.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function sendCallUiEvent(callId: int, eventName: string): Promise<void>--><!--Device-call-function sendCallUiEvent(callId: int, eventName: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -33,7 +35,7 @@ Send call ui event.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the sendCallUiEvent. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the sendCallUiEvent. |
 
 **Error codes:**
 

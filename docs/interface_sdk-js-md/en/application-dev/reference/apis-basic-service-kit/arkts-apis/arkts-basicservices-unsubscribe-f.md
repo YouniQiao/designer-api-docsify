@@ -18,14 +18,16 @@ Unsubscribes from a common event. This API uses an asynchronous callback to retu
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-commonEventManager-function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback<void>): void--><!--Device-commonEventManager-function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | CommonEventSubscriber | Yes | Subscriber object. |
-| callback | AsyncCallback&lt;void&gt; | No | Callback to unregister. If the operation is successful, **err** is**undefined**; otherwise, **err** is an error object. |
+| subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-i.md) | Yes | Subscriber object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | No | Callback to unregister. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

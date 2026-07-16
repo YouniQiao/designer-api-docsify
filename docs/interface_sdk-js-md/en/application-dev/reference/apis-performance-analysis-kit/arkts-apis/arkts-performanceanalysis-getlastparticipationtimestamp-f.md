@@ -18,6 +18,8 @@ Query the UNIX timestamp of the last participating time.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-hiRetrieval-function getLastParticipationTimestamp(): long--><!--Device-hiRetrieval-function getLastParticipationTimestamp(): long-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiRetrieval
 
 **Return value:**

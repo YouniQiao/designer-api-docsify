@@ -19,6 +19,8 @@ Injects keys (including single keys and combination keys).
 **Required permissions:** 
 - API version 12+: ohos.permission.INJECT_INPUT_EVENT
 
+<!--Device-inputEventClient-function injectEvent({ KeyEvent: KeyEvent }): void--><!--Device-inputEventClient-function injectEvent({ KeyEvent: KeyEvent }): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **System API:** This is a system API.

@@ -4,6 +4,8 @@ Describes the internal information about a task pool.
 
 **Since:** 10
 
+<!--Device-taskpool-class TaskPoolInfo--><!--Device-taskpool-class TaskPoolInfo-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Internal information about the tasks. You are advised not to change the value.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TaskPoolInfo-taskInfos: TaskInfo[]--><!--Device-TaskPoolInfo-taskInfos: TaskInfo[]-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## threadInfos
@@ -41,6 +45,8 @@ Internal information about the worker threads. You are advised not to change the
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TaskPoolInfo-threadInfos: ThreadInfo[]--><!--Device-TaskPoolInfo-threadInfos: ThreadInfo[]-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

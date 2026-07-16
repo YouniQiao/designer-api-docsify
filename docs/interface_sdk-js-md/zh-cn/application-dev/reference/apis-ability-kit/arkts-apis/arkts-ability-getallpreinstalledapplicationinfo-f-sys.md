@@ -1,5 +1,11 @@
 # getAllPreinstalledApplicationInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getAllPreinstalledApplicationInfo
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getAllPreinstalledApplicationInfo(): Promise<Array<PreinstalledApplicat
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundleManager-function getAllPreinstalledApplicationInfo(): Promise<Array<PreinstalledApplicationInfo>>--><!--Device-bundleManager-function getAllPreinstalledApplicationInfo(): Promise<Array<PreinstalledApplicationInfo>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function getAllPreinstalledApplicationInfo(): Promise<Array<PreinstalledApplicat
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;PreinstalledApplicationInfo&gt;&gt; | Promise对象，返回Array&lt;PreinstalledApplicationInfo&gt;。 |
+| Promise<Array<PreinstalledApplicationInfo>> | Promise对象，返回Array&lt;PreinstalledApplicationInfo&gt;。 |
 
 **错误码：**
 

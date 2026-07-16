@@ -6,6 +6,8 @@ This API inherits from [CommonShapeMethod](arkts-arkui-commonshapemethod-c.md).
 
 **Since:** 12
 
+<!--Device-unnamed-declare class BaseShape<T> extends CommonShapeMethod<T>--><!--Device-unnamed-declare class BaseShape<T> extends CommonShapeMethod<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,13 +32,15 @@ Sets the height of a shape.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-BaseShape-height(height: Length): T--><!--Device-BaseShape-height(height: Length): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | Length | Yes | Height of the shape.<br>Unit: vp.<br>If the value is invalid, 0 vp is used. |
+| height | [Length](arkts-arkui-length-t.md) | Yes | Height of the shape.<br>Unit: vp.<br>If the value is invalid, 0 vp is used. |
 
 **Return value:**
 
@@ -60,13 +64,15 @@ Sets the size of a shape.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-BaseShape-size(size: SizeOptions): T--><!--Device-BaseShape-size(size: SizeOptions): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | SizeOptions | Yes | Size of the shape. |
+| size | [SizeOptions](arkts-arkui-sizeoptions-i.md) | Yes | Size of the shape. |
 
 **Return value:**
 
@@ -90,13 +96,15 @@ Sets the width of a shape.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-BaseShape-width(width: Length): T--><!--Device-BaseShape-width(width: Length): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | Length | Yes | Width of the shape.<br>Unit: vp.<br>If the value is invalid, 0 vp is used. |
+| width | [Length](arkts-arkui-length-t.md) | Yes | Width of the shape.<br>Unit: vp.<br>If the value is invalid, 0 vp is used. |
 
 **Return value:**
 

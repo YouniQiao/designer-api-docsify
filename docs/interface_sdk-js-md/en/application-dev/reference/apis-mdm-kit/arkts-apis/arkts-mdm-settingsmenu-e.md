@@ -4,6 +4,8 @@ Describes the setting item list.
 
 **Since:** 24
 
+<!--Device-deviceSettings-enum SettingsMenu--><!--Device-deviceSettings-enum SettingsMenu-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## ACCOUNT_ID
@@ -17,6 +19,8 @@ Account.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsMenu-ACCOUNT_ID = 0--><!--Device-SettingsMenu-ACCOUNT_ID = 0-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -32,6 +36,8 @@ Wi-Fi.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingsMenu-WIFI = 1--><!--Device-SettingsMenu-WIFI = 1-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## WIFI_PROXY_SETTINGS
@@ -45,6 +51,8 @@ WLAN proxy.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsMenu-WIFI_PROXY_SETTINGS = 2--><!--Device-SettingsMenu-WIFI_PROXY_SETTINGS = 2-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -60,6 +68,8 @@ WLAN IP.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingsMenu-WIFI_IP_SETTINGS = 3--><!--Device-SettingsMenu-WIFI_IP_SETTINGS = 3-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## BLUETOOTH
@@ -73,6 +83,8 @@ Bluetooth/NearLink & Bluetooth.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsMenu-BLUETOOTH = 4--><!--Device-SettingsMenu-BLUETOOTH = 4-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -88,6 +100,8 @@ Network.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingsMenu-NETWORK = 5--><!--Device-SettingsMenu-NETWORK = 5-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MOBILE_NETWORK
@@ -101,6 +115,8 @@ Mobile network.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsMenu-MOBILE_NETWORK = 6--><!--Device-SettingsMenu-MOBILE_NETWORK = 6-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -116,6 +132,8 @@ More connectivity options - Super Device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingsMenu-SUPER_DEVICE = 7--><!--Device-SettingsMenu-SUPER_DEVICE = 7-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MORE_CONNECTIVITY_OPTIONS
@@ -129,6 +147,8 @@ More connectivity options.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsMenu-MORE_CONNECTIVITY_OPTIONS = 8--><!--Device-SettingsMenu-MORE_CONNECTIVITY_OPTIONS = 8-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -144,6 +164,8 @@ Home screen & style.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingsMenu-HOME_SCREEN_STYLE = 9--><!--Device-SettingsMenu-HOME_SCREEN_STYLE = 9-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## DISPLAY_BRIGHTNESS
@@ -157,6 +179,8 @@ Display & brightness.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsMenu-DISPLAY_BRIGHTNESS = 10--><!--Device-SettingsMenu-DISPLAY_BRIGHTNESS = 10-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -172,6 +196,8 @@ Sounds & vibration.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingsMenu-SOUND_VIBRATION = 11--><!--Device-SettingsMenu-SOUND_VIBRATION = 11-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## NOTIFICATIONS
@@ -185,6 +211,8 @@ Notifications & status bar.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsMenu-NOTIFICATIONS = 12--><!--Device-SettingsMenu-NOTIFICATIONS = 12-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -200,6 +228,8 @@ Biometrics & screen lock.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingsMenu-BIOMETRICS_PASSWORD = 13--><!--Device-SettingsMenu-BIOMETRICS_PASSWORD = 13-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## APPS_AND_SERVICES
@@ -213,6 +243,8 @@ Apps & services.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsMenu-APPS_AND_SERVICES = 14--><!--Device-SettingsMenu-APPS_AND_SERVICES = 14-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -228,6 +260,8 @@ Battery.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingsMenu-BATTERY = 15--><!--Device-SettingsMenu-BATTERY = 15-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## STORAGE
@@ -241,6 +275,8 @@ Storage.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsMenu-STORAGE = 16--><!--Device-SettingsMenu-STORAGE = 16-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -256,6 +292,8 @@ Privacy & security.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingsMenu-PRIVACY_AND_SECURITY = 17--><!--Device-SettingsMenu-PRIVACY_AND_SECURITY = 17-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## DIGITAL_BALANCE
@@ -269,6 +307,8 @@ Digital Balance.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsMenu-DIGITAL_BALANCE = 18--><!--Device-SettingsMenu-DIGITAL_BALANCE = 18-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -284,6 +324,8 @@ Smart assistant.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingsMenu-SMART_ASSISTANT = 19--><!--Device-SettingsMenu-SMART_ASSISTANT = 19-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## ACCESSIBILITY
@@ -297,6 +339,8 @@ Accessibility.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsMenu-ACCESSIBILITY = 20--><!--Device-SettingsMenu-ACCESSIBILITY = 20-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -312,6 +356,8 @@ System.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingsMenu-SYSTEM = 21--><!--Device-SettingsMenu-SYSTEM = 21-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## ABOUT_DEVICE
@@ -325,6 +371,8 @@ About.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsMenu-ABOUT_DEVICE = 22--><!--Device-SettingsMenu-ABOUT_DEVICE = 22-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -340,6 +388,8 @@ System - system navigation.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingsMenu-SYSTEM_NAVIGATION = 23--><!--Device-SettingsMenu-SYSTEM_NAVIGATION = 23-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## LANGUAGE_REGION
@@ -353,6 +403,8 @@ System - Language & region.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsMenu-LANGUAGE_REGION = 24--><!--Device-SettingsMenu-LANGUAGE_REGION = 24-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -368,6 +420,8 @@ System - Input method.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingsMenu-INPUT_METHODS = 25--><!--Device-SettingsMenu-INPUT_METHODS = 25-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## DATE_TIME
@@ -381,6 +435,8 @@ System - Date & time.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsMenu-DATE_TIME = 26--><!--Device-SettingsMenu-DATE_TIME = 26-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -396,6 +452,8 @@ System - Data Clone.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingsMenu-DATA_CLONE = 27--><!--Device-SettingsMenu-DATA_CLONE = 27-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## BACKUP_SETTINGS
@@ -409,6 +467,8 @@ System - Backup & Restore.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsMenu-BACKUP_SETTINGS = 28--><!--Device-SettingsMenu-BACKUP_SETTINGS = 28-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -424,6 +484,8 @@ System - Reset.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingsMenu-RESET = 29--><!--Device-SettingsMenu-RESET = 29-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## SUPERHUB
@@ -437,6 +499,8 @@ System - SuperHub.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsMenu-SUPERHUB = 30--><!--Device-SettingsMenu-SUPERHUB = 30-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -452,6 +516,8 @@ System - User Experience Improvement Program.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingsMenu-USER_EXPERIENCE = 31--><!--Device-SettingsMenu-USER_EXPERIENCE = 31-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## SCREEN_CAST
@@ -465,6 +531,8 @@ More connectivity options - ScreenCast.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsMenu-SCREEN_CAST = 32--><!--Device-SettingsMenu-SCREEN_CAST = 32-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -480,6 +548,8 @@ Printers & scanners.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingsMenu-PRINTERS_SCANNERS = 33--><!--Device-SettingsMenu-PRINTERS_SCANNERS = 33-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MOBILE_DATA
@@ -493,6 +563,8 @@ Mobile network - Mobile data.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsMenu-MOBILE_DATA = 34--><!--Device-SettingsMenu-MOBILE_DATA = 34-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -508,6 +580,8 @@ Mobile network - Personal hotspot.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingsMenu-PERSONAL_HOTSPOT = 35--><!--Device-SettingsMenu-PERSONAL_HOTSPOT = 35-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## SIM_MANAGEMENT
@@ -521,6 +595,8 @@ Mobile network - SIM management.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsMenu-SIM_MANAGEMENT = 36--><!--Device-SettingsMenu-SIM_MANAGEMENT = 36-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -536,6 +612,8 @@ Mobile network - Airplane mode.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingsMenu-AIRPLANE_MODE = 37--><!--Device-SettingsMenu-AIRPLANE_MODE = 37-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MANAGE_DATA_USAGE
@@ -549,6 +627,8 @@ Mobile network - Management data usage.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsMenu-MANAGE_DATA_USAGE = 38--><!--Device-SettingsMenu-MANAGE_DATA_USAGE = 38-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -564,6 +644,8 @@ Mobile network - VPN.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingsMenu-VPN_SETTINGS = 39--><!--Device-SettingsMenu-VPN_SETTINGS = 39-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## TEXT_DISPLAY_SIZE
@@ -577,6 +659,8 @@ Display & brightness - Text & display size.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsMenu-TEXT_DISPLAY_SIZE = 40--><!--Device-SettingsMenu-TEXT_DISPLAY_SIZE = 40-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -592,6 +676,8 @@ System - App duplicator.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SettingsMenu-APP_DUPLICATOR = 41--><!--Device-SettingsMenu-APP_DUPLICATOR = 41-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## SEARCH
@@ -605,6 +691,8 @@ Search.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SettingsMenu-SEARCH = 42--><!--Device-SettingsMenu-SEARCH = 42-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

@@ -18,13 +18,15 @@ Obtains the list of printers added to the system. This API uses a promise to ret
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
 
+<!--Device-print-function getAddedPrinters(): Promise<Array<string>>--><!--Device-print-function getAddedPrinters(): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return a list of all added printers. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return a list of all added printers. |
 
 **Error codes:**
 

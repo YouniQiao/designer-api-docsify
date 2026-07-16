@@ -23,22 +23,34 @@ Installs a private credential. This API uses an asynchronous callback to return 
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
+<!--Device-certificateManager-function installPrivateCertificate(
+    keystore: Uint8Array,
+    keystorePwd: string,
+    certAlias: string,
+    callback: AsyncCallback<CMResult>
+  ): void--><!--Device-certificateManager-function installPrivateCertificate(
+    keystore: Uint8Array,
+    keystorePwd: string,
+    certAlias: string,
+    callback: AsyncCallback<CMResult>
+  ): void-End-->
+
 **System capability:** SystemCapability.Security.CertificateManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keystore | Uint8Array | Yes | Keystore file with a key pair and certificate. The value contains up to 20480bytes. |
+| keystore | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Keystore file with a key pair and certificate. The value contains up to 20480bytes. |
 | keystorePwd | string | Yes | Password of the keystore file. The password cannot exceed 32 bytes. |
-| certAlias | string | Yes | Credential alias. Currently, the alias can contain only digits, letters, andunderscores (_) and should not exceed 32 bytes. |
-| callback | AsyncCallback&lt;CMResult&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null** and **data** is **uri** in the [CMResult](arkts-devicecertificate-cmresult-i.md) object.Otherwise, **err** is an error object. |
+| certAlias | string | Yes | Credential alias. Currently, the alias can contain only digits, letters, and underscores (_) and should not exceed 32 bytes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<CMResult> | Yes | Callback used to return the result. If the operation is successful,**err** is **null** and **data** is **uri** in the [CMResult](arkts-devicecertificate-cmresult-i.md) object.Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 | [17500003](../errorcode-certManager.md#17500003-invalid-certificate-or-credential) | The keystore is in an invalid format or the keystore password is incorrect. |
@@ -82,27 +94,29 @@ Installs a private credential. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
+<!--Device-certificateManager-function installPrivateCertificate(keystore: Uint8Array, keystorePwd: string, certAlias: string): Promise<CMResult>--><!--Device-certificateManager-function installPrivateCertificate(keystore: Uint8Array, keystorePwd: string, certAlias: string): Promise<CMResult>-End-->
+
 **System capability:** SystemCapability.Security.CertificateManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keystore | Uint8Array | Yes | Keystore file with a key pair and certificate. The value contains up to 20480bytes. |
+| keystore | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Keystore file with a key pair and certificate. The value contains up to 20480bytes. |
 | keystorePwd | string | Yes | Password of the keystore file. The password cannot exceed 32 bytes. |
-| certAlias | string | Yes | Credential alias. Currently, the alias can contain only digits, letters, andunderscores (_) and should not exceed 32 bytes. |
+| certAlias | string | Yes | Credential alias. Currently, the alias can contain only digits, letters, and underscores (_) and should not exceed 32 bytes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **uri** in the[CMResult](arkts-devicecertificate-cmresult-i.md) object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CMResult> | Promise used to return the operation result, that is, **uri** in the [CMResult](arkts-devicecertificate-cmresult-i.md) object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 | [17500003](../errorcode-certManager.md#17500003-invalid-certificate-or-credential) | The keystore is in an invalid format or the keystore password is incorrect. |
@@ -146,28 +160,30 @@ Installs a private credential and specifies its storage level. This API uses a p
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
+<!--Device-certificateManager-function installPrivateCertificate(keystore: Uint8Array, keystorePwd: string, certAlias: string, level: AuthStorageLevel): Promise<CMResult>--><!--Device-certificateManager-function installPrivateCertificate(keystore: Uint8Array, keystorePwd: string, certAlias: string, level: AuthStorageLevel): Promise<CMResult>-End-->
+
 **System capability:** SystemCapability.Security.CertificateManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keystore | Uint8Array | Yes | Keystore file with a key pair and certificate. The value contains up to 20480bytes. |
+| keystore | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Keystore file with a key pair and certificate. The value contains up to 20480bytes. |
 | keystorePwd | string | Yes | Password of the keystore file.<br>The value contains up to 32 bytes. |
 | certAlias | string | Yes | Alias of the credential entered by the user. Only digits, letters, and underscores (_) are supported.<br>The value should contain up to 32 bytes. |
-| level | AuthStorageLevel | Yes | Credential storage level. |
+| level | [AuthStorageLevel](arkts-devicecertificate-authstoragelevel-e.md) | Yes | Credential storage level. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **uri** in the[CMResult](arkts-devicecertificate-cmresult-i.md) object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CMResult> | Promise used to return the operation result, that is, **uri** in the [CMResult](arkts-devicecertificate-cmresult-i.md) object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 | [17500003](../errorcode-certManager.md#17500003-invalid-certificate-or-credential) | The keystore is in an invalid format or the keystore password is incorrect. |

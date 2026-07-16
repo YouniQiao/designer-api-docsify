@@ -6,6 +6,8 @@ Implements the running environment of the Worker thread. The GlobalScope class i
 
 **Since:** 9
 
+<!--Device-unnamed-declare interface GlobalScope extends WorkerEventTarget--><!--Device-unnamed-declare interface GlobalScope extends WorkerEventTarget-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Worker instance specified when there is a new Worker instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GlobalScope-readonly name: string--><!--Device-GlobalScope-readonly name: string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## onerror
@@ -36,14 +40,15 @@ Worker instance specified when there is a new Worker instance.
 onerror?: (ev: ErrorEvent) => void
 ```
 
-Called when an exception occurs during worker execution. The event handler is executed in the Worker thread.
-In the callback function, the ev type is ErrorEvent, indicating the received abnormal data.
+Called when an exception occurs during worker execution. The event handler is executed in the Worker thread.In the callback function, the ev type is ErrorEvent, indicating the received abnormal data.
 
 **Type:** (ev: ErrorEvent) => void
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GlobalScope-onerror?: (ev: ErrorEvent) => void--><!--Device-GlobalScope-onerror?: (ev: ErrorEvent) => void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -60,6 +65,8 @@ GlobalScope itself.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GlobalScope-readonly self: GlobalScope & typeof globalThis--><!--Device-GlobalScope-readonly self: GlobalScope & typeof globalThis-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

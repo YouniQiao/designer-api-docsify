@@ -4,7 +4,15 @@
 
 **起始版本：** 20
 
+<!--Device-asset-interface SyncResult--><!--Device-asset-interface SyncResult-End-->
+
 **系统能力：** SystemCapability.Security.Asset
+
+## 导入模块
+
+```TypeScript
+import { asset } from '@kit.AssetStoreKit';
+```
 
 ## failedCount
 
@@ -17,6 +25,8 @@ readonly failedCount?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-SyncResult-readonly failedCount?: number--><!--Device-SyncResult-readonly failedCount?: number-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -32,6 +42,8 @@ readonly resultCode: number
 
 **起始版本：** 20
 
+<!--Device-SyncResult-readonly resultCode: number--><!--Device-SyncResult-readonly resultCode: number-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 ## totalCount
@@ -45,6 +57,8 @@ readonly totalCount?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-SyncResult-readonly totalCount?: number--><!--Device-SyncResult-readonly totalCount?: number-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 

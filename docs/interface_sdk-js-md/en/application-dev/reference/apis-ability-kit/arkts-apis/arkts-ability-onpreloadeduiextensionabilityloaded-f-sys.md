@@ -12,15 +12,15 @@ import { abilityManager } from '@kit.AbilityKit';
 function onPreloadedUIExtensionAbilityLoaded(callback: PreloadedUIExtensionAbilityLoadedFn): void
 ```
 
-Subscribes to loaded events of a preloaded
-[UIExtensionAbility](arkts-ability-uiextensionability-c.md) instance in the current
-process.
+Subscribes to loaded events of a preloaded [UIExtensionAbility](arkts-ability-uiextensionability-c.md) instance in the current process.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.PRELOAD_UI_EXTENSION_ABILITY
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-abilityManager-function onPreloadedUIExtensionAbilityLoaded(callback: PreloadedUIExtensionAbilityLoadedFn): void--><!--Device-abilityManager-function onPreloadedUIExtensionAbilityLoaded(callback: PreloadedUIExtensionAbilityLoadedFn): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -30,7 +30,7 @@ process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | PreloadedUIExtensionAbilityLoadedFn | Yes | Callback used to receive the ID of the preloaded[UIExtensionAbility](arkts-ability-uiextensionability-c.md) instance that is loaded. |
+| callback | [PreloadedUIExtensionAbilityLoadedFn](arkts-ability-preloadeduiextensionabilityloadedfn-t-sys.md) | Yes | Callback used to receive the ID of the preloaded [UIExtensionAbility](arkts-ability-uiextensionability-c.md) instance that is loaded. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Provide some functions for settings and startup guide to select language or regi
 
 **Since:** 10
 
+<!--Device-i18n-export class SystemLocaleManager--><!--Device-i18n-export class SystemLocaleManager-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -23,6 +25,8 @@ constructor()
 Creates a SystemLocaleManager object.
 
 **Since:** 10
+
+<!--Device-SystemLocaleManager-constructor()--><!--Device-SystemLocaleManager-constructor()-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -53,6 +57,8 @@ Obtains the list of languages after sorting.
 
 **Since:** 10
 
+<!--Device-SystemLocaleManager-getLanguageInfoArray(languages: Array<string>, options?: SortOptions): Array<LocaleItem>--><!--Device-SystemLocaleManager-getLanguageInfoArray(languages: Array<string>, options?: SortOptions): Array<LocaleItem>-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -61,14 +67,14 @@ Obtains the list of languages after sorting.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| languages | Array&lt;string&gt; | Yes | Valid IDs of the languages to be sorted. |
-| options | SortOptions | No | Language sorting option. |
+| languages | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Valid IDs of the languages to be sorted. |
+| options | [SortOptions](arkts-localization-sortoptions-i-sys.md) | No | Language sorting option. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;LocaleItem&gt; | Language list after sorting. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<LocaleItem> | Language list after sorting. |
 
 **Error codes:**
 
@@ -108,6 +114,8 @@ Obtains the IDs of the countries or regions after sorting.
 
 **Since:** 10
 
+<!--Device-SystemLocaleManager-getRegionInfoArray(regions: Array<string>, options?: SortOptions): Array<LocaleItem>--><!--Device-SystemLocaleManager-getRegionInfoArray(regions: Array<string>, options?: SortOptions): Array<LocaleItem>-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -116,14 +124,14 @@ Obtains the IDs of the countries or regions after sorting.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| regions | Array&lt;string&gt; | Yes | Valid IDs of the countries or regions to be sorted. |
-| options | SortOptions | No | Country/region sorting option. By default, locale is the current systemlocale, isUseLocalName is false, and isSuggestedFirst is true. |
+| regions | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Valid IDs of the countries or regions to be sorted. |
+| options | [SortOptions](arkts-localization-sortoptions-i-sys.md) | No | Country/region sorting option. By default, locale is the current system locale, isUseLocalName is false, and isSuggestedFirst is true. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;LocaleItem&gt; | IDs of the countries or regions after sorting. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<LocaleItem> | IDs of the countries or regions after sorting. |
 
 **Error codes:**
 
@@ -163,6 +171,8 @@ Obtains list of time zone city items after sorting.
 
 **Since:** 10
 
+<!--Device-SystemLocaleManager-static getTimeZoneCityItemArray(): Array<TimeZoneCityItem>--><!--Device-SystemLocaleManager-static getTimeZoneCityItemArray(): Array<TimeZoneCityItem>-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -171,7 +181,7 @@ Obtains list of time zone city items after sorting.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TimeZoneCityItem&gt; | List of time zone city items after sorting. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<TimeZoneCityItem> | List of time zone city items after sorting. |
 
 **Error codes:**
 

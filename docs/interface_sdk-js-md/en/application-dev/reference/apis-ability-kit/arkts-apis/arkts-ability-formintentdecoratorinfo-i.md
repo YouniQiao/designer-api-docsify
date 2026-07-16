@@ -1,13 +1,12 @@
 # FormIntentDecoratorInfo
 
-Inherits from [IntentDecoratorInfo](arkts-ability-intentdecoratorinfo-i.md) and is used to describe the parameters supported by
-the
-[@InsightIntentForm](../../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform)
-decorator.
+Inherits from [IntentDecoratorInfo](arkts-ability-intentdecoratorinfo-i.md) and is used to describe the parameters supported by the [@InsightIntentForm](../../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform)decorator.
 
 **Inheritance/Implementation:** FormIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-intentdecoratorinfo-i.md)
 
 **Since:** 20
+
+<!--Device-unnamed-declare interface FormIntentDecoratorInfo extends IntentDecoratorInfo--><!--Device-unnamed-declare interface FormIntentDecoratorInfo extends IntentDecoratorInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -32,6 +31,8 @@ Name of the widget bound to the FormExtensionAbility.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-FormIntentDecoratorInfo-formName: string--><!--Device-FormIntentDecoratorInfo-formName: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

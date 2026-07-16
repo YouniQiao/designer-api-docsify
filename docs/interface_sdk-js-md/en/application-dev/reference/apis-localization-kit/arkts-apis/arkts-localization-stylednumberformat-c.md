@@ -4,6 +4,8 @@ Provide a number formatting interface which could format number to StyleString.
 
 **Since:** 18
 
+<!--Device-i18n-export class StyledNumberFormat--><!--Device-i18n-export class StyledNumberFormat-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Creates a **NumberFormat** object for rich text display.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-StyledNumberFormat-constructor(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)--><!--Device-StyledNumberFormat-constructor(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -31,7 +35,7 @@ Creates a **NumberFormat** object for rich text display.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | numberFormat | Intl.NumberFormat \| SimpleNumberFormat | Yes | **NumberFormat** object. |
-| options | StyledNumberFormatOptions | No |  |
+| options | [StyledNumberFormatOptions](arkts-localization-stylednumberformatoptions-i.md) | No |  |
 
 **Example**
 
@@ -86,6 +90,8 @@ Creates a **NumberFormat** object for rich text display.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-StyledNumberFormat-constructor(numberFormat: intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)--><!--Device-StyledNumberFormat-constructor(numberFormat: intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -93,7 +99,7 @@ Creates a **NumberFormat** object for rich text display.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | numberFormat | intl.NumberFormat \| SimpleNumberFormat | Yes | **NumberFormat** object. |
-| options | StyledNumberFormatOptions | No |  |
+| options | [StyledNumberFormatOptions](arkts-localization-stylednumberformatoptions-i.md) | No |  |
 
 **Example**
 
@@ -144,6 +150,8 @@ Formats a number as a rich text object.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-StyledNumberFormat-format(value: double): StyledString--><!--Device-StyledNumberFormat-format(value: double): StyledString-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -156,7 +164,7 @@ Formats a number as a rich text object.
 
 | Type | Description |
 | --- | --- |
-| StyledString | Rich text object after formatting. |
+| [StyledString](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-c.md) | Rich text object after formatting. |
 
 **Example**
 

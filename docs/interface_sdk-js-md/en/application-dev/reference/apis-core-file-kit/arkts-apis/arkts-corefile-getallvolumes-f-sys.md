@@ -12,12 +12,13 @@ import { volumeManager } from '@kit.CoreFileKit';
 function getAllVolumes(callback: AsyncCallback<Array<Volume>>): void
 ```
 
-Obtains information about all volumes of this external storage device. This API uses an asynchronous callback to
-return the result.
+Obtains information about all volumes of this external storage device. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
+
+<!--Device-volumeManager-function getAllVolumes(callback: AsyncCallback<Array<Volume>>): void--><!--Device-volumeManager-function getAllVolumes(callback: AsyncCallback<Array<Volume>>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -27,7 +28,7 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;Volume&gt;&gt; | Yes | Callback used to return information about all available volumes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Volume>> | Yes | Callback used to return information about all available volumes. |
 
 **Error codes:**
 
@@ -35,7 +36,7 @@ return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:Mandatoryparameters are left unspecified; |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:Mandatory parameters are left unspecified; |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
@@ -46,12 +47,13 @@ return the result.
 function getAllVolumes(): Promise<Array<Volume>>
 ```
 
-Obtains information about all volumes of this external storage device. This API uses a promise to return the
-result.
+Obtains information about all volumes of this external storage device. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
+
+<!--Device-volumeManager-function getAllVolumes(): Promise<Array<Volume>>--><!--Device-volumeManager-function getAllVolumes(): Promise<Array<Volume>>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -61,7 +63,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Volume&gt;&gt; | Promise used to return the information about all available volume devices. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Volume>> | Promise used to return the information about all available volume devices. |
 
 **Error codes:**
 
@@ -69,7 +71,7 @@ result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:Mandatoryparameters are left unspecified; |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:Mandatory parameters are left unspecified; |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 

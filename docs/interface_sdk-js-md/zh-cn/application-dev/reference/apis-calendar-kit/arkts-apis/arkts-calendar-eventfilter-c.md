@@ -4,7 +4,15 @@
 
 **起始版本：** 10
 
+<!--Device-calendarManager-class EventFilter--><!--Device-calendarManager-class EventFilter-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
+
+## 导入模块
+
+```TypeScript
+import { calendarManager } from '@kit.CalendarKit';
+```
 
 ## filterById
 
@@ -15,6 +23,8 @@ static filterById(ids: number[]): EventFilter
 根据日程id过滤日程。
 
 **起始版本：** 10
+
+<!--Device-EventFilter-static filterById(ids: number[]): EventFilter--><!--Device-EventFilter-static filterById(ids: number[]): EventFilter-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -28,7 +38,7 @@ static filterById(ids: number[]): EventFilter
 
 | 类型 | 说明 |
 | --- | --- |
-| EventFilter | 返回日程过滤器对象。 |
+| [EventFilter](arkts-calendar-eventfilter-c.md) | 返回日程过滤器对象。 |
 
 **示例：**
 
@@ -95,6 +105,8 @@ static filterByTime(start: number, end: number): EventFilter
 
 **起始版本：** 10
 
+<!--Device-EventFilter-static filterByTime(start: number, end: number): EventFilter--><!--Device-EventFilter-static filterByTime(start: number, end: number): EventFilter-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
@@ -108,7 +120,7 @@ static filterByTime(start: number, end: number): EventFilter
 
 | 类型 | 说明 |
 | --- | --- |
-| EventFilter | 返回日程过滤器对象。 |
+| [EventFilter](arkts-calendar-eventfilter-c.md) | 返回日程过滤器对象。 |
 
 **示例：**
 
@@ -170,6 +182,8 @@ static filterByTitle(title: string): EventFilter
 
 **起始版本：** 10
 
+<!--Device-EventFilter-static filterByTitle(title: string): EventFilter--><!--Device-EventFilter-static filterByTitle(title: string): EventFilter-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
 
 **参数：**
@@ -182,7 +196,7 @@ static filterByTitle(title: string): EventFilter
 
 | 类型 | 说明 |
 | --- | --- |
-| EventFilter | 返回日程过滤器对象。 |
+| [EventFilter](arkts-calendar-eventfilter-c.md) | 返回日程过滤器对象。 |
 
 **示例：**
 

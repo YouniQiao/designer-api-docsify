@@ -1,9 +1,10 @@
 # DistributedAccountAbility
 
-Provides APIs for querying and updating the login state of a distributed account. You must obtain a
-**DistributedAccountAbility** instance first.
+Provides APIs for querying and updating the login state of a distributed account. You must obtain a **DistributedAccountAbility** instance first.
 
 **Since:** 7
+
+<!--Device-distributedAccount-interface DistributedAccountAbility--><!--Device-distributedAccount-interface DistributedAccountAbility-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -19,14 +20,15 @@ import { distributedAccount } from '@kit.BasicServicesKit';
 getOsAccountDistributedInfoByLocalId(localId: number, callback: AsyncCallback<DistributedInfo>): void
 ```
 
-Obtains distributed information about an OS account. This API uses an asynchronous callback to return the
-result.
+Obtains distributed information about an OS account. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** 
 - API version 20+: ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or (ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.GET_DISTRIBUTED_ACCOUNTS)
 - API version 10 - 19: ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-DistributedAccountAbility-getOsAccountDistributedInfoByLocalId(localId: int, callback: AsyncCallback<DistributedInfo>): void--><!--Device-DistributedAccountAbility-getOsAccountDistributedInfoByLocalId(localId: int, callback: AsyncCallback<DistributedInfo>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -37,7 +39,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | AsyncCallback&lt;DistributedInfo&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined** and **data** is the distributed account information obtained.Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<DistributedInfo> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the distributed account information obtained.Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -85,6 +87,8 @@ Obtains distributed information about an OS account. This API uses a promise to 
 - API version 20+: ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or (ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.GET_DISTRIBUTED_ACCOUNTS)
 - API version 10 - 19: ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-DistributedAccountAbility-getOsAccountDistributedInfoByLocalId(localId: int): Promise<DistributedInfo>--><!--Device-DistributedAccountAbility-getOsAccountDistributedInfoByLocalId(localId: int): Promise<DistributedInfo>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -99,7 +103,7 @@ Obtains distributed information about an OS account. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DistributedInfo&gt; | Promise used to return the distributed account information obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DistributedInfo> | Promise used to return the distributed account information obtained. |
 
 **Error codes:**
 
@@ -137,12 +141,13 @@ try {
 setOsAccountDistributedInfoByLocalId(localId: number, distributedInfo: DistributedInfo, callback: AsyncCallback<void>): void
 ```
 
-Sets the distributed information for an OS account. This API uses an asynchronous callback to return the
-result.
+Sets the distributed information for an OS account. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
+
+<!--Device-DistributedAccountAbility-setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedInfo, callback: AsyncCallback<void>): void--><!--Device-DistributedAccountAbility-setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedInfo, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -153,8 +158,8 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| distributedInfo | DistributedInfo | Yes | Distributed account information to set. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the distributedinformation is set successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
+| distributedInfo | [DistributedInfo](arkts-basicservices-distributedinfo-i.md) | Yes | Distributed account information to set. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the distributed information is set successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -204,6 +209,8 @@ Sets the distributed information for an OS account. This API uses a promise to r
 
 **Required permissions:** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
 
+<!--Device-DistributedAccountAbility-setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedInfo): Promise<void>--><!--Device-DistributedAccountAbility-setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedInfo): Promise<void>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -213,13 +220,13 @@ Sets the distributed information for an OS account. This API uses a promise to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| distributedInfo | DistributedInfo | Yes | Distributed account information to set. |
+| distributedInfo | [DistributedInfo](arkts-basicservices-distributedinfo-i.md) | Yes | Distributed account information to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Provides playback control and component management for boids simulation.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class BoidsSimWorld--><!--Device-unnamed-export declare class BoidsSimWorld-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
@@ -20,6 +22,8 @@ Add a boids simulation component to the given node.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BoidsSimWorld-addBoidsSimComponent(node: Node, param: BoidsSimParameters): void--><!--Device-BoidsSimWorld-addBoidsSimComponent(node: Node, param: BoidsSimParameters): void-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
@@ -28,8 +32,8 @@ Add a boids simulation component to the given node.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | Node | Yes | the node to add the component to |
-| param | BoidsSimParameters | Yes | boids simulation parameters |
+| node | [Node](arkts-arkgraphics3d-node-i.md) | Yes | the node to add the component to |
+| param | [BoidsSimParameters](arkts-arkgraphics3d-boidssimparameters-i-sys.md) | Yes | boids simulation parameters |
 
 ## addBoidsSimGravityComponent
 
@@ -43,6 +47,8 @@ Add a gravity field component to the given node.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BoidsSimWorld-addBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void--><!--Device-BoidsSimWorld-addBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
@@ -51,8 +57,8 @@ Add a gravity field component to the given node.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | Node | Yes | the node to add the component to |
-| param | BoidsSimGravityParameters | Yes | gravity field parameters |
+| node | [Node](arkts-arkgraphics3d-node-i.md) | Yes | the node to add the component to |
+| param | [BoidsSimGravityParameters](arkts-arkgraphics3d-boidssimgravityparameters-i-sys.md) | Yes | gravity field parameters |
 
 ## addBoidsSimRepulsionComponent
 
@@ -66,6 +72,8 @@ Add a repulsion field component to the given node.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BoidsSimWorld-addBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): void--><!--Device-BoidsSimWorld-addBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): void-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
@@ -74,8 +82,8 @@ Add a repulsion field component to the given node.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | Node | Yes | the node to add the component to |
-| param | BoidsSimRepulsionParameters | Yes | repulsion field parameters |
+| node | [Node](arkts-arkgraphics3d-node-i.md) | Yes | the node to add the component to |
+| param | [BoidsSimRepulsionParameters](arkts-arkgraphics3d-boidssimrepulsionparameters-i-sys.md) | Yes | repulsion field parameters |
 
 ## getBoidsSimComponent
 
@@ -89,6 +97,8 @@ Get the boids simulation component parameters from the given node.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BoidsSimWorld-getBoidsSimComponent(node: Node): BoidsSimParameters | null--><!--Device-BoidsSimWorld-getBoidsSimComponent(node: Node): BoidsSimParameters | null-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
@@ -97,13 +107,13 @@ Get the boids simulation component parameters from the given node.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | Node | Yes | the node to query |
+| node | [Node](arkts-arkgraphics3d-node-i.md) | Yes | the node to query |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| BoidsSimParameters | boids simulation parameters, or null if not found |
+| [BoidsSimParameters](arkts-arkgraphics3d-boidssimparameters-i-sys.md) | boids simulation parameters, or null if not found |
 
 ## getBoidsSimGravityComponent
 
@@ -117,6 +127,8 @@ Get the gravity field component parameters from the given node.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BoidsSimWorld-getBoidsSimGravityComponent(node: Node): BoidsSimGravityParameters | null--><!--Device-BoidsSimWorld-getBoidsSimGravityComponent(node: Node): BoidsSimGravityParameters | null-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
@@ -125,13 +137,13 @@ Get the gravity field component parameters from the given node.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | Node | Yes | the node to query |
+| node | [Node](arkts-arkgraphics3d-node-i.md) | Yes | the node to query |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| BoidsSimGravityParameters | gravity field parameters, or null if not found |
+| [BoidsSimGravityParameters](arkts-arkgraphics3d-boidssimgravityparameters-i-sys.md) | gravity field parameters, or null if not found |
 
 ## getBoidsSimRepulsionComponent
 
@@ -145,6 +157,8 @@ Get the repulsion field component parameters from the given node.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BoidsSimWorld-getBoidsSimRepulsionComponent(node: Node): BoidsSimRepulsionParameters | null--><!--Device-BoidsSimWorld-getBoidsSimRepulsionComponent(node: Node): BoidsSimRepulsionParameters | null-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
@@ -153,13 +167,13 @@ Get the repulsion field component parameters from the given node.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | Node | Yes | the node to query |
+| node | [Node](arkts-arkgraphics3d-node-i.md) | Yes | the node to query |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| BoidsSimRepulsionParameters | repulsion field parameters, or null if not found |
+| [BoidsSimRepulsionParameters](arkts-arkgraphics3d-boidssimrepulsionparameters-i-sys.md) | repulsion field parameters, or null if not found |
 
 ## pause
 
@@ -172,6 +186,8 @@ Pause the simulation.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BoidsSimWorld-pause(): void--><!--Device-BoidsSimWorld-pause(): void-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -189,6 +205,8 @@ Start or resume the simulation.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BoidsSimWorld-play(): void--><!--Device-BoidsSimWorld-play(): void-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
@@ -205,6 +223,8 @@ Remove the boids simulation component from the given node.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BoidsSimWorld-removeBoidsSimComponent(node: Node): void--><!--Device-BoidsSimWorld-removeBoidsSimComponent(node: Node): void-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
@@ -213,7 +233,7 @@ Remove the boids simulation component from the given node.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | Node | Yes | the node to remove the component from |
+| node | [Node](arkts-arkgraphics3d-node-i.md) | Yes | the node to remove the component from |
 
 ## removeBoidsSimGravityComponent
 
@@ -227,6 +247,8 @@ Remove the gravity field component from the given node.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BoidsSimWorld-removeBoidsSimGravityComponent(node: Node): void--><!--Device-BoidsSimWorld-removeBoidsSimGravityComponent(node: Node): void-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
@@ -235,7 +257,7 @@ Remove the gravity field component from the given node.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | Node | Yes | the node to remove the component from |
+| node | [Node](arkts-arkgraphics3d-node-i.md) | Yes | the node to remove the component from |
 
 ## removeBoidsSimRepulsionComponent
 
@@ -249,6 +271,8 @@ Remove the repulsion field component from the given node.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BoidsSimWorld-removeBoidsSimRepulsionComponent(node: Node): void--><!--Device-BoidsSimWorld-removeBoidsSimRepulsionComponent(node: Node): void-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
@@ -257,7 +281,7 @@ Remove the repulsion field component from the given node.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | Node | Yes | the node to remove the component from |
+| node | [Node](arkts-arkgraphics3d-node-i.md) | Yes | the node to remove the component from |
 
 ## setBoidsSimComponent
 
@@ -271,6 +295,8 @@ Update the boids simulation component parameters on the given node.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BoidsSimWorld-setBoidsSimComponent(node: Node, param: BoidsSimParameters): void--><!--Device-BoidsSimWorld-setBoidsSimComponent(node: Node, param: BoidsSimParameters): void-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
@@ -279,8 +305,8 @@ Update the boids simulation component parameters on the given node.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | Node | Yes | the node to update |
-| param | BoidsSimParameters | Yes | boids simulation parameters |
+| node | [Node](arkts-arkgraphics3d-node-i.md) | Yes | the node to update |
+| param | [BoidsSimParameters](arkts-arkgraphics3d-boidssimparameters-i-sys.md) | Yes | boids simulation parameters |
 
 ## setBoidsSimGravityComponent
 
@@ -294,6 +320,8 @@ Update the gravity field component parameters on the given node.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BoidsSimWorld-setBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void--><!--Device-BoidsSimWorld-setBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
@@ -302,8 +330,8 @@ Update the gravity field component parameters on the given node.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | Node | Yes | the node to update |
-| param | BoidsSimGravityParameters | Yes | gravity field parameters |
+| node | [Node](arkts-arkgraphics3d-node-i.md) | Yes | the node to update |
+| param | [BoidsSimGravityParameters](arkts-arkgraphics3d-boidssimgravityparameters-i-sys.md) | Yes | gravity field parameters |
 
 ## setBoidsSimRepulsionComponent
 
@@ -317,6 +345,8 @@ Update the repulsion field component parameters on the given node.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BoidsSimWorld-setBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): void--><!--Device-BoidsSimWorld-setBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): void-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
@@ -325,8 +355,8 @@ Update the repulsion field component parameters on the given node.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | Node | Yes | the node to update |
-| param | BoidsSimRepulsionParameters | Yes | repulsion field parameters |
+| node | [Node](arkts-arkgraphics3d-node-i.md) | Yes | the node to update |
+| param | [BoidsSimRepulsionParameters](arkts-arkgraphics3d-boidssimrepulsionparameters-i-sys.md) | Yes | repulsion field parameters |
 
 ## stop
 
@@ -339,6 +369,8 @@ Stop the simulation and reset all boids to their initial state.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BoidsSimWorld-stop(): void--><!--Device-BoidsSimWorld-stop(): void-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -357,6 +389,8 @@ Whether the simulation is currently playing.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BoidsSimWorld-get isPlaying(): boolean--><!--Device-BoidsSimWorld-get isPlaying(): boolean-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

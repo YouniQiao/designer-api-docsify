@@ -1,5 +1,11 @@
 # deleteUninstallDisposedRule（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appControl } from '@kit.AbilityKit';
+```
+
 ## deleteUninstallDisposedRule
 
 ```TypeScript
@@ -11,6 +17,8 @@ function deleteUninstallDisposedRule(appIdentifier: string, appIndex?: number): 
 **起始版本：** 15
 
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS
+
+<!--Device-appControl-function deleteUninstallDisposedRule(appIdentifier: string, appIndex?: int): void--><!--Device-appControl-function deleteUninstallDisposedRule(appIdentifier: string, appIndex?: int): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 

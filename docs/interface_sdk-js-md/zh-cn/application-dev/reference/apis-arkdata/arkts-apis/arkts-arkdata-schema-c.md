@@ -4,12 +4,19 @@
 
 STRICT：STRICT模式要求用户插入的值必须与Schema定义严格匹配，字段数量和格式都不能有差异。如果不匹配，数据库将在插入数据时返回错误。
 
-COMPATIBLE：选择为COMPATIBLE模式时，数据库在检查Value格式时较为宽松，只要Value具有Schema描述的特征即可，允许存在额外字段。例如，定义了id、name字段时，可以插入id、name、age等多个字
-段。
+COMPATIBLE：选择为COMPATIBLE模式时，数据库在检查Value格式时较为宽松，只要Value具有Schema描述的特征即可，允许存在额外字段。例如，定义了id、name字段时，可以插入id、name、age等多个字段。
 
 **起始版本：** 9
 
+<!--Device-distributedKVStore-class Schema--><!--Device-distributedKVStore-class Schema-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
+## 导入模块
+
+```TypeScript
+import { distributedKVStore } from '@kit.ArkData';
+```
 
 ## constructor
 
@@ -22,6 +29,8 @@ constructor()
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Schema-constructor()--><!--Device-Schema-constructor()-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -61,6 +70,8 @@ set indexes(indexes: Array<string>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Schema-set indexes(indexes: Array<string>)--><!--Device-Schema-set indexes(indexes: Array<string>)-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## mode
@@ -76,6 +87,8 @@ set mode(mode: number)
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Schema-set mode(mode: int)--><!--Device-Schema-set mode(mode: int)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -93,6 +106,8 @@ set root(root: FieldNode)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Schema-set root(root: FieldNode)--><!--Device-Schema-set root(root: FieldNode)-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## skip
@@ -108,6 +123,8 @@ set skip(skip: number)
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Schema-set skip(skip: int)--><!--Device-Schema-set skip(skip: int)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 

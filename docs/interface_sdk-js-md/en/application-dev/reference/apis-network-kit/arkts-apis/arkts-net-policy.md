@@ -4,6 +4,8 @@ Provides interfaces to manage network policy rules.
 
 **Since:** 10
 
+<!--Device-unnamed-declare namespace policy--><!--Device-unnamed-declare namespace policy-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import
@@ -19,7 +21,7 @@ import { policy } from '@kit.NetworkKit';
 | Name | Description |
 | --- | --- |
 | [getNetAccessPolicy](arkts-network-getnetaccesspolicy-f.md#getnetaccesspolicy-1) | Query the network access policy of the calling application. |
-| [showAppNetPolicySettings](arkts-network-showappnetpolicysettings-f.md#showappnetpolicysettings-1) | Open the network settings interface of the application, which is presented in a semi-modal form and can  be used to configure the network connection method. This API uses a promise to return the result. |
+| [showAppNetPolicySettings](arkts-network-showappnetpolicysettings-f.md#showappnetpolicysettings-1) | Open the network settings interface of the application, which is presented in a semi-modal form and can be used to configure the network connection method. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions（系统接口）

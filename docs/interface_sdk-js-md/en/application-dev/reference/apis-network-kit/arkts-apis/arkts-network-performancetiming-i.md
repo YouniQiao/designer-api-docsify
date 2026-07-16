@@ -4,6 +4,8 @@ Counting the time taken of various stages of HTTP request.
 
 **Since:** 12
 
+<!--Device-http-export interface PerformanceTiming--><!--Device-http-export interface PerformanceTiming-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Time taken from startup to DNS resolution completion, in milliseconds.
 
 **Since:** 12
 
+<!--Device-PerformanceTiming-dnsTiming: double--><!--Device-PerformanceTiming-dnsTiming: double-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## firstReceiveTiming
@@ -37,6 +41,8 @@ Time taken from startup to receiving the first byte, in milliseconds.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-PerformanceTiming-firstReceiveTiming: double--><!--Device-PerformanceTiming-firstReceiveTiming: double-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -52,6 +58,8 @@ Time taken from startup to start sending the first byte, in milliseconds.
 
 **Since:** 12
 
+<!--Device-PerformanceTiming-firstSendTiming: double--><!--Device-PerformanceTiming-firstSendTiming: double-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## redirectTiming
@@ -65,6 +73,8 @@ Time taken from startup to completion of all redirection steps, in milliseconds.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-PerformanceTiming-redirectTiming: double--><!--Device-PerformanceTiming-redirectTiming: double-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -80,6 +90,8 @@ Time taken from HTTP Request to body completion, in milliseconds.
 
 **Since:** 12
 
+<!--Device-PerformanceTiming-responseBodyTiming: double--><!--Device-PerformanceTiming-responseBodyTiming: double-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## responseHeaderTiming
@@ -93,6 +105,8 @@ Time taken from HTTP request to header completion, in milliseconds.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-PerformanceTiming-responseHeaderTiming: double--><!--Device-PerformanceTiming-responseHeaderTiming: double-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -108,6 +122,8 @@ Time taken from startup to TCP connection completion, in milliseconds.
 
 **Since:** 12
 
+<!--Device-PerformanceTiming-tcpTiming: double--><!--Device-PerformanceTiming-tcpTiming: double-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## tlsTiming
@@ -121,6 +137,8 @@ Time taken from startup to TLS connection completion, in milliseconds.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-PerformanceTiming-tlsTiming: double--><!--Device-PerformanceTiming-tlsTiming: double-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -136,6 +154,8 @@ Time taken from startup to the completion of the request, in milliseconds.
 
 **Since:** 12
 
+<!--Device-PerformanceTiming-totalFinishTiming: double--><!--Device-PerformanceTiming-totalFinishTiming: double-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## totalTiming
@@ -149,6 +169,8 @@ Time taken from HTTP Request to callback to the application, in milliseconds.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-PerformanceTiming-totalTiming: double--><!--Device-PerformanceTiming-totalTiming: double-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

@@ -1,0 +1,18 @@
+# Paragraph
+
+```TypeScript
+declare type Paragraph = import('../api/@ohos.graphics.text').default.Paragraph
+```
+
+Implements a carrier that stores the text content and style. It supports operations such as layout and drawing.
+
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-unnamed-declare type Paragraph = import('../api/@ohos.graphics.text').default.Paragraph--><!--Device-unnamed-declare type Paragraph = import('../api/@ohos.graphics.text').default.Paragraph-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Property type:** import('../api/@ohos.graphics.text').default.Paragraph
+

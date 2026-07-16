@@ -4,7 +4,15 @@
 
 **起始版本：** 20
 
+<!--Device-cloudSync-class MultiDownloadProgress--><!--Device-cloudSync-class MultiDownloadProgress-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+## 导入模块
+
+```TypeScript
+import { cloudSync } from '@kit.CoreFileKit';
+```
 
 ## getFailedFiles
 
@@ -16,13 +24,15 @@ getFailedFiles(): Array<FailedFileInfo>
 
 **起始版本：** 20
 
+<!--Device-MultiDownloadProgress-getFailedFiles(): Array<FailedFileInfo>--><!--Device-MultiDownloadProgress-getFailedFiles(): Array<FailedFileInfo>-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;FailedFileInfo&gt; | 返回缓存失败的文件URI列表及其对应的错误类型。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<FailedFileInfo> | 返回缓存失败的文件URI列表及其对应的错误类型。 |
 
 **错误码：**
 
@@ -73,13 +83,15 @@ getSuccessfulFiles(): Array<string>
 
 **起始版本：** 20
 
+<!--Device-MultiDownloadProgress-getSuccessfulFiles(): Array<string>--><!--Device-MultiDownloadProgress-getSuccessfulFiles(): Array<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 数组类型，返回缓存成功的文件URI列表。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 数组类型，返回缓存成功的文件URI列表。 |
 
 **错误码：**
 
@@ -130,6 +142,8 @@ downloadedSize: number
 
 **起始版本：** 20
 
+<!--Device-MultiDownloadProgress-downloadedSize: long--><!--Device-MultiDownloadProgress-downloadedSize: long-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## errType
@@ -143,6 +157,8 @@ errType: DownloadErrorType
 **类型：** DownloadErrorType
 
 **起始版本：** 20
+
+<!--Device-MultiDownloadProgress-errType: DownloadErrorType--><!--Device-MultiDownloadProgress-errType: DownloadErrorType-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -158,6 +174,8 @@ failedCount: number
 
 **起始版本：** 20
 
+<!--Device-MultiDownloadProgress-failedCount: int--><!--Device-MultiDownloadProgress-failedCount: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## state
@@ -171,6 +189,8 @@ state: State
 **类型：** State
 
 **起始版本：** 20
+
+<!--Device-MultiDownloadProgress-state: State--><!--Device-MultiDownloadProgress-state: State-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -186,6 +206,8 @@ successfulCount: number
 
 **起始版本：** 20
 
+<!--Device-MultiDownloadProgress-successfulCount: int--><!--Device-MultiDownloadProgress-successfulCount: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## taskId
@@ -199,6 +221,8 @@ taskId: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-MultiDownloadProgress-taskId: long--><!--Device-MultiDownloadProgress-taskId: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -214,6 +238,8 @@ totalCount: number
 
 **起始版本：** 20
 
+<!--Device-MultiDownloadProgress-totalCount: int--><!--Device-MultiDownloadProgress-totalCount: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## totalSize
@@ -227,6 +253,8 @@ totalSize: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-MultiDownloadProgress-totalSize: long--><!--Device-MultiDownloadProgress-totalSize: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

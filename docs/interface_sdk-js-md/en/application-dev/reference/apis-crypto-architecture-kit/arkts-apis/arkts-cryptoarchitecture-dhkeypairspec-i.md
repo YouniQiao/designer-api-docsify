@@ -1,14 +1,14 @@
 # DHKeyPairSpec
 
-Defines a child class of [AsyKeySpec](arkts-cryptoarchitecture-asykeyspec-i.md) used to specify full parameters of the
-public and private keys in the DH algorithm.
+Defines a child class of [AsyKeySpec](arkts-cryptoarchitecture-asykeyspec-i.md) used to specify full parameters of the public and private keys in the DH algorithm.
 
-To generate a key based on key parameters, pass it to
-[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec-1) to create a key generator.
+To generate a key based on key parameters, pass it to [createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec-1) to create a key generator.
 
 **Inheritance/Implementation:** DHKeyPairSpec extends [AsyKeySpec](arkts-cryptoarchitecture-asykeyspec-i.md)
 
 **Since:** 11
+
+<!--Device-cryptoFramework-interface DHKeyPairSpec extends AsyKeySpec--><!--Device-cryptoFramework-interface DHKeyPairSpec extends AsyKeySpec-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -34,6 +34,8 @@ Common parameters of the public and private keys in the DH algorithm.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DHKeyPairSpec-params: DHCommonParamsSpec--><!--Device-DHKeyPairSpec-params: DHCommonParamsSpec-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 11: SystemCapability.Security.CryptoFramework
@@ -52,6 +54,8 @@ Public key **pk** in the DH algorithm.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DHKeyPairSpec-pk: bigint--><!--Device-DHKeyPairSpec-pk: bigint-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 11: SystemCapability.Security.CryptoFramework
@@ -69,6 +73,8 @@ Private key **sk** in the DH algorithm.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DHKeyPairSpec-sk: bigint--><!--Device-DHKeyPairSpec-sk: bigint-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey

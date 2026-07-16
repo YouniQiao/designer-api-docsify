@@ -1,5 +1,11 @@
 # createCmsParser
 
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
+
 ## createCmsParser
 
 ```TypeScript
@@ -10,7 +16,9 @@ function createCmsParser(): CmsParser
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cert-function createCmsParser(): CmsParser--><!--Device-cert-function createCmsParser(): CmsParser-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -18,7 +26,7 @@ function createCmsParser(): CmsParser
 
 | 类型 | 说明 |
 | --- | --- |
-| CmsParser | CmsParser对象。 |
+| [CmsParser](arkts-devicecertificate-cmsparser-i.md) | CmsParser对象。 |
 
 **错误码：**
 

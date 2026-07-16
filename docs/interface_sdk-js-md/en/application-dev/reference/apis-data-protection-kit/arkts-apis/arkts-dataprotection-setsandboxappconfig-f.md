@@ -12,14 +12,13 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function setSandboxAppConfig(configInfo: string): Promise<void>
 ```
 
-Sets the configuration information of the sandbox application. The configuration information is in JSON string
-format and can be set by the application. After the API is successfully called, the sandbox application runs
-based on the configuration information. This API uses a promise to return the result.
+Sets the configuration information of the sandbox application. The configuration information is in JSON string format and can be set by the application. After the API is successfully called, the sandbox application runs based on the configuration information. This API uses a promise to return the result.
 
-This API sets the sandbox application configuration so that the application can pass custom parameters as
-required.
+This API sets the sandbox application configuration so that the application can pass custom parameters as required.
 
 **Since:** 11
+
+<!--Device-dlpPermission-function setSandboxAppConfig(configInfo: string): Promise<void>--><!--Device-dlpPermission-function setSandboxAppConfig(configInfo: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -33,7 +32,7 @@ required.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

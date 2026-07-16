@@ -4,6 +4,8 @@ Enumerates the application clone preference modes.
 
 **Since:** 26.1.0
 
+<!--Device-bundleManager-export enum AppClonePreferenceMode--><!--Device-bundleManager-export enum AppClonePreferenceMode-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -19,6 +21,8 @@ Always prompts the user to select an application.
 **Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AppClonePreferenceMode-ALWAYS_ASK = 0--><!--Device-AppClonePreferenceMode-ALWAYS_ASK = 0-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -36,6 +40,8 @@ Uses the main application by default.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AppClonePreferenceMode-MAIN_APP = 1--><!--Device-AppClonePreferenceMode-MAIN_APP = 1-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -51,6 +57,8 @@ Uses the application clone by default.
 **Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AppClonePreferenceMode-CLONE_APP = 2--><!--Device-AppClonePreferenceMode-CLONE_APP = 2-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

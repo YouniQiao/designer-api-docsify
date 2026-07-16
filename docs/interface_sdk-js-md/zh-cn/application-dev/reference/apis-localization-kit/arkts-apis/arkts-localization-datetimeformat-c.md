@@ -8,7 +8,15 @@
 
 **替代接口：** org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
 
+<!--Device-intl-export class DateTimeFormat--><!--Device-intl-export class DateTimeFormat-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+```
 
 ## constructor
 
@@ -24,9 +32,11 @@ constructor()
 
 **替代接口：** org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeFormat-constructor()--><!--Device-DateTimeFormat-constructor()-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -54,9 +64,11 @@ constructor(locale: string | Array<string>, options?: DateTimeOptions)
 
 **替代接口：** org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeFormat-constructor(locale: string | Array<string>, options?: DateTimeOptions)--><!--Device-DateTimeFormat-constructor(locale: string | Array<string>, options?: DateTimeOptions)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -64,8 +76,8 @@ constructor(locale: string | Array<string>, options?: DateTimeOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
-| options | DateTimeOptions | 否 | 创建时间日期格式化对象时可设置的配置项。<br>若所有选项均未设置时，year、month、day三个属性的默认值为numeric。<br>默认值：所有属性都取默认值时的配置项。 |
+| locale | string \| Array<string> | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
+| options | [DateTimeOptions](arkts-localization-datetimeoptions-i.md) | 否 | 创建时间日期格式化对象时可设置的配置项。<br>若所有选项均未设置时，year、month、day三个属性的默认值为numeric。<br>默认值：所有属性都取默认值时的配置项。 |
 
 **示例：**
 
@@ -94,9 +106,11 @@ format(date: Date): string
 
 **替代接口：** org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeFormat-format(date: Date): string--><!--Device-DateTimeFormat-format(date: Date): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -142,9 +156,11 @@ formatRange(startDate: Date, endDate: Date): string
 
 **替代接口：** org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeFormat-formatRange(startDate: Date, endDate: Date): string--><!--Device-DateTimeFormat-formatRange(startDate: Date, endDate: Date): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -188,9 +204,11 @@ resolvedOptions(): DateTimeOptions
 
 **替代接口：** org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DateTimeFormat-resolvedOptions(): DateTimeOptions--><!--Device-DateTimeFormat-resolvedOptions(): DateTimeOptions-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -198,7 +216,7 @@ resolvedOptions(): DateTimeOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| DateTimeOptions | 时间日期格式化对象设置的配置项。 |
+| [DateTimeOptions](arkts-localization-datetimeoptions-i.md) | 时间日期格式化对象设置的配置项。 |
 
 **示例：**
 

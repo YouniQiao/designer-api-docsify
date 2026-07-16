@@ -1,5 +1,11 @@
 # createMac
 
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+```
+
 ## createMac
 
 ```TypeScript
@@ -12,7 +18,9 @@ function createMac(algName: string): Mac
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cryptoFramework-function createMac(algName: string): Mac--><!--Device-cryptoFramework-function createMac(algName: string): Mac-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Mac
@@ -28,7 +36,7 @@ function createMac(algName: string): Mac
 
 | 类型 | 说明 |
 | --- | --- |
-| Mac | 返回由输入算法指定生成的[Mac](arkts-cryptoarchitecture-mac-i.md)对象。 |
+| [Mac](arkts-cryptoarchitecture-mac-i.md) | 返回由输入算法指定生成的[Mac](arkts-cryptoarchitecture-mac-i.md)对象。 |
 
 **错误码：**
 
@@ -66,7 +74,9 @@ function createMac(macSpec: MacSpec): Mac
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cryptoFramework-function createMac(macSpec: MacSpec): Mac--><!--Device-cryptoFramework-function createMac(macSpec: MacSpec): Mac-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Mac
 
@@ -74,13 +84,13 @@ function createMac(macSpec: MacSpec): Mac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| macSpec | MacSpec | 是 | 根据消息认证码的不同算法，指定入参参数，支持算法请参考[MAC消息认证码算法规格](../../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。 |
+| macSpec | [MacSpec](arkts-cryptoarchitecture-macspec-i.md) | 是 | 根据消息认证码的不同算法，指定入参参数，支持算法请参考[MAC消息认证码算法规格](../../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Mac | 返回由指定入参参数生成的[Mac](arkts-cryptoarchitecture-mac-i.md)对象。 |
+| [Mac](arkts-cryptoarchitecture-mac-i.md) | 返回由指定入参参数生成的[Mac](arkts-cryptoarchitecture-mac-i.md)对象。 |
 
 **错误码：**
 

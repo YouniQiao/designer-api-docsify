@@ -12,10 +12,11 @@ import { systemSoundManager } from '@kit.AudioKit';
 function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>
 ```
 
-Creates a SystemSoundPlayer instance. This function uses a promise to return the result.
-This player can be used to play some system sounds for media or camera actions.
+Creates a SystemSoundPlayer instance. This function uses a promise to return the result.This player can be used to play some system sounds for media or camera actions.
 
 **Since:** 23
+
+<!--Device-systemSoundManager-function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>--><!--Device-systemSoundManager-function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -23,7 +24,7 @@ This player can be used to play some system sounds for media or camera actions.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SystemSoundPlayer \| null&gt; | Promise used to return the result.If the operation is successful, a SystemSoundPlayer instance is returned.Otherwise, null is returned. The instance is used for loading and playback. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SystemSoundPlayer \| null> | Promise used to return the result.If the operation is successful, a SystemSoundPlayer instance is returned.Otherwise, null is returned. The instance is used for loading and playback. |
 
 **Error codes:**
 

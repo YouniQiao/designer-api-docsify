@@ -1,5 +1,11 @@
 # getSeniorModeStateForApp（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { config } from '@kit.AccessibilityKit';
+```
+
 ## getSeniorModeStateForApp
 
 ```TypeScript
@@ -13,6 +19,8 @@ Get the senior mode state for app.
 **需要权限：** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-config-function getSeniorModeStateForApp(bundleName: string, appIndex?: int): Promise<boolean>--><!--Device-config-function getSeniorModeStateForApp(bundleName: string, appIndex?: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -29,7 +37,7 @@ Get the senior mode state for app.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns {@code true} if senior mode is enabled; returns {@code false} otherwise. |
+| Promise<boolean> | Returns {@code true} if senior mode is enabled; returns {@code false} otherwise. |
 
 **错误码：**
 

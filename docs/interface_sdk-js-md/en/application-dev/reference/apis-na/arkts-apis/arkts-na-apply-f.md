@@ -10,16 +10,25 @@ function apply<T, A extends readonly any[], R>(
     ): R
 ```
 
-Calls the function with the specified object as the this value
-and the elements of specified array as the arguments.
+Calls the function with the specified object as the this value and the elements of specified array as the arguments.
+
+<!--Device-Reflect-function apply<T, A extends readonly any[], R>(
+        target: (this: T, ...args: A) => R,
+        thisArgument: T,
+        argumentsList: Readonly<A>,
+    ): R--><!--Device-Reflect-function apply<T, A extends readonly any[], R>(
+        target: (this: T, ...args: A) => R,
+        thisArgument: T,
+        argumentsList: Readonly<A>,
+    ): R-End-->
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | (this: T, ...args: A) =&gt; R | Yes |  |
+| target | (this: T, ...args: A) => R | Yes |  |
 | thisArgument | T | Yes |  |
-| argumentsList | Readonly&lt;A&gt; | Yes |  |
+| argumentsList | [Readonly](arkts-na-readonly-t.md)<A> | Yes |  |
 
 **Return value:**
 
@@ -34,13 +43,15 @@ and the elements of specified array as the arguments.
 function apply(target: Function, thisArgument: any, argumentsList: ArrayLike<any>): any
 ```
 
+<!--Device-Reflect-function apply(target: Function, thisArgument: any, argumentsList: ArrayLike<any>): any--><!--Device-Reflect-function apply(target: Function, thisArgument: any, argumentsList: ArrayLike<any>): any-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | Function | Yes |  |
+| target | [Function](arkts-na-function-i.md) | Yes |  |
 | thisArgument | any | Yes |  |
-| argumentsList | ArrayLike&lt;any&gt; | Yes |  |
+| argumentsList | [ArrayLike](arkts-na-arraylike-i.md)<any> | Yes |  |
 
 **Return value:**
 

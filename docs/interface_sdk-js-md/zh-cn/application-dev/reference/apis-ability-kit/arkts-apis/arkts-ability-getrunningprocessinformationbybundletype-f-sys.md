@@ -1,5 +1,11 @@
 # getRunningProcessInformationByBundleType（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+```
+
 ## getRunningProcessInformationByBundleType
 
 ```TypeScript
@@ -12,6 +18,10 @@ function getRunningProcessInformationByBundleType(
 **起始版本：** 12
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
+
+<!--Device-appManager-function getRunningProcessInformationByBundleType(
+    bundleType: bundleManager.BundleType): Promise<Array<ProcessInformation>>--><!--Device-appManager-function getRunningProcessInformationByBundleType(
+    bundleType: bundleManager.BundleType): Promise<Array<ProcessInformation>>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -27,7 +37,7 @@ function getRunningProcessInformationByBundleType(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;ProcessInformation&gt;&gt; | Promise对象，返回特定包类型的运行进程的信息。 |
+| Promise<Array<ProcessInformation>> | Promise对象，返回特定包类型的运行进程的信息。 |
 
 **错误码：**
 

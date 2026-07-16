@@ -16,6 +16,8 @@ Creates a sendable image PixelMap from image PixelMap.
 
 **Since:** 12
 
+<!--Device-sendableImage-function convertFromPixelMap(pixelmap: image.PixelMap): PixelMap--><!--Device-sendableImage-function convertFromPixelMap(pixelmap: image.PixelMap): PixelMap-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
@@ -28,7 +30,7 @@ Creates a sendable image PixelMap from image PixelMap.
 
 | Type | Description |
 | --- | --- |
-| PixelMap | Returns the instance if the operation is successful.Otherwise, an exception will be thrown. |
+| [PixelMap](arkts-image-pixelmap-i.md) | Returns the instance if the operation is successful.Otherwise, an exception will be thrown. |
 
 **Error codes:**
 

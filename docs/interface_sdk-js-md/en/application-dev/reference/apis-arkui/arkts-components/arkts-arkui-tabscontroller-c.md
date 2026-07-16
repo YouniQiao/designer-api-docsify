@@ -1,9 +1,10 @@
 # TabsController
 
-Defines a tab controller, which is used to control switching of tabs. One **TabsController** cannot control multiple
-**Tabs** components.
+Defines a tab controller, which is used to control switching of tabs. One **TabsController** cannot control multiple **Tabs** components.
 
 **Since:** 7
+
+<!--Device-unnamed-declare class TabsController--><!--Device-unnamed-declare class TabsController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,13 +20,15 @@ Switches to the specified tab.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TabsController-changeIndex(value: number): void--><!--Device-TabsController-changeIndex(value: number): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Index of the tab. The value starts from 0.<br>**NOTE**<br>If this parameter is set to avalue less than 0 or greater than the maximum number, the default value **0** is used. |
+| value | number | Yes | Index of the tab. The value starts from 0.<br>**NOTE**<br>If this parameter is set to a value less than 0 or greater than the maximum number, the default value **0** is used. |
 
 ## constructor
 
@@ -39,6 +42,8 @@ A constructor used to create a **TabsController** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TabsController-constructor()--><!--Device-TabsController-constructor()-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## preloadItems
@@ -47,20 +52,19 @@ A constructor used to create a **TabsController** object.
 preloadItems(indices: Optional<Array<number>>): Promise<void>
 ```
 
-Preloads child nodes. After this API is called, all specified child nodes will be loaded at once. Therefore, for
-performance considerations, it is recommended that you load child nodes in batches.
+Preloads child nodes. After this API is called, all specified child nodes will be loaded at once. Therefore, for performance considerations, it is recommended that you load child nodes in batches.
 
-> **NOTE**
->
-> - **preloadItems** of **Tabs** needs to be called after **Tabs** is created. You are advised to control the first
-> preloading in the [onAppear](arkts-arkui-commonmethod-c.md#onappear-1) lifecycle of **Tabs**.
->
-> - If the **TabsController** object is not bound to any **Tabs** component, a JavaScript exception will be thrown
-> when this API is called. Therefore, you are advised to use **try-catch** to handle potential exceptions when
-> calling this API.
->
-> - When using **preloadItems** to preload tabs, you are advised to use **ComponentContent** to customize the
-> content displayed on the tab bar. For details, see
+> **NOTE**  
+>  
+> - **preloadItems** of **Tabs** needs to be called after **Tabs** is created. You are advised to control the first  
+> preloading in the [onAppear](arkts-arkui-commonmethod-c.md#onappear-1) lifecycle of **Tabs**.  
+>  
+> - If the **TabsController** object is not bound to any **Tabs** component, a JavaScript exception will be thrown  
+> when this API is called. Therefore, you are advised to use **try-catch** to handle potential exceptions when  
+> calling this API.  
+>  
+> - When using **preloadItems** to preload tabs, you are advised to use **ComponentContent** to customize the  
+> content displayed on the tab bar. For details, see  
 > [Example 10](../../../../reference/apis-arkui/arkui-ts/ts-container-tabcontent.md#example-10-setting-tabbar-using-componentcontent).
 
 **Since:** 12
@@ -69,19 +73,21 @@ performance considerations, it is recommended that you load child nodes in batch
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TabsController-preloadItems(indices: Optional<Array<number>>): Promise<void>--><!--Device-TabsController-preloadItems(indices: Optional<Array<number>>): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indices | Optional&lt;Array&lt;number&gt;&gt; | Yes | Array of indexes of the child nodes to preload.<br>The default valueis an empty array. |
+| indices | [Optional](arkts-arkui-optional-t.md)<Array<number>> | Yes | Array of indexes of the child nodes to preload.<br>The default value is an empty array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the value. |
 
 **Error codes:**
 
@@ -97,13 +103,13 @@ setTabBarOpacity(opacity: number): void
 
 Sets the opacity of the tab bar.
 
-> **NOTE**
->
-> When a **Tabs** component is bound to a scrollable container using APIs like
-> [bindTabsToScrollable](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable13)
-> or bindTabsToNestedScrollable](../arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable13), scrolling the
-> container will trigger the display and hide animations of the tab bar for all **Tabs** components bound to it. In
-> this case, any **TabBar** opacity set via the **setTabBarOpacity** API will be overridden. Therefore, avoid using
+> **NOTE**  
+>  
+> When a **Tabs** component is bound to a scrollable container using APIs like  
+> [bindTabsToScrollable](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable13)  
+> or bindTabsToNestedScrollable](../arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable13), scrolling the  
+> container will trigger the display and hide animations of the tab bar for all **Tabs** components bound to it. In  
+> this case, any **TabBar** opacity set via the **setTabBarOpacity** API will be overridden. Therefore, avoid using  
 > **bindTabsToScrollable**, **bindTabsToNestedScrollable**, and **setTabBarOpacity** simultaneously.
 
 **Since:** 13
@@ -112,13 +118,15 @@ Sets the opacity of the tab bar.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-TabsController-setTabBarOpacity(opacity: number): void--><!--Device-TabsController-setTabBarOpacity(opacity: number): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| opacity | number | Yes | Opacity of the tab bar. The value range is [0.0, 1.0]. A value less than 0.0 is handedas **0.0**. A value greater than **1.0** is handed as **1.0**.<br> Default value: **1.0**. |
+| opacity | number | Yes | Opacity of the tab bar. The value range is [0.0, 1.0]. A value less than 0.0 is handed as **0.0**. A value greater than **1.0** is handed as **1.0**.<br> Default value: **1.0**. |
 
 ## setTabBarTranslate
 
@@ -128,13 +136,13 @@ setTabBarTranslate(translate: TranslateOptions): void
 
 Sets the translation distance of the tab bar.
 
-> **NOTE**
->
-> When a **Tabs** component is bound to a scrollable container using APIs like
-> [bindTabsToScrollable](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable13)
-> or bindTabsToNestedScrollable](../arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable13), scrolling the
-> container will trigger the display and hide animations of the tab bar for all **Tabs** components bound to it. In
-> this case, calling the **setTabBarTranslate** API has no effect. Therefore, avoid using **bindTabsToScrollable**,
+> **NOTE**  
+>  
+> When a **Tabs** component is bound to a scrollable container using APIs like  
+> [bindTabsToScrollable](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable13)  
+> or bindTabsToNestedScrollable](../arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable13), scrolling the  
+> container will trigger the display and hide animations of the tab bar for all **Tabs** components bound to it. In  
+> this case, calling the **setTabBarTranslate** API has no effect. Therefore, avoid using **bindTabsToScrollable**,  
 > **bindTabsToNestedScrollable**, and **setTabBarTranslate** simultaneously.
 
 **Since:** 13
@@ -143,11 +151,13 @@ Sets the translation distance of the tab bar.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-TabsController-setTabBarTranslate(translate: TranslateOptions): void--><!--Device-TabsController-setTabBarTranslate(translate: TranslateOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| translate | TranslateOptions | Yes | Translation distance of the tab bar. |
+| translate | [TranslateOptions](arkts-arkui-translateoptions-i.md) | Yes | Translation distance of the tab bar. |
 

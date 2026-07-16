@@ -18,6 +18,8 @@ Updates the size of the widget.
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
+<!--Device-formHost-function updateFormSize(formId: string, newDimension: formInfo.FormDimension, newRect: formInfo.Rect): void--><!--Device-formHost-function updateFormSize(formId: string, newDimension: formInfo.FormDimension, newRect: formInfo.Rect): void-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Updates the size of the widget.
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
 | newDimension | formInfo.FormDimension | Yes | Widget dimension. For example, **Dimension_1_2** indicates a1 x 2 widget. |
-| newRect | formInfo.Rect | Yes | Widget position information, including the X and Y coordinates of the widget'stop-left corner, as well as its width and height. |
+| newRect | formInfo.Rect | Yes | Widget position information, including the X and Y coordinates of the widget's top-left corner, as well as its width and height. |
 
 **Error codes:**
 

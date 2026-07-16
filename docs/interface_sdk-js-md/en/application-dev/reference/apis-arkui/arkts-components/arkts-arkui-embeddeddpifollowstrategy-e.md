@@ -4,6 +4,8 @@ Enumeration of different types of EmbeddedDpiFollowStrategy.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare enum EmbeddedDpiFollowStrategy--><!--Device-unnamed-declare enum EmbeddedDpiFollowStrategy-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FOLLOW_HOST_DPI
@@ -20,6 +22,8 @@ Followed the host DPI.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-EmbeddedDpiFollowStrategy-FOLLOW_HOST_DPI = 0--><!--Device-EmbeddedDpiFollowStrategy-FOLLOW_HOST_DPI = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FOLLOW_UI_EXTENSION_ABILITY_DPI
@@ -35,6 +39,8 @@ Followed the EmbeddedUIExtensionAbility.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EmbeddedDpiFollowStrategy-FOLLOW_UI_EXTENSION_ABILITY_DPI = 1--><!--Device-EmbeddedDpiFollowStrategy-FOLLOW_UI_EXTENSION_ABILITY_DPI = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -12,12 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAlternateIcons(): Promise<Array<AlternateIconInfo>>
 ```
 
-Queries the alternate icon information configured in the alternateIcons in the app.json5
-of the current application. This API uses a promise to return the result.
+Queries the alternate icon information configured in the alternateIcons in the app.json5of the current application. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-bundleManager-function getAlternateIcons(): Promise<Array<AlternateIconInfo>>--><!--Device-bundleManager-function getAlternateIcons(): Promise<Array<AlternateIconInfo>>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -25,7 +26,7 @@ of the current application. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AlternateIconInfo&gt;&gt; | Promise used to return the list of alternateicons of the current application. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AlternateIconInfo>> | Promise used to return the list of alternate icons of the current application. |
 
 **Error codes:**
 

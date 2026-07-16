@@ -20,6 +20,8 @@ Query a network probe result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function queryProbeResult(destination: string, duration: int): Promise<ProbeResultInfo>--><!--Device-connection-function queryProbeResult(destination: string, duration: int): Promise<ProbeResultInfo>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -33,7 +35,7 @@ Query a network probe result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ProbeResultInfo&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ProbeResultInfo> | The promise returned by the function. |
 
 **Error codes:**
 

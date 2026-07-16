@@ -18,6 +18,8 @@ Set the card slot ID of the default voice service.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function setDefaultVoiceSlotId(slotId: int, callback: AsyncCallback<void>): void--><!--Device-sim-function setDefaultVoiceSlotId(slotId: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Set the card slot ID of the default voice service.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of setDefaultVoiceSlotId. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of setDefaultVoiceSlotId. |
 
 **Error codes:**
 
@@ -68,6 +70,8 @@ Set the card slot ID of the default voice service.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function setDefaultVoiceSlotId(slotId: int): Promise<void>--><!--Device-sim-function setDefaultVoiceSlotId(slotId: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -82,7 +86,7 @@ Set the card slot ID of the default voice service.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setVoiceMailInfo. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the setVoiceMailInfo. |
 
 **Error codes:**
 

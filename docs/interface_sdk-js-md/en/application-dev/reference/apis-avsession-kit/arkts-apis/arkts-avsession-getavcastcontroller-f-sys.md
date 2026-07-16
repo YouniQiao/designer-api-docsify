@@ -12,12 +12,13 @@ import { avSession } from '@kit.AVSessionKit';
 function getAVCastController(sessionId: string, callback: AsyncCallback<AVCastController>): void
 ```
 
-Register a callback to retrieve an avsession cast controller.
-This function can be used at both side to get the same controller to do the playback control.
+Register a callback to retrieve an avsession cast controller.This function can be used at both side to get the same controller to do the playback control.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
+
+<!--Device-avSession-function getAVCastController(sessionId: string, callback: AsyncCallback<AVCastController>): void--><!--Device-avSession-function getAVCastController(sessionId: string, callback: AsyncCallback<AVCastController>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -28,7 +29,7 @@ This function can be used at both side to get the same controller to do the play
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sessionId | string | Yes | Specifies the sessionId to get controller. |
-| callback | AsyncCallback&lt;AVCastController&gt; | Yes | async callback for the AVCastController. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AVCastController> | Yes | async callback for the AVCastController. |
 
 **Error codes:**
 
@@ -80,12 +81,13 @@ struct Index {
 function getAVCastController(sessionId: string): Promise<AVCastController>
 ```
 
-Get the current session's remote controller client.
-If the avsession is not under casting state, the controller will return null.
+Get the current session's remote controller client.If the avsession is not under casting state, the controller will return null.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
+
+<!--Device-avSession-function getAVCastController(sessionId: string): Promise<AVCastController>--><!--Device-avSession-function getAVCastController(sessionId: string): Promise<AVCastController>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -101,7 +103,7 @@ If the avsession is not under casting state, the controller will return null.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVCastController&gt; | Promise for the AVCastController |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AVCastController> | Promise for the AVCastController |
 
 **Error codes:**
 

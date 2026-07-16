@@ -4,6 +4,8 @@ Defines the parameters of the PGO configuration file.
 
 **Since:** 11
 
+<!--Device-installer-export interface PGOParam--><!--Device-installer-export interface PGOParam-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Module name of the bundle.
 
 **Since:** 11
 
+<!--Device-PGOParam-moduleName: string--><!--Device-PGOParam-moduleName: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Path of the PGO configuration file.
 **Type:** string
 
 **Since:** 11
+
+<!--Device-PGOParam-pgoFilePath: string--><!--Device-PGOParam-pgoFilePath: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

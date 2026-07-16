@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-bundleManager-export enum AppDistributionType--><!--Device-bundleManager-export enum AppDistributionType-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -17,6 +19,8 @@ APP_GALLERY = 1
 应用市场安装的应用。
 
 **起始版本：** 12
+
+<!--Device-AppDistributionType-APP_GALLERY = 1--><!--Device-AppDistributionType-APP_GALLERY = 1-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -32,6 +36,8 @@ ENTERPRISE = 2
 
 **起始版本：** 12
 
+<!--Device-AppDistributionType-ENTERPRISE = 2--><!--Device-AppDistributionType-ENTERPRISE = 2-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +52,8 @@ ENTERPRISE_NORMAL = 3
 
 **起始版本：** 12
 
+<!--Device-AppDistributionType-ENTERPRISE_NORMAL = 3--><!--Device-AppDistributionType-ENTERPRISE_NORMAL = 3-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -56,11 +64,11 @@ ENTERPRISE_NORMAL = 3
 ENTERPRISE_MDM = 4
 ```
 
-企业MDM应用，只能安装在企业设备上。需要被激活
-[adminManager.enableAdmin](../../apis-mdm-kit/arkts-apis/arkts-mdm-enableadmin-f-sys.md#enableadmin-1)
-后，才能安装普通企业应用。
+企业MDM应用，只能安装在企业设备上。需要被激活[adminManager.enableAdmin](../../apis-mdm-kit/arkts-apis/arkts-mdm-enableadmin-f-sys.md#enableadmin-1)后，才能安装普通企业应用。
 
 **起始版本：** 12
+
+<!--Device-AppDistributionType-ENTERPRISE_MDM = 4--><!--Device-AppDistributionType-ENTERPRISE_MDM = 4-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -76,6 +84,8 @@ OS_INTEGRATION = 5
 
 **起始版本：** 12
 
+<!--Device-AppDistributionType-OS_INTEGRATION = 5--><!--Device-AppDistributionType-OS_INTEGRATION = 5-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -90,6 +100,8 @@ CROWDTESTING = 6
 
 **起始版本：** 12
 
+<!--Device-AppDistributionType-CROWDTESTING = 6--><!--Device-AppDistributionType-CROWDTESTING = 6-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -103,6 +115,8 @@ NONE = 7
 其他。
 
 **起始版本：** 12
+
+<!--Device-AppDistributionType-NONE = 7--><!--Device-AppDistributionType-NONE = 7-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

@@ -2,14 +2,16 @@
 
 枚举，定义了文本首字母大写的不同模式。
 
-| 名称 | 值 | 说明 |
-| -------- | -- | -------- |
-| NONE | 0 | 不进行任何首字母大写处理。|
-| SENTENCES | 1 | 每个句子的首字母大写。|
-| WORDS | 2 | 每个单词的首字母大写。|
+| 名称 | 值 | 说明 |  
+| -------- | -- | -------- |  
+| NONE | 0 | 不进行任何首字母大写处理。|  
+| SENTENCES | 1 | 每个句子的首字母大写。|  
+| WORDS | 2 | 每个单词的首字母大写。|  
 | CHARACTERS | 3 | 每个字母都大写。|
 
 **起始版本：** 20
+
+<!--Device-inputMethodEngine-export enum CapitalizeMode--><!--Device-inputMethodEngine-export enum CapitalizeMode-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -23,6 +25,8 @@ NONE = 0
 
 **起始版本：** 20
 
+<!--Device-CapitalizeMode-NONE = 0--><!--Device-CapitalizeMode-NONE = 0-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## SENTENCES
@@ -34,6 +38,8 @@ SENTENCES
 每个句子的首字母大写。
 
 **起始版本：** 20
+
+<!--Device-CapitalizeMode-SENTENCES--><!--Device-CapitalizeMode-SENTENCES-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -47,6 +53,8 @@ WORDS
 
 **起始版本：** 20
 
+<!--Device-CapitalizeMode-WORDS--><!--Device-CapitalizeMode-WORDS-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## CHARACTERS
@@ -58,6 +66,8 @@ CHARACTERS
 每个字母都大写。
 
 **起始版本：** 20
+
+<!--Device-CapitalizeMode-CHARACTERS--><!--Device-CapitalizeMode-CHARACTERS-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

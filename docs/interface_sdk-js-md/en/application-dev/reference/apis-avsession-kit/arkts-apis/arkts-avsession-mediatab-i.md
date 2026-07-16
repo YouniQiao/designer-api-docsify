@@ -4,6 +4,8 @@ The definition of the tab page.
 
 **Since:** 23
 
+<!--Device-avMusicTemplate-interface MediaTab--><!--Device-avMusicTemplate-interface MediaTab-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Additional content on tab page.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MediaTab-extraDataJson?: string--><!--Device-MediaTab-extraDataJson?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## tabIcon
@@ -41,6 +45,8 @@ The tab page icon, main page required.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaTab-tabIcon?: image.PixelMap--><!--Device-MediaTab-tabIcon?: image.PixelMap-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -58,6 +64,8 @@ Unique ID of the tab page.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MediaTab-tabId: string--><!--Device-MediaTab-tabId: string-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## tabName
@@ -73,6 +81,8 @@ The tab page name.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaTab-tabName: string--><!--Device-MediaTab-tabName: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 

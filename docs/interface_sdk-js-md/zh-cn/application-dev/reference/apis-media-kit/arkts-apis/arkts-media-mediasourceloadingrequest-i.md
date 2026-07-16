@@ -2,13 +2,21 @@
 
 用于定义加载请求的对象。应用程序通过该对象来获取请求的资源位置，通过该对象和播放器进行数据交互。
 
-> **说明：**
->
+> **说明：**  
+>  
 > - 本Interface首批接口从API version 18开始支持。
 
 **起始版本：** 18
 
+<!--Device-unnamed-interface MediaSourceLoadingRequest--><!--Device-unnamed-interface MediaSourceLoadingRequest-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
+
+## 导入模块
+
+```TypeScript
+import { media } from '@kit.MediaKit';
+```
 
 ## finishLoading
 
@@ -20,7 +28,9 @@ finishLoading(uuid: number, state: LoadingRequestError): void
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaSourceLoadingRequest-finishLoading(uuid: long, state: LoadingRequestError): void--><!--Device-MediaSourceLoadingRequest-finishLoading(uuid: long, state: LoadingRequestError): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -29,7 +39,7 @@ finishLoading(uuid: number, state: LoadingRequestError): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uuid | number | 是 | 资源句柄的标识。来源是[SourceOpenCallback](@ohos.multimedia.media:media.SourceOpenCallback)。 |
-| state | LoadingRequestError | 是 | 请求的状态。 |
+| state | [LoadingRequestError](arkts-media-loadingrequesterror-e.md) | 是 | 请求的状态。 |
 
 ## respondData
 
@@ -41,7 +51,9 @@ respondData(uuid: number, offset: number, buffer: ArrayBuffer): number
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaSourceLoadingRequest-respondData(uuid: number, offset: number, buffer: ArrayBuffer): number--><!--Device-MediaSourceLoadingRequest-respondData(uuid: number, offset: number, buffer: ArrayBuffer): number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -51,7 +63,7 @@ respondData(uuid: number, offset: number, buffer: ArrayBuffer): number
 | --- | --- | --- | --- |
 | uuid | number | 是 | 资源句柄的标识。来源是[SourceOpenCallback](@ohos.multimedia.media:media.SourceOpenCallback)。 |
 | offset | number | 是 | 当前媒体数据相对于资源起始位置的偏移量。offset不能小于0。 |
-| buffer | ArrayBuffer | 是 | 响应播放器的媒体数据。<br/>**注意：** 不要传输无关数据，会影响正常数据解析和播放。 |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | 响应播放器的媒体数据。<br/>**注意：** 不要传输无关数据，会影响正常数据解析和播放。 |
 
 **返回值：**
 
@@ -65,13 +77,13 @@ respondData(uuid: number, offset: number, buffer: ArrayBuffer): number
 respondHeader(uuid: number, header?: Record<string, string>, redirectUrl?: string): void
 ```
 
-用于应用程序向播放器发送响应头信息，应在第一次调用
-[respondData](media.MediaSourceLoadingRequest.respondData(uuid: number, offset: number, buffer: ArrayBuffer))
-方法之前调用。
+用于应用程序向播放器发送响应头信息，应在第一次调用[respondData](media.MediaSourceLoadingRequest.respondData(uuid: number, offset: number, buffer: ArrayBuffer))方法之前调用。
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaSourceLoadingRequest-respondHeader(uuid: long, header?: Record<string, string>, redirectUrl?: string): void--><!--Device-MediaSourceLoadingRequest-respondHeader(uuid: long, header?: Record<string, string>, redirectUrl?: string): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -80,7 +92,7 @@ respondHeader(uuid: number, header?: Record<string, string>, redirectUrl?: strin
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uuid | number | 是 | 资源句柄的标识。来源是[SourceOpenCallback](@ohos.multimedia.media:media.SourceOpenCallback)。 |
-| header | Record&lt;string, string&gt; | 否 | HTTP响应中的头部信息。应用可将头部信息字段与底层支持解析字段取交集传递或直接传入对应的所有头部信息。<br> - 底层播放需要解析的字段包括Transfer-Encoding、Location、Content-Type、Content-Range、Content-Encode、Accept-Ranges、content-length。 |
+| header | Record<string, string> | 否 | HTTP响应中的头部信息。应用可将头部信息字段与底层支持解析字段取交集传递或直接传入对应的所有头部信息。<br> - 底层播放需要解析的字段包括Transfer-Encoding、Location、Content-Type、Content-Range、Content-Encode、Accept-Ranges、content-length。 |
 | redirectUrl | string | 否 | 如果存在，为HTTP响应中的重定向URL。 |
 
 ## header
@@ -95,7 +107,9 @@ header?: Record<string, string>
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaSourceLoadingRequest-header?: Record<string, string>--><!--Device-MediaSourceLoadingRequest-header?: Record<string, string>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -111,7 +125,9 @@ url: string
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MediaSourceLoadingRequest-url: string--><!--Device-MediaSourceLoadingRequest-url: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 

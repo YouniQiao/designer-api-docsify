@@ -18,13 +18,15 @@ Creates this checksum object. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-zlib-function createChecksum(): Promise<Checksum>--><!--Device-zlib-function createChecksum(): Promise<Checksum>-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Checksum&gt; | Promise used to return the created checksum object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Checksum> | Promise used to return the created checksum object. |
 
 **Example**
 

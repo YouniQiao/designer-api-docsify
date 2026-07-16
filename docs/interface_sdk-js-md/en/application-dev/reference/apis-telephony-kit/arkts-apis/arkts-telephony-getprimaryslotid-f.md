@@ -18,13 +18,15 @@ The primary card is the SIM card inserted in the card slot that uses data servic
 
 **Since:** 7
 
+<!--Device-radio-function getPrimarySlotId(callback: AsyncCallback<int>): void--><!--Device-radio-function getPrimarySlotId(callback: AsyncCallback<int>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Indicates the callback for getting the index number ofthe primary card slot. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Indicates the callback for getting the index number of the primary card slot. |
 
 **Error codes:**
 
@@ -64,13 +66,15 @@ The primary card is the SIM card inserted in the card slot that uses data servic
 
 **Since:** 7
 
+<!--Device-radio-function getPrimarySlotId(): Promise<int>--><!--Device-radio-function getPrimarySlotId(): Promise<int>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns the index number of the primary card slot. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Returns the index number of the primary card slot. |
 
 **Error codes:**
 

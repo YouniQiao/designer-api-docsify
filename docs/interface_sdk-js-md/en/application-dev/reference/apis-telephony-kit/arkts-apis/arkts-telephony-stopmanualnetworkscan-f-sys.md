@@ -18,6 +18,8 @@ Stop ManualNetworkScan.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-radio-function stopManualNetworkScan(slotId: int): Promise<void>--><!--Device-radio-function stopManualNetworkScan(slotId: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -32,7 +34,7 @@ Stop ManualNetworkScan.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise return stopManualNetworkScan. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise return stopManualNetworkScan. |
 
 **Error codes:**
 

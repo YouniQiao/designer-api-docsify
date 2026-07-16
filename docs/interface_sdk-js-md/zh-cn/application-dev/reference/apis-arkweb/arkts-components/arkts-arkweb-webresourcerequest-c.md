@@ -4,6 +4,8 @@ Encompassed message information as parameters to {@link onConsole} method.
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare class WebResourceRequest--><!--Device-unnamed-declare class WebResourceRequest-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## constructor
@@ -16,7 +18,9 @@ Constructor.
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceRequest-constructor()--><!--Device-WebResourceRequest-constructor()-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -30,7 +34,9 @@ getRequestHeader(): Array<Header>
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceRequest-getRequestHeader(): Array<Header>--><!--Device-WebResourceRequest-getRequestHeader(): Array<Header>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -38,7 +44,7 @@ getRequestHeader(): Array<Header>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Header&gt; | 返回资源请求头信息。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Header> | 返回资源请求头信息。 |
 
 ## getRequestMethod
 
@@ -50,7 +56,9 @@ getRequestMethod(): string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceRequest-getRequestMethod(): string--><!--Device-WebResourceRequest-getRequestMethod(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -70,7 +78,9 @@ getRequestUrl(): string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceRequest-getRequestUrl(): string--><!--Device-WebResourceRequest-getRequestUrl(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -90,7 +100,9 @@ isMainFrame(): boolean
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceRequest-isMainFrame(): boolean--><!--Device-WebResourceRequest-isMainFrame(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -110,7 +122,9 @@ isRedirect(): boolean
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceRequest-isRedirect(): boolean--><!--Device-WebResourceRequest-isRedirect(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -130,7 +144,9 @@ isRequestGesture(): boolean
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceRequest-isRequestGesture(): boolean--><!--Device-WebResourceRequest-isRequestGesture(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

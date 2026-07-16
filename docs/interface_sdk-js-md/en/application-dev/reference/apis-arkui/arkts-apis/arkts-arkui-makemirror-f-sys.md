@@ -16,6 +16,8 @@ Sets the screen to mirror mode. This API uses an asynchronous callback to return
 
 **Since:** 9
 
+<!--Device-screen-function makeMirror(mainScreen:long, mirrorScreen:Array<long>, callback: AsyncCallback<long>): void--><!--Device-screen-function makeMirror(mainScreen:long, mirrorScreen:Array<long>, callback: AsyncCallback<long>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -25,8 +27,8 @@ Sets the screen to mirror mode. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mainScreen | number | Yes | ID of the primary screen. The ID must be an integer. |
-| mirrorScreen | Array&lt;number&gt; | Yes | Array of IDs of secondary screens. Each ID must be an integer. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the group ID of the secondary screens, where theID is an integer. |
+| mirrorScreen | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Array of IDs of secondary screens. Each ID must be an integer. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the group ID of the secondary screens, where the ID is an integer. |
 
 **Error codes:**
 
@@ -67,6 +69,8 @@ Sets the screen to mirror mode. This API uses a promise to return the result.
 
 **Since:** 9
 
+<!--Device-screen-function makeMirror(mainScreen:long, mirrorScreen:Array<long>): Promise<long>--><!--Device-screen-function makeMirror(mainScreen:long, mirrorScreen:Array<long>): Promise<long>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -76,13 +80,13 @@ Sets the screen to mirror mode. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mainScreen | number | Yes | ID of the primary screen. The ID must be an integer. |
-| mirrorScreen | Array&lt;number&gt; | Yes | Array of IDs of secondary screens. Each ID must be an integer. |
+| mirrorScreen | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Array of IDs of secondary screens. Each ID must be an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the group ID of the secondary screens, where the ID is aninteger. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the group ID of the secondary screens, where the ID is an integer. |
 
 **Error codes:**
 

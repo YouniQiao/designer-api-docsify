@@ -18,6 +18,8 @@ Update surface parameters.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-abilityConnectionManager-function updateSurfaceParam(streamId: int, param: SurfaceParam): void--><!--Device-abilityConnectionManager-function updateSurfaceParam(streamId: int, param: SurfaceParam): void-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Update surface parameters.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | streamId | number | Yes | Stream ID. |
-| param | SurfaceParam | Yes | Surface Parameters |
+| param | [SurfaceParam](arkts-distributedservice-surfaceparam-i-sys.md) | Yes | Surface Parameters |
 
 **Error codes:**
 

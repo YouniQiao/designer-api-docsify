@@ -1,7 +1,7 @@
 # DeviceRemindType (System API)
 
-> **NOTE**<br>
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> **NOTE**<br>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
 > notificationManager.DeviceRemindType instead.
 
 **Since:** 8
@@ -9,6 +9,8 @@
 **Deprecated since:** 9
 
 **Substitutes:** DeviceRemindType
+
+<!--Device-notification-export enum DeviceRemindType--><!--Device-notification-export enum DeviceRemindType-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -28,6 +30,8 @@ The device is not in use. No notification is required.
 
 **Substitutes:** IDLE_DONOT_REMIND
 
+<!--Device-DeviceRemindType-IDLE_DONOT_REMIND = 0--><!--Device-DeviceRemindType-IDLE_DONOT_REMIND = 0-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -45,6 +49,8 @@ The device is not in use.
 **Deprecated since:** 9
 
 **Substitutes:** IDLE_REMIND
+
+<!--Device-DeviceRemindType-IDLE_REMIND = 1--><!--Device-DeviceRemindType-IDLE_REMIND = 1-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -64,6 +70,8 @@ The device is in use. No notification is required.
 
 **Substitutes:** ACTIVE_DONOT_REMIND
 
+<!--Device-DeviceRemindType-ACTIVE_DONOT_REMIND = 2--><!--Device-DeviceRemindType-ACTIVE_DONOT_REMIND = 2-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -81,6 +89,8 @@ The device is in use.
 **Deprecated since:** 9
 
 **Substitutes:** ACTIVE_REMIND
+
+<!--Device-DeviceRemindType-ACTIVE_REMIND = 3--><!--Device-DeviceRemindType-ACTIVE_REMIND = 3-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

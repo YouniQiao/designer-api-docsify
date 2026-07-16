@@ -12,14 +12,13 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function getDLPSupportedFileTypes(): Promise<Array<string>>
 ```
 
-Obtains the file name extension types that support DLP. After the API is successfully called, the list of
-supported file types is returned, indicating the types of files that can be used to generate DLP files. This API
-uses a promise to return the result.
+Obtains the file name extension types that support DLP. After the API is successfully called, the list of supported file types is returned, indicating the types of files that can be used to generate DLP files. This API uses a promise to return the result.
 
-This API is used to obtain the types of files that can be used to generate DLP files. If the current file type is
-in the list, it can be encrypted.
+This API is used to obtain the types of files that can be used to generate DLP files. If the current file type is in the list, it can be encrypted.
 
 **Since:** 10
+
+<!--Device-dlpPermission-function getDLPSupportedFileTypes(): Promise<Array<string>>--><!--Device-dlpPermission-function getDLPSupportedFileTypes(): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -27,7 +26,7 @@ in the list, it can be encrypted.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the file name extension types obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return the file name extension types obtained. |
 
 **Error codes:**
 
@@ -56,14 +55,13 @@ dlpPermission.getDLPSupportedFileTypes().then((fileTypes) => { // Obtain the fil
 function getDLPSupportedFileTypes(callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains the file name extension types that support DLP. After the API is successfully called, the list of
-supported file types is returned, indicating the types of files that can be used to generate DLP files. This API
-uses an asynchronous callback to return the result.
+Obtains the file name extension types that support DLP. After the API is successfully called, the list of supported file types is returned, indicating the types of files that can be used to generate DLP files. This API uses an asynchronous callback to return the result.
 
-This API is used to obtain the types of files that can be used to generate DLP files. If the current file type is
-in the list, it can be encrypted.
+This API is used to obtain the types of files that can be used to generate DLP files. If the current file type is in the list, it can be encrypted.
 
 **Since:** 10
+
+<!--Device-dlpPermission-function getDLPSupportedFileTypes(callback: AsyncCallback<Array<string>>): void--><!--Device-dlpPermission-function getDLPSupportedFileTypes(callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -71,7 +69,7 @@ in the list, it can be encrypted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

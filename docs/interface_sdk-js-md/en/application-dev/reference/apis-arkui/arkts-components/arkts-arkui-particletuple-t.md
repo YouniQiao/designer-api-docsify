@@ -12,6 +12,8 @@ Defines a pair of given type for particle.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-unnamed-declare type ParticleTuple<T1, T2> = [T1, T2]--><!--Device-unnamed-declare type ParticleTuple<T1, T2> = [T1, T2]-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** [T1, T2]

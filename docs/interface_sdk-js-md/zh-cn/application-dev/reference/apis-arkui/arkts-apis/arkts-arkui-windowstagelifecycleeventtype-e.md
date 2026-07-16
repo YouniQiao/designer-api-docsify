@@ -4,6 +4,8 @@ WindowStage生命周期的状态类型枚举。
 
 **起始版本：** 20
 
+<!--Device-window-enum WindowStageLifecycleEventType--><!--Device-window-enum WindowStageLifecycleEventType-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## SHOWN
@@ -17,6 +19,8 @@ SHOWN = 1
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WindowStageLifecycleEventType-SHOWN = 1--><!--Device-WindowStageLifecycleEventType-SHOWN = 1-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -32,6 +36,8 @@ RESUMED = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WindowStageLifecycleEventType-RESUMED = 2--><!--Device-WindowStageLifecycleEventType-RESUMED = 2-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## PAUSED
@@ -46,6 +52,8 @@ PAUSED = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WindowStageLifecycleEventType-PAUSED = 3--><!--Device-WindowStageLifecycleEventType-PAUSED = 3-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## HIDDEN
@@ -59,6 +67,8 @@ HIDDEN = 4
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WindowStageLifecycleEventType-HIDDEN = 4--><!--Device-WindowStageLifecycleEventType-HIDDEN = 4-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 

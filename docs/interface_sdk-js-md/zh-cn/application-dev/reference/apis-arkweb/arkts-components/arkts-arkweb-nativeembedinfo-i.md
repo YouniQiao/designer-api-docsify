@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare interface NativeEmbedInfo--><!--Device-unnamed-declare interface NativeEmbedInfo-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## height
@@ -18,7 +20,9 @@ height?: number
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NativeEmbedInfo-height?: number--><!--Device-NativeEmbedInfo-height?: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -34,7 +38,9 @@ id?: string
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NativeEmbedInfo-id?: string--><!--Device-NativeEmbedInfo-id?: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -50,7 +56,9 @@ object标签包含的param标签键值对列表，该map本质为Object类型，
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NativeEmbedInfo-params?: Map<string, string>--><!--Device-NativeEmbedInfo-params?: Map<string, string>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -66,7 +74,9 @@ position?: Position
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NativeEmbedInfo-position?: Position--><!--Device-NativeEmbedInfo-position?: Position-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -82,7 +92,9 @@ src?: string
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NativeEmbedInfo-src?: string--><!--Device-NativeEmbedInfo-src?: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -98,7 +110,9 @@ tag?: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NativeEmbedInfo-tag?: string--><!--Device-NativeEmbedInfo-tag?: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -114,7 +128,9 @@ type?: string
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NativeEmbedInfo-type?: string--><!--Device-NativeEmbedInfo-type?: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -130,7 +146,9 @@ url?: string
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NativeEmbedInfo-url?: string--><!--Device-NativeEmbedInfo-url?: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -146,7 +164,9 @@ width?: number
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NativeEmbedInfo-width?: number--><!--Device-NativeEmbedInfo-width?: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

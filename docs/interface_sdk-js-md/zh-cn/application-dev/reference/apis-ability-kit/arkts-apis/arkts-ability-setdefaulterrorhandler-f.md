@@ -1,5 +1,11 @@
 # setDefaultErrorHandler
 
+## 导入模块
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+```
+
 ## setDefaultErrorHandler
 
 ```TypeScript
@@ -14,7 +20,9 @@ function setDefaultErrorHandler(defaultHandler?: ErrorHandler) : ErrorHandler
 
 **起始版本：** 21
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+<!--Device-errorManager-function setDefaultErrorHandler(defaultHandler?: ErrorHandler) : ErrorHandler--><!--Device-errorManager-function setDefaultErrorHandler(defaultHandler?: ErrorHandler) : ErrorHandler-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -22,13 +30,13 @@ function setDefaultErrorHandler(defaultHandler?: ErrorHandler) : ErrorHandler
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| defaultHandler | ErrorHandler | 否 | 新注册的错误处理器，缺省时默认值为空。 |
+| defaultHandler | [ErrorHandler](arkts-ability-errorhandler-t.md) | 否 | 新注册的错误处理器，缺省时默认值为空。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ErrorHandler | 返回上一次注册的错误处理器。 |
+| [ErrorHandler](arkts-ability-errorhandler-t.md) | 返回上一次注册的错误处理器。 |
 
 **错误码：**
 

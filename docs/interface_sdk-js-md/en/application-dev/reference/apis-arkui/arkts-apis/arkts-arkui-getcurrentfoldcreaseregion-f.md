@@ -18,13 +18,15 @@ Obtains the crease region of the foldable device in the current display mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-display-function getCurrentFoldCreaseRegion(): FoldCreaseRegion--><!--Device-display-function getCurrentFoldCreaseRegion(): FoldCreaseRegion-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| FoldCreaseRegion | Crease region of the device. |
+| [FoldCreaseRegion](arkts-arkui-foldcreaseregion-i.md) | Crease region of the device. |
 
 **Error codes:**
 

@@ -12,14 +12,15 @@ import { cooperate } from '@kit.DistributedServiceKit';
 function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boolean>): void
 ```
 
-Obtains the screen hopping status of the target device. This API uses an asynchronous callback to return the
-result.
+Obtains the screen hopping status of the target device. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
 **Substitutes:** getCooperateSwitchState(networkId:
+
+<!--Device-cooperate-function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boolean>): void--><!--Device-cooperate-function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -30,7 +31,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | networkId | string | Yes | Descriptor of the target device for screen hopping. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates thatscreen hopping is enabled, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** indicates that screen hopping is enabled, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -74,6 +75,8 @@ Obtains the screen hopping status of the target device. This API uses a promise 
 
 **Substitutes:** getCooperateSwitchState(networkId:
 
+<!--Device-cooperate-function getCrossingSwitchState(networkId: string): Promise<boolean>--><!--Device-cooperate-function getCrossingSwitchState(networkId: string): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **System API:** This is a system API.
@@ -88,7 +91,7 @@ Obtains the screen hopping status of the target device. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that screen hoppingis enabled, and the value **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** indicates that screen hopping is enabled, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

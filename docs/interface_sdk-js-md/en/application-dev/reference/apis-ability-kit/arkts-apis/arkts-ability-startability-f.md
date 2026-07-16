@@ -14,14 +14,16 @@ function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<
 
 Starts a ParticleAbility. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> For details about the startup rules for the components in the FA model, see
+> **NOTE**  
+>  
+> For details about the startup rules for the components in the FA model, see  
 > [Component Startup Rules (FA Model)](../../../../application-models/component-startup-rules-fa.md).
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-particleAbility-function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<void>): void--><!--Device-particleAbility-function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -29,8 +31,8 @@ Starts a ParticleAbility. This API uses an asynchronous callback to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | StartAbilityParameter | Yes | Ability to start. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the ParticleAbility is started, **err**is **undefined**; otherwise, **err** is an error object. |
+| parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-t.md) | Yes | Ability to start. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the ParticleAbility is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Example**
 
@@ -71,14 +73,16 @@ function startAbility(parameter: StartAbilityParameter): Promise<void>
 
 Starts a ParticleAbility. This API uses a promise to return the result.
 
-> **NOTE**
->
-> For details about the startup rules for the components in the FA model, see
+> **NOTE**  
+>  
+> For details about the startup rules for the components in the FA model, see  
 > [Component Startup Rules (FA Model)](../../../../application-models/component-startup-rules-fa.md).
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-particleAbility-function startAbility(parameter: StartAbilityParameter): Promise<void>--><!--Device-particleAbility-function startAbility(parameter: StartAbilityParameter): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -86,13 +90,13 @@ Starts a ParticleAbility. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | StartAbilityParameter | Yes | Ability to start. |
+| parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-t.md) | Yes | Ability to start. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. Promise that returns no value. |
 
 **Example**
 

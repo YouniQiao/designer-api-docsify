@@ -12,8 +12,7 @@ import { wallpaper } from '@kit.BasicServicesKit';
 function getFile(wallpaperType: WallpaperType, callback: AsyncCallback<number>): void
 ```
 
-Obtains a file of the wallpaper of the specified type. Returns the file descriptor.
-When usage is complete, the caller needs to close the file descriptor in time.
+Obtains a file of the wallpaper of the specified type. Returns the file descriptor.When usage is complete, the caller needs to close the file descriptor in time.
 
 **Since:** 8
 
@@ -21,14 +20,16 @@ When usage is complete, the caller needs to close the file descriptor in time.
 
 **Required permissions:** ohos.permission.GET_WALLPAPER
 
+<!--Device-wallpaper-function getFile(wallpaperType: WallpaperType, callback: AsyncCallback<number>): void--><!--Device-wallpaper-function getFile(wallpaperType: WallpaperType, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | WallpaperType | Yes | indicates the wallpaper type. |
-| callback | AsyncCallback&lt;number&gt; | Yes | the callback of getFile. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | Yes | the callback of getFile. |
 
 **Example**
 
@@ -52,8 +53,7 @@ wallpaper.getFile(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessErro
 function getFile(wallpaperType: WallpaperType): Promise<number>
 ```
 
-Obtains a file of the wallpaper of the specified type. Returns the file descriptor.
-When usage is complete, the caller needs to close the file descriptor in time.
+Obtains a file of the wallpaper of the specified type. Returns the file descriptor.When usage is complete, the caller needs to close the file descriptor in time.
 
 **Since:** 8
 
@@ -61,19 +61,21 @@ When usage is complete, the caller needs to close the file descriptor in time.
 
 **Required permissions:** ohos.permission.GET_WALLPAPER
 
+<!--Device-wallpaper-function getFile(wallpaperType: WallpaperType): Promise<number>--><!--Device-wallpaper-function getFile(wallpaperType: WallpaperType): Promise<number>-End-->
+
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | WallpaperType | Yes | indicates the wallpaper type. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | the promise returned by the function. |
 
 **Example**
 

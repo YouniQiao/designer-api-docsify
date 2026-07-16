@@ -4,6 +4,8 @@ Describes the rotation parameters.
 
 **Since:** 7
 
+<!--Device-matrix4-interface RotateOption--><!--Device-matrix4-interface RotateOption-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Default value: **0**
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-RotateOption-angle?: number--><!--Device-RotateOption-angle?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## centerX
@@ -44,15 +48,15 @@ Default value: **0**
 
 **NOTE**
 
-The value **0** indicates that the transformation center coincides with the component's x-axis anchor. For
-details about the implementation, see
-[Example 3: Implementing Rotation Around a Center Point](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md#example-3-implementing-rotation-around-a-center-point).
+The value **0** indicates that the transformation center coincides with the component's x-axis anchor. For details about the implementation, see [Example 3: Implementing Rotation Around a Center Point](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md#example-3-implementing-rotation-around-a-center-point).
 
 **Type:** number
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RotateOption-centerX?: number--><!--Device-RotateOption-centerX?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,15 +74,15 @@ Default value: **0**
 
 **NOTE**
 
-The value **0** indicates that the transformation center coincides with the component's y-axis anchor. For
-details about the implementation, see
-[Example 3: Implementing Rotation Around a Center Point](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md#example-3-implementing-rotation-around-a-center-point).
+The value **0** indicates that the transformation center coincides with the component's y-axis anchor. For details about the implementation, see [Example 3: Implementing Rotation Around a Center Point](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md#example-3-implementing-rotation-around-a-center-point).
 
 **Type:** number
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RotateOption-centerY?: number--><!--Device-RotateOption-centerY?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +104,8 @@ Value range: (-∞, +∞)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-RotateOption-x?: number--><!--Device-RotateOption-x?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
@@ -119,6 +125,8 @@ Value range: (-∞, +∞)
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RotateOption-y?: number--><!--Device-RotateOption-y?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -143,6 +151,8 @@ The rotation axis vector is valid only when at least one of **x**, **y**, and **
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RotateOption-z?: number--><!--Device-RotateOption-z?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

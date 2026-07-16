@@ -1,11 +1,12 @@
 # PixelMapDrawableDescriptor
 
-Implements a **PixelMapDrawableDescriptor** object, which can be created by passing in a **PixelMap** object.
-Inherits from [DrawableDescriptor](arkts-arkui-drawabledescriptorloadedresult-i.md).
+Implements a **PixelMapDrawableDescriptor** object, which can be created by passing in a **PixelMap** object.Inherits from [DrawableDescriptor](arkts-arkui-drawabledescriptorloadedresult-i.md).
 
 **Inheritance/Implementation:** PixelMapDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-drawabledescriptor-c.md)
 
 **Since:** 12
+
+<!--Device-unnamed-export class PixelMapDrawableDescriptor extends DrawableDescriptor--><!--Device-unnamed-export class PixelMapDrawableDescriptor extends DrawableDescriptor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,6 +30,8 @@ A constructor used to create a **PixelMapDrawableDescriptor** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PixelMapDrawableDescriptor-constructor(src?: image.PixelMap)--><!--Device-PixelMapDrawableDescriptor-constructor(src?: image.PixelMap)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -51,13 +54,15 @@ A constructor used to create a **PixelMapDrawableDescriptor** object through the
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-PixelMapDrawableDescriptor-constructor(src?: image.PixelMap | ResourceStr)--><!--Device-PixelMapDrawableDescriptor-constructor(src?: image.PixelMap | ResourceStr)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | image.PixelMap \| ResourceStr | No | **PixelMap** image data. You can use application resources, systemresources, sandbox paths (file://&lt;bundleName&gt;/&lt;sandboxPath&gt;), and Base64 strings to create**PixelMapDrawableDescriptor** objects. |
+| src | image.PixelMap \| ResourceStr | No | **PixelMap** image data. You can use application resources, system resources, sandbox paths (file://&lt;bundleName&gt;/&lt;sandboxPath&gt;), and Base64 strings to create **PixelMapDrawableDescriptor** objects. |
 
 **Example**
 

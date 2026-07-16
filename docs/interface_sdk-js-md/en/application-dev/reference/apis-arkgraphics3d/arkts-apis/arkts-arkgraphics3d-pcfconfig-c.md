@@ -6,6 +6,8 @@ param config for pcf soft shadow
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class PCFConfig extends SoftShadowConfig--><!--Device-unnamed-export declare class PCFConfig extends SoftShadowConfig-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## shadowSampleCount
@@ -14,8 +16,7 @@ param config for pcf soft shadow
 set shadowSampleCount(value: number | undefined)
 ```
 
-Set the sample count number from shadow map used to render a shadow pixel.
-Values outside the range are ignored and the previous value is retained.
+Set the sample count number from shadow map used to render a shadow pixel.Values outside the range are ignored and the previous value is retained.
 
 **Type:** number
 
@@ -24,6 +25,8 @@ Values outside the range are ignored and the previous value is retained.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PCFConfig-set shadowSampleCount(value: int | undefined)--><!--Device-PCFConfig-set shadowSampleCount(value: int | undefined)-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -42,6 +45,8 @@ Set sample radius around the shadow edge at pixel-level.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PCFConfig-set shadowSampleRadius(value: double | undefined)--><!--Device-PCFConfig-set shadowSampleRadius(value: double | undefined)-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

@@ -1,5 +1,11 @@
 # getCalendar
 
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
+
 ## getCalendar
 
 ```TypeScript
@@ -10,7 +16,9 @@ export function getCalendar(locale: string, type?: string): Calendar
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-i18n-export function getCalendar(locale: string, type?: string): Calendar--><!--Device-i18n-export function getCalendar(locale: string, type?: string): Calendar-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -25,5 +33,5 @@ export function getCalendar(locale: string, type?: string): Calendar
 
 | 类型 | 说明 |
 | --- | --- |
-| Calendar | 日历对象。 |
+| [Calendar](arkts-localization-calendar-c.md) | 日历对象。 |
 

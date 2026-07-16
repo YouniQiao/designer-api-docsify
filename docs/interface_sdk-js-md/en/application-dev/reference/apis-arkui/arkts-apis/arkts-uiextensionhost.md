@@ -1,17 +1,17 @@
 # @ohos.uiExtensionHost
 
-Intended only for the **UIExtensionComponent** that has process isolation requirements, the **uiExtensionHost**
-module provides APIs for obtaining the host application window information and information about the component
-itself.
+Intended only for the **UIExtensionComponent** that has process isolation requirements, the **uiExtensionHost** module provides APIs for obtaining the host application window information and information about the component itself.
 
-> **NOTE**
->
-> No new function will be added to this module. Related functions will be provided in the
-> [uiExtension](arkts-arkui-uiextension.md) interface.
->
+> **NOTE**  
+>  
+> No new function will be added to this module. Related functions will be provided in the  
+> [uiExtension](arkts-arkui-uiextension.md) interface.  
+>  
 > The APIs provided by this module are system APIs.
 
 **Since:** 11
+
+<!--Device-unnamed-declare namespace uiExtensionHost--><!--Device-unnamed-declare namespace uiExtensionHost-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -18,6 +18,8 @@ Subscribe system keys.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-inputConsumer-function onKey(keyOptions: KeyOptions, callback:KeyCommandCallback): void--><!--Device-inputConsumer-function onKey(keyOptions: KeyOptions, callback:KeyCommandCallback): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Subscribe system keys.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyOptions | KeyOptions | Yes | the key events about input which is to be subscribed. |
-| callback | KeyCommandCallback | Yes | callback function, receive reported data. |
+| keyOptions | [KeyOptions](../../apis-test-kit/arkts-apis/arkts-test-keyoptions-i.md) | Yes | the key events about input which is to be subscribed. |
+| callback | [KeyCommandCallback](arkts-input-keycommandcallback-t-sys.md) | Yes | callback function, receive reported data. |
 
 **Error codes:**
 

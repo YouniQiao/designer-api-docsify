@@ -8,6 +8,8 @@ The configuration is valid only full-screen applications.
 
 **Since:** 20
 
+<!--Device-window-interface StartAnimationParams--><!--Device-window-interface StartAnimationParams-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
@@ -27,6 +29,8 @@ The type of window animation
 **Type:** AnimationType
 
 **Since:** 20
+
+<!--Device-StartAnimationParams-type: AnimationType--><!--Device-StartAnimationParams-type: AnimationType-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

@@ -12,15 +12,15 @@ import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 function unregisterDeviceSelectCallback(): void
 ```
 
-Unregisters a callback for companion device selection. After the callback is unregistered, the system will no
-longer invoke the device selection callback registered by the application, and the device selection will fall
-back to the default system behavior.
+Unregisters a callback for companion device selection. After the callback is unregistered, the system will no longer invoke the device selection callback registered by the application, and the device selection will fall back to the default system behavior.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-companionDeviceAuth-function unregisterDeviceSelectCallback(): void--><!--Device-companionDeviceAuth-function unregisterDeviceSelectCallback(): void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 

@@ -4,6 +4,8 @@ interface of form lifecycle.
 
 **Since:** 7
 
+<!--Device-unnamed-export declare interface LifecycleForm--><!--Device-unnamed-export declare interface LifecycleForm-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## onAcquireFormState
@@ -12,13 +14,13 @@ interface of form lifecycle.
 onAcquireFormState?(want: Want): formInfo.FormState
 ```
 
-Called to return a {@link FormState} object.
-<p>You must override this callback if you want this ability to return the actual form state. Otherwise,
-this method returns {@link FormState#DEFAULT} by default.</p>
+Called to return a {@link FormState} object.<p>You must override this callback if you want this ability to return the actual form state. Otherwise,this method returns {@link FormState#DEFAULT} by default.</p>
 
 **Since:** 8
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-LifecycleForm-onAcquireFormState?(want: Want): formInfo.FormState--><!--Device-LifecycleForm-onAcquireFormState?(want: Want): formInfo.FormState-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -26,7 +28,7 @@ this method returns {@link FormState#DEFAULT} by default.</p>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Indicates the description of the form for which the {@link formInfo#FormState} is obtained.The description covers the bundle name, ability name, module name, form name, formdimensions. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Indicates the description of the form for which the {@link formInfo#FormState} is obtained.The description covers the bundle name, ability name, module name, form name, form dimensions. |
 
 **Return value:**
 
@@ -45,6 +47,8 @@ Called when the form provider is notified that a temporary form is successfully 
 **Since:** 8
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-LifecycleForm-onCastToNormal?(formId: string): void--><!--Device-LifecycleForm-onCastToNormal?(formId: string): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -66,13 +70,15 @@ Called to return a {@link formBindingData.FormBindingData} object.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-LifecycleForm-onCreate?(want: Want): formBindingData.FormBindingData--><!--Device-LifecycleForm-onCreate?(want: Want): formBindingData.FormBindingData-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Indicates the detailed information for creating a {@link formBindingData#FormBindingData}.The {@code Want} object must include the form ID, form name, and grid style of the form,which can be obtained from {@link formInfo#FormParam#IDENTITY_KEY},{@link formInfo#FormParam#NAME_KEY}, and {@link formInfo#FormParam#DIMENSION_KEY},respectively. Such form information must be managed as persistent data for further formacquisition, update, and deletion. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Indicates the detailed information for creating a {@link formBindingData#FormBindingData}.The {@code Want} object must include the form ID, form name, and grid style of the form,which can be obtained from {@link formInfo#FormParam#IDENTITY_KEY},{@link formInfo#FormParam#NAME_KEY}, and {@link formInfo#FormParam#DIMENSION_KEY},respectively. Such form information must be managed as persistent data for further form acquisition, update, and deletion. |
 
 **Return value:**
 
@@ -86,12 +92,13 @@ Called to return a {@link formBindingData.FormBindingData} object.
 onDestroy?(formId: string): void
 ```
 
-Called to notify the form provider that a specified form has been deleted. Override this method if
-you want your application, as the form provider, to be notified of form deletion.
+Called to notify the form provider that a specified form has been deleted. Override this method if you want your application, as the form provider, to be notified of form deletion.
 
 **Since:** 8
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-LifecycleForm-onDestroy?(formId: string): void--><!--Device-LifecycleForm-onDestroy?(formId: string): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -107,12 +114,13 @@ you want your application, as the form provider, to be notified of form deletion
 onEvent?(formId: string, message: string): void
 ```
 
-Called when a specified message event defined by the form provider is triggered. This method is valid only for
-JS forms.
+Called when a specified message event defined by the form provider is triggered. This method is valid only for JS forms.
 
 **Since:** 8
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-LifecycleForm-onEvent?(formId: string, message: string): void--><!--Device-LifecycleForm-onEvent?(formId: string, message: string): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -120,8 +128,8 @@ JS forms.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formId | string | Yes | Indicates the ID of the form on which the message event is triggered, which isprovided by the client to the form provider. |
-| message | string | Yes | Indicates the value of the {@code params} field of the message event. This parameteris used to identify the specific component on which the event is triggered. |
+| formId | string | Yes | Indicates the ID of the form on which the message event is triggered, which is provided by the client to the form provider. |
+| message | string | Yes | Indicates the value of the {@code params} field of the message event. This parameter is used to identify the specific component on which the event is triggered. |
 
 ## onUpdate
 
@@ -134,6 +142,8 @@ Called to notify the form provider to update a specified form.
 **Since:** 8
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-LifecycleForm-onUpdate?(formId: string): void--><!--Device-LifecycleForm-onUpdate?(formId: string): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -155,11 +165,13 @@ Called when the form provider receives form events from the system.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-LifecycleForm-onVisibilityChange?(newStatus: Record<string, number>): void--><!--Device-LifecycleForm-onVisibilityChange?(newStatus: Record<string, number>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newStatus | Record&lt;string, number&gt; | Yes | Indicates the form events occurred. The key in the {@code Map}object indicates form ID,and the value indicates the event type,which can be either{@link formInfo#VisibilityType#FORM_VISIBLE} or{@link formInfo#VisibilityType#FORM_INVISIBLE}.{@link formInfo#VisibilityType#FORM_VISIBLE}means that the form becomes visible, and{@link formInfo#VisibilityType#FORM_INVISIBLE}means that the form becomes invisible. |
+| newStatus | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, number> | Yes | Indicates the form events occurred. The key in the {@code Map}object indicates form ID,and the value indicates the event type,which can be either{@link formInfo#VisibilityType#FORM_VISIBLE} or{@link formInfo#VisibilityType#FORM_INVISIBLE}.{@link formInfo#VisibilityType#FORM_VISIBLE}means that the form becomes visible, and{@link formInfo#VisibilityType#FORM_INVISIBLE}means that the form becomes invisible. |
 

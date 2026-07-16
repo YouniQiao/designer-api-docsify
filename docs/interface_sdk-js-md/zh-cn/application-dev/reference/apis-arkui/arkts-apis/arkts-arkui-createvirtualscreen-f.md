@@ -1,5 +1,11 @@
 # createVirtualScreen
 
+## 导入模块
+
+```TypeScript
+import { display } from '@kit.ArkUI';
+```
+
 ## createVirtualScreen
 
 ```TypeScript
@@ -12,27 +18,29 @@ function createVirtualScreen(config: VirtualScreenConfig): Promise<number>
 
 **需要权限：** ohos.permission.ACCESS_VIRTUAL_SCREEN
 
+<!--Device-display-function createVirtualScreen(config: VirtualScreenConfig): Promise<long>--><!--Device-display-function createVirtualScreen(config: VirtualScreenConfig): Promise<long>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | VirtualScreenConfig | 是 | 用于创建虚拟屏幕的参数。 |
+| config | [VirtualScreenConfig](arkts-arkui-virtualscreenconfig-i.md) | 是 | 用于创建虚拟屏幕的参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回创建的虚拟屏幕的ScreenId。 |
+| Promise<number> | Promise对象。返回创建的虚拟屏幕的ScreenId。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function createVirtualScreen can not work correctly due tolimited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function createVirtualScreen can not work correctly due to limited device capabilities. |
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
 
 **示例：**

@@ -1,18 +1,14 @@
 # AuxiliaryPicture
 
-The **AuxiliaryPicture** class is used to read or write auxiliary picture data of an image and obtain auxiliary
-picture information of an image. The supported types of auxiliary pictures can be found in
-[AuxiliaryPictureType](arkts-image-auxiliarypicturetype-e.md).
+The **AuxiliaryPicture** class is used to read or write auxiliary picture data of an image and obtain auxiliary picture information of an image. The supported types of auxiliary pictures can be found in [AuxiliaryPictureType](arkts-image-auxiliarypicturetype-e.md).
 
-Before calling any API in AuxiliaryPicture, you must create an AuxiliaryPicture instance using
-[image.createAuxiliaryPicture](arkts-image-createauxiliarypicture-f.md#createauxiliarypicture-1) or
-[getAuxiliaryPicture](arkts-image-picture-i.md#getauxiliarypicture-1) in Picture.
+Before calling any API in AuxiliaryPicture, you must create an AuxiliaryPicture instance using [image.createAuxiliaryPicture](arkts-image-createauxiliarypicture-f.md#createauxiliarypicture-1) or [getAuxiliaryPicture](arkts-image-picture-i.md#getauxiliarypicture-1) in Picture.
 
-Images occupy a large amount of memory. When you finish using an AuxiliaryPicture instance, call
-[release](arkts-image-auxiliarypicture-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure
-that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Images occupy a large amount of memory. When you finish using an AuxiliaryPicture instance, call [release](arkts-image-auxiliarypicture-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 13
+
+<!--Device-image-interface AuxiliaryPicture--><!--Device-image-interface AuxiliaryPicture-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -32,13 +28,15 @@ Obtains the auxiliary picture information.
 
 **Since:** 13
 
+<!--Device-AuxiliaryPicture-getAuxiliaryPictureInfo(): AuxiliaryPictureInfo--><!--Device-AuxiliaryPicture-getAuxiliaryPictureInfo(): AuxiliaryPictureInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AuxiliaryPictureInfo | Auxiliary picture information. |
+| [AuxiliaryPictureInfo](arkts-image-auxiliarypictureinfo-i.md) | Auxiliary picture information. |
 
 ## getMetadata
 
@@ -50,26 +48,28 @@ Obtains the metadata of this auxiliary picture. This API uses a promise to retur
 
 **Since:** 13
 
+<!--Device-AuxiliaryPicture-getMetadata(metadataType: MetadataType): Promise<Metadata>--><!--Device-AuxiliaryPicture-getMetadata(metadataType: MetadataType): Promise<Metadata>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| metadataType | MetadataType | Yes | Metadata type, which is used to obtain metadata of the corresponding type. |
+| metadataType | [MetadataType](arkts-image-metadatatype-e.md) | Yes | Metadata type, which is used to obtain metadata of the corresponding type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Metadata&gt; | Promise that returns the metadata. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Metadata> | Promise that returns the metadata. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. Themetadata type does not match the auxiliary picture type. |
+| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
 
 ## getType
 
@@ -81,13 +81,15 @@ Obtains the type of this auxiliary picture.
 
 **Since:** 13
 
+<!--Device-AuxiliaryPicture-getType(): AuxiliaryPictureType--><!--Device-AuxiliaryPicture-getType(): AuxiliaryPictureType-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AuxiliaryPictureType | Type of the auxiliary picture. |
+| [AuxiliaryPictureType](arkts-image-auxiliarypicturetype-e.md) | Type of the auxiliary picture. |
 
 ## readPixelsToBuffer
 
@@ -95,10 +97,11 @@ Obtains the type of this auxiliary picture.
 readPixelsToBuffer(): Promise<ArrayBuffer>
 ```
 
-Reads pixels of this auxiliary picture and writes the data to an ArrayBuffer. This API uses a promise to return
-the result.
+Reads pixels of this auxiliary picture and writes the data to an ArrayBuffer. This API uses a promise to return the result.
 
 **Since:** 13
+
+<!--Device-AuxiliaryPicture-readPixelsToBuffer(): Promise<ArrayBuffer>--><!--Device-AuxiliaryPicture-readPixelsToBuffer(): Promise<ArrayBuffer>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -106,7 +109,7 @@ the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise used to return the pixels of the auxiliary picture. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ArrayBuffer> | Promise used to return the pixels of the auxiliary picture. |
 
 ## release
 
@@ -116,13 +119,13 @@ release():void
 
 Releases this AuxiliaryPicture object. No value is returned.
 
-Images occupy a large amount of memory. When you finish using an AuxiliaryPicture instance, call this API to free
-the memory promptly.
+Images occupy a large amount of memory. When you finish using an AuxiliaryPicture instance, call this API to free the memory promptly.
 
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished
-and the instance is no longer needed.
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 13
+
+<!--Device-AuxiliaryPicture-release():void--><!--Device-AuxiliaryPicture-release():void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -136,13 +139,15 @@ Sets the auxiliary picture information.
 
 **Since:** 13
 
+<!--Device-AuxiliaryPicture-setAuxiliaryPictureInfo(info: AuxiliaryPictureInfo): void--><!--Device-AuxiliaryPicture-setAuxiliaryPictureInfo(info: AuxiliaryPictureInfo): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | AuxiliaryPictureInfo | Yes | Auxiliary picture information. |
+| info | [AuxiliaryPictureInfo](arkts-image-auxiliarypictureinfo-i.md) | Yes | Auxiliary picture information. |
 
 **Error codes:**
 
@@ -160,27 +165,29 @@ Sets the metadata for this auxiliary picture. This API uses a promise to return 
 
 **Since:** 13
 
+<!--Device-AuxiliaryPicture-setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>--><!--Device-AuxiliaryPicture-setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| metadataType | MetadataType | Yes | Metadata type, which is used to set the corresponding metadata. |
-| metadata | Metadata | Yes | Metadata object. |
+| metadataType | [MetadataType](arkts-image-metadatatype-e.md) | Yes | Metadata type, which is used to set the corresponding metadata. |
+| metadata | [Metadata](../../apis-ability-kit/arkts-apis/arkts-ability-metadata-t.md) | Yes | Metadata object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. Themetadata type does not match the auxiliary picture type. |
+| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
 
 ## writePixelsFromBuffer
 
@@ -188,10 +195,11 @@ Sets the metadata for this auxiliary picture. This API uses a promise to return 
 writePixelsFromBuffer(data: ArrayBuffer): Promise<void>
 ```
 
-Reads pixels from an ArrayBuffer and writes the data to this AuxiliaryPicture object. This API uses a promise to
-return the result.
+Reads pixels from an ArrayBuffer and writes the data to this AuxiliaryPicture object. This API uses a promise to return the result.
 
 **Since:** 13
+
+<!--Device-AuxiliaryPicture-writePixelsFromBuffer(data: ArrayBuffer): Promise<void>--><!--Device-AuxiliaryPicture-writePixelsFromBuffer(data: ArrayBuffer): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -199,13 +207,13 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | ArrayBuffer | Yes | Pixels of the auxiliary picture. |
+| data | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Pixels of the auxiliary picture. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

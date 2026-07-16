@@ -14,11 +14,11 @@ function createParallelSoundPool(maxStreams: number, audioRenderInfo: audio.Audi
 
 Creates a **SoundPool** instance. This API uses a promise to return the result.
 
-If a **SoundPool** instance created using [createSoundPool](#createSoundPool) is used to play the same sound
-again, it stops the current audio and restarts the audio. However, if the instance is created using
-**createParallelSoundPool**, it keeps playing the first audio and starts the new one alongside it.
+If a **SoundPool** instance created using [createSoundPool](#createSoundPool) is used to play the same sound again, it stops the current audio and restarts the audio. However, if the instance is created using **createParallelSoundPool**, it keeps playing the first audio and starts the new one alongside it.
 
 **Since:** 20
+
+<!--Device-media-function createParallelSoundPool(maxStreams: int, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool>--><!--Device-media-function createParallelSoundPool(maxStreams: int, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -35,7 +35,7 @@ again, it stops the current audio and restarts the audio. However, if the instan
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SoundPool&gt; | Promise used to return the result. If the operation is successful, a **SoundPool**instance is returned; otherwise, **null** is returned. The instance is used for loading and playback. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SoundPool> | Promise used to return the result. If the operation is successful, a **SoundPool** instance is returned; otherwise, **null** is returned. The instance is used for loading and playback. |
 
 **Error codes:**
 

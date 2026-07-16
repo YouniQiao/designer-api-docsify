@@ -20,6 +20,8 @@ Converts a Context object to a SendableContext object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-sendableContextManager-function convertFromContext(context: common.Context): SendableContext--><!--Device-sendableContextManager-function convertFromContext(context: common.Context): SendableContext-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
@@ -32,7 +34,7 @@ Converts a Context object to a SendableContext object.
 
 | Type | Description |
 | --- | --- |
-| SendableContext | [SendableContext](arkts-ability-sendablecontext-i.md) object. |
+| [SendableContext](arkts-ability-sendablecontext-t.md) | [SendableContext](arkts-ability-sendablecontext-i.md) object. |
 
 **Error codes:**
 

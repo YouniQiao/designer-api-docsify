@@ -4,6 +4,8 @@ Enumerates the adaptive color modes used for the background blur effect.
 
 **Since:** 10
 
+<!--Device-unnamed-declare enum AdaptiveColor--><!--Device-unnamed-declare enum AdaptiveColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DEFAULT
@@ -12,14 +14,15 @@ Enumerates the adaptive color modes used for the background blur effect.
 DEFAULT = 0
 ```
 
-Adaptive color mode is not used. The default color is used as the mask color. Using a mode other than **DEFAULT**
-can be more time-consuming.
+Adaptive color mode is not used. The default color is used as the mask color. Using a mode other than **DEFAULT** can be more time-consuming.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AdaptiveColor-DEFAULT = 0--><!--Device-AdaptiveColor-DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +39,8 @@ Adaptive color mode is used. The average color value of the color picking area i
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AdaptiveColor-AVERAGE = 1--><!--Device-AdaptiveColor-AVERAGE = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

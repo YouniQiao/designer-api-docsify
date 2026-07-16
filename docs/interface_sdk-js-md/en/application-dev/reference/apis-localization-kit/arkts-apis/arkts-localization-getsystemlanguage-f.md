@@ -20,6 +20,8 @@ Obtains the system language.
 
 **Substitutes:** [getSystemLanguage](arkts-localization-system-c.md#getsystemlanguage-1)
 
+<!--Device-i18n-export function getSystemLanguage(): string--><!--Device-i18n-export function getSystemLanguage(): string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**

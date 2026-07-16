@@ -17,12 +17,23 @@ function cancelAsBundle(
   ): void
 ```
 
-Cancels a notification published through the reminder agent. This API uses an asynchronous callback to return the
-result.
+Cancels a notification published through the reminder agent. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
+
+<!--Device-notificationManager-function cancelAsBundle(
+    id: int,
+    representativeBundle: string,
+    userId: int,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-notificationManager-function cancelAsBundle(
+    id: int,
+    representativeBundle: string,
+    userId: int,
+    callback: AsyncCallback<void>
+  ): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -33,9 +44,9 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | number | Yes | Notification ID. |
-| representativeBundle | string | Yes | Bundle name of the application whose notification function is taken overby the reminder agent. |
+| representativeBundle | string | Yes | Bundle name of the application whose notification function is taken over by the reminder agent. |
 | userId | number | Yes | User ID. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -85,6 +96,8 @@ Cancels a notification published through the reminder agent. This API uses a pro
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
+<!--Device-notificationManager-function cancelAsBundle(id: int, representativeBundle: string, userId: int): Promise<void>--><!--Device-notificationManager-function cancelAsBundle(id: int, representativeBundle: string, userId: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -94,14 +107,14 @@ Cancels a notification published through the reminder agent. This API uses a pro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | number | Yes | Notification ID. |
-| representativeBundle | string | Yes | Bundle name of the application whose notification function is taken overby the reminder agent. |
+| representativeBundle | string | Yes | Bundle name of the application whose notification function is taken over by the reminder agent. |
 | userId | number | Yes | User ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -147,6 +160,8 @@ Cancels a notification published through the reminder agent. This API uses a pro
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
+<!--Device-notificationManager-function cancelAsBundle(representativeBundle: BundleOption, id: int): Promise<void>--><!--Device-notificationManager-function cancelAsBundle(representativeBundle: BundleOption, id: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -155,14 +170,14 @@ Cancels a notification published through the reminder agent. This API uses a pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| representativeBundle | BundleOption | Yes | Bundle information of the application whose notification function istaken over by the reminder agent. |
+| representativeBundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application whose notification function is taken over by the reminder agent. |
 | id | number | Yes | Notification ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

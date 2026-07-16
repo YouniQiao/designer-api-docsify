@@ -1,9 +1,10 @@
 # Config (System API)
 
-Provides APIs for setting device-cloud synergy, including enabling and disabling device-cloud synergy, clearing
-data, and notifying data changes.
+Provides APIs for setting device-cloud synergy, including enabling and disabling device-cloud synergy, clearing data, and notifying data changes.
 
 **Since:** 10
+
+<!--Device-cloudData-class Config--><!--Device-cloudData-class Config-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -32,6 +33,14 @@ Queries the last synchronization information in batch
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Config-static batchQueryLastSyncInfo(
+        accountId: string,
+        bundleInfos: Array<BundleInfo>
+    ): Promise<Record<string, Record<string, SyncInfo>>>--><!--Device-Config-static batchQueryLastSyncInfo(
+        accountId: string,
+        bundleInfos: Array<BundleInfo>
+    ): Promise<Record<string, Record<string, SyncInfo>>>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -41,13 +50,13 @@ Queries the last synchronization information in batch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountId | string | Yes | Indicates the account ID.The account ID is required by hashing cloud account. |
-| bundleInfos | Array&lt;BundleInfo&gt; | Yes | BundleInfo configuration array. |
+| bundleInfos | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<BundleInfo> | Yes | BundleInfo configuration array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, Record&lt;string, SyncInfo&gt;&gt;&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Record<string, Record<string, SyncInfo>>> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -55,7 +64,7 @@ Queries the last synchronization information in batch
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed,usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed,application which is not a system application uses system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supportedbecause the device does not support the device-cloud capability. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the device does not support the device-cloud capability. |
 | [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. the accountId is empty;2. the bundlename is null; 3. the number of bundleInfos exceeds the upper limit or the number is 0. |
 
 **Example**
@@ -93,12 +102,23 @@ static changeAppCloudSwitch(
     ): void
 ```
 
-Changes the device-cloud synergy setting for an application. This API uses an asynchronous callback to return the
-result.
+Changes the device-cloud synergy setting for an application. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.CLOUDDATA_CONFIG
+
+<!--Device-Config-static changeAppCloudSwitch(
+      accountId: string,
+      bundleName: string,
+      status: boolean,
+      callback: AsyncCallback<void>
+    ): void--><!--Device-Config-static changeAppCloudSwitch(
+      accountId: string,
+      bundleName: string,
+      status: boolean,
+      callback: AsyncCallback<void>
+    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -110,15 +130,15 @@ result.
 | --- | --- | --- | --- |
 | accountId | string | Yes | ID of the cloud account. |
 | bundleName | string | Yes | Bundle name of the application. |
-| status | boolean | Yes | New device-cloud synergy setting. The value **true** means to enable device-cloudsynergy; the value **false** means the opposite. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| status | boolean | Yes | New device-cloud synergy setting. The value **true** means to enable device-cloud synergy; the value **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types;3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
@@ -156,6 +176,8 @@ Changes the device-cloud synergy setting for an application. This API uses a pro
 
 **Required permissions:** ohos.permission.CLOUDDATA_CONFIG
 
+<!--Device-Config-static changeAppCloudSwitch(accountId: string, bundleName: string, status: boolean): Promise<void>--><!--Device-Config-static changeAppCloudSwitch(accountId: string, bundleName: string, status: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -166,20 +188,20 @@ Changes the device-cloud synergy setting for an application. This API uses a pro
 | --- | --- | --- | --- |
 | accountId | string | Yes | ID of the cloud account. |
 | bundleName | string | Yes | Bundle name of the application. |
-| status | boolean | Yes | New device-cloud synergy setting. The value **true** means to enable device-cloudsynergy; the value **false** means the opposite. |
+| status | boolean | Yes | New device-cloud synergy setting. The value **true** means to enable device-cloud synergy; the value **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types;3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
@@ -222,6 +244,18 @@ Changes the device-cloud synergy setting for an application. This API uses a pro
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Config-static changeAppCloudSwitch(
+      accountId: string,
+      bundleName: string,
+      status: boolean,
+      config?: SwitchConfig
+    ): Promise<void>--><!--Device-Config-static changeAppCloudSwitch(
+      accountId: string,
+      bundleName: string,
+      status: boolean,
+      config?: SwitchConfig
+    ): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -232,21 +266,21 @@ Changes the device-cloud synergy setting for an application. This API uses a pro
 | --- | --- | --- | --- |
 | accountId | string | Yes | ID of the cloud account. |
 | bundleName | string | Yes | Bundle name of the application. |
-| status | boolean | Yes | New device-cloud synergy setting. The value **true** means to enable device-cloudsynergy; the value **false** means the opposite. |
-| config | SwitchConfig | No | Switch configuration of a device-cloud synergy database. Device-cloud synergypriority: application &gt; database &gt; table. If this parameter is not set, the application-level device-cloudsynergy is used by default. |
+| status | boolean | Yes | New device-cloud synergy setting. The value **true** means to enable device-cloud synergy; the value **false** means the opposite. |
+| config | [SwitchConfig](arkts-arkdata-switchconfig-i-sys.md) | No | Switch configuration of a device-cloud synergy database. Device-cloud synergy priority: application &gt; database &gt; table. If this parameter is not set, the application-level device-cloud synergy is used by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
 **Example**
@@ -296,6 +330,16 @@ Clears the cloud data locally. This API uses an asynchronous callback to return 
 
 **Required permissions:** ohos.permission.CLOUDDATA_CONFIG
 
+<!--Device-Config-static clear(
+      accountId: string,
+      appActions: Record<string, ClearAction>,
+      callback: AsyncCallback<void>
+    ): void--><!--Device-Config-static clear(
+      accountId: string,
+      appActions: Record<string, ClearAction>,
+      callback: AsyncCallback<void>
+    ): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -305,15 +349,15 @@ Clears the cloud data locally. This API uses an asynchronous callback to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountId | string | Yes | ID of the cloud account. |
-| appActions | Record&lt;string, ClearAction&gt; | Yes | Information about the application whose data is to be clearedand the operation to perform.<br>**Since:** 11 |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| appActions | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, ClearAction> | Yes | Information about the application whose data is to be cleared and the operation to perform.<br>**Since:** 11 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types;3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
@@ -355,6 +399,8 @@ Clears the cloud data locally. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.CLOUDDATA_CONFIG
 
+<!--Device-Config-static clear(accountId: string, appActions: Record<string, ClearAction>): Promise<void>--><!--Device-Config-static clear(accountId: string, appActions: Record<string, ClearAction>): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -364,20 +410,20 @@ Clears the cloud data locally. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountId | string | Yes | ID of the cloud account. |
-| appActions | Record&lt;string, ClearAction&gt; | Yes | Information about the application whose data is to becleared and the operation to perform.<br>**Since:** 11 |
+| appActions | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, ClearAction> | Yes | Information about the application whose data is to be cleared and the operation to perform.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned byVerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
@@ -423,6 +469,16 @@ Clears the cloud data locally. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Config-static clear(
+      accountId: string,
+      appActions: Record<string, ClearAction>,
+      config?: Record<string, ClearConfig>
+    ): Promise<void>--><!--Device-Config-static clear(
+      accountId: string,
+      appActions: Record<string, ClearAction>,
+      config?: Record<string, ClearConfig>
+    ): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -432,21 +488,21 @@ Clears the cloud data locally. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountId | string | Yes | ID of the cloud account. |
-| appActions | Record&lt;string, ClearAction&gt; | Yes | Information about the application whose data is to be clearedand the operation to perform. |
-| config | Record&lt;string, ClearConfig&gt; | No | Clearance information of a device-cloud synergy database. Thekey is the application name, and the value is the database clearance rules of the application. Clearancepriority: table &gt; database &gt; application. If this parameter is not set, the application-level data clearancemode is used by default. |
+| appActions | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, ClearAction> | Yes | Information about the application whose data is to be cleared and the operation to perform. |
+| config | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, ClearConfig> | No | Clearance information of a device-cloud synergy database. The key is the application name, and the value is the database clearance rules of the application. Clearance priority: table &gt; database &gt; application. If this parameter is not set, the application-level data clearance mode is used by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
 **Example**
@@ -497,12 +553,23 @@ static cloudSync(
     ): Promise<void>
 ```
 
-Synchronizes data of a specified application on the device to the cloud. This API uses a promise to return the
-result.
+Synchronizes data of a specified application on the device to the cloud. This API uses a promise to return the result.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.CLOUDDATA_CONFIG
+
+<!--Device-Config-static cloudSync(
+      bundleName: string,
+      storeId: string,
+      mode: relationalStore.SyncMode,
+      progress: Callback<relationalStore.ProgressDetails>
+    ): Promise<void>--><!--Device-Config-static cloudSync(
+      bundleName: string,
+      storeId: string,
+      mode: relationalStore.SyncMode,
+      progress: Callback<relationalStore.ProgressDetails>
+    ): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -515,13 +582,13 @@ result.
 | bundleName | string | Yes | Name of the application to sync. |
 | storeId | string | Yes | Name of the database to sync. |
 | mode | relationalStore.SyncMode | Yes | Device-cloud sync mode. |
-| progress | Callback&lt;relationalStore.ProgressDetails&gt; | Yes | Callback used to return the sync progress. |
+| progress | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<relationalStore.ProgressDetails> | Yes | Callback used to return the sync progress. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -571,6 +638,16 @@ Sync data to cloud. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Config-static cloudSyncEx(
+        bundleInfo: BundleInfo,
+        config: relationalStore.CloudSyncConfig,
+        progress: Callback<relationalStore.ProgressDetails>
+    ): Promise<void>--><!--Device-Config-static cloudSyncEx(
+        bundleInfo: BundleInfo,
+        config: relationalStore.CloudSyncConfig,
+        progress: Callback<relationalStore.ProgressDetails>
+    ): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -579,15 +656,15 @@ Sync data to cloud. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleInfo | BundleInfo | Yes | BundleInfo configuration.<br>the instance object of {@link BundleInfo} |
+| bundleInfo | [BundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleinfo-i-sys.md) | Yes | BundleInfo configuration.<br>the instance object of {@link BundleInfo} |
 | config | relationalStore.CloudSyncConfig | Yes | Indicates cloud sync configuration.<br>the instance object of {@link relationalStore.CloudSyncConfig} |
-| progress | Callback&lt;relationalStore.ProgressDetails&gt; | Yes | Callback used to return the sync progress. |
+| progress | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<relationalStore.ProgressDetails> | Yes | Callback used to return the sync progress. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -595,7 +672,7 @@ Sync data to cloud. This API uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed,<br>usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application is not a system application. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supportedbecause the device does not support the device-cloud capability. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the device does not support the device-cloud capability. |
 | [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Empty conditions. |
 
 **Example**
@@ -641,6 +718,8 @@ Disables device-cloud synergy. This API uses an asynchronous callback to return 
 
 **Required permissions:** ohos.permission.CLOUDDATA_CONFIG
 
+<!--Device-Config-static disableCloud(accountId: string, callback: AsyncCallback<void>): void--><!--Device-Config-static disableCloud(accountId: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -650,14 +729,14 @@ Disables device-cloud synergy. This API uses an asynchronous callback to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountId | string | Yes | ID of the cloud account. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types;3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
@@ -694,6 +773,8 @@ Disables device-cloud synergy. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.CLOUDDATA_CONFIG
 
+<!--Device-Config-static disableCloud(accountId: string): Promise<void>--><!--Device-Config-static disableCloud(accountId: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -708,14 +789,14 @@ Disables device-cloud synergy. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types;3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
@@ -754,6 +835,16 @@ Enables device-cloud synergy. This API uses an asynchronous callback to return t
 
 **Required permissions:** ohos.permission.CLOUDDATA_CONFIG
 
+<!--Device-Config-static enableCloud(
+      accountId: string,
+      switches: Record<string, boolean>,
+      callback: AsyncCallback<void>
+    ): void--><!--Device-Config-static enableCloud(
+      accountId: string,
+      switches: Record<string, boolean>,
+      callback: AsyncCallback<void>
+    ): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -763,15 +854,15 @@ Enables device-cloud synergy. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountId | string | Yes | ID of the cloud account. |
-| switches | Record&lt;string, boolean&gt; | Yes | Device-cloud synergy settings for applications. The value **true**means to enable device-cloud synergy; the value **false** means the opposite.<br>**Since:** 11 |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| switches | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, boolean> | Yes | Device-cloud synergy settings for applications. The value **true** means to enable device-cloud synergy; the value **false** means the opposite.<br>**Since:** 11 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types;3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
@@ -809,6 +900,8 @@ Enables device-cloud synergy. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.CLOUDDATA_CONFIG
 
+<!--Device-Config-static enableCloud(accountId: string, switches: Record<string, boolean>): Promise<void>--><!--Device-Config-static enableCloud(accountId: string, switches: Record<string, boolean>): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -818,20 +911,20 @@ Enables device-cloud synergy. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountId | string | Yes | ID of the cloud account. |
-| switches | Record&lt;string, boolean&gt; | Yes | Device-cloud synergy settings for applications. The value **true**means to enable device-cloud synergy; the value **false** means the opposite.<br>**Since:** 11 |
+| switches | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, boolean> | Yes | Device-cloud synergy settings for applications. The value **true** means to enable device-cloud synergy; the value **false** means the opposite.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned byVerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
@@ -861,12 +954,13 @@ try {
 static notifyDataChange(extInfo: ExtraData, userId?: number): Promise<void>
 ```
 
-Notifies the data changes in the cloud. This API uses a promise to return the result. You can specify the
-database and tables with data changes in the **extraData** field in **extInfo**, and specify the user ID.
+Notifies the data changes in the cloud. This API uses a promise to return the result. You can specify the database and tables with data changes in the **extraData** field in **extInfo**, and specify the user ID.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.CLOUDDATA_CONFIG
+
+<!--Device-Config-static notifyDataChange(extInfo: ExtraData, userId?: int): Promise<void>--><!--Device-Config-static notifyDataChange(extInfo: ExtraData, userId?: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -876,21 +970,21 @@ database and tables with data changes in the **extraData** field in **extInfo**,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extInfo | ExtraData | Yes | Transparently transmitted data, including information about the application thathas data changes. |
-| userId | number | No | User ID. This parameter is optional. The default value is the current user ID. If thisparameter is specified, the value must be an existing user ID in the system. |
+| extInfo | [ExtraData](../../apis-core-file-kit/arkts-apis/arkts-corefile-extradata-i-sys.md) | Yes | Transparently transmitted data, including information about the application that has data changes. |
+| userId | number | No | User ID. This parameter is optional. The default value is the current user ID. If this parameter is specified, the value must be an existing user ID in the system. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, whichis usually returned by <b>VerifyAccessToken</b>. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, which is usually returned by <b>VerifyAccessToken</b>. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types;3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
@@ -923,13 +1017,13 @@ try {
 static notifyDataChange(extInfo: ExtraData, callback: AsyncCallback<void>): void
 ```
 
-Notifies the data changes in the cloud with the specified information, such as the database and table names (
-specified by the **extraData** field in **extInfo**). This API uses an asynchronous callback to return the
-result.
+Notifies the data changes in the cloud with the specified information, such as the database and table names (specified by the **extraData** field in **extInfo**). This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.CLOUDDATA_CONFIG
+
+<!--Device-Config-static notifyDataChange(extInfo: ExtraData, callback: AsyncCallback<void>): void--><!--Device-Config-static notifyDataChange(extInfo: ExtraData, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -939,15 +1033,15 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extInfo | ExtraData | Yes | Transparently transmitted data, including information about the application thathas data changes. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| extInfo | [ExtraData](../../apis-core-file-kit/arkts-apis/arkts-corefile-extradata-i-sys.md) | Yes | Transparently transmitted data, including information about the application that has data changes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, whichis usually returned by <b>VerifyAccessToken</b>. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, which is usually returned by <b>VerifyAccessToken</b>. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types;3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
@@ -981,13 +1075,13 @@ try {
 static notifyDataChange(extInfo: ExtraData, userId: number, callback: AsyncCallback<void>): void
 ```
 
-Notifies the data changes of a user in the cloud. This API uses an asynchronous callback to return the result.
-You can also specify the database and tables with data changes in the **extraData** field in **extInfo**, and
-specify the user ID.
+Notifies the data changes of a user in the cloud. This API uses an asynchronous callback to return the result.You can also specify the database and tables with data changes in the **extraData** field in **extInfo**, and specify the user ID.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.CLOUDDATA_CONFIG
+
+<!--Device-Config-static notifyDataChange(extInfo: ExtraData, userId: int, callback: AsyncCallback<void>): void--><!--Device-Config-static notifyDataChange(extInfo: ExtraData, userId: int, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -997,16 +1091,16 @@ specify the user ID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extInfo | ExtraData | Yes | Transparently transmitted data, including information about the application thathas data changes. |
+| extInfo | [ExtraData](../../apis-core-file-kit/arkts-apis/arkts-corefile-extradata-i-sys.md) | Yes | Transparently transmitted data, including information about the application that has data changes. |
 | userId | number | Yes | User ID in the system. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, whichis usually returned by <b>VerifyAccessToken</b>. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, which is usually returned by <b>VerifyAccessToken</b>. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types;3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
@@ -1047,6 +1141,8 @@ Notifies the data changes in the cloud. This API uses a promise to return the re
 
 **Required permissions:** ohos.permission.CLOUDDATA_CONFIG
 
+<!--Device-Config-static notifyDataChange(accountId: string, bundleName: string): Promise<void>--><!--Device-Config-static notifyDataChange(accountId: string, bundleName: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -1062,14 +1158,14 @@ Notifies the data changes in the cloud. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types;3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
@@ -1105,6 +1201,8 @@ Notifies the data changes in the cloud. This API uses an asynchronous callback t
 
 **Required permissions:** ohos.permission.CLOUDDATA_CONFIG
 
+<!--Device-Config-static notifyDataChange(accountId: string, bundleName: string, callback: AsyncCallback<void>): void--><!--Device-Config-static notifyDataChange(accountId: string, bundleName: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -1115,14 +1213,14 @@ Notifies the data changes in the cloud. This API uses an asynchronous callback t
 | --- | --- | --- | --- |
 | accountId | string | Yes | ID of the cloud account. |
 | bundleName | string | Yes | Bundle name of the application. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types;3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
@@ -1165,6 +1263,14 @@ Remove specified observer of specified type from the database.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Config-static offSyncInfoChanged(
+        bundleInfos: Array<BundleInfo>,
+        progress?: Callback<Record<string, Record<string, SyncInfo>>>
+    ): void--><!--Device-Config-static offSyncInfoChanged(
+        bundleInfos: Array<BundleInfo>,
+        progress?: Callback<Record<string, Record<string, SyncInfo>>>
+    ): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -1173,8 +1279,8 @@ Remove specified observer of specified type from the database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleInfos | Array&lt;BundleInfo&gt; | Yes | BundleInfo configuration array. |
-| progress | Callback&lt;Record&lt;string, Record&lt;string, SyncInfo&gt;&gt;&gt; | No | Optional progress callback. |
+| bundleInfos | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<BundleInfo> | Yes | BundleInfo configuration array. |
+| progress | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Record<string, Record<string, SyncInfo>>> | No | Optional progress callback. |
 
 **Error codes:**
 
@@ -1182,7 +1288,7 @@ Remove specified observer of specified type from the database.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed,usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed,application which is not a system application uses system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supportedbecause the device does not support the device-cloud capability. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the device does not support the device-cloud capability. |
 | [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. bundlename is null;<br>2. the number of bundleInfos exceeds the upper limit or the number is 0. |
 
 **Example**
@@ -1242,6 +1348,14 @@ Subscribes to changes in the sync information of a specified application.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Config-static onSyncInfoChanged(
+        bundleInfos: Array<BundleInfo>,
+        progress: Callback<Record<string, Record<string, SyncInfo>>>
+    ): void--><!--Device-Config-static onSyncInfoChanged(
+        bundleInfos: Array<BundleInfo>,
+        progress: Callback<Record<string, Record<string, SyncInfo>>>
+    ): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -1250,8 +1364,8 @@ Subscribes to changes in the sync information of a specified application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleInfos | Array&lt;BundleInfo&gt; | Yes | BundleInfo configuration array. |
-| progress | Callback&lt;Record&lt;string, Record&lt;string, SyncInfo&gt;&gt;&gt; | Yes | progress. |
+| bundleInfos | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<BundleInfo> | Yes | BundleInfo configuration array. |
+| progress | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Record<string, Record<string, SyncInfo>>> | Yes | progress. |
 
 **Error codes:**
 
@@ -1259,7 +1373,7 @@ Subscribes to changes in the sync information of a specified application.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed,usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed,application which is not a system application uses system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supportedbecause the device does not support the device-cloud capability. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the device does not support the device-cloud capability. |
 | [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. bundlename is null;<br>2. the number of bundleInfos exceeds the upper limit or the number is 0. |
 
 **Example**
@@ -1299,6 +1413,16 @@ Queries information about the last device-cloud sync. This API uses a promise to
 
 **Required permissions:** ohos.permission.CLOUDDATA_CONFIG
 
+<!--Device-Config-static queryLastSyncInfo(
+        accountId: string,
+        bundleName: string,
+        storeId?: string
+    ): Promise<Record<string, SyncInfo>>--><!--Device-Config-static queryLastSyncInfo(
+        accountId: string,
+        bundleName: string,
+        storeId?: string
+    ): Promise<Record<string, SyncInfo>>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -1309,20 +1433,20 @@ Queries information about the last device-cloud sync. This API uses a promise to
 | --- | --- | --- | --- |
 | accountId | string | Yes | ID of the cloud account. |
 | bundleName | string | Yes | Bundle name of the application. |
-| storeId | string | No | Name of the RDB store. The default value is an empty string. If the default valueis used, this API queries the last device-cloud sync information of all databases of this application. |
+| storeId | string | No | Name of the RDB store. The default value is an empty string. If the default value is used, this API queries the last device-cloud sync information of all databases of this application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, SyncInfo&gt;&gt; | Promise used to return the database name and the result set of thelast device-cloud sync. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Record<string, SyncInfo>> | Promise used to return the database name and the result set of the last device-cloud sync. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types;3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
@@ -1357,12 +1481,21 @@ static queryStatistics(
     ): Promise<Record<string, Array<StatisticInfo>>>
 ```
 
-Queries device-cloud data statistics, which include the data not synced, data synced and consistent, and data
-synced but inconsistent between the device and the cloud. This API uses a promise to return the result.
+Queries device-cloud data statistics, which include the data not synced, data synced and consistent, and data synced but inconsistent between the device and the cloud. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.CLOUDDATA_CONFIG
+
+<!--Device-Config-static queryStatistics(
+        accountId: string,
+        bundleName: string,
+        storeId?: string
+    ): Promise<Record<string, Array<StatisticInfo>>>--><!--Device-Config-static queryStatistics(
+        accountId: string,
+        bundleName: string,
+        storeId?: string
+    ): Promise<Record<string, Array<StatisticInfo>>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -1374,20 +1507,20 @@ synced but inconsistent between the device and the cloud. This API uses a promis
 | --- | --- | --- | --- |
 | accountId | string | Yes | ID of the cloud account. |
 | bundleName | string | Yes | Bundle name of the application. |
-| storeId | string | No | Name of the RDB store. If this parameter is not specified, all local databases ofthis application are queried by default. |
+| storeId | string | No | Name of the RDB store. If this parameter is not specified, all local databases of this application are queried by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, Array&lt;StatisticInfo&gt;&gt;&gt; | Promise used to return the table name and statistics. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Record<string, Array<StatisticInfo>>> | Promise used to return the table name and statistics. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types;3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
@@ -1420,6 +1553,8 @@ Sets a global device-cloud sync strategy. This API uses a promise to return the 
 
 **Required permissions:** ohos.permission.CLOUDDATA_CONFIG
 
+<!--Device-Config-static setGlobalCloudStrategy(strategy: StrategyType, param?: Array<commonType.ValueType>): Promise<void>--><!--Device-Config-static setGlobalCloudStrategy(strategy: StrategyType, param?: Array<commonType.ValueType>): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -1428,21 +1563,21 @@ Sets a global device-cloud sync strategy. This API uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategy | StrategyType | Yes | Type of the strategy to set. |
-| param | Array&lt;commonType.ValueType&gt; | No | Strategy parameters to set. If this parameter is not specified,the strategy configuration is deleted by default. |
+| strategy | [StrategyType](arkts-arkdata-strategytype-e.md) | Yes | Type of the strategy to set. |
+| param | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<commonType.ValueType> | No | Strategy parameters to set. If this parameter is not specified,the strategy configuration is deleted by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types;3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
@@ -1473,6 +1608,8 @@ Stops syncing data to the cloud.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Config-static stopCloudSync(bundleInfos: Array<BundleInfo>): Promise<void>--><!--Device-Config-static stopCloudSync(bundleInfos: Array<BundleInfo>): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -1481,21 +1618,21 @@ Stops syncing data to the cloud.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleInfos | Array&lt;BundleInfo&gt; | Yes | BundleInfo configuration array. |
+| bundleInfos | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<BundleInfo> | Yes | BundleInfo configuration array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | : The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | : The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed,<br>usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | if permission verification failed, application which is not a systemapplication uses system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supportedbecause the device does not support the device-cloud capability. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | if permission verification failed, application which is not a system application uses system API. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the device does not support the device-cloud capability. |
 | [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. bundlename is null;<br>2. the number of bundleInfos exceeds the upper limit or the number is 0. |
 
 **Example**

@@ -20,6 +20,8 @@ Disables device control for a bound device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-partnerAgent-function disableDeviceControl(deviceAddress: PartnerDeviceAddress): Promise<void>--><!--Device-partnerAgent-function disableDeviceControl(deviceAddress: PartnerDeviceAddress): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 **System API:** This is a system API.
@@ -28,13 +30,13 @@ Disables device control for a bound device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceAddress | PartnerDeviceAddress | Yes | The address of partner device. |
+| deviceAddress | [PartnerDeviceAddress](arkts-connectivity-partnerdeviceaddress-t.md) | Yes | The address of partner device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 

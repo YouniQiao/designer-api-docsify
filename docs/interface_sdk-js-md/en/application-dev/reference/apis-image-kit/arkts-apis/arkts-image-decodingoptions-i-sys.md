@@ -4,6 +4,8 @@ Describes the image decoding options.
 
 **Since:** 7
 
+<!--Device-image-interface DecodingOptions--><!--Device-image-interface DecodingOptions-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 ## Modules to Import
@@ -23,6 +25,8 @@ Image quality.
 **Type:** ResolutionQuality
 
 **Since:** 12
+
+<!--Device-DecodingOptions-resolutionQuality?: ResolutionQuality--><!--Device-DecodingOptions-resolutionQuality?: ResolutionQuality-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 

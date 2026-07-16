@@ -1,5 +1,11 @@
 # getSync
 
+## 导入模块
+
+```TypeScript
+import { componentSnapshot } from '@kit.ArkUI';
+```
+
 ## getSync
 
 ```TypeScript
@@ -8,15 +14,17 @@ function getSync(id: string, options?: SnapshotOptions): image.PixelMap
 
 获取已加载的组件的截图，传入组件的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)，找到对应组件进行截图。同步等待截图完成返回[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md)。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 截图会获取最近一帧的绘制内容。如果在组件触发更新的同时调用截图，更新的渲染内容不会被截取到，截图会返回上一帧的绘制内容。
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-componentSnapshot-function getSync(id: string, options?: SnapshotOptions): image.PixelMap--><!--Device-componentSnapshot-function getSync(id: string, options?: SnapshotOptions): image.PixelMap-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,7 +33,7 @@ function getSync(id: string, options?: SnapshotOptions): image.PixelMap
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | string | 是 | 目标组件的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。 |
-| options | SnapshotOptions | 否 | 截图相关的自定义参数。 |
+| options | [SnapshotOptions](arkts-arkui-snapshotoptions-i.md) | 否 | 截图相关的自定义参数。 |
 
 **返回值：**
 

@@ -20,6 +20,8 @@ Stops any form of motor vibration.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-vibrator-function stopVibrationSync(): void--><!--Device-vibrator-function stopVibrationSync(): void-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Error codes:**

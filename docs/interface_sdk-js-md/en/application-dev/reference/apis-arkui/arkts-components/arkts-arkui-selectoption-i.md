@@ -4,6 +4,8 @@ Provides information about the drop-down menu options.
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface SelectOption--><!--Device-unnamed-declare interface SelectOption-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## icon
@@ -19,6 +21,8 @@ Icon of the drop-down menu option.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SelectOption-icon?: ResourceStr--><!--Device-SelectOption-icon?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ Symbol icon of drop-down menu option.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SelectOption-symbolIcon?: SymbolGlyphModifier--><!--Device-SelectOption-symbolIcon?: SymbolGlyphModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -55,6 +61,8 @@ Value of the drop-down menu option.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SelectOption-value: ResourceStr--><!--Device-SelectOption-value: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,5 +1,11 @@
 # changeConfirmation（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { cloudData } from '@kit.ArkData';
+```
+
 ## changeConfirmation
 
 ```TypeScript
@@ -10,6 +16,8 @@ function changeConfirmation(sharingResource: string, state: State, callback: Asy
 
 **起始版本：** 11
 
+<!--Device-sharing-function changeConfirmation(sharingResource: string, state: State, callback: AsyncCallback<Result<void>>): void--><!--Device-sharing-function changeConfirmation(sharingResource: string, state: State, callback: AsyncCallback<Result<void>>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +27,8 @@ function changeConfirmation(sharingResource: string, state: State, callback: Asy
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sharingResource | string | 是 | 端云共享数据的资源标识。 |
-| state | State | 是 | 更改邀请的状态。 |
-| callback | AsyncCallback&lt;Result&lt;void&gt;&gt; | 是 | 回调函数。返回更改邀请状态的结果。 |
+| state | [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-state-e.md) | 是 | 更改邀请的状态。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Result<void>> | 是 | 回调函数。返回更改邀请状态的结果。 |
 
 **错误码：**
 
@@ -56,6 +64,8 @@ function changeConfirmation(sharingResource: string, state: State): Promise<Resu
 
 **起始版本：** 11
 
+<!--Device-sharing-function changeConfirmation(sharingResource: string, state: State): Promise<Result<void>>--><!--Device-sharing-function changeConfirmation(sharingResource: string, state: State): Promise<Result<void>>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **系统接口：** 此接口为系统接口。
@@ -65,13 +75,13 @@ function changeConfirmation(sharingResource: string, state: State): Promise<Resu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sharingResource | string | 是 | 端云共享数据的资源标识。 |
-| state | State | 是 | 更改邀请的状态。 |
+| state | [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-state-e.md) | 是 | 更改邀请的状态。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;void&gt;&gt; | Promise对象，返回更改共享邀请状态的结果。 |
+| Promise<Result<void>> | Promise对象，返回更改共享邀请状态的结果。 |
 
 **错误码：**
 

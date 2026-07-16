@@ -4,6 +4,8 @@ Multi-line text input box type.
 
 **Since:** 11
 
+<!--Device-unnamed-declare enum TextAreaType--><!--Device-unnamed-declare enum TextAreaType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NORMAL
@@ -19,6 +21,8 @@ Basic input mode with no special restrictions.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextAreaType-NORMAL = 0--><!--Device-TextAreaType-NORMAL = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ Digit input mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextAreaType-NUMBER = 2--><!--Device-TextAreaType-NUMBER = 2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PHONE_NUMBER
@@ -46,14 +52,15 @@ PHONE_NUMBER = 3
 
 Phone number input mode.
 
-In this mode, the following characters are allowed: digits, spaces, plus signs (+), hyphens (-), asterisks (*), and
-number signs (#); the length is not limited.
+In this mode, the following characters are allowed: digits, spaces, plus signs (+), hyphens (-), asterisks (*), and number signs (#); the length is not limited.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextAreaType-PHONE_NUMBER = 3--><!--Device-TextAreaType-PHONE_NUMBER = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,14 +72,15 @@ EMAIL = 5
 
 Email address input mode.
 
-This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # $ % &
-' * + - / = ? ^ ` { | } ~ @ (which can only appear once)
+This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # $ % &' * + - / = ? ^ ` { | } ~ @ (which can only appear once)
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextAreaType-EMAIL = 5--><!--Device-TextAreaType-EMAIL = 5-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,6 +100,8 @@ The value can contain digits and one decimal point.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextAreaType-NUMBER_DECIMAL = 12--><!--Device-TextAreaType-NUMBER_DECIMAL = 12-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## URL
@@ -108,6 +118,8 @@ URL input mode with no special restrictions.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextAreaType-URL = 13--><!--Device-TextAreaType-URL = 13-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ONE_TIME_CODE
@@ -123,6 +135,8 @@ One-time code (verification code) input mode with no special restrictions.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TextAreaType-ONE_TIME_CODE = 14--><!--Device-TextAreaType-ONE_TIME_CODE = 14-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

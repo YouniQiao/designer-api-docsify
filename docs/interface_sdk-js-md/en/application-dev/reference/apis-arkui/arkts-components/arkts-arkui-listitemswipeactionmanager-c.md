@@ -4,6 +4,8 @@ Implements the swipe action menu manager for list items.
 
 **Since:** 21
 
+<!--Device-unnamed-declare class ListItemSwipeActionManager--><!--Device-unnamed-declare class ListItemSwipeActionManager-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## collapse
@@ -20,13 +22,15 @@ Collapses the swipe action menu for the specified list item.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-ListItemSwipeActionManager-static collapse(node: FrameNode): void--><!--Device-ListItemSwipeActionManager-static collapse(node: FrameNode): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | FrameNode | Yes | The ListItem FrameNode. |
+| node | [FrameNode](../arkts-apis/arkts-arkui-framenode-c.md) | Yes | The ListItem FrameNode. |
 
 **Error codes:**
 
@@ -49,14 +53,16 @@ Expands the swipe action menu for the specified list item.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-ListItemSwipeActionManager-static expand(node: FrameNode, direction: ListItemSwipeActionDirection): void--><!--Device-ListItemSwipeActionManager-static expand(node: FrameNode, direction: ListItemSwipeActionDirection): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | FrameNode | Yes | The ListItem FrameNode. |
-| direction | ListItemSwipeActionDirection | Yes | The direction to expand. |
+| node | [FrameNode](../arkts-apis/arkts-arkui-framenode-c.md) | Yes | The ListItem FrameNode. |
+| direction | [ListItemSwipeActionDirection](arkts-arkui-listitemswipeactiondirection-e.md) | Yes | The direction to expand. |
 
 **Error codes:**
 

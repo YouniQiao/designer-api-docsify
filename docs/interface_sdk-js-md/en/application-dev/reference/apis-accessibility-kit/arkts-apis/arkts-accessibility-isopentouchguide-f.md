@@ -20,13 +20,15 @@ Checks whether touch guide mode is enabled. This API uses an asynchronous callba
 
 **Substitutes:** [isOpenTouchGuideSync](arkts-accessibility-isopentouchguidesync-f.md#isopentouchguidesync-1)
 
+<!--Device-accessibility-function isOpenTouchGuide(callback: AsyncCallback<boolean>): void--><!--Device-accessibility-function isOpenTouchGuide(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Vision
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. Returns **true** if touch guidemode is enabled; returns **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. Returns **true** if touch guide mode is enabled; returns **false** otherwise. |
 
 **Example**
 
@@ -59,13 +61,15 @@ Checks whether touch guide mode is enabled. This API uses a promise to return th
 
 **Substitutes:** [isOpenTouchGuideSync](arkts-accessibility-isopentouchguidesync-f.md#isopentouchguidesync-1)
 
+<!--Device-accessibility-function isOpenTouchGuide(): Promise<boolean>--><!--Device-accessibility-function isOpenTouchGuide(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Vision
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if touch guide mode is enabled;returns **false** otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. Returns **true** if touch guide mode is enabled;returns **false** otherwise. |
 
 **Example**
 

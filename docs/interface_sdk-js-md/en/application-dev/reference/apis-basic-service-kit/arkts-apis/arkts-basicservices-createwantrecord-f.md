@@ -20,19 +20,21 @@ Creates a **PasteDataRecord** object of the Want type.
 
 **Substitutes:** createRecord(mimeType:
 
+<!--Device-pasteboard-function createWantRecord(want: Want): PasteDataRecord--><!--Device-pasteboard-function createWantRecord(want: Want): PasteDataRecord-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want content. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want content. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PasteDataRecord | New **PasteDataRecord** object of the Want type. |
+| [PasteDataRecord](arkts-basicservices-pastedatarecord-i.md) | New **PasteDataRecord** object of the Want type. |
 
 **Example**
 

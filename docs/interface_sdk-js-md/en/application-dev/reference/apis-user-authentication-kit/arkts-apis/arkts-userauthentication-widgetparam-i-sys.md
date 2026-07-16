@@ -1,11 +1,10 @@
 # WidgetParam
 
-Represents the information presented on the user authentication page. This API is used to configure the display
-style and interaction mode of the authentication screen, including the title, navigation button text, and window
-mode. By properly setting these parameters, you can provide clear authentication guidance and good interaction
-experience for users.
+Represents the information presented on the user authentication page. This API is used to configure the display style and interaction mode of the authentication screen, including the title, navigation button text, and window mode. By properly setting these parameters, you can provide clear authentication guidance and good interaction experience for users.
 
 **Since:** 10
+
+<!--Device-userAuth-interface WidgetParam--><!--Device-userAuth-interface WidgetParam-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -21,8 +20,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 appWindow?: window.Window
 ```
 
-This parameter is also provided to display the authentication dialog box in modal application mode.
-If uiContext has been provided, this parameter would be ignored.
+This parameter is also provided to display the authentication dialog box in modal application mode.If uiContext has been provided, this parameter would be ignored.
 
 **Type:** window.Window
 
@@ -31,6 +29,8 @@ If uiContext has been provided, this parameter would be ignored.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-WidgetParam-appWindow?: window.Window--><!--Device-WidgetParam-appWindow?: window.Window-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -42,15 +42,15 @@ If uiContext has been provided, this parameter would be ignored.
 windowMode?: WindowModeType
 ```
 
-Enumerates the window types of the authentication widget. This parameter is used to control the window style of
-the system authentication widget. You can select the dialog box mode (**DIALOG_BOX**) or full-screen mode (
-**FULLSCREEN**). The default value is **WindowModeType.DIALOG_BOX**.
+Enumerates the window types of the authentication widget. This parameter is used to control the window style of the system authentication widget. You can select the dialog box mode (**DIALOG_BOX**) or full-screen mode (**FULLSCREEN**). The default value is **WindowModeType.DIALOG_BOX**.
 
 **Type:** WindowModeType
 
 **Default:** WindowModeType.DIALOG_BOX
 
 **Since:** 10
+
+<!--Device-WidgetParam-windowMode?: WindowModeType--><!--Device-WidgetParam-windowMode?: WindowModeType-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 

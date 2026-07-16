@@ -1,5 +1,11 @@
 # getStartupTaskResult
 
+## 导入模块
+
+```TypeScript
+import { startupManager } from '@kit.AbilityKit';
+```
+
 ## getStartupTaskResult
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getStartupTaskResult(startupTask: string): Object
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-startupManager-function getStartupTaskResult(startupTask: string): Object--><!--Device-startupManager-function getStartupTaskResult(startupTask: string): Object-End-->
 
 **系统能力：** SystemCapability.Ability.AppStartup
 
@@ -24,7 +32,7 @@ function getStartupTaskResult(startupTask: string): Object
 
 | 类型 | 说明 |
 | --- | --- |
-| Object | 输入为启动任务名时，返回指定的启动任务[init](arkts-ability-startuptask-c.md#init-1)返回的执行结果。<br/>输入为so文件名时，返回undefined。 |
+| Object | 输入为启动任务名时，返回指定的启动任务[init](@ohos.app.appstartup.StartupTask:StartupTask#init(context: AbilityStageContext))返回的执行结果。<br/>输入为so文件名时，返回undefined。 |
 
 **错误码：**
 

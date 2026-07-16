@@ -4,6 +4,8 @@ Defines the vibration sequence.
 
 **Since:** 18
 
+<!--Device-vibrator-interface VibratorPattern--><!--Device-vibrator-interface VibratorPattern-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Vibration event array, which is the **VibratorPattern** object returned by **bui
 
 **Since:** 18
 
+<!--Device-VibratorPattern-events: Array<VibratorEvent>--><!--Device-VibratorPattern-events: Array<VibratorEvent>-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## time
@@ -37,6 +41,8 @@ Absolute vibration start time, in ms.
 **Type:** number
 
 **Since:** 18
+
+<!--Device-VibratorPattern-time: int--><!--Device-VibratorPattern-time: int-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 

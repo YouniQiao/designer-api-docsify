@@ -4,6 +4,8 @@ Declare AdvancedDialogV2Button.
 
 **Since:** 18
 
+<!--Device-unnamed-export declare class AdvancedDialogV2Button--><!--Device-unnamed-export declare class AdvancedDialogV2Button-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,13 +28,15 @@ The constructor used to create a AdvancedDialogV2Button object.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-AdvancedDialogV2Button-constructor(options: AdvancedDialogV2ButtonOptions)--><!--Device-AdvancedDialogV2Button-constructor(options: AdvancedDialogV2ButtonOptions)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | AdvancedDialogV2ButtonOptions | Yes | button info. |
+| options | [AdvancedDialogV2ButtonOptions](arkts-arkui-advanceddialogv2buttonoptions-i.md) | Yes | button info. |
 
 ## action
 
@@ -49,6 +53,8 @@ Sets the Button Callback.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-AdvancedDialogV2Button-action?: AdvancedDialogV2ButtonAction--><!--Device-AdvancedDialogV2Button-action?: AdvancedDialogV2ButtonAction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,6 +73,8 @@ Sets the background color of a button.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-AdvancedDialogV2Button-background?: ColorMetrics--><!--Device-AdvancedDialogV2Button-background?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -88,6 +96,8 @@ Describes the Button style.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-AdvancedDialogV2Button-buttonStyle?: ButtonStyleMode--><!--Device-AdvancedDialogV2Button-buttonStyle?: ButtonStyleMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## content
@@ -105,6 +115,8 @@ Sets the Display Content of a Button.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-AdvancedDialogV2Button-content: ResourceStr--><!--Device-AdvancedDialogV2Button-content: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,6 +138,8 @@ Set the default focus of a button.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-AdvancedDialogV2Button-defaultFocus?: boolean--><!--Device-AdvancedDialogV2Button-defaultFocus?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enabled
@@ -146,6 +160,8 @@ Set the availability of the button.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-AdvancedDialogV2Button-enabled?: boolean--><!--Device-AdvancedDialogV2Button-enabled?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontColor
@@ -163,6 +179,8 @@ Sets the Button Text Color.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-AdvancedDialogV2Button-fontColor?: ColorMetrics--><!--Device-AdvancedDialogV2Button-fontColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -184,6 +202,8 @@ Describes the Button role.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-AdvancedDialogV2Button-role?: ButtonRole--><!--Device-AdvancedDialogV2Button-role?: ButtonRole-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## textAlign
@@ -203,6 +223,8 @@ Set the alignment mode for the button label.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-AdvancedDialogV2Button-textAlign?: TextAlign--><!--Device-AdvancedDialogV2Button-textAlign?: TextAlign-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

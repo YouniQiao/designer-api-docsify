@@ -12,12 +12,13 @@ import { appControl } from '@kit.AbilityKit';
 function setDisposedStatus(appId: string, disposedWant: Want, callback: AsyncCallback<void>): void
 ```
 
-Sets the disposed status for an application. This API uses an asynchronous callback to return the result. If the
-operation is successful, **null** is returned. If the operation fails, an error message is returned.
+Sets the disposed status for an application. This API uses an asynchronous callback to return the result. If the operation is successful, **null** is returned. If the operation fails, an error message is returned.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS
+
+<!--Device-appControl-function setDisposedStatus(appId: string, disposedWant: Want, callback: AsyncCallback<void>): void--><!--Device-appControl-function setDisposedStatus(appId: string, disposedWant: Want, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -27,9 +28,9 @@ operation is successful, **null** is returned. If the operation fails, an error 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appId | string | Yes | ID of the target application.<br> **appId** is the unique identifier of an applicationand is determined by the bundle name and signature information of the application. For details about how toobtain **appId**, see[How do I obtain appId from application information](../../../../quick-start/common_problem_of_application.md#how-do-i-obtain-appid-from-application-information). |
-| disposedWant | Want | Yes | Disposal intent of the application. |
-| callback | AsyncCallback&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. Ifthe operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| appId | string | Yes | ID of the target application.<br> **appId** is the unique identifier of an application and is determined by the bundle name and signature information of the application. For details about how to obtain **appId**, see [How do I obtain appId from application information](../../../../quick-start/common_problem_of_application.md#how-do-i-obtain-appid-from-application-information). |
+| disposedWant | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Disposal intent of the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -74,12 +75,13 @@ try {
 function setDisposedStatus(appId: string, disposedWant: Want): Promise<void>
 ```
 
-Sets the disposed status for an application. This API uses a promise to return the result. If the operation is
-successful, **null** is returned. If the operation fails, an error message is returned.
+Sets the disposed status for an application. This API uses a promise to return the result. If the operation is successful, **null** is returned. If the operation fails, an error message is returned.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS
+
+<!--Device-appControl-function setDisposedStatus(appId: string, disposedWant: Want): Promise<void>--><!--Device-appControl-function setDisposedStatus(appId: string, disposedWant: Want): Promise<void>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -89,14 +91,14 @@ successful, **null** is returned. If the operation fails, an error message is re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appId | string | Yes | ID of the target application.<br> **appId** is the unique identifier of an applicationand is determined by the bundle name and signature information of the application. For details about how toobtain **appId**, see[How do I obtain appId from application information](../../../../quick-start/common_problem_of_application.md#how-do-i-obtain-appid-from-application-information). |
-| disposedWant | Want | Yes | Disposal intent of the application. |
+| appId | string | Yes | ID of the target application.<br> **appId** is the unique identifier of an application and is determined by the bundle name and signature information of the application. For details about how to obtain **appId**, see [How do I obtain appId from application information](../../../../quick-start/common_problem_of_application.md#how-do-i-obtain-appid-from-application-information). |
+| disposedWant | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Disposal intent of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

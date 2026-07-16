@@ -4,7 +4,15 @@
 
 **起始版本：** 10
 
+<!--Device-webview-class JsMessageExt--><!--Device-webview-class JsMessageExt-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
+
+## 导入模块
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+```
 
 ## getArray
 
@@ -16,7 +24,9 @@ getArray(): Array<string | number | boolean>
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-JsMessageExt-getArray(): Array<string | number | boolean>--><!--Device-JsMessageExt-getArray(): Array<string | number | boolean>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -24,7 +34,7 @@ getArray(): Array<string | number | boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string \| number \| boolean&gt; | - Returns data of Array type |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string \| number \| boolean> | - Returns data of Array type |
 
 **错误码：**
 
@@ -42,7 +52,9 @@ getArrayBuffer(): ArrayBuffer
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-JsMessageExt-getArrayBuffer(): ArrayBuffer--><!--Device-JsMessageExt-getArrayBuffer(): ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -50,7 +62,7 @@ getArrayBuffer(): ArrayBuffer
 
 | 类型 | 说明 |
 | --- | --- |
-| ArrayBuffer | - 返回原始二进制数据。 |
+| [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | - 返回原始二进制数据。 |
 
 **错误码：**
 
@@ -68,7 +80,9 @@ getBoolean(): boolean
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-JsMessageExt-getBoolean(): boolean--><!--Device-JsMessageExt-getBoolean(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -94,13 +108,15 @@ getErrorDescription(): string | null
 
 **起始版本：** 22
 
+<!--Device-JsMessageExt-getErrorDescription(): string | null--><!--Device-JsMessageExt-getErrorDescription(): string | null-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| string | - If an exception occurs, or the returned type is object, return theserialized string in the format of "Not support type: &lt;{exception\|object}&gt;", Parts exceeding a length of2048 will be truncated; otherwise, return null. |
+| string | - If an exception occurs, or the returned type is object, return the serialized string in the format of "Not support type: &lt;{exception\|object}&gt;", Parts exceeding a length of2048 will be truncated; otherwise, return null. |
 
 ## getNumber
 
@@ -112,7 +128,9 @@ getNumber(): number
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-JsMessageExt-getNumber(): number--><!--Device-JsMessageExt-getNumber(): number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -138,7 +156,9 @@ getString(): string
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-JsMessageExt-getString(): string--><!--Device-JsMessageExt-getString(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -164,7 +184,9 @@ getType(): JsMessageType
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-JsMessageExt-getType(): JsMessageType--><!--Device-JsMessageExt-getType(): JsMessageType-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -172,5 +194,5 @@ getType(): JsMessageType
 
 | 类型 | 说明 |
 | --- | --- |
-| JsMessageType | - runJavaScriptExt接口脚本执行后返回的结果的类型。 |
+| [JsMessageType](arkts-arkweb-jsmessagetype-e.md) | - runJavaScriptExt接口脚本执行后返回的结果的类型。 |
 

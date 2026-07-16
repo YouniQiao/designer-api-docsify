@@ -4,6 +4,8 @@ Information about all lock operations on the AsyncLock instance.
 
 **Since:** 12
 
+<!--Device-locks-class AsyncLockState--><!--Device-locks-class AsyncLockState-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Held locks information.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AsyncLockState-held: AsyncLockInfo[]--><!--Device-AsyncLockState-held: AsyncLockInfo[]-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## pending
@@ -41,6 +45,8 @@ Pending locks information.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyncLockState-pending: AsyncLockInfo[]--><!--Device-AsyncLockState-pending: AsyncLockInfo[]-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

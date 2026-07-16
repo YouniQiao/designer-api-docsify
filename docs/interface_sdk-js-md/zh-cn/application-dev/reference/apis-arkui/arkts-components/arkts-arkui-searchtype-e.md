@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare enum SearchType--><!--Device-unnamed-declare enum SearchType-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## NORMAL
@@ -18,7 +20,9 @@ NORMAL = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SearchType-NORMAL = 0--><!--Device-SearchType-NORMAL = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,7 +38,9 @@ NUMBER = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SearchType-NUMBER = 2--><!--Device-SearchType-NUMBER = 2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,7 +58,9 @@ PHONE_NUMBER = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SearchType-PHONE_NUMBER = 3--><!--Device-SearchType-PHONE_NUMBER = 3-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,7 +78,9 @@ EMAIL = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SearchType-EMAIL = 5--><!--Device-SearchType-EMAIL = 5-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -88,7 +98,9 @@ NUMBER_DECIMAL = 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SearchType-NUMBER_DECIMAL = 12--><!--Device-SearchType-NUMBER_DECIMAL = 12-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,7 +116,9 @@ URL = 13
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SearchType-URL = 13--><!--Device-SearchType-URL = 13-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -120,7 +134,9 @@ ONE_TIME_CODE = 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SearchType-ONE_TIME_CODE = 14--><!--Device-SearchType-ONE_TIME_CODE = 14-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

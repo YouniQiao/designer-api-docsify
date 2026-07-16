@@ -1,5 +1,11 @@
 # removeAsUser（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { asset } from '@kit.AssetStoreKit';
+```
+
 ## removeAsUser
 
 ```TypeScript
@@ -12,6 +18,8 @@ function removeAsUser(userId: number, query: AssetMap): Promise<void>
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-asset-function removeAsUser(userId: number, query: AssetMap): Promise<void>--><!--Device-asset-function removeAsUser(userId: number, query: AssetMap): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -21,13 +29,13 @@ function removeAsUser(userId: number, query: AssetMap): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID。取值范围大于等于100。 |
-| query | AssetMap | 是 | 待删除关键资产的搜索条件，如别名、访问控制属性、自定义数据等。 |
+| query | [AssetMap](arkts-assetstore-assetmap-t.md) | 是 | 待删除关键资产的搜索条件，如别名、访问控制属性、自定义数据等。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

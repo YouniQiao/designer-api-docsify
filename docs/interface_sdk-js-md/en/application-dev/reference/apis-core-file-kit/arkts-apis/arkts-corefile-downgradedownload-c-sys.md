@@ -6,6 +6,8 @@ It supports the full download of cloud application files.
 
 **Since:** 20
 
+<!--Device-cloudSyncManager-class DowngradeDownload--><!--Device-cloudSyncManager-class DowngradeDownload-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ A constructor used to create an instance of the **DowngradeDownload** class with
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
+<!--Device-DowngradeDownload-constructor(bundleName: string)--><!--Device-DowngradeDownload-constructor(bundleName: string)-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **System API:** This is a system API.
@@ -43,7 +47,7 @@ A constructor used to create an instance of the **DowngradeDownload** class with
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13900020 | Invalid argument. Possible causes:<br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | 22400005 | Inner error. Possible causes:<br>1.Failed to access the database or execute the SQL statement.<br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
@@ -68,12 +72,13 @@ try {
 getCloudFileInfo(): Promise<CloudFileInfo>
 ```
 
-Obtains the size and count of files for applications requiring full download, including those stored only locally
-, only in the cloud, or both locally and in the cloud. This API uses a promise to return the result.
+Obtains the size and count of files for applications requiring full download, including those stored only locally, only in the cloud, or both locally and in the cloud. This API uses a promise to return the result.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
+
+<!--Device-DowngradeDownload-getCloudFileInfo(): Promise<CloudFileInfo>--><!--Device-DowngradeDownload-getCloudFileInfo(): Promise<CloudFileInfo>-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -83,14 +88,14 @@ Obtains the size and count of files for applications requiring full download, in
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CloudFileInfo&gt; | Promise used to return the local and cloud file information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CloudFileInfo> | Promise used to return the local and cloud file information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error. Possible causes:<br>1.IPC failed or timed out. 2.Failed to load the service. |
 | 13900010 | Try again. |
 | 22400005 | Inner error. Possible causes:<br>1.Failed to access the database or execute the SQL statement.<br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
@@ -116,14 +121,15 @@ downgradeMgr.getCloudFileInfo().then((fileInfo: cloudSyncManager.CloudFileInfo) 
 startDownload(callback: Callback<DownloadProgress>): Promise<void>
 ```
 
-Starts the full download for the specified application's cloud files. This API uses a promise to return the
-result. This API uses an asynchronous callback to return the result.
+Starts the full download for the specified application's cloud files. This API uses a promise to return the result. This API uses an asynchronous callback to return the result.
 
 Repeated triggering of a full download task will throw an error (22400006).
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
+
+<!--Device-DowngradeDownload-startDownload(callback: Callback<DownloadProgress>): Promise<void>--><!--Device-DowngradeDownload-startDownload(callback: Callback<DownloadProgress>): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -133,20 +139,20 @@ Repeated triggering of a full download task will throw an error (22400006).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;DownloadProgress&gt; | Yes | Callback used to return the download progress. The parameter is**DownloadProgress**, and the return value is **void**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DownloadProgress> | Yes | Callback used to return the download progress. The parameter is **DownloadProgress**, and the return value is **void**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error. Possible causes:<br>1.IPC failed or timed out. 2.Failed to load the service. |
 | 13900010 | Try again. |
 | 13900020 | Invalid argument. Possible causes:<br>1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
@@ -190,6 +196,8 @@ Start to migrate the downloaded full data to the specified public directory of f
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DowngradeDownload-startTransfer(targetUri: string, callback: Callback<TransferProgress>): void--><!--Device-DowngradeDownload-startTransfer(targetUri: string, callback: Callback<TransferProgress>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **System API:** This is a system API.
@@ -199,7 +207,7 @@ Start to migrate the downloaded full data to the specified public directory of f
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | targetUri | string | Yes | Transfer target Uri. |
-| callback | Callback&lt;TransferProgress&gt; | Yes | Callback function. The callback will be triggered when the transfer progress changes or the transfer task completes. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<TransferProgress> | Yes | Callback function. The callback will be triggered when the transfer progress changes or the transfer task completes. |
 
 **Error codes:**
 
@@ -219,12 +227,13 @@ Start to migrate the downloaded full data to the specified public directory of f
 stopDownload(): Promise<void>
 ```
 
-Stops the full download task triggered by [startDownload](arkts-corefile-downgradedownload-c-sys.md#startdownload-1)
-. This API uses a promise to return the result.
+Stops the full download task triggered by [startDownload](arkts-corefile-downgradedownload-c-sys.md#startdownload-1). This API uses a promise to return the result.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
+
+<!--Device-DowngradeDownload-stopDownload(): Promise<void>--><!--Device-DowngradeDownload-stopDownload(): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -234,14 +243,14 @@ Stops the full download task triggered by [startDownload](arkts-corefile-downgra
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error. Possible causes:<br>1.IPC failed or timed out. 2.Failed to load the service. |
 | 22400005 | Inner error. Possible causes:<br>1.Failed to access the database or execute the SQL statement.<br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 

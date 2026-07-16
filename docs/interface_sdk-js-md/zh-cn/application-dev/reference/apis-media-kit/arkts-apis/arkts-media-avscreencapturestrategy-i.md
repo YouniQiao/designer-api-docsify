@@ -4,7 +4,15 @@ Provides the media AVScreenCaptureStrategy definition.
 
 **起始版本：** 20
 
+<!--Device-unnamed-interface AVScreenCaptureStrategy--><!--Device-unnamed-interface AVScreenCaptureStrategy-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
+
+## 导入模块
+
+```TypeScript
+import { media } from '@kit.MediaKit';
+```
 
 ## enableBFrame
 
@@ -17,6 +25,8 @@ Indicates whether to enable B-frame encoding, which is used to reduce the size o
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-AVScreenCaptureStrategy-enableBFrame?: boolean--><!--Device-AVScreenCaptureStrategy-enableBFrame?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -34,6 +44,8 @@ Enable pausing the screen capture. The default value is false.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVScreenCaptureStrategy-enablePause?: boolean--><!--Device-AVScreenCaptureStrategy-enablePause?: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## keepCaptureDuringCall
@@ -50,6 +62,8 @@ Allows starting or maintaining screen capture during a call
 
 **起始版本：** 20
 
+<!--Device-AVScreenCaptureStrategy-keepCaptureDuringCall?: boolean--><!--Device-AVScreenCaptureStrategy-keepCaptureDuringCall?: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## privacyMaskMode
@@ -65,6 +79,8 @@ Set the fill mode for screen capture when a privacy window exists.
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVScreenCaptureStrategy-privacyMaskMode?: int--><!--Device-AVScreenCaptureStrategy-privacyMaskMode?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 

@@ -1,5 +1,11 @@
 # dumpHeapData
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+```
+
 ## dumpHeapData
 
 ```TypeScript
@@ -13,6 +19,8 @@ function dumpHeapData(filename: string): void
 **废弃版本：** 9
 
 **替代接口：** dumpJsHeapData(filename
+
+<!--Device-hidebug-function dumpHeapData(filename: string): void--><!--Device-hidebug-function dumpHeapData(filename: string): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 

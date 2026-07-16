@@ -18,6 +18,8 @@ Creates a **CertChainValidator** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-cert-function createCertChainValidator(algorithm: string): CertChainValidator--><!--Device-cert-function createCertChainValidator(algorithm: string): CertChainValidator-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
@@ -30,7 +32,7 @@ Creates a **CertChainValidator** object.
 
 | Type | Description |
 | --- | --- |
-| CertChainValidator | **CertChainValidator** object created. |
+| [CertChainValidator](arkts-devicecertificate-certchainvalidator-i.md) | **CertChainValidator** object created. |
 
 **Error codes:**
 

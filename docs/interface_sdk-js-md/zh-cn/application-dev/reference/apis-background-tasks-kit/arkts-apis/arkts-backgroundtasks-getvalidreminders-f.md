@@ -1,5 +1,11 @@
 # getValidReminders
 
+## 导入模块
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+```
+
 ## getValidReminders
 
 ```TypeScript
@@ -10,13 +16,15 @@ function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): voi
 
 **起始版本：** 9
 
+<!--Device-reminderAgentManager-function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): void--><!--Device-reminderAgentManager-function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): void-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;ReminderRequest&gt;&gt; | 是 | 回调函数。当查询代理提醒成功，err为undefined，data为当前应用设置的所有有效（未过期）的代理提醒；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<ReminderRequest>> | 是 | 回调函数。当查询代理提醒成功，err为undefined，data为当前应用设置的所有有效（未过期）的代理提醒；否则为错误对象。 |
 
 **错误码：**
 
@@ -72,13 +80,15 @@ function getValidReminders(): Promise<Array<ReminderRequest>>
 
 **起始版本：** 9
 
+<!--Device-reminderAgentManager-function getValidReminders(): Promise<Array<ReminderRequest>>--><!--Device-reminderAgentManager-function getValidReminders(): Promise<Array<ReminderRequest>>-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;ReminderRequest&gt;&gt; | Promise对象，返回当前应用设置的所有有效（未过期）的代理提醒。 |
+| Promise<Array<ReminderRequest>> | Promise对象，返回当前应用设置的所有有效（未过期）的代理提醒。 |
 
 **错误码：**
 

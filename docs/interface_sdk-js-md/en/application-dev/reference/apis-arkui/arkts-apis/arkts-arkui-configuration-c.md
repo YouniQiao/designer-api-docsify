@@ -2,6 +2,8 @@
 
 **Since:** 12
 
+<!--Device-unnamed-export default class Configuration--><!--Device-unnamed-export default class Configuration-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 ## Modules to Import
@@ -22,11 +24,13 @@ Obtains the current locale of the application, which is the same as the system l
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Configuration-static getLocale(): LocaleResponse--><!--Device-Configuration-static getLocale(): LocaleResponse-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| LocaleResponse | @syscap SystemCapability.ArkUI.ArkUI.Lite@atomicservice |
+| [LocaleResponse](arkts-arkui-localeresponse-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Lite@atomicservice |
 

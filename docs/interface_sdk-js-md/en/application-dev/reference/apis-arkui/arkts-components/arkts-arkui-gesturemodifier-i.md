@@ -4,6 +4,8 @@ You need a custom class to implement the **GestureModifier** API.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface GestureModifier--><!--Device-unnamed-declare interface GestureModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## applyGesture
@@ -14,9 +16,7 @@ applyGesture(event: UIGestureEvent): void
 
 Applies a gesture.
 
-You can customize this API as required. Dynamic configuration using the **if/else** syntax is supported. If gesture
-switching is triggered during an active gesture operation, the change takes effect in the next gesture operation
-after the current one completes (when all fingers are lifted).
+You can customize this API as required. Dynamic configuration using the **if/else** syntax is supported. If gesture switching is triggered during an active gesture operation, the change takes effect in the next gesture operation after the current one completes (when all fingers are lifted).
 
 **Since:** 12
 
@@ -24,11 +24,13 @@ after the current one completes (when all fingers are lifted).
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GestureModifier-applyGesture(event: UIGestureEvent): void--><!--Device-GestureModifier-applyGesture(event: UIGestureEvent): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | UIGestureEvent | Yes | **UIGestureEvent** object, which is used to set the gesture to be bound to thecomponent. |
+| event | [UIGestureEvent](arkts-arkui-uigestureevent-i.md) | Yes | **UIGestureEvent** object, which is used to set the gesture to be bound to the component. |
 

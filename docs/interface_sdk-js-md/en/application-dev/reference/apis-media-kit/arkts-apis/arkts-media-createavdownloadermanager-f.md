@@ -18,11 +18,13 @@ Creating a Streaming Resource Download Task Manager
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-media-function createAVDownloaderManager( ): Promise<AVDownloaderManager>--><!--Device-media-function createAVDownloaderManager( ): Promise<AVDownloaderManager>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVDownloaderManager&gt; | Returns an instance of the Offline Download Manager |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AVDownloaderManager> | Returns an instance of the Offline Download Manager |
 

@@ -4,6 +4,8 @@ Represents information about an OS account.
 
 **Since:** 7
 
+<!--Device-osAccount-interface OsAccountInfo--><!--Device-osAccount-interface OsAccountInfo-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 ## Modules to Import
@@ -18,12 +20,13 @@ import { osAccount } from '@kit.BasicServicesKit';
 constraints: Array<string>
 ```
 
-[Constraints](../../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) of the system
-account. By default, no value is passed in.
+[Constraints](../../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) of the system account. By default, no value is passed in.
 
 **Type:** Array<string>
 
 **Since:** 7
+
+<!--Device-OsAccountInfo-constraints: Array<string>--><!--Device-OsAccountInfo-constraints: Array<string>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -39,6 +42,8 @@ OS account creation time. The value is a Unix timestamp (in seconds).
 
 **Since:** 8
 
+<!--Device-OsAccountInfo-createTime: long--><!--Device-OsAccountInfo-createTime: long-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 ## distributedInfo
@@ -52,6 +57,8 @@ Distributed account information. By default, no value is passed in.
 **Type:** distributedAccount.DistributedInfo
 
 **Since:** 7
+
+<!--Device-OsAccountInfo-distributedInfo: distributedAccount.DistributedInfo--><!--Device-OsAccountInfo-distributedInfo: distributedAccount.DistributedInfo-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -67,6 +74,8 @@ Domain account information. By default, no value is passed in.
 
 **Since:** 8
 
+<!--Device-OsAccountInfo-domainInfo: DomainAccountInfo--><!--Device-OsAccountInfo-domainInfo: DomainAccountInfo-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 ## isActivated
@@ -75,12 +84,13 @@ Domain account information. By default, no value is passed in.
 isActivated: boolean
 ```
 
-Whether the OS account is activated. The value **true** means the specified account is activated; the value
-**false** means the opposite.
+Whether the OS account is activated. The value **true** means the specified account is activated; the value **false** means the opposite.
 
 **Type:** boolean
 
 **Since:** 11
+
+<!--Device-OsAccountInfo-isActivated: boolean--><!--Device-OsAccountInfo-isActivated: boolean-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -90,11 +100,9 @@ Whether the OS account is activated. The value **true** means the specified acco
 isActived: boolean
 ```
 
-Whether the OS account is activated. The value **true** means the specified account is activated; the value
-**false** means the opposite.
+Whether the OS account is activated. The value **true** means the specified account is activated; the value **false** means the opposite.
 
-Note: This parameter is supported since API version 7 and deprecated since API version 11. You are advised to use
-**isActivated** instead.
+Note: This parameter is supported since API version 7 and deprecated since API version 11. You are advised to use **isActivated** instead.
 
 **Type:** boolean
 
@@ -104,6 +112,8 @@ Note: This parameter is supported since API version 7 and deprecated since API v
 
 **Substitutes:** [isActivated](arkts-basicservices-osaccountinfo-i.md#isactivated)
 
+<!--Device-OsAccountInfo-isActived: boolean--><!--Device-OsAccountInfo-isActived: boolean-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 ## isCreateCompleted
@@ -112,12 +122,13 @@ Note: This parameter is supported since API version 7 and deprecated since API v
 isCreateCompleted: boolean
 ```
 
-Whether the OS account information is complete. The value **true** means the specified account is complete;
-the value **false** means the opposite.
+Whether the OS account information is complete. The value **true** means the specified account is complete;the value **false** means the opposite.
 
 **Type:** boolean
 
 **Since:** 8
+
+<!--Device-OsAccountInfo-isCreateCompleted: boolean--><!--Device-OsAccountInfo-isCreateCompleted: boolean-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -127,12 +138,13 @@ the value **false** means the opposite.
 isUnlocked: boolean
 ```
 
-Whether the account is unlocked (whether the **el2/** directory is decrypted). The value **true** means the
-specified account is unlocked; the value **false** means the opposite.
+Whether the account is unlocked (whether the **el2/** directory is decrypted). The value **true** means the specified account is unlocked; the value **false** means the opposite.
 
 **Type:** boolean
 
 **Since:** 11
+
+<!--Device-OsAccountInfo-isUnlocked: boolean--><!--Device-OsAccountInfo-isUnlocked: boolean-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -142,11 +154,9 @@ specified account is unlocked; the value **false** means the opposite.
 isVerified: boolean
 ```
 
-Whether the account has been verified. The value **true** means the specified account has been verified; the
-value **false** means the opposite.
+Whether the account has been verified. The value **true** means the specified account has been verified; the value **false** means the opposite.
 
-Note: This parameter is supported since API version 7 and deprecated since API version 11. You are advised to use
-**isUnlocked** instead.
+Note: This parameter is supported since API version 7 and deprecated since API version 11. You are advised to use **isUnlocked** instead.
 
 **Type:** boolean
 
@@ -155,6 +165,8 @@ Note: This parameter is supported since API version 7 and deprecated since API v
 **Deprecated since:** 11
 
 **Substitutes:** [isUnlocked](arkts-basicservices-osaccountinfo-i.md#isunlocked)
+
+<!--Device-OsAccountInfo-isVerified: boolean--><!--Device-OsAccountInfo-isVerified: boolean-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -170,6 +182,8 @@ Last login time of the OS account. The value is a Unix timestamp (in seconds).
 
 **Since:** 8
 
+<!--Device-OsAccountInfo-lastLoginTime: long--><!--Device-OsAccountInfo-lastLoginTime: long-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 ## localId
@@ -183,6 +197,8 @@ ID of the target OS account.
 **Type:** number
 
 **Since:** 7
+
+<!--Device-OsAccountInfo-localId: int--><!--Device-OsAccountInfo-localId: int-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -198,6 +214,8 @@ Name of the OS account.
 
 **Since:** 7
 
+<!--Device-OsAccountInfo-localName: string--><!--Device-OsAccountInfo-localName: string-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 ## photo
@@ -211,6 +229,8 @@ Avatar of the OS account. By default, no value is passed in.
 **Type:** string
 
 **Since:** 8
+
+<!--Device-OsAccountInfo-photo: string--><!--Device-OsAccountInfo-photo: string-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -226,6 +246,8 @@ SN of the OS account.
 
 **Since:** 8
 
+<!--Device-OsAccountInfo-serialNumber: long--><!--Device-OsAccountInfo-serialNumber: long-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 ## type
@@ -239,6 +261,8 @@ Type of the OS account.
 **Type:** OsAccountType
 
 **Since:** 7
+
+<!--Device-OsAccountInfo-type: OsAccountType--><!--Device-OsAccountInfo-type: OsAccountType-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 

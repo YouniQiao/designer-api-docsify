@@ -8,6 +8,8 @@ Class for the context of the PartnerAgentExtensionAbility.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-unnamed-export default class PartnerAgentExtensionContext extends ExtensionContext--><!--Device-unnamed-export default class PartnerAgentExtensionContext extends ExtensionContext-End-->
+
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 ## Modules to Import

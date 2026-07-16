@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-wantAgent-export interface CompleteData--><!--Device-wantAgent-export interface CompleteData-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+## 导入模块
+
+```TypeScript
+import { WantAgent } from '@kit.AbilityKit';
+```
 
 ## extraInfo
 
@@ -18,7 +26,9 @@ extraInfo?: Record<string, Object>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CompleteData-extraInfo?: Record<string, Object>--><!--Device-CompleteData-extraInfo?: Record<string, Object>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -34,7 +44,9 @@ finalCode: number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CompleteData-finalCode: int--><!--Device-CompleteData-finalCode: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -50,7 +62,9 @@ finalData: string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CompleteData-finalData: string--><!--Device-CompleteData-finalData: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -66,7 +80,9 @@ info: WantAgent
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CompleteData-info: WantAgent--><!--Device-CompleteData-info: WantAgent-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -82,7 +98,9 @@ want: Want
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CompleteData-want: Want--><!--Device-CompleteData-want: Want-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

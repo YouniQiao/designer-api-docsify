@@ -4,6 +4,8 @@ Represents the optional parameter set for using a permission.
 
 **Since:** 26.0.0
 
+<!--Device-privacyManager-interface PermissionUsingOptions--><!--Device-privacyManager-interface PermissionUsingOptions-End-->
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -20,11 +22,7 @@ import { privacyManager } from '@kit.AbilityKit';
 enhancedIdentity?: string
 ```
 
-Extension identity, used to identify additional identity information of the caller. This field is passed in when
-it is necessary to distinguish permission usage records from different call sources within the same application.
-The length must not exceed 48 characters. Passing an excessively long value when calling
-[startUsingPermission](arkts-ability-startusingpermission-f-sys.md#startusingpermission-1) or
-[stopUsingPermission](arkts-ability-stopusingpermission-f-sys.md#stopusingpermission-1) will return error code 12100001.
+Extension identity, used to identify additional identity information of the caller. This field is passed in when it is necessary to distinguish permission usage records from different call sources within the same application.The length must not exceed 48 characters. Passing an excessively long value when calling [startUsingPermission](arkts-ability-startusingpermission-f-sys.md#startusingpermission-1) or [stopUsingPermission](arkts-ability-stopusingpermission-f-sys.md#stopusingpermission-1) will return error code 12100001.
 
 Default value: empty string.
 
@@ -33,6 +31,8 @@ Default value: empty string.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PermissionUsingOptions-enhancedIdentity?: string--><!--Device-PermissionUsingOptions-enhancedIdentity?: string-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 

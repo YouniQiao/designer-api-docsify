@@ -6,6 +6,8 @@ Provides APIs for managing the analysis album change request.
 
 **Since:** 18
 
+<!--Device-photoAccessHelper-class MediaAnalysisAlbumChangeRequest extends MediaAlbumChangeRequest--><!--Device-photoAccessHelper-class MediaAnalysisAlbumChangeRequest extends MediaAlbumChangeRequest-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Constructor.
 
 **Since:** 18
 
+<!--Device-MediaAnalysisAlbumChangeRequest-constructor(album: Album)--><!--Device-MediaAnalysisAlbumChangeRequest-constructor(album: Album)-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -34,7 +38,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| album | Album | Yes | **Highlights** album. |
+| album | [Album](arkts-medialibrary-album-i-sys.md) | Yes | **Highlights** album. |
 
 **Error codes:**
 
@@ -81,17 +85,27 @@ static createAnalysisAlbumRequest(
 
 Creates a change request for the **Analysis** album.
 
-> **NOTE**
->
-> The album name must meet the following requirements:
->
-> - The album name string length ranges from 1 to 255.
->
+> **NOTE**  
+>  
+> The album name must meet the following requirements:  
+>  
+> - The album name string length ranges from 1 to 255.  
+>  
 > - The album name cannot contain any of the following characters:.. \ / : * ? " ' ` < > | { } [ ]
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaAnalysisAlbumChangeRequest-static createAnalysisAlbumRequest(
+      context:Context,
+      name: string,
+      subtype: AlbumSubtype
+    ): MediaAnalysisAlbumChangeRequest--><!--Device-MediaAnalysisAlbumChangeRequest-static createAnalysisAlbumRequest(
+      context:Context,
+      name: string,
+      subtype: AlbumSubtype
+    ): MediaAnalysisAlbumChangeRequest-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -101,15 +115,15 @@ Creates a change request for the **Analysis** album.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability instance. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the ability instance. |
 | name | string | Yes | Name of the album. |
-| subtype | AlbumSubtype | Yes | Subtype of the album. |
+| subtype | [AlbumSubtype](arkts-medialibrary-albumsubtype-e-sys.md) | Yes | Subtype of the album. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MediaAnalysisAlbumChangeRequest | MediaAnalysisAlbumChangeRequest instance created. |
+| [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-mediaanalysisalbumchangerequest-c-sys.md) | MediaAnalysisAlbumChangeRequest instance created. |
 
 **Error codes:**
 
@@ -149,6 +163,8 @@ Sets the default cover image for the smart album.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaAnalysisAlbumChangeRequest-setDefaultCoverUri(coverUri: string): void--><!--Device-MediaAnalysisAlbumChangeRequest-setDefaultCoverUri(coverUri: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -229,6 +245,8 @@ Sets the sequence of assets in the **Analysis** album.
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-MediaAnalysisAlbumChangeRequest-setOrderPosition(assets: Array<PhotoAsset>, position: Array<int>): void--><!--Device-MediaAnalysisAlbumChangeRequest-setOrderPosition(assets: Array<PhotoAsset>, position: Array<int>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -237,8 +255,8 @@ Sets the sequence of assets in the **Analysis** album.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Assets in the album for which the sequence needs to be set. |
-| position | Array&lt;number&gt; | Yes | Sequence of assets in the album. |
+| assets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PhotoAsset> | Yes | Assets in the album for which the sequence needs to be set. |
+| position | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Sequence of assets in the album. |
 
 **Error codes:**
 
@@ -302,37 +320,39 @@ setRelationship(relationship: string): Promise<void>
 
 Sets the relationships of a person in the portrait album.
 
-The supported relationship names include:
-| Unique ID | Description |
-| ---------- | ------- |
-| me | Me|
-| son | Son|
-| daughter | Daughter|
-| wife | Wife|
-| husband | Husband|
-| father | Father|
-| mother | Mother|
-| colleague | Colleague|
-| friend | Friend|
-| classmate | Classmate|
-| best_friend_female | Best female friend|
-| boyfriend | Boyfriend|
-| girlfriend | Girlfriend|
-| family | Family|
-| maternal_grandfather | Maternal grandfather|
-| maternal_grandmother | Maternal grandmother|
-| paternal_grandfather | Paternal grandfather|
-| paternal_grandmother | Paternal grandmother|
-| older_brother | Older brother|
-| older_sister | Older sister|
-| younger_brother | Younger brother|
-| younger_sister | Younger sister|
-| relative | Relative|
+The supported relationship names include:  
+| Unique ID | Description |  
+| ---------- | ------- |  
+| me | Me|  
+| son | Son|  
+| daughter | Daughter|  
+| wife | Wife|  
+| husband | Husband|  
+| father | Father|  
+| mother | Mother|  
+| colleague | Colleague|  
+| friend | Friend|  
+| classmate | Classmate|  
+| best_friend_female | Best female friend|  
+| boyfriend | Boyfriend|  
+| girlfriend | Girlfriend|  
+| family | Family|  
+| maternal_grandfather | Maternal grandfather|  
+| maternal_grandmother | Maternal grandmother|  
+| paternal_grandfather | Paternal grandfather|  
+| paternal_grandmother | Paternal grandmother|  
+| older_brother | Older brother|  
+| older_sister | Older sister|  
+| younger_brother | Younger brother|  
+| younger_sister | Younger sister|  
+| relative | Relative|  
 | other | Other|
 
 **Since:** 21
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-MediaAnalysisAlbumChangeRequest-setRelationship(relationship: string): Promise<void>--><!--Device-MediaAnalysisAlbumChangeRequest-setRelationship(relationship: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -348,7 +368,7 @@ The supported relationship names include:
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

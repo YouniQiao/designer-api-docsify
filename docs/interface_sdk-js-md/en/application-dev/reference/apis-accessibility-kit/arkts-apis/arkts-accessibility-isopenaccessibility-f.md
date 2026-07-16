@@ -12,8 +12,7 @@ import { accessibility } from '@kit.AccessibilityKit';
 function isOpenAccessibility(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether an accessibility application is enabled. This API uses an asynchronous callback to return the
-result.
+Checks whether an accessibility application is enabled. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -21,13 +20,15 @@ result.
 
 **Substitutes:** [isOpenAccessibilitySync](arkts-accessibility-isopenaccessibilitysync-f.md#isopenaccessibilitysync-1)
 
+<!--Device-accessibility-function isOpenAccessibility(callback: AsyncCallback<boolean>): void--><!--Device-accessibility-function isOpenAccessibility(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. Returns **true** if theaccessibility application is enabled; returns **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. Returns **true** if the accessibility application is enabled; returns **false** otherwise. |
 
 **Example**
 
@@ -60,13 +61,15 @@ Checks whether an accessibility application is enabled. This API uses a promise 
 
 **Substitutes:** [isOpenAccessibilitySync](arkts-accessibility-isopenaccessibilitysync-f.md#isopenaccessibilitysync-1)
 
+<!--Device-accessibility-function isOpenAccessibility(): Promise<boolean>--><!--Device-accessibility-function isOpenAccessibility(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if the accessibility applicationis enabled; returns **false** otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. Returns **true** if the accessibility application is enabled; returns **false** otherwise. |
 
 **Example**
 

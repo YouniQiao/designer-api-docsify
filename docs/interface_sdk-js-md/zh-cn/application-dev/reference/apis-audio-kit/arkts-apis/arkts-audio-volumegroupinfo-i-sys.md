@@ -4,9 +4,17 @@ Describes an audio volume group.
 
 **起始版本：** 9
 
+<!--Device-audio-interface VolumeGroupInfo--><!--Device-audio-interface VolumeGroupInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## groupId
 
@@ -19,6 +27,8 @@ Volume group id.
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-VolumeGroupInfo-readonly groupId: int--><!--Device-VolumeGroupInfo-readonly groupId: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -36,6 +46,8 @@ Volume group name.
 
 **起始版本：** 9
 
+<!--Device-VolumeGroupInfo-readonly groupName: string--><!--Device-VolumeGroupInfo-readonly groupName: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +63,8 @@ Volume mapping group id.
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-VolumeGroupInfo-readonly mappingId: int--><!--Device-VolumeGroupInfo-readonly mappingId: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -68,6 +82,8 @@ Device network id.
 
 **起始版本：** 9
 
+<!--Device-VolumeGroupInfo-readonly networkId: string--><!--Device-VolumeGroupInfo-readonly networkId: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -83,6 +99,8 @@ Connect type of device for this group.
 **类型：** ConnectType
 
 **起始版本：** 9
+
+<!--Device-VolumeGroupInfo-readonly type: ConnectType--><!--Device-VolumeGroupInfo-readonly type: ConnectType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 

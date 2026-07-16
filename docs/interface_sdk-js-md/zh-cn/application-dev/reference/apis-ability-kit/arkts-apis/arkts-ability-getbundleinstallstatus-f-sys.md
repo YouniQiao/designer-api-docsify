@@ -1,5 +1,11 @@
 # getBundleInstallStatus（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getBundleInstallStatus
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getBundleInstallStatus(bundleName: string): BundleInstallStatus
 **起始版本：** 23
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getBundleInstallStatus(bundleName: string): BundleInstallStatus--><!--Device-bundleManager-function getBundleInstallStatus(bundleName: string): BundleInstallStatus-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -26,7 +34,7 @@ function getBundleInstallStatus(bundleName: string): BundleInstallStatus
 
 | 类型 | 说明 |
 | --- | --- |
-| BundleInstallStatus | 应用的安装状态。 |
+| [BundleInstallStatus](arkts-ability-bundleinstallstatus-e-sys.md) | 应用的安装状态。 |
 
 **错误码：**
 

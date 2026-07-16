@@ -12,10 +12,11 @@ import { advertising } from '@kit.AdsKit';
 function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Promise<string>
 ```
 
-Obtains the body of an ad request. This API uses a promise to return the result
-(this API is only open to some pre-installed system applications).
+Obtains the body of an ad request. This API uses a promise to return the result(this API is only open to some pre-installed system applications).
 
 **Since:** 12
+
+<!--Device-advertising-function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Promise<string>--><!--Device-advertising-function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Promise<string>-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -23,20 +24,20 @@ Obtains the body of an ad request. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adParams | AdRequestParams[] | Yes | Ad request parameters.**Note:** The **adId** parameter of this API can be empty. |
-| adOptions | AdOptions | Yes | Ad configuration parameters. |
+| adParams | [AdRequestParams](arkts-ads-adrequestparams-i.md)[] | Yes | Ad request parameters.**Note:** The **adId** parameter of this API can be empty. |
+| adOptions | [AdOptions](arkts-ads-adoptions-i.md) | Yes | Ad configuration parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the ad data of the string type. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the ad data of the string type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters areleft unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported. |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 

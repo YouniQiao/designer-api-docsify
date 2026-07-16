@@ -6,6 +6,8 @@ Message options for the dialog box, combining message content with text style.
 
 **Since:** 26.1.0
 
+<!--Device-dialog-declare interface DialogMessage extends DialogTextStyleOptions--><!--Device-dialog-declare interface DialogMessage extends DialogTextStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -29,6 +31,8 @@ Message content of the dialog box.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-DialogMessage-content: ResourceStr--><!--Device-DialogMessage-content: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

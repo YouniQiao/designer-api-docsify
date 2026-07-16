@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-export interface ListFileExtOptions--><!--Device-unnamed-export interface ListFileExtOptions-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+```
 
 ## fileFilter
 
@@ -20,6 +28,8 @@ fileFilter?: FileFilter
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ListFileExtOptions-fileFilter?: FileFilter--><!--Device-ListFileExtOptions-fileFilter?: FileFilter-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## listNum
@@ -28,14 +38,15 @@ fileFilter?: FileFilter
 listNum?: number
 ```
 
-列出文件名数量。可选，当设置0时，列出所有文件，默认为0。
-取值限定为整数。
+列出文件名数量。可选，当设置0时，列出所有文件，默认为0。取值限定为整数。
 
 **类型：** number
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ListFileExtOptions-listNum?: number--><!--Device-ListFileExtOptions-listNum?: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -52,6 +63,8 @@ recursion?: boolean
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ListFileExtOptions-recursion?: boolean--><!--Device-ListFileExtOptions-recursion?: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

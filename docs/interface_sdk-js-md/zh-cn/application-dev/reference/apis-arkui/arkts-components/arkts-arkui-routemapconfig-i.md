@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface RouteMapConfig--><!--Device-unnamed-declare interface RouteMapConfig-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## data
@@ -20,7 +22,9 @@ data: Object
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RouteMapConfig-data: Object--><!--Device-RouteMapConfig-data: Object-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,7 +42,9 @@ name: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RouteMapConfig-name: string--><!--Device-RouteMapConfig-name: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,7 +62,9 @@ pageSourceFile: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RouteMapConfig-pageSourceFile: string--><!--Device-RouteMapConfig-pageSourceFile: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,12 +1,12 @@
 # Zoom
 
-Zoom extend [ZoomQuery](arkts-camera-zoomquery-i.md)
-Provides APIs to process the zoom effect of a camera device, including obtaining the current zoom ratio, setting a
-zoom ratio, setting a zoom ratio in a smooth manner, and preparing or unpreparing for zooming.
+Zoom extend [ZoomQuery](arkts-camera-zoomquery-i.md)Provides APIs to process the zoom effect of a camera device, including obtaining the current zoom ratio, setting a zoom ratio, setting a zoom ratio in a smooth manner, and preparing or unpreparing for zooming.
 
 **Inheritance/Implementation:** Zoom extends [ZoomQuery](arkts-camera-zoomquery-i.md)
 
 **Since:** 11
+
+<!--Device-camera-interface Zoom extends ZoomQuery--><!--Device-camera-interface Zoom extends ZoomQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -28,13 +28,15 @@ Obtains the zoom ratio in use.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Zoom-getZoomRatio(): double--><!--Device-Zoom-getZoomRatio(): double-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Zoom ratio obtained. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| number | Zoom ratio obtained. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -55,14 +57,16 @@ Sets smooth zoom.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Zoom-setSmoothZoom(targetRatio: double, mode?: SmoothZoomMode): void--><!--Device-Zoom-setSmoothZoom(targetRatio: double, mode?: SmoothZoomMode): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetRatio | number | Yes | Target zoom ratio. The supported zoom ratio range can be obtained by calling[getZoomRatioRange](arkts-camera-zoomquery-i.md#getzoomratiorange-1). If the value passed inis not within the supported range, the value within the precision range is retained. |
-| mode | SmoothZoomMode | No | Smooth zoom mode. The default value is **0**. |
+| targetRatio | number | Yes | Target zoom ratio. The supported zoom ratio range can be obtained by calling [getZoomRatioRange](arkts-camera-zoomquery-i.md#getzoomratiorange-1). If the value passed in is not within the supported range, the value within the precision range is retained. |
+| mode | [SmoothZoomMode](arkts-camera-smoothzoommode-e.md) | No | Smooth zoom mode. The default value is **0**. |
 
 **Error codes:**
 
@@ -82,13 +86,15 @@ Sets a zoom ratio, with a maximum precision of two decimal places.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Zoom-setZoomRatio(zoomRatio: double): void--><!--Device-Zoom-setZoomRatio(zoomRatio: double): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| zoomRatio | number | Yes | Zoom ratio. The supported zoom ratio range can be obtained by calling[getZoomRatioRange](arkts-camera-zoomquery-i.md#getzoomratiorange-1). If the value passed inis not within the supported range, the value within the precision range is retained.<br>It takes some timefor the zoom ratio to take effect at the bottom layer. To obtain the correct zoom ratio, you need to wait forone to two frames. |
+| zoomRatio | number | Yes | Zoom ratio. The supported zoom ratio range can be obtained by calling [getZoomRatioRange](arkts-camera-zoomquery-i.md#getzoomratiorange-1). If the value passed in is not within the supported range, the value within the precision range is retained.<br>It takes some time for the zoom ratio to take effect at the bottom layer. To obtain the correct zoom ratio, you need to wait for one to two frames. |
 
 **Error codes:**
 

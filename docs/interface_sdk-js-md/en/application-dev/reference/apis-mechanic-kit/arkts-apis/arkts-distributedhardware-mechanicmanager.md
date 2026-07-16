@@ -1,9 +1,10 @@
 # @ohos.distributedHardware.mechanicManager
 
-Provides capabilities for controlling and interacting with mechanical devices connected to this device.
-The capabilities cover connection management, control, and monitoring.
+Provides capabilities for controlling and interacting with mechanical devices connected to this device.The capabilities cover connection management, control, and monitoring.
 
 **Since:** 20
+
+<!--Device-unnamed-declare namespace mechanicManager--><!--Device-unnamed-declare namespace mechanicManager-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -77,7 +78,7 @@ import { mechanicManager } from '@kit.MechanicKit';
 | [RotationAxesStateChangeInfo](arkts-mechanic-rotationaxesstatechangeinfo-i-sys.md) | Rotation axes state change information. |
 | [RotationAxesStatus](arkts-mechanic-rotationaxesstatus-i-sys.md) | Rotation axes status |
 | [RotationLimits](arkts-mechanic-rotationlimits-i-sys.md) | Rotation angle limits relative to the reference point. |
-| [RotationSpeed](arkts-mechanic-rotationspeed-i-sys.md) | Rotational speed. A negative value indicates a clockwise rotation, and a positive value indicates acounterclockwise rotation. |
+| [RotationSpeed](arkts-mechanic-rotationspeed-i-sys.md) | Rotational speed. A negative value indicates a clockwise rotation, and a positive value indicates a counterclockwise rotation. |
 | [SearchParams](arkts-mechanic-searchparams-i-sys.md) | Parameters for target searching. |
 | [SearchResult](arkts-mechanic-searchresult-i-sys.md) | Search result. |
 | [SpeedParams](arkts-mechanic-speedparams-i-sys.md) | Parameters for moving or turning at a speed. |

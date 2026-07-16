@@ -4,7 +4,15 @@
 
 **起始版本：** 10
 
+<!--Device-inputMethodEngine-export interface PanelInfo--><!--Device-inputMethodEngine-export interface PanelInfo-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+## 导入模块
+
+```TypeScript
+import { inputMethodEngine } from '@kit.IMEKit';
+```
 
 ## flag
 
@@ -20,6 +28,8 @@ flag?: PanelFlag
 
 **起始版本：** 10
 
+<!--Device-PanelInfo-flag?: PanelFlag--><!--Device-PanelInfo-flag?: PanelFlag-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## type
@@ -33,6 +43,8 @@ type: PanelType
 **类型：** PanelType
 
 **起始版本：** 10
+
+<!--Device-PanelInfo-type: PanelType--><!--Device-PanelInfo-type: PanelType-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

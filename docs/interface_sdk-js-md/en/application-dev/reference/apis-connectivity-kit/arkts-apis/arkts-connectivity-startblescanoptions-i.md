@@ -2,6 +2,8 @@
 
 **Since:** 6
 
+<!--Device-unnamed-export interface StartBLEScanOptions--><!--Device-unnamed-export interface StartBLEScanOptions-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 
 ## Modules to Import
@@ -24,6 +26,8 @@ StartBLEScanOptions completed
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-StartBLEScanOptions-complete: () => void--><!--Device-StartBLEScanOptions-complete: () => void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 
 ## fail
@@ -39,6 +43,8 @@ StartBLEScanOptions failed
 **Since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-StartBLEScanOptions-fail: (data: string, code: number) => void--><!--Device-StartBLEScanOptions-fail: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 
@@ -56,6 +62,8 @@ Time of delay for reporting the scan result
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-StartBLEScanOptions-interval: number--><!--Device-StartBLEScanOptions-interval: number-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 
 ## success
@@ -71,6 +79,8 @@ StartBLEScanOptions success
 **Since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-StartBLEScanOptions-success: () => void--><!--Device-StartBLEScanOptions-success: () => void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 

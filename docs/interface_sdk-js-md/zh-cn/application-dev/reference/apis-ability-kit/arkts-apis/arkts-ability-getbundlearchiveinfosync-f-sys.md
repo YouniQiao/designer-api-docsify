@@ -1,5 +1,11 @@
 # getBundleArchiveInfoSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getBundleArchiveInfoSync
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getBundleArchiveInfoSync(hapFilePath: string, bundleFlags: number): Bun
 **起始版本：** 10
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getBundleArchiveInfoSync(hapFilePath: string, bundleFlags: int): BundleInfo--><!--Device-bundleManager-function getBundleArchiveInfoSync(hapFilePath: string, bundleFlags: int): BundleInfo-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -27,7 +35,7 @@ function getBundleArchiveInfoSync(hapFilePath: string, bundleFlags: number): Bun
 
 | 类型 | 说明 |
 | --- | --- |
-| BundleInfo | 返回BundleInfo对象。 |
+| [BundleInfo](arkts-ability-bundleinfo-i.md) | 返回BundleInfo对象。 |
 
 **错误码：**
 

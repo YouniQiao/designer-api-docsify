@@ -18,6 +18,8 @@ Switches a given mission to the foreground. This API uses an asynchronous callba
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-missionManager-function moveMissionToFront(missionId: int, callback: AsyncCallback<void>): void--><!--Device-missionManager-function moveMissionToFront(missionId: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Switches a given mission to the foreground. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | missionId | number | Yes | Mission ID. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -68,12 +70,13 @@ try {
 function moveMissionToFront(missionId: number, options: StartOptions, callback: AsyncCallback<void>): void
 ```
 
-Switches a given mission to the foreground, with the startup parameters for the switching specified. This API uses
-an asynchronous callback to return the result.
+Switches a given mission to the foreground, with the startup parameters for the switching specified. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
+
+<!--Device-missionManager-function moveMissionToFront(missionId: int, options: StartOptions, callback: AsyncCallback<void>): void--><!--Device-missionManager-function moveMissionToFront(missionId: int, options: StartOptions, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -84,8 +87,8 @@ an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | missionId | number | Yes | Mission ID. |
-| options | StartOptions | Yes | Startup parameters, which are used to specify the window mode and device ID forswitching the mission to the foreground. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| options | [StartOptions](arkts-ability-startoptions-c-sys.md) | Yes | Startup parameters, which are used to specify the window mode and device ID for switching the mission to the foreground. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -126,12 +129,13 @@ try {
 function moveMissionToFront(missionId: number, options?: StartOptions): Promise<void>
 ```
 
-Switches a given mission to the foreground, with the startup parameters for the switching specified. This API uses
-a promise to return the result.
+Switches a given mission to the foreground, with the startup parameters for the switching specified. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
+
+<!--Device-missionManager-function moveMissionToFront(missionId: int, options?: StartOptions): Promise<void>--><!--Device-missionManager-function moveMissionToFront(missionId: int, options?: StartOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -142,13 +146,13 @@ a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | missionId | number | Yes | Mission ID. |
-| options | StartOptions | No | Startup parameters, which are used to specify the window mode and device ID forswitching the mission to the foreground. By default, no value is passed in, indicating that the default startupparameters are used. |
+| options | [StartOptions](arkts-ability-startoptions-c-sys.md) | No | Startup parameters, which are used to specify the window mode and device ID for switching the mission to the foreground. By default, no value is passed in, indicating that the default startup parameters are used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -16,20 +16,22 @@ Checks whether the trace flag is enabled for **HiTraceId**. This API returns the
 
 **Since:** 8
 
+<!--Device-hiTraceChain-function isFlagEnabled(id: HiTraceId, flag: HiTraceFlag): boolean--><!--Device-hiTraceChain-function isFlagEnabled(id: HiTraceId, flag: HiTraceFlag): boolean-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | HiTraceId | Yes | **HiTraceId** instance to be checked. |
-| flag | HiTraceFlag | Yes | Specified trace flag. |
+| id | [HiTraceId](arkts-performanceanalysis-hitraceid-i.md) | Yes | **HiTraceId** instance to be checked. |
+| flag | [HiTraceFlag](arkts-performanceanalysis-hitraceflag-e.md) | Yes | Specified trace flag. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The value **true** indicates that the flag for **HiTraceId** is enabled, and **false**indicates the opposite. |
+| boolean | The value **true** indicates that the flag for **HiTraceId** is enabled, and **false** indicates the opposite. |
 
 **Example**
 

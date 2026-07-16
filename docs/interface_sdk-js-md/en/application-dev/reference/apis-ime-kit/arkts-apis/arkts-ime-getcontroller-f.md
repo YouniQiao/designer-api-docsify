@@ -16,13 +16,15 @@ Input method controller
 
 **Since:** 9
 
+<!--Device-inputMethod-function getController(): InputMethodController--><!--Device-inputMethod-function getController(): InputMethodController-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| InputMethodController | the object of InputMethodController. |
+| [InputMethodController](arkts-ime-inputmethodcontroller-i.md) | the object of InputMethodController. |
 
 **Error codes:**
 

@@ -20,20 +20,22 @@ Queries the APN ID.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-networkManager-function queryApn(admin: Want, apnInfo: Record<string, string>): Array<string>--><!--Device-networkManager-function queryApn(admin: Want, apnInfo: Record<string, string>): Array<string>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| apnInfo | Record&lt;string, string&gt; | Yes | APN information.<br>- **apnName**: APN identifier, which is optional.&lt;br&gt;- **mcc**: 3-digit mobile country code (MCC), which is optional.<br>- **mnc**: 2-digit or 3-digit mobilenetwork code (MNC), which is optional.<br>- **apn**: access point name, which is optional.<br>- **type**: APNservice type, which is optional.<br>- **user**: user name for APN authentication, which is optional.<br>-**proxy**: address of the proxy server for a common data connection, which is optional.<br>- **mmsproxy**:dedicated proxy address of the MMS service, which is optional.<br>- **authType**: authentication protocol typeof the APN, which is optional. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| apnInfo | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, string> | Yes | APN information.<br>- **apnName**: APN identifier, which is optional.<br>- **mcc**: 3-digit mobile country code (MCC), which is optional.<br>- **mnc**: 2-digit or 3-digit mobile network code (MNC), which is optional.<br>- **apn**: access point name, which is optional.<br>- **type**: APN service type, which is optional.<br>- **user**: user name for APN authentication, which is optional.<br>-**proxy**: address of the proxy server for a common data connection, which is optional.<br>- **mmsproxy**:dedicated proxy address of the MMS service, which is optional.<br>- **authType**: authentication protocol type of the APN, which is optional. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | APN ID obtained. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | APN ID obtained. |
 
 **Error codes:**
 
@@ -41,7 +43,7 @@ Queries the APN ID.
 | --- | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 **Example**
 
@@ -85,20 +87,22 @@ Queries the APN parameter information.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-networkManager-function queryApn(admin: Want, apnId: string): Record<string, string>--><!--Device-networkManager-function queryApn(admin: Want, apnId: string): Record<string, string>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| apnId | string | Yes | Specified APN ID. You can obtain device information using[networkManager.queryApn](arkts-mdm-queryapn-f.md#queryapn-1). |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| apnId | string | Yes | Specified APN ID. You can obtain device information using [networkManager.queryApn](arkts-mdm-queryapn-f.md#queryapn-1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Record&lt;string, string&gt; | APN parameter information of the specified APN ID.<br>- **apnName**: APN identifier.<br>- **mcc**: 3-digit mobile country code (MCC).<br>- **mnc**: 2-digit or 3-digit mobile network code (MNC).<br>- **apn**: access point name.<br>- **type**: APN service type.<br>- **user**: user name for APN authentication.<br>- **proxy**: address of the proxy server for a common data connection.<br>- **mmsproxy**: dedicated proxy address of the MMS service.<br>- **authType**: authentication protocol type of the APN. |
+| [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, string> | APN parameter information of the specified APN ID.<br>- **apnName**: APN identifier.<br>- **mcc**: 3-digit mobile country code (MCC).<br>- **mnc**: 2-digit or 3-digit mobile network code (MNC).<br>- **apn**: access point name.<br>- **type**: APN service type.<br>- **user**: user name for APN authentication.<br>- **proxy**: address of the proxy server for a common data connection.<br>- **mmsproxy**: dedicated proxy address of the MMS service.<br>- **authType**: authentication protocol type of the APN. |
 
 **Error codes:**
 
@@ -106,7 +110,7 @@ Queries the APN parameter information.
 | --- | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 **Example**
 

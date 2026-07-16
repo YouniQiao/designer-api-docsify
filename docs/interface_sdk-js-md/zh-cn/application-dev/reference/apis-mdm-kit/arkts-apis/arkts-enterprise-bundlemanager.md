@@ -2,15 +2,23 @@
 
 本模块提供包管理能力，包括添加包安装允许名单、获取包安装允许名单、移除包安装允许名单等。
 
-> **说明：**
->
-> 本模块接口仅可在Stage模型下使用。
->
+> **说明：**  
+>  
+> 本模块接口仅可在Stage模型下使用。  
+>  
 > 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../../mdm/mdm-kit-guide.md)。
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace bundleManager--><!--Device-unnamed-declare namespace bundleManager-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+```
 
 ## 汇总
 
@@ -31,12 +39,12 @@
 | [getInstalledBundleStorageStats](arkts-mdm-getinstalledbundlestoragestats-f.md#getinstalledbundlestoragestats-1) | 获取设备指定用户下已安装应用的存储占用信息。使用Promise异步回调。 |
 | [install](arkts-mdm-install-f.md#install-3) | 安装指定路径下的应用包。使用Promise异步回调。&lt;/br&gt;此接口只能安装分发类型为enterprise_mdm（MDM应用）和enterprise_normal（普通企业应用）类型的应用，可以通过[getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-getbundleinfoforself-f.md#getbundleinfoforself-1)接口查询应用自身的[BundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleinfo-i.md)，其中BundleInfo.appInfo.appDistributionType为应用的分发类型。 |
 | [installForResult](arkts-mdm-installforresult-f.md#installforresult-1) | 安装应用 |
-| [installMarketApps](arkts-mdm-installmarketapps-f.md#installmarketapps-1) | 下载并安装应用市场应用。@link&gt; **说明**&gt;本接口调用成功后会在桌面上生成应用下载任务，此任务与从应用市场下载所创建任务一致。下载安装结束后，安装结果会通过回调[EnterpriseAdminExtensionAbility.onMarketAppInstallResult](|
+| [installMarketApps](arkts-mdm-installmarketapps-f.md#installmarketapps-1) | 下载并安装应用市场应用。 |
 | [removeAllowedInstallBundlesSync](arkts-mdm-removeallowedinstallbundlessync-f.md#removeallowedinstallbundlessync-1) | 在应用程序包安装允许名单中移除应用，在允许名单存在的情况下，不在应用程序包安装允许名单中的应用不允许在当前/指定用户下安装。 |
 | [removeDisallowedInstallBundlesSync](arkts-mdm-removedisallowedinstallbundlessync-f.md#removedisallowedinstallbundlessync-1) | 在应用程序包安装禁止名单中移除应用，在禁止名单存在的情况下，在应用程序包安装禁止名单中的应用不允许在当前/指定用户下安装。 |
 | [removeDisallowedUninstallBundlesSync](arkts-mdm-removedisalloweduninstallbundlessync-f.md#removedisalloweduninstallbundlessync-1) | 在包卸载禁止名单中移除应用。在禁止名单存在的情况下，在包卸载禁止名单中的应用不允许在当前/指定用户下卸载。 |
-| [removeInstallationAllowedAppDistributionTypes](arkts-mdm-removeinstallationallowedappdistributiontypes-f.md#removeinstallationallowedappdistributiontypes-1) | 移除应用的分发类型。若只移除了数组中部分的分发类型，则当前设备可以安装数组中剩下的分发类型的应用，但无法安装[AppDistributionType]{@link bundleManager.AppDistributionType)中未添加的分发类型的应用。应用程序签名证书的分发类型详细介绍请参见[ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md)的appDistributionType属性。 |
-| [uninstall](arkts-mdm-uninstall-f.md#uninstall-5) | 卸载当前/指定用户下的指定包接口，选择是否保留包数据（由isKeepData指定）。使用Promise异步回调。@link @ohos.enterprise.bundleManager:bundleManager.addDisallowedUninstallBundlesSync}&gt; 接口设置了不允许卸载时，调用此接口卸载应用会返回401错误码。 |
+| [removeInstallationAllowedAppDistributionTypes](arkts-mdm-removeinstallationallowedappdistributiontypes-f.md#removeinstallationallowedappdistributiontypes-1) | 移除应用的分发类型。若只移除了数组中部分的分发类型，则当前设备可以安装数组中剩下的分发类型的应用，但无法安装[AppDistributionType](arkts-mdm-appdistributiontype-e.md)中未添加的分发类型的应用。应用程序签名证书的分发类型详细介绍请参见[ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md)的appDistributionType属性。 |
+| [uninstall](arkts-mdm-uninstall-f.md#uninstall-5) | 卸载当前/指定用户下的指定包接口，选择是否保留包数据（由isKeepData指定）。使用Promise异步回调。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -72,10 +80,10 @@
 | [removeDisallowedUninstallBundles](arkts-mdm-removedisalloweduninstallbundles-f-sys.md#removedisalloweduninstallbundles-1) | 移除在应用程序包卸载禁止名单中的应用，在禁止名单存在的情况下，在禁止名单中的应用不允许在当前用户下卸载，使用callback异步回调。 |
 | [removeDisallowedUninstallBundles](arkts-mdm-removedisalloweduninstallbundles-f-sys.md#removedisalloweduninstallbundles-2) | 移除在应用程序包卸载禁止名单中的应用，在禁止名单存在的情况下，在禁止名单中的应用不允许在指定用户（通过userId指定）下卸载。使用callback异步回调。 |
 | [removeDisallowedUninstallBundles](arkts-mdm-removedisalloweduninstallbundles-f-sys.md#removedisalloweduninstallbundles-3) | 移除在应用程序包卸载禁止名单中的应用。在禁止名单存在的情况下，在禁止名单中的应用不允许在当前/指定用户下卸载。使用Promise异步回调。 |
-| [uninstall](arkts-mdm-uninstall-f-sys.md#uninstall-1) | 卸载当前用户下的指定应用程序包，且不保留应用程序包数据。使用callback异步回调。@link @ohos.enterprise.bundleManager:bundleManager.addDisallowedUninstallBundlesSync}&gt; 接口设置了不允许卸载时，调用此接口卸载应用会返回401错误码。 |
-| [uninstall](arkts-mdm-uninstall-f-sys.md#uninstall-2) | 卸载指定用户下（由参数userId指定）的指定应用程序包，且不保留应用程序包数据。使用callback异步回调。@link @ohos.enterprise.bundleManager:bundleManager.addDisallowedUninstallBundlesSync}&gt; 接口设置了不允许卸载时，调用此接口卸载应用会返回401错误码。 |
-| [uninstall](arkts-mdm-uninstall-f-sys.md#uninstall-3) | 卸载当前用户下的指定应用程序包，选择是否保留应用程序包数据（由isKeepData指定）。使用callback异步回调。@link @ohos.enterprise.bundleManager:bundleManager.addDisallowedUninstallBundlesSync}&gt; 接口设置了不允许卸载时，调用此接口卸载应用会返回401错误码。 |
-| [uninstall](arkts-mdm-uninstall-f-sys.md#uninstall-4) | 卸载指定用户下（由参数userId指定）的指定应用程序包接口，选择是否保留应用程序包数据（由isKeepData指定）。使用callback异步回调。@link @ohos.enterprise.bundleManager:bundleManager.addDisallowedUninstallBundlesSync}&gt; 接口设置了不允许卸载时，调用此接口卸载应用会返回401错误码。 |
+| [uninstall](arkts-mdm-uninstall-f-sys.md#uninstall-1) | 卸载当前用户下的指定应用程序包，且不保留应用程序包数据。使用callback异步回调。 |
+| [uninstall](arkts-mdm-uninstall-f-sys.md#uninstall-2) | 卸载指定用户下（由参数userId指定）的指定应用程序包，且不保留应用程序包数据。使用callback异步回调。 |
+| [uninstall](arkts-mdm-uninstall-f-sys.md#uninstall-3) | 卸载当前用户下的指定应用程序包，选择是否保留应用程序包数据（由isKeepData指定）。使用callback异步回调。 |
+| [uninstall](arkts-mdm-uninstall-f-sys.md#uninstall-4) | 卸载指定用户下（由参数userId指定）的指定应用程序包接口，选择是否保留应用程序包数据（由isKeepData指定）。使用callback异步回调。 |
 <!--DelEnd-->
 
 ### 接口

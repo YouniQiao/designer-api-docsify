@@ -20,19 +20,21 @@ Creates a media source from file descriptor.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-media-function createMediaSourceWithFd(fdSrc: AVFileDescriptor): MediaSource | undefined--><!--Device-media-function createMediaSourceWithFd(fdSrc: AVFileDescriptor): MediaSource | undefined-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fdSrc | AVFileDescriptor | Yes | file descriptor handler.<br>file descriptor handler. |
+| fdSrc | [AVFileDescriptor](arkts-media-avfiledescriptor-i.md) | Yes | file descriptor handler.<br>file descriptor handler. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MediaSource | MediaSource instance if the operation is successful; returns undefined otherwise. |
+| [MediaSource](arkts-media-mediasource-i.md) | MediaSource instance if the operation is successful; returns undefined otherwise. |
 
 **Example**
 

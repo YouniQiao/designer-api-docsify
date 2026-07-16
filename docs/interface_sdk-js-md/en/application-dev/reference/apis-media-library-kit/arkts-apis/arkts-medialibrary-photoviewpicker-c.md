@@ -1,9 +1,10 @@
 # PhotoViewPicker
 
-PhotoViewPicker provides APIs for the user to select images and videos. Before using the APIs of PhotoViewPicker,
-you need to create a PhotoViewPicker instance.
+PhotoViewPicker provides APIs for the user to select images and videos. Before using the APIs of PhotoViewPicker,you need to create a PhotoViewPicker instance.
 
 **Since:** 10
+
+<!--Device-photoAccessHelper-class PhotoViewPicker--><!--Device-photoAccessHelper-class PhotoViewPicker-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -19,21 +20,21 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>
 ```
 
-Starts a **photoPicker** page for the user to select one or more images or videos. This API uses a promise to
-return the result. You can pass in **PhotoSelectOptions** to specify the type and maximum number of the files to
-select. A **PhotoSelectResult** object is returned.
+Starts a **photoPicker** page for the user to select one or more images or videos. This API uses a promise to return the result. You can pass in **PhotoSelectOptions** to specify the type and maximum number of the files to select. A **PhotoSelectResult** object is returned.
 
-> **NOTE**
->
-> **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used
-> only by calling
-> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-i.md#getassets-1)
-> . For details, see
+> **NOTE**  
+>  
+> **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used  
+> only by calling  
+> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-i.md#getassets-1)  
+> . For details, see  
 > [Using a Media File URI](../../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PhotoViewPicker-select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>--><!--Device-PhotoViewPicker-select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -41,13 +42,13 @@ select. A **PhotoSelectResult** object is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | PhotoSelectOptions | No | Options for selecting files. If this parameter is not specified, up to 50 images and videos are selected by default. |
+| option | [PhotoSelectOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-photoselectoptions-c.md) | No | Options for selecting files. If this parameter is not specified, up to 50 images and videos are selected by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PhotoSelectResult&gt; | Promise used to return information about the images or videos selected. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PhotoSelectResult> | Promise used to return information about the images or videos selected. |
 
 **Error codes:**
 
@@ -63,21 +64,21 @@ select. A **PhotoSelectResult** object is returned.
 select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): void
 ```
 
-Starts a **photoPicker** page for the user to select one or more images or videos. This API uses an asynchronous
-callback to return the result. You can pass in **PhotoSelectOptions** to specify the media file type and the
-maximum number of files to select.
+Starts a **photoPicker** page for the user to select one or more images or videos. This API uses an asynchronous callback to return the result. You can pass in **PhotoSelectOptions** to specify the media file type and the maximum number of files to select.
 
-> **NOTE**
->
-> **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used
-> only by calling
-> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-i.md#getassets-1)
-> . For details, see
+> **NOTE**  
+>  
+> **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used  
+> only by calling  
+> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-i.md#getassets-1)  
+> . For details, see  
 > [Using a Media File URI](../../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PhotoViewPicker-select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): void--><!--Device-PhotoViewPicker-select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -85,8 +86,8 @@ maximum number of files to select.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | PhotoSelectOptions | Yes | Options for selecting images or videos. |
-| callback | AsyncCallback&lt;PhotoSelectResult&gt; | Yes | Callback used to return information about the images orvideos selected. |
+| option | [PhotoSelectOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-photoselectoptions-c.md) | Yes | Options for selecting images or videos. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<PhotoSelectResult> | Yes | Callback used to return information about the images or videos selected. |
 
 **Error codes:**
 
@@ -102,20 +103,21 @@ maximum number of files to select.
 select(callback: AsyncCallback<PhotoSelectResult>): void
 ```
 
-Starts a **photoPicker** page for the user to select one or more images or videos. This API uses an asynchronous
-callback to return the result.
+Starts a **photoPicker** page for the user to select one or more images or videos. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used
-> only by calling
-> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-i.md#getassets-1)
-> . For details, see
+> **NOTE**  
+>  
+> **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used  
+> only by calling  
+> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-i.md#getassets-1)  
+> . For details, see  
 > [Using a Media File URI](../../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PhotoViewPicker-select(callback: AsyncCallback<PhotoSelectResult>): void--><!--Device-PhotoViewPicker-select(callback: AsyncCallback<PhotoSelectResult>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -123,7 +125,7 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;PhotoSelectResult&gt; | Yes | Callback used to return information about the images orvideos selected. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<PhotoSelectResult> | Yes | Callback used to return information about the images or videos selected. |
 
 **Error codes:**
 

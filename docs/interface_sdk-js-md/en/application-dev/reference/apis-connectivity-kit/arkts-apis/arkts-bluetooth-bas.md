@@ -4,6 +4,8 @@ Provide methods to access BAS(Battery Service)-related capabilities.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare namespace bas--><!--Device-unnamed-declare namespace bas-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.

@@ -4,6 +4,8 @@ Defines the original MMS message reading indication.
 
 **Since:** 8
 
+<!--Device-sms-export interface MmsReadOrigInd--><!--Device-sms-export interface MmsReadOrigInd-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Indicates the date for the original MMS message reading indication.
 
 **Since:** 8
 
+<!--Device-MmsReadOrigInd-date: long--><!--Device-MmsReadOrigInd-date: long-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Indicates the source address for the original MMS message reading indication.
 **Type:** MmsAddress
 
 **Since:** 8
+
+<!--Device-MmsReadOrigInd-from: MmsAddress--><!--Device-MmsReadOrigInd-from: MmsAddress-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -58,6 +64,8 @@ Indicates the message ID for the original MMS message reading indication.
 
 **Since:** 8
 
+<!--Device-MmsReadOrigInd-messageId: string--><!--Device-MmsReadOrigInd-messageId: string-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Indicates the read status for the original MMS message reading indication.
 **Type:** number
 
 **Since:** 8
+
+<!--Device-MmsReadOrigInd-readStatus: int--><!--Device-MmsReadOrigInd-readStatus: int-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -90,6 +100,8 @@ Indicates the destination address for the original MMS message reading indicatio
 
 **Since:** 8
 
+<!--Device-MmsReadOrigInd-to: Array<MmsAddress>--><!--Device-MmsReadOrigInd-to: Array<MmsAddress>-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -105,6 +117,8 @@ Indicates the version for the original MMS message reading indication.
 **Type:** MmsVersionType
 
 **Since:** 8
+
+<!--Device-MmsReadOrigInd-version: MmsVersionType--><!--Device-MmsReadOrigInd-version: MmsVersionType-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 

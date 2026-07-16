@@ -13,8 +13,7 @@ function getApplicationInfo(bundleName: string,
     bundleFlags: number, userId: number, callback: AsyncCallback<ApplicationInfo>): void
 ```
 
-Obtains the application information of the specified user based on a given bundle name. This API uses an
-asynchronous callback to return the result.
+Obtains the application information of the specified user based on a given bundle name. This API uses an asynchronous callback to return the result.
 
 No permission is required for obtaining the caller's own information.
 
@@ -24,6 +23,10 @@ No permission is required for obtaining the caller's own information.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundle-function getApplicationInfo(bundleName: string,
+    bundleFlags: number, userId: number, callback: AsyncCallback<ApplicationInfo>): void--><!--Device-bundle-function getApplicationInfo(bundleName: string,
+    bundleFlags: number, userId: number, callback: AsyncCallback<ApplicationInfo>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **Parameters:**
@@ -31,9 +34,9 @@ No permission is required for obtaining the caller's own information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| bundleFlags | number | Yes | Type of information that will be returned. For details about the availableenumerated values, see the application information flags in [BundleFlag](arkts-ability-bundleflag-e.md). |
+| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the application information flags in [BundleFlag](arkts-ability-bundleflag-e.md). |
 | userId | number | Yes | User ID. The value must be greater than or equal to 0. |
-| callback | AsyncCallback&lt;ApplicationInfo&gt; | Yes | Callback used to return the application information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ApplicationInfo> | Yes | Callback used to return the application information. |
 
 
 ## getApplicationInfo
@@ -42,8 +45,7 @@ No permission is required for obtaining the caller's own information.
 function getApplicationInfo(bundleName: string, bundleFlags: number, callback: AsyncCallback<ApplicationInfo>): void
 ```
 
-Obtains the application information based on a given bundle name. This API uses an asynchronous callback to return
-the result.
+Obtains the application information based on a given bundle name. This API uses an asynchronous callback to return the result.
 
 No permission is required for obtaining the caller's own information.
 
@@ -53,6 +55,8 @@ No permission is required for obtaining the caller's own information.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundle-function getApplicationInfo(bundleName: string, bundleFlags: number, callback: AsyncCallback<ApplicationInfo>): void--><!--Device-bundle-function getApplicationInfo(bundleName: string, bundleFlags: number, callback: AsyncCallback<ApplicationInfo>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **Parameters:**
@@ -60,8 +64,8 @@ No permission is required for obtaining the caller's own information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| bundleFlags | number | Yes | Type of information that will be returned. For details about the availableenumerated values, see the application information flags in [BundleFlag](arkts-ability-bundleflag-e.md). |
-| callback | AsyncCallback&lt;ApplicationInfo&gt; | Yes | Callback used to return the application information. |
+| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the application information flags in [BundleFlag](arkts-ability-bundleflag-e.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ApplicationInfo> | Yes | Callback used to return the application information. |
 
 
 ## getApplicationInfo
@@ -80,6 +84,8 @@ No permission is required for obtaining the caller's own information.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundle-function getApplicationInfo(bundleName: string, bundleFlags: number, userId?: number): Promise<ApplicationInfo>--><!--Device-bundle-function getApplicationInfo(bundleName: string, bundleFlags: number, userId?: number): Promise<ApplicationInfo>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **Parameters:**
@@ -87,12 +93,12 @@ No permission is required for obtaining the caller's own information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| bundleFlags | number | Yes | Type of information that will be returned. For details about the availableenumerated values, see the application information flags in [BundleFlag](arkts-ability-bundleflag-e.md). |
-| userId | number | No | User ID. The default value is the user ID of the caller. The value must be greater thanor equal to 0. |
+| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the application information flags in [BundleFlag](arkts-ability-bundleflag-e.md). |
+| userId | number | No | User ID. The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ApplicationInfo&gt; | Promise used to return the application information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ApplicationInfo> | Promise used to return the application information. |
 

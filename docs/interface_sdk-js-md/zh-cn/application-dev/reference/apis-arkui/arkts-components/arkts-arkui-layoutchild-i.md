@@ -8,6 +8,8 @@
 
 **替代接口：** Measurable/Layoutable
 
+<!--Device-unnamed-declare interface LayoutChild--><!--Device-unnamed-declare interface LayoutChild-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## layout
@@ -26,13 +28,15 @@ layout(childLayoutInfo: LayoutInfo)
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-LayoutChild-layout(childLayoutInfo: LayoutInfo)--><!--Device-LayoutChild-layout(childLayoutInfo: LayoutInfo)-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| childLayoutInfo | LayoutInfo | 是 |  |
+| childLayoutInfo | [LayoutInfo](arkts-arkui-layoutinfo-i.md) | 是 |  |
 
 ## measure
 
@@ -50,13 +54,15 @@ measure(childConstraint: ConstraintSizeOptions)
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-LayoutChild-measure(childConstraint: ConstraintSizeOptions)--><!--Device-LayoutChild-measure(childConstraint: ConstraintSizeOptions)-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| childConstraint | ConstraintSizeOptions | 是 |  |
+| childConstraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | 是 |  |
 
 ## borderInfo
 
@@ -75,6 +81,8 @@ borderInfo: LayoutBorderInfo
 **替代接口：** Measurable/Layoutable
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-LayoutChild-borderInfo: LayoutBorderInfo--><!--Device-LayoutChild-borderInfo: LayoutBorderInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,6 +104,8 @@ constraint: ConstraintSizeOptions
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-LayoutChild-constraint: ConstraintSizeOptions--><!--Device-LayoutChild-constraint: ConstraintSizeOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## id
@@ -115,6 +125,8 @@ id: string
 **替代接口：** Measurable/Layoutable
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-LayoutChild-id: string--><!--Device-LayoutChild-id: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -136,6 +148,8 @@ name: string
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-LayoutChild-name: string--><!--Device-LayoutChild-name: string-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## position
@@ -155,6 +169,8 @@ position: Position
 **替代接口：** Measurable/Layoutable
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-LayoutChild-position: Position--><!--Device-LayoutChild-position: Position-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

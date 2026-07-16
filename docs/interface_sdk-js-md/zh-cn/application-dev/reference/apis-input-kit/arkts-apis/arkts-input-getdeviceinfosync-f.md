@@ -1,5 +1,11 @@
 # getDeviceInfoSync
 
+## 导入模块
+
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+```
+
 ## getDeviceInfoSync
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getDeviceInfoSync(deviceId: number): InputDeviceData
 获取指定输入设备的信息。
 
 **起始版本：** 10
+
+<!--Device-inputDevice-function getDeviceInfoSync(deviceId: int): InputDeviceData--><!--Device-inputDevice-function getDeviceInfoSync(deviceId: int): InputDeviceData-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -22,7 +30,7 @@ function getDeviceInfoSync(deviceId: number): InputDeviceData
 
 | 类型 | 说明 |
 | --- | --- |
-| InputDeviceData | 返回输入设备信息，包括输入设备ID、名称、支持的输入能力、物理地址、版本信息及产品信息等。 |
+| [InputDeviceData](arkts-input-inputdevicedata-i.md) | 返回输入设备信息，包括输入设备ID、名称、支持的输入能力、物理地址、版本信息及产品信息等。 |
 
 **错误码：**
 

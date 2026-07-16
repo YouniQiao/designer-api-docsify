@@ -12,8 +12,7 @@ import { systemTime } from '@kit.BasicServicesKit';
 function getRealTime(isNano: boolean, callback: AsyncCallback<number>): void
 ```
 
-Obtains the time elapsed since system startup, including the deep sleep time. This API uses an asynchronous
-callback to return the result.
+Obtains the time elapsed since system startup, including the deep sleep time. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -21,14 +20,16 @@ callback to return the result.
 
 **Substitutes:** [getUptime](arkts-basicservices-getuptime-f.md#getuptime-1)
 
+<!--Device-systemTime-function getRealTime(isNano: boolean, callback: AsyncCallback<number>): void--><!--Device-systemTime-function getRealTime(isNano: boolean, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isNano | boolean | Yes | Whether the time to return is in nanoseconds.<br>- **true**: The result is innanoseconds.<br>- **false**: The result is in milliseconds. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. |
+| isNano | boolean | Yes | Whether the time to return is in nanoseconds.<br>- **true**: The result is in nanoseconds.<br>- **false**: The result is in milliseconds. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -63,8 +64,7 @@ try {
 function getRealTime(callback: AsyncCallback<number>): void
 ```
 
-Obtains the time elapsed since system startup, including the deep sleep time. This API uses an asynchronous
-callback to return the result.
+Obtains the time elapsed since system startup, including the deep sleep time. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -72,13 +72,15 @@ callback to return the result.
 
 **Substitutes:** [getUptime](arkts-basicservices-getuptime-f.md#getuptime-1)
 
+<!--Device-systemTime-function getRealTime(callback: AsyncCallback<number>): void--><!--Device-systemTime-function getRealTime(callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -113,8 +115,7 @@ try {
 function getRealTime(isNano?: boolean): Promise<number>
 ```
 
-Obtains the time elapsed since system startup, including the deep sleep time. This API uses a promise to return the
-result.
+Obtains the time elapsed since system startup, including the deep sleep time. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -122,19 +123,21 @@ result.
 
 **Substitutes:** [getUptime](arkts-basicservices-getuptime-f.md#getuptime-1)
 
+<!--Device-systemTime-function getRealTime(isNano?: boolean): Promise<number>--><!--Device-systemTime-function getRealTime(isNano?: boolean): Promise<number>-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isNano | boolean | No | Whether the time to return is in nanoseconds. The default value is **false**.<br>Thedefault value is false.<br>- **true**: The result is in nanoseconds.<br>- **false**: The result is inmilliseconds. |
+| isNano | boolean | No | Whether the time to return is in nanoseconds. The default value is **false**.<br>The default value is false.<br>- **true**: The result is in nanoseconds.<br>- **false**: The result is in milliseconds. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the time elapsed since system startup, including the deep sleeptime. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the time elapsed since system startup, including the deep sleep time. |
 
 **Error codes:**
 

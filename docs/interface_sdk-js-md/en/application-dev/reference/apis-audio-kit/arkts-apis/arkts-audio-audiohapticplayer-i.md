@@ -1,10 +1,10 @@
 # AudioHapticPlayer
 
-Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, you must use
-[createPlayer](arkts-audio-audiohapticmanager-i.md#createplayer-1)
-to create an AudioHapticPlayer instance.
+Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, you must use [createPlayer](arkts-audio-audiohapticmanager-i.md#createplayer-1)to create an AudioHapticPlayer instance.
 
 **Since:** 11
+
+<!--Device-audioHaptic-interface AudioHapticPlayer--><!--Device-audioHaptic-interface AudioHapticPlayer-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -24,19 +24,21 @@ Checks whether an audio-haptic type is muted.
 
 **Since:** 11
 
+<!--Device-AudioHapticPlayer-isMuted(type: AudioHapticType): boolean--><!--Device-AudioHapticPlayer-isMuted(type: AudioHapticType): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | AudioHapticType | Yes | Audio-haptic type. |
+| type | [AudioHapticType](arkts-audio-audiohaptictype-e.md) | Yes | Audio-haptic type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the audio-haptic type is muted. **true** if muted, **false**otherwise. |
+| boolean | Check result for whether the audio-haptic type is muted. **true** if muted, **false** otherwise. |
 
 **Error codes:**
 
@@ -63,14 +65,16 @@ Unsubscribes from the EOS event. This API uses an asynchronous callback to retur
 
 **Since:** 11
 
+<!--Device-AudioHapticPlayer-off(type: 'endOfStream', callback?: Callback<void>): void--><!--Device-AudioHapticPlayer-off(type: 'endOfStream', callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'endOfStream' | Yes | Event type. The event **'endOfStream'** is triggered when the audio streamplayback ends. |
-| callback | Callback&lt;void&gt; | No | Callback that returns no value. |
+| type | 'endOfStream' | Yes | Event type. The event **'endOfStream'** is triggered when the audio stream playback ends. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | Callback that returns no value. |
 
 **Example**
 
@@ -99,14 +103,16 @@ Unsubscribes from the audio interruption event. This API uses an asynchronous ca
 
 **Since:** 11
 
+<!--Device-AudioHapticPlayer-off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void--><!--Device-AudioHapticPlayer-off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focusis changed. |
-| callback | Callback&lt;audio.InterruptEvent&gt; | No | Callback used to return the event information. |
+| type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<audio.InterruptEvent> | No | Callback used to return the event information. |
 
 **Example**
 
@@ -177,10 +183,11 @@ audioHapticPlayerInstance.off('audioInterrupt', audioInterruptCallback);
 on(type: 'endOfStream', callback: Callback<void>): void
 ```
 
-Subscribes to end of stream (EOS) event, which is triggered when the audio stream playback ends. This API uses an
-asynchronous callback to return the result.
+Subscribes to end of stream (EOS) event, which is triggered when the audio stream playback ends. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+<!--Device-AudioHapticPlayer-on(type: 'endOfStream', callback: Callback<void>): void--><!--Device-AudioHapticPlayer-on(type: 'endOfStream', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -188,8 +195,8 @@ asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'endOfStream' | Yes | Event type. The event **'endOfStream'** is triggered when the audio streamplayback ends. |
-| callback | Callback&lt;void&gt; | Yes | Callback that returns no value. |
+| type | 'endOfStream' | Yes | Event type. The event **'endOfStream'** is triggered when the audio stream playback ends. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Callback that returns no value. |
 
 **Example**
 
@@ -206,10 +213,11 @@ audioHapticPlayerInstance.on('endOfStream', () => {
 on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
 ```
 
-Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an
-asynchronous callback to return the result.
+Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+<!--Device-AudioHapticPlayer-on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void--><!--Device-AudioHapticPlayer-on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -217,8 +225,8 @@ asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focusis changed. |
-| callback | Callback&lt;audio.InterruptEvent&gt; | Yes | Callback used to return the event information. |
+| type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<audio.InterruptEvent> | Yes | Callback used to return the event information. |
 
 **Example**
 
@@ -286,13 +294,15 @@ Releases this audio-haptic player. This API uses a promise to return the result.
 
 **Since:** 11
 
+<!--Device-AudioHapticPlayer-release(): Promise<void>--><!--Device-AudioHapticPlayer-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -321,11 +331,13 @@ setLoop(loop: boolean): Promise<void>
 
 Sets this audio-haptic player to play in a loop. This API uses a promise to return the result.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > This API must be called before the audio-haptic player is released.
 
 **Since:** 20
+
+<!--Device-AudioHapticPlayer-setLoop(loop: boolean): Promise<void>--><!--Device-AudioHapticPlayer-setLoop(loop: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -339,7 +351,7 @@ Sets this audio-haptic player to play in a loop. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -368,11 +380,13 @@ setVolume(volume: number): Promise<void>
 
 Sets the volume for this audio-haptic player. This API uses a promise to return the result.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > This API must be called before the audio-haptic player is released.
 
 **Since:** 20
+
+<!--Device-AudioHapticPlayer-setVolume(volume: double): Promise<void>--><!--Device-AudioHapticPlayer-setVolume(volume: double): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -386,7 +400,7 @@ Sets the volume for this audio-haptic player. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -419,13 +433,15 @@ Starts playback. This API uses a promise to return the result.
 
 **Since:** 11
 
+<!--Device-AudioHapticPlayer-start(): Promise<void>--><!--Device-AudioHapticPlayer-start(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -458,13 +474,15 @@ Stops playback. This API uses a promise to return the result.
 
 **Since:** 11
 
+<!--Device-AudioHapticPlayer-stop(): Promise<void>--><!--Device-AudioHapticPlayer-stop(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

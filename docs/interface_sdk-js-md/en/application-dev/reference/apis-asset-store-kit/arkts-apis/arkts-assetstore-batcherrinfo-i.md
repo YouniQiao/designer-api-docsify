@@ -4,6 +4,8 @@ Result object containing error information with a specific index, error code, an
 
 **Since:** 26.0.0
 
+<!--Device-asset-interface BatchErrInfo--><!--Device-asset-interface BatchErrInfo-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 ## Modules to Import
@@ -24,6 +26,8 @@ The error code of the batch operation.
 
 **Since:** 26.0.0
 
+<!--Device-BatchErrInfo-errCode: number--><!--Device-BatchErrInfo-errCode: number-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 ## index
@@ -38,6 +42,8 @@ The index in the source assets array.
 
 **Since:** 26.0.0
 
+<!--Device-BatchErrInfo-index: number--><!--Device-BatchErrInfo-index: number-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 ## message
@@ -51,6 +57,8 @@ The error message of the batch operation.
 **Type:** string
 
 **Since:** 26.0.0
+
+<!--Device-BatchErrInfo-message: string--><!--Device-BatchErrInfo-message: string-End-->
 
 **System capability:** SystemCapability.Security.Asset
 

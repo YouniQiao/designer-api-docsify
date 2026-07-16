@@ -22,6 +22,8 @@ Sets the system time. This API uses an asynchronous callback to return the resul
 
 **Required permissions:** ohos.permission.SET_TIME
 
+<!--Device-systemTime-function setTime(time: number, callback: AsyncCallback<void>): void--><!--Device-systemTime-function setTime(time: number, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **Parameters:**
@@ -29,7 +31,7 @@ Sets the system time. This API uses an asynchronous callback to return the resul
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | time | number | Yes | Timestamp to set, in milliseconds. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -76,6 +78,8 @@ Sets the system time. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.SET_TIME
 
+<!--Device-systemTime-function setTime(time: number): Promise<void>--><!--Device-systemTime-function setTime(time: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **Parameters:**
@@ -88,7 +92,7 @@ Sets the system time. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

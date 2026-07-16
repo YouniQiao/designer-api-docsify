@@ -1,5 +1,11 @@
 # getAllowedDistributeAbilityConnBundles
 
+## 导入模块
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+```
+
 ## getAllowedDistributeAbilityConnBundles
 
 ```TypeScript
@@ -14,6 +20,8 @@ function getAllowedDistributeAbilityConnBundles(admin: Want | null, serviceType:
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function getAllowedDistributeAbilityConnBundles(admin: Want | null, serviceType: ServiceType, accountId: number): Array<string>--><!--Device-applicationManager-function getAllowedDistributeAbilityConnBundles(admin: Want | null, serviceType: ServiceType, accountId: number): Array<string>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -21,14 +29,14 @@ function getAllowedDistributeAbilityConnBundles(admin: Want | null, serviceType:
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | Want \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| serviceType | ServiceType | 是 | 分布式能力类型。 |
+| serviceType | [ServiceType](../../apis-calendar-kit/arkts-apis/arkts-calendar-servicetype-e.md) | 是 | 分布式能力类型。 |
 | accountId | number | 是 | 用户ID，取值范围：大于等于0的整数。<br> accountId可以通过@ohos.account.osAccount中的[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2)等接口来获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 允许使用指定类型的分布式能力的应用的[唯一标识符](../../apis-ability-kit/arkts-apis/arkts-ability-signatureinfo-i.md)的数组。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 允许使用指定类型的分布式能力的应用的[唯一标识符](../../apis-ability-kit/arkts-apis/arkts-ability-signatureinfo-i.md)的数组。 |
 
 **错误码：**
 

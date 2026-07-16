@@ -12,13 +12,13 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function off(type: 'openDLPFile', listener?: Callback<AccessedDLPFileInfo>): void
 ```
 
-Unsubscribes from the DLP file open event. This API can be called only in non-DLP sandbox applications. After the
-API is successfully called, the application will no longer receive notifications for the DLP file open event.
+Unsubscribes from the DLP file open event. This API can be called only in non-DLP sandbox applications. After the API is successfully called, the application will no longer receive notifications for the DLP file open event.
 
-This API is usually called to release resources when the page is destroyed or the subscription is no longer
-needed.
+This API is usually called to release resources when the page is destroyed or the subscription is no longer needed.
 
 **Since:** 10
+
+<!--Device-dlpPermission-function off(type: 'openDLPFile', listener?: Callback<AccessedDLPFileInfo>): void--><!--Device-dlpPermission-function off(type: 'openDLPFile', listener?: Callback<AccessedDLPFileInfo>): void-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -26,8 +26,8 @@ needed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'openDLPFile' | Yes | Event type. It has a fixed value of **openDLPFile**, which indicates the DLP fileopen event. |
-| listener | Callback&lt;AccessedDLPFileInfo&gt; | No | Callback for the DLP file open event. The application willnot be notified when a DLP file is opened. By default, this parameter is left blank, which unregisters allcallbacks for the file open event. |
+| type | 'openDLPFile' | Yes | Event type. It has a fixed value of **openDLPFile**, which indicates the DLP file open event. |
+| listener | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AccessedDLPFileInfo> | No | Callback for the DLP file open event. The application will not be notified when a DLP file is opened. By default, this parameter is left blank, which unregisters all callbacks for the file open event. |
 
 **Error codes:**
 

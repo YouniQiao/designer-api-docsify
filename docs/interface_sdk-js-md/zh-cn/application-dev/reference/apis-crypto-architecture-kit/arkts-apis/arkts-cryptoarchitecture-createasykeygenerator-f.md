@@ -1,5 +1,11 @@
 # createAsyKeyGenerator
 
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+```
+
 ## createAsyKeyGenerator
 
 ```TypeScript
@@ -8,12 +14,13 @@ function createAsyKeyGenerator(algName: string): AsyKeyGenerator
 
 通过指定算法名称的字符串，获取相应的非对称密钥生成器实例。
 
-支持的规格详见
-[非对称密钥生成和转换规格](../../../../security/CryptoArchitectureKit/crypto-asym-key-generation-conversion-spec.md)。
+支持的规格详见[非对称密钥生成和转换规格](../../../../security/CryptoArchitectureKit/crypto-asym-key-generation-conversion-spec.md)。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cryptoFramework-function createAsyKeyGenerator(algName: string): AsyKeyGenerator--><!--Device-cryptoFramework-function createAsyKeyGenerator(algName: string): AsyKeyGenerator-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -29,7 +36,7 @@ function createAsyKeyGenerator(algName: string): AsyKeyGenerator
 
 | 类型 | 说明 |
 | --- | --- |
-| AsyKeyGenerator | 返回非对称密钥生成器。 |
+| [AsyKeyGenerator](arkts-cryptoarchitecture-asykeygenerator-i.md) | 返回非对称密钥生成器。 |
 
 **错误码：**
 

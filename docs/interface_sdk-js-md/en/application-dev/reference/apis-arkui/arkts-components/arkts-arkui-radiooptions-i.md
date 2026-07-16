@@ -4,6 +4,8 @@ Radio button information.
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface RadioOptions--><!--Device-unnamed-declare interface RadioOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## group
@@ -12,8 +14,7 @@ Radio button information.
 group: string
 ```
 
-Name of the group to which the radio button belongs. Only one radio button in a given group can be selected at a
-time.
+Name of the group to which the radio button belongs. Only one radio button in a given group can be selected at a time.
 
 **Type:** string
 
@@ -23,6 +24,8 @@ time.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-RadioOptions-group: string--><!--Device-RadioOptions-group: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## indicatorBuilder
@@ -31,9 +34,7 @@ time.
 indicatorBuilder?: CustomBuilder
 ```
 
-Custom component to indicate that the radio button is selected. This custom component is center aligned with the
-radio button. If this parameter is set to **undefined**, the value of **RadioIndicatorType.TICK** is used as the
-indicator type.
+Custom component to indicate that the radio button is selected. This custom component is center aligned with the radio button. If this parameter is set to **undefined**, the value of **RadioIndicatorType.TICK** is used as the indicator type.
 
 **Type:** CustomBuilder
 
@@ -44,6 +45,8 @@ indicator type.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-RadioOptions-indicatorBuilder?: CustomBuilder--><!--Device-RadioOptions-indicatorBuilder?: CustomBuilder-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,6 +68,8 @@ Indicator type of the radio button. If no value is specified, the value of **Rad
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-RadioOptions-indicatorType?: RadioIndicatorType--><!--Device-RadioOptions-indicatorType?: RadioIndicatorType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -82,6 +87,8 @@ Current value of the radio button.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-RadioOptions-value: string--><!--Device-RadioOptions-value: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

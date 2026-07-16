@@ -20,13 +20,15 @@ Obtain the scanned station list. If does't have the permission of ohos.permissio
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-wifiManager-function getScanInfoList(): Array<WifiScanInfo>--><!--Device-wifiManager-function getScanInfoList(): Array<WifiScanInfo>-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;WifiScanInfo&gt; | Returns information about scanned Wi-Fi hotspot if any. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<WifiScanInfo> | Returns information about scanned Wi-Fi hotspot if any. |
 
 **Error codes:**
 

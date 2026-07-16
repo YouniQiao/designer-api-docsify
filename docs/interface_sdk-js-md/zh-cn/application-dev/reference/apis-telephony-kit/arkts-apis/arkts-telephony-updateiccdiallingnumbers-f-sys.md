@@ -1,5 +1,11 @@
 # updateIccDiallingNumbers（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## updateIccDiallingNumbers
 
 ```TypeScript
@@ -12,6 +18,8 @@ Update dialing number information on SIM card.
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
+<!--Device-sim-function updateIccDiallingNumbers(slotId: int, type: ContactType, diallingNumbers: DiallingNumbersInfo, callback: AsyncCallback<void>): void--><!--Device-sim-function updateIccDiallingNumbers(slotId: int, type: ContactType, diallingNumbers: DiallingNumbersInfo, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -21,9 +29,9 @@ Update dialing number information on SIM card.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| type | ContactType | 是 | Indicates contact type. |
-| diallingNumbers | DiallingNumbersInfo | 是 | Indicates dialing number information. |
-| callback | AsyncCallback&lt;void&gt; | 是 | The callback of updateIccDiallingNumbers. |
+| type | [ContactType](arkts-telephony-contacttype-e-sys.md) | 是 | Indicates contact type. |
+| diallingNumbers | [DiallingNumbersInfo](arkts-telephony-diallingnumbersinfo-i-sys.md) | 是 | Indicates dialing number information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | The callback of updateIccDiallingNumbers. |
 
 **错误码：**
 
@@ -70,6 +78,8 @@ Update dialing number information on SIM card.
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
+<!--Device-sim-function updateIccDiallingNumbers(slotId: int, type: ContactType, diallingNumbers: DiallingNumbersInfo): Promise<void>--><!--Device-sim-function updateIccDiallingNumbers(slotId: int, type: ContactType, diallingNumbers: DiallingNumbersInfo): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -79,14 +89,14 @@ Update dialing number information on SIM card.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| type | ContactType | 是 | Indicates contact type. |
-| diallingNumbers | DiallingNumbersInfo | 是 | Indicates dialing number information. |
+| type | [ContactType](arkts-telephony-contacttype-e-sys.md) | 是 | Indicates contact type. |
+| diallingNumbers | [DiallingNumbersInfo](arkts-telephony-diallingnumbersinfo-i-sys.md) | 是 | Indicates dialing number information. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the updateIccDiallingNumbers. |
+| Promise<void> | The promise returned by the updateIccDiallingNumbers. |
 
 **错误码：**
 

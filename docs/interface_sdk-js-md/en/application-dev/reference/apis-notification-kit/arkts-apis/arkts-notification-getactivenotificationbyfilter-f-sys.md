@@ -12,12 +12,13 @@ import { notificationManager } from '@kit.NotificationKit';
 function getActiveNotificationByFilter(filter: NotificationFilter, callback: AsyncCallback<NotificationRequest>): void
 ```
 
-Obtains information about the common live view that matches the specified filter criteria. This API uses an
-asynchronous callback to return the result.
+Obtains information about the common live view that matches the specified filter criteria. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function getActiveNotificationByFilter(filter: NotificationFilter, callback: AsyncCallback<NotificationRequest>): void--><!--Device-notificationManager-function getActiveNotificationByFilter(filter: NotificationFilter, callback: AsyncCallback<NotificationRequest>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -27,8 +28,8 @@ asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | NotificationFilter | Yes | Filter criteria for querying the common live view. |
-| callback | AsyncCallback&lt;NotificationRequest&gt; | Yes | Callback used to return the result. |
+| filter | [NotificationFilter](arkts-notification-notificationfilter-i-sys.md) | Yes | Filter criteria for querying the common live view. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<NotificationRequest> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -74,12 +75,13 @@ notificationManager.getActiveNotificationByFilter(filter, getActiveNotificationB
 function getActiveNotificationByFilter(filter: NotificationFilter): Promise<NotificationRequest>
 ```
 
-Obtains information about the common live view that matches the specified filter criteria. This API uses a promise
-to return the result.
+Obtains information about the common live view that matches the specified filter criteria. This API uses a promise to return the result.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function getActiveNotificationByFilter(filter: NotificationFilter): Promise<NotificationRequest>--><!--Device-notificationManager-function getActiveNotificationByFilter(filter: NotificationFilter): Promise<NotificationRequest>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -89,13 +91,13 @@ to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | NotificationFilter | Yes | Filter criteria for querying the common live view. |
+| filter | [NotificationFilter](arkts-notification-notificationfilter-i-sys.md) | Yes | Filter criteria for querying the common live view. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NotificationRequest&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NotificationRequest> | Promise used to return the result. |
 
 **Error codes:**
 

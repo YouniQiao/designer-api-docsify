@@ -4,6 +4,8 @@ Defines a contact's postal address.
 
 **Since:** 7
 
+<!--Device-contact-class PostalAddress--><!--Device-contact-class PostalAddress-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Home address, the default value is **1**.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PostalAddress-static readonly ADDR_HOME: 1--><!--Device-PostalAddress-static readonly ADDR_HOME: 1-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## ADDR_OTHER
@@ -41,6 +45,8 @@ Other addresses, the default value is **3**.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PostalAddress-static readonly ADDR_OTHER: 3--><!--Device-PostalAddress-static readonly ADDR_OTHER: 3-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -58,6 +64,8 @@ Work address, the default value is **2**.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PostalAddress-static readonly ADDR_WORK: 2--><!--Device-PostalAddress-static readonly ADDR_WORK: 2-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## CUSTOM_LABEL
@@ -73,6 +81,8 @@ Custom mailbox type, the default value is **0**.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PostalAddress-static readonly CUSTOM_LABEL: 0--><!--Device-PostalAddress-static readonly CUSTOM_LABEL: 0-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -90,6 +100,8 @@ Invalid mailbox, the default value is **-1**.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PostalAddress-static readonly INVALID_LABEL_ID: -1--><!--Device-PostalAddress-static readonly INVALID_LABEL_ID: -1-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## city
@@ -105,6 +117,8 @@ City where the contact is located.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PostalAddress-city?: string--><!--Device-PostalAddress-city?: string-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -122,6 +136,8 @@ Country/Region where the contact is located.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PostalAddress-country?: string--><!--Device-PostalAddress-country?: string-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## labelId
@@ -137,6 +153,8 @@ Mailbox type.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PostalAddress-labelId?: number--><!--Device-PostalAddress-labelId?: number-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -154,6 +172,8 @@ Name of the mailbox type.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PostalAddress-labelName?: string--><!--Device-PostalAddress-labelName?: string-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## neighborhood
@@ -169,6 +189,8 @@ Neighbor of the contact.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PostalAddress-neighborhood?: string--><!--Device-PostalAddress-neighborhood?: string-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -186,6 +208,8 @@ Email of the contact.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PostalAddress-pobox?: string--><!--Device-PostalAddress-pobox?: string-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## postalAddress
@@ -201,6 +225,8 @@ Postal address of the contact.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PostalAddress-postalAddress: string--><!--Device-PostalAddress-postalAddress: string-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -218,6 +244,8 @@ Postal code of the region where the contact is located.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PostalAddress-postcode?: string--><!--Device-PostalAddress-postcode?: string-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## region
@@ -234,6 +262,8 @@ Area where the contact is located.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PostalAddress-region?: string--><!--Device-PostalAddress-region?: string-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## street
@@ -249,6 +279,8 @@ Street where the contact resides.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PostalAddress-street?: string--><!--Device-PostalAddress-street?: string-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 

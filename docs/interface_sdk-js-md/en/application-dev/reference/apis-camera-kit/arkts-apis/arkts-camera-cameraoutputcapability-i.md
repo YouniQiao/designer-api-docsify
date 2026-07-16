@@ -4,6 +4,8 @@ Describes the camera output capability.
 
 **Since:** 10
 
+<!--Device-camera-interface CameraOutputCapability--><!--Device-camera-interface CameraOutputCapability-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Supported photo profiles.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraOutputCapability-readonly photoProfiles: Array<Profile>--><!--Device-CameraOutputCapability-readonly photoProfiles: Array<Profile>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## previewProfiles
@@ -41,6 +45,8 @@ Supported preview profiles.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraOutputCapability-readonly previewProfiles: Array<Profile>--><!--Device-CameraOutputCapability-readonly previewProfiles: Array<Profile>-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -58,6 +64,8 @@ Supported metadata object types.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraOutputCapability-readonly supportedMetadataObjectTypes: Array<MetadataObjectType>--><!--Device-CameraOutputCapability-readonly supportedMetadataObjectTypes: Array<MetadataObjectType>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## videoProfiles
@@ -73,6 +81,8 @@ Supported video profiles.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraOutputCapability-readonly videoProfiles: Array<VideoProfile>--><!--Device-CameraOutputCapability-readonly videoProfiles: Array<VideoProfile>-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

@@ -4,6 +4,8 @@ Describes the sensor information.
 
 **Since:** 9
 
+<!--Device-sensor-interface Sensor--><!--Device-sensor-interface Sensor-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Device ID.
 
 **Since:** 19
 
+<!--Device-Sensor-deviceId?: int--><!--Device-Sensor-deviceId?: int-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## deviceName
@@ -37,6 +41,8 @@ Device name.
 **Type:** string
 
 **Since:** 19
+
+<!--Device-Sensor-deviceName?: string--><!--Device-Sensor-deviceName?: string-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -52,6 +58,8 @@ Firmware version of the sensor.
 
 **Since:** 9
 
+<!--Device-Sensor-firmwareVersion:string--><!--Device-Sensor-firmwareVersion:string-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## hardwareVersion
@@ -66,6 +74,8 @@ Hardware version of the sensor.
 
 **Since:** 9
 
+<!--Device-Sensor-hardwareVersion:string--><!--Device-Sensor-hardwareVersion:string-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## isLocalSensor
@@ -74,12 +84,13 @@ Hardware version of the sensor.
 isLocalSensor?: boolean
 ```
 
-Whether the sensor is a local sensor. The value **true** indicates a local sensor, and the value **false**
-indicates the opposite.
+Whether the sensor is a local sensor. The value **true** indicates a local sensor, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 19
+
+<!--Device-Sensor-isLocalSensor?: boolean--><!--Device-Sensor-isLocalSensor?: boolean-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -89,12 +100,13 @@ indicates the opposite.
 isMockSensor?: boolean
 ```
 
-Whether the sensor is a mock sensor. The value **true** indicates a mock sensor, and the value **false**
-indicates the opposite.
+Whether the sensor is a mock sensor. The value **true** indicates a mock sensor, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 23
+
+<!--Device-Sensor-isMockSensor?: boolean--><!--Device-Sensor-isMockSensor?: boolean-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -110,6 +122,8 @@ Maximum measurement range of the sensor.
 
 **Since:** 9
 
+<!--Device-Sensor-maxRange:double--><!--Device-Sensor-maxRange:double-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## maxSamplePeriod
@@ -123,6 +137,8 @@ Maximum sampling period.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-Sensor-maxSamplePeriod:long--><!--Device-Sensor-maxSamplePeriod:long-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -138,6 +154,8 @@ Minimum sampling period.
 
 **Since:** 9
 
+<!--Device-Sensor-minSamplePeriod:long--><!--Device-Sensor-minSamplePeriod:long-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## power
@@ -151,6 +169,8 @@ Estimated sensor power, in mA.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-Sensor-power:double--><!--Device-Sensor-power:double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -166,6 +186,8 @@ Precision of the sensor.
 
 **Since:** 9
 
+<!--Device-Sensor-precision:double--><!--Device-Sensor-precision:double-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## sensorId
@@ -179,6 +201,8 @@ Sensor type ID.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-Sensor-sensorId:int--><!--Device-Sensor-sensorId:int-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -194,6 +218,8 @@ Sensor index.
 
 **Since:** 19
 
+<!--Device-Sensor-sensorIndex?: int--><!--Device-Sensor-sensorIndex?: int-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## sensorName
@@ -208,6 +234,8 @@ Sensor name.
 
 **Since:** 9
 
+<!--Device-Sensor-sensorName:string--><!--Device-Sensor-sensorName:string-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## vendorName
@@ -221,6 +249,8 @@ Vendor of the sensor.
 **Type:** string
 
 **Since:** 9
+
+<!--Device-Sensor-vendorName:string--><!--Device-Sensor-vendorName:string-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 

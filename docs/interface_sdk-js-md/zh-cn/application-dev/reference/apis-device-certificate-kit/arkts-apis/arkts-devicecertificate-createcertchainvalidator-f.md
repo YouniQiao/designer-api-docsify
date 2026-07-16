@@ -1,5 +1,11 @@
 # createCertChainValidator
 
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
+
 ## createCertChainValidator
 
 ```TypeScript
@@ -10,7 +16,9 @@ function createCertChainValidator(algorithm: string): CertChainValidator
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cert-function createCertChainValidator(algorithm: string): CertChainValidator--><!--Device-cert-function createCertChainValidator(algorithm: string): CertChainValidator-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -24,7 +32,7 @@ function createCertChainValidator(algorithm: string): CertChainValidator
 
 | 类型 | 说明 |
 | --- | --- |
-| CertChainValidator | 表示证书链校验器对象。 |
+| [CertChainValidator](arkts-devicecertificate-certchainvalidator-i.md) | 表示证书链校验器对象。 |
 
 **错误码：**
 

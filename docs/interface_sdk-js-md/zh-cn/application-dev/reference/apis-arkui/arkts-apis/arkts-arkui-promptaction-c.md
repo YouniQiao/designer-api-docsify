@@ -4,7 +4,15 @@ class PromptAction
 
 **起始版本：** 10
 
+<!--Device-unnamed-export class PromptAction--><!--Device-unnamed-export class PromptAction-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
+```
 
 ## closeCustomDialog
 
@@ -18,7 +26,9 @@ Closes a custom dialog box corresponding to dialogContent. This API uses a promi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PromptAction-closeCustomDialog<T extends Object>(dialogContent: ComponentContent<T>): Promise<void>--><!--Device-PromptAction-closeCustomDialog<T extends Object>(dialogContent: ComponentContent<T>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,13 +36,13 @@ Closes a custom dialog box corresponding to dialogContent. This API uses a promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dialogContent | ComponentContent&lt;T&gt; | 是 | Content of the custom dialog box. |
+| dialogContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)<T> | 是 | Content of the custom dialog box. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise<void> | Promise that returns no value. |
 
 **错误码：**
 
@@ -54,7 +64,9 @@ Close the custom dialog.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PromptAction-closeCustomDialog(dialogId: number): void--><!--Device-PromptAction-closeCustomDialog(dialogId: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -83,7 +95,9 @@ Close menu with frameNode.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PromptAction-closeMenu<T extends Object>(content: ComponentContent<T>): Promise<void>--><!--Device-PromptAction-closeMenu<T extends Object>(content: ComponentContent<T>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -91,13 +105,13 @@ Close menu with frameNode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | ComponentContent&lt;T&gt; | 是 | Content displayed in the menu. |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)<T> | 是 | Content displayed in the menu. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise<void> | Promise that returns no value. |
 
 **错误码：**
 
@@ -119,7 +133,9 @@ Close popup with frameNode.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PromptAction-closePopup<T extends Object>(content: ComponentContent<T>): Promise<void>--><!--Device-PromptAction-closePopup<T extends Object>(content: ComponentContent<T>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -127,13 +143,13 @@ Close popup with frameNode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | ComponentContent&lt;T&gt; | 是 | Content displayed in the popup. |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)<T> | 是 | Content displayed in the popup. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise<void> | Promise that returns no value. |
 
 **错误码：**
 
@@ -155,7 +171,9 @@ Close the notification text.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PromptAction-closeToast(toastId: number): void--><!--Device-PromptAction-closeToast(toastId: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -185,7 +203,9 @@ Get order value of bottom dialog.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PromptAction-getBottomOrder(): LevelOrder--><!--Device-PromptAction-getBottomOrder(): LevelOrder-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -193,7 +213,7 @@ Get order value of bottom dialog.
 
 | 类型 | 说明 |
 | --- | --- |
-| LevelOrder | Order of the topmost dialog box. |
+| [LevelOrder](arkts-arkui-levelorder-t.md) | Order of the topmost dialog box. |
 
 ## getTopOrder
 
@@ -207,7 +227,9 @@ Get order value of top dialog.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PromptAction-getTopOrder(): LevelOrder--><!--Device-PromptAction-getTopOrder(): LevelOrder-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -215,7 +237,7 @@ Get order value of top dialog.
 
 | 类型 | 说明 |
 | --- | --- |
-| LevelOrder | Order of the topmost dialog box. |
+| [LevelOrder](arkts-arkui-levelorder-t.md) | Order of the topmost dialog box. |
 
 ## openCustomDialog
 
@@ -229,7 +251,9 @@ openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?:
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PromptAction-openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?: promptAction.BaseDialogOptions): Promise<void>--><!--Device-PromptAction-openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?: promptAction.BaseDialogOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -237,14 +261,14 @@ openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dialogContent | ComponentContent&lt;T&gt; | 是 | 自定义对话框的内容。 |
+| dialogContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)<T> | 是 | 自定义对话框的内容。 |
 | options | promptAction.BaseDialogOptions | 否 | 选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 函数返回的promise。 |
+| Promise<void> | 函数返回的promise。 |
 
 **错误码：**
 
@@ -262,14 +286,15 @@ openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>
 
 打开自定义对话框。
 
-isModal = true和showInSubWindow = true不能同时使用。
-* @param { promptAction.CustomDialogOptions } options - 选项。 * @returns { Promise<number> } 返回将由closeCustomDialog使用的对话框ID。
+isModal = true和showInSubWindow = true不能同时使用。* @param { promptAction.CustomDialogOptions } options - 选项。 * @returns { Promise<number> } 返回将由closeCustomDialog使用的对话框ID。
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PromptAction-openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>--><!--Device-PromptAction-openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -277,13 +302,13 @@ isModal = true和showInSubWindow = true不能同时使用。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | promptAction.CustomDialogOptions | 是 | 选项。 *  |
+| options | promptAction.CustomDialogOptions | 是 | 选项。 * |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | 返回将由closeCustomDialog使用的对话框ID。 |
+| Promise<number> | 返回将由closeCustomDialog使用的对话框ID。 |
 
 **错误码：**
 
@@ -307,7 +332,11 @@ isModal = true和showInSubWindow = true不能同时使用。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PromptAction-openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent<T>, controller: promptAction.DialogController,
+    options?: promptAction.BaseDialogOptions): Promise<void>--><!--Device-PromptAction-openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent<T>, controller: promptAction.DialogController,
+    options?: promptAction.BaseDialogOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -315,7 +344,7 @@ isModal = true和showInSubWindow = true不能同时使用。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dialogContent | ComponentContent&lt;T&gt; | 是 | 自定义对话框的内容。 |
+| dialogContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)<T> | 是 | 自定义对话框的内容。 |
 | controller | promptAction.DialogController | 是 | 对话框控制器。 |
 | options | promptAction.BaseDialogOptions | 否 | 选项。 |
 
@@ -323,7 +352,7 @@ isModal = true和showInSubWindow = true不能同时使用。
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 函数返回的promise。 |
+| Promise<void> | 函数返回的promise。 |
 
 **错误码：**
 
@@ -345,7 +374,9 @@ Open menu with frameNode.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PromptAction-openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: MenuOptions): Promise<void>--><!--Device-PromptAction-openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: MenuOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -353,15 +384,15 @@ Open menu with frameNode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | ComponentContent&lt;T&gt; | 是 | Content displayed in the menu. |
-| target | TargetInfo | 是 | Information about the target component to bind. |
-| options | MenuOptions | 否 | Style of the menu.<br>**NOTE**<br>The **title** property is not effective.<br>The **preview** parameter supports only the **MenuPreviewMode** type. |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)<T> | 是 | Content displayed in the menu. |
+| target | [TargetInfo](arkts-arkui-targetinfo-i.md) | 是 | Information about the target component to bind. |
+| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | 否 | Style of the menu.<br>**NOTE**<br>The **title** property is not effective.<br>The **preview** parameter supports only the **MenuPreviewMode** type. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise<void> | Promise that returns no value. |
 
 **错误码：**
 
@@ -385,7 +416,9 @@ Open popup with frameNode.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PromptAction-openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: PopupCommonOptions): Promise<void>--><!--Device-PromptAction-openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: PopupCommonOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -393,15 +426,15 @@ Open popup with frameNode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | ComponentContent&lt;T&gt; | 是 | Content displayed in the popup. |
-| target | TargetInfo | 是 | Information about the target component to bind. |
-| options | PopupCommonOptions | 否 | Style of the popup. |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)<T> | 是 | Content displayed in the popup. |
+| target | [TargetInfo](arkts-arkui-targetinfo-i.md) | 是 | Information about the target component to bind. |
+| options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | 否 | Style of the popup. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise<void> | Promise that returns no value. |
 
 **错误码：**
 
@@ -425,7 +458,9 @@ Displays the notification text.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PromptAction-openToast(options: promptAction.ShowToastOptions): Promise<number>--><!--Device-PromptAction-openToast(options: promptAction.ShowToastOptions): Promise<number>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -439,7 +474,7 @@ Displays the notification text.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise that returns the toast ID for use with **closeToast**. |
+| Promise<number> | Promise that returns the toast ID for use with **closeToast**. |
 
 **错误码：**
 
@@ -463,7 +498,11 @@ isModal = true和showInSubWindow = true不能同时使用。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PromptAction-presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: promptAction.DialogController,
+    options?: promptAction.DialogOptions): Promise<number>--><!--Device-PromptAction-presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: promptAction.DialogController,
+    options?: promptAction.DialogOptions): Promise<number>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -473,13 +512,13 @@ isModal = true和showInSubWindow = true不能同时使用。
 | --- | --- | --- | --- |
 | builder | CustomBuilder \| CustomBuilderWithId | 是 | 对话框生成器。 |
 | controller | promptAction.DialogController | 否 | Controller of the custom dialog box.<br>**起始版本：** 26.0.0 |
-| options | promptAction.DialogOptions | 否 | Style of the custom dialog box.<br>Note: If both [isModal](arkts-arkui-basedialogoptions-i.md)and [showInSubWindow](arkts-arkui-basedialogoptions-i.md) in **BaseDialogOptions**are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayedwithout mask in the subwindow.<br>**起始版本：** 26.0.0 |
+| options | promptAction.DialogOptions | 否 | Style of the custom dialog box.<br>Note: If both [isModal](arkts-arkui-basedialogoptions-i.md)and [showInSubWindow](arkts-arkui-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow.<br>**起始版本：** 26.0.0 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise Promise used to return the custom dialog box ID. |
+| Promise<number> | Promise Promise used to return the custom dialog box ID. |
 
 **错误码：**
 
@@ -501,6 +540,8 @@ Shows an action menu in the given settings. This API uses an asynchronous callba
 **废弃版本：** 11
 
 **替代接口：** [showActionMenu](arkts-arkui-promptaction-c.md#showactionmenu-1)
+
+<!--Device-PromptAction-showActionMenu(options: promptAction.ActionMenuOptions, callback: promptAction.ActionMenuSuccessResponse): void--><!--Device-PromptAction-showActionMenu(options: promptAction.ActionMenuOptions, callback: promptAction.ActionMenuSuccessResponse): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -530,7 +571,9 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PromptAction-showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<promptAction.ActionMenuSuccessResponse>): void--><!--Device-PromptAction-showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<promptAction.ActionMenuSuccessResponse>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -539,7 +582,7 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | promptAction.ActionMenuOptions | 是 | 操作菜单选项。 |
-| callback | AsyncCallback&lt;promptAction.ActionMenuSuccessResponse&gt; | 是 | 用于返回操作的回调菜单响应结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<promptAction.ActionMenuSuccessResponse> | 是 | 用于返回操作的回调菜单响应结果。 |
 
 **错误码：**
 
@@ -560,7 +603,9 @@ showActionMenu(options: promptAction.ActionMenuOptions): Promise<promptAction.Ac
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PromptAction-showActionMenu(options: promptAction.ActionMenuOptions): Promise<promptAction.ActionMenuSuccessResponse>--><!--Device-PromptAction-showActionMenu(options: promptAction.ActionMenuOptions): Promise<promptAction.ActionMenuSuccessResponse>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -574,7 +619,7 @@ showActionMenu(options: promptAction.ActionMenuOptions): Promise<promptAction.Ac
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;promptAction.ActionMenuSuccessResponse&gt; | callback - Promise that returns the action menu response. |
+| Promise<promptAction.ActionMenuSuccessResponse> | callback - Promise that returns the action menu response. |
 
 **错误码：**
 
@@ -595,7 +640,9 @@ showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<prom
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PromptAction-showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<promptAction.ShowDialogSuccessResponse>): void--><!--Device-PromptAction-showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<promptAction.ShowDialogSuccessResponse>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -604,7 +651,7 @@ showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<prom
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | promptAction.ShowDialogOptions | 是 | 选项。 |
-| callback | AsyncCallback&lt;promptAction.ShowDialogSuccessResponse&gt; | 是 | showDialog的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<promptAction.ShowDialogSuccessResponse> | 是 | showDialog的回调。 |
 
 **错误码：**
 
@@ -625,7 +672,9 @@ showDialog(options: promptAction.ShowDialogOptions): Promise<promptAction.ShowDi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PromptAction-showDialog(options: promptAction.ShowDialogOptions): Promise<promptAction.ShowDialogSuccessResponse>--><!--Device-PromptAction-showDialog(options: promptAction.ShowDialogOptions): Promise<promptAction.ShowDialogSuccessResponse>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -639,7 +688,7 @@ showDialog(options: promptAction.ShowDialogOptions): Promise<promptAction.ShowDi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;promptAction.ShowDialogSuccessResponse&gt; | Promise that returns the dialog box response. |
+| Promise<promptAction.ShowDialogSuccessResponse> | Promise that returns the dialog box response. |
 
 **错误码：**
 
@@ -660,7 +709,9 @@ Displays the notification text.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PromptAction-showToast(options: promptAction.ShowToastOptions): void--><!--Device-PromptAction-showToast(options: promptAction.ShowToastOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -689,7 +740,9 @@ Update the custom dialog with frameNode.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PromptAction-updateCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options: promptAction.BaseDialogOptions): Promise<void>--><!--Device-PromptAction-updateCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options: promptAction.BaseDialogOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -697,14 +750,14 @@ Update the custom dialog with frameNode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dialogContent | ComponentContent&lt;T&gt; | 是 | Content of the custom dialog box. |
+| dialogContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)<T> | 是 | Content of the custom dialog box. |
 | options | promptAction.BaseDialogOptions | 是 | Dialog box style. Currently,only **alignment**, **offset**, **autoCancel**, and **maskColor** can be updated. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise<void> | Promise that returns no value. |
 
 **错误码：**
 
@@ -726,7 +779,9 @@ Update menu with frameNode.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PromptAction-updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions, partialUpdate?: boolean): Promise<void>--><!--Device-PromptAction-updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions, partialUpdate?: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -734,15 +789,15 @@ Update menu with frameNode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | ComponentContent&lt;T&gt; | 是 | Content displayed in the menu. |
-| options | MenuOptions | 是 | Style of the menu.<br>**NOTE**<br>1. Updating for the following is not supported:**showInSubWindow**, **preview**, **previewAnimationOptions**, **transition**, **onAppear**, **aboutToAppear**,**onDisappear**, **aboutToDisappear**, **onWillAppear**, **onDidAppear**, **onWillDisappear**, and**onDidDisappear**.<br>2. The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md).However, this API does not support mask presence toggling (that is, switching the mask from non-existent toexistent or vice versa) by setting a boolean value. |
-| partialUpdate | boolean | 否 | Whether to update the menu in incremental mode. Default value: **false**.<br>**NOTE**<br>1. **true**: incremental update, where the specified properties in **options** are updated, andother properties stay at their current value.<br>2. **false**: full update, where all properties except thosespecified in **options** are restored to default values. |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)<T> | 是 | Content displayed in the menu. |
+| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | 是 | Style of the menu.<br>**NOTE**<br>1. Updating for the following is not supported:**showInSubWindow**, **preview**, **previewAnimationOptions**, **transition**, **onAppear**, **aboutToAppear**,**onDisappear**, **aboutToDisappear**, **onWillAppear**, **onDidAppear**, **onWillDisappear**, and **onDidDisappear**.<br>2. The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md).However, this API does not support mask presence toggling (that is, switching the mask from non-existent to existent or vice versa) by setting a boolean value. |
+| partialUpdate | boolean | 否 | Whether to update the menu in incremental mode. Default value: **false**.<br>**NOTE**<br>1. **true**: incremental update, where the specified properties in **options** are updated, and other properties stay at their current value.<br>2. **false**: full update, where all properties except those specified in **options** are restored to default values. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise<void> | Promise that returns no value. |
 
 **错误码：**
 
@@ -764,7 +819,9 @@ Update popup with frameNode.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PromptAction-updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommonOptions, partialUpdate?: boolean): Promise<void>--><!--Device-PromptAction-updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommonOptions, partialUpdate?: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -772,15 +829,15 @@ Update popup with frameNode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | ComponentContent&lt;T&gt; | 是 | Content displayed in the popup. |
-| options | PopupCommonOptions | 是 | Style of the popup.<br>**NOTE**<br>Updating the following properties is not supported: **showInSubWindow**, **focusable**, **onStateChange**,**onWillDismiss**, and **transition**. |
-| partialUpdate | boolean | 否 | Whether to update the popup in incremental mode.<br>Default value: **false**<br>**NOTE**<br>**true**: Incremental update. Only specified attributes in **options** are updated, and the other attributesretain their current values. If the attribute value passed in **options** is invalid or **undefined**,the attribute is not updated.<br>**false**: Full update. Specified attributes in **options** are updated,and the other attributes are restored to their default values. |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)<T> | 是 | Content displayed in the popup. |
+| options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | 是 | Style of the popup.<br>**NOTE**<br>Updating the following properties is not supported: **showInSubWindow**, **focusable**, **onStateChange**,**onWillDismiss**, and **transition**. |
+| partialUpdate | boolean | 否 | Whether to update the popup in incremental mode.<br>Default value: **false**<br>**NOTE**<br>**true**: Incremental update. Only specified attributes in **options** are updated, and the other attributes retain their current values. If the attribute value passed in **options** is invalid or **undefined**,the attribute is not updated.<br>**false**: Full update. Specified attributes in **options** are updated,and the other attributes are restored to their default values. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise<void> | Promise that returns no value. |
 
 **错误码：**
 

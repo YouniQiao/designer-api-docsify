@@ -4,6 +4,8 @@ Declare component SwipeRefresher
 
 **Since:** 20
 
+<!--Device-unnamed-export declare struct SwipeRefresher--><!--Device-unnamed-export declare struct SwipeRefresher-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Sets the content when loading.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SwipeRefresher-@Prop content?: ResourceStr--><!--Device-SwipeRefresher-@Prop content?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## isLoading
@@ -38,8 +42,7 @@ Sets the content when loading.
 @Prop isLoading: boolean
 ```
 
-Whether the component is loading.
-type { boolean }
+Whether the component is loading.type { boolean }
 
 **Type:** boolean
 
@@ -50,6 +53,8 @@ type { boolean }
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SwipeRefresher-@Prop isLoading: boolean--><!--Device-SwipeRefresher-@Prop isLoading: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

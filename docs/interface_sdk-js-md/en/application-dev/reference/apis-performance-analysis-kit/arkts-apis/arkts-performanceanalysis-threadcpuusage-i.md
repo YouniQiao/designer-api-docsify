@@ -4,6 +4,8 @@ Describes the CPU usage of a thread.
 
 **Since:** 12
 
+<!--Device-hidebug-interface ThreadCpuUsage--><!--Device-hidebug-interface ThreadCpuUsage-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## Modules to Import
@@ -24,6 +26,8 @@ CPU usage of the thread.
 
 **Since:** 12
 
+<!--Device-ThreadCpuUsage-cpuUsage: double--><!--Device-ThreadCpuUsage-cpuUsage: double-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## threadId
@@ -37,6 +41,8 @@ Thread ID.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-ThreadCpuUsage-threadId: long--><!--Device-ThreadCpuUsage-threadId: long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 

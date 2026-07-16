@@ -20,6 +20,8 @@ Register session destroy event
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-avMusicTemplate-function onAVMusicTemplateDestroy(callback: Callback<AVMusicTemplateDescriptor>): void--><!--Device-avMusicTemplate-function onAVMusicTemplateDestroy(callback: Callback<AVMusicTemplateDescriptor>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Register session destroy event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AVMusicTemplateDescriptor&gt; | Yes | Used to handle 'sessionDestroy' command |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AVMusicTemplateDescriptor> | Yes | Used to handle 'sessionDestroy' command |
 
 **Error codes:**
 
@@ -36,5 +38,5 @@ Register session destroy event
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verify failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onAVMusicTemplateDestroycan not work correctly due to limited device capabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function onAVMusicTemplateDestroy can not work correctly due to limited device capabilities. |
 

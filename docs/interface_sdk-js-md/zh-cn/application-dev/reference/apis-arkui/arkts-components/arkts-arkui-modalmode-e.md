@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare enum ModalMode--><!--Device-unnamed-declare enum ModalMode-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## AUTO
@@ -18,7 +20,9 @@ AUTO = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ModalMode-AUTO = 0--><!--Device-ModalMode-AUTO = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,7 +38,9 @@ NONE = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ModalMode-NONE = 1--><!--Device-ModalMode-NONE = 1-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,7 +56,9 @@ TARGET_WINDOW = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ModalMode-TARGET_WINDOW = 2--><!--Device-ModalMode-TARGET_WINDOW = 2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

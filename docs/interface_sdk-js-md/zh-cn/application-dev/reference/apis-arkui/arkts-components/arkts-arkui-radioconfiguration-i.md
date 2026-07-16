@@ -6,6 +6,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface RadioConfiguration extends CommonConfiguration<RadioConfiguration>--><!--Device-unnamed-declare interface RadioConfiguration extends CommonConfiguration<RadioConfiguration>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## checked
@@ -26,7 +28,9 @@ checked: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RadioConfiguration-checked: boolean--><!--Device-RadioConfiguration-checked: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,7 +50,9 @@ triggerChange: Callback<boolean>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RadioConfiguration-triggerChange: Callback<boolean>--><!--Device-RadioConfiguration-triggerChange: Callback<boolean>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,7 +70,9 @@ value: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RadioConfiguration-value: string--><!--Device-RadioConfiguration-value: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

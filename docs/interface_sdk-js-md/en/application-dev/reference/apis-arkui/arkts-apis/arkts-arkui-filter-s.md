@@ -4,6 +4,8 @@ Declare Filter.The Filter is used in scenarios where multi-dimensional filtering
 
 **Since:** 22
 
+<!--Device-unnamed-export declare struct Filter--><!--Device-unnamed-export declare struct Filter-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,6 +32,8 @@ FilterParams, Additional filter item parameter. The filter item name is displaye
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Filter-@Prop additionFilters?: FilterParams--><!--Device-Filter-@Prop additionFilters?: FilterParams-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## container
@@ -49,6 +53,8 @@ Container in the user-defined filtering result display area.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-Filter-@BuilderParam container: () => void--><!--Device-Filter-@BuilderParam container: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,6 +76,8 @@ FilterType, Filter display style type.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Filter-@Prop filterType?: FilterType--><!--Device-Filter-@Prop filterType?: FilterType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## multiFilters
@@ -90,6 +98,8 @@ Multi-dimensional filtering parameters.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Filter-@Prop multiFilters: Array<FilterParams>--><!--Device-Filter-@Prop multiFilters: Array<FilterParams>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onFilterChanged
@@ -107,6 +117,8 @@ FilterParams, Callback method after a user clicks a filter item.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-Filter-onFilterChanged: (filterResults: Array<FilterResult>) => void--><!--Device-Filter-onFilterChanged: (filterResults: Array<FilterResult>) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

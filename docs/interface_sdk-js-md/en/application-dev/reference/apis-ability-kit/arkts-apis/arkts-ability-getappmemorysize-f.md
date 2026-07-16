@@ -12,12 +12,13 @@ import { appManager } from '@kit.AbilityKit';
 function getAppMemorySize(): Promise<number>
 ```
 
-Obtains the maximum memory (RAM allocation) available to the current application. This API uses a promise to return
-the result.
+Obtains the maximum memory (RAM allocation) available to the current application. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-appManager-function getAppMemorySize(): Promise<int>--><!--Device-appManager-function getAppMemorySize(): Promise<int>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -25,7 +26,7 @@ the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the maximum memory (RAM allocation) size, in MB. You can perform errorprocessing or other custom processing based on the size. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the maximum memory (RAM allocation) size, in MB. You can perform error processing or other custom processing based on the size. |
 
 **Error codes:**
 
@@ -54,12 +55,13 @@ appManager.getAppMemorySize().then((data) => {
 function getAppMemorySize(callback: AsyncCallback<number>): void
 ```
 
-Obtains the maximum memory (RAM allocation) available to the current application. This API uses an asynchronous
-callback to return the result.
+Obtains the maximum memory (RAM allocation) available to the current application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-appManager-function getAppMemorySize(callback: AsyncCallback<int>): void--><!--Device-appManager-function getAppMemorySize(callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -67,7 +69,7 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is**undefined** and **data** is the maximum memory (RAM allocation) available to the current application. Otherwise,**err** is an error object. You can perform error handling or other custom processing based on the return value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the maximum memory (RAM allocation) available to the current application. Otherwise,**err** is an error object. You can perform error handling or other custom processing based on the return value. |
 
 **Error codes:**
 

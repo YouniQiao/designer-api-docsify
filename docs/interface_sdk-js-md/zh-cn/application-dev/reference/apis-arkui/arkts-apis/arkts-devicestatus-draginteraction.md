@@ -2,15 +2,23 @@
 
 拖拽功能模块，提供注册和取消拖拽状态监听的能力。
 
-> **说明：**
->
+> **说明：**  
+>  
 > - 本模块接口均为系统接口。
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace dragInteraction--><!--Device-unnamed-declare namespace dragInteraction-End-->
+
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Drag
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { dragInteraction } from '@kit.ArkUI';
+```
 
 ## 汇总
 

@@ -4,6 +4,8 @@ Defines the xcomponent options.
 
 **Since:** 20
 
+<!--Device-unnamed-declare interface XComponentOptions--><!--Device-unnamed-declare interface XComponentOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## screenId
@@ -19,6 +21,8 @@ Identifier of a screen.
 **Since:** 17
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-XComponentOptions-screenId?: number--><!--Device-XComponentOptions-screenId?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

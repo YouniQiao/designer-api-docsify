@@ -12,9 +12,7 @@ import { applicationManager } from '@kit.MDMKit';
 function setAbilityDisabled(admin: Want, bundleName: string, accountId: number, abilityName: string, isDisabled: boolean): void
 ```
 
-Sets whether to disable the Ability component of a specified application (system application or third-party
-application). Currently, only the UIAbility type is supported. After the UIAbility type is disabled, the UI of the
-Ability component cannot be started.
+Sets whether to disable the Ability component of a specified application (system application or third-party application). Currently, only the UIAbility type is supported. After the UIAbility type is disabled, the UI of the Ability component cannot be started.
 
 **Since:** 23
 
@@ -22,17 +20,19 @@ Ability component cannot be started.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function setAbilityDisabled(admin: Want, bundleName: string, accountId: number, abilityName: string, isDisabled: boolean): void--><!--Device-applicationManager-function setAbilityDisabled(admin: Want, bundleName: string, accountId: number, abilityName: string, isDisabled: boolean): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | bundleName | string | Yes | App bundle name. |
 | accountId | number | Yes | Account ID. The value is an integer greater than or equal to 0.<br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2)of @ohos.account.osAccount to obtain the ID. |
-| abilityName | string | Yes | Name of the ability to be disabled or enabled. Currently, only UIAbility issupported. |
-| isDisabled | boolean | Yes | Whether to disable the ability. **true**: Disable the ability. **false**: Enablethe ability. |
+| abilityName | string | Yes | Name of the ability to be disabled or enabled. Currently, only UIAbility is supported. |
+| isDisabled | boolean | Yes | Whether to disable the ability. **true**: Disable the ability. **false**: Enable the ability. |
 
 **Error codes:**
 

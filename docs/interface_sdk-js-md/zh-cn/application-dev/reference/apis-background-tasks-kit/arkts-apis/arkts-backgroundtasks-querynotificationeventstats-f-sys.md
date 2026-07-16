@@ -1,5 +1,11 @@
 # queryNotificationEventStats（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+```
+
 ## queryNotificationEventStats
 
 ```TypeScript
@@ -16,6 +22,16 @@ function queryNotificationEventStats(
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryNotificationEventStats(
+    begin: long,
+    end: long,
+    callback: AsyncCallback<Array<DeviceEventStats>>
+  ): void--><!--Device-usageStatistics-function queryNotificationEventStats(
+    begin: long,
+    end: long,
+    callback: AsyncCallback<Array<DeviceEventStats>>
+  ): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -26,7 +42,7 @@ function queryNotificationEventStats(
 | --- | --- | --- | --- |
 | begin | number | 是 | 起始时间，单位：ms。 |
 | end | number | 是 | 结束时间，单位：ms。 |
-| callback | AsyncCallback&lt;Array&lt;DeviceEventStats&gt;&gt; | 是 | 回调函数。当查询成功，err为undefined，data为指定起始和结束时间段内，所有应用的通知次数；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<DeviceEventStats>> | 是 | 回调函数。当查询成功，err为undefined，data为指定起始和结束时间段内，所有应用的通知次数；否则为错误对象。 |
 
 **错误码：**
 
@@ -73,6 +89,8 @@ function queryNotificationEventStats(begin: number, end: number): Promise<Array<
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryNotificationEventStats(begin: long, end: long): Promise<Array<DeviceEventStats>>--><!--Device-usageStatistics-function queryNotificationEventStats(begin: long, end: long): Promise<Array<DeviceEventStats>>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -88,7 +106,7 @@ function queryNotificationEventStats(begin: number, end: number): Promise<Array<
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;DeviceEventStats&gt;&gt; | Promise对象。返回指定起始和结束时间段内，所有应用的通知次数。 |
+| Promise<Array<DeviceEventStats>> | Promise对象。返回指定起始和结束时间段内，所有应用的通知次数。 |
 
 **错误码：**
 

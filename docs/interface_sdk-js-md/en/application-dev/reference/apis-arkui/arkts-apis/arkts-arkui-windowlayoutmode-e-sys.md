@@ -6,6 +6,8 @@ Enumerates the window layout modes.
 
 **Deprecated since:** 26.0.0
 
+<!--Device-window-enum WindowLayoutMode--><!--Device-window-enum WindowLayoutMode-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -22,6 +24,8 @@ Cascade mode. In this mode, freeform windows are stacked with Z-order arrangemen
 
 **Deprecated since:** 26.0.0
 
+<!--Device-WindowLayoutMode-WINDOW_LAYOUT_MODE_CASCADE = 0--><!--Device-WindowLayoutMode-WINDOW_LAYOUT_MODE_CASCADE = 0-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -37,6 +41,8 @@ Tile mode. In this mode, newly opened application windows appear on the rightmos
 **Since:** 9
 
 **Deprecated since:** 26.0.0
+
+<!--Device-WindowLayoutMode-WINDOW_LAYOUT_MODE_TILE = 1--><!--Device-WindowLayoutMode-WINDOW_LAYOUT_MODE_TILE = 1-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

@@ -1,5 +1,11 @@
 # deactivate（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { cooperate } from '@kit.DistributedServiceKit';
+```
+
 ## deactivate
 
 ```TypeScript
@@ -14,6 +20,8 @@ function deactivate(isUnchained: boolean, callback: AsyncCallback<void>): void
 
 **替代接口：** deactivateCooperate(isUnchained:
 
+<!--Device-cooperate-function deactivate(isUnchained: boolean, callback: AsyncCallback<void>): void--><!--Device-cooperate-function deactivate(isUnchained: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **系统接口：** 此接口为系统接口。
@@ -23,7 +31,7 @@ function deactivate(isUnchained: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isUnchained | boolean | 是 | 是否关闭跨设备链路。<br> true表示关闭跨设备链路，false表示不关闭。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，键鼠穿越停止成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，键鼠穿越停止成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -66,6 +74,8 @@ function deactivate(isUnchained: boolean): Promise<void>
 
 **替代接口：** deactivateCooperate(isUnchained:
 
+<!--Device-cooperate-function deactivate(isUnchained: boolean): Promise<void>--><!--Device-cooperate-function deactivate(isUnchained: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **系统接口：** 此接口为系统接口。
@@ -80,7 +90,7 @@ function deactivate(isUnchained: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

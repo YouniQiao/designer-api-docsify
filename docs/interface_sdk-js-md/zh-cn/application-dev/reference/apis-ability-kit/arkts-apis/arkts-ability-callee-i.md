@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface Callee--><!--Device-unnamed-export interface Callee-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+## 导入模块
+
+```TypeScript
+import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from '@kit.AbilityKit';
+```
 
 ## off
 
@@ -17,6 +25,8 @@ off(method: string): void
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Callee-off(method: string): void--><!--Device-Callee-off(method: string): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -67,6 +77,8 @@ on(method: string, callback: CalleeCallback): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Callee-on(method: string, callback: CalleeCallback): void--><!--Device-Callee-on(method: string, callback: CalleeCallback): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **参数：**
@@ -74,7 +86,7 @@ on(method: string, callback: CalleeCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | method | string | 是 | 由Caller和Callee双方约定好的方法名，Callee方通过该字段区分消息类型。 |
-| callback | CalleeCallback | 是 | 一个[rpc.MessageSequence](./@ohos.rpc:rpc.MessageSequence)类型入参的js通知同步回调函数, 回调函数至少要返回一个空的[rpc.Parcelable](./@ohos.rpc:rpc.Parcelable)数据对象, 其他视为函数执行错误。 |
+| callback | [CalleeCallback](arkts-ability-calleecallback-i.md) | 是 | 一个[rpc.MessageSequence](./@ohos.rpc:rpc.MessageSequence)类型入参的js通知同步回调函数, 回调函数至少要返回一个空的[rpc.Parcelable](./@ohos.rpc:rpc.Parcelable)数据对象, 其他视为函数执行错误。 |
 
 **错误码：**
 

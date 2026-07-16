@@ -14,14 +14,16 @@ function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<Co
 
 **替代接口：** [subscribe](arkts-basicservices-subscribe-f.md#subscribe-1)
 
+<!--Device-commonEvent-function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<CommonEventData>): void--><!--Device-commonEvent-function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<CommonEventData>): void-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriber | CommonEventSubscriber | 是 | 表示订阅者对象。 |
-| callback | AsyncCallback&lt;CommonEventData&gt; | 是 | 表示接收公共事件数据的回调函数。 |
+| subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-i.md) | 是 | 表示订阅者对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<CommonEventData> | 是 | 表示接收公共事件数据的回调函数。 |
 
 **示例：**
 

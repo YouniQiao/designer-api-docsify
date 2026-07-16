@@ -1,12 +1,12 @@
 # GetDataParams
 
-Represents the parameters for obtaining data from UDMF, including the destination directory, option for resolving
-file conflicts, and progress indicator type.
+Represents the parameters for obtaining data from UDMF, including the destination directory, option for resolving file conflicts, and progress indicator type.
 
-For details, see
-[Obtaining Data Asynchronously Through Drag-and-Drop].
+For details, see [Obtaining Data Asynchronously Through Drag-and-Drop].
 
 **Since:** 15
+
+<!--Device-unifiedDataChannel-interface GetDataParams--><!--Device-unifiedDataChannel-interface GetDataParams-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -32,6 +32,8 @@ Indicates the supported data information.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-GetDataParams-acceptableInfo?: DataLoadInfo--><!--Device-GetDataParams-acceptableInfo?: DataLoadInfo-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## dataProgressListener
@@ -49,6 +51,8 @@ Indicates progress and data listener when getting unified data.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-GetDataParams-dataProgressListener: DataProgressListener--><!--Device-GetDataParams-dataProgressListener: DataProgressListener-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -68,6 +72,8 @@ Indicates the dest path uri where copy file will be copied to sandbox of applica
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-GetDataParams-destUri?: string--><!--Device-GetDataParams-destUri?: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## fileConflictOptions
@@ -86,6 +92,8 @@ Indicates file conflict options when dest path has file with same name.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-GetDataParams-fileConflictOptions?: FileConflictOptions--><!--Device-GetDataParams-fileConflictOptions?: FileConflictOptions-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## progressIndicator
@@ -103,6 +111,8 @@ Indicates whether to use default system progress indicator.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-GetDataParams-progressIndicator: ProgressIndicator--><!--Device-GetDataParams-progressIndicator: ProgressIndicator-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 

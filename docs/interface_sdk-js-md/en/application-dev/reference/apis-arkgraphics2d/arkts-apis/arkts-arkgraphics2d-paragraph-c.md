@@ -2,10 +2,11 @@
 
 Implements a carrier that stores the text content and style. You can perform operations such as layout and drawing.
 
-Before calling any of the following APIs, you must use [build()](arkts-arkgraphics2d-paragraphbuilder-c.md#build-1) of the
-[ParagraphBuilder](arkts-arkgraphics2d-paragraphbuilder-c.md) class to create a **Paragraph** object.
+Before calling any of the following APIs, you must use [build()](arkts-arkgraphics2d-paragraphbuilder-c.md#build-1) of the [ParagraphBuilder](arkts-arkgraphics2d-paragraphbuilder-c.md) class to create a **Paragraph** object.
 
 **Since:** 12
+
+<!--Device-text-class Paragraph--><!--Device-text-class Paragraph-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -27,13 +28,15 @@ Checks whether the number of lines in the paragraph exceeds the maximum.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Paragraph-didExceedMaxLines(): boolean--><!--Device-Paragraph-didExceedMaxLines(): boolean-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** means that the number of lines exceeds the maximum, and**false** means the opposite. |
+| boolean | Check result. The value **true** means that the number of lines exceeds the maximum, and **false** means the opposite. |
 
 **Example**
 
@@ -56,6 +59,8 @@ Whether to force reuse the rasterization result.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-Paragraph-forceReuseRasterResult(isForce: boolean): void--><!--Device-Paragraph-forceReuseRasterResult(isForce: boolean): void-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
@@ -76,20 +81,22 @@ Obtains the actually visible text range in the specified line, excluding any ove
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Paragraph-getActualTextRange(lineNumber: int, includeSpaces: boolean): Range--><!--Device-Paragraph-getActualTextRange(lineNumber: int, includeSpaces: boolean): Range-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineNumber | number | Yes | Line number of the text range, starting from 0. This API can only be used to obtainthe bounds of existing lines. That is, the line number must start from 0, and the maximum line index is thenumber of text lines – 1. The number of text lines can be obtained via the[getLineCount](arkts-arkgraphics2d-paragraph-c.md#getlinecount-1) API. |
-| includeSpaces | boolean | Yes | Whether spaces are included. The value **true** means that spaces arecontained, and **false** means the opposite. |
+| lineNumber | number | Yes | Line number of the text range, starting from 0. This API can only be used to obtain the bounds of existing lines. That is, the line number must start from 0, and the maximum line index is the number of text lines – 1. The number of text lines can be obtained via the [getLineCount](arkts-arkgraphics2d-paragraph-c.md#getlinecount-1) API. |
+| includeSpaces | boolean | Yes | Whether spaces are included. The value **true** means that spaces are contained, and **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Range | Text range obtained. If the line index is invalid, **start** and **end** are both **0**. |
+| [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | Text range obtained. If the line index is invalid, **start** and **end** are both **0**. |
 
 **Example**
 
@@ -109,6 +116,8 @@ Obtains the alphabetic baseline.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-Paragraph-getAlphabeticBaseline(): double--><!--Device-Paragraph-getAlphabeticBaseline(): double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -139,21 +148,23 @@ Obtains the character position information closest to the given coordinates.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-Paragraph-getCharacterPositionAtCoordinate(x: double, y: double, encoding: drawing.TextEncoding): PositionWithAffinity--><!--Device-Paragraph-getCharacterPositionAtCoordinate(x: double, y: double, encoding: drawing.TextEncoding): PositionWithAffinity-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | Horizontal coordinate in the text layout area, in physical pixels (px). X offset relativeto the top-left corner of the text layout area, with the right direction as positive. Supports floating-pointvalues and accepts negative values, which indicate positions to the left of the text layout area. If thecoordinates are beyond the text layout area, the nearest character position is returned. It can be obtainedthrough a touch event or click event. |
-| y | number | Yes | Vertical coordinate in the text layout area, in physical pixels (px). Y offset relative tothe top-left corner of the text layout area, with the downward direction as positive. Supports floating-pointvalues and accepts negative values, which indicate positions above the text layout area. If the coordinatesare beyond the text layout area, the nearest character position is returned. It can be obtained through atouch event or click event. |
-| encoding | drawing.TextEncoding | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding typesare supported. For UTF-8 encoding, the returned character position indicates the byte offset. For UTF-16encoding, the returned character position indicates the UTF-16 encoding unit offset. |
+| x | number | Yes | Horizontal coordinate in the text layout area, in physical pixels (px). X offset relative to the top-left corner of the text layout area, with the right direction as positive. Supports floating-point values and accepts negative values, which indicate positions to the left of the text layout area. If the coordinates are beyond the text layout area, the nearest character position is returned. It can be obtained through a touch event or click event. |
+| y | number | Yes | Vertical coordinate in the text layout area, in physical pixels (px). Y offset relative to the top-left corner of the text layout area, with the downward direction as positive. Supports floating-point values and accepts negative values, which indicate positions above the text layout area. If the coordinates are beyond the text layout area, the nearest character position is returned. It can be obtained through a touch event or click event. |
+| encoding | drawing.TextEncoding | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned character position indicates the byte offset. For UTF-16encoding, the returned character position indicates the UTF-16 encoding unit offset. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PositionWithAffinity | Character position. |
+| [PositionWithAffinity](../../apis-arkui/arkts-apis/arkts-arkui-positionwithaffinity-i.md) | Character position. |
 
 **Error codes:**
 
@@ -212,20 +223,22 @@ Obtains the character range corresponding to the specified glyph range.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-Paragraph-getCharacterRangeForGlyphRange(glyphRange: Range, encoding: drawing.TextEncoding): Array<Range>--><!--Device-Paragraph-getCharacterRangeForGlyphRange(glyphRange: Range, encoding: drawing.TextEncoding): Array<Range>-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| glyphRange | Range | Yes | Glyph range. |
-| encoding | drawing.TextEncoding | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding typesare supported. For UTF-8 encoding, the returned character range indicates the byte range. For UTF-16 encoding, the returned character range indicates the UTF-16 encoding unit range. |
+| glyphRange | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | Yes | Glyph range. |
+| encoding | drawing.TextEncoding | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned character range indicates the byte range. For UTF-16 encoding, the returned character range indicates the UTF-16 encoding unit range. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Range&gt; | Character range. If the array contains one element, it indicates the character range.If the array contains two elements, the first element indicates the character range, and the second elementindicates the actual glyph range. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Range> | Character range. If the array contains one element, it indicates the character range.If the array contains two elements, the first element indicates the character range, and the second element indicates the actual glyph range. |
 
 **Error codes:**
 
@@ -281,6 +294,8 @@ Obtains the position of a glyph closest to the given coordinates.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Paragraph-getGlyphPositionAtCoordinate(x: double, y: double): PositionWithAffinity--><!--Device-Paragraph-getGlyphPositionAtCoordinate(x: double, y: double): PositionWithAffinity-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
@@ -294,7 +309,7 @@ Obtains the position of a glyph closest to the given coordinates.
 
 | Type | Description |
 | --- | --- |
-| PositionWithAffinity | Position of the glyph. |
+| [PositionWithAffinity](../../apis-arkui/arkts-apis/arkts-arkui-positionwithaffinity-i.md) | Position of the glyph. |
 
 **Example**
 
@@ -317,20 +332,22 @@ Obtains the glyph range corresponding to the specified character range.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-Paragraph-getGlyphRangeForCharacterRange(characterRange: Range, encoding: drawing.TextEncoding): Array<Range>--><!--Device-Paragraph-getGlyphRangeForCharacterRange(characterRange: Range, encoding: drawing.TextEncoding): Array<Range>-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characterRange | Range | Yes | Character range. |
-| encoding | drawing.TextEncoding | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding typesare supported. For UTF-8 encoding, the returned actual character range indicates the byte range. For UTF-16encoding, the returned actual character range indicates the UTF-16 encoding unit range. |
+| characterRange | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | Yes | Character range. |
+| encoding | drawing.TextEncoding | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned actual character range indicates the byte range. For UTF-16encoding, the returned actual character range indicates the UTF-16 encoding unit range. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Range&gt; | Glyph range. The array contains two elements. The first element indicates the glyphrange, and the second element indicates the actual character range. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Range> | Glyph range. The array contains two elements. The first element indicates the glyph range, and the second element indicates the actual character range. |
 
 **Error codes:**
 
@@ -386,6 +403,8 @@ Obtains the total height of the text.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Paragraph-getHeight(): double--><!--Device-Paragraph-getHeight(): double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
@@ -412,6 +431,8 @@ Obtains the ideographic baseline.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-Paragraph-getIdeographicBaseline(): double--><!--Device-Paragraph-getIdeographicBaseline(): double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -440,6 +461,8 @@ Obtains the number of text lines.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Paragraph-getLineCount(): int--><!--Device-Paragraph-getLineCount(): int-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
@@ -466,6 +489,8 @@ Obtains the height of a given line.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-Paragraph-getLineHeight(line: int): double--><!--Device-Paragraph-getLineHeight(line: int): double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -500,13 +525,15 @@ Obtains an array of line measurement information.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Paragraph-getLineMetrics(): Array<LineMetrics>--><!--Device-Paragraph-getLineMetrics(): Array<LineMetrics>-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;LineMetrics&gt; | Array of line measurement information. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<LineMetrics> | Array of line measurement information. |
 
 **Example**
 
@@ -527,6 +554,8 @@ Obtains the line measurement information of a line.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Paragraph-getLineMetrics(lineNumber: int): LineMetrics | undefined--><!--Device-Paragraph-getLineMetrics(lineNumber: int): LineMetrics | undefined-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
@@ -539,7 +568,7 @@ Obtains the line measurement information of a line.
 
 | Type | Description |
 | --- | --- |
-| LineMetrics | **LineMetrics** object containing the measurement information if thespecified line number is valid and the measurement information exists. If the line number is invalid or themeasurement information cannot be obtained, **undefined** is returned. |
+| [LineMetrics](../../apis-arkui/arkts-apis/arkts-arkui-linemetrics-t.md) | **LineMetrics** object containing the measurement information if the specified line number is valid and the measurement information exists. If the line number is invalid or the measurement information cannot be obtained, **undefined** is returned. |
 
 **Example**
 
@@ -559,6 +588,8 @@ Obtains the width of a given line.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-Paragraph-getLineWidth(line: int): double--><!--Device-Paragraph-getLineWidth(line: int): double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -593,6 +624,8 @@ Obtains the longest line in the text.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Paragraph-getLongestLine(): double--><!--Device-Paragraph-getLongestLine(): double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
@@ -614,12 +647,13 @@ let longestLine = paragraph.getLongestLine();
 getLongestLineWithIndent(): number
 ```
 
-Obtains the width of the longest line, including its indentation, in the text. You are advised to round up the
-return value. If the text content is empty, **0** is returned.
+Obtains the width of the longest line, including its indentation, in the text. You are advised to round up the return value. If the text content is empty, **0** is returned.
 
 **Since:** 13
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-Paragraph-getLongestLineWithIndent(): double--><!--Device-Paragraph-getLongestLineWithIndent(): double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -648,6 +682,8 @@ Obtains the maximum intrinsic width of the paragraph.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Paragraph-getMaxIntrinsicWidth(): double--><!--Device-Paragraph-getMaxIntrinsicWidth(): double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
@@ -675,6 +711,8 @@ Obtains the maximum width of the line in the text.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Paragraph-getMaxWidth(): double--><!--Device-Paragraph-getMaxWidth(): double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
@@ -701,6 +739,8 @@ Obtains the minimum intrinsic width of the paragraph.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-Paragraph-getMinIntrinsicWidth(): double--><!--Device-Paragraph-getMinIntrinsicWidth(): double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -731,13 +771,15 @@ Obtains the style configuration of a paragraph.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-Paragraph-getParagraphStyle(): ParagraphStyle--><!--Device-Paragraph-getParagraphStyle(): ParagraphStyle-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ParagraphStyle | Paragraph style configuration. |
+| [ParagraphStyle](arkts-arkgraphics2d-paragraphstyle-i.md) | Paragraph style configuration. |
 
 **Example**
 
@@ -789,13 +831,15 @@ Obtains the text processing status of a paragraph.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-Paragraph-getProcessState(): TextProcessState--><!--Device-Paragraph-getProcessState(): TextProcessState-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TextProcessState | Text processing status of a paragraph. |
+| [TextProcessState](arkts-arkgraphics2d-textprocessstate-e.md) | Text processing status of a paragraph. |
 
 **Example**
 
@@ -845,13 +889,15 @@ Obtains the rectangles occupied by all placeholders in the text.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Paragraph-getRectsForPlaceholders(): Array<TextBox>--><!--Device-Paragraph-getRectsForPlaceholders(): Array<TextBox>-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextBox&gt; | Array holding the rectangles obtained. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<TextBox> | Array holding the rectangles obtained. |
 
 **Example**
 
@@ -866,12 +912,13 @@ let placeholderRects = paragraph.getRectsForPlaceholders();
 getRectsForRange(range: Range, widthStyle: RectWidthStyle, heightStyle: RectHeightStyle): Array<TextBox>
 ```
 
-Obtains the rectangles occupied by the characters in the range of the text under the given rectangle width and
-height.
+Obtains the rectangles occupied by the characters in the range of the text under the given rectangle width and height.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-Paragraph-getRectsForRange(range: Range, widthStyle: RectWidthStyle, heightStyle: RectHeightStyle): Array<TextBox>--><!--Device-Paragraph-getRectsForRange(range: Range, widthStyle: RectWidthStyle, heightStyle: RectHeightStyle): Array<TextBox>-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -879,15 +926,15 @@ height.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | Range | Yes | Range of the text. |
-| widthStyle | RectWidthStyle | Yes | Width of the rectangle. |
-| heightStyle | RectHeightStyle | Yes | Height of the rectangle. |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | Yes | Range of the text. |
+| widthStyle | [RectWidthStyle](arkts-arkgraphics2d-rectwidthstyle-e.md) | Yes | Width of the rectangle. |
+| heightStyle | [RectHeightStyle](arkts-arkgraphics2d-rectheightstyle-e.md) | Yes | Height of the rectangle. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextBox&gt; | Array holding the rectangles obtained. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<TextBox> | Array holding the rectangles obtained. |
 
 **Example**
 
@@ -911,13 +958,15 @@ Obtains the text display status of a paragraph.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-Paragraph-getTextDisplayState(): TextDisplayState--><!--Device-Paragraph-getTextDisplayState(): TextDisplayState-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TextDisplayState | Text display status of a paragraph. |
+| [TextDisplayState](arkts-arkgraphics2d-textdisplaystate-e.md) | Text display status of a paragraph. |
 
 **Example**
 
@@ -967,13 +1016,15 @@ Obtains all the text lines.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Paragraph-getTextLines(): Array<TextLine>--><!--Device-Paragraph-getTextLines(): Array<TextLine>-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextLine&gt; | Array of text lines. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<TextLine> | Array of text lines. |
 
 **Example**
 
@@ -988,9 +1039,7 @@ let lines = paragraph.getTextLines();
 getVisibleTextRanges(): Array<Range>
 ```
 
-Obtains the range of text that is visible on the screen in a paragraph. Excludes text that is not displayed due
-to truncation by the maximum line count (the maxLines attribute of [ParagraphStyle](arkts-arkgraphics2d-paragraphstyle-i.md))
-or replacement in ellipsis mode ([EllipsisMode](arkts-arkgraphics2d-ellipsismode-e.md)).
+Obtains the range of text that is visible on the screen in a paragraph. Excludes text that is not displayed due to truncation by the maximum line count (the maxLines attribute of [ParagraphStyle](arkts-arkgraphics2d-paragraphstyle-i.md))or replacement in ellipsis mode ([EllipsisMode](arkts-arkgraphics2d-ellipsismode-e.md)).
 
 **Since:** 26.0.0
 
@@ -998,13 +1047,15 @@ or replacement in ellipsis mode ([EllipsisMode](arkts-arkgraphics2d-ellipsismode
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-Paragraph-getVisibleTextRanges(): Array<Range>--><!--Device-Paragraph-getVisibleTextRanges(): Array<Range>-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Range&gt; | Array of the visible text range of a paragraph. The range is the index of the UTF-16encoding unit. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Range> | Array of the visible text range of a paragraph. The range is the index of the UTF-16encoding unit. |
 
 **Example**
 
@@ -1025,6 +1076,8 @@ Obtains the range of the word where the glyph with a given offset is located.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Paragraph-getWordBoundary(offset: int): Range--><!--Device-Paragraph-getWordBoundary(offset: int): Range-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
@@ -1037,7 +1090,7 @@ Obtains the range of the word where the glyph with a given offset is located.
 
 | Type | Description |
 | --- | --- |
-| Range | Range of the word. |
+| [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | Range of the word. |
 
 **Example**
 
@@ -1058,6 +1111,8 @@ Performs layout and calculates the positions of all glyphs. This API uses a prom
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Paragraph-layout(width: double): Promise<void>--><!--Device-Paragraph-layout(width: double): Promise<void>-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
@@ -1070,7 +1125,7 @@ Performs layout and calculates the positions of all glyphs. This API uses a prom
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1163,6 +1218,8 @@ Performs layout and calculates the positions of all glyphs.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Paragraph-layoutSync(width: double): void--><!--Device-Paragraph-layoutSync(width: double): void-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
@@ -1192,19 +1249,21 @@ Performs layout with the given height and width and calculates the positions of 
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-Paragraph-layoutWithConstraints(size: TextRectSize): TextLayoutResult--><!--Device-Paragraph-layoutWithConstraints(size: TextRectSize): TextLayoutResult-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | TextRectSize | Yes | Constrained height and width, in physical pixels (px). |
+| size | [TextRectSize](arkts-arkgraphics2d-textrectsize-i.md) | Yes | Constrained height and width, in physical pixels (px). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TextLayoutResult | Actual size after layout and character range after typesetting. |
+| [TextLayoutResult](arkts-arkgraphics2d-textlayoutresult-i.md) | Actual size after layout and character range after typesetting. |
 
 **Example**
 
@@ -1230,6 +1289,8 @@ Paints the text on the canvas with the coordinate point (x, y) as the upper left
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Paragraph-paint(canvas: drawing.Canvas, x: double, y: double): void--><!--Device-Paragraph-paint(canvas: drawing.Canvas, x: double, y: double): void-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
@@ -1237,8 +1298,8 @@ Paints the text on the canvas with the coordinate point (x, y) as the upper left
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | canvas | drawing.Canvas | Yes | Target canvas. |
-| x | number | Yes | Horizontal coordinate of the upper left corner, which is a floating-point value, inphysical pixels (px). |
-| y | number | Yes | Vertical coordinate of the upper left corner, which is a floating-point value, in physicalpixels (px). |
+| x | number | Yes | Horizontal coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
+| y | number | Yes | Vertical coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
 
 **Example**
 
@@ -1263,6 +1324,8 @@ Draws text along a path on the canvas.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Paragraph-paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: double, vOffset: double): void--><!--Device-Paragraph-paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: double, vOffset: double): void-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
@@ -1271,8 +1334,8 @@ Draws text along a path on the canvas.
 | --- | --- | --- | --- |
 | canvas | drawing.Canvas | Yes | Target canvas. |
 | path | drawing.Path | Yes | Path along which the text is drawn. |
-| hOffset | number | Yes | Offset along the path direction. Positive values extend forward from the path startpoint, and negative values extend backward. Unit: physical pixels (px). |
-| vOffset | number | Yes | Offset along the vertical direction of the path. Positive values extend to the rightalong the path, and negative values extend to the left. Unit: physical pixels (px). |
+| hOffset | number | Yes | Offset along the path direction. Positive values extend forward from the path start point, and negative values extend backward. Unit: physical pixels (px). |
+| vOffset | number | Yes | Offset along the vertical direction of the path. Positive values extend to the right along the path, and negative values extend to the left. Unit: physical pixels (px). |
 
 **Example**
 
@@ -1293,12 +1356,13 @@ paragraph.paintOnPath(canvas, path, 0, 0);
 updateColor(color: common2D.Color): void
 ```
 
-Updates the color of the entire text span. This API call also updates the decoration color if it hasn't been set
-yet.
+Updates the color of the entire text span. This API call also updates the decoration color if it hasn't been set yet.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-Paragraph-updateColor(color: common2D.Color): void--><!--Device-Paragraph-updateColor(color: common2D.Color): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -1327,13 +1391,15 @@ Updates the decoration line of the entire text span.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-Paragraph-updateDecoration(decoration: Decoration): void--><!--Device-Paragraph-updateDecoration(decoration: Decoration): void-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| decoration | Decoration | Yes | Updated decoration line. |
+| decoration | [Decoration](arkts-arkgraphics2d-decoration-i.md) | Yes | Updated decoration line. |
 
 **Example**
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 14
 
+<!--Device-wallpaper-interface WallpaperInfo--><!--Device-wallpaper-interface WallpaperInfo-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **系统接口：** 此接口为系统接口。
@@ -19,6 +21,8 @@ foldState: FoldState
 **类型：** FoldState
 
 **起始版本：** 14
+
+<!--Device-WallpaperInfo-foldState: FoldState--><!--Device-WallpaperInfo-foldState: FoldState-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
@@ -36,6 +40,8 @@ rotateState: RotateState
 
 **起始版本：** 14
 
+<!--Device-WallpaperInfo-rotateState: RotateState--><!--Device-WallpaperInfo-rotateState: RotateState-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +57,8 @@ source: string
 **类型：** string
 
 **起始版本：** 14
+
+<!--Device-WallpaperInfo-source: string--><!--Device-WallpaperInfo-source: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 

@@ -4,6 +4,8 @@ Defines the align rule options of relative container.
 
 **Since:** 9
 
+<!--Device-unnamed-declare interface AlignRuleOption--><!--Device-unnamed-declare interface AlignRuleOption-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## bias
@@ -12,8 +14,7 @@ Defines the align rule options of relative container.
 bias?: Bias
 ```
 
-Offset of the component under the anchor constraints.
-The value is the ratio of the distance to the left/upper anchor to the total distance between anchors.
+Offset of the component under the anchor constraints.The value is the ratio of the distance to the left/upper anchor to the total distance between anchors.
 
 **Type:** Bias
 
@@ -27,6 +28,8 @@ The value is the ratio of the distance to the left/upper anchor to the total dis
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-AlignRuleOption-bias?: Bias--><!--Device-AlignRuleOption-bias?: Bias-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## bottom
@@ -35,8 +38,7 @@ The value is the ratio of the distance to the left/upper anchor to the total dis
 bottom?: VerticalAlignParam
 ```
 
-Top alignment.
-In versions earlier than API version 23, the input parameter type is { anchor: string, align: VerticalAlign }.
+Top alignment.In versions earlier than API version 23, the input parameter type is { anchor: string, align: VerticalAlign }.
 
 **Type:** VerticalAlignParam
 
@@ -45,6 +47,8 @@ In versions earlier than API version 23, the input parameter type is { anchor: s
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-AlignRuleOption-bottom?: VerticalAlignParam--><!--Device-AlignRuleOption-bottom?: VerticalAlignParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,8 +58,7 @@ In versions earlier than API version 23, the input parameter type is { anchor: s
 center?: VerticalAlignParam
 ```
 
-Center alignment in the vertical direction.
-In versions earlier than API version 23, the input parameter type is { anchor: string, align: VerticalAlign }.
+Center alignment in the vertical direction.In versions earlier than API version 23, the input parameter type is { anchor: string, align: VerticalAlign }.
 
 **Type:** VerticalAlignParam
 
@@ -64,6 +67,8 @@ In versions earlier than API version 23, the input parameter type is { anchor: s
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-AlignRuleOption-center?: VerticalAlignParam--><!--Device-AlignRuleOption-center?: VerticalAlignParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,8 +78,7 @@ In versions earlier than API version 23, the input parameter type is { anchor: s
 left?: HorizontalAlignParam
 ```
 
-Left alignment.
-In versions earlier than API version 23, the input parameter type is { anchor: string, align: HorizontalAlign }.
+Left alignment.In versions earlier than API version 23, the input parameter type is { anchor: string, align: HorizontalAlign }.
 
 **Type:** HorizontalAlignParam
 
@@ -83,6 +87,8 @@ In versions earlier than API version 23, the input parameter type is { anchor: s
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-AlignRuleOption-left?: HorizontalAlignParam--><!--Device-AlignRuleOption-left?: HorizontalAlignParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,8 +98,7 @@ In versions earlier than API version 23, the input parameter type is { anchor: s
 middle?: HorizontalAlignParam
 ```
 
-Center alignment in the horizontal direction.
-In versions earlier than API version 23, the input parameter type is { anchor: string, align: HorizontalAlign }.
+Center alignment in the horizontal direction.In versions earlier than API version 23, the input parameter type is { anchor: string, align: HorizontalAlign }.
 
 **Type:** HorizontalAlignParam
 
@@ -102,6 +107,8 @@ In versions earlier than API version 23, the input parameter type is { anchor: s
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-AlignRuleOption-middle?: HorizontalAlignParam--><!--Device-AlignRuleOption-middle?: HorizontalAlignParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -111,8 +118,7 @@ In versions earlier than API version 23, the input parameter type is { anchor: s
 right?: HorizontalAlignParam
 ```
 
-Right alignment.
-In versions earlier than API version 23, the input parameter type is { anchor: string, align:HorizontalAlign }.
+Right alignment.In versions earlier than API version 23, the input parameter type is { anchor: string, align:HorizontalAlign }.
 
 **Type:** HorizontalAlignParam
 
@@ -122,6 +128,8 @@ In versions earlier than API version 23, the input parameter type is { anchor: s
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-AlignRuleOption-right?: HorizontalAlignParam--><!--Device-AlignRuleOption-right?: HorizontalAlignParam-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## top
@@ -130,8 +138,7 @@ In versions earlier than API version 23, the input parameter type is { anchor: s
 top?: VerticalAlignParam
 ```
 
-Top alignment.
-In versions earlier than API version 23, the input parameter type is { anchor: string, align: VerticalAlign }.
+Top alignment.In versions earlier than API version 23, the input parameter type is { anchor: string, align: VerticalAlign }.
 
 **Type:** VerticalAlignParam
 
@@ -140,6 +147,8 @@ In versions earlier than API version 23, the input parameter type is { anchor: s
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-AlignRuleOption-top?: VerticalAlignParam--><!--Device-AlignRuleOption-top?: VerticalAlignParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

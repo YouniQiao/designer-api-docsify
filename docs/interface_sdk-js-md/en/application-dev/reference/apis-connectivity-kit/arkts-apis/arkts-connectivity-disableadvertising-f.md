@@ -20,14 +20,16 @@ Disable the advertising with a specific ID temporarily.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ble-function disableAdvertising(advertisingDisableParams: AdvertisingDisableParams, callback: AsyncCallback<void>): void--><!--Device-ble-function disableAdvertising(advertisingDisableParams: AdvertisingDisableParams, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| advertisingDisableParams | AdvertisingDisableParams | Yes | Indicates the params for disable advertising. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback result. |
+| advertisingDisableParams | [AdvertisingDisableParams](arkts-connectivity-advertisingdisableparams-i.md) | Yes | Indicates the params for disable advertising. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback result. |
 
 **Error codes:**
 
@@ -126,19 +128,21 @@ Disable the advertising with a specific ID temporarily.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ble-function disableAdvertising(advertisingDisableParams: AdvertisingDisableParams): Promise<void>--><!--Device-ble-function disableAdvertising(advertisingDisableParams: AdvertisingDisableParams): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| advertisingDisableParams | AdvertisingDisableParams | Yes | Indicates the params for disable advertising. |
+| advertisingDisableParams | [AdvertisingDisableParams](arkts-connectivity-advertisingdisableparams-i.md) | Yes | Indicates the params for disable advertising. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 

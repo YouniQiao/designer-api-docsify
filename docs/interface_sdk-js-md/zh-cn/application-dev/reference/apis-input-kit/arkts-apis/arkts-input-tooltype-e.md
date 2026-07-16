@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-export declare enum ToolType--><!--Device-unnamed-export declare enum ToolType-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## FINGER
@@ -15,6 +17,8 @@ FINGER = 0
 手指。
 
 **起始版本：** 9
+
+<!--Device-ToolType-FINGER = 0--><!--Device-ToolType-FINGER = 0-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -28,6 +32,8 @@ PEN = 1
 
 **起始版本：** 9
 
+<!--Device-ToolType-PEN = 1--><!--Device-ToolType-PEN = 1-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## RUBBER
@@ -39,6 +45,8 @@ RUBBER = 2
 橡皮擦。
 
 **起始版本：** 9
+
+<!--Device-ToolType-RUBBER = 2--><!--Device-ToolType-RUBBER = 2-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -52,6 +60,8 @@ BRUSH = 3
 
 **起始版本：** 9
 
+<!--Device-ToolType-BRUSH = 3--><!--Device-ToolType-BRUSH = 3-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## PENCIL
@@ -63,6 +73,8 @@ PENCIL = 4
 铅笔。
 
 **起始版本：** 9
+
+<!--Device-ToolType-PENCIL = 4--><!--Device-ToolType-PENCIL = 4-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -76,6 +88,8 @@ AIRBRUSH = 5
 
 **起始版本：** 9
 
+<!--Device-ToolType-AIRBRUSH = 5--><!--Device-ToolType-AIRBRUSH = 5-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## MOUSE
@@ -88,6 +102,8 @@ MOUSE = 6
 
 **起始版本：** 9
 
+<!--Device-ToolType-MOUSE = 6--><!--Device-ToolType-MOUSE = 6-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## LENS
@@ -99,6 +115,8 @@ LENS = 7
 透镜。
 
 **起始版本：** 9
+
+<!--Device-ToolType-LENS = 7--><!--Device-ToolType-LENS = 7-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 

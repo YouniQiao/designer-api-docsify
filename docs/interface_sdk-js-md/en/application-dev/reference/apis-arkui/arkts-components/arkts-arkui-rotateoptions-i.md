@@ -4,6 +4,8 @@ Defines component rotation parameters.
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface RotateOptions--><!--Device-unnamed-declare interface RotateOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## angle
@@ -12,8 +14,7 @@ Defines component rotation parameters.
 angle: number | string
 ```
 
-Angle to rotate. A positive angle indicates a clockwise rotation, and a negative angle indicates a counterclockwise
-rotation. The value can be of the string type, for example, **'90deg'**.
+Angle to rotate. A positive angle indicates a clockwise rotation, and a negative angle indicates a counterclockwise rotation. The value can be of the string type, for example, **'90deg'**.
 
 **Type:** number | string
 
@@ -23,6 +24,8 @@ rotation. The value can be of the string type, for example, **'90deg'**.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-RotateOptions-angle: number | string--><!--Device-RotateOptions-angle: number | string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## centerX
@@ -31,8 +34,7 @@ rotation. The value can be of the string type, for example, **'90deg'**.
 centerX?: number | string
 ```
 
-X coordinate of the transformation center point (anchor). The value can be of the string type, for example,
-**'50'** and **'50%'**.
+X coordinate of the transformation center point (anchor). The value can be of the string type, for example,**'50'** and **'50%'**.
 
 Unit: vp
 
@@ -44,6 +46,8 @@ Unit: vp
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-RotateOptions-centerX?: number | string--><!--Device-RotateOptions-centerX?: number | string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## centerY
@@ -52,8 +56,7 @@ Unit: vp
 centerY?: number | string
 ```
 
-Y coordinate of the transformation center point (anchor). The value can be of the string type, for example,
-**'50'** and **'50%'**.
+Y coordinate of the transformation center point (anchor). The value can be of the string type, for example,**'50'** and **'50%'**.
 
 Unit: vp
 
@@ -64,6 +67,8 @@ Unit: vp
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-RotateOptions-centerY?: number | string--><!--Device-RotateOptions-centerY?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -91,6 +96,8 @@ Unit: px
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-RotateOptions-centerZ?: number--><!--Device-RotateOptions-centerZ?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## perspective
@@ -99,14 +106,9 @@ Unit: px
 perspective?: number
 ```
 
-Z-axis coordinate of the camera. The value indicates the viewing distance, that is, the distance between the camera
-and the z=0 plane. The positive and negative values of the parameter determine the camera observation direction.
-When perspective is set to 0, the system automatically calculates a proper camera Z-axis position. The value is
-negative.
+Z-axis coordinate of the camera. The value indicates the viewing distance, that is, the distance between the camera and the z=0 plane. The positive and negative values of the parameter determine the camera observation direction.When perspective is set to 0, the system automatically calculates a proper camera Z-axis position. The value is negative.
 
-The rotation axis and center point are defined based on the
-[component coordinate system](../../../../ui/arkui-glossary.md#component-coordinate-system). When the component
-moves, the coordinate system does not follow it.
+The rotation axis and center point are defined based on the [component coordinate system](../../../../ui/arkui-glossary.md#component-coordinate-system). When the component moves, the coordinate system does not follow it.
 
 Default value: **0**.
 
@@ -123,6 +125,8 @@ Unit: px
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-RotateOptions-perspective?: number--><!--Device-RotateOptions-perspective?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -142,6 +146,8 @@ X coordinate of the rotation axis vector.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-RotateOptions-x?: number--><!--Device-RotateOptions-x?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
@@ -160,6 +166,8 @@ Y coordinate of the rotation axis vector.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-RotateOptions-y?: number--><!--Device-RotateOptions-y?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## z
@@ -177,6 +185,8 @@ Z coordinate of the rotation axis vector.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-RotateOptions-z?: number--><!--Device-RotateOptions-z?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

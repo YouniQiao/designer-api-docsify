@@ -18,6 +18,8 @@ Clear the PIN auth state of the specified resource ID.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-huksExternalCrypto-function clearUkeyPinAuthState(resourceId: string): Promise<void>--><!--Device-huksExternalCrypto-function clearUkeyPinAuthState(resourceId: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 **Parameters:**
@@ -30,7 +32,7 @@ Clear the PIN auth state of the specified resource ID.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

@@ -22,15 +22,17 @@ Creates a {@link RunningLock} object. This API uses an asynchronous callback to 
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
+<!--Device-runningLock-function createRunningLock(name: string, type: RunningLockType, callback: AsyncCallback<RunningLock>): void--><!--Device-runningLock-function createRunningLock(name: string, type: RunningLockType, callback: AsyncCallback<RunningLock>): void-End-->
+
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Indicates the {@link RunningLock} name. A recommended name consists of the package orclass name and a suffix. |
-| type | RunningLockType | Yes | Indicates the {@link RunningLockType}. |
-| callback | AsyncCallback&lt;RunningLock&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined** and data is the created **RunningLock** object. Otherwise, **err** is anerror object. **AsyncCallback** has encapsulated an API of the **RunningLock** class. |
+| name | string | Yes | Indicates the {@link RunningLock} name. A recommended name consists of the package or class name and a suffix. |
+| type | [RunningLockType](arkts-basicservices-runninglocktype-e.md) | Yes | Indicates the {@link RunningLockType}. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<RunningLock> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the created **RunningLock** object. Otherwise, **err** is an error object. **AsyncCallback** has encapsulated an API of the **RunningLock** class. |
 
 **Example**
 
@@ -62,20 +64,22 @@ Creates a {@link RunningLock} object. This API uses a promise to return the resu
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
+<!--Device-runningLock-function createRunningLock(name: string, type: RunningLockType): Promise<RunningLock>--><!--Device-runningLock-function createRunningLock(name: string, type: RunningLockType): Promise<RunningLock>-End-->
+
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Indicates the {@link RunningLock} name. A recommended name consists of the package orclass name and a suffix. |
-| type | RunningLockType | Yes | Indicates the {@link RunningLockType}. |
+| name | string | Yes | Indicates the {@link RunningLock} name. A recommended name consists of the package or class name and a suffix. |
+| type | [RunningLockType](arkts-basicservices-runninglocktype-e.md) | Yes | Indicates the {@link RunningLockType}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RunningLock&gt; | Promise used to return the {@link RunningLock} object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<RunningLock> | Promise used to return the {@link RunningLock} object. |
 
 **Example**
 

@@ -10,6 +10,8 @@ Used for ide.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-unnamed-type DefaultData<T> = object--><!--Device-unnamed-type DefaultData<T> = object-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **System API:** This is a system API.

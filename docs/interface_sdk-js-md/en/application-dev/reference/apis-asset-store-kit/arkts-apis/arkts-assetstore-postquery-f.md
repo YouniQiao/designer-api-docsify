@@ -12,13 +12,13 @@ import { asset } from '@kit.AssetStoreKit';
 function postQuery(handle: AssetMap): Promise<void>
 ```
 
-Performs postprocessing for the asset query. This API is used when user authentication is required for the access
-to an asset. This API must be used with [asset.preQuery](arkts-assetstore-prequery-f.md#prequery-1) together.
-This API uses a promise to return the result.
+Performs postprocessing for the asset query. This API is used when user authentication is required for the access to an asset. This API must be used with [asset.preQuery](arkts-assetstore-prequery-f.md#prequery-1) together.This API uses a promise to return the result.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-asset-function postQuery(handle: AssetMap): Promise<void>--><!--Device-asset-function postQuery(handle: AssetMap): Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -26,13 +26,13 @@ This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | AssetMap | Yes | Handle of the query operation, including the challenge value returned by[asset.preQuery](arkts-assetstore-prequery-f.md#prequery-1). |
+| handle | [AssetMap](arkts-assetstore-assetmap-t.md) | Yes | Handle of the query operation, including the challenge value returned by [asset.preQuery](arkts-assetstore-prequery-f.md#prequery-1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

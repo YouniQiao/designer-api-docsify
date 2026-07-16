@@ -16,6 +16,8 @@ function registerApplicationStateObserver(observer: ApplicationStateObserver): n
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 
+<!--Device-appManager-function registerApplicationStateObserver(observer: ApplicationStateObserver): number--><!--Device-appManager-function registerApplicationStateObserver(observer: ApplicationStateObserver): number-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -24,7 +26,7 @@ function registerApplicationStateObserver(observer: ApplicationStateObserver): n
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| observer | ApplicationStateObserver | 是 | 表示程序状态观测器，用于观测应用的生命周期变化。 |
+| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | 是 | 表示程序状态观测器，用于观测应用的生命周期变化。 |
 
 **返回值：**
 

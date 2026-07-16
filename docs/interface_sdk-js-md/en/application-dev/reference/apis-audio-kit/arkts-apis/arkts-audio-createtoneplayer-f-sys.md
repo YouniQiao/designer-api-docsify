@@ -16,6 +16,8 @@ Obtains a {@link TonePlayer} instance. This method uses an asynchronous callback
 
 **Since:** 9
 
+<!--Device-audio-function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer>): void--><!--Device-audio-function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -24,8 +26,8 @@ Obtains a {@link TonePlayer} instance. This method uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | AudioRendererInfo | Yes | Tone playing attribute. |
-| callback | AsyncCallback&lt;TonePlayer&gt; | Yes | Callback used to return the tonePlayer instance. |
+| options | [AudioRendererInfo](arkts-audio-audiorendererinfo-i.md) | Yes | Tone playing attribute. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<TonePlayer> | Yes | Callback used to return the tonePlayer instance. |
 
 **Example**
 
@@ -61,6 +63,8 @@ Obtains a {@link TonePlayer} instance. This method uses a promise to return the 
 
 **Since:** 9
 
+<!--Device-audio-function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>--><!--Device-audio-function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -69,13 +73,13 @@ Obtains a {@link TonePlayer} instance. This method uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | AudioRendererInfo | Yes | Tone playing attribute. |
+| options | [AudioRendererInfo](arkts-audio-audiorendererinfo-i.md) | Yes | Tone playing attribute. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;TonePlayer&gt; | Promise used to return the tonePlayer instance. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<TonePlayer> | Promise used to return the tonePlayer instance. |
 
 **Example**
 

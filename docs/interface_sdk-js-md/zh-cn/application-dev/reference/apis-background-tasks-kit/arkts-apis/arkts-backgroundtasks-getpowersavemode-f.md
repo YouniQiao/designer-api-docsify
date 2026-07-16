@@ -1,5 +1,11 @@
 # getPowerSaveMode
 
+## 导入模块
+
+```TypeScript
+import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
+```
+
 ## getPowerSaveMode
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getPowerSaveMode(pid: number): Promise<PowerSaveMode>
 **起始版本：** 23
 
 **需要权限：** ohos.permission.BACKGROUND_MANAGER_POWER_SAVE_MODE
+
+<!--Device-backgroundProcessManager-function getPowerSaveMode(pid: int): Promise<PowerSaveMode>--><!--Device-backgroundProcessManager-function getPowerSaveMode(pid: int): Promise<PowerSaveMode>-End-->
 
 **系统能力：** SystemCapability.Resourceschedule.BackgroundProcessManager
 
@@ -24,7 +32,7 @@ function getPowerSaveMode(pid: number): Promise<PowerSaveMode>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PowerSaveMode&gt; | Promise对象。返回进程能效模式状态。 |
+| Promise<PowerSaveMode> | Promise对象。返回进程能效模式状态。 |
 
 **错误码：**
 

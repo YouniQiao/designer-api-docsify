@@ -18,13 +18,15 @@ Checks whether the screen lock of the current device is secure.
 
 **Deprecated since:** 9
 
+<!--Device-screenLock-function isSecureMode(callback: AsyncCallback<boolean>): void--><!--Device-screenLock-function isSecureMode(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | the callback of isSecureMode. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | the callback of isSecureMode. |
 
 **Example**
 
@@ -54,13 +56,15 @@ Checks whether the screen lock of the current device is secure.
 
 **Deprecated since:** 9
 
+<!--Device-screenLock-function isSecureMode(): Promise<boolean>--><!--Device-screenLock-function isSecureMode(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | the promise returned by the function. |
 
 **Example**
 

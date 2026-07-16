@@ -4,6 +4,8 @@ CompressLevel
 
 **Since:** 7
 
+<!--Device-zlib-export enum CompressLevel--><!--Device-zlib-export enum CompressLevel-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 ## COMPRESS_LEVEL_NO_COMPRESSION
@@ -17,6 +19,8 @@ Compress level 0 that indicates uncompressed.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CompressLevel-COMPRESS_LEVEL_NO_COMPRESSION = 0--><!--Device-CompressLevel-COMPRESS_LEVEL_NO_COMPRESSION = 0-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -32,6 +36,8 @@ Compression level 1 that gives the best speed.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CompressLevel-COMPRESS_LEVEL_BEST_SPEED = 1--><!--Device-CompressLevel-COMPRESS_LEVEL_BEST_SPEED = 1-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 ## COMPRESS_LEVEL_BEST_COMPRESSION
@@ -46,6 +52,8 @@ Compression level 9 that gives the best compression.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CompressLevel-COMPRESS_LEVEL_BEST_COMPRESSION = 9--><!--Device-CompressLevel-COMPRESS_LEVEL_BEST_COMPRESSION = 9-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 ## COMPRESS_LEVEL_DEFAULT_COMPRESSION
@@ -59,6 +67,8 @@ Default compression level.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CompressLevel-COMPRESS_LEVEL_DEFAULT_COMPRESSION = -1--><!--Device-CompressLevel-COMPRESS_LEVEL_DEFAULT_COMPRESSION = -1-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 

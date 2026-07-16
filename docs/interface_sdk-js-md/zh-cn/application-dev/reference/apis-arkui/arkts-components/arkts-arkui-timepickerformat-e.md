@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare enum TimePickerFormat--><!--Device-unnamed-declare enum TimePickerFormat-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## HOUR_MINUTE
@@ -18,7 +20,9 @@ HOUR_MINUTE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TimePickerFormat-HOUR_MINUTE--><!--Device-TimePickerFormat-HOUR_MINUTE-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,7 +38,9 @@ Hour and minute and second
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TimePickerFormat-HOUR_MINUTE_SECOND--><!--Device-TimePickerFormat-HOUR_MINUTE_SECOND-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

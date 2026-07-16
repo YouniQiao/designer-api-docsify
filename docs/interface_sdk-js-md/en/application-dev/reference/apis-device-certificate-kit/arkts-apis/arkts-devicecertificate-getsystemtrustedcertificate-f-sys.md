@@ -12,14 +12,15 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 function getSystemTrustedCertificate(certUri: string): Promise<CMResult>
 ```
 
-Obtains details about a CA certificate trusted by the system. This API is called only by the certificate management
-application. This API uses a promise to return the result.
+Obtains details about a CA certificate trusted by the system. This API is called only by the certificate management application. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-certificateManager-function getSystemTrustedCertificate(certUri: string): Promise<CMResult>--><!--Device-certificateManager-function getSystemTrustedCertificate(certUri: string): Promise<CMResult>-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -29,13 +30,13 @@ application. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| certUri | string | Yes | Unique identifier of the certificate. You can obtain the value through[getSystemTrustedCertificateList](arkts-devicecertificate-getsystemtrustedcertificatelist-f-sys.md#getsystemtrustedcertificatelist-1). |
+| certUri | string | Yes | Unique identifier of the certificate. You can obtain the value through [getSystemTrustedCertificateList](arkts-devicecertificate-getsystemtrustedcertificatelist-f-sys.md#getsystemtrustedcertificatelist-1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **certInfo** in the[CMResult](arkts-devicecertificate-cmresult-i.md) object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CMResult> | Promise used to return the operation result, that is, **certInfo** in the [CMResult](arkts-devicecertificate-cmresult-i.md) object. |
 
 **Error codes:**
 

@@ -4,7 +4,15 @@ nearlinkConstant的定义。
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-declare namespace nearlinkConstant--><!--Device-unnamed-declare namespace nearlinkConstant-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
+
+## 导入模块
+
+```TypeScript
+import { nearlinkConstant } from '@kit.ConnectivityKit';
+```
 
 ## 汇总
 

@@ -4,6 +4,8 @@ The VisualEffect of Component.
 
 **Since:** 12
 
+<!--Device-uiEffect-interface VisualEffect--><!--Device-uiEffect-interface VisualEffect-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
@@ -24,6 +26,8 @@ A backgroundColorEffect effect is added to the Component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
+<!--Device-VisualEffect-backgroundColorBlender(blender: BrightnessBlender): VisualEffect--><!--Device-VisualEffect-backgroundColorBlender(blender: BrightnessBlender): VisualEffect-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -32,13 +36,13 @@ A backgroundColorEffect effect is added to the Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blender | BrightnessBlender | Yes | The blender to blend backgroundColor. |
+| blender | [BrightnessBlender](arkts-arkgraphics2d-brightnessblender-i-sys.md) | Yes | The blender to blend backgroundColor. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| VisualEffect | VisualEffects for the current effect have been added. |
+| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | VisualEffects for the current effect have been added. |
 
 **Example**
 
@@ -61,6 +65,10 @@ Sets the border light effect.
 
 **Since:** 20
 
+<!--Device-VisualEffect-borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,
+      borderWidth: double): VisualEffect--><!--Device-VisualEffect-borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,
+      borderWidth: double): VisualEffect-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -78,7 +86,7 @@ Sets the border light effect.
 
 | Type | Description |
 | --- | --- |
-| VisualEffect | - Returns the VisualEffect that the current effect have been added. |
+| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | - Returns the VisualEffect that the current effect have been added. |
 
 **Error codes:**
 
@@ -140,6 +148,10 @@ Sets the color gradient effect, may blend with alpha mask.
 
 **Since:** 20
 
+<!--Device-VisualEffect-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,
+      alphaMask?: Mask): VisualEffect--><!--Device-VisualEffect-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,
+      alphaMask?: Mask): VisualEffect-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -148,16 +160,16 @@ Sets the color gradient effect, may blend with alpha mask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colors | Array&lt;Color&gt; | Yes | array of colors. |
-| positions | Array&lt;common2D.Point&gt; | Yes | the centers of colors. |
-| strengths | Array&lt;number&gt; | Yes | the weights of color Mixing. |
-| alphaMask | Mask | No | the mask determines the alpha of the effect. |
+| colors | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Color> | Yes | array of colors. |
+| positions | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<common2D.Point> | Yes | the centers of colors. |
+| strengths | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | the weights of color Mixing. |
+| alphaMask | [Mask](arkts-arkgraphics2d-mask-c-sys.md) | No | the mask determines the alpha of the effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| VisualEffect | - Returns the VisualEffect that the current effect have been added. |
+| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | - Returns the VisualEffect that the current effect have been added. |
 
 **Error codes:**
 
@@ -212,23 +224,13 @@ distortionCollapse(distortionParam: DistortionParam): VisualEffect
 
 Sets distortion collapse effect.
 
-NOTE
-1. This visual effect supports drawing outside the bounds of the control,
-but it is still subject to the clipping (Clip) of the parent control.
-2. Because it contains a foreground Filter, some visual effects of the component itself and its child components
-(e.g., BrightnessBlender or systemMaterial) are incompatible when not used in combination
-with the EffectComponent.
-3. It supports distorting the system material, but when used in combination with the EffectComponent,
-it will cause the background of the system material to be distorted.
-4. When calling distortionCollapse, an offscreen canvas equal in size to the deformed area will be created.
-The content of the current component (including child components) is then drawn onto this offscreen canvas,
-and the existing content on the canvas is drawn with deformation. When using this implementation without
-combining with the EffectComponent, interfaces that require screen capture, such as systemMaterial,
-backgroundEffect, brightness, and blur, will not be able to capture the correct screen.
+NOTE1. This visual effect supports drawing outside the bounds of the control,but it is still subject to the clipping (Clip) of the parent control.2. Because it contains a foreground Filter, some visual effects of the component itself and its child components(e.g., BrightnessBlender or systemMaterial) are incompatible when not used in combination with the EffectComponent.3. It supports distorting the system material, but when used in combination with the EffectComponent,it will cause the background of the system material to be distorted.4. When calling distortionCollapse, an offscreen canvas equal in size to the deformed area will be created.The content of the current component (including child components) is then drawn onto this offscreen canvas,and the existing content on the canvas is drawn with deformation. When using this implementation without combining with the EffectComponent, interfaces that require screen capture, such as systemMaterial,backgroundEffect, brightness, and blur, will not be able to capture the correct screen.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-VisualEffect-distortionCollapse(distortionParam: DistortionParam): VisualEffect--><!--Device-VisualEffect-distortionCollapse(distortionParam: DistortionParam): VisualEffect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -238,13 +240,13 @@ backgroundEffect, brightness, and blur, will not be able to capture the correct 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| distortionParam | DistortionParam | Yes | the distortion params of distortion effect. |
+| distortionParam | [DistortionParam](../../apis-arkui/arkts-components/arkts-arkui-distortionparam-i-sys.md) | Yes | the distortion params of distortion effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| VisualEffect | - Returns the VisualEffect that the current effect have been added. |
+| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | - Returns the VisualEffect that the current effect have been added. |
 
 ## liquidMaterial
 
@@ -257,6 +259,10 @@ Sets the liquid material effect.
 
 **Since:** 22
 
+<!--Device-VisualEffect-liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMask?: Mask,
+      brightnessParam?: BrightnessParam): VisualEffect--><!--Device-VisualEffect-liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMask?: Mask,
+      brightnessParam?: BrightnessParam): VisualEffect-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -265,16 +271,16 @@ Sets the liquid material effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | LiquidMaterialEffectParam | Yes | the liquid material effect parameters. |
-| useEffectMask | Mask | Yes | the mask determines the use effect flag. |
-| distortMask | Mask | No | the mask determines the distort of the effect. |
-| brightnessParam | BrightnessParam | No | the background brightness params of material effect. |
+| param | [LiquidMaterialEffectParam](arkts-arkgraphics2d-liquidmaterialeffectparam-i-sys.md) | Yes | the liquid material effect parameters. |
+| useEffectMask | [Mask](arkts-arkgraphics2d-mask-c-sys.md) | Yes | the mask determines the use effect flag. |
+| distortMask | [Mask](arkts-arkgraphics2d-mask-c-sys.md) | No | the mask determines the distort of the effect. |
+| brightnessParam | [BrightnessParam](arkts-arkgraphics2d-brightnessparam-i-sys.md) | No | the background brightness params of material effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| VisualEffect | - Returns the VisualEffect that the current effect have been added. |
+| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | - Returns the VisualEffect that the current effect have been added. |
 
 **Error codes:**
 

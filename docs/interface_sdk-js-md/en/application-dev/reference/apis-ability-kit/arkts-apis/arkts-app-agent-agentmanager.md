@@ -4,6 +4,8 @@ The module provides the capability to interact with agents in the system.
 
 **Since:** 24
 
+<!--Device-unnamed-declare namespace agentManager--><!--Device-unnamed-declare namespace agentManager-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -22,7 +24,7 @@ import { agentManager } from '@kit.AbilityKit';
 | Name | Description |
 | --- | --- |
 | [connectAgentExtensionAbility](arkts-ability-connectagentextensionability-f-sys.md#connectagentextensionability-1) | Connects to an AgentExtensionAbility. |
-| [connectServiceExtensionAbility](arkts-ability-connectserviceextensionability-f-sys.md#connectserviceextensionability-1) | Connects an AgentExtensionAbility to a ServiceExtensionAbility.If the target service extension ability is visible, you can connect to it.If the target service extension ability is invisible, you need to apply forpermission:ohos.permission.START_INVISIBLE_ABILITY to connect to it.If the target service extension ability is on a remote device, you need to apply forpermission:ohos.permission.DISTRIBUTED_DATASYNC. |
+| [connectServiceExtensionAbility](arkts-ability-connectserviceextensionability-f-sys.md#connectserviceextensionability-1) | Connects an AgentExtensionAbility to a ServiceExtensionAbility.If the target service extension ability is visible, you can connect to it.If the target service extension ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to connect to it.If the target service extension ability is on a remote device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC. |
 | [deleteAgentCard](arkts-ability-deleteagentcard-f-sys.md#deleteagentcard-1) | Deletes the AgentCard within specified agent id. |
 | [disconnectAgentExtensionAbility](arkts-ability-disconnectagentextensionability-f-sys.md#disconnectagentextensionability-1) | Disconnects to an AgentExtensionAbility. |
 | [disconnectServiceExtensionAbility](arkts-ability-disconnectserviceextensionability-f-sys.md#disconnectserviceextensionability-1) | Disconnects an AgentExtensionAbility from a ServiceExtensionAbility, in contrast to{@link connectServiceExtensionAbility}. |

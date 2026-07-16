@@ -2,10 +2,11 @@
 
 Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.
 
-Before calling any of the following APIs, you must use
-[PiPWindow.create()](arkts-arkui-create-f.md#create-1) to create a PiPController instance.
+Before calling any of the following APIs, you must use [PiPWindow.create()](arkts-arkui-create-f.md#create-1) to create a PiPController instance.
 
 **Since:** 11
+
+<!--Device-PiPWindow-interface PiPController--><!--Device-PiPWindow-interface PiPController-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -27,19 +28,21 @@ Obtains the status of the auto-start PiP switch in Settings. This API uses a pro
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-PiPController-getPiPSettingSwitch(): Promise<boolean>--><!--Device-PiPController-getPiPSettingSwitch(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the auto-start PiP switch status. **true** if enabled,**false** otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the auto-start PiP switch status. **true** if enabled,**false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause:The PiP controller has been destroyed. |
 
 **Example**
@@ -74,19 +77,21 @@ Obtains the PIP window information. This API uses a promise to return the result
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-PiPController-getPiPWindowInfo(): Promise<PiPWindowInfo>--><!--Device-PiPController-getPiPWindowInfo(): Promise<PiPWindowInfo>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PiPWindowInfo&gt; | Promise used to return the information about the current PIP window. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PiPWindowInfo> | Promise used to return the information about the current PIP window. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible causes:<br>1.The PiP controller has been destroyed.<br>2.The PiP window is not created or has been destroyed. |
 
 **Example**
@@ -121,13 +126,15 @@ Check whether the PiP window is active. This API uses a promise to return the re
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-PiPController-isPiPActive(): Promise<boolean>--><!--Device-PiPController-isPiPActive(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the PiP window status. **true** is returned if the PiPwindow is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). If thisAPI is called when the PiP lifecycle is not [STARTED](arkts-arkui-pipstate-e.md), **false** is alwaysreturned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the PiP window status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). If this API is called when the PiP lifecycle is not [STARTED](arkts-arkui-pipstate-e.md), **false** is always returned. |
 
 **Error codes:**
 
@@ -167,13 +174,15 @@ Unsubscribes from PiP state events.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PiPController-off(type: 'stateChange'): void--><!--Device-PiPController-off(type: 'stateChange'): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'stateChange' | Yes | Event type. The value is fixed at **'stateChange'**, indicating that the PiPstate changes. |
+| type | 'stateChange' | Yes | Event type. The value is fixed at **'stateChange'**, indicating that the PiP state changes. |
 
 **Example**
 
@@ -189,13 +198,13 @@ this.pipController.off('stateChange');
 off(type: 'controlPanelActionEvent'): void
 ```
 
-Unsubscribes from PiP action events. The
-**[off('controlEvent')](arkts-arkui-pipcontroller-i.md#off-3)**
-API is preferred.
+Unsubscribes from PiP action events. The **[off('controlEvent')](arkts-arkui-pipcontroller-i.md#off-3)** API is preferred.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PiPController-off(type: 'controlPanelActionEvent'): void--><!--Device-PiPController-off(type: 'controlPanelActionEvent'): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -225,14 +234,16 @@ Unsubscribes from PiP action events.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PiPController-off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void--><!--Device-PiPController-off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'controlEvent' | Yes | Event type. The value is fixed at **'controlEvent'**, indicating the actionevent of the PiP controller. |
-| callback | Callback&lt;ControlEventParam&gt; | No | Describes the action event callback of the PiP controller. Ifno value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'controlEvent' | Yes | Event type. The value is fixed at **'controlEvent'**, indicating the action event of the PiP controller. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<ControlEventParam> | No | Describes the action event callback of the PiP controller. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Example**
 
@@ -257,21 +268,23 @@ Unsubscribes from the PiP window size change event.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-PiPController-off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void--><!--Device-PiPController-off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'pipWindowSizeChange' | Yes | Event type. The value is fixed at **'pipWindowSizeChange'**, indicatingthat the PiP window size changes. |
-| callback | Callback&lt;PiPWindowSize&gt; | No | Callback used to return the size of the current PiP window. If avalue is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptionsto the specified event are canceled. |
+| type | 'pipWindowSizeChange' | Yes | Event type. The value is fixed at **'pipWindowSizeChange'**, indicating that the PiP window size changes. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<PiPWindowSize> | No | Callback used to return the size of the current PiP window. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types.<br>3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
 **Example**
 
@@ -309,14 +322,16 @@ Unsubscribes from PiP window active status change events.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-PiPController-off(type: 'activeStatusChange', callback?: Callback<boolean>): void--><!--Device-PiPController-off(type: 'activeStatusChange', callback?: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'activeStatusChange' | Yes | Event type. The value is fixed at **'activeStatusChange'**, indicatingthat the PiP window active status changes. |
-| callback | Callback&lt;boolean&gt; | No | PiP window active status. **true** is returned if the PiP window isvisible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). If no value ispassed in, all subscriptions to the specified event are canceled. |
+| type | 'activeStatusChange' | Yes | Event type. The value is fixed at **'activeStatusChange'**, indicating that the PiP window active status changes. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<boolean> | No | PiP window active status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Example**
 
@@ -335,12 +350,13 @@ this.pipController.off('activeStatusChange', callback);
 on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): void
 ```
 
-Subscribes to PiP state events. To avoid potential memory leaks, you are advised to stop listening when it is no
-longer needed.
+Subscribes to PiP state events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PiPController-on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): void--><!--Device-PiPController-on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -348,8 +364,8 @@ longer needed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'stateChange' | Yes | Event type. The value is fixed at **'stateChange'**, indicating that the PiPstate changes. |
-| callback | (state: PiPState, reason: string) =&gt; void | Yes | Callback used to return the result, which includes the following information:<br>-**state**: [PiPState](arkts-arkui-pipstate-e.md), indicating the new PiP state.<br>- **reason**: a string indicating the reason for the state change.<br>Before &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, the value of **reason** is always **0**,which can be ignored.<br>Since &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, **reason**indicates the reason for switching the current lifecycle. The options are as follows:<br>**"requestStart"**: An application calls the **startPip** API.<br>**"autoStart"**: The application is automatically started in PiP modewhen it is switched to the background.<br>**"requestDelete"**: The application calls the **stopPip** API.<br>**"panelActionDelete"**: The user taps the close button in the PiP window.<br>**"dragDelete"**: The user drags the PiP window to delete.<br>**"panelActionRestore"**: The user taps the restore button in the PiPwindow (or taps the PiP window if there is no restore button) to restore the PiP window.<br>**"other"**: Other reasons, such as the current window or application's main window being closeddue to the startup of a new PiP window. |
+| type | 'stateChange' | Yes | Event type. The value is fixed at **'stateChange'**, indicating that the PiP state changes. |
+| callback | (state: PiPState, reason: string) => void | Yes | Callback used to return the result, which includes the following information:<br>-**state**: [PiPState](arkts-arkui-pipstate-e.md), indicating the new PiP state.<br>- **reason**: a string indicating the reason for the state change.<br>Before &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, the value of **reason** is always **0**,which can be ignored.<br>Since &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, **reason** indicates the reason for switching the current lifecycle. The options are as follows:<br>**"requestStart"**: An application calls the **startPip** API.<br>**"autoStart"**: The application is automatically started in PiP mode when it is switched to the background.<br>**"requestDelete"**: The application calls the **stopPip** API.<br>**"panelActionDelete"**: The user taps the close button in the PiP window.<br>**"dragDelete"**: The user drags the PiP window to delete.<br>**"panelActionRestore"**: The user taps the restore button in the PiP window (or taps the PiP window if there is no restore button) to restore the PiP window.<br>**"other"**: Other reasons, such as the current window or application's main window being closed due to the startup of a new PiP window. |
 
 **Example**
 
@@ -390,14 +406,13 @@ this.pipController.on('stateChange', (state: PiPWindow.PiPState, reason: string)
 on(type: 'controlPanelActionEvent', callback: ControlPanelActionEventCallback): void
 ```
 
-Subscribes to PiP action events. To avoid potential memory leaks, you are advised to stop listening when it is no
-longer needed. The
-[on('controlEvent')](arkts-arkui-pipcontroller-i.md#on-3)
-API is preferred.
+Subscribes to PiP action events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed. The [on('controlEvent')](arkts-arkui-pipcontroller-i.md#on-3)API is preferred.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PiPController-on(type: 'controlPanelActionEvent', callback: ControlPanelActionEventCallback): void--><!--Device-PiPController-on(type: 'controlPanelActionEvent', callback: ControlPanelActionEventCallback): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -406,7 +421,7 @@ API is preferred.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'controlPanelActionEvent' | Yes | Event type. The value is fixed at **'controlPanelActionEvent'**,indicating the action event of the PiP controller. |
-| callback | ControlPanelActionEventCallback | Yes | Action event callback of the PiP controller.<br>**Since:** 12 |
+| callback | [ControlPanelActionEventCallback](arkts-arkui-controlpanelactioneventcallback-t.md) | Yes | Action event callback of the PiP controller.<br>**Since:** 12 |
 
 **Example**
 
@@ -447,12 +462,13 @@ this.pipController.on('controlPanelActionEvent', (event: PiPWindow.PiPActionEven
 on(type: 'controlEvent', callback: Callback<ControlEventParam>): void
 ```
 
-Subscribes to PiP action events. To avoid potential memory leaks, you are advised to stop listening when it is no
-longer needed.
+Subscribes to PiP action events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PiPController-on(type: 'controlEvent', callback: Callback<ControlEventParam>): void--><!--Device-PiPController-on(type: 'controlEvent', callback: Callback<ControlEventParam>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -460,8 +476,8 @@ longer needed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'controlEvent' | Yes | Event type. The value is fixed at **'controlEvent'**, indicating the actionevent of the PiP controller. |
-| callback | Callback&lt;ControlEventParam&gt; | Yes | Action event callback of the PiP controller. |
+| type | 'controlEvent' | Yes | Event type. The value is fixed at **'controlEvent'**, indicating the action event of the PiP controller. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<ControlEventParam> | Yes | Action event callback of the PiP controller. |
 
 **Example**
 
@@ -502,12 +518,13 @@ this.pipController.on('controlEvent', (control) => {
 on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void
 ```
 
-Subscribes to PiP window size change events. To avoid potential memory leaks, you are advised to stop listening
-when it is no longer needed.
+Subscribes to PiP window size change events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed.
 
 **Since:** 15
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-PiPController-on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void--><!--Device-PiPController-on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -515,15 +532,15 @@ when it is no longer needed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'pipWindowSizeChange' | Yes | Event type. The value is fixed at **'pipWindowSizeChange'**, indicatingthat the PiP window size changes. |
-| callback | Callback&lt;PiPWindowSize&gt; | Yes | Callback used to return the size of the current PiP window. |
+| type | 'pipWindowSizeChange' | Yes | Event type. The value is fixed at **'pipWindowSizeChange'**, indicating that the PiP window size changes. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<PiPWindowSize> | Yes | Callback used to return the size of the current PiP window. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Callback is already registered. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause:The PiP controller has been destroyed. |
 
 **Example**
@@ -546,12 +563,13 @@ try {
 on(type: 'activeStatusChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to PiP window active status change events. To avoid potential memory leaks, you are advised to stop
-listening when it is no longer needed.
+Subscribes to PiP window active status change events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed.
 
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-PiPController-on(type: 'activeStatusChange', callback: Callback<boolean>): void--><!--Device-PiPController-on(type: 'activeStatusChange', callback: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -559,8 +577,8 @@ listening when it is no longer needed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'activeStatusChange' | Yes | Event type. The value is fixed at **'activeStatusChange'**, indicatingthat the PiP window active status changes. |
-| callback | Callback&lt;boolean&gt; | Yes | PiP window active status. **true** is returned if the PiP window isvisible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). |
+| type | 'activeStatusChange' | Yes | Event type. The value is fixed at **'activeStatusChange'**, indicating that the PiP window active status changes. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<boolean> | Yes | PiP window active status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). |
 
 **Example**
 
@@ -579,16 +597,15 @@ this.pipController.on('activeStatusChange', callback);
 setAutoStartEnabled(enable: boolean): void
 ```
 
-Sets whether to automatically start the PiP window when the application's main window which can start the
-PiP window transitions to the background. By default, the PiP window is not automatically started.
+Sets whether to automatically start the PiP window when the application's main window which can start the PiP window transitions to the background. By default, the PiP window is not automatically started.
 
-If the XComponent approach is used to implement PiP and the **Navigation** component is used for route management
-, the system caches the top stack information with the specified navigation ID upon the first call of
-**setAutoStartEnabled(true)**.
+If the XComponent approach is used to implement PiP and the **Navigation** component is used for route management, the system caches the top stack information with the specified navigation ID upon the first call of **setAutoStartEnabled(true)**.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PiPController-setAutoStartEnabled(enable: boolean): void--><!--Device-PiPController-setAutoStartEnabled(enable: boolean): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -596,7 +613,7 @@ If the XComponent approach is used to implement PiP and the **Navigation** compo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | If the PiP window needs to be automatically started when the application'smain window transitions to the background, set this parameter to **true**. Otherwise,set this parameter to **false**. If the PiP feature under **Settings** &gt; **System** &gt; **Multi-window**is disabled, the PiP window will not be automatically started when the application's main window transitionsto the background even if this parameter is set to **true**. |
+| enable | boolean | Yes | If the PiP window needs to be automatically started when the application's main window transitions to the background, set this parameter to **true**. Otherwise,set this parameter to **false**. If the PiP feature under **Settings** &gt; **System** &gt; **Multi-window** is disabled, the PiP window will not be automatically started when the application's main window transitions to the background even if this parameter is set to **true**. |
 
 **Example**
 
@@ -618,13 +635,15 @@ Sets the enabled status for a component displayed on the PiP controller.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PiPController-setPiPControlEnabled(controlType: PiPControlType, enabled: boolean): void--><!--Device-PiPController-setPiPControlEnabled(controlType: PiPControlType, enabled: boolean): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controlType | PiPControlType | Yes | Type of the component displayed on the PiP controller. |
+| controlType | [PiPControlType](arkts-arkui-pipcontroltype-e.md) | Yes | Type of the component displayed on the PiP controller. |
 | enabled | boolean | Yes | Enabled status of the component displayed on the PiP controller. **true** if enabled, **false** otherwise. |
 
 **Error codes:**
@@ -654,13 +673,15 @@ Starts a PiP window. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PiPController-startPiP(): Promise<void>--><!--Device-PiPController-startPiP(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -697,13 +718,15 @@ Stops a PiP window. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PiPController-stopPiP(): Promise<void>--><!--Device-PiPController-stopPiP(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -737,26 +760,28 @@ Updates the PiP node content. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-PiPController-updateContentNode(contentNode: typeNode.XComponent): Promise<void>--><!--Device-PiPController-updateContentNode(contentNode: typeNode.XComponent): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contentNode | typeNode.XComponent | Yes | Content to be rendered in the PiP window. The parameter value cannotbe empty. |
+| contentNode | typeNode.XComponent | Yes | Content to be rendered in the PiP window. The parameter value cannot be empty. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types.<br>3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause:The PiP controller has been destroyed. |
 
 **Example**
@@ -787,14 +812,16 @@ Updates the media content size when the media content changes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PiPController-updateContentSize(width: int, height: int): void--><!--Device-PiPController-updateContentSize(width: int, height: int): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | number | Yes | Width of the media content, in px. The value must be an integer greater than 0. It is usedto update the aspect ratio of the PiP window. |
-| height | number | Yes | Height of the media content, in px. The value must be an integer greater than 0. It isused to update the aspect ratio of the PiP window. |
+| width | number | Yes | Width of the media content, in px. The value must be an integer greater than 0. It is used to update the aspect ratio of the PiP window. |
+| height | number | Yes | Height of the media content, in px. The value must be an integer greater than 0. It is used to update the aspect ratio of the PiP window. |
 
 **Error codes:**
 
@@ -823,14 +850,16 @@ Updates the PiP controller status.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PiPController-updatePiPControlStatus(controlType: PiPControlType, status: PiPControlStatus): void--><!--Device-PiPController-updatePiPControlStatus(controlType: PiPControlType, status: PiPControlStatus): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controlType | PiPControlType | Yes | Type of the component displayed on the PiP controller. Currently, onlythe **VIDEO_PLAY_PAUSE**, **MICROPHONE_SWITCH**, **CAMERA_SWITCH**, and **MUTE_SWITCH** component types aresupported. If other component types are passed, they do not take effect and no error is reported. |
-| status | PiPControlStatus | Yes | Status of the component displayed on the PiP controller. |
+| controlType | [PiPControlType](arkts-arkui-pipcontroltype-e.md) | Yes | Type of the component displayed on the PiP controller. Currently, only the **VIDEO_PLAY_PAUSE**, **MICROPHONE_SWITCH**, **CAMERA_SWITCH**, and **MUTE_SWITCH** component types are supported. If other component types are passed, they do not take effect and no error is reported. |
+| status | [PiPControlStatus](arkts-arkui-pipcontrolstatus-e.md) | Yes | Status of the component displayed on the PiP controller. |
 
 **Error codes:**
 

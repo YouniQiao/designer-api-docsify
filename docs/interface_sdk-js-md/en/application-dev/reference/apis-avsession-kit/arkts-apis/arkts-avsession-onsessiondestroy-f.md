@@ -18,13 +18,15 @@ Register session destroy callback
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES_FOR_PUBLIC
 
+<!--Device-avSession-function onSessionDestroy(callback: Callback<AVSessionDescriptor>): void--><!--Device-avSession-function onSessionDestroy(callback: Callback<AVSessionDescriptor>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AVSessionDescriptor&gt; | Yes | Used to handle ('sessionDestroy' command) |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AVSessionDescriptor> | Yes | Used to handle ('sessionDestroy' command) |
 
 **Error codes:**
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 3
 
+<!--Device-unnamed-export interface RequestFullWindowOptions--><!--Device-unnamed-export interface RequestFullWindowOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { AppResponse, ScreenOnVisibleOptions, RequestFullWindowOptions } from '@kit.ArkUI';
+```
 
 ## duration
 
@@ -18,7 +26,9 @@ duration: number
 
 **起始版本：** 3
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RequestFullWindowOptions-duration: number--><!--Device-RequestFullWindowOptions-duration: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

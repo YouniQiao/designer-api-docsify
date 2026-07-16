@@ -12,14 +12,15 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 function uninstallAllAppCertificate() : Promise<void>
 ```
 
-Uninstalls all system application credentials and public user credentials. This API is called only by the
-certificate management application. This API uses a promise to return the result.
+Uninstalls all system application credentials and public user credentials. This API is called only by the certificate management application. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL and ohos.permission.ACCESS_SYSTEM_APP_CERT
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-certificateManager-function uninstallAllAppCertificate() : Promise<void>--><!--Device-certificateManager-function uninstallAllAppCertificate() : Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -29,7 +30,7 @@ certificate management application. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

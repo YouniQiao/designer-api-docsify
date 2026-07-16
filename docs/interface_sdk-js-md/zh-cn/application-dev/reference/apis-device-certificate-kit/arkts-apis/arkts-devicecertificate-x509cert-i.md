@@ -4,7 +4,15 @@ X509证书类。
 
 **起始版本：** 9
 
+<!--Device-cert-interface X509Cert--><!--Device-cert-interface X509Cert-End-->
+
 **系统能力：** SystemCapability.Security.Cert
+
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
 
 ## checkValidityWithDate
 
@@ -16,7 +24,9 @@ checkValidityWithDate(date: string): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-checkValidityWithDate(date: string): void--><!--Device-X509Cert-checkValidityWithDate(date: string): void-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -46,7 +56,9 @@ getBasicConstraints(): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getBasicConstraints(): int--><!--Device-X509Cert-getBasicConstraints(): int-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -66,7 +78,9 @@ getCRLDistributionPoint(): DataArray
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getCRLDistributionPoint(): DataArray--><!--Device-X509Cert-getCRLDistributionPoint(): DataArray-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -74,7 +88,7 @@ getCRLDistributionPoint(): DataArray
 
 | 类型 | 说明 |
 | --- | --- |
-| DataArray | 表示X509证书CRL的分发点统一资源标识符。 |
+| [DataArray](arkts-devicecertificate-dataarray-i.md) | 表示X509证书CRL的分发点统一资源标识符。 |
 
 **错误码：**
 
@@ -94,7 +108,9 @@ getCertSerialNumber(): bigint
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getCertSerialNumber(): bigint--><!--Device-X509Cert-getCertSerialNumber(): bigint-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -120,7 +136,9 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getEncoded(callback: AsyncCallback<EncodingBlob>): void--><!--Device-X509Cert-getEncoded(callback: AsyncCallback<EncodingBlob>): void-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -128,7 +146,7 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;EncodingBlob&gt; | 是 | 回调函数。当获取X509证书序列化数据成功时，err为undefined，data为获取到的X509证书序列化数据；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<EncodingBlob> | 是 | 回调函数。当获取X509证书序列化数据成功时，err为undefined，data为获取到的X509证书序列化数据；否则为错误对象。 |
 
 **错误码：**
 
@@ -149,7 +167,9 @@ getEncoded(): Promise<EncodingBlob>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getEncoded(): Promise<EncodingBlob>--><!--Device-X509Cert-getEncoded(): Promise<EncodingBlob>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -157,7 +177,7 @@ getEncoded(): Promise<EncodingBlob>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;EncodingBlob&gt; | Promise对象，返回X509证书序列化数据。 |
+| Promise<EncodingBlob> | Promise对象，返回X509证书序列化数据。 |
 
 **错误码：**
 
@@ -178,7 +198,9 @@ getExtKeyUsage(): DataArray
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getExtKeyUsage(): DataArray--><!--Device-X509Cert-getExtKeyUsage(): DataArray-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -186,7 +208,7 @@ getExtKeyUsage(): DataArray
 
 | 类型 | 说明 |
 | --- | --- |
-| DataArray | 表示X509证书扩展密钥用途。 |
+| [DataArray](arkts-devicecertificate-dataarray-i.md) | 表示X509证书扩展密钥用途。 |
 
 **错误码：**
 
@@ -206,7 +228,9 @@ getExtensionsObject(): CertExtension
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getExtensionsObject(): CertExtension--><!--Device-X509Cert-getExtensionsObject(): CertExtension-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -214,7 +238,7 @@ getExtensionsObject(): CertExtension
 
 | 类型 | 说明 |
 | --- | --- |
-| CertExtension | 证书扩展域段类对象。 |
+| [CertExtension](arkts-devicecertificate-certextension-i.md) | 证书扩展域段类对象。 |
 
 **错误码：**
 
@@ -232,13 +256,15 @@ getIssuerAltNames(): DataArray
 
 表示获取X509证书颁发者可选名称。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 获取到的X509证书颁发者可选名称数据带字符串结束符。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getIssuerAltNames(): DataArray--><!--Device-X509Cert-getIssuerAltNames(): DataArray-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -246,7 +272,7 @@ getIssuerAltNames(): DataArray
 
 | 类型 | 说明 |
 | --- | --- |
-| DataArray | 表示X509证书颁发者可选名称。 |
+| [DataArray](arkts-devicecertificate-dataarray-i.md) | 表示X509证书颁发者可选名称。 |
 
 **错误码：**
 
@@ -264,13 +290,15 @@ getIssuerName(): DataBlob
 
 表示获取X509证书颁发者。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 获取到的X509证书颁发者名称包含字符串终止符。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getIssuerName(): DataBlob--><!--Device-X509Cert-getIssuerName(): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -278,7 +306,7 @@ getIssuerName(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 表示X509证书颁发者。 |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | 表示X509证书颁发者。 |
 
 **错误码：**
 
@@ -298,7 +326,9 @@ getIssuerName(encodingType: EncodingType): string
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getIssuerName(encodingType: EncodingType): string--><!--Device-X509Cert-getIssuerName(encodingType: EncodingType): string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -306,7 +336,7 @@ getIssuerName(encodingType: EncodingType): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| encodingType | EncodingType | 是 | 表示编码类型。 |
+| encodingType | [EncodingType](arkts-devicecertificate-encodingtype-e.md) | 是 | 表示编码类型。 |
 
 **返回值：**
 
@@ -333,7 +363,9 @@ getIssuerX500DistinguishedName(): X500DistinguishedName
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getIssuerX500DistinguishedName(): X500DistinguishedName--><!--Device-X509Cert-getIssuerX500DistinguishedName(): X500DistinguishedName-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -341,7 +373,7 @@ getIssuerX500DistinguishedName(): X500DistinguishedName
 
 | 类型 | 说明 |
 | --- | --- |
-| X500DistinguishedName | X.500可分辨对象。 |
+| [X500DistinguishedName](arkts-devicecertificate-x500distinguishedname-i.md) | X.500可分辨对象。 |
 
 **错误码：**
 
@@ -361,7 +393,9 @@ getItem(itemType: CertItemType): DataBlob
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getItem(itemType: CertItemType): DataBlob--><!--Device-X509Cert-getItem(itemType: CertItemType): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -369,13 +403,13 @@ getItem(itemType: CertItemType): DataBlob
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| itemType | CertItemType | 是 | 表示需要获取的证书字段。 |
+| itemType | [CertItemType](arkts-devicecertificate-certitemtype-e.md) | 是 | 表示需要获取的证书字段。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 表示X509证书对应的字段，返回值为DER格式。 |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | 表示X509证书对应的字段，返回值为DER格式。 |
 
 **错误码：**
 
@@ -396,7 +430,9 @@ getKeyUsage(): DataBlob
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getKeyUsage(): DataBlob--><!--Device-X509Cert-getKeyUsage(): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -404,7 +440,7 @@ getKeyUsage(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 表示X509证书密钥用途。 |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | 表示X509证书密钥用途。 |
 
 **错误码：**
 
@@ -423,7 +459,9 @@ getNotAfterTime(): string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getNotAfterTime(): string--><!--Device-X509Cert-getNotAfterTime(): string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -451,7 +489,9 @@ getNotBeforeTime(): string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getNotBeforeTime(): string--><!--Device-X509Cert-getNotBeforeTime(): string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -479,7 +519,9 @@ getPublicKey(): cryptoFramework.PubKey
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getPublicKey(): cryptoFramework.PubKey--><!--Device-X509Cert-getPublicKey(): cryptoFramework.PubKey-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -504,9 +546,9 @@ getSerialNumber(): number
 
 表示获取X509证书序列号。
 
-> **说明：**
->
-> 从API version 9开始支持，从API version 10开始废弃，建议使用
+> **说明：**  
+>  
+> 从API version 9开始支持，从API version 10开始废弃，建议使用  
 > [X509Cert.getCertSerialNumber()](arkts-devicecertificate-x509cert-i.md#getcertserialnumber-1)替代。
 
 **起始版本：** 9
@@ -514,6 +556,8 @@ getSerialNumber(): number
 **废弃版本：** 10
 
 **替代接口：** getCertSerialNumber
+
+<!--Device-X509Cert-getSerialNumber(): number--><!--Device-X509Cert-getSerialNumber(): number-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -533,7 +577,9 @@ getSignature(): DataBlob
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getSignature(): DataBlob--><!--Device-X509Cert-getSignature(): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -541,7 +587,7 @@ getSignature(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 表示X509证书签名数据。 |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | 表示X509证书签名数据。 |
 
 **错误码：**
 
@@ -561,7 +607,9 @@ getSignatureAlgName(): string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getSignatureAlgName(): string--><!--Device-X509Cert-getSignatureAlgName(): string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -589,7 +637,9 @@ getSignatureAlgOid(): string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getSignatureAlgOid(): string--><!--Device-X509Cert-getSignatureAlgOid(): string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -617,7 +667,9 @@ getSignatureAlgParams(): DataBlob
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getSignatureAlgParams(): DataBlob--><!--Device-X509Cert-getSignatureAlgParams(): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -625,7 +677,7 @@ getSignatureAlgParams(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 表示X509证书签名算法参数。 |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | 表示X509证书签名算法参数。 |
 
 **错误码：**
 
@@ -644,13 +696,15 @@ getSubjectAltNames(): DataArray
 
 表示获取X509证书主体可选名称。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 获取到的X509证书主体可选名称数据带字符串结束符。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getSubjectAltNames(): DataArray--><!--Device-X509Cert-getSubjectAltNames(): DataArray-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -658,7 +712,7 @@ getSubjectAltNames(): DataArray
 
 | 类型 | 说明 |
 | --- | --- |
-| DataArray | 表示X509证书主体可选名称。 |
+| [DataArray](arkts-devicecertificate-dataarray-i.md) | 表示X509证书主体可选名称。 |
 
 **错误码：**
 
@@ -676,13 +730,15 @@ getSubjectName(encodingType?: EncodingType): DataBlob
 
 表示获取X509证书主体。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 获取到的X509证书主体名称包含字符串终止符。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getSubjectName(encodingType?: EncodingType): DataBlob--><!--Device-X509Cert-getSubjectName(encodingType?: EncodingType): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -690,13 +746,13 @@ getSubjectName(encodingType?: EncodingType): DataBlob
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| encodingType | EncodingType | 否 | 表示编码类型。设置该参数时，获取UTF-8格式的主体名称；不设置时，默认获取ASCII编码格式的主体名称。<br>该参数从API version 12开始可用。<br>**起始版本：** 12 |
+| encodingType | [EncodingType](arkts-devicecertificate-encodingtype-e.md) | 否 | 表示编码类型。设置该参数时，获取UTF-8格式的主体名称；不设置时，默认获取ASCII编码格式的主体名称。<br>该参数从API version 12开始可用。<br>**起始版本：** 12 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 表示X509证书主体名称。不设置encodingType参数，数据转换为字符串后以斜杠（/）分隔相对可分辨名称，设置encodingType参数为EncodingType.ENCODING_UTF8时，数据转换为字符串后以逗号（,）分隔相对可分辨名称。 |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | 表示X509证书主体名称。不设置encodingType参数，数据转换为字符串后以斜杠（/）分隔相对可分辨名称，设置encodingType参数为EncodingType.ENCODING_UTF8时，数据转换为字符串后以逗号（,）分隔相对可分辨名称。 |
 
 **错误码：**
 
@@ -717,7 +773,9 @@ getSubjectX500DistinguishedName(): X500DistinguishedName
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getSubjectX500DistinguishedName(): X500DistinguishedName--><!--Device-X509Cert-getSubjectX500DistinguishedName(): X500DistinguishedName-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -725,7 +783,7 @@ getSubjectX500DistinguishedName(): X500DistinguishedName
 
 | 类型 | 说明 |
 | --- | --- |
-| X500DistinguishedName | X.500可分辨对象。 |
+| [X500DistinguishedName](arkts-devicecertificate-x500distinguishedname-i.md) | X.500可分辨对象。 |
 
 **错误码：**
 
@@ -745,7 +803,9 @@ getVersion(): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-getVersion(): int--><!--Device-X509Cert-getVersion(): int-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -765,7 +825,9 @@ hashCode(): Uint8Array
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-hashCode(): Uint8Array--><!--Device-X509Cert-hashCode(): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -773,7 +835,7 @@ hashCode(): Uint8Array
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | DER格式数据的哈希值。 |
+| [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | DER格式数据的哈希值。 |
 
 **错误码：**
 
@@ -793,7 +855,9 @@ match(param: X509CertMatchParameters): boolean
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-match(param: X509CertMatchParameters): boolean--><!--Device-X509Cert-match(param: X509CertMatchParameters): boolean-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -801,7 +865,7 @@ match(param: X509CertMatchParameters): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | X509CertMatchParameters | 是 | 表示需要匹配的参数。 |
+| param | [X509CertMatchParameters](arkts-devicecertificate-x509certmatchparameters-i.md) | 是 | 表示需要匹配的参数。 |
 
 **返回值：**
 
@@ -827,7 +891,9 @@ toString(): string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-toString(): string--><!--Device-X509Cert-toString(): string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -855,7 +921,9 @@ toString(encodingType: EncodingType): string
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-toString(encodingType: EncodingType): string--><!--Device-X509Cert-toString(encodingType: EncodingType): string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -863,7 +931,7 @@ toString(encodingType: EncodingType): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| encodingType | EncodingType | 是 | 表示编码类型。 |
+| encodingType | [EncodingType](arkts-devicecertificate-encodingtype-e.md) | 是 | 表示编码类型。 |
 
 **返回值：**
 
@@ -890,7 +958,9 @@ verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void--><!--Device-X509Cert-verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -899,7 +969,7 @@ verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | cryptoFramework.PubKey | 是 | 用于验签的公钥对象。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当验签成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当验签成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -918,7 +988,9 @@ verify(key: cryptoFramework.PubKey): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509Cert-verify(key: cryptoFramework.PubKey): Promise<void>--><!--Device-X509Cert-verify(key: cryptoFramework.PubKey): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -932,7 +1004,7 @@ verify(key: cryptoFramework.PubKey): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

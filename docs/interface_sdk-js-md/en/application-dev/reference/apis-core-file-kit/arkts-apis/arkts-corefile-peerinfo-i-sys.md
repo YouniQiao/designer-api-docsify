@@ -6,6 +6,8 @@ Defines information about a registered device.
 
 **Deprecated since:** 26.0.0
 
+<!--Device-userFileManager-interface PeerInfo--><!--Device-userFileManager-interface PeerInfo-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.DistributedCore
 
 **System API:** This is a system API.
@@ -30,6 +32,8 @@ Name of the registered device.
 
 **Deprecated since:** 26.0.0
 
+<!--Device-PeerInfo-readonly deviceName: string--><!--Device-PeerInfo-readonly deviceName: string-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.DistributedCore
 
 **System API:** This is a system API.
@@ -40,14 +44,15 @@ Name of the registered device.
 readonly isOnline: boolean
 ```
 
-Whether the registered device is online. The value **true** means the registered device is online; the value
-**false** means the opposite.
+Whether the registered device is online. The value **true** means the registered device is online; the value **false** means the opposite.
 
 **Type:** boolean
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
+
+<!--Device-PeerInfo-readonly isOnline: boolean--><!--Device-PeerInfo-readonly isOnline: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.DistributedCore
 
@@ -66,6 +71,8 @@ Network ID of the registered device.
 **Since:** 9
 
 **Deprecated since:** 26.0.0
+
+<!--Device-PeerInfo-readonly networkId: string--><!--Device-PeerInfo-readonly networkId: string-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.DistributedCore
 

@@ -1,11 +1,12 @@
 # ColorEffect (System API)
 
-ColorEffect extends [ColorEffectQuery](arkts-camera-coloreffectquery-i-sys.md)
-Provides the APIs to obtain and set the lens color effect.
+ColorEffect extends [ColorEffectQuery](arkts-camera-coloreffectquery-i-sys.md)Provides the APIs to obtain and set the lens color effect.
 
 **Inheritance/Implementation:** ColorEffect extends [ColorEffectQuery](arkts-camera-coloreffectquery-i-sys.md)
 
 **Since:** 11
+
+<!--Device-camera-interface ColorEffect extends ColorEffectQuery--><!--Device-camera-interface ColorEffect extends ColorEffectQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -27,6 +28,8 @@ Obtains the color effect in use.
 
 **Since:** 11
 
+<!--Device-ColorEffect-getColorEffect(): ColorEffectType--><!--Device-ColorEffect-getColorEffect(): ColorEffectType-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -35,7 +38,7 @@ Obtains the color effect in use.
 
 | Type | Description |
 | --- | --- |
-| ColorEffectType | Color effect. |
+| [ColorEffectType](arkts-camera-coloreffecttype-e-sys.md) | Color effect. |
 
 **Error codes:**
 
@@ -60,11 +63,11 @@ function getColorEffect(session: camera.PhotoSessionForSys): camera.ColorEffectT
 setColorEffect(type: ColorEffectType): void
 ```
 
-Sets a color effect. Before the setting, call
-[getSupportedColorEffects](arkts-camera-coloreffectquery-i-sys.md#getsupportedcoloreffects-1) to obtain the supported color
-effects.
+Sets a color effect. Before the setting, call [getSupportedColorEffects](arkts-camera-coloreffectquery-i-sys.md#getsupportedcoloreffects-1) to obtain the supported color effects.
 
 **Since:** 11
+
+<!--Device-ColorEffect-setColorEffect(type: ColorEffectType): void--><!--Device-ColorEffect-setColorEffect(type: ColorEffectType): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -74,7 +77,7 @@ effects.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | ColorEffectType | Yes | The type of color effect. |
+| type | [ColorEffectType](arkts-camera-coloreffecttype-e-sys.md) | Yes | The type of color effect. |
 
 **Error codes:**
 

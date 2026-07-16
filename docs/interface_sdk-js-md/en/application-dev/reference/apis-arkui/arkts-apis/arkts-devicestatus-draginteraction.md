@@ -2,11 +2,13 @@
 
 The **dragInteraction** module provides the APIs to enable and disable listening for dragging status changes.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > - The APIs provided by this module are system APIs.
 
 **Since:** 10
+
+<!--Device-unnamed-declare namespace dragInteraction--><!--Device-unnamed-declare namespace dragInteraction-End-->
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Drag
 

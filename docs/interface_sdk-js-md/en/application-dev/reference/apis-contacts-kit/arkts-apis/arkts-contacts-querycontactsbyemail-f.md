@@ -12,11 +12,7 @@ import { contact } from '@kit.ContactsKit';
 function queryContactsByEmail(email: string, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified email. This API uses an asynchronous callback to return the result. The
-return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to query all
-information about a contact, you are advised to call
-[queryContact](arkts-contacts-querycontact-f.md#querycontact-8)
-to query the contact based on the specified key.
+Queries a contact based on the specified email. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-querycontact-f.md#querycontact-8)to query the contact based on the specified key.
 
 **Since:** 7
 
@@ -26,6 +22,8 @@ to query the contact based on the specified key.
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContactsByEmail(email: string, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByEmail(email: string, callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -33,7 +31,7 @@ to query the contact based on the specified key.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | email | string | Yes | Email address of the contact. |
-| callback | AsyncCallback&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Contact>> | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
 
 **Example**
 
@@ -58,15 +56,13 @@ contact.queryContactsByEmail('xxx@email.com', (err: BusinessError, data) => {
 function queryContactsByEmail(context: Context, email: string, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified email. This API uses an asynchronous callback to return the result. The
-return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to query all
-information about a contact, you are advised to call
-[queryContact](arkts-contacts-querycontact-f.md#querycontact-8)
-to query the contact based on the specified key.
+Queries a contact based on the specified email. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-querycontact-f.md#querycontact-8)to query the contact based on the specified key.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContactsByEmail(context: Context, email: string, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByEmail(context: Context, email: string, callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -74,9 +70,9 @@ to query the contact based on the specified key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
 | email | string | Yes | Email address of the contact. |
-| callback | AsyncCallback&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Contact>> | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
 
 **Error codes:**
 
@@ -113,11 +109,7 @@ contact.queryContactsByEmail(context, 'xxx@email.com', (err: BusinessError, data
 function queryContactsByEmail(email: string, holder: Holder, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified email and holder. This API uses an asynchronous callback to return the
-result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to
-query all information about a contact, you are advised to call
-[queryContact](arkts-contacts-querycontact-f.md#querycontact-8)
-to query the contact based on the specified key.
+Queries a contact based on the specified email and holder. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-querycontact-f.md#querycontact-8)to query the contact based on the specified key.
 
 **Since:** 7
 
@@ -127,6 +119,8 @@ to query the contact based on the specified key.
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContactsByEmail(email: string, holder: Holder, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByEmail(email: string, holder: Holder, callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -134,8 +128,8 @@ to query the contact based on the specified key.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | email | string | Yes | Email address of the contact. |
-| holder | Holder | Yes | Application that creates the contacts.If the passed parameter is empty, the systemcontact application is used by default. |
-| callback | AsyncCallback&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
+| holder | [Holder](arkts-contacts-holder-c.md) | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Contact>> | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
 
 **Example**
 
@@ -165,15 +159,15 @@ function queryContactsByEmail(context: Context, email: string, holder: Holder,
     callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified email and holder. This API uses an asynchronous callback to return the
-result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to
-query all information about a contact, you are advised to call
-[queryContact](arkts-contacts-querycontact-f.md#querycontact-8)
-to query the contact based on the specified key.
+Queries a contact based on the specified email and holder. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-querycontact-f.md#querycontact-8)to query the contact based on the specified key.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContactsByEmail(context: Context, email: string, holder: Holder,
+    callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByEmail(context: Context, email: string, holder: Holder,
+    callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -181,10 +175,10 @@ to query the contact based on the specified key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
 | email | string | Yes | Email address of the contact. |
-| holder | Holder | Yes | Application that creates the contacts.If the passed parameter is empty, the systemcontact application is used by default. |
-| callback | AsyncCallback&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
+| holder | [Holder](arkts-contacts-holder-c.md) | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Contact>> | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
 
 **Error codes:**
 
@@ -225,11 +219,7 @@ contact.queryContactsByEmail(context, 'xxx@email.com', {
 function queryContactsByEmail(email: string, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified email and attributes. This API uses an asynchronous callback to return the
-result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to
-query all information about a contact, you are advised to call
-[queryContact](arkts-contacts-querycontact-f.md#querycontact-8)
-to query the contact based on the specified key.
+Queries a contact based on the specified email and attributes. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-querycontact-f.md#querycontact-8)to query the contact based on the specified key.
 
 **Since:** 7
 
@@ -239,6 +229,8 @@ to query the contact based on the specified key.
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContactsByEmail(email: string, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByEmail(email: string, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -246,8 +238,8 @@ to query the contact based on the specified key.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | email | string | Yes | Email address of the contact. |
-| attrs | ContactAttributes | Yes | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
-| callback | AsyncCallback&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
+| attrs | [ContactAttributes](arkts-contacts-contactattributes-c.md) | Yes | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Contact>> | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
 
 **Example**
 
@@ -275,15 +267,15 @@ function queryContactsByEmail(context: Context, email: string, attrs: ContactAtt
     callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified email and attributes. This API uses an asynchronous callback to return the
-result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to
-query all information about a contact, you are advised to call
-[queryContact](arkts-contacts-querycontact-f.md#querycontact-8)
-to query the contact based on the specified key.
+Queries a contact based on the specified email and attributes. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-querycontact-f.md#querycontact-8)to query the contact based on the specified key.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContactsByEmail(context: Context, email: string, attrs: ContactAttributes,
+    callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByEmail(context: Context, email: string, attrs: ContactAttributes,
+    callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -291,10 +283,10 @@ to query the contact based on the specified key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
 | email | string | Yes | Email address of the contact. |
-| attrs | ContactAttributes | Yes | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
-| callback | AsyncCallback&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
+| attrs | [ContactAttributes](arkts-contacts-contactattributes-c.md) | Yes | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Contact>> | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
 
 **Error codes:**
 
@@ -333,11 +325,7 @@ contact.queryContactsByEmail(context, 'xxx@email.com', {
 function queryContactsByEmail(email: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified email, holder, and attributes. This API uses an asynchronous callback to
-return the result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If
-you want to query all information about a contact, you are advised to call
-[queryContact](arkts-contacts-querycontact-f.md#querycontact-8)
-to query the contact based on the specified key.
+Queries a contact based on the specified email, holder, and attributes. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-querycontact-f.md#querycontact-8)to query the contact based on the specified key.
 
 **Since:** 7
 
@@ -347,6 +335,8 @@ to query the contact based on the specified key.
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContactsByEmail(email: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByEmail(email: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -354,9 +344,9 @@ to query the contact based on the specified key.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | email | string | Yes | Email address of the contact. |
-| holder | Holder | Yes | Application that creates the contacts.If the passed parameter is empty, the systemcontact application is used by default. |
-| attrs | ContactAttributes | Yes | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
-| callback | AsyncCallback&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
+| holder | [Holder](arkts-contacts-holder-c.md) | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
+| attrs | [ContactAttributes](arkts-contacts-contactattributes-c.md) | Yes | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Contact>> | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
 
 **Example**
 
@@ -387,15 +377,13 @@ contact.queryContactsByEmail('xxx@email.com', {
 function queryContactsByEmail(context: Context, email: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified email, holder, and attributes. This API uses an asynchronous callback to
-return the result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If
-you want to query all information about a contact, you are advised to call
-[queryContact](arkts-contacts-querycontact-f.md#querycontact-8)
-to query the contact based on the specified key.
+Queries a contact based on the specified email, holder, and attributes. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-querycontact-f.md#querycontact-8)to query the contact based on the specified key.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContactsByEmail(context: Context, email: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContactsByEmail(context: Context, email: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -403,11 +391,11 @@ to query the contact based on the specified key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
 | email | string | Yes | Email address of the contact. |
-| holder | Holder | Yes | Application that creates the contacts.If the passed parameter is empty, the systemcontact application is used by default. |
-| attrs | ContactAttributes | Yes | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
-| callback | AsyncCallback&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
+| holder | [Holder](arkts-contacts-holder-c.md) | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
+| attrs | [ContactAttributes](arkts-contacts-contactattributes-c.md) | Yes | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Contact>> | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
 
 **Error codes:**
 
@@ -450,11 +438,7 @@ contact.queryContactsByEmail(context, 'xxx@email.com', {
 function queryContactsByEmail(email: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>
 ```
 
-Queries a contact based on the specified email, holder, and attributes. This API uses a promise to return the
-result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to
-query all information about a contact, you are advised to call
-[queryContact](arkts-contacts-querycontact-f.md#querycontact-8)
-to query the contact based on the specified key.
+Queries a contact based on the specified email, holder, and attributes. This API uses a promise to return the result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-querycontact-f.md#querycontact-8)to query the contact based on the specified key.
 
 **Since:** 7
 
@@ -464,6 +448,8 @@ to query the contact based on the specified key.
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryContactsByEmail(email: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>--><!--Device-contact-function queryContactsByEmail(email: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -471,14 +457,14 @@ to query the contact based on the specified key.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | email | string | Yes | Email address of the contact. |
-| holder | Holder | No | Application information for a contact. If this parameter is not specified, it is notused for contact filtering by default. |
-| attrs | ContactAttributes | No | Contact attribute list. If this parameter is not specified, all contactattributes are queried by default. |
+| holder | [Holder](arkts-contacts-holder-c.md) | No | Application information for a contact. If this parameter is not specified, it is not used for contact filtering by default. |
+| attrs | [ContactAttributes](arkts-contacts-contactattributes-c.md) | No | Contact attribute list. If this parameter is not specified, all contact attributes are queried by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Contact&gt;&gt; | Promise used to return the result, which is an array of queried contacts. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Contact>> | Promise used to return the result, which is an array of queried contacts. |
 
 **Example**
 
@@ -505,15 +491,13 @@ promise.then((data) => {
 function queryContactsByEmail(context: Context, email: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>
 ```
 
-Queries a contact based on the specified email, holder, and attributes. This API uses a promise to return the
-result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to
-query all information about a contact, you are advised to call
-[queryContact](arkts-contacts-querycontact-f.md#querycontact-8)
-to query the contact based on the specified key.
+Queries a contact based on the specified email, holder, and attributes. This API uses a promise to return the result. The return result of this API includes only the **id**, **key**, and **Emails** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-querycontact-f.md#querycontact-8)to query the contact based on the specified key.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContactsByEmail(context: Context, email: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>--><!--Device-contact-function queryContactsByEmail(context: Context, email: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -521,16 +505,16 @@ to query the contact based on the specified key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
 | email | string | Yes | Email address of the contact. |
-| holder | Holder | No | Application information for a contact. If this parameter is not specified, it is notused for contact filtering by default. |
-| attrs | ContactAttributes | No | Contact attribute list. If this parameter is not specified, all contactattributes are queried by default. |
+| holder | [Holder](arkts-contacts-holder-c.md) | No | Application information for a contact. If this parameter is not specified, it is not used for contact filtering by default. |
+| attrs | [ContactAttributes](arkts-contacts-contactattributes-c.md) | No | Contact attribute list. If this parameter is not specified, all contact attributes are queried by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Contact&gt;&gt; | Promise used to return the result, which is an array of queried contacts. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Contact>> | Promise used to return the result, which is an array of queried contacts. |
 
 **Error codes:**
 

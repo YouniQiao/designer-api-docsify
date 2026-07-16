@@ -4,6 +4,8 @@ Defines the animator result.
 
 **Since:** 6
 
+<!--Device-unnamed-export interface AnimatorResult--><!--Device-unnamed-export interface AnimatorResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -18,13 +20,13 @@ import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@kit.Ark
 cancel(): void
 ```
 
-Cancels the animation, triggering the [onCancel](../../../../reference/apis-arkui/js-apis-animator.md#properties)
-callback. This API is functionally identical to [finish](arkts-arkui-animatorresult-i.md#finish-1) except for the callback it
-triggers. It is recommended that you use the **finish** API to end animations.
+Cancels the animation, triggering the [onCancel](../../../../reference/apis-arkui/js-apis-animator.md#properties)callback. This API is functionally identical to [finish](arkts-arkui-animatorresult-i.md#finish-1) except for the callback it triggers. It is recommended that you use the **finish** API to end animations.
 
 **Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AnimatorResult-cancel(): void--><!--Device-AnimatorResult-cancel(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,12 +45,13 @@ animator.cancel();
 finish(): void
 ```
 
-Ends the animation, triggering the [onFinish](../../../../reference/apis-arkui/js-apis-animator.md#properties)
-callback.
+Ends the animation, triggering the [onFinish](../../../../reference/apis-arkui/js-apis-animator.md#properties)callback.
 
 **Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AnimatorResult-finish(): void--><!--Device-AnimatorResult-finish(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,6 +76,8 @@ Pauses this animation.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AnimatorResult-pause(): void--><!--Device-AnimatorResult-pause(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Example**
@@ -90,12 +95,13 @@ animator.pause();
 play(): void
 ```
 
-Plays this animation. The animation retains the previous playback state. For example, if the animation is set to
-**reverse** and paused, it will remain in **reverse** when resumed.
+Plays this animation. The animation retains the previous playback state. For example, if the animation is set to **reverse** and paused, it will remain in **reverse** when resumed.
 
 **Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AnimatorResult-play(): void--><!--Device-AnimatorResult-play(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -120,13 +126,15 @@ Resets the animation parameters of this animator.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AnimatorResult-reset(options: AnimatorOptions): void--><!--Device-AnimatorResult-reset(options: AnimatorOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | AnimatorOptions | Yes | Animator options. |
+| options | [AnimatorOptions](arkts-arkui-animatoroptions-i.md) | Yes | Animator options. |
 
 **Error codes:**
 
@@ -181,15 +189,15 @@ struct AnimatorTest {
 reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 ```
 
-Resets the animation parameters of this animator. Compared with
-[reset](arkts-arkui-animatorresult-i.md#reset-1), this API accepts parameters of the
-[SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md) type.
+Resets the animation parameters of this animator. Compared with [reset](arkts-arkui-animatorresult-i.md#reset-1), this API accepts parameters of the [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md) type.
 
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-AnimatorResult-reset(options: AnimatorOptions | SimpleAnimatorOptions): void--><!--Device-AnimatorResult-reset(options: AnimatorOptions | SimpleAnimatorOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -244,6 +252,8 @@ Plays this animation in reverse order. This API does not take effect when the in
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AnimatorResult-reverse(): void--><!--Device-AnimatorResult-reverse(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Example**
@@ -269,13 +279,15 @@ Sets the expected frame rate range.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AnimatorResult-setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange): void--><!--Device-AnimatorResult-setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rateRange | ExpectedFrameRateRange | Yes | Expected frame rate range. |
+| rateRange | [ExpectedFrameRateRange](../arkts-components/arkts-arkui-expectedframeraterange-i.md) | Yes | Expected frame rate range. |
 
 **Example**
 
@@ -328,13 +340,15 @@ Updates this animator.
 
 **Substitutes:** reset
 
+<!--Device-AnimatorResult-update(options: AnimatorOptions): void--><!--Device-AnimatorResult-update(options: AnimatorOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | AnimatorOptions | Yes | Animator options. |
+| options | [AnimatorOptions](arkts-arkui-animatoroptions-i.md) | Yes | Animator options. |
 
 **Example**
 
@@ -361,6 +375,8 @@ Called when this animation is canceled.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AnimatorResult-onCancel: () => void--><!--Device-AnimatorResult-onCancel: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onFinish
@@ -379,6 +395,8 @@ Called when this animation is finished.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AnimatorResult-onFinish: () => void--><!--Device-AnimatorResult-onFinish: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onFrame
@@ -389,8 +407,7 @@ onFrame: (progress: number) => void
 
 Called when a frame is received.
 
-**progress**: current value of the animation. Value range: [begin, end] defined in
-[AnimatorOptions](arkts-arkui-animatoroptions-i.md). Default value range: [0, 1]
+**progress**: current value of the animation. Value range: [begin, end] defined in [AnimatorOptions](arkts-arkui-animatoroptions-i.md). Default value range: [0, 1]
 
 **Type:** (progress: number) => void
 
@@ -399,6 +416,8 @@ Called when a frame is received.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AnimatorResult-onFrame: (progress: number) => void--><!--Device-AnimatorResult-onFrame: (progress: number) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -418,6 +437,8 @@ Called when this animation repeats.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AnimatorResult-onRepeat: () => void--><!--Device-AnimatorResult-onRepeat: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## oncancel
@@ -428,8 +449,7 @@ oncancel: () => void
 
 Called when this animation is canceled.
 
-Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use
-**onCancel** instead.
+Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onCancel** instead.
 
 **Type:** () => void
 
@@ -441,6 +461,8 @@ Note: This API is supported since API version 6 and deprecated since API version
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AnimatorResult-oncancel: () => void--><!--Device-AnimatorResult-oncancel: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onfinish
@@ -451,8 +473,7 @@ onfinish: () => void
 
 Called when this animation is finished.
 
-Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use
-**onFinish** instead.
+Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onFinish** instead.
 
 **Type:** () => void
 
@@ -464,6 +485,8 @@ Note: This API is supported since API version 6 and deprecated since API version
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AnimatorResult-onfinish: () => void--><!--Device-AnimatorResult-onfinish: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onframe
@@ -474,8 +497,7 @@ onframe: (progress: number) => void
 
 Called when a frame is received.
 
-Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use
-**onFrame** instead.
+Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onFrame** instead.
 
 **Type:** (progress: number) => void
 
@@ -487,6 +509,8 @@ Note: This API is supported since API version 6 and deprecated since API version
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AnimatorResult-onframe: (progress: number) => void--><!--Device-AnimatorResult-onframe: (progress: number) => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onrepeat
@@ -497,8 +521,7 @@ onrepeat: () => void
 
 Called when this animation repeats.
 
-Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use
-**onRepeat** instead.
+Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onRepeat** instead.
 
 **Type:** () => void
 
@@ -509,6 +532,8 @@ Note: This API is supported since API version 6 and deprecated since API version
 **Substitutes:** onRepeat
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AnimatorResult-onrepeat: () => void--><!--Device-AnimatorResult-onrepeat: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

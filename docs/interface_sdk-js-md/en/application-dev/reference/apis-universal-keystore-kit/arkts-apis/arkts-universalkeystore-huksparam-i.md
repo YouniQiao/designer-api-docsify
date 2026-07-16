@@ -4,6 +4,8 @@ Defines the **param** field in the **properties** array of **options** used in t
 
 **Since:** 8
 
+<!--Device-huks-export interface HuksParam--><!--Device-huks-export interface HuksParam-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Tag.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HuksParam-tag: HuksTag--><!--Device-HuksParam-tag: HuksTag-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## value
@@ -41,6 +45,8 @@ Value of the tag.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-HuksParam-value: boolean | number | bigint | Uint8Array--><!--Device-HuksParam-value: boolean | number | bigint | Uint8Array-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 

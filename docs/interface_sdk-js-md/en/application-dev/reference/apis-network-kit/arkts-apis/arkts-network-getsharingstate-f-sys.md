@@ -18,6 +18,8 @@ Obtains the network sharing state for given type.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-sharing-function getSharingState(type: SharingIfaceType, callback: AsyncCallback<SharingIfaceState>): void--><!--Device-sharing-function getSharingState(type: SharingIfaceType, callback: AsyncCallback<SharingIfaceState>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Obtains the network sharing state for given type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SharingIfaceType | Yes | Is the enumeration of shareable interface types. |
-| callback | AsyncCallback&lt;SharingIfaceState&gt; | Yes | the callback of getSharingState. {@code SharingIfaceState}. |
+| type | [SharingIfaceType](arkts-network-sharingifacetype-e-sys.md) | Yes | Is the enumeration of shareable interface types. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<SharingIfaceState> | Yes | the callback of getSharingState. {@code SharingIfaceState}. |
 
 **Error codes:**
 
@@ -67,6 +69,8 @@ Obtains the network sharing state for given type.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-sharing-function getSharingState(type: SharingIfaceType): Promise<SharingIfaceState>--><!--Device-sharing-function getSharingState(type: SharingIfaceType): Promise<SharingIfaceState>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
@@ -75,13 +79,13 @@ Obtains the network sharing state for given type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SharingIfaceType | Yes | Is the enumeration of shareable interface types. |
+| type | [SharingIfaceType](arkts-network-sharingifacetype-e-sys.md) | Yes | Is the enumeration of shareable interface types. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SharingIfaceState&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SharingIfaceState> | The promise returned by the function. |
 
 **Error codes:**
 

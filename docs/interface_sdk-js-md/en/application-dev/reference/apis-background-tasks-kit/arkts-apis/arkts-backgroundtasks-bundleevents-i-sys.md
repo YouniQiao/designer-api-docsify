@@ -2,6 +2,8 @@
 
 **Since:** 9
 
+<!--Device-usageStatistics-interface BundleEvents--><!--Device-usageStatistics-interface BundleEvents-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -24,6 +26,8 @@ The usage group of the application.
 
 **Since:** 9
 
+<!--Device-BundleEvents-appGroup?: int--><!--Device-BundleEvents-appGroup?: int-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -39,6 +43,8 @@ The bundle name.
 **Type:** string
 
 **Since:** 9
+
+<!--Device-BundleEvents-bundleName?: string--><!--Device-BundleEvents-bundleName?: string-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -56,6 +62,8 @@ The event id.
 
 **Since:** 9
 
+<!--Device-BundleEvents-eventId?: int--><!--Device-BundleEvents-eventId?: int-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -66,12 +74,13 @@ The event id.
 eventOccurredTime?: number
 ```
 
-The time when this state occurred, in milliseconds.
-<br> Unit:ms
+The time when this state occurred, in milliseconds.<br> Unit:ms
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-BundleEvents-eventOccurredTime?: long--><!--Device-BundleEvents-eventOccurredTime?: long-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -89,6 +98,8 @@ The shortcut ID.
 
 **Since:** 9
 
+<!--Device-BundleEvents-indexOfLink?: string--><!--Device-BundleEvents-indexOfLink?: string-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -104,6 +115,8 @@ The class name.
 **Type:** string
 
 **Since:** 9
+
+<!--Device-BundleEvents-nameOfClass?: string--><!--Device-BundleEvents-nameOfClass?: string-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 

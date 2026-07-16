@@ -6,6 +6,8 @@ Defines the lazy column layout attribute.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class LazyColumnLayoutAttribute extends CommonMethod<LazyColumnLayoutAttribute>--><!--Device-unnamed-export declare class LazyColumnLayoutAttribute extends CommonMethod<LazyColumnLayoutAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Sets the horizontal alignment of the row content.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-LazyColumnLayoutAttribute-alignItems(value: HorizontalAlign | undefined): LazyColumnLayoutAttribute--><!--Device-LazyColumnLayoutAttribute-alignItems(value: HorizontalAlign | undefined): LazyColumnLayoutAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -40,7 +44,7 @@ Sets the horizontal alignment of the row content.
 
 | Type | Description |
 | --- | --- |
-| LazyColumnLayoutAttribute | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
+| [LazyColumnLayoutAttribute](arkts-arkui-lazycolumnlayoutattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
 ## footer
 
@@ -56,6 +60,8 @@ Sets the footer of the lazy column layout.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-LazyColumnLayoutAttribute-footer(builder: CustomBuilder | undefined): LazyColumnLayoutAttribute--><!--Device-LazyColumnLayoutAttribute-footer(builder: CustomBuilder | undefined): LazyColumnLayoutAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -68,7 +74,7 @@ Sets the footer of the lazy column layout.
 
 | Type | Description |
 | --- | --- |
-| LazyColumnLayoutAttribute | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
+| [LazyColumnLayoutAttribute](arkts-arkui-lazycolumnlayoutattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
 ## header
 
@@ -84,6 +90,8 @@ Sets the header of the lazy column layout.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-LazyColumnLayoutAttribute-header(builder: CustomBuilder | undefined): LazyColumnLayoutAttribute--><!--Device-LazyColumnLayoutAttribute-header(builder: CustomBuilder | undefined): LazyColumnLayoutAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -96,7 +104,7 @@ Sets the header of the lazy column layout.
 
 | Type | Description |
 | --- | --- |
-| LazyColumnLayoutAttribute | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
+| [LazyColumnLayoutAttribute](arkts-arkui-lazycolumnlayoutattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
 ## onVisibleIndexesChange
 
@@ -112,19 +120,21 @@ Triggered when the index of child components in the visible area changes.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-LazyColumnLayoutAttribute-onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): LazyColumnLayoutAttribute--><!--Device-LazyColumnLayoutAttribute-onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): LazyColumnLayoutAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnVisibleIndexesChangeCallback \| undefined | Yes | callback function, triggeredwhen the index of child components in the visible area changes.<br>Passing undefined will unregister the callback. |
+| callback | OnVisibleIndexesChangeCallback \| undefined | Yes | callback function, triggered when the index of child components in the visible area changes.<br>Passing undefined will unregister the callback. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| LazyColumnLayoutAttribute | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
+| [LazyColumnLayoutAttribute](arkts-arkui-lazycolumnlayoutattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
 ## space
 
@@ -140,6 +150,8 @@ The spacing between rows.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-LazyColumnLayoutAttribute-space(space: LengthMetrics | undefined): LazyColumnLayoutAttribute--><!--Device-LazyColumnLayoutAttribute-space(space: LengthMetrics | undefined): LazyColumnLayoutAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -152,7 +164,7 @@ The spacing between rows.
 
 | Type | Description |
 | --- | --- |
-| LazyColumnLayoutAttribute | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
+| [LazyColumnLayoutAttribute](arkts-arkui-lazycolumnlayoutattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
 ## sticky
 
@@ -168,6 +180,8 @@ Sets sticky style for header and footer.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-LazyColumnLayoutAttribute-sticky(sticky: StickyStyle | undefined): LazyColumnLayoutAttribute--><!--Device-LazyColumnLayoutAttribute-sticky(sticky: StickyStyle | undefined): LazyColumnLayoutAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -180,5 +194,5 @@ Sets sticky style for header and footer.
 
 | Type | Description |
 | --- | --- |
-| LazyColumnLayoutAttribute | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
+| [LazyColumnLayoutAttribute](arkts-arkui-lazycolumnlayoutattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 20
 
+<!--Device-cloudSyncManager-interface CloudFileInfo--><!--Device-cloudSyncManager-interface CloudFileInfo-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
+
+## 导入模块
+
+```TypeScript
+import { cloudSyncManager } from '@kit.CoreFileKit';
+```
 
 ## bothFileCount
 
@@ -17,6 +25,8 @@ bothFileCount: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-CloudFileInfo-bothFileCount: int--><!--Device-CloudFileInfo-bothFileCount: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -32,6 +42,8 @@ bothFileTotalSize: number
 
 **起始版本：** 20
 
+<!--Device-CloudFileInfo-bothFileTotalSize: long--><!--Device-CloudFileInfo-bothFileTotalSize: long-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## cloudFileCount
@@ -45,6 +57,8 @@ cloudFileCount: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-CloudFileInfo-cloudFileCount: int--><!--Device-CloudFileInfo-cloudFileCount: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -60,6 +74,8 @@ cloudFileTotalSize: number
 
 **起始版本：** 20
 
+<!--Device-CloudFileInfo-cloudFileTotalSize: long--><!--Device-CloudFileInfo-cloudFileTotalSize: long-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## localFileCount
@@ -74,6 +90,8 @@ localFileCount: number
 
 **起始版本：** 20
 
+<!--Device-CloudFileInfo-localFileCount: int--><!--Device-CloudFileInfo-localFileCount: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## localFileTotalSize
@@ -87,6 +105,8 @@ localFileTotalSize: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-CloudFileInfo-localFileTotalSize: long--><!--Device-CloudFileInfo-localFileTotalSize: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 

@@ -18,19 +18,21 @@ Creates a **DataProxyHandle** instance. This API uses a promise to return the re
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-dataShare-function createDataProxyHandle(): Promise<DataProxyHandle>--><!--Device-dataShare-function createDataProxyHandle(): Promise<DataProxyHandle>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataProxyHandle&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DataProxyHandle> | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is beingrestarted abnormally. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 **Example**
 

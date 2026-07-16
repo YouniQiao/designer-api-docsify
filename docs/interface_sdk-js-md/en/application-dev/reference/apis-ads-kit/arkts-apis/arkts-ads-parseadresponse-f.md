@@ -13,10 +13,13 @@ function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,
     context: common.UIAbilityContext): void
 ```
 
-Parses and processes the body of an ad response
-(this API is only open to some pre-installed system applications).
+Parses and processes the body of an ad response(this API is only open to some pre-installed system applications).
 
 **Since:** 12
+
+<!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener, 
+    context: common.UIAbilityContext): void--><!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener, 
+    context: common.UIAbilityContext): void-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -25,14 +28,14 @@ Parses and processes the body of an ad response
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | adResponse | string | Yes | Ad response body. |
-| listener | MultiSlotsAdLoadListener | Yes | Callback listener for ad requests. |
+| listener | [MultiSlotsAdLoadListener](arkts-ads-multislotsadloadlistener-i.md) | Yes | Callback listener for ad requests. |
 | context | common.UIAbilityContext | Yes | Context of the UIAbility. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter.Possible causes: 1. Mandatory parameters areleft unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter.Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported. |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 | [21800005](../errorcode-ads.md#21800005-ad-data-parsing-failure) | Failed to parse the ad response. |

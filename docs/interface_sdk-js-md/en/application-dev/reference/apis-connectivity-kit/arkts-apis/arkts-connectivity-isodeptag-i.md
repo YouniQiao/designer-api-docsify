@@ -6,6 +6,8 @@ Provides methods for accessing IsoDep tag.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface IsoDepTag extends TagSession--><!--Device-unnamed-export interface IsoDepTag extends TagSession-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## getHiLayerResponse
@@ -14,12 +16,13 @@ Provides methods for accessing IsoDep tag.
 getHiLayerResponse(): number[]
 ```
 
-Gets IsoDep HiLayer Response bytes of the tag, which is based on NfcB RF technology.
-It could be null if not based on NfcB.
+Gets IsoDep HiLayer Response bytes of the tag, which is based on NfcB RF technology.It could be null if not based on NfcB.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-IsoDepTag-getHiLayerResponse(): int[]--><!--Device-IsoDepTag-getHiLayerResponse(): int[]-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -35,12 +38,13 @@ It could be null if not based on NfcB.
 getHistoricalBytes(): number[]
 ```
 
-Gets IsoDep Historical bytes of the tag, which is based on NfcA RF technology.
-It could be null if not based on NfcA.
+Gets IsoDep Historical bytes of the tag, which is based on NfcA RF technology.It could be null if not based on NfcA.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-IsoDepTag-getHistoricalBytes(): int[]--><!--Device-IsoDepTag-getHistoricalBytes(): int[]-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -64,13 +68,15 @@ Checks if extended apdu length supported or not.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-IsoDepTag-isExtendedApduSupported(): Promise<boolean>--><!--Device-IsoDepTag-isExtendedApduSupported(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns true if extended apdu length supported, otherwise false. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns true if extended apdu length supported, otherwise false. |
 
 **Error codes:**
 
@@ -95,13 +101,15 @@ Checks if extended apdu length supported or not.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-IsoDepTag-isExtendedApduSupported(callback: AsyncCallback<boolean>): void--><!--Device-IsoDepTag-isExtendedApduSupported(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | The callback. |
 
 **Error codes:**
 

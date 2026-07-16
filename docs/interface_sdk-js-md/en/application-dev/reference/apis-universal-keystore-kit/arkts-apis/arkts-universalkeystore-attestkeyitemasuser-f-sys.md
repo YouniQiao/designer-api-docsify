@@ -18,6 +18,8 @@ Attests a key for the specified user. This API uses a promise to return the resu
 
 **Required permissions:** ohos.permission.ATTEST_KEY and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-huks-function attestKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<HuksReturnResult>--><!--Device-huks-function attestKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<HuksReturnResult>-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **System API:** This is a system API.
@@ -28,13 +30,13 @@ Attests a key for the specified user. This API uses a promise to return the resu
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
 | keyAlias | string | Yes | Alias of the key. The certificate to be obtained stores the key. |
-| huksOptions | HuksOptions | Yes | Options for attesting the key. |
+| huksOptions | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Options for attesting the key. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | Promise used to return the result. If the operation is successful,**certChains** in **HuksReturnResult** is the certificate chain obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HuksReturnResult> | Promise used to return the result. If the operation is successful,**certChains** in **HuksReturnResult** is the certificate chain obtained. |
 
 **Error codes:**
 

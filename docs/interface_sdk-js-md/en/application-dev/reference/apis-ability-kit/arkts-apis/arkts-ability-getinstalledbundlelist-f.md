@@ -12,8 +12,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function getInstalledBundleList(bundleFlags: number): Promise<Array<BundleInfo>>
 ```
 
-Obtains all the bundle information in the system based on the given bundle flags.
-This API uses a promise to return the result.
+Obtains all the bundle information in the system based on the given bundle flags.This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -21,19 +20,21 @@ This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-bundleManager-function getInstalledBundleList(bundleFlags: int): Promise<Array<BundleInfo>>--><!--Device-bundleManager-function getInstalledBundleList(bundleFlags: int): Promise<Array<BundleInfo>>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlags | number | Yes | Information contained in the returned BundleInfo. Fordetails, see {@link BundleFlag}. |
+| bundleFlags | number | Yes | Information contained in the returned BundleInfo. For details, see {@link BundleFlag}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleInfo&gt;&gt; | Promise used to return the list ofinstalled applications. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<BundleInfo>> | Promise used to return the list of installed applications. |
 
 **Error codes:**
 

@@ -8,6 +8,8 @@ Enumerates the media file types that can be selected.
 
 **Substitutes:** [PhotoViewMIMETypes](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoviewmimetypes-e.md)
 
+<!--Device-picker-export enum PhotoViewMIMETypes--><!--Device-picker-export enum PhotoViewMIMETypes-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 ## IMAGE_TYPE
@@ -25,6 +27,8 @@ Image.
 **Substitutes:** [IMAGE_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoviewmimetypes-e.md#image_type)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PhotoViewMIMETypes-IMAGE_TYPE = 'image/*'--><!--Device-PhotoViewMIMETypes-IMAGE_TYPE = 'image/*'-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -44,6 +48,8 @@ Video.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PhotoViewMIMETypes-VIDEO_TYPE = 'video/*'--><!--Device-PhotoViewMIMETypes-VIDEO_TYPE = 'video/*'-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 ## IMAGE_VIDEO_TYPE
@@ -61,6 +67,8 @@ Image and video.
 **Substitutes:** [IMAGE_VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoviewmimetypes-e.md#image_video_type)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PhotoViewMIMETypes-IMAGE_VIDEO_TYPE = '*/*'--><!--Device-PhotoViewMIMETypes-IMAGE_VIDEO_TYPE = '*/*'-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 

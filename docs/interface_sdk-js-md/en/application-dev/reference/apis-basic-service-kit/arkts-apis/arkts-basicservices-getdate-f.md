@@ -20,13 +20,15 @@ Obtains the current system date. This API uses an asynchronous callback to retur
 
 **Substitutes:** [setDate](arkts-basicservices-setdate-f-sys.md#setdate-1)
 
+<!--Device-systemTime-function getDate(callback: AsyncCallback<Date>): void--><!--Device-systemTime-function getDate(callback: AsyncCallback<Date>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Date&gt; | Yes | Callback used to return the current system date. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Date> | Yes | Callback used to return the current system date. |
 
 **Error codes:**
 
@@ -69,13 +71,15 @@ Obtains the current system date. This API uses a promise to return the result.
 
 **Substitutes:** [getDate](arkts-basicservices-getdate-f.md#getdate-1)
 
+<!--Device-systemTime-function getDate(): Promise<Date>--><!--Device-systemTime-function getDate(): Promise<Date>-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Date&gt; | Promise used to return the current system date. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Date> | Promise used to return the current system date. |
 
 **Error codes:**
 

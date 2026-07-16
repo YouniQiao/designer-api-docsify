@@ -4,6 +4,8 @@ Provides the scene detection and query capabilities.
 
 **Since:** 12
 
+<!--Device-camera-interface SceneDetectionQuery--><!--Device-camera-interface SceneDetectionQuery-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -24,6 +26,8 @@ Checks whether a scene feature is supported.
 
 **Since:** 12
 
+<!--Device-SceneDetectionQuery-isSceneFeatureSupported(type: SceneFeatureType): boolean--><!--Device-SceneDetectionQuery-isSceneFeatureSupported(type: SceneFeatureType): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -32,13 +36,13 @@ Checks whether a scene feature is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SceneFeatureType | Yes | Scene feature. |
+| type | [SceneFeatureType](arkts-camera-scenefeaturetype-e-sys.md) | Yes | Scene feature. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the scene feature. **true** if supported, **false**otherwise. |
+| boolean | Check result for the support of the scene feature. **true** if supported, **false** otherwise. |
 
 **Error codes:**
 

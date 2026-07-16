@@ -16,6 +16,8 @@ Get the call Id list of the conference.
 
 **Since:** 7
 
+<!--Device-call-function getCallIdListForConference(callId: int, callback: AsyncCallback<Array<string>>): void--><!--Device-call-function getCallIdListForConference(callId: int, callback: AsyncCallback<Array<string>>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -25,7 +27,7 @@ Get the call Id list of the conference.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | number | Yes | Indicates the identifier of the call. |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Indicates the callback for gettingthe call id list of conference calls. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Indicates the callback for getting the call id list of conference calls. |
 
 **Error codes:**
 
@@ -64,6 +66,8 @@ Get the call Id list of the conference.
 
 **Since:** 7
 
+<!--Device-call-function getCallIdListForConference(callId: int): Promise<Array<string>>--><!--Device-call-function getCallIdListForConference(callId: int): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -78,7 +82,7 @@ Get the call Id list of the conference.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Returns the call id list of conference calls. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Returns the call id list of conference calls. |
 
 **Error codes:**
 

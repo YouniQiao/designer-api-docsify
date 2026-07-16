@@ -4,6 +4,8 @@ Indicates the result of call transfer.
 
 **Since:** 26.0.0
 
+<!--Device-call-export interface CallTransferResult--><!--Device-call-export interface CallTransferResult-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Indicates the end time hours of call forwarding.
 
 **Since:** 26.0.0
 
+<!--Device-CallTransferResult-endHour: int--><!--Device-CallTransferResult-endHour: int-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Indicates the end time minutes of call forwarding.
 **Type:** number
 
 **Since:** 26.0.0
+
+<!--Device-CallTransferResult-endMinute: int--><!--Device-CallTransferResult-endMinute: int-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -58,6 +64,8 @@ Indicates the phone number of call forwarding.
 
 **Since:** 8
 
+<!--Device-CallTransferResult-number: string--><!--Device-CallTransferResult-number: string-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Indicates the start time hours of call forwarding.
 **Type:** number
 
 **Since:** 26.0.0
+
+<!--Device-CallTransferResult-startHour: int--><!--Device-CallTransferResult-startHour: int-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -90,6 +100,8 @@ Indicates the start time minutes of call forwarding.
 
 **Since:** 26.0.0
 
+<!--Device-CallTransferResult-startMinute: int--><!--Device-CallTransferResult-startMinute: int-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -105,6 +117,8 @@ Indicates the status of call forwarding.
 **Type:** TransferStatus
 
 **Since:** 26.0.0
+
+<!--Device-CallTransferResult-status: TransferStatus--><!--Device-CallTransferResult-status: TransferStatus-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 

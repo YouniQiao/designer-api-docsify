@@ -1,5 +1,11 @@
 # getFloatViewLimits
 
+## 导入模块
+
+```TypeScript
+import { floatView } from '@kit.ArkUI';
+```
+
 ## getFloatViewLimits
 
 ```TypeScript
@@ -12,19 +18,21 @@ function getFloatViewLimits(templateType: FloatViewTemplateType): FloatViewLimit
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-floatView-function getFloatViewLimits(templateType: FloatViewTemplateType): FloatViewLimits--><!--Device-floatView-function getFloatViewLimits(templateType: FloatViewTemplateType): FloatViewLimits-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| templateType | FloatViewTemplateType | 是 | 标准悬浮窗模板类型。 |
+| templateType | [FloatViewTemplateType](arkts-arkui-floatviewtemplatetype-e.md) | 是 | 标准悬浮窗模板类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| FloatViewLimits | 返回标准悬浮窗窗口的限制，包括最大尺寸、最小尺寸和宽高比的限制范围。 |
+| [FloatViewLimits](arkts-arkui-floatviewlimits-i.md) | 返回标准悬浮窗窗口的限制，包括最大尺寸、最小尺寸和宽高比的限制范围。 |
 
 **错误码：**
 

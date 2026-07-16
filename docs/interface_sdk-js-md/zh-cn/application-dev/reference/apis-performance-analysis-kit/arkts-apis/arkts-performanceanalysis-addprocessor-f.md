@@ -1,5 +1,11 @@
 # addProcessor
 
+## 导入模块
+
+```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+```
+
 ## addProcessor
 
 ```TypeScript
@@ -12,7 +18,9 @@ function addProcessor(processor: Processor): number
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-hiAppEvent-function addProcessor(processor: Processor): long--><!--Device-hiAppEvent-function addProcessor(processor: Processor): long-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -20,7 +28,7 @@ function addProcessor(processor: Processor): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| processor | Processor | 是 | 上报事件的数据处理者。 |
+| processor | [Processor](arkts-performanceanalysis-processor-i.md) | 是 | 上报事件的数据处理者。 |
 
 **返回值：**
 

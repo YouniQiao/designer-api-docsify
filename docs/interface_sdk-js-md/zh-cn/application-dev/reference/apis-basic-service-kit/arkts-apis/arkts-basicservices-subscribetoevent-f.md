@@ -1,5 +1,11 @@
 # subscribeToEvent
 
+## 导入模块
+
+```TypeScript
+import { commonEventManager } from '@kit.BasicServicesKit';
+```
+
 ## subscribeToEvent
 
 ```TypeScript
@@ -10,7 +16,9 @@ function subscribeToEvent(subscriber: CommonEventSubscriber, callback: Callback<
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-commonEventManager-function subscribeToEvent(subscriber: CommonEventSubscriber, callback: Callback<CommonEventData>): Promise<void>--><!--Device-commonEventManager-function subscribeToEvent(subscriber: CommonEventSubscriber, callback: Callback<CommonEventData>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -18,14 +26,14 @@ function subscribeToEvent(subscriber: CommonEventSubscriber, callback: Callback<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriber | CommonEventSubscriber | 是 | 表示订阅者对象。 |
-| callback | Callback&lt;CommonEventData&gt; | 是 | 表示接收公共事件数据的回调函数。 |
+| subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-i.md) | 是 | 表示订阅者对象。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CommonEventData> | 是 | 表示接收公共事件数据的回调函数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

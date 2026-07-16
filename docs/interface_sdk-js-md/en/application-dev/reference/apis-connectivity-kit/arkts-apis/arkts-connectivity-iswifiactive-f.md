@@ -18,6 +18,8 @@ Query the Wi-Fi status
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-wifiManager-function isWifiActive(): boolean--><!--Device-wifiManager-function isWifiActive(): boolean-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **Return value:**

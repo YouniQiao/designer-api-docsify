@@ -20,6 +20,8 @@ To set {@link Tag.IS_PERSISTENT}, the application must have the ohos.permission.
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-asset-function addAsUser(userId: number, attributes: AssetMap): Promise<void>--><!--Device-asset-function addAsUser(userId: number, attributes: AssetMap): Promise<void>-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
@@ -29,13 +31,13 @@ To set {@link Tag.IS_PERSISTENT}, the application must have the ohos.permission.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | the user identifier to add an Asset. The value must be greater than or equal to 100. |
-| attributes | AssetMap | Yes | Attributes of the asset to add, including the asset plaintext, access controlattributes, and custom data. |
+| attributes | [AssetMap](arkts-assetstore-assetmap-t.md) | Yes | Attributes of the asset to add, including the asset plaintext, access control attributes, and custom data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

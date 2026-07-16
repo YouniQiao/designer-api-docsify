@@ -18,6 +18,8 @@ Hide the AI image generation task popup.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-imageGeneration-function hideGeneratorDialog(uiContext: UIContext): Promise<void>--><!--Device-imageGeneration-function hideGeneratorDialog(uiContext: UIContext): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -26,11 +28,11 @@ Hide the AI image generation task popup.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | UIContext | Yes | The context of dialog for ui display. |
+| uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | The context of dialog for ui display. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the result of hide operation. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the result of hide operation. |
 

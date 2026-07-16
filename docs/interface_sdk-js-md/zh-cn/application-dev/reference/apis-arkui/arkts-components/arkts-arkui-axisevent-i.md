@@ -6,6 +6,8 @@
 
 **起始版本：** 17
 
+<!--Device-unnamed-declare interface AxisEvent extends BaseEvent--><!--Device-unnamed-declare interface AxisEvent extends BaseEvent-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## getCurrentLocalPosition
@@ -20,7 +22,9 @@ getCurrentLocalPosition?(): Coordinate2D
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AxisEvent-getCurrentLocalPosition?(): Coordinate2D--><!--Device-AxisEvent-getCurrentLocalPosition?(): Coordinate2D-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,7 +32,7 @@ getCurrentLocalPosition?(): Coordinate2D
 
 | 类型 | 说明 |
 | --- | --- |
-| Coordinate2D | - 点击位置相对于当前组件实时位置的左上角坐标。 |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | - 点击位置相对于当前组件实时位置的左上角坐标。 |
 
 ## getHorizontalAxisValue
 
@@ -42,7 +46,9 @@ getHorizontalAxisValue(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本17开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AxisEvent-getHorizontalAxisValue(): number--><!--Device-AxisEvent-getHorizontalAxisValue(): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,7 +70,9 @@ getPinchAxisScaleValue(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AxisEvent-getPinchAxisScaleValue(): number--><!--Device-AxisEvent-getPinchAxisScaleValue(): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,7 +94,9 @@ getVerticalAxisValue(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本17开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AxisEvent-getVerticalAxisValue(): number--><!--Device-AxisEvent-getVerticalAxisValue(): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,7 +118,9 @@ hasAxis(axisType: AxisType): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AxisEvent-hasAxis(axisType: AxisType): boolean--><!--Device-AxisEvent-hasAxis(axisType: AxisType): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,7 +128,7 @@ hasAxis(axisType: AxisType): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| axisType | AxisType | 是 | 轴事件的轴类型。 |
+| axisType | [AxisType](../arkts-apis/arkts-arkui-axistype-e.md) | 是 | 轴事件的轴类型。 |
 
 **返回值：**
 
@@ -138,7 +150,9 @@ action: AxisAction
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本17开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AxisEvent-action: AxisAction--><!--Device-AxisEvent-action: AxisAction-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -158,7 +172,9 @@ displayX: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本17开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AxisEvent-displayX: number--><!--Device-AxisEvent-displayX: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -178,7 +194,9 @@ displayY: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本17开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AxisEvent-displayY: number--><!--Device-AxisEvent-displayY: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -192,8 +210,7 @@ eventHandleId?: number
 
 取值范围：[0, +∞)
 
-**说明：** 在使用[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postinputeventwithstrategy-1)接口分发事件时会使用该字段，事件每分
-发一次字段会增加100000。
+**说明：** 在使用[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postinputeventwithstrategy-1)接口分发事件时会使用该字段，事件每分发一次字段会增加100000。
 
 多次使用相同的eventHandleId进行事件分发将导致事件响应异常。仅在构造事件的时候需要对此字段赋值，其余情况开发者无需处理。
 
@@ -203,7 +220,9 @@ eventHandleId?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本24开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AxisEvent-eventHandleId?: number--><!--Device-AxisEvent-eventHandleId?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -225,7 +244,9 @@ globalDisplayX?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AxisEvent-globalDisplayX?: number--><!--Device-AxisEvent-globalDisplayX?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -247,7 +268,9 @@ globalDisplayY?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AxisEvent-globalDisplayY?: number--><!--Device-AxisEvent-globalDisplayY?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -265,7 +288,9 @@ propagation: Callback<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本17开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AxisEvent-propagation: Callback<void>--><!--Device-AxisEvent-propagation: Callback<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -285,7 +310,9 @@ scrollStep?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本17开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AxisEvent-scrollStep?: number--><!--Device-AxisEvent-scrollStep?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -305,7 +332,9 @@ windowX: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本17开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AxisEvent-windowX: number--><!--Device-AxisEvent-windowX: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -325,7 +354,9 @@ windowY: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本17开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AxisEvent-windowY: number--><!--Device-AxisEvent-windowY: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -345,7 +376,9 @@ x: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本17开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AxisEvent-x: number--><!--Device-AxisEvent-x: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -365,7 +398,9 @@ y: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本17开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AxisEvent-y: number--><!--Device-AxisEvent-y: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

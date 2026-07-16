@@ -12,14 +12,15 @@ import { sensor } from '@kit.SensorServiceKit';
 function getAltitude(seaPressure: number, currentPressure: number, callback: AsyncCallback<number>): void
 ```
 
-Obtains the altitude at which the device is located based on the sea-level atmospheric pressure and the current
-atmospheric pressure. This API uses an asynchronous callback to return the result.
+Obtains the altitude at which the device is located based on the sea-level atmospheric pressure and the current atmospheric pressure. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** getDeviceAltitude(seaPressure:
+
+<!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number, callback: AsyncCallback<number>): void--><!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number, callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -29,7 +30,7 @@ atmospheric pressure. This API uses an asynchronous callback to return the resul
 | --- | --- | --- | --- |
 | seaPressure | number | Yes | Sea-level atmospheric pressure, in hPa. |
 | currentPressure | number | Yes | Atmospheric pressure at the altitude where the device is located, in hPa. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the altitude, in meters. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the altitude, in meters. |
 
 **Example**
 
@@ -54,14 +55,15 @@ sensor.getAltitude(0, 200, (err: BusinessError, data: number) => {
 function getAltitude(seaPressure: number, currentPressure: number): Promise<number>
 ```
 
-Obtains the altitude at which the device is located based on the sea-level atmospheric pressure and the current
-atmospheric pressure. This API uses a promise to return the result.
+Obtains the altitude at which the device is located based on the sea-level atmospheric pressure and the current atmospheric pressure. This API uses a promise to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** getDeviceAltitude(seaPressure:
+
+<!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number): Promise<number>--><!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number): Promise<number>-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -76,7 +78,7 @@ atmospheric pressure. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the altitude, in meters. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the altitude, in meters. |
 
 **Example**
 

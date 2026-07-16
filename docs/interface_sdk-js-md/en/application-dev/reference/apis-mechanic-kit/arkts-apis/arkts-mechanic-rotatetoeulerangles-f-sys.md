@@ -16,6 +16,8 @@ Rotates a mechanical device to the absolute angles.
 
 **Since:** 20
 
+<!--Device-mechanicManager-function rotateToEulerAngles(mechId: int, angles: EulerAngles, duration: int): Promise<Result>--><!--Device-mechanicManager-function rotateToEulerAngles(mechId: int, angles: EulerAngles, duration: int): Promise<Result>-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -25,14 +27,14 @@ Rotates a mechanical device to the absolute angles.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mechId | number | Yes | ID of the mechanical device. |
-| angles | EulerAngles | Yes | Absolute angles. |
+| angles | [EulerAngles](arkts-mechanic-eulerangles-i-sys.md) | Yes | Absolute angles. |
 | duration | number | Yes | Rotation duration. Unit: millisecond. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | Promise that return the execution result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Result> | Promise that return the execution result. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Defines the device information of the Ethernet.
 
 **Since:** 20
 
+<!--Device-ethernet-export interface EthernetDeviceInfos--><!--Device-ethernet-export interface EthernetDeviceInfos-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Device connection mode.
 
 **Since:** 20
 
+<!--Device-EthernetDeviceInfos-connectionMode: DeviceConnectionType--><!--Device-EthernetDeviceInfos-connectionMode: DeviceConnectionType-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Ethernet device name.
 **Type:** string
 
 **Since:** 20
+
+<!--Device-EthernetDeviceInfos-deviceName: string--><!--Device-EthernetDeviceInfos-deviceName: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -58,6 +64,8 @@ Ethernet interface name.
 
 **Since:** 20
 
+<!--Device-EthernetDeviceInfos-ifaceName: string--><!--Device-EthernetDeviceInfos-ifaceName: string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Maximum Rate of device.
 **Type:** string
 
 **Since:** 20
+
+<!--Device-EthernetDeviceInfos-maximumRate: string--><!--Device-EthernetDeviceInfos-maximumRate: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -90,6 +100,8 @@ Product name of device.
 
 **Since:** 20
 
+<!--Device-EthernetDeviceInfos-productName: string--><!--Device-EthernetDeviceInfos-productName: string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
@@ -106,6 +118,8 @@ Supplier id of device.
 
 **Since:** 20
 
+<!--Device-EthernetDeviceInfos-supplierId: string--><!--Device-EthernetDeviceInfos-supplierId: string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
@@ -121,6 +135,8 @@ Supplier name of device.
 **Type:** string
 
 **Since:** 20
+
+<!--Device-EthernetDeviceInfos-supplierName: string--><!--Device-EthernetDeviceInfos-supplierName: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 

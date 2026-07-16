@@ -1,5 +1,11 @@
 # getFreeSize
 
+## 导入模块
+
+```TypeScript
+import { storageStatistics } from '@kit.CoreFileKit';
+```
+
 ## getFreeSize
 
 ```TypeScript
@@ -10,13 +16,15 @@ function getFreeSize(): Promise<number>
 
 **起始版本：** 15
 
+<!--Device-storageStatistics-function getFreeSize(): Promise<long>--><!--Device-storageStatistics-function getFreeSize(): Promise<long>-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回内置存储的可用空间大小（单位为Byte）。 (Unit: Byte) |
+| Promise<number> | Promise对象，返回内置存储的可用空间大小（单位为Byte）。 (Unit: Byte) |
 
 **错误码：**
 

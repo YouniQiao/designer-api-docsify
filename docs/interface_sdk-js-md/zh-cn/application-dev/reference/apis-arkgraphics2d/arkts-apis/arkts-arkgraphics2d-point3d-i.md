@@ -6,7 +6,15 @@
 
 **起始版本：** 12
 
+<!--Device-common2D-interface Point3d extends Point--><!--Device-common2D-interface Point3d extends Point-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
+
+## 导入模块
+
+```TypeScript
+import { common2D } from '@kit.ArkGraphics2D';
+```
 
 ## z
 
@@ -19,6 +27,8 @@ z轴坐标，浮点数。
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-Point3d-z: double--><!--Device-Point3d-z: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

@@ -12,10 +12,11 @@ import { sendableRelationalStore } from '@kit.ArkData';
 function toSendableValuesBucket(valuesBucket: NonSendableBucket): ValuesBucket
 ```
 
-Converts a key-value (KV) pair that cannot be passed across threads into the data that can be passed across
-threads.
+Converts a key-value (KV) pair that cannot be passed across threads into the data that can be passed across threads.
 
 **Since:** 12
+
+<!--Device-sendableRelationalStore-function toSendableValuesBucket(valuesBucket: NonSendableBucket): ValuesBucket--><!--Device-sendableRelationalStore-function toSendableValuesBucket(valuesBucket: NonSendableBucket): ValuesBucket-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -23,13 +24,13 @@ threads.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| valuesBucket | NonSendableBucket | Yes | Data that cannot be passed across threads. |
+| valuesBucket | [NonSendableBucket](arkts-arkdata-nonsendablebucket-t.md) | Yes | Data that cannot be passed across threads. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ValuesBucket | Data that can be passed across threads. |
+| [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Data that can be passed across threads. |
 
 **Error codes:**
 

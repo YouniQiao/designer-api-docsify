@@ -2,6 +2,8 @@
 
 **Since:** 12
 
+<!--Device-unnamed-export interface LocaleResponse--><!--Device-unnamed-export interface LocaleResponse-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Country or region. Example: CN.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LocaleResponse-countryOrRegion: string--><!--Device-LocaleResponse-countryOrRegion: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 ## dir
@@ -32,15 +36,15 @@ Country or region. Example: CN.
 dir: "ltr" | "rtl"
 ```
 
-Text layout direction. Available values are as follows:
-ltr: The text direction is from left to right.
-rtl: The text direction is from right to left.
+Text layout direction. Available values are as follows:ltr: The text direction is from left to right.rtl: The text direction is from right to left.
 
 **Type:** "ltr" | "rtl"
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LocaleResponse-dir: "ltr" | "rtl"--><!--Device-LocaleResponse-dir: "ltr" | "rtl"-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -57,6 +61,8 @@ Current language of the application. Example: zh.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LocaleResponse-language: string--><!--Device-LocaleResponse-language: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 

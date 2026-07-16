@@ -2,19 +2,26 @@
 
 一种非线性数据结构。
 
-> **说明**
->
-> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
+> **说明**  
+>  
+> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。  
 > 本节使用以下标识来表示泛型的使用：
 
-- T：Type，支持[Sendable支持的数据类型](../../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。
-**装饰器类型：** \@Sendable
+- T：Type，支持[Sendable支持的数据类型](../../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。**装饰器类型：** \@Sendable
 
 **起始版本：** 12
 
 **装饰器类型：** @Sendable
 
+<!--Device-collections-class Set<T>--><!--Device-collections-class Set<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { collections } from '@kit.ArkTS';
+```
 
 ## [Symbol.iterator]
 
@@ -22,13 +29,13 @@
 [Symbol.iterator](): IterableIterator<T>
 ```
 
-返回一个迭代器，迭代器的每一项都是一个JavaScript对象。
-说明：
-本接口不支持在.ets文件中使用。
+返回一个迭代器，迭代器的每一项都是一个JavaScript对象。说明：本接口不支持在.ets文件中使用。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Set-[Symbol.iterator](): IterableIterator<T>--><!--Device-Set-[Symbol.iterator](): IterableIterator<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -36,7 +43,7 @@
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 迭代器对象。 |
+| IterableIterator<T> | 迭代器对象。 |
 
 **错误码：**
 
@@ -54,7 +61,9 @@ add(value: T): Set<T>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Set-add(value: T): Set<T>--><!--Device-Set-add(value: T): Set<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -68,7 +77,7 @@ add(value: T): Set<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| Set&lt;T&gt; | Set对象。 |
+| [Set](arkts-arkts-set-c.md)<T> | Set对象。 |
 
 **错误码：**
 
@@ -87,7 +96,9 @@ clear(): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Set-clear(): void--><!--Device-Set-clear(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -108,7 +119,9 @@ constructor(values?: readonly T[] | null)
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Set-constructor(values?: readonly T[] | null)--><!--Device-Set-constructor(values?: readonly T[] | null)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -134,7 +147,9 @@ constructor(iterable: Iterable<T>)
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Set-constructor(iterable: Iterable<T>)--><!--Device-Set-constructor(iterable: Iterable<T>)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -142,7 +157,7 @@ constructor(iterable: Iterable<T>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| iterable | Iterable&lt;T&gt; | 是 | 用于构造ArkTS Set的对象。 |
+| iterable | Iterable<T> | 是 | 用于构造ArkTS Set的对象。 |
 
 **错误码：**
 
@@ -160,7 +175,9 @@ delete(value: T): boolean
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Set-delete(value: T): boolean--><!--Device-Set-delete(value: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -193,7 +210,9 @@ entries(): IterableIterator<[T, T]>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Set-entries(): IterableIterator<[T, T]>--><!--Device-Set-entries(): IterableIterator<[T, T]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -201,7 +220,7 @@ entries(): IterableIterator<[T, T]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[T, T]&gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的键值对。 |
+| IterableIterator<[T, T]> | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的键值对。 |
 
 **错误码：**
 
@@ -220,7 +239,9 @@ forEach(callbackFn: (value: T, value2: T, set: Set<T>) => void): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Set-forEach(callbackFn: (value: T, value2: T, set: Set<T>) => void): void--><!--Device-Set-forEach(callbackFn: (value: T, value2: T, set: Set<T>) => void): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -228,7 +249,7 @@ forEach(callbackFn: (value: T, value2: T, set: Set<T>) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, value2: T, set: Set&lt;T&gt;) =&gt; void | 是 | 对每个键值对运行的回调函数。 |
+| callbackFn | (value: T, value2: T, set: Set<T>) => void | 是 | 对每个键值对运行的回调函数。 |
 
 **错误码：**
 
@@ -247,7 +268,9 @@ has(value: T): boolean
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Set-has(value: T): boolean--><!--Device-Set-has(value: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -280,7 +303,9 @@ keys(): IterableIterator<T>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Set-keys(): IterableIterator<T>--><!--Device-Set-keys(): IterableIterator<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -288,7 +313,7 @@ keys(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的键。 |
+| IterableIterator<T> | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的键。 |
 
 **错误码：**
 
@@ -307,7 +332,9 @@ values(): IterableIterator<T>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Set-values(): IterableIterator<T>--><!--Device-Set-values(): IterableIterator<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -315,7 +342,7 @@ values(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的值。 |
+| IterableIterator<T> | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的值。 |
 
 **错误码：**
 
@@ -336,7 +363,9 @@ Set的元素个数。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Set-readonly size: number--><!--Device-Set-readonly size: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

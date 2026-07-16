@@ -4,6 +4,8 @@ Enumeration of different types of DpiFollowStrategy.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare enum SecurityDpiFollowStrategy--><!--Device-unnamed-declare enum SecurityDpiFollowStrategy-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -20,6 +22,8 @@ Followed the host DPI.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SecurityDpiFollowStrategy-FOLLOW_HOST_DPI = 0--><!--Device-SecurityDpiFollowStrategy-FOLLOW_HOST_DPI = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -35,6 +39,8 @@ Followed the UIExtensionAbility.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SecurityDpiFollowStrategy-FOLLOW_UI_EXTENSION_ABILITY_DPI = 1--><!--Device-SecurityDpiFollowStrategy-FOLLOW_UI_EXTENSION_ABILITY_DPI = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

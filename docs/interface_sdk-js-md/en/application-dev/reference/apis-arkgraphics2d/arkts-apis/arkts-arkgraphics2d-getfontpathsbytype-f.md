@@ -18,19 +18,21 @@ Obtains the paths of all font files of a specified font type.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-text-function getFontPathsByType(fontType: SystemFontType): Array<string>--><!--Device-text-function getFontPathsByType(fontType: SystemFontType): Array<string>-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontType | SystemFontType | Yes | Font type. |
+| fontType | [SystemFontType](arkts-arkgraphics2d-systemfonttype-e.md) | Yes | Font type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | List of font file paths. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | List of font file paths. |
 
 **Example**
 

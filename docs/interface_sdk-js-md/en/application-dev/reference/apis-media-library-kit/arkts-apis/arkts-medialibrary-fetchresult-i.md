@@ -6,6 +6,8 @@ Provides APIs to manage the file retrieval result.
 
 **Since:** 12
 
+<!--Device-sendablePhotoAccessHelper-interface FetchResult<T> extends lang.ISendable--><!--Device-sendablePhotoAccessHelper-interface FetchResult<T> extends lang.ISendable-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -20,10 +22,11 @@ import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 close(): void
 ```
 
-Closes this FetchResult instance to invalidate it. After this instance is closed, the APIs in this instance
-cannot be invoked.
+Closes this FetchResult instance to invalidate it. After this instance is closed, the APIs in this instance cannot be invoked.
 
 **Since:** 12
+
+<!--Device-FetchResult-close(): void--><!--Device-FetchResult-close(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -69,13 +72,15 @@ Obtains all the file assets in the result set. This API uses a promise to return
 
 **Since:** 12
 
+<!--Device-FetchResult-getAllObjects(): Promise<Array<T>>--><!--Device-FetchResult-getAllObjects(): Promise<Array<T>>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;T&gt;&gt; | Promise used to return all the assets in the result set. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<T>> | Promise used to return all the assets in the result set. |
 
 **Error codes:**
 
@@ -114,6 +119,8 @@ getCount(): number
 Obtains the total number of files in the result set.
 
 **Since:** 12
+
+<!--Device-FetchResult-getCount(): number--><!--Device-FetchResult-getCount(): number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -161,13 +168,15 @@ Obtains the first asset in the result set. This API uses a promise to return the
 
 **Since:** 12
 
+<!--Device-FetchResult-getFirstObject(): Promise<T>--><!--Device-FetchResult-getFirstObject(): Promise<T>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;T&gt; | Promise used to return the first object in the result set. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<T> | Promise used to return the first object in the result set. |
 
 **Error codes:**
 
@@ -207,13 +216,15 @@ Obtains the last asset in the result set. This API uses a promise to return the 
 
 **Since:** 12
 
+<!--Device-FetchResult-getLastObject(): Promise<T>--><!--Device-FetchResult-getLastObject(): Promise<T>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;T&gt; | Promise used to return the last object in the result set. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<T> | Promise used to return the last object in the result set. |
 
 **Error codes:**
 
@@ -251,10 +262,11 @@ getNextObject(): Promise<T>
 
 Obtains the next asset in the result set. This API uses a promise to return the result.
 
-Before using this API, you must use [isAfterLast()](arkts-medialibrary-fetchresult-i.md#isafterlast-1) to
-check whether the current position is the end of the result set.
+Before using this API, you must use [isAfterLast()](arkts-medialibrary-fetchresult-i.md#isafterlast-1) to check whether the current position is the end of the result set.
 
 **Since:** 12
+
+<!--Device-FetchResult-getNextObject(): Promise<T>--><!--Device-FetchResult-getNextObject(): Promise<T>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -262,7 +274,7 @@ check whether the current position is the end of the result set.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;T&gt; | Promise used to return the next object in the result set. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<T> | Promise used to return the next object in the result set. |
 
 **Error codes:**
 
@@ -303,6 +315,8 @@ Obtains the asset with the given index in the result set. This API uses a promis
 
 **Since:** 12
 
+<!--Device-FetchResult-getObjectByPosition(index: number): Promise<T>--><!--Device-FetchResult-getObjectByPosition(index: number): Promise<T>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -315,7 +329,7 @@ Obtains the asset with the given index in the result set. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;T&gt; | Promise used to return the asset obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<T> | Promise used to return the asset obtained. |
 
 **Error codes:**
 
@@ -356,13 +370,15 @@ Checks whether the cursor is in the last row of the result set.
 
 **Since:** 12
 
+<!--Device-FetchResult-isAfterLast(): boolean--><!--Device-FetchResult-isAfterLast(): boolean-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the cursor is in the last row of the result set; returns **false**otherwise. |
+| boolean | Returns **true** if the cursor is in the last row of the result set; returns **false** otherwise. |
 
 **Error codes:**
 

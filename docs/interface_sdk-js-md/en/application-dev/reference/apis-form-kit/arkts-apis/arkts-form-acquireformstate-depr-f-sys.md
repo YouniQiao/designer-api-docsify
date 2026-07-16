@@ -16,6 +16,8 @@ Obtains the widget state. This API uses an asynchronous callback to return the r
 
 **Required permissions:** ohos.permission.REQUIRE_FORM and ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-formHost-function acquireFormState(want: Want, callback: AsyncCallback<formInfo.FormStateInfo>): void--><!--Device-formHost-function acquireFormState(want: Want, callback: AsyncCallback<formInfo.FormStateInfo>): void-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -24,8 +26,8 @@ Obtains the widget state. This API uses an asynchronous callback to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | **Want** information carried to query the widget state. The information must contain thebundle name, ability name, module name, widget name, and widget dimensions. |
-| callback | AsyncCallback&lt;formInfo.FormStateInfo&gt; | Yes | Callback used to return the result. If the widgetstate is obtained, **error** is undefined and **data** is the widget state obtained; otherwise, **error**is an error object. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | **Want** information carried to query the widget state. The information must contain the bundle name, ability name, module name, widget name, and widget dimensions. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<formInfo.FormStateInfo> | Yes | Callback used to return the result. If the widget state is obtained, **error** is undefined and **data** is the widget state obtained; otherwise, **error** is an error object. |
 
 
 ## acquireFormState
@@ -44,6 +46,8 @@ Obtains the widget state. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.REQUIRE_FORM and ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-formHost-function acquireFormState(want: Want): Promise<formInfo.FormStateInfo>--><!--Device-formHost-function acquireFormState(want: Want): Promise<formInfo.FormStateInfo>-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -52,11 +56,11 @@ Obtains the widget state. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | **Want** information carried to query the widget state. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | **Want** information carried to query the widget state. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;formInfo.FormStateInfo&gt; | Promise used to return the widget state obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<formInfo.FormStateInfo> | Promise used to return the widget state obtained. |
 

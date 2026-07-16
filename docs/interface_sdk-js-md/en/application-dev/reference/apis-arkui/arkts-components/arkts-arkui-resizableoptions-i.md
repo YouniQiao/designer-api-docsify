@@ -2,10 +2,11 @@
 
 Defines the resizable image options.
 
-**Figure 1** Effect of Setting EdgeWidths
-![edgewidths](../../../../reference/apis-arkui/arkui-ts/figures/edgewidths.png)
+**Figure 1** Effect of Setting EdgeWidths![edgewidths](../../../../reference/apis-arkui/arkui-ts/figures/edgewidths.png)
 
 **Since:** 11
+
+<!--Device-unnamed-declare interface ResizableOptions--><!--Device-unnamed-declare interface ResizableOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,15 +20,9 @@ Lattice object, which is used to divide the image by lattice.
 
 **NOTE**
 
-Use the
-[createImageLattice](@ohos.graphics.drawing:drawing.Lattice.createImageLattice(xDivs: Array<number>,
-yDivs: Array<number>, fXCount: number, fYCount: number, fBounds?: common2D.Rect | null, fRectTypes?:
-Array<RectType> | null, fColors?: Array<common2D.Color> | null))
-API of **@ohos.graphics.drawing** to create a **Lattice** type as the input parameter. Lattices located at both
-even columns and even rows are fixed; those at other positions are stretched according to **slice**.
+Use the [createImageLattice](@ohos.graphics.drawing:drawing.Lattice.createImageLattice(xDivs: Array<number>,yDivs: Array<number>, fXCount: number, fYCount: number, fBounds?: common2D.Rect | null, fRectTypes?:Array<RectType> | null, fColors?: Array<common2D.Color> | null))API of **@ohos.graphics.drawing** to create a **Lattice** type as the input parameter. Lattices located at both even columns and even rows are fixed; those at other positions are stretched according to **slice**.
 
-This parameter does not take effect for the [backgroundImageResizable](arkts-arkui-commonmethod-c.md#backgroundimageresizable-1)
-API.
+This parameter does not take effect for the [backgroundImageResizable](arkts-arkui-commonmethod-c.md#backgroundimageresizable-1)API.
 
 When a number is passed, the default unit is px.
 
@@ -38,6 +33,8 @@ When a number is passed, the default unit is px.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ResizableOptions-lattice?: DrawingLattice--><!--Device-ResizableOptions-lattice?: DrawingLattice-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -55,11 +52,9 @@ This attribute takes effect only when both **bottom** and **right** are greater 
 
 When **top** is set, the top part of the image is stretched while the pixel values of the image remain unchanged.
 
-When **right** is set, the right part of the image is stretched while the pixel values of the image remain
-unchanged.
+When **right** is set, the right part of the image is stretched while the pixel values of the image remain unchanged.
 
-When **bottom** is set, the bottom part of the image is stretched while the pixel values of the image remain
-unchanged.
+When **bottom** is set, the bottom part of the image is stretched while the pixel values of the image remain unchanged.
 
 When **left** is set, the left part of the image is stretched while the pixel values of the image remain unchanged.
 
@@ -74,6 +69,8 @@ The effect of setting **EdgeWidths** is shown in Figure 1 (Effect of Setting Edg
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ResizableOptions-slice?: EdgeWidths--><!--Device-ResizableOptions-slice?: EdgeWidths-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

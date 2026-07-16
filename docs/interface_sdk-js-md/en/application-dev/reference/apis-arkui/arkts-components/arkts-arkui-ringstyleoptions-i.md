@@ -2,12 +2,13 @@
 
 Options of the ring style without scales.
 
-Inherits from [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md) and
-[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md).
+Inherits from [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md) and [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md).
 
 **Inheritance/Implementation:** RingStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
 
 **Since:** 10
+
+<!--Device-unnamed-declare interface RingStyleOptions extends ScanEffectOptions, CommonProgressStyleOptions--><!--Device-unnamed-declare interface RingStyleOptions extends ScanEffectOptions, CommonProgressStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,6 +32,8 @@ Default value: **false**
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-RingStyleOptions-shadow?: boolean--><!--Device-RingStyleOptions-shadow?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## status
@@ -39,9 +42,7 @@ Default value: **false**
 status?: ProgressStatus
 ```
 
-Progress state. When this parameter is set to **ProgressStatus.LOADING**, the update check animation is enabled,
-and the progress value setting does not take effect. When the value changes from **ProgressStatus.LOADING** to
-**ProgressStatus.PROGRESSING**, the update check animation runs to completion and then stops.
+Progress state. When this parameter is set to **ProgressStatus.LOADING**, the update check animation is enabled,and the progress value setting does not take effect. When the value changes from **ProgressStatus.LOADING** to **ProgressStatus.PROGRESSING**, the update check animation runs to completion and then stops.
 
 Default value: **ProgressStatus.PROGRESSING**
 
@@ -52,6 +53,8 @@ Default value: **ProgressStatus.PROGRESSING**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RingStyleOptions-status?: ProgressStatus--><!--Device-RingStyleOptions-status?: ProgressStatus-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,6 +75,8 @@ Default value: **4.0vp**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RingStyleOptions-strokeWidth?: Length--><!--Device-RingStyleOptions-strokeWidth?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

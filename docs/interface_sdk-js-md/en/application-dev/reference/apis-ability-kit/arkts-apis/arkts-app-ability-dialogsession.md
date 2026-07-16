@@ -4,6 +4,8 @@ The dialogSession module provides APIs related to the dialog box.
 
 **Since:** 11
 
+<!--Device-unnamed-declare namespace dialogSession--><!--Device-unnamed-declare namespace dialogSession-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -32,6 +34,6 @@ import { dialogSession } from '@kit.AbilityKit';
 | Name | Description |
 | --- | --- |
 | [DialogAbilityInfo](arkts-ability-dialogabilityinfo-i-sys.md) | Provides DialogAbility information, including the bundle name, module name, and ability name. |
-| [DialogSessionInfo](arkts-ability-dialogsessioninfo-i-sys.md) | Provides session information, including the requester information, target ability information list, and otherparameters. |
+| [DialogSessionInfo](arkts-ability-dialogsessioninfo-i-sys.md) | Provides session information, including the requester information, target ability information list, and other parameters. |
 <!--DelEnd-->
 

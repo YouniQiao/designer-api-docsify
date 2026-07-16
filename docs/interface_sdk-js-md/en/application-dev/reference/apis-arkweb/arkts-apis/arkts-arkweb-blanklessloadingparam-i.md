@@ -6,6 +6,8 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 
 **Since:** 23
 
+<!--Device-webview-interface BlanklessLoadingParam--><!--Device-webview-interface BlanklessLoadingParam-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -20,8 +22,7 @@ import { webview } from '@kit.ArkWeb';
 callback?: Callback<BlanklessFrameInterpolationInfo>
 ```
 
-Callback for the blankless frame interpolation, which is used to return the blankless frame interpolation
-information.
+Callback for the blankless frame interpolation, which is used to return the blankless frame interpolation information.
 
 Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
@@ -31,6 +32,8 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BlanklessLoadingParam-callback?: Callback<BlanklessFrameInterpolationInfo>--><!--Device-BlanklessLoadingParam-callback?: Callback<BlanklessFrameInterpolationInfo>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## duration
@@ -39,18 +42,17 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 duration?: number
 ```
 
-Duration of the frame interpolation.
-The valid range is the union of {0} and [200, 2000].
+Duration of the frame interpolation.The valid range is the union of {0} and [200, 2000].
 
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
-The value must be an integer.
-<br>Unit: ms.
+Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.The value must be an integer.<br>Unit: ms.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BlanklessLoadingParam-duration?: number--><!--Device-BlanklessLoadingParam-duration?: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -60,8 +62,7 @@ The value must be an integer.
 enable: boolean
 ```
 
-Whether to enable frame interpolation. The value true indicates to enable frame interpolation, and false
-indicates the opposite.
+Whether to enable frame interpolation. The value true indicates to enable frame interpolation, and false indicates the opposite.
 
 Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
@@ -71,6 +72,8 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BlanklessLoadingParam-enable: boolean--><!--Device-BlanklessLoadingParam-enable: boolean-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## expirationTime
@@ -79,9 +82,7 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 expirationTime?: number
 ```
 
-Expiration time of the historical frame, in ms (UTC time). T indicates the current UTC time. If the
-expiration time is 30 days, the value is 2592000000 ms. The value range is the union of (T, T + 2592000000] and
-{0}. 0 indicates that the expiration time is not specified and the default expiration time (7 days) is used.
+Expiration time of the historical frame, in ms (UTC time). T indicates the current UTC time. If the expiration time is 30 days, the value is 2592000000 ms. The value range is the union of (T, T + 2592000000] and{0}. 0 indicates that the expiration time is not specified and the default expiration time (7 days) is used.
 
 Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
@@ -90,6 +91,8 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BlanklessLoadingParam-expirationTime?: number--><!--Device-BlanklessLoadingParam-expirationTime?: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

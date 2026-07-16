@@ -18,6 +18,8 @@ Customize eap packets by callback
 
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
+<!--Device-eap-function regCustomEapHandler(netType: number, eapCode: number, eapType: number, callback: Callback<EapData>): void--><!--Device-eap-function regCustomEapHandler(netType: number, eapCode: number, eapType: number, callback: Callback<EapData>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 **Parameters:**
@@ -27,7 +29,7 @@ Customize eap packets by callback
 | netType | number | Yes | Indicates net type need to customize. |
 | eapCode | number | Yes | Indicates eap code need to customize. |
 | eapType | number | Yes | Indicates eap type need to customize. |
-| callback | Callback&lt;EapData&gt; | Yes | the callback of eap packet customization. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<EapData> | Yes | the callback of eap packet customization. |
 
 **Error codes:**
 

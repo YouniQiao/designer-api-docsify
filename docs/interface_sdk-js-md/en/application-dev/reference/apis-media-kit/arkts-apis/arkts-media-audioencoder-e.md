@@ -8,6 +8,8 @@ Enumerates the audio encoding formats.
 
 **Substitutes:** [CodecMimeType](arkts-media-codecmimetype-e.md)
 
+<!--Device-media-enum AudioEncoder--><!--Device-media-enum AudioEncoder-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## DEFAULT
@@ -20,12 +22,13 @@ Default encoding format.
 
 This API is defined but not implemented yet.
 
-Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use
-**AUDIO_AAC** in [CodecMimeType](arkts-media-codecmimetype-e.md) instead.
+Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **AUDIO_AAC** in [CodecMimeType](arkts-media-codecmimetype-e.md) instead.
 
 **Since:** 6
 
 **Deprecated since:** 8
+
+<!--Device-AudioEncoder-DEFAULT = 0--><!--Device-AudioEncoder-DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -39,14 +42,15 @@ AMR-NB.
 
 This API is defined but not implemented yet.
 
-Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use
-**AUDIO_AMR_NB** in [CodecMimeType](arkts-media-codecmimetype-e.md) instead.
+Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **AUDIO_AMR_NB** in [CodecMimeType](arkts-media-codecmimetype-e.md) instead.
 
 **Since:** 6
 
 **Deprecated since:** 8
 
 **Substitutes:** AUDIO_AMR_NB
+
+<!--Device-AudioEncoder-AMR_NB = 1--><!--Device-AudioEncoder-AMR_NB = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -60,14 +64,15 @@ Adaptive Multi Rate-Wide Band Speech Codec (AMR-WB).
 
 This API is defined but not implemented yet.
 
-Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use
-**AUDIO_AMR_WB** in [CodecMimeType](arkts-media-codecmimetype-e.md) instead.
+Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **AUDIO_AMR_WB** in [CodecMimeType](arkts-media-codecmimetype-e.md) instead.
 
 **Since:** 6
 
 **Deprecated since:** 8
 
 **Substitutes:** AUDIO_AMR_WB
+
+<!--Device-AudioEncoder-AMR_WB = 2--><!--Device-AudioEncoder-AMR_WB = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -79,14 +84,15 @@ AAC_LC = 3
 
 Advanced Audio Coding Low Complexity (AAC-LC).
 
-Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use
-**AUDIO_AAC** in [CodecMimeType](arkts-media-codecmimetype-e.md) instead.
+Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **AUDIO_AAC** in [CodecMimeType](arkts-media-codecmimetype-e.md) instead.
 
 **Since:** 6
 
 **Deprecated since:** 8
 
 **Substitutes:** AUDIO_AAC
+
+<!--Device-AudioEncoder-AAC_LC = 3--><!--Device-AudioEncoder-AAC_LC = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -100,14 +106,15 @@ High-Efficiency Advanced Audio Coding (HE_AAC).
 
 This API is defined but not implemented yet.
 
-Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use
-**AUDIO_AAC** in [CodecMimeType](arkts-media-codecmimetype-e.md) instead.
+Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **AUDIO_AAC** in [CodecMimeType](arkts-media-codecmimetype-e.md) instead.
 
 **Since:** 6
 
 **Deprecated since:** 8
 
 **Substitutes:** AUDIO_AAC
+
+<!--Device-AudioEncoder-HE_AAC = 4--><!--Device-AudioEncoder-HE_AAC = 4-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 

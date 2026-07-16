@@ -1,11 +1,18 @@
 # ChildProcessOptions
 
-子进程的启动配置选项。通过[childProcessManager](arkts-app-ability-childprocessmanager.md)启动子进程时，可以通过
-ChildProcessOptions配置子进程启动选项。
+子进程的启动配置选项。通过[childProcessManager](arkts-app-ability-childprocessmanager.md)启动子进程时，可以通过ChildProcessOptions配置子进程启动选项。
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface ChildProcessOptions--><!--Device-unnamed-export interface ChildProcessOptions-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+## 导入模块
+
+```TypeScript
+import { ChildProcessOptions } from '@kit.AbilityKit';
+```
 
 ## isolationMode
 
@@ -20,6 +27,8 @@ isolationMode?: boolean
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ChildProcessOptions-isolationMode?: boolean--><!--Device-ChildProcessOptions-isolationMode?: boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -36,6 +45,8 @@ isolationUid?: boolean
 **起始版本：** 21
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ChildProcessOptions-isolationUid?: boolean--><!--Device-ChildProcessOptions-isolationUid?: boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

@@ -4,6 +4,8 @@ CompletedResult
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class CompletedResult--><!--Device-unnamed-export declare class CompletedResult-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Contextual information about the PhotoPicker's exit state.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CompletedResult-contextRecoveryInfo: photoAccessHelper.ContextRecoveryInfo--><!--Device-CompletedResult-contextRecoveryInfo: photoAccessHelper.ContextRecoveryInfo-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## movingPhotoBadgeStates
@@ -36,9 +40,7 @@ Contextual information about the PhotoPicker's exit state.
 movingPhotoBadgeStates: Array<photoAccessHelper.MovingPhotoBadgeStateType>
 ```
 
-M​oving photo badge states for the selected media files in the gallery.
-When isMovingPhotoBadgeShown is true, movingPhotoBadgeStates contains the moving photo states;
-otherwise, it is empty.
+M​oving photo badge states for the selected media files in the gallery.When isMovingPhotoBadgeShown is true, movingPhotoBadgeStates contains the moving photo states;otherwise, it is empty.
 
 **Type:** Array<photoAccessHelper.MovingPhotoBadgeStateType>
 
@@ -48,6 +50,8 @@ otherwise, it is empty.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CompletedResult-movingPhotoBadgeStates: Array<photoAccessHelper.MovingPhotoBadgeStateType>--><!--Device-CompletedResult-movingPhotoBadgeStates: Array<photoAccessHelper.MovingPhotoBadgeStateType>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## photoUris
@@ -56,8 +60,7 @@ otherwise, it is empty.
 photoUris: Array<string>
 ```
 
-URIs of the images or videos selected. The URI array can be used only by calling photoAccessHelper.getAssets
-with temporary authorization. For details about how to use the media file URI, see Using a Media File URI.
+URIs of the images or videos selected. The URI array can be used only by calling photoAccessHelper.getAssets with temporary authorization. For details about how to use the media file URI, see Using a Media File URI.
 
 **Type:** Array<string>
 
@@ -66,6 +69,8 @@ with temporary authorization. For details about how to use the media file URI, s
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CompletedResult-photoUris: Array<string>--><!--Device-CompletedResult-photoUris: Array<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

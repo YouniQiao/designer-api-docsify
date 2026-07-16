@@ -14,17 +14,17 @@ function matchMediaSync(condition: string): MediaQueryListener
 
 Sets the media query condition. This API returns the corresponding media query listener.
 
-> **NOTE**
->
-> - This API is supported since API version 7 and deprecated since API version 18. You are advised to use
-> [matchMediaSync](@link @ohos.arkui.UIContext:MediaQuery#matchMediaSync) instead. Before calling this API, you
-> need to obtain the [MediaQuery](@link @ohos.arkui.UIContext:MediaQuery) object using the
-> [getMediaQuery](@link @ohos.arkui.UIContext:UIContext#getMediaQuery) method in
-> [UIContext](@link @ohos.arkui.UIContext).
->
-> - Since API version 10, you can use the
-> [getMediaQuery](@link @ohos.arkui.UIContext:UIContext#getMediaQuery) API in
-> [UIContext](arkts-arkui-uicontext-c.md) to obtain the
+> **NOTE**  
+>  
+> - This API is supported since API version 7 and deprecated since API version 18. You are advised to use  
+> [matchMediaSync](@link @ohos.arkui.UIContext:MediaQuery#matchMediaSync) instead. Before calling this API, you  
+> need to obtain the [MediaQuery](@link @ohos.arkui.UIContext:MediaQuery) object using the  
+> [getMediaQuery](@link @ohos.arkui.UIContext:UIContext#getMediaQuery) method in  
+> [UIContext](@link @ohos.arkui.UIContext).  
+>  
+> - Since API version 10, you can use the  
+> [getMediaQuery](@link @ohos.arkui.UIContext:UIContext#getMediaQuery) API in  
+> [UIContext](arkts-arkui-uicontext-c.md) to obtain the  
 > [MediaQuery](arkts-arkui-mediaquery-c.md) object associated with the current UI context.
 
 **Since:** 7
@@ -37,19 +37,21 @@ Sets the media query condition. This API returns the corresponding media query l
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-mediaquery-function matchMediaSync(condition: string): MediaQueryListener--><!--Device-mediaquery-function matchMediaSync(condition: string): MediaQueryListener-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| condition | string | Yes | Media query condition. For details, see[Syntax](../../../../ui/arkts-layout-development-media-query.md#syntax). |
+| condition | string | Yes | Media query condition. For details, see [Syntax](../../../../ui/arkts-layout-development-media-query.md#syntax). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MediaQueryListener | Media query listener, which is used to register or deregister the listeningcallback. |
+| [MediaQueryListener](arkts-arkui-mediaquerylistener-i.md) | Media query listener, which is used to register or deregister the listening callback. |
 
 **Example**
 

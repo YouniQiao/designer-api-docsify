@@ -1,21 +1,26 @@
 # AVRecorder
 
-音视频录制管理类，用于音视频媒体录制。在调用AVRecorder的方法前，需要先调用
-[createAVRecorder](arkts-media-createavrecorder-f.md#createavrecorder-1)接口构建一个
-AVRecorder实例。
+音视频录制管理类，用于音视频媒体录制。在调用AVRecorder的方法前，需要先调用[createAVRecorder](arkts-media-createavrecorder-f.md#createavrecorder-1)接口构建一个AVRecorder实例。
 
-音视频录制demo可参考：[音频录制开发指导](../../../../media/media/using-avrecorder-for-recording.md)、
-[视频录制开发指导](../../../../media/media/video-recording.md)。
+音视频录制demo可参考：[音频录制开发指导](../../../../media/media/using-avrecorder-for-recording.md)、[视频录制开发指导](../../../../media/media/video-recording.md)。
 
-> **说明：**
->
-> - 本Interface首批API从API version 9开始支持。
->
+> **说明：**  
+>  
+> - 本Interface首批API从API version 9开始支持。  
+>  
 > - 相机视频录制功能需配合相机模块使用，相机模块接口的使用详情请参考[相机管理](@ohos.multimedia.camera:camera)。
 
 **起始版本：** 9
 
+<!--Device-unnamed-interface AVRecorder--><!--Device-unnamed-interface AVRecorder-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
+
+## 导入模块
+
+```TypeScript
+import { media } from '@kit.MediaKit';
+```
 
 ## getInputMetaSurface
 
@@ -27,6 +32,8 @@ getInputMetaSurface(type: MetaSourceType): Promise<string>
 
 **起始版本：** 12
 
+<!--Device-AVRecorder-getInputMetaSurface(type: MetaSourceType): Promise<string>--><!--Device-AVRecorder-getInputMetaSurface(type: MetaSourceType): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -35,13 +42,13 @@ getInputMetaSurface(type: MetaSourceType): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | MetaSourceType | 是 | 元数据源类型。 |
+| type | [MetaSourceType](arkts-media-metasourcetype-e-sys.md) | 是 | 元数据源类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回输入surface id字符串。 |
+| Promise<string> | Promise对象，返回输入surface id字符串。 |
 
 **错误码：**
 
@@ -65,6 +72,8 @@ isWatermarkSupported(): Promise<boolean>
 
 **起始版本：** 13
 
+<!--Device-AVRecorder-isWatermarkSupported(): Promise<boolean>--><!--Device-AVRecorder-isWatermarkSupported(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -73,7 +82,7 @@ isWatermarkSupported(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回查询结果。true表示设备支持硬件数字水印，false表示不支持。 |
+| Promise<boolean> | Promise对象，返回查询结果。true表示设备支持硬件数字水印，false表示不支持。 |
 
 **示例：**
 
@@ -94,14 +103,13 @@ avRecorder.isWatermarkSupported().then((isWatermarkSupported: boolean) => {
 setMetadata(metadata: Record<string, string>): void
 ```
 
-设置录制的元数据信息。如果这些信息的键相同，会覆盖config.metadata.customInfo（参考
-[prepare()](media.AVRecorder.prepare(config: AVRecorderConfig))和
-[AVRecorderConfig](@ohos.multimedia.media:media.AVRecorderConfig)）中的值。
+设置录制的元数据信息。如果这些信息的键相同，会覆盖config.metadata.customInfo（参考[prepare()](media.AVRecorder.prepare(config: AVRecorderConfig))和[AVRecorderConfig](@ohos.multimedia.media:media.AVRecorderConfig)）中的值。
 
-该方法只能在[prepare()](media.AVRecorder.prepare(config: AVRecorderConfig))事件成功触发后，且必须在
-[stop()](media.AVRecorder.stop(callback: AsyncCallback<void>))之前调用。
+该方法只能在[prepare()](media.AVRecorder.prepare(config: AVRecorderConfig))事件成功触发后，且必须在[stop()](media.AVRecorder.stop(callback: AsyncCallback<void>))之前调用。
 
 **起始版本：** 26.0.0
+
+<!--Device-AVRecorder-setMetadata(metadata: Record<string, string>): void--><!--Device-AVRecorder-setMetadata(metadata: Record<string, string>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -111,7 +119,7 @@ setMetadata(metadata: Record<string, string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| metadata | Record&lt;string, string&gt; | 是 | 录制的元数据信息。<br>格式为字符串键值对，其中，键需要以`com.openharmony.`开头，且值的长度不能超过256个字节。 |
+| metadata | Record<string, string> | 是 | 录制的元数据信息。<br>格式为字符串键值对，其中，键需要以`com.openharmony.`开头，且值的长度不能超过256个字节。 |
 
 **错误码：**
 
@@ -134,6 +142,8 @@ setWatermark(watermark: image.PixelMap, config: WatermarkConfig): Promise<void>
 
 **起始版本：** 13
 
+<!--Device-AVRecorder-setWatermark(watermark: image.PixelMap, config: WatermarkConfig): Promise<void>--><!--Device-AVRecorder-setWatermark(watermark: image.PixelMap, config: WatermarkConfig): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **系统接口：** 此接口为系统接口。
@@ -143,13 +153,13 @@ setWatermark(watermark: image.PixelMap, config: WatermarkConfig): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | watermark | image.PixelMap | 是 | 水印图片。 |
-| config | WatermarkConfig | 是 | 水印配置。 |
+| config | [WatermarkConfig](arkts-media-watermarkconfig-i-sys.md) | 是 | 水印配置。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

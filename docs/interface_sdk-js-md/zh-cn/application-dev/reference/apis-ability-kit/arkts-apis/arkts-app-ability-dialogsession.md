@@ -4,9 +4,17 @@ dialogSession模块用于支持系统应用弹框功能。
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace dialogSession--><!--Device-unnamed-declare namespace dialogSession-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { dialogSession } from '@kit.AbilityKit';
+```
 
 ## 汇总
 

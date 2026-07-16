@@ -18,6 +18,8 @@ Send terminal response command to SIM card.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function sendTerminalResponseCmd(slotId: int, cmd: string, callback: AsyncCallback<void>): void--><!--Device-sim-function sendTerminalResponseCmd(slotId: int, cmd: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Send terminal response command to SIM card.
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
 | cmd | string | Yes | Indicates sending command. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of sendTerminalResponseCmd. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of sendTerminalResponseCmd. |
 
 **Error codes:**
 
@@ -68,6 +70,8 @@ Send terminal response command to SIM card.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function sendTerminalResponseCmd(slotId: int, cmd: string): Promise<void>--><!--Device-sim-function sendTerminalResponseCmd(slotId: int, cmd: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -83,7 +87,7 @@ Send terminal response command to SIM card.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the sendTerminalResponseCmd. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the sendTerminalResponseCmd. |
 
 **Error codes:**
 

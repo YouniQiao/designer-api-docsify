@@ -14,12 +14,13 @@ function queryAppGroupSync(): number
 
 Queries the app group of the calling application.
 
-The priority defined in a priority group restricts the resource usage of an application,
-for example, restricting the running of background tasks.
+The priority defined in a priority group restricts the resource usage of an application,for example, restricting the running of background tasks.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
+
+<!--Device-usageStatistics-function queryAppGroupSync(): int--><!--Device-usageStatistics-function queryAppGroupSync(): int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -64,12 +65,13 @@ function queryAppGroupSync(bundleName: string): number
 
 Queries the usage priority group by bundleName.
 
-The priority defined in a priority group restricts the resource usage of an application,
-for example, restricting the running of background tasks.
+The priority defined in a priority group restricts the resource usage of an application,for example, restricting the running of background tasks.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
+
+<!--Device-usageStatistics-function queryAppGroupSync(bundleName: string): int--><!--Device-usageStatistics-function queryAppGroupSync(bundleName: string): int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 

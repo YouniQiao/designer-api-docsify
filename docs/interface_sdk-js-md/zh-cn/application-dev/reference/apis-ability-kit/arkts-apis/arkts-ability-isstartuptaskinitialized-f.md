@@ -1,5 +1,11 @@
 # isStartupTaskInitialized
 
+## 导入模块
+
+```TypeScript
+import { startupManager } from '@kit.AbilityKit';
+```
+
 ## isStartupTaskInitialized
 
 ```TypeScript
@@ -11,6 +17,8 @@ function isStartupTaskInitialized(startupTask: string): boolean
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-startupManager-function isStartupTaskInitialized(startupTask: string): boolean--><!--Device-startupManager-function isStartupTaskInitialized(startupTask: string): boolean-End-->
 
 **系统能力：** SystemCapability.Ability.AppStartup
 

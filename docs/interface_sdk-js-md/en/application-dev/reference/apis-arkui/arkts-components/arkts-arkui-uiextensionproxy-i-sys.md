@@ -1,10 +1,10 @@
 # UIExtensionProxy (System API)
 
-This interface is used for send data to the UIExtensionAbility.<br/>
-It is returned from onRemoteReady callback of UIExtensionComponent<br/>
-when UIExtensionAbility connects successfully
+This interface is used for send data to the UIExtensionAbility.<br/>It is returned from onRemoteReady callback of UIExtensionComponent<br/>when UIExtensionAbility connects successfully
 
 **Since:** 10
+
+<!--Device-unnamed-declare interface UIExtensionProxy--><!--Device-unnamed-declare interface UIExtensionProxy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,12 +16,13 @@ when UIExtensionAbility connects successfully
 off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 ```
 
-Deregisters the listener that watches for async data receiver callback being registered by UIExtensionAbility.
-AnonyMous Object Rectification
+Deregisters the listener that watches for async data receiver callback being registered by UIExtensionAbility.AnonyMous Object Rectification
 
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionProxy-off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void--><!--Device-UIExtensionProxy-off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,7 +33,7 @@ AnonyMous Object Rectification
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'asyncReceiverRegister' | Yes | Type of the listened event. |
-| callback | Callback&lt;UIExtensionProxy&gt; | No | Callback of the listened event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<UIExtensionProxy> | No | Callback of the listened event. |
 
 ## off('syncReceiverRegister')
 
@@ -40,12 +41,13 @@ AnonyMous Object Rectification
 off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 ```
 
-Deregisters the listener that watches for sync data receiver callback being registered by UIExtensionAbility.
-AnonyMous Object Rectification
+Deregisters the listener that watches for sync data receiver callback being registered by UIExtensionAbility.AnonyMous Object Rectification
 
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionProxy-off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void--><!--Device-UIExtensionProxy-off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,7 +58,7 @@ AnonyMous Object Rectification
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'syncReceiverRegister' | Yes | Type of the listened event. |
-| callback | Callback&lt;UIExtensionProxy&gt; | No | Callback of the listened event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<UIExtensionProxy> | No | Callback of the listened event. |
 
 ## on('asyncReceiverRegister')
 
@@ -64,12 +66,13 @@ AnonyMous Object Rectification
 on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 ```
 
-Register the listener that watches for async data receiver callback being registered by UIExtensionAbility.
-AnonyMous Object Rectification
+Register the listener that watches for async data receiver callback being registered by UIExtensionAbility.AnonyMous Object Rectification
 
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionProxy-on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void--><!--Device-UIExtensionProxy-on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -80,7 +83,7 @@ AnonyMous Object Rectification
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'asyncReceiverRegister' | Yes | Indicates the type of event. |
-| callback | Callback&lt;UIExtensionProxy&gt; | Yes | Callback of the listened event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<UIExtensionProxy> | Yes | Callback of the listened event. |
 
 ## on('syncReceiverRegister')
 
@@ -88,12 +91,13 @@ AnonyMous Object Rectification
 on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 ```
 
-Register the listener that watches for sync data receiver callback being registered by UIExtensionAbility.
-AnonyMous Object Rectification
+Register the listener that watches for sync data receiver callback being registered by UIExtensionAbility.AnonyMous Object Rectification
 
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionProxy-on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void--><!--Device-UIExtensionProxy-on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,7 +108,7 @@ AnonyMous Object Rectification
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'syncReceiverRegister' | Yes | Indicates the type of event. |
-| callback | Callback&lt;UIExtensionProxy&gt; | Yes | Callback of the listened event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<UIExtensionProxy> | Yes | Callback of the listened event. |
 
 ## send
 
@@ -112,12 +116,13 @@ AnonyMous Object Rectification
 send(data: Record<string, Object>): void
 ```
 
-This function is for sending data to the UIExtensionAbility.
-AnonyMous Object Rectification
+This function is for sending data to the UIExtensionAbility.AnonyMous Object Rectification
 
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionProxy-send(data: Record<string, Object>): void--><!--Device-UIExtensionProxy-send(data: Record<string, Object>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -127,7 +132,7 @@ AnonyMous Object Rectification
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | Yes |  |
+| data | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Object> | Yes |  |
 
 ## sendSync
 
@@ -135,12 +140,13 @@ AnonyMous Object Rectification
 sendSync(data: Record<string, Object>): Record<string, Object>
 ```
 
-This function is for sending data to the UIExtensionAbility and waiting the result in blocking mode.
-AnonyMous Object Rectification
+This function is for sending data to the UIExtensionAbility and waiting the result in blocking mode.AnonyMous Object Rectification
 
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionProxy-sendSync(data: Record<string, Object>): Record<string, Object>--><!--Device-UIExtensionProxy-sendSync(data: Record<string, Object>): Record<string, Object>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -150,13 +156,13 @@ AnonyMous Object Rectification
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | Yes | Data send to the UIExtensionAbility. |
+| data | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Object> | Yes | Data send to the UIExtensionAbility. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Record&lt;string, Object&gt; | data - Data transferred from the UIExtensionAbility. |
+| [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Object> | data - Data transferred from the UIExtensionAbility. |
 
 **Error codes:**
 

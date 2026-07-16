@@ -1,5 +1,11 @@
 # write（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
+```
+
 ## write
 
 ```TypeScript
@@ -10,6 +16,8 @@ function write(info: SysEventInfo): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-hiSysEvent-function write(info: SysEventInfo): Promise<void>--><!--Device-hiSysEvent-function write(info: SysEventInfo): Promise<void>-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -18,13 +26,13 @@ function write(info: SysEventInfo): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | SysEventInfo | 是 | 系统事件。 |
+| info | [SysEventInfo](arkts-performanceanalysis-syseventinfo-i-sys.md) | 是 | 系统事件。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise实例，可以在其then()、catch()方法中分别对系统事件写入成功、写入异常的回调进行处理。 |
+| Promise<void> | - Promise实例，可以在其then()、catch()方法中分别对系统事件写入成功、写入异常的回调进行处理。 |
 
 **错误码：**
 
@@ -89,6 +97,8 @@ function write(info: SysEventInfo, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-hiSysEvent-function write(info: SysEventInfo, callback: AsyncCallback<void>): void--><!--Device-hiSysEvent-function write(info: SysEventInfo, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -97,8 +107,8 @@ function write(info: SysEventInfo, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | SysEventInfo | 是 | 系统事件。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，可以在回调函数中处理接口返回值。<br/>- 0表示事件校验成功，事件正常异步写入事件文件；<br/>- 正值表示事件打点存在异常，但可以正常写入；<br/>- 负值表示事件打点失败。 |
+| info | [SysEventInfo](arkts-performanceanalysis-syseventinfo-i-sys.md) | 是 | 系统事件。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，可以在回调函数中处理接口返回值。<br/>- 0表示事件校验成功，事件正常异步写入事件文件；<br/>- 正值表示事件打点存在异常，但可以正常写入；<br/>- 负值表示事件打点失败。 |
 
 **错误码：**
 

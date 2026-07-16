@@ -8,6 +8,8 @@ Decodes a string or Uint8Array containing Base64 data into a newly allocated Uin
 
 **Substitutes:** [Base64Helper](arkts-arkts-base64helper-c.md)
 
+<!--Device-util-class Base64--><!--Device-util-class Base64-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -30,6 +32,8 @@ A constructor used to create a **Base64** object.
 
 **Substitutes:** [constructor](arkts-arkts-base64helper-c.md#constructor-1)
 
+<!--Device-Base64-constructor()--><!--Device-Base64-constructor()-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## decode
@@ -46,6 +50,8 @@ Decodes the input content into a Uint8Array object. This API uses a promise to r
 
 **Substitutes:** [decode](arkts-arkts-base64helper-c.md#decode-1)
 
+<!--Device-Base64-decode(src: Uint8Array | string): Promise<Uint8Array>--><!--Device-Base64-decode(src: Uint8Array | string): Promise<Uint8Array>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -58,7 +64,7 @@ Decodes the input content into a Uint8Array object. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the Uint8Array object obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Uint8Array> | Promise used to return the Uint8Array object obtained. |
 
 ## decodeSync
 
@@ -74,6 +80,8 @@ Decodes the input content into a Uint8Array object.
 
 **Substitutes:** [decodeSync](arkts-arkts-base64helper-c.md#decodesync-1)
 
+<!--Device-Base64-decodeSync(src: Uint8Array | string): Uint8Array--><!--Device-Base64-decodeSync(src: Uint8Array | string): Uint8Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -86,7 +94,7 @@ Decodes the input content into a Uint8Array object.
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Uint8Array object obtained. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Uint8Array object obtained. |
 
 ## encode
 
@@ -102,19 +110,21 @@ Encodes the input content into a Uint8Array object. This API uses a promise to r
 
 **Substitutes:** [encode](arkts-arkts-base64helper-c.md#encode-1)
 
+<!--Device-Base64-encode(src: Uint8Array): Promise<Uint8Array>--><!--Device-Base64-encode(src: Uint8Array): Promise<Uint8Array>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array | Yes | Uint8Array object to encode. |
+| src | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Uint8Array object to encode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the Uint8Array object obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Uint8Array> | Promise used to return the Uint8Array object obtained. |
 
 ## encodeSync
 
@@ -130,19 +140,21 @@ Performs Base64 encoding on the input Uint8Array byte array and returns the enco
 
 **Substitutes:** [encodeSync](arkts-arkts-base64helper-c.md#encodesync-1)
 
+<!--Device-Base64-encodeSync(src: Uint8Array): Uint8Array--><!--Device-Base64-encodeSync(src: Uint8Array): Uint8Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array | Yes | Uint8Array object to encode. |
+| src | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Uint8Array object to encode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Uint8Array object obtained. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Uint8Array object obtained. |
 
 ## encodeToString
 
@@ -158,19 +170,21 @@ Encodes the input content into a string. This API uses a promise to return the r
 
 **Substitutes:** [encodeToString](arkts-arkts-base64helper-c.md#encodetostring-1)
 
+<!--Device-Base64-encodeToString(src: Uint8Array): Promise<string>--><!--Device-Base64-encodeToString(src: Uint8Array): Promise<string>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array | Yes | Uint8Array object to encode. |
+| src | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Uint8Array object to encode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the string obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the string obtained. |
 
 ## encodeToStringSync
 
@@ -186,13 +200,15 @@ Performs Base64 encoding on the input Uint8Array byte array and returns the enco
 
 **Substitutes:** [encodeToStringSync](arkts-arkts-base64helper-c.md#encodetostringsync-1)
 
+<!--Device-Base64-encodeToStringSync(src: Uint8Array): string--><!--Device-Base64-encodeToStringSync(src: Uint8Array): string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array | Yes | Uint8Array object to encode. |
+| src | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Uint8Array object to encode. |
 
 **Return value:**
 

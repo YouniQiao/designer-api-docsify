@@ -4,6 +4,8 @@ Encompassed message information as parameters to {@link onFileSelectorShow} meth
 
 **Since:** 9
 
+<!--Device-unnamed-declare class FileSelectorParam--><!--Device-unnamed-declare class FileSelectorParam-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## constructor
@@ -17,6 +19,8 @@ Constructor.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-FileSelectorParam-constructor()--><!--Device-FileSelectorParam-constructor()-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,13 +36,15 @@ Gets an array of acceptable MIME type.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-FileSelectorParam-getAcceptType(): Array<string>--><!--Device-FileSelectorParam-getAcceptType(): Array<string>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Return an array of acceptable MIME type. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Return an array of acceptable MIME type. |
 
 ## getAcceptableFileTypes
 
@@ -50,13 +56,15 @@ Gets an array of selected types for web page files.
 
 **Since:** 23
 
+<!--Device-FileSelectorParam-getAcceptableFileTypes(): Array<Array<AcceptableFileType>>--><!--Device-FileSelectorParam-getAcceptableFileTypes(): Array<Array<AcceptableFileType>>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Array&lt;AcceptableFileType&gt;&gt; | Return an array of selected types for web page files. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Array<AcceptableFileType>> | Return an array of selected types for web page files. |
 
 ## getDefaultPath
 
@@ -67,6 +75,8 @@ getDefaultPath(): string
 Get the default path opened when pulling up the selector.
 
 **Since:** 23
+
+<!--Device-FileSelectorParam-getDefaultPath(): string--><!--Device-FileSelectorParam-getDefaultPath(): string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -86,13 +96,15 @@ Gets a description array of file types.
 
 **Since:** 23
 
+<!--Device-FileSelectorParam-getDescriptions(): Array<string>--><!--Device-FileSelectorParam-getDescriptions(): Array<string>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Return an array of description of the file type. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Return an array of description of the file type. |
 
 ## getMimeTypes
 
@@ -104,13 +116,15 @@ Gets an array of raw acceptable MIME type.
 
 **Since:** 18
 
+<!--Device-FileSelectorParam-getMimeTypes(): Array<string>--><!--Device-FileSelectorParam-getMimeTypes(): Array<string>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Return an array of raw acceptable MIME type. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Return an array of raw acceptable MIME type. |
 
 ## getMode
 
@@ -124,13 +138,15 @@ Gets the FileSelectorMode of this file selector.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-FileSelectorParam-getMode(): FileSelectorMode--><!--Device-FileSelectorParam-getMode(): FileSelectorMode-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| FileSelectorMode | Return the FileSelectorMode of this file selector. |
+| [FileSelectorMode](arkts-arkweb-fileselectormode-e.md) | Return the FileSelectorMode of this file selector. |
 
 ## getSuggestedName
 
@@ -141,6 +157,8 @@ getSuggestedName(): string
 Gets suggested file names.
 
 **Since:** 23
+
+<!--Device-FileSelectorParam-getSuggestedName(): string--><!--Device-FileSelectorParam-getSuggestedName(): string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -162,6 +180,8 @@ Gets the title of this file selector.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-FileSelectorParam-getTitle(): string--><!--Device-FileSelectorParam-getTitle(): string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -179,6 +199,8 @@ isAcceptAllOptionExcluded(): boolean
 Gets whether to filter fully matching file types.
 
 **Since:** 23
+
+<!--Device-FileSelectorParam-isAcceptAllOptionExcluded(): boolean--><!--Device-FileSelectorParam-isAcceptAllOptionExcluded(): boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -199,6 +221,8 @@ Gets whether this file selector use a live media captured value.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-FileSelectorParam-isCapture(): boolean--><!--Device-FileSelectorParam-isCapture(): boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

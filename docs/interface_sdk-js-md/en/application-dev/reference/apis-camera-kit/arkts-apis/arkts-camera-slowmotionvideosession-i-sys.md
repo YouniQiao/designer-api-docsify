@@ -1,16 +1,15 @@
 # SlowMotionVideoSession (System API)
 
-SlowMotionVideoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect
-Implements a slow-motion video session, which sets the parameters of the slow-motion video mode and saves all
-[CameraInput](arkts-camera-camerainput-i.md) and [CameraOutput](arkts-camera-cameraoutput-i.md)
-instances required to run the camera. It inherits from [Session](arkts-camera-session-i.md).
+SlowMotionVideoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect Implements a slow-motion video session, which sets the parameters of the slow-motion video mode and saves all [CameraInput](arkts-camera-camerainput-i.md) and [CameraOutput](arkts-camera-cameraoutput-i.md)instances required to run the camera. It inherits from [Session](arkts-camera-session-i.md).
 
-> **NOTE**
+> **NOTE**  
 > > In slow-motion video mode, only preview streams and video streams can be added.
 
 **Inheritance/Implementation:** SlowMotionVideoSession extends [Session](arkts-camera-session-i.md), [Flash](arkts-camera-flash-i.md), [AutoExposure](arkts-camera-autoexposure-i.md), [Focus](arkts-camera-focus-i.md), [Zoom](arkts-camera-zoom-i.md), [ColorEffect](arkts-camera-coloreffect-i-sys.md)
 
 **Since:** 12
+
+<!--Device-camera-interface SlowMotionVideoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect--><!--Device-camera-interface SlowMotionVideoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -30,11 +29,13 @@ isSlowMotionDetectionSupported(): boolean
 
 Checks whether the device supports slow-motion detection.
 
-> **NOTE**
-> > This API must be called after [commitConfig](arkts-camera-session-i.md#commitconfig-2) is
+> **NOTE**  
+> > This API must be called after [commitConfig](arkts-camera-session-i.md#commitconfig-2) is  
 > called.
 
 **Since:** 12
+
+<!--Device-SlowMotionVideoSession-isSlowMotionDetectionSupported(): boolean--><!--Device-SlowMotionVideoSession-isSlowMotionDetectionSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -44,7 +45,7 @@ Checks whether the device supports slow-motion detection.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of slow-motion detection. **true** if supported, **false**otherwise. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| boolean | Check result for the support of slow-motion detection. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -82,6 +83,8 @@ Unsubscribes from HighResolutionPhotoSession error events.
 
 **Since:** 12
 
+<!--Device-SlowMotionVideoSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-SlowMotionVideoSession-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -90,8 +93,8 @@ Unsubscribes from HighResolutionPhotoSession error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when asession is created. |
-| callback | ErrorCallback | No | Callback used to return the result. This parameter is optional. If thisparameter is specified, the subscription to the specified event **on('error')** with the specified callbackis canceled. (The callback object cannot be an anonymous function.) |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('error')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
 
@@ -118,6 +121,8 @@ Unsubscribes from focus state change events.
 
 **Since:** 12
 
+<!--Device-SlowMotionVideoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-SlowMotionVideoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -126,8 +131,8 @@ Unsubscribes from focus state change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can belistened for when a session is created. |
-| callback | AsyncCallback&lt;FocusState&gt; | No | Callback used to return the result. This parameter is optional.If this parameter is specified, the subscription to the specified event **on('focusStateChange')** with thespecified callback is canceled. (The callback object cannot be an anonymous function.) |
+| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FocusState> | No | Callback used to return the result. This parameter is optional.If this parameter is specified, the subscription to the specified event **on('focusStateChange')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
 
@@ -154,6 +159,8 @@ Unsubscribes from smooth zoom state change events.
 
 **Since:** 12
 
+<!--Device-SlowMotionVideoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void--><!--Device-SlowMotionVideoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -162,8 +169,8 @@ Unsubscribes from smooth zoom state change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'smoothZoomInfoAvailable' | Yes | Event type. The value is fixed at **'smoothZoomInfoAvailable'**. Theevent can be listened for when a session is created. |
-| callback | AsyncCallback&lt;SmoothZoomInfo&gt; | No | Callback used to return the result. This parameter isoptional. If this parameter is specified, the subscription to the specified event**on('smoothZoomInfoAvailable')** with the specified callback is canceled. (The callback object cannot be ananonymous function.) |
+| type | 'smoothZoomInfoAvailable' | Yes | Event type. The value is fixed at **'smoothZoomInfoAvailable'**. The event can be listened for when a session is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<SmoothZoomInfo> | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('smoothZoomInfoAvailable')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
 
@@ -190,6 +197,8 @@ Unsubscribes from slow-motion status change events.
 
 **Since:** 12
 
+<!--Device-SlowMotionVideoSession-off(type: 'slowMotionStatus', callback?: AsyncCallback<SlowMotionStatus>): void--><!--Device-SlowMotionVideoSession-off(type: 'slowMotionStatus', callback?: AsyncCallback<SlowMotionStatus>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -198,8 +207,8 @@ Unsubscribes from slow-motion status change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'slowMotionStatus' | Yes | Event type. The value is fixed at **'slowMotionStatus'**. The event can belistened for when a session is created. |
-| callback | AsyncCallback&lt;SlowMotionStatus&gt; | No | Callback used to return the result. This parameter isoptional. If this parameter is specified, the subscription to the specified event **on('slowMotionStatus')**with the specified callback is canceled. (The callback object cannot be an anonymous function.) If theoperation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| type | 'slowMotionStatus' | Yes | Event type. The value is fixed at **'slowMotionStatus'**. The event can be listened for when a session is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<SlowMotionStatus> | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('slowMotionStatus')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -222,10 +231,11 @@ function unregisterSlowMotionStatus(slowMotionVideoSession: camera.SlowMotionVid
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to HighResolutionPhotoSession error events. This API uses an asynchronous callback to return the
-result.
+Subscribes to HighResolutionPhotoSession error events. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
+
+<!--Device-SlowMotionVideoSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-SlowMotionVideoSession-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -235,8 +245,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when asession is created. This event is triggered and the error message is returned when an error occurs during thecalling of a session-related API such as[beginConfig](arkts-camera-session-i.md#beginconfig-1),[commitConfig](arkts-camera-session-i.md#commitconfig-2), and[addInput](arkts-camera-session-i.md#addinput-1). |
-| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. This event is triggered and the error message is returned when an error occurs during the calling of a session-related API such as [beginConfig](arkts-camera-session-i.md#beginconfig-1),[commitConfig](arkts-camera-session-i.md#commitconfig-2), and [addInput](arkts-camera-session-i.md#addinput-1). |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -269,6 +279,8 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 
 **Since:** 12
 
+<!--Device-SlowMotionVideoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-SlowMotionVideoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -277,8 +289,8 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can belistened for when a session is created. This event is triggered only when the camera focus state changes inauto focus mode. |
-| callback | AsyncCallback&lt;FocusState&gt; | Yes | Callback used to return the focus state change. |
+| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. This event is triggered only when the camera focus state changes in auto focus mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FocusState> | Yes | Callback used to return the focus state change. |
 
 **Error codes:**
 
@@ -315,6 +327,8 @@ Subscribes to smooth zoom state change events. This API uses an asynchronous cal
 
 **Since:** 12
 
+<!--Device-SlowMotionVideoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void--><!--Device-SlowMotionVideoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -323,8 +337,8 @@ Subscribes to smooth zoom state change events. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'smoothZoomInfoAvailable' | Yes | Event type. The value is fixed at **'smoothZoomInfoAvailable'**. Theevent can be listened for when a session is created. |
-| callback | AsyncCallback&lt;SmoothZoomInfo&gt; | Yes | Callback used to return the smooth zoom state change. |
+| type | 'smoothZoomInfoAvailable' | Yes | Event type. The value is fixed at **'smoothZoomInfoAvailable'**. The event can be listened for when a session is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<SmoothZoomInfo> | Yes | Callback used to return the smooth zoom state change. |
 
 **Error codes:**
 
@@ -361,6 +375,8 @@ Subscribes to slow-motion status change events. This API uses an asynchronous ca
 
 **Since:** 12
 
+<!--Device-SlowMotionVideoSession-on(type: 'slowMotionStatus', callback: AsyncCallback<SlowMotionStatus>): void--><!--Device-SlowMotionVideoSession-on(type: 'slowMotionStatus', callback: AsyncCallback<SlowMotionStatus>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -369,8 +385,8 @@ Subscribes to slow-motion status change events. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'slowMotionStatus' | Yes | Event type. The value is fixed at **'slowMotionStatus'**. The event can belistened for when a session is created. |
-| callback | AsyncCallback&lt;SlowMotionStatus&gt; | Yes | Callback used to return the slow-motion status change. |
+| type | 'slowMotionStatus' | Yes | Event type. The value is fixed at **'slowMotionStatus'**. The event can be listened for when a session is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<SlowMotionStatus> | Yes | Callback used to return the slow-motion status change. |
 
 **Error codes:**
 
@@ -405,14 +421,16 @@ setSlowMotionDetectionArea(area: Rect): void
 
 Sets an area for slow-motion detection.
 
-> **NOTE**
-> > Before the setting, call
-> [isSlowMotionDetectionSupported](arkts-camera-slowmotionvideosession-i-sys.md#isslowmotiondetectionsupported-1) to check
-> whether the device supports slow-motion detection.
-> This API must be called after [commitConfig](arkts-camera-session-i.md#commitconfig-2) is
+> **NOTE**  
+> > Before the setting, call  
+> [isSlowMotionDetectionSupported](arkts-camera-slowmotionvideosession-i-sys.md#isslowmotiondetectionsupported-1) to check  
+> whether the device supports slow-motion detection.  
+> This API must be called after [commitConfig](arkts-camera-session-i.md#commitconfig-2) is  
 > called.
 
 **Since:** 12
+
+<!--Device-SlowMotionVideoSession-setSlowMotionDetectionArea(area: Rect): void--><!--Device-SlowMotionVideoSession-setSlowMotionDetectionArea(area: Rect): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -422,7 +440,7 @@ Sets an area for slow-motion detection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| area | Rect | Yes | Area. |
+| area | [Rect](../../apis-form-kit/arkts-apis/arkts-form-rect-i.md) | Yes | Area. |
 
 **Error codes:**
 

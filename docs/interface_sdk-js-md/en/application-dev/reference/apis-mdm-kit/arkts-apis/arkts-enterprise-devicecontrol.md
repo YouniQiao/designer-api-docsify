@@ -2,14 +2,16 @@
 
 The **deviceControl** module provides APIs for device control.
 
-> **NOTE**
->
-> The APIs of this module can be used only in the stage model.
->
-> The APIs of this module can be called only by a device administrator application that is enabled. For details, see
+> **NOTE**  
+>  
+> The APIs of this module can be used only in the stage model.  
+>  
+> The APIs of this module can be called only by a device administrator application that is enabled. For details, see  
 > [MDM Kit Development](../../../../mdm/mdm-kit-guide.md).
 
 **Since:** 10
+
+<!--Device-unnamed-declare namespace deviceControl--><!--Device-unnamed-declare namespace deviceControl-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

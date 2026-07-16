@@ -18,6 +18,8 @@ Unsubscribe to rotate sensor event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-motion-function offRotateChange(callback?: Callback<RotateEvent>): void--><!--Device-motion-function offRotateChange(callback?: Callback<RotateEvent>): void-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Unsubscribe to rotate sensor event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;RotateEvent&gt; | No | Callback used for rotate event unsubscription.<br> If this parameter is not specified, all callbacks of the rotate event are unsubscribed from. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<RotateEvent> | No | Callback used for rotate event unsubscription.<br> If this parameter is not specified, all callbacks of the rotate event are unsubscribed from. |
 
 **Error codes:**
 

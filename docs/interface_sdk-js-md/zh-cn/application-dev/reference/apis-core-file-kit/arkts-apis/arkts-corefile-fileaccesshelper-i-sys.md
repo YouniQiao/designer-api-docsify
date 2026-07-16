@@ -6,9 +6,17 @@ FileAccessHelper对象。
 
 **废弃版本：** 23
 
+<!--Device-fileAccess-interface FileAccessHelper--><!--Device-fileAccess-interface FileAccessHelper-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { fileAccess } from '@kit.CoreFileKit';
+```
 
 ## access
 
@@ -26,6 +34,8 @@ access(sourceFileUri: string) : Promise<boolean>
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-access(sourceFileUri: string) : Promise<boolean>--><!--Device-FileAccessHelper-access(sourceFileUri: string) : Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -40,7 +50,7 @@ access(sourceFileUri: string) : Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns whether it exists. |
+| Promise<boolean> | Returns whether it exists. |
 
 **错误码：**
 
@@ -125,6 +135,8 @@ access(sourceFileUri: string, callback: AsyncCallback<boolean>): void
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-access(sourceFileUri: string, callback: AsyncCallback<boolean>): void--><!--Device-FileAccessHelper-access(sourceFileUri: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -134,7 +146,7 @@ access(sourceFileUri: string, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sourceFileUri | string | 是 | Indicates the selected file or directory. |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | The callback is used to return whether it exists. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | The callback is used to return whether it exists. |
 
 **错误码：**
 
@@ -221,6 +233,8 @@ copy(sourceUri: string, destUri: string, force?: boolean): Promise<Array<CopyRes
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, force?: boolean): Promise<Array<CopyResult>>--><!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, force?: boolean): Promise<Array<CopyResult>>-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -237,7 +251,7 @@ copy(sourceUri: string, destUri: string, force?: boolean): Promise<Array<CopyRes
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;CopyResult&gt;&gt; | 返回 copyresult 数组。copyResult 为复制操作失败的返回信息；复制成功无返回信息。 |
+| Promise<Array<CopyResult>> | 返回 copyresult 数组。copyResult 为复制操作失败的返回信息；复制成功无返回信息。 |
 
 ## copy
 
@@ -255,6 +269,8 @@ copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResul
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResult>>): void--><!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResult>>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -265,7 +281,7 @@ copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResul
 | --- | --- | --- | --- |
 | sourceUri | string | 是 | 待拷贝的源文件(夹)的 uri。例如：file://docs/storage/Users/currentUser/Download/1.txt。 |
 | destUri | string | 是 | 目标文件夹的 uri。例如：file://docs/storage/Users/currentUser/Download/test。 |
-| callback | AsyncCallback&lt;Array&lt;CopyResult&gt;&gt; | 是 | 返回 copyresult 数组。copyResult 为复制操作失败的返回信息；复制成功无返回信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<CopyResult>> | 是 | 返回 copyresult 数组。copyResult 为复制操作失败的返回信息；复制成功无返回信息。 |
 
 **示例：**
 
@@ -319,6 +335,8 @@ copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<CopyResult>>): void--><!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<CopyResult>>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -330,7 +348,7 @@ copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback
 | sourceUri | string | 是 | 待拷贝的源文件(夹)的 uri。例如：file://docs/storage/Users/currentUser/Download/1.txt。 |
 | destUri | string | 是 | 目标文件夹的 uri。例如：file://docs/storage/Users/currentUser/Download/test。 |
 | force | boolean | 是 | 含有同名文件时是否强制覆盖原文件。force 为 true 时强制覆盖原文件；force 为空或 false 时不覆盖原文件。 |
-| callback | AsyncCallback&lt;Array&lt;CopyResult&gt;&gt; | 是 | 返回 copyresult 数组。copyResult 为复制操作失败的返回信息；复制成功无返回信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<CopyResult>> | 是 | 返回 copyresult 数组。copyResult 为复制操作失败的返回信息；复制成功无返回信息。 |
 
 **示例：**
 
@@ -386,6 +404,8 @@ copyFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileAccessHelper-copyFile(sourceUri: string, destUri: string, fileName: string): Promise<string>--><!--Device-FileAccessHelper-copyFile(sourceUri: string, destUri: string, fileName: string): Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -402,14 +422,14 @@ copyFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | 返回一个复制成功的文件的uri。 |
+| Promise<string> | 返回一个复制成功的文件的uri。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system applicationuses system API |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
 | 13900004 | Interrupted system call |
@@ -451,6 +471,8 @@ copyFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileAccessHelper-copyFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-copyFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -462,14 +484,14 @@ copyFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 | sourceUri | string | 是 | 待拷贝的源文件(夹)的 uri。例如：file://docs/storage/Users/currentUser/Download/1.txt。 |
 | destUri | string | 是 | 目标文件夹的 uri。例如：file://docs/storage/Users/currentUser/Download/test。 |
 | fileName | string | 是 | 如果目标目录中有1.txt文件。就是用fileName 作为文件名进行复制。 |
-| callback | AsyncCallback&lt;string&gt; | 是 | 返回一个复制成功的文件的uri。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | 返回一个复制成功的文件的uri。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system applicationuses system API |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
 | 13900004 | Interrupted system call |
@@ -534,6 +556,8 @@ createFile(uri: string, displayName: string) : Promise<string>
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-createFile(uri: string, displayName: string) : Promise<string>--><!--Device-FileAccessHelper-createFile(uri: string, displayName: string) : Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -549,7 +573,7 @@ createFile(uri: string, displayName: string) : Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the new file's URI. |
+| Promise<string> | Returns the new file's URI. |
 
 **错误码：**
 
@@ -636,6 +660,8 @@ createFile(uri: string, displayName: string, callback: AsyncCallback<string>): v
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-createFile(uri: string, displayName: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-createFile(uri: string, displayName: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -646,7 +672,7 @@ createFile(uri: string, displayName: string, callback: AsyncCallback<string>): v
 | --- | --- | --- | --- |
 | uri | string | 是 | Represents a specific parent directory. |
 | displayName | string | 是 | Indicates the new file name, and supports with suffix. |
-| callback | AsyncCallback&lt;string&gt; | 是 | The callback is used to return the new file's URI. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | The callback is used to return the new file's URI. |
 
 **错误码：**
 
@@ -730,6 +756,8 @@ delete(uri: string) : Promise<number>
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-delete(uri: string) : Promise<number>--><!--Device-FileAccessHelper-delete(uri: string) : Promise<number>-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -744,7 +772,7 @@ delete(uri: string) : Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | @throws { BusinessError } 13900001 - Operation not permitted |
+| Promise<number> | @throws { BusinessError } 13900001 - Operation not permitted |
 
 **错误码：**
 
@@ -826,6 +854,8 @@ delete(uri: string, callback: AsyncCallback<number>): void
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-delete(uri: string, callback: AsyncCallback<number>): void--><!--Device-FileAccessHelper-delete(uri: string, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -835,7 +865,7 @@ delete(uri: string, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | Indicates the file or directory to be deleted. |
-| callback | AsyncCallback&lt;number&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 |  |
 
 **错误码：**
 
@@ -918,6 +948,8 @@ getFileInfoFromRelativePath(relativePath: string) : Promise<FileInfo>
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-getFileInfoFromRelativePath(relativePath: string) : Promise<FileInfo>--><!--Device-FileAccessHelper-getFileInfoFromRelativePath(relativePath: string) : Promise<FileInfo>-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -932,7 +964,7 @@ getFileInfoFromRelativePath(relativePath: string) : Promise<FileInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;FileInfo&gt; | Returns a FileInfo. |
+| Promise<FileInfo> | Returns a FileInfo. |
 
 **示例：**
 
@@ -972,6 +1004,8 @@ getFileInfoFromRelativePath(relativePath: string, callback: AsyncCallback<FileIn
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-getFileInfoFromRelativePath(relativePath: string, callback: AsyncCallback<FileInfo>) : void--><!--Device-FileAccessHelper-getFileInfoFromRelativePath(relativePath: string, callback: AsyncCallback<FileInfo>) : void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -981,7 +1015,7 @@ getFileInfoFromRelativePath(relativePath: string, callback: AsyncCallback<FileIn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | relativePath | string | 是 | Indicates the selected file or directory. |
-| callback | AsyncCallback&lt;FileInfo&gt; | 是 | The callback is used to return a fileinfo object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FileInfo> | 是 | The callback is used to return a fileinfo object. |
 
 **示例：**
 
@@ -1025,6 +1059,8 @@ getFileInfoFromUri(uri: string) : Promise<FileInfo>
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-getFileInfoFromUri(uri: string) : Promise<FileInfo>--><!--Device-FileAccessHelper-getFileInfoFromUri(uri: string) : Promise<FileInfo>-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -1039,7 +1075,7 @@ getFileInfoFromUri(uri: string) : Promise<FileInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;FileInfo&gt; | Returns a FileInfo. |
+| Promise<FileInfo> | Returns a FileInfo. |
 
 **示例：**
 
@@ -1080,6 +1116,8 @@ getFileInfoFromUri(uri: string, callback: AsyncCallback<FileInfo>) : void
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-getFileInfoFromUri(uri: string, callback: AsyncCallback<FileInfo>) : void--><!--Device-FileAccessHelper-getFileInfoFromUri(uri: string, callback: AsyncCallback<FileInfo>) : void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -1089,7 +1127,7 @@ getFileInfoFromUri(uri: string, callback: AsyncCallback<FileInfo>) : void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | Indicates the selected file or directory. |
-| callback | AsyncCallback&lt;FileInfo&gt; | 是 | The callback is used to return a fileinfo object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FileInfo> | 是 | The callback is used to return a fileinfo object. |
 
 **示例：**
 
@@ -1124,14 +1162,15 @@ try {
 getRoots(): Promise<RootIterator>
 ```
 
-以异步方法获取helper对象连接的文件管理服务类的设备根节点信息。使用Promise异步回调。
-该方法返回迭代器对象RootIterator，然后通过[next](arkts-corefile-fileiterator-i-sys.md#next-1)方法返回[RootInfo](arkts-corefile-rootinfo-i-sys.md)。
+以异步方法获取helper对象连接的文件管理服务类的设备根节点信息。使用Promise异步回调。该方法返回迭代器对象RootIterator，然后通过[next](arkts-corefile-fileiterator-i-sys.md#next-1)方法返回[RootInfo](arkts-corefile-rootinfo-i-sys.md)。
 
 **起始版本：** 9
 
 **废弃版本：** 23
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-getRoots(): Promise<RootIterator>--><!--Device-FileAccessHelper-getRoots(): Promise<RootIterator>-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -1141,7 +1180,7 @@ getRoots(): Promise<RootIterator>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;RootIterator&gt; | Returns a RootIterator. |
+| Promise<RootIterator> | Returns a RootIterator. |
 
 **错误码：**
 
@@ -1220,15 +1259,15 @@ async function getRoots() {
 getRoots(callback: AsyncCallback<RootIterator>): void
 ```
 
-以异步方法获取helper对象连接的文件管理服务类的设备根节点信息。使用callback异步回调。
-callback带回迭代器对象RootIterator，然后通过[next](arkts-corefile-fileiterator-i-sys.md#next-1)方法返回
-[RootInfo](arkts-corefile-rootinfo-i-sys.md)。
+以异步方法获取helper对象连接的文件管理服务类的设备根节点信息。使用callback异步回调。callback带回迭代器对象RootIterator，然后通过[next](arkts-corefile-fileiterator-i-sys.md#next-1)方法返回[RootInfo](arkts-corefile-rootinfo-i-sys.md)。
 
 **起始版本：** 9
 
 **废弃版本：** 23
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-getRoots(callback: AsyncCallback<RootIterator>): void--><!--Device-FileAccessHelper-getRoots(callback: AsyncCallback<RootIterator>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -1238,7 +1277,7 @@ callback带回迭代器对象RootIterator，然后通过[next](arkts-corefile-fi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;RootIterator&gt; | 是 | The callback is used to return a RootIterator. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<RootIterator> | 是 | The callback is used to return a RootIterator. |
 
 **错误码：**
 
@@ -1328,6 +1367,8 @@ mkDir(parentUri: string, displayName: string) : Promise<string>
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-mkDir(parentUri: string, displayName: string) : Promise<string>--><!--Device-FileAccessHelper-mkDir(parentUri: string, displayName: string) : Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -1343,7 +1384,7 @@ mkDir(parentUri: string, displayName: string) : Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the new directory's URI. |
+| Promise<string> | Returns the new directory's URI. |
 
 **错误码：**
 
@@ -1430,6 +1471,8 @@ mkDir(parentUri: string, displayName: string, callback: AsyncCallback<string>): 
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-mkDir(parentUri: string, displayName: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-mkDir(parentUri: string, displayName: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -1440,7 +1483,7 @@ mkDir(parentUri: string, displayName: string, callback: AsyncCallback<string>): 
 | --- | --- | --- | --- |
 | parentUri | string | 是 | Represents a specific parent directory. |
 | displayName | string | 是 | Indicates the new directory name. |
-| callback | AsyncCallback&lt;string&gt; | 是 | The callback is used to return the new directory's URI. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | The callback is used to return the new directory's URI. |
 
 **错误码：**
 
@@ -1524,6 +1567,8 @@ move(sourceFile: string, destFile: string) : Promise<string>
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-move(sourceFile: string, destFile: string) : Promise<string>--><!--Device-FileAccessHelper-move(sourceFile: string, destFile: string) : Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -1539,7 +1584,7 @@ move(sourceFile: string, destFile: string) : Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | 新路径下的文件(夹)的uri。 |
+| Promise<string> | 新路径下的文件(夹)的uri。 |
 
 **错误码：**
 
@@ -1621,6 +1666,8 @@ move(sourceFile: string, destFile: string, callback: AsyncCallback<string>): voi
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-move(sourceFile: string, destFile: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-move(sourceFile: string, destFile: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -1631,7 +1678,7 @@ move(sourceFile: string, destFile: string, callback: AsyncCallback<string>): voi
 | --- | --- | --- | --- |
 | sourceFile | string | 是 | Indicates the file or directory to be moved. |
 | destFile | string | 是 | Represents the destination folder. |
-| callback | AsyncCallback&lt;string&gt; | 是 | The callback is used to return the generated new file or directory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | The callback is used to return the generated new file or directory. |
 
 **错误码：**
 
@@ -1705,9 +1752,7 @@ try {
 moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 ```
 
-以异步方法移动文件，返回移动后文件的uri。使用Promise异步回调。
-当存在同名文件时（即发生文件移动冲突时），可以重命名待移动的文件，再保存到目标文件夹。
-目前仅支持设备内移动，跨设备不支持移动。
+以异步方法移动文件，返回移动后文件的uri。使用Promise异步回调。当存在同名文件时（即发生文件移动冲突时），可以重命名待移动的文件，再保存到目标文件夹。目前仅支持设备内移动，跨设备不支持移动。
 
 **起始版本：** 11
 
@@ -1718,6 +1763,8 @@ moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileAccessHelper-moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>--><!--Device-FileAccessHelper-moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -1735,14 +1782,14 @@ moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | 新路径下的文件uri。 |
+| Promise<string> | 新路径下的文件uri。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
 | 13900004 | Interrupted system call |
@@ -1798,9 +1845,7 @@ async function moveFile01() {
 moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCallback<string>): void
 ```
 
-以异步方法移动文件，返回移动后文件的uri。使用callback异步回调。
-当存在同名文件时（即发生文件移动冲突时），可以重命名待移动的文件，再保存到目标文件夹。
-当前仅支持设备内移动，不支持跨设备移动。
+以异步方法移动文件，返回移动后文件的uri。使用callback异步回调。当存在同名文件时（即发生文件移动冲突时），可以重命名待移动的文件，再保存到目标文件夹。当前仅支持设备内移动，不支持跨设备移动。
 
 **起始版本：** 11
 
@@ -1811,6 +1856,8 @@ moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileAccessHelper-moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -1823,14 +1870,14 @@ moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 | sourceUri | string | 是 | 待移动的源文件的uri。 |
 | destUri | string | 是 | 目标文件夹的uri。 |
 | fileName | string | 是 | 冲突文件的新名称。 |
-| callback | AsyncCallback&lt;string&gt; | 是 | 新路径下的文件uri。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | 新路径下的文件uri。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
 | 13900004 | Interrupted system call |
@@ -1888,9 +1935,7 @@ try {
 moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<MoveResult>>
 ```
 
-以异步方法移动文件(夹)，返回移动后文件(夹)的uri。使用Promise异步回调。
-当存在同名文件时，可以选择强制覆盖文件。
-目前仅支持设备内移动，跨设备不支持移动。
+以异步方法移动文件(夹)，返回移动后文件(夹)的uri。使用Promise异步回调。当存在同名文件时，可以选择强制覆盖文件。目前仅支持设备内移动，跨设备不支持移动。
 
 **起始版本：** 11
 
@@ -1901,6 +1946,8 @@ moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<Mov
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<MoveResult>>--><!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<MoveResult>>-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -1918,14 +1965,14 @@ moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<Mov
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;MoveResult&gt;&gt; | 返回 moveresult 数组。moveResult 为移动操作失败的返回信息；复制成功无返回信息。 |
+| Promise<Array<MoveResult>> | 返回 moveresult 数组。moveResult 为移动操作失败的返回信息；复制成功无返回信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
 | 13900004 | Interrupted system call |
@@ -1955,8 +2002,7 @@ moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<Mov
 moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveResult>>): void
 ```
 
-以异步方法移动文件(夹)，返回移动后文件(夹)的uri。使用callback异步回调。
-当前仅支持设备内移动，不支持跨设备移动。
+以异步方法移动文件(夹)，返回移动后文件(夹)的uri。使用callback异步回调。当前仅支持设备内移动，不支持跨设备移动。
 
 **起始版本：** 11
 
@@ -1968,6 +2014,8 @@ moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveR
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveResult>>): void--><!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveResult>>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -1978,14 +2026,14 @@ moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveR
 | --- | --- | --- | --- |
 | sourceUri | string | 是 | 待移动的源文件(夹)的uri。 |
 | destUri | string | 是 | 目标文件夹的uri。 |
-| callback | AsyncCallback&lt;Array&lt;MoveResult&gt;&gt; | 是 | 回调返回MoveResult数组。MoveResult为移动操作失败的返回信息；移动成功无返回信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<MoveResult>> | 是 | 回调返回MoveResult数组。MoveResult为移动操作失败的返回信息；移动成功无返回信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
 | 13900004 | Interrupted system call |
@@ -2051,9 +2099,7 @@ try {
 moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<MoveResult>>): void
 ```
 
-以异步方法移动文件(夹)，返回移动后文件(夹)的uri。使用callback异步回调。
-当存在同名文件时，可以选择强制覆盖文件。
-当前仅支持设备内移动，不支持跨设备移动。
+以异步方法移动文件(夹)，返回移动后文件(夹)的uri。使用callback异步回调。当存在同名文件时，可以选择强制覆盖文件。当前仅支持设备内移动，不支持跨设备移动。
 
 **起始版本：** 11
 
@@ -2064,6 +2110,8 @@ moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCall
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<MoveResult>>): void--><!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<MoveResult>>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -2076,14 +2124,14 @@ moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCall
 | sourceUri | string | 是 | 待移动的源文件(夹)的uri。 |
 | destUri | string | 是 | 目标文件夹的uri。 |
 | force | boolean | 是 | 选择当存在同名文件时，是否强制覆盖文件。当force为true时，强制覆盖文件；为false时不强制覆盖文件。该参数不填，默认为false。 |
-| callback | AsyncCallback&lt;Array&lt;MoveResult&gt;&gt; | 是 | 回调返回MoveResult数组。MoveResult为移动操作失败的返回信息；移动成功无返回信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<MoveResult>> | 是 | 回调返回MoveResult数组。MoveResult为移动操作失败的返回信息；移动成功无返回信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
 | 13900004 | Interrupted system call |
@@ -2159,6 +2207,8 @@ openFile(uri: string, flags: OPENFLAGS) : Promise<number>
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-openFile(uri: string, flags: OPENFLAGS) : Promise<number>--><!--Device-FileAccessHelper-openFile(uri: string, flags: OPENFLAGS) : Promise<number>-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -2168,13 +2218,13 @@ openFile(uri: string, flags: OPENFLAGS) : Promise<number>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | Indicates the path of the file to open. |
-| flags | OPENFLAGS | 是 | Indicate options of opening a file. The default value is read-only. |
+| flags | [OPENFLAGS](arkts-corefile-openflags-e-sys.md) | 是 | Indicate options of opening a file. The default value is read-only. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Returns the file descriptor. |
+| Promise<number> | Returns the file descriptor. |
 
 **错误码：**
 
@@ -2254,6 +2304,8 @@ openFile(uri: string, flags: OPENFLAGS, callback: AsyncCallback<number>): void
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-openFile(uri: string, flags: OPENFLAGS, callback: AsyncCallback<number>): void--><!--Device-FileAccessHelper-openFile(uri: string, flags: OPENFLAGS, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -2263,8 +2315,8 @@ openFile(uri: string, flags: OPENFLAGS, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | Indicates the path of the file to open. |
-| flags | OPENFLAGS | 是 | Indicate options of opening a file. The default value is read-only. |
-| callback | AsyncCallback&lt;number&gt; | 是 | The callback is used to return the file descriptor. |
+| flags | [OPENFLAGS](arkts-corefile-openflags-e-sys.md) | 是 | Indicate options of opening a file. The default value is read-only. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | The callback is used to return the file descriptor. |
 
 **错误码：**
 
@@ -2347,6 +2399,8 @@ query(uri: string, metaJson: string) : Promise<string>
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-query(uri: string, metaJson: string) : Promise<string>--><!--Device-FileAccessHelper-query(uri: string, metaJson: string) : Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -2362,7 +2416,7 @@ query(uri: string, metaJson: string) : Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | 返回json字符串，包括查询属性和值。 |
+| Promise<string> | 返回json字符串，包括查询属性和值。 |
 
 **示例：**
 
@@ -2403,6 +2457,8 @@ query(uri: string, metaJson: string, callback: AsyncCallback<string>) : void
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-query(uri: string, metaJson: string, callback: AsyncCallback<string>) : void--><!--Device-FileAccessHelper-query(uri: string, metaJson: string, callback: AsyncCallback<string>) : void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -2413,7 +2469,7 @@ query(uri: string, metaJson: string, callback: AsyncCallback<string>) : void
 | --- | --- | --- | --- |
 | uri | string | 是 | 所选文件或目录的uri（从[FileInfo](arkts-corefile-fileinfo-i-sys.md)中获取）。 |
 | metaJson | string | 是 | json字符串，包含查询属性[FILEKEY](arkts-corefile-filekey-e-sys.md)。 |
-| callback | AsyncCallback&lt;string&gt; | 是 | 返回json字符串，包括查询属性和值。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | 返回json字符串，包括查询属性和值。 |
 
 **示例：**
 
@@ -2459,6 +2515,8 @@ registerObserver(uri: string, notifyForDescendants: boolean, callback: Callback<
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-registerObserver(uri: string, notifyForDescendants: boolean, callback: Callback<NotifyMessage>): void--><!--Device-FileAccessHelper-registerObserver(uri: string, notifyForDescendants: boolean, callback: Callback<NotifyMessage>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -2469,7 +2527,7 @@ registerObserver(uri: string, notifyForDescendants: boolean, callback: Callback<
 | --- | --- | --- | --- |
 | uri | string | 是 | 文件或目录的uri。 |
 | notifyForDescendants | boolean | 是 | 监听目录时，是否监听子文件变化。true为监听；false为不监听。 |
-| callback | Callback&lt;NotifyMessage&gt; | 是 | 返回通知信息。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<NotifyMessage> | 是 | 返回通知信息。 |
 
 **错误码：**
 
@@ -2493,6 +2551,8 @@ rename(uri: string, displayName: string) : Promise<string>
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-rename(uri: string, displayName: string) : Promise<string>--><!--Device-FileAccessHelper-rename(uri: string, displayName: string) : Promise<string>-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -2508,7 +2568,7 @@ rename(uri: string, displayName: string) : Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Returns a URI representing the new file or directory. |
+| Promise<string> | Returns a URI representing the new file or directory. |
 
 **错误码：**
 
@@ -2589,6 +2649,8 @@ rename(uri: string, displayName: string, callback: AsyncCallback<string>): void
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-rename(uri: string, displayName: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-rename(uri: string, displayName: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -2599,7 +2661,7 @@ rename(uri: string, displayName: string, callback: AsyncCallback<string>): void
 | --- | --- | --- | --- |
 | uri | string | 是 | Indicates the selected file or directory. |
 | displayName | string | 是 | Indicates the new directory or file name. |
-| callback | AsyncCallback&lt;string&gt; | 是 | The callback is used to return a URI representing the new file ordirectory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | The callback is used to return a URI representing the new file or directory. |
 
 **错误码：**
 
@@ -2680,6 +2742,8 @@ unregisterObserver(uri: string, callback?: Callback<NotifyMessage>): void
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-unregisterObserver(uri: string, callback?: Callback<NotifyMessage>): void--><!--Device-FileAccessHelper-unregisterObserver(uri: string, callback?: Callback<NotifyMessage>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -2689,7 +2753,7 @@ unregisterObserver(uri: string, callback?: Callback<NotifyMessage>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 文件或目录的uri。 |
-| callback | Callback&lt;NotifyMessage&gt; | 否 | 解注册uri下对应的callback。如果该参数不填，则解注册对应的所有callbackback。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<NotifyMessage> | 否 | 解注册uri下对应的callback。如果该参数不填，则解注册对应的所有callbackback。 |
 
 **错误码：**
 

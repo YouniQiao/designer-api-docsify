@@ -6,6 +6,8 @@ Base class for smart gesture handling with a target node.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export abstract class TargetedGestureProposal extends BaseGestureHandlingProposal--><!--Device-unnamed-export abstract class TargetedGestureProposal extends BaseGestureHandlingProposal-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -29,6 +31,8 @@ Target node that handles the current smart gesture.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TargetedGestureProposal-node: FrameNode--><!--Device-TargetedGestureProposal-node: FrameNode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

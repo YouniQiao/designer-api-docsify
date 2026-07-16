@@ -8,6 +8,8 @@ Describes the parameters of the Gatt client's descriptor read request.
 
 **Substitutes:** DescriptorReadRequest
 
+<!--Device-bluetoothManager-interface DescriptorReadRequest--><!--Device-bluetoothManager-interface DescriptorReadRequest-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -32,6 +34,8 @@ The UUID of the characteristic to which the descriptor belongs
 
 **Substitutes:** characteristicUuid
 
+<!--Device-DescriptorReadRequest-characteristicUuid: string--><!--Device-DescriptorReadRequest-characteristicUuid: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## descriptorUuid
@@ -49,6 +53,8 @@ The UUID of a DescriptorReadRequest instance
 **Deprecated since:** 10
 
 **Substitutes:** descriptorUuid
+
+<!--Device-DescriptorReadRequest-descriptorUuid: string--><!--Device-DescriptorReadRequest-descriptorUuid: string-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -68,6 +74,8 @@ Indicates the address of the client that initiates the read request
 
 **Substitutes:** deviceId
 
+<!--Device-DescriptorReadRequest-deviceId: string--><!--Device-DescriptorReadRequest-deviceId: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## offset
@@ -85,6 +93,8 @@ Indicates the byte offset of the start position for reading characteristic value
 **Deprecated since:** 10
 
 **Substitutes:** offset
+
+<!--Device-DescriptorReadRequest-offset: number--><!--Device-DescriptorReadRequest-offset: number-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -104,6 +114,8 @@ The UUID of the service to which the descriptor belongs
 
 **Substitutes:** serviceUuid
 
+<!--Device-DescriptorReadRequest-serviceUuid: string--><!--Device-DescriptorReadRequest-serviceUuid: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## transId
@@ -121,6 +133,8 @@ The Id of the read request
 **Deprecated since:** 10
 
 **Substitutes:** transId
+
+<!--Device-DescriptorReadRequest-transId: number--><!--Device-DescriptorReadRequest-transId: number-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

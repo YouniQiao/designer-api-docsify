@@ -1,5 +1,11 @@
 # setOverlayEnabledByBundleName（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { overlay } from '@kit.AbilityKit';
+```
+
 ## setOverlayEnabledByBundleName
 
 ```TypeScript
@@ -14,6 +20,8 @@ function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isE
 
 **需要权限：** ohos.permission.CHANGE_OVERLAY_ENABLED_STATE
 
+<!--Device-overlay-function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isEnabled: boolean, callback: AsyncCallback<void>): void--><!--Device-overlay-function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isEnabled: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 
 **系统接口：** 此接口为系统接口。
@@ -25,7 +33,7 @@ function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isE
 | bundleName | string | 是 | 指定应用的bundle名称。 |
 | moduleName | string | 是 | 指定应用的overlay特征module的名称。 |
 | isEnabled | boolean | 是 | 值为true表示使能，值为false表示禁用。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)。当设置指定应用的overlay module的禁用使能状态成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)。当设置指定应用的overlay module的禁用使能状态成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -81,6 +89,8 @@ function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isE
 
 **需要权限：** ohos.permission.CHANGE_OVERLAY_ENABLED_STATE
 
+<!--Device-overlay-function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isEnabled: boolean): Promise<void>--><!--Device-overlay-function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isEnabled: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 
 **系统接口：** 此接口为系统接口。
@@ -97,7 +107,7 @@ function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isE
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

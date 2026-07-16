@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-audio-enum AudioChannelLayout--><!--Device-audio-enum AudioChannelLayout-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_UNKNOWN
@@ -15,6 +17,8 @@ CH_LAYOUT_UNKNOWN = 0x0
 未知声道布局。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_UNKNOWN = 0x0--><!--Device-AudioChannelLayout-CH_LAYOUT_UNKNOWN = 0x0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -28,6 +32,8 @@ CH_LAYOUT_MONO = 0x4
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_MONO = 0x4--><!--Device-AudioChannelLayout-CH_LAYOUT_MONO = 0x4-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_STEREO
@@ -39,6 +45,8 @@ CH_LAYOUT_STEREO = 0x3
 声道布局为STEREO。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_STEREO = 0x3--><!--Device-AudioChannelLayout-CH_LAYOUT_STEREO = 0x3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -52,6 +60,8 @@ CH_LAYOUT_STEREO_DOWNMIX = 0x60000000
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_STEREO_DOWNMIX = 0x60000000--><!--Device-AudioChannelLayout-CH_LAYOUT_STEREO_DOWNMIX = 0x60000000-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_2POINT1
@@ -63,6 +73,8 @@ CH_LAYOUT_2POINT1 = 0xB
 声道布局为2.1。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_2POINT1 = 0xB--><!--Device-AudioChannelLayout-CH_LAYOUT_2POINT1 = 0xB-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -76,6 +88,8 @@ CH_LAYOUT_3POINT0 = 0x103
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_3POINT0 = 0x103--><!--Device-AudioChannelLayout-CH_LAYOUT_3POINT0 = 0x103-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_SURROUND
@@ -87,6 +101,8 @@ CH_LAYOUT_SURROUND = 0x7
 声道布局为SURROUND。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_SURROUND = 0x7--><!--Device-AudioChannelLayout-CH_LAYOUT_SURROUND = 0x7-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -100,6 +116,8 @@ CH_LAYOUT_3POINT1 = 0xF
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_3POINT1 = 0xF--><!--Device-AudioChannelLayout-CH_LAYOUT_3POINT1 = 0xF-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_4POINT0
@@ -111,6 +129,8 @@ CH_LAYOUT_4POINT0 = 0x107
 声道布局为4.0。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_4POINT0 = 0x107--><!--Device-AudioChannelLayout-CH_LAYOUT_4POINT0 = 0x107-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -124,6 +144,8 @@ CH_LAYOUT_QUAD = 0x33
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_QUAD = 0x33--><!--Device-AudioChannelLayout-CH_LAYOUT_QUAD = 0x33-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_QUAD_SIDE
@@ -135,6 +157,8 @@ CH_LAYOUT_QUAD_SIDE = 0x603
 声道布局为QUAD-SIDE。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_QUAD_SIDE = 0x603--><!--Device-AudioChannelLayout-CH_LAYOUT_QUAD_SIDE = 0x603-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -148,6 +172,8 @@ CH_LAYOUT_2POINT0POINT2 = 0x3000000003
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_2POINT0POINT2 = 0x3000000003--><!--Device-AudioChannelLayout-CH_LAYOUT_2POINT0POINT2 = 0x3000000003-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_AMB_ORDER1_ACN_N3D
@@ -159,6 +185,8 @@ CH_LAYOUT_AMB_ORDER1_ACN_N3D = 0x100000000001
 声道排序为ACN_N3D（根据ITU标准）的一阶FOA文件。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_AMB_ORDER1_ACN_N3D = 0x100000000001--><!--Device-AudioChannelLayout-CH_LAYOUT_AMB_ORDER1_ACN_N3D = 0x100000000001-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -172,6 +200,8 @@ CH_LAYOUT_AMB_ORDER1_ACN_SN3D = 0x100000001001
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_AMB_ORDER1_ACN_SN3D = 0x100000001001--><!--Device-AudioChannelLayout-CH_LAYOUT_AMB_ORDER1_ACN_SN3D = 0x100000001001-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_AMB_ORDER1_FUMA
@@ -183,6 +213,8 @@ CH_LAYOUT_AMB_ORDER1_FUMA = 0x100000000101
 声道排序为FUMA（根据ITU标准）的一阶FOA文件。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_AMB_ORDER1_FUMA = 0x100000000101--><!--Device-AudioChannelLayout-CH_LAYOUT_AMB_ORDER1_FUMA = 0x100000000101-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -196,6 +228,8 @@ CH_LAYOUT_4POINT1 = 0x10F
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_4POINT1 = 0x10F--><!--Device-AudioChannelLayout-CH_LAYOUT_4POINT1 = 0x10F-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_5POINT0
@@ -207,6 +241,8 @@ CH_LAYOUT_5POINT0 = 0x607
 声道布局为5.0。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_5POINT0 = 0x607--><!--Device-AudioChannelLayout-CH_LAYOUT_5POINT0 = 0x607-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -220,6 +256,8 @@ CH_LAYOUT_5POINT0_BACK = 0x37
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_5POINT0_BACK = 0x37--><!--Device-AudioChannelLayout-CH_LAYOUT_5POINT0_BACK = 0x37-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_2POINT1POINT2
@@ -231,6 +269,8 @@ CH_LAYOUT_2POINT1POINT2 = 0x300000000B
 声道布局为2.1.2。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_2POINT1POINT2 = 0x300000000B--><!--Device-AudioChannelLayout-CH_LAYOUT_2POINT1POINT2 = 0x300000000B-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -244,6 +284,8 @@ CH_LAYOUT_3POINT0POINT2 = 0x3000000007
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_3POINT0POINT2 = 0x3000000007--><!--Device-AudioChannelLayout-CH_LAYOUT_3POINT0POINT2 = 0x3000000007-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_5POINT1
@@ -255,6 +297,8 @@ CH_LAYOUT_5POINT1 = 0x60F
 声道布局为5.1。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_5POINT1 = 0x60F--><!--Device-AudioChannelLayout-CH_LAYOUT_5POINT1 = 0x60F-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -268,6 +312,8 @@ CH_LAYOUT_5POINT1_BACK = 0x3F
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_5POINT1_BACK = 0x3F--><!--Device-AudioChannelLayout-CH_LAYOUT_5POINT1_BACK = 0x3F-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_6POINT0
@@ -279,6 +325,8 @@ CH_LAYOUT_6POINT0 = 0x707
 声道布局为6.0。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_6POINT0 = 0x707--><!--Device-AudioChannelLayout-CH_LAYOUT_6POINT0 = 0x707-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -292,6 +340,8 @@ CH_LAYOUT_HEXAGONAL = 0x137
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_HEXAGONAL = 0x137--><!--Device-AudioChannelLayout-CH_LAYOUT_HEXAGONAL = 0x137-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_3POINT1POINT2
@@ -303,6 +353,8 @@ CH_LAYOUT_3POINT1POINT2 = 0x500F
 声道布局为3.1.2。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_3POINT1POINT2 = 0x500F--><!--Device-AudioChannelLayout-CH_LAYOUT_3POINT1POINT2 = 0x500F-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -316,6 +368,8 @@ CH_LAYOUT_6POINT0_FRONT = 0x6C3
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_6POINT0_FRONT = 0x6C3--><!--Device-AudioChannelLayout-CH_LAYOUT_6POINT0_FRONT = 0x6C3-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_6POINT1
@@ -327,6 +381,8 @@ CH_LAYOUT_6POINT1 = 0x70F
 声道布局为6.1。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_6POINT1 = 0x70F--><!--Device-AudioChannelLayout-CH_LAYOUT_6POINT1 = 0x70F-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -340,6 +396,8 @@ CH_LAYOUT_6POINT1_BACK = 0x13F
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_6POINT1_BACK = 0x13F--><!--Device-AudioChannelLayout-CH_LAYOUT_6POINT1_BACK = 0x13F-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_6POINT1_FRONT
@@ -351,6 +409,8 @@ CH_LAYOUT_6POINT1_FRONT = 0x6CB
 声道布局为6.1-FRONT。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_6POINT1_FRONT = 0x6CB--><!--Device-AudioChannelLayout-CH_LAYOUT_6POINT1_FRONT = 0x6CB-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -364,6 +424,8 @@ CH_LAYOUT_7POINT0 = 0x637
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_7POINT0 = 0x637--><!--Device-AudioChannelLayout-CH_LAYOUT_7POINT0 = 0x637-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_7POINT0_FRONT
@@ -375,6 +437,8 @@ CH_LAYOUT_7POINT0_FRONT = 0x6C7
 声道布局为7.0-FRONT。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_7POINT0_FRONT = 0x6C7--><!--Device-AudioChannelLayout-CH_LAYOUT_7POINT0_FRONT = 0x6C7-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -388,6 +452,8 @@ CH_LAYOUT_7POINT1 = 0x63F
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_7POINT1 = 0x63F--><!--Device-AudioChannelLayout-CH_LAYOUT_7POINT1 = 0x63F-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_OCTAGONAL
@@ -399,6 +465,8 @@ CH_LAYOUT_OCTAGONAL = 0x737
 声道布局为OCTAGONAL。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_OCTAGONAL = 0x737--><!--Device-AudioChannelLayout-CH_LAYOUT_OCTAGONAL = 0x737-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -412,6 +480,8 @@ CH_LAYOUT_5POINT1POINT2 = 0x300000060F
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_5POINT1POINT2 = 0x300000060F--><!--Device-AudioChannelLayout-CH_LAYOUT_5POINT1POINT2 = 0x300000060F-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_7POINT1_WIDE
@@ -423,6 +493,8 @@ CH_LAYOUT_7POINT1_WIDE = 0x6CF
 声道布局为7.1-WIDE。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_7POINT1_WIDE = 0x6CF--><!--Device-AudioChannelLayout-CH_LAYOUT_7POINT1_WIDE = 0x6CF-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -436,6 +508,8 @@ CH_LAYOUT_7POINT1_WIDE_BACK = 0xFF
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_7POINT1_WIDE_BACK = 0xFF--><!--Device-AudioChannelLayout-CH_LAYOUT_7POINT1_WIDE_BACK = 0xFF-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_AMB_ORDER2_ACN_N3D
@@ -447,6 +521,8 @@ CH_LAYOUT_AMB_ORDER2_ACN_N3D = 0x100000000002
 声道排序为ACN_N3D（根据ITU标准）的二阶HOA文件。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_AMB_ORDER2_ACN_N3D = 0x100000000002--><!--Device-AudioChannelLayout-CH_LAYOUT_AMB_ORDER2_ACN_N3D = 0x100000000002-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -460,6 +536,8 @@ CH_LAYOUT_AMB_ORDER2_ACN_SN3D = 0x100000001002
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_AMB_ORDER2_ACN_SN3D = 0x100000001002--><!--Device-AudioChannelLayout-CH_LAYOUT_AMB_ORDER2_ACN_SN3D = 0x100000001002-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_AMB_ORDER2_FUMA
@@ -471,6 +549,8 @@ CH_LAYOUT_AMB_ORDER2_FUMA = 0x100000000102
 声道排序为FUMA（根据ITU标准）的二阶HOA文件。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_AMB_ORDER2_FUMA = 0x100000000102--><!--Device-AudioChannelLayout-CH_LAYOUT_AMB_ORDER2_FUMA = 0x100000000102-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -484,6 +564,8 @@ CH_LAYOUT_5POINT1POINT4 = 0x2D60F
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_5POINT1POINT4 = 0x2D60F--><!--Device-AudioChannelLayout-CH_LAYOUT_5POINT1POINT4 = 0x2D60F-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_7POINT1POINT2
@@ -495,6 +577,8 @@ CH_LAYOUT_7POINT1POINT2 = 0x300000063F
 声道布局为7.1.2。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_7POINT1POINT2 = 0x300000063F--><!--Device-AudioChannelLayout-CH_LAYOUT_7POINT1POINT2 = 0x300000063F-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -508,6 +592,8 @@ CH_LAYOUT_7POINT1POINT4 = 0x2D63F
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_7POINT1POINT4 = 0x2D63F--><!--Device-AudioChannelLayout-CH_LAYOUT_7POINT1POINT4 = 0x2D63F-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_10POINT2
@@ -519,6 +605,8 @@ CH_LAYOUT_10POINT2 = 0x180005737
 声道布局为10.2。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_10POINT2 = 0x180005737--><!--Device-AudioChannelLayout-CH_LAYOUT_10POINT2 = 0x180005737-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -532,6 +620,8 @@ CH_LAYOUT_9POINT1POINT4 = 0x18002D63F
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_9POINT1POINT4 = 0x18002D63F--><!--Device-AudioChannelLayout-CH_LAYOUT_9POINT1POINT4 = 0x18002D63F-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_9POINT1POINT6
@@ -543,6 +633,8 @@ CH_LAYOUT_9POINT1POINT6 = 0x318002D63F
 声道布局为9.1.6。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_9POINT1POINT6 = 0x318002D63F--><!--Device-AudioChannelLayout-CH_LAYOUT_9POINT1POINT6 = 0x318002D63F-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -556,6 +648,8 @@ CH_LAYOUT_HEXADECAGONAL = 0x18003F737
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_HEXADECAGONAL = 0x18003F737--><!--Device-AudioChannelLayout-CH_LAYOUT_HEXADECAGONAL = 0x18003F737-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_AMB_ORDER3_ACN_N3D
@@ -567,6 +661,8 @@ CH_LAYOUT_AMB_ORDER3_ACN_N3D = 0x100000000003
 声道排序为ACN_N3D（根据ITU标准）的三阶HOA文件。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_AMB_ORDER3_ACN_N3D = 0x100000000003--><!--Device-AudioChannelLayout-CH_LAYOUT_AMB_ORDER3_ACN_N3D = 0x100000000003-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -580,6 +676,8 @@ CH_LAYOUT_AMB_ORDER3_ACN_SN3D = 0x100000001003
 
 **起始版本：** 11
 
+<!--Device-AudioChannelLayout-CH_LAYOUT_AMB_ORDER3_ACN_SN3D = 0x100000001003--><!--Device-AudioChannelLayout-CH_LAYOUT_AMB_ORDER3_ACN_SN3D = 0x100000001003-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CH_LAYOUT_AMB_ORDER3_FUMA
@@ -591,6 +689,8 @@ CH_LAYOUT_AMB_ORDER3_FUMA = 0x100000000103
 声道排序为FUMA（根据ITU标准）的三阶HOA文件。
 
 **起始版本：** 11
+
+<!--Device-AudioChannelLayout-CH_LAYOUT_AMB_ORDER3_FUMA = 0x100000000103--><!--Device-AudioChannelLayout-CH_LAYOUT_AMB_ORDER3_FUMA = 0x100000000103-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 

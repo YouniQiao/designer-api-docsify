@@ -4,6 +4,8 @@ Enumerates the directions of cursor movement of the input method.
 
 **Since:** 10
 
+<!--Device-inputMethodEngine-export enum Direction--><!--Device-inputMethodEngine-export enum Direction-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## CURSOR_UP
@@ -15,6 +17,8 @@ CURSOR_UP = 1
 Upward.
 
 **Since:** 10
+
+<!--Device-Direction-CURSOR_UP = 1--><!--Device-Direction-CURSOR_UP = 1-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -28,6 +32,8 @@ Downward.
 
 **Since:** 10
 
+<!--Device-Direction-CURSOR_DOWN--><!--Device-Direction-CURSOR_DOWN-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## CURSOR_LEFT
@@ -40,6 +46,8 @@ Leftward.
 
 **Since:** 10
 
+<!--Device-Direction-CURSOR_LEFT--><!--Device-Direction-CURSOR_LEFT-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## CURSOR_RIGHT
@@ -51,6 +59,8 @@ CURSOR_RIGHT
 Rightward.
 
 **Since:** 10
+
+<!--Device-Direction-CURSOR_RIGHT--><!--Device-Direction-CURSOR_RIGHT-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 

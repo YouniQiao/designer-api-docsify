@@ -4,6 +4,8 @@ Represents the tool authorization result.
 
 **Since:** 26.0.0
 
+<!--Device-abilityAccessCtrl-interface ToolAuthResult--><!--Device-abilityAccessCtrl-interface ToolAuthResult-End-->
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -27,6 +29,8 @@ List of authorization result strings.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ToolAuthResult-authResults: Array<string>--><!--Device-ToolAuthResult-authResults: Array<string>-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 

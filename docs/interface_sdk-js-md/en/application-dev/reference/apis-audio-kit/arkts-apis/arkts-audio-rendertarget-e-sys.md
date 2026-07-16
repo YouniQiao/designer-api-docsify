@@ -4,6 +4,8 @@ Audio render target.
 
 **Since:** 22
 
+<!--Device-audio-enum RenderTarget--><!--Device-audio-enum RenderTarget-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
@@ -14,10 +16,11 @@ Audio render target.
 PLAYBACK = 0
 ```
 
-Playback. Under this target, the audio renderer will be played out. This is the default
-target of audio renderer.
+Playback. Under this target, the audio renderer will be played out. This is the default target of audio renderer.
 
 **Since:** 22
+
+<!--Device-RenderTarget-PLAYBACK = 0--><!--Device-RenderTarget-PLAYBACK = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -29,11 +32,11 @@ target of audio renderer.
 INJECT_TO_VOICE_COMMUNICATION_CAPTURE = 1
 ```
 
-Inject to voice communication capture. Under this target, the audio renderer will be injected
-to audio capture with source type of {@link SourceType#SOURCE_TYPE_VOICE_COMMUNICATION} when the
-audio scene is {@link AudioScene#AUDIO_SCENE_VOICE_CHAT}.
+Inject to voice communication capture. Under this target, the audio renderer will be injected to audio capture with source type of {@link SourceType#SOURCE_TYPE_VOICE_COMMUNICATION} when the audio scene is {@link AudioScene#AUDIO_SCENE_VOICE_CHAT}.
 
 **Since:** 22
+
+<!--Device-RenderTarget-INJECT_TO_VOICE_COMMUNICATION_CAPTURE = 1--><!--Device-RenderTarget-INJECT_TO_VOICE_COMMUNICATION_CAPTURE = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 

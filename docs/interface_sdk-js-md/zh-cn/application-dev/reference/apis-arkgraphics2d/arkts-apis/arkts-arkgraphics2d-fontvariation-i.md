@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-text-interface FontVariation--><!--Device-text-interface FontVariation-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
+
+## 导入模块
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D';
+```
 
 ## axis
 
@@ -18,7 +26,9 @@ axis: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FontVariation-axis: string--><!--Device-FontVariation-axis: string-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -34,7 +44,9 @@ isNormalized?: boolean
 
 **起始版本：** 24
 
-**元服务API：** 从API版本24开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FontVariation-isNormalized?: boolean--><!--Device-FontVariation-isNormalized?: boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -50,7 +62,9 @@ value: number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FontVariation-value: double--><!--Device-FontVariation-value: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

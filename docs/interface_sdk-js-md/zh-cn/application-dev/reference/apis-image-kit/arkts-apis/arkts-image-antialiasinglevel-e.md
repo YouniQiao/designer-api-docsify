@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-image-enum AntiAliasingLevel--><!--Device-image-enum AntiAliasingLevel-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## NONE
@@ -18,7 +20,9 @@ NONE = 0
 
 **起始版本：** 12
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AntiAliasingLevel-NONE = 0--><!--Device-AntiAliasingLevel-NONE = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -34,7 +38,9 @@ LOW = 1
 
 **起始版本：** 12
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AntiAliasingLevel-LOW = 1--><!--Device-AntiAliasingLevel-LOW = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -50,7 +56,9 @@ MEDIUM = 2
 
 **起始版本：** 12
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AntiAliasingLevel-MEDIUM = 2--><!--Device-AntiAliasingLevel-MEDIUM = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -66,7 +74,9 @@ HIGH = 3
 
 **起始版本：** 12
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AntiAliasingLevel-HIGH = 3--><!--Device-AntiAliasingLevel-HIGH = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

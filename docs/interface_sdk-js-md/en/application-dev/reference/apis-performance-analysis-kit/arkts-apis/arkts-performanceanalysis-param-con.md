@@ -12,6 +12,8 @@ Distributed service instance ID.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-param-const DISTRIBUTED_SERVICE_INSTANCE_ID: string--><!--Device-param-const DISTRIBUTED_SERVICE_INSTANCE_ID: string-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## DISTRIBUTED_SERVICE_NAME
@@ -26,6 +28,8 @@ Distributed service name.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-param-const DISTRIBUTED_SERVICE_NAME: string--><!--Device-param-const DISTRIBUTED_SERVICE_NAME: string-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## USER_ID
@@ -39,6 +43,8 @@ Custom user ID.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-param-const USER_ID: string--><!--Device-param-const USER_ID: string-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 

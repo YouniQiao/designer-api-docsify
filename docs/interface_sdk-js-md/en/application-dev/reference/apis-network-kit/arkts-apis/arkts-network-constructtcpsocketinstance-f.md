@@ -16,13 +16,15 @@ Creates a TCPSocket object.
 
 **Since:** 10
 
+<!--Device-socket-function constructTCPSocketInstance(): TCPSocket--><!--Device-socket-function constructTCPSocketInstance(): TCPSocket-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TCPSocket | the TCPSocket of the constructTCPSocketInstance. |
+| [TCPSocket](arkts-network-tcpsocket-i.md) | the TCPSocket of the constructTCPSocketInstance. |
 
 **Example**
 

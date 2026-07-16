@@ -4,9 +4,17 @@
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare namespace shortcutManager--><!--Device-unnamed-declare namespace shortcutManager-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { shortcutManager } from '@kit.AbilityKit';
+```
 
 ## 汇总
 

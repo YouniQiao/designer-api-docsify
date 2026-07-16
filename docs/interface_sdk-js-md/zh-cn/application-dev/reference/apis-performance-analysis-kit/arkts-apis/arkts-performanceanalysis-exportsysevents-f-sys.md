@@ -1,5 +1,11 @@
 # exportSysEvents（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
+```
+
 ## exportSysEvents
 
 ```TypeScript
@@ -12,6 +18,8 @@ function exportSysEvents(queryArg: QueryArg, rules: QueryRule[]): number
 
 **需要权限：** ohos.permission.READ_DFX_SYSEVENT
 
+<!--Device-hiSysEvent-function exportSysEvents(queryArg: QueryArg, rules: QueryRule[]): long--><!--Device-hiSysEvent-function exportSysEvents(queryArg: QueryArg, rules: QueryRule[]): long-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +28,8 @@ function exportSysEvents(queryArg: QueryArg, rules: QueryRule[]): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| queryArg | QueryArg | 是 | 导出需要配置的查询参数。 |
-| rules | QueryRule[] | 是 | 查询规则数组，每次导出可配置多个查询规则。 |
+| queryArg | [QueryArg](arkts-performanceanalysis-queryarg-i-sys.md) | 是 | 导出需要配置的查询参数。 |
+| rules | [QueryRule](arkts-performanceanalysis-queryrule-i-sys.md)[] | 是 | 查询规则数组，每次导出可配置多个查询规则。 |
 
 **返回值：**
 

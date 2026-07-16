@@ -4,6 +4,8 @@ Component sheet title options
 
 **Since:** 11
 
+<!--Device-unnamed-declare interface SheetTitleOptions--><!--Device-unnamed-declare interface SheetTitleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## subtitle
@@ -22,6 +24,8 @@ Defines subtitle text
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SheetTitleOptions-subtitle?: ResourceStr--><!--Device-SheetTitleOptions-subtitle?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## title
@@ -39,6 +43,8 @@ Defines title text
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SheetTitleOptions-title: ResourceStr--><!--Device-SheetTitleOptions-title: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

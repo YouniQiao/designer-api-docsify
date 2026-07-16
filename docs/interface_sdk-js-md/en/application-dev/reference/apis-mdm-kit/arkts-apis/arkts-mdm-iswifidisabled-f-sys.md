@@ -24,6 +24,8 @@ Queries whether Wi-Fi is disabled on the current device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-wifiManager-function isWifiDisabled(admin: Want): boolean--><!--Device-wifiManager-function isWifiDisabled(admin: Want): boolean-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -32,13 +34,13 @@ Queries whether Wi-Fi is disabled on the current device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Wi-Fi disabling status. The value **true** indicates that Wi-Fi is disabled, and falseindicates the opposite. |
+| boolean | Wi-Fi disabling status. The value **true** indicates that Wi-Fi is disabled, and false indicates the opposite. |
 
 **Error codes:**
 

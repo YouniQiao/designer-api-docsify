@@ -1,12 +1,14 @@
 # SegmentButtonOptions
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > The component does not support custom font type settings.
 
 Provides initial data and custom properties for the **SegmentButton** component.
 
 **Since:** 11
+
+<!--Device-unnamed-declare class SegmentButtonOptions--><!--Device-unnamed-declare class SegmentButtonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,19 +32,21 @@ Creates a **SegmentButtonOptions** object specifically for capsule-style segment
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SegmentButtonOptions-static capsule(options: CapsuleSegmentButtonConstructionOptions): SegmentButtonOptions--><!--Device-SegmentButtonOptions-static capsule(options: CapsuleSegmentButtonConstructionOptions): SegmentButtonOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | CapsuleSegmentButtonConstructionOptions | Yes | Configuration options for capsule-style segmentedbuttons. |
+| options | [CapsuleSegmentButtonConstructionOptions](arkts-arkui-capsulesegmentbuttonconstructionoptions-i.md) | Yes | Configuration options for capsule-style segmented buttons. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SegmentButtonOptions | Options of the **SegmentButton** component. |
+| [SegmentButtonOptions](arkts-arkui-segmentbuttonoptions-c.md) | Options of the **SegmentButton** component. |
 
 ## constructor
 
@@ -58,13 +62,15 @@ Constructor.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SegmentButtonOptions-constructor(options: TabSegmentButtonOptions | CapsuleSegmentButtonOptions)--><!--Device-SegmentButtonOptions-constructor(options: TabSegmentButtonOptions | CapsuleSegmentButtonOptions)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | TabSegmentButtonOptions \| CapsuleSegmentButtonOptions | Yes | Configuration options for tab-style orcapsule-style segmented buttons. |
+| options | TabSegmentButtonOptions \| CapsuleSegmentButtonOptions | Yes | Configuration options for tab-style or capsule-style segmented buttons. |
 
 ## tab
 
@@ -80,19 +86,21 @@ Creates a SegmentButtonOptions class to define tabs.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SegmentButtonOptions-static tab(options: TabSegmentButtonConstructionOptions): SegmentButtonOptions--><!--Device-SegmentButtonOptions-static tab(options: TabSegmentButtonConstructionOptions): SegmentButtonOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | TabSegmentButtonConstructionOptions | Yes | Configuration options for tab-style segmented buttons. |
+| options | [TabSegmentButtonConstructionOptions](arkts-arkui-tabsegmentbuttonconstructionoptions-i.md) | Yes | Configuration options for tab-style segmented buttons. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SegmentButtonOptions | Options of the **SegmentButton** component. |
+| [SegmentButtonOptions](arkts-arkui-segmentbuttonoptions-c.md) | Options of the **SegmentButton** component. |
 
 ## backgroundBlurStyle
 
@@ -112,6 +120,8 @@ If the value is **undefined**, it defaults to **BlurStyle.NONE**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SegmentButtonOptions-backgroundBlurStyle: BlurStyle--><!--Device-SegmentButtonOptions-backgroundBlurStyle: BlurStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundBorderRadius
@@ -126,11 +136,9 @@ Container border radius.
 
 This attribute takes effect only when **borderRadiusMode** is set to **BorderRadiusMode.CUSTOM**.
 
-For capsule-style multi-selection segmented buttons (with **type** being **"capsule"** and **multiply** being
-**true**), this attribute does not take effect and **itemBorderRadius** must be used to set the border radius.
+For capsule-style multi-selection segmented buttons (with **type** being **"capsule"** and **multiply** being **true**), this attribute does not take effect and **itemBorderRadius** must be used to set the border radius.
 
-The maximum value for the border radius is half of the component's width or height, and percentage values are not
-supported.
+The maximum value for the border radius is half of the component's width or height, and percentage values are not supported.
 
 Default value: **$r('sys.float.segmentbutton_container_shape')**
 
@@ -143,6 +151,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SegmentButtonOptions-backgroundBorderRadius?: LengthMetrics--><!--Device-SegmentButtonOptions-backgroundBorderRadius?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -163,6 +173,8 @@ If the value is **undefined**, the background color is $r('sys.color.ohos_id_col
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SegmentButtonOptions-backgroundColor: ResourceColor--><!--Device-SegmentButtonOptions-backgroundColor: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -187,6 +199,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SegmentButtonOptions-borderRadiusMode?: BorderRadiusMode--><!--Device-SegmentButtonOptions-borderRadiusMode?: BorderRadiusMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -214,6 +228,8 @@ Unit: vp
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SegmentButtonOptions-buttonPadding: Padding | Dimension--><!--Device-SegmentButtonOptions-buttonPadding: Padding | Dimension-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## buttons
@@ -231,6 +247,8 @@ Button information of the component, including the icon and text.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SegmentButtonOptions-buttons: SegmentButtonItemOptionsArray--><!--Device-SegmentButtonOptions-buttons: SegmentButtonItemOptionsArray-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -254,6 +272,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SegmentButtonOptions-direction?: Direction--><!--Device-SegmentButtonOptions-direction?: Direction-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontColor
@@ -273,6 +293,8 @@ If the value is **undefined**, the color is $r('sys.color.ohos_id_color_text_sec
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SegmentButtonOptions-fontColor: ResourceColor--><!--Device-SegmentButtonOptions-fontColor: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -294,6 +316,8 @@ If the value is **undefined**, the font size is $r('sys.float.ohos_id_text_size_
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SegmentButtonOptions-fontSize: DimensionNoPercentage--><!--Device-SegmentButtonOptions-fontSize: DimensionNoPercentage-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontWeight
@@ -313,6 +337,8 @@ If the value is **undefined**, the font weight is **FontWeight.Regular**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SegmentButtonOptions-fontWeight: FontWeight--><!--Device-SegmentButtonOptions-fontWeight: FontWeight-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -340,6 +366,8 @@ The **imageSize** property takes effect only for icon-only and icon-with-text bu
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SegmentButtonOptions-imageSize: SizeOptions--><!--Device-SegmentButtonOptions-imageSize: SizeOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## itemBorderRadius
@@ -354,11 +382,9 @@ Individual button border radius.
 
 This attribute takes effect only when **borderRadiusMode** is set to **BorderRadiusMode.CUSTOM**.
 
-For capsule-style multi-selection segmented buttons (with **type** being **"capsule"** and **multiply** being
-**true**), this attribute only affects end items.
+For capsule-style multi-selection segmented buttons (with **type** being **"capsule"** and **multiply** being **true**), this attribute only affects end items.
 
-The maximum value for the border radius is half of the component's width or height, and percentage values are not
-supported.
+The maximum value for the border radius is half of the component's width or height, and percentage values are not supported.
 
 Default value: **$r('sys.float.segmentbutton_selected_background_shape')**
 
@@ -372,6 +398,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SegmentButtonOptions-itemBorderRadius?: LengthMetrics--><!--Device-SegmentButtonOptions-itemBorderRadius?: LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## localizedButtonPadding
@@ -384,12 +412,9 @@ Button padding of the component.
 
 Default value:
 
-Icon button and text button:
-**{ top: LengthMetrics.vp(4), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(4), start: LengthMetrics.vp(8) }**.
+Icon button and text button:**{ top: LengthMetrics.vp(4), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(4), start: LengthMetrics.vp(8) }**.
 
-Icon + text button:
-**{ top: LengthMetrics.vp(6), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(6), start: LengthMetrics.vp(8) **}
-.
+Icon + text button:**{ top: LengthMetrics.vp(6), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(6), start: LengthMetrics.vp(8) **}.
 
 If the value is **undefined**, the default value is used.
 
@@ -400,6 +425,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SegmentButtonOptions-localizedButtonPadding?: LocalizedPadding--><!--Device-SegmentButtonOptions-localizedButtonPadding?: LocalizedPadding-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -423,6 +450,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SegmentButtonOptions-localizedTextPadding?: LocalizedPadding--><!--Device-SegmentButtonOptions-localizedTextPadding?: LocalizedPadding-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## multiply
@@ -435,8 +464,7 @@ Whether multiple items can be selected.
 
 **true**: Multiple items can be selected.
 
-**false**: Multiple items cannot be selected. For the **SegmentButton** component consisting of tab-style buttons,
-only one item can be selected. In this case, setting **multiply** to **true** does not take effect.
+**false**: Multiple items cannot be selected. For the **SegmentButton** component consisting of tab-style buttons,only one item can be selected. In this case, setting **multiply** to **true** does not take effect.
 
 If the value is **undefined**, the component does not support selection of multiple items.
 
@@ -448,6 +476,8 @@ If the value is **undefined**, the component does not support selection of multi
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SegmentButtonOptions-multiply: boolean--><!--Device-SegmentButtonOptions-multiply: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectedBackgroundColor
@@ -458,8 +488,7 @@ selectedBackgroundColor: ResourceColor
 
 Background color of the selected button.
 
-When the value is **undefined** and **type** is **"tab"**, the background color is
-**$r('sys.color.segment_button_checked_foreground_color')**.
+When the value is **undefined** and **type** is **"tab"**, the background color is **$r('sys.color.segment_button_checked_foreground_color')**.
 
 When **type** is **"capsule"**, the background color is **$r('sys.color.ohos_id_color_emphasize')**.
 
@@ -471,6 +500,8 @@ When **type** is **"capsule"**, the background color is **$r('sys.color.ohos_id_
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SegmentButtonOptions-selectedBackgroundColor: ResourceColor--><!--Device-SegmentButtonOptions-selectedBackgroundColor: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectedFontColor
@@ -481,8 +512,7 @@ selectedFontColor: ResourceColor
 
 Text color of the selected button.
 
-If the value is **undefined**, the color is $r('sys.color.ohos_id_color_text_primary') when type is set to
-**"tab"**.
+If the value is **undefined**, the color is $r('sys.color.ohos_id_color_text_primary') when type is set to **"tab"**.
 
 When type is set to **"capsule"**, the color is $r('sys.color.ohos_id_color_foreground_contrary').
 
@@ -493,6 +523,8 @@ When type is set to **"capsule"**, the color is $r('sys.color.ohos_id_color_fore
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SegmentButtonOptions-selectedFontColor: ResourceColor--><!--Device-SegmentButtonOptions-selectedFontColor: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -514,6 +546,8 @@ If the value is **undefined**, the font size is $r('sys.float.ohos_id_text_size_
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SegmentButtonOptions-selectedFontSize: DimensionNoPercentage--><!--Device-SegmentButtonOptions-selectedFontSize: DimensionNoPercentage-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectedFontWeight
@@ -533,6 +567,8 @@ If the value is **undefined**, the font weight is **FontWeight.Medium**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SegmentButtonOptions-selectedFontWeight: FontWeight--><!--Device-SegmentButtonOptions-selectedFontWeight: FontWeight-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -555,6 +591,8 @@ Unit: vp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SegmentButtonOptions-textPadding: Padding | Dimension--><!--Device-SegmentButtonOptions-textPadding: Padding | Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -579,6 +617,8 @@ Type of the **SegmentButton** component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SegmentButtonOptions-type: "tab" | "capsule"--><!--Device-SegmentButtonOptions-type: "tab" | "capsule"-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

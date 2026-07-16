@@ -4,6 +4,8 @@ Declare CustomDialog SelectDialog
 
 **Since:** 18
 
+<!--Device-unnamed-export declare struct SelectDialog--><!--Device-unnamed-export declare struct SelectDialog-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Sets the SelectDialog confirm button.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SelectDialog-confirm?: ButtonOptions--><!--Device-SelectDialog-confirm?: ButtonOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## content
@@ -45,6 +49,8 @@ Sets the SelectDialog content.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SelectDialog-content?: ResourceStr--><!--Device-SelectDialog-content?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +70,8 @@ Sets the SelectDialog Controller.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SelectDialog-controller: CustomDialogController--><!--Device-SelectDialog-controller: CustomDialogController-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## radioContent
@@ -81,6 +89,8 @@ Sets the SelectDialog sheets.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SelectDialog-radioContent: Array<SheetInfo>--><!--Device-SelectDialog-radioContent: Array<SheetInfo>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +110,8 @@ Sets the SelectDialog selected index.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SelectDialog-selectedIndex?: number--><!--Device-SelectDialog-selectedIndex?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## theme
@@ -117,6 +129,8 @@ Custom Theme.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SelectDialog-theme?: Theme | CustomTheme--><!--Device-SelectDialog-theme?: Theme | CustomTheme-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -136,6 +150,8 @@ Sets the SelectDialog dark or light Mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SelectDialog-themeColorMode?: ThemeColorMode--><!--Device-SelectDialog-themeColorMode?: ThemeColorMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## title
@@ -153,6 +169,8 @@ Sets the SelectDialog title.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SelectDialog-title: ResourceStr--><!--Device-SelectDialog-title: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

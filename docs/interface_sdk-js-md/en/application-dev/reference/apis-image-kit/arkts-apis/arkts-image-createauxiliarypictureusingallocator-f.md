@@ -13,14 +13,15 @@ function createAuxiliaryPictureUsingAllocator(auxiliaryPictureInfo: AuxiliaryPic
     allocatorType?: AllocatorType, pixels?: ArrayBuffer): AuxiliaryPicture
 ```
 
-Create an <b>AuxiliaryPicture</b> object, the memory type used by the AuxiliaryPicture can be specified by
-allocatorType {@link IMAGE_ALLOCATOR_TYPE}. By default, the system selects the memory type based on the image type,
-image size, platform capability, etc. When processing the AuxiliaryPicture returned by this interface, please
-always consider the impact of stride. The created auxiliary picture is initialized with the input pixels.
+Create an <b>AuxiliaryPicture</b> object, the memory type used by the AuxiliaryPicture can be specified by allocatorType {@link IMAGE_ALLOCATOR_TYPE}. By default, the system selects the memory type based on the image type,image size, platform capability, etc. When processing the AuxiliaryPicture returned by this interface, please always consider the impact of stride. The created auxiliary picture is initialized with the input pixels.
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-image-function createAuxiliaryPictureUsingAllocator(auxiliaryPictureInfo: AuxiliaryPictureInfo,
+    allocatorType?: AllocatorType, pixels?: ArrayBuffer): AuxiliaryPicture--><!--Device-image-function createAuxiliaryPictureUsingAllocator(auxiliaryPictureInfo: AuxiliaryPictureInfo,
+    allocatorType?: AllocatorType, pixels?: ArrayBuffer): AuxiliaryPicture-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -28,21 +29,21 @@ always consider the impact of stride. The created auxiliary picture is initializ
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| auxiliaryPictureInfo | AuxiliaryPictureInfo | Yes | The basic information of the auxiliary picture. |
-| allocatorType | AllocatorType | No | Memory type. |
-| pixels | ArrayBuffer | No | Pixel data used to initialize the auxiliary picture. |
+| auxiliaryPictureInfo | [AuxiliaryPictureInfo](arkts-image-auxiliarypictureinfo-i.md) | Yes | The basic information of the auxiliary picture. |
+| allocatorType | [AllocatorType](arkts-image-allocatortype-e.md) | No | Memory type. |
+| pixels | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | No | Pixel data used to initialize the auxiliary picture. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AuxiliaryPicture | The AuxiliaryPicture object. |
+| [AuxiliaryPicture](arkts-image-auxiliarypicture-i.md) | The AuxiliaryPicture object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600205](../errorcode-image.md#7600205-unsupported-format) | Unsupported allocator type, e.g., use shared memory to create a gainmap asonly DMA supported hdr metadata. |
+| [7600205](../errorcode-image.md#7600205-unsupported-format) | Unsupported allocator type, e.g., use shared memory to create a gainmap as only DMA supported hdr metadata. |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter, size.height or size.width is less than or equal to 0. |
 | [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Alloc memory failed. |
 

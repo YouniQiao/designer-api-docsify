@@ -18,6 +18,8 @@ Open the AI image generation task popup and perform AI image generation operatio
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-imageGeneration-function showGeneratorDialog(uiContext: UIContext, options?: GeneratorDialogOptions): Promise<Array<GeneratorResult>>--><!--Device-imageGeneration-function showGeneratorDialog(uiContext: UIContext, options?: GeneratorDialogOptions): Promise<Array<GeneratorResult>>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -26,12 +28,12 @@ Open the AI image generation task popup and perform AI image generation operatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | UIContext | Yes | the context of dialog for ui display. |
-| options | GeneratorDialogOptions | No | Generate image task parameters. |
+| uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | the context of dialog for ui display. |
+| options | [GeneratorDialogOptions](arkts-arkui-generatordialogoptions-i-sys.md) | No | Generate image task parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;GeneratorResult&gt;&gt; | - Returns the result of generated image. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<GeneratorResult>> | - Returns the result of generated image. |
 

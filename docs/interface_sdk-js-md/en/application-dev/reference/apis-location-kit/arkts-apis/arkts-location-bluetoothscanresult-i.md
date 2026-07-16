@@ -4,6 +4,8 @@ Describes the contents of the bluetooth scan results.
 
 **Since:** 16
 
+<!--Device-geoLocationManager-export interface BluetoothScanResult--><!--Device-geoLocationManager-export interface BluetoothScanResult-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Connectable of the scanned device
 
 **Since:** 16
 
+<!--Device-BluetoothScanResult-connectable: boolean--><!--Device-BluetoothScanResult-connectable: boolean-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## data
@@ -37,6 +41,8 @@ The raw data of broadcast packet
 **Type:** ArrayBuffer
 
 **Since:** 16
+
+<!--Device-BluetoothScanResult-data?: ArrayBuffer--><!--Device-BluetoothScanResult-data?: ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -52,6 +58,8 @@ Address of the scanned device
 
 **Since:** 16
 
+<!--Device-BluetoothScanResult-deviceId: string--><!--Device-BluetoothScanResult-deviceId: string-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## deviceName
@@ -66,6 +74,8 @@ The local name of the scanned device
 
 **Since:** 16
 
+<!--Device-BluetoothScanResult-deviceName: string--><!--Device-BluetoothScanResult-deviceName: string-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## rssi
@@ -79,6 +89,8 @@ RSSI of the scanned device
 **Type:** number
 
 **Since:** 16
+
+<!--Device-BluetoothScanResult-rssi: int--><!--Device-BluetoothScanResult-rssi: int-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 

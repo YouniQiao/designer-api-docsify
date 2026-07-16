@@ -1,5 +1,11 @@
 # getLaunchWantForBundleSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getLaunchWantForBundleSync
 
 ```TypeScript
@@ -13,6 +19,8 @@ function getLaunchWantForBundleSync(bundleName: string, userId?: number): Want
 **需要权限：** 
 - API版本24+：ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or (ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 - API版本10 - 23：ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getLaunchWantForBundleSync(bundleName: string, userId?: int): Want--><!--Device-bundleManager-function getLaunchWantForBundleSync(bundleName: string, userId?: int): Want-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -29,7 +37,7 @@ function getLaunchWantForBundleSync(bundleName: string, userId?: number): Want
 
 | 类型 | 说明 |
 | --- | --- |
-| Want | Want对象。 |
+| [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Want对象。 |
 
 **错误码：**
 

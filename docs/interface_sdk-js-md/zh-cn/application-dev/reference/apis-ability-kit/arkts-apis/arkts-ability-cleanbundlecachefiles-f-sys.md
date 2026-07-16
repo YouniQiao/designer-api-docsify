@@ -1,5 +1,11 @@
 # cleanBundleCacheFiles（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## cleanBundleCacheFiles
 
 ```TypeScript
@@ -14,6 +20,8 @@ function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>
 
 **需要权限：** ohos.permission.REMOVE_CACHE_FILES
 
+<!--Device-bundleManager-function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>): void--><!--Device-bundleManager-function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,7 +31,7 @@ function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示要清理其缓存数据的应用程序的bundleName。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当清理应用缓存目录数据成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当清理应用缓存目录数据成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -74,6 +82,8 @@ function cleanBundleCacheFiles(bundleName: string): Promise<void>
 
 **需要权限：** ohos.permission.REMOVE_CACHE_FILES
 
+<!--Device-bundleManager-function cleanBundleCacheFiles(bundleName: string): Promise<void>--><!--Device-bundleManager-function cleanBundleCacheFiles(bundleName: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -88,7 +98,7 @@ function cleanBundleCacheFiles(bundleName: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -137,6 +147,8 @@ function cleanBundleCacheFiles(bundleName: string, appIndex: number): Promise<vo
 
 **需要权限：** ohos.permission.REMOVE_CACHE_FILES
 
+<!--Device-bundleManager-function cleanBundleCacheFiles(bundleName: string, appIndex: int): Promise<void>--><!--Device-bundleManager-function cleanBundleCacheFiles(bundleName: string, appIndex: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -152,7 +164,7 @@ function cleanBundleCacheFiles(bundleName: string, appIndex: number): Promise<vo
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

@@ -1,5 +1,11 @@
 # getAllDisplays
 
+## 导入模块
+
+```TypeScript
+import { display } from '@kit.ArkUI';
+```
+
 ## getAllDisplays
 
 ```TypeScript
@@ -10,7 +16,9 @@ function getAllDisplays(callback: AsyncCallback<Array<Display>>): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-display-function getAllDisplays(callback: AsyncCallback<Array<Display>>): void--><!--Device-display-function getAllDisplays(callback: AsyncCallback<Array<Display>>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -18,7 +26,7 @@ function getAllDisplays(callback: AsyncCallback<Array<Display>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;Display&gt;&gt; | 是 | 回调函数。返回当前所有的Display对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Display>> | 是 | 回调函数。返回当前所有的Display对象。 |
 
 **错误码：**
 
@@ -55,7 +63,9 @@ function getAllDisplays(): Promise<Array<Display>>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-display-function getAllDisplays(): Promise<Array<Display>>--><!--Device-display-function getAllDisplays(): Promise<Array<Display>>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -63,7 +73,7 @@ function getAllDisplays(): Promise<Array<Display>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Display&gt;&gt; | Promise对象。返回当前所有的Display对象。 |
+| Promise<Array<Display>> | Promise对象。返回当前所有的Display对象。 |
 
 **错误码：**
 

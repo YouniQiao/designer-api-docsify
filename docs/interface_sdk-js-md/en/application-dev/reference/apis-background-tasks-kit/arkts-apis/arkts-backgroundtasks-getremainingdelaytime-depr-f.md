@@ -6,8 +6,7 @@
 function getRemainingDelayTime(requestId: number, callback: AsyncCallback<number>): void
 ```
 
-Obtains the remaining duration before the application is suspended. This API uses an asynchronous callback to
-return the result.
+Obtains the remaining duration before the application is suspended. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -15,14 +14,16 @@ return the result.
 
 **Substitutes:** getRemainingDelayTime(requestId:
 
+<!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: number, callback: AsyncCallback<number>): void--><!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: number, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestId | number | Yes | ID of the suspension delay request. The value is obtained by calling[requestSuspendDelay](arkts-backgroundtasks-requestsuspenddelay-depr-f.md#requestsuspenddelay-1). |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the remaining duration before the applicationis suspended, in milliseconds. |
+| requestId | number | Yes | ID of the suspension delay request. The value is obtained by calling [requestSuspendDelay](arkts-backgroundtasks-requestsuspenddelay-depr-f.md#requestsuspenddelay-1). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the remaining duration before the application is suspended, in milliseconds. |
 
 **Example**
 
@@ -56,19 +57,21 @@ Obtains the remaining duration before the application is suspended. This API use
 
 **Substitutes:** getRemainingDelayTime(requestId:
 
+<!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: number): Promise<number>--><!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: number): Promise<number>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestId | number | Yes | ID of the suspension delay request. The value is obtained by calling[requestSuspendDelay](arkts-backgroundtasks-requestsuspenddelay-depr-f.md#requestsuspenddelay-1). |
+| requestId | number | Yes | ID of the suspension delay request. The value is obtained by calling [requestSuspendDelay](arkts-backgroundtasks-requestsuspenddelay-depr-f.md#requestsuspenddelay-1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the remaining duration before the application is suspended, inmilliseconds. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the remaining duration before the application is suspended, in milliseconds. |
 
 **Example**
 

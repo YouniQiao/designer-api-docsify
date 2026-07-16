@@ -14,10 +14,11 @@ function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>):
 
 获取指定类型的通知渠道。使用callback异步回调。
 
-用于查询已创建的通知渠道的详细配置信息，包括提醒方式、级别、锁屏显示等设置。
-需先通过addSlot创建对应类型的通知渠道，否则获取结果为空。
+用于查询已创建的通知渠道的详细配置信息，包括提醒方式、级别、锁屏显示等设置。需先通过addSlot创建对应类型的通知渠道，否则获取结果为空。
 
 **起始版本：** 9
+
+<!--Device-notificationManager-function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>): void--><!--Device-notificationManager-function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -25,8 +26,8 @@ function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotType | SlotType | 是 | 通知渠道类型，例如社交通讯、服务提醒、内容咨询等类型。 |
-| callback | AsyncCallback&lt;NotificationSlot&gt; | 是 | 回调函数。当获取通知渠道成功，err为undefined，data为获取到的NotificationSlot，否则为错误对象。 |
+| slotType | [SlotType](arkts-notification-slottype-e.md) | 是 | 通知渠道类型，例如社交通讯、服务提醒、内容咨询等类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<NotificationSlot> | 是 | 回调函数。当获取通知渠道成功，err为undefined，data为获取到的NotificationSlot，否则为错误对象。 |
 
 **错误码：**
 
@@ -64,10 +65,11 @@ function getSlot(slotType: SlotType): Promise<NotificationSlot>
 
 获取指定类型的通知渠道。使用Promise异步回调。
 
-用于查询已创建的通知渠道的详细配置信息，包括提醒方式、级别、锁屏显示等设置。
-需先通过addSlot创建对应类型的通知渠道，否则获取结果为空。
+用于查询已创建的通知渠道的详细配置信息，包括提醒方式、级别、锁屏显示等设置。需先通过addSlot创建对应类型的通知渠道，否则获取结果为空。
 
 **起始版本：** 9
+
+<!--Device-notificationManager-function getSlot(slotType: SlotType): Promise<NotificationSlot>--><!--Device-notificationManager-function getSlot(slotType: SlotType): Promise<NotificationSlot>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -75,13 +77,13 @@ function getSlot(slotType: SlotType): Promise<NotificationSlot>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotType | SlotType | 是 | 通知渠道类型，例如社交通讯、服务提醒、内容咨询等类型。 |
+| slotType | [SlotType](arkts-notification-slottype-e.md) | 是 | 通知渠道类型，例如社交通讯、服务提醒、内容咨询等类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;NotificationSlot&gt; | Promise对象，返回通知渠道对象。 |
+| Promise<NotificationSlot> | Promise对象，返回通知渠道对象。 |
 
 **错误码：**
 

@@ -4,6 +4,8 @@ Provides APIs for configuring gestures bound to a component.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface UIGestureEvent--><!--Device-unnamed-declare interface UIGestureEvent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## addGesture
@@ -20,15 +22,17 @@ Adds a gesture.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UIGestureEvent-addGesture<T>(gesture: GestureHandler<T>, priority?: GesturePriority, mask?: GestureMask): void--><!--Device-UIGestureEvent-addGesture<T>(gesture: GestureHandler<T>, priority?: GesturePriority, mask?: GestureMask): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesture | GestureHandler&lt;T&gt; | Yes | Gesture handler object. |
-| priority | GesturePriority | No | Priority of the bound gesture.<br>Default value: **GesturePriority.NORMAL**. |
-| mask | GestureMask | No | Mask for gesture events.<br>Default value: **GestureMask.Normal**. |
+| gesture | [GestureHandler](../arkts-apis/arkts-arkui-gesturehandler-c.md)<T> | Yes | Gesture handler object. |
+| priority | [GesturePriority](../arkts-apis/arkts-arkui-gesturepriority-e.md) | No | Priority of the bound gesture.<br>Default value: **GesturePriority.NORMAL**. |
+| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.<br>Default value: **GestureMask.Normal**. |
 
 ## addParallelGesture
 
@@ -44,14 +48,16 @@ Adds a gesture that can be recognized at once by the component and its child com
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UIGestureEvent-addParallelGesture<T>(gesture: GestureHandler<T>, mask?: GestureMask): void--><!--Device-UIGestureEvent-addParallelGesture<T>(gesture: GestureHandler<T>, mask?: GestureMask): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesture | GestureHandler&lt;T&gt; | Yes | Gesture handler object. |
-| mask | GestureMask | No | Mask for gesture events.<br>Default value: **GestureMask.Normal**. |
+| gesture | [GestureHandler](../arkts-apis/arkts-arkui-gesturehandler-c.md)<T> | Yes | Gesture handler object. |
+| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.<br>Default value: **GestureMask.Normal**. |
 
 ## clearGestures
 
@@ -66,6 +72,8 @@ Clears all gestures that have been bound to the component through a modifier.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIGestureEvent-clearGestures(): void--><!--Device-UIGestureEvent-clearGestures(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,6 +90,8 @@ Remove a gesture from a component that has been bound with a specific tag throug
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UIGestureEvent-removeGestureByTag(tag: string): void--><!--Device-UIGestureEvent-removeGestureByTag(tag: string): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

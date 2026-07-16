@@ -4,6 +4,8 @@ Describes upload file information.
 
 **Since:** 12
 
+<!--Device-intelligentVoice-interface UploadFile--><!--Device-intelligentVoice-interface UploadFile-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Files content.
 
 **Since:** 12
 
+<!--Device-UploadFile-filesContent: Array<ArrayBuffer>--><!--Device-UploadFile-filesContent: Array<ArrayBuffer>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ Files description.
 
 **Since:** 12
 
+<!--Device-UploadFile-filesDescription: string--><!--Device-UploadFile-filesDescription: string-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ Report file type.
 **Type:** UploadFileType
 
 **Since:** 12
+
+<!--Device-UploadFile-type: UploadFileType--><!--Device-UploadFile-type: UploadFileType-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 

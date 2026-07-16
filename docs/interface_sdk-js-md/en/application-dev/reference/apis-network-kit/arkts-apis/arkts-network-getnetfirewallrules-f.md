@@ -18,6 +18,8 @@ Get firewall rules by userId, and it is necessary to specify the pagination quer
 
 **Required permissions:** ohos.permission.GET_NET_FIREWALL
 
+<!--Device-netFirewall-function getNetFirewallRules(userId: number, requestParam: RequestParam): Promise<FirewallRulePage>--><!--Device-netFirewall-function getNetFirewallRules(userId: number, requestParam: RequestParam): Promise<FirewallRulePage>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 **Parameters:**
@@ -25,13 +27,13 @@ Get firewall rules by userId, and it is necessary to specify the pagination quer
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | Indicates the user ID. It cannot be the ID of a user that does not exist. |
-| requestParam | RequestParam | Yes | Paging query input parameters. |
+| requestParam | [RequestParam](arkts-network-requestparam-i.md) | Yes | Paging query input parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FirewallRulePage&gt; | Paginated firewall rule list. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<FirewallRulePage> | Paginated firewall rule list. |
 
 **Error codes:**
 

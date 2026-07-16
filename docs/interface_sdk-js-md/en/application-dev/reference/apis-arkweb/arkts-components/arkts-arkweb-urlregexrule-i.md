@@ -4,6 +4,8 @@ Defines the regular expression rule.
 
 **Since:** 23
 
+<!--Device-unnamed-declare interface UrlRegexRule--><!--Device-unnamed-declare interface UrlRegexRule-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## rule
@@ -20,6 +22,8 @@ Full URL regular expression.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UrlRegexRule-rule: string--><!--Device-UrlRegexRule-rule: string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## secondLevelDomain
@@ -28,15 +32,15 @@ Full URL regular expression.
 secondLevelDomain: string
 ```
 
-Exact match of the second-level domain. For example, the second-level domain of https://www.example.com
-is example.com, and the second-level domain of https://www.example.com.cn is example.com.cn. If the URL
-is an IP address, the full IP is matched against the secondLevelDomain.
+Exact match of the second-level domain. For example, the second-level domain of https://www.example.com is example.com, and the second-level domain of https://www.example.com.cn is example.com.cn. If the URL is an IP address, the full IP is matched against the secondLevelDomain.
 
 **Type:** string
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UrlRegexRule-secondLevelDomain: string--><!--Device-UrlRegexRule-secondLevelDomain: string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 15
 
+<!--Device-adminManager-export enum AdminType--><!--Device-adminManager-export enum AdminType-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## ADMIN_TYPE_BYOD
@@ -15,6 +17,8 @@ ADMIN_TYPE_BYOD = 0x02
 BYOD设备管理应用。
 
 **起始版本：** 15
+
+<!--Device-AdminType-ADMIN_TYPE_BYOD = 0x02--><!--Device-AdminType-ADMIN_TYPE_BYOD = 0x02-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

@@ -14,12 +14,13 @@ function enableLeakWatcher(isEnabled: boolean, configs: Array<string>, callback:
 
 Enables the detection for JS object leaks. This function is disabled by default.
 
-This API can detect the JS object memory leak, which is simpler than the method that needs to call the **enable**,
-**watch**, **check**, and **dump** functions.
+This API can detect the JS object memory leak, which is simpler than the method that needs to call the **enable**,**watch**, **check**, and **dump** functions.
 
 If a memory leak occurs, the leaked file is returned through the callback.
 
 **Since:** 20
+
+<!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: Array<string>, callback: Callback<Array<string>>): void--><!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: Array<string>, callback: Callback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
@@ -28,8 +29,8 @@ If a memory leak occurs, the leaked file is returned through the callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isEnabled | boolean | Yes | Whether to enable the detection for JS object memory leaks. **true**: yes; **false**: no. |
-| configs | Array&lt;string&gt; | Yes | Configuration item. Each element in the array indicates a specific object typeto monitor.<br>Options: **XComponent**, **NodeContainer**, **Window**, **CustomComponent**, and **Ability**.<br>Note: An empty array indicates that all the preceding objects are monitored. |
-| callback | Callback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to receive the memory-leaked object returned by the**jsLeakWatcher.enableLeakWatcher** API.<br>You need to input an array object in the callback. Index **0** isthe name of the leak list file, whose extension is **.jsleaklist**. Index **1** is the name of the VM memorysnapshot file, whose extension is **.rawheap**. |
+| configs | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Configuration item. Each element in the array indicates a specific object type to monitor.<br>Options: **XComponent**, **NodeContainer**, **Window**, **CustomComponent**, and **Ability**.<br  >Note: An empty array indicates that all the preceding objects are monitored. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<Array<string>> | Yes | Callback used to receive the memory-leaked object returned by the **jsLeakWatcher.enableLeakWatcher** API.<br>You need to input an array object in the callback. Index **0** is the name of the leak list file, whose extension is **.jsleaklist**. Index **1** is the name of the VM memory snapshot file, whose extension is **.rawheap**. |
 
 **Error codes:**
 
@@ -61,11 +62,11 @@ function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callb
 
 Enables the ArkTS object leak detection.
 
-This API can detect memory leaks of ArkTS objects with a single call, which is simpler than the previous method
-that requires four functions (**enable**, **watch**, **check**, and **dump**). You can use the **configs**
-parameter to customize the properties of monitoring items, greatly improving the leak detection performance.
+This API can detect memory leaks of ArkTS objects with a single call, which is simpler than the previous method that requires four functions (**enable**, **watch**, **check**, and **dump**). You can use the **configs** parameter to customize the properties of monitoring items, greatly improving the leak detection performance.
 
 **Since:** 24
+
+<!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callback: Callback<Array<string>>): void--><!--Device-jsLeakWatcher-function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callback: Callback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
@@ -74,8 +75,8 @@ parameter to customize the properties of monitoring items, greatly improving the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isEnabled | boolean | Yes | Whether to enable the detection for ArkTS object memory leaks.<br>**true**: yes;<br>**false**: no. |
-| configs | LeakWatcherConfig | Yes | LeakWatcherConfig object, which contains multiple configurable propertiesfor memory leak monitoring.<br>Note: If the parameter type in the object is set to null or a false value, thedefault value is used. |
-| callback | Callback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to receive the memory-leaked object returned by the**jsLeakWatcher.enableLeakWatcher** API.<br>You need to input an array object in the callback. Index **0** isthe name of the leak list file, whose extension is **.jsleaklist**. Index **1** is the name of the VM memorysnapshot file, whose extension is **.rawheap**. |
+| configs | [LeakWatcherConfig](arkts-performanceanalysis-leakwatcherconfig-i.md) | Yes | LeakWatcherConfig object, which contains multiple configurable properties for memory leak monitoring.<br>Note: If the parameter type in the object is set to null or a false value, the default value is used. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<Array<string>> | Yes | Callback used to receive the memory-leaked object returned by the **jsLeakWatcher.enableLeakWatcher** API.<br>You need to input an array object in the callback. Index **0** is the name of the leak list file, whose extension is **.jsleaklist**. Index **1** is the name of the VM memory snapshot file, whose extension is **.rawheap**. |
 
 **Error codes:**
 

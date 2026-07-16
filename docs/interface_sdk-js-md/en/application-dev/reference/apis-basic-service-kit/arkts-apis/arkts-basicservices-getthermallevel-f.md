@@ -20,13 +20,15 @@ Obtains the current thermal level.
 
 **Substitutes:** [getLevel](arkts-basicservices-getlevel-f.md#getlevel-1)
 
+<!--Device-thermal-function getThermalLevel(): ThermalLevel--><!--Device-thermal-function getThermalLevel(): ThermalLevel-End-->
+
 **System capability:** SystemCapability.PowerManager.ThermalManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ThermalLevel | Thermal level. |
+| [ThermalLevel](arkts-basicservices-thermallevel-e.md) | Thermal level. |
 
 **Example**
 

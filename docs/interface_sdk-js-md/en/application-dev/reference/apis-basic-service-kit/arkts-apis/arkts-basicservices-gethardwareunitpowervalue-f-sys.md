@@ -16,6 +16,8 @@ Obtains the power consumption of a hardware unit according to the consumption ty
 
 **Since:** 8
 
+<!--Device-batteryStats-function getHardwareUnitPowerValue(type: ConsumptionType): double--><!--Device-batteryStats-function getHardwareUnitPowerValue(type: ConsumptionType): double-End-->
+
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
 
 **System API:** This is a system API.
@@ -24,13 +26,13 @@ Obtains the power consumption of a hardware unit according to the consumption ty
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | ConsumptionType | Yes | Power consumption type. The value must be an enum. |
+| type | [ConsumptionType](arkts-basicservices-consumptiontype-e-sys.md) | Yes | Power consumption type. The value must be an enum. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Power consumption of the hardware unit corresponding to the power consumption type, in unitof mAh. |
+| number | Power consumption of the hardware unit corresponding to the power consumption type, in unit of mAh. |
 
 **Error codes:**
 

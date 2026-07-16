@@ -20,6 +20,8 @@ Creates a distributed data object.
 
 **Substitutes:** [create](arkts-arkdata-create-f.md#create-1)
 
+<!--Device-distributedDataObject-function createDistributedObject(source: object): DistributedObject--><!--Device-distributedDataObject-function createDistributedObject(source: object): DistributedObject-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
@@ -32,7 +34,7 @@ Creates a distributed data object.
 
 | Type | Description |
 | --- | --- |
-| DistributedObject | Distributed data object created. |
+| [DistributedObject](arkts-arkdata-distributedobject-i.md) | Distributed data object created. |
 
 **Example**
 

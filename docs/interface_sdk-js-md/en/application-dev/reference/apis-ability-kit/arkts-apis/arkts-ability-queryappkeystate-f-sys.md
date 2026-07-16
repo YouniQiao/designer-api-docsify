@@ -18,6 +18,8 @@ Queries the status of a specified type of sensitive data key under the lock scre
 
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK_MEDIA_DATA or ohos.permission.ACCESS_SCREEN_LOCK_ALL_DATA
 
+<!--Device-screenLockFileManager-function queryAppKeyState(dataType: DataType): KeyStatus--><!--Device-screenLockFileManager-function queryAppKeyState(dataType: DataType): KeyStatus-End-->
+
 **System capability:** SystemCapability.Security.ScreenLockFileManager
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Queries the status of a specified type of sensitive data key under the lock scre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataType | DataType | Yes | Type of sensitive data that is accessible on the lock screen. |
+| dataType | [DataType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-datatype-e.md) | Yes | Type of sensitive data that is accessible on the lock screen. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| KeyStatus | Status of the key for sensitive data under lock screen. |
+| [KeyStatus](arkts-ability-keystatus-e.md) | Status of the key for sensitive data under lock screen. |
 
 **Error codes:**
 

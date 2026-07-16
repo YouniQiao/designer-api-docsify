@@ -18,6 +18,8 @@ Notify bluetooth the result of bluetooth dialog.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
+<!--Device-access-function notifyDialogResult(notifyDialogResultParams: NotifyDialogResultParams): Promise<void>--><!--Device-access-function notifyDialogResult(notifyDialogResultParams: NotifyDialogResultParams): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Notify bluetooth the result of bluetooth dialog.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| notifyDialogResultParams | NotifyDialogResultParams | Yes | Indicates the params for dialog result. |
+| notifyDialogResultParams | [NotifyDialogResultParams](arkts-connectivity-notifydialogresultparams-i-sys.md) | Yes | Indicates the params for dialog result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 

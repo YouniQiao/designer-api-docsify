@@ -18,6 +18,8 @@ Sets the next refresh time for a widget. This API uses an asynchronous callback 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-formProvider-function setFormNextRefreshTime(formId: string, minute: int, callback: AsyncCallback<void>): void--><!--Device-formProvider-function setFormNextRefreshTime(formId: string, minute: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
@@ -26,7 +28,7 @@ Sets the next refresh time for a widget. This API uses an asynchronous callback 
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
 | minute | number | Yes | Time after which a widget is updated. The value is greater than or equal to 5, in minutes. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -75,6 +77,8 @@ Sets the next refresh time for a widget. This API uses a promise to return the r
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-formProvider-function setFormNextRefreshTime(formId: string, minute: int): Promise<void>--><!--Device-formProvider-function setFormNextRefreshTime(formId: string, minute: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
@@ -88,7 +92,7 @@ Sets the next refresh time for a widget. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -12,12 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getDeveloperIds(appDistributionType?: number): Array<string>
 ```
 
-Obtains all the developer IDs of the current user based on the given application
-[distribution type](arkts-ability-appdistributiontype-e-sys.md).
+Obtains all the developer IDs of the current user based on the given application [distribution type](arkts-ability-appdistributiontype-e-sys.md).
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getDeveloperIds(appDistributionType?: int): Array<string>--><!--Device-bundleManager-function getDeveloperIds(appDistributionType?: int): Array<string>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -27,13 +28,13 @@ Obtains all the developer IDs of the current user based on the given application
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appDistributionType | number | No | Application distribution type. If this parameter is not specified, a list ofdeveloper IDs of all applications is returned. |
+| appDistributionType | number | No | Application distribution type. If this parameter is not specified, a list of developer IDs of all applications is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | An array of strings. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | An array of strings. |
 
 **Error codes:**
 

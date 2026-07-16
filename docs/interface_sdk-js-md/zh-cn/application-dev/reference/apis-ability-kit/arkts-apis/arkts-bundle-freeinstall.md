@@ -2,15 +2,23 @@
 
 本模块提供免安装相关的设置和查询能力，支持BundlePackInfo、DispatchInfo等信息的查询。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 本模块为系统接口。
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace freeInstall--><!--Device-unnamed-declare namespace freeInstall-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { freeInstall } from '@kit.AbilityKit';
+```
 
 ## 汇总
 

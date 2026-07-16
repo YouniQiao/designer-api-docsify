@@ -21,6 +21,10 @@ Proactively triggers screen content awareness and obtains the current screen awa
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-onScreen-function trigger(capability: OnscreenAwarenessCap, 
+                   options?: OnscreenAwarenessOptions): Promise<OnscreenAwarenessInfo>--><!--Device-onScreen-function trigger(capability: OnscreenAwarenessCap, 
+                   options?: OnscreenAwarenessOptions): Promise<OnscreenAwarenessInfo>-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -29,14 +33,14 @@ Proactively triggers screen content awareness and obtains the current screen awa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| capability | OnscreenAwarenessCap | Yes | Onscreen awareness capability list. |
-| options | OnscreenAwarenessOptions | No | Onscreen awareness parameter list. |
+| capability | [OnscreenAwarenessCap](arkts-multimodalawareness-onscreenawarenesscap-i-sys.md) | Yes | Onscreen awareness capability list. |
+| options | [OnscreenAwarenessOptions](arkts-multimodalawareness-onscreenawarenessoptions-i-sys.md) | No | Onscreen awareness parameter list. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OnscreenAwarenessInfo&gt; | Promise used to return the onscreen awareness result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<OnscreenAwarenessInfo> | Promise used to return the onscreen awareness result. |
 
 **Error codes:**
 

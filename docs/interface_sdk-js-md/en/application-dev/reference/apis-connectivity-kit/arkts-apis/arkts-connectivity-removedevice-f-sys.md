@@ -14,9 +14,7 @@ function removeDevice(id: number): boolean
 
 Deletes a Wi-Fi network with a specified ID.
 
-<p>After a Wi-Fi network is deleted, its configuration will be deleted from the list of Wi-Fi configurations.
-If the Wi-Fi network is being connected, the connection will be interrupted.
-The application can only delete Wi-Fi networks it has created.
+<p>After a Wi-Fi network is deleted, its configuration will be deleted from the list of Wi-Fi configurations.If the Wi-Fi network is being connected, the connection will be interrupted.The application can only delete Wi-Fi networks it has created.
 
 **Since:** 7
 
@@ -25,6 +23,8 @@ The application can only delete Wi-Fi networks it has created.
 **Substitutes:** removeDeviceConfig
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
+
+<!--Device-wifi-function removeDevice(id: number): boolean--><!--Device-wifi-function removeDevice(id: number): boolean-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 

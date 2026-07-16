@@ -1,10 +1,10 @@
 # UserAuthTipCode
 
-表示身份认证中间状态的枚举。该枚举用于描述认证过程中的各种中间状态，包括认证不通过、超时、冻结状态以及认证界面的加载和释放等。应用可通过
-[on('authTip')](arkts-userauthentication-userauthinstance-i.md#on-2)接口订阅这些中间状态，以便在认证过程中提
-供更精细的用户反馈和状态感知。
+表示身份认证中间状态的枚举。该枚举用于描述认证过程中的各种中间状态，包括认证不通过、超时、冻结状态以及认证界面的加载和释放等。应用可通过[on('authTip')](arkts-userauthentication-userauthinstance-i.md#on-2)接口订阅这些中间状态，以便在认证过程中提供更精细的用户反馈和状态感知。
 
 **起始版本：** 20
+
+<!--Device-userAuth-enum UserAuthTipCode--><!--Device-userAuth-enum UserAuthTipCode-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -18,7 +18,9 @@ COMPARE_FAILURE = 1
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthTipCode-COMPARE_FAILURE = 1--><!--Device-UserAuthTipCode-COMPARE_FAILURE = 1-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -32,7 +34,9 @@ TIMEOUT = 2
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthTipCode-TIMEOUT = 2--><!--Device-UserAuthTipCode-TIMEOUT = 2-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -46,7 +50,9 @@ TEMPORARILY_LOCKED = 3
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthTipCode-TEMPORARILY_LOCKED = 3--><!--Device-UserAuthTipCode-TEMPORARILY_LOCKED = 3-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -60,7 +66,9 @@ PERMANENTLY_LOCKED = 4
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthTipCode-PERMANENTLY_LOCKED = 4--><!--Device-UserAuthTipCode-PERMANENTLY_LOCKED = 4-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -74,7 +82,9 @@ WIDGET_LOADED = 5
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthTipCode-WIDGET_LOADED = 5--><!--Device-UserAuthTipCode-WIDGET_LOADED = 5-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -84,12 +94,13 @@ WIDGET_LOADED = 5
 WIDGET_RELEASED = 6
 ```
 
-当前的身份认证界面退出，切换其他认证界面或身份认证控件关闭。表示认证控件已释放，应用可在此状态触发后进行后续操作，如弹出其他窗口等。在PC/2in1设备上使用模应用弹窗方式认证时，建议订阅此状态以确保控件完全释放后再执行其他界
-面操作。
+当前的身份认证界面退出，切换其他认证界面或身份认证控件关闭。表示认证控件已释放，应用可在此状态触发后进行后续操作，如弹出其他窗口等。在PC/2in1设备上使用模应用弹窗方式认证时，建议订阅此状态以确保控件完全释放后再执行其他界面操作。
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthTipCode-WIDGET_RELEASED = 6--><!--Device-UserAuthTipCode-WIDGET_RELEASED = 6-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -103,7 +114,9 @@ COMPARE_FAILURE_WITH_FROZEN = 7
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthTipCode-COMPARE_FAILURE_WITH_FROZEN = 7--><!--Device-UserAuthTipCode-COMPARE_FAILURE_WITH_FROZEN = 7-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

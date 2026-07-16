@@ -4,6 +4,8 @@ Represents the locale information, which consists of the language, script, and c
 
 **Since:** 10
 
+<!--Device-i18n-export interface LocaleItem--><!--Device-i18n-export interface LocaleItem-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Representation of ID in the specified locale in SystemLocaleManager.
 
 **Since:** 10
 
+<!--Device-LocaleItem-displayName: string--><!--Device-LocaleItem-displayName: string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Language code or country/region code, for example, "zh" or "CN".
 **Type:** string
 
 **Since:** 10
+
+<!--Device-LocaleItem-id: string--><!--Device-LocaleItem-id: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -58,6 +64,8 @@ Local name of the ID.
 
 **Since:** 10
 
+<!--Device-LocaleItem-localName?: string--><!--Device-LocaleItem-localName?: string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Language or country/region suggestion type.
 **Type:** SuggestionType
 
 **Since:** 10
+
+<!--Device-LocaleItem-suggestionType: SuggestionType--><!--Device-LocaleItem-suggestionType: SuggestionType-End-->
 
 **System capability:** SystemCapability.Global.I18n
 

@@ -4,6 +4,8 @@ Describes the parameters used to maintain the relative position between the chil
 
 **Since:** 24
 
+<!--Device-window-interface SubWindowAttachOptions--><!--Device-window-interface SubWindowAttachOptions-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
@@ -20,14 +22,15 @@ import { window } from '@kit.ArkUI';
 currentLayoutMode?: string
 ```
 
-Current layout mode of the child window, which is used to control the UI effect customized by the application. If
-this parameter is not passed, the default value is an empty string.
+Current layout mode of the child window, which is used to control the UI effect customized by the application. If this parameter is not passed, the default value is an empty string.
 
 **Type:** string
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SubWindowAttachOptions-currentLayoutMode?: string--><!--Device-SubWindowAttachOptions-currentLayoutMode?: string-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -49,6 +52,8 @@ Whether to use the intersection of the height limits of both windows in the atta
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SubWindowAttachOptions-isIntersectedHeightLimit?: boolean--><!--Device-SubWindowAttachOptions-isIntersectedHeightLimit?: boolean-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
@@ -69,6 +74,8 @@ Whether to use the intersection of the width limits of both windows in the attac
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SubWindowAttachOptions-isIntersectedWidthLimit?: boolean--><!--Device-SubWindowAttachOptions-isIntersectedWidthLimit?: boolean-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
@@ -79,15 +86,15 @@ Whether to use the intersection of the width limits of both windows in the attac
 parentWindowSizeChangeCallback?: Callback<Size>
 ```
 
-Callback triggered when the parent window size changes. The callback is triggered immediately after the binding,
-and notifications are sent when the parent window size changes. By default, this parameter is not passed, and
-notifications about the parent window size changes cannot be received.
+Callback triggered when the parent window size changes. The callback is triggered immediately after the binding,and notifications are sent when the parent window size changes. By default, this parameter is not passed, and notifications about the parent window size changes cannot be received.
 
 **Type:** Callback<Size>
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SubWindowAttachOptions-parentWindowSizeChangeCallback?: Callback<Size>--><!--Device-SubWindowAttachOptions-parentWindowSizeChangeCallback?: Callback<Size>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -99,15 +106,15 @@ notifications about the parent window size changes cannot be received.
 parentWindowStatusChangeCallback?: Callback<WindowStatusType>
 ```
 
-Callback triggered when the parent window mode changes. The callback is triggered immediately after the binding,
-and notifications are sent when the parent window mode changes. By default, this parameter is not passed, and
-notifications about the parent window mode changes cannot be received.
+Callback triggered when the parent window mode changes. The callback is triggered immediately after the binding,and notifications are sent when the parent window mode changes. By default, this parameter is not passed, and notifications about the parent window mode changes cannot be received.
 
 **Type:** Callback<WindowStatusType>
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SubWindowAttachOptions-parentWindowStatusChangeCallback?: Callback<WindowStatusType>--><!--Device-SubWindowAttachOptions-parentWindowStatusChangeCallback?: Callback<WindowStatusType>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

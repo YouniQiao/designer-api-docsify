@@ -8,6 +8,8 @@ Defines a **CompassResponse** object.
 
 **Substitutes:** OrientationResponse
 
+<!--Device-unnamed-export interface CompassResponse--><!--Device-unnamed-export interface CompassResponse-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -33,6 +35,8 @@ Direction of the device, in degrees.
 **Substitutes:** OrientationResponse.alpha
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-CompassResponse-direction: number--><!--Device-CompassResponse-direction: number-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 

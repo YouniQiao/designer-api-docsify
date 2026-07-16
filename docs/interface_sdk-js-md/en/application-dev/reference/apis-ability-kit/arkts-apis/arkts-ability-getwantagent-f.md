@@ -12,17 +12,15 @@ import { WantAgent } from '@kit.AbilityKit';
 function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): void
 ```
 
-Obtains a WantAgent object.
-This API uses an asynchronous callback to return the result.
-If the creation fails, a null WantAgent object is returned.
+Obtains a WantAgent object.This API uses an asynchronous callback to return the result.If the creation fails, a null WantAgent object is returned.
 
-<p>**NOTE**:
-<br>Third-party applications can set only their own abilities.
-</p>
+<p>**NOTE**:<br>Third-party applications can set only their own abilities.</p>
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-wantAgent-function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): void--><!--Device-wantAgent-function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -30,8 +28,8 @@ If the creation fails, a null WantAgent object is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | WantAgentInfo | Yes | Information about the WantAgent object to obtain. |
-| callback | AsyncCallback&lt;WantAgent&gt; | Yes | Callback used to return the WantAgent object. |
+| info | [WantAgentInfo](arkts-ability-wantagentinfo-t.md) | Yes | Information about the WantAgent object to obtain. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<WantAgent> | Yes | Callback used to return the WantAgent object. |
 
 **Error codes:**
 
@@ -102,17 +100,15 @@ try {
 function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 ```
 
-Obtains a WantAgent object.
-This API uses a promise to return the result.
-If the creation fails, a null WantAgent object is returned.
+Obtains a WantAgent object.This API uses a promise to return the result.If the creation fails, a null WantAgent object is returned.
 
-<p>**NOTE**:
-<br>Third-party applications can set only their own abilities.
-</p>
+<p>**NOTE**:<br>Third-party applications can set only their own abilities.</p>
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-wantAgent-function getWantAgent(info: WantAgentInfo): Promise<WantAgent>--><!--Device-wantAgent-function getWantAgent(info: WantAgentInfo): Promise<WantAgent>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -120,13 +116,13 @@ If the creation fails, a null WantAgent object is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | WantAgentInfo | Yes | Information about the WantAgent object to obtain. |
+| info | [WantAgentInfo](arkts-ability-wantagentinfo-t.md) | Yes | Information about the WantAgent object to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WantAgent&gt; | Promise used to return the WantAgent object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<WantAgent> | Promise used to return the WantAgent object. |
 
 **Error codes:**
 

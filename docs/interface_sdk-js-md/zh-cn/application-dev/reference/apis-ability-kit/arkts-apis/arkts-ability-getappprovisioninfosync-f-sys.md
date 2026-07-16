@@ -1,5 +1,11 @@
 # getAppProvisionInfoSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getAppProvisionInfoSync
 
 ```TypeScript
@@ -13,6 +19,8 @@ function getAppProvisionInfoSync(bundleName: string, userId?: number): AppProvis
 **起始版本：** 10
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getAppProvisionInfoSync(bundleName: string, userId?: int): AppProvisionInfo--><!--Device-bundleManager-function getAppProvisionInfoSync(bundleName: string, userId?: int): AppProvisionInfo-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -29,7 +37,7 @@ function getAppProvisionInfoSync(bundleName: string, userId?: number): AppProvis
 
 | 类型 | 说明 |
 | --- | --- |
-| AppProvisionInfo | AppProvisionInfo对象，返回应用的provision配置文件信息。 |
+| [AppProvisionInfo](arkts-ability-appprovisioninfo-t-sys.md) | AppProvisionInfo对象，返回应用的provision配置文件信息。 |
 
 **错误码：**
 

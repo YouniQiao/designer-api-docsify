@@ -18,13 +18,15 @@ Obtains the browser policy of the current device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-browser-function getSelfManagedBrowserPolicy(): ArrayBuffer--><!--Device-browser-function getSelfManagedBrowserPolicy(): ArrayBuffer-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | Browser policy obtained. |
+| [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Browser policy obtained. |
 
 **Example**
 

@@ -1,11 +1,12 @@
 # SystemDefinedAppItem
 
-Represents the data of the home screen icon defined by the system. It is a child class of
-[SystemDefinedRecord](arkts-arkdata-systemdefinedrecord-c.md).
+Represents the data of the home screen icon defined by the system. It is a child class of [SystemDefinedRecord](arkts-arkdata-systemdefinedrecord-c.md).
 
 **Inheritance/Implementation:** SystemDefinedAppItem extends [SystemDefinedRecord](arkts-arkdata-systemdefinedrecord-c.md)
 
 **Since:** 10
+
+<!--Device-unifiedDataChannel-class SystemDefinedAppItem extends SystemDefinedRecord--><!--Device-unifiedDataChannel-class SystemDefinedAppItem extends SystemDefinedRecord-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -31,6 +32,8 @@ Indicates the ability name of app
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SystemDefinedAppItem-set abilityName(value: string)--><!--Device-SystemDefinedAppItem-set abilityName(value: string)-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## appIconId
@@ -39,8 +42,7 @@ Indicates the ability name of app
 set appIconId(value: string)
 ```
 
-Indicates the id of app icon.
-This field can be sourced from BMS or customized as needed.
+Indicates the id of app icon.This field can be sourced from BMS or customized as needed.
 
 **Type:** string
 
@@ -49,6 +51,8 @@ This field can be sourced from BMS or customized as needed.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SystemDefinedAppItem-set appIconId(value: string)--><!--Device-SystemDefinedAppItem-set appIconId(value: string)-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -68,6 +72,8 @@ Indicates the app id
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SystemDefinedAppItem-set appId(value: string)--><!--Device-SystemDefinedAppItem-set appId(value: string)-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## appLabelId
@@ -76,8 +82,7 @@ Indicates the app id
 set appLabelId(value: string)
 ```
 
-Indicates the id of app label.
-This field can be sourced from BMS or customized as needed.
+Indicates the id of app label.This field can be sourced from BMS or customized as needed.
 
 **Type:** string
 
@@ -86,6 +91,8 @@ This field can be sourced from BMS or customized as needed.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SystemDefinedAppItem-set appLabelId(value: string)--><!--Device-SystemDefinedAppItem-set appLabelId(value: string)-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -105,6 +112,8 @@ Indicates the app name
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SystemDefinedAppItem-set appName(value: string)--><!--Device-SystemDefinedAppItem-set appName(value: string)-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## bundleName
@@ -122,6 +131,8 @@ Indicates the bundle name of app
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SystemDefinedAppItem-set bundleName(value: string)--><!--Device-SystemDefinedAppItem-set bundleName(value: string)-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 

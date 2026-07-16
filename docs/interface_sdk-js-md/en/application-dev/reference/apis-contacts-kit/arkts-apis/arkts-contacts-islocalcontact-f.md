@@ -12,8 +12,7 @@ import { contact } from '@kit.ContactsKit';
 function isLocalContact(id: number, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the ID of this contact is in the local address book. This API uses an asynchronous callback to
-return the result.
+Checks whether the ID of this contact is in the local address book. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -23,6 +22,8 @@ return the result.
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function isLocalContact(id: number, callback: AsyncCallback<boolean>): void--><!--Device-contact-function isLocalContact(id: number, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -30,7 +31,7 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | number | Yes | Contact ID. Each contact corresponds to one ID. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, aBoolean value is returned. The value **true** indicates that the contact ID is in the local phonebook, and thevalue **false** indicates the opposite. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Indicates the callback for getting the result of the call. If the operation is successful, a Boolean value is returned. The value **true** indicates that the contact ID is in the local phonebook, and the value **false** indicates the opposite. If the operation fails, an error code is returned. |
 
 **Example**
 
@@ -56,12 +57,13 @@ contact.isLocalContact(1, (err: BusinessError, data) => {
 function isLocalContact(context: Context, id: number, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the ID of this contact is in the local address book. This API uses an asynchronous callback to
-return the result.
+Checks whether the ID of this contact is in the local address book. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function isLocalContact(context: Context, id: number, callback: AsyncCallback<boolean>): void--><!--Device-contact-function isLocalContact(context: Context, id: number, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -69,9 +71,9 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
 | id | number | Yes | Contact ID. Each contact corresponds to one ID. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, aBoolean value is returned. The value **true** indicates that the contact ID is in the local phonebook, and thevalue **false** indicates the opposite. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Indicates the callback for getting the result of the call. If the operation is successful, a Boolean value is returned. The value **true** indicates that the contact ID is in the local phonebook, and the value **false** indicates the opposite. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -118,6 +120,8 @@ Checks whether the ID of this contact is in the local address book. This API use
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function isLocalContact(id: number): Promise<boolean>--><!--Device-contact-function isLocalContact(id: number): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
@@ -130,7 +134,7 @@ Checks whether the ID of this contact is in the local address book. This API use
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the contact IDis in the local phonebook, and the value **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** indicates that the contact ID is in the local phonebook, and the value **false** indicates the opposite. |
 
 **Example**
 
@@ -158,20 +162,22 @@ Checks whether the ID of this contact is in the local address book. This API use
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function isLocalContact(context: Context, id: number): Promise<boolean>--><!--Device-contact-function isLocalContact(context: Context, id: number): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
 | id | number | Yes | Contact ID. Each contact corresponds to one ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the contact IDis in the local phonebook, and the value **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** indicates that the contact ID is in the local phonebook, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

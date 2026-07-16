@@ -1,5 +1,11 @@
 # getDefaultDisplay
 
+## 导入模块
+
+```TypeScript
+import { display } from '@kit.ArkUI';
+```
+
 ## getDefaultDisplay
 
 ```TypeScript
@@ -14,13 +20,15 @@ function getDefaultDisplay(callback: AsyncCallback<Display>): void
 
 **替代接口：** [getDefaultDisplaySync](arkts-arkui-getdefaultdisplaysync-f.md#getdefaultdisplaysync-1)
 
+<!--Device-display-function getDefaultDisplay(callback: AsyncCallback<Display>): void--><!--Device-display-function getDefaultDisplay(callback: AsyncCallback<Display>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Display&gt; | 是 | 回调函数。返回当前默认的Display对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Display> | 是 | 回调函数。返回当前默认的Display对象。 |
 
 **示例：**
 
@@ -55,13 +63,15 @@ function getDefaultDisplay(): Promise<Display>
 
 **替代接口：** [getDefaultDisplaySync](arkts-arkui-getdefaultdisplaysync-f.md#getdefaultdisplaysync-1)
 
+<!--Device-display-function getDefaultDisplay(): Promise<Display>--><!--Device-display-function getDefaultDisplay(): Promise<Display>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Display&gt; | Promise对象。返回当前默认的Display对象。 |
+| Promise<Display> | Promise对象。返回当前默认的Display对象。 |
 
 **示例：**
 

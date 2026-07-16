@@ -8,6 +8,8 @@
 
 **起始版本：** 18
 
+<!--Device-unnamed-declare interface ButtonIconOptions--><!--Device-unnamed-declare interface ButtonIconOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## hidden
@@ -22,7 +24,9 @@ Defines whether an icon is hidden.
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ButtonIconOptions-hidden: string | PixelMap | Resource--><!--Device-ButtonIconOptions-hidden: string | PixelMap | Resource-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,7 +42,9 @@ Defines whether an icon is shown.
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ButtonIconOptions-shown: string | PixelMap | Resource--><!--Device-ButtonIconOptions-shown: string | PixelMap | Resource-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,7 +60,9 @@ Defines whether an icon is switching.
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ButtonIconOptions-switching?: string | PixelMap | Resource--><!--Device-ButtonIconOptions-switching?: string | PixelMap | Resource-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

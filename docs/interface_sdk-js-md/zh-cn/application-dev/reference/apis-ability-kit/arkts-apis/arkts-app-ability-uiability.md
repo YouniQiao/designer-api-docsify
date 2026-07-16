@@ -1,5 +1,11 @@
 # @ohos.app.ability.UIAbility
 
+## 导入模块
+
+```TypeScript
+import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from '@kit.AbilityKit';
+```
+
 ## 汇总
 
 ### 类

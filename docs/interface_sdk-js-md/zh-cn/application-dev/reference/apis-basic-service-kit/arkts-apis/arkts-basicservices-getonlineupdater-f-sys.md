@@ -1,5 +1,11 @@
 # getOnlineUpdater（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { update } from '@kit.BasicServicesKit';
+```
+
 ## getOnlineUpdater
 
 ```TypeScript
@@ -10,6 +16,8 @@ function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater
 
 **起始版本：** 9
 
+<!--Device-update-function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater--><!--Device-update-function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -18,13 +26,13 @@ function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| upgradeInfo | UpgradeInfo | 是 | 升级对象信息。 |
+| upgradeInfo | [UpgradeInfo](arkts-basicservices-upgradeinfo-i-sys.md) | 是 | 升级对象信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Updater | 升级对象。 |
+| [Updater](arkts-basicservices-updater-i-sys.md) | 升级对象。 |
 
 **错误码：**
 

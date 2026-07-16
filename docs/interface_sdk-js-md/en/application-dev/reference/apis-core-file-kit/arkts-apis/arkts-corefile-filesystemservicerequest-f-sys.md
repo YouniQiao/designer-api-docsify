@@ -20,6 +20,8 @@ Requests filesystem garbage collection with specified configuration.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-backup-function fileSystemServiceRequest(config: FileSystemRequestConfig): Promise<int>--><!--Device-backup-function fileSystemServiceRequest(config: FileSystemRequestConfig): Promise<int>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -28,13 +30,13 @@ Requests filesystem garbage collection with specified configuration.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | FileSystemRequestConfig | Yes | Configuration parameters for garbage collection.<br>triggerType: 0. writeSize: 0 - 2097152(MB). waitTime: 0-300(s). |
+| config | [FileSystemRequestConfig](arkts-corefile-filesystemrequestconfig-i-sys.md) | Yes | Configuration parameters for garbage collection.<br>triggerType: 0. writeSize: 0 - 2097152(MB). waitTime: 0-300(s). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The errcode of garbage collection. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | The errcode of garbage collection. |
 
 **Error codes:**
 

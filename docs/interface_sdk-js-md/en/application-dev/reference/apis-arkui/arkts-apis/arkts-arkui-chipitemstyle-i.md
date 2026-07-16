@@ -2,15 +2,17 @@
 
 Defines the common attributes shared by all chips.
 
-> **NOTE**
->
-> 1. The size settings for chips can be of two types: (1) **ChipSize**, which conveniently offers two size options,
-> **NORMAL** and **SMALL**; (2) **SizeOptions**.
->
-> 2. If **backgroundColor** or **selectedBackgroundColor** is set to **undefined**, the default background color is
+> **NOTE**  
+>  
+> 1. The size settings for chips can be of two types: (1) **ChipSize**, which conveniently offers two size options,  
+> **NORMAL** and **SMALL**; (2) **SizeOptions**.  
+>  
+> 2. If **backgroundColor** or **selectedBackgroundColor** is set to **undefined**, the default background color is  
 > used. If an invalid value is provided, the background color is transparent.
 
 **Since:** 12
+
+<!--Device-unnamed-export interface ChipItemStyle--><!--Device-unnamed-export interface ChipItemStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +42,8 @@ If this parameter is set to **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ChipItemStyle-backgroundColor?: ResourceColor--><!--Device-ChipItemStyle-backgroundColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontColor
@@ -61,6 +65,8 @@ If this parameter is set to **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ChipItemStyle-fontColor?: ResourceColor--><!--Device-ChipItemStyle-fontColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,6 +90,8 @@ If this parameter is set to **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ChipItemStyle-selectedBackgroundColor?: ResourceColor--><!--Device-ChipItemStyle-selectedBackgroundColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectedFontColor
@@ -106,6 +114,8 @@ If this parameter is set to **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ChipItemStyle-selectedFontColor?: ResourceColor--><!--Device-ChipItemStyle-selectedFontColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## size
@@ -127,6 +137,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ChipItemStyle-size?: ChipSize | SizeOptions--><!--Device-ChipItemStyle-size?: ChipSize | SizeOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

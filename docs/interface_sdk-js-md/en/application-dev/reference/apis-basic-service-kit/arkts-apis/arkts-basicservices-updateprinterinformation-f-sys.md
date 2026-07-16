@@ -12,14 +12,15 @@ import { print } from '@kit.BasicServicesKit';
 function updatePrinterInformation(printerInformation: PrinterInformation): Promise<void>
 ```
 
-Updates the information of a printer in the system. This API uses a promise to return the result. Currently, only
-the **alias** and **options** fields of [PrinterInformation](arkts-basicservices-printerinformation-i.md) can be updated.
+Updates the information of a printer in the system. This API uses a promise to return the result. Currently, only the **alias** and **options** fields of [PrinterInformation](arkts-basicservices-printerinformation-i.md) can be updated.
 
 **Since:** 24
 
 **Required permissions:** 
 - API version 24+: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.ENTERPRISE_MANAGE_PRINT
 - API version 18 - 23: ohos.permission.MANAGE_PRINT_JOB
+
+<!--Device-print-function updatePrinterInformation(printerInformation: PrinterInformation): Promise<void>--><!--Device-print-function updatePrinterInformation(printerInformation: PrinterInformation): Promise<void>-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -29,13 +30,13 @@ the **alias** and **options** fields of [PrinterInformation](arkts-basicservices
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerInformation | PrinterInformation | Yes | Printer information to be updated. |
+| printerInformation | [PrinterInformation](arkts-basicservices-printerinformation-i.md) | Yes | Printer information to be updated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

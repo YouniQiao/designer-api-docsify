@@ -18,6 +18,8 @@ Queries all device administrator applications of the current user. This API uses
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-adminManager-function getAdmins(): Promise<Array<Want>>--><!--Device-adminManager-function getAdmins(): Promise<Array<Want>>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Queries all device administrator applications of the current user. This API uses
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Want&gt;&gt; | Promise that contains all activated device administrator applications. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Want>> | Promise that contains all activated device administrator applications. |
 
 **Error codes:**
 

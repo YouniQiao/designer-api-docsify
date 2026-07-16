@@ -4,9 +4,17 @@
 
 **起始版本：** 24
 
+<!--Device-selectionManager-interface SelectionInfo--><!--Device-selectionManager-interface SelectionInfo-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { selectionManager } from '@kit.BasicServicesKit';
+```
 
 ## bundleName
 
@@ -21,6 +29,8 @@ bundleName: string
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SelectionInfo-bundleName: string--><!--Device-SelectionInfo-bundleName: string-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 
@@ -40,6 +50,8 @@ displayID: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SelectionInfo-displayID: int--><!--Device-SelectionInfo-displayID: int-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
@@ -57,6 +69,8 @@ endDisplayX: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SelectionInfo-endDisplayX: int--><!--Device-SelectionInfo-endDisplayX: int-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 
@@ -76,6 +90,8 @@ endDisplayY: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SelectionInfo-endDisplayY: int--><!--Device-SelectionInfo-endDisplayY: int-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
@@ -94,6 +110,8 @@ endWindowX: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SelectionInfo-endWindowX: int--><!--Device-SelectionInfo-endWindowX: int-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
@@ -111,6 +129,8 @@ endWindowY: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SelectionInfo-endWindowY: int--><!--Device-SelectionInfo-endWindowY: int-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 
@@ -132,6 +152,8 @@ selectionType: SelectionType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SelectionInfo-selectionType: SelectionType--><!--Device-SelectionInfo-selectionType: SelectionType-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
@@ -149,6 +171,8 @@ startDisplayX: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SelectionInfo-startDisplayX: int--><!--Device-SelectionInfo-startDisplayX: int-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 
@@ -168,6 +192,8 @@ startDisplayY: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SelectionInfo-startDisplayY: int--><!--Device-SelectionInfo-startDisplayY: int-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
@@ -185,6 +211,8 @@ startWindowX: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SelectionInfo-startWindowX: int--><!--Device-SelectionInfo-startWindowX: int-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 
@@ -204,6 +232,8 @@ startWindowY: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SelectionInfo-startWindowY: int--><!--Device-SelectionInfo-startWindowY: int-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
@@ -221,6 +251,8 @@ windowID: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SelectionInfo-windowID: int--><!--Device-SelectionInfo-windowID: int-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 

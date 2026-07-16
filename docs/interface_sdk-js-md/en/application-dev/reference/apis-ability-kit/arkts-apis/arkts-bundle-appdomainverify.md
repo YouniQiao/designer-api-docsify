@@ -4,6 +4,8 @@ This module provides app domain verification info.
 
 **Since:** 13
 
+<!--Device-unnamed-declare namespace appDomainVerify--><!--Device-unnamed-declare namespace appDomainVerify-End-->
+
 **System capability:** SystemCapability.BundleManager.AppDomainVerify
 
 **System API:** This is a system API.

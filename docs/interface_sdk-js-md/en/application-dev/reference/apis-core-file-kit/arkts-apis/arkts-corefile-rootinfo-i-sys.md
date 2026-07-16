@@ -6,6 +6,8 @@ Provides APIs for managing the device's root attribute information.
 
 **Deprecated since:** 23
 
+<!--Device-fileAccess-interface RootInfo--><!--Device-fileAccess-interface RootInfo-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -22,10 +24,7 @@ import { fileAccess } from '@kit.CoreFileKit';
 listFile(filter?: Filter): FileIterator
 ```
 
-Obtains a **FileIterator** object that lists the next-level files or directories matching the specified
-conditions of this directory. This API returns the result synchronously. [FileInfo](arkts-corefile-fileinfo-i-sys.md) is
-returned by [next()](arkts-corefile-fileiterator-i-sys.md#next-1). Currently, only built-in storage devices support the
-file filter.
+Obtains a **FileIterator** object that lists the next-level files or directories matching the specified conditions of this directory. This API returns the result synchronously. [FileInfo](arkts-corefile-fileinfo-i-sys.md) is returned by [next()](arkts-corefile-fileiterator-i-sys.md#next-1). Currently, only built-in storage devices support the file filter.
 
 **Since:** 9
 
@@ -37,6 +36,8 @@ file filter.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RootInfo-listFile(filter?: Filter): FileIterator--><!--Device-RootInfo-listFile(filter?: Filter): FileIterator-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -45,13 +46,13 @@ file filter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | Filter | No | Indicates the filter of file. |
+| filter | [Filter](../../apis-arkui/arkts-components/arkts-arkui-filter-t.md) | No | Indicates the filter of file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| FileIterator | Returns the FileIterator Object. |
+| [FileIterator](arkts-corefile-fileiterator-i-sys.md) | Returns the FileIterator Object. |
 
 **Error codes:**
 
@@ -131,10 +132,7 @@ try {
 scanFile(filter?: Filter): FileIterator
 ```
 
-Obtains a **FileIterator** object that recursively retrieves the files matching the specified conditions from the
-device root directory. This API returns the result synchronously. [FileInfo](arkts-corefile-fileinfo-i-sys.md) is
-returned by [next](arkts-corefile-fileiterator-i-sys.md#next-1). Currently, this API supports only built-in storage
-devices.
+Obtains a **FileIterator** object that recursively retrieves the files matching the specified conditions from the device root directory. This API returns the result synchronously. [FileInfo](arkts-corefile-fileinfo-i-sys.md) is returned by [next](arkts-corefile-fileiterator-i-sys.md#next-1). Currently, this API supports only built-in storage devices.
 
 **Since:** 9
 
@@ -144,6 +142,8 @@ devices.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RootInfo-scanFile(filter?: Filter): FileIterator--><!--Device-RootInfo-scanFile(filter?: Filter): FileIterator-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -152,13 +152,13 @@ devices.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | Filter | No | Indicates the filter of file. |
+| filter | [Filter](../../apis-arkui/arkts-components/arkts-arkui-filter-t.md) | No | Indicates the filter of file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| FileIterator | Returns the RootIterator Object. |
+| [FileIterator](arkts-corefile-fileiterator-i-sys.md) | Returns the RootIterator Object. |
 
 **Error codes:**
 
@@ -250,6 +250,8 @@ Capabilities supported by the device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RootInfo-deviceFlags: number--><!--Device-RootInfo-deviceFlags: number-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -271,6 +273,8 @@ Capabilities supported by the device.
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RootInfo-deviceType: number--><!--Device-RootInfo-deviceType: number-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -294,6 +298,8 @@ Capabilities supported by the device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RootInfo-displayName: string--><!--Device-RootInfo-displayName: string-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -316,6 +322,8 @@ Relative path of the root directory.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RootInfo-relativePath: string--><!--Device-RootInfo-relativePath: string-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -337,6 +345,8 @@ Capabilities supported by the device.
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RootInfo-uri: string--><!--Device-RootInfo-uri: string-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 

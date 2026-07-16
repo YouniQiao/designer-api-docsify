@@ -1,5 +1,11 @@
 # acquireAccess
 
+## 导入模块
+
+```TypeScript
+import { screenLockFileManager } from '@kit.AbilityKit';
+```
+
 ## acquireAccess
 
 ```TypeScript
@@ -12,13 +18,15 @@ function acquireAccess(): AccessStatus
 
 **起始版本：** 12
 
+<!--Device-screenLockFileManager-function acquireAccess(): AccessStatus--><!--Device-screenLockFileManager-function acquireAccess(): AccessStatus-End-->
+
 **系统能力：** SystemCapability.Security.ScreenLockFileManager
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AccessStatus | 锁屏下敏感数据访问权限的申请状态。 |
+| [AccessStatus](arkts-ability-accessstatus-e.md) | 锁屏下敏感数据访问权限的申请状态。 |
 
 **错误码：**
 

@@ -6,6 +6,8 @@ Fluorescence photo session object.
 
 **Since:** 13
 
+<!--Device-camera-interface FluorescencePhotoSession extends Session, AutoExposure, Focus, Zoom--><!--Device-camera-interface FluorescencePhotoSession extends Session, AutoExposure, Focus, Zoom-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Unsubscribes from error events.
 
 **Since:** 13
 
+<!--Device-FluorescencePhotoSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-FluorescencePhotoSession-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -35,7 +39,7 @@ Unsubscribes from error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. |
-| callback | ErrorCallback | No | Callback used to get the capture session errors. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | Callback used to get the capture session errors. |
 
 **Error codes:**
 
@@ -53,6 +57,8 @@ Unsubscribes from focus state change event callback.
 
 **Since:** 13
 
+<!--Device-FluorescencePhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-FluorescencePhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -62,7 +68,7 @@ Unsubscribes from focus state change event callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'focusStateChange' | Yes | Event type. |
-| callback | AsyncCallback&lt;FocusState&gt; | No | Callback used to get the focus state change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FocusState> | No | Callback used to get the focus state change. |
 
 **Error codes:**
 
@@ -80,6 +86,8 @@ Subscribes to error events.
 
 **Since:** 13
 
+<!--Device-FluorescencePhotoSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-FluorescencePhotoSession-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -89,7 +97,7 @@ Subscribes to error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. |
-| callback | ErrorCallback | Yes | Callback used to get the capture session errors. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback used to get the capture session errors. |
 
 **Error codes:**
 
@@ -107,6 +115,8 @@ Subscribes focus state change event callback.
 
 **Since:** 13
 
+<!--Device-FluorescencePhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-FluorescencePhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -116,7 +126,7 @@ Subscribes focus state change event callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'focusStateChange' | Yes | Event type. |
-| callback | AsyncCallback&lt;FocusState&gt; | Yes | Callback used to get the focus state change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FocusState> | Yes | Callback used to get the focus state change. |
 
 **Error codes:**
 

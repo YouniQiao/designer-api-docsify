@@ -8,6 +8,8 @@
 
 **替代接口：** [BundleInstaller](arkts-ability-bundleinstaller-i-sys.md)
 
+<!--Device-unnamed-export interface BundleInstaller--><!--Device-unnamed-export interface BundleInstaller-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -28,6 +30,8 @@ install(bundleFilePaths: Array<string>, param: InstallParam, callback: AsyncCall
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 
+<!--Device-BundleInstaller-install(bundleFilePaths: Array<string>, param: InstallParam, callback: AsyncCallback<InstallStatus>): void--><!--Device-BundleInstaller-install(bundleFilePaths: Array<string>, param: InstallParam, callback: AsyncCallback<InstallStatus>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -36,9 +40,9 @@ install(bundleFilePaths: Array<string>, param: InstallParam, callback: AsyncCall
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleFilePaths | Array&lt;string&gt; | 是 | 指示存储HAP的沙箱路径。 |
-| param | InstallParam | 是 | 指定安装所需的其他参数。 |
-| callback | AsyncCallback&lt;InstallStatus&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，程序启动作为入参的回调函数，返回安装状态信息。 |
+| bundleFilePaths | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 指示存储HAP的沙箱路径。 |
+| param | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-installparam-i.md) | 是 | 指定安装所需的其他参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<InstallStatus> | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，程序启动作为入参的回调函数，返回安装状态信息。 |
 
 ## recover
 
@@ -56,6 +60,8 @@ recover(bundleName: string, param: InstallParam, callback: AsyncCallback<Install
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 
+<!--Device-BundleInstaller-recover(bundleName: string, param: InstallParam, callback: AsyncCallback<InstallStatus>): void--><!--Device-BundleInstaller-recover(bundleName: string, param: InstallParam, callback: AsyncCallback<InstallStatus>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -65,8 +71,8 @@ recover(bundleName: string, param: InstallParam, callback: AsyncCallback<Install
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
-| param | InstallParam | 是 | 指定应用恢复所需的其他参数。 |
-| callback | AsyncCallback&lt;InstallStatus&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，程序启动作为入参的回调函数，返回安装状态信息。 |
+| param | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-installparam-i.md) | 是 | 指定应用恢复所需的其他参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<InstallStatus> | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，程序启动作为入参的回调函数，返回安装状态信息。 |
 
 ## uninstall
 
@@ -84,6 +90,8 @@ uninstall(bundleName: string, param: InstallParam, callback: AsyncCallback<Insta
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 
+<!--Device-BundleInstaller-uninstall(bundleName: string, param: InstallParam, callback: AsyncCallback<InstallStatus>): void--><!--Device-BundleInstaller-uninstall(bundleName: string, param: InstallParam, callback: AsyncCallback<InstallStatus>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +101,6 @@ uninstall(bundleName: string, param: InstallParam, callback: AsyncCallback<Insta
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
-| param | InstallParam | 是 | 指定卸载所需的其他参数。 |
-| callback | AsyncCallback&lt;InstallStatus&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，程序启动作为入参的回调函数，返回安装状态信息。 |
+| param | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-installparam-i.md) | 是 | 指定卸载所需的其他参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<InstallStatus> | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，程序启动作为入参的回调函数，返回安装状态信息。 |
 

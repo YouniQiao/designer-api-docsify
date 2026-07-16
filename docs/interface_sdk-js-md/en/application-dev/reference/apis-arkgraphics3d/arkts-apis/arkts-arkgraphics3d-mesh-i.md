@@ -6,6 +6,8 @@ The mesh instance owned by the mesh node
 
 **Since:** 12
 
+<!--Device-unnamed-export interface Mesh extends SceneResource--><!--Device-unnamed-export interface Mesh extends SceneResource-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## aabb
@@ -19,6 +21,8 @@ The axis aligned bounding box of the mesh.
 **Type:** Aabb
 
 **Since:** 12
+
+<!--Device-Mesh-readonly aabb: Aabb--><!--Device-Mesh-readonly aabb: Aabb-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -34,6 +38,8 @@ The material override sub mesh's material.
 
 **Since:** 12
 
+<!--Device-Mesh-materialOverride?: Material--><!--Device-Mesh-materialOverride?: Material-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## subMeshes
@@ -47,6 +53,8 @@ The sub meshes of the mesh.
 **Type:** SubMesh[]
 
 **Since:** 12
+
+<!--Device-Mesh-readonly subMeshes: SubMesh[]--><!--Device-Mesh-readonly subMeshes: SubMesh[]-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface IPrefetcher--><!--Device-unnamed-export interface IPrefetcher-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from '@kit.ArkUI';
+```
 
 ## setDataSource
 
@@ -18,7 +26,9 @@ setDataSource(dataSource: IDataSourcePrefetching): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-IPrefetcher-setDataSource(dataSource: IDataSourcePrefetching): void--><!--Device-IPrefetcher-setDataSource(dataSource: IDataSourcePrefetching): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,7 +36,7 @@ setDataSource(dataSource: IDataSourcePrefetching): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dataSource | IDataSourcePrefetching | 是 | 支持预取能力的数据源。 |
+| dataSource | [IDataSourcePrefetching](arkts-arkui-idatasourceprefetching-i.md) | 是 | 支持预取能力的数据源。 |
 
 ## visibleAreaChanged
 
@@ -40,7 +50,9 @@ visibleAreaChanged(minVisible: number, maxVisible: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-IPrefetcher-visibleAreaChanged(minVisible: number, maxVisible: number): void--><!--Device-IPrefetcher-visibleAreaChanged(minVisible: number, maxVisible: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

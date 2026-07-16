@@ -23,15 +23,25 @@ Switch input method and subtype. The caller must be the current inputmethod.
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.CONNECT_IME_ABILITY
 
+<!--Device-inputMethod-function switchCurrentInputMethodAndSubtype(
+    inputMethodProperty: InputMethodProperty,
+    inputMethodSubtype: InputMethodSubtype,
+    callback: AsyncCallback<boolean>
+  ): void--><!--Device-inputMethod-function switchCurrentInputMethodAndSubtype(
+    inputMethodProperty: InputMethodProperty,
+    inputMethodSubtype: InputMethodSubtype,
+    callback: AsyncCallback<boolean>
+  ): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputMethodProperty | InputMethodProperty | Yes | indicates the target input method. |
-| inputMethodSubtype | InputMethodSubtype | Yes | indicates the target input method subtype. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | the callback of switchCurrentInputMethodAndSubtype. |
+| inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethodproperty-i.md) | Yes | indicates the target input method. |
+| inputMethodSubtype | [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | Yes | indicates the target input method subtype. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | the callback of switchCurrentInputMethodAndSubtype. |
 
 **Error codes:**
 
@@ -81,20 +91,28 @@ Switch input method and subtype. The caller must be the current inputmethod.
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.CONNECT_IME_ABILITY
 
+<!--Device-inputMethod-function switchCurrentInputMethodAndSubtype(
+    inputMethodProperty: InputMethodProperty,
+    inputMethodSubtype: InputMethodSubtype
+  ): Promise<boolean>--><!--Device-inputMethod-function switchCurrentInputMethodAndSubtype(
+    inputMethodProperty: InputMethodProperty,
+    inputMethodSubtype: InputMethodSubtype
+  ): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputMethodProperty | InputMethodProperty | Yes | indicates the target input method. |
-| inputMethodSubtype | InputMethodSubtype | Yes | indicates the target input method subtype. |
+| inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethodproperty-i.md) | Yes | indicates the target input method. |
+| inputMethodSubtype | [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | Yes | indicates the target input method subtype. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | the promise returned by the function. |
 
 **Error codes:**
 

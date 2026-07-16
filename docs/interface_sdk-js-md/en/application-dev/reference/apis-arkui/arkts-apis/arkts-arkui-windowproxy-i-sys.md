@@ -4,6 +4,8 @@ The proxy of the UIExtension window.
 
 **Since:** 12
 
+<!--Device-uiExtension-interface WindowProxy--><!--Device-uiExtension-interface WindowProxy-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -20,19 +22,19 @@ hideNonSecureWindows(shouldHide: boolean): Promise<void>
 
 Sets whether to hide non-secure windows. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - A non-secure window refers to any window that may obstruct the
-> [EmbeddedComponent](./@internal/component/ets/embedded_component) or
-> [UIExtensionComponent](./@internal/component/ets/ui_extension_component), such as global floating windows
-> , host subwindows, and dialog box windows created by the host application (excluding windows of these types
-> created by system applications).
->
-> - When using the **EmbeddedComponent** or **UIExtensionComponent** to display sensitive information, call this
-> API to hide non-secure windows and prevent information obstruction. Hidden non-secure windows will reappear
-> when the **EmbeddedComponent** or **UIExtensionComponent** is hidden or destroyed.
->
-> - On PCs/2-in-1 devices, global floating windows within non-secure windows remain visible when
+> **NOTE**  
+>  
+> - A non-secure window refers to any window that may obstruct the  
+> [EmbeddedComponent](./@internal/component/ets/embedded_component) or  
+> [UIExtensionComponent](./@internal/component/ets/ui_extension_component), such as global floating windows  
+> , host subwindows, and dialog box windows created by the host application (excluding windows of these types  
+> created by system applications).  
+>  
+> - When using the **EmbeddedComponent** or **UIExtensionComponent** to display sensitive information, call this  
+> API to hide non-secure windows and prevent information obstruction. Hidden non-secure windows will reappear  
+> when the **EmbeddedComponent** or **UIExtensionComponent** is hidden or destroyed.  
+>  
+> - On PCs/2-in-1 devices, global floating windows within non-secure windows remain visible when  
 > **hideNonSecureWindows(true)** is called.
 
 **Since:** 12
@@ -40,6 +42,8 @@ Sets whether to hide non-secure windows. This API uses a promise to return the r
 **Required permissions:** ohos.permission.ALLOW_SHOW_NON_SECURE_WINDOWS
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WindowProxy-hideNonSecureWindows(shouldHide: boolean): Promise<void>--><!--Device-WindowProxy-hideNonSecureWindows(shouldHide: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,13 +53,13 @@ Sets whether to hide non-secure windows. This API uses a promise to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shouldHide | boolean | Yes | Whether to hide non-secure windows. The value **true** means to hide non-securewindows, and **false** means the opposite. |
+| shouldHide | boolean | Yes | Whether to hide non-secure windows. The value **true** means to hide non-secure windows, and **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -106,14 +110,16 @@ setWaterMarkFlag(enable: boolean): Promise<void>
 
 Adds or deletes the watermark flag for this window. This API uses a promise to return the result.
 
-> **NOTE**
->
-> With the watermark flag added, the watermark is applied on the full screen when the window is in the foreground
+> **NOTE**  
+>  
+> With the watermark flag added, the watermark is applied on the full screen when the window is in the foreground  
 > , regardless of whether the window is displayed in full screen, floating, and split screen mode.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WindowProxy-setWaterMarkFlag(enable: boolean): Promise<void>--><!--Device-WindowProxy-setWaterMarkFlag(enable: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -129,7 +135,7 @@ Adds or deletes the watermark flag for this window. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

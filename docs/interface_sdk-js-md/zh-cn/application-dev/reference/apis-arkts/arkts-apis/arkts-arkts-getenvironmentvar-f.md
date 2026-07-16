@@ -1,5 +1,11 @@
 # getEnvironmentVar
 
+## 导入模块
+
+```TypeScript
+import { process } from '@kit.ArkTS';
+```
+
 ## getEnvironmentVar
 
 ```TypeScript
@@ -13,6 +19,8 @@ function getEnvironmentVar(name: string): string
 **废弃版本：** 9
 
 **替代接口：** [getEnvironmentVar](arkts-arkts-processmanager-c.md#getenvironmentvar-1)
+
+<!--Device-process-function getEnvironmentVar(name: string): string--><!--Device-process-function getEnvironmentVar(name: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

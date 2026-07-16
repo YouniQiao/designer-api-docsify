@@ -4,6 +4,8 @@ Parameters for moving the target.
 
 **Since:** 26.0.0
 
+<!--Device-mechanicManager-export interface MoveParams--><!--Device-mechanicManager-export interface MoveParams-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Turning angle, unit degree.
 
 **Since:** 26.0.0
 
+<!--Device-MoveParams-angle: double--><!--Device-MoveParams-angle: double-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -36,12 +40,13 @@ Turning angle, unit degree.
 distance: number
 ```
 
-Moving distance, unit cm.
-The value should be an integer.
+Moving distance, unit cm.The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+<!--Device-MoveParams-distance: int--><!--Device-MoveParams-distance: int-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -59,6 +64,8 @@ Movement mode.
 
 **Since:** 26.0.0
 
+<!--Device-MoveParams-mode?: MarchingMode--><!--Device-MoveParams-mode?: MarchingMode-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -74,6 +81,8 @@ Speed gear.
 **Type:** SpeedGear
 
 **Since:** 26.0.0
+
+<!--Device-MoveParams-speedGear?: SpeedGear--><!--Device-MoveParams-speedGear?: SpeedGear-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
 

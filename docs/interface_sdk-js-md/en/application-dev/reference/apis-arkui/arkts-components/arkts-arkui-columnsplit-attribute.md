@@ -8,6 +8,8 @@ The [universal events](arkts-arkui-commonmethod-c.md) are supported.
 
 **Since:** 7
 
+<!--Device-unnamed-declare class ColumnSplitAttribute extends CommonMethod<ColumnSplitAttribute>--><!--Device-unnamed-declare class ColumnSplitAttribute extends CommonMethod<ColumnSplitAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## divider
@@ -24,13 +26,15 @@ Margin of the divider.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ColumnSplitAttribute-divider(value: ColumnSplitDividerStyle | null): ColumnSplitAttribute--><!--Device-ColumnSplitAttribute-divider(value: ColumnSplitDividerStyle | null): ColumnSplitAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ColumnSplitDividerStyle \| null | Yes | Margin of the divider, that is, the distance between thedivider and the child component.<br>Default value: **null**. When this parameter is set to null, the distance between the divider and thechild component is 0 vp.<br>Invalid values are treated as the default value. |
+| value | ColumnSplitDividerStyle \| null | Yes | Margin of the divider, that is, the distance between the divider and the child component.<br>Default value: **null**. When this parameter is set to null, the distance between the divider and the child component is 0 vp.<br>Invalid values are treated as the default value. |
 
 ## resizeable
 
@@ -43,6 +47,8 @@ Sets whether the divider can be dragged.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ColumnSplitAttribute-resizeable(value: boolean): ColumnSplitAttribute--><!--Device-ColumnSplitAttribute-resizeable(value: boolean): ColumnSplitAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

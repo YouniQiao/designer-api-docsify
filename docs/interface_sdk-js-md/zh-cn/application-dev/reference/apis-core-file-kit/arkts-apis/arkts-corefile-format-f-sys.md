@@ -1,17 +1,24 @@
 # format（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { volumeManager } from '@kit.CoreFileKit';
+```
+
 ## format
 
 ```TypeScript
 function format(volumeId: string, fsType: string, callback: AsyncCallback<void>): void
 ```
 
-对指定卷设备进行格式化，使用callback异步回调。当前仅支持vfat和exfat两种文件系统类型的格式化，只有处于卸载状态的
-卷设备可以进行格式化，格式化后卷设备的uuid、挂载路径和卷设备描述均会发生变化。
+对指定卷设备进行格式化，使用callback异步回调。当前仅支持vfat和exfat两种文件系统类型的格式化，只有处于卸载状态的卷设备可以进行格式化，格式化后卷设备的uuid、挂载路径和卷设备描述均会发生变化。
 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MOUNT_FORMAT_MANAGER
+
+<!--Device-volumeManager-function format(volumeId: string, fsType: string, callback: AsyncCallback<void>): void--><!--Device-volumeManager-function format(volumeId: string, fsType: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
@@ -23,7 +30,7 @@ function format(volumeId: string, fsType: string, callback: AsyncCallback<void>)
 | --- | --- | --- | --- |
 | volumeId | string | 是 | 卷设备id。 |
 | fsType | string | 是 | 文件系统类型(vfat或者exfat)。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 对指定卷设备格式化后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 对指定卷设备格式化后的回调。 |
 
 **错误码：**
 
@@ -45,12 +52,13 @@ function format(volumeId: string, fsType: string, callback: AsyncCallback<void>)
 function format(volumeId: string, fsType: string): Promise<void>
 ```
 
-对指定卷设备进行格式化，使用Promise异步回调。当前仅支持vfat和exfat两种文件系统类型的格式化，只有处于卸载状态的
-卷设备可以进行格式化，格式化后卷设备的uuid、挂载路径和卷设备描述均会发生变化。
+对指定卷设备进行格式化，使用Promise异步回调。当前仅支持vfat和exfat两种文件系统类型的格式化，只有处于卸载状态的卷设备可以进行格式化，格式化后卷设备的uuid、挂载路径和卷设备描述均会发生变化。
 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.MOUNT_FORMAT_MANAGER
+
+<!--Device-volumeManager-function format(volumeId: string, fsType: string): Promise<void>--><!--Device-volumeManager-function format(volumeId: string, fsType: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
@@ -67,7 +75,7 @@ function format(volumeId: string, fsType: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

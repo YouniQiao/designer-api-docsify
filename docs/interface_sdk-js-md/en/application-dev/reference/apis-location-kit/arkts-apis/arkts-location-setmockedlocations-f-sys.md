@@ -19,6 +19,8 @@ Set the configuration parameters for location simulation.
 **Required permissions:** 
 - API version 20+: ohos.permission.MOCK_LOCATION
 
+<!--Device-geoLocationManager-function setMockedLocations(config: LocationMockConfig): void--><!--Device-geoLocationManager-function setMockedLocations(config: LocationMockConfig): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Set the configuration parameters for location simulation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | LocationMockConfig | Yes | Indicates the configuration parameters for location simulation.Contains the array of locations and reporting intervals that need to be simulated. |
+| config | [LocationMockConfig](arkts-location-locationmockconfig-i-sys.md) | Yes | Indicates the configuration parameters for location simulation.Contains the array of locations and reporting intervals that need to be simulated. |
 
 **Error codes:**
 
@@ -38,7 +40,7 @@ Set the configuration parameters for location simulation.
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call ${geoLocationManager.setMockedLocations}due to limited device capabilities. |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
 | [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API.<br>**Applicable version:** 20 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 20 and later |
 
 **Example**
 

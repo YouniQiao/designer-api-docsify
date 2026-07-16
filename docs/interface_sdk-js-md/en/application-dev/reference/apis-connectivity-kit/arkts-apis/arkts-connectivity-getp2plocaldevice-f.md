@@ -12,13 +12,13 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getP2pLocalDevice(): Promise<WifiP2pDevice>
 ```
 
-Obtain the information about own device information.
-DeviceAddress in the returned WifiP2pDevice will be set "00:00:00:00:00:00",
-if ohos.permission.GET_WIFI_LOCAL_MAC is not granted.
+Obtain the information about own device information.DeviceAddress in the returned WifiP2pDevice will be set "00:00:00:00:00:00",if ohos.permission.GET_WIFI_LOCAL_MAC is not granted.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
+
+<!--Device-wifiManager-function getP2pLocalDevice(): Promise<WifiP2pDevice>--><!--Device-wifiManager-function getP2pLocalDevice(): Promise<WifiP2pDevice>-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -26,7 +26,7 @@ if ohos.permission.GET_WIFI_LOCAL_MAC is not granted.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WifiP2pDevice&gt; | Returns the information about own device info. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<WifiP2pDevice> | Returns the information about own device info. |
 
 **Error codes:**
 
@@ -43,13 +43,13 @@ if ohos.permission.GET_WIFI_LOCAL_MAC is not granted.
 function getP2pLocalDevice(callback: AsyncCallback<WifiP2pDevice>): void
 ```
 
-Obtain the information about own device information.
-DeviceAddress in the returned WifiP2pDevice will be set "00:00:00:00:00:00",
-if ohos.permission.GET_WIFI_LOCAL_MAC is not granted.
+Obtain the information about own device information.DeviceAddress in the returned WifiP2pDevice will be set "00:00:00:00:00:00",if ohos.permission.GET_WIFI_LOCAL_MAC is not granted.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
+
+<!--Device-wifiManager-function getP2pLocalDevice(callback: AsyncCallback<WifiP2pDevice>): void--><!--Device-wifiManager-function getP2pLocalDevice(callback: AsyncCallback<WifiP2pDevice>): void-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -57,7 +57,7 @@ if ohos.permission.GET_WIFI_LOCAL_MAC is not granted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;WifiP2pDevice&gt; | Yes | Indicates callback of function. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<WifiP2pDevice> | Yes | Indicates callback of function. |
 
 **Error codes:**
 

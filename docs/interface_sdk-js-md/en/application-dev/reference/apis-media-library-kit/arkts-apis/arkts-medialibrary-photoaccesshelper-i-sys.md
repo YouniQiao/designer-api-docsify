@@ -6,6 +6,8 @@ Helper functions to access photos and albums.
 
 **Since:** 12
 
+<!--Device-sendablePhotoAccessHelper-interface PhotoAccessHelper extends lang.ISendable--><!--Device-sendablePhotoAccessHelper-interface PhotoAccessHelper extends lang.ISendable-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -24,8 +26,8 @@ Creates an asset with the specified file name. This API uses a promise to return
 
 The file name must meet the following requirements:
 
-- A valid file name must include a base name and a supported image or video extension.
-- The total length of the file name must be between 1 and 255 characters.
+- A valid file name must include a base name and a supported image or video extension.  
+- The total length of the file name must be between 1 and 255 characters.  
 - The base name must not contain any invalid characters.
 
 Starting from API version 18, the following characters are considered invalid: \ / : * ? " < > |
@@ -35,6 +37,8 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 **Since:** 12
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-createAsset(displayName: string): Promise<PhotoAsset>--><!--Device-PhotoAccessHelper-createAsset(displayName: string): Promise<PhotoAsset>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -50,7 +54,7 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PhotoAsset&gt; | Promise used to return the created asset. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PhotoAsset> | Promise used to return the created asset. |
 
 **Error codes:**
 
@@ -92,8 +96,8 @@ Creates an asset with the specified file name and options. This API uses a promi
 
 The file name must meet the following requirements:
 
-- A valid file name must include a base name and a supported image or video extension.
-- The total length of the file name must be between 1 and 255 characters.
+- A valid file name must include a base name and a supported image or video extension.  
+- The total length of the file name must be between 1 and 255 characters.  
 - The base name must not contain any invalid characters.
 
 Starting from API version 18, the following characters are considered invalid: \ / : * ? " < > |
@@ -103,6 +107,8 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 **Since:** 12
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-createAsset(displayName: string, options: photoAccessHelper.PhotoCreateOptions): Promise<PhotoAsset>--><!--Device-PhotoAccessHelper-createAsset(displayName: string, options: photoAccessHelper.PhotoCreateOptions): Promise<PhotoAsset>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -119,7 +125,7 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PhotoAsset&gt; | Promise used to return the created asset. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PhotoAsset> | Promise used to return the created asset. |
 
 **Error codes:**
 
@@ -163,12 +169,19 @@ getHiddenAlbums(
     ): Promise<FetchResult<Album>>
 ```
 
-Obtains hidden albums based on the specified display mode and retrieval options. This API uses a promise to
-return the result.
+Obtains hidden albums based on the specified display mode and retrieval options. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
+
+<!--Device-PhotoAccessHelper-getHiddenAlbums(
+      mode: photoAccessHelper.HiddenPhotosDisplayMode,
+      options?: photoAccessHelper.FetchOptions
+    ): Promise<FetchResult<Album>>--><!--Device-PhotoAccessHelper-getHiddenAlbums(
+      mode: photoAccessHelper.HiddenPhotosDisplayMode,
+      options?: photoAccessHelper.FetchOptions
+    ): Promise<FetchResult<Album>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -179,13 +192,13 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | photoAccessHelper.HiddenPhotosDisplayMode | Yes | Display mode of hidden albums. |
-| options | photoAccessHelper.FetchOptions | No | Options for retrieving the albums. If this parameter is not specified, thealbums are retrieved based on the display mode. |
+| options | photoAccessHelper.FetchOptions | No | Options for retrieving the albums. If this parameter is not specified, the albums are retrieved based on the display mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<FetchResult<Album>> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -208,6 +221,8 @@ Converts the **ValuesBucket** record to a **PhotoAsset** object.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoAccessHelper-getPhotoAssets(assetsData: photoAccessHelper.ValuesBucket[]): Promise<PhotoAsset[]>--><!--Device-PhotoAccessHelper-getPhotoAssets(assetsData: photoAccessHelper.ValuesBucket[]): Promise<PhotoAsset[]>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -222,7 +237,7 @@ Converts the **ValuesBucket** record to a **PhotoAsset** object.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PhotoAsset[]&gt; | Promise used to return the PhotoAsset object array (which may be empty). |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PhotoAsset[]> | Promise used to return the PhotoAsset object array (which may be empty). |
 
 **Error codes:**
 
@@ -272,6 +287,8 @@ Fetch shared photo assets.
 
 **Required permissions:** ohos.permission.ACCESS_MEDIALIB_THUMB_DB
 
+<!--Device-PhotoAccessHelper-getSharedPhotoAssets(options: photoAccessHelper.FetchOptions): Array<SharedPhotoAsset>--><!--Device-PhotoAccessHelper-getSharedPhotoAssets(options: photoAccessHelper.FetchOptions): Array<SharedPhotoAsset>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -286,7 +303,7 @@ Fetch shared photo assets.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;SharedPhotoAsset&gt; | Returns the shared photo assets |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<SharedPhotoAsset> | Returns the shared photo assets |
 
 **Error codes:**
 

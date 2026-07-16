@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-cert-interface CertCRLCollection--><!--Device-cert-interface CertCRLCollection-End-->
+
 **系统能力：** SystemCapability.Security.Cert
+
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
 
 ## selectCRLs
 
@@ -16,7 +24,9 @@ selectCRLs(param: X509CRLMatchParameters): Promise<Array<X509CRL>>
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CertCRLCollection-selectCRLs(param: X509CRLMatchParameters): Promise<Array<X509CRL>>--><!--Device-CertCRLCollection-selectCRLs(param: X509CRLMatchParameters): Promise<Array<X509CRL>>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -24,13 +34,13 @@ selectCRLs(param: X509CRLMatchParameters): Promise<Array<X509CRL>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | X509CRLMatchParameters | 是 | 表示证书吊销列表需匹配的参数。 |
+| param | [X509CRLMatchParameters](arkts-devicecertificate-x509crlmatchparameters-i.md) | 是 | 表示证书吊销列表需匹配的参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;X509CRL&gt;&gt; | Promise对象，返回匹配到的证书吊销列表对象数组。 |
+| Promise<Array<X509CRL>> | Promise对象，返回匹配到的证书吊销列表对象数组。 |
 
 **错误码：**
 
@@ -150,7 +160,9 @@ selectCRLs(param: X509CRLMatchParameters, callback: AsyncCallback<Array<X509CRL>
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CertCRLCollection-selectCRLs(param: X509CRLMatchParameters, callback: AsyncCallback<Array<X509CRL>>): void--><!--Device-CertCRLCollection-selectCRLs(param: X509CRLMatchParameters, callback: AsyncCallback<Array<X509CRL>>): void-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -158,8 +170,8 @@ selectCRLs(param: X509CRLMatchParameters, callback: AsyncCallback<Array<X509CRL>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | X509CRLMatchParameters | 是 | 表示证书吊销列表需匹配的参数对象。 |
-| callback | AsyncCallback&lt;Array&lt;X509CRL&gt;&gt; | 是 | 回调函数。当查找证书吊销列表成功时，err为undefined，data为获取到的匹配的证书吊销列表对象数组；否则为错误对象。 |
+| param | [X509CRLMatchParameters](arkts-devicecertificate-x509crlmatchparameters-i.md) | 是 | 表示证书吊销列表需匹配的参数对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<X509CRL>> | 是 | 回调函数。当查找证书吊销列表成功时，err为undefined，data为获取到的匹配的证书吊销列表对象数组；否则为错误对象。 |
 
 **错误码：**
 
@@ -279,7 +291,9 @@ selectCerts(param: X509CertMatchParameters): Promise<Array<X509Cert>>
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters): Promise<Array<X509Cert>>--><!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters): Promise<Array<X509Cert>>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -287,13 +301,13 @@ selectCerts(param: X509CertMatchParameters): Promise<Array<X509Cert>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | X509CertMatchParameters | 是 | 表示证书需匹配的参数。 |
+| param | [X509CertMatchParameters](arkts-devicecertificate-x509certmatchparameters-i.md) | 是 | 表示证书需匹配的参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;X509Cert&gt;&gt; | Promise对象，返回匹配到的证书对象数组。 |
+| Promise<Array<X509Cert>> | Promise对象，返回匹配到的证书对象数组。 |
 
 **错误码：**
 
@@ -377,7 +391,9 @@ selectCerts(param: X509CertMatchParameters, callback: AsyncCallback<Array<X509Ce
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters, callback: AsyncCallback<Array<X509Cert>>): void--><!--Device-CertCRLCollection-selectCerts(param: X509CertMatchParameters, callback: AsyncCallback<Array<X509Cert>>): void-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -385,8 +401,8 @@ selectCerts(param: X509CertMatchParameters, callback: AsyncCallback<Array<X509Ce
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | X509CertMatchParameters | 是 | 表示证书需匹配的参数。 |
-| callback | AsyncCallback&lt;Array&lt;X509Cert&gt;&gt; | 是 | 回调函数。当查找证书对象成功时，err为undefined，data为获取到的匹配的证书对象数组；否则为错误对象。 |
+| param | [X509CertMatchParameters](arkts-devicecertificate-x509certmatchparameters-i.md) | 是 | 表示证书需匹配的参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<X509Cert>> | 是 | 回调函数。当查找证书对象成功时，err为undefined，data为获取到的匹配的证书对象数组；否则为错误对象。 |
 
 **错误码：**
 

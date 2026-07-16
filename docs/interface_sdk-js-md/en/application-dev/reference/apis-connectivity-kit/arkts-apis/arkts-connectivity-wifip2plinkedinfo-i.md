@@ -4,6 +4,8 @@ P2P linked information.
 
 **Since:** 9
 
+<!--Device-wifiManager-interface WifiP2pLinkedInfo--><!--Device-wifiManager-interface WifiP2pLinkedInfo-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Connection status
 
 **Since:** 9
 
+<!--Device-WifiP2pLinkedInfo-connectState: P2pConnectState--><!--Device-WifiP2pLinkedInfo-connectState: P2pConnectState-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 ## groupOwnerAddr
@@ -38,6 +42,8 @@ Group owner address
 
 **Since:** 9
 
+<!--Device-WifiP2pLinkedInfo-groupOwnerAddr: string--><!--Device-WifiP2pLinkedInfo-groupOwnerAddr: string-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 ## isGroupOwner
@@ -51,6 +57,8 @@ Indicates whether it is group owner
 **Type:** boolean
 
 **Since:** 9
+
+<!--Device-WifiP2pLinkedInfo-isGroupOwner: boolean--><!--Device-WifiP2pLinkedInfo-isGroupOwner: boolean-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 

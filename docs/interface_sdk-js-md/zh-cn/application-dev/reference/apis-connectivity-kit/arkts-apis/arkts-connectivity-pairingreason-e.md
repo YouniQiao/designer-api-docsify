@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-remoteDevice-enum PairingReason--><!--Device-remoteDevice-enum PairingReason-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## PAIRING_REASON_SUCCESS
@@ -17,6 +19,8 @@ PAIRING_REASON_SUCCESS = 0
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PairingReason-PAIRING_REASON_SUCCESS = 0--><!--Device-PairingReason-PAIRING_REASON_SUCCESS = 0-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -32,6 +36,8 @@ PAIRING_REASON_FAILURE = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PairingReason-PAIRING_REASON_FAILURE = 1--><!--Device-PairingReason-PAIRING_REASON_FAILURE = 1-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## PAIRING_REASON_ACB_CONNECTION_FAIL
@@ -45,6 +51,8 @@ PAIRING_REASON_ACB_CONNECTION_FAIL = 2
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PairingReason-PAIRING_REASON_ACB_CONNECTION_FAIL = 2--><!--Device-PairingReason-PAIRING_REASON_ACB_CONNECTION_FAIL = 2-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -60,6 +68,8 @@ PAIRING_REASON_EXCEED_ACB_MAX = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PairingReason-PAIRING_REASON_EXCEED_ACB_MAX = 3--><!--Device-PairingReason-PAIRING_REASON_EXCEED_ACB_MAX = 3-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## PAIRING_REASON_REMOTE_CANCELED
@@ -73,6 +83,8 @@ PAIRING_REASON_REMOTE_CANCELED = 4
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PairingReason-PAIRING_REASON_REMOTE_CANCELED = 4--><!--Device-PairingReason-PAIRING_REASON_REMOTE_CANCELED = 4-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -88,6 +100,8 @@ PAIRING_REASON_LOCAL_CANCELED = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PairingReason-PAIRING_REASON_LOCAL_CANCELED = 5--><!--Device-PairingReason-PAIRING_REASON_LOCAL_CANCELED = 5-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## PAIRING_REASON_AUTH_FAIL
@@ -101,6 +115,8 @@ PAIRING_REASON_AUTH_FAIL = 6
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PairingReason-PAIRING_REASON_AUTH_FAIL = 6--><!--Device-PairingReason-PAIRING_REASON_AUTH_FAIL = 6-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 

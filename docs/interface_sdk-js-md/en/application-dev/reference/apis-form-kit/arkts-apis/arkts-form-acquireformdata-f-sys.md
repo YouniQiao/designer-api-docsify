@@ -20,6 +20,8 @@ Requests data from the widget provider. This API uses an asynchronous callback t
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-formHost-function acquireFormData(formId: string, callback: AsyncCallback<Record<string, Object>>): void--><!--Device-formHost-function acquireFormData(formId: string, callback: AsyncCallback<Record<string, Object>>): void-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -29,7 +31,7 @@ Requests data from the widget provider. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
-| callback | AsyncCallback&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to return the API call result and theshared data.<br>**Since:** 11 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Record<string, Object>> | Yes | Callback used to return the API call result and the shared data.<br>**Since:** 11 |
 
 **Error codes:**
 
@@ -57,6 +59,8 @@ Requests data from the widget provider. This API uses a promise to return the re
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-formHost-function acquireFormData(formId: string): Promise<Record<string, Object>>--><!--Device-formHost-function acquireFormData(formId: string): Promise<Record<string, Object>>-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -71,7 +75,7 @@ Requests data from the widget provider. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, Object&gt;&gt; | Promise used to return the API call result and the shareddata. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Record<string, Object>> | Promise used to return the API call result and the shared data. |
 
 **Error codes:**
 

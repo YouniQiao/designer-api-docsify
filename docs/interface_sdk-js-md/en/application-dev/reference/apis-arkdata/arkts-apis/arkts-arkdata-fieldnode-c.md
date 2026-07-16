@@ -4,6 +4,8 @@ Represents a **Schema** instance, which provides the methods for defining the va
 
 **Since:** 9
 
+<!--Device-distributedKVStore-class FieldNode--><!--Device-distributedKVStore-class FieldNode-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Appends a child node to this **FieldNode**.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FieldNode-appendChild(child: FieldNode): boolean--><!--Device-FieldNode-appendChild(child: FieldNode): boolean-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| child | FieldNode | Yes | Child node to append. |
+| child | [FieldNode](arkts-arkdata-fieldnode-c.md) | Yes | Child node to append. |
 
 **Return value:**
 
@@ -80,6 +84,8 @@ Defines a constructor used to create a **FieldNode** instance with a string fiel
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FieldNode-constructor(name: string)--><!--Device-FieldNode-constructor(name: string)-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 **Parameters:**
@@ -106,6 +112,8 @@ Indicates the default value of field node.
 
 **Since:** 9
 
+<!--Device-FieldNode-default: string--><!--Device-FieldNode-default: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## nullable
@@ -122,6 +130,8 @@ Set the nullable of database field.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FieldNode-set nullable(isnullable: boolean)--><!--Device-FieldNode-set nullable(isnullable: boolean)-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## type
@@ -137,6 +147,8 @@ Set the type of value.
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FieldNode-set type(type: int)--><!--Device-FieldNode-set type(type: int)-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 

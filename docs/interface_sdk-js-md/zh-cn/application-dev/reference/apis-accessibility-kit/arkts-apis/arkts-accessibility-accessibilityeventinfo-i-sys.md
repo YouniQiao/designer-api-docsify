@@ -4,9 +4,17 @@
 
 **起始版本：** 20
 
+<!--Device-unnamed-export declare interface AccessibilityEventInfo--><!--Device-unnamed-export declare interface AccessibilityEventInfo-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, FocusCondition, AccessibilityExtensionContext, ElementAttributeValues, AccessibilityEventInfo, AccessibilityEvent, AccessibilityElement, FocusRule, FocusMoveResult, FocusType, Parameter, FocusDirection, WindowType } from '@kit.AccessibilityKit';
+```
 
 ## eventType
 
@@ -19,6 +27,8 @@ eventType: AccessibilityEventType
 **类型：** AccessibilityEventType
 
 **起始版本：** 20
+
+<!--Device-AccessibilityEventInfo-eventType: AccessibilityEventType--><!--Device-AccessibilityEventInfo-eventType: AccessibilityEventType-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -36,6 +46,8 @@ extraInfo?: string
 
 **起始版本：** 20
 
+<!--Device-AccessibilityEventInfo-extraInfo?: string--><!--Device-AccessibilityEventInfo-extraInfo?: string-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +64,8 @@ target?: AccessibilityElement
 
 **起始版本：** 20
 
+<!--Device-AccessibilityEventInfo-target?: AccessibilityElement--><!--Device-AccessibilityEventInfo-target?: AccessibilityElement-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +81,8 @@ timestamp?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-AccessibilityEventInfo-timestamp?: long--><!--Device-AccessibilityEventInfo-timestamp?: long-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

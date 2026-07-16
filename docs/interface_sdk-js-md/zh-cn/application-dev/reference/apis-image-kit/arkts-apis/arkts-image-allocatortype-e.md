@@ -4,6 +4,8 @@
 
 **起始版本：** 15
 
+<!--Device-image-enum AllocatorType--><!--Device-image-enum AllocatorType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## AUTO
@@ -15,6 +17,8 @@ AUTO = 0
 系统决定内存申请类型。
 
 **起始版本：** 15
+
+<!--Device-AllocatorType-AUTO = 0--><!--Device-AllocatorType-AUTO = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -28,6 +32,8 @@ DMA = 1
 
 **起始版本：** 15
 
+<!--Device-AllocatorType-DMA = 1--><!--Device-AllocatorType-DMA = 1-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SHARE_MEMORY
@@ -39,6 +45,8 @@ SHARE_MEMORY = 2
 使用共享内存（Share Memory）的内存类型。
 
 **起始版本：** 15
+
+<!--Device-AllocatorType-SHARE_MEMORY = 2--><!--Device-AllocatorType-SHARE_MEMORY = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

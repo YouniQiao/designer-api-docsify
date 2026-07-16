@@ -1,5 +1,11 @@
 # setScreenPrivacyMaskImage（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { screen } from '@kit.ArkUI';
+```
+
 ## setScreenPrivacyMaskImage
 
 ```TypeScript
@@ -9,6 +15,8 @@ function setScreenPrivacyMaskImage(screenId: number, image?: image.PixelMap): Pr
 设置屏幕的隐私蒙版图片，使用Promise异步回调。
 
 **起始版本：** 19
+
+<!--Device-screen-function setScreenPrivacyMaskImage(screenId: long, image?: image.PixelMap): Promise<void>--><!--Device-screen-function setScreenPrivacyMaskImage(screenId: long, image?: image.PixelMap): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -25,7 +33,7 @@ function setScreenPrivacyMaskImage(screenId: number, image?: image.PixelMap): Pr
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-abilityAccessCtrl-export enum PermissionDecisionStatus--><!--Device-abilityAccessCtrl-export enum PermissionDecisionStatus-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -19,6 +21,8 @@ NEED_PERMISSION_DIALOG = 0
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PermissionDecisionStatus-NEED_PERMISSION_DIALOG = 0--><!--Device-PermissionDecisionStatus-NEED_PERMISSION_DIALOG = 0-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -36,6 +40,8 @@ NO_DIALOG_DENIED = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PermissionDecisionStatus-NO_DIALOG_DENIED = 1--><!--Device-PermissionDecisionStatus-NO_DIALOG_DENIED = 1-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +57,8 @@ NO_DIALOG_RESTRICTED = 2
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PermissionDecisionStatus-NO_DIALOG_RESTRICTED = 2--><!--Device-PermissionDecisionStatus-NO_DIALOG_RESTRICTED = 2-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -68,6 +76,8 @@ NO_DIALOG_GRANTED = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PermissionDecisionStatus-NO_DIALOG_GRANTED = 3--><!--Device-PermissionDecisionStatus-NO_DIALOG_GRANTED = 3-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -84,6 +94,8 @@ NO_DIALOG_NOT_DECLARED = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PermissionDecisionStatus-NO_DIALOG_NOT_DECLARED = 4--><!--Device-PermissionDecisionStatus-NO_DIALOG_NOT_DECLARED = 4-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -99,6 +111,8 @@ NO_DIALOG_CLI_PERMISSION_RESOLVED = 5
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PermissionDecisionStatus-NO_DIALOG_CLI_PERMISSION_RESOLVED = 5--><!--Device-PermissionDecisionStatus-NO_DIALOG_CLI_PERMISSION_RESOLVED = 5-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

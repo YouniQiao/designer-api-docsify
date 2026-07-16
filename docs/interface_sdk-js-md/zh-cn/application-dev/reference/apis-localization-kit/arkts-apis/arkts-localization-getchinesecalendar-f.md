@@ -1,5 +1,11 @@
 # getChineseCalendar
 
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
+
 ## getChineseCalendar
 
 ```TypeScript
@@ -12,7 +18,9 @@ export function getChineseCalendar(locale?: Intl.Locale): ChineseCalendar
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-i18n-export function getChineseCalendar(locale?: Intl.Locale): ChineseCalendar--><!--Device-i18n-export function getChineseCalendar(locale?: Intl.Locale): ChineseCalendar-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -26,5 +34,5 @@ export function getChineseCalendar(locale?: Intl.Locale): ChineseCalendar
 
 | 类型 | 说明 |
 | --- | --- |
-| ChineseCalendar | 农历对象。 |
+| [ChineseCalendar](arkts-localization-chinesecalendar-c.md) | 农历对象。 |
 

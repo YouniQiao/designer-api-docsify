@@ -1,5 +1,11 @@
 # subscribeReminderState
 
+## 导入模块
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+```
+
 ## subscribeReminderState
 
 ```TypeScript
@@ -14,19 +20,21 @@ function subscribeReminderState(callback: Callback<Array<ReminderState>>): Promi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-reminderAgentManager-function subscribeReminderState(callback: Callback<Array<ReminderState>>): Promise<void>--><!--Device-reminderAgentManager-function subscribeReminderState(callback: Callback<Array<ReminderState>>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;Array&lt;ReminderState&gt;&gt; | 是 | 回调函数，返回代理提醒状态信息。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<ReminderState>> | 是 | 回调函数，返回代理提醒状态信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

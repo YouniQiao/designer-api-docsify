@@ -4,6 +4,8 @@ Enumerates the playback metric keys.
 
 **Since:** 23
 
+<!--Device-media-enum PlaybackMetricsKey--><!--Device-media-enum PlaybackMetricsKey-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 ## PREPARE_DURATION
@@ -15,6 +17,8 @@ PREPARE_DURATION = 'prepare_duration'
 Preparation duration, in milliseconds.
 
 **Since:** 23
+
+<!--Device-PlaybackMetricsKey-PREPARE_DURATION = 'prepare_duration'--><!--Device-PlaybackMetricsKey-PREPARE_DURATION = 'prepare_duration'-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -28,6 +32,8 @@ Duration for establishing a resource connection, in milliseconds.
 
 **Since:** 23
 
+<!--Device-PlaybackMetricsKey-RESOURCE_CONNECTION_DURATION = 'resource_connection_duration'--><!--Device-PlaybackMetricsKey-RESOURCE_CONNECTION_DURATION = 'resource_connection_duration'-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 ## FIRST_FRAME_DECAPSULATION_DURATION
@@ -40,6 +46,8 @@ Duration for decapsulating the first frame, in milliseconds.
 
 **Since:** 23
 
+<!--Device-PlaybackMetricsKey-FIRST_FRAME_DECAPSULATION_DURATION = 'first_frame_decapsulation_duration'--><!--Device-PlaybackMetricsKey-FIRST_FRAME_DECAPSULATION_DURATION = 'first_frame_decapsulation_duration'-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 ## TOTAL_PLAYING_TIME
@@ -51,6 +59,8 @@ TOTAL_PLAYING_TIME = 'total_playback_time'
 Total playback duration, in milliseconds.
 
 **Since:** 23
+
+<!--Device-PlaybackMetricsKey-TOTAL_PLAYING_TIME = 'total_playback_time'--><!--Device-PlaybackMetricsKey-TOTAL_PLAYING_TIME = 'total_playback_time'-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -66,6 +76,8 @@ Total number of requests.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PlaybackMetricsKey-DOWNLOAD_REQUESTS_COUNT  = 'loading_requests_count'--><!--Device-PlaybackMetricsKey-DOWNLOAD_REQUESTS_COUNT  = 'loading_requests_count'-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 ## TOTAL_DOWNLOAD_TIME
@@ -77,6 +89,8 @@ TOTAL_DOWNLOAD_TIME  = 'total_loading_time'
 Total loading duration, in milliseconds.
 
 **Since:** 23
+
+<!--Device-PlaybackMetricsKey-TOTAL_DOWNLOAD_TIME  = 'total_loading_time'--><!--Device-PlaybackMetricsKey-TOTAL_DOWNLOAD_TIME  = 'total_loading_time'-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -92,6 +106,8 @@ Total loading size, in bytes.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PlaybackMetricsKey-TOTAL_DOWNLOAD_SIZE  = 'total_loading_bytes'--><!--Device-PlaybackMetricsKey-TOTAL_DOWNLOAD_SIZE  = 'total_loading_bytes'-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 ## STALLING_COUNT
@@ -104,6 +120,8 @@ Total number of stalling times.
 
 **Since:** 23
 
+<!--Device-PlaybackMetricsKey-STALLING_COUNT  = 'stalling_count'--><!--Device-PlaybackMetricsKey-STALLING_COUNT  = 'stalling_count'-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 ## TOTAL_STALLING_TIME
@@ -115,6 +133,8 @@ TOTAL_STALLING_TIME  = 'total_stalling_time'
 Total stalling duration, in milliseconds.
 
 **Since:** 23
+
+<!--Device-PlaybackMetricsKey-TOTAL_STALLING_TIME  = 'total_stalling_time'--><!--Device-PlaybackMetricsKey-TOTAL_STALLING_TIME  = 'total_stalling_time'-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -130,6 +150,8 @@ Cumulative lip async count.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PlaybackMetricsKey-LIP_ASYNC_COUNT  = 'lip_async_count'--><!--Device-PlaybackMetricsKey-LIP_ASYNC_COUNT  = 'lip_async_count'-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 ## TOTAL_LIP_ASYNC_TIME
@@ -143,6 +165,8 @@ Total lip async duration during the playback, in milliseconds.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PlaybackMetricsKey-TOTAL_LIP_ASYNC_TIME  = 'total_lip_async_time'--><!--Device-PlaybackMetricsKey-TOTAL_LIP_ASYNC_TIME  = 'total_lip_async_time'-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 

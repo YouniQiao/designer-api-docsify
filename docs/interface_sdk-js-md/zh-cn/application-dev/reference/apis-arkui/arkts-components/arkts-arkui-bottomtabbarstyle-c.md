@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class BottomTabBarStyle--><!--Device-unnamed-declare class BottomTabBarStyle-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -16,7 +18,9 @@ BottomTabBarStyle�Ĺ��캯����
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BottomTabBarStyle-constructor(icon: ResourceStr | TabBarSymbol, text: ResourceStr)--><!--Device-BottomTabBarStyle-constructor(icon: ResourceStr | TabBarSymbol, text: ResourceStr)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,7 +29,7 @@ BottomTabBarStyle�Ĺ��캯����
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | icon | ResourceStr \| TabBarSymbol | 是 | ҳǩ�ڵ�ͼƬ���ݡ�<br>**起始版本：** 9 - 11 |
-| text | ResourceStr | 是 | ҳǩ�ڵ��������ݡ� |
+| text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | ҳǩ�ڵ��������ݡ� |
 
 ## iconStyle
 
@@ -39,7 +43,9 @@ iconStyle(style: TabBarIconStyle): BottomTabBarStyle
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BottomTabBarStyle-iconStyle(style: TabBarIconStyle): BottomTabBarStyle--><!--Device-BottomTabBarStyle-iconStyle(style: TabBarIconStyle): BottomTabBarStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,13 +53,13 @@ iconStyle(style: TabBarIconStyle): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | TabBarIconStyle | 是 | �ײ�ҳǩ��labelͼ�����ʽ�� |
+| style | [TabBarIconStyle](arkts-arkui-tabbariconstyle-i.md) | 是 | �ײ�ҳǩ��labelͼ�����ʽ�� |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| BottomTabBarStyle | ����BottomTabBarStyle�������� |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | ����BottomTabBarStyle�������� |
 
 ## id
 
@@ -67,7 +73,9 @@ id(value: string): BottomTabBarStyle
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BottomTabBarStyle-id(value: string): BottomTabBarStyle--><!--Device-BottomTabBarStyle-id(value: string): BottomTabBarStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -81,7 +89,7 @@ id(value: string): BottomTabBarStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| BottomTabBarStyle | ����BottomTabBarStyle�������� |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | ����BottomTabBarStyle�������� |
 
 ## labelStyle
 
@@ -95,7 +103,9 @@ labelStyle(value: LabelStyle): BottomTabBarStyle
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BottomTabBarStyle-labelStyle(value: LabelStyle): BottomTabBarStyle--><!--Device-BottomTabBarStyle-labelStyle(value: LabelStyle): BottomTabBarStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -103,13 +113,13 @@ labelStyle(value: LabelStyle): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | LabelStyle | 是 | �ײ�ҳǩ��label�ı����������ʽ�� |
+| value | [LabelStyle](arkts-arkui-labelstyle-i.md) | 是 | �ײ�ҳǩ��label�ı����������ʽ�� |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| BottomTabBarStyle | ����BottomTabBarStyle�������� |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | ����BottomTabBarStyle�������� |
 
 ## layoutMode
 
@@ -123,7 +133,9 @@ layoutMode(value: LayoutMode): BottomTabBarStyle
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BottomTabBarStyle-layoutMode(value: LayoutMode): BottomTabBarStyle--><!--Device-BottomTabBarStyle-layoutMode(value: LayoutMode): BottomTabBarStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -131,13 +143,13 @@ layoutMode(value: LayoutMode): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | LayoutMode | 是 | �ײ�ҳǩ��ͼƬ�������Ų��ķ�ʽ���������LayoutModeö�١�<br/>Ĭ��ֵ��LayoutMode.VERTICAL |
+| value | [LayoutMode](arkts-arkui-layoutmode-e.md) | 是 | �ײ�ҳǩ��ͼƬ�������Ų��ķ�ʽ���������LayoutModeö�١�<br/>Ĭ��ֵ��LayoutMode.VERTICAL |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| BottomTabBarStyle | ����BottomTabBarStyle�������� |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | ����BottomTabBarStyle�������� |
 
 ## of
 
@@ -151,7 +163,9 @@ BottomTabBarStyle�ľ�̬���캯����
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BottomTabBarStyle-static of(icon: ResourceStr | TabBarSymbol, text: ResourceStr): BottomTabBarStyle--><!--Device-BottomTabBarStyle-static of(icon: ResourceStr | TabBarSymbol, text: ResourceStr): BottomTabBarStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -160,13 +174,13 @@ BottomTabBarStyle�ľ�̬���캯����
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | icon | ResourceStr \| TabBarSymbol | 是 | ҳǩ�ڵ�ͼƬ���ݡ�<br>**起始版本：** 10 - 11 |
-| text | ResourceStr | 是 | ҳǩ�ڵ��������ݡ� |
+| text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | ҳǩ�ڵ��������ݡ� |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| BottomTabBarStyle | ���ش�����BottomTabBarStyle���� |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | ���ش�����BottomTabBarStyle���� |
 
 ## padding
 
@@ -180,7 +194,9 @@ padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BottomTabBarStyle-padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle--><!--Device-BottomTabBarStyle-padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -194,7 +210,7 @@ padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| BottomTabBarStyle | ����BottomTabBarStyle�������� |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | ����BottomTabBarStyle�������� |
 
 ## symmetricExtensible
 
@@ -208,7 +224,9 @@ symmetricExtensible(value: boolean): BottomTabBarStyle
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BottomTabBarStyle-symmetricExtensible(value: boolean): BottomTabBarStyle--><!--Device-BottomTabBarStyle-symmetricExtensible(value: boolean): BottomTabBarStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -222,7 +240,7 @@ symmetricExtensible(value: boolean): BottomTabBarStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| BottomTabBarStyle | ����BottomTabBarStyle�������� |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | ����BottomTabBarStyle�������� |
 
 ## verticalAlign
 
@@ -236,7 +254,9 @@ verticalAlign(value: VerticalAlign): BottomTabBarStyle
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BottomTabBarStyle-verticalAlign(value: VerticalAlign): BottomTabBarStyle--><!--Device-BottomTabBarStyle-verticalAlign(value: VerticalAlign): BottomTabBarStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -244,11 +264,11 @@ verticalAlign(value: VerticalAlign): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | VerticalAlign | 是 | �ײ�ҳǩ��ͼƬ�������ڴ�ֱ�����ϵĶ����ʽ��<br/>Ĭ��ֵ��VerticalAlign.Center |
+| value | [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md) | 是 | �ײ�ҳǩ��ͼƬ�������ڴ�ֱ�����ϵĶ����ʽ��<br/>Ĭ��ֵ��VerticalAlign.Center |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| BottomTabBarStyle | ����BottomTabBarStyle�������� |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | ����BottomTabBarStyle�������� |
 

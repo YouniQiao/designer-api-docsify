@@ -1,17 +1,12 @@
 # Picture
 
-An image that contains special information can be decoded into a picture object, which generally contains the main
-picture, auxiliary picture, and metadata. The main picture contains most information about the image and is mainly
-used to render the image. The auxiliary picture is used to store data related to but different from the main
-picture, revealing more comprehensive details. The metadata is generally used to store information about the image
-file. The picture object class is used to read or write picture objects. Before calling any API in Picture, you
-must use [image.createPicture](arkts-image-createpicture-f.md#createpicture-1) to create a Picture object.
+An image that contains special information can be decoded into a picture object, which generally contains the main picture, auxiliary picture, and metadata. The main picture contains most information about the image and is mainly used to render the image. The auxiliary picture is used to store data related to but different from the main picture, revealing more comprehensive details. The metadata is generally used to store information about the image file. The picture object class is used to read or write picture objects. Before calling any API in Picture, you must use [image.createPicture](arkts-image-createpicture-f.md#createpicture-1) to create a Picture object.
 
-Images occupy a large amount of memory. When you finish using a Picture instance, call
-[release](arkts-image-picture-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure that all
-asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-picture-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 13
+
+<!--Device-image-interface Picture--><!--Device-image-interface Picture-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -31,19 +26,21 @@ Obtains an auxiliary picture by type.
 
 **Since:** 13
 
+<!--Device-Picture-getAuxiliaryPicture(type: AuxiliaryPictureType): AuxiliaryPicture | null--><!--Device-Picture-getAuxiliaryPicture(type: AuxiliaryPictureType): AuxiliaryPicture | null-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | AuxiliaryPictureType | Yes | Type of the auxiliary picture. |
+| type | [AuxiliaryPictureType](arkts-image-auxiliarypicturetype-e.md) | Yes | Type of the auxiliary picture. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AuxiliaryPicture | AuxiliaryPicture object. If there is no AuxiliaryPicture object, null isreturned. |
+| [AuxiliaryPicture](arkts-image-auxiliarypicture-i.md) | AuxiliaryPicture object. If there is no AuxiliaryPicture object, null is returned. |
 
 **Error codes:**
 
@@ -61,13 +58,15 @@ Obtains the PixelMap object of the gain map.
 
 **Since:** 13
 
+<!--Device-Picture-getGainmapPixelmap(): PixelMap | null--><!--Device-Picture-getGainmapPixelmap(): PixelMap | null-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PixelMap | PixelMap object obtained. If there is no PixelMap object, null is returned. |
+| [PixelMap](arkts-image-pixelmap-i.md) | PixelMap object obtained. If there is no PixelMap object, null is returned. |
 
 ## getHdrComposedPixelmap
 
@@ -75,10 +74,11 @@ Obtains the PixelMap object of the gain map.
 getHdrComposedPixelmap(): Promise<PixelMap>
 ```
 
-Generates a High Dynamic Range (HDR) image and obtains its PixelMap object. This API uses a promise to return the
-result.
+Generates a High Dynamic Range (HDR) image and obtains its PixelMap object. This API uses a promise to return the result.
 
 **Since:** 13
+
+<!--Device-Picture-getHdrComposedPixelmap(): Promise<PixelMap>--><!--Device-Picture-getHdrComposedPixelmap(): Promise<PixelMap>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -86,7 +86,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PixelMap> | Promise used to return the PixelMap object. |
 
 **Error codes:**
 
@@ -101,8 +101,7 @@ result.
 getHdrComposedPixelmapWithOptions(options?: HdrComposeOptions): Promise<PixelMap | undefined>
 ```
 
-Composites an HDR image and returns PixelMap of the image. Composition options (such as PixelMapFormat) can be
-passed. This API uses a promise to return the result.
+Composites an HDR image and returns PixelMap of the image. Composition options (such as PixelMapFormat) can be passed. This API uses a promise to return the result.
 
 The Picture object that calls this API must contain the main picture, gain map, and metadata.
 
@@ -110,19 +109,21 @@ The Picture object that calls this API must contain the main picture, gain map, 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Picture-getHdrComposedPixelmapWithOptions(options?: HdrComposeOptions): Promise<PixelMap | undefined>--><!--Device-Picture-getHdrComposedPixelmapWithOptions(options?: HdrComposeOptions): Promise<PixelMap | undefined>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | HdrComposeOptions | No | Options for HDR composition. |
+| options | [HdrComposeOptions](arkts-image-hdrcomposeoptions-i.md) | No | Options for HDR composition. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PixelMap \| undefined&gt; | Promise, which returns the PixelMap object or **undefined**. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PixelMap \| undefined> | Promise, which returns the PixelMap object or **undefined**. |
 
 **Error codes:**
 
@@ -140,13 +141,15 @@ Obtains the PixelMap object of the main picture. This API returns the result syn
 
 **Since:** 13
 
+<!--Device-Picture-getMainPixelmap(): PixelMap--><!--Device-Picture-getMainPixelmap(): PixelMap-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PixelMap | PixelMap object. |
+| [PixelMap](arkts-image-pixelmap-i.md) | PixelMap object. |
 
 ## getMetadata
 
@@ -158,26 +161,28 @@ Obtains the metadata of this Picture object. This API uses a promise to return t
 
 **Since:** 13
 
+<!--Device-Picture-getMetadata(metadataType: MetadataType): Promise<Metadata>--><!--Device-Picture-getMetadata(metadataType: MetadataType): Promise<Metadata>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| metadataType | MetadataType | Yes | Metadata type. |
+| metadataType | [MetadataType](arkts-image-metadatatype-e.md) | Yes | Metadata type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Metadata&gt; | Promise used to return the metadata. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Metadata> | Promise used to return the metadata. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. Themetadata type does not match the auxiliary picture type. |
+| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
 
 ## hdrComposeToMainPixelmap
 
@@ -185,8 +190,7 @@ Obtains the metadata of this Picture object. This API uses a promise to return t
 hdrComposeToMainPixelmap(): Promise<void>
 ```
 
-Invokes the VPE algorithm to compose the main pixelmap and gainmap. The composed result will replace the
-main pixelmap of the current picture object.
+Invokes the VPE algorithm to compose the main pixelmap and gainmap. The composed result will replace the main pixelmap of the current picture object.
 
 The Picture object that calls this API must contain the main pixelmap, gain map.
 
@@ -194,13 +198,15 @@ The Picture object that calls this API must contain the main pixelmap, gain map.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Picture-hdrComposeToMainPixelmap(): Promise<void>--><!--Device-Picture-hdrComposeToMainPixelmap(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -218,6 +224,8 @@ Marshals this Picture object and writes it to a MessageSequence object.
 
 **Since:** 13
 
+<!--Device-Picture-marshalling(sequence: rpc.MessageSequence): void--><!--Device-Picture-marshalling(sequence: rpc.MessageSequence): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
@@ -231,7 +239,7 @@ Marshals this Picture object and writes it to a MessageSequence object.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types; 3.Parameter verification failed. |
-| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image uploadexception.3. Decode process exception. 4. Insufficient memory. |
+| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception.3. Decode process exception. 4. Insufficient memory. |
 
 ## release
 
@@ -241,13 +249,13 @@ release(): void
 
 Releases this Picture object.
 
-Images occupy a large amount of memory. When you finish using a Picture instance, call this API to free the
-memory promptly.
+Images occupy a large amount of memory. When you finish using a Picture instance, call this API to free the memory promptly.
 
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished
-and the instance is no longer needed.
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 13
+
+<!--Device-Picture-release(): void--><!--Device-Picture-release(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -261,14 +269,16 @@ Sets an auxiliary picture.
 
 **Since:** 13
 
+<!--Device-Picture-setAuxiliaryPicture(type: AuxiliaryPictureType, auxiliaryPicture: AuxiliaryPicture): void--><!--Device-Picture-setAuxiliaryPicture(type: AuxiliaryPictureType, auxiliaryPicture: AuxiliaryPicture): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | AuxiliaryPictureType | Yes | Type of the auxiliary picture. |
-| auxiliaryPicture | AuxiliaryPicture | Yes | AuxiliaryPicture object. |
+| type | [AuxiliaryPictureType](arkts-image-auxiliarypicturetype-e.md) | Yes | Type of the auxiliary picture. |
+| auxiliaryPicture | [AuxiliaryPicture](arkts-image-auxiliarypicture-i.md) | Yes | AuxiliaryPicture object. |
 
 **Error codes:**
 
@@ -286,25 +296,27 @@ Sets the metadata for this Picture object. This API uses a promise to return the
 
 **Since:** 13
 
+<!--Device-Picture-setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>--><!--Device-Picture-setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| metadataType | MetadataType | Yes | Metadata type. |
-| metadata | Metadata | Yes | Metadata object. |
+| metadataType | [MetadataType](arkts-image-metadatatype-e.md) | Yes | Metadata type. |
+| metadata | [Metadata](../../apis-ability-kit/arkts-apis/arkts-ability-metadata-t.md) | Yes | Metadata object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. Themetadata type does not match the auxiliary picture type. |
+| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
 

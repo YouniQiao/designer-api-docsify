@@ -6,6 +6,8 @@ Provides methods for accessing MifareUltralight tag.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface MifareUltralightTag extends TagSession--><!--Device-unnamed-export interface MifareUltralightTag extends TagSession-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## getType
@@ -19,6 +21,8 @@ Gets the type of the MifareUltralight tag.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MifareUltralightTag-getType(): tag.MifareUltralightType--><!--Device-MifareUltralightTag-getType(): tag.MifareUltralightType-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -42,6 +46,8 @@ Reads 4 pages, total is 16 bytes. Page size is 4 bytes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MifareUltralightTag-readMultiplePages(pageIndex: int): Promise<int[]>--><!--Device-MifareUltralightTag-readMultiplePages(pageIndex: int): Promise<int[]>-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -54,7 +60,7 @@ Reads 4 pages, total is 16 bytes. Page size is 4 bytes.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number[]&gt; | Returns 4 pages data. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number[]> | Returns 4 pages data. |
 
 **Error codes:**
 
@@ -79,6 +85,8 @@ Reads 4 pages, total is 16 bytes. Page size is 4 bytes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MifareUltralightTag-readMultiplePages(pageIndex: int, callback: AsyncCallback<int[]>): void--><!--Device-MifareUltralightTag-readMultiplePages(pageIndex: int, callback: AsyncCallback<int[]>): void-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -86,7 +94,7 @@ Reads 4 pages, total is 16 bytes. Page size is 4 bytes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pageIndex | number | Yes | The index of page to read. |
-| callback | AsyncCallback&lt;number[]&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number[]> | Yes | The callback. |
 
 **Error codes:**
 
@@ -111,6 +119,8 @@ Writes a page, total 4 bytes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MifareUltralightTag-writeSinglePage(pageIndex: int, data: int[]): Promise<void>--><!--Device-MifareUltralightTag-writeSinglePage(pageIndex: int, data: int[]): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -124,7 +134,7 @@ Writes a page, total 4 bytes.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The void |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The void |
 
 **Error codes:**
 
@@ -149,6 +159,8 @@ Writes a page, total 4 bytes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MifareUltralightTag-writeSinglePage(pageIndex: int, data: int[], callback: AsyncCallback<void>): void--><!--Device-MifareUltralightTag-writeSinglePage(pageIndex: int, data: int[], callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -157,7 +169,7 @@ Writes a page, total 4 bytes.
 | --- | --- | --- | --- |
 | pageIndex | number | Yes | The index of page to write. |
 | data | number[] | Yes | The page data to write. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback. |
 
 **Error codes:**
 

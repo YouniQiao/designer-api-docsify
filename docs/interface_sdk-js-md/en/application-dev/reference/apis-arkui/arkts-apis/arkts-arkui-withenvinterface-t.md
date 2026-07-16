@@ -12,5 +12,7 @@ Define the WithEnv component's type.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-unnamed-export declare type WithEnvInterface = () => WithEnvAttribute--><!--Device-unnamed-export declare type WithEnvInterface = () => WithEnvAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

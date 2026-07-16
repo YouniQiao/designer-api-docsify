@@ -1,5 +1,11 @@
 # unsubscribe
 
+## 导入模块
+
+```TypeScript
+import { commonEventManager } from '@kit.BasicServicesKit';
+```
+
 ## unsubscribe
 
 ```TypeScript
@@ -10,7 +16,9 @@ function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-commonEventManager-function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback<void>): void--><!--Device-commonEventManager-function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -18,8 +26,8 @@ function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriber | CommonEventSubscriber | 是 | 表示订阅者对象。 |
-| callback | AsyncCallback&lt;void&gt; | 否 | 回调函数。当取消公共事件订阅成功时，err为undefined，否则为错误对象。 |
+| subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-i.md) | 是 | 表示订阅者对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 否 | 回调函数。当取消公共事件订阅成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

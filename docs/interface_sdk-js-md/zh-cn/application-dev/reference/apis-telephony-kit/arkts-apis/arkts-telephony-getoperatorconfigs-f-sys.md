@@ -1,5 +1,11 @@
 # getOperatorConfigs（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## getOperatorConfigs
 
 ```TypeScript
@@ -12,6 +18,8 @@ Obtains the operatorconfigs of the SIM card in a specified slot.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getOperatorConfigs(slotId: int, callback: AsyncCallback<Array<OperatorConfig>>): void--><!--Device-sim-function getOperatorConfigs(slotId: int, callback: AsyncCallback<Array<OperatorConfig>>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -21,7 +29,7 @@ Obtains the operatorconfigs of the SIM card in a specified slot.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;Array&lt;OperatorConfig&gt;&gt; | 是 | Indicates the callback forgetting the operatorconfigs in a specified slot;returns empty OperatorConfig if no SIM card is inserted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<OperatorConfig>> | 是 | Indicates the callback for getting the operatorconfigs in a specified slot;returns empty OperatorConfig if no SIM card is inserted. |
 
 **错误码：**
 
@@ -60,6 +68,8 @@ Obtains the operatorconfigs of the SIM card in a specified slot.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getOperatorConfigs(slotId: int): Promise<Array<OperatorConfig>>--><!--Device-sim-function getOperatorConfigs(slotId: int): Promise<Array<OperatorConfig>>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -74,7 +84,7 @@ Obtains the operatorconfigs of the SIM card in a specified slot.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;OperatorConfig&gt;&gt; | Returns the operatorconfigs in a specified slot;returns empty OperatorConfig if no SIM card is inserted. |
+| Promise<Array<OperatorConfig>> | Returns the operatorconfigs in a specified slot;returns empty OperatorConfig if no SIM card is inserted. |
 
 **错误码：**
 

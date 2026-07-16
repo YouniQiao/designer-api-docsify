@@ -12,19 +12,17 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAllDynamicIconInfo(userId?: number): Promise<Array<DynamicIconInfo>>
 ```
 
-Obtains the dynamic icon information of all applications and all application clones of a specified user. This API
-uses a promise to return the result.
+Obtains the dynamic icon information of all applications and all application clones of a specified user. This API uses a promise to return the result.
 
-To obtain the dynamic icon information of all applications and all application clones of the current user, you must
-request the ohos.permission.GET_BUNDLE_INFO_PRIVILEGED permission.
+To obtain the dynamic icon information of all applications and all application clones of the current user, you must request the ohos.permission.GET_BUNDLE_INFO_PRIVILEGED permission.
 
-To obtain the dynamic icon information of all applications and all application clones of other users or all users,
-you must request the ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-permissions.
+To obtain the dynamic icon information of all applications and all application clones of other users or all users,you must request the ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permissions.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-bundleManager-function getAllDynamicIconInfo(userId?: int): Promise<Array<DynamicIconInfo>>--><!--Device-bundleManager-function getAllDynamicIconInfo(userId?: int): Promise<Array<DynamicIconInfo>>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -34,13 +32,13 @@ permissions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | No | User ID. By default, the dynamic icon information of all applications and all applicationclones of all users is queried. |
+| userId | number | No | User ID. By default, the dynamic icon information of all applications and all application clones of all users is queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DynamicIconInfo&gt;&gt; | Promise used to return the dynamic icon information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<DynamicIconInfo>> | Promise used to return the dynamic icon information. |
 
 **Error codes:**
 

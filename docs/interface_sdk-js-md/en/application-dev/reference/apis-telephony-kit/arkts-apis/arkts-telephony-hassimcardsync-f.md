@@ -16,6 +16,8 @@ Checks whether a SIM card is inserted in a specified slot.
 
 **Since:** 10
 
+<!--Device-sim-function hasSimCardSync(slotId: int): boolean--><!--Device-sim-function hasSimCardSync(slotId: int): boolean-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**

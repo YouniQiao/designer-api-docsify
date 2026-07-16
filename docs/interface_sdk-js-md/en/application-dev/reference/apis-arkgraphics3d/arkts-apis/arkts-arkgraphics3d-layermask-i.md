@@ -4,6 +4,8 @@ Defines the layer mask of the node.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface LayerMask--><!--Device-unnamed-export interface LayerMask-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## getEnabled
@@ -15,6 +17,8 @@ getEnabled(index: number): boolean
 Get whether layer mask is enabled.
 
 **Since:** 12
+
+<!--Device-LayerMask-getEnabled(index: int): boolean--><!--Device-LayerMask-getEnabled(index: int): boolean-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -39,6 +43,8 @@ setEnabled(index: number, enabled: boolean): void
 Set whether the layer mask is enabled.
 
 **Since:** 12
+
+<!--Device-LayerMask-setEnabled(index: int, enabled: boolean): void--><!--Device-LayerMask-setEnabled(index: int, enabled: boolean): void-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

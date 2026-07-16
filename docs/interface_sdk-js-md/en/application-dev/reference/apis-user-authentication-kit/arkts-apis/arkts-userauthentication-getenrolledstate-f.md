@@ -12,10 +12,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 function getEnrolledState(authType: UserAuthType): EnrolledState
 ```
 
-Obtains the credential state. This API is used to obtain the credential enrollment information of a specified
-authentication type, including the credential digest and quantity. The application can compare the current query
-result with the previously saved result to determine whether the user has added or deleted credentials, and then
-perform corresponding service processing.
+Obtains the credential state. This API is used to obtain the credential enrollment information of a specified authentication type, including the credential digest and quantity. The application can compare the current query result with the previously saved result to determine whether the user has added or deleted credentials, and then perform corresponding service processing.
 
 **Since:** 12
 
@@ -23,19 +20,21 @@ perform corresponding service processing.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-userAuth-function getEnrolledState(authType: UserAuthType): EnrolledState--><!--Device-userAuth-function getEnrolledState(authType: UserAuthType): EnrolledState-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | UserAuthType | Yes | Authentication type. This parameter specifies the credential type to be queried.The options are **FACE**, **FINGERPRINT**, **PIN**, and **COMPANION_DEVICE**. When a PIN is queried, theoverall status of the PIN instead of the number of PINs is returned. |
+| authType | [UserAuthType](arkts-userauthentication-userauthtype-e.md) | Yes | Authentication type. This parameter specifies the credential type to be queried.The options are **FACE**, **FINGERPRINT**, **PIN**, and **COMPANION_DEVICE**. When a PIN is queried, the overall status of the PIN instead of the number of PINs is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| EnrolledState | Credential state obtained if the operation is successful. The value contains**credentialDigest** (credential digest) and **credentialCount** (credential count). The application can savethe **credentialDigest** value and compare it with the value obtained in subsequent queries to detectcredential changes. |
+| [EnrolledState](arkts-userauthentication-enrolledstate-i.md) | Credential state obtained if the operation is successful. The value contains **credentialDigest** (credential digest) and **credentialCount** (credential count). The application can save the **credentialDigest** value and compare it with the value obtained in subsequent queries to detect credential changes. |
 
 **Error codes:**
 

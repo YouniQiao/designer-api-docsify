@@ -54,6 +54,8 @@ Creates a vertical lazy-loading grid layout container.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-LazyVGridLayoutInterface-(): LazyVGridLayoutAttribute--><!--Device-LazyVGridLayoutInterface-(): LazyVGridLayoutAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Summary

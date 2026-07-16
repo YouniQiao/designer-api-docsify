@@ -4,6 +4,8 @@ Defines the client certificate request result, related to {@link onClientAuthent
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class ClientAuthenticationHandler--><!--Device-unnamed-declare class ClientAuthenticationHandler-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## cancel
@@ -16,7 +18,9 @@ cancel(): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ClientAuthenticationHandler-cancel(): void--><!--Device-ClientAuthenticationHandler-cancel(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -30,7 +34,9 @@ confirm(priKeyFile: string, certChainFile: string): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ClientAuthenticationHandler-confirm(priKeyFile: string, certChainFile: string): void--><!--Device-ClientAuthenticationHandler-confirm(priKeyFile: string, certChainFile: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -51,7 +57,9 @@ confirm(authUri: string): void
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ClientAuthenticationHandler-confirm(authUri: string): void--><!--Device-ClientAuthenticationHandler-confirm(authUri: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -71,6 +79,8 @@ confirm(identity: string, credentialTypeOrCertChainFile: CredentialType | string
 
 **起始版本：** 22
 
+<!--Device-ClientAuthenticationHandler-confirm(identity: string, credentialTypeOrCertChainFile: CredentialType | string): void--><!--Device-ClientAuthenticationHandler-confirm(identity: string, credentialTypeOrCertChainFile: CredentialType | string): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -78,7 +88,7 @@ confirm(identity: string, credentialTypeOrCertChainFile: CredentialType | string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | identity | string | 是 | The identify of the credential. |
-| credentialTypeOrCertChainFile | CredentialType \| string | 是 | The type of the credential or the file that storeclient certificate chain. |
+| credentialTypeOrCertChainFile | CredentialType \| string | 是 | The type of the credential or the file that store client certificate chain. |
 
 **错误码：**
 
@@ -96,7 +106,9 @@ Constructor.
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ClientAuthenticationHandler-constructor()--><!--Device-ClientAuthenticationHandler-constructor()-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -110,7 +122,9 @@ Ignore this certificate request temporarily.
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ClientAuthenticationHandler-ignore(): void--><!--Device-ClientAuthenticationHandler-ignore(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

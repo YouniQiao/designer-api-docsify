@@ -18,6 +18,8 @@ Set the NR option mode.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-radio-function setNROptionMode(slotId: int, mode: NROptionMode, callback: AsyncCallback<void>): void--><!--Device-radio-function setNROptionMode(slotId: int, mode: NROptionMode, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -26,9 +28,9 @@ Set the NR option mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot indexnumber supported by the device. |
-| mode | NROptionMode | Yes | Indicates the nr option mode to be set. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Indicates the callback for getting the option result. |
+| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| mode | [NROptionMode](arkts-telephony-nroptionmode-e-sys.md) | Yes | Indicates the nr option mode to be set. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Indicates the callback for getting the option result. |
 
 **Error codes:**
 
@@ -72,6 +74,8 @@ Set the NR option mode.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-radio-function setNROptionMode(slotId: int, mode: NROptionMode): Promise<void>--><!--Device-radio-function setNROptionMode(slotId: int, mode: NROptionMode): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -80,14 +84,14 @@ Set the NR option mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot indexnumber supported by the device. |
-| mode | NROptionMode | Yes | Indicates the nr option mode to be set. |
+| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| mode | [NROptionMode](arkts-telephony-nroptionmode-e-sys.md) | Yes | Indicates the nr option mode to be set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns option result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns option result. |
 
 **Error codes:**
 

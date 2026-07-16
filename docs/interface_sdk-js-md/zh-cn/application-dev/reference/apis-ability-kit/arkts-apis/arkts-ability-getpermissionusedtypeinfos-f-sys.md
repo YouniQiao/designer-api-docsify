@@ -1,5 +1,11 @@
 # getPermissionUsedTypeInfos（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+```
+
 ## getPermissionUsedTypeInfos
 
 ```TypeScript
@@ -13,6 +19,12 @@ function getPermissionUsedTypeInfos(
 **起始版本：** 12
 
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
+
+<!--Device-privacyManager-function getPermissionUsedTypeInfos(
+    tokenId?: int | null,
+    permissionName?: Permissions): Promise<Array<PermissionUsedTypeInfo>>--><!--Device-privacyManager-function getPermissionUsedTypeInfos(
+    tokenId?: int | null,
+    permissionName?: Permissions): Promise<Array<PermissionUsedTypeInfo>>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -29,7 +41,7 @@ function getPermissionUsedTypeInfos(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;PermissionUsedTypeInfo&gt;&gt; | Promise used to return the list of permission access typeinformation. |
+| Promise<Array<PermissionUsedTypeInfo>> | Promise used to return the list of permission access type information. |
 
 **错误码：**
 

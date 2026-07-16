@@ -4,6 +4,8 @@ Provides APIs for managing credential inputers.
 
 **Since:** 9
 
+<!--Device-osAccount-class InputerManager--><!--Device-osAccount-class InputerManager-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Registers a credential inputer.
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL or ohos.permission.MANAGE_USER_IDM
 
+<!--Device-InputerManager-static registerInputer(authType: AuthType, inputer: IInputer): void--><!--Device-InputerManager-static registerInputer(authType: AuthType, inputer: IInputer): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -34,8 +38,8 @@ Registers a credential inputer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | AuthType | Yes | Authentication credential type. |
-| inputer | IInputer | Yes | Credential inputer to register. |
+| authType | [AuthType](arkts-basicservices-authtype-e-sys.md) | Yes | Authentication credential type. |
+| inputer | [IInputer](arkts-basicservices-iinputer-i-sys.md) | Yes | Credential inputer to register. |
 
 **Error codes:**
 
@@ -82,6 +86,8 @@ Unregisters a credential inputer.
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL or ohos.permission.MANAGE_USER_IDM
 
+<!--Device-InputerManager-static unregisterInputer(authType: AuthType): void--><!--Device-InputerManager-static unregisterInputer(authType: AuthType): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -90,7 +96,7 @@ Unregisters a credential inputer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | AuthType | Yes | Authentication credential type. |
+| authType | [AuthType](arkts-basicservices-authtype-e-sys.md) | Yes | Authentication credential type. |
 
 **Error codes:**
 

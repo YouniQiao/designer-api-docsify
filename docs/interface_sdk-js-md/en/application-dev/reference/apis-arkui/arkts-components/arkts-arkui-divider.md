@@ -1,6 +1,14 @@
 # Divider
 
-Provides a divider component to separate different content blocks/content elements.
+The **Divider** component is used to separate content blocks and content elements.
+> **NOTE**
+>
+> If the divider appears with inconsistent thickness or becomes invisible, follow the instructions in
+> [FAQs](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-pixelRoundForComponent.md#faqs).
+>
+> **Child Components**
+>
+> Not supported
 
 
 ## Divider
@@ -16,6 +24,8 @@ Creates a **Divider** component.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-DividerInterface-(): DividerAttribute--><!--Device-DividerInterface-(): DividerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -12,12 +12,13 @@ import { text } from '@kit.ArkGraphics2D';
 function matchFontDescriptors(desc: FontDescriptor): Promise<Array<FontDescriptor>>
 ```
 
-Obtains all system font descriptors that match the provided font descriptor. This API uses a promise to return the
-result.
+Obtains all system font descriptors that match the provided font descriptor. This API uses a promise to return the result.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-text-function matchFontDescriptors(desc: FontDescriptor): Promise<Array<FontDescriptor>>--><!--Device-text-function matchFontDescriptors(desc: FontDescriptor): Promise<Array<FontDescriptor>>-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -25,13 +26,13 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| desc | FontDescriptor | Yes | Font descriptor to match against. If this parameter is left unspecified, allsystem font descriptors are returned. If a specific value is provided, the matching is performed based on thevalue provided. If the matching fails, an empty array is returned. |
+| desc | [FontDescriptor](arkts-arkgraphics2d-fontdescriptor-i.md) | Yes | Font descriptor to match against. If this parameter is left unspecified, all system font descriptors are returned. If a specific value is provided, the matching is performed based on the value provided. If the matching fails, an empty array is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;FontDescriptor&gt;&gt; | Promise used to return all matched system font descriptors. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<FontDescriptor>> | Promise used to return all matched system font descriptors. |
 
 **Error codes:**
 

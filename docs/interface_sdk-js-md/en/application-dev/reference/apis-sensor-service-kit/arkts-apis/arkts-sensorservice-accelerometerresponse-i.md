@@ -10,6 +10,8 @@ Defines the callback invoked when the acceleration sensor data changes.
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
+<!--Device-unnamed-export interface AccelerometerResponse--><!--Device-unnamed-export interface AccelerometerResponse-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -38,6 +40,8 @@ Acceleration on the x-axis.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-AccelerometerResponse-x: number--><!--Device-AccelerometerResponse-x: number-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## y
@@ -60,6 +64,8 @@ Acceleration on the y-axis.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-AccelerometerResponse-y: number--><!--Device-AccelerometerResponse-y: number-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## z
@@ -81,6 +87,8 @@ Acceleration on the z-axis.
 **Required permissions:** ohos.permission.ACCELEROMETER
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-AccelerometerResponse-z: number--><!--Device-AccelerometerResponse-z: number-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 

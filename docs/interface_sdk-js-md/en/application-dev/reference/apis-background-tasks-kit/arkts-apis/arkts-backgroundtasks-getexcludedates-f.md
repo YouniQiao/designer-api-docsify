@@ -12,10 +12,11 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 function getExcludeDates(reminderId: number): Promise<Array<Date>>
 ```
 
-Obtains all non-reminder dates for a recurring calendar reminder with a specific ID. This API uses a promise to
-return the result.
+Obtains all non-reminder dates for a recurring calendar reminder with a specific ID. This API uses a promise to return the result.
 
 **Since:** 12
+
+<!--Device-reminderAgentManager-function getExcludeDates(reminderId: int): Promise<Array<Date>>--><!--Device-reminderAgentManager-function getExcludeDates(reminderId: int): Promise<Array<Date>>-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -23,13 +24,13 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderId | number | Yes | ID of the agent-powered reminder to be queried.The reminder ID is returned when the[publishReminder](arkts-backgroundtasks-publishreminder-f.md#publishreminder-1)API is called. |
+| reminderId | number | Yes | ID of the agent-powered reminder to be queried.The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-publishreminder-f.md#publishreminder-1)API is called. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Date&gt;&gt; | Promise used to return all the non-reminder dates. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Date>> | Promise used to return all the non-reminder dates. |
 
 **Error codes:**
 

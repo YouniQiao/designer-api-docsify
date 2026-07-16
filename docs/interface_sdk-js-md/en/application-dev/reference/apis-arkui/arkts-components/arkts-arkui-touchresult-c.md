@@ -4,6 +4,8 @@ Defines the custom event dispatch result. You can influence event dispatch by re
 
 **Since:** 11
 
+<!--Device-unnamed-declare class TouchResult--><!--Device-unnamed-declare class TouchResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## id
@@ -14,9 +16,7 @@ id?: string
 
 Unique ID of the child component.
 
-If **strategy** is set to **TouchTestStrategy.DEFAULT**, **id** is optional. If **strategy** is set to
-**TouchTestStrategy.FORWARD_COMPETITION** or **TouchTestStrategy.FORWARD**, **id** is mandatory. If **id** is not
-returned, the strategy **TouchTestStrategy.DEFAULT** is used.
+If **strategy** is set to **TouchTestStrategy.DEFAULT**, **id** is optional. If **strategy** is set to **TouchTestStrategy.FORWARD_COMPETITION** or **TouchTestStrategy.FORWARD**, **id** is mandatory. If **id** is not returned, the strategy **TouchTestStrategy.DEFAULT** is used.
 
 **Type:** string
 
@@ -25,6 +25,8 @@ returned, the strategy **TouchTestStrategy.DEFAULT** is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TouchResult-id?: string--><!--Device-TouchResult-id?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,6 +45,8 @@ Event dispatch strategy.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TouchResult-strategy: TouchTestStrategy--><!--Device-TouchResult-strategy: TouchTestStrategy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

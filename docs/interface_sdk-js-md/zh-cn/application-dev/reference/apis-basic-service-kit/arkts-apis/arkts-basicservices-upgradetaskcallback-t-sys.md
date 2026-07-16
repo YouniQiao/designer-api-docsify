@@ -8,6 +8,8 @@ export type UpgradeTaskCallback = (eventInfo: EventInfo) => void
 
 **起始版本：** 9
 
+<!--Device-update-export type UpgradeTaskCallback = (eventInfo: EventInfo) => void--><!--Device-update-export type UpgradeTaskCallback = (eventInfo: EventInfo) => void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。

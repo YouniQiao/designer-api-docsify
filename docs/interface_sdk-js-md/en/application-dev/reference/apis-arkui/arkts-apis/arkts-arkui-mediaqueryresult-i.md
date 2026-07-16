@@ -4,6 +4,8 @@ Provides the media query result.
 
 **Since:** 7
 
+<!--Device-mediaquery-interface MediaQueryResult--><!--Device-mediaquery-interface MediaQueryResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -18,9 +20,7 @@ import { mediaquery } from '@kit.ArkUI';
 readonly matches: boolean
 ```
 
-Whether the media query condition is met. The value **true** means that the
-query conditions are met, and **false** means the opposite.
-This parameter is read-only.
+Whether the media query condition is met. The value **true** means that the query conditions are met, and **false** means the opposite.This parameter is read-only.
 
 **Type:** boolean
 
@@ -30,6 +30,8 @@ This parameter is read-only.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-MediaQueryResult-readonly matches: boolean--><!--Device-MediaQueryResult-readonly matches: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## media
@@ -38,8 +40,7 @@ This parameter is read-only.
 readonly media: string
 ```
 
-Matching condition of a media event.
-This parameter is read-only.
+Matching condition of a media event.This parameter is read-only.
 
 **Type:** string
 
@@ -48,6 +49,8 @@ This parameter is read-only.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-MediaQueryResult-readonly media: string--><!--Device-MediaQueryResult-readonly media: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

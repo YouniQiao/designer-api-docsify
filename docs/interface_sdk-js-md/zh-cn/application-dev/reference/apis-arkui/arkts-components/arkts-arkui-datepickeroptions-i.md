@@ -2,13 +2,15 @@
 
 日期选择器组件的参数说明。
 
-> **说明：**
->
-> - Date的使用请参考[TimePickerOptions](arkts-arkui-timepickeroptions-i.md)。
->
+> **说明：**  
+>  
+> - Date的使用请参考[TimePickerOptions](arkts-arkui-timepickeroptions-i.md)。  
+>  
 > - 在DatePicker组件滑动过程中修改DatePickerOptions中的属性，会导致这些属性无法生效。
 
 **起始版本：** 8
+
+<!--Device-unnamed-declare interface DatePickerOptions--><!--Device-unnamed-declare interface DatePickerOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,7 +32,9 @@ end?: Date
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DatePickerOptions-end?: Date--><!--Device-DatePickerOptions-end?: Date-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,9 +48,7 @@ mode?: DatePickerMode
 
 默认值：DatePickerMode.DATE，显示年、月、日三列。
 
-在[DatePickerDialog](./date_picker)中，当[DatePickerDialogOptions]
-(../../../../reference/apis-arkui/arkui-ts/ts-methods-datepicker-dialog.md#datepickerdialogoptions)的showTime设置为
-true时，此参数不生效，默认显示年、月、日三列。
+在[DatePickerDialog](./date_picker)中，当[DatePickerDialogOptions](../../../../reference/apis-arkui/arkui-ts/ts-methods-datepicker-dialog.md#datepickerdialogoptions)的showTime设置为true时，此参数不生效，默认显示年、月、日三列。
 
 **类型：** DatePickerMode
 
@@ -57,7 +59,9 @@ true时，此参数不生效，默认显示年、月、日三列。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DatePickerOptions-mode?: DatePickerMode--><!--Device-DatePickerOptions-mode?: DatePickerMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -81,7 +85,9 @@ selected?: Date
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DatePickerOptions-selected?: Date--><!--Device-DatePickerOptions-selected?: Date-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -103,7 +109,9 @@ start?: Date
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DatePickerOptions-start?: Date--><!--Device-DatePickerOptions-start?: Date-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

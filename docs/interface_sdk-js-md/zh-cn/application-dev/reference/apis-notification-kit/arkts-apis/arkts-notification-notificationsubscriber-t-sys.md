@@ -8,6 +8,8 @@ export type NotificationSubscriber = _NotificationSubscriber
 
 **起始版本：** 9
 
+<!--Device-notificationSubscribe-export type NotificationSubscriber = _NotificationSubscriber--><!--Device-notificationSubscribe-export type NotificationSubscriber = _NotificationSubscriber-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。

@@ -12,6 +12,8 @@ Progress callback, which can be the size or numberof files.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-photoAccessHelper-type ProgressListener = (progress: Progress) => void--><!--Device-photoAccessHelper-type ProgressListener = (progress: Progress) => void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.

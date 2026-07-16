@@ -18,13 +18,15 @@ Obtains the minimum height of the wallpaper. in pixels. returns 0 if no wallpape
 
 **Deprecated since:** 9
 
+<!--Device-wallpaper-function getMinHeight(callback: AsyncCallback<number>): void--><!--Device-wallpaper-function getMinHeight(callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | the callback of getMinHeight. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | Yes | the callback of getMinHeight. |
 
 **Example**
 
@@ -54,13 +56,15 @@ Obtains the minimum height of the wallpaper. in pixels. returns 0 if no wallpape
 
 **Deprecated since:** 9
 
+<!--Device-wallpaper-function getMinHeight(): Promise<number>--><!--Device-wallpaper-function getMinHeight(): Promise<number>-End-->
+
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | the promise returned by the function. |
 
 **Example**
 

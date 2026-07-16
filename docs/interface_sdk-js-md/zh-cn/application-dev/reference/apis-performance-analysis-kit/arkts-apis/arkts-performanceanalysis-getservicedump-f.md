@@ -1,5 +1,11 @@
 # getServiceDump
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+```
+
 ## getServiceDump
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getServiceDump(serviceid : number, fd : number, args : Array<string>) :
 
 **需要权限：** ohos.permission.DUMP
 
+<!--Device-hidebug-function getServiceDump(serviceid : int, fd : int, args : Array<string>) : void--><!--Device-hidebug-function getServiceDump(serviceid : int, fd : int, args : Array<string>) : void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **参数：**
@@ -20,7 +28,7 @@ function getServiceDump(serviceid : number, fd : number, args : Array<string>) :
 | --- | --- | --- | --- |
 | serviceid | number | 是 | ϵͳ����ID�����ڱ�ʶҪ��ȡ��Ϣ��ϵͳ����ȡֵ��ϵͳ���壬ȡֵ��Χ[0, 255]��������Чֵʱ���ش�����401�� |
 | fd | number | 是 | �ļ����������ӿڻ����fdд�����ݡ�������Ч�ļ�������ʱ���ش�����401�� |
-| args | Array&lt;string&gt; | 是 | ϵͳ�����dump�ӿڲ����б���string���ȵ����ֵΪ254���������ֽ��ᱻ�ضϡ� |
+| args | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | ϵͳ�����dump�ӿڲ����б���string���ȵ����ֵΪ254���������ֽ��ᱻ�ضϡ� |
 
 **错误码：**
 

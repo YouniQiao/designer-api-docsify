@@ -18,6 +18,8 @@ Sets volume description. This API uses an asynchronous callback to return the re
 
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
 
+<!--Device-volumeManager-function setVolumeDescription(uuid: string, description: string, callback: AsyncCallback<void>): void--><!--Device-volumeManager-function setVolumeDescription(uuid: string, description: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Sets volume description. This API uses an asynchronous callback to return the re
 | --- | --- | --- | --- |
 | uuid | string | Yes | UUID of the volume. |
 | description | string | Yes | Description of the volume. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback invoked after the volume description is set. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback invoked after the volume description is set. |
 
 **Error codes:**
 
@@ -56,6 +58,8 @@ Sets volume description. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
 
+<!--Device-volumeManager-function setVolumeDescription(uuid: string, description: string): Promise<void>--><!--Device-volumeManager-function setVolumeDescription(uuid: string, description: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -71,7 +75,7 @@ Sets volume description. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-image-interface DecodingOptionsForThumbnail--><!--Device-image-interface DecodingOptionsForThumbnail-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
+
+## 导入模块
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+```
 
 ## generateThumbnailIfAbsent
 
@@ -14,14 +22,15 @@ generateThumbnailIfAbsent?: boolean
 
 指定图像无缩略图时是否生成缩略图。true表示生成，false表示不生成。默认值为true。
 
-当图片文件中无缩略图且generateThumbnailIfAbsent为false时，返回undefined（抛出错误码
-[7700303 图片不包含缩略图数据](../../../../reference/apis-image-kit/errorcode-image.md#7700303-图片不包含缩略图数据)）。
+当图片文件中无缩略图且generateThumbnailIfAbsent为false时，返回undefined（抛出错误码[7700303 图片不包含缩略图数据](../../../../reference/apis-image-kit/errorcode-image.md#7700303-图片不包含缩略图数据)）。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DecodingOptionsForThumbnail-generateThumbnailIfAbsent?: boolean--><!--Device-DecodingOptionsForThumbnail-generateThumbnailIfAbsent?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -44,6 +53,8 @@ maxGeneratedPixelDimension?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DecodingOptionsForThumbnail-maxGeneratedPixelDimension?: int--><!--Device-DecodingOptionsForThumbnail-maxGeneratedPixelDimension?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 

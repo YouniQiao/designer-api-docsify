@@ -6,6 +6,8 @@ The module provides APIs for querying and adjusting the screen brightness and mo
 
 **Deprecated since:** 7
 
+<!--Device-unnamed-export default class Brightness--><!--Device-unnamed-export default class Brightness-End-->
+
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 ## Modules to Import
@@ -26,13 +28,15 @@ Obtains the screen brightness adjustment mode.
 
 **Deprecated since:** 7
 
+<!--Device-Brightness-static getMode(options?: GetBrightnessModeOptions): void--><!--Device-Brightness-static getMode(options?: GetBrightnessModeOptions): void-End-->
+
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | GetBrightnessModeOptions | No | Options for obtaining the screen brightness mode. This parameter is |
+| options | [GetBrightnessModeOptions](arkts-basicservices-getbrightnessmodeoptions-i.md) | No | Options for obtaining the screen brightness mode. This parameter is |
 
 **Example**
 
@@ -117,13 +121,15 @@ Obtains the current screen brightness.
 
 **Deprecated since:** 7
 
+<!--Device-Brightness-static getValue(options?: GetBrightnessOptions): void--><!--Device-Brightness-static getValue(options?: GetBrightnessOptions): void-End-->
+
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | GetBrightnessOptions | No | Options for obtaining the screen brightness. This parameter is |
+| options | [GetBrightnessOptions](arkts-basicservices-getbrightnessoptions-i.md) | No | Options for obtaining the screen brightness. This parameter is |
 
 **Example**
 
@@ -206,13 +212,9 @@ Sets whether to always keep the screen on. Call this API in **onShow()**.
 
 **NOTE**
 
-- This API is no longer maintained since API version 7 except for lite wearables. You are advised to use
-[window.setWindowKeepScreenOn()](../../../../reference/apis-arkui/arkts-apis-window-Window.md#setwindowkeepscreenon9)
-instead.
+- This API is no longer maintained since API version 7 except for lite wearables. You are advised to use [window.setWindowKeepScreenOn()](../../../../reference/apis-arkui/arkts-apis-window-Window.md#setwindowkeepscreenon9)instead.
 
-- On Lite Wearables, this API can only prevent the system from turning off the screen due to inactivity
-timeout (automatic). It cannot prevent screen-off caused by user actions (such as covering the screen) or
-the end of the keep-screen-on period.
+- On Lite Wearables, this API can only prevent the system from turning off the screen due to inactivity timeout (automatic). It cannot prevent screen-off caused by user actions (such as covering the screen) or the end of the keep-screen-on period.
 
 **Since:** 3
 
@@ -220,13 +222,15 @@ the end of the keep-screen-on period.
 
 **Substitutes:** setWindowKeepScreenOn
 
+<!--Device-Brightness-static setKeepScreenOn(options?: SetKeepScreenOnOptions): void--><!--Device-Brightness-static setKeepScreenOn(options?: SetKeepScreenOnOptions): void-End-->
+
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SetKeepScreenOnOptions | No | Options for setting the screen to be steady on. This parameter is |
+| options | [SetKeepScreenOnOptions](arkts-basicservices-setkeepscreenonoptions-i.md) | No | Options for setting the screen to be steady on. This parameter is |
 
 **Example**
 
@@ -312,13 +316,15 @@ Sets the screen brightness adjustment mode.
 
 **Deprecated since:** 7
 
+<!--Device-Brightness-static setMode(options?: SetBrightnessModeOptions): void--><!--Device-Brightness-static setMode(options?: SetBrightnessModeOptions): void-End-->
+
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SetBrightnessModeOptions | No | Options for setting the screen brightness mode. This parameter is |
+| options | [SetBrightnessModeOptions](arkts-basicservices-setbrightnessmodeoptions-i.md) | No | Options for setting the screen brightness mode. This parameter is |
 
 **Example**
 
@@ -406,13 +412,15 @@ Sets the screen brightness.
 
 **Substitutes:** [setValue](arkts-basicservices-setvalue-f-sys.md#setvalue-1)
 
+<!--Device-Brightness-static setValue(options?: SetBrightnessOptions): void--><!--Device-Brightness-static setValue(options?: SetBrightnessOptions): void-End-->
+
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SetBrightnessOptions | No | Options for setting the screen brightness. This parameter is |
+| options | [SetBrightnessOptions](arkts-basicservices-setbrightnessoptions-i.md) | No | Options for setting the screen brightness. This parameter is |
 
 **Example**
 

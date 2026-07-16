@@ -12,14 +12,15 @@ import { storageStatistics } from '@kit.CoreFileKit';
 function listUserdataDirInfo(): Promise<Array<UserdataDirInfo>>
 ```
 
-Queries the space usage of the **\/data** directory on the user device.
-This API uses a promise to return the result.
+Queries the space usage of the **\/data** directory on the user device.This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-storageStatistics-function listUserdataDirInfo(): Promise<Array<UserdataDirInfo>>--><!--Device-storageStatistics-function listUserdataDirInfo(): Promise<Array<UserdataDirInfo>>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -29,7 +30,7 @@ This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;UserdataDirInfo&gt;&gt; | Promise used to return the space usage of the **\/data** directoryon the user device. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<UserdataDirInfo>> | Promise used to return the space usage of the **\/data** directory on the user device. |
 
 **Error codes:**
 

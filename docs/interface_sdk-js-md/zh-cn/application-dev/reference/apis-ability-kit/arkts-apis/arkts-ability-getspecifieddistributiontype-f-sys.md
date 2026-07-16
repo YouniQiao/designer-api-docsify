@@ -1,19 +1,26 @@
 # getSpecifiedDistributionType（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getSpecifiedDistributionType
 
 ```TypeScript
 function getSpecifiedDistributionType(bundleName: string): string
 ```
 
-以同步的方法查询指定bundleName的[HarmonyAppProvision配置文件说明](../../../../security/app-provision-structure.md)，该返回值是在调用install接口时传
-入的[InstallParam](arkts-ability-installparam-i-sys.md)中的specifiedDistributionType字段。
+以同步的方法查询指定bundleName的[HarmonyAppProvision配置文件说明](../../../../security/app-provision-structure.md)，该返回值是在调用install接口时传入的[InstallParam](arkts-ability-installparam-i-sys.md)中的specifiedDistributionType字段。
 
 获取调用方自身的信息时不需要权限。
 
 **起始版本：** 10
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getSpecifiedDistributionType(bundleName: string): string--><!--Device-bundleManager-function getSpecifiedDistributionType(bundleName: string): string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

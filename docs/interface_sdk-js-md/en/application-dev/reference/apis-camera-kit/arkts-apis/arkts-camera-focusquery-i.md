@@ -4,6 +4,8 @@ Provides the API to check whether the focus assist is supported.
 
 **Since:** 12
 
+<!--Device-camera-interface FocusQuery--><!--Device-camera-interface FocusQuery-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
@@ -24,19 +26,21 @@ Checks whether a focus mode is supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-FocusQuery-isFocusModeSupported(afMode: FocusMode): boolean--><!--Device-FocusQuery-isFocusModeSupported(afMode: FocusMode): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| afMode | FocusMode | Yes | Focus mode. If the input parameter is null or undefined, it is treated as 0 andmanual focus is used. |
+| afMode | [FocusMode](arkts-camera-focusmode-e.md) | Yes | Focus mode. If the input parameter is null or undefined, it is treated as 0 and manual focus is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the focus mode. **true** if supported, **false** otherwise.If the operation fails, undefined is returned and an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is thrown. |
+| boolean | Check result for the support of the focus mode. **true** if supported, **false** otherwise.If the operation fails, undefined is returned and an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is thrown. |
 
 **Error codes:**
 
@@ -57,6 +61,8 @@ Checks whether lock focus tracking is supported.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-FocusQuery-isLockFocusTrackingSupported(): boolean--><!--Device-FocusQuery-isLockFocusTrackingSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

@@ -13,14 +13,15 @@ function unbind(floatViewController: FloatViewController,
     floatingBallController: floatingBall.FloatingBallController): Promise<void>
 ```
 
-Unbinds the float view and floating ball. The unbinding can be performed only after both the
-[float view controller](arkts-arkui-floatviewcontroller-i.md) and
-[floating ball controller](arkts-arkui-floatingballcontroller-i.md) are stopped. This
-API uses a promise to return the result.
+Unbinds the float view and floating ball. The unbinding can be performed only after both the [float view controller](arkts-arkui-floatviewcontroller-i.md) and [floating ball controller](arkts-arkui-floatingballcontroller-i.md) are stopped. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-floatView-function unbind(floatViewController: FloatViewController,
+    floatingBallController: floatingBall.FloatingBallController): Promise<void>--><!--Device-floatView-function unbind(floatViewController: FloatViewController,
+    floatingBallController: floatingBall.FloatingBallController): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -28,14 +29,14 @@ API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| floatViewController | FloatViewController | Yes | Float view controller. |
+| floatViewController | [FloatViewController](arkts-arkui-floatviewcontroller-i.md) | Yes | Float view controller. |
 | floatingBallController | floatingBall.FloatingBallController | Yes | Floating ball controller. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

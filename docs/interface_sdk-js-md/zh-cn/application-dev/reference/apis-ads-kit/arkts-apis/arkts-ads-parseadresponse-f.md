@@ -1,5 +1,11 @@
 # parseAdResponse
 
+## 导入模块
+
+```TypeScript
+import { advertising } from '@kit.AdsKit';
+```
+
 ## parseAdResponse
 
 ```TypeScript
@@ -10,6 +16,8 @@ function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,
 
 **起始版本：** 12
 
+<!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener, context: common.UIAbilityContext): void--><!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener, context: common.UIAbilityContext): void-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 **参数：**
@@ -17,14 +25,14 @@ function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | adResponse | string | 是 | 广告响应体。 |
-| listener | MultiSlotsAdLoadListener | 是 | 请求广告回调监听。 |
+| listener | [MultiSlotsAdLoadListener](arkts-ads-multislotsadloadlistener-i.md) | 是 | 请求广告回调监听。 |
 | context | common.UIAbilityContext | 是 | UIAbility的上下文环境。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Invalid input parameter.Possible causes: 1. Mandatory parameters areleft unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Invalid input parameter.Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Device not supported. |
 | [21800001](../errorcode-ads.md#21800001-系统内部错误) | System internal error. |
 | [21800005](../errorcode-ads.md#21800005-广告数据解析失败) | Failed to parse the ad response. |

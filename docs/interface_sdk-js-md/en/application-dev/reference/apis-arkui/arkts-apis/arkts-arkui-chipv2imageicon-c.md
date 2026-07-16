@@ -6,6 +6,8 @@ ChipV2 icon common option
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export abstract class ChipV2ImageIcon extends ChipV2Icon--><!--Device-unnamed-export abstract class ChipV2ImageIcon extends ChipV2Icon-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,13 +30,15 @@ The constructor of ChipV2ImageIcon
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2ImageIcon-constructor(config: ChipV2ImageIconConfig)--><!--Device-ChipV2ImageIcon-constructor(config: ChipV2ImageIconConfig)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | ChipV2ImageIconConfig | Yes | config of icon common Mandatory parameter. |
+| config | [ChipV2ImageIconConfig](arkts-arkui-chipv2imageiconconfig-i.md) | Yes | config of icon common Mandatory parameter. |
 
 ## activatedFillColor
 
@@ -51,6 +55,8 @@ Image filled color when chip is activated.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipV2ImageIcon-public activatedFillColor?: ColorMetrics--><!--Device-ChipV2ImageIcon-public activatedFillColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,6 +76,8 @@ Image filled color.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2ImageIcon-public fillColor?: ColorMetrics--><!--Device-ChipV2ImageIcon-public fillColor?: ColorMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## modifier
@@ -87,6 +95,8 @@ Modifier for icon.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipV2ImageIcon-public modifier?: ImageModifier--><!--Device-ChipV2ImageIcon-public modifier?: ImageModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -106,6 +116,8 @@ Image size option.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2ImageIcon-public size?: SizeT<LengthMetrics>--><!--Device-ChipV2ImageIcon-public size?: SizeT<LengthMetrics>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## src
@@ -123,6 +135,8 @@ Image resource.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipV2ImageIcon-public src: ResourceStr--><!--Device-ChipV2ImageIcon-public src: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

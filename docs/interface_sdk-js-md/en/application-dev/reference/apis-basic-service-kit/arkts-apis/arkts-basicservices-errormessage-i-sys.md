@@ -4,6 +4,8 @@ Represents an error message.
 
 **Since:** 9
 
+<!--Device-update-export interface ErrorMessage--><!--Device-update-export interface ErrorMessage-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Error code.
 
 **Since:** 9
 
+<!--Device-ErrorMessage-errorCode: int--><!--Device-ErrorMessage-errorCode: int-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Error message.
 **Type:** string
 
 **Since:** 9
+
+<!--Device-ErrorMessage-errorMessage: string--><!--Device-ErrorMessage-errorMessage: string-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 

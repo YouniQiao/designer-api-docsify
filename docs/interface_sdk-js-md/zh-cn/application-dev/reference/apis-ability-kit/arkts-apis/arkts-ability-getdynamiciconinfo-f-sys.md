@@ -1,5 +1,11 @@
 # getDynamicIconInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getDynamicIconInfo
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getDynamicIconInfo(bundleName: string): Promise<Array<DynamicIconInfo>>
 **起始版本：** 20
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-bundleManager-function getDynamicIconInfo(bundleName: string): Promise<Array<DynamicIconInfo>>--><!--Device-bundleManager-function getDynamicIconInfo(bundleName: string): Promise<Array<DynamicIconInfo>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -26,7 +34,7 @@ function getDynamicIconInfo(bundleName: string): Promise<Array<DynamicIconInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;DynamicIconInfo&gt;&gt; | Promise对象，返回查询到的动态图标信息。 |
+| Promise<Array<DynamicIconInfo>> | Promise对象，返回查询到的动态图标信息。 |
 
 **错误码：**
 

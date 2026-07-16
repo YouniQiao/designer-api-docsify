@@ -4,6 +4,8 @@ Provides methods related to nearlink CDSM(Coordinated Devices Set Management).
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare namespace cdsm--><!--Device-unnamed-declare namespace cdsm-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import

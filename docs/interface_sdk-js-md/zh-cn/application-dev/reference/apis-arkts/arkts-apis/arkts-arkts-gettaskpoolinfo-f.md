@@ -1,5 +1,11 @@
 # getTaskPoolInfo
 
+## 导入模块
+
+```TypeScript
+import { taskpool } from '@kit.ArkTS';
+```
+
 ## getTaskPoolInfo
 
 ```TypeScript
@@ -10,7 +16,9 @@ function getTaskPoolInfo(): TaskPoolInfo
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-taskpool-function getTaskPoolInfo(): TaskPoolInfo--><!--Device-taskpool-function getTaskPoolInfo(): TaskPoolInfo-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -18,7 +26,7 @@ function getTaskPoolInfo(): TaskPoolInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| TaskPoolInfo | 任务池的内部信息。 |
+| [TaskPoolInfo](arkts-arkts-taskpoolinfo-c.md) | 任务池的内部信息。 |
 
 **示例：**
 

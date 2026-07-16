@@ -1,9 +1,10 @@
 # ImmersiveStyle
 
-Enumerates immersive material styles. Different material styles correspond to different material parameters,
-including the blur degree and brightness.
+Enumerates immersive material styles. Different material styles correspond to different material parameters,including the blur degree and brightness.
 
 **Since:** 26.0.0
+
+<!--Device-uiMaterial-enum ImmersiveStyle--><!--Device-uiMaterial-enum ImmersiveStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -13,14 +14,15 @@ including the blur degree and brightness.
 ULTRA_THIN_EC = 5
 ```
 
-Ultra thin style. The material layer is ultra thin, with a very strong transparency effect,
-set on EffectComponent.
+Ultra thin style. The material layer is ultra thin, with a very strong transparency effect,set on EffectComponent.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ImmersiveStyle-ULTRA_THIN_EC = 5--><!--Device-ImmersiveStyle-ULTRA_THIN_EC = 5-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +42,8 @@ Thin style. The material layer is thin, with a strong transparency effect, set o
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ImmersiveStyle-THIN_EC = 6--><!--Device-ImmersiveStyle-THIN_EC = 6-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -57,6 +61,8 @@ Regular style. The material layer is regular, set on EffectComponent.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ImmersiveStyle-REGULAR_EC = 7--><!--Device-ImmersiveStyle-REGULAR_EC = 7-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,6 +82,8 @@ Thick style. The blur effect is strong, set on EffectComponent.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ImmersiveStyle-THICK_EC = 8--><!--Device-ImmersiveStyle-THICK_EC = 8-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -94,6 +102,8 @@ Ultra thick style, set on EffectComponent.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ImmersiveStyle-ULTRA_THICK_EC = 9--><!--Device-ImmersiveStyle-ULTRA_THICK_EC = 9-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -104,14 +114,15 @@ Ultra thick style, set on EffectComponent.
 ULTRA_THIN_EC_SUB = 10
 ```
 
-Ultra thin style. The material layer is ultra thin, with a very strong transparency effect,
-set on sub component of EffectComponent.
+Ultra thin style. The material layer is ultra thin, with a very strong transparency effect,set on sub component of EffectComponent.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ImmersiveStyle-ULTRA_THIN_EC_SUB = 10--><!--Device-ImmersiveStyle-ULTRA_THIN_EC_SUB = 10-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -123,14 +134,15 @@ set on sub component of EffectComponent.
 THIN_EC_SUB = 11
 ```
 
-Thin style. The material layer is thin, with a strong transparency effect,
-set on sub component of EffectComponent.
+Thin style. The material layer is thin, with a strong transparency effect,set on sub component of EffectComponent.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ImmersiveStyle-THIN_EC_SUB = 11--><!--Device-ImmersiveStyle-THIN_EC_SUB = 11-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -150,6 +162,8 @@ Regular style. The material layer is regular, set on sub component of EffectComp
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ImmersiveStyle-REGULAR_EC_SUB = 12--><!--Device-ImmersiveStyle-REGULAR_EC_SUB = 12-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -168,6 +182,8 @@ Thick style. The blur effect is strong, set on sub component of EffectComponent.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ImmersiveStyle-THICK_EC_SUB = 13--><!--Device-ImmersiveStyle-THICK_EC_SUB = 13-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -185,6 +201,8 @@ Ultra thick style, set on sub component of EffectComponent.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ImmersiveStyle-ULTRA_THICK_EC_SUB = 14--><!--Device-ImmersiveStyle-ULTRA_THICK_EC_SUB = 14-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

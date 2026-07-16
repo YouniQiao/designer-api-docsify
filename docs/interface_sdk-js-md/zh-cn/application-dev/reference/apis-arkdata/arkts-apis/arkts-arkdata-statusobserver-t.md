@@ -8,6 +8,8 @@ type StatusObserver = (sessionId: string, networkId: string, status: string) => 
 
 **起始版本：** 20
 
+<!--Device-distributedDataObject-type StatusObserver = (sessionId: string, networkId: string, status: string) => void--><!--Device-distributedDataObject-type StatusObserver = (sessionId: string, networkId: string, status: string) => void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **参数：**

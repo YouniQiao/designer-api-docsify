@@ -12,14 +12,15 @@ import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 function obtainAllContinuousTasks(): Promise<ContinuousTaskInfo[]>
 ```
 
-Obtains all continuous task information, including the task ID and type. This API uses a promise to return the
-result.
+Obtains all continuous task information, including the task ID and type. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.GET_BACKGROUND_TASK_INFO
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-backgroundTaskManager-function obtainAllContinuousTasks(): Promise<ContinuousTaskInfo[]>--><!--Device-backgroundTaskManager-function obtainAllContinuousTasks(): Promise<ContinuousTaskInfo[]>-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -29,7 +30,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ContinuousTaskInfo[]&gt; | Promise that returns all continuous task information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ContinuousTaskInfo[]> | Promise that returns all continuous task information. |
 
 **Error codes:**
 

@@ -1,11 +1,12 @@
 # CheckBoxConfiguration
 
-You need a custom class to implement the **ContentModifier** API. Inherits from
-[CommonConfiguration](arkts-arkui-commonconfiguration-i.md).
+You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md).
 
 **Inheritance/Implementation:** CheckBoxConfiguration extends [CommonConfiguration<CheckBoxConfiguration>](CommonConfiguration<CheckBoxConfiguration>)
 
 **Since:** 12
+
+<!--Device-unnamed-declare interface CheckBoxConfiguration extends CommonConfiguration<CheckBoxConfiguration>--><!--Device-unnamed-declare interface CheckBoxConfiguration extends CommonConfiguration<CheckBoxConfiguration>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,6 +25,8 @@ Name of the check box.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CheckBoxConfiguration-name: string--><!--Device-CheckBoxConfiguration-name: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,6 +54,8 @@ If the **select** attribute is set, the attribute value is used here.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CheckBoxConfiguration-selected: boolean--><!--Device-CheckBoxConfiguration-selected: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## triggerChange
@@ -61,8 +66,7 @@ triggerChange: Callback<boolean>
 
 Triggers a change in the check box selection state.
 
-The value **true** indicates a change from unselected to selected, and **false** indicates a change from selected
-to unselected.
+The value **true** indicates a change from unselected to selected, and **false** indicates a change from selected to unselected.
 
 **Type:** Callback<boolean>
 
@@ -71,6 +75,8 @@ to unselected.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CheckBoxConfiguration-triggerChange: Callback<boolean>--><!--Device-CheckBoxConfiguration-triggerChange: Callback<boolean>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

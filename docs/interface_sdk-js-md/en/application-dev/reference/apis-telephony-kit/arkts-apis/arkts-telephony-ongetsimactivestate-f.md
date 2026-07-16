@@ -18,6 +18,8 @@ Subscribe to sim active state change events using a callback-based approach as a
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-observer-function onGetSimActiveState(slotId: int, callback: Callback<boolean>): void--><!--Device-observer-function onGetSimActiveState(slotId: int, callback: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
@@ -25,7 +27,7 @@ Subscribe to sim active state change events using a callback-based approach as a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the ID of the target card slot. |
-| callback | Callback&lt;boolean&gt; | Yes | Indicates the callback for sim active state |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | Yes | Indicates the callback for sim active state |
 
 **Error codes:**
 

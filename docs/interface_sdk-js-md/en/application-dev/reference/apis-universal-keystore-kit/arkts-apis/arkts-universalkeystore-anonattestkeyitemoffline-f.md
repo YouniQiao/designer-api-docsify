@@ -14,12 +14,12 @@ function anonAttestKeyItemOffline(keyAlias: string, params: HuksParam[]): Promis
 
 Obtains an anonymous key certificate in offline mode. This API uses a promise to return the result.
 
-> **NOTE**
-> >
-> - Offline key attestation depends on the network. You need to periodically connect to the network to use this API
-> to update the offline certificate. Offline anonymous key attestation is recommended.
-> >
-> - Offline anonymous key attestation requires that the local time be accurate. Otherwise, the peer end may fail to
+> **NOTE**  
+> >  
+> - Offline key attestation depends on the network. You need to periodically connect to the network to use this API  
+> to update the offline certificate. Offline anonymous key attestation is recommended.  
+> >  
+> - Offline anonymous key attestation requires that the local time be accurate. Otherwise, the peer end may fail to  
 > verify the certificate expiration.
 
 **Since:** 26.0.0
@@ -28,6 +28,8 @@ Obtains an anonymous key certificate in offline mode. This API uses a promise to
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-huks-function anonAttestKeyItemOffline(keyAlias: string, params: HuksParam[]): Promise<HuksReturnResult>--><!--Device-huks-function anonAttestKeyItemOffline(keyAlias: string, params: HuksParam[]): Promise<HuksReturnResult>-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **Parameters:**
@@ -35,13 +37,13 @@ Obtains an anonymous key certificate in offline mode. This API uses a promise to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key. The certificate to be obtained stores the key. |
-| params | HuksParam[] | Yes | Parameters and data required for obtaining the certificate. |
+| params | [HuksParam](arkts-universalkeystore-huksparam-i.md)[] | Yes | Parameters and data required for obtaining the certificate. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | Promise that returns the operation result. When the call is successful, the**certChains** member of **HuksReturnResult** is the obtained certificate chain. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HuksReturnResult> | Promise that returns the operation result. When the call is successful, the **certChains** member of **HuksReturnResult** is the obtained certificate chain. |
 
 **Error codes:**
 

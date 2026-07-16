@@ -4,6 +4,8 @@ Describes the parameters of the SSAP client's property write request.
 
 **Since:** 26.0.0
 
+<!--Device-ssap-interface PropertyWriteRequest--><!--Device-ssap-interface PropertyWriteRequest-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import
@@ -18,14 +20,15 @@ import { ssap } from '@kit.ConnectivityKit';
 address: string
 ```
 
-Indicates the device address.
-The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+Indicates the device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
 
 **Type:** string
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PropertyWriteRequest-address: string--><!--Device-PropertyWriteRequest-address: string-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -35,16 +38,15 @@ The length must be 17, The value consists of hexadecimal digits and colons (:), 
 propertyUuid: string
 ```
 
-The UUID of the Property instance which client request to write.
-The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),
-for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.
-<br>NearLink standard UUIDs are not allowed.
+The UUID of the Property instance which client request to write.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.<br>NearLink standard UUIDs are not allowed.
 
 **Type:** string
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PropertyWriteRequest-propertyUuid: string--><!--Device-PropertyWriteRequest-propertyUuid: string-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -62,6 +64,8 @@ The request ID.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PropertyWriteRequest-requestId: int--><!--Device-PropertyWriteRequest-requestId: int-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## serviceUuid
@@ -70,16 +74,15 @@ The request ID.
 serviceUuid: string
 ```
 
-The UUID of the {@link Service} instance which the property belongs to.
-The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),
-for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.
-<br>NearLink standard UUIDs are not allowed.
+The UUID of the {@link Service} instance which the property belongs to.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.<br>NearLink standard UUIDs are not allowed.
 
 **Type:** string
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PropertyWriteRequest-serviceUuid: string--><!--Device-PropertyWriteRequest-serviceUuid: string-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -97,6 +100,8 @@ Indicates the data to be written.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PropertyWriteRequest-value: ArrayBuffer--><!--Device-PropertyWriteRequest-value: ArrayBuffer-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## writeType
@@ -112,6 +117,8 @@ The write type for this request.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PropertyWriteRequest-writeType: PropertyWriteType--><!--Device-PropertyWriteRequest-writeType: PropertyWriteType-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 

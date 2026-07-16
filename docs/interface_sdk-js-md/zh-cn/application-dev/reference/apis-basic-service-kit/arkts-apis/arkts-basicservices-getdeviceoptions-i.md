@@ -6,7 +6,15 @@
 
 **废弃版本：** 6
 
+<!--Device-unnamed-export interface GetDeviceOptions--><!--Device-unnamed-export interface GetDeviceOptions-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
+
+## 导入模块
+
+```TypeScript
+import { DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit';
+```
 
 ## complete
 
@@ -21,6 +29,8 @@ complete?: () => void
 **起始版本：** 3
 
 **废弃版本：** 6
+
+<!--Device-GetDeviceOptions-complete?: () => void--><!--Device-GetDeviceOptions-complete?: () => void-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
@@ -40,6 +50,8 @@ code:200，表示返回结果中存在无法获得的信息。
 
 **废弃版本：** 6
 
+<!--Device-GetDeviceOptions-fail?: (data: any, code: number) => void--><!--Device-GetDeviceOptions-fail?: (data: any, code: number) => void-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
 ## success
@@ -55,6 +67,8 @@ success?: (data: DeviceResponse) => void
 **起始版本：** 3
 
 **废弃版本：** 6
+
+<!--Device-GetDeviceOptions-success?: (data: DeviceResponse) => void--><!--Device-GetDeviceOptions-success?: (data: DeviceResponse) => void-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 

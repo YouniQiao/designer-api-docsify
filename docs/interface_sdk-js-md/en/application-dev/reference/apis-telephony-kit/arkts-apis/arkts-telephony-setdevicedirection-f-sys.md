@@ -18,6 +18,8 @@ Set device direction when video call.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function setDeviceDirection(callId: int, deviceDirection: DeviceDirection): Promise<void>--><!--Device-call-function setDeviceDirection(callId: int, deviceDirection: DeviceDirection): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -27,13 +29,13 @@ Set device direction when video call.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | number | Yes | Indicates the identifier of the call. |
-| deviceDirection | DeviceDirection | Yes | Indicates the identifier of the direction for the display. |
+| deviceDirection | [DeviceDirection](arkts-telephony-devicedirection-e-sys.md) | Yes | Indicates the identifier of the direction for the display. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setDeviceDirection. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the setDeviceDirection. |
 
 **Error codes:**
 

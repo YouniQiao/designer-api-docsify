@@ -2,11 +2,11 @@
 
 Implements a Display instance, with attributes and APIs defined.
 
-Before calling any API in Display, you must use
-[getAllDisplays()](arkts-arkui-getalldisplays-f.md#getalldisplays-1) or
-[getDefaultDisplaySync()](arkts-arkui-getdefaultdisplaysync-f.md#getdefaultdisplaysync-1) to obtain a Display instance.
+Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-getalldisplays-f.md#getalldisplays-1) or [getDefaultDisplaySync()](arkts-arkui-getdefaultdisplaysync-f.md#getdefaultdisplaysync-1) to obtain a Display instance.
 
 **Since:** 7
+
+<!--Device-display-interface Display--><!--Device-display-interface Display-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -22,10 +22,11 @@ import { display } from '@kit.ArkUI';
 hasImmersiveWindow(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether this display contains an immersive window. This API uses an asynchronous callback to return the
-result.
+Checks whether this display contains an immersive window. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+<!--Device-Display-hasImmersiveWindow(callback: AsyncCallback<boolean>): void--><!--Device-Display-hasImmersiveWindow(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -35,14 +36,14 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. **true** if the display containsan immersive window, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. **true** if the display contains an immersive window, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
@@ -77,6 +78,8 @@ Checks whether this display contains an immersive window. This API uses a promis
 
 **Since:** 11
 
+<!--Device-Display-hasImmersiveWindow(): Promise<boolean>--><!--Device-Display-hasImmersiveWindow(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
@@ -85,14 +88,14 @@ Checks whether this display contains an immersive window. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** if the display contains an immersivewindow, **false** otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. **true** if the display contains an immersive window, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 

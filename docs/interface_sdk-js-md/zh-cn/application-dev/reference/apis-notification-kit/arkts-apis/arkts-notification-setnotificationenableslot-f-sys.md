@@ -23,6 +23,18 @@ function setNotificationEnableSlot(
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function setNotificationEnableSlot(
+    bundle: BundleOption,
+    type: SlotType,
+    enable: boolean,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-notificationManager-function setNotificationEnableSlot(
+    bundle: BundleOption,
+    type: SlotType,
+    enable: boolean,
+    callback: AsyncCallback<void>
+  ): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -31,10 +43,10 @@ function setNotificationEnableSlot(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 应用的包信息。 |
-| type | SlotType | 是 | 指定渠道类型。 |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 应用的包信息。 |
+| type | [SlotType](arkts-notification-slottype-e-sys.md) | 是 | 指定渠道类型。 |
 | enable | boolean | 是 | 使能状态（true：使能，false：禁止）。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 设置渠道使能回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 设置渠道使能回调函数。 |
 
 **错误码：**
 
@@ -90,6 +102,20 @@ function setNotificationEnableSlot(
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function setNotificationEnableSlot(
+    bundle: BundleOption,
+    type: SlotType,
+    enable: boolean,
+    isForceControl: boolean,
+    callback: AsyncCallback<void>,
+  ): void--><!--Device-notificationManager-function setNotificationEnableSlot(
+    bundle: BundleOption,
+    type: SlotType,
+    enable: boolean,
+    isForceControl: boolean,
+    callback: AsyncCallback<void>,
+  ): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -98,11 +124,11 @@ function setNotificationEnableSlot(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 应用的包信息。 |
-| type | SlotType | 是 | 指定渠道类型。 |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 应用的包信息。 |
+| type | [SlotType](arkts-notification-slottype-e-sys.md) | 是 | 指定渠道类型。 |
 | enable | boolean | 是 | 使能状态（true：使能，false：禁止）。 |
 | isForceControl | boolean | 是 | 渠道开关是否受通知授权开关影响（false：受影响，true：不受影响）。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 设置渠道使能回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 设置渠道使能回调函数。 |
 
 **错误码：**
 
@@ -131,6 +157,8 @@ function setNotificationEnableSlot(bundle: BundleOption, type: SlotType, enable:
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function setNotificationEnableSlot(bundle: BundleOption, type: SlotType, enable: boolean, isForceControl?: boolean): Promise<void>--><!--Device-notificationManager-function setNotificationEnableSlot(bundle: BundleOption, type: SlotType, enable: boolean, isForceControl?: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -139,8 +167,8 @@ function setNotificationEnableSlot(bundle: BundleOption, type: SlotType, enable:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 应用的包信息。 |
-| type | SlotType | 是 | 渠道类型。 |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 应用的包信息。 |
+| type | [SlotType](arkts-notification-slottype-e-sys.md) | 是 | 渠道类型。 |
 | enable | boolean | 是 | 使能状态（true：使能，false：禁止）。 |
 | isForceControl | boolean | 否 | 渠道开关是否受通知总开关影响（false：受总开关影响，true：不受总开关影响）。默认为false。<br>**起始版本：** 11 |
 
@@ -148,7 +176,7 @@ function setNotificationEnableSlot(bundle: BundleOption, type: SlotType, enable:
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

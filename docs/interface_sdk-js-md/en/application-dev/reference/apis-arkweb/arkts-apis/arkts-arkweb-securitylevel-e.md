@@ -4,6 +4,8 @@ Defines the security level for the page.
 
 **Since:** 11
 
+<!--Device-webview-enum SecurityLevel--><!--Device-webview-enum SecurityLevel-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## NONE
@@ -17,6 +19,8 @@ Unable to determine whether it is safe or not, the non-http/https protocol used.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SecurityLevel-NONE = 0--><!--Device-SecurityLevel-NONE = 0-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,6 +36,8 @@ Indicates the HTTPS protocol used by the page and the authentication is successf
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SecurityLevel-SECURE = 1--><!--Device-SecurityLevel-SECURE = 1-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## WARNING
@@ -40,12 +46,13 @@ Indicates the HTTPS protocol used by the page and the authentication is successf
 WARNING = 2
 ```
 
-The page is insecure. For example, the HTTP protocol is used or the HTTPS protocol
-is used but use an legacy TLS version.
+The page is insecure. For example, the HTTP protocol is used or the HTTPS protocol is used but use an legacy TLS version.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SecurityLevel-WARNING = 2--><!--Device-SecurityLevel-WARNING = 2-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -60,6 +67,8 @@ Attempted HTTPS and failed, the authentication is failed.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SecurityLevel-DANGEROUS = 3--><!--Device-SecurityLevel-DANGEROUS = 3-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

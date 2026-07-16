@@ -1,5 +1,11 @@
 # decryptDlpFile（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+```
+
 ## decryptDlpFile
 
 ```TypeScript
@@ -10,13 +16,15 @@ function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>
 
 该接口用于将DLP加密文件解密为明文文件，适用于拥有者权限用户导出或迁移文件。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 该接口仅支持企业账号调用，需要企业自行搭建企业账号服务器配套使用。由企业服务器管控账号是否有权限解密DLP文件。
 
 **起始版本：** 21
 
 **需要权限：** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
+
+<!--Device-dlpPermission-function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>--><!--Device-dlpPermission-function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -33,7 +41,7 @@ function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

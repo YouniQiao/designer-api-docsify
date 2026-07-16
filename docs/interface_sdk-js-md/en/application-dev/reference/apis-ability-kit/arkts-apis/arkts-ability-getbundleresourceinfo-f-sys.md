@@ -12,12 +12,13 @@ import { bundleResourceManager } from '@kit.AbilityKit';
 function getBundleResourceInfo(bundleName: string, resourceFlags?: number): BundleResourceInfo
 ```
 
-Obtains the resource information of an application based on the given bundle name and resource flags. This API
-returns the result synchronously.
+Obtains the resource information of an application based on the given bundle name and resource flags. This API returns the result synchronously.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.GET_BUNDLE_RESOURCES
+
+<!--Device-bundleResourceManager-function getBundleResourceInfo(bundleName: string, resourceFlags?: int): BundleResourceInfo--><!--Device-bundleResourceManager-function getBundleResourceInfo(bundleName: string, resourceFlags?: int): BundleResourceInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -34,7 +35,7 @@ returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| BundleResourceInfo | Resource information of the application obtained. |
+| [BundleResourceInfo](arkts-ability-bundleresourceinfo-i-sys.md) | Resource information of the application obtained. |
 
 **Error codes:**
 
@@ -52,12 +53,13 @@ returns the result synchronously.
 function getBundleResourceInfo(bundleName: string, resourceFlags?: number, appIndex?: number): BundleResourceInfo
 ```
 
-Obtains the resource information of an application based on the given bundle name, resource flags, and app index.
-This API returns the result synchronously.
+Obtains the resource information of an application based on the given bundle name, resource flags, and app index.This API returns the result synchronously.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.GET_BUNDLE_RESOURCES
+
+<!--Device-bundleResourceManager-function getBundleResourceInfo(bundleName: string, resourceFlags?: int, appIndex?: int): BundleResourceInfo--><!--Device-bundleResourceManager-function getBundleResourceInfo(bundleName: string, resourceFlags?: int, appIndex?: int): BundleResourceInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -75,7 +77,7 @@ This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| BundleResourceInfo | Resource information of the application obtained. |
+| [BundleResourceInfo](arkts-ability-bundleresourceinfo-i-sys.md) | Resource information of the application obtained. |
 
 **Error codes:**
 

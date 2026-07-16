@@ -1,5 +1,11 @@
 # getForegroundUIAbilities（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
+```
+
 ## getForegroundUIAbilities
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getForegroundUIAbilities(callback: AsyncCallback<Array<AbilityStateData
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
+<!--Device-abilityManager-function getForegroundUIAbilities(callback: AsyncCallback<Array<AbilityStateData>>): void--><!--Device-abilityManager-function getForegroundUIAbilities(callback: AsyncCallback<Array<AbilityStateData>>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function getForegroundUIAbilities(callback: AsyncCallback<Array<AbilityStateData
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;AbilityStateData&gt;&gt; | 是 | 以回调方式返回接口运行结果及有关前台Ability的信息，可进行错误处理或其他自定义处理。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<AbilityStateData>> | 是 | 以回调方式返回接口运行结果及有关前台Ability的信息，可进行错误处理或其他自定义处理。 |
 
 **错误码：**
 
@@ -60,6 +68,8 @@ function getForegroundUIAbilities(): Promise<Array<AbilityStateData>>
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
+<!--Device-abilityManager-function getForegroundUIAbilities(): Promise<Array<AbilityStateData>>--><!--Device-abilityManager-function getForegroundUIAbilities(): Promise<Array<AbilityStateData>>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -68,7 +78,7 @@ function getForegroundUIAbilities(): Promise<Array<AbilityStateData>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;AbilityStateData&gt;&gt; | 以Promise方式返回接口运行结果及有关前台Ability的信息，可进行错误处理或其他自定义处理。 |
+| Promise<Array<AbilityStateData>> | 以Promise方式返回接口运行结果及有关前台Ability的信息，可进行错误处理或其他自定义处理。 |
 
 **错误码：**
 

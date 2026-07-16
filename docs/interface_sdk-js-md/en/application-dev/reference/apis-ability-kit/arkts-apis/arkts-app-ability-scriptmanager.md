@@ -4,6 +4,8 @@ Namespace for managing and organizing script information.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare namespace scriptManager--><!--Device-unnamed-declare namespace scriptManager-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## Modules to Import

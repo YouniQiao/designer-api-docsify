@@ -16,13 +16,15 @@ Obtains the time elapsed since system startup. This API returns the result synch
 
 **Since:** 10
 
+<!--Device-systemDateTime-function getUptime(timeType: TimeType, isNanoseconds?: boolean): long--><!--Device-systemDateTime-function getUptime(timeType: TimeType, isNanoseconds?: boolean): long-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeType | TimeType | Yes | Type of the time to be obtained. The value can only be `STARTUP` or `ACTIVE`. |
+| timeType | [TimeType](arkts-basicservices-timetype-e.md) | Yes | Type of the time to be obtained. The value can only be `STARTUP` or `ACTIVE`. |
 | isNanoseconds | boolean | No |  |
 
 **Return value:**

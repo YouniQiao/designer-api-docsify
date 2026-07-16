@@ -18,6 +18,8 @@ Parses a JSON string into an ArkTS object or null.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-json-function parse(text: string, reviver?: Transformer, options?: ParseOptions): Object | null--><!--Device-json-function parse(text: string, reviver?: Transformer, options?: ParseOptions): Object | null-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -25,12 +27,12 @@ Parses a JSON string into an ArkTS object or null.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Valid JSON string. |
-| reviver | Transformer | No | Conversion function. This parameter can be used to modify the value generatedafter parsing. The default value is undefined. |
-| options | ParseOptions | No | Parsing options. This parameter is used to control the type of the parsing result.The default value is undefined. |
+| reviver | [Transformer](arkts-arkts-transformer-t.md) | No | Conversion function. This parameter can be used to modify the value generated after parsing. The default value is undefined. |
+| options | [ParseOptions](arkts-arkts-parseoptions-i.md) | No | Parsing options. This parameter is used to control the type of the parsing result.The default value is undefined. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Object | Return an Object, array, string, number, boolean, or null value corresponding to JSONtext. |
+| [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Return an Object, array, string, number, boolean, or null value corresponding to JSON text. |
 

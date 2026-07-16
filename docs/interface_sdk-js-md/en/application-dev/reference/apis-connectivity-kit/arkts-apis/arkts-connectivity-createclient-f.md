@@ -20,6 +20,8 @@ Creates a SSAP client instance.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ssap-function createClient(address: string): Client--><!--Device-ssap-function createClient(address: string): Client-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**
@@ -32,7 +34,7 @@ Creates a SSAP client instance.
 
 | Type | Description |
 | --- | --- |
-| Client | Returns a SSAP client instance {@code Client}. |
+| [Client](arkts-connectivity-client-i.md) | Returns a SSAP client instance {@code Client}. |
 
 **Error codes:**
 

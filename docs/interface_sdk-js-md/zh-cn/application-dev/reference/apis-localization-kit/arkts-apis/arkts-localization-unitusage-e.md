@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+<!--Device-i18n-export enum UnitUsage--><!--Device-i18n-export enum UnitUsage-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## AREA_LAND_AGRICULT
@@ -18,7 +20,9 @@ AREA_LAND_AGRICULT = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnitUsage-AREA_LAND_AGRICULT = 1--><!--Device-UnitUsage-AREA_LAND_AGRICULT = 1-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -34,7 +38,9 @@ AREA_LAND_COMMERCL = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnitUsage-AREA_LAND_COMMERCL = 2--><!--Device-UnitUsage-AREA_LAND_COMMERCL = 2-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -50,7 +56,9 @@ AREA_LAND_RESIDNTL = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnitUsage-AREA_LAND_RESIDNTL = 3--><!--Device-UnitUsage-AREA_LAND_RESIDNTL = 3-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -66,7 +74,9 @@ LENGTH_PERSON = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnitUsage-LENGTH_PERSON = 4--><!--Device-UnitUsage-LENGTH_PERSON = 4-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -82,7 +92,9 @@ LENGTH_PERSON_SMALL = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnitUsage-LENGTH_PERSON_SMALL = 5--><!--Device-UnitUsage-LENGTH_PERSON_SMALL = 5-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -98,7 +110,9 @@ LENGTH_RAINFALL = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnitUsage-LENGTH_RAINFALL = 6--><!--Device-UnitUsage-LENGTH_RAINFALL = 6-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -114,7 +128,9 @@ LENGTH_ROAD = 7
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnitUsage-LENGTH_ROAD = 7--><!--Device-UnitUsage-LENGTH_ROAD = 7-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -130,7 +146,9 @@ LENGTH_ROAD_SMALL = 8
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnitUsage-LENGTH_ROAD_SMALL = 8--><!--Device-UnitUsage-LENGTH_ROAD_SMALL = 8-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -146,7 +164,9 @@ LENGTH_SNOWFALL = 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnitUsage-LENGTH_SNOWFALL = 9--><!--Device-UnitUsage-LENGTH_SNOWFALL = 9-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -162,7 +182,9 @@ LENGTH_VEHICLE = 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnitUsage-LENGTH_VEHICLE = 10--><!--Device-UnitUsage-LENGTH_VEHICLE = 10-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -178,7 +200,9 @@ LENGTH_VISIBLTY = 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnitUsage-LENGTH_VISIBLTY = 11--><!--Device-UnitUsage-LENGTH_VISIBLTY = 11-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -194,7 +218,9 @@ LENGTH_VISIBLTY_SMALL = 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnitUsage-LENGTH_VISIBLTY_SMALL = 12--><!--Device-UnitUsage-LENGTH_VISIBLTY_SMALL = 12-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -210,7 +236,9 @@ LENGTH_PERSON_INFORMAL = 13
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnitUsage-LENGTH_PERSON_INFORMAL = 13--><!--Device-UnitUsage-LENGTH_PERSON_INFORMAL = 13-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -226,7 +254,9 @@ LENGTH_PERSON_SMALL_INFORMAL = 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnitUsage-LENGTH_PERSON_SMALL_INFORMAL = 14--><!--Device-UnitUsage-LENGTH_PERSON_SMALL_INFORMAL = 14-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -242,7 +272,9 @@ LENGTH_ROAD_INFORMAL = 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnitUsage-LENGTH_ROAD_INFORMAL = 15--><!--Device-UnitUsage-LENGTH_ROAD_INFORMAL = 15-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -258,7 +290,9 @@ SPEED_ROAD_TRAVEL = 16
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnitUsage-SPEED_ROAD_TRAVEL = 16--><!--Device-UnitUsage-SPEED_ROAD_TRAVEL = 16-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -274,7 +308,9 @@ SPEED_WIND = 17
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnitUsage-SPEED_WIND = 17--><!--Device-UnitUsage-SPEED_WIND = 17-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -290,7 +326,9 @@ TEMPERATURE_PERSON = 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnitUsage-TEMPERATURE_PERSON = 18--><!--Device-UnitUsage-TEMPERATURE_PERSON = 18-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -306,7 +344,9 @@ TEMPERATURE_WEATHER = 19
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnitUsage-TEMPERATURE_WEATHER = 19--><!--Device-UnitUsage-TEMPERATURE_WEATHER = 19-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -322,7 +362,9 @@ VOLUME_VEHICLE_FUEL = 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnitUsage-VOLUME_VEHICLE_FUEL = 20--><!--Device-UnitUsage-VOLUME_VEHICLE_FUEL = 20-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -338,7 +380,9 @@ ELAPSED_TIME_SECOND = 21
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnitUsage-ELAPSED_TIME_SECOND = 21--><!--Device-UnitUsage-ELAPSED_TIME_SECOND = 21-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -354,7 +398,9 @@ SIZE_FILE_BYTE = 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnitUsage-SIZE_FILE_BYTE = 22--><!--Device-UnitUsage-SIZE_FILE_BYTE = 22-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -370,7 +416,9 @@ SIZE_SHORTFILE_BYTE = 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnitUsage-SIZE_SHORTFILE_BYTE = 23--><!--Device-UnitUsage-SIZE_SHORTFILE_BYTE = 23-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

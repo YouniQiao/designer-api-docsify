@@ -18,19 +18,21 @@ Finds a window based on the name.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-window-function findWindow(name: string): Window--><!--Device-window-function findWindow(name: string): Window-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Window name. When searching for a child window or system window, use the window name in[Configuration](arkts-arkui-configuration-i.md). When searching for the main window, use[getWindowName](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getwindowname12) to obtain thewindow name of the current instance. |
+| name | string | Yes | Window name. When searching for a child window or system window, use the window name in [Configuration](arkts-arkui-configuration-i.md). When searching for the main window, use [getWindowName](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getwindowname12) to obtain the window name of the current instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Window | Window found. If the window with the specified name does not exist, error code 1300002is thrown. |
+| [Window](arkts-arkui-window-i.md) | Window found. If the window with the specified name does not exist, error code 1300002is thrown. |
 
 **Error codes:**
 

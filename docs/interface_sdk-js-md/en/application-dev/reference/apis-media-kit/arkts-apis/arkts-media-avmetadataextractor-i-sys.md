@@ -1,14 +1,12 @@
 # AVMetadataExtractor
 
-AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtain metadata and thumbnails from
-media assets. Before calling any API of AVMetadataExtractor, you must use
-[media.createAVMetadataExtractor](arkts-media-createavmetadataextractor-f.md#createavmetadataextractor-3)
-to create an AVMetadataExtractor instance.
+AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtain metadata and thumbnails from media assets. Before calling any API of AVMetadataExtractor, you must use [media.createAVMetadataExtractor](arkts-media-createavmetadataextractor-f.md#createavmetadataextractor-3)to create an AVMetadataExtractor instance.
 
-For details about the demo of obtaining audio or video metadata and video thumbnails, see
-[Using AVMetadataExtractor to Extract Audio and Video Metadata (ArkTS)](../../../../media/media/avmetadataextractor.md).
+For details about the demo of obtaining audio or video metadata and video thumbnails, see [Using AVMetadataExtractor to Extract Audio and Video Metadata (ArkTS)](../../../../media/media/avmetadataextractor.md).
 
 **Since:** 11
+
+<!--Device-media-interface AVMetadataExtractor--><!--Device-media-interface AVMetadataExtractor-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -28,6 +26,8 @@ Obtains the video frame number corresponding to a video timestamp. Only MP4 vide
 
 **Since:** 12
 
+<!--Device-AVMetadataExtractor-getFrameIndexByTime(timeUs: long): Promise<int>--><!--Device-AVMetadataExtractor-getFrameIndexByTime(timeUs: long): Promise<int>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **System API:** This is a system API.
@@ -42,7 +42,7 @@ Obtains the video frame number corresponding to a video timestamp. Only MP4 vide
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the video frame number. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the video frame number. |
 
 **Error codes:**
 
@@ -76,6 +76,8 @@ Obtains the video timestamp corresponding to a video frame number. Only MP4 vide
 
 **Since:** 12
 
+<!--Device-AVMetadataExtractor-getTimeByFrameIndex(index: int): Promise<long>--><!--Device-AVMetadataExtractor-getTimeByFrameIndex(index: int): Promise<long>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **System API:** This is a system API.
@@ -90,7 +92,7 @@ Obtains the video timestamp corresponding to a video frame number. Only MP4 vide
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the timestamp, in microseconds. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the timestamp, in microseconds. |
 
 **Error codes:**
 

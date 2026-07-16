@@ -20,6 +20,8 @@ Check whether the GNSS fence service is supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-geoLocationManager-function isGnssFenceServiceSupported(): boolean--><!--Device-geoLocationManager-function isGnssFenceServiceSupported(): boolean-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **Return value:**

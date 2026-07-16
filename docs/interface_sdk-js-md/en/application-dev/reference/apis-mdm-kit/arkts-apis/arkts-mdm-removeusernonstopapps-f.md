@@ -12,9 +12,7 @@ import { applicationManager } from '@kit.MDMKit';
 function removeUserNonStopApps(admin: Want, applicationInstances: Array<common.ApplicationInstance>): void
 ```
 
-Removes the non-stoppable application list for a specified user. If the parameter list includes uninstalled
-applications, the removal will still succeed. Installed applications will be removed from the list, while
-uninstalled ones will not impact the removal process.
+Removes the non-stoppable application list for a specified user. If the parameter list includes uninstalled applications, the removal will still succeed. Installed applications will be removed from the list, while uninstalled ones will not impact the removal process.
 
 **Since:** 22
 
@@ -22,14 +20,16 @@ uninstalled ones will not impact the removal process.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function removeUserNonStopApps(admin: Want, applicationInstances: Array<common.ApplicationInstance>): void--><!--Device-applicationManager-function removeUserNonStopApps(admin: Want, applicationInstances: Array<common.ApplicationInstance>): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| applicationInstances | Array&lt;common.ApplicationInstance&gt; | Yes | Array of non-stoppable applications. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| applicationInstances | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<common.ApplicationInstance> | Yes | Array of non-stoppable applications. |
 
 **Error codes:**
 

@@ -1,11 +1,10 @@
 # DragSpringLoadingConfiguration
 
-Defines the configuration parameters for drag hover detection. The default settings typically suffice. These
-settings can be customized through [onDragSpringLoading](../arkts-components/arkts-arkui-commonmethod-c.md#ondragspringloading-1) binding or
-dynamically updated during BEGIN state using
-[updateConfiguration](arkts-arkui-springloadingcontext-c.md#updateconfiguration-1).
+Defines the configuration parameters for drag hover detection. The default settings typically suffice. These settings can be customized through [onDragSpringLoading](../arkts-components/arkts-arkui-commonmethod-c.md#ondragspringloading-1) binding or dynamically updated during BEGIN state using [updateConfiguration](arkts-arkui-springloadingcontext-c.md#updateconfiguration-1).
 
 **Since:** 20
+
+<!--Device-dragController-interface DragSpringLoadingConfiguration--><!--Device-dragController-interface DragSpringLoadingConfiguration-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,9 +20,7 @@ import { dragController } from '@kit.ArkUI';
 stillTimeLimit?: number
 ```
 
-Time (in ms) required to remain stationary to enter the BEGIN state of hover detection. Value range: integer in
-the [0, 2<sup>31</sup>-1] range. Floating-point number inputs will be truncated to integers. Invalid values (
-negative numbers, **null**, **undefined**, **NaN**) are treated as the default value **500**.
+Time (in ms) required to remain stationary to enter the BEGIN state of hover detection. Value range: integer in the [0, 2<sup>31</sup>-1] range. Floating-point number inputs will be truncated to integers. Invalid values (negative numbers, **null**, **undefined**, **NaN**) are treated as the default value **500**.
 
 **Type:** number
 
@@ -32,6 +29,8 @@ negative numbers, **null**, **undefined**, **NaN**) are treated as the default v
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-DragSpringLoadingConfiguration-stillTimeLimit?: number--><!--Device-DragSpringLoadingConfiguration-stillTimeLimit?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -41,9 +40,7 @@ negative numbers, **null**, **undefined**, **NaN**) are treated as the default v
 updateInterval?: number
 ```
 
-Time interval (in ms) at which update notifications are sent after hover detection enters the UPDATE state. Value
-range: integer in the [0, 2<sup>31</sup>-1] range. Floating-point number inputs will be truncated to integers.
-Invalid values (negative numbers, **null**, **undefined**, **NaN**) are treated as the default value **100**.
+Time interval (in ms) at which update notifications are sent after hover detection enters the UPDATE state. Value range: integer in the [0, 2<sup>31</sup>-1] range. Floating-point number inputs will be truncated to integers.Invalid values (negative numbers, **null**, **undefined**, **NaN**) are treated as the default value **100**.
 
 **Type:** number
 
@@ -52,6 +49,8 @@ Invalid values (negative numbers, **null**, **undefined**, **NaN**) are treated 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-DragSpringLoadingConfiguration-updateInterval?: number--><!--Device-DragSpringLoadingConfiguration-updateInterval?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,9 +60,7 @@ Invalid values (negative numbers, **null**, **undefined**, **NaN**) are treated 
 updateNotifyCount?: number
 ```
 
-Maximum number of update notifications after hover detection enters the UPDATE state. Value range: integer in the
-[0, 2<sup>31</sup>-1] range. Floating-point number inputs will be truncated to integers. Invalid values (negative
-numbers, **null**, **undefined**, **NaN**) are treated as the default value **3**.
+Maximum number of update notifications after hover detection enters the UPDATE state. Value range: integer in the [0, 2<sup>31</sup>-1] range. Floating-point number inputs will be truncated to integers. Invalid values (negative numbers, **null**, **undefined**, **NaN**) are treated as the default value **3**.
 
 **Type:** number
 
@@ -72,6 +69,8 @@ numbers, **null**, **undefined**, **NaN**) are treated as the default value **3*
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-DragSpringLoadingConfiguration-updateNotifyCount?: number--><!--Device-DragSpringLoadingConfiguration-updateNotifyCount?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -81,9 +80,7 @@ numbers, **null**, **undefined**, **NaN**) are treated as the default value **3*
 updateToFinishInterval?: number
 ```
 
-Maximum waiting time (in ms) from the UPDATE state to the END state. Value range: integer in the
-[0, 2<sup>31</sup>-1] range. Floating-point number inputs will be truncated to integers. Invalid values (negative
-numbers, **null**, **undefined**, **NaN**) are treated as the default value **100**.
+Maximum waiting time (in ms) from the UPDATE state to the END state. Value range: integer in the [0, 2<sup>31</sup>-1] range. Floating-point number inputs will be truncated to integers. Invalid values (negative numbers, **null**, **undefined**, **NaN**) are treated as the default value **100**.
 
 **Type:** number
 
@@ -92,6 +89,8 @@ numbers, **null**, **undefined**, **NaN**) are treated as the default value **10
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-DragSpringLoadingConfiguration-updateToFinishInterval?: number--><!--Device-DragSpringLoadingConfiguration-updateToFinishInterval?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

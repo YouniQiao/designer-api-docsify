@@ -4,6 +4,8 @@ The interface is used to notify listeners of changes in shared interface status.
 
 **Since:** 11
 
+<!--Device-sharing-export interface InterfaceSharingStateInfo--><!--Device-sharing-export interface InterfaceSharingStateInfo-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ The specified network interface name.
 
 **Since:** 11
 
+<!--Device-InterfaceSharingStateInfo-iface: string--><!--Device-InterfaceSharingStateInfo-iface: string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ Network card sharing status.
 
 **Since:** 11
 
+<!--Device-InterfaceSharingStateInfo-state: SharingIfaceState--><!--Device-InterfaceSharingStateInfo-state: SharingIfaceState-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ Enumerates the network sharing types of an NIC.
 **Type:** SharingIfaceType
 
 **Since:** 11
+
+<!--Device-InterfaceSharingStateInfo-type: SharingIfaceType--><!--Device-InterfaceSharingStateInfo-type: SharingIfaceType-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 

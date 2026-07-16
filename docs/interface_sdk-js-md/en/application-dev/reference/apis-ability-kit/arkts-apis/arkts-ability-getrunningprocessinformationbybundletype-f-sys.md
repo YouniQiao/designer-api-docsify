@@ -13,12 +13,15 @@ function getRunningProcessInformationByBundleType(
     bundleType: bundleManager.BundleType): Promise<Array<ProcessInformation>>
 ```
 
-Obtains the information about the running process based on the bundle type. This API uses a promise to return the
-result.
+Obtains the information about the running process based on the bundle type. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
+
+<!--Device-appManager-function getRunningProcessInformationByBundleType(
+    bundleType: bundleManager.BundleType): Promise<Array<ProcessInformation>>--><!--Device-appManager-function getRunningProcessInformationByBundleType(
+    bundleType: bundleManager.BundleType): Promise<Array<ProcessInformation>>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -34,7 +37,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ProcessInformation&gt;&gt; | Promise used to return the process information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ProcessInformation>> | Promise used to return the process information. |
 
 **Error codes:**
 

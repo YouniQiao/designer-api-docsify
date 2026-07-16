@@ -1,11 +1,12 @@
 # Folder
 
-Represents the folder data. It is a child class of [File](arkts-arkdata-file-c.md) and is used to describe a
-folder.
+Represents the folder data. It is a child class of [File](arkts-arkdata-file-c.md) and is used to describe a folder.
 
 **Inheritance/Implementation:** Folder extends [File](arkts-arkdata-file-c.md)
 
 **Since:** 10
+
+<!--Device-unifiedDataChannel-class Folder extends File--><!--Device-unifiedDataChannel-class Folder extends File-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -30,6 +31,8 @@ Indicates the uri of folder
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Folder-set folderUri(value: string)--><!--Device-Folder-set folderUri(value: string)-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 

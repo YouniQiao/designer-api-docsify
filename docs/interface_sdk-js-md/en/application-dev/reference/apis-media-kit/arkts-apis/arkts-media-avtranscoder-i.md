@@ -1,13 +1,12 @@
 # AVTranscoder
 
-AVTranscoder is a transcoding management class. It provides APIs to transcode videos. Before calling any API in
-AVTranscoder, you must use [createAVTranscoder()](arkts-media-createavtranscoder-f.md#createavtranscoder-1) to
-create an AVTranscoder instance.
+AVTranscoder is a transcoding management class. It provides APIs to transcode videos. Before calling any API in AVTranscoder, you must use [createAVTranscoder()](arkts-media-createavtranscoder-f.md#createavtranscoder-1) to create an AVTranscoder instance.
 
-For details about the AVTranscoder demo, see
-[Using AVTranscoder for Transcoding](../../../../media/media/using-avtranscoder-for-transcodering.md).
+For details about the AVTranscoder demo, see [Using AVTranscoder for Transcoding](../../../../media/media/using-avtranscoder-for-transcodering.md).
 
 **Since:** 12
+
+<!--Device-media-interface AVTranscoder--><!--Device-media-interface AVTranscoder-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -23,13 +22,13 @@ import { media } from '@kit.MediaKit';
 addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise<number>
 ```
 
-add a watermark for the AVTranscoder. This API uses a promise to return the result.
-App can add up to 5 watermarks.
-This API can be called only before the prepared state.
+add a watermark for the AVTranscoder. This API uses a promise to return the result.App can add up to 5 watermarks.This API can be called only before the prepared state.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVTranscoder-addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise<int>--><!--Device-AVTranscoder-addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise<int>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -38,13 +37,13 @@ This API can be called only before the prepared state.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | watermark | image.PixelMap | Yes | : Watermark image. |
-| config | WatermarkConfiguration | Yes | : Configuration of the watermark. |
+| config | [WatermarkConfiguration](arkts-media-watermarkconfiguration-i.md) | Yes | : Configuration of the watermark. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise that returns the watermark id. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise that returns the watermark id. |
 
 **Error codes:**
 
@@ -63,13 +62,13 @@ cancel(): Promise<void>
 
 Cancels video transcoding. This API uses a promise to return the result.
 
-This API can be called only after the [prepare()](arkts-media-avtranscoder-i.md#prepare-1),
-[start()](arkts-media-avtranscoder-i.md#start-1), [pause()](arkts-media-avtranscoder-i.md#pause-1), or
-[resume()](arkts-media-avtranscoder-i.md#resume-1) API is called.
+This API can be called only after the [prepare()](arkts-media-avtranscoder-i.md#prepare-1),[start()](arkts-media-avtranscoder-i.md#start-1), [pause()](arkts-media-avtranscoder-i.md#pause-1), or [resume()](arkts-media-avtranscoder-i.md#resume-1) API is called.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-AVTranscoder-cancel(): Promise<void>--><!--Device-AVTranscoder-cancel(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -77,7 +76,7 @@ This API can be called only after the [prepare()](arkts-media-avtranscoder-i.md#
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -99,6 +98,8 @@ Unsubscribes from the event indicating that transcoding is complete.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-AVTranscoder-off(type:'complete', callback?: Callback<void>):void--><!--Device-AVTranscoder-off(type:'complete', callback?: Callback<void>):void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
 
 **Parameters:**
@@ -106,7 +107,7 @@ Unsubscribes from the event indicating that transcoding is complete.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' | Yes | Event type, which is **'complete'** in this case. |
-| callback | Callback&lt;void&gt; | No | Callback that has been registered to listen for transcoding completionevents. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | Callback that has been registered to listen for transcoding completion events. |
 
 ## off('error')
 
@@ -114,12 +115,13 @@ Unsubscribes from the event indicating that transcoding is complete.
 off(type:'error', callback?: ErrorCallback):void
 ```
 
-Unsubscribes from AVTranscoder errors. After the unsubscription, your application can no longer receive
-AVTranscoder errors.
+Unsubscribes from AVTranscoder errors. After the unsubscription, your application can no longer receive AVTranscoder errors.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-AVTranscoder-off(type:'error', callback?: ErrorCallback):void--><!--Device-AVTranscoder-off(type:'error', callback?: ErrorCallback):void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -127,8 +129,8 @@ AVTranscoder errors.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type, which is **'error'** in this case.<br>This event is triggered when an erroroccurs during transcoding. |
-| callback | ErrorCallback | No | Callback that has been registered to listen for AVTranscoder errors. |
+| type | 'error' | Yes | Event type, which is **'error'** in this case.<br>This event is triggered when an error occurs during transcoding. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | Callback that has been registered to listen for AVTranscoder errors. |
 
 ## off('progressUpdate')
 
@@ -142,6 +144,8 @@ Unsubscribes from transcoding progress updates.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-AVTranscoder-off(type:'progressUpdate', callback?: Callback<int>):void--><!--Device-AVTranscoder-off(type:'progressUpdate', callback?: Callback<int>):void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
 
 **Parameters:**
@@ -149,7 +153,7 @@ Unsubscribes from transcoding progress updates.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'progressUpdate' | Yes | Event type, which is **'progressUpdate'** in this case. |
-| callback | Callback&lt;number&gt; | No | Called that has been registered to listen for progress updates. You areadvised to use the default value because only the last registered callback is retained in the currentcallback mechanism. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | No | Called that has been registered to listen for progress updates. You are advised to use the default value because only the last registered callback is retained in the current callback mechanism. |
 
 ## on('complete')
 
@@ -157,16 +161,15 @@ Unsubscribes from transcoding progress updates.
 on(type:'complete', callback: Callback<void>):void
 ```
 
-Subscribes to the event indicating that transcoding is complete. An application can subscribe to only one
-transcoding progress update event. When the application initiates multiple subscriptions to this event, the last
-subscription is applied. This API uses an asynchronous callback to return the result.
+Subscribes to the event indicating that transcoding is complete. An application can subscribe to only one transcoding progress update event. When the application initiates multiple subscriptions to this event, the last subscription is applied. This API uses an asynchronous callback to return the result.
 
-When this event is reported, the current transcoding operation is complete. You need to call
-[release()](arkts-media-avtranscoder-i.md#release-1) to exit the transcoding.
+When this event is reported, the current transcoding operation is complete. You need to call [release()](arkts-media-avtranscoder-i.md#release-1) to exit the transcoding.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-AVTranscoder-on(type:'complete', callback: Callback<void>):void--><!--Device-AVTranscoder-on(type:'complete', callback: Callback<void>):void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -174,8 +177,8 @@ When this event is reported, the current transcoding operation is complete. You 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' | Yes | Event type, which is **'complete'** in this case. This event is triggered by thesystem during transcoding. |
-| callback | Callback&lt;void&gt; | Yes | Callback used to return the event callback method. |
+| type | 'complete' | Yes | Event type, which is **'complete'** in this case. This event is triggered by the system during transcoding. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Callback used to return the event callback method. |
 
 ## on('error')
 
@@ -183,15 +186,15 @@ When this event is reported, the current transcoding operation is complete. You 
 on(type:'error', callback: ErrorCallback):void
 ```
 
-Subscribes to AVTranscoder errors. If this event is reported, call [release()](arkts-media-avtranscoder-i.md#release-1)
-to exit the transcoding. This API uses an asynchronous callback to return the result.
+Subscribes to AVTranscoder errors. If this event is reported, call [release()](arkts-media-avtranscoder-i.md#release-1)to exit the transcoding. This API uses an asynchronous callback to return the result.
 
-An application can subscribe to only one AVTranscoder error event. When the application initiates multiple
-subscriptions to this event, the last subscription is applied.
+An application can subscribe to only one AVTranscoder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-AVTranscoder-on(type:'error', callback: ErrorCallback):void--><!--Device-AVTranscoder-on(type:'error', callback: ErrorCallback):void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -199,8 +202,8 @@ subscriptions to this event, the last subscription is applied.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type, which is **'error'** in this case.<br>This event is triggered when an erroroccurs during recording. |
-| callback | ErrorCallback | Yes | Callback invoked when the event is triggered. |
+| type | 'error' | Yes | Event type, which is **'error'** in this case.<br>This event is triggered when an error occurs during recording. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback invoked when the event is triggered. |
 
 **Error codes:**
 
@@ -221,13 +224,13 @@ subscriptions to this event, the last subscription is applied.
 on(type:'progressUpdate', callback: Callback<number>):void
 ```
 
-Subscribes to transcoding progress updates. An application can subscribe to only one transcoding progress update
-event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
-This API uses an asynchronous callback to return the result.
+Subscribes to transcoding progress updates. An application can subscribe to only one transcoding progress update event. When the application initiates multiple subscriptions to this event, the last subscription is applied.This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-AVTranscoder-on(type:'progressUpdate', callback: Callback<int>):void--><!--Device-AVTranscoder-on(type:'progressUpdate', callback: Callback<int>):void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -235,8 +238,8 @@ This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'progressUpdate' | Yes | Event type, which is **'progressUpdate'** in this case. This event istriggered by the system during transcoding. |
-| callback | Callback&lt;number&gt; | Yes | Callback used to return the progress update event. The **number** parameterin the function indicates the current transcoding progress, in percentage. |
+| type | 'progressUpdate' | Yes | Event type, which is **'progressUpdate'** in this case. This event is triggered by the system during transcoding. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | Yes | Callback used to return the progress update event. The **number** parameter in the function indicates the current transcoding progress, in percentage. |
 
 ## pause
 
@@ -246,12 +249,13 @@ pause(): Promise<void>
 
 Pauses video transcoding. This API uses a promise to return the result.
 
-This API can be called only after the [start()](arkts-media-avtranscoder-i.md#start-1) API is called. You can call
-[resume()](arkts-media-avtranscoder-i.md#resume-1) to resume transcoding.
+This API can be called only after the [start()](arkts-media-avtranscoder-i.md#start-1) API is called. You can call [resume()](arkts-media-avtranscoder-i.md#resume-1) to resume transcoding.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-AVTranscoder-pause(): Promise<void>--><!--Device-AVTranscoder-pause(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -259,7 +263,7 @@ This API can be called only after the [start()](arkts-media-avtranscoder-i.md#st
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -281,19 +285,21 @@ Sets video transcoding parameters. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-AVTranscoder-prepare(config: AVTranscoderConfig): Promise<void>--><!--Device-AVTranscoder-prepare(config: AVTranscoderConfig): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | AVTranscoderConfig | Yes | Video transcoding parameters to set.&lt;!--RP1--&gt;&lt;!--RP1End--&gt; |
+| config | [AVTranscoderConfig](arkts-media-avtranscoderconfig-i.md) | Yes | Video transcoding parameters to set.&lt;!--RP1--&gt;&lt;!--RP1End--&gt; |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -319,13 +325,15 @@ After the resources are released, you can no longer perform any operation on the
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-AVTranscoder-release(): Promise<void>--><!--Device-AVTranscoder-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -348,13 +356,15 @@ This API can be called only after the [pause()](arkts-media-avtranscoder-i.md#pa
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-AVTranscoder-resume(): Promise<void>--><!--Device-AVTranscoder-resume(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -378,13 +388,15 @@ This API can be called only after the [prepare()](arkts-media-avtranscoder-i.md#
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-AVTranscoder-start(): Promise<void>--><!--Device-AVTranscoder-start(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -400,22 +412,20 @@ This API can be called only after the [prepare()](arkts-media-avtranscoder-i.md#
 fdDst: number
 ```
 
-Destination media file descriptor, which specifies the data source. After creating an AVTranscoder instance, you
-must set both **fdSrc** and **fdDst**.
+Destination media file descriptor, which specifies the data source. After creating an AVTranscoder instance, you must set both **fdSrc** and **fdDst**.
 
 **NOTE**
 
-- After the resource handle (FD) is transferred to an AVTranscoder instance, do not use the resource handle to
-perform other read and write operations, including but not limited to transferring this handle to other AVPlayer,
-AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance.
-- Competition occurs when multiple AVTranscoders use the same resource handle to read and write files at the same
-time, resulting in errors in obtaining data.
+- After the resource handle (FD) is transferred to an AVTranscoder instance, do not use the resource handle to perform other read and write operations, including but not limited to transferring this handle to other AVPlayer,AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance.  
+- Competition occurs when multiple AVTranscoders use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.
 
 **Type:** number
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-AVTranscoder-fdDst: int--><!--Device-AVTranscoder-fdDst: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -427,22 +437,20 @@ fdSrc: AVFileDescriptor
 
 Source media file descriptor, which specifies the data source.
 
-There is a media file that stores continuous assets, the address offset is 0, and the byte length is 100. Its
-file descriptor is **AVFileDescriptor { fd = resourceHandle; offset = 0; length = 100; }**.
+There is a media file that stores continuous assets, the address offset is 0, and the byte length is 100. Its file descriptor is **AVFileDescriptor { fd = resourceHandle; offset = 0; length = 100; }**.
 
 **NOTE**
 
-- After the resource handle (FD) is transferred to an AVTranscoder instance, do not use the resource handle to
-perform other read and write operations, including but not limited to transferring this handle to other AVPlayer,
-AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance.
-- Competition occurs when multiple AVTranscoders use the same resource handle to read and write files at the same
-time, resulting in errors in obtaining data.
+- After the resource handle (FD) is transferred to an AVTranscoder instance, do not use the resource handle to perform other read and write operations, including but not limited to transferring this handle to other AVPlayer,AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance.  
+- Competition occurs when multiple AVTranscoders use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.
 
 **Type:** AVFileDescriptor
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-AVTranscoder-fdSrc: AVFileDescriptor--><!--Device-AVTranscoder-fdSrc: AVFileDescriptor-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
 

@@ -8,6 +8,8 @@ Navigation type.
 
 **Substitutes:** Navigation
 
+<!--Device-unnamed-declare enum NavigationType--><!--Device-unnamed-declare enum NavigationType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Push
@@ -20,8 +22,7 @@ Navigates to the specified page in the application.
 
 **NOTE**
 
-This API is supported since API version 7 and deprecated since API version 13. You are advised to use
-[pushPath](arkts-arkui-navpathstack-c.md#pushpath-1) instead.
+This API is supported since API version 7 and deprecated since API version 13. You are advised to use [pushPath](arkts-arkui-navpathstack-c.md#pushpath-1) instead.
 
 **Since:** 7
 
@@ -31,6 +32,8 @@ This API is supported since API version 7 and deprecated since API version 13. Y
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-NavigationType-Push--><!--Device-NavigationType-Push-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Back
@@ -39,13 +42,11 @@ This API is supported since API version 7 and deprecated since API version 13. Y
 Back
 ```
 
-Returns to the specified page. If the specified page does not exist in the stack, no response is returned. If no
-page is specified, the previous page is returned to.
+Returns to the specified page. If the specified page does not exist in the stack, no response is returned. If no page is specified, the previous page is returned to.
 
 **NOTE**
 
-This API is supported since API version 7 and deprecated since API version 13. You are advised to use
-[pop](NavPathStack#pop(animated?: boolean)) instead.
+This API is supported since API version 7 and deprecated since API version 13. You are advised to use [pop](NavPathStack#pop(animated?: boolean)) instead.
 
 **Since:** 7
 
@@ -54,6 +55,8 @@ This API is supported since API version 7 and deprecated since API version 13. Y
 **Substitutes:** [pop](arkts-arkui-navpathstack-c.md#pop-1)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NavigationType-Back--><!--Device-NavigationType-Back-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,8 +70,7 @@ Replaces the current page with another one in the application and destroys the c
 
 **NOTE**
 
-This API is supported since API version 7 and deprecated since API version 13. You are advised to use
-[replacePath](arkts-arkui-navpathstack-c.md#replacepath-1) instead.
+This API is supported since API version 7 and deprecated since API version 13. You are advised to use [replacePath](arkts-arkui-navpathstack-c.md#replacepath-1) instead.
 
 **Since:** 7
 
@@ -77,6 +79,8 @@ This API is supported since API version 7 and deprecated since API version 13. Y
 **Substitutes:** [replacePath](arkts-arkui-navpathstack-c.md#replacepath-1)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NavigationType-Replace--><!--Device-NavigationType-Replace-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

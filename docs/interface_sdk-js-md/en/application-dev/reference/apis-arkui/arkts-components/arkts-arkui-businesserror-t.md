@@ -6,8 +6,7 @@ declare type BusinessError<T = void> = import('../api/@ohos.base').BusinessError
 
 Represents the error information returned when an error occurs during image loading.
 
-The table below describes the **ImageError** error codes. The **error** property of **ImageError** contains error
-details with **code** and **message** fields, representing the error code and error message, respectively.
+The table below describes the **ImageError** error codes. The **error** property of **ImageError** contains error details with **code** and **message** fields, representing the error code and error message, respectively.
 
 **Since:** 20
 
@@ -16,6 +15,8 @@ details with **code** and **message** fields, representing the error code and er
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
+
+<!--Device-unnamed-declare type BusinessError<T = void> = import('../api/@ohos.base').BusinessError<T>--><!--Device-unnamed-declare type BusinessError<T = void> = import('../api/@ohos.base').BusinessError<T>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

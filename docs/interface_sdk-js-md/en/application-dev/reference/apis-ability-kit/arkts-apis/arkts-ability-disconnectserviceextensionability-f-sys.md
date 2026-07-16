@@ -12,12 +12,13 @@ import { agentManager } from '@kit.AbilityKit';
 function disconnectServiceExtensionAbility(context: AgentExtensionContext, connectId: number): Promise<void>
 ```
 
-Disconnects an AgentExtensionAbility from a ServiceExtensionAbility, in contrast to
-{@link connectServiceExtensionAbility}.
+Disconnects an AgentExtensionAbility from a ServiceExtensionAbility, in contrast to{@link connectServiceExtensionAbility}.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-agentManager-function disconnectServiceExtensionAbility(context: AgentExtensionContext, connectId: long): Promise<void>--><!--Device-agentManager-function disconnectServiceExtensionAbility(context: AgentExtensionContext, connectId: long): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -27,14 +28,14 @@ Disconnects an AgentExtensionAbility from a ServiceExtensionAbility, in contrast
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | AgentExtensionContext | Yes | The context of the current agent extension ability. |
+| context | [AgentExtensionContext](arkts-ability-agentextensioncontext-t.md) | Yes | The context of the current agent extension ability. |
 | connectId | number | Yes | The connection id returned by connectServiceExtensionAbility. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

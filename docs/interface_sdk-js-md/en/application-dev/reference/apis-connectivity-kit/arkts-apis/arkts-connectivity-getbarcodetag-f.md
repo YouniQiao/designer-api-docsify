@@ -12,13 +12,13 @@ import { tag } from '@kit.ConnectivityKit';
 function getBarcodeTag(tagInfo: TagInfo): BarcodeTag
 ```
 
-Obtains an {@link BarcodeTag} object based on the tag information.
-During tag reading, if the tag supports the NfcBarcode technology,
-an {@link BarcodeTag} object will be created.
+Obtains an {@link BarcodeTag} object based on the tag information.During tag reading, if the tag supports the NfcBarcode technology,an {@link BarcodeTag} object will be created.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-tag-function getBarcodeTag(tagInfo: TagInfo): BarcodeTag--><!--Device-tag-function getBarcodeTag(tagInfo: TagInfo): BarcodeTag-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -26,13 +26,13 @@ an {@link BarcodeTag} object will be created.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tagInfo | TagInfo | Yes | Indicates the dispatched tag information. |
+| tagInfo | [TagInfo](arkts-connectivity-taginfo-i.md) | Yes | Indicates the dispatched tag information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| BarcodeTag | The {@link BarcodeTag} object. |
+| [BarcodeTag](arkts-connectivity-barcodetag-t.md) | The {@link BarcodeTag} object. |
 
 **Error codes:**
 

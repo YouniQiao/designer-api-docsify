@@ -1,5 +1,11 @@
 # createFileAccessHelper（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { fileAccess } from '@kit.CoreFileKit';
+```
+
 ## createFileAccessHelper
 
 ```TypeScript
@@ -16,6 +22,8 @@ function createFileAccessHelper(context: Context): FileAccessHelper
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-fileAccess-function createFileAccessHelper(context: Context): FileAccessHelper--><!--Device-fileAccess-function createFileAccessHelper(context: Context): FileAccessHelper-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -24,13 +32,13 @@ function createFileAccessHelper(context: Context): FileAccessHelper
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | Indicates the application context. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | Indicates the application context. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| FileAccessHelper | Returns the fileAccessHelper. |
+| [FileAccessHelper](arkts-corefile-fileaccesshelper-i-sys.md) | Returns the fileAccessHelper. |
 
 **错误码：**
 
@@ -108,6 +116,8 @@ function createFileAccessHelper(context: Context, wants: Array<Want>): FileAcces
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-fileAccess-function createFileAccessHelper(context: Context, wants: Array<Want>): FileAccessHelper--><!--Device-fileAccess-function createFileAccessHelper(context: Context, wants: Array<Want>): FileAccessHelper-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -116,14 +126,14 @@ function createFileAccessHelper(context: Context, wants: Array<Want>): FileAcces
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | Indicates the application context. |
-| wants | Array&lt;Want&gt; | 是 | Represents the connected data provider. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | Indicates the application context. |
+| wants | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Want> | 是 | Represents the connected data provider. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| FileAccessHelper | Returns the fileAccessHelper. |
+| [FileAccessHelper](arkts-corefile-fileaccesshelper-i-sys.md) | Returns the fileAccessHelper. |
 
 **错误码：**
 

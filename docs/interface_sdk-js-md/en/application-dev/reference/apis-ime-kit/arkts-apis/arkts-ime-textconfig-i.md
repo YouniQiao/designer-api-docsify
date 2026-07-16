@@ -4,6 +4,8 @@ Config of editor.
 
 **Since:** 10
 
+<!--Device-inputMethod-export interface TextConfig--><!--Device-inputMethod-export interface TextConfig-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Indicates the capitalize mode of the edit box.
 
 **Since:** 20
 
+<!--Device-TextConfig-capitalizeMode?: CapitalizeMode--><!--Device-TextConfig-capitalizeMode?: CapitalizeMode-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## cursorInfo
@@ -39,6 +43,8 @@ Cursor information.
 **Type:** CursorInfo
 
 **Since:** 10
+
+<!--Device-TextConfig-cursorInfo?: CursorInfo--><!--Device-TextConfig-cursorInfo?: CursorInfo-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -54,6 +60,8 @@ Attribute of Input.
 
 **Since:** 10
 
+<!--Device-TextConfig-inputAttribute: InputAttribute--><!--Device-TextConfig-inputAttribute: InputAttribute-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## newEditBox
@@ -67,6 +75,8 @@ Indicates that this is a new edit box.
 **Type:** boolean
 
 **Since:** 20
+
+<!--Device-TextConfig-newEditBox?: boolean--><!--Device-TextConfig-newEditBox?: boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -82,6 +92,8 @@ Selection information.
 
 **Since:** 10
 
+<!--Device-TextConfig-selection?: Range--><!--Device-TextConfig-selection?: Range-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## windowId
@@ -95,6 +107,8 @@ The window ID of the application currently bound to the input method.
 **Type:** number
 
 **Since:** 10
+
+<!--Device-TextConfig-windowId?: int--><!--Device-TextConfig-windowId?: int-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 

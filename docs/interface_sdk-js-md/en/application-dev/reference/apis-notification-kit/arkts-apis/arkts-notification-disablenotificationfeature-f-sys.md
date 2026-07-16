@@ -12,12 +12,13 @@ import { notificationManager } from '@kit.NotificationKit';
 function disableNotificationFeature(disabled:boolean, bundleList: Array<string>): Promise<void>
 ```
 
-Disables the application from publishing notifications by adding the application bundle name to the permission
-control list. This function can be disabled as required.
+Disables the application from publishing notifications by adding the application bundle name to the permission control list. This function can be disabled as required.
 
 **Since:** 18
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER or ohos.permission.MANAGE_EDM_POLICY
+
+<!--Device-notificationManager-function disableNotificationFeature(disabled:boolean, bundleList: Array<string>): Promise<void>--><!--Device-notificationManager-function disableNotificationFeature(disabled:boolean, bundleList: Array<string>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -28,13 +29,13 @@ control list. This function can be disabled as required.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | disabled | boolean | Yes | Whether to enable the permission control list for publishing notifications (**true**:enabled; **false**: disabled). |
-| bundleList | Array&lt;string&gt; | Yes | Application list under the permission control list. The bundle name is usedto represent a specific application. |
+| bundleList | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Application list under the permission control list. The bundle name is used to represent a specific application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -74,12 +75,13 @@ try {
 function disableNotificationFeature(disabled: boolean, bundleList: Array<string>, userId: number): Promise<void>
 ```
 
-Disables the application from publishing notifications by adding the application bundle name to the permission
-control list. This API uses a promise to return the result.
+Disables the application from publishing notifications by adding the application bundle name to the permission control list. This API uses a promise to return the result.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER or ohos.permission.MANAGE_EDM_POLICY
+
+<!--Device-notificationManager-function disableNotificationFeature(disabled: boolean, bundleList: Array<string>, userId: int): Promise<void>--><!--Device-notificationManager-function disableNotificationFeature(disabled: boolean, bundleList: Array<string>, userId: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -89,15 +91,15 @@ control list. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| disabled | boolean | Yes | Whether to enable the notification permission control list. The value **true**indicates that the notification permission control list is enabled; **false** indicates the opposite. |
-| bundleList | Array&lt;string&gt; | Yes | Bundles under the permission control list. The bundle name is used torepresent a specific application. |
+| disabled | boolean | Yes | Whether to enable the notification permission control list. The value **true** indicates that the notification permission control list is enabled; **false** indicates the opposite. |
+| bundleList | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Bundles under the permission control list. The bundle name is used to represent a specific application. |
 | userId | number | Yes | User ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

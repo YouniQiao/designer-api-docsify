@@ -1,5 +1,11 @@
 # setScanAutoOption
 
+## 导入模块
+
+```TypeScript
+import { scan } from '@kit.BasicServicesKit';
+```
+
 ## setScanAutoOption
 
 ```TypeScript
@@ -11,6 +17,8 @@ function setScanAutoOption(scannerId: string, optionIndex: number): Promise<void
 **起始版本：** 20
 
 **需要权限：** ohos.permission.PRINT
+
+<!--Device-scan-function setScanAutoOption(scannerId: string, optionIndex: int): Promise<void>--><!--Device-scan-function setScanAutoOption(scannerId: string, optionIndex: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -25,7 +33,7 @@ function setScanAutoOption(scannerId: string, optionIndex: number): Promise<void
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

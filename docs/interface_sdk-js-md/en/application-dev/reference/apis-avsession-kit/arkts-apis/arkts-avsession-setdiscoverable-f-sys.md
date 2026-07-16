@@ -16,6 +16,8 @@ Enable or disable device to be discoverable, used at sink side.
 
 **Since:** 10
 
+<!--Device-avSession-function setDiscoverable(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-avSession-function setDiscoverable(enable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -25,7 +27,7 @@ Enable or disable device to be discoverable, used at sink side.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | true: can be discoverable, false: cannot be discoverable. |
-| callback | AsyncCallback&lt;void&gt; | Yes | a callback function |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | a callback function |
 
 **Error codes:**
 
@@ -55,6 +57,8 @@ Enable or disable device to be discoverable, used at sink side.
 
 **Since:** 10
 
+<!--Device-avSession-function setDiscoverable(enable: boolean): Promise<void>--><!--Device-avSession-function setDiscoverable(enable: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -69,7 +73,7 @@ Enable or disable device to be discoverable, used at sink side.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise for the result |
 
 **Error codes:**
 

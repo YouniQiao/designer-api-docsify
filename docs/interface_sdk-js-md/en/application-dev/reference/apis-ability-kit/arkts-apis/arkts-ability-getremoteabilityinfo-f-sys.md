@@ -12,8 +12,7 @@ import { distributedBundle } from '@kit.AbilityKit';
 function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<RemoteAbilityInfo>): void
 ```
 
-Obtains the information about the remote ability that matches the given element name. This API uses an asynchronous
-callback to return the result.
+Obtains the information about the remote ability that matches the given element name. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -23,6 +22,8 @@ callback to return the result.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-distributedBundle-function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<RemoteAbilityInfo>): void--><!--Device-distributedBundle-function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<RemoteAbilityInfo>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
 
 **System API:** This is a system API.
@@ -31,8 +32,8 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | ElementName | Yes | **ElementName**. |
-| callback | AsyncCallback&lt;RemoteAbilityInfo&gt; | Yes | Callback used to return the remote ability information. |
+| elementName | [ElementName](arkts-ability-elementname-t.md) | Yes | **ElementName**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<RemoteAbilityInfo> | Yes | Callback used to return the remote ability information. |
 
 
 ## getRemoteAbilityInfo
@@ -41,8 +42,7 @@ callback to return the result.
 function getRemoteAbilityInfo(elementName: ElementName): Promise<RemoteAbilityInfo>
 ```
 
-Obtains the information about the remote ability that matches the given element name. This API uses a promise to
-return the result.
+Obtains the information about the remote ability that matches the given element name. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -52,6 +52,8 @@ return the result.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-distributedBundle-function getRemoteAbilityInfo(elementName: ElementName): Promise<RemoteAbilityInfo>--><!--Device-distributedBundle-function getRemoteAbilityInfo(elementName: ElementName): Promise<RemoteAbilityInfo>-End-->
+
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
 
 **System API:** This is a system API.
@@ -60,11 +62,11 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | ElementName | Yes | **ElementName**. |
+| elementName | [ElementName](arkts-ability-elementname-t.md) | Yes | **ElementName**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RemoteAbilityInfo&gt; | Promise used to return the remote ability information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<RemoteAbilityInfo> | Promise used to return the remote ability information. |
 

@@ -4,6 +4,8 @@ Enumerates the audio interruption modes.
 
 **Since:** 9
 
+<!--Device-audio-enum InterruptMode--><!--Device-audio-enum InterruptMode-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
 
 ## SHARE_MODE
@@ -18,6 +20,8 @@ Mode that different stream share one interrupt unit.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-InterruptMode-SHARE_MODE = 0--><!--Device-InterruptMode-SHARE_MODE = 0-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
 
 ## INDEPENDENT_MODE
@@ -31,6 +35,8 @@ Mode that each stream has independent interrupt unit.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-InterruptMode-INDEPENDENT_MODE = 1--><!--Device-InterruptMode-INDEPENDENT_MODE = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Interrupt
 

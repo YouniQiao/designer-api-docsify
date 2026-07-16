@@ -1,5 +1,11 @@
 # getRunningProcessInformation
 
+## 导入模块
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+```
+
 ## getRunningProcessInformation
 
 ```TypeScript
@@ -8,10 +14,10 @@ function getRunningProcessInformation(): Promise<Array<ProcessInformation>>
 
 获取当前应用运行进程的相关信息。使用Promise异步回调。
 
-> **说明：**
->
-> - 对于API version 11之前的版本，该接口需要申请权限ohos.permission.GET_RUNNING_INFO（该权限仅系统应用可申请）。
->
+> **说明：**  
+>  
+> - 对于API version 11之前的版本，该接口需要申请权限ohos.permission.GET_RUNNING_INFO（该权限仅系统应用可申请）。  
+>  
 > - 从API version 11开始，该接口仅用于获取调用方自身的进程信息，不再需要申请权限。
 
 **起始版本：** 9
@@ -19,7 +25,9 @@ function getRunningProcessInformation(): Promise<Array<ProcessInformation>>
 **需要权限：** 
 - API版本9 - 10：ohos.permission.GET_RUNNING_INFO
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-appManager-function getRunningProcessInformation(): Promise<Array<ProcessInformation>>--><!--Device-appManager-function getRunningProcessInformation(): Promise<Array<ProcessInformation>>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -27,7 +35,7 @@ function getRunningProcessInformation(): Promise<Array<ProcessInformation>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;ProcessInformation&gt;&gt; | Promise对象，返回接口运行结果及有关运行进程的信息，可进行错误处理或其他自定义处理。 |
+| Promise<Array<ProcessInformation>> | Promise对象，返回接口运行结果及有关运行进程的信息，可进行错误处理或其他自定义处理。 |
 
 **错误码：**
 
@@ -58,10 +66,10 @@ function getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInfor
 
 获取当前应用运行进程的相关信息。使用callback异步回调。
 
-> **说明：**
->
-> - 对于API version 11之前的版本，该接口需要申请权限ohos.permission.GET_RUNNING_INFO（该权限仅系统应用可申请）。
->
+> **说明：**  
+>  
+> - 对于API version 11之前的版本，该接口需要申请权限ohos.permission.GET_RUNNING_INFO（该权限仅系统应用可申请）。  
+>  
 > - 从API version 11开始，该接口仅用于获取调用方自身的进程信息，不再需要申请权限。
 
 **起始版本：** 9
@@ -69,7 +77,9 @@ function getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInfor
 **需要权限：** 
 - API版本9 - 10：ohos.permission.GET_RUNNING_INFO
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-appManager-function getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInformation>>): void--><!--Device-appManager-function getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInformation>>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -77,7 +87,7 @@ function getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInfor
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;ProcessInformation&gt;&gt; | 是 | 回调函数。当接口调用成功，err为undefined，data为当前应用运行进程的信息；否则为错误对象。可进行错误处理或其他自定义处理。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<ProcessInformation>> | 是 | 回调函数。当接口调用成功，err为undefined，data为当前应用运行进程的信息；否则为错误对象。可进行错误处理或其他自定义处理。 |
 
 **错误码：**
 

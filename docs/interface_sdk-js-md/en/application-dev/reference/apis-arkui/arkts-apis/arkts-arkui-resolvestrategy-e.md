@@ -4,6 +4,8 @@ Enumerates resolution strategies for **UIContext** objects.
 
 **Since:** 22
 
+<!--Device-unnamed-export const enum ResolveStrategy--><!--Device-unnamed-export const enum ResolveStrategy-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CALLING_SCOPE
@@ -19,6 +21,8 @@ Obtain the UIContext of the current calling scope.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-ResolveStrategy-CALLING_SCOPE = 0--><!--Device-ResolveStrategy-CALLING_SCOPE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ Obtain the UIContext of the instance that most recently switched to the focused 
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-ResolveStrategy-LAST_FOCUS = 1--><!--Device-ResolveStrategy-LAST_FOCUS = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## MAX_INSTANCE_ID
@@ -51,6 +57,8 @@ Obtain the UIContext of the instance with the largest instance ID.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-ResolveStrategy-MAX_INSTANCE_ID = 2--><!--Device-ResolveStrategy-MAX_INSTANCE_ID = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +76,8 @@ Obtain the UIContext of the unique UI instance (when only one UI instance exists
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-ResolveStrategy-UNIQUE = 3--><!--Device-ResolveStrategy-UNIQUE = 3-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## LAST_FOREGROUND
@@ -84,6 +94,8 @@ Obtain the UIContext of the instance that most recently switched to the foregrou
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-ResolveStrategy-LAST_FOREGROUND = 4--><!--Device-ResolveStrategy-LAST_FOREGROUND = 4-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## UNDEFINED
@@ -99,6 +111,8 @@ Obtain a UIContext with an ambiguous calling scope.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-ResolveStrategy-UNDEFINED = 5--><!--Device-ResolveStrategy-UNDEFINED = 5-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

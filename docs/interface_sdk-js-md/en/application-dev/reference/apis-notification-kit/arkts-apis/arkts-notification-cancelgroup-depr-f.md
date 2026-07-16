@@ -6,8 +6,7 @@
 function cancelGroup(groupName: string, callback: AsyncCallback<void>): void
 ```
 
-Cancels notifications under a notification group of this application. This API uses an asynchronous callback to
-return the result.
+Cancels notifications under a notification group of this application. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -15,14 +14,16 @@ return the result.
 
 **Substitutes:** cancelGroup
 
+<!--Device-notification-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void--><!--Device-notification-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| groupName | string | Yes | Name of the notification group, which is specified through[NotificationRequest](arkts-notification-requestenablenotification-depr-f.md#requestenablenotification-1) when thenotification is published. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| groupName | string | Yes | Name of the notification group, which is specified through [NotificationRequest](arkts-notification-requestenablenotification-depr-f.md#requestenablenotification-1) when the notification is published. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 
 ## cancelGroup
@@ -39,6 +40,8 @@ Cancels notifications under a notification group of this application. This API u
 
 **Substitutes:** cancelGroup
 
+<!--Device-notification-function cancelGroup(groupName: string): Promise<void>--><!--Device-notification-function cancelGroup(groupName: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **Parameters:**
@@ -51,5 +54,5 @@ Cancels notifications under a notification group of this application. This API u
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 

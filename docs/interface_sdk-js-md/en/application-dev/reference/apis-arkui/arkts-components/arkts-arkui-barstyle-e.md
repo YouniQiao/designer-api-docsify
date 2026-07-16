@@ -1,9 +1,10 @@
 # BarStyle
 
-Enumerates the layout styles of the title bar and toolbar. Note that this API is not supported for the toolbar in
-**NavDestination**.
+Enumerates the layout styles of the title bar and toolbar. Note that this API is not supported for the toolbar in **NavDestination**.
 
 **Since:** 12
+
+<!--Device-unnamed-declare enum BarStyle--><!--Device-unnamed-declare enum BarStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,6 +22,8 @@ In this mode, the title bar or toolbar is laid out above the content area.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BarStyle-STANDARD = 0--><!--Device-BarStyle-STANDARD = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## STACK
@@ -37,6 +40,8 @@ In this mode, the title bar or toolbar is overlaid on top of the content area.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BarStyle-STACK = 1--><!--Device-BarStyle-STACK = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SAFE_AREA_PADDING
@@ -45,14 +50,15 @@ In this mode, the title bar or toolbar is overlaid on top of the content area.
 SAFE_AREA_PADDING = 2
 ```
 
-In this mode, the title bar or toolbar is configured to respect the
-[component-level safe area](arkts-arkui-commonmethod-c.md#safeareapadding-1).
+In this mode, the title bar or toolbar is configured to respect the [component-level safe area](arkts-arkui-commonmethod-c.md#safeareapadding-1).
 
 **Since:** 14
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-BarStyle-SAFE_AREA_PADDING = 2--><!--Device-BarStyle-SAFE_AREA_PADDING = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,18 +1,26 @@
 # ChipGroup
 
-> **说明：**
->
-> 1. 针对`selectedIndexes`和`multiple`接口，当`multiple`等于`false`时，如果没有传入`selectedIndexes`，默认是第一个Chip被选中，如果传入的
-> `selectedIndexes`有一个以上的元素时，默认第一个索引的Chip被选中。
->
-> 2. 使用suffix接口时，需引入IconGroupSuffix接口，若不传入，suffix将为空。
->
-> 3. 图标填充色（`fillColor`和`activedFillColor`）的设置应与字体颜色（`fontColor`）保持一致。如果需要设置不同的颜色，可以在传入
+> **说明：**  
+>  
+> 1. 针对`selectedIndexes`和`multiple`接口，当`multiple`等于`false`时，如果没有传入`selectedIndexes`，默认是第一个Chip被选中，如果传入的  
+> `selectedIndexes`有一个以上的元素时，默认第一个索引的Chip被选中。  
+>  
+> 2. 使用suffix接口时，需引入IconGroupSuffix接口，若不传入，suffix将为空。  
+>  
+> 3. 图标填充色（`fillColor`和`activedFillColor`）的设置应与字体颜色（`fontColor`）保持一致。如果需要设置不同的颜色，可以在传入  
 > `[ChipGroupSpaceOptions](#chipgroupspaceoptions)`时使用`prefixSymbol`。
 
 **起始版本：** 12
 
+<!--Device-unnamed-export declare struct ChipGroup--><!--Device-unnamed-export declare struct ChipGroup-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixImageIconOptions, IconGroupSuffix, IconItemOptions, ChipItemStyle, ChipGroupItemOptions, ChipGroup, IconOptions } from '@kit.ArkUI';
+```
 
 ## backgroundSystemMaterial
 
@@ -20,8 +28,7 @@
 backgroundSystemMaterial?: uiMaterial.Material
 ```
 
-设置组件系统材质样式。不同材质具有不同的效果，能够影响组件的[backgroundColor](../arkts-components/arkts-arkui-commonmethod-c.md#backgroundcolor-1)、
-[border](../arkts-components/arkts-arkui-commonmethod-c.md#border-1)、[shadow](../arkts-components/arkts-arkui-commonmethod-c.md#shadow-1)等视觉属性。
+设置组件系统材质样式。不同材质具有不同的效果，能够影响组件的[backgroundColor](../arkts-components/arkts-arkui-commonmethod-c.md#backgroundcolor-1)、[border](../arkts-components/arkts-arkui-commonmethod-c.md#border-1)、[shadow](../arkts-components/arkts-arkui-commonmethod-c.md#shadow-1)等视觉属性。
 
 默认值：undefined
 
@@ -35,7 +42,9 @@ backgroundSystemMaterial?: uiMaterial.Material
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroup-backgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipGroup-backgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,7 +70,9 @@ chipGroupPadding?: ChipGroupPaddingOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroup-chipGroupPadding?: ChipGroupPaddingOptions--><!--Device-ChipGroup-chipGroupPadding?: ChipGroupPaddingOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -87,7 +98,9 @@ chipGroupSpace?: ChipGroupSpaceOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroup-chipGroupSpace?: ChipGroupSpaceOptions--><!--Device-ChipGroup-chipGroupSpace?: ChipGroupSpaceOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -101,9 +114,7 @@ itemStyle?: ChipItemStyle
 
 默认值：
 
-{ size: ChipSize.NORMAL, backgroundColor: $r('sys.color.ohos_id_color_button_normal'), fontColor: $r('
-sys.color.ohos_id_color_text_primary'), selectedFontColor: $r('sys.color.ohos_id_color_text_primary_contrary'),
-selectedBackgroundColor: $r('sys.color.ohos_id_color_emphasize') }
+{ size: ChipSize.NORMAL, backgroundColor: $r('sys.color.ohos_id_color_button_normal'), fontColor: $r('sys.color.ohos_id_color_text_primary'), selectedFontColor: $r('sys.color.ohos_id_color_text_primary_contrary'),selectedBackgroundColor: $r('sys.color.ohos_id_color_emphasize') }
 
 值为undefined时，按默认值处理。
 
@@ -115,7 +126,9 @@ selectedBackgroundColor: $r('sys.color.ohos_id_color_emphasize') }
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroup-itemStyle?: ChipItemStyle--><!--Device-ChipGroup-itemStyle?: ChipItemStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -137,7 +150,9 @@ items: ChipGroupItemOptions[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroup-items: ChipGroupItemOptions[]--><!--Device-ChipGroup-items: ChipGroupItemOptions[]-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -163,7 +178,9 @@ multiple?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroup-multiple?: boolean--><!--Device-ChipGroup-multiple?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -183,7 +200,9 @@ Chip状态改变时的回调方法。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroup-onChange?: Callback<Array<number>>--><!--Device-ChipGroup-onChange?: Callback<Array<number>>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -193,8 +212,7 @@ Chip状态改变时的回调方法。
 selectedBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
-设置组件被选中时的系统材质样式。不同的材料有不同的效果，会影响
-组件的背景颜色、边框、阴影和其他视觉属性。
+设置组件被选中时的系统材质样式。不同的材料有不同的效果，会影响组件的背景颜色、边框、阴影和其他视觉属性。
 
 **类型：** uiMaterial.Material
 
@@ -204,7 +222,9 @@ selectedBackgroundSystemMaterial?: uiMaterial.Material
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroup-selectedBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipGroup-selectedBackgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -228,7 +248,9 @@ selectedIndexes?: Array<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroup-selectedIndexes?: Array<number>--><!--Device-ChipGroup-selectedIndexes?: Array<number>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -252,7 +274,9 @@ suffix?: Callback<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroup-suffix?: Callback<void>--><!--Device-ChipGroup-suffix?: Callback<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

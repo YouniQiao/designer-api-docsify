@@ -4,7 +4,15 @@
 
 **起始版本：** 19
 
+<!--Device-audio-interface AudioTimestampInfo--><!--Device-audio-interface AudioTimestampInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## framePos
 
@@ -17,6 +25,8 @@ readonly framePos: number
 **类型：** number
 
 **起始版本：** 19
+
+<!--Device-AudioTimestampInfo-readonly framePos: long--><!--Device-AudioTimestampInfo-readonly framePos: long-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -31,6 +41,8 @@ readonly timestamp: number
 **类型：** number
 
 **起始版本：** 19
+
+<!--Device-AudioTimestampInfo-readonly timestamp: long--><!--Device-AudioTimestampInfo-readonly timestamp: long-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 

@@ -1,22 +1,21 @@
 # Array
 
-A linear data structure that is implemented on arrays and can be passed between ArkTS concurrent instances.
-Pass-by-reference is recommended for better transfer performance.
+A linear data structure that is implemented on arrays and can be passed between ArkTS concurrent instances.Pass-by-reference is recommended for better transfer performance.
 
-> **NOTE**
->
-> - This module can be imported only to ArkTS files (with the file name extension .ets).
+> **NOTE**  
+>  
+> - This module can be imported only to ArkTS files (with the file name extension .ets).  
 > This section uses the following to identify the use of generics:
 
-- T: type, which can be any of the
-[sendable data types](../../../../arkts-utils/arkts-sendable.md#sendable-data-types).
-**Decorator**: \@Sendable
+- T: type, which can be any of the [sendable data types](../../../../arkts-utils/arkts-sendable.md#sendable-data-types).**Decorator**: \@Sendable
 
 **Inheritance/Implementation:** Array implements [ConcatArray<T>](ConcatArray<T>)
 
 **Since:** 12
 
 **Decorator:** @Sendable
+
+<!--Device-collections-class Array<T> implements ConcatArray<T>--><!--Device-collections-class Array<T> implements ConcatArray<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -38,13 +37,15 @@ Obtains an iterator, each item of which is a JavaScript object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Array-[Symbol.iterator](): IterableIterator<T>--><!--Device-Array-[Symbol.iterator](): IterableIterator<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;T&gt; | Iterator object. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<T> | Iterator object. |
 
 **Error codes:**
 
@@ -64,19 +65,21 @@ Returns the element at a given index in this ArkTS array.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Array-at(index: number): T | undefined--><!--Device-Array-at(index: number): T | undefined-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the element. The index in an array always starts from 0 and is an integer. Ifa negative number is passed in, it refers to the index of **index + array.length**. |
+| index | number | Yes | Index of the element. The index in an array always starts from 0 and is an integer. If a negative number is passed in, it refers to the index of **index + array.length**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Element at the given index. If the index is out of range or invalid, **undefined** isreturned. |
+| T | Element at the given index. If the index is out of range or invalid, **undefined** is returned. |
 
 **Error codes:**
 
@@ -97,19 +100,21 @@ Concatenates this ArkTS array with one or more arrays.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Array-concat(...items: ConcatArray<T>[]): Array<T>--><!--Device-Array-concat(...items: ConcatArray<T>[]): Array<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | ConcatArray&lt;T&gt;[] | Yes | Concatenates this ArkTS array with one or more arrays. |
+| items | [ConcatArray](../../apis-na/arkts-apis/arkts-na-concatarray-i.md)<T>[] | Yes | Concatenates this ArkTS array with one or more arrays. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | New array generated. Not a valid array. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<T> | New array generated. Not a valid array. |
 
 **Error codes:**
 
@@ -130,6 +135,8 @@ A constructor used to create an empty ArkTS array.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Array-constructor()--><!--Device-Array-constructor()-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
@@ -149,6 +156,8 @@ A constructor used to create an ArkTS array with the given elements.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Array-constructor(first: T, ...left: T[])--><!--Device-Array-constructor(first: T, ...left: T[])-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -177,6 +186,8 @@ A constructor used to create an ArkTS array with the given elements.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Array-constructor(...items: T[])--><!--Device-Array-constructor(...items: T[])-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -203,6 +214,8 @@ Copies elements within a given range from this ArkTS array to another position i
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Array-copyWithin(target: number, start: number, end?: number): Array<T>--><!--Device-Array-copyWithin(target: number, start: number, end?: number): Array<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -210,14 +223,14 @@ Copies elements within a given range from this ArkTS array to another position i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | number | Yes | Start index of the range. If a negative number is passed in, it refers to the index of`target + array.length`. |
-| start | number | Yes | Start index of the range. If a negative number is passed in, it refers to the index of**start + array.length**. |
+| start | number | Yes | Start index of the range. If a negative number is passed in, it refers to the index of **start + array.length**. |
 | end | number | No | End index of the range. If a negative number is passed in, it refers to the index of `end+ array.length`. The default value is the length of the ArkTS array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | ArkTS array after being modified. Possible causes:1. Mandatory parameters are left unspecified.2. Incorrect parameter types.3. Parameter verification failed. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<T> | ArkTS array after being modified. Possible causes:1. Mandatory parameters are left unspecified.2. Incorrect parameter types.3. Parameter verification failed. |
 
 **Error codes:**
 
@@ -238,6 +251,8 @@ Creates an ArkTS array of a fixed length, with each element set to a given initi
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Array-static create<T>(arrayLength: number, initialValue: T): Array<T>--><!--Device-Array-static create<T>(arrayLength: number, initialValue: T): Array<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -251,7 +266,7 @@ Creates an ArkTS array of a fixed length, with each element set to a given initi
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | Newly created ArkTS array. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<T> | Newly created ArkTS array. |
 
 **Error codes:**
 
@@ -271,13 +286,15 @@ Returns an iterator object that contains the key-value pair of each element in t
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Array-entries(): IterableIterator<[number, T]>--><!--Device-Array-entries(): IterableIterator<[number, T]>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;[number, T]&gt; | Iterator object that contains the key-value pair of each element inthe array. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<[number, T]> | Iterator object that contains the key-value pair of each element in the array. |
 
 **Error codes:**
 
@@ -298,13 +315,15 @@ Checks whether all elements in this ArkTS array meet a given condition.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Array-every(predicate: ArrayPredicateFn<T, Array<T>>): boolean--><!--Device-Array-every(predicate: ArrayPredicateFn<T, Array<T>>): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | ArrayPredicateFn&lt;T, Array&lt;T&gt;&gt; | Yes | Assertion function used for the test. |
+| predicate | [ArrayPredicateFn](arkts-arkts-arraypredicatefn-t.md)<T, Array<T>> | Yes | Assertion function used for the test. |
 
 **Return value:**
 
@@ -331,13 +350,15 @@ Extends this array to a given length by adding elements with the specified initi
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Array-extendTo(arrayLength: number, initialValue: T): void--><!--Device-Array-extendTo(arrayLength: number, initialValue: T): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLength | number | Yes | New length of the array. If a value less than or equal to the current arraylength is passed in, the array does not change. |
+| arrayLength | number | Yes | New length of the array. If a value less than or equal to the current array length is passed in, the array does not change. |
 | initialValue | T | Yes | Initial value of the elements to be added. |
 
 **Error codes:**
@@ -359,6 +380,8 @@ Fills elements in the specified range of this ArkTS array with a given value.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Array-fill(value: T, start?: number, end?: number): Array<T>--><!--Device-Array-fill(value: T, start?: number, end?: number): Array<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -367,13 +390,13 @@ Fills elements in the specified range of this ArkTS array with a given value.
 | --- | --- | --- | --- |
 | value | T | Yes | Value to fill in. |
 | start | number | No | Start index of the range. The default value is **0**. |
-| end | number | No | End index of the range (exclusive). If no value is passed in, it refers to the lastelement of the array. |
+| end | number | No | End index of the range (exclusive). If no value is passed in, it refers to the last element of the array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | Filled array. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<T> | Filled array. |
 
 **Error codes:**
 
@@ -394,19 +417,21 @@ Returns a new array containing all elements that pass a test provided by a callb
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Array-filter(predicate: (value: T, index: number, array: Array<T>) => boolean): Array<T>--><!--Device-Array-filter(predicate: (value: T, index: number, array: Array<T>) => boolean): Array<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | (value: T, index: number, array: Array&lt;T&gt;) =&gt; boolean | Yes | Function that takes three arguments. It is used to filter elements. The value**true** means that the current element passes the test and should be retained in the new array. The value**false** means that the current element fails the test and should be excluded from the new array. |
+| predicate | (value: T, index: number, array: Array<T>) => boolean | Yes | Function that takes three arguments. It is used to filter elements. The value **true** means that the current element passes the test and should be retained in the new array. The value **false** means that the current element fails the test and should be excluded from the new array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | New array containing elements that pass the test. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<T> | New array containing elements that pass the test. |
 
 **Error codes:**
 
@@ -421,12 +446,13 @@ Returns a new array containing all elements that pass a test provided by a callb
 find(predicate: (value: T, index: number, obj: Array<T>) => boolean): T | undefined
 ```
 
-Returns the value of the first element that passes a test provided by a callback function. If none of the
-elements pass the test, **undefined** is returned.
+Returns the value of the first element that passes a test provided by a callback function. If none of the elements pass the test, **undefined** is returned.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Array-find(predicate: (value: T, index: number, obj: Array<T>) => boolean): T | undefined--><!--Device-Array-find(predicate: (value: T, index: number, obj: Array<T>) => boolean): T | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -434,7 +460,7 @@ elements pass the test, **undefined** is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | (value: T, index: number, obj: Array&lt;T&gt;) =&gt; boolean | Yes | Function that takes three arguments. It is used to filter elements. The value**true** means that the current element meets the conditions, the traversal stops, and that element isreturned. The value **false** means that the current element does not meet the condition, and the traversalcontinues until the element that meets the condition is found or the entire array is traversed. |
+| predicate | (value: T, index: number, obj: Array<T>) => boolean | Yes | Function that takes three arguments. It is used to filter elements. The value **true** means that the current element meets the conditions, the traversal stops, and that element is returned. The value **false** means that the current element does not meet the condition, and the traversal continues until the element that meets the condition is found or the entire array is traversed. |
 
 **Return value:**
 
@@ -455,12 +481,13 @@ elements pass the test, **undefined** is returned.
 findIndex(predicate: (value: T, index: number, obj: Array<T>) => boolean): number
 ```
 
-Returns the index of the first element that passes a test provided by a callback function. If none of the
-elements pass the test, **-1** is returned.
+Returns the index of the first element that passes a test provided by a callback function. If none of the elements pass the test, **-1** is returned.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Array-findIndex(predicate: (value: T, index: number, obj: Array<T>) => boolean): number--><!--Device-Array-findIndex(predicate: (value: T, index: number, obj: Array<T>) => boolean): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -468,7 +495,7 @@ elements pass the test, **-1** is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | (value: T, index: number, obj: Array&lt;T&gt;) =&gt; boolean | Yes | Function that takes three arguments. It is used to filter elements. The value**true** means that the current element meets the conditions, the traversal stops, and the index of thatelement is returned. The value **false** means that the current element does not meet the condition, and thetraversal continues until the element that meets the condition is found or the entire array is traversed. |
+| predicate | (value: T, index: number, obj: Array<T>) => boolean | Yes | Function that takes three arguments. It is used to filter elements. The value **true** means that the current element meets the conditions, the traversal stops, and the index of that element is returned. The value **false** means that the current element does not meet the condition, and the traversal continues until the element that meets the condition is found or the entire array is traversed. |
 
 **Return value:**
 
@@ -495,13 +522,15 @@ Calls a callback function for each element in this ArkTS Array.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Array-forEach(callbackFn: (value: T, index: number, array: Array<T>) => void): void--><!--Device-Array-forEach(callbackFn: (value: T, index: number, array: Array<T>) => void): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index: number, array: Array&lt;T&gt;) =&gt; void | Yes | Callback function to run for each element. |
+| callbackFn | (value: T, index: number, array: Array<T>) => void | Yes | Callback function to run for each element. |
 
 **Error codes:**
 
@@ -522,19 +551,21 @@ Creates an ArkTS array from an array-like object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Array-static from<T>(arrayLike: ArrayLike<T>): Array<T>--><!--Device-Array-static from<T>(arrayLike: ArrayLike<T>): Array<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;T&gt; | Yes | Array-like object. |
+| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)<T> | Yes | Array-like object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | Newly created ArkTS array. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<T> | Newly created ArkTS array. |
 
 **Error codes:**
 
@@ -554,19 +585,21 @@ Creates an ArkTS array from an iterable object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Array-static from<T>(iterable: Iterable<T>): Array<T>--><!--Device-Array-static from<T>(iterable: Iterable<T>): Array<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iterable | Iterable&lt;T&gt; | Yes | Array-like object. |
+| iterable | [Iterable](../../apis-na/arkts-apis/arkts-na-iterable-i.md)<T> | Yes | Array-like object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | Newly created ArkTS array. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<T> | Newly created ArkTS array. |
 
 **Error codes:**
 
@@ -586,20 +619,22 @@ Creates an ArkTS array from an array-like object, and uses a custom function to 
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Array-static from<T>(arrayLike: ArrayLike<T> | Iterable<T>, mapFn: ArrayFromMapFn<T, T>): Array<T>--><!--Device-Array-static from<T>(arrayLike: ArrayLike<T> | Iterable<T>, mapFn: ArrayFromMapFn<T, T>): Array<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;T&gt; \| Iterable&lt;T&gt; | Yes | Array-like object. |
-| mapFn | ArrayFromMapFn&lt;T, T&gt; | Yes | Functions used to process the array elements. |
+| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)<T> \| Iterable<T> | Yes | Array-like object. |
+| mapFn | [ArrayFromMapFn](arkts-arkts-arrayfrommapfn-t.md)<T, T> | Yes | Functions used to process the array elements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | Newly created ArkTS array. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<T> | Newly created ArkTS array. |
 
 ## from
 
@@ -607,12 +642,13 @@ Creates an ArkTS array from an array-like object, and uses a custom function to 
 static from<U, T>(arrayLike: ArrayLike<U> | Iterable<U>, mapFn: ArrayFromMapFn<U, T>): Array<T>
 ```
 
-Creates an ArkTS array from an array-like object, and uses a custom function to process each array element. The
-type of the elements in the array-like object can be different from that of the array elements.
+Creates an ArkTS array from an array-like object, and uses a custom function to process each array element. The type of the elements in the array-like object can be different from that of the array elements.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-Array-static from<U, T>(arrayLike: ArrayLike<U> | Iterable<U>, mapFn: ArrayFromMapFn<U, T>): Array<T>--><!--Device-Array-static from<U, T>(arrayLike: ArrayLike<U> | Iterable<U>, mapFn: ArrayFromMapFn<U, T>): Array<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -620,14 +656,14 @@ type of the elements in the array-like object can be different from that of the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;U&gt; \| Iterable&lt;U&gt; | Yes | Array-like object. |
-| mapFn | ArrayFromMapFn&lt;U, T&gt; | Yes | Functions used to process the array elements. |
+| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)<U> \| Iterable<U> | Yes | Array-like object. |
+| mapFn | [ArrayFromMapFn](arkts-arkts-arrayfrommapfn-t.md)<U, T> | Yes | Functions used to process the array elements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | Newly created ArkTS array. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<T> | Newly created ArkTS array. |
 
 ## includes
 
@@ -640,6 +676,8 @@ Checks whether this ArkTS array contains an element and returns a Boolean value.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Array-includes(searchElement: T, fromIndex?: number): boolean--><!--Device-Array-includes(searchElement: T, fromIndex?: number): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -654,7 +692,7 @@ Checks whether this ArkTS array contains an element and returns a Boolean value.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the element exists; otherwise, **false** isreturned. |
+| boolean | Check result. The value **true** is returned if the element exists; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -669,12 +707,13 @@ Checks whether this ArkTS array contains an element and returns a Boolean value.
 indexOf(searchElement: T, fromIndex?: number): number
 ```
 
-Returns the index of the first occurrence of a value in this ArkTS Array. If the value is not found, **-1** is
-returned.
+Returns the index of the first occurrence of a value in this ArkTS Array. If the value is not found, **-1** is returned.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Array-indexOf(searchElement: T, fromIndex?: number): number--><!--Device-Array-indexOf(searchElement: T, fromIndex?: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -683,7 +722,7 @@ returned.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | T | Yes | Value to search for. |
-| fromIndex | number | No | Index from which the search starts. The value begins at 0. The default value is**0**. |
+| fromIndex | number | No | Index from which the search starts. The value begins at 0. The default value is **0**. |
 
 **Return value:**
 
@@ -709,6 +748,8 @@ Check whether the input parameter is an ArkTS array.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-Array-static isArray(value: Object | undefined | null): boolean--><!--Device-Array-static isArray(value: Object | undefined | null): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -736,13 +777,15 @@ Concatenates all elements in this ArkTS array into a string, with a given separa
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Array-join(separator?: string): string--><!--Device-Array-join(separator?: string): string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| separator | string | No | Separator to be used. If no value is passed in, a comma (,) is used as theseparator. |
+| separator | string | No | Separator to be used. If no value is passed in, a comma (,) is used as the separator. |
 
 **Return value:**
 
@@ -769,13 +812,15 @@ Returns an iterator object that contains the index of each element in this ArkTS
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Array-keys(): IterableIterator<number>--><!--Device-Array-keys(): IterableIterator<number>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;number&gt; | Iterator object that contains the index of each element in the array. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<number> | Iterator object that contains the index of each element in the array. |
 
 **Error codes:**
 
@@ -796,6 +841,8 @@ Obtains the index of the last occurrence of the specified value in this ArkTS ar
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Array-lastIndexOf(searchElement: T, fromIndex?: number): number--><!--Device-Array-lastIndexOf(searchElement: T, fromIndex?: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -803,7 +850,7 @@ Obtains the index of the last occurrence of the specified value in this ArkTS ar
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | T | Yes | Value to search for. |
-| fromIndex | number | No | Index from which the search starts. The default value is **0**. If the index isgreater than or equal to the length of the ArkTS array, **-1** is returned. If a negative number is passed in, it refers to the index of **fromIndex + array.length**. |
+| fromIndex | number | No | Index from which the search starts. The default value is **0**. If the index is greater than or equal to the length of the ArkTS array, **-1** is returned. If a negative number is passed in, it refers to the index of **fromIndex + array.length**. |
 
 **Return value:**
 
@@ -824,12 +871,13 @@ Obtains the index of the last occurrence of the specified value in this ArkTS ar
 map<U>(callbackFn: (value: T, index: number, array: Array<T>) => U): Array<U>
 ```
 
-Calls a callback function for each element in this ArkTS Array and returns a new array that contains the result
-of the callback function.
+Calls a callback function for each element in this ArkTS Array and returns a new array that contains the result of the callback function.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Array-map<U>(callbackFn: (value: T, index: number, array: Array<T>) => U): Array<U>--><!--Device-Array-map<U>(callbackFn: (value: T, index: number, array: Array<T>) => U): Array<U>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -837,13 +885,13 @@ of the callback function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index: number, array: Array&lt;T&gt;) =&gt; U | Yes | Callback function to run for each element. |
+| callbackFn | (value: T, index: number, array: Array<T>) => U | Yes | Callback function to run for each element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;U&gt; | New array containing the result of the callback function. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<U> | New array containing the result of the callback function. |
 
 **Error codes:**
 
@@ -864,19 +912,21 @@ Creates an ArkTS array with a variable number of parameters.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Array-static of<T>(...items: T[]): Array<T>--><!--Device-Array-static of<T>(...items: T[]): Array<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | T[] | Yes | Array of elements used to create the array. The number of elements can be zero, one, ormore. |
+| items | T[] | Yes | Array of elements used to create the array. The number of elements can be zero, one, or more. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | Newly created ArkTS array. Possible causes:1. Mandatory parameters are left unspecified.2. Incorrect parameter types.3. Parameter verification failed. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<T> | Newly created ArkTS array. Possible causes:1. Mandatory parameters are left unspecified.2. Incorrect parameter types.3. Parameter verification failed. |
 
 ## pop
 
@@ -884,12 +934,13 @@ Creates an ArkTS array with a variable number of parameters.
 pop(): T | undefined
 ```
 
-Removes the last element from this ArkTS array and returns that element. If the array is empty, **undefined** is
-returned and the array does not change.
+Removes the last element from this ArkTS array and returns that element. If the array is empty, **undefined** is returned and the array does not change.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Array-pop(): T | undefined--><!--Device-Array-pop(): T | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -918,6 +969,8 @@ Adds elements to the end of this ArkTS array and returns the new length of the a
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Array-push(...items: T[]): number--><!--Device-Array-push(...items: T[]): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -945,12 +998,13 @@ Adds elements to the end of this ArkTS array and returns the new length of the a
 reduce(callbackFn: (previousValue: T, currentValue: T, currentIndex: number, array: Array<T>) => T): T
 ```
 
-Calls a callback function for each element in this ArkTS array, uses the previous return value of the function as
-an accumulated value, and returns the final result.
+Calls a callback function for each element in this ArkTS array, uses the previous return value of the function as an accumulated value, and returns the final result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Array-reduce(callbackFn: (previousValue: T, currentValue: T, currentIndex: number, array: Array<T>) => T): T--><!--Device-Array-reduce(callbackFn: (previousValue: T, currentValue: T, currentIndex: number, array: Array<T>) => T): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -958,7 +1012,7 @@ an accumulated value, and returns the final result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (previousValue: T, currentValue: T, currentIndex: number, array: Array&lt;T&gt;) =&gt; T | Yes | Function that takes four arguments. It performs an operation on each element andpasses the result as an accumulated value to the next element. |
+| callbackFn | (previousValue: T, currentValue: T, currentIndex: number, array: Array<T>) => T | Yes | Function that takes four arguments. It performs an operation on each element and passes the result as an accumulated value to the next element. |
 
 **Return value:**
 
@@ -982,12 +1036,19 @@ reduce<U>(
     ): U
 ```
 
-Similar to the previous API, this API takes an initial value as the second parameter to initialize the
-accumulator before the array traversal starts.
+Similar to the previous API, this API takes an initial value as the second parameter to initialize the accumulator before the array traversal starts.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Array-reduce<U>(
+      callbackFn: (previousValue: U, currentValue: T, currentIndex: number, array: Array<T>) => U,
+      initialValue: U
+    ): U--><!--Device-Array-reduce<U>(
+      callbackFn: (previousValue: U, currentValue: T, currentIndex: number, array: Array<T>) => U,
+      initialValue: U
+    ): U-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -995,7 +1056,7 @@ accumulator before the array traversal starts.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (previousValue: U, currentValue: T, currentIndex: number, array: Array&lt;T&gt;) =&gt; U | Yes | Function that takes four arguments. It performs an operation on each element andpasses the result as an accumulated value to the next element. |
+| callbackFn | (previousValue: U, currentValue: T, currentIndex: number, array: Array<T>) => U | Yes | Function that takes four arguments. It performs an operation on each element and passes the result as an accumulated value to the next element. |
 | initialValue | U | Yes | Initial value of the accumulator. |
 
 **Return value:**
@@ -1017,14 +1078,13 @@ accumulator before the array traversal starts.
 reduceRight<U = T>(callbackFn: ArrayReduceCallback<U, T, Array<T>>, initialValue: U): U
 ```
 
-This API is similar to the
-[reduceRight](arkts-arkts-array-c.md#reduceright-2) API, but it
-takes an initial value as the second parameter to initialize the accumulator before the array traversal starts
-from right to left.
+This API is similar to the [reduceRight](arkts-arkts-array-c.md#reduceright-2) API, but it takes an initial value as the second parameter to initialize the accumulator before the array traversal starts from right to left.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-Array-reduceRight<U = T>(callbackFn: ArrayReduceCallback<U, T, Array<T>>, initialValue: U): U--><!--Device-Array-reduceRight<U = T>(callbackFn: ArrayReduceCallback<U, T, Array<T>>, initialValue: U): U-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1032,7 +1092,7 @@ from right to left.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | ArrayReduceCallback&lt;U, T, Array&lt;T&gt;&gt; | Yes | Function that takes four arguments. It performs anoperation on each element and passes the result as an accumulated value to the next element. |
+| callbackFn | [ArrayReduceCallback](arkts-arkts-arrayreducecallback-t.md)<U, T, Array<T>> | Yes | Function that takes four arguments. It performs an operation on each element and passes the result as an accumulated value to the next element. |
 | initialValue | U | Yes | Initial value of the accumulator. |
 
 **Return value:**
@@ -1054,12 +1114,13 @@ from right to left.
 reduceRight(callbackFn: ArrayReduceCallback<T, T, Array<T>>): T
 ```
 
-Goes through each element in this ArkTS array from right to left, uses a callback function to combine them into a
-single value, and returns that final value.
+Goes through each element in this ArkTS array from right to left, uses a callback function to combine them into a single value, and returns that final value.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-Array-reduceRight(callbackFn: ArrayReduceCallback<T, T, Array<T>>): T--><!--Device-Array-reduceRight(callbackFn: ArrayReduceCallback<T, T, Array<T>>): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1067,7 +1128,7 @@ single value, and returns that final value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | ArrayReduceCallback&lt;T, T, Array&lt;T&gt;&gt; | Yes | Function that takes four arguments. It performs anoperation on each element and passes the result as an accumulated value to the next element. |
+| callbackFn | [ArrayReduceCallback](arkts-arkts-arrayreducecallback-t.md)<T, T, Array<T>> | Yes | Function that takes four arguments. It performs an operation on each element and passes the result as an accumulated value to the next element. |
 
 **Return value:**
 
@@ -1094,13 +1155,15 @@ Reverses elements in this ArkTS array and returns a reference to the same array.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Array-reverse(): Array<T>--><!--Device-Array-reverse(): Array<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | Reversed ArkTS array. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<T> | Reversed ArkTS array. |
 
 **Error codes:**
 
@@ -1115,12 +1178,13 @@ Reverses elements in this ArkTS array and returns a reference to the same array.
 shift(): T | undefined
 ```
 
-Removes the first element from this ArkTS array and returns that element. If the array is empty, **undefined** is
-returned and the array does not change.
+Removes the first element from this ArkTS array and returns that element. If the array is empty, **undefined** is returned and the array does not change.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Array-shift(): T | undefined--><!--Device-Array-shift(): T | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1149,13 +1213,15 @@ Shrinks this ArkTS array to a given length.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Array-shrinkTo(arrayLength: number): void--><!--Device-Array-shrinkTo(arrayLength: number): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLength | number | Yes | New length of the array. If a value greater than or equal to the current arraylength is passed in, the array does not change. |
+| arrayLength | number | Yes | New length of the array. If a value greater than or equal to the current array length is passed in, the array does not change. |
 
 **Error codes:**
 
@@ -1176,6 +1242,8 @@ Selects a range of elements in this ArkTS array to create an array.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Array-slice(start?: number, end?: number): Array<T>--><!--Device-Array-slice(start?: number, end?: number): Array<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -1189,7 +1257,7 @@ Selects a range of elements in this ArkTS array to create an array.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | New array containing the selected elements. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<T> | New array containing the selected elements. |
 
 **Error codes:**
 
@@ -1210,19 +1278,21 @@ Checks whether this ArkTS array contains an element that meets certain condition
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Array-some(predicate: ArrayPredicateFn<T, Array<T>>): boolean--><!--Device-Array-some(predicate: ArrayPredicateFn<T, Array<T>>): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | ArrayPredicateFn&lt;T, Array&lt;T&gt;&gt; | Yes | Assertion function used for the test. |
+| predicate | [ArrayPredicateFn](arkts-arkts-arraypredicatefn-t.md)<T, Array<T>> | Yes | Assertion function used for the test. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if an element meeting the given conditionexists; otherwise, **false** is returned. |
+| boolean | Check result. The value **true** is returned if an element meeting the given condition exists; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -1243,19 +1313,21 @@ Sorts elements in this ArkTS array and returns a new array.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Array-sort(compareFn?: (a: T, b: T) => number): Array<T>--><!--Device-Array-sort(compareFn?: (a: T, b: T) => number): Array<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| compareFn | (a: T, b: T) =&gt; number | No | Function that determines the sort order. By default, elements are sorted inascending order. |
+| compareFn | (a: T, b: T) => number | No | Function that determines the sort order. By default, elements are sorted in ascending order. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | Array with the sorted elements. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<T> | Array with the sorted elements. |
 
 **Error codes:**
 
@@ -1276,6 +1348,8 @@ Removes elements from a specified position (start) and all elements after the sp
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Array-splice(start: number): Array<T>--><!--Device-Array-splice(start: number): Array<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -1288,7 +1362,7 @@ Removes elements from a specified position (start) and all elements after the sp
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | **Array** object that contains the removed elements. If no element is removed, an empty**Array** object is returned.Possible causes:1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<T> | **Array** object that contains the removed elements. If no element is removed, an empty **Array** object is returned.Possible causes:1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 
 **Error codes:**
 
@@ -1309,6 +1383,8 @@ Removes elements from a specified position in an array, and inserts new elements
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Array-splice(start: number, deleteCount: number, ...items: T[]): Array<T>--><!--Device-Array-splice(start: number, deleteCount: number, ...items: T[]): Array<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -1323,7 +1399,7 @@ Removes elements from a specified position in an array, and inserts new elements
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | **Array** object that contains the removed elements. If no element is removed, an empty**Array** object is returned. Possible causes:1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<T> | **Array** object that contains the removed elements. If no element is removed, an empty **Array** object is returned. Possible causes:1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 
 **Error codes:**
 
@@ -1338,12 +1414,13 @@ Removes elements from a specified position in an array, and inserts new elements
 toLocaleString(): string
 ```
 
-Generates a string that matches the cultural conversions of the current system locale. Each element converts
-itself to a string via its **toLocaleString** API, and these strings are then joined in sequence with commas (,).
+Generates a string that matches the cultural conversions of the current system locale. Each element converts itself to a string via its **toLocaleString** API, and these strings are then joined in sequence with commas (,).
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-Array-toLocaleString(): string--><!--Device-Array-toLocaleString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1372,6 +1449,8 @@ Converts an ArkTS array into a string.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Array-toString(): string--><!--Device-Array-toString(): string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -1398,6 +1477,8 @@ Adds elements to the beginning of this ArkTS array and returns the new length of
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Array-unshift(...items: T[]): number--><!--Device-Array-unshift(...items: T[]): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1432,13 +1513,15 @@ Returns an iterator object that contains the value of each element in this ArkTS
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Array-values(): IterableIterator<T>--><!--Device-Array-values(): IterableIterator<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;T&gt; | Iterator object that contains the value of each element in the array. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<T> | Iterator object that contains the value of each element in the array. |
 
 **Error codes:**
 
@@ -1461,6 +1544,8 @@ Returns the element at a given index in this array.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Array-[index: number]: T--><!--Device-Array-[index: number]: T-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## length
@@ -1476,6 +1561,8 @@ Number of elements in an ArkTS array.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Array-readonly length: number--><!--Device-Array-readonly length: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

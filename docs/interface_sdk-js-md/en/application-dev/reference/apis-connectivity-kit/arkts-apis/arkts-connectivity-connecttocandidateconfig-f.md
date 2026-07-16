@@ -12,15 +12,15 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function connectToCandidateConfig(networkId: number): void
 ```
 
-Connect to a specified candidate hotspot by networkId, only the configuration which is added by ourself
-is allowed to be connected. This method connect to a configuration at a time.
-The app must be in the foreground.
+Connect to a specified candidate hotspot by networkId, only the configuration which is added by ourself is allowed to be connected. This method connect to a configuration at a time.The app must be in the foreground.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-wifiManager-function connectToCandidateConfig(networkId: int): void--><!--Device-wifiManager-function connectToCandidateConfig(networkId: int): void-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -72,19 +72,21 @@ Connect to the specified candidate hotspot using connect settings.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-wifiManager-function connectToCandidateConfig(settings: ConnectSettings): Promise<void>--><!--Device-wifiManager-function connectToCandidateConfig(settings: ConnectSettings): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| settings | ConnectSettings | Yes | Indicates the connection settings. |
+| settings | [ConnectSettings](arkts-connectivity-connectsettings-i.md) | Yes | Indicates the connection settings. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Returns the promise object that used to return the operation result.If the operation fails, an error message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Returns the promise object that used to return the operation result.If the operation fails, an error message is returned. |
 
 **Error codes:**
 

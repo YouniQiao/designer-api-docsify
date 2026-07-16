@@ -6,6 +6,8 @@ Options for obtaining the screen brightness.
 
 **Deprecated since:** 7
 
+<!--Device-unnamed-export interface GetBrightnessOptions--><!--Device-unnamed-export interface GetBrightnessOptions-End-->
+
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Called when an API call is complete.
 
 **Deprecated since:** 7
 
+<!--Device-GetBrightnessOptions-complete?: () => void--><!--Device-GetBrightnessOptions-complete?: () => void-End-->
+
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 ## fail
@@ -36,14 +40,15 @@ Called when an API call is complete.
 fail?: (data: string, code: number) => void
 ```
 
-Called when an API call has failed. **data** indicates the error information, and **code** indicates the error
-code.
+Called when an API call has failed. **data** indicates the error information, and **code** indicates the error code.
 
 **Type:** (data: string, code: number) => void
 
 **Since:** 3
 
 **Deprecated since:** 7
+
+<!--Device-GetBrightnessOptions-fail?: (data: string, code: number) => void--><!--Device-GetBrightnessOptions-fail?: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -53,14 +58,15 @@ code.
 success?: (data: BrightnessResponse) => void
 ```
 
-Called when an API call is successful. **data** is a return value of the
-[BrightnessResponse](arkts-basicservices-brightnessresponse-i.md) type.
+Called when an API call is successful. **data** is a return value of the [BrightnessResponse](arkts-basicservices-brightnessresponse-i.md) type.
 
 **Type:** (data: BrightnessResponse) => void
 
 **Since:** 3
 
 **Deprecated since:** 7
+
+<!--Device-GetBrightnessOptions-success?: (data: BrightnessResponse) => void--><!--Device-GetBrightnessOptions-success?: (data: BrightnessResponse) => void-End-->
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 

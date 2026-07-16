@@ -18,6 +18,8 @@ Generates IR signals at the specified frequency and level.
 
 **Required permissions:** ohos.permission.MANAGE_INPUT_INFRARED_EMITTER
 
+<!--Device-infraredEmitter-function transmitInfrared(infraredFrequency: long, pattern: Array<long>): void--><!--Device-infraredEmitter-function transmitInfrared(infraredFrequency: long, pattern: Array<long>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InfraredEmitter
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Generates IR signals at the specified frequency and level.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | infraredFrequency | number | Yes | IR frequency, in Hz. |
-| pattern | Array&lt;number&gt; | Yes | Infrared level signal, in microseconds (μs). The number of infrared level signalsranges from 0 to 1024. The value of this parameter must be greater than 0. If this parameter is set to **0**,the API does not take effect. <br/>For example, in the level signal array [100,200,300,400], **100** indicatesa high-level signal, **200** indicates a low-level signal, **300** is a high-level signal, and **400** is a low-level signal. |
+| pattern | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Infrared level signal, in microseconds (μs). The number of infrared level signals ranges from 0 to 1024. The value of this parameter must be greater than 0. If this parameter is set to **0**,the API does not take effect. <br/>For example, in the level signal array [100,200,300,400], **100** indicates a high-level signal, **200** indicates a low-level signal, **300** is a high-level signal, and **400** is a low  -level signal. |
 
 **Error codes:**
 

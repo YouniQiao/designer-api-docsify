@@ -20,6 +20,8 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback:
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -28,9 +30,9 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 指定应用的包信息。 |
-| slot | NotificationSlot | 是 | 通知渠道。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 设定通知渠道回调函数。 |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 指定应用的包信息。 |
+| slot | [NotificationSlot](arkts-notification-notificationslot-i-sys.md) | 是 | 通知渠道。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 设定通知渠道回调函数。 |
 
 **错误码：**
 
@@ -82,6 +84,8 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<void>--><!--Device-notificationManager-function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -90,14 +94,14 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 指定应用的包信息。 |
-| slot | NotificationSlot | 是 | 通知渠道。 |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 指定应用的包信息。 |
+| slot | [NotificationSlot](arkts-notification-notificationslot-i-sys.md) | 是 | 通知渠道。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

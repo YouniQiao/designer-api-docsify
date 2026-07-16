@@ -20,6 +20,8 @@ Get detailed information of a single tool by its name
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-cliManager-function getToolInfoByName(toolName: string): Promise<ToolInfo>--><!--Device-cliManager-function getToolInfoByName(toolName: string): Promise<ToolInfo>-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -34,7 +36,7 @@ Get detailed information of a single tool by its name
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ToolInfo&gt; | detailed information of tool. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ToolInfo> | detailed information of tool. |
 
 **Error codes:**
 

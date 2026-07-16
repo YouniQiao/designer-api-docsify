@@ -6,6 +6,8 @@
 
 **Substitutes:** FeatureAbility
 
+<!--Device-unnamed-export declare class FeatureAbility--><!--Device-unnamed-export declare class FeatureAbility-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **System API:** This is a system API.
@@ -22,6 +24,8 @@ Sends messages to the destination device.
 
 **Deprecated since:** 8
 
+<!--Device-FeatureAbility-static sendMsg(options: SendMessageOptions): void--><!--Device-FeatureAbility-static sendMsg(options: SendMessageOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **System API:** This is a system API.
@@ -30,7 +34,7 @@ Sends messages to the destination device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SendMessageOptions | Yes | Options. |
+| options | [SendMessageOptions](arkts-arkui-sendmessageoptions-i.md) | Yes | Options. |
 
 ## subscribeMsg
 
@@ -44,6 +48,8 @@ Listens for messages sent from other devices.
 
 **Deprecated since:** 8
 
+<!--Device-FeatureAbility-static subscribeMsg(options: SubscribeMessageOptions): void--><!--Device-FeatureAbility-static subscribeMsg(options: SubscribeMessageOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **System API:** This is a system API.
@@ -52,7 +58,7 @@ Listens for messages sent from other devices.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SubscribeMessageOptions | Yes | Options. |
+| options | [SubscribeMessageOptions](arkts-arkui-subscribemessageoptions-i.md) | Yes | Options. |
 
 ## unsubscribeMsg
 
@@ -65,6 +71,8 @@ Cancel the listening for messages sent from other devices.
 **Since:** 5
 
 **Deprecated since:** 8
+
+<!--Device-FeatureAbility-static unsubscribeMsg(): void--><!--Device-FeatureAbility-static unsubscribeMsg(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 

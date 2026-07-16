@@ -4,6 +4,8 @@ Defines a content form card.
 
 **Since:** 20
 
+<!--Device-unnamed-declare struct ContentFormCard--><!--Device-unnamed-declare struct ContentFormCard-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Data of the form card.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ContentFormCard-contentFormData: uniformDataStruct.ContentForm--><!--Device-ContentFormCard-contentFormData: uniformDataStruct.ContentForm-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## formHeight
@@ -43,6 +47,8 @@ Height of the content form card. The unit of measurement is vp.
 **Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ContentFormCard-formHeight?: double--><!--Device-ContentFormCard-formHeight?: double-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -62,6 +68,8 @@ Type of the form card.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ContentFormCard-formType: FormType--><!--Device-ContentFormCard-formType: FormType-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## formWidth
@@ -80,6 +88,8 @@ Width of the content form card. The unit of measurement is vp.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ContentFormCard-formWidth?: double--><!--Device-ContentFormCard-formWidth?: double-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## handleOnClick
@@ -95,6 +105,8 @@ Callback to be invoked when the form card is tapped.
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ContentFormCard-handleOnClick?: Function--><!--Device-ContentFormCard-handleOnClick?: Function-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 

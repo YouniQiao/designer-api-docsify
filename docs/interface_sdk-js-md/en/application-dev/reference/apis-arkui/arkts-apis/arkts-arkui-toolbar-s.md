@@ -4,6 +4,8 @@ Declare Component ToolBar
 
 **Since:** 18
 
+<!--Device-unnamed-export declare struct ToolBar--><!--Device-unnamed-export declare struct ToolBar-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Define toolbar activate item index, default is -1.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ToolBar-@Prop activateIndex?: number--><!--Device-ToolBar-@Prop activateIndex?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## controller
@@ -47,6 +51,8 @@ Define toolbar controller.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ToolBar-controller: TabsController--><!--Device-ToolBar-controller: TabsController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +74,8 @@ Define divider Modifier.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ToolBar-@Prop dividerModifier?: DividerModifier--><!--Device-ToolBar-@Prop dividerModifier?: DividerModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## toolBarList
@@ -88,6 +96,8 @@ Define toolbar list array.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ToolBar-@ObjectLink toolBarList: ToolBarOptions--><!--Device-ToolBar-@ObjectLink toolBarList: ToolBarOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## toolBarModifier
@@ -107,6 +117,8 @@ Define toolbar modifier.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ToolBar-@Prop toolBarModifier?: ToolBarModifier--><!--Device-ToolBar-@Prop toolBarModifier?: ToolBarModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

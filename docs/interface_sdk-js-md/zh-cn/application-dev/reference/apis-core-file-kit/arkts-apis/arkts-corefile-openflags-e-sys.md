@@ -8,6 +8,8 @@
 
 **替代接口：** [OpenMode](arkts-corefile-openmode-n.md#openmode)
 
+<!--Device-fileAccess-enum OPENFLAGS--><!--Device-fileAccess-enum OPENFLAGS-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -27,6 +29,8 @@ READ = 0o0
 **替代接口：** [OpenMode](arkts-corefile-openmode-n.md#openmode)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OPENFLAGS-READ = 0o0--><!--Device-OPENFLAGS-READ = 0o0-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -48,6 +52,8 @@ WRITE = 0o1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-OPENFLAGS-WRITE = 0o1--><!--Device-OPENFLAGS-WRITE = 0o1-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +73,8 @@ WRITE_READ = 0o2
 **替代接口：** [OpenMode](arkts-corefile-openmode-n.md#openmode)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OPENFLAGS-WRITE_READ = 0o2--><!--Device-OPENFLAGS-WRITE_READ = 0o2-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

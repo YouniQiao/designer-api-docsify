@@ -6,7 +6,15 @@
 
 **废弃版本：** 6
 
+<!--Device-unnamed-export interface GetStatusOptions--><!--Device-unnamed-export interface GetStatusOptions-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Lite
+
+## 导入模块
+
+```TypeScript
+import { GetStatusOptions, BatteryResponse } from '@kit.BasicServicesKit';
+```
 
 ## complete
 
@@ -21,6 +29,8 @@ complete?: () => void
 **起始版本：** 3
 
 **废弃版本：** 6
+
+<!--Device-GetStatusOptions-complete?: () => void--><!--Device-GetStatusOptions-complete?: () => void-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Lite
 
@@ -38,6 +48,8 @@ fail?: (data: string, code: number) => void
 
 **废弃版本：** 6
 
+<!--Device-GetStatusOptions-fail?: (data: string, code: number) => void--><!--Device-GetStatusOptions-fail?: (data: string, code: number) => void-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Lite
 
 ## success
@@ -53,6 +65,8 @@ success?: (data: BatteryResponse) => void
 **起始版本：** 3
 
 **废弃版本：** 6
+
+<!--Device-GetStatusOptions-success?: (data: BatteryResponse) => void--><!--Device-GetStatusOptions-success?: (data: BatteryResponse) => void-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Lite
 

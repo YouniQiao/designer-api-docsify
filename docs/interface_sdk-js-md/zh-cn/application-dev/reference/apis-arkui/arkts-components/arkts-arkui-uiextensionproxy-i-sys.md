@@ -1,10 +1,10 @@
 # UIExtensionProxy（系统接口）
 
-该接口用于向UIExtensionAbility发送数据。<br/>
-当UIExtensionAbility连接成功时，<br/>
-它从UIExtensionComponent的onRemoteReady回调中返回。
+该接口用于向UIExtensionAbility发送数据。<br/>当UIExtensionAbility连接成功时，<br/>它从UIExtensionComponent的onRemoteReady回调中返回。
 
 **起始版本：** 10
+
+<!--Device-unnamed-declare interface UIExtensionProxy--><!--Device-unnamed-declare interface UIExtensionProxy-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,12 +16,13 @@
 off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 ```
 
-注销监听UIExtensionAbility注册异步数据接收回调的监听器。
-AnonyMous Object Rectification
+注销监听UIExtensionAbility注册异步数据接收回调的监听器。AnonyMous Object Rectification
 
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionProxy-off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void--><!--Device-UIExtensionProxy-off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,7 +33,7 @@ AnonyMous Object Rectification
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'asyncReceiverRegister' | 是 | 监听事件的类型。 |
-| callback | Callback&lt;UIExtensionProxy&gt; | 否 | 监听事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<UIExtensionProxy> | 否 | 监听事件的回调。 |
 
 ## off('syncReceiverRegister')
 
@@ -40,12 +41,13 @@ AnonyMous Object Rectification
 off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 ```
 
-注销监听UIExtensionAbility注册同步数据接收回调的监听器。
-AnonyMous Object Rectification
+注销监听UIExtensionAbility注册同步数据接收回调的监听器。AnonyMous Object Rectification
 
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionProxy-off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void--><!--Device-UIExtensionProxy-off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,7 +58,7 @@ AnonyMous Object Rectification
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'syncReceiverRegister' | 是 | 监听事件的类型。 |
-| callback | Callback&lt;UIExtensionProxy&gt; | 否 | 监听事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<UIExtensionProxy> | 否 | 监听事件的回调。 |
 
 ## on('asyncReceiverRegister')
 
@@ -64,12 +66,13 @@ AnonyMous Object Rectification
 on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 ```
 
-注册监听器，用于监听UIExtensionAbility注册异步数据接收回调。
-AnonyMous Object Rectification
+注册监听器，用于监听UIExtensionAbility注册异步数据接收回调。AnonyMous Object Rectification
 
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionProxy-on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void--><!--Device-UIExtensionProxy-on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -80,7 +83,7 @@ AnonyMous Object Rectification
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'asyncReceiverRegister' | 是 | 表示事件的类型。 |
-| callback | Callback&lt;UIExtensionProxy&gt; | 是 | 监听事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<UIExtensionProxy> | 是 | 监听事件的回调。 |
 
 ## on('syncReceiverRegister')
 
@@ -88,12 +91,13 @@ AnonyMous Object Rectification
 on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 ```
 
-注册监听器，用于监听UIExtensionAbility注册同步数据接收回调。
-AnonyMous Object Rectification
+注册监听器，用于监听UIExtensionAbility注册同步数据接收回调。AnonyMous Object Rectification
 
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionProxy-on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void--><!--Device-UIExtensionProxy-on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,7 +108,7 @@ AnonyMous Object Rectification
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'syncReceiverRegister' | 是 | 表示事件的类型。 |
-| callback | Callback&lt;UIExtensionProxy&gt; | 是 | 监听事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<UIExtensionProxy> | 是 | 监听事件的回调。 |
 
 ## send
 
@@ -112,12 +116,13 @@ AnonyMous Object Rectification
 send(data: Record<string, Object>): void
 ```
 
-该接口用于向UIExtensionAbility发送数据。
-AnonyMous Object Rectification
+该接口用于向UIExtensionAbility发送数据。AnonyMous Object Rectification
 
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionProxy-send(data: Record<string, Object>): void--><!--Device-UIExtensionProxy-send(data: Record<string, Object>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -127,7 +132,7 @@ AnonyMous Object Rectification
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | 是 |  |
+| data | Record<string, Object> | 是 |  |
 
 ## sendSync
 
@@ -135,12 +140,13 @@ AnonyMous Object Rectification
 sendSync(data: Record<string, Object>): Record<string, Object>
 ```
 
-该接口用于向UIExtensionAbility发送数据，并以阻塞方式等待结果。
-AnonyMous Object Rectification
+该接口用于向UIExtensionAbility发送数据，并以阻塞方式等待结果。AnonyMous Object Rectification
 
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionProxy-sendSync(data: Record<string, Object>): Record<string, Object>--><!--Device-UIExtensionProxy-sendSync(data: Record<string, Object>): Record<string, Object>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -150,13 +156,13 @@ AnonyMous Object Rectification
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | 是 | 发送给UIExtensionAbility的数据。 |
+| data | Record<string, Object> | 是 | 发送给UIExtensionAbility的数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Record&lt;string, Object&gt; | data - 从UIExtensionAbility传输回来的数据。 |
+| Record<string, Object> | data - 从UIExtensionAbility传输回来的数据。 |
 
 **错误码：**
 

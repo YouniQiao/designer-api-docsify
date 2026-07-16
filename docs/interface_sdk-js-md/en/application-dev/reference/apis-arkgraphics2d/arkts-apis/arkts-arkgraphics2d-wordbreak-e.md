@@ -4,6 +4,8 @@ Enumerates the word break types.
 
 **Since:** 12
 
+<!--Device-text-enum WordBreak--><!--Device-text-enum WordBreak-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## NORMAL
@@ -18,6 +20,8 @@ Default mode that break words based on language-specific conventions.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-WordBreak-NORMAL = 0--><!--Device-WordBreak-NORMAL = 0-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## BREAK_ALL
@@ -26,13 +30,13 @@ Default mode that break words based on language-specific conventions.
 BREAK_ALL = 1
 ```
 
-Allows breaks within any character in non-CJK text. (CJK means Chinese, Japanese, and Korean.) This value is
-suitable for Asian text that contains some non-Asian text. For example, it can be used to break consecutive
-English characters.
+Allows breaks within any character in non-CJK text. (CJK means Chinese, Japanese, and Korean.) This value is suitable for Asian text that contains some non-Asian text. For example, it can be used to break consecutive English characters.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-WordBreak-BREAK_ALL = 1--><!--Device-WordBreak-BREAK_ALL = 1-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -42,13 +46,13 @@ English characters.
 BREAK_WORD = 2
 ```
 
-Allows breaks between any two characters in non-CJK text. It prioritizes breaking at whitespace or other natural
-breakpoints to keep words intact. If no breakpoints are found, it breaks between any two characters. For CJK text
-, this behaves like **NORMAL**.
+Allows breaks between any two characters in non-CJK text. It prioritizes breaking at whitespace or other natural breakpoints to keep words intact. If no breakpoints are found, it breaks between any two characters. For CJK text, this behaves like **NORMAL**.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-WordBreak-BREAK_WORD = 2--><!--Device-WordBreak-BREAK_WORD = 2-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -58,15 +62,15 @@ breakpoints to keep words intact. If no breakpoints are found, it breaks between
 BREAK_HYPHEN = 3
 ```
 
-Attempts to break words at the end of a line using a hyphen. If a hyphen cannot be added, it behaves like
-**BREAK_WORD**.
+Attempts to break words at the end of a line using a hyphen. If a hyphen cannot be added, it behaves like **BREAK_WORD**.
 
-When using this word break strategy, you need to use the `locale` attribute in [TextStyle](arkts-arkgraphics2d-textstyle-i.md)
-to define the language environment, which affects the word break effect.
+When using this word break strategy, you need to use the `locale` attribute in [TextStyle](arkts-arkgraphics2d-textstyle-i.md)to define the language environment, which affects the word break effect.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-WordBreak-BREAK_HYPHEN = 3--><!--Device-WordBreak-BREAK_HYPHEN = 3-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

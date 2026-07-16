@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-cloudExtension-export enum Flag--><!--Device-cloudExtension-export enum Flag-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -17,6 +19,8 @@ INSERT = 0
 插入操作。
 
 **起始版本：** 11
+
+<!--Device-Flag-INSERT = 0--><!--Device-Flag-INSERT = 0-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -32,6 +36,8 @@ UPDATE = 1
 
 **起始版本：** 11
 
+<!--Device-Flag-UPDATE = 1--><!--Device-Flag-UPDATE = 1-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +51,8 @@ DELETE = 2
 删除操作。
 
 **起始版本：** 11
+
+<!--Device-Flag-DELETE = 2--><!--Device-Flag-DELETE = 2-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 

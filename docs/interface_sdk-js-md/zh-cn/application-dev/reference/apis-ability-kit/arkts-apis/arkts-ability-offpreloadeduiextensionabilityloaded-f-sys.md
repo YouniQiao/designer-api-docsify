@@ -1,5 +1,11 @@
 # offPreloadedUIExtensionAbilityLoaded（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
+```
+
 ## offPreloadedUIExtensionAbilityLoaded
 
 ```TypeScript
@@ -14,6 +20,8 @@ function offPreloadedUIExtensionAbilityLoaded(callback?: PreloadedUIExtensionAbi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-abilityManager-function offPreloadedUIExtensionAbilityLoaded(callback?: PreloadedUIExtensionAbilityLoadedFn): void--><!--Device-abilityManager-function offPreloadedUIExtensionAbilityLoaded(callback?: PreloadedUIExtensionAbilityLoadedFn): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ function offPreloadedUIExtensionAbilityLoaded(callback?: PreloadedUIExtensionAbi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | PreloadedUIExtensionAbilityLoadedFn | 否 | 需要注销监听的回调函数。如果不传入任何回调函数，则会注销当前进程中所有该事件类型的监听。 |
+| callback | [PreloadedUIExtensionAbilityLoadedFn](arkts-ability-preloadeduiextensionabilityloadedfn-t-sys.md) | 否 | 需要注销监听的回调函数。如果不传入任何回调函数，则会注销当前进程中所有该事件类型的监听。 |
 
 **错误码：**
 

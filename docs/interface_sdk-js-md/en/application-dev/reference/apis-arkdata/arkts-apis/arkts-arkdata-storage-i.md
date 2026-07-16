@@ -2,14 +2,15 @@
 
 Provides APIs for obtaining and modifying storage data.
 
-Before calling the following APIs, use [data_storage.getStorage](arkts-arkdata-getstoragesync-f.md#getstoragesync-1) or
-[data_storage.getStorageSync](arkts-arkdata-getstoragesync-f.md#getstoragesync-1) to obtain the **Storage** instance.
+Before calling the following APIs, use [data_storage.getStorage](arkts-arkdata-getstoragesync-f.md#getstoragesync-1) or [data_storage.getStorageSync](arkts-arkdata-getstoragesync-f.md#getstoragesync-1) to obtain the **Storage** instance.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
 **Substitutes:** preferences
+
+<!--Device-storage-interface Storage--><!--Device-storage-interface Storage-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -27,11 +28,13 @@ Clears this **Storage** object. This API uses an asynchronous callback to return
 
 **Substitutes:** clear
 
+<!--Device-Storage-clear(callback: AsyncCallback<void>): void--><!--Device-Storage-clear(callback: AsyncCallback<void>): void-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -60,11 +63,13 @@ Clears this **Storage** object. This API uses a promise to return the result.
 
 **Substitutes:** clear
 
+<!--Device-Storage-clear(): Promise<void>--><!--Device-Storage-clear(): Promise<void>-End-->
+
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A promise object. |
 
 **Example**
 
@@ -92,6 +97,8 @@ Clears this **Storage** object.
 
 **Substitutes:** clear
 
+<!--Device-Storage-clearSync(): void--><!--Device-Storage-clearSync(): void-End-->
+
 **Example**
 
 ```TypeScript
@@ -105,8 +112,7 @@ storage.clearSync();
 delete(key: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes data with the specified key from this storage object. This API uses an asynchronous callback to return
-the result.
+Deletes data with the specified key from this storage object. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -114,12 +120,14 @@ the result.
 
 **Substitutes:** delete
 
+<!--Device-Storage-delete(key: string, callback: AsyncCallback<void>): void--><!--Device-Storage-delete(key: string, callback: AsyncCallback<void>): void-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the data. It cannot be empty. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -148,6 +156,8 @@ Deletes data with the specified key from this storage object. This API uses a pr
 
 **Substitutes:** delete
 
+<!--Device-Storage-delete(key: string): Promise<void>--><!--Device-Storage-delete(key: string): Promise<void>-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -158,7 +168,7 @@ Deletes data with the specified key from this storage object. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Example**
 
@@ -186,6 +196,8 @@ Deletes data with the specified key from this storage object.
 
 **Substitutes:** delete
 
+<!--Device-Storage-deleteSync(key: string): void--><!--Device-Storage-deleteSync(key: string): void-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -205,8 +217,7 @@ Deletes data with the specified key from this storage object.
 flush(callback: AsyncCallback<void>): void
 ```
 
-Saves the modification of this object to the **Storage** instance and synchronizes the modification to the file.
-This API uses an asynchronous callback to return the result.
+Saves the modification of this object to the **Storage** instance and synchronizes the modification to the file.This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -214,11 +225,13 @@ This API uses an asynchronous callback to return the result.
 
 **Substitutes:** flush
 
+<!--Device-Storage-flush(callback: AsyncCallback<void>): void--><!--Device-Storage-flush(callback: AsyncCallback<void>): void-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -239,8 +252,7 @@ storage.flush(function (err) {
 flush(): Promise<void>
 ```
 
-Saves the modification of this object to the **Storage** instance and synchronizes the modification to the file.
-This API uses a promise to return the result.
+Saves the modification of this object to the **Storage** instance and synchronizes the modification to the file.This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -248,11 +260,13 @@ This API uses a promise to return the result.
 
 **Substitutes:** flush
 
+<!--Device-Storage-flush(): Promise<void>--><!--Device-Storage-flush(): Promise<void>-End-->
+
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Example**
 
@@ -280,6 +294,8 @@ Saves the modification of this object to the **Storage** instance and synchroniz
 
 **Substitutes:** flush
 
+<!--Device-Storage-flushSync(): void--><!--Device-Storage-flushSync(): void-End-->
+
 **Example**
 
 ```TypeScript
@@ -293,8 +309,7 @@ storage.flushSync();
 get(key: string, defValue: ValueType, callback: AsyncCallback<ValueType>): void
 ```
 
-Obtains the value corresponding to a key. If the value is null or not of the default value type, **defValue** is
-returned. This API uses an asynchronous callback to return the result.
+Obtains the value corresponding to a key. If the value is null or not of the default value type, **defValue** is returned. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -302,13 +317,15 @@ returned. This API uses an asynchronous callback to return the result.
 
 **Substitutes:** get
 
+<!--Device-Storage-get(key: string, defValue: ValueType, callback: AsyncCallback<ValueType>): void--><!--Device-Storage-get(key: string, defValue: ValueType, callback: AsyncCallback<ValueType>): void-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the data. It cannot be empty. |
-| defValue | ValueType | Yes | Default value to be returned. It can be a number, string, or Boolean value. |
-| callback | AsyncCallback&lt;ValueType&gt; | Yes | Callback used to return the result. |
+| defValue | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Default value to be returned. It can be a number, string, or Boolean value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ValueType> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -329,8 +346,7 @@ storage.get('startup', 'default', function(err, value) {
 get(key: string, defValue: ValueType): Promise<ValueType>
 ```
 
-Obtains the value corresponding to a key. If the value is null or not of the default value type, **defValue** is
-returned. This API uses a promise to return the result.
+Obtains the value corresponding to a key. If the value is null or not of the default value type, **defValue** is returned. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -338,18 +354,20 @@ returned. This API uses a promise to return the result.
 
 **Substitutes:** get
 
+<!--Device-Storage-get(key: string, defValue: ValueType): Promise<ValueType>--><!--Device-Storage-get(key: string, defValue: ValueType): Promise<ValueType>-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the data. It cannot be empty. |
-| defValue | ValueType | Yes | Default value to be returned. It can be a number, string, or Boolean value. |
+| defValue | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Default value to be returned. It can be a number, string, or Boolean value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ValueType&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ValueType> | Promise used to return the result. |
 
 **Example**
 
@@ -369,8 +387,7 @@ promiseget.then((value) => {
 getSync(key: string, defValue: ValueType): ValueType
 ```
 
-Obtains the value corresponding to a key. If the value is null or not of the default value type, **defValue** is
-returned.
+Obtains the value corresponding to a key. If the value is null or not of the default value type, **defValue** is returned.
 
 **Since:** 6
 
@@ -378,18 +395,20 @@ returned.
 
 **Substitutes:** get
 
+<!--Device-Storage-getSync(key: string, defValue: ValueType): ValueType--><!--Device-Storage-getSync(key: string, defValue: ValueType): ValueType-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the data. It cannot be empty. |
-| defValue | ValueType | Yes | Default value to be returned if the value of the specified key does not exist. Itcan be a number, string, or Boolean value. |
+| defValue | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Default value to be returned if the value of the specified key does not exist. It can be a number, string, or Boolean value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ValueType | Value corresponding to the specified key. If the value is null or not in the default valueformat, the default value is returned. |
+| [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Value corresponding to the specified key. If the value is null or not in the default value format, the default value is returned. |
 
 **Example**
 
@@ -405,8 +424,7 @@ console.info("The value of startup is " + value);
 has(key: string, callback: AsyncCallback<boolean>): boolean
 ```
 
-Checks whether the storage object contains data with a given key. This API uses an asynchronous callback to
-return the result.
+Checks whether the storage object contains data with a given key. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -414,18 +432,20 @@ return the result.
 
 **Substitutes:** has
 
+<!--Device-Storage-has(key: string, callback: AsyncCallback<boolean>): boolean--><!--Device-Storage-has(key: string, callback: AsyncCallback<boolean>): boolean-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the data. It cannot be empty. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the storage object contains data with the specified key; returns**false** otherwise. |
+| boolean | Returns **true** if the storage object contains data with the specified key; returns **false** otherwise. |
 
 **Example**
 
@@ -456,6 +476,8 @@ Checks whether the storage object contains data with a given key. This API uses 
 
 **Substitutes:** has
 
+<!--Device-Storage-has(key: string): Promise<boolean>--><!--Device-Storage-has(key: string): Promise<boolean>-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -466,7 +488,7 @@ Checks whether the storage object contains data with a given key. This API uses 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. |
 
 **Example**
 
@@ -496,6 +518,8 @@ Checks whether the storage object contains data with a given key.
 
 **Substitutes:** has
 
+<!--Device-Storage-hasSync(key: string): boolean--><!--Device-Storage-hasSync(key: string): boolean-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -506,7 +530,7 @@ Checks whether the storage object contains data with a given key.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the storage object contains data with the specified key; returns**false** otherwise. |
+| boolean | Returns **true** if the storage object contains data with the specified key; returns **false** otherwise. |
 
 **Example**
 
@@ -532,12 +556,14 @@ Unsubscribes from data changes.
 
 **Substitutes:** off
 
+<!--Device-Storage-off(type: 'change', callback: Callback<StorageObserver>): void--><!--Device-Storage-off(type: 'change', callback: Callback<StorageObserver>): void-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. The value **change** indicates data change events. |
-| callback | Callback&lt;StorageObserver&gt; | Yes | Callback for the data change. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<StorageObserver> | Yes | Callback for the data change. |
 
 **Example**
 
@@ -555,8 +581,7 @@ storage.off('change', observer);
 on(type: 'change', callback: Callback<StorageObserver>): void
 ```
 
-Subscribes to data changes. The **StorageObserver** needs to be implemented. When the value of the key subscribed
-to is changed, a callback will be invoked after **flush()** or **flushSync()** is executed.
+Subscribes to data changes. The **StorageObserver** needs to be implemented. When the value of the key subscribed to is changed, a callback will be invoked after **flush()** or **flushSync()** is executed.
 
 **Since:** 6
 
@@ -564,12 +589,14 @@ to is changed, a callback will be invoked after **flush()** or **flushSync()** i
 
 **Substitutes:** on
 
+<!--Device-Storage-on(type: 'change', callback: Callback<StorageObserver>): void--><!--Device-Storage-on(type: 'change', callback: Callback<StorageObserver>): void-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. The value **change** indicates data change events. |
-| callback | Callback&lt;StorageObserver&gt; | Yes | Callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<StorageObserver> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -589,9 +616,7 @@ storage.flushSync();  // observer will be called.
 put(key: string, value: ValueType, callback: AsyncCallback<void>): void
 ```
 
-Obtains the **Storage** instance corresponding to the specified file, writes data to the **Storage** instance
-using a **Storage** API, and saves the modification using **flush()** or **flushSync()**. This API uses an
-asynchronous callback to return the result.
+Obtains the **Storage** instance corresponding to the specified file, writes data to the **Storage** instance using a **Storage** API, and saves the modification using **flush()** or **flushSync()**. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -599,13 +624,15 @@ asynchronous callback to return the result.
 
 **Substitutes:** put
 
+<!--Device-Storage-put(key: string, value: ValueType, callback: AsyncCallback<void>): void--><!--Device-Storage-put(key: string, value: ValueType, callback: AsyncCallback<void>): void-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the data. It cannot be empty. |
-| value | ValueType | Yes | New value to store. It can be a number, string, or Boolean value. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | New value to store. It can be a number, string, or Boolean value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -626,9 +653,7 @@ storage.put('startup', 'auto', function (err) {
 put(key: string, value: ValueType): Promise<void>
 ```
 
-Obtains the **Storage** instance corresponding to the specified file, writes data to the **Storage** instance
-using a **Storage** API, and saves the modification using **flush()** or **flushSync()**. This API uses a promise
-to return the result.
+Obtains the **Storage** instance corresponding to the specified file, writes data to the **Storage** instance using a **Storage** API, and saves the modification using **flush()** or **flushSync()**. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -636,18 +661,20 @@ to return the result.
 
 **Substitutes:** put
 
+<!--Device-Storage-put(key: string, value: ValueType): Promise<void>--><!--Device-Storage-put(key: string, value: ValueType): Promise<void>-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the data. It cannot be empty. |
-| value | ValueType | Yes | New value to store. It can be a number, string, or Boolean value. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | New value to store. It can be a number, string, or Boolean value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Example**
 
@@ -667,8 +694,7 @@ promiseput.then(() => {
 putSync(key: string, value: ValueType): void
 ```
 
-Obtains the **Storage** instance corresponding to the specified file, writes data to the **Storage** instance
-using a **Storage** API, and saves the modification using **flush()** or **flushSync()**.
+Obtains the **Storage** instance corresponding to the specified file, writes data to the **Storage** instance using a **Storage** API, and saves the modification using **flush()** or **flushSync()**.
 
 **Since:** 6
 
@@ -676,12 +702,14 @@ using a **Storage** API, and saves the modification using **flush()** or **flush
 
 **Substitutes:** put
 
+<!--Device-Storage-putSync(key: string, value: ValueType): void--><!--Device-Storage-putSync(key: string, value: ValueType): void-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the data. It cannot be empty. |
-| value | ValueType | Yes | New value to store. It can be a number, string, or Boolean value. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | New value to store. It can be a number, string, or Boolean value. |
 
 **Example**
 

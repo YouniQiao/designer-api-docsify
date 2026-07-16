@@ -1,5 +1,11 @@
 # getDynamicIcon（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getDynamicIcon
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getDynamicIcon(bundleName: string): Promise<string>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getDynamicIcon(bundleName: string): Promise<string>--><!--Device-bundleManager-function getDynamicIcon(bundleName: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -26,7 +34,7 @@ function getDynamicIcon(bundleName: string): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象。返回接口运行结果及动态图标对应的moduleName。 |
+| Promise<string> | Promise对象。返回接口运行结果及动态图标对应的moduleName。 |
 
 **错误码：**
 

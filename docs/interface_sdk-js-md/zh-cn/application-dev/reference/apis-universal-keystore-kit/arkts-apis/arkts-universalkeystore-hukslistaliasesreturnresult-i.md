@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-huks-export interface HuksListAliasesReturnResult--><!--Device-huks-export interface HuksListAliasesReturnResult-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
+
+## 导入模块
+
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+```
 
 ## keyAliases
 
@@ -18,7 +26,9 @@ keyAliases: Array<string>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HuksListAliasesReturnResult-keyAliases: Array<string>--><!--Device-HuksListAliasesReturnResult-keyAliases: Array<string>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 

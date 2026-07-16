@@ -20,13 +20,15 @@ Obtains all Display objects. This API uses an asynchronous callback to return th
 
 **Substitutes:** getAllDisplays(callback:
 
+<!--Device-display-function getAllDisplay(callback: AsyncCallback<Array<Display>>): void--><!--Device-display-function getAllDisplay(callback: AsyncCallback<Array<Display>>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;Display&gt;&gt; | Yes | Callback used to return all the Display objects. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Display>> | Yes | Callback used to return all the Display objects. |
 
 **Example**
 
@@ -59,13 +61,15 @@ Obtains all Display objects. This API uses a promise to return the result.
 
 **Substitutes:** [getAllDisplays()](arkts-arkui-getalldisplays-f.md#getalldisplays-2)
 
+<!--Device-display-function getAllDisplay(): Promise<Array<Display>>--><!--Device-display-function getAllDisplay(): Promise<Array<Display>>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Display&gt;&gt; | Promise used to return all the Display objects. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Display>> | Promise used to return all the Display objects. |
 
 **Example**
 

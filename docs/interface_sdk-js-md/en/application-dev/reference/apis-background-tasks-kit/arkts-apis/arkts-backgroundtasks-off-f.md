@@ -12,12 +12,13 @@ import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 function off(type: 'continuousTaskCancel', callback?: Callback<ContinuousTaskCancelInfo>): void
 ```
 
-Unsubscribes from continuous task cancellation events. This API uses an asynchronous callback to return the
-result.
+Unsubscribes from continuous task cancellation events. This API uses an asynchronous callback to return the result.
 
 **Since:** 15
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
+
+<!--Device-backgroundTaskManager-function off(type: 'continuousTaskCancel', callback?: Callback<ContinuousTaskCancelInfo>): void--><!--Device-backgroundTaskManager-function off(type: 'continuousTaskCancel', callback?: Callback<ContinuousTaskCancelInfo>): void-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -25,8 +26,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'continuousTaskCancel' | Yes | Cancels a continuous task. The value is fixed at**'continuousTaskCancel'**. |
-| callback | Callback&lt;ContinuousTaskCancelInfo&gt; | No | Callback for which listening is cancelled. If thisparameter is left unspecified, all registered callbacks are cancelled. |
+| type | 'continuousTaskCancel' | Yes | Cancels a continuous task. The value is fixed at **'continuousTaskCancel'**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ContinuousTaskCancelInfo> | No | Callback for which listening is cancelled. If this parameter is left unspecified, all registered callbacks are cancelled. |
 
 **Error codes:**
 
@@ -66,12 +67,13 @@ export default class EntryAbility extends UIAbility {
 function off(type: 'continuousTaskSuspend', callback?: Callback<ContinuousTaskSuspendInfo>): void
 ```
 
-Unregisters from the listener for continuous task suspension. This API uses an asynchronous callback to return the
-result.
+Unregisters from the listener for continuous task suspension. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
+
+<!--Device-backgroundTaskManager-function off(type: 'continuousTaskSuspend', callback?: Callback<ContinuousTaskSuspendInfo>): void--><!--Device-backgroundTaskManager-function off(type: 'continuousTaskSuspend', callback?: Callback<ContinuousTaskSuspendInfo>): void-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -79,8 +81,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'continuousTaskSuspend' | Yes | Event type. The value is fixed at **'continuousTaskSuspend'**, indicatingthat the continuous task is suspended. |
-| callback | Callback&lt;ContinuousTaskSuspendInfo&gt; | No | Callback used to unregister from the listener forcontinuous task suspension. If this parameter is not passed, all listeners are unsubscribed from. |
+| type | 'continuousTaskSuspend' | Yes | Event type. The value is fixed at **'continuousTaskSuspend'**, indicating that the continuous task is suspended. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ContinuousTaskSuspendInfo> | No | Callback used to unregister from the listener for continuous task suspension. If this parameter is not passed, all listeners are unsubscribed from. |
 
 **Error codes:**
 
@@ -121,12 +123,13 @@ export default class EntryAbility extends UIAbility {
 function off(type: 'continuousTaskActive', callback?: Callback<ContinuousTaskActiveInfo>): void
 ```
 
-Unregisters from the listener for continuous task activation. This API uses an asynchronous callback to return the
-result.
+Unregisters from the listener for continuous task activation. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
+
+<!--Device-backgroundTaskManager-function off(type: 'continuousTaskActive', callback?: Callback<ContinuousTaskActiveInfo>): void--><!--Device-backgroundTaskManager-function off(type: 'continuousTaskActive', callback?: Callback<ContinuousTaskActiveInfo>): void-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -134,8 +137,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'continuousTaskActive' | Yes | Event type. The value is fixed at **'continuousTaskActive'**, indicatingthat the continuous task is activated. |
-| callback | Callback&lt;ContinuousTaskActiveInfo&gt; | No | Callback used to unregister from the listener forcontinuous task activation. If this parameter is not passed, all listeners are unsubscribed from. |
+| type | 'continuousTaskActive' | Yes | Event type. The value is fixed at **'continuousTaskActive'**, indicating that the continuous task is activated. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ContinuousTaskActiveInfo> | No | Callback used to unregister from the listener for continuous task activation. If this parameter is not passed, all listeners are unsubscribed from. |
 
 **Error codes:**
 

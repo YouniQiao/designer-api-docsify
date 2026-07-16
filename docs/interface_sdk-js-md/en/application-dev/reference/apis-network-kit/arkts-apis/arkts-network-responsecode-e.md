@@ -4,6 +4,8 @@ Enumerates the response codes for an HTTP request.
 
 **Since:** 11
 
+<!--Device-http-export enum ResponseCode--><!--Device-http-export enum ResponseCode-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## OK
@@ -17,6 +19,8 @@ The request was successful. Typically used for GET and POST requests.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResponseCode-OK = 200--><!--Device-ResponseCode-OK = 200-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -32,6 +36,8 @@ Successfully requested and created a new resource.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResponseCode-CREATED--><!--Device-ResponseCode-CREATED-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## ACCEPTED
@@ -45,6 +51,8 @@ The request has been accepted but has not been processed completely.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResponseCode-ACCEPTED--><!--Device-ResponseCode-ACCEPTED-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -60,6 +68,8 @@ Unauthorized information. The request was successful.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResponseCode-NOT_AUTHORITATIVE--><!--Device-ResponseCode-NOT_AUTHORITATIVE-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## NO_CONTENT
@@ -73,6 +83,8 @@ No content. The server successfully processed, but did not return content.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResponseCode-NO_CONTENT--><!--Device-ResponseCode-NO_CONTENT-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -88,6 +100,8 @@ Reset the content.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResponseCode-RESET--><!--Device-ResponseCode-RESET-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## PARTIAL
@@ -101,6 +115,8 @@ Partial content. The server successfully processed some GET requests.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResponseCode-PARTIAL--><!--Device-ResponseCode-PARTIAL-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -116,6 +132,8 @@ Multiple options.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResponseCode-MULT_CHOICE = 300--><!--Device-ResponseCode-MULT_CHOICE = 300-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## MOVED_PERM
@@ -124,12 +142,13 @@ Multiple options.
 MOVED_PERM
 ```
 
-<p>Permanently move. The requested resource has been permanently moved to a new URI,
-and the returned information will include the new URI. The browser will automatically redirect to the new URI.</p>
+<p>Permanently move. The requested resource has been permanently moved to a new URI,and the returned information will include the new URI. The browser will automatically redirect to the new URI.</p>
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResponseCode-MOVED_PERM--><!--Device-ResponseCode-MOVED_PERM-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -145,6 +164,8 @@ Temporary movement.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResponseCode-MOVED_TEMP--><!--Device-ResponseCode-MOVED_TEMP-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## SEE_OTHER
@@ -158,6 +179,8 @@ View other addresses.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResponseCode-SEE_OTHER--><!--Device-ResponseCode-SEE_OTHER-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -173,6 +196,8 @@ Not modified.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResponseCode-NOT_MODIFIED--><!--Device-ResponseCode-NOT_MODIFIED-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## USE_PROXY
@@ -186,6 +211,8 @@ Using proxies.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResponseCode-USE_PROXY--><!--Device-ResponseCode-USE_PROXY-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -201,6 +228,8 @@ The server cannot understand the syntax error error requested by the client.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResponseCode-BAD_REQUEST = 400--><!--Device-ResponseCode-BAD_REQUEST = 400-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## UNAUTHORIZED
@@ -214,6 +243,8 @@ Request for user authentication.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResponseCode-UNAUTHORIZED--><!--Device-ResponseCode-UNAUTHORIZED-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -229,6 +260,8 @@ Reserved for future use.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResponseCode-PAYMENT_REQUIRED--><!--Device-ResponseCode-PAYMENT_REQUIRED-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## FORBIDDEN
@@ -242,6 +275,8 @@ The server understands the request from the requesting client, but refuses to ex
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResponseCode-FORBIDDEN--><!--Device-ResponseCode-FORBIDDEN-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -257,6 +292,8 @@ The server was unable to find resources (web pages) based on the client's reques
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResponseCode-NOT_FOUND--><!--Device-ResponseCode-NOT_FOUND-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## BAD_METHOD
@@ -270,6 +307,8 @@ The method in the client request is prohibited.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResponseCode-BAD_METHOD--><!--Device-ResponseCode-BAD_METHOD-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -285,6 +324,8 @@ The server is unable to complete the request based on the content characteristic
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResponseCode-NOT_ACCEPTABLE--><!--Device-ResponseCode-NOT_ACCEPTABLE-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## PROXY_AUTH
@@ -298,6 +339,8 @@ Request authentication of the proxy's identity.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResponseCode-PROXY_AUTH--><!--Device-ResponseCode-PROXY_AUTH-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -313,6 +356,8 @@ The request took too long and timed out.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResponseCode-CLIENT_TIMEOUT--><!--Device-ResponseCode-CLIENT_TIMEOUT-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## CONFLICT
@@ -321,12 +366,13 @@ The request took too long and timed out.
 CONFLICT
 ```
 
-<p>The server may have returned this code when completing the client's PUT request,
-as there was a conflict when the server was processing the request.</p>
+<p>The server may have returned this code when completing the client's PUT request,as there was a conflict when the server was processing the request.</p>
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResponseCode-CONFLICT--><!--Device-ResponseCode-CONFLICT-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -342,6 +388,8 @@ The resource requested by the client no longer exists.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResponseCode-GONE--><!--Device-ResponseCode-GONE-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## LENGTH_REQUIRED
@@ -355,6 +403,8 @@ The server is unable to process request information sent by the client without C
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResponseCode-LENGTH_REQUIRED--><!--Device-ResponseCode-LENGTH_REQUIRED-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -370,6 +420,8 @@ The prerequisite for requesting information from the client is incorrect.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResponseCode-PRECON_FAILED--><!--Device-ResponseCode-PRECON_FAILED-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## ENTITY_TOO_LARGE
@@ -383,6 +435,8 @@ The request was rejected because the requested entity was too large for the serv
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResponseCode-ENTITY_TOO_LARGE--><!--Device-ResponseCode-ENTITY_TOO_LARGE-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -398,6 +452,8 @@ The requested URI is too long (usually a URL) and the server cannot process it.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResponseCode-REQ_TOO_LONG--><!--Device-ResponseCode-REQ_TOO_LONG-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## UNSUPPORTED_TYPE
@@ -411,6 +467,8 @@ The server is unable to process the requested format.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResponseCode-UNSUPPORTED_TYPE--><!--Device-ResponseCode-UNSUPPORTED_TYPE-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -426,6 +484,8 @@ The server cannot process the requested data range.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ResponseCode-RANGE_NOT_SATISFIABLE--><!--Device-ResponseCode-RANGE_NOT_SATISFIABLE-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## INTERNAL_ERROR
@@ -439,6 +499,8 @@ Internal server error, unable to complete the request.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResponseCode-INTERNAL_ERROR = 500--><!--Device-ResponseCode-INTERNAL_ERROR = 500-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -454,6 +516,8 @@ The server does not support the requested functionality and cannot complete the 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResponseCode-NOT_IMPLEMENTED--><!--Device-ResponseCode-NOT_IMPLEMENTED-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## BAD_GATEWAY
@@ -467,6 +531,8 @@ The server acting as a gateway or proxy received an invalid request from the rem
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResponseCode-BAD_GATEWAY--><!--Device-ResponseCode-BAD_GATEWAY-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -482,6 +548,8 @@ Due to overload or system maintenance, the server is temporarily unable to proce
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResponseCode-UNAVAILABLE--><!--Device-ResponseCode-UNAVAILABLE-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## GATEWAY_TIMEOUT
@@ -496,6 +564,8 @@ The server acting as a gateway or proxy did not obtain requests from the remote 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResponseCode-GATEWAY_TIMEOUT--><!--Device-ResponseCode-GATEWAY_TIMEOUT-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## VERSION
@@ -509,6 +579,8 @@ The version of the HTTP protocol requested by the server.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResponseCode-VERSION--><!--Device-ResponseCode-VERSION-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

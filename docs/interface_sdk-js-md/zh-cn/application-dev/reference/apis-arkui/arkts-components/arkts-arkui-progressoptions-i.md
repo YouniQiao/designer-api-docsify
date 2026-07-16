@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare interface ProgressOptions<Type extends keyof ProgressStyleMap>--><!--Device-unnamed-declare interface ProgressOptions<Type extends keyof ProgressStyleMap>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## style
@@ -26,6 +28,8 @@ style?: ProgressStyle
 
 **替代接口：** [type](arkts-arkui-progressoptions-i.md#type)
 
+<!--Device-ProgressOptions-style?: ProgressStyle--><!--Device-ProgressOptions-style?: ProgressStyle-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## total
@@ -42,9 +46,11 @@ total?: number
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ProgressOptions-total?: number--><!--Device-ProgressOptions-total?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,16 +64,17 @@ type?: Type
 
 默认值：ProgressType.Linear
 
-**说明：** 不同的type需分别对应相应的[style](ProgressAttribute#style)属性设置，详细映射关系参考
-[ProgressStyleMap](arkts-arkui-progressstylemap-i.md)。
+**说明：** 不同的type需分别对应相应的[style](ProgressAttribute#style)属性设置，详细映射关系参考[ProgressStyleMap](arkts-arkui-progressstylemap-i.md)。
 
 **类型：** Type
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ProgressOptions-type?: Type--><!--Device-ProgressOptions-type?: Type-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -87,9 +94,11 @@ value: number
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ProgressOptions-value: number--><!--Device-ProgressOptions-value: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

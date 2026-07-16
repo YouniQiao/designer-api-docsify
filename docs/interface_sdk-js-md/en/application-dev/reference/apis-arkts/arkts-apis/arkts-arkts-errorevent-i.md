@@ -1,11 +1,12 @@
 # ErrorEvent
 
-Provides detailed information about the exception that occurs during worker execution. The ErrorEvent class inherits
-from Event.
+Provides detailed information about the exception that occurs during worker execution. The ErrorEvent class inherits from Event.
 
 **Inheritance/Implementation:** ErrorEvent extends [Event](arkts-arkts-event-i.md)
 
 **Since:** 7
+
+<!--Device-unnamed-export interface ErrorEvent extends Event--><!--Device-unnamed-export interface ErrorEvent extends Event-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -29,6 +30,8 @@ Serial number of the column where the exception is located.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ErrorEvent-readonly colno: number--><!--Device-ErrorEvent-readonly colno: number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## error
@@ -44,6 +47,8 @@ Type of the exception.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ErrorEvent-readonly error: Object--><!--Device-ErrorEvent-readonly error: Object-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -61,6 +66,8 @@ File where the exception is located.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ErrorEvent-readonly filename: string--><!--Device-ErrorEvent-readonly filename: string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## lineno
@@ -77,6 +84,8 @@ Serial number of the line where the exception is located.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ErrorEvent-readonly lineno: number--><!--Device-ErrorEvent-readonly lineno: number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## message
@@ -92,6 +101,8 @@ Information about the exception.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ErrorEvent-readonly message: string--><!--Device-ErrorEvent-readonly message: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

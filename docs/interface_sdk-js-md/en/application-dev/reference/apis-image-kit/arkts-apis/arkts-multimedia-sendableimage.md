@@ -1,10 +1,10 @@
 # @ohos.multimedia.sendableImage
 
-The module provides APIs for image processing based on the [Sendable](../../../../arkts-utils/arkts-sendable.md)
-object. You can use the APIs to create a PixelMap object with specified properties or read pixels of an image (or
-even in a region of an image).
+The module provides APIs for image processing based on the [Sendable](../../../../arkts-utils/arkts-sendable.md)object. You can use the APIs to create a PixelMap object with specified properties or read pixels of an image (or even in a region of an image).
 
 **Since:** 12
+
+<!--Device-unnamed-declare namespace sendableImage--><!--Device-unnamed-declare namespace sendableImage-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

@@ -4,6 +4,8 @@ Enumerates the alignment modes of list items when scrolling ends.
 
 **Since:** 10
 
+<!--Device-unnamed-declare enum ScrollSnapAlign--><!--Device-unnamed-declare enum ScrollSnapAlign-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NONE
@@ -20,6 +22,8 @@ No alignment. This is the default value.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScrollSnapAlign-NONE = 0--><!--Device-ScrollSnapAlign-NONE = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## START
@@ -32,14 +36,15 @@ The first item in the view is aligned at the start of the list.
 
 **NOTE**
 
-When the list hits the end, the items at the end must be completely displayed. In this case, the items at the start
-may not be aligned.
+When the list hits the end, the items at the end must be completely displayed. In this case, the items at the start may not be aligned.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScrollSnapAlign-START = 1--><!--Device-ScrollSnapAlign-START = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -53,14 +58,15 @@ The middle items in the view are aligned in the center of the list.
 
 **NOTE**
 
-The top and end items can be aligned to the center of the list. In this case, which may cause empty space to be
-visible in the list display.
+The top and end items can be aligned to the center of the list. In this case, which may cause empty space to be visible in the list display.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScrollSnapAlign-CENTER = 2--><!--Device-ScrollSnapAlign-CENTER = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,14 +80,15 @@ The last item in the view is aligned at the end of the list.
 
 **NOTE**
 
-When the list hits the start, the items at the start must be completely displayed. In this case, the items at the
-end may not be aligned.
+When the list hits the start, the items at the start must be completely displayed. In this case, the items at the end may not be aligned.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScrollSnapAlign-END = 3--><!--Device-ScrollSnapAlign-END = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

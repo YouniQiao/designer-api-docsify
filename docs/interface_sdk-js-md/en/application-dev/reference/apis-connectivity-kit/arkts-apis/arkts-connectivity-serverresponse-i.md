@@ -4,6 +4,8 @@ Describes the parameters of a response send by the server to a specified read or
 
 **Since:** 26.0.0
 
+<!--Device-ssap-interface ServerResponse--><!--Device-ssap-interface ServerResponse-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import
@@ -18,14 +20,15 @@ import { ssap } from '@kit.ConnectivityKit';
 address: string
 ```
 
-Indicates the device address.
-The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+Indicates the device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
 
 **Type:** string
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ServerResponse-address: string--><!--Device-ServerResponse-address: string-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -35,14 +38,15 @@ The length must be 17, The value consists of hexadecimal digits and colons (:), 
 requestId: number
 ```
 
-The request ID.
-The value range is all integers.
+The request ID.The value range is all integers.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ServerResponse-requestId: int--><!--Device-ServerResponse-requestId: int-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -59,6 +63,8 @@ Indicates the response data.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ServerResponse-value: ArrayBuffer--><!--Device-ServerResponse-value: ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 

@@ -12,12 +12,7 @@ import { ranging } from '@kit.ConnectivityKit';
 function stopRanging(callback: Callback<RangingResult>, params?: RangingParams): void
 ```
 
-Stops ongoing ranging operations.
-If no target device is specified, stops ranging for all devices associated with the callback.
-If a target device is specified, only stops ranging for that specific device.
-This method also releases all occupied resources. For proper resource management,
-stopRanging must be called after startRanging to avoid resource leaks.
-State changes are notified via the onRangingStateChange callback.
+Stops ongoing ranging operations.If no target device is specified, stops ranging for all devices associated with the callback.If a target device is specified, only stops ranging for that specific device.This method also releases all occupied resources. For proper resource management,stopRanging must be called after startRanging to avoid resource leaks.State changes are notified via the onRangingStateChange callback.
 
 **Since:** 26.0.0
 
@@ -25,14 +20,16 @@ State changes are notified via the onRangingStateChange callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ranging-function stopRanging(callback: Callback<RangingResult>, params?: RangingParams): void--><!--Device-ranging-function stopRanging(callback: Callback<RangingResult>, params?: RangingParams): void-End-->
+
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;RangingResult&gt; | Yes | Callback used to return the ranging result. |
-| params | RangingParams | No | Parameters for ranging include deviceId and ranging types. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<RangingResult> | Yes | Callback used to return the ranging result. |
+| params | [RangingParams](arkts-connectivity-rangingparams-i.md) | No | Parameters for ranging include deviceId and ranging types. |
 
 **Error codes:**
 

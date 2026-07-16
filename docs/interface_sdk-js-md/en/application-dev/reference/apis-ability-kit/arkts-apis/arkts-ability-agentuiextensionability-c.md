@@ -10,6 +10,8 @@ The class of agent UI extension ability. This class cannot be used in Harmony Ar
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-unnamed-declare class AgentUIExtensionAbility extends UIExtensionAbility--><!--Device-unnamed-declare class AgentUIExtensionAbility extends UIExtensionAbility-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## Modules to Import

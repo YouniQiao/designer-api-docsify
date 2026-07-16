@@ -4,6 +4,8 @@ Control class for incremental backup procedure.
 
 **Since:** 12
 
+<!--Device-backup-class IncrementalBackupSession--><!--Device-backup-class IncrementalBackupSession-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Append new bundles to incremental backup.
 
 **Required permissions:** ohos.permission.BACKUP
 
+<!--Device-IncrementalBackupSession-appendBundles(bundlesToBackup: Array<IncrementalBackupData>): Promise<void>--><!--Device-IncrementalBackupSession-appendBundles(bundlesToBackup: Array<IncrementalBackupData>): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -34,13 +38,13 @@ Append new bundles to incremental backup.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundlesToBackup | Array&lt;IncrementalBackupData&gt; | Yes | Bundles to incremental backup. |
+| bundlesToBackup | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<IncrementalBackupData> | Yes | Bundles to incremental backup. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -129,6 +133,8 @@ Append new bundles to incremental backup.
 
 **Required permissions:** ohos.permission.BACKUP
 
+<!--Device-IncrementalBackupSession-appendBundles(bundlesToAppend: Array<IncrementalBackupData>, infos: string[]): Promise<void>--><!--Device-IncrementalBackupSession-appendBundles(bundlesToAppend: Array<IncrementalBackupData>, infos: string[]): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -137,14 +143,14 @@ Append new bundles to incremental backup.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundlesToAppend | Array&lt;IncrementalBackupData&gt; | Yes | Bundles to incremental backup. |
+| bundlesToAppend | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<IncrementalBackupData> | Yes | Bundles to incremental backup. |
 | infos | string[] | Yes | information of the bundlesToBackup |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -274,6 +280,8 @@ cancel the application being incrementalBackup.
 
 **Required permissions:** ohos.permission.BACKUP
 
+<!--Device-IncrementalBackupSession-cancel(bundleName: string): int--><!--Device-IncrementalBackupSession-cancel(bundleName: string): int-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -372,6 +380,8 @@ Provides an interface for the tool to clear temporary directories
 
 **Required permissions:** ohos.permission.BACKUP
 
+<!--Device-IncrementalBackupSession-cleanBundleTempDir(bundleName: string): Promise<boolean>--><!--Device-IncrementalBackupSession-cleanBundleTempDir(bundleName: string): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -386,7 +396,7 @@ Provides an interface for the tool to clear temporary directories
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Return clean result, true is success, false is fail. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Return clean result, true is success, false is fail. |
 
 **Error codes:**
 
@@ -474,6 +484,8 @@ Constructor for obtaining the instance of the IncrementalBackupSession class.
 
 **Required permissions:** ohos.permission.BACKUP
 
+<!--Device-IncrementalBackupSession-constructor(callbacks: GeneralCallbacks)--><!--Device-IncrementalBackupSession-constructor(callbacks: GeneralCallbacks)-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -482,7 +494,7 @@ Constructor for obtaining the instance of the IncrementalBackupSession class.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbacks | GeneralCallbacks | Yes | Callbacks to be registered for the backup. |
+| callbacks | [GeneralCallbacks](arkts-corefile-generalcallbacks-i-sys.md) | Yes | Callbacks to be registered for the backup. |
 
 **Error codes:**
 
@@ -554,6 +566,8 @@ Obtain application data size to be backed up.
 
 **Required permissions:** ohos.permission.BACKUP
 
+<!--Device-IncrementalBackupSession-getBackupDataSize(isPreciseScan: boolean, dataList: Array<IncrementalBackupTime>): Promise<void>--><!--Device-IncrementalBackupSession-getBackupDataSize(isPreciseScan: boolean, dataList: Array<IncrementalBackupTime>): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -563,13 +577,13 @@ Obtain application data size to be backed up.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isPreciseScan | boolean | Yes | Indicates whether to obtain the exact data size. |
-| dataList | Array&lt;IncrementalBackupTime&gt; | Yes | Application list. |
+| dataList | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<IncrementalBackupTime> | Yes | Application list. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -703,6 +717,8 @@ Provides an interface for the tool to get compatibility info.
 
 **Required permissions:** ohos.permission.BACKUP
 
+<!--Device-IncrementalBackupSession-getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>--><!--Device-IncrementalBackupSession-getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -718,7 +734,7 @@ Provides an interface for the tool to get compatibility info.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Return compatibility info. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Return compatibility info. |
 
 **Error codes:**
 
@@ -805,6 +821,8 @@ Obtain a Json file that describes local capabilities.
 
 **Required permissions:** ohos.permission.BACKUP
 
+<!--Device-IncrementalBackupSession-getLocalCapabilities(): Promise<FileData>--><!--Device-IncrementalBackupSession-getLocalCapabilities(): Promise<FileData>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -813,7 +831,7 @@ Obtain a Json file that describes local capabilities.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FileData&gt; | A FileData holding all the local capabilities. The returned file is a temporal file that will bedeleted automatically when closed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<FileData> | A FileData holding all the local capabilities. The returned file is a temporal file that will be deleted automatically when closed. |
 
 **Error codes:**
 
@@ -967,6 +985,8 @@ End backup process
 
 **Required permissions:** ohos.permission.BACKUP
 
+<!--Device-IncrementalBackupSession-release(): Promise<void>--><!--Device-IncrementalBackupSession-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -975,7 +995,7 @@ End backup process
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

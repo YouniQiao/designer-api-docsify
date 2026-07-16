@@ -1,18 +1,24 @@
 # getProfileByAbilitySync
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getProfileByAbilitySync
 
 ```TypeScript
 function getProfileByAbilitySync(moduleName: string, abilityName: string, metadataName?: string): Array<string>
 ```
 
-以同步方法根据给定的moduleName、abilityName和metadataName（module.json5中
-[metadata标签](../../../../quick-start/module-configuration-file.md#metadata标签)下的name）获取自身相应配置文件的json格式字符串，返回对象为string数
-组。
+以同步方法根据给定的moduleName、abilityName和metadataName（module.json5中[metadata标签](../../../../quick-start/module-configuration-file.md#metadata标签)下的name）获取自身相应配置文件的json格式字符串，返回对象为string数组。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-bundleManager-function getProfileByAbilitySync(moduleName: string, abilityName: string, metadataName?: string): Array<string>--><!--Device-bundleManager-function getProfileByAbilitySync(moduleName: string, abilityName: string, metadataName?: string): Array<string>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -28,7 +34,7 @@ function getProfileByAbilitySync(moduleName: string, abilityName: string, metada
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 数组对象，返回Array&lt;string&gt;。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 数组对象，返回Array&lt;string&gt;。 |
 
 **错误码：**
 

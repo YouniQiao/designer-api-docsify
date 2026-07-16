@@ -1,10 +1,14 @@
 # ErrorConstructor
 
+<!--Device-unnamed-interface ErrorConstructor--><!--Device-unnamed-interface ErrorConstructor-End-->
+
 ## constructor
 
 ```TypeScript
 new(message?: string): Error
 ```
+
+<!--Device-ErrorConstructor-new(message?: string): Error--><!--Device-ErrorConstructor-new(message?: string): Error-End-->
 
 **Parameters:**
 
@@ -16,7 +20,7 @@ new(message?: string): Error
 
 | Type | Description |
 | --- | --- |
-| Error |  |
+| [Error](arkts-na-error-i.md) |  |
 
 ## constructor
 
@@ -24,6 +28,8 @@ new(message?: string): Error
 (message?: string): Error
 ```
 
+<!--Device-ErrorConstructor-(message?: string): Error--><!--Device-ErrorConstructor-(message?: string): Error-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -34,7 +40,7 @@ new(message?: string): Error
 
 | Type | Description |
 | --- | --- |
-| Error |  |
+| [Error](arkts-na-error-i.md) |  |
 
 ## prototype
 
@@ -43,4 +49,6 @@ readonly prototype: Error
 ```
 
 **Type:** Error
+
+<!--Device-ErrorConstructor-readonly prototype: Error--><!--Device-ErrorConstructor-readonly prototype: Error-End-->
 

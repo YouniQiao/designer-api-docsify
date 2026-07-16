@@ -8,6 +8,8 @@ Enumerates the widget states.
 
 **Substitutes:** FormState
 
+<!--Device-formInfo-enum FormState--><!--Device-formInfo-enum FormState-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 ## UNKNOWN
@@ -23,6 +25,8 @@ Unknown state.
 **Deprecated since:** 9
 
 **Substitutes:** UNKNOWN
+
+<!--Device-FormState-UNKNOWN = -1--><!--Device-FormState-UNKNOWN = -1-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -40,6 +44,8 @@ Default state.
 
 **Substitutes:** DEFAULT
 
+<!--Device-FormState-DEFAULT = 0--><!--Device-FormState-DEFAULT = 0-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 ## READY
@@ -55,6 +61,8 @@ Ready state.
 **Deprecated since:** 9
 
 **Substitutes:** READY
+
+<!--Device-FormState-READY = 1--><!--Device-FormState-READY = 1-End-->
 
 **System capability:** SystemCapability.Ability.Form
 

@@ -8,6 +8,8 @@ ConfigurationConstant模块提供配置信息枚举值定义的能力。
 
 **替代接口：** ConfigurationConstant/ConfigurationConstant
 
+<!--Device-unnamed-declare namespace ConfigurationConstant--><!--Device-unnamed-declare namespace ConfigurationConstant-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## 汇总

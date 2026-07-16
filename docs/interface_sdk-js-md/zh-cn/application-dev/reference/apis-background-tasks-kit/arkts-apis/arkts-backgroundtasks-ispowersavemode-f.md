@@ -1,5 +1,11 @@
 # isPowerSaveMode
 
+## 导入模块
+
+```TypeScript
+import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
+```
+
 ## isPowerSaveMode
 
 ```TypeScript
@@ -11,6 +17,8 @@ function isPowerSaveMode(pid: number): Promise<boolean>
 **起始版本：** 20
 
 **需要权限：** ohos.permission.BACKGROUND_MANAGER_POWER_SAVE_MODE
+
+<!--Device-backgroundProcessManager-function isPowerSaveMode(pid: int): Promise<boolean>--><!--Device-backgroundProcessManager-function isPowerSaveMode(pid: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Resourceschedule.BackgroundProcessManager
 
@@ -24,7 +32,7 @@ function isPowerSaveMode(pid: number): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回进程PID是否处于能效模式，返回true表示进程处于能效模式，返回false表示进程未处于能效模式。 |
+| Promise<boolean> | Promise对象。返回进程PID是否处于能效模式，返回true表示进程处于能效模式，返回false表示进程未处于能效模式。 |
 
 **错误码：**
 

@@ -16,13 +16,15 @@ Obtains the {@link NetHandle} bound to a process using {@link setAppNet}.
 
 **Since:** 10
 
+<!--Device-connection-function getAppNetSync(): NetHandle--><!--Device-connection-function getAppNetSync(): NetHandle-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| NetHandle | Returns the {@link NetHandle} bound to a process using {@link setAppNet}. |
+| [NetHandle](arkts-network-nethandle-i.md) | Returns the {@link NetHandle} bound to a process using {@link setAppNet}. |
 
 **Error codes:**
 

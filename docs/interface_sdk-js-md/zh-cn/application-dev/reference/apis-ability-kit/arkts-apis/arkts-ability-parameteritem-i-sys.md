@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+<!--Device-unnamed-export interface ParameterItem--><!--Device-unnamed-export interface ParameterItem-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **系统接口：** 此接口为系统接口。
@@ -20,6 +22,8 @@ key: string
 
 **起始版本：** 20
 
+<!--Device-ParameterItem-key: string--><!--Device-ParameterItem-key: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +39,8 @@ value: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-ParameterItem-value: string--><!--Device-ParameterItem-value: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 

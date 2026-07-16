@@ -12,12 +12,13 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getMultiLinkedInfo(): Array<WifiLinkedInfo>
 ```
 
-Obtain multiple Wi-Fi connection information when Wi-Fi linked in MLO(Muti-Link Operation) state.
-If does't have the permission of ohos.permission.GET_WIFI_PEERS_MAC, return random bssid.
+Obtain multiple Wi-Fi connection information when Wi-Fi linked in MLO(Muti-Link Operation) state.If does't have the permission of ohos.permission.GET_WIFI_PEERS_MAC, return random bssid.
 
 **Since:** 18
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
+
+<!--Device-wifiManager-function getMultiLinkedInfo(): Array<WifiLinkedInfo>--><!--Device-wifiManager-function getMultiLinkedInfo(): Array<WifiLinkedInfo>-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -25,7 +26,7 @@ If does't have the permission of ohos.permission.GET_WIFI_PEERS_MAC, return rand
 
 | Type | Description |
 | --- | --- |
-| Array&lt;WifiLinkedInfo&gt; | Returns Wi-Fi multiple link information. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<WifiLinkedInfo> | Returns Wi-Fi multiple link information. |
 
 **Error codes:**
 

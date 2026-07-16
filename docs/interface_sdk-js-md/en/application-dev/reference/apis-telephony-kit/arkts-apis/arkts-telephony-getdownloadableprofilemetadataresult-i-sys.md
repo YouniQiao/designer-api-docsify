@@ -4,6 +4,8 @@ Result the metadata for a downloadableProfile.
 
 **Since:** 18
 
+<!--Device-eSIM-export interface GetDownloadableProfileMetadataResult--><!--Device-eSIM-export interface GetDownloadableProfileMetadataResult-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Information about a profile which is downloadable to an eUICC using.
 
 **Since:** 18
 
+<!--Device-GetDownloadableProfileMetadataResult-downloadableProfile: DownloadableProfile--><!--Device-GetDownloadableProfileMetadataResult-downloadableProfile: DownloadableProfile-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ The iccid of the profile.
 **Type:** string
 
 **Since:** 18
+
+<!--Device-GetDownloadableProfileMetadataResult-iccid: string--><!--Device-GetDownloadableProfileMetadataResult-iccid: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -58,6 +64,8 @@ The flag of profile policy rule.
 
 **Since:** 18
 
+<!--Device-GetDownloadableProfileMetadataResult-pprFlag: boolean--><!--Device-GetDownloadableProfileMetadataResult-pprFlag: boolean-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ The type of profile policy rule.
 **Type:** number
 
 **Since:** 18
+
+<!--Device-GetDownloadableProfileMetadataResult-pprType: int--><!--Device-GetDownloadableProfileMetadataResult-pprType: int-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -90,6 +100,8 @@ Profile class for the profile.
 
 **Since:** 18
 
+<!--Device-GetDownloadableProfileMetadataResult-profileClass: ProfileClass--><!--Device-GetDownloadableProfileMetadataResult-profileClass: ProfileClass-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -105,6 +117,8 @@ The profile name.
 **Type:** string
 
 **Since:** 18
+
+<!--Device-GetDownloadableProfileMetadataResult-profileName: string--><!--Device-GetDownloadableProfileMetadataResult-profileName: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -122,6 +136,8 @@ Gets the result of the operation.
 
 **Since:** 18
 
+<!--Device-GetDownloadableProfileMetadataResult-responseResult: ResultCode--><!--Device-GetDownloadableProfileMetadataResult-responseResult: ResultCode-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -138,6 +154,8 @@ The service provider name for the profile.
 
 **Since:** 18
 
+<!--Device-GetDownloadableProfileMetadataResult-serviceProviderName: string--><!--Device-GetDownloadableProfileMetadataResult-serviceProviderName: string-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -153,6 +171,8 @@ Gets the solvable errors.
 **Type:** SolvableErrors
 
 **Since:** 18
+
+<!--Device-GetDownloadableProfileMetadataResult-solvableErrors: SolvableErrors--><!--Device-GetDownloadableProfileMetadataResult-solvableErrors: SolvableErrors-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 

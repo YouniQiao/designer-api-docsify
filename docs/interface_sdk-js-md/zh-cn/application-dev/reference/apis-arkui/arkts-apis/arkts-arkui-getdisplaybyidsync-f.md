@@ -1,5 +1,11 @@
 # getDisplayByIdSync
 
+## 导入模块
+
+```TypeScript
+import { display } from '@kit.ArkUI';
+```
+
 ## getDisplayByIdSync
 
 ```TypeScript
@@ -10,7 +16,9 @@ function getDisplayByIdSync(displayId: number): Display
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-display-function getDisplayByIdSync(displayId: long): Display--><!--Device-display-function getDisplayByIdSync(displayId: long): Display-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -24,7 +32,7 @@ function getDisplayByIdSync(displayId: number): Display
 
 | 类型 | 说明 |
 | --- | --- |
-| Display | 返回displayId对应的Display对象。 |
+| [Display](arkts-arkui-display-i.md) | 返回displayId对应的Display对象。 |
 
 **错误码：**
 

@@ -20,6 +20,8 @@ Applies the current transformation effect to a coordinate point.
 
 **Substitutes:** [transformPoint](arkts-arkui-matrix4transit-i.md#transformpoint-1)
 
+<!--Device-matrix4-function transformPoint(options: [number, number]): [number, number]--><!--Device-matrix4-function transformPoint(options: [number, number]): [number, number]-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

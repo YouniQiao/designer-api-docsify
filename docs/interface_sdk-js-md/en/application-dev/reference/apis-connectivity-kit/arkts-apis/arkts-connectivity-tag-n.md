@@ -4,6 +4,8 @@ Provides methods to operate or manage NFC tag.
 
 **Since:** 12
 
+<!--Device-unnamed-declare namespace tag--><!--Device-unnamed-declare namespace tag-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## Modules to Import
@@ -24,16 +26,16 @@ import { tag } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [getNfcATag](arkts-connectivity-getnfcatag-f.md#getnfcatag-1) | Obtains an {@link NfcATag} object based on the tag information.&lt;p&gt;During tag reading, if the tag supports the NFC-A technology, an {@link NfcATag} objectwill be created based on the tag information. |
-| [getNfcA](arkts-connectivity-getnfca-f.md#getnfca-1) | Obtains an {@link NfcATag} object based on the tag information.During tag reading, if the tag supports the NFC-A technology, an {@link NfcATag} objectwill be created based on the tag information. |
-| [getNfcBTag](arkts-connectivity-getnfcbtag-f.md#getnfcbtag-1) | Obtains an {@link NfcBTag} object based on the tag information.&lt;p&gt;During tag reading, if the tag supports the NFC-B technology, an {@link NfcBTag} objectwill be created based on the tag information. |
-| [getNfcB](arkts-connectivity-getnfcb-f.md#getnfcb-1) | Obtains an {@link NfcBTag} object based on the tag information.During tag reading, if the tag supports the NFC-B technology, an {@link NfcBTag} objectwill be created based on the tag information. |
-| [getNfcFTag](arkts-connectivity-getnfcftag-f.md#getnfcftag-1) | Obtains an {@link NfcFTag} object based on the tag information.&lt;p&gt;During tag reading, if the tag supports the NFC-F technology, an {@link NfcFTag} objectwill be created based on the tag information. |
-| [getNfcF](arkts-connectivity-getnfcf-f.md#getnfcf-1) | Obtains an {@link NfcFTag} object based on the tag information.During tag reading, if the tag supports the NFC-F technology, an {@link NfcFTag} objectwill be created based on the tag information. |
-| [getNfcVTag](arkts-connectivity-getnfcvtag-f.md#getnfcvtag-1) | Obtains an {@link NfcVTag} object based on the tag information.&lt;p&gt;During tag reading, if the tag supports the NFC-V technology, an {@link NfcVTag} objectwill be created based on the tag information. |
-| [getNfcV](arkts-connectivity-getnfcv-f.md#getnfcv-1) | Obtains an {@link NfcVTag} object based on the tag information.During tag reading, if the tag supports the NFC-V technology, an {@link NfcVTag} objectwill be created based on the tag information. |
-| [getIsoDep](arkts-connectivity-getisodep-f.md#getisodep-1) | Obtains an {@link IsoDepTag} object based on the tag information.During tag reading, if the tag supports the IsoDep technology, an {@link IsoDepTag} objectwill be created based on the tag information. |
-| [getNdef](arkts-connectivity-getndef-f.md#getndef-1) | Obtains an {@link NdefTag} object based on the tag information.During tag reading, if the tag supports the NDEF technology, an {@link NdefTag} objectwill be created based on the tag information. |
+| [getNfcATag](arkts-connectivity-getnfcatag-f.md#getnfcatag-1) | Obtains an {@link NfcATag} object based on the tag information.&lt;p&gt;During tag reading, if the tag supports the NFC-A technology, an {@link NfcATag} object will be created based on the tag information. |
+| [getNfcA](arkts-connectivity-getnfca-f.md#getnfca-1) | Obtains an {@link NfcATag} object based on the tag information.During tag reading, if the tag supports the NFC-A technology, an {@link NfcATag} object will be created based on the tag information. |
+| [getNfcBTag](arkts-connectivity-getnfcbtag-f.md#getnfcbtag-1) | Obtains an {@link NfcBTag} object based on the tag information.&lt;p&gt;During tag reading, if the tag supports the NFC-B technology, an {@link NfcBTag} object will be created based on the tag information. |
+| [getNfcB](arkts-connectivity-getnfcb-f.md#getnfcb-1) | Obtains an {@link NfcBTag} object based on the tag information.During tag reading, if the tag supports the NFC-B technology, an {@link NfcBTag} object will be created based on the tag information. |
+| [getNfcFTag](arkts-connectivity-getnfcftag-f.md#getnfcftag-1) | Obtains an {@link NfcFTag} object based on the tag information.&lt;p&gt;During tag reading, if the tag supports the NFC-F technology, an {@link NfcFTag} object will be created based on the tag information. |
+| [getNfcF](arkts-connectivity-getnfcf-f.md#getnfcf-1) | Obtains an {@link NfcFTag} object based on the tag information.During tag reading, if the tag supports the NFC-F technology, an {@link NfcFTag} object will be created based on the tag information. |
+| [getNfcVTag](arkts-connectivity-getnfcvtag-f.md#getnfcvtag-1) | Obtains an {@link NfcVTag} object based on the tag information.&lt;p&gt;During tag reading, if the tag supports the NFC-V technology, an {@link NfcVTag} object will be created based on the tag information. |
+| [getNfcV](arkts-connectivity-getnfcv-f.md#getnfcv-1) | Obtains an {@link NfcVTag} object based on the tag information.During tag reading, if the tag supports the NFC-V technology, an {@link NfcVTag} object will be created based on the tag information. |
+| [getIsoDep](arkts-connectivity-getisodep-f.md#getisodep-1) | Obtains an {@link IsoDepTag} object based on the tag information.During tag reading, if the tag supports the IsoDep technology, an {@link IsoDepTag} object will be created based on the tag information. |
+| [getNdef](arkts-connectivity-getndef-f.md#getndef-1) | Obtains an {@link NdefTag} object based on the tag information.During tag reading, if the tag supports the NDEF technology, an {@link NdefTag} object will be created based on the tag information. |
 | [getMifareClassic](arkts-connectivity-getmifareclassic-f.md#getmifareclassic-1) | Obtains an {@link MifareClassicTag} object based on the tag information.During tag reading, if the tag supports the MIFARE Classic technology,an {@link MifareClassicTag} object will be created based on the tag information. |
 | [getMifareUltralight](arkts-connectivity-getmifareultralight-f.md#getmifareultralight-1) | Obtains an {@link MifareUltralightTag} object based on the tag information.During tag reading, if the tag supports the MIFARE Ultralight technology,an {@link MifareUltralightTag} object will be created based on the tag information. |
 | [getNdefFormatable](arkts-connectivity-getndefformatable-f.md#getndefformatable-1) | Obtains an {@link NdefFormatableTag} object based on the tag information.During tag reading, if the tag supports the NDEF Formatable technology,an {@link NdefFormatableTag} object will be created based on the tag information. |
@@ -50,7 +52,7 @@ import { tag } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [TagInfo](arkts-connectivity-taginfo-i.md) | Provides tag information.&lt;p&gt;This class provides the technology a tag supports, for example, NFC-A. Applications can createdifferent tags based on the supported technology. |
+| [TagInfo](arkts-connectivity-taginfo-i.md) | Provides tag information.&lt;p&gt;This class provides the technology a tag supports, for example, NFC-A. Applications can create different tags based on the supported technology. |
 | [NdefRecord](arkts-connectivity-ndefrecord-i.md) | NDEF records definition, see NFCForum-TS-NDEF_1.0. |
 
 <!--Del-->
@@ -58,7 +60,7 @@ import { tag } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [TagInfo](arkts-connectivity-taginfo-i-sys.md) | Provides tag information.&lt;p&gt;This class provides the technology a tag supports, for example, NFC-A. Applications can createdifferent tags based on the supported technology. |
+| [TagInfo](arkts-connectivity-taginfo-i-sys.md) | Provides tag information.&lt;p&gt;This class provides the technology a tag supports, for example, NFC-A. Applications can create different tags based on the supported technology. |
 <!--DelEnd-->
 
 ### Enums

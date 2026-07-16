@@ -4,6 +4,8 @@ Obtains WCDMA cell information.
 
 **Since:** 8
 
+<!--Device-radio-export interface WcdmaCellInformation--><!--Device-radio-export interface WcdmaCellInformation-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Indicates the cell ID.
 
 **Since:** 8
 
+<!--Device-WcdmaCellInformation-cellId: int--><!--Device-WcdmaCellInformation-cellId: int-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Indicates the location area code.
 **Type:** number
 
 **Since:** 8
+
+<!--Device-WcdmaCellInformation-lac: int--><!--Device-WcdmaCellInformation-lac: int-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -58,6 +64,8 @@ Indicates the mobile country code.
 
 **Since:** 8
 
+<!--Device-WcdmaCellInformation-mcc: string--><!--Device-WcdmaCellInformation-mcc: string-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Indicates the mobile network code.
 **Type:** string
 
 **Since:** 8
+
+<!--Device-WcdmaCellInformation-mnc: string--><!--Device-WcdmaCellInformation-mnc: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -90,6 +100,8 @@ Indicates the primary scrambling code.
 
 **Since:** 8
 
+<!--Device-WcdmaCellInformation-psc: int--><!--Device-WcdmaCellInformation-psc: int-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -105,6 +117,8 @@ Indicates the absolute radio frequency number.
 **Type:** number
 
 **Since:** 8
+
+<!--Device-WcdmaCellInformation-uarfcn: int--><!--Device-WcdmaCellInformation-uarfcn: int-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 

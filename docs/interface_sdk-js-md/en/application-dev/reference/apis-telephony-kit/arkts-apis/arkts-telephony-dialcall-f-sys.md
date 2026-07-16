@@ -18,6 +18,8 @@ Makes a call.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
+<!--Device-call-function dialCall(phoneNumber: string, options: DialCallOptions, callback: AsyncCallback<void>): void--><!--Device-call-function dialCall(phoneNumber: string, options: DialCallOptions, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -27,8 +29,8 @@ Makes a call.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Indicates the called number. |
-| options | DialCallOptions | Yes | Indicates additional information carried in the call. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of dialCall. |
+| options | [DialCallOptions](arkts-telephony-dialcalloptions-i-sys.md) | Yes | Indicates additional information carried in the call. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of dialCall. |
 
 **Error codes:**
 
@@ -78,6 +80,8 @@ Makes a call.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
+<!--Device-call-function dialCall(phoneNumber: string, options?: DialCallOptions): Promise<void>--><!--Device-call-function dialCall(phoneNumber: string, options?: DialCallOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -87,13 +91,13 @@ Makes a call.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Indicates the called number. |
-| options | DialCallOptions | No | Indicates additional information carried in the call. |
+| options | [DialCallOptions](arkts-telephony-dialcalloptions-i-sys.md) | No | Indicates additional information carried in the call. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the dialCall. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the dialCall. |
 
 **Error codes:**
 
@@ -141,6 +145,8 @@ Makes a call.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
+<!--Device-call-function dialCall(phoneNumber: string, callback: AsyncCallback<void>): void--><!--Device-call-function dialCall(phoneNumber: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -150,7 +156,7 @@ Makes a call.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Indicates the called number. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of dialCall. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of dialCall. |
 
 **Error codes:**
 

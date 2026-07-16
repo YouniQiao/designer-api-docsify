@@ -18,6 +18,8 @@ Removes a printer from the printer discovery list. This API uses a promise to re
 
 **Required permissions:** ohos.permission.PRINT
 
+<!--Device-print-function removePrinterFromDiscovery(printerId: string): Promise<void>--><!--Device-print-function removePrinterFromDiscovery(printerId: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
@@ -30,7 +32,7 @@ Removes a printer from the printer discovery list. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

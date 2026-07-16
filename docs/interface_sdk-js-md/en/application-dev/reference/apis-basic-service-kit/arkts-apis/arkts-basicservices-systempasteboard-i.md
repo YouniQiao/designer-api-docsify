@@ -1,10 +1,10 @@
 # SystemPasteboard
 
-Provides **SystemPasteboard** APIs.
-Before calling any **SystemPasteboard** API, you must obtain a **SystemPasteboard** object using
-[getSystemPasteboard](arkts-basicservices-getsystempasteboard-f.md#getsystempasteboard-1).
+Provides **SystemPasteboard** APIs.Before calling any **SystemPasteboard** API, you must obtain a **SystemPasteboard** object using [getSystemPasteboard](arkts-basicservices-getsystempasteboard-f.md#getsystempasteboard-1).
 
 **Since:** 6
+
+<!--Device-pasteboard-interface SystemPasteboard--><!--Device-pasteboard-interface SystemPasteboard-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -28,13 +28,15 @@ Clears the system pasteboard. This API uses an asynchronous callback to return t
 
 **Substitutes:** clearData(callback:
 
+<!--Device-SystemPasteboard-clear(callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-clear(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -70,13 +72,15 @@ Clears the system pasteboard. This API uses a promise to return the result.
 
 **Substitutes:** [clearData()](arkts-basicservices-systempasteboard-i.md#cleardata-2)
 
+<!--Device-SystemPasteboard-clear(): Promise<void>--><!--Device-SystemPasteboard-clear(): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -104,13 +108,15 @@ Clears the system pasteboard. This API uses an asynchronous callback to return t
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SystemPasteboard-clearData(callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-clearData(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -146,13 +152,15 @@ Clears the system pasteboard. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SystemPasteboard-clearData(): Promise<void>--><!--Device-SystemPasteboard-clearData(): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -179,6 +187,8 @@ Clears the system pasteboard. This API returns the result synchronously.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SystemPasteboard-clearDataSync(): void--><!--Device-SystemPasteboard-clearDataSync(): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -207,10 +217,11 @@ try {
 detectPatterns(patterns: Array<Pattern>): Promise<Array<Pattern>>
 ```
 
-Detects [patterns](arkts-basicservices-pattern-e.md) in the system pasteboard. This API uses a promise to return the
-result.
+Detects [patterns](arkts-basicservices-pattern-e.md) in the system pasteboard. This API uses a promise to return the result.
 
 **Since:** 13
+
+<!--Device-SystemPasteboard-detectPatterns(patterns: Array<Pattern>): Promise<Array<Pattern>>--><!--Device-SystemPasteboard-detectPatterns(patterns: Array<Pattern>): Promise<Array<Pattern>>-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -218,13 +229,13 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| patterns | Array&lt;Pattern&gt; | Yes | Pattern to be detected in the system pasteboard. |
+| patterns | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Pattern> | Yes | Pattern to be detected in the system pasteboard. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Pattern&gt;&gt; | Promise used to return the detected patterns. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Pattern>> | Promise used to return the detected patterns. |
 
 **Error codes:**
 
@@ -262,17 +273,13 @@ systemPasteboard.detectPatterns(patterns).then((data: Array<pasteboard.Pattern>)
 getChangeCount(): number
 ```
 
-Obtains the number of pasteboard content changes.
-Returns the number of pasteboard content changes if this API is called successfully; returns **0** otherwise.
-Even though the PasteData expires, or the data becomes empty because of the called
-[clearDataSync](arkts-basicservices-systempasteboard-i.md#cleardatasync-1) API, the number of data changes remains.
-When the system is restarted, or the pasteboard service is restarted due to an exception, the number of
-PasteData changes counts from 0. In addition, copying the same data repeatedly is considered to change the
-data for multiple times. Therefore, each time the data is copied, the number of data changes increases.
+Obtains the number of pasteboard content changes.Returns the number of pasteboard content changes if this API is called successfully; returns **0** otherwise.Even though the PasteData expires, or the data becomes empty because of the called [clearDataSync](arkts-basicservices-systempasteboard-i.md#cleardatasync-1) API, the number of data changes remains.When the system is restarted, or the pasteboard service is restarted due to an exception, the number of PasteData changes counts from 0. In addition, copying the same data repeatedly is considered to change the data for multiple times. Therefore, each time the data is copied, the number of data changes increases.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SystemPasteboard-getChangeCount(): long--><!--Device-SystemPasteboard-getChangeCount(): long-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -312,13 +319,15 @@ Obtains a **PasteData** object from the pasteboard. This API uses an asynchronou
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SystemPasteboard-getData(callback: AsyncCallback<PasteData>): void--><!--Device-SystemPasteboard-getData(callback: AsyncCallback<PasteData>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;PasteData&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<PasteData> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -326,7 +335,7 @@ Obtains a **PasteData** object from the pasteboard. This API uses an asynchronou
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) | Another copy or paste operation is in progress. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have thepermission required to call the API.<br>**Applicable version:** 12 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -362,20 +371,22 @@ Obtains a **PasteData** object from the pasteboard. This API uses a promise to r
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SystemPasteboard-getData(): Promise<PasteData>--><!--Device-SystemPasteboard-getData(): Promise<PasteData>-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PasteData&gt; | Promise used to return the system PasteData. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PasteData> | Promise used to return the system PasteData. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) | Another copy or paste operation is in progress. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have thepermission required to call the API.<br>**Applicable version:** 12 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -405,6 +416,8 @@ Obtains the name of the application that provides data.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SystemPasteboard-getDataSource(): string--><!--Device-SystemPasteboard-getDataSource(): string-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -448,20 +461,22 @@ Obtains a **PasteData** object from the pasteboard. This API returns the result 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SystemPasteboard-getDataSync(): PasteData--><!--Device-SystemPasteboard-getDataSync(): PasteData-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PasteData | Data in the system pasteboard. |
+| [PasteData](arkts-basicservices-pastedata-i.md) | Data in the system pasteboard. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) | Excessive processing time for internal data. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have thepermission required to call the API.<br>**Applicable version:** 12 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -482,8 +497,7 @@ try {
 getDataWithProgress(params: GetDataParams): Promise<PasteData>
 ```
 
-Obtains the PasteData from the system pasteboard with system progress.
-This API uses a promise to return the result. Folders cannot be copied.
+Obtains the PasteData from the system pasteboard with system progress.This API uses a promise to return the result. Folders cannot be copied.
 
 **Since:** 15
 
@@ -491,25 +505,27 @@ This API uses a promise to return the result. Folders cannot be copied.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-SystemPasteboard-getDataWithProgress(params: GetDataParams): Promise<PasteData>--><!--Device-SystemPasteboard-getDataWithProgress(params: GetDataParams): Promise<PasteData>-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | GetDataParams | Yes | Parameters required when an application obtains the Data from thesystem pasteboard, including the destination path, file conflict options, and progress indicator types. |
+| params | [GetDataParams](arkts-basicservices-getdataparams-i.md) | Yes | Parameters required when an application obtains the Data from the system pasteboard, including the destination path, file conflict options, and progress indicator types. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PasteData&gt; | Promise used to return the system PasteData. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PasteData> | Promise used to return the system PasteData. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have thepermission required to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 | [12900003](../../apis-basic-services-kit/errorcode-pasteboard.md#12900003-another-copy-or-paste-operation-in-progress) | Another copy or paste operation is in progress. |
 | [12900007](../../apis-basic-services-kit/errorcode-pasteboard.md#12900007-file-copying-failure) | Invalid destUri or file system error. |
@@ -572,13 +588,15 @@ Obtains the types of PasteData in the system pasteboard. This API uses a promise
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-SystemPasteboard-getMimeTypes(): Promise<Array<string>>--><!--Device-SystemPasteboard-getMimeTypes(): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the types. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return the types. |
 
 **Example**
 
@@ -608,13 +626,15 @@ Obtains a **PasteData** object from the pasteboard. This API uses an asynchronou
 
 **Substitutes:** getData(callback:
 
+<!--Device-SystemPasteboard-getPasteData(callback: AsyncCallback<PasteData>): void--><!--Device-SystemPasteboard-getPasteData(callback: AsyncCallback<PasteData>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;PasteData&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<PasteData> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -655,13 +675,15 @@ Obtains a **PasteData** object from the pasteboard. This API uses a promise to r
 
 **Substitutes:** [getData()](arkts-basicservices-systempasteboard-i.md#getdata-2)
 
+<!--Device-SystemPasteboard-getPasteData(): Promise<PasteData>--><!--Device-SystemPasteboard-getPasteData(): Promise<PasteData>-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PasteData&gt; | Promise used to return the system PasteData. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PasteData> | Promise used to return the system PasteData. |
 
 **Example**
 
@@ -694,19 +716,21 @@ Obtains a **PasteData** object from the system pasteboard. This API uses a promi
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SystemPasteboard-getUnifiedData(): Promise<unifiedDataChannel.UnifiedData>--><!--Device-SystemPasteboard-getUnifiedData(): Promise<unifiedDataChannel.UnifiedData>-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;unifiedDataChannel.UnifiedData&gt; | Promise used to return the system PasteData. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<unifiedDataChannel.UnifiedData> | Promise used to return the system PasteData. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have thepermission required to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) | Another copy or paste operation is in progress. |
 
 **Example**
@@ -744,6 +768,8 @@ Obtains a **UnifiedData** object from the system pasteboard. This API returns th
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SystemPasteboard-getUnifiedDataSync(): unifiedDataChannel.UnifiedData--><!--Device-SystemPasteboard-getUnifiedDataSync(): unifiedDataChannel.UnifiedData-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Return value:**
@@ -756,7 +782,7 @@ Obtains a **UnifiedData** object from the system pasteboard. This API returns th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have thepermission required to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) | Excessive processing time for internal data. |
 
 **Example**
@@ -786,13 +812,15 @@ Checks whether the system pasteboard contains data. This API uses an asynchronou
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SystemPasteboard-hasData(callback: AsyncCallback<boolean>): void--><!--Device-SystemPasteboard-hasData(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. Returns **true** if the systempasteboard contains data; returns **false** otherwise. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. Returns **true** if the system pasteboard contains data; returns **false** otherwise. |
 
 **Error codes:**
 
@@ -828,13 +856,15 @@ Checks whether the system pasteboard contains data. This API uses a promise to r
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SystemPasteboard-hasData(): Promise<boolean>--><!--Device-SystemPasteboard-hasData(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Callback used to return the result.Returns **true** if the system pasteboard contains data; returns **false** otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Callback used to return the result.Returns **true** if the system pasteboard contains data; returns **false** otherwise. |
 
 **Example**
 
@@ -861,6 +891,8 @@ Checks whether the system pasteboard contains data. This API returns the result 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SystemPasteboard-hasDataSync(): boolean--><!--Device-SystemPasteboard-hasDataSync(): boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -901,6 +933,8 @@ Checks whether the pasteboard contains data of the specified type.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SystemPasteboard-hasDataType(mimeType: string): boolean--><!--Device-SystemPasteboard-hasDataType(mimeType: string): boolean-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
@@ -913,7 +947,7 @@ Checks whether the pasteboard contains data of the specified type.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the pasteboard contains data of the specified type; returns **false**otherwise. |
+| boolean | Returns **true** if the pasteboard contains data of the specified type; returns **false** otherwise. |
 
 **Error codes:**
 
@@ -949,13 +983,15 @@ Checks whether the system pasteboard contains data. This API uses an asynchronou
 
 **Substitutes:** hasData(callback:
 
+<!--Device-SystemPasteboard-hasPasteData(callback: AsyncCallback<boolean>): void--><!--Device-SystemPasteboard-hasPasteData(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. Returns **true** if the systempasteboard contains data; returns **false** otherwise. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. Returns **true** if the system pasteboard contains data; returns **false** otherwise. |
 
 **Error codes:**
 
@@ -993,13 +1029,15 @@ Checks whether the system pasteboard contains data. This API uses a promise to r
 
 **Substitutes:** [hasData()](arkts-basicservices-systempasteboard-i.md#hasdata-2)
 
+<!--Device-SystemPasteboard-hasPasteData(): Promise<boolean>--><!--Device-SystemPasteboard-hasPasteData(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Callback used to return the result.Returns **true** if the system pasteboard contains data; returns **false** otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Callback used to return the result.Returns **true** if the system pasteboard contains data; returns **false** otherwise. |
 
 **Example**
 
@@ -1021,13 +1059,13 @@ systemPasteboard.hasPasteData().then((data: boolean) => {
 hasRemoteData(): boolean
 ```
 
-Checks whether the PasteData is on a remote device. Transferring data across devices takes time. If the
-PasteData is in a remote device, do not check for custom data types or read the PasteData on the UI
-thread.
+Checks whether the PasteData is on a remote device. Transferring data across devices takes time. If the PasteData is in a remote device, do not check for custom data types or read the PasteData on the UI thread.
 
 **Since:** 24
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-SystemPasteboard-hasRemoteData(): boolean--><!--Device-SystemPasteboard-hasRemoteData(): boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -1035,7 +1073,7 @@ thread.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns the check result. The value **true** indicates that the PasteDatais in a remote device, and **false** indicates the opposite. Default value: **false**. |
+| boolean | Returns the check result. The value **true** indicates that the PasteData is in a remote device, and **false** indicates the opposite. Default value: **false**. |
 
 **Example**
 
@@ -1059,6 +1097,8 @@ Checks whether the data in the pasteboard is from another device.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SystemPasteboard-isRemoteData(): boolean--><!--Device-SystemPasteboard-isRemoteData(): boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -1097,6 +1137,8 @@ Unsubscribes the content change event of the system pasteboard.
 
 **Since:** 7
 
+<!--Device-SystemPasteboard-off(type: 'update', callback?: () => void): void--><!--Device-SystemPasteboard-off(type: 'update', callback?: () => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
@@ -1104,7 +1146,7 @@ Unsubscribes the content change event of the system pasteboard.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'update' | Yes | Event type. The value **'update'** indicates changes in the pasteboard content. |
-| callback | () =&gt; void | No | the callback to remove.If this parameter is not filled in, it indicates that all callbacks for this application will be cleared.Otherwise, it indicates that the specified callback will be cleared. |
+| callback | () => void | No | the callback to remove.If this parameter is not filled in, it indicates that all callbacks for this application will be cleared.Otherwise, it indicates that the specified callback will be cleared. |
 
 **Error codes:**
 
@@ -1136,13 +1178,15 @@ Remove a callback invoked when remote pasteboard content changes.
 
 **Since:** 22
 
+<!--Device-SystemPasteboard-offRemoteUpdate(callback?: UpdateCallback): void--><!--Device-SystemPasteboard-offRemoteUpdate(callback?: UpdateCallback): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | UpdateCallback | No | the callback to remove. If this parameter is not filled in, it indicatesthat all callbacks for this application will be cleared. Otherwise, it indicates that the specified callbackwill be cleared. |
+| callback | [UpdateCallback](arkts-basicservices-updatecallback-t.md) | No | the callback to remove. If this parameter is not filled in, it indicates that all callbacks for this application will be cleared. Otherwise, it indicates that the specified callback will be cleared. |
 
 **Example**
 
@@ -1165,6 +1209,8 @@ Subscribes the content change event of the system pasteboard.
 
 **Since:** 7
 
+<!--Device-SystemPasteboard-on(type: 'update', callback: () => void): void--><!--Device-SystemPasteboard-on(type: 'update', callback: () => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
@@ -1172,7 +1218,7 @@ Subscribes the content change event of the system pasteboard.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'update' | Yes | Event type. The value **'update'** indicates changes in the pasteboard content. |
-| callback | () =&gt; void | Yes | Callback invoked when the pasteboard content changes. |
+| callback | () => void | Yes | Callback invoked when the pasteboard content changes. |
 
 **Error codes:**
 
@@ -1204,13 +1250,15 @@ Add a callback invoked when remote pasteboard content changes.
 
 **Since:** 22
 
+<!--Device-SystemPasteboard-onRemoteUpdate(callback: UpdateCallback): void--><!--Device-SystemPasteboard-onRemoteUpdate(callback: UpdateCallback): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | UpdateCallback | Yes | the callback to add. |
+| callback | [UpdateCallback](arkts-basicservices-updatecallback-t.md) | Yes | the callback to add. |
 
 **Example**
 
@@ -1235,14 +1283,16 @@ Writes a **PasteData** object to the pasteboard. This API uses an asynchronous c
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SystemPasteboard-setData(data: PasteData, callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-setData(data: PasteData, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | PasteData | Yes | **PasteData** object. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| data | [PasteData](arkts-basicservices-pastedata-i.md) | Yes | **PasteData** object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1282,19 +1332,21 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SystemPasteboard-setData(data: PasteData): Promise<void>--><!--Device-SystemPasteboard-setData(data: PasteData): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | PasteData | Yes | **PasteData** object. |
+| data | [PasteData](arkts-basicservices-pastedata-i.md) | Yes | **PasteData** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1334,13 +1386,15 @@ Writes data to the system system pasteboard. This API returns the result synchro
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SystemPasteboard-setDataSync(data: PasteData): void--><!--Device-SystemPasteboard-setDataSync(data: PasteData): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | PasteData | Yes | Data to be written to the pasteboard. |
+| data | [PasteData](arkts-basicservices-pastedata-i.md) | Yes | Data to be written to the pasteboard. |
 
 **Error codes:**
 
@@ -1377,14 +1431,16 @@ Writes a **PasteData** object to the system pasteboard. This API uses an asynchr
 
 **Substitutes:** setData(data:
 
+<!--Device-SystemPasteboard-setPasteData(data: PasteData, callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-setPasteData(data: PasteData, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | PasteData | Yes | **PasteData** object. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| data | [PasteData](arkts-basicservices-pastedata-i.md) | Yes | **PasteData** object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1421,19 +1477,21 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 **Substitutes:** setData(data:
 
+<!--Device-SystemPasteboard-setPasteData(data: PasteData): Promise<void>--><!--Device-SystemPasteboard-setPasteData(data: PasteData): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | PasteData | Yes | **PasteData** object. |
+| data | [PasteData](arkts-basicservices-pastedata-i.md) | Yes | **PasteData** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -1462,6 +1520,8 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SystemPasteboard-setUnifiedData(data: unifiedDataChannel.UnifiedData): Promise<void>--><!--Device-SystemPasteboard-setUnifiedData(data: unifiedDataChannel.UnifiedData): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
@@ -1474,7 +1534,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1523,6 +1583,8 @@ Writes data to the system pasteboard. This API returns the result synchronously.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SystemPasteboard-setUnifiedDataSync(data: unifiedDataChannel.UnifiedData): void--><!--Device-SystemPasteboard-setUnifiedDataSync(data: unifiedDataChannel.UnifiedData): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-certificateManager-export interface CertInfo--><!--Device-certificateManager-export interface CertInfo-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
+
+## 导入模块
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+```
 
 ## cert
 
@@ -17,6 +25,8 @@ cert: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 11
+
+<!--Device-CertInfo-cert: Uint8Array--><!--Device-CertInfo-cert: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -32,6 +42,8 @@ certAlias: string
 
 **起始版本：** 11
 
+<!--Device-CertInfo-certAlias: string--><!--Device-CertInfo-certAlias: string-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## fingerprintSha256
@@ -45,6 +57,8 @@ fingerprintSha256: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-CertInfo-fingerprintSha256: string--><!--Device-CertInfo-fingerprintSha256: string-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -60,6 +74,8 @@ issuerName: string
 
 **起始版本：** 11
 
+<!--Device-CertInfo-issuerName: string--><!--Device-CertInfo-issuerName: string-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## notAfter
@@ -73,6 +89,8 @@ notAfter: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-CertInfo-notAfter: string--><!--Device-CertInfo-notAfter: string-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -88,6 +106,8 @@ notBefore: string
 
 **起始版本：** 11
 
+<!--Device-CertInfo-notBefore: string--><!--Device-CertInfo-notBefore: string-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## serial
@@ -101,6 +121,8 @@ serial: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-CertInfo-serial: string--><!--Device-CertInfo-serial: string-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -116,6 +138,8 @@ state: boolean
 
 **起始版本：** 11
 
+<!--Device-CertInfo-state: boolean--><!--Device-CertInfo-state: boolean-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## subjectName
@@ -130,6 +154,8 @@ subjectName: string
 
 **起始版本：** 11
 
+<!--Device-CertInfo-subjectName: string--><!--Device-CertInfo-subjectName: string-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## uri
@@ -143,6 +169,8 @@ uri: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-CertInfo-uri: string--><!--Device-CertInfo-uri: string-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 

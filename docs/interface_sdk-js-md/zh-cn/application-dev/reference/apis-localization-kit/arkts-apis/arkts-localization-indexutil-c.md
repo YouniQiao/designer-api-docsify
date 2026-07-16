@@ -4,7 +4,15 @@
 
 **起始版本：** 8
 
+<!--Device-i18n-export class IndexUtil--><!--Device-i18n-export class IndexUtil-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
 
 ## addLocale
 
@@ -16,7 +24,9 @@ addLocale(locale: string): void
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-IndexUtil-addLocale(locale: string): void--><!--Device-IndexUtil-addLocale(locale: string): void-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -46,7 +56,9 @@ getIndex(text: string): string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-IndexUtil-getIndex(text: string): string--><!--Device-IndexUtil-getIndex(text: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -82,7 +94,9 @@ getIndexList(): Array<string>
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-IndexUtil-getIndexList(): Array<string>--><!--Device-IndexUtil-getIndexList(): Array<string>-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -90,7 +104,7 @@ getIndexList(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 当前区域的索引列表。第一个元素和最后一个元素为“...”。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 当前区域的索引列表。第一个元素和最后一个元素为“...”。 |
 
 **示例：**
 

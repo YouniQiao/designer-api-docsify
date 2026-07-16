@@ -8,7 +8,15 @@
 
 **起始版本：** 18
 
+<!--Device-unnamed-export interface ArcAlphabetIndexerInterface--><!--Device-unnamed-export interface ArcAlphabetIndexerInterface-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
+
+## 导入模块
+
+```TypeScript
+import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from '@kit.ArkUI';
+```
 
 ## constructor
 
@@ -20,7 +28,9 @@
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcAlphabetIndexerInterface-(info: ArcAlphabetIndexerInitInfo): ArcAlphabetIndexerAttribute--><!--Device-ArcAlphabetIndexerInterface-(info: ArcAlphabetIndexerInitInfo): ArcAlphabetIndexerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -28,11 +38,11 @@
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | ArcAlphabetIndexerInitInfo | 是 | 定义弧形字母索引条的初始化参数。 |
+| info | [ArcAlphabetIndexerInitInfo](arkts-arkui-arcalphabetindexerinitinfo-i.md) | 是 | 定义弧形字母索引条的初始化参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArcAlphabetIndexerAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 

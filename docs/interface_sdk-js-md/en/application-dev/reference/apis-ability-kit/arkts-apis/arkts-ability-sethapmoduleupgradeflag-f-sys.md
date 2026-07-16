@@ -19,6 +19,10 @@ Sets an upgrade flag for a module. This API uses an asynchronous callback to ret
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 
+<!--Device-freeInstall-function setHapModuleUpgradeFlag(bundleName: string, 
+    moduleName: string, upgradeFlag: UpgradeFlag, callback: AsyncCallback<void>): void--><!--Device-freeInstall-function setHapModuleUpgradeFlag(bundleName: string, 
+    moduleName: string, upgradeFlag: UpgradeFlag, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
@@ -29,8 +33,8 @@ Sets an upgrade flag for a module. This API uses an asynchronous callback to ret
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | moduleName | string | Yes | Module name. |
-| upgradeFlag | UpgradeFlag | Yes | Upgrade flag, which is for internal use only. |
-| callback | AsyncCallback&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. Ifthe operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| upgradeFlag | [UpgradeFlag](arkts-ability-upgradeflag-e-sys.md) | Yes | Upgrade flag, which is for internal use only. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -56,6 +60,8 @@ Sets an upgrade flag for a module. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 
+<!--Device-freeInstall-function setHapModuleUpgradeFlag(bundleName: string, moduleName: string, upgradeFlag: UpgradeFlag): Promise<void>--><!--Device-freeInstall-function setHapModuleUpgradeFlag(bundleName: string, moduleName: string, upgradeFlag: UpgradeFlag): Promise<void>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
@@ -66,13 +72,13 @@ Sets an upgrade flag for a module. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | moduleName | string | Yes | Module name. |
-| upgradeFlag | UpgradeFlag | Yes | Upgrade flag, which is for internal use only. |
+| upgradeFlag | [UpgradeFlag](arkts-ability-upgradeflag-e-sys.md) | Yes | Upgrade flag, which is for internal use only. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

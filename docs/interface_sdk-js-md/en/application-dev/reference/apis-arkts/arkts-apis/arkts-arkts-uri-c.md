@@ -4,6 +4,8 @@ URI Represents a Uniform Resource Identifier (URI) reference.
 
 **Since:** 8
 
+<!--Device-uri-export class URI--><!--Device-uri-export class URI-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -18,12 +20,13 @@ import { uri } from '@kit.ArkTS';
 addEncodedSegment(pathSegment: string): URI
 ```
 
-Appends an encoded field to the path component of this URI to create a new URI and returns the new URI,
-while keeping the existing URI unchanged.
+Appends an encoded field to the path component of this URI to create a new URI and returns the new URI,while keeping the existing URI unchanged.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-URI-addEncodedSegment(pathSegment: string): URI--><!--Device-URI-addEncodedSegment(pathSegment: string): URI-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -37,7 +40,7 @@ while keeping the existing URI unchanged.
 
 | Type | Description |
 | --- | --- |
-| URI | After adding, return the URI object. |
+| [URI](arkts-arkts-uri-c.md) | After adding, return the URI object. |
 
 **Example**
 
@@ -60,6 +63,8 @@ Adds a query parameter to this URI to create a new URI, while keeping the existi
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-URI-addQueryValue(key: string, value: string): URI--><!--Device-URI-addQueryValue(key: string, value: string): URI-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -73,7 +78,7 @@ Adds a query parameter to this URI to create a new URI, while keeping the existi
 
 | Type | Description |
 | --- | --- |
-| URI | Return URI object. |
+| [URI](arkts-arkts-uri-c.md) | Return URI object. |
 
 **Example**
 
@@ -90,12 +95,13 @@ console.info(newRoute.toString()); // https://www.test.com?param1=hello%20world
 addSegment(pathSegment: string): URI
 ```
 
-Encodes a given field, appends it to the path component of this URI to create a new URI, and returns the new URI,
-while keeping the existing URI unchanged.
+Encodes a given field, appends it to the path component of this URI to create a new URI, and returns the new URI,while keeping the existing URI unchanged.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-URI-addSegment(pathSegment: string): URI--><!--Device-URI-addSegment(pathSegment: string): URI-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -109,7 +115,7 @@ while keeping the existing URI unchanged.
 
 | Type | Description |
 | --- | --- |
-| URI | After adding, return the URI object. |
+| [URI](arkts-arkts-uri-c.md) | After adding, return the URI object. |
 
 **Example**
 
@@ -126,12 +132,13 @@ console.info(newRoute.toString()); // http://www.test.com/my%20image.jpg
 checkHierarchical(): boolean
 ```
 
-Checks whether this URI is a hierarchical URI. The URI that starts with a slash (/) in scheme-specific-part is a
-hierarchical URI. Relative URIs are also hierarchical.
+Checks whether this URI is a hierarchical URI. The URI that starts with a slash (/) in scheme-specific-part is a hierarchical URI. Relative URIs are also hierarchical.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-URI-checkHierarchical(): boolean--><!--Device-URI-checkHierarchical(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -163,13 +170,15 @@ Checks whether this URI is an absolute URI (whether the scheme component is defi
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-URI-checkIsAbsolute(): boolean--><!--Device-URI-checkIsAbsolute(): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | boolean Indicates whether the URI is an absolute URI (whether the scheme component isdefined). |
+| boolean | boolean Indicates whether the URI is an absolute URI (whether the scheme component is defined). |
 
 **Example**
 
@@ -192,6 +201,8 @@ Checks whether this URI is an opaque URI. The URI that does not start with a sla
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-URI-checkOpaque(): boolean--><!--Device-URI-checkOpaque(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -223,6 +234,8 @@ Determine whether URI is Relative.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-URI-checkRelative(): boolean--><!--Device-URI-checkRelative(): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -253,13 +266,15 @@ Clears the query component of this URI to create a new URI, while keeping the ex
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-URI-clearQuery(): URI--><!--Device-URI-clearQuery(): URI-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| URI | After clearing, return the URI object. |
+| [URI](arkts-arkts-uri-c.md) | After clearing, return the URI object. |
 
 **Example**
 
@@ -280,6 +295,8 @@ A constructor used to create a URI instance.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URI-constructor(uri: string)--><!--Device-URI-constructor(uri: string)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -320,6 +337,8 @@ Creates a URI based on the provided scheme, scheme-specific-part, and fragment c
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-URI-static createFromParts(scheme: string, ssp: string, fragment: string): URI--><!--Device-URI-static createFromParts(scheme: string, ssp: string, fragment: string): URI-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -334,7 +353,7 @@ Creates a URI based on the provided scheme, scheme-specific-part, and fragment c
 
 | Type | Description |
 | --- | --- |
-| URI | Return Uri consisting of a given scheme, SSP, and fragment. |
+| [URI](arkts-arkts-uri-c.md) | Return Uri consisting of a given scheme, SSP, and fragment. |
 
 **Example**
 
@@ -358,13 +377,15 @@ Check whether this URI is equivalent to other URI objects.
 
 **Substitutes:** equalsTo
 
+<!--Device-URI-equals(other: URI): boolean--><!--Device-URI-equals(other: URI): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | URI | Yes | other other URI object to be compared |
+| other | [URI](arkts-arkts-uri-c.md) | Yes | other other URI object to be compared |
 
 **Return value:**
 
@@ -393,13 +414,15 @@ Checks whether this URI is the same as another URI object.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-URI-equalsTo(other: URI): boolean--><!--Device-URI-equalsTo(other: URI): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | URI | Yes | URI object to compare. |
+| other | [URI](arkts-arkts-uri-c.md) | Yes | URI object to compare. |
 
 **Return value:**
 
@@ -427,6 +450,8 @@ Obtains the value of the Boolean type of a query parameter in this URI.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-URI-getBooleanQueryValue(key: string, defaultValue: boolean): boolean--><!--Device-URI-getBooleanQueryValue(key: string, defaultValue: boolean): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -471,6 +496,8 @@ Obtains the last segment of this URI.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-URI-getLastSegment(): string--><!--Device-URI-getLastSegment(): string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -499,6 +526,8 @@ Obtains all non-repeated keys in the query component of this URI.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-URI-getQueryNames(): string[]--><!--Device-URI-getQueryNames(): string[]-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -522,13 +551,13 @@ console.info(paramNames.toString()); // param1,param2
 getQueryValue(key: string): string
 ```
 
-Obtains the first value of a given key from the query component of this URI. If the query component contains
-encoded content,
-this API decodes the key before obtaining the value.
+Obtains the first value of a given key from the query component of this URI. If the query component contains encoded content,this API decodes the key before obtaining the value.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-URI-getQueryValue(key: string): string--><!--Device-URI-getQueryValue(key: string): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -567,6 +596,8 @@ Obtains the values of a given key from the query component of this URI.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-URI-getQueryValues(key: string): string[]--><!--Device-URI-getQueryValues(key: string): string[]-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -602,6 +633,8 @@ Gets the decoded path segments.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-URI-getSegment(): string[]--><!--Device-URI-getSegment(): string[]-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -630,13 +663,15 @@ Normalizes the path of this URI.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-URI-normalize(): URI--><!--Device-URI-normalize(): URI-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| URI | URI Used to normalize the path of this URI and return a URI object whose path has beennormalized. |
+| [URI](arkts-arkts-uri-c.md) | URI Used to normalize the path of this URI and return a URI object whose path has been normalized. |
 
 **Example**
 
@@ -665,6 +700,8 @@ Converts this URI into an encoded string.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URI-toString(): string--><!--Device-URI-toString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -696,6 +733,8 @@ Gets/Sets the decoding permission component part of this URI.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-URI-authority: string--><!--Device-URI-authority: string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## encodedAuthority
@@ -711,6 +750,8 @@ Gets/Sets the encoded authority part of this URI.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-URI-encodedAuthority: string--><!--Device-URI-encodedAuthority: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -728,6 +769,8 @@ Gets/Sets the encoded fragment part of this URI, everything after the '#'.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-URI-encodedFragment: string--><!--Device-URI-encodedFragment: string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## encodedPath
@@ -743,6 +786,8 @@ Gets/Sets the encoded path portion of the URI.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-URI-encodedPath: string--><!--Device-URI-encodedPath: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -760,6 +805,8 @@ Gets/Sets the encoded query component from this URI.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-URI-encodedQuery: string--><!--Device-URI-encodedQuery: string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## encodedSSP
@@ -768,14 +815,15 @@ Gets/Sets the encoded query component from this URI.
 encodedSSP: string
 ```
 
-Gets/Sets the scheme-specific part of this URI, i.e. everything between the scheme separator ':' and
-the fragment separator '#'.
+Gets/Sets the scheme-specific part of this URI, i.e. everything between the scheme separator ':' and the fragment separator '#'.
 
 **Type:** string
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-URI-encodedSSP: string--><!--Device-URI-encodedSSP: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -793,6 +841,8 @@ Gets/Sets Obtains the encoded user information part of the URI.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-URI-encodedUserInfo: string--><!--Device-URI-encodedUserInfo: string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## fragment
@@ -808,6 +858,8 @@ Gets/Sets the fragment part of the URI.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URI-fragment: string--><!--Device-URI-fragment: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -825,6 +877,8 @@ Gets the hostname portion of the URI without a port.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-URI-host: string--><!--Device-URI-host: string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## path
@@ -840,6 +894,8 @@ Gets/Sets the path portion of the URI.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URI-path: string--><!--Device-URI-path: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -857,6 +913,8 @@ Gets the port portion of the URI.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-URI-port: string--><!--Device-URI-port: string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## query
@@ -872,6 +930,8 @@ Gets/Sets the query portion of the URI
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URI-query: string--><!--Device-URI-query: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -889,6 +949,8 @@ Gets/Sets the protocol part of the URI.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-URI-scheme: string--><!--Device-URI-scheme: string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## ssp
@@ -905,6 +967,8 @@ Gets/Sets the decoding scheme-specific part of the URI.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-URI-ssp: string--><!--Device-URI-ssp: string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## userInfo
@@ -920,6 +984,8 @@ Gets/Sets Obtains the user information part of the URI.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URI-userInfo: string--><!--Device-URI-userInfo: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

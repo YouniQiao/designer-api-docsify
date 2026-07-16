@@ -12,12 +12,13 @@ import { adminManager } from '@kit.MDMKit';
 function isSuperAdmin(bundleName: String, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a super device administrator application is enabled based on **bundleName**. This API uses an
-asynchronous callback to return the result.
+Checks whether a super device administrator application is enabled based on **bundleName**. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-adminManager-function isSuperAdmin(bundleName: String, callback: AsyncCallback<boolean>): void--><!--Device-adminManager-function isSuperAdmin(bundleName: String, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -27,8 +28,8 @@ asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | String | Yes | Super device administrator application. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback invoked to return the result. If the operation is successful,**err** is **null** and **data** is a Boolean value (**true** means that the device administrator applicationis enabled; and **false** means the opposite). If the operation fails, **err** is an error object. |
+| bundleName | [String](../../apis-na/arkts-apis/arkts-na-string-i.md) | Yes | Super device administrator application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback invoked to return the result. If the operation is successful,**err** is **null** and **data** is a Boolean value (**true** means that the device administrator application is enabled; and **false** means the opposite). If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -63,12 +64,13 @@ adminManager.isSuperAdmin(bundleName, (err, result) => {
 function isSuperAdmin(bundleName: String): Promise<boolean>
 ```
 
-Checks whether a super device administrator application is enabled based on **bundleName**. This API uses a promise
-to return the result.
+Checks whether a super device administrator application is enabled based on **bundleName**. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-adminManager-function isSuperAdmin(bundleName: String): Promise<boolean>--><!--Device-adminManager-function isSuperAdmin(bundleName: String): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -78,13 +80,13 @@ to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | String | Yes | Super device administrator application. |
+| bundleName | [String](../../apis-na/arkts-apis/arkts-na-string-i.md) | Yes | Super device administrator application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the super deviceadministrator application is enabled; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means the super device administrator application is enabled; the value **false** means the opposite. |
 
 **Error codes:**
 

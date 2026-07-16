@@ -8,6 +8,8 @@
 
 **替代接口：** InterruptType
 
+<!--Device-audio-enum InterruptActionType--><!--Device-audio-enum InterruptActionType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## TYPE_ACTIVATED
@@ -24,6 +26,8 @@ TYPE_ACTIVATED = 0
 
 **替代接口：** INTERRUPT_TYPE_BEGIN
 
+<!--Device-InterruptActionType-TYPE_ACTIVATED = 0--><!--Device-InterruptActionType-TYPE_ACTIVATED = 0-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## TYPE_INTERRUPT
@@ -39,6 +43,8 @@ TYPE_INTERRUPT = 1
 **废弃版本：** 9
 
 **替代接口：** INTERRUPT_TYPE_END
+
+<!--Device-InterruptActionType-TYPE_INTERRUPT = 1--><!--Device-InterruptActionType-TYPE_INTERRUPT = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 

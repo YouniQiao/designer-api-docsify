@@ -4,6 +4,8 @@ XMPMetadata instance.
 
 **Since:** 26.0.0
 
+<!--Device-image-class XMPMetadata--><!--Device-image-class XMPMetadata-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
@@ -28,15 +30,25 @@ Enumerate the XMP tags from specified path and uses a callback to return the res
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-XMPMetadata-public enumerateTags(
+      callback: (path: string, tag: XMPTag) => boolean,
+      rootPath?: string,
+      options?: XMPEnumerateOptions
+    ): void--><!--Device-XMPMetadata-public enumerateTags(
+      callback: (path: string, tag: XMPTag) => boolean,
+      rootPath?: string,
+      options?: XMPEnumerateOptions
+    ): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (path: string, tag: XMPTag) =&gt; boolean | Yes | Callback used to return the XMP node and the corresponding XMPTag.The callback receives a path argument that follows the XMP namespace:path format. |
-| rootPath | string | No | Enumerate root path. If this parameter is not specified, the default value is rootpath. |
-| options | XMPEnumerateOptions | No | XMP enumerate option. |
+| callback | (path: string, tag: XMPTag) => boolean | Yes | Callback used to return the XMP node and the corresponding XMPTag.The callback receives a path argument that follows the XMP namespace:path format. |
+| rootPath | string | No | Enumerate root path. If this parameter is not specified, the default value is root path. |
+| options | [XMPEnumerateOptions](arkts-image-xmpenumerateoptions-i.md) | No | XMP enumerate option. |
 
 **Error codes:**
 
@@ -56,13 +68,15 @@ Obtains the XMP metadata as a blob.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-XMPMetadata-public getBlob(): Promise<ArrayBuffer>--><!--Device-XMPMetadata-public getBlob(): Promise<ArrayBuffer>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | A Promise instance used to return the ArrayBuffer of blob. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ArrayBuffer> | A Promise instance used to return the ArrayBuffer of blob. |
 
 **Error codes:**
 
@@ -83,6 +97,8 @@ Get a single XMP tag from specified path.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-XMPMetadata-public getTag(path: string): Promise<XMPTag | null>--><!--Device-XMPMetadata-public getTag(path: string): Promise<XMPTag | null>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
@@ -95,7 +111,7 @@ Get a single XMP tag from specified path.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;XMPTag \| null&gt; | Promise used to return the XMP tag. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<XMPTag \| null> | Promise used to return the XMP tag. |
 
 **Error codes:**
 
@@ -115,20 +131,22 @@ Get all XMP tags from specified path.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-XMPMetadata-public getTags(rootPath?: string, options?: XMPEnumerateOptions): Promise<Record<string, XMPTag>>--><!--Device-XMPMetadata-public getTags(rootPath?: string, options?: XMPEnumerateOptions): Promise<Record<string, XMPTag>>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rootPath | string | No | The specified path. If this parameter is not specified, the default value is rootpath. |
-| options | XMPEnumerateOptions | No | XMP enumerate option. |
+| rootPath | string | No | The specified path. If this parameter is not specified, the default value is root path. |
+| options | [XMPEnumerateOptions](arkts-image-xmpenumerateoptions-i.md) | No | XMP enumerate option. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, XMPTag&gt;&gt; | A Promise instance used to return all XMP tags. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Record<string, XMPTag>> | A Promise instance used to return all XMP tags. |
 
 **Error codes:**
 
@@ -148,19 +166,21 @@ Register a new namespace according to the xml namespace and prefix.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-XMPMetadata-public registerXMPNamespace(xmpNamespace: XMPNamespace): Promise<void>--><!--Device-XMPMetadata-public registerXMPNamespace(xmpNamespace: XMPNamespace): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| xmpNamespace | XMPNamespace | Yes | The xmp namespace. |
+| xmpNamespace | [XMPNamespace](arkts-image-xmpnamespace-i.md) | Yes | The xmp namespace. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, anerror message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -180,6 +200,8 @@ Remove the XMP tag from specified path.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-XMPMetadata-public removeTag(path: string): Promise<void>--><!--Device-XMPMetadata-public removeTag(path: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
@@ -192,7 +214,7 @@ Remove the XMP tag from specified path.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, anerror message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -212,19 +234,21 @@ Set a blob into the XMP metadata.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-XMPMetadata-public setBlob(buffer: ArrayBuffer): Promise<void>--><!--Device-XMPMetadata-public setBlob(buffer: ArrayBuffer): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | blob data. |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | blob data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, anerror message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -244,6 +268,8 @@ Set the XMP type and value of the XMP tag in the specified path.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-XMPMetadata-public setValue(path: string, type: XMPTagType, value?: string): Promise<void>--><!--Device-XMPMetadata-public setValue(path: string, type: XMPTagType, value?: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
@@ -251,14 +277,14 @@ Set the XMP type and value of the XMP tag in the specified path.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | The specified path of the target XMP tag.(e.g., "dc:title"). |
-| type | XMPTagType | Yes | The specified XMP tag type. |
+| type | [XMPTagType](arkts-image-xmptagtype-e.md) | Yes | The specified XMP tag type. |
 | value | string | No | The specified value. If this parameter is not specified, the default value is empty. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, anerror message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 

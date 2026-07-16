@@ -18,6 +18,8 @@ Disable screen lock showing for os account local userId. This only becomes effec
 
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK
 
+<!--Device-screenLock-function setScreenLockDisabled(disable: boolean, userId: int): Promise<boolean>--><!--Device-screenLock-function setScreenLockDisabled(disable: boolean, userId: int): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 **System API:** This is a system API.
@@ -33,7 +35,7 @@ Disable screen lock showing for os account local userId. This only becomes effec
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | the promise returned by the function. |
 
 **Error codes:**
 

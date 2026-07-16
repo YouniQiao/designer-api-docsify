@@ -12,14 +12,13 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function removeDevice(id: number): void
 ```
 
-Remove a Wi-Fi DeviceConfig with networkId.
-After a Wi-Fi DeviceConfig is removed, its configuration will be deleted from the list of Wi-Fi configurations.
-If the Wi-Fi DeviceConfig is being connected, the connection will be interrupted.
-The application can only delete Wi-Fi DeviceConfig it has created.
+Remove a Wi-Fi DeviceConfig with networkId.After a Wi-Fi DeviceConfig is removed, its configuration will be deleted from the list of Wi-Fi configurations.If the Wi-Fi DeviceConfig is being connected, the connection will be interrupted.The application can only delete Wi-Fi DeviceConfig it has created.
 
 **Since:** 15
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and (ohos.permission.MANAGE_WIFI_CONNECTION or ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION)
+
+<!--Device-wifiManager-function removeDevice(id: int): void--><!--Device-wifiManager-function removeDevice(id: int): void-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 

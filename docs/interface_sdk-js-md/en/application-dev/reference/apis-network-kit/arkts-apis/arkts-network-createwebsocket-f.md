@@ -18,13 +18,15 @@ Creates a web socket connection.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-webSocket-function createWebSocket(): WebSocket--><!--Device-webSocket-function createWebSocket(): WebSocket-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| WebSocket | the WebSocket of the createWebSocket. |
+| [WebSocket](arkts-network-websocket-i.md) | the WebSocket of the createWebSocket. |
 
 **Example**
 

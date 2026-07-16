@@ -4,6 +4,8 @@ Defines the web keyboard options when onInterceptKeyboardAttach event return.
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface WebKeyboardOptions--><!--Device-unnamed-declare interface WebKeyboardOptions-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## customKeyboard
@@ -18,7 +20,9 @@ Set the custom keyboard builder when the custom keyboard is used.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebKeyboardOptions-customKeyboard?: CustomBuilder--><!--Device-WebKeyboardOptions-customKeyboard?: CustomBuilder-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -34,7 +38,9 @@ Set the enter key type when the system keyboard is used, the "enter" key related
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebKeyboardOptions-enterKeyType?: number--><!--Device-WebKeyboardOptions-enterKeyType?: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -50,7 +56,9 @@ Whether the system keyboard is used.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebKeyboardOptions-useSystemKeyboard: boolean--><!--Device-WebKeyboardOptions-useSystemKeyboard: boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

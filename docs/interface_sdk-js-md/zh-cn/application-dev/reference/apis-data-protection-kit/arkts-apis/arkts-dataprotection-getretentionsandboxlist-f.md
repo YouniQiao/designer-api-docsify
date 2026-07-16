@@ -1,5 +1,11 @@
 # getRetentionSandboxList
 
+## 导入模块
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+```
+
 ## getRetentionSandboxList
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getRetentionSandboxList(bundleName?: string): Promise<Array<RetentionSa
 该接口用于查询指定应用的保留沙箱列表，以便查看或管理当前处于保留状态的沙箱环境。
 
 **起始版本：** 10
+
+<!--Device-dlpPermission-function getRetentionSandboxList(bundleName?: string): Promise<Array<RetentionSandboxInfo>>--><!--Device-dlpPermission-function getRetentionSandboxList(bundleName?: string): Promise<Array<RetentionSandboxInfo>>-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -24,7 +32,7 @@ function getRetentionSandboxList(bundleName?: string): Promise<Array<RetentionSa
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;RetentionSandboxInfo&gt;&gt; | Promise对象。返回查询的沙箱信息列表。 |
+| Promise<Array<RetentionSandboxInfo>> | Promise对象。返回查询的沙箱信息列表。 |
 
 **错误码：**
 
@@ -61,6 +69,8 @@ function getRetentionSandboxList(bundleName: string, callback: AsyncCallback<Arr
 
 **起始版本：** 10
 
+<!--Device-dlpPermission-function getRetentionSandboxList(bundleName: string, callback: AsyncCallback<Array<RetentionSandboxInfo>>): void--><!--Device-dlpPermission-function getRetentionSandboxList(bundleName: string, callback: AsyncCallback<Array<RetentionSandboxInfo>>): void-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**
@@ -68,7 +78,7 @@ function getRetentionSandboxList(bundleName: string, callback: AsyncCallback<Arr
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 指定应用包名，用于查询该应用的保留沙箱信息列表。长度范围[7, 128]字节，超出此范围抛出错误码401。 |
-| callback | AsyncCallback&lt;Array&lt;RetentionSandboxInfo&gt;&gt; | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<RetentionSandboxInfo>> | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
 
 **错误码：**
 
@@ -107,13 +117,15 @@ function getRetentionSandboxList(callback: AsyncCallback<Array<RetentionSandboxI
 
 **起始版本：** 10
 
+<!--Device-dlpPermission-function getRetentionSandboxList(callback: AsyncCallback<Array<RetentionSandboxInfo>>): void--><!--Device-dlpPermission-function getRetentionSandboxList(callback: AsyncCallback<Array<RetentionSandboxInfo>>): void-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;RetentionSandboxInfo&gt;&gt; | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<RetentionSandboxInfo>> | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
 
 **错误码：**
 

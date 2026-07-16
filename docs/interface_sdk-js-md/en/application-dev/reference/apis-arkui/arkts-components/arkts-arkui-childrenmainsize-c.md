@@ -4,6 +4,8 @@ Indicates children main size.
 
 **Since:** 12
 
+<!--Device-unnamed-declare class ChildrenMainSize--><!--Device-unnamed-declare class ChildrenMainSize-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -19,6 +21,8 @@ Creates an instance of ChildrenMainSize.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ChildrenMainSize-constructor(childDefaultSize: number)--><!--Device-ChildrenMainSize-constructor(childDefaultSize: number)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +52,8 @@ Changes children main size by removing or replacing existing elements and/or add
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ChildrenMainSize-splice(start: number, deleteCount?: number, childrenSize?: Array<number>): void--><!--Device-ChildrenMainSize-splice(start: number, deleteCount?: number, childrenSize?: Array<number>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -56,7 +62,7 @@ Changes children main size by removing or replacing existing elements and/or add
 | --- | --- | --- | --- |
 | start | number | Yes | Zero-based index at which to start changing the children main size. |
 | deleteCount | number | No | Indicating the number of children main size to remove from start. |
-| childrenSize | Array&lt;number&gt; | No | Add the new children main size, beginning from start. |
+| childrenSize | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | No | Add the new children main size, beginning from start. |
 
 **Error codes:**
 
@@ -77,6 +83,8 @@ Updates main size for specified child.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ChildrenMainSize-update(index: number, childSize: number): void--><!--Device-ChildrenMainSize-update(index: number, childSize: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,6 +116,8 @@ Get default size
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ChildrenMainSize-get childDefaultSize(): number--><!--Device-ChildrenMainSize-get childDefaultSize(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

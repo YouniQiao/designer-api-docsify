@@ -14,12 +14,14 @@ function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySus
 
 Requests a transient task.
 
-> **NOTE**
->
-> For details about the constraints on requesting and using a transient task, see
+> **NOTE**  
+>  
+> For details about the constraints on requesting and using a transient task, see  
 > [Transient Task (ArkTS)](../../../../task-management/transient-task.md#constraints).
 
 **Since:** 9
+
+<!--Device-backgroundTaskManager-function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySuspendInfo--><!--Device-backgroundTaskManager-function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySuspendInfo-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
@@ -28,13 +30,13 @@ Requests a transient task.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reason | string | Yes | Reason for requesting the transient task. |
-| callback | Callback&lt;void&gt; | Yes | Callback used to notify the application that the transient task is about totime out. Generally, the callback is invoked 6 seconds before the timeout. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Callback used to notify the application that the transient task is about to time out. Generally, the callback is invoked 6 seconds before the timeout. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DelaySuspendInfo | Information about the transient task. |
+| [DelaySuspendInfo](arkts-backgroundtasks-delaysuspendinfo-i.md) | Information about the transient task. |
 
 **Error codes:**
 

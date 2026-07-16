@@ -12,15 +12,13 @@ import { asset } from '@kit.AssetStoreKit';
 function queryAsUser(userId: number, query: AssetMap): Promise<Array<AssetMap>>
 ```
 
-Queries one or more assets in the specified user space. If user authentication is required for the access to the
-asset, call [asset.preQueryAsUser](arkts-assetstore-prequeryasuser-f-sys.md#prequeryasuser-1) before this API and call
-[asset.postQueryAsUser](arkts-assetstore-postqueryasuser-f-sys.md#postqueryasuser-1) after this API. For details about the development procedure,
-see [Development Guidance](../../../../security/AssetStoreKit/asset-js-query-auth.md).
-This API uses a promise to return the result.
+Queries one or more assets in the specified user space. If user authentication is required for the access to the asset, call [asset.preQueryAsUser](arkts-assetstore-prequeryasuser-f-sys.md#prequeryasuser-1) before this API and call [asset.postQueryAsUser](arkts-assetstore-postqueryasuser-f-sys.md#postqueryasuser-1) after this API. For details about the development procedure,see [Development Guidance](../../../../security/AssetStoreKit/asset-js-query-auth.md).This API uses a promise to return the result.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-asset-function queryAsUser(userId: number, query: AssetMap): Promise<Array<AssetMap>>--><!--Device-asset-function queryAsUser(userId: number, query: AssetMap): Promise<Array<AssetMap>>-End-->
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -30,14 +28,14 @@ This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | the user identifier to query one or more assets. The value must be greater thanor equal to 100. |
-| query | AssetMap | Yes | Conditions for querying the asset, such as the asset aliases,access control attributes, and custom data. |
+| userId | number | Yes | the user identifier to query one or more assets. The value must be greater than or equal to 100. |
+| query | [AssetMap](arkts-assetstore-assetmap-t.md) | Yes | Conditions for querying the asset, such as the asset aliases,access control attributes, and custom data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AssetMap&gt;&gt; | Promise used to return the result obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AssetMap>> | Promise used to return the result obtained. |
 
 **Error codes:**
 

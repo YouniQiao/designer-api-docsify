@@ -4,7 +4,15 @@
 
 **起始版本：** 7
 
+<!--Device-distributedAccount-interface DistributedAccountAbility--><!--Device-distributedAccount-interface DistributedAccountAbility-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
+
+## 导入模块
+
+```TypeScript
+import { distributedAccount } from '@kit.BasicServicesKit';
+```
 
 ## getOsAccountDistributedInfoByLocalId
 
@@ -20,6 +28,8 @@ getOsAccountDistributedInfoByLocalId(localId: number, callback: AsyncCallback<Di
 - API版本20+：ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or (ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.GET_DISTRIBUTED_ACCOUNTS)
 - API版本10 - 19：ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-DistributedAccountAbility-getOsAccountDistributedInfoByLocalId(localId: int, callback: AsyncCallback<DistributedInfo>): void--><!--Device-DistributedAccountAbility-getOsAccountDistributedInfoByLocalId(localId: int, callback: AsyncCallback<DistributedInfo>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -29,7 +39,7 @@ getOsAccountDistributedInfoByLocalId(localId: number, callback: AsyncCallback<Di
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| callback | AsyncCallback&lt;DistributedInfo&gt; | 是 | 回调参数。当获取分布式账号信息成功，err为undefined，data为获取到的分布式账号信息对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<DistributedInfo> | 是 | 回调参数。当获取分布式账号信息成功，err为undefined，data为获取到的分布式账号信息对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -77,6 +87,8 @@ getOsAccountDistributedInfoByLocalId(localId: number): Promise<DistributedInfo>
 - API版本20+：ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or (ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.GET_DISTRIBUTED_ACCOUNTS)
 - API版本10 - 19：ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-DistributedAccountAbility-getOsAccountDistributedInfoByLocalId(localId: int): Promise<DistributedInfo>--><!--Device-DistributedAccountAbility-getOsAccountDistributedInfoByLocalId(localId: int): Promise<DistributedInfo>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -91,7 +103,7 @@ getOsAccountDistributedInfoByLocalId(localId: number): Promise<DistributedInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DistributedInfo&gt; | Promise对象，返回分布式账号信息对象。 |
+| Promise<DistributedInfo> | Promise对象，返回分布式账号信息对象。 |
 
 **错误码：**
 
@@ -135,6 +147,8 @@ setOsAccountDistributedInfoByLocalId(localId: number, distributedInfo: Distribut
 
 **需要权限：** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
 
+<!--Device-DistributedAccountAbility-setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedInfo, callback: AsyncCallback<void>): void--><!--Device-DistributedAccountAbility-setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedInfo, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -144,8 +158,8 @@ setOsAccountDistributedInfoByLocalId(localId: number, distributedInfo: Distribut
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| distributedInfo | DistributedInfo | 是 | 分布式账号信息。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当设置指定系统账号的分布式信息成功时，err为undefined，否则为错误对象。 |
+| distributedInfo | [DistributedInfo](arkts-basicservices-distributedinfo-i.md) | 是 | 分布式账号信息。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当设置指定系统账号的分布式信息成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -195,6 +209,8 @@ setOsAccountDistributedInfoByLocalId(localId: number, distributedInfo: Distribut
 
 **需要权限：** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
 
+<!--Device-DistributedAccountAbility-setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedInfo): Promise<void>--><!--Device-DistributedAccountAbility-setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedInfo): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -204,13 +220,13 @@ setOsAccountDistributedInfoByLocalId(localId: number, distributedInfo: Distribut
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| distributedInfo | DistributedInfo | 是 | 分布式账号信息。 |
+| distributedInfo | [DistributedInfo](arkts-basicservices-distributedinfo-i.md) | 是 | 分布式账号信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| Promise<void> | Promise对象，无返回结果的Promise对象。 |
 
 **错误码：**
 

@@ -6,13 +6,13 @@
 export function grantToolPermissionsByUser(userAuthResult: UserAuthResult[]): Promise<TicketInfo[]>
 ```
 
-Grants tool permissions based on user authorization results.
-This function grants permissions for tools (CLI commands or APIs) according to the user's authorization decisions.
-After successful authorization, tickets are generated which can be used for permission verification.
+Grants tool permissions based on user authorization results.This function grants permissions for tools (CLI commands or APIs) according to the user's authorization decisions.After successful authorization, tickets are generated which can be used for permission verification.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.MANAGE_TOOL_RUNTIME_PERMISSIONS
+
+<!--Device-abilityToolAccessCtrl-export function grantToolPermissionsByUser(userAuthResult: UserAuthResult[]): Promise<TicketInfo[]>--><!--Device-abilityToolAccessCtrl-export function grantToolPermissionsByUser(userAuthResult: UserAuthResult[]): Promise<TicketInfo[]>-End-->
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -22,13 +22,13 @@ After successful authorization, tickets are generated which can be used for perm
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userAuthResult | UserAuthResult[] | Yes | User authorization result list. |
+| userAuthResult | [UserAuthResult](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-userauthresult-e.md)[] | Yes | User authorization result list. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;TicketInfo[]&gt; | Promise used to return ${TicketInfo[]}. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<TicketInfo[]> | Promise used to return ${TicketInfo[]}. |
 
 **Error codes:**
 
@@ -41,5 +41,5 @@ After successful authorization, tickets are generated which can be used for perm
 | 24010002 | Common internal error. possible cause: dependent service unavailable,resource access failure, etc. |
 | 24010003 | The account is not logged in, network is unavailable, timeout, etc. |
 | 24010004 | Invalid permission. A permission in permissionInfo does not exist. |
-| 24010005 | Grant permission failed. The application specified by the tokenID is notallowed to be granted with the specified permission, the specified permission cannot be granted by user, etc. |
+| 24010005 | Grant permission failed. The application specified by the tokenID is not allowed to be granted with the specified permission, the specified permission cannot be granted by user, etc. |
 

@@ -12,10 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function addCandidateConfig(config: WifiDeviceConfig): Promise<number>
 ```
 
-Add a specified candidate hotspot configuration and returns the networkId.
-This method adds one configuration at a time. After this configuration is added,
-your device will determine whether to connect to the hotspot.
-The app must be in the foreground.
+Add a specified candidate hotspot configuration and returns the networkId.This method adds one configuration at a time. After this configuration is added,your device will determine whether to connect to the hotspot.The app must be in the foreground.
 
 **Since:** 12
 
@@ -23,19 +20,21 @@ The app must be in the foreground.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-wifiManager-function addCandidateConfig(config: WifiDeviceConfig): Promise<int>--><!--Device-wifiManager-function addCandidateConfig(config: WifiDeviceConfig): Promise<int>-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | Yes | candidate config. |
+| config | [WifiDeviceConfig](arkts-connectivity-wifideviceconfig-i.md) | Yes | candidate config. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns {@code networkId} if the configuration is added; returns {@code -1} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Returns {@code networkId} if the configuration is added; returns {@code -1} otherwise. |
 
 **Error codes:**
 
@@ -75,10 +74,7 @@ The app must be in the foreground.
 function addCandidateConfig(config: WifiDeviceConfig, callback: AsyncCallback<number>): void
 ```
 
-Add a specified candidate hotspot configuration and returns the networkId.
-This method adds one configuration at a time. After this configuration is added,
-your device will determine whether to connect to the hotspot.
-The app must be in the foreground.
+Add a specified candidate hotspot configuration and returns the networkId.This method adds one configuration at a time. After this configuration is added,your device will determine whether to connect to the hotspot.The app must be in the foreground.
 
 **Since:** 12
 
@@ -86,14 +82,16 @@ The app must be in the foreground.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-wifiManager-function addCandidateConfig(config: WifiDeviceConfig, callback: AsyncCallback<int>): void--><!--Device-wifiManager-function addCandidateConfig(config: WifiDeviceConfig, callback: AsyncCallback<int>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | Yes | candidate config. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Indicates call back of addCandidateConfig. |
+| config | [WifiDeviceConfig](arkts-connectivity-wifideviceconfig-i.md) | Yes | candidate config. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Indicates call back of addCandidateConfig. |
 
 **Error codes:**
 

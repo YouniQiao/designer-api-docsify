@@ -16,13 +16,15 @@ Create a Filter to add multiple effects to the component.
 
 **Since:** 12
 
+<!--Device-uiEffect-function createFilter(): Filter--><!--Device-uiEffect-function createFilter(): Filter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Filter | Returns the head node of Filter. |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-filter-i.md) | Returns the head node of Filter. |
 
 **Example**
 

@@ -4,6 +4,8 @@ View
 
 **Since:** 9
 
+<!--Device-unnamed-declare class View--><!--Device-unnamed-declare class View-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -19,6 +21,8 @@ Just use for generate tsbundle
 **Since:** 9
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-View-create(value: any): any--><!--Device-View-create(value: any): any-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -16,13 +16,15 @@ create the instance of MAP MSE profile.
 
 **Since:** 11
 
+<!--Device-map-function createMapMseProfile(): MapMseProfile--><!--Device-map-function createMapMseProfile(): MapMseProfile-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MapMseProfile | Returns the instance of map mse profile. |
+| [MapMseProfile](arkts-connectivity-mapmseprofile-i-sys.md) | Returns the instance of map mse profile. |
 
 **Error codes:**
 

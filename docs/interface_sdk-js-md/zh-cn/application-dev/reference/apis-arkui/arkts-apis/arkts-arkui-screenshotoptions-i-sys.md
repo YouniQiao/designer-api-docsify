@@ -4,9 +4,17 @@
 
 **起始版本：** 7
 
+<!--Device-screenshot-interface ScreenshotOptions--><!--Device-screenshot-interface ScreenshotOptions-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { screenshot } from '@kit.ArkUI';
+```
 
 ## displayId
 
@@ -19,6 +27,8 @@ displayId?: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-ScreenshotOptions-displayId?: long--><!--Device-ScreenshotOptions-displayId?: long-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -36,6 +46,8 @@ imageSize?: Size
 
 **起始版本：** 7
 
+<!--Device-ScreenshotOptions-imageSize?: Size--><!--Device-ScreenshotOptions-imageSize?: Size-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +64,8 @@ isCaptureFullOfScreen?: boolean
 
 **起始版本：** 20
 
+<!--Device-ScreenshotOptions-isCaptureFullOfScreen?: boolean--><!--Device-ScreenshotOptions-isCaptureFullOfScreen?: boolean-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -62,13 +76,13 @@ isCaptureFullOfScreen?: boolean
 isNotificationNeeded?: boolean
 ```
 
-表示截取图像之后是否发送截屏通知，true表示发送截屏通知，false表示不发送截屏通知，默认值为true。截屏通知可以通过
-[captureStatusChange](arkts-arkui-on-f.md#on-7)接口
-监听。
+表示截取图像之后是否发送截屏通知，true表示发送截屏通知，false表示不发送截屏通知，默认值为true。截屏通知可以通过[captureStatusChange](arkts-arkui-on-f.md#on-7)接口监听。
 
 **类型：** boolean
 
 **起始版本：** 14
+
+<!--Device-ScreenshotOptions-isNotificationNeeded?: boolean--><!--Device-ScreenshotOptions-isNotificationNeeded?: boolean-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -86,6 +100,8 @@ rotation?: number
 
 **起始版本：** 7
 
+<!--Device-ScreenshotOptions-rotation?: int--><!--Device-ScreenshotOptions-rotation?: int-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -101,6 +117,8 @@ screenRect?: Rect
 **类型：** Rect
 
 **起始版本：** 7
+
+<!--Device-ScreenshotOptions-screenRect?: Rect--><!--Device-ScreenshotOptions-screenRect?: Rect-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 

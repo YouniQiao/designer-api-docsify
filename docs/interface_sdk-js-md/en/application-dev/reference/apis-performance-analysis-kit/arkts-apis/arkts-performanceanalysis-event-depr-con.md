@@ -14,6 +14,8 @@ Distributed service event.
 
 **Substitutes:** DISTRIBUTED_SERVICE_START
 
+<!--Device-Event-const DISTRIBUTED_SERVICE_START: string--><!--Device-Event-const DISTRIBUTED_SERVICE_START: string-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## USER_LOGIN
@@ -30,6 +32,8 @@ User login event.
 
 **Substitutes:** USER_LOGIN
 
+<!--Device-Event-const USER_LOGIN: string--><!--Device-Event-const USER_LOGIN: string-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## USER_LOGOUT
@@ -45,6 +49,8 @@ User logout event.
 **Deprecated since:** 9
 
 **Substitutes:** USER_LOGOUT
+
+<!--Device-Event-const USER_LOGOUT: string--><!--Device-Event-const USER_LOGOUT: string-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 

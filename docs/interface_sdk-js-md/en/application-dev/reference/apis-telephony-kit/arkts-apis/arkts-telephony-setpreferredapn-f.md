@@ -18,6 +18,8 @@ Set preferred APN.
 
 **Required permissions:** ohos.permission.MANAGE_APN_SETTING
 
+<!--Device-data-function setPreferredApn(apnId: int): Promise<boolean>--><!--Device-data-function setPreferredApn(apnId: int): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Telephony.CellularData
 
 **Parameters:**
@@ -30,7 +32,7 @@ Set preferred APN.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns {@code true} if preferred APN set success; returns {@code false} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns {@code true} if preferred APN set success; returns {@code false} otherwise. |
 
 **Error codes:**
 

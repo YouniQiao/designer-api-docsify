@@ -4,6 +4,8 @@ Describes the **ListItemGroup** component parameter.
 
 **Since:** 9
 
+<!--Device-unnamed-declare interface ListItemGroupOptions--><!--Device-unnamed-declare interface ListItemGroupOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## footer
@@ -20,6 +22,8 @@ Footer of the list item group.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ListItemGroupOptions-footer?: CustomBuilder--><!--Device-ListItemGroupOptions-footer?: CustomBuilder-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## footerComponent
@@ -28,10 +32,7 @@ Footer of the list item group.
 footerComponent?: ComponentContent
 ```
 
-Footer of the list item group, in the type of ComponentContent.
-This parameter takes precedence over the footer parameter. This means that, if both footer and
-footerComponent are set, the value of footerComponent is used.
-To avoid display issues, do not assign the same footerComponent to different ListItemGroup components.
+Footer of the list item group, in the type of ComponentContent.This parameter takes precedence over the footer parameter. This means that, if both footer and footerComponent are set, the value of footerComponent is used.To avoid display issues, do not assign the same footerComponent to different ListItemGroup components.
 
 **Type:** ComponentContent
 
@@ -41,6 +42,8 @@ To avoid display issues, do not assign the same footerComponent to different Lis
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-ListItemGroupOptions-footerComponent?: ComponentContent--><!--Device-ListItemGroupOptions-footerComponent?: ComponentContent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## footerStyle
@@ -49,9 +52,7 @@ To avoid display issues, do not assign the same footerComponent to different Lis
 footerStyle?: ListItemGroupHeaderFooterStyle
 ```
 
-Footer style of ListItemGroup.
-If this parameter is set to ListItemGroupHeaderFooterStyle.FLOATING, the footer component is displayed
-in floating mode during scrolling.
+Footer style of ListItemGroup.If this parameter is set to ListItemGroupHeaderFooterStyle.FLOATING, the footer component is displayed in floating mode during scrolling.
 
 **Type:** ListItemGroupHeaderFooterStyle
 
@@ -62,6 +63,8 @@ in floating mode during scrolling.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ListItemGroupOptions-footerStyle?: ListItemGroupHeaderFooterStyle--><!--Device-ListItemGroupOptions-footerStyle?: ListItemGroupHeaderFooterStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -79,6 +82,8 @@ Header of the list item group.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ListItemGroupOptions-header?: CustomBuilder--><!--Device-ListItemGroupOptions-header?: CustomBuilder-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## headerComponent
@@ -87,10 +92,7 @@ Header of the list item group.
 headerComponent?: ComponentContent
 ```
 
-Header of the list item group, in the type of ComponentContent.
-This parameter takes precedence over the header parameter. This means that, if both header and
-headerComponent are set, the value of headerComponent is used.
-To avoid display issues, do not assign the same headerComponent to different ListItemGroup components.
+Header of the list item group, in the type of ComponentContent.This parameter takes precedence over the header parameter. This means that, if both header and headerComponent are set, the value of headerComponent is used.To avoid display issues, do not assign the same headerComponent to different ListItemGroup components.
 
 **Type:** ComponentContent
 
@@ -100,6 +102,8 @@ To avoid display issues, do not assign the same headerComponent to different Lis
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-ListItemGroupOptions-headerComponent?: ComponentContent--><!--Device-ListItemGroupOptions-headerComponent?: ComponentContent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## headerStyle
@@ -108,9 +112,7 @@ To avoid display issues, do not assign the same headerComponent to different Lis
 headerStyle?: ListItemGroupHeaderFooterStyle
 ```
 
-Header style of ListItemGroup.
-If this parameter is set to ListItemGroupHeaderFooterStyle.FLOATING, the header component is displayed
-in floating mode during scrolling.
+Header style of ListItemGroup.If this parameter is set to ListItemGroupHeaderFooterStyle.FLOATING, the header component is displayed in floating mode during scrolling.
 
 **Type:** ListItemGroupHeaderFooterStyle
 
@@ -122,6 +124,8 @@ in floating mode during scrolling.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ListItemGroupOptions-headerStyle?: ListItemGroupHeaderFooterStyle--><!--Device-ListItemGroupOptions-headerStyle?: ListItemGroupHeaderFooterStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## space
@@ -130,10 +134,7 @@ in floating mode during scrolling.
 space?: number | string
 ```
 
-Spacing between list items.
-This parameter only affects the spacing between list items,
-but not spacing between the header and list items or between the footer and list items.
-<br>Default value: **0**<br>Unit: vp
+Spacing between list items.This parameter only affects the spacing between list items,but not spacing between the header and list items or between the footer and list items.<br>Default value: **0**<br>Unit: vp
 
 **Type:** number | string
 
@@ -143,6 +144,8 @@ but not spacing between the header and list items or between the footer and list
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ListItemGroupOptions-space?: number | string--><!--Device-ListItemGroupOptions-space?: number | string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## spaceWidth
@@ -151,15 +154,7 @@ but not spacing between the header and list items or between the footer and list
 spaceWidth?: Dimension
 ```
 
-Spacing between list items.
-This parameter only affects the spacing between list items,
-but not spacing between the header and list items or between the footer and list items.
-<br>Default value: **0**<br>Unit: vp
-<br>**NOTE**
-<br>If this parameter is set to a negative number
-or a value greater than or equal to the length of the list content area, the default value is used.
-If both **spaceWidth** and **space** are set, **spaceWidth** takes precedence.
-When **spaceWidth** is **undefined** or **null**, **space** takes effect.
+Spacing between list items.This parameter only affects the spacing between list items,but not spacing between the header and list items or between the footer and list items.<br>Default value: **0**<br>Unit: vp<br>**NOTE**<br>If this parameter is set to a negative number or a value greater than or equal to the length of the list content area, the default value is used.If both **spaceWidth** and **space** are set, **spaceWidth** takes precedence.When **spaceWidth** is **undefined** or **null**, **space** takes effect.
 
 **Type:** Dimension
 
@@ -168,6 +163,8 @@ When **spaceWidth** is **undefined** or **null**, **space** takes effect.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ListItemGroupOptions-spaceWidth?: Dimension--><!--Device-ListItemGroupOptions-spaceWidth?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -186,6 +183,8 @@ Style of the list item.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ListItemGroupOptions-style?: ListItemGroupStyle--><!--Device-ListItemGroupOptions-style?: ListItemGroupStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

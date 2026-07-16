@@ -20,14 +20,16 @@ Removes the applications that are allowed to run by the specified user.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function removeAllowedRunningBundles(admin: Want, appIdentifiers: Array<string>, accountId: number): void--><!--Device-applicationManager-function removeAllowedRunningBundles(admin: Want, appIdentifiers: Array<string>, accountId: number): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| appIdentifiers | Array&lt;string&gt; | Yes | Array of unique identifiers of an app. You can obtain the**bundleInfo.signatureInfo.appIdentifier** by calling the[bundleManager.getinstalledbundlelist](arkts-mdm-getinstalledbundlelist-f.md#getinstalledbundlelist-1)API. Value range: The array length cannot exceed 200. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| appIdentifiers | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Array of unique identifiers of an app. You can obtain the **bundleInfo.signatureInfo.appIdentifier** by calling the [bundleManager.getinstalledbundlelist](arkts-mdm-getinstalledbundlelist-f.md#getinstalledbundlelist-1)API. Value range: The array length cannot exceed 200. |
 | accountId | number | Yes | Account ID, which must be greater than or equal to 0.<br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2)of @ohos.account.osAccount to obtain the ID. |
 
 **Error codes:**

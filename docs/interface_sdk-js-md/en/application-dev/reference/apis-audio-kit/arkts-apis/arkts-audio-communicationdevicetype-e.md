@@ -4,6 +4,8 @@ Enumerates the available device types for communication.
 
 **Since:** 12
 
+<!--Device-audio-enum CommunicationDeviceType--><!--Device-audio-enum CommunicationDeviceType-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
 ## SPEAKER
@@ -15,6 +17,8 @@ SPEAKER = 2
 Speaker.
 
 **Since:** 12
+
+<!--Device-CommunicationDeviceType-SPEAKER = 2--><!--Device-CommunicationDeviceType-SPEAKER = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 

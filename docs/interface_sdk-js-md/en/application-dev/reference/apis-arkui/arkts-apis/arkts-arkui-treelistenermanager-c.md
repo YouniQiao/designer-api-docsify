@@ -4,6 +4,8 @@ Declare class TreeListenerManager
 
 **Since:** 22
 
+<!--Device-unnamed-export declare class TreeListenerManager--><!--Device-unnamed-export declare class TreeListenerManager-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,13 +28,15 @@ Get instance of treeListenerManager.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TreeListenerManager-static getInstance(): TreeListenerManager--><!--Device-TreeListenerManager-static getInstance(): TreeListenerManager-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TreeListenerManager |  |
+| [TreeListenerManager](arkts-arkui-treelistenermanager-c.md) |  |
 
 ## getTreeListener
 
@@ -48,11 +52,13 @@ Get treeListener.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TreeListenerManager-getTreeListener(): TreeListener--><!--Device-TreeListenerManager-getTreeListener(): TreeListener-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TreeListener |  |
+| [TreeListener](arkts-arkui-treelistener-c.md) |  |
 

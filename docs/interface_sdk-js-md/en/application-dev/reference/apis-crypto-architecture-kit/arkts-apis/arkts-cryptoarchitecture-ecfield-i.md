@@ -4,6 +4,8 @@ Defines the field type of an elliptic curve. Currently, only the **Fp** field is
 
 **Since:** 10
 
+<!--Device-cryptoFramework-interface ECField--><!--Device-cryptoFramework-interface ECField-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 10 to 11: SystemCapability.Security.CryptoFramework
@@ -27,6 +29,8 @@ Type of the elliptic curve field. Currently, only **Fp** is supported.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ECField-fieldType: string--><!--Device-ECField-fieldType: string-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey

@@ -18,13 +18,15 @@ Get Active APN's Name.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-data-function getActiveApnName(): Promise<string>--><!--Device-data-function getActiveApnName(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Telephony.CellularData
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the name of the active APN or null if cellular network is not active. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the name of the active APN or null if cellular network is not active. |
 
 **Error codes:**
 

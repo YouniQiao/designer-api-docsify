@@ -4,6 +4,8 @@ Declaration of the left icon type.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare enum EditableLeftIconTypeV2--><!--Device-unnamed-export declare enum EditableLeftIconTypeV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Back
@@ -20,6 +22,8 @@ The back type.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-EditableLeftIconTypeV2-Back = 0--><!--Device-EditableLeftIconTypeV2-Back = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Cancel
@@ -35,6 +39,8 @@ The cancel type.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableLeftIconTypeV2-Cancel = 1--><!--Device-EditableLeftIconTypeV2-Cancel = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,6 +4,8 @@ Declare ToolBarV2Modifier used in ToolBar
 
 **Since:** 18
 
+<!--Device-unnamed-export declare class ToolBarV2Modifier--><!--Device-unnamed-export declare class ToolBarV2Modifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,19 +28,21 @@ Sets the backgroundColor of the toolBarV2.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ToolBarV2Modifier-backgroundColor(backgroundColor: ColorMetrics): ToolBarV2Modifier--><!--Device-ToolBarV2Modifier-backgroundColor(backgroundColor: ColorMetrics): ToolBarV2Modifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| backgroundColor | ColorMetrics | Yes | toolBarV2's backgroundColor. |
+| backgroundColor | [ColorMetrics](arkts-arkui-colormetrics-t.md) | Yes | toolBarV2's backgroundColor. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ToolBarV2Modifier | returns the instance of the ToolBarV2Modifier. |
+| [ToolBarV2Modifier](arkts-arkui-toolbarv2modifier-c.md) | returns the instance of the ToolBarV2Modifier. |
 
 ## height
 
@@ -54,19 +58,21 @@ Sets the height of the toolBarV2.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ToolBarV2Modifier-height(height: LengthMetrics): ToolBarV2Modifier--><!--Device-ToolBarV2Modifier-height(height: LengthMetrics): ToolBarV2Modifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | LengthMetrics | Yes | toolBarV2's height. |
+| height | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | toolBarV2's height. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ToolBarV2Modifier | returns the instance of the ToolBarV2Modifier. |
+| [ToolBarV2Modifier](arkts-arkui-toolbarv2modifier-c.md) | returns the instance of the ToolBarV2Modifier. |
 
 ## padding
 
@@ -82,19 +88,21 @@ Sets the left and right padding of the toolbarV2.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ToolBarV2Modifier-padding(padding: LengthMetrics): ToolBarV2Modifier--><!--Device-ToolBarV2Modifier-padding(padding: LengthMetrics): ToolBarV2Modifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| padding | LengthMetrics | Yes | left and right padding. |
+| padding | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | left and right padding. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ToolBarV2Modifier | returns the instance of the ToolBarV2Modifier. |
+| [ToolBarV2Modifier](arkts-arkui-toolbarv2modifier-c.md) | returns the instance of the ToolBarV2Modifier. |
 
 ## stateEffect
 
@@ -110,6 +118,8 @@ Sets whether or not to display the press status effect.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ToolBarV2Modifier-stateEffect(stateEffect: boolean): ToolBarV2Modifier--><!--Device-ToolBarV2Modifier-stateEffect(stateEffect: boolean): ToolBarV2Modifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -122,5 +132,5 @@ Sets whether or not to display the press status effect.
 
 | Type | Description |
 | --- | --- |
-| ToolBarV2Modifier | returns the instance of the ToolBarV2Modifier. |
+| [ToolBarV2Modifier](arkts-arkui-toolbarv2modifier-c.md) | returns the instance of the ToolBarV2Modifier. |
 

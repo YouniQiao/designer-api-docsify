@@ -2,14 +2,16 @@
 
 Provides APIs to create and display toasts, dialog boxes, action menus, and custom popups.
 
-> **NOTE**
->
-> - The initial APIs of this class are supported since API version 10.
->
-> - In the following API examples, you must first use [getPromptAction()](arkts-arkui-uicontext-c.md#getpromptaction-1) in
+> **NOTE**  
+>  
+> - The initial APIs of this class are supported since API version 10.  
+>  
+> - In the following API examples, you must first use [getPromptAction()](arkts-arkui-uicontext-c.md#getpromptaction-1) in  
 > **UIContext** to obtain a **PromptAction** instance, and then call the APIs using the obtained instance.
 
 **Since:** 10
+
+<!--Device-unnamed-export class PromptAction--><!--Device-unnamed-export class PromptAction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,19 +35,21 @@ Closes a custom dialog box corresponding to **dialogContent**. This API uses a p
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PromptAction-closeCustomDialog<T extends Object>(dialogContent: ComponentContent<T>): Promise<void>--><!--Device-PromptAction-closeCustomDialog<T extends Object>(dialogContent: ComponentContent<T>): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dialogContent | ComponentContent&lt;T&gt; | Yes | Content of the custom dialog box. |
+| dialogContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)<T> | Yes | Content of the custom dialog box. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -68,6 +72,8 @@ Closes the specified custom dialog box.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PromptAction-closeCustomDialog(dialogId: number): void--><!--Device-PromptAction-closeCustomDialog(dialogId: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,19 +104,21 @@ Closes the menu corresponding to the provided content. This API uses a promise t
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-PromptAction-closeMenu<T extends Object>(content: ComponentContent<T>): Promise<void>--><!--Device-PromptAction-closeMenu<T extends Object>(content: ComponentContent<T>): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent&lt;T&gt; | Yes | Content displayed in the menu. |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)<T> | Yes | Content displayed in the menu. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -134,19 +142,21 @@ Closes the popup corresponding to the provided **content**. This API uses a prom
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-PromptAction-closePopup<T extends Object>(content: ComponentContent<T>): Promise<void>--><!--Device-PromptAction-closePopup<T extends Object>(content: ComponentContent<T>): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent&lt;T&gt; | Yes | Content displayed in the popup. |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)<T> | Yes | Content displayed in the popup. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -170,6 +180,8 @@ Closes the specified toast.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-PromptAction-closeToast(toastId: number): void--><!--Device-PromptAction-closeToast(toastId: number): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -192,8 +204,7 @@ Closes the specified toast.
 getBottomOrder(): LevelOrder
 ```
 
-This API returns the order of the dialog box currently at the bottom layer. This information can be used to specify
-the desired order for subsequent dialog boxes.
+This API returns the order of the dialog box currently at the bottom layer. This information can be used to specify the desired order for subsequent dialog boxes.
 
 **Since:** 18
 
@@ -201,13 +212,15 @@ the desired order for subsequent dialog boxes.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-PromptAction-getBottomOrder(): LevelOrder--><!--Device-PromptAction-getBottomOrder(): LevelOrder-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| LevelOrder | Order of the topmost dialog box. |
+| [LevelOrder](arkts-arkui-levelorder-t.md) | Order of the topmost dialog box. |
 
 ## getTopOrder
 
@@ -217,8 +230,7 @@ getTopOrder(): LevelOrder
 
 Obtains the order of the topmost dialog box.
 
-This API returns the order of the dialog box currently at the top layer. This information can be used to specify
-the desired order for subsequent dialog boxes.
+This API returns the order of the dialog box currently at the top layer. This information can be used to specify the desired order for subsequent dialog boxes.
 
 **Since:** 18
 
@@ -226,13 +238,15 @@ the desired order for subsequent dialog boxes.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-PromptAction-getTopOrder(): LevelOrder--><!--Device-PromptAction-getTopOrder(): LevelOrder-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| LevelOrder | Order of the topmost dialog box. |
+| [LevelOrder](arkts-arkui-levelorder-t.md) | Order of the topmost dialog box. |
 
 ## openCustomDialog
 
@@ -240,9 +254,7 @@ the desired order for subsequent dialog boxes.
 openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?: promptAction.BaseDialogOptions): Promise<void>
 ```
 
-Opens a custom dialog box corresponding to **dialogContent**. This API uses a promise to return the result.
-The dialog box displayed through this API has its content fully following style settings of **dialogContent**.
-It is displayed in the same way where **customStyle** is set to **true**.
+Opens a custom dialog box corresponding to **dialogContent**. This API uses a promise to return the result.The dialog box displayed through this API has its content fully following style settings of **dialogContent**.It is displayed in the same way where **customStyle** is set to **true**.
 
 **Since:** 12
 
@@ -250,20 +262,22 @@ It is displayed in the same way where **customStyle** is set to **true**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PromptAction-openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?: promptAction.BaseDialogOptions): Promise<void>--><!--Device-PromptAction-openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?: promptAction.BaseDialogOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dialogContent | ComponentContent&lt;T&gt; | Yes | Content of the custom dialog box. |
+| dialogContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)<T> | Yes | Content of the custom dialog box. |
 | options | promptAction.BaseDialogOptions | No | Dialog box style.<br>Note: If both [isModal](arkts-arkui-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-basedialogoptions-i.md)in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect.In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -281,11 +295,7 @@ openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>
 
 Creates and displays a custom dialog box. This API uses a promise to return the dialog box ID for use with **closeCustomDialog**.
 
-+ * @param { promptAction.CustomDialogOptions } options - Content of the custom dialog box.<br>
-+ * Note: If both [isModal](arkts-arkui-basedialogoptions-i.md)
-+ * and [showInSubWindow](arkts-arkui-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**,
-+ * only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow.
-+ * @returns { Promise<number> } Promise that returns the dialog box ID for use with **closeCustomDialog**.
++ * @param { promptAction.CustomDialogOptions } options - Content of the custom dialog box.<br>+ * Note: If both [isModal](arkts-arkui-basedialogoptions-i.md)+ * and [showInSubWindow](arkts-arkui-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**,+ * only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow.+ * @returns { Promise<number> } Promise that returns the dialog box ID for use with **closeCustomDialog**.
 
 **Since:** 12
 
@@ -293,19 +303,21 @@ Creates and displays a custom dialog box. This API uses a promise to return the 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PromptAction-openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>--><!--Device-PromptAction-openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.CustomDialogOptions | Yes | Content of the custom dialog box.<br>+ * Note: If both [isModal](arkts-arkui-basedialogoptions-i.md)+ * and [showInSubWindow](arkts-arkui-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**,+ * only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow.+ *  |
+| options | promptAction.CustomDialogOptions | Yes | Content of the custom dialog box.<br>+ * Note: If both [isModal](arkts-arkui-basedialogoptions-i.md)+ * and [showInSubWindow](arkts-arkui-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**,+ * only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow.+ * |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise that returns the dialog box ID for use with **closeCustomDialog**. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise that returns the dialog box ID for use with **closeCustomDialog**. |
 
 **Error codes:**
 
@@ -331,13 +343,17 @@ The dialog box displayed through this API has its content fully following style 
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-PromptAction-openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent<T>, controller: promptAction.DialogController,
+    options?: promptAction.BaseDialogOptions): Promise<void>--><!--Device-PromptAction-openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent<T>, controller: promptAction.DialogController,
+    options?: promptAction.BaseDialogOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dialogContent | ComponentContent&lt;T&gt; | Yes | Content of the custom dialog box. |
+| dialogContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)<T> | Yes | Content of the custom dialog box. |
 | controller | promptAction.DialogController | Yes | Controller of the custom dialog box. |
 | options | promptAction.BaseDialogOptions | No | Style of the custom dialog box.<br>Note: If both [isModal](arkts-arkui-basedialogoptions-i.md)and [showInSubWindow](arkts-arkui-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**,only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
@@ -345,7 +361,7 @@ The dialog box displayed through this API has its content fully following style 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -363,19 +379,19 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 
 Opens a menu with the specified content. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - If an invalid **target** is provided, the menu will not be displayed.
->
-> - You must maintain the provided **content**, on which [updateMenu](arkts-arkui-promptaction-c.md#updatemenu-1) and
-> [closeMenu](arkts-arkui-promptaction-c.md#closemenu-1) rely to identify the target menu.
->
-> - If your **wrapBuilder** includes other components (such as [Popup](arkts-arkui-advanced-popup.md) or
-> [Chip](arkts-arkui-advanced-chip.md)), the [ComponentContent](arkts-arkui-componentcontent-c.md)
-> constructor must include four parameters, and the **options** parameter must be
-> **{ nestingBuilderSupported: true }**.
->
-> - Nested subwindow dialog boxes are not supported. For example, when [openMenu](arkts-arkui-promptaction-c.md#openmenu-1) has
+> **NOTE**  
+>  
+> - If an invalid **target** is provided, the menu will not be displayed.  
+>  
+> - You must maintain the provided **content**, on which [updateMenu](arkts-arkui-promptaction-c.md#updatemenu-1) and  
+> [closeMenu](arkts-arkui-promptaction-c.md#closemenu-1) rely to identify the target menu.  
+>  
+> - If your **wrapBuilder** includes other components (such as [Popup](arkts-arkui-advanced-popup.md) or  
+> [Chip](arkts-arkui-advanced-chip.md)), the [ComponentContent](arkts-arkui-componentcontent-c.md)  
+> constructor must include four parameters, and the **options** parameter must be  
+> **{ nestingBuilderSupported: true }**.  
+>  
+> - Nested subwindow dialog boxes are not supported. For example, when [openMenu](arkts-arkui-promptaction-c.md#openmenu-1) has  
 > **showInSubWindow** set to **true**, another dialog box with **showInSubWindow=true** cannot be displayed.
 
 **Since:** 18
@@ -384,21 +400,23 @@ Opens a menu with the specified content. This API uses a promise to return the r
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-PromptAction-openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: MenuOptions): Promise<void>--><!--Device-PromptAction-openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: MenuOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent&lt;T&gt; | Yes | Content displayed in the menu. |
-| target | TargetInfo | Yes | Information about the target component to bind. |
-| options | MenuOptions | No | Style of the menu.<br>**NOTE**<br>The **title** property is not effective.<br>The **preview** parameter supports only the **MenuPreviewMode** type. |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)<T> | Yes | Content displayed in the menu. |
+| target | [TargetInfo](arkts-arkui-targetinfo-i.md) | Yes | Information about the target component to bind. |
+| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | No | Style of the menu.<br>**NOTE**<br>The **title** property is not effective.<br>The **preview** parameter supports only the **MenuPreviewMode** type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -418,16 +436,16 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 
 Creates and displays a popup with the specified content. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - If an invalid **target** is provided, the popup will not be displayed.
->
-> - You must maintain the provided **content**, on which [updatePopup](arkts-arkui-promptaction-c.md#updatepopup-1) and
-> [closePopup](arkts-arkui-promptaction-c.md#closepopup-1) rely to identify the target popup.
->
-> - If your **wrapBuilder** includes other components (such as [Popup](arkts-arkui-advanced-popup.md) or
-> [Chip](arkts-arkui-advanced-chip.md)), the [ComponentContent](arkts-arkui-componentcontent-c.md)
-> constructor must include four parameters, and the **options** parameter must be
+> **NOTE**  
+>  
+> - If an invalid **target** is provided, the popup will not be displayed.  
+>  
+> - You must maintain the provided **content**, on which [updatePopup](arkts-arkui-promptaction-c.md#updatepopup-1) and  
+> [closePopup](arkts-arkui-promptaction-c.md#closepopup-1) rely to identify the target popup.  
+>  
+> - If your **wrapBuilder** includes other components (such as [Popup](arkts-arkui-advanced-popup.md) or  
+> [Chip](arkts-arkui-advanced-chip.md)), the [ComponentContent](arkts-arkui-componentcontent-c.md)  
+> constructor must include four parameters, and the **options** parameter must be  
 > **{ nestingBuilderSupported: true }**.
 
 **Since:** 18
@@ -436,21 +454,23 @@ Creates and displays a popup with the specified content. This API uses a promise
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-PromptAction-openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: PopupCommonOptions): Promise<void>--><!--Device-PromptAction-openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: PopupCommonOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent&lt;T&gt; | Yes | Content displayed in the popup. |
-| target | TargetInfo | Yes | Information about the target component to bind. |
-| options | PopupCommonOptions | No | Style of the popup. |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)<T> | Yes | Content displayed in the popup. |
+| target | [TargetInfo](arkts-arkui-targetinfo-i.md) | Yes | Information about the target component to bind. |
+| options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | No | Style of the popup. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -476,6 +496,8 @@ Displays a toast. This API uses a promise to return the toast ID for use with **
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-PromptAction-openToast(options: promptAction.ShowToastOptions): Promise<number>--><!--Device-PromptAction-openToast(options: promptAction.ShowToastOptions): Promise<number>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -488,7 +510,7 @@ Displays a toast. This API uses a promise to return the toast ID for use with **
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise that returns the toast ID for use with **closeToast**. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise that returns the toast ID for use with **closeToast**. |
 
 **Error codes:**
 
@@ -514,6 +536,10 @@ The dialog box ID can be included in the dialog box content for related operatio
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-PromptAction-presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: promptAction.DialogController,
+    options?: promptAction.DialogOptions): Promise<number>--><!--Device-PromptAction-presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: promptAction.DialogController,
+    options?: promptAction.DialogOptions): Promise<number>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -528,7 +554,7 @@ The dialog box ID can be included in the dialog box content for related operatio
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise Promise used to return the custom dialog box ID. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise Promise used to return the custom dialog box ID. |
 
 **Error codes:**
 
@@ -553,6 +579,8 @@ Shows an action menu in the given settings. This API uses an asynchronous callba
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PromptAction-showActionMenu(options: promptAction.ActionMenuOptions, callback: promptAction.ActionMenuSuccessResponse): void--><!--Device-PromptAction-showActionMenu(options: promptAction.ActionMenuOptions, callback: promptAction.ActionMenuSuccessResponse): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -560,7 +588,7 @@ Shows an action menu in the given settings. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | promptAction.ActionMenuOptions | Yes | Action menu options. |
-| callback | promptAction.ActionMenuSuccessResponse | Yes | Callback used to return the action menuresponse result. |
+| callback | promptAction.ActionMenuSuccessResponse | Yes | Callback used to return the action menu response result. |
 
 **Error codes:**
 
@@ -583,6 +611,8 @@ Creates and displays an action menu. This API uses an asynchronous callback to r
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PromptAction-showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<promptAction.ActionMenuSuccessResponse>): void--><!--Device-PromptAction-showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<promptAction.ActionMenuSuccessResponse>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -590,7 +620,7 @@ Creates and displays an action menu. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | promptAction.ActionMenuOptions | Yes | Action menu options. |
-| callback | AsyncCallback&lt;promptAction.ActionMenuSuccessResponse&gt; | Yes | Callback used to return the result.On success, **err** is **undefined** and **data** contains the action menu response.On failure, **err** provides error details. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<promptAction.ActionMenuSuccessResponse> | Yes | Callback used to return the result.On success, **err** is **undefined** and **data** contains the action menu response.On failure, **err** provides error details. |
 
 **Error codes:**
 
@@ -613,6 +643,8 @@ Creates and displays an action menu. This API uses a promise to return the resul
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PromptAction-showActionMenu(options: promptAction.ActionMenuOptions): Promise<promptAction.ActionMenuSuccessResponse>--><!--Device-PromptAction-showActionMenu(options: promptAction.ActionMenuOptions): Promise<promptAction.ActionMenuSuccessResponse>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -625,7 +657,7 @@ Creates and displays an action menu. This API uses a promise to return the resul
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;promptAction.ActionMenuSuccessResponse&gt; | callback - Promise that returns the action menu response. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<promptAction.ActionMenuSuccessResponse> | callback - Promise that returns the action menu response. |
 
 **Error codes:**
 
@@ -648,6 +680,8 @@ Creates and displays a dialog box. This API uses an asynchronous callback to ret
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PromptAction-showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<promptAction.ShowDialogSuccessResponse>): void--><!--Device-PromptAction-showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<promptAction.ShowDialogSuccessResponse>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -655,7 +689,7 @@ Creates and displays a dialog box. This API uses an asynchronous callback to ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | promptAction.ShowDialogOptions | Yes | Dialog box configuration options. |
-| callback | AsyncCallback&lt;promptAction.ShowDialogSuccessResponse&gt; | Yes | Callback used to return the result.On success, **err** is **undefined** and **data** contains the dialog box response.On failure, **err** provides error details. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<promptAction.ShowDialogSuccessResponse> | Yes | Callback used to return the result.On success, **err** is **undefined** and **data** contains the dialog box response.On failure, **err** provides error details. |
 
 **Error codes:**
 
@@ -678,6 +712,8 @@ Creates and displays a dialog box. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PromptAction-showDialog(options: promptAction.ShowDialogOptions): Promise<promptAction.ShowDialogSuccessResponse>--><!--Device-PromptAction-showDialog(options: promptAction.ShowDialogOptions): Promise<promptAction.ShowDialogSuccessResponse>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -690,7 +726,7 @@ Creates and displays a dialog box. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;promptAction.ShowDialogSuccessResponse&gt; | Promise that returns the dialog box response. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<promptAction.ShowDialogSuccessResponse> | Promise that returns the dialog box response. |
 
 **Error codes:**
 
@@ -712,6 +748,8 @@ Creates and displays a toast.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PromptAction-showToast(options: promptAction.ShowToastOptions): void--><!--Device-PromptAction-showToast(options: promptAction.ShowToastOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -742,20 +780,22 @@ Updates a custom dialog box corresponding to **dialogContent**. This API uses a 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PromptAction-updateCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options: promptAction.BaseDialogOptions): Promise<void>--><!--Device-PromptAction-updateCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options: promptAction.BaseDialogOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dialogContent | ComponentContent&lt;T&gt; | Yes | Content of the custom dialog box. |
+| dialogContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)<T> | Yes | Content of the custom dialog box. |
 | options | promptAction.BaseDialogOptions | Yes | Dialog box style. Currently,only **alignment**, **offset**, **autoCancel**, and **maskColor** can be updated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -771,17 +811,16 @@ Updates a custom dialog box corresponding to **dialogContent**. This API uses a 
 updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions, partialUpdate?: boolean): Promise<void>
 ```
 
-Updates the style of the menu corresponding to the provided **content**. This API uses a promise to return the
-result.
+Updates the style of the menu corresponding to the provided **content**. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - Updating for the following is not supported: **showInSubWindow**, **preview**, **previewAnimationOptions**,
-> **transition**, **onAppear**, **aboutToAppear**, **onDisappear**, **aboutToDisappear**, **onWillAppear**,
-> **onDidAppear**, **onWillDisappear**, and **onDidDisappear**.
->
-> - The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md). However, this API does not
-> support mask presence toggling (that is, switching the mask from non-existent to existent or vice versa) by
+> **NOTE**  
+>  
+> - Updating for the following is not supported: **showInSubWindow**, **preview**, **previewAnimationOptions**,  
+> **transition**, **onAppear**, **aboutToAppear**, **onDisappear**, **aboutToDisappear**, **onWillAppear**,  
+> **onDidAppear**, **onWillDisappear**, and **onDidDisappear**.  
+>  
+> - The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md). However, this API does not  
+> support mask presence toggling (that is, switching the mask from non-existent to existent or vice versa) by  
 > setting a boolean value.
 
 **Since:** 18
@@ -790,21 +829,23 @@ result.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-PromptAction-updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions, partialUpdate?: boolean): Promise<void>--><!--Device-PromptAction-updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions, partialUpdate?: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent&lt;T&gt; | Yes | Content displayed in the menu. |
-| options | MenuOptions | Yes | Style of the menu.<br>**NOTE**<br>1. Updating for the following is not supported:**showInSubWindow**, **preview**, **previewAnimationOptions**, **transition**, **onAppear**, **aboutToAppear**,**onDisappear**, **aboutToDisappear**, **onWillAppear**, **onDidAppear**, **onWillDisappear**, and**onDidDisappear**.<br>2. The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md).However, this API does not support mask presence toggling (that is, switching the mask from non-existent toexistent or vice versa) by setting a boolean value. |
-| partialUpdate | boolean | No | Whether to update the menu in incremental mode. Default value: **false**.<br>**NOTE**<br>1. **true**: incremental update, where the specified properties in **options** are updated, andother properties stay at their current value.<br>2. **false**: full update, where all properties except thosespecified in **options** are restored to default values. |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)<T> | Yes | Content displayed in the menu. |
+| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | Yes | Style of the menu.<br>**NOTE**<br>1. Updating for the following is not supported:**showInSubWindow**, **preview**, **previewAnimationOptions**, **transition**, **onAppear**, **aboutToAppear**,**onDisappear**, **aboutToDisappear**, **onWillAppear**, **onDidAppear**, **onWillDisappear**, and **onDidDisappear**.<br>2. The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md).However, this API does not support mask presence toggling (that is, switching the mask from non-existent to existent or vice versa) by setting a boolean value. |
+| partialUpdate | boolean | No | Whether to update the menu in incremental mode. Default value: **false**.<br>**NOTE**<br>1. **true**: incremental update, where the specified properties in **options** are updated, and other properties stay at their current value.<br>2. **false**: full update, where all properties except those specified in **options** are restored to default values. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -822,8 +863,8 @@ updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommon
 
 Updates the style of the popup corresponding to the provided **content**. This API uses a promise to return the result.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > Updating the following properties is not supported: **showInSubWindow**, **focusable**, **onStateChange**, **onWillDismiss**, and **transition**.
 
 **Since:** 18
@@ -832,21 +873,23 @@ Updates the style of the popup corresponding to the provided **content**. This A
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-PromptAction-updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommonOptions, partialUpdate?: boolean): Promise<void>--><!--Device-PromptAction-updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommonOptions, partialUpdate?: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent&lt;T&gt; | Yes | Content displayed in the popup. |
-| options | PopupCommonOptions | Yes | Style of the popup.<br>**NOTE**<br>Updating the following properties is not supported: **showInSubWindow**, **focusable**, **onStateChange**,**onWillDismiss**, and **transition**. |
-| partialUpdate | boolean | No | Whether to update the popup in incremental mode.<br>Default value: **false**<br>**NOTE**<br>**true**: Incremental update. Only specified attributes in **options** are updated, and the other attributes retaintheir current values. If the attribute value passed in **options** is invalid or **undefined**, the attributeis not updated.<br>**false**: Full update. Specified attributes in **options** are updated, and the other attributes are restored totheir default values. |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)<T> | Yes | Content displayed in the popup. |
+| options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | Yes | Style of the popup.<br>**NOTE**<br>Updating the following properties is not supported: **showInSubWindow**, **focusable**, **onStateChange**,**onWillDismiss**, and **transition**. |
+| partialUpdate | boolean | No | Whether to update the popup in incremental mode.<br>Default value: **false**<br>**NOTE**<br>**true**: Incremental update. Only specified attributes in **options** are updated, and the other attributes retain their current values. If the attribute value passed in **options** is invalid or **undefined**, the attribute is not updated.<br>**false**: Full update. Specified attributes in **options** are updated, and the other attributes are restored to their default values. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

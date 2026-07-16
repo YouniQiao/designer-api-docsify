@@ -18,6 +18,8 @@ Get the traffic usage sequence of the specified network of the application in th
 
 **Required permissions:** ohos.permission.GET_NETWORK_STATS
 
+<!--Device-statistics-function getTrafficStatsByUidNetwork(uid: int, networkInfo: NetworkInfo): Promise<NetStatsInfoSequence>--><!--Device-statistics-function getTrafficStatsByUidNetwork(uid: int, networkInfo: NetworkInfo): Promise<NetStatsInfoSequence>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -27,13 +29,13 @@ Get the traffic usage sequence of the specified network of the application in th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | number | Yes | UID with this parameter, get stats info of this UID. |
-| networkInfo | NetworkInfo | Yes | Information about the network to be queried. |
+| networkInfo | [NetworkInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-networkinfo-i.md) | Yes | Information about the network to be queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetStatsInfoSequence&gt; | The statistics history of the sim card. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetStatsInfoSequence> | The statistics history of the sim card. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Provides APIs for operating on certificate extensions.
 
 **Since:** 10
 
+<!--Device-cert-interface CertExtension--><!--Device-cert-interface CertExtension-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Checks whether the certificate is a CA certificate.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CertExtension-checkCA(): int--><!--Device-CertExtension-checkCA(): int-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | If the key usage extension contains the keyCertSign bit and the CA field in the basicconstraints is **true**, the certificate is a CA certificate. Returns **-1** if the certificate is not a CAcertificate; returns the path length in the basic constraints otherwise. Returns **-2** if the certificate isa CA certificate but the path length is not specified in the basic constraints, which means the path lengthis not limited. |
+| number | If the key usage extension contains the keyCertSign bit and the CA field in the basic constraints is **true**, the certificate is a CA certificate. Returns **-1** if the certificate is not a CA certificate; returns the path length in the basic constraints otherwise. Returns **-2** if the certificate is a CA certificate but the path length is not specified in the basic constraints, which means the path length is not limited. |
 
 **Error codes:**
 
@@ -92,13 +96,15 @@ Obtains the serialized data of the certificate extensions.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CertExtension-getEncoded(): EncodingBlob--><!--Device-CertExtension-getEncoded(): EncodingBlob-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| EncodingBlob | Serialized data obtained. |
+| [EncodingBlob](arkts-devicecertificate-encodingblob-i.md) | Serialized data obtained. |
 
 **Error codes:**
 
@@ -161,20 +167,22 @@ Obtains the certificate extension object information.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CertExtension-getEntry(valueType: ExtensionEntryType, oid: DataBlob): DataBlob--><!--Device-CertExtension-getEntry(valueType: ExtensionEntryType, oid: DataBlob): DataBlob-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| valueType | ExtensionEntryType | Yes | Type of the information to obtain. |
-| oid | DataBlob | Yes | OID of the certificate extension to obtain. |
+| valueType | [ExtensionEntryType](arkts-devicecertificate-extensionentrytype-e.md) | Yes | Type of the information to obtain. |
+| oid | [DataBlob](arkts-devicecertificate-datablob-i.md) | Yes | OID of the certificate extension to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataBlob | Certificate extension object information obtained. |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | Certificate extension object information obtained. |
 
 **Error codes:**
 
@@ -242,19 +250,21 @@ Obtains the OIDs of the certificate extensions.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CertExtension-getOidList(valueType: ExtensionOidType): DataArray--><!--Device-CertExtension-getOidList(valueType: ExtensionOidType): DataArray-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| valueType | ExtensionOidType | Yes | Type of the OIDs to obtain. |
+| valueType | [ExtensionOidType](arkts-devicecertificate-extensionoidtype-e.md) | Yes | Type of the OIDs to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataArray | OIDs obtained. |
+| [DataArray](arkts-devicecertificate-dataarray-i.md) | OIDs obtained. |
 
 **Error codes:**
 
@@ -317,6 +327,8 @@ Checks whether there is a critical extension that is not supported.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CertExtension-hasUnsupportedCriticalExtension(): boolean--><!--Device-CertExtension-hasUnsupportedCriticalExtension(): boolean-End-->
 
 **System capability:** SystemCapability.Security.Cert
 

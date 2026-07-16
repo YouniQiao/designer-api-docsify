@@ -12,12 +12,13 @@ import { bundle } from '@kit.AbilityKit';
 function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the ability that matches a given AbilityInfo object is enabled. This API uses an asynchronous
-callback to return the result.
+Checks whether the ability that matches a given AbilityInfo object is enabled. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-bundle-function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): void--><!--Device-bundle-function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -25,8 +26,8 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | AbilityInfo | Yes | Ability information. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. **true** if enabled, **false**otherwise. |
+| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | Yes | Ability information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. **true** if enabled, **false** otherwise. |
 
 
 ## isAbilityEnabled
@@ -35,12 +36,13 @@ callback to return the result.
 function isAbilityEnabled(info: AbilityInfo): Promise<boolean>
 ```
 
-Checks whether the ability that matches a given AbilityInfo object is enabled. This API uses a promise to return
-the result.
+Checks whether the ability that matches a given AbilityInfo object is enabled. This API uses a promise to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-bundle-function isAbilityEnabled(info: AbilityInfo): Promise<boolean>--><!--Device-bundle-function isAbilityEnabled(info: AbilityInfo): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -48,11 +50,11 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | AbilityInfo | Yes | Ability information. |
+| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | Yes | Ability information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** if enabled, **false** otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. **true** if enabled, **false** otherwise. |
 

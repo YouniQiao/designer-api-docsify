@@ -4,6 +4,8 @@ Enum for identification result inside and outside the door
 
 **Since:** 23
 
+<!--Device-spatialAwareness-export enum PositionRelativeToDoor--><!--Device-spatialAwareness-export enum PositionRelativeToDoor-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **System API:** This is a system API.
@@ -20,6 +22,8 @@ indicates outdoor result
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PositionRelativeToDoor-OUTDOOR = 0--><!--Device-PositionRelativeToDoor-OUTDOOR = 0-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **System API:** This is a system API.
@@ -35,6 +39,8 @@ indicates indoor result
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PositionRelativeToDoor-INDOOR = 1--><!--Device-PositionRelativeToDoor-INDOOR = 1-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 

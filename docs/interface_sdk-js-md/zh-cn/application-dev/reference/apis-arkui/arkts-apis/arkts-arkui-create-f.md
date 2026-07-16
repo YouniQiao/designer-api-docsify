@@ -1,5 +1,11 @@
 # create
 
+## 导入模块
+
+```TypeScript
+import { floatingBall } from '@kit.ArkUI';
+```
+
 ## create
 
 ```TypeScript
@@ -10,19 +16,21 @@ function create(config: FloatingBallConfiguration): Promise<FloatingBallControll
 
 **起始版本：** 20
 
+<!--Device-floatingBall-function create(config: FloatingBallConfiguration): Promise<FloatingBallController>--><!--Device-floatingBall-function create(config: FloatingBallConfiguration): Promise<FloatingBallController>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | FloatingBallConfiguration | 是 | 创建闪控球控制器的参数。该参数不能为空，并且构造该参数的context不能为空。 |
+| config | [FloatingBallConfiguration](arkts-arkui-floatingballconfiguration-i.md) | 是 | 创建闪控球控制器的参数。该参数不能为空，并且构造该参数的context不能为空。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;FloatingBallController&gt; | Promise对象。返回当前创建的闪控球控制器。 |
+| Promise<FloatingBallController> | Promise对象。返回当前创建的闪控球控制器。 |
 
 **错误码：**
 

@@ -4,6 +4,8 @@ Defines the content transition effect.
 
 **起始版本：** 21
 
+<!--Device-unnamed-declare class ContentTransitionEffect--><!--Device-unnamed-declare class ContentTransitionEffect-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## IDENTITY
@@ -18,7 +20,9 @@ When the content changes, there is no animation effect.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ContentTransitionEffect-static get IDENTITY(): ContentTransitionEffect--><!--Device-ContentTransitionEffect-static get IDENTITY(): ContentTransitionEffect-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,7 +30,7 @@ When the content changes, there is no animation effect.
 
 | 类型 | 说明 |
 | --- | --- |
-| ContentTransitionEffect |  |
+| [ContentTransitionEffect](arkts-arkui-contenttransitioneffect-c.md) |  |
 
 ## OPACITY
 
@@ -40,7 +44,9 @@ When the content changes, there is a smooth fade-in and fade-out effect.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ContentTransitionEffect-static get OPACITY(): ContentTransitionEffect--><!--Device-ContentTransitionEffect-static get OPACITY(): ContentTransitionEffect-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,5 +54,5 @@ When the content changes, there is a smooth fade-in and fade-out effect.
 
 | 类型 | 说明 |
 | --- | --- |
-| ContentTransitionEffect |  |
+| [ContentTransitionEffect](arkts-arkui-contenttransitioneffect-c.md) |  |
 

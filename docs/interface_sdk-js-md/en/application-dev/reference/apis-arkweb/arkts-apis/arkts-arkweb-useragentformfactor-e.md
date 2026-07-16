@@ -4,6 +4,8 @@ The form factors for User-Agent metadata.
 
 **Since:** 24
 
+<!--Device-webview-enum UserAgentFormFactor--><!--Device-webview-enum UserAgentFormFactor-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## AUTOMOTIVE
@@ -17,6 +19,8 @@ Form factor option: Automotive.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UserAgentFormFactor-AUTOMOTIVE = 'Automotive'--><!--Device-UserAgentFormFactor-AUTOMOTIVE = 'Automotive'-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,6 +36,8 @@ Form factor option: Desktop.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UserAgentFormFactor-DESKTOP = 'Desktop'--><!--Device-UserAgentFormFactor-DESKTOP = 'Desktop'-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## MOBILE
@@ -45,6 +51,8 @@ Form factor option: Mobile.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UserAgentFormFactor-MOBILE = 'Mobile'--><!--Device-UserAgentFormFactor-MOBILE = 'Mobile'-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -60,6 +68,8 @@ Form factor option: EInk.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UserAgentFormFactor-EINK = 'EInk'--><!--Device-UserAgentFormFactor-EINK = 'EInk'-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## TABLET
@@ -73,6 +83,8 @@ Form factor option: Tablet.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UserAgentFormFactor-TABLET = 'Tablet'--><!--Device-UserAgentFormFactor-TABLET = 'Tablet'-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -88,6 +100,8 @@ Form factor option: Watch.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UserAgentFormFactor-WATCH = 'Watch'--><!--Device-UserAgentFormFactor-WATCH = 'Watch'-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## XR
@@ -101,6 +115,8 @@ Form factor option: XR.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UserAgentFormFactor-XR = 'XR'--><!--Device-UserAgentFormFactor-XR = 'XR'-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

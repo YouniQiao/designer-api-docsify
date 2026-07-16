@@ -1,5 +1,11 @@
 # @ohos.measure
 
+## 导入模块
+
+```TypeScript
+import { MeasureOptions } from '@kit.ArkUI';
+```
+
 ## 汇总
 
 ### 类

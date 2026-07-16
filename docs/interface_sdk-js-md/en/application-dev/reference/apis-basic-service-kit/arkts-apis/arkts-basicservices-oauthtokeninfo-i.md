@@ -2,9 +2,9 @@
 
 Defines authorization token information.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
 > [AuthTokenInfo](arkts-basicservices-authtokeninfo-i.md) instead.
 
 **Since:** 8
@@ -12,6 +12,8 @@ Defines authorization token information.
 **Deprecated since:** 9
 
 **Substitutes:** [AuthTokenInfo](arkts-basicservices-authtokeninfo-i.md)
+
+<!--Device-appAccount-interface OAuthTokenInfo--><!--Device-appAccount-interface OAuthTokenInfo-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -37,6 +39,8 @@ Authentication type.
 
 **Substitutes:** [authType](arkts-basicservices-authtokeninfo-i.md#authtype)
 
+<!--Device-OAuthTokenInfo-authType: string--><!--Device-OAuthTokenInfo-authType: string-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 ## token
@@ -54,6 +58,8 @@ Value of the authorization token.
 **Deprecated since:** 9
 
 **Substitutes:** [token](arkts-basicservices-authtokeninfo-i.md#token)
+
+<!--Device-OAuthTokenInfo-token: string--><!--Device-OAuthTokenInfo-token: string-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 

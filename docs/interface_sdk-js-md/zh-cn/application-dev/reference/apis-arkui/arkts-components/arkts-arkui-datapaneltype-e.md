@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare enum DataPanelType--><!--Device-unnamed-declare enum DataPanelType-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## Line
@@ -16,9 +18,11 @@ Line = 0
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DataPanelType-Line = 0--><!--Device-DataPanelType-Line = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,9 +36,11 @@ Line Rainbow
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DataPanelType-Circle--><!--Device-DataPanelType-Circle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

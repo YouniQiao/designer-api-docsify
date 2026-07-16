@@ -1,13 +1,14 @@
 # RelativeTimeFormatInputOptions
 
-Defines the configuration options for a **RelativeTimeFormat** object.
-Since API version 9, the attributes in **RelativeTimeFormatInputOptions** are optional.
+Defines the configuration options for a **RelativeTimeFormat** object.Since API version 9, the attributes in **RelativeTimeFormatInputOptions** are optional.
 
 **Since:** 8
 
 **Deprecated since:** 20
 
 **Substitutes:** options)
+
+<!--Device-intl-export interface RelativeTimeFormatInputOptions--><!--Device-intl-export interface RelativeTimeFormatInputOptions-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -37,6 +38,8 @@ The default value is **best fit**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RelativeTimeFormatInputOptions-localeMatcher?: string--><!--Device-RelativeTimeFormatInputOptions-localeMatcher?: string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## numeric
@@ -45,13 +48,11 @@ The default value is **best fit**.
 numeric?: string
 ```
 
-Format of the output result. It determines whether numeric values are used to represent relative dates or times
-in the formatting result. The value can be **always** or **auto**.
+Format of the output result. It determines whether numeric values are used to represent relative dates or times in the formatting result. The value can be **always** or **auto**.
 
 The default value is **always**.
 
-For details about their display effects, see
-[Table 23](../../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+For details about their display effects, see [Table 23](../../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
@@ -62,6 +63,8 @@ For details about their display effects, see
 **Substitutes:** numeric)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RelativeTimeFormatInputOptions-numeric?: string--><!--Device-RelativeTimeFormatInputOptions-numeric?: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -84,6 +87,8 @@ The default value is **long**.
 **Substitutes:** style)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RelativeTimeFormatInputOptions-style?: string--><!--Device-RelativeTimeFormatInputOptions-style?: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 

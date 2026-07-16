@@ -4,6 +4,8 @@ Manager OPP server profile.
 
 **Since:** 16
 
+<!--Device-opp-interface OppServerProfile--><!--Device-opp-interface OppServerProfile-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ cancel the current file transfer action.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OppServerProfile-cancelTransfer(): Promise<void>--><!--Device-OppServerProfile-cancelTransfer(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -34,7 +38,7 @@ cancel the current file transfer action.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 
@@ -72,9 +76,7 @@ try {
 getCurrentTransferInformation(): Promise<OppTransferInformation>
 ```
 
-Obtains the information about the file that is being transferred.
-On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC,
-the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
+Obtains the information about the file that is being transferred.On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC,the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
 
 **Since:** 16
 
@@ -84,6 +86,8 @@ the type of the peer device address is real. Otherwise, the type of the peer dev
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OppServerProfile-getCurrentTransferInformation(): Promise<OppTransferInformation>--><!--Device-OppServerProfile-getCurrentTransferInformation(): Promise<OppTransferInformation>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -92,7 +96,7 @@ the type of the peer device address is real. Otherwise, the type of the peer dev
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OppTransferInformation&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<OppTransferInformation> | Returns the promise object. |
 
 **Error codes:**
 
@@ -122,6 +126,8 @@ Unsubscribe the event reported when the file transfer status changes.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OppServerProfile-off(type: 'transferStateChange', callback?: Callback<OppTransferInformation>): void--><!--Device-OppServerProfile-off(type: 'transferStateChange', callback?: Callback<OppTransferInformation>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -131,7 +137,7 @@ Unsubscribe the event reported when the file transfer status changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'transferStateChange' | Yes | Type of transport state change event to listen for. |
-| callback | Callback&lt;OppTransferInformation&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<OppTransferInformation> | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -176,6 +182,8 @@ Unsubscribe to the event of receiving a file transfer request.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OppServerProfile-off(type: 'receiveIncomingFile', callback?: Callback<OppTransferInformation>): void--><!--Device-OppServerProfile-off(type: 'receiveIncomingFile', callback?: Callback<OppTransferInformation>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -185,7 +193,7 @@ Unsubscribe to the event of receiving a file transfer request.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'receiveIncomingFile' | Yes | Type of the event for receiving a file request to listen for. |
-| callback | Callback&lt;OppTransferInformation&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<OppTransferInformation> | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -221,9 +229,7 @@ try {
 on(type: 'transferStateChange', callback: Callback<OppTransferInformation>): void
 ```
 
-Subscribe the event reported when the file transfer status changes.
-On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC,
-the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
+Subscribe the event reported when the file transfer status changes.On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC,the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
 
 **Since:** 16
 
@@ -232,6 +238,8 @@ the type of the peer device address is real. Otherwise, the type of the peer dev
 - API version 16 - 24: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OppServerProfile-on(type: 'transferStateChange', callback: Callback<OppTransferInformation>): void--><!--Device-OppServerProfile-on(type: 'transferStateChange', callback: Callback<OppTransferInformation>): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -242,7 +250,7 @@ the type of the peer device address is real. Otherwise, the type of the peer dev
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'transferStateChange' | Yes | Type of transport state change event to listen for. |
-| callback | Callback&lt;OppTransferInformation&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<OppTransferInformation> | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -287,9 +295,7 @@ try {
 on(type: 'receiveIncomingFile', callback: Callback<OppTransferInformation>): void
 ```
 
-Subscribe to the event of receiving a file transfer request.
-On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC,
-the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
+Subscribe to the event of receiving a file transfer request.On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC,the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
 
 **Since:** 16
 
@@ -298,6 +304,8 @@ the type of the peer device address is real. Otherwise, the type of the peer dev
 - API version 16 - 24: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OppServerProfile-on(type: 'receiveIncomingFile', callback: Callback<OppTransferInformation>): void--><!--Device-OppServerProfile-on(type: 'receiveIncomingFile', callback: Callback<OppTransferInformation>): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -308,7 +316,7 @@ the type of the peer device address is real. Otherwise, the type of the peer dev
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'receiveIncomingFile' | Yes | Type of the event for receiving a file request to listen for. |
-| callback | Callback&lt;OppTransferInformation&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<OppTransferInformation> | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -361,6 +369,8 @@ Send files to the remote device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OppServerProfile-sendFile(deviceId: string, fileHolds: Array<FileHolder>): Promise<void>--><!--Device-OppServerProfile-sendFile(deviceId: string, fileHolds: Array<FileHolder>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -370,13 +380,13 @@ Send files to the remote device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| fileHolds | Array&lt;FileHolder&gt; | Yes | Indicates the information about files to be sent. |
+| fileHolds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<FileHolder> | Yes | Indicates the information about files to be sent. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 
@@ -441,6 +451,8 @@ Set the user confirmation information for incoming files.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OppServerProfile-setIncomingFileConfirmation(accept: boolean, fileFd: int): Promise<void>--><!--Device-OppServerProfile-setIncomingFileConfirmation(accept: boolean, fileFd: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -456,7 +468,7 @@ Set the user confirmation information for incoming files.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 
@@ -512,6 +524,8 @@ Set the URI of the last received file.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OppServerProfile-setLastReceivedFileUri(uri: string): Promise<void>--><!--Device-OppServerProfile-setLastReceivedFileUri(uri: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -526,7 +540,7 @@ Set the URI of the last received file.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 

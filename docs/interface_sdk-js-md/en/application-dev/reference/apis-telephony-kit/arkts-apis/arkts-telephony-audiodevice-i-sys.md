@@ -4,6 +4,8 @@ Indicates the audio device.
 
 **Since:** 10
 
+<!--Device-call-export interface AudioDevice--><!--Device-call-export interface AudioDevice-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Indicates the address of the audio device.
 
 **Since:** 10
 
+<!--Device-AudioDevice-address?: string--><!--Device-AudioDevice-address?: string-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ Indicates the name of the audio device.
 
 **Since:** 11
 
+<!--Device-AudioDevice-deviceName?: string--><!--Device-AudioDevice-deviceName?: string-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ Indicates the device type of the audio device.
 **Type:** AudioDeviceType
 
 **Since:** 10
+
+<!--Device-AudioDevice-deviceType: AudioDeviceType--><!--Device-AudioDevice-deviceType: AudioDeviceType-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 

@@ -4,6 +4,8 @@ Represents the result returned.
 
 **Since:** 11
 
+<!--Device-certificateManager-export interface CMResult--><!--Device-certificateManager-export interface CMResult-End-->
+
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## Modules to Import
@@ -24,6 +26,8 @@ List of authorized applications.
 
 **Since:** 11
 
+<!--Device-CMResult-appUidList?: Array<string>--><!--Device-CMResult-appUidList?: Array<string>-End-->
+
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## certInfo
@@ -37,6 +41,8 @@ Detailed certificate information.
 **Type:** CertInfo
 
 **Since:** 11
+
+<!--Device-CMResult-certInfo?: CertInfo--><!--Device-CMResult-certInfo?: CertInfo-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -52,6 +58,8 @@ Brief certificate information.
 
 **Since:** 11
 
+<!--Device-CMResult-certList?: Array<CertAbstract>--><!--Device-CMResult-certList?: Array<CertAbstract>-End-->
+
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## credential
@@ -65,6 +73,8 @@ Detailed credential information.
 **Type:** Credential
 
 **Since:** 11
+
+<!--Device-CMResult-credential?: Credential--><!--Device-CMResult-credential?: Credential-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -80,6 +90,8 @@ Represents detailed information about a credential.
 
 **Since:** 22
 
+<!--Device-CMResult-credentialDetailList?: Array<Credential>--><!--Device-CMResult-credentialDetailList?: Array<Credential>-End-->
+
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## credentialList
@@ -93,6 +105,8 @@ Brief credential information.
 **Type:** Array<CredentialAbstract>
 
 **Since:** 11
+
+<!--Device-CMResult-credentialList?: Array<CredentialAbstract>--><!--Device-CMResult-credentialList?: Array<CredentialAbstract>-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -108,6 +122,8 @@ Signature generated.
 
 **Since:** 11
 
+<!--Device-CMResult-outData?: Uint8Array--><!--Device-CMResult-outData?: Uint8Array-End-->
+
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## uri
@@ -122,6 +138,8 @@ Unique identifier of a certificate or credential. The value contains up to 256 b
 
 **Since:** 11
 
+<!--Device-CMResult-uri?: string--><!--Device-CMResult-uri?: string-End-->
+
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## uriList
@@ -130,14 +148,15 @@ Unique identifier of a certificate or credential. The value contains up to 256 b
 uriList?: Array<string>
 ```
 
-Certificate URI list.
-**Since**: 26.0.0
+Certificate URI list.**Since**: 26.0.0
 
 **Type:** Array<string>
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CMResult-uriList?: Array<string>--><!--Device-CMResult-uriList?: Array<string>-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 

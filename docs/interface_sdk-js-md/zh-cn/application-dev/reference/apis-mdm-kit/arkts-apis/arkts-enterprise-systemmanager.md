@@ -2,15 +2,23 @@
 
 本模块提供系统管理能力。
 
-> **说明**：
->
-> 本模块接口仅可在Stage模型下使用。
->
+> **说明**：  
+>  
+> 本模块接口仅可在Stage模型下使用。  
+>  
 > 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../../mdm/mdm-kit-guide.md)。
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare namespace systemManager--><!--Device-unnamed-declare namespace systemManager-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { systemManager } from '@kit.MDMKit';
+```
 
 ## 汇总
 
@@ -20,7 +28,7 @@
 | --- | --- |
 | [addDisallowedNearLinkProtocols](arkts-mdm-adddisallowednearlinkprotocols-f.md#adddisallowednearlinkprotocols-1) | 为指定用户添加禁用的星闪协议名单。NearLink Kit（星闪服务）提供一种低功耗、高速率的短距离通信服务，支持星闪设备之间的连接、数据交互。&lt;!--RP3--&gt;&lt;!--RP3End--&gt;本接口对键盘、手写笔等系统服务和系统应用不生效。 |
 | [addKeyEventPolicies](arkts-mdm-addkeyeventpolicies-f.md#addkeyeventpolicies-1) | 添加按键事件处理策略。系统触发按键事件时，若匹配下发的按键事件策略，将通过[EnterpriseAdminExtensionAbility.onKeyEvent](arkts-mdm-enterpriseadminextensionability-c.md#onkeyevent-1)回调通知MDM应用，并携带匹配策略的按键事件信息。 |
-| [finishLogCollected](arkts-mdm-finishlogcollected-f.md#finishlogcollected-1) | 删除本MDM应用在当前用户下收集到的设备日志。@link systemManager.startCollectLog}开始收集日志后，收到&gt; [EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterpriseadminextensionability-c.md#onlogcollected-1)&gt; 回调时，建议立即拷贝或者处理日志，并调用此接口删除收集到的日志。&gt;&gt; 若不调本接口，设备日志会占用系统存储空间，不影响下一次调用[startCollectLog](arkts-mdm-startcollectlog-f.md#startcollectlog-1)启动日志收集任务。 |
+| [finishLogCollected](arkts-mdm-finishlogcollected-f.md#finishlogcollected-1) | 删除本MDM应用在当前用户下收集到的设备日志。 |
 | [getAutoUnlockAfterReboot](arkts-mdm-getautounlockafterreboot-f.md#getautounlockafterreboot-1) | 获取设备是否重启自动解锁。 |
 | [getDisallowedNearLinkProtocols](arkts-mdm-getdisallowednearlinkprotocols-f.md#getdisallowednearlinkprotocols-1) | 获取指定用户下禁用的星闪协议名单。 |
 | [getInstallLocalEnterpriseAppEnabled](arkts-mdm-getinstalllocalenterpriseappenabled-f.md#getinstalllocalenterpriseappenabled-1) | 查询是否支持本地安装企业应用。 |
@@ -42,7 +50,7 @@
 | [setNTPServer](arkts-mdm-setntpserver-f.md#setntpserver-1) | 设置NTP(Network Time Protocol)时间服务器。 |
 | [setOtaUpdateNonceEnable](arkts-mdm-setotaupdatenonceenable-f.md#setotaupdatenonceenable-1) | 使能服务器端生成随机Nonce标记 |
 | [setOtaUpdatePolicy](arkts-mdm-setotaupdatepolicy-f.md#setotaupdatepolicy-1) | 设置升级策略。内网升级场景下，需要先调用[systemManager.notifyUpdatePackages](arkts-mdm-notifyupdatepackages-f.md#notifyupdatepackages-1)接口通知系统更新包，再调用该接口设置升级策略。 |
-| [startCollectLog](arkts-mdm-startcollectlog-f.md#startcollectlog-1) | 开始收集设备上已生成并存储至硬盘的[faultlog](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-faulttype-e.md)日志，不支持收集未存储至硬盘的faultlog日志、应用业务日志和系统运行日志。- 调用接口后，系统会启动一个日志收集任务，任务启动后接口立即返回。任务可能会因为系统性能等原因导致收集失败。- 允许多个MDM应用调用，不同MDM应用在不同用户下收集的日志分开保存，互不影响。同一时间只允许一个MDM应用启动日志收集任务，在任务执行完成前调用本接口会返回错误码9201009，任务执行完成后，允许其他MDM应用调用。- 任务执行完成后，通过[EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterpriseadminextensionability-c.md#onlogcollected-1)回调函数通知给MDM应用，系统将已收集的日志文件挂载到MDM应用沙箱路径，MDM应用可以在回调函数中读取已收集的日志。- 如果日志收集任务执行超过5分钟，[EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterpriseadminextensionability-c.md#onlogcollected-1)回调函数会返回日志收集任务失败。- 应用取走日志后，建议调用[systemManager.finishLogCollected](arkts-mdm-finishlogcollected-f.md#finishlogcollected-1)删除已收集到的日志。 |
+| [startCollectLog](arkts-mdm-startcollectlog-f.md#startcollectlog-1) | 开始收集设备上已生成并存储至硬盘的[faultlog](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-faulttype-e.md)日志，不支持收集未存储至硬盘的faultlog日志、应用业务日志和系统运行日志。- 调用接口后，系统会启动一个日志收集任务，任务启动后接口立即返回。任务可能会因为系统性能等原因导致收集失败。 - 允许多个MDM应用调用，不同MDM应用在不同用户下收集的日志分开保存，互不影响。同一时间只允许一个MDM应用启动日志收集任务，在任务执行完成前调用本接口会返回错误码9201009，任务执行完成后，允许其他MDM应用调用。 - 任务执行完成后，通过[EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterpriseadminextensionability-c.md#onlogcollected-1)回调函数通知给MDM应用，系统将已收集的日志文件挂载到MDM应用沙箱路径，MDM应用可以在回调函数中读取已收集的日志。 - 如果日志收集任务执行超过5分钟，[EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterpriseadminextensionability-c.md#onlogcollected-1)回调函数会返回日志收集任务失败。 - 应用取走日志后，建议调用[systemManager.finishLogCollected](arkts-mdm-finishlogcollected-f.md#finishlogcollected-1)删除已收集到的日志。 |
 
 ### 接口
 

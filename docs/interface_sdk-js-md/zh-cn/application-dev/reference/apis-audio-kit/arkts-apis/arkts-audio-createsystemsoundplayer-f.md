@@ -1,5 +1,11 @@
 # createSystemSoundPlayer
 
+## 导入模块
+
+```TypeScript
+import { systemSoundManager } from '@kit.AudioKit';
+```
+
 ## createSystemSoundPlayer
 
 ```TypeScript
@@ -10,13 +16,15 @@ function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>
 
 **起始版本：** 23
 
+<!--Device-systemSoundManager-function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>--><!--Device-systemSoundManager-function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;SystemSoundPlayer \| null&gt; | 成功返回系统音效播放器对象，失败返回null。 |
+| Promise<SystemSoundPlayer \| null> | 成功返回系统音效播放器对象，失败返回null。 |
 
 **错误码：**
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-enum AVScreenCaptureStateCode--><!--Device-unnamed-enum AVScreenCaptureStateCode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## SCREENCAPTURE_STATE_STARTED
@@ -15,6 +17,8 @@ SCREENCAPTURE_STATE_STARTED = 0
 录屏已开始。
 
 **起始版本：** 12
+
+<!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_STARTED = 0--><!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_STARTED = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -28,6 +32,8 @@ SCREENCAPTURE_STATE_CANCELED = 1
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_CANCELED = 1--><!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_CANCELED = 1-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## SCREENCAPTURE_STATE_STOPPED_BY_USER
@@ -39,6 +45,8 @@ SCREENCAPTURE_STATE_STOPPED_BY_USER = 2
 录屏被用户手动停止。
 
 **起始版本：** 12
+
+<!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_STOPPED_BY_USER = 2--><!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_STOPPED_BY_USER = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -52,6 +60,8 @@ SCREENCAPTURE_STATE_INTERRUPTED_BY_OTHER = 3
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_INTERRUPTED_BY_OTHER = 3--><!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_INTERRUPTED_BY_OTHER = 3-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## SCREENCAPTURE_STATE_STOPPED_BY_CALL
@@ -63,6 +73,8 @@ SCREENCAPTURE_STATE_STOPPED_BY_CALL = 4
 录屏被来电打断。
 
 **起始版本：** 12
+
+<!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_STOPPED_BY_CALL = 4--><!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_STOPPED_BY_CALL = 4-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -76,6 +88,8 @@ SCREENCAPTURE_STATE_MIC_UNAVAILABLE = 5
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_MIC_UNAVAILABLE = 5--><!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_MIC_UNAVAILABLE = 5-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## SCREENCAPTURE_STATE_MIC_MUTED_BY_USER
@@ -87,6 +101,8 @@ SCREENCAPTURE_STATE_MIC_MUTED_BY_USER = 6
 麦克风被用户关闭。
 
 **起始版本：** 12
+
+<!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_MIC_MUTED_BY_USER = 6--><!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_MIC_MUTED_BY_USER = 6-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -100,6 +116,8 @@ SCREENCAPTURE_STATE_MIC_UNMUTED_BY_USER = 7
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_MIC_UNMUTED_BY_USER = 7--><!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_MIC_UNMUTED_BY_USER = 7-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## SCREENCAPTURE_STATE_ENTER_PRIVATE_SCENE
@@ -111,6 +129,8 @@ SCREENCAPTURE_STATE_ENTER_PRIVATE_SCENE = 8
 录屏进入隐私页面。
 
 **起始版本：** 12
+
+<!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_ENTER_PRIVATE_SCENE = 8--><!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_ENTER_PRIVATE_SCENE = 8-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -124,6 +144,8 @@ SCREENCAPTURE_STATE_EXIT_PRIVATE_SCENE = 9
 
 **起始版本：** 12
 
+<!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_EXIT_PRIVATE_SCENE = 9--><!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_EXIT_PRIVATE_SCENE = 9-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## SCREENCAPTURE_STATE_STOPPED_BY_USER_SWITCHES
@@ -135,6 +157,8 @@ SCREENCAPTURE_STATE_STOPPED_BY_USER_SWITCHES = 10
 系统用户切换，录屏中断。
 
 **起始版本：** 12
+
+<!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_STOPPED_BY_USER_SWITCHES = 10--><!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_STOPPED_BY_USER_SWITCHES = 10-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -154,6 +178,8 @@ SCREENCAPTURE_STATE_PAUSED_BY_USER = 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_PAUSED_BY_USER = 11--><!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_PAUSED_BY_USER = 11-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## SCREENCAPTURE_STATE_RESUMED_BY_USER
@@ -171,6 +197,8 @@ SCREENCAPTURE_STATE_RESUMED_BY_USER = 12
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_RESUMED_BY_USER = 12--><!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_RESUMED_BY_USER = 12-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -190,6 +218,8 @@ SCREENCAPTURE_STATE_PAUSED_BY_APP = 13
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_PAUSED_BY_APP = 13--><!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_PAUSED_BY_APP = 13-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## SCREENCAPTURE_STATE_RESUMED_BY_APP
@@ -207,6 +237,8 @@ SCREENCAPTURE_STATE_RESUMED_BY_APP = 14
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_RESUMED_BY_APP = 14--><!--Device-AVScreenCaptureStateCode-SCREENCAPTURE_STATE_RESUMED_BY_APP = 14-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 

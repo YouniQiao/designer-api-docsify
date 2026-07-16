@@ -1,10 +1,10 @@
 # TextEncoder
 
-Provides APIs to encode strings into byte arrays. Multiple encoding formats are supported.
-When **TextEncoder** is used for encoding, the number of bytes occupied by a character varies according to the
-encoding format. You must explicitly specify the encoding format to obtain the required encoding result.
+Provides APIs to encode strings into byte arrays. Multiple encoding formats are supported.When **TextEncoder** is used for encoding, the number of bytes occupied by a character varies according to the encoding format. You must explicitly specify the encoding format to obtain the required encoding result.
 
 **Since:** 7
+
+<!--Device-util-class TextEncoder--><!--Device-util-class TextEncoder-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,6 +26,8 @@ A constructor used to create a **TextEncoder** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextEncoder-constructor()--><!--Device-TextEncoder-constructor()-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Example**
@@ -46,6 +48,8 @@ A constructor used to create a **TextEncoder** object.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextEncoder-constructor(encoding?: string)--><!--Device-TextEncoder-constructor(encoding?: string)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -74,6 +78,8 @@ Creates a **TextEncoder** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextEncoder-static create(encoding?: string): TextEncoder--><!--Device-TextEncoder-static create(encoding?: string): TextEncoder-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -86,7 +92,7 @@ Creates a **TextEncoder** object.
 
 | Type | Description |
 | --- | --- |
-| TextEncoder | **TextEncoder** object. |
+| [TextEncoder](arkts-arkts-textencoder-c.md) | **TextEncoder** object. |
 
 **Example**
 
@@ -109,6 +115,8 @@ Encodes the input content in to a Uint8Array object.
 
 **Substitutes:** encodeInto
 
+<!--Device-TextEncoder-encode(input?: string): Uint8Array--><!--Device-TextEncoder-encode(input?: string): Uint8Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -121,7 +129,7 @@ Encodes the input content in to a Uint8Array object.
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Uint8Array object obtained. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Uint8Array object obtained. |
 
 **Example**
 
@@ -145,19 +153,21 @@ Encodes the input content into a Uint8Array object.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextEncoder-encodeInto(input?: string): Uint8Array--><!--Device-TextEncoder-encodeInto(input?: string): Uint8Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| input | string | No | String to encode. The default value is an empty string. If the input parameter is anempty string, the return value is undefined. |
+| input | string | No | String to encode. The default value is an empty string. If the input parameter is an empty string, the return value is undefined. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Uint8Array object obtained. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Uint8Array object obtained. |
 
 **Example**
 
@@ -183,6 +193,8 @@ Writes the generated UTF-8 encoded text to an array.
 
 **Substitutes:** [encodeIntoUint8Array](arkts-arkts-textencoder-c.md#encodeintouint8array-1)
 
+<!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }--><!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -190,13 +202,13 @@ Writes the generated UTF-8 encoded text to an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | input | string | Yes | String to encode. |
-| dest | Uint8Array | Yes | Uint8Array object used to store the UTF-8 encoded text. |
+| dest | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Uint8Array object used to store the UTF-8 encoded text. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| { read: number; written: number } | Object obtained. **read** indicates the number of encoded characters, and **written**indicates the number of bytes in the encoded characters. |
+| { read: number; written: number } | Object obtained. **read** indicates the number of encoded characters, and **written** indicates the number of bytes in the encoded characters. |
 
 **Example**
 
@@ -222,6 +234,8 @@ Encodes the input content and stores the result into a Uint8Array object.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextEncoder-encodeIntoUint8Array(input: string, dest: Uint8Array): EncodeIntoUint8ArrayInfo--><!--Device-TextEncoder-encodeIntoUint8Array(input: string, dest: Uint8Array): EncodeIntoUint8ArrayInfo-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -229,14 +243,14 @@ Encodes the input content and stores the result into a Uint8Array object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | input | string | Yes | String to encode. |
-| dest | Uint8Array | Yes | Uint8Array object used to store the UTF-8 encoded text. |
+| dest | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Uint8Array object used to store the UTF-8 encoded text. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| object | Return the object, where read representsthe number of characters that have been encoded, and writtenrepresents the number of bytes occupied by the encoded characters.<br>**Applicable version:** 9 - 10 |
-| EncodeIntoUint8ArrayInfo | Object obtained. **read** indicates the number of encoded characters, and**written** indicates the number of bytes in the encoded characters.<br>**Applicable version:** 11 and later |
+| object | Return the object, where read represents the number of characters that have been encoded, and written represents the number of bytes occupied by the encoded characters.<br>**Applicable version:** 9 - 10 |
+| [EncodeIntoUint8ArrayInfo](arkts-arkts-encodeintouint8arrayinfo-i.md) | Object obtained. **read** indicates the number of encoded characters, and **written** indicates the number of bytes in the encoded characters.<br>**Applicable version:** 11 and later |
 
 **Example**
 
@@ -260,17 +274,15 @@ console.info("result.written = " + result.written);
 readonly encoding = 'utf-8'
 ```
 
-Encoding format.<br>The following formats are supported: utf-8, gb2312, gb18030, ibm866, iso-8859-1, iso-8859-2,
-iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-8-i, iso-8859-10, iso-8859-13,
-iso-8859-14, iso-8859-15, koi8-r, koi8-u, macintosh, windows-874, windows-1250, windows-1251, windows-1252,
-windows-1253, windows-1254, windows-1255, windows-1256, windows-1257, windows-1258, gbk, big5, euc-jp, iso-2022-
-jp, shift_jis, euc-kr, x-mac-cyrillic, utf-16be, and utf-16le.<br>The default value is **'utf-8'**.
+Encoding format.<br>The following formats are supported: utf-8, gb2312, gb18030, ibm866, iso-8859-1, iso-8859-2,iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-8-i, iso-8859-10, iso-8859-13,iso-8859-14, iso-8859-15, koi8-r, koi8-u, macintosh, windows-874, windows-1250, windows-1251, windows-1252,windows-1253, windows-1254, windows-1255, windows-1256, windows-1257, windows-1258, gbk, big5, euc-jp, iso-2022-jp, shift_jis, euc-kr, x-mac-cyrillic, utf-16be, and utf-16le.<br>The default value is **'utf-8'**.
 
 **Type:** 'utf-8'
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextEncoder-readonly encoding = 'utf-8'--><!--Device-TextEncoder-readonly encoding = 'utf-8'-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

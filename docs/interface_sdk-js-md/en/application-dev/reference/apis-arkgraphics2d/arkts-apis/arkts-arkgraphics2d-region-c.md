@@ -2,16 +2,18 @@
 
 Describes a region, which is used to describe the region where the shape can be drawn.
 
-> **NOTE**
->
-> - The initial APIs of this class are supported since API version 12.
->
-> - This module uses the physical pixel unit, px.
->
-> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
+> **NOTE**  
+>  
+> - The initial APIs of this class are supported since API version 12.  
+>  
+> - This module uses the physical pixel unit, px.  
+>  
+> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state  
 > transitions.
 
 **Since:** 12
+
+<!--Device-drawing-class Region--><!--Device-drawing-class Region-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -31,6 +33,8 @@ Constructs a **Region** object.
 
 **Since:** 20
 
+<!--Device-Region-constructor()--><!--Device-Region-constructor()-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## constructor
@@ -43,13 +47,15 @@ Copies a **Region** object.
 
 **Since:** 20
 
+<!--Device-Region-constructor(region: Region)--><!--Device-Region-constructor(region: Region)-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | Region | Yes | Region to be copied. |
+| region | [Region](../../apis-image-kit/arkts-apis/arkts-image-region-i.md) | Yes | Region to be copied. |
 
 ## constructor
 
@@ -61,16 +67,18 @@ Constructs a rectangular region.
 
 **Since:** 20
 
+<!--Device-Region-constructor(left: int, top: int, right: int, bottom: int)--><!--Device-Region-constructor(left: int, top: int, right: int, bottom: int)-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| left | number | Yes | Left position of the rectangle (X coordinate of the upper left corner). The value must bean integer. **0** indicates the coordinate origin. A positive value places the point to the right of thecoordinate origin, while a negative value places the point to the left. |
-| top | number | Yes | Top position of the rectangle (Y coordinate of the upper left corner). The value must be aninteger. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
-| right | number | Yes | Right position of the rectangle (X coordinate of the lower right corner). The value mustbe an integer. **0** indicates the coordinate origin. A positive value places the point to the right of thecoordinate origin, while a negative value places the point to the left. |
-| bottom | number | Yes | Bottom position of the rectangle (Y coordinate of the lower right corner). The value mustbe an integer. **0** indicates the coordinate origin. A positive value places the point below the coordinateorigin, while a negative value places the point above the coordinate origin. |
+| left | number | Yes | Left position of the rectangle (X coordinate of the upper left corner). The value must be an integer. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
+| top | number | Yes | Top position of the rectangle (Y coordinate of the upper left corner). The value must be an integer. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
+| right | number | Yes | Right position of the rectangle (X coordinate of the lower right corner). The value must be an integer. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
+| bottom | number | Yes | Bottom position of the rectangle (Y coordinate of the lower right corner). The value must be an integer. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
 
 ## getBoundaryPath
 
@@ -82,13 +90,15 @@ Obtains a new path that is the boundary of the existing region.
 
 **Since:** 20
 
+<!--Device-Region-getBoundaryPath(): Path--><!--Device-Region-getBoundaryPath(): Path-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Path | Path of the boundary of the existing region. |
+| [Path](arkts-arkgraphics2d-path-c.md) | Path of the boundary of the existing region. |
 
 ## getBounds
 
@@ -99,6 +109,8 @@ getBounds(): common2D.Rect
 Obtains the boundaries of the existing region.
 
 **Since:** 20
+
+<!--Device-Region-getBounds(): common2D.Rect--><!--Device-Region-getBounds(): common2D.Rect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -118,6 +130,8 @@ Checks whether this region contains multiple rectangles.
 
 **Since:** 20
 
+<!--Device-Region-isComplex(): boolean--><!--Device-Region-isComplex(): boolean-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
@@ -135,6 +149,8 @@ isEmpty(): boolean
 Checks whether the existing region is empty.
 
 **Since:** 20
+
+<!--Device-Region-isEmpty(): boolean--><!--Device-Region-isEmpty(): boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -154,13 +170,15 @@ Checks whether another region is equal to this region.
 
 **Since:** 20
 
+<!--Device-Region-isEqual(other: Region): boolean--><!--Device-Region-isEqual(other: Region): boolean-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | Region | Yes | **Region** object. |
+| other | [Region](../../apis-image-kit/arkts-apis/arkts-image-region-i.md) | Yes | **Region** object. |
 
 **Return value:**
 
@@ -178,14 +196,16 @@ Checks whether a point is contained in this region.
 
 **Since:** 12
 
+<!--Device-Region-isPointContained(x: int, y:int): boolean--><!--Device-Region-isPointContained(x: int, y:int): boolean-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | X coordinate of the point. The value must be an integer. If a decimal is passed in, thedecimal part is rounded off. |
-| y | number | Yes | Y coordinate of the point. The value must be an integer. If a decimal is passed in, thedecimal part is rounded off. |
+| x | number | Yes | X coordinate of the point. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
+| y | number | Yes | Y coordinate of the point. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
 
 **Return value:**
 
@@ -211,13 +231,15 @@ Checks whether this region is the same as a single rectangle.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Region-isRect(): boolean--><!--Device-Region-isRect(): boolean-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. **true** if this region is the same as a single rectangle; **false**otherwise. |
+| boolean | Check result. **true** if this region is the same as a single rectangle; **false** otherwise. |
 
 ## isRegionContained
 
@@ -229,13 +251,15 @@ Checks whether another region is contained in this region.
 
 **Since:** 12
 
+<!--Device-Region-isRegionContained(other: Region): boolean--><!--Device-Region-isRegionContained(other: Region): boolean-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | Region | Yes | **Region** object. |
+| other | [Region](../../apis-image-kit/arkts-apis/arkts-image-region-i.md) | Yes | **Region** object. |
 
 **Return value:**
 
@@ -259,14 +283,16 @@ Translates a region.
 
 **Since:** 20
 
+<!--Device-Region-offset(dx: int, dy: int): void--><!--Device-Region-offset(dx: int, dy: int): void-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dx | number | Yes | X offset. A positive number indicates an offset towards the positive direction of the X axis,and a negative number indicates an offset towards the negative direction of the X axis. The value is aninteger. |
-| dy | number | Yes | Y offset. A positive number indicates an offset towards the positive direction of the Y axis,and a negative number indicates an offset towards the negative direction of the Y axis. The value is aninteger. |
+| dx | number | Yes | X offset. A positive number indicates an offset towards the positive direction of the X axis,and a negative number indicates an offset towards the negative direction of the X axis. The value is an integer. |
+| dy | number | Yes | Y offset. A positive number indicates an offset towards the positive direction of the Y axis,and a negative number indicates an offset towards the negative direction of the Y axis. The value is an integer. |
 
 ## op
 
@@ -274,10 +300,11 @@ Translates a region.
 op(region: Region, regionOp: RegionOp): boolean
 ```
 
-Performs an operation on this region and another region, and stores the resulting region in this **Region**
-object.
+Performs an operation on this region and another region, and stores the resulting region in this **Region** object.
 
 **Since:** 12
+
+<!--Device-Region-op(region: Region, regionOp: RegionOp): boolean--><!--Device-Region-op(region: Region, regionOp: RegionOp): boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -285,14 +312,14 @@ object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | Region | Yes | **Region** object. |
-| regionOp | RegionOp | Yes | Operation mode of the region. |
+| region | [Region](../../apis-image-kit/arkts-apis/arkts-image-region-i.md) | Yes | **Region** object. |
+| regionOp | [RegionOp](arkts-arkgraphics2d-regionop-e.md) | Yes | Operation mode of the region. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** means that the resulting region is stored in the current**Region** object, and **false** means the opposite. |
+| boolean | Check result. The value **true** means that the resulting region is stored in the current **Region** object, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -312,6 +339,8 @@ Checks whether this region is the same as a single rectangle and contains the sp
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Region-quickContains(left: int, top: int, right: int, bottom: int): boolean--><!--Device-Region-quickContains(left: int, top: int, right: int, bottom: int): boolean-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
@@ -319,7 +348,7 @@ Checks whether this region is the same as a single rectangle and contains the sp
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | left | number | Yes | Left position of the rectangle. The value must be an integer. If a decimal is passed in,the decimal part is rounded off. |
-| top | number | Yes | Top position of the rectangle. The value must be an integer. If a decimal is passed in, thedecimal part is rounded off. |
+| top | number | Yes | Top position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
 | right | number | Yes | Right position of the rectangle. The value must be an integer. If a decimal is passed in,the decimal part is rounded off. |
 | bottom | number | Yes | Bottom position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
 
@@ -327,7 +356,7 @@ Checks whether this region is the same as a single rectangle and contains the sp
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. **true** if the current region is the same as a single rectangle and containsthe specified rectangle; **false** otherwise. |
+| boolean | Check result. **true** if the current region is the same as a single rectangle and contains the specified rectangle; **false** otherwise. |
 
 ## quickReject
 
@@ -335,10 +364,11 @@ Checks whether this region is the same as a single rectangle and contains the sp
 quickReject(left: number, top: number, right: number, bottom: number): boolean
 ```
 
-Checks whether a rectangle do not intersect with this region. Actually, this API determines whether the rectangle
-does not intersect with the bounding rectangle of the region, and therefore the result may not be accurate.
+Checks whether a rectangle do not intersect with this region. Actually, this API determines whether the rectangle does not intersect with the bounding rectangle of the region, and therefore the result may not be accurate.
 
 **Since:** 12
+
+<!--Device-Region-quickReject(left: int, top: int, right: int, bottom: int): boolean--><!--Device-Region-quickReject(left: int, top: int, right: int, bottom: int): boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -347,7 +377,7 @@ does not intersect with the bounding rectangle of the region, and therefore the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | left | number | Yes | Left position of the rectangle. The value must be an integer. If a decimal is passed in,the decimal part is rounded off. |
-| top | number | Yes | Top position of the rectangle. The value must be an integer. If a decimal is passed in, thedecimal part is rounded off. |
+| top | number | Yes | Top position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
 | right | number | Yes | Right position of the rectangle. The value must be an integer. If a decimal is passed in,the decimal part is rounded off. |
 | bottom | number | Yes | Bottom position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
 
@@ -369,10 +399,11 @@ does not intersect with the bounding rectangle of the region, and therefore the 
 quickRejectRegion(region: Region): boolean
 ```
 
-Checks whether the existing region does not intersect with another region. Actually, the outer rectangles of the
-two regions are compared to determine whether they do not intersect. Therefore, there may be an error.
+Checks whether the existing region does not intersect with another region. Actually, the outer rectangles of the two regions are compared to determine whether they do not intersect. Therefore, there may be an error.
 
 **Since:** 20
+
+<!--Device-Region-quickRejectRegion(region: Region): boolean--><!--Device-Region-quickRejectRegion(region: Region): boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -380,13 +411,13 @@ two regions are compared to determine whether they do not intersect. Therefore, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | Region | Yes | **Region** object. |
+| region | [Region](../../apis-image-kit/arkts-apis/arkts-image-region-i.md) | Yes | **Region** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. **true** if the regions do not intersect; **false** otherwise. The value**true** is returned only if the regions intersect with each other by point or edge. |
+| boolean | Check result. **true** if the regions do not intersect; **false** otherwise. The value **true** is returned only if the regions intersect with each other by point or edge. |
 
 ## setEmpty
 
@@ -397,6 +428,8 @@ setEmpty(): void
 Set the existing region to empty.
 
 **Since:** 20
+
+<!--Device-Region-setEmpty(): void--><!--Device-Region-setEmpty(): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -410,20 +443,22 @@ Sets a region that matches the outline of a path within the cropping area.
 
 **Since:** 12
 
+<!--Device-Region-setPath(path: Path, clip: Region): boolean--><!--Device-Region-setPath(path: Path, clip: Region): boolean-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | Path | Yes | **Path** object. |
-| clip | Region | Yes | **Region** object. |
+| path | [Path](arkts-arkgraphics2d-path-c.md) | Yes | **Path** object. |
+| clip | [Region](../../apis-image-kit/arkts-apis/arkts-image-region-i.md) | Yes | **Region** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Result of the setting operation. The value **true** is returned if the corked status issuccessfully set; otherwise, **false** is returned. |
+| boolean | Result of the setting operation. The value **true** is returned if the corked status is successfully set; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -441,6 +476,8 @@ Sets a rectangle.
 
 **Since:** 12
 
+<!--Device-Region-setRect(left: int, top: int, right: int, bottom: int): boolean--><!--Device-Region-setRect(left: int, top: int, right: int, bottom: int): boolean-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
@@ -448,7 +485,7 @@ Sets a rectangle.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | left | number | Yes | Left position of the rectangle. The value must be an integer. If a decimal is passed in,the decimal part is rounded off. |
-| top | number | Yes | Top position of the rectangle. The value must be an integer. If a decimal is passed in, thedecimal part is rounded off. |
+| top | number | Yes | Top position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
 | right | number | Yes | Right position of the rectangle. The value must be an integer. If a decimal is passed in,the decimal part is rounded off. |
 | bottom | number | Yes | Bottom position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
 
@@ -474,11 +511,13 @@ Sets the existing region to another region.
 
 **Since:** 20
 
+<!--Device-Region-setRegion(region: Region): void--><!--Device-Region-setRegion(region: Region): void-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | Region | Yes | Region to be set. |
+| region | [Region](../../apis-image-kit/arkts-apis/arkts-image-region-i.md) | Yes | Region to be set. |
 

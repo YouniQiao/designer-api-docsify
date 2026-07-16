@@ -16,13 +16,15 @@ create the instance of hid profile.
 
 **Since:** 10
 
+<!--Device-hid-function createHidHostProfile(): HidHostProfile--><!--Device-hid-function createHidHostProfile(): HidHostProfile-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| HidHostProfile | Returns the instance of hid profile. |
+| [HidHostProfile](arkts-connectivity-hidhostprofile-i.md) | Returns the instance of hid profile. |
 
 **Error codes:**
 

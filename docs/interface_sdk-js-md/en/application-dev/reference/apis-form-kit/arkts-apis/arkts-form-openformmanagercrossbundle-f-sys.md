@@ -12,12 +12,13 @@ import { formProvider } from '@kit.FormKit';
 function openFormManagerCrossBundle(want: Want): void
 ```
 
-Open the view of forms belonging to the specified bundle.
-Client to communication with FormManagerService.
+Open the view of forms belonging to the specified bundle.Client to communication with FormManagerService.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.PUBLISH_FORM_CROSS_BUNDLE
+
+<!--Device-formProvider-function openFormManagerCrossBundle(want: Want): void--><!--Device-formProvider-function openFormManagerCrossBundle(want: Want): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -27,7 +28,7 @@ Client to communication with FormManagerService.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | The want of the form to open. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | The want of the form to open. |
 
 **Error codes:**
 

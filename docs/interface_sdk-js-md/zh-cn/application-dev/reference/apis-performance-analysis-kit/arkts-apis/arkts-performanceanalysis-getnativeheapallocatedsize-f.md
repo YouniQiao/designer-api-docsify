@@ -1,5 +1,11 @@
 # getNativeHeapAllocatedSize
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+```
+
 ## getNativeHeapAllocatedSize
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getNativeHeapAllocatedSize() : bigint
 ��ȡ�ڴ������ͳ�ƵĽ��̳��е���ʹ�õ���ͨ����ռ�õ����ֽ�����
 
 **起始版本：** 8
+
+<!--Device-hidebug-function getNativeHeapAllocatedSize() : bigint--><!--Device-hidebug-function getNativeHeapAllocatedSize() : bigint-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 

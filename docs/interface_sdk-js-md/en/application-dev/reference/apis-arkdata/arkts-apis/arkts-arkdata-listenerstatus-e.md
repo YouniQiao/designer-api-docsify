@@ -4,6 +4,8 @@ Enumerates the status codes returned when data is obtained from the UDMF.
 
 **Since:** 15
 
+<!--Device-unifiedDataChannel-enum ListenerStatus--><!--Device-unifiedDataChannel-enum ListenerStatus-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## FINISHED
@@ -19,6 +21,8 @@ The task is completed.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-ListenerStatus-FINISHED = 0--><!--Device-ListenerStatus-FINISHED = 0-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -36,6 +40,8 @@ The task is being processed.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-ListenerStatus-PROCESSING = 1--><!--Device-ListenerStatus-PROCESSING = 1-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## CANCELED
@@ -51,6 +57,8 @@ The task is canceled.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-ListenerStatus-CANCELED = 2--><!--Device-ListenerStatus-CANCELED = 2-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -68,6 +76,8 @@ An internal error occurs.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-ListenerStatus-INNER_ERROR = 200--><!--Device-ListenerStatus-INNER_ERROR = 200-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## INVALID_PARAMETERS
@@ -83,6 +93,8 @@ INVALID_PARAMETERS = 201
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-ListenerStatus-INVALID_PARAMETERS = 201--><!--Device-ListenerStatus-INVALID_PARAMETERS = 201-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -100,6 +112,8 @@ No data is obtained.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-ListenerStatus-DATA_NOT_FOUND = 202--><!--Device-ListenerStatus-DATA_NOT_FOUND = 202-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## SYNC_FAILED
@@ -116,6 +130,8 @@ Failed to sync data.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-ListenerStatus-SYNC_FAILED = 203--><!--Device-ListenerStatus-SYNC_FAILED = 203-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## COPY_FILE_FAILED
@@ -131,6 +147,8 @@ Failed to copy data.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-ListenerStatus-COPY_FILE_FAILED = 204--><!--Device-ListenerStatus-COPY_FILE_FAILED = 204-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 

@@ -6,6 +6,8 @@ Image resource.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface Image extends SceneResource--><!--Device-unnamed-export interface Image extends SceneResource-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## height
@@ -20,6 +22,8 @@ The height of the image, the unit is pixel.
 
 **Since:** 12
 
+<!--Device-Image-readonly height: int--><!--Device-Image-readonly height: int-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## width
@@ -33,6 +37,8 @@ The width of the image, the unit is pixel.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-Image-readonly width: int--><!--Device-Image-readonly width: int-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

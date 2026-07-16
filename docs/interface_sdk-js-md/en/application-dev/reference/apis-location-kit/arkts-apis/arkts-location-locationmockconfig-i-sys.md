@@ -4,6 +4,8 @@ Parameters for configuring the location simulation function.
 
 **Since:** 9
 
+<!--Device-geoLocationManager-export interface LocationMockConfig--><!--Device-geoLocationManager-export interface LocationMockConfig-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Mock location array.
 
 **Since:** 9
 
+<!--Device-LocationMockConfig-locations: Array<Location>--><!--Device-LocationMockConfig-locations: Array<Location>-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Interval for reporting simulated locations.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-LocationMockConfig-timeInterval: int--><!--Device-LocationMockConfig-timeInterval: int-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 

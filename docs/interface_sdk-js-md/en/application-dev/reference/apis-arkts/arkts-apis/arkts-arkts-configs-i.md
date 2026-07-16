@@ -4,6 +4,8 @@ Defines the task configs interface
 
 **Since:** 24
 
+<!--Device-taskpool-interface Configs--><!--Device-taskpool-interface Configs-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -26,6 +28,8 @@ The priority of the task. The default value is taskpool.Priority.MEDIUM.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-Configs-priority?: Priority--><!--Device-Configs-priority?: Priority-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## timeout
@@ -34,18 +38,15 @@ The priority of the task. The default value is taskpool.Priority.MEDIUM.
 timeout?: number
 ```
 
-The timeout for the task in ms. Suggest passing in integers. If decimals are passed in, they will be rounded down.
-If this parameter is omitted, timeout will take the default value of 0 and no timeout logic will be executed.
-**NOTE**
-1. The timeout period is not a precise time, and the actual timeout period may differ from the expected time.
-2. If the value is less than 1, it will be defaulted to **0**.
-3. The value is subject to system limitations. If it exceeds 2^31 �C 1, the value will be **0**.
+The timeout for the task in ms. Suggest passing in integers. If decimals are passed in, they will be rounded down.If this parameter is omitted, timeout will take the default value of 0 and no timeout logic will be executed.**NOTE**1. The timeout period is not a precise time, and the actual timeout period may differ from the expected time.2. If the value is less than 1, it will be defaulted to **0**.3. The value is subject to system limitations. If it exceeds 2^31 �C 1, the value will be **0**.
 
 **Type:** number
 
 **Since:** 24
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-Configs-timeout?: number--><!--Device-Configs-timeout?: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

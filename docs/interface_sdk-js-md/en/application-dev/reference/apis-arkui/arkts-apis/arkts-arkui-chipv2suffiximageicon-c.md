@@ -6,6 +6,8 @@ Defines suffix icon.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class ChipV2SuffixImageIcon extends ChipV2ImageIcon--><!--Device-unnamed-export declare class ChipV2SuffixImageIcon extends ChipV2ImageIcon-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,13 +30,15 @@ The constructor of ChipV2SuffixImageIcon
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2SuffixImageIcon-constructor(config: ChipV2SuffixImageIconConfig)--><!--Device-ChipV2SuffixImageIcon-constructor(config: ChipV2SuffixImageIconConfig)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | ChipV2SuffixImageIconConfig | Yes | config of suffix icon |
+| config | [ChipV2SuffixImageIconConfig](arkts-arkui-chipv2suffiximageiconconfig-i.md) | Yes | config of suffix icon |
 
 ## accessibilityDescription
 
@@ -51,6 +55,8 @@ Set accessibility description.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipV2SuffixImageIcon-public accessibilityDescription?: ResourceStr--><!--Device-ChipV2SuffixImageIcon-public accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,6 +78,8 @@ Set accessibility level.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2SuffixImageIcon-public accessibilityLevel?: string--><!--Device-ChipV2SuffixImageIcon-public accessibilityLevel?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
@@ -90,6 +98,8 @@ Set accessibility text.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2SuffixImageIcon-public accessibilityText?: ResourceStr--><!--Device-ChipV2SuffixImageIcon-public accessibilityText?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## action
@@ -107,6 +117,8 @@ Called when suffix icon is clicked.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipV2SuffixImageIcon-public action?: VoidCallback--><!--Device-ChipV2SuffixImageIcon-public action?: VoidCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

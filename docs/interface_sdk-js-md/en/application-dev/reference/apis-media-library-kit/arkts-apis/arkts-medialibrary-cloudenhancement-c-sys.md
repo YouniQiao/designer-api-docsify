@@ -1,9 +1,10 @@
 # CloudEnhancement (System API)
 
-Provides APIs for cloud enhancement management, including managing the tasks of generating AI-powered cloud-
-enhanced photos and obtaining the association between the original photos and AI cloud-enhanced photos.
+Provides APIs for cloud enhancement management, including managing the tasks of generating AI-powered cloud-enhanced photos and obtaining the association between the original photos and AI cloud-enhanced photos.
 
 **Since:** 13
+
+<!--Device-photoAccessHelper-class CloudEnhancement--><!--Device-photoAccessHelper-class CloudEnhancement-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -27,6 +28,8 @@ Cancels all cloud enhancement tasks.
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-CloudEnhancement-cancelAllCloudEnhancementTasks(): Promise<void>--><!--Device-CloudEnhancement-cancelAllCloudEnhancementTasks(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -35,7 +38,7 @@ Cancels all cloud enhancement tasks.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -75,6 +78,8 @@ Cancels cloud enhancement tasks.
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-CloudEnhancement-cancelCloudEnhancementTasks(photoAssets: Array<PhotoAsset>): Promise<void>--><!--Device-CloudEnhancement-cancelCloudEnhancementTasks(photoAssets: Array<PhotoAsset>): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -83,13 +88,13 @@ Cancels cloud enhancement tasks.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| photoAssets | Array&lt;PhotoAsset&gt; | Yes | Array of [PhotoAsset](arkts-medialibrary-photoasset-i.md) objectswhose cloud enhancement tasks are to be canceled. |
+| photoAssets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PhotoAsset> | Yes | Array of [PhotoAsset](arkts-medialibrary-photoasset-i.md) objects whose cloud enhancement tasks are to be canceled. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -140,6 +145,8 @@ Obtains a cloud enhancement instance.
 
 **Since:** 13
 
+<!--Device-CloudEnhancement-static getCloudEnhancementInstance(context: Context): CloudEnhancement--><!--Device-CloudEnhancement-static getCloudEnhancementInstance(context: Context): CloudEnhancement-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -148,13 +155,13 @@ Obtains a cloud enhancement instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability instance. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the ability instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CloudEnhancement | A cloud enhancement instance. |
+| [CloudEnhancement](arkts-medialibrary-cloudenhancement-c-sys.md) | A cloud enhancement instance. |
 
 **Error codes:**
 
@@ -203,6 +210,8 @@ Obtains the photo after cloud enhancement.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-CloudEnhancement-getCloudEnhancementPair(asset: PhotoAsset): Promise<PhotoAsset>--><!--Device-CloudEnhancement-getCloudEnhancementPair(asset: PhotoAsset): Promise<PhotoAsset>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -211,13 +220,13 @@ Obtains the photo after cloud enhancement.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| asset | PhotoAsset | Yes | [PhotoAsset](arkts-medialibrary-photoasset-i.md) for which the cloud-enhanced photois to be obtained. |
+| asset | [PhotoAsset](arkts-medialibrary-photoasset-i-sys.md) | Yes | [PhotoAsset](arkts-medialibrary-photoasset-i.md) for which the cloud-enhanced photo is to be obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PhotoAsset&gt; | Promise used to return the photo after cloud enhancement. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PhotoAsset> | Promise used to return the photo after cloud enhancement. |
 
 **Error codes:**
 
@@ -271,6 +280,8 @@ Prioritizes a cloud enhancement task.
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-CloudEnhancement-prioritizeCloudEnhancementTask(photoAsset: PhotoAsset): Promise<void>--><!--Device-CloudEnhancement-prioritizeCloudEnhancementTask(photoAsset: PhotoAsset): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -279,13 +290,13 @@ Prioritizes a cloud enhancement task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| photoAsset | PhotoAsset | Yes | [PhotoAsset](arkts-medialibrary-photoasset-i.md) whose cloud enhancementpriority needs to be escalated. |
+| photoAsset | [PhotoAsset](arkts-medialibrary-photoasset-i-sys.md) | Yes | [PhotoAsset](arkts-medialibrary-photoasset-i.md) whose cloud enhancement priority needs to be escalated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -339,6 +350,8 @@ Queries information about a cloud enhancement task.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-CloudEnhancement-queryCloudEnhancementTaskState(photoAsset: PhotoAsset): Promise<CloudEnhancementTaskState>--><!--Device-CloudEnhancement-queryCloudEnhancementTaskState(photoAsset: PhotoAsset): Promise<CloudEnhancementTaskState>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -347,13 +360,13 @@ Queries information about a cloud enhancement task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| photoAsset | PhotoAsset | Yes | [PhotoAsset](arkts-medialibrary-photoasset-i.md) whose cloud enhancement taskinformation is to be queried. |
+| photoAsset | [PhotoAsset](arkts-medialibrary-photoasset-i-sys.md) | Yes | [PhotoAsset](arkts-medialibrary-photoasset-i.md) whose cloud enhancement task information is to be queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CloudEnhancementTaskState&gt; | Promise used to return the information about the cloudenhancement task. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CloudEnhancementTaskState> | Promise used to return the information about the cloud enhancement task. |
 
 **Error codes:**
 
@@ -433,6 +446,8 @@ Submits cloud enhancement tasks. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-CloudEnhancement-submitCloudEnhancementTasks(photoAssets: Array<PhotoAsset>, hasCloudWatermark: boolean): Promise<void>--><!--Device-CloudEnhancement-submitCloudEnhancementTasks(photoAssets: Array<PhotoAsset>, hasCloudWatermark: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -441,14 +456,14 @@ Submits cloud enhancement tasks. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| photoAssets | Array&lt;PhotoAsset&gt; | Yes | [PhotoAsset](arkts-medialibrary-photoasset-i.md) to enhance. |
+| photoAssets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PhotoAsset> | Yes | [PhotoAsset](arkts-medialibrary-photoasset-i.md) to enhance. |
 | hasCloudWatermark | boolean | Yes | Whether to add a cloud enhancement watermark to the enhanced images. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -498,12 +513,21 @@ submitCloudEnhancementTasks(
     ): Promise<void>
 ```
 
-Submits cloud enhancement tasks. You can select the trigger mode of the cloud enhancement task. This API uses a
-promise to return the result.
+Submits cloud enhancement tasks. You can select the trigger mode of the cloud enhancement task. This API uses a promise to return the result.
 
 **Since:** 18
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-CloudEnhancement-submitCloudEnhancementTasks(
+      photoAssets: Array<PhotoAsset>,
+      hasCloudWatermark: boolean,
+      triggerMode?: int
+    ): Promise<void>--><!--Device-CloudEnhancement-submitCloudEnhancementTasks(
+      photoAssets: Array<PhotoAsset>,
+      hasCloudWatermark: boolean,
+      triggerMode?: int
+    ): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -513,7 +537,7 @@ promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| photoAssets | Array&lt;PhotoAsset&gt; | Yes | [PhotoAsset](arkts-medialibrary-photoasset-i.md) to enhance. |
+| photoAssets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PhotoAsset> | Yes | [PhotoAsset](arkts-medialibrary-photoasset-i.md) to enhance. |
 | hasCloudWatermark | boolean | Yes | Whether to add a cloud watermark to the enhanced image. **true** to add,**false** otherwise. |
 | triggerMode | number | No | Trigger mode of the cloud enhancement task.<br>**- 0**: manually triggered.<br>**- 1**: automatically triggered.<br>The default value is **0**. |
 
@@ -521,7 +545,7 @@ promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -574,6 +598,8 @@ Synchronizes the cloud enhancement task status.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-CloudEnhancement-syncCloudEnhancementTaskStatus(): Promise<void>--><!--Device-CloudEnhancement-syncCloudEnhancementTaskStatus(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -582,7 +608,7 @@ Synchronizes the cloud enhancement task status.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

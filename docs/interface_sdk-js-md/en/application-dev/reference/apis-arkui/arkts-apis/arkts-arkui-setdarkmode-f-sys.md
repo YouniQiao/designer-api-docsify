@@ -20,6 +20,8 @@ Sets the system color mode. This API uses an asynchronous callback to return the
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-uiAppearance-function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void--><!--Device-uiAppearance-function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.UiAppearance
 
 **System API:** This is a system API.
@@ -28,8 +30,8 @@ Sets the system color mode. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | DarkMode | Yes | indicates the dark-mode to set |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of setDarkMode |
+| mode | [DarkMode](arkts-arkui-darkmode-e-sys.md) | Yes | indicates the dark-mode to set |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of setDarkMode |
 
 **Error codes:**
 
@@ -75,6 +77,8 @@ Sets the system color mode. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-uiAppearance-function setDarkMode(mode: DarkMode): Promise<void>--><!--Device-uiAppearance-function setDarkMode(mode: DarkMode): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.UiAppearance
 
 **System API:** This is a system API.
@@ -83,13 +87,13 @@ Sets the system color mode. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | DarkMode | Yes | indicates the dark-mode to set |
+| mode | [DarkMode](arkts-arkui-darkmode-e-sys.md) | Yes | indicates the dark-mode to set |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

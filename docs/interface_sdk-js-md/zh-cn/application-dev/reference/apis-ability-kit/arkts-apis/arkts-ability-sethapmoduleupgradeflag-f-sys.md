@@ -1,5 +1,11 @@
 # setHapModuleUpgradeFlag（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { freeInstall } from '@kit.AbilityKit';
+```
+
 ## setHapModuleUpgradeFlag
 
 ```TypeScript
@@ -13,6 +19,10 @@ function setHapModuleUpgradeFlag(bundleName: string,
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 
+<!--Device-freeInstall-function setHapModuleUpgradeFlag(bundleName: string, 
+    moduleName: string, upgradeFlag: UpgradeFlag, callback: AsyncCallback<void>): void--><!--Device-freeInstall-function setHapModuleUpgradeFlag(bundleName: string, 
+    moduleName: string, upgradeFlag: UpgradeFlag, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -23,8 +33,8 @@ function setHapModuleUpgradeFlag(bundleName: string,
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
 | moduleName | string | 是 | 应用程序模块名称。 |
-| upgradeFlag | UpgradeFlag | 是 | 仅供内部系统使用标志位。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)。当函数调用成功，err为undefined，否则为错误对象。 |
+| upgradeFlag | [UpgradeFlag](arkts-ability-upgradeflag-e-sys.md) | 是 | 仅供内部系统使用标志位。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)。当函数调用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -50,6 +60,8 @@ function setHapModuleUpgradeFlag(bundleName: string, moduleName: string, upgrade
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 
+<!--Device-freeInstall-function setHapModuleUpgradeFlag(bundleName: string, moduleName: string, upgradeFlag: UpgradeFlag): Promise<void>--><!--Device-freeInstall-function setHapModuleUpgradeFlag(bundleName: string, moduleName: string, upgradeFlag: UpgradeFlag): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -60,13 +72,13 @@ function setHapModuleUpgradeFlag(bundleName: string, moduleName: string, upgrade
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
 | moduleName | string | 是 | 应用程序模块名称。 |
-| upgradeFlag | UpgradeFlag | 是 | 仅供内部系统使用标志位。 |
+| upgradeFlag | [UpgradeFlag](arkts-ability-upgradeflag-e-sys.md) | 是 | 仅供内部系统使用标志位。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

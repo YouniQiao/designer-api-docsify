@@ -20,6 +20,8 @@ Add a fusion fence.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-geoLocationManager-function addFusionFence(fenceRequestParams: FusionFenceRequestParams): Promise<void>--><!--Device-geoLocationManager-function addFusionFence(fenceRequestParams: FusionFenceRequestParams): Promise<void>-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **System API:** This is a system API.
@@ -28,20 +30,20 @@ Add a fusion fence.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fenceRequestParams | FusionFenceRequestParams | Yes | Indicates the fusion fence request parameters. |
+| fenceRequestParams | [FusionFenceRequestParams](arkts-location-fusionfencerequestparams-i-sys.md) | Yes | Indicates the fusion fence request parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The applicationdoes not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-systemapplication calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call this API due to limited device. |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
 | [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |

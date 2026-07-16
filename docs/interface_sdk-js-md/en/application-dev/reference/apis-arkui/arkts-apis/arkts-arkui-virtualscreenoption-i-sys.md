@@ -4,6 +4,8 @@ Defines virtual screen parameters.
 
 **Since:** 9
 
+<!--Device-screen-interface VirtualScreenOption--><!--Device-screen-interface VirtualScreenOption-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Density of the virtual screen, in px. The value must be a floating-point number.
 
 **Since:** 9
 
+<!--Device-VirtualScreenOption-density: double--><!--Device-VirtualScreenOption-density: double-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Height of the virtual screen, in px. The value must be an integer.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-VirtualScreenOption-height: long--><!--Device-VirtualScreenOption-height: long-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -58,6 +64,8 @@ Name of a virtual screen.
 
 **Since:** 9
 
+<!--Device-VirtualScreenOption-name: string--><!--Device-VirtualScreenOption-name: string-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -68,12 +76,13 @@ Name of a virtual screen.
 supportsFocus?: boolean
 ```
 
-Whether the virtual screen is focusable. **true** if focusable; **false** otherwise. The default value is
-**true**.
+Whether the virtual screen is focusable. **true** if focusable; **false** otherwise. The default value is **true**.
 
 **Type:** boolean
 
 **Since:** 22
+
+<!--Device-VirtualScreenOption-supportsFocus?: boolean--><!--Device-VirtualScreenOption-supportsFocus?: boolean-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -90,6 +99,8 @@ Surface ID of the virtual screen.
 **Type:** string
 
 **Since:** 9
+
+<!--Device-VirtualScreenOption-surfaceId: string--><!--Device-VirtualScreenOption-surfaceId: string-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -109,6 +120,8 @@ User ID of the virtual screen, which is an integer. The default value is **-1**.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-VirtualScreenOption-userId?: int--><!--Device-VirtualScreenOption-userId?: int-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -124,6 +137,8 @@ Width of the virtual screen, in px. The value must be an integer.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-VirtualScreenOption-width: long--><!--Device-VirtualScreenOption-width: long-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

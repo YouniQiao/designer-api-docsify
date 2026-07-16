@@ -20,6 +20,8 @@ Analyze print events.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-print-function analyzePrintEvents(printerId: string, eventType: string): Promise<string>--><!--Device-print-function analyzePrintEvents(printerId: string, eventType: string): Promise<string>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -35,7 +37,7 @@ Analyze print events.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | the promise returned by the function. |
 
 **Error codes:**
 

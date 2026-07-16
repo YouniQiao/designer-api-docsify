@@ -1,5 +1,11 @@
 # getPictureScanProgress
 
+## 导入模块
+
+```TypeScript
+import { scan } from '@kit.BasicServicesKit';
+```
+
 ## getPictureScanProgress
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getPictureScanProgress(scannerId: string): Promise<PictureScanProgress>
 **起始版本：** 20
 
 **需要权限：** ohos.permission.PRINT
+
+<!--Device-scan-function getPictureScanProgress(scannerId: string): Promise<PictureScanProgress>--><!--Device-scan-function getPictureScanProgress(scannerId: string): Promise<PictureScanProgress>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -24,7 +32,7 @@ function getPictureScanProgress(scannerId: string): Promise<PictureScanProgress>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PictureScanProgress&gt; | Promise对象，返回图片扫描进度信息。 |
+| Promise<PictureScanProgress> | Promise对象，返回图片扫描进度信息。 |
 
 **错误码：**
 

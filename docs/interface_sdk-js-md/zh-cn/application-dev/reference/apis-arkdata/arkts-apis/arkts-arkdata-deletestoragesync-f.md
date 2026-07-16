@@ -14,6 +14,8 @@ function deleteStorageSync(path: string): void
 
 **替代接口：** deletePreferences
 
+<!--Device-storage-function deleteStorageSync(path: string): void--><!--Device-storage-function deleteStorageSync(path: string): void-End-->
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |

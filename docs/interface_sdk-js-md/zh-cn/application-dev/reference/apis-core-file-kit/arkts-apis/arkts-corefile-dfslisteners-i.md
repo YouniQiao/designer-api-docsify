@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface DfsListeners--><!--Device-unnamed-export interface DfsListeners-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+```
 
 ## onStatus
 
@@ -15,6 +23,8 @@ onStatus(networkId: string, status: number): void
 事件回调类。参数由[connectDfs](arkts-corefile-file-fs-connectdfs-f.md#connectdfs-1)传入。
 
 **起始版本：** 12
+
+<!--Device-DfsListeners-onStatus(networkId: string, status: number): void--><!--Device-DfsListeners-onStatus(networkId: string, status: number): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

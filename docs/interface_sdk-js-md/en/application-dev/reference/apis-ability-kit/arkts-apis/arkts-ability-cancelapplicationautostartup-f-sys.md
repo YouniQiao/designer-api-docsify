@@ -12,20 +12,15 @@ import { autoStartupManager } from '@kit.AbilityKit';
 function cancelApplicationAutoStartup(info: AutoStartupInfo, callback: AsyncCallback<void>): void
 ```
 
-Cancels the auto-startup setting for an application component. This API uses an asynchronous callback to return the
-result.
-Starting from API version 21, this API can be properly called only on phones, 2-in-1 devices, tablets, and
-wearables. On other devices, it returns the error code 16000050.
-Starting from API version 18, this API can be properly called on 2-in-1 devices and wearables. If it is called on
-other device types, error code 16000050 is returned.
-For versions earlier than API version 18, this API can be properly called only on 2-in-1 devices. If it is called
-on other device types, error code 16000050 is returned.
+Cancels the auto-startup setting for an application component. This API uses an asynchronous callback to return the result.Starting from API version 21, this API can be properly called only on phones, 2-in-1 devices, tablets, and wearables. On other devices, it returns the error code 16000050.Starting from API version 18, this API can be properly called on 2-in-1 devices and wearables. If it is called on other device types, error code 16000050 is returned.For versions earlier than API version 18, this API can be properly called only on 2-in-1 devices. If it is called on other device types, error code 16000050 is returned.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.MANAGE_APP_BOOT
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-autoStartupManager-function cancelApplicationAutoStartup(info: AutoStartupInfo, callback: AsyncCallback<void>): void--><!--Device-autoStartupManager-function cancelApplicationAutoStartup(info: AutoStartupInfo, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -35,8 +30,8 @@ on other device types, error code 16000050 is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | AutoStartupInfo | Yes | Information about the target application component. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the cancellation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| info | [AutoStartupInfo](arkts-ability-autostartupinfo-t-sys.md) | Yes | Information about the target application component. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the cancellation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -44,7 +39,7 @@ on other device types, error code 16000050 is returned.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied, interface caller does not have permission"ohos.permission.MANAGE_APP_BOOT". |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are leftunspecified; 2. Incorrect parameters types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service. |
@@ -56,19 +51,15 @@ on other device types, error code 16000050 is returned.
 function cancelApplicationAutoStartup(info: AutoStartupInfo): Promise<void>
 ```
 
-Cancels the auto-startup setting for an application component. This API uses a promise to return the result.
-Starting from API version 21, this API can be properly called only on phones, 2-in-1 devices, tablets, and
-wearables. On other devices, it returns the error code 16000050.
-Starting from API version 18, this API can be properly called on 2-in-1 devices and wearables. If it is called on
-other device types, error code 16000050 is returned.
-For versions earlier than API version 18, this API can be properly called only on 2-in-1 devices. If it is called
-on other device types, error code 16000050 is returned.
+Cancels the auto-startup setting for an application component. This API uses a promise to return the result.Starting from API version 21, this API can be properly called only on phones, 2-in-1 devices, tablets, and wearables. On other devices, it returns the error code 16000050.Starting from API version 18, this API can be properly called on 2-in-1 devices and wearables. If it is called on other device types, error code 16000050 is returned.For versions earlier than API version 18, this API can be properly called only on 2-in-1 devices. If it is called on other device types, error code 16000050 is returned.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.MANAGE_APP_BOOT
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-autoStartupManager-function cancelApplicationAutoStartup(info: AutoStartupInfo): Promise<void>--><!--Device-autoStartupManager-function cancelApplicationAutoStartup(info: AutoStartupInfo): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -78,13 +69,13 @@ on other device types, error code 16000050 is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | AutoStartupInfo | Yes | Information about the target application component. |
+| info | [AutoStartupInfo](arkts-ability-autostartupinfo-t-sys.md) | Yes | Information about the target application component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -92,7 +83,7 @@ on other device types, error code 16000050 is returned.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied, interface caller does not have permission"ohos.permission.MANAGE_APP_BOOT". |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are leftunspecified; 2. Incorrect parameters types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service. |

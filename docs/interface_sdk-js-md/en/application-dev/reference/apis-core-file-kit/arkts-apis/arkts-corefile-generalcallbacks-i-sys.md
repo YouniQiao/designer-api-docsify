@@ -1,9 +1,10 @@
 # GeneralCallbacks (System API)
 
-General callbacks for both backup and restore procedure.
-The backup service will notify the client by these callbacks.
+General callbacks for both backup and restore procedure.The backup service will notify the client by these callbacks.
 
 **Since:** 10
+
+<!--Device-backup-interface GeneralCallbacks--><!--Device-backup-interface GeneralCallbacks-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -21,12 +22,13 @@ import { backup } from '@kit.CoreFileKit';
 onProcess(bundleName: string, process: string): void
 ```
 
-Callback called when the backup_sa service return result information.
-The first return string parameter indicates the result of the bundle.
+Callback called when the backup_sa service return result information.The first return string parameter indicates the result of the bundle.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GeneralCallbacks-onProcess(bundleName: string, process: string): void--><!--Device-GeneralCallbacks-onProcess(bundleName: string, process: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -60,13 +62,13 @@ The first return string parameter indicates the result of the bundle.
 onResultReport(bundleName: string, result: string): void
 ```
 
-Callback called when the backup service return result information.
-The first return string parameter indicates the bundleName that triggers the callback.
-The second return string parameter indicates the result of the bundle.
+Callback called when the backup service return result information.The first return string parameter indicates the bundleName that triggers the callback.The second return string parameter indicates the result of the bundle.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GeneralCallbacks-onResultReport(bundleName: string, result: string): void--><!--Device-GeneralCallbacks-onResultReport(bundleName: string, result: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -103,6 +105,8 @@ Callback called when the all the bundles to backup/restore are done or aborted u
 
 **Since:** 10
 
+<!--Device-GeneralCallbacks-onAllBundlesEnd: AsyncCallback<undefined>--><!--Device-GeneralCallbacks-onAllBundlesEnd: AsyncCallback<undefined>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -119,6 +123,8 @@ Callback called when the backup service dies unexpectedly.
 
 **Since:** 10
 
+<!--Device-GeneralCallbacks-onBackupServiceDied: Callback<undefined>--><!--Device-GeneralCallbacks-onBackupServiceDied: Callback<undefined>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -129,12 +135,13 @@ Callback called when the backup service dies unexpectedly.
 onBackupSizeReport?: OnBackupSizeReport
 ```
 
-Callback called when the backup_sa service return result information.
-The first return string parameter indicates the result of the scanned bundle datasize.
+Callback called when the backup_sa service return result information.The first return string parameter indicates the result of the scanned bundle datasize.
 
 **Type:** OnBackupSizeReport
 
 **Since:** 18
+
+<!--Device-GeneralCallbacks-onBackupSizeReport?: OnBackupSizeReport--><!--Device-GeneralCallbacks-onBackupSizeReport?: OnBackupSizeReport-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -146,14 +153,13 @@ The first return string parameter indicates the result of the scanned bundle dat
 onBundleBegin: AsyncCallback<string, void | string>
 ```
 
-Callback called when a backup/restore procedure for an bundle is started.
-The first return string parameter indicates the name of the bundle.
-The second return string parameter indicates that when BusinessError errors occur,
-the callback data is the name of the bundle.
+Callback called when a backup/restore procedure for an bundle is started.The first return string parameter indicates the name of the bundle.The second return string parameter indicates that when BusinessError errors occur,the callback data is the name of the bundle.
 
 **Type:** AsyncCallback<string, void | string>
 
 **Since:** 12
+
+<!--Device-GeneralCallbacks-onBundleBegin: AsyncCallback<string, void | string>--><!--Device-GeneralCallbacks-onBundleBegin: AsyncCallback<string, void | string>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -165,14 +171,13 @@ the callback data is the name of the bundle.
 onBundleEnd: AsyncCallback<string, void | string>
 ```
 
-Callback called when a backup/restore procedure for an bundle ends successfully or gets aborted unexpectedly.
-The first return string parameter indicates the name of the bundle.
-The second return string parameter indicates that when BusinessError errors occur,
-the callback data is the name of the bundle.
+Callback called when a backup/restore procedure for an bundle ends successfully or gets aborted unexpectedly.The first return string parameter indicates the name of the bundle.The second return string parameter indicates that when BusinessError errors occur,the callback data is the name of the bundle.
 
 **Type:** AsyncCallback<string, void | string>
 
 **Since:** 12
+
+<!--Device-GeneralCallbacks-onBundleEnd: AsyncCallback<string, void | string>--><!--Device-GeneralCallbacks-onBundleEnd: AsyncCallback<string, void | string>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -184,13 +189,13 @@ the callback data is the name of the bundle.
 onFileReady: AsyncCallback<File>
 ```
 
-Callback called when the backup service tries to send files to the client.
-The File argument indicates a file to send to the client.
-The returned file is owned by the backup service and will be cleaned by the service once the file is closed.
+Callback called when the backup service tries to send files to the client.The File argument indicates a file to send to the client.The returned file is owned by the backup service and will be cleaned by the service once the file is closed.
 
 **Type:** AsyncCallback<File>
 
 **Since:** 10
+
+<!--Device-GeneralCallbacks-onFileReady: AsyncCallback<File>--><!--Device-GeneralCallbacks-onFileReady: AsyncCallback<File>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -202,15 +207,15 @@ The returned file is owned by the backup service and will be cleaned by the serv
 onFileReadyBatch?: OnFileReadyBatch
 ```
 
-Callback called when the backup service tries to send files to the client.
-The File argument indicates a file to send to the client.
-The returned file is owned by the backup service and will be cleaned by the service once the file is closed.
+Callback called when the backup service tries to send files to the client.The File argument indicates a file to send to the client.The returned file is owned by the backup service and will be cleaned by the service once the file is closed.
 
 **Type:** OnFileReadyBatch
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GeneralCallbacks-onFileReadyBatch?: OnFileReadyBatch--><!--Device-GeneralCallbacks-onFileReadyBatch?: OnFileReadyBatch-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -222,16 +227,15 @@ The returned file is owned by the backup service and will be cleaned by the serv
 onMigrateResult?: AsyncCallback<string, void | string>
 ```
 
-Callback called when the migrate result is reported.
-The first return string parameter indicates the name of the bundle.
-The second return string parameter indicates that when BusinessError errors occur,
-the callback data is the name of the bundle.
+Callback called when the migrate result is reported.The first return string parameter indicates the name of the bundle.The second return string parameter indicates that when BusinessError errors occur,the callback data is the name of the bundle.
 
 **Type:** AsyncCallback<string, void | string>
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GeneralCallbacks-onMigrateResult?: AsyncCallback<string, void | string>--><!--Device-GeneralCallbacks-onMigrateResult?: AsyncCallback<string, void | string>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 

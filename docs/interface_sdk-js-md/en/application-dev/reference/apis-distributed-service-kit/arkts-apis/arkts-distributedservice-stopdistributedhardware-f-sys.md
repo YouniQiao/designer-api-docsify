@@ -18,6 +18,8 @@ Stops the distributed hardware service on the controlled device. This API uses a
 
 **Required permissions:** ohos.permission.ACCESS_DISTRIBUTED_HARDWARE
 
+<!--Device-hardwareManager-function stopDistributedHardware(description: HardwareDescriptor): Promise<void>--><!--Device-hardwareManager-function stopDistributedHardware(description: HardwareDescriptor): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Stops the distributed hardware service on the controlled device. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| description | HardwareDescriptor | Yes | Hardware information. |
+| description | [HardwareDescriptor](arkts-distributedservice-hardwaredescriptor-i-sys.md) | Yes | Hardware information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

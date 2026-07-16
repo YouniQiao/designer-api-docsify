@@ -16,14 +16,16 @@ Obtains the UID of a WantAgent.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-wantAgent-function getUid(agent: WantAgent, callback: AsyncCallback<number>): void--><!--Device-wantAgent-function getUid(agent: WantAgent, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | WantAgent | Yes | whose UID to obtain. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Create a callback method for WantAgent. |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | whose UID to obtain. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Create a callback method for WantAgent. |
 
 **Example**
 
@@ -97,19 +99,21 @@ Obtains the UID of a WantAgent.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-wantAgent-function getUid(agent: WantAgent): Promise<number>--><!--Device-wantAgent-function getUid(agent: WantAgent): Promise<number>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | WantAgent | Yes | whose UID to obtain. |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | whose UID to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns the UID of the {@link WantAgent} if any; returns {@code -1} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Returns the UID of the {@link WantAgent} if any; returns {@code -1} otherwise. |
 
 **Example**
 

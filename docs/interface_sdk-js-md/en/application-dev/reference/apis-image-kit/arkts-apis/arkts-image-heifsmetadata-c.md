@@ -8,6 +8,8 @@ HEIF image sequence metadata.
 
 **Since:** 23
 
+<!--Device-image-class HeifsMetadata implements Metadata--><!--Device-image-class HeifsMetadata implements Metadata-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
@@ -28,13 +30,15 @@ Clones the HEIFS metadata. This API returns the result asynchronously through a 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HeifsMetadata-clone(): Promise<HeifsMetadata>--><!--Device-HeifsMetadata-clone(): Promise<HeifsMetadata>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HeifsMetadata&gt; | Promise used to return the HEIFS metadata instance. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HeifsMetadata> | Promise used to return the HEIFS metadata instance. |
 
 ## createInstance
 
@@ -48,13 +52,15 @@ Creates an empty [HeifsMetadata](arkts-image-heifsmetadata-c.md) instance.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HeifsMetadata-static createInstance(): HeifsMetadata--><!--Device-HeifsMetadata-static createInstance(): HeifsMetadata-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| HeifsMetadata | Empty **HeifsMetadata** instance. |
+| [HeifsMetadata](arkts-image-heifsmetadata-c.md) | Empty **HeifsMetadata** instance. |
 
 ## getAllProperties
 
@@ -62,15 +68,15 @@ Creates an empty [HeifsMetadata](arkts-image-heifsmetadata-c.md) instance.
 getAllProperties(): Promise<Record<string, string | null>>
 ```
 
-Obtains all properties and their values from the image metadata. This API returns the result asynchronously
-through a promise.
+Obtains all properties and their values from the image metadata. This API returns the result asynchronously through a promise.
 
-For details about the properties, see
-[HeifsPropertyKey](arkts-image-heifspropertykey-e.md).
+For details about the properties, see [HeifsPropertyKey](arkts-image-heifspropertykey-e.md).
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HeifsMetadata-getAllProperties(): Promise<Record<string, string | null>>--><!--Device-HeifsMetadata-getAllProperties(): Promise<Record<string, string | null>>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -78,7 +84,7 @@ For details about the properties, see
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the values of all properties. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Record<string, string \| null>> | Promise used to return the values of all properties. |
 
 ## getBlob
 
@@ -92,13 +98,15 @@ Obtains the metadata in binary format. This API uses a promise to return the res
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HeifsMetadata-getBlob(): Promise<ArrayBuffer>--><!--Device-HeifsMetadata-getBlob(): Promise<ArrayBuffer>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise that returns the binary data of the metadata. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ArrayBuffer> | Promise that returns the binary data of the metadata. |
 
 ## getProperties
 
@@ -112,19 +120,21 @@ Obtains the property values of image metadata. This API returns the result async
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HeifsMetadata-getProperties(key: Array<string>): Promise<Record<string, string | null>>--><!--Device-HeifsMetadata-getProperties(key: Array<string>): Promise<Record<string, string | null>>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | Array&lt;string&gt; | Yes | Names of the properties to query. |
+| key | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Names of the properties to query. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the property values. If the operationfails, an error code is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Record<string, string \| null>> | Promise used to return the property values. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -144,19 +154,21 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HeifsMetadata-setBlob(blob: ArrayBuffer): Promise<void>--><!--Device-HeifsMetadata-setBlob(blob: ArrayBuffer): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blob | ArrayBuffer | Yes | Binary data used to replace the metadata. |
+| blob | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Binary data used to replace the metadata. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -170,15 +182,15 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously
-through a promise.
+Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise.
 
-For details about the properties, see
-[HeifsPropertyKey](arkts-image-heifspropertykey-e.md).
+For details about the properties, see [HeifsPropertyKey](arkts-image-heifspropertykey-e.md).
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HeifsMetadata-setProperties(records: Record<string, string | null>): Promise<void>--><!--Device-HeifsMetadata-setProperties(records: Record<string, string | null>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -186,13 +198,13 @@ For details about the properties, see
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | Yes | Set of key-value pairs representing the **HeifsMetadata**properties and corresponding values. |
+| records | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, string \| null> | Yes | Set of key-value pairs representing the **HeifsMetadata** properties and corresponding values. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -214,6 +226,8 @@ Canvas height.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HeifsMetadata-readonly heifsCanvasHeight?: int--><!--Device-HeifsMetadata-readonly heifsCanvasHeight?: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## heifsCanvasWidth
@@ -229,6 +243,8 @@ Canvas width.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HeifsMetadata-readonly heifsCanvasWidth?: int--><!--Device-HeifsMetadata-readonly heifsCanvasWidth?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -246,6 +262,8 @@ Playback duration of each frame in an HEIF image sequence, in ms.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HeifsMetadata-readonly heifsDelayTime?: int--><!--Device-HeifsMetadata-readonly heifsDelayTime?: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## heifsUnclampedDelayTime
@@ -261,6 +279,8 @@ Unclamped delay of each frame in ms.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HeifsMetadata-readonly heifsUnclampedDelayTime?: int--><!--Device-HeifsMetadata-readonly heifsUnclampedDelayTime?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

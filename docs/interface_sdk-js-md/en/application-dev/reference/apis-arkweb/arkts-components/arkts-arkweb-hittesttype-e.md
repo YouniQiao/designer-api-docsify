@@ -8,6 +8,8 @@ Enumerates the test result types of the click event.
 
 **Substitutes:** [WebHitTestType](../arkts-apis/arkts-arkweb-webhittesttype-e.md)
 
+<!--Device-unnamed-declare enum HitTestType--><!--Device-unnamed-declare enum HitTestType-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## EditText
@@ -25,6 +27,8 @@ Editable area.
 **Substitutes:** [EditText](../arkts-apis/arkts-arkweb-webhittesttype-e.md#edittext)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-HitTestType-EditText = 0--><!--Device-HitTestType-EditText = 0-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -44,6 +48,8 @@ Email address.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HitTestType-Email = 1--><!--Device-HitTestType-Email = 1-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## HttpAnchor
@@ -61,6 +67,8 @@ Hyperlink whose **src** is **http**.
 **Substitutes:** [HttpAnchor](../arkts-apis/arkts-arkweb-webhittesttype-e.md#httpanchor)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-HitTestType-HttpAnchor = 2--><!--Device-HitTestType-HttpAnchor = 2-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -80,6 +88,8 @@ Image with a hyperlink, where **src** is **http**.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HitTestType-HttpAnchorImg = 3--><!--Device-HitTestType-HttpAnchorImg = 3-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Img
@@ -97,6 +107,8 @@ HTML::img tag.
 **Substitutes:** [Img](../arkts-apis/arkts-arkweb-webhittesttype-e.md#img)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-HitTestType-Img = 4--><!--Device-HitTestType-Img = 4-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -116,6 +128,8 @@ Geographical address.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HitTestType-Map = 5--><!--Device-HitTestType-Map = 5-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Phone
@@ -134,6 +148,8 @@ Phone number.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HitTestType-Phone = 6--><!--Device-HitTestType-Phone = 6-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Unknown
@@ -151,6 +167,8 @@ Unknown content.
 **Substitutes:** [Unknown](../arkts-apis/arkts-arkweb-webhittesttype-e.md#unknown)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-HitTestType-Unknown = 7--><!--Device-HitTestType-Unknown = 7-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

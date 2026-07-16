@@ -4,6 +4,8 @@ Result of downloadable Profile list.
 
 **Since:** 18
 
+<!--Device-eSIM-export interface GetDownloadableProfilesResult--><!--Device-eSIM-export interface GetDownloadableProfilesResult-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Gets the downloadable Profiles with filled-in metadata.
 
 **Since:** 18
 
+<!--Device-GetDownloadableProfilesResult-downloadableProfiles: Array<DownloadableProfile>--><!--Device-GetDownloadableProfilesResult-downloadableProfiles: Array<DownloadableProfile>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Gets the result of the operation.
 **Type:** ResultCode
 
 **Since:** 18
+
+<!--Device-GetDownloadableProfilesResult-responseResult: ResultCode--><!--Device-GetDownloadableProfilesResult-responseResult: ResultCode-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 

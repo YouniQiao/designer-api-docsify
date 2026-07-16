@@ -4,6 +4,8 @@ Customize the import icon, which is used to add images and text from the applica
 
 **Since:** 26.0.0
 
+<!--Device-imageGeneration-interface CustomImportIcon--><!--Device-imageGeneration-interface CustomImportIcon-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Async callback function for import operation.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-CustomImportIcon-callback: CustomImportCallback--><!--Device-CustomImportIcon-callback: CustomImportCallback-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -46,6 +50,8 @@ Icon image information.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-CustomImportIcon-image: image.PixelMap | ResourceStr--><!--Device-CustomImportIcon-image: image.PixelMap | ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -63,6 +69,8 @@ Icon text description.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CustomImportIcon-text: ResourceStr--><!--Device-CustomImportIcon-text: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -14,12 +14,13 @@ function getSimIccId(slotId: number, callback: AsyncCallback<string>): void
 
 Obtains the ICCID of the SIM card in a specified slot.
 
-<p>The ICCID is a unique identifier of a SIM card. It consists of 20 digits
-and is recorded in the EFICCID file of the SIM card.
+<p>The ICCID is a unique identifier of a SIM card. It consists of 20 digits and is recorded in the EFICCID file of the SIM card.
 
 **Since:** 7
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-sim-function getSimIccId(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getSimIccId(slotId: int, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -30,7 +31,7 @@ and is recorded in the EFICCID file of the SIM card.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Indicates the callback for getting the ICCID;returns an empty string if no SIM card is inserted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Indicates the callback for getting the ICCID;returns an empty string if no SIM card is inserted. |
 
 **Error codes:**
 
@@ -66,12 +67,13 @@ function getSimIccId(slotId: number): Promise<string>
 
 Obtains the ICCID of the SIM card in a specified slot.
 
-<p>The ICCID is a unique identifier of a SIM card. It consists of 20 digits
-and is recorded in the EFICCID file of the SIM card.
+<p>The ICCID is a unique identifier of a SIM card. It consists of 20 digits and is recorded in the EFICCID file of the SIM card.
 
 **Since:** 7
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-sim-function getSimIccId(slotId: int): Promise<string>--><!--Device-sim-function getSimIccId(slotId: int): Promise<string>-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -87,7 +89,7 @@ and is recorded in the EFICCID file of the SIM card.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the ICCID; returns an empty string if no SIM card is inserted. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the ICCID; returns an empty string if no SIM card is inserted. |
 
 **Error codes:**
 

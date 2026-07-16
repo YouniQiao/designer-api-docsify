@@ -16,6 +16,8 @@ Obtains the data summary of all dragged objects.
 
 **Since:** 11
 
+<!--Device-dragInteraction-function getDataSummary(): Array<Summary>--><!--Device-dragInteraction-function getDataSummary(): Array<Summary>-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Drag
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Obtains the data summary of all dragged objects.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Summary&gt; | Data summary of all dragged objects, including their type and data length. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Summary> | Data summary of all dragged objects, including their type and data length. |
 
 **Error codes:**
 

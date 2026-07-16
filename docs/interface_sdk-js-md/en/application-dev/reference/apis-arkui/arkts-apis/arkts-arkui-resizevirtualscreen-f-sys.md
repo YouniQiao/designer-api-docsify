@@ -16,6 +16,8 @@ Resizes the virtual screen. This API uses a promise to return the result.
 
 **Since:** 24
 
+<!--Device-screen-function resizeVirtualScreen(screenId:long, width: long, height: long): Promise<void>--><!--Device-screen-function resizeVirtualScreen(screenId:long, width: long, height: long): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
@@ -24,22 +26,22 @@ Resizes the virtual screen. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| screenId | number | Yes | ID of the virtual screen to be resized. The value is a positive integer within the rangeof [1000, 2147483647]. If the value is not within the valid range, error code 1400004 is returned. |
-| width | number | Yes | New width of the virtual screen, in px. The value is a positive integer within the range of[1, 65536]. If the value is not within the valid range, error code 1400004 is returned. |
-| height | number | Yes | New height of the virtual screen, in px. The value is a positive integer within the rangeof [1, 65536]. If the value is not within the valid range, error code 1400004 is returned. |
+| screenId | number | Yes | ID of the virtual screen to be resized. The value is a positive integer within the range of [1000, 2147483647]. If the value is not within the valid range, error code 1400004 is returned. |
+| width | number | Yes | New width of the virtual screen, in px. The value is a positive integer within the range of [1, 65536]. If the value is not within the valid range, error code 1400004 is returned. |
+| height | number | Yes | New height of the virtual screen, in px. The value is a positive integer within the range of [1, 65536]. If the value is not within the valid range, error code 1400004 is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function can not work because the current device doesnot support this ability. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function can not work because the current device does not support this ability. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 | [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |

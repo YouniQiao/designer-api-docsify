@@ -1,19 +1,12 @@
 # Vector
 
-Vector is a linear data structure that is implemented based on arrays. When the memory of a vector is used up, a
-larger contiguous memory area is automatically allocated, all the elements are copied to the new memory area, and the
-current memory area is reclaimed. Vector can be used to efficiently access elements.
-Both Vector and [ArrayList](arkts-util-arraylist.md) are implemented based on arrays, but Vector provides more
-interfaces for operating the arrays. Both of them can dynamically adjust the capacity. Vector doubles the capacity
-each time, whereas ArrayList increases the capacity by 50%.
-**Recommended use case**: Use Vector when the data volume is large.
-This topic uses the following to identify the use of generics:
+Vector is a linear data structure that is implemented based on arrays. When the memory of a vector is used up, a larger contiguous memory area is automatically allocated, all the elements are copied to the new memory area, and the current memory area is reclaimed. Vector can be used to efficiently access elements.Both Vector and [ArrayList](arkts-util-arraylist.md) are implemented based on arrays, but Vector provides more interfaces for operating the arrays. Both of them can dynamically adjust the capacity. Vector doubles the capacity each time, whereas ArrayList increases the capacity by 50%.**Recommended use case**: Use Vector when the data volume is large.This topic uses the following to identify the use of generics:
 
 - T: Type
 
-> **NOTE**
->
-> - The APIs provided by this module are deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> - The APIs provided by this module are deprecated since API version 9. You are advised to use  
 > [@ohos.util.ArrayList](arkts-util-arraylist.md).
 
 **Since:** 8
@@ -21,6 +14,8 @@ This topic uses the following to identify the use of generics:
 **Deprecated since:** 9
 
 **Substitutes:** ArrayList
+
+<!--Device-unnamed-declare class Vector<T>--><!--Device-unnamed-declare class Vector<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -42,13 +37,15 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Deprecated since:** 9
 
+<!--Device-Vector-[Symbol.iterator](): IterableIterator<T>--><!--Device-Vector-[Symbol.iterator](): IterableIterator<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;T&gt; | @syscap SystemCapability.Utils.Lang |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<T> | @syscap SystemCapability.Utils.Lang |
 
 **Example**
 
@@ -86,6 +83,8 @@ Adds an element at the end of this Vector.
 
 **Deprecated since:** 9
 
+<!--Device-Vector-add(element: T): boolean--><!--Device-Vector-add(element: T): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -98,7 +97,7 @@ Adds an element at the end of this Vector.
 
 | Type | Description |
 | --- | --- |
-| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false**is returned. |
+| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false** is returned. |
 
 **Example**
 
@@ -129,6 +128,8 @@ Clears all elements in this Vector and sets its length to **0**.
 
 **Deprecated since:** 9
 
+<!--Device-Vector-clear(): void--><!--Device-Vector-clear(): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Example**
@@ -155,13 +156,15 @@ Clones this Vector and returns a copy. The modification to the copy does not aff
 
 **Deprecated since:** 9
 
+<!--Device-Vector-clone(): Vector<T>--><!--Device-Vector-clone(): Vector<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Vector&lt;T&gt; | New **Vector** instance obtained. |
+| [Vector](arkts-arkts-vector-c.md)<T> | New **Vector** instance obtained. |
 
 **Example**
 
@@ -187,6 +190,8 @@ A constructor used to create a **Vector** instance.
 
 **Deprecated since:** 9
 
+<!--Device-Vector-constructor()--><!--Device-Vector-constructor()-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Example**
@@ -208,13 +213,15 @@ Converts this Vector into an array.
 
 **Deprecated since:** 9
 
+<!--Device-Vector-convertToArray(): Array<T>--><!--Device-Vector-convertToArray(): Array<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | Array obtained. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<T> | Array obtained. |
 
 **Example**
 
@@ -240,13 +247,15 @@ Copies elements in this Vector into an array to overwrite elements of the same p
 
 **Deprecated since:** 9
 
+<!--Device-Vector-copyToArray(array: Array<T>): void--><!--Device-Vector-copyToArray(array: Array<T>): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | Array&lt;T&gt; | Yes | Array to which the elements in the Vector will be copied. |
+| array | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<T> | Yes | Array to which the elements in the Vector will be copied. |
 
 ## forEach
 
@@ -260,14 +269,16 @@ Uses a callback to traverse the elements in this Vector and obtain their positio
 
 **Deprecated since:** 9
 
+<!--Device-Vector-forEach(callbackFn: (value: T, index?: number, vector?: Vector<T>) => void, thisArg?: Object): void--><!--Device-Vector-forEach(callbackFn: (value: T, index?: number, vector?: Vector<T>) => void, thisArg?: Object): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; void | Yes | Callback invoked for replacement. |
-| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is thisinstance. |
+| callbackFn | (value: T, index?: number, vector?: Vector<T>) => void | Yes | Callback invoked for replacement. |
+| thisArg | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Example**
 
@@ -294,6 +305,8 @@ Obtains an element at the specified position in this Vector.
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-Vector-get(index: number): T--><!--Device-Vector-get(index: number): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -333,6 +346,8 @@ Obtains the capacity of this Vector.
 
 **Deprecated since:** 9
 
+<!--Device-Vector-getCapacity(): number--><!--Device-Vector-getCapacity(): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -365,6 +380,8 @@ Obtains the first element in this Vector.
 
 **Deprecated since:** 9
 
+<!--Device-Vector-getFirstElement(): T--><!--Device-Vector-getFirstElement(): T-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -396,6 +413,8 @@ Searches for an element forward from the specified position index and returns th
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-Vector-getIndexFrom(element: T, index: number): number--><!--Device-Vector-getIndexFrom(element: T, index: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -435,6 +454,8 @@ Obtains the index of the first occurrence of the specified element in this Vecto
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-Vector-getIndexOf(element: T): number--><!--Device-Vector-getIndexOf(element: T): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -477,6 +498,8 @@ Obtains the last element in this Vector.
 
 **Deprecated since:** 9
 
+<!--Device-Vector-getLastElement(): T--><!--Device-Vector-getLastElement(): T-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -508,6 +531,8 @@ Searches for an element backward from the specified position index and returns t
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-Vector-getLastIndexFrom(element: T, index: number): number--><!--Device-Vector-getLastIndexFrom(element: T, index: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -547,6 +572,8 @@ Obtains the index of the last occurrence of the specified element in this Vector
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-Vector-getLastIndexOf(element: T): number--><!--Device-Vector-getLastIndexOf(element: T): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -589,6 +616,8 @@ Checks whether this Vector has the specified element.
 
 **Deprecated since:** 9
 
+<!--Device-Vector-has(element: T): boolean--><!--Device-Vector-has(element: T): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -625,6 +654,8 @@ Increases the capacity of this Vector.
 
 **Deprecated since:** 9
 
+<!--Device-Vector-increaseCapacityTo(newCapacity: number): void--><!--Device-Vector-increaseCapacityTo(newCapacity: number): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -658,6 +689,8 @@ Inserts an element within the length range and moves its subsequent elements rig
 
 **Deprecated since:** 9
 
+<!--Device-Vector-insert(element: T, index: number): void--><!--Device-Vector-insert(element: T, index: number): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -689,13 +722,15 @@ Checks whether this Vector is empty (contains no elements).
 
 **Deprecated since:** 9
 
+<!--Device-Vector-isEmpty(): boolean--><!--Device-Vector-isEmpty(): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the Vector is empty; otherwise, **false** isreturned. |
+| boolean | Check result. The value **true** is returned if the Vector is empty; otherwise, **false** is returned. |
 
 **Example**
 
@@ -720,6 +755,8 @@ Removes the first occurrence of the specified element from this Vector.
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-Vector-remove(element: T): boolean--><!--Device-Vector-remove(element: T): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -753,12 +790,13 @@ let result = vector.remove(2);
 removeByIndex(index: number): T
 ```
 
-Searches for an element based on its index, removes the element after returning it, and moves its subsequent
-elements leftwards.
+Searches for an element based on its index, removes the element after returning it, and moves its subsequent elements leftwards.
 
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-Vector-removeByIndex(index: number): T--><!--Device-Vector-removeByIndex(index: number): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -772,7 +810,7 @@ elements leftwards.
 
 | Type | Description |
 | --- | --- |
-| T | Element removed. If the Vector is empty, **undefined** is returned. If the index is out of range, anexception is thrown. |
+| T | Element removed. If the Vector is empty, **undefined** is returned. If the index is out of range, an exception is thrown. |
 
 **Example**
 
@@ -793,12 +831,13 @@ let result = vector.removeByIndex(2);
 removeByRange(fromIndex: number, toIndex: number): void
 ```
 
-Removes from this Vector all of the elements within a range, including the element at the start position but not
-that at the end position.
+Removes from this Vector all of the elements within a range, including the element at the start position but not that at the end position.
 
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-Vector-removeByRange(fromIndex: number, toIndex: number): void--><!--Device-Vector-removeByRange(fromIndex: number, toIndex: number): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -833,14 +872,16 @@ Replaces all elements in this Vector with new elements, and returns the new ones
 
 **Deprecated since:** 9
 
+<!--Device-Vector-replaceAllElements(callbackFn: (value: T, index?: number, vector?: Vector<T>) => T, thisArg?: Object): void--><!--Device-Vector-replaceAllElements(callbackFn: (value: T, index?: number, vector?: Vector<T>) => T, thisArg?: Object): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; T | Yes | Callback invoked for replacement. |
-| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is thisinstance. |
+| callbackFn | (value: T, index?: number, vector?: Vector<T>) => T | Yes | Callback invoked for replacement. |
+| thisArg | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Example**
 
@@ -869,6 +910,8 @@ Replaces an element at the specified position in this Vector with a given elemen
 
 **Deprecated since:** 9
 
+<!--Device-Vector-set(index: number, element: T): T--><!--Device-Vector-set(index: number, element: T): T-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -895,6 +938,8 @@ Sets a new length for this Vector.
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-Vector-setLength(newSize: number): void--><!--Device-Vector-setLength(newSize: number): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -929,13 +974,15 @@ Sorts elements in this Vector.
 
 **Deprecated since:** 9
 
+<!--Device-Vector-sort(comparator?: (firstValue: T, secondValue: T) => number): void--><!--Device-Vector-sort(comparator?: (firstValue: T, secondValue: T) => number): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| comparator | (firstValue: T, secondValue: T) =&gt; number | No | Callback invoked for sorting. The default value is this instance. |
+| comparator | (firstValue: T, secondValue: T) => number | No | Callback invoked for sorting. The default value is this instance. |
 
 **Example**
 
@@ -957,12 +1004,13 @@ vector.sort();
 subVector(fromIndex: number, toIndex: number): Vector<T>
 ```
 
-Obtains elements within a range in this Vector, including the element at the start position but not that at the end
-position, and returns these elements as a new **Vector** instance.
+Obtains elements within a range in this Vector, including the element at the start position but not that at the end position, and returns these elements as a new **Vector** instance.
 
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-Vector-subVector(fromIndex: number, toIndex: number): Vector<T>--><!--Device-Vector-subVector(fromIndex: number, toIndex: number): Vector<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -977,7 +1025,7 @@ position, and returns these elements as a new **Vector** instance.
 
 | Type | Description |
 | --- | --- |
-| Vector&lt;T&gt; | New **Vector** instance obtained. |
+| [Vector](arkts-arkts-vector-c.md)<T> | New **Vector** instance obtained. |
 
 **Example**
 
@@ -1006,6 +1054,8 @@ Uses commas (,) to concatenate elements in this Vector into a string.
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-Vector-toString(): string--><!--Device-Vector-toString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1039,6 +1089,8 @@ Trims the capacity of this Vector into its current length.
 
 **Deprecated since:** 9
 
+<!--Device-Vector-trimToCurrentLength(): void--><!--Device-Vector-trimToCurrentLength(): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Example**
@@ -1066,6 +1118,8 @@ Number of elements in a Vector.
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-Vector-length: number--><!--Device-Vector-length: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

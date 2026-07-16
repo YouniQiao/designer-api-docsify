@@ -12,12 +12,13 @@ import { contact } from '@kit.ContactsKit';
 function saveToExistingContactViaUI(context: Context, contact: Contact): Promise<number>
 ```
 
-Saves the information to an existing contact through UI interaction.. This API uses a promise to return the
-result.
+Saves the information to an existing contact through UI interaction.. This API uses a promise to return the result.
 
 **Since:** 15
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-contact-function saveToExistingContactViaUI(context: Context, contact: Contact): Promise<number>--><!--Device-contact-function saveToExistingContactViaUI(context: Context, contact: Contact): Promise<number>-End-->
 
 **System capability:** SystemCapability.Applications.Contacts
 
@@ -25,14 +26,14 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| contact | Contact | Yes | Indicates the contact information. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| contact | [Contact](arkts-contacts-contact-c.md) | Yes | Indicates the contact information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result, which is the contact ID. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result, which is the contact ID. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Provide interfaces and functions for HiRetrieval feature.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare namespace hiRetrieval--><!--Device-unnamed-declare namespace hiRetrieval-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiRetrieval
 
 ## Modules to Import

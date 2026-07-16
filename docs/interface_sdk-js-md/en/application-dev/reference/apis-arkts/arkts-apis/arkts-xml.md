@@ -4,6 +4,8 @@ The xml module provides utilities for converting XML text to Javascript object, 
 
 **Since:** 8
 
+<!--Device-unnamed-declare namespace xml--><!--Device-unnamed-declare namespace xml-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import

@@ -1,5 +1,11 @@
 # getSystemConfig
 
+## 导入模块
+
+```TypeScript
+import { process } from '@kit.ArkTS';
+```
+
 ## getSystemConfig
 
 ```TypeScript
@@ -13,6 +19,8 @@ function getSystemConfig(name: number): number
 **废弃版本：** 9
 
 **替代接口：** [getSystemConfig](arkts-arkts-processmanager-c.md#getsystemconfig-1)
+
+<!--Device-process-function getSystemConfig(name: number): number--><!--Device-process-function getSystemConfig(name: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-declare namespace advertising--><!--Device-unnamed-declare namespace advertising-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
+
+## 导入模块
+
+```TypeScript
+import { advertising } from '@kit.ConnectivityKit';
+```
 
 ## 汇总
 

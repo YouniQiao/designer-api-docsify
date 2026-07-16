@@ -4,6 +4,8 @@ Enumerates the audio encoding types.
 
 **Since:** 8
 
+<!--Device-audio-enum AudioEncodingType--><!--Device-audio-enum AudioEncodingType-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## ENCODING_TYPE_INVALID
@@ -18,6 +20,8 @@ Invalid.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AudioEncodingType-ENCODING_TYPE_INVALID = -1--><!--Device-AudioEncodingType-ENCODING_TYPE_INVALID = -1-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## ENCODING_TYPE_RAW
@@ -31,6 +35,8 @@ PCM encoding.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AudioEncodingType-ENCODING_TYPE_RAW = 0--><!--Device-AudioEncodingType-ENCODING_TYPE_RAW = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 

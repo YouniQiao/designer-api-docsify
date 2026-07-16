@@ -18,6 +18,8 @@ Updates information about the specified printers. This API uses an asynchronous 
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function updatePrinters(printers: Array<PrinterInfo>, callback: AsyncCallback<void>): void--><!--Device-print-function updatePrinters(printers: Array<PrinterInfo>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Updates information about the specified printers. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printers | Array&lt;PrinterInfo&gt; | Yes | List of printers whose information is to be updated. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| printers | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PrinterInfo> | Yes | List of printers whose information is to be updated. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -75,6 +77,8 @@ Updates information about the specified printers. This API uses a promise to ret
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function updatePrinters(printers: Array<PrinterInfo>): Promise<void>--><!--Device-print-function updatePrinters(printers: Array<PrinterInfo>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -83,13 +87,13 @@ Updates information about the specified printers. This API uses a promise to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printers | Array&lt;PrinterInfo&gt; | Yes | List of printers whose information is to be updated. |
+| printers | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PrinterInfo> | Yes | List of printers whose information is to be updated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

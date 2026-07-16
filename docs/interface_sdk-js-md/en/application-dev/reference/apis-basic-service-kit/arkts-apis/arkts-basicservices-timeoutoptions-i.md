@@ -4,6 +4,8 @@ Task timeout configuration.
 
 **Since:** 26.0.0
 
+<!--Device-cacheDownload-interface TimeoutOptions--><!--Device-cacheDownload-interface TimeoutOptions-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## Modules to Import
@@ -18,16 +20,15 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 httpTotalTimeout?: number
 ```
 
-Complete HTTP request-response cycle timeout, in seconds.
-The default value is 60.
-The minimum value is 1.
-The value should be an integer.
+Complete HTTP request-response cycle timeout, in seconds.The default value is 60.The minimum value is 1.The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TimeoutOptions-httpTotalTimeout?: int--><!--Device-TimeoutOptions-httpTotalTimeout?: int-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -37,18 +38,15 @@ The value should be an integer.
 networkCheckTimeout?: number
 ```
 
-Network availability check timeout, in seconds.
-The default value is 20.
-The minimum value is 0.
-The maximum value is 20.
-When set to 0, no check will be performed.
-The value should be an integer.
+Network availability check timeout, in seconds.The default value is 20.The minimum value is 0.The maximum value is 20.When set to 0, no check will be performed.The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TimeoutOptions-networkCheckTimeout?: int--><!--Device-TimeoutOptions-networkCheckTimeout?: int-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 

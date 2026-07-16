@@ -12,13 +12,13 @@ import { WantAgent } from '@kit.AbilityKit';
 function equal(agent: WantAgent, otherAgent: WantAgent, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether two WantAgent objects are equal, so as to determine whether the same operation is from the
-same application.
-This API uses an asynchronous callback to return the result.
+Checks whether two WantAgent objects are equal, so as to determine whether the same operation is from the same application.This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-wantAgent-function equal(agent: WantAgent, otherAgent: WantAgent, callback: AsyncCallback<boolean>): void--><!--Device-wantAgent-function equal(agent: WantAgent, otherAgent: WantAgent, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -26,9 +26,9 @@ This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | WantAgent | Yes | The first WantAgent object. |
-| otherAgent | WantAgent | Yes | The second WantAgent object. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value <code>true</code> meansthat the two WantAgent objects are equal, and <code>false</code> means the opposite. |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | The first WantAgent object. |
+| otherAgent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | The second WantAgent object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value <code>true</code> means that the two WantAgent objects are equal, and <code>false</code> means the opposite. |
 
 **Error codes:**
 
@@ -112,13 +112,13 @@ try {
 function equal(agent: WantAgent, otherAgent: WantAgent): Promise<boolean>
 ```
 
-Checks whether two WantAgent objects are equal, so as to determine whether the same operation is from the
-same application.
-This API uses a promise to return the result.
+Checks whether two WantAgent objects are equal, so as to determine whether the same operation is from the same application.This API uses a promise to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-wantAgent-function equal(agent: WantAgent, otherAgent: WantAgent): Promise<boolean>--><!--Device-wantAgent-function equal(agent: WantAgent, otherAgent: WantAgent): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -126,14 +126,14 @@ This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | WantAgent | Yes | The first WantAgent object. |
-| otherAgent | WantAgent | Yes | The second WantAgent object. |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | The first WantAgent object. |
+| otherAgent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | The second WantAgent object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value <code>true</code> means that the twoWantAgent objects are equal, and <code>false</code> means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value <code>true</code> means that the two WantAgent objects are equal, and <code>false</code> means the opposite. |
 
 **Error codes:**
 

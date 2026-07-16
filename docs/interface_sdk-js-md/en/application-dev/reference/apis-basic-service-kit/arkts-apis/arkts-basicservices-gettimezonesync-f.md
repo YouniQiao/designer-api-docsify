@@ -16,13 +16,15 @@ Obtains the system time zone in synchronous mode.
 
 **Since:** 10
 
+<!--Device-systemDateTime-function getTimezoneSync(): string--><!--Device-systemDateTime-function getTimezoneSync(): string-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | System time zone. For details, see[Supported System Time Zones](../../../../reference/apis-basic-services-kit/js-apis-date-time.md#supported-system-time-zones). |
+| string | System time zone. For details, see [Supported System Time Zones](../../../../reference/apis-basic-services-kit/js-apis-date-time.md#supported-system-time-zones). |
 
 **Example**
 

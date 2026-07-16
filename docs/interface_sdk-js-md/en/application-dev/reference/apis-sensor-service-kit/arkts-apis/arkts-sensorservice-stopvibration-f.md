@@ -18,19 +18,21 @@ Stops vibration in the specified mode. This API uses a promise to return the res
 
 **Required permissions:** ohos.permission.VIBRATE
 
+<!--Device-vibrator-function stopVibration(stopMode: VibratorStopMode): Promise<void>--><!--Device-vibrator-function stopVibration(stopMode: VibratorStopMode): Promise<void>-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stopMode | VibratorStopMode | Yes | Vibration stop mode:<br>- **VIBRATOR_STOP_MODE_TIME**: used to stopvibration of the specified duration.<br>- **VIBRATOR_STOP_MODE_PRESET**: used to stop vibration of the preseteffect.<br>To stop custom vibration, use [vibrator.stopVibration&lt;sup&gt;10+&lt;/sup&gt;](arkts-sensorservice-stopvibration-f.md#stopvibration-4). |
+| stopMode | [VibratorStopMode](arkts-sensorservice-vibratorstopmode-e.md) | Yes | Vibration stop mode:<br>- **VIBRATOR_STOP_MODE_TIME**: used to stop vibration of the specified duration.<br>- **VIBRATOR_STOP_MODE_PRESET**: used to stop vibration of the preset effect.<br>To stop custom vibration, use [vibrator.stopVibration&lt;sup&gt;10+&lt;/sup&gt;](arkts-sensorservice-stopvibration-f.md#stopvibration-4). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns the result. |
 
 **Error codes:**
 
@@ -132,14 +134,16 @@ Stops vibration in the specified mode. This API uses an asynchronous callback to
 
 **Required permissions:** ohos.permission.VIBRATE
 
+<!--Device-vibrator-function stopVibration(stopMode: VibratorStopMode, callback: AsyncCallback<void>): void--><!--Device-vibrator-function stopVibration(stopMode: VibratorStopMode, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stopMode | VibratorStopMode | Yes | Mode to stop the vibration. The options are as follows:<br>-**VIBRATOR_STOP_MODE_TIME**: used to stop vibration of the specified duration.<br>-**VIBRATOR_STOP_MODE_PRESET**: used to stop vibration of the preset effect.<br>To stop custom vibration, use[vibrator.stopVibration&lt;sup&gt;10+&lt;/sup&gt;](arkts-sensorservice-stopvibration-f.md#stopvibration-3). |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the vibration stops, **err** is**undefined**; otherwise, **err** is an error object. |
+| stopMode | [VibratorStopMode](arkts-sensorservice-vibratorstopmode-e.md) | Yes | Mode to stop the vibration. The options are as follows:<br>-**VIBRATOR_STOP_MODE_TIME**: used to stop vibration of the specified duration.<br>-**VIBRATOR_STOP_MODE_PRESET**: used to stop vibration of the preset effect.<br>To stop custom vibration, use [vibrator.stopVibration&lt;sup&gt;10+&lt;/sup&gt;](arkts-sensorservice-stopvibration-f.md#stopvibration-3). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the vibration stops, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -251,13 +255,15 @@ Stops vibration in all modes. This API uses an asynchronous callback to return t
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-vibrator-function stopVibration(callback: AsyncCallback<void>): void--><!--Device-vibrator-function stopVibration(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the vibration stops, **err** is**undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the vibration stops, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -303,13 +309,15 @@ Stops vibration in all modes. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-vibrator-function stopVibration(): Promise<void>--><!--Device-vibrator-function stopVibration(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns the result. |
 
 **Error codes:**
 
@@ -345,12 +353,13 @@ try {
 function stopVibration(param?: VibratorInfoParam): Promise<void>
 ```
 
-Stops vibration based on the specified vibrator parameters. If no parameters are passed, this API stops all
-vibrators of the local device by default. This API uses a promise to return the result.
+Stops vibration based on the specified vibrator parameters. If no parameters are passed, this API stops all vibrators of the local device by default. This API uses a promise to return the result.
 
 **Since:** 19
 
 **Required permissions:** ohos.permission.VIBRATE
+
+<!--Device-vibrator-function stopVibration(param?: VibratorInfoParam): Promise<void>--><!--Device-vibrator-function stopVibration(param?: VibratorInfoParam): Promise<void>-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -358,13 +367,13 @@ vibrators of the local device by default. This API uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | VibratorInfoParam | No | Vibrator parameters, such as the specified device and vibrator. If thisparameter is left unspecified, this API applies to all vibrators of the local device by default. |
+| param | [VibratorInfoParam](arkts-sensorservice-vibratorinfoparam-i.md) | No | Vibrator parameters, such as the specified device and vibrator. If this parameter is left unspecified, this API applies to all vibrators of the local device by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns the result. |
 
 **Error codes:**
 

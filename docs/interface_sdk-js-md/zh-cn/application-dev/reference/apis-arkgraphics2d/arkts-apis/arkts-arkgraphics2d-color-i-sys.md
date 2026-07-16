@@ -4,9 +4,17 @@ RGBA格式的颜色描述。
 
 **起始版本：** 20
 
+<!--Device-uiEffect-interface Color--><!--Device-uiEffect-interface Color-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
+```
 
 ## alpha
 
@@ -19,6 +27,8 @@ alpha: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-Color-alpha: double--><!--Device-Color-alpha: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -36,6 +46,8 @@ blue: number
 
 **起始版本：** 20
 
+<!--Device-Color-blue: double--><!--Device-Color-blue: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +64,8 @@ green: number
 
 **起始版本：** 20
 
+<!--Device-Color-green: double--><!--Device-Color-green: double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +81,8 @@ red: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-Color-red: double--><!--Device-Color-red: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

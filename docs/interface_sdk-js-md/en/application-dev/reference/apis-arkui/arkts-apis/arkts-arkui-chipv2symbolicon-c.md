@@ -6,6 +6,8 @@ Defines chip symbol icon.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export abstract class ChipV2SymbolIcon extends ChipV2Icon--><!--Device-unnamed-export abstract class ChipV2SymbolIcon extends ChipV2Icon-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,13 +30,15 @@ The constructor of ChipV2SymbolIcon
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2SymbolIcon-constructor(config: ChipV2SymbolIconConfig)--><!--Device-ChipV2SymbolIcon-constructor(config: ChipV2SymbolIconConfig)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | ChipV2SymbolIconConfig | Yes | config of chip symbol icon |
+| config | [ChipV2SymbolIconConfig](arkts-arkui-chipv2symboliconconfig-i.md) | Yes | config of chip symbol icon |
 
 ## activated
 
@@ -51,6 +55,8 @@ Symbol activated.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipV2SymbolIcon-public activated?: SymbolGlyphModifier--><!--Device-ChipV2SymbolIcon-public activated?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,6 +75,8 @@ Symbol normal.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipV2SymbolIcon-public normal?: SymbolGlyphModifier--><!--Device-ChipV2SymbolIcon-public normal?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

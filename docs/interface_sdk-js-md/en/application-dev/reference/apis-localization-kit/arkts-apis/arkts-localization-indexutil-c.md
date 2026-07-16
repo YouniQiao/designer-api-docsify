@@ -4,6 +4,8 @@ Provides index management capabilities, such as obtaining the locale index list 
 
 **Since:** 8
 
+<!--Device-i18n-export class IndexUtil--><!--Device-i18n-export class IndexUtil-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
@@ -23,6 +25,8 @@ Adds the index list of a new locale to the index list of the current locale to f
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-IndexUtil-addLocale(locale: string): void--><!--Device-IndexUtil-addLocale(locale: string): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -53,6 +57,8 @@ Obtains the index of the **text** object.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-IndexUtil-getIndex(text: string): string--><!--Device-IndexUtil-getIndex(text: string): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -90,13 +96,15 @@ Obtains the index list of the current locale.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-IndexUtil-getIndexList(): Array<string>--><!--Device-IndexUtil-getIndexList(): Array<string>-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Index list of the current locale. The first and last elements are **...**. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Index list of the current locale. The first and last elements are **...**. |
 
 **Example**
 

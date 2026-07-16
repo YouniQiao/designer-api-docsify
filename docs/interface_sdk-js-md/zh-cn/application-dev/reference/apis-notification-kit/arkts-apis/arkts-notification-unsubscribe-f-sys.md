@@ -19,6 +19,8 @@ function unsubscribe(subscriber: NotificationSubscriber, callback: AsyncCallback
 **需要权限：** 
 - API版本9 - 19：ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationSubscribe-function unsubscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<void>): void--><!--Device-notificationSubscribe-function unsubscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -27,8 +29,8 @@ function unsubscribe(subscriber: NotificationSubscriber, callback: AsyncCallback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriber | NotificationSubscriber | 是 | 通知订阅对象。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 取消订阅动作回调函数。 |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-i-sys.md) | 是 | 通知订阅对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 取消订阅动作回调函数。 |
 
 **错误码：**
 
@@ -77,6 +79,8 @@ function unsubscribe(subscriber: NotificationSubscriber): Promise<void>
 **需要权限：** 
 - API版本9 - 19：ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationSubscribe-function unsubscribe(subscriber: NotificationSubscriber): Promise<void>--><!--Device-notificationSubscribe-function unsubscribe(subscriber: NotificationSubscriber): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -85,13 +89,13 @@ function unsubscribe(subscriber: NotificationSubscriber): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriber | NotificationSubscriber | 是 | 通知订阅对象。 |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-i-sys.md) | 是 | 通知订阅对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

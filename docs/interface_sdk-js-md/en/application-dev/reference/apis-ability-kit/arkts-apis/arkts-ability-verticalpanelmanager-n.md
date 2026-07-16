@@ -4,6 +4,8 @@ Defines a vertical domain panel manager.
 
 **Since:** 20
 
+<!--Device-unnamed-declare namespace verticalPanelManager--><!--Device-unnamed-declare namespace verticalPanelManager-End-->
+
 **System capability:** SystemCapability.Ability.AppExtension.VerticalPanel
 
 **System API:** This is a system API.

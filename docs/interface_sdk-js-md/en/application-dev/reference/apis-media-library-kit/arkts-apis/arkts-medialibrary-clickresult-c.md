@@ -4,6 +4,8 @@ ClickResult
 
 **Since:** 23
 
+<!--Device-unnamed-export declare class ClickResult--><!--Device-unnamed-export declare class ClickResult-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Indicates whether the media file is selected.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-ClickResult-isSelected: boolean--><!--Device-ClickResult-isSelected: boolean-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## uri
@@ -45,6 +49,8 @@ Uri of the media file.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-ClickResult-uri: string--><!--Device-ClickResult-uri: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

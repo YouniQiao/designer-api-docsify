@@ -12,17 +12,15 @@ import { screenLockFileManager } from '@kit.AbilityKit';
 function releaseAccess(dataType: DataType): ReleaseStatus
 ```
 
-Releases the permission to access a specified type of sensitive data under the lock screen synchronously. After the
-release is successful, the reference count of the sensitive data key decreases. When the reference count reaches
-zero, the key can be destroyed after the screen has been locked for the system-configured duration threshold.
+Releases the permission to access a specified type of sensitive data under the lock screen synchronously. After the release is successful, the reference count of the sensitive data key decreases. When the reference count reaches zero, the key can be destroyed after the screen has been locked for the system-configured duration threshold.
 
-Before calling this API, ensure that the app has enabled the sensitive data protection under lock screen feature
-and that the permission has been successfully requested by calling the
-[acquireAccess](arkts-ability-acquireaccess-f.md#acquireaccess-1) API first.
+Before calling this API, ensure that the app has enabled the sensitive data protection under lock screen feature and that the permission has been successfully requested by calling the [acquireAccess](arkts-ability-acquireaccess-f.md#acquireaccess-1) API first.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK_MEDIA_DATA or ohos.permission.ACCESS_SCREEN_LOCK_ALL_DATA
+
+<!--Device-screenLockFileManager-function releaseAccess(dataType: DataType): ReleaseStatus--><!--Device-screenLockFileManager-function releaseAccess(dataType: DataType): ReleaseStatus-End-->
 
 **System capability:** SystemCapability.Security.ScreenLockFileManager
 
@@ -32,13 +30,13 @@ and that the permission has been successfully requested by calling the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataType | DataType | Yes | Type of sensitive data that is accessible on the lock screen. The dataType must beconsistent with the dataType used in the acquireAccess API. |
+| dataType | [DataType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-datatype-e.md) | Yes | Type of sensitive data that is accessible on the lock screen. The dataType must be consistent with the dataType used in the acquireAccess API. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ReleaseStatus | Release status of the access permission for sensitive data under lock screen. |
+| [ReleaseStatus](arkts-ability-releasestatus-e.md) | Release status of the access permission for sensitive data under lock screen. |
 
 **Error codes:**
 

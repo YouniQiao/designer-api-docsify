@@ -4,9 +4,17 @@
 
 **起始版本：** 9
 
+<!--Device-update-export interface Updater--><!--Device-update-export interface Updater-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { update } from '@kit.BasicServicesKit';
+```
 
 ## checkNewVersion
 
@@ -20,6 +28,8 @@ checkNewVersion(callback: AsyncCallback<CheckResult>): void
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-checkNewVersion(callback: AsyncCallback<CheckResult>): void--><!--Device-Updater-checkNewVersion(callback: AsyncCallback<CheckResult>): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -28,7 +38,7 @@ checkNewVersion(callback: AsyncCallback<CheckResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;CheckResult&gt; | 是 | 回调函数，返回搜包结果对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<CheckResult> | 是 | 回调函数，返回搜包结果对象。 |
 
 **错误码：**
 
@@ -82,6 +92,8 @@ checkNewVersion(): Promise<CheckResult>
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-checkNewVersion(): Promise<CheckResult>--><!--Device-Updater-checkNewVersion(): Promise<CheckResult>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -90,7 +102,7 @@ checkNewVersion(): Promise<CheckResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CheckResult&gt; | Promise对象，返回搜包结果对象。 |
+| Promise<CheckResult> | Promise对象，返回搜包结果对象。 |
 
 **错误码：**
 
@@ -143,6 +155,8 @@ clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions, cal
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions, callback: AsyncCallback<void>): void--><!--Device-Updater-clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -151,9 +165,9 @@ clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions, cal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | 是 | 版本摘要信息。 |
-| clearOptions | ClearOptions | 是 | 清除选项。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当清除异常成功时，err为undefined，否则为错误对象。 |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息。 |
+| clearOptions | [ClearOptions](arkts-basicservices-clearoptions-i-sys.md) | 是 | 清除选项。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当清除异常成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -218,6 +232,8 @@ clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions): Pr
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions): Promise<void>--><!--Device-Updater-clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -226,14 +242,14 @@ clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions): Pr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | 是 | 版本摘要信息。 |
-| clearOptions | ClearOptions | 是 | 清除选项。 |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息。 |
+| clearOptions | [ClearOptions](arkts-basicservices-clearoptions-i-sys.md) | 是 | 清除选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -298,6 +314,16 @@ download(
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-download(
+      versionDigestInfo: VersionDigestInfo,
+      downloadOptions: DownloadOptions,
+      callback: AsyncCallback<void>
+    ): void--><!--Device-Updater-download(
+      versionDigestInfo: VersionDigestInfo,
+      downloadOptions: DownloadOptions,
+      callback: AsyncCallback<void>
+    ): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -306,9 +332,9 @@ download(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | 是 | 版本摘要信息。 |
-| downloadOptions | DownloadOptions | 是 | 下载选项。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当下载成功时，err为undefined，否则为错误对象。 |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息。 |
+| downloadOptions | [DownloadOptions](arkts-basicservices-downloadoptions-i-sys.md) | 是 | 下载选项。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当下载成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -374,6 +400,8 @@ download(versionDigestInfo: VersionDigestInfo, downloadOptions: DownloadOptions)
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-download(versionDigestInfo: VersionDigestInfo, downloadOptions: DownloadOptions): Promise<void>--><!--Device-Updater-download(versionDigestInfo: VersionDigestInfo, downloadOptions: DownloadOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -382,14 +410,14 @@ download(versionDigestInfo: VersionDigestInfo, downloadOptions: DownloadOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | 是 | 版本摘要信息。 |
-| downloadOptions | DownloadOptions | 是 | 下载选项。 |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息。 |
+| downloadOptions | [DownloadOptions](arkts-basicservices-downloadoptions-i-sys.md) | 是 | 下载选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -454,6 +482,14 @@ getCurrentVersionDescription(
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getCurrentVersionDescription(
+      descriptionOptions: DescriptionOptions,
+      callback: AsyncCallback<Array<ComponentDescription>>
+    ): void--><!--Device-Updater-getCurrentVersionDescription(
+      descriptionOptions: DescriptionOptions,
+      callback: AsyncCallback<Array<ComponentDescription>>
+    ): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -462,8 +498,8 @@ getCurrentVersionDescription(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| descriptionOptions | DescriptionOptions | 是 | 描述文件选项。 |
-| callback | AsyncCallback&lt;Array&lt;ComponentDescription&gt;&gt; | 是 | 回调函数，返回当前版本描述信息。 |
+| descriptionOptions | [DescriptionOptions](arkts-basicservices-descriptionoptions-i-sys.md) | 是 | 描述文件选项。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<ComponentDescription>> | 是 | 回调函数，返回当前版本描述信息。 |
 
 **错误码：**
 
@@ -521,6 +557,8 @@ getCurrentVersionDescription(descriptionOptions: DescriptionOptions): Promise<Ar
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getCurrentVersionDescription(descriptionOptions: DescriptionOptions): Promise<Array<ComponentDescription>>--><!--Device-Updater-getCurrentVersionDescription(descriptionOptions: DescriptionOptions): Promise<Array<ComponentDescription>>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -529,13 +567,13 @@ getCurrentVersionDescription(descriptionOptions: DescriptionOptions): Promise<Ar
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| descriptionOptions | DescriptionOptions | 是 | 描述文件选项。 |
+| descriptionOptions | [DescriptionOptions](arkts-basicservices-descriptionoptions-i-sys.md) | 是 | 描述文件选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;ComponentDescription&gt;&gt; | Promise对象，返回当前版本描述信息。 |
+| Promise<Array<ComponentDescription>> | Promise对象，返回当前版本描述信息。 |
 
 **错误码：**
 
@@ -591,6 +629,8 @@ getCurrentVersionInfo(callback: AsyncCallback<CurrentVersionInfo>): void
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getCurrentVersionInfo(callback: AsyncCallback<CurrentVersionInfo>): void--><!--Device-Updater-getCurrentVersionInfo(callback: AsyncCallback<CurrentVersionInfo>): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -599,7 +639,7 @@ getCurrentVersionInfo(callback: AsyncCallback<CurrentVersionInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;CurrentVersionInfo&gt; | 是 | 回调函数，返回当前版本信息对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<CurrentVersionInfo> | 是 | 回调函数，返回当前版本信息对象。 |
 
 **错误码：**
 
@@ -655,6 +695,8 @@ getCurrentVersionInfo(): Promise<CurrentVersionInfo>
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getCurrentVersionInfo(): Promise<CurrentVersionInfo>--><!--Device-Updater-getCurrentVersionInfo(): Promise<CurrentVersionInfo>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -663,7 +705,7 @@ getCurrentVersionInfo(): Promise<CurrentVersionInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CurrentVersionInfo&gt; | Promise对象，返回当前版本信息对象。 |
+| Promise<CurrentVersionInfo> | Promise对象，返回当前版本信息对象。 |
 
 **错误码：**
 
@@ -718,6 +760,16 @@ getNewVersionDescription(
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getNewVersionDescription(
+      versionDigestInfo: VersionDigestInfo,
+      descriptionOptions: DescriptionOptions,
+      callback: AsyncCallback<Array<ComponentDescription>>
+    ): void--><!--Device-Updater-getNewVersionDescription(
+      versionDigestInfo: VersionDigestInfo,
+      descriptionOptions: DescriptionOptions,
+      callback: AsyncCallback<Array<ComponentDescription>>
+    ): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -726,9 +778,9 @@ getNewVersionDescription(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | 是 | 版本摘要信息。 |
-| descriptionOptions | DescriptionOptions | 是 | 描述文件选项。 |
-| callback | AsyncCallback&lt;Array&lt;ComponentDescription&gt;&gt; | 是 | 回调函数，返回新版本描述信息。 |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息。 |
+| descriptionOptions | [DescriptionOptions](arkts-basicservices-descriptionoptions-i-sys.md) | 是 | 描述文件选项。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<ComponentDescription>> | 是 | 回调函数，返回新版本描述信息。 |
 
 **错误码：**
 
@@ -795,6 +847,14 @@ getNewVersionDescription(
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getNewVersionDescription(
+      versionDigestInfo: VersionDigestInfo,
+      descriptionOptions: DescriptionOptions
+    ): Promise<Array<ComponentDescription>>--><!--Device-Updater-getNewVersionDescription(
+      versionDigestInfo: VersionDigestInfo,
+      descriptionOptions: DescriptionOptions
+    ): Promise<Array<ComponentDescription>>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -803,14 +863,14 @@ getNewVersionDescription(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | 是 | 版本摘要信息。 |
-| descriptionOptions | DescriptionOptions | 是 | 描述文件选项。 |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息。 |
+| descriptionOptions | [DescriptionOptions](arkts-basicservices-descriptionoptions-i-sys.md) | 是 | 描述文件选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;ComponentDescription&gt;&gt; | Promise对象，返回新版本描述信息。 |
+| Promise<Array<ComponentDescription>> | Promise对象，返回新版本描述信息。 |
 
 **错误码：**
 
@@ -875,6 +935,8 @@ getNewVersionInfo(callback: AsyncCallback<NewVersionInfo>): void
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getNewVersionInfo(callback: AsyncCallback<NewVersionInfo>): void--><!--Device-Updater-getNewVersionInfo(callback: AsyncCallback<NewVersionInfo>): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -883,7 +945,7 @@ getNewVersionInfo(callback: AsyncCallback<NewVersionInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;NewVersionInfo&gt; | 是 | 回调函数，返回新版本信息对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<NewVersionInfo> | 是 | 回调函数，返回新版本信息对象。 |
 
 **错误码：**
 
@@ -935,6 +997,8 @@ getNewVersionInfo(): Promise<NewVersionInfo>
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getNewVersionInfo(): Promise<NewVersionInfo>--><!--Device-Updater-getNewVersionInfo(): Promise<NewVersionInfo>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -943,7 +1007,7 @@ getNewVersionInfo(): Promise<NewVersionInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;NewVersionInfo&gt; | Promise对象，返回新版本信息对象。 |
+| Promise<NewVersionInfo> | Promise对象，返回新版本信息对象。 |
 
 **错误码：**
 
@@ -993,6 +1057,8 @@ getTaskInfo(callback: AsyncCallback<TaskInfo>): void
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getTaskInfo(callback: AsyncCallback<TaskInfo>): void--><!--Device-Updater-getTaskInfo(callback: AsyncCallback<TaskInfo>): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -1001,7 +1067,7 @@ getTaskInfo(callback: AsyncCallback<TaskInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;TaskInfo&gt; | 是 | 回调函数，返回升级任务信息对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<TaskInfo> | 是 | 回调函数，返回升级任务信息对象。 |
 
 **错误码：**
 
@@ -1054,6 +1120,8 @@ getTaskInfo(): Promise<TaskInfo>
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getTaskInfo(): Promise<TaskInfo>--><!--Device-Updater-getTaskInfo(): Promise<TaskInfo>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -1062,7 +1130,7 @@ getTaskInfo(): Promise<TaskInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;TaskInfo&gt; | Promise对象，返回任务信息对象。 |
+| Promise<TaskInfo> | Promise对象，返回任务信息对象。 |
 
 **错误码：**
 
@@ -1113,6 +1181,8 @@ getUpgradePolicy(callback: AsyncCallback<UpgradePolicy>): void
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getUpgradePolicy(callback: AsyncCallback<UpgradePolicy>): void--><!--Device-Updater-getUpgradePolicy(callback: AsyncCallback<UpgradePolicy>): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -1121,7 +1191,7 @@ getUpgradePolicy(callback: AsyncCallback<UpgradePolicy>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;UpgradePolicy&gt; | 是 | 回调函数，返回升级策略信息对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<UpgradePolicy> | 是 | 回调函数，返回升级策略信息对象。 |
 
 **错误码：**
 
@@ -1173,6 +1243,8 @@ getUpgradePolicy(): Promise<UpgradePolicy>
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getUpgradePolicy(): Promise<UpgradePolicy>--><!--Device-Updater-getUpgradePolicy(): Promise<UpgradePolicy>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -1181,7 +1253,7 @@ getUpgradePolicy(): Promise<UpgradePolicy>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;UpgradePolicy&gt; | Promise对象，返回升级策略信息对象。 |
+| Promise<UpgradePolicy> | Promise对象，返回升级策略信息对象。 |
 
 **错误码：**
 
@@ -1229,6 +1301,8 @@ off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): v
 
 **起始版本：** 9
 
+<!--Device-Updater-off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): void--><!--Device-Updater-off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -1237,8 +1311,8 @@ off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventClassifyInfo | EventClassifyInfo | 是 | 事件信息。 |
-| taskCallback | UpgradeTaskCallback | 否 | 事件回调。 |
+| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-eventclassifyinfo-i-sys.md) | 是 | 事件信息。 |
+| taskCallback | [UpgradeTaskCallback](arkts-basicservices-upgradetaskcallback-t-sys.md) | 否 | 事件回调。 |
 
 **错误码：**
 
@@ -1284,6 +1358,8 @@ on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): voi
 
 **起始版本：** 9
 
+<!--Device-Updater-on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): void--><!--Device-Updater-on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -1292,8 +1368,8 @@ on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventClassifyInfo | EventClassifyInfo | 是 | 事件信息。 |
-| taskCallback | UpgradeTaskCallback | 是 | 事件回调。 |
+| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-eventclassifyinfo-i-sys.md) | 是 | 事件信息。 |
+| taskCallback | [UpgradeTaskCallback](arkts-basicservices-upgradetaskcallback-t-sys.md) | 是 | 事件回调。 |
 
 **错误码：**
 
@@ -1345,6 +1421,16 @@ pauseDownload(
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-pauseDownload(
+      versionDigestInfo: VersionDigestInfo,
+      pauseDownloadOptions: PauseDownloadOptions,
+      callback: AsyncCallback<void>
+    ): void--><!--Device-Updater-pauseDownload(
+      versionDigestInfo: VersionDigestInfo,
+      pauseDownloadOptions: PauseDownloadOptions,
+      callback: AsyncCallback<void>
+    ): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -1353,9 +1439,9 @@ pauseDownload(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | 是 | 版本摘要信息。 |
-| pauseDownloadOptions | PauseDownloadOptions | 是 | 暂停下载选项。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当暂停下载成功时，err为undefined，否则为错误对象。 |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息。 |
+| pauseDownloadOptions | [PauseDownloadOptions](arkts-basicservices-pausedownloadoptions-i-sys.md) | 是 | 暂停下载选项。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当暂停下载成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1419,6 +1505,8 @@ pauseDownload(versionDigestInfo: VersionDigestInfo, pauseDownloadOptions: PauseD
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-pauseDownload(versionDigestInfo: VersionDigestInfo, pauseDownloadOptions: PauseDownloadOptions): Promise<void>--><!--Device-Updater-pauseDownload(versionDigestInfo: VersionDigestInfo, pauseDownloadOptions: PauseDownloadOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -1427,14 +1515,14 @@ pauseDownload(versionDigestInfo: VersionDigestInfo, pauseDownloadOptions: PauseD
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | 是 | 版本摘要信息。 |
-| pauseDownloadOptions | PauseDownloadOptions | 是 | 暂停下载选项。 |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息。 |
+| pauseDownloadOptions | [PauseDownloadOptions](arkts-basicservices-pausedownloadoptions-i-sys.md) | 是 | 暂停下载选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1500,6 +1588,16 @@ resumeDownload(
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-resumeDownload(
+      versionDigestInfo: VersionDigestInfo,
+      resumeDownloadOptions: ResumeDownloadOptions,
+      callback: AsyncCallback<void>
+    ): void--><!--Device-Updater-resumeDownload(
+      versionDigestInfo: VersionDigestInfo,
+      resumeDownloadOptions: ResumeDownloadOptions,
+      callback: AsyncCallback<void>
+    ): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -1508,9 +1606,9 @@ resumeDownload(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | 是 | 版本摘要信息。 |
-| resumeDownloadOptions | ResumeDownloadOptions | 是 | 恢复下载选项。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当恢复下载成功时，err为undefined，否则为错误对象。 |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息。 |
+| resumeDownloadOptions | [ResumeDownloadOptions](arkts-basicservices-resumedownloadoptions-i-sys.md) | 是 | 恢复下载选项。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当恢复下载成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1574,6 +1672,8 @@ resumeDownload(versionDigestInfo: VersionDigestInfo, resumeDownloadOptions: Resu
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-resumeDownload(versionDigestInfo: VersionDigestInfo, resumeDownloadOptions: ResumeDownloadOptions): Promise<void>--><!--Device-Updater-resumeDownload(versionDigestInfo: VersionDigestInfo, resumeDownloadOptions: ResumeDownloadOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -1582,14 +1682,14 @@ resumeDownload(versionDigestInfo: VersionDigestInfo, resumeDownloadOptions: Resu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | 是 | 版本摘要信息。 |
-| resumeDownloadOptions | ResumeDownloadOptions | 是 | 恢复下载选项。 |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息。 |
+| resumeDownloadOptions | [ResumeDownloadOptions](arkts-basicservices-resumedownloadoptions-i-sys.md) | 是 | 恢复下载选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1650,6 +1750,8 @@ setUpgradePolicy(policy: UpgradePolicy, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-setUpgradePolicy(policy: UpgradePolicy, callback: AsyncCallback<void>): void--><!--Device-Updater-setUpgradePolicy(policy: UpgradePolicy, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -1658,8 +1760,8 @@ setUpgradePolicy(policy: UpgradePolicy, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| policy | UpgradePolicy | 是 | 升级策略。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当设置升级策略成功时，err为undefined，否则为错误对象。 |
+| policy | [UpgradePolicy](arkts-basicservices-upgradepolicy-i-sys.md) | 是 | 升级策略。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当设置升级策略成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1716,6 +1818,8 @@ setUpgradePolicy(policy: UpgradePolicy): Promise<void>
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-setUpgradePolicy(policy: UpgradePolicy): Promise<void>--><!--Device-Updater-setUpgradePolicy(policy: UpgradePolicy): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -1724,13 +1828,13 @@ setUpgradePolicy(policy: UpgradePolicy): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| policy | UpgradePolicy | 是 | 升级策略。 |
+| policy | [UpgradePolicy](arkts-basicservices-upgradepolicy-i-sys.md) | 是 | 升级策略。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。 无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1785,6 +1889,8 @@ terminateUpgrade(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-terminateUpgrade(callback: AsyncCallback<void>): void--><!--Device-Updater-terminateUpgrade(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -1793,7 +1899,7 @@ terminateUpgrade(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当终止升级执行成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当终止升级执行成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1844,6 +1950,8 @@ terminateUpgrade(): Promise<void>
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-terminateUpgrade(): Promise<void>--><!--Device-Updater-terminateUpgrade(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -1852,7 +1960,7 @@ terminateUpgrade(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1901,6 +2009,8 @@ upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions, ca
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions, callback: AsyncCallback<void>): void--><!--Device-Updater-upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -1909,9 +2019,9 @@ upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions, ca
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | 是 | 版本摘要信息。 |
-| upgradeOptions | UpgradeOptions | 是 | 更新选项。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当升级执行成功时，err为undefined，否则为错误对象。 |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息。 |
+| upgradeOptions | [UpgradeOptions](arkts-basicservices-upgradeoptions-i-sys.md) | 是 | 更新选项。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当升级执行成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1974,6 +2084,8 @@ upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions): P
 
 **需要权限：** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions): Promise<void>--><!--Device-Updater-upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -1982,14 +2094,14 @@ upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions): P
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | 是 | 版本摘要信息。 |
-| upgradeOptions | UpgradeOptions | 是 | 更新选项。 |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | 是 | 版本摘要信息。 |
+| upgradeOptions | [UpgradeOptions](arkts-basicservices-upgradeoptions-i-sys.md) | 是 | 更新选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

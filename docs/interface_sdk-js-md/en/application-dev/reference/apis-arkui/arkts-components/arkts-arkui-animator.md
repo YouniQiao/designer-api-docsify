@@ -1,6 +1,6 @@
 # Animator
 
-Defines Animator.
+Defines Animator Component.
 
 
 ## Animator
@@ -14,6 +14,8 @@ Constructor parameters
 **Since:** 7
 
 **Deprecated since:** 22
+
+<!--Device-AnimatorInterface-(value: string): AnimatorAttribute--><!--Device-AnimatorInterface-(value: string): AnimatorAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

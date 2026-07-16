@@ -1,5 +1,11 @@
 # createTimer（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { systemTimer } from '@kit.BasicServicesKit';
+```
+
 ## createTimer
 
 ```TypeScript
@@ -8,12 +14,14 @@ function createTimer(options: TimerOptions, callback: AsyncCallback<number>): vo
 
 创建定时器，使用callback异步回调。
 
-> **注意：**
->
-> 需与[systemTimer.destroyTimer](arkts-basicservices-destroytimer-f-sys.md#destroytimer-1)结合使用，否则会造
+> **注意：**  
+>  
+> 需与[systemTimer.destroyTimer](arkts-basicservices-destroytimer-f-sys.md#destroytimer-1)结合使用，否则会造  
 > 成内存泄漏
 
 **起始版本：** 7
+
+<!--Device-systemTimer-function createTimer(options: TimerOptions, callback: AsyncCallback<long>): void--><!--Device-systemTimer-function createTimer(options: TimerOptions, callback: AsyncCallback<long>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
 
@@ -23,8 +31,8 @@ function createTimer(options: TimerOptions, callback: AsyncCallback<number>): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | TimerOptions | 是 | 创建系统定时器的初始化选项，包括定时器类型、是否循环触发、间隔时间、WantAgent通知机制等。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数，返回定时器的ID。 |
+| options | [TimerOptions](arkts-basicservices-timeroptions-i-sys.md) | 是 | 创建系统定时器的初始化选项，包括定时器类型、是否循环触发、间隔时间、WantAgent通知机制等。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数，返回定时器的ID。 |
 
 **错误码：**
 
@@ -66,12 +74,14 @@ function createTimer(options: TimerOptions): Promise<number>
 
 创建定时器，使用Promise异步回调返回定时器的ID。
 
-> **注意：**
->
-> 需与[systemTimer.destroyTimer](arkts-basicservices-destroytimer-f-sys.md#destroytimer-1)结合使用，否则会造
+> **注意：**  
+>  
+> 需与[systemTimer.destroyTimer](arkts-basicservices-destroytimer-f-sys.md#destroytimer-1)结合使用，否则会造  
 > 成内存泄漏
 
 **起始版本：** 7
+
+<!--Device-systemTimer-function createTimer(options: TimerOptions): Promise<long>--><!--Device-systemTimer-function createTimer(options: TimerOptions): Promise<long>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
 
@@ -81,13 +91,13 @@ function createTimer(options: TimerOptions): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | TimerOptions | 是 | 创建系统定时器的初始化选项，包括定时器类型、是否循环触发、间隔时间、WantAgent通知机制等。 |
+| options | [TimerOptions](arkts-basicservices-timeroptions-i-sys.md) | 是 | 创建系统定时器的初始化选项，包括定时器类型、是否循环触发、间隔时间、WantAgent通知机制等。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回定时器的ID。 |
+| Promise<number> | Promise对象，返回定时器的ID。 |
 
 **错误码：**
 

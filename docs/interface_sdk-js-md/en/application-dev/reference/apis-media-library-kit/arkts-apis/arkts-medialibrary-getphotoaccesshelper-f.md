@@ -20,19 +20,21 @@ Obtains a PhotoAccessHelper instance, which can be used for accessing and modify
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-sendablePhotoAccessHelper-function getPhotoAccessHelper(context: Context): PhotoAccessHelper--><!--Device-sendablePhotoAccessHelper-function getPhotoAccessHelper(context: Context): PhotoAccessHelper-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability instance. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the ability instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PhotoAccessHelper | PhotoAccessHelper instance obtained. |
+| [PhotoAccessHelper](arkts-medialibrary-photoaccesshelper-i.md) | PhotoAccessHelper instance obtained. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Describes the metadata of a module.
 
 **Since:** 10
 
+<!--Device-unnamed-export interface ModuleMetadata--><!--Device-unnamed-export interface ModuleMetadata-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## metadata
@@ -20,6 +22,8 @@ Metadata list of the module.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ModuleMetadata-readonly metadata: Array<Metadata>--><!--Device-ModuleMetadata-readonly metadata: Array<Metadata>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## moduleName
@@ -35,6 +39,8 @@ Module name.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ModuleMetadata-readonly moduleName: string--><!--Device-ModuleMetadata-readonly moduleName: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

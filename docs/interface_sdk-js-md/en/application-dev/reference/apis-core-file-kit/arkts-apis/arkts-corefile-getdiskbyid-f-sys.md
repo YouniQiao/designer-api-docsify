@@ -20,6 +20,8 @@ Querying disk information based on the disk ID.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-volumeManager-function getDiskById(diskId: string): Promise<Disk>--><!--Device-volumeManager-function getDiskById(diskId: string): Promise<Disk>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -34,7 +36,7 @@ Querying disk information based on the disk ID.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Disk&gt; | return Promise |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Disk> | return Promise |
 
 **Error codes:**
 

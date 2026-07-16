@@ -4,6 +4,8 @@ Enumerates the component role types used by screen readers.
 
 **Since:** 18
 
+<!--Device-unnamed-declare enum AccessibilityRoleType--><!--Device-unnamed-declare enum AccessibilityRoleType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ACTION_SHEET
@@ -21,6 +23,8 @@ Action sheet.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-ACTION_SHEET = 0--><!--Device-AccessibilityRoleType-ACTION_SHEET = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ Alert dialog box.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-ALERT_DIALOG = 1--><!--Device-AccessibilityRoleType-ALERT_DIALOG = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## INDEXER_COMPONENT
@@ -57,6 +63,8 @@ Indexer component.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-INDEXER_COMPONENT = 2--><!--Device-AccessibilityRoleType-INDEXER_COMPONENT = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,6 +84,8 @@ Badge component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-BADGE_COMPONENT = 3--><!--Device-AccessibilityRoleType-BADGE_COMPONENT = 3-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BLANK
@@ -93,6 +103,8 @@ Blank placeholder component.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-BLANK = 4--><!--Device-AccessibilityRoleType-BLANK = 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -112,6 +124,8 @@ Button.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-BUTTON = 5--><!--Device-AccessibilityRoleType-BUTTON = 5-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BACK_BUTTON
@@ -129,6 +143,8 @@ Back button on a large image page.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-BACK_BUTTON = 6--><!--Device-AccessibilityRoleType-BACK_BUTTON = 6-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -148,6 +164,8 @@ Drag bar for sheets.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-SHEET_DRAG_BAR = 7--><!--Device-AccessibilityRoleType-SHEET_DRAG_BAR = 7-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CALENDAR_PICKER
@@ -165,6 +183,8 @@ Calendar picker.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-CALENDAR_PICKER = 8--><!--Device-AccessibilityRoleType-CALENDAR_PICKER = 8-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -184,6 +204,8 @@ Calendar.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-CALENDAR = 9--><!--Device-AccessibilityRoleType-CALENDAR = 9-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CANVAS
@@ -201,6 +223,8 @@ Canvas component.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-CANVAS = 10--><!--Device-AccessibilityRoleType-CANVAS = 10-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -220,6 +244,8 @@ Gradient object.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-CANVAS_GRADIENT = 11--><!--Device-AccessibilityRoleType-CANVAS_GRADIENT = 11-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CANVAS_PATTERN
@@ -237,6 +263,8 @@ Pattern for image filling based on a specified source image and repetition mode.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-CANVAS_PATTERN = 12--><!--Device-AccessibilityRoleType-CANVAS_PATTERN = 12-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -256,6 +284,8 @@ Check box component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-CHECKBOX = 13--><!--Device-AccessibilityRoleType-CHECKBOX = 13-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CHECKBOX_GROUP
@@ -273,6 +303,8 @@ Check box group.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-CHECKBOX_GROUP = 14--><!--Device-AccessibilityRoleType-CHECKBOX_GROUP = 14-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -292,6 +324,8 @@ Component for drawing circles.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-CIRCLE = 15--><!--Device-AccessibilityRoleType-CIRCLE = 15-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## COLUMN_SPLIT
@@ -309,6 +343,8 @@ Vertical layout of child components with horizontal dividers.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-COLUMN_SPLIT = 16--><!--Device-AccessibilityRoleType-COLUMN_SPLIT = 16-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -328,6 +364,8 @@ Container that lays out child components vertically.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-COLUMN = 17--><!--Device-AccessibilityRoleType-COLUMN = 17-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CANVAS_RENDERING_CONTEXT_2D
@@ -345,6 +383,8 @@ CANVAS_RENDERING_CONTEXT_2D = 18
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-CANVAS_RENDERING_CONTEXT_2D = 18--><!--Device-AccessibilityRoleType-CANVAS_RENDERING_CONTEXT_2D = 18-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -364,6 +404,8 @@ Chart component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-CHART = 19--><!--Device-AccessibilityRoleType-CHART = 19-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## COUNTER
@@ -381,6 +423,8 @@ Counter component.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-COUNTER = 20--><!--Device-AccessibilityRoleType-COUNTER = 20-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -400,6 +444,8 @@ Modal container.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-CONTAINER_MODAL = 21--><!--Device-AccessibilityRoleType-CONTAINER_MODAL = 21-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DATA_PANEL
@@ -417,6 +463,8 @@ Data panel component.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-DATA_PANEL = 22--><!--Device-AccessibilityRoleType-DATA_PANEL = 22-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -436,6 +484,8 @@ Date picker.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-DATE_PICKER = 23--><!--Device-AccessibilityRoleType-DATE_PICKER = 23-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DIALOG
@@ -453,6 +503,8 @@ Dialog box.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-DIALOG = 24--><!--Device-AccessibilityRoleType-DIALOG = 24-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -472,6 +524,8 @@ Divider component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-DIVIDER = 25--><!--Device-AccessibilityRoleType-DIVIDER = 25-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DRAG_BAR
@@ -489,6 +543,8 @@ Drag bar.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-DRAG_BAR = 26--><!--Device-AccessibilityRoleType-DRAG_BAR = 26-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -508,6 +564,8 @@ Container component for special effects.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-EFFECT_COMPONENT = 27--><!--Device-AccessibilityRoleType-EFFECT_COMPONENT = 27-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ELLIPSE
@@ -525,6 +583,8 @@ Ellipse drawing component.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-ELLIPSE = 28--><!--Device-AccessibilityRoleType-ELLIPSE = 28-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -544,6 +604,8 @@ Container that allows for flexible layout of child components.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-FLEX = 29--><!--Device-AccessibilityRoleType-FLEX = 29-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FLOW_ITEM
@@ -561,6 +623,8 @@ Child component of a waterfall layout container.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-FLOW_ITEM = 30--><!--Device-AccessibilityRoleType-FLOW_ITEM = 30-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -580,6 +644,8 @@ Widget component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-FORM_COMPONENT = 31--><!--Device-AccessibilityRoleType-FORM_COMPONENT = 31-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FORM_LINK
@@ -597,6 +663,8 @@ Static widget interaction component.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-FORM_LINK = 32--><!--Device-AccessibilityRoleType-FORM_LINK = 32-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -616,6 +684,8 @@ Gauge component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-GAUGE = 33--><!--Device-AccessibilityRoleType-GAUGE = 33-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## GRID
@@ -633,6 +703,8 @@ Grid container.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-GRID = 34--><!--Device-AccessibilityRoleType-GRID = 34-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -652,6 +724,8 @@ Grid column component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-GRID_COL = 35--><!--Device-AccessibilityRoleType-GRID_COL = 35-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## GRID_CONTAINER
@@ -669,6 +743,8 @@ Grid container that lays out child components vertically.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-GRID_CONTAINER = 36--><!--Device-AccessibilityRoleType-GRID_CONTAINER = 36-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -688,6 +764,8 @@ Single-item container within a grid container.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-GRID_ITEM = 37--><!--Device-AccessibilityRoleType-GRID_ITEM = 37-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## GRID_ROW
@@ -705,6 +783,8 @@ Grid row component.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-GRID_ROW = 38--><!--Device-AccessibilityRoleType-GRID_ROW = 38-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -724,6 +804,8 @@ Hyperlink component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-HYPERLINK = 39--><!--Device-AccessibilityRoleType-HYPERLINK = 39-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## IMAGE
@@ -741,6 +823,8 @@ Image component.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-IMAGE = 40--><!--Device-AccessibilityRoleType-IMAGE = 40-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -760,6 +844,8 @@ Frame animation component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-IMAGE_ANIMATOR = 41--><!--Device-AccessibilityRoleType-IMAGE_ANIMATOR = 41-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## IMAGE_BITMAP
@@ -777,6 +863,8 @@ Pixel data for canvas rendering.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-IMAGE_BITMAP = 42--><!--Device-AccessibilityRoleType-IMAGE_BITMAP = 42-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -796,6 +884,8 @@ Pixel data for canvas rendering.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-IMAGE_DATA = 43--><!--Device-AccessibilityRoleType-IMAGE_DATA = 43-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## IMAGE_SPAN
@@ -813,6 +903,8 @@ Component used to display inline images.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-IMAGE_SPAN = 44--><!--Device-AccessibilityRoleType-IMAGE_SPAN = 44-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -832,6 +924,8 @@ Label.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-LABEL = 45--><!--Device-AccessibilityRoleType-LABEL = 45-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## LINE
@@ -849,6 +943,8 @@ Line.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-LINE = 46--><!--Device-AccessibilityRoleType-LINE = 46-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -868,6 +964,8 @@ List.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-LIST = 47--><!--Device-AccessibilityRoleType-LIST = 47-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## LIST_ITEM
@@ -885,6 +983,8 @@ Specific item in a list.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-LIST_ITEM = 48--><!--Device-AccessibilityRoleType-LIST_ITEM = 48-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -904,6 +1004,8 @@ List item group.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-LIST_ITEM_GROUP = 49--><!--Device-AccessibilityRoleType-LIST_ITEM_GROUP = 49-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## LOADING_PROGRESS
@@ -921,6 +1023,8 @@ Component for display loading animations.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-LOADING_PROGRESS = 50--><!--Device-AccessibilityRoleType-LOADING_PROGRESS = 50-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -940,6 +1044,8 @@ Marquee component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-MARQUEE = 51--><!--Device-AccessibilityRoleType-MARQUEE = 51-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## MATRIX2D
@@ -957,6 +1063,8 @@ MATRIX2D = 52
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-MATRIX2D = 52--><!--Device-AccessibilityRoleType-MATRIX2D = 52-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -976,6 +1084,8 @@ Menu.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-MENU = 53--><!--Device-AccessibilityRoleType-MENU = 53-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## MENU_ITEM
@@ -993,6 +1103,8 @@ Menu item.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-MENU_ITEM = 54--><!--Device-AccessibilityRoleType-MENU_ITEM = 54-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1012,6 +1124,8 @@ Menu item group.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-MENU_ITEM_GROUP = 55--><!--Device-AccessibilityRoleType-MENU_ITEM_GROUP = 55-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NAV_DESTINATION
@@ -1029,6 +1143,8 @@ Content area of the **Navigation** component.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-NAV_DESTINATION = 56--><!--Device-AccessibilityRoleType-NAV_DESTINATION = 56-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1048,6 +1164,8 @@ navrouter component type
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-NAV_ROUTER = 57--><!--Device-AccessibilityRoleType-NAV_ROUTER = 57-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NAVIGATION
@@ -1065,6 +1183,8 @@ Root view container for navigation routing.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-NAVIGATION = 58--><!--Device-AccessibilityRoleType-NAVIGATION = 58-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1084,6 +1204,8 @@ Navigation bar.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-NAVIGATION_BAR = 59--><!--Device-AccessibilityRoleType-NAVIGATION_BAR = 59-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NAVIGATION_MENU
@@ -1101,6 +1223,8 @@ Navigation menu.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-NAVIGATION_MENU = 60--><!--Device-AccessibilityRoleType-NAVIGATION_MENU = 60-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1120,6 +1244,8 @@ Navigation container component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-NAVIGATOR = 61--><!--Device-AccessibilityRoleType-NAVIGATOR = 61-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## OFFSCREEN_CANVAS
@@ -1137,6 +1263,8 @@ Canvas for custom drawing of graphics.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-OFFSCREEN_CANVAS = 62--><!--Device-AccessibilityRoleType-OFFSCREEN_CANVAS = 62-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1156,6 +1284,8 @@ OFFSCREEN_CANVAS_RENDERING_CONTEXT2D = 63
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-OFFSCREEN_CANVAS_RENDERING_CONTEXT2D = 63--><!--Device-AccessibilityRoleType-OFFSCREEN_CANVAS_RENDERING_CONTEXT2D = 63-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## OPTION
@@ -1173,6 +1303,8 @@ option component type
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-OPTION = 64--><!--Device-AccessibilityRoleType-OPTION = 64-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1192,6 +1324,8 @@ Slidable panel.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-PANEL = 65--><!--Device-AccessibilityRoleType-PANEL = 65-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PAPER_PAGE
@@ -1209,6 +1343,8 @@ paper page component type
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-PAPER_PAGE = 66--><!--Device-AccessibilityRoleType-PAPER_PAGE = 66-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1228,6 +1364,8 @@ Path drawing component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-PATH = 67--><!--Device-AccessibilityRoleType-PATH = 67-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PATH2D
@@ -1245,6 +1383,8 @@ Path object.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-PATH2D = 68--><!--Device-AccessibilityRoleType-PATH2D = 68-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1264,6 +1404,8 @@ Pattern lock component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-PATTERN_LOCK = 69--><!--Device-AccessibilityRoleType-PATTERN_LOCK = 69-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PICKER
@@ -1281,6 +1423,8 @@ Picker.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-PICKER = 70--><!--Device-AccessibilityRoleType-PICKER = 70-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1300,6 +1444,8 @@ Picker view.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-PICKER_VIEW = 71--><!--Device-AccessibilityRoleType-PICKER_VIEW = 71-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PLUGIN_COMPONENT
@@ -1317,6 +1463,8 @@ Plugin component.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-PLUGIN_COMPONENT = 72--><!--Device-AccessibilityRoleType-PLUGIN_COMPONENT = 72-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1336,6 +1484,8 @@ Component used to draw a polygon.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-POLYGON = 73--><!--Device-AccessibilityRoleType-POLYGON = 73-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## POLYLINE
@@ -1353,6 +1503,8 @@ Component used to draw a polyline.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-POLYLINE = 74--><!--Device-AccessibilityRoleType-POLYLINE = 74-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1372,6 +1524,8 @@ Popup with a specific style.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-POPUP = 75--><!--Device-AccessibilityRoleType-POPUP = 75-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PROGRESS
@@ -1389,6 +1543,8 @@ progress component type
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-PROGRESS = 76--><!--Device-AccessibilityRoleType-PROGRESS = 76-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1408,6 +1564,8 @@ QR code.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-QRCODE = 77--><!--Device-AccessibilityRoleType-QRCODE = 77-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## RADIO
@@ -1425,6 +1583,8 @@ Radio button.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-RADIO = 78--><!--Device-AccessibilityRoleType-RADIO = 78-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1444,6 +1604,8 @@ Component for selecting a rating within a given range.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-RATING = 79--><!--Device-AccessibilityRoleType-RATING = 79-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## RECT
@@ -1461,6 +1623,8 @@ Component used to draw a rectangle.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-RECT = 80--><!--Device-AccessibilityRoleType-RECT = 80-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1480,6 +1644,8 @@ Pull-to-refresh container component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-REFRESH = 81--><!--Device-AccessibilityRoleType-REFRESH = 81-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## RELATIVE_CONTAINER
@@ -1497,6 +1663,8 @@ Relative layout component.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-RELATIVE_CONTAINER = 82--><!--Device-AccessibilityRoleType-RELATIVE_CONTAINER = 82-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1516,6 +1684,8 @@ Remote control window component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-REMOTE_WINDOW = 83--><!--Device-AccessibilityRoleType-REMOTE_WINDOW = 83-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## RICH_EDITOR
@@ -1533,6 +1703,8 @@ Component that supports rich text editing and interactive text editing.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-RICH_EDITOR = 84--><!--Device-AccessibilityRoleType-RICH_EDITOR = 84-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1552,6 +1724,8 @@ Rich text component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-RICH_TEXT = 85--><!--Device-AccessibilityRoleType-RICH_TEXT = 85-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ROLE_PAGER
@@ -1569,6 +1743,8 @@ Pagination component.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-ROLE_PAGER = 86--><!--Device-AccessibilityRoleType-ROLE_PAGER = 86-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1588,6 +1764,8 @@ Container that lays out child components horizontally.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-ROW = 87--><!--Device-AccessibilityRoleType-ROW = 87-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ROW_SPLIT
@@ -1605,6 +1783,8 @@ Horizontal layout of child components with vertical dividers.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-ROW_SPLIT = 88--><!--Device-AccessibilityRoleType-ROW_SPLIT = 88-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1624,6 +1804,8 @@ Scrollable container component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-SCROLL = 89--><!--Device-AccessibilityRoleType-SCROLL = 89-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SCROLL_BAR
@@ -1641,6 +1823,8 @@ Scrollbar.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-SCROLL_BAR = 90--><!--Device-AccessibilityRoleType-SCROLL_BAR = 90-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1660,6 +1844,8 @@ Search box component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-SEARCH = 91--><!--Device-AccessibilityRoleType-SEARCH = 91-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SEARCH_FIELD
@@ -1677,6 +1863,8 @@ Search box.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-SEARCH_FIELD = 92--><!--Device-AccessibilityRoleType-SEARCH_FIELD = 92-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1696,6 +1884,8 @@ Drop-down list component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-SELECT = 93--><!--Device-AccessibilityRoleType-SELECT = 93-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SHAPE
@@ -1713,6 +1903,8 @@ Parent component of the drawing components.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-SHAPE = 94--><!--Device-AccessibilityRoleType-SHAPE = 94-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1732,6 +1924,8 @@ Sidebar container that can show and hide the sidebar.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-SIDEBAR_CONTAINER = 95--><!--Device-AccessibilityRoleType-SIDEBAR_CONTAINER = 95-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SLIDER
@@ -1749,6 +1943,8 @@ slider component type
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-SLIDER = 96--><!--Device-AccessibilityRoleType-SLIDER = 96-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1768,6 +1964,8 @@ Component used to display inline text.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-SPAN = 97--><!--Device-AccessibilityRoleType-SPAN = 97-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## STACK
@@ -1785,6 +1983,8 @@ Stack container.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-STACK = 98--><!--Device-AccessibilityRoleType-STACK = 98-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1804,6 +2004,8 @@ Stepper component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-STEPPER = 99--><!--Device-AccessibilityRoleType-STEPPER = 99-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## STEPPER_ITEM
@@ -1821,6 +2023,8 @@ Page child component of the stepper component.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-STEPPER_ITEM = 100--><!--Device-AccessibilityRoleType-STEPPER_ITEM = 100-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1840,6 +2044,8 @@ Swiper view container.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-SWIPER = 101--><!--Device-AccessibilityRoleType-SWIPER = 101-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SWIPER_INDICATOR
@@ -1857,6 +2063,8 @@ Navigation indicator for the **Swiper** component.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-SWIPER_INDICATOR = 102--><!--Device-AccessibilityRoleType-SWIPER_INDICATOR = 102-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1876,6 +2084,8 @@ Switch.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-SWITCH = 103--><!--Device-AccessibilityRoleType-SWITCH = 103-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SYMBOL_GLYPH
@@ -1893,6 +2103,8 @@ Component for displaying a symbol glyph.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-SYMBOL_GLYPH = 104--><!--Device-AccessibilityRoleType-SYMBOL_GLYPH = 104-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1912,6 +2124,8 @@ Content view for a tab in the **Tabs** component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-TAB_CONTENT = 105--><!--Device-AccessibilityRoleType-TAB_CONTENT = 105-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TAB_BAR
@@ -1929,6 +2143,8 @@ Tab bar.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-TAB_BAR = 106--><!--Device-AccessibilityRoleType-TAB_BAR = 106-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1948,6 +2164,8 @@ Container that allows users to switch between content views through tabs.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-TABS = 107--><!--Device-AccessibilityRoleType-TABS = 107-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TEXT
@@ -1965,6 +2183,8 @@ Text.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-TEXT = 108--><!--Device-AccessibilityRoleType-TEXT = 108-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1984,6 +2204,8 @@ Text clock component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-TEXT_CLOCK = 109--><!--Device-AccessibilityRoleType-TEXT_CLOCK = 109-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TEXT_ENTRY
@@ -2001,6 +2223,8 @@ text entry component type
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-TEXT_ENTRY = 110--><!--Device-AccessibilityRoleType-TEXT_ENTRY = 110-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2020,6 +2244,8 @@ Text box component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-TEXT_INPUT = 111--><!--Device-AccessibilityRoleType-TEXT_INPUT = 111-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TEXT_PICKER
@@ -2037,6 +2263,8 @@ Text picker.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-TEXT_PICKER = 112--><!--Device-AccessibilityRoleType-TEXT_PICKER = 112-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2056,6 +2284,8 @@ Component that displays timing information and is controlled in text format.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-TEXT_TIMER = 113--><!--Device-AccessibilityRoleType-TEXT_TIMER = 113-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TEXT_AREA
@@ -2073,6 +2303,8 @@ Text area component.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-TEXT_AREA = 114--><!--Device-AccessibilityRoleType-TEXT_AREA = 114-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2092,6 +2324,8 @@ Text box.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-TEXT_FIELD = 115--><!--Device-AccessibilityRoleType-TEXT_FIELD = 115-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TIME_PICKER
@@ -2109,6 +2343,8 @@ Time picker.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-TIME_PICKER = 116--><!--Device-AccessibilityRoleType-TIME_PICKER = 116-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2128,6 +2364,8 @@ Title bar.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-TITLE_BAR = 117--><!--Device-AccessibilityRoleType-TITLE_BAR = 117-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TOGGLER
@@ -2145,6 +2383,8 @@ toggler component type
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-TOGGLER = 118--><!--Device-AccessibilityRoleType-TOGGLER = 118-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2164,6 +2404,8 @@ UI extension component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-UI_EXTENSION_COMPONENT = 119--><!--Device-AccessibilityRoleType-UI_EXTENSION_COMPONENT = 119-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## VIDEO
@@ -2181,6 +2423,8 @@ Component for playing video files and controlling playback.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-VIDEO = 120--><!--Device-AccessibilityRoleType-VIDEO = 120-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2200,6 +2444,8 @@ Waterfall layout container.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-WATER_FLOW = 121--><!--Device-AccessibilityRoleType-WATER_FLOW = 121-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## WEB
@@ -2217,6 +2463,8 @@ Component for loading web pages.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-WEB = 122--><!--Device-AccessibilityRoleType-WEB = 122-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2236,6 +2484,8 @@ Custom rendering component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
+<!--Device-AccessibilityRoleType-XCOMPONENT = 123--><!--Device-AccessibilityRoleType-XCOMPONENT = 123-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ROLE_NONE
@@ -2253,6 +2503,8 @@ Null.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-AccessibilityRoleType-ROLE_NONE = 124--><!--Device-AccessibilityRoleType-ROLE_NONE = 124-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

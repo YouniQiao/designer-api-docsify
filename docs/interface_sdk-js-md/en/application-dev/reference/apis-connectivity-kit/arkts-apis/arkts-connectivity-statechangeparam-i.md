@@ -8,6 +8,8 @@ Profile state change parameters.
 
 **Substitutes:** StateChangeParam
 
+<!--Device-bluetoothManager-interface StateChangeParam--><!--Device-bluetoothManager-interface StateChangeParam-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -32,6 +34,8 @@ The address of device
 
 **Substitutes:** deviceId
 
+<!--Device-StateChangeParam-deviceId: string--><!--Device-StateChangeParam-deviceId: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## state
@@ -49,6 +53,8 @@ Profile state value
 **Deprecated since:** 10
 
 **Substitutes:** state
+
+<!--Device-StateChangeParam-state: ProfileConnectionState--><!--Device-StateChangeParam-state: ProfileConnectionState-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

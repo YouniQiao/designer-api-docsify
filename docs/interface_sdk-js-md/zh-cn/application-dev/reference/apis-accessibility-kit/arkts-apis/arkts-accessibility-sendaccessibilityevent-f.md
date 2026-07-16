@@ -1,5 +1,11 @@
 # sendAccessibilityEvent
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+```
+
 ## sendAccessibilityEvent
 
 ```TypeScript
@@ -10,9 +16,11 @@ function sendAccessibilityEvent(event: EventInfo, callback: AsyncCallback<void>)
 
 **起始版本：** 9
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-accessibility-function sendAccessibilityEvent(event: EventInfo, callback: AsyncCallback<void>): void--><!--Device-accessibility-function sendAccessibilityEvent(event: EventInfo, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -20,8 +28,8 @@ function sendAccessibilityEvent(event: EventInfo, callback: AsyncCallback<void>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | EventInfo | 是 | 辅助事件对象。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，如果发送无障碍事件失败，则 AsyncCallback中err有数据返回。 |
+| event | [EventInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-eventinfo-i-sys.md) | 是 | 辅助事件对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，如果发送无障碍事件失败，则 AsyncCallback中err有数据返回。 |
 
 **错误码：**
 
@@ -123,9 +131,11 @@ function sendAccessibilityEvent(event: EventInfo): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-accessibility-function sendAccessibilityEvent(event: EventInfo): Promise<void>--><!--Device-accessibility-function sendAccessibilityEvent(event: EventInfo): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -133,13 +143,13 @@ function sendAccessibilityEvent(event: EventInfo): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | EventInfo | 是 | 无障碍事件对象。 |
+| event | [EventInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-eventinfo-i-sys.md) | 是 | 无障碍事件对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

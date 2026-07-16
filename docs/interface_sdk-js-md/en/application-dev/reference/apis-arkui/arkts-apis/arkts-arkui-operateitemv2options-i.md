@@ -4,6 +4,8 @@ Declare interface OperateItemV2Options
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export interface OperateItemV2Options--><!--Device-unnamed-export interface OperateItemV2Options-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Sets the arrow
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-OperateItemV2Options-arrow?: OperateIconV2--><!--Device-OperateItemV2Options-arrow?: OperateIconV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## button
@@ -45,6 +49,8 @@ Sets the button
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateItemV2Options-button?: OperateButtonV2--><!--Device-OperateItemV2Options-button?: OperateButtonV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +70,8 @@ Sets the checkBox
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-OperateItemV2Options-checkbox?: OperateCheckV2--><!--Device-OperateItemV2Options-checkbox?: OperateCheckV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## icon
@@ -81,6 +89,8 @@ Sets the icon.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateItemV2Options-icon?: OperateIconV2--><!--Device-OperateItemV2Options-icon?: OperateIconV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +110,8 @@ Sets the image
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-OperateItemV2Options-image?: ResourceStr--><!--Device-OperateItemV2Options-image?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## radio
@@ -117,6 +129,8 @@ Sets the radio
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateItemV2Options-radio?: OperateCheckV2--><!--Device-OperateItemV2Options-radio?: OperateCheckV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -136,6 +150,8 @@ Sets the subIcon
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-OperateItemV2Options-subIcon?: OperateIconV2--><!--Device-OperateItemV2Options-subIcon?: OperateIconV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## symbolStyle
@@ -153,6 +169,8 @@ Sets the symbolStyle
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateItemV2Options-symbolStyle?: SymbolGlyphModifier--><!--Device-OperateItemV2Options-symbolStyle?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -172,6 +190,8 @@ Sets the text
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-OperateItemV2Options-text?: ResourceStr--><!--Device-OperateItemV2Options-text?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## toggle
@@ -189,6 +209,8 @@ Sets the toggle
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateItemV2Options-toggle?: OperateCheckV2--><!--Device-OperateItemV2Options-toggle?: OperateCheckV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

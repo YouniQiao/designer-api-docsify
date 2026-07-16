@@ -1,12 +1,18 @@
 # AbilityLifecycleCallback
 
-[UIAbility](arkts-app-ability-uiability.md)从创建到销毁过程其生命周期是动态变化的。
-AbilityLifecycleCallback模块提供监听[UIAbility](arkts-app-ability-uiability.md)生命周期变化的能力，
-可用于统计每个UIAbility的运行时长、执行与UIAbility业务逻辑解耦的数据加载等场景。
+[UIAbility](arkts-app-ability-uiability.md)从创建到销毁过程其生命周期是动态变化的。AbilityLifecycleCallback模块提供监听[UIAbility](arkts-app-ability-uiability.md)生命周期变化的能力，可用于统计每个UIAbility的运行时长、执行与UIAbility业务逻辑解耦的数据加载等场景。
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class AbilityLifecycleCallback--><!--Device-unnamed-declare class AbilityLifecycleCallback-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+## 导入模块
+
+```TypeScript
+import { AbilityLifecycleCallback } from '@kit.AbilityKit';
+```
 
 ## onAbilityBackground
 
@@ -20,7 +26,9 @@ onAbilityBackground(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityLifecycleCallback-onAbilityBackground(ability: UIAbility): void--><!--Device-AbilityLifecycleCallback-onAbilityBackground(ability: UIAbility): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -28,7 +36,7 @@ onAbilityBackground(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | UIAbility | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
 **示例：**
 
@@ -46,7 +54,9 @@ onAbilityContinue(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityLifecycleCallback-onAbilityContinue(ability: UIAbility): void--><!--Device-AbilityLifecycleCallback-onAbilityContinue(ability: UIAbility): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -54,7 +64,7 @@ onAbilityContinue(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | UIAbility | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
 **示例：**
 
@@ -72,7 +82,9 @@ onAbilityCreate(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityLifecycleCallback-onAbilityCreate(ability: UIAbility): void--><!--Device-AbilityLifecycleCallback-onAbilityCreate(ability: UIAbility): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -80,7 +92,7 @@ onAbilityCreate(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | UIAbility | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
 **示例：**
 
@@ -98,7 +110,9 @@ onAbilityDestroy(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityLifecycleCallback-onAbilityDestroy(ability: UIAbility): void--><!--Device-AbilityLifecycleCallback-onAbilityDestroy(ability: UIAbility): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -106,7 +120,7 @@ onAbilityDestroy(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | UIAbility | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
 **示例：**
 
@@ -124,7 +138,9 @@ onAbilityForeground(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityLifecycleCallback-onAbilityForeground(ability: UIAbility): void--><!--Device-AbilityLifecycleCallback-onAbilityForeground(ability: UIAbility): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -132,7 +148,7 @@ onAbilityForeground(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | UIAbility | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
 **示例：**
 
@@ -150,7 +166,9 @@ onAbilitySaveState?(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityLifecycleCallback-onAbilitySaveState?(ability: UIAbility): void--><!--Device-AbilityLifecycleCallback-onAbilitySaveState?(ability: UIAbility): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -158,7 +176,7 @@ onAbilitySaveState?(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | UIAbility | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
 **示例：**
 
@@ -176,7 +194,9 @@ onAbilityWillBackground?(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityLifecycleCallback-onAbilityWillBackground?(ability: UIAbility): void--><!--Device-AbilityLifecycleCallback-onAbilityWillBackground?(ability: UIAbility): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -184,7 +204,7 @@ onAbilityWillBackground?(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | UIAbility | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
 **示例：**
 
@@ -202,7 +222,9 @@ onAbilityWillContinue?(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityLifecycleCallback-onAbilityWillContinue?(ability: UIAbility): void--><!--Device-AbilityLifecycleCallback-onAbilityWillContinue?(ability: UIAbility): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -210,7 +232,7 @@ onAbilityWillContinue?(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | UIAbility | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
 **示例：**
 
@@ -228,7 +250,9 @@ onAbilityWillCreate?(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityLifecycleCallback-onAbilityWillCreate?(ability: UIAbility): void--><!--Device-AbilityLifecycleCallback-onAbilityWillCreate?(ability: UIAbility): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -236,7 +260,7 @@ onAbilityWillCreate?(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | UIAbility | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
 **示例：**
 
@@ -254,7 +278,9 @@ onAbilityWillDestroy?(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityLifecycleCallback-onAbilityWillDestroy?(ability: UIAbility): void--><!--Device-AbilityLifecycleCallback-onAbilityWillDestroy?(ability: UIAbility): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -262,7 +288,7 @@ onAbilityWillDestroy?(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | UIAbility | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
 **示例：**
 
@@ -280,7 +306,9 @@ onAbilityWillForeground?(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityLifecycleCallback-onAbilityWillForeground?(ability: UIAbility): void--><!--Device-AbilityLifecycleCallback-onAbilityWillForeground?(ability: UIAbility): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -288,7 +316,7 @@ onAbilityWillForeground?(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | UIAbility | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
 **示例：**
 
@@ -306,7 +334,9 @@ onAbilityWillSaveState?(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityLifecycleCallback-onAbilityWillSaveState?(ability: UIAbility): void--><!--Device-AbilityLifecycleCallback-onAbilityWillSaveState?(ability: UIAbility): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -314,7 +344,7 @@ onAbilityWillSaveState?(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | UIAbility | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
 **示例：**
 
@@ -332,7 +362,9 @@ onNewWant?(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityLifecycleCallback-onNewWant?(ability: UIAbility): void--><!--Device-AbilityLifecycleCallback-onNewWant?(ability: UIAbility): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -340,7 +372,7 @@ onNewWant?(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | UIAbility | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
 **示例：**
 
@@ -358,7 +390,9 @@ onWillNewWant?(ability: UIAbility): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityLifecycleCallback-onWillNewWant?(ability: UIAbility): void--><!--Device-AbilityLifecycleCallback-onWillNewWant?(ability: UIAbility): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -366,7 +400,7 @@ onWillNewWant?(ability: UIAbility): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | UIAbility | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 
 **示例：**
 
@@ -384,7 +418,9 @@ onWindowStageActive(ability: UIAbility, windowStage: window.WindowStage): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityLifecycleCallback-onWindowStageActive(ability: UIAbility, windowStage: window.WindowStage): void--><!--Device-AbilityLifecycleCallback-onWindowStageActive(ability: UIAbility, windowStage: window.WindowStage): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -392,7 +428,7 @@ onWindowStageActive(ability: UIAbility, windowStage: window.WindowStage): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | UIAbility | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 | windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
 **示例：**
@@ -411,7 +447,9 @@ onWindowStageCreate(ability: UIAbility, windowStage: window.WindowStage): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityLifecycleCallback-onWindowStageCreate(ability: UIAbility, windowStage: window.WindowStage): void--><!--Device-AbilityLifecycleCallback-onWindowStageCreate(ability: UIAbility, windowStage: window.WindowStage): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -419,7 +457,7 @@ onWindowStageCreate(ability: UIAbility, windowStage: window.WindowStage): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | UIAbility | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 | windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
 **示例：**
@@ -438,7 +476,9 @@ onWindowStageDestroy(ability: UIAbility, windowStage: window.WindowStage): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityLifecycleCallback-onWindowStageDestroy(ability: UIAbility, windowStage: window.WindowStage): void--><!--Device-AbilityLifecycleCallback-onWindowStageDestroy(ability: UIAbility, windowStage: window.WindowStage): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -446,7 +486,7 @@ onWindowStageDestroy(ability: UIAbility, windowStage: window.WindowStage): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | UIAbility | 是 | 回调事件对应的UIAbility对象 |
+| ability | [UIAbility](arkts-ability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象 |
 | windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
 **示例：**
@@ -465,7 +505,9 @@ onWindowStageInactive(ability: UIAbility, windowStage: window.WindowStage): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityLifecycleCallback-onWindowStageInactive(ability: UIAbility, windowStage: window.WindowStage): void--><!--Device-AbilityLifecycleCallback-onWindowStageInactive(ability: UIAbility, windowStage: window.WindowStage): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -473,7 +515,7 @@ onWindowStageInactive(ability: UIAbility, windowStage: window.WindowStage): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | UIAbility | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 | windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
 **示例：**
@@ -492,7 +534,9 @@ onWindowStageRestore?(ability: UIAbility, windowStage: window.WindowStage): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityLifecycleCallback-onWindowStageRestore?(ability: UIAbility, windowStage: window.WindowStage): void--><!--Device-AbilityLifecycleCallback-onWindowStageRestore?(ability: UIAbility, windowStage: window.WindowStage): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -500,7 +544,7 @@ onWindowStageRestore?(ability: UIAbility, windowStage: window.WindowStage): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | UIAbility | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 | windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
 **示例：**
@@ -519,7 +563,9 @@ onWindowStageWillCreate?(ability: UIAbility, windowStage: window.WindowStage): v
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityLifecycleCallback-onWindowStageWillCreate?(ability: UIAbility, windowStage: window.WindowStage): void--><!--Device-AbilityLifecycleCallback-onWindowStageWillCreate?(ability: UIAbility, windowStage: window.WindowStage): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -527,7 +573,7 @@ onWindowStageWillCreate?(ability: UIAbility, windowStage: window.WindowStage): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | UIAbility | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 | windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
 **示例：**
@@ -546,7 +592,9 @@ onWindowStageWillDestroy?(ability: UIAbility, windowStage: window.WindowStage): 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityLifecycleCallback-onWindowStageWillDestroy?(ability: UIAbility, windowStage: window.WindowStage): void--><!--Device-AbilityLifecycleCallback-onWindowStageWillDestroy?(ability: UIAbility, windowStage: window.WindowStage): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -554,7 +602,7 @@ onWindowStageWillDestroy?(ability: UIAbility, windowStage: window.WindowStage): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | UIAbility | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 | windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
 **示例：**
@@ -573,7 +621,9 @@ onWindowStageWillRestore?(ability: UIAbility, windowStage: window.WindowStage): 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AbilityLifecycleCallback-onWindowStageWillRestore?(ability: UIAbility, windowStage: window.WindowStage): void--><!--Device-AbilityLifecycleCallback-onWindowStageWillRestore?(ability: UIAbility, windowStage: window.WindowStage): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -581,7 +631,7 @@ onWindowStageWillRestore?(ability: UIAbility, windowStage: window.WindowStage): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ability | UIAbility | 是 | 回调事件对应的UIAbility对象。 |
+| ability | [UIAbility](arkts-ability-uiability-c.md) | 是 | 回调事件对应的UIAbility对象。 |
 | windowStage | window.WindowStage | 是 | 回调事件对应的UIAbility主窗管理器。 |
 
 **示例：**

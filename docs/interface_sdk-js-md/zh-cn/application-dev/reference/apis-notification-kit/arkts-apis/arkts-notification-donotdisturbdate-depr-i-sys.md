@@ -1,14 +1,15 @@
 # DoNotDisturbDate（系统接口）
 
-> **说明：**
-> 从 API version 8开始支持，从API version 9开始废弃。建议使用
-[notificationManager.DoNotDisturbDate](arkts-notification-donotdisturbdate-i-sys.md)替代。
+> **说明：**  
+> 从 API version 8开始支持，从API version 9开始废弃。建议使用[notificationManager.DoNotDisturbDate](arkts-notification-donotdisturbdate-i-sys.md)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
 **替代接口：** DoNotDisturbDate
+
+<!--Device-notification-export interface DoNotDisturbDate--><!--Device-notification-export interface DoNotDisturbDate-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -30,6 +31,8 @@ begin: Date
 
 **替代接口：** begin
 
+<!--Device-DoNotDisturbDate-begin: Date--><!--Device-DoNotDisturbDate-begin: Date-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -50,6 +53,8 @@ end: Date
 
 **替代接口：** end
 
+<!--Device-DoNotDisturbDate-end: Date--><!--Device-DoNotDisturbDate-end: Date-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -69,6 +74,8 @@ type: DoNotDisturbType
 **废弃版本：** 9
 
 **替代接口：** type
+
+<!--Device-DoNotDisturbDate-type: DoNotDisturbType--><!--Device-DoNotDisturbDate-type: DoNotDisturbType-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

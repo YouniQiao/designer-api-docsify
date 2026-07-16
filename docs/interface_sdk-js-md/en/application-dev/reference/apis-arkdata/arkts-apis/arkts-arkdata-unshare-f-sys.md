@@ -16,10 +16,19 @@ function unshare(
     ): void
 ```
 
-Unshares data based on the specified shared resource ID and participants.
-This API uses an asynchronous callback to return the result.
+Unshares data based on the specified shared resource ID and participants.This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+<!--Device-sharing-function unshare(
+      sharingResource: string,
+      participants: Array<Participant>,
+      callback: AsyncCallback<Result<Array<Result<Participant>>>>
+    ): void--><!--Device-sharing-function unshare(
+      sharingResource: string,
+      participants: Array<Participant>,
+      callback: AsyncCallback<Result<Array<Result<Participant>>>>
+    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -30,8 +39,8 @@ This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sharingResource | string | Yes | Shared resource ID. |
-| participants | Array&lt;Participant&gt; | Yes | Participants of the share. |
-| callback | AsyncCallback&lt;Result&lt;Array&lt;Result&lt;Participant&gt;&gt;&gt;&gt; | Yes | Callback used to return the result. |
+| participants | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Participant> | Yes | Participants of the share. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Result<Array<Result<Participant>>>> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -80,10 +89,17 @@ function unshare(
     ): Promise<Result<Array<Result<Participant>>>>
 ```
 
-Unshares data based on the specified shared resource ID and participants.
-This API uses a promise to return the result.
+Unshares data based on the specified shared resource ID and participants.This API uses a promise to return the result.
 
 **Since:** 11
+
+<!--Device-sharing-function unshare(
+      sharingResource: string,
+      participants: Array<Participant>
+    ): Promise<Result<Array<Result<Participant>>>>--><!--Device-sharing-function unshare(
+      sharingResource: string,
+      participants: Array<Participant>
+    ): Promise<Result<Array<Result<Participant>>>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -94,13 +110,13 @@ This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sharingResource | string | Yes | Shared resource ID. |
-| participants | Array&lt;Participant&gt; | Yes | Participants of the share. |
+| participants | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Participant> | Yes | Participants of the share. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;Result&lt;Participant&gt;&gt;&gt;&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Result<Array<Result<Participant>>>> | Promise used to return the result. |
 
 **Error codes:**
 

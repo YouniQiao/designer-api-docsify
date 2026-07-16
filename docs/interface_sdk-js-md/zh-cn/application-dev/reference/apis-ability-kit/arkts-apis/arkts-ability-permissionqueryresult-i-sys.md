@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-abilityToolAccessCtrl-interface PermissionQueryResult--><!--Device-abilityToolAccessCtrl-interface PermissionQueryResult-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -19,6 +21,8 @@ needDialog: boolean
 **类型：** boolean
 
 **起始版本：** 26.0.0
+
+<!--Device-PermissionQueryResult-needDialog: boolean--><!--Device-PermissionQueryResult-needDialog: boolean-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -36,6 +40,8 @@ permissionResults: PermissionInfo[]
 
 **起始版本：** 26.0.0
 
+<!--Device-PermissionQueryResult-permissionResults: PermissionInfo[]--><!--Device-PermissionQueryResult-permissionResults: PermissionInfo[]-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +57,8 @@ ticket?: TicketInfo
 **类型：** TicketInfo
 
 **起始版本：** 26.0.0
+
+<!--Device-PermissionQueryResult-ticket?: TicketInfo--><!--Device-PermissionQueryResult-ticket?: TicketInfo-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 

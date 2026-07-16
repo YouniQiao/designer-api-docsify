@@ -20,6 +20,8 @@ Set the pin during pairing when the pin type is PIN_TYPE_ENTER_PIN_CODE.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function setDevicePinCode(deviceId: string, code: string, callback: AsyncCallback<void>): void--><!--Device-connection-function setDevicePinCode(deviceId: string, code: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -28,7 +30,7 @@ Set the pin during pairing when the pin type is PIN_TYPE_ENTER_PIN_CODE.
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
 | code | string | Yes | The pin code entered by the user. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of setDevicePinCode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of setDevicePinCode. |
 
 **Error codes:**
 
@@ -71,6 +73,8 @@ Set the pin during pairing when the pin type is PIN_TYPE_ENTER_PIN_CODE.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function setDevicePinCode(deviceId: string, code: string): Promise<void>--><!--Device-connection-function setDevicePinCode(deviceId: string, code: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -84,7 +88,7 @@ Set the pin during pairing when the pin type is PIN_TYPE_ENTER_PIN_CODE.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 

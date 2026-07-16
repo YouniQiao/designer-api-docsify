@@ -4,7 +4,15 @@
 
 **起始版本：** 20
 
+<!--Device-audio-interface CurrentOutputDeviceChangedEvent--><!--Device-audio-interface CurrentOutputDeviceChangedEvent-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## changeReason
 
@@ -17,6 +25,8 @@ changeReason: AudioStreamDeviceChangeReason
 **类型：** AudioStreamDeviceChangeReason
 
 **起始版本：** 20
+
+<!--Device-CurrentOutputDeviceChangedEvent-changeReason: AudioStreamDeviceChangeReason--><!--Device-CurrentOutputDeviceChangedEvent-changeReason: AudioStreamDeviceChangeReason-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -31,6 +41,8 @@ devices: AudioDeviceDescriptors
 **类型：** AudioDeviceDescriptors
 
 **起始版本：** 20
+
+<!--Device-CurrentOutputDeviceChangedEvent-devices: AudioDeviceDescriptors--><!--Device-CurrentOutputDeviceChangedEvent-devices: AudioDeviceDescriptors-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -48,6 +60,8 @@ preDevices?: AudioDeviceDescriptors
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CurrentOutputDeviceChangedEvent-preDevices?: AudioDeviceDescriptors--><!--Device-CurrentOutputDeviceChangedEvent-preDevices?: AudioDeviceDescriptors-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## recommendedAction
@@ -61,6 +75,8 @@ recommendedAction: OutputDeviceChangeRecommendedAction
 **类型：** OutputDeviceChangeRecommendedAction
 
 **起始版本：** 20
+
+<!--Device-CurrentOutputDeviceChangedEvent-recommendedAction: OutputDeviceChangeRecommendedAction--><!--Device-CurrentOutputDeviceChangedEvent-recommendedAction: OutputDeviceChangeRecommendedAction-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 

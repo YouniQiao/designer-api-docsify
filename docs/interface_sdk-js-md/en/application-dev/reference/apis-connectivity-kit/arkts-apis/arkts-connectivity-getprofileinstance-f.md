@@ -20,19 +20,25 @@ Obtains the instance of profile.
 
 **Deprecated since:** 10
 
+<!--Device-bluetoothManager-function getProfileInstance(
+    profileId: ProfileId
+  ): A2dpSourceProfile | HandsFreeAudioGatewayProfile | HidHostProfile | PanProfile--><!--Device-bluetoothManager-function getProfileInstance(
+    profileId: ProfileId
+  ): A2dpSourceProfile | HandsFreeAudioGatewayProfile | HidHostProfile | PanProfile-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profileId | ProfileId | Yes | The profile id.. |
+| profileId | [ProfileId](arkts-connectivity-profileid-e.md) | Yes | The profile id.. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| A2dpSourceProfile | Returns the instance ofprofile. |
+| [A2dpSourceProfile](arkts-connectivity-a2dpsourceprofile-i.md) | Returns the instance of profile. |
 
 **Error codes:**
 

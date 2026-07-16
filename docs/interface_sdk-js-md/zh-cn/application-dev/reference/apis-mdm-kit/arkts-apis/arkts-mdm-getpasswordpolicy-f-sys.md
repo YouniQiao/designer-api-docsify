@@ -1,5 +1,11 @@
 # getPasswordPolicy（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+```
+
 ## getPasswordPolicy
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getPasswordPolicy(): PasswordPolicy
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-securityManager-function getPasswordPolicy(): PasswordPolicy--><!--Device-securityManager-function getPasswordPolicy(): PasswordPolicy-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function getPasswordPolicy(): PasswordPolicy
 
 | 类型 | 说明 |
 | --- | --- |
-| PasswordPolicy | 设备锁屏口令策略。 |
+| [PasswordPolicy](arkts-mdm-passwordpolicy-i.md) | 设备锁屏口令策略。 |
 
 **错误码：**
 

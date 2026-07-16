@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-privacyManager-enum PermissionActiveStatus--><!--Device-privacyManager-enum PermissionActiveStatus-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -17,6 +19,8 @@ PERM_INACTIVE = 0
 表示未使用权限。
 
 **起始版本：** 9
+
+<!--Device-PermissionActiveStatus-PERM_INACTIVE = 0--><!--Device-PermissionActiveStatus-PERM_INACTIVE = 0-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -32,6 +36,8 @@ PERM_ACTIVE_IN_FOREGROUND = 1
 
 **起始版本：** 9
 
+<!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_FOREGROUND = 1--><!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_FOREGROUND = 1-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +51,8 @@ PERM_ACTIVE_IN_BACKGROUND = 2
 表示后台使用权限。
 
 **起始版本：** 9
+
+<!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_BACKGROUND = 2--><!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_BACKGROUND = 2-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

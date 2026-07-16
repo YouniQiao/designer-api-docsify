@@ -16,6 +16,8 @@ Obtains the path of the configuration file with the highest priority based on th
 
 **Since:** 11
 
+<!--Device-configPolicy-function getOneCfgFileSync(relPath: string, followMode?: FollowXMode, extra?: string): string--><!--Device-configPolicy-function getOneCfgFileSync(relPath: string, followMode?: FollowXMode, extra?: string): string-End-->
+
 **System capability:** SystemCapability.Customization.ConfigPolicy
 
 **System API:** This is a system API.
@@ -25,8 +27,8 @@ Obtains the path of the configuration file with the highest priority based on th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | relPath | string | Yes | Name of the configuration file. |
-| followMode | FollowXMode | No | Follow mode. The default value is[DEFAULT](arkts-basicservices-followxmode-e-sys.md#default) if this parameter is not set. |
-| extra | string | No | Custom follow rule. This parameter is valid only when **followMode** is set to[USER_DEFINED](arkts-basicservices-followxmode-e-sys.md#user_defined). |
+| followMode | [FollowXMode](arkts-basicservices-followxmode-e-sys.md) | No | Follow mode. The default value is [DEFAULT](arkts-basicservices-followxmode-e-sys.md#default) if this parameter is not set. |
+| extra | string | No | Custom follow rule. This parameter is valid only when **followMode** is set to [USER_DEFINED](arkts-basicservices-followxmode-e-sys.md#user_defined). |
 
 **Return value:**
 

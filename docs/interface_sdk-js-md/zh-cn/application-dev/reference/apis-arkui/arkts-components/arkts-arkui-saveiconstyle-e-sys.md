@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare enum SaveIconStyle--><!--Device-unnamed-declare enum SaveIconStyle-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## PICTURE
@@ -17,6 +19,8 @@ PICTURE = 2
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SaveIconStyle-PICTURE = 2--><!--Device-SaveIconStyle-PICTURE = 2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

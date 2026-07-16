@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface NavigationOptions--><!--Device-unnamed-declare interface NavigationOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## animated
@@ -24,7 +26,9 @@ true：支持转场动画；false：不支持转场动画。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NavigationOptions-animated?: boolean--><!--Device-NavigationOptions-animated?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,7 +48,9 @@ launchMode?: LaunchMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NavigationOptions-launchMode?: LaunchMode--><!--Device-NavigationOptions-launchMode?: LaunchMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

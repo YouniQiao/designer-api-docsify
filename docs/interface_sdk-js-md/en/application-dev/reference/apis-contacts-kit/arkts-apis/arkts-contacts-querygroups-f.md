@@ -22,13 +22,15 @@ Queries all groups of a contact. This API uses an asynchronous callback to retur
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryGroups(callback: AsyncCallback<Array<Group>>): void--><!--Device-contact-function queryGroups(callback: AsyncCallback<Array<Group>>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;Group&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation issuccessful, an array of queried groups is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Group>> | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of queried groups is returned. If the operation fails, an error code is returned. |
 
 **Example**
 
@@ -59,14 +61,16 @@ Queries all groups of a contact. This API uses an asynchronous callback to retur
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryGroups(context: Context, callback: AsyncCallback<Array<Group>>): void--><!--Device-contact-function queryGroups(context: Context, callback: AsyncCallback<Array<Group>>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| callback | AsyncCallback&lt;Array&lt;Group&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation issuccessful, an array of queried groups is returned. If the operation fails, an error code is returned. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Group>> | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of queried groups is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -103,8 +107,7 @@ contact.queryGroups(context, (err: BusinessError, data) => {
 function queryGroups(holder: Holder, callback: AsyncCallback<Array<Group>>): void
 ```
 
-Queries all groups of a contact based on the specified holder. This API uses an asynchronous callback to return the
-result.
+Queries all groups of a contact based on the specified holder. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -114,14 +117,16 @@ result.
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryGroups(holder: Holder, callback: AsyncCallback<Array<Group>>): void--><!--Device-contact-function queryGroups(holder: Holder, callback: AsyncCallback<Array<Group>>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| holder | Holder | Yes | Application that creates the contacts.If the passed parameter is empty, the systemcontact application is used by default. |
-| callback | AsyncCallback&lt;Array&lt;Group&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation issuccessful, an array of queried groups is returned. If the operation fails, an error code is returned. |
+| holder | [Holder](arkts-contacts-holder-c.md) | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Group>> | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of queried groups is returned. If the operation fails, an error code is returned. |
 
 **Example**
 
@@ -150,12 +155,13 @@ contact.queryGroups({
 function queryGroups(context: Context, holder: Holder, callback: AsyncCallback<Array<Group>>): void
 ```
 
-Queries all groups of a contact based on the specified holder. This API uses an asynchronous callback to return the
-result.
+Queries all groups of a contact based on the specified holder. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryGroups(context: Context, holder: Holder, callback: AsyncCallback<Array<Group>>): void--><!--Device-contact-function queryGroups(context: Context, holder: Holder, callback: AsyncCallback<Array<Group>>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -163,9 +169,9 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| holder | Holder | Yes | Application that creates the contacts.If the passed parameter is empty, the systemcontact application is used by default. |
-| callback | AsyncCallback&lt;Array&lt;Group&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation issuccessful, an array of queried groups is returned. If the operation fails, an error code is returned. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| holder | [Holder](arkts-contacts-holder-c.md) | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Group>> | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of queried groups is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -216,19 +222,21 @@ Queries all groups of a contact based on the specified holder. This API uses a p
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryGroups(holder?: Holder): Promise<Array<Group>>--><!--Device-contact-function queryGroups(holder?: Holder): Promise<Array<Group>>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| holder | Holder | No | Application information for a contact. If this parameter is not specified, the systemcontact application is used by default. |
+| holder | [Holder](arkts-contacts-holder-c.md) | No | Application information for a contact. If this parameter is not specified, the system contact application is used by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Group&gt;&gt; | Promise used to return the result, which is an array of groups. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Group>> | Promise used to return the result, which is an array of groups. |
 
 **Example**
 
@@ -259,20 +267,22 @@ Queries all groups of a contact based on the specified holder. This API uses a p
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryGroups(context: Context, holder?: Holder): Promise<Array<Group>>--><!--Device-contact-function queryGroups(context: Context, holder?: Holder): Promise<Array<Group>>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| holder | Holder | No | Application information for a contact. If this parameter is not specified, the systemcontact application is used by default. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| holder | [Holder](arkts-contacts-holder-c.md) | No | Application information for a contact. If this parameter is not specified, the system contact application is used by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Group&gt;&gt; | Promise used to return the result, which is an array of groups. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Group>> | Promise used to return the result, which is an array of groups. |
 
 **Error codes:**
 

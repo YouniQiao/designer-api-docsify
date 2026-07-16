@@ -18,6 +18,8 @@ Obtains the scroll direction of the mouse wheel. This API uses a promise to retu
 
 **Required permissions:** ohos.permission.INPUT_DEVICE_CONTROLLER
 
+<!--Device-pointer-function getMouseScrollDirection(): Promise<boolean>--><!--Device-pointer-function getMouseScrollDirection(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Obtains the scroll direction of the mouse wheel. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the mouse wheelscroll direction is the same as the finger direction, and the value **false** indicates that the mouse wheelscroll direction is opposite to the finger direction. The default value is **true**. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** indicates that the mouse wheel scroll direction is the same as the finger direction, and the value **false** indicates that the mouse wheel scroll direction is opposite to the finger direction. The default value is **true**. |
 
 **Error codes:**
 

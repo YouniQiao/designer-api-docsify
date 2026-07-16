@@ -6,6 +6,8 @@
 
 **废弃版本：** 23
 
+<!--Device-fileExtensionInfo-enum DeviceType--><!--Device-fileExtensionInfo-enum DeviceType-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ DEVICE_LOCAL_DISK = 1
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceType-DEVICE_LOCAL_DISK = 1--><!--Device-DeviceType-DEVICE_LOCAL_DISK = 1-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -42,6 +46,8 @@ DEVICE_SHARED_DISK = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceType-DEVICE_SHARED_DISK = 2--><!--Device-DeviceType-DEVICE_SHARED_DISK = 2-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -59,6 +65,8 @@ DEVICE_SHARED_TERMINAL = 3
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceType-DEVICE_SHARED_TERMINAL = 3--><!--Device-DeviceType-DEVICE_SHARED_TERMINAL = 3-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -78,6 +86,8 @@ DEVICE_NETWORK_NEIGHBORHOODS = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceType-DEVICE_NETWORK_NEIGHBORHOODS = 4--><!--Device-DeviceType-DEVICE_NETWORK_NEIGHBORHOODS = 4-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -95,6 +105,8 @@ MTP设备。
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceType-DEVICE_EXTERNAL_MTP = 5--><!--Device-DeviceType-DEVICE_EXTERNAL_MTP = 5-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -114,6 +126,8 @@ USB设备。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceType-DEVICE_EXTERNAL_USB = 6--><!--Device-DeviceType-DEVICE_EXTERNAL_USB = 6-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -131,6 +145,8 @@ DEVICE_EXTERNAL_CLOUD = 7
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceType-DEVICE_EXTERNAL_CLOUD = 7--><!--Device-DeviceType-DEVICE_EXTERNAL_CLOUD = 7-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

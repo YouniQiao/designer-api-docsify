@@ -16,6 +16,8 @@ Obtains the current mouse pointer size. This API uses an asynchronous callback t
 
 **Since:** 10
 
+<!--Device-pointer-function getPointerSize(callback: AsyncCallback<int>): void--><!--Device-pointer-function getPointerSize(callback: AsyncCallback<int>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Obtains the current mouse pointer size. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **number** is the obtained mouse pointer size (value range: [1-7]). Otherwise,**err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **number** is the obtained mouse pointer size (value range: [1-7]). Otherwise,**err** is an error object. |
 
 **Error codes:**
 
@@ -76,6 +78,8 @@ Obtains the current mouse pointer size. This API uses a promise to return the re
 
 **Since:** 10
 
+<!--Device-pointer-function getPointerSize(): Promise<int>--><!--Device-pointer-function getPointerSize(): Promise<int>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **System API:** This is a system API.
@@ -84,7 +88,7 @@ Obtains the current mouse pointer size. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the mouse pointer size. The value ranges from 1 to 7. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the mouse pointer size. The value ranges from 1 to 7. |
 
 **Error codes:**
 

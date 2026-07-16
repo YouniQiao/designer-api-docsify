@@ -18,6 +18,8 @@ Queries whether the process is in power saving mode. This API uses a promise to 
 
 **Required permissions:** ohos.permission.BACKGROUND_MANAGER_POWER_SAVE_MODE
 
+<!--Device-backgroundProcessManager-function isPowerSaveMode(pid: int): Promise<boolean>--><!--Device-backgroundProcessManager-function isPowerSaveMode(pid: int): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Resourceschedule.BackgroundProcessManager
 
 **Parameters:**
@@ -30,7 +32,7 @@ Queries whether the process is in power saving mode. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the query result. The value **true** means that the processis in power saving mode; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the query result. The value **true** means that the process is in power saving mode; the value **false** means the opposite. |
 
 **Error codes:**
 

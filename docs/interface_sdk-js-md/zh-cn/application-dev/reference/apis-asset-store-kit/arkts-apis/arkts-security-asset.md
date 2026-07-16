@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace asset--><!--Device-unnamed-declare namespace asset-End-->
+
 **系统能力：** SystemCapability.Security.Asset
+
+## 导入模块
+
+```TypeScript
+import { asset } from '@kit.AssetStoreKit';
+```
 
 ## 汇总
 

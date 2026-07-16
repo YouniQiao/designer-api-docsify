@@ -16,15 +16,15 @@ Sets the power saving mode for a process. This API uses a promise to return the 
 
 You can set to enter the power saving mode when:
 
-- The application is not focused, and there are no audio operations or UI updates.
-- The application cannot obtain the power lock through the system framework.
-- The application needs to perform time-consuming computing tasks, such as compression, decompression, and
-compilation, which are significantly restricted by CPU resources. (In this case, the power saving mode will be
-enabled forcibly.)
+- The application is not focused, and there are no audio operations or UI updates.  
+- The application cannot obtain the power lock through the system framework.  
+- The application needs to perform time-consuming computing tasks, such as compression, decompression, and compilation, which are significantly restricted by CPU resources. (In this case, the power saving mode will be enabled forcibly.)
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.BACKGROUND_MANAGER_POWER_SAVE_MODE
+
+<!--Device-backgroundProcessManager-function setPowerSaveMode(pid: int, powerSaveMode: PowerSaveMode): Promise<void>--><!--Device-backgroundProcessManager-function setPowerSaveMode(pid: int, powerSaveMode: PowerSaveMode): Promise<void>-End-->
 
 **System capability:** SystemCapability.Resourceschedule.BackgroundProcessManager
 
@@ -33,13 +33,13 @@ enabled forcibly.)
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pid | number | Yes | Process ID. |
-| powerSaveMode | PowerSaveMode | Yes | Power saving mode. |
+| powerSaveMode | [PowerSaveMode](arkts-backgroundtasks-powersavemode-e.md) | Yes | Power saving mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

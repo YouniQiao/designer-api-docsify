@@ -20,19 +20,21 @@ Checks whether local installation of enterprise applications is supported.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-systemManager-function getInstallLocalEnterpriseAppEnabled(admin: Want | null): boolean--><!--Device-systemManager-function getInstallLocalEnterpriseAppEnabled(admin: Want | null): boolean-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application.<br>Before API version 24, this API canbe called to check whether local installation of enterprise applications is supported. If the device hasmultiple MDM applications, you can pass **admin** to query the corresponding policies. Since API version 24,**admin** can be set to **null**. In this case, the policies that actually take effect on the device arereturned.<br>**Since:** 24 |
+| admin | Want \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application.<br>Before API version 24, this API can be called to check whether local installation of enterprise applications is supported. If the device has multiple MDM applications, you can pass **admin** to query the corresponding policies. Since API version 24,**admin** can be set to **null**. In this case, the policies that actually take effect on the device are returned.<br>**Since:** 24 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether local installation of enterprise applications is supported. The value **true**indicates that local installation is supported, and the value **false** indicates the opposite. |
+| boolean | Whether local installation of enterprise applications is supported. The value **true** indicates that local installation is supported, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

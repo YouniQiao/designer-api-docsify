@@ -6,5 +6,7 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface DirectionalLight extends Light--><!--Device-unnamed-export interface DirectionalLight extends Light-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

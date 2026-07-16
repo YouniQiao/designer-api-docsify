@@ -16,16 +16,13 @@ Sets the management policy for extensions from external sources.
 
 - DEFAULT:
 
-Default policy with no restrictions applied. Users can enable or disable **Run extensions from external sources**
-in **Settings** > **Privacy & security** > **Advanced option**.
+Default policy with no restrictions applied. Users can enable or disable **Run extensions from external sources** in **Settings** > **Privacy & security** > **Advanced option**.  
 - DISALLOW:
 
-Policy that disallows extensions from external sources to run. With this policy, currently running extensions can
-continue, but cannot be started after being closed. Users cannot enable **Run extensions from external sources**.
+Policy that disallows extensions from external sources to run. With this policy, currently running extensions can continue, but cannot be started after being closed. Users cannot enable **Run extensions from external sources**.  
 - FORCE_OPEN:
 
-Policy that forcibly enables extensions from external sources to run. Users cannot disable
-**Run extensions from external sources**.
+Policy that forcibly enables extensions from external sources to run. Users cannot disable **Run extensions from external sources**.
 
 **Since:** 22
 
@@ -33,13 +30,15 @@ Policy that forcibly enables extensions from external sources to run. Users cann
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-securityManager-function setExternalSourceExtensionsPolicy(admin: Want, policy: common.ManagedPolicy): void--><!--Device-securityManager-function setExternalSourceExtensionsPolicy(admin: Want, policy: common.ManagedPolicy): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | policy | common.ManagedPolicy | Yes | Management policy. |
 
 **Error codes:**

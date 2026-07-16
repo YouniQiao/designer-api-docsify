@@ -18,6 +18,8 @@ Queries state data of all bundles within a specified period identified by the st
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryBundleEvents(begin: long, end: long, callback: AsyncCallback<Array<BundleEvents>>): void--><!--Device-usageStatistics-function queryBundleEvents(begin: long, end: long, callback: AsyncCallback<Array<BundleEvents>>): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Queries state data of all bundles within a specified period identified by the st
 | --- | --- | --- | --- |
 | begin | number | Yes | Indicates the start time of the query period, in milliseconds.<br> Unit:ms |
 | end | number | Yes | Indicates the end time of the query period, in milliseconds.<br> Unit:ms |
-| callback | AsyncCallback&lt;Array&lt;BundleEvents&gt;&gt; | Yes | Callback used to return the result.If the query is successful, **err** is **undefined**, and data is the list of {@link BundleEvents} objectscontaining the state data of all bundles. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<BundleEvents>> | Yes | Callback used to return the result.If the query is successful, **err** is **undefined**, and data is the list of {@link BundleEvents} objects containing the state data of all bundles. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -78,6 +80,8 @@ Queries state data of all bundles within a specified period identified by the st
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryBundleEvents(begin: long, end: long): Promise<Array<BundleEvents>>--><!--Device-usageStatistics-function queryBundleEvents(begin: long, end: long): Promise<Array<BundleEvents>>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -93,7 +97,7 @@ Queries state data of all bundles within a specified period identified by the st
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleEvents&gt;&gt; | the promise returned by queryBundleEvents.the list of {@link BundleEvents} objects containing the state data of all bundles. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<BundleEvents>> | the promise returned by queryBundleEvents.the list of {@link BundleEvents} objects containing the state data of all bundles. |
 
 **Error codes:**
 
@@ -143,6 +147,8 @@ Queries state data of all bundles within a specified period identified by the st
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-usageStatistics-function queryBundleEvents(begin: long, end: long, maxNum: int): Promise<Array<BundleEvents>>--><!--Device-usageStatistics-function queryBundleEvents(begin: long, end: long, maxNum: int): Promise<Array<BundleEvents>>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -159,7 +165,7 @@ Queries state data of all bundles within a specified period identified by the st
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleEvents&gt;&gt; | the promise returned by queryBundleEvents.the list of {@link BundleEvents} objects containing the state data of all bundles. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<BundleEvents>> | the promise returned by queryBundleEvents.the list of {@link BundleEvents} objects containing the state data of all bundles. |
 
 **Error codes:**
 
@@ -173,7 +179,7 @@ Queries state data of all bundles within a specified period identified by the st
 | [10000004](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000004-ipc-failure) | Failed to access the device usage service. |
 | [10000006](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) | Failed to get the application information. |
 | [10000007](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000007-time-operation-failure) | Failed to get the system time. |
-| [10000008](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000008-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are leftunspecified;<br> 2. Incorrect parameters types; 3. Parameter verification failed. |
+| [10000008](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000008-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameters types; 3. Parameter verification failed. |
 
 **Example**
 

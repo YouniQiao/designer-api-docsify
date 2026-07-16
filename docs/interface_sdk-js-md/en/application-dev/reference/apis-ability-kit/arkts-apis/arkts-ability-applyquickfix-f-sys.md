@@ -18,6 +18,8 @@ Applies a quick fix patch. This API uses an asynchronous callback to return the 
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 
+<!--Device-quickFixManager-function applyQuickFix(hapModuleQuickFixFiles: Array<string>, callback: AsyncCallback<void>): void--><!--Device-quickFixManager-function applyQuickFix(hapModuleQuickFixFiles: Array<string>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Applies a quick fix patch. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hapModuleQuickFixFiles | Array&lt;string&gt; | Yes | Quick fix patch files, each of which must contain a valid file path. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the quick fix patch is installed,**err** is **undefined**. Otherwise, **err** is an error object. |
+| hapModuleQuickFixFiles | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Quick fix patch files, each of which must contain a valid file path. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the quick fix patch is installed,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -72,6 +74,8 @@ Applies a quick fix patch. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 
+<!--Device-quickFixManager-function applyQuickFix(hapModuleQuickFixFiles: Array<string>): Promise<void>--><!--Device-quickFixManager-function applyQuickFix(hapModuleQuickFixFiles: Array<string>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
 
 **System API:** This is a system API.
@@ -80,13 +84,13 @@ Applies a quick fix patch. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hapModuleQuickFixFiles | Array&lt;string&gt; | Yes | Quick fix patch files, each of which must contain a valid file path. |
+| hapModuleQuickFixFiles | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Quick fix patch files, each of which must contain a valid file path. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -18,14 +18,16 @@ Enables or disables airplane mode.
 
 **Deprecated since:** 26.0.0
 
+<!--Device-settings-function enableAirplaneMode(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-settings-function enableAirplaneMode(enable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Specifies whether to enable airplane mode. The value {@code true} means to enableairplane mode, and {@code false} means to disable airplane mode. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of enableAirplaneMode result. |
+| enable | boolean | Yes | Specifies whether to enable airplane mode. The value {@code true} means to enable airplane mode, and {@code false} means to disable airplane mode. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of enableAirplaneMode result. |
 
 **Example**
 
@@ -54,19 +56,21 @@ Enables or disables airplane mode.
 
 **Deprecated since:** 26.0.0
 
+<!--Device-settings-function enableAirplaneMode(enable: boolean): Promise<void>--><!--Device-settings-function enableAirplaneMode(enable: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Specifies whether to enable airplane mode. The value {@code true} means to enableairplane mode, and {@code false} means to disable airplane mode. |
+| enable | boolean | Yes | Specifies whether to enable airplane mode. The value {@code true} means to enable airplane mode, and {@code false} means to disable airplane mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Return Promise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Return Promise. |
 
 **Example**
 

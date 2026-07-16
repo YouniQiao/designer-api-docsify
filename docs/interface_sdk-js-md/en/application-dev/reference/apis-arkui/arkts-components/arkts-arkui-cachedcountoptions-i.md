@@ -4,6 +4,8 @@ Describes the configuration options for child components to be preloaded.
 
 **Since:** 24
 
+<!--Device-unnamed-declare interface CachedCountOptions--><!--Device-unnamed-declare interface CachedCountOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## independent
@@ -12,13 +14,11 @@ Describes the configuration options for child components to be preloaded.
 independent?: boolean
 ```
 
-Whether to calculate [cachedCount](SwiperAttribute#cachedCount(count: number, options: CachedCountOptions))
-by group.
+Whether to calculate [cachedCount](SwiperAttribute#cachedCount(count: number, options: CachedCountOptions))by group.
 
 **true**: **cachedCount** is calculated based on the actual number of child components, not by group.
 
-**false**: If **displayCount.swipeByGroup=true**, **cachedCount** is calculated by group. Otherwise, it is
-calculated based on the actual number of child components.
+**false**: If **displayCount.swipeByGroup=true**, **cachedCount** is calculated by group. Otherwise, it is calculated based on the actual number of child components.
 
 Default value: **false**.
 
@@ -33,6 +33,8 @@ Default value: **false**.
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
+
+<!--Device-CachedCountOptions-independent?: boolean--><!--Device-CachedCountOptions-independent?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,6 +63,8 @@ Default value: **false**.
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
+
+<!--Device-CachedCountOptions-isShown?: boolean--><!--Device-CachedCountOptions-isShown?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

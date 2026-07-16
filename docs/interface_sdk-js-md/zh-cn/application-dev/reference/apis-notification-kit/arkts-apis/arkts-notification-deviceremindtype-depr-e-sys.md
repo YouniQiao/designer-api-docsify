@@ -1,14 +1,15 @@
 # DeviceRemindType（系统接口）
 
-> **说明：**
-> 从 API version 8开始支持，从API version 9开始废弃。建议使用
-[notificationManager.DeviceRemindType](js-apis-notificationManager-sys.md#deviceremindtype)替代。
+> **说明：**  
+> 从 API version 8开始支持，从API version 9开始废弃。建议使用[notificationManager.DeviceRemindType](js-apis-notificationManager-sys.md#deviceremindtype)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
 **替代接口：** DeviceRemindType
+
+<!--Device-notification-export enum DeviceRemindType--><!--Device-notification-export enum DeviceRemindType-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -28,6 +29,8 @@ IDLE_DONOT_REMIND = 0
 
 **替代接口：** IDLE_DONOT_REMIND
 
+<!--Device-DeviceRemindType-IDLE_DONOT_REMIND = 0--><!--Device-DeviceRemindType-IDLE_DONOT_REMIND = 0-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +48,8 @@ IDLE_REMIND = 1
 **废弃版本：** 9
 
 **替代接口：** IDLE_REMIND
+
+<!--Device-DeviceRemindType-IDLE_REMIND = 1--><!--Device-DeviceRemindType-IDLE_REMIND = 1-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -64,6 +69,8 @@ ACTIVE_DONOT_REMIND = 2
 
 **替代接口：** ACTIVE_DONOT_REMIND
 
+<!--Device-DeviceRemindType-ACTIVE_DONOT_REMIND = 2--><!--Device-DeviceRemindType-ACTIVE_DONOT_REMIND = 2-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -81,6 +88,8 @@ ACTIVE_REMIND = 3
 **废弃版本：** 9
 
 **替代接口：** ACTIVE_REMIND
+
+<!--Device-DeviceRemindType-ACTIVE_REMIND = 3--><!--Device-DeviceRemindType-ACTIVE_REMIND = 3-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

@@ -18,13 +18,15 @@ Obtains **SystemPasteboard** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-pasteboard-function getSystemPasteboard(): SystemPasteboard--><!--Device-pasteboard-function getSystemPasteboard(): SystemPasteboard-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SystemPasteboard | **SystemPasteboard** object. |
+| [SystemPasteboard](arkts-basicservices-systempasteboard-i.md) | **SystemPasteboard** object. |
 
 **Example**
 

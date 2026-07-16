@@ -8,6 +8,8 @@ Defines the Web controller.
 
 **替代接口：** WebviewController
 
+<!--Device-unnamed-declare class WebController--><!--Device-unnamed-declare class WebController-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## accessBackward
@@ -23,6 +25,8 @@ Checks whether the web page can go back.
 **废弃版本：** 9
 
 **替代接口：** accessBackward
+
+<!--Device-WebController-accessBackward(): boolean--><!--Device-WebController-accessBackward(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -46,6 +50,8 @@ Checks whether the web page can go forward.
 
 **替代接口：** accessForward
 
+<!--Device-WebController-accessForward(): boolean--><!--Device-WebController-accessForward(): boolean-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -67,6 +73,8 @@ Checks whether the web page can go back or forward the given number of steps.
 **废弃版本：** 9
 
 **替代接口：** accessStep
+
+<!--Device-WebController-accessStep(step: number): boolean--><!--Device-WebController-accessStep(step: number): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -96,6 +104,8 @@ Goes back in the history of the web page.
 
 **替代接口：** backward
 
+<!--Device-WebController-backward()--><!--Device-WebController-backward()-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## clearHistory
@@ -111,6 +121,8 @@ Clears the history in the Web.
 **废弃版本：** 9
 
 **替代接口：** clearHistory
+
+<!--Device-WebController-clearHistory(): void--><!--Device-WebController-clearHistory(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -128,6 +140,8 @@ Constructor.
 
 **替代接口：** constructor
 
+<!--Device-WebController-constructor()--><!--Device-WebController-constructor()-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## deleteJavaScriptRegister
@@ -143,6 +157,8 @@ Deletes a registered JavaScript object with given name.
 **废弃版本：** 9
 
 **替代接口：** deleteJavaScriptRegister
+
+<!--Device-WebController-deleteJavaScriptRegister(name: string)--><!--Device-WebController-deleteJavaScriptRegister(name: string)-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -166,6 +182,8 @@ Goes forward in the history of the web page.
 
 **替代接口：** forward
 
+<!--Device-WebController-forward()--><!--Device-WebController-forward()-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## getCookieManager
@@ -182,13 +200,15 @@ Gets network cookie manager
 
 **替代接口：** WebCookieManager
 
+<!--Device-WebController-getCookieManager(): WebCookie--><!--Device-WebController-getCookieManager(): WebCookie-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| WebCookie | @syscap SystemCapability.Web.Webview.Core |
+| [WebCookie](arkts-arkweb-webcookie-c.md) | @syscap SystemCapability.Web.Webview.Core |
 
 ## getHitTest
 
@@ -204,13 +224,15 @@ getHitTest(): HitTestType
 
 **替代接口：** getHitTest
 
+<!--Device-WebController-getHitTest(): HitTestType--><!--Device-WebController-getHitTest(): HitTestType-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| HitTestType | 点击测试类型。 |
+| [HitTestType](arkts-arkweb-hittesttype-e.md) | 点击测试类型。 |
 
 ## loadData
 
@@ -225,6 +247,8 @@ Loads the data or URL.
 **废弃版本：** 9
 
 **替代接口：** loadData
+
+<!--Device-WebController-loadData(options: { data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string })--><!--Device-WebController-loadData(options: { data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string })-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -248,13 +272,15 @@ Loads the given URL.
 
 **替代接口：** loadUrl
 
+<!--Device-WebController-loadUrl(options: { url: string | Resource, headers?: Array<Header> })--><!--Device-WebController-loadUrl(options: { url: string | Resource, headers?: Array<Header> })-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | { url: string \| Resource, headers?: Array&lt;Header&gt; } | 是 | The options with the URL and other information. |
+| options | { url: string \| Resource, headers?: Array<Header> } | 是 | The options with the URL and other information. |
 
 ## onActive
 
@@ -262,14 +288,15 @@ Loads the given URL.
 onActive(): void
 ```
 
-Let the Web active.
-It is no longer maintained since API version 9, and it is recommended to use {@link onActive} instead.
+Let the Web active.It is no longer maintained since API version 9, and it is recommended to use {@link onActive} instead.
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
 **替代接口：** onActive
+
+<!--Device-WebController-onActive(): void--><!--Device-WebController-onActive(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -279,14 +306,15 @@ It is no longer maintained since API version 9, and it is recommended to use {@l
 onInactive(): void
 ```
 
-Let the Web inactive.
-It is no longer maintained since API version 9, and it is recommended to use {@link onInactive} instead.
+Let the Web inactive.It is no longer maintained since API version 9, and it is recommended to use {@link onInactive} instead.
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
 **替代接口：** onInactive
+
+<!--Device-WebController-onInactive(): void--><!--Device-WebController-onInactive(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -304,6 +332,8 @@ refreshes the current URL.
 
 **替代接口：** refresh
 
+<!--Device-WebController-refresh()--><!--Device-WebController-refresh()-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## registerJavaScriptProxy
@@ -320,13 +350,15 @@ Registers the JavaScript object and method list.
 
 **替代接口：** registerJavaScriptProxy
 
+<!--Device-WebController-registerJavaScriptProxy(options: { object: object, name: string, methodList: Array<string> })--><!--Device-WebController-registerJavaScriptProxy(options: { object: object, name: string, methodList: Array<string> })-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | { object: object, name: string, methodList: Array&lt;string&gt; } | 是 | The option with the JavaScript object and method list. |
+| options | { object: object, name: string, methodList: Array<string> } | 是 | The option with the JavaScript object and method list. |
 
 ## requestFocus
 
@@ -342,6 +374,8 @@ Gets the request focus.
 
 **替代接口：** requestFocus
 
+<!--Device-WebController-requestFocus()--><!--Device-WebController-requestFocus()-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## runJavaScript
@@ -350,14 +384,7 @@ Gets the request focus.
 runJavaScript(options: { script: string, callback?: (result: string) => void })
 ```
 
-Asynchronously execute JavaScript in the context of the currently displayed page.
-The result of the script execution will be returned through an asynchronous callback.
-This method must be used on the UI thread, and the callback will also be invoked on the UI thread.
-<p><strong>API Note</strong>:<br>
-The state of JavaScript is no longer persisted across navigations like loadUrl.
-For example, global variables and functions defined before calling loadUrl will not exist in the loaded page.
-It is recommended that applications use registerJavaScriptProxy to ensure that the JavaScript state can be persisted across page navigations.
-<p>
+Asynchronously execute JavaScript in the context of the currently displayed page.The result of the script execution will be returned through an asynchronous callback.This method must be used on the UI thread, and the callback will also be invoked on the UI thread.<p><strong>API Note</strong>:<br>The state of JavaScript is no longer persisted across navigations like loadUrl.For example, global variables and functions defined before calling loadUrl will not exist in the loaded page.It is recommended that applications use registerJavaScriptProxy to ensure that the JavaScript state can be persisted across page navigations.<p>
 
 **起始版本：** 8
 
@@ -365,13 +392,15 @@ It is recommended that applications use registerJavaScriptProxy to ensure that t
 
 **替代接口：** runJavaScript
 
+<!--Device-WebController-runJavaScript(options: { script: string, callback?: (result: string) => void })--><!--Device-WebController-runJavaScript(options: { script: string, callback?: (result: string) => void })-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | { script: string, callback?: (result: string) =&gt; void } | 是 | The options with a piece of code and a callback. |
+| options | { script: string, callback?: (result: string) => void } | 是 | The options with a piece of code and a callback. |
 
 ## stop
 
@@ -386,6 +415,8 @@ Stops the current load.
 **废弃版本：** 9
 
 **替代接口：** stop
+
+<!--Device-WebController-stop()--><!--Device-WebController-stop()-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -402,6 +433,8 @@ zoom(factor: number): void
 **废弃版本：** 9
 
 **替代接口：** zoom
+
+<!--Device-WebController-zoom(factor: number): void--><!--Device-WebController-zoom(factor: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

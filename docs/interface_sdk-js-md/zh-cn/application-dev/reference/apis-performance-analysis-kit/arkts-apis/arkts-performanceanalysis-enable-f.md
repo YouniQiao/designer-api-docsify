@@ -1,5 +1,11 @@
 # enable
 
+## 导入模块
+
+```TypeScript
+import { jsLeakWatcher } from '@kit.PerformanceAnalysisKit';
+```
+
 ## enable
 
 ```TypeScript
@@ -9,6 +15,8 @@ function enable(isEnable: boolean): void
 ʹ��ArkTS����й©��⣬Ĭ�Ϲرա���������ռ�й©��Ϣ�������������ܿ�����
 
 **起始版本：** 12
+
+<!--Device-jsLeakWatcher-function enable(isEnable: boolean): void--><!--Device-jsLeakWatcher-function enable(isEnable: boolean): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 

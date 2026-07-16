@@ -18,19 +18,21 @@ Obtains the limits of the float view based on the passed template type. The unit
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-floatView-function getFloatViewLimits(templateType: FloatViewTemplateType): FloatViewLimits--><!--Device-floatView-function getFloatViewLimits(templateType: FloatViewTemplateType): FloatViewLimits-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templateType | FloatViewTemplateType | Yes | Template type of the float view. |
+| templateType | [FloatViewTemplateType](arkts-arkui-floatviewtemplatetype-e.md) | Yes | Template type of the float view. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| FloatViewLimits | Limits of the float view, including the maximum size, minimum size, and aspect ratio. |
+| [FloatViewLimits](arkts-arkui-floatviewlimits-i.md) | Limits of the float view, including the maximum size, minimum size, and aspect ratio. |
 
 **Error codes:**
 

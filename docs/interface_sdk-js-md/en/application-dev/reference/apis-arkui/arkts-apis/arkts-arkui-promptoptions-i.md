@@ -4,6 +4,8 @@ Configuration parameter of ExceptionPrompt.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface PromptOptions--><!--Device-unnamed-export interface PromptOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Right icon button text of PromptOptions.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PromptOptions-actionText?: ResourceStr--><!--Device-PromptOptions-actionText?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## icon
@@ -45,6 +49,8 @@ Icon of PromptOptions.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PromptOptions-icon?: ResourceStr--><!--Device-PromptOptions-icon?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +70,8 @@ Control concealment of PromptOptions.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PromptOptions-isShown?: boolean--><!--Device-PromptOptions-isShown?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## marginTop
@@ -81,6 +89,8 @@ Distance from the top of PromptOptions.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PromptOptions-marginTop: Dimension--><!--Device-PromptOptions-marginTop: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +110,8 @@ Margin Type of ExceptionPrompt.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PromptOptions-marginType: MarginType--><!--Device-PromptOptions-marginType: MarginType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## symbolStyle
@@ -118,6 +130,8 @@ SymbolGlyphModifier of PromptOptions.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-PromptOptions-symbolStyle?: SymbolGlyphModifier--><!--Device-PromptOptions-symbolStyle?: SymbolGlyphModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## tip
@@ -135,6 +149,8 @@ Tip text of PromptOptions.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PromptOptions-tip?: ResourceStr--><!--Device-PromptOptions-tip?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

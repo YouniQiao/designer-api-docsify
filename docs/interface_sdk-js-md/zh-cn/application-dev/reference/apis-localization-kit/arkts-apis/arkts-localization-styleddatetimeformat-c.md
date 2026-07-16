@@ -4,7 +4,15 @@
 
 **起始版本：** 23
 
+<!--Device-i18n-export class StyledDateTimeFormat--><!--Device-i18n-export class StyledDateTimeFormat-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
 
 ## constructor
 
@@ -17,7 +25,11 @@ constructor(dateTimeFormat: Intl.DateTimeFormat | SimpleDateTimeFormat,
 
 **起始版本：** 23
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-StyledDateTimeFormat-constructor(dateTimeFormat: Intl.DateTimeFormat | SimpleDateTimeFormat,
+        options?: StyledDateTimeFormatOptions)--><!--Device-StyledDateTimeFormat-constructor(dateTimeFormat: Intl.DateTimeFormat | SimpleDateTimeFormat,
+        options?: StyledDateTimeFormatOptions)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -26,7 +38,7 @@ constructor(dateTimeFormat: Intl.DateTimeFormat | SimpleDateTimeFormat,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | dateTimeFormat | Intl.DateTimeFormat \| SimpleDateTimeFormat | 是 | 用于格式化时间日期的对象。 |
-| options | StyledDateTimeFormatOptions | 否 |  |
+| options | [StyledDateTimeFormatOptions](arkts-localization-styleddatetimeformatoptions-i.md) | 否 |  |
 
 **示例：**
 
@@ -76,7 +88,9 @@ format(date: Date): StyledString
 
 **起始版本：** 23
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-StyledDateTimeFormat-format(date: Date): StyledString--><!--Device-StyledDateTimeFormat-format(date: Date): StyledString-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -90,7 +104,7 @@ format(date: Date): StyledString
 
 | 类型 | 说明 |
 | --- | --- |
-| StyledString | 格式化后的富文本对象。 |
+| [StyledString](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-c.md) | 格式化后的富文本对象。 |
 
 **示例：**
 

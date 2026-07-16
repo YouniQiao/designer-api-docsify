@@ -4,6 +4,8 @@ The WrappedBuilder object is also a template class.
 
 **Since:** 12
 
+<!--Device-unnamed-declare class WrappedBuilder<Args extends Object[]>--><!--Device-unnamed-declare class WrappedBuilder<Args extends Object[]>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -18,13 +20,15 @@ constructor(builder: (...args: Args) => void)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WrappedBuilder-constructor(builder: (...args: Args) => void)--><!--Device-WrappedBuilder-constructor(builder: (...args: Args) => void)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | (...args: Args) =&gt; void | Yes |  |
+| builder | (...args: Args) => void | Yes |  |
 
 ## builder
 
@@ -41,6 +45,8 @@ global @Builder decorated function.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WrappedBuilder-builder: (...args: Args) => void--><!--Device-WrappedBuilder-builder: (...args: Args) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -12,12 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAllApplicationInfo(appFlags: number, callback: AsyncCallback<Array<ApplicationInfo>>): void
 ```
 
-Obtains all the application information in the system based on the given application flags. This API uses an
-asynchronous callback to return the result.
+Obtains all the application information in the system based on the given application flags. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_INSTALLED_BUNDLE_LIST
+
+<!--Device-bundleManager-function getAllApplicationInfo(appFlags: int, callback: AsyncCallback<Array<ApplicationInfo>>): void--><!--Device-bundleManager-function getAllApplicationInfo(appFlags: int, callback: AsyncCallback<Array<ApplicationInfo>>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -28,7 +29,7 @@ asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appFlags | number | Yes | Type of the application information to obtain. |
-| callback | AsyncCallback&lt;Array&lt;ApplicationInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used toreturn the result. If the operation is successful, **err** is **null** and **data** is the array of applicationinformation obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<ApplicationInfo>> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of application information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -70,12 +71,15 @@ function getAllApplicationInfo(appFlags: number,
     userId: number, callback: AsyncCallback<Array<ApplicationInfo>>): void
 ```
 
-Obtains all the application information in the system based on the given application flags and user ID. This API
-uses an asynchronous callback to return the result.
+Obtains all the application information in the system based on the given application flags and user ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_INSTALLED_BUNDLE_LIST
+
+<!--Device-bundleManager-function getAllApplicationInfo(appFlags: int,
+    userId: int, callback: AsyncCallback<Array<ApplicationInfo>>): void--><!--Device-bundleManager-function getAllApplicationInfo(appFlags: int,
+    userId: int, callback: AsyncCallback<Array<ApplicationInfo>>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -86,8 +90,8 @@ uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appFlags | number | Yes | Type of the application information to obtain. |
-| userId | number | Yes | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). |
-| callback | AsyncCallback&lt;Array&lt;ApplicationInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used toreturn the result. If the operation is successful, **err** is **null** and **data** is the array of applicationinformation obtained. Otherwise, **err** is an error object. |
+| userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<ApplicationInfo>> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of application information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -130,12 +134,13 @@ try {
 function getAllApplicationInfo(appFlags: number, userId?: number): Promise<Array<ApplicationInfo>>
 ```
 
-Obtains all the application information in the system based on the given application flags and user ID. This API
-uses a promise to return the result.
+Obtains all the application information in the system based on the given application flags and user ID. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_INSTALLED_BUNDLE_LIST
+
+<!--Device-bundleManager-function getAllApplicationInfo(appFlags: int, userId?: int): Promise<Array<ApplicationInfo>>--><!--Device-bundleManager-function getAllApplicationInfo(appFlags: int, userId?: int): Promise<Array<ApplicationInfo>>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -146,13 +151,13 @@ uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appFlags | number | Yes | Type of the application information to obtain. |
-| userId | number | No | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ApplicationInfo&gt;&gt; | Promise used to return the array of application information obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ApplicationInfo>> | Promise used to return the array of application information obtained. |
 
 **Error codes:**
 

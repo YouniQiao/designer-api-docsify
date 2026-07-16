@@ -1,10 +1,10 @@
 # Configuration
 
-The module defines the environment variables for the application runtime, including language, dark/light color mode,
-screen orientation, and font size. You can subscribe to these environment variables to adapt to different user
-preferences and enhance the interaction experience.
+The module defines the environment variables for the application runtime, including language, dark/light color mode,screen orientation, and font size. You can subscribe to these environment variables to adapt to different user preferences and enhance the interaction experience.
 
 **Since:** 9
+
+<!--Device-unnamed-export interface Configuration--><!--Device-unnamed-export interface Configuration-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -22,14 +22,12 @@ colorMode?: ConfigurationConstant.ColorMode
 
 Dark/Light color mode of the application. The light color mode is used by default.
 
-You can
-[set the dark/light color mode for an application or a component](../../application-models/subscribe-system-environment-variable-changes.md#setting-darklight-color-mode)
-.
+You can [set the dark/light color mode for an application or a component](../../application-models/subscribe-system-environment-variable-changes.md#setting-darklight-color-mode).
 
 The options are as follows:
 
-- **COLOR_MODE_NOT_SET**: The color mode is not set.
-- **COLOR_MODE_LIGHT**: light mode.
+- **COLOR_MODE_NOT_SET**: The color mode is not set.  
+- **COLOR_MODE_LIGHT**: light mode.  
 - **COLOR_MODE_DARK**: dark mode.
 
 **Type:** ConfigurationConstant.ColorMode
@@ -37,6 +35,8 @@ The options are as follows:
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Configuration-colorMode?: ConfigurationConstant.ColorMode--><!--Device-Configuration-colorMode?: ConfigurationConstant.ColorMode-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -50,20 +50,19 @@ Screen orientation of the application.
 
 The options are as follows:
 
-- **DIRECTION_NOT_SET**: The screen orientation is not set.
-- **DIRECTION_HORIZONTAL**: horizontal direction.
+- **DIRECTION_NOT_SET**: The screen orientation is not set.  
+- **DIRECTION_HORIZONTAL**: horizontal direction.  
 - **DIRECTION_VERTICAL**: vertical direction.
 
-You can subscribe to changes to this environment variable in the [UIAbility](./js-apis-app-ability-uiAbility.md)
-and [UIExtensionAbility](./js-apis-app-ability-uiExtensionAbility.md), but not in the
-[ApplicationContext](./js-apis-inner-application-applicationContext.md) or
-[AbilityStage](./js-apis-app-ability-abilityStage.md).
+You can subscribe to changes to this environment variable in the [UIAbility](./js-apis-app-ability-uiAbility.md)and [UIExtensionAbility](./js-apis-app-ability-uiExtensionAbility.md), but not in the [ApplicationContext](./js-apis-inner-application-applicationContext.md) or [AbilityStage](./js-apis-app-ability-abilityStage.md).
 
 **Type:** ConfigurationConstant.Direction
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Configuration-direction?: ConfigurationConstant.Direction--><!--Device-Configuration-direction?: ConfigurationConstant.Direction-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -75,16 +74,15 @@ displayId?: number
 
 ID of the display where the application is located.
 
-You can subscribe to changes to this environment variable in the [UIAbility](./js-apis-app-ability-uiAbility.md)
-and [UIExtensionAbility](./js-apis-app-ability-uiExtensionAbility.md), but not in the
-[ApplicationContext](./js-apis-inner-application-applicationContext.md) or
-[AbilityStage](./js-apis-app-ability-abilityStage.md).
+You can subscribe to changes to this environment variable in the [UIAbility](./js-apis-app-ability-uiAbility.md)and [UIExtensionAbility](./js-apis-app-ability-uiExtensionAbility.md), but not in the [ApplicationContext](./js-apis-inner-application-applicationContext.md) or [AbilityStage](./js-apis-app-ability-abilityStage.md).
 
 **Type:** number
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Configuration-displayId?: long--><!--Device-Configuration-displayId?: long-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -102,6 +100,8 @@ Unique ID of the font.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-Configuration-fontId?: string--><!--Device-Configuration-fontId?: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## fontSizeScale
@@ -112,15 +112,15 @@ fontSizeScale?: number
 
 Font size scale ratio. The value is a non-negative number. The default value is **1**.
 
-You can
-[set the font size for an application](../../application-models/subscribe-system-environment-variable-changes.md#setting-font-size)
-.
+You can [set the font size for an application](../../application-models/subscribe-system-environment-variable-changes.md#setting-font-size).
 
 **Type:** number
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Configuration-fontSizeScale?: double--><!--Device-Configuration-fontSizeScale?: double-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -138,6 +138,8 @@ Font weight scale ratio. The value is a non-negative number. The default value i
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Configuration-fontWeightScale?: double--><!--Device-Configuration-fontWeightScale?: double-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## hasPointerDevice
@@ -146,14 +148,15 @@ Font weight scale ratio. The value is a non-negative number. The default value i
 hasPointerDevice?: boolean
 ```
 
-Whether a pointer device, such as a keyboard, mouse, or touchpad, is connected. **true** if connected, **false**
-otherwise.
+Whether a pointer device, such as a keyboard, mouse, or touchpad, is connected. **true** if connected, **false** otherwise.
 
 **Type:** boolean
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Configuration-hasPointerDevice?: boolean--><!--Device-Configuration-hasPointerDevice?: boolean-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -165,18 +168,17 @@ language?: string
 
 Current language of the application, for example, **zh** (Chinese) or **en** (English).
 
-You can
-[set the application language](../../application-models/subscribe-system-environment-variable-changes.md#setting-application-language)
-.
+You can [set the application language](../../application-models/subscribe-system-environment-variable-changes.md#setting-application-language).
 
-For details about the value range, see
-[getSystemLanguages](../apis-localization-kit/js-apis-i18n.md#getsystemlanguages9).
+For details about the value range, see [getSystemLanguages](../apis-localization-kit/js-apis-i18n.md#getsystemlanguages9).
 
 **Type:** string
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Configuration-language?: string--><!--Device-Configuration-language?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -188,15 +190,15 @@ locale?: Intl.Locale
 
 Locale.
 
-The application automatically adjusts its behavior based on the current locale to meet the localization
-requirements of users. This property can be set by configuring the system language, system region, and
-application preferred language.
+The application automatically adjusts its behavior based on the current locale to meet the localization requirements of users. This property can be set by configuring the system language, system region, and application preferred language.
 
 **Type:** Intl.Locale
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-Configuration-locale?: Intl.Locale--><!--Device-Configuration-locale?: Intl.Locale-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -214,6 +216,8 @@ Mobile country code.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Configuration-mcc?: string--><!--Device-Configuration-mcc?: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## mnc
@@ -230,6 +234,8 @@ Mobile network code.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Configuration-mnc?: string--><!--Device-Configuration-mnc?: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## screenDensity
@@ -242,28 +248,25 @@ Screen density.
 
 The options are as follows:
 
-- **SCREEN_DENSITY_NOT_SET**: The pixel density is not set.
-- **SCREEN_DENSITY_SDPI**: 120.
-- **SCREEN_DENSITY_MDPI**: 160.
-- **SCREEN_DENSITY_LDPI**: 240.
-- **SCREEN_DENSITY_XLDPI**: 320.
-- **SCREEN_DENSITY_XXLDPI**: 480.
+- **SCREEN_DENSITY_NOT_SET**: The pixel density is not set.  
+- **SCREEN_DENSITY_SDPI**: 120.  
+- **SCREEN_DENSITY_MDPI**: 160.  
+- **SCREEN_DENSITY_LDPI**: 240.  
+- **SCREEN_DENSITY_XLDPI**: 320.  
+- **SCREEN_DENSITY_XXLDPI**: 480.  
 - **SCREEN_DENSITY_XXXLDPI**: 640.
 
-The font size is positively correlated with the screen pixel density. By monitoring changes in the screen pixel
-density, you can detect adjustments in the font size. Typically, for the same physical size, the higher the screen
-pixel density, the larger the font display effect.
+The font size is positively correlated with the screen pixel density. By monitoring changes in the screen pixel density, you can detect adjustments in the font size. Typically, for the same physical size, the higher the screen pixel density, the larger the font display effect.
 
-You can subscribe to changes to this environment variable in the [UIAbility](./js-apis-app-ability-uiAbility.md)
-and [UIExtensionAbility](./js-apis-app-ability-uiExtensionAbility.md), but not in the
-[ApplicationContext](./js-apis-inner-application-applicationContext.md) or
-[AbilityStage](./js-apis-app-ability-abilityStage.md).
+You can subscribe to changes to this environment variable in the [UIAbility](./js-apis-app-ability-uiAbility.md)and [UIExtensionAbility](./js-apis-app-ability-uiExtensionAbility.md), but not in the [ApplicationContext](./js-apis-inner-application-applicationContext.md) or [AbilityStage](./js-apis-app-ability-abilityStage.md).
 
 **Type:** ConfigurationConstant.ScreenDensity
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Configuration-screenDensity?: ConfigurationConstant.ScreenDensity--><!--Device-Configuration-screenDensity?: ConfigurationConstant.ScreenDensity-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 

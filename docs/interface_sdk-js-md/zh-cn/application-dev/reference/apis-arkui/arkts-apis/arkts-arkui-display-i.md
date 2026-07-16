@@ -2,12 +2,19 @@
 
 屏幕实例。描述Display对象的属性和方法。
 
-下列API示例中都需先使用[getAllDisplays()](arkts-arkui-getalldisplays-f.md#getalldisplays-1)、
-[getDefaultDisplaySync()](arkts-arkui-getdefaultdisplaysync-f.md#getdefaultdisplaysync-1)中的任一方法获取到Display实例，再通过此实例调用对应方法。
+下列API示例中都需先使用[getAllDisplays()](arkts-arkui-getalldisplays-f.md#getalldisplays-1)、[getDefaultDisplaySync()](arkts-arkui-getdefaultdisplaysync-f.md#getdefaultdisplaysync-1)中的任一方法获取到Display实例，再通过此实例调用对应方法。
 
 **起始版本：** 7
 
+<!--Device-display-interface Display--><!--Device-display-interface Display-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+## 导入模块
+
+```TypeScript
+import { display } from '@kit.ArkUI';
+```
 
 ## getAvailableArea
 
@@ -21,7 +28,9 @@ getAvailableArea(): Promise<Rect>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-getAvailableArea(): Promise<Rect>--><!--Device-Display-getAvailableArea(): Promise<Rect>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -29,13 +38,13 @@ getAvailableArea(): Promise<Rect>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Rect&gt; | Promise对象。返回当前屏幕可用矩形区域。 |
+| Promise<Rect> | Promise对象。返回当前屏幕可用矩形区域。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. Possible cause:1. This display is abnormal.2. Internal task error. |
 
 **示例：**
@@ -68,7 +77,9 @@ getCutoutInfo(callback: AsyncCallback<CutoutInfo>): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-getCutoutInfo(callback: AsyncCallback<CutoutInfo>): void--><!--Device-Display-getCutoutInfo(callback: AsyncCallback<CutoutInfo>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -76,7 +87,7 @@ getCutoutInfo(callback: AsyncCallback<CutoutInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;CutoutInfo&gt; | 是 | 回调函数。返回不可用屏幕区域对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<CutoutInfo> | 是 | 回调函数。返回不可用屏幕区域对象。 |
 
 **错误码：**
 
@@ -113,7 +124,9 @@ getCutoutInfo(): Promise<CutoutInfo>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-getCutoutInfo(): Promise<CutoutInfo>--><!--Device-Display-getCutoutInfo(): Promise<CutoutInfo>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -121,7 +134,7 @@ getCutoutInfo(): Promise<CutoutInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CutoutInfo&gt; | Promise对象。返回描述不可用屏幕区域的CutoutInfo对象。 |
+| Promise<CutoutInfo> | Promise对象。返回描述不可用屏幕区域的CutoutInfo对象。 |
 
 **错误码：**
 
@@ -155,7 +168,9 @@ Get current display capability, including foldstatus, displaymode, rotation, and
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-getDisplayCapability(): string--><!--Device-Display-getDisplayCapability(): string-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -169,7 +184,7 @@ Get current display capability, including foldstatus, displaymode, rotation, and
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.Function getDisplayCapability can not work correctly dueto limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.Function getDisplayCapability can not work correctly due to limited device capabilities. |
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
@@ -183,19 +198,21 @@ getLiveCreaseRegion(): FoldCreaseRegion
 
 **起始版本：** 20
 
+<!--Device-Display-getLiveCreaseRegion(): FoldCreaseRegion--><!--Device-Display-getLiveCreaseRegion(): FoldCreaseRegion-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| FoldCreaseRegion | 返回设备在当前显示模式下的折叠折痕区域。 |
+| [FoldCreaseRegion](arkts-arkui-foldcreaseregion-i.md) | 返回设备在当前显示模式下的折叠折痕区域。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 **示例：**
@@ -222,7 +239,9 @@ getRoundedCorner(): Array<RoundedCorner>
 
 **起始版本：** 23
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-getRoundedCorner(): Array<RoundedCorner>--><!--Device-Display-getRoundedCorner(): Array<RoundedCorner>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -230,7 +249,7 @@ getRoundedCorner(): Array<RoundedCorner>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;RoundedCorner&gt; | 返回当前屏幕的圆角信息。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<RoundedCorner> | 返回当前屏幕的圆角信息。 |
 
 **错误码：**
 
@@ -266,7 +285,9 @@ off(type: 'availableAreaChange', callback?: Callback<Rect>): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-off(type: 'availableAreaChange', callback?: Callback<Rect>): void--><!--Device-Display-off(type: 'availableAreaChange', callback?: Callback<Rect>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -275,14 +296,14 @@ off(type: 'availableAreaChange', callback?: Callback<Rect>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'availableAreaChange' | 是 | 监听事件，固定为'availableAreaChange'，表示屏幕可用区域变更。 |
-| callback | Callback&lt;Rect&gt; | 否 | 需要取消注册的回调函数。返回改变后的可用区域。若无此参数，则取消注册屏幕可用区域变化监听的所有回调函数。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<Rect> | 否 | 需要取消注册的回调函数。返回改变后的可用区域。若无此参数，则取消注册屏幕可用区域变化监听的所有回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 **示例：**
@@ -313,7 +334,9 @@ on(type: 'availableAreaChange', callback: Callback<Rect>): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-on(type: 'availableAreaChange', callback: Callback<Rect>): void--><!--Device-Display-on(type: 'availableAreaChange', callback: Callback<Rect>): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -322,14 +345,14 @@ on(type: 'availableAreaChange', callback: Callback<Rect>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'availableAreaChange' | 是 | 监听事件。固定为'availableAreaChange'，表示屏幕可用区域变更。 |
-| callback | Callback&lt;Rect&gt; | 是 | 回调函数。返回改变后的可用区域。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<Rect> | 是 | 回调函数。返回改变后的可用区域。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 **示例：**
@@ -364,7 +387,9 @@ SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 7
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-alive: boolean--><!--Device-Display-alive: boolean-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -384,7 +409,9 @@ SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-availableHeight: long--><!--Device-Display-availableHeight: long-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -404,7 +431,9 @@ SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-availableWidth: long--><!--Device-Display-availableWidth: long-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -422,7 +451,9 @@ SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-colorSpaces: Array<colorSpaceManager.ColorSpace>--><!--Device-Display-colorSpaces: Array<colorSpaceManager.ColorSpace>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -440,7 +471,9 @@ SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 7
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-densityDPI: double--><!--Device-Display-densityDPI: double-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -460,7 +493,9 @@ SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-densityPixels: double--><!--Device-Display-densityPixels: double-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -478,7 +513,9 @@ SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-hdrFormats: Array<hdrCapability.HDRFormat>--><!--Device-Display-hdrFormats: Array<hdrCapability.HDRFormat>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -496,7 +533,9 @@ SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-height: long--><!--Device-Display-height: long-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -514,7 +553,9 @@ SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 7
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-id: long--><!--Device-Display-id: long-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -532,7 +573,9 @@ SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 7
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-name: string--><!--Device-Display-name: string-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -550,7 +593,9 @@ SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-orientation: Orientation--><!--Device-Display-orientation: Orientation-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -568,7 +613,9 @@ SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 7
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-refreshRate: int--><!--Device-Display-refreshRate: int-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -594,7 +641,9 @@ SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-rotation: int--><!--Device-Display-rotation: int-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -612,7 +661,9 @@ SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 7
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-scaledDensity: double--><!--Device-Display-scaledDensity: double-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -630,7 +681,9 @@ SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-screenShape?: ScreenShape--><!--Device-Display-screenShape?: ScreenShape-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -648,7 +701,9 @@ SystemCapability.Window.SessionManager
 
 **起始版本：** 19
 
-**元服务API：** 从API版本19开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-sourceMode?: DisplaySourceMode--><!--Device-Display-sourceMode?: DisplaySourceMode-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -666,7 +721,9 @@ SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 7
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-state: DisplayState--><!--Device-Display-state: DisplayState-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -684,7 +741,9 @@ SystemCapability.Window.SessionManager
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-supportedRefreshRates?: Array<int>--><!--Device-Display-supportedRefreshRates?: Array<int>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -702,7 +761,9 @@ SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-width: long--><!--Device-Display-width: long-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -720,7 +781,9 @@ SystemCapability.Window.SessionManager
 
 **起始版本：** 19
 
-**元服务API：** 从API版本19开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-x?: long--><!--Device-Display-x?: long-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -738,7 +801,9 @@ SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 7
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-xDPI: double--><!--Device-Display-xDPI: double-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -756,7 +821,9 @@ SystemCapability.Window.SessionManager
 
 **起始版本：** 19
 
-**元服务API：** 从API版本19开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-y?: long--><!--Device-Display-y?: long-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -774,7 +841,9 @@ SystemCapability.WindowManager.WindowManager.Core
 
 **起始版本：** 7
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Display-yDPI: double--><!--Device-Display-yDPI: double-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 

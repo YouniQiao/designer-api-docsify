@@ -4,6 +4,8 @@
 
 **起始版本：** 15
 
+<!--Device-unnamed-declare interface SwiperContentWillScrollResult--><!--Device-unnamed-declare interface SwiperContentWillScrollResult-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## comingIndex
@@ -20,9 +22,11 @@ comingIndex: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本15开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-SwiperContentWillScrollResult-comingIndex: number--><!--Device-SwiperContentWillScrollResult-comingIndex: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,9 +44,11 @@ currentIndex: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本15开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-SwiperContentWillScrollResult-currentIndex: number--><!--Device-SwiperContentWillScrollResult-currentIndex: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,9 +68,11 @@ offset: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本15开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-SwiperContentWillScrollResult-offset: number--><!--Device-SwiperContentWillScrollResult-offset: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

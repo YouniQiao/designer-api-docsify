@@ -4,6 +4,8 @@ Defines the triggered callback when the application receive a new favicon for th
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface OnFaviconReceivedEvent--><!--Device-unnamed-declare interface OnFaviconReceivedEvent-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## favicon
@@ -19,6 +21,8 @@ Received the Favicon icon for the PixelMap object.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-OnFaviconReceivedEvent-favicon: PixelMap--><!--Device-OnFaviconReceivedEvent-favicon: PixelMap-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

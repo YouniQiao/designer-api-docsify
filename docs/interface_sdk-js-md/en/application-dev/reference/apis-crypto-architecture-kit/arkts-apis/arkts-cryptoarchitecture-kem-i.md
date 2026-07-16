@@ -4,6 +4,8 @@ Provides APIs for key encapsulation and decapsulation operations using the key e
 
 **Since:** 26.0.0
 
+<!--Device-cryptoFramework-interface Kem--><!--Device-cryptoFramework-interface Kem-End-->
+
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
 
 ## Modules to Import
@@ -18,8 +20,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 decapsulate(priKey: PriKey, wrappedKey: Uint8Array): Promise<Uint8Array>
 ```
 
-Key decapsulation operation. Using the receiver's private key, executed by the receiver, to decapsulate the
-shared key from the ciphertext. This API uses a promise to return the result.
+Key decapsulation operation. Using the receiver's private key, executed by the receiver, to decapsulate the shared key from the ciphertext. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -27,20 +28,22 @@ shared key from the ciphertext. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-Kem-decapsulate(priKey: PriKey, wrappedKey: Uint8Array): Promise<Uint8Array>--><!--Device-Kem-decapsulate(priKey: PriKey, wrappedKey: Uint8Array): Promise<Uint8Array>-End-->
+
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| priKey | PriKey | Yes | The private key of the receiver. |
-| wrappedKey | Uint8Array | Yes | The wrapped key of the KEM. |
+| priKey | [PriKey](arkts-cryptoarchitecture-prikey-i.md) | Yes | The private key of the receiver. |
+| wrappedKey | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | The wrapped key of the KEM. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the shared secret. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Uint8Array> | Promise used to return the shared secret. |
 
 **Error codes:**
 
@@ -80,13 +83,9 @@ async function kemDecapsulate() {
 decapsulateSync(priKey: PriKey, wrappedKey: Uint8Array): Uint8Array
 ```
 
-Key decapsulation operation. Using the receiver's private key, executed by the receiver, to decapsulate the
-shared key from the ciphertext.
+Key decapsulation operation. Using the receiver's private key, executed by the receiver, to decapsulate the shared key from the ciphertext.
 
-<br><br>**NOTE**
-<br>It is recommended to prioritize the use of asynchronous API, {@link decapsulate}. Synchronous API may
-take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,
-it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link decapsulate}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 26.0.0
 
@@ -94,20 +93,22 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-Kem-decapsulateSync(priKey: PriKey, wrappedKey: Uint8Array): Uint8Array--><!--Device-Kem-decapsulateSync(priKey: PriKey, wrappedKey: Uint8Array): Uint8Array-End-->
+
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| priKey | PriKey | Yes | The private key of the receiver. |
-| wrappedKey | Uint8Array | Yes | The wrapped key of the KEM. |
+| priKey | [PriKey](arkts-cryptoarchitecture-prikey-i.md) | Yes | The private key of the receiver. |
+| wrappedKey | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | The wrapped key of the KEM. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | The decapsulation result of the KEM. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | The decapsulation result of the KEM. |
 
 **Error codes:**
 
@@ -147,8 +148,7 @@ function kemDecapsulateSync() {
 encapsulate(pubKey: PubKey, ikme: Uint8Array | null): Promise<KemEncapResult>
 ```
 
-Key encapsulation operation. Using the recipient's public key, executed by the sender, to generate and
-encapsulate a shared key. This API uses a promise to return the result.
+Key encapsulation operation. Using the recipient's public key, executed by the sender, to generate and encapsulate a shared key. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -156,20 +156,22 @@ encapsulate a shared key. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-Kem-encapsulate(pubKey: PubKey, ikme: Uint8Array | null): Promise<KemEncapResult>--><!--Device-Kem-encapsulate(pubKey: PubKey, ikme: Uint8Array | null): Promise<KemEncapResult>-End-->
+
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | PubKey | Yes | The public key of the receiver. |
+| pubKey | [PubKey](arkts-cryptoarchitecture-pubkey-i.md) | Yes | The public key of the receiver. |
 | ikme | Uint8Array \| null | Yes | Random number seed, used to replace the random number within the algorithm.For the ML-KEM algorithm, the random number seed is 32 bytes. It is recommended to pass null. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KemEncapResult&gt; | Promise used to return the KemEncapResult. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<KemEncapResult> | Promise used to return the KemEncapResult. |
 
 **Error codes:**
 
@@ -209,13 +211,9 @@ async function kemEncapsulate() {
 encapsulateSync(pubKey: PubKey, ikme: Uint8Array | null): KemEncapResult
 ```
 
-Key encapsulation operation. Using the recipient's public key, executed by the sender, to generate and
-encapsulate a shared key.
+Key encapsulation operation. Using the recipient's public key, executed by the sender, to generate and encapsulate a shared key.
 
-<br><br>**NOTE**
-<br>It is recommended to prioritize the use of asynchronous API, {@link encapsulate}. Synchronous API may
-take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,
-it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link encapsulate}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 26.0.0
 
@@ -223,20 +221,22 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-Kem-encapsulateSync(pubKey: PubKey, ikme: Uint8Array | null): KemEncapResult--><!--Device-Kem-encapsulateSync(pubKey: PubKey, ikme: Uint8Array | null): KemEncapResult-End-->
+
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | PubKey | Yes | The public key of the receiver. |
+| pubKey | [PubKey](arkts-cryptoarchitecture-pubkey-i.md) | Yes | The public key of the receiver. |
 | ikme | Uint8Array \| null | Yes | Random number seed, used to replace the random number within the algorithm.For the ML-KEM algorithm, the random number seed is 32 bytes. It is recommended to pass null. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| KemEncapResult | The encapsulation result of the KEM. |
+| [KemEncapResult](arkts-cryptoarchitecture-kemencapresult-i.md) | The encapsulation result of the KEM. |
 
 **Error codes:**
 

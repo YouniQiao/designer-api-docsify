@@ -14,12 +14,13 @@ function setFileCacheSize(bytes: number): void
 
 Sets the upper limit of the file cache size for the **cacheDownload** component.
 
-- When this API is used to adjust the cache size, the LRU mode is used by default to clear redundant cached data
-in the file.
-- If **bytes** is set to **0**, all cached files will be deleted.
+- When this API is used to adjust the cache size, the LRU mode is used by default to clear redundant cached data in the file.  
+- If **bytes** is set to **0**, all cached files will be deleted.  
 - This API returns the result synchronously, without blocking the calling thread.
 
 **Since:** 18
+
+<!--Device-cacheDownload-function setFileCacheSize(bytes: long): void--><!--Device-cacheDownload-function setFileCacheSize(bytes: long): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -27,7 +28,7 @@ in the file.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bytes | number | Yes | Upper limit of the cache, in bytes. The default value is **104857600** (100 MB), and themaximum value is **4294967296** (4 GB). |
+| bytes | number | Yes | Upper limit of the cache, in bytes. The default value is **104857600** (100 MB), and the maximum value is **4294967296** (4 GB). |
 
 **Error codes:**
 

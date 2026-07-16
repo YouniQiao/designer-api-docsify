@@ -4,6 +4,8 @@ Describes the device connection status and device information.
 
 **Since:** 7
 
+<!--Device-audio-interface DeviceChangeAction--><!--Device-audio-interface DeviceChangeAction-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Device information.
 
 **Since:** 7
 
+<!--Device-DeviceChangeAction-deviceDescriptors: AudioDeviceDescriptors--><!--Device-DeviceChangeAction-deviceDescriptors: AudioDeviceDescriptors-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## type
@@ -37,6 +41,8 @@ Device change type.
 **Type:** DeviceChangeType
 
 **Since:** 7
+
+<!--Device-DeviceChangeAction-type: DeviceChangeType--><!--Device-DeviceChangeAction-type: DeviceChangeType-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 

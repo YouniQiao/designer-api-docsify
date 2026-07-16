@@ -1,5 +1,11 @@
 # getExtResource（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getExtResource
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getExtResource(bundleName: string): Promise<Array<string>>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getExtResource(bundleName: string): Promise<Array<string>>--><!--Device-bundleManager-function getExtResource(bundleName: string): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -26,7 +34,7 @@ function getExtResource(bundleName: string): Promise<Array<string>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回接口运行结果及扩展资源对应的moduleNames。 |
+| Promise<Array<string>> | Promise对象，返回接口运行结果及扩展资源对应的moduleNames。 |
 
 **错误码：**
 

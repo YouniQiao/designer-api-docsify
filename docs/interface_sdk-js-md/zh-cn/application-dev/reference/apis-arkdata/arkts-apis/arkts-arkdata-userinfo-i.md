@@ -6,6 +6,8 @@
 
 **废弃版本：** 9
 
+<!--Device-distributedData-interface UserInfo--><!--Device-distributedData-interface UserInfo-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## userId
@@ -22,6 +24,8 @@ userId?: string
 
 **废弃版本：** 9
 
+<!--Device-UserInfo-userId?: string--><!--Device-UserInfo-userId?: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## userType
@@ -37,6 +41,8 @@ userType?: UserType
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-UserInfo-userType?: UserType--><!--Device-UserInfo-userType?: UserType-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 

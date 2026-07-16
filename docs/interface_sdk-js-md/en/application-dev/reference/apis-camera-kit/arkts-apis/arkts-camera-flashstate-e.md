@@ -4,6 +4,8 @@ Enumerates the flash states.
 
 **Since:** 24
 
+<!--Device-camera-enum FlashState--><!--Device-camera-enum FlashState-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## FLASH_STATE_UNAVAILABLE
@@ -19,6 +21,8 @@ The flash is unavailable. This is the default value.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-FlashState-FLASH_STATE_UNAVAILABLE = 0--><!--Device-FlashState-FLASH_STATE_UNAVAILABLE = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -36,6 +40,8 @@ The flash is available.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-FlashState-FLASH_STATE_READY = 1--><!--Device-FlashState-FLASH_STATE_READY = 1-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## FLASH_STATE_FLASHING
@@ -51,6 +57,8 @@ The flash is turned on.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-FlashState-FLASH_STATE_FLASHING = 2--><!--Device-FlashState-FLASH_STATE_FLASHING = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

@@ -1,5 +1,11 @@
 # verifyAuthToken（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { userAccessCtrl } from '@kit.UserAuthenticationKit';
+```
+
 ## verifyAuthToken
 
 ```TypeScript
@@ -12,6 +18,8 @@ function verifyAuthToken(authToken: Uint8Array, allowableDuration: number): Prom
 
 **需要权限：** ohos.permission.USE_USER_ACCESS_MANAGER
 
+<!--Device-userAccessCtrl-function verifyAuthToken(authToken: Uint8Array, allowableDuration: int): Promise<AuthToken>--><!--Device-userAccessCtrl-function verifyAuthToken(authToken: Uint8Array, allowableDuration: int): Promise<AuthToken>-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -20,14 +28,14 @@ function verifyAuthToken(authToken: Uint8Array, allowableDuration: number): Prom
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| authToken | Uint8Array | 是 | 待验证的认证令牌。最大长度为1024字节，由用户认证通过后返回。令牌中包含用户身份认证的凭证信息，用于后续的安全操作验证。 |
+| authToken | [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 是 | 待验证的认证令牌。最大长度为1024字节，由用户认证通过后返回。令牌中包含用户身份认证的凭证信息，用于后续的安全操作验证。 |
 | allowableDuration | number | 是 | 允许的认证有效时长。从AuthToken签发起允许使用的最大时间间隔，单位为毫秒。值需大于0且小于等于86400000（24小时）。用于校验令牌的时效性，防止过期令牌被使用。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AuthToken&gt; | Promise对象，用于返回AuthToken。 |
+| Promise<AuthToken> | Promise对象，用于返回AuthToken。 |
 
 **错误码：**
 

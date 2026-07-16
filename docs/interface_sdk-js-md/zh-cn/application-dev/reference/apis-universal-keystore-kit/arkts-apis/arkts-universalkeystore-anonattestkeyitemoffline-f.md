@@ -1,5 +1,11 @@
 # anonAttestKeyItemOffline
 
+## 导入模块
+
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+```
+
 ## anonAttestKeyItemOffline
 
 ```TypeScript
@@ -8,25 +14,27 @@ function anonAttestKeyItemOffline(keyAlias: string, params: HuksParam[]): Promis
 
 离线模式下获取匿名化密钥证书。使用Promise异步回调。
 
-> **说明：**
->
-> - 离线密钥证明依赖网络，需要定期联网使用该接口以更新离线证书，推荐优先使用离线匿名密钥证明。
->
+> **说明：**  
+>  
+> - 离线密钥证明依赖网络，需要定期联网使用该接口以更新离线证书，推荐优先使用离线匿名密钥证明。  
+>  
 > - 离线匿名密钥证明需保证本地时间是准确的，否则可能导致对端校验证书超期失败。
 
-> **说明**
-> >
-> - Offline key attestation depends on the network. You need to periodically connect to the network to use this API
-> to update the offline certificate. Offline anonymous key attestation is recommended.
-> >
-> - Offline anonymous key attestation requires that the local time be accurate. Otherwise, the peer end may fail to
+> **说明**  
+> >  
+> - Offline key attestation depends on the network. You need to periodically connect to the network to use this API  
+> to update the offline certificate. Offline anonymous key attestation is recommended.  
+> >  
+> - Offline anonymous key attestation requires that the local time be accurate. Otherwise, the peer end may fail to  
 > verify the certificate expiration。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-huks-function anonAttestKeyItemOffline(keyAlias: string, params: HuksParam[]): Promise<HuksReturnResult>--><!--Device-huks-function anonAttestKeyItemOffline(keyAlias: string, params: HuksParam[]): Promise<HuksReturnResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
@@ -35,13 +43,13 @@ function anonAttestKeyItemOffline(keyAlias: string, params: HuksParam[]): Promis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 密钥别名，存放待获取证书密钥的别名。 |
-| params | HuksParam[] | 是 | 用于获取证书时指定所需参数与数据。 |
+| params | [HuksParam](arkts-universalkeystore-huksparam-i.md)[] | 是 | 用于获取证书时指定所需参数与数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | Promise对象，返回调用接口的结果。当调用成功时，HuksReturnResult的certChains成员为获取到的证书链。 |
+| Promise<HuksReturnResult> | Promise对象，返回调用接口的结果。当调用成功时，HuksReturnResult的certChains成员为获取到的证书链。 |
 
 **错误码：**
 

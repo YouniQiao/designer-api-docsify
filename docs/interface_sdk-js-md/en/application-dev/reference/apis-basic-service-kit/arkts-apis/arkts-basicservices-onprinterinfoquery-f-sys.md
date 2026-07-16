@@ -20,6 +20,8 @@ Register event callback for the printer info queried.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-print-function onPrinterInfoQuery(callback: PrinterInfoQueryCallback): void--><!--Device-print-function onPrinterInfoQuery(callback: PrinterInfoQueryCallback): void-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Register event callback for the printer info queried.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | PrinterInfoQueryCallback | Yes | The callback function for the printer info queried.<br>The callback function for the printer info queried. |
+| callback | [PrinterInfoQueryCallback](arkts-basicservices-printerinfoquerycallback-t-sys.md) | Yes | The callback function for the printer info queried.<br>The callback function for the printer info queried. |
 
 **Error codes:**
 

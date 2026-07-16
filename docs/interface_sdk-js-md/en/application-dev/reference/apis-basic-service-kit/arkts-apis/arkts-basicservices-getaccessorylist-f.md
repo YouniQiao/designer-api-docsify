@@ -16,20 +16,22 @@ Obtains the list of USB accessories connected to the host.
 
 **Since:** 14
 
+<!--Device-usbManager-function getAccessoryList(): Array<Readonly<USBAccessory>>--><!--Device-usbManager-function getAccessoryList(): Array<Readonly<USBAccessory>>-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Readonly&lt;USBAccessory&gt;&gt; | List of USB accessories (read-only). Currently, only one USB accessory iscontained in the list. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Readonly<USBAccessory>> | List of USB accessories (read-only). Currently, only one USB accessory is contained in the list. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
-| [14400004](../../apis-basic-services-kit/errorcode-usb.md#14400004-service-exception) | Service exception. Possible causes:<br>1. No accessory is plugged in. |
+| [14400004](../../apis-basic-services-kit/errorcode-usb.md#14400004-service-exception) | Service exception. Possible causes:* <br>1. No accessory is plugged in. |
 
 **Example**
 

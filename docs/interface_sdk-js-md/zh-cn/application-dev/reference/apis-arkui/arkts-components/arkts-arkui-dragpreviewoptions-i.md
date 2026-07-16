@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare interface DragPreviewOptions--><!--Device-unnamed-declare interface DragPreviewOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## mode
@@ -24,7 +26,9 @@ mode?: DragPreviewMode | Array<DragPreviewMode>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DragPreviewOptions-mode?: DragPreviewMode | Array<DragPreviewMode>--><!--Device-DragPreviewOptions-mode?: DragPreviewMode | Array<DragPreviewMode>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,8 +42,7 @@ modifier?: ImageModifier
 
 1.透明度。
 
-通过[opacity](arkts-arkui-commonmethod-c.md#opacity-1)设置不透明度，不透明度的取值范围为0-1。设置0或不设置时采用背板图透明度的默认值0.95，设置1或
-异常值时不透明。
+通过[opacity](arkts-arkui-commonmethod-c.md#opacity-1)设置不透明度，不透明度的取值范围为0-1。设置0或不设置时采用背板图透明度的默认值0.95，设置1或异常值时不透明。
 
 2.阴影。
 
@@ -47,15 +50,11 @@ modifier?: ImageModifier
 
 3.背景模糊度。
 
-通过[backgroundEffect](arkts-arkui-commonmethod-c.md#backgroundeffect-1)或
-[backgroundBlurStyle](arkts-arkui-commonmethod-c.md#backgroundblurstyle-1)
-设置背景模糊度，如果两者同时设置，以后设置的属性为准。
+通过[backgroundEffect](arkts-arkui-commonmethod-c.md#backgroundeffect-1)或[backgroundBlurStyle](arkts-arkui-commonmethod-c.md#backgroundblurstyle-1)设置背景模糊度，如果两者同时设置，以后设置的属性为准。
 
 4.圆角。
 
-通过[border](arkts-arkui-commonmethod-c.md#border-1)或
-[borderRadius](arkts-arkui-commonmethod-c.md#borderradius-1)设置圆角，当同时在
-mode和modifier中设置圆角，mode设置的圆角显示优先级低于modifier设置。
+通过[border](arkts-arkui-commonmethod-c.md#border-1)或[borderRadius](arkts-arkui-commonmethod-c.md#borderradius-1)设置圆角，当同时在mode和modifier中设置圆角，mode设置的圆角显示优先级低于modifier设置。
 
 5.材质效果，从API版本26.0.0开始支持。
 
@@ -65,11 +64,9 @@ mode和modifier中设置圆角，mode设置的圆角显示优先级低于modifie
 
 **说明：**
 
-1.若节点已设置背景模糊或材质效果，直接用作拖拽预览会导致截图包含这些效果，与拖拽modifier属性冲突。建议使用
-[dragPreview](arkts-arkui-commonmethod-c.md#dragpreview-1)自定义不包含背景模糊和材质效果的预览。
+1.若节点已设置背景模糊或材质效果，直接用作拖拽预览会导致截图包含这些效果，与拖拽modifier属性冲突。建议使用[dragPreview](arkts-arkui-commonmethod-c.md#dragpreview-1)自定义不包含背景模糊和材质效果的预览。
 
-2.[ImmersiveMaterial](@ohos.arkui.uiMaterial:ImmersiveMaterial#immersivematerial)的
-[colorInvert](@ohos.arkui.uiMaterial:ImmersiveOptions#colorInvert)参数在拖拽中不生效。
+2.[ImmersiveMaterial](@ohos.arkui.uiMaterial:ImmersiveMaterial#immersivematerial)的[colorInvert](@ohos.arkui.uiMaterial:ImmersiveOptions#colorInvert)参数在拖拽中不生效。
 
 **类型：** ImageModifier
 
@@ -77,7 +74,9 @@ mode和modifier中设置圆角，mode设置的圆角显示优先级低于modifie
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DragPreviewOptions-modifier?: ImageModifier--><!--Device-DragPreviewOptions-modifier?: ImageModifier-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -101,7 +100,9 @@ numberBadge?: boolean | number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DragPreviewOptions-numberBadge?: boolean | number--><!--Device-DragPreviewOptions-numberBadge?: boolean | number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -121,7 +122,9 @@ sizeChangeEffect?: DraggingSizeChangeEffect
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本19开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DragPreviewOptions-sizeChangeEffect?: DraggingSizeChangeEffect--><!--Device-DragPreviewOptions-sizeChangeEffect?: DraggingSizeChangeEffect-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

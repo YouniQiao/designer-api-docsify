@@ -4,6 +4,8 @@ Linear Gradient Interface
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare interface LinearGradient--><!--Device-unnamed-declare interface LinearGradient-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## angle
@@ -18,7 +20,9 @@ Linear Gradient Angle
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LinearGradient-angle?: number | string--><!--Device-LinearGradient-angle?: number | string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,7 +38,9 @@ Linear Gradient Colors
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LinearGradient-colors: Array<[ResourceColor, number]>--><!--Device-LinearGradient-colors: Array<[ResourceColor, number]>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,7 +56,9 @@ Linear Gradient Direction
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LinearGradient-direction?: GradientDirection--><!--Device-LinearGradient-direction?: GradientDirection-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,7 +74,9 @@ Linear Gradient Repeating
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LinearGradient-repeating?: boolean--><!--Device-LinearGradient-repeating?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

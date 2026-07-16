@@ -1,5 +1,11 @@
 # createSign
 
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+```
+
 ## createSign
 
 ```TypeScript
@@ -10,7 +16,9 @@ function createSign(algName: string): Sign
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cryptoFramework-function createSign(algName: string): Sign--><!--Device-cryptoFramework-function createSign(algName: string): Sign-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -26,7 +34,7 @@ function createSign(algName: string): Sign
 
 | 类型 | 说明 |
 | --- | --- |
-| Sign | 返回由输入算法指定生成的Sign对象。 |
+| [Sign](arkts-cryptoarchitecture-sign-i.md) | 返回由输入算法指定生成的Sign对象。 |
 
 **错误码：**
 

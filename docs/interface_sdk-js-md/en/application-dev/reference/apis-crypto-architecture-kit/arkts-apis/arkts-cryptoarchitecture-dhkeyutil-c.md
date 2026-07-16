@@ -4,6 +4,8 @@ Generates common parameters for a DH key based on the prime **p** length and the
 
 **Since:** 11
 
+<!--Device-cryptoFramework-class DHKeyUtil--><!--Device-cryptoFramework-class DHKeyUtil-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 11: SystemCapability.Security.CryptoFramework
@@ -20,12 +22,13 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 static genDHCommonParamsSpec(pLen: number, skLen?: number): DHCommonParamsSpec
 ```
 
-Generates common parameters for a DH key based on the prime **p** length and the private key length, in bits. For
-details, see [DH](../../../../security/CryptoArchitectureKit/crypto-asym-key-generation-conversion-spec.md#dh).
+Generates common parameters for a DH key based on the prime **p** length and the private key length, in bits. For details, see [DH](../../../../security/CryptoArchitectureKit/crypto-asym-key-generation-conversion-spec.md#dh).
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DHKeyUtil-static genDHCommonParamsSpec(pLen: int, skLen?: int): DHCommonParamsSpec--><!--Device-DHKeyUtil-static genDHCommonParamsSpec(pLen: int, skLen?: int): DHCommonParamsSpec-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -42,7 +45,7 @@ details, see [DH](../../../../security/CryptoArchitectureKit/crypto-asym-key-gen
 
 | Type | Description |
 | --- | --- |
-| DHCommonParamsSpec | DH common parameters generated. |
+| [DHCommonParamsSpec](arkts-cryptoarchitecture-dhcommonparamsspec-i.md) | DH common parameters generated. |
 
 **Error codes:**
 

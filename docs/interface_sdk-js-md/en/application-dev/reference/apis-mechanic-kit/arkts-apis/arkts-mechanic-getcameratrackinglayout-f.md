@@ -16,13 +16,15 @@ Obtains the camera tracking layout of this mechanical device.
 
 **Since:** 20
 
+<!--Device-mechanicManager-function getCameraTrackingLayout(): CameraTrackingLayout--><!--Device-mechanicManager-function getCameraTrackingLayout(): CameraTrackingLayout-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CameraTrackingLayout | Camera tracking layout obtained. |
+| [CameraTrackingLayout](arkts-mechanic-cameratrackinglayout-e.md) | Camera tracking layout obtained. |
 
 **Error codes:**
 

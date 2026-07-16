@@ -16,6 +16,8 @@ Decode the message content.
 
 **Since:** 8
 
+<!--Device-sms-function decodeMms(mmsFilePathName: string | Array<int>, callback: AsyncCallback<MmsInformation>): void--><!--Device-sms-function decodeMms(mmsFilePathName: string | Array<int>, callback: AsyncCallback<MmsInformation>): void-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -24,8 +26,8 @@ Decode the message content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mmsFilePathName | string \| Array&lt;number&gt; | Yes | Indicates the path name of the multimedia message file. |
-| callback | AsyncCallback&lt;MmsInformation&gt; | Yes | Indicates the callback for getting a {@code MmsInformation}object. |
+| mmsFilePathName | string \| Array<number> | Yes | Indicates the path name of the multimedia message file. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<MmsInformation> | Yes | Indicates the callback for getting a {@code MmsInformation}object. |
 
 **Error codes:**
 
@@ -67,6 +69,8 @@ Decode the message content.
 
 **Since:** 8
 
+<!--Device-sms-function decodeMms(mmsFilePathName: string | Array<int>): Promise<MmsInformation>--><!--Device-sms-function decodeMms(mmsFilePathName: string | Array<int>): Promise<MmsInformation>-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -75,13 +79,13 @@ Decode the message content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mmsFilePathName | string \| Array&lt;number&gt; | Yes | Indicates the path name of the multimedia message file. |
+| mmsFilePathName | string \| Array<number> | Yes | Indicates the path name of the multimedia message file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MmsInformation&gt; | Returns a {@code MmsInformation} object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<MmsInformation> | Returns a {@code MmsInformation} object. |
 
 **Error codes:**
 

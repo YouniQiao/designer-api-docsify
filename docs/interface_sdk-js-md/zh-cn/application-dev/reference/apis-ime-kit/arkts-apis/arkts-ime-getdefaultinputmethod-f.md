@@ -1,5 +1,11 @@
 # getDefaultInputMethod
 
+## 导入模块
+
+```TypeScript
+import { inputMethod } from '@kit.IMEKit';
+```
+
 ## getDefaultInputMethod
 
 ```TypeScript
@@ -10,13 +16,15 @@ function getDefaultInputMethod(): InputMethodProperty
 
 **起始版本：** 11
 
+<!--Device-inputMethod-function getDefaultInputMethod(): InputMethodProperty--><!--Device-inputMethod-function getDefaultInputMethod(): InputMethodProperty-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| InputMethodProperty | 返回默认输入法属性对象。 |
+| [InputMethodProperty](arkts-ime-inputmethodproperty-i.md) | 返回默认输入法属性对象。 |
 
 **错误码：**
 

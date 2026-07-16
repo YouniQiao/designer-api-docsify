@@ -8,6 +8,8 @@
 
 **替代接口：** SwiperAttribute
 
+<!--Device-unnamed-declare class StepperItemAttribute extends CommonMethod<StepperItemAttribute>--><!--Device-unnamed-declare class StepperItemAttribute extends CommonMethod<StepperItemAttribute>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## nextLabel
@@ -28,7 +30,9 @@ nextLabel(value: string)
 
 **替代接口：** showNext
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-StepperItemAttribute-nextLabel(value: string): StepperItemAttribute--><!--Device-StepperItemAttribute-nextLabel(value: string): StepperItemAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,7 +60,9 @@ prevLabel(value: string)
 
 **替代接口：** showPrevious
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-StepperItemAttribute-prevLabel(value: string): StepperItemAttribute--><!--Device-StepperItemAttribute-prevLabel(value: string): StepperItemAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,7 +90,9 @@ status(value?: ItemState)
 
 **替代接口：** indicatorInteractive
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-StepperItemAttribute-status(value?: ItemState): StepperItemAttribute--><!--Device-StepperItemAttribute-status(value?: ItemState): StepperItemAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,5 +100,5 @@ status(value?: ItemState)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ItemState | 否 | 步骤导航器nextLabel的显示状态。<br/>默认值：ItemState.Normal |
+| value | [ItemState](arkts-arkui-itemstate-e.md) | 否 | 步骤导航器nextLabel的显示状态。<br/>默认值：ItemState.Normal |
 

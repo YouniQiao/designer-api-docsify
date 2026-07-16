@@ -18,6 +18,8 @@ Set the specified network interface parameters.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-ethernet-function setIfaceConfig(iface: string, ic: InterfaceConfiguration, callback: AsyncCallback<void>): void--><!--Device-ethernet-function setIfaceConfig(iface: string, ic: InterfaceConfiguration, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
@@ -27,8 +29,8 @@ Set the specified network interface parameters.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | iface | string | Yes | Indicates the network interface name of the network parameter. |
-| ic | InterfaceConfiguration | Yes | Indicates the ic. See {@link InterfaceConfiguration}. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of setIfaceConfig. |
+| ic | [InterfaceConfiguration](arkts-network-interfaceconfiguration-i-sys.md) | Yes | Indicates the ic. See {@link InterfaceConfiguration}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of setIfaceConfig. |
 
 **Error codes:**
 
@@ -83,6 +85,8 @@ Set the specified network interface parameters.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-ethernet-function setIfaceConfig(iface: string, ic: InterfaceConfiguration): Promise<void>--><!--Device-ethernet-function setIfaceConfig(iface: string, ic: InterfaceConfiguration): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
@@ -92,13 +96,13 @@ Set the specified network interface parameters.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | iface | string | Yes | Indicates the network interface name of the network parameter. |
-| ic | InterfaceConfiguration | Yes | Indicates the ic. See {@link InterfaceConfiguration}. |
+| ic | [InterfaceConfiguration](arkts-network-interfaceconfiguration-i-sys.md) | Yes | Indicates the ic. See {@link InterfaceConfiguration}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 

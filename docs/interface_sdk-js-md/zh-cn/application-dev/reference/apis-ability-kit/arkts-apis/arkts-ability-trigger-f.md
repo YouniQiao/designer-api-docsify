@@ -1,5 +1,11 @@
 # trigger
 
+## 导入模块
+
+```TypeScript
+import { WantAgent } from '@kit.AbilityKit';
+```
+
 ## trigger
 
 ```TypeScript
@@ -10,7 +16,9 @@ function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: AsyncCal
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-wantAgent-function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: AsyncCallback<CompleteData>): void--><!--Device-wantAgent-function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: AsyncCallback<CompleteData>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -18,9 +26,9 @@ function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: AsyncCal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| agent | WantAgent | 是 | WantAgent对象。 |
-| triggerInfo | TriggerInfo | 是 | 表示触发WantAgent实例时携带的信息，如自定义的extraInfos。 |
-| callback | AsyncCallback&lt;CompleteData&gt; | 否 | 主动激发WantAgent实例的回调方法。 |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | 是 | WantAgent对象。 |
+| triggerInfo | [TriggerInfo](arkts-ability-triggerinfo-t.md) | 是 | 表示触发WantAgent实例时携带的信息，如自定义的extraInfos。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<CompleteData> | 否 | 主动激发WantAgent实例的回调方法。 |
 
 **错误码：**
 

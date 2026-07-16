@@ -12,10 +12,11 @@ import { formProvider } from '@kit.FormKit';
 function isRequestPublishFormSupported(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a widget can be added to the widget host. This API uses an asynchronous callback to return the
-result.
+Checks whether a widget can be added to the widget host. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-formProvider-function isRequestPublishFormSupported(callback: AsyncCallback<boolean>): void--><!--Device-formProvider-function isRequestPublishFormSupported(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -25,7 +26,7 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback function that returns the query result.<br>**true**: The widgetcan be added to the widget host.<br>**false**: The widget cannot be added to the widget host. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback function that returns the query result.<br>**true**: The widget can be added to the widget host.<br>**false**: The widget cannot be added to the widget host. |
 
 **Error codes:**
 
@@ -47,6 +48,8 @@ Checks whether a widget can be added to the widget host. This API uses a promise
 
 **Since:** 9
 
+<!--Device-formProvider-function isRequestPublishFormSupported(): Promise<boolean>--><!--Device-formProvider-function isRequestPublishFormSupported(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -55,7 +58,7 @@ Checks whether a widget can be added to the widget host. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise that returns whether a widget can be added to the widget host.**true**: The widget can be added to the widget host.**false**: The widget cannot be added to the widget host. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise that returns whether a widget can be added to the widget host.* **true**: The widget can be added to the widget host.* **false**: The widget cannot be added to the widget host. |
 
 **Error codes:**
 

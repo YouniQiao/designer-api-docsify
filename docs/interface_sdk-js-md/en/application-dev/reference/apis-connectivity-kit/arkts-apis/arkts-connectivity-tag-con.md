@@ -12,6 +12,8 @@ Indicates an ISO_DEP tag.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-tag-const ISO_DEP = 3--><!--Device-tag-const ISO_DEP = 3-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## MIFARE_CLASSIC
@@ -25,6 +27,8 @@ Indicates an MIFARE CLASSIC tag.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-tag-const MIFARE_CLASSIC = 8--><!--Device-tag-const MIFARE_CLASSIC = 8-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -40,6 +44,8 @@ Indicates an MIFARE ULTRALIGHT tag.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-tag-const MIFARE_ULTRALIGHT = 9--><!--Device-tag-const MIFARE_ULTRALIGHT = 9-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## NDEF
@@ -53,6 +59,8 @@ Indicates an NDEF tag.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-tag-const NDEF = 6--><!--Device-tag-const NDEF = 6-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -68,6 +76,8 @@ Indicates an NDEF Formatable tag.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-tag-const NDEF_FORMATABLE = 7--><!--Device-tag-const NDEF_FORMATABLE = 7-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## NFC_A
@@ -81,6 +91,8 @@ Indicates an NFC-A tag.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-tag-const NFC_A = 1--><!--Device-tag-const NFC_A = 1-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -96,6 +108,8 @@ Indicates an NFC-B tag.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-tag-const NFC_B = 2--><!--Device-tag-const NFC_B = 2-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## NFC_BARCODE
@@ -109,6 +123,8 @@ Indicates an NfcBarcode tag.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-tag-const NFC_BARCODE = 10--><!--Device-tag-const NFC_BARCODE = 10-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -124,6 +140,8 @@ Indicates an NFC-F tag.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-tag-const NFC_F = 4--><!--Device-tag-const NFC_F = 4-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## NFC_V
@@ -137,6 +155,8 @@ Indicates an NFC-V tag.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-tag-const NFC_V = 5--><!--Device-tag-const NFC_V = 5-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -152,6 +172,8 @@ RTD type TEXT, see NFC Record Type Definition (RTD) Specification.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-tag-const RTD_TEXT: int[]--><!--Device-tag-const RTD_TEXT: int[]-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## RTD_URI
@@ -165,6 +187,8 @@ RTD type URI, see NFC Record Type Definition (RTD) Specification.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-tag-const RTD_URI: int[]--><!--Device-tag-const RTD_URI: int[]-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -181,6 +205,8 @@ Skip NDEF when app is reading a card in the foreground.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-tag-const SKIP_NDEF = 11--><!--Device-tag-const SKIP_NDEF = 11-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 

@@ -4,6 +4,8 @@ This filter value is used to filter business ability info
 
 **Since:** 10
 
+<!--Device-businessAbilityRouter-export interface BusinessAbilityFilter--><!--Device-businessAbilityRouter-export interface BusinessAbilityFilter-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Indicates the type of business ability info
 
 **Since:** 10
 
+<!--Device-BusinessAbilityFilter-businessType: BusinessType--><!--Device-BusinessAbilityFilter-businessType: BusinessType-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ Indicates the supported mime type of business ability info
 
 **Since:** 10
 
+<!--Device-BusinessAbilityFilter-mimeType?: string--><!--Device-BusinessAbilityFilter-mimeType?: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ Indicates the supported uri of business ability info
 **Type:** string
 
 **Since:** 10
+
+<!--Device-BusinessAbilityFilter-uri?: string--><!--Device-BusinessAbilityFilter-uri?: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

@@ -20,6 +20,8 @@ Back encrypt.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-encryptedVolumeManager-function bindRecoverKeyToPasswd(volumeId: string, passWord: string, recoverKey: string): Promise<void>--><!--Device-encryptedVolumeManager-function bindRecoverKeyToPasswd(volumeId: string, passWord: string, recoverKey: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -36,7 +38,7 @@ Back encrypt.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | return Promise |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | return Promise |
 
 **Error codes:**
 
@@ -49,7 +51,7 @@ Back encrypt.
 | 13600005 | Incorrect volume state. |
 | 13600008 | No such object. |
 | 13600010 | Invalid params |
-| 13600019 | Check the password length and ensure it includes at least twoof the following: uppercase letters, lowercase letters, numbers, and special characters. |
+| 13600019 | Check the password length and ensure it includes at least two of the following: uppercase letters, lowercase letters, numbers, and special characters. |
 | 13600020 | encrypt key format invalid |
 | 13600021 | Volume is not encrypted. |
 | 13600022 | Incorrect password. |

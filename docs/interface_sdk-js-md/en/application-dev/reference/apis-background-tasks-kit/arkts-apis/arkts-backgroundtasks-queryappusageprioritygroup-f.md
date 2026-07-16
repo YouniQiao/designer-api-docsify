@@ -14,12 +14,13 @@ function queryAppUsagePriorityGroup(callback: AsyncCallback<number>): void
 
 Queries the usage priority group of the calling application.
 
-The priority defined in a priority group restricts the resource usage of an application,
-for example, restricting the running of background tasks.
+The priority defined in a priority group restricts the resource usage of an application,for example, restricting the running of background tasks.
 
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-bundleState-function queryAppUsagePriorityGroup(callback: AsyncCallback<number>): void--><!--Device-bundleState-function queryAppUsagePriorityGroup(callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -27,7 +28,7 @@ for example, restricting the running of background tasks.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | the callback of queryAppUsagePriorityGroup.Returns the app group of the calling application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | the callback of queryAppUsagePriorityGroup.Returns the app group of the calling application. |
 
 **Example**
 
@@ -54,12 +55,13 @@ function queryAppUsagePriorityGroup(): Promise<number>
 
 Queries the usage priority group of the calling application.
 
-The priority defined in a priority group restricts the resource usage of an application,
-for example, restricting the running of background tasks.
+The priority defined in a priority group restricts the resource usage of an application,for example, restricting the running of background tasks.
 
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-bundleState-function queryAppUsagePriorityGroup(): Promise<number>--><!--Device-bundleState-function queryAppUsagePriorityGroup(): Promise<number>-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -67,7 +69,7 @@ for example, restricting the running of background tasks.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | the promise returned by queryAppUsagePriorityGroup.Returns the app group of the calling application. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | the promise returned by queryAppUsagePriorityGroup.Returns the app group of the calling application. |
 
 **Example**
 

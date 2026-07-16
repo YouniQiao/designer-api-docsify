@@ -2,18 +2,26 @@
 
 本模块提供企业设备Wi-Fi管理能力，包括查询Wi-Fi开启状态等。
 
-> **说明：**
->
-> 本模块接口仅可在Stage模型下使用。
->
-> 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../../mdm/mdm-kit-guide.md)。
->
-> 全局通用限制类策略由restrictions统一提供，若要全局禁用Wi-Fi，请参考
+> **说明：**  
+>  
+> 本模块接口仅可在Stage模型下使用。  
+>  
+> 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../../mdm/mdm-kit-guide.md)。  
+>  
+> 全局通用限制类策略由restrictions统一提供，若要全局禁用Wi-Fi，请参考  
 > [@ohos.enterprise.restrictions（限制类策略）](arkts-enterprise-restrictions.md)。
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace wifiManager--><!--Device-unnamed-declare namespace wifiManager-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { wifiManager } from '@kit.MDMKit';
+```
 
 ## 汇总
 
@@ -58,7 +66,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [EapMethod](arkts-mdm-eapmethod-e.md) | 表示EAP认证方式的枚举。&gt; **说明**：&gt;&gt; 当前仅支持使用EAP_PEAP、EAP_TLS两种认证方式，其他暂不支持。 |
+| [EapMethod](arkts-mdm-eapmethod-e.md) | 表示EAP认证方式的枚举。&gt; **说明**： &gt; &gt; 当前仅支持使用EAP_PEAP、EAP_TLS两种认证方式，其他暂不支持。 |
 | [IpType](arkts-mdm-iptype-e.md) | 表示IP类型的枚举。 |
 | [Phase2Method](arkts-mdm-phase2method-e.md) | 表示第二阶段认证方式的枚举。 |
 | [WifiSecurityType](arkts-mdm-wifisecuritytype-e.md) | 表示加密类型的枚举。 |

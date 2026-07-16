@@ -4,6 +4,8 @@ Sets the expected frame rate range for an animation.
 
 **Since:** 11
 
+<!--Device-unnamed-declare interface ExpectedFrameRateRange--><!--Device-unnamed-declare interface ExpectedFrameRateRange-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## expected
@@ -23,6 +25,8 @@ The value range is [**min**, **max**]. When this parameter is set to **0**, the 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ExpectedFrameRateRange-expected: number--><!--Device-ExpectedFrameRateRange-expected: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ The value range is [**min**, Maximum frame rate of the device].
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ExpectedFrameRateRange-max: number--><!--Device-ExpectedFrameRateRange-max: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## min
@@ -63,6 +69,8 @@ The value range is [0, Maximum frame rate of the device].
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ExpectedFrameRateRange-min: number--><!--Device-ExpectedFrameRateRange-min: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

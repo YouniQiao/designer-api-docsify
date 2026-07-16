@@ -6,6 +6,8 @@ Defines chip prefix symbol icon.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class ChipV2PrefixSymbolIcon extends ChipV2SymbolIcon--><!--Device-unnamed-export declare class ChipV2PrefixSymbolIcon extends ChipV2SymbolIcon-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,11 +30,13 @@ The constructor of ChipV2PrefixSymbolIcon
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2PrefixSymbolIcon-constructor(config: ChipV2PrefixSymbolIconConfig)--><!--Device-ChipV2PrefixSymbolIcon-constructor(config: ChipV2PrefixSymbolIconConfig)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | ChipV2PrefixSymbolIconConfig | Yes | config of chip prefix symbol icon |
+| config | [ChipV2PrefixSymbolIconConfig](arkts-arkui-chipv2prefixsymboliconconfig-i.md) | Yes | config of chip prefix symbol icon |
 

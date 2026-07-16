@@ -18,19 +18,21 @@ Only assets with the same {@link Tag.GROUP_ID} and {@link Tag.REQUIRE_ATTR_ENCRY
 
 **Since:** 26.0.0
 
+<!--Device-asset-function batchRemove(assetsToBeRemoved: Array<AssetMap>): Promise<void>--><!--Device-asset-function batchRemove(assetsToBeRemoved: Array<AssetMap>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assetsToBeRemoved | Array&lt;AssetMap&gt; | Yes | an array of attributes of the asset to remove,such as the asset alias, access control attributes, and custom data.<br>The {@link Tag.GROUP_ID} and {@link Tag.REQUIRE_ATTR_ENCRYPTED} attributes of all data must be the same. |
+| assetsToBeRemoved | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<AssetMap> | Yes | an array of attributes of the asset to remove,such as the asset alias, access control attributes, and custom data.<br>The {@link Tag.GROUP_ID} and {@link Tag.REQUIRE_ATTR_ENCRYPTED} attributes of all data must be the same. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise object returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise object returned by the function. |
 
 **Error codes:**
 

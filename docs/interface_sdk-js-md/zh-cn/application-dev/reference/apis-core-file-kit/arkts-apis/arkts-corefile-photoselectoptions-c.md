@@ -8,7 +8,15 @@
 
 **替代接口：** PhotoSelectOptions
 
+<!--Device-picker-class PhotoSelectOptions--><!--Device-picker-class PhotoSelectOptions-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
+
+## 导入模块
+
+```TypeScript
+import { picker } from '@kit.CoreFileKit';
+```
 
 ## MIMEType
 
@@ -26,7 +34,9 @@ MIMEType?: PhotoViewMIMETypes
 
 **替代接口：** MIMEType
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhotoSelectOptions-MIMEType?: PhotoViewMIMETypes--><!--Device-PhotoSelectOptions-MIMEType?: PhotoViewMIMETypes-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -46,7 +56,9 @@ maxSelectNumber?: number
 
 **替代接口：** maxSelectNumber
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhotoSelectOptions-maxSelectNumber?: number--><!--Device-PhotoSelectOptions-maxSelectNumber?: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

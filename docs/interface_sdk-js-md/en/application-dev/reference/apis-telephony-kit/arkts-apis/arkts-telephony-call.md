@@ -4,6 +4,8 @@ Provides methods related to call management.
 
 **Since:** 11
 
+<!--Device-unnamed-declare namespace call--><!--Device-unnamed-declare namespace call-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 ## Modules to Import
@@ -33,7 +35,7 @@ import { call } from '@kit.TelephonyKit';
 | [hasCall](arkts-telephony-hascall-f.md#hascall-1) | Checks whether a call is ongoing. |
 | [hasCall](arkts-telephony-hascall-f.md#hascall-2) | Checks whether a call is ongoing. |
 | [hasCallSync](arkts-telephony-hascallsync-f.md#hascallsync-1) | Checks whether a call is ongoing. |
-| [hasVoiceCapability](arkts-telephony-hasvoicecapability-f.md#hasvoicecapability-1) | Checks whether a device supports voice calls.The system checks whether the device has the capability to initiate a circuit switching (CS) or IP multimediasubsystem domain (IMS) call on a telephone service network. If the device supports only packet switching(even if the device supports OTT calls), {@code false} is returned. |
+| [hasVoiceCapability](arkts-telephony-hasvoicecapability-f.md#hasvoicecapability-1) | Checks whether a device supports voice calls.The system checks whether the device has the capability to initiate a circuit switching (CS) or IP multimedia subsystem domain (IMS) call on a telephone service network. If the device supports only packet switching(even if the device supports OTT calls), {@code false} is returned. |
 | [isEmergencyPhoneNumber](arkts-telephony-isemergencyphonenumber-f.md#isemergencyphonenumber-1) | Checks whether a phone number is on the emergency number list. |
 | [isEmergencyPhoneNumber](arkts-telephony-isemergencyphonenumber-f.md#isemergencyphonenumber-2) | Checks whether a phone number is on the emergency number list. |
 | [isEmergencyPhoneNumber](arkts-telephony-isemergencyphonenumber-f.md#isemergencyphonenumber-3) | Checks whether a phone number is on the emergency number list. |

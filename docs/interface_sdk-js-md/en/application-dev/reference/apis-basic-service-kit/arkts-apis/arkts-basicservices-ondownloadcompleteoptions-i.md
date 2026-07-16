@@ -6,6 +6,8 @@
 
 **Substitutes:** on
 
+<!--Device-unnamed-export interface OnDownloadCompleteOptions--><!--Device-unnamed-export interface OnDownloadCompleteOptions-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Called when API call is complete.
 
 **Substitutes:** on
 
+<!--Device-OnDownloadCompleteOptions-complete?: () => void--><!--Device-OnDownloadCompleteOptions-complete?: () => void-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 ## fail
@@ -47,6 +51,8 @@ Called when API call has failed. Header information and HTTP status code returne
 **Deprecated since:** 9
 
 **Substitutes:** on
+
+<!--Device-OnDownloadCompleteOptions-fail?: (data: any, code: number) => void--><!--Device-OnDownloadCompleteOptions-fail?: (data: any, code: number) => void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -66,6 +72,8 @@ Called when API call is successful.
 
 **Substitutes:** on
 
+<!--Device-OnDownloadCompleteOptions-success?: (data: OnDownloadCompleteResponse) => void--><!--Device-OnDownloadCompleteOptions-success?: (data: OnDownloadCompleteResponse) => void-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 ## token
@@ -83,6 +91,8 @@ Result token returned by the download API.
 **Deprecated since:** 9
 
 **Substitutes:** tid
+
+<!--Device-OnDownloadCompleteOptions-token: string--><!--Device-OnDownloadCompleteOptions-token: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 

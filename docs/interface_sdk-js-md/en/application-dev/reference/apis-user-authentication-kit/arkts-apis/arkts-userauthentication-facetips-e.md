@@ -6,6 +6,8 @@ Enumerates the tip codes used during the facial authentication process.
 
 **Deprecated since:** 11
 
+<!--Device-userAuth-enum FaceTips--><!--Device-userAuth-enum FaceTips-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## FACE_AUTH_TIP_TOO_BRIGHT
@@ -19,6 +21,8 @@ The obtained facial image is too bright due to high illumination.
 **Since:** 8
 
 **Deprecated since:** 11
+
+<!--Device-FaceTips-FACE_AUTH_TIP_TOO_BRIGHT = 1--><!--Device-FaceTips-FACE_AUTH_TIP_TOO_BRIGHT = 1-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -34,6 +38,8 @@ The obtained facial image is too dark due to low illumination.
 
 **Deprecated since:** 11
 
+<!--Device-FaceTips-FACE_AUTH_TIP_TOO_DARK = 2--><!--Device-FaceTips-FACE_AUTH_TIP_TOO_DARK = 2-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## FACE_AUTH_TIP_TOO_CLOSE
@@ -47,6 +53,8 @@ The face is too close to the device.
 **Since:** 8
 
 **Deprecated since:** 11
+
+<!--Device-FaceTips-FACE_AUTH_TIP_TOO_CLOSE = 3--><!--Device-FaceTips-FACE_AUTH_TIP_TOO_CLOSE = 3-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -62,6 +70,8 @@ The face is too far away from the device.
 
 **Deprecated since:** 11
 
+<!--Device-FaceTips-FACE_AUTH_TIP_TOO_FAR = 4--><!--Device-FaceTips-FACE_AUTH_TIP_TOO_FAR = 4-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## FACE_AUTH_TIP_TOO_HIGH
@@ -75,6 +85,8 @@ Only the upper part of the face is captured because the device is angled too hig
 **Since:** 8
 
 **Deprecated since:** 11
+
+<!--Device-FaceTips-FACE_AUTH_TIP_TOO_HIGH = 5--><!--Device-FaceTips-FACE_AUTH_TIP_TOO_HIGH = 5-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -90,6 +102,8 @@ Only the lower part of the face is captured because the device is angled too low
 
 **Deprecated since:** 11
 
+<!--Device-FaceTips-FACE_AUTH_TIP_TOO_LOW = 6--><!--Device-FaceTips-FACE_AUTH_TIP_TOO_LOW = 6-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## FACE_AUTH_TIP_TOO_RIGHT
@@ -103,6 +117,8 @@ Only the right part of the face is captured because the device is deviated to th
 **Since:** 8
 
 **Deprecated since:** 11
+
+<!--Device-FaceTips-FACE_AUTH_TIP_TOO_RIGHT = 7--><!--Device-FaceTips-FACE_AUTH_TIP_TOO_RIGHT = 7-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -118,6 +134,8 @@ Only the left part of the face is captured because the device is deviated to the
 
 **Deprecated since:** 11
 
+<!--Device-FaceTips-FACE_AUTH_TIP_TOO_LEFT = 8--><!--Device-FaceTips-FACE_AUTH_TIP_TOO_LEFT = 8-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## FACE_AUTH_TIP_TOO_MUCH_MOTION
@@ -131,6 +149,8 @@ The face moves too fast during facial information collection.
 **Since:** 8
 
 **Deprecated since:** 11
+
+<!--Device-FaceTips-FACE_AUTH_TIP_TOO_MUCH_MOTION = 9--><!--Device-FaceTips-FACE_AUTH_TIP_TOO_MUCH_MOTION = 9-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -146,6 +166,8 @@ The face is not facing the camera.
 
 **Deprecated since:** 11
 
+<!--Device-FaceTips-FACE_AUTH_TIP_POOR_GAZE = 10--><!--Device-FaceTips-FACE_AUTH_TIP_POOR_GAZE = 10-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## FACE_AUTH_TIP_NOT_DETECTED
@@ -159,6 +181,8 @@ No face is detected.
 **Since:** 8
 
 **Deprecated since:** 11
+
+<!--Device-FaceTips-FACE_AUTH_TIP_NOT_DETECTED = 11--><!--Device-FaceTips-FACE_AUTH_TIP_NOT_DETECTED = 11-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 

@@ -8,6 +8,8 @@ Provides the information about the suspension delay.
 
 **Substitutes:** [DelaySuspendInfo](arkts-backgroundtasks-delaysuspendinfo-i.md)
 
+<!--Device-backgroundTaskManager-interface DelaySuspendInfo--><!--Device-backgroundTaskManager-interface DelaySuspendInfo-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 ## actualDelayTime
@@ -18,8 +20,7 @@ actualDelayTime: number
 
 Actual suspension delay duration of the application, in milliseconds.
 
-The default duration is 180000 when the battery level is higher than or equal to the broadcast low battery level
-and 60000 when the battery level is lower than the broadcast low battery level.
+The default duration is 180000 when the battery level is higher than or equal to the broadcast low battery level and 60000 when the battery level is lower than the broadcast low battery level.
 
 **Type:** number
 
@@ -28,6 +29,8 @@ and 60000 when the battery level is lower than the broadcast low battery level.
 **Deprecated since:** 9
 
 **Substitutes:** DelaySuspendInfo
+
+<!--Device-DelaySuspendInfo-actualDelayTime: number--><!--Device-DelaySuspendInfo-actualDelayTime: number-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
@@ -46,6 +49,8 @@ ID of the suspension delay request.
 **Deprecated since:** 9
 
 **Substitutes:** DelaySuspendInfo
+
+<!--Device-DelaySuspendInfo-requestId: number--><!--Device-DelaySuspendInfo-requestId: number-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 

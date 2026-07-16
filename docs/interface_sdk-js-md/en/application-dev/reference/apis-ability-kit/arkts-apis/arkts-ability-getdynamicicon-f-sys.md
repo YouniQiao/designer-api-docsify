@@ -12,12 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getDynamicIcon(bundleName: string): Promise<string>
 ```
 
-Obtains the module name corresponding to the dynamic icon based on the specified bundle name. This API uses a
-promise to return the result.
+Obtains the module name corresponding to the dynamic icon based on the specified bundle name. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getDynamicIcon(bundleName: string): Promise<string>--><!--Device-bundleManager-function getDynamicIcon(bundleName: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -33,7 +34,7 @@ promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the API call result and module name corresponding to thedynamic icon. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the API call result and module name corresponding to the dynamic icon. |
 
 **Error codes:**
 

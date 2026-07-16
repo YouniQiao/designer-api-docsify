@@ -1,12 +1,12 @@
 # WhiteBalance (System API)
 
-**WhiteBalance** inherits from [WhiteBalanceQuery](arkts-camera-whitebalancequery-i.md).
-It provides APIs to process white balance, including obtaining and setting the white balance mode and white balance
-value.
+**WhiteBalance** inherits from [WhiteBalanceQuery](arkts-camera-whitebalancequery-i-sys.md).It provides APIs to process white balance, including obtaining and setting the white balance mode and white balance value.
 
-**Inheritance/Implementation:** WhiteBalance extends [WhiteBalanceQuery](arkts-camera-whitebalancequery-i.md)
+**Inheritance/Implementation:** WhiteBalance extends [WhiteBalanceQuery](arkts-camera-whitebalancequery-i-sys.md)
 
 **Since:** 20
+
+<!--Device-camera-interface WhiteBalance extends WhiteBalanceQuery--><!--Device-camera-interface WhiteBalance extends WhiteBalanceQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -29,6 +29,8 @@ Obtains the current white balance value.
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-WhiteBalance-getWhiteBalance(): int--><!--Device-WhiteBalance-getWhiteBalance(): int-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -59,6 +61,8 @@ Obtains the white balance mode in use.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-WhiteBalance-getWhiteBalanceMode(): WhiteBalanceMode--><!--Device-WhiteBalance-getWhiteBalanceMode(): WhiteBalanceMode-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -67,7 +71,7 @@ Obtains the white balance mode in use.
 
 | Type | Description |
 | --- | --- |
-| WhiteBalanceMode | White balance mode in use. If the API call fails, undefined is returned. |
+| [WhiteBalanceMode](arkts-camera-whitebalancemode-e-sys.md) | White balance mode in use. If the API call fails, undefined is returned. |
 
 **Error codes:**
 
@@ -82,14 +86,13 @@ Obtains the white balance mode in use.
 setWhiteBalance(whiteBalance: number): void
 ```
 
-Sets a white balance value.
-Before the setting, run
-[getWhiteBalanceRange](arkts-camera-whitebalancequery-i-sys.md#getwhitebalancerange-1) to check the
-white balance value range supported by the device.
+Sets a white balance value.Before the setting, run [getWhiteBalanceRange](arkts-camera-whitebalancequery-i-sys.md#getwhitebalancerange-1) to check the white balance value range supported by the device.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-WhiteBalance-setWhiteBalance(whiteBalance: int): void--><!--Device-WhiteBalance-setWhiteBalance(whiteBalance: int): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -115,13 +118,13 @@ white balance value range supported by the device.
 setWhiteBalanceMode(mode: WhiteBalanceMode): void
 ```
 
-Sets a white balance mode. Before the setting, run
-[isWhiteBalanceModeSupported](arkts-camera-whitebalancequery-i-sys.md#iswhitebalancemodesupported-1)
-to check whether the device supports the specified white balance mode.
+Sets a white balance mode. Before the setting, run [isWhiteBalanceModeSupported](arkts-camera-whitebalancequery-i-sys.md#iswhitebalancemodesupported-1)to check whether the device supports the specified white balance mode.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-WhiteBalance-setWhiteBalanceMode(mode: WhiteBalanceMode): void--><!--Device-WhiteBalance-setWhiteBalanceMode(mode: WhiteBalanceMode): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -131,7 +134,7 @@ to check whether the device supports the specified white balance mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | WhiteBalanceMode | Yes | White balance mode. |
+| mode | [WhiteBalanceMode](arkts-camera-whitebalancemode-e-sys.md) | Yes | White balance mode. |
 
 **Error codes:**
 

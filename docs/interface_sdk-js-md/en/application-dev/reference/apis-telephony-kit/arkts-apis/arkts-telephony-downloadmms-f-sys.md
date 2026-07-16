@@ -18,6 +18,8 @@ Downloads an MMS message.
 
 **Required permissions:** ohos.permission.RECEIVE_MMS
 
+<!--Device-sms-function downloadMms(context: Context, mmsParams: MmsParams, callback: AsyncCallback<void>): void--><!--Device-sms-function downloadMms(context: Context, mmsParams: MmsParams, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -26,9 +28,9 @@ Downloads an MMS message.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| mmsParams | MmsParams | Yes | Indicates the parameters of the MMS message. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of downloadMms. For error code, see MmsFailCode. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| mmsParams | [MmsParams](arkts-telephony-mmsparams-i-sys.md) | Yes | Indicates the parameters of the MMS message. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of downloadMms. For error code, see MmsFailCode. |
 
 **Error codes:**
 
@@ -139,6 +141,8 @@ Downloads an MMS message.
 
 **Required permissions:** ohos.permission.RECEIVE_MMS
 
+<!--Device-sms-function downloadMms(context: Context, mmsParams: MmsParams): Promise<void>--><!--Device-sms-function downloadMms(context: Context, mmsParams: MmsParams): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -147,14 +151,14 @@ Downloads an MMS message.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| mmsParams | MmsParams | Yes | Indicates the parameters of the MMS message. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| mmsParams | [MmsParams](arkts-telephony-mmsparams-i-sys.md) | Yes | Indicates the parameters of the MMS message. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the downloadMms. For error code, see MmsFailCode. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the downloadMms. For error code, see MmsFailCode. |
 
 **Error codes:**
 

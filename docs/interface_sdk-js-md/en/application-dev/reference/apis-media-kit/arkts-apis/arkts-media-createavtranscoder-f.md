@@ -14,13 +14,15 @@ function createAVTranscoder(): Promise<AVTranscoder>
 
 Creates an AVTranscoder instance. This API uses a promise to return the result.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > A maximum of 2 AVTranscoder instances can be created.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-media-function createAVTranscoder(): Promise<AVTranscoder>--><!--Device-media-function createAVTranscoder(): Promise<AVTranscoder>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
 
@@ -28,7 +30,7 @@ Creates an AVTranscoder instance. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVTranscoder&gt; | Promise used to return the result. If the operation is successful, anAVTranscoder instance is returned; otherwise, **null** is returned. The instance can be used for videotranscoding. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AVTranscoder> | Promise used to return the result. If the operation is successful, an AVTranscoder instance is returned; otherwise, **null** is returned. The instance can be used for video transcoding. |
 
 **Error codes:**
 

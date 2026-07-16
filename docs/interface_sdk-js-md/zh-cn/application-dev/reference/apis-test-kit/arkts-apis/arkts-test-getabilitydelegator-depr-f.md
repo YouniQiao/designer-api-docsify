@@ -14,13 +14,15 @@ function getAbilityDelegator(): AbilityDelegator
 
 **替代接口：** [getAbilityDelegator](arkts-test-getabilitydelegator-f.md#getabilitydelegator-1)
 
+<!--Device-abilityDelegatorRegistry-function getAbilityDelegator(): AbilityDelegator--><!--Device-abilityDelegatorRegistry-function getAbilityDelegator(): AbilityDelegator-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AbilityDelegator | [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md)对象。可以用来调度测试框架相关功能。 |
+| [AbilityDelegator](arkts-test-abilitydelegator-t.md) | [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md)对象。可以用来调度测试框架相关功能。 |
 
 **示例：**
 

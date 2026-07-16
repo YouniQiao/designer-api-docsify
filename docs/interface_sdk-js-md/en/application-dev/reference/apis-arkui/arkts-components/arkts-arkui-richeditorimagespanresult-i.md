@@ -4,6 +4,8 @@ Provides the image information returned by the backend.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface RichEditorImageSpanResult--><!--Device-unnamed-declare interface RichEditorImageSpanResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## imageStyle
@@ -21,6 +23,8 @@ Image style.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RichEditorImageSpanResult-imageStyle: RichEditorImageSpanStyleResult--><!--Device-RichEditorImageSpanResult-imageStyle: RichEditorImageSpanStyleResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ Start and end positions of the image in the span.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-RichEditorImageSpanResult-offsetInSpan: [number, number]--><!--Device-RichEditorImageSpanResult-offsetInSpan: [number, number]-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## spanPosition
@@ -57,6 +63,8 @@ Span position.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RichEditorImageSpanResult-spanPosition: RichEditorSpanPosition--><!--Device-RichEditorImageSpanResult-spanPosition: RichEditorSpanPosition-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,6 +84,8 @@ Image content.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-RichEditorImageSpanResult-valuePixelMap?: PixelMap--><!--Device-RichEditorImageSpanResult-valuePixelMap?: PixelMap-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## valueResourceStr
@@ -93,6 +103,8 @@ Image resource ID.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RichEditorImageSpanResult-valueResourceStr?: ResourceStr--><!--Device-RichEditorImageSpanResult-valueResourceStr?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

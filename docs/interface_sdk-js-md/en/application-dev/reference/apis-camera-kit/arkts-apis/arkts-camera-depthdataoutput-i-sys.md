@@ -6,6 +6,8 @@ Implements depth data output. It inherits from [CameraOutput](arkts-camera-camer
 
 **Since:** 13
 
+<!--Device-camera-interface DepthDataOutput extends CameraOutput--><!--Device-camera-interface DepthDataOutput extends CameraOutput-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Unsubscribes from depth data availability events.
 
 **Since:** 13
 
+<!--Device-DepthDataOutput-off(type: 'depthDataAvailable', callback?: AsyncCallback<DepthData>): void--><!--Device-DepthDataOutput-off(type: 'depthDataAvailable', callback?: AsyncCallback<DepthData>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -34,8 +38,8 @@ Unsubscribes from depth data availability events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'depthDataAvailable' | Yes | Event type. The value is fixed at **'depthDataAvailable'**. The event canbe listened for when a depthDataOutput instance is created. |
-| callback | AsyncCallback&lt;DepthData&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback objectcannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacksare canceled. |
+| type | 'depthDataAvailable' | Yes | Event type. The value is fixed at **'depthDataAvailable'**. The event can be listened for when a depthDataOutput instance is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DepthData> | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 **Error codes:**
 
@@ -71,6 +75,8 @@ Unsubscribes from DepthDataOutput error events.
 
 **Since:** 13
 
+<!--Device-DepthDataOutput-off(type: 'error', callback?: ErrorCallback): void--><!--Device-DepthDataOutput-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -79,8 +85,8 @@ Unsubscribes from DepthDataOutput error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when adepthDataOutput instance is created. |
-| callback | ErrorCallback | No | Callback used to return the result. If this parameter is specified, thesubscription to the specified event with the specified callback is canceled. (The callback object cannot bean anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks arecanceled. |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a depthDataOutput instance is created. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 **Error codes:**
 
@@ -105,11 +111,13 @@ on(type: 'depthDataAvailable', callback: AsyncCallback<DepthData>): void
 
 Subscribes to depth data availability events. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 13
+
+<!--Device-DepthDataOutput-on(type: 'depthDataAvailable', callback: AsyncCallback<DepthData>): void--><!--Device-DepthDataOutput-on(type: 'depthDataAvailable', callback: AsyncCallback<DepthData>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -119,8 +127,8 @@ Subscribes to depth data availability events. This API uses an asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'depthDataAvailable' | Yes | Event type. The value is fixed at **'depthDataAvailable'**. The event canbe listened for when a depthDataOutput instance is created. |
-| callback | AsyncCallback&lt;DepthData&gt; | Yes | Callback used to listen for depth data. |
+| type | 'depthDataAvailable' | Yes | Event type. The value is fixed at **'depthDataAvailable'**. The event can be listened for when a depthDataOutput instance is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DepthData> | Yes | Callback used to listen for depth data. |
 
 **Error codes:**
 
@@ -154,11 +162,13 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to DepthDataOutput error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 13
+
+<!--Device-DepthDataOutput-on(type: 'error', callback: ErrorCallback): void--><!--Device-DepthDataOutput-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -168,8 +178,8 @@ Subscribes to DepthDataOutput error events. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when adepthDataOutput instance is created. |
-| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a depthDataOutput instance is created. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -202,6 +212,8 @@ Starts depth data output. This API uses a promise to return the result.
 
 **Since:** 13
 
+<!--Device-DepthDataOutput-start(): Promise<void>--><!--Device-DepthDataOutput-start(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -210,7 +222,7 @@ Starts depth data output. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -245,6 +257,8 @@ Stops depth data output. This API uses a promise to return the result.
 
 **Since:** 13
 
+<!--Device-DepthDataOutput-stop(): Promise<void>--><!--Device-DepthDataOutput-stop(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -253,7 +267,7 @@ Stops depth data output. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

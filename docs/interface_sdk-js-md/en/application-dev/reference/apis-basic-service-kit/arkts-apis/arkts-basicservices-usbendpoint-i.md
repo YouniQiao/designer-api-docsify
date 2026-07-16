@@ -1,15 +1,16 @@
 # USBEndpoint
 
-Represents the USB endpoint from which data is sent or received. You can obtain the USB endpoint through
-[USBInterface](arkts-basicservices-usbinterface-i.md).
+Represents the USB endpoint from which data is sent or received. You can obtain the USB endpoint through [USBInterface](arkts-basicservices-usbinterface-i.md).
 
-> **NOTE**
->
-> The host controller schedules the endpoint based on the endpoint type.
->
+> **NOTE**  
+>  
+> The host controller schedules the endpoint based on the endpoint type.  
+>  
 > The transmission characteristics are determined by the type during protocol layer packaging.
 
 **Since:** 9
+
+<!--Device-usbManager-interface USBEndpoint--><!--Device-usbManager-interface USBEndpoint-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -31,6 +32,8 @@ Endpoint address.
 
 **Since:** 9
 
+<!--Device-USBEndpoint-address: int--><!--Device-USBEndpoint-address: int-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## attributes
@@ -44,6 +47,8 @@ Endpoint attributes.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-USBEndpoint-attributes: int--><!--Device-USBEndpoint-attributes: int-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -59,6 +64,8 @@ Endpoint direction.
 
 **Since:** 9
 
+<!--Device-USBEndpoint-direction: USBRequestDirection--><!--Device-USBEndpoint-direction: USBRequestDirection-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## interfaceId
@@ -72,6 +79,8 @@ Unique ID of the interface to which the endpoint belongs.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-USBEndpoint-interfaceId: int--><!--Device-USBEndpoint-interfaceId: int-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -87,6 +96,8 @@ Endpoint interval.Unit: milliseconds.
 
 **Since:** 9
 
+<!--Device-USBEndpoint-interval: int--><!--Device-USBEndpoint-interval: int-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## maxPacketSize
@@ -100,6 +111,8 @@ Maximum size of data packets on the endpoint.Unit: bytes.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-USBEndpoint-maxPacketSize: int--><!--Device-USBEndpoint-maxPacketSize: int-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -115,6 +128,8 @@ Endpoint number.
 
 **Since:** 9
 
+<!--Device-USBEndpoint-number: number--><!--Device-USBEndpoint-number: number-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## type
@@ -128,6 +143,8 @@ Endpoint type. For details, see [UsbEndpointTransferType](arkts-basicservices-us
 **Type:** number
 
 **Since:** 9
+
+<!--Device-USBEndpoint-type: int--><!--Device-USBEndpoint-type: int-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 

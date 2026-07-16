@@ -1,5 +1,11 @@
 # queryDevices
 
+## 导入模块
+
+```TypeScript
+import { deviceManager } from '@kit.DriverDevelopmentKit';
+```
+
 ## queryDevices
 
 ```TypeScript
@@ -11,6 +17,8 @@ function queryDevices(busType?: number): Array<Readonly<Device>>
 **起始版本：** 10
 
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
+
+<!--Device-deviceManager-function queryDevices(busType?: int): Array<Readonly<Device>>--><!--Device-deviceManager-function queryDevices(busType?: int): Array<Readonly<Device>>-End-->
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
@@ -24,7 +32,7 @@ function queryDevices(busType?: number): Array<Readonly<Device>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Readonly&lt;Device&gt;&gt; | 设备信息列表。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Readonly<Device>> | 设备信息列表。 |
 
 **错误码：**
 

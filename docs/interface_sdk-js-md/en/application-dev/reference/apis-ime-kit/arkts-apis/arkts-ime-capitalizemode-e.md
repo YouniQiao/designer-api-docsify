@@ -4,6 +4,8 @@ Enumerates the modes of capitalizing the first letter of a text.
 
 **Since:** 20
 
+<!--Device-inputMethodEngine-export enum CapitalizeMode--><!--Device-inputMethodEngine-export enum CapitalizeMode-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## NONE
@@ -15,6 +17,8 @@ NONE = 0
 Capitalize nothing.
 
 **Since:** 20
+
+<!--Device-CapitalizeMode-NONE = 0--><!--Device-CapitalizeMode-NONE = 0-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -28,6 +32,8 @@ Capitalize the first letter of each sentence.
 
 **Since:** 20
 
+<!--Device-CapitalizeMode-SENTENCES--><!--Device-CapitalizeMode-SENTENCES-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## WORDS
@@ -40,6 +46,8 @@ Capitalize the first letter of each word.
 
 **Since:** 20
 
+<!--Device-CapitalizeMode-WORDS--><!--Device-CapitalizeMode-WORDS-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## CHARACTERS
@@ -51,6 +59,8 @@ CHARACTERS
 Capitalize each letter.
 
 **Since:** 20
+
+<!--Device-CapitalizeMode-CHARACTERS--><!--Device-CapitalizeMode-CHARACTERS-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 

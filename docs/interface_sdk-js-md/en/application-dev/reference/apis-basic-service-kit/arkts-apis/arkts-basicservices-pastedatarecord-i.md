@@ -1,9 +1,10 @@
 # PasteDataRecord
 
-Provides **PasteDataRecord** APIs. A **PasteDataRecord** is an abstract definition of the content in the
-pasteboard. The pasteboard content consists of one or more plain text, HTML, URI, or Want records.
+Provides **PasteDataRecord** APIs. A **PasteDataRecord** is an abstract definition of the content in the pasteboard. The pasteboard content consists of one or more plain text, HTML, URI, or Want records.
 
 **Since:** 7
+
+<!--Device-pasteboard-interface PasteDataRecord--><!--Device-pasteboard-interface PasteDataRecord-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -19,11 +20,11 @@ import { pasteboard } from '@kit.BasicServicesKit';
 addEntry(type: string, value: ValueType): void
 ```
 
-Adds PasteData of an extra type to **PasteDataRecord**. The type added using this method is not the
-default type of **Record**. You can only use the
-[getData](arkts-basicservices-pastedatarecord-i.md#getdata-1) API to read the corresponding data.
+Adds PasteData of an extra type to **PasteDataRecord**. The type added using this method is not the default type of **Record**. You can only use the [getData](arkts-basicservices-pastedatarecord-i.md#getdata-1) API to read the corresponding data.
 
 **Since:** 14
+
+<!--Device-PasteDataRecord-addEntry(type: string, value: ValueType): void--><!--Device-PasteDataRecord-addEntry(type: string, value: ValueType): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -31,8 +32,8 @@ default type of **Record**. You can only use the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of extra data. The value can be a predefined MIME type listed in[Constants](../../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#constants),including HTML, WANT, plain text, URI, and pixel map, or a custom type.The value of **mimeType** cannot exceed 1024 bytes. |
-| value | ValueType | Yes | Content of extra data. |
+| type | string | Yes | Type of extra data. The value can be a predefined MIME type listed in [Constants](../../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#constants),including HTML, WANT, plain text, URI, and pixel map, or a custom type.The value of **mimeType** cannot exceed 1024 bytes. |
+| value | [ValueType](arkts-basicservices-valuetype-t.md) | Yes | Content of extra data. |
 
 **Error codes:**
 
@@ -60,8 +61,7 @@ record.addEntry(pasteboard.MIMETYPE_TEXT_HTML, html);
 convertToText(callback: AsyncCallback<string>): void
 ```
 
-Forcibly converts the content in a **PasteData** object to text. This API uses an asynchronous callback to return
-the result.
+Forcibly converts the content in a **PasteData** object to text. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -69,13 +69,15 @@ the result.
 
 **Substitutes:** [toPlainText()](arkts-basicservices-pastedatarecord-i.md#toplaintext-1)
 
+<!--Device-PasteDataRecord-convertToText(callback: AsyncCallback<string>): void--><!--Device-PasteDataRecord-convertToText(callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -113,13 +115,15 @@ Forcibly converts the content in a **PasteData** object to text. This API uses a
 
 **Substitutes:** [toPlainText()](arkts-basicservices-pastedatarecord-i.md#toplaintext-1)
 
+<!--Device-PasteDataRecord-convertToText(): Promise<string>--><!--Device-PasteDataRecord-convertToText(): Promise<string>-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the text obtained from the conversion. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the text obtained from the conversion. |
 
 **Example**
 
@@ -145,6 +149,8 @@ Obtains data of the specified type from **PasteDataRecord**.
 
 **Since:** 14
 
+<!--Device-PasteDataRecord-getData(type: string): Promise<ValueType>--><!--Device-PasteDataRecord-getData(type: string): Promise<ValueType>-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
@@ -157,7 +163,7 @@ Obtains data of the specified type from **PasteDataRecord**.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ValueType&gt; | Promise used to return the data of the specified type in**PasteDataRecord**.If **PasteDataRecord** contains data of multiple types,the non-**PasteDataRecord** data of the defaulttype can be obtained only through this API. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ValueType> | Promise used to return the data of the specified type in **PasteDataRecord**.* If **PasteDataRecord** contains data of multiple types,the non-**PasteDataRecord** data of the default type can be obtained only through this API. |
 
 **Error codes:**
 
@@ -199,19 +205,21 @@ Obtains the intersection of the input types and the types of the PasteData.
 
 **Since:** 14
 
+<!--Device-PasteDataRecord-getValidTypes(types: Array<string>): Array<string>--><!--Device-PasteDataRecord-getValidTypes(types: Array<string>): Array<string>-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| types | Array&lt;string&gt; | Yes | List of the types. |
+| types | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | List of the types. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Intersection of the input types and the types of the PasteData obtained. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Intersection of the input types and the types of the PasteData obtained. |
 
 **Error codes:**
 
@@ -248,6 +256,8 @@ Forcibly converts HTML, plain, and URI content in a **PasteDataRecord** to the p
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PasteDataRecord-toPlainText(): string--><!--Device-PasteDataRecord-toPlainText(): string-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Return value:**
@@ -271,16 +281,15 @@ console.info(`Succeeded in converting to text. Text: ${text}`);
 data: Record<string, ArrayBuffer>
 ```
 
-Content of custom data.
-This parameter is read-only and does not support assignment operations.
-To assign a value, please use [createData](arkts-basicservices-createdata-f.md#createdata-1)
-** or ** [addEntry](arkts-basicservices-pastedatarecord-i.md#addentry-1)**
+Content of custom data.This parameter is read-only and does not support assignment operations.To assign a value, please use [createData](arkts-basicservices-createdata-f.md#createdata-1)** or ** [addEntry](arkts-basicservices-pastedatarecord-i.md#addentry-1)**
 
 **Type:** Record<string, ArrayBuffer>
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PasteDataRecord-data: Record<string, ArrayBuffer>--><!--Device-PasteDataRecord-data: Record<string, ArrayBuffer>-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -290,16 +299,15 @@ To assign a value, please use [createData](arkts-basicservices-createdata-f.md#c
 htmlText: string
 ```
 
-HTML content.
-This parameter is read-only and does not support assignment operations.
-To assign a value, please use [createData](arkts-basicservices-createdata-f.md#createdata-1)
-** or ** [addEntry](arkts-basicservices-pastedatarecord-i.md#addentry-1)**
+HTML content.This parameter is read-only and does not support assignment operations.To assign a value, please use [createData](arkts-basicservices-createdata-f.md#createdata-1)** or ** [addEntry](arkts-basicservices-pastedatarecord-i.md#addentry-1)**
 
 **Type:** string
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PasteDataRecord-htmlText: string--><!--Device-PasteDataRecord-htmlText: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -309,16 +317,15 @@ To assign a value, please use [createData](arkts-basicservices-createdata-f.md#c
 mimeType: string
 ```
 
-Default type of PasteDataRecord.
-This parameter is read-only and does not support assignment operations.
-To assign a value, please use [createData](arkts-basicservices-createdata-f.md#createdata-1)
-** or ** [addEntry](arkts-basicservices-pastedatarecord-i.md#addentry-1)**
+Default type of PasteDataRecord.This parameter is read-only and does not support assignment operations.To assign a value, please use [createData](arkts-basicservices-createdata-f.md#createdata-1)** or ** [addEntry](arkts-basicservices-pastedatarecord-i.md#addentry-1)**
 
 **Type:** string
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PasteDataRecord-mimeType: string--><!--Device-PasteDataRecord-mimeType: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -328,16 +335,15 @@ To assign a value, please use [createData](arkts-basicservices-createdata-f.md#c
 pixelMap: image.PixelMap
 ```
 
-PixelMap content.
-This parameter is read-only and does not support assignment operations.
-To assign a value, please use [createData](arkts-basicservices-createdata-f.md#createdata-1)
-** or ** [addEntry](arkts-basicservices-pastedatarecord-i.md#addentry-1)**
+PixelMap content.This parameter is read-only and does not support assignment operations.To assign a value, please use [createData](arkts-basicservices-createdata-f.md#createdata-1)** or ** [addEntry](arkts-basicservices-pastedatarecord-i.md#addentry-1)**
 
 **Type:** image.PixelMap
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PasteDataRecord-pixelMap: image.PixelMap--><!--Device-PasteDataRecord-pixelMap: image.PixelMap-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -347,16 +353,15 @@ To assign a value, please use [createData](arkts-basicservices-createdata-f.md#c
 plainText: string
 ```
 
-Plain text.
-This parameter is read-only and does not support assignment operations.
-To assign a value, please use [createData](arkts-basicservices-createdata-f.md#createdata-1)
-** or ** [addEntry](arkts-basicservices-pastedatarecord-i.md#addentry-1)**
+Plain text.This parameter is read-only and does not support assignment operations.To assign a value, please use [createData](arkts-basicservices-createdata-f.md#createdata-1)** or ** [addEntry](arkts-basicservices-pastedatarecord-i.md#addentry-1)**
 
 **Type:** string
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PasteDataRecord-plainText: string--><!--Device-PasteDataRecord-plainText: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -366,16 +371,15 @@ To assign a value, please use [createData](arkts-basicservices-createdata-f.md#c
 uri: string
 ```
 
-URI content.
-This parameter is read-only and does not support assignment operations.
-To assign a value, please use [createData](arkts-basicservices-createdata-f.md#createdata-1)
-** or ** [addEntry](arkts-basicservices-pastedatarecord-i.md#addentry-1)**
+URI content.This parameter is read-only and does not support assignment operations.To assign a value, please use [createData](arkts-basicservices-createdata-f.md#createdata-1)** or ** [addEntry](arkts-basicservices-pastedatarecord-i.md#addentry-1)**
 
 **Type:** string
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PasteDataRecord-uri: string--><!--Device-PasteDataRecord-uri: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -385,16 +389,15 @@ To assign a value, please use [createData](arkts-basicservices-createdata-f.md#c
 want: Want
 ```
 
-Want content.
-This parameter is read-only and does not support assignment operations.
-To assign a value, please use [createData](arkts-basicservices-createdata-f.md#createdata-1)
-** or ** [addEntry](arkts-basicservices-pastedatarecord-i.md#addentry-1)**
+Want content.This parameter is read-only and does not support assignment operations.To assign a value, please use [createData](arkts-basicservices-createdata-f.md#createdata-1)** or ** [addEntry](arkts-basicservices-pastedatarecord-i.md#addentry-1)**
 
 **Type:** Want
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PasteDataRecord-want: Want--><!--Device-PasteDataRecord-want: Want-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 

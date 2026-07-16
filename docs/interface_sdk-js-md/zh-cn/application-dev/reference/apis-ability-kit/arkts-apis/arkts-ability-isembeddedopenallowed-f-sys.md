@@ -1,5 +1,11 @@
 # isEmbeddedOpenAllowed（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
+```
+
 ## isEmbeddedOpenAllowed
 
 ```TypeScript
@@ -12,6 +18,8 @@ function isEmbeddedOpenAllowed(context: Context, appId: string): Promise<boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-abilityManager-function isEmbeddedOpenAllowed(context: Context, appId: string): Promise<boolean>--><!--Device-abilityManager-function isEmbeddedOpenAllowed(context: Context, appId: string): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -20,14 +28,14 @@ function isEmbeddedOpenAllowed(context: Context, appId: string): Promise<boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 嵌入式拉起EmbeddableUIAbility的调用方Context。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 嵌入式拉起EmbeddableUIAbility的调用方Context。 |
 | appId | string | 是 | 应用的唯一标识，由云端统一分配。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示允许嵌入式启动；返回false表示不允许嵌入式启动。 |
+| Promise<boolean> | Promise对象。返回true表示允许嵌入式启动；返回false表示不允许嵌入式启动。 |
 
 **错误码：**
 

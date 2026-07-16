@@ -1,5 +1,11 @@
 # queryPrinterInfoByIp（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+```
+
 ## queryPrinterInfoByIp
 
 ```TypeScript
@@ -13,6 +19,8 @@ function queryPrinterInfoByIp(printerIp: string): Promise<void>
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-print-function queryPrinterInfoByIp(printerIp: string): Promise<void>--><!--Device-print-function queryPrinterInfoByIp(printerIp: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -28,7 +36,7 @@ function queryPrinterInfoByIp(printerIp: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise<void> | the promise returned by the function. |
 
 **错误码：**
 

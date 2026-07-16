@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-image-interface BinaryBufferInfo--><!--Device-image-interface BinaryBufferInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
+
+## 导入模块
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+```
 
 ## bytesPerRow
 
@@ -19,6 +27,8 @@ bytesPerRow?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BinaryBufferInfo-bytesPerRow?: int--><!--Device-BinaryBufferInfo-bytesPerRow?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -36,6 +46,8 @@ data: ArrayBuffer
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-BinaryBufferInfo-data: ArrayBuffer--><!--Device-BinaryBufferInfo-data: ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 ## size
@@ -51,6 +63,8 @@ size: Size
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-BinaryBufferInfo-size: Size--><!--Device-BinaryBufferInfo-size: Size-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 

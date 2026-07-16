@@ -22,6 +22,8 @@ Obtains the pair state of a specified device.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-connection-function getPairState(deviceId: string): BondState--><!--Device-connection-function getPairState(deviceId: string): BondState-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -34,7 +36,7 @@ Obtains the pair state of a specified device.
 
 | Type | Description |
 | --- | --- |
-| BondState | Returns the pair state. |
+| [BondState](arkts-connectivity-bondstate-e.md) | Returns the pair state. |
 
 **Error codes:**
 

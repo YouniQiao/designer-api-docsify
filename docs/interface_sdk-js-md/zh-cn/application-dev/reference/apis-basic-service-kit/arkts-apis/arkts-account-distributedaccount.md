@@ -4,7 +4,15 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace distributedAccount--><!--Device-unnamed-declare namespace distributedAccount-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
+
+## 导入模块
+
+```TypeScript
+import { distributedAccount } from '@kit.BasicServicesKit';
+```
 
 ## 汇总
 

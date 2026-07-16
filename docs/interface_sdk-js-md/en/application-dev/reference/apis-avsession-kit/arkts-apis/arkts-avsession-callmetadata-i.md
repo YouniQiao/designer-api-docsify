@@ -4,6 +4,8 @@ The metadata of the current call.
 
 **Since:** 11
 
+<!--Device-avSession-interface CallMetadata--><!--Device-avSession-interface CallMetadata-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ The displayed picture that represents a particular user.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CallMetadata-avatar?: image.PixelMap--><!--Device-CallMetadata-avatar?: image.PixelMap-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## name
@@ -42,6 +46,8 @@ The displayed user name of current call.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CallMetadata-name?: string--><!--Device-CallMetadata-name?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## phoneNumber
@@ -57,6 +63,8 @@ The phone number of current call.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CallMetadata-phoneNumber?: string--><!--Device-CallMetadata-phoneNumber?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 

@@ -18,6 +18,8 @@ Get call barring status.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-call-function getCallRestrictionStatus(slotId: int, type: CallRestrictionType, callback: AsyncCallback<RestrictionStatus>): void--><!--Device-call-function getCallRestrictionStatus(slotId: int, type: CallRestrictionType, callback: AsyncCallback<RestrictionStatus>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -27,8 +29,8 @@ Get call barring status.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| type | CallRestrictionType | Yes | Indicates which type of call restriction to obtain. |
-| callback | AsyncCallback&lt;RestrictionStatus&gt; | Yes | Indicates the callback for getting the call restriction status. |
+| type | [CallRestrictionType](arkts-telephony-callrestrictiontype-e-sys.md) | Yes | Indicates which type of call restriction to obtain. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<RestrictionStatus> | Yes | Indicates the callback for getting the call restriction status. |
 
 **Error codes:**
 
@@ -70,6 +72,8 @@ Get call barring status.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-call-function getCallRestrictionStatus(slotId: int, type: CallRestrictionType): Promise<RestrictionStatus>--><!--Device-call-function getCallRestrictionStatus(slotId: int, type: CallRestrictionType): Promise<RestrictionStatus>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -79,13 +83,13 @@ Get call barring status.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| type | CallRestrictionType | Yes | Indicates which type of call restriction to obtain. |
+| type | [CallRestrictionType](arkts-telephony-callrestrictiontype-e-sys.md) | Yes | Indicates which type of call restriction to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RestrictionStatus&gt; | Returns the call restriction status. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<RestrictionStatus> | Returns the call restriction status. |
 
 **Error codes:**
 

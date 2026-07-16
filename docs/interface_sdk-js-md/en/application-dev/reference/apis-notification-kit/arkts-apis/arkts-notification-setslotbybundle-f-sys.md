@@ -12,15 +12,15 @@ import { notificationManager } from '@kit.NotificationKit';
 function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback: AsyncCallback<void>): void
 ```
 
-Sets the notification slot for a specified application. This API uses an asynchronous callback to return the
-result.
+Sets the notification slot for a specified application. This API uses an asynchronous callback to return the result.
 
-Before setting a notification slot, create a slot through
-[addSlot](arkts-notification-addslot-f-sys.md#addslot-1).
+Before setting a notification slot, create a slot through [addSlot](arkts-notification-addslot-f-sys.md#addslot-1).
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -30,9 +30,9 @@ Before setting a notification slot, create a slot through
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
-| slot | NotificationSlot | Yes | Notification slot. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
+| slot | [NotificationSlot](arkts-notification-notificationslot-i-sys.md) | Yes | Notification slot. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -78,12 +78,13 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<
 
 Sets the notification slot for a specified application. This API uses a promise to return the result.
 
-Before setting a notification slot, create a slot through
-[addSlot](arkts-notification-addslot-f-sys.md#addslot-1).
+Before setting a notification slot, create a slot through [addSlot](arkts-notification-addslot-f-sys.md#addslot-1).
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<void>--><!--Device-notificationManager-function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -93,14 +94,14 @@ Before setting a notification slot, create a slot through
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
-| slot | NotificationSlot | Yes | Notification slot. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
+| slot | [NotificationSlot](arkts-notification-notificationslot-i-sys.md) | Yes | Notification slot. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

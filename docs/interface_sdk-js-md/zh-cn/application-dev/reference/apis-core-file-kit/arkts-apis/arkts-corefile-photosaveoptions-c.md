@@ -8,7 +8,15 @@
 
 **替代接口：** [SaveButtonOptions](../../apis-arkui/arkts-components/arkts-arkui-savebuttonoptions-i.md)
 
+<!--Device-picker-class PhotoSaveOptions--><!--Device-picker-class PhotoSaveOptions-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
+
+## 导入模块
+
+```TypeScript
+import { picker } from '@kit.CoreFileKit';
+```
 
 ## newFileNames
 
@@ -25,6 +33,8 @@ newFileNames?: Array<string>
 **废弃版本：** 18
 
 **替代接口：** [SaveButtonOptions](../../apis-arkui/arkts-components/arkts-arkui-savebuttonoptions-i.md)
+
+<!--Device-PhotoSaveOptions-newFileNames?: Array<string>--><!--Device-PhotoSaveOptions-newFileNames?: Array<string>-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

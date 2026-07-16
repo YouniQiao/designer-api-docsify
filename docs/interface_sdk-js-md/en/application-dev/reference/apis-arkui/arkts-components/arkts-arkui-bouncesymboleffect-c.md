@@ -6,6 +6,8 @@ Defines BounceSymbolEffect class, which inherits from **SymbolEffect**.
 
 **Since:** 12
 
+<!--Device-unnamed-declare class BounceSymbolEffect extends SymbolEffect--><!--Device-unnamed-declare class BounceSymbolEffect extends SymbolEffect-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -24,14 +26,16 @@ A constructor used to create a **ScaleSymbolEffect** instance, which comes with 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-BounceSymbolEffect-constructor(scope?: EffectScope, direction?: EffectDirection)--><!--Device-BounceSymbolEffect-constructor(scope?: EffectScope, direction?: EffectDirection)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | EffectScope | No | Effect scope.<br>Default value: **EffectScope.LAYER** |
-| direction | EffectDirection | No | Effect direction.<br>Default value: **EffectDirection.DOWN** |
+| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | Effect scope.<br>Default value: **EffectScope.LAYER** |
+| direction | [EffectDirection](arkts-arkui-effectdirection-e.md) | No | Effect direction.<br>Default value: **EffectDirection.DOWN** |
 
 ## direction
 
@@ -52,6 +56,8 @@ Default value: **EffectDirection.DOWN**
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-BounceSymbolEffect-direction?: EffectDirection--><!--Device-BounceSymbolEffect-direction?: EffectDirection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,6 +80,8 @@ Default value: **EffectScope.LAYER**
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-BounceSymbolEffect-scope?: EffectScope--><!--Device-BounceSymbolEffect-scope?: EffectScope-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

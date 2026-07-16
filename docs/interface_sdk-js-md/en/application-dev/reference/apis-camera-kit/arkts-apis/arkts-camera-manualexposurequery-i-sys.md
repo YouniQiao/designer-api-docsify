@@ -4,6 +4,8 @@ Provides APIs to obtain the manual exposure range supported.
 
 **Since:** 24
 
+<!--Device-camera-interface ManualExposureQuery--><!--Device-camera-interface ManualExposureQuery-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -24,6 +26,8 @@ Obtains the supported manual exposure durations.
 
 **Since:** 11
 
+<!--Device-ManualExposureQuery-getSupportedExposureRange(): Array<int>--><!--Device-ManualExposureQuery-getSupportedExposureRange(): Array<int>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -32,7 +36,7 @@ Obtains the supported manual exposure durations.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Array of manual exposure durations supported, in ms. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Array of manual exposure durations supported, in ms. |
 
 **Error codes:**
 

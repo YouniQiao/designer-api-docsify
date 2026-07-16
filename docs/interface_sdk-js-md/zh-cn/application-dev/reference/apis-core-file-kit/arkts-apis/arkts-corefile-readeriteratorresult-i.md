@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface ReaderIteratorResult--><!--Device-unnamed-export interface ReaderIteratorResult-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+```
 
 ## done
 
@@ -17,6 +25,8 @@ done: boolean
 **类型：** boolean
 
 **起始版本：** 11
+
+<!--Device-ReaderIteratorResult-done: boolean--><!--Device-ReaderIteratorResult-done: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -31,6 +41,8 @@ value: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-ReaderIteratorResult-value: string--><!--Device-ReaderIteratorResult-value: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

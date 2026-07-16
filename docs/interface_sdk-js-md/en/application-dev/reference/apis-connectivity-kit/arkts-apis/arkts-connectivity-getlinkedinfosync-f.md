@@ -12,12 +12,13 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getLinkedInfoSync(): WifiLinkedInfo
 ```
 
-Obtain connection information about the Wi-Fi connection.this apireturns the result syncchronously.
-If does't have the permission of ohos.permission.GET_WIFI_PEERS_MAC, return random bssid.
+Obtain connection information about the Wi-Fi connection.this apireturns the result syncchronously.If does't have the permission of ohos.permission.GET_WIFI_PEERS_MAC, return random bssid.
 
 **Since:** 18
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
+
+<!--Device-wifiManager-function getLinkedInfoSync(): WifiLinkedInfo--><!--Device-wifiManager-function getLinkedInfoSync(): WifiLinkedInfo-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -25,7 +26,7 @@ If does't have the permission of ohos.permission.GET_WIFI_PEERS_MAC, return rand
 
 | Type | Description |
 | --- | --- |
-| WifiLinkedInfo | Returns Wi-Fi linked information. |
+| [WifiLinkedInfo](arkts-connectivity-wifilinkedinfo-i.md) | Returns Wi-Fi linked information. |
 
 **Error codes:**
 

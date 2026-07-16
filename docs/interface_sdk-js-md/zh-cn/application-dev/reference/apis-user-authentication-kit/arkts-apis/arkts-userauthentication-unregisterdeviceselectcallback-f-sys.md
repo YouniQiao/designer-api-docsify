@@ -1,5 +1,11 @@
 # unregisterDeviceSelectCallback（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+```
+
 ## unregisterDeviceSelectCallback
 
 ```TypeScript
@@ -13,6 +19,8 @@ function unregisterDeviceSelectCallback(): void
 **需要权限：** ohos.permission.USE_USER_IDM
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-companionDeviceAuth-function unregisterDeviceSelectCallback(): void--><!--Device-companionDeviceAuth-function unregisterDeviceSelectCallback(): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 

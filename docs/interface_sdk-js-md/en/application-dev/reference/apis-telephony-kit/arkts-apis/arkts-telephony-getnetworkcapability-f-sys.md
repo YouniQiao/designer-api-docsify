@@ -19,6 +19,10 @@ Get the network capability state according to the specified capability type.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-radio-function getNetworkCapability(slotId: int, type: NetworkCapabilityType,
+    callback: AsyncCallback<NetworkCapabilityState>): void--><!--Device-radio-function getNetworkCapability(slotId: int, type: NetworkCapabilityType,
+    callback: AsyncCallback<NetworkCapabilityState>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -28,8 +32,8 @@ Get the network capability state according to the specified capability type.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| type | NetworkCapabilityType | Yes | Indicates the service type of the {@link NetworkCapabilityType}. |
-| callback | AsyncCallback&lt;NetworkCapabilityState&gt; | Yes | Indicates the callback for gettingthe network capability state. |
+| type | [NetworkCapabilityType](arkts-telephony-networkcapabilitytype-e-sys.md) | Yes | Indicates the service type of the {@link NetworkCapabilityType}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<NetworkCapabilityState> | Yes | Indicates the callback for getting the network capability state. |
 
 **Error codes:**
 
@@ -73,6 +77,8 @@ Get the network capability state according to the specified capability type.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-radio-function getNetworkCapability(slotId: int, type: NetworkCapabilityType): Promise<NetworkCapabilityState>--><!--Device-radio-function getNetworkCapability(slotId: int, type: NetworkCapabilityType): Promise<NetworkCapabilityState>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -82,13 +88,13 @@ Get the network capability state according to the specified capability type.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| type | NetworkCapabilityType | Yes | Indicates the service type of the {@link NetworkCapabilityType}. |
+| type | [NetworkCapabilityType](arkts-telephony-networkcapabilitytype-e-sys.md) | Yes | Indicates the service type of the {@link NetworkCapabilityType}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetworkCapabilityState&gt; | Returns the callback for getting the network capability state. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetworkCapabilityState> | Returns the callback for getting the network capability state. |
 
 **Error codes:**
 

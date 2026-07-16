@@ -18,6 +18,8 @@ Checks whether the radio service is enabled.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-radio-function isRadioOn(slotId: int, callback: AsyncCallback<boolean>): void--><!--Device-radio-function isRadioOn(slotId: int, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -25,7 +27,7 @@ Checks whether the radio service is enabled.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Returns {@code true} If the radio service is enabled.Returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Returns {@code true} If the radio service is enabled.Returns {@code false} otherwise. |
 
 **Error codes:**
 
@@ -67,6 +69,8 @@ Checks whether the radio service is enabled.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-radio-function isRadioOn(slotId?: int): Promise<boolean>--><!--Device-radio-function isRadioOn(slotId?: int): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -79,7 +83,7 @@ Checks whether the radio service is enabled.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns {@code true} If the radio service is enabled; returns {@code false} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns {@code true} If the radio service is enabled; returns {@code false} otherwise. |
 
 **Error codes:**
 
@@ -119,13 +123,15 @@ Checks whether the radio service is enabled.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-radio-function isRadioOn(callback: AsyncCallback<boolean>): void--><!--Device-radio-function isRadioOn(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Returns {@code true} If the radio service is enabled.Returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Returns {@code true} If the radio service is enabled.Returns {@code false} otherwise. |
 
 **Error codes:**
 

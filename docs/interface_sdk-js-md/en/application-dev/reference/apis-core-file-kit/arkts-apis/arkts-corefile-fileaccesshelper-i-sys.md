@@ -6,6 +6,8 @@ Provides a **FileAccessHelper** object.
 
 **Deprecated since:** 23
 
+<!--Device-fileAccess-interface FileAccessHelper--><!--Device-fileAccess-interface FileAccessHelper-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -32,6 +34,8 @@ Checks whether a file or directory exists. This API uses a promise to return the
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-access(sourceFileUri: string) : Promise<boolean>--><!--Device-FileAccessHelper-access(sourceFileUri: string) : Promise<boolean>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -46,7 +50,7 @@ Checks whether a file or directory exists. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns whether it exists. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns whether it exists. |
 
 **Error codes:**
 
@@ -131,6 +135,8 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-access(sourceFileUri: string, callback: AsyncCallback<boolean>): void--><!--Device-FileAccessHelper-access(sourceFileUri: string, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -140,7 +146,7 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sourceFileUri | string | Yes | Indicates the selected file or directory. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | The callback is used to return whether it exists. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | The callback is used to return whether it exists. |
 
 **Error codes:**
 
@@ -227,6 +233,8 @@ Copies a file or directory. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, force?: boolean): Promise<Array<CopyResult>>--><!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, force?: boolean): Promise<Array<CopyResult>>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -236,14 +244,14 @@ Copies a file or directory. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sourceUri | string | Yes | URI of the source file or directory to copy. For example,**file://docs/storage/Users/currentUser/Download/1.txt**. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. Forexample, **file://docs/storage/Users/currentUser/Download/test**. |
-| force | boolean | No | Whether to forcibly overwrite the file with the same name. If **force** is **true**,the file with the same name will be overwritten. If **force** is **false** or not specified, the file withthe same name will not be overwritten. The default value is **false**. |
+| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
+| force | boolean | No | Whether to forcibly overwrite the file with the same name. If **force** is **true**,the file with the same name will be overwritten. If **force** is **false** or not specified, the file with the same name will not be overwritten. The default value is **false**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;CopyResult&gt;&gt; | Promise used to return the result. If the file or directory is copiedsuccessfully, no information is returned. If the file copy fails, a **copyResult** array is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<CopyResult>> | Promise used to return the result. If the file or directory is copied successfully, no information is returned. If the file copy fails, a **copyResult** array is returned. |
 
 ## copy
 
@@ -261,6 +269,8 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResult>>): void--><!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResult>>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -270,8 +280,8 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sourceUri | string | Yes | URI of the source file or directory to copy. For example,**file://docs/storage/Users/currentUser/Download/1.txt**. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. Forexample, **file://docs/storage/Users/currentUser/Download/test**. |
-| callback | AsyncCallback&lt;Array&lt;CopyResult&gt;&gt; | Yes | Callback invoked to return the result. If the file ordirectory is copied successfully, no information is returned. If the copy fails, a **copyResult** array isreturned. |
+| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<CopyResult>> | Yes | Callback invoked to return the result. If the file or directory is copied successfully, no information is returned. If the copy fails, a **copyResult** array is returned. |
 
 **Example**
 
@@ -315,8 +325,7 @@ try {
 copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<CopyResult>>): void
 ```
 
-Copies a file or directory. If a file with the same name already exists, you can choose whether to forcibly
-overwrite the original file. This API uses an asynchronous callback to return the result.
+Copies a file or directory. If a file with the same name already exists, you can choose whether to forcibly overwrite the original file. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -325,6 +334,8 @@ overwrite the original file. This API uses an asynchronous callback to return th
 **Substitutes:** copy(srcUri:
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<CopyResult>>): void--><!--Device-FileAccessHelper-copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<CopyResult>>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -335,9 +346,9 @@ overwrite the original file. This API uses an asynchronous callback to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sourceUri | string | Yes | URI of the source file or directory to copy. For example,**file://docs/storage/Users/currentUser/Download/1.txt**. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. Forexample, **file://docs/storage/Users/currentUser/Download/test**. |
-| force | boolean | Yes | Whether to forcibly overwrite the original file with the same name. If **force** isset to **true**, the original file is forcibly overwritten. If **force** is left empty or set to **false**,the original file is not overwritten. |
-| callback | AsyncCallback&lt;Array&lt;CopyResult&gt;&gt; | Yes | Callback invoked to return the result. If the file ordirectory is copied successfully, no information is returned. If the copy fails, a **copyResult** array isreturned. |
+| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
+| force | boolean | Yes | Whether to forcibly overwrite the original file with the same name. If **force** is set to **true**, the original file is forcibly overwritten. If **force** is left empty or set to **false**,the original file is not overwritten. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<CopyResult>> | Yes | Callback invoked to return the result. If the file or directory is copied successfully, no information is returned. If the copy fails, a **copyResult** array is returned. |
 
 **Example**
 
@@ -393,6 +404,8 @@ Copies a file with an alternative file name. This API uses a promise to return t
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FileAccessHelper-copyFile(sourceUri: string, destUri: string, fileName: string): Promise<string>--><!--Device-FileAccessHelper-copyFile(sourceUri: string, destUri: string, fileName: string): Promise<string>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -402,21 +415,21 @@ Copies a file with an alternative file name. This API uses a promise to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sourceUri | string | Yes | URI of the source file or directory to copy. For example,**file://docs/storage/Users/currentUser/Download/1.txt**. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. Forexample, **file://docs/storage/Users/currentUser/Download/test**. |
-| fileName | string | Yes | File name to use if there is a file with the same name as the source file in thedestination directory. |
+| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
+| fileName | string | Yes | File name to use if there is a file with the same name as the source file in the destination directory. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | URI of the file generated. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | URI of the file generated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
 | 13900004 | Interrupted system call |
@@ -484,6 +497,8 @@ Copies a file with an alternative file name. This API uses an asynchronous callb
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FileAccessHelper-copyFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-copyFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -493,16 +508,16 @@ Copies a file with an alternative file name. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sourceUri | string | Yes | URI of the source file or directory to copy. For example,**file://docs/storage/Users/currentUser/Download/1.txt**. |
-| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. Forexample, **file://docs/storage/Users/currentUser/Download/test**. |
-| fileName | string | Yes | File name to use if there is a file with the same name as the source file in thedestination directory. |
-| callback | AsyncCallback&lt;string&gt; | Yes | URI of the file generated. |
+| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
+| fileName | string | Yes | File name to use if there is a file with the same name as the source file in the destination directory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | URI of the file generated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
 | 13900004 | Interrupted system call |
@@ -567,6 +582,8 @@ Creates a file in a directory. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-createFile(uri: string, displayName: string) : Promise<string>--><!--Device-FileAccessHelper-createFile(uri: string, displayName: string) : Promise<string>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -582,7 +599,7 @@ Creates a file in a directory. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the new file's URI. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the new file's URI. |
 
 **Error codes:**
 
@@ -669,6 +686,8 @@ Creates a file in a directory. This API uses an asynchronous callback to return 
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-createFile(uri: string, displayName: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-createFile(uri: string, displayName: string, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -679,7 +698,7 @@ Creates a file in a directory. This API uses an asynchronous callback to return 
 | --- | --- | --- | --- |
 | uri | string | Yes | Represents a specific parent directory. |
 | displayName | string | Yes | Indicates the new file name, and supports with suffix. |
-| callback | AsyncCallback&lt;string&gt; | Yes | The callback is used to return the new file's URI. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | The callback is used to return the new file's URI. |
 
 **Error codes:**
 
@@ -763,6 +782,8 @@ Deletes a file or directory. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-delete(uri: string) : Promise<number>--><!--Device-FileAccessHelper-delete(uri: string) : Promise<number>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -777,7 +798,7 @@ Deletes a file or directory. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | @throws { BusinessError } 13900001 - Operation not permitted |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | @throws { BusinessError } 13900001 - Operation not permitted |
 
 **Error codes:**
 
@@ -859,6 +880,8 @@ Deletes a file or directory. This API uses an asynchronous callback to return th
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-delete(uri: string, callback: AsyncCallback<number>): void--><!--Device-FileAccessHelper-delete(uri: string, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -868,7 +891,7 @@ Deletes a file or directory. This API uses an asynchronous callback to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the file or directory to be deleted. |
-| callback | AsyncCallback&lt;number&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes |  |
 
 **Error codes:**
 
@@ -951,6 +974,8 @@ Obtains a **FileInfo** object based on a relative path. This API uses a promise 
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-getFileInfoFromRelativePath(relativePath: string) : Promise<FileInfo>--><!--Device-FileAccessHelper-getFileInfoFromRelativePath(relativePath: string) : Promise<FileInfo>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -965,7 +990,7 @@ Obtains a **FileInfo** object based on a relative path. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FileInfo&gt; | Returns a FileInfo. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<FileInfo> | Returns a FileInfo. |
 
 **Example**
 
@@ -995,8 +1020,7 @@ async function getRelativePath() {
 getFileInfoFromRelativePath(relativePath: string, callback: AsyncCallback<FileInfo>) : void
 ```
 
-Obtains a **FileInfo** object based on a relative path. This API uses an asynchronous callback to return the
-result.
+Obtains a **FileInfo** object based on a relative path. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1005,6 +1029,8 @@ result.
 **Substitutes:** stat(file:
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-getFileInfoFromRelativePath(relativePath: string, callback: AsyncCallback<FileInfo>) : void--><!--Device-FileAccessHelper-getFileInfoFromRelativePath(relativePath: string, callback: AsyncCallback<FileInfo>) : void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -1015,7 +1041,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | relativePath | string | Yes | Indicates the selected file or directory. |
-| callback | AsyncCallback&lt;FileInfo&gt; | Yes | The callback is used to return a fileinfo object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FileInfo> | Yes | The callback is used to return a fileinfo object. |
 
 **Example**
 
@@ -1059,6 +1085,8 @@ Obtains a **FileInfo** object based on a URI. This API uses a promise to return 
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-getFileInfoFromUri(uri: string) : Promise<FileInfo>--><!--Device-FileAccessHelper-getFileInfoFromUri(uri: string) : Promise<FileInfo>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -1073,7 +1101,7 @@ Obtains a **FileInfo** object based on a URI. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FileInfo&gt; | Returns a FileInfo. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<FileInfo> | Returns a FileInfo. |
 
 **Example**
 
@@ -1114,6 +1142,8 @@ Obtains a **FileInfo** object based on a URI. This API uses an asynchronous call
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-getFileInfoFromUri(uri: string, callback: AsyncCallback<FileInfo>) : void--><!--Device-FileAccessHelper-getFileInfoFromUri(uri: string, callback: AsyncCallback<FileInfo>) : void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -1123,7 +1153,7 @@ Obtains a **FileInfo** object based on a URI. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the selected file or directory. |
-| callback | AsyncCallback&lt;FileInfo&gt; | Yes | The callback is used to return a fileinfo object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FileInfo> | Yes | The callback is used to return a fileinfo object. |
 
 **Example**
 
@@ -1158,16 +1188,15 @@ try {
 getRoots(): Promise<RootIterator>
 ```
 
-Obtains information about the device root nodes of the file management services associated with the **Helper**
-object.
-This API uses a promise to return a **RootIterator** object. You can use
-[next](arkts-corefile-fileiterator-i-sys.md#next-1) to return [RootInfo](arkts-corefile-rootinfo-i-sys.md).
+Obtains information about the device root nodes of the file management services associated with the **Helper** object.This API uses a promise to return a **RootIterator** object. You can use [next](arkts-corefile-fileiterator-i-sys.md#next-1) to return [RootInfo](arkts-corefile-rootinfo-i-sys.md).
 
 **Since:** 9
 
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-getRoots(): Promise<RootIterator>--><!--Device-FileAccessHelper-getRoots(): Promise<RootIterator>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -1177,7 +1206,7 @@ This API uses a promise to return a **RootIterator** object. You can use
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RootIterator&gt; | Returns a RootIterator. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<RootIterator> | Returns a RootIterator. |
 
 **Error codes:**
 
@@ -1256,16 +1285,15 @@ async function getRoots() {
 getRoots(callback: AsyncCallback<RootIterator>): void
 ```
 
-Obtains information about the device root nodes of the file management services associated with the **Helper**
-object.
-This API uses an asynchronous callback to return a **RootIterator** object. You can use
-[next](arkts-corefile-fileiterator-i-sys.md#next-1) to return [RootInfo](arkts-corefile-rootinfo-i-sys.md).
+Obtains information about the device root nodes of the file management services associated with the **Helper** object.This API uses an asynchronous callback to return a **RootIterator** object. You can use [next](arkts-corefile-fileiterator-i-sys.md#next-1) to return [RootInfo](arkts-corefile-rootinfo-i-sys.md).
 
 **Since:** 9
 
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-getRoots(callback: AsyncCallback<RootIterator>): void--><!--Device-FileAccessHelper-getRoots(callback: AsyncCallback<RootIterator>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -1275,7 +1303,7 @@ This API uses an asynchronous callback to return a **RootIterator** object. You 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;RootIterator&gt; | Yes | The callback is used to return a RootIterator. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<RootIterator> | Yes | The callback is used to return a RootIterator. |
 
 **Error codes:**
 
@@ -1365,6 +1393,8 @@ Creates a directory in a specified directory. This API uses a promise to return 
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-mkDir(parentUri: string, displayName: string) : Promise<string>--><!--Device-FileAccessHelper-mkDir(parentUri: string, displayName: string) : Promise<string>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -1380,7 +1410,7 @@ Creates a directory in a specified directory. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the new directory's URI. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the new directory's URI. |
 
 **Error codes:**
 
@@ -1467,6 +1497,8 @@ Creates a directory in a specified directory. This API uses an asynchronous call
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-mkDir(parentUri: string, displayName: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-mkDir(parentUri: string, displayName: string, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -1477,7 +1509,7 @@ Creates a directory in a specified directory. This API uses an asynchronous call
 | --- | --- | --- | --- |
 | parentUri | string | Yes | Represents a specific parent directory. |
 | displayName | string | Yes | Indicates the new directory name. |
-| callback | AsyncCallback&lt;string&gt; | Yes | The callback is used to return the new directory's URI. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | The callback is used to return the new directory's URI. |
 
 **Error codes:**
 
@@ -1551,8 +1583,7 @@ try {
 move(sourceFile: string, destFile: string) : Promise<string>
 ```
 
-Moves a file or directory. This API uses a promise to return the result. Currently, this API does not support
-move of files or directories across devices.
+Moves a file or directory. This API uses a promise to return the result. Currently, this API does not support move of files or directories across devices.
 
 **Since:** 9
 
@@ -1561,6 +1592,8 @@ move of files or directories across devices.
 **Substitutes:** moveFile(src:
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-move(sourceFile: string, destFile: string) : Promise<string>--><!--Device-FileAccessHelper-move(sourceFile: string, destFile: string) : Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -1577,7 +1610,7 @@ move of files or directories across devices.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the URI of the file or directory in the destinationdirectory. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the URI of the file or directory in the destination directory. |
 
 **Error codes:**
 
@@ -1649,8 +1682,7 @@ async function moveFile01() {
 move(sourceFile: string, destFile: string, callback: AsyncCallback<string>): void
 ```
 
-Moves a file or directory. This API uses an asynchronous callback to return the result. Currently, this API does
-not support move of files or directories across devices.
+Moves a file or directory. This API uses an asynchronous callback to return the result. Currently, this API does not support move of files or directories across devices.
 
 **Since:** 9
 
@@ -1659,6 +1691,8 @@ not support move of files or directories across devices.
 **Substitutes:** moveFile(src:
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-move(sourceFile: string, destFile: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-move(sourceFile: string, destFile: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -1670,7 +1704,7 @@ not support move of files or directories across devices.
 | --- | --- | --- | --- |
 | sourceFile | string | Yes | Indicates the file or directory to be moved. |
 | destFile | string | Yes | Represents the destination folder. |
-| callback | AsyncCallback&lt;string&gt; | Yes | The callback is used to return the generated new file or directory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | The callback is used to return the generated new file or directory. |
 
 **Error codes:**
 
@@ -1744,11 +1778,7 @@ try {
 moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 ```
 
-Moves a file, and renames it if a file with the same name already exists in the destination directory. This API
-uses a promise to return the result.
-If a file with the same name exists (that is, a file moving conflict occurs), you can rename the file to be moved
-and save it to the destination directory.
-Currently, this API does not support move of files across devices.
+Moves a file, and renames it if a file with the same name already exists in the destination directory. This API uses a promise to return the result.If a file with the same name exists (that is, a file moving conflict occurs), you can rename the file to be moved and save it to the destination directory.Currently, this API does not support move of files across devices.
 
 **Since:** 11
 
@@ -1759,6 +1789,8 @@ Currently, this API does not support move of files across devices.
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FileAccessHelper-moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>--><!--Device-FileAccessHelper-moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -1776,14 +1808,14 @@ Currently, this API does not support move of files across devices.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the URI of the file in the destination directory. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the URI of the file in the destination directory. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
 | 13900004 | Interrupted system call |
@@ -1839,11 +1871,7 @@ async function moveFile01() {
 moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCallback<string>): void
 ```
 
-Moves a file, and renames it if a file with the same name already exists in the destination directory. This API
-uses an asynchronous callback to return the result.
-If a file with the same name exists (that is, a file moving conflict occurs), you can rename the file to be moved
-and save it to the destination directory.
-Currently, this API does not support move of files across devices.
+Moves a file, and renames it if a file with the same name already exists in the destination directory. This API uses an asynchronous callback to return the result.If a file with the same name exists (that is, a file moving conflict occurs), you can rename the file to be moved and save it to the destination directory.Currently, this API does not support move of files across devices.
 
 **Since:** 11
 
@@ -1854,6 +1882,8 @@ Currently, this API does not support move of files across devices.
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FileAccessHelper-moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -1866,14 +1896,14 @@ Currently, this API does not support move of files across devices.
 | sourceUri | string | Yes | URI of the source file to move. |
 | destUri | string | Yes | URI of the destination directory, to which the file is moved. |
 | fileName | string | Yes | New name of the file. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback invoked to return the URI of the file in the destinationdirectory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback invoked to return the URI of the file in the destination directory. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
 | 13900004 | Interrupted system call |
@@ -1931,9 +1961,7 @@ try {
 moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<MoveResult>>
 ```
 
-Moves a file or directory. This API uses a promise to return the result.
-You can forcibly overwrite the file with the same name in the destination directory.
-Currently, this API does not support move of files or directories across devices.
+Moves a file or directory. This API uses a promise to return the result.You can forcibly overwrite the file with the same name in the destination directory.Currently, this API does not support move of files or directories across devices.
 
 **Since:** 11
 
@@ -1945,6 +1973,8 @@ Currently, this API does not support move of files or directories across devices
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<MoveResult>>--><!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<MoveResult>>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -1955,20 +1985,20 @@ Currently, this API does not support move of files or directories across devices
 | --- | --- | --- | --- |
 | sourceUri | string | Yes | URI of the source file or directory to move. |
 | destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. |
-| force | boolean | No | Whether to forcibly overwrite the file with the same name. The value **true** meansto overwrite the file forcibly; the value **false** means the opposite. The default value is **false**. |
+| force | boolean | No | Whether to forcibly overwrite the file with the same name. The value **true** means to overwrite the file forcibly; the value **false** means the opposite. The default value is **false**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;MoveResult&gt;&gt; | Promise used to return the result. If the operation is successful, noinformation is returned. If the operation fails, a **MoveResult** array is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<MoveResult>> | Promise used to return the result. If the operation is successful, no information is returned. If the operation fails, a **MoveResult** array is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
 | 13900004 | Interrupted system call |
@@ -1998,8 +2028,7 @@ Currently, this API does not support move of files or directories across devices
 moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveResult>>): void
 ```
 
-Moves a file or directory. This API uses an asynchronous callback to return the result.
-Currently, this API does not support move of files or directories across devices.
+Moves a file or directory. This API uses an asynchronous callback to return the result.Currently, this API does not support move of files or directories across devices.
 
 **Since:** 11
 
@@ -2011,6 +2040,8 @@ Currently, this API does not support move of files or directories across devices
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveResult>>): void--><!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveResult>>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -2021,14 +2052,14 @@ Currently, this API does not support move of files or directories across devices
 | --- | --- | --- | --- |
 | sourceUri | string | Yes | URI of the source file or directory to move. |
 | destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. |
-| callback | AsyncCallback&lt;Array&lt;MoveResult&gt;&gt; | Yes | Callback invoked to return the result. If the operation issuccessful, no information is returned. If the operation fails, a **MoveResult** array is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<MoveResult>> | Yes | Callback invoked to return the result. If the operation is successful, no information is returned. If the operation fails, a **MoveResult** array is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
 | 13900004 | Interrupted system call |
@@ -2094,9 +2125,7 @@ try {
 moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<MoveResult>>): void
 ```
 
-Moves a file or directory. This API uses an asynchronous callback to return the result.
-You can forcibly overwrite the file with the same name in the destination directory.
-Currently, this API does not support move of files or directories across devices.
+Moves a file or directory. This API uses an asynchronous callback to return the result.You can forcibly overwrite the file with the same name in the destination directory.Currently, this API does not support move of files or directories across devices.
 
 **Since:** 11
 
@@ -2108,6 +2137,8 @@ Currently, this API does not support move of files or directories across devices
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<MoveResult>>): void--><!--Device-FileAccessHelper-moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<MoveResult>>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -2118,15 +2149,15 @@ Currently, this API does not support move of files or directories across devices
 | --- | --- | --- | --- |
 | sourceUri | string | Yes | URI of the source file or directory to move. |
 | destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. |
-| force | boolean | Yes | Whether to forcibly overwrite the file with the same name. The value **true** means tooverwrite the file forcibly; the value **false** means the opposite. The default value is **false**. |
-| callback | AsyncCallback&lt;Array&lt;MoveResult&gt;&gt; | Yes | Callback invoked to return the result. If the operation issuccessful, no information is returned. If the operation fails, a **MoveResult** array is returned. |
+| force | boolean | Yes | Whether to forcibly overwrite the file with the same name. The value **true** means to overwrite the file forcibly; the value **false** means the opposite. The default value is **false**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<MoveResult>> | Yes | Callback invoked to return the result. If the operation is successful, no information is returned. If the operation fails, a **MoveResult** array is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
 | 13900004 | Interrupted system call |
@@ -2202,6 +2233,8 @@ Opens a file. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-openFile(uri: string, flags: OPENFLAGS) : Promise<number>--><!--Device-FileAccessHelper-openFile(uri: string, flags: OPENFLAGS) : Promise<number>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -2211,13 +2244,13 @@ Opens a file. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the path of the file to open. |
-| flags | OPENFLAGS | Yes | Indicate options of opening a file. The default value is read-only. |
+| flags | [OPENFLAGS](arkts-corefile-openflags-e-sys.md) | Yes | Indicate options of opening a file. The default value is read-only. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns the file descriptor. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Returns the file descriptor. |
 
 **Error codes:**
 
@@ -2297,6 +2330,8 @@ Opens a file. This API uses an asynchronous callback to return the result.
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-openFile(uri: string, flags: OPENFLAGS, callback: AsyncCallback<number>): void--><!--Device-FileAccessHelper-openFile(uri: string, flags: OPENFLAGS, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -2306,8 +2341,8 @@ Opens a file. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the path of the file to open. |
-| flags | OPENFLAGS | Yes | Indicate options of opening a file. The default value is read-only. |
-| callback | AsyncCallback&lt;number&gt; | Yes | The callback is used to return the file descriptor. |
+| flags | [OPENFLAGS](arkts-corefile-openflags-e-sys.md) | Yes | Indicate options of opening a file. The default value is read-only. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | The callback is used to return the file descriptor. |
 
 **Error codes:**
 
@@ -2380,8 +2415,7 @@ try {
 query(uri: string, metaJson: string) : Promise<string>
 ```
 
-Queries the attribute information about a file or directory based on a URI. This API uses a promise to return the
-result.
+Queries the attribute information about a file or directory based on a URI. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -2390,6 +2424,8 @@ result.
 **Substitutes:** stat(file:
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-query(uri: string, metaJson: string) : Promise<string>--><!--Device-FileAccessHelper-query(uri: string, metaJson: string) : Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -2406,7 +2442,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return a JSON string that contains the file attribute and the valueobtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return a JSON string that contains the file attribute and the value obtained. |
 
 **Example**
 
@@ -2437,8 +2473,7 @@ async function getQuery01() {
 query(uri: string, metaJson: string, callback: AsyncCallback<string>) : void
 ```
 
-Queries the attribute information about a file or directory based on a URI. This API uses an asynchronous
-callback to return the result.
+Queries the attribute information about a file or directory based on a URI. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -2447,6 +2482,8 @@ callback to return the result.
 **Substitutes:** stat(file:
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-query(uri: string, metaJson: string, callback: AsyncCallback<string>) : void--><!--Device-FileAccessHelper-query(uri: string, metaJson: string, callback: AsyncCallback<string>) : void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -2458,7 +2495,7 @@ callback to return the result.
 | --- | --- | --- | --- |
 | uri | string | Yes | File or directory URI obtained from [FileInfo](arkts-corefile-fileinfo-i-sys.md). |
 | metaJson | string | Yes | Attribute [FILEKEY](arkts-corefile-filekey-e-sys.md) to query. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return a JSON string that contains the fileattribute and the value obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return a JSON string that contains the file attribute and the value obtained. |
 
 **Example**
 
@@ -2494,8 +2531,7 @@ async function getQuery02() {
 registerObserver(uri: string, notifyForDescendants: boolean, callback: Callback<NotifyMessage>): void
 ```
 
-Registers a callback to listen for a URI. URIs and callbacks can be in many-to-many relationships. You are
-advised to use one callback to listen for one URI.
+Registers a callback to listen for a URI. URIs and callbacks can be in many-to-many relationships. You are advised to use one callback to listen for one URI.
 
 **Since:** 10
 
@@ -2504,6 +2540,8 @@ advised to use one callback to listen for one URI.
 **Substitutes:** createWatcher
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
+
+<!--Device-FileAccessHelper-registerObserver(uri: string, notifyForDescendants: boolean, callback: Callback<NotifyMessage>): void--><!--Device-FileAccessHelper-registerObserver(uri: string, notifyForDescendants: boolean, callback: Callback<NotifyMessage>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -2514,8 +2552,8 @@ advised to use one callback to listen for one URI.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file or directory. |
-| notifyForDescendants | boolean | Yes | Whether to observe changes of the files in the directory. The value**true** means to observe changes of the files in the directory; the value **false** means the opposite. |
-| callback | Callback&lt;NotifyMessage&gt; | Yes | Callback invoked to return the notification. |
+| notifyForDescendants | boolean | Yes | Whether to observe changes of the files in the directory. The value **true** means to observe changes of the files in the directory; the value **false** means the opposite. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<NotifyMessage> | Yes | Callback invoked to return the notification. |
 
 **Error codes:**
 
@@ -2539,6 +2577,8 @@ Renames a file or directory. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-rename(uri: string, displayName: string) : Promise<string>--><!--Device-FileAccessHelper-rename(uri: string, displayName: string) : Promise<string>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -2554,7 +2594,7 @@ Renames a file or directory. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns a URI representing the new file or directory. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns a URI representing the new file or directory. |
 
 **Error codes:**
 
@@ -2635,6 +2675,8 @@ Renames a file or directory. This API uses an asynchronous callback to return th
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-rename(uri: string, displayName: string, callback: AsyncCallback<string>): void--><!--Device-FileAccessHelper-rename(uri: string, displayName: string, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -2645,7 +2687,7 @@ Renames a file or directory. This API uses an asynchronous callback to return th
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the selected file or directory. |
 | displayName | string | Yes | Indicates the new directory or file name. |
-| callback | AsyncCallback&lt;string&gt; | Yes | The callback is used to return a URI representing the new file ordirectory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | The callback is used to return a URI representing the new file or directory. |
 
 **Error codes:**
 
@@ -2726,6 +2768,8 @@ Unregisters a callback that is used to listen for the specified URI.
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-FileAccessHelper-unregisterObserver(uri: string, callback?: Callback<NotifyMessage>): void--><!--Device-FileAccessHelper-unregisterObserver(uri: string, callback?: Callback<NotifyMessage>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -2735,7 +2779,7 @@ Unregisters a callback that is used to listen for the specified URI.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file or directory. |
-| callback | Callback&lt;NotifyMessage&gt; | No | Callback to unregister. If this parameter is not specified, allcallbacks of the specified URI will be unregistered. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<NotifyMessage> | No | Callback to unregister. If this parameter is not specified, all callbacks of the specified URI will be unregistered. |
 
 **Error codes:**
 

@@ -1,9 +1,10 @@
 # CollatorOptions
 
-Defines the options for creating a **Collator** object.
-Since API version 9, the attributes in **CollatorOptions** are optional.
+Defines the options for creating a **Collator** object.Since API version 9, the attributes in **CollatorOptions** are optional.
 
 **Since:** 8
+
+<!--Device-intl-export interface CollatorOptions--><!--Device-intl-export interface CollatorOptions-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -34,6 +35,8 @@ The default value is **false**.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CollatorOptions-caseFirst?: string--><!--Device-CollatorOptions-caseFirst?: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -85,6 +88,8 @@ The default value is **default**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CollatorOptions-collation?: string--><!--Device-CollatorOptions-collation?: string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## ignorePunctuation
@@ -93,8 +98,7 @@ The default value is **default**.
 ignorePunctuation?: boolean
 ```
 
-Whether to ignore punctuation. The value **true** means to ignore punctuation, and the value **false** means the
-opposite.
+Whether to ignore punctuation. The value **true** means to ignore punctuation, and the value **false** means the opposite.
 
 The default value is **false**.
 
@@ -103,6 +107,8 @@ The default value is **false**.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CollatorOptions-ignorePunctuation?: boolean--><!--Device-CollatorOptions-ignorePunctuation?: boolean-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -126,6 +132,8 @@ The default value is **best fit**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CollatorOptions-localeMatcher?: string--><!--Device-CollatorOptions-localeMatcher?: string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## numeric
@@ -136,7 +144,7 @@ numeric?: boolean
 
 Whether numeric sorting is used. The options are as follows:
 
-- **true**: Numeric sorting is used. For example, '1' < '2' < '10' < '11'.
+- **true**: Numeric sorting is used. For example, '1' < '2' < '10' < '11'.  
 - **false**: Numeric sorting is not used. For example, '1' < '10' < '11' < '2'.
 
 The default value is **false**.
@@ -146,6 +154,8 @@ The default value is **false**.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CollatorOptions-numeric?: boolean--><!--Device-CollatorOptions-numeric?: boolean-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -157,13 +167,10 @@ sensitivity?: string
 
 Differences in the strings that lead to non-zero return values. The options are as follows:
 
-- **base**: Different letters are considered unequal, for example, 'a' ≠ 'b', 'a' = 'á', 'a' = 'A'.
-- **accent**: Different letters or same letters with different pronunciations are considered unequal, for example
-, 'a' ≠ 'b', 'a' ≠ 'á', 'a' = 'A'.
-- **case**: Different letters or same letters with different cases are considered unequal, for example, 'a' ≠ 'b'
-, 'a' = 'á', 'a' ≠ 'A'.
-- **variant**: Different letters, pronunciations, other distinguishing marks, or cases are all considered unequal
-, for example, 'a' ≠ 'b', 'a' ≠ 'á', 'a' ≠ 'A'.
+- **base**: Different letters are considered unequal, for example, 'a' ≠ 'b', 'a' = 'á', 'a' = 'A'.  
+- **accent**: Different letters or same letters with different pronunciations are considered unequal, for example, 'a' ≠ 'b', 'a' ≠ 'á', 'a' = 'A'.  
+- **case**: Different letters or same letters with different cases are considered unequal, for example, 'a' ≠ 'b', 'a' = 'á', 'a' ≠ 'A'.  
+- **variant**: Different letters, pronunciations, other distinguishing marks, or cases are all considered unequal, for example, 'a' ≠ 'b', 'a' ≠ 'á', 'a' ≠ 'A'.
 
 The default value is **variant**.
 
@@ -172,6 +179,8 @@ The default value is **variant**.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CollatorOptions-sensitivity?: string--><!--Device-CollatorOptions-sensitivity?: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -183,7 +192,7 @@ usage?: string
 
 Purpose of comparison. The options are as follows:
 
-- **sort**: sorting.
+- **sort**: sorting.  
 - **search**: search for matched strings.
 
 The default value is **sort**.
@@ -193,6 +202,8 @@ The default value is **sort**.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CollatorOptions-usage?: string--><!--Device-CollatorOptions-usage?: string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 

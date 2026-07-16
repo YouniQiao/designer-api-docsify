@@ -4,6 +4,8 @@ Parameters for checking certificate revocation status.
 
 **Since:** 26.0.0
 
+<!--Device-cert-interface X509CertRevokedParams--><!--Device-cert-interface X509CertRevokedParams-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
@@ -18,11 +20,10 @@ import { cert } from '@kit.DeviceCertificateKit';
 allowDownloadCrl?: boolean
 ```
 
-Indicates whether to allow CRL download. The default value is false. true: The CDP extension of the certificate
-is used to download the CRL. false: Do not attempt to download the CRL.
+Indicates whether to allow CRL download. The default value is false. true: The CDP extension of the certificate is used to download the CRL. false: Do not attempt to download the CRL.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > Skip download if matching CRL exists in crls.
 
 **Type:** boolean
@@ -35,6 +36,8 @@ is used to download the CRL. false: Do not attempt to download the CRL.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-X509CertRevokedParams-allowDownloadCrl?: boolean--><!--Device-X509CertRevokedParams-allowDownloadCrl?: boolean-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## allowOcspCheckOnline
@@ -43,12 +46,10 @@ is used to download the CRL. false: Do not attempt to download the CRL.
 allowOcspCheckOnline?: boolean
 ```
 
-Indicates whether to allow online OCSP check. The default value is false. true: Perform online OCSP check, that
-is, attempt to obtain the OCSP URL from the certificate AIA extension and send a request to obtain the response.
-false: Do not perform online OCSP check.
+Indicates whether to allow online OCSP check. The default value is false. true: Perform online OCSP check, that is, attempt to obtain the OCSP URL from the certificate AIA extension and send a request to obtain the response.false: Do not perform online OCSP check.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > Skip online OCSP check if a matching OCSP response is found in ocspResponses.
 
 **Type:** boolean
@@ -60,6 +61,8 @@ false: Do not perform online OCSP check.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-X509CertRevokedParams-allowOcspCheckOnline?: boolean--><!--Device-X509CertRevokedParams-allowOcspCheckOnline?: boolean-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -78,6 +81,8 @@ CRL list. Maximum count: 100.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-X509CertRevokedParams-crls?: Array<X509CRL>--><!--Device-X509CertRevokedParams-crls?: Array<X509CRL>-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -99,6 +104,8 @@ Digest algorithm used by OCSP requests. The default value is SHA256.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-X509CertRevokedParams-ocspDigest?: OcspDigest--><!--Device-X509CertRevokedParams-ocspDigest?: OcspDigest-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## ocspResponses
@@ -117,6 +124,8 @@ Preconfigured OCSP response data. Maximum count: 100.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-X509CertRevokedParams-ocspResponses?: Array<Uint8Array>--><!--Device-X509CertRevokedParams-ocspResponses?: Array<Uint8Array>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## revocationFlags
@@ -125,8 +134,7 @@ Preconfigured OCSP response data. Maximum count: 100.
 revocationFlags: Array<CertRevocationFlag>
 ```
 
-Revocation check flag. Array length range: [1,4]. The array must contain either CERT_REVOCATION_CRL_CHECK or
-CERT_REVOCATION_OCSP_CHECK.
+Revocation check flag. Array length range: [1,4]. The array must contain either CERT_REVOCATION_CRL_CHECK or CERT_REVOCATION_OCSP_CHECK.
 
 **Type:** Array<CertRevocationFlag>
 
@@ -135,6 +143,8 @@ CERT_REVOCATION_OCSP_CHECK.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-X509CertRevokedParams-revocationFlags: Array<CertRevocationFlag>--><!--Device-X509CertRevokedParams-revocationFlags: Array<CertRevocationFlag>-End-->
 
 **System capability:** SystemCapability.Security.Cert
 

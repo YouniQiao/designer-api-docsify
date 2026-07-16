@@ -1,5 +1,11 @@
 # @ohos.annotation
 
+## 导入模块
+
+```TypeScript
+import { SuppressWarnings, Available, SuppressWarningsType } from '@kit.BasicServicesKit';
+```
+
 ## 汇总
 
 ### 枚举

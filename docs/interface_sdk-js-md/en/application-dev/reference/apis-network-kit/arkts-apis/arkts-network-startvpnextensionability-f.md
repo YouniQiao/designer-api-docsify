@@ -18,19 +18,21 @@ Starts a new vpn extension ability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-vpnExtension-function startVpnExtensionAbility(want: Want): Promise<void>--><!--Device-vpnExtension-function startVpnExtensionAbility(want: Want): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Indicates the want info to start. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Indicates the want info to start. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

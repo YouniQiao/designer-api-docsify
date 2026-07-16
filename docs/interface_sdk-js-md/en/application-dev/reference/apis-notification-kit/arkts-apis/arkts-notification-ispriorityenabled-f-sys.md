@@ -18,6 +18,8 @@ Checks whether the priority notification is enabled.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isPriorityEnabled(): Promise<boolean>--><!--Device-notificationManager-function isPriorityEnabled(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Checks whether the priority notification is enabled.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result.<br> - **true**: The priority notification is enabled.<br> - **false**: The priority notification is disabled. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result.<br> - **true**: The priority notification is enabled.<br> - **false**: The priority notification is disabled. |
 
 **Error codes:**
 

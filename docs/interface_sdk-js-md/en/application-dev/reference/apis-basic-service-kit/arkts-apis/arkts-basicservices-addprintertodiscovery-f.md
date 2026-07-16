@@ -18,19 +18,21 @@ Adds a printer to the printer discovery list. This API uses a promise to return 
 
 **Required permissions:** ohos.permission.PRINT
 
+<!--Device-print-function addPrinterToDiscovery(printerInformation: PrinterInformation): Promise<void>--><!--Device-print-function addPrinterToDiscovery(printerInformation: PrinterInformation): Promise<void>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerInformation | PrinterInformation | Yes | The added printer. |
+| printerInformation | [PrinterInformation](arkts-basicservices-printerinformation-i.md) | Yes | The added printer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ HashSet is implemented based on HashMap. In HashSet, only the value object is pr
 
 **Since:** 8
 
+<!--Device-unnamed-declare class HashSet<T>--><!--Device-unnamed-declare class HashSet<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -24,13 +26,15 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HashSet-[Symbol.iterator](): IterableIterator<T>--><!--Device-HashSet-[Symbol.iterator](): IterableIterator<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;T&gt; | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<T> | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
 
 **Error codes:**
 
@@ -88,6 +92,8 @@ Adds elements to this HashSet.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HashSet-add(value: T): boolean--><!--Device-HashSet-add(value: T): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -100,7 +106,7 @@ Adds elements to this HashSet.
 
 | Type | Description |
 | --- | --- |
-| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false**is returned. |
+| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -128,6 +134,8 @@ Clears this HashSet and sets its length to **0**.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HashSet-clear(): void--><!--Device-HashSet-clear(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -161,6 +169,8 @@ A constructor used to create a **HashSet** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HashSet-constructor()--><!--Device-HashSet-constructor()-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
@@ -188,13 +198,15 @@ Returns an iterator that contains all the elements in this HashSet.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HashSet-entries(): IterableIterator<[T, T]>--><!--Device-HashSet-entries(): IterableIterator<[T, T]>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;[T, T]&gt; | Iterator obtained. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<[T, T]> | Iterator obtained. |
 
 **Error codes:**
 
@@ -246,14 +258,16 @@ Uses a callback to traverse each element.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HashSet-forEach(callbackFn: (value?: T, key?: T, set?: HashSet<T>) => void, thisArg?: Object): void--><!--Device-HashSet-forEach(callbackFn: (value?: T, key?: T, set?: HashSet<T>) => void, thisArg?: Object): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value?: T, key?: T, set?: HashSet&lt;T&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the HashSet. |
-| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is thisinstance. |
+| callbackFn | (value?: T, key?: T, set?: HashSet<T>) => void | Yes | Callback invoked to traverse the elements in the HashSet. |
+| thisArg | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
 
@@ -299,6 +313,8 @@ Checks whether this HashSet has the specified element.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HashSet-has(value: T): boolean--><!--Device-HashSet-has(value: T): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -341,13 +357,15 @@ Checks whether this HashSet is empty (contains no element).
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HashSet-isEmpty(): boolean--><!--Device-HashSet-isEmpty(): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the HashSet is empty; otherwise, **false** isreturned. |
+| boolean | Check result. The value **true** is returned if the HashSet is empty; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -375,6 +393,8 @@ Removes an element from this HashSet.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HashSet-remove(value: T): boolean--><!--Device-HashSet-remove(value: T): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -419,13 +439,15 @@ Returns an iterator that contains all the values in this HashSet.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HashSet-values(): IterableIterator<T>--><!--Device-HashSet-values(): IterableIterator<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;T&gt; | Iterator obtained. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<T> | Iterator obtained. |
 
 **Error codes:**
 
@@ -461,6 +483,8 @@ Number of elements in a HashSet.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HashSet-length: number--><!--Device-HashSet-length: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

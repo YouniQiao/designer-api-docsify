@@ -20,6 +20,8 @@ Stops advertising with advertising ID.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-advertising-function stopAdvertising(advertisingId: int): Promise<void>--><!--Device-advertising-function stopAdvertising(advertisingId: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**
@@ -32,7 +34,7 @@ Stops advertising with advertising ID.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 

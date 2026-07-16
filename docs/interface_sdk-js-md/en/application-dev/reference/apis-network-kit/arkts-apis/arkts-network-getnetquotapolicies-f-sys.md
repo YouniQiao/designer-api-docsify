@@ -18,6 +18,8 @@ Get metered network quota policies.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function getNetQuotaPolicies(callback: AsyncCallback<Array<NetQuotaPolicy>>): void--><!--Device-policy-function getNetQuotaPolicies(callback: AsyncCallback<Array<NetQuotaPolicy>>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Get metered network quota policies.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;NetQuotaPolicy&gt;&gt; | Yes | the callback of getNetQuotaPolicies. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<NetQuotaPolicy>> | Yes | the callback of getNetQuotaPolicies. |
 
 **Error codes:**
 
@@ -64,6 +66,8 @@ Get metered network quota policies.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function getNetQuotaPolicies(): Promise<Array<NetQuotaPolicy>>--><!--Device-policy-function getNetQuotaPolicies(): Promise<Array<NetQuotaPolicy>>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -72,7 +76,7 @@ Get metered network quota policies.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NetQuotaPolicy&gt;&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<NetQuotaPolicy>> | The promise returned by the function. |
 
 **Error codes:**
 

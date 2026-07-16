@@ -18,6 +18,8 @@ Get the specified network interface information.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-ethernet-function getIfaceConfig(iface: string, callback: AsyncCallback<InterfaceConfiguration>): void--><!--Device-ethernet-function getIfaceConfig(iface: string, callback: AsyncCallback<InterfaceConfiguration>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Get the specified network interface information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | iface | string | Yes | Indicates the network interface name. |
-| callback | AsyncCallback&lt;InterfaceConfiguration&gt; | Yes | the callback of getIfaceConfig. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<InterfaceConfiguration> | Yes | the callback of getIfaceConfig. |
 
 **Error codes:**
 
@@ -75,6 +77,8 @@ Get the specified network interface information.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-ethernet-function getIfaceConfig(iface: string): Promise<InterfaceConfiguration>--><!--Device-ethernet-function getIfaceConfig(iface: string): Promise<InterfaceConfiguration>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
@@ -89,7 +93,7 @@ Get the specified network interface information.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;InterfaceConfiguration&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<InterfaceConfiguration> | the promise returned by the function. |
 
 **Error codes:**
 

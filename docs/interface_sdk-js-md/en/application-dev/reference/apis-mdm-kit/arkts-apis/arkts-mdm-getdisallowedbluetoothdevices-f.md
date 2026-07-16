@@ -20,19 +20,21 @@ Obtains disallowed Bluetooth devices.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-bluetoothManager-function getDisallowedBluetoothDevices(admin: Want | null): Array<string>--><!--Device-bluetoothManager-function getDisallowedBluetoothDevices(admin: Want | null): Array<string>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application.<br>If the device has multiple MDMapplications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policiesthat actually take effect on the device are returned.<br>**Since:** 26.0.0 |
+| admin | Want \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application.<br>If the device has multiple MDM applications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policies that actually take effect on the device are returned.<br>**Since:** 26.0.0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | MAC addresses of disallowed Bluetooth devices obtained. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | MAC addresses of disallowed Bluetooth devices obtained. |
 
 **Error codes:**
 

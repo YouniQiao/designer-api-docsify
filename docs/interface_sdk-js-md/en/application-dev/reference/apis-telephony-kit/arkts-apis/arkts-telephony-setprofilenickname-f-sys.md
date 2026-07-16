@@ -18,6 +18,8 @@ Adds or updates the given profile nickname.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE
 
+<!--Device-eSIM-function setProfileNickname(slotId: int, iccid: string, nickname: string): Promise<ResultCode>--><!--Device-eSIM-function setProfileNickname(slotId: int, iccid: string, nickname: string): Promise<ResultCode>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -34,7 +36,7 @@ Adds or updates the given profile nickname.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultCode&gt; | Returns the result of the set nickname operation. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ResultCode> | Returns the result of the set nickname operation. |
 
 **Error codes:**
 

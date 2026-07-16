@@ -16,6 +16,8 @@ Obtains the touchpad right-click menu type. This API uses an asynchronous callba
 
 **Since:** 10
 
+<!--Device-pointer-function getTouchpadRightClickType(callback: AsyncCallback<RightClickType>): void--><!--Device-pointer-function getTouchpadRightClickType(callback: AsyncCallback<RightClickType>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Obtains the touchpad right-click menu type. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;RightClickType&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined**, and the object is the touchpad right-click menu type. Otherwise, **err**is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<RightClickType> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and the object is the touchpad right-click menu type. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -72,6 +74,8 @@ Obtains the touchpad right-click menu type. This API uses a promise to return th
 
 **Since:** 10
 
+<!--Device-pointer-function getTouchpadRightClickType(): Promise<RightClickType>--><!--Device-pointer-function getTouchpadRightClickType(): Promise<RightClickType>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **System API:** This is a system API.
@@ -80,7 +84,7 @@ Obtains the touchpad right-click menu type. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RightClickType&gt; | Promise used to return the touchpad right-click menu type. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<RightClickType> | Promise used to return the touchpad right-click menu type. |
 
 **Error codes:**
 

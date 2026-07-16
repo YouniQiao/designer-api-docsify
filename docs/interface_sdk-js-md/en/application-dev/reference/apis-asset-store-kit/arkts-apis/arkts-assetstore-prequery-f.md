@@ -12,13 +12,13 @@ import { asset } from '@kit.AssetStoreKit';
 function preQuery(query: AssetMap): Promise<Uint8Array>
 ```
 
-Performs preprocessing for the asset query. This API is used when user authentication is required for the access to
-the asset. After the user authentication is successful, call [asset.query](arkts-assetstore-query-f.md#query-1) and
-[asset.postQuery](arkts-assetstore-postquery-f.md#postquery-1). This API uses a promise to return the result.
+Performs preprocessing for the asset query. This API is used when user authentication is required for the access to the asset. After the user authentication is successful, call [asset.query](arkts-assetstore-query-f.md#query-1) and [asset.postQuery](arkts-assetstore-postquery-f.md#postquery-1). This API uses a promise to return the result.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-asset-function preQuery(query: AssetMap): Promise<Uint8Array>--><!--Device-asset-function preQuery(query: AssetMap): Promise<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -26,13 +26,13 @@ the asset. After the user authentication is successful, call [asset.query](arkts
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | AssetMap | Yes | Attributes of the asset to query, such as the asset alias, access control attributes,and custom data. |
+| query | [AssetMap](arkts-assetstore-assetmap-t.md) | Yes | Attributes of the asset to query, such as the asset alias, access control attributes,and custom data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return a challenge value.<br>**Note**: The challenge value is used for subsequent user authentication. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Uint8Array> | Promise used to return a challenge value.<br>**Note**: The challenge value is used for subsequent user authentication. |
 
 **Error codes:**
 

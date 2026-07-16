@@ -13,24 +13,22 @@ function createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image
     delay?: number, checkImageStatus?: boolean, options?: SnapshotOptions): void
 ```
 
-Renders a custom component in the application background and outputs its snapshot. This API uses an asynchronous
-callback to return the result. The coordinates and size of the offscreen component's drawing area can be obtained
-through the callback.
+Renders a custom component in the application background and outputs its snapshot. This API uses an asynchronous callback to return the result. The coordinates and size of the offscreen component's drawing area can be obtained through the callback.
 
-> **NOTE**
->
-> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-uicontext-c.md#getcomponentsnapshot-1)
-> API in [UIContext](arkts-arkui-uicontext.md) to obtain the [ComponentSnapshot](arkts-arkui-componentsnapshot-c.md)
-> object associated with the current UI context.
->
-> - To account for the time spent in awaiting component building and rendering, the callback of offscreen snapshots
-> has a delay of less than 500 ms.
->
-> - Components in the builder do not support the setting of animation-related attributes, such as
-> [transition](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md).
->
-> - If a component is on a time-consuming task, for example, an [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) or [Web](../../apis-arkweb/arkts-components/arkts-arkweb-web.md) component
-> that is loading online images, its loading may be still in progress when this API is called. In this case, the
+> **NOTE**  
+>  
+> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-uicontext-c.md#getcomponentsnapshot-1)  
+> API in [UIContext](arkts-arkui-uicontext.md) to obtain the [ComponentSnapshot](arkts-arkui-componentsnapshot-c.md)  
+> object associated with the current UI context.  
+>  
+> - To account for the time spent in awaiting component building and rendering, the callback of offscreen snapshots  
+> has a delay of less than 500 ms.  
+>  
+> - Components in the builder do not support the setting of animation-related attributes, such as  
+> [transition](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md).  
+>  
+> - If a component is on a time-consuming task, for example, an [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) or [Web](../../apis-arkweb/arkts-components/arkts-arkweb-web.md) component  
+> that is loading online images, its loading may be still in progress when this API is called. In this case, the  
 > output snapshot does not represent the component in the way it looks when the loading is successfully completed.
 
 **Since:** 10
@@ -43,17 +41,21 @@ through the callback.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-componentSnapshot-function createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap>,
+    delay?: number, checkImageStatus?: boolean, options?: SnapshotOptions): void--><!--Device-componentSnapshot-function createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap>,
+    delay?: number, checkImageStatus?: boolean, options?: SnapshotOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | CustomBuilder | Yes | Builder of the custom component.<br>Note: The global builder is not supported.&lt;br&gt;If the root component of the builder has a width or height of zero, the snapshot operation will fail witherror code 100001. |
-| callback | AsyncCallback&lt;image.PixelMap&gt; | Yes | Callback used to return the result. The coordinates and size ofthe offscreen component's drawing area can be obtained through the callback. |
-| delay | number | No | Delay time for triggering the screenshot command. When the layout includes an imagecomponent, it is necessary to set a delay time to allow the system to decode the image resources. The decodingtime is subject to the resource size. In light of this, whenever possible, use pixel map resources that do notrequire decoding.<br> When pixel map resources are used or when **syncLoad** to **true** for the **Image**component, you can set **delay** to **0** to forcibly capture snapshots without waiting. This delay time doesnot refer to the time from the API call to the return: As the system needs to temporarily construct the passed-in **builder** offscreen, the return time is usually longer than this delay.<br>Note: In the **builder** passedin, state variables should not be used to control the construction of child components. If they are used, theyshould not change when the API is called, so as to avoid unexpected snapshot results.<br> Default value:**300**<br> Unit: ms<br> Value range:[0, +∞). If the value is less than 0, the default value is used.<br>**Since:** 12 |
-| checkImageStatus | boolean | No | Whether to verify the image decoding status before taking a snapshot. <br>**true**: Check whether all Image components have been decoded. <br>**false**: Skip verification. If theverification is not completed, snapshot capture will be canceled and an exception will be returned.<br>Defaultvalue: **false**<br>**Since:** 12 |
-| options | SnapshotOptions | No | Custom settings of the snapshot.<br>**Since:** 12 |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | Builder of the custom component.<br>Note: The global builder is not supported.<br>If the root component of the builder has a width or height of zero, the snapshot operation will fail with error code 100001. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<image.PixelMap> | Yes | Callback used to return the result. The coordinates and size of the offscreen component's drawing area can be obtained through the callback. |
+| delay | number | No | Delay time for triggering the screenshot command. When the layout includes an image component, it is necessary to set a delay time to allow the system to decode the image resources. The decoding time is subject to the resource size. In light of this, whenever possible, use pixel map resources that do not require decoding.<br> When pixel map resources are used or when **syncLoad** to **true** for the **Image** component, you can set **delay** to **0** to forcibly capture snapshots without waiting. This delay time does not refer to the time from the API call to the return: As the system needs to temporarily construct the passed-in **builder** offscreen, the return time is usually longer than this delay.<br>Note: In the **builder** passed in, state variables should not be used to control the construction of child components. If they are used, they should not change when the API is called, so as to avoid unexpected snapshot results.<br> Default value:**300**<br> Unit: ms<br> Value range:[0, +∞). If the value is less than 0, the default value is used.<br>**Since:** 12 |
+| checkImageStatus | boolean | No | Whether to verify the image decoding status before taking a snapshot. <br>**true**: Check whether all Image components have been decoded. <br>**false**: Skip verification. If the verification is not completed, snapshot capture will be canceled and an exception will be returned.<br>Default value: **false**<br>**Since:** 12 |
+| options | [SnapshotOptions](arkts-arkui-snapshotoptions-i.md) | No | Custom settings of the snapshot.<br>**Since:** 12 |
 
 **Error codes:**
 
@@ -61,7 +63,7 @@ through the callback.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | The builder is not a valid build function. |
-| [160001](../errorcode-snapshot.md#160001-image-loading-error) | An image component in builder is not ready for taking a snapshot. The check forthe ready state is required when the checkImageStatus option is enabled.<br>**Applicable version:** 12 and later |
+| [160001](../errorcode-snapshot.md#160001-image-loading-error) | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -134,24 +136,22 @@ function createFromBuilder(builder: CustomBuilder, delay?: number,
     checkImageStatus?: boolean, options?: SnapshotOptions): Promise<image.PixelMap>
 ```
 
-Renders a custom component in the application background and outputs its snapshot. This API uses a promise to
-return the result. The coordinates and size of the offscreen component's drawing area can be obtained through the
-callback.
+Renders a custom component in the application background and outputs its snapshot. This API uses a promise to return the result. The coordinates and size of the offscreen component's drawing area can be obtained through the callback.
 
-> **NOTE**
->
-> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-uicontext-c.md#getcomponentsnapshot-1)
-> API in [UIContext](arkts-arkui-uicontext.md) to obtain the [ComponentSnapshot](arkts-arkui-componentsnapshot-c.md)
-> object associated with the current UI context.
->
-> - To account for the time spent in awaiting component building and rendering, the callback of offscreen snapshots
-> has a delay of less than 500 ms.
->
-> - Components in the builder do not support the setting of animation-related attributes, such as
-> [transition](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md).
->
-> - If a component is on a time-consuming task, for example, an [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) or [Web](../../apis-arkweb/arkts-components/arkts-arkweb-web.md) component
-> that is loading online images, its loading may be still in progress when this API is called. In this case, the
+> **NOTE**  
+>  
+> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-uicontext-c.md#getcomponentsnapshot-1)  
+> API in [UIContext](arkts-arkui-uicontext.md) to obtain the [ComponentSnapshot](arkts-arkui-componentsnapshot-c.md)  
+> object associated with the current UI context.  
+>  
+> - To account for the time spent in awaiting component building and rendering, the callback of offscreen snapshots  
+> has a delay of less than 500 ms.  
+>  
+> - Components in the builder do not support the setting of animation-related attributes, such as  
+> [transition](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md).  
+>  
+> - If a component is on a time-consuming task, for example, an [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) or [Web](../../apis-arkweb/arkts-components/arkts-arkweb-web.md) component  
+> that is loading online images, its loading may be still in progress when this API is called. In this case, the  
 > output snapshot does not represent the component in the way it looks when the loading is successfully completed.
 
 **Since:** 10
@@ -164,22 +164,26 @@ callback.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-componentSnapshot-function createFromBuilder(builder: CustomBuilder, delay?: number,
+    checkImageStatus?: boolean, options?: SnapshotOptions): Promise<image.PixelMap>--><!--Device-componentSnapshot-function createFromBuilder(builder: CustomBuilder, delay?: number,
+    checkImageStatus?: boolean, options?: SnapshotOptions): Promise<image.PixelMap>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | CustomBuilder | Yes | Builder of the custom component.<br>Note: The global builder is not supported.&lt;br&gt;If the root component of the builder has a width or height of zero, the snapshot operation will fail witherror code 100001. |
-| delay | number | No | Delay time for triggering the screenshot command. When the layout includes an imagecomponent, it is necessary to set a delay time to allow the system to decode the image resources. The decodingtime is subject to the resource size. In light of this, whenever possible, use pixel map resources that do notrequire decoding.<br> When pixel map resources are used or when **syncLoad** to **true** for the **Image**component, you can set **delay** to **0** to forcibly capture snapshots without waiting. This delay time doesnot refer to the time from the API call to the return: As the system needs to temporarily construct the passed-in **builder** offscreen, the return time is usually longer than this delay.<br>Note: In the **builder** passedin, state variables should not be used to control the construction of child components. If they are used, theyshould not change when the API is called, so as to avoid unexpected snapshot results.<br> Default value:**300**<br> Unit: ms<br>**Since:** 12 |
-| checkImageStatus | boolean | No | Whether to verify the image decoding status before taking a snapshot. <br>**true**: Check whether all Image components have been decoded. <br>**false**: Skip verification. If theverification is not completed, snapshot capture will be canceled and an exception will be returned.<br>Defaultvalue: **false**<br>**Since:** 12 |
-| options | SnapshotOptions | No | Custom settings of the snapshot.<br>**Since:** 12 |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | Builder of the custom component.<br>Note: The global builder is not supported.<br>If the root component of the builder has a width or height of zero, the snapshot operation will fail with error code 100001. |
+| delay | number | No | Delay time for triggering the screenshot command. When the layout includes an image component, it is necessary to set a delay time to allow the system to decode the image resources. The decoding time is subject to the resource size. In light of this, whenever possible, use pixel map resources that do not require decoding.<br> When pixel map resources are used or when **syncLoad** to **true** for the **Image** component, you can set **delay** to **0** to forcibly capture snapshots without waiting. This delay time does not refer to the time from the API call to the return: As the system needs to temporarily construct the passed-in **builder** offscreen, the return time is usually longer than this delay.<br>Note: In the **builder** passed in, state variables should not be used to control the construction of child components. If they are used, they should not change when the API is called, so as to avoid unexpected snapshot results.<br> Default value:**300**<br> Unit: ms<br>**Since:** 12 |
+| checkImageStatus | boolean | No | Whether to verify the image decoding status before taking a snapshot. <br>**true**: Check whether all Image components have been decoded. <br>**false**: Skip verification. If the verification is not completed, snapshot capture will be canceled and an exception will be returned.<br>Default value: **false**<br>**Since:** 12 |
+| options | [SnapshotOptions](arkts-arkui-snapshotoptions-i.md) | No | Custom settings of the snapshot.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<image.PixelMap> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -187,7 +191,7 @@ callback.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | The builder is not a valid build function. |
-| [160001](../errorcode-snapshot.md#160001-image-loading-error) | An image component in builder is not ready for taking a snapshot. The check forthe ready state is required when the checkImageStatus option is enabled.<br>**Applicable version:** 12 and later |
+| [160001](../errorcode-snapshot.md#160001-image-loading-error) | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled.<br>**Applicable version:** 12 and later |
 
 **Example**
 

@@ -18,6 +18,8 @@ function distributeOperation(hashcode: string, operationInfo?: OperationInfo): P
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationSubscribe-function distributeOperation(hashcode: string, operationInfo?: OperationInfo): Promise<void>--><!--Device-notificationSubscribe-function distributeOperation(hashcode: string, operationInfo?: OperationInfo): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -27,13 +29,13 @@ function distributeOperation(hashcode: string, operationInfo?: OperationInfo): P
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hashcode | string | 是 | 通知唯一ID。 |
-| operationInfo | OperationInfo | 否 | 跨设备协同操作信息，默认为空。 |
+| operationInfo | [OperationInfo](arkts-notification-operationinfo-i-sys.md) | 否 | 跨设备协同操作信息，默认为空。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

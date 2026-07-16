@@ -12,14 +12,13 @@ import { WantAgent } from '@kit.AbilityKit';
 function triggerAsync(agent: WantAgent, triggerInfo: TriggerInfo, context: Context): Promise<CompleteData>
 ```
 
-Asynchronously triggers a predefined operation encration encapsulated in a Wantagent with specified trigger
-information.
-If the specified wantAgent is local, you need to apply for permission:
-ohos.permission.TRIGGER_LOCAL_WANTAGENT permission.
+Asynchronously triggers a predefined operation encration encapsulated in a Wantagent with specified trigger information.If the specified wantAgent is local, you need to apply for permission:ohos.permission.TRIGGER_LOCAL_WANTAGENT permission.
 
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-wantAgent-function triggerAsync(agent: WantAgent, triggerInfo: TriggerInfo, context: Context): Promise<CompleteData>--><!--Device-wantAgent-function triggerAsync(agent: WantAgent, triggerInfo: TriggerInfo, context: Context): Promise<CompleteData>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -29,15 +28,15 @@ ohos.permission.TRIGGER_LOCAL_WANTAGENT permission.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | WantAgent | Yes | Indicates the WantAgent. |
-| triggerInfo | TriggerInfo | Yes | Indicates the information required for triggering a WantAgent. |
-| context | Context | Yes | Indicates current context. |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | Indicates the WantAgent. |
+| triggerInfo | [TriggerInfo](arkts-ability-triggerinfo-t.md) | Yes | Indicates the information required for triggering a WantAgent. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates current context. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CompleteData&gt; | Returns the CompleteData. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CompleteData> | Returns the CompleteData. |
 
 **Error codes:**
 

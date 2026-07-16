@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface Vec3--><!--Device-unnamed-export interface Vec3-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## x
@@ -17,6 +19,8 @@ vec3的X分量.
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-Vec3-x: double--><!--Device-Vec3-x: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -32,6 +36,8 @@ vec3的Y分量.
 
 **起始版本：** 12
 
+<!--Device-Vec3-y: double--><!--Device-Vec3-y: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## z
@@ -45,6 +51,8 @@ vec3的Z分量.
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-Vec3-z: double--><!--Device-Vec3-z: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

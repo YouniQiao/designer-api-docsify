@@ -18,6 +18,8 @@ Check whether the specified network is active.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-ethernet-function isIfaceActive(iface: string, callback: AsyncCallback<number>): void--><!--Device-ethernet-function isIfaceActive(iface: string, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Check whether the specified network is active.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | iface | string | Yes | Indicates the network interface name. |
-| callback | AsyncCallback&lt;number&gt; | Yes | the callback of isIfaceActive. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | the callback of isIfaceActive. |
 
 **Error codes:**
 
@@ -70,6 +72,8 @@ Check whether the specified network is active.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-ethernet-function isIfaceActive(iface: string): Promise<number>--><!--Device-ethernet-function isIfaceActive(iface: string): Promise<number>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
@@ -84,7 +88,7 @@ Check whether the specified network is active.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | the promise returned by the function. |
 
 **Error codes:**
 

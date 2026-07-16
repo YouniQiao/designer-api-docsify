@@ -2,12 +2,14 @@
 
 Enumerates the operations for combining two regions.
 
-> **NOTE**
->
-> The schematic diagram shows the result obtained by combining a red region with a blue region at different
+> **NOTE**  
+>  
+> The schematic diagram shows the result obtained by combining a red region with a blue region at different  
 > operation mode. The green region is the region obtained.
 
 **Since:** 12
+
+<!--Device-drawing-enum RegionOp--><!--Device-drawing-enum RegionOp-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -21,6 +23,8 @@ Difference operation.
 
 **Since:** 12
 
+<!--Device-RegionOp-DIFFERENCE = 0--><!--Device-RegionOp-DIFFERENCE = 0-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## INTERSECT
@@ -32,6 +36,8 @@ INTERSECT = 1
 Intersect operation.
 
 **Since:** 12
+
+<!--Device-RegionOp-INTERSECT = 1--><!--Device-RegionOp-INTERSECT = 1-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -45,6 +51,8 @@ Union operation.
 
 **Since:** 12
 
+<!--Device-RegionOp-UNION = 2--><!--Device-RegionOp-UNION = 2-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## XOR
@@ -56,6 +64,8 @@ XOR = 3
 XOR operation.
 
 **Since:** 12
+
+<!--Device-RegionOp-XOR = 3--><!--Device-RegionOp-XOR = 3-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -69,6 +79,8 @@ Reverse difference operation.
 
 **Since:** 12
 
+<!--Device-RegionOp-REVERSE_DIFFERENCE = 4--><!--Device-RegionOp-REVERSE_DIFFERENCE = 4-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## REPLACE
@@ -80,6 +92,8 @@ REPLACE = 5
 Replace operation.
 
 **Since:** 12
+
+<!--Device-RegionOp-REPLACE = 5--><!--Device-RegionOp-REPLACE = 5-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

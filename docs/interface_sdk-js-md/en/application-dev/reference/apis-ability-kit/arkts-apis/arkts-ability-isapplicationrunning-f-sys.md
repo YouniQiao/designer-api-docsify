@@ -12,12 +12,13 @@ import { appManager } from '@kit.AbilityKit';
 function isApplicationRunning(bundleName: string): Promise<boolean>
 ```
 
-Checks whether the application with the specified bundle name is running across all users. This API uses a promise
-to return the result.
+Checks whether the application with the specified bundle name is running across all users. This API uses a promise to return the result.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
+
+<!--Device-appManager-function isApplicationRunning(bundleName: string): Promise<boolean>--><!--Device-appManager-function isApplicationRunning(bundleName: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -33,7 +34,7 @@ to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** is returned if at least one user is runningthe specified application. **false** is returned if none of the users are running the application. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. **true** is returned if at least one user is running the specified application. **false** is returned if none of the users are running the application. |
 
 **Error codes:**
 
@@ -67,12 +68,13 @@ appManager.isApplicationRunning(bundleName).then((data) => {
 function isApplicationRunning(bundleName: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the application with the specified bundle name is running across all users. This API uses an
-asynchronous callback to return the result.
+Checks whether the application with the specified bundle name is running across all users. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
+
+<!--Device-appManager-function isApplicationRunning(bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-appManager-function isApplicationRunning(bundleName: string, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -83,7 +85,7 @@ asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. **true** is returned if at least oneuser is running the specified application. **false** is returned if none of the users are running the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. **true** is returned if at least one user is running the specified application. **false** is returned if none of the users are running the application. |
 
 **Error codes:**
 

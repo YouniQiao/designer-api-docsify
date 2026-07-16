@@ -16,6 +16,8 @@ Obtains the operator key of the SIM card in a specified slot.
 
 **Since:** 9
 
+<!--Device-sim-function getOpKey(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getOpKey(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -23,7 +25,7 @@ Obtains the operator key of the SIM card in a specified slot.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Indicates the callback for getting the operator key;Returns an empty string if no SIM card is inserted or no operator key matched. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Indicates the callback for getting the operator key;Returns an empty string if no SIM card is inserted or no operator key matched. |
 
 **Error codes:**
 
@@ -67,6 +69,8 @@ Obtains the operator key of the SIM card in a specified slot.
 
 **Since:** 9
 
+<!--Device-sim-function getOpKey(slotId: int): Promise<string>--><!--Device-sim-function getOpKey(slotId: int): Promise<string>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -79,7 +83,7 @@ Obtains the operator key of the SIM card in a specified slot.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the operator key;Returns an empty string if no SIM card is inserted or no operator key matched. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the operator key;Returns an empty string if no SIM card is inserted or no operator key matched. |
 
 **Error codes:**
 

@@ -14,12 +14,13 @@ function sendShortMessage(options: SendMessageOptions, callback: AsyncCallback<v
 
 Sends a text or data SMS message.
 
-<p>This method checks whether the length of an SMS message exceeds the maximum length. If the
-maximum length is exceeded, the SMS message is split into multiple parts and sent separately.
+<p>This method checks whether the length of an SMS message exceeds the maximum length. If the maximum length is exceeded, the SMS message is split into multiple parts and sent separately.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.SEND_MESSAGES
+
+<!--Device-sms-function sendShortMessage(options: SendMessageOptions, callback: AsyncCallback<void>): void--><!--Device-sms-function sendShortMessage(options: SendMessageOptions, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -27,8 +28,8 @@ maximum length is exceeded, the SMS message is split into multiple parts and sen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SendMessageOptions | Yes | Indicates the parameters and callback for sending the SMS message. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of sendShortMessage. |
+| options | [SendMessageOptions](../../apis-arkui/arkts-apis/arkts-arkui-sendmessageoptions-i.md) | Yes | Indicates the parameters and callback for sending the SMS message. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of sendShortMessage. |
 
 **Error codes:**
 
@@ -77,12 +78,13 @@ function sendShortMessage(options: SendMessageOptions): Promise<void>
 
 Sends a text or data SMS message.
 
-<p>This method checks whether the length of an SMS message exceeds the maximum length. If the
-maximum length is exceeded, the SMS message is split into multiple parts and sent separately.
+<p>This method checks whether the length of an SMS message exceeds the maximum length. If the maximum length is exceeded, the SMS message is split into multiple parts and sent separately.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.SEND_MESSAGES
+
+<!--Device-sms-function sendShortMessage(options: SendMessageOptions): Promise<void>--><!--Device-sms-function sendShortMessage(options: SendMessageOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -90,13 +92,13 @@ maximum length is exceeded, the SMS message is split into multiple parts and sen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SendMessageOptions | Yes | Indicates the parameters and callback for sending the SMS message. |
+| options | [SendMessageOptions](../../apis-arkui/arkts-apis/arkts-arkui-sendmessageoptions-i.md) | Yes | Indicates the parameters and callback for sending the SMS message. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the sendShortMessage. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the sendShortMessage. |
 
 **Error codes:**
 

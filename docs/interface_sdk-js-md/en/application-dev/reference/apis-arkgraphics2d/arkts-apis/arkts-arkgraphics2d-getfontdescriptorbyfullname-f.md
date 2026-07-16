@@ -14,12 +14,13 @@ function getFontDescriptorByFullName(fullName: string, fontType: SystemFontType)
 
 Obtains the font descriptor based on the font name and type. This API uses a promise to return the result.
 
-A font descriptor is a data structure that describes font features. It contains details of the font appearance and
-properties.
+A font descriptor is a data structure that describes font features. It contains details of the font appearance and properties.
 
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-text-function getFontDescriptorByFullName(fullName: string, fontType: SystemFontType): Promise<FontDescriptor>--><!--Device-text-function getFontDescriptorByFullName(fullName: string, fontType: SystemFontType): Promise<FontDescriptor>-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -27,14 +28,14 @@ properties.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fullName | string | Yes | Font name. It is obtained with[getSystemFontFullNamesByType](arkts-arkgraphics2d-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype-1) called. |
-| fontType | SystemFontType | Yes | Font type. |
+| fullName | string | Yes | Font name. It is obtained with [getSystemFontFullNamesByType](arkts-arkgraphics2d-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype-1) called. |
+| fontType | [SystemFontType](arkts-arkgraphics2d-systemfonttype-e.md) | Yes | Font type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FontDescriptor&gt; | Promise used to return the font descriptor. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<FontDescriptor> | Promise used to return the font descriptor. |
 
 **Error codes:**
 

@@ -12,9 +12,7 @@ import { uiMaterial } from '@kit.ArkUI';
 function getMaterialInfo(): MaterialInfo
 ```
 
-Obtains the material configuration information of this application. The returned configuration information comes
-from the metadata configured in the [module.json5](../../../../quick-start/module-configuration-file.md) file of the
-application.
+Obtains the material configuration information of this application. The returned configuration information comes from the metadata configured in the [module.json5](../../../../quick-start/module-configuration-file.md) file of the application.
 
 **Since:** 26.0.0
 
@@ -22,11 +20,13 @@ application.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-uiMaterial-function getMaterialInfo(): MaterialInfo--><!--Device-uiMaterial-function getMaterialInfo(): MaterialInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MaterialInfo | Material configuration information of this application, including the material enablingstate and material type. |
+| [MaterialInfo](arkts-arkui-materialinfo-i.md) | Material configuration information of this application, including the material enabling state and material type. |
 

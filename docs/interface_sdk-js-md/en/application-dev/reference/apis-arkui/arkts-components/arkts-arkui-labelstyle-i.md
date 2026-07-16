@@ -4,6 +4,8 @@ Represents a style object for the label text and font.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface LabelStyle--><!--Device-unnamed-declare interface LabelStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## font
@@ -14,11 +16,9 @@ font?: Font
 
 Font of the label text.
 
-When the tab is a subtab, the default font is in 16.0 fp size, 'HarmonyOS Sans' family, normal font style, medium
-weight when selected, and normal weight when not selected.
+When the tab is a subtab, the default font is in 16.0 fp size, 'HarmonyOS Sans' family, normal font style, medium weight when selected, and normal weight when not selected.
 
-When the tab is a bottom tab, the default font is in 10.0 fp size, 'HarmonyOS Sans' family, normal font style, and
-medium weight.
+When the tab is a bottom tab, the default font is in 10.0 fp size, 'HarmonyOS Sans' family, normal font style, and medium weight.
 
 The default font size of the bottom tab page is 12.0 fp since API version 12.
 
@@ -29,6 +29,8 @@ The default font size of the bottom tab page is 12.0 fp since API version 12.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-LabelStyle-font?: Font--><!--Device-LabelStyle-font?: Font-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +50,8 @@ How the adaptive height is determined for the label text. By default, the **maxL
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-LabelStyle-heightAdaptivePolicy?: TextHeightAdaptivePolicy--><!--Device-LabelStyle-heightAdaptivePolicy?: TextHeightAdaptivePolicy-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## maxFontSize
@@ -56,10 +60,7 @@ How the adaptive height is determined for the label text. By default, the **maxL
 maxFontSize?: number | ResourceStr
 ```
 
-Maximum font size of the label text. It cannot be set in percentage. For the setting to take effect, this attribute
-must be used together with **minFontSize**, **maxLines**, or layout constraint settings. When the adaptive text
-size is set, **font.size** does not take effect. The default value is **0.0fp**, indicating that the adaptive text
-size has no effect.
+Maximum font size of the label text. It cannot be set in percentage. For the setting to take effect, this attribute must be used together with **minFontSize**, **maxLines**, or layout constraint settings. When the adaptive text size is set, **font.size** does not take effect. The default value is **0.0fp**, indicating that the adaptive text size has no effect.
 
 Value range: [minFontSize, +∞)
 
@@ -73,6 +74,8 @@ Value range: [minFontSize, +∞)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-LabelStyle-maxFontSize?: number | ResourceStr--><!--Device-LabelStyle-maxFontSize?: number | ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## maxLines
@@ -81,8 +84,7 @@ Value range: [minFontSize, +∞)
 maxLines?: number
 ```
 
-Maximum number of lines in the label text. If this attribute is specified, the text will not exceed the specified
-number of lines. You can use **textOverflow** to specify how to represent text overflow. Default value: **1**
+Maximum number of lines in the label text. If this attribute is specified, the text will not exceed the specified number of lines. You can use **textOverflow** to specify how to represent text overflow. Default value: **1**
 
 Value range: [1, +∞)
 
@@ -94,6 +96,8 @@ Value range: [1, +∞)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-LabelStyle-maxLines?: number--><!--Device-LabelStyle-maxLines?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## minFontSize
@@ -102,10 +106,7 @@ Value range: [1, +∞)
 minFontSize?: number | ResourceStr
 ```
 
-Minimum font size of the label text. It cannot be set in percentage. For the setting to take effect, this attribute
-must be used together with **maxFontSize**, **maxLines**, or layout constraint settings. When the adaptive text
-size is set, **font.size** does not take effect. The default value is **0.0fp**, indicating that the adaptive text
-size has no effect.
+Minimum font size of the label text. It cannot be set in percentage. For the setting to take effect, this attribute must be used together with **maxFontSize**, **maxLines**, or layout constraint settings. When the adaptive text size is set, **font.size** does not take effect. The default value is **0.0fp**, indicating that the adaptive text size has no effect.
 
 Value range: (0, +∞)
 
@@ -118,6 +119,8 @@ Value range: (0, +∞)
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-LabelStyle-minFontSize?: number | ResourceStr--><!--Device-LabelStyle-minFontSize?: number | ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -136,6 +139,8 @@ Display mode when the label text is too long. By default, an ellipsis (...) is u
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-LabelStyle-overflow?: TextOverflow--><!--Device-LabelStyle-overflow?: TextOverflow-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -159,6 +164,8 @@ Default value: **#FF007DFF**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LabelStyle-selectedColor?: ResourceColor--><!--Device-LabelStyle-selectedColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## unselectedColor
@@ -180,6 +187,8 @@ Default value: **#99182431**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LabelStyle-unselectedColor?: ResourceColor--><!--Device-LabelStyle-unselectedColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

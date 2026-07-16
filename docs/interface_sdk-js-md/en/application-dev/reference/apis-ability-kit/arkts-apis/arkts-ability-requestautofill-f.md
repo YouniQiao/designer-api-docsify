@@ -20,15 +20,17 @@ Trigger an auto fill request.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-autoFillManager-export function requestAutoFill(context: UIContext, request: FillRequest, callback?: AutoFillCallback): void--><!--Device-autoFillManager-export function requestAutoFill(context: UIContext, request: FillRequest, callback?: AutoFillCallback): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIContext | Yes | Indicates the ui context where the filling operation will be performed. |
-| request | FillRequest | Yes | Indicates the struct of automatic filling request. |
-| callback | AutoFillCallback | No | Indicates the callback that used to receive the result. |
+| context | [UIContext](../../apis-arkui/arkts-components/arkts-arkui-uicontext-t.md) | Yes | Indicates the ui context where the filling operation will be performed. |
+| request | [FillRequest](arkts-ability-fillrequest-i-sys.md) | Yes | Indicates the struct of automatic filling request. |
+| callback | [AutoFillCallback](arkts-ability-autofillcallback-i.md) | No | Indicates the callback that used to receive the result. |
 
 **Error codes:**
 

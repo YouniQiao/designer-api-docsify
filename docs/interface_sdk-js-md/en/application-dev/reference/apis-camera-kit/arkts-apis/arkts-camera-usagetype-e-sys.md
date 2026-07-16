@@ -4,6 +4,8 @@ Enum for usage type used in capture session.
 
 **Since:** 13
 
+<!--Device-camera-enum UsageType--><!--Device-camera-enum UsageType-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -17,6 +19,8 @@ BOKEH = 0
 Bokeh usage type.
 
 **Since:** 13
+
+<!--Device-UsageType-BOKEH = 0--><!--Device-UsageType-BOKEH = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

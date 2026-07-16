@@ -1,5 +1,11 @@
 # queryParticipants（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { cloudData } from '@kit.ArkData';
+```
+
 ## queryParticipants
 
 ```TypeScript
@@ -10,6 +16,8 @@ function queryParticipants(sharingResource: string, callback: AsyncCallback<Resu
 
 **起始版本：** 11
 
+<!--Device-sharing-function queryParticipants(sharingResource: string, callback: AsyncCallback<Result<Array<Participant>>>): void--><!--Device-sharing-function queryParticipants(sharingResource: string, callback: AsyncCallback<Result<Array<Participant>>>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **系统接口：** 此接口为系统接口。
@@ -19,7 +27,7 @@ function queryParticipants(sharingResource: string, callback: AsyncCallback<Resu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sharingResource | string | 是 | 端云共享数据的资源标识。 |
-| callback | AsyncCallback&lt;Result&lt;Array&lt;Participant&gt;&gt;&gt; | 是 | 回调函数。返回查找共享参与者的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Result<Array<Participant>>> | 是 | 回调函数。返回查找共享参与者的结果。 |
 
 **错误码：**
 
@@ -55,6 +63,8 @@ function queryParticipants(sharingResource: string): Promise<Result<Array<Partic
 
 **起始版本：** 11
 
+<!--Device-sharing-function queryParticipants(sharingResource: string): Promise<Result<Array<Participant>>>--><!--Device-sharing-function queryParticipants(sharingResource: string): Promise<Result<Array<Participant>>>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **系统接口：** 此接口为系统接口。
@@ -69,7 +79,7 @@ function queryParticipants(sharingResource: string): Promise<Result<Array<Partic
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;Participant&gt;&gt;&gt; | Promise对象，返回查询共享参与者的结果。 |
+| Promise<Result<Array<Participant>>> | Promise对象，返回查询共享参与者的结果。 |
 
 **错误码：**
 

@@ -4,6 +4,8 @@ Defines device information.
 
 **Since:** 26.0.0
 
+<!--Device-userStatus-export interface DeviceInfo--><!--Device-userStatus-export interface DeviceInfo-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Device ID.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DeviceInfo-deviceId: string--><!--Device-DeviceInfo-deviceId: string-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
@@ -45,6 +49,8 @@ Device name.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DeviceInfo-deviceName: string--><!--Device-DeviceInfo-deviceName: string-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -64,6 +70,8 @@ Device type.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DeviceInfo-deviceType: DeviceType--><!--Device-DeviceInfo-deviceType: DeviceType-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
@@ -81,6 +89,8 @@ Device network ID.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DeviceInfo-networkId: string--><!--Device-DeviceInfo-networkId: string-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 

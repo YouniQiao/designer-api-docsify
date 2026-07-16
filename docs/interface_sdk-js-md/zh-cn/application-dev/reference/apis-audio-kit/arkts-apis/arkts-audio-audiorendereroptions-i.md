@@ -4,7 +4,15 @@
 
 **起始版本：** 8
 
+<!--Device-audio-interface AudioRendererOptions--><!--Device-audio-interface AudioRendererOptions-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## privacyType
 
@@ -17,6 +25,8 @@ privacyType?: AudioPrivacyType
 **类型：** AudioPrivacyType
 
 **起始版本：** 10
+
+<!--Device-AudioRendererOptions-privacyType?: AudioPrivacyType--><!--Device-AudioRendererOptions-privacyType?: AudioPrivacyType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 
@@ -32,6 +42,8 @@ rendererInfo: AudioRendererInfo
 
 **起始版本：** 8
 
+<!--Device-AudioRendererOptions-rendererInfo: AudioRendererInfo--><!--Device-AudioRendererOptions-rendererInfo: AudioRendererInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## streamInfo
@@ -45,6 +57,8 @@ streamInfo: AudioStreamInfo
 **类型：** AudioStreamInfo
 
 **起始版本：** 8
+
+<!--Device-AudioRendererOptions-streamInfo: AudioStreamInfo--><!--Device-AudioRendererOptions-streamInfo: AudioStreamInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 

@@ -1,5 +1,11 @@
 # getPointerSpeed（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+```
+
 ## getPointerSpeed
 
 ```TypeScript
@@ -10,6 +16,8 @@ function getPointerSpeed(callback: AsyncCallback<number>): void
 
 **起始版本：** 9
 
+<!--Device-pointer-function getPointerSpeed(callback: AsyncCallback<int>): void--><!--Device-pointer-function getPointerSpeed(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -18,7 +26,7 @@ function getPointerSpeed(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。当获取鼠标移动速度成功，err为undefined，number为鼠标移动速度；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。当获取鼠标移动速度成功，err为undefined，number为鼠标移动速度；否则为错误对象。 |
 
 **错误码：**
 
@@ -70,6 +78,8 @@ function getPointerSpeed(): Promise<number>
 
 **起始版本：** 9
 
+<!--Device-pointer-function getPointerSpeed(): Promise<int>--><!--Device-pointer-function getPointerSpeed(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **系统接口：** 此接口为系统接口。
@@ -78,7 +88,7 @@ function getPointerSpeed(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回鼠标移动速度。 |
+| Promise<number> | Promise对象，返回鼠标移动速度。 |
 
 **错误码：**
 

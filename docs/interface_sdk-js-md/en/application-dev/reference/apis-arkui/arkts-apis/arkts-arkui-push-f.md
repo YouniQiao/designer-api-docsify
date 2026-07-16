@@ -20,13 +20,15 @@ Navigates to a specified page in the application.
 
 **Substitutes:** pushUrl(options:
 
+<!--Device-router-function push(options: RouterOptions): void--><!--Device-router-function push(options: RouterOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | RouterOptions | Yes | Page routing parameters. |
+| options | [RouterOptions](arkts-arkui-routeroptions-i.md) | Yes | Page routing parameters. |
 
 **Example**
 

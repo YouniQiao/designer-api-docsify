@@ -4,6 +4,8 @@ Role of the button.
 
 **Since:** 12
 
+<!--Device-unnamed-declare enum ButtonRole--><!--Device-unnamed-declare enum ButtonRole-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NORMAL
@@ -22,6 +24,8 @@ Normal button.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-ButtonRole-NORMAL = 0--><!--Device-ButtonRole-NORMAL = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ERROR
@@ -39,6 +43,8 @@ Warning button.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-ButtonRole-ERROR = 1--><!--Device-ButtonRole-ERROR = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

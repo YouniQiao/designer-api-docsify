@@ -4,9 +4,17 @@
 
 **起始版本：** 10
 
+<!--Device-dataSharePredicates-class DataSharePredicates--><!--Device-dataSharePredicates-class DataSharePredicates-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+```
 
 ## and
 
@@ -22,7 +30,9 @@ and(): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DataSharePredicates-and(): DataSharePredicates--><!--Device-DataSharePredicates-and(): DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -30,7 +40,7 @@ and(): DataSharePredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回带有和条件的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c.md) | 返回带有和条件的谓词。 |
 
 **示例：**
 
@@ -56,7 +66,9 @@ equalTo(field: string, value: ValueType): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DataSharePredicates-equalTo(field: string, value: ValueType): DataSharePredicates--><!--Device-DataSharePredicates-equalTo(field: string, value: ValueType): DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -65,13 +77,13 @@ equalTo(field: string, value: ValueType): DataSharePredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名。field为undefined或者null时，此次调用接口配置的谓词无效。 |
-| value | ValueType | 是 | 指示要与谓词匹配的值。value为undefined或者null时，此次调用接口配置的谓词无效。 |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 指示要与谓词匹配的值。value为undefined或者null时，此次调用接口配置的谓词无效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 
@@ -95,7 +107,9 @@ in(field: string, value: Array<ValueType>): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DataSharePredicates-in(field: string, value: Array<ValueType>): DataSharePredicates--><!--Device-DataSharePredicates-in(field: string, value: Array<ValueType>): DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -104,13 +118,13 @@ in(field: string, value: Array<ValueType>): DataSharePredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名。field为undefined或者null时，此次调用接口配置的谓词无效。 |
-| value | Array&lt;ValueType&gt; | 是 | 以ValueType型数组形式指定的要匹配的值。 |
+| value | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<ValueType> | 是 | 以ValueType型数组形式指定的要匹配的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 
@@ -134,7 +148,9 @@ limit(total: number, offset: number): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DataSharePredicates-limit(total: int, offset: int): DataSharePredicates--><!--Device-DataSharePredicates-limit(total: int, offset: int): DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -149,7 +165,7 @@ limit(total: number, offset: number): DataSharePredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 
@@ -173,7 +189,9 @@ orderByAsc(field: string): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DataSharePredicates-orderByAsc(field: string): DataSharePredicates--><!--Device-DataSharePredicates-orderByAsc(field: string): DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -187,7 +205,7 @@ orderByAsc(field: string): DataSharePredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 
@@ -211,7 +229,9 @@ orderByDesc(field: string): DataSharePredicates
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DataSharePredicates-orderByDesc(field: string): DataSharePredicates--><!--Device-DataSharePredicates-orderByDesc(field: string): DataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -225,7 +245,7 @@ orderByDesc(field: string): DataSharePredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| DataSharePredicates | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **示例：**
 

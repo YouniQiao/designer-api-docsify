@@ -4,6 +4,8 @@ Sets the placeholder image.
 
 **Since:** 22
 
+<!--Device-unnamed-declare interface ImageAlt--><!--Device-unnamed-declare interface ImageAlt-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## error
@@ -24,6 +26,8 @@ Placeholder image displayed when loading fails.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
+<!--Device-ImageAlt-error?: ResourceStr | PixelMap--><!--Device-ImageAlt-error?: ResourceStr | PixelMap-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## placeholder
@@ -43,6 +47,8 @@ Placeholder image displayed during loading.
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
+
+<!--Device-ImageAlt-placeholder?: ResourceStr | PixelMap--><!--Device-ImageAlt-placeholder?: ResourceStr | PixelMap-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

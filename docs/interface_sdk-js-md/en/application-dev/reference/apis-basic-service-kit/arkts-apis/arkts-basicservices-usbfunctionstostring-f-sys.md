@@ -20,6 +20,8 @@ Converts the USB function list in the numeric mask format to a string in Device 
 
 **Substitutes:** getStringFromFunctions(funcs:
 
+<!--Device-usbManager-function usbFunctionsToString(funcs: FunctionType): string--><!--Device-usbManager-function usbFunctionsToString(funcs: FunctionType): string-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Converts the USB function list in the numeric mask format to a string in Device 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| funcs | FunctionType | Yes | USB function list in numeric mask format. |
+| funcs | [FunctionType](arkts-basicservices-functiontype-e-sys.md) | Yes | USB function list in numeric mask format. |
 
 **Return value:**
 
@@ -40,5 +42,5 @@ Converts the USB function list in the numeric mask format to a string in Device 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified.<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:* <br>1.Mandatory parameters are left unspecified.* <br>2.Incorrect parameter types. |
 

@@ -1,9 +1,10 @@
 # Aspect
 
-Provides APIs that support Aspect Oriented Programming (AOP). These APIs can be used to perform instrumentation or
-replacement on class methods.
+Provides APIs that support Aspect Oriented Programming (AOP). These APIs can be used to perform instrumentation or replacement on class methods.
 
 **Since:** 11
+
+<!--Device-util-class Aspect--><!--Device-util-class Aspect-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -19,12 +20,13 @@ import { util } from '@kit.ArkTS';
 static addAfter(targetClass: Object, methodName: string, isStatic: boolean, after: Function): void
 ```
 
-Inserts a function after a method of a class object. The final return value is the return value of the function
-inserted.
+Inserts a function after a method of a class object. The final return value is the return value of the function inserted.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Aspect-static addAfter(targetClass: Object, methodName: string, isStatic: boolean, after: Function): void--><!--Device-Aspect-static addAfter(targetClass: Object, methodName: string, isStatic: boolean, after: Function): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -32,10 +34,10 @@ inserted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetClass | Object | Yes | Target class object. |
+| targetClass | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Target class object. |
 | methodName | string | Yes | Name of the method. Read-only methods are not supported. |
 | isStatic | boolean | Yes | Whether the method is a static method. The value **true** means a static method,and **false** means an instance method. |
-| after | Function | Yes | Function to insert. If the function carries parameters, then the first parameter isthe **this** object, which is the target class object (specified by **targetClass**) if **isStatic** is**true** or the instance object of the method if **isStatic** is **false**; the second parameter is thereturn value of the original method (**undefined** if the original method does not have a return value);other parameters are the parameters carried by the original method. If the function does not carry anyparameter, no processing is performed. |
+| after | [Function](../../apis-na/arkts-apis/arkts-na-function-i.md) | Yes | Function to insert. If the function carries parameters, then the first parameter is the **this** object, which is the target class object (specified by **targetClass**) if **isStatic** is **true** or the instance object of the method if **isStatic** is **false**; the second parameter is the return value of the original method (**undefined** if the original method does not have a return value);other parameters are the parameters carried by the original method. If the function does not carry any parameter, no processing is performed. |
 
 **Example**
 
@@ -100,12 +102,13 @@ util.Aspect.addAfter(AroundTest, 'foo', false, () => {
 static addBefore(targetClass: Object, methodName: string, isStatic: boolean, before: Function): void
 ```
 
-Inserts a function before a method of a class object. The inserted function is executed in prior to the original
-method of the class object.
+Inserts a function before a method of a class object. The inserted function is executed in prior to the original method of the class object.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Aspect-static addBefore(targetClass: Object, methodName: string, isStatic: boolean, before: Function): void--><!--Device-Aspect-static addBefore(targetClass: Object, methodName: string, isStatic: boolean, before: Function): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -113,10 +116,10 @@ method of the class object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetClass | Object | Yes | Target class object. |
+| targetClass | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Target class object. |
 | methodName | string | Yes | Name of the method. Read-only methods are not supported. |
 | isStatic | boolean | Yes | Whether the method is a static method. The value **true** means a static method,and **false** means an instance method. |
-| before | Function | Yes | Function to insert. If the function carries parameters, then the first parameter isthe **this** object, which is the target class object (specified by **targetClass**) if **isStatic** is**true** or the instance object of the method if **isStatic** is **false**; other parameters are theparameters carried in the original method. If the function does not carry any parameter, no processing isperformed. |
+| before | [Function](../../apis-na/arkts-apis/arkts-na-function-i.md) | Yes | Function to insert. If the function carries parameters, then the first parameter is the **this** object, which is the target class object (specified by **targetClass**) if **isStatic** is **true** or the instance object of the method if **isStatic** is **false**; other parameters are the parameters carried in the original method. If the function does not carry any parameter, no processing is performed. |
 
 **Example**
 
@@ -190,12 +193,13 @@ console.info('MyClass.data is ' + MyClass.data);
 static replace(targetClass: Object, methodName: string, isStatic: boolean, instead: Function) : void
 ```
 
-Replaces a method of a class object with another function. After the replacement, only the new function logic is
-executed. The final return value is the return value of the new function.
+Replaces a method of a class object with another function. After the replacement, only the new function logic is executed. The final return value is the return value of the new function.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Aspect-static replace(targetClass: Object, methodName: string, isStatic: boolean, instead: Function) : void--><!--Device-Aspect-static replace(targetClass: Object, methodName: string, isStatic: boolean, instead: Function) : void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -203,10 +207,10 @@ executed. The final return value is the return value of the new function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetClass | Object | Yes | Target class object. |
+| targetClass | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Target class object. |
 | methodName | string | Yes | Name of the method. Read-only methods are not supported. |
 | isStatic | boolean | Yes | Whether the method is a static method. The value **true** means a static method,and **false** means an instance method. |
-| instead | Function | Yes | Function to be used replacement. If the function carries parameters, then the firstparameter is the **this** object, which is the target class object (specified by **targetClass**) if**isStatic** is **true** or the instance object of the method if **isStatic** is **false**; other parametersare the parameters carried in the original method. If the function does not carry any parameter, noprocessing is performed. |
+| instead | [Function](../../apis-na/arkts-apis/arkts-na-function-i.md) | Yes | Function to be used replacement. If the function carries parameters, then the first parameter is the **this** object, which is the target class object (specified by **targetClass**) if **isStatic** is **true** or the instance object of the method if **isStatic** is **false**; other parameters are the parameters carried in the original method. If the function does not carry any parameter, no processing is performed. |
 
 **Example**
 

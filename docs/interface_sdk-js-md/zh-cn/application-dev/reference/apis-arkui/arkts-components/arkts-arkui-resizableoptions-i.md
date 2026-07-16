@@ -2,10 +2,11 @@
 
 图像拉伸时可调整大小的图像选项。
 
-**图1** 设置EdgeWidths效果图
-![edgewidths](../../../../reference/apis-arkui/arkui-ts/figures/edgewidths.png)
+**图1** 设置EdgeWidths效果图![edgewidths](../../../../reference/apis-arkui/arkui-ts/figures/edgewidths.png)
 
 **起始版本：** 11
+
+<!--Device-unnamed-declare interface ResizableOptions--><!--Device-unnamed-declare interface ResizableOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,13 +20,7 @@ lattice?: DrawingLattice
 
 **说明：**
 
-通过@ohos.graphics.drawing的[createImageLattice]
-{@link @ohos.graphics.drawing:drawing.Lattice.createImageLattice(xDivs: Array<number>, yDivs: Array<number>,
-fXCount: number, fYCount: number, fBounds?: common2D.Rect | null, fRectTypes?: Array<RectType> | null,
-fColors?: Array<common2D.Color> | null)}
-接口创建Lattice类型作为入参。将图像划分为矩形网格，同时处于偶数列和偶数行上的网格图像是固定的，
-不会被拉伸。其他位置的网格图像会根据
-slice进行拉伸。
+通过@ohos.graphics.drawing的[createImageLattice](@ohos.graphics.drawing:drawing.Lattice.createImageLattice(xDivs: Array<number>, yDivs: Array<number>,fXCount: number, fYCount: number, fBounds?: common2D.Rect | null, fRectTypes?: Array<RectType> | null,fColors?: Array<common2D.Color> | null))接口创建Lattice类型作为入参。将图像划分为矩形网格，同时处于偶数列和偶数行上的网格图像是固定的，不会被拉伸。其他位置的网格图像会根据slice进行拉伸。
 
 该参数对[backgroundImageResizable](arkts-arkui-commonmethod-c.md#backgroundimageresizable-1)接口不生效。
 
@@ -37,7 +32,9 @@ slice进行拉伸。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResizableOptions-lattice?: DrawingLattice--><!--Device-ResizableOptions-lattice?: DrawingLattice-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,7 +70,9 @@ slice?: EdgeWidths
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResizableOptions-slice?: EdgeWidths--><!--Device-ResizableOptions-slice?: EdgeWidths-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -18,6 +18,8 @@ Registers a callback for querying the number of application badges.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function onBadgeNumberQuery(callback: (bundle: BundleOption) => Promise<long>): void--><!--Device-notificationManager-function onBadgeNumberQuery(callback: (bundle: BundleOption) => Promise<long>): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Registers a callback for querying the number of application badges.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (bundle: BundleOption) =&gt; Promise&lt;number&gt; | Yes | Number of target application badges. |
+| callback | (bundle: BundleOption) => Promise<number> | Yes | Number of target application badges. |
 
 **Error codes:**
 

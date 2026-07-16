@@ -8,6 +8,8 @@ Enumerates the touch guide event types.
 
 **Since:** 9
 
+<!--Device-unnamed-type TouchGuideType = 'touchBegin' | 'touchEnd' | 'touchGuideGesture'--><!--Device-unnamed-type TouchGuideType = 'touchBegin' | 'touchEnd' | 'touchGuideGesture'-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 | Type | Description |

@@ -1,5 +1,11 @@
 # off（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+```
+
 ## off('receiveImage')
 
 ```TypeScript
@@ -13,6 +19,10 @@ Unregisters receiveImage event.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-abilityConnectionManager-function off(type: 'receiveImage', sessionId: number,
+        callback?: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function off(type: 'receiveImage', sessionId: number,
+        callback?: Callback<EventCallbackInfo>): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **系统接口：** 此接口为系统接口。
@@ -23,7 +33,7 @@ Unregisters receiveImage event.
 | --- | --- | --- | --- |
 | type | 'receiveImage' | 是 | Registration Type, 'receiveImage'. |
 | sessionId | number | 是 | Ability connection Session id. |
-| callback | Callback&lt;EventCallbackInfo&gt; | 否 | Used to handle ('receiveImage') command. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<EventCallbackInfo> | 否 | Used to handle ('receiveImage') command. |
 
 **错误码：**
 
@@ -58,6 +68,10 @@ Unregisters collaborateEvent event.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-abilityConnectionManager-function off(type: 'collaborateEvent', sessionId: number,
+        callback?: Callback<CollaborateEventInfo>): void--><!--Device-abilityConnectionManager-function off(type: 'collaborateEvent', sessionId: number,
+        callback?: Callback<CollaborateEventInfo>): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **系统接口：** 此接口为系统接口。
@@ -68,7 +82,7 @@ Unregisters collaborateEvent event.
 | --- | --- | --- | --- |
 | type | 'collaborateEvent' | 是 | Registration Type, 'collaborateEvent'. |
 | sessionId | number | 是 | Ability connection Session id. |
-| callback | Callback&lt;CollaborateEventInfo&gt; | 否 | Called when an error event comes. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CollaborateEventInfo> | 否 | Called when an error event comes. |
 
 **错误码：**
 
@@ -101,6 +115,10 @@ Unregisters collaborateEvent event.
 
 **起始版本：** 18
 
+<!--Device-abilityConnectionManager-function off(type: 'collaborateEvent', sessionId: number,
+        callback?: Callback<CollaborateEventInfo>): void--><!--Device-abilityConnectionManager-function off(type: 'collaborateEvent', sessionId: number,
+        callback?: Callback<CollaborateEventInfo>): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **系统接口：** 此接口为系统接口。
@@ -111,7 +129,7 @@ Unregisters collaborateEvent event.
 | --- | --- | --- | --- |
 | type | 'collaborateEvent' | 是 | Registration Type, 'collaborateEvent'. |
 | sessionId | number | 是 | Ability connection Session id. |
-| callback | Callback&lt;CollaborateEventInfo&gt; | 否 | Called when an error event comes. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CollaborateEventInfo> | 否 | Called when an error event comes. |
 
 **错误码：**
 

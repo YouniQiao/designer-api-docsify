@@ -1,5 +1,11 @@
 # init
 
+## 导入模块
+
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+```
+
 ## init
 
 ```TypeScript
@@ -10,9 +16,9 @@ init操作密钥接口。使用callback异步回调。
 
 huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
 
-> **说明：**
->
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> **说明：**  
+>  
+> 从API version 8开始支持，从API version 9开始废弃，建议使用  
 > [huks.initSession<sup>9+</sup>](arkts-universalkeystore-initsession-f.md#initsession-2)替代。
 
 **起始版本：** 8
@@ -21,6 +27,8 @@ huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
 
 **替代接口：** initSession(keyAlias:
 
+<!--Device-huks-function init(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksHandle>): void--><!--Device-huks-function init(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksHandle>): void-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **参数：**
@@ -28,8 +36,8 @@ huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | Init操作密钥的别名。 |
-| options | HuksOptions | 是 | Init操作的参数集合。 |
-| callback | AsyncCallback&lt;HuksHandle&gt; | 是 | 回调函数。当密钥操作init成功时，err为undefined，data为获取到的HuksHandle；否则为错误对象。HuksHandle的handle返回init生成的handle。 |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | 是 | Init操作的参数集合。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<HuksHandle> | 是 | 回调函数。当密钥操作init成功时，err为undefined，data为获取到的HuksHandle；否则为错误对象。HuksHandle的handle返回init生成的handle。 |
 
 
 ## init
@@ -42,9 +50,9 @@ init操作密钥接口。使用Promise异步回调。
 
 huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
 
-> **说明：**
->
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> **说明：**  
+>  
+> 从API version 8开始支持，从API version 9开始废弃，建议使用  
 > [huks.initSession<sup>9+</sup>](arkts-universalkeystore-initsession-f.md#initsession-2)替代。
 
 **起始版本：** 8
@@ -53,6 +61,8 @@ huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
 
 **替代接口：** initSession(keyAlias:
 
+<!--Device-huks-function init(keyAlias: string, options: HuksOptions): Promise<HuksHandle>--><!--Device-huks-function init(keyAlias: string, options: HuksOptions): Promise<HuksHandle>-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **参数：**
@@ -60,11 +70,11 @@ huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | Init操作密钥的别名。 |
-| options | HuksOptions | 是 | Init参数集合。 |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | 是 | Init参数集合。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;HuksHandle&gt; | Promise对象，返回HuksResult。HuksHandle的handle返回init生成的handle。 |
+| Promise<HuksHandle> | Promise对象，返回HuksResult。HuksHandle的handle返回init生成的handle。 |
 

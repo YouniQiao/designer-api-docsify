@@ -1,13 +1,12 @@
 # File
 
-Represents the file data. It is a child class of [UnifiedRecord](arkts-arkdata-unifiedrecord-c.md) and a base
-class of the data of the file type. You are advised to use the child class of **File**, for example,
-[Image](arkts-arkdata-image-c.md), [Video](arkts-arkdata-video-c.md), and
-[Folder](arkts-arkdata-folder-c.md), to describe data.
+Represents the file data. It is a child class of [UnifiedRecord](arkts-arkdata-unifiedrecord-c.md) and a base class of the data of the file type. You are advised to use the child class of **File**, for example,[Image](arkts-arkdata-image-c.md), [Video](arkts-arkdata-video-c.md), and [Folder](arkts-arkdata-folder-c.md), to describe data.
 
 **Inheritance/Implementation:** File extends [UnifiedRecord](arkts-arkdata-unifiedrecord-c.md)
 
 **Since:** 10
+
+<!--Device-unifiedDataChannel-class File extends UnifiedRecord--><!--Device-unifiedDataChannel-class File extends UnifiedRecord-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -23,8 +22,7 @@ import { unifiedDataChannel } from '@kit.ArkData';
 details?: Record<string, string>
 ```
 
-A dictionary type object, where both the key and value are of the string type and are used to describe file
-information. For example, a data object with the following content can be created to describe a file:
+A dictionary type object, where both the key and value are of the string type and are used to describe file information. For example, a data object with the following content can be created to describe a file:
 
 {
 
@@ -44,6 +42,8 @@ The default value is an empty dictionary object.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-File-details?: Record<string, string>--><!--Device-File-details?: Record<string, string>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## uri
@@ -62,6 +62,8 @@ Indicates the uri of file
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-File-set uri(value: string)--><!--Device-File-set uri(value: string)-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## uriAuthorizationPolicies
@@ -79,6 +81,8 @@ Defines URI authorization policies for drag intention.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-File-set uriAuthorizationPolicies(value: Array<UriPermission> | undefined)--><!--Device-File-set uriAuthorizationPolicies(value: Array<UriPermission> | undefined)-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 

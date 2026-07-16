@@ -1,9 +1,10 @@
 # EventPolicy
 
-Defines the system event configuration policy, which is set by calling
-[configEventPolicy](arkts-performanceanalysis-configeventpolicy-f.md#configeventpolicy-1).
+Defines the system event configuration policy, which is set by calling [configEventPolicy](arkts-performanceanalysis-configeventpolicy-f.md#configeventpolicy-1).
 
 **Since:** 22
+
+<!--Device-hiAppEvent-interface EventPolicy--><!--Device-hiAppEvent-interface EventPolicy-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -27,6 +28,8 @@ ADDRESS_SANITIZER event configuration policy.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-EventPolicy-addressSanitizerPolicy?: AddressSanitizerPolicy--><!--Device-EventPolicy-addressSanitizerPolicy?: AddressSanitizerPolicy-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## appCrashPolicy
@@ -42,6 +45,8 @@ APP_CRASH event configuration policy.
 **Since:** 24
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-EventPolicy-appCrashPolicy?: AppCrashPolicy--><!--Device-EventPolicy-appCrashPolicy?: AppCrashPolicy-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -59,6 +64,8 @@ APP_FREEZE event configuration policy.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-EventPolicy-appFreezePolicy?: AppFreezePolicy--><!--Device-EventPolicy-appFreezePolicy?: AppFreezePolicy-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## cpuUsageHighPolicy
@@ -74,6 +81,8 @@ Configuration policy for CPU_USAGE_HIGH event.
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-EventPolicy-cpuUsageHighPolicy?: CpuUsageHighPolicy--><!--Device-EventPolicy-cpuUsageHighPolicy?: CpuUsageHighPolicy-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -91,6 +100,8 @@ Configuration policy for MAIN_THREAD_JANK event.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-EventPolicy-mainThreadJankPolicy?: MainThreadJankPolicy--><!--Device-EventPolicy-mainThreadJankPolicy?: MainThreadJankPolicy-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## resourceOverlimitPolicy
@@ -106,6 +117,8 @@ RESOURCE_OVERLIMIT event configuration policy.
 **Since:** 24
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-EventPolicy-resourceOverlimitPolicy?: ResourceOverlimitPolicy--><!--Device-EventPolicy-resourceOverlimitPolicy?: ResourceOverlimitPolicy-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 

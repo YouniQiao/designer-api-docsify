@@ -4,6 +4,8 @@ Animator options.
 
 **Since:** 6
 
+<!--Device-unnamed-export interface AnimatorOptions--><!--Device-unnamed-export interface AnimatorOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -20,8 +22,7 @@ begin: number
 
 Start point of the animation interpolation.
 
-Note: This setting affects the input parameter value of the
-[onFrame](../../../../reference/apis-arkui/js-apis-animator.md#properties) callback.
+Note: This setting affects the input parameter value of the [onFrame](../../../../reference/apis-arkui/js-apis-animator.md#properties) callback.
 
 Default value: **0**
 
@@ -30,6 +31,8 @@ Default value: **0**
 **Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AnimatorOptions-begin: number--><!--Device-AnimatorOptions-begin: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -39,9 +42,7 @@ Default value: **0**
 delay: number
 ```
 
-Animation delay duration, in milliseconds. Value **0** means that there is no delay. If the value specified is a
-negative number, the animation starts playing ahead of its scheduled time. If the amount of time by which the
-playback is advanced exceeds the total duration of the animation, the animation immediately skips to its end state.
+Animation delay duration, in milliseconds. Value **0** means that there is no delay. If the value specified is a negative number, the animation starts playing ahead of its scheduled time. If the amount of time by which the playback is advanced exceeds the total duration of the animation, the animation immediately skips to its end state.
 
 Default value: **0**
 
@@ -50,6 +51,8 @@ Default value: **0**
 **Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AnimatorOptions-delay: number--><!--Device-AnimatorOptions-delay: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,13 +68,9 @@ Animation playback mode.
 
 **'reverse'**: plays the animation in reverse loop mode.
 
-**'alternate'**: plays the animation in alternating loop mode. When the animation is played for an odd number of
-times, the playback is in forward direction. When the animation is played for an even number of times, the playback
-is in reverse direction.
+**'alternate'**: plays the animation in alternating loop mode. When the animation is played for an odd number of times, the playback is in forward direction. When the animation is played for an even number of times, the playback is in reverse direction.
 
-**'alternate-reverse'**: plays the animation in reverse alternating loop mode. When the animation is played for an
-odd number of times, the playback is in reverse direction. When the animation is played for an even number of
-times, the playback is in forward direction.
+**'alternate-reverse'**: plays the animation in reverse alternating loop mode. When the animation is played for an odd number of times, the playback is in reverse direction. When the animation is played for an even number of times, the playback is in forward direction.
 
 Default value: **'normal'**
 
@@ -80,6 +79,8 @@ Default value: **'normal'**
 **Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AnimatorOptions-direction: "normal" | "reverse" | "alternate" | "alternate-reverse"--><!--Device-AnimatorOptions-direction: "normal" | "reverse" | "alternate" | "alternate-reverse"-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -101,6 +102,8 @@ Default value: **0**
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AnimatorOptions-duration: number--><!--Device-AnimatorOptions-duration: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## easing
@@ -119,6 +122,8 @@ If the provided string is invalid, **"ease"** is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AnimatorOptions-easing: string--><!--Device-AnimatorOptions-easing: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## end
@@ -129,8 +134,7 @@ end: number
 
 End point of animation interpolation.
 
-Note: This setting affects the input parameter value of the
-[onFrame](../../../../reference/apis-arkui/js-apis-animator.md#properties) callback.
+Note: This setting affects the input parameter value of the [onFrame](../../../../reference/apis-arkui/js-apis-animator.md#properties) callback.
 
 Default value: **1**
 
@@ -139,6 +143,8 @@ Default value: **1**
 **Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AnimatorOptions-end: number--><!--Device-AnimatorOptions-end: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -152,14 +158,9 @@ State of the animated target after the animation is executed.
 
 **'none'**: No style is applied to the target before or after the animation is executed.
 
-**'forwards'**: The target keeps the state at the end of the animation (defined in the last key frame) after the
-animation is executed.
+**'forwards'**: The target keeps the state at the end of the animation (defined in the last key frame) after the animation is executed.
 
-**'backwards'**: During the delay period specified in [AnimatorOptions](arkts-arkui-animatoroptions-i.md), the animation uses
-the value defined in the first keyframe. When **direction** in [AnimatorOptions](arkts-arkui-animatoroptions-i.md) is
-**'normal'** or **'alternate'**, the animation uses the **from** keyframe value. When **direction** in
-[AnimatorOptions](arkts-arkui-animatoroptions-i.md) is **'reverse'** or **'alternate-reverse'**, the animation uses the **to**
-keyframe value.
+**'backwards'**: During the delay period specified in [AnimatorOptions](arkts-arkui-animatoroptions-i.md), the animation uses the value defined in the first keyframe. When **direction** in [AnimatorOptions](arkts-arkui-animatoroptions-i.md) is **'normal'** or **'alternate'**, the animation uses the **from** keyframe value. When **direction** in [AnimatorOptions](arkts-arkui-animatoroptions-i.md) is **'reverse'** or **'alternate-reverse'**, the animation uses the **to** keyframe value.
 
 **'both'**: The animation follows the **'forwards'** and **'backwards'** rules.
 
@@ -169,6 +170,8 @@ keyframe value.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AnimatorOptions-fill: "none" | "forwards" | "backwards" | "both"--><!--Device-AnimatorOptions-fill: "none" | "forwards" | "backwards" | "both"-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## iterations
@@ -177,9 +180,7 @@ keyframe value.
 iterations: number
 ```
 
-Number of times that the animation is played. The value **0** means the animation is not played, **-1** means the
-animation is played for an unlimited number of times, and a positive integer means the animation is played that
-specific number of times.
+Number of times that the animation is played. The value **0** means the animation is not played, **-1** means the animation is played for an unlimited number of times, and a positive integer means the animation is played that specific number of times.
 
 Note: Any negative value other than **-1** is treated as invalid. For invalid values, the animation is played once.
 
@@ -188,6 +189,8 @@ Note: Any negative value other than **-1** is treated as invalid. For invalid va
 **Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AnimatorOptions-iterations: number--><!--Device-AnimatorOptions-iterations: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

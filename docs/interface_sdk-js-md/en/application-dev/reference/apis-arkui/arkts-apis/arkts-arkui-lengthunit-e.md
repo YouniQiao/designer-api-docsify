@@ -4,6 +4,8 @@ Enumerates length units.
 
 **Since:** 12
 
+<!--Device-unnamed-declare enum LengthUnit--><!--Device-unnamed-declare enum LengthUnit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PX
@@ -19,6 +21,8 @@ Length in px.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LengthUnit-PX = 0--><!--Device-LengthUnit-PX = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ Length in vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LengthUnit-VP = 1--><!--Device-LengthUnit-VP = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FP
@@ -51,6 +57,8 @@ Length in fp.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LengthUnit-FP = 2--><!--Device-LengthUnit-FP = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +76,8 @@ Length in percentage.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LengthUnit-PERCENT = 3--><!--Device-LengthUnit-PERCENT = 3-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## LPX
@@ -83,6 +93,8 @@ Length in lpx.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LengthUnit-LPX = 4--><!--Device-LengthUnit-LPX = 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

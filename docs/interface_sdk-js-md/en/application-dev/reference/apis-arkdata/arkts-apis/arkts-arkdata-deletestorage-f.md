@@ -6,9 +6,7 @@
 function deleteStorage(path: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes the singleton **Storage** instance of a file from the memory, and deletes the specified file, its backup
-file, and damaged files. After the specified files are deleted, the **Storage** instance cannot be used for data
-operations. Otherwise, data inconsistency will occur. This API uses an asynchronous callback to return the result.
+Deletes the singleton **Storage** instance of a file from the memory, and deletes the specified file, its backup file, and damaged files. After the specified files are deleted, the **Storage** instance cannot be used for data operations. Otherwise, data inconsistency will occur. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -16,12 +14,14 @@ operations. Otherwise, data inconsistency will occur. This API uses an asynchron
 
 **Substitutes:** deletePreferences
 
+<!--Device-storage-function deleteStorage(path: string, callback: AsyncCallback<void>): void--><!--Device-storage-function deleteStorage(path: string, callback: AsyncCallback<void>): void-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the target file. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 
 ## deleteStorage
@@ -30,15 +30,15 @@ operations. Otherwise, data inconsistency will occur. This API uses an asynchron
 function deleteStorage(path: string): Promise<void>
 ```
 
-Deletes the singleton **Storage** instance of a file from the memory, and deletes the specified file, its backup
-file, and damaged files. After the specified files are deleted, the **Storage** instance cannot be used for data
-operations. Otherwise, data inconsistency will occur. This API uses a promise to return the result.
+Deletes the singleton **Storage** instance of a file from the memory, and deletes the specified file, its backup file, and damaged files. After the specified files are deleted, the **Storage** instance cannot be used for data operations. Otherwise, data inconsistency will occur. This API uses a promise to return the result.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
 **Substitutes:** deletePreferences
+
+<!--Device-storage-function deleteStorage(path: string): Promise<void>--><!--Device-storage-function deleteStorage(path: string): Promise<void>-End-->
 
 **Parameters:**
 
@@ -50,5 +50,5 @@ operations. Otherwise, data inconsistency will occur. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 

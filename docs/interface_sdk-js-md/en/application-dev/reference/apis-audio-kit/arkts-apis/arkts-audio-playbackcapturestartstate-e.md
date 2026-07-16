@@ -1,9 +1,10 @@
 # PlaybackCaptureStartState
 
-Defines the playback capture start state, which is returned asynchronously
-after calling {@link AudioCapturer.requestPlaybackCaptureStart} function.
+Defines the playback capture start state, which is returned asynchronously after calling {@link AudioCapturer.requestPlaybackCaptureStart} function.
 
 **Since:** 26.0.0
+
+<!--Device-audio-enum PlaybackCaptureStartState--><!--Device-audio-enum PlaybackCaptureStartState-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 
@@ -19,6 +20,8 @@ Start playback capture success state.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PlaybackCaptureStartState-STATE_SUCCESS = 0--><!--Device-PlaybackCaptureStartState-STATE_SUCCESS = 0-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 
 ## STATE_FAILED
@@ -27,12 +30,13 @@ Start playback capture success state.
 STATE_FAILED = 1
 ```
 
-Start playback capture failed state, because the request for interrupt is denied
-or meet system internal error.
+Start playback capture failed state, because the request for interrupt is denied or meet system internal error.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PlaybackCaptureStartState-STATE_FAILED = 1--><!--Device-PlaybackCaptureStartState-STATE_FAILED = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 
@@ -47,6 +51,8 @@ Start playback capture but user not authorized state.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PlaybackCaptureStartState-STATE_NOT_AUTHORIZED = 2--><!--Device-PlaybackCaptureStartState-STATE_NOT_AUTHORIZED = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 

@@ -4,6 +4,8 @@ Mode of the **NavDestination** component.
 
 **Since:** 11
 
+<!--Device-unnamed-declare enum NavDestinationMode--><!--Device-unnamed-declare enum NavDestinationMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## STANDARD
@@ -20,6 +22,8 @@ Standard mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavDestinationMode-STANDARD = 0--><!--Device-NavDestinationMode-STANDARD = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DIALOG
@@ -28,18 +32,17 @@ Standard mode.
 DIALOG = 1
 ```
 
-The navigation destination is transparent by default. Stack operations do not affect the visibility of underlying
-**NavDestination** components (lifecycle methods like **onShown** and **onHidden** remain unchanged). Only the
-**onActive** and **onInactive** lifecycle methods are triggered.
+The navigation destination is transparent by default. Stack operations do not affect the visibility of underlying **NavDestination** components (lifecycle methods like **onShown** and **onHidden** remain unchanged). Only the **onActive** and **onInactive** lifecycle methods are triggered.
 
-Before API version 13, no system transition animation is available by default. System transition animations are
-supported since API version 13.
+Before API version 13, no system transition animation is available by default. System transition animations are supported since API version 13.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NavDestinationMode-DIALOG = 1--><!--Device-NavDestinationMode-DIALOG = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

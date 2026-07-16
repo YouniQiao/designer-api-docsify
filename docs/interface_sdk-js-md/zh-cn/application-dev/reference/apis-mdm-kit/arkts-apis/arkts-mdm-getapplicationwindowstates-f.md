@@ -1,5 +1,11 @@
 # getApplicationWindowStates
 
+## 导入模块
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+```
+
 ## getApplicationWindowStates
 
 ```TypeScript
@@ -14,13 +20,15 @@ function getApplicationWindowStates(admin: Want, bundleName: string, appIndex: n
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function getApplicationWindowStates(admin: Want, bundleName: string, appIndex: number): Array<WindowStateInfo>--><!--Device-applicationManager-function getApplicationWindowStates(admin: Want, bundleName: string, appIndex: number): Array<WindowStateInfo>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件 |
 | bundleName | string | 是 | 应用包名 |
 | appIndex | number | 是 | 应用分身索引<br>取值应为≥0的整数。 |
 
@@ -28,7 +36,7 @@ function getApplicationWindowStates(admin: Want, bundleName: string, appIndex: n
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;WindowStateInfo&gt; | 返回应用窗口状态信息 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<WindowStateInfo> | 返回应用窗口状态信息 |
 
 **错误码：**
 

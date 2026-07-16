@@ -1,5 +1,11 @@
 # removeHideLauncherIcon
 
+## 导入模块
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+```
+
 ## removeHideLauncherIcon
 
 ```TypeScript
@@ -8,8 +14,8 @@ function removeHideLauncherIcon(admin: Want, bundleNames: Array<string>): void
 
 取消隐藏桌面应用图标名单。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 取消隐藏的应用会从桌面第2屏开始找空位显示；如果第2~18屏无空位，则在第1屏找空位；如果第1屏无空位，则在第2屏第1个应用的位置创建小文件夹放置应用。
 
 **起始版本：** 26.0.0
@@ -18,14 +24,16 @@ function removeHideLauncherIcon(admin: Want, bundleNames: Array<string>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function removeHideLauncherIcon(admin: Want, bundleNames: Array<string>): void--><!--Device-applicationManager-function removeHideLauncherIcon(admin: Want, bundleNames: Array<string>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| bundleNames | Array&lt;string&gt; | 是 | 应用包名数组，指定需要取消隐藏的应用，最大支持500个。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| bundleNames | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 应用包名数组，指定需要取消隐藏的应用，最大支持500个。 |
 
 **错误码：**
 

@@ -1,5 +1,11 @@
 # createUnpremultipliedPixelMap
 
+## 导入模块
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+```
+
 ## createUnpremultipliedPixelMap
 
 ```TypeScript
@@ -10,15 +16,17 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 
 **起始版本：** 12
 
+<!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap, callback: AsyncCallback<void>): void--><!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | PixelMap | 是 | The source pixelmap. |
-| dst | PixelMap | 是 | The destination pixelmap. |
-| callback | AsyncCallback&lt;void&gt; | 是 | Callback used to return the operation result. |
+| src | [PixelMap](arkts-image-pixelmap-i.md) | 是 | The source pixelmap. |
+| dst | [PixelMap](arkts-image-pixelmap-i.md) | 是 | The destination pixelmap. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | Callback used to return the operation result. |
 
 **错误码：**
 
@@ -69,20 +77,22 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 
 **起始版本：** 12
 
+<!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<void>--><!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | PixelMap | 是 | The source pixelmap. |
-| dst | PixelMap | 是 | The destination pixelmap. |
+| src | [PixelMap](arkts-image-pixelmap-i.md) | 是 | The source pixelmap. |
+| dst | [PixelMap](arkts-image-pixelmap-i.md) | 是 | The destination pixelmap. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| Promise<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **错误码：**
 

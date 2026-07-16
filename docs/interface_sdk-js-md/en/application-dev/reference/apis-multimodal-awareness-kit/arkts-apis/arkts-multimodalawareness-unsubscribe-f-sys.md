@@ -18,6 +18,8 @@ Unsubscribes from user status monitoring.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-userStatus-function unsubscribe(featureId: UserStatusFeature, callback?: Callback<UserStatusData>): int--><!--Device-userStatus-function unsubscribe(featureId: UserStatusFeature, callback?: Callback<UserStatusData>): int-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Unsubscribes from user status monitoring.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| featureId | UserStatusFeature | Yes | Indicates the feature to be unsubscribed from. |
-| callback | Callback&lt;UserStatusData&gt; | No | Callback used to return user status data. |
+| featureId | [UserStatusFeature](arkts-multimodalawareness-userstatusfeature-e-sys.md) | Yes | Indicates the feature to be unsubscribed from. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<UserStatusData> | No | Callback used to return user status data. |
 
 **Return value:**
 

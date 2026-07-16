@@ -1,5 +1,11 @@
 # bindDevice
 
+## 导入模块
+
+```TypeScript
+import { deviceManager } from '@kit.DriverDevelopmentKit';
+```
+
 ## bindDevice
 
 ```TypeScript
@@ -7,8 +13,7 @@ function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>,
     callback: AsyncCallback<{deviceId: number; remote: rpc.IRemoteObject;}>): void
 ```
 
-根据queryDevices()返回的设备信息绑定设备。
-需要调用[deviceManager.queryDevices()](arkts-driverdevelopment-querydevices-f.md#querydevices-1)获取设备信息以及device。
+根据queryDevices()返回的设备信息绑定设备。需要调用[deviceManager.queryDevices()](arkts-driverdevelopment-querydevices-f.md#querydevices-1)获取设备信息以及device。
 
 **起始版本：** 10
 
@@ -18,6 +23,10 @@ function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>,
 
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
+<!--Device-deviceManager-function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>,
+    callback: AsyncCallback<{deviceId: number; remote: rpc.IRemoteObject;}>): void--><!--Device-deviceManager-function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>,
+    callback: AsyncCallback<{deviceId: number; remote: rpc.IRemoteObject;}>): void-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 **参数：**
@@ -25,8 +34,8 @@ function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | number | 是 | 设备ID，通过queryDevices获得。 |
-| onDisconnect | AsyncCallback&lt;number&gt; | 是 | 回调函数。当绑定设备断开时，err为undefined，data为解绑的设备ID；否则为错误对象。 |
-| callback | AsyncCallback&lt;{deviceId: number; remote: rpc.IRemoteObject;}&gt; | 是 |  |
+| onDisconnect | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。当绑定设备断开时，err为undefined，data为解绑的设备ID；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<{deviceId: number; remote: rpc.IRemoteObject;}> | 是 |  |
 
 **错误码：**
 
@@ -73,8 +82,7 @@ function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>): Prom
     remote: rpc.IRemoteObject;}>
 ```
 
-根据queryDevices()返回的设备信息绑定设备。
-需要调用[deviceManager.queryDevices](arkts-driverdevelopment-querydevices-f.md#querydevices-1)获取设备信息以及device。
+根据queryDevices()返回的设备信息绑定设备。需要调用[deviceManager.queryDevices](arkts-driverdevelopment-querydevices-f.md#querydevices-1)获取设备信息以及device。
 
 **起始版本：** 10
 
@@ -84,6 +92,10 @@ function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>): Prom
 
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
+<!--Device-deviceManager-function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>): Promise<{deviceId: number;
+    remote: rpc.IRemoteObject;}>--><!--Device-deviceManager-function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>): Promise<{deviceId: number;
+    remote: rpc.IRemoteObject;}>-End-->
+
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 **参数：**
@@ -91,13 +103,13 @@ function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>): Prom
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | number | 是 | 设备ID，通过queryDevices获得。 |
-| onDisconnect | AsyncCallback&lt;number&gt; | 是 | 回调函数。当绑定设备断开时，err为undefined，data为解绑的设备ID；否则为错误对象。 |
+| onDisconnect | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。当绑定设备断开时，err为undefined，data为解绑的设备ID；否则为错误对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;{deviceId: number;    remote: rpc.IRemoteObject;}&gt; |  |
+| Promise<{deviceId: number;     remote: rpc.IRemoteObject;}> |  |
 
 **错误码：**
 

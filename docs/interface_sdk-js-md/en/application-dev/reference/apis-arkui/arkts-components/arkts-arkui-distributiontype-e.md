@@ -4,6 +4,8 @@ Enumerates the color distribution types of a particle.
 
 **Since:** 12
 
+<!--Device-unnamed-declare enum DistributionType--><!--Device-unnamed-declare enum DistributionType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## UNIFORM
@@ -20,6 +22,8 @@ The initial color random values are distributed uniformly.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DistributionType-UNIFORM = 0--><!--Device-DistributionType-UNIFORM = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## GAUSSIAN
@@ -35,6 +39,8 @@ The initial color random values are distributed according to a Gaussian distribu
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DistributionType-GAUSSIAN = 1--><!--Device-DistributionType-GAUSSIAN = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

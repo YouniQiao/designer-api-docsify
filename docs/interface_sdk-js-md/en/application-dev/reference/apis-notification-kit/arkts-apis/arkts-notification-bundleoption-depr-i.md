@@ -1,14 +1,15 @@
 # BundleOption
 
-> **NOTE**
-> This API is supported since API version 7 and deprecated since API version 9.
-You are advised to use [notificationManager.BundleOption](arkts-notification-bundleoption-i.md) instead.
+> **NOTE**  
+> This API is supported since API version 7 and deprecated since API version 9.You are advised to use [notificationManager.BundleOption](arkts-notification-bundleoption-i.md) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
 **Substitutes:** BundleOption
+
+<!--Device-notification-export interface BundleOption--><!--Device-notification-export interface BundleOption-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -28,6 +29,8 @@ Bundle information of the application.
 
 **Substitutes:** BundleOption
 
+<!--Device-BundleOption-bundle: string--><!--Device-BundleOption-bundle: string-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## uid
@@ -45,6 +48,8 @@ User ID. The default value is 0.
 **Deprecated since:** 9
 
 **Substitutes:** BundleOption
+
+<!--Device-BundleOption-uid?: number--><!--Device-BundleOption-uid?: number-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

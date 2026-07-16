@@ -4,6 +4,8 @@ Provides APIs for creating diverse query conditions.
 
 **Since:** 7
 
+<!--Device-dataAbility-class DataAbilityPredicates--><!--Device-dataAbility-class DataAbilityPredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 ## Modules to Import
@@ -22,13 +24,15 @@ Creates a **DataAbilityPredicates** object to add the AND condition.
 
 **Since:** 7
 
+<!--Device-DataAbilityPredicates-and(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-and(): DataAbilityPredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object with the AND condition. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object with the AND condition. |
 
 **Example**
 
@@ -45,10 +49,11 @@ dataAbilityPredicates.equalTo("NAME", "Lisa")
 beginWrap(): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to add a left parenthesis. This API is similar to "(" in an SQL
-statement and must be used with **endWrap**.
+Creates a **DataAbilityPredicates** object to add a left parenthesis. This API is similar to "(" in an SQL statement and must be used with **endWrap**.
 
 **Since:** 7
+
+<!--Device-DataAbilityPredicates-beginWrap(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-beginWrap(): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -56,7 +61,7 @@ statement and must be used with **endWrap**.
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object with a left parenthesis. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object with a left parenthesis. |
 
 **Example**
 
@@ -76,12 +81,13 @@ dataAbilityPredicates.equalTo("NAME", "lisi")
 beginsWith(field: string, value: string): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that begin with the
-given value.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that begin with the given value.
 
 This API is similar to the percent sign (%) in SQL statements.
 
 **Since:** 7
+
+<!--Device-DataAbilityPredicates-beginsWith(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-beginsWith(field: string, value: string): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -96,7 +102,7 @@ This API is similar to the percent sign (%) in SQL statements.
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 
@@ -111,10 +117,11 @@ dataAbilityPredicates.beginsWith("NAME", "os")
 between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that are within the
-given range.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are within the given range.
 
 **Since:** 7
+
+<!--Device-DataAbilityPredicates-between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -123,14 +130,14 @@ given range.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| low | ValueType | Yes | Minimum value to match. |
-| high | ValueType | Yes | Maximum value to match. |
+| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Minimum value to match. |
+| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Maximum value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 
@@ -145,10 +152,11 @@ dataAbilityPredicates.between("AGE", 10, 50)
 contains(field: string, value: string): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that contain the
-given value.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that contain the given value.
 
 **Since:** 7
+
+<!--Device-DataAbilityPredicates-contains(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-contains(field: string, value: string): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -163,7 +171,7 @@ given value.
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 
@@ -182,13 +190,15 @@ Creates a **DataAbilityPredicates** object to filter out duplicate records.
 
 **Since:** 7
 
+<!--Device-DataAbilityPredicates-distinct(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-distinct(): DataAbilityPredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 
@@ -203,10 +213,11 @@ dataAbilityPredicates.equalTo("NAME", "Rose").distinct()
 endWrap(): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to add a right parenthesis. This API is similar to ")" in an SQL
-statement and must be used with **beginWrap**.
+Creates a **DataAbilityPredicates** object to add a right parenthesis. This API is similar to ")" in an SQL statement and must be used with **beginWrap**.
 
 **Since:** 7
+
+<!--Device-DataAbilityPredicates-endWrap(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-endWrap(): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -214,7 +225,7 @@ statement and must be used with **beginWrap**.
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object with a right parenthesis. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object with a right parenthesis. |
 
 **Example**
 
@@ -234,12 +245,13 @@ dataAbilityPredicates.equalTo("NAME", "lisi")
 endsWith(field: string, value: string): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that end with the
-given value.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that end with the given value.
 
 This API is similar to the percent sign (%) in SQL statements.
 
 **Since:** 7
+
+<!--Device-DataAbilityPredicates-endsWith(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-endsWith(field: string, value: string): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -254,7 +266,7 @@ This API is similar to the percent sign (%) in SQL statements.
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 
@@ -269,12 +281,13 @@ dataAbilityPredicates.endsWith("NAME", "se")
 equalTo(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that are equal to
-the given value.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are equal to the given value.
 
 This API is similar to the SQL equal to (=) operator.
 
 **Since:** 7
+
+<!--Device-DataAbilityPredicates-equalTo(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-equalTo(field: string, value: ValueType): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -283,13 +296,13 @@ This API is similar to the SQL equal to (=) operator.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | ValueType | Yes | Value to match. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 
@@ -304,10 +317,11 @@ dataAbilityPredicates.equalTo("NAME", "lisi")
 glob(field: string, value: string): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that match the given
-string. Different from **like**, the input parameters of this API are case-sensitive.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that match the given string. Different from **like**, the input parameters of this API are case-sensitive.
 
 **Since:** 7
+
+<!--Device-DataAbilityPredicates-glob(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-glob(field: string, value: string): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -322,7 +336,7 @@ string. Different from **like**, the input parameters of this API are case-sensi
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 
@@ -343,10 +357,11 @@ dataAbilityPredicates.glob("NAME", "lisa")
 greaterThan(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that are greater
-than the given value.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are greater than the given value.
 
 **Since:** 7
+
+<!--Device-DataAbilityPredicates-greaterThan(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-greaterThan(field: string, value: ValueType): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -355,13 +370,13 @@ than the given value.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | ValueType | Yes | Value to match. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 
@@ -376,10 +391,11 @@ dataAbilityPredicates.greaterThan("AGE", 18)
 greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that are greater
-than or equal to the given value.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are greater than or equal to the given value.
 
 **Since:** 7
+
+<!--Device-DataAbilityPredicates-greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -388,13 +404,13 @@ than or equal to the given value.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | ValueType | Yes | Value to match. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 
@@ -413,19 +429,21 @@ Creates a **DataAbilityPredicates** object to group the query results based on t
 
 **Since:** 7
 
+<!--Device-DataAbilityPredicates-groupBy(fields: Array<string>): DataAbilityPredicates--><!--Device-DataAbilityPredicates-groupBy(fields: Array<string>): DataAbilityPredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fields | Array&lt;string&gt; | Yes | Names of columns to group. |
+| fields | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Names of columns to group. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 
@@ -440,10 +458,11 @@ dataAbilityPredicates.groupBy(["AGE", "NAME"])
 in(field: string, value: Array<ValueType>): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that are in the
-given range.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are in the given range.
 
 **Since:** 7
+
+<!--Device-DataAbilityPredicates-in(field: string, value: Array<ValueType>): DataAbilityPredicates--><!--Device-DataAbilityPredicates-in(field: string, value: Array<ValueType>): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -452,13 +471,13 @@ given range.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | Array&lt;ValueType&gt; | Yes | Array of **ValueType**s to match. |
+| value | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ValueType> | Yes | Array of **ValueType**s to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 
@@ -473,10 +492,11 @@ dataAbilityPredicates.in("AGE", [18, 20])
 indexedBy(field: string): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to specify the index column. Before calling this API, you need to
-create an index column.
+Creates a **DataAbilityPredicates** object to specify the index column. Before calling this API, you need to create an index column.
 
 **Since:** 7
+
+<!--Device-DataAbilityPredicates-indexedBy(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-indexedBy(field: string): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -490,7 +510,7 @@ create an index column.
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 
@@ -544,10 +564,11 @@ export default class EntryAbility extends UIAbility {
 isNotNull(field: string): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that are not
-**null**.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are not **null**.
 
 **Since:** 7
+
+<!--Device-DataAbilityPredicates-isNotNull(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-isNotNull(field: string): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -561,7 +582,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 
@@ -580,6 +601,8 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 **Since:** 7
 
+<!--Device-DataAbilityPredicates-isNull(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-isNull(field: string): DataAbilityPredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Parameters:**
@@ -592,7 +615,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 
@@ -607,10 +630,11 @@ dataAbilityPredicates.isNull("NAME")
 lessThan(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that are less than
-the given value.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are less than the given value.
 
 **Since:** 7
+
+<!--Device-DataAbilityPredicates-lessThan(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-lessThan(field: string, value: ValueType): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -619,13 +643,13 @@ the given value.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | ValueType | Yes | Value to match. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 
@@ -640,10 +664,11 @@ dataAbilityPredicates.lessThan("AGE", 20)
 lessThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that are less than
-or equal to the given value.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are less than or equal to the given value.
 
 **Since:** 7
+
+<!--Device-DataAbilityPredicates-lessThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-lessThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -652,13 +677,13 @@ or equal to the given value.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | ValueType | Yes | Value to match. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 
@@ -673,12 +698,13 @@ dataAbilityPredicates.lessThanOrEqualTo("AGE", 20)
 like(field: string, value: string): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that are similar to
-the given value.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are similar to the given value.
 
 This API is similar to the SQL **like** statement.
 
 **Since:** 7
+
+<!--Device-DataAbilityPredicates-like(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-like(field: string, value: string): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -693,7 +719,7 @@ This API is similar to the SQL **like** statement.
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 
@@ -712,19 +738,21 @@ Creates a **DataAbilityPredicates** object to limit the number of records.
 
 **Since:** 7
 
+<!--Device-DataAbilityPredicates-limitAs(value: number): DataAbilityPredicates--><!--Device-DataAbilityPredicates-limitAs(value: number): DataAbilityPredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Maximum number of records. The value should be a positive integer. If a value less thanor equal to **0** is specified, the number of records is not limited. |
+| value | number | Yes | Maximum number of records. The value should be a positive integer. If a value less than or equal to **0** is specified, the number of records is not limited. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 
@@ -739,10 +767,11 @@ dataAbilityPredicates.equalTo("NAME", "Rose").limitAs(3)
 notBetween(field: string, low: ValueType, high: ValueType): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that are out of the
-given range.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are out of the given range.
 
 **Since:** 7
+
+<!--Device-DataAbilityPredicates-notBetween(field: string, low: ValueType, high: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-notBetween(field: string, low: ValueType, high: ValueType): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -751,14 +780,14 @@ given range.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| low | ValueType | Yes | Minimum value to match. |
-| high | ValueType | Yes | Maximum value to match. |
+| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Minimum value to match. |
+| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Maximum value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 
@@ -773,12 +802,13 @@ dataAbilityPredicates.notBetween("AGE", 10, 50)
 notEqualTo(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that are not equal
-to the given value.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are not equal to the given value.
 
 This API is similar to the SQL not equal (!=) operator.
 
 **Since:** 7
+
+<!--Device-DataAbilityPredicates-notEqualTo(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-notEqualTo(field: string, value: ValueType): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -787,13 +817,13 @@ This API is similar to the SQL not equal (!=) operator.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | ValueType | Yes | Value to match. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 
@@ -808,10 +838,11 @@ dataAbilityPredicates.notEqualTo("NAME", "lisi")
 notIn(field: string, value: Array<ValueType>): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that are out of the
-given range.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are out of the given range.
 
 **Since:** 7
+
+<!--Device-DataAbilityPredicates-notIn(field: string, value: Array<ValueType>): DataAbilityPredicates--><!--Device-DataAbilityPredicates-notIn(field: string, value: Array<ValueType>): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -820,13 +851,13 @@ given range.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | Array&lt;ValueType&gt; | Yes | Array of **ValueType**s to match. |
+| value | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ValueType> | Yes | Array of **ValueType**s to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 
@@ -841,11 +872,11 @@ dataAbilityPredicates.notIn("NAME", ["Lisa", "Rose"])
 offsetAs(rowOffset: number): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to set the start position of the query result. This API must be used
-together with **limitAs**. Otherwise, no result will be returned. To query all rows after the specified offset,
-pass in **-1** in **limitAs**.
+Creates a **DataAbilityPredicates** object to set the start position of the query result. This API must be used together with **limitAs**. Otherwise, no result will be returned. To query all rows after the specified offset,pass in **-1** in **limitAs**.
 
 **Since:** 7
+
+<!--Device-DataAbilityPredicates-offsetAs(rowOffset: number): DataAbilityPredicates--><!--Device-DataAbilityPredicates-offsetAs(rowOffset: number): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -853,13 +884,13 @@ pass in **-1** in **limitAs**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rowOffset | number | Yes | Start position. The value should be a positive integer. If a value less than orequal to **0** is specified, the query result is returned from the first element. |
+| rowOffset | number | Yes | Start position. The value should be a positive integer. If a value less than or equal to **0** is specified, the query result is returned from the first element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 
@@ -881,13 +912,15 @@ This API is similar to the SQL **or** operator.
 
 **Since:** 7
 
+<!--Device-DataAbilityPredicates-or(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-or(): DataAbilityPredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object with the OR condition. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object with the OR condition. |
 
 **Example**
 
@@ -904,10 +937,11 @@ dataAbilityPredicates.equalTo("NAME", "Lisa")
 orderByAsc(field: string): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to sort the records in the specified column in ascending order. When
-there are multiple **orderByAsc**s, the first **orderByAsc** used has the highest priority.
+Creates a **DataAbilityPredicates** object to sort the records in the specified column in ascending order. When there are multiple **orderByAsc**s, the first **orderByAsc** used has the highest priority.
 
 **Since:** 7
+
+<!--Device-DataAbilityPredicates-orderByAsc(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-orderByAsc(field: string): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -921,7 +955,7 @@ there are multiple **orderByAsc**s, the first **orderByAsc** used has the highes
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 
@@ -937,10 +971,11 @@ dataAbilityPredicates.orderByAsc("NAME").orderByAsc("AGE").orderByAsc("SALARY")
 orderByDesc(field: string): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to sort the records in the specified column in descending order. When
-there are multiple **orderByDesc**s, the first **orderByDesc** used has the highest priority.
+Creates a **DataAbilityPredicates** object to sort the records in the specified column in descending order. When there are multiple **orderByDesc**s, the first **orderByDesc** used has the highest priority.
 
 **Since:** 7
+
+<!--Device-DataAbilityPredicates-orderByDesc(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-orderByDesc(field: string): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -954,7 +989,7 @@ there are multiple **orderByDesc**s, the first **orderByDesc** used has the high
 
 | Type | Description |
 | --- | --- |
-| DataAbilityPredicates | **DataAbilityPredicates** object created. |
+| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | **DataAbilityPredicates** object created. |
 
 **Example**
 

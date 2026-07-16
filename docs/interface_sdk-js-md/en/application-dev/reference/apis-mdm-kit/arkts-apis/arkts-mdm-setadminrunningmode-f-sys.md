@@ -20,6 +20,8 @@ Sets the running mode of the device management application.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-adminManager-function setAdminRunningMode(admin: Want, mode: RunningMode): void--><!--Device-adminManager-function setAdminRunningMode(admin: Want, mode: RunningMode): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -28,15 +30,15 @@ Sets the running mode of the device management application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| mode | RunningMode | Yes | Running mode. <br>The value **DEFAULT** means the application runs under the defaultuser (user after the first device power-on). The value **MULTI_USER** means the application runs under multipleusers at the same time. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| mode | [RunningMode](arkts-mdm-runningmode-e-sys.md) | Yes | Running mode. <br>The value **DEFAULT** means the application runs under the default user (user after the first device power-on). The value **MULTI_USER** means the application runs under multiple users at the same time. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 **Example**

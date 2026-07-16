@@ -1,5 +1,11 @@
 # importContactsViaUI
 
+## 导入模块
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+```
+
 ## importContactsViaUI
 
 ```TypeScript
@@ -14,7 +20,9 @@ function importContactsViaUI(context: Context, contacts: Array<Contact>): Promis
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-contact-function importContactsViaUI(context: Context, contacts: Array<Contact>): Promise<Array<int>>--><!--Device-contact-function importContactsViaUI(context: Context, contacts: Array<Contact>): Promise<Array<int>>-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -22,14 +30,14 @@ function importContactsViaUI(context: Context, contacts: Array<Contact>): Promis
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文Context。 |
-| contacts | Array&lt;Contact&gt; | 是 | 表示待导入数据库的联系人信息数组。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
+| contacts | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Contact> | 是 | 表示待导入数据库的联系人信息数组。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | 返回联系人创建结果的数组。返回的联系人id有效（可通过[getId](Contact#getId())获取）表示创建成功。返回值为-1[INVALID_CONTACT_ID](arkts-contacts-contact-c.md#invalid_contact_id) 表示创建失败。-2表示用户未选择该联系人。 |
+| Promise<Array<number>> | 返回联系人创建结果的数组。返回的联系人id有效（可通过[getId](Contact#getId())获取）表示创建成功。返回值为-1[INVALID_CONTACT_ID](arkts-contacts-contact-c.md#invalid_contact_id) 表示创建失败。-2表示用户未选择该联系人。 |
 
 **错误码：**
 

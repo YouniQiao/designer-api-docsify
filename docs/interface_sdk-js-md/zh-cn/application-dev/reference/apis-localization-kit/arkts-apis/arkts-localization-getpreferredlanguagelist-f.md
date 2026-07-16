@@ -1,5 +1,11 @@
 # getPreferredLanguageList
 
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
+
 ## getPreferredLanguageList
 
 ```TypeScript
@@ -14,11 +20,13 @@ export function getPreferredLanguageList(): Array<string>
 
 **替代接口：** [getPreferredLanguageList](arkts-localization-system-c.md#getpreferredlanguagelist-1)
 
+<!--Device-i18n-export function getPreferredLanguageList(): Array<string>--><!--Device-i18n-export function getPreferredLanguageList(): Array<string>-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 系统偏好语言列表。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 系统偏好语言列表。 |
 

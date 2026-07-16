@@ -4,6 +4,8 @@ Provide configuration capabilities for the menuBar of atomicservice
 
 **Since:** 23
 
+<!--Device-unnamed-export declare class AtomicServiceMenuBar--><!--Device-unnamed-export declare class AtomicServiceMenuBar-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ The constructor used to create a AtomicServiceMenuBar object.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-AtomicServiceMenuBar-constructor(uiContext: UIContext)--><!--Device-AtomicServiceMenuBar-constructor(uiContext: UIContext)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -36,7 +40,7 @@ The constructor used to create a AtomicServiceMenuBar object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | UIContext | Yes | The atomicservice context instance. |
+| uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | The atomicservice context instance. |
 
 ## setVisible
 
@@ -51,6 +55,8 @@ Set the visibility of the atomicservice menubar.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-AtomicServiceMenuBar-public setVisible(visible: boolean): void--><!--Device-AtomicServiceMenuBar-public setVisible(visible: boolean): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

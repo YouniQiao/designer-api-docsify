@@ -6,7 +6,15 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-interface TabSegmentButtonOptions extends TabSegmentButtonConstructionOptions--><!--Device-unnamed-interface TabSegmentButtonOptions extends TabSegmentButtonConstructionOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { CommonSegmentButtonOptions, SegmentButtonItemOptionsConstructorOptions, SegmentButtonIconTextItem, SegmentButtonItemOptions, SegmentButtonTextItem, CapsuleSegmentButtonOptions, SegmentButtonOptions, CapsuleSegmentButtonConstructionOptions, SegmentButtonItemTuple, SegmentButton, SegmentButtonItemArray, SegmentButtonItemOptionsArray, SegmentButtonIconItem, BorderRadiusMode, TabSegmentButtonConstructionOptions, TabSegmentButtonOptions, ItemRestriction, DimensionNoPercentage } from '@kit.ArkUI';
+```
 
 ## type
 
@@ -28,7 +36,9 @@ type: "tab"
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TabSegmentButtonOptions-type: "tab"--><!--Device-TabSegmentButtonOptions-type: "tab"-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

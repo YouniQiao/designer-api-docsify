@@ -1,9 +1,10 @@
 # HolidayManager
 
-Provides holiday data parsing capabilities, such as determining holidays and obtaining the holiday list of a
-specified year.
+Provides holiday data parsing capabilities, such as determining holidays and obtaining the holiday list of a specified year.
 
 **Since:** 11
+
+<!--Device-i18n-export class HolidayManager--><!--Device-i18n-export class HolidayManager-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -25,13 +26,15 @@ Creates a **HolidayManager** object for parsing holiday data.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HolidayManager-constructor(icsPath: String)--><!--Device-HolidayManager-constructor(icsPath: String)-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icsPath | String | Yes | Path of the **.ics** file with the read permission granted for applications.iCalendar is a standard Internet calendar format for storing calendar data. |
+| icsPath | [String](../../apis-na/arkts-apis/arkts-na-string-i.md) | Yes | Path of the **.ics** file with the read permission granted for applications.iCalendar is a standard Internet calendar format for storing calendar data. |
 
 **Error codes:**
 
@@ -68,6 +71,8 @@ Obtains the holiday information list of the specified year.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HolidayManager-getHolidayInfoItemArray(year?: int): Array<HolidayInfoItem>--><!--Device-HolidayManager-getHolidayInfoItemArray(year?: int): Array<HolidayInfoItem>-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -80,7 +85,7 @@ Obtains the holiday information list of the specified year.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;HolidayInfoItem&gt; | Holiday information list. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<HolidayInfoItem> | Holiday information list. |
 
 **Error codes:**
 
@@ -101,13 +106,15 @@ Determines whether the specified date is a holiday.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HolidayManager-isHoliday(date?: Date): boolean--><!--Device-HolidayManager-isHoliday(date?: Date): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | No | Date and time. Note: The month starts from **0**. For example, **0** indicates January.The default value is the current date. |
+| date | [Date](../../apis-na/arkts-apis/arkts-na-date-i.md) | No | Date and time. Note: The month starts from **0**. For example, **0** indicates January.The default value is the current date. |
 
 **Return value:**
 

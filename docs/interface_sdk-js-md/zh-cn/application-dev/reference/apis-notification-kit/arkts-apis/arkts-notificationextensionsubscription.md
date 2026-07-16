@@ -2,11 +2,13 @@
 
 本模块提供管理通知扩展的能力，具体包括：打开通知扩展订阅设置界面、订阅和取消订阅通知扩展、获取和设置通知授权状态。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 本模块首批接口从API version 22开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 22
+
+<!--Device-unnamed-declare namespace notificationExtensionSubscription--><!--Device-unnamed-declare namespace notificationExtensionSubscription-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

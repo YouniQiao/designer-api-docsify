@@ -22,13 +22,15 @@ Obtain the number of cached GNSS locations reported at a time
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function getCachedGnssLocationsSize(callback: AsyncCallback<number>): void--><!--Device-geolocation-function getCachedGnssLocationsSize(callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Gnss
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Indicates the callback for reporting the cached GNSS locations size. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Indicates the callback for reporting the cached GNSS locations size. |
 
 **Example**
 
@@ -62,13 +64,15 @@ Obtain the number of cached GNSS locations reported at a time
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function getCachedGnssLocationsSize(): Promise<number>--><!--Device-geolocation-function getCachedGnssLocationsSize(): Promise<number>-End-->
+
 **System capability:** SystemCapability.Location.Location.Gnss
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | The promise returned by the function. |
 
 **Example**
 

@@ -18,6 +18,8 @@ Destroys the word selection panel. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-selectionManager-function destroyPanel(panel: Panel): Promise<void>--><!--Device-selectionManager-function destroyPanel(panel: Panel): Promise<void>-End-->
+
 **System capability:** SystemCapability.SelectionInput.Selection
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Destroys the word selection panel. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| panel | Panel | Yes | Word selection panel to destroy. |
+| panel | [Panel](arkts-basicservices-panel-i-sys.md) | Yes | Word selection panel to destroy. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

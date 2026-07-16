@@ -4,7 +4,15 @@
 
 **起始版本：** 18
 
+<!--Device-cert-interface Pkcs12ParsingConfig--><!--Device-cert-interface Pkcs12ParsingConfig-End-->
+
 **系统能力：** SystemCapability.Security.Cert
+
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
 
 ## needsCert
 
@@ -20,7 +28,9 @@ needsCert?: boolean
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Pkcs12ParsingConfig-needsCert?: boolean--><!--Device-Pkcs12ParsingConfig-needsCert?: boolean-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -38,7 +48,9 @@ needsOtherCerts?: boolean
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Pkcs12ParsingConfig-needsOtherCerts?: boolean--><!--Device-Pkcs12ParsingConfig-needsOtherCerts?: boolean-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -58,7 +70,9 @@ true为获取，返回PKCS8编码的私钥数据；false为不获取。
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Pkcs12ParsingConfig-needsPrivateKey?: boolean--><!--Device-Pkcs12ParsingConfig-needsPrivateKey?: boolean-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -74,7 +88,9 @@ password: string
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Pkcs12ParsingConfig-password: string--><!--Device-Pkcs12ParsingConfig-password: string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -86,8 +102,8 @@ privateKeyFormat?: EncodingBaseFormat
 
 表示获取私钥的格式，当前支持PEM和DER格式。参数缺省时，默认为PEM格式。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 当needsPrivateKey值为true时，该参数生效。
 
 **类型：** EncodingBaseFormat
@@ -96,7 +112,9 @@ privateKeyFormat?: EncodingBaseFormat
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Pkcs12ParsingConfig-privateKeyFormat?: EncodingBaseFormat--><!--Device-Pkcs12ParsingConfig-privateKeyFormat?: EncodingBaseFormat-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

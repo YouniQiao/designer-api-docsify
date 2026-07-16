@@ -14,14 +14,16 @@ Removes a notification slot of a specified type. This API uses an asynchronous c
 
 **Substitutes:** removeSlot
 
+<!--Device-notification-function removeSlot(slotType: SlotType, callback: AsyncCallback<void>): void--><!--Device-notification-function removeSlot(slotType: SlotType, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotType | SlotType | Yes | Type of the notification slot, which can be used for social communication, serviceinformation, content consultation, and other purposes. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| slotType | [SlotType](arkts-notification-slottype-e.md) | Yes | Type of the notification slot, which can be used for social communication, service information, content consultation, and other purposes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 
 ## removeSlot
@@ -38,17 +40,19 @@ Removes a notification slot of a specified type. This API uses a promise to retu
 
 **Substitutes:** removeSlot
 
+<!--Device-notification-function removeSlot(slotType: SlotType): Promise<void>--><!--Device-notification-function removeSlot(slotType: SlotType): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotType | SlotType | Yes | Type of the notification slot, which can be used for social communication, serviceinformation, content consultation, and other purposes. |
+| slotType | [SlotType](arkts-notification-slottype-e.md) | Yes | Type of the notification slot, which can be used for social communication, service information, content consultation, and other purposes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 

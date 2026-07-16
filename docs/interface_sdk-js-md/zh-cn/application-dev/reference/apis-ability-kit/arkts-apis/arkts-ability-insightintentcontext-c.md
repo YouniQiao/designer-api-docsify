@@ -1,12 +1,18 @@
 # InsightIntentContext
 
-本模块提供意图执行上下文，是[意图执行基类](arkts-ability-insightintentexecutor-c.md)和
-[@InsightIntentEntry的意图执行基类](arkts-ability-insightintententryexecutor-c.md)的属性，为意图执行提
-供基础能力，例如启动本应用内的[UIAbility组件](arkts-app-ability-uiability.md)。
+本模块提供意图执行上下文，是[意图执行基类](arkts-ability-insightintentexecutor-c.md)和[@InsightIntentEntry的意图执行基类](arkts-ability-insightintententryexecutor-c.md)的属性，为意图执行提供基础能力，例如启动本应用内的[UIAbility组件](arkts-app-ability-uiability.md)。
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare class InsightIntentContext--><!--Device-unnamed-declare class InsightIntentContext-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+## 导入模块
+
+```TypeScript
+import { InsightIntentContext } from '@kit.AbilityKit';
+```
 
 ## setReturnModeForUIAbilityForeground
 
@@ -20,7 +26,9 @@ setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-InsightIntentContext-setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void--><!--Device-InsightIntentContext-setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -34,7 +42,7 @@ setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. Possible causes: 1.The context isnot insightIntentContext; 2.The context is not for UIAbility foreground insight intent execute mode. |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. Possible causes: 1.The context is not insightIntentContext; 2.The context is not for UIAbility foreground insight intent execute mode. |
 
 **示例：**
 
@@ -91,7 +99,9 @@ setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-InsightIntentContext-setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void--><!--Device-InsightIntentContext-setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -105,7 +115,7 @@ setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. Possible causes: 1.The context is notinsightIntentContext; 2.The context is not for UIExtensionAbility insight intent execute mode. |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. Possible causes: 1.The context is not insightIntentContext; 2.The context is not for UIExtensionAbility insight intent execute mode. |
 
 **示例：**
 
@@ -161,7 +171,9 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-InsightIntentContext-startAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-InsightIntentContext-startAbility(want: Want, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -169,8 +181,8 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | Want | 是 | 启动UIAbility组件的want信息。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当接口调用成功，err为undefined，否则为错误对象。 |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 启动UIAbility组件的want信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当接口调用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -245,7 +257,9 @@ startAbility(want: Want): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-InsightIntentContext-startAbility(want: Want): Promise<void>--><!--Device-InsightIntentContext-startAbility(want: Want): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -253,13 +267,13 @@ startAbility(want: Want): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | Want | 是 | 启动UIAbility组件的want信息。 |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 启动UIAbility组件的want信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -323,11 +337,7 @@ export default class IntentExecutorImpl extends InsightIntentExecutor {
 instanceId: number
 ```
 
-意图实例唯一ID。用于通过
-[insightIntentProvider.sendExecuteResult接口]
-{@link @ohos.app.ability.insightIntentProvider:insightIntentProvider.sendExecuteResult} 和
-[insightIntentProvider.sendIntentResult接口]
-{@link @ohos.app.ability.insightIntentProvider:insightIntentProvider.sendIntentResult}返回指定意图的执行结果。
+意图实例唯一ID。用于通过[insightIntentProvider.sendExecuteResult接口](@ohos.app.ability.insightIntentProvider:insightIntentProvider.sendExecuteResult) 和[insightIntentProvider.sendIntentResult接口](@ohos.app.ability.insightIntentProvider:insightIntentProvider.sendIntentResult)返回指定意图的执行结果。
 
 **类型：** number
 
@@ -335,7 +345,9 @@ instanceId: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-InsightIntentContext-instanceId: int--><!--Device-InsightIntentContext-instanceId: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

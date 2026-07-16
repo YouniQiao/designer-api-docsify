@@ -1,10 +1,14 @@
 # Int8ArrayConstructor
 
+<!--Device-unnamed-interface Int8ArrayConstructor--><!--Device-unnamed-interface Int8ArrayConstructor-End-->
+
 ## constructor
 
 ```TypeScript
 new(length: number): Int8Array
 ```
+
+<!--Device-Int8ArrayConstructor-new(length: number): Int8Array--><!--Device-Int8ArrayConstructor-new(length: number): Int8Array-End-->
 
 **Parameters:**
 
@@ -16,7 +20,7 @@ new(length: number): Int8Array
 
 | Type | Description |
 | --- | --- |
-| Int8Array |  |
+| [Int8Array](arkts-na-int8array-i.md) |  |
 
 ## constructor
 
@@ -24,17 +28,19 @@ new(length: number): Int8Array
 new(array: ArrayLike<number> | ArrayBufferLike): Int8Array
 ```
 
+<!--Device-Int8ArrayConstructor-new(array: ArrayLike<number> | ArrayBufferLike): Int8Array--><!--Device-Int8ArrayConstructor-new(array: ArrayLike<number> | ArrayBufferLike): Int8Array-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; \| ArrayBufferLike | Yes |  |
+| array | [ArrayLike](arkts-na-arraylike-i.md)<number> \| ArrayBufferLike | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Int8Array |  |
+| [Int8Array](arkts-na-int8array-i.md) |  |
 
 ## constructor
 
@@ -42,11 +48,13 @@ new(array: ArrayLike<number> | ArrayBufferLike): Int8Array
 new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Int8Array
 ```
 
+<!--Device-Int8ArrayConstructor-new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Int8Array--><!--Device-Int8ArrayConstructor-new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Int8Array-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBufferLike | Yes |  |
+| buffer | [ArrayBufferLike](arkts-na-arraybufferlike-t.md) | Yes |  |
 | byteOffset | number | No |  |
 | length | number | No |  |
 
@@ -54,7 +62,7 @@ new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Int8Array
 
 | Type | Description |
 | --- | --- |
-| Int8Array |  |
+| [Int8Array](arkts-na-int8array-i.md) |  |
 
 ## from
 
@@ -64,17 +72,19 @@ from(arrayLike: ArrayLike<number>): Int8Array
 
 Creates an array from an array-like or iterable object.
 
+<!--Device-Int8ArrayConstructor-from(arrayLike: ArrayLike<number>): Int8Array--><!--Device-Int8ArrayConstructor-from(arrayLike: ArrayLike<number>): Int8Array-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;number&gt; | Yes |  |
+| arrayLike | [ArrayLike](arkts-na-arraylike-i.md)<number> | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Int8Array |  |
+| [Int8Array](arkts-na-int8array-i.md) |  |
 
 ## from
 
@@ -84,19 +94,21 @@ from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: a
 
 Creates an array from an array-like or iterable object.
 
+<!--Device-Int8ArrayConstructor-from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Int8Array--><!--Device-Int8ArrayConstructor-from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Int8Array-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;T&gt; | Yes |  |
-| mapfn | (v: T, k: number) =&gt; number | Yes |  |
+| arrayLike | [ArrayLike](arkts-na-arraylike-i.md)<T> | Yes |  |
+| mapfn | (v: T, k: number) => number | Yes |  |
 | thisArg | any | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Int8Array |  |
+| [Int8Array](arkts-na-int8array-i.md) |  |
 
 ## of
 
@@ -105,6 +117,8 @@ of(...items: number[]): Int8Array
 ```
 
 Returns a new array from a set of elements.
+
+<!--Device-Int8ArrayConstructor-of(...items: number[]): Int8Array--><!--Device-Int8ArrayConstructor-of(...items: number[]): Int8Array-End-->
 
 **Parameters:**
 
@@ -116,7 +130,7 @@ Returns a new array from a set of elements.
 
 | Type | Description |
 | --- | --- |
-| Int8Array |  |
+| [Int8Array](arkts-na-int8array-i.md) |  |
 
 ## BYTES_PER_ELEMENT
 
@@ -128,6 +142,8 @@ The size in bytes of each element in the array.
 
 **Type:** number
 
+<!--Device-Int8ArrayConstructor-readonly BYTES_PER_ELEMENT: number--><!--Device-Int8ArrayConstructor-readonly BYTES_PER_ELEMENT: number-End-->
+
 ## prototype
 
 ```TypeScript
@@ -135,4 +151,6 @@ readonly prototype: Int8Array
 ```
 
 **Type:** Int8Array
+
+<!--Device-Int8ArrayConstructor-readonly prototype: Int8Array--><!--Device-Int8ArrayConstructor-readonly prototype: Int8Array-End-->
 

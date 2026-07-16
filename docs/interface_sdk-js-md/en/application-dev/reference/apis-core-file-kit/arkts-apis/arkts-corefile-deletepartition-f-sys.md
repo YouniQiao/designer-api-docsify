@@ -20,6 +20,8 @@ Deletes a partition on a disk. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-volumeManager-function deletePartition(diskId: string, partitionNum: int): Promise<void>--><!--Device-volumeManager-function deletePartition(diskId: string, partitionNum: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -35,7 +37,7 @@ Deletes a partition on a disk. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

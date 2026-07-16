@@ -24,6 +24,8 @@ Queries the Wi-Fi status of the current device. This API uses an asynchronous ca
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-wifiManager-function isWifiActive(admin: Want, callback: AsyncCallback<boolean>): void--><!--Device-wifiManager-function isWifiActive(admin: Want, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -32,8 +34,8 @@ Queries the Wi-Fi status of the current device. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback invoked to return the result. If the operation is successful,**err** is **null** and **data** is a Boolean value (**true** means that Wi-Fi is enabled; and **false** meansthe opposite). If the operation fails, **err** is an error object. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback invoked to return the result. If the operation is successful,**err** is **null** and **data** is a Boolean value (**true** means that Wi-Fi is enabled; and **false** means the opposite). If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -41,7 +43,7 @@ Queries the Wi-Fi status of the current device. This API uses an asynchronous ca
 | --- | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 
@@ -86,6 +88,8 @@ Queries the Wi-Fi status of the current device. This API uses a promise to retur
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-wifiManager-function isWifiActive(admin: Want): Promise<boolean>--><!--Device-wifiManager-function isWifiActive(admin: Want): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -94,13 +98,13 @@ Queries the Wi-Fi status of the current device. This API uses a promise to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the Wi-Fi status.<br>The value **true** means that Wi-Fi is enabled; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the Wi-Fi status.<br>The value **true** means that Wi-Fi is enabled; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -108,7 +112,7 @@ Queries the Wi-Fi status of the current device. This API uses a promise to retur
 | --- | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 

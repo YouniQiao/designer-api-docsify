@@ -1,5 +1,11 @@
 # getKeyboardType
 
+## 导入模块
+
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+```
+
 ## getKeyboardType
 
 ```TypeScript
@@ -10,6 +16,8 @@ function getKeyboardType(deviceId: number, callback: AsyncCallback<KeyboardType>
 
 **起始版本：** 9
 
+<!--Device-inputDevice-function getKeyboardType(deviceId: int, callback: AsyncCallback<KeyboardType>): void--><!--Device-inputDevice-function getKeyboardType(deviceId: int, callback: AsyncCallback<KeyboardType>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **参数：**
@@ -17,7 +25,7 @@ function getKeyboardType(deviceId: number, callback: AsyncCallback<KeyboardType>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | number | 是 | 输入设备的唯一标识，同一个物理设备反复插拔或重启，设备ID可能会发生变化。 |
-| callback | AsyncCallback&lt;KeyboardType&gt; | 是 | 回调函数。当查询成功，err为undefined，data为输入设备的键盘类型；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<KeyboardType> | 是 | 回调函数。当查询成功，err为undefined，data为输入设备的键盘类型；否则为错误对象。 |
 
 **错误码：**
 
@@ -69,6 +77,8 @@ function getKeyboardType(deviceId: number): Promise<KeyboardType>
 
 **起始版本：** 9
 
+<!--Device-inputDevice-function getKeyboardType(deviceId: int): Promise<KeyboardType>--><!--Device-inputDevice-function getKeyboardType(deviceId: int): Promise<KeyboardType>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **参数：**
@@ -81,7 +91,7 @@ function getKeyboardType(deviceId: number): Promise<KeyboardType>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;KeyboardType&gt; | Promise对象，返回输入设备的键盘类型。 |
+| Promise<KeyboardType> | Promise对象，返回输入设备的键盘类型。 |
 
 **错误码：**
 

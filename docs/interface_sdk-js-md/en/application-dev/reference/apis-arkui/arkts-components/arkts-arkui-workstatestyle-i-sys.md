@@ -6,6 +6,8 @@ Work state style.
 
 **Deprecated since:** 20
 
+<!--Device-unnamed-interface WorkStateStyle--><!--Device-unnamed-interface WorkStateStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -25,6 +27,8 @@ Style of day color.
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-WorkStateStyle-offDayMarkColor?: ResourceColor--><!--Device-WorkStateStyle-offDayMarkColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,6 +50,8 @@ Style of day size.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-WorkStateStyle-offDayMarkSize?: number--><!--Device-WorkStateStyle-offDayMarkSize?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -65,6 +71,8 @@ Style of day color.
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-WorkStateStyle-workDayMarkColor?: ResourceColor--><!--Device-WorkStateStyle-workDayMarkColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,6 +94,8 @@ Style of day size.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-WorkStateStyle-workDayMarkSize?: number--><!--Device-WorkStateStyle-workDayMarkSize?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -105,6 +115,8 @@ Style of distance.
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-WorkStateStyle-workStateHorizontalMovingDistance?: number--><!--Device-WorkStateStyle-workStateHorizontalMovingDistance?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,6 +138,8 @@ Style of distance.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-WorkStateStyle-workStateVerticalMovingDistance?: number--><!--Device-WorkStateStyle-workStateVerticalMovingDistance?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -145,6 +159,8 @@ Style of width.
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-WorkStateStyle-workStateWidth?: number--><!--Device-WorkStateStyle-workStateWidth?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

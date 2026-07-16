@@ -1,9 +1,10 @@
 # List
 
-List is implemented based on the singly linked list. Each node has a reference pointing to the next element.
-When querying an element, the system traverses the list from the beginning.
+List is implemented based on the singly linked list. Each node has a reference pointing to the next element.When querying an element, the system traverses the list from the beginning.
 
 **Since:** 8
+
+<!--Device-unnamed-declare class List<T>--><!--Device-unnamed-declare class List<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,13 +26,15 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-List-[Symbol.iterator](): IterableIterator<T>--><!--Device-List-[Symbol.iterator](): IterableIterator<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;T&gt; | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<T> | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
 
 **Error codes:**
 
@@ -83,6 +86,8 @@ Adds an element at the end of this List.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-List-add(element: T): boolean--><!--Device-List-add(element: T): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -95,7 +100,7 @@ Adds an element at the end of this List.
 
 | Type | Description |
 | --- | --- |
-| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false**is returned. |
+| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -134,6 +139,8 @@ Clears this List and sets its length to **0**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-List-clear(): void--><!--Device-List-clear(): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
@@ -168,6 +175,8 @@ A constructor used to create a **List** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-List-constructor()--><!--Device-List-constructor()-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
@@ -195,13 +204,15 @@ Converts this List into an array and returns the array.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-List-convertToArray(): Array<T>--><!--Device-List-convertToArray(): Array<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | Array obtained. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<T> | Array obtained. |
 
 **Error codes:**
 
@@ -234,19 +245,21 @@ Compares whether a specified object is equal to this List.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-List-equal(obj: Object): boolean--><!--Device-List-equal(obj: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | Object | Yes | Object used for comparison. |
+| obj | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object used for comparison. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the two are equal; otherwise, **false** isreturned. |
+| boolean | Check result. The value **true** is returned if the two are equal; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -282,14 +295,16 @@ Uses a callback to traverse each element in the **List** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-List-forEach(callbackFn: (value: T, index?: number, List?: List<T>) => void, thisArg?: Object): void--><!--Device-List-forEach(callbackFn: (value: T, index?: number, List?: List<T>) => void, thisArg?: Object): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, List?: List&lt;T&gt;) =&gt; void | Yes | Callback used to return the result. |
-| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is thisinstance. |
+| callbackFn | (value: T, index?: number, List?: List<T>) => void | Yes | Callback used to return the result. |
+| thisArg | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
 
@@ -326,6 +341,8 @@ Obtains the element at the specified position in this List.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-List-get(index: int): T--><!--Device-List-get(index: int): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -376,6 +393,8 @@ Obtains the first element in this List.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-List-getFirst(): T--><!--Device-List-getFirst(): T-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -415,6 +434,8 @@ Obtains the index of the first occurrence of the specified element in this List.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-List-getIndexOf(element: T): int--><!--Device-List-getIndexOf(element: T): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -464,6 +485,8 @@ Obtains the last element in this List.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-List-getLast(): T--><!--Device-List-getLast(): T-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -503,6 +526,8 @@ Obtains the index of the last occurrence of the specified element in this List.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-List-getLastIndexOf(element: T): int--><!--Device-List-getLastIndexOf(element: T): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -546,12 +571,13 @@ console.info("result:", result); // result: 5
 getSubList(fromIndex: number, toIndex: number): List<T>
 ```
 
-Obtains elements within a range in this List, including the element at the start position but not that at the end
-position, and returns these elements as a new **List** instance.
+Obtains elements within a range in this List, including the element at the start position but not that at the end position, and returns these elements as a new **List** instance.
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-List-getSubList(fromIndex: int, toIndex: int): List<T>--><!--Device-List-getSubList(fromIndex: int, toIndex: int): List<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -566,7 +592,7 @@ position, and returns these elements as a new **List** instance.
 
 | Type | Description |
 | --- | --- |
-| List&lt;T&gt; | New **List** instance obtained. |
+| [List](arkts-arkts-list-c.md)<T> | New **List** instance obtained. |
 
 **Error codes:**
 
@@ -599,6 +625,8 @@ Checks whether this List has the specified element.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-List-has(element: T): boolean--><!--Device-List-has(element: T): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -642,6 +670,8 @@ Inserts an element at the specified position in this List.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-List-insert(element: T, index: int): void--><!--Device-List-insert(element: T, index: int): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -649,7 +679,7 @@ Inserts an element at the specified position in this List.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | element | T | Yes | Target element. |
-| index | number | Yes | Index of the position where the element is to be inserted. The value must be less than orequal to int32_max, that is, 2147483647. |
+| index | number | Yes | Index of the position where the element is to be inserted. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Error codes:**
 
@@ -681,13 +711,15 @@ Checks whether this List is empty (contains no element).
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-List-isEmpty(): boolean--><!--Device-List-isEmpty(): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the List is empty; otherwise, **false** isreturned. |
+| boolean | Check result. The value **true** is returned if the List is empty; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -719,6 +751,8 @@ Removes the first occurrence of the specified element from this List.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-List-remove(element: T): boolean--><!--Device-List-remove(element: T): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -764,6 +798,8 @@ Searches for an element based on its index and then removes it.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-List-removeByIndex(index: number): T--><!--Device-List-removeByIndex(index: number): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -812,14 +848,16 @@ Replaces all elements in this List with new elements, and returns the new ones.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-List-replaceAllElements(callbackFn: (value: T, index?: number, list?: List<T>) => T, thisArg?: Object): void--><!--Device-List-replaceAllElements(callbackFn: (value: T, index?: number, list?: List<T>) => T, thisArg?: Object): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, list?: List&lt;T&gt;) =&gt; T | Yes | Callback invoked for the replacement. |
-| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is thisinstance. |
+| callbackFn | (value: T, index?: number, list?: List<T>) => T | Yes | Callback invoked for the replacement. |
+| thisArg | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
 
@@ -858,6 +896,8 @@ Replaces an element at the specified position in this List with a given element.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-List-set(index: int, element: T): T--><!--Device-List-set(index: int, element: T): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -906,13 +946,15 @@ Sorts elements in this List.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-List-sort(comparator: ListComparatorFn<T>): void--><!--Device-List-sort(comparator: ListComparatorFn<T>): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| comparator | ListComparatorFn&lt;T&gt; | Yes | Callback used to return the result.<br> There has been a compatibilitychange since API version 23. In API version 22 and earlier versions, the type is `(firstValue: T, secondValue:T) =&gt; number`.<br>**Since:** 23 |
+| comparator | [ListComparatorFn](arkts-arkts-listcomparatorfn-t.md)<T> | Yes | Callback used to return the result.<br> There has been a compatibility change since API version 23. In API version 22 and earlier versions, the type is `(firstValue: T, secondValue:T) =&gt; number`.<br>**Since:** 23 |
 
 **Error codes:**
 
@@ -949,6 +991,8 @@ Number of elements in a List.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-List-length: number--><!--Device-List-length: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

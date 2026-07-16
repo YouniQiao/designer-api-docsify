@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+<!--Device-unnamed-enum BufferingInfoType--><!--Device-unnamed-enum BufferingInfoType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## BUFFERING_START
@@ -16,7 +18,9 @@ BUFFERING_START = 1
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BufferingInfoType-BUFFERING_START = 1--><!--Device-BufferingInfoType-BUFFERING_START = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -30,7 +34,9 @@ BUFFERING_END = 2
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BufferingInfoType-BUFFERING_END = 2--><!--Device-BufferingInfoType-BUFFERING_END = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -44,7 +50,9 @@ BUFFERING_PERCENT = 3
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BufferingInfoType-BUFFERING_PERCENT = 3--><!--Device-BufferingInfoType-BUFFERING_PERCENT = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -58,7 +66,9 @@ CACHED_DURATION = 4
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BufferingInfoType-CACHED_DURATION = 4--><!--Device-BufferingInfoType-CACHED_DURATION = 4-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 

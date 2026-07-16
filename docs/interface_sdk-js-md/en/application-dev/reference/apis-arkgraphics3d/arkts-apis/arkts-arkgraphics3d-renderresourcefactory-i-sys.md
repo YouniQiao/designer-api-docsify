@@ -1,9 +1,10 @@
 # RenderResourceFactory
 
-The render resource factory. RenderResourceFactory is used to create resources that can be shared
-across Scenes that share a RenderContext
+The render resource factory. RenderResourceFactory is used to create resources that can be shared across Scenes that share a RenderContext
 
 **Since:** 20
+
+<!--Device-unnamed-export interface RenderResourceFactory--><!--Device-unnamed-export interface RenderResourceFactory-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -19,6 +20,8 @@ Create a new scene from a SceneLoadParams.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RenderResourceFactory-createScene(uri: ResourceStr, param: SceneLoadParams): Promise<Scene>--><!--Device-RenderResourceFactory-createScene(uri: ResourceStr, param: SceneLoadParams): Promise<Scene>-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
@@ -27,12 +30,12 @@ Create a new scene from a SceneLoadParams.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | ResourceStr | Yes | the resource of creating a scene |
-| param | SceneLoadParams | Yes | the params for scene load |
+| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | the resource of creating a scene |
+| param | [SceneLoadParams](arkts-arkgraphics3d-sceneloadparams-i-sys.md) | Yes | the params for scene load |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Scene&gt; | Promise used to return a scene |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Scene> | Promise used to return a scene |
 

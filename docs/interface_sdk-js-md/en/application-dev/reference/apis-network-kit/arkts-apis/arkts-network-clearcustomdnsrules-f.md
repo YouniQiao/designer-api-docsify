@@ -18,13 +18,15 @@ Clear all custom DNS rules for current application.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-connection-function clearCustomDnsRules(callback: AsyncCallback<void>): void--><!--Device-connection-function clearCustomDnsRules(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Returns the callback of clearCustomDnsRules. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Returns the callback of clearCustomDnsRules. |
 
 **Error codes:**
 
@@ -65,13 +67,15 @@ Clear all custom DNS rules for current application.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-connection-function clearCustomDnsRules(): Promise<void>--><!--Device-connection-function clearCustomDnsRules(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 

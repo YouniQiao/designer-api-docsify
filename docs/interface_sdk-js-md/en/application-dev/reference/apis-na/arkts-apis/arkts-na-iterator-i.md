@@ -1,10 +1,14 @@
 # Iterator
 
+<!--Device-unnamed-interface Iterator<T, TReturn = any, TNext = undefined>--><!--Device-unnamed-interface Iterator<T, TReturn = any, TNext = undefined>-End-->
+
 ## next
 
 ```TypeScript
 next(...args: [] | [TNext]): IteratorResult<T, TReturn>
 ```
+
+<!--Device-Iterator-next(...args: [] | [TNext]): IteratorResult<T, TReturn>--><!--Device-Iterator-next(...args: [] | [TNext]): IteratorResult<T, TReturn>-End-->
 
 **Parameters:**
 
@@ -16,13 +20,15 @@ next(...args: [] | [TNext]): IteratorResult<T, TReturn>
 
 | Type | Description |
 | --- | --- |
-| IteratorResult&lt;T, TReturn&gt; |  |
+| [IteratorResult](arkts-na-iteratorresult-t.md)<T, TReturn> |  |
 
 ## return
 
 ```TypeScript
 return?(value?: TReturn): IteratorResult<T, TReturn>
 ```
+
+<!--Device-Iterator-return?(value?: TReturn): IteratorResult<T, TReturn>--><!--Device-Iterator-return?(value?: TReturn): IteratorResult<T, TReturn>-End-->
 
 **Parameters:**
 
@@ -34,13 +40,15 @@ return?(value?: TReturn): IteratorResult<T, TReturn>
 
 | Type | Description |
 | --- | --- |
-| IteratorResult&lt;T, TReturn&gt; |  |
+| [IteratorResult](arkts-na-iteratorresult-t.md)<T, TReturn> |  |
 
 ## throw
 
 ```TypeScript
 throw?(e?: any): IteratorResult<T, TReturn>
 ```
+
+<!--Device-Iterator-throw?(e?: any): IteratorResult<T, TReturn>--><!--Device-Iterator-throw?(e?: any): IteratorResult<T, TReturn>-End-->
 
 **Parameters:**
 
@@ -52,5 +60,5 @@ throw?(e?: any): IteratorResult<T, TReturn>
 
 | Type | Description |
 | --- | --- |
-| IteratorResult&lt;T, TReturn&gt; |  |
+| [IteratorResult](arkts-na-iteratorresult-t.md)<T, TReturn> |  |
 

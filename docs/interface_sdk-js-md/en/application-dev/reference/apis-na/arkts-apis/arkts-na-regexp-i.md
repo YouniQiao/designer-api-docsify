@@ -1,5 +1,7 @@
 # RegExp
 
+<!--Device-unnamed-interface RegExp--><!--Device-unnamed-interface RegExp-End-->
+
 ## compile
 
 ```TypeScript
@@ -7,6 +9,8 @@ compile(pattern: string, flags?: string): this
 ```
 
 **Deprecated since:** legacy feature for browser compatibility 
+
+<!--Device-RegExp-compile(pattern: string, flags?: string): this--><!--Device-RegExp-compile(pattern: string, flags?: string): this-End-->
 
 **Parameters:**
 
@@ -29,6 +33,8 @@ exec(string: string): RegExpExecArray | null
 
 Executes a search on a string using a regular expression pattern, and returns an array containing the results of that search.
 
+<!--Device-RegExp-exec(string: string): RegExpExecArray | null--><!--Device-RegExp-exec(string: string): RegExpExecArray | null-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -39,7 +45,7 @@ Executes a search on a string using a regular expression pattern, and returns an
 
 | Type | Description |
 | --- | --- |
-| RegExpExecArray |  |
+| [RegExpExecArray](arkts-na-regexpexecarray-i.md) |  |
 
 ## test
 
@@ -48,6 +54,8 @@ test(string: string): boolean
 ```
 
 Returns a Boolean value that indicates whether or not a pattern exists in a searched string.
+
+<!--Device-RegExp-test(string: string): boolean--><!--Device-RegExp-test(string: string): boolean-End-->
 
 **Parameters:**
 
@@ -71,6 +79,8 @@ Returns a Boolean value indicating the state of the global flag (g) used with a 
 
 **Type:** boolean
 
+<!--Device-RegExp-readonly global: boolean--><!--Device-RegExp-readonly global: boolean-End-->
+
 ## ignoreCase
 
 ```TypeScript
@@ -81,6 +91,8 @@ Returns a Boolean value indicating the state of the ignoreCase flag (i) used wit
 
 **Type:** boolean
 
+<!--Device-RegExp-readonly ignoreCase: boolean--><!--Device-RegExp-readonly ignoreCase: boolean-End-->
+
 ## lastIndex
 
 ```TypeScript
@@ -88,6 +100,8 @@ lastIndex: number
 ```
 
 **Type:** number
+
+<!--Device-RegExp-lastIndex: number--><!--Device-RegExp-lastIndex: number-End-->
 
 ## multiline
 
@@ -99,6 +113,8 @@ Returns a Boolean value indicating the state of the multiline flag (m) used with
 
 **Type:** boolean
 
+<!--Device-RegExp-readonly multiline: boolean--><!--Device-RegExp-readonly multiline: boolean-End-->
+
 ## source
 
 ```TypeScript
@@ -108,4 +124,6 @@ readonly source: string
 Returns a copy of the text of the regular expression pattern. Read-only. The regExp argument is a Regular expression object. It can be a variable name or a literal.
 
 **Type:** string
+
+<!--Device-RegExp-readonly source: string--><!--Device-RegExp-readonly source: string-End-->
 

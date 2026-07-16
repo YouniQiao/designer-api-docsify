@@ -1,5 +1,11 @@
 # createTouchController
 
+## 导入模块
+
+```TypeScript
+import { inputEventClient } from '@kit.InputKit';
+```
+
 ## createTouchController
 
 ```TypeScript
@@ -14,13 +20,15 @@ function createTouchController(): Promise<TouchController>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-inputEventClient-function createTouchController(): Promise<TouchController>--><!--Device-inputEventClient-function createTouchController(): Promise<TouchController>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;TouchController&gt; | Promise对象，返回触控控制器实例。 |
+| Promise<TouchController> | Promise对象，返回触控控制器实例。 |
 
 **错误码：**
 

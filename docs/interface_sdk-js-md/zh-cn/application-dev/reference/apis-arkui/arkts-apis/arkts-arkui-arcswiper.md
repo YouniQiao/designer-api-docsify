@@ -1,5 +1,11 @@
 # @ohos.arkui.ArcSwiper
 
+## 导入模块
+
+```TypeScript
+import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from '@kit.ArkUI';
+```
+
 ## 汇总
 
 ### 类

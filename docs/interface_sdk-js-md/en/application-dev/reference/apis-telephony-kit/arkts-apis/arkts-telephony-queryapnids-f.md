@@ -18,19 +18,21 @@ Query APN IDs.
 
 **Required permissions:** ohos.permission.MANAGE_APN_SETTING
 
+<!--Device-data-function queryApnIds(apnInfo: ApnInfo): Promise<Array<int>>--><!--Device-data-function queryApnIds(apnInfo: ApnInfo): Promise<Array<int>>-End-->
+
 **System capability:** SystemCapability.Telephony.CellularData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| apnInfo | ApnInfo | Yes | The APN information that needs to be queried. |
+| apnInfo | [ApnInfo](arkts-telephony-apninfo-i.md) | Yes | The APN information that needs to be queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Returns IDs of all APNs that meet the query conditions. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | Returns IDs of all APNs that meet the query conditions. |
 
 **Error codes:**
 

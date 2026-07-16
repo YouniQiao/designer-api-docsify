@@ -1,11 +1,18 @@
 # DisplaySync
 
-帧率和回调函数设置实例。用于帧率设置和回调函数的注册，以及启动和停止回调函数的调用。
-下列API示例中都需先使用displaySync.create()方法获取到DisplaySync实例，再通过此实例调用对应方法。
+帧率和回调函数设置实例。用于帧率设置和回调函数的注册，以及启动和停止回调函数的调用。下列API示例中都需先使用displaySync.create()方法获取到DisplaySync实例，再通过此实例调用对应方法。
 
 **起始版本：** 11
 
+<!--Device-displaySync-interface DisplaySync--><!--Device-displaySync-interface DisplaySync-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { displaySync } from '@kit.ArkGraphics2D';
+```
 
 ## off('frame')
 
@@ -17,6 +24,8 @@ off(type: 'frame', callback?: Callback<IntervalInfo>): void
 
 **起始版本：** 11
 
+<!--Device-DisplaySync-off(type: 'frame', callback?: Callback<IntervalInfo>): void--><!--Device-DisplaySync-off(type: 'frame', callback?: Callback<IntervalInfo>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -24,7 +33,7 @@ off(type: 'frame', callback?: Callback<IntervalInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'frame' | 是 | 设置注册回调的类型（只能是'frame'类型）。 |
-| callback | Callback&lt;IntervalInfo&gt; | 否 | 订阅函数，参数不填时，默认取消全部订阅函数。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<IntervalInfo> | 否 | 订阅函数，参数不填时，默认取消全部订阅函数。 |
 
 **示例：**
 
@@ -52,6 +61,8 @@ on(type: 'frame', callback: Callback<IntervalInfo>): void
 
 **起始版本：** 11
 
+<!--Device-DisplaySync-on(type: 'frame', callback: Callback<IntervalInfo>): void--><!--Device-DisplaySync-on(type: 'frame', callback: Callback<IntervalInfo>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -59,7 +70,7 @@ on(type: 'frame', callback: Callback<IntervalInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'frame' | 是 | 设置注册回调的类型（只能是'frame'类型）。 |
-| callback | Callback&lt;IntervalInfo&gt; | 是 | 订阅函数。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<IntervalInfo> | 是 | 订阅函数。 |
 
 **示例：**
 
@@ -87,13 +98,15 @@ setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void
 
 **起始版本：** 11
 
+<!--Device-DisplaySync-setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void--><!--Device-DisplaySync-setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rateRange | ExpectedFrameRateRange | 是 | 设置DisplaySync期望的帧率。 |
+| rateRange | [ExpectedFrameRateRange](../../apis-arkui/arkts-components/arkts-arkui-expectedframeraterange-i.md) | 是 | 设置DisplaySync期望的帧率。 |
 
 **错误码：**
 
@@ -128,6 +141,8 @@ start(): void
 开始每帧回调。
 
 **起始版本：** 11
+
+<!--Device-DisplaySync-start(): void--><!--Device-DisplaySync-start(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -193,6 +208,8 @@ stop(): void
 停止每帧回调。
 
 **起始版本：** 11
+
+<!--Device-DisplaySync-stop(): void--><!--Device-DisplaySync-stop(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

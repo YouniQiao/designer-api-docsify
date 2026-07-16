@@ -16,14 +16,16 @@ Obtains the remaining time of a transient task. This API uses an asynchronous ca
 
 **Since:** 9
 
+<!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: int, callback: AsyncCallback<int>): void--><!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: int, callback: AsyncCallback<int>): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestId | number | Yes | Request ID of the transient task. It is obtained by calling the[requestSuspendDelay](arkts-backgroundtasks-requestsuspenddelay-f.md#requestsuspenddelay-1) API. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the remaining time of the transient task, inmilliseconds. |
+| requestId | number | Yes | Request ID of the transient task. It is obtained by calling the [requestSuspendDelay](arkts-backgroundtasks-requestsuspenddelay-f.md#requestsuspenddelay-1) API. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the remaining time of the transient task, in milliseconds. |
 
 **Error codes:**
 
@@ -65,19 +67,21 @@ Obtains the remaining time of a transient task. This API uses a promise to retur
 
 **Since:** 9
 
+<!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: int): Promise<int>--><!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: int): Promise<int>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestId | number | Yes | Request ID of the transient task. It is obtained by calling the[requestSuspendDelay](arkts-backgroundtasks-requestsuspenddelay-f.md#requestsuspenddelay-1) API. |
+| requestId | number | Yes | Request ID of the transient task. It is obtained by calling the [requestSuspendDelay](arkts-backgroundtasks-requestsuspenddelay-f.md#requestsuspenddelay-1) API. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise that returns the remaining time of the transient task, in milliseconds. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise that returns the remaining time of the transient task, in milliseconds. |
 
 **Error codes:**
 

@@ -12,12 +12,13 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 function getGraphicsMemory(): Promise<number>
 ```
 
-Obtains the total GPU memory size (**gl** + **graph**) of the application. This API uses a promise to return the
-result.
+Obtains the total GPU memory size (**gl** + **graph**) of the application. This API uses a promise to return the result.
 
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-hidebug-function getGraphicsMemory(): Promise<int>--><!--Device-hidebug-function getGraphicsMemory(): Promise<int>-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -25,7 +26,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the total GPU memory size of the application, in KB. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the total GPU memory size of the application, in KB. |
 
 **Error codes:**
 

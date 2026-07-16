@@ -12,13 +12,13 @@ import { notificationManager } from '@kit.NotificationKit';
 function getNotificationParameters(id: number, label?: string): Promise<NotificationParameters>
 ```
 
-Obtains some information about the **wantAgent** field in
-[NotificationRequest](arkts-notification-notificationrequest-i.md). This API uses a promise to
-return the result.
+Obtains some information about the **wantAgent** field in [NotificationRequest](arkts-notification-notificationrequest-i.md). This API uses a promise to return the result.
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-notificationManager-function getNotificationParameters(id: number, label?: string): Promise<NotificationParameters>--><!--Device-notificationManager-function getNotificationParameters(id: number, label?: string): Promise<NotificationParameters>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -26,14 +26,14 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | number | Yes | Notification ID, used to identify the target notification. This value is specified by the**id** field of NotificationRequest when a notification is published. |
+| id | number | Yes | Notification ID, used to identify the target notification. This value is specified by the **id** field of NotificationRequest when a notification is published. |
 | label | string | No | Notification label. This parameter is left empty by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NotificationParameters&gt; | Promise used to return some information about **wantAgent**. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NotificationParameters> | Promise used to return some information about **wantAgent**. |
 
 **Error codes:**
 

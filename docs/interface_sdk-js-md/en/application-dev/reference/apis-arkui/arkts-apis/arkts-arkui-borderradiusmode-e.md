@@ -1,9 +1,10 @@
 # BorderRadiusMode
 
-Enumerates the border radius modes for the **SegmentButton** component, which are used to control the border radius
-calculation method.
+Enumerates the border radius modes for the **SegmentButton** component, which are used to control the border radius calculation method.
 
 **Since:** 20
+
+<!--Device-unnamed-declare enum BorderRadiusMode--><!--Device-unnamed-declare enum BorderRadiusMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,6 +22,8 @@ Default mode, where the framework automatically calculates the border radius.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-BorderRadiusMode-DEFAULT = 0--><!--Device-BorderRadiusMode-DEFAULT = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CUSTOM
@@ -36,6 +39,8 @@ Custom mode, where the border radius is set by the developer.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-BorderRadiusMode-CUSTOM = 1--><!--Device-BorderRadiusMode-CUSTOM = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

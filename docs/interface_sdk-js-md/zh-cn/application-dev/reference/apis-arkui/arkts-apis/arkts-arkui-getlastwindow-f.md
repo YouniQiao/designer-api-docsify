@@ -1,5 +1,11 @@
 # getLastWindow
 
+## 导入模块
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+```
+
 ## getLastWindow
 
 ```TypeScript
@@ -8,12 +14,13 @@ function getLastWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void
 
 获取当前应用内层级最高的子窗口，使用callback异步回调。
 
-若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-i.md#showwindow-1)进行显示，则返回应用主
-窗口。
+若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-i.md#showwindow-1)进行显示，则返回应用主窗口。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-window-function getLastWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void--><!--Device-window-function getLastWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -21,8 +28,8 @@ function getLastWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ctx | BaseContext | 是 | Current application context. |
-| callback | AsyncCallback&lt;Window&gt; | 是 | Callback used to return the top window obtained. |
+| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | Current application context. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Window> | 是 | Callback used to return the top window obtained. |
 
 **错误码：**
 
@@ -87,12 +94,13 @@ function getLastWindow(ctx: BaseContext): Promise<Window>
 
 获取当前应用内层级最高的子窗口，使用Promise异步回调。
 
-若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-i.md#showwindow-1)进行显示，则返回应用主
-窗口。
+若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-i.md#showwindow-1)进行显示，则返回应用主窗口。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-window-function getLastWindow(ctx: BaseContext): Promise<Window>--><!--Device-window-function getLastWindow(ctx: BaseContext): Promise<Window>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -100,13 +108,13 @@ function getLastWindow(ctx: BaseContext): Promise<Window>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ctx | BaseContext | 是 | 当前应用上下文信息。 |
+| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 当前应用上下文信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Window&gt; | Promise对象。返回当前应用内层级最高的窗口对象。 |
+| Promise<Window> | Promise对象。返回当前应用内层级最高的窗口对象。 |
 
 **错误码：**
 

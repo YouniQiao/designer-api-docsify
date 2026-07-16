@@ -4,6 +4,8 @@ Indicates the info of the rtt event.
 
 **Since:** 22
 
+<!--Device-call-export interface RttEventInfo--><!--Device-call-export interface RttEventInfo-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Indicates the id of rtt.
 
 **Since:** 22
 
+<!--Device-RttEventInfo-callId: int--><!--Device-RttEventInfo-callId: int-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ Indicates the type of rtt event.
 
 **Since:** 22
 
+<!--Device-RttEventInfo-eventType: int--><!--Device-RttEventInfo-eventType: int-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ Indicates the reason of rtt event.
 **Type:** number
 
 **Since:** 22
+
+<!--Device-RttEventInfo-reason: int--><!--Device-RttEventInfo-reason: int-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 

@@ -12,6 +12,8 @@ Window update type.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-accessibility-type WindowUpdateType = 'add' | 'remove' | 'bounds' | 'active' | 'focus'--><!--Device-accessibility-type WindowUpdateType = 'add' | 'remove' | 'bounds' | 'active' | 'focus'-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 | Type | Description |

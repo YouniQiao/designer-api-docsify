@@ -4,9 +4,17 @@ Random类，调用Random方法生成随机数。调用前，需要通过[createR
 
 **起始版本：** 9
 
+<!--Device-cryptoFramework-interface Random--><!--Device-cryptoFramework-interface Random-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Rand
 - API版本9-11：SystemCapability.Security.CryptoFramework
+
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+```
 
 ## enableHardwareEntropy
 
@@ -20,7 +28,9 @@ enableHardwareEntropy(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Random-enableHardwareEntropy(): void--><!--Device-Random-enableHardwareEntropy(): void-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Rand
 
@@ -71,7 +81,9 @@ generateRandom(len: number, callback: AsyncCallback<DataBlob>): void
 - API版本12+：此接口可在Stage模型和FA模型下使用。
 - API版本9-11：此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Random-generateRandom(len: int, callback: AsyncCallback<DataBlob>): void--><!--Device-Random-generateRandom(len: int, callback: AsyncCallback<DataBlob>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Rand
@@ -82,7 +94,7 @@ generateRandom(len: number, callback: AsyncCallback<DataBlob>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | len | number | 是 | 表示生成随机数的长度，单位为bytes，范围在[1, INT_MAX]。 |
-| callback | AsyncCallback&lt;DataBlob&gt; | 是 | 回调函数。当生成随机数成功时，err为undefined，data为获取到的随机数；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DataBlob> | 是 | 回调函数。当生成随机数成功时，err为undefined，data为获取到的随机数；否则为错误对象。 |
 
 **错误码：**
 
@@ -120,7 +132,9 @@ generateRandom(len: number): Promise<DataBlob>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Random-generateRandom(len: int): Promise<DataBlob>--><!--Device-Random-generateRandom(len: int): Promise<DataBlob>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Rand
@@ -136,7 +150,7 @@ generateRandom(len: number): Promise<DataBlob>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise对象，返回生成的随机数。 |
+| Promise<DataBlob> | Promise对象，返回生成的随机数。 |
 
 **错误码：**
 
@@ -241,9 +255,7 @@ generateRandomSync(len: number): DataBlob
 
 同步生成指定长度的随机数。
 
-<br><br>**说明：**
-<br>建议优先使用异步API{@link generateRandom}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。
-因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：**<br>建议优先使用异步API{@link generateRandom}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 10
 
@@ -251,7 +263,9 @@ generateRandomSync(len: number): DataBlob
 - API版本12+：此接口可在Stage模型和FA模型下使用。
 - API版本10-11：此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Random-generateRandomSync(len: int): DataBlob--><!--Device-Random-generateRandomSync(len: int): DataBlob-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Rand
@@ -267,7 +281,7 @@ generateRandomSync(len: number): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 表示生成的随机数。 |
+| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | 表示生成的随机数。 |
 
 **错误码：**
 
@@ -384,7 +398,9 @@ setSeed(seed: DataBlob): void
 - API版本12+：此接口可在Stage模型和FA模型下使用。
 - API版本9-11：此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Random-setSeed(seed: DataBlob): void--><!--Device-Random-setSeed(seed: DataBlob): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Rand
@@ -394,7 +410,7 @@ setSeed(seed: DataBlob): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| seed | DataBlob | 是 | 设置的种子。 |
+| seed | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | 是 | 设置的种子。 |
 
 **错误码：**
 
@@ -439,7 +455,9 @@ readonly algName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Random-readonly algName: string--><!--Device-Random-readonly algName: string-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Rand

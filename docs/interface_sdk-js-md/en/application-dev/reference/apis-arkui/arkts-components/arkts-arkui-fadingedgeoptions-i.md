@@ -4,6 +4,8 @@ Defines the fadingEdge options.
 
 **Since:** 14
 
+<!--Device-unnamed-declare interface FadingEdgeOptions--><!--Device-unnamed-declare interface FadingEdgeOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fadingEdgeLength
@@ -23,6 +25,8 @@ The length of FadingEdge.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-FadingEdgeOptions-fadingEdgeLength?: LengthMetrics--><!--Device-FadingEdgeOptions-fadingEdgeLength?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

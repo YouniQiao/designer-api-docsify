@@ -4,6 +4,8 @@ Defines the detailed information about a device.
 
 **Since:** 12
 
+<!--Device-deviceManager-interface DeviceInfo--><!--Device-deviceManager-interface DeviceInfo-End-->
+
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Device ID.
 
 **Since:** 12
 
+<!--Device-DeviceInfo-deviceId: long--><!--Device-DeviceInfo-deviceId: long-End-->
+
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ UID of the driver matching the device.
 
 **Since:** 12
 
+<!--Device-DeviceInfo-driverUid?: string--><!--Device-DeviceInfo-driverUid?: string-End-->
+
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **System API:** This is a system API.
@@ -52,12 +58,13 @@ UID of the driver matching the device.
 isDriverMatched: boolean
 ```
 
-Whether the device matches the driver. The value `true` indicates the device matches the driver, and the value
-`false` indicates the opposite.
+Whether the device matches the driver. The value `true` indicates the device matches the driver, and the value`false` indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 12
+
+<!--Device-DeviceInfo-isDriverMatched: boolean--><!--Device-DeviceInfo-isDriverMatched: boolean-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 

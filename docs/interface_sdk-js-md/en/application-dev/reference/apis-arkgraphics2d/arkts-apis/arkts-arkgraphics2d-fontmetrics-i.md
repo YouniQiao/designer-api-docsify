@@ -4,6 +4,8 @@ Describes the attributes that describe the font size and layout. A typeface has 
 
 **Since:** 11
 
+<!--Device-drawing-interface FontMetrics--><!--Device-drawing-interface FontMetrics-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Distance from the baseline to the highest coordinate of the text. The value is a
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-FontMetrics-ascent: double--><!--Device-FontMetrics-ascent: double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## avgCharWidth
@@ -41,6 +45,8 @@ Average character width.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FontMetrics-avgCharWidth?: double--><!--Device-FontMetrics-avgCharWidth?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -58,6 +64,8 @@ Maximum distance from the baseline to the lowest coordinate of the text. The val
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-FontMetrics-bottom: double--><!--Device-FontMetrics-bottom: double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## capHeight
@@ -73,6 +81,8 @@ Height of a capital letter. The value is usually a negative value.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FontMetrics-capHeight?: double--><!--Device-FontMetrics-capHeight?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -90,6 +100,8 @@ Distance from the baseline to the lowest coordinate of the text. The value is a 
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-FontMetrics-descent: double--><!--Device-FontMetrics-descent: double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## flags
@@ -106,6 +118,8 @@ Font measurement flags that are valid.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-FontMetrics-flags?: FontMetricsFlags--><!--Device-FontMetrics-flags?: FontMetricsFlags-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## leading
@@ -114,14 +128,15 @@ Font measurement flags that are valid.
 leading: number
 ```
 
-Interline spacing, that is, the distance from the descent of one line of text to the ascent of the next line. The
-value is a floating point number.
+Interline spacing, that is, the distance from the descent of one line of text to the ascent of the next line. The value is a floating point number.
 
 **Type:** number
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FontMetrics-leading: double--><!--Device-FontMetrics-leading: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -139,6 +154,8 @@ Maximum character width.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-FontMetrics-maxCharWidth?: double--><!--Device-FontMetrics-maxCharWidth?: double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## strikethroughPosition
@@ -154,6 +171,8 @@ Vertical distance from the baseline to the bottom of the strikethrough. The valu
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FontMetrics-strikethroughPosition?: double--><!--Device-FontMetrics-strikethroughPosition?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -171,6 +190,8 @@ Thickness of the strikethrough.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-FontMetrics-strikethroughThickness?: double--><!--Device-FontMetrics-strikethroughThickness?: double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## top
@@ -186,6 +207,8 @@ Maximum distance from the baseline to the highest coordinate of the text. The va
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FontMetrics-top: double--><!--Device-FontMetrics-top: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -203,6 +226,8 @@ Vertical distance from the baseline to the top of the underline. The value is us
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-FontMetrics-underlinePosition?: double--><!--Device-FontMetrics-underlinePosition?: double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## underlineThickness
@@ -218,6 +243,8 @@ Thickness of the underline.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FontMetrics-underlineThickness?: double--><!--Device-FontMetrics-underlineThickness?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -235,6 +262,8 @@ Height of the lowercase letter x. The value is usually a negative value.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-FontMetrics-xHeight?: double--><!--Device-FontMetrics-xHeight?: double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## xMax
@@ -243,14 +272,15 @@ Height of the lowercase letter x. The value is usually a negative value.
 xMax?: number
 ```
 
-Horizontal distance from the rightmost edge of any glyph bounding box to the origin. The value is a positive
-number, indicating the maximum horizontal coordinate across all glyph bounding boxes.
+Horizontal distance from the rightmost edge of any glyph bounding box to the origin. The value is a positive number, indicating the maximum horizontal coordinate across all glyph bounding boxes.
 
 **Type:** number
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FontMetrics-xMax?: double--><!--Device-FontMetrics-xMax?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -260,14 +290,15 @@ number, indicating the maximum horizontal coordinate across all glyph bounding b
 xMin?: number
 ```
 
-Horizontal distance from the leftmost edge of any glyph bounding box to the origin. This value is usually less
-than 0, indicating the minimum horizontal coordinate across all glyph bounding boxes.
+Horizontal distance from the leftmost edge of any glyph bounding box to the origin. This value is usually less than 0, indicating the minimum horizontal coordinate across all glyph bounding boxes.
 
 **Type:** number
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FontMetrics-xMin?: double--><!--Device-FontMetrics-xMin?: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

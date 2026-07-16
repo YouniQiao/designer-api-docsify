@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface SceneResource--><!--Device-unnamed-export interface SceneResource-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## destroy
@@ -15,6 +17,8 @@ destroy(): void
 释放场景资源.
 
 **起始版本：** 12
+
+<!--Device-SceneResource-destroy(): void--><!--Device-SceneResource-destroy(): void-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -30,6 +34,8 @@ name: string
 
 **起始版本：** 12
 
+<!--Device-SceneResource-name: string--><!--Device-SceneResource-name: string-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## resourceType
@@ -44,6 +50,8 @@ readonly resourceType: SceneResourceType
 
 **起始版本：** 12
 
+<!--Device-SceneResource-readonly resourceType: SceneResourceType--><!--Device-SceneResource-readonly resourceType: SceneResourceType-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## uri
@@ -57,6 +65,8 @@ readonly uri?: ResourceStr
 **类型：** ResourceStr
 
 **起始版本：** 12
+
+<!--Device-SceneResource-readonly uri?: ResourceStr--><!--Device-SceneResource-readonly uri?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

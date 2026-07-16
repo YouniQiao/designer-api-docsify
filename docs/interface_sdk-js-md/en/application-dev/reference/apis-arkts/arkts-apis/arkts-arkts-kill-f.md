@@ -20,6 +20,8 @@ Sends a signal to a specified process to terminate it.
 
 **Substitutes:** [kill](arkts-arkts-processmanager-c.md#kill-1)
 
+<!--Device-process-function kill(signal: number, pid: number): boolean--><!--Device-process-function kill(signal: number, pid: number): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**

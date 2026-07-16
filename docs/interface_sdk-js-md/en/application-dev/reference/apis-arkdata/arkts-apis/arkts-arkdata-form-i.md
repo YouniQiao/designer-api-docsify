@@ -4,6 +4,8 @@ Represents data of the widget type defined by the system.
 
 **Since:** 15
 
+<!--Device-uniformDataStruct-interface Form--><!--Device-uniformDataStruct-interface Form-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Ability name corresponding to the widget.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Form-abilityName: string--><!--Device-Form-abilityName: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## bundleName
@@ -42,6 +46,8 @@ Bundle to which the widget belongs.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Form-bundleName: string--><!--Device-Form-bundleName: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## details
@@ -50,14 +56,15 @@ Bundle to which the widget belongs.
 details?: Record<string, number | number | number | string | Uint8Array>
 ```
 
-Object of the dictionary type used to describe the icon. The key is of the string type, and the value can be a
-number, a string, or a Uint8Array. By default, it is an empty dictionary object.
+Object of the dictionary type used to describe the icon. The key is of the string type, and the value can be a number, a string, or a Uint8Array. By default, it is an empty dictionary object.
 
 **Type:** Record<string, number | number | number | string | Uint8Array>
 
 **Since:** 15
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Form-details?: Record<string, int | long | double | string | Uint8Array>--><!--Device-Form-details?: Record<string, int | long | double | string | Uint8Array>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -75,6 +82,8 @@ Widget ID.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Form-formId: int--><!--Device-Form-formId: int-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## formName
@@ -90,6 +99,8 @@ Widget name.
 **Since:** 15
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Form-formName: string--><!--Device-Form-formName: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -107,6 +118,8 @@ Module to which the widget belongs.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Form-module: string--><!--Device-Form-module: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## uniformDataType
@@ -115,14 +128,15 @@ Module to which the widget belongs.
 readonly uniformDataType: 'openharmony.form'
 ```
 
-Uniform data type, which has a fixed value of **openharmony.form**. For details, see
-[UniformDataType](arkts-arkdata-uniformdatatype-e.md).
+Uniform data type, which has a fixed value of **openharmony.form**. For details, see [UniformDataType](arkts-arkdata-uniformdatatype-e.md).
 
 **Type:** 'openharmony.form'
 
 **Since:** 15
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Form-readonly uniformDataType: 'openharmony.form'--><!--Device-Form-readonly uniformDataType: 'openharmony.form'-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 

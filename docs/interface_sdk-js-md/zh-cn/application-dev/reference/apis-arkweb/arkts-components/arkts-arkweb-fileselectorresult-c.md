@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class FileSelectorResult--><!--Device-unnamed-declare class FileSelectorResult-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## constructor
@@ -16,7 +18,9 @@ FileSelectorResult的构造函数。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FileSelectorResult-constructor()--><!--Device-FileSelectorResult-constructor()-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -30,7 +34,9 @@ handleFileList(fileList: Array<string>): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FileSelectorResult-handleFileList(fileList: Array<string>): void--><!--Device-FileSelectorResult-handleFileList(fileList: Array<string>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -38,5 +44,5 @@ handleFileList(fileList: Array<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fileList | Array&lt;string&gt; | 是 | List of files that need to be operated. |
+| fileList | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | List of files that need to be operated. |
 

@@ -18,6 +18,8 @@ Updates the configuration. This API uses an asynchronous callback to return the 
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-abilityManager-function updateConfiguration(config: Configuration, callback: AsyncCallback<void>): void--><!--Device-abilityManager-function updateConfiguration(config: Configuration, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Updates the configuration. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | Configuration | Yes | New configuration. You only need to configure the items to be updated. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is**undefined**. Otherwise, **err** is an error object. You can perform error handling or other custom processing. |
+| config | [Configuration](../../apis-arkui/arkts-components/arkts-arkui-configuration-i.md) | Yes | New configuration. You only need to configure the items to be updated. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined**. Otherwise, **err** is an error object. You can perform error handling or other custom processing. |
 
 **Error codes:**
 
@@ -51,6 +53,8 @@ Updates the configuration. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-abilityManager-function updateConfiguration(config: Configuration): Promise<void>--><!--Device-abilityManager-function updateConfiguration(config: Configuration): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -59,13 +63,13 @@ Updates the configuration. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | Configuration | Yes | New configuration. You only need to configure the items to be updated. |
+| config | [Configuration](../../apis-arkui/arkts-components/arkts-arkui-configuration-i.md) | Yes | New configuration. You only need to configure the items to be updated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. You can perform error handling or other custom processing. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. You can perform error handling or other custom processing. |
 
 **Error codes:**
 

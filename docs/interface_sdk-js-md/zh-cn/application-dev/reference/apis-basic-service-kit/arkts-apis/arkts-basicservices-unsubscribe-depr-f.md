@@ -14,14 +14,16 @@ function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback
 
 **替代接口：** [unsubscribe](arkts-basicservices-unsubscribe-f.md#unsubscribe-1)
 
+<!--Device-commonEvent-function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback<void>): void--><!--Device-commonEvent-function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriber | CommonEventSubscriber | 是 | 表示订阅者对象。 |
-| callback | AsyncCallback&lt;void&gt; | 否 | 表示取消订阅的回调方法。 |
+| subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-i.md) | 是 | 表示订阅者对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 否 | 表示取消订阅的回调方法。 |
 
 **示例：**
 

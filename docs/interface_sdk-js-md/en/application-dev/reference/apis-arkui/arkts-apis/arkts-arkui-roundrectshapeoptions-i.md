@@ -8,6 +8,8 @@ This API inherits from [ShapeSize](arkts-arkui-shapesize-i.md).
 
 **Since:** 12
 
+<!--Device-unnamed-interface RoundRectShapeOptions extends ShapeSize--><!--Device-unnamed-interface RoundRectShapeOptions extends ShapeSize-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +26,7 @@ radiusHeight?: number | string
 
 Radius height of the rectangle border corners.
 
-When the parameter type is number, the valid value range is
-[0, +∞). When the parameter type is string, the value must conform to the [Length](../arkts-components/arkts-arkui-length-t.md) type specification.
+When the parameter type is number, the valid value range is [0, +∞). When the parameter type is string, the value must conform to the [Length](arkts-arkui-length-t.md) type specification.
 
 Unit: vp.
 
@@ -40,6 +41,8 @@ If the value is invalid, 0 vp is used.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-RoundRectShapeOptions-radiusHeight?: number | string--><!--Device-RoundRectShapeOptions-radiusHeight?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,8 +54,7 @@ radiusWidth?: number | string
 
 Radius width of the rectangle border corners.
 
-When the parameter type is number, the valid value range is
-[0, +∞). When the parameter type is string, the value must conform to the [Length](../arkts-components/arkts-arkui-length-t.md) type specification.
+When the parameter type is number, the valid value range is [0, +∞). When the parameter type is string, the value must conform to the [Length](arkts-arkui-length-t.md) type specification.
 
 Unit: vp.
 
@@ -67,6 +69,8 @@ If the value is invalid, 0 vp is used.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-RoundRectShapeOptions-radiusWidth?: number | string--><!--Device-RoundRectShapeOptions-radiusWidth?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

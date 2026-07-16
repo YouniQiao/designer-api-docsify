@@ -4,6 +4,8 @@ This class is used to intercept requests for a specified scheme.
 
 **Since:** 12
 
+<!--Device-webview-class WebSchemeHandler--><!--Device-webview-class WebSchemeHandler-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -25,13 +27,17 @@ Callback for handling the request.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WebSchemeHandler-onRequestStart(
+      callback: (request: WebSchemeHandlerRequest, handler: WebResourceHandler) => boolean): void--><!--Device-WebSchemeHandler-onRequestStart(
+      callback: (request: WebSchemeHandlerRequest, handler: WebResourceHandler) => boolean): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (request: WebSchemeHandlerRequest, handler: WebResourceHandler) =&gt; boolean | Yes | Callback of handling the request. If callback return false,it means no interception. |
+| callback | (request: WebSchemeHandlerRequest, handler: WebResourceHandler) => boolean | Yes | Callback of handling the request. If callback return false,it means no interception. |
 
 **Error codes:**
 
@@ -51,13 +57,15 @@ Callback when the request is completed.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WebSchemeHandler-onRequestStop(callback: Callback<WebSchemeHandlerRequest>): void--><!--Device-WebSchemeHandler-onRequestStop(callback: Callback<WebSchemeHandlerRequest>): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;WebSchemeHandlerRequest&gt; | Yes | Callback of request is completed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<WebSchemeHandlerRequest> | Yes | Callback of request is completed. |
 
 **Error codes:**
 

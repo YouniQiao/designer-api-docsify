@@ -12,12 +12,13 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 function getLauncherAbilityInfoSync(bundleName: string, userId: number): Array<LauncherAbilityInfo>
 ```
 
-Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md) based on
-the given bundle name and user ID.
+Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md) based on the given bundle name and user ID.
 
 **Since:** 18
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-launcherBundleManager-function getLauncherAbilityInfoSync(bundleName: string, userId: int): Array<LauncherAbilityInfo>--><!--Device-launcherBundleManager-function getLauncherAbilityInfoSync(bundleName: string, userId: int): Array<LauncherAbilityInfo>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -26,13 +27,13 @@ the given bundle name and user ID.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| userId | number | Yes | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). |
+| userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;LauncherAbilityInfo&gt; | Array of the[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md) objects obtained. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<LauncherAbilityInfo> | Array of the [LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md) objects obtained. |
 
 **Error codes:**
 

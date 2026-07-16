@@ -1,5 +1,11 @@
 # getCardType
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## getCardType
 
 ```TypeScript
@@ -10,6 +16,8 @@ Obtains the type of the SIM card installed in a specified slot.
 
 **起始版本：** 7
 
+<!--Device-sim-function getCardType(slotId: int, callback: AsyncCallback<CardType>): void--><!--Device-sim-function getCardType(slotId: int, callback: AsyncCallback<CardType>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -17,7 +25,7 @@ Obtains the type of the SIM card installed in a specified slot.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from {@code 0} to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;CardType&gt; | 是 | Indicates the callback for getting the SIM card type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<CardType> | 是 | Indicates the callback for getting the SIM card type. |
 
 **错误码：**
 
@@ -53,6 +61,8 @@ Obtains the type of the SIM card installed in a specified slot.
 
 **起始版本：** 7
 
+<!--Device-sim-function getCardType(slotId: int): Promise<CardType>--><!--Device-sim-function getCardType(slotId: int): Promise<CardType>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -65,7 +75,7 @@ Obtains the type of the SIM card installed in a specified slot.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CardType&gt; | Returns the SIM card type. |
+| Promise<CardType> | Returns the SIM card type. |
 
 **错误码：**
 

@@ -18,6 +18,8 @@ Set the audio device.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function setAudioDevice(device: AudioDevice, callback: AsyncCallback<void>): void--><!--Device-call-function setAudioDevice(device: AudioDevice, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Set the audio device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| device | AudioDevice | Yes | Indicates the device of audio. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of setAudioDevice. |
+| device | [AudioDevice](arkts-telephony-audiodevice-i-sys.md) | Yes | Indicates the device of audio. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of setAudioDevice. |
 
 **Error codes:**
 
@@ -72,6 +74,8 @@ Set the audio device.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function setAudioDevice(device: AudioDevice): Promise<void>--><!--Device-call-function setAudioDevice(device: AudioDevice): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -80,13 +84,13 @@ Set the audio device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| device | AudioDevice | Yes | Indicates the device of audio. |
+| device | [AudioDevice](arkts-telephony-audiodevice-i-sys.md) | Yes | Indicates the device of audio. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setAudioDevice. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the setAudioDevice. |
 
 **Error codes:**
 

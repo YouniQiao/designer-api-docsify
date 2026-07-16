@@ -12,13 +12,13 @@ import { netFirewall } from '@kit.NetworkKit';
 function setNetFirewallPolicy(userId: number, policy: NetFirewallPolicy): Promise<void>
 ```
 
-Set firewall policy by userId.
-<p>Enables or disables the firewall function, and specifies the default actions for inbound connections and
-outbound connections.</p>
+Set firewall policy by userId.<p>Enables or disables the firewall function, and specifies the default actions for inbound connections and outbound connections.</p>
 
 **Since:** 15
 
 **Required permissions:** ohos.permission.MANAGE_NET_FIREWALL
+
+<!--Device-netFirewall-function setNetFirewallPolicy(userId: number, policy: NetFirewallPolicy): Promise<void>--><!--Device-netFirewall-function setNetFirewallPolicy(userId: number, policy: NetFirewallPolicy): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -27,13 +27,13 @@ outbound connections.</p>
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | Indicates the user ID. It cannot be the ID of a user that does not exist. |
-| policy | NetFirewallPolicy | Yes | The firewall policy to be set. |
+| policy | [NetFirewallPolicy](arkts-network-netfirewallpolicy-i.md) | Yes | The firewall policy to be set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns void. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns void. |
 
 **Error codes:**
 

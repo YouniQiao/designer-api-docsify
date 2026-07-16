@@ -4,6 +4,8 @@ Enumerates the cipher modes.
 
 **Since:** 8
 
+<!--Device-huks-export enum HuksCipherMode--><!--Device-huks-export enum HuksCipherMode-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_MODE_ECB
@@ -17,6 +19,8 @@ Electronic Code Block (ECB) mode.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksCipherMode-HUKS_MODE_ECB = 1--><!--Device-HuksCipherMode-HUKS_MODE_ECB = 1-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -32,6 +36,8 @@ Cipher Block Chaining (CBC) mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksCipherMode-HUKS_MODE_CBC = 2--><!--Device-HuksCipherMode-HUKS_MODE_CBC = 2-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_MODE_CTR
@@ -46,6 +52,8 @@ Counter (CTR) mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksCipherMode-HUKS_MODE_CTR = 3--><!--Device-HuksCipherMode-HUKS_MODE_CTR = 3-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_MODE_OFB
@@ -59,6 +67,8 @@ Output Feedback (OFB) mode.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksCipherMode-HUKS_MODE_OFB = 4--><!--Device-HuksCipherMode-HUKS_MODE_OFB = 4-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -76,6 +86,8 @@ Ciphertext Feedback (CFB) mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HuksCipherMode-HUKS_MODE_CFB = 5--><!--Device-HuksCipherMode-HUKS_MODE_CFB = 5-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_MODE_CCM
@@ -89,6 +101,8 @@ Counter with CBC-MAC (CCM) mode.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HuksCipherMode-HUKS_MODE_CCM = 31--><!--Device-HuksCipherMode-HUKS_MODE_CCM = 31-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -105,6 +119,8 @@ Galois/Counter (GCM) mode.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-HuksCipherMode-HUKS_MODE_GCM = 32--><!--Device-HuksCipherMode-HUKS_MODE_GCM = 32-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 

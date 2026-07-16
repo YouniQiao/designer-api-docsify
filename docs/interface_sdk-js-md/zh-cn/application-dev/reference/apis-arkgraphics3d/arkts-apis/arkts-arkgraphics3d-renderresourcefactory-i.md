@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+<!--Device-unnamed-export interface RenderResourceFactory--><!--Device-unnamed-export interface RenderResourceFactory-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## createImage
@@ -16,19 +18,21 @@ createImage(params: SceneResourceParameters): Promise<Image>
 
 **起始版本：** 20
 
+<!--Device-RenderResourceFactory-createImage(params: SceneResourceParameters): Promise<Image>--><!--Device-RenderResourceFactory-createImage(params: SceneResourceParameters): Promise<Image>-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | SceneResourceParameters | 是 | 创建图像的参数 |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-sceneresourceparameters-i.md) | 是 | 创建图像的参数 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Image&gt; | 返回创建的图像 |
+| Promise<Image> | 返回创建的图像 |
 
 ## createImageStream
 
@@ -42,19 +46,21 @@ createImageStream(params: SceneResourceParameters): Promise<ImageStream>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RenderResourceFactory-createImageStream(params: SceneResourceParameters): Promise<ImageStream>--><!--Device-RenderResourceFactory-createImageStream(params: SceneResourceParameters): Promise<ImageStream>-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | SceneResourceParameters | 是 | 创建图像流的参数 |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-sceneresourceparameters-i.md) | 是 | 创建图像流的参数 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ImageStream&gt; | 返回创建的图像流 |
+| Promise<ImageStream> | 返回创建的图像流 |
 
 ## createMesh
 
@@ -66,20 +72,22 @@ createMesh(params: SceneResourceParameters, geometry: GeometryDefinition): Promi
 
 **起始版本：** 20
 
+<!--Device-RenderResourceFactory-createMesh(params: SceneResourceParameters, geometry: GeometryDefinition): Promise<MeshResource>--><!--Device-RenderResourceFactory-createMesh(params: SceneResourceParameters, geometry: GeometryDefinition): Promise<MeshResource>-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | SceneResourceParameters | 是 | 创建网格对象的参数 |
-| geometry | GeometryDefinition | 是 | 要创建的几何形状类型 |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-sceneresourceparameters-i.md) | 是 | 创建网格对象的参数 |
+| geometry | [GeometryDefinition](arkts-arkgraphics3d-geometrydefinition-c.md) | 是 | 要创建的几何形状类型 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;MeshResource&gt; | 返回创建的网格 |
+| Promise<MeshResource> | 返回创建的网格 |
 
 ## createSampler
 
@@ -91,19 +99,21 @@ createSampler(params:SceneResourceParameters): Promise<Sampler>
 
 **起始版本：** 20
 
+<!--Device-RenderResourceFactory-createSampler(params:SceneResourceParameters): Promise<Sampler>--><!--Device-RenderResourceFactory-createSampler(params:SceneResourceParameters): Promise<Sampler>-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | SceneResourceParameters | 是 | 创建采样器的参数 |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-sceneresourceparameters-i.md) | 是 | 创建采样器的参数 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Sampler&gt; | - 返回创建的采样器 |
+| Promise<Sampler> | - 返回创建的采样器 |
 
 ## createScene
 
@@ -111,10 +121,11 @@ createSampler(params:SceneResourceParameters): Promise<Sampler>
 createScene(uri?: ResourceStr): Promise<Scene>
 ```
 
-从资源创建新场景.
-如果未提供uri，将返回空场景.
+从资源创建新场景.如果未提供uri，将返回空场景.
 
 **起始版本：** 20
+
+<!--Device-RenderResourceFactory-createScene(uri?: ResourceStr): Promise<Scene>--><!--Device-RenderResourceFactory-createScene(uri?: ResourceStr): Promise<Scene>-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -122,13 +133,13 @@ createScene(uri?: ResourceStr): Promise<Scene>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uri | ResourceStr | 否 | 创建场景的资源 |
+| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | 否 | 创建场景的资源 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Scene&gt; | 返回创建的场景 |
+| Promise<Scene> | 返回创建的场景 |
 
 ## createShader
 
@@ -140,17 +151,19 @@ createShader(params: SceneResourceParameters): Promise<Shader>
 
 **起始版本：** 20
 
+<!--Device-RenderResourceFactory-createShader(params: SceneResourceParameters): Promise<Shader>--><!--Device-RenderResourceFactory-createShader(params: SceneResourceParameters): Promise<Shader>-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | SceneResourceParameters | 是 | 创建着色器的参数 |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-sceneresourceparameters-i.md) | 是 | 创建着色器的参数 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Shader&gt; | 返回创建的着色器 |
+| Promise<Shader> | 返回创建的着色器 |
 

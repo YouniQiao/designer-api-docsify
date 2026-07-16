@@ -1,5 +1,11 @@
 # getSystemMemInfo
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+```
+
 ## getSystemMemInfo
 
 ```TypeScript
@@ -10,13 +16,15 @@ function getSystemMemInfo(): SystemMemInfo
 
 **起始版本：** 12
 
+<!--Device-hidebug-function getSystemMemInfo(): SystemMemInfo--><!--Device-hidebug-function getSystemMemInfo(): SystemMemInfo-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| SystemMemInfo | ϵͳ�ڴ���Ϣ�� |
+| [SystemMemInfo](arkts-performanceanalysis-systemmeminfo-i.md) | ϵͳ�ڴ���Ϣ�� |
 
 **示例：**
 

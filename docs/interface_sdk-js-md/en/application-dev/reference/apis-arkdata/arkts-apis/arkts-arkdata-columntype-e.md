@@ -4,6 +4,8 @@ Enumerates the types of the column data. Use the enum name rather than the enum 
 
 **Since:** 18
 
+<!--Device-relationalStore-enum ColumnType--><!--Device-relationalStore-enum ColumnType-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## NULL
@@ -16,6 +18,8 @@ The value in the column is null.
 
 **Since:** 18
 
+<!--Device-ColumnType-NULL = 0--><!--Device-ColumnType-NULL = 0-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## INTEGER
@@ -26,12 +30,11 @@ INTEGER = 1
 
 64-bit integer.
 
-The column can hold 8-bit (including Boolean values), 16-bit, 32-bit, and 64-bit integers. If the 64-bit integer
-is greater than 2^53 or less than -2^53, use
-[getString](arkts-arkdata-resultset-i.md#getstring-1) to convert the 64-bit integer
-to a string.
+The column can hold 8-bit (including Boolean values), 16-bit, 32-bit, and 64-bit integers. If the 64-bit integer is greater than 2^53 or less than -2^53, use [getString](arkts-arkdata-resultset-i.md#getstring-1) to convert the 64-bit integer to a string.
 
 **Since:** 18
+
+<!--Device-ColumnType-INTEGER = 1--><!--Device-ColumnType-INTEGER = 1-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -45,6 +48,8 @@ The value in the column is a floating point number.
 
 **Since:** 18
 
+<!--Device-ColumnType-REAL = 2--><!--Device-ColumnType-REAL = 2-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## TEXT
@@ -56,6 +61,8 @@ TEXT = 3
 The value in the column is a string.
 
 **Since:** 18
+
+<!--Device-ColumnType-TEXT = 3--><!--Device-ColumnType-TEXT = 3-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -69,6 +76,8 @@ The value in the column is a Uint8Array.
 
 **Since:** 18
 
+<!--Device-ColumnType-BLOB = 4--><!--Device-ColumnType-BLOB = 4-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## ASSET
@@ -80,6 +89,8 @@ ASSET = 5
 The value in the column is an asset.
 
 **Since:** 18
+
+<!--Device-ColumnType-ASSET = 5--><!--Device-ColumnType-ASSET = 5-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -93,6 +104,8 @@ The value in the column is an array of assets.
 
 **Since:** 18
 
+<!--Device-ColumnType-ASSETS = 6--><!--Device-ColumnType-ASSETS = 6-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## FLOAT_VECTOR
@@ -105,6 +118,8 @@ The value in the column is a Float32Array.
 
 **Since:** 18
 
+<!--Device-ColumnType-FLOAT_VECTOR = 7--><!--Device-ColumnType-FLOAT_VECTOR = 7-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## UNLIMITED_INT
@@ -116,6 +131,8 @@ UNLIMITED_INT = 8
 The value in the column is a bigint.
 
 **Since:** 18
+
+<!--Device-ColumnType-UNLIMITED_INT = 8--><!--Device-ColumnType-UNLIMITED_INT = 8-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 

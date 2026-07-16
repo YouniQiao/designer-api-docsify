@@ -4,6 +4,8 @@ Enumerates mouse buttons.
 
 **Since:** 9
 
+<!--Device-unnamed-export declare enum Button--><!--Device-unnamed-export declare enum Button-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## LEFT
@@ -15,6 +17,8 @@ LEFT = 0
 Left button.
 
 **Since:** 9
+
+<!--Device-Button-LEFT = 0--><!--Device-Button-LEFT = 0-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -28,6 +32,8 @@ Middle button.
 
 **Since:** 9
 
+<!--Device-Button-MIDDLE = 1--><!--Device-Button-MIDDLE = 1-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## RIGHT
@@ -39,6 +45,8 @@ RIGHT = 2
 Right button
 
 **Since:** 9
+
+<!--Device-Button-RIGHT = 2--><!--Device-Button-RIGHT = 2-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -52,6 +60,8 @@ Side button.
 
 **Since:** 9
 
+<!--Device-Button-SIDE = 3--><!--Device-Button-SIDE = 3-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## EXTRA
@@ -63,6 +73,8 @@ EXTRA = 4
 Extended button.
 
 **Since:** 9
+
+<!--Device-Button-EXTRA = 4--><!--Device-Button-EXTRA = 4-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -76,6 +88,8 @@ Forward button.
 
 **Since:** 9
 
+<!--Device-Button-FORWARD = 5--><!--Device-Button-FORWARD = 5-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## BACK
@@ -88,6 +102,8 @@ Back button.
 
 **Since:** 9
 
+<!--Device-Button-BACK = 6--><!--Device-Button-BACK = 6-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## TASK
@@ -99,6 +115,8 @@ TASK = 7
 Task button.
 
 **Since:** 9
+
+<!--Device-Button-TASK = 7--><!--Device-Button-TASK = 7-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 

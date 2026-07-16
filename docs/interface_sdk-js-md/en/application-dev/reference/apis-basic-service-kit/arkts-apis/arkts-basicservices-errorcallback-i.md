@@ -1,9 +1,10 @@
 # ErrorCallback
 
-Defines a common callback that carries an error parameter. The information returned by the callback is of
-the [BusinessError](arkts-basicservices-businesserror-i.md) type.
+Defines a common callback that carries an error parameter. The information returned by the callback is of the [BusinessError](arkts-basicservices-businesserror-i.md) type.
 
 **Since:** 6
+
+<!--Device-unnamed-export interface ErrorCallback<T extends Error = BusinessError>--><!--Device-unnamed-export interface ErrorCallback<T extends Error = BusinessError>-End-->
 
 **System capability:** SystemCapability.Base
 
@@ -22,6 +23,8 @@ import { Callback, BusinessError, ErrorCallback, AsyncCallback } from '@kit.Basi
 **Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ErrorCallback-(err: T): void--><!--Device-ErrorCallback-(err: T): void-End-->
 
 **System capability:** SystemCapability.Base
 

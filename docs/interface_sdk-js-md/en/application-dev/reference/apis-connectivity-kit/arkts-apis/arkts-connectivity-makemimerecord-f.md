@@ -18,6 +18,8 @@ Creates an NDEF record with mime data.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ndef-function makeMimeRecord(mimeType: string, mimeData: int[]): NdefRecord--><!--Device-ndef-function makeMimeRecord(mimeType: string, mimeData: int[]): NdefRecord-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -31,7 +33,7 @@ Creates an NDEF record with mime data.
 
 | Type | Description |
 | --- | --- |
-| NdefRecord | The instance of NdefRecord. |
+| [NdefRecord](arkts-connectivity-ndefrecord-i.md) | The instance of NdefRecord. |
 
 **Error codes:**
 

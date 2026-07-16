@@ -1,5 +1,11 @@
 # getFreeSizeSync
 
+## 导入模块
+
+```TypeScript
+import { statfs } from '@kit.CoreFileKit';
+```
+
 ## getFreeSizeSync
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getFreeSizeSync(path: string): number
 以同步方法获取指定文件系统空闲字节数。
 
 **起始版本：** 10
+
+<!--Device-statfs-function getFreeSizeSync(path: string): long--><!--Device-statfs-function getFreeSizeSync(path: string): long-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

@@ -16,6 +16,8 @@ Unsubscribes from device attachment state change events.
 
 **Since:** 20
 
+<!--Device-mechanicManager-function off(type: 'attachStateChange', callback?: Callback<AttachStateChangeInfo>): void--><!--Device-mechanicManager-function off(type: 'attachStateChange', callback?: Callback<AttachStateChangeInfo>): void-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **Parameters:**
@@ -23,7 +25,7 @@ Unsubscribes from device attachment state change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'attachStateChange' | Yes | Event type. |
-| callback | Callback&lt;AttachStateChangeInfo&gt; | No | Callback used to return the state change. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AttachStateChangeInfo> | No | Callback used to return the state change. |
 
 **Error codes:**
 
@@ -55,6 +57,8 @@ Unsubscribes from tracking events.
 
 **Since:** 20
 
+<!--Device-mechanicManager-function off(type: 'trackingStateChange', callback?: Callback<TrackingEventInfo>): void--><!--Device-mechanicManager-function off(type: 'trackingStateChange', callback?: Callback<TrackingEventInfo>): void-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **Parameters:**
@@ -62,7 +66,7 @@ Unsubscribes from tracking events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'trackingStateChange' | Yes | Event type. |
-| callback | Callback&lt;TrackingEventInfo&gt; | No | Callback used to return the tracking event information. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<TrackingEventInfo> | No | Callback used to return the tracking event information. |
 
 **Error codes:**
 

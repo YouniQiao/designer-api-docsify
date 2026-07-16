@@ -16,6 +16,8 @@ Unsubscribes from data of the color sensor.
 
 **Since:** 10
 
+<!--Device-sensor-function off(type: SensorId.COLOR, callback?: Callback<ColorResponse>): void--><!--Device-sensor-function off(type: SensorId.COLOR, callback?: Callback<ColorResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **System API:** This is a system API.
@@ -25,7 +27,7 @@ Unsubscribes from data of the color sensor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.COLOR | Yes | Sensor type. The value is fixed at **SensorId.COLOR**. |
-| callback | Callback&lt;ColorResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified,all callbacks of the specified sensor type are unsubscribed from. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ColorResponse> | No | Callback used for unsubscription. If this parameter is not specified,all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
@@ -45,6 +47,8 @@ Unsubscribes from data of the color sensor.
 
 **Since:** 19
 
+<!--Device-sensor-function off(type: SensorId.COLOR, sensorInfoParam?: SensorInfoParam, callback?: Callback<ColorResponse>): void--><!--Device-sensor-function off(type: SensorId.COLOR, sensorInfoParam?: SensorInfoParam, callback?: Callback<ColorResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **System API:** This is a system API.
@@ -54,8 +58,8 @@ Unsubscribes from data of the color sensor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.COLOR | Yes | Sensor type. The value is fixed at **SensorId.COLOR**. |
-| sensorInfoParam | SensorInfoParam | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
-| callback | Callback&lt;ColorResponse&gt; | No | Callback used for unsubscription. If this parameter is notspecified, all callbacks of the specified sensor type are unsubscribed from. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ColorResponse> | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
@@ -75,6 +79,8 @@ Unsubscribes from data of the SAR sensor.
 
 **Since:** 10
 
+<!--Device-sensor-function off(type: SensorId.SAR, callback?: Callback<SarResponse>): void--><!--Device-sensor-function off(type: SensorId.SAR, callback?: Callback<SarResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **System API:** This is a system API.
@@ -84,7 +90,7 @@ Unsubscribes from data of the SAR sensor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.SAR | Yes | Sensor type. The value is fixed at **SensorId.SAR**. |
-| callback | Callback&lt;SarResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified,all callbacks of the specified sensor type are unsubscribed from. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SarResponse> | No | Callback used for unsubscription. If this parameter is not specified,all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
@@ -104,6 +110,8 @@ Unsubscribes from data of the SAR sensor.
 
 **Since:** 19
 
+<!--Device-sensor-function off(type: SensorId.SAR, sensorInfoParam?: SensorInfoParam, callback?: Callback<SarResponse>): void--><!--Device-sensor-function off(type: SensorId.SAR, sensorInfoParam?: SensorInfoParam, callback?: Callback<SarResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **System API:** This is a system API.
@@ -113,8 +121,8 @@ Unsubscribes from data of the SAR sensor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.SAR | Yes | Sensor type. The value is fixed at **SensorId.SAR**. |
-| sensorInfoParam | SensorInfoParam | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
-| callback | Callback&lt;SarResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified,all callbacks of the specified sensor type are unsubscribed from. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SarResponse> | No | Callback used for unsubscription. If this parameter is not specified,all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 

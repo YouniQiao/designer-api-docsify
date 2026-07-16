@@ -14,14 +14,16 @@ function reset(wallpaperType: WallpaperType, callback: AsyncCallback<void>): voi
 
 **需要权限：** ohos.permission.SET_WALLPAPER
 
+<!--Device-wallpaper-function reset(wallpaperType: WallpaperType, callback: AsyncCallback<void>): void--><!--Device-wallpaper-function reset(wallpaperType: WallpaperType, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wallpaperType | WallpaperType | 是 |  |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，移除壁纸成功，error为undefined，否则返回error信息。 |
+| wallpaperType | [WallpaperType](arkts-na-wallpapertype-e.md) | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，移除壁纸成功，error为undefined，否则返回error信息。 |
 
 **示例：**
 
@@ -53,19 +55,21 @@ function reset(wallpaperType: WallpaperType): Promise<void>
 
 **需要权限：** ohos.permission.SET_WALLPAPER
 
+<!--Device-wallpaper-function reset(wallpaperType: WallpaperType): Promise<void>--><!--Device-wallpaper-function reset(wallpaperType: WallpaperType): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wallpaperType | WallpaperType | 是 |  |
+| wallpaperType | [WallpaperType](arkts-na-wallpapertype-e.md) | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **示例：**
 

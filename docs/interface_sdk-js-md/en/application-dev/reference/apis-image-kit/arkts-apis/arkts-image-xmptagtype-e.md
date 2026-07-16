@@ -4,6 +4,8 @@ Enumerates XMP tag type.
 
 **Since:** 26.0.0
 
+<!--Device-image-enum XMPTagType--><!--Device-image-enum XMPTagType-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## UNKNOWN
@@ -17,6 +19,8 @@ Unknown XMP tag type.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-XMPTagType-UNKNOWN = 0--><!--Device-XMPTagType-UNKNOWN = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -32,6 +36,8 @@ String XMP tag type.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-XMPTagType-STRING = 1--><!--Device-XMPTagType-STRING = 1-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## UNORDERED_ARRAY
@@ -45,6 +51,8 @@ Unordered array XMP tag type.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-XMPTagType-UNORDERED_ARRAY = 2--><!--Device-XMPTagType-UNORDERED_ARRAY = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -60,6 +68,8 @@ Ordered array XMP tag type.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-XMPTagType-ORDERED_ARRAY = 3--><!--Device-XMPTagType-ORDERED_ARRAY = 3-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## ALTERNATE_ARRAY
@@ -73,6 +83,8 @@ Alternate array XMP tag type.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-XMPTagType-ALTERNATE_ARRAY = 4--><!--Device-XMPTagType-ALTERNATE_ARRAY = 4-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -88,6 +100,8 @@ Alternate text XMP tag type.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-XMPTagType-ALTERNATE_TEXT = 5--><!--Device-XMPTagType-ALTERNATE_TEXT = 5-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## STRUCTURE
@@ -101,6 +115,8 @@ Structure XMP tag type.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-XMPTagType-STRUCTURE = 6--><!--Device-XMPTagType-STRUCTURE = 6-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

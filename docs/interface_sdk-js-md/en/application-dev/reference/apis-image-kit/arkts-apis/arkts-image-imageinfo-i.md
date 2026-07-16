@@ -4,6 +4,8 @@ Describes image information.
 
 **Since:** 6
 
+<!--Device-image-interface ImageInfo--><!--Device-image-interface ImageInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Alpha type.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-ImageInfo-alphaType: AlphaType--><!--Device-ImageInfo-alphaType: AlphaType-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## density
@@ -46,6 +50,8 @@ Pixel density, in ppi.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-ImageInfo-density: int--><!--Device-ImageInfo-density: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## isHdr
@@ -54,14 +60,13 @@ Pixel density, in ppi.
 isHdr: boolean
 ```
 
-Whether the image is an HDR image. The value **true** means an HDR image, and **false** means an SDR image. For
-[ImageSource](arkts-image-imagesource-i.md), this parameter specifies whether the source image is in HDR
-format. For [PixelMap](arkts-image-pixelmap-i.md), this parameter specifies whether the decoded PixelMap
-is in HDR format.
+Whether the image is an HDR image. The value **true** means an HDR image, and **false** means an SDR image. For [ImageSource](arkts-image-imagesource-i.md), this parameter specifies whether the source image is in HDR format. For [PixelMap](arkts-image-pixelmap-i.md), this parameter specifies whether the decoded PixelMap is in HDR format.
 
 **Type:** boolean
 
 **Since:** 12
+
+<!--Device-ImageInfo-isHdr: boolean--><!--Device-ImageInfo-isHdr: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -73,18 +78,15 @@ mimeType: string
 
 Actual image format (MIME type).
 
-The supported formats for image decoding and image encoding are different. Do not directly use the actual image
-format obtained after decoding as the value of **format** in [PackingOption](arkts-image-packingoption-i.md) during
-image encoding.
+The supported formats for image decoding and image encoding are different. Do not directly use the actual image format obtained after decoding as the value of **format** in [PackingOption](arkts-image-packingoption-i.md) during image encoding.
 
-You can use the **supportedFormats** property of
-[ImageSource](@ohos.multimedia.image: image.ImageSource#supportedFormats) and
-[ImagePacker](@ohos.multimedia.image: image.ImagePacker#supportedFormats) to view the
-supported formats for decoding and encoding.
+You can use the **supportedFormats** property of [ImageSource](arkts-image-imagesource-i.md#supportedformats) and [ImagePacker](arkts-image-imagepacker-i.md#supportedformats) to view the supported formats for decoding and encoding.
 
 **Type:** string
 
 **Since:** 12
+
+<!--Device-ImageInfo-mimeType: string--><!--Device-ImageInfo-mimeType: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -104,6 +106,8 @@ Pixel format.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-ImageInfo-pixelFormat: PixelMapFormat--><!--Device-ImageInfo-pixelFormat: PixelMapFormat-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## size
@@ -122,6 +126,8 @@ Image size.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-ImageInfo-size: Size--><!--Device-ImageInfo-size: Size-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## stride
@@ -130,8 +136,7 @@ Image size.
 stride: number
 ```
 
-Number of bytes from one row of pixels in memory to the next row of pixels in memory.stride >= region.size.width*
-4
+Number of bytes from one row of pixels in memory to the next row of pixels in memory.stride >= region.size.width*4
 
 **Type:** number
 
@@ -140,6 +145,8 @@ Number of bytes from one row of pixels in memory to the next row of pixels in me
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-ImageInfo-stride: int--><!--Device-ImageInfo-stride: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

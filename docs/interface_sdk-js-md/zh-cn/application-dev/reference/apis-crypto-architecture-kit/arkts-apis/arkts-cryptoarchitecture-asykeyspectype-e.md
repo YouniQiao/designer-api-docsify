@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-cryptoFramework-enum AsyKeySpecType--><!--Device-cryptoFramework-enum AsyKeySpecType-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API版本10-11：SystemCapability.Security.CryptoFramework
@@ -14,13 +16,13 @@
 COMMON_PARAMS_SPEC = 0
 ```
 
-表示公私钥中包含的公共参数。使用此类型的参数可以调用
-[generateKeyPair](arkts-cryptoarchitecture-asykeygeneratorbyspec-i.md#generatekeypair-1)
-随机生成密钥对。
+表示公私钥中包含的公共参数。使用此类型的参数可以调用[generateKeyPair](arkts-cryptoarchitecture-asykeygeneratorbyspec-i.md#generatekeypair-1)随机生成密钥对。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeySpecType-COMMON_PARAMS_SPEC = 0--><!--Device-AsyKeySpecType-COMMON_PARAMS_SPEC = 0-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -32,13 +34,13 @@ COMMON_PARAMS_SPEC = 0
 PRIVATE_KEY_SPEC = 1
 ```
 
-表示私钥中包含的参数。使用此类型的参数可以调用
-[generatePriKey](arkts-cryptoarchitecture-asykeygeneratorbyspec-i.md#generateprikey-1)生成
-指定的私钥。
+表示私钥中包含的参数。使用此类型的参数可以调用[generatePriKey](arkts-cryptoarchitecture-asykeygeneratorbyspec-i.md#generateprikey-1)生成指定的私钥。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeySpecType-PRIVATE_KEY_SPEC = 1--><!--Device-AsyKeySpecType-PRIVATE_KEY_SPEC = 1-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -50,13 +52,13 @@ PRIVATE_KEY_SPEC = 1
 PUBLIC_KEY_SPEC = 2
 ```
 
-表示公钥中包含的参数。使用此类型的参数可以调用
-[generatePubKey](arkts-cryptoarchitecture-asykeygeneratorbyspec-i.md#generatepubkey-1)生成
-指定的公钥。
+表示公钥中包含的参数。使用此类型的参数可以调用[generatePubKey](arkts-cryptoarchitecture-asykeygeneratorbyspec-i.md#generatepubkey-1)生成指定的公钥。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeySpecType-PUBLIC_KEY_SPEC = 2--><!--Device-AsyKeySpecType-PUBLIC_KEY_SPEC = 2-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -68,13 +70,13 @@ PUBLIC_KEY_SPEC = 2
 KEY_PAIR_SPEC = 3
 ```
 
-表示公私钥中包含的全量参数。使用此类型的参数可以调用
-[generateKeyPair](arkts-cryptoarchitecture-asykeygeneratorbyspec-i.md#generatekeypair-1)
-生成指定的密钥对。
+表示公私钥中包含的全量参数。使用此类型的参数可以调用[generateKeyPair](arkts-cryptoarchitecture-asykeygeneratorbyspec-i.md#generatekeypair-1)生成指定的密钥对。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeySpecType-KEY_PAIR_SPEC = 3--><!--Device-AsyKeySpecType-KEY_PAIR_SPEC = 3-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey

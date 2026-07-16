@@ -2,9 +2,9 @@
 
 Represents the result returned.
 
-> **NOTE**
->
-> - For details about the error codes, see
+> **NOTE**  
+>  
+> - For details about the error codes, see  
 > [HUKS Error Codes](../../../../reference/apis-universal-keystore-kit/errorcode-huks.md).
 
 **Since:** 8
@@ -12,6 +12,8 @@ Represents the result returned.
 **Deprecated since:** 9
 
 **Substitutes:** [HuksReturnResult](arkts-universalkeystore-huksreturnresult-i.md)
+
+<!--Device-huks-export interface HuksResult--><!--Device-huks-export interface HuksResult-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -37,6 +39,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Deprecated since:** 9
 
+<!--Device-HuksResult-certChains?: Array<string>--><!--Device-HuksResult-certChains?: Array<string>-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## errorCode
@@ -54,6 +58,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-HuksResult-errorCode: number--><!--Device-HuksResult-errorCode: number-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -73,6 +79,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Deprecated since:** 9
 
+<!--Device-HuksResult-outData?: Uint8Array--><!--Device-HuksResult-outData?: Uint8Array-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## properties
@@ -90,6 +98,8 @@ Note: This API is deprecated since API version 9. No substitute API is provided.
 **Since:** 8
 
 **Deprecated since:** 9
+
+<!--Device-HuksResult-properties?: Array<HuksParam>--><!--Device-HuksResult-properties?: Array<HuksParam>-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 

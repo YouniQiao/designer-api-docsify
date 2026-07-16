@@ -18,6 +18,8 @@ Checks whether data traffic usage on the current network is metered.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-connection-function isDefaultNetMeteredSync(): boolean--><!--Device-connection-function isDefaultNetMeteredSync(): boolean-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Return value:**

@@ -4,9 +4,17 @@
 
 **起始版本：** 19
 
+<!--Device-screen-interface Rect--><!--Device-screen-interface Rect-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { screen } from '@kit.ArkUI';
+```
 
 ## height
 
@@ -19,6 +27,8 @@ height: number
 **类型：** number
 
 **起始版本：** 19
+
+<!--Device-Rect-height: long--><!--Device-Rect-height: long-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -36,6 +46,8 @@ left: number
 
 **起始版本：** 19
 
+<!--Device-Rect-left: long--><!--Device-Rect-left: long-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +64,8 @@ top: number
 
 **起始版本：** 19
 
+<!--Device-Rect-top: long--><!--Device-Rect-top: long-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +81,8 @@ width: number
 **类型：** number
 
 **起始版本：** 19
+
+<!--Device-Rect-width: long--><!--Device-Rect-width: long-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 

@@ -1,19 +1,26 @@
 # getAvailableStatus
 
+## 导入模块
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+```
+
 ## getAvailableStatus
 
 ```TypeScript
 function getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLevel): void
 ```
 
-查询指定类型和等级的认证能力是否支持。该接口用于检查当前设备是否支持指定的认证类型和认证可信等级，帮助应用在发起认证前判断认证能力是否可用，从而避免不必要的认证不通过。若查询通过（无错误抛出），表示认证能力可用；若抛出错误，应用应
-根据错误码判断具体原因并采取相应处理。
+查询指定类型和等级的认证能力是否支持。该接口用于检查当前设备是否支持指定的认证类型和认证可信等级，帮助应用在发起认证前判断认证能力是否可用，从而避免不必要的认证不通过。若查询通过（无错误抛出），表示认证能力可用；若抛出错误，应用应根据错误码判断具体原因并采取相应处理。
 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-userAuth-function getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLevel): void--><!--Device-userAuth-function getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLevel): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -21,8 +28,8 @@ function getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLev
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| authType | UserAuthType | 是 | 认证类型。用于指定查询的认证类型，支持FACE（人脸）、FINGERPRINT（指纹）、PIN（密码）、COMPANION_DEVICE（伴随设备）。<br>**说明**：<br>从API版本11开始支持PIN查询。<br>从API版本26.0.0开始支持COMPANION_DEVICE查询。 |
-| authTrustLevel | AuthTrustLevel | 是 | 认证信任等级。用于指定查询的认证可信等级，有效值为ATL1(10000)、ATL2(20000)、ATL3(30000)、ATL4(40000)。等级越高，对认证方案的活体检测能力要求越高。 |
+| authType | [UserAuthType](arkts-userauthentication-userauthtype-e.md) | 是 | 认证类型。用于指定查询的认证类型，支持FACE（人脸）、FINGERPRINT（指纹）、PIN（密码）、COMPANION_DEVICE（伴随设备）。<br>**说明**：<br>从API版本11开始支持PIN查询。<br>从API版本26.0.0开始支持COMPANION_DEVICE查询。 |
+| authTrustLevel | [AuthTrustLevel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-authtrustlevel-e-sys.md) | 是 | 认证信任等级。用于指定查询的认证可信等级，有效值为ATL1(10000)、ATL2(20000)、ATL3(30000)、ATL4(40000)。等级越高，对认证方案的活体检测能力要求越高。 |
 
 **错误码：**
 

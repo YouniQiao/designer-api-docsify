@@ -16,6 +16,8 @@ Obtains the memory size of a process. This API uses a promise to return the resu
 
 **Since:** 10
 
+<!--Device-appManager-function getProcessMemoryByPid(pid: int): Promise<int>--><!--Device-appManager-function getProcessMemoryByPid(pid: int): Promise<int>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -24,13 +26,13 @@ Obtains the memory size of a process. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pid | number | Yes | Process ID. For details, see[getRunningProcessInfoByBundleName](arkts-ability-getrunningprocessinfobybundlename-f-sys.md#getrunningprocessinfobybundlename-1). |
+| pid | number | Yes | Process ID. For details, see [getRunningProcessInfoByBundleName](arkts-ability-getrunningprocessinfobybundlename-f-sys.md#getrunningprocessinfobybundlename-1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the API call result and the memory size (in KB). You can perform errorhandling or custom processing in this callback. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the API call result and the memory size (in KB). You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 
@@ -73,6 +75,8 @@ Obtains the memory size of a process. This API uses an asynchronous callback to 
 
 **Since:** 10
 
+<!--Device-appManager-function getProcessMemoryByPid(pid: int, callback: AsyncCallback<int>): void--><!--Device-appManager-function getProcessMemoryByPid(pid: int, callback: AsyncCallback<int>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -81,8 +85,8 @@ Obtains the memory size of a process. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pid | number | Yes | Process ID. For details, see[getRunningProcessInfoByBundleName](arkts-ability-getrunningprocessinfobybundlename-f-sys.md#getrunningprocessinfobybundlename-1). |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the API call result and the memory size (in KB). Youcan perform error handling or custom processing in this callback. |
+| pid | number | Yes | Process ID. For details, see [getRunningProcessInfoByBundleName](arkts-ability-getrunningprocessinfobybundlename-f-sys.md#getrunningprocessinfobybundlename-1). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the API call result and the memory size (in KB). You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 

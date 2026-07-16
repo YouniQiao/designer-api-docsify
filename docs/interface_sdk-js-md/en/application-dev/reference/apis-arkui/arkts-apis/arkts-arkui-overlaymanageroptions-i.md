@@ -4,6 +4,8 @@ Provides the parameters used for initializing [OverlayManager](arkts-arkui-uicon
 
 **Since:** 15
 
+<!--Device-unnamed-export interface OverlayManagerOptions--><!--Device-unnamed-export interface OverlayManagerOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -18,9 +20,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 enableBackPressedEvent?: boolean
 ```
 
-hether to enable the swipe-to-dismiss gesture for **ComponentContent** under **OverlayManager**.
-The value **true** means to enable the swipe-to-dismiss gesture, and **false** means the opposite. Default value: **false**.<br>
-**Atomic service API**: This API can be used in atomic services since API version 19.
+hether to enable the swipe-to-dismiss gesture for **ComponentContent** under **OverlayManager**.The value **true** means to enable the swipe-to-dismiss gesture, and **false** means the opposite. Default value: **false**.<br>**Atomic service API**: This API can be used in atomic services since API version 19.
 
 **Type:** boolean
 
@@ -32,6 +32,8 @@ The value **true** means to enable the swipe-to-dismiss gesture, and **false** m
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-OverlayManagerOptions-enableBackPressedEvent?: boolean--><!--Device-OverlayManagerOptions-enableBackPressedEvent?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## renderRootOverlay
@@ -40,9 +42,7 @@ The value **true** means to enable the swipe-to-dismiss gesture, and **false** m
 renderRootOverlay?: boolean
 ```
 
-Whether to render the overlay root node. The value **true** means to render the overlay root node,
-and **false** means the opposite. The default value is **true**.<br>
-**Atomic service API**: This API can be used in atomic services since API version 15.
+Whether to render the overlay root node. The value **true** means to render the overlay root node,and **false** means the opposite. The default value is **true**.<br>**Atomic service API**: This API can be used in atomic services since API version 15.
 
 **Type:** boolean
 
@@ -53,6 +53,8 @@ and **false** means the opposite. The default value is **true**.<br>
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-OverlayManagerOptions-renderRootOverlay?: boolean--><!--Device-OverlayManagerOptions-renderRootOverlay?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

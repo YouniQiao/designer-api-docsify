@@ -4,6 +4,8 @@ Enumerates the event types of monitoring a geofence.
 
 **Since:** 23
 
+<!--Device-unnamed-export enum MonitorEvent--><!--Device-unnamed-export enum MonitorEvent-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -18,6 +20,8 @@ Entering a geofence.
 
 **Since:** 23
 
+<!--Device-MonitorEvent-MONITOR_TYPE_ENTRY = 1--><!--Device-MonitorEvent-MONITOR_TYPE_ENTRY = 1-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -31,6 +35,8 @@ MONITOR_TYPE_LEAVE = 2
 Exiting a geofence.
 
 **Since:** 23
+
+<!--Device-MonitorEvent-MONITOR_TYPE_LEAVE = 2--><!--Device-MonitorEvent-MONITOR_TYPE_LEAVE = 2-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

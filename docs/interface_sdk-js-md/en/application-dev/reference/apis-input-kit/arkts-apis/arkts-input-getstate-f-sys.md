@@ -20,6 +20,8 @@ Obtains the state of the screen hopping switch. This API uses an asynchronous ca
 
 **Substitutes:** getCooperateSwitchState
 
+<!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boolean }>): void--><!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boolean }>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Cooperator
 
 **System API:** This is a system API.
@@ -29,7 +31,7 @@ Obtains the state of the screen hopping switch. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceDescriptor | string | Yes | Descriptor of the target device for screen hopping. |
-| callback | AsyncCallback&lt;{ state: boolean }&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<{ state: boolean }> | Yes |  |
 
 **Error codes:**
 
@@ -85,6 +87,8 @@ Checks whether screen hopping is enabled. This API uses a promise to return the 
 
 **Substitutes:** getCooperateSwitchState
 
+<!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string): Promise<{ state: boolean }>--><!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string): Promise<{ state: boolean }>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Cooperator
 
 **System API:** This is a system API.
@@ -99,7 +103,7 @@ Checks whether screen hopping is enabled. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;{ state: boolean }&gt; |  |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<{ state: boolean }> |  |
 
 **Error codes:**
 

@@ -12,10 +12,11 @@ import { sensor } from '@kit.SensorServiceKit';
 function getDeviceAltitude(seaPressure: number, currentPressure: number, callback: AsyncCallback<number>): void
 ```
 
-Obtains the altitude based on the atmospheric pressure. This API uses an asynchronous callback to return the
-result.
+Obtains the altitude based on the atmospheric pressure. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-sensor-function getDeviceAltitude(seaPressure: double, currentPressure: double, callback: AsyncCallback<double>): void--><!--Device-sensor-function getDeviceAltitude(seaPressure: double, currentPressure: double, callback: AsyncCallback<double>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -25,7 +26,7 @@ result.
 | --- | --- | --- | --- |
 | seaPressure | number | Yes | Sea-level atmospheric pressure, in hPa. |
 | currentPressure | number | Yes | Specified atmospheric pressure, in hPa. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the altitude, in meters. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the altitude, in meters. |
 
 **Error codes:**
 
@@ -69,6 +70,8 @@ Obtains the altitude based on the atmospheric pressure. This API uses a promise 
 
 **Since:** 9
 
+<!--Device-sensor-function getDeviceAltitude(seaPressure: double, currentPressure: double): Promise<double>--><!--Device-sensor-function getDeviceAltitude(seaPressure: double, currentPressure: double): Promise<double>-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -82,7 +85,7 @@ Obtains the altitude based on the atmospheric pressure. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the altitude, in meters. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the altitude, in meters. |
 
 **Error codes:**
 

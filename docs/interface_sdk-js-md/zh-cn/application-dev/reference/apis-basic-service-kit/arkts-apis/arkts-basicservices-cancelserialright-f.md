@@ -1,5 +1,11 @@
 # cancelSerialRight
 
+## 导入模块
+
+```TypeScript
+import { serialManager } from '@kit.BasicServicesKit';
+```
+
 ## cancelSerialRight
 
 ```TypeScript
@@ -9,6 +15,8 @@ function cancelSerialRight(portId: number): void
 移除应用程序运行时访问串口设备的权限。此接口会调用close关闭已打开的串口。
 
 **起始版本：** 19
+
+<!--Device-serialManager-function cancelSerialRight(portId: int): void--><!--Device-serialManager-function cancelSerialRight(portId: int): void-End-->
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 

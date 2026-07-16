@@ -1,5 +1,11 @@
 # isApplicationEnabled（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## isApplicationEnabled
 
 ```TypeScript
@@ -9,6 +15,8 @@ function isApplicationEnabled(bundleName: string, appIndex: number): Promise<boo
 获取指定应用或分身应用的禁用或使能状态。使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-bundleManager-function isApplicationEnabled(bundleName: string, appIndex: int): Promise<boolean>--><!--Device-bundleManager-function isApplicationEnabled(bundleName: string, appIndex: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -25,7 +33,7 @@ function isApplicationEnabled(bundleName: string, appIndex: number): Promise<boo
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回true表示当前应用为使能状态，返回false表示当前应用为禁用状态。 |
+| Promise<boolean> | Promise对象，返回true表示当前应用为使能状态，返回false表示当前应用为禁用状态。 |
 
 **错误码：**
 
@@ -69,6 +77,8 @@ function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolea
 
 **起始版本：** 9
 
+<!--Device-bundleManager-function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-bundleManager-function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -78,7 +88,7 @@ function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolea
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示应用程序的bundleName。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，返回true表示当前应用为使能状态，返回false表示应用为禁用状态。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，返回true表示当前应用为使能状态，返回false表示应用为禁用状态。 |
 
 **错误码：**
 
@@ -123,6 +133,8 @@ function isApplicationEnabled(bundleName: string): Promise<boolean>
 
 **起始版本：** 9
 
+<!--Device-bundleManager-function isApplicationEnabled(bundleName: string): Promise<boolean>--><!--Device-bundleManager-function isApplicationEnabled(bundleName: string): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -137,7 +149,7 @@ function isApplicationEnabled(bundleName: string): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回true表示当前应用为使能状态，返回false表示当前应用为禁用状态。 |
+| Promise<boolean> | Promise对象，返回true表示当前应用为使能状态，返回false表示当前应用为禁用状态。 |
 
 **错误码：**
 

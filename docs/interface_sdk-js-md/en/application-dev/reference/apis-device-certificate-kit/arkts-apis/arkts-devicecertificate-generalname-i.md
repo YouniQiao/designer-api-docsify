@@ -4,6 +4,8 @@ Represents the GeneralName.
 
 **Since:** 12
 
+<!--Device-cert-interface GeneralName--><!--Device-cert-interface GeneralName-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
@@ -26,6 +28,8 @@ DER-encoded value of the GeneralName.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GeneralName-name?: Uint8Array--><!--Device-GeneralName-name?: Uint8Array-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## type
@@ -41,6 +45,8 @@ Type of the GeneralName.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GeneralName-type: GeneralNameType--><!--Device-GeneralName-type: GeneralNameType-End-->
 
 **System capability:** SystemCapability.Security.Cert
 

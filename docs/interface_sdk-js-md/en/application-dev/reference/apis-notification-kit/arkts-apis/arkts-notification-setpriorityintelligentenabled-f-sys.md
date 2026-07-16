@@ -12,14 +12,15 @@ import { notificationManager } from '@kit.NotificationKit';
 function setPriorityIntelligentEnabled(enable: boolean): Promise<void>
 ```
 
-Sets the enabling status of the intelligent priority notification service. This API uses a promise to return the
-result.
+Sets the enabling status of the intelligent priority notification service. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-notificationManager-function setPriorityIntelligentEnabled(enable: boolean): Promise<void>--><!--Device-notificationManager-function setPriorityIntelligentEnabled(enable: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -29,13 +30,13 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Enabling status of the intelligent priority notification service.<br> - **true**: Theintelligent priority notification service is enabled.<br> - **false**: The intelligent priority notificationservice is disabled. |
+| enable | boolean | Yes | Enabling status of the intelligent priority notification service.<br> - **true**: The intelligent priority notification service is enabled.<br> - **false**: The intelligent priority notification service is disabled. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

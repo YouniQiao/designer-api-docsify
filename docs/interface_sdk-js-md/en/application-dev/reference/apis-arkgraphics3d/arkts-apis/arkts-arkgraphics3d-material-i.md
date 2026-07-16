@@ -6,6 +6,8 @@ Material resource.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface Material extends SceneResource--><!--Device-unnamed-export interface Material extends SceneResource-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## alphaCutoff
@@ -19,6 +21,8 @@ Alpha cutoff value [0,1]. Enabled if < 1.
 **Type:** number
 
 **Since:** 20
+
+<!--Device-Material-alphaCutoff?: double--><!--Device-Material-alphaCutoff?: double-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -36,6 +40,8 @@ Control whether the blend is enabled
 
 **Since:** 20
 
+<!--Device-Material-blend?: Blend--><!--Device-Material-blend?: Blend-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## cullMode
@@ -50,6 +56,8 @@ Culling mode.
 
 **Since:** 20
 
+<!--Device-Material-cullMode?: CullMode--><!--Device-Material-cullMode?: CullMode-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## materialType
@@ -63,6 +71,8 @@ Material resource type.
 **Type:** MaterialType
 
 **Since:** 12
+
+<!--Device-Material-readonly materialType: MaterialType--><!--Device-Material-readonly materialType: MaterialType-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -80,6 +90,8 @@ Polygon Mode of the material
 
 **Since:** 23
 
+<!--Device-Material-polygonMode?: PolygonMode--><!--Device-Material-polygonMode?: PolygonMode-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## renderSort
@@ -94,6 +106,8 @@ Render sorting priority for layers.
 
 **Since:** 20
 
+<!--Device-Material-renderSort?: RenderSort--><!--Device-Material-renderSort?: RenderSort-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## shadowReceiver
@@ -107,6 +121,8 @@ Defines if the material can receive shadows.
 **Type:** boolean
 
 **Since:** 20
+
+<!--Device-Material-shadowReceiver?: boolean--><!--Device-Material-shadowReceiver?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

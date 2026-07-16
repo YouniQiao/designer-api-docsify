@@ -20,6 +20,8 @@ function publish(request: NotificationRequest, userId: number, callback: AsyncCa
 - API版本18+：ohos.permission.NOTIFICATION_CONTROLLER or ohos.permission.SEND_NOTIFICATION_CROSS_USER
 - API版本9 - 17：ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function publish(request: NotificationRequest, userId: int, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function publish(request: NotificationRequest, userId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -28,9 +30,9 @@ function publish(request: NotificationRequest, userId: number, callback: AsyncCa
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | NotificationRequest | 是 | 用于设置要发布通知的内容和相关配置信息。 |
+| request | [NotificationRequest](arkts-notification-notificationrequest-t.md) | 是 | 用于设置要发布通知的内容和相关配置信息。 |
 | userId | number | 是 | 用户ID。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 被指定的回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 被指定的回调方法。 |
 
 **错误码：**
 
@@ -50,13 +52,13 @@ function publish(request: NotificationRequest, userId: number, callback: AsyncCa
 | [1600009](../errorcode-notification.md#1600009-通知发布频度超过限制) | The notification sending frequency reaches the upper limit. |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
 | [1600014](../errorcode-notification.md#1600014-没有相关权限) | No permission.<br>**适用版本：** 11+ |
-| [1600015](../errorcode-notification.md#1600015-当前通知状态不支持重复配置) | The current notification status does not support duplicateconfigurations.<br>**适用版本：** 11+ |
+| [1600015](../errorcode-notification.md#1600015-当前通知状态不支持重复配置) | The current notification status does not support duplicate configurations.<br>**适用版本：** 11+ |
 | [1600016](../errorcode-notification.md#1600016-本次更新的通知版本太低) | The notification version for this update is too low.<br>**适用版本：** 11+ |
-| [1600020](../errorcode-notification.md#1600020-不允许权限管控名单中的应用发布通知) | The application is not allowed to send notifications due to permissionsettings.<br>**适用版本：** 18+ |
+| [1600020](../errorcode-notification.md#1600020-不允许权限管控名单中的应用发布通知) | The application is not allowed to send notifications due to permission settings.<br>**适用版本：** 18+ |
 | [1600025](../errorcode-notification.md#1600025-地理围栏开关关闭) | Geofencing disabled.<br>**适用版本：** 23+ |
 | [1600026](../errorcode-notification.md#1600026-位置功能开关关闭) | The location switch is off.<br>**适用版本：** 23+ |
-| [1600027](../errorcode-notification.md#1600027-位置系统服务的感知与提醒开关关闭) | The "Awareness & suggestions" switch of the location-based service isoff.<br>**适用版本：** 23+ |
-| [1600029](../errorcode-notification.md#1600029-系统无法找到实况窗卡片自定义扩展区的extensionability) | The system failed to find the ExtensionAbility instance for thecustom Live View widget template.<br>**适用版本：** 26.0.0+ |
+| [1600027](../errorcode-notification.md#1600027-位置系统服务的感知与提醒开关关闭) | The "Awareness & suggestions" switch of the location-based service is off.<br>**适用版本：** 23+ |
+| [1600029](../errorcode-notification.md#1600029-系统无法找到实况窗卡片自定义扩展区的extensionability) | The system failed to find the ExtensionAbility instance for the custom Live View widget template.<br>**适用版本：** 26.0.0+ |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-无法连接到服务器) | Network unreachable.<br>**适用版本：** 11+ |
 
 **示例：**
@@ -105,6 +107,8 @@ function publish(request: NotificationRequest, userId: number): Promise<void>
 - API版本18+：ohos.permission.NOTIFICATION_CONTROLLER or ohos.permission.SEND_NOTIFICATION_CROSS_USER
 - API版本9 - 17：ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function publish(request: NotificationRequest, userId: int): Promise<void>--><!--Device-notificationManager-function publish(request: NotificationRequest, userId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -113,14 +117,14 @@ function publish(request: NotificationRequest, userId: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | NotificationRequest | 是 | 用于设置要发布通知的内容和相关配置信息。 |
+| request | [NotificationRequest](arkts-notification-notificationrequest-t.md) | 是 | 用于设置要发布通知的内容和相关配置信息。 |
 | userId | number | 是 | 用户ID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -140,13 +144,13 @@ function publish(request: NotificationRequest, userId: number): Promise<void>
 | [1600009](../errorcode-notification.md#1600009-通知发布频度超过限制) | The notification sending frequency reaches the upper limit. |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
 | [1600014](../errorcode-notification.md#1600014-没有相关权限) | No permission.<br>**适用版本：** 11+ |
-| [1600015](../errorcode-notification.md#1600015-当前通知状态不支持重复配置) | The current notification status does not support duplicateconfigurations.<br>**适用版本：** 11+ |
+| [1600015](../errorcode-notification.md#1600015-当前通知状态不支持重复配置) | The current notification status does not support duplicate configurations.<br>**适用版本：** 11+ |
 | [1600016](../errorcode-notification.md#1600016-本次更新的通知版本太低) | The notification version for this update is too low.<br>**适用版本：** 11+ |
-| [1600020](../errorcode-notification.md#1600020-不允许权限管控名单中的应用发布通知) | The application is not allowed to send notifications due to permissionsettings.<br>**适用版本：** 18+ |
+| [1600020](../errorcode-notification.md#1600020-不允许权限管控名单中的应用发布通知) | The application is not allowed to send notifications due to permission settings.<br>**适用版本：** 18+ |
 | [1600025](../errorcode-notification.md#1600025-地理围栏开关关闭) | Geofencing disabled.<br>**适用版本：** 23+ |
 | [1600026](../errorcode-notification.md#1600026-位置功能开关关闭) | The location switch is off.<br>**适用版本：** 23+ |
-| [1600027](../errorcode-notification.md#1600027-位置系统服务的感知与提醒开关关闭) | The "Awareness & suggestions" switch of the location-based service isoff.<br>**适用版本：** 23+ |
-| [1600029](../errorcode-notification.md#1600029-系统无法找到实况窗卡片自定义扩展区的extensionability) | The system failed to find the ExtensionAbility instance for thecustom Live View widget template.<br>**适用版本：** 26.0.0+ |
+| [1600027](../errorcode-notification.md#1600027-位置系统服务的感知与提醒开关关闭) | The "Awareness & suggestions" switch of the location-based service is off.<br>**适用版本：** 23+ |
+| [1600029](../errorcode-notification.md#1600029-系统无法找到实况窗卡片自定义扩展区的extensionability) | The system failed to find the ExtensionAbility instance for the custom Live View widget template.<br>**适用版本：** 26.0.0+ |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-无法连接到服务器) | Network unreachable.<br>**适用版本：** 11+ |
 
 **示例：**

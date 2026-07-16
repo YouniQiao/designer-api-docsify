@@ -12,14 +12,13 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 function queryReusableAuthResult(authParam: AuthParam): Uint8Array
 ```
 
-Queries whether there is any reusable identity authentication result. This API is used to query whether there is an
-authentication result that meets the reuse conditions before authentication is initiated. If such a result exists,
-the **AuthToken** that can be reused is returned directly, and the user does not need to perform authentication
-again.
+Queries whether there is any reusable identity authentication result. This API is used to query whether there is an authentication result that meets the reuse conditions before authentication is initiated. If such a result exists,the **AuthToken** that can be reused is returned directly, and the user does not need to perform authentication again.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
+
+<!--Device-userAuth-function queryReusableAuthResult(authParam: AuthParam): Uint8Array--><!--Device-userAuth-function queryReusableAuthResult(authParam: AuthParam): Uint8Array-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -29,13 +28,13 @@ again.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authParam | AuthParam | Yes | Represents the user authentication parameters. The parameters include thechallenge value, authentication type list (**authType**), authentication trust level (**authTrustLevel**), andauthentication result reuse configuration (**reuseUnlockResult**). Based on these parameters, the systemdetermines whether there are reusable authentication results that meet the requirements. |
+| authParam | [AuthParam](arkts-userauthentication-authparam-i-sys.md) | Yes | Represents the user authentication parameters. The parameters include the challenge value, authentication type list (**authType**), authentication trust level (**authTrustLevel**), and authentication result reuse configuration (**reuseUnlockResult**). Based on these parameters, the system determines whether there are reusable authentication results that meet the requirements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Reusable authentication token (**AuthToken**). If there are reusable authentication resultsthat meet the requirements, the **AuthToken** data is returned. The maximum length is 1024 bytes. If there areno such results, an error code is returned. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Reusable authentication token (**AuthToken**). If there are reusable authentication results that meet the requirements, the **AuthToken** data is returned. The maximum length is 1024 bytes. If there are no such results, an error code is returned. |
 
 **Error codes:**
 

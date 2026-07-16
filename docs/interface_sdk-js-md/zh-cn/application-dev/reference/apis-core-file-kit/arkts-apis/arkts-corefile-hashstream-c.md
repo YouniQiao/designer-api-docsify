@@ -6,7 +6,15 @@ HashStream 类是用于创建数据的哈希摘要的实用工具。由 [createH
 
 **起始版本：** 12
 
+<!--Device-hash-class HashStream extends stream.Transform--><!--Device-hash-class HashStream extends stream.Transform-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { hash } from '@kit.CoreFileKit';
+```
 
 ## digest
 
@@ -17,6 +25,8 @@ digest(): string
 计算传递给哈希处理的所有数据的摘要。
 
 **起始版本：** 12
+
+<!--Device-HashStream-digest(): string--><!--Device-HashStream-digest(): string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -56,13 +66,15 @@ update(data: ArrayBuffer): void
 
 **起始版本：** 12
 
+<!--Device-HashStream-update(data: ArrayBuffer): void--><!--Device-HashStream-update(data: ArrayBuffer): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | ArrayBuffer | 是 | updated data. |
+| data | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | updated data. |
 
 **错误码：**
 

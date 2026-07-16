@@ -14,13 +14,13 @@ function createAsyKeyGenerator(algName: string): AsyKeyGenerator
 
 Creates an **AsyKeyGenerator** instance based on the specified algorithm.
 
-For details about the supported specifications, see
-[Asymmetric Key Generation and Conversion Specifications](../../../../security/CryptoArchitectureKit/crypto-asym-key-generation-conversion-spec.md)
-.
+For details about the supported specifications, see [Asymmetric Key Generation and Conversion Specifications](../../../../security/CryptoArchitectureKit/crypto-asym-key-generation-conversion-spec.md).
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-cryptoFramework-function createAsyKeyGenerator(algName: string): AsyKeyGenerator--><!--Device-cryptoFramework-function createAsyKeyGenerator(algName: string): AsyKeyGenerator-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -30,13 +30,13 @@ For details about the supported specifications, see
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algName | string | Yes | Algorithm used by the asymmetric keys. For details, see the string parameters in[Asymmetric Key Generation and Conversion Specifications](../../../../security/CryptoArchitectureKit/crypto-asym-key-generation-conversion-spec.md). |
+| algName | string | Yes | Algorithm used by the asymmetric keys. For details, see the string parameters in [Asymmetric Key Generation and Conversion Specifications](../../../../security/CryptoArchitectureKit/crypto-asym-key-generation-conversion-spec.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AsyKeyGenerator | **AsyKeyGenerator** instance created. |
+| [AsyKeyGenerator](arkts-cryptoarchitecture-asykeygenerator-i.md) | **AsyKeyGenerator** instance created. |
 
 **Error codes:**
 

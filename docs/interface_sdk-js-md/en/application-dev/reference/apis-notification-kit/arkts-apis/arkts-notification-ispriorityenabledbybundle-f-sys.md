@@ -18,6 +18,8 @@ Checks whether the priority notification for a specified application is enabled.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isPriorityEnabledByBundle(bundle: BundleOption): Promise<PriorityEnableStatus>--><!--Device-notificationManager-function isPriorityEnabledByBundle(bundle: BundleOption): Promise<PriorityEnableStatus>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Checks whether the priority notification for a specified application is enabled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PriorityEnableStatus&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PriorityEnableStatus> | Promise used to return the result. |
 
 **Error codes:**
 

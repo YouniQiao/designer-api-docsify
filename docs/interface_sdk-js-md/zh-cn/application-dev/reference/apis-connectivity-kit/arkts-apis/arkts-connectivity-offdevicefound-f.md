@@ -1,5 +1,11 @@
 # offDeviceFound
 
+## 导入模块
+
+```TypeScript
+import { scan } from '@kit.ConnectivityKit';
+```
+
 ## offDeviceFound
 
 ```TypeScript
@@ -12,13 +18,15 @@ function offDeviceFound(callback?: Callback<ScanResults[]>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-scan-function offDeviceFound(callback?: Callback<ScanResults[]>): void--><!--Device-scan-function offDeviceFound(callback?: Callback<ScanResults[]>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;ScanResults[]&gt; | 否 | 监听扫描结果事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<ScanResults[]> | 否 | 监听扫描结果事件的回调。 |
 
 **错误码：**
 

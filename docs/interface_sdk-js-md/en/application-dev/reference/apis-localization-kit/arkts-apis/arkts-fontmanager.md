@@ -4,6 +4,8 @@ The **fontManager** module provides APIs for system applications to install and 
 
 **Since:** 19
 
+<!--Device-unnamed-declare namespace fontManager--><!--Device-unnamed-declare namespace fontManager-End-->
+
 **System capability:** SystemCapability.Global.FontManager
 
 **System API:** This is a system API.

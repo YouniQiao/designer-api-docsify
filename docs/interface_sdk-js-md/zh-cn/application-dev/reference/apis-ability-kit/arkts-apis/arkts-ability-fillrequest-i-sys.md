@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface FillRequest--><!--Device-unnamed-export interface FillRequest-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ customData: CustomData
 **起始版本：** 13
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FillRequest-customData: CustomData--><!--Device-FillRequest-customData: CustomData-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -44,6 +48,8 @@ false：当前拉起模态窗。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FillRequest-isPopup: boolean--><!--Device-FillRequest-isPopup: boolean-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -62,6 +68,8 @@ type: AutoFillType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FillRequest-type: AutoFillType--><!--Device-FillRequest-type: AutoFillType-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -79,6 +87,8 @@ viewData: ViewData
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FillRequest-viewData: ViewData--><!--Device-FillRequest-viewData: ViewData-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

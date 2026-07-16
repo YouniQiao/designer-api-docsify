@@ -1,5 +1,11 @@
 # getLauncherAbilityResourceInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleResourceManager } from '@kit.AbilityKit';
+```
+
 ## getLauncherAbilityResourceInfo
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: numb
 **起始版本：** 11
 
 **需要权限：** ohos.permission.GET_BUNDLE_RESOURCES
+
+<!--Device-bundleResourceManager-function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: int): Array<LauncherAbilityResourceInfo>--><!--Device-bundleResourceManager-function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: int): Array<LauncherAbilityResourceInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -27,7 +35,7 @@ function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: numb
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;LauncherAbilityResourceInfo&gt; | 返回指定应用的LauncherAbilityResourceInfo。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<LauncherAbilityResourceInfo> | 返回指定应用的LauncherAbilityResourceInfo。 |
 
 **错误码：**
 
@@ -51,6 +59,8 @@ function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: numb
 
 **需要权限：** ohos.permission.GET_BUNDLE_RESOURCES
 
+<!--Device-bundleResourceManager-function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: int, appIndex?: int): Array<LauncherAbilityResourceInfo>--><!--Device-bundleResourceManager-function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: int, appIndex?: int): Array<LauncherAbilityResourceInfo>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
 **系统接口：** 此接口为系统接口。
@@ -67,7 +77,7 @@ function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: numb
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;LauncherAbilityResourceInfo&gt; | 返回指定应用的LauncherAbilityResourceInfo。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<LauncherAbilityResourceInfo> | 返回指定应用的LauncherAbilityResourceInfo。 |
 
 **错误码：**
 

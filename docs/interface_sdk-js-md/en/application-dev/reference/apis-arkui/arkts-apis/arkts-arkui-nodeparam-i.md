@@ -4,6 +4,8 @@ Declare NodeParam
 
 **Since:** 22
 
+<!--Device-unnamed-export interface NodeParam--><!--Device-unnamed-export interface NodeParam-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ set subcomponent binded on tree item.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-NodeParam-container?: () => void--><!--Device-NodeParam-container?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## currentNodeId
@@ -45,6 +49,8 @@ Set currentNodeId.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-NodeParam-currentNodeId?: number--><!--Device-NodeParam-currentNodeId?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +70,8 @@ Set edit icon resource.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-NodeParam-editIcon?: ResourceStr--><!--Device-NodeParam-editIcon?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## icon
@@ -81,6 +89,8 @@ Set the icon resource.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-NodeParam-icon?: ResourceStr--><!--Device-NodeParam-icon?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +110,8 @@ Set catalog whether is folder.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-NodeParam-isFolder?: boolean--><!--Device-NodeParam-isFolder?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## parentNodeId
@@ -117,6 +129,8 @@ Set the parentNodeId.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-NodeParam-parentNodeId?: number--><!--Device-NodeParam-parentNodeId?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -136,6 +150,8 @@ Set primary title content.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-NodeParam-primaryTitle?: ResourceStr--><!--Device-NodeParam-primaryTitle?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## secondaryTitle
@@ -153,6 +169,8 @@ Set secondary title content.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-NodeParam-secondaryTitle?: ResourceStr--><!--Device-NodeParam-secondaryTitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -172,6 +190,8 @@ Set selected icon resource.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-NodeParam-selectedIcon?: ResourceStr--><!--Device-NodeParam-selectedIcon?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## symbolEditIconStyle
@@ -189,6 +209,8 @@ Set edit symbol resource.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-NodeParam-symbolEditIconStyle?: SymbolGlyphModifier--><!--Device-NodeParam-symbolEditIconStyle?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -208,6 +230,8 @@ Set the symbol resource.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-NodeParam-symbolIconStyle?: SymbolGlyphModifier--><!--Device-NodeParam-symbolIconStyle?: SymbolGlyphModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## symbolSelectedIconStyle
@@ -225,6 +249,8 @@ Set selected symbol resource.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-NodeParam-symbolSelectedIconStyle?: SymbolGlyphModifier--><!--Device-NodeParam-symbolSelectedIconStyle?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

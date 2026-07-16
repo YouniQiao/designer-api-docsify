@@ -4,6 +4,8 @@
 declare type ParameterDecorator = (target: Object, propertyKey: string | symbol, parameterIndex: number) => void
 ```
 
+<!--Device-unnamed-declare type ParameterDecorator = (target: Object, propertyKey: string | symbol, parameterIndex: number) => void--><!--Device-unnamed-declare type ParameterDecorator = (target: Object, propertyKey: string | symbol, parameterIndex: number) => void-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |

@@ -12,12 +12,13 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getStations(): Array<StationInfo>
 ```
 
-Obtain the list of stations that are connected to the Wi-Fi hotspot.
-This method can only be used on a device that serves as a Wi-Fi hotspot.
+Obtain the list of stations that are connected to the Wi-Fi hotspot.This method can only be used on a device that serves as a Wi-Fi hotspot.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.MANAGE_WIFI_HOTSPOT
+
+<!--Device-wifiManager-function getStations(): Array<StationInfo>--><!--Device-wifiManager-function getStations(): Array<StationInfo>-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -27,7 +28,7 @@ This method can only be used on a device that serves as a Wi-Fi hotspot.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;StationInfo&gt; | the list of clients that are connected to the Wi-Fi hotspot. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<StationInfo> | the list of clients that are connected to the Wi-Fi hotspot. |
 
 **Error codes:**
 

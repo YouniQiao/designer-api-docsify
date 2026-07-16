@@ -12,14 +12,15 @@ import { bundle } from '@kit.AbilityKit';
 function getLaunchWantForBundle(bundleName: string, callback: AsyncCallback<Want>): void
 ```
 
-Obtains the Want object that launches the specified application. This API uses an asynchronous callback to return
-the result.
+Obtains the Want object that launches the specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundle-function getLaunchWantForBundle(bundleName: string, callback: AsyncCallback<Want>): void--><!--Device-bundle-function getLaunchWantForBundle(bundleName: string, callback: AsyncCallback<Want>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -28,7 +29,7 @@ the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | AsyncCallback&lt;Want&gt; | Yes | Callback used to return the Want object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Want> | Yes | Callback used to return the Want object. |
 
 
 ## getLaunchWantForBundle
@@ -45,6 +46,8 @@ Obtains the Want object that launches the specified application. This API uses a
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundle-function getLaunchWantForBundle(bundleName: string): Promise<Want>--><!--Device-bundle-function getLaunchWantForBundle(bundleName: string): Promise<Want>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **Parameters:**
@@ -57,5 +60,5 @@ Obtains the Want object that launches the specified application. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Want&gt; | Returns the Want for starting the application's main ability if any. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Want> | Returns the Want for starting the application's main ability if any. |
 

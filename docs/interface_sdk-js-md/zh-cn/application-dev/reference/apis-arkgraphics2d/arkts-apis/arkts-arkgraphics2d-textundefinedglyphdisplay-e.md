@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+<!--Device-text-enum TextUndefinedGlyphDisplay--><!--Device-text-enum TextUndefinedGlyphDisplay-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## USE_DEFAULT
@@ -16,7 +18,9 @@ USE_DEFAULT = 0
 
 **起始版本：** 20
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextUndefinedGlyphDisplay-USE_DEFAULT = 0--><!--Device-TextUndefinedGlyphDisplay-USE_DEFAULT = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -30,7 +34,9 @@ USE_TOFU = 1
 
 **起始版本：** 20
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextUndefinedGlyphDisplay-USE_TOFU = 1--><!--Device-TextUndefinedGlyphDisplay-USE_TOFU = 1-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

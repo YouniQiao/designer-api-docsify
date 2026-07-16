@@ -1,5 +1,11 @@
 # getBundlePackInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { freeInstall } from '@kit.AbilityKit';
+```
+
 ## getBundlePackInfo
 
 ```TypeScript
@@ -13,6 +19,10 @@ function getBundlePackInfo(bundleName: string,
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-freeInstall-function getBundlePackInfo(bundleName: string, 
+    bundlePackFlag : BundlePackFlag, callback: AsyncCallback<BundlePackInfo>): void--><!--Device-freeInstall-function getBundlePackInfo(bundleName: string, 
+    bundlePackFlag : BundlePackFlag, callback: AsyncCallback<BundlePackInfo>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -22,8 +32,8 @@ function getBundlePackInfo(bundleName: string,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
-| bundlePackFlag | BundlePackFlag | 是 | 指示要查询的应用包标志。 |
-| callback | AsyncCallback&lt;BundlePackInfo&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)。当函数调用成功，err为undefined，data为获取到的BundlePackInfo信息。否则为错误对象。 |
+| bundlePackFlag | [BundlePackFlag](arkts-ability-bundlepackflag-e-sys.md) | 是 | 指示要查询的应用包标志。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<BundlePackInfo> | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)。当函数调用成功，err为undefined，data为获取到的BundlePackInfo信息。否则为错误对象。 |
 
 **错误码：**
 
@@ -48,6 +58,8 @@ function getBundlePackInfo(bundleName: string, bundlePackFlag : BundlePackFlag):
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-freeInstall-function getBundlePackInfo(bundleName: string, bundlePackFlag : BundlePackFlag): Promise<BundlePackInfo>--><!--Device-freeInstall-function getBundlePackInfo(bundleName: string, bundlePackFlag : BundlePackFlag): Promise<BundlePackInfo>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -57,13 +69,13 @@ function getBundlePackInfo(bundleName: string, bundlePackFlag : BundlePackFlag):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用程序Bundle名称。 |
-| bundlePackFlag | BundlePackFlag | 是 | 指示要查询的应用包标志。 |
+| bundlePackFlag | [BundlePackFlag](arkts-ability-bundlepackflag-e-sys.md) | 是 | 指示要查询的应用包标志。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;BundlePackInfo&gt; | Promise对象，返回BundlePackInfo信息。 |
+| Promise<BundlePackInfo> | Promise对象，返回BundlePackInfo信息。 |
 
 **错误码：**
 

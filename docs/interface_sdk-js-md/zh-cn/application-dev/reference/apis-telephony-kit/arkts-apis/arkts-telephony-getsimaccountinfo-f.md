@@ -1,5 +1,11 @@
 # getSimAccountInfo
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## getSimAccountInfo
 
 ```TypeScript
@@ -12,6 +18,8 @@ Get account information of SIM card.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getSimAccountInfo(slotId: int, callback: AsyncCallback<IccAccountInfo>): void--><!--Device-sim-function getSimAccountInfo(slotId: int, callback: AsyncCallback<IccAccountInfo>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -19,7 +27,7 @@ Get account information of SIM card.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;IccAccountInfo&gt; | 是 | Indicates the callback forgetting a {@code IccAccountInfo} object. The ICCID and phone number will be nullif the permission ohos.permission.GET_TELEPHONY_STATE is not granted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<IccAccountInfo> | 是 | Indicates the callback for getting a {@code IccAccountInfo} object. The ICCID and phone number will be null if the permission ohos.permission.GET_TELEPHONY_STATE is not granted. |
 
 **错误码：**
 
@@ -58,6 +66,8 @@ Get account information of SIM card.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getSimAccountInfo(slotId: int): Promise<IccAccountInfo>--><!--Device-sim-function getSimAccountInfo(slotId: int): Promise<IccAccountInfo>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -70,7 +80,7 @@ Get account information of SIM card.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;IccAccountInfo&gt; | Returns a {@code IccAccountInfo} object. The ICCID and phone numberwill be null if has no ohos.permission.GET_TELEPHONY_STATE. |
+| Promise<IccAccountInfo> | Returns a {@code IccAccountInfo} object. The ICCID and phone number will be null if has no ohos.permission.GET_TELEPHONY_STATE. |
 
 **错误码：**
 

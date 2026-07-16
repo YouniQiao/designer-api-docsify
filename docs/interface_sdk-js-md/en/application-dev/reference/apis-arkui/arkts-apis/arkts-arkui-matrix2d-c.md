@@ -1,8 +1,10 @@
 # Matrix2D
 
-2D transformation matrix, supporting rotation, translation, and scaling of the X-axis and Y-axis
+**Matrix2D** allows you to perform matrix transformation, such as scaling, rotating, and translating.
 
-**Since:** 11
+**Since:** 8
+
+<!--Device-unnamed-declare class Matrix2D--><!--Device-unnamed-declare class Matrix2D-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -12,84 +14,37 @@
 constructor()
 ```
 
-Constructs a 2D change matrix object. The default value is the unit matrix.
+Constructs a two-dimensional transformation matrix object.The default value is a matrix whose attributes are all 0.
 
-**Since:** 11
+**Since:** 10
 
-**Model restriction:** This API can be used only in the FA model.
+**Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-Matrix2D-constructor()--><!--Device-Matrix2D-constructor()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## identity
+## constructor
 
 ```TypeScript
-identity(): Matrix2D
+constructor(unit: LengthMetricsUnit)
 ```
 
-Transforms the current 2D matrix back to the identity matrix (i.e., without any rotational
-translation scaling effect)
+Constructs a two-dimensional transformation matrix object.The default value is a matrix whose attributes are all 0. The unit mode of the Matrix2D object can be configured.
 
-**Since:** 11
+**Since:** 12
 
-**Model restriction:** This API can be used only in the FA model.
+**Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Matrix2D | @syscap SystemCapability.ArkUI.ArkUI.Full@famodelonly@form@atomicservice |
-
-## invert
-
-```TypeScript
-invert(): Matrix2D
-```
-
-Transform the current 2D matrix into an inverse matrix (that is, the transformation effect
-is the opposite effect of the original)
-
-**Since:** 11
-
-**Model restriction:** This API can be used only in the FA model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Matrix2D | @syscap SystemCapability.ArkUI.ArkUI.Full@famodelonly@form@atomicservice |
-
-## multiply
-
-```TypeScript
-multiply(other?: Matrix2D): Matrix2D
-```
-
-The matrix is superimposed in right multiplication mode. When the input parameter is empty,
-the matrix is superimposed.
-
-**Since:** 11
-
-**Model restriction:** This API can be used only in the FA model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+<!--Device-Matrix2D-constructor(unit: LengthMetricsUnit)--><!--Device-Matrix2D-constructor(unit: LengthMetricsUnit)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -97,13 +52,85 @@ the matrix is superimposed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | Matrix2D | No | Matrix to be superimposed |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-e.md) | Yes | Unit mode of the **Matrix2D** object. The value cannot be dynamically changed once set. The configuration method is the same as that of CanvasRenderingContext2D.<br>For abnormal values NaN and Infinity, the default values are used.<br>Default value: DEFAULT. |
+
+## identity
+
+```TypeScript
+identity(): Matrix2D
+```
+
+Transforms the current 2D matrix back to the identity matrix (i.e., without any rotational translation scaling effect)
+
+**Since:** 8
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Matrix2D-identity(): Matrix2D--><!--Device-Matrix2D-identity(): Matrix2D-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix2D | @syscap SystemCapability.ArkUI.ArkUI.Full@famodelonly@form@atomicservice |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | - Identity matrix. |
+
+## invert
+
+```TypeScript
+invert(): Matrix2D
+```
+
+Transform the current 2D matrix into an inverse matrix (that is, the transformation effect is the opposite effect of the original)
+
+**Since:** 8
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Matrix2D-invert(): Matrix2D--><!--Device-Matrix2D-invert(): Matrix2D-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | - Inverse of the current matrix. |
+
+## multiply
+
+```TypeScript
+multiply(other?: Matrix2D): Matrix2D
+```
+
+The matrix is superimposed in right multiplication mode. When the input parameter is empty,the matrix is superimposed.
+
+**Since:** 8
+
+**Deprecated since:** 10
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Matrix2D-multiply(other?: Matrix2D): Matrix2D--><!--Device-Matrix2D-multiply(other?: Matrix2D): Matrix2D-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| other | [Matrix2D](arkts-arkui-matrix2d-c.md) | No | Target matrix.<br>Invalid values **undefined** and **null** are treated as invalid inputs.<br>Default value: **null**. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | - Matrix of the multiplication result. |
 
 ## rotate
 
@@ -113,13 +140,15 @@ rotate(rx?: number, ry?: number): Matrix2D
 
 Adds the rotation effect of the X and Y axes to the current matrix.
 
-**Since:** 11
+**Since:** 8
 
-**Model restriction:** This API can be used only in the FA model.
+**Deprecated since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Substitutes:** [rotate](arkts-arkui-matrix2d-c.md#rotate-1)
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Matrix2D-rotate(rx?: number, ry?: number): Matrix2D--><!--Device-Matrix2D-rotate(rx?: number, ry?: number): Matrix2D-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -127,14 +156,48 @@ Adds the rotation effect of the X and Y axes to the current matrix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rx | number | No | Rotation effect of the X axis |
-| ry | number | No | Rotation effect of the Y-axis |
+| rx | number | No | Horizontal coordinate of the rotation point. The value range is not limited.<br>Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.<br>Default unit: vp. |
+| ry | number | No | Vertical coordinate of the rotation point. The value range is not limited.<br>Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.<br>Default unit: vp. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix2D | @syscap SystemCapability.ArkUI.ArkUI.Full@famodelonly@form@atomicservice |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@FaAndStageModel@form |
+
+## rotate
+
+```TypeScript
+rotate(degree: number, rx?: number, ry?: number): Matrix2D
+```
+
+Adds the rotation effect of the X and Y axes to the current matrix.
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-Matrix2D-rotate(degree: number, rx?: number, ry?: number): Matrix2D--><!--Device-Matrix2D-rotate(degree: number, rx?: number, ry?: number): Matrix2D-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| degree | number | Yes | Rotation angle. The value range is not limited. Positive angles represent clockwise rotation. You can convert the angle to radians using the following formula: degree * Math.PI/180.<br>Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.<br>Default unit: radian. |
+| rx | number | No | Horizontal coordinate of the rotation point. The value range is not limited.<br>Default unit: vp.<br>Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.<br>Default value: **0**. |
+| ry | number | No | Vertical coordinate of the rotation point. The value range is not limited.<br>Default unit:vp.<br>Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.<br>Default value: **0**. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@form@atomicservice |
 
 ## scale
 
@@ -144,13 +207,13 @@ scale(sx?: number, sy?: number): Matrix2D
 
 Adds the scaling effect of the X and Y axes to the current matrix.
 
-**Since:** 11
-
-**Model restriction:** This API can be used only in the FA model.
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Matrix2D-scale(sx?: number, sy?: number): Matrix2D--><!--Device-Matrix2D-scale(sx?: number, sy?: number): Matrix2D-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -158,14 +221,14 @@ Adds the scaling effect of the X and Y axes to the current matrix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sx | number | No | X-axis scaling effect |
-| sy | number | No | Y-axis scaling effect |
+| sx | number | No | Horizontal scaling ratio coefficient. The value range is not limited.<br>Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.<br>Default value: **1.0**. |
+| sy | number | No | Vertical scaling ratio coefficient. The value range is not limited.<br>Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.<br>Default value: **1.0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix2D | @syscap SystemCapability.ArkUI.ArkUI.Full@famodelonly@form@atomicservice |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@FaAndStageModel@crossplatform |
 
 ## translate
 
@@ -173,15 +236,15 @@ Adds the scaling effect of the X and Y axes to the current matrix.
 translate(tx?: number, ty?: number): Matrix2D
 ```
 
-Adds the translation effect of the X and Y axes to the current matrix.
+Performs a left multiplication translation operation on this matrix.
 
-**Since:** 11
-
-**Model restriction:** This API can be used only in the FA model.
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Matrix2D-translate(tx?: number, ty?: number): Matrix2D--><!--Device-Matrix2D-translate(tx?: number, ty?: number): Matrix2D-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -189,14 +252,14 @@ Adds the translation effect of the X and Y axes to the current matrix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tx | number | No | X-axis translation effect |
-| ty | number | No | Y-axis translation effect |
+| tx | number | No | Horizontal translation distance. The value range is not limited.<br>Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.<br>Default unit: vp.<br>Default value: **0**. |
+| ty | number | No | Vertical translation distance. The value range is not limited.<br>Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.<br>Default unit: vp.<br>Default value: **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix2D | @syscap SystemCapability.ArkUI.ArkUI.Full@famodelonly@form@atomicservice |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | - Matrix of the translation result. |
 
 ## rotateX
 
@@ -204,17 +267,17 @@ Adds the translation effect of the X and Y axes to the current matrix.
 rotateX?: number
 ```
 
-Horizontal Tilt
+Horizontal skew coefficient. The value range is not limited.<br>If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
 
 **Type:** number
 
-**Since:** 11
-
-**Model restriction:** This API can be used only in the FA model.
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Matrix2D-rotateX?: number--><!--Device-Matrix2D-rotateX?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -224,17 +287,17 @@ Horizontal Tilt
 rotateY?: number
 ```
 
-Vertical Tilt
+Vertical skew coefficient. The value range is not limited.<br>If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
 
 **Type:** number
 
-**Since:** 11
-
-**Model restriction:** This API can be used only in the FA model.
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Matrix2D-rotateY?: number--><!--Device-Matrix2D-rotateY?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -244,17 +307,17 @@ Vertical Tilt
 scaleX?: number
 ```
 
-Horizontal Zoom
+Horizontal scaling coefficient. The value range is not limited.<br>If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
 
 **Type:** number
 
-**Since:** 11
-
-**Model restriction:** This API can be used only in the FA model.
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Matrix2D-scaleX?: number--><!--Device-Matrix2D-scaleX?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -264,17 +327,17 @@ Horizontal Zoom
 scaleY?: number
 ```
 
-Vertical Zoom
+Vertical scaling coefficient. The value range is not limited.<br>If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
 
 **Type:** number
 
-**Since:** 11
-
-**Model restriction:** This API can be used only in the FA model.
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Matrix2D-scaleY?: number--><!--Device-Matrix2D-scaleY?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -284,17 +347,17 @@ Vertical Zoom
 translateX?: number
 ```
 
-Horizontal movement
+Horizontal translation distance. The value range is unlimited. <br>The abnormal value undefined is processed as an invalid value. NaN and Infinity will cause Matrix2D exceptions. After the setting, the drawn content is not displayed. <br>Default unit: vp.
 
 **Type:** number
 
-**Since:** 11
-
-**Model restriction:** This API can be used only in the FA model.
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Matrix2D-translateX?: number--><!--Device-Matrix2D-translateX?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -304,17 +367,17 @@ Horizontal movement
 translateY?: number
 ```
 
-Vertical movement
+Vertical translation distance. The value range is unlimited. <br>The abnormal value undefined is processed as an invalid value. NaN and Infinity will cause Matrix2D exceptions. After the setting, the drawn content is not displayed. <br>Default unit: vp.
 
 **Type:** number
 
-**Since:** 11
-
-**Model restriction:** This API can be used only in the FA model.
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Matrix2D-translateY?: number--><!--Device-Matrix2D-translateY?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

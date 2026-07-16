@@ -18,6 +18,8 @@ Returns the remaining storage space in KB for the eUICC hardware.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_ESIM_STATE
 
+<!--Device-eSIM-function getEsimFreeStorage(): Promise<int>--><!--Device-eSIM-function getEsimFreeStorage(): Promise<int>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Returns the remaining storage space in KB for the eUICC hardware.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns the size of the remaining storage space in KB for the eUICC. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Returns the size of the remaining storage space in KB for the eUICC. |
 
 **Error codes:**
 

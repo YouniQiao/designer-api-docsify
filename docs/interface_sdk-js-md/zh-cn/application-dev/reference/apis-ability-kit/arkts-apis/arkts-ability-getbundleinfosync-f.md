@@ -1,5 +1,11 @@
 # getBundleInfoSync
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getBundleInfoSync
 
 ```TypeScript
@@ -13,6 +19,8 @@ function getBundleInfoSync(bundleName: string, bundleFlags: number, userId: numb
 **起始版本：** 14
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getBundleInfoSync(bundleName: string, bundleFlags: int, userId: int): BundleInfo--><!--Device-bundleManager-function getBundleInfoSync(bundleName: string, bundleFlags: int, userId: int): BundleInfo-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -28,7 +36,7 @@ function getBundleInfoSync(bundleName: string, bundleFlags: number, userId: numb
 
 | 类型 | 说明 |
 | --- | --- |
-| BundleInfo | 返回BundleInfo对象。 |
+| [BundleInfo](arkts-ability-bundleinfo-i.md) | 返回BundleInfo对象。 |
 
 **错误码：**
 
@@ -76,6 +84,8 @@ function getBundleInfoSync(bundleName: string, bundleFlags: number): BundleInfo
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundleManager-function getBundleInfoSync(bundleName: string, bundleFlags: int): BundleInfo--><!--Device-bundleManager-function getBundleInfoSync(bundleName: string, bundleFlags: int): BundleInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **参数：**
@@ -89,7 +99,7 @@ function getBundleInfoSync(bundleName: string, bundleFlags: number): BundleInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| BundleInfo | 返回BundleInfo对象。 |
+| [BundleInfo](arkts-ability-bundleinfo-i.md) | 返回BundleInfo对象。 |
 
 **错误码：**
 

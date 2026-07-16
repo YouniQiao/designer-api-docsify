@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-declare enum AnchoredColorMode--><!--Device-unnamed-declare enum AnchoredColorMode-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## FOLLOW_SYSTEM
@@ -18,7 +20,9 @@ FOLLOW_SYSTEM = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AnchoredColorMode-FOLLOW_SYSTEM = 0--><!--Device-AnchoredColorMode-FOLLOW_SYSTEM = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,7 +38,9 @@ FOLLOW_TARGET = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AnchoredColorMode-FOLLOW_TARGET = 1--><!--Device-AnchoredColorMode-FOLLOW_TARGET = 1-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

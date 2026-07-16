@@ -12,12 +12,13 @@ import { cert } from '@kit.DeviceCertificateKit';
 function createX500DistinguishedName(nameStr: string): Promise<X500DistinguishedName>
 ```
 
-Creates an **X500DistinguishedName** object with a name in the form of a string. This API uses a promise to return
-the result.
+Creates an **X500DistinguishedName** object with a name in the form of a string. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-cert-function createX500DistinguishedName(nameStr: string): Promise<X500DistinguishedName>--><!--Device-cert-function createX500DistinguishedName(nameStr: string): Promise<X500DistinguishedName>-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -25,13 +26,13 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| nameStr | string | Yes | Name in a slash-separated format, each relative distinguished name is in the format of**attribute=value**. Common attributes include **CN** (common name), **O** (organization name),**OU** (organization unit), **C** (country/region), **ST** (province/state), and **L** (city/district).For example, **\/CN=example.com/O=Example/C=CN**. |
+| nameStr | string | Yes | Name in a slash-separated format, each relative distinguished name is in the format of **attribute=value**. Common attributes include **CN** (common name), **O** (organization name),**OU** (organization unit), **C** (country/region), **ST** (province/state), and **L** (city/district).For example, **\/CN=example.com/O=Example/C=CN**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;X500DistinguishedName&gt; | Promise used to return the **X500DistinguishedName** object created. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<X500DistinguishedName> | Promise used to return the **X500DistinguishedName** object created. |
 
 **Error codes:**
 
@@ -88,12 +89,13 @@ async function createX500DistinguishedName() {
 function createX500DistinguishedName(nameDer: Uint8Array): Promise<X500DistinguishedName>
 ```
 
-Creates an **X500DistinguishedName** object with a name in DER format. This API uses a promise to return the
-result.
+Creates an **X500DistinguishedName** object with a name in DER format. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-cert-function createX500DistinguishedName(nameDer: Uint8Array): Promise<X500DistinguishedName>--><!--Device-cert-function createX500DistinguishedName(nameDer: Uint8Array): Promise<X500DistinguishedName>-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -101,13 +103,13 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| nameDer | Uint8Array | Yes | X.500 Distinguished Name in DER format. |
+| nameDer | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | X.500 Distinguished Name in DER format. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;X500DistinguishedName&gt; | Promise used to return the **X500DistinguishedName** object created. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<X500DistinguishedName> | Promise used to return the **X500DistinguishedName** object created. |
 
 **Error codes:**
 

@@ -1,11 +1,10 @@
 # EntryIntentInfo (System API)
 
-Describes the parameters supported by the
-[@InsightIntentForm](../../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform)
-decorator, such as the widget name. It also describes the widget information bound to the
-[intent developed using a configuration file](../../../../application-models/insight-intent-config-development.md).
+Describes the parameters supported by the [@InsightIntentForm](../../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform)decorator, such as the widget name. It also describes the widget information bound to the [intent developed using a configuration file](../../../../application-models/insight-intent-config-development.md).
 
 **Since:** 20
+
+<!--Device-insightIntentDriver-interface EntryIntentInfo--><!--Device-insightIntentDriver-interface EntryIntentInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -31,6 +30,8 @@ Ability name.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-EntryIntentInfo-readonly abilityName: string--><!--Device-EntryIntentInfo-readonly abilityName: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -48,6 +49,8 @@ Intent execution mode. that is, execution mode supported when the bound ability 
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-EntryIntentInfo-readonly executeMode: insightIntent.ExecuteMode[]--><!--Device-EntryIntentInfo-readonly executeMode: insightIntent.ExecuteMode[]-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

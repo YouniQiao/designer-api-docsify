@@ -1,5 +1,11 @@
 # addAsUser（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { asset } from '@kit.AssetStoreKit';
+```
+
 ## addAsUser
 
 ```TypeScript
@@ -8,12 +14,13 @@ function addAsUser(userId: number, attributes: AssetMap): Promise<void>
 
 在指定用户空间中新增一条关键资产。使用Promise异步回调。
 
-设置[Tag.IS_PERSISTENT](arkts-assetstore-tagtype-e.md)属性，需申请ohos.permission.STORE_PERSISTENT_DATA权限，申请方式请参
-考[声明权限](../../../../security/AccessToken/declare-permissions.md)。
+设置[Tag.IS_PERSISTENT](arkts-assetstore-tagtype-e.md)属性，需申请ohos.permission.STORE_PERSISTENT_DATA权限，申请方式请参考[声明权限](../../../../security/AccessToken/declare-permissions.md)。
 
 **起始版本：** 12
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-asset-function addAsUser(userId: number, attributes: AssetMap): Promise<void>--><!--Device-asset-function addAsUser(userId: number, attributes: AssetMap): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -24,13 +31,13 @@ function addAsUser(userId: number, attributes: AssetMap): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID。取值范围大于等于100。 |
-| attributes | AssetMap | 是 | 待新增关键资产的属性集合，包括关键资产明文、访问控制属性、自定义数据等。 |
+| attributes | [AssetMap](arkts-assetstore-assetmap-t.md) | 是 | 待新增关键资产的属性集合，包括关键资产明文、访问控制属性、自定义数据等。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

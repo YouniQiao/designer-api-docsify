@@ -4,7 +4,15 @@ This module provides the capability to manage web modules.
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace webview--><!--Device-unnamed-declare namespace webview-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
+
+## 导入模块
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+```
 
 ## 汇总
 
@@ -30,7 +38,7 @@ This module provides the capability to manage web modules.
 | [ProxyConfig](arkts-arkweb-proxyconfig-c.md) | The ProxyConfig used by applyProxyOverride. |
 | [ProxyController](arkts-arkweb-proxycontroller-c.md) | This class is used for set proxy for ArkWeb. |
 | [ProxyRule](arkts-arkweb-proxyrule-c.md) | The ProxyRule used by insertProxyRule. |
-| [UserAgentBrandVersion](arkts-arkweb-useragentbrandversion-c.md) | Class that holds brand name, major version and full version. Brand name and major version used to generatedUser-Agent client hints sec-cu-ua. Brand name and full version used to generated user-agent client hintsec-ch-ua-full-version-list. |
+| [UserAgentBrandVersion](arkts-arkweb-useragentbrandversion-c.md) | Class that holds brand name, major version and full version. Brand name and major version used to generated User-Agent client hints sec-cu-ua. Brand name and full version used to generated user-agent client hint sec-ch-ua-full-version-list. |
 | [UserAgentMetadata](arkts-arkweb-useragentmetadata-c.md) | Holds User-Agent metadata information and uses to generate User-Agent client hints. |
 | [WebCookieManager](arkts-arkweb-webcookiemanager-c.md) | 提供了用于管理网页Cookie的方法。 |
 | [WebDataBase](arkts-arkweb-webdatabase-c.md) | Web组件数据库管理对象。 |
@@ -39,7 +47,7 @@ This module provides the capability to manage web modules.
 | [WebDownloadManager](arkts-arkweb-webdownloadmanager-c.md) | 可以通过该类提供的接口来恢复失败的下载任务。 |
 | [WebHttpBodyStream](arkts-arkweb-webhttpbodystream-c.md) | The http body stream of the request. |
 | [WebMessageExt](arkts-arkweb-webmessageext-c.md) | The message received or sent from web message port. |
-| [WebResourceHandler](arkts-arkweb-webresourcehandler-c.md) | Used to intercept url requests. Response headers and body can be sent throughWebResourceHandler. |
+| [WebResourceHandler](arkts-arkweb-webresourcehandler-c.md) | Used to intercept url requests. Response headers and body can be sent through WebResourceHandler. |
 | [WebSchemeHandler](arkts-arkweb-webschemehandler-c.md) | This class is used to intercept requests for a specified scheme. |
 | [WebSchemeHandlerRequest](arkts-arkweb-webschemehandlerrequest-c.md) | 通过WebSchemeHandler拦截到的请求。 |
 | [WebSchemeHandlerResponse](arkts-arkweb-webschemehandlerresponse-c.md) | 请求的响应，可以为被拦截的请求创建一个Response并填充自定义的内容返回给Web组件。 |

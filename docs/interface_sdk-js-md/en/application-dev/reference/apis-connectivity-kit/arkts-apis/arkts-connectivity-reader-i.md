@@ -4,6 +4,8 @@ Reader represents the SE readers supported by this device.
 
 **Since:** 10
 
+<!--Device-omapi-export interface Reader--><!--Device-omapi-export interface Reader-End-->
+
 **System capability:** SystemCapability.Communication.SecureElement
 
 ## Modules to Import
@@ -21,6 +23,8 @@ closeSessions(): void
 Close all the sessions opened on this reader. All the channels opened by all these sessions will be closed.
 
 **Since:** 10
+
+<!--Device-Reader-closeSessions(): void--><!--Device-Reader-closeSessions(): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
 
@@ -70,11 +74,11 @@ function secureElementDemo() {
 getName(): string
 ```
 
-Returns the name of this reader.
-If this reader is a SIM reader, then its name must be "SIM[slot]".
-If the reader is an embedded SE reader, then its name must be "eSE[slot]".
+Returns the name of this reader.If this reader is a SIM reader, then its name must be "SIM[slot]".If the reader is an embedded SE reader, then its name must be "eSE[slot]".
 
 **Since:** 10
+
+<!--Device-Reader-getName(): string--><!--Device-Reader-getName(): string-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
 
@@ -120,6 +124,8 @@ Checks if a SE is present in this reader.
 
 **Since:** 10
 
+<!--Device-Reader-isSecureElementPresent(): boolean--><!--Device-Reader-isSecureElementPresent(): boolean-End-->
+
 **System capability:** SystemCapability.Communication.SecureElement
 
 **Return value:**
@@ -161,11 +167,11 @@ try {
 openSession(): Session
 ```
 
-Connects to a SE in this reader.
-This method prepares (initializes) the SE for communication before the session object is returned.
-There might be multiple sessions opened at the same time on the same reader.
+Connects to a SE in this reader.This method prepares (initializes) the SE for communication before the session object is returned.There might be multiple sessions opened at the same time on the same reader.
 
 **Since:** 10
+
+<!--Device-Reader-openSession(): Session--><!--Device-Reader-openSession(): Session-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
 
@@ -173,7 +179,7 @@ There might be multiple sessions opened at the same time on the same reader.
 
 | Type | Description |
 | --- | --- |
-| Session | A Session object to be used to create channels. |
+| [Session](../../apis-camera-kit/arkts-apis/arkts-camera-session-i.md) | A Session object to be used to create channels. |
 
 **Error codes:**
 

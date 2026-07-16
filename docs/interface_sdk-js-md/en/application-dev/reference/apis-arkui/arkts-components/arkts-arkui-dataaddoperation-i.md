@@ -4,6 +4,8 @@ Represents an operation for adding data.
 
 **Since:** 12
 
+<!--Device-unnamed-interface DataAddOperation--><!--Device-unnamed-interface DataAddOperation-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## count
@@ -26,6 +28,8 @@ Default value: **1**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DataAddOperation-count?: number--><!--Device-DataAddOperation-count?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## index
@@ -43,6 +47,8 @@ Index at which to insert the data record. The value range is [0, data source len
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DataAddOperation-index: number--><!--Device-DataAddOperation-index: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,6 +68,8 @@ Keys to assign to the inserted data records. The original keys are used by defau
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DataAddOperation-key?: string | Array<string>--><!--Device-DataAddOperation-key?: string | Array<string>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## type
@@ -79,6 +87,8 @@ Type of data addition.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DataAddOperation-type: DataOperationType.ADD--><!--Device-DataAddOperation-type: DataOperationType.ADD-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

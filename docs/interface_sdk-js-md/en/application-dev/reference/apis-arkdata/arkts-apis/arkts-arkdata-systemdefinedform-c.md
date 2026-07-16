@@ -1,11 +1,12 @@
 # SystemDefinedForm
 
-Represents the service widget data defined by the system. It is a child class of
-[SystemDefinedRecord](arkts-arkdata-systemdefinedrecord-c.md).
+Represents the service widget data defined by the system. It is a child class of [SystemDefinedRecord](arkts-arkdata-systemdefinedrecord-c.md).
 
 **Inheritance/Implementation:** SystemDefinedForm extends [SystemDefinedRecord](arkts-arkdata-systemdefinedrecord-c.md)
 
 **Since:** 10
+
+<!--Device-unifiedDataChannel-class SystemDefinedForm extends SystemDefinedRecord--><!--Device-unifiedDataChannel-class SystemDefinedForm extends SystemDefinedRecord-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -31,6 +32,8 @@ Indicates the ability name of form.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SystemDefinedForm-set abilityName(value: string)--><!--Device-SystemDefinedForm-set abilityName(value: string)-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## bundleName
@@ -48,6 +51,8 @@ Indicates the bundle name of form
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SystemDefinedForm-set bundleName(value: string)--><!--Device-SystemDefinedForm-set bundleName(value: string)-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -67,6 +72,8 @@ Indicates the id of form
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SystemDefinedForm-set formId(value: int)--><!--Device-SystemDefinedForm-set formId(value: int)-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## formName
@@ -85,6 +92,8 @@ Indicates the name of form
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SystemDefinedForm-set formName(value: string)--><!--Device-SystemDefinedForm-set formName(value: string)-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## module
@@ -102,6 +111,8 @@ Indicates the module of form
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SystemDefinedForm-set module(value: string)--><!--Device-SystemDefinedForm-set module(value: string)-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 

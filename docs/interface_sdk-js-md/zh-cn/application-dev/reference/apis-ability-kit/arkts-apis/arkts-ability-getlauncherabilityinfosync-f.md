@@ -1,5 +1,11 @@
 # getLauncherAbilityInfoSync
 
+## 导入模块
+
+```TypeScript
+import { launcherBundleManager } from '@kit.AbilityKit';
+```
+
 ## getLauncherAbilityInfoSync
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getLauncherAbilityInfoSync(bundleName: string, userId: number): Array<L
 **起始版本：** 18
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-launcherBundleManager-function getLauncherAbilityInfoSync(bundleName: string, userId: int): Array<LauncherAbilityInfo>--><!--Device-launcherBundleManager-function getLauncherAbilityInfoSync(bundleName: string, userId: int): Array<LauncherAbilityInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -25,7 +33,7 @@ function getLauncherAbilityInfoSync(bundleName: string, userId: number): Array<L
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;LauncherAbilityInfo&gt; | Array形式返回bundle包含的[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md)信息。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<LauncherAbilityInfo> | Array形式返回bundle包含的[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md)信息。 |
 
 **错误码：**
 

@@ -4,7 +4,15 @@ Provides preferred playback settings for player.
 
 **起始版本：** 12
 
+<!--Device-unnamed-interface PlaybackStrategy--><!--Device-unnamed-interface PlaybackStrategy-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
+
+## 导入模块
+
+```TypeScript
+import { media } from '@kit.MediaKit';
+```
 
 ## enableSuperResolution
 
@@ -12,14 +20,15 @@ Provides preferred playback settings for player.
 enableSuperResolution?: boolean
 ```
 
-Enable super-resolution feature. default is false.
-Must enable super-resolution feature before calling {@link #setSuperResolution} and {@link #setVideoWindowSize}.
+Enable super-resolution feature. default is false.Must enable super-resolution feature before calling {@link #setSuperResolution} and {@link #setVideoWindowSize}.
 
 **类型：** boolean
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlaybackStrategy-enableSuperResolution?: boolean--><!--Device-PlaybackStrategy-enableSuperResolution?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -29,14 +38,15 @@ Must enable super-resolution feature before calling {@link #setSuperResolution} 
 keepDecodingOnMute?: boolean
 ```
 
-Indicates whether to keep the decoder working when closing the media,
-which is used to facilitate quick opening of the media. Currently only supports video
+Indicates whether to keep the decoder working when closing the media,which is used to facilitate quick opening of the media. Currently only supports video
 
 **类型：** boolean
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlaybackStrategy-keepDecodingOnMute?: boolean--><!--Device-PlaybackStrategy-keepDecodingOnMute?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -52,6 +62,8 @@ mute the specified media stream when playing.
 
 **起始版本：** 12
 
+<!--Device-PlaybackStrategy-mutedMediaType?: MediaType--><!--Device-PlaybackStrategy-mutedMediaType?: MediaType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## preferredAudioLanguage
@@ -66,7 +78,9 @@ Audio language.
 
 **起始版本：** 13
 
-**元服务API：** 从API版本13开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlaybackStrategy-preferredAudioLanguage?: string--><!--Device-PlaybackStrategy-preferredAudioLanguage?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -78,14 +92,15 @@ preferredBufferDuration?: number
 
 Chooses a preferred buffer duration.
 
-<p>The preferred buffer duration in the playback policy, is used to set the buffer size. For details,
-see [Online Video Frame Freezing Optimization Practice](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-online-video-playback-lags-practice).</p>
+<p>The preferred buffer duration in the playback policy, is used to set the buffer size. For details,see [Online Video Frame Freezing Optimization Practice](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-online-video-playback-lags-practice).</p>
 
 **类型：** number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlaybackStrategy-preferredBufferDuration?: int--><!--Device-PlaybackStrategy-preferredBufferDuration?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -101,7 +116,9 @@ Customize the buffering threshold for start or restart playing. The unit is seco
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlaybackStrategy-preferredBufferDurationForPlaying?: double--><!--Device-PlaybackStrategy-preferredBufferDurationForPlaying?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -117,7 +134,9 @@ If true, the player should choose HDR stream if exist.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlaybackStrategy-preferredHdr?: boolean--><!--Device-PlaybackStrategy-preferredHdr?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -133,7 +152,9 @@ Choose a stream with height close to it.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlaybackStrategy-preferredHeight?: int--><!--Device-PlaybackStrategy-preferredHeight?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -149,7 +170,9 @@ Subtitle language.
 
 **起始版本：** 13
 
-**元服务API：** 从API版本13开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlaybackStrategy-preferredSubtitleLanguage?: string--><!--Device-PlaybackStrategy-preferredSubtitleLanguage?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -165,7 +188,9 @@ Choose a stream with width close to it.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlaybackStrategy-preferredWidth?: int--><!--Device-PlaybackStrategy-preferredWidth?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -181,7 +206,9 @@ Show first frame on prepare.
 
 **起始版本：** 17
 
-**元服务API：** 从API版本17开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlaybackStrategy-showFirstFrameOnPrepare?: boolean--><!--Device-PlaybackStrategy-showFirstFrameOnPrepare?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -191,14 +218,15 @@ Show first frame on prepare.
 thresholdForAutoQuickPlay?: number
 ```
 
-set max buffering threshold for liveStreaming or avplayer while change the speed.
-It is recommended that the value be 2 seconds greater than the starting waterline.
+set max buffering threshold for liveStreaming or avplayer while change the speed.It is recommended that the value be 2 seconds greater than the starting waterline.
 
 **类型：** number
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlaybackStrategy-thresholdForAutoQuickPlay?: double--><!--Device-PlaybackStrategy-thresholdForAutoQuickPlay?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 

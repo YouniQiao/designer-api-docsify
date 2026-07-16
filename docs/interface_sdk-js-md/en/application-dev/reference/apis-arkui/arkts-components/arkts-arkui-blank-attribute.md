@@ -8,6 +8,8 @@ The [universal events](arkts-arkui-commonmethod-c.md) are supported.
 
 **Since:** 7
 
+<!--Device-unnamed-declare class BlankAttribute extends CommonMethod<BlankAttribute>--><!--Device-unnamed-declare class BlankAttribute extends CommonMethod<BlankAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## color
@@ -16,8 +18,7 @@ The [universal events](arkts-arkui-commonmethod-c.md) are supported.
 color(value: ResourceColor)
 ```
 
-Sets the fill color of the **Blank** component. This attribute can be dynamically set using
-[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+Sets the fill color of the **Blank** component. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 7
 
@@ -25,11 +26,13 @@ Sets the fill color of the **Blank** component. This attribute can be dynamicall
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-BlankAttribute-color(value: ResourceColor): BlankAttribute--><!--Device-BlankAttribute-color(value: ResourceColor): BlankAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Color to fill the blank.<br>Default value: **Color.Transparent**<br>Invalid valuesare treated as the default value. |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color to fill the blank.<br>Default value: **Color.Transparent**<br>Invalid values are treated as the default value. |
 

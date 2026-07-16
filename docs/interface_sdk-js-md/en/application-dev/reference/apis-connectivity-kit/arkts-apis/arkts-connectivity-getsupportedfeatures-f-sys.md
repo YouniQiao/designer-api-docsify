@@ -12,12 +12,13 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getSupportedFeatures(): number
 ```
 
-Obtain the features supported by the device.
-To check whether this device supports a specified feature.
+Obtain the features supported by the device.To check whether this device supports a specified feature.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
+
+<!--Device-wifiManager-function getSupportedFeatures(): long--><!--Device-wifiManager-function getSupportedFeatures(): long-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.Core
 

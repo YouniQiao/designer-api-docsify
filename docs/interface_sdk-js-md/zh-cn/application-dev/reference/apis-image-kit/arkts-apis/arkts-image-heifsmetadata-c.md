@@ -8,7 +8,15 @@ HEIF序列图像元数据类，用于存储图像的元数据。
 
 **起始版本：** 23
 
+<!--Device-image-class HeifsMetadata implements Metadata--><!--Device-image-class HeifsMetadata implements Metadata-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
+
+## 导入模块
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+```
 
 ## clone
 
@@ -22,13 +30,15 @@ clone(): Promise<HeifsMetadata>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HeifsMetadata-clone(): Promise<HeifsMetadata>--><!--Device-HeifsMetadata-clone(): Promise<HeifsMetadata>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;HeifsMetadata&gt; | Promise对象，成功返回Heifs元数据实例。 |
+| Promise<HeifsMetadata> | Promise对象，成功返回Heifs元数据实例。 |
 
 ## createInstance
 
@@ -42,13 +52,15 @@ static createInstance(): HeifsMetadata
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HeifsMetadata-static createInstance(): HeifsMetadata--><!--Device-HeifsMetadata-static createInstance(): HeifsMetadata-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| HeifsMetadata | 返回HeifsMetadata的空实例。 |
+| [HeifsMetadata](arkts-image-heifsmetadata-c.md) | 返回HeifsMetadata的空实例。 |
 
 ## getAllProperties
 
@@ -64,13 +76,15 @@ getAllProperties(): Promise<Record<string, string | null>>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HeifsMetadata-getAllProperties(): Promise<Record<string, string | null>>--><!--Device-HeifsMetadata-getAllProperties(): Promise<Record<string, string | null>>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise对象，返回元数据拥有的所有属性的值。 |
+| Promise<Record<string, string \| null>> | Promise对象，返回元数据拥有的所有属性的值。 |
 
 ## getBlob
 
@@ -84,13 +98,15 @@ getBlob(): Promise<ArrayBuffer>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HeifsMetadata-getBlob(): Promise<ArrayBuffer>--><!--Device-HeifsMetadata-getBlob(): Promise<ArrayBuffer>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise对象，返回元数据的二进制数据。 |
+| Promise<ArrayBuffer> | Promise对象，返回元数据的二进制数据。 |
 
 ## getProperties
 
@@ -106,19 +122,21 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HeifsMetadata-getProperties(key: Array<string>): Promise<Record<string, string | null>>--><!--Device-HeifsMetadata-getProperties(key: Array<string>): Promise<Record<string, string | null>>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | Array&lt;string&gt; | 是 | 要获取的值的属性名称。 |
+| key | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 要获取的值的属性名称。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise对象，返回元数据要获取的属性的值，如果获取失败则返回错误码。 |
+| Promise<Record<string, string \| null>> | Promise对象，返回元数据要获取的属性的值，如果获取失败则返回错误码。 |
 
 **错误码：**
 
@@ -138,19 +156,21 @@ setBlob(blob: ArrayBuffer): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HeifsMetadata-setBlob(blob: ArrayBuffer): Promise<void>--><!--Device-HeifsMetadata-setBlob(blob: ArrayBuffer): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| blob | ArrayBuffer | 是 | 要替换的二进制数据。 |
+| blob | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | 要替换的二进制数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -172,19 +192,21 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HeifsMetadata-setProperties(records: Record<string, string | null>): Promise<void>--><!--Device-HeifsMetadata-setProperties(records: Record<string, string | null>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | 是 | 用户要修改HeifsMetadata对象的属性和值的键值对集合。 |
+| records | Record<string, string \| null> | 是 | 用户要修改HeifsMetadata对象的属性和值的键值对集合。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -210,6 +232,8 @@ HEIF序列图片的画布高度。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HeifsMetadata-readonly heifsCanvasHeight?: int--><!--Device-HeifsMetadata-readonly heifsCanvasHeight?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## heifsCanvasWidth
@@ -230,6 +254,8 @@ HEIF序列图片的画布宽度。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HeifsMetadata-readonly heifsCanvasWidth?: int--><!--Device-HeifsMetadata-readonly heifsCanvasWidth?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## heifsDelayTime
@@ -245,6 +271,8 @@ HEIF序列图片的每帧播放时长。单位为毫秒（ms）。
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HeifsMetadata-readonly heifsDelayTime?: int--><!--Device-HeifsMetadata-readonly heifsDelayTime?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -265,6 +293,8 @@ HEIF序列图片每帧未钳制的延迟时长。
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HeifsMetadata-readonly heifsUnclampedDelayTime?: int--><!--Device-HeifsMetadata-readonly heifsUnclampedDelayTime?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

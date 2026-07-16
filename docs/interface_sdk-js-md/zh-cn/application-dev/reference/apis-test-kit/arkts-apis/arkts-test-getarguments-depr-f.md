@@ -14,13 +14,15 @@ function getArguments(): AbilityDelegatorArgs
 
 **替代接口：** [getArguments](arkts-test-getarguments-f.md#getarguments-1)
 
+<!--Device-abilityDelegatorRegistry-function getArguments(): AbilityDelegatorArgs--><!--Device-abilityDelegatorRegistry-function getArguments(): AbilityDelegatorArgs-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AbilityDelegatorArgs | [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-i.md)对象。可以用来获取测试参数。 |
+| [AbilityDelegatorArgs](arkts-test-abilitydelegatorargs-t.md) | [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-i.md)对象。可以用来获取测试参数。 |
 
 **示例：**
 

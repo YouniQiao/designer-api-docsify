@@ -4,17 +4,23 @@
 
 数据存储采用键值对形式，键为字符串类型，值可为数字、字符串、布尔类型、数组、Uint8Array、object或bigint。
 
-用户首选项的持久化文件存储在[preferencesDir](../../../../application-models/application-context-stage.md#获取应用文件路径)路径下，创建preferences对象
-前，需要保证preferencesDir路径可读写。持久化文件存储路径中的[加密等级](../../apis-ability-kit/arkts-apis/arkts-ability-areamode-e.md)会影响文件的可读
-写状态，路径访问限制详见[应用文件目录与应用文件路径](../../../../file-management/app-sandbox-directory.md#应用文件目录与应用文件路径)。
+用户首选项的持久化文件存储在[preferencesDir](../../../../application-models/application-context-stage.md#获取应用文件路径)路径下，创建preferences对象前，需要保证preferencesDir路径可读写。持久化文件存储路径中的[加密等级](../../apis-ability-kit/arkts-apis/arkts-ability-areamode-e.md)会影响文件的可读写状态，路径访问限制详见[应用文件目录与应用文件路径](../../../../file-management/app-sandbox-directory.md#应用文件目录与应用文件路径)。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 首选项无法保证进程并发安全，会有文件损坏和数据丢失的风险，不支持在多进程场景下使用。
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace preferences--><!--Device-unnamed-declare namespace preferences-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
+
+## 导入模块
+
+```TypeScript
+import { preferences } from '@kit.ArkData';
+```
 
 ## 汇总
 
@@ -50,7 +56,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [StorageType](arkts-arkdata-storagetype-e.md) | Preferences的存储模式枚举。@link preferences.isStorageTypeSupported}检查当前平台是否支持对应存储模式。&gt;&gt; - 当选择某一模式通过[preferences.getPreferences](arkts-arkdata-getpreferences-f.md#getpreferences-1)接口获取实例后，不允许中途切换模式。&gt;&gt; - 首选项不支持不同模式间数据的迁移，若需将数据从一种模式切换至另一种模式，需通过读写首选项的形式进行数据迁移。&gt;&gt; - 若需要变更首选项的存储路径，不能通过移动或覆盖文件的方式进行，需通过读写首选项的形式进行数据迁移。 |
+| [StorageType](arkts-arkdata-storagetype-e.md) | Preferences的存储模式枚举。 |
 
 ### 类型
 

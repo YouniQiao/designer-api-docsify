@@ -12,5 +12,7 @@ The [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-commo
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-unnamed-declare class FormLinkAttribute extends CommonMethod<FormLinkAttribute>--><!--Device-unnamed-declare class FormLinkAttribute extends CommonMethod<FormLinkAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

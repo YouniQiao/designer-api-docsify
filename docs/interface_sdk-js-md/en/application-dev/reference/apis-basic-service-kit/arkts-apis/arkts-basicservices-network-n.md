@@ -1,9 +1,10 @@
 # network
 
-Provides methods for setting network information, including the data roaming status, HTTP proxy configurations,
-and preferred networks.
+Provides methods for setting network information, including the data roaming status, HTTP proxy configurations,and preferred networks.
 
 **Since:** 7
+
+<!--Device-settings-namespace network--><!--Device-settings-namespace network-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 

@@ -4,6 +4,8 @@ Represents a custom policy.
 
 **Since:** 21
 
+<!--Device-dlpPermission-export interface CustomProperty--><!--Device-dlpPermission-export interface CustomProperty-End-->
+
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **System API:** This is a system API.
@@ -27,6 +29,8 @@ Query options about an enterprise DLP file. This parameter is left blank by defa
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CustomProperty-options?: DlpFileQueryOptions--><!--Device-CustomProperty-options?: DlpFileQueryOptions-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 

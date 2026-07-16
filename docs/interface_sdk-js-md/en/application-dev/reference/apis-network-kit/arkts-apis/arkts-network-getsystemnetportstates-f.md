@@ -12,8 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function getSystemNetPortStates(): Promise<NetPortStatesInfo>
 ```
 
-Obtains the port states of system network.
-To invoke this method, you must have the {@code ohos.permission.GET_IP_MAC_INFO} permission.
+Obtains the port states of system network.To invoke this method, you must have the {@code ohos.permission.GET_IP_MAC_INFO} permission.
 
 **Since:** 24
 
@@ -21,13 +20,15 @@ To invoke this method, you must have the {@code ohos.permission.GET_IP_MAC_INFO}
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function getSystemNetPortStates(): Promise<NetPortStatesInfo>--><!--Device-connection-function getSystemNetPortStates(): Promise<NetPortStatesInfo>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetPortStatesInfo&gt; | Returns the port status of system network. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetPortStatesInfo> | Returns the port status of system network. |
 
 **Error codes:**
 

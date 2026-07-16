@@ -1,5 +1,11 @@
 # getImagePackerSupportedFormats
 
+## 导入模块
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+```
+
 ## getImagePackerSupportedFormats
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getImagePackerSupportedFormats(): string[]
 获取支持编码的图片格式，图片格式以mime type表示。
 
 **起始版本：** 20
+
+<!--Device-image-function getImagePackerSupportedFormats(): string[]--><!--Device-image-function getImagePackerSupportedFormats(): string[]-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 

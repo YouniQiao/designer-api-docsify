@@ -4,6 +4,8 @@ Definition of color mode of picker
 
 **Since:** 12
 
+<!--Device-unnamed-export declare enum AVCastPickerColorMode--><!--Device-unnamed-export declare enum AVCastPickerColorMode-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## AUTO
@@ -17,6 +19,8 @@ Auto mode that follows the system definition.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCastPickerColorMode-AUTO--><!--Device-AVCastPickerColorMode-AUTO-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -32,6 +36,8 @@ Dark mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVCastPickerColorMode-DARK--><!--Device-AVCastPickerColorMode-DARK-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## LIGHT
@@ -45,6 +51,8 @@ Light mode.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCastPickerColorMode-LIGHT--><!--Device-AVCastPickerColorMode-LIGHT-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 

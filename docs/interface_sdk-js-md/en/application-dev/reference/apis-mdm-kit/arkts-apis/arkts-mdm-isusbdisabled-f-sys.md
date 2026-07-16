@@ -24,6 +24,8 @@ Queries whether the USB is disabled.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-usbManager-function isUsbDisabled(admin: Want): boolean--><!--Device-usbManager-function isUsbDisabled(admin: Want): boolean-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -32,7 +34,7 @@ Queries whether the USB is disabled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 
 **Return value:**
 

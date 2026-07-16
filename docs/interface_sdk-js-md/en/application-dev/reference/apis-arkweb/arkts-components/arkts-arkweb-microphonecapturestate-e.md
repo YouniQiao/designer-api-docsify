@@ -4,6 +4,8 @@ Enumerates the microphone capture states.
 
 **Since:** 23
 
+<!--Device-unnamed-declare enum MicrophoneCaptureState--><!--Device-unnamed-declare enum MicrophoneCaptureState-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## NONE
@@ -15,6 +17,8 @@ NONE = 0
 The microphone is not working.
 
 **Since:** 23
+
+<!--Device-MicrophoneCaptureState-NONE = 0--><!--Device-MicrophoneCaptureState-NONE = 0-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -28,6 +32,8 @@ The microphone is paused.
 
 **Since:** 23
 
+<!--Device-MicrophoneCaptureState-PAUSED = 1--><!--Device-MicrophoneCaptureState-PAUSED = 1-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## ACTIVE
@@ -39,6 +45,8 @@ ACTIVE = 2
 The microphone is active.
 
 **Since:** 23
+
+<!--Device-MicrophoneCaptureState-ACTIVE = 2--><!--Device-MicrophoneCaptureState-ACTIVE = 2-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

@@ -12,14 +12,13 @@ import { appManager } from '@kit.AbilityKit';
 function getKeepAliveAppServiceExtensions(): Promise<Array<KeepAliveBundleInfo>>
 ```
 
-Obtains information about all AppServiceExtensionAbility components that are kept alive. The information is defined
-by [KeepAliveBundleInfo](arkts-ability-keepalivebundleinfo-i-sys.md). This API uses a promise to return the result.
-This API can be properly called on PCs/2-in-1 devices. If it is called on other devices, error code 801 is
-returned.
+Obtains information about all AppServiceExtensionAbility components that are kept alive. The information is defined by [KeepAliveBundleInfo](arkts-ability-keepalivebundleinfo-i-sys.md). This API uses a promise to return the result.This API can be properly called on PCs/2-in-1 devices. If it is called on other devices, error code 801 is returned.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.MANAGE_APP_KEEP_ALIVE
+
+<!--Device-appManager-function getKeepAliveAppServiceExtensions(): Promise<Array<KeepAliveBundleInfo>>--><!--Device-appManager-function getKeepAliveAppServiceExtensions(): Promise<Array<KeepAliveBundleInfo>>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -29,7 +28,7 @@ returned.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;KeepAliveBundleInfo&gt;&gt; | Promise used to return the array of keep-alive application information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<KeepAliveBundleInfo>> | Promise used to return the array of keep-alive application information. |
 
 **Error codes:**
 

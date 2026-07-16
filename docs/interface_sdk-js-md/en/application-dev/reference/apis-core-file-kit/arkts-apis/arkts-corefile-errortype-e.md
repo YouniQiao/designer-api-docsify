@@ -2,16 +2,14 @@
 
 Enumerates the device-cloud sync errors.
 
-- In the current phase, **NETWORK_UNAVAILABLE** is returned only when the mobile data network and Wi-Fi are
-unavailable. If the mobile data network is available, the synchronization can be performed normally.
-- During the sync process, if the battery level is lower than 10% in non-charging scenarios, **BATTERY_LEVEL_LOW**
-will be return when the current upload is complete.
-- When sync is being triggered, if the battery level is lower than 10% in non-charging scenarios, sync is not
-allowed.
-- If the cloud space is insufficient when a file is uploaded, the upload will fail and there is no such a file in
-the cloud.
+- In the current phase, **NETWORK_UNAVAILABLE** is returned only when the mobile data network and Wi-Fi are unavailable. If the mobile data network is available, the synchronization can be performed normally.  
+- During the sync process, if the battery level is lower than 10% in non-charging scenarios, **BATTERY_LEVEL_LOW** will be return when the current upload is complete.  
+- When sync is being triggered, if the battery level is lower than 10% in non-charging scenarios, sync is not allowed.  
+- If the cloud space is insufficient when a file is uploaded, the upload will fail and there is no such a file in the cloud.
 
 **Since:** 12
+
+<!--Device-cloudSync-enum ErrorType--><!--Device-cloudSync-enum ErrorType-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -25,6 +23,8 @@ No error.
 
 **Since:** 12
 
+<!--Device-ErrorType-NO_ERROR = 0--><!--Device-ErrorType-NO_ERROR = 0-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## NETWORK_UNAVAILABLE
@@ -36,6 +36,8 @@ NETWORK_UNAVAILABLE = 1
 No network is available.
 
 **Since:** 12
+
+<!--Device-ErrorType-NETWORK_UNAVAILABLE = 1--><!--Device-ErrorType-NETWORK_UNAVAILABLE = 1-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -49,6 +51,8 @@ Wi-Fi is unavailable.
 
 **Since:** 12
 
+<!--Device-ErrorType-WIFI_UNAVAILABLE = 2--><!--Device-ErrorType-WIFI_UNAVAILABLE = 2-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## BATTERY_LEVEL_LOW
@@ -60,6 +64,8 @@ BATTERY_LEVEL_LOW = 3
 The battery level is lower than 10%.
 
 **Since:** 12
+
+<!--Device-ErrorType-BATTERY_LEVEL_LOW = 3--><!--Device-ErrorType-BATTERY_LEVEL_LOW = 3-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -73,6 +79,8 @@ The battery level is lower than 15%.
 
 **Since:** 12
 
+<!--Device-ErrorType-BATTERY_LEVEL_WARNING = 4--><!--Device-ErrorType-BATTERY_LEVEL_WARNING = 4-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## CLOUD_STORAGE_FULL
@@ -84,6 +92,8 @@ CLOUD_STORAGE_FULL = 5
 The cloud space is insufficient.
 
 **Since:** 12
+
+<!--Device-ErrorType-CLOUD_STORAGE_FULL = 5--><!--Device-ErrorType-CLOUD_STORAGE_FULL = 5-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -97,6 +107,8 @@ The local space is insufficient.
 
 **Since:** 12
 
+<!--Device-ErrorType-LOCAL_STORAGE_FULL = 6--><!--Device-ErrorType-LOCAL_STORAGE_FULL = 6-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## DEVICE_TEMPERATURE_TOO_HIGH
@@ -109,6 +121,8 @@ The device temperature is too high.
 
 **Since:** 12
 
+<!--Device-ErrorType-DEVICE_TEMPERATURE_TOO_HIGH = 7--><!--Device-ErrorType-DEVICE_TEMPERATURE_TOO_HIGH = 7-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## REMOTE_SERVER_ABNORMAL
@@ -120,6 +134,8 @@ REMOTE_SERVER_ABNORMAL = 8
 The remote service is unavailable.
 
 **Since:** 20
+
+<!--Device-ErrorType-REMOTE_SERVER_ABNORMAL = 8--><!--Device-ErrorType-REMOTE_SERVER_ABNORMAL = 8-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

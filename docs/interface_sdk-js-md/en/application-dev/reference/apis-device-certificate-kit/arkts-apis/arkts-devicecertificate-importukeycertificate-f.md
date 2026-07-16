@@ -20,6 +20,8 @@ Import the certificate to the USB Key.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-certificateManager-function importUkeyCertificate(keyUri: string, cert: Uint8Array, ukeyInfo: UkeyInfo): Promise<void>--><!--Device-certificateManager-function importUkeyCertificate(keyUri: string, cert: Uint8Array, ukeyInfo: UkeyInfo): Promise<void>-End-->
+
 **System capability:** SystemCapability.Security.CertificateManager
 
 **Parameters:**
@@ -27,14 +29,14 @@ Import the certificate to the USB Key.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyUri | string | Yes | Indicates the USB Key credentials URI.<br>The maximum length is 256 and cannot be empty.<br>The keyUri parameter identifies a certificate entity, which can be obtained<br>by calling the [getUkeyCertificateList](arkts-devicecertificate-getukeycertificatelist-f.md#getukeycertificatelist-1) interface. |
-| cert | Uint8Array | Yes | Indicates the certificate data to be imported.<br>The maximum length is 10240 and cannot be empty.<br>The certificate data format complies with the Smart Key Framework (SKF) specifications. |
-| ukeyInfo | UkeyInfo | Yes | Indicates USB Key certificate attribute information.<br>UkeyInfo.CertificatePurpose can only be set to PURPOSE_SIGN, PURPOSE_ENCRYPT or PURPOSE_DEFAULT. |
+| cert | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Indicates the certificate data to be imported.<br>The maximum length is 10240 and cannot be empty.<br>The certificate data format complies with the Smart Key Framework (SKF) specifications. |
+| ukeyInfo | [UkeyInfo](arkts-devicecertificate-ukeyinfo-i.md) | Yes | Indicates USB Key certificate attribute information.<br>UkeyInfo.CertificatePurpose can only be set to PURPOSE_SIGN, PURPOSE_ENCRYPT or PURPOSE_DEFAULT. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Defines the accessibility options of the symbol-type suffix icon.
 
 **Since:** 14
 
+<!--Device-unnamed-export interface ChipSuffixSymbolGlyphOptions--><!--Device-unnamed-export interface ChipSuffixSymbolGlyphOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Default value: **undefined**
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-ChipSuffixSymbolGlyphOptions-action?: VoidCallback--><!--Device-ChipSuffixSymbolGlyphOptions-action?: VoidCallback-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## activatedAccessibility
@@ -50,6 +54,8 @@ Default value: **undefined**
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-ChipSuffixSymbolGlyphOptions-activatedAccessibility?: AccessibilityOptions--><!--Device-ChipSuffixSymbolGlyphOptions-activatedAccessibility?: AccessibilityOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## normalAccessibility
@@ -69,6 +75,8 @@ Default value: **undefined**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ChipSuffixSymbolGlyphOptions-normalAccessibility?: AccessibilityOptions--><!--Device-ChipSuffixSymbolGlyphOptions-normalAccessibility?: AccessibilityOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

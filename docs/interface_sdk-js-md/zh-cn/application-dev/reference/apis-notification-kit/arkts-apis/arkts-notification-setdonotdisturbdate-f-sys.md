@@ -18,6 +18,8 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, callback: AsyncCallback<voi
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function setDoNotDisturbDate(date: DoNotDisturbDate, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function setDoNotDisturbDate(date: DoNotDisturbDate, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,8 +28,8 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, callback: AsyncCallback<voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | DoNotDisturbDate | 是 | 免打扰时间选项。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 设置免打扰时间回调函数。 |
+| date | [DoNotDisturbDate](arkts-notification-donotdisturbdate-i-sys.md) | 是 | 免打扰时间选项。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 设置免打扰时间回调函数。 |
 
 **错误码：**
 
@@ -78,6 +80,8 @@ function setDoNotDisturbDate(date: DoNotDisturbDate): Promise<void>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function setDoNotDisturbDate(date: DoNotDisturbDate): Promise<void>--><!--Device-notificationManager-function setDoNotDisturbDate(date: DoNotDisturbDate): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -86,13 +90,13 @@ function setDoNotDisturbDate(date: DoNotDisturbDate): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | DoNotDisturbDate | 是 | 免打扰时间选项。 |
+| date | [DoNotDisturbDate](arkts-notification-donotdisturbdate-i-sys.md) | 是 | 免打扰时间选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -138,6 +142,8 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number, callback: A
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function setDoNotDisturbDate(date: DoNotDisturbDate, userId: int, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function setDoNotDisturbDate(date: DoNotDisturbDate, userId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -146,9 +152,9 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number, callback: A
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | DoNotDisturbDate | 是 | 免打扰时间选项。 |
+| date | [DoNotDisturbDate](arkts-notification-donotdisturbdate-i-sys.md) | 是 | 免打扰时间选项。 |
 | userId | number | 是 | 设置免打扰时间的用户ID。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 设置免打扰时间回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 设置免打扰时间回调函数。 |
 
 **错误码：**
 
@@ -203,6 +209,8 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number): Promise<vo
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function setDoNotDisturbDate(date: DoNotDisturbDate, userId: int): Promise<void>--><!--Device-notificationManager-function setDoNotDisturbDate(date: DoNotDisturbDate, userId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -211,14 +219,14 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number): Promise<vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | DoNotDisturbDate | 是 | 免打扰时间选项。 |
+| date | [DoNotDisturbDate](arkts-notification-donotdisturbdate-i-sys.md) | 是 | 免打扰时间选项。 |
 | userId | number | 是 | 设置免打扰时间的用户ID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

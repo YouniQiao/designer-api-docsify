@@ -4,13 +4,21 @@
 
 在使用AudioVolumeManager的接口之前，需先通过[getVolumeManager](arkts-audio-audiomanager-i.md#getvolumemanager-1)获取AudioVolumeManager实例。
 
-> **说明：**
->
+> **说明：**  
+>  
 > - 本Interface首批接口从API version 9开始支持。
 
 **起始版本：** 9
 
+<!--Device-audio-interface AudioVolumeManager--><!--Device-audio-interface AudioVolumeManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## forceVolumeKeyControlType
 
@@ -24,6 +32,8 @@ Interface for forcibly setting the volume type by pressing the volume key.
 
 **需要权限：** ohos.permission.MODIFY_AUDIO_SETTINGS
 
+<!--Device-AudioVolumeManager-forceVolumeKeyControlType(volumeType: AudioVolumeType, duration: int): void--><!--Device-AudioVolumeManager-forceVolumeKeyControlType(volumeType: AudioVolumeType, duration: int): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -32,8 +42,8 @@ Interface for forcibly setting the volume type by pressing the volume key.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | Audio volume typethat the application expects to control using the volume key. |
-| duration | number | 是 | Duration for continuing to control the volume type when no key is pressed.The forced volume type setting is released when the timer expires. Unit is second, the maximumduration is 10 seconds.If the duration is set to -1, the setting is canceled. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | 是 | Audio volume type that the application expects to control using the volume key. |
+| duration | number | 是 | Duration for continuing to control the volume type when no key is pressed.The forced volume type setting is released when the timer expires. Unit is second, the maximum duration is 10 seconds.If the duration is set to -1, the setting is canceled. |
 
 **错误码：**
 
@@ -76,6 +86,8 @@ getActiveStreamsVolumeInfo(): ActiveStreamsVolumeInfoArray
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioVolumeManager-getActiveStreamsVolumeInfo(): ActiveStreamsVolumeInfoArray--><!--Device-AudioVolumeManager-getActiveStreamsVolumeInfo(): ActiveStreamsVolumeInfoArray-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -84,7 +96,7 @@ getActiveStreamsVolumeInfo(): ActiveStreamsVolumeInfoArray
 
 | 类型 | 说明 |
 | --- | --- |
-| ActiveStreamsVolumeInfoArray | Returns the result. |
+| [ActiveStreamsVolumeInfoArray](arkts-audio-activestreamsvolumeinfoarray-t-sys.md) | Returns the result. |
 
 **错误码：**
 
@@ -105,6 +117,8 @@ Get the volume for specified app with range from 0 to 100. Applications with sam
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
 
+<!--Device-AudioVolumeManager-getAppVolumePercentageForUid(uid: int): Promise<int>--><!--Device-AudioVolumeManager-getAppVolumePercentageForUid(uid: int): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -119,7 +133,7 @@ Get the volume for specified app with range from 0 to 100. Applications with sam
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. |
+| Promise<number> | Promise used to return the result. |
 
 **错误码：**
 
@@ -150,6 +164,8 @@ Obtains volume type by stream type.
 
 **起始版本：** 20
 
+<!--Device-AudioVolumeManager-getAudioVolumeTypeByStreamUsage(streamUsage: StreamUsage): AudioVolumeType--><!--Device-AudioVolumeManager-getAudioVolumeTypeByStreamUsage(streamUsage: StreamUsage): AudioVolumeType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -158,13 +174,13 @@ Obtains volume type by stream type.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| streamUsage | StreamUsage | 是 | Audio stream type. |
+| streamUsage | [StreamUsage](arkts-audio-streamusage-e-sys.md) | 是 | Audio stream type. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AudioVolumeType | Return the audio volume type. |
+| [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | Return the audio volume type. |
 
 **错误码：**
 
@@ -183,6 +199,8 @@ Obtains the maximum volume allowed for a volume type.
 
 **起始版本：** 20
 
+<!--Device-AudioVolumeManager-getMaxSystemVolume(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeManager-getMaxSystemVolume(volumeType: AudioVolumeType): int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -191,7 +209,7 @@ Obtains the maximum volume allowed for a volume type.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | 是 | Audio volume type. |
 
 **返回值：**
 
@@ -216,6 +234,8 @@ Obtains the minimum volume allowed for a volume type.
 
 **起始版本：** 20
 
+<!--Device-AudioVolumeManager-getMinSystemVolume(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeManager-getMinSystemVolume(volumeType: AudioVolumeType): int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -224,7 +244,7 @@ Obtains the minimum volume allowed for a volume type.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | 是 | Audio volume type. |
 
 **返回值：**
 
@@ -249,6 +269,8 @@ Gets the minimum system volume percentage application can set for specified volu
 
 **起始版本：** 23
 
+<!--Device-AudioVolumeManager-getMinSystemVolumePercentage(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeManager-getMinSystemVolumePercentage(volumeType: AudioVolumeType): int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -257,7 +279,7 @@ Gets the minimum system volume percentage application can set for specified volu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | Audio volume type to get. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | 是 | Audio volume type to get. |
 
 **返回值：**
 
@@ -295,6 +317,8 @@ Obtains stream types by volume type.
 
 **起始版本：** 20
 
+<!--Device-AudioVolumeManager-getStreamUsagesByVolumeType(volumeType: AudioVolumeType): StreamUsageArray--><!--Device-AudioVolumeManager-getStreamUsagesByVolumeType(volumeType: AudioVolumeType): StreamUsageArray-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -303,13 +327,13 @@ Obtains stream types by volume type.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | Audio stream type. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | 是 | Audio stream type. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| StreamUsageArray | Return the audio stream types. |
+| [StreamUsageArray](arkts-audio-streamusagearray-t-sys.md) | Return the audio stream types. |
 
 **错误码：**
 
@@ -328,6 +352,8 @@ Obtains system supported volume types.
 
 **起始版本：** 20
 
+<!--Device-AudioVolumeManager-getSupportedAudioVolumeTypes(): Array<Readonly<AudioVolumeType>>--><!--Device-AudioVolumeManager-getSupportedAudioVolumeTypes(): Array<Readonly<AudioVolumeType>>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -336,7 +362,7 @@ Obtains system supported volume types.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Readonly&lt;AudioVolumeType&gt;&gt; | Return the system volume type array. |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Readonly<AudioVolumeType>> | Return the system volume type array. |
 
 **错误码：**
 
@@ -354,6 +380,8 @@ Obtains the volume of a volume type.
 
 **起始版本：** 20
 
+<!--Device-AudioVolumeManager-getSystemVolume(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeManager-getSystemVolume(volumeType: AudioVolumeType): int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -362,7 +390,7 @@ Obtains the volume of a volume type.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | 是 | Audio volume type. |
 
 **返回值：**
 
@@ -387,6 +415,8 @@ Obtains the volume of streams in specific uid application.
 
 **起始版本：** 20
 
+<!--Device-AudioVolumeManager-getSystemVolumeByUid(volumeType: AudioVolumeType, callingUid: int): int--><!--Device-AudioVolumeManager-getSystemVolumeByUid(volumeType: AudioVolumeType, callingUid: int): int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -395,7 +425,7 @@ Obtains the volume of streams in specific uid application.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | 是 | Audio volume type. |
 | callingUid | number | 是 | Uid of the stream owner. |
 
 **返回值：**
@@ -422,6 +452,8 @@ Gets the current system volume percentage for specified volume type.
 
 **起始版本：** 23
 
+<!--Device-AudioVolumeManager-getSystemVolumePercentage(volumeType: AudioVolumeType): int--><!--Device-AudioVolumeManager-getSystemVolumePercentage(volumeType: AudioVolumeType): int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -430,7 +462,7 @@ Gets the current system volume percentage for specified volume type.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | Audio volume type to get. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | 是 | Audio volume type to get. |
 
 **返回值：**
 
@@ -468,6 +500,8 @@ Get the volume group list for a networkId. This method uses an asynchronous call
 
 **起始版本：** 9
 
+<!--Device-AudioVolumeManager-getVolumeGroupInfos(networkId: string, callback: AsyncCallback<VolumeGroupInfos>): void--><!--Device-AudioVolumeManager-getVolumeGroupInfos(networkId: string, callback: AsyncCallback<VolumeGroupInfos>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -477,7 +511,7 @@ Get the volume group list for a networkId. This method uses an asynchronous call
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | networkId | string | 是 | Distributed deice net work id |
-| callback | AsyncCallback&lt;VolumeGroupInfos&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<VolumeGroupInfos> | 是 | Callback used to return the result. |
 
 **示例：**
 
@@ -504,6 +538,8 @@ Get the volume group list for a networkId. This method uses a promise to return 
 
 **起始版本：** 9
 
+<!--Device-AudioVolumeManager-getVolumeGroupInfos(networkId: string): Promise<VolumeGroupInfos>--><!--Device-AudioVolumeManager-getVolumeGroupInfos(networkId: string): Promise<VolumeGroupInfos>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -518,7 +554,7 @@ Get the volume group list for a networkId. This method uses a promise to return 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;VolumeGroupInfos&gt; | Promise used to return the result. |
+| Promise<VolumeGroupInfos> | Promise used to return the result. |
 
 **示例：**
 
@@ -540,6 +576,8 @@ Get the volume group list for a networkId.
 
 **起始版本：** 10
 
+<!--Device-AudioVolumeManager-getVolumeGroupInfosSync(networkId: string): VolumeGroupInfos--><!--Device-AudioVolumeManager-getVolumeGroupInfosSync(networkId: string): VolumeGroupInfos-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -554,7 +592,7 @@ Get the volume group list for a networkId.
 
 | 类型 | 说明 |
 | --- | --- |
-| VolumeGroupInfos | Volume group info list. |
+| [VolumeGroupInfos](arkts-audio-volumegroupinfos-t-sys.md) | Volume group info list. |
 
 **错误码：**
 
@@ -588,6 +626,8 @@ Gets the volume db value that system calculate by volume type, volume level and 
 
 **起始版本：** 20
 
+<!--Device-AudioVolumeManager-getVolumeInUnitOfDb(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType): double--><!--Device-AudioVolumeManager-getVolumeInUnitOfDb(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType): double-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -596,9 +636,9 @@ Gets the volume db value that system calculate by volume type, volume level and 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | 是 | Audio volume type. |
 | volumeLevel | number | 是 | Volume level to set. |
-| device | DeviceType | 是 | Output device type. |
+| device | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-devicetype-e.md) | 是 | Output device type. |
 
 **返回值：**
 
@@ -619,12 +659,13 @@ Gets the volume db value that system calculate by volume type, volume level and 
 isAppVolumeMutedForUid(uid: number, owned: boolean): Promise<boolean>
 ```
 
-Checks whether the app volume is muted. If there are multiple callers setting muted states,
-only when all callers cancel muted state the volume of this app will be truly unmuted.
+Checks whether the app volume is muted. If there are multiple callers setting muted states,only when all callers cancel muted state the volume of this app will be truly unmuted.
 
 **起始版本：** 19
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioVolumeManager-isAppVolumeMutedForUid(uid: int, owned: boolean): Promise<boolean>--><!--Device-AudioVolumeManager-isAppVolumeMutedForUid(uid: int, owned: boolean): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -635,13 +676,13 @@ only when all callers cancel muted state the volume of this app will be truly un
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uid | number | 是 | App's uid. |
-| owned | boolean | 是 | If true is passed, the result will be indicated your owned muted statesettings to this app. Otherwise if false is passed, the result will be indicated the real muted state. |
+| owned | boolean | 是 | If true is passed, the result will be indicated your owned muted state settings to this app. Otherwise if false is passed, the result will be indicated the real muted state. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. |
+| Promise<boolean> | Promise used to return the result. |
 
 **错误码：**
 
@@ -672,6 +713,8 @@ Checks whether a volume type is muted.
 
 **起始版本：** 20
 
+<!--Device-AudioVolumeManager-isSystemMuted(volumeType: AudioVolumeType): boolean--><!--Device-AudioVolumeManager-isSystemMuted(volumeType: AudioVolumeType): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -680,13 +723,13 @@ Checks whether a volume type is muted.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | 是 | Audio volume type. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | The mute status of the volume type. The value truemeans that the volume type is muted, and false means the opposite. |
+| boolean | The mute status of the volume type. The value true means that the volume type is muted, and false means the opposite. |
 
 **错误码：**
 
@@ -707,6 +750,8 @@ Unsubscribes to the app volume change events..
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
 
+<!--Device-AudioVolumeManager-off(type: 'appVolumeChangeForUid', callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'appVolumeChangeForUid', callback?: Callback<VolumeEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -715,8 +760,8 @@ Unsubscribes to the app volume change events..
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'appVolumeChangeForUid' | 是 | Type of the event to be unregistered. Only the appVolumeChangeForUidevent is supported. |
-| callback | Callback&lt;VolumeEvent&gt; | 否 | Callback used to obtain the invoking volume change event. |
+| type | 'appVolumeChangeForUid' | 是 | Type of the event to be unregistered. Only the appVolumeChangeForUid event is supported. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VolumeEvent> | 否 | Callback used to obtain the invoking volume change event. |
 
 **错误码：**
 
@@ -755,6 +800,8 @@ off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void
 
 **起始版本：** 20
 
+<!--Device-AudioVolumeManager-off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void--><!--Device-AudioVolumeManager-off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -764,7 +811,7 @@ off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'activeVolumeTypeChange' | 是 | Type of the event to unregister. |
-| callback | Callback&lt;AudioVolumeType&gt; | 否 | Callback used to return the active volume type. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioVolumeType> | 否 | Callback used to return the active volume type. |
 
 **错误码：**
 
@@ -800,6 +847,8 @@ Unsubscribes to the system volume change events.
 
 **起始版本：** 20
 
+<!--Device-AudioVolumeManager-off(type: 'systemVolumeChange', callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'systemVolumeChange', callback?: Callback<VolumeEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -809,7 +858,7 @@ Unsubscribes to the system volume change events.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'systemVolumeChange' | 是 | Type of the event to be unregistered.Only the systemVolumeChange event is supported. |
-| callback | Callback&lt;VolumeEvent&gt; | 否 | Callback used to obtain the invoking volume change event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VolumeEvent> | 否 | Callback used to obtain the invoking volume change event. |
 
 **错误码：**
 
@@ -847,6 +896,8 @@ offSystemVolumeChangeByFilter(callback?: Callback<VolumeEvent>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioVolumeManager-offSystemVolumeChangeByFilter(callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-offSystemVolumeChangeByFilter(callback?: Callback<VolumeEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -855,7 +906,7 @@ offSystemVolumeChangeByFilter(callback?: Callback<VolumeEvent>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;VolumeEvent&gt; | 否 | 订阅中使用的回调。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VolumeEvent> | 否 | 订阅中使用的回调。 |
 
 **错误码：**
 
@@ -874,6 +925,8 @@ Unsubscribes from system volume percentage change events.
 
 **起始版本：** 23
 
+<!--Device-AudioVolumeManager-offVolumePercentageChange(callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-offVolumePercentageChange(callback?: Callback<VolumeEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -882,7 +935,7 @@ Unsubscribes from system volume percentage change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;VolumeEvent&gt; | 否 | Callback used to return the system volume percentage change event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VolumeEvent> | 否 | Callback used to return the system volume percentage change event. |
 
 **错误码：**
 
@@ -917,12 +970,13 @@ audioVolumeManager.offVolumePercentageChange(volumePercentageChangeCallback);
 on(type: 'appVolumeChangeForUid', uid: number, callback: Callback<VolumeEvent>): void
 ```
 
-Listens for specified app volume change events.
-The app volume may changed by {@link setAppVolumePercentageForUid}.
+Listens for specified app volume change events.The app volume may changed by {@link setAppVolumePercentageForUid}.
 
 **起始版本：** 19
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioVolumeManager-on(type: 'appVolumeChangeForUid', uid: int, callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-on(type: 'appVolumeChangeForUid', uid: int, callback: Callback<VolumeEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -932,9 +986,9 @@ The app volume may changed by {@link setAppVolumePercentageForUid}.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'appVolumeChangeForUid' | 是 | Type of the event to listen for. Only theappVolumeChangeForUid event is supported. |
+| type | 'appVolumeChangeForUid' | 是 | Type of the event to listen for. Only the appVolumeChangeForUid event is supported. |
 | uid | number | 是 | The app's uid. |
-| callback | Callback&lt;VolumeEvent&gt; | 是 | Callback used to get the app volume change event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VolumeEvent> | 是 | Callback used to get the app volume change event. |
 
 **错误码：**
 
@@ -967,6 +1021,8 @@ on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void
 
 **起始版本：** 20
 
+<!--Device-AudioVolumeManager-on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void--><!--Device-AudioVolumeManager-on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -976,7 +1032,7 @@ on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'activeVolumeTypeChange' | 是 | Type of the event to listen for. |
-| callback | Callback&lt;AudioVolumeType&gt; | 是 | Callback used to return the active volume type. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioVolumeType> | 是 | Callback used to return the active volume type. |
 
 **错误码：**
 
@@ -1004,6 +1060,8 @@ Listens for system volume change events. This method uses a callback to get volu
 
 **起始版本：** 20
 
+<!--Device-AudioVolumeManager-on(type: 'systemVolumeChange', callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-on(type: 'systemVolumeChange', callback: Callback<VolumeEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -1013,7 +1071,7 @@ Listens for system volume change events. This method uses a callback to get volu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'systemVolumeChange' | 是 | Type of the event to listen for.Only the systemVolumeChange event is supported. |
-| callback | Callback&lt;VolumeEvent&gt; | 是 | Callback used to get the system volume change event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VolumeEvent> | 是 | Callback used to get the system volume change event. |
 
 **错误码：**
 
@@ -1037,12 +1095,13 @@ audioVolumeManager.on('systemVolumeChange', (volumeEvent: audio.VolumeEvent) => 
 onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<VolumeEvent>): void
 ```
 
-订阅系统音量变化事件。当系统体积为目标时
-系统卷过滤器更改，已注册的客户端将收到回调。
+订阅系统音量变化事件。当系统体积为目标时系统卷过滤器更改，已注册的客户端将收到回调。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioVolumeManager-onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<VolumeEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -1052,8 +1111,8 @@ onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<Volu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | SystemVolumeFilter | 是 | 系统音量变化的过滤器。 |
-| callback | Callback&lt;VolumeEvent&gt; | 是 | 回调用于接收系统音量的变化。 |
+| filter | [SystemVolumeFilter](arkts-audio-systemvolumefilter-i-sys.md) | 是 | 系统音量变化的过滤器。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VolumeEvent> | 是 | 回调用于接收系统音量的变化。 |
 
 **错误码：**
 
@@ -1072,6 +1131,8 @@ Subscribes to system volume percentage change events.
 
 **起始版本：** 23
 
+<!--Device-AudioVolumeManager-onVolumePercentageChange(callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-onVolumePercentageChange(callback: Callback<VolumeEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -1080,7 +1141,7 @@ Subscribes to system volume percentage change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;VolumeEvent&gt; | 是 | Callback used to return the system volume percentage change event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VolumeEvent> | 是 | Callback used to return the system volume percentage change event. |
 
 **错误码：**
 
@@ -1107,12 +1168,13 @@ onVolumePercentageChange((volumeEvent: audio.VolumeEvent) => {
 setAppVolumeMutedForUid(uid: number, muted: boolean): Promise<void>
 ```
 
-Change mute state of specified application volume. If there are multiple callers setting muted states,
-only when all callers cancel muted state the volume of this app will be truly unmuted.
+Change mute state of specified application volume. If there are multiple callers setting muted states,only when all callers cancel muted state the volume of this app will be truly unmuted.
 
 **起始版本：** 19
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioVolumeManager-setAppVolumeMutedForUid(uid: int, muted: boolean): Promise<void>--><!--Device-AudioVolumeManager-setAppVolumeMutedForUid(uid: int, muted: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -1129,7 +1191,7 @@ only when all callers cancel muted state the volume of this app will be truly un
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise<void> | Promise used to return the result. |
 
 **错误码：**
 
@@ -1163,6 +1225,8 @@ Sets the volume for specified app with range from 0 to 100. Applications with sa
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
 
+<!--Device-AudioVolumeManager-setAppVolumePercentageForUid(uid: int, volume: int): Promise<void>--><!--Device-AudioVolumeManager-setAppVolumePercentageForUid(uid: int, volume: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -1178,7 +1242,7 @@ Sets the volume for specified app with range from 0 to 100. Applications with sa
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise<void> | Promise used to return the result. |
 
 **错误码：**
 
@@ -1213,6 +1277,8 @@ Sets the volume for specific uid application. This method uses a promise to retu
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
+<!--Device-AudioVolumeManager-setSystemVolumeByUid(volumeType: AudioVolumeType, volume: int, callingUid: int): Promise<void>--><!--Device-AudioVolumeManager-setSystemVolumeByUid(volumeType: AudioVolumeType, volume: int, callingUid: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -1221,7 +1287,7 @@ Sets the volume for specific uid application. This method uses a promise to retu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | 是 | Audio volume type. |
 | volume | number | 是 | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
 | callingUid | number | 是 | Uid of the stream owner. |
 
@@ -1229,7 +1295,7 @@ Sets the volume for specific uid application. This method uses a promise to retu
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise<void> | Promise used to return the result. |
 
 **错误码：**
 
@@ -1246,15 +1312,13 @@ Sets the volume for specific uid application. This method uses a promise to retu
 setSystemVolumePercentage(volumeType: AudioVolumeType, percentage: number): Promise<void>
 ```
 
-Sets the system volume percentage, using an integer ranging from minimum system volume percentage to 100.
-The volume percentage corresponds to volume levels, with each level tied to a specific percentage. When the
-volume level changes, the volume percentage adjusts accordingly and is mapped within the range of volume levels.
-Zero volume is mapped to 0, and the maximum volume is mapped to 100%. Intermediate volume levels are evenly
-distributed between 1 and 99. When the volume percentage changes, the volume level changes accordingly.
+Sets the system volume percentage, using an integer ranging from minimum system volume percentage to 100.The volume percentage corresponds to volume levels, with each level tied to a specific percentage. When the volume level changes, the volume percentage adjusts accordingly and is mapped within the range of volume levels.Zero volume is mapped to 0, and the maximum volume is mapped to 100%. Intermediate volume levels are evenly distributed between 1 and 99. When the volume percentage changes, the volume level changes accordingly.
 
 **起始版本：** 23
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioVolumeManager-setSystemVolumePercentage(volumeType: AudioVolumeType, percentage: int): Promise<void>--><!--Device-AudioVolumeManager-setSystemVolumePercentage(volumeType: AudioVolumeType, percentage: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -1264,14 +1328,14 @@ distributed between 1 and 99. When the volume percentage changes, the volume lev
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | Audio volume type to set. |
-| percentage | number | 是 | Percentage to set. It must be an integer with the rangefrom minimum value getted by {@link #getMinSystemVolumePercentage} to 100. |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e-sys.md) | 是 | Audio volume type to set. |
+| percentage | number | 是 | Percentage to set. It must be an integer with the range from minimum value getted by {@link #getMinSystemVolumePercentage} to 100. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise<void> | Promise used to return the result. |
 
 **错误码：**
 
@@ -1279,7 +1343,7 @@ distributed between 1 and 99. When the volume percentage changes, the volume lev
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed, includingvolumeType or percentage param being out of range. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed, including volumeType or percentage param being out of range. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Crash or blocking occurs in system process. |
 
 **示例：**

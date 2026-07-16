@@ -4,7 +4,15 @@ ArcButton内进度条的参数配置。
 
 **起始版本：** 23
 
+<!--Device-unnamed-export declare class ArcButtonProgressConfig--><!--Device-unnamed-export declare class ArcButtonProgressConfig-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
+
+## 导入模块
+
+```TypeScript
+import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcButtonOptions, ArcButtonProgressConfig } from '@kit.ArkUI';
+```
 
 ## color
 
@@ -12,8 +20,7 @@ ArcButton内进度条的参数配置。
 color?: ResourceColor
 ```
 
-进度条前景色。如果组件设置了背景色（[backgroundColor](arkts-arkui-arcbuttonoptions-c.md)），进度条前景色默认值取组件背景色。进度条前景色不受按钮样式（
-[ArcButtonStyleMode](arkts-arkui-arcbuttonstylemode-e.md)）设置影响。进度条背景色仅依赖进度条前景色设置，取进度条前景色的25%透明度。
+进度条前景色。如果组件设置了背景色（[backgroundColor](arkts-arkui-arcbuttonoptions-c.md)），进度条前景色默认值取组件背景色。进度条前景色不受按钮样式（[ArcButtonStyleMode](arkts-arkui-arcbuttonstylemode-e.md)）设置影响。进度条背景色仅依赖进度条前景色设置，取进度条前景色的25%透明度。
 
 默认值："#1F71FF"，显示为蓝色。
 
@@ -23,7 +30,9 @@ color?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcButtonProgressConfig-color?: ResourceColor--><!--Device-ArcButtonProgressConfig-color?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -47,7 +56,9 @@ total?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcButtonProgressConfig-total?: number--><!--Device-ArcButtonProgressConfig-total?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -69,7 +80,9 @@ value: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcButtonProgressConfig-value: number--><!--Device-ArcButtonProgressConfig-value: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 

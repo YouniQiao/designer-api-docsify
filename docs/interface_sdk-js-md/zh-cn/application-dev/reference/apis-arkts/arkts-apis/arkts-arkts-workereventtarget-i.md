@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface WorkerEventTarget--><!--Device-unnamed-export interface WorkerEventTarget-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
+```
 
 ## addEventListener
 
@@ -16,7 +24,9 @@ addEventListener(type: string, listener: WorkerEventListener): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WorkerEventTarget-addEventListener(type: string, listener: WorkerEventListener): void--><!--Device-WorkerEventTarget-addEventListener(type: string, listener: WorkerEventListener): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,7 +35,7 @@ addEventListener(type: string, listener: WorkerEventListener): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 监听的事件类型。 |
-| listener | WorkerEventListener | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
+| listener | [WorkerEventListener](arkts-arkts-workereventlistener-i.md) | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
 
 **错误码：**
 
@@ -60,7 +70,9 @@ dispatchEvent(event: Event): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WorkerEventTarget-dispatchEvent(event: Event): boolean--><!--Device-WorkerEventTarget-dispatchEvent(event: Event): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -68,7 +80,7 @@ dispatchEvent(event: Event): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Event | 是 | 需要分发的事件。 |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-event-c.md) | 是 | 需要分发的事件。 |
 
 **返回值：**
 
@@ -110,7 +122,9 @@ removeAllListener(): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WorkerEventTarget-removeAllListener(): void--><!--Device-WorkerEventTarget-removeAllListener(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -148,7 +162,9 @@ removeEventListener(type: string, callback?: WorkerEventListener): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WorkerEventTarget-removeEventListener(type: string, callback?: WorkerEventListener): void--><!--Device-WorkerEventTarget-removeEventListener(type: string, callback?: WorkerEventListener): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -157,7 +173,7 @@ removeEventListener(type: string, callback?: WorkerEventListener): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 需要移除的事件类型。 |
-| callback | WorkerEventListener | 否 | 移除监听事件后执行的回调函数。 |
+| callback | [WorkerEventListener](arkts-arkts-workereventlistener-i.md) | 否 | 移除监听事件后执行的回调函数。 |
 
 **错误码：**
 

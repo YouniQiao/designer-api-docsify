@@ -1,23 +1,18 @@
 # agent
 
-The request agent api.
-Supports "background" and "frontend" tasks as while.
-Though "background" and "frontend" here do not the same with process's concept.
-All tasks will be executed at request manager service and recorded.
-Background tasks is for concurrent transfer, such as caching videos for a later play.
-Frontend tasks is for instant transfer, such as submitting forms for a consumption bill.
-Background tasks use notification to tell user tasks' status information.
-Frontend tasks use callback to tell caller tasks' status information.
-Background has some automatically restore mechanism.
-Frontend tasks controlled by caller.
-Uses `multipart/form-data` in client request for upload.
-A `Content-Disposition: attachment; filename=<filename>` response from server leads to download.
-More details, please see the architecture documents of the request subsystem.
-Only front-end mode is supported in cross-platform scenarios.
+The request agent api.Supports "background" and "frontend" tasks as while.Though "background" and "frontend" here do not the same with process's concept.All tasks will be executed at request manager service and recorded.Background tasks is for concurrent transfer, such as caching videos for a later play.Frontend tasks is for instant transfer, such as submitting forms for a consumption bill.Background tasks use notification to tell user tasks' status information.Frontend tasks use callback to tell caller tasks' status information.Background has some automatically restore mechanism.Frontend tasks controlled by caller.Uses `multipart/form-data` in client request for upload.A `Content-Disposition: attachment; filename=<filename>` response from server leads to download.More details, please see the architecture documents of the request subsystem.Only front-end mode is supported in cross-platform scenarios.
 
 **起始版本：** 10
 
+<!--Device-request-namespace agent--><!--Device-request-namespace agent-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
+
+## 导入模块
+
+```TypeScript
+import { request } from '@kit.BasicServicesKit';
+```
 
 ## 汇总
 

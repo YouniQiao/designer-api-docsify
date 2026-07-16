@@ -1,12 +1,12 @@
 # WhiteBalance (System API)
 
-**WhiteBalance** inherits from [WhiteBalanceQuery](arkts-camera-whitebalancequery-i.md).
-It provides APIs to process white balance, including obtaining and setting the white balance mode and white balance
-value.
+**WhiteBalance** inherits from [WhiteBalanceQuery](arkts-camera-whitebalancequery-i-sys.md).It provides APIs to process white balance, including obtaining and setting the white balance mode and white balance value.
 
-**Inheritance/Implementation:** WhiteBalance extends [WhiteBalanceQuery](arkts-camera-whitebalancequery-i.md)
+**Inheritance/Implementation:** WhiteBalance extends [WhiteBalanceQuery](arkts-camera-whitebalancequery-i-sys.md)
 
 **Since:** 20
+
+<!--Device-camera-interface WhiteBalance extends WhiteBalanceQuery--><!--Device-camera-interface WhiteBalance extends WhiteBalanceQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -31,6 +31,8 @@ Gets current color tint.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-WhiteBalance-getColorTint(): int--><!--Device-WhiteBalance-getColorTint(): int-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -60,13 +62,15 @@ Sets color tint.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-WhiteBalance-setColorTint(colorTint: int): void--><!--Device-WhiteBalance-setColorTint(colorTint: int): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorTint | number | Yes | Color tint, the supported range can be obtained by calling[getColorTintRange](arkts-camera-whitebalancequery-i.md#getcolortintrange-1). |
+| colorTint | number | Yes | Color tint, the supported range can be obtained by calling [getColorTintRange](arkts-camera-whitebalancequery-i.md#getcolortintrange-1). |
 
 **Error codes:**
 

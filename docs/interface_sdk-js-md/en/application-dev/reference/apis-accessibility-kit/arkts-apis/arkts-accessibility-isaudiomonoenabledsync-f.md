@@ -18,13 +18,15 @@ Checks whether mono audio mode is enabled with a synchronous mode.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-accessibility-function isAudioMonoEnabledSync(): boolean--><!--Device-accessibility-function isAudioMonoEnabledSync(): boolean-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether mono audio mode is enabled. Returns **true** if mono audio mode is enabled; returns**false** otherwise. |
+| boolean | Whether mono audio mode is enabled. Returns **true** if mono audio mode is enabled; returns **false** otherwise. |
 
 **Example**
 

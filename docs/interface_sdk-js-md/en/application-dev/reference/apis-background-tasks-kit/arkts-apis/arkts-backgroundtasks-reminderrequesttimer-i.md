@@ -8,6 +8,8 @@ Defines a reminder for a scheduled timer.
 
 **Since:** 9
 
+<!--Device-reminderAgentManager-interface ReminderRequestTimer extends ReminderRequest--><!--Device-reminderAgentManager-interface ReminderRequestTimer extends ReminderRequest-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## Modules to Import
@@ -22,8 +24,7 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 repeatCount?: number
 ```
 
-Number of repetitions. The default value is **0**, indicating infinite repetitions. This parameter must be used
-together with **repeatInterval**.
+Number of repetitions. The default value is **0**, indicating infinite repetitions. This parameter must be used together with **repeatInterval**.
 
 The value range is [0, +∞). If the value is out of range, error code 401 is returned.
 
@@ -33,6 +34,8 @@ The value range is [0, +∞). If the value is out of range, error code 401 is re
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ReminderRequestTimer-repeatCount?: int--><!--Device-ReminderRequestTimer-repeatCount?: int-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## repeatInterval
@@ -41,8 +44,7 @@ The value range is [0, +∞). If the value is out of range, error code 401 is re
 repeatInterval?: number
 ```
 
-Repeat interval. There is no default value. If no value is set, there is no repeat interval. This parameter
-must be used together with **repeatCount**.
+Repeat interval. There is no default value. If no value is set, there is no repeat interval. This parameter must be used together with **repeatCount**.
 
 The value range is [86400, +∞), in seconds. If the value is out of range, error code 401 is returned.
 
@@ -51,6 +53,8 @@ The value range is [86400, +∞), in seconds. If the value is out of range, erro
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ReminderRequestTimer-repeatInterval?: long--><!--Device-ReminderRequestTimer-repeatInterval?: long-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -67,6 +71,8 @@ Unit: s
 **Type:** number
 
 **Since:** 9
+
+<!--Device-ReminderRequestTimer-triggerTimeInSeconds: long--><!--Device-ReminderRequestTimer-triggerTimeInSeconds: long-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 20
 
+<!--Device-bundleManager-interface SignatureInfo--><!--Device-bundleManager-interface SignatureInfo-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+```
 
 ## appId
 
@@ -19,6 +27,8 @@ readonly appId: string
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SignatureInfo-readonly appId: string--><!--Device-SignatureInfo-readonly appId: string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -36,6 +46,8 @@ readonly appIdentifier: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SignatureInfo-readonly appIdentifier: string--><!--Device-SignatureInfo-readonly appIdentifier: string-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## certificate
@@ -52,6 +64,8 @@ readonly certificate?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SignatureInfo-readonly certificate?: string--><!--Device-SignatureInfo-readonly certificate?: string-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## fingerprint
@@ -67,6 +81,8 @@ readonly fingerprint: string
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SignatureInfo-readonly fingerprint: string--><!--Device-SignatureInfo-readonly fingerprint: string-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

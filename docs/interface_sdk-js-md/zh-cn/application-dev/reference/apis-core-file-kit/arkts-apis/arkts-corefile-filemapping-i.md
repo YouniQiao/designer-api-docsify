@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-declare interface FileMapping--><!--Device-unnamed-declare interface FileMapping-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+```
 
 ## capacity
 
@@ -17,6 +25,8 @@ capacity(): number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileMapping-capacity(): number--><!--Device-FileMapping-capacity(): number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -58,6 +68,8 @@ flip(): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileMapping-flip(): void--><!--Device-FileMapping-flip(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -101,6 +113,8 @@ getLimit(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileMapping-getLimit(): number--><!--Device-FileMapping-getLimit(): number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
@@ -142,6 +156,8 @@ getPosition(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileMapping-getPosition(): number--><!--Device-FileMapping-getPosition(): number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
@@ -177,12 +193,13 @@ fileIo.closeSync(file);
 msync(): Promise<void>
 ```
 
-将整个文件映射区的脏页数据同步到磁盘文件，使用promise异步回调。
-注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+将整个文件映射区的脏页数据同步到磁盘文件，使用promise异步回调。注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileMapping-msync(): Promise<void>--><!--Device-FileMapping-msync(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -190,7 +207,7 @@ msync(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回值。 |
+| Promise<void> | - Promise对象。无返回值。 |
 
 **错误码：**
 
@@ -232,12 +249,13 @@ mapping.msync().then(() => {
 msync(position: number, length: number): Promise<void>
 ```
 
-将文件映射区指定范围内的脏页数据同步到磁盘文件，使用promise异步回调。
-注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+将文件映射区指定范围内的脏页数据同步到磁盘文件，使用promise异步回调。注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileMapping-msync(position: number, length: number): Promise<void>--><!--Device-FileMapping-msync(position: number, length: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -252,7 +270,7 @@ msync(position: number, length: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回值。 |
+| Promise<void> | - Promise对象。无返回值。 |
 
 **错误码：**
 
@@ -294,12 +312,13 @@ mapping.msync(50, buffer.byteLength).then(() => {
 msyncSync(): void
 ```
 
-以同步方法将整个文件映射区的脏页数据同步到磁盘文件。
-注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+以同步方法将整个文件映射区的脏页数据同步到磁盘文件。注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileMapping-msyncSync(): void--><!--Device-FileMapping-msyncSync(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -340,12 +359,13 @@ fileIo.closeSync(file);
 msyncSync(position: number, length: number): void
 ```
 
-以同步方法将文件映射区指定范围内的脏页数据同步到磁盘文件。
-注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+以同步方法将文件映射区指定范围内的脏页数据同步到磁盘文件。注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileMapping-msyncSync(position: number, length: number): void--><!--Device-FileMapping-msyncSync(position: number, length: number): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -399,13 +419,15 @@ read(buffer: ArrayBuffer, length?: number): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileMapping-read(buffer: ArrayBuffer, length?: number): number--><!--Device-FileMapping-read(buffer: ArrayBuffer, length?: number): number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于保存读取到的文件数据的缓冲区。 |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | 用于保存读取到的文件数据的缓冲区。 |
 | length | number | 否 | 期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。 |
 
 **返回值：**
@@ -452,6 +474,8 @@ read(position: number, buffer: ArrayBuffer, length?: number): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileMapping-read(position: number, buffer: ArrayBuffer, length?: number): number--><!--Device-FileMapping-read(position: number, buffer: ArrayBuffer, length?: number): number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -459,7 +483,7 @@ read(position: number, buffer: ArrayBuffer, length?: number): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | position | number | 是 | 期望读取的起始位置。 |
-| buffer | ArrayBuffer | 是 | 用于保存读取到的文件数据的缓冲区。 |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | 用于保存读取到的文件数据的缓冲区。 |
 | length | number | 否 | 期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。 |
 
 **返回值：**
@@ -506,6 +530,8 @@ remaining(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileMapping-remaining(): number--><!--Device-FileMapping-remaining(): number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
@@ -550,6 +576,8 @@ setLimit(limit: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileMapping-setLimit(limit: number): void--><!--Device-FileMapping-setLimit(limit: number): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -590,6 +618,8 @@ setPosition(position: number): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileMapping-setPosition(position: number): void--><!--Device-FileMapping-setPosition(position: number): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -632,13 +662,15 @@ unmap(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileMapping-unmap(): Promise<void>--><!--Device-FileMapping-unmap(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回值。 |
+| Promise<void> | - Promise对象。无返回值。 |
 
 **错误码：**
 
@@ -680,6 +712,8 @@ unmapSync(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileMapping-unmapSync(): void--><!--Device-FileMapping-unmapSync(): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
@@ -716,13 +750,15 @@ write(data: ArrayBuffer, length?: number): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileMapping-write(data: ArrayBuffer, length?: number): number--><!--Device-FileMapping-write(data: ArrayBuffer, length?: number): number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | ArrayBuffer | 是 | 待写入文件的缓冲区数据。 |
+| data | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | 待写入文件的缓冲区数据。 |
 | length | number | 否 | 期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。 |
 
 **返回值：**
@@ -771,6 +807,8 @@ write(position: number, data: ArrayBuffer, length?: number): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileMapping-write(position: number, data: ArrayBuffer, length?: number): number--><!--Device-FileMapping-write(position: number, data: ArrayBuffer, length?: number): number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -778,7 +816,7 @@ write(position: number, data: ArrayBuffer, length?: number): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | position | number | 是 | 期望写入的起始位置，单位为Byte。 |
-| data | ArrayBuffer | 是 | 待写入文件的缓冲区数据。 |
+| data | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | 待写入文件的缓冲区数据。 |
 | length | number | 否 | 期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。 |
 
 **返回值：**

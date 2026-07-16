@@ -16,13 +16,15 @@ Get the default cellular data card.
 
 **Since:** 7
 
+<!--Device-data-function getDefaultCellularDataSlotId(callback: AsyncCallback<int>): void--><!--Device-data-function getDefaultCellularDataSlotId(callback: AsyncCallback<int>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CellularData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Indicates the default cellular data slot id. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Indicates the default cellular data slot id. |
 
 **Example**
 
@@ -51,13 +53,15 @@ Get the default cellular data card.
 
 **Since:** 7
 
+<!--Device-data-function getDefaultCellularDataSlotId(): Promise<int>--><!--Device-data-function getDefaultCellularDataSlotId(): Promise<int>-End-->
+
 **System capability:** SystemCapability.Telephony.CellularData
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns the default cellular data slot id. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Returns the default cellular data slot id. |
 
 **Example**
 

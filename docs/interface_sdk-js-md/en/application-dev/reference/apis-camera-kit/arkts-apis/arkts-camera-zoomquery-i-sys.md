@@ -4,6 +4,8 @@ Provides the API to obtain the equivalent focal length information list in the c
 
 **Since:** 12
 
+<!--Device-camera-interface ZoomQuery--><!--Device-camera-interface ZoomQuery-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Obtains the equivalent focal length information list in the current mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ZoomQuery-getZoomPointInfos(): Array<ZoomPointInfo>--><!--Device-ZoomQuery-getZoomPointInfos(): Array<ZoomPointInfo>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -32,7 +36,7 @@ Obtains the equivalent focal length information list in the current mode.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ZoomPointInfo&gt; | Equivalent focal length information list in the current mode. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ZoomPointInfo> | Equivalent focal length information list in the current mode. |
 
 **Error codes:**
 
@@ -50,6 +54,8 @@ isZoomCenterPointSupported(): boolean
 Checks whether zoom center point is supported.
 
 **Since:** 20
+
+<!--Device-ZoomQuery-isZoomCenterPointSupported(): boolean--><!--Device-ZoomQuery-isZoomCenterPointSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

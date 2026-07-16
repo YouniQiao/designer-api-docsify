@@ -2,6 +2,8 @@
 
 **Since:** 9
 
+<!--Device-usageStatistics-interface BundleStatsInfo--><!--Device-usageStatistics-interface BundleStatsInfo-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -18,12 +20,13 @@ import { usageStatistics } from '@kit.BackgroundTasksKit';
 abilityInFgTotalTime?: number
 ```
 
-The total duration, in milliseconds.
-<br> Unit:ms
+The total duration, in milliseconds.<br> Unit:ms
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-BundleStatsInfo-abilityInFgTotalTime?: long--><!--Device-BundleStatsInfo-abilityInFgTotalTime?: long-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -35,12 +38,13 @@ The total duration, in milliseconds.
 abilityPrevAccessTime?: number
 ```
 
-The last time when the application was accessed, in milliseconds.
-<br> Unit:ms
+The last time when the application was accessed, in milliseconds.<br> Unit:ms
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-BundleStatsInfo-abilityPrevAccessTime?: long--><!--Device-BundleStatsInfo-abilityPrevAccessTime?: long-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -52,12 +56,13 @@ The last time when the application was accessed, in milliseconds.
 abilityPrevSeenTime?: number
 ```
 
-The last time when the application was visible in the foreground, in milliseconds.
-<br> Unit:ms
+The last time when the application was visible in the foreground, in milliseconds.<br> Unit:ms
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-BundleStatsInfo-abilityPrevSeenTime?: long--><!--Device-BundleStatsInfo-abilityPrevSeenTime?: long-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -69,12 +74,13 @@ The last time when the application was visible in the foreground, in millisecond
 abilitySeenTotalTime?: number
 ```
 
-The total duration, in milliseconds.
-<br> Unit:ms
+The total duration, in milliseconds.<br> Unit:ms
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-BundleStatsInfo-abilitySeenTotalTime?: long--><!--Device-BundleStatsInfo-abilitySeenTotalTime?: long-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -92,6 +98,8 @@ The app index of the application.
 
 **Since:** 15
 
+<!--Device-BundleStatsInfo-appIndex?: int--><!--Device-BundleStatsInfo-appIndex?: int-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -108,6 +116,8 @@ The bundle name of the application.
 
 **Since:** 9
 
+<!--Device-BundleStatsInfo-bundleName?: string--><!--Device-BundleStatsInfo-bundleName?: string-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -118,12 +128,13 @@ The bundle name of the application.
 fgAbilityAccessTotalTime?: number
 ```
 
-The total duration, in milliseconds.
-<br> Unit:ms
+The total duration, in milliseconds.<br> Unit:ms
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-BundleStatsInfo-fgAbilityAccessTotalTime?: long--><!--Device-BundleStatsInfo-fgAbilityAccessTotalTime?: long-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -135,12 +146,13 @@ The total duration, in milliseconds.
 fgAbilityPrevAccessTime?: number
 ```
 
-The last time when the foreground application was accessed, in milliseconds.
-<br> Unit:ms
+The last time when the foreground application was accessed, in milliseconds.<br> Unit:ms
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-BundleStatsInfo-fgAbilityPrevAccessTime?: long--><!--Device-BundleStatsInfo-fgAbilityPrevAccessTime?: long-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -158,6 +170,8 @@ The identifier of BundleStatsInfo.
 
 **Since:** 9
 
+<!--Device-BundleStatsInfo-id: int--><!--Device-BundleStatsInfo-id: int-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -168,13 +182,13 @@ The identifier of BundleStatsInfo.
 infosBeginTime?: number
 ```
 
-The time of the first bundle usage record in this {@code BundleActiveInfo} object,
-in milliseconds.
-<br> Unit:ms
+The time of the first bundle usage record in this {@code BundleActiveInfo} object,in milliseconds.<br> Unit:ms
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-BundleStatsInfo-infosBeginTime?: long--><!--Device-BundleStatsInfo-infosBeginTime?: long-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -186,13 +200,13 @@ in milliseconds.
 infosEndTime?: number
 ```
 
-The time of the last bundle usage record in this {@code BundleActiveInfo} object,
-in milliseconds.
-<br> Unit:ms
+The time of the last bundle usage record in this {@code BundleActiveInfo} object,in milliseconds.<br> Unit:ms
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-BundleStatsInfo-infosEndTime?: long--><!--Device-BundleStatsInfo-infosEndTime?: long-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 

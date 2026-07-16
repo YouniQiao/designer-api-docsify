@@ -12,12 +12,13 @@ import { formProvider } from '@kit.FormKit';
 function getFormsInfo(filter: formInfo.FormInfoFilter, callback: AsyncCallback<Array<formInfo.FormInfo>>): void
 ```
 
-Obtains the application's widget information that meets a filter criterion on the device. This API uses an
-asynchronous callback to return the result.
+Obtains the application's widget information that meets a filter criterion on the device. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-formProvider-function getFormsInfo(filter: formInfo.FormInfoFilter, callback: AsyncCallback<Array<formInfo.FormInfo>>): void--><!--Device-formProvider-function getFormsInfo(filter: formInfo.FormInfoFilter, callback: AsyncCallback<Array<formInfo.FormInfo>>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -26,7 +27,7 @@ asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filter | formInfo.FormInfoFilter | Yes | Filter criterion. |
-| callback | AsyncCallback&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the information obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<formInfo.FormInfo>> | Yes | Callback used to return the information obtained. |
 
 **Error codes:**
 
@@ -68,12 +69,13 @@ try {
 function getFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): void
 ```
 
-Obtains the application's widget information on the device. This API uses an asynchronous callback to return the
-result.
+Obtains the application's widget information on the device. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-formProvider-function getFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): void--><!--Device-formProvider-function getFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -81,7 +83,7 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the information obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<formInfo.FormInfo>> | Yes | Callback used to return the information obtained. |
 
 **Error codes:**
 
@@ -119,12 +121,13 @@ try {
 function getFormsInfo(filter?: formInfo.FormInfoFilter): Promise<Array<formInfo.FormInfo>>
 ```
 
-Obtains information about widgets that meet the criteria of the current application. This API uses a promise to
-return the result.
+Obtains information about widgets that meet the criteria of the current application. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-formProvider-function getFormsInfo(filter?: formInfo.FormInfoFilter): Promise<Array<formInfo.FormInfo>>--><!--Device-formProvider-function getFormsInfo(filter?: formInfo.FormInfoFilter): Promise<Array<formInfo.FormInfo>>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -132,13 +135,13 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | formInfo.FormInfoFilter | No | Filter criterion. By default, no value is passed, indicating that nofiltering is performed. |
+| filter | formInfo.FormInfoFilter | No | Filter criterion. By default, no value is passed, indicating that no filtering is performed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Promise used to return the information obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<formInfo.FormInfo>> | Promise used to return the information obtained. |
 
 **Error codes:**
 

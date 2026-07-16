@@ -4,7 +4,15 @@
 
 **起始版本：** 15
 
+<!--Device-contact-interface FilterClause--><!--Device-contact-interface FilterClause-End-->
+
 **系统能力：** SystemCapability.Applications.Contacts
+
+## 导入模块
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+```
 
 ## dataItem
 
@@ -18,7 +26,9 @@ dataItem?: DataFilter
 
 **起始版本：** 15
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FilterClause-dataItem?: DataFilter--><!--Device-FilterClause-dataItem?: DataFilter-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -34,7 +44,9 @@ focusModeList?: Array<FilterOptions>
 
 **起始版本：** 15
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FilterClause-focusModeList?: Array<FilterOptions>--><!--Device-FilterClause-focusModeList?: Array<FilterOptions>-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -50,7 +62,9 @@ id?: Array<FilterOptions>
 
 **起始版本：** 15
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FilterClause-id?: Array<FilterOptions>--><!--Device-FilterClause-id?: Array<FilterOptions>-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -66,7 +80,9 @@ name?: Array<FilterOptions>
 
 **起始版本：** 15
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FilterClause-name?: Array<FilterOptions>--><!--Device-FilterClause-name?: Array<FilterOptions>-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 

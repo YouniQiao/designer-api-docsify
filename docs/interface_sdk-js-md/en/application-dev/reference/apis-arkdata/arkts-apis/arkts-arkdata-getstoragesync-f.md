@@ -14,6 +14,8 @@ Reads the specified file and loads its data to the **Storage** instance for data
 
 **Substitutes:** getPreferences
 
+<!--Device-storage-function getStorageSync(path: string): Storage--><!--Device-storage-function getStorageSync(path: string): Storage-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -24,5 +26,5 @@ Reads the specified file and loads its data to the **Storage** instance for data
 
 | Type | Description |
 | --- | --- |
-| Storage | **Storage** instance used for data storage operations. |
+| [Storage](arkts-arkdata-storage-c.md) | **Storage** instance used for data storage operations. |
 

@@ -1,5 +1,11 @@
 # getWatermarkImageApps
 
+## 导入模块
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+```
+
 ## getWatermarkImageApps
 
 ```TypeScript
@@ -14,20 +20,22 @@ function getWatermarkImageApps(admin: Want, accountId: number): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-securityManager-function getWatermarkImageApps(admin: Want, accountId: number): Array<string>--><!--Device-securityManager-function getWatermarkImageApps(admin: Want, accountId: number): Array<string>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件 |
 | accountId | number | 是 | 系统账号ID<br>取值应为≥0的整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 设置水印的应用列表 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 设置水印的应用列表 |
 
 **错误码：**
 

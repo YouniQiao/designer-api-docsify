@@ -14,6 +14,8 @@ Deletes the ID from the end of the path component of the given uri.
 
 **Substitutes:** deleteId
 
+<!--Device-dataUriUtils-function deleteId(uri: string): string--><!--Device-dataUriUtils-function deleteId(uri: string): string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**

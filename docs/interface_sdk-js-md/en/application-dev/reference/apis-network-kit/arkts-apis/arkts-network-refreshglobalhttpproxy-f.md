@@ -12,8 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function refreshGlobalHttpProxy(): Promise<HttpProxy>
 ```
 
-Notifies the system that global proxy re-authentication is required.
-Upon receiving the notification, the system will reproces the global proxy's authentication status.
+Notifies the system that global proxy re-authentication is required.Upon receiving the notification, the system will reproces the global proxy's authentication status.
 
 **Since:** 26.0.0
 
@@ -21,13 +20,15 @@ Upon receiving the notification, the system will reproces the global proxy's aut
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function refreshGlobalHttpProxy(): Promise<HttpProxy>--><!--Device-connection-function refreshGlobalHttpProxy(): Promise<HttpProxy>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HttpProxy&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HttpProxy> | the promise returned by the function. |
 
 **Error codes:**
 

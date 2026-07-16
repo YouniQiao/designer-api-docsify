@@ -4,6 +4,8 @@ Represents a distinct capability or function that an agent can perform.
 
 **Since:** 24
 
+<!--Device-unnamed-export interface AgentSkill--><!--Device-unnamed-export interface AgentSkill-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## description
@@ -21,6 +23,8 @@ A detailed description of the skill.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-AgentSkill-description: string--><!--Device-AgentSkill-description: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -40,6 +44,8 @@ Example prompts or scenarios that this skill can handle.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-AgentSkill-examples?: Array<string>--><!--Device-AgentSkill-examples?: Array<string>-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## extension
@@ -57,6 +63,8 @@ Extension configuration items for the skill.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-AgentSkill-extension?: string--><!--Device-AgentSkill-extension?: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -76,6 +84,8 @@ A unique identifier for the Skill.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-AgentSkill-id: string--><!--Device-AgentSkill-id: string-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## inputModes
@@ -93,6 +103,8 @@ The set of supported input media types for this skill, overriding the agent's de
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-AgentSkill-inputModes?: Array<string>--><!--Device-AgentSkill-inputModes?: Array<string>-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -112,6 +124,8 @@ A human-readable name.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-AgentSkill-name: string--><!--Device-AgentSkill-name: string-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## outputModes
@@ -130,6 +144,8 @@ The set of supported output media types for this skill, overriding the agent's d
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-AgentSkill-outputModes?: Array<string>--><!--Device-AgentSkill-outputModes?: Array<string>-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## tags
@@ -147,6 +163,8 @@ A set of keywords describing the skill's capabilities.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-AgentSkill-tags: Array<string>--><!--Device-AgentSkill-tags: Array<string>-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 

@@ -12,10 +12,7 @@ import { notificationExtensionSubscription } from '@kit.NotificationKit';
 function openSubscriptionSettingsWithResult(context: UIAbilityContext): Promise<UserGrantSetting>
 ```
 
-Opens the settings screen of notification extension subscription in a semi-modal dialog box. On this screen, the
-user can toggle on the **Allow access to notifications on this device** switch and grant access to notifications
-for specified applications. This API uses a promise to return the result. When the semi-modal window is closed, the
-user-defined authorization result is returned.
+Opens the settings screen of notification extension subscription in a semi-modal dialog box. On this screen, the user can toggle on the **Allow access to notifications on this device** switch and grant access to notifications for specified applications. This API uses a promise to return the result. When the semi-modal window is closed, the user-defined authorization result is returned.
 
 **Since:** 26.0.0
 
@@ -23,19 +20,21 @@ user-defined authorization result is returned.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-notificationExtensionSubscription-function openSubscriptionSettingsWithResult(context: UIAbilityContext): Promise<UserGrantSetting>--><!--Device-notificationExtensionSubscription-function openSubscriptionSettingsWithResult(context: UIAbilityContext): Promise<UserGrantSetting>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIAbilityContext | Yes | Ability context bound to the notification settings page. |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-t.md) | Yes | Ability context bound to the notification settings page. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;UserGrantSetting&gt; | Promise used to return the result of the authorization set by the user. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<UserGrantSetting> | Promise used to return the result of the authorization set by the user. |
 
 **Error codes:**
 

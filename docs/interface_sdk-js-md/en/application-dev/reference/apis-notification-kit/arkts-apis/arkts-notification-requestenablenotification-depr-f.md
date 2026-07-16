@@ -6,8 +6,7 @@
 function requestEnableNotification(callback: AsyncCallback<void>): void
 ```
 
-Requests notification to be enabled for this application. This API uses an asynchronous callback to return the
-result.
+Requests notification to be enabled for this application. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -15,13 +14,15 @@ result.
 
 **Substitutes:** requestEnableNotification
 
+<!--Device-notification-function requestEnableNotification(callback: AsyncCallback<void>): void--><!--Device-notification-function requestEnableNotification(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 
 ## requestEnableNotification
@@ -38,11 +39,13 @@ Requests notification to be enabled for this application. This API uses a promis
 
 **Substitutes:** requestEnableNotification
 
+<!--Device-notification-function requestEnableNotification(): Promise<void>--><!--Device-notification-function requestEnableNotification(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 

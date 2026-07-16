@@ -2,14 +2,15 @@
 
 窗口内容的避让区域的类型枚举。
 
-窗口内容做[沉浸式布局](../../../../windowmanager/window-terminology.md#沉浸式布局)适配时，需要按照AvoidAreaType对应的
-[AvoidArea](arkts-arkui-avoidarea-i.md)做窗口内容避让。
+窗口内容做[沉浸式布局](../../../../windowmanager/window-terminology.md#沉浸式布局)适配时，需要按照AvoidAreaType对应的[AvoidArea](arkts-arkui-avoidarea-i.md)做窗口内容避让。
 
 <!--RP13-->
 
 <!--RP13End-->
 
 **起始版本：** 7
+
+<!--Device-window-enum AvoidAreaType--><!--Device-window-enum AvoidAreaType-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -23,7 +24,9 @@ TYPE_SYSTEM = 0
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AvoidAreaType-TYPE_SYSTEM = 0--><!--Device-AvoidAreaType-TYPE_SYSTEM = 0-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -37,7 +40,9 @@ TYPE_CUTOUT = 1
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AvoidAreaType-TYPE_CUTOUT = 1--><!--Device-AvoidAreaType-TYPE_CUTOUT = 1-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -51,7 +56,9 @@ TYPE_SYSTEM_GESTURE = 2
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AvoidAreaType-TYPE_SYSTEM_GESTURE = 2--><!--Device-AvoidAreaType-TYPE_SYSTEM_GESTURE = 2-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -65,7 +72,9 @@ TYPE_KEYBOARD = 3
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AvoidAreaType-TYPE_KEYBOARD = 3--><!--Device-AvoidAreaType-TYPE_KEYBOARD = 3-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -79,7 +88,9 @@ TYPE_NAVIGATION_INDICATOR = 4
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AvoidAreaType-TYPE_NAVIGATION_INDICATOR = 4--><!--Device-AvoidAreaType-TYPE_NAVIGATION_INDICATOR = 4-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -95,7 +106,9 @@ TYPE_FLOAT_NAVIGATION = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AvoidAreaType-TYPE_FLOAT_NAVIGATION = 5--><!--Device-AvoidAreaType-TYPE_FLOAT_NAVIGATION = 5-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 

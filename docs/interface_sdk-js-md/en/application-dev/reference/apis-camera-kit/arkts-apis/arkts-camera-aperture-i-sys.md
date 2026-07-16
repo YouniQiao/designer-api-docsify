@@ -6,6 +6,8 @@ Provides the APIs for aperture settings. It inherits from [ApertureQuery](arkts-
 
 **Since:** 24
 
+<!--Device-camera-interface Aperture extends ApertureQuery--><!--Device-camera-interface Aperture extends ApertureQuery-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -27,6 +29,8 @@ Gets current physical aperture value.
 **Since:** 24
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-Aperture-getPhysicalAperture(): double--><!--Device-Aperture-getPhysicalAperture(): double-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -55,6 +59,8 @@ getVirtualAperture(): number
 Obtains the virtual aperture in use.
 
 **Since:** 11
+
+<!--Device-Aperture-getVirtualAperture(): double--><!--Device-Aperture-getVirtualAperture(): double-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -95,6 +101,8 @@ Sets physical aperture value.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-Aperture-setPhysicalAperture(aperture: double): void--><!--Device-Aperture-setPhysicalAperture(aperture: double): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -103,7 +111,7 @@ Sets physical aperture value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aperture | number | Yes | physical aperture value. The supported physical aperture range can be obtained bycalling [getSupportedPhysicalApertures](arkts-camera-aperturequery-i-sys.md#getsupportedphysicalapertures-1) |
+| aperture | number | Yes | physical aperture value. The supported physical aperture range can be obtained by calling [getSupportedPhysicalApertures](arkts-camera-aperturequery-i-sys.md#getsupportedphysicalapertures-1) |
 
 **Error codes:**
 
@@ -119,11 +127,11 @@ Sets physical aperture value.
 setVirtualAperture(aperture: number): void
 ```
 
-Sets a virtual aperture. Before the setting, call
-[getSupportedVirtualApertures](arkts-camera-aperturequery-i-sys.md#getsupportedvirtualapertures-1) to obtain the supported
-virtual apertures.
+Sets a virtual aperture. Before the setting, call [getSupportedVirtualApertures](arkts-camera-aperturequery-i-sys.md#getsupportedvirtualapertures-1) to obtain the supported virtual apertures.
 
 **Since:** 11
+
+<!--Device-Aperture-setVirtualAperture(aperture: double): void--><!--Device-Aperture-setVirtualAperture(aperture: double): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

@@ -1,18 +1,24 @@
 # AVMetadataExtractor
 
-元数据获取类，用于从媒体资源中获取元数据、缩略图。在调用AVMetadataExtractor的方法前，需要先通过
-[media.createAVMetadataExtractor](arkts-media-createavmetadataextractor-f.md#createavmetadataextractor-3)
-构建一个AVMetadataExtractor实例。
+元数据获取类，用于从媒体资源中获取元数据、缩略图。在调用AVMetadataExtractor的方法前，需要先通过[media.createAVMetadataExtractor](arkts-media-createavmetadataextractor-f.md#createavmetadataextractor-3)构建一个AVMetadataExtractor实例。
 
 获取音频或视频元数据、视频缩略图的demo可参考：[使用AVMetadataExtractor提取音视频元数据信息(ArkTS)](../../../../media/media/avmetadataextractor.md)。
 
-> **说明：**
->
+> **说明：**  
+>  
 > - 本Interface首批接口从API version 11开始支持。
 
 **起始版本：** 11
 
+<!--Device-media-interface AVMetadataExtractor--><!--Device-media-interface AVMetadataExtractor-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
+
+## 导入模块
+
+```TypeScript
+import { media } from '@kit.MediaKit';
+```
 
 ## cancelAllFetchFrames
 
@@ -26,6 +32,8 @@ cancelAllFetchFrames(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMetadataExtractor-cancelAllFetchFrames(): void--><!--Device-AVMetadataExtractor-cancelAllFetchFrames(): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## fetchAlbumCover
@@ -38,13 +46,15 @@ fetchAlbumCover(callback: AsyncCallback<image.PixelMap>): void
 
 **起始版本：** 11
 
+<!--Device-AVMetadataExtractor-fetchAlbumCover(callback: AsyncCallback<image.PixelMap>): void--><!--Device-AVMetadataExtractor-fetchAlbumCover(callback: AsyncCallback<image.PixelMap>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;image.PixelMap&gt; | 是 | 回调函数。异步返回专辑封面。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<image.PixelMap> | 是 | 回调函数。异步返回专辑封面。 |
 
 **错误码：**
 
@@ -63,13 +73,15 @@ fetchAlbumCover(): Promise<image.PixelMap>
 
 **起始版本：** 11
 
+<!--Device-AVMetadataExtractor-fetchAlbumCover(): Promise<image.PixelMap>--><!--Device-AVMetadataExtractor-fetchAlbumCover(): Promise<image.PixelMap>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise对象。异步返回专辑封面。 |
+| Promise<image.PixelMap> | Promise对象。异步返回专辑封面。 |
 
 **错误码：**
 
@@ -88,6 +100,8 @@ fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapPa
 
 **起始版本：** 20
 
+<!--Device-AVMetadataExtractor-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap>--><!--Device-AVMetadataExtractor-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **参数：**
@@ -95,14 +109,14 @@ fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapPa
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | timeUs | number | 是 | 需要获取的缩略图在视频中的时间点，单位为微秒（us）。 |
-| options | AVImageQueryOptions | 是 | 需要获取的缩略图时间点与视频帧的对应关系。 |
-| param | PixelMapParams | 是 | 需要获取的缩略图的格式参数。 |
+| options | [AVImageQueryOptions](arkts-media-avimagequeryoptions-e.md) | 是 | 需要获取的缩略图时间点与视频帧的对应关系。 |
+| param | [PixelMapParams](arkts-media-pixelmapparams-i.md) | 是 | 需要获取的缩略图的格式参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise对象，返回视频缩略图对象。 |
+| Promise<image.PixelMap> | Promise对象，返回视频缩略图对象。 |
 
 **错误码：**
 
@@ -126,6 +140,10 @@ fetchFrameByTimeWithTimeout(timeUs: number, options: AVImageQueryOptions, param:
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMetadataExtractor-fetchFrameByTimeWithTimeout(timeUs: long, options: AVImageQueryOptions, param: PixelMapParams,
+      timeoutMs: long): Promise<image.PixelMap | undefined>--><!--Device-AVMetadataExtractor-fetchFrameByTimeWithTimeout(timeUs: long, options: AVImageQueryOptions, param: PixelMapParams,
+      timeoutMs: long): Promise<image.PixelMap | undefined>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **参数：**
@@ -133,15 +151,15 @@ fetchFrameByTimeWithTimeout(timeUs: number, options: AVImageQueryOptions, param:
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | timeUs | number | 是 | 需要获取的缩略图在视频中的时间点，单位为微秒（μs）。 |
-| options | AVImageQueryOptions | 是 | 需要获取的缩略图时间点与视频帧的对应关系。 |
-| param | PixelMapParams | 是 | 需要获取的缩略图的格式参数。 |
+| options | [AVImageQueryOptions](arkts-media-avimagequeryoptions-e.md) | 是 | 需要获取的缩略图时间点与视频帧的对应关系。 |
+| param | [PixelMapParams](arkts-media-pixelmapparams-i.md) | 是 | 需要获取的缩略图的格式参数。 |
 | timeoutMs | number | 是 | 获取缩略图的最大等待时间，时间范围为(0, 20000]，单位为毫秒（ms）。<br>在指定的超时时间内未获取缩略图则返回错误码5400104。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap \| undefined&gt; | Promise对象，返回视频缩略图对象。 |
+| Promise<image.PixelMap \| undefined> | Promise对象，返回视频缩略图对象。 |
 
 **错误码：**
 
@@ -162,15 +180,19 @@ fetchFramesByTimes(timesUs: number[], queryOption: AVImageQueryOptions, param: P
 
 批量获取视频缩略图。使用Callback异步回调。
 
-> **说明：**
->
-> - 先对给定的视频资源进行解码，随后依据提供的参数options和param，从timesUs数组中的每个时间点提取图像帧。
->
+> **说明：**  
+>  
+> - 先对给定的视频资源进行解码，随后依据提供的参数options和param，从timesUs数组中的每个时间点提取图像帧。  
+>  
 > - 当每一次图像提取完成时，系统将调用回调函数并传递提取结果。请注意，回调函数的执行顺序会与timesUs数组中时间点的先后顺序不一致。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMetadataExtractor-fetchFramesByTimes(timesUs: long[], queryOption: AVImageQueryOptions, param: PixelMapParams,
+        callback: OnFrameFetched): void--><!--Device-AVMetadataExtractor-fetchFramesByTimes(timesUs: long[], queryOption: AVImageQueryOptions, param: PixelMapParams,
+        callback: OnFrameFetched): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -179,9 +201,9 @@ fetchFramesByTimes(timesUs: number[], queryOption: AVImageQueryOptions, param: P
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | timesUs | number[] | 是 | 需要获取的所有缩略图在视频中的时间点集合。<br>时间单位为微秒（μs），数组长度取值范围为(0, 4096]。 |
-| queryOption | AVImageQueryOptions | 是 | 需要获取的缩略图时间点与视频帧的对应关系。 |
-| param | PixelMapParams | 是 | 需要获取的缩略图的格式参数。 |
-| callback | OnFrameFetched | 是 | 需要返回的缩略图信息及可能的异常类型。<br>异常类型请参考具体返回的错误码信息。 |
+| queryOption | [AVImageQueryOptions](arkts-media-avimagequeryoptions-e.md) | 是 | 需要获取的缩略图时间点与视频帧的对应关系。 |
+| param | [PixelMapParams](arkts-media-pixelmapparams-i.md) | 是 | 需要获取的缩略图的格式参数。 |
+| callback | [OnFrameFetched](arkts-media-onframefetched-t.md) | 是 | 需要返回的缩略图信息及可能的异常类型。<br>异常类型请参考具体返回的错误码信息。 |
 
 **错误码：**
 
@@ -203,17 +225,21 @@ fetchFramesByTimesWithTimeout(timesUs: number[], queryOption: AVImageQueryOption
 
 批量获取视频缩略图，支持设置每一帧缩略图获取最大耗时timeoutMs。使用Callback异步回调。
 
-> **说明：**
->
-> - 先对给定的视频资源进行解码，随后依据提供的参数options和param，从timesUs数组中的每个时间点提取图像帧。
->
-> - 当每一次图像提取完成时，系统将调用回调函数并传递提取结果。请注意，回调函数的执行顺序会与timesUs数组中时间点的先后顺序不一致。
->
+> **说明：**  
+>  
+> - 先对给定的视频资源进行解码，随后依据提供的参数options和param，从timesUs数组中的每个时间点提取图像帧。  
+>  
+> - 当每一次图像提取完成时，系统将调用回调函数并传递提取结果。请注意，回调函数的执行顺序会与timesUs数组中时间点的先后顺序不一致。  
+>  
 > - 超时时间timeoutMs是针对每一帧的获取时间，而非整个批量抽帧流程。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVMetadataExtractor-fetchFramesByTimesWithTimeout(timesUs: long[], queryOption: AVImageQueryOptions, param: PixelMapParams,
+      timeoutMs: long, callback: OnFrameFetched): void--><!--Device-AVMetadataExtractor-fetchFramesByTimesWithTimeout(timesUs: long[], queryOption: AVImageQueryOptions, param: PixelMapParams,
+      timeoutMs: long, callback: OnFrameFetched): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -222,10 +248,10 @@ fetchFramesByTimesWithTimeout(timesUs: number[], queryOption: AVImageQueryOption
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | timesUs | number[] | 是 | 需要获取的所有缩略图在视频中的时间点集合。<br>时间单位为微秒（μs），数组长度取值范围为(0, 4096]。 |
-| queryOption | AVImageQueryOptions | 是 | 需要获取的缩略图时间点与视频帧的对应关系。 |
-| param | PixelMapParams | 是 | 需要获取的缩略图的格式参数。 |
+| queryOption | [AVImageQueryOptions](arkts-media-avimagequeryoptions-e.md) | 是 | 需要获取的缩略图时间点与视频帧的对应关系。 |
+| param | [PixelMapParams](arkts-media-pixelmapparams-i.md) | 是 | 需要获取的缩略图的格式参数。 |
 | timeoutMs | number | 是 | 获取每一帧缩略图的最大等待时间，时间范围为(0, 20000]，单位为毫秒（ms）。<br>对于每一帧缩略图，在指定的超时时间内未获取缩略图则返回错误码5400104。 |
-| callback | OnFrameFetched | 是 | 需要返回的缩略图信息及可能的异常类型。<br>异常类型请参考具体返回的错误码信息。 |
+| callback | [OnFrameFetched](arkts-media-onframefetched-t.md) | 是 | 需要返回的缩略图信息及可能的异常类型。<br>异常类型请参考具体返回的错误码信息。 |
 
 **错误码：**
 
@@ -248,13 +274,15 @@ fetchMetadata(callback: AsyncCallback<AVMetadata>): void
 
 **起始版本：** 11
 
+<!--Device-AVMetadataExtractor-fetchMetadata(callback: AsyncCallback<AVMetadata>): void--><!--Device-AVMetadataExtractor-fetchMetadata(callback: AsyncCallback<AVMetadata>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;AVMetadata&gt; | 是 | 回调函数。异步返回音视频元数据对象（AVMetadata）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AVMetadata> | 是 | 回调函数。异步返回音视频元数据对象（AVMetadata）。 |
 
 **错误码：**
 
@@ -274,13 +302,15 @@ fetchMetadata(): Promise<AVMetadata>
 
 **起始版本：** 11
 
+<!--Device-AVMetadataExtractor-fetchMetadata(): Promise<AVMetadata>--><!--Device-AVMetadataExtractor-fetchMetadata(): Promise<AVMetadata>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AVMetadata&gt; | Promise对象。异步返回音视频元数据对象（AVMetadata）。 |
+| Promise<AVMetadata> | Promise对象。异步返回音视频元数据对象（AVMetadata）。 |
 
 **错误码：**
 
@@ -302,6 +332,8 @@ fetchMetadataWithTimeout(timeoutMs: number): Promise<AVMetadata | undefined>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AVMetadataExtractor-fetchMetadataWithTimeout(timeoutMs: long): Promise<AVMetadata | undefined>--><!--Device-AVMetadataExtractor-fetchMetadataWithTimeout(timeoutMs: long): Promise<AVMetadata | undefined>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **参数：**
@@ -314,7 +346,7 @@ fetchMetadataWithTimeout(timeoutMs: number): Promise<AVMetadata | undefined>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AVMetadata \| undefined&gt; | Promise对象，异步返回音视频元数据对象（AVMetadata）。 |
+| Promise<AVMetadata \| undefined> | Promise对象，异步返回音视频元数据对象（AVMetadata）。 |
 
 **错误码：**
 
@@ -336,13 +368,15 @@ release(callback: AsyncCallback<void>): void
 
 **起始版本：** 11
 
+<!--Device-AVMetadataExtractor-release(callback: AsyncCallback<void>): void--><!--Device-AVMetadataExtractor-release(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当释放资源成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当释放资源成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -360,13 +394,15 @@ release(): Promise<void>
 
 **起始版本：** 11
 
+<!--Device-AVMetadataExtractor-release(): Promise<void>--><!--Device-AVMetadataExtractor-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 异步方式释放资源release方法的Promise返回值。 |
+| Promise<void> | 异步方式释放资源release方法的Promise返回值。 |
 
 **错误码：**
 
@@ -380,12 +416,11 @@ release(): Promise<void>
 setUrlSource(url: string, headers?: Record<string, string>): void
 ```
 
-网络点播资源地址描述，通过该接口设置数据源。只支持获取网络
-[fetchMetadata](arkts-media-avmetadataextractor-i.md#fetchmetadata-1)（元数据）和
-[fetchFrameByTime](arkts-media-avmetadataextractor-i.md#fetchframebytime-1)
-（缩略图），在获取之前，必须设置媒体资源URL。
+网络点播资源地址描述，通过该接口设置数据源。只支持获取网络[fetchMetadata](arkts-media-avmetadataextractor-i.md#fetchmetadata-1)（元数据）和[fetchFrameByTime](arkts-media-avmetadataextractor-i.md#fetchframebytime-1)（缩略图），在获取之前，必须设置媒体资源URL。
 
 **起始版本：** 20
+
+<!--Device-AVMetadataExtractor-setUrlSource(url: string, headers?: Record<string, string>): void--><!--Device-AVMetadataExtractor-setUrlSource(url: string, headers?: Record<string, string>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -394,7 +429,7 @@ setUrlSource(url: string, headers?: Record<string, string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | 媒体资源URL。<br/>1. 支持的视频格式包括：mp4、mpeg-ts、mkv。<br/>2. 支持的音频格式包括：m4a、aac、mp3、ogg、wav、flac、amr。<br/>**支持路径示例**：<br/>1. http网络播放：`http://xx`。<br/>2. https网络播放：`https://xx`。<br/>**说明：** 不支持设置HLS/Dash、直播资源。 |
-| headers | Record&lt;string, string&gt; | 否 | 支持访问网络资源HttpHeader自定义。默认为空。 |
+| headers | Record<string, string> | 否 | 支持访问网络资源HttpHeader自定义。默认为空。 |
 
 ## dataSrc
 
@@ -409,6 +444,8 @@ dataSrc ?: AVDataSrcDescriptor
 **类型：** AVDataSrcDescriptor
 
 **起始版本：** 11
+
+<!--Device-AVMetadataExtractor-dataSrc ?: AVDataSrcDescriptor--><!--Device-AVMetadataExtractor-dataSrc ?: AVDataSrcDescriptor-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -426,12 +463,13 @@ fdSrc ?: AVFileDescriptor
 
 **说明：**
 
-将资源句柄（fd）传递给AVMetadataExtractor实例之后，不允许通过该资源句柄做其他读写操作，包括但不限于将同一个资源句柄传递给多个AVPlayer/AVMetadataExtractor/
-AVImageGenerator/AVTranscoder。同一时间通过同一个资源句柄读写文件时存在竞争关系，将导致音视频元数据获取异常。
+将资源句柄（fd）传递给AVMetadataExtractor实例之后，不允许通过该资源句柄做其他读写操作，包括但不限于将同一个资源句柄传递给多个AVPlayer/AVMetadataExtractor/AVImageGenerator/AVTranscoder。同一时间通过同一个资源句柄读写文件时存在竞争关系，将导致音视频元数据获取异常。
 
 **类型：** AVFileDescriptor
 
 **起始版本：** 11
+
+<!--Device-AVMetadataExtractor-fdSrc ?: AVFileDescriptor--><!--Device-AVMetadataExtractor-fdSrc ?: AVFileDescriptor-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 

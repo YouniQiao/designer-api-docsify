@@ -4,6 +4,8 @@ Name and UUID of DRM plugin.
 
 **Since:** 14
 
+<!--Device-drm-interface MediaKeySystemDescription--><!--Device-drm-interface MediaKeySystemDescription-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Name of DRM plugin.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-MediaKeySystemDescription-name: string--><!--Device-MediaKeySystemDescription-name: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## uuid
@@ -41,6 +45,8 @@ UUID supported by DRM plugin.
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-MediaKeySystemDescription-uuid: string--><!--Device-MediaKeySystemDescription-uuid: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 

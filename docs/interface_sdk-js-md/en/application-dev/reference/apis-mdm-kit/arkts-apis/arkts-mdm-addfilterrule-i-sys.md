@@ -4,6 +4,8 @@ Defines the network packet filtering rule to add.
 
 **Since:** 10
 
+<!--Device-networkManager-interface AddFilterRule--><!--Device-networkManager-interface AddFilterRule-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Action to take, that is, receive or discard the data packets.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AddFilterRule-action: Action--><!--Device-AddFilterRule-action: Action-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -45,6 +49,8 @@ Destination IP address.
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AddFilterRule-destAddr?: string--><!--Device-AddFilterRule-destAddr?: string-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -64,6 +70,8 @@ Port of the destination IP address.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AddFilterRule-destPort?: string--><!--Device-AddFilterRule-destPort?: string-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -81,6 +89,8 @@ Direction chains to which the rule applies.
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AddFilterRule-direction: Direction--><!--Device-AddFilterRule-direction: Direction-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -100,6 +110,8 @@ Method used to add the data packets.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AddFilterRule-method: AddMethod--><!--Device-AddFilterRule-method: AddMethod-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -117,6 +129,8 @@ Network protocol.
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AddFilterRule-protocol?: Protocol--><!--Device-AddFilterRule-protocol?: Protocol-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -136,6 +150,8 @@ Sequence number of the rule.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AddFilterRule-ruleNo?: number--><!--Device-AddFilterRule-ruleNo?: number-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -153,6 +169,8 @@ Source IP address.
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AddFilterRule-srcAddr?: string--><!--Device-AddFilterRule-srcAddr?: string-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -172,6 +190,8 @@ Port of the source IP address.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AddFilterRule-srcPort?: string--><!--Device-AddFilterRule-srcPort?: string-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -189,6 +209,8 @@ UID of the application.
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AddFilterRule-uid?: string--><!--Device-AddFilterRule-uid?: string-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

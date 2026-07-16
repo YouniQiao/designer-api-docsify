@@ -12,8 +12,7 @@ import { media } from '@kit.MediaKit';
 function createAudioRecorder(): AudioRecorder
 ```
 
-Creates an AudioRecorder instance to control audio recording. Only one AudioRecorder instance can be created per
-device.
+Creates an AudioRecorder instance to control audio recording. Only one AudioRecorder instance can be created per device.
 
 **Since:** 6
 
@@ -21,13 +20,15 @@ device.
 
 **Substitutes:** createAVRecorder(callback:
 
+<!--Device-media-function createAudioRecorder(): AudioRecorder--><!--Device-media-function createAudioRecorder(): AudioRecorder-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AudioRecorder | If the operation is successful, an AudioRecorder instance is returned; otherwise,**null** is returned. The instance can be used to record audio. |
+| [AudioRecorder](arkts-media-audiorecorder-i.md) | If the operation is successful, an AudioRecorder instance is returned; otherwise,**null** is returned. The instance can be used to record audio. |
 
 **Example**
 

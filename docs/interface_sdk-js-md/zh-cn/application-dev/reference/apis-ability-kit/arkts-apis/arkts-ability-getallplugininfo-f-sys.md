@@ -1,5 +1,11 @@
 # getAllPluginInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getAllPluginInfo
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getAllPluginInfo(hostBundleName: string, userId?: number): Promise<Arra
 **起始版本：** 19
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getAllPluginInfo(hostBundleName: string, userId?: int): Promise<Array<PluginBundleInfo>>--><!--Device-bundleManager-function getAllPluginInfo(hostBundleName: string, userId?: int): Promise<Array<PluginBundleInfo>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -27,7 +35,7 @@ function getAllPluginInfo(hostBundleName: string, userId?: number): Promise<Arra
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;PluginBundleInfo&gt;&gt; | Promise对象，返回Array&lt;PluginBundleInfo&gt;。 |
+| Promise<Array<PluginBundleInfo>> | Promise对象，返回Array&lt;PluginBundleInfo&gt;。 |
 
 **错误码：**
 

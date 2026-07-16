@@ -20,6 +20,8 @@ Recycles widgets, that is, reclaiming widget memory. This API uses a promise to 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-formHost-function recycleForms(formIds: Array<string>): Promise<void>--><!--Device-formHost-function recycleForms(formIds: Array<string>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -28,13 +30,13 @@ Recycles widgets, that is, reclaiming widget memory. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | Yes | Array of widget IDs. |
+| formIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Array of widget IDs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

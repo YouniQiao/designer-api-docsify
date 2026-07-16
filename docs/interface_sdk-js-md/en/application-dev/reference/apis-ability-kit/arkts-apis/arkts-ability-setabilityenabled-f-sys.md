@@ -12,12 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function setAbilityEnabled(info: AbilityInfo, appIndex: number, isEnabled: boolean): Promise<void>
 ```
 
-Enables or disables an ability of an application or an application clone. This API uses a promise to return the
-result.
+Enables or disables an ability of an application or an application clone. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
+
+<!--Device-bundleManager-function setAbilityEnabled(info: AbilityInfo, appIndex: int, isEnabled: boolean): Promise<void>--><!--Device-bundleManager-function setAbilityEnabled(info: AbilityInfo, appIndex: int, isEnabled: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -27,15 +28,15 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | AbilityInfo | Yes | Information about the target ability. |
-| appIndex | number | Yes | Index of the application clone.<br> The value **0** means to enable or disable theability of the main application. A value greater than 0 means to enable or disable the ability of theapplication clone. |
+| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | Yes | Information about the target ability. |
+| appIndex | number | Yes | Index of the application clone.<br> The value **0** means to enable or disable the ability of the main application. A value greater than 0 means to enable or disable the ability of the application clone. |
 | isEnabled | boolean | Yes | Whether to enable the application. **true** to enable, **false** otherwise. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -96,6 +97,8 @@ Enables or disables an ability. This API uses an asynchronous callback to return
 
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
+<!--Device-bundleManager-function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean, callback: AsyncCallback<void>): void--><!--Device-bundleManager-function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -104,9 +107,9 @@ Enables or disables an ability. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | AbilityInfo | Yes | Information about the target ability. |
+| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | Yes | Information about the target ability. |
 | isEnabled | boolean | Yes | Whether to enable the application. **true** to enable, **false** otherwise. |
-| callback | AsyncCallback&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. Ifthe operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -168,6 +171,8 @@ Enables or disables an ability. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
+<!--Device-bundleManager-function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean): Promise<void>--><!--Device-bundleManager-function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -176,14 +181,14 @@ Enables or disables an ability. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | AbilityInfo | Yes | Information about the target ability. |
+| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | Yes | Information about the target ability. |
 | isEnabled | boolean | Yes | Whether to enable the application. **true** to enable, **false** otherwise. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

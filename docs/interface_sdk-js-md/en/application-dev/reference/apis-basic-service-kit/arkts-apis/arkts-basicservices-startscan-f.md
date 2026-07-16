@@ -18,6 +18,8 @@ Starts scanning. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.PRINT
 
+<!--Device-scan-function startScan(scannerId: string, batchMode: boolean): Promise<void>--><!--Device-scan-function startScan(scannerId: string, batchMode: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
@@ -25,13 +27,13 @@ Starts scanning. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | scannerId | string | Yes | Scanner ID. |
-| batchMode | boolean | Yes | Whether to use the batch processing mode. The value **true** indicates that thebatch processing mode is used, and **false** indicates the opposite. |
+| batchMode | boolean | Yes | Whether to use the batch processing mode. The value **true** indicates that the batch processing mode is used, and **false** indicates the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

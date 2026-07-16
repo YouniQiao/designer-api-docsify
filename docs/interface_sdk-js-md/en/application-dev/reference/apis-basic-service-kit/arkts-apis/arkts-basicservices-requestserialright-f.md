@@ -12,11 +12,11 @@ import { serialManager } from '@kit.BasicServicesKit';
 function requestSerialRight(portId: number): Promise<boolean>
 ```
 
-Requests the permission for the application to access the serial port device. After the application exits, the
-access permission on the serial port device is automatically removed. After the application is restarted, you need
-to request the permission again. This API uses a promise to return the result.
+Requests the permission for the application to access the serial port device. After the application exits, the access permission on the serial port device is automatically removed. After the application is restarted, you need to request the permission again. This API uses a promise to return the result.
 
 **Since:** 19
+
+<!--Device-serialManager-function requestSerialRight(portId: int): Promise<boolean>--><!--Device-serialManager-function requestSerialRight(portId: int): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -24,13 +24,13 @@ to request the permission again. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPortreturned by [getPortList](arkts-basicservices-getportlist-f.md#getportlist-1). |
+| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-getportlist-f.md#getportlist-1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the permission issuccessfully requested, and **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** indicates that the permission is successfully requested, and **false** indicates the opposite. |
 
 **Error codes:**
 

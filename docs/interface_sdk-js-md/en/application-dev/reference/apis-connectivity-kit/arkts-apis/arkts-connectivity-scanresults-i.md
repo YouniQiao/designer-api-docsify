@@ -4,6 +4,8 @@ Describes the contents of the scan results.
 
 **Since:** 26.0.0
 
+<!--Device-scan-interface ScanResults--><!--Device-scan-interface ScanResults-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import
@@ -18,14 +20,15 @@ import { scan } from '@kit.ConnectivityKit';
 address: string
 ```
 
-Address of the remote device.
-The length is 17, and the value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+Address of the remote device.The length is 17, and the value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
 
 **Type:** string
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ScanResults-address: string--><!--Device-ScanResults-address: string-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -43,6 +46,8 @@ The raw data.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ScanResults-data: ArrayBuffer--><!--Device-ScanResults-data: ArrayBuffer-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## deviceClass
@@ -58,6 +63,8 @@ Indicates the device class.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ScanResults-deviceClass?: nearlinkConstant.DeviceClass--><!--Device-ScanResults-deviceClass?: nearlinkConstant.DeviceClass-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -75,6 +82,8 @@ Device name of the remote device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ScanResults-deviceName: string--><!--Device-ScanResults-deviceName: string-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## isConnectable
@@ -91,6 +100,8 @@ Indicates whether the remote device is connectable.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ScanResults-isConnectable: boolean--><!--Device-ScanResults-isConnectable: boolean-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## rssi
@@ -99,14 +110,15 @@ Indicates whether the remote device is connectable.
 rssi: number
 ```
 
-RSSI of the remote device.
-Unit: dBm. The value is an integer within [-128,127], and the value 127 indicates an invalid RSSI.
+RSSI of the remote device.Unit: dBm. The value is an integer within [-128,127], and the value 127 indicates an invalid RSSI.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ScanResults-rssi: int--><!--Device-ScanResults-rssi: int-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 

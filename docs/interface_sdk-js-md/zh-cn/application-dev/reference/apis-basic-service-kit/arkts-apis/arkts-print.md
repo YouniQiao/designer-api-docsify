@@ -4,7 +4,15 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace print--><!--Device-unnamed-declare namespace print-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
+
+## 导入模块
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+```
 
 ## 汇总
 

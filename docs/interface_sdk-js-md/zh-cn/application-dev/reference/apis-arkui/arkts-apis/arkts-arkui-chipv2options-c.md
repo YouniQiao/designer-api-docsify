@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-export class ChipV2Options--><!--Device-unnamed-export class ChipV2Options-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { ChipV2SuffixSymbolIconConfig, ChipV2Label, ChipV2PrefixSymbolIconConfig, IChipV2OptionsConfig, ChipV2SymbolIcon, ChipV2SuffixImageIconConfig, ChipV2LocalizedLabelMarginConfig, ChipV2SymbolIconConfig, ChipV2LabelConfig, ChipV2SuffixSymbolIcon, ChipV2AccessibilityConfig, ChipV2Icon, ChipV2Size, ChipV2CloseConfig, ChipV2SuffixImageIcon, ChipV2Accessibility, ChipV2Options, ChipV2ImageIconConfig, ChipV2ImageIcon, ChipV2PrefixImageIcon, ChipV2LabelMarginConfig, ChipV2PrefixSymbolIcon, ChipV2, ChipV2CloseIcon, ChipV2PrefixImageIconConfig, ChipV2AccessibilitySelectedType } from '@kit.ArkUI';
+```
 
 ## constructor
 
@@ -18,7 +26,9 @@ ChipV2Options的构造函数
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-constructor(config: IChipV2OptionsConfig)--><!--Device-ChipV2Options-constructor(config: IChipV2OptionsConfig)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,7 +36,7 @@ ChipV2Options的构造函数
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | IChipV2OptionsConfig | 是 | Chip的选项 |
+| config | [IChipV2OptionsConfig](arkts-arkui-ichipv2optionsconfig-i.md) | 是 | Chip的选项 |
 
 ## accessibilityDescription
 
@@ -42,7 +52,9 @@ public accessibilityDescription?: ResourceStr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-public accessibilityDescription?: ResourceStr--><!--Device-ChipV2Options-public accessibilityDescription?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,7 +72,9 @@ public accessibilityLevel?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-public accessibilityLevel?: string--><!--Device-ChipV2Options-public accessibilityLevel?: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,7 +92,9 @@ public accessibilitySelectedType?: ChipV2AccessibilitySelectedType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-public accessibilitySelectedType?: ChipV2AccessibilitySelectedType--><!--Device-ChipV2Options-public accessibilitySelectedType?: ChipV2AccessibilitySelectedType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,7 +112,9 @@ public activated?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-public activated?: boolean--><!--Device-ChipV2Options-public activated?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -114,7 +132,9 @@ Chip激活时的背景色。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-public activatedBackgroundColor?: ColorMetrics--><!--Device-ChipV2Options-public activatedBackgroundColor?: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -124,8 +144,7 @@ Chip激活时的背景色。
 public activatedBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
-为激活的组件设置系统样式材质。不同的材料有不同的效果，
-它可以影响组件的背景颜色、边框、阴影和其他视觉属性。
+为激活的组件设置系统样式材质。不同的材料有不同的效果，它可以影响组件的背景颜色、边框、阴影和其他视觉属性。
 
 **类型：** uiMaterial.Material
 
@@ -133,7 +152,9 @@ public activatedBackgroundSystemMaterial?: uiMaterial.Material
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-public activatedBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipV2Options-public activatedBackgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -151,7 +172,9 @@ public allowClose?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-public allowClose?: boolean--><!--Device-ChipV2Options-public allowClose?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -169,7 +192,9 @@ Chip背景色。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-public backgroundColor?: ColorMetrics--><!--Device-ChipV2Options-public backgroundColor?: ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -179,8 +204,7 @@ Chip背景色。
 public backgroundSystemMaterial?: uiMaterial.Material
 ```
 
-为组件设置系统样式材质。不同的材料有不同的效果，会影响
-组件的背景颜色、边框、阴影和其他视觉属性。
+为组件设置系统样式材质。不同的材料有不同的效果，会影响组件的背景颜色、边框、阴影和其他视觉属性。
 
 **类型：** uiMaterial.Material
 
@@ -188,7 +212,9 @@ public backgroundSystemMaterial?: uiMaterial.Material
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-public backgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipV2Options-public backgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -206,7 +232,9 @@ Chip半径。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-public borderRadius?: LengthMetrics--><!--Device-ChipV2Options-public borderRadius?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -224,7 +252,9 @@ public closeIcon?: ChipV2CloseIcon
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-public closeIcon?: ChipV2CloseIcon--><!--Device-ChipV2Options-public closeIcon?: ChipV2CloseIcon-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -242,7 +272,9 @@ public direction?: Direction
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-public direction?: Direction--><!--Device-ChipV2Options-public direction?: Direction-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -260,7 +292,9 @@ Chip使能。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-public enabled?: boolean--><!--Device-ChipV2Options-public enabled?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -278,7 +312,9 @@ public fontSize?: LengthMetrics
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-public fontSize?: LengthMetrics--><!--Device-ChipV2Options-public fontSize?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -296,7 +332,9 @@ Chip前缀图标。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-public label: ChipV2Label--><!--Device-ChipV2Options-public label: ChipV2Label-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -314,7 +352,9 @@ Chip的最大字体比例。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-public maxFontScale?: number | Resource--><!--Device-ChipV2Options-public maxFontScale?: number | Resource-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -332,7 +372,9 @@ Chip的最小字体比例。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-public minFontScale?: number | Resource--><!--Device-ChipV2Options-public minFontScale?: number | Resource-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -350,7 +392,9 @@ public onClicked?: Callback<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-public onClicked?: Callback<void>--><!--Device-ChipV2Options-public onClicked?: Callback<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -368,7 +412,9 @@ public onClose?: VoidCallback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-public onClose?: VoidCallback--><!--Device-ChipV2Options-public onClose?: VoidCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -386,7 +432,9 @@ Chip填充大小。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-public padding?: LocalizedPadding--><!--Device-ChipV2Options-public padding?: LocalizedPadding-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -404,7 +452,9 @@ Chip前缀图标。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-public prefixIcon?: ChipV2Icon--><!--Device-ChipV2Options-public prefixIcon?: ChipV2Icon-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -422,7 +472,9 @@ Chip尺寸。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-public size?: ChipV2Size | SizeT<LengthMetrics>--><!--Device-ChipV2Options-public size?: ChipV2Size | SizeT<LengthMetrics>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -440,7 +492,9 @@ Chip后缀图标。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipV2Options-public suffixIcon?: ChipV2Icon--><!--Device-ChipV2Options-public suffixIcon?: ChipV2Icon-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

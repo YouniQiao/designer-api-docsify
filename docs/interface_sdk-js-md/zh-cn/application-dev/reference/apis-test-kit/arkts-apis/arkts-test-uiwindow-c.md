@@ -1,11 +1,18 @@
 # UiWindow
 
-UiWindow代表了UI界面上的一个窗口，提供窗口属性获取，窗口拖动、调整窗口大小等能力。
-该类提供的所有方法都使用Promise方式作为异步方法，需使用await方式调用。
+UiWindow代表了UI界面上的一个窗口，提供窗口属性获取，窗口拖动、调整窗口大小等能力。该类提供的所有方法都使用Promise方式作为异步方法，需使用await方式调用。
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class UiWindow--><!--Device-unnamed-declare class UiWindow-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
+
+## 导入模块
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
+```
 
 ## close
 
@@ -17,7 +24,9 @@ close(): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UiWindow-close(): Promise<void>--><!--Device-UiWindow-close(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -25,7 +34,7 @@ close(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -59,7 +68,9 @@ focus(): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UiWindow-focus(): Promise<void>--><!--Device-UiWindow-focus(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -67,7 +78,7 @@ focus(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象，返回无结果的Promise对象。 |
+| Promise<void> | - Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 
@@ -100,7 +111,9 @@ getBounds(): Promise<Rect>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UiWindow-getBounds(): Promise<Rect>--><!--Device-UiWindow-getBounds(): Promise<Rect>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -108,7 +121,7 @@ getBounds(): Promise<Rect>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Rect&gt; | - Promise对象，返回窗口的边框信息。 |
+| Promise<Rect> | - Promise对象，返回窗口的边框信息。 |
 
 **错误码：**
 
@@ -144,7 +157,9 @@ getBundleName(): Promise<string>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UiWindow-getBundleName(): Promise<string>--><!--Device-UiWindow-getBundleName(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -152,7 +167,7 @@ getBundleName(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | - Promise对象，返回窗口归属应用的包名信息。 |
+| Promise<string> | - Promise对象，返回窗口归属应用的包名信息。 |
 
 **错误码：**
 
@@ -188,7 +203,9 @@ getDisplayId(): Promise<number>
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UiWindow-getDisplayId(): Promise<int>--><!--Device-UiWindow-getDisplayId(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -196,7 +213,7 @@ getDisplayId(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | - Promise对象，返回窗口所属的屏幕ID。 |
+| Promise<number> | - Promise对象，返回窗口所属的屏幕ID。 |
 
 **错误码：**
 
@@ -229,7 +246,9 @@ getTitle(): Promise<string>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UiWindow-getTitle(): Promise<string>--><!--Device-UiWindow-getTitle(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -237,7 +256,7 @@ getTitle(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | - Promise对象，返回窗口的标题信息。 |
+| Promise<string> | - Promise对象，返回窗口的标题信息。 |
 
 **错误码：**
 
@@ -270,7 +289,9 @@ getWindowMode(): Promise<WindowMode>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UiWindow-getWindowMode(): Promise<WindowMode>--><!--Device-UiWindow-getWindowMode(): Promise<WindowMode>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -278,7 +299,7 @@ getWindowMode(): Promise<WindowMode>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;WindowMode&gt; | - Promise对象，返回窗口的窗口模式信息。 |
+| Promise<WindowMode> | - Promise对象，返回窗口的窗口模式信息。 |
 
 **错误码：**
 
@@ -311,7 +332,9 @@ isActive(): Promise<boolean>
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UiWindow-isActive(): Promise<boolean>--><!--Device-UiWindow-isActive(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -319,7 +342,7 @@ isActive(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise对象，返回窗口对象是否为用户正在交互窗口。true：交互窗口。false：非交互窗口。 |
+| Promise<boolean> | - Promise对象，返回窗口对象是否为用户正在交互窗口。true：交互窗口。false：非交互窗口。 |
 
 **错误码：**
 
@@ -350,8 +373,8 @@ isActived(): Promise<boolean>
 
 判断窗口是否为用户正在交互窗口。使用Promise异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 9开始支持，从API version 11开始废弃，建议使用[isActive<sup>11+</sup>](arkts-test-uiwindow-c.md#isactive-1)替代。
 
 **起始版本：** 9
@@ -360,13 +383,15 @@ isActived(): Promise<boolean>
 
 **替代接口：** [isActive](arkts-test-uiwindow-c.md#isactive-1)
 
+<!--Device-UiWindow-isActived(): Promise<boolean>--><!--Device-UiWindow-isActived(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise对象，返回窗口对象是否为用户正在交互窗口。true表示是交互窗口。false表示非交互窗口。 |
+| Promise<boolean> | - Promise对象，返回窗口对象是否为用户正在交互窗口。true表示是交互窗口。false表示非交互窗口。 |
 
 **错误码：**
 
@@ -399,7 +424,9 @@ isFocused(): Promise<boolean>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UiWindow-isFocused(): Promise<boolean>--><!--Device-UiWindow-isFocused(): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -407,7 +434,7 @@ isFocused(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise对象，返回窗口对象是否获取获焦状态。true：获焦。false：未获焦。 |
+| Promise<boolean> | - Promise对象，返回窗口对象是否获取获焦状态。true：获焦。false：未获焦。 |
 
 **错误码：**
 
@@ -440,7 +467,9 @@ maximize(): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UiWindow-maximize(): Promise<void>--><!--Device-UiWindow-maximize(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -448,7 +477,7 @@ maximize(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象，返回无结果的Promise对象。 |
+| Promise<void> | - Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 
@@ -482,7 +511,9 @@ minimize(): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UiWindow-minimize(): Promise<void>--><!--Device-UiWindow-minimize(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -490,7 +521,7 @@ minimize(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象，返回无结果的Promise对象。 |
+| Promise<void> | - Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 
@@ -524,7 +555,9 @@ moveTo(x: number, y: number): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UiWindow-moveTo(x: int, y: int): Promise<void>--><!--Device-UiWindow-moveTo(x: int, y: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -539,7 +572,7 @@ moveTo(x: number, y: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象，返回无结果的Promise对象。 |
+| Promise<void> | - Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 
@@ -574,7 +607,9 @@ resize(wide: number, height: number, direction: ResizeDirection): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UiWindow-resize(wide: int, height: int, direction: ResizeDirection): Promise<void>--><!--Device-UiWindow-resize(wide: int, height: int, direction: ResizeDirection): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -584,13 +619,13 @@ resize(wide: number, height: number, direction: ResizeDirection): Promise<void>
 | --- | --- | --- | --- |
 | wide | number | 是 | 以number的形式传入调整后窗口的宽度，取值范围：大于等于0的整数。 |
 | height | number | 是 | 以number的形式传入调整后窗口的高度，取值范围：大于等于0的整数。 |
-| direction | ResizeDirection | 是 | 以[ResizeDirection](arkts-test-resizedirection-e.md)的形式传入窗口调整的方向。 |
+| direction | [ResizeDirection](arkts-test-resizedirection-e.md) | 是 | 以[ResizeDirection](arkts-test-resizedirection-e.md)的形式传入窗口调整的方向。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象，返回无结果的Promise对象。 |
+| Promise<void> | - Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 
@@ -611,7 +646,9 @@ resume(): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UiWindow-resume(): Promise<void>--><!--Device-UiWindow-resume(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -619,7 +656,7 @@ resume(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | - Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -653,7 +690,9 @@ split(): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UiWindow-split(): Promise<void>--><!--Device-UiWindow-split(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -661,7 +700,7 @@ split(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象，返回无结果的Promise对象。 |
+| Promise<void> | - Promise对象，返回无结果的Promise对象。 |
 
 **错误码：**
 

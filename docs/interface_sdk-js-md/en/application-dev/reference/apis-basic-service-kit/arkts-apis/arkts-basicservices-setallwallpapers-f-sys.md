@@ -18,6 +18,8 @@ Set wallpapers for all forms of devices.
 
 **Required permissions:** ohos.permission.SET_WALLPAPER
 
+<!--Device-wallpaper-function setAllWallpapers(wallpaperInfos: Array<WallpaperInfo>, wallpaperType: WallpaperType): Promise<void>--><!--Device-wallpaper-function setAllWallpapers(wallpaperInfos: Array<WallpaperInfo>, wallpaperType: WallpaperType): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **System API:** This is a system API.
@@ -26,14 +28,14 @@ Set wallpapers for all forms of devices.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperInfos | Array&lt;WallpaperInfo&gt; | Yes | indicates the current device wallpaper type object.among them, NORMAL and PORTRAIT are mandatory. |
-| wallpaperType | WallpaperType | Yes | indicates the wallpaper type. |
+| wallpaperInfos | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<WallpaperInfo> | Yes | indicates the current device wallpaper type object.among them, NORMAL and PORTRAIT are mandatory. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 

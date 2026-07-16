@@ -12,13 +12,11 @@ import { systemManager } from '@kit.MDMKit';
 function notifyUpdatePackages(admin: Want, packageInfo: UpdatePackageInfo): Promise<void>
 ```
 
-Notifies the system of the update packages. In intranet updates, call this API to notify the system of the update
-packages, and then call [systemManager.setOtaUpdatePolicy](arkts-mdm-setotaupdatepolicy-f.md#setotaupdatepolicy-1) to set the
-update policy.
+Notifies the system of the update packages. In intranet updates, call this API to notify the system of the update packages, and then call [systemManager.setOtaUpdatePolicy](arkts-mdm-setotaupdatepolicy-f.md#setotaupdatepolicy-1) to set the update policy.
 
-> **NOTE**
->
-> This API is time-consuming. Subsequent calls to other synchronous APIs in the application main thread must wait
+> **NOTE**  
+>  
+> This API is time-consuming. Subsequent calls to other synchronous APIs in the application main thread must wait  
 > for the asynchronous return of this API.
 
 **Since:** 12
@@ -27,20 +25,22 @@ update policy.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-systemManager-function notifyUpdatePackages(admin: Want, packageInfo: UpdatePackageInfo): Promise<void>--><!--Device-systemManager-function notifyUpdatePackages(admin: Want, packageInfo: UpdatePackageInfo): Promise<void>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| packageInfo | UpdatePackageInfo | Yes | Information about the system update packages.<br>**Note**: The input**UpdatePackageInfo.packages.path** must be a .zip package starting with update. If a file in other formats isinput, error code 9201004 will be reported. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| packageInfo | [UpdatePackageInfo](arkts-mdm-updatepackageinfo-i.md) | Yes | Information about the system update packages.<br>**Note**: The input **UpdatePackageInfo.packages.path** must be a .zip package starting with update. If a file in other formats is input, error code 9201004 will be reported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. An error object will be thrown if the operation fails. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. An error object will be thrown if the operation fails. |
 
 **Error codes:**
 
@@ -49,7 +49,7 @@ update policy.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [9201004](../errorcode-enterpriseDeviceManager.md#9201004-update-package-not-exist-or-fails-to-be-parsed) | The update packages do not exist or analyzing failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Example**

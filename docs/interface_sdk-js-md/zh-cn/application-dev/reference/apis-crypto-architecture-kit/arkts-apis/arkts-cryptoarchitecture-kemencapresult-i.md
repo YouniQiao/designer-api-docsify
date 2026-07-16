@@ -4,7 +4,15 @@ KEM封装结果。
 
 **起始版本：** 26.0.0
 
+<!--Device-cryptoFramework-interface KemEncapResult--><!--Device-cryptoFramework-interface KemEncapResult-End-->
+
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
+
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+```
 
 ## sharedSecret
 
@@ -20,7 +28,9 @@ KEM的共享密钥。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-KemEncapResult-sharedSecret: Uint8Array--><!--Device-KemEncapResult-sharedSecret: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
 
@@ -38,7 +48,9 @@ KEM封装的密钥，即KEM的密文。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-KemEncapResult-wrappedKey: Uint8Array--><!--Device-KemEncapResult-wrappedKey: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
 

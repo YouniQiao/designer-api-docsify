@@ -12,11 +12,11 @@ import { serialManager } from '@kit.BasicServicesKit';
 function write(portId: number, buffer: Uint8Array, timeout?: number): Promise<number>
 ```
 
-Writes data to the serial port device asynchronously. The length of data written each time cannot exceed 4 KB;
-otherwise, data loss may occur. You are advised to write long data in multiple packets. This API uses a promise to
-return the result.
+Writes data to the serial port device asynchronously. The length of data written each time cannot exceed 4 KB;otherwise, data loss may occur. You are advised to write long data in multiple packets. This API uses a promise to return the result.
 
 **Since:** 19
+
+<!--Device-serialManager-function write(portId: int, buffer: Uint8Array, timeout?: int): Promise<int>--><!--Device-serialManager-function write(portId: int, buffer: Uint8Array, timeout?: int): Promise<int>-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -24,15 +24,15 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPortreturned by [getPortList](arkts-basicservices-getportlist-f.md#getportlist-1). |
-| buffer | Uint8Array | Yes | Buffer for writing data, with a maximum length of 4 KB. |
-| timeout | number | No | Timeout interval.Unit: milliseconds. Whether the buffer of the target port is writable within thespecified time. If yes, the API is processed properly; otherwise, a timeout message is returned after the specifiedtime. The default value **0** indicates that the API returns the result immediately when the target port is notwritable. |
+| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-getportlist-f.md#getportlist-1). |
+| buffer | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Buffer for writing data, with a maximum length of 4 KB. |
+| timeout | number | No | Timeout interval.Unit: milliseconds. Whether the buffer of the target port is writable within the specified time. If yes, the API is processed properly; otherwise, a timeout message is returned after the specified time. The default value **0** indicates that the API returns the result immediately when the target port is not writable. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the length of the data written. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the length of the data written. |
 
 **Error codes:**
 

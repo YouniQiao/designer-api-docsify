@@ -1,5 +1,11 @@
 # getUserAuthWidgetMgr（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+```
+
 ## getUserAuthWidgetMgr
 
 ```TypeScript
@@ -8,13 +14,15 @@ function getUserAuthWidgetMgr(version: number): UserAuthWidgetMgr
 
 获取身份认证组件管理器对象。用于获取UserAuthWidgetMgr实例，通过该实例可将自定义身份认证控件注册到系统进行统一管理。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 每个UserAuthWidgetMgr实例可管理一个身份认证控件，若需要管理多个控件则需获取多个实例。
 
 **起始版本：** 10
 
 **需要权限：** ohos.permission.SUPPORT_USER_AUTH
+
+<!--Device-userAuth-function getUserAuthWidgetMgr(version: int): UserAuthWidgetMgr--><!--Device-userAuth-function getUserAuthWidgetMgr(version: int): UserAuthWidgetMgr-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -30,7 +38,7 @@ function getUserAuthWidgetMgr(version: number): UserAuthWidgetMgr
 
 | 类型 | 说明 |
 | --- | --- |
-| UserAuthWidgetMgr | 身份认证组件管理器对象。可用于订阅和取消订阅来自用户认证框架的命令。 |
+| [UserAuthWidgetMgr](arkts-userauthentication-userauthwidgetmgr-i-sys.md) | 身份认证组件管理器对象。可用于订阅和取消订阅来自用户认证框架的命令。 |
 
 **错误码：**
 

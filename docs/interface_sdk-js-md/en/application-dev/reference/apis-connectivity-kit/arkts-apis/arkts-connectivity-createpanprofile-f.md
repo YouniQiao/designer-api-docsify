@@ -18,13 +18,15 @@ create the instance of pan profile.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-pan-function createPanProfile(): PanProfile--><!--Device-pan-function createPanProfile(): PanProfile-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PanProfile | Returns the instance of pan profile. |
+| [PanProfile](arkts-connectivity-panprofile-i.md) | Returns the instance of pan profile. |
 
 **Error codes:**
 

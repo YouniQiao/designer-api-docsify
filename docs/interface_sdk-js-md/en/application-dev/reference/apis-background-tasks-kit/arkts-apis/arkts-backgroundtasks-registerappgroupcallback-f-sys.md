@@ -18,6 +18,8 @@ Register appGroup change callback to service.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function registerAppGroupCallBack(groupCallback: Callback<AppGroupCallbackInfo>, callback: AsyncCallback<void>): void--><!--Device-usageStatistics-function registerAppGroupCallBack(groupCallback: Callback<AppGroupCallbackInfo>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Register appGroup change callback to service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| groupCallback | Callback&lt;AppGroupCallbackInfo&gt; | Yes | callback of AppGroupCallbackInfo when the group of app changed. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result.If the registration is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| groupCallback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AppGroupCallbackInfo> | Yes | callback of AppGroupCallbackInfo when the group of app changed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result.If the registration is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -80,6 +82,8 @@ Register appGroup change callback to service.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function registerAppGroupCallBack(groupCallback: Callback<AppGroupCallbackInfo>): Promise<void>--><!--Device-usageStatistics-function registerAppGroupCallBack(groupCallback: Callback<AppGroupCallbackInfo>): Promise<void>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **System API:** This is a system API.
@@ -88,13 +92,13 @@ Register appGroup change callback to service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| groupCallback | Callback&lt;AppGroupCallbackInfo&gt; | Yes | callback of AppGroupCallbackInfo when the group of app changed. |
+| groupCallback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AppGroupCallbackInfo> | Yes | callback of AppGroupCallbackInfo when the group of app changed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by registerAppGroupCallBack. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by registerAppGroupCallBack. |
 
 **Error codes:**
 

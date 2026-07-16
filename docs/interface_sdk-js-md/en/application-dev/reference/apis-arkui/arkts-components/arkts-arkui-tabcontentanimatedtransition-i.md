@@ -4,6 +4,8 @@ Provides the information about the custom tab switching animation.
 
 **Since:** 11
 
+<!--Device-unnamed-declare interface TabContentAnimatedTransition--><!--Device-unnamed-declare interface TabContentAnimatedTransition-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## timeout
@@ -12,10 +14,7 @@ Provides the information about the custom tab switching animation.
 timeout?: number
 ```
 
-Timeout for the custom tab switching animation. The timer starts when the switching begins. If this timeframe
-passes without you calling the **finishTransition** API in
-[TabContentTransitionProxy](arkts-arkui-tabcontenttransitionproxy-i.md), the component will assume that the custom animation
-has ended and will proceed directly with subsequent operations.
+Timeout for the custom tab switching animation. The timer starts when the switching begins. If this timeframe passes without you calling the **finishTransition** API in [TabContentTransitionProxy](arkts-arkui-tabcontenttransitionproxy-i.md), the component will assume that the custom animation has ended and will proceed directly with subsequent operations.
 
 Default value: **1000**
 
@@ -34,6 +33,8 @@ Value range: [0, +∞)
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-TabContentAnimatedTransition-timeout?: number--><!--Device-TabContentAnimatedTransition-timeout?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,6 +55,8 @@ Content of the custom tab switching animation.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-TabContentAnimatedTransition-transition: Callback<TabContentTransitionProxy>--><!--Device-TabContentAnimatedTransition-transition: Callback<TabContentTransitionProxy>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

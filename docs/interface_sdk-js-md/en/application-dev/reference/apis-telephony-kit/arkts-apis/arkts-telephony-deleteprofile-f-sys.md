@@ -18,6 +18,8 @@ Deletes the given profile from eUICC.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE
 
+<!--Device-eSIM-function deleteProfile(slotId: int, iccid: string): Promise<ResultCode>--><!--Device-eSIM-function deleteProfile(slotId: int, iccid: string): Promise<ResultCode>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -33,7 +35,7 @@ Deletes the given profile from eUICC.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultCode&gt; | Returns the response to deletes the given profile. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ResultCode> | Returns the response to deletes the given profile. |
 
 **Error codes:**
 

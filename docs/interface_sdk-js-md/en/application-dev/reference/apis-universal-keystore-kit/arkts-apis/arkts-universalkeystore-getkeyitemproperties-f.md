@@ -18,14 +18,24 @@ function getKeyItemProperties(
 
 Obtains key properties. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> Getting properties of SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)
+> **NOTE**  
+>  
+> Getting properties of SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)  
 > requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-huks-function getKeyItemProperties(
+    keyAlias: string,
+    options: HuksOptions,
+    callback: AsyncCallback<HuksReturnResult>
+  ): void--><!--Device-huks-function getKeyItemProperties(
+    keyAlias: string,
+    options: HuksOptions,
+    callback: AsyncCallback<HuksReturnResult>
+  ): void-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -36,14 +46,14 @@ Obtains key properties. This API uses an asynchronous callback to return the res
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Key alias, which must be the same as the alias used when the key was generated. |
-| options | HuksOptions | Yes | Empty object (leave this parameter empty). |
-| callback | AsyncCallback&lt;HuksReturnResult&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** isan error object. **properties** of **HuksReturnResult** are the parameters required for generating a key. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Empty object (leave this parameter empty). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<HuksReturnResult> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. **properties** of **HuksReturnResult** are the parameters required for generating a key. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly becausethe ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified.2. Incorrect parameter types.3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
 | [12000001](../errorcode-huks.md#12000001-feature-not-supported) | algorithm mode is not supported |
@@ -88,14 +98,16 @@ function getKeyItemProperties(keyAlias: string, options: HuksOptions): Promise<H
 
 Obtains key properties. This API uses a promise to return the result.
 
-> **NOTE**
->
-> Getting properties of SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)
+> **NOTE**  
+>  
+> Getting properties of SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)  
 > requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-huks-function getKeyItemProperties(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>--><!--Device-huks-function getKeyItemProperties(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -104,19 +116,19 @@ Obtains key properties. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Key alias, which must be the same as the alias used when the key was generated. |
-| options | HuksOptions | Yes | Empty object (leave this parameter empty). |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Empty object (leave this parameter empty). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | Promise that returns the operation result. If the operation is successful,**properties** of **HuksReturnResult** is the obtained key property information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HuksReturnResult> | Promise that returns the operation result. If the operation is successful,**properties** of **HuksReturnResult** is the obtained key property information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly becausethe ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified.2. Incorrect parameter types.3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
 | [12000001](../errorcode-huks.md#12000001-feature-not-supported) | algorithm mode is not supported |

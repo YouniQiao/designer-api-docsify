@@ -12,12 +12,13 @@ import { notificationManager } from '@kit.NotificationKit';
 function isNotificationSlotEnabledByBundles(bundles: Array<BundleOption>, type: SlotType): Promise<Map<BundleOption, boolean>>
 ```
 
-Checks whether a notification slot type is enabled for the specified applications in batch. This API uses a
-promise to return the result.
+Checks whether a notification slot type is enabled for the specified applications in batch. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function isNotificationSlotEnabledByBundles(bundles: Array<BundleOption>, type: SlotType): Promise<Map<BundleOption, boolean>>--><!--Device-notificationManager-function isNotificationSlotEnabledByBundles(bundles: Array<BundleOption>, type: SlotType): Promise<Map<BundleOption, boolean>>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -27,14 +28,14 @@ promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundles | Array&lt;BundleOption&gt; | Yes | Array of bundle information of the applications.<br>The maximum length is 1000 and cannot be empty. |
-| type | SlotType | Yes | Notification slot type. All bundles share the same slot type. |
+| bundles | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<BundleOption> | Yes | Array of bundle information of the applications.<br>The maximum length is 1000 and cannot be empty. |
+| type | [SlotType](arkts-notification-slottype-e-sys.md) | Yes | Notification slot type. All bundles share the same slot type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Map&lt;BundleOption, boolean&gt;&gt; | Promise used to return the result. The key is the bundleinformation, and the value **true** means that the notification slot type is enabled, and **false** means theopposite. Bundles whose slot has not been created will not appear in the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Map<BundleOption, boolean>> | Promise used to return the result. The key is the bundle information, and the value **true** means that the notification slot type is enabled, and **false** means the opposite. Bundles whose slot has not been created will not appear in the result. |
 
 **Error codes:**
 

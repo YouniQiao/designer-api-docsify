@@ -4,6 +4,8 @@ OIS (Optical Image Stabilization) query interface.
 
 **Since:** 24
 
+<!--Device-camera-interface OISQuery--><!--Device-camera-interface OISQuery-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
@@ -26,13 +28,15 @@ Gets the current custom bias value for the specified OIS axis.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-OISQuery-getCurrentCustomOISBias(oisAxis: OISAxes): double--><!--Device-OISQuery-getCurrentCustomOISBias(oisAxis: OISAxes): double-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oisAxis | OISAxes | Yes | The OIS axis |
+| oisAxis | [OISAxes](arkts-camera-oisaxes-e.md) | Yes | The OIS axis |
 
 **Return value:**
 
@@ -61,13 +65,15 @@ Gets the current OIS mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-OISQuery-getCurrentOISMode(): OISMode--><!--Device-OISQuery-getCurrentOISMode(): OISMode-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| OISMode | The current OIS mode. |
+| [OISMode](arkts-camera-oismode-e.md) | The current OIS mode. |
 
 **Error codes:**
 
@@ -90,19 +96,21 @@ Gets the supported bias range for the specified OIS axis.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-OISQuery-getSupportedOISBiasRange(oisAxis: OISAxes): Array<double>--><!--Device-OISQuery-getSupportedOISBiasRange(oisAxis: OISAxes): Array<double>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oisAxis | OISAxes | Yes | The OIS axis. |
+| oisAxis | [OISAxes](arkts-camera-oisaxes-e.md) | Yes | The OIS axis. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | The bias range. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | The bias range. |
 
 **Error codes:**
 
@@ -125,13 +133,15 @@ Gets the bias step for the specified OIS axis.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-OISQuery-getSupportedOISBiasStep(oisAxis: OISAxes): double--><!--Device-OISQuery-getSupportedOISBiasStep(oisAxis: OISAxes): double-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oisAxis | OISAxes | Yes | The OIS axis. |
+| oisAxis | [OISAxes](arkts-camera-oisaxes-e.md) | Yes | The OIS axis. |
 
 **Return value:**
 
@@ -160,13 +170,15 @@ Checks if the specified OIS mode is supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-OISQuery-isOISModeSupported(mode: OISMode): boolean--><!--Device-OISQuery-isOISModeSupported(mode: OISMode): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | OISMode | Yes | The OIS mode to check. |
+| mode | [OISMode](arkts-camera-oismode-e.md) | Yes | The OIS mode to check. |
 
 **Return value:**
 

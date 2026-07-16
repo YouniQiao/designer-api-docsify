@@ -18,6 +18,8 @@ Restrict Bluetooth BR/EDR ability on a device.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
+<!--Device-access-function restrictBluetooth(): Promise<void>--><!--Device-access-function restrictBluetooth(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Restrict Bluetooth BR/EDR ability on a device.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

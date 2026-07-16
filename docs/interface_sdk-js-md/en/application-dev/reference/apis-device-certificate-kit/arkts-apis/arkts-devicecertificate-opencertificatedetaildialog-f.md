@@ -12,15 +12,15 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 function openCertificateDetailDialog(context: common.Context,cert: Uint8Array, property: CertificateDialogProperty): Promise<void>
 ```
 
-Opens the Certificate Management dialog box to display the certificate details. After the interface is invoked
-successfully, detailed information about the certificate, such as the basic information, validity period, issuer,
-and user, is displayed. Use Promise asynchronous callback.
+Opens the Certificate Management dialog box to display the certificate details. After the interface is invoked successfully, detailed information about the certificate, such as the basic information, validity period, issuer,and user, is displayed. Use Promise asynchronous callback.
 
 **Since:** 18
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-certificateManagerDialog-function openCertificateDetailDialog(context: common.Context,cert: Uint8Array, property: CertificateDialogProperty): Promise<void>--><!--Device-certificateManagerDialog-function openCertificateDetailDialog(context: common.Context,cert: Uint8Array, property: CertificateDialogProperty): Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 
@@ -29,23 +29,23 @@ and user, is displayed. Use Promise asynchronous callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | common.Context | Yes | Context of the application. |
-| cert | Uint8Array | Yes | The certificate Data. |
-| property | CertificateDialogProperty | Yes | Property of the certificate management dialog box. |
+| cert | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | The certificate Data. |
+| property | [CertificateDialogProperty](arkts-devicecertificate-certificatedialogproperty-i.md) | Yes | Property of the certificate management dialog box. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
-| [29700003](../errorcode-certManagerDialog.md#29700003-failed-to-install-the-certificate) | Show the certificate detail dialog failed, such as the certificate is in aninvalid format. |
+| [29700003](../errorcode-certManagerDialog.md#29700003-failed-to-install-the-certificate) | Show the certificate detail dialog failed, such as the certificate is in an invalid format. |
 | [29700004](../errorcode-certManagerDialog.md#29700004-operation-not-supported-by-the-device) | The API is not supported on this device. |
 
 **Example**

@@ -1,9 +1,10 @@
 # ManualIsoQuery (System API)
 
-Provides APIs to check whether a camera device supports manual ISO setting and obtain the ISO range supported by
-the device.
+Provides APIs to check whether a camera device supports manual ISO setting and obtain the ISO range supported by the device.
 
 **Since:** 24
+
+<!--Device-camera-interface ManualIsoQuery--><!--Device-camera-interface ManualIsoQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -25,6 +26,8 @@ Obtains the supported ISO range.
 
 **Since:** 12
 
+<!--Device-ManualIsoQuery-getIsoRange(): Array<int>--><!--Device-ManualIsoQuery-getIsoRange(): Array<int>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -33,7 +36,7 @@ Obtains the supported ISO range.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | ISO range. The value range is [50, 100, ..., 6400]. The actual value depends on thebottom-layer capability. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | ISO range. The value range is [50, 100, ..., 6400]. The actual value depends on the bottom-layer capability. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -71,6 +74,8 @@ Checks whether manual ISO setting is supported.
 
 **Since:** 12
 
+<!--Device-ManualIsoQuery-isManualIsoSupported(): boolean--><!--Device-ManualIsoQuery-isManualIsoSupported(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -79,7 +84,7 @@ Checks whether manual ISO setting is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of manual ISO setting. **true** if supported, **false**otherwise. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| boolean | Check result for the support of manual ISO setting. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 

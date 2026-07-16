@@ -12,12 +12,13 @@ import { config } from '@kit.AccessibilityKit';
 function on(type: 'enabledAccessibilityExtensionListChange', callback: Callback<void>): void
 ```
 
-Adds a listener for changes in the list of enabled accessibility extension abilities. This API uses an asynchronous
-callback to return the result.
+Adds a listener for changes in the list of enabled accessibility extension abilities. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.READ_ACCESSIBILITY_CONFIG
+
+<!--Device-config-function on(type: 'enabledAccessibilityExtensionListChange', callback: Callback<void>): void--><!--Device-config-function on(type: 'enabledAccessibilityExtensionListChange', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -27,8 +28,8 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'enabledAccessibilityExtensionListChange' | Yes | Listening type. The value is fixed at**'enabledAccessibilityExtensionListChange'**, indicating listening for changes in the list of enabledaccessibility extension abilities. |
-| callback | Callback&lt;void&gt; | Yes | Callback invoked when the list of enabled accessibility extension abilitieschanges. |
+| type | 'enabledAccessibilityExtensionListChange' | Yes | Listening type. The value is fixed at **'enabledAccessibilityExtensionListChange'**, indicating listening for changes in the list of enabled accessibility extension abilities. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Callback invoked when the list of enabled accessibility extension abilities changes. |
 
 **Error codes:**
 
@@ -45,12 +46,13 @@ callback to return the result.
 function on(type: 'installedAccessibilityListChange', callback: Callback<void>): void
 ```
 
-Adds a listener for changes in the list of installed accessibility extension abilities. This API uses an
-asynchronous callback to return the result.
+Adds a listener for changes in the list of installed accessibility extension abilities. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.READ_ACCESSIBILITY_CONFIG
+
+<!--Device-config-function on(type: 'installedAccessibilityListChange', callback: Callback<void>): void--><!--Device-config-function on(type: 'installedAccessibilityListChange', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -60,8 +62,8 @@ asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'installedAccessibilityListChange' | Yes | Listening type. The value is fixed at**'installedAccessibilityListChange'**, indicating listening for changes in the list of installed accessibilityextension abilities. |
-| callback | Callback&lt;void&gt; | Yes | Callback invoked when the list of installed accessibility extension abilitieschanges. |
+| type | 'installedAccessibilityListChange' | Yes | Listening type. The value is fixed at **'installedAccessibilityListChange'**, indicating listening for changes in the list of installed accessibility extension abilities. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Callback invoked when the list of installed accessibility extension abilities changes. |
 
 **Error codes:**
 

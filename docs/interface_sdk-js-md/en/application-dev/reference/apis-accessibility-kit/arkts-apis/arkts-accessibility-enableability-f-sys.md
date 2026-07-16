@@ -18,6 +18,8 @@ Enables an accessibility extension ability. This API uses a promise to return th
 
 **Required permissions:** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
+<!--Device-config-function enableAbility(name: string, capability: Array<accessibility.Capability>): Promise<void>--><!--Device-config-function enableAbility(name: string, capability: Array<accessibility.Capability>): Promise<void>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -27,13 +29,13 @@ Enables an accessibility extension ability. This API uses a promise to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the accessibility extension ability, in the format of 'bundleName/abilityName'. |
-| capability | Array&lt;accessibility.Capability&gt; | Yes | Capability of the accessibility extension ability. |
+| capability | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<accessibility.Capability> | Yes | Capability of the accessibility extension ability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -62,6 +64,16 @@ Enables an accessibility extension ability. This API uses an asynchronous callba
 
 **Required permissions:** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
+<!--Device-config-function enableAbility(
+    name: string,
+    capability: Array<accessibility.Capability>,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-config-function enableAbility(
+    name: string,
+    capability: Array<accessibility.Capability>,
+    callback: AsyncCallback<void>
+  ): void-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -71,8 +83,8 @@ Enables an accessibility extension ability. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the accessibility extension ability, in the format of 'bundleName/abilityName'. |
-| capability | Array&lt;accessibility.Capability&gt; | Yes | Capability of the accessibility extension ability. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| capability | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<accessibility.Capability> | Yes | Capability of the accessibility extension ability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 

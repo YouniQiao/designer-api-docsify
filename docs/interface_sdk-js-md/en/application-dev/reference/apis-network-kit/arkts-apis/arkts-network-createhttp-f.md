@@ -18,13 +18,15 @@ Creates an HTTP request task.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-http-function createHttp(): HttpRequest--><!--Device-http-function createHttp(): HttpRequest-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| HttpRequest | the HttpRequest of the createHttp. |
+| [HttpRequest](arkts-network-httprequest-t.md) | the HttpRequest of the createHttp. |
 
 **Example**
 

@@ -14,12 +14,13 @@ function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: numbe
 
 Stops an asynchronous trace with the trace output level specified.
 
-The **level**, **name**, and **taskId** used in **finishAsyncTrace()** must be the same as those of
-[startAsyncTrace()](arkts-performanceanalysis-startasynctrace-f.md#startasynctrace-1).
+The **level**, **name**, and **taskId** used in **finishAsyncTrace()** must be the same as those of [startAsyncTrace()](arkts-performanceanalysis-startasynctrace-f.md#startasynctrace-1).
 
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-hiTraceMeter-function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: int): void--><!--Device-hiTraceMeter-function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: int): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
@@ -27,7 +28,7 @@ The **level**, **name**, and **taskId** used in **finishAsyncTrace()** must be t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | HiTraceOutputLevel | Yes | Trace output level. |
+| level | [HiTraceOutputLevel](arkts-performanceanalysis-hitraceoutputlevel-e.md) | Yes | Trace output level. |
 | name | string | Yes | Name of the trace to start. |
 | taskId | number | Yes | Task ID. |
 

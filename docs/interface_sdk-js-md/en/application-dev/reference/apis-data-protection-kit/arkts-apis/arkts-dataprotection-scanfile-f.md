@@ -12,12 +12,13 @@ import { identifySensitiveContent } from '@kit.DataProtectionKit';
 function scanFile(filePath: string, identifyPolicies: Array<Policy>): Promise<Array<MatchResult>>
 ```
 
-Identifies sensitive content in a specified file based on the configured policy and returns the identified result array,
-including the matched sensitivity labels, matched content, and number of matched items. This API uses a promise to return the result.
+Identifies sensitive content in a specified file based on the configured policy and returns the identified result array,including the matched sensitivity labels, matched content, and number of matched items. This API uses a promise to return the result.
 
 **Since:** 21
 
 **Required permissions:** ohos.permission.ENTERPRISE_DATA_IDENTIFY_FILE
+
+<!--Device-identifySensitiveContent-function scanFile(filePath: string, identifyPolicies: Array<Policy>): Promise<Array<MatchResult>>--><!--Device-identifySensitiveContent-function scanFile(filePath: string, identifyPolicies: Array<Policy>): Promise<Array<MatchResult>>-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -26,13 +27,13 @@ including the matched sensitivity labels, matched content, and number of matched
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filePath | string | Yes | File path identified. The path must be a physical path. The file to which the path points must exist and can be accessed. |
-| identifyPolicies | Array&lt;Policy&gt; | Yes | An array of policies used to identify sensitive content.Each policy defines an identification rule (tags, keywords, and regular expressions).The system scans file content based on these rules and returns the matching result. |
+| identifyPolicies | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Policy> | Yes | An array of policies used to identify sensitive content.Each policy defines an identification rule (tags, keywords, and regular expressions).The system scans file content based on these rules and returns the matching result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;MatchResult&gt;&gt; | Promise used to return the identification result of sensitive content.If the operation is successful, the matching result array is returned. If the operation fails, an error code is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<MatchResult>> | Promise used to return the identification result of sensitive content.If the operation is successful, the matching result array is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 

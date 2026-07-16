@@ -4,6 +4,8 @@ Enumerates the speeds of the snap animation for list scrolling.
 
 **Since:** 22
 
+<!--Device-unnamed-declare enum ScrollSnapAnimationSpeed--><!--Device-unnamed-declare enum ScrollSnapAnimationSpeed-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NORMAL
@@ -12,14 +14,15 @@ Enumerates the speeds of the snap animation for list scrolling.
 NORMAL = 0
 ```
 
-Default snap animation speed for the list, typically used when list items are large and scrolling moves one item
-per swipe.
+Default snap animation speed for the list, typically used when list items are large and scrolling moves one item per swipe.
 
 **Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-ScrollSnapAnimationSpeed-NORMAL = 0--><!--Device-ScrollSnapAnimationSpeed-NORMAL = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +39,8 @@ Slower snap animation speed, typically used when list items are small and scroll
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-ScrollSnapAnimationSpeed-SLOW = 1--><!--Device-ScrollSnapAnimationSpeed-SLOW = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

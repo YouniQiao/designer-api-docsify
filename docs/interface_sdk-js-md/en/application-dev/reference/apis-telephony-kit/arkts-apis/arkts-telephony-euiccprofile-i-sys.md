@@ -4,6 +4,8 @@ Information about an embedded profile (subscription) on an eUICC.
 
 **Since:** 18
 
+<!--Device-eSIM-export interface EuiccProfile--><!--Device-eSIM-export interface EuiccProfile-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Optional access rules that specify which apps can manage this profile. Default p
 
 **Since:** 18
 
+<!--Device-EuiccProfile-accessRules: Array<AccessRule>--><!--Device-EuiccProfile-accessRules: Array<AccessRule>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ The iccid of the profile.
 **Type:** string
 
 **Since:** 18
+
+<!--Device-EuiccProfile-iccid: string--><!--Device-EuiccProfile-iccid: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -58,6 +64,8 @@ An optional nickname for the profile.
 
 **Since:** 18
 
+<!--Device-EuiccProfile-nickName: string--><!--Device-EuiccProfile-nickName: string-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ The operator Id of the profile.
 **Type:** OperatorId
 
 **Since:** 18
+
+<!--Device-EuiccProfile-operatorId: OperatorId--><!--Device-EuiccProfile-operatorId: OperatorId-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -90,6 +100,8 @@ The policy rules of the profile.
 
 **Since:** 18
 
+<!--Device-EuiccProfile-policyRules: PolicyRules--><!--Device-EuiccProfile-policyRules: PolicyRules-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -105,6 +117,8 @@ Profile class for the profile.
 **Type:** ProfileClass
 
 **Since:** 18
+
+<!--Device-EuiccProfile-profileClass: ProfileClass--><!--Device-EuiccProfile-profileClass: ProfileClass-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -122,6 +136,8 @@ The profile name.
 
 **Since:** 18
 
+<!--Device-EuiccProfile-profileName: string--><!--Device-EuiccProfile-profileName: string-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -138,6 +154,8 @@ The service provider name for the profile.
 
 **Since:** 18
 
+<!--Device-EuiccProfile-serviceProviderName: string--><!--Device-EuiccProfile-serviceProviderName: string-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -153,6 +171,8 @@ The profile state.
 **Type:** ProfileState
 
 **Since:** 18
+
+<!--Device-EuiccProfile-state: ProfileState--><!--Device-EuiccProfile-state: ProfileState-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 

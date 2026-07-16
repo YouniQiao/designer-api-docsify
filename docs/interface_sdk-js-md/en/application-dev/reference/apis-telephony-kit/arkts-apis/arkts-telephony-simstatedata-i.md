@@ -4,6 +4,8 @@ Indicates SIM card type and status.
 
 **Since:** 7
 
+<!--Device-observer-export interface SimStateData--><!--Device-observer-export interface SimStateData-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Indicates the SIM card lock type.
 
 **Since:** 8
 
+<!--Device-SimStateData-reason: LockReason--><!--Device-SimStateData-reason: LockReason-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## state
@@ -38,6 +42,8 @@ Indicates the SIM card states.
 
 **Since:** 7
 
+<!--Device-SimStateData-state: SimState--><!--Device-SimStateData-state: SimState-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## type
@@ -51,6 +57,8 @@ Indicates the SIM card type.
 **Type:** CardType
 
 **Since:** 7
+
+<!--Device-SimStateData-type: CardType--><!--Device-SimStateData-type: CardType-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 

@@ -1,5 +1,11 @@
 # getAllDesktopShortcutInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { shortcutManager } from '@kit.AbilityKit';
+```
+
 ## getAllDesktopShortcutInfo
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getAllDesktopShortcutInfo(userId: number): Promise<Array<ShortcutInfo>>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.MANAGE_SHORTCUTS
+
+<!--Device-shortcutManager-function getAllDesktopShortcutInfo(userId: int): Promise<Array<ShortcutInfo>>--><!--Device-shortcutManager-function getAllDesktopShortcutInfo(userId: int): Promise<Array<ShortcutInfo>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -26,7 +34,7 @@ function getAllDesktopShortcutInfo(userId: number): Promise<Array<ShortcutInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;ShortcutInfo&gt;&gt; | Promise对象，返回应用配置文件中定义的快捷方式信息。 |
+| Promise<Array<ShortcutInfo>> | Promise对象，返回应用配置文件中定义的快捷方式信息。 |
 
 **错误码：**
 

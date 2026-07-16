@@ -1,5 +1,11 @@
 # queryBundleStatsInfoByInterval（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+```
+
 ## queryBundleStatsInfoByInterval
 
 ```TypeScript
@@ -17,6 +23,18 @@ function queryBundleStatsInfoByInterval(
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryBundleStatsInfoByInterval(
+    byInterval: IntervalType,
+    begin: long,
+    end: long,
+    callback: AsyncCallback<Array<BundleStatsInfo>>
+  ): void--><!--Device-usageStatistics-function queryBundleStatsInfoByInterval(
+    byInterval: IntervalType,
+    begin: long,
+    end: long,
+    callback: AsyncCallback<Array<BundleStatsInfo>>
+  ): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -25,10 +43,10 @@ function queryBundleStatsInfoByInterval(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| byInterval | IntervalType | 是 | 查询类型。 |
+| byInterval | [IntervalType](arkts-backgroundtasks-intervaltype-e.md) | 是 | 查询类型。 |
 | begin | number | 是 | 起始时间，单位：ms。 |
 | end | number | 是 | 结束时间，单位：ms。 |
-| callback | AsyncCallback&lt;Array&lt;BundleStatsInfo&gt;&gt; | 是 | 回调函数。当查询成功，err为undefined，data为指定时间段间隔内，应用使用时长的统计信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<BundleStatsInfo>> | 是 | 回调函数。当查询成功，err为undefined，data为指定时间段间隔内，应用使用时长的统计信息；否则为错误对象。 |
 
 **错误码：**
 
@@ -82,6 +100,16 @@ function queryBundleStatsInfoByInterval(
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryBundleStatsInfoByInterval(
+    byInterval: IntervalType,
+    begin: long,
+    end: long
+  ): Promise<Array<BundleStatsInfo>>--><!--Device-usageStatistics-function queryBundleStatsInfoByInterval(
+    byInterval: IntervalType,
+    begin: long,
+    end: long
+  ): Promise<Array<BundleStatsInfo>>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -90,7 +118,7 @@ function queryBundleStatsInfoByInterval(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| byInterval | IntervalType | 是 | 查询类型。 |
+| byInterval | [IntervalType](arkts-backgroundtasks-intervaltype-e.md) | 是 | 查询类型。 |
 | begin | number | 是 | 起始时间，单位：ms。 |
 | end | number | 是 | 结束时间，单位：ms。 |
 
@@ -98,7 +126,7 @@ function queryBundleStatsInfoByInterval(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;BundleStatsInfo&gt;&gt; | Promise对象。返回指定时间段间隔内，应用使用时长的统计信息。 |
+| Promise<Array<BundleStatsInfo>> | Promise对象。返回指定时间段间隔内，应用使用时长的统计信息。 |
 
 **错误码：**
 

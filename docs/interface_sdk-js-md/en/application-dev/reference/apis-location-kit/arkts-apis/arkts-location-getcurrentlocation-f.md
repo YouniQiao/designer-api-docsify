@@ -22,14 +22,16 @@ Obtain current location
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function getCurrentLocation(request: CurrentLocationRequest, callback: AsyncCallback<Location>): void--><!--Device-geolocation-function getCurrentLocation(request: CurrentLocationRequest, callback: AsyncCallback<Location>): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | CurrentLocationRequest | Yes | Indicates the location request parameters. |
-| callback | AsyncCallback&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+| request | [CurrentLocationRequest](arkts-location-currentlocationrequest-i.md) | Yes | Indicates the location request parameters. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Location> | Yes | Indicates the callback for reporting the location result. |
 
 **Example**
 
@@ -66,13 +68,15 @@ Obtain current location
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function getCurrentLocation(callback: AsyncCallback<Location>): void--><!--Device-geolocation-function getCurrentLocation(callback: AsyncCallback<Location>): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Location> | Yes | Indicates the callback for reporting the location result. |
 
 **Example**
 
@@ -108,19 +112,21 @@ Obtain current location
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function getCurrentLocation(request?: CurrentLocationRequest): Promise<Location>--><!--Device-geolocation-function getCurrentLocation(request?: CurrentLocationRequest): Promise<Location>-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | CurrentLocationRequest | No | Indicates the location request parameters. |
+| request | [CurrentLocationRequest](arkts-location-currentlocationrequest-i.md) | No | Indicates the location request parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Location&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Location> | The promise returned by the function. |
 
 **Example**
 

@@ -8,6 +8,8 @@ Provides the audio recorder configuration definitions.
 
 **Substitutes:** AVRecorderConfig
 
+<!--Device-media-interface AudioRecorderConfig--><!--Device-media-interface AudioRecorderConfig-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## Modules to Import
@@ -32,6 +34,8 @@ Audio encoding bit rate, in bit/s.
 
 **Substitutes:** audioBitrate
 
+<!--Device-AudioRecorderConfig-audioEncodeBitRate?: number--><!--Device-AudioRecorderConfig-audioEncodeBitRate?: number-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## audioEncoder
@@ -40,8 +44,7 @@ Audio encoding bit rate, in bit/s.
 audioEncoder?: AudioEncoder
 ```
 
-Audio encoding format. The default value is DEFAULT, it will be deprecated after API8.
-use "audioEncoderMime" instead.
+Audio encoding format. The default value is DEFAULT, it will be deprecated after API8.use "audioEncoderMime" instead.
 
 **Type:** AudioEncoder
 
@@ -50,6 +53,8 @@ use "audioEncoderMime" instead.
 **Deprecated since:** 8
 
 **Substitutes:** audioEncoderMime
+
+<!--Device-AudioRecorderConfig-audioEncoder?: AudioEncoder--><!--Device-AudioRecorderConfig-audioEncoder?: AudioEncoder-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -69,6 +74,8 @@ audio encoding format MIME. it used to replace audioEncoder.
 
 **Substitutes:** audioCodec
 
+<!--Device-AudioRecorderConfig-audioEncoderMime?: CodecMimeType--><!--Device-AudioRecorderConfig-audioEncoderMime?: CodecMimeType-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## audioSampleRate
@@ -86,6 +93,8 @@ Audio sampling rate, in Hz.
 **Deprecated since:** 9
 
 **Substitutes:** audioSampleRate
+
+<!--Device-AudioRecorderConfig-audioSampleRate?: number--><!--Device-AudioRecorderConfig-audioSampleRate?: number-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -105,6 +114,8 @@ output file format. see @ContainerFormatType , it used to replace "format".
 
 **Substitutes:** fileFormat
 
+<!--Device-AudioRecorderConfig-fileFormat?: ContainerFormatType--><!--Device-AudioRecorderConfig-fileFormat?: ContainerFormatType-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## format
@@ -113,8 +124,7 @@ output file format. see @ContainerFormatType , it used to replace "format".
 format?: AudioOutputFormat
 ```
 
-Audio output format. The default value is DEFAULT, it will be deprecated after API8.
-it will be replaced with "fileFormat".
+Audio output format. The default value is DEFAULT, it will be deprecated after API8.it will be replaced with "fileFormat".
 
 **Type:** AudioOutputFormat
 
@@ -123,6 +133,8 @@ it will be replaced with "fileFormat".
 **Deprecated since:** 8
 
 **Substitutes:** fileFormat
+
+<!--Device-AudioRecorderConfig-format?: AudioOutputFormat--><!--Device-AudioRecorderConfig-format?: AudioOutputFormat-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -142,6 +154,8 @@ Geographical location information.
 
 **Substitutes:** location
 
+<!--Device-AudioRecorderConfig-location?: Location--><!--Device-AudioRecorderConfig-location?: Location-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## numberOfChannels
@@ -160,6 +174,8 @@ Number of audio channels.
 
 **Substitutes:** audioChannels
 
+<!--Device-AudioRecorderConfig-numberOfChannels?: number--><!--Device-AudioRecorderConfig-numberOfChannels?: number-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
 ## uri
@@ -168,10 +184,7 @@ Number of audio channels.
 uri: string
 ```
 
-Audio output uri.support two kind of uri now.
-format like: scheme + "://" + "context".
-file: file://path
-fd: fd://fd
+Audio output uri.support two kind of uri now.format like: scheme + "://" + "context".file: file://path fd: fd://fd
 
 **Type:** string
 
@@ -180,6 +193,8 @@ fd: fd://fd
 **Deprecated since:** 9
 
 **Substitutes:** url
+
+<!--Device-AudioRecorderConfig-uri: string--><!--Device-AudioRecorderConfig-uri: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 

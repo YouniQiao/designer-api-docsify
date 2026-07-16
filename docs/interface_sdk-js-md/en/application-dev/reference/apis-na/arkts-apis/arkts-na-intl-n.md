@@ -1,5 +1,7 @@
 # Intl
 
+<!--Device-unnamed-declare namespace Intl--><!--Device-unnamed-declare namespace Intl-End-->
+
 ## Summary
 
 ### Interfaces

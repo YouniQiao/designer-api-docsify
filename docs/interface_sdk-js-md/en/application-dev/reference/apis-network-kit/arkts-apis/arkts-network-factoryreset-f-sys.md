@@ -20,6 +20,8 @@ To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INT
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-connection-function factoryReset(): Promise<void>--><!--Device-connection-function factoryReset(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INT
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 

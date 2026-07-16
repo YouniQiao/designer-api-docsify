@@ -8,6 +8,8 @@
 
 **替代接口：** CompleteData
 
+<!--Device-wantAgent-export interface CompleteData--><!--Device-wantAgent-export interface CompleteData-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## extraInfo
@@ -26,7 +28,9 @@ extraInfo?: { [key: string]: any }
 
 **替代接口：** extraInfo
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CompleteData-extraInfo?: { [key: string]: any }--><!--Device-CompleteData-extraInfo?: { [key: string]: any }-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -46,7 +50,9 @@ finalCode: number
 
 **替代接口：** finalCode
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CompleteData-finalCode: number--><!--Device-CompleteData-finalCode: number-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -66,7 +72,9 @@ finalData: string
 
 **替代接口：** finalData
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CompleteData-finalData: string--><!--Device-CompleteData-finalData: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -86,7 +94,9 @@ info: WantAgent
 
 **替代接口：** info
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CompleteData-info: WantAgent--><!--Device-CompleteData-info: WantAgent-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -106,7 +116,9 @@ want: Want
 
 **替代接口：** want
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CompleteData-want: Want--><!--Device-CompleteData-want: Want-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

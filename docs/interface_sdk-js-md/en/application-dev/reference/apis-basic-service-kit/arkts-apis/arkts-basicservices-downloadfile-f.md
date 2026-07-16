@@ -12,21 +12,19 @@ import { request } from '@kit.BasicServicesKit';
 function downloadFile(context: BaseContext, config: DownloadConfig, callback: AsyncCallback<DownloadTask>): void
 ```
 
-Downloads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use
-[on('complete'|'pause'|'remove')](arkts-basicservices-downloadtask-i.md#on-2)
-to obtain the download task state, including task completion, pause, and removal. You can also use
-[on('fail')](arkts-basicservices-downloadtask-i.md#on-5) to obtain the task download
-error information.
+Downloads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use [on('complete'|'pause'|'remove')](arkts-basicservices-downloadtask-i.md#on-2)to obtain the download task state, including task completion, pause, and removal. You can also use [on('fail')](arkts-basicservices-downloadtask-i.md#on-5) to obtain the task download error information.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-request-function downloadFile(context: BaseContext, config: DownloadConfig, callback: AsyncCallback<DownloadTask>): void--><!--Device-request-function downloadFile(context: BaseContext, config: DownloadConfig, callback: AsyncCallback<DownloadTask>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -34,9 +32,9 @@ error information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Application-based context. |
-| config | DownloadConfig | Yes | Download configuration. |
-| callback | AsyncCallback&lt;DownloadTask&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined** and **data** is the **DownloadTask** object obtained. Otherwise, **err**is an error object. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Application-based context. |
+| config | [DownloadConfig](arkts-basicservices-downloadconfig-i.md) | Yes | Download configuration. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<DownloadTask> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadTask** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -80,21 +78,19 @@ try {
 function downloadFile(context: BaseContext, config: DownloadConfig): Promise<DownloadTask>
 ```
 
-Downloads a file. This API uses a promise to return the result. HTTP is supported. You can use
-[on('complete'|'pause'|'remove')](arkts-basicservices-downloadtask-i.md#on-2)
-to obtain the download task state, including task completion, pause, and removal. You can also use
-[on('fail')](arkts-basicservices-downloadtask-i.md#on-5) to obtain the task download
-error information.
+Downloads a file. This API uses a promise to return the result. HTTP is supported. You can use [on('complete'|'pause'|'remove')](arkts-basicservices-downloadtask-i.md#on-2)to obtain the download task state, including task completion, pause, and removal. You can also use [on('fail')](arkts-basicservices-downloadtask-i.md#on-5) to obtain the task download error information.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-request-function downloadFile(context: BaseContext, config: DownloadConfig): Promise<DownloadTask>--><!--Device-request-function downloadFile(context: BaseContext, config: DownloadConfig): Promise<DownloadTask>-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -102,14 +98,14 @@ error information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Application-based context. |
-| config | DownloadConfig | Yes | Download configuration. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Application-based context. |
+| config | [DownloadConfig](arkts-basicservices-downloadconfig-i.md) | Yes | Download configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DownloadTask&gt; | Promise used to return the **DownloadTask** object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DownloadTask> | Promise used to return the **DownloadTask** object. |
 
 **Error codes:**
 

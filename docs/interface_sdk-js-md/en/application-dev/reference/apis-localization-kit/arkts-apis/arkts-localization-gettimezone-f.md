@@ -18,6 +18,8 @@ Obtains the **TimeZone** object corresponding to the specified time zone ID.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-i18n-export function getTimeZone(zoneID?: string): TimeZone--><!--Device-i18n-export function getTimeZone(zoneID?: string): TimeZone-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -30,5 +32,5 @@ Obtains the **TimeZone** object corresponding to the specified time zone ID.
 
 | Type | Description |
 | --- | --- |
-| TimeZone | **TimeZone** object corresponding to the time zone ID. |
+| [TimeZone](arkts-localization-timezone-c.md) | **TimeZone** object corresponding to the time zone ID. |
 

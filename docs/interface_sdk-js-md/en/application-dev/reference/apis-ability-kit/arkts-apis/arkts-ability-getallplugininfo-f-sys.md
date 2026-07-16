@@ -12,12 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAllPluginInfo(hostBundleName: string, userId?: number): Promise<Array<PluginBundleInfo>>
 ```
 
-Obtains all the plugin information in the system based on the given host bundle name and user ID. This API uses a
-promise to return the result.
+Obtains all the plugin information in the system based on the given host bundle name and user ID. This API uses a promise to return the result.
 
 **Since:** 19
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getAllPluginInfo(hostBundleName: string, userId?: int): Promise<Array<PluginBundleInfo>>--><!--Device-bundleManager-function getAllPluginInfo(hostBundleName: string, userId?: int): Promise<Array<PluginBundleInfo>>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -28,13 +29,13 @@ promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hostBundleName | string | Yes | Bundle name of the target application. |
-| userId | number | No | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PluginBundleInfo&gt;&gt; | Promise used to return the array of plugin information obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<PluginBundleInfo>> | Promise used to return the array of plugin information obtained. |
 
 **Error codes:**
 

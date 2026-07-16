@@ -1,5 +1,11 @@
 # createPkcs12Sync
 
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
+
 ## createPkcs12Sync
 
 ```TypeScript
@@ -10,7 +16,9 @@ function createPkcs12Sync(data: Pkcs12Data, config: Pkcs12CreationConfig): Uint8
 
 **起始版本：** 21
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cert-function createPkcs12Sync(data: Pkcs12Data, config: Pkcs12CreationConfig): Uint8Array--><!--Device-cert-function createPkcs12Sync(data: Pkcs12Data, config: Pkcs12CreationConfig): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -18,14 +26,14 @@ function createPkcs12Sync(data: Pkcs12Data, config: Pkcs12CreationConfig): Uint8
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Pkcs12Data | 是 | 要打包的P12数据对象。 |
-| config | Pkcs12CreationConfig | 是 | P12的创建配置。 |
+| data | [Pkcs12Data](arkts-devicecertificate-pkcs12data-i.md) | 是 | 要打包的P12数据对象。 |
+| config | [Pkcs12CreationConfig](arkts-devicecertificate-pkcs12creationconfig-i.md) | 是 | P12的创建配置。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 表示创建的P12，DER格式。 |
+| [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 表示创建的P12，DER格式。 |
 
 **错误码：**
 

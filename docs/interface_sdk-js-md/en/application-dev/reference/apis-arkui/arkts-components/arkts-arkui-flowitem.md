@@ -5,8 +5,7 @@ items in the container layout.
 
 > **NOTE**
 >
-> * This component is supported since API version 9. Updates will be marked with a superscript to indicate their
-> earliest API version.
+> *
 >
 > * This component can be used only as a child of [WaterFlow]{@link water_flow}.
 >
@@ -14,9 +13,11 @@ items in the container layout.
 > destroyed. You are advised to encapsulate components in the **FlowItem** component into custom components and
 > decorating them with the @Reusable decorator, making the components reusable and reducing the overhead of
 > repeatedly creating and destroying nodes in the ArkUI framework. For best practices, see
-> [Reusing Components](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-waterflow-performance-optimization#section189041489339)
-> .
+> [Reusing Components](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-waterflow-performance-optimization#section189041489339).
 
+## Child Components
+
+This component supports only one child component.
 
 ## FlowItem
 
@@ -29,6 +30,8 @@ Creates a child component in the **WaterFlow** layout.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-FlowItemInterface-(): FlowItemAttribute--><!--Device-FlowItemInterface-(): FlowItemAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

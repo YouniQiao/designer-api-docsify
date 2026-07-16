@@ -22,19 +22,21 @@ Obtains all the deferred tasks. This API uses an asynchronous callback to return
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-workScheduler-function obtainAllWorks(callback: AsyncCallback<void>): Array<WorkInfo>--><!--Device-workScheduler-function obtainAllWorks(callback: AsyncCallback<void>): Array<WorkInfo>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If all the deferred tasks areobtained, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If all the deferred tasks are obtained, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;WorkInfo&gt; | List of deferred tasks. If deferred tasks have been added to the execution queue, thelist of all deferred tasks in the current application is returned. Otherwise, an empty list is returned. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<WorkInfo> | List of deferred tasks. If deferred tasks have been added to the execution queue, the list of all deferred tasks in the current application is returned. Otherwise, an empty list is returned. |
 
 **Error codes:**
 
@@ -58,13 +60,15 @@ Obtains all the deferred tasks. This API uses an asynchronous callback to return
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-workScheduler-function obtainAllWorks(callback: AsyncCallback<Array<WorkInfo>>): void--><!--Device-workScheduler-function obtainAllWorks(callback: AsyncCallback<Array<WorkInfo>>): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;WorkInfo&gt;&gt; | Yes | Callback used to return the list of all deferred tasks in thecurrent application. If the list fails to be obtained, an exception is thrown. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<WorkInfo>> | Yes | Callback used to return the list of all deferred tasks in the current application. If the list fails to be obtained, an exception is thrown. |
 
 **Error codes:**
 
@@ -104,13 +108,15 @@ Obtains all the deferred tasks. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-workScheduler-function obtainAllWorks(): Promise<Array<WorkInfo>>--><!--Device-workScheduler-function obtainAllWorks(): Promise<Array<WorkInfo>>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;WorkInfo&gt;&gt; | Promise used to return all the deferred tasks. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<WorkInfo>> | Promise used to return all the deferred tasks. |
 
 **Error codes:**
 

@@ -18,19 +18,21 @@ Obtains the full names of all fonts of the specified type. This API uses a promi
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-text-function getSystemFontFullNamesByType(fontType: SystemFontType): Promise<Array<string>>--><!--Device-text-function getSystemFontFullNamesByType(fontType: SystemFontType): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontType | SystemFontType | Yes | Font type. |
+| fontType | [SystemFontType](arkts-arkgraphics2d-systemfonttype-e.md) | Yes | Font type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the full names of all fonts of the specified type. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return the full names of all fonts of the specified type. |
 
 **Error codes:**
 

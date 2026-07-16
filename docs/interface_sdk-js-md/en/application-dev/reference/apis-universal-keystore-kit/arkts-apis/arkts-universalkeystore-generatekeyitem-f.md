@@ -14,18 +14,18 @@ function generateKeyItem(keyAlias: string, options: HuksOptions, callback: Async
 
 Generates a key. This API uses an asynchronous callback to return the result.
 
-Based on the principle that the key cannot be transferred out of
-[Trusted Execution Environment (TEE)](../../../../security/UniversalKeystoreKit/huks-concepts.md#tee), the key
-material content is not returned through this API and is only used to indicate whether the call is successful.
+Based on the principle that the key cannot be transferred out of [Trusted Execution Environment (TEE)](../../../../security/UniversalKeystoreKit/huks-concepts.md#tee), the key material content is not returned through this API and is only used to indicate whether the call is successful.
 
-> **NOTE**
->
-> Generating SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)
+> **NOTE**  
+>  
+> Generating SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)  
 > requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-huks-function generateKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<void>): void--><!--Device-huks-function generateKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -33,15 +33,15 @@ material content is not returned through this API and is only used to indicate w
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not includesensitive data such as personal information. |
-| options | HuksOptions | Yes | Tags required for generating the key. The algorithm, key purpose, and key lengthare mandatory. When specifying the SE security level defined in[HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md), the ohos.permission.ACCESS_SE_KEY permissionis required. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not include sensitive data such as personal information. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Tags required for generating the key. The algorithm, key purpose, and key length are mandatory. When specifying the SE security level defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md), the ohos.permission.ACCESS_SE_KEY permission is required. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly becausethe ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified.2. Incorrect parameter types.3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
 | [12000001](../errorcode-huks.md#12000001-feature-not-supported) | algorithm mode is not supported |
@@ -56,7 +56,7 @@ material content is not returned through this API and is only used to indicate w
 | [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) | Failed to obtain the security information via UserIAM |
 | [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) | The key with the same alias already exists<br>**Applicable version:** 20 and later |
 | [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
-| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | The queried entity does not exist. This may happen becausethe key resource ID specified by keyAlias has not been opened in the external crypto scenario.<br>**Applicable version:** 26.0.0 and later |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | The queried entity does not exist. This may happen because the key resource ID specified by keyAlias has not been opened in the external crypto scenario.<br>**Applicable version:** 26.0.0 and later |
 | [12000020](../errorcode-huks.md#12000020-dependent-module-error) | the provider operation failed<br>**Applicable version:** 26.0.0 and later |
 | [12000021](../errorcode-huks.md#12000021-ukey-pin-locked) | the UKey PIN is locked<br>**Applicable version:** 26.0.0 and later |
 | [12000023](../errorcode-huks.md#12000023-unauthenticated-ukey-pin) | the UKey PIN not authenticated<br>**Applicable version:** 26.0.0 and later |
@@ -198,18 +198,18 @@ function generateKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 
 Generates a key. This API uses a promise to return the result.
 
-> **NOTE**
->
-> Generating SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)
+> **NOTE**  
+>  
+> Generating SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)  
 > requires the ohos.permission.ACCESS_SE_KEY permission.
 
-Based on the principle that the key cannot be transferred out of
-[Trusted Execution Environment (TEE)](../../../../security/UniversalKeystoreKit/huks-concepts.md#tee), the key
-material content is not returned through this API and is only used to indicate whether the call is successful.
+Based on the principle that the key cannot be transferred out of [Trusted Execution Environment (TEE)](../../../../security/UniversalKeystoreKit/huks-concepts.md#tee), the key material content is not returned through this API and is only used to indicate whether the call is successful.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-huks-function generateKeyItem(keyAlias: string, options: HuksOptions): Promise<void>--><!--Device-huks-function generateKeyItem(keyAlias: string, options: HuksOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -217,20 +217,20 @@ material content is not returned through this API and is only used to indicate w
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not includesensitive data such as personal information. |
-| options | HuksOptions | Yes | Tags required for generating the key. The algorithm, key purpose, and key lengthare mandatory. When specifying the SE security level defined in[HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md), the ohos.permission.ACCESS_SE_KEY permissionis required. |
+| keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not include sensitive data such as personal information. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Tags required for generating the key. The algorithm, key purpose, and key length are mandatory. When specifying the SE security level defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md), the ohos.permission.ACCESS_SE_KEY permission is required. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly becausethe ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified.2. Incorrect parameter types.3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
 | [12000001](../errorcode-huks.md#12000001-feature-not-supported) | algorithm mode is not supported |
@@ -245,7 +245,7 @@ material content is not returned through this API and is only used to indicate w
 | [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) | Failed to obtain the security information via UserIAM |
 | [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) | The key with the same alias already exists<br>**Applicable version:** 20 and later |
 | [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
-| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | The queried entity does not exist. This may happen becausethe key resource ID specified by keyAlias has not been opened in the external crypto scenario.<br>**Applicable version:** 26.0.0 and later |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | The queried entity does not exist. This may happen because the key resource ID specified by keyAlias has not been opened in the external crypto scenario.<br>**Applicable version:** 26.0.0 and later |
 | [12000020](../errorcode-huks.md#12000020-dependent-module-error) | the provider operation failed<br>**Applicable version:** 26.0.0 and later |
 | [12000021](../errorcode-huks.md#12000021-ukey-pin-locked) | the UKey PIN is locked<br>**Applicable version:** 26.0.0 and later |
 | [12000023](../errorcode-huks.md#12000023-unauthenticated-ukey-pin) | the UKey PIN not authenticated<br>**Applicable version:** 26.0.0 and later |

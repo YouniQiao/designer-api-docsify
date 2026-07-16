@@ -6,8 +6,7 @@
 function configure(config: ConfigOption): boolean
 ```
 
-Configures the application event logging function, such as setting the event logging switch and maximum size of the
-directory that stores the event logging files.
+Configures the application event logging function, such as setting the event logging switch and maximum size of the directory that stores the event logging files.
 
 **Since:** 7
 
@@ -15,13 +14,15 @@ directory that stores the event logging files.
 
 **Substitutes:** configure
 
+<!--Device-hiAppEvent-function configure(config: ConfigOption): boolean--><!--Device-hiAppEvent-function configure(config: ConfigOption): boolean-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | ConfigOption | Yes | Configuration items for application event logging. |
+| config | [ConfigOption](arkts-performanceanalysis-configoption-i.md) | Yes | Configuration items for application event logging. |
 
 **Return value:**
 

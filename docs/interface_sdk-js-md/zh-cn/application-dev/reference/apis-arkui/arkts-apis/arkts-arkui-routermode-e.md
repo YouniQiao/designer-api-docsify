@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-router-export enum RouterMode--><!--Device-router-export enum RouterMode-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## Standard
@@ -22,7 +24,9 @@ Standard
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RouterMode-Standard--><!--Device-RouterMode-Standard-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,7 +44,9 @@ Single
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RouterMode-Single--><!--Device-RouterMode-Single-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

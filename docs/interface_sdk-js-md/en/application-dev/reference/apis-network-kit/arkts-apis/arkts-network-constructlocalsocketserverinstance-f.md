@@ -16,13 +16,15 @@ Creates a LocalSocketServer object.
 
 **Since:** 12
 
+<!--Device-socket-function constructLocalSocketServerInstance(): LocalSocketServer--><!--Device-socket-function constructLocalSocketServerInstance(): LocalSocketServer-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| LocalSocketServer | the LocalSocketServer of the constructLocalSocketServerInstance. |
+| [LocalSocketServer](arkts-network-localsocketserver-i.md) | the LocalSocketServer of the constructLocalSocketServerInstance. |
 
 **Example**
 

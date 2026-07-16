@@ -4,6 +4,8 @@ Enumerates switch names.
 
 **Since:** 26.0.0
 
+<!--Device-deviceSettings-enum SwitchKey--><!--Device-deviceSettings-enum SwitchKey-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## NEARLINK
@@ -17,6 +19,8 @@ NearLink.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SwitchKey-NEARLINK = 0--><!--Device-SwitchKey-NEARLINK = 0-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -32,6 +36,8 @@ Bluetooth.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SwitchKey-BLUETOOTH = 1--><!--Device-SwitchKey-BLUETOOTH = 1-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## WIFI
@@ -46,6 +52,8 @@ Wi-Fi.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SwitchKey-WIFI = 2--><!--Device-SwitchKey-WIFI = 2-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## NFC
@@ -59,6 +67,8 @@ NFC.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SwitchKey-NFC = 3--><!--Device-SwitchKey-NFC = 3-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

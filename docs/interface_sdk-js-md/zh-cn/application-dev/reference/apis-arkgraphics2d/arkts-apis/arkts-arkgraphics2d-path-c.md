@@ -2,15 +2,23 @@
 
 由直线、圆弧、二阶贝塞尔、三阶贝塞尔组成的复合几何路径。
 
-> **说明：**
->
-> - 本模块使用屏幕物理像素单位px。
->
+> **说明：**  
+>  
+> - 本模块使用屏幕物理像素单位px。  
+>  
 > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 11
 
+<!--Device-drawing-class Path--><!--Device-drawing-class Path-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
+
+## 导入模块
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+```
 
 ## addArc
 
@@ -18,13 +26,11 @@
 addArc(rect: common2D.Rect, startAngle: number, sweepAngle: number): void
 ```
 
-向路径添加一段圆弧。
-当startAngle和sweepAngle同时满足以下两种情况时，添加整个椭圆而不是圆弧：
-1.startAngle对90取余接近于0；
-2.sweepAngle不在(-360, 360)区间内。
-其余情况sweepAngle会对360取余后添加圆弧。
+向路径添加一段圆弧。当startAngle和sweepAngle同时满足以下两种情况时，添加整个椭圆而不是圆弧：1.startAngle对90取余接近于0；2.sweepAngle不在(-360, 360)区间内。其余情况sweepAngle会对360取余后添加圆弧。
 
 **起始版本：** 12
+
+<!--Device-Path-addArc(rect: common2D.Rect, startAngle: double, sweepAngle: double): void--><!--Device-Path-addArc(rect: common2D.Rect, startAngle: double, sweepAngle: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -52,6 +58,8 @@ addCircle(x: number, y: number, radius: number, pathDirection?: PathDirection): 
 
 **起始版本：** 12
 
+<!--Device-Path-addCircle(x: double, y: double, radius: double, pathDirection?: PathDirection): void--><!--Device-Path-addCircle(x: double, y: double, radius: double, pathDirection?: PathDirection): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -61,7 +69,7 @@ addCircle(x: number, y: number, radius: number, pathDirection?: PathDirection): 
 | x | number | 是 | 表示圆心的x轴坐标，该参数为浮点数。 |
 | y | number | 是 | 表示圆心的y轴坐标，该参数为浮点数。 |
 | radius | number | 是 | 表示圆形的半径，该参数为浮点数，小于等于0时不会有任何效果。 |
-| pathDirection | PathDirection | 否 | 表示路径方向，默认为顺时针方向。 |
+| pathDirection | [PathDirection](arkts-arkgraphics2d-pathdirection-e.md) | 否 | 表示路径方向，默认为顺时针方向。 |
 
 **错误码：**
 
@@ -79,6 +87,8 @@ addOval(rect: common2D.Rect, start: number, pathDirection?: PathDirection): void
 
 **起始版本：** 12
 
+<!--Device-Path-addOval(rect: common2D.Rect, start: int, pathDirection?: PathDirection): void--><!--Device-Path-addOval(rect: common2D.Rect, start: int, pathDirection?: PathDirection): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -87,7 +97,7 @@ addOval(rect: common2D.Rect, start: number, pathDirection?: PathDirection): void
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 椭圆的矩形边界。 |
 | start | number | 是 | 表示椭圆初始点的索引，0，1，2，3分别对应椭圆的上端点，右端点，下端点，左端点，该参数为不小于0的整数，大于等于4时会对4取余。 |
-| pathDirection | PathDirection | 否 | 表示路径方向，默认为顺时针方向。 |
+| pathDirection | [PathDirection](arkts-arkgraphics2d-pathdirection-e.md) | 否 | 表示路径方向，默认为顺时针方向。 |
 
 **错误码：**
 
@@ -105,13 +115,15 @@ addPath(path: Path, matrix?: Matrix | null): void
 
 **起始版本：** 12
 
+<!--Device-Path-addPath(path: Path, matrix?: Matrix | null): void--><!--Device-Path-addPath(path: Path, matrix?: Matrix | null): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | Path | 是 | 表示源路径对象。 |
+| path | [Path](arkts-arkgraphics2d-path-c.md) | 是 | 表示源路径对象。 |
 | matrix | Matrix \| null | 否 | 表示矩阵对象，默认为单位矩阵。 |
 
 **错误码：**
@@ -130,13 +142,15 @@ addPolygon(points: Array<common2D.Point>, close: boolean): void
 
 **起始版本：** 12
 
+<!--Device-Path-addPolygon(points: Array<common2D.Point>, close: boolean): void--><!--Device-Path-addPolygon(points: Array<common2D.Point>, close: boolean): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| points | Array&lt;common2D.Point&gt; | 是 | 坐标点数组。 |
+| points | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<common2D.Point> | 是 | 坐标点数组。 |
 | close | boolean | 是 | 表示是否将路径闭合，即是否添加路径起始点到终点的连线。true表示将路径闭合，false表示不将路径闭合。 |
 
 **错误码：**
@@ -155,6 +169,8 @@ addRect(rect: common2D.Rect, pathDirection?: PathDirection): void
 
 **起始版本：** 12
 
+<!--Device-Path-addRect(rect: common2D.Rect, pathDirection?: PathDirection): void--><!--Device-Path-addRect(rect: common2D.Rect, pathDirection?: PathDirection): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -162,7 +178,7 @@ addRect(rect: common2D.Rect, pathDirection?: PathDirection): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 向路径中添加的矩形轮廓。 |
-| pathDirection | PathDirection | 否 | 表示路径方向，默认为顺时针方向。 |
+| pathDirection | [PathDirection](arkts-arkgraphics2d-pathdirection-e.md) | 否 | 表示路径方向，默认为顺时针方向。 |
 
 **错误码：**
 
@@ -180,14 +196,16 @@ addRoundRect(roundRect: RoundRect, pathDirection?: PathDirection): void
 
 **起始版本：** 12
 
+<!--Device-Path-addRoundRect(roundRect: RoundRect, pathDirection?: PathDirection): void--><!--Device-Path-addRoundRect(roundRect: RoundRect, pathDirection?: PathDirection): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| roundRect | RoundRect | 是 | 圆角矩形对象。 |
-| pathDirection | PathDirection | 否 | 表示路径方向，默认为顺时针方向。 |
+| roundRect | [RoundRect](arkts-arkgraphics2d-roundrect-c.md) | 是 | 圆角矩形对象。 |
+| pathDirection | [PathDirection](arkts-arkgraphics2d-pathdirection-e.md) | 否 | 表示路径方向，默认为顺时针方向。 |
 
 **错误码：**
 
@@ -203,15 +221,17 @@ approximate(acceptableError: number): Array<number>
 
 将当前路径转化为由连续直线段构成的近似路径。
 
-> **说明：**
->
-> - 当acceptableError为0时，曲线路径被极度细分，会严重影响性能和内存消耗，不建议设置误差值为0。
->
-> - 当acceptableError特别大时，路径会极度简化，保留少量关键点，可能会丢失原有形状。
->
+> **说明：**  
+>  
+> - 当acceptableError为0时，曲线路径被极度细分，会严重影响性能和内存消耗，不建议设置误差值为0。  
+>  
+> - 当acceptableError特别大时，路径会极度简化，保留少量关键点，可能会丢失原有形状。  
+>  
 > - 对于椭圆等曲线，当acceptableError过大时，拟合结果通常只包含椭圆的分段贝塞尔曲线的起止点，椭圆形会被极度简化为多边形。
 
 **起始版本：** 20
+
+<!--Device-Path-approximate(acceptableError: number): Array<number>--><!--Device-Path-approximate(acceptableError: number): Array<number>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -225,7 +245,7 @@ approximate(acceptableError: number): Array<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;number&gt; | 返回包含近似路径的点的数组，至少包含两个点。每个点由三个值组成：<br>1. 该点所在的位置距离路径起点的长度比例值，范围为[0.0, 1.0]。<br>2. 点的x坐标。<br>3. 点的y坐标。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<number> | 返回包含近似路径的点的数组，至少包含两个点。每个点由三个值组成：<br>1. 该点所在的位置距离路径起点的长度比例值，范围为[0.0, 1.0]。<br>2. 点的x坐标。<br>3. 点的y坐标。 |
 
 **错误码：**
 
@@ -239,12 +259,13 @@ approximate(acceptableError: number): Array<number>
 arcTo(x1: number, y1: number, x2: number, y2: number, startDeg: number, sweepDeg: number): void
 ```
 
-给路径添加一段弧线，绘制弧线的方式为角度弧，该方式首先会指定一个矩形边框，取其内切椭圆，然后会指定一个起始角度和扫描度数，从起始角度扫描截取的椭圆周长一部分即为绘制的弧线。另外会默认添加一条从路径的最后点位置到弧线起始点位置的
-线段。
+给路径添加一段弧线，绘制弧线的方式为角度弧，该方式首先会指定一个矩形边框，取其内切椭圆，然后会指定一个起始角度和扫描度数，从起始角度扫描截取的椭圆周长一部分即为绘制的弧线。另外会默认添加一条从路径的最后点位置到弧线起始点位置的线段。
 
 **起始版本：** 11
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Path-arcTo(x1: double, y1: double, x2: double, y2: double, startDeg: double, sweepDeg: double): void--><!--Device-Path-arcTo(x1: double, y1: double, x2: double, y2: double, startDeg: double, sweepDeg: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -274,6 +295,8 @@ buildFromSvgString(str: string): boolean
 解析SVG字符串表示的路径。
 
 **起始版本：** 12
+
+<!--Device-Path-buildFromSvgString(str: string): boolean--><!--Device-Path-buildFromSvgString(str: string): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -305,6 +328,8 @@ close(): void
 
 **起始版本：** 11
 
+<!--Device-Path-close(): void--><!--Device-Path-close(): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## conicTo
@@ -317,7 +342,9 @@ conicTo(ctrlX: number, ctrlY: number, endX: number, endY: number, weight: number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Path-conicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: double): void--><!--Device-Path-conicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -347,7 +374,9 @@ constructor()
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Path-constructor()--><!--Device-Path-constructor()-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -361,7 +390,9 @@ constructor(path: Path)
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Path-constructor(path: Path)--><!--Device-Path-constructor(path: Path)-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -369,7 +400,7 @@ constructor(path: Path)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | Path | 是 | 待复制的路径对象。 |
+| path | [Path](arkts-arkgraphics2d-path-c.md) | 是 | 待复制的路径对象。 |
 
 ## contains
 
@@ -380,6 +411,8 @@ contains(x: number, y: number): boolean
 判断指定坐标点是否被路径包含，判定是否被路径包含的规则参考[PathFillType](arkts-arkgraphics2d-pathfilltype-e.md)。
 
 **起始版本：** 12
+
+<!--Device-Path-contains(x: double, y: double): boolean--><!--Device-Path-contains(x: double, y: double): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -414,6 +447,8 @@ convertToSvgString(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Path-convertToSvgString(): string--><!--Device-Path-convertToSvgString(): string-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -432,7 +467,9 @@ cubicTo(ctrlX1: number, ctrlY1: number, ctrlX2: number, ctrlY2: number, endX: nu
 
 **起始版本：** 11
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Path-cubicTo(ctrlX1: double, ctrlY1: double, ctrlX2: double, ctrlY2: double, endX: double, endY: double): void--><!--Device-Path-cubicTo(ctrlX1: double, ctrlY1: double, ctrlX2: double, ctrlY2: double, endX: double, endY: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -463,6 +500,8 @@ getBounds(): common2D.Rect
 
 **起始版本：** 12
 
+<!--Device-Path-getBounds(): common2D.Rect--><!--Device-Path-getBounds(): common2D.Rect-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -477,16 +516,13 @@ getBounds(): common2D.Rect
 getConicWeightData(): Array<number>
 ```
 
-获取路径的圆锥曲线权重数据。
-在路径（path）图元中，圆锥曲线数据采用有理贝塞尔曲线（Rational Bézier Curve）形式表示，其中每个控制点附带一个权重值（weight）。权重属于曲线定义的几何参数。
-主要作用如下：
-形状调控：权重值越大，曲线越靠近对应控制点；权重为1时退化为标准贝塞尔曲线；权重为0时该控制点不起作用。
-精确表示圆锥曲线：通过组合权重与二次贝塞尔曲线，可以精确表示圆弧、椭圆弧、抛物线等圆锥曲线段，无需使用分段逼近或专用椭圆弧指令。
-数据组织：权重通常以数组形式与点数据并列，按顺序对应每个控制点，与相应的指令verb（如[conicTo](arkts-arkgraphics2d-path-c.md#conicto-1)）配合使用。
+获取路径的圆锥曲线权重数据。在路径（path）图元中，圆锥曲线数据采用有理贝塞尔曲线（Rational Bézier Curve）形式表示，其中每个控制点附带一个权重值（weight）。权重属于曲线定义的几何参数。主要作用如下：形状调控：权重值越大，曲线越靠近对应控制点；权重为1时退化为标准贝塞尔曲线；权重为0时该控制点不起作用。精确表示圆锥曲线：通过组合权重与二次贝塞尔曲线，可以精确表示圆弧、椭圆弧、抛物线等圆锥曲线段，无需使用分段逼近或专用椭圆弧指令。数据组织：权重通常以数组形式与点数据并列，按顺序对应每个控制点，与相应的指令verb（如[conicTo](arkts-arkgraphics2d-path-c.md#conicto-1)）配合使用。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Path-getConicWeightData(): Array<double>--><!--Device-Path-getConicWeightData(): Array<double>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -494,7 +530,7 @@ getConicWeightData(): Array<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;number&gt; | 类型为浮点数（取值范围为非负数）。取值为0.0时，该控制点完全无效，曲线不经过此点，曲线实际由其余控制点定义。取值为1.0时，该控制点对应的曲线变为标准贝塞尔曲线，此时权重不产生额外形变效果。取值大于1时，权重值越大，曲线越靠近该控制点；小于1.0但大于0.0时，曲线则相对远离该控制点。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<number> | 类型为浮点数（取值范围为非负数）。取值为0.0时，该控制点完全无效，曲线不经过此点，曲线实际由其余控制点定义。取值为1.0时，该控制点对应的曲线变为标准贝塞尔曲线，此时权重不产生额外形变效果。取值大于1时，权重值越大，曲线越靠近该控制点；小于1.0但大于0.0时，曲线则相对远离该控制点。 |
 
 ## getFillType
 
@@ -506,13 +542,15 @@ getFillType(): PathFillType
 
 **起始版本：** 20
 
+<!--Device-Path-getFillType(): PathFillType--><!--Device-Path-getFillType(): PathFillType-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| PathFillType | 路径填充类型。 |
+| [PathFillType](arkts-arkgraphics2d-pathfilltype-e.md) | 路径填充类型。 |
 
 ## getLastPoint
 
@@ -525,6 +563,8 @@ getLastPoint(): common2D.Point
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Path-getLastPoint(): common2D.Point--><!--Device-Path-getLastPoint(): common2D.Point-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -543,6 +583,8 @@ getLength(forceClosed: boolean): number
 获取路径长度。
 
 **起始版本：** 12
+
+<!--Device-Path-getLength(forceClosed: boolean): double--><!--Device-Path-getLength(forceClosed: boolean): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -568,6 +610,8 @@ getMatrix(forceClosed: boolean, distance: number, matrix: Matrix, flags: PathMea
 
 **起始版本：** 12
 
+<!--Device-Path-getMatrix(forceClosed: boolean, distance: double, matrix: Matrix, flags: PathMeasureMatrixFlags): boolean--><!--Device-Path-getMatrix(forceClosed: boolean, distance: double, matrix: Matrix, flags: PathMeasureMatrixFlags): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -576,8 +620,8 @@ getMatrix(forceClosed: boolean, distance: number, matrix: Matrix, flags: PathMea
 | --- | --- | --- | --- |
 | forceClosed | boolean | 是 | 表示是否按照闭合路径测量，true表示测量时路径会被强制视为已闭合，false表示会根据路径的实际闭合状态测量。 |
 | distance | number | 是 | 表示与路径起始点的距离，小于0时会被视作0，大于路径长度时会被视作路径长度。该参数为浮点数。 |
-| matrix | Matrix | 是 | 矩阵对象，用于存储得到的矩阵。 |
-| flags | PathMeasureMatrixFlags | 是 | 矩阵信息维度枚举。 |
+| matrix | [Matrix](arkts-arkgraphics2d-matrix-c.md) | 是 | 矩阵对象，用于存储得到的矩阵。 |
+| flags | [PathMeasureMatrixFlags](arkts-arkgraphics2d-pathmeasurematrixflags-e.md) | 是 | 矩阵信息维度枚举。 |
 
 **返回值：**
 
@@ -601,13 +645,15 @@ getPathIterator(): PathIterator
 
 **起始版本：** 18
 
+<!--Device-Path-getPathIterator(): PathIterator--><!--Device-Path-getPathIterator(): PathIterator-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| PathIterator | 该路径的迭代器对象。 |
+| [PathIterator](arkts-arkgraphics2d-pathiterator-c.md) | 该路径的迭代器对象。 |
 
 ## getPointData
 
@@ -615,16 +661,13 @@ getPathIterator(): PathIterator
 getPointData(): Array<common2D.Point>
 ```
 
-获取路径的点数据。
-在路径（path）图元中，点数据以数值序列的形式存在，与动词verb指令一一对应，用来精确指定绘图操作的几何坐标位置。
-点数据的主要类型包括：
-终点坐标：与[moveTo](arkts-arkgraphics2d-path-c.md#moveto-1)、[lineTo](arkts-arkgraphics2d-path-c.md#lineto-1)等指令配合，定义线段或移动的目标位置。
-控制点坐标：与曲线指令配合，用于定义贝塞尔曲线的形状（如三次曲线需要两个控制点和一个终点）。
-闭合点：通常不单独提供坐标，由[close](arkts-arkgraphics2d-path-c.md#close-1)指令隐式使用路径起点。
+获取路径的点数据。在路径（path）图元中，点数据以数值序列的形式存在，与动词verb指令一一对应，用来精确指定绘图操作的几何坐标位置。点数据的主要类型包括：终点坐标：与[moveTo](arkts-arkgraphics2d-path-c.md#moveto-1)、[lineTo](arkts-arkgraphics2d-path-c.md#lineto-1)等指令配合，定义线段或移动的目标位置。控制点坐标：与曲线指令配合，用于定义贝塞尔曲线的形状（如三次曲线需要两个控制点和一个终点）。闭合点：通常不单独提供坐标，由[close](arkts-arkgraphics2d-path-c.md#close-1)指令隐式使用路径起点。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Path-getPointData(): Array<common2D.Point>--><!--Device-Path-getPointData(): Array<common2D.Point>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -632,7 +675,7 @@ getPointData(): Array<common2D.Point>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | path points array. |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<common2D.Point> | path points array. |
 
 ## getPositionAndTangent
 
@@ -643,6 +686,8 @@ getPositionAndTangent(forceClosed: boolean, distance: number, position: common2D
 获取路径起始点指定距离处的坐标点和切线值。
 
 **起始版本：** 12
+
+<!--Device-Path-getPositionAndTangent(forceClosed: boolean, distance: double, position: common2D.Point, tangent: common2D.Point): boolean--><!--Device-Path-getPositionAndTangent(forceClosed: boolean, distance: double, position: common2D.Point, tangent: common2D.Point): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -677,6 +722,8 @@ getSegment(forceClosed: boolean, start: number, stop: number, startWithMoveTo: b
 
 **起始版本：** 18
 
+<!--Device-Path-getSegment(forceClosed: boolean, start: double, stop: double, startWithMoveTo: boolean, dst: Path): boolean--><!--Device-Path-getSegment(forceClosed: boolean, start: double, stop: double, startWithMoveTo: boolean, dst: Path): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -687,7 +734,7 @@ getSegment(forceClosed: boolean, start: number, stop: number, startWithMoveTo: b
 | start | number | 是 | 表示与路径起始点的距离，距离路径起始点start距离的位置即为截取路径片段的起始点，小于0时会被视作0，大于等于stop时会截取失败。该参数为浮点数。 |
 | stop | number | 是 | 表示与路径起始点的距离，距离路径起始点stop距离的位置即为截取路径片段的终点，小于等于start时会截取失败，大于路径长度时会被视作路径长度。该参数为浮点数。 |
 | startWithMoveTo | boolean | 是 | 表示是否在目标路径执行[moveTo](arkts-arkgraphics2d-path-c.md#moveto-1)移动到截取路径片段的起始点位置。true表示执行，false表示不执行。 |
-| dst | Path | 是 | 目标路径，截取成功时会将得到的路径片段追加到目标路径上，截取失败时不做改变。 |
+| dst | [Path](arkts-arkgraphics2d-path-c.md) | 是 | 目标路径，截取成功时会将得到的路径片段追加到目标路径上，截取失败时不做改变。 |
 
 **返回值：**
 
@@ -701,16 +748,13 @@ getSegment(forceClosed: boolean, start: number, stop: number, startWithMoveTo: b
 getVerbData(): Array<PathIteratorVerb>
 ```
 
-获取路径的指令数据。
-在路径（path）图元中，指令数据verb用于描述路径构造过程中的基本绘图动作。
-指令数据以枚举的形式存在，每个取值对应一种几何操作类型，例如：
-[moveTo](arkts-arkgraphics2d-path-c.md#moveto-1)：将当前绘图点移至指定坐标，不产生线段。
-[lineTo](arkts-arkgraphics2d-path-c.md#lineto-1)：从当前点向指定点绘制直线段。
-[close](arkts-arkgraphics2d-path-c.md#close-1)：将当前点与路径起点相连，形成封闭区域。
+获取路径的指令数据。在路径（path）图元中，指令数据verb用于描述路径构造过程中的基本绘图动作。指令数据以枚举的形式存在，每个取值对应一种几何操作类型，例如：[moveTo](arkts-arkgraphics2d-path-c.md#moveto-1)：将当前绘图点移至指定坐标，不产生线段。[lineTo](arkts-arkgraphics2d-path-c.md#lineto-1)：从当前点向指定点绘制直线段。[close](arkts-arkgraphics2d-path-c.md#close-1)：将当前点与路径起点相连，形成封闭区域。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Path-getVerbData(): Array<PathIteratorVerb>--><!--Device-Path-getVerbData(): Array<PathIteratorVerb>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -718,7 +762,7 @@ getVerbData(): Array<PathIteratorVerb>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;PathIteratorVerb&gt; | 类型为浮点数。理论上取值范围为全体实数，但实际受限于渲染坐标系的有效范围（如-2^31到2^31-1或屏幕可见区域）；超出范围可能导致图形不可见或裁剪。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<PathIteratorVerb> | 类型为浮点数。理论上取值范围为全体实数，但实际受限于渲染坐标系的有效范围（如-2^31到2^31-1或屏幕可见区域）；超出范围可能导致图形不可见或裁剪。 |
 
 ## interpolate
 
@@ -730,15 +774,17 @@ interpolate(other: Path, weight: number, interpolatedPath: Path): boolean
 
 **起始版本：** 20
 
+<!--Device-Path-interpolate(other: Path, weight: double, interpolatedPath: Path): boolean--><!--Device-Path-interpolate(other: Path, weight: double, interpolatedPath: Path): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | Path | 是 | 表示另一条路径对象。 |
+| other | [Path](arkts-arkgraphics2d-path-c.md) | 是 | 表示另一条路径对象。 |
 | weight | number | 是 | 表示插值权重，必须在[0.0, 1.0]范围内。该参数为浮点数。 |
-| interpolatedPath | Path | 是 | 表示用于存储插值结果的目标路径对象。 |
+| interpolatedPath | [Path](arkts-arkgraphics2d-path-c.md) | 是 | 表示用于存储插值结果的目标路径对象。 |
 
 **返回值：**
 
@@ -762,6 +808,8 @@ isClosed(): boolean
 
 **起始版本：** 12
 
+<!--Device-Path-isClosed(): boolean--><!--Device-Path-isClosed(): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -779,6 +827,8 @@ isEmpty(): boolean
 判断路径是否为空。
 
 **起始版本：** 20
+
+<!--Device-Path-isEmpty(): boolean--><!--Device-Path-isEmpty(): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -800,13 +850,15 @@ Checks if two paths are equal.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Path-isEqual(path: Path): boolean--><!--Device-Path-isEqual(path: Path): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | Path | 是 | Another Path object to compare. |
+| path | [Path](arkts-arkgraphics2d-path-c.md) | 是 | Another Path object to compare. |
 
 **返回值：**
 
@@ -824,13 +876,15 @@ isInterpolate(other: Path): boolean
 
 **起始版本：** 20
 
+<!--Device-Path-isInterpolate(other: Path): boolean--><!--Device-Path-isInterpolate(other: Path): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | Path | 是 | 表示另一条路径对象。 |
+| other | [Path](arkts-arkgraphics2d-path-c.md) | 是 | 表示另一条路径对象。 |
 
 **返回值：**
 
@@ -847,6 +901,8 @@ isInverseFillType(): boolean
 检查当前路径填充类型是否是反向填充类型。例如填充类型Winding、EvenOdd不是反向类型，InverseWinding、InverseEvenOdd是反向类型。
 
 **起始版本：** 23
+
+<!--Device-Path-isInverseFillType(): boolean--><!--Device-Path-isInverseFillType(): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -865,6 +921,8 @@ isRect(rect: common2D.Rect | null): boolean
 判断路径是否构成矩形。
 
 **起始版本：** 20
+
+<!--Device-Path-isRect(rect: common2D.Rect | null): boolean--><!--Device-Path-isRect(rect: common2D.Rect | null): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -890,7 +948,9 @@ lineTo(x: number, y: number): void
 
 **起始版本：** 11
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Path-lineTo(x: double, y: double): void--><!--Device-Path-lineTo(x: double, y: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -917,7 +977,9 @@ moveTo(x: number, y: number): void
 
 **起始版本：** 11
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Path-moveTo(x: double, y: double): void--><!--Device-Path-moveTo(x: double, y: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -944,6 +1006,8 @@ offset(dx: number, dy: number): Path
 
 **起始版本：** 12
 
+<!--Device-Path-offset(dx: number, dy: number): Path--><!--Device-Path-offset(dx: number, dy: number): Path-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -957,7 +1021,7 @@ offset(dx: number, dy: number): Path
 
 | 类型 | 说明 |
 | --- | --- |
-| Path | 返回当前路径偏移(dx,dy)后生成的新路径对象。 |
+| [Path](arkts-arkgraphics2d-path-c.md) | 返回当前路径偏移(dx,dy)后生成的新路径对象。 |
 
 **错误码：**
 
@@ -975,14 +1039,16 @@ op(path: Path, pathOp: PathOp): boolean
 
 **起始版本：** 12
 
+<!--Device-Path-op(path: Path, pathOp: PathOp): boolean--><!--Device-Path-op(path: Path, pathOp: PathOp): boolean-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | Path | 是 | 路径对象，用于与当前路径合并。 |
-| pathOp | PathOp | 是 | 路径操作类型枚举。 |
+| path | [Path](arkts-arkgraphics2d-path-c.md) | 是 | 路径对象，用于与当前路径合并。 |
+| pathOp | [PathOp](arkts-arkgraphics2d-pathop-e.md) | 是 | 路径操作类型枚举。 |
 
 **返回值：**
 
@@ -1006,7 +1072,9 @@ quadTo(ctrlX: number, ctrlY: number, endX: number, endY: number): void
 
 **起始版本：** 11
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Path-quadTo(ctrlX: double, ctrlY: double, endX: double, endY: double): void--><!--Device-Path-quadTo(ctrlX: double, ctrlY: double, endX: double, endY: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1035,7 +1103,9 @@ rConicTo(ctrlX: number, ctrlY: number, endX: number, endY: number, weight: numbe
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Path-rConicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: double): void--><!--Device-Path-rConicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1065,7 +1135,9 @@ rCubicTo(ctrlX1: number, ctrlY1: number, ctrlX2: number, ctrlY2: number, endX: n
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Path-rCubicTo(ctrlX1: double, ctrlY1: double, ctrlX2: double, ctrlY2: double, endX: double, endY: double): void--><!--Device-Path-rCubicTo(ctrlX1: double, ctrlY1: double, ctrlX2: double, ctrlY2: double, endX: double, endY: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1096,7 +1168,9 @@ rLineTo(dx: number, dy: number): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Path-rLineTo(dx: double, dy: double): void--><!--Device-Path-rLineTo(dx: double, dy: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1123,7 +1197,9 @@ rMoveTo(dx: number, dy: number): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Path-rMoveTo(dx: double, dy: double): void--><!--Device-Path-rMoveTo(dx: double, dy: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1150,7 +1226,9 @@ rQuadTo(dx1: number, dy1: number, dx2: number, dy2: number): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Path-rQuadTo(dx1: double, dy1: double, dx2: double, dy2: double): void--><!--Device-Path-rQuadTo(dx1: double, dy1: double, dx2: double, dy2: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1179,6 +1257,8 @@ reset(): void
 
 **起始版本：** 11
 
+<!--Device-Path-reset(): void--><!--Device-Path-reset(): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## rewind
@@ -1190,6 +1270,8 @@ rewind(): void
 将路径内添加的各类点/线清空，但是保留内存空间。
 
 **起始版本：** 20
+
+<!--Device-Path-rewind(): void--><!--Device-Path-rewind(): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1203,7 +1285,9 @@ set(src: Path): void
 
 **起始版本：** 20
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Path-set(src: Path): void--><!--Device-Path-set(src: Path): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1211,7 +1295,7 @@ set(src: Path): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | Path | 是 | 用于更新的路径。 |
+| src | [Path](arkts-arkgraphics2d-path-c.md) | 是 | 用于更新的路径。 |
 
 ## setFillType
 
@@ -1223,13 +1307,15 @@ setFillType(pathFillType: PathFillType): void
 
 **起始版本：** 12
 
+<!--Device-Path-setFillType(pathFillType: PathFillType): void--><!--Device-Path-setFillType(pathFillType: PathFillType): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pathFillType | PathFillType | 是 | 表示路径填充规则。 |
+| pathFillType | [PathFillType](arkts-arkgraphics2d-pathfilltype-e.md) | 是 | 表示路径填充规则。 |
 
 **错误码：**
 
@@ -1246,6 +1332,8 @@ setLastPoint(x: number, y: number): void
 修改路径的最后一个点。
 
 **起始版本：** 20
+
+<!--Device-Path-setLastPoint(x: double, y: double): void--><!--Device-Path-setLastPoint(x: double, y: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1266,6 +1354,8 @@ toggleInverseFillType(): void
 
 **起始版本：** 23
 
+<!--Device-Path-toggleInverseFillType(): void--><!--Device-Path-toggleInverseFillType(): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## transform
@@ -1278,13 +1368,15 @@ transform(matrix: Matrix): void
 
 **起始版本：** 12
 
+<!--Device-Path-transform(matrix: Matrix): void--><!--Device-Path-transform(matrix: Matrix): void-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| matrix | Matrix | 是 | 表示矩阵对象。 |
+| matrix | [Matrix](arkts-arkgraphics2d-matrix-c.md) | 是 | 表示矩阵对象。 |
 
 **错误码：**
 

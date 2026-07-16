@@ -1,21 +1,14 @@
 # AutoDeviceSwitch
 
-**AutoDeviceSwitch** inherits from [AutoDeviceSwitchQuery](arkts-camera-autodeviceswitchquery-i.md) and is used to
-enable or disable automatic camera switch. This capability can be used only on foldable devices. For details about
-the development, see
-[Practices for Automatic Camera Switching (ArkTS)](../../../../media/camera/camera-auto-switch.md).
+**AutoDeviceSwitch** inherits from [AutoDeviceSwitchQuery](arkts-camera-autodeviceswitchquery-i.md) and is used to enable or disable automatic camera switch. This capability can be used only on foldable devices. For details about the development, see [Practices for Automatic Camera Switching (ArkTS)](../../../../media/camera/camera-auto-switch.md).
 
-It is recommended that the system automatically handle input device switching, session configuration, and parameter
-continuity during automatic camera switch. If the system detects that the zoom ranges of the two cameras are
-different during camera switching, it will notify the application through the **isDeviceCapabilityChanged** field
-in [AutoDeviceSwitchStatus](arkts-camera-autodeviceswitchstatus-i.md). However, the application
-still needs to handle the UX change. For example, for the zoom range adjustment, the application needs to call
-[getZoomRatioRange](arkts-camera-zoomquery-i.md#getzoomratiorange-1) to obtain data and update the
-UX. Therefore, **AutoDeviceSwitch** is more applicable to simplified UX interactions.
+It is recommended that the system automatically handle input device switching, session configuration, and parameter continuity during automatic camera switch. If the system detects that the zoom ranges of the two cameras are different during camera switching, it will notify the application through the **isDeviceCapabilityChanged** field in [AutoDeviceSwitchStatus](arkts-camera-autodeviceswitchstatus-i.md). However, the application still needs to handle the UX change. For example, for the zoom range adjustment, the application needs to call [getZoomRatioRange](arkts-camera-zoomquery-i.md#getzoomratiorange-1) to obtain data and update the UX. Therefore, **AutoDeviceSwitch** is more applicable to simplified UX interactions.
 
 **Inheritance/Implementation:** AutoDeviceSwitch extends [AutoDeviceSwitchQuery](arkts-camera-autodeviceswitchquery-i.md)
 
 **Since:** 13
+
+<!--Device-camera-interface AutoDeviceSwitch extends AutoDeviceSwitchQuery--><!--Device-camera-interface AutoDeviceSwitch extends AutoDeviceSwitchQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -31,19 +24,19 @@ import { camera } from '@kit.CameraKit';
 enableAutoDeviceSwitch(enabled: boolean): void
 ```
 
-Enables or disables automatic camera switch. You can use
-[isAutoDeviceSwitchSupported](arkts-camera-autodeviceswitchquery-i.md#isautodeviceswitchsupported-1)
-to check whether the device supports automatic camera switch.
+Enables or disables automatic camera switch. You can use [isAutoDeviceSwitchSupported](arkts-camera-autodeviceswitchquery-i.md#isautodeviceswitchsupported-1)to check whether the device supports automatic camera switch.
 
-> **NOTE**
->
-> This API is used only for foldable devices with multiple front cameras. In different fold states, the system
-> can automatically switch to an available front camera. It does not enable automatic switching between front and
+> **NOTE**  
+>  
+> This API is used only for foldable devices with multiple front cameras. In different fold states, the system  
+> can automatically switch to an available front camera. It does not enable automatic switching between front and  
 > rear cameras.
 
 **Since:** 13
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-AutoDeviceSwitch-enableAutoDeviceSwitch(enabled: boolean): void--><!--Device-AutoDeviceSwitch-enableAutoDeviceSwitch(enabled: boolean): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

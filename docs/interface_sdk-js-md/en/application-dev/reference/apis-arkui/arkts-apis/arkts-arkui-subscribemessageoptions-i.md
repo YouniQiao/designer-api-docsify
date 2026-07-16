@@ -4,6 +4,8 @@
 
 **Deprecated since:** 8
 
+<!--Device-unnamed-export interface SubscribeMessageOptions--><!--Device-unnamed-export interface SubscribeMessageOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 ## fail
@@ -20,6 +22,8 @@ Called when the messages fail to be sent.
 
 **Deprecated since:** 8
 
+<!--Device-SubscribeMessageOptions-fail?: (data: string, code: number) => void--><!--Device-SubscribeMessageOptions-fail?: (data: string, code: number) => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 ## success
@@ -35,6 +39,8 @@ Called when the messages are sent successfully.
 **Since:** 5
 
 **Deprecated since:** 8
+
+<!--Device-SubscribeMessageOptions-success?: (data: SubscribeMessageResponse) => void--><!--Device-SubscribeMessageOptions-success?: (data: SubscribeMessageResponse) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 

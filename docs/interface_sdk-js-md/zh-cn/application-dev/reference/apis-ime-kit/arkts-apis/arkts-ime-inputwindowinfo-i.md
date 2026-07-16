@@ -4,7 +4,15 @@
 
 **起始版本：** 10
 
+<!--Device-inputMethod-export interface InputWindowInfo--><!--Device-inputMethod-export interface InputWindowInfo-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+## 导入模块
+
+```TypeScript
+import { inputMethod } from '@kit.IMEKit';
+```
 
 ## displayId
 
@@ -22,6 +30,8 @@ displayId?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-InputWindowInfo-displayId?: long--><!--Device-InputWindowInfo-displayId?: long-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## height
@@ -35,6 +45,8 @@ height: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-InputWindowInfo-height: long--><!--Device-InputWindowInfo-height: long-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -50,6 +62,8 @@ left: number
 
 **起始版本：** 10
 
+<!--Device-InputWindowInfo-left: int--><!--Device-InputWindowInfo-left: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## name
@@ -63,6 +77,8 @@ name: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-InputWindowInfo-name: string--><!--Device-InputWindowInfo-name: string-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -78,6 +94,8 @@ top: number
 
 **起始版本：** 10
 
+<!--Device-InputWindowInfo-top: int--><!--Device-InputWindowInfo-top: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## width
@@ -91,6 +109,8 @@ width: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-InputWindowInfo-width: long--><!--Device-InputWindowInfo-width: long-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

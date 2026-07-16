@@ -1,5 +1,11 @@
 # exit（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { cloudData } from '@kit.ArkData';
+```
+
 ## exit
 
 ```TypeScript
@@ -10,6 +16,8 @@ function exit(sharingResource: string, callback: AsyncCallback<Result<void>>): v
 
 **起始版本：** 11
 
+<!--Device-sharing-function exit(sharingResource: string, callback: AsyncCallback<Result<void>>): void--><!--Device-sharing-function exit(sharingResource: string, callback: AsyncCallback<Result<void>>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **系统接口：** 此接口为系统接口。
@@ -19,7 +27,7 @@ function exit(sharingResource: string, callback: AsyncCallback<Result<void>>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sharingResource | string | 是 | 端云共享数据的资源标识。 |
-| callback | AsyncCallback&lt;Result&lt;void&gt;&gt; | 是 | 回调函数。返回退出共享的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Result<void>> | 是 | 回调函数。返回退出共享的结果。 |
 
 **错误码：**
 
@@ -55,6 +63,8 @@ function exit(sharingResource: string): Promise<Result<void>>
 
 **起始版本：** 11
 
+<!--Device-sharing-function exit(sharingResource: string): Promise<Result<void>>--><!--Device-sharing-function exit(sharingResource: string): Promise<Result<void>>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **系统接口：** 此接口为系统接口。
@@ -69,7 +79,7 @@ function exit(sharingResource: string): Promise<Result<void>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;void&gt;&gt; | Promise对象，返回退出端云共享的结果。 |
+| Promise<Result<void>> | Promise对象，返回退出端云共享的结果。 |
 
 **错误码：**
 

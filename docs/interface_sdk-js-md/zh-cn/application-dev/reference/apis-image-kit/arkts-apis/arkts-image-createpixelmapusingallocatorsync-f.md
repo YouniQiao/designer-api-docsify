@@ -1,5 +1,11 @@
 # createPixelMapUsingAllocatorSync
 
+## 导入模块
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+```
+
 ## createPixelMapUsingAllocatorSync
 
 ```TypeScript
@@ -7,12 +13,13 @@ function createPixelMapUsingAllocatorSync(colors: ArrayBuffer, param: Initializa
     allocatorType?: AllocatorType): PixelMap
 ```
 
-Create pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified
-by allocatorType. By default, the system selects the memory type based on the image type, image size,
-platform capability, etc. When processing the PixelMap returned by this interface, please always
-consider the impact of stride.
+Create pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size,platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride.
 
 **起始版本：** 20
+
+<!--Device-image-function createPixelMapUsingAllocatorSync(colors: ArrayBuffer, param: InitializationOptions,
+    allocatorType?: AllocatorType): PixelMap--><!--Device-image-function createPixelMapUsingAllocatorSync(colors: ArrayBuffer, param: InitializationOptions,
+    allocatorType?: AllocatorType): PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -20,15 +27,15 @@ consider the impact of stride.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colors | ArrayBuffer | 是 | The image color buffer. |
-| param | InitializationOptions | 是 | Initialization options for pixelmap. |
-| allocatorType | AllocatorType | 否 | Indicate which memory type will be used by the returned PixelMap. |
+| colors | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | The image color buffer. |
+| param | [InitializationOptions](arkts-image-initializationoptions-i.md) | 是 | Initialization options for pixelmap. |
+| allocatorType | [AllocatorType](arkts-image-allocatortype-e.md) | 否 | Indicate which memory type will be used by the returned PixelMap. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| PixelMap | Returns the instance if the operation is successful;Otherwise, return undefined. |
+| [PixelMap](arkts-image-pixelmap-i.md) | Returns the instance if the operation is successful;Otherwise, return undefined. |
 
 **错误码：**
 
@@ -69,12 +76,11 @@ function createPixelMapUsingAllocatorSync() {
 function createPixelMapUsingAllocatorSync(param: InitializationOptions, allocatorType?: AllocatorType): PixelMap
 ```
 
-Create an empty pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified
-by allocatorType. By default, the system selects the memory type based on the image type, image size,
-platform capability, etc. When processing the PixelMap returned by this interface, please always
-consider the impact of stride.
+Create an empty pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size,platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride.
 
 **起始版本：** 20
+
+<!--Device-image-function createPixelMapUsingAllocatorSync(param: InitializationOptions, allocatorType?: AllocatorType): PixelMap--><!--Device-image-function createPixelMapUsingAllocatorSync(param: InitializationOptions, allocatorType?: AllocatorType): PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -82,14 +88,14 @@ consider the impact of stride.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | InitializationOptions | 是 | Initialization options for pixelmap. |
-| allocatorType | AllocatorType | 否 | Indicate which memory type will be used by the returned PixelMap. |
+| param | [InitializationOptions](arkts-image-initializationoptions-i.md) | 是 | Initialization options for pixelmap. |
+| allocatorType | [AllocatorType](arkts-image-allocatortype-e.md) | 否 | Indicate which memory type will be used by the returned PixelMap. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| PixelMap | Returns the instance if the operation is successful;Otherwise, return undefined. |
+| [PixelMap](arkts-image-pixelmap-i.md) | Returns the instance if the operation is successful;Otherwise, return undefined. |
 
 **错误码：**
 

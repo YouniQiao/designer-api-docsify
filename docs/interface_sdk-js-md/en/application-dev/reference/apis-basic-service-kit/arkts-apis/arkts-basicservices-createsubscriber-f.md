@@ -21,14 +21,22 @@ Creates a subscriber. This API uses an asynchronous callback to return the resul
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-commonEventManager-function createSubscriber(
+    subscribeInfo: CommonEventSubscribeInfo,
+    callback: AsyncCallback<CommonEventSubscriber>
+  ): void--><!--Device-commonEventManager-function createSubscriber(
+    subscribeInfo: CommonEventSubscribeInfo,
+    callback: AsyncCallback<CommonEventSubscriber>
+  ): void-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeInfo | CommonEventSubscribeInfo | Yes | Subscriber information. |
-| callback | AsyncCallback&lt;CommonEventSubscriber&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined**; otherwise, **err** is an error object. |
+| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-t.md) | Yes | Subscriber information. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<CommonEventSubscriber> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -79,19 +87,21 @@ Creates a subscriber. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-commonEventManager-function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<CommonEventSubscriber>--><!--Device-commonEventManager-function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<CommonEventSubscriber>-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeInfo | CommonEventSubscribeInfo | Yes | Subscriber information. |
+| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-t.md) | Yes | Subscriber information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CommonEventSubscriber&gt; | Promise used to return the created subscriber object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CommonEventSubscriber> | Promise used to return the created subscriber object. |
 
 **Error codes:**
 

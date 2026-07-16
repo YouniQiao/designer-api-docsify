@@ -1,5 +1,11 @@
 # setAlternateIcon
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## setAlternateIcon
 
 ```TypeScript
@@ -11,6 +17,8 @@ function setAlternateIcon(alternateIconName: string): Promise<void>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-bundleManager-function setAlternateIcon(alternateIconName: string): Promise<void>--><!--Device-bundleManager-function setAlternateIcon(alternateIconName: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -24,13 +32,13 @@ function setAlternateIcon(alternateIconName: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17700308](../errorcode-bundle.md#17700308-备用图标名称没有在配置文件中配置) | The alternateIconName must match the name field under alternateIconsin the app.json5 file. |
+| [17700308](../errorcode-bundle.md#17700308-备用图标名称没有在配置文件中配置) | The alternateIconName must match the name field under alternateIcons in the app.json5 file. |
 | [17700309](../errorcode-bundle.md#17700309-当前没有设置备用图标) | No alternate icon is enabled. |
 | [17700310](../errorcode-bundle.md#17700310-设置备用图标失败) | Failed to set the alternate icon. |
 

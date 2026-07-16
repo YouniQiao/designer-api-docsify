@@ -2,10 +2,11 @@
 
 Describes the start animation configuration. This API works only for full-screen applications.
 
-The configuration does not take effect for inter-application transitions, where the default animation of the
-system is used.
+The configuration does not take effect for inter-application transitions, where the default animation of the system is used.
 
 **Since:** 20
+
+<!--Device-window-interface StartAnimationSystemParams--><!--Device-window-interface StartAnimationSystemParams-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -23,12 +24,13 @@ import { window } from '@kit.ArkUI';
 animationConfig?: WindowAnimationConfig
 ```
 
-Configuration for the window animation. The default animation curve is **WindowAnimationCurve.LINEAR**, and the
-duration is **0**.
+Configuration for the window animation. The default animation curve is **WindowAnimationCurve.LINEAR**, and the duration is **0**.
 
 **Type:** WindowAnimationConfig
 
 **Since:** 20
+
+<!--Device-StartAnimationSystemParams-animationConfig?: WindowAnimationConfig--><!--Device-StartAnimationSystemParams-animationConfig?: WindowAnimationConfig-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -45,6 +47,8 @@ Type of the window animation.
 **Type:** AnimationType
 
 **Since:** 20
+
+<!--Device-StartAnimationSystemParams-type: AnimationType--><!--Device-StartAnimationSystemParams-type: AnimationType-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

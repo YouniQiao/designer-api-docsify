@@ -4,6 +4,8 @@ Provides the text normalization capabilities.
 
 **Since:** 10
 
+<!--Device-i18n-export class Normalizer--><!--Device-i18n-export class Normalizer-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
@@ -24,19 +26,21 @@ Obtains a **Normalizer** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Normalizer-static getInstance(mode: NormalizerMode): Normalizer--><!--Device-Normalizer-static getInstance(mode: NormalizerMode): Normalizer-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | NormalizerMode | Yes | Text normalization mode. |
+| mode | [NormalizerMode](arkts-localization-normalizermode-e.md) | Yes | Text normalization mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Normalizer | **Normalizer** object for text normalization. |
+| [Normalizer](arkts-localization-normalizer-c.md) | **Normalizer** object for text normalization. |
 
 **Error codes:**
 
@@ -70,6 +74,8 @@ Normalizes input strings.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Normalizer-normalize(text: string): string--><!--Device-Normalizer-normalize(text: string): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 

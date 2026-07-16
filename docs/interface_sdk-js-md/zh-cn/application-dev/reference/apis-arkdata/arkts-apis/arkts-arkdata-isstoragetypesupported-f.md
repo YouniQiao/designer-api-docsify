@@ -1,5 +1,11 @@
 # isStorageTypeSupported
 
+## 导入模块
+
+```TypeScript
+import { preferences } from '@kit.ArkData';
+```
+
 ## isStorageTypeSupported
 
 ```TypeScript
@@ -10,7 +16,9 @@ function isStorageTypeSupported(type: StorageType): boolean
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-preferences-function isStorageTypeSupported(type: StorageType): boolean--><!--Device-preferences-function isStorageTypeSupported(type: StorageType): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -18,7 +26,7 @@ function isStorageTypeSupported(type: StorageType): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | StorageType | 是 | 需要判断是否支持的存储模式。 |
+| type | [StorageType](arkts-arkdata-storagetype-e.md) | 是 | 需要判断是否支持的存储模式。 |
 
 **返回值：**
 

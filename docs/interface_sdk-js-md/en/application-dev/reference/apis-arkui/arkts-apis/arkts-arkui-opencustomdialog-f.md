@@ -16,20 +16,13 @@ Opens a custom dialog box. This API uses a promise to return the result.
 
 <!--Del-->This API cannot be used in **ServiceExtension**.<!--DelEnd-->
 
-By default, the width of the dialog box in portrait mode is the width of the window where it is located minus the
-left and right margins (40 vp for 2-in-1 devices and 16 vp for other devices), and the maximum width is 400 vp.
+By default, the width of the dialog box in portrait mode is the width of the window where it is located minus the left and right margins (40 vp for 2-in-1 devices and 16 vp for other devices), and the maximum width is 400 vp.
 
-> **NOTE**
->
-> - This API is supported since API version 11 and deprecated since API version 18.
-You are advised to use [openCustomDialog](arkts-apis-uicontext-promptaction.md#opencustomdialog12-1) instead.
-Before calling this API, you need to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object
-using the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) method in [UIContext](arkts-apis-uicontext-uicontext.md).
-Directly using **openCustomDialog** can lead to the issue of [ambiguous UI context](../../ui/arkts-global-interface.md#ambiguous-ui-context).
->
-> - Since API version 12, you can use the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) API
-in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md)
-object associated with the current UI context.
+> **NOTE**  
+>  
+> - This API is supported since API version 11 and deprecated since API version 18.You are advised to use [openCustomDialog](arkts-apis-uicontext-promptaction.md#opencustomdialog12-1) instead.Before calling this API, you need to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) method in [UIContext](arkts-apis-uicontext-uicontext.md).Directly using **openCustomDialog** can lead to the issue of [ambiguous UI context](../../ui/arkts-global-interface.md#ambiguous-ui-context).  
+>  
+> - Since API version 12, you can use the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) API in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md)object associated with the current UI context.
 
 **Since:** 11
 
@@ -41,19 +34,21 @@ object associated with the current UI context.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-promptAction-function openCustomDialog(options: CustomDialogOptions): Promise<number>--><!--Device-promptAction-function openCustomDialog(options: CustomDialogOptions): Promise<number>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | CustomDialogOptions | Yes | Content of the custom dialog box.<br>Note: If both [isModal](js-apis-promptAction.md#basedialogoptions11) and[showInSubWindow](js-apis-promptAction.md#basedialogoptions11) in **BaseDialogOptions** are set to **true**,only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayedwithout mask in the subwindow. |
+| options | [CustomDialogOptions](arkts-arkui-customdialogoptions-i.md) | Yes | Content of the custom dialog box.<br>Note: If both [isModal](js-apis-promptAction.md#basedialogoptions11) and [showInSubWindow](js-apis-promptAction.md#basedialogoptions11) in **BaseDialogOptions** are set to **true**,only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | ID of the custom dialog box, which can be used in **closeCustomDialog**. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | ID of the custom dialog box, which can be used in **closeCustomDialog**. |
 
 **Error codes:**
 

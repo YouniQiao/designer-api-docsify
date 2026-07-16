@@ -8,6 +8,8 @@ Provides util functions.
 
 **Substitutes:** [I18NUtil](arkts-localization-i18nutil-c.md)
 
+<!--Device-i18n-export interface Util--><!--Device-i18n-export interface Util-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
@@ -30,17 +32,19 @@ Converts one measurement unit into another and formats the unit based on the spe
 
 **Substitutes:** [unitConvert](arkts-localization-i18nutil-c.md#unitconvert-1)
 
+<!--Device-Util-unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string--><!--Device-Util-unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromUnit | UnitInfo | Yes | Measurement unit to be converted. |
-| toUnit | UnitInfo | Yes | Measurement unit to be converted to. |
+| fromUnit | [UnitInfo](arkts-localization-unitinfo-i.md) | Yes | Measurement unit to be converted. |
+| toUnit | [UnitInfo](arkts-localization-unitinfo-i.md) | Yes | Measurement unit to be converted to. |
 | value | number | Yes | Value of the measurement unit to be converted. |
 | locale | string | Yes | Locale ID used for formatting, for example, **zh-Hans-CN**. |
-| style | string | No | Style used for formatting. The value can be **long**, **short**, or **narrow**. Thedefault value is **short**. |
+| style | string | No | Style used for formatting. The value can be **long**, **short**, or **narrow**. The default value is **short**. |
 
 **Return value:**
 

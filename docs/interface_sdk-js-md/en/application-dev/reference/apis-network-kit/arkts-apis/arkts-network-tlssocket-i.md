@@ -4,6 +4,8 @@ Defines a TLSSocket connection.
 
 **Since:** 10
 
+<!--Device-socket-export interface TLSSocket--><!--Device-socket-export interface TLSSocket-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -24,14 +26,16 @@ Binds the IP address and port number. The port number can be specified or random
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-TLSSocket-bind(address: NetAddress, callback: AsyncCallback<void>): void--><!--Device-TLSSocket-bind(address: NetAddress, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | NetAddress | Yes | Destination address. {@link NetAddress} |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of bind. |
+| address | [NetAddress](arkts-network-netaddress-i.md) | Yes | Destination address. {@link NetAddress} |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of bind. |
 
 **Error codes:**
 
@@ -75,19 +79,21 @@ Binds the IP address and port number. The port number can be specified or random
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-TLSSocket-bind(address: NetAddress): Promise<void>--><!--Device-TLSSocket-bind(address: NetAddress): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | NetAddress | Yes | Destination address. {@link NetAddress} |
+| address | [NetAddress](arkts-network-netaddress-i.md) | Yes | Destination address. {@link NetAddress} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -127,13 +133,15 @@ Closes a TLSSocket connection
 
 **Since:** 10
 
+<!--Device-TLSSocket-close(callback: AsyncCallback<void>): void--><!--Device-TLSSocket-close(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of close. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of close. |
 
 **Error codes:**
 
@@ -172,13 +180,15 @@ Closes a TLSSocket connection
 
 **Since:** 10
 
+<!--Device-TLSSocket-close(): Promise<void>--><!--Device-TLSSocket-close(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -211,10 +221,11 @@ tls.close().then(() => {
 connect(options: TLSConnectOptions, callback: AsyncCallback<void>): void
 ```
 
-Sets up a connection to the specified IP address and port number.
-Only TCP is supported.
+Sets up a connection to the specified IP address and port number.Only TCP is supported.
 
 **Since:** 18
+
+<!--Device-TLSSocket-connect(options: TLSConnectOptions, callback: AsyncCallback<void>): void--><!--Device-TLSSocket-connect(options: TLSConnectOptions, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -222,8 +233,8 @@ Only TCP is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | TLSConnectOptions | Yes | Optional parameters {@link TLSConnectOptions}. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of connect. |
+| options | [TLSConnectOptions](arkts-network-tlsconnectoptions-i.md) | Yes | Optional parameters {@link TLSConnectOptions}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of connect. |
 
 **Error codes:**
 
@@ -413,10 +424,11 @@ tlsOneWay.connect(tlsOneWayConnectOptions, (err: BusinessError) => {
 connect(options: TLSConnectOptions): Promise<void>
 ```
 
-Sets up a connection to the specified IP address and port number.
-Only TCP is supported.
+Sets up a connection to the specified IP address and port number.Only TCP is supported.
 
 **Since:** 18
+
+<!--Device-TLSSocket-connect(options: TLSConnectOptions): Promise<void>--><!--Device-TLSSocket-connect(options: TLSConnectOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -424,13 +436,13 @@ Only TCP is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | TLSConnectOptions | Yes | Optional parameters {@link TLSConnectOptions}. |
+| options | [TLSConnectOptions](arkts-network-tlsconnectoptions-i.md) | Yes | Optional parameters {@link TLSConnectOptions}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -632,13 +644,15 @@ Returns an object representing a local certificate.
 
 **Since:** 10
 
+<!--Device-TLSSocket-getCertificate(callback: AsyncCallback<X509CertRawData>): void--><!--Device-TLSSocket-getCertificate(callback: AsyncCallback<X509CertRawData>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;X509CertRawData&gt; | Yes | the callback of getCertificate. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<X509CertRawData> | Yes | the callback of getCertificate. |
 
 **Error codes:**
 
@@ -658,13 +672,15 @@ Returns an object representing a local certificate.
 
 **Since:** 10
 
+<!--Device-TLSSocket-getCertificate(): Promise<X509CertRawData>--><!--Device-TLSSocket-getCertificate(): Promise<X509CertRawData>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;X509CertRawData&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<X509CertRawData> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -680,10 +696,11 @@ Returns an object representing a local certificate.
 getCipherSuite(callback: AsyncCallback<Array<string>>): void
 ```
 
-Returns a list containing the negotiated cipher suite information.
-For example:{"TLS_RSA_WITH_AES_128_CBC_SHA256", "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"}
+Returns a list containing the negotiated cipher suite information.For example:{"TLS_RSA_WITH_AES_128_CBC_SHA256", "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"}
 
 **Since:** 10
+
+<!--Device-TLSSocket-getCipherSuite(callback: AsyncCallback<Array<string>>): void--><!--Device-TLSSocket-getCipherSuite(callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -691,7 +708,7 @@ For example:{"TLS_RSA_WITH_AES_128_CBC_SHA256", "TLS_ECDHE_RSA_WITH_AES_128_CBC_
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | the callback of getCipherSuite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | the callback of getCipherSuite. |
 
 **Error codes:**
 
@@ -725,10 +742,11 @@ tls.getCipherSuite((err: BusinessError, data: Array<string>) => {
 getCipherSuite(): Promise<Array<string>>
 ```
 
-Returns a list containing the negotiated cipher suite information.
-For example:{"TLS_RSA_WITH_AES_128_CBC_SHA256", "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"}
+Returns a list containing the negotiated cipher suite information.For example:{"TLS_RSA_WITH_AES_128_CBC_SHA256", "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"}
 
 **Since:** 10
+
+<!--Device-TLSSocket-getCipherSuite(): Promise<Array<string>>--><!--Device-TLSSocket-getCipherSuite(): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -736,7 +754,7 @@ For example:{"TLS_RSA_WITH_AES_128_CBC_SHA256", "TLS_ECDHE_RSA_WITH_AES_128_CBC_
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -772,13 +790,15 @@ Obtains the local address of a TLSSocket connection.
 
 **Since:** 24
 
+<!--Device-TLSSocket-getLocalAddress(): Promise<NetAddress>--><!--Device-TLSSocket-getLocalAddress(): Promise<NetAddress>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetAddress> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -809,11 +829,11 @@ tls.getLocalAddress().then((localAddress: socket.NetAddress) => {
 getProtocol(callback: AsyncCallback<string>): void
 ```
 
-Returns a string containing the negotiated SSL/TLS protocol version of the current connection.
-For connected sockets that have not completed the handshake process, the value 'unknown' will be returned.
-Server sockets or disconnected client sockets will return a value of null.
+Returns a string containing the negotiated SSL/TLS protocol version of the current connection.For connected sockets that have not completed the handshake process, the value 'unknown' will be returned.Server sockets or disconnected client sockets will return a value of null.
 
 **Since:** 10
+
+<!--Device-TLSSocket-getProtocol(callback: AsyncCallback<string>): void--><!--Device-TLSSocket-getProtocol(callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -821,7 +841,7 @@ Server sockets or disconnected client sockets will return a value of null.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes | the callback of getProtocol. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | the callback of getProtocol. |
 
 **Error codes:**
 
@@ -854,11 +874,11 @@ tls.getProtocol((err: BusinessError, data: string) => {
 getProtocol(): Promise<string>
 ```
 
-Returns a string containing the negotiated SSL/TLS protocol version of the current connection.
-For connected sockets that have not completed the handshake process, the value 'unknown' will be returned.
-Server sockets or disconnected client sockets will return a value of null.
+Returns a string containing the negotiated SSL/TLS protocol version of the current connection.For connected sockets that have not completed the handshake process, the value 'unknown' will be returned.Server sockets or disconnected client sockets will return a value of null.
 
 **Since:** 10
+
+<!--Device-TLSSocket-getProtocol(): Promise<string>--><!--Device-TLSSocket-getProtocol(): Promise<string>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -866,7 +886,7 @@ Server sockets or disconnected client sockets will return a value of null.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -901,13 +921,15 @@ Obtains the peer address of a TLSSocket connection.
 
 **Since:** 10
 
+<!--Device-TLSSocket-getRemoteAddress(callback: AsyncCallback<NetAddress>): void--><!--Device-TLSSocket-getRemoteAddress(callback: AsyncCallback<NetAddress>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;NetAddress&gt; | Yes | the callback of getRemoteAddress. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<NetAddress> | Yes | the callback of getRemoteAddress. |
 
 **Error codes:**
 
@@ -943,13 +965,15 @@ Obtains the peer address of a TLSSocket connection.
 
 **Since:** 10
 
+<!--Device-TLSSocket-getRemoteAddress(): Promise<NetAddress>--><!--Device-TLSSocket-getRemoteAddress(): Promise<NetAddress>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetAddress&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetAddress> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -979,11 +1003,11 @@ tls.getRemoteAddress().then(() => {
 getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void
 ```
 
-<p>Returns an object representing the peer certificate. If the peer does not provide a certificate,
-<p>an empty object will be returned. If the socket is destroyed, null is returned.</p>
-It only contains the peer's certificate.
+<p>Returns an object representing the peer certificate. If the peer does not provide a certificate,<p>an empty object will be returned. If the socket is destroyed, null is returned.</p>It only contains the peer's certificate.
 
 **Since:** 10
+
+<!--Device-TLSSocket-getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void--><!--Device-TLSSocket-getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -991,7 +1015,7 @@ It only contains the peer's certificate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;X509CertRawData&gt; | Yes | the callback of getRemoteCertificate. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<X509CertRawData> | Yes | the callback of getRemoteCertificate. |
 
 **Error codes:**
 
@@ -1006,11 +1030,11 @@ It only contains the peer's certificate.
 getRemoteCertificate(): Promise<X509CertRawData>
 ```
 
-<p>Returns an object representing the peer certificate. If the peer does not provide a certificate,
-<p>an empty object will be returned. If the socket is destroyed, null is returned.</p>
-It only contains the peer's certificate.
+<p>Returns an object representing the peer certificate. If the peer does not provide a certificate,<p>an empty object will be returned. If the socket is destroyed, null is returned.</p>It only contains the peer's certificate.
 
 **Since:** 10
+
+<!--Device-TLSSocket-getRemoteCertificate(): Promise<X509CertRawData>--><!--Device-TLSSocket-getRemoteCertificate(): Promise<X509CertRawData>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -1018,7 +1042,7 @@ It only contains the peer's certificate.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;X509CertRawData&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<X509CertRawData> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -1033,10 +1057,11 @@ It only contains the peer's certificate.
 getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void
 ```
 
-<p>The list of signature algorithms shared between the server and the client,
-in descending order of priority.</p>
+<p>The list of signature algorithms shared between the server and the client,in descending order of priority.</p>
 
 **Since:** 10
+
+<!--Device-TLSSocket-getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void--><!--Device-TLSSocket-getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -1044,7 +1069,7 @@ in descending order of priority.</p>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | the callback of getSignatureAlgorithms.@see https://www.openssl.org/docs/man1.1.1/man3/SSL_get_shared_sigalgs.html |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | the callback of getSignatureAlgorithms.@see https://www.openssl.org/docs/man1.1.1/man3/SSL_get_shared_sigalgs.html |
 
 **Error codes:**
 
@@ -1076,10 +1101,11 @@ tls.getSignatureAlgorithms((err: BusinessError, data: Array<string>) => {
 getSignatureAlgorithms(): Promise<Array<string>>
 ```
 
-<p>The list of signature algorithms shared between the server and the client,
-in descending order of priority.</p>
+<p>The list of signature algorithms shared between the server and the client,in descending order of priority.</p>
 
 **Since:** 10
+
+<!--Device-TLSSocket-getSignatureAlgorithms(): Promise<Array<string>>--><!--Device-TLSSocket-getSignatureAlgorithms(): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -1087,7 +1113,7 @@ in descending order of priority.</p>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | The promise returned by the function.@see https://www.openssl.org/docs/man1.1.1/man3/SSL_get_shared_sigalgs.html |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | The promise returned by the function.@see https://www.openssl.org/docs/man1.1.1/man3/SSL_get_shared_sigalgs.html |
 
 **Error codes:**
 
@@ -1121,13 +1147,15 @@ Obtains the file descriptor of the TLSSocket connection.
 
 **Since:** 24
 
+<!--Device-TLSSocket-getSocketFd(): Promise<int>--><!--Device-TLSSocket-getSocketFd(): Promise<int>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The promise returns the file descriptor of the TLSSocket connection. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | The promise returns the file descriptor of the TLSSocket connection. |
 
 **Example**
 
@@ -1162,13 +1190,15 @@ Obtains the status of the TLSSocket connection.
 
 **Since:** 10
 
+<!--Device-TLSSocket-getState(callback: AsyncCallback<SocketStateBase>): void--><!--Device-TLSSocket-getState(callback: AsyncCallback<SocketStateBase>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;SocketStateBase&gt; | Yes | the callback of getState. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<SocketStateBase> | Yes | the callback of getState. |
 
 **Error codes:**
 
@@ -1215,13 +1245,15 @@ Obtains the status of the TLSSocket connection.
 
 **Since:** 10
 
+<!--Device-TLSSocket-getState(): Promise<SocketStateBase>--><!--Device-TLSSocket-getState(): Promise<SocketStateBase>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SocketStateBase&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SocketStateBase> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -1266,6 +1298,8 @@ Cancels listening for message receiving events of the TLSSocket connection.
 
 **Since:** 11
 
+<!--Device-TLSSocket-off(type: 'message', callback?: Callback<SocketMessageInfo>): void--><!--Device-TLSSocket-off(type: 'message', callback?: Callback<SocketMessageInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -1273,7 +1307,7 @@ Cancels listening for message receiving events of the TLSSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Indicates Event name. |
-| callback | Callback&lt;SocketMessageInfo&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SocketMessageInfo> | No | the callback used to return the result. |
 
 **Error codes:**
 
@@ -1315,6 +1349,8 @@ Cancels listening for connection or close events of the TLSSocket connection.
 
 **Since:** 10
 
+<!--Device-TLSSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void--><!--Device-TLSSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -1322,7 +1358,7 @@ Cancels listening for connection or close events of the TLSSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' \| 'close' | Yes | Indicates Event name. |
-| callback | Callback&lt;void&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | the callback used to return the result. |
 
 **Error codes:**
 
@@ -1363,6 +1399,8 @@ Cancels listening for connection or close events of the TLSSocket connection.
 
 **Since:** 10
 
+<!--Device-TLSSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void--><!--Device-TLSSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -1370,7 +1408,7 @@ Cancels listening for connection or close events of the TLSSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' \| 'close' | Yes | Indicates Event name. |
-| callback | Callback&lt;void&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | the callback used to return the result. |
 
 **Error codes:**
 
@@ -1411,6 +1449,8 @@ Cancels listening for error events of the TLSSocket connection.
 
 **Since:** 10
 
+<!--Device-TLSSocket-off(type: 'error', callback?: ErrorCallback): void--><!--Device-TLSSocket-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -1418,7 +1458,7 @@ Cancels listening for error events of the TLSSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Indicates Event name. |
-| callback | ErrorCallback | No | the callback used to return the result. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | the callback used to return the result. |
 
 **Error codes:**
 
@@ -1452,6 +1492,8 @@ Listens for message receiving events of the TLSSocket connection.
 
 **Since:** 11
 
+<!--Device-TLSSocket-on(type: 'message', callback: Callback<SocketMessageInfo>): void--><!--Device-TLSSocket-on(type: 'message', callback: Callback<SocketMessageInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -1459,7 +1501,7 @@ Listens for message receiving events of the TLSSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Indicates Event name. |
-| callback | Callback&lt;SocketMessageInfo&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SocketMessageInfo> | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -1509,6 +1551,8 @@ Listens for connection or close events of the TLSSocket connection.
 
 **Since:** 10
 
+<!--Device-TLSSocket-on(type: 'connect' | 'close', callback: Callback<void>): void--><!--Device-TLSSocket-on(type: 'connect' | 'close', callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -1516,7 +1560,7 @@ Listens for connection or close events of the TLSSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' \| 'close' | Yes | Indicates Event name. |
-| callback | Callback&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -1561,6 +1605,8 @@ Listens for connection or close events of the TLSSocket connection.
 
 **Since:** 10
 
+<!--Device-TLSSocket-on(type: 'connect' | 'close', callback: Callback<void>): void--><!--Device-TLSSocket-on(type: 'connect' | 'close', callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -1568,7 +1614,7 @@ Listens for connection or close events of the TLSSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' \| 'close' | Yes | Indicates Event name. |
-| callback | Callback&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -1613,6 +1659,8 @@ Listens for error events of the TLSSocket connection.
 
 **Since:** 10
 
+<!--Device-TLSSocket-on(type: 'error', callback: ErrorCallback): void--><!--Device-TLSSocket-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -1620,7 +1668,7 @@ Listens for error events of the TLSSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Indicates Event name. |
-| callback | ErrorCallback | Yes | the callback used to return the result. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -1662,6 +1710,8 @@ Sends data over a TLSSocket connection.
 
 **Since:** 12
 
+<!--Device-TLSSocket-send(data: string | ArrayBuffer, callback: AsyncCallback<void>): void--><!--Device-TLSSocket-send(data: string | ArrayBuffer, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -1669,7 +1719,7 @@ Sends data over a TLSSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | string \| ArrayBuffer | Yes | Parameters for sending data. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of send. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of send. |
 
 **Error codes:**
 
@@ -1709,6 +1759,8 @@ Sends data over a TLSSocket connection.
 
 **Since:** 12
 
+<!--Device-TLSSocket-send(data: string | ArrayBuffer): Promise<void>--><!--Device-TLSSocket-send(data: string | ArrayBuffer): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -1721,7 +1773,7 @@ Sends data over a TLSSocket connection.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -1759,14 +1811,16 @@ Sets other attributes of the TLSSocket connection.
 
 **Since:** 10
 
+<!--Device-TLSSocket-setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void--><!--Device-TLSSocket-setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | TCPExtraOptions | Yes | Optional parameters {@link TCPExtraOptions}. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of setExtraOptions. |
+| options | [TCPExtraOptions](arkts-network-tcpextraoptions-i.md) | Yes | Optional parameters {@link TCPExtraOptions}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of setExtraOptions. |
 
 **Error codes:**
 
@@ -1831,19 +1885,21 @@ Sets other attributes of the TLSSocket connection.
 
 **Since:** 10
 
+<!--Device-TLSSocket-setExtraOptions(options: TCPExtraOptions): Promise<void>--><!--Device-TLSSocket-setExtraOptions(options: TCPExtraOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | TCPExtraOptions | Yes | Optional parameters {@link TCPExtraOptions}. |
+| options | [TCPExtraOptions](arkts-network-tcpextraoptions-i.md) | Yes | Optional parameters {@link TCPExtraOptions}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

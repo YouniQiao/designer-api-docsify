@@ -2,14 +2,16 @@
 
 Provides API for obtaining the coordinates and size of the drawing area of a component.
 
-> **NOTE**
->
-> - The initial APIs of this class are supported since API version 10.
->
-> - In the following API examples, you must first use [getComponentUtils()](arkts-arkui-uicontext-c.md#getcomponentutils-1) in
+> **NOTE**  
+>  
+> - The initial APIs of this class are supported since API version 10.  
+>  
+> - In the following API examples, you must first use [getComponentUtils()](arkts-arkui-uicontext-c.md#getcomponentutils-1) in  
 > **UIContext** to obtain a **ComponentUtils** instance, and then call the APIs using the obtained instance.
 
 **Since:** 10
+
+<!--Device-unnamed-export class ComponentUtils--><!--Device-unnamed-export class ComponentUtils-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,12 +27,11 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 getRectangleById(id: string): componentUtils.ComponentInfo
 ```
 
-Obtains the size, position, translation, scaling, rotation, and affine matrix information of the specified
-component.
+Obtains the size, position, translation, scaling, rotation, and affine matrix information of the specified component.
 
-> **NOTE**
->
-> This API should be called after the target component's layout is complete to obtain its size information. It is
+> **NOTE**  
+>  
+> This API should be called after the target component's layout is complete to obtain its size information. It is  
 > recommended that you use this API within [onAppear](../arkts-components/arkts-arkui-commonmethod-c.md#onappear-1).
 
 **Since:** 10
@@ -38,6 +39,8 @@ component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ComponentUtils-getRectangleById(id: string): componentUtils.ComponentInfo--><!--Device-ComponentUtils-getRectangleById(id: string): componentUtils.ComponentInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,7 +54,7 @@ component.
 
 | Type | Description |
 | --- | --- |
-| componentUtils.ComponentInfo | Size, position, translation, scaling, rotation, and affine matrixinformation of the component. |
+| componentUtils.ComponentInfo | Size, position, translation, scaling, rotation, and affine matrix information of the component. |
 
 **Error codes:**
 

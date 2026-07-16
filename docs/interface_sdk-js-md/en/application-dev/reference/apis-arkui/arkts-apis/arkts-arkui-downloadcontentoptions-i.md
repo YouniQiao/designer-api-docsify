@@ -4,6 +4,8 @@ Defines the download content options.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface DownloadContentOptions--><!--Device-unnamed-export interface DownloadContentOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,6 +28,8 @@ DownloadFileButton icon Style.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DownloadContentOptions-icon?: DownloadIconStyle--><!--Device-DownloadContentOptions-icon?: DownloadIconStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## text
@@ -41,6 +45,8 @@ DownloadFileButton description.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DownloadContentOptions-text?: DownloadDescription--><!--Device-DownloadContentOptions-text?: DownloadDescription-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

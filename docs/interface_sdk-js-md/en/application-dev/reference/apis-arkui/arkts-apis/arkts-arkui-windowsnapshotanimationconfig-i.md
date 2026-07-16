@@ -4,6 +4,8 @@ Configuration for window snapshot animation.
 
 **Since:** 26.0.0
 
+<!--Device-window-interface WindowSnapshotAnimationConfig--><!--Device-window-interface WindowSnapshotAnimationConfig-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
@@ -18,17 +20,15 @@ import { window } from '@kit.ArkUI';
 delay?: number
 ```
 
-The delay before the window snapshot fade-out animation begins (ms).
-If left unspecified, the parameter defaults to a value determined by the system animation context:
-350 for transitions between WindowStatusType.FLOATING and WindowStatusType.FULLSCREEN window status.
-50 for all other screenshot animation scenarios.
-The valid range for this parameter is 0-350.
+The delay before the window snapshot fade-out animation begins (ms).If left unspecified, the parameter defaults to a value determined by the system animation context:350 for transitions between WindowStatusType.FLOATING and WindowStatusType.FULLSCREEN window status.50 for all other screenshot animation scenarios.The valid range for this parameter is 0-350.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WindowSnapshotAnimationConfig-delay?: long--><!--Device-WindowSnapshotAnimationConfig-delay?: long-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -38,17 +38,15 @@ The valid range for this parameter is 0-350.
 duration?: number
 ```
 
-The duration of the window snapshot fade-out animation (ms).
-If left unspecified, the parameter defaults to a value determined by the system animation context:
-400 for transitions between WindowStatusType.FLOATING and WindowStatusType.FULLSCREEN window status.
-250 for all other screenshot animation scenarios.
-The valid range for this parameter is 0-400.
+The duration of the window snapshot fade-out animation (ms).If left unspecified, the parameter defaults to a value determined by the system animation context:400 for transitions between WindowStatusType.FLOATING and WindowStatusType.FULLSCREEN window status.250 for all other screenshot animation scenarios.The valid range for this parameter is 0-400.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WindowSnapshotAnimationConfig-duration?: long--><!--Device-WindowSnapshotAnimationConfig-duration?: long-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

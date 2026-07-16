@@ -4,6 +4,8 @@ Enumeration of different types of WindowModeFollowStrategy.
 
 **Since:** 18
 
+<!--Device-unnamed-declare enum WindowModeFollowStrategy--><!--Device-unnamed-declare enum WindowModeFollowStrategy-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -20,6 +22,8 @@ Followed the host Window Mode.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WindowModeFollowStrategy-FOLLOW_HOST_WINDOW_MODE = 0--><!--Device-WindowModeFollowStrategy-FOLLOW_HOST_WINDOW_MODE = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -35,6 +39,8 @@ Followed the UIExtensionAbility.
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WindowModeFollowStrategy-FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE = 1--><!--Device-WindowModeFollowStrategy-FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -18,6 +18,8 @@ Obtains a pre-installed channel ID of this application.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-customConfig-function getChannelId(): string--><!--Device-customConfig-function getChannelId(): string-End-->
+
 **System capability:** SystemCapability.Customization.CustomConfig
 
 **Return value:**

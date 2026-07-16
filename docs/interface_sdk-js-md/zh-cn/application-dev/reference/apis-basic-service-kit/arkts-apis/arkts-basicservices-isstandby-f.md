@@ -1,5 +1,11 @@
 # isStandby
 
+## 导入模块
+
+```TypeScript
+import { power } from '@kit.BasicServicesKit';
+```
+
 ## isStandby
 
 ```TypeScript
@@ -9,6 +15,8 @@ function isStandby(): boolean
 检测当前设备是否进入待机低功耗续航模式。
 
 **起始版本：** 10
+
+<!--Device-power-function isStandby(): boolean--><!--Device-power-function isStandby(): boolean-End-->
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 

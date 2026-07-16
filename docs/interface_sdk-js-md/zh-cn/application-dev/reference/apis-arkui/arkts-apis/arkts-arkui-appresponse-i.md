@@ -4,7 +4,15 @@
 
 **起始版本：** 3
 
+<!--Device-unnamed-export interface AppResponse--><!--Device-unnamed-export interface AppResponse-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
+
+## 导入模块
+
+```TypeScript
+import { AppResponse, ScreenOnVisibleOptions, RequestFullWindowOptions } from '@kit.ArkUI';
+```
 
 ## appID
 
@@ -18,7 +26,9 @@ appID: string
 
 **起始版本：** 6
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AppResponse-appID: string--><!--Device-AppResponse-appID: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,7 +44,9 @@ appName: string
 
 **起始版本：** 3
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AppResponse-appName: string--><!--Device-AppResponse-appName: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -50,7 +62,9 @@ versionCode: number
 
 **起始版本：** 3
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AppResponse-versionCode: number--><!--Device-AppResponse-versionCode: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -66,7 +80,9 @@ versionName: string
 
 **起始版本：** 3
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AppResponse-versionName: string--><!--Device-AppResponse-versionName: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 

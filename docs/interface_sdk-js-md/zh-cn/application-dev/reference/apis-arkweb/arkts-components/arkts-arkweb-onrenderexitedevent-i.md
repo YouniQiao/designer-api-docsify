@@ -4,6 +4,8 @@ Defines the triggered when the render process exits.
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface OnRenderExitedEvent--><!--Device-unnamed-declare interface OnRenderExitedEvent-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## renderExitReason
@@ -18,7 +20,9 @@ The specific reason why the rendering process exits abnormally.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnRenderExitedEvent-renderExitReason: RenderExitReason--><!--Device-OnRenderExitedEvent-renderExitReason: RenderExitReason-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

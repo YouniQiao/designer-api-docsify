@@ -12,12 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getBundleInfoForSelfSync(bundleFlags: number): BundleInfo
 ```
 
-Obtains the bundle information of the current application based on the given bundle flags. This API returns the
-result synchronously.
+Obtains the bundle information of the current application based on the given bundle flags. This API returns the result synchronously.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-bundleManager-function getBundleInfoForSelfSync(bundleFlags: int): BundleInfo--><!--Device-bundleManager-function getBundleInfoForSelfSync(bundleFlags: int): BundleInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -31,7 +32,7 @@ result synchronously.
 
 | Type | Description |
 | --- | --- |
-| BundleInfo | Bundle information obtained. |
+| [BundleInfo](arkts-ability-bundleinfo-i.md) | Bundle information obtained. |
 
 **Error codes:**
 

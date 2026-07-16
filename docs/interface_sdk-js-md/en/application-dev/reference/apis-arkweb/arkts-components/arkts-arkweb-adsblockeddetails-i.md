@@ -4,6 +4,8 @@ Defines the ads block details.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface AdsBlockedDetails--><!--Device-unnamed-declare interface AdsBlockedDetails-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## adsBlocked
@@ -20,6 +22,8 @@ the url of ads.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AdsBlockedDetails-adsBlocked: Array<string>--><!--Device-AdsBlockedDetails-adsBlocked: Array<string>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## url
@@ -35,6 +39,8 @@ The url of main frame.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AdsBlockedDetails-url: string--><!--Device-AdsBlockedDetails-url: string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

@@ -18,14 +18,16 @@ Creates an **X509CRL** instance. This API uses an asynchronous callback to retur
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-cert-function createX509CRL(inStream: EncodingBlob, callback: AsyncCallback<X509CRL>): void--><!--Device-cert-function createX509CRL(inStream: EncodingBlob, callback: AsyncCallback<X509CRL>): void-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inStream | EncodingBlob | Yes | Serialized CRL data. The data length cannot exceed 8192 bytes. |
-| callback | AsyncCallback&lt;X509CRL&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the **X509CRL** instance created. Otherwise, **err** is an errorobject. |
+| inStream | [EncodingBlob](arkts-devicecertificate-encodingblob-i.md) | Yes | Serialized CRL data. The data length cannot exceed 8192 bytes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<X509CRL> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the **X509CRL** instance created. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -88,19 +90,21 @@ Creates an **X509CRL** instance. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-cert-function createX509CRL(inStream: EncodingBlob): Promise<X509CRL>--><!--Device-cert-function createX509CRL(inStream: EncodingBlob): Promise<X509CRL>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inStream | EncodingBlob | Yes | Serialized CRL data. The data length cannot exceed 8192 bytes. |
+| inStream | [EncodingBlob](arkts-devicecertificate-encodingblob-i.md) | Yes | Serialized CRL data. The data length cannot exceed 8192 bytes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;X509CRL&gt; | Promise used to return the **X509CRL** instance created. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<X509CRL> | Promise used to return the **X509CRL** instance created. |
 
 **Error codes:**
 

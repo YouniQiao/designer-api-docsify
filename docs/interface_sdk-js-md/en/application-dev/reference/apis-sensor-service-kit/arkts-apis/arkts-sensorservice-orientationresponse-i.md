@@ -6,6 +6,8 @@ Describes the orientation sensor data. It extends from [Response](arkts-sensorse
 
 **Since:** 8
 
+<!--Device-sensor-interface OrientationResponse extends Response--><!--Device-sensor-interface OrientationResponse extends Response-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Rotation angle of the device around the z-axis, in degrees. The value ranges fro
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-OrientationResponse-alpha: double--><!--Device-OrientationResponse-alpha: double-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## beta
@@ -44,6 +48,8 @@ Rotation angle of the device around the x-axis, in degrees. The value ranges fro
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-OrientationResponse-beta: double--><!--Device-OrientationResponse-beta: double-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## gamma
@@ -59,6 +65,8 @@ Rotation angle of the device around the y-axis, in degrees. The value ranges fro
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-OrientationResponse-gamma: double--><!--Device-OrientationResponse-gamma: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 

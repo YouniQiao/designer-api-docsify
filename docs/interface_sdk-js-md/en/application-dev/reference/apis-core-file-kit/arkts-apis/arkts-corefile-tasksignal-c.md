@@ -4,6 +4,8 @@ Provides APIs for interrupting a copy task.
 
 **Since:** 12
 
+<!--Device-unnamed-export class TaskSignal--><!--Device-unnamed-export class TaskSignal-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## Modules to Import
@@ -21,6 +23,8 @@ cancel(): void
 Cancels a copy task.
 
 **Since:** 12
+
+<!--Device-TaskSignal-cancel(): void--><!--Device-TaskSignal-cancel(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -81,8 +85,8 @@ try {
 onCancel(): Promise<string>
 ```
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > This API is supported since API version 12 and deprecated since API version 24.
 
 Subscribes to the event reported when a copy task is canceled.
@@ -91,13 +95,15 @@ Subscribes to the event reported when a copy task is canceled.
 
 **Deprecated since:** 24
 
+<!--Device-TaskSignal-onCancel(): Promise<string>--><!--Device-TaskSignal-onCancel(): Promise<string>-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the path of the last file copied. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the path of the last file copied. |
 
 **Error codes:**
 

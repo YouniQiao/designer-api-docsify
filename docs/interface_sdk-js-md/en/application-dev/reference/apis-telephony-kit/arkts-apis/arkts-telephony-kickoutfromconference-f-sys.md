@@ -18,6 +18,8 @@ Kick out call from the conference call.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
+<!--Device-call-function kickOutFromConference(callId: int, callback: AsyncCallback<void>): void--><!--Device-call-function kickOutFromConference(callId: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Kick out call from the conference call.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | number | Yes | Indicates the identifier of the call which kick out. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of kickOutFromConference. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of kickOutFromConference. |
 
 **Error codes:**
 
@@ -69,6 +71,8 @@ Kick out call from the conference call.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
+<!--Device-call-function kickOutFromConference(callId: int): Promise<void>--><!--Device-call-function kickOutFromConference(callId: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -83,7 +87,7 @@ Kick out call from the conference call.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the kickOutFromConference. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the kickOutFromConference. |
 
 **Error codes:**
 

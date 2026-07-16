@@ -12,14 +12,15 @@ import { bundleManager } from '@kit.AbilityKit';
 function getJsonProfile(profileType: ProfileType, bundleName: string, moduleName?: string, userId?: number): string
 ```
 
-Obtains the JSON strings of the profile based on the given profile type, bundle name, and module name. This API
-returns the result synchronously.
+Obtains the JSON strings of the profile based on the given profile type, bundle name, and module name. This API returns the result synchronously.
 
 No permission is required for obtaining the caller's own profile.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getJsonProfile(profileType: ProfileType, bundleName: string, moduleName?: string, userId?: int): string--><!--Device-bundleManager-function getJsonProfile(profileType: ProfileType, bundleName: string, moduleName?: string, userId?: int): string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -29,10 +30,10 @@ No permission is required for obtaining the caller's own profile.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profileType | ProfileType | Yes | Type of the profile. |
+| profileType | [ProfileType](arkts-ability-profiletype-e-sys.md) | Yes | Type of the profile. |
 | bundleName | string | Yes | Bundle name of the application. |
-| moduleName | string | No | Module name of the application. If this parameter is not passed in, the entry moduleis used. |
-| userId | number | No | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0.<br>**Since:** 12 |
+| moduleName | string | No | Module name of the application. If this parameter is not passed in, the entry module is used. |
+| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -49,7 +50,7 @@ No permission is required for obtaining the caller's own profile.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified moduleName is not found. |
-| [17700024](../errorcode-bundle.md#17700024-profile-does-not-exist) | Failed to get the profile because the specified profile is not found in theHAP. |
+| [17700024](../errorcode-bundle.md#17700024-profile-does-not-exist) | Failed to get the profile because the specified profile is not found in the HAP. |
 | [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found.<br>**Applicable version:** 12 and later |
 

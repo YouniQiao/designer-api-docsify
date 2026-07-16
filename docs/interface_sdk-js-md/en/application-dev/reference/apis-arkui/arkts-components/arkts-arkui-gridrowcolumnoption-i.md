@@ -2,27 +2,21 @@
 
 Describes the numbers of grid columns for devices with different grid sizes.
 
-In versions earlier than API version 20: When **GridRow** column spans are configured only at specific breakpoints,
-unconfigured breakpoints inherit values from the next smaller configured breakpoint. If no smaller breakpoint exists,
-the default column count (12) is used for unconfigured breakpoints.
+In versions earlier than API version 20: When **GridRow** column spans are configured only at specific breakpoints,unconfigured breakpoints inherit values from the next smaller configured breakpoint. If no smaller breakpoint exists,the default column count (12) is used for unconfigured breakpoints.
 
 <!--code_no_check-->
 
-Since API version 20: When **GridRow** column spans are configured only at specific breakpoints, unconfigured
-breakpoints inherit values from the next smaller configured breakpoint. If no smaller breakpoint exists, values are
-inherited from the next larger configured breakpoint.
+Since API version 20: When **GridRow** column spans are configured only at specific breakpoints, unconfigured breakpoints inherit values from the next smaller configured breakpoint. If no smaller breakpoint exists, values are inherited from the next larger configured breakpoint.
 
 <!--code_no_check-->
 
-Recommendation: Explicitly configure **GridRow** column spans for all required breakpoints to prevent unexpected
-layout behavior caused by automatic value inheritance.
+Recommendation: Explicitly configure **GridRow** column spans for all required breakpoints to prevent unexpected layout behavior caused by automatic value inheritance.
 
-The width of each column is the content area size of the **GridRow** component minus the gutter of the grid child
-components, and then divided by the total number of columns. For example, if **columns** is set to **12**, **gutter**
-is set to **10px**, and **padding** is set to **20px** for a **GridRow** component with a width of 800 px, the width
-of each column is (800 – 20 × 2 – 10 × 11)/12.
+The width of each column is the content area size of the **GridRow** component minus the gutter of the grid child components, and then divided by the total number of columns. For example, if **columns** is set to **12**, **gutter** is set to **10px**, and **padding** is set to **20px** for a **GridRow** component with a width of 800 px, the width of each column is (800 – 20 × 2 – 10 × 11)/12.
 
 **Since:** 9
+
+<!--Device-unnamed-declare interface GridRowColumnOption--><!--Device-unnamed-declare interface GridRowColumnOption-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,6 +36,8 @@ Number of grid columns on the device where the grid size is lg.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-GridRowColumnOption-lg?: number--><!--Device-GridRowColumnOption-lg?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## md
@@ -59,6 +55,8 @@ Number of grid columns on the device where the grid size is md.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-GridRowColumnOption-md?: number--><!--Device-GridRowColumnOption-md?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,6 +76,8 @@ Number of grid columns on the device where the grid size is sm.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-GridRowColumnOption-sm?: number--><!--Device-GridRowColumnOption-sm?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## xl
@@ -95,6 +95,8 @@ Number of grid columns on the device where the grid size is xl.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-GridRowColumnOption-xl?: number--><!--Device-GridRowColumnOption-xl?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -114,6 +116,8 @@ Number of grid columns on the device where the grid size is xs.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-GridRowColumnOption-xs?: number--><!--Device-GridRowColumnOption-xs?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## xxl
@@ -131,6 +135,8 @@ Number of grid columns on the device where the grid size is xxl.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-GridRowColumnOption-xxl?: number--><!--Device-GridRowColumnOption-xxl?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

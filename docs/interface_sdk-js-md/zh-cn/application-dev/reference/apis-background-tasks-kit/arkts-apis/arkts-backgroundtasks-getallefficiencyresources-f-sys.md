@@ -1,5 +1,11 @@
 # getAllEfficiencyResources（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+```
+
 ## getAllEfficiencyResources
 
 ```TypeScript
@@ -10,6 +16,8 @@ function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>
 
 **起始版本：** 20
 
+<!--Device-backgroundTaskManager-function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>--><!--Device-backgroundTaskManager-function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
 **系统接口：** 此接口为系统接口。
@@ -18,7 +26,7 @@ function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;EfficiencyResourcesInfo[]&gt; | Promise对象，返回所有能效资源信息。 |
+| Promise<EfficiencyResourcesInfo[]> | Promise对象，返回所有能效资源信息。 |
 
 **错误码：**
 

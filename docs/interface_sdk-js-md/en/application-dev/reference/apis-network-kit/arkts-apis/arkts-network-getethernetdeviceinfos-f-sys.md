@@ -18,6 +18,8 @@ Get the ethernet mac address list.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-ethernet-function getEthernetDeviceInfos(): Promise<Array<EthernetDeviceInfos>>--><!--Device-ethernet-function getEthernetDeviceInfos(): Promise<Array<EthernetDeviceInfos>>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Get the ethernet mac address list.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;EthernetDeviceInfos&gt;&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<EthernetDeviceInfos>> | the promise returned by the function. |
 
 **Error codes:**
 

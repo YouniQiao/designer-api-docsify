@@ -12,14 +12,15 @@ import { bundleManager } from '@kit.AbilityKit';
 function getApplicationInfoSync(bundleName: string, applicationFlags: number, userId: number) : ApplicationInfo
 ```
 
-Obtains the application information based on the given bundle name, application flags, and user ID. This API
-returns the result synchronously.
+Obtains the application information based on the given bundle name, application flags, and user ID. This API returns the result synchronously.
 
 No permission is required for obtaining the caller's own information.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getApplicationInfoSync(bundleName: string, applicationFlags: int, userId: int) : ApplicationInfo--><!--Device-bundleManager-function getApplicationInfoSync(bundleName: string, applicationFlags: int, userId: int) : ApplicationInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -31,13 +32,13 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | applicationFlags | number | Yes | Type of the application information to obtain. |
-| userId | number | Yes | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). |
+| userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ApplicationInfo | Application information obtained. |
+| [ApplicationInfo](arkts-ability-applicationinfo-t.md) | Application information obtained. |
 
 **Error codes:**
 
@@ -78,14 +79,15 @@ try {
 function getApplicationInfoSync(bundleName: string, applicationFlags: number) : ApplicationInfo
 ```
 
-Obtains the application information based on the given bundle name and application flags. This API returns the
-result synchronously.
+Obtains the application information based on the given bundle name and application flags. This API returns the result synchronously.
 
 No permission is required for obtaining the caller's own information.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getApplicationInfoSync(bundleName: string, applicationFlags: int) : ApplicationInfo--><!--Device-bundleManager-function getApplicationInfoSync(bundleName: string, applicationFlags: int) : ApplicationInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -102,7 +104,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| ApplicationInfo | Application information obtained. |
+| [ApplicationInfo](arkts-ability-applicationinfo-t.md) | Application information obtained. |
 
 **Error codes:**
 

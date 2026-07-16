@@ -4,6 +4,8 @@ Task information.
 
 **Since:** 9
 
+<!--Device-update-export interface TaskInfo--><!--Device-update-export interface TaskInfo-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ The value **true** indicates that the task exists, and the value **false** indic
 
 **Since:** 9
 
+<!--Device-TaskInfo-existTask: boolean--><!--Device-TaskInfo-existTask: boolean-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -43,6 +47,8 @@ Task data.
 **Type:** TaskBody
 
 **Since:** 9
+
+<!--Device-TaskInfo-taskBody: TaskBody--><!--Device-TaskInfo-taskBody: TaskBody-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 

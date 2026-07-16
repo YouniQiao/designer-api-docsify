@@ -12,15 +12,15 @@ import { notificationManager } from '@kit.NotificationKit';
 function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a notification slot type is enabled for the specified application. This API uses an asynchronous
-callback to return the result.
+Checks whether a notification slot type is enabled for the specified application. This API uses an asynchronous callback to return the result.
 
-This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is
-returned.
+This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType, callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -30,9 +30,9 @@ returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
-| type | SlotType | Yes | Notification slot type. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that thenotification slot type is enabled, and **false** means the opposite. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
+| type | [SlotType](arkts-notification-slottype-e-sys.md) | Yes | Notification slot type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means that the notification slot type is enabled, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -75,15 +75,15 @@ notificationManager.isNotificationSlotEnabled(
 function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType): Promise<boolean>
 ```
 
-Checks whether a notification slot type is enabled for the specified application. This API uses a promise to return
-the result.
+Checks whether a notification slot type is enabled for the specified application. This API uses a promise to return the result.
 
-This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is
-returned.
+This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType): Promise<boolean>--><!--Device-notificationManager-function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -93,14 +93,14 @@ returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
-| type | SlotType | Yes | Notification slot type. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
+| type | [SlotType](arkts-notification-slottype-e-sys.md) | Yes | Notification slot type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the notificationslot type is enabled, and **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means that the notification slot type is enabled, and **false** means the opposite. |
 
 **Error codes:**
 

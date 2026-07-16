@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface NotificationFilter--><!--Device-unnamed-export interface NotificationFilter-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -19,6 +21,8 @@ bundle: BundleOption
 **类型：** BundleOption
 
 **起始版本：** 11
+
+<!--Device-NotificationFilter-bundle: BundleOption--><!--Device-NotificationFilter-bundle: BundleOption-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -36,6 +40,8 @@ extraInfoKeys?: Array<string>
 
 **起始版本：** 11
 
+<!--Device-NotificationFilter-extraInfoKeys?: Array<string>--><!--Device-NotificationFilter-extraInfoKeys?: Array<string>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +57,8 @@ notificationKey: notificationSubscribe.NotificationKey
 **类型：** notificationSubscribe.NotificationKey
 
 **起始版本：** 11
+
+<!--Device-NotificationFilter-notificationKey: notificationSubscribe.NotificationKey--><!--Device-NotificationFilter-notificationKey: notificationSubscribe.NotificationKey-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

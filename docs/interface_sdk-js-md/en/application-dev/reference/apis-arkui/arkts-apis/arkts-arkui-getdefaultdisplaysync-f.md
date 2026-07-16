@@ -12,13 +12,13 @@ import { display } from '@kit.ArkUI';
 function getDefaultDisplaySync(): Display
 ```
 
-Obtains the **Display** object of the screen where the application is located. If multiple abilities of an
-application are on different screens, the **Display** object of the main screen is returned. If multiple abilities
-of an application are on the same screen, the **Display** object of the screen is returned.
+Obtains the **Display** object of the screen where the application is located. If multiple abilities of an application are on different screens, the **Display** object of the main screen is returned. If multiple abilities of an application are on the same screen, the **Display** object of the screen is returned.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-display-function getDefaultDisplaySync(): Display--><!--Device-display-function getDefaultDisplaySync(): Display-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -26,7 +26,7 @@ of an application are on the same screen, the **Display** object of the screen i
 
 | Type | Description |
 | --- | --- |
-| Display | Default Display object. |
+| [Display](arkts-arkui-display-i.md) | Default Display object. |
 
 **Error codes:**
 

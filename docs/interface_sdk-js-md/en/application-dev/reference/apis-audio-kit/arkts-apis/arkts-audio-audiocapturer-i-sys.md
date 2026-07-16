@@ -2,15 +2,15 @@
 
 This interface provides APIs for audio capture.
 
-Before calling any API in AudioCapturer, you must use
-[createAudioCapturer](arkts-audio-createaudiocapturer-f.md#createaudiocapturer-1)
-to create an AudioCapturer instance.
+Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkts-audio-createaudiocapturer-f.md#createaudiocapturer-1)to create an AudioCapturer instance.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > - The initial APIs of this interface are supported since API version 8.
 
 **Since:** 8
+
+<!--Device-audio-interface AudioCapturer--><!--Device-audio-interface AudioCapturer-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -32,6 +32,8 @@ Unsubscribes from micIn audio data callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AudioCapturer-offReadMicInData(callback?: Callback<AudioCapturerMicInData>): void--><!--Device-AudioCapturer-offReadMicInData(callback?: Callback<AudioCapturerMicInData>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
@@ -40,7 +42,7 @@ Unsubscribes from micIn audio data callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AudioCapturerMicInData&gt; | No | Callback for the buffers to read. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioCapturerMicInData> | No | Callback for the buffers to read. |
 
 **Error codes:**
 
@@ -56,14 +58,13 @@ Unsubscribes from micIn audio data callback.
 onReadMicInData(callback: Callback<AudioCapturerMicInData>): void
 ```
 
-Subscribes to micIn audio data callback. This callback has higher priority than 'readData' callback.
-If this callback and 'readData' callback are both subscribed, only this callback will be triggered.
-See {@link #onReadData} for more details.
-The event is triggered when an audio buffer is available for reading more data.
+Subscribes to micIn audio data callback. This callback has higher priority than 'readData' callback.If this callback and 'readData' callback are both subscribed, only this callback will be triggered.See {@link #onReadData} for more details.The event is triggered when an audio buffer is available for reading more data.
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioCapturer-onReadMicInData(callback: Callback<AudioCapturerMicInData>): void--><!--Device-AudioCapturer-onReadMicInData(callback: Callback<AudioCapturerMicInData>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -73,7 +74,7 @@ The event is triggered when an audio buffer is available for reading more data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AudioCapturerMicInData&gt; | Yes | Callback for the buffers to read. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioCapturerMicInData> | Yes | Callback for the buffers to read. |
 
 **Error codes:**
 
@@ -88,14 +89,11 @@ The event is triggered when an audio buffer is available for reading more data.
 setInputDeviceToAccessory(): void
 ```
 
-Sets default input device of this Capturer to DEVICE_TYPE_ACCESSORY.
-Other capturers' devices will not be affected by this method.
-This method can only be used before the capture stream starts. Besides,
-if audio accessory is not connected, this method will report fail. After
-calling this function, the input device of this capturer will not be affected
-by other interfaces.
+Sets default input device of this Capturer to DEVICE_TYPE_ACCESSORY.Other capturers' devices will not be affected by this method.This method can only be used before the capture stream starts. Besides,if audio accessory is not connected, this method will report fail. After calling this function, the input device of this capturer will not be affected by other interfaces.
 
 **Since:** 19
+
+<!--Device-AudioCapturer-setInputDeviceToAccessory(): void--><!--Device-AudioCapturer-setInputDeviceToAccessory(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 

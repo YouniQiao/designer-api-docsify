@@ -1,9 +1,10 @@
 # Query
 
-Provides methods to create a **Query** object, which defines different data query criteria. A **Query** object
-supports a maximum of 256 predicates.
+Provides methods to create a **Query** object, which defines different data query criteria. A **Query** object supports a maximum of 256 predicates.
 
 **Since:** 9
+
+<!--Device-distributedKVStore-class Query--><!--Device-distributedKVStore-class Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -25,13 +26,15 @@ Creates a **Query** object with the AND condition.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Query-and(): Query--><!--Device-Query-and(): Query-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Example**
 
@@ -66,13 +69,15 @@ Creates a **Query** object for a query condition group with a left parenthesis.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Query-beginGroup(): Query--><!--Device-Query-beginGroup(): Query-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Example**
 
@@ -107,6 +112,8 @@ Defines a constructor used to create a **Query** instance.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Query-constructor()--><!--Device-Query-constructor()-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## deviceId
@@ -117,16 +124,18 @@ deviceId(deviceId: string): Query
 
 Creates a **Query** object with the device ID as the key prefix.
 
-> **NOTE**
->
-> **deviceId** can be obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1)
-> .
+> **NOTE**  
+>  
+> **deviceId** can be obtained by  
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1)  
+> .  
 > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-syncmode-e.md).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Query-deviceId(deviceId: string): Query--><!--Device-Query-deviceId(deviceId: string): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -140,7 +149,7 @@ Creates a **Query** object with the device ID as the key prefix.
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -178,13 +187,15 @@ Creates a **Query** object for a query condition group with a right parenthesis.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Query-endGroup(): Query--><!--Device-Query-endGroup(): Query-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Example**
 
@@ -215,17 +226,19 @@ equalTo(field: string, value: number | number | string | boolean): Query
 
 Creates a **Query** object to match the specified field whose value is equal to the given value.
 
-> **NOTE**
->
-> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
->
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
+> **NOTE**  
+>  
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).  
+>  
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
+> store using the **getKVStore()** method in  
 > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Query-equalTo(field: string, value: long | double | string | boolean): Query--><!--Device-Query-equalTo(field: string, value: long | double | string | boolean): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -233,14 +246,14 @@ Creates a **Query** object to match the specified field whose value is equal to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomesinvalid and all data in the KV store will be returned. |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 | value | number \| number \| string \| boolean | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -259,6 +272,8 @@ Obtains the query statement of the **Query** object.
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Query-getSqlLike(): string--><!--Device-Query-getSqlLike(): string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -294,17 +309,19 @@ greaterThan(field: string, value: number | number | string | boolean): Query
 
 Creates a **Query** object to match the specified field whose value is greater than the specified value.
 
-> **NOTE**
->
-> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
->
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
+> **NOTE**  
+>  
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).  
+>  
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
+> store using the **getKVStore()** method in  
 > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Query-greaterThan(field: string, value: long | double | string | boolean): Query--><!--Device-Query-greaterThan(field: string, value: long | double | string | boolean): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -319,7 +336,7 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -333,20 +350,21 @@ Creates a **Query** object to match the specified field whose value is greater t
 greaterThanOrEqualTo(field: string, value: number | number | string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is greater than or equal to the specified
-value.
+Creates a **Query** object to match the specified field whose value is greater than or equal to the specified value.
 
-> **NOTE**
->
-> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
->
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
+> **NOTE**  
+>  
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).  
+>  
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
+> store using the **getKVStore()** method in  
 > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Query-greaterThanOrEqualTo(field: string, value: long | double | string): Query--><!--Device-Query-greaterThanOrEqualTo(field: string, value: long | double | string): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -354,14 +372,14 @@ value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomesinvalid and all data in the KV store will be returned. |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 | value | number \| number \| string | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -377,17 +395,19 @@ inNumber(field: string, valueList: number[] | number[]): Query
 
 Creates a **Query** object to match the specified field whose value is within the specified list of numbers.
 
-> **NOTE**
->
-> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
->
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
+> **NOTE**  
+>  
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).  
+>  
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
+> store using the **getKVStore()** method in  
 > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Query-inNumber(field: string, valueList: long[] | double[]): Query--><!--Device-Query-inNumber(field: string, valueList: long[] | double[]): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -395,14 +415,14 @@ Creates a **Query** object to match the specified field whose value is within th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomesinvalid and all data in the KV store will be returned. |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 | valueList | number[] \| number[] | Yes | List of numbers. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -418,17 +438,19 @@ inString(field: string, valueList: string[]): Query
 
 Creates a **Query** object to match the specified field whose value is within the specified list of strings.
 
-> **NOTE**
->
-> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
->
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
+> **NOTE**  
+>  
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).  
+>  
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
+> store using the **getKVStore()** method in  
 > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Query-inString(field: string, valueList: string[]): Query--><!--Device-Query-inString(field: string, valueList: string[]): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -436,14 +458,14 @@ Creates a **Query** object to match the specified field whose value is within th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomesinvalid and all data in the KV store will be returned. |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 | valueList | string[] | Yes | List of strings. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -478,17 +500,19 @@ isNotNull(field: string): Query
 
 Creates a **Query** object to match the specified field whose value is not **null**.
 
-> **NOTE**
->
-> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
->
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
+> **NOTE**  
+>  
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).  
+>  
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
+> store using the **getKVStore()** method in  
 > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Query-isNotNull(field: string): Query--><!--Device-Query-isNotNull(field: string): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -496,13 +520,13 @@ Creates a **Query** object to match the specified field whose value is not **nul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomesinvalid and all data in the KV store will be returned. |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -537,17 +561,19 @@ isNull(field: string): Query
 
 Creates a **Query** object to match the specified field whose value is **null**.
 
-> **NOTE**
->
-> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
->
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
+> **NOTE**  
+>  
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).  
+>  
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
+> store using the **getKVStore()** method in  
 > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Query-isNull(field: string): Query--><!--Device-Query-isNull(field: string): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -555,13 +581,13 @@ Creates a **Query** object to match the specified field whose value is **null**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomesinvalid and all data in the KV store will be returned. |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -596,17 +622,19 @@ lessThan(field: string, value: number | number | string): Query
 
 Creates a **Query** object to match the specified field whose value is less than the specified value.
 
-> **NOTE**
->
-> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
->
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
+> **NOTE**  
+>  
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).  
+>  
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
+> store using the **getKVStore()** method in  
 > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Query-lessThan(field: string, value: long | double | string): Query--><!--Device-Query-lessThan(field: string, value: long | double | string): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -614,14 +642,14 @@ Creates a **Query** object to match the specified field whose value is less than
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomesinvalid and all data in the KV store will be returned. |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 | value | number \| number \| string | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -637,17 +665,19 @@ lessThanOrEqualTo(field: string, value: number | number | string): Query
 
 Creates a **Query** object to match the specified field whose value is less than or equal to the specified value.
 
-> **NOTE**
->
-> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
->
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
+> **NOTE**  
+>  
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).  
+>  
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
+> store using the **getKVStore()** method in  
 > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Query-lessThanOrEqualTo(field: string, value: long | double | string): Query--><!--Device-Query-lessThanOrEqualTo(field: string, value: long | double | string): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -655,14 +685,14 @@ Creates a **Query** object to match the specified field whose value is less than
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomesinvalid and all data in the KV store will be returned. |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 | value | number \| number \| string | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -678,17 +708,19 @@ like(field: string, value: string): Query
 
 Creates a **Query** object to match the specified field whose value is similar to the specified string.
 
-> **NOTE**
->
-> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
->
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
+> **NOTE**  
+>  
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).  
+>  
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
+> store using the **getKVStore()** method in  
 > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Query-like(field: string, value: string): Query--><!--Device-Query-like(field: string, value: string): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -696,14 +728,14 @@ Creates a **Query** object to match the specified field whose value is similar t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomesinvalid and all data in the KV store will be returned. |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 | value | string | Yes | String specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -736,13 +768,13 @@ try {
 limit(total: number, offset: number): Query
 ```
 
-Creates a **Query** object to specify the number of records of the query result and where to start. This API must
-be called after the invocation of the **orderByAsc()**, **orderByDesc()**, and the query APIs of the **Query**
-object.
+Creates a **Query** object to specify the number of records of the query result and where to start. This API must be called after the invocation of the **orderByAsc()**, **orderByDesc()**, and the query APIs of the **Query** object.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Query-limit(total: int, offset: int): Query--><!--Device-Query-limit(total: int, offset: int): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -750,14 +782,14 @@ object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| total | number | Yes | Maximum number of results to query. The value must be a non-negative integer.<br>If the value isa negative number, the entire result set is queried. |
-| offset | number | Yes | Start position of the query result. The value must be a non-negative integer.<br>If the value isa negative number, the entire result set is queried.<br>If **offset** exceeds the end of the result set, the queryresult is empty. |
+| total | number | Yes | Maximum number of results to query. The value must be a non-negative integer.<br>If the value is a negative number, the entire result set is queried. |
+| offset | number | Yes | Start position of the query result. The value must be a non-negative integer.<br>If the value is a negative number, the entire result set is queried.<br>If **offset** exceeds the end of the result set, the query result is empty. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -795,17 +827,19 @@ notEqualTo(field: string, value: number | number | string | boolean): Query
 
 Creates a **Query** object to match the specified field whose value is not equal to the specified value.
 
-> **NOTE**
->
-> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
->
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
+> **NOTE**  
+>  
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).  
+>  
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
+> store using the **getKVStore()** method in  
 > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Query-notEqualTo(field: string, value: long | double | string | boolean): Query--><!--Device-Query-notEqualTo(field: string, value: long | double | string | boolean): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -813,14 +847,14 @@ Creates a **Query** object to match the specified field whose value is not equal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomesinvalid and all data in the KV store will be returned. |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 | value | number \| number \| string \| boolean | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -836,17 +870,19 @@ notInNumber(field: string, valueList: number[] | number[]): Query
 
 Creates a **Query** object to match the specified field whose value is not within the specified list of numbers.
 
-> **NOTE**
->
-> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
->
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
+> **NOTE**  
+>  
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).  
+>  
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
+> store using the **getKVStore()** method in  
 > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Query-notInNumber(field: string, valueList: long[] | double[]): Query--><!--Device-Query-notInNumber(field: string, valueList: long[] | double[]): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -854,14 +890,14 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomesinvalid and all data in the KV store will be returned. |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 | valueList | number[] \| number[] | Yes | List of numbers. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -877,17 +913,19 @@ notInString(field: string, valueList: string[]): Query
 
 Creates a **Query** object to match the specified field whose value is not within the specified list of strings.
 
-> **NOTE**
->
-> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
->
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
+> **NOTE**  
+>  
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).  
+>  
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
+> store using the **getKVStore()** method in  
 > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Query-notInString(field: string, valueList: string[]): Query--><!--Device-Query-notInString(field: string, valueList: string[]): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -895,14 +933,14 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomesinvalid and all data in the KV store will be returned. |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 | valueList | string[] | Yes | List of strings. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -941,13 +979,15 @@ Creates a **Query** object with the OR condition.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Query-or(): Query--><!--Device-Query-or(): Query-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Example**
 
@@ -978,17 +1018,19 @@ orderByAsc(field: string): Query
 
 Creates a **Query** object to sort the query results in ascending order.
 
-> **NOTE**
->
-> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
->
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
+> **NOTE**  
+>  
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).  
+>  
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
+> store using the **getKVStore()** method in  
 > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Query-orderByAsc(field: string): Query--><!--Device-Query-orderByAsc(field: string): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -996,13 +1038,13 @@ Creates a **Query** object to sort the query results in ascending order.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomesinvalid and all data in the KV store will be returned. |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -1038,17 +1080,19 @@ orderByDesc(field: string): Query
 
 Creates a **Query** object to sort the query results in descending order.
 
-> **NOTE**
->
-> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
->
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
+> **NOTE**  
+>  
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).  
+>  
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
+> store using the **getKVStore()** method in  
 > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Query-orderByDesc(field: string): Query--><!--Device-Query-orderByDesc(field: string): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -1056,13 +1100,13 @@ Creates a **Query** object to sort the query results in descending order.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomesinvalid and all data in the KV store will be returned. |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -1102,19 +1146,21 @@ Creates a **Query** object with a specified key prefix.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Query-prefixKey(prefix: string): Query--><!--Device-Query-prefixKey(prefix: string): Query-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| prefix | string | Yes | Key prefix, which cannot contain '^'. If the value contains '^', the predicate becomesinvalid and all data in the KV store will be returned. |
+| prefix | string | Yes | Key prefix, which cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -1154,13 +1200,15 @@ Resets the **Query** object.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Query-reset(): Query--><!--Device-Query-reset(): Query-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object reset. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object reset. |
 
 **Example**
 
@@ -1195,19 +1243,21 @@ Creates a **Query** object with an index preferentially used for query.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Query-setSuggestIndex(index: string): Query--><!--Device-Query-setSuggestIndex(index: string): Query-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | string | Yes | Index to set, which cannot contain '^'. If the value contains '^', the predicate becomesinvalid and all data in the KV store will be returned. |
+| index | string | Yes | Index to set, which cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Error codes:**
 
@@ -1243,17 +1293,19 @@ unlike(field: string, value: string): Query
 
 Creates a **Query** object to match the specified field whose value is not similar to the specified string.
 
-> **NOTE**
->
-> This API should be used together with [Schema](arkts-arkdata-schema-c.md).
->
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
+> **NOTE**  
+>  
+> This API should be used together with [Schema](arkts-arkdata-schema-c.md).  
+>  
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
+> store using the **getKVStore()** method in  
 > [Persisting KV Store Data](../../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Query-unlike(field: string, value: string): Query--><!--Device-Query-unlike(field: string, value: string): Query-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -1261,14 +1313,14 @@ Creates a **Query** object to match the specified field whose value is not simil
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomesinvalid and all data in the KV store will be returned. |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 | value | string | Yes | String specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Query | **Query** object created. |
+| [Query](arkts-arkdata-query-c.md) | **Query** object created. |
 
 **Error codes:**
 

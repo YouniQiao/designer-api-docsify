@@ -4,6 +4,8 @@ Defines an MMS confirmation indication.
 
 **Since:** 8
 
+<!--Device-sms-export interface MmsAcknowledgeInd--><!--Device-sms-export interface MmsAcknowledgeInd-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Indicates the report allowed for the MMS confirmation indication.
 
 **Since:** 8
 
+<!--Device-MmsAcknowledgeInd-reportAllowed?: ReportType--><!--Device-MmsAcknowledgeInd-reportAllowed?: ReportType-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ Indicates the transaction ID for the MMS confirmation indication.
 
 **Since:** 8
 
+<!--Device-MmsAcknowledgeInd-transactionId: string--><!--Device-MmsAcknowledgeInd-transactionId: string-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ Indicates the version for the MMS confirmation indication.
 **Type:** MmsVersionType
 
 **Since:** 8
+
+<!--Device-MmsAcknowledgeInd-version: MmsVersionType--><!--Device-MmsAcknowledgeInd-version: MmsVersionType-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 

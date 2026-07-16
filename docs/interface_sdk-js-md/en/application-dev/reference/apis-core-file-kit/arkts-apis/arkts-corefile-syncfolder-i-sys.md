@@ -4,6 +4,8 @@ Encapsulates the sync root information.
 
 **Since:** 21
 
+<!--Device-cloudDiskManager-interface SyncFolder--><!--Device-cloudDiskManager-interface SyncFolder-End-->
+
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Bundle name of the sync root.
 
 **Since:** 21
 
+<!--Device-SyncFolder-bundleName: string--><!--Device-SyncFolder-bundleName: string-End-->
+
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ Custom alias displayed in the File Manager list. The default value is **undefine
 
 **Since:** 21
 
+<!--Device-SyncFolder-customAlias?: string--><!--Device-SyncFolder-customAlias?: string-End-->
+
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 
 **System API:** This is a system API.
@@ -52,12 +58,13 @@ Custom alias displayed in the File Manager list. The default value is **undefine
 displayNameResId?: number
 ```
 
-Resource ID, which can be mapped to the alias displayed in the File Manager list. The default value is
-**undefined**.
+Resource ID, which can be mapped to the alias displayed in the File Manager list. The default value is **undefined**.
 
 **Type:** number
 
 **Since:** 21
+
+<!--Device-SyncFolder-displayNameResId?: int--><!--Device-SyncFolder-displayNameResId?: int-End-->
 
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 
@@ -75,6 +82,8 @@ URI of the sync root.
 
 **Since:** 21
 
+<!--Device-SyncFolder-path: string--><!--Device-SyncFolder-path: string-End-->
+
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 
 **System API:** This is a system API.
@@ -90,6 +99,8 @@ State of the sync root.
 **Type:** SyncFolderState
 
 **Since:** 21
+
+<!--Device-SyncFolder-state: SyncFolderState--><!--Device-SyncFolder-state: SyncFolderState-End-->
 
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 

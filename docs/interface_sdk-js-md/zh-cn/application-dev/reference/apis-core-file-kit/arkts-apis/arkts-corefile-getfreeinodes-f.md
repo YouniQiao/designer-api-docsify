@@ -1,5 +1,11 @@
 # getFreeInodes
 
+## 导入模块
+
+```TypeScript
+import { storageStatistics } from '@kit.CoreFileKit';
+```
+
 ## getFreeInodes
 
 ```TypeScript
@@ -12,13 +18,15 @@ function getFreeInodes(): Promise<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-storageStatistics-function getFreeInodes(): Promise<long>--><!--Device-storageStatistics-function getFreeInodes(): Promise<long>-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回文件系统inode资源剩余量。 |
+| Promise<number> | Promise对象，返回文件系统inode资源剩余量。 |
 
 **错误码：**
 

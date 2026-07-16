@@ -4,20 +4,25 @@
 
 数据存储形式为键值对，键的类型为字符串型，值的存储数据类型包括number、string、boolean、bigint以及可序列化的object。
 
-共享用户首选项的持久化文件存储在[preferencesDir](../../../../application-models/application-context-stage.md#获取应用文件路径)路径下，创建preferences
-对象前，需要保证preferencesDir路径可读写。持久化文件存储路径中的[加密等级](../../apis-ability-kit/arkts-apis/arkts-ability-areamode-e.md)会影响文件的
-可读写状态，路径访问限制详见[应用文件目录与应用文件路径](../../../../file-management/app-sandbox-directory.md#应用文件目录与应用文件路径)。
+共享用户首选项的持久化文件存储在[preferencesDir](../../../../application-models/application-context-stage.md#获取应用文件路径)路径下，创建preferences对象前，需要保证preferencesDir路径可读写。持久化文件存储路径中的[加密等级](../../apis-ability-kit/arkts-apis/arkts-ability-areamode-e.md)会影响文件的可读写状态，路径访问限制详见[应用文件目录与应用文件路径](../../../../file-management/app-sandbox-directory.md#应用文件目录与应用文件路径)。
 
-共享用户首选项可以在ArkTS并发实例间（包括主线程、TaskPool&Worker工作线程）传递，传递的行为是引用传递，性能优于普通的[用户首选项](arkts-data-preferences.md)
-，可参考[Sendable使用场景](../../../../arkts-utils/sendable-guide.md)。
+共享用户首选项可以在ArkTS并发实例间（包括主线程、TaskPool&Worker工作线程）传递，传递的行为是引用传递，性能优于普通的[用户首选项](arkts-data-preferences.md)，可参考[Sendable使用场景](../../../../arkts-utils/sendable-guide.md)。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 共享用户首选项无法保证进程并发安全，会有文件损坏和数据丢失的风险，不支持在多进程场景下使用。
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare namespace sendablePreferences--><!--Device-unnamed-declare namespace sendablePreferences-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
+
+## 导入模块
+
+```TypeScript
+import { sendablePreferences } from '@kit.ArkData';
+```
 
 ## 汇总
 

@@ -4,6 +4,8 @@ Defines the http auth request result, related to {@link onHttpAuthRequest} metho
 
 **Since:** 9
 
+<!--Device-unnamed-declare class HttpAuthHandler--><!--Device-unnamed-declare class HttpAuthHandler-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## cancel
@@ -18,6 +20,8 @@ Cancels HTTP authentication as requested by the user.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HttpAuthHandler-cancel(): void--><!--Device-HttpAuthHandler-cancel(): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## confirm
@@ -31,6 +35,8 @@ Performs HTTP authentication with the user name and password provided by the use
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-HttpAuthHandler-confirm(userName: string, password: string): boolean--><!--Device-HttpAuthHandler-confirm(userName: string, password: string): boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -59,6 +65,8 @@ Constructor.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HttpAuthHandler-constructor()--><!--Device-HttpAuthHandler-constructor()-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## isHttpAuthInfoSaved
@@ -67,12 +75,13 @@ Constructor.
 isHttpAuthInfoSaved(): boolean
 ```
 
-Determine whether the credentials stored for the current host are suitable for use. If the credentials have
-previously been rejected by the server for the current request, they are not suitable for use.
+Determine whether the credentials stored for the current host are suitable for use. If the credentials have previously been rejected by the server for the current request, they are not suitable for use.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-HttpAuthHandler-isHttpAuthInfoSaved(): boolean--><!--Device-HttpAuthHandler-isHttpAuthInfoSaved(): boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

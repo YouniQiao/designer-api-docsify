@@ -4,6 +4,8 @@ Declare type OperateIconV2
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class OperateIconV2--><!--Device-unnamed-export declare class OperateIconV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,13 +28,15 @@ The constructor of OperateIconV2.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-OperateIconV2-constructor(options?: OperateIconV2Options)--><!--Device-OperateIconV2-constructor(options?: OperateIconV2Options)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | OperateIconV2Options | No | The options of OperateIconV2 |
+| options | [OperateIconV2Options](arkts-arkui-operateiconv2options-i.md) | No | The options of OperateIconV2 |
 
 ## accessibilityDescription
 
@@ -49,6 +53,8 @@ The accessibilityDescription of the icon.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateIconV2-public accessibilityDescription?: ResourceStr--><!--Device-OperateIconV2-public accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,6 +76,8 @@ The accessibilityLevel of the icon.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-OperateIconV2-public accessibilityLevel?: string--><!--Device-OperateIconV2-public accessibilityLevel?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
@@ -87,6 +95,8 @@ The accessibilityText of the icon.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateIconV2-public accessibilityText?: ResourceStr--><!--Device-OperateIconV2-public accessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -106,6 +116,8 @@ Callback function when operate the icon.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-OperateIconV2-public action?: OnActionCallback--><!--Device-OperateIconV2-public action?: OnActionCallback-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## symbolStyle
@@ -124,6 +136,8 @@ The content of text or the address of symbol
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-OperateIconV2-public symbolStyle?: SymbolGlyphModifier--><!--Device-OperateIconV2-public symbolStyle?: SymbolGlyphModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -141,6 +155,8 @@ The content of text or the address of icon.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateIconV2-public value: ResourceStr--><!--Device-OperateIconV2-public value: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

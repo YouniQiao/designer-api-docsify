@@ -12,6 +12,8 @@ Enumerates the states of an accessibility application.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-accessibility-type AbilityState = 'enable' | 'disable' | 'install'--><!--Device-accessibility-type AbilityState = 'enable' | 'disable' | 'install'-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 | Type | Description |

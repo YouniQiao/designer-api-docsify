@@ -1,9 +1,10 @@
 # AdvancedMeasureFormat
 
-Provides the number formatting capability, supporting automatic unit conversion based on
-specific application scenarios.
+Provides the number formatting capability, supporting automatic unit conversion based on specific application scenarios.
 
 **Since:** 23
+
+<!--Device-i18n-export class AdvancedMeasureFormat--><!--Device-i18n-export class AdvancedMeasureFormat-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -27,6 +28,8 @@ Creates a **NumberFormat** object for the specified locale.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-AdvancedMeasureFormat-constructor(numberFormat: Intl.NumberFormat, options?: AdvancedMeasureFormatOptions)--><!--Device-AdvancedMeasureFormat-constructor(numberFormat: Intl.NumberFormat, options?: AdvancedMeasureFormatOptions)-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -34,7 +37,7 @@ Creates a **NumberFormat** object for the specified locale.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | numberFormat | Intl.NumberFormat | Yes | Indicates the number format object that used to format number. |
-| options | AdvancedMeasureFormatOptions | No |  |
+| options | [AdvancedMeasureFormatOptions](arkts-localization-advancedmeasureformatoptions-i.md) | No |  |
 
 **Example**
 
@@ -54,14 +57,15 @@ let advancedMeasureFormat: i18n.AdvancedMeasureFormat = new i18n.AdvancedMeasure
 format(num: number): string
 ```
 
-Formats a number by appropriate measure for usage scenarios. For instance, when formatting the value 12.3
-for rainfall in the English locale, the output is "12.3 mm".
+Formats a number by appropriate measure for usage scenarios. For instance, when formatting the value 12.3for rainfall in the English locale, the output is "12.3 mm".
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-AdvancedMeasureFormat-format(num: double): string--><!--Device-AdvancedMeasureFormat-format(num: double): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 

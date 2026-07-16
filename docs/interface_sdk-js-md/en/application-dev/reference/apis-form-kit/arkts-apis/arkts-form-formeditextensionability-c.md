@@ -1,12 +1,12 @@
 # FormEditExtensionAbility
 
-The **FormEditExtensionAbility** module, inherited from
-[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensionability-c.md), provides the widget editing
-function.
+The **FormEditExtensionAbility** module, inherited from [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensionability-c.md), provides the widget editing function.
 
 **Inheritance/Implementation:** FormEditExtensionAbility extends [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensionability-c.md)
 
 **Since:** 18
+
+<!--Device-unnamed-declare class FormEditExtensionAbility extends UIExtensionAbility--><!--Device-unnamed-declare class FormEditExtensionAbility extends UIExtensionAbility-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -29,6 +29,8 @@ Indicates configuration information about a form edit extension ability context.
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FormEditExtensionAbility-context: FormEditExtensionContext--><!--Device-FormEditExtensionAbility-context: FormEditExtensionContext-End-->
 
 **System capability:** SystemCapability.Ability.Form
 

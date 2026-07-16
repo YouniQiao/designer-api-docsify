@@ -4,6 +4,8 @@ Enumerates the content types for autofill.
 
 **Since:** 12
 
+<!--Device-unnamed-declare enum ContentType--><!--Device-unnamed-declare enum ContentType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## USER_NAME
@@ -19,6 +21,8 @@ Username. Password Vault, when enabled, can automatically save and fill in usern
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ContentType-USER_NAME = 0--><!--Device-ContentType-USER_NAME = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ Password. Password Vault, when enabled, can automatically save and fill in passw
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ContentType-PASSWORD = 1--><!--Device-ContentType-PASSWORD = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NEW_PASSWORD
@@ -52,6 +58,8 @@ New password. Password Vault, when enabled, can automatically generate a new pas
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ContentType-NEW_PASSWORD = 2--><!--Device-ContentType-NEW_PASSWORD = 2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FULL_STREET_ADDRESS
@@ -60,14 +68,15 @@ New password. Password Vault, when enabled, can automatically generate a new pas
 FULL_STREET_ADDRESS = 3
 ```
 
-Full street address. The scenario-based autofill feature, when enabled, can automatically save and fill in full
-street addresses.
+Full street address. The scenario-based autofill feature, when enabled, can automatically save and fill in full street addresses.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ContentType-FULL_STREET_ADDRESS = 3--><!--Device-ContentType-FULL_STREET_ADDRESS = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,6 +94,8 @@ House number. The scenario-based autofill feature, when enabled, can automatical
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ContentType-HOUSE_NUMBER = 4--><!--Device-ContentType-HOUSE_NUMBER = 4-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DISTRICT_ADDRESS
@@ -93,14 +104,15 @@ House number. The scenario-based autofill feature, when enabled, can automatical
 DISTRICT_ADDRESS = 5
 ```
 
-District and county. The scenario-based autofill feature, when enabled, can automatically save and fill in
-districts and counties.
+District and county. The scenario-based autofill feature, when enabled, can automatically save and fill in districts and counties.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ContentType-DISTRICT_ADDRESS = 5--><!--Device-ContentType-DISTRICT_ADDRESS = 5-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -118,6 +130,8 @@ City. The scenario-based autofill feature, when enabled, can automatically save 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ContentType-CITY_ADDRESS = 6--><!--Device-ContentType-CITY_ADDRESS = 6-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PROVINCE_ADDRESS
@@ -133,6 +147,8 @@ Province. The scenario-based autofill feature, when enabled, can automatically s
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ContentType-PROVINCE_ADDRESS = 7--><!--Device-ContentType-PROVINCE_ADDRESS = 7-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -150,6 +166,8 @@ Country. The scenario-based autofill feature, when enabled, can automatically sa
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ContentType-COUNTRY_ADDRESS = 8--><!--Device-ContentType-COUNTRY_ADDRESS = 8-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PERSON_FULL_NAME
@@ -165,6 +183,8 @@ Full name. The scenario-based autofill feature, when enabled, can automatically 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ContentType-PERSON_FULL_NAME = 9--><!--Device-ContentType-PERSON_FULL_NAME = 9-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -182,6 +202,8 @@ Last name. The scenario-based autofill feature, when enabled, can automatically 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ContentType-PERSON_LAST_NAME = 10--><!--Device-ContentType-PERSON_LAST_NAME = 10-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PERSON_FIRST_NAME
@@ -197,6 +219,8 @@ First name. The scenario-based autofill feature, when enabled, can automatically
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ContentType-PERSON_FIRST_NAME = 11--><!--Device-ContentType-PERSON_FIRST_NAME = 11-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -214,6 +238,8 @@ Phone number. The scenario-based autofill feature, when enabled, can automatical
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ContentType-PHONE_NUMBER = 12--><!--Device-ContentType-PHONE_NUMBER = 12-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PHONE_COUNTRY_CODE
@@ -230,6 +256,8 @@ Country code. The scenario-based autofill feature, when enabled, can automatical
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ContentType-PHONE_COUNTRY_CODE = 13--><!--Device-ContentType-PHONE_COUNTRY_CODE = 13-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FULL_PHONE_NUMBER
@@ -238,14 +266,15 @@ Country code. The scenario-based autofill feature, when enabled, can automatical
 FULL_PHONE_NUMBER = 14
 ```
 
-Phone number with country code. The scenario-based autofill feature, when enabled, can automatically save and fill
-in phone numbers with country codes.
+Phone number with country code. The scenario-based autofill feature, when enabled, can automatically save and fill in phone numbers with country codes.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ContentType-FULL_PHONE_NUMBER = 14--><!--Device-ContentType-FULL_PHONE_NUMBER = 14-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -255,14 +284,15 @@ in phone numbers with country codes.
 EMAIL_ADDRESS = 15
 ```
 
-Email address. The scenario-based autofill feature, when enabled, can automatically save and fill in email
-addresses.
+Email address. The scenario-based autofill feature, when enabled, can automatically save and fill in email addresses.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ContentType-EMAIL_ADDRESS = 15--><!--Device-ContentType-EMAIL_ADDRESS = 15-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -272,14 +302,15 @@ addresses.
 BANK_CARD_NUMBER = 16
 ```
 
-Bank card number. The scenario-based autofill feature, when enabled, can automatically save and fill in bank card
-numbers.
+Bank card number. The scenario-based autofill feature, when enabled, can automatically save and fill in bank card numbers.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ContentType-BANK_CARD_NUMBER = 16--><!--Device-ContentType-BANK_CARD_NUMBER = 16-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -289,14 +320,15 @@ numbers.
 ID_CARD_NUMBER = 17
 ```
 
-ID card number. The scenario-based autofill feature, when enabled, can automatically save and fill in ID card
-numbers.
+ID card number. The scenario-based autofill feature, when enabled, can automatically save and fill in ID card numbers.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ContentType-ID_CARD_NUMBER = 17--><!--Device-ContentType-ID_CARD_NUMBER = 17-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -314,6 +346,8 @@ Nickname. The scenario-based autofill feature, when enabled, can automatically s
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ContentType-NICKNAME = 23--><!--Device-ContentType-NICKNAME = 23-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DETAIL_INFO_WITHOUT_STREET
@@ -322,14 +356,15 @@ Nickname. The scenario-based autofill feature, when enabled, can automatically s
 DETAIL_INFO_WITHOUT_STREET = 24
 ```
 
-Address information without street address. The scenario-based autofill feature, when enabled, can automatically
-save and fill in address information without street addresses.
+Address information without street address. The scenario-based autofill feature, when enabled, can automatically save and fill in address information without street addresses.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ContentType-DETAIL_INFO_WITHOUT_STREET = 24--><!--Device-ContentType-DETAIL_INFO_WITHOUT_STREET = 24-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -339,14 +374,15 @@ save and fill in address information without street addresses.
 FORMAT_ADDRESS = 25
 ```
 
-Standard address. The scenario-based autofill feature, when enabled, can automatically save and fill in standard
-addresses.
+Standard address. The scenario-based autofill feature, when enabled, can automatically save and fill in standard addresses.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ContentType-FORMAT_ADDRESS = 25--><!--Device-ContentType-FORMAT_ADDRESS = 25-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -356,14 +392,15 @@ addresses.
 PASSPORT_NUMBER = 26
 ```
 
-Passport number. The scenario-based autofill feature, when enabled, can automatically save and fill in passport
-numbers.
+Passport number. The scenario-based autofill feature, when enabled, can automatically save and fill in passport numbers.
 
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ContentType-PASSPORT_NUMBER = 26--><!--Device-ContentType-PASSPORT_NUMBER = 26-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -373,14 +410,15 @@ numbers.
 VALIDITY = 27
 ```
 
-Passport validity period. The scenario-based autofill feature, when enabled, can automatically save and fill in
-passport validity periods.
+Passport validity period. The scenario-based autofill feature, when enabled, can automatically save and fill in passport validity periods.
 
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ContentType-VALIDITY = 27--><!--Device-ContentType-VALIDITY = 27-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -390,14 +428,15 @@ passport validity periods.
 ISSUE_AT = 28
 ```
 
-Passport place of issue. The scenario-based autofill feature, when enabled, can automatically save and fill in the
-place of issue for passports.
+Passport place of issue. The scenario-based autofill feature, when enabled, can automatically save and fill in the place of issue for passports.
 
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ContentType-ISSUE_AT = 28--><!--Device-ContentType-ISSUE_AT = 28-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -407,14 +446,15 @@ place of issue for passports.
 ORGANIZATION = 29
 ```
 
-Invoice title. The scenario-based autofill feature, when enabled, can automatically save and fill in invoice
-titles.
+Invoice title. The scenario-based autofill feature, when enabled, can automatically save and fill in invoice titles.
 
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ContentType-ORGANIZATION = 29--><!--Device-ContentType-ORGANIZATION = 29-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -432,6 +472,8 @@ Tax ID. The scenario-based autofill feature, when enabled, can automatically sav
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ContentType-TAX_ID = 30--><!--Device-ContentType-TAX_ID = 30-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ADDRESS_CITY_AND_STATE
@@ -447,6 +489,8 @@ Location. The scenario-based autofill feature, when enabled, can automatically s
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ContentType-ADDRESS_CITY_AND_STATE = 31--><!--Device-ContentType-ADDRESS_CITY_AND_STATE = 31-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -464,6 +508,8 @@ Flight number. Currently not supported for automatic saving and auto-filling.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ContentType-FLIGHT_NUMBER = 32--><!--Device-ContentType-FLIGHT_NUMBER = 32-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## LICENSE_NUMBER
@@ -479,6 +525,8 @@ Driver's license number. Currently not supported for automatic saving and auto-f
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ContentType-LICENSE_NUMBER = 33--><!--Device-ContentType-LICENSE_NUMBER = 33-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -496,6 +544,8 @@ Driver's license file number. Currently not supported for automatic saving and a
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ContentType-LICENSE_FILE_NUMBER = 34--><!--Device-ContentType-LICENSE_FILE_NUMBER = 34-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## LICENSE_PLATE
@@ -504,14 +554,15 @@ Driver's license file number. Currently not supported for automatic saving and a
 LICENSE_PLATE = 35
 ```
 
-License plate number. The scenario-based autofill feature, when enabled, can automatically save and fill in license
-plate numbers.
+License plate number. The scenario-based autofill feature, when enabled, can automatically save and fill in license plate numbers.
 
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ContentType-LICENSE_PLATE = 35--><!--Device-ContentType-LICENSE_PLATE = 35-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -529,6 +580,8 @@ Vehicle registration engine number. Currently not supported for automatic saving
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ContentType-ENGINE_NUMBER = 36--><!--Device-ContentType-ENGINE_NUMBER = 36-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## LICENSE_CHASSIS_NUMBER
@@ -544,6 +597,8 @@ Chassis number. Currently not supported for automatic saving and auto-filling.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ContentType-LICENSE_CHASSIS_NUMBER = 37--><!--Device-ContentType-LICENSE_CHASSIS_NUMBER = 37-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

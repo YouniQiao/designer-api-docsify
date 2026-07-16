@@ -2,16 +2,24 @@
 
 一种线性数据结构，底层基于数组实现。BitVector 中存储的元素为 bit 值，能够存储和处理 bit 级别的操作。
 
-> **NOTE**
->
-> - 此模块仅支持在 ArkTS 文件（文件后缀为 .ets）中导入使用。
+> **NOTE**  
+>  
+> - 此模块仅支持在 ArkTS 文件（文件后缀为 .ets）中导入使用。  
 > **装饰器**：\@Sendable
 
 **起始版本：** 12
 
 **装饰器类型：** @Sendable
 
+<!--Device-collections-class BitVector--><!--Device-collections-class BitVector-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { collections } from '@kit.ArkTS';
+```
 
 ## [Symbol.iterator]
 
@@ -23,7 +31,9 @@
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BitVector-[Symbol.iterator](): IterableIterator<number>--><!--Device-BitVector-[Symbol.iterator](): IterableIterator<number>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -31,7 +41,7 @@
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;number&gt; | 一个新的可迭代迭代器对象。 |
+| IterableIterator<number> | 一个新的可迭代迭代器对象。 |
 
 **错误码：**
 
@@ -49,7 +59,9 @@ BitVector 的构造函数。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BitVector-constructor(length: number)--><!--Device-BitVector-constructor(length: number)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -69,7 +81,9 @@ flipBitByIndex(index: number): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BitVector-flipBitByIndex(index: number): void--><!--Device-BitVector-flipBitByIndex(index: number): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -97,7 +111,9 @@ flipBitsByRange(fromIndex: number, toIndex: number): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BitVector-flipBitsByRange(fromIndex: number, toIndex: number): void--><!--Device-BitVector-flipBitsByRange(fromIndex: number, toIndex: number): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -126,7 +142,9 @@ getBitCountByRange(element: number, fromIndex: number, toIndex: number): number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BitVector-getBitCountByRange(element: number, fromIndex: number, toIndex: number): number--><!--Device-BitVector-getBitCountByRange(element: number, fromIndex: number, toIndex: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -162,7 +180,9 @@ getBitsByRange(fromIndex: number, toIndex: number): BitVector
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BitVector-getBitsByRange(fromIndex: number, toIndex: number): BitVector--><!--Device-BitVector-getBitsByRange(fromIndex: number, toIndex: number): BitVector-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -177,7 +197,7 @@ getBitsByRange(fromIndex: number, toIndex: number): BitVector
 
 | 类型 | 说明 |
 | --- | --- |
-| BitVector | 包含所获取 bit 值的 BitVector。可能的原因：1.必填参数未指定。2.参数类型不正确。 |
+| [BitVector](arkts-arkts-bitvector-c.md) | 包含所获取 bit 值的 BitVector。可能的原因：1.必填参数未指定。2.参数类型不正确。 |
 
 **错误码：**
 
@@ -197,7 +217,9 @@ getIndexOf(element: number, fromIndex: number, toIndex: number): number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BitVector-getIndexOf(element: number, fromIndex: number, toIndex: number): number--><!--Device-BitVector-getIndexOf(element: number, fromIndex: number, toIndex: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -233,7 +255,9 @@ getLastIndexOf(element: number, fromIndex: number, toIndex: number): number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BitVector-getLastIndexOf(element: number, fromIndex: number, toIndex: number): number--><!--Device-BitVector-getLastIndexOf(element: number, fromIndex: number, toIndex: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -269,7 +293,9 @@ has(element: number, fromIndex: number, toIndex: number): boolean
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BitVector-has(element: number, fromIndex: number, toIndex: number): boolean--><!--Device-BitVector-has(element: number, fromIndex: number, toIndex: number): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -305,7 +331,9 @@ pop(): number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BitVector-pop(): number--><!--Device-BitVector-pop(): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -332,7 +360,9 @@ push(element: number): boolean
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BitVector-push(element: number): boolean--><!--Device-BitVector-push(element: number): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -361,13 +391,13 @@ push(element: number): boolean
 resize(size: number): void
 ```
 
-改变 BitVector 的长度。
-如果 **size** 大于原 BitVector 的长度，则扩充原 BitVector 的长度，多出部分的元素设置为 0。
-如果 **size** 小于等于原 BitVector 的长度，则将原 BitVector 按 size 长度大小裁剪。
+改变 BitVector 的长度。如果 **size** 大于原 BitVector 的长度，则扩充原 BitVector 的长度，多出部分的元素设置为 0。如果 **size** 小于等于原 BitVector 的长度，则将原 BitVector 按 size 长度大小裁剪。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BitVector-resize(size: number): void--><!--Device-BitVector-resize(size: number): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -394,7 +424,9 @@ setAllBits(element: number): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BitVector-setAllBits(element: number): void--><!--Device-BitVector-setAllBits(element: number): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -421,7 +453,9 @@ setBitsByRange(element: number, fromIndex: number, toIndex: number): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BitVector-setBitsByRange(element: number, fromIndex: number, toIndex: number): void--><!--Device-BitVector-setBitsByRange(element: number, fromIndex: number, toIndex: number): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -451,7 +485,9 @@ values(): IterableIterator<number>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BitVector-values(): IterableIterator<number>--><!--Device-BitVector-values(): IterableIterator<number>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -459,7 +495,7 @@ values(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;number&gt; | BitVector 迭代器对象。 |
+| IterableIterator<number> | BitVector 迭代器对象。 |
 
 **错误码：**
 
@@ -480,7 +516,9 @@ values(): IterableIterator<number>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BitVector-[index: number]: number--><!--Device-BitVector-[index: number]: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -496,7 +534,9 @@ BitVector 的元素个数。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BitVector-readonly length: number--><!--Device-BitVector-readonly length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

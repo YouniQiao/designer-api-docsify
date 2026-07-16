@@ -4,13 +4,13 @@
 type TemplateStatusCallback = (templateStatusList: TemplateStatus[]) => void
 ```
 
-Defines the callback triggered for receiving notifications of template status changes. When the template status
-changes (for example, the template is added, deleted, or its validity changes), the system notifies the
-application through this callback.
+Defines the callback triggered for receiving notifications of template status changes. When the template status changes (for example, the template is added, deleted, or its validity changes), the system notifies the application through this callback.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-companionDeviceAuth-type TemplateStatusCallback = (templateStatusList: TemplateStatus[]) => void--><!--Device-companionDeviceAuth-type TemplateStatusCallback = (templateStatusList: TemplateStatus[]) => void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 

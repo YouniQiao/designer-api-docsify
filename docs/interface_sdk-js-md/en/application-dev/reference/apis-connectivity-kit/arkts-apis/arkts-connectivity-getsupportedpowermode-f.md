@@ -18,13 +18,15 @@ Obtains the supported power Mode.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManagerExt-function getSupportedPowerMode(): Promise<Array<PowerMode>>--><!--Device-wifiManagerExt-function getSupportedPowerMode(): Promise<Array<PowerMode>>-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.AP.Extension
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PowerMode&gt;&gt; | Returns a list of application PowerMode. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<PowerMode>> | Returns a list of application PowerMode. |
 
 **Error codes:**
 
@@ -47,13 +49,15 @@ Obtains the supported power Mode.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManagerExt-function getSupportedPowerMode(callback: AsyncCallback<Array<PowerMode>>): void--><!--Device-wifiManagerExt-function getSupportedPowerMode(callback: AsyncCallback<Array<PowerMode>>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.AP.Extension
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;PowerMode&gt;&gt; | Yes | the callback of model. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<PowerMode>> | Yes | the callback of model. |
 
 **Error codes:**
 

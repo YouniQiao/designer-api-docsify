@@ -1,9 +1,10 @@
 # PathMeasureMatrixFlags
 
-Enumerates the dimensions of matrix information in path measurement. It is often used in animation scenarios where
-objects move along a path.
+Enumerates the dimensions of matrix information in path measurement. It is often used in animation scenarios where objects move along a path.
 
 **Since:** 12
+
+<!--Device-drawing-enum PathMeasureMatrixFlags--><!--Device-drawing-enum PathMeasureMatrixFlags-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -17,6 +18,8 @@ Matrix corresponding to the position information.
 
 **Since:** 12
 
+<!--Device-PathMeasureMatrixFlags-GET_POSITION_MATRIX = 0--><!--Device-PathMeasureMatrixFlags-GET_POSITION_MATRIX = 0-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## GET_TANGENT_MATRIX
@@ -29,6 +32,8 @@ Matrix corresponding to the tangent information.
 
 **Since:** 12
 
+<!--Device-PathMeasureMatrixFlags-GET_TANGENT_MATRIX = 1--><!--Device-PathMeasureMatrixFlags-GET_TANGENT_MATRIX = 1-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## GET_POSITION_AND_TANGENT_MATRIX
@@ -40,6 +45,8 @@ GET_POSITION_AND_TANGENT_MATRIX = 2
 Matrix corresponding to the position and tangent information.
 
 **Since:** 12
+
+<!--Device-PathMeasureMatrixFlags-GET_POSITION_AND_TANGENT_MATRIX = 2--><!--Device-PathMeasureMatrixFlags-GET_POSITION_AND_TANGENT_MATRIX = 2-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

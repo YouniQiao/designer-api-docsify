@@ -4,6 +4,8 @@ Defines the title bar options.
 
 **Since:** 11
 
+<!--Device-unnamed-declare interface NavigationTitleOptions--><!--Device-unnamed-declare interface NavigationTitleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundBlurStyle
@@ -21,6 +23,8 @@ Background blur style of the title bar. If this parameter is not set, the backgr
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NavigationTitleOptions-backgroundBlurStyle?: BlurStyle--><!--Device-NavigationTitleOptions-backgroundBlurStyle?: BlurStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,6 +50,8 @@ Avoid using this API in conjunction with **backgroundEffect**.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-NavigationTitleOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions--><!--Device-NavigationTitleOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundColor
@@ -63,6 +69,8 @@ Background color of the title bar. If this parameter is not set, the default col
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NavigationTitleOptions-backgroundColor?: ResourceColor--><!--Device-NavigationTitleOptions-backgroundColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,6 +94,8 @@ Avoid using this API in conjunction with **backgroundBlurStyleOptions**.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-NavigationTitleOptions-backgroundEffect?: BackgroundEffectOptions--><!--Device-NavigationTitleOptions-backgroundEffect?: BackgroundEffectOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## barStyle
@@ -108,6 +118,8 @@ Default value: **BarStyle.STANDARD**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavigationTitleOptions-barStyle?: BarStyle--><!--Device-NavigationTitleOptions-barStyle?: BarStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableHoverMode
@@ -120,9 +132,7 @@ Whether to respond when the device is in semi-folded mode.
 
 Observe the following when using this API:
 
-1. Make sure the **Navigation** component is in full screen.
-2. When the title bar is in [Free](arkts-arkui-navigationtitlemode-e.md) display mode or in [STANDARD](arkts-arkui-barstyle-e.md) layout
-style, this API has no effect.
+1. Make sure the **Navigation** component is in full screen.2. When the title bar is in [Free](arkts-arkui-navigationtitlemode-e.md) display mode or in [STANDARD](arkts-arkui-barstyle-e.md) layout style, this API has no effect.
 
 **true**: yes; **false**: no
 
@@ -138,6 +148,8 @@ Default value: **false**
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-NavigationTitleOptions-enableHoverMode?: boolean--><!--Device-NavigationTitleOptions-enableHoverMode?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## mainTitleModifier
@@ -148,13 +160,7 @@ mainTitleModifier?: TextModifier
 
 Main title attribute modifier.
 
-1. Attribute settings configured by this modifier will override the system's default attribute settings.
-For example, if the modifier is used to set font size attributes, such as **fontSize**, **maxFontSize**,
-and **minFontSize**, the settings will take precedence over the system's default settings for
-size-related attributes.
-2. If no modifier is used or an invalid value is set, the system reverts to its default settings.
-3. In [Free](arkts-arkui-navigationtitlemode-e.md) mode, setting the font size will disable the effect where the main title's
-size changes in response to content scrolling.
+1. Attribute settings configured by this modifier will override the system's default attribute settings.For example, if the modifier is used to set font size attributes, such as **fontSize**, **maxFontSize**,and **minFontSize**, the settings will take precedence over the system's default settings for size-related attributes.2. If no modifier is used or an invalid value is set, the system reverts to its default settings.3. In [Free](arkts-arkui-navigationtitlemode-e.md) mode, setting the font size will disable the effect where the main title's size changes in response to content scrolling.
 
 **Type:** TextModifier
 
@@ -163,6 +169,8 @@ size changes in response to content scrolling.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-NavigationTitleOptions-mainTitleModifier?: TextModifier--><!--Device-NavigationTitleOptions-mainTitleModifier?: TextModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -176,11 +184,7 @@ Padding at the end of the title bar.
 
 Only supported in one of the following scenarios:
 
-1. Using a non-custom menu, that is, the
-[menu value](NavigationAttribute#menus(value: Array<NavigationMenuItem> | CustomBuilder))
-is Array<NavigationMenuItem>
-2. Using a non-custom menu without a menu in the upper right corner, that is,
-the [title value](NavigationAttribute#title) type is **ResourceStr** or **NavigationCommonTitle**
+1. Using a non-custom menu, that is, the [menu value](NavigationAttribute#menus(value: Array<NavigationMenuItem> | CustomBuilder))is Array<NavigationMenuItem>2. Using a non-custom menu without a menu in the upper right corner, that is,the [title value](NavigationAttribute#title) type is **ResourceStr** or **NavigationCommonTitle**
 
 Default value:
 
@@ -196,6 +200,8 @@ LengthMetrics.resource(`$r('sys.float.margin_right')`)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavigationTitleOptions-paddingEnd?: LengthMetrics--><!--Device-NavigationTitleOptions-paddingEnd?: LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## paddingStart
@@ -208,8 +214,7 @@ Padding at the start of the title bar.
 
 Only supported in one of the following scenarios:
 
-1. Displaying the back icon, that is, [hideBackButton](NavigationAttribute#hideBackButton) is **false**
-2. Using a non-custom title, that is, the [title value](NavigationAttribute#title) type is **ResourceStr** or **NavigationCommonTitle**
+1. Displaying the back icon, that is, [hideBackButton](NavigationAttribute#hideBackButton) is **false**2. Using a non-custom title, that is, the [title value](NavigationAttribute#title) type is **ResourceStr** or **NavigationCommonTitle**
 
 Default value:
 
@@ -224,6 +229,8 @@ LengthMetrics.resource(**$r('sys.float.margin_left')**)
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NavigationTitleOptions-paddingStart?: LengthMetrics--><!--Device-NavigationTitleOptions-paddingStart?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -243,6 +250,8 @@ Title scroll blur style.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-NavigationTitleOptions-scrollEffectOptions?: ScrollEffectOptions--><!--Device-NavigationTitleOptions-scrollEffectOptions?: ScrollEffectOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## subTitleModifier
@@ -253,11 +262,7 @@ subTitleModifier?: TextModifier
 
 Subtitle attribute modifier.
 
-1. Attribute settings configured by this modifier will override the system's default attribute settings.
-For example, if the modifier is used to set font size attributes, such as **fontSize**, **maxFontSize**,
-and **minFontSize**, the settings will take precedence over the system's default settings
-for size-related attributes.
-2. If no modifier is used or an invalid value is set, the system reverts to its default settings.
+1. Attribute settings configured by this modifier will override the system's default attribute settings.For example, if the modifier is used to set font size attributes, such as **fontSize**, **maxFontSize**,and **minFontSize**, the settings will take precedence over the system's default settings for size-related attributes.2. If no modifier is used or an invalid value is set, the system reverts to its default settings.
 
 **Type:** TextModifier
 
@@ -267,6 +272,8 @@ for size-related attributes.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-NavigationTitleOptions-subTitleModifier?: TextModifier--><!--Device-NavigationTitleOptions-subTitleModifier?: TextModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## systemMaterial
@@ -275,10 +282,7 @@ for size-related attributes.
 systemMaterial?: Material
 ```
 
-Set system-styled materials for the TitleBar. Different materials have different effects, which can influence
-the backgroundColor, border, shadow, and other visual attributes of the titleBar.
-Device Behavior Differences:The effect of the same material may vary across different devices depending on
-their computing power.
+Set system-styled materials for the TitleBar. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the titleBar.Device Behavior Differences:The effect of the same material may vary across different devices depending on their computing power.
 
 **Type:** Material
 
@@ -287,6 +291,8 @@ their computing power.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-NavigationTitleOptions-systemMaterial?: Material--><!--Device-NavigationTitleOptions-systemMaterial?: Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

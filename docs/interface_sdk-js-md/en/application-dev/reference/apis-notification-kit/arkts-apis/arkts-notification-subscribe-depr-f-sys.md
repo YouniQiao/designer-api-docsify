@@ -6,8 +6,7 @@
 function subscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<void>): void
 ```
 
-Subscribes to notifications of all applications under this user.
-This API uses an asynchronous callback to return the result.
+Subscribes to notifications of all applications under this user.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -17,6 +16,8 @@ This API uses an asynchronous callback to return the result.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function subscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<void>): void--><!--Device-notification-function subscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -25,8 +26,8 @@ This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | NotificationSubscriber | Yes | Notification subscriber. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-i-sys.md) | Yes | Notification subscriber. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 
 ## subscribe
@@ -39,8 +40,7 @@ function subscribe(
   ): void
 ```
 
-Subscribes to a notification with the subscription information specified.
-This API uses an asynchronous callback to return the result.
+Subscribes to a notification with the subscription information specified.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -50,6 +50,16 @@ This API uses an asynchronous callback to return the result.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function subscribe(
+    subscriber: NotificationSubscriber,
+    info: NotificationSubscribeInfo,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-notification-function subscribe(
+    subscriber: NotificationSubscriber,
+    info: NotificationSubscribeInfo,
+    callback: AsyncCallback<void>
+  ): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -58,9 +68,9 @@ This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | NotificationSubscriber | Yes | Notification subscriber. |
-| info | NotificationSubscribeInfo | Yes | Notification subscription information. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-i-sys.md) | Yes | Notification subscriber. |
+| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-i-sys.md) | Yes | Notification subscription information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 
 ## subscribe
@@ -69,8 +79,7 @@ This API uses an asynchronous callback to return the result.
 function subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscribeInfo): Promise<void>
 ```
 
-Subscribes to a notification with the subscription information specified.
-This API uses a promise to return the result.
+Subscribes to a notification with the subscription information specified.This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -80,6 +89,8 @@ This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscribeInfo): Promise<void>--><!--Device-notification-function subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscribeInfo): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -88,12 +99,12 @@ This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | NotificationSubscriber | Yes | Notification subscriber. |
-| info | NotificationSubscribeInfo | No | Notification subscription information.This parameter is left empty by default. |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-i-sys.md) | Yes | Notification subscriber. |
+| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-i-sys.md) | No | Notification subscription information.This parameter is left empty by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 

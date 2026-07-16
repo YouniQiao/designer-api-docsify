@@ -18,6 +18,8 @@ Uninstalls a font by name. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.UPDATE_FONT
 
+<!--Device-fontManager-function uninstallFont(fullName: string): Promise<int>--><!--Device-fontManager-function uninstallFont(fullName: string): Promise<int>-End-->
+
 **System capability:** SystemCapability.Global.FontManager
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Uninstalls a font by name. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fullName | string | Yes | Name of the font to be uninstalled. You can obtain the font name by opening the**.ttf** or **.ttc** font file. |
+| fullName | string | Yes | Name of the font to be uninstalled. You can obtain the font name by opening the **.ttf** or **.ttc** font file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. The value **0** indicates that the uninstallation issuccessful, and any other value indicates that the uninstallation has failed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result. The value **0** indicates that the uninstallation is successful, and any other value indicates that the uninstallation has failed. |
 
 **Error codes:**
 

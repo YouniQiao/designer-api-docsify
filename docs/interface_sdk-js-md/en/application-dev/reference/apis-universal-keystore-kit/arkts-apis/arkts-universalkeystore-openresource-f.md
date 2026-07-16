@@ -12,12 +12,13 @@ import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 function openResource(resourceId: string, params?: HuksExternalCryptoParam[]): Promise<void>
 ```
 
-Open resource by specific resource ID.
-NOTE: The opened resource must be closed using closeResource.
+Open resource by specific resource ID.NOTE: The opened resource must be closed using closeResource.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-huksExternalCrypto-function openResource(resourceId: string, params?: HuksExternalCryptoParam[]): Promise<void>--><!--Device-huksExternalCrypto-function openResource(resourceId: string, params?: HuksExternalCryptoParam[]): Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -26,13 +27,13 @@ NOTE: The opened resource must be closed using closeResource.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resourceId | string | Yes | Indicates the resource ID of the provider. |
-| params | HuksExternalCryptoParam[] | No | Indicates the input operation parameters. |
+| params | [HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcryptoparam-i.md)[] | No | Indicates the input operation parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Return value of the Promise type |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Return value of the Promise type |
 
 **Error codes:**
 

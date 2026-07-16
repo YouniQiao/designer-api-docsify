@@ -1,9 +1,10 @@
 # CameraErrorCode
 
-Enumerates the camera error codes,
-which are returned when an API call is incorrect or the **on()** API is used to listen for the error status.
+Enumerates the camera error codes,which are returned when an API call is incorrect or the **on()** API is used to listen for the error status.
 
 **Since:** 10
+
+<!--Device-camera-enum CameraErrorCode--><!--Device-camera-enum CameraErrorCode-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -19,6 +20,8 @@ A parameter is missing or the parameter type is incorrect.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraErrorCode-INVALID_ARGUMENT = 7400101--><!--Device-CameraErrorCode-INVALID_ARGUMENT = 7400101-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## OPERATION_NOT_ALLOWED
@@ -32,6 +35,8 @@ The operation is not allowed.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraErrorCode-OPERATION_NOT_ALLOWED = 7400102--><!--Device-CameraErrorCode-OPERATION_NOT_ALLOWED = 7400102-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -47,6 +52,8 @@ The session is not configured.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraErrorCode-SESSION_NOT_CONFIG = 7400103--><!--Device-CameraErrorCode-SESSION_NOT_CONFIG = 7400103-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## SESSION_NOT_RUNNING
@@ -60,6 +67,8 @@ The session is not running.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraErrorCode-SESSION_NOT_RUNNING = 7400104--><!--Device-CameraErrorCode-SESSION_NOT_RUNNING = 7400104-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -75,6 +84,8 @@ The session configuration is locked.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraErrorCode-SESSION_CONFIG_LOCKED = 7400105--><!--Device-CameraErrorCode-SESSION_CONFIG_LOCKED = 7400105-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## DEVICE_SETTING_LOCKED
@@ -88,6 +99,8 @@ The device setting is locked.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraErrorCode-DEVICE_SETTING_LOCKED = 7400106--><!--Device-CameraErrorCode-DEVICE_SETTING_LOCKED = 7400106-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -103,6 +116,8 @@ The device is already started.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraErrorCode-CONFLICT_CAMERA = 7400107--><!--Device-CameraErrorCode-CONFLICT_CAMERA = 7400107-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## DEVICE_DISABLED
@@ -116,6 +131,8 @@ The camera is disabled for security reasons.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraErrorCode-DEVICE_DISABLED = 7400108--><!--Device-CameraErrorCode-DEVICE_DISABLED = 7400108-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -131,6 +148,8 @@ The camera is preempted.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraErrorCode-DEVICE_PREEMPTED = 7400109--><!--Device-CameraErrorCode-DEVICE_PREEMPTED = 7400109-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## UNRESOLVED_CONFLICTS_WITH_CURRENT_CONFIGURATIONS
@@ -145,6 +164,8 @@ The configuration conflicts with the current configuration.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraErrorCode-UNRESOLVED_CONFLICTS_WITH_CURRENT_CONFIGURATIONS = 7400110--><!--Device-CameraErrorCode-UNRESOLVED_CONFLICTS_WITH_CURRENT_CONFIGURATIONS = 7400110-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## SERVICE_FATAL_ERROR
@@ -158,6 +179,8 @@ The camera service is abnormal.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraErrorCode-SERVICE_FATAL_ERROR = 7400201--><!--Device-CameraErrorCode-SERVICE_FATAL_ERROR = 7400201-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

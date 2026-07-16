@@ -18,6 +18,8 @@ Terminates a mission. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.KILL_APP_PROCESSES
 
+<!--Device-appManager-function terminateMission(missionId: int): Promise<void>--><!--Device-appManager-function terminateMission(missionId: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Terminates a mission. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionId | number | Yes | Mission ID, which can be obtained by calling[getMissionInfos](arkts-ability-getmissioninfos-f-sys.md#getmissioninfos-1). |
+| missionId | number | Yes | Mission ID, which can be obtained by calling [getMissionInfos](arkts-ability-getmissioninfos-f-sys.md#getmissioninfos-1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

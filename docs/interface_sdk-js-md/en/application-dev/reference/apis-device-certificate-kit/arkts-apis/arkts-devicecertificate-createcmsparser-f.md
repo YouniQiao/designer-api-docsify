@@ -18,13 +18,15 @@ Creates a **CmsParser** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-cert-function createCmsParser(): CmsParser--><!--Device-cert-function createCmsParser(): CmsParser-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CmsParser | CmsParser object. |
+| [CmsParser](arkts-devicecertificate-cmsparser-i.md) | CmsParser object. |
 
 **Error codes:**
 

@@ -1,13 +1,16 @@
 # DataView
 
+<!--Device-unnamed-interface DataView--><!--Device-unnamed-interface DataView-End-->
+
 ## getFloat32
 
 ```TypeScript
 getFloat32(byteOffset: number, littleEndian?: boolean): number
 ```
 
-Gets the Float32 value at the specified byte offset from the start of the view. There is
-no alignment constraint; multi-byte values may be fetched from any offset.
+Gets the Float32 value at the specified byte offset from the start of the view. There is no alignment constraint; multi-byte values may be fetched from any offset.
+
+<!--Device-DataView-getFloat32(byteOffset: number, littleEndian?: boolean): number--><!--Device-DataView-getFloat32(byteOffset: number, littleEndian?: boolean): number-End-->
 
 **Parameters:**
 
@@ -28,8 +31,9 @@ no alignment constraint; multi-byte values may be fetched from any offset.
 getFloat64(byteOffset: number, littleEndian?: boolean): number
 ```
 
-Gets the Float64 value at the specified byte offset from the start of the view. There is
-no alignment constraint; multi-byte values may be fetched from any offset.
+Gets the Float64 value at the specified byte offset from the start of the view. There is no alignment constraint; multi-byte values may be fetched from any offset.
+
+<!--Device-DataView-getFloat64(byteOffset: number, littleEndian?: boolean): number--><!--Device-DataView-getFloat64(byteOffset: number, littleEndian?: boolean): number-End-->
 
 **Parameters:**
 
@@ -50,8 +54,9 @@ no alignment constraint; multi-byte values may be fetched from any offset.
 getInt16(byteOffset: number, littleEndian?: boolean): number
 ```
 
-Gets the Int16 value at the specified byte offset from the start of the view. There is
-no alignment constraint; multi-byte values may be fetched from any offset.
+Gets the Int16 value at the specified byte offset from the start of the view. There is no alignment constraint; multi-byte values may be fetched from any offset.
+
+<!--Device-DataView-getInt16(byteOffset: number, littleEndian?: boolean): number--><!--Device-DataView-getInt16(byteOffset: number, littleEndian?: boolean): number-End-->
 
 **Parameters:**
 
@@ -72,8 +77,9 @@ no alignment constraint; multi-byte values may be fetched from any offset.
 getInt32(byteOffset: number, littleEndian?: boolean): number
 ```
 
-Gets the Int32 value at the specified byte offset from the start of the view. There is
-no alignment constraint; multi-byte values may be fetched from any offset.
+Gets the Int32 value at the specified byte offset from the start of the view. There is no alignment constraint; multi-byte values may be fetched from any offset.
+
+<!--Device-DataView-getInt32(byteOffset: number, littleEndian?: boolean): number--><!--Device-DataView-getInt32(byteOffset: number, littleEndian?: boolean): number-End-->
 
 **Parameters:**
 
@@ -94,8 +100,9 @@ no alignment constraint; multi-byte values may be fetched from any offset.
 getInt8(byteOffset: number): number
 ```
 
-Gets the Int8 value at the specified byte offset from the start of the view. There is
-no alignment constraint; multi-byte values may be fetched from any offset.
+Gets the Int8 value at the specified byte offset from the start of the view. There is no alignment constraint; multi-byte values may be fetched from any offset.
+
+<!--Device-DataView-getInt8(byteOffset: number): number--><!--Device-DataView-getInt8(byteOffset: number): number-End-->
 
 **Parameters:**
 
@@ -115,8 +122,9 @@ no alignment constraint; multi-byte values may be fetched from any offset.
 getUint16(byteOffset: number, littleEndian?: boolean): number
 ```
 
-Gets the Uint16 value at the specified byte offset from the start of the view. There is
-no alignment constraint; multi-byte values may be fetched from any offset.
+Gets the Uint16 value at the specified byte offset from the start of the view. There is no alignment constraint; multi-byte values may be fetched from any offset.
+
+<!--Device-DataView-getUint16(byteOffset: number, littleEndian?: boolean): number--><!--Device-DataView-getUint16(byteOffset: number, littleEndian?: boolean): number-End-->
 
 **Parameters:**
 
@@ -137,8 +145,9 @@ no alignment constraint; multi-byte values may be fetched from any offset.
 getUint32(byteOffset: number, littleEndian?: boolean): number
 ```
 
-Gets the Uint32 value at the specified byte offset from the start of the view. There is
-no alignment constraint; multi-byte values may be fetched from any offset.
+Gets the Uint32 value at the specified byte offset from the start of the view. There is no alignment constraint; multi-byte values may be fetched from any offset.
+
+<!--Device-DataView-getUint32(byteOffset: number, littleEndian?: boolean): number--><!--Device-DataView-getUint32(byteOffset: number, littleEndian?: boolean): number-End-->
 
 **Parameters:**
 
@@ -159,8 +168,9 @@ no alignment constraint; multi-byte values may be fetched from any offset.
 getUint8(byteOffset: number): number
 ```
 
-Gets the Uint8 value at the specified byte offset from the start of the view. There is
-no alignment constraint; multi-byte values may be fetched from any offset.
+Gets the Uint8 value at the specified byte offset from the start of the view. There is no alignment constraint; multi-byte values may be fetched from any offset.
+
+<!--Device-DataView-getUint8(byteOffset: number): number--><!--Device-DataView-getUint8(byteOffset: number): number-End-->
 
 **Parameters:**
 
@@ -182,6 +192,8 @@ setFloat32(byteOffset: number, value: number, littleEndian?: boolean): void
 
 Stores an Float32 value at the specified byte offset from the start of the view.
 
+<!--Device-DataView-setFloat32(byteOffset: number, value: number, littleEndian?: boolean): void--><!--Device-DataView-setFloat32(byteOffset: number, value: number, littleEndian?: boolean): void-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -197,6 +209,8 @@ setFloat64(byteOffset: number, value: number, littleEndian?: boolean): void
 ```
 
 Stores an Float64 value at the specified byte offset from the start of the view.
+
+<!--Device-DataView-setFloat64(byteOffset: number, value: number, littleEndian?: boolean): void--><!--Device-DataView-setFloat64(byteOffset: number, value: number, littleEndian?: boolean): void-End-->
 
 **Parameters:**
 
@@ -214,6 +228,8 @@ setInt16(byteOffset: number, value: number, littleEndian?: boolean): void
 
 Stores an Int16 value at the specified byte offset from the start of the view.
 
+<!--Device-DataView-setInt16(byteOffset: number, value: number, littleEndian?: boolean): void--><!--Device-DataView-setInt16(byteOffset: number, value: number, littleEndian?: boolean): void-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -229,6 +245,8 @@ setInt32(byteOffset: number, value: number, littleEndian?: boolean): void
 ```
 
 Stores an Int32 value at the specified byte offset from the start of the view.
+
+<!--Device-DataView-setInt32(byteOffset: number, value: number, littleEndian?: boolean): void--><!--Device-DataView-setInt32(byteOffset: number, value: number, littleEndian?: boolean): void-End-->
 
 **Parameters:**
 
@@ -246,6 +264,8 @@ setInt8(byteOffset: number, value: number): void
 
 Stores an Int8 value at the specified byte offset from the start of the view.
 
+<!--Device-DataView-setInt8(byteOffset: number, value: number): void--><!--Device-DataView-setInt8(byteOffset: number, value: number): void-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -260,6 +280,8 @@ setUint16(byteOffset: number, value: number, littleEndian?: boolean): void
 ```
 
 Stores an Uint16 value at the specified byte offset from the start of the view.
+
+<!--Device-DataView-setUint16(byteOffset: number, value: number, littleEndian?: boolean): void--><!--Device-DataView-setUint16(byteOffset: number, value: number, littleEndian?: boolean): void-End-->
 
 **Parameters:**
 
@@ -277,6 +299,8 @@ setUint32(byteOffset: number, value: number, littleEndian?: boolean): void
 
 Stores an Uint32 value at the specified byte offset from the start of the view.
 
+<!--Device-DataView-setUint32(byteOffset: number, value: number, littleEndian?: boolean): void--><!--Device-DataView-setUint32(byteOffset: number, value: number, littleEndian?: boolean): void-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -293,6 +317,8 @@ setUint8(byteOffset: number, value: number): void
 
 Stores an Uint8 value at the specified byte offset from the start of the view.
 
+<!--Device-DataView-setUint8(byteOffset: number, value: number): void--><!--Device-DataView-setUint8(byteOffset: number, value: number): void-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -308,6 +334,8 @@ readonly buffer: ArrayBuffer
 
 **Type:** ArrayBuffer
 
+<!--Device-DataView-readonly buffer: ArrayBuffer--><!--Device-DataView-readonly buffer: ArrayBuffer-End-->
+
 ## byteLength
 
 ```TypeScript
@@ -316,6 +344,8 @@ readonly byteLength: number
 
 **Type:** number
 
+<!--Device-DataView-readonly byteLength: number--><!--Device-DataView-readonly byteLength: number-End-->
+
 ## byteOffset
 
 ```TypeScript
@@ -323,4 +353,6 @@ readonly byteOffset: number
 ```
 
 **Type:** number
+
+<!--Device-DataView-readonly byteOffset: number--><!--Device-DataView-readonly byteOffset: number-End-->
 

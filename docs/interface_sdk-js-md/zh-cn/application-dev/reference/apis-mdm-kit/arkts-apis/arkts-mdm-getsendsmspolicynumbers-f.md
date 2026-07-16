@@ -1,5 +1,11 @@
 # getSendSmsPolicyNumbers
 
+## 导入模块
+
+```TypeScript
+import { telephonyManager } from '@kit.MDMKit';
+```
+
 ## getSendSmsPolicyNumbers
 
 ```TypeScript
@@ -14,6 +20,8 @@ function getSendSmsPolicyNumbers(admin: Want | null, policy: adminManager.Policy
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-telephonyManager-function getSendSmsPolicyNumbers(admin: Want | null, policy: adminManager.Policy): Array<string>--><!--Device-telephonyManager-function getSendSmsPolicyNumbers(admin: Want | null, policy: adminManager.Policy): Array<string>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -27,7 +35,7 @@ function getSendSmsPolicyNumbers(admin: Want | null, policy: adminManager.Policy
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | phone numbers in the trust/block list. |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | phone numbers in the trust/block list. |
 
 **错误码：**
 

@@ -20,15 +20,17 @@ Removes the application from the list of applications allowed to grant the permi
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-securityManager-function removeAllowedPermissionBundle(admin: Want, permission: string, applicationInstance: common.ApplicationInstance): void--><!--Device-securityManager-function removeAllowedPermissionBundle(admin: Want, permission: string, applicationInstance: common.ApplicationInstance): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | admin indicates the administrator ability information. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | admin indicates the administrator ability information. |
 | permission | string | Yes | permission indicates the name of the permission. |
-| applicationInstance | common.ApplicationInstance | Yes | applicationInstance indicatesthe application need to be removed from the list of applications allowed to grant the permission. |
+| applicationInstance | common.ApplicationInstance | Yes | applicationInstance indicates the application need to be removed from the list of applications allowed to grant the permission. |
 
 **Error codes:**
 

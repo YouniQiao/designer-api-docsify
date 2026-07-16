@@ -4,6 +4,8 @@ Describes the data migration progress.
 
 **Since:** 23
 
+<!--Device-fontManager-interface DataMigrationProgress--><!--Device-fontManager-interface DataMigrationProgress-End-->
+
 **System capability:** SystemCapability.Global.FontManager
 
 **System API:** This is a system API.
@@ -20,12 +22,13 @@ import { fontManager } from '@kit.LocalizationKit';
 progressPercentage: number
 ```
 
-Data migration progress, in percentage. The value ranges from 0 to 100.
-The value range is all integers.
+Data migration progress, in percentage. The value ranges from 0 to 100.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
+
+<!--Device-DataMigrationProgress-progressPercentage: int--><!--Device-DataMigrationProgress-progressPercentage: int-End-->
 
 **System capability:** SystemCapability.Global.FontManager
 
@@ -37,12 +40,13 @@ The value range is all integers.
 timeRemaining: number
 ```
 
-Estimated remaining time, in seconds.
-The value should be an integer.
+Estimated remaining time, in seconds.The value should be an integer.
 
 **Type:** number
 
 **Since:** 23
+
+<!--Device-DataMigrationProgress-timeRemaining: int--><!--Device-DataMigrationProgress-timeRemaining: int-End-->
 
 **System capability:** SystemCapability.Global.FontManager
 

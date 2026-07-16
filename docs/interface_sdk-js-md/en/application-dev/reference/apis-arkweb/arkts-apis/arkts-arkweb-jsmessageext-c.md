@@ -4,6 +4,8 @@ The message for indicating the of result of JavaScript code execution.
 
 **Since:** 10
 
+<!--Device-webview-class JsMessageExt--><!--Device-webview-class JsMessageExt-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Get the array value of the the JavaScript code execution result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-JsMessageExt-getArray(): Array<string | number | boolean>--><!--Device-JsMessageExt-getArray(): Array<string | number | boolean>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string \| number \| boolean&gt; | - Returns data of Array type |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string \| number \| boolean> | - Returns data of Array type |
 
 **Error codes:**
 
@@ -50,13 +54,15 @@ Get the array buffer value of the JavaScript code execution result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-JsMessageExt-getArrayBuffer(): ArrayBuffer--><!--Device-JsMessageExt-getArrayBuffer(): ArrayBuffer-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | - Returns data of ArrayBuffer |
+| [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | - Returns data of ArrayBuffer |
 
 **Error codes:**
 
@@ -75,6 +81,8 @@ Get the boolean value of the JavaScript code execution result.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-JsMessageExt-getBoolean(): boolean--><!--Device-JsMessageExt-getBoolean(): boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -100,13 +108,15 @@ Get the object or exception of the the JavaScript code execution result and seri
 
 **Since:** 22
 
+<!--Device-JsMessageExt-getErrorDescription(): string | null--><!--Device-JsMessageExt-getErrorDescription(): string | null-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | - If an exception occurs, or the returned type is object, return theserialized string in the format of "Not support type: &lt;{exception\|object}&gt;", Parts exceeding a length of2048 will be truncated; otherwise, return null. |
+| string | - If an exception occurs, or the returned type is object, return the serialized string in the format of "Not support type: &lt;{exception\|object}&gt;", Parts exceeding a length of2048 will be truncated; otherwise, return null. |
 
 ## getNumber
 
@@ -119,6 +129,8 @@ Get the number value of the JavaScript code execution result.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-JsMessageExt-getNumber(): number--><!--Device-JsMessageExt-getNumber(): number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -146,6 +158,8 @@ Get the string value of the JavaScript code execution result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-JsMessageExt-getString(): string--><!--Device-JsMessageExt-getString(): string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -172,11 +186,13 @@ Get the type of the JavaScript code execution result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-JsMessageExt-getType(): JsMessageType--><!--Device-JsMessageExt-getType(): JsMessageType-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| JsMessageType | - Returns data of JsMessageType type |
+| [JsMessageType](arkts-arkweb-jsmessagetype-e.md) | - Returns data of JsMessageType type |
 

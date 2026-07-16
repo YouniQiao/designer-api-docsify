@@ -4,6 +4,8 @@ Provides the ImageProcessor type, including the processing function.
 
 **Since:** 18
 
+<!--Device-videoProcessingEngine-interface ImageProcessor--><!--Device-videoProcessingEngine-interface ImageProcessor-End-->
+
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
 
 ## Modules to Import
@@ -18,13 +20,13 @@ import { videoProcessingEngine } from '@kit.ImageKit';
 enhanceDetail(sourceImage: image.PixelMap, width: number, height: number, level?: QualityLevel): Promise<image.PixelMap>
 ```
 
-The function generate the destinationImage from sourceImage with necessary scaling operation
-<br>according to width and height. Different levels of scaling methods are provided to
-<br>balance performance and image quality. This method uses a promise to return the result.
+The function generate the destinationImage from sourceImage with necessary scaling operation<br>according to width and height. Different levels of scaling methods are provided to<br>balance performance and image quality. This method uses a promise to return the result.
 
 **Since:** 18
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): Promise<image.PixelMap>--><!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): Promise<image.PixelMap>-End-->
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
 
@@ -35,13 +37,13 @@ The function generate the destinationImage from sourceImage with necessary scali
 | sourceImage | image.PixelMap | Yes | The source pixelmap. |
 | width | number | Yes | The zoom value of width. |
 | height | number | Yes | The zoom value of height. |
-| level | QualityLevel | No | The quality level. |
+| level | [QualityLevel](../../apis-camera-kit/arkts-apis/arkts-camera-qualitylevel-e.md) | No | The quality level. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | A Promise instance used to return the PixelMap object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<image.PixelMap> | A Promise instance used to return the PixelMap object. |
 
 **Error codes:**
 
@@ -72,13 +74,13 @@ async function enhanceDetail(sourceImage: image.PixelMap, width: number, height:
 enhanceDetail(sourceImage: image.PixelMap, scale: number, level?: QualityLevel): Promise<image.PixelMap>
 ```
 
-The function generate the destinationImage from sourceImage with necessary scaling operation
-<br>according to the zoom ratio. Different levels of scaling methods are provided to
-<br>balance performance and image quality. This method uses a promise to return the result.
+The function generate the destinationImage from sourceImage with necessary scaling operation<br>according to the zoom ratio. Different levels of scaling methods are provided to<br>balance performance and image quality. This method uses a promise to return the result.
 
 **Since:** 18
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): Promise<image.PixelMap>--><!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): Promise<image.PixelMap>-End-->
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
 
@@ -88,13 +90,13 @@ The function generate the destinationImage from sourceImage with necessary scali
 | --- | --- | --- | --- |
 | sourceImage | image.PixelMap | Yes | The source pixelmap. |
 | scale | number | Yes | The zoom ratio. |
-| level | QualityLevel | No | The quality level. |
+| level | [QualityLevel](../../apis-camera-kit/arkts-apis/arkts-camera-qualitylevel-e.md) | No | The quality level. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | A Promise instance used to return the PixelMap object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<image.PixelMap> | A Promise instance used to return the PixelMap object. |
 
 **Error codes:**
 
@@ -125,13 +127,13 @@ async function enhanceDetail(sourceImage: image.PixelMap, scale: number) {
 enhanceDetailSync(sourceImage: image.PixelMap, width: number, height: number, level?: QualityLevel): image.PixelMap
 ```
 
-The function generate the destinationImage from sourceImage with necessary scaling operation
-<br>according to width and height. Different levels of scaling methods are provided to
-<br>balance performance and image quality.
+The function generate the destinationImage from sourceImage with necessary scaling operation<br>according to width and height. Different levels of scaling methods are provided to<br>balance performance and image quality.
 
 **Since:** 18
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): image.PixelMap--><!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): image.PixelMap-End-->
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
 
@@ -142,7 +144,7 @@ The function generate the destinationImage from sourceImage with necessary scali
 | sourceImage | image.PixelMap | Yes | The source pixelmap. |
 | width | number | Yes | The zoom value of width. |
 | height | number | Yes | The zoom value of height. |
-| level | QualityLevel | No | The quality level. |
+| level | [QualityLevel](../../apis-camera-kit/arkts-apis/arkts-camera-qualitylevel-e.md) | No | The quality level. |
 
 **Return value:**
 
@@ -180,13 +182,13 @@ async function enhanceDetailSync(sourceImage: image.PixelMap, width: number, hei
 enhanceDetailSync(sourceImage: image.PixelMap, scale: number, level?: QualityLevel): image.PixelMap
 ```
 
-The function generate the destinationImage from sourceImage with necessary scaling operation
-<br>according to the zoom ratio. Different levels of scaling methods are provided to
-<br>balance performance and image quality.
+The function generate the destinationImage from sourceImage with necessary scaling operation<br>according to the zoom ratio. Different levels of scaling methods are provided to<br>balance performance and image quality.
 
 **Since:** 18
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
+
+<!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): image.PixelMap--><!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): image.PixelMap-End-->
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
 
@@ -196,7 +198,7 @@ The function generate the destinationImage from sourceImage with necessary scali
 | --- | --- | --- | --- |
 | sourceImage | image.PixelMap | Yes | The source pixelmap. |
 | scale | number | Yes | The zoom ratio. |
-| level | QualityLevel | No | The quality level. |
+| level | [QualityLevel](../../apis-camera-kit/arkts-apis/arkts-camera-qualitylevel-e.md) | No | The quality level. |
 
 **Return value:**
 

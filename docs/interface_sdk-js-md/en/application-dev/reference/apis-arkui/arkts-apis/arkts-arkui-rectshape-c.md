@@ -8,6 +8,8 @@ This API inherits from [BaseShape](arkts-arkui-baseshape-c.md).
 
 **Since:** 12
 
+<!--Device-unnamed-export declare class RectShape extends BaseShape<RectShape>--><!--Device-unnamed-export declare class RectShape extends BaseShape<RectShape>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -31,6 +33,8 @@ A constructor used to create a **RectShape** object.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-RectShape-constructor(options?: RectShapeOptions | RoundRectShapeOptions)--><!--Device-RectShape-constructor(options?: RectShapeOptions | RoundRectShapeOptions)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,19 +60,21 @@ Sets the radius of the rectangle border corners.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-RectShape-radius(radius: number | string | Array<number | string>): RectShape--><!--Device-RectShape-radius(radius: number | string | Array<number | string>): RectShape-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | number \| string \| Array&lt;number \| string&gt; | Yes | Radius of the rectangle border corners. When an arrayis provided, it should contain exactly four elements, corresponding to the radius of the upper left, upperright, lower left, and lower right corners of the rectangle, respectively. If more than four elements arecontained, only the first four are accepted.<br> When the parameter type is number, the valid value range is[0, +∞). When the parameter type is string, the value must conform to the [Length](../arkts-components/arkts-arkui-length-t.md) type specification.<br>Unit: vp.<br>If the value is invalid, 0 vp is used. |
+| radius | number \| string \| Array<number \| string> | Yes | Radius of the rectangle border corners. When an array is provided, it should contain exactly four elements, corresponding to the radius of the upper left, upper right, lower left, and lower right corners of the rectangle, respectively. If more than four elements are contained, only the first four are accepted.<br> When the parameter type is number, the valid value range is [0, +∞). When the parameter type is string, the value must conform to the [Length](arkts-arkui-length-t.md) type specification.<br>Unit: vp.<br>If the value is invalid, 0 vp is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RectShape | **RectShape** object. |
+| [RectShape](arkts-arkui-rectshape-c.md) | **RectShape** object. |
 
 ## radiusHeight
 
@@ -86,19 +92,21 @@ Sets the radius height of the rectangle border corners.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-RectShape-radiusHeight(rHeight: number | string): RectShape--><!--Device-RectShape-radiusHeight(rHeight: number | string): RectShape-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rHeight | number \| string | Yes | Radius height of the rectangle border corners.<br> When the parameter type isnumber, the valid value range is[0, +∞). When the parameter type is string, the value must conform to the [Length](../arkts-components/arkts-arkui-length-t.md) type specification.<br>Unit: vp.<br>If the value is invalid, 0 vp is used. |
+| rHeight | number \| string | Yes | Radius height of the rectangle border corners.<br> When the parameter type is number, the valid value range is [0, +∞). When the parameter type is string, the value must conform to the [Length](arkts-arkui-length-t.md) type specification.<br>Unit: vp.<br>If the value is invalid, 0 vp is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RectShape | **RectShape** object. |
+| [RectShape](arkts-arkui-rectshape-c.md) | **RectShape** object. |
 
 ## radiusWidth
 
@@ -116,17 +124,19 @@ Sets the radius width of the rectangle border corners.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-RectShape-radiusWidth(rWidth: number | string): RectShape--><!--Device-RectShape-radiusWidth(rWidth: number | string): RectShape-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rWidth | number \| string | Yes | Radius width of the rectangle border corners.<br> When the parameter type isnumber, the valid value range is[0, +∞). When the parameter type is string, the value must conform to the [Length](../arkts-components/arkts-arkui-length-t.md) type specification.<br>Unit: vp.<br>If the value is invalid, 0 vp is used. |
+| rWidth | number \| string | Yes | Radius width of the rectangle border corners.<br> When the parameter type is number, the valid value range is [0, +∞). When the parameter type is string, the value must conform to the [Length](arkts-arkui-length-t.md) type specification.<br>Unit: vp.<br>If the value is invalid, 0 vp is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RectShape | **RectShape** object. |
+| [RectShape](arkts-arkui-rectshape-c.md) | **RectShape** object. |
 

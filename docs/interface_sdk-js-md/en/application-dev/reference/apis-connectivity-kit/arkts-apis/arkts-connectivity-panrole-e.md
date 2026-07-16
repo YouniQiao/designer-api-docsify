@@ -4,6 +4,8 @@ Enum for PAN profile role.
 
 **Since:** 26.0.0
 
+<!--Device-baseProfile-enum PanRole--><!--Device-baseProfile-enum PanRole-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## ROLE_PANNAP
@@ -18,6 +20,8 @@ The PAN role of the device is PANNAP.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PanRole-ROLE_PANNAP = 0--><!--Device-PanRole-ROLE_PANNAP = 0-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## ROLE_PANU
@@ -31,6 +35,8 @@ The PAN role of the device is PANU.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PanRole-ROLE_PANU = 1--><!--Device-PanRole-ROLE_PANU = 1-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

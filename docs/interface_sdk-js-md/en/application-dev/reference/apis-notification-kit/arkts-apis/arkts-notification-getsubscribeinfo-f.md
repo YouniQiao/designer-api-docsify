@@ -12,12 +12,13 @@ import { notificationExtensionSubscription } from '@kit.NotificationKit';
 function getSubscribeInfo(): Promise<NotificationExtensionSubscriptionInfo[]>
 ```
 
-Obtains the subscription information about the notification extension of this application. This API uses a promise
-to return the result.
+Obtains the subscription information about the notification extension of this application. This API uses a promise to return the result.
 
 **Since:** 22
 
 **Required permissions:** ohos.permission.SUBSCRIBE_NOTIFICATION
+
+<!--Device-notificationExtensionSubscription-function getSubscribeInfo(): Promise<NotificationExtensionSubscriptionInfo[]>--><!--Device-notificationExtensionSubscription-function getSubscribeInfo(): Promise<NotificationExtensionSubscriptionInfo[]>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -25,7 +26,7 @@ to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NotificationExtensionSubscriptionInfo[]&gt; | Promise used to return the[NotificationExtensionSubscriptionInfo[]]{@link ./notification/NotificationExtensionSubscriptionInfo:NotificationExtensionSubscriptionInfo}array. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NotificationExtensionSubscriptionInfo[]> | Promise used to return the [NotificationExtensionSubscriptionInfo[]]{@link ./notification/NotificationExtensionSubscriptionInfo:NotificationExtensionSubscriptionInfo}array. |
 
 **Error codes:**
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-remoteDevice-interface RemoteDevice--><!--Device-remoteDevice-interface RemoteDevice-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
+
+## 导入模块
+
+```TypeScript
+import { remoteDevice } from '@kit.ConnectivityKit';
+```
 
 ## getAcbState
 
@@ -20,13 +28,15 @@ getAcbState(): AcbState
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RemoteDevice-getAcbState(): AcbState--><!--Device-RemoteDevice-getAcbState(): AcbState-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AcbState | 返回ACB连接状态。 |
+| [AcbState](arkts-connectivity-acbstate-e.md) | 返回ACB连接状态。 |
 
 **错误码：**
 
@@ -50,13 +60,15 @@ getConnectionState(): ConnectionState
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RemoteDevice-getConnectionState(): ConnectionState--><!--Device-RemoteDevice-getConnectionState(): ConnectionState-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ConnectionState | 返回连接状态。 |
+| [ConnectionState](arkts-connectivity-connectionstate-t.md) | 返回连接状态。 |
 
 **错误码：**
 
@@ -80,13 +92,15 @@ getDeviceClass(): DeviceClass
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RemoteDevice-getDeviceClass(): DeviceClass--><!--Device-RemoteDevice-getDeviceClass(): DeviceClass-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DeviceClass | 星闪设备的类型。 |
+| [DeviceClass](arkts-connectivity-deviceclass-e.md) | 星闪设备的类型。 |
 
 **错误码：**
 
@@ -110,13 +124,15 @@ getDeviceInformation(): DeviceInformation
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RemoteDevice-getDeviceInformation(): DeviceInformation--><!--Device-RemoteDevice-getDeviceInformation(): DeviceInformation-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DeviceInformation | 返回远端设备信息。 |
+| [DeviceInformation](arkts-connectivity-deviceinformation-i.md) | 返回远端设备信息。 |
 
 **错误码：**
 
@@ -139,6 +155,8 @@ getDeviceName(): string
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RemoteDevice-getDeviceName(): string--><!--Device-RemoteDevice-getDeviceName(): string-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -170,13 +188,15 @@ getPairingState(): PairingState
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RemoteDevice-getPairingState(): PairingState--><!--Device-RemoteDevice-getPairingState(): PairingState-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| PairingState | 返回配对状态。 |
+| [PairingState](arkts-connectivity-pairingstate-t.md) | 返回配对状态。 |
 
 **错误码：**
 
@@ -200,13 +220,15 @@ startPairing(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RemoteDevice-startPairing(): Promise<void>--><!--Device-RemoteDevice-startPairing(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise<void> | 返回promise对象。 |
 
 **错误码：**
 

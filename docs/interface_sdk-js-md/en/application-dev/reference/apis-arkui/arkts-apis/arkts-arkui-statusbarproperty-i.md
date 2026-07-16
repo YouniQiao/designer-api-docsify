@@ -1,9 +1,10 @@
 # StatusBarProperty
 
-Describes the properties of the status bar. These properties are returned when you query the status bar's
-configuration details.
+Describes the properties of the status bar. These properties are returned when you query the status bar's configuration details.
 
 **Since:** 18
+
+<!--Device-window-interface StatusBarProperty--><!--Device-window-interface StatusBarProperty-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -26,6 +27,8 @@ Color of the text on the status bar. The value is in ARGB format, for example, *
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-StatusBarProperty-contentColor: string--><!--Device-StatusBarProperty-contentColor: string-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

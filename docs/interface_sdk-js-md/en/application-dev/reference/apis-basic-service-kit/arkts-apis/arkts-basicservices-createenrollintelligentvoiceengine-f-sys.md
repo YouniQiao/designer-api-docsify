@@ -18,6 +18,8 @@ Obtains an {@link EnrollIntelligentVoiceEngine} instance. This method uses an as
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-intelligentVoice-function createEnrollIntelligentVoiceEngine(descriptor: EnrollIntelligentVoiceEngineDescriptor, callback: AsyncCallback<EnrollIntelligentVoiceEngine>): void--><!--Device-intelligentVoice-function createEnrollIntelligentVoiceEngine(descriptor: EnrollIntelligentVoiceEngineDescriptor, callback: AsyncCallback<EnrollIntelligentVoiceEngine>): void-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Obtains an {@link EnrollIntelligentVoiceEngine} instance. This method uses an as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | EnrollIntelligentVoiceEngineDescriptor | Yes | descriptor indicates enroll intelligent voice engine descriptor. |
-| callback | AsyncCallback&lt;EnrollIntelligentVoiceEngine&gt; | Yes | the callback used to return the EnrollIntelligentVoiceEngine instance. |
+| descriptor | [EnrollIntelligentVoiceEngineDescriptor](arkts-basicservices-enrollintelligentvoiceenginedescriptor-i-sys.md) | Yes | descriptor indicates enroll intelligent voice engine descriptor. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<EnrollIntelligentVoiceEngine> | Yes | the callback used to return the EnrollIntelligentVoiceEngine instance. |
 
 **Error codes:**
 
@@ -72,6 +74,8 @@ Obtains an {@link EnrollIntelligentVoiceEngine} instance. This method uses a pro
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-intelligentVoice-function createEnrollIntelligentVoiceEngine(descriptor: EnrollIntelligentVoiceEngineDescriptor): Promise<EnrollIntelligentVoiceEngine>--><!--Device-intelligentVoice-function createEnrollIntelligentVoiceEngine(descriptor: EnrollIntelligentVoiceEngineDescriptor): Promise<EnrollIntelligentVoiceEngine>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -80,13 +84,13 @@ Obtains an {@link EnrollIntelligentVoiceEngine} instance. This method uses a pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | EnrollIntelligentVoiceEngineDescriptor | Yes | descriptor indicates enroll intelligent voice engine descriptor. |
+| descriptor | [EnrollIntelligentVoiceEngineDescriptor](arkts-basicservices-enrollintelligentvoiceenginedescriptor-i-sys.md) | Yes | descriptor indicates enroll intelligent voice engine descriptor. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;EnrollIntelligentVoiceEngine&gt; | the promise used to return the EnrollIntelligentVoiceEngine instance. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<EnrollIntelligentVoiceEngine> | the promise used to return the EnrollIntelligentVoiceEngine instance. |
 
 **Error codes:**
 

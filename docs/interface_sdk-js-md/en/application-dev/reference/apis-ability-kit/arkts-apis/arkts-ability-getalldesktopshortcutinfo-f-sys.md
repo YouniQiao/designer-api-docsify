@@ -18,6 +18,8 @@ Obtains the information about all shortcuts of the given user.
 
 **Required permissions:** ohos.permission.MANAGE_SHORTCUTS
 
+<!--Device-shortcutManager-function getAllDesktopShortcutInfo(userId: int): Promise<Array<ShortcutInfo>>--><!--Device-shortcutManager-function getAllDesktopShortcutInfo(userId: int): Promise<Array<ShortcutInfo>>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Obtains the information about all shortcuts of the given user.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). |
+| userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ShortcutInfo&gt;&gt; | Promise that returns the shortcut information defined in the applicationconfiguration file. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ShortcutInfo>> | Promise that returns the shortcut information defined in the application configuration file. |
 
 **Error codes:**
 

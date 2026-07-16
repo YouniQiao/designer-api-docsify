@@ -4,6 +4,8 @@ Describes the configuration for file type filtering.
 
 **Since:** 19
 
+<!--Device-photoAccessHelper-class MimeTypeFilter--><!--Device-photoAccessHelper-class MimeTypeFilter-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -18,8 +20,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 mimeTypeArray: Array<string>
 ```
 
-Types of media files that PhotoPicker allows users to filter by. The maximum array length is 10, thus supporting
-up to 10 specified types.
+Types of media files that PhotoPicker allows users to filter by. The maximum array length is 10, thus supporting up to 10 specified types.
 
 The filter type is defined by the MIME type, for example, image/jpeg and video/mp4.
 
@@ -28,6 +29,8 @@ The filter type is defined by the MIME type, for example, image/jpeg and video/m
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-MimeTypeFilter-mimeTypeArray: Array<string>--><!--Device-MimeTypeFilter-mimeTypeArray: Array<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

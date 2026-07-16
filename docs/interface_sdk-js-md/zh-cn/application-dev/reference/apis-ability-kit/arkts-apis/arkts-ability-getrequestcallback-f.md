@@ -1,5 +1,11 @@
 # getRequestCallback
 
+## 导入模块
+
+```TypeScript
+import { dialogRequest } from '@kit.AbilityKit';
+```
+
 ## getRequestCallback
 
 ```TypeScript
@@ -8,12 +14,14 @@ function getRequestCallback(want: Want): RequestCallback
 
 从Want中获取请求方的RequestCallback。
 
-> **说明：**
->
-> 该接口可以在ServiceExtensionAbility下使用，如果ServiceExtensionAbility实现了模态弹框，则能从Want中获取请求方的RequestCallback。其他场景使用该接口，均无法获取返回
+> **说明：**  
+>  
+> 该接口可以在ServiceExtensionAbility下使用，如果ServiceExtensionAbility实现了模态弹框，则能从Want中获取请求方的RequestCallback。其他场景使用该接口，均无法获取返回  
 > 值。
 
 **起始版本：** 9
+
+<!--Device-dialogRequest-function getRequestCallback(want: Want): RequestCallback--><!--Device-dialogRequest-function getRequestCallback(want: Want): RequestCallback-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -21,13 +29,13 @@ function getRequestCallback(want: Want): RequestCallback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | Want | 是 | 表示发起方请求弹框时传入的want信息。 |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 表示发起方请求弹框时传入的want信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| RequestCallback | 请求方RequestCallback，用于设置返回结果。 |
+| [RequestCallback](arkts-ability-requestcallback-i.md) | 请求方RequestCallback，用于设置返回结果。 |
 
 **错误码：**
 

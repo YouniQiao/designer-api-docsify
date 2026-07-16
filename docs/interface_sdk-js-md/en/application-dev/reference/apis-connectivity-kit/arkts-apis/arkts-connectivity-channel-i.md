@@ -4,6 +4,8 @@ Channel represents an [ISO 7816-4] channel opened to a SE. It can be either a lo
 
 **Since:** 10
 
+<!--Device-omapi-export interface Channel--><!--Device-omapi-export interface Channel-End-->
+
 **System capability:** SystemCapability.Communication.SecureElement
 
 ## Modules to Import
@@ -18,10 +20,11 @@ import { omapi } from '@kit.ConnectivityKit';
 close(): void
 ```
 
-Closes this channel to the SE.
-If the method is called when the channel is already closed, this method SHALL be ignored.
+Closes this channel to the SE.If the method is called when the channel is already closed, this method SHALL be ignored.
 
 **Since:** 10
+
+<!--Device-Channel-close(): void--><!--Device-Channel-close(): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
 
@@ -54,10 +57,11 @@ try {
 getSelectResponse(): number[]
 ```
 
-Returns the data as received from the application select command, including the status word received
-at applet selection.
+Returns the data as received from the application select command, including the status word received at applet selection.
 
 **Since:** 10
+
+<!--Device-Channel-getSelectResponse(): number[]--><!--Device-Channel-getSelectResponse(): number[]-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
 
@@ -101,13 +105,15 @@ Get the session that has opened this channel.
 
 **Since:** 10
 
+<!--Device-Channel-getSession(): Session--><!--Device-Channel-getSession(): Session-End-->
+
 **System capability:** SystemCapability.Communication.SecureElement
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Session | The Session object this channel is bound to. |
+| [Session](../../apis-camera-kit/arkts-apis/arkts-camera-session-i.md) | The Session object this channel is bound to. |
 
 **Error codes:**
 
@@ -143,6 +149,8 @@ isBasicChannel(): boolean
 Checks whether this channel is the basic channel.
 
 **Since:** 10
+
+<!--Device-Channel-isBasicChannel(): boolean--><!--Device-Channel-isBasicChannel(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
 
@@ -186,6 +194,8 @@ Checks if this channel is closed.
 
 **Since:** 10
 
+<!--Device-Channel-isClosed(): boolean--><!--Device-Channel-isClosed(): boolean-End-->
+
 **System capability:** SystemCapability.Communication.SecureElement
 
 **Return value:**
@@ -228,6 +238,8 @@ Transmit an APDU command (as per ISO/IEC 7816) to the SE.
 
 **Since:** 10
 
+<!--Device-Channel-transmit(command: number[]): Promise<number[]>--><!--Device-Channel-transmit(command: number[]): Promise<number[]>-End-->
+
 **System capability:** SystemCapability.Communication.SecureElement
 
 **Parameters:**
@@ -240,7 +252,7 @@ Transmit an APDU command (as per ISO/IEC 7816) to the SE.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number[]&gt; | The response received, as a byte array. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number[]> | The response received, as a byte array. |
 
 **Error codes:**
 
@@ -285,6 +297,8 @@ Transmit an APDU command (as per ISO/IEC 7816) to the SE.
 
 **Since:** 10
 
+<!--Device-Channel-transmit(command: number[], callback: AsyncCallback<number[]>): void--><!--Device-Channel-transmit(command: number[], callback: AsyncCallback<number[]>): void-End-->
+
 **System capability:** SystemCapability.Communication.SecureElement
 
 **Parameters:**
@@ -292,7 +306,7 @@ Transmit an APDU command (as per ISO/IEC 7816) to the SE.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | command | number[] | Yes | The APDU command to be transmitted, as a byte array. |
-| callback | AsyncCallback&lt;number[]&gt; | Yes | The callback to return the response received, as a byte array. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number[]> | Yes | The callback to return the response received, as a byte array. |
 
 **Error codes:**
 

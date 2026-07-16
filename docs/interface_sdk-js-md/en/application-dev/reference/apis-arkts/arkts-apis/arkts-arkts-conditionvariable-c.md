@@ -6,6 +6,8 @@ Object used for thread synchronization.
 
 **Decorator:** @Sendable
 
+<!--Device-locks-class ConditionVariable--><!--Device-locks-class ConditionVariable-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Default constructor.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ConditionVariable-constructor()--><!--Device-ConditionVariable-constructor()-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## notifyAll
@@ -39,6 +43,8 @@ Notify all waiting promise.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ConditionVariable-notifyAll(): void--><!--Device-ConditionVariable-notifyAll(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -54,6 +60,8 @@ Notify one waiting promise.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ConditionVariable-notifyOne(): void--><!--Device-ConditionVariable-notifyOne(): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## request
@@ -68,6 +76,8 @@ Find or create an instance of ConditionVariable using the specified name.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ConditionVariable-static request(name: string): ConditionVariable--><!--Device-ConditionVariable-static request(name: string): ConditionVariable-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -80,7 +90,7 @@ Find or create an instance of ConditionVariable using the specified name.
 
 | Type | Description |
 | --- | --- |
-| ConditionVariable | Returns an instance of ConditionVariable. |
+| [ConditionVariable](arkts-arkts-conditionvariable-c.md) | Returns an instance of ConditionVariable. |
 
 ## wait
 
@@ -94,13 +104,15 @@ Waits for the ConditionVariable to be notified.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ConditionVariable-wait(): Promise<void>--><!--Device-ConditionVariable-wait(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A promise will be resolved once the ConditionVariable is notified.. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A promise will be resolved once the ConditionVariable is notified.. |
 
 ## waitFor
 
@@ -114,6 +126,8 @@ Waits for the ConditionVariable to be notified, or until the specified time limi
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ConditionVariable-waitFor(timeout: number): Promise<void>--><!--Device-ConditionVariable-waitFor(timeout: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -126,5 +140,5 @@ Waits for the ConditionVariable to be notified, or until the specified time limi
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A promise that will be resolved once the ConditionVariable is notified orthespecified time limit is reached. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A promise that will be resolved once the ConditionVariable is notified or the specified time limit is reached. |
 

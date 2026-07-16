@@ -8,6 +8,8 @@ Base interface of profile.
 
 **Substitutes:** BaseProfile
 
+<!--Device-bluetoothManager-interface BaseProfile--><!--Device-bluetoothManager-interface BaseProfile-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -22,8 +24,7 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 getConnectionDevices(): Array<string>
 ```
 
-Obtains the connected devices list of profile.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Obtains the connected devices list of profile.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -35,13 +36,15 @@ On API 10 and above, the permission required by this interface is changed from U
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
+<!--Device-BaseProfile-getConnectionDevices(): Array<string>--><!--Device-BaseProfile-getConnectionDevices(): Array<string>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Returns the address of connected devices list. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Returns the address of connected devices list. |
 
 **Error codes:**
 
@@ -73,8 +76,7 @@ try {
 getDeviceState(device: string): ProfileConnectionState
 ```
 
-Obtains the profile state of device.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Obtains the profile state of device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -85,6 +87,8 @@ On API 10 and above, the permission required by this interface is changed from U
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
+
+<!--Device-BaseProfile-getDeviceState(device: string): ProfileConnectionState--><!--Device-BaseProfile-getDeviceState(device: string): ProfileConnectionState-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -98,7 +102,7 @@ On API 10 and above, the permission required by this interface is changed from U
 
 | Type | Description |
 | --- | --- |
-| ProfileConnectionState | Returns {@link ProfileConnectionState} of device. |
+| [ProfileConnectionState](arkts-connectivity-profileconnectionstate-e.md) | Returns {@link ProfileConnectionState} of device. |
 
 **Error codes:**
 

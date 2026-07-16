@@ -16,13 +16,15 @@ Checks whether a call is ongoing.
 
 **Since:** 6
 
+<!--Device-call-function hasCall(callback: AsyncCallback<boolean>): void--><!--Device-call-function hasCall(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | The callback of hasCall. Returns {@code true} if at least one call isnot in the {@link CallState#CALL_STATE_IDLE} state; returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | The callback of hasCall. Returns {@code true} if at least one call is not in the {@link CallState#CALL_STATE_IDLE} state; returns {@code false} otherwise. |
 
 **Example**
 
@@ -50,13 +52,15 @@ Checks whether a call is ongoing.
 
 **Since:** 6
 
+<!--Device-call-function hasCall(): Promise<boolean>--><!--Device-call-function hasCall(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns {@code true} if at least one call is notin the {@link CallState#CALL_STATE_IDLE} state; returns {@code false} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns {@code true} if at least one call is not in the {@link CallState#CALL_STATE_IDLE} state; returns {@code false} otherwise. |
 
 **Example**
 

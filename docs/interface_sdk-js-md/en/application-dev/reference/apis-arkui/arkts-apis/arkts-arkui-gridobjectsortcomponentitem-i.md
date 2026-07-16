@@ -4,6 +4,8 @@ Provides data item configuration for the **GridObjectSortComponent** component.
 
 **Since:** 11
 
+<!--Device-unnamed-export interface GridObjectSortComponentItem--><!--Device-unnamed-export interface GridObjectSortComponentItem-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,6 +32,8 @@ The default value is an empty string.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GridObjectSortComponentItem-id: number | string--><!--Device-GridObjectSortComponentItem-id: number | string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## order
@@ -52,6 +56,8 @@ Default value: **0**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GridObjectSortComponentItem-order: number--><!--Device-GridObjectSortComponentItem-order: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selected
@@ -60,8 +66,7 @@ Default value: **0**.
 selected: boolean
 ```
 
-Whether the grid object has been added. The value **true** means that the grid object has been added, and **false**
-means the opposite.
+Whether the grid object has been added. The value **true** means that the grid object has been added, and **false** means the opposite.
 
 **Type:** boolean
 
@@ -71,6 +76,8 @@ means the opposite.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GridObjectSortComponentItem-selected: boolean--><!--Device-GridObjectSortComponentItem-selected: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## symbolStyle
@@ -79,8 +86,7 @@ means the opposite.
 symbolStyle?: SymbolGlyphModifier
 ```
 
-Symbol resource of the image. Required when **GridObjectSortComponentType** is set to **IMAGE_TEXT**. The priority
-of this property is higher than that of **url**.
+Symbol resource of the image. Required when **GridObjectSortComponentType** is set to **IMAGE_TEXT**. The priority of this property is higher than that of **url**.
 
 **Type:** SymbolGlyphModifier
 
@@ -89,6 +95,8 @@ of this property is higher than that of **url**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-GridObjectSortComponentItem-symbolStyle?: SymbolGlyphModifier--><!--Device-GridObjectSortComponentItem-symbolStyle?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,6 +116,8 @@ Text information.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GridObjectSortComponentItem-text: ResourceStr--><!--Device-GridObjectSortComponentItem-text: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## url
@@ -125,6 +135,8 @@ URL of the image. Required when **GridObjectSortComponentType** is set to **IMAG
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GridObjectSortComponentItem-url?: ResourceStr--><!--Device-GridObjectSortComponentItem-url?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -20,6 +20,8 @@ Send execute result.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-insightIntentProvider-function sendExecuteResult(instanceId: int, result: insightIntent.ExecuteResult): Promise<void>--><!--Device-insightIntentProvider-function sendExecuteResult(instanceId: int, result: insightIntent.ExecuteResult): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
@@ -33,7 +35,7 @@ Send execute result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - The promise returned by the function. |
 
 **Error codes:**
 

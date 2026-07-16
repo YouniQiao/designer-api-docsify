@@ -4,6 +4,8 @@ Provides the configuration options for the popup.
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface PopupOptions--><!--Device-unnamed-declare interface PopupOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## arrowHeight
@@ -32,6 +34,8 @@ Percentage values are not supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PopupOptions-arrowHeight?: Dimension--><!--Device-PopupOptions-arrowHeight?: Dimension-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## arrowOffset
@@ -42,29 +46,25 @@ arrowOffset?: Length
 
 Offset of the popup arrow relative to the popup.
 
-When the arrow is at the top or bottom of the popup: The value **0** indicates that the arrow is located on the
-leftmost, and any other value indicates the distance from the arrow to the leftmost; the arrow is centered by
-default.
+When the arrow is at the top or bottom of the popup: The value **0** indicates that the arrow is located on the leftmost, and any other value indicates the distance from the arrow to the leftmost; the arrow is centered by default.
 
-When the arrow is on the left or right side of the popup: The value indicates the distance from the arrow to the
-top; the arrow is centered by default.
+When the arrow is on the left or right side of the popup: The value indicates the distance from the arrow to the top; the arrow is centered by default.
 
-When the popup is displayed on either edge of the screen, it automatically adjusts horizontally. When the value is
-**0**, the arrow always points to the bound component.
+When the popup is displayed on either edge of the screen, it automatically adjusts horizontally. When the value is **0**, the arrow always points to the bound component.
 
 Unit: vp
 
 **NOTE**
 
-1. If **arrowOffset** is not set, the distance between the popup arrow and the four corners must be no less than the corner radius.
-2. If **arrowPointPosition** is set, **arrowOffset** does not take effect.
-3. Percentage values are not supported.
+1. If **arrowOffset** is not set, the distance between the popup arrow and the four corners must be no less than the corner radius.2. If **arrowPointPosition** is set, **arrowOffset** does not take effect.3. Percentage values are not supported.
 
 **Type:** Length
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PopupOptions-arrowOffset?: Length--><!--Device-PopupOptions-arrowOffset?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,8 +74,7 @@ Unit: vp
 arrowPointPosition?: ArrowPointPosition
 ```
 
-Position of the tooltip arrow relative to its parent component. Available positions are **Start**, **Center**, and
-**End**, in both vertical and horizontal directions. All these positions are within the parent component area.
+Position of the tooltip arrow relative to its parent component. Available positions are **Start**, **Center**, and **End**, in both vertical and horizontal directions. All these positions are within the parent component area.
 
 Default value: **ArrowPointPosition.CENTER**
 
@@ -87,6 +86,8 @@ Default value: **ArrowPointPosition.CENTER**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PopupOptions-arrowPointPosition?: ArrowPointPosition--><!--Device-PopupOptions-arrowPointPosition?: ArrowPointPosition-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## arrowWidth
@@ -95,8 +96,7 @@ Default value: **ArrowPointPosition.CENTER**
 arrowWidth?: Dimension
 ```
 
-Arrow thickness. If the arrow thickness exceeds the length of the edge minus twice the size of the popup rounded
-corner, the arrow is not drawn.
+Arrow thickness. If the arrow thickness exceeds the length of the edge minus twice the size of the popup rounded corner, the arrow is not drawn.
 
 Default value: **16**
 
@@ -115,6 +115,8 @@ Percentage values are not supported.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupOptions-arrowWidth?: Dimension--><!--Device-PopupOptions-arrowWidth?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -140,6 +142,8 @@ Default value: **true**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PopupOptions-autoCancel?: boolean--><!--Device-PopupOptions-autoCancel?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## avoidTarget
@@ -161,6 +165,8 @@ Default value: **AvoidanceMode.COVER_TARGET**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PopupOptions-avoidTarget?: AvoidanceMode--><!--Device-PopupOptions-avoidTarget?: AvoidanceMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -184,6 +190,8 @@ Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PopupOptions-backgroundBlurStyle?: BlurStyle--><!--Device-PopupOptions-backgroundBlurStyle?: BlurStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundBlurStyleOptions
@@ -201,6 +209,8 @@ Defines the popup's background blur style with options
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-PopupOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions--><!--Device-PopupOptions-backgroundBlurStyleOptions?: BackgroundBlurStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -220,6 +230,8 @@ Defines the popup's background effect with options
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-PopupOptions-backgroundEffect?: BackgroundEffectOptions--><!--Device-PopupOptions-backgroundEffect?: BackgroundEffectOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## borderLinearGradient
@@ -232,8 +244,7 @@ Linear gradient color of the inner outline of the popup.
 
 **NOTE**
 
-1. If **borderLinearGradient** is not set or set to **null** or **undefined**, the linear gradient color of the inner outline does not take effect.
-2. When **borderLinearGradient** is set, the default value of **direction** is **GradientDirection.Bottom**.
+1. If **borderLinearGradient** is not set or set to **null** or **undefined**, the linear gradient color of the inner outline does not take effect.2. When **borderLinearGradient** is set, the default value of **direction** is **GradientDirection.Bottom**.
 
 **Type:** PopupBorderLinearGradient
 
@@ -242,6 +253,8 @@ Linear gradient color of the inner outline of the popup.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PopupOptions-borderLinearGradient?: PopupBorderLinearGradient--><!--Device-PopupOptions-borderLinearGradient?: PopupBorderLinearGradient-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -259,9 +272,7 @@ Unit: vp
 
 **NOTE**
 
-1. Percentage values are not supported. If a percentage value is set, the value **0** is used.
-2. If no inner outline is set, this parameter must be used together with **borderLinearGradient**.
-3. For double outlines, it is recommended that the inner outline width should not exceed 10 vp.
+1. Percentage values are not supported. If a percentage value is set, the value **0** is used.2. If no inner outline is set, this parameter must be used together with **borderLinearGradient**.3. For double outlines, it is recommended that the inner outline width should not exceed 10 vp.
 
 **Type:** Dimension
 
@@ -270,6 +281,8 @@ Unit: vp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PopupOptions-borderWidth?: Dimension--><!--Device-PopupOptions-borderWidth?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -291,6 +304,8 @@ Define the popup theme color mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-PopupOptions-colorMode?: AnchoredColorMode--><!--Device-PopupOptions-colorMode?: AnchoredColorMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableArrow
@@ -307,8 +322,7 @@ Default value: **true**
 
 **NOTE**
 
-If the available space on the screen is insufficient, the popup will cover part of the component and the arrow will
-not be displayed.
+If the available space on the screen is insufficient, the popup will cover part of the component and the arrow will not be displayed.
 
 **Type:** boolean
 
@@ -320,6 +334,8 @@ not be displayed.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PopupOptions-enableArrow?: boolean--><!--Device-PopupOptions-enableArrow?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableHoverMode
@@ -328,17 +344,13 @@ not be displayed.
 enableHoverMode?: boolean
 ```
 
-Whether the popup responds when the device is in hover mode (semi-folded state), that is, whether it triggers
-avoidance of the crease area in hover mode.
+Whether the popup responds when the device is in hover mode (semi-folded state), that is, whether it triggers avoidance of the crease area in hover mode.
 
-Default value: **false** (**true** for 2-in-1 devices by default). If this parameter is not set or set to an
-invalid value, the default value is used.
+Default value: **false** (**true** for 2-in-1 devices by default). If this parameter is not set or set to an invalid value, the default value is used.
 
 **NOTE**
 
-1. If the popup position is within the crease area in hover mode, it will not respond in hover mode.
-2. This parameter is supported on 2-in-1 devices since API version 20.
-3. This parameter only takes effect in window waterfall mode for 2-in-1 devices.
+1. If the popup position is within the crease area in hover mode, it will not respond in hover mode.2. This parameter is supported on 2-in-1 devices since API version 20.3. This parameter only takes effect in window waterfall mode for 2-in-1 devices.
 
 **Type:** boolean
 
@@ -350,6 +362,8 @@ invalid value, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-PopupOptions-enableHoverMode?: boolean--><!--Device-PopupOptions-enableHoverMode?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## followTransformOfTarget
@@ -358,11 +372,9 @@ invalid value, the default value is used.
 followTransformOfTarget?: boolean
 ```
 
-Whether the popup aligns with the transformed position of the target when the target component or its parent
-container has transformations (such as rotation and scaling).
+Whether the popup aligns with the transformed position of the target when the target component or its parent container has transformations (such as rotation and scaling).
 
-**true**: The popup aligns with the transformed position of the target; **false**: The popup does not track such
-transformations, which may result in incorrect display.
+**true**: The popup aligns with the transformed position of the target; **false**: The popup does not track such transformations, which may result in incorrect display.
 
 Default value: **false**
 
@@ -376,6 +388,8 @@ Default value: **false**
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-PopupOptions-followTransformOfTarget?: boolean--><!--Device-PopupOptions-followTransformOfTarget?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## keyboardAvoidMode
@@ -384,10 +398,7 @@ Default value: **false**
 keyboardAvoidMode?: KeyboardAvoidMode
 ```
 
-Whether to avoid the soft keyboard. By default, the popup does not avoid the soft keyboard. When configured to
-avoid the soft keyboard, if the popup display space is insufficient, the display mode of the popup changes from
-being centered over the parent component to being translated and covering the parent component.. In addition, if
-the popup arrow does not point to the host, the arrow will not be displayed.
+Whether to avoid the soft keyboard. By default, the popup does not avoid the soft keyboard. When configured to avoid the soft keyboard, if the popup display space is insufficient, the display mode of the popup changes from being centered over the parent component to being translated and covering the parent component.. In addition, if the popup arrow does not point to the host, the arrow will not be displayed.
 
 Default value: **KeyboardAvoidMode.NONE**
 
@@ -400,6 +411,8 @@ Default value: **KeyboardAvoidMode.NONE**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-PopupOptions-keyboardAvoidMode?: KeyboardAvoidMode--><!--Device-PopupOptions-keyboardAvoidMode?: KeyboardAvoidMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -418,6 +431,8 @@ Defines the display level of the popup.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-PopupOptions-levelMode?: LevelMode--><!--Device-PopupOptions-levelMode?: LevelMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -443,6 +458,8 @@ Default value: **true**
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PopupOptions-mask?: boolean | { color: ResourceColor }--><!--Device-PopupOptions-mask?: boolean | { color: ResourceColor }-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## message
@@ -458,6 +475,8 @@ Content of the popup.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PopupOptions-message: string--><!--Device-PopupOptions-message: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -476,6 +495,8 @@ Configuration options of the popup message.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PopupOptions-messageOptions?: PopupMessageOptions--><!--Device-PopupOptions-messageOptions?: PopupMessageOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -505,6 +526,8 @@ Percentage values are not supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PopupOptions-offset?: Position--><!--Device-PopupOptions-offset?: Position-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onStateChange
@@ -523,9 +546,7 @@ onStateChange?: (event: {
   }) => void
 ```
 
-Callback for popup visibility state changes. The parameter **isVisible** indicates the visibility of the popup. It
-returns **true** when the popup transitions from closed to open, and **false** when the popup transitions from open
-to closed.
+Callback for popup visibility state changes. The parameter **isVisible** indicates the visibility of the popup. It returns **true** when the popup transitions from closed to open, and **false** when the popup transitions from open to closed.
 
 **Type:** (event: {
     /**
@@ -554,6 +575,28 @@ to closed.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PopupOptions-onStateChange?: (event: {
+    /**
+     * is Visible.
+     *
+     ******/
+    /**
+     * is Visible.
+     *
+     *******/
+    isVisible: boolean
+  }) => void--><!--Device-PopupOptions-onStateChange?: (event: {
+    /**
+     * is Visible.
+     *
+     ******/
+    /**
+     * is Visible.
+     *
+     *******/
+    isVisible: boolean
+  }) => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onWillDismiss
@@ -562,11 +605,9 @@ to closed.
 onWillDismiss?: boolean | Callback<DismissPopupAction>
 ```
 
-Interactive dismissal behavior. The default value is **true**, meaning that the popup responds to clicks, swipes (
-left or right), and the back button.
+Interactive dismissal behavior. The default value is **true**, meaning that the popup responds to clicks, swipes (left or right), and the back button.
 
-1. For the boolean type, if this parameter is set to **false**, the popup ignores clicks, swipes, back button, route navigation, and **Esc** key events, and can only be dismissed by setting the **show** parameter to **false**; if this parameter is set to **true**, the popup responds to dismissal events.
-2. If this parameter is set to a function, the dismissal event is intercepted and the callback function is executed. For swipes, back button, route navigation, and the **Esc** key, the value of **reason** returned in the callback function is **PRESS_BACK**. For clicks, the value is **TOUCH_OUTSIDE**.
+1. For the boolean type, if this parameter is set to **false**, the popup ignores clicks, swipes, back button, route navigation, and **Esc** key events, and can only be dismissed by setting the **show** parameter to **false**; if this parameter is set to **true**, the popup responds to dismissal events.2. If this parameter is set to a function, the dismissal event is intercepted and the callback function is executed. For swipes, back button, route navigation, and the **Esc** key, the value of **reason** returned in the callback function is **PRESS_BACK**. For clicks, the value is **TOUCH_OUTSIDE**.
 
 **NOTE**
 
@@ -580,6 +621,8 @@ No more **onWillDismiss** callback is allowed in an **onWillDismiss** callback.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PopupOptions-onWillDismiss?: boolean | Callback<DismissPopupAction>--><!--Device-PopupOptions-onWillDismiss?: boolean | Callback<DismissPopupAction>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## outlineLinearGradient
@@ -592,8 +635,7 @@ Linear gradient color of the outer outline of the popup.
 
 **NOTE**
 
-1. If **outlineLinearGradient** is not set or set to **null** or **undefined**, the linear gradient color of the outer outline does not take effect.
-2. When **outlineLinearGradient** is set, the default value of **direction** is **GradientDirection.Bottom**.
+1. If **outlineLinearGradient** is not set or set to **null** or **undefined**, the linear gradient color of the outer outline does not take effect.2. When **outlineLinearGradient** is set, the default value of **direction** is **GradientDirection.Bottom**.
 
 **Type:** PopupBorderLinearGradient
 
@@ -602,6 +644,8 @@ Linear gradient color of the outer outline of the popup.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PopupOptions-outlineLinearGradient?: PopupBorderLinearGradient--><!--Device-PopupOptions-outlineLinearGradient?: PopupBorderLinearGradient-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -619,9 +663,7 @@ Unit: vp
 
 **NOTE**
 
-1. Percentage values are not supported. If a percentage value is set, the value **0** is used.
-2. If the outer outline is not set, this parameter must be used together with **outlineLinearGradient**.
-3. For double outlines, it is recommended that the outer outline width should not exceed 10 vp.
+1. Percentage values are not supported. If a percentage value is set, the value **0** is used.2. If the outer outline is not set, this parameter must be used together with **outlineLinearGradient**.3. For double outlines, it is recommended that the outer outline width should not exceed 10 vp.
 
 **Type:** Dimension
 
@@ -630,6 +672,8 @@ Unit: vp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PopupOptions-outlineWidth?: Dimension--><!--Device-PopupOptions-outlineWidth?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -641,8 +685,7 @@ placement?: Placement
 
 Display position of the popup relative to the host node. The default value is **Placement.Bottom**.
 
-If both **placementOnTop** and **placement** are set, the latter prevails. If the popup cannot be completely
-displayed in the specified position, the popup automatically adjusts its position to completely show itself.
+If both **placementOnTop** and **placement** are set, the latter prevails. If the popup cannot be completely displayed in the specified position, the popup automatically adjusts its position to completely show itself.
 
 **Type:** Placement
 
@@ -654,6 +697,8 @@ displayed in the specified position, the popup automatically adjusts its positio
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PopupOptions-placement?: Placement--><!--Device-PopupOptions-placement?: Placement-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## placementOnTop
@@ -662,13 +707,11 @@ displayed in the specified position, the popup automatically adjusts its positio
 placementOnTop?: boolean
 ```
 
-Whether to display the popup above the component. The default value is **false**. **true**: The popup is displayed
-above the bound component; **false**: The popup is displayed below the bound component.
+Whether to display the popup above the component. The default value is **false**. **true**: The popup is displayed above the bound component; **false**: The popup is displayed below the bound component.
 
 **NOTE**
 
-This parameter is supported since API version 7 and deprecated since API version 10. You are advised to use
-**placement** instead.
+This parameter is supported since API version 7 and deprecated since API version 10. You are advised to use **placement** instead.
 
 **Type:** boolean
 
@@ -677,6 +720,8 @@ This parameter is supported since API version 7 and deprecated since API version
 **Deprecated since:** 10
 
 **Substitutes:** [placement](arkts-arkui-popupoptions-i.md#placement)
+
+<!--Device-PopupOptions-placementOnTop?: boolean--><!--Device-PopupOptions-placementOnTop?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -697,6 +742,8 @@ Default value: [TRANSPARENT](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphi
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupOptions-popupColor?: Color | string | Resource | number--><!--Device-PopupOptions-popupColor?: Color | string | Resource | number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -798,6 +845,64 @@ Primary button.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PopupOptions-primaryButton?: {
+    /**
+     * Button text value
+     *
+     ****/
+    /**
+     * Button text value
+     *
+     *****/
+    /**
+     * Button text value
+     *
+     ******/
+    value: string;
+
+    /**
+     * action
+     *
+     ****/
+    /**
+     * action
+     *
+     *****/
+    /**
+     * action
+     *
+     ******/
+    action: () => void;
+  }--><!--Device-PopupOptions-primaryButton?: {
+    /**
+     * Button text value
+     *
+     ****/
+    /**
+     * Button text value
+     *
+     *****/
+    /**
+     * Button text value
+     *
+     ******/
+    value: string;
+
+    /**
+     * action
+     *
+     ****/
+    /**
+     * action
+     *
+     *****/
+    /**
+     * action
+     *
+     ******/
+    action: () => void;
+  }-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## radius
@@ -821,6 +926,8 @@ Unit: vp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupOptions-radius?: Dimension--><!--Device-PopupOptions-radius?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -922,6 +1029,64 @@ Secondary button.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PopupOptions-secondaryButton?: {
+    /**
+     * Button text value
+     *
+     ****/
+    /**
+     * Button text value
+     *
+     *****/
+    /**
+     * Button text value
+     *
+     ******/
+    value: string;
+
+    /**
+     * action
+     *
+     ****/
+    /**
+     * action
+     *
+     *****/
+    /**
+     * action
+     *
+     ******/
+    action: () => void;
+  }--><!--Device-PopupOptions-secondaryButton?: {
+    /**
+     * Button text value
+     *
+     ****/
+    /**
+     * Button text value
+     *
+     *****/
+    /**
+     * Button text value
+     *
+     ******/
+    value: string;
+
+    /**
+     * action
+     *
+     ****/
+    /**
+     * action
+     *
+     *****/
+    /**
+     * action
+     *
+     ******/
+    action: () => void;
+  }-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## shadow
@@ -944,6 +1109,8 @@ Default value: **ShadowStyle.OUTER_DEFAULT_MD**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PopupOptions-shadow?: ShadowOptions | ShadowStyle--><!--Device-PopupOptions-shadow?: ShadowOptions | ShadowStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## showInSubWindow
@@ -954,8 +1121,7 @@ showInSubWindow?: boolean
 
 Whether the popup is displayed in the created subwindow.
 
-**true**: The popup is displayed in the created subwindow; **false**: The popup is displayed in the corresponding
-main window.
+**true**: The popup is displayed in the created subwindow; **false**: The popup is displayed in the corresponding main window.
 
 Default value: **false**
 
@@ -967,6 +1133,8 @@ Default value: **false**
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PopupOptions-showInSubWindow?: boolean--><!--Device-PopupOptions-showInSubWindow?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## systemMaterial
@@ -975,8 +1143,7 @@ Default value: **false**
 systemMaterial?: SystemUiMaterial
 ```
 
-Set system-styled materials for popup. Different materials have different effects, which can influence
-the backgroundColor, border, shadow, and other visual attributes of popup.
+Set system-styled materials for popup. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of popup.
 
 **Type:** SystemUiMaterial
 
@@ -985,6 +1152,8 @@ the backgroundColor, border, shadow, and other visual attributes of popup.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-PopupOptions-systemMaterial?: SystemUiMaterial--><!--Device-PopupOptions-systemMaterial?: SystemUiMaterial-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1008,6 +1177,8 @@ Unit: vp
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PopupOptions-targetSpace?: Length--><!--Device-PopupOptions-targetSpace?: Length-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## transition
@@ -1020,9 +1191,7 @@ Transition animations for the entrance and exit of the popup.
 
 **NOTE**
 
-1. If this parameter is not set, the default entrance and exit animations are used.
-2. Touching the back button during the entrance animation interrupts it and starts the exit animation. The final effect is one obtained after the curves of the entrance and exit animations are combined.
-3. Touching the back button during the exit animation does not affect the animation playback; the back button is unresponsive.
+1. If this parameter is not set, the default entrance and exit animations are used.2. Touching the back button during the entrance animation interrupts it and starts the exit animation. The final effect is one obtained after the curves of the entrance and exit animations are combined.3. Touching the back button during the exit animation does not affect the animation playback; the back button is unresponsive.
 
 **Type:** TransitionEffect
 
@@ -1032,6 +1201,8 @@ Transition animations for the entrance and exit of the popup.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PopupOptions-transition?: TransitionEffect--><!--Device-PopupOptions-transition?: TransitionEffect-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## width
@@ -1040,8 +1211,7 @@ Transition animations for the entrance and exit of the popup.
 width?: Dimension
 ```
 
-Width of the popup. If this parameter is not set or the value is invalid, the popup width is automatically adjusted
-to adapt to the content width.
+Width of the popup. If this parameter is not set or the value is invalid, the popup width is automatically adjusted to adapt to the content width.
 
 Unit: vp
 
@@ -1052,6 +1222,8 @@ Unit: vp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupOptions-width?: Dimension--><!--Device-PopupOptions-width?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

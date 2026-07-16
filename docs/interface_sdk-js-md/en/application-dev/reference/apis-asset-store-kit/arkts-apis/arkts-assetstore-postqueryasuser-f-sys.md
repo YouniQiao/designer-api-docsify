@@ -12,14 +12,13 @@ import { asset } from '@kit.AssetStoreKit';
 function postQueryAsUser(userId:number, handle: AssetMap): Promise<void>
 ```
 
-Performs postprocessing for the asset query in the specified user space. This API is used when user authentication
-is required for the access to an asset. This API must be used with
-[asset.preQueryAsUser](arkts-assetstore-prequeryasuser-f-sys.md#prequeryasuser-1) together.
-This API uses a promise to return the result.
+Performs postprocessing for the asset query in the specified user space. This API is used when user authentication is required for the access to an asset. This API must be used with [asset.preQueryAsUser](arkts-assetstore-prequeryasuser-f-sys.md#prequeryasuser-1) together.This API uses a promise to return the result.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-asset-function postQueryAsUser(userId:number, handle: AssetMap): Promise<void>--><!--Device-asset-function postQueryAsUser(userId:number, handle: AssetMap): Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -29,14 +28,14 @@ This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | the user identifier to post-query one or more assets. The value must be greater thanor equal to 100. |
-| handle | AssetMap | Yes | Handle of the query operation, including the challenge value returned by[asset.preQueryAsUser](arkts-assetstore-prequeryasuser-f-sys.md#prequeryasuser-1). |
+| userId | number | Yes | the user identifier to post-query one or more assets. The value must be greater than or equal to 100. |
+| handle | [AssetMap](arkts-assetstore-assetmap-t.md) | Yes | Handle of the query operation, including the challenge value returned by [asset.preQueryAsUser](arkts-assetstore-prequeryasuser-f-sys.md#prequeryasuser-1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

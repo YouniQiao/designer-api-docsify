@@ -20,6 +20,8 @@ The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** mus
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-huks-function finishSession(handle: number, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void--><!--Device-huks-function finishSession(handle: number, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void-End-->
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 **Parameters:**
@@ -27,8 +29,8 @@ The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** mus
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | handle | number | Yes | Handle of the **finishSession** operation, which is of the uint64 type. |
-| options | HuksOptions | Yes | Parameter set used for the **finishSession** operation. |
-| callback | AsyncCallback&lt;HuksReturnResult&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** isan error object. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Parameter set used for the **finishSession** operation. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<HuksReturnResult> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -68,14 +70,25 @@ function finishSession(
   ): void
 ```
 
-Finishes the key operation by segment. The **finishSession** operation is used for user identity authentication and
-access control. This API uses an asynchronous callback to return the result.
+Finishes the key operation by segment. The **finishSession** operation is used for user identity authentication and access control. This API uses an asynchronous callback to return the result.
 
 The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-huks-function finishSession(
+    handle: number,
+    options: HuksOptions,
+    token: Uint8Array,
+    callback: AsyncCallback<HuksReturnResult>
+  ): void--><!--Device-huks-function finishSession(
+    handle: number,
+    options: HuksOptions,
+    token: Uint8Array,
+    callback: AsyncCallback<HuksReturnResult>
+  ): void-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -84,9 +97,9 @@ The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** mus
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | handle | number | Yes | Handle of the **finishSession** operation, which is of the uint64 type. |
-| options | HuksOptions | Yes | Parameter set used for the **finishSession** operation. |
-| token | Uint8Array | Yes | Authentication token for[refined key access control](../../../../security/UniversalKeystoreKit/huks-identity-authentication-overview.md#refined-key-access-control). |
-| callback | AsyncCallback&lt;HuksReturnResult&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** isan error object. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Parameter set used for the **finishSession** operation. |
+| token | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Authentication token for [refined key access control](../../../../security/UniversalKeystoreKit/huks-identity-authentication-overview.md#refined-key-access-control). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<HuksReturnResult> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -125,6 +138,8 @@ The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** mus
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-huks-function finishSession(handle: number, options: HuksOptions, token?: Uint8Array): Promise<HuksReturnResult>--><!--Device-huks-function finishSession(handle: number, options: HuksOptions, token?: Uint8Array): Promise<HuksReturnResult>-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **Parameters:**
@@ -132,14 +147,14 @@ The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** mus
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | handle | number | Yes | Handle of the **finishSession** operation, which is of the uint64 type. |
-| options | HuksOptions | Yes | Parameter set used for the **finishSession** operation. |
-| token | Uint8Array | No | Authentication token for[refined key access control](../../../../security/UniversalKeystoreKit/huks-identity-authentication-overview.md#refined-key-access-control). If this parameter is left blank, refined key access control is not performed. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Parameter set used for the **finishSession** operation. |
+| token | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | No | Authentication token for [refined key access control](../../../../security/UniversalKeystoreKit/huks-identity-authentication-overview.md#refined-key-access-control). If this parameter is left blank, refined key access control is not performed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | Promise that returns the operation result. If the operation is successful,**outData** of **HuksReturnResult** returns the corresponding data. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HuksReturnResult> | Promise that returns the operation result. If the operation is successful,**outData** of **HuksReturnResult** returns the corresponding data. |
 
 **Error codes:**
 

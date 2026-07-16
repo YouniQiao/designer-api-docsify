@@ -2,12 +2,14 @@
 
 Badge的样式。包括文本颜色、尺寸、字重、圆点颜色和尺寸等。
 
-> **说明：**
->
-> - 当`borderWidth`大于0且`borderColor`与`badgeColor`颜色不一致时，先绘制角标，再绘制描边。由于边缘像素经过抗锯齿处理，抗锯齿产生半透明像素，四角会出现 `badgeColor` 颜色的描边
+> **说明：**  
+>  
+> - 当`borderWidth`大于0且`borderColor`与`badgeColor`颜色不一致时，先绘制角标，再绘制描边。由于边缘像素经过抗锯齿处理，抗锯齿产生半透明像素，四角会出现 `badgeColor` 颜色的描边  
 > 线。如需实现相关场景，建议使用[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md)组件设置[outline](arkts-arkui-commonmethod-c.md#outline-1)代替Badge组件。
 
 **起始版本：** 7
+
+<!--Device-unnamed-declare interface BadgeStyle--><!--Device-unnamed-declare interface BadgeStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,9 +29,11 @@ Badge的颜色。
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BadgeStyle-badgeColor?: ResourceColor--><!--Device-BadgeStyle-badgeColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,9 +53,7 @@ Badge的大小。string类型仅支持number类型取值的字符串形式，可
 
 **说明：**
 
-1. 不支持设置百分比，当设置为百分比时，按照默认值处理。
-2. 从API version 20开始，支持ResourceStr类型。
-3. 当设置了fontSize且badgeSize小于fontSize时，badgeSize将按照fontSize生效。
+1. 不支持设置百分比，当设置为百分比时，按照默认值处理。2. 从API version 20开始，支持ResourceStr类型。3. 当设置了fontSize且badgeSize小于fontSize时，badgeSize将按照fontSize生效。
 
 **类型：** number | ResourceStr
 
@@ -59,9 +61,11 @@ Badge的大小。string类型仅支持number类型取值的字符串形式，可
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BadgeStyle-badgeSize?: number | ResourceStr--><!--Device-BadgeStyle-badgeSize?: number | ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -83,7 +87,9 @@ borderColor?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BadgeStyle-borderColor?: ResourceColor--><!--Device-BadgeStyle-borderColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -111,7 +117,9 @@ borderWidth?: Length
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BadgeStyle-borderWidth?: Length--><!--Device-BadgeStyle-borderWidth?: Length-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -131,9 +139,11 @@ color?: ResourceColor
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BadgeStyle-color?: ResourceColor--><!--Device-BadgeStyle-color?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -151,9 +161,7 @@ true表示避让，false表示不避让。
 
 **说明：**
 
-1. 避让效果为角标文本向组件内部延伸显示。
-2. 当外描边的宽度大于0时，角标的延伸起点为外描边的内侧。
-3. 当position设置为具体坐标值时，角标不进行避让处理。
+1. 避让效果为角标文本向组件内部延伸显示。2. 当外描边的宽度大于0时，角标的延伸起点为外描边的内侧。3. 当position设置为具体坐标值时，角标不进行避让处理。
 
 **类型：** boolean
 
@@ -163,7 +171,9 @@ true表示避让，false表示不避让。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BadgeStyle-enableAutoAvoidance?: boolean--><!--Device-BadgeStyle-enableAutoAvoidance?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -183,8 +193,7 @@ fontSize?: number | ResourceStr
 
 **说明：**
 
-1. 不支持设置百分比，当设置为百分比时，按照默认值处理。
-2. 从API version 20开始，支持ResourceStr类型。
+1. 不支持设置百分比，当设置为百分比时，按照默认值处理。2. 从API version 20开始，支持ResourceStr类型。
 
 **类型：** number | ResourceStr
 
@@ -192,9 +201,11 @@ fontSize?: number | ResourceStr
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BadgeStyle-fontSize?: number | ResourceStr--><!--Device-BadgeStyle-fontSize?: number | ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -204,8 +215,7 @@ fontSize?: number | ResourceStr
 fontWeight?: number | FontWeight | ResourceStr
 ```
 
-设置文本的字体粗细。number类型取值范围：[100, 900]，取值间隔为100。取值越大，字体越粗。设置number类型在取值范围外时，按默认值400处理。string类型仅支持number类型取值的字符串形式，例如"400
-"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。
+设置文本的字体粗细。number类型取值范围：[100, 900]，取值间隔为100。取值越大，字体越粗。设置number类型在取值范围外时，按默认值400处理。string类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。
 
 默认值：FontWeight.Normal
 
@@ -219,7 +229,9 @@ fontWeight?: number | FontWeight | ResourceStr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BadgeStyle-fontWeight?: number | FontWeight | ResourceStr--><!--Device-BadgeStyle-fontWeight?: number | FontWeight | ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -241,7 +253,9 @@ outerBorderColor?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BadgeStyle-outerBorderColor?: ResourceColor--><!--Device-BadgeStyle-outerBorderColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -267,7 +281,9 @@ outerBorderWidth?: LengthMetrics
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BadgeStyle-outerBorderWidth?: LengthMetrics--><!--Device-BadgeStyle-outerBorderWidth?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

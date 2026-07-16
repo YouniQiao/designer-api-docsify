@@ -18,6 +18,8 @@ Creates an NDEF record with uri data.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ndef-function makeUriRecord(uri: string): NdefRecord--><!--Device-ndef-function makeUriRecord(uri: string): NdefRecord-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -30,7 +32,7 @@ Creates an NDEF record with uri data.
 
 | Type | Description |
 | --- | --- |
-| NdefRecord | The instance of NdefRecord. |
+| [NdefRecord](arkts-connectivity-ndefrecord-i.md) | The instance of NdefRecord. |
 
 **Error codes:**
 

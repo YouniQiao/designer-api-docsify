@@ -20,17 +20,19 @@ Translates this matrix object along the x, y, and z axes.
 
 **Substitutes:** [translate](arkts-arkui-matrix4transit-i.md#translate-1)
 
+<!--Device-matrix4-function translate(options: TranslateOption): Matrix4Transit--><!--Device-matrix4-function translate(options: TranslateOption): Matrix4Transit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | TranslateOption | Yes | Translation configuration. |
+| options | [TranslateOption](arkts-arkui-translateoption-i.md) | Yes | Translation configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Matrix object after translation. |
+| [Matrix4Transit](arkts-arkui-matrix4transit-i.md) | Matrix object after translation. |
 

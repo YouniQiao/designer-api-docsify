@@ -2,13 +2,19 @@
 
 描述段落基础文本行结构的载体。
 
-下列API示例中都需先使用[Paragraph](arkts-arkgraphics2d-paragraphstyle-i.md)类的[getTextLines()](arkts-arkgraphics2d-paragraph-c.md#gettextlines-1)接口或者
-[LineTypeset](arkts-arkgraphics2d-linetypeset-c.md)类的[createLine()](arkts-arkgraphics2d-linetypeset-c.md#createline-1)接口获取到TextLine对象实例，再通过此实例调用对
-应方法。
+下列API示例中都需先使用[Paragraph](arkts-arkgraphics2d-paragraphstyle-i.md)类的[getTextLines()](arkts-arkgraphics2d-paragraph-c.md#gettextlines-1)接口或者[LineTypeset](arkts-arkgraphics2d-linetypeset-c.md)类的[createLine()](arkts-arkgraphics2d-linetypeset-c.md#createline-1)接口获取到TextLine对象实例，再通过此实例调用对应方法。
 
 **起始版本：** 12
 
+<!--Device-text-class TextLine--><!--Device-text-class TextLine-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
+
+## 导入模块
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D';
+```
 
 ## createTruncatedLine
 
@@ -20,7 +26,9 @@ createTruncatedLine(width: number, ellipsisMode: EllipsisMode, ellipsis: string)
 
 **起始版本：** 18
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextLine-createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string): TextLine--><!--Device-TextLine-createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string): TextLine-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -29,14 +37,14 @@ createTruncatedLine(width: number, ellipsisMode: EllipsisMode, ellipsis: string)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | width | number | 是 | 截断后的行宽度，浮点数，单位为物理像素px。 |
-| ellipsisMode | EllipsisMode | 是 | 截断的类型，当前仅支持头部截断START和尾部截断END。 |
+| ellipsisMode | [EllipsisMode](arkts-arkgraphics2d-ellipsismode-e.md) | 是 | 截断的类型，当前仅支持头部截断START和尾部截断END。 |
 | ellipsis | string | 是 | 截断的标记字符串。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| TextLine | 截断的文本行对象。 |
+| [TextLine](arkts-arkgraphics2d-textline-c.md) | 截断的文本行对象。 |
 
 **示例：**
 
@@ -82,7 +90,9 @@ enumerateCaretOffsets(callback: CaretOffsetsCallback): void
 
 **起始版本：** 18
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextLine-enumerateCaretOffsets(callback: CaretOffsetsCallback): void--><!--Device-TextLine-enumerateCaretOffsets(callback: CaretOffsetsCallback): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -90,7 +100,7 @@ enumerateCaretOffsets(callback: CaretOffsetsCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | CaretOffsetsCallback | 是 | 用户自定义函数。回调方法参数包括文本行中每个字符的偏移量和索引值。 |
+| callback | [CaretOffsetsCallback](arkts-arkgraphics2d-caretoffsetscallback-t.md) | 是 | 用户自定义函数。回调方法参数包括文本行中每个字符的偏移量和索引值。 |
 
 **示例：**
 
@@ -112,7 +122,9 @@ getAlignmentOffset(alignmentFactor: number, alignmentWidth: number): number
 
 **起始版本：** 18
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextLine-getAlignmentOffset(alignmentFactor: double, alignmentWidth: double): double--><!--Device-TextLine-getAlignmentOffset(alignmentFactor: double, alignmentWidth: double): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -146,7 +158,9 @@ getGlyphCount(): number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextLine-getGlyphCount(): int--><!--Device-TextLine-getGlyphCount(): int-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -173,7 +187,9 @@ getGlyphRuns(): Array<Run>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextLine-getGlyphRuns(): Array<Run>--><!--Device-TextLine-getGlyphRuns(): Array<Run>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -181,7 +197,7 @@ getGlyphRuns(): Array<Run>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Run&gt; | 该文本行中的文本排版单元数组。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Run> | 该文本行中的文本排版单元数组。 |
 
 **示例：**
 
@@ -196,23 +212,24 @@ let runs = lines[0].getGlyphRuns();
 getImageBounds(): common2D.Rect
 ```
 
-获取文本行的图像边界。文本行图像边界与排版字体、排版字号、字符本身都有关，相当于视觉边界。例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，用户在界面上只能看到"a b"，图像边界即为不包括带行首
-和末尾空格的边界。例如字符串为"j"或"E"，视觉边界不同，即与字符本身有关，"j"字符串的视觉边界宽度小于"E"字符串的视觉边界宽度，"j"字符串的视觉边界高度大于"E"字符串的视觉边界高度。
+获取文本行的图像边界。文本行图像边界与排版字体、排版字号、字符本身都有关，相当于视觉边界。例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，用户在界面上只能看到"a b"，图像边界即为不包括带行首和末尾空格的边界。例如字符串为"j"或"E"，视觉边界不同，即与字符本身有关，"j"字符串的视觉边界宽度小于"E"字符串的视觉边界宽度，"j"字符串的视觉边界高度大于"E"字符串的视觉边界高度。
 
-> **说明：**
->
-> 示意图展示了字符串为" a b "的图像边界。
->
-> ![zh-ch_image_ImageBounds.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_ImageBounds.png)
->
-> 示意图展示了字符串为"j"或"E"的图像边界。
->
-> !
+> **说明：**  
+>  
+> 示意图展示了字符串为" a b "的图像边界。  
+>  
+> ![zh-ch_image_ImageBounds.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_ImageBounds.png)  
+>  
+> 示意图展示了字符串为"j"或"E"的图像边界。  
+>  
+> !  
 > [zh-ch_image_ImageBounds_Character.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_ImageBounds_Character.png)
 
 **起始版本：** 18
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextLine-getImageBounds(): common2D.Rect--><!--Device-TextLine-getImageBounds(): common2D.Rect-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -239,7 +256,9 @@ getOffsetForStringIndex(index: number): number
 
 **起始版本：** 18
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextLine-getOffsetForStringIndex(index: int): double--><!--Device-TextLine-getOffsetForStringIndex(index: int): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -272,7 +291,9 @@ getStringIndexForPosition(point: common2D.Point): number
 
 **起始版本：** 18
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextLine-getStringIndexForPosition(point: common2D.Point): int--><!--Device-TextLine-getStringIndexForPosition(point: common2D.Point): int-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -306,7 +327,9 @@ getTextRange(): Range
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextLine-getTextRange(): Range--><!--Device-TextLine-getTextRange(): Range-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -314,7 +337,7 @@ getTextRange(): Range
 
 | 类型 | 说明 |
 | --- | --- |
-| Range | 该行文本在整个段落文本中的索引区间。 |
+| [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | 该行文本在整个段落文本中的索引区间。 |
 
 **示例：**
 
@@ -333,7 +356,9 @@ getTrailingSpaceWidth(): number
 
 **起始版本：** 18
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextLine-getTrailingSpaceWidth(): double--><!--Device-TextLine-getTrailingSpaceWidth(): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -356,24 +381,25 @@ let trailingSpaceWidth = lines[0].getTrailingSpaceWidth();
 getTypographicBounds(): TypographicBounds
 ```
 
-获取文本行的排版边界。文本行排版边界与排版字体、排版字号有关，与字符本身无关。例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，排版边界就包括行首和末尾空格的边界。例如字符串为"j"或"E"，排版
-边界相同，即与字符本身无关。
+获取文本行的排版边界。文本行排版边界与排版字体、排版字号有关，与字符本身无关。例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，排版边界就包括行首和末尾空格的边界。例如字符串为"j"或"E"，排版边界相同，即与字符本身无关。
 
-> **说明：**
->
-> 示意图展示了字符串为" a b "的排版边界。
->
-> !
-> [zh-ch_image_TypographicBounds.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_TypographicBounds.png)
->
-> 示意图展示了字符串为"j"或"E"的排版边界。
->
-> !
+> **说明：**  
+>  
+> 示意图展示了字符串为" a b "的排版边界。  
+>  
+> !  
+> [zh-ch_image_TypographicBounds.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_TypographicBounds.png)  
+>  
+> 示意图展示了字符串为"j"或"E"的排版边界。  
+>  
+> !  
 > [zh-ch_image_TypographicBounds_Character.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_TypographicBounds_Character.png)
 
 **起始版本：** 18
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextLine-getTypographicBounds(): TypographicBounds--><!--Device-TextLine-getTypographicBounds(): TypographicBounds-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -381,7 +407,7 @@ getTypographicBounds(): TypographicBounds
 
 | 类型 | 说明 |
 | --- | --- |
-| TypographicBounds | 文本行的排版边界。 |
+| [TypographicBounds](arkts-arkgraphics2d-typographicbounds-i.md) | 文本行的排版边界。 |
 
 **示例：**
 
@@ -401,7 +427,9 @@ paint(canvas: drawing.Canvas, x: number, y: number): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextLine-paint(canvas: drawing.Canvas, x: double, y: double): void--><!--Device-TextLine-paint(canvas: drawing.Canvas, x: double, y: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

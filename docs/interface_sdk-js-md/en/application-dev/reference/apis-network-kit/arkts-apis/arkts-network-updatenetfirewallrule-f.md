@@ -18,19 +18,21 @@ Update a firewall rule.
 
 **Required permissions:** ohos.permission.MANAGE_NET_FIREWALL
 
+<!--Device-netFirewall-function updateNetFirewallRule(rule: NetFirewallRule): Promise<void>--><!--Device-netFirewall-function updateNetFirewallRule(rule: NetFirewallRule): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rule | NetFirewallRule | Yes | Firewall rule. |
+| rule | [NetFirewallRule](arkts-network-netfirewallrule-i.md) | Yes | Firewall rule. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns void. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns void. |
 
 **Error codes:**
 

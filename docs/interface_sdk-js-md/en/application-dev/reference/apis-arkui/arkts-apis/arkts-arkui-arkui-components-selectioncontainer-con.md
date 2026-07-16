@@ -14,6 +14,8 @@ Defines SelectionContainer component.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-unnamed-export declare const SelectionContainer: SelectionContainerInterface--><!--Device-unnamed-export declare const SelectionContainer: SelectionContainerInterface-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SelectionContainerInstance
@@ -29,6 +31,8 @@ Defines SelectionContainer component instance.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-unnamed-export declare const SelectionContainerInstance: SelectionContainerAttribute--><!--Device-unnamed-export declare const SelectionContainerInstance: SelectionContainerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

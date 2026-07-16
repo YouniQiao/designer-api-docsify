@@ -12,14 +12,13 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function getDLPPermissionInfo(): Promise<DLPPermissionInfo>
 ```
 
-Queries the permission information of the current DLP sandbox, including permissions on the file and operations
-that can be performed (such as viewing, editing, and copying). This API can be called only in DLP sandbox
-applications. This API uses a promise to return the result.
+Queries the permission information of the current DLP sandbox, including permissions on the file and operations that can be performed (such as viewing, editing, and copying). This API can be called only in DLP sandbox applications. This API uses a promise to return the result.
 
-When processing files in the DLP sandbox, the system determines the operations that can be performed for the
-current user to prevent calling unauthorized capabilities.
+When processing files in the DLP sandbox, the system determines the operations that can be performed for the current user to prevent calling unauthorized capabilities.
 
 **Since:** 10
+
+<!--Device-dlpPermission-function getDLPPermissionInfo(): Promise<DLPPermissionInfo>--><!--Device-dlpPermission-function getDLPPermissionInfo(): Promise<DLPPermissionInfo>-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -27,7 +26,7 @@ current user to prevent calling unauthorized capabilities.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DLPPermissionInfo&gt; | Promise used to return the permission information about the DLP file. Theoperation is successful if no error is reported. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DLPPermissionInfo> | Promise used to return the permission information about the DLP file. The operation is successful if no error is reported. |
 
 **Error codes:**
 
@@ -61,14 +60,13 @@ dlpPermission.isInSandbox().then(async (inSandbox) => { // Check whether the app
 function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void
 ```
 
-Obtains the permission information of this DLP file. The returned permission information includes permissions on
-the file and operations that can be performed (such as viewing, editing, and copying). This API uses an
-asynchronous callback to return the result.
+Obtains the permission information of this DLP file. The returned permission information includes permissions on the file and operations that can be performed (such as viewing, editing, and copying). This API uses an asynchronous callback to return the result.
 
-When processing files in the DLP sandbox, the system determines the operations that can be performed for the
-current user to prevent calling unauthorized capabilities.
+When processing files in the DLP sandbox, the system determines the operations that can be performed for the current user to prevent calling unauthorized capabilities.
 
 **Since:** 10
+
+<!--Device-dlpPermission-function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void--><!--Device-dlpPermission-function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -76,7 +74,7 @@ current user to prevent calling unauthorized capabilities.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;DLPPermissionInfo&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DLPPermissionInfo> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

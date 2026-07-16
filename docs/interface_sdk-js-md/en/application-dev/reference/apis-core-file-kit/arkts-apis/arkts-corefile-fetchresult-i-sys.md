@@ -8,6 +8,8 @@ Provides APIs to manage the file retrieval result.
 
 **Substitutes:** [FetchResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchresult-i.md)
 
+<!--Device-userFileManager-interface FetchResult<T>--><!--Device-userFileManager-interface FetchResult<T>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -24,14 +26,15 @@ import { userFileManager } from '@kit.CoreFileKit';
 close(): void
 ```
 
-Releases and invalidates the **FetchFileResult** instance. After this instance is released, the APIs in this
-instance cannot be invoked.
+Releases and invalidates the **FetchFileResult** instance. After this instance is released, the APIs in this instance cannot be invoked.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [close](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchresult-i.md#close-1)
+
+<!--Device-FetchResult-close(): void--><!--Device-FetchResult-close(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -76,6 +79,8 @@ Obtains all the file assets in the result set. This API uses an asynchronous cal
 
 **Substitutes:** [getAllObjects](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchresult-i.md#getallobjects-1)
 
+<!--Device-FetchResult-getAllObject(callback: AsyncCallback<Array<T>>): void--><!--Device-FetchResult-getAllObject(callback: AsyncCallback<Array<T>>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -84,7 +89,7 @@ Obtains all the file assets in the result set. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;T&gt;&gt; | Yes | Callback used to return an array of all file assets in the resultset. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<T>> | Yes | Callback used to return an array of all file assets in the result set. |
 
 **Example**
 
@@ -126,6 +131,8 @@ Obtains all the file assets in the result set. This API uses a promise to return
 
 **Substitutes:** [getAllObjects](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchresult-i.md#getallobjects-1)
 
+<!--Device-FetchResult-getAllObject(): Promise<Array<T>>--><!--Device-FetchResult-getAllObject(): Promise<Array<T>>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -134,7 +141,7 @@ Obtains all the file assets in the result set. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;T&gt;&gt; | Promise that returns an array of all file assets in the result set. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<T>> | Promise that returns an array of all file assets in the result set. |
 
 **Example**
 
@@ -170,6 +177,8 @@ Obtains the total number of files in the result set.
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [getCount](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchresult-i.md#getcount-1)
+
+<!--Device-FetchResult-getCount(): number--><!--Device-FetchResult-getCount(): number-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -216,6 +225,8 @@ Obtains the first file asset in the result set. This API uses an asynchronous ca
 
 **Substitutes:** [getFirstObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchresult-i.md#getfirstobject-1)
 
+<!--Device-FetchResult-getFirstObject(callback: AsyncCallback<T>): void--><!--Device-FetchResult-getFirstObject(callback: AsyncCallback<T>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -224,7 +235,7 @@ Obtains the first file asset in the result set. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;T&gt; | Yes | Callback used to return the first file asset obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<T> | Yes | Callback used to return the first file asset obtained. |
 
 **Example**
 
@@ -266,6 +277,8 @@ Obtains the first file asset in the result set. This API uses a promise to retur
 
 **Substitutes:** [getFirstObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchresult-i.md#getfirstobject-1)
 
+<!--Device-FetchResult-getFirstObject(): Promise<T>--><!--Device-FetchResult-getFirstObject(): Promise<T>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -274,7 +287,7 @@ Obtains the first file asset in the result set. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;T&gt; | Promise that returns the first object in the result set. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<T> | Promise that returns the first object in the result set. |
 
 **Example**
 
@@ -311,6 +324,8 @@ Obtains the last file asset in the result set. This API uses an asynchronous cal
 
 **Substitutes:** [getLastObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchresult-i.md#getlastobject-1)
 
+<!--Device-FetchResult-getLastObject(callback: AsyncCallback<T>): void--><!--Device-FetchResult-getLastObject(callback: AsyncCallback<T>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -319,7 +334,7 @@ Obtains the last file asset in the result set. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;T&gt; | Yes | Callback used to return the last file asset obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<T> | Yes | Callback used to return the last file asset obtained. |
 
 **Example**
 
@@ -361,6 +376,8 @@ Obtains the last file asset in the result set. This API uses a promise to return
 
 **Substitutes:** [getLastObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchresult-i.md#getlastobject-1)
 
+<!--Device-FetchResult-getLastObject(): Promise<T>--><!--Device-FetchResult-getLastObject(): Promise<T>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -369,7 +386,7 @@ Obtains the last file asset in the result set. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;T&gt; | Promise that returns the last object in the result set. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<T> | Promise that returns the last object in the result set. |
 
 **Example**
 
@@ -400,14 +417,15 @@ getNextObject(callback: AsyncCallback<T>): void
 
 Obtains the next file asset in the result set. This API uses an asynchronous callback to return the result.
 
-Before using this API, you must use [isAfterLast()](arkts-corefile-fetchresult-i-sys.md#isafterlast-1) to check
-whether the current position is the end of the result set.
+Before using this API, you must use [isAfterLast()](arkts-corefile-fetchresult-i-sys.md#isafterlast-1) to check whether the current position is the end of the result set.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [getNextObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchresult-i.md#getnextobject-1)
+
+<!--Device-FetchResult-getNextObject(callback: AsyncCallback<T>): void--><!--Device-FetchResult-getNextObject(callback: AsyncCallback<T>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -417,7 +435,7 @@ whether the current position is the end of the result set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;T&gt; | Yes | Callback used to return the next file asset. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<T> | Yes | Callback used to return the next file asset. |
 
 **Example**
 
@@ -456,14 +474,15 @@ getNextObject(): Promise<T>
 
 Obtains the next file asset in the result set. This API uses a promise to return the result.
 
-Before using this API, you must use [isAfterLast()](arkts-corefile-fetchresult-i-sys.md#isafterlast-1) to check
-whether the current position is the end of the result set.
+Before using this API, you must use [isAfterLast()](arkts-corefile-fetchresult-i-sys.md#isafterlast-1) to check whether the current position is the end of the result set.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [getNextObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchresult-i.md#getnextobject-1)
+
+<!--Device-FetchResult-getNextObject(): Promise<T>--><!--Device-FetchResult-getNextObject(): Promise<T>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -473,7 +492,7 @@ whether the current position is the end of the result set.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;T&gt; | Promise that returns the next object in the result set. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<T> | Promise that returns the next object in the result set. |
 
 **Example**
 
@@ -505,14 +524,15 @@ async function example(mgr: userFileManager.UserFileManager) {
 getPositionObject(index: number, callback: AsyncCallback<T>): void
 ```
 
-Obtains a file asset with the specified index in the result set. This API uses an asynchronous callback to return
-the result.
+Obtains a file asset with the specified index in the result set. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [getObjectByPosition](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchresult-i.md#getobjectbyposition-1)
+
+<!--Device-FetchResult-getPositionObject(index: number, callback: AsyncCallback<T>): void--><!--Device-FetchResult-getPositionObject(index: number, callback: AsyncCallback<T>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -523,7 +543,7 @@ the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | number | Yes | Index of the file asset to obtain. The value starts from **0**. |
-| callback | AsyncCallback&lt;T&gt; | Yes | Callback used to return the file asset obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<T> | Yes | Callback used to return the file asset obtained. |
 
 **Error codes:**
 
@@ -571,6 +591,8 @@ Obtains a file asset with the specified index in the result set. This API uses a
 
 **Substitutes:** [getObjectByPosition](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchresult-i.md#getobjectbyposition-1)
 
+<!--Device-FetchResult-getPositionObject(index: number): Promise<T>--><!--Device-FetchResult-getPositionObject(index: number): Promise<T>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -585,7 +607,7 @@ Obtains a file asset with the specified index in the result set. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;T&gt; | Promise that returns the file asset obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<T> | Promise that returns the file asset obtained. |
 
 **Error codes:**
 
@@ -632,6 +654,8 @@ Checks whether the cursor is in the last row of the result set.
 
 **Substitutes:** [isAfterLast](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchresult-i.md#isafterlast-1)
 
+<!--Device-FetchResult-isAfterLast(): boolean--><!--Device-FetchResult-isAfterLast(): boolean-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -640,7 +664,7 @@ Checks whether the cursor is in the last row of the result set.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the cursor is in the last row of the result set; returns **false**otherwise. |
+| boolean | Returns **true** if the cursor is in the last row of the result set; returns **false** otherwise. |
 
 **Example**
 

@@ -20,13 +20,15 @@ Indicates that there is no uplink or downlink data.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-data-function getCellularDataFlowType(callback: AsyncCallback<DataFlowType>): void--><!--Device-data-function getCellularDataFlowType(callback: AsyncCallback<DataFlowType>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CellularData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;DataFlowType&gt; | Yes | Indicates the data flow type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DataFlowType> | Yes | Indicates the data flow type. |
 
 **Error codes:**
 
@@ -65,13 +67,15 @@ Indicates that there is no uplink or downlink data.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-data-function getCellularDataFlowType(): Promise<DataFlowType>--><!--Device-data-function getCellularDataFlowType(): Promise<DataFlowType>-End-->
+
 **System capability:** SystemCapability.Telephony.CellularData
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataFlowType&gt; | Returns the data flow type. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DataFlowType> | Returns the data flow type. |
 
 **Error codes:**
 

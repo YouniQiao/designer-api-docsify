@@ -8,6 +8,8 @@ A utility class used for handling objects that use the DataAbilityHelper scheme.
 
 **Substitutes:** dataUriUtils/dataUriUtils
 
+<!--Device-unnamed-declare namespace dataUriUtils--><!--Device-unnamed-declare namespace dataUriUtils-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Summary

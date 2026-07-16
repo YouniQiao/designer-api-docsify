@@ -8,6 +8,8 @@ Defines the UserFileManager class and provides functions to access the data in u
 
 **Substitutes:** [PhotoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i.md)
 
+<!--Device-userFileManager-interface UserFileManager--><!--Device-userFileManager-interface UserFileManager-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -28,12 +30,12 @@ Creates an album. This API uses an asynchronous callback to return the result.
 
 The album name must meet the following requirements:
 
-- The album name is a string of 1 to 255 characters.
+- The album name is a string of 1 to 255 characters.  
 - The album name cannot contain any of the following characters:
 
 . .. \ / : * ? " ' ` < > | { } [ ]
 
-- The album name is case-insensitive.
+- The album name is case-insensitive.  
 - Duplicate album names are not allowed.
 
 **Since:** 10
@@ -44,6 +46,8 @@ The album name must meet the following requirements:
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-UserFileManager-createAlbum(name: string, callback: AsyncCallback<Album>): void--><!--Device-UserFileManager-createAlbum(name: string, callback: AsyncCallback<Album>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -53,7 +57,7 @@ The album name must meet the following requirements:
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the album to create. |
-| callback | AsyncCallback&lt;Album&gt; | Yes | Callback used to return the created album instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Album> | Yes | Callback used to return the created album instance. |
 
 **Example**
 
@@ -84,12 +88,12 @@ Creates an album. This API uses a promise to return the result.
 
 The album name must meet the following requirements:
 
-- The album name is a string of 1 to 255 characters.
+- The album name is a string of 1 to 255 characters.  
 - The album name cannot contain any of the following characters:
 
 . .. \ / : * ? " ' ` < > | { } [ ]
 
-- The album name is case-insensitive.
+- The album name is case-insensitive.  
 - Duplicate album names are not allowed.
 
 **Since:** 10
@@ -99,6 +103,8 @@ The album name must meet the following requirements:
 **Substitutes:** [createAlbumRequest](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-mediaalbumchangerequest-c-sys.md#createalbumrequest-1)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-UserFileManager-createAlbum(name: string): Promise<Album>--><!--Device-UserFileManager-createAlbum(name: string): Promise<Album>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -114,7 +120,7 @@ The album name must meet the following requirements:
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Album&gt; | Promise that returns the created album instance. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Album> | Promise that returns the created album instance. |
 
 **Example**
 
@@ -149,6 +155,8 @@ Creates an audio asset. This API uses an asynchronous callback to return the res
 
 **Required permissions:** ohos.permission.WRITE_AUDIO
 
+<!--Device-UserFileManager-createAudioAsset(displayName: string, callback: AsyncCallback<FileAsset>): void--><!--Device-UserFileManager-createAudioAsset(displayName: string, callback: AsyncCallback<FileAsset>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -158,7 +166,7 @@ Creates an audio asset. This API uses an asynchronous callback to return the res
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the audio asset to create. |
-| callback | AsyncCallback&lt;FileAsset&gt; | Yes | Callback used to return the created audio asset. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FileAsset> | Yes | Callback used to return the created audio asset. |
 
 **Error codes:**
 
@@ -201,6 +209,8 @@ Creates an audio asset. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.WRITE_AUDIO
 
+<!--Device-UserFileManager-createAudioAsset(displayName: string): Promise<FileAsset>--><!--Device-UserFileManager-createAudioAsset(displayName: string): Promise<FileAsset>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -215,7 +225,7 @@ Creates an audio asset. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FileAsset&gt; | Promise that returns the created audio asset. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<FileAsset> | Promise that returns the created audio asset. |
 
 **Error codes:**
 
@@ -248,16 +258,17 @@ async function example(mgr: userFileManager.UserFileManager) {
 createPhotoAsset(displayName: string, albumUri: string, callback: AsyncCallback<FileAsset>): void
 ```
 
-Creates an image or video asset with the specified file name and URI. This API uses an asynchronous callback to
-return the result.
+Creates an image or video asset with the specified file name and URI. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i-sys.md#createasset-1)
+**Substitutes:** [createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i.md#createasset-5)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-UserFileManager-createPhotoAsset(displayName: string, albumUri: string, callback: AsyncCallback<FileAsset>): void--><!--Device-UserFileManager-createPhotoAsset(displayName: string, albumUri: string, callback: AsyncCallback<FileAsset>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -269,7 +280,7 @@ return the result.
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the image or video to create. |
 | albumUri | string | Yes | URI of the album where the image or video is located. |
-| callback | AsyncCallback&lt;FileAsset&gt; | Yes | Callback used to return the image or video created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FileAsset> | Yes | Callback used to return the image or video created. |
 
 **Error codes:**
 
@@ -312,16 +323,17 @@ async function example(mgr: userFileManager.UserFileManager) {
 createPhotoAsset(displayName: string, callback: AsyncCallback<FileAsset>): void
 ```
 
-Creates an image or video asset with the specified file name. This API uses an asynchronous callback to return
-the result.
+Creates an image or video asset with the specified file name. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i-sys.md#createasset-1)
+**Substitutes:** [createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i.md#createasset-5)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-UserFileManager-createPhotoAsset(displayName: string, callback: AsyncCallback<FileAsset>): void--><!--Device-UserFileManager-createPhotoAsset(displayName: string, callback: AsyncCallback<FileAsset>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -332,7 +344,7 @@ the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the image or video to create. |
-| callback | AsyncCallback&lt;FileAsset&gt; | Yes | Callback used to return the image or video created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FileAsset> | Yes | Callback used to return the image or video created. |
 
 **Error codes:**
 
@@ -367,16 +379,17 @@ async function example(mgr: userFileManager.UserFileManager) {
 createPhotoAsset(displayName: string, albumUri?: string): Promise<FileAsset>
 ```
 
-Creates an image or video asset with the specified file name and album URI. This API uses a promise to return the
-result.
+Creates an image or video asset with the specified file name and album URI. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i-sys.md#createasset-1)
+**Substitutes:** [createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i.md#createasset-5)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-UserFileManager-createPhotoAsset(displayName: string, albumUri?: string): Promise<FileAsset>--><!--Device-UserFileManager-createPhotoAsset(displayName: string, albumUri?: string): Promise<FileAsset>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -393,7 +406,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FileAsset&gt; | Promise that returns the created image or video asset. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<FileAsset> | Promise that returns the created image or video asset. |
 
 **Error codes:**
 
@@ -426,16 +439,17 @@ async function example(mgr: userFileManager.UserFileManager) {
 createPhotoAsset(displayName: string, createOption: PhotoCreateOptions): Promise<FileAsset>
 ```
 
-Creates an image or video asset with the specified file name and options. This API uses a promise to return the
-result.
+Creates an image or video asset with the specified file name and options. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i-sys.md#createasset-1)
+**Substitutes:** [createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i.md#createasset-5)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-UserFileManager-createPhotoAsset(displayName: string, createOption: PhotoCreateOptions): Promise<FileAsset>--><!--Device-UserFileManager-createPhotoAsset(displayName: string, createOption: PhotoCreateOptions): Promise<FileAsset>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -446,13 +460,13 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the image or video to create. |
-| createOption | PhotoCreateOptions | Yes | Options for creating an image or video asset. |
+| createOption | [PhotoCreateOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photocreateoptions-i-sys.md) | Yes | Options for creating an image or video asset. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FileAsset&gt; | Promise that returns the created image or video asset. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<FileAsset> | Promise that returns the created image or video asset. |
 
 **Error codes:**
 
@@ -488,16 +502,17 @@ async function example(mgr: userFileManager.UserFileManager) {
 createPhotoAsset(displayName: string, createOption: PhotoCreateOptions, callback: AsyncCallback<FileAsset>): void
 ```
 
-Creates an image or video asset with the specified file name and options. This API uses an asynchronous callback
-to return the result.
+Creates an image or video asset with the specified file name and options. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i-sys.md#createasset-1)
+**Substitutes:** [createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i.md#createasset-5)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-UserFileManager-createPhotoAsset(displayName: string, createOption: PhotoCreateOptions, callback: AsyncCallback<FileAsset>): void--><!--Device-UserFileManager-createPhotoAsset(displayName: string, createOption: PhotoCreateOptions, callback: AsyncCallback<FileAsset>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -508,8 +523,8 @@ to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the image or video to create. |
-| createOption | PhotoCreateOptions | Yes | Options for creating an image or video asset. |
-| callback | AsyncCallback&lt;FileAsset&gt; | Yes | Callback used to return the image or video created. |
+| createOption | [PhotoCreateOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photocreateoptions-i-sys.md) | Yes | Options for creating an image or video asset. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FileAsset> | Yes | Callback used to return the image or video created. |
 
 **Error codes:**
 
@@ -547,8 +562,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 delete(uri: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes a media file. This API uses an asynchronous callback to return the result. The deleted file is moved to
-the recycle bin. This API uses an asynchronous callback to return the result.
+Deletes a media file. This API uses an asynchronous callback to return the result. The deleted file is moved to the recycle bin. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -557,6 +571,8 @@ the recycle bin. This API uses an asynchronous callback to return the result.
 **Substitutes:** [deleteAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-mediaassetchangerequest-c.md#deleteassets-1)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.READ_AUDIO and ohos.permission.WRITE_AUDIO
+
+<!--Device-UserFileManager-delete(uri: string, callback: AsyncCallback<void>): void--><!--Device-UserFileManager-delete(uri: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -567,7 +583,7 @@ the recycle bin. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the media file. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -628,6 +644,8 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.READ_AUDIO and ohos.permission.WRITE_AUDIO
 
+<!--Device-UserFileManager-delete(uri: string): Promise<void>--><!--Device-UserFileManager-delete(uri: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -642,7 +660,7 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -696,6 +714,8 @@ Deletes user albums. This API uses an asynchronous callback to return the result
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-UserFileManager-deleteAlbums(albums: Array<Album>, callback: AsyncCallback<void>): void--><!--Device-UserFileManager-deleteAlbums(albums: Array<Album>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -704,8 +724,8 @@ Deletes user albums. This API uses an asynchronous callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| albums | Array&lt;Album&gt; | Yes | Albums to delete. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback that returns no value. |
+| albums | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Album> | Yes | Albums to delete. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback that returns no value. |
 
 **Example**
 
@@ -753,6 +773,8 @@ Deletes user albums. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-UserFileManager-deleteAlbums(albums: Array<Album>): Promise<void>--><!--Device-UserFileManager-deleteAlbums(albums: Array<Album>): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -761,13 +783,13 @@ Deletes user albums. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| albums | Array&lt;Album&gt; | Yes | Albums to delete. |
+| albums | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Album> | Yes | Albums to delete. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -811,6 +833,8 @@ Obtains information about online peer devices. This API uses an asynchronous cal
 
 **Deprecated since:** 26.0.0
 
+<!--Device-UserFileManager-getActivePeers(callback: AsyncCallback<Array<PeerInfo>>): void--><!--Device-UserFileManager-getActivePeers(callback: AsyncCallback<Array<PeerInfo>>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.DistributedCore
 
 **System API:** This is a system API.
@@ -819,7 +843,7 @@ Obtains information about online peer devices. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;PeerInfo&gt;&gt; | Yes | Callback used to return a list of online peer devices. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<PeerInfo>> | Yes | Callback used to return a list of online peer devices. |
 
 **Example**
 
@@ -854,6 +878,8 @@ Obtains the information about online peer devices. This API uses a promise to re
 
 **Deprecated since:** 26.0.0
 
+<!--Device-UserFileManager-getActivePeers(): Promise<Array<PeerInfo>>--><!--Device-UserFileManager-getActivePeers(): Promise<Array<PeerInfo>>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.DistributedCore
 
 **System API:** This is a system API.
@@ -862,7 +888,7 @@ Obtains the information about online peer devices. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PeerInfo&gt;&gt; | Promise that returns a list of online peer devices. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<PeerInfo>> | Promise that returns a list of online peer devices. |
 
 **Example**
 
@@ -899,12 +925,9 @@ getAlbums(
     ): void
 ```
 
-Obtains albums based on the specified options and album type. This API uses an asynchronous callback to return
-the result.
+Obtains albums based on the specified options and album type. This API uses an asynchronous callback to return the result.
 
-This API cannot be used to obtain hidden albums. Use
-[getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i-sys.md#gethiddenalbums-1)
-to obtain hidden albums.
+This API cannot be used to obtain hidden albums. Use [getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i-sys.md#gethiddenalbums-1)to obtain hidden albums.
 
 Before the operation, ensure that the albums to obtain exist.
 
@@ -916,6 +939,18 @@ Before the operation, ensure that the albums to obtain exist.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-UserFileManager-getAlbums(
+      type: AlbumType,
+      subType: AlbumSubType,
+      options: FetchOptions,
+      callback: AsyncCallback<FetchResult<Album>>
+    ): void--><!--Device-UserFileManager-getAlbums(
+      type: AlbumType,
+      subType: AlbumSubType,
+      options: FetchOptions,
+      callback: AsyncCallback<FetchResult<Album>>
+    ): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -924,10 +959,10 @@ Before the operation, ensure that the albums to obtain exist.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | AlbumType | Yes | Type of the album to obtain. |
-| subType | AlbumSubType | Yes | Subtype of the album. |
-| options | FetchOptions | Yes | Retrieval options. |
-| callback | AsyncCallback&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
+| type | [AlbumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumtype-e-sys.md) | Yes | Type of the album to obtain. |
+| subType | [AlbumSubType](arkts-corefile-albumsubtype-e-sys.md) | Yes | Subtype of the album. |
+| options | [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchoptions-i.md) | Yes | Retrieval options. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FetchResult<Album>> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -976,9 +1011,7 @@ getAlbums(type: AlbumType, subType: AlbumSubType, callback: AsyncCallback<FetchR
 
 Obtains albums by type. This API uses an asynchronous callback to return the result.
 
-This API cannot be used to obtain hidden albums. Use
-[getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i-sys.md#gethiddenalbums-1)
-to obtain hidden albums.
+This API cannot be used to obtain hidden albums. Use [getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i-sys.md#gethiddenalbums-1)to obtain hidden albums.
 
 Before the operation, ensure that the albums to obtain exist.
 
@@ -990,6 +1023,8 @@ Before the operation, ensure that the albums to obtain exist.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-UserFileManager-getAlbums(type: AlbumType, subType: AlbumSubType, callback: AsyncCallback<FetchResult<Album>>): void--><!--Device-UserFileManager-getAlbums(type: AlbumType, subType: AlbumSubType, callback: AsyncCallback<FetchResult<Album>>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -998,9 +1033,9 @@ Before the operation, ensure that the albums to obtain exist.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | AlbumType | Yes | Type of the album to obtain. |
-| subType | AlbumSubType | Yes | Subtype of the album. |
-| callback | AsyncCallback&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
+| type | [AlbumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumtype-e-sys.md) | Yes | Type of the album to obtain. |
+| subType | [AlbumSubType](arkts-corefile-albumsubtype-e-sys.md) | Yes | Subtype of the album. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FetchResult<Album>> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1041,9 +1076,7 @@ getAlbums(type: AlbumType, subType: AlbumSubType, options?: FetchOptions): Promi
 
 Obtains albums based on the specified options and album type. This API uses a promise to return the result.
 
-This API cannot be used to obtain hidden albums. Use
-[getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i-sys.md#gethiddenalbums-1)
-to obtain hidden albums.
+This API cannot be used to obtain hidden albums. Use [getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i-sys.md#gethiddenalbums-1)to obtain hidden albums.
 
 Before the operation, ensure that the albums to obtain exist.
 
@@ -1055,6 +1088,8 @@ Before the operation, ensure that the albums to obtain exist.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-UserFileManager-getAlbums(type: AlbumType, subType: AlbumSubType, options?: FetchOptions): Promise<FetchResult<Album>>--><!--Device-UserFileManager-getAlbums(type: AlbumType, subType: AlbumSubType, options?: FetchOptions): Promise<FetchResult<Album>>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -1063,15 +1098,15 @@ Before the operation, ensure that the albums to obtain exist.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | AlbumType | Yes | Type of the album to obtain. |
-| subType | AlbumSubType | Yes | Subtype of the album. |
-| options | FetchOptions | No | Options for fetching the albums. If this parameter is not specified, thealbums are obtained based on the album type by default. |
+| type | [AlbumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumtype-e-sys.md) | Yes | Type of the album to obtain. |
+| subType | [AlbumSubType](arkts-corefile-albumsubtype-e-sys.md) | Yes | Subtype of the album. |
+| options | [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchoptions-i.md) | No | Options for fetching the albums. If this parameter is not specified, the albums are obtained based on the album type by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise that returns the albums. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<FetchResult<Album>> | Promise that returns the albums. |
 
 **Error codes:**
 
@@ -1123,6 +1158,8 @@ Obtains information about all peer devices. This API uses an asynchronous callba
 
 **Deprecated since:** 26.0.0
 
+<!--Device-UserFileManager-getAllPeers(callback: AsyncCallback<Array<PeerInfo>>): void--><!--Device-UserFileManager-getAllPeers(callback: AsyncCallback<Array<PeerInfo>>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.DistributedCore
 
 **System API:** This is a system API.
@@ -1131,7 +1168,7 @@ Obtains information about all peer devices. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;PeerInfo&gt;&gt; | Yes | Callback used to return a list of online peer devices. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<PeerInfo>> | Yes | Callback used to return a list of online peer devices. |
 
 **Example**
 
@@ -1166,6 +1203,8 @@ Obtains the information about all peer devices. This API uses a promise to retur
 
 **Deprecated since:** 26.0.0
 
+<!--Device-UserFileManager-getAllPeers(): Promise<Array<PeerInfo>>--><!--Device-UserFileManager-getAllPeers(): Promise<Array<PeerInfo>>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.DistributedCore
 
 **System API:** This is a system API.
@@ -1174,7 +1213,7 @@ Obtains the information about all peer devices. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PeerInfo&gt;&gt; | Promise that returns the information obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<PeerInfo>> | Promise that returns the information obtained. |
 
 **Example**
 
@@ -1215,6 +1254,8 @@ Obtains audio assets. This API uses an asynchronous callback to return the resul
 
 **Required permissions:** ohos.permission.READ_AUDIO
 
+<!--Device-UserFileManager-getAudioAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<FileAsset>>): void--><!--Device-UserFileManager-getAudioAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<FileAsset>>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -1223,8 +1264,8 @@ Obtains audio assets. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FetchOptions | Yes | Retrieval options. |
-| callback | AsyncCallback&lt;FetchResult&lt;FileAsset&gt;&gt; | Yes | Callback used to return the audio assets obtained. |
+| options | [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchoptions-i.md) | Yes | Retrieval options. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FetchResult<FileAsset>> | Yes | Callback used to return the audio assets obtained. |
 
 **Error codes:**
 
@@ -1276,6 +1317,8 @@ Obtains an audio asset. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.READ_AUDIO
 
+<!--Device-UserFileManager-getAudioAssets(options: FetchOptions): Promise<FetchResult<FileAsset>>--><!--Device-UserFileManager-getAudioAssets(options: FetchOptions): Promise<FetchResult<FileAsset>>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -1284,13 +1327,13 @@ Obtains an audio asset. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FetchOptions | Yes | Retrieval options. |
+| options | [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchoptions-i.md) | Yes | Retrieval options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;FileAsset&gt;&gt; | Promise that returns the audio assets obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<FetchResult<FileAsset>> | Promise that returns the audio assets obtained. |
 
 **Error codes:**
 
@@ -1336,13 +1379,9 @@ getPhotoAlbums(options: AlbumFetchOptions, callback: AsyncCallback<FetchResult<A
 
 Obtains image and video albums. This API uses an asynchronous callback to return the result.
 
-This API cannot be used to obtain hidden albums. Use
-[getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i-sys.md#gethiddenalbums-1)
-to obtain hidden albums.
+This API cannot be used to obtain hidden albums. Use [getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i-sys.md#gethiddenalbums-1)to obtain hidden albums.
 
-This API will be deprecated. Use
-[getAlbums](arkts-corefile-userfilemanager-i-sys.md#getalbums-1)
-instead.
+This API will be deprecated. Use [getAlbums](arkts-corefile-userfilemanager-i-sys.md#getalbums-1)instead.
 
 **Since:** 9
 
@@ -1352,6 +1391,8 @@ instead.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-UserFileManager-getPhotoAlbums(options: AlbumFetchOptions, callback: AsyncCallback<FetchResult<Album>>): void--><!--Device-UserFileManager-getPhotoAlbums(options: AlbumFetchOptions, callback: AsyncCallback<FetchResult<Album>>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -1360,8 +1401,8 @@ instead.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | AlbumFetchOptions | Yes | Options for fetching the albums. |
-| callback | AsyncCallback&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the albums obtained. |
+| options | [AlbumFetchOptions](arkts-corefile-albumfetchoptions-i-sys.md) | Yes | Options for fetching the albums. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FetchResult<Album>> | Yes | Callback used to return the albums obtained. |
 
 **Error codes:**
 
@@ -1409,13 +1450,9 @@ getPhotoAlbums(options: AlbumFetchOptions): Promise<FetchResult<Album>>
 
 Obtains albums. This API uses a promise to return the result.
 
-This API cannot be used to obtain hidden albums. Use
-[getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i-sys.md#gethiddenalbums-1)
-to obtain hidden albums.
+This API cannot be used to obtain hidden albums. Use [getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i-sys.md#gethiddenalbums-1)to obtain hidden albums.
 
-This API will be deprecated. Use
-[getAlbums](arkts-corefile-userfilemanager-i-sys.md#getalbums-1)
-instead.
+This API will be deprecated. Use [getAlbums](arkts-corefile-userfilemanager-i-sys.md#getalbums-1)instead.
 
 **Since:** 9
 
@@ -1425,6 +1462,8 @@ instead.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-UserFileManager-getPhotoAlbums(options: AlbumFetchOptions): Promise<FetchResult<Album>>--><!--Device-UserFileManager-getPhotoAlbums(options: AlbumFetchOptions): Promise<FetchResult<Album>>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -1433,13 +1472,13 @@ instead.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | AlbumFetchOptions | Yes | Options for fetching the albums. |
+| options | [AlbumFetchOptions](arkts-corefile-albumfetchoptions-i-sys.md) | Yes | Options for fetching the albums. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise that returns the albums obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<FetchResult<Album>> | Promise that returns the albums obtained. |
 
 **Error codes:**
 
@@ -1488,6 +1527,8 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-UserFileManager-getPhotoAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<FileAsset>>): void--><!--Device-UserFileManager-getPhotoAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<FileAsset>>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -1496,8 +1537,8 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FetchOptions | Yes | Options for fetching the image and video assets. |
-| callback | AsyncCallback&lt;FetchResult&lt;FileAsset&gt;&gt; | Yes | Callback used to return the image and video assetsobtained. |
+| options | [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchoptions-i.md) | Yes | Options for fetching the image and video assets. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FetchResult<FileAsset>> | Yes | Callback used to return the image and video assets obtained. |
 
 **Error codes:**
 
@@ -1551,6 +1592,8 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-UserFileManager-getPhotoAssets(options: FetchOptions): Promise<FetchResult<FileAsset>>--><!--Device-UserFileManager-getPhotoAssets(options: FetchOptions): Promise<FetchResult<FileAsset>>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -1559,13 +1602,13 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FetchOptions | Yes | Options for fetching the image and video assets. |
+| options | [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchoptions-i.md) | Yes | Options for fetching the image and video assets. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;FileAsset&gt;&gt; | Promise that returns the image and video assets obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<FetchResult<FileAsset>> | Promise that returns the image and video assets obtained. |
 
 **Error codes:**
 
@@ -1619,6 +1662,8 @@ Obtains the index of an image or video in an album. This API uses an asynchronou
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-UserFileManager-getPhotoIndex(photoUri: string, albumUri: string, options: FetchOptions, callback: AsyncCallback<number>): void--><!--Device-UserFileManager-getPhotoIndex(photoUri: string, albumUri: string, options: FetchOptions, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -1628,9 +1673,9 @@ Obtains the index of an image or video in an album. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | photoUri | string | Yes | URI of the media asset whose index is to be obtained. |
-| albumUri | string | Yes | Album URI, which can be an empty string. If it is an empty string, all the mediaassets in the Gallery are obtained by default. |
-| options | FetchOptions | Yes | Retrieval options. Only one search condition or sorting mode must be set in**predicates**. If no value is set or multiple search criteria or sorting modes are set, the API cannot becalled successfully. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the index obtained. |
+| albumUri | string | Yes | Album URI, which can be an empty string. If it is an empty string, all the media assets in the Gallery are obtained by default. |
+| options | [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchoptions-i.md) | Yes | Retrieval options. Only one search condition or sorting mode must be set in **predicates**. If no value is set or multiple search criteria or sorting modes are set, the API cannot be called successfully. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the index obtained. |
 
 **Error codes:**
 
@@ -1696,6 +1741,8 @@ Obtains the index of an image or video in an album. This API uses a promise to r
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-UserFileManager-getPhotoIndex(photoUri: string, albumUri: string, options: FetchOptions): Promise<number>--><!--Device-UserFileManager-getPhotoIndex(photoUri: string, albumUri: string, options: FetchOptions): Promise<number>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -1705,14 +1752,14 @@ Obtains the index of an image or video in an album. This API uses a promise to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | photoUri | string | Yes | URI of the media asset whose index is to be obtained. |
-| albumUri | string | Yes | Album URI, which can be an empty string. If it is an empty string, all the mediaassets in the Gallery are obtained by default. |
-| options | FetchOptions | Yes | Retrieval options. Only one search condition or sorting mode must be set in**predicates**. If no value is set or multiple search criteria or sorting modes are set, the API cannot becalled successfully. |
+| albumUri | string | Yes | Album URI, which can be an empty string. If it is an empty string, all the media assets in the Gallery are obtained by default. |
+| options | [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchoptions-i.md) | Yes | Retrieval options. Only one search condition or sorting mode must be set in **predicates**. If no value is set or multiple search criteria or sorting modes are set, the API cannot be called successfully. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise that returns the index obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise that returns the index obtained. |
 
 **Error codes:**
 
@@ -1773,9 +1820,7 @@ getPrivateAlbum(type: PrivateAlbumType, callback: AsyncCallback<FetchResult<Priv
 
 Obtains the system album. This API uses an asynchronous callback to return the result.
 
-This API will be deprecated. Use
-[getAlbums](arkts-corefile-userfilemanager-i-sys.md#getalbums-1)
-instead.
+This API will be deprecated. Use [getAlbums](arkts-corefile-userfilemanager-i-sys.md#getalbums-1)instead.
 
 **Since:** 9
 
@@ -1785,6 +1830,8 @@ instead.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-UserFileManager-getPrivateAlbum(type: PrivateAlbumType, callback: AsyncCallback<FetchResult<PrivateAlbum>>): void--><!--Device-UserFileManager-getPrivateAlbum(type: PrivateAlbumType, callback: AsyncCallback<FetchResult<PrivateAlbum>>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -1793,8 +1840,8 @@ instead.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | PrivateAlbumType | Yes | Type of the system album to obtain. |
-| callback | AsyncCallback&lt;FetchResult&lt;PrivateAlbum&gt;&gt; | Yes | Callback used to return the albums obtained. |
+| type | [PrivateAlbumType](arkts-corefile-privatealbumtype-e-sys.md) | Yes | Type of the system album to obtain. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FetchResult<PrivateAlbum>> | Yes | Callback used to return the albums obtained. |
 
 **Error codes:**
 
@@ -1829,9 +1876,7 @@ getPrivateAlbum(type: PrivateAlbumType): Promise<FetchResult<PrivateAlbum>>
 
 Obtains the private album. This API uses a promise to return the result.
 
-This API will be deprecated. Use
-[getAlbums](arkts-corefile-userfilemanager-i-sys.md#getalbums-1)
-instead.
+This API will be deprecated. Use [getAlbums](arkts-corefile-userfilemanager-i-sys.md#getalbums-1)instead.
 
 **Since:** 9
 
@@ -1841,6 +1886,8 @@ instead.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-UserFileManager-getPrivateAlbum(type: PrivateAlbumType): Promise<FetchResult<PrivateAlbum>>--><!--Device-UserFileManager-getPrivateAlbum(type: PrivateAlbumType): Promise<FetchResult<PrivateAlbum>>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -1849,13 +1896,13 @@ instead.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | PrivateAlbumType | Yes | Type of the system album to obtain. |
+| type | [PrivateAlbumType](arkts-corefile-privatealbumtype-e-sys.md) | Yes | Type of the system album to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;PrivateAlbum&gt;&gt; | Promise that returns the albums obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<FetchResult<PrivateAlbum>> | Promise that returns the albums obtained. |
 
 **Error codes:**
 
@@ -1889,15 +1936,15 @@ off(type: ChangeEvent, callback?: Callback<void>): void
 
 Unsubscribes from changes of the file management library. This API uses a callback to return the result.
 
-This API will be deprecated. Use
-[off](arkts-corefile-userfilemanager-i-sys.md#off-2)
-instead.
+This API will be deprecated. Use [off](arkts-corefile-userfilemanager-i-sys.md#off-2)instead.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
 **Substitutes:** off
+
+<!--Device-UserFileManager-off(type: ChangeEvent, callback?: Callback<void>): void--><!--Device-UserFileManager-off(type: ChangeEvent, callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -1907,8 +1954,8 @@ instead.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | ChangeEvent | Yes | Type of event to subscribe to.<br>**'deviceChange'**: device change.<br>**'albumChange'**: album change.<br>**'imageChange'**: image change.<br>**'audioChange'**: audio file change.<br>**'videoChange'**: video file change.<br>**'remoteFileChange'**: change of the file on a registered device. |
-| callback | Callback&lt;void&gt; | No | Callback that returns no value. |
+| type | [ChangeEvent](arkts-corefile-changeevent-t-sys.md) | Yes | Type of event to subscribe to.<br>**'deviceChange'**: device change.<br>**'albumChange'**: album change.<br>**'imageChange'**: image change.<br>**'audioChange'**: audio file change.<br>**'videoChange'**: video file change.<br>**'remoteFileChange'**: change of the file on a registered device. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | Callback that returns no value. |
 
 **Example**
 
@@ -1951,14 +1998,15 @@ async function example(mgr: userFileManager.UserFileManager) {
 off(uri: string, callback?: Callback<ChangeData>): void
 ```
 
-Unregisters the listener for the specified URI. Multiple callbacks can be registered for a URI for listening. You
-can use this API to unregister the specified callbacks or all callbacks.
+Unregisters the listener for the specified URI. Multiple callbacks can be registered for a URI for listening. You can use this API to unregister the specified callbacks or all callbacks.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
 **Substitutes:** unregisterChange
+
+<!--Device-UserFileManager-off(uri: string, callback?: Callback<ChangeData>): void--><!--Device-UserFileManager-off(uri: string, callback?: Callback<ChangeData>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -1968,8 +2016,8 @@ can use this API to unregister the specified callbacks or all callbacks.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the file asset or album, or[DefaultChangeUri](arkts-corefile-defaultchangeuri-e-sys.md). |
-| callback | Callback&lt;ChangeData&gt; | No | Callback registered by[on](arkts-corefile-userfilemanager-i-sys.md#on-2). If this parameter is not specified, all listener callbacks registered for the URI will be unregistered.<br>Note that the specified callback will not be invoked. |
+| uri | string | Yes | URI of the file asset or album, or [DefaultChangeUri](arkts-corefile-defaultchangeuri-e-sys.md). |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ChangeData> | No | Callback registered by [on](arkts-corefile-userfilemanager-i-sys.md#on-2). If this parameter is not specified, all listener callbacks registered for the URI will be unregistered.<br>Note that the specified callback will not be invoked. |
 
 **Error codes:**
 
@@ -2029,15 +2077,15 @@ on(type: ChangeEvent, callback: Callback<void>): void
 
 Subscribes to changes of the file management library. This API uses a callback to return the result.
 
-This API will be deprecated. Use
-[on](arkts-corefile-userfilemanager-i-sys.md#on-2)
-instead.
+This API will be deprecated. Use [on](arkts-corefile-userfilemanager-i-sys.md#on-2)instead.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
 **Substitutes:** on
+
+<!--Device-UserFileManager-on(type: ChangeEvent, callback: Callback<void>): void--><!--Device-UserFileManager-on(type: ChangeEvent, callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -2047,8 +2095,8 @@ instead.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | ChangeEvent | Yes | Type of event to subscribe to.<br>**'deviceChange'**: device change.<br>**'albumChange'**: album change.<br>**'imageChange'**: image change.<br>**'audioChange'**: audio file change.<br>**'videoChange'**: video file change.<br>**'remoteFileChange'**: change of the file on a registered device. |
-| callback | Callback&lt;void&gt; | Yes | Callback that returns no value. |
+| type | [ChangeEvent](arkts-corefile-changeevent-t-sys.md) | Yes | Type of event to subscribe to.<br>**'deviceChange'**: device change.<br>**'albumChange'**: album change.<br>**'imageChange'**: image change.<br>**'audioChange'**: audio file change.<br>**'videoChange'**: video file change.<br>**'remoteFileChange'**: change of the file on a registered device. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Callback that returns no value. |
 
 **Example**
 
@@ -2097,6 +2145,8 @@ Registers a listener for the specified URI. This API uses an asynchronous callba
 
 **Substitutes:** [registerChange](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i.md#registerchange-1)
 
+<!--Device-UserFileManager-on(uri: string, forSubUri: boolean, callback: Callback<ChangeData>): void--><!--Device-UserFileManager-on(uri: string, forSubUri: boolean, callback: Callback<ChangeData>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -2105,9 +2155,9 @@ Registers a listener for the specified URI. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the file asset or album, or[DefaultChangeUri](arkts-corefile-defaultchangeuri-e-sys.md). |
-| forSubUri | boolean | Yes | Whether to perform fuzzy listening.<br>If **uri** is the URI of the album, thevalue **true** means to listen for the file change in the album; the value **false** means to listen for thealbum change only. If **uri** is the URI of the file asset, there is no difference whether **forSubUri** is**true** or **false**. If **uri** is **DefaultChangeUri**, the value must be **true**, otherwise, the URIcannot be found and no message can be received. |
-| callback | Callback&lt;ChangeData&gt; | Yes | Callback used to return [ChangeData](arkts-corefile-changedata-i-sys.md).<br>Note that different callbacks can be registered for a URI. You can use[off](arkts-corefile-userfilemanager-i-sys.md#off-2)to disable the specified callback or all callbacks for the URI. |
+| uri | string | Yes | URI of the file asset or album, or [DefaultChangeUri](arkts-corefile-defaultchangeuri-e-sys.md). |
+| forSubUri | boolean | Yes | Whether to perform fuzzy listening.<br>If **uri** is the URI of the album, the value **true** means to listen for the file change in the album; the value **false** means to listen for the album change only. If **uri** is the URI of the file asset, there is no difference whether **forSubUri** is **true** or **false**. If **uri** is **DefaultChangeUri**, the value must be **true**, otherwise, the URI cannot be found and no message can be received. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ChangeData> | Yes | Callback used to return [ChangeData](arkts-corefile-changedata-i-sys.md).<br>Note that different callbacks can be registered for a URI. You can use [off](arkts-corefile-userfilemanager-i-sys.md#off-2)to disable the specified callback or all callbacks for the URI. |
 
 **Error codes:**
 
@@ -2174,6 +2224,8 @@ Call this API when the APIs in the **UserFileManager** instance are no longer us
 
 **Substitutes:** [release](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i.md#release-1)
 
+<!--Device-UserFileManager-release(callback: AsyncCallback<void>): void--><!--Device-UserFileManager-release(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -2182,7 +2234,7 @@ Call this API when the APIs in the **UserFileManager** instance are no longer us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -2218,6 +2270,8 @@ Call this API when the APIs in the **UserFileManager** instance are no longer us
 
 **Substitutes:** [release](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-i.md#release-1)
 
+<!--Device-UserFileManager-release(): Promise<void>--><!--Device-UserFileManager-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -2226,7 +2280,7 @@ Call this API when the APIs in the **UserFileManager** instance are no longer us
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 

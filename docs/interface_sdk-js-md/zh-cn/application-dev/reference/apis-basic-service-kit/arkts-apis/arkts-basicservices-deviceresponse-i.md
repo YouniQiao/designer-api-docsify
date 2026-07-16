@@ -6,7 +6,15 @@
 
 **废弃版本：** 6
 
+<!--Device-unnamed-export interface DeviceResponse--><!--Device-unnamed-export interface DeviceResponse-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
+
+## 导入模块
+
+```TypeScript
+import { DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit';
+```
 
 ## apiVersion
 
@@ -21,6 +29,8 @@ apiVersion: number
 **起始版本：** 4
 
 **废弃版本：** 6
+
+<!--Device-DeviceResponse-apiVersion: number--><!--Device-DeviceResponse-apiVersion: number-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
@@ -38,6 +48,8 @@ brand: string
 
 **废弃版本：** 6
 
+<!--Device-DeviceResponse-brand: string--><!--Device-DeviceResponse-brand: string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
 ## deviceType
@@ -53,6 +65,8 @@ deviceType: string
 **起始版本：** 4
 
 **废弃版本：** 6
+
+<!--Device-DeviceResponse-deviceType: string--><!--Device-DeviceResponse-deviceType: string-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
@@ -70,6 +84,8 @@ language: string
 
 **废弃版本：** 6
 
+<!--Device-DeviceResponse-language: string--><!--Device-DeviceResponse-language: string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
 ## manufacturer
@@ -85,6 +101,8 @@ manufacturer: string
 **起始版本：** 3
 
 **废弃版本：** 6
+
+<!--Device-DeviceResponse-manufacturer: string--><!--Device-DeviceResponse-manufacturer: string-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
@@ -102,6 +120,8 @@ model: string
 
 **废弃版本：** 6
 
+<!--Device-DeviceResponse-model: string--><!--Device-DeviceResponse-model: string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
 ## product
@@ -117,6 +137,8 @@ product: string
 **起始版本：** 3
 
 **废弃版本：** 6
+
+<!--Device-DeviceResponse-product: string--><!--Device-DeviceResponse-product: string-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
@@ -134,6 +156,8 @@ region: string
 
 **废弃版本：** 6
 
+<!--Device-DeviceResponse-region: string--><!--Device-DeviceResponse-region: string-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
 ## screenDensity
@@ -149,6 +173,8 @@ screenDensity: number
 **起始版本：** 4
 
 **废弃版本：** 6
+
+<!--Device-DeviceResponse-screenDensity: number--><!--Device-DeviceResponse-screenDensity: number-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
@@ -170,6 +196,8 @@ screenShape: 'rect' | 'circle'
 
 **废弃版本：** 6
 
+<!--Device-DeviceResponse-screenShape: 'rect' | 'circle'--><!--Device-DeviceResponse-screenShape: 'rect' | 'circle'-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
 ## windowHeight
@@ -186,6 +214,8 @@ windowHeight: number
 
 **废弃版本：** 6
 
+<!--Device-DeviceResponse-windowHeight: number--><!--Device-DeviceResponse-windowHeight: number-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
 ## windowWidth
@@ -201,6 +231,8 @@ windowWidth: number
 **起始版本：** 3
 
 **废弃版本：** 6
+
+<!--Device-DeviceResponse-windowWidth: number--><!--Device-DeviceResponse-windowWidth: number-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 

@@ -1,5 +1,11 @@
 # stopWork
 
+## 导入模块
+
+```TypeScript
+import { workScheduler } from '@kit.BackgroundTasksKit';
+```
+
 ## stopWork
 
 ```TypeScript
@@ -12,13 +18,15 @@ function stopWork(work: WorkInfo, needCancel?: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-workScheduler-function stopWork(work: WorkInfo, needCancel?: boolean): void--><!--Device-workScheduler-function stopWork(work: WorkInfo, needCancel?: boolean): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| work | WorkInfo | 是 | 要停止或移除的延迟任务。 |
+| work | [WorkInfo](arkts-backgroundtasks-workinfo-i.md) | 是 | 要停止或移除的延迟任务。 |
 | needCancel | boolean | 否 | 是否需要移除任务。<br>true表示停止并移除，false表示只停止不移除。默认为false。 |
 
 **错误码：**

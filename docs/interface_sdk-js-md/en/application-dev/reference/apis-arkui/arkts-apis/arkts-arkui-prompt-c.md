@@ -4,6 +4,8 @@ Defines the prompt interface.
 
 **Since:** 11
 
+<!--Device-unnamed-export default class Prompt--><!--Device-unnamed-export default class Prompt-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Displays the menu.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Prompt-static showActionMenu(options: ShowActionMenuOptions): void--><!--Device-Prompt-static showActionMenu(options: ShowActionMenuOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ShowActionMenuOptions | Yes | Options. |
+| options | [ShowActionMenuOptions](arkts-arkui-showactionmenuoptions-i.md) | Yes | Options. |
 
 ## showDialog
 
@@ -44,13 +48,15 @@ Displays the dialog box.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Prompt-static showDialog(options: ShowDialogOptions): void--><!--Device-Prompt-static showDialog(options: ShowDialogOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ShowDialogOptions | Yes | Options. |
+| options | [ShowDialogOptions](arkts-arkui-showdialogoptions-i.md) | Yes | Options. |
 
 ## showToast
 
@@ -64,11 +70,13 @@ Displays the notification text.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Prompt-static showToast(options: ShowToastOptions): void--><!--Device-Prompt-static showToast(options: ShowToastOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ShowToastOptions | Yes | Options. |
+| options | [ShowToastOptions](arkts-arkui-showtoastoptions-i.md) | Yes | Options. |
 

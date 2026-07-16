@@ -18,6 +18,8 @@ Judge whether the emergency call is in progress.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function isInEmergencyCall(callback: AsyncCallback<boolean>): void--><!--Device-call-function isInEmergencyCall(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Judge whether the emergency call is in progress.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | The callback of isInEmergencyCall.Returns {@code true} if the call is in emergency; returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | The callback of isInEmergencyCall.Returns {@code true} if the call is in emergency; returns {@code false} otherwise. |
 
 **Error codes:**
 
@@ -68,6 +70,8 @@ Judge whether the emergency call is in progress.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function isInEmergencyCall(): Promise<boolean>--><!--Device-call-function isInEmergencyCall(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -76,7 +80,7 @@ Judge whether the emergency call is in progress.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns {@code true} if the call is in emergency; returns {@code false} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns {@code true} if the call is in emergency; returns {@code false} otherwise. |
 
 **Error codes:**
 

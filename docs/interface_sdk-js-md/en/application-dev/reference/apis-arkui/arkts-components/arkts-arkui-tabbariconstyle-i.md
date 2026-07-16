@@ -4,6 +4,8 @@ Represents a label icon style object.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface TabBarIconStyle--><!--Device-unnamed-declare interface TabBarIconStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectedColor
@@ -30,6 +32,8 @@ This attribute only applies to an SVG image. Once set, the fill color will repla
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TabBarIconStyle-selectedColor?: ResourceColor--><!--Device-TabBarIconStyle-selectedColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## unselectedColor
@@ -55,6 +59,8 @@ This attribute only applies to an SVG image. Once set, the fill color will repla
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TabBarIconStyle-unselectedColor?: ResourceColor--><!--Device-TabBarIconStyle-unselectedColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -12,12 +12,13 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function off(type: 'streamChange', callback?: Callback<number>): void
 ```
 
-Unsubscribe Wi-Fi stream change events.
-All callback functions will be deregistered If there is no specific callback parameter.
+Unsubscribe Wi-Fi stream change events.All callback functions will be deregistered If there is no specific callback parameter.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_CONNECTION
+
+<!--Device-wifiManager-function off(type: 'streamChange', callback?: Callback<number>): void--><!--Device-wifiManager-function off(type: 'streamChange', callback?: Callback<number>): void-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -28,7 +29,7 @@ All callback functions will be deregistered If there is no specific callback par
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'streamChange' | Yes | event name. |
-| callback | Callback&lt;number&gt; | No | the callback of off |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | No | the callback of off |
 
 **Error codes:**
 
@@ -71,6 +72,8 @@ Subscribe Wi-Fi device config change events.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function off(type: 'deviceConfigChange', callback?: Callback<number>): void--><!--Device-wifiManager-function off(type: 'deviceConfigChange', callback?: Callback<number>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -80,7 +83,7 @@ Subscribe Wi-Fi device config change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceConfigChange' | Yes | event name. |
-| callback | Callback&lt;number&gt; | No | the callback of off,0: config is added, 1: config is changed, 2: config is removed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | No | the callback of off,0: config is added, 1: config is changed, 2: config is removed. |
 
 **Error codes:**
 
@@ -117,12 +120,13 @@ wifiManager.off("deviceConfigChange", recvDeviceConfigChangeFunc);
 function off(type: 'hotspotStaJoin', callback?: Callback<StationInfo>): void
 ```
 
-Unsubscribe Wi-Fi hotspot sta join events.
-All callback functions will be deregistered If there is no specific callback parameter.
+Unsubscribe Wi-Fi hotspot sta join events.All callback functions will be deregistered If there is no specific callback parameter.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
+
+<!--Device-wifiManager-function off(type: 'hotspotStaJoin', callback?: Callback<StationInfo>): void--><!--Device-wifiManager-function off(type: 'hotspotStaJoin', callback?: Callback<StationInfo>): void-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -133,7 +137,7 @@ All callback functions will be deregistered If there is no specific callback par
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hotspotStaJoin' | Yes | event name. |
-| callback | Callback&lt;StationInfo&gt; | No | the callback of off |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<StationInfo> | No | the callback of off |
 
 **Error codes:**
 
@@ -176,6 +180,8 @@ Unsubscribe Wi-Fi hotspot sta leave events.
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
 
+<!--Device-wifiManager-function off(type: 'hotspotStaLeave', callback?: Callback<StationInfo>): void--><!--Device-wifiManager-function off(type: 'hotspotStaLeave', callback?: Callback<StationInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
 **System API:** This is a system API.
@@ -185,7 +191,7 @@ Unsubscribe Wi-Fi hotspot sta leave events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hotspotStaLeave' | Yes | event name. |
-| callback | Callback&lt;StationInfo&gt; | No | the callback of off |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<StationInfo> | No | the callback of off |
 
 **Error codes:**
 

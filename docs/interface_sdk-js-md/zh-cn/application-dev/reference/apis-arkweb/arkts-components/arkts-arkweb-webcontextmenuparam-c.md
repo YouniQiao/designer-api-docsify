@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class WebContextMenuParam--><!--Device-unnamed-declare class WebContextMenuParam-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## constructor
@@ -16,7 +18,9 @@ WebContextMenuParam的构造函数。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebContextMenuParam-constructor()--><!--Device-WebContextMenuParam-constructor()-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -30,7 +34,9 @@ existsImageContents(): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebContextMenuParam-existsImageContents(): boolean--><!--Device-WebContextMenuParam-existsImageContents(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -50,13 +56,15 @@ getContextMenuMediaType(): ContextMenuDataMediaType
 
 **起始版本：** 22
 
+<!--Device-WebContextMenuParam-getContextMenuMediaType(): ContextMenuDataMediaType--><!--Device-WebContextMenuParam-getContextMenuMediaType(): ContextMenuDataMediaType-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ContextMenuDataMediaType | 返回上下文节点的类型。 |
+| [ContextMenuDataMediaType](arkts-arkweb-contextmenudatamediatype-e.md) | 返回上下文节点的类型。 |
 
 ## getEditStateFlags
 
@@ -68,7 +76,9 @@ getEditStateFlags(): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebContextMenuParam-getEditStateFlags(): number--><!--Device-WebContextMenuParam-getEditStateFlags(): number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -88,7 +98,9 @@ getInputFieldType(): ContextMenuInputFieldType
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebContextMenuParam-getInputFieldType(): ContextMenuInputFieldType--><!--Device-WebContextMenuParam-getInputFieldType(): ContextMenuInputFieldType-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -96,7 +108,7 @@ getInputFieldType(): ContextMenuInputFieldType
 
 | 类型 | 说明 |
 | --- | --- |
-| ContextMenuInputFieldType | 输入框上触发菜单时返回输入框类型。 |
+| [ContextMenuInputFieldType](arkts-arkweb-contextmenuinputfieldtype-e.md) | 输入框上触发菜单时返回输入框类型。 |
 
 ## getLinkUrl
 
@@ -108,7 +120,9 @@ getLinkUrl(): string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebContextMenuParam-getLinkUrl(): string--><!--Device-WebContextMenuParam-getLinkUrl(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -128,7 +142,9 @@ getMediaType(): ContextMenuMediaType
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebContextMenuParam-getMediaType(): ContextMenuMediaType--><!--Device-WebContextMenuParam-getMediaType(): ContextMenuMediaType-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -136,7 +152,7 @@ getMediaType(): ContextMenuMediaType
 
 | 类型 | 说明 |
 | --- | --- |
-| ContextMenuMediaType | 返回上下文节点的类型。 |
+| [ContextMenuMediaType](arkts-arkweb-contextmenumediatype-e.md) | 返回上下文节点的类型。 |
 
 ## getPreviewHeight
 
@@ -147,6 +163,8 @@ getPreviewHeight(): number
 返回选择菜单预览高度。
 
 **起始版本：** 13
+
+<!--Device-WebContextMenuParam-getPreviewHeight(): number--><!--Device-WebContextMenuParam-getPreviewHeight(): number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -166,6 +184,8 @@ getPreviewWidth(): number
 
 **起始版本：** 13
 
+<!--Device-WebContextMenuParam-getPreviewWidth(): number--><!--Device-WebContextMenuParam-getPreviewWidth(): number-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -184,7 +204,9 @@ getSelectionText(): string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebContextMenuParam-getSelectionText(): string--><!--Device-WebContextMenuParam-getSelectionText(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -204,7 +226,9 @@ getSourceType(): ContextMenuSourceType
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebContextMenuParam-getSourceType(): ContextMenuSourceType--><!--Device-WebContextMenuParam-getSourceType(): ContextMenuSourceType-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -212,7 +236,7 @@ getSourceType(): ContextMenuSourceType
 
 | 类型 | 说明 |
 | --- | --- |
-| ContextMenuSourceType | @syscap SystemCapability.Web.Webview.Core@atomicservice |
+| [ContextMenuSourceType](arkts-arkweb-contextmenusourcetype-e.md) | @syscap SystemCapability.Web.Webview.Core@atomicservice |
 
 ## getSourceUrl
 
@@ -224,7 +248,9 @@ getSourceUrl(): string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebContextMenuParam-getSourceUrl(): string--><!--Device-WebContextMenuParam-getSourceUrl(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -244,7 +270,9 @@ getUnfilteredLinkUrl(): string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebContextMenuParam-getUnfilteredLinkUrl(): string--><!--Device-WebContextMenuParam-getUnfilteredLinkUrl(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -264,7 +292,9 @@ isEditable(): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebContextMenuParam-isEditable(): boolean--><!--Device-WebContextMenuParam-isEditable(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -284,7 +314,9 @@ x(): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebContextMenuParam-x(): number--><!--Device-WebContextMenuParam-x(): number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -304,7 +336,9 @@ y(): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebContextMenuParam-y(): number--><!--Device-WebContextMenuParam-y(): number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

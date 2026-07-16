@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-usbManager-interface USBInterface--><!--Device-usbManager-interface USBInterface-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
+
+## 导入模块
+
+```TypeScript
+import { usbManager } from '@kit.BasicServicesKit';
+```
 
 ## alternateSetting
 
@@ -17,6 +25,8 @@ alternateSetting: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-USBInterface-alternateSetting: int--><!--Device-USBInterface-alternateSetting: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -32,6 +42,8 @@ clazz: number
 
 **起始版本：** 9
 
+<!--Device-USBInterface-clazz: int--><!--Device-USBInterface-clazz: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## endpoints
@@ -45,6 +57,8 @@ endpoints: Array<USBEndpoint>
 **类型：** Array<USBEndpoint>
 
 **起始版本：** 9
+
+<!--Device-USBInterface-endpoints: Array<USBEndpoint>--><!--Device-USBInterface-endpoints: Array<USBEndpoint>-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -60,6 +74,8 @@ id: number
 
 **起始版本：** 9
 
+<!--Device-USBInterface-id: int--><!--Device-USBInterface-id: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## name
@@ -73,6 +89,8 @@ name: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-USBInterface-name: string--><!--Device-USBInterface-name: string-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -88,6 +106,8 @@ protocol: number
 
 **起始版本：** 9
 
+<!--Device-USBInterface-protocol: int--><!--Device-USBInterface-protocol: int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager
 
 ## subClass
@@ -101,6 +121,8 @@ subClass: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-USBInterface-subClass: int--><!--Device-USBInterface-subClass: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 

@@ -1,5 +1,11 @@
 # queryAppStatsInfos（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+```
+
 ## queryAppStatsInfos
 
 ```TypeScript
@@ -11,6 +17,8 @@ function queryAppStatsInfos(begin: number, end: number): Promise<AppStatsMap>
 **起始版本：** 15
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
+
+<!--Device-usageStatistics-function queryAppStatsInfos(begin: long, end: long): Promise<AppStatsMap>--><!--Device-usageStatistics-function queryAppStatsInfos(begin: long, end: long): Promise<AppStatsMap>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -27,7 +35,7 @@ function queryAppStatsInfos(begin: number, end: number): Promise<AppStatsMap>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AppStatsMap&gt; | Promise对象。返回指定时间段内应用使用的具体信息。 |
+| Promise<AppStatsMap> | Promise对象。返回指定时间段内应用使用的具体信息。 |
 
 **错误码：**
 

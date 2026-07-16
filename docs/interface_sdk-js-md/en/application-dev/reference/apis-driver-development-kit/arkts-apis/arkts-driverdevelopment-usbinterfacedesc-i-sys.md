@@ -4,6 +4,8 @@ Defines the interface descriptor of a USB device.
 
 **Since:** 12
 
+<!--Device-deviceManager-interface USBInterfaceDesc--><!--Device-deviceManager-interface USBInterfaceDesc-End-->
+
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Interface class.
 
 **Since:** 12
 
+<!--Device-USBInterfaceDesc-bClass: int--><!--Device-USBInterfaceDesc-bClass: int-End-->
+
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Interface ID.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-USBInterfaceDesc-bInterfaceNumber: int--><!--Device-USBInterfaceDesc-bInterfaceNumber: int-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -58,6 +64,8 @@ Interface protocol.
 
 **Since:** 12
 
+<!--Device-USBInterfaceDesc-bProtocol: int--><!--Device-USBInterfaceDesc-bProtocol: int-End-->
+
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Interface subclass.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-USBInterfaceDesc-bSubClass: int--><!--Device-USBInterfaceDesc-bSubClass: int-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 

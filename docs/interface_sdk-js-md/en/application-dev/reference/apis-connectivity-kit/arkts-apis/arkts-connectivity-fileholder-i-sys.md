@@ -4,6 +4,8 @@ Describes the file info for transfer
 
 **Since:** 16
 
+<!--Device-opp-interface FileHolder--><!--Device-opp-interface FileHolder-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ The file fd
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FileHolder-fileFd: int--><!--Device-FileHolder-fileFd: int-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -46,6 +50,8 @@ The file path
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FileHolder-filePath: string--><!--Device-FileHolder-filePath: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -63,6 +69,8 @@ The file size
 **Since:** 16
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FileHolder-fileSize: long--><!--Device-FileHolder-fileSize: long-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

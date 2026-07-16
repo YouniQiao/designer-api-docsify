@@ -4,9 +4,17 @@
 
 **起始版本：** 24
 
+<!--Device-selectionManager-interface Panel--><!--Device-selectionManager-interface Panel-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { selectionManager } from '@kit.BasicServicesKit';
+```
 
 ## moveToGlobalDisplay
 
@@ -19,6 +27,8 @@ moveToGlobalDisplay(x: number, y: number): Promise<void>
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Panel-moveToGlobalDisplay(x: int, y: int): Promise<void>--><!--Device-Panel-moveToGlobalDisplay(x: int, y: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 
@@ -33,7 +43,7 @@ moveToGlobalDisplay(x: number, y: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

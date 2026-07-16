@@ -12,12 +12,11 @@ import { media } from '@kit.MediaKit';
 function reportAVScreenCaptureUserChoice(sessionId: number, choice: string): Promise<void>
 ```
 
-Reports the user selection result in the screen capture privacy dialog box to the AVScreenCapture server to
-determine whether to start screen capture. Screen capture starts only when the user touches a button to
-continue the operation.
-This API is called by the system application that creates the dialog box.
+Reports the user selection result in the screen capture privacy dialog box to the AVScreenCapture server to determine whether to start screen capture. Screen capture starts only when the user touches a button to continue the operation.This API is called by the system application that creates the dialog box.
 
 **Since:** 12
+
+<!--Device-media-function reportAVScreenCaptureUserChoice(sessionId: int, choice: string): Promise<void>--><!--Device-media-function reportAVScreenCaptureUserChoice(sessionId: int, choice: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -34,7 +33,7 @@ This API is called by the system application that creates the dialog box.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 

@@ -20,13 +20,15 @@ Stops scanning.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-scan-function stopScan(): Promise<void>--><!--Device-scan-function stopScan(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | @throws { BusinessError } 201 - Permission denied. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | @throws { BusinessError } 201 - Permission denied. |
 
 **Error codes:**
 

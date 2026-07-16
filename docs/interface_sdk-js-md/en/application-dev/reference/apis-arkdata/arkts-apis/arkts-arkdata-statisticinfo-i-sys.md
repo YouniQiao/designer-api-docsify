@@ -4,6 +4,8 @@ Represents the device-cloud sync statistics.
 
 **Since:** 12
 
+<!--Device-cloudData-interface StatisticInfo--><!--Device-cloudData-interface StatisticInfo-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -20,12 +22,13 @@ import { cloudData } from '@kit.ArkData';
 inserted: number
 ```
 
-Number of data records that are added locally and have not been synced to the cloud. For example, the value **2**
-indicates that the table has two data records that are added locally but not synced to the cloud.
+Number of data records that are added locally and have not been synced to the cloud. For example, the value **2** indicates that the table has two data records that are added locally but not synced to the cloud.
 
 **Type:** number
 
 **Since:** 12
+
+<!--Device-StatisticInfo-inserted: int--><!--Device-StatisticInfo-inserted: int-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -37,12 +40,13 @@ indicates that the table has two data records that are added locally but not syn
 normal: number
 ```
 
-Number of consistent data records between the device and the cloud. For example, the value **2** indicates that
-table has two data records that are consistent between the device and the cloud.
+Number of consistent data records between the device and the cloud. For example, the value **2** indicates that table has two data records that are consistent between the device and the cloud.
 
 **Type:** number
 
 **Since:** 12
+
+<!--Device-StatisticInfo-normal: int--><!--Device-StatisticInfo-normal: int-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -54,12 +58,13 @@ table has two data records that are consistent between the device and the cloud.
 table: string
 ```
 
-Name of the table queried. For example, the value **cloud_notes** indicates that the sync information of the
-**cloud_notes** table is queried.
+Name of the table queried. For example, the value **cloud_notes** indicates that the sync information of the **cloud_notes** table is queried.
 
 **Type:** string
 
 **Since:** 12
+
+<!--Device-StatisticInfo-table: string--><!--Device-StatisticInfo-table: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -71,12 +76,13 @@ Name of the table queried. For example, the value **cloud_notes** indicates that
 updated: number
 ```
 
-Number of data records that are modified locally or on the cloud but have not been synced. For example, the value
-**2** indicates that the table has two data records that are updated locally or on the cloud but not synced.
+Number of data records that are modified locally or on the cloud but have not been synced. For example, the value **2** indicates that the table has two data records that are updated locally or on the cloud but not synced.
 
 **Type:** number
 
 **Since:** 12
+
+<!--Device-StatisticInfo-updated: int--><!--Device-StatisticInfo-updated: int-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 

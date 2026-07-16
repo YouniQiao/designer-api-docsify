@@ -8,6 +8,8 @@
 
 **替代接口：** [DeviceStateChange](arkts-distributedservice-devicestatechange-e.md)
 
+<!--Device-deviceManager-enum DeviceStateChangeAction--><!--Device-deviceManager-enum DeviceStateChangeAction-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -25,6 +27,8 @@ ONLINE = 0
 **废弃版本：** 11
 
 **替代接口：** [UNKNOWN](arkts-distributedservice-devicestatechange-e.md#unknown)
+
+<!--Device-DeviceStateChangeAction-ONLINE = 0--><!--Device-DeviceStateChangeAction-ONLINE = 0-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -44,6 +48,8 @@ READY = 1
 
 **替代接口：** [AVAILABLE](arkts-distributedservice-devicestatechange-e.md#available)
 
+<!--Device-DeviceStateChangeAction-READY = 1--><!--Device-DeviceStateChangeAction-READY = 1-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -62,6 +68,8 @@ OFFLINE = 2
 
 **替代接口：** [UNAVAILABLE](arkts-distributedservice-devicestatechange-e.md#unavailable)
 
+<!--Device-DeviceStateChangeAction-OFFLINE = 2--><!--Device-DeviceStateChangeAction-OFFLINE = 2-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +85,8 @@ CHANGE = 3
 **起始版本：** 7
 
 **废弃版本：** 11
+
+<!--Device-DeviceStateChangeAction-CHANGE = 3--><!--Device-DeviceStateChangeAction-CHANGE = 3-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 

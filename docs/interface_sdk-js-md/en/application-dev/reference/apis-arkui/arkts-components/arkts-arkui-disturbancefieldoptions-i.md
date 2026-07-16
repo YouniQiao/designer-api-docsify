@@ -4,6 +4,8 @@ Defines particle disturbance Field params.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface DisturbanceFieldOptions--><!--Device-unnamed-declare interface DisturbanceFieldOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## feather
@@ -12,10 +14,7 @@ Defines particle disturbance Field params.
 feather?: number
 ```
 
-Feather value, which represents the degree of attenuation from the center of the field to its edges. The value is
-an integer ranging from 0 to 100. A value of 0 indicates that the field is rigid, and all particles within its
-range are repelled. The higher the feather value, the more gradual the field becomes, resulting in more particles
-close to the center point appearing within the field's range.
+Feather value, which represents the degree of attenuation from the center of the field to its edges. The value is an integer ranging from 0 to 100. A value of 0 indicates that the field is rigid, and all particles within its range are repelled. The higher the feather value, the more gradual the field becomes, resulting in more particles close to the center point appearing within the field's range.
 
 Default value: **0**.
 
@@ -29,6 +28,8 @@ Default value: **0**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DisturbanceFieldOptions-feather?: number--><!--Device-DisturbanceFieldOptions-feather?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## noiseAmplitude
@@ -37,8 +38,7 @@ Default value: **0**.
 noiseAmplitude?: number
 ```
 
-Noise amplitude, which indicates the range of noise fluctuations. The greater the amplitude, the greater the
-difference between the noises. The value is greater than or equal to 0.
+Noise amplitude, which indicates the range of noise fluctuations. The greater the amplitude, the greater the difference between the noises. The value is greater than or equal to 0.
 
 Default value: **1**.
 
@@ -51,6 +51,8 @@ Default value: **1**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DisturbanceFieldOptions-noiseAmplitude?: number--><!--Device-DisturbanceFieldOptions-noiseAmplitude?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,6 +76,8 @@ Default value: **1**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DisturbanceFieldOptions-noiseFrequency?: number--><!--Device-DisturbanceFieldOptions-noiseFrequency?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## noiseScale
@@ -95,6 +99,8 @@ Default value: **1**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DisturbanceFieldOptions-noiseScale?: number--><!--Device-DisturbanceFieldOptions-noiseScale?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -120,6 +126,8 @@ Value range of **x** and **y**: (-∞, +∞).
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DisturbanceFieldOptions-position?: PositionT<number>--><!--Device-DisturbanceFieldOptions-position?: PositionT<number>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## shape
@@ -141,6 +149,8 @@ Default value: **DisturbanceFieldShape.RECT**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DisturbanceFieldOptions-shape?: DisturbanceFieldShape--><!--Device-DisturbanceFieldOptions-shape?: DisturbanceFieldShape-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -166,6 +176,8 @@ Value range of **width** and **height**: [0, +∞).
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DisturbanceFieldOptions-size?: SizeT<number>--><!--Device-DisturbanceFieldOptions-size?: SizeT<number>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## strength
@@ -174,9 +186,7 @@ Value range of **width** and **height**: [0, +∞).
 strength?: number
 ```
 
-Field strength, which indicates the intensity of the repulsive force from the center outward. The default value is
-**0**. Positive values indicate a repulsive force directed outward, while negative values indicate an attractive
-force directed inward.
+Field strength, which indicates the intensity of the repulsive force from the center outward. The default value is **0**. Positive values indicate a repulsive force directed outward, while negative values indicate an attractive force directed inward.
 
 Value range: (-∞, +∞).
 
@@ -189,6 +199,8 @@ Value range: (-∞, +∞).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DisturbanceFieldOptions-strength?: number--><!--Device-DisturbanceFieldOptions-strength?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

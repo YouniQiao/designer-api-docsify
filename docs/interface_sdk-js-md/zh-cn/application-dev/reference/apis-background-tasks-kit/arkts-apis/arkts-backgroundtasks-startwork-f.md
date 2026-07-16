@@ -1,5 +1,11 @@
 # startWork
 
+## 导入模块
+
+```TypeScript
+import { workScheduler } from '@kit.BackgroundTasksKit';
+```
+
 ## startWork
 
 ```TypeScript
@@ -12,13 +18,15 @@ function startWork(work: WorkInfo): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-workScheduler-function startWork(work: WorkInfo): void--><!--Device-workScheduler-function startWork(work: WorkInfo): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| work | WorkInfo | 是 | The info of work. |
+| work | [WorkInfo](arkts-backgroundtasks-workinfo-i.md) | 是 | The info of work. |
 
 **错误码：**
 

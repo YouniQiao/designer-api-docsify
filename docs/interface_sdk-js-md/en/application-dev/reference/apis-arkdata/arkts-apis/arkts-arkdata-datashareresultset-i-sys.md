@@ -2,10 +2,11 @@
 
 Provides APIs for accessing the result sets returned.
 
-The column or key names are returned as a string array, in which the strings are in the same order as the columns or
-keys in the result set.
+The column or key names are returned as a string array, in which the strings are in the same order as the columns or keys in the result set.
 
 **Since:** 9
+
+<!--Device-unnamed-export default interface DataShareResultSet--><!--Device-unnamed-export default interface DataShareResultSet-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -31,6 +32,8 @@ Calling this API will invalidate the result set and release all its resources.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataShareResultSet-close(): void--><!--Device-DataShareResultSet-close(): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -52,12 +55,13 @@ getBlob(columnIndex: number): Uint8Array
 
 Obtains the value in the form of a byte array based on the specified column and the current row.
 
-If the specified column or key is empty or the value is not of the Blob type, you need to determine whether to
-throw an exception.
+If the specified column or key is empty or the value is not of the Blob type, you need to determine whether to throw an exception.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-getBlob(columnIndex: int): Uint8Array--><!--Device-DataShareResultSet-getBlob(columnIndex: int): Uint8Array-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -73,7 +77,7 @@ throw an exception.
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Value obtained. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Value obtained. |
 
 **Example**
 
@@ -104,6 +108,8 @@ The column name is passed in as an input parameter.
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-getColumnIndex(columnName: string): int--><!--Device-DataShareResultSet-getColumnIndex(columnName: string): int-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -146,6 +152,8 @@ The column index is passed in as an input parameter.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataShareResultSet-getColumnName(columnIndex: int): string--><!--Device-DataShareResultSet-getColumnName(columnIndex: int): string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -181,12 +189,13 @@ getDataType(columnIndex: number): DataType
 
 Obtains the data type based on the specified column index.
 
-If the specified column or key is empty or the value is not of the DataType type, you need to determine whether to
-throw an exception.
+If the specified column or key is empty or the value is not of the DataType type, you need to determine whether to throw an exception.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-getDataType(columnIndex: int): DataType--><!--Device-DataShareResultSet-getDataType(columnIndex: int): DataType-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -202,7 +211,7 @@ throw an exception.
 
 | Type | Description |
 | --- | --- |
-| DataType | Data type obtained. |
+| [DataType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-datatype-e.md) | Data type obtained. |
 
 **Example**
 
@@ -221,15 +230,15 @@ if (resultSet != undefined) {
 getDouble(columnIndex: number): number
 ```
 
-Obtains the value in the form of a double-precision floating-point number based on the specified column and the
-current row.
+Obtains the value in the form of a double-precision floating-point number based on the specified column and the current row.
 
-If the specified column or key is empty or the value is not of the double type, you need to determine whether to
-throw an exception.
+If the specified column or key is empty or the value is not of the double type, you need to determine whether to throw an exception.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-getDouble(columnIndex: int): double--><!--Device-DataShareResultSet-getDouble(columnIndex: int): double-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -267,12 +276,13 @@ getLong(columnIndex: number): number
 
 Obtains the value in the form of a long integer based on the specified column and the current row.
 
-If the specified column or key is empty or the value is not of the long type, you need to determine whether to
-throw an exception.
+If the specified column or key is empty or the value is not of the long type, you need to determine whether to throw an exception.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-getLong(columnIndex: int): long--><!--Device-DataShareResultSet-getLong(columnIndex: int): long-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -310,12 +320,13 @@ getString(columnIndex: number): string
 
 Obtains the value in the form of a string based on the specified column and the current row.
 
-If the specified column or key is empty or the value is not of the string type, you need to determine whether to
-throw an exception.
+If the specified column or key is empty or the value is not of the string type, you need to determine whether to throw an exception.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-getString(columnIndex: int): string--><!--Device-DataShareResultSet-getString(columnIndex: int): string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -357,6 +368,8 @@ Moves based on the specified offset.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataShareResultSet-goTo(offset: int): boolean--><!--Device-DataShareResultSet-goTo(offset: int): boolean-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -365,7 +378,7 @@ Moves based on the specified offset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | Offset relative to the current position. A negative value means to move forward, and apositive value means to move backward. |
+| offset | number | Yes | Offset relative to the current position. A negative value means to move forward, and a positive value means to move backward. |
 
 **Return value:**
 
@@ -395,6 +408,8 @@ Moves to the first row of the result set.
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-goToFirstRow(): boolean--><!--Device-DataShareResultSet-goToFirstRow(): boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -429,6 +444,8 @@ Moves to the last row of the result set.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataShareResultSet-goToLastRow(): boolean--><!--Device-DataShareResultSet-goToLastRow(): boolean-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -460,6 +477,8 @@ Moves to the next row in the result set.
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-goToNextRow(): boolean--><!--Device-DataShareResultSet-goToNextRow(): boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -493,6 +512,8 @@ Moves to the previous row in the result set.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataShareResultSet-goToPreviousRow(): boolean--><!--Device-DataShareResultSet-goToPreviousRow(): boolean-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -524,6 +545,8 @@ Moves to the specified row in the result set.
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-goToRow(position: int): boolean--><!--Device-DataShareResultSet-goToRow(position: int): boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -566,6 +589,8 @@ Number of columns in the result set.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataShareResultSet-columnCount: int--><!--Device-DataShareResultSet-columnCount: int-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -584,6 +609,8 @@ Names of all columns in the result set.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataShareResultSet-columnNames: Array<string>--><!--Device-DataShareResultSet-columnNames: Array<string>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **System API:** This is a system API.
@@ -594,14 +621,15 @@ Names of all columns in the result set.
 isClosed: boolean
 ```
 
-Whether the result set is closed. The value **true** means the result set is closed; the value **false** means the
-opposite.
+Whether the result set is closed. The value **true** means the result set is closed; the value **false** means the opposite.
 
 **Type:** boolean
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-isClosed: boolean--><!--Device-DataShareResultSet-isClosed: boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -620,6 +648,8 @@ Number of rows in the result set.
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-rowCount: int--><!--Device-DataShareResultSet-rowCount: int-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 

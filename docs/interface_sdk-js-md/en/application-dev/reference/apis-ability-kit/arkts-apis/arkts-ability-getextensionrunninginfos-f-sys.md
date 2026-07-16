@@ -18,6 +18,8 @@ Obtains the ExtensionAbility running information. This API uses a promise to ret
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
+<!--Device-abilityManager-function getExtensionRunningInfos(upperLimit: int): Promise<Array<ExtensionRunningInfo>>--><!--Device-abilityManager-function getExtensionRunningInfos(upperLimit: int): Promise<Array<ExtensionRunningInfo>>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -32,7 +34,7 @@ Obtains the ExtensionAbility running information. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ExtensionRunningInfo&gt;&gt; | Promise used to return the API call result and the ExtensionAbilityrunning information. You can perform error handling or other custom processing. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ExtensionRunningInfo>> | Promise used to return the API call result and the ExtensionAbility running information. You can perform error handling or other custom processing. |
 
 **Error codes:**
 
@@ -55,6 +57,8 @@ Obtains the ExtensionAbility running information. This API uses an asynchronous 
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
+<!--Device-abilityManager-function getExtensionRunningInfos(upperLimit: int, callback: AsyncCallback<Array<ExtensionRunningInfo>>): void--><!--Device-abilityManager-function getExtensionRunningInfos(upperLimit: int, callback: AsyncCallback<Array<ExtensionRunningInfo>>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -64,7 +68,7 @@ Obtains the ExtensionAbility running information. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | upperLimit | number | Yes | Maximum number of messages that can be obtained. The maximum value is 2&lt;sup&gt;31&lt;/sup&gt;-1. |
-| callback | AsyncCallback&lt;Array&lt;ExtensionRunningInfo&gt;&gt; | Yes | Callback used to return the result. If the API call issuccessful, **err** is **undefined** and **data** is the ExtensionAbility running information obtained. Otherwise,**err** is an error object. You can perform error handling or other custom processing. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<ExtensionRunningInfo>> | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the ExtensionAbility running information obtained. Otherwise,**err** is an error object. You can perform error handling or other custom processing. |
 
 **Error codes:**
 

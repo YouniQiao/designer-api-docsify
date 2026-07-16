@@ -14,11 +14,13 @@ function setPointerColorSync(color: number): void
 
 Sets the pointer color. This API returns the result synchronously.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.
 
 **Since:** 10
+
+<!--Device-pointer-function setPointerColorSync(color: int): void--><!--Device-pointer-function setPointerColorSync(color: int): void-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 

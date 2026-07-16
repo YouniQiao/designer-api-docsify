@@ -12,15 +12,15 @@ import { notificationManager } from '@kit.NotificationKit';
 function snoozeNotification(hashCode: string, delayTime: number): Promise<void>
 ```
 
-Snoozes a notification. The notification will be reminded again after the specified time. Each
-setting will trigger only one reminder, and the reminder mode will be the same as that of the
-notification.<br>The notification will be deleted after the setting.
+Snoozes a notification. The notification will be reminded again after the specified time. Each setting will trigger only one reminder, and the reminder mode will be the same as that of the notification.<br>The notification will be deleted after the setting.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-notificationManager-function snoozeNotification(hashCode: string, delayTime: long): Promise<void>--><!--Device-notificationManager-function snoozeNotification(hashCode: string, delayTime: long): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -37,7 +37,7 @@ notification.<br>The notification will be deleted after the setting.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

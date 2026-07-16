@@ -4,6 +4,8 @@ Provides text style settings.
 
 **Since:** 11
 
+<!--Device-unnamed-export interface PopupTextOptions--><!--Device-unnamed-export interface PopupTextOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Default value: **$r('sys.color.ohos_id_color_text_secondary')**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PopupTextOptions-fontColor?: ResourceColor--><!--Device-PopupTextOptions-fontColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontSize
@@ -42,8 +46,7 @@ Text font size.
 
 Default value: **$r('sys.float.ohos_id_text_size_body2')**
 
-The string value must be convertible to a number (for example, **'10'**) or include a length unit (for example,
-**'10px'**); percentage-based strings are not supported.
+The string value must be convertible to a number (for example, **'10'**) or include a length unit (for example,**'10px'**); percentage-based strings are not supported.
 
 Value range of number values: (0, +∞)
 
@@ -55,6 +58,8 @@ Value range of number values: (0, +∞)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PopupTextOptions-fontSize?: number | string | Resource--><!--Device-PopupTextOptions-fontSize?: number | string | Resource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontWeight
@@ -65,12 +70,9 @@ fontWeight?: number | FontWeight | string
 
 Text font weight.
 
-For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier
-font weight. The default value is **400**.
+For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**.
 
-For the string type, only strings of the number type are supported, for example, **"400"**, **"bold"**,
-**"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in
-**FontWeight**.
+For the string type, only strings of the number type are supported, for example, **"400"**, **"bold"**,**"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in **FontWeight**.
 
 Default value: **FontWeight.Regular**
 
@@ -81,6 +83,8 @@ Default value: **FontWeight.Regular**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupTextOptions-fontWeight?: number | FontWeight | string--><!--Device-PopupTextOptions-fontWeight?: number | FontWeight | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -99,6 +103,8 @@ Text content.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupTextOptions-text: ResourceStr--><!--Device-PopupTextOptions-text: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

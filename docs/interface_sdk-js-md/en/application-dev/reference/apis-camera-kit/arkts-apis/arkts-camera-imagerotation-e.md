@@ -4,6 +4,8 @@ Enumerates the image rotation angles.
 
 **Since:** 10
 
+<!--Device-camera-enum ImageRotation--><!--Device-camera-enum ImageRotation-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## ROTATION_0
@@ -17,6 +19,8 @@ The image rotates 0 degrees.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-ImageRotation-ROTATION_0 = 0--><!--Device-ImageRotation-ROTATION_0 = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -32,6 +36,8 @@ The image rotates 90 degrees.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-ImageRotation-ROTATION_90 = 90--><!--Device-ImageRotation-ROTATION_90 = 90-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## ROTATION_180
@@ -46,6 +52,8 @@ The image rotates 180 degrees.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-ImageRotation-ROTATION_180 = 180--><!--Device-ImageRotation-ROTATION_180 = 180-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## ROTATION_270
@@ -59,6 +67,8 @@ The image rotates 270 degrees.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-ImageRotation-ROTATION_270 = 270--><!--Device-ImageRotation-ROTATION_270 = 270-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

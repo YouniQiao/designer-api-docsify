@@ -6,7 +6,15 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace certificateManager--><!--Device-unnamed-declare namespace certificateManager-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
+
+## 导入模块
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+```
 
 ## 汇总
 

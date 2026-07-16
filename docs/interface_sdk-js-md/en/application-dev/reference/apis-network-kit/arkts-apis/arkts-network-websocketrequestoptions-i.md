@@ -4,6 +4,8 @@ Defines the optional parameters carried in the request for establishing a WebSoc
 
 **Since:** 11
 
+<!--Device-webSocket-export interface WebSocketRequestOptions--><!--Device-webSocket-export interface WebSocketRequestOptions-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -24,6 +26,8 @@ File path for client cert.
 
 **Since:** 12
 
+<!--Device-WebSocketRequestOptions-caPath?: string--><!--Device-WebSocketRequestOptions-caPath?: string-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## clientCert
@@ -37,6 +41,8 @@ Client cert.
 **Type:** ClientCert
 
 **Since:** 12
+
+<!--Device-WebSocketRequestOptions-clientCert?: ClientCert--><!--Device-WebSocketRequestOptions-clientCert?: ClientCert-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -54,6 +60,8 @@ HTTP request header.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebSocketRequestOptions-header?: Object--><!--Device-WebSocketRequestOptions-header?: Object-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## minSupportTlsProtocol
@@ -70,6 +78,8 @@ The minimum support version of TLS protocol.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WebSocketRequestOptions-minSupportTlsProtocol?: TlsProtocol--><!--Device-WebSocketRequestOptions-minSupportTlsProtocol?: TlsProtocol-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## pingInterval
@@ -78,13 +88,13 @@ The minimum support version of TLS protocol.
 pingInterval?: number
 ```
 
-Self defined interval of ping frame.
-default: 30. disable: 0. max: 30000. unit:second.
-Ping is performed at every pingInterval.
+Self defined interval of ping frame.default: 30. disable: 0. max: 30000. unit:second.Ping is performed at every pingInterval.
 
 **Type:** number
 
 **Since:** 24
+
+<!--Device-WebSocketRequestOptions-pingInterval?: int--><!--Device-WebSocketRequestOptions-pingInterval?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -94,13 +104,13 @@ Ping is performed at every pingInterval.
 pongTimeout?: number
 ```
 
-Self defined timeout of pong frame.
-default: 30. max: 30000. unit:second. The value must be less than or equal to pingInterval.
-If no pong is received within the pongTimeout period, the websocket connection will be disconnected.
+Self defined timeout of pong frame.default: 30. max: 30000. unit:second. The value must be less than or equal to pingInterval.If no pong is received within the pongTimeout period, the websocket connection will be disconnected.
 
 **Type:** number
 
 **Since:** 24
+
+<!--Device-WebSocketRequestOptions-pongTimeout?: int--><!--Device-WebSocketRequestOptions-pongTimeout?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -116,6 +126,8 @@ Self defined protocol.
 
 **Since:** 24
 
+<!--Device-WebSocketRequestOptions-protocol?: string--><!--Device-WebSocketRequestOptions-protocol?: string-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## proxy
@@ -130,6 +142,8 @@ HTTP proxy configuration. Use 'system' if this field is not set.
 
 **Since:** 24
 
+<!--Device-WebSocketRequestOptions-proxy?: ProxyConfiguration--><!--Device-WebSocketRequestOptions-proxy?: ProxyConfiguration-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## skipServerCertVerification
@@ -143,6 +157,8 @@ Whether or not to skip the verification of the server's certification.
 **Type:** boolean
 
 **Since:** 24
+
+<!--Device-WebSocketRequestOptions-skipServerCertVerification?: boolean--><!--Device-WebSocketRequestOptions-skipServerCertVerification?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -159,6 +175,8 @@ The option of supporting origin port.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebSocketRequestOptions-supportOriginPort?: boolean--><!--Device-WebSocketRequestOptions-supportOriginPort?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

@@ -12,8 +12,7 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 function getConnectedBLEDevices(): Array<string>
 ```
 
-Obtains the list of devices in the connected status.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Obtains the list of devices in the connected status.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -25,13 +24,15 @@ On API 10 and above, the permission required by this interface is changed from U
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
+<!--Device-BLE-function getConnectedBLEDevices(): Array<string>--><!--Device-BLE-function getConnectedBLEDevices(): Array<string>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Returns the list of device address. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Returns the list of device address. |
 
 **Error codes:**
 

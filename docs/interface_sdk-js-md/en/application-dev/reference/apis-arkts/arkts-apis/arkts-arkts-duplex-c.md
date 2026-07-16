@@ -1,13 +1,12 @@
 # Duplex
 
-A stream that is both readable and writable. A duplex stream allows data to be transmitted in two directions, that
-is, data can be read and written.
-The **Duplex** class inherits from [Readable](arkts-arkts-readableoptions-i.md) and supports all the APIs in
-**Readable**.
+A stream that is both readable and writable. A duplex stream allows data to be transmitted in two directions, that is, data can be read and written.The **Duplex** class inherits from [Readable](arkts-arkts-readableoptions-i.md) and supports all the APIs in **Readable**.
 
 **Inheritance/Implementation:** Duplex extends [Readable](arkts-arkts-readable-c.md)
 
 **Since:** 12
+
+<!--Device-stream-export class Duplex extends Readable--><!--Device-stream-export class Duplex extends Readable-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -29,6 +28,8 @@ A constructor used to create a **Duplex** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Duplex-constructor()--><!--Device-Duplex-constructor()-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Example**
@@ -44,13 +45,13 @@ let duplex = new stream.Duplex();
 cork(): boolean
 ```
 
-Forces subsequent writes to be buffered. This API is called to optimize the performance of continuous write
-operations. After this API is called, the value of **writableCorked** is incremented by one. It is recommended
-that this API be used in pair with [uncork()](arkts-arkts-writable-c.md#uncork-1).
+Forces subsequent writes to be buffered. This API is called to optimize the performance of continuous write operations. After this API is called, the value of **writableCorked** is incremented by one. It is recommended that this API be used in pair with [uncork()](arkts-arkts-writable-c.md#uncork-1).
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Duplex-cork(): boolean--><!--Device-Duplex-cork(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -75,12 +76,13 @@ console.info("duplexStream cork result", result); // duplexStream cork result tr
 doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void
 ```
 
-A data write API. You need to implement this API but do not call it directly. This API is automatically called
-when data is written. This API uses an asynchronous callback to return the result.
+A data write API. You need to implement this API but do not call it directly. This API is automatically called when data is written. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Duplex-doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void--><!--Device-Duplex-doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -89,8 +91,8 @@ when data is written. This API uses an asynchronous callback to return the resul
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | chunk | string \| Uint8Array | Yes | Data to write. |
-| encoding | string | Yes | Encoding format. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'**are supported. |
-| callback | Function | Yes | Callback function. |
+| encoding | string | Yes | Encoding format. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
+| callback | [Function](../../apis-na/arkts-apis/arkts-na-function-i.md) | Yes | Callback function. |
 
 **Example**
 
@@ -120,12 +122,13 @@ duplexStream.write('data', 'utf8');
 doWritev(chunks: string[] | Uint8Array[], callback: Function): void
 ```
 
-A batch data write API. You need to implement this API but do not call it directly. This API is automatically
-called when data is written. This API uses an asynchronous callback to return the result.
+A batch data write API. You need to implement this API but do not call it directly. This API is automatically called when data is written. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Duplex-doWritev(chunks: string[] | Uint8Array[], callback: Function): void--><!--Device-Duplex-doWritev(chunks: string[] | Uint8Array[], callback: Function): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -134,7 +137,7 @@ called when data is written. This API uses an asynchronous callback to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | chunks | string[] \| Uint8Array[] | Yes | Data arrays to write in batches. |
-| callback | Function | Yes | Callback function. |
+| callback | [Function](../../apis-na/arkts-apis/arkts-na-function-i.md) | Yes | Callback function. |
 
 **Example**
 
@@ -172,16 +175,13 @@ duplexStream.end();
 end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writable
 ```
 
-Ends the writing process in a duplex stream. If the value of **writableCorked** is greater than 0, the value is
-set to **0** and the remaining data in the buffer is output. If the **chunk** parameter is passed, it is treated
-as the final data chunk and written using either the **write** or **doWrite** API, based on the current execution
-context. If **doWrite** is used for writing, the validity check of the **encoding** parameter depends on
-**doWrite**. If **end** is used alone (without **write**) and the **chunk** parameter is passed, the data is
-written through **doWrite**. This API uses an asynchronous callback to return the result.
+Ends the writing process in a duplex stream. If the value of **writableCorked** is greater than 0, the value is set to **0** and the remaining data in the buffer is output. If the **chunk** parameter is passed, it is treated as the final data chunk and written using either the **write** or **doWrite** API, based on the current execution context. If **doWrite** is used for writing, the validity check of the **encoding** parameter depends on **doWrite**. If **end** is used alone (without **write**) and the **chunk** parameter is passed, the data is written through **doWrite**. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Duplex-end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writable--><!--Device-Duplex-end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writable-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -191,19 +191,19 @@ written through **doWrite**. This API uses an asynchronous callback to return th
 | --- | --- | --- | --- |
 | chunk | string \| Uint8Array | No | Data to write. The default value is **undefined**. |
 | encoding | string | No | Encoding format. The default value is **'utf8'**. Currently, **'utf8'**,**'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
-| callback | Function | No | Callback used to return the result. It is not called by default. |
+| callback | [Function](../../apis-na/arkts-apis/arkts-na-function-i.md) | No | Callback used to return the result. It is not called by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Writable | Current **Duplex** object. |
+| [Writable](arkts-arkts-writable-c.md) | Current **Duplex** object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200039](../errorcode-utils.md#10200039-dotransform-is-not-implemented) | The doTransform method has not been implemented for a class that inheritsfrom Transform. |
+| [10200039](../errorcode-utils.md#10200039-dotransform-is-not-implemented) | The doTransform method has not been implemented for a class that inherits from Transform. |
 
 **Example**
 
@@ -240,6 +240,8 @@ Sets the default encoding format for the writable stream.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Duplex-setDefaultEncoding(encoding?: string): boolean--><!--Device-Duplex-setDefaultEncoding(encoding?: string): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -283,14 +285,13 @@ console.info("duplexStream is result", result); // duplexStream is result true
 uncork(): boolean
 ```
 
-Releases the cork state, flushing the buffered data and writing it to the target location. After this API is
-called, the value of **writableCorked** is decremented by one. If the value reaches **0**, the stream is no
-longer in the cork state. Otherwise, the stream is still in the cork state. It is recommended that this API be
-used in pair with [cork()](arkts-arkts-writable-c.md#cork-1).
+Releases the cork state, flushing the buffered data and writing it to the target location. After this API is called, the value of **writableCorked** is decremented by one. If the value reaches **0**, the stream is no longer in the cork state. Otherwise, the stream is still in the cork state. It is recommended that this API be used in pair with [cork()](arkts-arkts-writable-c.md#cork-1).
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Duplex-uncork(): boolean--><!--Device-Duplex-uncork(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -339,6 +340,8 @@ Writes data to the buffer of the stream. This API uses an asynchronous callback 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Duplex-write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): boolean--><!--Device-Duplex-write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -347,13 +350,13 @@ Writes data to the buffer of the stream. This API uses an asynchronous callback 
 | --- | --- | --- | --- |
 | chunk | string \| Uint8Array | No | Data to write. It cannot be **null**, **undefined**, or an empty string. |
 | encoding | string | No | Encoding format. The default value is **'utf8'**. Currently, **'utf8'**,**'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
-| callback | Function | No | Callback used to return the result. It is not called by default. |
+| callback | [Function](../../apis-na/arkts-apis/arkts-na-function-i.md) | No | Callback used to return the result. It is not called by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether there is space in the buffer of the writable stream. The value **true** means thatthere is still space in the buffer. The value **false** means that the buffer is full, and you are notadvised to continue writing data. If the write function is called continuously, data is still added to thebuffer until the memory overflows. |
+| boolean | Whether there is space in the buffer of the writable stream. The value **true** means that there is still space in the buffer. The value **false** means that the buffer is full, and you are not advised to continue writing data. If the write function is called continuously, data is still added to the buffer until the memory overflows. |
 
 **Error codes:**
 
@@ -361,7 +364,7 @@ Writes data to the buffer of the stream. This API uses an asynchronous callback 
 | --- | --- |
 | [10200036](../errorcode-utils.md#10200036-write-operation-is-still-performed-after-the-stream-ends) | The stream has been ended. |
 | [10200037](../errorcode-utils.md#10200037-callback-is-invoked-multiple-times) | The callback is invoked multiple times consecutively. |
-| [10200039](../errorcode-utils.md#10200039-dotransform-is-not-implemented) | The doTransform method has not been implemented for a class that inheritsfrom Transform. |
+| [10200039](../errorcode-utils.md#10200039-dotransform-is-not-implemented) | The doTransform method has not been implemented for a class that inherits from Transform. |
 
 **Example**
 
@@ -400,6 +403,8 @@ Is true if it is safe to call writable.write(), which means the stream has not b
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Duplex-get writable(): boolean--><!--Device-Duplex-get writable(): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## writableCorked
@@ -415,6 +420,8 @@ Number of times writable.uncork() needs to be called in order to fully uncork th
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Duplex-get writableCorked(): int--><!--Device-Duplex-get writableCorked(): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -432,6 +439,8 @@ Whether Writable.end has been called.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Duplex-get writableEnded(): boolean--><!--Device-Duplex-get writableEnded(): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## writableFinished
@@ -447,6 +456,8 @@ Whether Writable.end has been called and all buffers have been flushed.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Duplex-get writableFinished(): boolean--><!--Device-Duplex-get writableFinished(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -464,6 +475,8 @@ Value of highWatermark.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Duplex-get writableHighWatermark(): int--><!--Device-Duplex-get writableHighWatermark(): int-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## writableLength
@@ -480,6 +493,8 @@ Size of data that can be flushed, in bytes or objects.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Duplex-get writableLength(): int--><!--Device-Duplex-get writableLength(): int-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## writableObjectMode
@@ -495,6 +510,8 @@ Returns boolean indicating whether it is in ObjectMode.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Duplex-get writableObjectMode(): boolean--><!--Device-Duplex-get writableObjectMode(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

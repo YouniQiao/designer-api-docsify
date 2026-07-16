@@ -4,7 +4,15 @@
 
 **起始版本：** 18
 
+<!--Device-text-interface TextTab--><!--Device-text-interface TextTab-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
+
+## 导入模块
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D';
+```
 
 ## alignment
 
@@ -18,7 +26,9 @@ alignment: TextAlign
 
 **起始版本：** 18
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextTab-alignment: TextAlign--><!--Device-TextTab-alignment: TextAlign-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -34,7 +44,9 @@ location: number
 
 **起始版本：** 18
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextTab-location: double--><!--Device-TextTab-location: double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

@@ -4,6 +4,8 @@ Represents the base controller for **TextInput**, **TextArea**, and **Search** c
 
 **Since:** 10
 
+<!--Device-unnamed-declare abstract class TextContentControllerBase--><!--Device-unnamed-declare abstract class TextContentControllerBase-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## addText
@@ -12,19 +14,19 @@ Represents the base controller for **TextInput**, **TextArea**, and **Search** c
 addText(text: string, textOperationOptions?: TextContentControllerOptions): number
 ```
 
-Inserts text at a specified position in the editable content. If no position is specified, the text is appended to
-the end of the existing content.
+Inserts text at a specified position in the editable content. If no position is specified, the text is appended to the end of the existing content.
 
 This API does not work when the text is being dragged.
 
-**addText** only affects the UI performance within the application and has no effect on the internal logic of the
-input method application. Therefore, avoid calling this API for the preview text.
+**addText** only affects the UI performance within the application and has no effect on the internal logic of the input method application. Therefore, avoid calling this API for the preview text.
 
 **Since:** 15
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-TextContentControllerBase-addText(text: string, textOperationOptions?: TextContentControllerOptions): number--><!--Device-TextContentControllerBase-addText(text: string, textOperationOptions?: TextContentControllerOptions): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,7 +35,7 @@ input method application. Therefore, avoid calling this API for the preview text
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Text to insert. |
-| textOperationOptions | TextContentControllerOptions | No | Configuration option for inserting text. If thisparameter is not provided, the text is appended to the end. |
+| textOperationOptions | [TextContentControllerOptions](arkts-arkui-textcontentcontrolleroptions-i.md) | No | Configuration option for inserting text. If this parameter is not provided, the text is appended to the end. |
 
 **Return value:**
 
@@ -55,6 +57,8 @@ Notifies the input method to clear the current preview text.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
 
+<!--Device-TextContentControllerBase-clearPreviewText(): void--><!--Device-TextContentControllerBase-clearPreviewText(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## deleteBackward
@@ -63,8 +67,7 @@ Notifies the input method to clear the current preview text.
 deleteBackward(): void
 ```
 
-Deletes the character before the text cursor in the text box bound to the basic controller. If some text has been
-selected using the mouse or keyboard before this function is called, the selected text will be deleted.
+Deletes the character before the text cursor in the text box bound to the basic controller. If some text has been selected using the mouse or keyboard before this function is called, the selected text will be deleted.
 
 This API is not supported in preview display scenarios.
 
@@ -73,6 +76,8 @@ This API is not supported in preview display scenarios.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-TextContentControllerBase-deleteBackward(): void--><!--Device-TextContentControllerBase-deleteBackward(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,11 +89,11 @@ deleteText(range?: TextRange): void
 
 Deletes text within a specified range in the editable content.
 
-> **NOTE**
->
-> - This API does not work when the text is being dragged.
->
-> - **deleteText** only affects the UI performance within the application and has no effect on the internal logic
+> **NOTE**  
+>  
+> - This API does not work when the text is being dragged.  
+>  
+> - **deleteText** only affects the UI performance within the application and has no effect on the internal logic  
 > of the input method application. Therefore, avoid calling this API for the preview text.
 
 **Since:** 15
@@ -97,13 +102,15 @@ Deletes text within a specified range in the editable content.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-TextContentControllerBase-deleteText(range?: TextRange): void--><!--Device-TextContentControllerBase-deleteText(range?: TextRange): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | TextRange | No | Range of the text to be deleted, including the start and end positions.<br>If therange is not specified, the entire text is deleted. If the start position is not specified, deletion startsfrom index 0. If the end position is not specified, deletion ends at the end of the text. |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | Range of the text to be deleted, including the start and end positions.<br>If the range is not specified, the entire text is deleted. If the start position is not specified, deletion starts from index 0. If the end position is not specified, deletion ends at the end of the text. |
 
 ## getCaretOffset
 
@@ -113,20 +120,20 @@ getCaretOffset() : CaretOffset
 
 Obtains the position information of the caret.
 
-> **NOTE**
->
-> - If this API is called when the caret position is updated in the current frame, it will not take effect.
->
-> - For the **Search** component, the returned position information is the offset of the first character relative
-> to the search icon in the component.
->
-> - If no text is entered in the **Search** component, the return value contains the position information relative
-> to the component.
->
-> - The location information in the return value is the location of the caret relative to the editable component.
->
-> - If the caret position cannot be obtained (for example, when the
-> [TextInputController](arkts-arkui-textinputcontroller-c.md) is not bound to the [TextInput](./text_input) component),
+> **NOTE**  
+>  
+> - If this API is called when the caret position is updated in the current frame, it will not take effect.  
+>  
+> - For the **Search** component, the returned position information is the offset of the first character relative  
+> to the search icon in the component.  
+>  
+> - If no text is entered in the **Search** component, the return value contains the position information relative  
+> to the component.  
+>  
+> - The location information in the return value is the location of the caret relative to the editable component.  
+>  
+> - If the caret position cannot be obtained (for example, when the  
+> [TextInputController](arkts-arkui-textinputcontroller-c.md) is not bound to the [TextInput](./text_input) component),  
 > **null** is returned.
 
 **Since:** 11
@@ -135,13 +142,15 @@ Obtains the position information of the caret.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextContentControllerBase-getCaretOffset() : CaretOffset--><!--Device-TextContentControllerBase-getCaretOffset() : CaretOffset-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CaretOffset | Position of the caret relative to the text box.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined**is returned. |
+| [CaretOffset](arkts-arkui-caretoffset-i.md) | Position of the caret relative to the text box.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getSelection
 
@@ -157,13 +166,15 @@ Obtains the current text selection range.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-TextContentControllerBase-getSelection(): TextRange--><!--Device-TextContentControllerBase-getSelection(): TextRange-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TextRange | Current text selection range, or cursor position if no text is selected.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined**is returned. |
+| [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | Current text selection range, or cursor position if no text is selected.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getTextContentLineCount
 
@@ -179,13 +190,15 @@ Obtains the number of lines of the edited text.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextContentControllerBase-getTextContentLineCount() : number--><!--Device-TextContentControllerBase-getTextContentLineCount() : number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Number of lines of the edited text.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined**is returned. |
+| number | Number of lines of the edited text.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getTextContentRect
 
@@ -193,8 +206,7 @@ Obtains the number of lines of the edited text.
 getTextContentRect() : RectResult
 ```
 
-Obtains the position of the edited text area relative to the component and its size. The unit of the return value
-is pixel.
+Obtains the position of the edited text area relative to the component and its size. The unit of the return value is pixel.
 
 **Since:** 10
 
@@ -202,13 +214,15 @@ is pixel.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextContentControllerBase-getTextContentRect() : RectResult--><!--Device-TextContentControllerBase-getTextContentRect() : RectResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RectResult | Position of the edited text area relative to the component and its size.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined**is returned. |
+| [RectResult](arkts-arkui-rectresult-i.md) | Position of the edited text area relative to the component and its size.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## scrollToVisible
 
@@ -216,8 +230,7 @@ is pixel.
 scrollToVisible(range?: TextRange): void
 ```
 
-Passes the start and end indexes to the bound text box components (**TextInput**, **TextArea**, and **Search**),
-and scrolls the text within the range to the visible area.
+Passes the start and end indexes to the bound text box components (**TextInput**, **TextArea**, and **Search**),and scrolls the text within the range to the visible area.
 
 **Since:** 23
 
@@ -225,13 +238,15 @@ and scrolls the text within the range to the visible area.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-TextContentControllerBase-scrollToVisible(range?: TextRange): void--><!--Device-TextContentControllerBase-scrollToVisible(range?: TextRange): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | TextRange | No | Text range to be scrolled to the visible area, including the start and end positions.of the text.<br>The start position must be less than or equal to the end position. Otherwise, the API call isinvalid. If the start position is less than 0, it is treated as the value **0**. If the end position is greaterthan the length of the entire text, it is treated as the length of the entire text.<br>If no range is specified,the entire text is used by default. If the start position is not specified, the default start position is 0. If theend position is not specified, the default end position is the length of the entire text. |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | Text range to be scrolled to the visible area, including the start and end positions.of the text.<br>The start position must be less than or equal to the end position. Otherwise, the API call is invalid. If the start position is less than 0, it is treated as the value **0**. If the end position is greater than the length of the entire text, it is treated as the length of the entire text.<br>If no range is specified,the entire text is used by default. If the start position is not specified, the default start position is 0. If the end position is not specified, the default end position is the length of the entire text. |
 
 ## setStyledPlaceholder
 
@@ -247,11 +262,13 @@ Binds or updates the styled placeholder string.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TextContentControllerBase-setStyledPlaceholder(styledString: StyledString): void--><!--Device-TextContentControllerBase-setStyledPlaceholder(styledString: StyledString): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | StyledString | Yes | Styled string for the placeholder. This takes precedence over the plain text.**placeholder** attribute.<br>The placeholder does not support gesture events or hyperlink navigation withinstyled strings. |
+| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | Styled string for the placeholder. This takes precedence over the plain text.**placeholder** attribute.<br>The placeholder does not support gesture events or hyperlink navigation within styled strings. |
 

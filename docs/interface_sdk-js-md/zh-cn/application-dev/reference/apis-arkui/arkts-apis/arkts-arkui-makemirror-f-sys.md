@@ -1,5 +1,11 @@
 # makeMirror（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { screen } from '@kit.ArkUI';
+```
+
 ## makeMirror
 
 ```TypeScript
@@ -10,6 +16,8 @@ function makeMirror(mainScreen:number, mirrorScreen:Array<number>, callback: Asy
 
 **起始版本：** 9
 
+<!--Device-screen-function makeMirror(mainScreen:long, mirrorScreen:Array<long>, callback: AsyncCallback<long>): void--><!--Device-screen-function makeMirror(mainScreen:long, mirrorScreen:Array<long>, callback: AsyncCallback<long>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +27,8 @@ function makeMirror(mainScreen:number, mirrorScreen:Array<number>, callback: Asy
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mainScreen | number | 是 | 主屏幕ID，该参数仅支持整数输入。 |
-| mirrorScreen | Array&lt;number&gt; | 是 | 镜像屏幕ID集合，其中ID应为整数。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。返回镜像屏幕的群组id，其中id为整数。 |
+| mirrorScreen | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<number> | 是 | 镜像屏幕ID集合，其中ID应为整数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。返回镜像屏幕的群组id，其中id为整数。 |
 
 **错误码：**
 
@@ -61,6 +69,8 @@ function makeMirror(mainScreen:number, mirrorScreen:Array<number>): Promise<numb
 
 **起始版本：** 9
 
+<!--Device-screen-function makeMirror(mainScreen:long, mirrorScreen:Array<long>): Promise<long>--><!--Device-screen-function makeMirror(mainScreen:long, mirrorScreen:Array<long>): Promise<long>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -70,13 +80,13 @@ function makeMirror(mainScreen:number, mirrorScreen:Array<number>): Promise<numb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mainScreen | number | 是 | 主屏幕ID，该参数仅支持整数输入。 |
-| mirrorScreen | Array&lt;number&gt; | 是 | 镜像屏幕ID集合。其中ID应为整数。 |
+| mirrorScreen | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<number> | 是 | 镜像屏幕ID集合。其中ID应为整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回镜像屏幕的群组id，其中id为整数。 |
+| Promise<number> | Promise对象。返回镜像屏幕的群组id，其中id为整数。 |
 
 **错误码：**
 

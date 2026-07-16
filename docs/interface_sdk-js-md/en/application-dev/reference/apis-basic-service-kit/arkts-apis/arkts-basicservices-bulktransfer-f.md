@@ -19,16 +19,28 @@ function bulkTransfer(
 
 Performs bulk transfer. This API uses a promise to return the result.
 
-> **NOTE**
->
-> The total size of data (including **pipe**, **endpoint**, **buffer**, and **timeout**) to be transferred in a
-> single bulk transfer must be less than 200 KB. Otherwise, the transfer fails and **-1** is returned.
->
-> Before calling this API, call the
-> [usbManager.claimInterface](arkts-basicservices-claiminterface-f.md#claiminterface-1)
+> **NOTE**  
+>  
+> The total size of data (including **pipe**, **endpoint**, **buffer**, and **timeout**) to be transferred in a  
+> single bulk transfer must be less than 200 KB. Otherwise, the transfer fails and **-1** is returned.  
+>  
+> Before calling this API, call the  
+> [usbManager.claimInterface](arkts-basicservices-claiminterface-f.md#claiminterface-1)  
 > API to claim a communication interface.
 
 **Since:** 9
+
+<!--Device-usbManager-function bulkTransfer(
+    pipe: USBDevicePipe,
+    endpoint: USBEndpoint,
+    buffer: Uint8Array,
+    timeout?: int
+  ): Promise<int>--><!--Device-usbManager-function bulkTransfer(
+    pipe: USBDevicePipe,
+    endpoint: USBEndpoint,
+    buffer: Uint8Array,
+    timeout?: int
+  ): Promise<int>-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -36,22 +48,22 @@ Performs bulk transfer. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | USBDevicePipe | Yes | USB device pipe. You need to call [usbManager.connectDevice](arkts-basicservices-connectdevice-f.md#connectdevice-1) to obtain its value. |
-| endpoint | USBEndpoint | Yes | USB endpoint, which is used to determine the USB interface for data transfer. You needto call [usbManager.getDevices](arkts-basicservices-getdevices-f.md#getdevices-1) to obtain the device information list and endpoint. Wherein, **address** is used to determinethe endpoint address, **direction** is used to determine the endpoint direction, and **interfaceId** is used todetermine the USB interface to which the endpoint belongs. Other parameters are passed transparently. |
-| buffer | Uint8Array | Yes | Buffer for writing or reading data. |
-| timeout | number | No | Timeout interval.Unit: milliseconds. This parameter is optional. If the bulk transfer iscomplete within the specified time, the size of the transferred or received data block is returned; otherwise, atimeout error is returned. The default value is **0**, indicating that the system waits infinitely until the controltransfer is complete. Set this parameter as required. |
+| pipe | [USBDevicePipe](arkts-basicservices-usbdevicepipe-i.md) | Yes | USB device pipe. You need to call [usbManager.connectDevice](arkts-basicservices-connectdevice-f.md#connectdevice-1) to obtain its value. |
+| endpoint | [USBEndpoint](arkts-basicservices-usbendpoint-i.md) | Yes | USB endpoint, which is used to determine the USB interface for data transfer. You need to call [usbManager.getDevices](arkts-basicservices-getdevices-f.md#getdevices-1) to obtain the device information list and endpoint. Wherein, **address** is used to determine the endpoint address, **direction** is used to determine the endpoint direction, and **interfaceId** is used to determine the USB interface to which the endpoint belongs. Other parameters are passed transparently. |
+| buffer | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Buffer for writing or reading data. |
+| timeout | number | No | Timeout interval.Unit: milliseconds. This parameter is optional. If the bulk transfer is complete within the specified time, the size of the transferred or received data block is returned; otherwise, a timeout error is returned. The default value is **0**, indicating that the system waits infinitely until the control transfer is complete. Set this parameter as required. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result, which is the size of the transferred or received data blockif the transfer is successful. If the API call fails, the following error codes are returned:- -1: The driver is abnormal. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result, which is the size of the transferred or received data block if the transfer is successful. If the API call fails, the following error codes are returned:* - -1: The driver is abnormal. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified.<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:* <br>1.Mandatory parameters are left unspecified.* <br>2.Incorrect parameter types. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 **Example**

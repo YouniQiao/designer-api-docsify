@@ -16,13 +16,15 @@ Obtains a **DistributedAccountAbility** instance.
 
 **Since:** 7
 
+<!--Device-distributedAccount-function getDistributedAccountAbility(): DistributedAccountAbility--><!--Device-distributedAccount-function getDistributedAccountAbility(): DistributedAccountAbility-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DistributedAccountAbility | **DistributedAccountAbility** instance obtained.This instance provides APIs for querying and updating the login state of a distributed account. |
+| [DistributedAccountAbility](arkts-basicservices-distributedaccountability-i.md) | **DistributedAccountAbility** instance obtained.This instance provides APIs for querying and updating the login state of a distributed account. |
 
 **Example**
 

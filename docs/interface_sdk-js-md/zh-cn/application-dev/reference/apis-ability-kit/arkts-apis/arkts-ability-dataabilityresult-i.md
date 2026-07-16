@@ -1,10 +1,10 @@
 # DataAbilityResult
 
-定义DataAbility数据操作结果，通过
-[executeBatch](../../../../reference/apis-ability-kit/js-apis-inner-ability-dataAbilityHelper.md#dataabilityhelperexecutebatch)
-操作数据库时，操作结果使用DataAbilityResult对象返回。
+定义DataAbility数据操作结果，通过[executeBatch](../../../../reference/apis-ability-kit/js-apis-inner-ability-dataAbilityHelper.md#dataabilityhelperexecutebatch)操作数据库时，操作结果使用DataAbilityResult对象返回。
 
 **起始版本：** 7
+
+<!--Device-unnamed-export interface DataAbilityResult--><!--Device-unnamed-export interface DataAbilityResult-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -22,6 +22,8 @@ count?: number
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-DataAbilityResult-count?: number--><!--Device-DataAbilityResult-count?: number-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## uri
@@ -37,6 +39,8 @@ uri?: string
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DataAbilityResult-uri?: string--><!--Device-DataAbilityResult-uri?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 

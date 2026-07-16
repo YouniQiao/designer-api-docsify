@@ -1,17 +1,18 @@
 # ScryptSpec
 
-Defines the child class of [KdfSpec](arkts-cryptoarchitecture-kdfspec-i.md). It is a parameter for scrypt key derivation
-function (KDF).
+Defines the child class of [KdfSpec](arkts-cryptoarchitecture-kdfspec-i.md). It is a parameter for scrypt key derivation function (KDF).
 
-> **NOTE**
->
-> **passphrase** specifies the original password. If **passphrase** is of the string type, pass in the data used for
-> key derivation rather than a string of the HexString or Base64 type. In addition, the string must be in UTF-8
+> **NOTE**  
+>  
+> **passphrase** specifies the original password. If **passphrase** is of the string type, pass in the data used for  
+> key derivation rather than a string of the HexString or Base64 type. In addition, the string must be in UTF-8  
 > format. Otherwise, the key derived may be different from the one expected.
 
 **Inheritance/Implementation:** ScryptSpec extends [KdfSpec](arkts-cryptoarchitecture-kdfspec-i.md)
 
 **Since:** 18
+
+<!--Device-cryptoFramework-interface ScryptSpec extends KdfSpec--><!--Device-cryptoFramework-interface ScryptSpec extends KdfSpec-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
@@ -35,6 +36,8 @@ Length of the derived key, in bytes. The value must be a positive integer.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ScryptSpec-keySize: int--><!--Device-ScryptSpec-keySize: int-End-->
+
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
 ## maxMemory
@@ -50,6 +53,8 @@ Maximum memory size, in bytes. The value must be a positive integer.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ScryptSpec-maxMemory: long--><!--Device-ScryptSpec-maxMemory: long-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
@@ -67,6 +72,8 @@ CPU/memory cost parameter. The value must be a positive integer.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ScryptSpec-n: long--><!--Device-ScryptSpec-n: long-End-->
+
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
 ## p
@@ -82,6 +89,8 @@ Parallelization parameter. The value must be a positive integer.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ScryptSpec-p: long--><!--Device-ScryptSpec-p: long-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
@@ -99,6 +108,8 @@ Original password entered by the user.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ScryptSpec-passphrase: string | Uint8Array--><!--Device-ScryptSpec-passphrase: string | Uint8Array-End-->
+
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
 ## r
@@ -115,6 +126,8 @@ Block size. The value must be a positive integer.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ScryptSpec-r: long--><!--Device-ScryptSpec-r: long-End-->
+
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
 ## salt
@@ -130,6 +143,8 @@ Salt value.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ScryptSpec-salt: Uint8Array--><!--Device-ScryptSpec-salt: Uint8Array-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 

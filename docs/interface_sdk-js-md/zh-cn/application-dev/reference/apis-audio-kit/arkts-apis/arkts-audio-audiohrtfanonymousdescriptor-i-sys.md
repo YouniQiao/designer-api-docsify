@@ -4,9 +4,17 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-audio-interface AudioHRTFAnonymousDescriptor--><!--Device-audio-interface AudioHRTFAnonymousDescriptor-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## fd
 
@@ -21,6 +29,8 @@ fd: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioHRTFAnonymousDescriptor-fd: int--><!--Device-AudioHRTFAnonymousDescriptor-fd: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -39,6 +49,8 @@ length: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioHRTFAnonymousDescriptor-length: long--><!--Device-AudioHRTFAnonymousDescriptor-length: long-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 

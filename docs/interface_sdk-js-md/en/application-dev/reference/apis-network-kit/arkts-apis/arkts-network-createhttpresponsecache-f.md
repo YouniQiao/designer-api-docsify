@@ -18,6 +18,8 @@ Creates a default {@code HttpResponseCache} object to store the responses of HTT
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-http-function createHttpResponseCache(cacheSize?: int): HttpResponseCache--><!--Device-http-function createHttpResponseCache(cacheSize?: int): HttpResponseCache-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -30,7 +32,7 @@ Creates a default {@code HttpResponseCache} object to store the responses of HTT
 
 | Type | Description |
 | --- | --- |
-| HttpResponseCache | the HttpResponseCache of the createHttpResponseCache. |
+| [HttpResponseCache](arkts-network-httpresponsecache-i.md) | the HttpResponseCache of the createHttpResponseCache. |
 
 **Example**
 

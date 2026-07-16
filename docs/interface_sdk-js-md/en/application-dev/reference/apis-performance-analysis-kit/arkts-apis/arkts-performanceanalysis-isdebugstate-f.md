@@ -16,13 +16,15 @@ Obtains the debugging state of an application process.
 
 **Since:** 12
 
+<!--Device-hidebug-function isDebugState(): boolean--><!--Device-hidebug-function isDebugState(): boolean-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the Ark or native layer of the application process is in the debugging state. Thevalue **true** indicates that the layer is in the debugging state, and **false** indicates the opposite. |
+| boolean | Whether the Ark or native layer of the application process is in the debugging state. The value **true** indicates that the layer is in the debugging state, and **false** indicates the opposite. |
 
 **Example**
 

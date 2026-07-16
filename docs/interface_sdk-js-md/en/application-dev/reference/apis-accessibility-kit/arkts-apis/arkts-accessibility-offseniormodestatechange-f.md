@@ -18,13 +18,15 @@ Cancels listening for the senior mode change event. This API uses an asynchronou
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-accessibility-function offSeniorModeStateChange(callback?: Callback<boolean>): void--><!--Device-accessibility-function offSeniorModeStateChange(callback?: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;boolean&gt; | No | Callback function. The value **true** indicates that the senior mode isenabled, and the value **false** indicates that the senior mode is disabled. Cancels the event response of aspecified callback object. It must be consistent with the callback used in[accessibility.onSeniorModeStateChange](arkts-accessibility-onseniormodestatechange-f.md#onseniormodestatechange-1). If this parameter is not specified, listening will be disabled for all callbacks corresponding to thespecified type. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | No | Callback function. The value **true** indicates that the senior mode is enabled, and the value **false** indicates that the senior mode is disabled. Cancels the event response of a specified callback object. It must be consistent with the callback used in [accessibility.onSeniorModeStateChange](arkts-accessibility-onseniormodestatechange-f.md#onseniormodestatechange-1). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Example**
 

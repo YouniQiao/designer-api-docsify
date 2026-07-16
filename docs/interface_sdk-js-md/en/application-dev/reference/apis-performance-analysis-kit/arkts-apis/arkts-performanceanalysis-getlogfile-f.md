@@ -18,6 +18,8 @@ Returns the list of hilog log file paths in the sandbox for the specified recent
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-hilog-function getLogFile(latestSeconds: int): Array<string>--><!--Device-hilog-function getLogFile(latestSeconds: int): Array<string>-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiLog
 
 **Parameters:**
@@ -30,7 +32,7 @@ Returns the list of hilog log file paths in the sandbox for the specified recent
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | list of hilog log file paths in the sandbox for the specified rencent time period,with newer files appearing first in the list. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | list of hilog log file paths in the sandbox for the specified rencent time period,with newer files appearing first in the list. |
 
 **Example**
 

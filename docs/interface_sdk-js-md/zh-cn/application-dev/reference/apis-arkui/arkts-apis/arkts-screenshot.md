@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare namespace screenshot--><!--Device-unnamed-declare namespace screenshot-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+## 导入模块
+
+```TypeScript
+import { screenshot } from '@kit.ArkUI';
+```
 
 ## 汇总
 
@@ -23,7 +31,7 @@
 | [save](arkts-arkui-save-f-sys.md#save-1) | 获取屏幕截图，使用callback异步回调。 |
 | [save](arkts-arkui-save-f-sys.md#save-2) | 获取屏幕截图，使用callback异步回调。 |
 | [save](arkts-arkui-save-f-sys.md#save-3) | 获取屏幕截图，使用Promise异步回调。 |
-| [saveHdrPicture](arkts-arkui-savehdrpicture-f-sys.md#savehdrpicture-1) | 获取屏幕截图，使用Promise异步回调。SDR为标准动态范围图，HDR为高动态范围图。- 当物理屏存在HDR资源（包括HDR资源被遮挡）时，无论HDR是否开启，该接口返回一个包含SDR和HDR的PixelMap数组。- 当物理屏不存在HDR资源时，与[save](arkts-arkui-save-f-sys.md#save-1)接口返回一个SDR的PixelMap不同，该接口返回包含一个SDR的PixelMap数组。同时该接口不具备[save](arkts-arkui-save-f-sys.md#save-1)接口的裁剪、拉伸、旋转功能。 |
+| [saveHdrPicture](arkts-arkui-savehdrpicture-f-sys.md#savehdrpicture-1) | 获取屏幕截图，使用Promise异步回调。SDR为标准动态范围图，HDR为高动态范围图。- 当物理屏存在HDR资源（包括HDR资源被遮挡）时，无论HDR是否开启，该接口返回一个包含SDR和HDR的PixelMap数组。 - 当物理屏不存在HDR资源时，与[save](arkts-arkui-save-f-sys.md#save-1)接口返回一个SDR的PixelMap不同，该接口返回包含一个SDR的PixelMap数组。同时该接口不具备[save](arkts-arkui-save-f-sys.md#save-1)接口的裁剪、拉伸、旋转功能。 |
 <!--DelEnd-->
 
 ### 接口

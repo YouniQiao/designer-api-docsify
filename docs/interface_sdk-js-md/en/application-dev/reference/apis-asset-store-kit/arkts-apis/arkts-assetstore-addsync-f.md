@@ -20,13 +20,15 @@ To set {@link Tag.IS_PERSISTENT}, the application must have the ohos.permission.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-asset-function addSync(attributes: AssetMap): void--><!--Device-asset-function addSync(attributes: AssetMap): void-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| attributes | AssetMap | Yes | Attributes of the asset to add, including the asset plaintext,access control attributes, and custom data. |
+| attributes | [AssetMap](arkts-assetstore-assetmap-t.md) | Yes | Attributes of the asset to add, including the asset plaintext,access control attributes, and custom data. |
 
 **Error codes:**
 

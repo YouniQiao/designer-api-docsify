@@ -4,6 +4,8 @@ Declare class TreeListener
 
 **Since:** 22
 
+<!--Device-unnamed-export declare class TreeListener--><!--Device-unnamed-export declare class TreeListener-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,14 +28,16 @@ Destroy event.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TreeListener-off(type: TreeListenType, callback?: (callbackParam: CallbackParam) => void): void--><!--Device-TreeListener-off(type: TreeListenType, callback?: (callbackParam: CallbackParam) => void): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | TreeListenType | Yes |  |
-| callback | (callbackParam: CallbackParam) =&gt; void | No |  |
+| type | [TreeListenType](arkts-arkui-treelistentype-e.md) | Yes |  |
+| callback | (callbackParam: CallbackParam) => void | No |  |
 
 ## on
 
@@ -41,8 +45,7 @@ Destroy event.
 on(type: TreeListenType, callback: (callbackParam: CallbackParam) => void): void
 ```
 
-Event registration and processing.
-The event will not be destroyed after being processed.
+Event registration and processing.The event will not be destroyed after being processed.
 
 **Since:** 22
 
@@ -50,14 +53,16 @@ The event will not be destroyed after being processed.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TreeListener-on(type: TreeListenType, callback: (callbackParam: CallbackParam) => void): void--><!--Device-TreeListener-on(type: TreeListenType, callback: (callbackParam: CallbackParam) => void): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | TreeListenType | Yes |  |
-| callback | (callbackParam: CallbackParam) =&gt; void | Yes |  |
+| type | [TreeListenType](arkts-arkui-treelistentype-e.md) | Yes |  |
+| callback | (callbackParam: CallbackParam) => void | Yes |  |
 
 ## once
 
@@ -65,8 +70,7 @@ The event will not be destroyed after being processed.
 once(type: TreeListenType, callback: (callbackParam: CallbackParam) => void): void
 ```
 
-Event registration and processing.
-After the event is processed once, it will be destroyed.
+Event registration and processing.After the event is processed once, it will be destroyed.
 
 **Since:** 22
 
@@ -74,12 +78,14 @@ After the event is processed once, it will be destroyed.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TreeListener-once(type: TreeListenType, callback: (callbackParam: CallbackParam) => void): void--><!--Device-TreeListener-once(type: TreeListenType, callback: (callbackParam: CallbackParam) => void): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | TreeListenType | Yes |  |
-| callback | (callbackParam: CallbackParam) =&gt; void | Yes |  |
+| type | [TreeListenType](arkts-arkui-treelistentype-e.md) | Yes |  |
+| callback | (callbackParam: CallbackParam) => void | Yes |  |
 

@@ -14,11 +14,11 @@ function replaceNamedRoute(options: NamedRouterOptions, callback: AsyncCallback<
 
 Replaces the current page with another one using the named route and destroys the current page.
 
-> **NOTE**
->
-> - Since API version 10, you can use the
-> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> **NOTE**  
+>  
+> - Since API version 10, you can use the  
+> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in  
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated  
 > with the current UI context.
 
 **Since:** 10
@@ -31,21 +31,23 @@ Replaces the current page with another one using the named route and destroys th
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-router-function replaceNamedRoute(options: NamedRouterOptions, callback: AsyncCallback<void>): void--><!--Device-router-function replaceNamedRoute(options: NamedRouterOptions, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | NamedRouterOptions | Yes | Description of the new page. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| options | [NamedRouterOptions](arkts-arkui-namedrouteroptions-i.md) | Yes | Description of the new page. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in thestandard system. |
+| [100001](../errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
 **Example**
@@ -83,11 +85,11 @@ function replaceNamedRoute(options: NamedRouterOptions): Promise<void>
 
 Replaces the current page with another one using the named route and destroys the current page.
 
-> **NOTE**
->
-> - Since API version 10, you can use the
-> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> **NOTE**  
+>  
+> - Since API version 10, you can use the  
+> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in  
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated  
 > with the current UI context.
 
 **Since:** 10
@@ -100,26 +102,28 @@ Replaces the current page with another one using the named route and destroys th
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-router-function replaceNamedRoute(options: NamedRouterOptions): Promise<void>--><!--Device-router-function replaceNamedRoute(options: NamedRouterOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | NamedRouterOptions | Yes | Description of the new page. |
+| options | [NamedRouterOptions](arkts-arkui-namedrouteroptions-i.md) | Yes | Description of the new page. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in thestandard system. |
+| [100001](../errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
 **Example**
@@ -159,11 +163,11 @@ function replaceNamedRoute(options: NamedRouterOptions, mode: RouterMode, callba
 
 Replaces the current page with another one using the named route and destroys the current page.
 
-> **NOTE**
->
-> - Since API version 10, you can use the
-> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> **NOTE**  
+>  
+> - Since API version 10, you can use the  
+> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in  
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated  
 > with the current UI context.
 
 **Since:** 10
@@ -176,22 +180,24 @@ Replaces the current page with another one using the named route and destroys th
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-router-function replaceNamedRoute(options: NamedRouterOptions, mode: RouterMode, callback: AsyncCallback<void>): void--><!--Device-router-function replaceNamedRoute(options: NamedRouterOptions, mode: RouterMode, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | NamedRouterOptions | Yes | Description of the new page. |
-| mode | RouterMode | Yes | Routing mode. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| options | [NamedRouterOptions](arkts-arkui-namedrouteroptions-i.md) | Yes | Description of the new page. |
+| mode | [RouterMode](arkts-arkui-routermode-e.md) | Yes | Routing mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in thestandard system. |
+| [100001](../errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
 **Example**
@@ -229,11 +235,11 @@ function replaceNamedRoute(options: NamedRouterOptions, mode: RouterMode): Promi
 
 Replaces the current page with another one using the named route and destroys the current page.
 
-> **NOTE**
->
-> - Since API version 10, you can use the
-> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> **NOTE**  
+>  
+> - Since API version 10, you can use the  
+> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in  
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated  
 > with the current UI context.
 
 **Since:** 10
@@ -246,27 +252,29 @@ Replaces the current page with another one using the named route and destroys th
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-router-function replaceNamedRoute(options: NamedRouterOptions, mode: RouterMode): Promise<void>--><!--Device-router-function replaceNamedRoute(options: NamedRouterOptions, mode: RouterMode): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | NamedRouterOptions | Yes | Description of the new page. |
-| mode | RouterMode | Yes | Routing mode. |
+| options | [NamedRouterOptions](arkts-arkui-namedrouteroptions-i.md) | Yes | Description of the new page. |
+| mode | [RouterMode](arkts-arkui-routermode-e.md) | Yes | Routing mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-internal-error) | Failed to get the delegate. This error code is thrown only in the standardsystem. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Failed to get the delegate. This error code is thrown only in the standard system. |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
 **Example**

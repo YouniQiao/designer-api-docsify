@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-print-enum PrintDocumentAdapterState--><!--Device-print-enum PrintDocumentAdapterState-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## PREVIEW_DESTROY
@@ -15,6 +17,8 @@ PREVIEW_DESTROY = 0
 表示预览失败。
 
 **起始版本：** 11
+
+<!--Device-PrintDocumentAdapterState-PREVIEW_DESTROY = 0--><!--Device-PrintDocumentAdapterState-PREVIEW_DESTROY = 0-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -28,6 +32,8 @@ PRINT_TASK_SUCCEED = 1
 
 **起始版本：** 11
 
+<!--Device-PrintDocumentAdapterState-PRINT_TASK_SUCCEED = 1--><!--Device-PrintDocumentAdapterState-PRINT_TASK_SUCCEED = 1-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## PRINT_TASK_FAIL
@@ -39,6 +45,8 @@ PRINT_TASK_FAIL = 2
 表示打印任务失败。
 
 **起始版本：** 11
+
+<!--Device-PrintDocumentAdapterState-PRINT_TASK_FAIL = 2--><!--Device-PrintDocumentAdapterState-PRINT_TASK_FAIL = 2-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -52,6 +60,8 @@ PRINT_TASK_CANCEL = 3
 
 **起始版本：** 11
 
+<!--Device-PrintDocumentAdapterState-PRINT_TASK_CANCEL = 3--><!--Device-PrintDocumentAdapterState-PRINT_TASK_CANCEL = 3-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## PRINT_TASK_BLOCK
@@ -63,6 +73,8 @@ PRINT_TASK_BLOCK = 4
 表示打印任务阻塞。
 
 **起始版本：** 11
+
+<!--Device-PrintDocumentAdapterState-PRINT_TASK_BLOCK = 4--><!--Device-PrintDocumentAdapterState-PRINT_TASK_BLOCK = 4-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 

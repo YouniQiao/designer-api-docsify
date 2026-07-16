@@ -2,10 +2,11 @@
 
 Defines a float view controller instance, which is used to start and stop the float view and register callbacks.
 
-Before calling the following APIs, you must use [floatView.create()](arkts-arkui-create-f.md#create-1) to create a float view
-controller instance (that is, **floatViewController**).
+Before calling the following APIs, you must use [floatView.create()](arkts-arkui-create-f.md#create-1) to create a float view controller instance (that is, **floatViewController**).
 
 **Since:** 26.0.0
+
+<!--Device-floatView-interface FloatViewController--><!--Device-floatView-interface FloatViewController-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -27,13 +28,15 @@ Obtains the properties of the float view.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FloatViewController-getWindowProperties(): FloatViewProperties--><!--Device-FloatViewController-getWindowProperties(): FloatViewProperties-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| FloatViewProperties | Properties of the float view. |
+| [FloatViewProperties](arkts-arkui-floatviewproperties-i.md) | Properties of the float view. |
 
 **Error codes:**
 
@@ -67,13 +70,15 @@ Unregisters the callback for listening to limit changes of the float view.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FloatViewController-offLimitsChange(callback?: Callback<FloatViewLimits>): void--><!--Device-FloatViewController-offLimitsChange(callback?: Callback<FloatViewLimits>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;FloatViewLimits&gt; | No | Callback used to return the limit change information of thecurrent float view. If a value is passed in, the corresponding callback is unregistered. If no value ispassed in, all callbacks associated with the limit change event of the float view are unregistered. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<FloatViewLimits> | No | Callback used to return the limit change information of the current float view. If a value is passed in, the corresponding callback is unregistered. If no value is passed in, all callbacks associated with the limit change event of the float view are unregistered. |
 
 **Error codes:**
 
@@ -109,13 +114,15 @@ Unregisters the callback for listening to changes in the rectangular area of the
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FloatViewController-offRectChange(callback?: Callback<FloatViewRectChangeInfo>): void--><!--Device-FloatViewController-offRectChange(callback?: Callback<FloatViewRectChangeInfo>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;FloatViewRectChangeInfo&gt; | No | Callback used to return the rectangle area changeinformation of the current float view. If a value is passed in, the corresponding callback is unregistered.If no value is passed in, all callbacks associated with the rectangle area change event of the float view areunregistered. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<FloatViewRectChangeInfo> | No | Callback used to return the rectangle area change information of the current float view. If a value is passed in, the corresponding callback is unregistered.If no value is passed in, all callbacks associated with the rectangle area change event of the float view are unregistered. |
 
 **Error codes:**
 
@@ -151,13 +158,15 @@ Unregisters the callback for listening to float view state changes.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FloatViewController-offStateChange(callback?: Callback<FloatViewStateChangeInfo>): void--><!--Device-FloatViewController-offStateChange(callback?: Callback<FloatViewStateChangeInfo>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;FloatViewStateChangeInfo&gt; | No | Callback used to return the status change informationof the current float view. If a value is passed in, the corresponding callback is unregistered. If no valueis passed in, all callbacks associated with the status change event of the float view are unregistered. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<FloatViewStateChangeInfo> | No | Callback used to return the status change information of the current float view. If a value is passed in, the corresponding callback is unregistered. If no value is passed in, all callbacks associated with the status change event of the float view are unregistered. |
 
 **Error codes:**
 
@@ -187,13 +196,13 @@ try {
 onLimitsChange(callback: Callback<FloatViewLimits>): void
 ```
 
-Registers a callback for listening to limit changes of the float view. When the limit changes, for example, when
-the device is folded or unfolded, the callback is triggered. To prevent memory leaks, remember to unregister the
-callback when it is no longer needed.
+Registers a callback for listening to limit changes of the float view. When the limit changes, for example, when the device is folded or unfolded, the callback is triggered. To prevent memory leaks, remember to unregister the callback when it is no longer needed.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FloatViewController-onLimitsChange(callback: Callback<FloatViewLimits>): void--><!--Device-FloatViewController-onLimitsChange(callback: Callback<FloatViewLimits>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -201,7 +210,7 @@ callback when it is no longer needed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;FloatViewLimits&gt; | Yes | Callback used to return the limit change information of thecurrent float view. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<FloatViewLimits> | Yes | Callback used to return the limit change information of the current float view. |
 
 **Error codes:**
 
@@ -232,12 +241,13 @@ try {
 onRectChange(callback: Callback<FloatViewRectChangeInfo>): void
 ```
 
-Registers a callback for listening to changes in the rectangular area (position and size) of the float view. To
-prevent memory leaks, remember to unregister the callback when it is no longer needed.
+Registers a callback for listening to changes in the rectangular area (position and size) of the float view. To prevent memory leaks, remember to unregister the callback when it is no longer needed.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FloatViewController-onRectChange(callback: Callback<FloatViewRectChangeInfo>): void--><!--Device-FloatViewController-onRectChange(callback: Callback<FloatViewRectChangeInfo>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -245,7 +255,7 @@ prevent memory leaks, remember to unregister the callback when it is no longer n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;FloatViewRectChangeInfo&gt; | Yes | Callback used to return the rectangle area changeinformation of the current float view. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<FloatViewRectChangeInfo> | Yes | Callback used to return the rectangle area change information of the current float view. |
 
 **Error codes:**
 
@@ -276,12 +286,13 @@ try {
 onStateChange(callback: Callback<FloatViewStateChangeInfo>): void
 ```
 
-Registers a callback for listening to float view state changes. To prevent memory leaks, remember to unregister
-the callback when it is no longer needed.
+Registers a callback for listening to float view state changes. To prevent memory leaks, remember to unregister the callback when it is no longer needed.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FloatViewController-onStateChange(callback: Callback<FloatViewStateChangeInfo>): void--><!--Device-FloatViewController-onStateChange(callback: Callback<FloatViewStateChangeInfo>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -289,7 +300,7 @@ the callback when it is no longer needed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;FloatViewStateChangeInfo&gt; | Yes | Callback used to return the status change information ofthe current float view. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<FloatViewStateChangeInfo> | Yes | Callback used to return the status change information of the current float view. |
 
 **Error codes:**
 
@@ -320,14 +331,13 @@ try {
 restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 ```
 
-Restores the main window of the float view to display in the foreground. If this API is called when the main
-window is already in the foreground, the main window level will be raised. This API can be used only after the
-float view is clicked. If the main window is in the **PAUSED** state or in the multitasking state, error code 130
-0032 will be returned if this API is called. This API uses a promise to return the result.
+Restores the main window of the float view to display in the foreground. If this API is called when the main window is already in the foreground, the main window level will be raised. This API can be used only after the float view is clicked. If the main window is in the **PAUSED** state or in the multitasking state, error code 1300032 will be returned if this API is called. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FloatViewController-restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>--><!--Device-FloatViewController-restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -335,13 +345,13 @@ float view is clicked. If the main window is in the **PAUSED** state or in the m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParameters | Record&lt;string, Object&gt; | No | Custom parameters passed to the main window when the mainwindow of the float view is restored. The main window will receive the parameters when the[onNewWant](../../apis-ability-kit/arkts-apis/arkts-ability-abilitylifecyclecallback-c.md#onnewwant-1)callback is triggered. The default value is empty, indicating that no custom parameters are passed to themain window. |
+| wantParameters | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Object> | No | Custom parameters passed to the main window when the main window of the float view is restored. The main window will receive the parameters when the [onNewWant](../../apis-ability-kit/arkts-apis/arkts-ability-abilitylifecyclecallback-c.md#onnewwant-1)callback is triggered. The default value is empty, indicating that no custom parameters are passed to the main window. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -382,15 +392,15 @@ try {
 setFloatViewVisibilityInApp(isVisible: boolean): Promise<void>
 ```
 
-Sets whether the float view is visible when the application is running in the foreground. This API uses a promise
-to return the result.
+Sets whether the float view is visible when the application is running in the foreground. This API uses a promise to return the result.
 
-After the float view is created and before this API is called, the float view is visible by default when the
-application is running in the foreground.
+After the float view is created and before this API is called, the float view is visible by default when the application is running in the foreground.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FloatViewController-setFloatViewVisibilityInApp(isVisible: boolean): Promise<void>--><!--Device-FloatViewController-setFloatViewVisibilityInApp(isVisible: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -398,13 +408,13 @@ application is running in the foreground.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isVisible | boolean | Yes | Whether the float view is visible when the application is running in theforeground. The value **true** indicates that the window is visible, and **false** indicates the opposite. |
+| isVisible | boolean | Yes | Whether the float view is visible when the application is running in the foreground. The value **true** indicates that the window is visible, and **false** indicates the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -438,12 +448,13 @@ try {
 setUIContext(path: string, storage?: LocalStorage): Promise<void>
 ```
 
-Loads the content of a page, with its path specified in the current project, for the float view, and transfers
-the state attribute to the page through **LocalStorage**. This API uses a promise to return the result.
+Loads the content of a page, with its path specified in the current project, for the float view, and transfers the state attribute to the page through **LocalStorage**. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FloatViewController-setUIContext(path: string, storage?: LocalStorage): Promise<void>--><!--Device-FloatViewController-setUIContext(path: string, storage?: LocalStorage): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -451,14 +462,14 @@ the state attribute to the page through **LocalStorage**. This API uses a promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the page content which needs to be loaded to the window. The path needs to beconfigured in the **main_pages.json** file of the project. The path cannot be a relative path and must be thesame as the value of **src** in the **main_pages.json** file. |
-| storage | LocalStorage | No | Page-level UI state storage unit, which is used to transfer the stateattribute for the page. By default, the value is empty. |
+| path | string | Yes | Path of the page content which needs to be loaded to the window. The path needs to be configured in the **main_pages.json** file of the project. The path cannot be a relative path and must be the same as the value of **src** in the **main_pages.json** file. |
+| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | No | Page-level UI state storage unit, which is used to transfer the state attribute for the page. By default, the value is empty. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -499,6 +510,8 @@ Sets the UI content of a [named route](../../../../ui/arkts-routing.md#named-rou
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FloatViewController-setUIContextByName(name: string, storage?: LocalStorage): Promise<void>--><!--Device-FloatViewController-setUIContextByName(name: string, storage?: LocalStorage): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -506,13 +519,13 @@ Sets the UI content of a [named route](../../../../ui/arkts-routing.md#named-rou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the named route page. |
-| storage | LocalStorage | No | The data object shared within the content instance loaded by the window. |
+| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | No | The data object shared within the content instance loaded by the window. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -577,16 +590,13 @@ export struct Hello {
 setWindowSize(size: window.Size): Promise<void>
 ```
 
-Sets the size of the float view. You are advised to call the
-[getFloatViewLimits](arkts-arkui-getfloatviewlimits-f.md#getfloatviewlimits-1) API to obtain the recommended width and height ranges
-and aspect ratio range, and then call this API based on the recommended values. The actual window size change can
-be listened to through the
-[onRectChange](arkts-arkui-floatviewcontroller-i.md#onrectchange-1)
-API. This API uses a promise to return the result.
+Sets the size of the float view. You are advised to call the [getFloatViewLimits](arkts-arkui-getfloatviewlimits-f.md#getfloatviewlimits-1) API to obtain the recommended width and height ranges and aspect ratio range, and then call this API based on the recommended values. The actual window size change can be listened to through the [onRectChange](arkts-arkui-floatviewcontroller-i.md#onrectchange-1)API. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FloatViewController-setWindowSize(size: window.Size): Promise<void>--><!--Device-FloatViewController-setWindowSize(size: window.Size): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -594,13 +604,13 @@ API. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | window.Size | Yes | Window size. It is recommended that the size meet the limits returned by the[getFloatViewLimits](arkts-arkui-getfloatviewlimits-f.md#getfloatviewlimits-1) API. |
+| size | window.Size | Yes | Window size. It is recommended that the size meet the limits returned by the [getFloatViewLimits](arkts-arkui-getfloatviewlimits-f.md#getfloatviewlimits-1) API. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -640,12 +650,7 @@ try {
 start(): Promise<void>
 ```
 
-Starts the float view. The return value of this API does not indicate that the start process is complete. You
-need to use the
-[onStateChange](arkts-arkui-floatviewcontroller-i.md#onstatechange-1)
-API to listen for the **STARTED** callback to determine whether the start is successful. You are advised to call
-**start ()** after calling [setUIContext()](arkts-arkui-floatviewcontroller-i.md#setuicontext-1). This API uses a
-promise to return the result.
+Starts the float view. The return value of this API does not indicate that the start process is complete. You need to use the [onStateChange](arkts-arkui-floatviewcontroller-i.md#onstatechange-1)API to listen for the **STARTED** callback to determine whether the start is successful. You are advised to call **start ()** after calling [setUIContext()](arkts-arkui-floatviewcontroller-i.md#setuicontext-1). This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -653,13 +658,15 @@ promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FloatViewController-start(): Promise<void>--><!--Device-FloatViewController-start(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -698,15 +705,13 @@ try {
 stop(): Promise<void>
 ```
 
-Stops the float view. The return value of this API does not indicate that the stop process is complete. You need
-to use the
-[onStateChange](arkts-arkui-floatviewcontroller-i.md#onstatechange-1)
-API to listen for the **STOPPED** callback to determine whether the stop is successful. This API uses a promise
-to return the result.
+Stops the float view. The return value of this API does not indicate that the stop process is complete. You need to use the [onStateChange](arkts-arkui-floatviewcontroller-i.md#onstatechange-1)API to listen for the **STOPPED** callback to determine whether the stop is successful. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FloatViewController-stop(): Promise<void>--><!--Device-FloatViewController-stop(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -714,7 +719,7 @@ to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -750,16 +755,13 @@ try {
 switchTemplate(templateProperty: TemplateProperty): Promise<void>
 ```
 
-Switches the template of the flow view and changes the window size. You are advised to call the
-[getFloatViewLimits](arkts-arkui-getfloatviewlimits-f.md#getfloatviewlimits-1) API to obtain the recommended width and height ranges
-and aspect ratio range of the target template, and then call this API based on the recommended values. The actual
-window size change can be listened to through the
-[onRectChange](arkts-arkui-floatviewcontroller-i.md#onrectchange-1)
-API. This API uses a promise to return the result.
+Switches the template of the flow view and changes the window size. You are advised to call the [getFloatViewLimits](arkts-arkui-getfloatviewlimits-f.md#getfloatviewlimits-1) API to obtain the recommended width and height ranges and aspect ratio range of the target template, and then call this API based on the recommended values. The actual window size change can be listened to through the [onRectChange](arkts-arkui-floatviewcontroller-i.md#onrectchange-1)API. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FloatViewController-switchTemplate(templateProperty: TemplateProperty): Promise<void>--><!--Device-FloatViewController-switchTemplate(templateProperty: TemplateProperty): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -767,13 +769,13 @@ API. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templateProperty | TemplateProperty | Yes | Target flow view template and window size. It is recommended thatthe size meet the limits returned by the [getFloatViewLimits](arkts-arkui-getfloatviewlimits-f.md#getfloatviewlimits-1) API. |
+| templateProperty | [TemplateProperty](arkts-arkui-templateproperty-i.md) | Yes | Target flow view template and window size. It is recommended that the size meet the limits returned by the [getFloatViewLimits](arkts-arkui-getfloatviewlimits-f.md#getfloatviewlimits-1) API. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

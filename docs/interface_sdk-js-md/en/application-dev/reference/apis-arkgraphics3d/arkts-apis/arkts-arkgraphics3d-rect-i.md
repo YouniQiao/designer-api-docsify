@@ -4,6 +4,8 @@ Defines rectangle.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface Rect--><!--Device-unnamed-export interface Rect-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## height
@@ -17,6 +19,8 @@ The height of the rectangle, the unit is the scene unit in the world coordinate 
 **Type:** number
 
 **Since:** 12
+
+<!--Device-Rect-height: double--><!--Device-Rect-height: double-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -32,6 +36,8 @@ The width of the rectangle, the unit is the scene unit in the world coordinate s
 
 **Since:** 12
 
+<!--Device-Rect-width: double--><!--Device-Rect-width: double-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## x
@@ -46,6 +52,8 @@ Left up x coordinate, the unit is the scene unit in the world coordinate system 
 
 **Since:** 12
 
+<!--Device-Rect-x: double--><!--Device-Rect-x: double-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## y
@@ -59,6 +67,8 @@ Left up y coordinate, the unit is the scene unit in the world coordinate system 
 **Type:** number
 
 **Since:** 12
+
+<!--Device-Rect-y: double--><!--Device-Rect-y: double-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

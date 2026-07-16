@@ -12,12 +12,13 @@ import { hiRetrieval } from '@kit.PerformanceAnalysisKit';
 function quit(): void
 ```
 
-Quit the HiRetrieval project. This operation clears the current HiRetrieval config.
-Invoking init function again is required after invoking quit function.
+Quit the HiRetrieval project. This operation clears the current HiRetrieval config.Invoking init function again is required after invoking quit function.
 
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-hiRetrieval-function quit(): void--><!--Device-hiRetrieval-function quit(): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiRetrieval
 

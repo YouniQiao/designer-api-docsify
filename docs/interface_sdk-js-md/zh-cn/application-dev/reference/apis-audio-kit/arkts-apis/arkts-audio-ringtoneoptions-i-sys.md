@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-export interface RingtoneOptions--><!--Device-unnamed-export interface RingtoneOptions-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -20,6 +22,8 @@ loop: boolean
 
 **起始版本：** 10
 
+<!--Device-RingtoneOptions-loop: boolean--><!--Device-RingtoneOptions-loop: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +39,8 @@ volume: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-RingtoneOptions-volume: double--><!--Device-RingtoneOptions-volume: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 

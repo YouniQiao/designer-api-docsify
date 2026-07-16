@@ -18,6 +18,8 @@ Removes one or more assets in the specified user space. This API uses a promise 
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-asset-function removeAsUser(userId: number, query: AssetMap): Promise<void>--><!--Device-asset-function removeAsUser(userId: number, query: AssetMap): Promise<void>-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
@@ -27,13 +29,13 @@ Removes one or more assets in the specified user space. This API uses a promise 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | the user identifier to remove an Asset. The value must be greater than or equal to 100. |
-| query | AssetMap | Yes | Attributes of the asset to remove, such as the asset alias, access control attributes,and custom data. |
+| query | [AssetMap](arkts-assetstore-assetmap-t.md) | Yes | Attributes of the asset to remove, such as the asset alias, access control attributes,and custom data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

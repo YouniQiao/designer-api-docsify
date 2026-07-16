@@ -1,5 +1,11 @@
 # updateContact
 
+## 导入模块
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+```
+
 ## updateContact
 
 ```TypeScript
@@ -16,14 +22,16 @@ function updateContact(contact: Contact, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function updateContact(contact: Contact, callback: AsyncCallback<void>): void--><!--Device-contact-function updateContact(contact: Contact, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| contact | Contact | 是 | 联系人信息。id必填，可通过[selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2)接口获取。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。成功返回更新的联系人id；失败返回具体的错误码信息。 |
+| contact | [Contact](arkts-contacts-contact-c.md) | 是 | 联系人信息。id必填，可通过[selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2)接口获取。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。成功返回更新的联系人id；失败返回具体的错误码信息。 |
 
 **示例：**
 
@@ -67,15 +75,17 @@ function updateContact(context: Context, contact: Contact, callback: AsyncCallba
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function updateContact(context: Context, contact: Contact, callback: AsyncCallback<void>): void--><!--Device-contact-function updateContact(context: Context, contact: Contact, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文Context。 |
-| contact | Contact | 是 | 联系人信息。id必填，可通过[selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2)接口获取。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。成功返回更新的联系人id；失败返回具体的错误码信息。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
+| contact | [Contact](arkts-contacts-contact-c.md) | 是 | 联系人信息。id必填，可通过[selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2)接口获取。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。成功返回更新的联系人id；失败返回具体的错误码信息。 |
 
 **错误码：**
 
@@ -134,15 +144,17 @@ function updateContact(contact: Contact, attrs: ContactAttributes, callback: Asy
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function updateContact(contact: Contact, attrs: ContactAttributes, callback: AsyncCallback<void>): void--><!--Device-contact-function updateContact(contact: Contact, attrs: ContactAttributes, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| contact | Contact | 是 | 联系人信息。id必填，可通过[selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2)接口获取。 |
-| attrs | ContactAttributes | 是 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。成功返回更新的联系人id；失败返回具体的错误码信息。 |
+| contact | [Contact](arkts-contacts-contact-c.md) | 是 | 联系人信息。id必填，可通过[selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2)接口获取。 |
+| attrs | [ContactAttributes](arkts-contacts-contactattributes-c.md) | 是 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。成功返回更新的联系人id；失败返回具体的错误码信息。 |
 
 **示例：**
 
@@ -187,16 +199,18 @@ function updateContact(context: Context, contact: Contact, attrs: ContactAttribu
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function updateContact(context: Context, contact: Contact, attrs: ContactAttributes, callback: AsyncCallback<void>): void--><!--Device-contact-function updateContact(context: Context, contact: Contact, attrs: ContactAttributes, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文Context。 |
-| contact | Contact | 是 | 联系人信息。id必填，可通过[selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2)接口获取。 |
-| attrs | ContactAttributes | 是 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。成功返回更新的联系人id；失败返回具体的错误码信息。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
+| contact | [Contact](arkts-contacts-contact-c.md) | 是 | 联系人信息。id必填，可通过[selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2)接口获取。 |
+| attrs | [ContactAttributes](arkts-contacts-contactattributes-c.md) | 是 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。成功返回更新的联系人id；失败返回具体的错误码信息。 |
 
 **错误码：**
 
@@ -256,20 +270,22 @@ function updateContact(contact: Contact, attrs?: ContactAttributes): Promise<voi
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function updateContact(contact: Contact, attrs?: ContactAttributes): Promise<void>--><!--Device-contact-function updateContact(contact: Contact, attrs?: ContactAttributes): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| contact | Contact | 是 | 联系人信息。id必填，可通过[selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2)接口获取。 |
-| attrs | ContactAttributes | 否 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
+| contact | [Contact](arkts-contacts-contact-c.md) | 是 | 联系人信息。id必填，可通过[selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2)接口获取。 |
+| attrs | [ContactAttributes](arkts-contacts-contactattributes-c.md) | 否 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **示例：**
 
@@ -309,21 +325,23 @@ function updateContact(context: Context, contact: Contact, attrs?: ContactAttrib
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function updateContact(context: Context, contact: Contact, attrs?: ContactAttributes): Promise<void>--><!--Device-contact-function updateContact(context: Context, contact: Contact, attrs?: ContactAttributes): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文Context。 |
-| contact | Contact | 是 | 联系人信息。id必填，可通过[selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2)接口获取。 |
-| attrs | ContactAttributes | 否 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
+| contact | [Contact](arkts-contacts-contact-c.md) | 是 | 联系人信息。id必填，可通过[selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2)接口获取。 |
+| attrs | [ContactAttributes](arkts-contacts-contactattributes-c.md) | 否 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

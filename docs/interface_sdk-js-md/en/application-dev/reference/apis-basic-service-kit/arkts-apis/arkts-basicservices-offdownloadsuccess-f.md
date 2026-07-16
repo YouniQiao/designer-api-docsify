@@ -12,10 +12,11 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 function offDownloadSuccess(url: string, callback?: Callback<void>): void
 ```
 
-Unsubscribes from the pre-download completion events. This API uses an asynchronous callback to return the
-result.
+Unsubscribes from the pre-download completion events. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
+
+<!--Device-cacheDownload-function offDownloadSuccess(url: string, callback?: Callback<void>): void--><!--Device-cacheDownload-function offDownloadSuccess(url: string, callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -24,7 +25,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | Callback URL to be registered, with a maximum of 8,192 bytes. |
-| callback | Callback&lt;void&gt; | No | Callback to unregister. If this parameter is left blank, all completioncallback functions of the URL are unregistered. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | Callback to unregister. If this parameter is left blank, all completion callback functions of the URL are unregistered. |
 
 **Example**
 

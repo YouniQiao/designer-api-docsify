@@ -4,6 +4,8 @@ Describes the event received by the application when the audio stream volume is 
 
 **Since:** 20
 
+<!--Device-audio-interface StreamVolumeEvent--><!--Device-audio-interface StreamVolumeEvent-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Volume level before change.
 
 **Since:** 23
 
+<!--Device-StreamVolumeEvent-previousVolume?: int--><!--Device-StreamVolumeEvent-previousVolume?: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 ## streamUsage
@@ -37,6 +41,8 @@ Audio stream for which the volume changes.
 **Type:** StreamUsage
 
 **Since:** 20
+
+<!--Device-StreamVolumeEvent-streamUsage: StreamUsage--><!--Device-StreamVolumeEvent-streamUsage: StreamUsage-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -52,6 +58,8 @@ Whether to show the volume change in UI. **true** to show, **false** otherwise.
 
 **Since:** 20
 
+<!--Device-StreamVolumeEvent-updateUi: boolean--><!--Device-StreamVolumeEvent-updateUi: boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 ## volume
@@ -65,6 +73,8 @@ Volume.
 **Type:** number
 
 **Since:** 20
+
+<!--Device-StreamVolumeEvent-volume: int--><!--Device-StreamVolumeEvent-volume: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 

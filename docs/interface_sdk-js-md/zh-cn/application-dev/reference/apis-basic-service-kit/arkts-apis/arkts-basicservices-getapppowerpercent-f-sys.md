@@ -1,5 +1,11 @@
 # getAppPowerPercent（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { batteryStats } from '@kit.BasicServicesKit';
+```
+
 ## getAppPowerPercent
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getAppPowerPercent(uid: number): number
 获取应用的耗电百分比。
 
 **起始版本：** 8
+
+<!--Device-batteryStats-function getAppPowerPercent(uid: int): double--><!--Device-batteryStats-function getAppPowerPercent(uid: int): double-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 

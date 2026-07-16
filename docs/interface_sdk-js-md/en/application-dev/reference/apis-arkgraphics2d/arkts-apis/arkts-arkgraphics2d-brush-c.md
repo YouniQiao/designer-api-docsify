@@ -2,14 +2,16 @@
 
 Defines a brush, which is used to describe the style and color to fill in a shape.
 
-> **NOTE**
->
-> - This module uses the physical pixel unit, px.
->
-> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
+> **NOTE**  
+>  
+> - This module uses the physical pixel unit, px.  
+>  
+> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state  
 > transitions.
 
 **Since:** 11
+
+<!--Device-drawing-class Brush--><!--Device-drawing-class Brush-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -29,6 +31,8 @@ A constructor used to create a **Brush** object.
 
 **Since:** 12
 
+<!--Device-Brush-constructor()--><!--Device-Brush-constructor()-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## constructor
@@ -41,13 +45,15 @@ Copies a **Brush** object to create a new one.
 
 **Since:** 12
 
+<!--Device-Brush-constructor(brush: Brush)--><!--Device-Brush-constructor(brush: Brush)-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brush | Brush | Yes | **Brush** object to copy. |
+| brush | [Brush](arkts-arkgraphics2d-brush-c.md) | Yes | **Brush** object to copy. |
 
 **Error codes:**
 
@@ -64,6 +70,8 @@ getAlpha(): number
 Obtains the alpha value of this brush.
 
 **Since:** 12
+
+<!--Device-Brush-getAlpha(): int--><!--Device-Brush-getAlpha(): int-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -83,6 +91,8 @@ Obtains the color of this brush.
 
 **Since:** 12
 
+<!--Device-Brush-getColor(): common2D.Color--><!--Device-Brush-getColor(): common2D.Color-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
@@ -97,10 +107,11 @@ Obtains the color of this brush.
 getColor4f(): common2D.Color4f
 ```
 
-Obtains the brush color. The difference between this method and [getColor](arkts-arkgraphics2d-brush-c.md#getcolor-1) is
-that this method returns a floating point number.
+Obtains the brush color. The difference between this method and [getColor](arkts-arkgraphics2d-brush-c.md#getcolor-1) is that this method returns a floating point number.
 
 **Since:** 20
+
+<!--Device-Brush-getColor4f(): common2D.Color4f--><!--Device-Brush-getColor4f(): common2D.Color4f-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -120,13 +131,15 @@ Obtains the color filter of this brush.
 
 **Since:** 12
 
+<!--Device-Brush-getColorFilter(): ColorFilter--><!--Device-Brush-getColorFilter(): ColorFilter-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | Color filter. |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
 
 ## getHexColor
 
@@ -137,6 +150,8 @@ getHexColor(): number
 Obtains the color of this brush.
 
 **Since:** 18
+
+<!--Device-Brush-getHexColor(): int--><!--Device-Brush-getHexColor(): int-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -156,13 +171,15 @@ Checks whether anti-aliasing is enabled for this brush.
 
 **Since:** 12
 
+<!--Device-Brush-isAntiAlias(): boolean--><!--Device-Brush-isAntiAlias(): boolean-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** means that anti-aliasing is enabled, and **false** meansthe opposite. |
+| boolean | Check result. The value **true** means that anti-aliasing is enabled, and **false** means the opposite. |
 
 ## reset
 
@@ -173,6 +190,8 @@ reset(): void
 Resets this brush to the initial state.
 
 **Since:** 12
+
+<!--Device-Brush-reset(): void--><!--Device-Brush-reset(): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -186,13 +205,15 @@ Sets an alpha value for this brush.
 
 **Since:** 11
 
+<!--Device-Brush-setAlpha(alpha: int): void--><!--Device-Brush-setAlpha(alpha: int): void-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alpha | number | Yes | Alpha value. The value is an integer in the range [0, 255]. If a floating point number ispassed in, the value is rounded down. |
+| alpha | number | Yes | Alpha value. The value is an integer in the range [0, 255]. If a floating point number is passed in, the value is rounded down. |
 
 **Error codes:**
 
@@ -206,10 +227,11 @@ Sets an alpha value for this brush.
 setAntiAlias(aa: boolean): void
 ```
 
-Enables anti-aliasing for this brush. Anti-aliasing makes the edges of the content smoother. If this API is not
-called, anti-aliasing is disabled by default.
+Enables anti-aliasing for this brush. Anti-aliasing makes the edges of the content smoother. If this API is not called, anti-aliasing is disabled by default.
 
 **Since:** 11
+
+<!--Device-Brush-setAntiAlias(aa: boolean): void--><!--Device-Brush-setAntiAlias(aa: boolean): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -217,7 +239,7 @@ called, anti-aliasing is disabled by default.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aa | boolean | Yes | Whether to enable anti-aliasing. The value **true** means to enable anti-aliasing, and**false** means the opposite. |
+| aa | boolean | Yes | Whether to enable anti-aliasing. The value **true** means to enable anti-aliasing, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -235,13 +257,15 @@ Sets a blend mode for this brush. If this API is not called, the default blend m
 
 **Since:** 11
 
+<!--Device-Brush-setBlendMode(mode: BlendMode): void--><!--Device-Brush-setBlendMode(mode: BlendMode): void-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | BlendMode | Yes | Blend mode. |
+| mode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | Yes | Blend mode. |
 
 **Error codes:**
 
@@ -259,13 +283,15 @@ Sets a color for this brush.
 
 **Since:** 11
 
+<!--Device-Brush-setColor(color: common2D.Color): void--><!--Device-Brush-setColor(color: common2D.Color): void-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer rangingfrom 0 to 255. |
+| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
 
 **Error codes:**
 
@@ -279,10 +305,11 @@ Sets a color for this brush.
 setColor(alpha: number, red: number, green: number, blue: number): void
 ```
 
-Sets a color for this brush. This API provides better performance than
-[setColor](arkts-arkgraphics2d-brush-c.md#setcolor-1) and is recommended.
+Sets a color for this brush. This API provides better performance than [setColor](arkts-arkgraphics2d-brush-c.md#setcolor-1) and is recommended.
 
 **Since:** 12
+
+<!--Device-Brush-setColor(alpha: int, red: int, green: int, blue: int): void--><!--Device-Brush-setColor(alpha: int, red: int, green: int, blue: int): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -311,6 +338,8 @@ Sets a color for this brush.
 
 **Since:** 18
 
+<!--Device-Brush-setColor(color: int): void--><!--Device-Brush-setColor(color: int): void-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
@@ -331,10 +360,11 @@ Sets a color for this brush.
 setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void
 ```
 
-Sets the color and standard color gamut for this brush. The difference between this method and
-[setColor](arkts-arkgraphics2d-brush-c.md#setcolor-1) is that the color gamut can be set separately.
+Sets the color and standard color gamut for this brush. The difference between this method and [setColor](arkts-arkgraphics2d-brush-c.md#setcolor-1) is that the color gamut can be set separately.
 
 **Since:** 20
+
+<!--Device-Brush-setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void--><!--Device-Brush-setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -342,8 +372,8 @@ Sets the color and standard color gamut for this brush. The difference between t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color4f | common2D.Color4f | Yes | Color in the ARGB format. The value of each color channel is a floatingpoint number ranging from 0.0 to 1.0. Values above 1.0 default to **1.0**, and values below 0.0 default to**0.0**. |
-| colorSpace | colorSpaceManager.ColorSpaceManager \| null | Yes | Standard color gamut object. **null**indicates SRGB. |
+| color4f | common2D.Color4f | Yes | Color in the ARGB format. The value of each color channel is a floating point number ranging from 0.0 to 1.0. Values above 1.0 default to **1.0**, and values below 0.0 default to **0.0**. |
+| colorSpace | colorSpaceManager.ColorSpaceManager \| null | Yes | Standard color gamut object. **null** indicates SRGB. |
 
 ## setColorFilter
 
@@ -355,13 +385,15 @@ Sets a color filter for this brush.
 
 **Since:** 11
 
+<!--Device-Brush-setColorFilter(filter: ColorFilter | null): void--><!--Device-Brush-setColorFilter(filter: ColorFilter | null): void-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | ColorFilter \| null | Yes | Defines a color filter. If **null** is passed in, the color filter iscleared.<br>**Since:** 20 |
+| filter | ColorFilter \| null | Yes | Defines a color filter. If **null** is passed in, the color filter is cleared.<br>**Since:** 20 |
 
 **Error codes:**
 
@@ -379,13 +411,15 @@ Sets an image filter for this brush.
 
 **Since:** 12
 
+<!--Device-Brush-setImageFilter(filter: ImageFilter | null): void--><!--Device-Brush-setImageFilter(filter: ImageFilter | null): void-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | ImageFilter \| null | Yes | Image filter. If **null** is passed in, the image filter effect of thebrush will be cleared. |
+| filter | ImageFilter \| null | Yes | Image filter. If **null** is passed in, the image filter effect of the brush will be cleared. |
 
 **Error codes:**
 
@@ -402,6 +436,8 @@ setMaskFilter(filter: MaskFilter | null): void
 Adds a mask filter for this brush.
 
 **Since:** 12
+
+<!--Device-Brush-setMaskFilter(filter: MaskFilter | null): void--><!--Device-Brush-setMaskFilter(filter: MaskFilter | null): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -427,13 +463,15 @@ Sets the shader effect for this brush.
 
 **Since:** 12
 
+<!--Device-Brush-setShaderEffect(shaderEffect: ShaderEffect | null): void--><!--Device-Brush-setShaderEffect(shaderEffect: ShaderEffect | null): void-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shaderEffect | ShaderEffect \| null | Yes | **ShaderEffect** object. If **null** is passed in, the shadereffect will be cleared.<br>**Since:** 20 |
+| shaderEffect | ShaderEffect \| null | Yes | **ShaderEffect** object. If **null** is passed in, the shader effect will be cleared.<br>**Since:** 20 |
 
 **Error codes:**
 
@@ -451,13 +489,15 @@ Sets a shadow layer for this brush. The shadow layer effect takes effect only wh
 
 **Since:** 12
 
+<!--Device-Brush-setShadowLayer(shadowLayer: ShadowLayer | null): void--><!--Device-Brush-setShadowLayer(shadowLayer: ShadowLayer | null): void-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shadowLayer | ShadowLayer \| null | Yes | Implements a shadow layer. If **null** is passed in, the shadow layeris cleared.<br>**Since:** 20 |
+| shadowLayer | ShadowLayer \| null | Yes | Implements a shadow layer. If **null** is passed in, the shadow layer is cleared.<br>**Since:** 20 |
 
 **Error codes:**
 

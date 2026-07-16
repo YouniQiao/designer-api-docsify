@@ -4,6 +4,8 @@ Defines the onDataResubmission callback, related to {@link onDataResubmission} m
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class DataResubmissionHandler--><!--Device-unnamed-declare class DataResubmissionHandler-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## cancel
@@ -16,7 +18,9 @@ cancel(): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DataResubmissionHandler-cancel(): void--><!--Device-DataResubmissionHandler-cancel(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -30,7 +34,9 @@ Constructor.
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DataResubmissionHandler-constructor()--><!--Device-DataResubmissionHandler-constructor()-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -44,7 +50,9 @@ resend(): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DataResubmissionHandler-resend(): void--><!--Device-DataResubmissionHandler-resend(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

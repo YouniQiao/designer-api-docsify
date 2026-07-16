@@ -4,6 +4,8 @@ Defines the network ID filter options.
 
 **Since:** 18
 
+<!--Device-distributedDeviceManager-interface NetworkIdQueryFilter--><!--Device-distributedDeviceManager-interface NetworkIdQueryFilter-End-->
+
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -22,12 +24,14 @@ onlineStatus : number
 
 Device online status.
 
-- **0**: The device is offline.
+- **0**: The device is offline.  
 - **1**: The device is online.
 
 **Type:** number
 
 **Since:** 18
+
+<!--Device-NetworkIdQueryFilter-onlineStatus : int--><!--Device-NetworkIdQueryFilter-onlineStatus : int-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -44,6 +48,8 @@ Registered device ID.
 **Type:** string
 
 **Since:** 18
+
+<!--Device-NetworkIdQueryFilter-wiseDeviceId : string--><!--Device-NetworkIdQueryFilter-wiseDeviceId : string-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 

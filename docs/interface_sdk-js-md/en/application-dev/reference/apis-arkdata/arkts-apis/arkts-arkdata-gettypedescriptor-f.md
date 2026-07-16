@@ -18,6 +18,8 @@ Obtains the **TypeDescriptor** object based on the uniform data type ID.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-uniformTypeDescriptor-function getTypeDescriptor(typeId: string): TypeDescriptor--><!--Device-uniformTypeDescriptor-function getTypeDescriptor(typeId: string): TypeDescriptor-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 **Parameters:**
@@ -30,7 +32,7 @@ Obtains the **TypeDescriptor** object based on the uniform data type ID.
 
 | Type | Description |
 | --- | --- |
-| TypeDescriptor | **TypeDescriptor** object obtained. If the uniform data type does not exist, **null**is returned. |
+| [TypeDescriptor](arkts-arkdata-typedescriptor-c.md) | **TypeDescriptor** object obtained. If the uniform data type does not exist, **null** is returned. |
 
 **Error codes:**
 

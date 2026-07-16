@@ -18,19 +18,21 @@ Starts a page through an ability, on which users can touch the button to downloa
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE_OPEN
 
+<!--Device-eSIM-function addProfile(profile: DownloadableProfile): Promise<boolean>--><!--Device-eSIM-function addProfile(profile: DownloadableProfile): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | DownloadableProfile | Yes | Bound profile package data returned by the SM-DP+ server. |
+| profile | [DownloadableProfile](arkts-telephony-downloadableprofile-i.md) | Yes | Bound profile package data returned by the SM-DP+ server. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns {@code true} if the profile is added successfully;returns {@code false} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns {@code true} if the profile is added successfully;returns {@code false} otherwise. |
 
 **Error codes:**
 

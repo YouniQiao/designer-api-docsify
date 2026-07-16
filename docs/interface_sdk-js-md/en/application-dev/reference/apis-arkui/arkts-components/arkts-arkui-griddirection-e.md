@@ -4,6 +4,8 @@ Enumerates the main axis layout directions.
 
 **Since:** 8
 
+<!--Device-unnamed-declare enum GridDirection--><!--Device-unnamed-declare enum GridDirection-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Row
@@ -17,6 +19,8 @@ Horizontal layout, where the child components are arranged from left to right as
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridDirection-Row--><!--Device-GridDirection-Row-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,6 +36,8 @@ Vertical layout, where the child components are arranged from top to bottom as t
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-GridDirection-Column--><!--Device-GridDirection-Column-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## RowReverse
@@ -40,12 +46,13 @@ Vertical layout, where the child components are arranged from top to bottom as t
 RowReverse
 ```
 
-Reverse horizontal layout, where the child components are arranged from right to left as the main axis runs along
-the rows.
+Reverse horizontal layout, where the child components are arranged from right to left as the main axis runs along the rows.
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridDirection-RowReverse--><!--Device-GridDirection-RowReverse-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -55,12 +62,13 @@ the rows.
 ColumnReverse
 ```
 
-Reverse vertical layout, where the child components are arranged from bottom up as the main axis runs down the
-columns.
+Reverse vertical layout, where the child components are arranged from bottom up as the main axis runs down the columns.
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-GridDirection-ColumnReverse--><!--Device-GridDirection-ColumnReverse-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

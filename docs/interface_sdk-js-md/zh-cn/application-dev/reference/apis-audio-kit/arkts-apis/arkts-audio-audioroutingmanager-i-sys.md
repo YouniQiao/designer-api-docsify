@@ -2,16 +2,23 @@
 
 音频路由管理。
 
-在使用AudioRoutingManager的接口之前，需先通过[getRoutingManager](arkts-audio-audiomanager-i.md#getroutingmanager-1)获取
-AudioRoutingManager实例。
+在使用AudioRoutingManager的接口之前，需先通过[getRoutingManager](arkts-audio-audiomanager-i.md#getroutingmanager-1)获取AudioRoutingManager实例。
 
-> **说明：**
->
+> **说明：**  
+>  
 > - 本Interface首批接口从API version 9开始支持。
 
 **起始版本：** 9
 
+<!--Device-audio-interface AudioRoutingManager--><!--Device-audio-interface AudioRoutingManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## excludeOutputDevices
 
@@ -19,14 +26,14 @@ AudioRoutingManager实例。
 excludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Promise<void>
 ```
 
-Exclude output devices. After calling this function successfully, audio will not be played on the specified
-devices. Note that only the external ouput device can be excluded by this function. Local output devices is not
-accepted.
+Exclude output devices. After calling this function successfully, audio will not be played on the specified devices. Note that only the external ouput device can be excluded by this function. Local output devices is not accepted.
 
 **起始版本：** 18
 
 **需要权限：** 
 - API版本18 - 22：ohos.permission.MANAGE_AUDIO_CONFIG
+
+<!--Device-AudioRoutingManager-excludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-excludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -36,14 +43,14 @@ accepted.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| usage | DeviceUsage | 是 | Device usage, only output device usages can be accepted. |
-| devices | AudioDeviceDescriptors | 是 | The devices to be excluded. |
+| usage | [DeviceUsage](arkts-audio-deviceusage-e.md) | 是 | Device usage, only output device usages can be accepted. |
+| devices | [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | 是 | The devices to be excluded. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return result. |
+| Promise<void> | Promise used to return result. |
 
 **错误码：**
 
@@ -92,12 +99,13 @@ async function excludeOutputDevices(){
 getActiveOutputDeviceDescriptors(): Promise<AudioDeviceDescriptors>
 ```
 
-获取当前音频设备情况下的活动输出设备描述符。
-激活策略与系统的音频设备策略相关。
+获取当前音频设备情况下的活动输出设备描述符。激活策略与系统的音频设备策略相关。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioRoutingManager-getActiveOutputDeviceDescriptors(): Promise<AudioDeviceDescriptors>--><!--Device-AudioRoutingManager-getActiveOutputDeviceDescriptors(): Promise<AudioDeviceDescriptors>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -107,7 +115,7 @@ getActiveOutputDeviceDescriptors(): Promise<AudioDeviceDescriptors>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AudioDeviceDescriptors&gt; | 当前激活的输出设备信息 |
+| Promise<AudioDeviceDescriptors> | 当前激活的输出设备信息 |
 
 **错误码：**
 
@@ -137,6 +145,8 @@ Get excluded devices by filter.
 
 **起始版本：** 18
 
+<!--Device-AudioRoutingManager-getExcludedDevices(usage: DeviceUsage): AudioDeviceDescriptors--><!--Device-AudioRoutingManager-getExcludedDevices(usage: DeviceUsage): AudioDeviceDescriptors-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -145,13 +155,13 @@ Get excluded devices by filter.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| usage | DeviceUsage | 是 | Device usage, only output device usages can be accepted. |
+| usage | [DeviceUsage](arkts-audio-deviceusage-e.md) | 是 | Device usage, only output device usages can be accepted. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AudioDeviceDescriptors | Exclueded devices. |
+| [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | Exclueded devices. |
 
 **错误码：**
 
@@ -184,6 +194,8 @@ Get the preferred input device for the target audio capturer filter.
 
 **起始版本：** 18
 
+<!--Device-AudioRoutingManager-getPreferredInputDeviceByFilter(filter: AudioCapturerFilter): AudioDeviceDescriptors--><!--Device-AudioRoutingManager-getPreferredInputDeviceByFilter(filter: AudioCapturerFilter): AudioDeviceDescriptors-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -192,13 +204,13 @@ Get the preferred input device for the target audio capturer filter.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | AudioCapturerFilter | 是 | Audio capturer filter. |
+| filter | [AudioCapturerFilter](arkts-audio-audiocapturerfilter-i-sys.md) | 是 | Audio capturer filter. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AudioDeviceDescriptors | The preferred devices. |
+| [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | The preferred devices. |
 
 **错误码：**
 
@@ -240,6 +252,8 @@ Get the preferred output devices by the target audio renderer filter.
 
 **起始版本：** 18
 
+<!--Device-AudioRoutingManager-getPreferredOutputDeviceByFilter(filter: AudioRendererFilter): AudioDeviceDescriptors--><!--Device-AudioRoutingManager-getPreferredOutputDeviceByFilter(filter: AudioRendererFilter): AudioDeviceDescriptors-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -248,13 +262,13 @@ Get the preferred output devices by the target audio renderer filter.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | AudioRendererFilter | 是 | Audio renderer filter. |
+| filter | [AudioRendererFilter](arkts-audio-audiorendererfilter-i-sys.md) | 是 | Audio renderer filter. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AudioDeviceDescriptors | The preferred devices. |
+| [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | The preferred devices. |
 
 **错误码：**
 
@@ -297,6 +311,8 @@ Unsubscribes to preferred output device change events.
 
 **起始版本：** 21
 
+<!--Device-AudioRoutingManager-off(type: 'preferredOutputDeviceChangeByFilter', callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-off(type: 'preferredOutputDeviceChangeByFilter', callback?: Callback<AudioDeviceDescriptors>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -305,8 +321,8 @@ Unsubscribes to preferred output device change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'preferredOutputDeviceChangeByFilter' | 是 | Type of the event to listen for. Only thepreferredOutputDeviceChangeByFilter event is supported. |
-| callback | Callback&lt;AudioDeviceDescriptors&gt; | 否 | Callback used in subscribe. |
+| type | 'preferredOutputDeviceChangeByFilter' | 是 | Type of the event to listen for. Only the preferredOutputDeviceChangeByFilter event is supported. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioDeviceDescriptors> | 否 | Callback used in subscribe. |
 
 **错误码：**
 
@@ -352,6 +368,8 @@ offPreferredInputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioRoutingManager-offPreferredInputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-offPreferredInputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -360,7 +378,7 @@ offPreferredInputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AudioDeviceDescriptors&gt; | 否 | 要侦听的事件类型。只有支持的输入设备变更按过滤事件为precedenceInputDeviceChangeByFilter。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioDeviceDescriptors> | 否 | 要侦听的事件类型。只有支持的输入设备变更按过滤事件为precedenceInputDeviceChangeByFilter。 |
 
 **错误码：**
 
@@ -399,10 +417,11 @@ audioRoutingManager.offPreferredInputDeviceChangeByFilter(preferredInputDeviceCh
 on(type: 'preferredOutputDeviceChangeByFilter', filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void
 ```
 
-Subscribes to preferred output device change events. When preferred device for target audio renderer
-filter changes, registered clients will receive the callback.
+Subscribes to preferred output device change events. When preferred device for target audio renderer filter changes, registered clients will receive the callback.
 
 **起始版本：** 21
+
+<!--Device-AudioRoutingManager-on(type: 'preferredOutputDeviceChangeByFilter', filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-on(type: 'preferredOutputDeviceChangeByFilter', filter: AudioRendererFilter, callback: Callback<AudioDeviceDescriptors>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -412,9 +431,9 @@ filter changes, registered clients will receive the callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'preferredOutputDeviceChangeByFilter' | 是 | Type of the event to listen for. Only thepreferredOutputDeviceChangeByFilter event is supported. |
-| filter | AudioRendererFilter | 是 | Filter for AudioRenderer. |
-| callback | Callback&lt;AudioDeviceDescriptors&gt; | 是 | Callback used to obtain the changed preferred devicesinformation. |
+| type | 'preferredOutputDeviceChangeByFilter' | 是 | Type of the event to listen for. Only the preferredOutputDeviceChangeByFilter event is supported. |
+| filter | [AudioRendererFilter](arkts-audio-audiorendererfilter-i-sys.md) | 是 | Filter for AudioRenderer. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioDeviceDescriptors> | 是 | Callback used to obtain the changed preferred devices information. |
 
 **错误码：**
 
@@ -447,12 +466,13 @@ audioRoutingManager.on('preferredOutputDeviceChangeByFilter', outputAudioRendere
 onPreferredInputDeviceChangeByFilter(filter: AudioCapturerFilter, callback: Callback<AudioDeviceDescriptors>): void
 ```
 
-订阅首选输入设备变更事件。当目标音频的首选设备
-捕获器过滤器更改，已注册的客户端将收到回调。
+订阅首选输入设备变更事件。当目标音频的首选设备捕获器过滤器更改，已注册的客户端将收到回调。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioRoutingManager-onPreferredInputDeviceChangeByFilter(filter: AudioCapturerFilter, callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioRoutingManager-onPreferredInputDeviceChangeByFilter(filter: AudioCapturerFilter, callback: Callback<AudioDeviceDescriptors>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -462,8 +482,8 @@ onPreferredInputDeviceChangeByFilter(filter: AudioCapturerFilter, callback: Call
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | AudioCapturerFilter | 是 | 过滤capturer。 |
-| callback | Callback&lt;AudioDeviceDescriptors&gt; | 是 | 回调用于接收首选设备变更信息。 |
+| filter | [AudioCapturerFilter](arkts-audio-audiocapturerfilter-i-sys.md) | 是 | 过滤capturer。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioDeviceDescriptors> | 是 | 回调用于接收首选设备变更信息。 |
 
 **错误码：**
 
@@ -501,6 +521,8 @@ restoreOutputDeviceByFilter(filter: AudioRendererFilter): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioRoutingManager-restoreOutputDeviceByFilter(filter: AudioRendererFilter): Promise<void>--><!--Device-AudioRoutingManager-restoreOutputDeviceByFilter(filter: AudioRendererFilter): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -509,13 +531,13 @@ restoreOutputDeviceByFilter(filter: AudioRendererFilter): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | AudioRendererFilter | 是 | 要恢复策略的音频播放流筛选属性 |
+| filter | [AudioRendererFilter](arkts-audio-audiorendererfilter-i-sys.md) | 是 | 要恢复策略的音频播放流筛选属性 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return result. |
+| Promise<void> | Promise used to return result. |
 
 **错误码：**
 
@@ -557,6 +579,8 @@ Select the input device. This method uses an asynchronous callback to return the
 
 **起始版本：** 9
 
+<!--Device-AudioRoutingManager-selectInputDevice(inputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void--><!--Device-AudioRoutingManager-selectInputDevice(inputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -565,8 +589,8 @@ Select the input device. This method uses an asynchronous callback to return the
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inputAudioDevices | AudioDeviceDescriptors | 是 | Audio device description |
-| callback | AsyncCallback&lt;void&gt; | 是 | Callback used to return the result. |
+| inputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | 是 | Audio device description |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | Callback used to return the result. |
 
 **示例：**
 
@@ -611,6 +635,8 @@ Select the input device. This method uses a promise to return the result.
 
 **起始版本：** 9
 
+<!--Device-AudioRoutingManager-selectInputDevice(inputAudioDevices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-selectInputDevice(inputAudioDevices: AudioDeviceDescriptors): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -619,13 +645,13 @@ Select the input device. This method uses a promise to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inputAudioDevices | AudioDeviceDescriptors | 是 | Audio device description |
+| inputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | 是 | Audio device description |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise<void> | Promise used to return the result. |
 
 **示例：**
 
@@ -668,6 +694,8 @@ Select the input device with desired AudioCapturer. This method uses a promise t
 
 **起始版本：** 18
 
+<!--Device-AudioRoutingManager-selectInputDeviceByFilter(filter: AudioCapturerFilter, inputAudioDevices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-selectInputDeviceByFilter(filter: AudioCapturerFilter, inputAudioDevices: AudioDeviceDescriptors): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -676,14 +704,14 @@ Select the input device with desired AudioCapturer. This method uses a promise t
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | AudioCapturerFilter | 是 | Filter for AudioCapturer. |
-| inputAudioDevices | AudioDeviceDescriptors | 是 | Audio device descriptions |
+| filter | [AudioCapturerFilter](arkts-audio-audiocapturerfilter-i-sys.md) | 是 | Filter for AudioCapturer. |
+| inputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | 是 | Audio device descriptions |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise<void> | Promise used to return the result. |
 
 **错误码：**
 
@@ -743,6 +771,8 @@ Select the output device. This method uses an asynchronous callback to return th
 
 **起始版本：** 9
 
+<!--Device-AudioRoutingManager-selectOutputDevice(outputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void--><!--Device-AudioRoutingManager-selectOutputDevice(outputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -751,8 +781,8 @@ Select the output device. This method uses an asynchronous callback to return th
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| outputAudioDevices | AudioDeviceDescriptors | 是 | Audio device description |
-| callback | AsyncCallback&lt;void&gt; | 是 | Callback used to return the result. |
+| outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | 是 | Audio device description |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | Callback used to return the result. |
 
 **示例：**
 
@@ -796,6 +826,8 @@ Select the output device. This method uses a promise to return the result.
 
 **起始版本：** 9
 
+<!--Device-AudioRoutingManager-selectOutputDevice(outputAudioDevices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-selectOutputDevice(outputAudioDevices: AudioDeviceDescriptors): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -804,13 +836,13 @@ Select the output device. This method uses a promise to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| outputAudioDevices | AudioDeviceDescriptors | 是 | Audio device description |
+| outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | 是 | Audio device description |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise<void> | Promise used to return the result. |
 
 **示例：**
 
@@ -853,6 +885,8 @@ Select the output device with desired AudioRenderer. This method uses an asynchr
 
 **起始版本：** 9
 
+<!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void--><!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -861,9 +895,9 @@ Select the output device with desired AudioRenderer. This method uses an asynchr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | AudioRendererFilter | 是 | Filter for AudioRenderer. |
-| outputAudioDevices | AudioDeviceDescriptors | 是 | Audio device description. |
-| callback | AsyncCallback&lt;void&gt; | 是 | Callback used to return the result. |
+| filter | [AudioRendererFilter](arkts-audio-audiorendererfilter-i-sys.md) | 是 | Filter for AudioRenderer. |
+| outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | 是 | Audio device description. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | Callback used to return the result. |
 
 **示例：**
 
@@ -916,6 +950,8 @@ Select the output device with desired AudioRenderer. This method uses a promise 
 
 **起始版本：** 9
 
+<!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -924,14 +960,14 @@ Select the output device with desired AudioRenderer. This method uses a promise 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | AudioRendererFilter | 是 | Filter for AudioRenderer. |
-| outputAudioDevices | AudioDeviceDescriptors | 是 | Audio device description |
+| filter | [AudioRendererFilter](arkts-audio-audiorendererfilter-i-sys.md) | 是 | Filter for AudioRenderer. |
+| outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | 是 | Audio device description |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise<void> | Promise used to return the result. |
 
 **示例：**
 
@@ -983,6 +1019,8 @@ Select the output device with desired AudioRenderer. This method uses a promise 
 
 **起始版本：** 21
 
+<!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors, strategy: AudioDevcieSelectStrategy): Promise<void>--><!--Device-AudioRoutingManager-selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: AudioDeviceDescriptors, strategy: AudioDevcieSelectStrategy): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -991,15 +1029,15 @@ Select the output device with desired AudioRenderer. This method uses a promise 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | AudioRendererFilter | 是 | Filter for affected AudioRenderers. |
-| outputAudioDevices | AudioDeviceDescriptors | 是 | Audio device to select. |
-| strategy | AudioDevcieSelectStrategy | 是 | Target audio device select strategy. |
+| filter | [AudioRendererFilter](arkts-audio-audiorendererfilter-i-sys.md) | 是 | Filter for affected AudioRenderers. |
+| outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | 是 | Audio device to select. |
+| strategy | [AudioDevcieSelectStrategy](arkts-audio-audiodevcieselectstrategy-e-sys.md) | 是 | Target audio device select strategy. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 202 - Not system App. |
+| Promise<void> | 202 - Not system App. |
 
 **错误码：**
 
@@ -1059,6 +1097,8 @@ Unexclude output devices.
 **需要权限：** 
 - API版本18 - 22：ohos.permission.MANAGE_AUDIO_CONFIG
 
+<!--Device-AudioRoutingManager-unexcludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Promise<void>--><!--Device-AudioRoutingManager-unexcludeOutputDevices(usage: DeviceUsage, devices: AudioDeviceDescriptors): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -1067,14 +1107,14 @@ Unexclude output devices.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| usage | DeviceUsage | 是 | Device usage, only output device usages can be accepted. |
-| devices | AudioDeviceDescriptors | 是 | The devices to be unexcluded. |
+| usage | [DeviceUsage](arkts-audio-deviceusage-e.md) | 是 | Device usage, only output device usages can be accepted. |
+| devices | [AudioDeviceDescriptors](arkts-audio-audiodevicedescriptors-t.md) | 是 | The devices to be unexcluded. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return result. |
+| Promise<void> | Promise used to return result. |
 
 **错误码：**
 
@@ -1130,6 +1170,8 @@ Unexclude output devices. This function will unexclude all output devices belong
 **需要权限：** 
 - API版本18 - 22：ohos.permission.MANAGE_AUDIO_CONFIG
 
+<!--Device-AudioRoutingManager-unexcludeOutputDevices(usage: DeviceUsage): Promise<void>--><!--Device-AudioRoutingManager-unexcludeOutputDevices(usage: DeviceUsage): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -1138,13 +1180,13 @@ Unexclude output devices. This function will unexclude all output devices belong
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| usage | DeviceUsage | 是 | Device usage, only output device usages can be accepted. |
+| usage | [DeviceUsage](arkts-audio-deviceusage-e.md) | 是 | Device usage, only output device usages can be accepted. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return result. |
+| Promise<void> | Promise used to return result. |
 
 **错误码：**
 

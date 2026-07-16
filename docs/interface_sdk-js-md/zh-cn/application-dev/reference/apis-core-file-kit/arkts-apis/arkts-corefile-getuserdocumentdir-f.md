@@ -1,5 +1,11 @@
 # getUserDocumentDir
 
+## 导入模块
+
+```TypeScript
+import { Environment } from '@kit.CoreFileKit';
+```
+
 ## getUserDocumentDir
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getUserDocumentDir(): string
 
 **需要权限：** 
 - API版本11：ohos.permission.READ_WRITE_DOCUMENTS_DIRECTORY
+
+<!--Device-Environment-function getUserDocumentDir(): string--><!--Device-Environment-function getUserDocumentDir(): string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.Environment.FolderObtain
 

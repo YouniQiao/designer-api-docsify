@@ -12,12 +12,13 @@ import { appControl } from '@kit.AbilityKit';
 function deleteDisposedStatusSync(appId: string, appIndex?: number): void
 ```
 
-Deletes the disposed status for an application or an application clone. This API returns the result synchronously.
-If the operation is successful, **null** is returned. If the operation fails, an error message is returned.
+Deletes the disposed status for an application or an application clone. This API returns the result synchronously.If the operation is successful, **null** is returned. If the operation fails, an error message is returned.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS
+
+<!--Device-appControl-function deleteDisposedStatusSync(appId: string, appIndex?: int): void--><!--Device-appControl-function deleteDisposedStatusSync(appId: string, appIndex?: int): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -27,8 +28,8 @@ If the operation is successful, **null** is returned. If the operation fails, an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appId | string | Yes | appId or appIdentifier of the target application. If a rule is set using appId, it mustbe deleted using appId; the same principle applies to appIdentifier.<br>**NOTE**<br> **appId** is the uniqueidentifier of an application and is determined by the bundle name and signature information of the application.For details about how to obtain **appId**, see[How do I obtain appId from application information](../../../../quick-start/common_problem_of_application.md#how-do-i-obtain-appid-from-application-information).<br> [appIdentifier](arkts-ability-signatureinfo-i.md) is also the unique identifier of an app.For details, see[What is appIdentifier](../../../../quick-start/common_problem_of_application.md#what-is-appidentifier). Fordetails about how to obtain **appIdentifier**, see[How do I obtain appIdentifier from application information](../../../../quick-start/common_problem_of_application.md#how-do-i-obtain-appidentifier-from-application-information). |
-| appIndex | number | No | Index of the application clone. The default value is **0**.<br> The value **0** meansto delete the disposed status of the main application. A value greater than 0 means to delete the disposedstatus of the application clone.<br>**Since:** 12 |
+| appId | string | Yes | appId or appIdentifier of the target application. If a rule is set using appId, it must be deleted using appId; the same principle applies to appIdentifier.<br>**NOTE**<br> **appId** is the unique identifier of an application and is determined by the bundle name and signature information of the application.For details about how to obtain **appId**, see [How do I obtain appId from application information](../../../../quick-start/common_problem_of_application.md#how-do-i-obtain-appid-from-application-information).<br> [appIdentifier](arkts-ability-signatureinfo-i.md) is also the unique identifier of an app.For details, see [What is appIdentifier](../../../../quick-start/common_problem_of_application.md#what-is-appidentifier). For details about how to obtain **appIdentifier**, see [How do I obtain appIdentifier from application information](../../../../quick-start/common_problem_of_application.md#how-do-i-obtain-appidentifier-from-application-information). |
+| appIndex | number | No | Index of the application clone. The default value is **0**.<br> The value **0** means to delete the disposed status of the main application. A value greater than 0 means to delete the disposed status of the application clone.<br>**Since:** 12 |
 
 **Error codes:**
 

@@ -18,6 +18,8 @@ Returns the information about the specified exempted application.
 
 **Required permissions:** ohos.permission.DEVICE_STANDBY_EXEMPTION
 
+<!--Device-deviceStandby-function getExemptedApps(resourceTypes: int, callback: AsyncCallback<Array<ExemptedAppInfo>>): void--><!--Device-deviceStandby-function getExemptedApps(resourceTypes: int, callback: AsyncCallback<Array<ExemptedAppInfo>>): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Returns the information about the specified exempted application.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resourceTypes | number | Yes | the combination of {@link ResourceType} values. |
-| callback | AsyncCallback&lt;Array&lt;ExemptedAppInfo&gt;&gt; | Yes | the callback of getExemptedApps. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<ExemptedAppInfo>> | Yes | the callback of getExemptedApps. |
 
 **Error codes:**
 
@@ -75,6 +77,8 @@ Returns the information about the specified exempted application.
 
 **Required permissions:** ohos.permission.DEVICE_STANDBY_EXEMPTION
 
+<!--Device-deviceStandby-function getExemptedApps(resourceTypes: int): Promise<Array<ExemptedAppInfo>>--><!--Device-deviceStandby-function getExemptedApps(resourceTypes: int): Promise<Array<ExemptedAppInfo>>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
 **System API:** This is a system API.
@@ -89,7 +93,7 @@ Returns the information about the specified exempted application.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ExemptedAppInfo&gt;&gt; | the promise returned by getExemptedApps. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ExemptedAppInfo>> | the promise returned by getExemptedApps. |
 
 **Error codes:**
 

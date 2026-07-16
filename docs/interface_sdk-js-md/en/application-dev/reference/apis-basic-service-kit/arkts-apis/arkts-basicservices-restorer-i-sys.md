@@ -4,6 +4,8 @@ Defines a tool class for restoring factory settings.
 
 **Since:** 9
 
+<!--Device-update-export interface Restorer--><!--Device-update-export interface Restorer-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -20,14 +22,15 @@ import { update } from '@kit.BasicServicesKit';
 deepFactoryReset(factoryResetStrategy: FactoryResetStrategy): Promise<void>
 ```
 
-Clears the user data partition and OS partition by means of overwriting. This API uses a promise to return the
-result.
+Clears the user data partition and OS partition by means of overwriting. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.FACTORY_RESET
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Restorer-deepFactoryReset(factoryResetStrategy: FactoryResetStrategy): Promise<void>--><!--Device-Restorer-deepFactoryReset(factoryResetStrategy: FactoryResetStrategy): Promise<void>-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -37,13 +40,13 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| factoryResetStrategy | FactoryResetStrategy | Yes | Factory reset strategy. |
+| factoryResetStrategy | [FactoryResetStrategy](arkts-basicservices-factoryresetstrategy-i-sys.md) | Yes | Factory reset strategy. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -87,6 +90,8 @@ Clears the user data partition. This API uses an asynchronous callback to return
 
 **Required permissions:** ohos.permission.FACTORY_RESET
 
+<!--Device-Restorer-factoryReset(callback: AsyncCallback<void>): void--><!--Device-Restorer-factoryReset(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -95,7 +100,7 @@ Clears the user data partition. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the factory reset is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the factory reset is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -132,6 +137,8 @@ Clears the user data partition. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.FACTORY_RESET
 
+<!--Device-Restorer-factoryReset(): Promise<void>--><!--Device-Restorer-factoryReset(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -140,7 +147,7 @@ Clears the user data partition. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -180,6 +187,8 @@ Clears the user data partition and the file key. This API uses a promise to retu
 
 **Required permissions:** ohos.permission.FORCE_FACTORY_RESET
 
+<!--Device-Restorer-forceFactoryReset(): Promise<void>--><!--Device-Restorer-forceFactoryReset(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -188,7 +197,7 @@ Clears the user data partition and the file key. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -230,6 +239,8 @@ Obtains the factory reset information. This API uses a promise to return the res
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Restorer-getDeepFactoryResetInfo(factoryResetStrategy: FactoryResetStrategy): Promise<FactoryResetInfo>--><!--Device-Restorer-getDeepFactoryResetInfo(factoryResetStrategy: FactoryResetStrategy): Promise<FactoryResetInfo>-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -238,13 +249,13 @@ Obtains the factory reset information. This API uses a promise to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| factoryResetStrategy | FactoryResetStrategy | Yes | Factory reset strategy. |
+| factoryResetStrategy | [FactoryResetStrategy](arkts-basicservices-factoryresetstrategy-i-sys.md) | Yes | Factory reset strategy. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FactoryResetInfo&gt; | Promise used to return the factory reset information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<FactoryResetInfo> | Promise used to return the factory reset information. |
 
 **Error codes:**
 

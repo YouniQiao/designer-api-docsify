@@ -2,12 +2,19 @@
 
 保存着文本内容以及样式的载体，可以用于计算单行排版信息。
 
-下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-paragraphbuilder-c.md)类的
-[buildLineTypeset()](arkts-arkgraphics2d-paragraphbuilder-c.md#buildlinetypeset-1)接口获取到LineTypeset对象实例，再通过此实例调用对应方法。
+下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-paragraphbuilder-c.md)类的[buildLineTypeset()](arkts-arkgraphics2d-paragraphbuilder-c.md#buildlinetypeset-1)接口获取到LineTypeset对象实例，再通过此实例调用对应方法。
 
 **起始版本：** 18
 
+<!--Device-text-class LineTypeset--><!--Device-text-class LineTypeset-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
+
+## 导入模块
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D';
+```
 
 ## createLine
 
@@ -19,7 +26,9 @@ createLine(startIndex: number, count: number): TextLine
 
 **起始版本：** 18
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LineTypeset-createLine(startIndex: int, count: int): TextLine--><!--Device-LineTypeset-createLine(startIndex: int, count: int): TextLine-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -34,7 +43,7 @@ createLine(startIndex: number, count: number): TextLine
 
 | 类型 | 说明 |
 | --- | --- |
-| TextLine | 根据文本区间字符生成的TextLine对象。 |
+| [TextLine](arkts-arkgraphics2d-textline-c.md) | 根据文本区间字符生成的TextLine对象。 |
 
 **错误码：**
 
@@ -62,7 +71,9 @@ getLineBreak(startIndex: number, width: number): number
 
 **起始版本：** 18
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LineTypeset-getLineBreak(startIndex: int, width: double): int--><!--Device-LineTypeset-getLineBreak(startIndex: int, width: double): int-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

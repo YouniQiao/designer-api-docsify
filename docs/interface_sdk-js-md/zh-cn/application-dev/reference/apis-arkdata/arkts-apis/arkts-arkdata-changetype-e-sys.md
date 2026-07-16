@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+<!--Device-dataShare-enum ChangeType--><!--Device-dataShare-enum ChangeType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -19,6 +21,8 @@ INSERT = 0
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ChangeType-INSERT = 0--><!--Device-ChangeType-INSERT = 0-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -36,6 +40,8 @@ DELETE = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ChangeType-DELETE = 1--><!--Device-ChangeType-DELETE = 1-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +57,8 @@ UPDATE = 2
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ChangeType-UPDATE = 2--><!--Device-ChangeType-UPDATE = 2-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 

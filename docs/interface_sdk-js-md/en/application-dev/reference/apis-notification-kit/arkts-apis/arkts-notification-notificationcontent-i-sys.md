@@ -4,6 +4,8 @@ Describes the notification contents.
 
 **Since:** 7
 
+<!--Device-unnamed-export interface NotificationContent--><!--Device-unnamed-export interface NotificationContent-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## liveView
@@ -17,6 +19,8 @@ Common live view.
 **Type:** NotificationLiveViewContent
 
 **Since:** 11
+
+<!--Device-NotificationContent-liveView?: NotificationLiveViewContent--><!--Device-NotificationContent-liveView?: NotificationLiveViewContent-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

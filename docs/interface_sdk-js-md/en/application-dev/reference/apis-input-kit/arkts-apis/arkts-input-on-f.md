@@ -12,10 +12,11 @@ import { inputDevice } from '@kit.InputKit';
 function on(type: 'change', listener: Callback<DeviceListener>): void
 ```
 
-Enables listening for device hot swap events. When performing this operation, you need to connect to external
-devices such as a mouse, keyboard, and touchscreen. This API uses an asynchronous callback to return the result.
+Enables listening for device hot swap events. When performing this operation, you need to connect to external devices such as a mouse, keyboard, and touchscreen. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-inputDevice-function on(type: 'change', listener: Callback<DeviceListener>): void--><!--Device-inputDevice-function on(type: 'change', listener: Callback<DeviceListener>): void-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -24,7 +25,7 @@ devices such as a mouse, keyboard, and touchscreen. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. This field has a fixed value of **change**. |
-| listener | Callback&lt;DeviceListener&gt; | Yes | Callback used to return the input device hot swap events. |
+| listener | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DeviceListener> | Yes | Callback used to return the input device hot swap events. |
 
 **Error codes:**
 

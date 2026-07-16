@@ -18,13 +18,15 @@ Creates this **Zip** instance. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-zlib-function createZip(): Promise<Zip>--><!--Device-zlib-function createZip(): Promise<Zip>-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Zip&gt; | Promise used to return the **Zip** instance created. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Zip> | Promise used to return the **Zip** instance created. |
 
 **Example**
 

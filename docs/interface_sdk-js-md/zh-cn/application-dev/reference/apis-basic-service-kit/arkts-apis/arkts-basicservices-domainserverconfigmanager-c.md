@@ -4,7 +4,15 @@
 
 **起始版本：** 18
 
+<!--Device-osAccount-class DomainServerConfigManager--><!--Device-osAccount-class DomainServerConfigManager-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
+
+## 导入模块
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+```
 
 ## addServerConfig
 
@@ -18,19 +26,21 @@ static addServerConfig(parameters: Record<string, Object>): Promise<DomainServer
 
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
+<!--Device-DomainServerConfigManager-static addServerConfig(parameters: Record<string, Object>): Promise<DomainServerConfig>--><!--Device-DomainServerConfigManager-static addServerConfig(parameters: Record<string, Object>): Promise<DomainServerConfig>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameters | Record&lt;string, Object&gt; | 是 | 表示域服务器配置参数。 |
+| parameters | Record<string, Object> | 是 | 表示域服务器配置参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DomainServerConfig&gt; | Promise对象，返回新添加的域服务器配置。 |
+| Promise<DomainServerConfig> | Promise对象，返回新添加的域服务器配置。 |
 
 **错误码：**
 
@@ -74,19 +84,21 @@ static getAccountServerConfig(domainAccountInfo: DomainAccountInfo): Promise<Dom
 
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
+<!--Device-DomainServerConfigManager-static getAccountServerConfig(domainAccountInfo: DomainAccountInfo): Promise<DomainServerConfig>--><!--Device-DomainServerConfigManager-static getAccountServerConfig(domainAccountInfo: DomainAccountInfo): Promise<DomainServerConfig>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| domainAccountInfo | DomainAccountInfo | 是 | 表示目标域账号信息。 |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i.md) | 是 | 表示目标域账号信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DomainServerConfig&gt; | Promise对象，返回目标账号的域服务器配置。 |
+| Promise<DomainServerConfig> | Promise对象，返回目标账号的域服务器配置。 |
 
 **错误码：**
 
@@ -127,13 +139,15 @@ static getAllServerConfigs(): Promise<Array<DomainServerConfig>>
 
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
+<!--Device-DomainServerConfigManager-static getAllServerConfigs(): Promise<Array<DomainServerConfig>>--><!--Device-DomainServerConfigManager-static getAllServerConfigs(): Promise<Array<DomainServerConfig>>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;DomainServerConfig&gt;&gt; | Promise对象，返回获取的所有域服务器配置。 |
+| Promise<Array<DomainServerConfig>> | Promise对象，返回获取的所有域服务器配置。 |
 
 **错误码：**
 
@@ -178,6 +192,8 @@ static getServerConfig(configId: string): Promise<DomainServerConfig>
 
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
+<!--Device-DomainServerConfigManager-static getServerConfig(configId: string): Promise<DomainServerConfig>--><!--Device-DomainServerConfigManager-static getServerConfig(configId: string): Promise<DomainServerConfig>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -190,7 +206,7 @@ static getServerConfig(configId: string): Promise<DomainServerConfig>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DomainServerConfig&gt; | Promise对象，返回获取的域服务器配置。 |
+| Promise<DomainServerConfig> | Promise对象，返回获取的域服务器配置。 |
 
 **错误码：**
 
@@ -236,6 +252,8 @@ static removeServerConfig(configId: string): Promise<void>
 
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
+<!--Device-DomainServerConfigManager-static removeServerConfig(configId: string): Promise<void>--><!--Device-DomainServerConfigManager-static removeServerConfig(configId: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -248,7 +266,7 @@ static removeServerConfig(configId: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| Promise<void> | Promise对象，无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -292,6 +310,8 @@ static updateServerConfig(configId: string, parameters: Record<string, Object>):
 
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
+<!--Device-DomainServerConfigManager-static updateServerConfig(configId: string, parameters: Record<string, Object>): Promise<DomainServerConfig>--><!--Device-DomainServerConfigManager-static updateServerConfig(configId: string, parameters: Record<string, Object>): Promise<DomainServerConfig>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **参数：**
@@ -299,13 +319,13 @@ static updateServerConfig(configId: string, parameters: Record<string, Object>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | configId | string | 是 | 表示服务器配置标识。 |
-| parameters | Record&lt;string, Object&gt; | 是 | 表示域服务器配置参数。 |
+| parameters | Record<string, Object> | 是 | 表示域服务器配置参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DomainServerConfig&gt; | Promise对象，返回更新后的域服务器配置。 |
+| Promise<DomainServerConfig> | Promise对象，返回更新后的域服务器配置。 |
 
 **错误码：**
 

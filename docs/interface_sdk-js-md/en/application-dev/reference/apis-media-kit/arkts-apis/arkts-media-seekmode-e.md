@@ -4,6 +4,8 @@ Enumerates the video playback seek modes, which can be passed in the **seek** AP
 
 **Since:** 8
 
+<!--Device-media-enum SeekMode--><!--Device-media-enum SeekMode-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## SEEK_NEXT_SYNC
@@ -12,12 +14,13 @@ Enumerates the video playback seek modes, which can be passed in the **seek** AP
 SEEK_NEXT_SYNC = 0
 ```
 
-Seeks to the next key frame at the specified position. You are advised to use this value for the rewind
-operation.
+Seeks to the next key frame at the specified position. You are advised to use this value for the rewind operation.
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SeekMode-SEEK_NEXT_SYNC = 0--><!--Device-SeekMode-SEEK_NEXT_SYNC = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -27,12 +30,13 @@ operation.
 SEEK_PREV_SYNC = 1
 ```
 
-Seeks to the previous key frame at the specified position. You are advised to use this value for the fast-forward
-operation.
+Seeks to the previous key frame at the specified position. You are advised to use this value for the fast-forward operation.
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SeekMode-SEEK_PREV_SYNC = 1--><!--Device-SeekMode-SEEK_PREV_SYNC = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -48,6 +52,8 @@ Seeks to the frame closest to the specified position. You are advised to use thi
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SeekMode-SEEK_CLOSEST = 2--><!--Device-SeekMode-SEEK_CLOSEST = 2-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## SEEK_CONTINUOUS
@@ -56,28 +62,21 @@ Seeks to the frame closest to the specified position. You are advised to use thi
 SEEK_CONTINUOUS = 3
 ```
 
-Offers a smooth and fluid visual experience for seeking. Applications can use a progress bar component to
-continuously invoke the **seek** method, and the AVPlayer will update the video frames smoothly in response to
-these calls.
+Offers a smooth and fluid visual experience for seeking. Applications can use a progress bar component to continuously invoke the **seek** method, and the AVPlayer will update the video frames smoothly in response to these calls.
 
-Applications can call
-[isSeekContinuousSupported](arkts-media-avplayer-i.md#isseekcontinuoussupported-1) to check
-whether the video source supports this seeking mode.
+Applications can call [isSeekContinuousSupported](arkts-media-avplayer-i.md#isseekcontinuoussupported-1) to check whether the video source supports this seeking mode.
 
-If the video source does not support this mode, calling **seek** will result in an
-**AVERR_SEEK_CONTINUOUS_UNSUPPORTED** error (see [AVErrorCode](arkts-media-averrorcode-e.md)), and the smoothness of
-frame updates will be compromised.
+If the video source does not support this mode, calling **seek** will result in an **AVERR_SEEK_CONTINUOUS_UNSUPPORTED** error (see [AVErrorCode](arkts-media-averrorcode-e.md)), and the smoothness of frame updates will be compromised.
 
-This seek mode does not trigger the
-[on('seekDone')](arkts-media-avplayer-i.md#on-5)
-event.
+This seek mode does not trigger the [on('seekDone')](arkts-media-avplayer-i.md#on-5)event.
 
-To exit this seeking mode, applications must call **seek(-1, SeekMode.SEEK_CONTINUOUS)** to end the seeking
-process.
+To exit this seeking mode, applications must call **seek(-1, SeekMode.SEEK_CONTINUOUS)** to end the seeking process.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SeekMode-SEEK_CONTINUOUS = 3--><!--Device-SeekMode-SEEK_CONTINUOUS = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 

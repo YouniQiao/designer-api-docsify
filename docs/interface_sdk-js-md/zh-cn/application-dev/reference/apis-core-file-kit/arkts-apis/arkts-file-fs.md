@@ -2,6 +2,12 @@
 
 FileIO
 
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+```
+
 ## 汇总
 
 ### 命名空间
@@ -78,7 +84,7 @@ FileIO
 | [mkdtemp](arkts-corefile-file-fs-mkdtemp-f.md#mkdtemp-1) | 创建临时目录，使用promise异步回调。 |
 | [mkdtemp](arkts-corefile-file-fs-mkdtemp-f.md#mkdtemp-2) | 创建临时目录，使用callback异步回调。 |
 | [mkdtempSync](arkts-corefile-file-fs-mkdtempsync-f.md#mkdtempsync-1) | 以同步的方法创建临时目录。 |
-| [mmap](arkts-corefile-file-fs-mmap-f.md#mmap-1) | 基于文件描述符或文件对象创建文件映射对象，使用promise异步回调。将文件内容映射到内存，以实现文件的高效读写访问。注意：读写模式（MappingMode.READ_WRITE）下，若映射范围超过原始文件大小，将自动扩展文件大小。&gt; **说明**&gt; 注意：在读写模式（MappingMode.READ_WRITE）下，如果映射范围超过原始文件大小，则文件大小&gt; 将自动展开。 |
+| [mmap](arkts-corefile-file-fs-mmap-f.md#mmap-1) | 基于文件描述符或文件对象创建文件映射对象，使用promise异步回调。将文件内容映射到内存，以实现文件的高效读写访问。注意：读写模式（MappingMode.READ_WRITE）下，若映射范围超过原始文件大小，将自动扩展文件大小。 &gt; **说明** &gt; 注意：在读写模式（MappingMode.READ_WRITE）下，如果映射范围超过原始文件大小，则文件大小 &gt; 将自动展开。 |
 | [mmapSync](arkts-corefile-file-fs-mmapsync-f.md#mmapsync-1) | 以同步方法基于文件描述符或文件对象创建文件映射对象。将文件内容映射到内存，以实现文件的高效读写访问。注意：读写模式（MappingMode.READ_WRITE）下，若映射范围超过原始文件大小，将自动扩展文件大小。 |
 | [moveDir](arkts-corefile-file-fs-movedir-f.md#movedir-1) | 移动源目录至目标路径下，使用promise异步回调。 |
 | [moveDir](arkts-corefile-file-fs-movedir-f.md#movedir-2) | Moves the source directory to the destination directory. This API uses an asynchronous callback to return the result. |

@@ -1,5 +1,11 @@
 # setProcessPriority
 
+## 导入模块
+
+```TypeScript
+import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
+```
+
 ## setProcessPriority
 
 ```TypeScript
@@ -10,6 +16,8 @@ function setProcessPriority(pid: number, priority: ProcessPriority): Promise<voi
 
 **起始版本：** 17
 
+<!--Device-backgroundProcessManager-function setProcessPriority(pid: int, priority: ProcessPriority): Promise<void>--><!--Device-backgroundProcessManager-function setProcessPriority(pid: int, priority: ProcessPriority): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Resourceschedule.BackgroundProcessManager
 
 **参数：**
@@ -17,13 +25,13 @@ function setProcessPriority(pid: number, priority: ProcessPriority): Promise<voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pid | number | 是 | 需要被压制子进程的进程号，[OH_Ability_StartNativeChildProcess](../../../../reference/apis-ability-kit/capi-native-child-process-h.md#oh_ability_startnativechildprocess)接口创建子进程后的pid参数，即为子进程进程号。 |
-| priority | ProcessPriority | 是 | 压制档位。 |
+| priority | [ProcessPriority](arkts-backgroundtasks-processpriority-e.md) | 是 | 压制档位。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

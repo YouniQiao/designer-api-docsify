@@ -18,6 +18,8 @@ Checks whether the shared library is in use. This API uses a promise to return t
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
+<!--Device-appManager-function isSharedBundleRunning(bundleName: string, versionCode: long): Promise<boolean>--><!--Device-appManager-function isSharedBundleRunning(bundleName: string, versionCode: long): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -33,7 +35,7 @@ Checks whether the shared library is in use. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** if the shared library is in use, **false**otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. **true** if the shared library is in use, **false** otherwise. |
 
 **Error codes:**
 
@@ -74,6 +76,8 @@ Checks whether the shared library is in use. This API uses an asynchronous callb
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
+<!--Device-appManager-function isSharedBundleRunning(bundleName: string, versionCode: long, callback: AsyncCallback<boolean>): void--><!--Device-appManager-function isSharedBundleRunning(bundleName: string, versionCode: long, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -84,7 +88,7 @@ Checks whether the shared library is in use. This API uses an asynchronous callb
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the shared library. |
 | versionCode | number | Yes | Version number of the shared library. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. **true** if the shared library is inuse, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. **true** if the shared library is in use, **false** otherwise. |
 
 **Error codes:**
 

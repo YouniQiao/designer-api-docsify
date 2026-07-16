@@ -16,6 +16,8 @@ Create a VPN connection using the AbilityContext.
 
 **Since:** 10
 
+<!--Device-vpn-function createVpnConnection(context: AbilityContext): VpnConnection--><!--Device-vpn-function createVpnConnection(context: AbilityContext): VpnConnection-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -24,13 +26,13 @@ Create a VPN connection using the AbilityContext.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | AbilityContext | Yes | Indicates the context of application or capability. |
+| context | [AbilityContext](arkts-network-abilitycontext-t.md) | Yes | Indicates the context of application or capability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| VpnConnection | the VpnConnection of the construct VpnConnection instance. |
+| [VpnConnection](arkts-network-vpnconnection-i.md) | the VpnConnection of the construct VpnConnection instance. |
 
 **Error codes:**
 

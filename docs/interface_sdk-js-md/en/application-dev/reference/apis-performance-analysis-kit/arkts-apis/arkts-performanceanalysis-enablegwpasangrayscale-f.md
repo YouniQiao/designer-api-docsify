@@ -16,13 +16,15 @@ Enable the GWP-ASAN grayscale of your application.
 
 **Since:** 20
 
+<!--Device-hidebug-function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: int): void--><!--Device-hidebug-function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: int): void-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | GwpAsanOptions | No | The options of GWP-ASAN grayscale. |
+| options | [GwpAsanOptions](arkts-performanceanalysis-gwpasanoptions-i.md) | No | The options of GWP-ASAN grayscale. |
 | duration | number | No | The duration days of GWP-ASAN grayscale. |
 
 **Error codes:**

@@ -18,6 +18,8 @@ Set the proxy mode {@link ProxyMode}.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-connection-function setProxyMode(mode: ProxyMode): Promise<void>--><!--Device-connection-function setProxyMode(mode: ProxyMode): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Set the proxy mode {@link ProxyMode}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | ProxyMode | Yes | Indicates the proxy mode. |
+| mode | [ProxyMode](arkts-network-proxymode-e-sys.md) | Yes | Indicates the proxy mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 

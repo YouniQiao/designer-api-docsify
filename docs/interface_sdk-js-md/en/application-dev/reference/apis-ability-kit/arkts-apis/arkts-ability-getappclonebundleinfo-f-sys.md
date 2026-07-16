@@ -12,15 +12,15 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAppCloneBundleInfo(bundleName: string, appIndex: number, bundleFlags: number, userId?: number): Promise<BundleInfo>
 ```
 
-Obtains the bundle information of an application or an application clone based on the given bundle name, app index,
-[bundleFlags](arkts-ability-bundleflag-e.md), and user ID. This API uses a promise to
-return the result.
+Obtains the bundle information of an application or an application clone based on the given bundle name, app index,[bundleFlags](arkts-ability-bundleflag-e.md), and user ID. This API uses a promise to return the result.
 
 No permission is required for obtaining the caller's own information.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getAppCloneBundleInfo(bundleName: string, appIndex: int, bundleFlags: int, userId?: int): Promise<BundleInfo>--><!--Device-bundleManager-function getAppCloneBundleInfo(bundleName: string, appIndex: int, bundleFlags: int, userId?: int): Promise<BundleInfo>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -31,15 +31,15 @@ No permission is required for obtaining the caller's own information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| appIndex | number | Yes | Index of the application clone.<br>The value **0** means to obtain the bundle informationof the main application. A value greater than 0 means to obtain the bundle information of the applicationclone. |
+| appIndex | number | Yes | Index of the application clone.<br>The value **0** means to obtain the bundle information of the main application. A value greater than 0 means to obtain the bundle information of the application clone. |
 | bundleFlags | number | Yes | Type of the bundle information to obtain. |
-| userId | number | No | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BundleInfo&gt; | Promise used to return the bundle information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<BundleInfo> | Promise used to return the bundle information. |
 
 **Error codes:**
 

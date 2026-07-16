@@ -4,6 +4,8 @@ Describes the interruption event received by the application when the audio is i
 
 **Since:** 9
 
+<!--Device-audio-interface InterruptEvent--><!--Device-audio-interface InterruptEvent-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Whether the audio interruption has started or ended.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-InterruptEvent-eventType: InterruptType--><!--Device-InterruptEvent-eventType: InterruptType-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 ## forceType
@@ -42,6 +46,8 @@ Whether the audio interruption is forcibly taken by the system or taken by an ap
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-InterruptEvent-forceType: InterruptForceType--><!--Device-InterruptEvent-forceType: InterruptForceType-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 ## hintType
@@ -57,6 +63,8 @@ Hint provided along the interruption to provide information related to the inter
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-InterruptEvent-hintType: InterruptHint--><!--Device-InterruptEvent-hintType: InterruptHint-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 

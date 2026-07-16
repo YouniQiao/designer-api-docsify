@@ -1,12 +1,12 @@
 # HashStream
 
-The **HashStream** class is a utility for creating a message digest of data. You can use
-[createHash](../../../../reference/apis-core-file-kit/js-apis-file-hash.md#hashcreatehash12) to create a
-**HashStream** instance.
+The **HashStream** class is a utility for creating a message digest of data. You can use [createHash](../../../../reference/apis-core-file-kit/js-apis-file-hash.md#hashcreatehash12) to create a **HashStream** instance.
 
 **Inheritance/Implementation:** HashStream extends [stream.Transform](../../apis-arkts/arkts-apis/arkts-arkts-transform-c.md)
 
 **Since:** 12
+
+<!--Device-hash-class HashStream extends stream.Transform--><!--Device-hash-class HashStream extends stream.Transform-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -25,6 +25,8 @@ digest(): string
 Generates a message digest.
 
 **Since:** 12
+
+<!--Device-HashStream-digest(): string--><!--Device-HashStream-digest(): string-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -64,13 +66,15 @@ Updates the data for generating a message digest. This API can be called multipl
 
 **Since:** 12
 
+<!--Device-HashStream-update(data: ArrayBuffer): void--><!--Device-HashStream-update(data: ArrayBuffer): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | ArrayBuffer | Yes | Data to be calculated. |
+| data | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Data to be calculated. |
 
 **Error codes:**
 

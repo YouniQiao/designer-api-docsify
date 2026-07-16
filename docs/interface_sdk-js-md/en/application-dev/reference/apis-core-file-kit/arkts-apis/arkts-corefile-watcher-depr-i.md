@@ -1,13 +1,14 @@
 # Watcher
 
-Listens for file change. You can call the **Watcher.stop()** method synchronously or asynchronously to stop the
-listening.
+Listens for file change. You can call the **Watcher.stop()** method synchronously or asynchronously to stop the listening.
 
 **Since:** 7
 
 **Deprecated since:** 10
 
 **Substitutes:** [fs:Watcher](arkts-corefile-watcher-i.md)
+
+<!--Device-unnamed-declare interface Watcher--><!--Device-unnamed-declare interface Watcher-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -25,13 +26,15 @@ Stops the **watcher** instance. This API uses a promise to return the result.
 
 **Substitutes:** [stop](arkts-corefile-watcher-i.md#stop-1)
 
+<!--Device-Watcher-stop(): Promise<void>--><!--Device-Watcher-stop(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | return Promise |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | return Promise |
 
 **Example**
 
@@ -60,13 +63,15 @@ Stops the **watcher** instance. This API uses an asynchronous callback to return
 
 **Substitutes:** [stop](arkts-corefile-watcher-i.md#stop-1)
 
+<!--Device-Watcher-stop(callback: AsyncCallback<void>): void--><!--Device-Watcher-stop(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback invoked when **watcher** is stopped asynchronously. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback invoked when **watcher** is stopped asynchronously. |
 
 **Example**
 

@@ -16,20 +16,22 @@ Obtains the SQL statement used to query data. This API returns the result synchr
 
 **Since:** 20
 
+<!--Device-relationalStore-function getQuerySqlInfo(predicates: RdbPredicates, columns?: Array<string>):SqlInfo--><!--Device-relationalStore-function getQuerySqlInfo(predicates: RdbPredicates, columns?: Array<string>):SqlInfo-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | **RdbPredicates** object that matches the specified field. |
-| columns | Array&lt;string&gt; | No | Columns to be queried. If this parameter is not specified, all columns arequeried. |
+| predicates | [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | Yes | **RdbPredicates** object that matches the specified field. |
+| columns | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | No | Columns to be queried. If this parameter is not specified, all columns are queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SqlInfo | **SqlInfo** object. **sql** indicates the returned SQL statement, and **args** indicates theparameters in the executed SQL statement. |
+| [SqlInfo](arkts-arkdata-sqlinfo-i.md) | **SqlInfo** object. **sql** indicates the returned SQL statement, and **args** indicates the parameters in the executed SQL statement. |
 
 **Error codes:**
 

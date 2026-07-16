@@ -12,8 +12,7 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 function sppConnect(device: string, option: SppOption, callback: AsyncCallback<number>): void
 ```
 
-Connects to a remote device over the socket.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Connects to a remote device over the socket.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -25,6 +24,8 @@ On API 10 and above, the permission required by this interface is changed from U
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
+<!--Device-bluetoothManager-function sppConnect(device: string, option: SppOption, callback: AsyncCallback<number>): void--><!--Device-bluetoothManager-function sppConnect(device: string, option: SppOption, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -32,8 +33,8 @@ On API 10 and above, the permission required by this interface is changed from U
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | device | string | Yes | The address of the remote device to connect. |
-| option | SppOption | Yes | Indicates the connect parameters {@link SppOption}. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return a client socket ID. |
+| option | [SppOption](arkts-connectivity-sppoption-i.md) | Yes | Indicates the connect parameters {@link SppOption}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return a client socket ID. |
 
 **Error codes:**
 

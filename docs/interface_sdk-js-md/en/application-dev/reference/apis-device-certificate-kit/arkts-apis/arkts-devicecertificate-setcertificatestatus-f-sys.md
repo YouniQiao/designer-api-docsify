@@ -12,14 +12,15 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 function setCertificateStatus(certUri: string, certType: CertType, enabled: boolean) : Promise<void>
 ```
 
-Sets the status of a CA certificate. Currently, only the status of a user's CA certificate can be set. This API is
-called only by the certificate management application. This API uses a promise to return the result.
+Sets the status of a CA certificate. Currently, only the status of a user's CA certificate can be set. This API is called only by the certificate management application. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_USER_TRUSTED_CERT
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-certificateManager-function setCertificateStatus(certUri: string, certType: CertType, enabled: boolean) : Promise<void>--><!--Device-certificateManager-function setCertificateStatus(certUri: string, certType: CertType, enabled: boolean) : Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -29,15 +30,15 @@ called only by the certificate management application. This API uses a promise t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| certUri | string | Yes | Unique identifier of the certificate. Currently, only user CA certificates aresupported. |
-| certType | CertType | Yes | Certificate type. Currently, only the status of user CA certificates (**CA_CERT_USER**) can be set. |
+| certUri | string | Yes | Unique identifier of the certificate. Currently, only user CA certificates are supported. |
+| certType | [CertType](../../apis-network-kit/arkts-apis/arkts-network-certtype-e.md) | Yes | Certificate type. Currently, only the status of user CA certificates (**CA_CERT_USER**) can be set. |
 | enabled | boolean | Yes | Whether the certificate is enabled. **true**: enabled; **false**: disabled. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Represents the reference information of the credential.
 
 **Since:** 22
 
+<!--Device-certificateManagerDialog-export interface CertReference--><!--Device-certificateManagerDialog-export interface CertReference-End-->
+
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Certificate type.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-CertReference-certType: CertificateType--><!--Device-CertReference-certType: CertificateType-End-->
+
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 
 ## keyUri
@@ -41,6 +45,8 @@ Unique identifier of the credential. The value contains up to 256 bytes.
 **Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CertReference-keyUri: string--><!--Device-CertReference-keyUri: string-End-->
 
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 

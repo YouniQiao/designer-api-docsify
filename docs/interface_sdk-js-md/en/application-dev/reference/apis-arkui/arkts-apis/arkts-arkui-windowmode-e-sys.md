@@ -4,6 +4,8 @@ Enumerates the window modes.
 
 **Since:** 7
 
+<!--Device-window-enum WindowMode--><!--Device-window-enum WindowMode-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -17,6 +19,8 @@ UNDEFINED = 1
 The window mode is not defined by the application.
 
 **Since:** 7
+
+<!--Device-WindowMode-UNDEFINED = 1--><!--Device-WindowMode-UNDEFINED = 1-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -32,6 +36,8 @@ The application is displayed in full screen.
 
 **Since:** 7
 
+<!--Device-WindowMode-FULLSCREEN = 2--><!--Device-WindowMode-FULLSCREEN = 2-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -42,10 +48,11 @@ The application is displayed in full screen.
 PRIMARY = 3
 ```
 
-The application is displayed in the primary window in split-screen mode. In top-bottom splits, the top screen is
-primary; in left-right splits, the left screen is primary.
+The application is displayed in the primary window in split-screen mode. In top-bottom splits, the top screen is primary; in left-right splits, the left screen is primary.
 
 **Since:** 7
+
+<!--Device-WindowMode-PRIMARY = 3--><!--Device-WindowMode-PRIMARY = 3-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -57,10 +64,11 @@ primary; in left-right splits, the left screen is primary.
 SECONDARY = 4
 ```
 
-The application is displayed in the secondary window in split-screen mode. In top-bottom splits, the bottom
-screen is secondary; in left-right splits, the right screen is secondary.
+The application is displayed in the secondary window in split-screen mode. In top-bottom splits, the bottom screen is secondary; in left-right splits, the right screen is secondary.
 
 **Since:** 7
+
+<!--Device-WindowMode-SECONDARY = 4--><!--Device-WindowMode-SECONDARY = 4-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -75,6 +83,8 @@ FLOATING = 5
 The application is displayed in a floating window.
 
 **Since:** 7
+
+<!--Device-WindowMode-FLOATING = 5--><!--Device-WindowMode-FLOATING = 5-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

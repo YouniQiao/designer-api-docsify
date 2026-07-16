@@ -4,6 +4,8 @@ Provides APIs for querying the color retention type supported by the device.
 
 **Since:** 15
 
+<!--Device-camera-interface ColorReservationQuery--><!--Device-camera-interface ColorReservationQuery-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -24,6 +26,8 @@ Obtains the supported color reservation types.
 
 **Since:** 15
 
+<!--Device-ColorReservationQuery-getSupportedColorReservationTypes(): Array<ColorReservationType>--><!--Device-ColorReservationQuery-getSupportedColorReservationTypes(): Array<ColorReservationType>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -32,7 +36,7 @@ Obtains the supported color reservation types.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ColorReservationType&gt; | Array of color reservation types supported. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ColorReservationType> | Array of color reservation types supported. |
 
 **Error codes:**
 

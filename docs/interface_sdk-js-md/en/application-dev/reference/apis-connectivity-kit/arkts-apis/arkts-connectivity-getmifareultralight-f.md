@@ -12,13 +12,13 @@ import { tag } from '@kit.ConnectivityKit';
 function getMifareUltralight(tagInfo: TagInfo): MifareUltralightTag
 ```
 
-Obtains an {@link MifareUltralightTag} object based on the tag information.
-During tag reading, if the tag supports the MIFARE Ultralight technology,
-an {@link MifareUltralightTag} object will be created based on the tag information.
+Obtains an {@link MifareUltralightTag} object based on the tag information.During tag reading, if the tag supports the MIFARE Ultralight technology,an {@link MifareUltralightTag} object will be created based on the tag information.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-tag-function getMifareUltralight(tagInfo: TagInfo): MifareUltralightTag--><!--Device-tag-function getMifareUltralight(tagInfo: TagInfo): MifareUltralightTag-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -26,13 +26,13 @@ an {@link MifareUltralightTag} object will be created based on the tag informati
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tagInfo | TagInfo | Yes | Indicates the dispatched tag information. |
+| tagInfo | [TagInfo](arkts-connectivity-taginfo-i.md) | Yes | Indicates the dispatched tag information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MifareUltralightTag | The {@link MifareUltralightTag} object. |
+| [MifareUltralightTag](arkts-connectivity-mifareultralighttag-i.md) | The {@link MifareUltralightTag} object. |
 
 **Error codes:**
 

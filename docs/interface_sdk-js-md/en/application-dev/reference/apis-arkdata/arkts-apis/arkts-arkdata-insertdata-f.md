@@ -12,8 +12,7 @@ import { unifiedDataChannel } from '@kit.ArkData';
 function insertData(options: Options, data: UnifiedData, callback: AsyncCallback<string>): void
 ```
 
-Inserts data to the UDMF public data channel. This API uses an asynchronous callback to return the unique
-identifier of the data inserted.
+Inserts data to the UDMF public data channel. This API uses an asynchronous callback to return the unique identifier of the data inserted.
 
 **Since:** 10
 
@@ -21,15 +20,17 @@ identifier of the data inserted.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-unifiedDataChannel-function insertData(options: Options, data: UnifiedData, callback: AsyncCallback<string>): void--><!--Device-unifiedDataChannel-function insertData(options: Options, data: UnifiedData, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | Options | Yes | Configuration for the data insertion operation. The **intention** field is mandatory (the DRAG channel is not supported). If it is not specified, error code 401 will be returned. The settings ofother parameters do not affect the use of this API. |
-| data | UnifiedData | Yes | Data to insert. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the key (unique identifier) of the datainserted. |
+| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-options-i.md) | Yes | Configuration for the data insertion operation. The **intention** field is mandatory (the DRAG channel is not supported). If it is not specified, error code 401 will be returned. The settings of other parameters do not affect the use of this API. |
+| data | [UnifiedData](../../apis-arkui/arkts-components/arkts-arkui-unifieddata-t.md) | Yes | Data to insert. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the key (unique identifier) of the data inserted. |
 
 **Error codes:**
 
@@ -76,8 +77,7 @@ try {
 function insertData(options: Options, data: UnifiedData): Promise<string>
 ```
 
-Inserts data to the UDMF public data channel. This API uses a promise to return the unique identifier of the data
-inserted.
+Inserts data to the UDMF public data channel. This API uses a promise to return the unique identifier of the data inserted.
 
 **Since:** 10
 
@@ -85,20 +85,22 @@ inserted.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-unifiedDataChannel-function insertData(options: Options, data: UnifiedData): Promise<string>--><!--Device-unifiedDataChannel-function insertData(options: Options, data: UnifiedData): Promise<string>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | Options | Yes | Configuration for the data insertion operation. The **intention** field is mandatory (the DRAG channel is not supported). If it is not specified, error code 401 will be returned. The settings ofother parameters do not affect the use of this API. |
-| data | UnifiedData | Yes | Data to insert. |
+| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-options-i.md) | Yes | Configuration for the data insertion operation. The **intention** field is mandatory (the DRAG channel is not supported). If it is not specified, error code 401 will be returned. The settings of other parameters do not affect the use of this API. |
+| data | [UnifiedData](../../apis-arkui/arkts-components/arkts-arkui-unifieddata-t.md) | Yes | Data to insert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the key of the data inserted. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the key of the data inserted. |
 
 **Error codes:**
 

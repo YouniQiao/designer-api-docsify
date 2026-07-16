@@ -1,5 +1,11 @@
 # setAttribute
 
+## 导入模块
+
+```TypeScript
+import { serialManager } from '@kit.BasicServicesKit';
+```
+
 ## setAttribute
 
 ```TypeScript
@@ -10,6 +16,8 @@ function setAttribute(portId: number, attribute: SerialAttribute): void
 
 **起始版本：** 19
 
+<!--Device-serialManager-function setAttribute(portId: int, attribute: SerialAttribute): void--><!--Device-serialManager-function setAttribute(portId: int, attribute: SerialAttribute): void-End-->
+
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 **参数：**
@@ -17,7 +25,7 @@ function setAttribute(portId: number, attribute: SerialAttribute): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | portId | number | 是 | 目标设备的端口号，来自[getPortList](arkts-basicservices-getportlist-f.md#getportlist-1)获取的串口参数SerialPort。 |
-| attribute | SerialAttribute | 是 | 串口参数。 |
+| attribute | [SerialAttribute](arkts-basicservices-serialattribute-i.md) | 是 | 串口参数。 |
 
 **错误码：**
 

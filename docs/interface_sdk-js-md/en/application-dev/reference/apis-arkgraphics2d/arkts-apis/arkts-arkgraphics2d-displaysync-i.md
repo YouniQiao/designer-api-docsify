@@ -1,11 +1,10 @@
 # DisplaySync
 
-An object that implements the setting of the frame rate and callback. It provides APIs for you to set the frame
-rate, register a callback, and start/stop the callback.
-Before calling any of the following APIs, you must use [displaySync.create()](arkts-arkgraphics2d-create-f.md#create-1) to create
-a **DisplaySync** instance.
+An object that implements the setting of the frame rate and callback. It provides APIs for you to set the frame rate, register a callback, and start/stop the callback.Before calling any of the following APIs, you must use [displaySync.create()](arkts-arkgraphics2d-create-f.md#create-1) to create a **DisplaySync** instance.
 
 **Since:** 11
+
+<!--Device-displaySync-interface DisplaySync--><!--Device-displaySync-interface DisplaySync-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +24,8 @@ Unsubscribes from change events of each frame.
 
 **Since:** 11
 
+<!--Device-DisplaySync-off(type: 'frame', callback?: Callback<IntervalInfo>): void--><!--Device-DisplaySync-off(type: 'frame', callback?: Callback<IntervalInfo>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -32,7 +33,7 @@ Unsubscribes from change events of each frame.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'frame' | Yes | Event type. The value is fixed at **'frame'**. |
-| callback | Callback&lt;IntervalInfo&gt; | No | Callback used for unsubscription.If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<IntervalInfo> | No | Callback used for unsubscription.If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Example**
 
@@ -58,6 +59,8 @@ Subscribes to change events of each frame.
 
 **Since:** 11
 
+<!--Device-DisplaySync-on(type: 'frame', callback: Callback<IntervalInfo>): void--><!--Device-DisplaySync-on(type: 'frame', callback: Callback<IntervalInfo>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -65,7 +68,7 @@ Subscribes to change events of each frame.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'frame' | Yes | Event type. The value is fixed at **'frame'**. |
-| callback | Callback&lt;IntervalInfo&gt; | Yes | Callback used for subscription. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<IntervalInfo> | Yes | Callback used for subscription. |
 
 **Example**
 
@@ -89,13 +92,15 @@ Sets the expected frame rate range.
 
 **Since:** 11
 
+<!--Device-DisplaySync-setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void--><!--Device-DisplaySync-setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rateRange | ExpectedFrameRateRange | Yes | Expected frame rate range. |
+| rateRange | [ExpectedFrameRateRange](../../apis-arkui/arkts-components/arkts-arkui-expectedframeraterange-i.md) | Yes | Expected frame rate range. |
 
 **Error codes:**
 
@@ -126,6 +131,8 @@ start(): void
 Starts callback for each frame.
 
 **Since:** 11
+
+<!--Device-DisplaySync-start(): void--><!--Device-DisplaySync-start(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -188,6 +195,8 @@ stop(): void
 Stops callback for each frame.
 
 **Since:** 11
+
+<!--Device-DisplaySync-stop(): void--><!--Device-DisplaySync-stop(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

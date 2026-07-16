@@ -1,5 +1,11 @@
 # @ohos.app.ability.Ability
 
+## 导入模块
+
+```TypeScript
+import { Ability } from '@kit.AbilityKit';
+```
+
 ## 汇总
 
 ### 类

@@ -8,6 +8,8 @@
 
 **替代接口：** EventType
 
+<!--Device-hiAppEvent-enum EventType--><!--Device-hiAppEvent-enum EventType-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## FAULT
@@ -23,6 +25,8 @@ FAULT = 1
 **废弃版本：** 9
 
 **替代接口：** FAULT
+
+<!--Device-EventType-FAULT = 1--><!--Device-EventType-FAULT = 1-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -40,6 +44,8 @@ STATISTIC = 2
 
 **替代接口：** STATISTIC
 
+<!--Device-EventType-STATISTIC = 2--><!--Device-EventType-STATISTIC = 2-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## SECURITY
@@ -56,6 +62,8 @@ SECURITY = 3
 
 **替代接口：** SECURITY
 
+<!--Device-EventType-SECURITY = 3--><!--Device-EventType-SECURITY = 3-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## BEHAVIOR
@@ -71,6 +79,8 @@ BEHAVIOR = 4
 **废弃版本：** 9
 
 **替代接口：** BEHAVIOR
+
+<!--Device-EventType-BEHAVIOR = 4--><!--Device-EventType-BEHAVIOR = 4-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 

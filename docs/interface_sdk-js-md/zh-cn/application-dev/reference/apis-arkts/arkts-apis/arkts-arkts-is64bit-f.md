@@ -1,5 +1,11 @@
 # is64Bit
 
+## 导入模块
+
+```TypeScript
+import { process } from '@kit.ArkTS';
+```
+
 ## is64Bit
 
 ```TypeScript
@@ -10,7 +16,9 @@ function is64Bit(): boolean
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-process-function is64Bit(): boolean--><!--Device-process-function is64Bit(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

@@ -4,6 +4,8 @@ ArkTS JSON utils.
 
 **Since:** 12
 
+<!--Device-utils-namespace ASON--><!--Device-utils-namespace ASON-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import

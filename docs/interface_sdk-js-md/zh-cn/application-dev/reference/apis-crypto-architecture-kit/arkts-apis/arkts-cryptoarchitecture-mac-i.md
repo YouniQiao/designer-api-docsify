@@ -1,13 +1,20 @@
 # Mac
 
-Mac类，调用Mac方法进行消息认证码（Message Authentication Code）计算。调用前，需要通过
-[createMac](arkts-cryptoarchitecture-createmac-f.md#createmac-1)构造Mac实例。
+Mac类，调用Mac方法进行消息认证码（Message Authentication Code）计算。调用前，需要通过[createMac](arkts-cryptoarchitecture-createmac-f.md#createmac-1)构造Mac实例。
 
 **起始版本：** 9
+
+<!--Device-cryptoFramework-interface Mac--><!--Device-cryptoFramework-interface Mac-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Mac
 - API版本9-11：SystemCapability.Security.CryptoFramework
+
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+```
 
 ## doFinal
 
@@ -19,7 +26,9 @@ doFinal(callback: AsyncCallback<DataBlob>): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Mac-doFinal(callback: AsyncCallback<DataBlob>): void--><!--Device-Mac-doFinal(callback: AsyncCallback<DataBlob>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Mac
@@ -29,7 +38,7 @@ doFinal(callback: AsyncCallback<DataBlob>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;DataBlob&gt; | 是 | 回调函数。当MAC计算成功时，err为undefined，data为获取到的Mac计算结果；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DataBlob> | 是 | 回调函数。当MAC计算成功时，err为undefined，data为获取到的Mac计算结果；否则为错误对象。 |
 
 **错误码：**
 
@@ -74,7 +83,9 @@ doFinal(): Promise<DataBlob>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Mac-doFinal(): Promise<DataBlob>--><!--Device-Mac-doFinal(): Promise<DataBlob>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Mac
@@ -84,7 +95,7 @@ doFinal(): Promise<DataBlob>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise对象，返回MAC计算结果。 |
+| Promise<DataBlob> | Promise对象，返回MAC计算结果。 |
 
 **错误码：**
 
@@ -123,13 +134,13 @@ doFinalSync(): DataBlob
 
 通过同步方式完成MAC计算并获取MAC计算结果。
 
-<br><br>**说明：**
-<br>建议优先使用异步API{@link doFinal}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。
-因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：**<br>建议优先使用异步API{@link doFinal}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Mac-doFinalSync(): DataBlob--><!--Device-Mac-doFinalSync(): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Mac
 
@@ -137,7 +148,7 @@ doFinalSync(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 返回MAC计算结果。 |
+| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | 返回MAC计算结果。 |
 
 **错误码：**
 
@@ -180,7 +191,9 @@ getMacLength(): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Mac-getMacLength(): int--><!--Device-Mac-getMacLength(): int-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Mac
@@ -242,12 +255,13 @@ function testGetMacLength() {
 init(key: SymKey, callback: AsyncCallback<void>): void
 ```
 
-使用对称密钥初始化Mac计算。使用callback异步回调。init、update、doFinal为三段式接口，需要成组使用。其中init和doFinal必选，
-update可选。
+使用对称密钥初始化Mac计算。使用callback异步回调。init、update、doFinal为三段式接口，需要成组使用。其中init和doFinal必选，update可选。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Mac-init(key: SymKey, callback: AsyncCallback<void>): void--><!--Device-Mac-init(key: SymKey, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Mac
@@ -257,8 +271,8 @@ update可选。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | SymKey | 是 | 对称密钥。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当HMAC初始化成功，err为undefined，否则为错误对象。 |
+| key | [SymKey](arkts-cryptoarchitecture-symkey-i.md) | 是 | 对称密钥。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当HMAC初始化成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -274,12 +288,13 @@ update可选。
 init(key: SymKey): Promise<void>
 ```
 
-使用对称密钥初始化Mac计算。使用Promise异步回调。init、update、doFinal为三段式接口，需要成组使用。其中init和doFinal必选，
-update可选。
+使用对称密钥初始化Mac计算。使用Promise异步回调。init、update、doFinal为三段式接口，需要成组使用。其中init和doFinal必选，update可选。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Mac-init(key: SymKey): Promise<void>--><!--Device-Mac-init(key: SymKey): Promise<void>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Mac
@@ -289,13 +304,13 @@ update可选。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | SymKey | 是 | 对称密钥。 |
+| key | [SymKey](arkts-cryptoarchitecture-symkey-i.md) | 是 | 对称密钥。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -311,16 +326,15 @@ update可选。
 initSync(key: SymKey): void
 ```
 
-使用对称密钥初始化Mac计算，通过同步方式获取结果。initSync、updateSync、doFinalSync为三段式接口，需要成组使用。其中initSync和
-doFinalSync必选，updateSync可选。
+使用对称密钥初始化Mac计算，通过同步方式获取结果。initSync、updateSync、doFinalSync为三段式接口，需要成组使用。其中initSync和doFinalSync必选，updateSync可选。
 
-<br><br>**说明：**
-<br>建议优先使用异步API{@link init}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。
-因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：**<br>建议优先使用异步API{@link init}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Mac-initSync(key: SymKey): void--><!--Device-Mac-initSync(key: SymKey): void-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Mac
 
@@ -328,7 +342,7 @@ doFinalSync必选，updateSync可选。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | SymKey | 是 | 对称密钥。 |
+| key | [SymKey](arkts-cryptoarchitecture-symkey-i.md) | 是 | 对称密钥。 |
 
 **错误码：**
 
@@ -346,13 +360,15 @@ update(input: DataBlob, callback: AsyncCallback<void>): void
 
 传入消息进行Mac更新消息认证码状态。使用callback异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > HMAC算法多次调用update更新的代码示例详见[消息认证码计算](../../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#分段hmac)。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Mac-update(input: DataBlob, callback: AsyncCallback<void>): void--><!--Device-Mac-update(input: DataBlob, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Mac
@@ -362,8 +378,8 @@ update(input: DataBlob, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| input | DataBlob | 是 | 传入的消息。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当HMAC更新成功，err为undefined，否则为错误对象。 |
+| input | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | 是 | 传入的消息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当HMAC更新成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -381,13 +397,15 @@ update(input: DataBlob): Promise<void>
 
 传入消息进行Mac更新消息认证码状态。使用Promise异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > HMAC算法多次调用update更新的代码示例详见[消息认证码计算](../../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#分段hmac)。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Mac-update(input: DataBlob): Promise<void>--><!--Device-Mac-update(input: DataBlob): Promise<void>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Mac
@@ -397,13 +415,13 @@ update(input: DataBlob): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| input | DataBlob | 是 | 传入的消息。 |
+| input | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | 是 | 传入的消息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -421,18 +439,18 @@ updateSync(input: DataBlob): void
 
 传入消息进行Mac更新消息认证码状态，通过同步方式获取结果。
 
-> **说明：**
->
-> HMAC算法多次调用updateSync更新的代码示例详见
+> **说明：**  
+>  
+> HMAC算法多次调用updateSync更新的代码示例详见  
 > [消息认证码计算](../../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#分段hmac)。
 
-<br><br>**说明：**
-<br>建议优先使用异步API{@link update}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。
-因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：**<br>建议优先使用异步API{@link update}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Mac-updateSync(input: DataBlob): void--><!--Device-Mac-updateSync(input: DataBlob): void-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Mac
 
@@ -440,7 +458,7 @@ updateSync(input: DataBlob): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| input | DataBlob | 是 | 传入的消息。 |
+| input | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | 是 | 传入的消息。 |
 
 **错误码：**
 
@@ -462,7 +480,9 @@ readonly algName: string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Mac-readonly algName: string--><!--Device-Mac-readonly algName: string-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Mac

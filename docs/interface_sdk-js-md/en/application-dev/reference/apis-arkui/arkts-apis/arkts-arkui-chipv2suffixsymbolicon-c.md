@@ -6,6 +6,8 @@ Defines accessibility of suffix symbol.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class ChipV2SuffixSymbolIcon extends ChipV2SymbolIcon--><!--Device-unnamed-export declare class ChipV2SuffixSymbolIcon extends ChipV2SymbolIcon-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,13 +30,15 @@ The constructor of ChipV2SuffixSymbolIcon
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2SuffixSymbolIcon-constructor(config: ChipV2SuffixSymbolIconConfig)--><!--Device-ChipV2SuffixSymbolIcon-constructor(config: ChipV2SuffixSymbolIconConfig)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | ChipV2SuffixSymbolIconConfig | Yes | config of suffix symbol |
+| config | [ChipV2SuffixSymbolIconConfig](arkts-arkui-chipv2suffixsymboliconconfig-i.md) | Yes | config of suffix symbol |
 
 ## action
 
@@ -51,6 +55,8 @@ Called when suffix symbol is clicked.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipV2SuffixSymbolIcon-public action?: VoidCallback--><!--Device-ChipV2SuffixSymbolIcon-public action?: VoidCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,6 +76,8 @@ Set activated accessibility config for suffix symbol.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2SuffixSymbolIcon-public activatedAccessibility?: ChipV2Accessibility--><!--Device-ChipV2SuffixSymbolIcon-public activatedAccessibility?: ChipV2Accessibility-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## normalAccessibility
@@ -87,6 +95,8 @@ Set normal accessibility config for suffix symbol.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipV2SuffixSymbolIcon-public normalAccessibility?: ChipV2Accessibility--><!--Device-ChipV2SuffixSymbolIcon-public normalAccessibility?: ChipV2Accessibility-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

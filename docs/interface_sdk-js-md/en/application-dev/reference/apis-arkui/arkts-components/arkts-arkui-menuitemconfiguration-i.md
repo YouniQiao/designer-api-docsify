@@ -1,11 +1,12 @@
 # MenuItemConfiguration
 
-You need a custom class to implement the **ContentModifier** API. Inherits from
-[CommonConfiguration](arkts-arkui-commonconfiguration-i.md).
+You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md).
 
 **Inheritance/Implementation:** MenuItemConfiguration extends [CommonConfiguration<MenuItemConfiguration>](CommonConfiguration<MenuItemConfiguration>)
 
 **Since:** 12
+
+<!--Device-unnamed-declare interface MenuItemConfiguration extends CommonConfiguration<MenuItemConfiguration>--><!--Device-unnamed-declare interface MenuItemConfiguration extends CommonConfiguration<MenuItemConfiguration>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,18 +16,15 @@ You need a custom class to implement the **ContentModifier** API. Inherits from
 triggerSelect(index: number, value: string): void
 ```
 
-Invoked when a drop-down menu option is selected.
-<br>**NOTE**
-<br>The value of **index** will be assigned to the **index** parameter in the
-[onSelect](SelectAttribute#onSelect(callback: (index: number, value: string) => void)) callback;
-the value of **value** will be returned to the **Select** component for display and will also be assigned to
-the **value** parameter in the [onSelect](SelectAttribute#onSelect(callback: (index: number, value: string) => void)) callback.
+Invoked when a drop-down menu option is selected.<br>**NOTE**<br>The value of **index** will be assigned to the **index** parameter in the [onSelect](SelectAttribute#onSelect(callback: (index: number, value: string) => void)) callback;the value of **value** will be returned to the **Select** component for display and will also be assigned to the **value** parameter in the [onSelect](SelectAttribute#onSelect(callback: (index: number, value: string) => void)) callback.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MenuItemConfiguration-triggerSelect(index: number, value: string): void--><!--Device-MenuItemConfiguration-triggerSelect(index: number, value: string): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -57,6 +55,8 @@ The string type can be used to load network images and local images.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MenuItemConfiguration-icon?: ResourceStr--><!--Device-MenuItemConfiguration-icon?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## index
@@ -75,6 +75,8 @@ Index of the drop-down menu option. The index is zero-based.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MenuItemConfiguration-index: number--><!--Device-MenuItemConfiguration-index: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selected
@@ -83,8 +85,7 @@ Index of the drop-down menu option. The index is zero-based.
 selected: boolean
 ```
 
-Whether the drop-down menu option is selected. The value **true** means that the option is selected, and **false**
-means the opposite.
+Whether the drop-down menu option is selected. The value **true** means that the option is selected, and **false** means the opposite.
 
 Default value: **false**
 
@@ -95,6 +96,8 @@ Default value: **false**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MenuItemConfiguration-selected: boolean--><!--Device-MenuItemConfiguration-selected: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -115,6 +118,8 @@ Symbol icon of drop-down menu option.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MenuItemConfiguration-symbolIcon?: SymbolGlyphModifier--><!--Device-MenuItemConfiguration-symbolIcon?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -137,6 +142,8 @@ If the length of the text exceeds the width of the menu item text area, the text
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MenuItemConfiguration-value: ResourceStr--><!--Device-MenuItemConfiguration-value: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

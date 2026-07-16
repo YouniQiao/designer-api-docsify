@@ -4,6 +4,8 @@ Implements a **DragAction** object to subscribe to drag state changes and start 
 
 **Since:** 11
 
+<!--Device-dragController-interface DragAction--><!--Device-dragController-interface DragAction-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Unsubscribes from drag state changes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DragAction-off(type: 'statusChange', callback?: Callback<DragAndDropInfo>): void--><!--Device-DragAction-off(type: 'statusChange', callback?: Callback<DragAndDropInfo>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -33,7 +37,7 @@ Unsubscribes from drag state changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'statusChange' | Yes | for status changing |
-| callback | Callback&lt;DragAndDropInfo&gt; | No | with drag event and status information |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<DragAndDropInfo> | No | with drag event and status information |
 
 ## on('statusChange')
 
@@ -49,6 +53,8 @@ Subscribes to drag state changes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DragAction-on(type: 'statusChange', callback: Callback<DragAndDropInfo>): void--><!--Device-DragAction-on(type: 'statusChange', callback: Callback<DragAndDropInfo>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -56,7 +62,7 @@ Subscribes to drag state changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'statusChange' | Yes | for status changing |
-| callback | Callback&lt;DragAndDropInfo&gt; | Yes | with drag event and status information |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<DragAndDropInfo> | Yes | with drag event and status information |
 
 ## startDrag
 
@@ -72,13 +78,15 @@ Starts the drag service. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DragAction-startDrag(): Promise<void>--><!--Device-DragAction-startDrag(): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

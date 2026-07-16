@@ -4,6 +4,8 @@ Describes the left and right arrow attributes.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface ArrowStyle--><!--Device-unnamed-declare interface ArrowStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## arrowColor
@@ -25,6 +27,8 @@ Default value: **'#182431'**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ArrowStyle-arrowColor?: ResourceColor--><!--Device-ArrowStyle-arrowColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,6 +64,8 @@ Percentage values are not supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ArrowStyle-arrowSize?: Length--><!--Device-ArrowStyle-arrowSize?: Length-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundColor
@@ -91,6 +97,8 @@ Default value: **'#19182431'**.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ArrowStyle-backgroundColor?: ResourceColor--><!--Device-ArrowStyle-backgroundColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundSize
@@ -121,6 +129,8 @@ Percentage values are not supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ArrowStyle-backgroundSize?: Length--><!--Device-ArrowStyle-backgroundSize?: Length-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## isSidebarMiddle
@@ -129,9 +139,7 @@ Percentage values are not supported.
 isSidebarMiddle?: boolean
 ```
 
-Whether the arrow is centered on both sides of the **Swiper** component. The value **true** means that the arrow is
-centered on both sides of the **Swiper** component, and **false** means that the arrow is show on either side of
-the navigation indicator.
+Whether the arrow is centered on both sides of the **Swiper** component. The value **true** means that the arrow is centered on both sides of the **Swiper** component, and **false** means that the arrow is show on either side of the navigation indicator.
 
 Default value: **false**.
 
@@ -144,6 +152,8 @@ Default value: **false**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ArrowStyle-isSidebarMiddle?: boolean--><!--Device-ArrowStyle-isSidebarMiddle?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -153,8 +163,7 @@ Default value: **false**.
 showBackground?: boolean
 ```
 
-Whether to show the background for the arrow. The value **true** means to show the background for the arrow, and
-**false** means the opposite.
+Whether to show the background for the arrow. The value **true** means to show the background for the arrow, and **false** means the opposite.
 
 Default value: **false**.
 
@@ -167,6 +176,8 @@ Default value: **false**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ArrowStyle-showBackground?: boolean--><!--Device-ArrowStyle-showBackground?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

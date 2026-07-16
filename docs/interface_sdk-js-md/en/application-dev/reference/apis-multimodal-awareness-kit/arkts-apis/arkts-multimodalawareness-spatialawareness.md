@@ -4,6 +4,8 @@ This module provides the capability to subscribe to report the distance measurem
 
 **Since:** 23
 
+<!--Device-unnamed-declare namespace spatialAwareness--><!--Device-unnamed-declare namespace spatialAwareness-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **System API:** This is a system API.

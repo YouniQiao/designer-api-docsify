@@ -1,5 +1,11 @@
 # getDLPFileAccessRecords
 
+## 导入模块
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+```
+
 ## getDLPFileAccessRecords
 
 ```TypeScript
@@ -12,13 +18,15 @@ function getDLPFileAccessRecords(): Promise<Array<AccessedDLPFileInfo>>
 
 **起始版本：** 10
 
+<!--Device-dlpPermission-function getDLPFileAccessRecords(): Promise<Array<AccessedDLPFileInfo>>--><!--Device-dlpPermission-function getDLPFileAccessRecords(): Promise<Array<AccessedDLPFileInfo>>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;AccessedDLPFileInfo&gt;&gt; | Promise对象。返回最近访问的DLP文件列表。 |
+| Promise<Array<AccessedDLPFileInfo>> | Promise对象。返回最近访问的DLP文件列表。 |
 
 **错误码：**
 
@@ -54,13 +62,15 @@ function getDLPFileAccessRecords(callback: AsyncCallback<Array<AccessedDLPFileIn
 
 **起始版本：** 10
 
+<!--Device-dlpPermission-function getDLPFileAccessRecords(callback: AsyncCallback<Array<AccessedDLPFileInfo>>): void--><!--Device-dlpPermission-function getDLPFileAccessRecords(callback: AsyncCallback<Array<AccessedDLPFileInfo>>): void-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;AccessedDLPFileInfo&gt;&gt; | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<AccessedDLPFileInfo>> | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
 
 **错误码：**
 

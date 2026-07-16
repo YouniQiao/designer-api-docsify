@@ -1,5 +1,11 @@
 # watch
 
+## 导入模块
+
+```TypeScript
+import { jsLeakWatcher } from '@kit.PerformanceAnalysisKit';
+```
+
 ## watch
 
 ```TypeScript
@@ -9,6 +15,8 @@ function watch(obj: object, msg: string): void
 ע������й©�Ķ���
 
 **起始版本：** 12
+
+<!--Device-jsLeakWatcher-function watch(obj: object, msg: string): void--><!--Device-jsLeakWatcher-function watch(obj: object, msg: string): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 

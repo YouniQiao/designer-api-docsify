@@ -4,6 +4,8 @@ Defines the popup init info.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export interface PopupV2InitInfo--><!--Device-unnamed-export interface PopupV2InitInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,6 +28,8 @@ The buttons of Popup.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-PopupV2InitInfo-buttons?: [PopupV2Button?, PopupV2Button?]--><!--Device-PopupV2InitInfo-buttons?: [PopupV2Button?, PopupV2Button?]-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## direction
@@ -41,6 +45,8 @@ Indicates the attribute of the current popup direction.
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-PopupV2InitInfo-direction?: Direction--><!--Device-PopupV2InitInfo-direction?: Direction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,6 +64,8 @@ The icon of Popup.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-PopupV2InitInfo-icon?: ResourceStr--><!--Device-PopupV2InitInfo-icon?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## iconModifier
@@ -73,6 +81,8 @@ The icon attributes of Popup.
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-PopupV2InitInfo-iconModifier?: ImageModifier--><!--Device-PopupV2InitInfo-iconModifier?: ImageModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,6 +100,8 @@ Set the max width of the popup.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-PopupV2InitInfo-maxWidth?: Dimension--><!--Device-PopupV2InitInfo-maxWidth?: Dimension-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## message
@@ -105,6 +117,8 @@ The message of Popup.
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-PopupV2InitInfo-message: ResourceStr--><!--Device-PopupV2InitInfo-message: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -122,6 +136,8 @@ The message attributes of Popup.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-PopupV2InitInfo-messageModifier?: TextModifier--><!--Device-PopupV2InitInfo-messageModifier?: TextModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onClose
@@ -137,6 +153,8 @@ The close button callback of Popup.
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-PopupV2InitInfo-onClose?: Callback<void>--><!--Device-PopupV2InitInfo-onClose?: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -154,6 +172,8 @@ The show close of Popup.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-PopupV2InitInfo-showClose?: boolean | Resource--><!--Device-PopupV2InitInfo-showClose?: boolean | Resource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## title
@@ -170,6 +190,8 @@ The title of Popup.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-PopupV2InitInfo-title?: ResourceStr--><!--Device-PopupV2InitInfo-title?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## titleModifier
@@ -185,6 +207,8 @@ The title attributes of Popup.
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-PopupV2InitInfo-titleModifier?: TextModifier--><!--Device-PopupV2InitInfo-titleModifier?: TextModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -12,6 +12,8 @@ Represents a FrameNode of the **Radio** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-typeNode-type Radio = TypedFrameNode<RadioInterface, RadioAttribute>--><!--Device-typeNode-type Radio = TypedFrameNode<RadioInterface, RadioAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** TypedFrameNode<RadioInterface, RadioAttribute>

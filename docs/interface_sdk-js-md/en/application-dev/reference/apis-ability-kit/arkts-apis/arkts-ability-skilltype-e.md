@@ -4,6 +4,8 @@ Enumerates the skill types.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export enum SkillType--><!--Device-unnamed-export enum SkillType-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## APP_SKILL
@@ -20,6 +22,8 @@ Indicates an app skill.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SkillType-APP_SKILL = 0--><!--Device-SkillType-APP_SKILL = 0-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## INDEPENDENT_SKILL
@@ -35,6 +39,8 @@ Indicates an independent skill.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SkillType-INDEPENDENT_SKILL = 1--><!--Device-SkillType-INDEPENDENT_SKILL = 1-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

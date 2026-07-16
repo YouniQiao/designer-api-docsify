@@ -18,6 +18,8 @@ Go to the dial screen and the called number is displayed.The authentication chal
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-call-function makeCallWithToken(phoneNumber: string, options?: MakeCallOptions): Promise<string>--><!--Device-call-function makeCallWithToken(phoneNumber: string, options?: MakeCallOptions): Promise<string>-End-->
+
 **System capability:** SystemCapability.Applications.Contacts
 
 **Parameters:**
@@ -25,13 +27,13 @@ Go to the dial screen and the called number is displayed.The authentication chal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Indicates the called number. |
-| options | MakeCallOptions | No | Indicates additional information carried in the call. |
+| options | [MakeCallOptions](arkts-telephony-makecalloptions-i.md) | No | Indicates additional information carried in the call. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return access token by the makeCall. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return access token by the makeCall. |
 
 **Error codes:**
 

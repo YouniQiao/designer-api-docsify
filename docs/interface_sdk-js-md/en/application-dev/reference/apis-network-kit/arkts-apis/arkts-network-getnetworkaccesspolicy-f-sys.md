@@ -18,6 +18,8 @@ Query the network access policy of the specified application.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function getNetworkAccessPolicy(uid: number): Promise<NetworkAccessPolicy>--><!--Device-policy-function getNetworkAccessPolicy(uid: number): Promise<NetworkAccessPolicy>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -32,7 +34,7 @@ Query the network access policy of the specified application.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetworkAccessPolicy&gt; | Returns the network access policy of the application. For details, see {@link NetworkAccessPolicy}. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetworkAccessPolicy> | Returns the network access policy of the application. For details, see {@link NetworkAccessPolicy}. |
 
 **Error codes:**
 
@@ -74,6 +76,8 @@ Query the network access policy of all applications.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function getNetworkAccessPolicy(): Promise<UidNetworkAccessPolicy>--><!--Device-policy-function getNetworkAccessPolicy(): Promise<UidNetworkAccessPolicy>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -82,7 +86,7 @@ Query the network access policy of all applications.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;UidNetworkAccessPolicy&gt; | the network access policy of all applications. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<UidNetworkAccessPolicy> | the network access policy of all applications. |
 
 **Error codes:**
 

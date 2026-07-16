@@ -4,6 +4,8 @@ Describes wakeup intelligent voice engine.
 
 **Since:** 10
 
+<!--Device-intelligentVoice-interface WakeupIntelligentVoiceEngineDescriptor--><!--Device-intelligentVoice-interface WakeupIntelligentVoiceEngineDescriptor-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Need reconfirm.
 
 **Since:** 10
 
+<!--Device-WakeupIntelligentVoiceEngineDescriptor-needReconfirm: boolean--><!--Device-WakeupIntelligentVoiceEngineDescriptor-needReconfirm: boolean-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Wakeup phrase.
 **Type:** string
 
 **Since:** 10
+
+<!--Device-WakeupIntelligentVoiceEngineDescriptor-wakeupPhrase: string--><!--Device-WakeupIntelligentVoiceEngineDescriptor-wakeupPhrase: string-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 

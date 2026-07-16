@@ -1,5 +1,11 @@
 # injectTouchEvent（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { inputEventClient } from '@kit.InputKit';
+```
+
 ## injectTouchEvent
 
 ```TypeScript
@@ -13,6 +19,8 @@ function injectTouchEvent(touchEvent: TouchEventData): void
 **需要权限：** 
 - API版本12+：ohos.permission.INJECT_INPUT_EVENT
 
+<!--Device-inputEventClient-function injectTouchEvent(touchEvent: TouchEventData): void--><!--Device-inputEventClient-function injectTouchEvent(touchEvent: TouchEventData): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **系统接口：** 此接口为系统接口。
@@ -21,7 +29,7 @@ function injectTouchEvent(touchEvent: TouchEventData): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| touchEvent | TouchEventData | 是 | 触屏注入描述信息。此参数中[Action](arkts-input-action-e.md)属性不支持设置为CANCEL。 |
+| touchEvent | [TouchEventData](arkts-input-toucheventdata-i-sys.md) | 是 | 触屏注入描述信息。此参数中[Action](arkts-input-action-e.md)属性不支持设置为CANCEL。 |
 
 **错误码：**
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+<!--Device-companionDeviceAuth-enum SelectPurpose--><!--Device-companionDeviceAuth-enum SelectPurpose-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -19,6 +21,8 @@ SELECT_ADD_DEVICE = 1
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SelectPurpose-SELECT_ADD_DEVICE = 1--><!--Device-SelectPurpose-SELECT_ADD_DEVICE = 1-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -36,6 +40,8 @@ SELECT_AUTH_DEVICE = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SelectPurpose-SELECT_AUTH_DEVICE = 2--><!--Device-SelectPurpose-SELECT_AUTH_DEVICE = 2-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +57,8 @@ VENDOR_BEGIN = 10000
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SelectPurpose-VENDOR_BEGIN = 10000--><!--Device-SelectPurpose-VENDOR_BEGIN = 10000-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 

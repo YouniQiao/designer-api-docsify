@@ -18,13 +18,15 @@ Checks whether animation reduction mode is enabled. This API uses a promise to r
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-accessibility-function isAnimationReduceEnabled(): Promise<boolean>--><!--Device-accessibility-function isAnimationReduceEnabled(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if animation reduction mode isenabled; returns **false** otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. Returns **true** if animation reduction mode is enabled; returns **false** otherwise. |
 
 **Example**
 

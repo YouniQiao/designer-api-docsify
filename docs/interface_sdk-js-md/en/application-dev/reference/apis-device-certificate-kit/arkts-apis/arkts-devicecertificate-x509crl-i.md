@@ -4,6 +4,8 @@ Provides APIs for managing a CRL object.
 
 **Since:** 11
 
+<!--Device-cert-interface X509CRL--><!--Device-cert-interface X509CRL-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Obtains the serialized X.509 CRL data. This API uses an asynchronous callback to
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CRL-getEncoded(callback: AsyncCallback<EncodingBlob>): void--><!--Device-X509CRL-getEncoded(callback: AsyncCallback<EncodingBlob>): void-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;EncodingBlob&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined**, and **data** is the serialized X.509 CRL data obtained. Otherwise,**err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<EncodingBlob> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the serialized X.509 CRL data obtained. Otherwise,**err** is an error object. |
 
 **Error codes:**
 
@@ -53,13 +57,15 @@ Obtains the serialized X.509 CRL data. This API uses a promise to return the res
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CRL-getEncoded(): Promise<EncodingBlob>--><!--Device-X509CRL-getEncoded(): Promise<EncodingBlob>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;EncodingBlob&gt; | Promise used to return the serialized X.509 CRL data obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<EncodingBlob> | Promise used to return the serialized X.509 CRL data obtained. |
 
 **Error codes:**
 
@@ -82,13 +88,15 @@ Obtains the CRL extensions data in DER format.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CRL-getExtensions(): DataBlob--><!--Device-X509CRL-getExtensions(): DataBlob-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataBlob | CRL extensions data in DER format obtained. |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | CRL extensions data in DER format obtained. |
 
 **Error codes:**
 
@@ -110,13 +118,15 @@ Obtains the CRL extensions in DER format.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CRL-getExtensionsObject(): CertExtension--><!--Device-X509CRL-getExtensionsObject(): CertExtension-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CertExtension | CRL extensions object obtained. |
+| [CertExtension](arkts-devicecertificate-certextension-i.md) | CRL extensions object obtained. |
 
 **Error codes:**
 
@@ -134,13 +144,15 @@ getIssuerName(): DataBlob
 
 Obtains the issuer of the X.509 CRL.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > The obtained X.509 CRL issuer name contains a string terminator.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509CRL-getIssuerName(): DataBlob--><!--Device-X509CRL-getIssuerName(): DataBlob-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -148,7 +160,7 @@ Obtains the issuer of the X.509 CRL.
 
 | Type | Description |
 | --- | --- |
-| DataBlob | Issuer of the X.509 CRL obtained. |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | Issuer of the X.509 CRL obtained. |
 
 **Error codes:**
 
@@ -170,13 +182,15 @@ Obtains the issuer name of an X.509 CRL based on the encoding type.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-X509CRL-getIssuerName(encodingType: EncodingType): string--><!--Device-X509CRL-getIssuerName(encodingType: EncodingType): string-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encodingType | EncodingType | Yes | Encoding type. |
+| encodingType | [EncodingType](arkts-devicecertificate-encodingtype-e.md) | Yes | Encoding type. |
 
 **Return value:**
 
@@ -205,13 +219,15 @@ Obtains the distinguished name (DN) of the X.509 CRL issuer.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CRL-getIssuerX500DistinguishedName(): X500DistinguishedName--><!--Device-X509CRL-getIssuerX500DistinguishedName(): X500DistinguishedName-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| X500DistinguishedName | DN object obtained. |
+| [X500DistinguishedName](arkts-devicecertificate-x500distinguishedname-i.md) | DN object obtained. |
 
 **Error codes:**
 
@@ -232,6 +248,8 @@ Obtains the last update date of this X.509 CRL.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509CRL-getLastUpdate(): string--><!--Device-X509CRL-getLastUpdate(): string-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -261,6 +279,8 @@ Obtains the next update date of this CRL.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CRL-getNextUpdate(): string--><!--Device-X509CRL-getNextUpdate(): string-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
@@ -289,6 +309,8 @@ Obtains the revoked certificate entry from the X.509 CRL based on the specified 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CRL-getRevokedCert(serialNumber: bigint): X509CRLEntry--><!--Device-X509CRL-getRevokedCert(serialNumber: bigint): X509CRLEntry-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
@@ -301,7 +323,7 @@ Obtains the revoked certificate entry from the X.509 CRL based on the specified 
 
 | Type | Description |
 | --- | --- |
-| X509CRLEntry | Revoked certificate entry obtained. |
+| [X509CRLEntry](arkts-devicecertificate-x509crlentry-i.md) | Revoked certificate entry obtained. |
 
 **Error codes:**
 
@@ -323,19 +345,21 @@ Obtains the revoked certificate entry from the X.509 CRL based on the specified 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CRL-getRevokedCertWithCert(cert: X509Cert): X509CRLEntry--><!--Device-X509CRL-getRevokedCertWithCert(cert: X509Cert): X509CRLEntry-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | X509Cert | Yes | Certificate based on which the revoked certificate is obtained. |
+| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-x509cert-t.md) | Yes | Certificate based on which the revoked certificate is obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| X509CRLEntry | Revoked certificate entry obtained. |
+| [X509CRLEntry](arkts-devicecertificate-x509crlentry-i.md) | Revoked certificate entry obtained. |
 
 **Error codes:**
 
@@ -351,12 +375,13 @@ Obtains the revoked certificate entry from the X.509 CRL based on the specified 
 getRevokedCerts(callback: AsyncCallback<Array<X509CRLEntry>>): void
 ```
 
-Obtains all the revoked certificate entries from the X.509 CRL. This API uses an asynchronous callback to return
-the result.
+Obtains all the revoked certificate entries from the X.509 CRL. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509CRL-getRevokedCerts(callback: AsyncCallback<Array<X509CRLEntry>>): void--><!--Device-X509CRL-getRevokedCerts(callback: AsyncCallback<Array<X509CRLEntry>>): void-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -364,7 +389,7 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;X509CRLEntry&gt;&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined**, and **data** is the revoked certificate entries obtained. Otherwise,**err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<X509CRLEntry>> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the revoked certificate entries obtained. Otherwise,**err** is an error object. |
 
 **Error codes:**
 
@@ -386,13 +411,15 @@ Obtains all the revoked certificate entries from the X.509 CRL. This API uses a 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CRL-getRevokedCerts(): Promise<Array<X509CRLEntry>>--><!--Device-X509CRL-getRevokedCerts(): Promise<Array<X509CRLEntry>>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;X509CRLEntry&gt;&gt; | Promise used to return the revoked certificate entries obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<X509CRLEntry>> | Promise used to return the revoked certificate entries obtained. |
 
 **Error codes:**
 
@@ -414,13 +441,15 @@ Obtains the signature data of the X.509 CRL.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CRL-getSignature(): DataBlob--><!--Device-X509CRL-getSignature(): DataBlob-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataBlob | Signature data of the X.509 CRL obtained. |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | Signature data of the X.509 CRL obtained. |
 
 **Error codes:**
 
@@ -441,6 +470,8 @@ Obtains the signing algorithm of the X.509 CRL.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509CRL-getSignatureAlgName(): string--><!--Device-X509CRL-getSignatureAlgName(): string-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -464,12 +495,13 @@ Obtains the signing algorithm of the X.509 CRL.
 getSignatureAlgOid(): string
 ```
 
-Obtains the OID of the X.509 CRL signing algorithm. OIDs are allocated by the International Organization for
-Standardization (ISO).
+Obtains the OID of the X.509 CRL signing algorithm. OIDs are allocated by the International Organization for Standardization (ISO).
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509CRL-getSignatureAlgOid(): string--><!--Device-X509CRL-getSignatureAlgOid(): string-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -499,13 +531,15 @@ Obtains the parameters of the X.509 CRL signing algorithm.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CRL-getSignatureAlgParams(): DataBlob--><!--Device-X509CRL-getSignatureAlgParams(): DataBlob-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataBlob | Algorithm parameters obtained. |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | Algorithm parameters obtained. |
 
 **Error codes:**
 
@@ -528,13 +562,15 @@ Obtains the DER-encoded CRL information, that is, **tbsCertList** from this CRL.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CRL-getTBSInfo(): DataBlob--><!--Device-X509CRL-getTBSInfo(): DataBlob-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataBlob | **tbsCertList** information obtained. |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | **tbsCertList** information obtained. |
 
 **Error codes:**
 
@@ -556,6 +592,8 @@ Obtains the CRL type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CRL-getType(): string--><!--Device-X509CRL-getType(): string-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
@@ -575,6 +613,8 @@ Obtains the version of the X.509 CRL.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509CRL-getVersion(): int--><!--Device-X509CRL-getVersion(): int-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -596,13 +636,15 @@ Obtains the hash value of the data in DER format.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CRL-hashCode(): Uint8Array--><!--Device-X509CRL-hashCode(): Uint8Array-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Hash value obtained. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Hash value obtained. |
 
 **Error codes:**
 
@@ -624,19 +666,21 @@ Checks whether an X.509 certificate is revoked.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CRL-isRevoked(cert: X509Cert): boolean--><!--Device-X509CRL-isRevoked(cert: X509Cert): boolean-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | X509Cert | Yes | X.509 certificate to check. |
+| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-x509cert-t.md) | Yes | X.509 certificate to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the certificate is revoked. The value **true** indicates that the certificate isrevoked, and **false** indicates the opposite. |
+| boolean | Whether the certificate is revoked. The value **true** indicates that the certificate is revoked, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -656,19 +700,21 @@ Checks whether this CRL matches the specified parameters.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CRL-match(param: X509CRLMatchParameters): boolean--><!--Device-X509CRL-match(param: X509CRLMatchParameters): boolean-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | X509CRLMatchParameters | Yes | Parameters specified for matching the CRL. |
+| param | [X509CRLMatchParameters](arkts-devicecertificate-x509crlmatchparameters-i.md) | Yes | Parameters specified for matching the CRL. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the CRL matches the parameters specified; returns **false**otherwise. |
+| boolean | Returns **true** if the CRL matches the parameters specified; returns **false** otherwise. |
 
 **Error codes:**
 
@@ -689,6 +735,8 @@ Converts the object data into a string.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509CRL-toString(): string--><!--Device-X509CRL-toString(): string-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -718,13 +766,15 @@ Converts this object into a string in the specified encoding format.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-X509CRL-toString(encodingType: EncodingType): string--><!--Device-X509CRL-toString(encodingType: EncodingType): string-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encodingType | EncodingType | Yes | Encoding type. |
+| encodingType | [EncodingType](arkts-devicecertificate-encodingtype-e.md) | Yes | Encoding type. |
 
 **Return value:**
 
@@ -747,12 +797,13 @@ Converts this object into a string in the specified encoding format.
 verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void
 ```
 
-Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This API uses an asynchronous callback
-to return the result.
+Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509CRL-verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void--><!--Device-X509CRL-verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -761,7 +812,7 @@ to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | cryptoFramework.PubKey | Yes | Public key used for signature verification. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -776,12 +827,13 @@ to return the result.
 verify(key: cryptoFramework.PubKey): Promise<void>
 ```
 
-Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This API uses a promise to return the
-result.
+Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This API uses a promise to return the result.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509CRL-verify(key: cryptoFramework.PubKey): Promise<void>--><!--Device-X509CRL-verify(key: cryptoFramework.PubKey): Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -795,7 +847,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

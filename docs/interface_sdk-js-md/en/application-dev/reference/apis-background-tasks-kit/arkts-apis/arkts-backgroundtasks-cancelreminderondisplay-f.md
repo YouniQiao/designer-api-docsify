@@ -12,11 +12,11 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 function cancelReminderOnDisplay(reminderId: number): Promise<void>
 ```
 
-Cancels the notification card displayed in the notification center with the agent reminder data retained. For
-example, for a daily repeating reminder, calling this API removes the card from the notification center, but the
-reminder will be triggered again the next day according to its schedule.
+Cancels the notification card displayed in the notification center with the agent reminder data retained. For example, for a daily repeating reminder, calling this API removes the card from the notification center, but the reminder will be triggered again the next day according to its schedule.
 
 **Since:** 23
+
+<!--Device-reminderAgentManager-function cancelReminderOnDisplay(reminderId: int): Promise<void>--><!--Device-reminderAgentManager-function cancelReminderOnDisplay(reminderId: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -24,13 +24,13 @@ reminder will be triggered again the next day according to its schedule.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderId | number | Yes | ID of the agent-powered reminder to be canceled.The reminder ID is returned when the[publishReminder](arkts-backgroundtasks-publishreminder-f.md#publishreminder-1)API is called<br>The value range is all integers. |
+| reminderId | number | Yes | ID of the agent-powered reminder to be canceled.The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-publishreminder-f.md#publishreminder-1)API is called<br>The value range is all integers. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

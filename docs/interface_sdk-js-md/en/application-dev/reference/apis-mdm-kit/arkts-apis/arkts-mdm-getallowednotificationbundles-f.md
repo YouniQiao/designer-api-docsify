@@ -20,6 +20,8 @@ Gets applications that are allowed to send notifications.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function getAllowedNotificationBundles(admin: Want | null, accountId: number): Array<string>--><!--Device-applicationManager-function getAllowedNotificationBundles(admin: Want | null, accountId: number): Array<string>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
@@ -33,7 +35,7 @@ Gets applications that are allowed to send notifications.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | returns the list of bundle names of the applications. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | returns the list of bundle names of the applications. |
 
 **Error codes:**
 

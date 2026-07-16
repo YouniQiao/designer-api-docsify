@@ -1,14 +1,20 @@
 # AnimatedDrawableDescriptor
 
-使用[Image](./@internal/component/ets/image)组件播放PixelMap数组或动图资源时传入
-AnimatedDrawableDescriptor对象，
-该对象继承自[DrawableDescriptor](arkts-arkui-drawabledescriptorloadedresult-i.md)。
+使用[Image](./@internal/component/ets/image)组件播放PixelMap数组或动图资源时传入AnimatedDrawableDescriptor对象，该对象继承自[DrawableDescriptor](arkts-arkui-drawabledescriptorloadedresult-i.md)。
 
 **继承/实现关系：** AnimatedDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-drawabledescriptor-c.md)
 
 **起始版本：** 12
 
+<!--Device-unnamed-export class AnimatedDrawableDescriptor extends DrawableDescriptor--><!--Device-unnamed-export class AnimatedDrawableDescriptor extends DrawableDescriptor-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from '@kit.ArkUI';
+```
 
 ## constructor
 
@@ -22,7 +28,9 @@ AnimatedDrawableDescriptor的构造函数。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AnimatedDrawableDescriptor-constructor(pixelMaps: Array<image.PixelMap>, options?: AnimationOptions)--><!--Device-AnimatedDrawableDescriptor-constructor(pixelMaps: Array<image.PixelMap>, options?: AnimationOptions)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,8 +38,8 @@ AnimatedDrawableDescriptor的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelMaps | Array&lt;image.PixelMap&gt; | 是 | PixelMap 数组类型参数，存储 PixelMap 图片数据。 |
-| options | AnimationOptions | 否 | 动画控制选项。 |
+| pixelMaps | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<image.PixelMap> | 是 | PixelMap 数组类型参数，存储 PixelMap 图片数据。 |
+| options | [AnimationOptions](arkts-arkui-animationoptions-i.md) | 否 | 动画控制选项。 |
 
 ## constructor
 
@@ -45,7 +53,9 @@ AnimatedDrawableDescriptor的构造函数。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AnimatedDrawableDescriptor-constructor(src: ResourceStr | Array<image.PixelMap>, options?: AnimationOptions)--><!--Device-AnimatedDrawableDescriptor-constructor(src: ResourceStr | Array<image.PixelMap>, options?: AnimationOptions)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -53,8 +63,8 @@ AnimatedDrawableDescriptor的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | ResourceStr \| Array&lt;image.PixelMap&gt; | 是 | 动图资源地址或者[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md)对象构成的数组。<br/> ResourceStr当前支持的范围：应用资源Resource，沙箱路径（file://&lt;bundleName&gt;/&lt;sandboxPath&gt;），BASE64字符串。 |
-| options | AnimationOptions | 否 | 动画控制参数。 |
+| src | ResourceStr \| Array<image.PixelMap> | 是 | 动图资源地址或者[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md)对象构成的数组。<br/> ResourceStr当前支持的范围：应用资源Resource，沙箱路径（file://&lt;bundleName&gt;/&lt;sandboxPath&gt;），BASE64字符串。 |
+| options | [AnimationOptions](arkts-arkui-animationoptions-i.md) | 否 | 动画控制参数。 |
 
 **示例：**
 
@@ -101,7 +111,9 @@ getAnimationController(id?: string): AnimationController | undefined
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AnimatedDrawableDescriptor-getAnimationController(id?: string): AnimationController | undefined--><!--Device-AnimatedDrawableDescriptor-getAnimationController(id?: string): AnimationController | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -115,7 +127,7 @@ getAnimationController(id?: string): AnimationController | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| AnimationController | 动画控制器对象。 |
+| [AnimationController](arkts-arkui-animationcontroller-i.md) | 动画控制器对象。 |
 
 **示例：**
 

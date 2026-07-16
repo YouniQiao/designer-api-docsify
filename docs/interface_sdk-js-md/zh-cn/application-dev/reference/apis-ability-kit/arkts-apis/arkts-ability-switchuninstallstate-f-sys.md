@@ -1,5 +1,11 @@
 # switchUninstallState（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## switchUninstallState
 
 ```TypeScript
@@ -11,6 +17,8 @@ function switchUninstallState(bundleName: string, state: boolean): void
 **起始版本：** 12
 
 **需要权限：** ohos.permission.CHANGE_BUNDLE_UNINSTALL_STATE
+
+<!--Device-bundleManager-function switchUninstallState(bundleName: string, state: boolean): void--><!--Device-bundleManager-function switchUninstallState(bundleName: string, state: boolean): void-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

@@ -1,5 +1,11 @@
 # addContact
 
+## 导入模块
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+```
+
 ## addContact
 
 ```TypeScript
@@ -16,14 +22,16 @@ function addContact(contact: Contact, callback: AsyncCallback<number>): void
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function addContact(contact: Contact, callback: AsyncCallback<number>): void--><!--Device-contact-function addContact(contact: Contact, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| contact | Contact | 是 | 联系人信息。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。成功返回添加的联系人id；失败返回具体的错误码信息。 |
+| contact | [Contact](arkts-contacts-contact-c.md) | 是 | 联系人信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。成功返回添加的联系人id；失败返回具体的错误码信息。 |
 
 **示例：**
 
@@ -64,7 +72,9 @@ function addContact(context: Context, contact: Contact, callback: AsyncCallback<
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-contact-function addContact(context: Context, contact: Contact, callback: AsyncCallback<number>): void--><!--Device-contact-function addContact(context: Context, contact: Contact, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -72,9 +82,9 @@ function addContact(context: Context, contact: Contact, callback: AsyncCallback<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文Context。 |
-| contact | Contact | 是 | 联系人信息。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。成功返回添加的联系人id；失败返回具体的错误码信息。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
+| contact | [Contact](arkts-contacts-contact-c.md) | 是 | 联系人信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。成功返回添加的联系人id；失败返回具体的错误码信息。 |
 
 **错误码：**
 
@@ -128,19 +138,21 @@ function addContact(contact: Contact): Promise<number>
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function addContact(contact: Contact): Promise<number>--><!--Device-contact-function addContact(contact: Contact): Promise<number>-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| contact | Contact | 是 | 联系人信息。 |
+| contact | [Contact](arkts-contacts-contact-c.md) | 是 | 联系人信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回添加的联系人id。 |
+| Promise<number> | Promise对象，返回添加的联系人id。 |
 
 **示例：**
 
@@ -176,7 +188,9 @@ function addContact(context: Context, contact: Contact): Promise<number>
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-contact-function addContact(context: Context, contact: Contact): Promise<number>--><!--Device-contact-function addContact(context: Context, contact: Contact): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -184,14 +198,14 @@ function addContact(context: Context, contact: Contact): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文Context。 |
-| contact | Contact | 是 | 联系人信息。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
+| contact | [Contact](arkts-contacts-contact-c.md) | 是 | 联系人信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回添加的联系人id。 |
+| Promise<number> | Promise对象，返回添加的联系人id。 |
 
 **错误码：**
 

@@ -13,16 +13,17 @@ function pairDeviceOutOfBand(transport: BluetoothTransport, p192Data: OobData | 
     p256Data: OobData | null): Promise<void>
 ```
 
-Starts pairing with a remote Bluetooth device using the Out Of Band mechanism.
-This function is asynchronous, and the pairing status is obtained by listening to the bondStateChange event.
-If both p192Data and p256Data are null, the function call will fail.
-If both p192Data and p256Data are used simultaneously, p256Data takes effect.
+Starts pairing with a remote Bluetooth device using the Out Of Band mechanism.This function is asynchronous, and the pairing status is obtained by listening to the bondStateChange event.If both p192Data and p256Data are null, the function call will fail.If both p192Data and p256Data are used simultaneously, p256Data takes effect.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-connection-function pairDeviceOutOfBand(transport: BluetoothTransport, p192Data: OobData | null,
+    p256Data: OobData | null): Promise<void>--><!--Device-connection-function pairDeviceOutOfBand(transport: BluetoothTransport, p192Data: OobData | null,
+    p256Data: OobData | null): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -32,7 +33,7 @@ If both p192Data and p256Data are used simultaneously, p256Data takes effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transport | BluetoothTransport | Yes | Indicates the transport of a remote Bluetooth device. |
+| transport | [BluetoothTransport](arkts-connectivity-bluetoothtransport-e.md) | Yes | Indicates the transport of a remote Bluetooth device. |
 | p192Data | OobData \| null | Yes | The out-of-band data (P192), or null if not available. |
 | p256Data | OobData \| null | Yes | The out-of-band data (P256), or null if not available. |
 
@@ -40,7 +41,7 @@ If both p192Data and p256Data are used simultaneously, p256Data takes effect.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 

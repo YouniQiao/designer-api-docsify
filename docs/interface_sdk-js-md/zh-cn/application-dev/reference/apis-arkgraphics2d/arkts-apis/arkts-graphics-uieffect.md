@@ -1,5 +1,11 @@
 # @ohos.graphics.uiEffect
 
+## 导入模块
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
+```
+
 ## 汇总
 
 ### 命名空间

@@ -4,6 +4,8 @@ Provides WebSocket APIs.
 
 **Since:** 11
 
+<!--Device-unnamed-declare namespace webSocket--><!--Device-unnamed-declare namespace webSocket-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -25,7 +27,7 @@ import { webSocket } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [ClientCert](arkts-network-clientcert-i.md) | The clientCert field of the client certificate, which includes three attributes:client certificate (certPath) and only support PEM format, certificate private key (keyPath), and passphrase (keyPassword). |
+| [ClientCert](arkts-network-clientcert-i.md) | The clientCert field of the client certificate, which includes three attributes:client certificate (certPath) and only support PEM format, certificate private key (keyPath),and passphrase (keyPassword). |
 | [CloseResult](arkts-network-closeresult-i.md) | The result for closing a WebSocket connection. |
 | [ServerCert](arkts-network-servercert-i.md) | The serverCert field of the server certificate, which includes two attributes:File paths of server certificate (certPath) and certificate private key (keyPath). Only support PEM format. |
 | [WebSocket](arkts-network-websocket-i.md) | &lt;p&gt;Defines a WebSocket object. Before invoking WebSocket APIs,you need to call webSocket.createWebSocket to create a WebSocket object.&lt;/p&gt; |

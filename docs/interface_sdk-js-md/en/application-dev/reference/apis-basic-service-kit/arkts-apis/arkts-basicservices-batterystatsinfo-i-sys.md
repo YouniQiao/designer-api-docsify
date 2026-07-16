@@ -4,6 +4,8 @@ Describes the device power consumption information.
 
 **Since:** 8
 
+<!--Device-batteryStats-interface BatteryStatsInfo--><!--Device-batteryStats-interface BatteryStatsInfo-End-->
+
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ The power consumption, in unit of mAh.
 
 **Since:** 8
 
+<!--Device-BatteryStatsInfo-power: double--><!--Device-BatteryStatsInfo-power: double-End-->
+
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ The power consumption type.
 
 **Since:** 8
 
+<!--Device-BatteryStatsInfo-type: ConsumptionType--><!--Device-BatteryStatsInfo-type: ConsumptionType-End-->
+
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ The uid related with the power consumption info.
 **Type:** number
 
 **Since:** 8
+
+<!--Device-BatteryStatsInfo-uid: int--><!--Device-BatteryStatsInfo-uid: int-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
 

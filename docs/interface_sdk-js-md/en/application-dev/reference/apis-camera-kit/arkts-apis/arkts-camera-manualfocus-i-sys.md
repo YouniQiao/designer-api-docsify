@@ -6,6 +6,8 @@ ManualFocus object.
 
 **Since:** 24
 
+<!--Device-camera-interface ManualFocus extends ManualFocusQuery--><!--Device-camera-interface ManualFocus extends ManualFocusQuery-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -22,12 +24,13 @@ import { camera } from '@kit.CameraKit';
 getFocusDistance(): number
 ```
 
-Gets current focus distance, ranging from 0.0 to 1.0, with 0.0 being shortest
-distance at which the lens can focus and 1.0 the furthest. The default value is 1.0.
+Gets current focus distance, ranging from 0.0 to 1.0, with 0.0 being shortest distance at which the lens can focus and 1.0 the furthest. The default value is 1.0.
 
 **Since:** 24
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-ManualFocus-getFocusDistance(): double--><!--Device-ManualFocus-getFocusDistance(): double-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -53,12 +56,13 @@ distance at which the lens can focus and 1.0 the furthest. The default value is 
 setFocusDistance(distance: number): void
 ```
 
-Sets focus distance. Possible distance values range from 0.0 to 1.0, with 0.0 being shortest
-distance at which the lens can focus and 1.0 the furthest. The default value is 1.0.
+Sets focus distance. Possible distance values range from 0.0 to 1.0, with 0.0 being shortest distance at which the lens can focus and 1.0 the furthest. The default value is 1.0.
 
 **Since:** 24
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-ManualFocus-setFocusDistance(distance: double): void--><!--Device-ManualFocus-setFocusDistance(distance: double): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

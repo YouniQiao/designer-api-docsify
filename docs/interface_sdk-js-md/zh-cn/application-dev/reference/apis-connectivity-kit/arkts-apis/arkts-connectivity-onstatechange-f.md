@@ -1,5 +1,11 @@
 # onStateChange
 
+## 导入模块
+
+```TypeScript
+import { manager } from '@kit.ConnectivityKit';
+```
+
 ## onStateChange
 
 ```TypeScript
@@ -12,13 +18,15 @@ function onStateChange(callback: Callback<NearlinkState>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-manager-function onStateChange(callback: Callback<NearlinkState>): void--><!--Device-manager-function onStateChange(callback: Callback<NearlinkState>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;NearlinkState&gt; | 是 | 用于监听状态改变事件的回调 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<NearlinkState> | 是 | 用于监听状态改变事件的回调 |
 
 **错误码：**
 

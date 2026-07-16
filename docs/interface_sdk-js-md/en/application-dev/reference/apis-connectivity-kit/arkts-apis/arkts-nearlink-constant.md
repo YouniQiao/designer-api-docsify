@@ -4,6 +4,8 @@ The definition of nearlinkConstant.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare namespace nearlinkConstant--><!--Device-unnamed-declare namespace nearlinkConstant-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import

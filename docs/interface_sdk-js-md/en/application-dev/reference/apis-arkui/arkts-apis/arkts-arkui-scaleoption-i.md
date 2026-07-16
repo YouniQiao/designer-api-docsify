@@ -4,6 +4,8 @@ Describes the scale parameters.
 
 **Since:** 7
 
+<!--Device-matrix4-interface ScaleOption--><!--Device-matrix4-interface ScaleOption-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,6 +34,8 @@ Value range: (-∞, +∞)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScaleOption-centerX?: number--><!--Device-ScaleOption-centerX?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## centerY
@@ -53,6 +57,8 @@ Value range: (-∞, +∞)
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScaleOption-centerY?: number--><!--Device-ScaleOption-centerY?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,6 +84,8 @@ Value range: (-∞, +∞)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScaleOption-x?: number--><!--Device-ScaleOption-x?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
@@ -102,6 +110,8 @@ Value range: (-∞, +∞)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScaleOption-y?: number--><!--Device-ScaleOption-y?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## z
@@ -125,6 +135,8 @@ Value range: (-∞, +∞)
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScaleOption-z?: number--><!--Device-ScaleOption-z?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

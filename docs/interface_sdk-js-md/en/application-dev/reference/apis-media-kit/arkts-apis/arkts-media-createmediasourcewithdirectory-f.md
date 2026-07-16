@@ -18,6 +18,8 @@ Create a MediaSource object from the given directory.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-media-function createMediaSourceWithDirectory(path: string): Promise< MediaSource | undefined>--><!--Device-media-function createMediaSourceWithDirectory(path: string): Promise< MediaSource | undefined>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 **Parameters:**
@@ -30,7 +32,7 @@ Create a MediaSource object from the given directory.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt; MediaSource \| undefined&gt; | If success, an MediaSource is returned. Otherwise returns null. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)< MediaSource \| undefined> | If success, an MediaSource is returned. Otherwise returns null. |
 
 **Error codes:**
 

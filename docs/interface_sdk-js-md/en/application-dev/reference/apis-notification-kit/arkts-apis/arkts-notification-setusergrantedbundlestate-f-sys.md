@@ -13,12 +13,15 @@ function setUserGrantedBundleState(targetBundle: BundleOption,
     enabledBundles: BundleOption[], enabled: boolean): Promise<void>
 ```
 
-Sets the enabling state of device notification access for the specified application.
-This API uses a promise to return the result.
+Sets the enabling state of device notification access for the specified application.This API uses a promise to return the result.
 
 **Since:** 22
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationExtensionSubscription-function setUserGrantedBundleState(targetBundle: BundleOption,
+    enabledBundles: BundleOption[], enabled: boolean): Promise<void>--><!--Device-notificationExtensionSubscription-function setUserGrantedBundleState(targetBundle: BundleOption,
+    enabledBundles: BundleOption[], enabled: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -28,15 +31,15 @@ This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetBundle | BundleOption | Yes | Information about the target application.The application must have requested the ohos.permission.SUBSCRIBE_NOTIFICATION permission and implemented[NotificationSubscriberExtensionAbility](arkts-notification-notificationsubscriberextensionability-c.md).Otherwise, error code 1600022 is returned. |
-| enabledBundles | BundleOption[] | Yes | Authorized applications. |
+| targetBundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Information about the target application.The application must have requested the ohos.permission.SUBSCRIBE_NOTIFICATION permission and implemented [NotificationSubscriberExtensionAbility](arkts-notification-notificationsubscriberextensionability-c.md).Otherwise, error code 1600022 is returned. |
+| enabledBundles | [BundleOption](arkts-notification-bundleoption-i.md)[] | Yes | Authorized applications. |
 | enabled | boolean | Yes | Whether the device notification access for the specified application is enabled.The value **true** indicates that this functionality is enabled, and **false** indicates the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -1,5 +1,11 @@
 # onPreloadedUIExtensionAbilityDestroyed（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
+```
+
 ## onPreloadedUIExtensionAbilityDestroyed
 
 ```TypeScript
@@ -14,6 +20,8 @@ function onPreloadedUIExtensionAbilityDestroyed(callback: PreloadedUIExtensionAb
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-abilityManager-function onPreloadedUIExtensionAbilityDestroyed(callback: PreloadedUIExtensionAbilityDestroyedFn): void--><!--Device-abilityManager-function onPreloadedUIExtensionAbilityDestroyed(callback: PreloadedUIExtensionAbilityDestroyedFn): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ function onPreloadedUIExtensionAbilityDestroyed(callback: PreloadedUIExtensionAb
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | PreloadedUIExtensionAbilityDestroyedFn | 是 | 用于接收被销毁的预加载[UIExtensionAbility](arkts-ability-uiextensionability-c.md)实例ID的回调函数。 |
+| callback | [PreloadedUIExtensionAbilityDestroyedFn](arkts-ability-preloadeduiextensionabilitydestroyedfn-t-sys.md) | 是 | 用于接收被销毁的预加载[UIExtensionAbility](arkts-ability-uiextensionability-c.md)实例ID的回调函数。 |
 
 **错误码：**
 

@@ -2,13 +2,15 @@
 
 Verifies or decrypts a CMS message.
 
-> **NOTE**
->
-> PKCS #7 is a standard syntax for storing signed or encrypted data. CMS is an extension of PKCS #7. PKCS #7
-> supports data types including data, signed data, enveloped data, signed and enveloped data, digested
+> **NOTE**  
+>  
+> PKCS #7 is a standard syntax for storing signed or encrypted data. CMS is an extension of PKCS #7. PKCS #7  
+> supports data types including data, signed data, enveloped data, signed and enveloped data, digested  
 > data, and encrypted data. It is often used to protect data integrity and confidentiality.
 
 **Since:** 22
+
+<!--Device-cert-interface CmsParser--><!--Device-cert-interface CmsParser-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -30,19 +32,21 @@ Decrypts the CMS message of the **ENVELOPED_DATA** content type. This API uses a
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-CmsParser-decryptEnvelopedData(config: CmsEnvelopedDecryptionConfig): Promise<Uint8Array>--><!--Device-CmsParser-decryptEnvelopedData(config: CmsEnvelopedDecryptionConfig): Promise<Uint8Array>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | CmsEnvelopedDecryptionConfig | Yes | CMS decapsulation configuration content. |
+| config | [CmsEnvelopedDecryptionConfig](arkts-devicecertificate-cmsenvelopeddecryptionconfig-i.md) | Yes | CMS decapsulation configuration content. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the decapsulation result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Uint8Array> | Promise used to return the decapsulation result. |
 
 **Error codes:**
 
@@ -144,12 +148,13 @@ async function testCmsDecryptTest() {
 getCerts(type: CmsCertType): Promise<Array<X509Cert>>
 ```
 
-Obtains the certificate from CMS message of the **SIGNED_DATA** type by passing enumerated values. The signer
-certificates or all certificates can be obtained. This API uses a promise to return the result.
+Obtains the certificate from CMS message of the **SIGNED_DATA** type by passing enumerated values. The signer certificates or all certificates can be obtained. This API uses a promise to return the result.
 
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-CmsParser-getCerts(type: CmsCertType): Promise<Array<X509Cert>>--><!--Device-CmsParser-getCerts(type: CmsCertType): Promise<Array<X509Cert>>-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -157,13 +162,13 @@ certificates or all certificates can be obtained. This API uses a promise to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | CmsCertType | Yes | Type of the certificate obtained from the CMS. |
+| type | [CmsCertType](arkts-devicecertificate-cmscerttype-e.md) | Yes | Type of the certificate obtained from the CMS. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;X509Cert&gt;&gt; | Promise used to return a certificate set. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<X509Cert>> | Promise used to return a certificate set. |
 
 **Error codes:**
 
@@ -180,12 +185,13 @@ certificates or all certificates can be obtained. This API uses a promise to ret
 getContentData(): Promise<Uint8Array>
 ```
 
-Obtains the content data from CMS message of the **SIGNED_DATA** type. This API uses a promise to return the
-result.
+Obtains the content data from CMS message of the **SIGNED_DATA** type. This API uses a promise to return the result.
 
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-CmsParser-getContentData(): Promise<Uint8Array>--><!--Device-CmsParser-getContentData(): Promise<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -193,7 +199,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the content data. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Uint8Array> | Promise used to return the content data. |
 
 **Error codes:**
 
@@ -331,13 +337,15 @@ Obtains the CMS content type.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-CmsParser-getContentType(): CmsContentType--><!--Device-CmsParser-getContentType(): CmsContentType-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CmsContentType | CMS content type. |
+| [CmsContentType](arkts-devicecertificate-cmscontenttype-e.md) | CMS content type. |
 
 **Error codes:**
 
@@ -472,14 +480,16 @@ setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>
 
 Converts data in CMS format into CMS objects. This API uses a promise to return the result.
 
-> **NOTE**
->
-> CMS message in PEM and DER formats is supported. **string** corresponds to the PEM format, and **Uint8Array**
+> **NOTE**  
+>  
+> CMS message in PEM and DER formats is supported. **string** corresponds to the PEM format, and **Uint8Array**  
 > corresponds to the DER format.
 
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-CmsParser-setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>--><!--Device-CmsParser-setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -488,13 +498,13 @@ Converts data in CMS format into CMS objects. This API uses a promise to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | Uint8Array \| string | Yes | CMS message content. |
-| cmsFormat | CmsFormat | Yes | Input CMS format. |
+| cmsFormat | [CmsFormat](arkts-devicecertificate-cmsformat-e.md) | Yes | Input CMS format. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -632,19 +642,21 @@ Verifies the CMS message of the **SIGNED_DATA** content type. This API uses a pr
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-CmsParser-verifySignedData(config: CmsVerificationConfig): Promise<void>--><!--Device-CmsParser-verifySignedData(config: CmsVerificationConfig): Promise<void>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | CmsVerificationConfig | Yes | CMS signature verification configuration. |
+| config | [CmsVerificationConfig](arkts-devicecertificate-cmsverificationconfig-i.md) | Yes | CMS signature verification configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

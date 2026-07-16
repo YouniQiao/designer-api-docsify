@@ -1,5 +1,11 @@
 # dump
 
+## 导入模块
+
+```TypeScript
+import { jsLeakWatcher } from '@kit.PerformanceAnalysisKit';
+```
+
 ## dump
 
 ```TypeScript
@@ -9,6 +15,8 @@ function dump(filePath: string): Array<string>
 ����й©�б���������ڴ���ա�
 
 **起始版本：** 12
+
+<!--Device-jsLeakWatcher-function dump(filePath: string): Array<string>--><!--Device-jsLeakWatcher-function dump(filePath: string): Array<string>-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
@@ -22,7 +30,7 @@ function dump(filePath: string): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | ����������ֱ�Ϊ�ļ�����׺Ϊ.jsleaklist��й©�б����ļ�����׺Ϊ.heapsnapshot������ڴ�����ļ���<br>**˵��**��dump�ɹ�������й©�б��ļ�·����������ڴ����·����dumpʧ�ܣ����ؿ����顣 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | ����������ֱ�Ϊ�ļ�����׺Ϊ.jsleaklist��й©�б����ļ�����׺Ϊ.heapsnapshot������ڴ�����ļ���<br>**˵��**��dump�ɹ�������й©�б��ļ�·����������ڴ����·����dumpʧ�ܣ����ؿ����顣 |
 
 **示例：**
 

@@ -23,6 +23,18 @@ Provides grant uri permission for app
 
 **Required permissions:** ohos.permission.WRITE_MEDIA
 
+<!--Device-fileShare-function grantUriPermission(
+    uri: string,
+    bundleName: string,
+    flag: wantConstant.Flags,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-fileShare-function grantUriPermission(
+    uri: string,
+    bundleName: string,
+    flag: wantConstant.Flags,
+    callback: AsyncCallback<void>
+  ): void-End-->
+
 **System capability:** SystemCapability.FileManagement.AppFileService
 
 **System API:** This is a system API.
@@ -34,7 +46,7 @@ Provides grant uri permission for app
 | uri | string | Yes | uri |
 | bundleName | string | Yes | bundleName |
 | flag | wantConstant.Flags | Yes | wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION or wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION |
-| callback | AsyncCallback&lt;void&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes |  |
 
 **Error codes:**
 
@@ -83,6 +95,8 @@ Provides grant uri permission for app
 
 **Required permissions:** ohos.permission.WRITE_MEDIA
 
+<!--Device-fileShare-function grantUriPermission(uri: string, bundleName: string, flag: wantConstant.Flags): Promise<void>--><!--Device-fileShare-function grantUriPermission(uri: string, bundleName: string, flag: wantConstant.Flags): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.AppFileService
 
 **System API:** This is a system API.
@@ -99,7 +113,7 @@ Provides grant uri permission for app
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | no callback return Promise otherwise return void |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | no callback return Promise otherwise return void |
 
 **Error codes:**
 
@@ -146,6 +160,8 @@ Grant URI permissions for an application.
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
+<!--Device-fileShare-function grantUriPermission(policies: Array<PolicyInfo>, targetBundleName: string, appCloneIndex: int): Promise<void>--><!--Device-fileShare-function grantUriPermission(policies: Array<PolicyInfo>, targetBundleName: string, appCloneIndex: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 **System API:** This is a system API.
@@ -154,7 +170,7 @@ Grant URI permissions for an application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policies | Array&lt;PolicyInfo&gt; | Yes | Policy information for the user to grant permissions on URIs. |
+| policies | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PolicyInfo> | Yes | Policy information for the user to grant permissions on URIs. |
 | targetBundleName | string | Yes | Name of the target bundle to authorize. |
 | appCloneIndex | number | Yes | Clone index of the target application. |
 
@@ -162,7 +178,7 @@ Grant URI permissions for an application.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns void. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns void. |
 
 **Error codes:**
 

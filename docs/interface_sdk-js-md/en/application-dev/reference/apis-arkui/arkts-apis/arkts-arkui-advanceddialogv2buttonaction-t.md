@@ -12,5 +12,7 @@ Declare the action when the button of dialog is clicked.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-unnamed-export declare type AdvancedDialogV2ButtonAction = () => void--><!--Device-unnamed-export declare type AdvancedDialogV2ButtonAction = () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

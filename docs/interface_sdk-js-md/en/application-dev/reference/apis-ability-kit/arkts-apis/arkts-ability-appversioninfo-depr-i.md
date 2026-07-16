@@ -1,10 +1,10 @@
 # AppVersionInfo
 
-The module defines the application version information. You can use
-[getAppVersionInfo](../../../../reference/apis-ability-kit/js-apis-inner-app-context.md#contextgetappversioninfo7) to
-obtain the version information of the current application.
+The module defines the application version information. You can use [getAppVersionInfo](../../../../reference/apis-ability-kit/js-apis-inner-app-context.md#contextgetappversioninfo7) to obtain the version information of the current application.
 
 **Since:** 7
+
+<!--Device-unnamed-export interface AppVersionInfo--><!--Device-unnamed-export interface AppVersionInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -27,6 +27,8 @@ Application name.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AppVersionInfo-readonly appName: string--><!--Device-AppVersionInfo-readonly appName: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## versionCode
@@ -48,6 +50,8 @@ Application version number.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-AppVersionInfo-readonly versionCode: number--><!--Device-AppVersionInfo-readonly versionCode: number-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## versionName
@@ -68,6 +72,8 @@ Application version name.
 - API version 12 and later: This API can be used only in the FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AppVersionInfo-readonly versionName: string--><!--Device-AppVersionInfo-readonly versionName: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

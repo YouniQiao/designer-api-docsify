@@ -4,6 +4,8 @@ Indicates wireless signal feature.
 
 **Since:** 26.0.0
 
+<!--Device-geoLocationManager-export interface WirelessSignalFeature--><!--Device-geoLocationManager-export interface WirelessSignalFeature-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Indicates MAC array.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WirelessSignalFeature-mac: Array<string>--><!--Device-WirelessSignalFeature-mac: Array<string>-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **System API:** This is a system API.
@@ -38,14 +42,15 @@ Indicates MAC array.
 rssiAvg: number
 ```
 
-Indicates average RSSI value.
-The value range is all integers.
+Indicates average RSSI value.The value range is all integers.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WirelessSignalFeature-rssiAvg: int--><!--Device-WirelessSignalFeature-rssiAvg: int-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -64,6 +69,8 @@ Indicates RSSI standard deviation.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WirelessSignalFeature-rssiStandardDeviation: double--><!--Device-WirelessSignalFeature-rssiStandardDeviation: double-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 

@@ -4,6 +4,8 @@ Defines a contact's email.
 
 **Since:** 7
 
+<!--Device-contact-class Email--><!--Device-contact-class Email-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Custom mailbox type, the default value is **0**.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Email-static readonly CUSTOM_LABEL: 0--><!--Device-Email-static readonly CUSTOM_LABEL: 0-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## EMAIL_HOME
@@ -41,6 +45,8 @@ Home mailbox, the default value is **1**.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Email-static readonly EMAIL_HOME: 1--><!--Device-Email-static readonly EMAIL_HOME: 1-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -58,6 +64,8 @@ Other mailbox, the default value is **3**.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Email-static readonly EMAIL_OTHER: 3--><!--Device-Email-static readonly EMAIL_OTHER: 3-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## EMAIL_WORK
@@ -73,6 +81,8 @@ Work mailbox, the default value is **2**.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Email-static readonly EMAIL_WORK: 2--><!--Device-Email-static readonly EMAIL_WORK: 2-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -90,6 +100,8 @@ Invalid mailbox, the default value is **-1**.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Email-static readonly INVALID_LABEL_ID: -1--><!--Device-Email-static readonly INVALID_LABEL_ID: -1-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## displayName
@@ -105,6 +117,8 @@ Displayed name of the mailbox.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Email-displayName?: string--><!--Device-Email-displayName?: string-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -122,6 +136,8 @@ Email address of the contact.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Email-email: string--><!--Device-Email-email: string-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## labelId
@@ -138,6 +154,8 @@ Mailbox type.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Email-labelId?: number--><!--Device-Email-labelId?: number-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## labelName
@@ -153,6 +171,8 @@ Name of the mailbox type.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Email-labelName?: string--><!--Device-Email-labelName?: string-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 

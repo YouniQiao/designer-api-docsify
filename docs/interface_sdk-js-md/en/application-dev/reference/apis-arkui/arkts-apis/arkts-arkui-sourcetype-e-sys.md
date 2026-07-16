@@ -4,6 +4,8 @@ Enumerates the trigger source types of user scenes.
 
 **Since:** 12
 
+<!--Device-performanceMonitor-export enum SourceType--><!--Device-performanceMonitor-export enum SourceType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -19,6 +21,8 @@ Touchscreen event.
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SourceType-PERF_TOUCH_EVENT = 0--><!--Device-SourceType-PERF_TOUCH_EVENT = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ Mouse event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SourceType-PERF_MOUSE_EVENT = 1--><!--Device-SourceType-PERF_MOUSE_EVENT = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -51,6 +57,8 @@ Touchpad event.
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SourceType-PERF_TOUCHPAD_EVENT = 2--><!--Device-SourceType-PERF_TOUCHPAD_EVENT = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +76,8 @@ Joystick event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SourceType-PERF_JOYSTICK_EVENT = 3--><!--Device-SourceType-PERF_JOYSTICK_EVENT = 3-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -83,6 +93,8 @@ Keyboard event.
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SourceType-PERF_KEY_EVENT = 4--><!--Device-SourceType-PERF_KEY_EVENT = 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

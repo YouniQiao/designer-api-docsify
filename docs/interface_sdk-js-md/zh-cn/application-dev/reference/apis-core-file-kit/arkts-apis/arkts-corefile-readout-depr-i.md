@@ -6,6 +6,8 @@
 
 **废弃版本：** 9
 
+<!--Device-unnamed-declare interface ReadOut--><!--Device-unnamed-declare interface ReadOut-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## buffer
@@ -21,6 +23,8 @@ buffer: ArrayBuffer
 **起始版本：** 6
 
 **废弃版本：** 9
+
+<!--Device-ReadOut-buffer: ArrayBuffer--><!--Device-ReadOut-buffer: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -38,6 +42,8 @@ bytesRead: number
 
 **废弃版本：** 9
 
+<!--Device-ReadOut-bytesRead: number--><!--Device-ReadOut-bytesRead: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## offset
@@ -53,6 +59,8 @@ offset: number
 **起始版本：** 6
 
 **废弃版本：** 9
+
+<!--Device-ReadOut-offset: number--><!--Device-ReadOut-offset: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

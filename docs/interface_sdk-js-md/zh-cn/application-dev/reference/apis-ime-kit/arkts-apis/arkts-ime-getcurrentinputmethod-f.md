@@ -1,5 +1,11 @@
 # getCurrentInputMethod
 
+## 导入模块
+
+```TypeScript
+import { inputMethod } from '@kit.IMEKit';
+```
+
 ## getCurrentInputMethod
 
 ```TypeScript
@@ -16,13 +22,15 @@ function getCurrentInputMethod(): InputMethodProperty
 
 **起始版本：** 9
 
+<!--Device-inputMethod-function getCurrentInputMethod(): InputMethodProperty--><!--Device-inputMethod-function getCurrentInputMethod(): InputMethodProperty-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| InputMethodProperty | 返回当前输入法属性对象。 |
+| [InputMethodProperty](arkts-ime-inputmethodproperty-i.md) | 返回当前输入法属性对象。 |
 
 **示例：**
 

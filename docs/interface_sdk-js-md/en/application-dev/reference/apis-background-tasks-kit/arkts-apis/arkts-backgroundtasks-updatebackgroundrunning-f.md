@@ -12,12 +12,9 @@ import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 function updateBackgroundRunning(context: Context, bgModes: string[]): Promise<ContinuousTaskNotification>
 ```
 
-Updates continuous tasks of multiple types. This API uses a promise to return the result. After a continuous task
-is successfully updated, there will be a notification message without prompt tone.
+Updates continuous tasks of multiple types. This API uses a promise to return the result. After a continuous task is successfully updated, there will be a notification message without prompt tone.
 
-Before updating a continuous task, you can call
-[getAllContinuousTasks](arkts-backgroundtasks-getallcontinuoustasks-f.md#getallcontinuoustasks-1) to retrieve
-information about all existing continuous tasks. If there are no continuous tasks, the update will fail.
+Before updating a continuous task, you can call [getAllContinuousTasks](arkts-backgroundtasks-getallcontinuoustasks-f.md#getallcontinuoustasks-1) to retrieve information about all existing continuous tasks. If there are no continuous tasks, the update will fail.
 
 This API can only be used to update continuous tasks that were requested via the following APIs:
 
@@ -33,20 +30,22 @@ This API can only be used to update continuous tasks that were requested via the
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-backgroundTaskManager-function updateBackgroundRunning(context: Context, bgModes: string[]): Promise<ContinuousTaskNotification>--><!--Device-backgroundTaskManager-function updateBackgroundRunning(context: Context, bgModes: string[]): Promise<ContinuousTaskNotification>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md).<br> Note: Continuous tasks can be requested only by theUIAbility in the stage model and the ServiceAbility in the FA model. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context.<br>For details about the application context of the FA model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md).<br> Note: Continuous tasks can be requested only by the UIAbility in the stage model and the ServiceAbility in the FA model. |
 | bgModes | string[] | Yes | Types of continuous tasks after the update.<br>For details about the available options,see [Item](../../../../task-management/continuous-task.md#use-cases).<br> Note: One or more types can be passed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ContinuousTaskNotification&gt; | Promise that returns an object of the[ContinuousTaskNotification](arkts-backgroundtasks-continuoustasknotification-i.md) type. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ContinuousTaskNotification> | Promise that returns an object of the [ContinuousTaskNotification](arkts-backgroundtasks-continuoustasknotification-i.md) type. |
 
 **Error codes:**
 
@@ -94,18 +93,11 @@ export default class EntryAbility extends UIAbility {
 function updateBackgroundRunning(context: Context, request: ContinuousTaskRequest): Promise<ContinuousTaskNotification>
 ```
 
-Updates a continuous task. This API uses a promise to return the result. After a continuous task is successfully
-updated, there will be a notification message without prompt tone.
+Updates a continuous task. This API uses a promise to return the result. After a continuous task is successfully updated, there will be a notification message without prompt tone.
 
 The following restrictions apply when updating a continuous task:
 
-1. This API can only update continuous tasks requested via
-[startBackgroundRunning(context: Context, request: ContinuousTaskRequest): Promise&lt;ContinuousTaskNotification&gt;](arkts-backgroundtasks-startbackgroundrunning-f.md#startbackgroundrunning-4).
-2. If the main type and subtype of the background tasks are the same,
-only the wants information (such as **abilityName**) in **ContinuousTaskRequest.wantAgent** can be updated.
-If the types are different, the update fails.
-3. If the continuous task to be updated or the specified update type contains the data transmission type,
-a failure message is returned.
+1. This API can only update continuous tasks requested via [startBackgroundRunning(context: Context, request: ContinuousTaskRequest): Promise&lt;ContinuousTaskNotification&gt;](arkts-backgroundtasks-startbackgroundrunning-f.md#startbackgroundrunning-4).2. If the main type and subtype of the background tasks are the same,only the wants information (such as **abilityName**) in **ContinuousTaskRequest.wantAgent** can be updated.If the types are different, the update fails.3. If the continuous task to be updated or the specified update type contains the data transmission type,a failure message is returned.
 
 **Since:** 21
 
@@ -113,20 +105,22 @@ a failure message is returned.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-backgroundTaskManager-function updateBackgroundRunning(context: Context, request: ContinuousTaskRequest): Promise<ContinuousTaskNotification>--><!--Device-backgroundTaskManager-function updateBackgroundRunning(context: Context, request: ContinuousTaskRequest): Promise<ContinuousTaskNotification>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md).<br> Note: Continuous tasks can be requested only by theUIAbility in the stage model and the ServiceAbility in the FA model. |
-| request | ContinuousTaskRequest | Yes | Continuous task request information, including the ID of the continuoustask to be updated. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context.<br>For details about the application context of the FA model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md).<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md).<br> Note: Continuous tasks can be requested only by the UIAbility in the stage model and the ServiceAbility in the FA model. |
+| request | [ContinuousTaskRequest](arkts-backgroundtasks-continuoustaskrequest-c.md) | Yes | Continuous task request information, including the ID of the continuous task to be updated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ContinuousTaskNotification&gt; | Promise used to return the updated continuous task notificationinformation, including the continuous task ID. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ContinuousTaskNotification> | Promise used to return the updated continuous task notification information, including the continuous task ID. |
 
 **Error codes:**
 

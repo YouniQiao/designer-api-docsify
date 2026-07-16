@@ -12,9 +12,7 @@ import { tag } from '@kit.ConnectivityKit';
 function getNfcFTag(tagInfo: TagInfo): NfcFTag
 ```
 
-Obtains an {@link NfcFTag} object based on the tag information.
-<p>During tag reading, if the tag supports the NFC-F technology, an {@link NfcFTag} object
-will be created based on the tag information.
+Obtains an {@link NfcFTag} object based on the tag information.<p>During tag reading, if the tag supports the NFC-F technology, an {@link NfcFTag} object will be created based on the tag information.
 
 **Since:** 7
 
@@ -22,17 +20,19 @@ will be created based on the tag information.
 
 **Substitutes:** getNfcF
 
+<!--Device-tag-function getNfcFTag(tagInfo: TagInfo): NfcFTag--><!--Device-tag-function getNfcFTag(tagInfo: TagInfo): NfcFTag-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tagInfo | TagInfo | Yes | Indicates the tag information. |
+| tagInfo | [TagInfo](arkts-connectivity-taginfo-i.md) | Yes | Indicates the tag information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| NfcFTag | The {@link NfcFTag} object. |
+| [NfcFTag](arkts-connectivity-nfcftag-t.md) | The {@link NfcFTag} object. |
 

@@ -4,6 +4,8 @@ Defines the current task status.
 
 **Since:** 10
 
+<!--Device-agent-enum State--><!--Device-agent-enum State-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## INITIALIZED
@@ -12,12 +14,13 @@ Defines the current task status.
 INITIALIZED = 0x00
 ```
 
-The task is initialized based on the configuration specified in
-[Config](arkts-basicservices-config-i.md).
+The task is initialized based on the configuration specified in [Config](arkts-basicservices-config-i.md).
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-State-INITIALIZED = 0x00--><!--Device-State-INITIALIZED = 0x00-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -33,6 +36,8 @@ The task lacks resources for running or the resources for retries, or does not m
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-State-WAITING = 0x10--><!--Device-State-WAITING = 0x10-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## RUNNING
@@ -46,6 +51,8 @@ The task is being executed.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-State-RUNNING = 0x20--><!--Device-State-RUNNING = 0x20-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -61,6 +68,8 @@ The task has failed at least once and is being executed again.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-State-RETRYING = 0x21--><!--Device-State-RETRYING = 0x21-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## PAUSED
@@ -74,6 +83,8 @@ The task is suspended and will be resumed later.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-State-PAUSED = 0x30--><!--Device-State-PAUSED = 0x30-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -89,6 +100,8 @@ The task is stopped.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-State-STOPPED = 0x31--><!--Device-State-STOPPED = 0x31-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## COMPLETED
@@ -102,6 +115,8 @@ The task is complete.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-State-COMPLETED = 0x40--><!--Device-State-COMPLETED = 0x40-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -117,6 +132,8 @@ The task fails.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-State-FAILED = 0x41--><!--Device-State-FAILED = 0x41-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## REMOVED
@@ -130,6 +147,8 @@ The task is removed.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-State-REMOVED = 0x50--><!--Device-State-REMOVED = 0x50-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 

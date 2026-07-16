@@ -1,5 +1,11 @@
 # getSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { systemParameter } from '@kit.BasicServicesKit';
+```
+
 ## getSync
 
 ```TypeScript
@@ -13,6 +19,8 @@ function getSync(key: string, def?: string): string
 **废弃版本：** 9
 
 **替代接口：** getSync
+
+<!--Device-systemParameter-function getSync(key: string, def?: string): string--><!--Device-systemParameter-function getSync(key: string, def?: string): string-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 

@@ -12,10 +12,11 @@ import { securityLabel } from '@kit.CoreFileKit';
 function setSecurityLabelSync(path: string, type: DataLevel): void
 ```
 
-Sets the data security level for a file or directory in synchronous mode. The level can only be adjusted from low
-to high, or set to the same level.
+Sets the data security level for a file or directory in synchronous mode. The level can only be adjusted from low to high, or set to the same level.
 
 **Since:** 9
+
+<!--Device-securityLabel-function setSecurityLabelSync(path: string, type: DataLevel): void--><!--Device-securityLabel-function setSecurityLabelSync(path: string, type: DataLevel): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -24,7 +25,7 @@ to high, or set to the same level.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | File path. |
-| type | DataLevel | Yes | Data security level. The value can only be **s0**, **s1**, **s2**, **s3**, or **s4**. |
+| type | [DataLevel](arkts-corefile-datalevel-t.md) | Yes | Data security level. The value can only be **s0**, **s1**, **s2**, **s3**, or **s4**. |
 
 **Error codes:**
 

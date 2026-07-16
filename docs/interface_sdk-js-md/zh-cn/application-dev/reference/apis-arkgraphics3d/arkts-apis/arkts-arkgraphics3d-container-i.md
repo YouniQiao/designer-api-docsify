@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface Container<T>--><!--Device-unnamed-export interface Container<T>-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## append
@@ -15,6 +17,8 @@ append(item: T): void
 将项目追加到容器.
 
 **起始版本：** 12
+
+<!--Device-Container-append(item: T): void--><!--Device-Container-append(item: T): void-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -34,6 +38,8 @@ clear(): void
 
 **起始版本：** 12
 
+<!--Device-Container-clear(): void--><!--Device-Container-clear(): void-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## count
@@ -45,6 +51,8 @@ count(): number
 返回容器中的项目数量.
 
 **起始版本：** 12
+
+<!--Device-Container-count(): int--><!--Device-Container-count(): int-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -63,6 +71,8 @@ get(index: number): T | null
 从容器的子节点列表中返回给定索引的子节点.
 
 **起始版本：** 12
+
+<!--Device-Container-get(index: int): T | null--><!--Device-Container-get(index: int): T | null-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -88,6 +98,8 @@ insertAfter(item: T, sibling: T | null): void
 
 **起始版本：** 12
 
+<!--Device-Container-insertAfter(item: T, sibling: T | null): void--><!--Device-Container-insertAfter(item: T, sibling: T | null): void-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
@@ -106,6 +118,8 @@ remove(item: T): void
 从容器的子节点中移除项目.
 
 **起始版本：** 12
+
+<!--Device-Container-remove(item: T): void--><!--Device-Container-remove(item: T): void-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

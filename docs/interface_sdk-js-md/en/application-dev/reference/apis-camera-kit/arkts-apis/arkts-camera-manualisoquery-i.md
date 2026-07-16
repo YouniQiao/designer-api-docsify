@@ -1,9 +1,10 @@
 # ManualIsoQuery (System API)
 
-Provides APIs to check whether a camera device supports manual ISO setting and obtain the ISO range supported by
-the device.
+Provides APIs to check whether a camera device supports manual ISO setting and obtain the ISO range supported by the device.
 
 **Since:** 24
+
+<!--Device-camera-interface ManualIsoQuery--><!--Device-camera-interface ManualIsoQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -26,6 +27,8 @@ Get a array of supported standard ISO sensitivity values, as defined in ISO 1223
 **Since:** 24
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-ManualIsoQuery-getSupportedIsoRange(): int[]--><!--Device-ManualIsoQuery-getSupportedIsoRange(): int[]-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

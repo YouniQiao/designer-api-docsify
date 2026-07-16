@@ -4,6 +4,8 @@ Describes the setting for Gatt Connection.
 
 **Since:** 26.0.0
 
+<!--Device-ble-interface GattSetting--><!--Device-ble-interface GattSetting-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Indicates whether to automatically connect to the remote device, default is {@co
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-GattSetting-autoConnect?: boolean--><!--Device-GattSetting-autoConnect?: boolean-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## transport
@@ -45,6 +49,8 @@ Transport of the connection, default is {@code TRANSPORT_LE}
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-GattSetting-transport?: BluetoothTransport--><!--Device-GattSetting-transport?: BluetoothTransport-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

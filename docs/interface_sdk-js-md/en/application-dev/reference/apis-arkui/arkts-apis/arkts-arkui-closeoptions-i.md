@@ -1,13 +1,14 @@
 # CloseOptions
 
-Defines the default close icon behavior attributes for the chip, including accessibility attributes. The default
-value of **accessibilityText** is **"Delete"**.
+Defines the default close icon behavior attributes for the chip, including accessibility attributes. The default value of **accessibilityText** is **"Delete"**.
 
 Inherits from [AccessibilityOptions](arkts-arkui-accessibilityoptions-i.md).
 
 **Inheritance/Implementation:** CloseOptions extends [AccessibilityOptions](arkts-arkui-accessibilityoptions-i.md)
 
 **Since:** 14
+
+<!--Device-unnamed-export interface CloseOptions extends AccessibilityOptions--><!--Device-unnamed-export interface CloseOptions extends AccessibilityOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +41,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-CloseOptions-fontSize?: Dimension--><!--Device-CloseOptions-fontSize?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

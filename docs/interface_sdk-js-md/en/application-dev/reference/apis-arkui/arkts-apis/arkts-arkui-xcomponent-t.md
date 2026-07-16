@@ -12,6 +12,8 @@ Represents a FrameNode of the **XComponent** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-type XComponent = TypedFrameNode<XComponentInterface, XComponentAttribute>--><!--Device-typeNode-type XComponent = TypedFrameNode<XComponentInterface, XComponentAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** TypedFrameNode<XComponentInterface, XComponentAttribute>

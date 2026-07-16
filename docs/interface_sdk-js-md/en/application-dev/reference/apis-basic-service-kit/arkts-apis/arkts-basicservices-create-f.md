@@ -18,6 +18,8 @@ Creates a {@link RunningLock} object. This API uses an asynchronous callback to 
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
+<!--Device-runningLock-function create(name: string, type: RunningLockType, callback: AsyncCallback<RunningLock>): void--><!--Device-runningLock-function create(name: string, type: RunningLockType, callback: AsyncCallback<RunningLock>): void-End-->
+
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 **Parameters:**
@@ -25,8 +27,8 @@ Creates a {@link RunningLock} object. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the **RunningLock** object. The value must be a string. |
-| type | RunningLockType | Yes | Type of the **RunningLock** object. The value must be an enum. |
-| callback | AsyncCallback&lt;RunningLock&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined** and data is the created **RunningLock** object. Otherwise, **err** is anerror object. **AsyncCallback** has encapsulated an API of the **RunningLock** class. |
+| type | [RunningLockType](arkts-basicservices-runninglocktype-e.md) | Yes | Type of the **RunningLock** object. The value must be an enum. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<RunningLock> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the created **RunningLock** object. Otherwise, **err** is an error object. **AsyncCallback** has encapsulated an API of the **RunningLock** class. |
 
 **Error codes:**
 
@@ -62,6 +64,8 @@ Creates a {@link RunningLock} object. This API uses a promise to return the resu
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
+<!--Device-runningLock-function create(name: string, type: RunningLockType): Promise<RunningLock>--><!--Device-runningLock-function create(name: string, type: RunningLockType): Promise<RunningLock>-End-->
+
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 **Parameters:**
@@ -69,13 +73,13 @@ Creates a {@link RunningLock} object. This API uses a promise to return the resu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the **RunningLock** object. The value must be a string. |
-| type | RunningLockType | Yes | Type of the **RunningLock** object. The value must be an enum. |
+| type | [RunningLockType](arkts-basicservices-runninglocktype-e.md) | Yes | Type of the **RunningLock** object. The value must be an enum. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RunningLock&gt; | Promise used to return the {@link RunningLock} object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<RunningLock> | Promise used to return the {@link RunningLock} object. |
 
 **Error codes:**
 

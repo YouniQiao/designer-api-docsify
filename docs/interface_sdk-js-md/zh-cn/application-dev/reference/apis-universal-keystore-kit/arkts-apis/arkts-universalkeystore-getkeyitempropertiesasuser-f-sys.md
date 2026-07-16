@@ -1,5 +1,11 @@
 # getKeyItemPropertiesAsUser（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+```
+
 ## getKeyItemPropertiesAsUser
 
 ```TypeScript
@@ -16,6 +22,16 @@ Get properties of the key as user.
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-huks-function getKeyItemPropertiesAsUser(
+    userId: number,
+    keyAlias: string,
+    huksOptions: HuksOptions
+  ): Promise<HuksReturnResult>--><!--Device-huks-function getKeyItemPropertiesAsUser(
+    userId: number,
+    keyAlias: string,
+    huksOptions: HuksOptions
+  ): Promise<HuksReturnResult>-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **系统接口：** 此接口为系统接口。
@@ -26,13 +42,13 @@ Get properties of the key as user.
 | --- | --- | --- | --- |
 | userId | number | 是 | User ID. |
 | keyAlias | string | 是 | Key alias, which must be the same as the alias used when the key was generated. |
-| huksOptions | HuksOptions | 是 | Empty object (leave this parameter empty). |
+| huksOptions | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | 是 | Empty object (leave this parameter empty). |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | Promise used to return the result. If the operation is successful,**properties** in **HuksReturnResult** holds the parameters required for generating the key. |
+| Promise<HuksReturnResult> | Promise used to return the result. If the operation is successful,**properties** in **HuksReturnResult** holds the parameters required for generating the key. |
 
 **错误码：**
 

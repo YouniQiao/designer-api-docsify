@@ -6,7 +6,15 @@
 
 **替代接口：** [request:request](arkts-basicservices-request-n.md)
 
+<!--Device-unnamed-export default class Request--><!--Device-unnamed-export default class Request-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
+
+## 导入模块
+
+```TypeScript
+import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from '@kit.BasicServicesKit';
+```
 
 ## download
 
@@ -22,13 +30,15 @@ static download(options: DownloadRequestOptions): void
 
 **替代接口：** downloadFile(context:
 
+<!--Device-Request-static download(options: DownloadRequestOptions): void--><!--Device-Request-static download(options: DownloadRequestOptions): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | DownloadRequestOptions | 是 | 下载的配置信息。 |
+| options | [DownloadRequestOptions](arkts-basicservices-downloadrequestoptions-i.md) | 是 | 下载的配置信息。 |
 
 ## onDownloadComplete
 
@@ -44,13 +54,15 @@ static onDownloadComplete(options: OnDownloadCompleteOptions): void
 
 **替代接口：** show(id:
 
+<!--Device-Request-static onDownloadComplete(options: OnDownloadCompleteOptions): void--><!--Device-Request-static onDownloadComplete(options: OnDownloadCompleteOptions): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Download
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | OnDownloadCompleteOptions | 是 | 监听下载任务的配置信息。 |
+| options | [OnDownloadCompleteOptions](arkts-basicservices-ondownloadcompleteoptions-i.md) | 是 | 监听下载任务的配置信息。 |
 
 ## upload
 
@@ -66,11 +78,13 @@ static upload(options: UploadRequestOptions): void
 
 **替代接口：** uploadFile(context:
 
+<!--Device-Request-static upload(options: UploadRequestOptions): void--><!--Device-Request-static upload(options: UploadRequestOptions): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Upload
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | UploadRequestOptions | 是 | 上传的配置信息。 |
+| options | [UploadRequestOptions](arkts-basicservices-uploadrequestoptions-i.md) | 是 | 上传的配置信息。 |
 

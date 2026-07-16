@@ -12,6 +12,8 @@ The type for window.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-unnamed-type window = import('../api/@ohos.window').default--><!--Device-unnamed-type window = import('../api/@ohos.window').default-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Property type:** import('../api/@ohos.window').default

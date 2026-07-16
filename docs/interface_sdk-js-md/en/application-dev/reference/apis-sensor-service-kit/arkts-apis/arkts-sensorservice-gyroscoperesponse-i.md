@@ -10,6 +10,8 @@ Defines a **GyroscopeResponse** object.
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
+<!--Device-unnamed-export interface GyroscopeResponse--><!--Device-unnamed-export interface GyroscopeResponse-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -38,6 +40,8 @@ Rotation angular velocity of the X axis.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-GyroscopeResponse-x: number--><!--Device-GyroscopeResponse-x: number-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## y
@@ -60,6 +64,8 @@ Rotation angular velocity of the Y axis.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-GyroscopeResponse-y: number--><!--Device-GyroscopeResponse-y: number-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## z
@@ -81,6 +87,8 @@ Rotation angular velocity of the Z axis.
 **Required permissions:** ohos.permission.GYROSCOPE
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-GyroscopeResponse-z: number--><!--Device-GyroscopeResponse-z: number-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 

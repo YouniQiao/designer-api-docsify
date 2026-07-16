@@ -1,13 +1,14 @@
 # wantAgent
 
-The WantAgent module provides APIs for creating and comparing WantAgent objects, and obtaining the user ID and bundle
-name of a WantAgent object.
+The WantAgent module provides APIs for creating and comparing WantAgent objects, and obtaining the user ID and bundle name of a WantAgent object.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
 **Substitutes:** wantAgent/wantAgent
+
+<!--Device-unnamed-declare namespace wantAgent--><!--Device-unnamed-declare namespace wantAgent-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

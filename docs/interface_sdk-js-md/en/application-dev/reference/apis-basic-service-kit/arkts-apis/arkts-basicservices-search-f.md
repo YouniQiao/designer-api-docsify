@@ -12,12 +12,11 @@ import { request } from '@kit.BasicServicesKit';
 function search(callback: AsyncCallback<Array<string>>): void
 ```
 
-Searches for task IDs based on
-[Filter](arkts-basicservices-filter-i.md). The IDs of all
-tasks from the invoking time to 24 hours ago are searched. This API uses an asynchronous callback to return the
-result.
+Searches for task IDs based on [Filter](arkts-basicservices-filter-i.md). The IDs of all tasks from the invoking time to 24 hours ago are searched. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-agent-function search(callback: AsyncCallback<Array<string>>): void--><!--Device-agent-function search(callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -25,7 +24,7 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined** and **data** is the task ID. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the task ID. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -41,11 +40,11 @@ result.
 function search(filter: Filter, callback: AsyncCallback<Array<string>>): void
 ```
 
-Searches for task IDs based on
-[Filter](arkts-basicservices-filter-i.md). This API uses an
-asynchronous callback to return the result.
+Searches for task IDs based on [Filter](arkts-basicservices-filter-i.md). This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-agent-function search(filter: Filter, callback: AsyncCallback<Array<string>>): void--><!--Device-agent-function search(filter: Filter, callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -53,8 +52,8 @@ asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | Filter | Yes | Filter criteria. |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined** and **data** is the task ID. Otherwise, **err** is an error object. |
+| filter | [Filter](arkts-basicservices-filter-i.md) | Yes | Filter criteria. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the task ID. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -70,11 +69,11 @@ asynchronous callback to return the result.
 function search(filter?: Filter): Promise<Array<string>>
 ```
 
-Searches for task IDs based on
-[Filter](arkts-basicservices-filter-i.md). This API uses a
-promise to return the result.
+Searches for task IDs based on [Filter](arkts-basicservices-filter-i.md). This API uses a promise to return the result.
 
 **Since:** 10
+
+<!--Device-agent-function search(filter?: Filter): Promise<Array<string>>--><!--Device-agent-function search(filter?: Filter): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -82,13 +81,13 @@ promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | Filter | No | Filter criteria. The default value is empty. |
+| filter | [Filter](arkts-basicservices-filter-i.md) | No | Filter criteria. The default value is empty. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the task IDs that meet the filter criteria. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return the task IDs that meet the filter criteria. |
 
 **Error codes:**
 

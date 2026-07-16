@@ -19,6 +19,8 @@ Injects key events (for both single keys and combination keys).
 **Required permissions:** 
 - API version 12+: ohos.permission.INJECT_INPUT_EVENT
 
+<!--Device-inputEventClient-function injectKeyEvent(keyEvent: KeyEventData): void--><!--Device-inputEventClient-function injectKeyEvent(keyEvent: KeyEventData): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Injects key events (for both single keys and combination keys).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyEvent | KeyEventData | Yes | Key event to inject. |
+| keyEvent | [KeyEventData](arkts-input-keyeventdata-i-sys.md) | Yes | Key event to inject. |
 
 **Error codes:**
 

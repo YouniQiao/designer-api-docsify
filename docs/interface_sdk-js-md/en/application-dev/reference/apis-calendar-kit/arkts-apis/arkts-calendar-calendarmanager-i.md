@@ -1,9 +1,10 @@
 # CalendarManager
 
-Before calling any of the following APIs to manage the calendar, you must use
-[getCalendarManager()](arkts-calendar-getcalendarmanager-f.md#getcalendarmanager-1) to obtain a **CalendarManager** object first.
+Before calling any of the following APIs to manage the calendar, you must use [getCalendarManager()](arkts-calendar-getcalendarmanager-f.md#getcalendarmanager-1) to obtain a **CalendarManager** object first.
 
 **Since:** 10
+
+<!--Device-calendarManager-export interface CalendarManager--><!--Device-calendarManager-export interface CalendarManager-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -19,12 +20,13 @@ import { calendarManager } from '@kit.CalendarKit';
 createCalendar(calendarAccount: CalendarAccount): Promise<Calendar>
 ```
 
-Creates a Calendar object based on the calendar account information.
-This API uses a promise to return the result.
+Creates a Calendar object based on the calendar account information.This API uses a promise to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+
+<!--Device-CalendarManager-createCalendar(calendarAccount: CalendarAccount): Promise<Calendar>--><!--Device-CalendarManager-createCalendar(calendarAccount: CalendarAccount): Promise<Calendar>-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -32,13 +34,13 @@ This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| calendarAccount | CalendarAccount | Yes | Calendar account information. |
+| calendarAccount | [CalendarAccount](arkts-calendar-calendaraccount-i.md) | Yes | Calendar account information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Calendar&gt; | Promise used to return the created Calendar object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Calendar> | Promise used to return the created Calendar object. |
 
 **Error codes:**
 
@@ -77,12 +79,13 @@ calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calenda
 createCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>): void
 ```
 
-Creates a Calendar object based on the calendar account information.
-This API uses an asynchronous callback to return the result.
+Creates a Calendar object based on the calendar account information.This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+
+<!--Device-CalendarManager-createCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>): void--><!--Device-CalendarManager-createCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>): void-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -90,8 +93,8 @@ This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| calendarAccount | CalendarAccount | Yes | Calendar account information. |
-| callback | AsyncCallback&lt;Calendar&gt; | Yes | Callback used to return the created Calendar object. |
+| calendarAccount | [CalendarAccount](arkts-calendar-calendaraccount-i.md) | Yes | Calendar account information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Calendar> | Yes | Callback used to return the created Calendar object. |
 
 **Error codes:**
 
@@ -141,19 +144,21 @@ Deletes a specified Calendar object. This API uses a promise to return the resul
 
 **Required permissions:** ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 
+<!--Device-CalendarManager-deleteCalendar(calendar: Calendar): Promise<void>--><!--Device-CalendarManager-deleteCalendar(calendar: Calendar): Promise<void>-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| calendar | Calendar | Yes | Calendar object to delete. The default account cannot be deleted. |
+| calendar | [Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-calendar-c.md) | Yes | Calendar object to delete. The default account cannot be deleted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -209,14 +214,16 @@ Deletes a specified Calendar object. This API uses an asynchronous callback to r
 
 **Required permissions:** ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
 
+<!--Device-CalendarManager-deleteCalendar(calendar: Calendar, callback: AsyncCallback<void>): void--><!--Device-CalendarManager-deleteCalendar(calendar: Calendar, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| calendar | Calendar | Yes | Calendar object to delete. The default account cannot be deleted. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Asynchronous callback that returns no value. |
+| calendar | [Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-calendar-c.md) | Yes | Calendar object to delete. The default account cannot be deleted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Asynchronous callback that returns no value. |
 
 **Error codes:**
 
@@ -269,17 +276,15 @@ calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calenda
 editEvent(event: Event): Promise<number>
 ```
 
-Edits an event on the event creation page, with no event ID specified in **Event**. The **instanceStartTime**, **instanceEndTime**,
-**identifier**, **attendee**, **service**, **isLunar**, and **timeZone** attributes cannot be set. Important events cannot be added either.
-This API uses a promise to return the result.
+Edits an event on the event creation page, with no event ID specified in **Event**. The **instanceStartTime**, **instanceEndTime**,**identifier**, **attendee**, **service**, **isLunar**, and **timeZone** attributes cannot be set. Important events cannot be added either.This API uses a promise to return the result.
 
-Events created using this API can be obtained and modified by the system calendar.
-Third-party applications can obtain and modify the events after they requested the **READ_WHOLE_CALENDAR**
-permission and the **WRITE_WHOLE_CALENDAR** permission, respectively.
+Events created using this API can be obtained and modified by the system calendar.Third-party applications can obtain and modify the events after they requested the **READ_WHOLE_CALENDAR** permission and the **WRITE_WHOLE_CALENDAR** permission, respectively.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CalendarManager-editEvent(event: Event): Promise<number>--><!--Device-CalendarManager-editEvent(event: Event): Promise<number>-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -287,13 +292,13 @@ permission and the **WRITE_WHOLE_CALENDAR** permission, respectively.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Event | Yes | **Event** object. |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-event-c.md) | Yes | **Event** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the event ID. The event ID is the unique identifier of anevent and is the auto-increment primary key of the database. If the event creation fails, no value isreturned; if the value is less than **0**, the event creation is canceled; if the value is greater than **0**, the event creation is successful. The return value cannot be **0** |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the event ID. The event ID is the unique identifier of an event and is the auto-increment primary key of the database. If the event creation fails, no value is returned; if the value is less than **0**, the event creation is canceled; if the value is greater than **0**, the event creation is successful. The return value cannot be **0** |
 
 **Example**
 
@@ -321,12 +326,13 @@ calendarMgr?.editEvent(event).then((eventId: number): void => {
 getAllCalendars(): Promise<Calendar[]>
 ```
 
-Obtains the created and default Calendar objects of the current application.
-This API uses a promise to return the result.
+Obtains the created and default Calendar objects of the current application.This API uses a promise to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+
+<!--Device-CalendarManager-getAllCalendars(): Promise<Calendar[]>--><!--Device-CalendarManager-getAllCalendars(): Promise<Calendar[]>-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -334,7 +340,7 @@ This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Calendar[]&gt; | Promise used to return an array of obtained Calendar objects. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Calendar[]> | Promise used to return an array of obtained Calendar objects. |
 
 **Error codes:**
 
@@ -373,12 +379,13 @@ calendarMgr?.getAllCalendars().then((data: calendarManager.Calendar[]) => {
 getAllCalendars(callback: AsyncCallback<Calendar[]>): void
 ```
 
-Obtains the created and default Calendar objects of the current application.
-This API uses an asynchronous callback to return the result.
+Obtains the created and default Calendar objects of the current application.This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+
+<!--Device-CalendarManager-getAllCalendars(callback: AsyncCallback<Calendar[]>): void--><!--Device-CalendarManager-getAllCalendars(callback: AsyncCallback<Calendar[]>): void-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -386,7 +393,7 @@ This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Calendar[]&gt; | Yes | Callback used to return an array of the obtained Calendar objects. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Calendar[]> | Yes | Callback used to return an array of the obtained Calendar objects. |
 
 **Error codes:**
 
@@ -433,19 +440,21 @@ Obtains the default or specified Calendar object. This API uses a promise to ret
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CalendarManager-getCalendar(calendarAccount?: CalendarAccount): Promise<Calendar>--><!--Device-CalendarManager-getCalendar(calendarAccount?: CalendarAccount): Promise<Calendar>-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| calendarAccount | CalendarAccount | No | Calendar account information, which is used to obtaina specified Calendar object. If this parameter is not set, the default Calendar object is obtained. |
+| calendarAccount | [CalendarAccount](arkts-calendar-calendaraccount-i.md) | No | Calendar account information, which is used to obtain a specified Calendar object. If this parameter is not set, the default Calendar object is obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Calendar&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Calendar> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -488,14 +497,16 @@ Obtains a specified Calendar object. This API uses an asynchronous callback to r
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CalendarManager-getCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>): void--><!--Device-CalendarManager-getCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>): void-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| calendarAccount | CalendarAccount | Yes | Calendar account information. |
-| callback | AsyncCallback&lt;Calendar&gt; | Yes | Callback used to return the obtained Calendar object. |
+| calendarAccount | [CalendarAccount](arkts-calendar-calendaraccount-i.md) | Yes | Calendar account information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Calendar> | Yes | Callback used to return the obtained Calendar object. |
 
 **Error codes:**
 
@@ -542,9 +553,7 @@ calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calenda
 getCalendar(callback: AsyncCallback<Calendar>): void
 ```
 
-Obtains the default Calendar object, which is created when the data storage runs for the first time.
-This API uses an asynchronous callback to return the result.
-You can call this API instead of createCalendar() to use the default calendar for a new event.
+Obtains the default Calendar object, which is created when the data storage runs for the first time.This API uses an asynchronous callback to return the result.You can call this API instead of createCalendar() to use the default calendar for a new event.
 
 **Since:** 10
 
@@ -552,13 +561,15 @@ You can call this API instead of createCalendar() to use the default calendar fo
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CalendarManager-getCalendar(callback: AsyncCallback<Calendar>): void--><!--Device-CalendarManager-getCalendar(callback: AsyncCallback<Calendar>): void-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Calendar&gt; | Yes | Callback used to return the obtained Calendar object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Calendar> | Yes | Callback used to return the obtained Calendar object. |
 
 **Error codes:**
 

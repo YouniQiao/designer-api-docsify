@@ -8,6 +8,8 @@ Defines the callback invoked upon change in the wearing state of the device that
 
 **Substitutes:** WEAR_DETECTION
 
+<!--Device-unnamed-export interface GetOnBodyStateOptions--><!--Device-unnamed-export interface GetOnBodyStateOptions-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -34,6 +36,8 @@ Callback invoked when the API call is complete.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-GetOnBodyStateOptions-complete?: () => void--><!--Device-GetOnBodyStateOptions-complete?: () => void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## fail
@@ -54,6 +58,8 @@ Callback invoked when an API call fails.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-GetOnBodyStateOptions-fail?: (data: string, code: number) => void--><!--Device-GetOnBodyStateOptions-fail?: (data: string, code: number) => void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## success
@@ -73,6 +79,8 @@ Callback upon a successful API call.
 **Substitutes:** once
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-GetOnBodyStateOptions-success: (data: OnBodyStateResponse) => void--><!--Device-GetOnBodyStateOptions-success: (data: OnBodyStateResponse) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 

@@ -1,9 +1,10 @@
 # @ohos.commonEventManager
 
-The **CommonEventManager** module provides common event capabilities to publish, subscribe to, and unsubscribe from
-common events.
+The **CommonEventManager** module provides common event capabilities to publish, subscribe to, and unsubscribe from common events.
 
 **Since:** 9
+
+<!--Device-unnamed-declare namespace commonEventManager--><!--Device-unnamed-declare namespace commonEventManager-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 

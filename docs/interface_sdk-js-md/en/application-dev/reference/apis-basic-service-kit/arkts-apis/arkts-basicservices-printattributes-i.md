@@ -4,6 +4,8 @@ Defines the print attributes.
 
 **Since:** 11
 
+<!--Device-print-interface PrintAttributes--><!--Device-print-interface PrintAttributes-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Color mode of the files to print.
 
 **Since:** 11
 
+<!--Device-PrintAttributes-colorMode?: PrintColorMode--><!--Device-PrintAttributes-colorMode?: PrintColorMode-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## copyNumber
@@ -37,6 +41,8 @@ Number of printed file copies. The default value is **1**.
 **Type:** number
 
 **Since:** 11
+
+<!--Device-PrintAttributes-copyNumber?: int--><!--Device-PrintAttributes-copyNumber?: int-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -52,6 +58,8 @@ Print direction mode.
 
 **Since:** 11
 
+<!--Device-PrintAttributes-directionMode?: PrintDirectionMode--><!--Device-PrintAttributes-directionMode?: PrintDirectionMode-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## duplexMode
@@ -65,6 +73,8 @@ Duplex mode of the files to print.
 **Type:** PrintDuplexMode
 
 **Since:** 11
+
+<!--Device-PrintAttributes-duplexMode?: PrintDuplexMode--><!--Device-PrintAttributes-duplexMode?: PrintDuplexMode-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -80,6 +90,8 @@ Page range of the file to print.
 
 **Since:** 11
 
+<!--Device-PrintAttributes-pageRange?: PrintPageRange--><!--Device-PrintAttributes-pageRange?: PrintPageRange-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## pageSize
@@ -93,6 +105,8 @@ Page size of the file to print.
 **Type:** PrintPageSize | PrintPageType
 
 **Since:** 11
+
+<!--Device-PrintAttributes-pageSize?: PrintPageSize | PrintPageType--><!--Device-PrintAttributes-pageSize?: PrintPageSize | PrintPageType-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 

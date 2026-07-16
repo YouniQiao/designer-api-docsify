@@ -4,6 +4,8 @@ Enumeration of button type.
 
 **Since:** 23
 
+<!--Device-avMusicTemplate-enum ButtonType--><!--Device-avMusicTemplate-enum ButtonType-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## NORMAL
@@ -18,6 +20,8 @@ Normal button.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ButtonType-NORMAL = 0--><!--Device-ButtonType-NORMAL = 0-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## EMPHASIZE
@@ -31,6 +35,8 @@ Emphasize button.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ButtonType-EMPHASIZE = 1--><!--Device-ButtonType-EMPHASIZE = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 

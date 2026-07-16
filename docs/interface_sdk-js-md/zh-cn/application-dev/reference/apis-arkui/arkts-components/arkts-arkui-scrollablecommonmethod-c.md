@@ -6,6 +6,8 @@ CommonScrollableMethod
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare class ScrollableCommonMethod<T> extends CommonMethod<T>--><!--Device-unnamed-declare class ScrollableCommonMethod<T> extends CommonMethod<T>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## autoAdjustScrollBarMargin
@@ -20,7 +22,9 @@ autoAdjustScrollBarMargin(enable: boolean | undefined): T
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-autoAdjustScrollBarMargin(enable: boolean | undefined): T--><!--Device-ScrollableCommonMethod-autoAdjustScrollBarMargin(enable: boolean | undefined): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,7 +52,9 @@ Controls whether the scrollable scrolls back to top when status bar is clicked.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-backToTop(backToTop: boolean): T--><!--Device-ScrollableCommonMethod-backToTop(backToTop: boolean): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,7 +82,9 @@ Clip the content of the scrollable container, excluding background.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-clipContent(clip: ContentClipMode | RectShape): T--><!--Device-ScrollableCommonMethod-clipContent(clip: ContentClipMode | RectShape): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,7 +112,9 @@ contentEndOffset(offset: number | Resource): T
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-contentEndOffset(offset: number | Resource): T--><!--Device-ScrollableCommonMethod-contentEndOffset(offset: number | Resource): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -132,7 +142,9 @@ Sets the offset from the start of the content to the boundary of the scrollable 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-contentStartOffset(offset: number | Resource): T--><!--Device-ScrollableCommonMethod-contentStartOffset(offset: number | Resource): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -140,7 +152,7 @@ Sets the offset from the start of the content to the boundary of the scrollable 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number \| Resource | 是 | Offset from the start of the content to the boundary ofthe scrollable display area.<br>Default value: <em>0</em><br>Unit: vp |
+| offset | number \| Resource | 是 | Offset from the start of the content to the boundary of the scrollable display area.<br>Default value: <em>0</em><br>Unit: vp |
 
 **返回值：**
 
@@ -160,7 +172,9 @@ Set the sensitivity of rotating crown.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): T--><!--Device-ScrollableCommonMethod-digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -168,7 +182,7 @@ Set the sensitivity of rotating crown.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sensitivity | Optional&lt;CrownSensitivity&gt; | 是 | The sensitivity of rotating crown, default value is { MEDIUM }. |
+| sensitivity | [Optional](arkts-arkui-optional-t.md)<CrownSensitivity> | 是 | The sensitivity of rotating crown, default value is { MEDIUM }. |
 
 **返回值：**
 
@@ -188,7 +202,9 @@ Edge scrolling effect.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-edgeEffect(edgeEffect: EdgeEffect, options?: EdgeEffectOptions): T--><!--Device-ScrollableCommonMethod-edgeEffect(edgeEffect: EdgeEffect, options?: EdgeEffectOptions): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -196,8 +212,8 @@ Edge scrolling effect.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| edgeEffect | EdgeEffect | 是 | edge scrolling effect. |
-| options | EdgeEffectOptions | 否 | edge scrolling effect options. |
+| edgeEffect | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 | edge scrolling effect. |
+| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | 否 | edge scrolling effect options. |
 
 **返回值：**
 
@@ -217,7 +233,9 @@ Whether to support scroll gestures by finger or mouse.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-enableScrollInteraction(value: boolean): T--><!--Device-ScrollableCommonMethod-enableScrollInteraction(value: boolean): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -245,7 +263,9 @@ enableScrollWithMouse(enabled: boolean | undefined): T
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-enableScrollWithMouse(enabled: boolean | undefined): T--><!--Device-ScrollableCommonMethod-enableScrollWithMouse(enabled: boolean | undefined): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -273,7 +293,9 @@ Called when setting whether to enable fading Edge effect.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-fadingEdge(enabled: Optional<boolean>, options?: FadingEdgeOptions): T--><!--Device-ScrollableCommonMethod-fadingEdge(enabled: Optional<boolean>, options?: FadingEdgeOptions): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -281,8 +303,8 @@ Called when setting whether to enable fading Edge effect.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | Optional&lt;boolean&gt; | 是 | Whether to turn on the edge fade effect |
-| options | FadingEdgeOptions | 否 | The options of fadingEdge. |
+| enabled | [Optional](arkts-arkui-optional-t.md)<boolean> | 是 | Whether to turn on the edge fade effect |
+| options | [FadingEdgeOptions](arkts-arkui-fadingedgeoptions-i.md) | 否 | The options of fadingEdge. |
 
 **返回值：**
 
@@ -302,7 +324,9 @@ Limit the max speed when fling.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-flingSpeedLimit(speedLimit: number): T--><!--Device-ScrollableCommonMethod-flingSpeedLimit(speedLimit: number): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -330,7 +354,9 @@ friction coefficient.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-friction(value: number | Resource): T--><!--Device-ScrollableCommonMethod-friction(value: number | Resource): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -358,7 +384,9 @@ Nested scrolling options.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-nestedScroll(value: NestedScrollOptions): T--><!--Device-ScrollableCommonMethod-nestedScroll(value: NestedScrollOptions): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -366,7 +394,7 @@ Nested scrolling options.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | NestedScrollOptions | 是 | options for nested scrolling. |
+| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | 是 | options for nested scrolling. |
 
 **返回值：**
 
@@ -386,9 +414,11 @@ Triggered when the scrollable component scrolls.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ScrollableCommonMethod-onDidScroll(handler: OnScrollCallback): T--><!--Device-ScrollableCommonMethod-onDidScroll(handler: OnScrollCallback): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -396,7 +426,7 @@ Triggered when the scrollable component scrolls.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | OnScrollCallback | 是 | Callback triggered when the scrollable component scrolls. |
+| handler | [OnScrollCallback](arkts-arkui-onscrollcallback-t.md) | 是 | Callback triggered when the scrollable component scrolls. |
 
 **返回值：**
 
@@ -416,9 +446,11 @@ Called when the scrollable did end dragging.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本21开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ScrollableCommonMethod-onDidStopDragging(handler: OnDidStopDraggingCallback): T--><!--Device-ScrollableCommonMethod-onDidStopDragging(handler: OnDidStopDraggingCallback): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -426,7 +458,7 @@ Called when the scrollable did end dragging.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | OnDidStopDraggingCallback | 是 | callback of end dragging. |
+| handler | [OnDidStopDraggingCallback](arkts-arkui-ondidstopdraggingcallback-t.md) | 是 | callback of end dragging. |
 
 **返回值：**
 
@@ -446,9 +478,11 @@ Called when the scrollable did end fling.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本21开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ScrollableCommonMethod-onDidStopFling(handler: VoidCallback): T--><!--Device-ScrollableCommonMethod-onDidStopFling(handler: VoidCallback): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -456,7 +490,7 @@ Called when the scrollable did end fling.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | VoidCallback | 是 | callback of end fling. |
+| handler | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 | callback of end fling. |
 
 **返回值：**
 
@@ -476,7 +510,9 @@ Called when the scrollable reaches the end position.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-onReachEnd(event: () => void): T--><!--Device-ScrollableCommonMethod-onReachEnd(event: () => void): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -484,7 +520,7 @@ Called when the scrollable reaches the end position.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | () =&gt; void | 是 | Callback function, triggered when the scrollable reaches the end position. |
+| event | () => void | 是 | Callback function, triggered when the scrollable reaches the end position. |
 
 **返回值：**
 
@@ -504,7 +540,9 @@ Called when the scrollable reaches the start position.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-onReachStart(event: () => void): T--><!--Device-ScrollableCommonMethod-onReachStart(event: () => void): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -512,7 +550,7 @@ Called when the scrollable reaches the start position.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | () =&gt; void | 是 | Callback function, triggered when the scrollable reaches the start position. |
+| event | () => void | 是 | Callback function, triggered when the scrollable reaches the start position. |
 
 **返回值：**
 
@@ -536,7 +574,9 @@ Triggered when the scrollable component scrolls.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void): T--><!--Device-ScrollableCommonMethod-onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -544,7 +584,7 @@ Triggered when the scrollable component scrolls.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | (scrollOffset: number, scrollState: ScrollState) =&gt; void | 是 | callback of scrollable,scrollOffset is offset per frame scrolling, ScrollState is current scroll state. |
+| event | (scrollOffset: number, scrollState: ScrollState) => void | 是 | callback of scrollable,scrollOffset is offset per frame scrolling, ScrollState is current scroll state. |
 
 **返回值：**
 
@@ -564,7 +604,9 @@ Called when the scrollable starts scrolling.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-onScrollStart(event: () => void): T--><!--Device-ScrollableCommonMethod-onScrollStart(event: () => void): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -572,7 +614,7 @@ Called when the scrollable starts scrolling.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | () =&gt; void | 是 | Callback function, triggered when the scrollable starts scrolling. |
+| event | () => void | 是 | Callback function, triggered when the scrollable starts scrolling. |
 
 **返回值：**
 
@@ -592,7 +634,9 @@ Called when the scrollable stops scrolling.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-onScrollStop(event: () => void): T--><!--Device-ScrollableCommonMethod-onScrollStop(event: () => void): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -600,7 +644,7 @@ Called when the scrollable stops scrolling.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | () =&gt; void | 是 | Callback function, triggered when the scrollable stops scrolling. |
+| event | () => void | 是 | Callback function, triggered when the scrollable stops scrolling. |
 
 **返回值：**
 
@@ -620,7 +664,9 @@ Called when the scrollable will scroll.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-onWillScroll(handler: Optional<OnWillScrollCallback>): T--><!--Device-ScrollableCommonMethod-onWillScroll(handler: Optional<OnWillScrollCallback>): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -628,7 +674,7 @@ Called when the scrollable will scroll.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | Optional&lt;OnWillScrollCallback&gt; | 是 | callback of scrollable. |
+| handler | [Optional](arkts-arkui-optional-t.md)<OnWillScrollCallback> | 是 | callback of scrollable. |
 
 **返回值：**
 
@@ -648,9 +694,11 @@ Called when the scrollable will start dragging.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本21开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ScrollableCommonMethod-onWillStartDragging(handler: VoidCallback): T--><!--Device-ScrollableCommonMethod-onWillStartDragging(handler: VoidCallback): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -658,7 +706,7 @@ Called when the scrollable will start dragging.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | VoidCallback | 是 | callback of start dragging. |
+| handler | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 | callback of start dragging. |
 
 **返回值：**
 
@@ -678,9 +726,11 @@ Called when the scrollable will start fling.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本21开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ScrollableCommonMethod-onWillStartFling(handler: VoidCallback): T--><!--Device-ScrollableCommonMethod-onWillStartFling(handler: VoidCallback): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -688,7 +738,7 @@ Called when the scrollable will start fling.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | VoidCallback | 是 | callback of start fling. |
+| handler | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 | callback of start fling. |
 
 **返回值：**
 
@@ -708,9 +758,11 @@ Called when the scrollable will end dragging.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本20开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-ScrollableCommonMethod-onWillStopDragging(handler: OnWillStopDraggingCallback): T--><!--Device-ScrollableCommonMethod-onWillStopDragging(handler: OnWillStopDraggingCallback): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -718,7 +770,7 @@ Called when the scrollable will end dragging.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | OnWillStopDraggingCallback | 是 | callback of end dragging, |
+| handler | [OnWillStopDraggingCallback](arkts-arkui-onwillstopdraggingcallback-t.md) | 是 | callback of end dragging, |
 
 **返回值：**
 
@@ -738,7 +790,9 @@ Scrollbar status.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-scrollBar(barState: BarState): T--><!--Device-ScrollableCommonMethod-scrollBar(barState: BarState): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -746,7 +800,7 @@ Scrollbar status.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| barState | BarState | 是 | Scrollbar status. |
+| barState | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 是 | Scrollbar status. |
 
 **返回值：**
 
@@ -766,7 +820,9 @@ Color of the scrollbar.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-scrollBarColor(color: Color | number | string): T--><!--Device-ScrollableCommonMethod-scrollBarColor(color: Color | number | string): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -794,7 +850,9 @@ Sets the scrollbar color.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-scrollBarColor(color: Color | number | string | Resource): T--><!--Device-ScrollableCommonMethod-scrollBarColor(color: Color | number | string | Resource): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -822,7 +880,9 @@ scrollBarHeight(height: LengthMetrics | undefined): T
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-scrollBarHeight(height: LengthMetrics | undefined): T--><!--Device-ScrollableCommonMethod-scrollBarHeight(height: LengthMetrics | undefined): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -850,7 +910,9 @@ Margin of the scrollbar.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-scrollBarMargin(margin: ScrollBarMargin): T--><!--Device-ScrollableCommonMethod-scrollBarMargin(margin: ScrollBarMargin): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -858,7 +920,7 @@ Margin of the scrollbar.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| margin | ScrollBarMargin | 是 | Margin of the scrollbar. |
+| margin | [ScrollBarMargin](../arkts-apis/arkts-arkui-scrollbarmargin-i.md) | 是 | Margin of the scrollbar. |
 
 **返回值：**
 
@@ -878,7 +940,9 @@ Width of the scrollbar.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-scrollBarWidth(value: number | string): T--><!--Device-ScrollableCommonMethod-scrollBarWidth(value: number | string): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -906,7 +970,9 @@ scrollBarWidth(value: number | string | Resource): T
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScrollableCommonMethod-scrollBarWidth(value: number | string | Resource): T--><!--Device-ScrollableCommonMethod-scrollBarWidth(value: number | string | Resource): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -6,6 +6,8 @@ Describes the color sensor data. It extends from [Response](arkts-sensorservice-
 
 **Since:** 10
 
+<!--Device-sensor-interface ColorResponse extends Response--><!--Device-sensor-interface ColorResponse extends Response-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Color temperature, in Kelvin.
 
 **Since:** 10
 
+<!--Device-ColorResponse-colorTemperature: double--><!--Device-ColorResponse-colorTemperature: double-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **System API:** This is a system API.
@@ -43,6 +47,8 @@ Intensity of light, in lux.
 **Type:** number
 
 **Since:** 10
+
+<!--Device-ColorResponse-lightIntensity: double--><!--Device-ColorResponse-lightIntensity: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 

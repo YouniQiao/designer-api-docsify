@@ -20,6 +20,8 @@ Obtains the application priority notification strategies in batches. This API us
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-notificationManager-function getPriorityStrategyByBundles(bundles: Array<BundleOption>): Promise<Map<BundleOption, long>>--><!--Device-notificationManager-function getPriorityStrategyByBundles(bundles: Array<BundleOption>): Promise<Map<BundleOption, long>>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -28,13 +30,13 @@ Obtains the application priority notification strategies in batches. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundles | Array&lt;BundleOption&gt; | Yes | Array of application bundles. |
+| bundles | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<BundleOption> | Yes | Array of application bundles. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Map&lt;BundleOption, number&gt;&gt; | Promise used to return the key-value pair set of the applicationnotification priority strategies. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Map<BundleOption, number>> | Promise used to return the key-value pair set of the application notification priority strategies. |
 
 **Error codes:**
 

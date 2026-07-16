@@ -1,10 +1,10 @@
 # Session
 
-**Session** implements a session, which saves all [CameraInput](arkts-camera-camerainput-i.md) and
-[CameraOutput](arkts-camera-cameraoutput-i.md) instances required to run the camera and requests the camera
-to take a photo or record a video.
+**Session** implements a session, which saves all [CameraInput](arkts-camera-camerainput-i.md) and [CameraOutput](arkts-camera-cameraoutput-i.md) instances required to run the camera and requests the camera to take a photo or record a video.
 
 **Since:** 11
+
+<!--Device-camera-interface Session--><!--Device-camera-interface Session-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -26,13 +26,15 @@ Adds a [CameraInput](arkts-camera-camerainput-i.md) instance to this session.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Session-addInput(cameraInput: CameraInput): void--><!--Device-Session-addInput(cameraInput: CameraInput): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraInput | CameraInput | Yes | **CameraInput** instance to add. |
+| cameraInput | [CameraInput](arkts-camera-camerainput-i.md) | Yes | **CameraInput** instance to add. |
 
 **Error codes:**
 
@@ -55,13 +57,15 @@ Adds a [CameraOutput](arkts-camera-cameraoutput-i.md) instance to this session.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Session-addOutput(cameraOutput: CameraOutput): void--><!--Device-Session-addOutput(cameraOutput: CameraOutput): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraOutput | CameraOutput | Yes | **CameraOutput** instance to add. |
+| cameraOutput | [CameraOutput](arkts-camera-cameraoutput-i.md) | Yes | **CameraOutput** instance to add. |
 
 **Error codes:**
 
@@ -84,6 +88,8 @@ Starts configuration for the session.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Session-beginConfig(): void--><!--Device-Session-beginConfig(): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Error codes:**
@@ -99,12 +105,13 @@ Starts configuration for the session.
 canAddInput(cameraInput: CameraInput): boolean
 ```
 
-Checks whether a **CameraInput** instance can be added to this session. This API must be called after
-[beginConfig](arkts-camera-session-i.md#beginconfig-1) and before [commitConfig](arkts-camera-session-i.md#commitconfig-2).
+Checks whether a **CameraInput** instance can be added to this session. This API must be called after [beginConfig](arkts-camera-session-i.md#beginconfig-1) and before [commitConfig](arkts-camera-session-i.md#commitconfig-2).
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-Session-canAddInput(cameraInput: CameraInput): boolean--><!--Device-Session-canAddInput(cameraInput: CameraInput): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -112,13 +119,13 @@ Checks whether a **CameraInput** instance can be added to this session. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraInput | CameraInput | Yes | **CameraInput** instance to add. The API does not take effect if the inputparameter is invalid (for example, the value is out of range, null, or undefined). |
+| cameraInput | [CameraInput](arkts-camera-camerainput-i.md) | Yes | **CameraInput** instance to add. The API does not take effect if the input parameter is invalid (for example, the value is out of range, null, or undefined). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for adding the **CameraInput** instance. **true** if it can be added, **false**otherwise. |
+| boolean | Check result for adding the **CameraInput** instance. **true** if it can be added, **false** otherwise. |
 
 ## canAddOutput
 
@@ -126,12 +133,13 @@ Checks whether a **CameraInput** instance can be added to this session. This API
 canAddOutput(cameraOutput: CameraOutput): boolean
 ```
 
-Determines whether a CameraOutput instance can be added to this session. This API must be called after
-[addInput](arkts-camera-session-i.md#addinput-1) and before [commitConfig](arkts-camera-session-i.md#commitconfig-2).
+Determines whether a CameraOutput instance can be added to this session. This API must be called after [addInput](arkts-camera-session-i.md#addinput-1) and before [commitConfig](arkts-camera-session-i.md#commitconfig-2).
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-Session-canAddOutput(cameraOutput: CameraOutput): boolean--><!--Device-Session-canAddOutput(cameraOutput: CameraOutput): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -139,7 +147,7 @@ Determines whether a CameraOutput instance can be added to this session. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraOutput | CameraOutput | Yes | **CameraOutput** instance to add. The API does not take effect if theinput parameter is invalid (for example, the value is out of range, null, or undefined). |
+| cameraOutput | [CameraOutput](arkts-camera-cameraoutput-i.md) | Yes | **CameraOutput** instance to add. The API does not take effect if the input parameter is invalid (for example, the value is out of range, null, or undefined). |
 
 **Return value:**
 
@@ -159,13 +167,15 @@ Commits the configuration for this session. This API uses an asynchronous callba
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Session-commitConfig(callback: AsyncCallback<void>): void--><!--Device-Session-commitConfig(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the configuration issuccessfully committed, **err** is **undefined**; otherwise, **err** is an error object with an error codedefined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). For example, if theaspect ratio of the preview stream is different from that of the video output stream, error code 7400201 isreturned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the configuration is successfully committed, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). For example, if the aspect ratio of the preview stream is different from that of the video output stream, error code 7400201 is returned. |
 
 **Error codes:**
 
@@ -186,13 +196,15 @@ Commits the configuration for this session. This API uses a promise to return th
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Session-commitConfig(): Promise<void>--><!--Device-Session-commitConfig(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -213,13 +225,15 @@ Releases this session. This API uses an asynchronous callback to return the resu
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Session-release(callback: AsyncCallback<void>): void--><!--Device-Session-release(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the session is releasedsuccessfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the session is released successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -239,13 +253,15 @@ Releases this session. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Session-release(): Promise<void>--><!--Device-Session-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -259,13 +275,13 @@ Releases this session. This API uses a promise to return the result.
 removeInput(cameraInput: CameraInput): void
 ```
 
-Removes a [CameraInput](arkts-camera-camerainput-i.md) instance from this session. This API must be called
-after [beginConfig](arkts-camera-session-i.md#beginconfig-1) and before
-[commitConfig](arkts-camera-session-i.md#commitconfig-2).
+Removes a [CameraInput](arkts-camera-camerainput-i.md) instance from this session. This API must be called after [beginConfig](arkts-camera-session-i.md#beginconfig-1) and before [commitConfig](arkts-camera-session-i.md#commitconfig-2).
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-Session-removeInput(cameraInput: CameraInput): void--><!--Device-Session-removeInput(cameraInput: CameraInput): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -273,7 +289,7 @@ after [beginConfig](arkts-camera-session-i.md#beginconfig-1) and before
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraInput | CameraInput | Yes | **CameraInput** instance to remove. |
+| cameraInput | [CameraInput](arkts-camera-camerainput-i.md) | Yes | **CameraInput** instance to remove. |
 
 **Error codes:**
 
@@ -296,13 +312,15 @@ Removes a [CameraOutput](arkts-camera-cameraoutput-i.md) instance from this sess
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Session-removeOutput(cameraOutput: CameraOutput): void--><!--Device-Session-removeOutput(cameraOutput: CameraOutput): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraOutput | CameraOutput | Yes | **CameraOutput** instance to remove. |
+| cameraOutput | [CameraOutput](arkts-camera-cameraoutput-i.md) | Yes | **CameraOutput** instance to remove. |
 
 **Error codes:**
 
@@ -325,13 +343,15 @@ Starts this session. This API uses an asynchronous callback to return the result
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Session-start(callback: AsyncCallback<void>): void--><!--Device-Session-start(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the session starts successfully,**err** is **undefined**; otherwise, **err** is an error object with an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the session starts successfully,**err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -353,13 +373,15 @@ Starts this session. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Session-start(): Promise<void>--><!--Device-Session-start(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -381,13 +403,15 @@ Stops this session. This API uses an asynchronous callback to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Session-stop(callback: AsyncCallback<void>): void--><!--Device-Session-stop(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the session stops successfully,**err** is **undefined**; otherwise, **err** is an error object with an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the session stops successfully,**err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -407,13 +431,15 @@ Stops this session. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Session-stop(): Promise<void>--><!--Device-Session-stop(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

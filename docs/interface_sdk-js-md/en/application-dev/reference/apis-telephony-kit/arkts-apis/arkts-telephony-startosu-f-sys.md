@@ -18,6 +18,8 @@ Execute OS upgrade if current OS upgrade is not the latest one.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE
 
+<!--Device-eSIM-function startOsu(slotId: int): Promise<OsuStatus>--><!--Device-eSIM-function startOsu(slotId: int): Promise<OsuStatus>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -32,7 +34,7 @@ Execute OS upgrade if current OS upgrade is not the latest one.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OsuStatus&gt; | Return the status of OS upgrade when OS upgrade status changed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<OsuStatus> | Return the status of OS upgrade when OS upgrade status changed. |
 
 **Error codes:**
 

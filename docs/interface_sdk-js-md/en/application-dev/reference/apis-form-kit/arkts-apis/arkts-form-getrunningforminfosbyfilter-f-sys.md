@@ -22,6 +22,12 @@ Obtains the RunningFormInfo objects by FormProviderFilter.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-formObserver-function getRunningFormInfosByFilter(
+    formProviderFilter: formInfo.FormProviderFilter
+  ): Promise<Array<formInfo.RunningFormInfo>>--><!--Device-formObserver-function getRunningFormInfosByFilter(
+    formProviderFilter: formInfo.FormProviderFilter
+  ): Promise<Array<formInfo.RunningFormInfo>>-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -36,7 +42,7 @@ Obtains the RunningFormInfo objects by FormProviderFilter.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<formInfo.RunningFormInfo>> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -67,6 +73,14 @@ Obtains the RunningFormInfo objects by FormProviderFilter.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-formObserver-function getRunningFormInfosByFilter(
+    formProviderFilter: formInfo.FormProviderFilter,
+    callback: AsyncCallback<Array<formInfo.RunningFormInfo>>
+  ): void--><!--Device-formObserver-function getRunningFormInfosByFilter(
+    formProviderFilter: formInfo.FormProviderFilter,
+    callback: AsyncCallback<Array<formInfo.RunningFormInfo>>
+  ): void-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -76,7 +90,7 @@ Obtains the RunningFormInfo objects by FormProviderFilter.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formProviderFilter | formInfo.FormProviderFilter | Yes | Indicates the form provider app info. |
-| callback | AsyncCallback&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback of getFormInstancesByFilter. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<formInfo.RunningFormInfo>> | Yes | The callback of getFormInstancesByFilter. |
 
 **Error codes:**
 

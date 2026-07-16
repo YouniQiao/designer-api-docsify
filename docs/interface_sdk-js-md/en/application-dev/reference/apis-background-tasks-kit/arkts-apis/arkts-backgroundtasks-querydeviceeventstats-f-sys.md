@@ -18,6 +18,8 @@ Queries device event states data within a specified period identified by the sta
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryDeviceEventStats(begin: long, end: long, callback: AsyncCallback<Array<DeviceEventStats>>): void--><!--Device-usageStatistics-function queryDeviceEventStats(begin: long, end: long, callback: AsyncCallback<Array<DeviceEventStats>>): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Queries device event states data within a specified period identified by the sta
 | --- | --- | --- | --- |
 | begin | number | Yes | Indicates the start time of the query period, in milliseconds.<br> Unit:ms |
 | end | number | Yes | Indicates the end time of the query period, in milliseconds.<br> Unit:ms |
-| callback | AsyncCallback&lt;Array&lt;DeviceEventStats&gt;&gt; | Yes | Callback used to return the result.If the query is successful, **err** is **undefined**, and data is the {@link DeviceEventStats} object Arraycontaining the event states data. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<DeviceEventStats>> | Yes | Callback used to return the result.If the query is successful, **err** is **undefined**, and data is the {@link DeviceEventStats} object Array containing the event states data. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -75,6 +77,8 @@ Queries device event states data within a specified period identified by the sta
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryDeviceEventStats(begin: long, end: long): Promise<Array<DeviceEventStats>>--><!--Device-usageStatistics-function queryDeviceEventStats(begin: long, end: long): Promise<Array<DeviceEventStats>>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -90,7 +94,7 @@ Queries device event states data within a specified period identified by the sta
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DeviceEventStats&gt;&gt; | the promise returned by queryDeviceEventStats.the {@link DeviceEventStats} object Array containing the event states data. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<DeviceEventStats>> | the promise returned by queryDeviceEventStats.the {@link DeviceEventStats} object Array containing the event states data. |
 
 **Error codes:**
 

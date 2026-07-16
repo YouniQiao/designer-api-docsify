@@ -11,6 +11,10 @@ The type of control command.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-avSession-type AVControlCommandType = 'play' | 'pause' | 'stop' | 'playNext' | 'playPrevious' | 'fastForward' | 'rewind' |
+  'seek' | 'setSpeed' | 'setLoopMode' | 'toggleFavorite' | 'playFromAssetId' | 'playWithAssetId' | 'answer' | 'hangUp' | 'toggleCallMute' | 'setTargetLoopMode'--><!--Device-avSession-type AVControlCommandType = 'play' | 'pause' | 'stop' | 'playNext' | 'playPrevious' | 'fastForward' | 'rewind' |
+  'seek' | 'setSpeed' | 'setLoopMode' | 'toggleFavorite' | 'playFromAssetId' | 'playWithAssetId' | 'answer' | 'hangUp' | 'toggleCallMute' | 'setTargetLoopMode'-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 | Type | Description |
@@ -31,5 +35,5 @@ The type of control command.
 | 'answer' | Answer an incoming call. [since 11] |
 | 'hangUp' | Hang up the current call. [since 11] |
 | 'toggleCallMute' | Toggle the mute status of the call. [since 11] |
-| 'setTargetLoopMode' | Set the target loop mode. [since 18] |
+| 'setTargetLoopMode' | Set the target loop mode. [since 18]* |
 

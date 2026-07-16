@@ -6,6 +6,8 @@ Enumerates the continuation modes provided by the device selection module.
 
 **Deprecated since:** 22
 
+<!--Device-continuationManager-export enum ContinuationMode--><!--Device-continuationManager-export enum ContinuationMode-End-->
+
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 ## COLLABORATION_SINGLE
@@ -24,6 +26,8 @@ Single-choice mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ContinuationMode-COLLABORATION_SINGLE = 0--><!--Device-ContinuationMode-COLLABORATION_SINGLE = 0-End-->
+
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 ## COLLABORATION_MULTIPLE
@@ -41,6 +45,8 @@ Multi-choice mode.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ContinuationMode-COLLABORATION_MULTIPLE = 1--><!--Device-ContinuationMode-COLLABORATION_MULTIPLE = 1-End-->
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 

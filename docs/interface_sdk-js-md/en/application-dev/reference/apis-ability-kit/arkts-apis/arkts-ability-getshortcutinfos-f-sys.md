@@ -12,13 +12,12 @@ import { BundleStatusCallback } from '@kit.AbilityKit';
 function getShortcutInfos(bundleName: string, callback: AsyncCallback<Array<ShortcutInfo>>): void
 ```
 
-Obtains an array of the shortcut information based on a given bundle name. This API uses an asynchronous callback
-to return the result.
+Obtains an array of the shortcut information based on a given bundle name. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getShortcutInfo](@ohos.bundle.launcherBundleManager:launcherBundleManager.getShortcutInfo(bundleName :string, callback: AsyncCallback<Array<ShortcutInfo>>))
+> **NOTE**  
+>  
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [getShortcutInfo](arkts-ability-getshortcutinfo-f-sys.md#getshortcutinfo-1)  
 > instead.
 
 **Since:** 8
@@ -28,6 +27,8 @@ to return the result.
 **Substitutes:** getShortcutInfo(bundleName
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-innerBundleManager-function getShortcutInfos(bundleName: string, callback: AsyncCallback<Array<ShortcutInfo>>): void--><!--Device-innerBundleManager-function getShortcutInfos(bundleName: string, callback: AsyncCallback<Array<ShortcutInfo>>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -38,7 +39,7 @@ to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | AsyncCallback&lt;Array&lt;ShortcutInfo&gt;&gt; | Yes | Callback used to return an array of the shortcutinformation. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<ShortcutInfo>> | Yes | Callback used to return an array of the shortcut information. |
 
 
 ## getShortcutInfos
@@ -47,13 +48,12 @@ to return the result.
 function getShortcutInfos(bundleName: string): Promise<Array<ShortcutInfo>>
 ```
 
-Obtains an array of the shortcut information based on a given bundle name. This API uses a promise to return the
-result.
+Obtains an array of the shortcut information based on a given bundle name. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getShortcutInfo](@ohos.bundle.launcherBundleManager:launcherBundleManager.getShortcutInfo(bundleName :string, callback: AsyncCallback<Array<ShortcutInfo>>))
+> **NOTE**  
+>  
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use  
+> [getShortcutInfo](arkts-ability-getshortcutinfo-f-sys.md#getshortcutinfo-1)  
 > instead.
 
 **Since:** 8
@@ -63,6 +63,8 @@ result.
 **Substitutes:** getShortcutInfo(bundleName
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-innerBundleManager-function getShortcutInfos(bundleName: string): Promise<Array<ShortcutInfo>>--><!--Device-innerBundleManager-function getShortcutInfos(bundleName: string): Promise<Array<ShortcutInfo>>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -78,5 +80,5 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ShortcutInfo&gt;&gt; | Promise used to return an array of the shortcut information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ShortcutInfo>> | Promise used to return an array of the shortcut information. |
 

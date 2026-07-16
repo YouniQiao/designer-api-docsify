@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-cloudSync-enum State--><!--Device-cloudSync-enum State-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## RUNNING
@@ -15,6 +17,8 @@ RUNNING = 0
 云文件正在下载中。
 
 **起始版本：** 11
+
+<!--Device-State-RUNNING = 0--><!--Device-State-RUNNING = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -28,6 +32,8 @@ COMPLETED = 1
 
 **起始版本：** 11
 
+<!--Device-State-COMPLETED = 1--><!--Device-State-COMPLETED = 1-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## FAILED
@@ -40,6 +46,8 @@ FAILED = 2
 
 **起始版本：** 11
 
+<!--Device-State-FAILED = 2--><!--Device-State-FAILED = 2-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## STOPPED
@@ -51,6 +59,8 @@ STOPPED = 3
 云文件下载已停止。
 
 **起始版本：** 11
+
+<!--Device-State-STOPPED = 3--><!--Device-State-STOPPED = 3-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

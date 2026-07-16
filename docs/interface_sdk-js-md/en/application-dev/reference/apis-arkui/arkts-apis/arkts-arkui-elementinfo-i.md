@@ -1,9 +1,10 @@
 # ElementInfo
 
-Defines information about the components associated with the observable object, including system components and
-custom components.
+Defines information about the components associated with the observable object, including system components and custom components.
 
 **Since:** 23
+
+<!--Device-unnamed-export interface ElementInfo--><!--Device-unnamed-export interface ElementInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,6 +30,8 @@ Component ID.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-ElementInfo-elementId: number--><!--Device-ElementInfo-elementId: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## elementName
@@ -46,6 +49,8 @@ Component name.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-ElementInfo-elementName: string--><!--Device-ElementInfo-elementName: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

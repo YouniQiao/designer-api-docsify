@@ -1,10 +1,10 @@
 # HceService
 
-A class for NFC host application.
-<p>The NFC host application use this class, then Nfc service can access the application
-installation information and connect to services of the application.
+A class for NFC host application.<p>The NFC host application use this class, then Nfc service can access the application installation information and connect to services of the application.
 
 **Since:** 12
+
+<!--Device-cardEmulation-export class HceService--><!--Device-cardEmulation-export class HceService-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
@@ -28,6 +28,8 @@ Unsubscribe the event to receive the APDU data.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-HceService-off(type: 'hceCmd', callback?: AsyncCallback<int[]>): void--><!--Device-HceService-off(type: 'hceCmd', callback?: AsyncCallback<int[]>): void-End-->
+
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
 **Parameters:**
@@ -35,7 +37,7 @@ Unsubscribe the event to receive the APDU data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hceCmd' | Yes | The type to unregister event. |
-| callback | AsyncCallback&lt;number[]&gt; | No | The callback used to listen for the event. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number[]> | No | The callback used to listen for the event. |
 
 **Error codes:**
 
@@ -94,6 +96,8 @@ register HCE event to receive the APDU data.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HceService-on(type: 'hceCmd', callback: AsyncCallback<int[]>): void--><!--Device-HceService-on(type: 'hceCmd', callback: AsyncCallback<int[]>): void-End-->
+
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
 **Parameters:**
@@ -101,7 +105,7 @@ register HCE event to receive the APDU data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hceCmd' | Yes | The type to register. |
-| callback | AsyncCallback&lt;number[]&gt; | Yes | Callback used to listen to HCE data that local device received. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number[]> | Yes | Callback used to listen to HCE data that local device received. |
 
 **Error codes:**
 
@@ -117,8 +121,7 @@ register HCE event to receive the APDU data.
 sendResponse(responseApdu: number[]): void
 ```
 
-Sends a response APDU to the remote device.
-<p>This method is used by a host application when swiping card.
+Sends a response APDU to the remote device.<p>This method is used by a host application when swiping card.
 
 **Since:** 8
 
@@ -129,6 +132,8 @@ Sends a response APDU to the remote device.
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HceService-sendResponse(responseApdu: number[]): void--><!--Device-HceService-sendResponse(responseApdu: number[]): void-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
@@ -152,13 +157,15 @@ Starts the HCE, register more aids and allows this application to be preferred w
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HceService-start(elementName: ElementName, aidList: string[]): void--><!--Device-HceService-start(elementName: ElementName, aidList: string[]): void-End-->
+
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | ElementName | Yes | The element name of the service ability |
+| elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-t.md) | Yes | The element name of the service ability |
 | aidList | string[] | Yes | The aid list to be registered by this service, allowed to be empty. |
 
 **Error codes:**
@@ -188,6 +195,8 @@ start HCE
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HceService-startHCE(aidList: string[]): boolean--><!--Device-HceService-startHCE(aidList: string[]): boolean-End-->
+
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
 **Parameters:**
@@ -216,13 +225,15 @@ Stops the HCE, and unset the preferred service while in foreground.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HceService-stop(elementName: ElementName): void--><!--Device-HceService-stop(elementName: ElementName): void-End-->
+
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | ElementName | Yes | The element name of the service ability |
+| elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-t.md) | Yes | The element name of the service ability |
 
 **Error codes:**
 
@@ -251,6 +262,8 @@ stop HCE
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HceService-stopHCE(): boolean--><!--Device-HceService-stopHCE(): boolean-End-->
+
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
 **Return value:**
@@ -273,6 +286,8 @@ Sends a response APDU to the remote device.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HceService-transmit(response: int[]): Promise<void>--><!--Device-HceService-transmit(response: int[]): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
 **Parameters:**
@@ -285,7 +300,7 @@ Sends a response APDU to the remote device.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The void |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The void |
 
 **Error codes:**
 
@@ -346,6 +361,8 @@ Sends a response APDU to the remote device.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HceService-transmit(response: int[], callback: AsyncCallback<void>): void--><!--Device-HceService-transmit(response: int[], callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
 **Parameters:**
@@ -353,7 +370,7 @@ Sends a response APDU to the remote device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | response | number[] | Yes | Indicates the response to send, which is a byte array. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback |
 
 **Error codes:**
 

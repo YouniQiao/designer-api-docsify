@@ -1,5 +1,11 @@
 # getFontDescriptorByFullName
 
+## 导入模块
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D';
+```
+
 ## getFontDescriptorByFullName
 
 ```TypeScript
@@ -12,7 +18,9 @@ function getFontDescriptorByFullName(fullName: string, fontType: SystemFontType)
 
 **起始版本：** 14
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-text-function getFontDescriptorByFullName(fullName: string, fontType: SystemFontType): Promise<FontDescriptor>--><!--Device-text-function getFontDescriptorByFullName(fullName: string, fontType: SystemFontType): Promise<FontDescriptor>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -21,13 +29,13 @@ function getFontDescriptorByFullName(fullName: string, fontType: SystemFontType)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | fullName | string | 是 | 指定的字体名称。可以使用[getSystemFontFullNamesByType](arkts-arkgraphics2d-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype-1)获取。 |
-| fontType | SystemFontType | 是 | 指定的字体类型。 |
+| fontType | [SystemFontType](arkts-arkgraphics2d-systemfonttype-e.md) | 是 | 指定的字体类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;FontDescriptor&gt; | Promise对象，返回指定的字体描述符。 |
+| Promise<FontDescriptor> | Promise对象，返回指定的字体描述符。 |
 
 **错误码：**
 

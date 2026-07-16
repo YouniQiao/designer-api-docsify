@@ -1,10 +1,10 @@
 # AsyKeyGeneratorBySpec
 
-Provides APIs for using the **AsyKeyGeneratorBySpec**. Before using the APIs of this class, you need to use
-[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec-1) to create an
-**AsyKeyGeneratorBySpec** instance.
+Provides APIs for using the **AsyKeyGeneratorBySpec**. Before using the APIs of this class, you need to use [createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec-1) to create an **AsyKeyGeneratorBySpec** instance.
 
 **Since:** 10
+
+<!--Device-cryptoFramework-interface AsyKeyGeneratorBySpec--><!--Device-cryptoFramework-interface AsyKeyGeneratorBySpec-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -22,17 +22,15 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 generateKeyPair(callback: AsyncCallback<KeyPair>): void
 ```
 
-Generates a key pair using this asymmetric key generator. This API uses an asynchronous callback to return the
-result.
+Generates a key pair using this asymmetric key generator. This API uses an asynchronous callback to return the result.
 
-If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the
-key generator, a key pair will be randomly generated. If a key parameter of the
-[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key generator, you can obtain a
-key pair that is consistent with the specified key parameters.
+If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key generator, a key pair will be randomly generated. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key generator, you can obtain a key pair that is consistent with the specified key parameters.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeyGeneratorBySpec-generateKeyPair(callback: AsyncCallback<KeyPair>): void--><!--Device-AsyKeyGeneratorBySpec-generateKeyPair(callback: AsyncCallback<KeyPair>): void-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -42,7 +40,7 @@ key pair that is consistent with the specified key parameters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;KeyPair&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the key pair obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<KeyPair> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the key pair obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -104,14 +102,13 @@ generateKeyPair(): Promise<KeyPair>
 
 Generates a key pair using this asymmetric key generator. This API uses a promise to return the result.
 
-If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the
-key generator, a key pair will be randomly generated. If a key parameter of the
-[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key generator, you can obtain a
-key pair that is consistent with the specified key parameters.
+If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key generator, a key pair will be randomly generated. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key generator, you can obtain a key pair that is consistent with the specified key parameters.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeyGeneratorBySpec-generateKeyPair(): Promise<KeyPair>--><!--Device-AsyKeyGeneratorBySpec-generateKeyPair(): Promise<KeyPair>-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -121,7 +118,7 @@ key pair that is consistent with the specified key parameters.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KeyPair&gt; | Promise used to return the asymmetric key pair. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<KeyPair> | Promise used to return the asymmetric key pair. |
 
 **Error codes:**
 
@@ -183,19 +180,15 @@ generateKeyPairSync(): KeyPair
 
 Generates a key pair using this asymmetric key generator. This API returns the result synchronously.
 
-If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the
-key generator, a key pair will be randomly generated. If a key parameter of the
-[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key generator, you can obtain a
-key pair that is consistent with the specified key parameters.
+If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key generator, a key pair will be randomly generated. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key generator, you can obtain a key pair that is consistent with the specified key parameters.
 
-<br><br>**NOTE**
-<br>It is recommended to prioritize the use of asynchronous API, {@link generateKeyPair}. Synchronous API may
-take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,
-it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link generateKeyPair}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeyGeneratorBySpec-generateKeyPairSync(): KeyPair--><!--Device-AsyKeyGeneratorBySpec-generateKeyPairSync(): KeyPair-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -203,7 +196,7 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 
 | Type | Description |
 | --- | --- |
-| KeyPair | Asymmetric key pair. |
+| [KeyPair](arkts-cryptoarchitecture-keypair-i.md) | Asymmetric key pair. |
 
 **Error codes:**
 
@@ -268,16 +261,15 @@ function testGenerateKeyPairSync() {
 generatePriKey(callback: AsyncCallback<PriKey>): void
 ```
 
-Generates a private key using this asymmetric key generator. This API uses an asynchronous callback to return the
-result.
+Generates a private key using this asymmetric key generator. This API uses an asynchronous callback to return the result.
 
-If [PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) is used to create a key generator, the key generator
-generates the specified private key. If [KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) is used to create a
-key generator, you can obtain the specified private key from the key pair generated.
+If [PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) is used to create a key generator, the key generator generates the specified private key. If [KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) is used to create a key generator, you can obtain the specified private key from the key pair generated.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeyGeneratorBySpec-generatePriKey(callback: AsyncCallback<PriKey>): void--><!--Device-AsyKeyGeneratorBySpec-generatePriKey(callback: AsyncCallback<PriKey>): void-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -287,7 +279,7 @@ key generator, you can obtain the specified private key from the key pair genera
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;PriKey&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the private key obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<PriKey> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the private key obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -349,14 +341,13 @@ generatePriKey(): Promise<PriKey>
 
 Generates a private key using this asymmetric key generator. This API uses a promise to return the result.
 
-If a key parameter of the [PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key
-generator, a private key can be obtained. If a key parameter of the
-[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key generator, you can obtain
-the private key from the key pair generated.
+If a key parameter of the [PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key generator, a private key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key generator, you can obtain the private key from the key pair generated.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeyGeneratorBySpec-generatePriKey(): Promise<PriKey>--><!--Device-AsyKeyGeneratorBySpec-generatePriKey(): Promise<PriKey>-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -366,7 +357,7 @@ the private key from the key pair generated.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PriKey&gt; | Promise used to return the private key. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PriKey> | Promise used to return the private key. |
 
 **Error codes:**
 
@@ -428,19 +419,15 @@ generatePriKeySync(): PriKey
 
 Generates a private key using this asymmetric key generator. This API returns the result synchronously.
 
-If a key parameter of the [PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key
-generator, a private key can be obtained. If a key parameter of the
-[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key generator, you can obtain
-the private key from the key pair generated.
+If a key parameter of the [PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key generator, a private key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key generator, you can obtain the private key from the key pair generated.
 
-<br><br>**NOTE**
-<br>It is recommended to prioritize the use of asynchronous API, {@link generatePriKey}. Synchronous API may
-take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,
-it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link generatePriKey}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeyGeneratorBySpec-generatePriKeySync(): PriKey--><!--Device-AsyKeyGeneratorBySpec-generatePriKeySync(): PriKey-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -448,7 +435,7 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 
 | Type | Description |
 | --- | --- |
-| PriKey | Private key. |
+| [PriKey](arkts-cryptoarchitecture-prikey-i.md) | Private key. |
 
 **Error codes:**
 
@@ -511,17 +498,15 @@ function testGeneratePriKeySync() {
 generatePubKey(callback: AsyncCallback<PubKey>): void
 ```
 
-Generates a public key using this asymmetric key generator. This API uses an asynchronous callback to return the
-result.
+Generates a public key using this asymmetric key generator. This API uses an asynchronous callback to return the result.
 
-If a key parameter of the [PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key
-generator, the specified public key can be obtained. If a key parameter of the
-[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key generator, you can obtain
-the specified public key from the key pair generated.
+If a key parameter of the [PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key generator, the specified public key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key generator, you can obtain the specified public key from the key pair generated.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeyGeneratorBySpec-generatePubKey(callback: AsyncCallback<PubKey>): void--><!--Device-AsyKeyGeneratorBySpec-generatePubKey(callback: AsyncCallback<PubKey>): void-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -531,7 +516,7 @@ the specified public key from the key pair generated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;PubKey&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the public key obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<PubKey> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the public key obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -593,14 +578,13 @@ generatePubKey(): Promise<PubKey>
 
 Generates a public key using this asymmetric key generator. This API uses a promise to return the result.
 
-If a key parameter of the [PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key
-generator, the specified public key can be obtained. If a key parameter of the
-[KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key generator, you can obtain
-the specified public key from the key pair generated.
+If a key parameter of the [PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key generator, the specified public key can be obtained. If a key parameter of the [KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) type is used to create the key generator, you can obtain the specified public key from the key pair generated.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeyGeneratorBySpec-generatePubKey(): Promise<PubKey>--><!--Device-AsyKeyGeneratorBySpec-generatePubKey(): Promise<PubKey>-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -610,7 +594,7 @@ the specified public key from the key pair generated.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PubKey&gt; | Promise used to return the public key. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PubKey> | Promise used to return the public key. |
 
 **Error codes:**
 
@@ -672,18 +656,15 @@ generatePubKeySync(): PubKey
 
 Generates a public key using this asymmetric key generator. This API returns the result synchronously.
 
-If [PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) is used to create a key generator, the key generator
-generates the specified public key. If [KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) is used to create a
-key generator, you can obtain the specified public key from the key pair generated.
+If [PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) is used to create a key generator, the key generator generates the specified public key. If [KEY_PAIR_SPEC](arkts-cryptoarchitecture-asykeyspectype-e.md) is used to create a key generator, you can obtain the specified public key from the key pair generated.
 
-<br><br>**NOTE**
-<br>It is recommended to prioritize the use of asynchronous API, {@link generatePubKey}. Synchronous API may
-take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,
-it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link generatePubKey}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeyGeneratorBySpec-generatePubKeySync(): PubKey--><!--Device-AsyKeyGeneratorBySpec-generatePubKeySync(): PubKey-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -691,7 +672,7 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 
 | Type | Description |
 | --- | --- |
-| PubKey | Public key. |
+| [PubKey](arkts-cryptoarchitecture-pubkey-i.md) | Public key. |
 
 **Error codes:**
 
@@ -761,6 +742,8 @@ Indicates the algorithm name of the generator.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeyGeneratorBySpec-readonly algName: string--><!--Device-AsyKeyGeneratorBySpec-readonly algName: string-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey

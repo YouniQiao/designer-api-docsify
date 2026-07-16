@@ -2,16 +2,23 @@
 
 空间音频管理。
 
-在使用AudioSpatializationManager的接口之前，需先通过
-[getSpatializationManager](arkts-audio-audiomanager-i.md#getspatializationmanager-1)获取AudioSpatializationManager实例。
+在使用AudioSpatializationManager的接口之前，需先通过[getSpatializationManager](arkts-audio-audiomanager-i.md#getspatializationmanager-1)获取AudioSpatializationManager实例。
 
-> **说明：**
->
+> **说明：**  
+>  
 > - 本Interface首批接口从API version 18开始支持。
 
 **起始版本：** 18
 
+<!--Device-audio-interface AudioSpatializationManager--><!--Device-audio-interface AudioSpatializationManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## downloadPersonalizedHRTF
 
@@ -27,6 +34,8 @@ downloadPersonalizedHRTF(hrtfDescriptor: AudioHRTFAnonymousDescriptor): Promise<
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioSpatializationManager-downloadPersonalizedHRTF(hrtfDescriptor: AudioHRTFAnonymousDescriptor): Promise<void>--><!--Device-AudioSpatializationManager-downloadPersonalizedHRTF(hrtfDescriptor: AudioHRTFAnonymousDescriptor): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -35,13 +44,13 @@ downloadPersonalizedHRTF(hrtfDescriptor: AudioHRTFAnonymousDescriptor): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| hrtfDescriptor | AudioHRTFAnonymousDescriptor | 是 | 要下载的个性化HRTF数据描述符。 |
+| hrtfDescriptor | [AudioHRTFAnonymousDescriptor](arkts-audio-audiohrtfanonymousdescriptor-i-sys.md) | 是 | 要下载的个性化HRTF数据描述符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 201 - 权限被拒绝。 |
+| Promise<void> | 201 - 权限被拒绝。 |
 
 **错误码：**
 
@@ -66,6 +75,8 @@ getCurrentSpatialAudioSourceType(): SpatialAudioSourceType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioSpatializationManager-getCurrentSpatialAudioSourceType(): SpatialAudioSourceType--><!--Device-AudioSpatializationManager-getCurrentSpatialAudioSourceType(): SpatialAudioSourceType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -74,7 +85,7 @@ getCurrentSpatialAudioSourceType(): SpatialAudioSourceType
 
 | 类型 | 说明 |
 | --- | --- |
-| SpatialAudioSourceType | The spatial audio source type on the current device. |
+| [SpatialAudioSourceType](arkts-audio-spatialaudiosourcetype-e-sys.md) | The spatial audio source type on the current device. |
 
 **错误码：**
 
@@ -92,6 +103,8 @@ Get spatialization rendering scene type.
 
 **起始版本：** 12
 
+<!--Device-AudioSpatializationManager-getSpatializationSceneType(): AudioSpatializationSceneType--><!--Device-AudioSpatializationManager-getSpatializationSceneType(): AudioSpatializationSceneType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -100,7 +113,7 @@ Get spatialization rendering scene type.
 
 | 类型 | 说明 |
 | --- | --- |
-| AudioSpatializationSceneType | Current spatialization rendering scene type. |
+| [AudioSpatializationSceneType](arkts-audio-audiospatializationscenetype-e-sys.md) | Current spatialization rendering scene type. |
 
 **错误码：**
 
@@ -134,6 +147,8 @@ Checks whether the adaptive spatial rendering is enabled by the specified device
 
 **起始版本：** 24
 
+<!--Device-AudioSpatializationManager-isAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -142,7 +157,7 @@ Checks whether the adaptive spatial rendering is enabled by the specified device
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceDescriptor | AudioDeviceDescriptor | 是 | The target deviceto be check whether the adaptive spatial rendering is enabled. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i-sys.md) | 是 | The target device to be check whether the adaptive spatial rendering is enabled. |
 
 **返回值：**
 
@@ -170,6 +185,8 @@ Checks whether the head tracking is enabled.
 **废弃版本：** 12
 
 **替代接口：** isHeadTrackingEnabled
+
+<!--Device-AudioSpatializationManager-isHeadTrackingEnabled(): boolean--><!--Device-AudioSpatializationManager-isHeadTrackingEnabled(): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -213,6 +230,8 @@ Checks whether the head tracking is enabled by the specified device.
 
 **起始版本：** 12
 
+<!--Device-AudioSpatializationManager-isHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -221,7 +240,7 @@ Checks whether the head tracking is enabled by the specified device.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceDescriptor | AudioDeviceDescriptor | 是 | Audio device description. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i-sys.md) | 是 | Audio device description. |
 
 **返回值：**
 
@@ -278,6 +297,8 @@ Checks whether head tracking is supported by system.
 
 **起始版本：** 11
 
+<!--Device-AudioSpatializationManager-isHeadTrackingSupported(): boolean--><!--Device-AudioSpatializationManager-isHeadTrackingSupported(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -320,6 +341,8 @@ Checks whether head tracking is supported by the specified device.
 
 **起始版本：** 11
 
+<!--Device-AudioSpatializationManager-isHeadTrackingSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isHeadTrackingSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -328,7 +351,7 @@ Checks whether head tracking is supported by the specified device.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceDescriptor | AudioDeviceDescriptor | 是 | Audio device description. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i-sys.md) | 是 | Audio device description. |
 
 **返回值：**
 
@@ -387,6 +410,8 @@ isPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor):
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioSpatializationManager-isPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -395,7 +420,7 @@ isPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| selectedAudioDevice | AudioDeviceDescriptor | 是 | 音频设备描述。 |
+| selectedAudioDevice | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i-sys.md) | 是 | 音频设备描述。 |
 
 **返回值：**
 
@@ -421,6 +446,8 @@ isPersonalizedSpatializationSupported(): boolean
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSpatializationManager-isPersonalizedSpatializationSupported(): boolean--><!--Device-AudioSpatializationManager-isPersonalizedSpatializationSupported(): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -451,6 +478,8 @@ Checks whether the spatialization is enabled.
 **废弃版本：** 12
 
 **替代接口：** isSpatializationEnabled
+
+<!--Device-AudioSpatializationManager-isSpatializationEnabled(): boolean--><!--Device-AudioSpatializationManager-isSpatializationEnabled(): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -494,6 +523,8 @@ Checks whether the spatialization is enabled by the specified device.
 
 **起始版本：** 12
 
+<!--Device-AudioSpatializationManager-isSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -502,7 +533,7 @@ Checks whether the spatialization is enabled by the specified device.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceDescriptor | AudioDeviceDescriptor | 是 | Audio device description. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i-sys.md) | 是 | Audio device description. |
 
 **返回值：**
 
@@ -559,6 +590,8 @@ Checks whether spatialization is supported by system.
 
 **起始版本：** 11
 
+<!--Device-AudioSpatializationManager-isSpatializationSupported(): boolean--><!--Device-AudioSpatializationManager-isSpatializationSupported(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -600,6 +633,8 @@ Checks whether spatialization is supported by the specified device.
 
 **起始版本：** 11
 
+<!--Device-AudioSpatializationManager-isSpatializationSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isSpatializationSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -608,7 +643,7 @@ Checks whether spatialization is supported by the specified device.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceDescriptor | AudioDeviceDescriptor | 是 | Audio device description. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i-sys.md) | 是 | Audio device description. |
 
 **返回值：**
 
@@ -669,6 +704,8 @@ Unsubscribes to the spatialization enable state change events.
 
 **替代接口：** off
 
+<!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -678,7 +715,7 @@ Unsubscribes to the spatialization enable state change events.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'spatializationEnabledChange' | 是 | Type of the event to listen for. |
-| callback | Callback&lt;boolean&gt; | 否 | Callback used to get the spatialization enable state. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | 否 | Callback used to get the spatialization enable state. |
 
 **错误码：**
 
@@ -715,6 +752,8 @@ Unsubscribes to the spatialization enable state change events by the specified d
 
 **起始版本：** 12
 
+<!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -724,7 +763,7 @@ Unsubscribes to the spatialization enable state change events by the specified d
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'spatializationEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
-| callback | Callback&lt;AudioSpatialEnabledStateForDevice&gt; | 否 | Callback used to get the spatialization enable state by the specified device. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioSpatialEnabledStateForDevice> | 否 | Callback used to get the spatialization enable state by the specified device. |
 
 **错误码：**
 
@@ -768,6 +807,8 @@ Unsubscribes to the head tracking enable state change events.
 
 **替代接口：** off
 
+<!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -777,7 +818,7 @@ Unsubscribes to the head tracking enable state change events.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChange' | 是 | Type of the event to listen for. |
-| callback | Callback&lt;boolean&gt; | 否 | Callback used to get the head tracking enable state. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | 否 | Callback used to get the head tracking enable state. |
 
 **错误码：**
 
@@ -816,6 +857,8 @@ Unsubscribes to the head tracking enable state change events by the specified de
 
 **起始版本：** 12
 
+<!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -825,7 +868,7 @@ Unsubscribes to the head tracking enable state change events by the specified de
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
-| callback | Callback&lt;AudioSpatialEnabledStateForDevice&gt; | 否 | Callback used to get the head tracking enable state by the specified device. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioSpatialEnabledStateForDevice> | 否 | Callback used to get the head tracking enable state by the specified device. |
 
 **错误码：**
 
@@ -865,6 +908,8 @@ Unsubscribes to the adaptive spatial rendering enable state change events.
 
 **起始版本：** 24
 
+<!--Device-AudioSpatializationManager-offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -873,7 +918,7 @@ Unsubscribes to the adaptive spatial rendering enable state change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AudioSpatialEnabledStateForDevice&gt; | 否 | Callback used to get the adaptive spatialrendering enable state by the specified device. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioSpatialEnabledStateForDevice> | 否 | Callback used to get the adaptive spatial rendering enable state by the specified device. |
 
 **错误码：**
 
@@ -889,12 +934,15 @@ offPersonalizedSpatializationEnabledChangeForAnyDevice(
       callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void
 ```
 
-取消订阅指定设备的个性化空间启用状态更改事件。
-当状态发生变化时，已注册的客户端将收到回调。
+取消订阅指定设备的个性化空间启用状态更改事件。当状态发生变化时，已注册的客户端将收到回调。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSpatializationManager-offPersonalizedSpatializationEnabledChangeForAnyDevice(
+      callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void--><!--Device-AudioSpatializationManager-offPersonalizedSpatializationEnabledChangeForAnyDevice(
+      callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -904,7 +952,7 @@ offPersonalizedSpatializationEnabledChangeForAnyDevice(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AudioPersonalizedSpatialEnabledChangeForAnyDevice&gt; | 否 | 回调用于通过所述指定设备获取所述个性化空间化使能状态。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioPersonalizedSpatialEnabledChangeForAnyDevice> | 否 | 回调用于通过所述指定设备获取所述个性化空间化使能状态。 |
 
 **错误码：**
 
@@ -924,6 +972,8 @@ offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): vo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioSpatializationManager-offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): void--><!--Device-AudioSpatializationManager-offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -932,7 +982,7 @@ offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;SpatialAudioSourceType&gt; | 否 | 回调用于接收当前空间音频源类型变化 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SpatialAudioSourceType> | 否 | 回调用于接收当前空间音频源类型变化 |
 
 **错误码：**
 
@@ -947,14 +997,15 @@ offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): vo
 on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the spatialization enable state change events. When the spatialization enable state changes,
-registered clients will receive the callback.
+Subscribes to the spatialization enable state change events. When the spatialization enable state changes,registered clients will receive the callback.
 
 **起始版本：** 11
 
 **废弃版本：** 12
 
 **替代接口：** on
+
+<!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -965,7 +1016,7 @@ registered clients will receive the callback.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'spatializationEnabledChange' | 是 | Type of the event to listen for. |
-| callback | Callback&lt;boolean&gt; | 是 | Callback used to get the spatialization enable state. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | 是 | Callback used to get the spatialization enable state. |
 
 **错误码：**
 
@@ -992,10 +1043,11 @@ audioSpatializationManager.on('spatializationEnabledChange', (isSpatializationEn
 on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the spatialization enable state change events by the specified device.
-When the spatialization enable state changes, registered clients will receive the callback.
+Subscribes to the spatialization enable state change events by the specified device.When the spatialization enable state changes, registered clients will receive the callback.
 
 **起始版本：** 12
+
+<!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1006,7 +1058,7 @@ When the spatialization enable state changes, registered clients will receive th
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'spatializationEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
-| callback | Callback&lt;AudioSpatialEnabledStateForDevice&gt; | 是 | Callback used to get the spatialization enable state by the specified device. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioSpatialEnabledStateForDevice> | 是 | Callback used to get the spatialization enable state by the specified device. |
 
 **错误码：**
 
@@ -1034,14 +1086,15 @@ audioSpatializationManager.on('spatializationEnabledChangeForAnyDevice', (audioS
 on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the head tracking enable state change events. When the head tracking enable state changes,
-registered clients will receive the callback.
+Subscribes to the head tracking enable state change events. When the head tracking enable state changes,registered clients will receive the callback.
 
 **起始版本：** 11
 
 **废弃版本：** 12
 
 **替代接口：** on
+
+<!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1052,7 +1105,7 @@ registered clients will receive the callback.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChange' | 是 | Type of the event to listen for. |
-| callback | Callback&lt;boolean&gt; | 是 | Callback used to get the head tracking enable state. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | 是 | Callback used to get the head tracking enable state. |
 
 **错误码：**
 
@@ -1079,10 +1132,11 @@ audioSpatializationManager.on('headTrackingEnabledChange', (isHeadTrackingEnable
 on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the head tracking enable state change events by the specified device.
-When the head tracking enable state changes, registered clients will receive the callback.
+Subscribes to the head tracking enable state change events by the specified device.When the head tracking enable state changes, registered clients will receive the callback.
 
 **起始版本：** 12
+
+<!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1093,7 +1147,7 @@ When the head tracking enable state changes, registered clients will receive the
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
-| callback | Callback&lt;AudioSpatialEnabledStateForDevice&gt; | 是 | Callback used to get the head tracking enable state by the specified device. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioSpatialEnabledStateForDevice> | 是 | Callback used to get the head tracking enable state by the specified device. |
 
 **错误码：**
 
@@ -1121,10 +1175,11 @@ audioSpatializationManager.on('headTrackingEnabledChangeForAnyDevice', (audioSpa
 onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the adaptive spatial rendering enable state change events.
-When the adaptive spatial rendering enable state changes, registered clients will receive the callback.
+Subscribes to the adaptive spatial rendering enable state change events.When the adaptive spatial rendering enable state changes, registered clients will receive the callback.
 
 **起始版本：** 24
+
+<!--Device-AudioSpatializationManager-onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1134,7 +1189,7 @@ When the adaptive spatial rendering enable state changes, registered clients wil
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AudioSpatialEnabledStateForDevice&gt; | 是 | Callback used to get the adaptive spatialrendering enable state by the specified device. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioSpatialEnabledStateForDevice> | 是 | Callback used to get the adaptive spatial rendering enable state by the specified device. |
 
 **错误码：**
 
@@ -1150,12 +1205,15 @@ onPersonalizedSpatializationEnabledChangeForAnyDevice(
       callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void
 ```
 
-指定设备订阅个性化空间化使能状态变更事件。
-当状态发生变化时，已注册的客户端将收到回调。
+指定设备订阅个性化空间化使能状态变更事件。当状态发生变化时，已注册的客户端将收到回调。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSpatializationManager-onPersonalizedSpatializationEnabledChangeForAnyDevice(
+      callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void--><!--Device-AudioSpatializationManager-onPersonalizedSpatializationEnabledChangeForAnyDevice(
+      callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1165,7 +1223,7 @@ onPersonalizedSpatializationEnabledChangeForAnyDevice(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AudioPersonalizedSpatialEnabledChangeForAnyDevice&gt; | 是 | 回调用于通过所述指定设备获取所述个性化空间化使能状态。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioPersonalizedSpatialEnabledChangeForAnyDevice> | 是 | 回调用于通过所述指定设备获取所述个性化空间化使能状态。 |
 
 **错误码：**
 
@@ -1179,12 +1237,13 @@ onPersonalizedSpatializationEnabledChangeForAnyDevice(
 onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void
 ```
 
-订阅空间音源类型变化事件。当当前空间音源类型发生变化时，
-注册的客户端将收到回调。
+订阅空间音源类型变化事件。当当前空间音源类型发生变化时，注册的客户端将收到回调。
 
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSpatializationManager-onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void--><!--Device-AudioSpatializationManager-onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1194,7 +1253,7 @@ onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;SpatialAudioSourceType&gt; | 是 | 回调用于接收所述当前空间音源类型。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SpatialAudioSourceType> | 是 | 回调用于接收所述当前空间音源类型。 |
 
 **错误码：**
 
@@ -1209,13 +1268,13 @@ onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void
 setAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>
 ```
 
-Sets the adaptive spatial rendering enabled or disabled by the specified device.
-This method uses a promise to return the result.
-When the adaptive spatial rendering is enabled, spatial audio rendering will not take effect on stereo audio.
+Sets the adaptive spatial rendering enabled or disabled by the specified device.This method uses a promise to return the result.When the adaptive spatial rendering is enabled, spatial audio rendering will not take effect on stereo audio.
 
 **起始版本：** 24
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
+
+<!--Device-AudioSpatializationManager-setAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>--><!--Device-AudioSpatializationManager-setAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1225,14 +1284,14 @@ When the adaptive spatial rendering is enabled, spatial audio rendering will not
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceDescriptor | AudioDeviceDescriptor | 是 | The target deviceto be set adaptive spatial rendering enabled. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i-sys.md) | 是 | The target device to be set adaptive spatial rendering enabled. |
 | enabled | boolean | 是 | Adaptive spatial rendering enable state. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise<void> | Promise used to return the result. |
 
 **错误码：**
 
@@ -1259,6 +1318,8 @@ Sets the head tracking enabled or disabled. This method uses an asynchronous cal
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
+<!--Device-AudioSpatializationManager-setHeadTrackingEnabled(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioSpatializationManager-setHeadTrackingEnabled(enable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -1268,7 +1329,7 @@ Sets the head tracking enabled or disabled. This method uses an asynchronous cal
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | Head tracking enable state. |
-| callback | AsyncCallback&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | Callback used to return the result. |
 
 **错误码：**
 
@@ -1313,6 +1374,8 @@ Sets the head tracking enabled or disabled. This method uses a promise to return
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
+<!--Device-AudioSpatializationManager-setHeadTrackingEnabled(enable: boolean): Promise<void>--><!--Device-AudioSpatializationManager-setHeadTrackingEnabled(enable: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -1327,7 +1390,7 @@ Sets the head tracking enabled or disabled. This method uses a promise to return
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise<void> | Promise used to return the result. |
 
 **错误码：**
 
@@ -1359,12 +1422,13 @@ audioSpatializationManager.setHeadTrackingEnabled(enable).then(() => {
 setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>
 ```
 
-Sets the head tracking enabled or disabled by the specified device.
-This method uses a promise to return the result.
+Sets the head tracking enabled or disabled by the specified device.This method uses a promise to return the result.
 
 **起始版本：** 12
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
+
+<!--Device-AudioSpatializationManager-setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>--><!--Device-AudioSpatializationManager-setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1374,14 +1438,14 @@ This method uses a promise to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceDescriptor | AudioDeviceDescriptor | 是 | Audio device description. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i-sys.md) | 是 | Audio device description. |
 | enabled | boolean | 是 | Head tracking enable state. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise<void> | Promise used to return the result. |
 
 **错误码：**
 
@@ -1437,6 +1501,10 @@ setPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor,
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioSpatializationManager-setPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor,
+      enable: boolean): Promise<void>--><!--Device-AudioSpatializationManager-setPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor,
+      enable: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -1445,14 +1513,14 @@ setPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| selectedAudioDevice | AudioDeviceDescriptor | 是 | 音频设备描述。 |
+| selectedAudioDevice | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i-sys.md) | 是 | 音频设备描述。 |
 | enable | boolean | 是 | 是否开启个性化空间化。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise用于返回结果。 |
+| Promise<void> | Promise用于返回结果。 |
 
 **错误码：**
 
@@ -1478,6 +1546,8 @@ Sets the spatialization enabled or disabled. This method uses an asynchronous ca
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
+<!--Device-AudioSpatializationManager-setSpatializationEnabled(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioSpatializationManager-setSpatializationEnabled(enable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -1487,7 +1557,7 @@ Sets the spatialization enabled or disabled. This method uses an asynchronous ca
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | Spatialization enable state. |
-| callback | AsyncCallback&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | Callback used to return the result. |
 
 **错误码：**
 
@@ -1532,6 +1602,8 @@ Sets the spatialization enabled or disabled. This method uses a promise to retur
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
+<!--Device-AudioSpatializationManager-setSpatializationEnabled(enable: boolean): Promise<void>--><!--Device-AudioSpatializationManager-setSpatializationEnabled(enable: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -1546,7 +1618,7 @@ Sets the spatialization enabled or disabled. This method uses a promise to retur
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise<void> | Promise used to return the result. |
 
 **错误码：**
 
@@ -1578,12 +1650,13 @@ audioSpatializationManager.setSpatializationEnabled(enable).then(() => {
 setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>
 ```
 
-Sets the spatialization enabled or disabled by the specified device.
-This method uses a promise to return the result.
+Sets the spatialization enabled or disabled by the specified device.This method uses a promise to return the result.
 
 **起始版本：** 12
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
+
+<!--Device-AudioSpatializationManager-setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>--><!--Device-AudioSpatializationManager-setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1593,14 +1666,14 @@ This method uses a promise to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceDescriptor | AudioDeviceDescriptor | 是 | Audio device description. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i-sys.md) | 是 | Audio device description. |
 | enabled | boolean | 是 | Spatialization enable state. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise<void> | Promise used to return the result. |
 
 **错误码：**
 
@@ -1653,6 +1726,8 @@ Set spatialization rendering scene type.
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
+<!--Device-AudioSpatializationManager-setSpatializationSceneType(spatializationSceneType: AudioSpatializationSceneType): void--><!--Device-AudioSpatializationManager-setSpatializationSceneType(spatializationSceneType: AudioSpatializationSceneType): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -1661,7 +1736,7 @@ Set spatialization rendering scene type.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| spatializationSceneType | AudioSpatializationSceneType | 是 | Spatialization scene type. |
+| spatializationSceneType | [AudioSpatializationSceneType](arkts-audio-audiospatializationscenetype-e-sys.md) | 是 | Spatialization scene type. |
 
 **错误码：**
 
@@ -1700,6 +1775,8 @@ Updates the spatial device state.
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
+<!--Device-AudioSpatializationManager-updateSpatialDeviceState(spatialDeviceState: AudioSpatialDeviceState): void--><!--Device-AudioSpatializationManager-updateSpatialDeviceState(spatialDeviceState: AudioSpatialDeviceState): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -1708,7 +1785,7 @@ Updates the spatial device state.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| spatialDeviceState | AudioSpatialDeviceState | 是 | Spatial device state. |
+| spatialDeviceState | [AudioSpatialDeviceState](arkts-audio-audiospatialdevicestate-i-sys.md) | 是 | Spatial device state. |
 
 **错误码：**
 

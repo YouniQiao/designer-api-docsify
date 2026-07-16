@@ -4,6 +4,8 @@ Describes the progress information about a batch download.
 
 **Since:** 21
 
+<!--Device-photoAccessHelper-interface CloudAssetDownloadProgressInfo--><!--Device-photoAccessHelper-interface CloudAssetDownloadProgressInfo-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Reason for automatic pause.
 
 **Since:** 21
 
+<!--Device-CloudAssetDownloadProgressInfo-readonly autoPauseReason: int--><!--Device-CloudAssetDownloadProgressInfo-readonly autoPauseReason: int-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Type of event that triggers this update.
 **Type:** CloudAssetDownloadNotifyType
 
 **Since:** 21
+
+<!--Device-CloudAssetDownloadProgressInfo-readonly downloadEventType: CloudAssetDownloadNotifyType--><!--Device-CloudAssetDownloadProgressInfo-readonly downloadEventType: CloudAssetDownloadNotifyType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -58,6 +64,8 @@ ID of the file being downloaded.
 
 **Since:** 21
 
+<!--Device-CloudAssetDownloadProgressInfo-readonly fileId: int--><!--Device-CloudAssetDownloadProgressInfo-readonly fileId: int-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Download completion percentage.
 **Type:** number
 
 **Since:** 21
+
+<!--Device-CloudAssetDownloadProgressInfo-readonly percent: int--><!--Device-CloudAssetDownloadProgressInfo-readonly percent: int-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

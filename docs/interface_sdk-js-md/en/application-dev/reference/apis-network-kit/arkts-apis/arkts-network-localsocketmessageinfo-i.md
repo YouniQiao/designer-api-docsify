@@ -4,6 +4,8 @@ Defines the local socket connection information.
 
 **Since:** 12
 
+<!--Device-socket-export interface LocalSocketMessageInfo--><!--Device-socket-export interface LocalSocketMessageInfo-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Bound local socket address.
 
 **Since:** 12
 
+<!--Device-LocalSocketMessageInfo-address: string--><!--Device-LocalSocketMessageInfo-address: string-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## message
@@ -38,6 +42,8 @@ Message data.
 
 **Since:** 12
 
+<!--Device-LocalSocketMessageInfo-message: ArrayBuffer--><!--Device-LocalSocketMessageInfo-message: ArrayBuffer-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## size
@@ -51,6 +57,8 @@ Length of the message, in bytes.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-LocalSocketMessageInfo-size: number--><!--Device-LocalSocketMessageInfo-size: number-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

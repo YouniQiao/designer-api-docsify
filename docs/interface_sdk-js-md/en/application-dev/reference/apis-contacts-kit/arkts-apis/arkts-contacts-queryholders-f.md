@@ -22,13 +22,15 @@ Queries all applications that have created contacts. This API uses an asynchrono
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryHolders(callback: AsyncCallback<Array<Holder>>): void--><!--Device-contact-function queryHolders(callback: AsyncCallback<Array<Holder>>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;Holder&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation issuccessful, an array of the queried applications is returned. If the operation fails, an error code isreturned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Holder>> | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of the queried applications is returned. If the operation fails, an error code is returned. |
 
 **Example**
 
@@ -59,14 +61,16 @@ Queries all applications that have created contacts. This API uses an asynchrono
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryHolders(context: Context, callback: AsyncCallback<Array<Holder>>): void--><!--Device-contact-function queryHolders(context: Context, callback: AsyncCallback<Array<Holder>>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| callback | AsyncCallback&lt;Array&lt;Holder&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation issuccessful, an array of the queried applications is returned. If the operation fails, an error code isreturned. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Holder>> | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of the queried applications is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -113,13 +117,15 @@ Queries all applications that have created contacts. This API uses a promise to 
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryHolders(): Promise<Array<Holder>>--><!--Device-contact-function queryHolders(): Promise<Array<Holder>>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Holder&gt;&gt; | Promise used to return the result, which is an array of queried applications. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Holder>> | Promise used to return the result, which is an array of queried applications. |
 
 **Example**
 
@@ -146,19 +152,21 @@ Queries all applications that have created contacts. This API uses a promise to 
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
+<!--Device-contact-function queryHolders(context: Context): Promise<Array<Holder>>--><!--Device-contact-function queryHolders(context: Context): Promise<Array<Holder>>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Holder&gt;&gt; | Promise used to return the result, which is an array of queried applications. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Holder>> | Promise used to return the result, which is an array of queried applications. |
 
 **Error codes:**
 

@@ -16,13 +16,15 @@ Unregisters from the thermal level changes. This API uses an asynchronous callba
 
 **Since:** 9
 
+<!--Device-thermal-function unregisterThermalLevelCallback(callback?: Callback<void>): void--><!--Device-thermal-function unregisterThermalLevelCallback(callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.PowerManager.ThermalManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; | No | (Optional) Callback that returns no value. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | (Optional) Callback that returns no value. |
 
 **Error codes:**
 

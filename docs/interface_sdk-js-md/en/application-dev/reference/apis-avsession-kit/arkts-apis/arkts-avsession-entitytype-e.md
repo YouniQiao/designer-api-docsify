@@ -4,6 +4,8 @@ Enumeration of media resource type.
 
 **Since:** 23
 
+<!--Device-avMusicTemplate-enum EntityType--><!--Device-avMusicTemplate-enum EntityType-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## UNKNOWN
@@ -17,6 +19,8 @@ Unknown type.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-EntityType-UNKNOWN = 0--><!--Device-EntityType-UNKNOWN = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -32,6 +36,8 @@ Single song type.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-EntityType-SINGLE = 1--><!--Device-EntityType-SINGLE = 1-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## SINGER
@@ -45,6 +51,8 @@ Singer type.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-EntityType-SINGER = 2--><!--Device-EntityType-SINGER = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -60,6 +68,8 @@ Album type.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-EntityType-ALBUM = 3--><!--Device-EntityType-ALBUM = 3-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## RANKING
@@ -73,6 +83,8 @@ Ranking type.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-EntityType-RANKING = 4--><!--Device-EntityType-RANKING = 4-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -88,6 +100,8 @@ Banner type.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-EntityType-BANNER = 5--><!--Device-EntityType-BANNER = 5-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## RADIO_STATION
@@ -101,6 +115,8 @@ Radio station type.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-EntityType-RADIO_STATION = 6--><!--Device-EntityType-RADIO_STATION = 6-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 

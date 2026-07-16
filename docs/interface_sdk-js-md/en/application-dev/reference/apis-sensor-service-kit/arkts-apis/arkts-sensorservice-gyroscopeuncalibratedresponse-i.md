@@ -6,6 +6,8 @@ Describes the uncalibrated gyroscope sensor data. It extends from [Response](ark
 
 **Since:** 8
 
+<!--Device-sensor-interface GyroscopeUncalibratedResponse extends Response--><!--Device-sensor-interface GyroscopeUncalibratedResponse extends Response-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Uncalibrated angular velocity bias of rotation around the x-axis of the device, 
 
 **Since:** 8
 
+<!--Device-GyroscopeUncalibratedResponse-biasX: double--><!--Device-GyroscopeUncalibratedResponse-biasX: double-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## biasY
@@ -39,6 +43,8 @@ Uncalibrated angular velocity bias of rotation around the y-axis of the device, 
 **Type:** number
 
 **Since:** 8
+
+<!--Device-GyroscopeUncalibratedResponse-biasY: double--><!--Device-GyroscopeUncalibratedResponse-biasY: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -54,6 +60,8 @@ Uncalibrated angular velocity bias of rotation around the z-axis of the device, 
 
 **Since:** 8
 
+<!--Device-GyroscopeUncalibratedResponse-biasZ: double--><!--Device-GyroscopeUncalibratedResponse-biasZ: double-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## x
@@ -67,6 +75,8 @@ Uncalibrated angular velocity of rotation around the x-axis of the device, in ra
 **Type:** number
 
 **Since:** 8
+
+<!--Device-GyroscopeUncalibratedResponse-x: double--><!--Device-GyroscopeUncalibratedResponse-x: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -82,6 +92,8 @@ Uncalibrated angular velocity of rotation around the y-axis of the device, in ra
 
 **Since:** 8
 
+<!--Device-GyroscopeUncalibratedResponse-y: double--><!--Device-GyroscopeUncalibratedResponse-y: double-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## z
@@ -95,6 +107,8 @@ Uncalibrated angular velocity of rotation around the z-axis of the device, in ra
 **Type:** number
 
 **Since:** 8
+
+<!--Device-GyroscopeUncalibratedResponse-z: double--><!--Device-GyroscopeUncalibratedResponse-z: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 

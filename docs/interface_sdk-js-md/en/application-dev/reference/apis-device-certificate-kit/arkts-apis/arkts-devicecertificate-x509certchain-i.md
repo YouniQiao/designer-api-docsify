@@ -4,6 +4,8 @@ Provides APIs for managing the X.509 certificate chain.
 
 **Since:** 11
 
+<!--Device-cert-interface X509CertChain--><!--Device-cert-interface X509CertChain-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Obtains the X.509 certificate list.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CertChain-getCertList(): Array<X509Cert>--><!--Device-X509CertChain-getCertList(): Array<X509Cert>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;X509Cert&gt; | X.509 certificate list obtained. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<X509Cert> | X.509 certificate list obtained. |
 
 **Error codes:**
 
@@ -52,13 +56,15 @@ Obtains the hash value of the data in DER format.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CertChain-hashCode(): Uint8Array--><!--Device-X509CertChain-hashCode(): Uint8Array-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Hash value obtained. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Hash value obtained. |
 
 **Error codes:**
 
@@ -79,6 +85,8 @@ Converts the object data into a string.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-X509CertChain-toString(): string--><!--Device-X509CertChain-toString(): string-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -108,19 +116,21 @@ Validates a certificate chain. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CertChain-validate(param: CertChainValidationParameters): Promise<CertChainValidationResult>--><!--Device-X509CertChain-validate(param: CertChainValidationParameters): Promise<CertChainValidationResult>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | CertChainValidationParameters | Yes | Parameters for validating the X.509 certificate chain. |
+| param | [CertChainValidationParameters](arkts-devicecertificate-certchainvalidationparameters-i.md) | Yes | Parameters for validating the X.509 certificate chain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CertChainValidationResult&gt; | Promise used to return the certificate chain validation result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CertChainValidationResult> | Promise used to return the certificate chain validation result. |
 
 **Error codes:**
 
@@ -149,14 +159,16 @@ Validates a certificate chain. This API uses an asynchronous callback to return 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-X509CertChain-validate(param: CertChainValidationParameters, callback: AsyncCallback<CertChainValidationResult>): void--><!--Device-X509CertChain-validate(param: CertChainValidationParameters, callback: AsyncCallback<CertChainValidationResult>): void-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | CertChainValidationParameters | Yes | Parameters for validating the X.509 certificate chain. |
-| callback | AsyncCallback&lt;CertChainValidationResult&gt; | Yes | Callback used to return the result. If the operationis successful, **err** is **undefined**, and **data** is the certificate chain validation result obtained.Otherwise, **err** is an error object. |
+| param | [CertChainValidationParameters](arkts-devicecertificate-certchainvalidationparameters-i.md) | Yes | Parameters for validating the X.509 certificate chain. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<CertChainValidationResult> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the certificate chain validation result obtained.Otherwise, **err** is an error object. |
 
 **Error codes:**
 

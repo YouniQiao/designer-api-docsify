@@ -12,12 +12,13 @@ import { notificationManager } from '@kit.NotificationKit';
 function getNotificationStatisticsByBundle(bundles: BundleOption[]): Promise<BundleNotificationStatistics[]>
 ```
 
-Obtains notification statistics of a specified list of applications in batches.
-This API uses a promise to return the result.
+Obtains notification statistics of a specified list of applications in batches.This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function getNotificationStatisticsByBundle(bundles: BundleOption[]): Promise<BundleNotificationStatistics[]>--><!--Device-notificationManager-function getNotificationStatisticsByBundle(bundles: BundleOption[]): Promise<BundleNotificationStatistics[]>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -27,13 +28,13 @@ This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundles | BundleOption[] | Yes | List of application bundle information. |
+| bundles | [BundleOption](arkts-notification-bundleoption-i.md)[] | Yes | List of application bundle information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BundleNotificationStatistics[]&gt; | Promise used to return the notification statisticsof a specified list of applications. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<BundleNotificationStatistics[]> | Promise used to return the notification statistics of a specified list of applications. |
 
 **Error codes:**
 

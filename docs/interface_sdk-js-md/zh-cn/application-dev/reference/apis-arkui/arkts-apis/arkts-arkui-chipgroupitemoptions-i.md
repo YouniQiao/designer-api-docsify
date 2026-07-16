@@ -2,13 +2,21 @@
 
 ChipGroupItemOptions定义每个Chip的非通用属性。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 当传入`suffixIcon`参数时，`allowClose`不生效；未传入`suffixIcon`参数时，`allowClose`决定是否显示移除图标。
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface ChipGroupItemOptions--><!--Device-unnamed-export interface ChipGroupItemOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixImageIconOptions, IconGroupSuffix, IconItemOptions, ChipItemStyle, ChipGroupItemOptions, ChipGroup, IconOptions } from '@kit.ArkUI';
+```
 
 ## accessibilityDescription
 
@@ -16,9 +24,7 @@ ChipGroupItemOptions定义每个Chip的非通用属性。
 accessibilityDescription?: ResourceStr
 ```
 
-ChipGroup中Chip项的无障碍描述。此描述用于向用户详细解释ChipGroup中Chip项，开发人员应为ChipGroup中Chip项的这一属性提供较为详尽的文本说明，以协助用户理解即将执行的操作及其可能产生的结果。特别是
-当这些结果无法仅从ChipGroup中Chip项的属性和无障碍文本中直接获知时。如果ChipGroup中Chip项同时具备文本属性和无障碍说明属性，当ChipGroup中Chip项被选中时，系统将首先播报ChipGroup中
-Chip项的文本属性，随后播报无障碍说明属性的内容。
+ChipGroup中Chip项的无障碍描述。此描述用于向用户详细解释ChipGroup中Chip项，开发人员应为ChipGroup中Chip项的这一属性提供较为详尽的文本说明，以协助用户理解即将执行的操作及其可能产生的结果。特别是当这些结果无法仅从ChipGroup中Chip项的属性和无障碍文本中直接获知时。如果ChipGroup中Chip项同时具备文本属性和无障碍说明属性，当ChipGroup中Chip项被选中时，系统将首先播报ChipGroup中Chip项的文本属性，随后播报无障碍说明属性的内容。
 
 默认值：空字符串。
 
@@ -30,7 +36,9 @@ Chip项的文本属性，随后播报无障碍说明属性的内容。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroupItemOptions-accessibilityDescription?: ResourceStr--><!--Device-ChipGroupItemOptions-accessibilityDescription?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,7 +72,9 @@ ChipGroup中Chip项无障碍重要性。用于控制ChipGroup中Chip项是否可
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroupItemOptions-accessibilityLevel?: string--><!--Device-ChipGroupItemOptions-accessibilityLevel?: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -88,7 +98,9 @@ false表示删除图标不显示，true表示删除图标显示。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroupItemOptions-allowClose?: boolean--><!--Device-ChipGroupItemOptions-allowClose?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,7 +120,9 @@ closeOptions?: CloseOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroupItemOptions-closeOptions?: CloseOptions--><!--Device-ChipGroupItemOptions-closeOptions?: CloseOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,7 +140,9 @@ label: LabelOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroupItemOptions-label: LabelOptions--><!--Device-ChipGroupItemOptions-label: LabelOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -148,7 +164,9 @@ prefixIcon?: IconOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroupItemOptions-prefixIcon?: IconOptions--><!--Device-ChipGroupItemOptions-prefixIcon?: IconOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -170,7 +188,9 @@ prefixSymbol?: ChipSymbolGlyphOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroupItemOptions-prefixSymbol?: ChipSymbolGlyphOptions--><!--Device-ChipGroupItemOptions-prefixSymbol?: ChipSymbolGlyphOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -196,7 +216,9 @@ suffixIcon?: IconOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroupItemOptions-suffixIcon?: IconOptions--><!--Device-ChipGroupItemOptions-suffixIcon?: IconOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -218,7 +240,9 @@ suffixImageIcon?: SuffixImageIconOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroupItemOptions-suffixImageIcon?: SuffixImageIconOptions--><!--Device-ChipGroupItemOptions-suffixImageIcon?: SuffixImageIconOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -240,7 +264,9 @@ suffixSymbol?: ChipSymbolGlyphOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroupItemOptions-suffixSymbol?: ChipSymbolGlyphOptions--><!--Device-ChipGroupItemOptions-suffixSymbol?: ChipSymbolGlyphOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -262,7 +288,9 @@ suffixSymbolOptions?: ChipSuffixSymbolGlyphOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipGroupItemOptions-suffixSymbolOptions?: ChipSuffixSymbolGlyphOptions--><!--Device-ChipGroupItemOptions-suffixSymbolOptions?: ChipSuffixSymbolGlyphOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

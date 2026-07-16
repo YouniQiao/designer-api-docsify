@@ -4,6 +4,8 @@ Provides methods to accessing bluetooth PBAP(Phone Book Access Profile)-related 
 
 **Since:** 11
 
+<!--Device-unnamed-declare namespace pbap--><!--Device-unnamed-declare namespace pbap-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import

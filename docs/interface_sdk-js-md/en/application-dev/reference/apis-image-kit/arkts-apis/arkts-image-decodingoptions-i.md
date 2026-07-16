@@ -4,6 +4,8 @@ Describes the image decoding options.
 
 **Since:** 7
 
+<!--Device-image-interface DecodingOptions--><!--Device-image-interface DecodingOptions-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Only **SCALE_FIRST** and **CROP_FIRST** are supported.
 
 **Since:** 18
 
+<!--Device-DecodingOptions-cropAndScaleStrategy?: CropAndScaleStrategy--><!--Device-DecodingOptions-cropAndScaleStrategy?: CropAndScaleStrategy-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 ## desiredColorSpace
@@ -40,6 +44,8 @@ Target color space. The default value is **UNKNOWN**.
 
 **Since:** 11
 
+<!--Device-DecodingOptions-desiredColorSpace?: colorSpaceManager.ColorSpaceManager--><!--Device-DecodingOptions-desiredColorSpace?: colorSpaceManager.ColorSpaceManager-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 ## desiredDynamicRange
@@ -50,16 +56,15 @@ desiredDynamicRange?: DecodingDynamicRange
 
 Desired dynamic range. The default value is **SDR**.
 
-This property cannot be set for an image source created using
-[CreateIncrementalSource](arkts-image-createincrementalsource-f.md#createincrementalsource-1). By
-default, the image source is decoded as SDR content.
+This property cannot be set for an image source created using [CreateIncrementalSource](arkts-image-createincrementalsource-f.md#createincrementalsource-1). By default, the image source is decoded as SDR content.
 
-If the platform does not support HDR, the setting is invalid and the content is decoded as SDR content by
-default.
+If the platform does not support HDR, the setting is invalid and the content is decoded as SDR content by default.
 
 **Type:** DecodingDynamicRange
 
 **Since:** 12
+
+<!--Device-DecodingOptions-desiredDynamicRange?: DecodingDynamicRange--><!--Device-DecodingOptions-desiredDynamicRange?: DecodingDynamicRange-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -69,8 +74,7 @@ default.
 desiredPixelFormat?: PixelMapFormat
 ```
 
-Pixel format for decoding. The default value is **RGBA_8888**. Only RGBA_8888, BGRA_8888, and RGB_565 are
-supported. RGB_565 is not supported for images with alpha channels, such as PNG, GIF, ICO, and WEBP.
+Pixel format for decoding. The default value is **RGBA_8888**. Only RGBA_8888, BGRA_8888, and RGB_565 are supported. RGB_565 is not supported for images with alpha channels, such as PNG, GIF, ICO, and WEBP.
 
 **Type:** PixelMapFormat
 
@@ -80,6 +84,8 @@ supported. RGB_565 is not supported for images with alpha channels, such as PNG,
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-DecodingOptions-desiredPixelFormat?: PixelMapFormat--><!--Device-DecodingOptions-desiredPixelFormat?: PixelMapFormat-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 ## desiredRegion
@@ -88,12 +94,9 @@ supported. RGB_565 is not supported for images with alpha channels, such as PNG,
 desiredRegion?: Region
 ```
 
-Rectangle specified by **Region** in the decoded image. When the original image is large and only a specific part
-of the image is required, you can set this parameter to improve performance. The default value is the original
-image size.
+Rectangle specified by **Region** in the decoded image. When the original image is large and only a specific part of the image is required, you can set this parameter to improve performance. The default value is the original image size.
 
-Note: If both **desiredSize** and **desiredRegion** are passed to the decoding API, you must also include
-**cropAndScaleStrategy** to determine whether to crop or scale first. **CROP_FIRST** is recommended.
+Note: If both **desiredSize** and **desiredRegion** are passed to the decoding API, you must also include **cropAndScaleStrategy** to determine whether to crop or scale first. **CROP_FIRST** is recommended.
 
 **Type:** Region
 
@@ -103,6 +106,8 @@ Note: If both **desiredSize** and **desiredRegion** are passed to the decoding A
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-DecodingOptions-desiredRegion?: Region--><!--Device-DecodingOptions-desiredRegion?: Region-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 ## desiredSize
@@ -111,11 +116,9 @@ Note: If both **desiredSize** and **desiredRegion** are passed to the decoding A
 desiredSize?: Size
 ```
 
-Expected output size. The value must be a positive integer and defaults to the original image size. If the output
-size is different from the original size, the output is stretched or scaled to the specified size.
+Expected output size. The value must be a positive integer and defaults to the original image size. If the output size is different from the original size, the output is stretched or scaled to the specified size.
 
-Note: If both **desiredSize** and **desiredRegion** are passed to the decoding API, you must also include
-**cropAndScaleStrategy** to determine whether to crop or scale first. **CROP_FIRST** is recommended.
+Note: If both **desiredSize** and **desiredRegion** are passed to the decoding API, you must also include **cropAndScaleStrategy** to determine whether to crop or scale first. **CROP_FIRST** is recommended.
 
 **Type:** Size
 
@@ -125,6 +128,8 @@ Note: If both **desiredSize** and **desiredRegion** are passed to the decoding A
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-DecodingOptions-desiredSize?: Size--><!--Device-DecodingOptions-desiredSize?: Size-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 ## editable
@@ -133,8 +138,7 @@ Note: If both **desiredSize** and **desiredRegion** are passed to the decoding A
 editable?: boolean
 ```
 
-Whether the image is editable. **true** if editable, **false** otherwise. The default value is **false**. If this
-option is set to **false**, the image cannot be edited again, and operations such as writing pixels will fail.
+Whether the image is editable. **true** if editable, **false** otherwise. The default value is **false**. If this option is set to **false**, the image cannot be edited again, and operations such as writing pixels will fail.
 
 **Type:** boolean
 
@@ -143,6 +147,8 @@ option is set to **false**, the image cannot be edited again, and operations suc
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-DecodingOptions-editable?: boolean--><!--Device-DecodingOptions-editable?: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -162,6 +168,8 @@ Pixel density, in ppi. The default value is **0**.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-DecodingOptions-fitDensity?: int--><!--Device-DecodingOptions-fitDensity?: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 ## index
@@ -170,9 +178,7 @@ Pixel density, in ppi. The default value is **0**.
 index?: number
 ```
 
-Index of the image to decode. The default value is **0**, indicating the first image. If this parameter is set to
-N, the (N+1)th image is used. For single-frame images, the value is always **0**. For multi-frame images such as
-animations, the value ranges from 0 to (Number of frames – 1).
+Index of the image to decode. The default value is **0**, indicating the first image. If this parameter is set to N, the (N+1)th image is used. For single-frame images, the value is always **0**. For multi-frame images such as animations, the value ranges from 0 to (Number of frames – 1).
 
 **Type:** number
 
@@ -181,6 +187,8 @@ animations, the value ranges from 0 to (Number of frames – 1).
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-DecodingOptions-index?: int--><!--Device-DecodingOptions-index?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -200,6 +208,8 @@ Rotation angle. The default value is **0**.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-DecodingOptions-rotate?: int--><!--Device-DecodingOptions-rotate?: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 ## sampleSize
@@ -217,6 +227,8 @@ Sampling size of the thumbnail. The default value is **1**. Currently, the value
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-DecodingOptions-sampleSize?: int--><!--Device-DecodingOptions-sampleSize?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 

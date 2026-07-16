@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare namespace sendableColorSpaceManager--><!--Device-unnamed-declare namespace sendableColorSpaceManager-End-->
+
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
+
+## 导入模块
+
+```TypeScript
+import { sendableColorSpaceManager } from '@kit.ArkGraphics2D';
+```
 
 ## 汇总
 

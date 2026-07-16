@@ -6,10 +6,11 @@
 const VISIBILITY_COMPLETION: 1
 ```
 
-([Notification](arkts-basicservices-notification-i.md)
-visibility type) Displays completion notifications.
+([Notification](arkts-basicservices-notification-i.md)visibility type) Displays completion notifications.
 
 **Since:** 21
+
+<!--Device-agent-const VISIBILITY_COMPLETION: 1--><!--Device-agent-const VISIBILITY_COMPLETION: 1-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -19,10 +20,11 @@ visibility type) Displays completion notifications.
 const VISIBILITY_PROGRESS: 2
 ```
 
-([Notification](arkts-basicservices-notification-i.md)
-visibility type) Displays progress notifications.
+([Notification](arkts-basicservices-notification-i.md)visibility type) Displays progress notifications.
 
 **Since:** 21
+
+<!--Device-agent-const VISIBILITY_PROGRESS: 2--><!--Device-agent-const VISIBILITY_PROGRESS: 2-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 

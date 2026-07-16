@@ -4,6 +4,8 @@ Defines the triggered callback when web page requires the user to create a windo
 
 **起始版本：** 23
 
+<!--Device-unnamed-declare interface OnWindowNewExtEvent--><!--Device-unnamed-declare interface OnWindowNewExtEvent-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## handler
@@ -18,7 +20,9 @@ Lets you set the WebviewController instance for creating a new window.
 
 **起始版本：** 23
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnWindowNewExtEvent-handler: ControllerHandler--><!--Device-OnWindowNewExtEvent-handler: ControllerHandler-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -34,7 +38,9 @@ true indicates the request to create a dialog and false indicates a new tab.
 
 **起始版本：** 23
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnWindowNewExtEvent-isAlert: boolean--><!--Device-OnWindowNewExtEvent-isAlert: boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -50,7 +56,9 @@ true indicates that it is triggered by the user, and false indicates that it is 
 
 **起始版本：** 23
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnWindowNewExtEvent-isUserTrigger: boolean--><!--Device-OnWindowNewExtEvent-isUserTrigger: boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -66,7 +74,9 @@ The navigation policy causing the new web view to be created.
 
 **起始版本：** 23
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnWindowNewExtEvent-navigationPolicy: NavigationPolicy--><!--Device-OnWindowNewExtEvent-navigationPolicy: NavigationPolicy-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -82,7 +92,9 @@ Destination URL.
 
 **起始版本：** 23
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnWindowNewExtEvent-targetUrl: string--><!--Device-OnWindowNewExtEvent-targetUrl: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -92,14 +104,15 @@ Destination URL.
 windowFeatures: WindowFeatures
 ```
 
-Contains the attributes that a webpage requests from its containing web view, the parameters
-of window.open.
+Contains the attributes that a webpage requests from its containing web view, the parameters of window.open.
 
 **类型：** WindowFeatures
 
 **起始版本：** 23
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnWindowNewExtEvent-windowFeatures: WindowFeatures--><!--Device-OnWindowNewExtEvent-windowFeatures: WindowFeatures-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

@@ -20,16 +20,18 @@ Clears all application data.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function clearUpApplicationData(admin: Want, bundleName: string, appIndex: number, accountId: number): void--><!--Device-applicationManager-function clearUpApplicationData(admin: Want, bundleName: string, appIndex: number, accountId: number): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | bundleName | string | Yes | Bundle name of the application whose data needs to be cleared. |
-| appIndex | number | Yes | Index of the application clone. The value is an integer greater than or equal to 0.<br> You can call [getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-getappcloneidentity-f.md#getappcloneidentity-1) of @ohos.bundle.bundleManager to obtain the index. |
-| accountId | number | Yes | Account ID. The value is an integer greater than or equal to 0.<br> You can call[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2) of @ohos.account.osAccount to obtain the ID. |
+| appIndex | number | Yes | Index of the application clone. The value is an integer greater than or equal to 0.<br  > You can call [getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-getappcloneidentity-f.md#getappcloneidentity-1) of @ohos.bundle.bundleManager to obtain the index. |
+| accountId | number | Yes | Account ID. The value is an integer greater than or equal to 0.<br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2) of @ohos.account.osAccount to obtain the ID. |
 
 **Error codes:**
 
@@ -37,7 +39,7 @@ Clears all application data.
 | --- | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 
 **Example**
 

@@ -20,13 +20,15 @@ Creates a **VideoPlayer** instance. This API uses an asynchronous callback to re
 
 **Substitutes:** createAVPlayer(callback:
 
+<!--Device-media-function createVideoPlayer(callback: AsyncCallback<VideoPlayer>): void--><!--Device-media-function createVideoPlayer(callback: AsyncCallback<VideoPlayer>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;VideoPlayer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the VideoPlayer instance created; otherwise, **err** is an errorobject. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<VideoPlayer> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the VideoPlayer instance created; otherwise, **err** is an error object. |
 
 **Example**
 
@@ -60,13 +62,15 @@ Creates a VideoPlayer instance. This API uses a promise to return the result.
 
 **Substitutes:** [createAVPlayer()](arkts-media-createavplayer-f.md#createavplayer-3)
 
+<!--Device-media-function createVideoPlayer(): Promise<VideoPlayer>--><!--Device-media-function createVideoPlayer(): Promise<VideoPlayer>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;VideoPlayer&gt; | Promise used to return the result. If the operation is successful, a VideoPlayerinstance is returned; otherwise, **null** is returned. The instance can be used to manage and play video. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<VideoPlayer> | Promise used to return the result. If the operation is successful, a VideoPlayer instance is returned; otherwise, **null** is returned. The instance can be used to manage and play video. |
 
 **Example**
 

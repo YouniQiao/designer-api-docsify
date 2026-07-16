@@ -1,9 +1,10 @@
 # Intention
 
-Enumerates the data channel types supported by the UDMF. It is used to identify different service scenarios, to
-which the UDMF data channels apply.
+Enumerates the data channel types supported by the UDMF. It is used to identify different service scenarios, to which the UDMF data channels apply.
 
 **Since:** 10
+
+<!--Device-unifiedDataChannel-enum Intention--><!--Device-unifiedDataChannel-enum Intention-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -20,6 +21,8 @@ Channel in which data can be dragged and dropped.
 **Since:** 14
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Intention-DRAG = 'Drag'--><!--Device-Intention-DRAG = 'Drag'-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 

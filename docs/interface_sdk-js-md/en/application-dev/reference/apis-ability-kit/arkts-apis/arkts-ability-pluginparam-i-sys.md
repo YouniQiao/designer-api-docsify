@@ -4,6 +4,8 @@ Defines the parameters for installing or uninstalling a plugin.
 
 **Since:** 19
 
+<!--Device-installer-export interface PluginParam--><!--Device-installer-export interface PluginParam-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Extension parameters for installing or uninstalling the plugin. The default valu
 
 **Since:** 19
 
+<!--Device-PluginParam-parameters?: Array<Parameters>--><!--Device-PluginParam-parameters?: Array<Parameters>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -36,13 +40,13 @@ Extension parameters for installing or uninstalling the plugin. The default valu
 userId?: number
 ```
 
-ID of the user for whom the plugin is to be installed or uninstalled. You can obtain the user ID by calling
-[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)
-. The default value is the user ID of the caller.
+ID of the user for whom the plugin is to be installed or uninstalled. You can obtain the user ID by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller.
 
 **Type:** number
 
 **Since:** 19
+
+<!--Device-PluginParam-userId?: int--><!--Device-PluginParam-userId?: int-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

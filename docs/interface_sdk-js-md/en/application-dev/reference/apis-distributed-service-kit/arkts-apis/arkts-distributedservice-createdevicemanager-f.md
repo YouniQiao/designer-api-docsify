@@ -12,10 +12,11 @@ import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 function createDeviceManager(bundleName: string): DeviceManager
 ```
 
-Creates a **DeviceManager** instance. The **DeviceManager** instance is the entry for invoking the APIs for
-distributed device management. It can be used to obtain information about trusted devices and local devices.
+Creates a **DeviceManager** instance. The **DeviceManager** instance is the entry for invoking the APIs for distributed device management. It can be used to obtain information about trusted devices and local devices.
 
 **Since:** 10
+
+<!--Device-distributedDeviceManager-function createDeviceManager(bundleName: string): DeviceManager--><!--Device-distributedDeviceManager-function createDeviceManager(bundleName: string): DeviceManager-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -29,7 +30,7 @@ distributed device management. It can be used to obtain information about truste
 
 | Type | Description |
 | --- | --- |
-| DeviceManager | **DeviceManager** instance created. |
+| [DeviceManager](arkts-distributedservice-devicemanager-i.md) | **DeviceManager** instance created. |
 
 **Error codes:**
 

@@ -12,12 +12,13 @@ import { settings } from '@kit.BasicServicesKit';
 function registerKeyObserver(context: Context, name: string, domainName: string, observer: AsyncCallback<void>): boolean
 ```
 
-Monitor registration key(synchronous method)
-[USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
+Monitor registration key(synchronous method)[USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-settings-function registerKeyObserver(context: Context, name: string, domainName: string, observer: AsyncCallback<void>): boolean--><!--Device-settings-function registerKeyObserver(context: Context, name: string, domainName: string, observer: AsyncCallback<void>): boolean-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -25,10 +26,10 @@ Monitor registration key(synchronous method)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
 | name | string | Yes | Indicates the name of the character string. |
 | domainName | string | Yes | Indicates the name of the domain name to set. |
-| observer | AsyncCallback&lt;void&gt; | Yes | callback when monitored key value is changed. |
+| observer | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | callback when monitored key value is changed. |
 
 **Return value:**
 

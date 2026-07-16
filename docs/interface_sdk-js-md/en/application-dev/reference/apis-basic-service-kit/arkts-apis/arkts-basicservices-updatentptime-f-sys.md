@@ -12,10 +12,11 @@ import { systemDateTime } from '@kit.BasicServicesKit';
 function updateNtpTime(): Promise<void>
 ```
 
-Updates the NTP time from the NTP server This API returns the result asynchronously. In this way, the NTP time is
-updated from the NTP server only once within one hour.
+Updates the NTP time from the NTP server This API returns the result asynchronously. In this way, the NTP time is updated from the NTP server only once within one hour.
 
 **Since:** 14
+
+<!--Device-systemDateTime-function updateNtpTime(): Promise<void>--><!--Device-systemDateTime-function updateNtpTime(): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -25,7 +26,7 @@ updated from the NTP server only once within one hour.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

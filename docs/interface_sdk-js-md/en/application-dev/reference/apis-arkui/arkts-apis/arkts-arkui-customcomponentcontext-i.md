@@ -1,9 +1,10 @@
 # CustomComponentContext
 
-The **CustomComponentContext** class provides access to component-level services, including the reuse pool. You can
-obtain an instance through [UIUtils.getCustomComponentContext](arkts-arkui-uiutils-c.md#getcustomcomponentcontext-1).
+The **CustomComponentContext** class provides access to component-level services, including the reuse pool. You can obtain an instance through [UIUtils.getCustomComponentContext](arkts-arkui-uiutils-c.md#getcustomcomponentcontext-1).
 
 **Since:** 26.0.0
+
+<!--Device-unnamed-export declare interface CustomComponentContext--><!--Device-unnamed-export declare interface CustomComponentContext-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,10 +20,7 @@ import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInacti
 getReusePool(): IReusePool | undefined
 ```
 
-Obtains the global reuse pool of the custom component. If the component does not configure the reuse pool through
-**reusePool** and **poolAccepts**, **undefined** is returned. For details about how to configure the global reuse
-pool, see
-[Global Reuse: Centralized Component Recycling and Reuse](../../../../ui/state-management/arkts-global-reuse-pool.md).
+Obtains the global reuse pool of the custom component. If the component does not configure the reuse pool through **reusePool** and **poolAccepts**, **undefined** is returned. For details about how to configure the global reuse pool, see [Global Reuse: Centralized Component Recycling and Reuse](../../../../ui/state-management/arkts-global-reuse-pool.md).
 
 **Since:** 26.0.0
 
@@ -30,13 +28,15 @@ pool, see
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CustomComponentContext-getReusePool(): IReusePool | undefined--><!--Device-CustomComponentContext-getReusePool(): IReusePool | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IReusePool | If a global reuse pool is configured for the current component, the reuse poolinformation is returned. Otherwise, **undefined** is returned. |
+| [IReusePool](arkts-arkui-ireusepool-i.md) | If a global reuse pool is configured for the current component, the reuse pool information is returned. Otherwise, **undefined** is returned. |
 
 **Example**
 

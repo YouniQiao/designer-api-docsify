@@ -4,7 +4,15 @@
 
 **起始版本：** 8
 
+<!--Device-xml-interface ParseInfo--><!--Device-xml-interface ParseInfo-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { xml } from '@kit.ArkTS';
+```
 
 ## getAttributeCount
 
@@ -18,7 +26,9 @@ ArkTS-Sta: getAttributeCount(): int
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ParseInfo-getAttributeCount(): int--><!--Device-ParseInfo-getAttributeCount(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -61,7 +71,9 @@ ArkTS-Sta: getColumnNumber(): int
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ParseInfo-getColumnNumber(): int--><!--Device-ParseInfo-getColumnNumber(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -102,13 +114,15 @@ ArkTS-Sta: getDepth(): int
 
 获取元素的当前深度。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 标签内的空白事件深度与标签的深度保持一致。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ParseInfo-getDepth(): int--><!--Device-ParseInfo-getDepth(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -155,7 +169,9 @@ ArkTS-Sta: getLineNumber(): int
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ParseInfo-getLineNumber(): int--><!--Device-ParseInfo-getLineNumber(): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -196,7 +212,9 @@ getName(): string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ParseInfo-getName(): string--><!--Device-ParseInfo-getName(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -237,7 +255,9 @@ getNamespace(): string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ParseInfo-getNamespace(): string--><!--Device-ParseInfo-getNamespace(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -282,7 +302,9 @@ getPrefix(): string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ParseInfo-getPrefix(): string--><!--Device-ParseInfo-getPrefix(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -327,7 +349,9 @@ getText(): string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ParseInfo-getText(): string--><!--Device-ParseInfo-getText(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -368,7 +392,9 @@ isEmptyElementTag(): boolean
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ParseInfo-isEmptyElementTag(): boolean--><!--Device-ParseInfo-isEmptyElementTag(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -413,7 +439,9 @@ isWhitespace(): boolean
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ParseInfo-isWhitespace(): boolean--><!--Device-ParseInfo-isWhitespace(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

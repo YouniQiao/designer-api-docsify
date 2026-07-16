@@ -18,13 +18,15 @@ Removes the data processor of a reported event.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-hiAppEvent-function removeProcessor(id: long): void--><!--Device-hiAppEvent-function removeProcessor(id: long): void-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | number | Yes | ID of a data processor. The value must be greater than **0**. The value is obtained by calling[addProcessor](arkts-performanceanalysis-addprocessor-f.md#addprocessor-1) or[addProcessorFromConfig](arkts-performanceanalysis-addprocessorfromconfig-f.md#addprocessorfromconfig-1). |
+| id | number | Yes | ID of a data processor. The value must be greater than **0**. The value is obtained by calling [addProcessor](arkts-performanceanalysis-addprocessor-f.md#addprocessor-1) or [addProcessorFromConfig](arkts-performanceanalysis-addprocessorfromconfig-f.md#addprocessorfromconfig-1). |
 
 **Error codes:**
 

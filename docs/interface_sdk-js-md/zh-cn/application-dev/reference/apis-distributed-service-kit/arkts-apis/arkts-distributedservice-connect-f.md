@@ -1,5 +1,11 @@
 # connect
 
+## 导入模块
+
+```TypeScript
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+```
+
 ## connect
 
 ```TypeScript
@@ -11,6 +17,8 @@ function connect(sessionId: number): Promise<ConnectResult>
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-abilityConnectionManager-function connect(sessionId: int): Promise<ConnectResult>--><!--Device-abilityConnectionManager-function connect(sessionId: int): Promise<ConnectResult>-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -24,7 +32,7 @@ function connect(sessionId: number): Promise<ConnectResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ConnectResult&gt; | 以Promise形式返回[连接结果](arkts-distributedservice-connectresult-i.md)。 |
+| Promise<ConnectResult> | 以Promise形式返回[连接结果](arkts-distributedservice-connectresult-i.md)。 |
 
 **错误码：**
 

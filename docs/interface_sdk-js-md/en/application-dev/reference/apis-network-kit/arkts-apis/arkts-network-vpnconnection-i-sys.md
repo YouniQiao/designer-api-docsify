@@ -4,6 +4,8 @@ Defines a VPN connection.
 
 **Since:** 10
 
+<!--Device-vpn-export interface VpnConnection--><!--Device-vpn-export interface VpnConnection-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Destroy the VPN network.
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 
+<!--Device-VpnConnection-destroy(callback: AsyncCallback<void>): void--><!--Device-VpnConnection-destroy(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -34,7 +38,7 @@ Destroy the VPN network.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of destroy. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of destroy. |
 
 **Error codes:**
 
@@ -82,6 +86,8 @@ Destroy the VPN network.
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 
+<!--Device-VpnConnection-destroy(): Promise<void>--><!--Device-VpnConnection-destroy(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -90,7 +96,7 @@ Destroy the VPN network.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -134,12 +140,13 @@ struct Index {
 protect(socketFd: number, callback: AsyncCallback<void>): void
 ```
 
-Protect a socket from VPN connections. After protecting, data sent through this socket will go directly to the
-underlying network so its traffic will not be forwarded through the VPN.
+Protect a socket from VPN connections. After protecting, data sent through this socket will go directly to the underlying network so its traffic will not be forwarded through the VPN.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_VPN
+
+<!--Device-VpnConnection-protect(socketFd: number, callback: AsyncCallback<void>): void--><!--Device-VpnConnection-protect(socketFd: number, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -150,7 +157,7 @@ underlying network so its traffic will not be forwarded through the VPN.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | socketFd | number | Yes | File descriptor of socket, this socket from @ohos.net.socket. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of protect. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of protect. |
 
 **Error codes:**
 
@@ -212,12 +219,13 @@ struct Index {
 protect(socketFd: number): Promise<void>
 ```
 
-Protect a socket from VPN connections. After protecting, data sent through this socket will go directly to the
-underlying network so its traffic will not be forwarded through the VPN.
+Protect a socket from VPN connections. After protecting, data sent through this socket will go directly to the underlying network so its traffic will not be forwarded through the VPN.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_VPN
+
+<!--Device-VpnConnection-protect(socketFd: number): Promise<void>--><!--Device-VpnConnection-protect(socketFd: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -233,7 +241,7 @@ underlying network so its traffic will not be forwarded through the VPN.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -303,6 +311,8 @@ Create a VPN network using the VpnConfig.
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 
+<!--Device-VpnConnection-setUp(config: VpnConfig, callback: AsyncCallback<number>): void--><!--Device-VpnConnection-setUp(config: VpnConfig, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -311,8 +321,8 @@ Create a VPN network using the VpnConfig.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | VpnConfig | Yes | Indicates the {@link VpnConfig} configuration of the VPN network. |
-| callback | AsyncCallback&lt;number&gt; | Yes | The callback is used to return file descriptor of VPN interface. |
+| config | [VpnConfig](arkts-network-vpnconfig-i.md) | Yes | Indicates the {@link VpnConfig} configuration of the VPN network. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | The callback is used to return file descriptor of VPN interface. |
 
 **Error codes:**
 
@@ -375,6 +385,8 @@ Create a VPN network using the VpnConfig.
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 
+<!--Device-VpnConnection-setUp(config: VpnConfig): Promise<number>--><!--Device-VpnConnection-setUp(config: VpnConfig): Promise<number>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -383,13 +395,13 @@ Create a VPN network using the VpnConfig.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | VpnConfig | Yes | Indicates the {@link VpnConfig} configuration of the VPN network. |
+| config | [VpnConfig](arkts-network-vpnconfig-i.md) | Yes | Indicates the {@link VpnConfig} configuration of the VPN network. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The promise returns file descriptor of VPN interface. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | The promise returns file descriptor of VPN interface. |
 
 **Error codes:**
 

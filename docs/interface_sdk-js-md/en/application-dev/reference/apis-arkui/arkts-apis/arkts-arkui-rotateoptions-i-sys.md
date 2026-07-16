@@ -4,6 +4,8 @@ Describes the rotation parameters.
 
 **Since:** 9
 
+<!--Device-window-interface RotateOptions--><!--Device-window-interface RotateOptions-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -20,12 +22,13 @@ import { window } from '@kit.ArkUI';
 pivotX?: number
 ```
 
-X coordinate of the rotation center. The value is a floating-point number in the range [0.0, 1.0], and the
-default value is **0.5**.
+X coordinate of the rotation center. The value is a floating-point number in the range [0.0, 1.0], and the default value is **0.5**.
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-RotateOptions-pivotX?: double--><!--Device-RotateOptions-pivotX?: double-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -37,12 +40,13 @@ default value is **0.5**.
 pivotY?: number
 ```
 
-Y coordinate of the rotation center. The value is a floating-point number in the range [0.0, 1.0], and the
-default value is **0.5**.
+Y coordinate of the rotation center. The value is a floating-point number in the range [0.0, 1.0], and the default value is **0.5**.
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-RotateOptions-pivotY?: double--><!--Device-RotateOptions-pivotY?: double-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -60,6 +64,8 @@ Rotation angle around the x-axis. The value is a floating-point number, and the 
 
 **Since:** 9
 
+<!--Device-RotateOptions-x?: double--><!--Device-RotateOptions-x?: double-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -76,6 +82,8 @@ Rotation angle around the y-axis. The value is a floating-point number, and the 
 
 **Since:** 9
 
+<!--Device-RotateOptions-y?: double--><!--Device-RotateOptions-y?: double-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -91,6 +99,8 @@ Rotation angle around the z-axis. The value is a floating-point number, and the 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-RotateOptions-z?: double--><!--Device-RotateOptions-z?: double-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

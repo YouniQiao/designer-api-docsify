@@ -12,15 +12,15 @@ import { abilityManager } from '@kit.AbilityKit';
 function offPreloadedUIExtensionAbilityDestroyed(callback?: PreloadedUIExtensionAbilityDestroyedFn): void
 ```
 
-Unsubscribes from loaded events of a preloaded
-[UIExtensionAbility](arkts-ability-uiextensionability-c.md) instance in the current
-process.
+Unsubscribes from loaded events of a preloaded [UIExtensionAbility](arkts-ability-uiextensionability-c.md) instance in the current process.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.PRELOAD_UI_EXTENSION_ABILITY
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-abilityManager-function offPreloadedUIExtensionAbilityDestroyed(callback?: PreloadedUIExtensionAbilityDestroyedFn): void--><!--Device-abilityManager-function offPreloadedUIExtensionAbilityDestroyed(callback?: PreloadedUIExtensionAbilityDestroyedFn): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -30,7 +30,7 @@ process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | PreloadedUIExtensionAbilityDestroyedFn | No | Callback used for unsubscription. If this parameter isnot specified, all callbacks associated with the specified event in the process will be unregistered. |
+| callback | [PreloadedUIExtensionAbilityDestroyedFn](arkts-ability-preloadeduiextensionabilitydestroyedfn-t-sys.md) | No | Callback used for unsubscription. If this parameter is not specified, all callbacks associated with the specified event in the process will be unregistered. |
 
 **Error codes:**
 

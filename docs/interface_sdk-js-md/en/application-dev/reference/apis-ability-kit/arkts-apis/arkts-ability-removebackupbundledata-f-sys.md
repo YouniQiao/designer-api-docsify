@@ -12,12 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function removeBackupBundleData(bundleName: string, userId: number, appIndex: number): Promise<void>
 ```
 
-Removes the backup data for a specified application under a given user. This API uses a promise to return the
-result.
+Removes the backup data for a specified application under a given user. This API uses a promise to return the result.
 
 **Since:** 21
 
 **Required permissions:** ohos.permission.CLEAN_APPLICATION_DATA
+
+<!--Device-bundleManager-function removeBackupBundleData(bundleName: string, userId: int, appIndex: int): Promise<void>--><!--Device-bundleManager-function removeBackupBundleData(bundleName: string, userId: int, appIndex: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -28,14 +29,14 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
-| userId | number | Yes | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The value is greater than or equal to 0. |
-| appIndex | number | Yes | Index of the application. The value ranges from 0 to 5. The value **0** indicates themain application, and the values 1 to 5 indicate the indexes of application clones. |
+| userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The value is greater than or equal to 0. |
+| appIndex | number | Yes | Index of the application. The value ranges from 0 to 5. The value **0** indicates the main application, and the values 1 to 5 indicate the indexes of application clones. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

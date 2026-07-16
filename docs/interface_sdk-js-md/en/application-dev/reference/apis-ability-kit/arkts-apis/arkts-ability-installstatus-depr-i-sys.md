@@ -6,6 +6,8 @@ Describes the bundle installation or uninstall status.
 
 **Deprecated since:** 9
 
+<!--Device-unnamed-export interface InstallStatus--><!--Device-unnamed-export interface InstallStatus-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **System API:** This is a system API.
@@ -16,8 +18,7 @@ Describes the bundle installation or uninstall status.
 status: bundle.InstallErrorCode
 ```
 
-Installation or uninstall error code. The value must be defined in
-[InstallErrorCode](arkts-ability-installerrorcode-e.md).
+Installation or uninstall error code. The value must be defined in [InstallErrorCode](arkts-ability-installerrorcode-e.md).
 
 **Type:** bundle.InstallErrorCode
 
@@ -26,6 +27,8 @@ Installation or uninstall error code. The value must be defined in
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-InstallStatus-status: bundle.InstallErrorCode--><!--Device-InstallStatus-status: bundle.InstallErrorCode-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -47,20 +50,17 @@ Installation or uninstall status message.
 
 **STATUS_INSTALL_FAILURE_INVALID**: Invalid installation parameter.
 
-**STATUS_INSTALL_FAILURE_CONFLICT**: Installation conflict. (The basic information of the application to update is
-inconsistent with that of the existing application.)
+**STATUS_INSTALL_FAILURE_CONFLICT**: Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
 
 **STATUS_INSTALL_FAILURE_STORAGE**: Failed to store the bundle information.
 
-**STATUS_INSTALL_FAILURE_INCOMPATIBLE**: Installation incompatibility. (A downgrade occurs or the signature
-information is incorrect.)
+**STATUS_INSTALL_FAILURE_INCOMPATIBLE**: Installation incompatibility. (A downgrade occurs or the signature information is incorrect.)
 
 **STATUS_UNINSTALL_FAILURE**: Uninstallation failed. (The application to be uninstalled is not found.)
 
 **STATUS_UNINSTALL_FAILURE_ABORTED**: Uninstallation aborted. (This error code is not in use.)
 
-**STATUS_UNINSTALL_FAILURE_ABORTED**: Uninstallation conflict. (Failed to uninstall a system application or end the
-application process.)
+**STATUS_UNINSTALL_FAILURE_ABORTED**: Uninstallation conflict. (Failed to uninstall a system application or end the application process.)
 
 **STATUS_INSTALL_FAILURE_DOWNLOAD_TIMEOUT**: Installation failed. (Download timed out.)
 
@@ -87,6 +87,8 @@ application process.)
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-InstallStatus-statusMessage: string--><!--Device-InstallStatus-statusMessage: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 

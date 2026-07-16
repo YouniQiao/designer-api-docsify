@@ -4,6 +4,8 @@ Defines a screen hopping status change event.
 
 **Since:** 11
 
+<!--Device-cooperate-interface CooperateMessage--><!--Device-cooperate-interface CooperateMessage-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Descriptor of the target device for screen hopping.
 
 **Since:** 11
 
+<!--Device-CooperateMessage-networkId: string--><!--Device-CooperateMessage-networkId: string-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Screen hopping status.
 **Type:** CooperateState
 
 **Since:** 11
+
+<!--Device-CooperateMessage-state: CooperateState--><!--Device-CooperateMessage-state: CooperateState-End-->
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 

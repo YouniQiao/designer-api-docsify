@@ -4,6 +4,8 @@ Provides detailed information about the same-layer tag.
 
 **Since:** 11
 
+<!--Device-unnamed-declare interface NativeEmbedInfo--><!--Device-unnamed-declare interface NativeEmbedInfo-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## height
@@ -12,14 +14,15 @@ Provides detailed information about the same-layer tag.
 height?: number
 ```
 
-The embed tag height.
-<br>Unit:px.
+The embed tag height.<br>Unit:px.
 
 **Type:** number
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NativeEmbedInfo-height?: number--><!--Device-NativeEmbedInfo-height?: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -37,6 +40,8 @@ ID of the same-layer tag.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-NativeEmbedInfo-id?: string--><!--Device-NativeEmbedInfo-id?: string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## params
@@ -45,14 +50,15 @@ ID of the same-layer tag.
 params?: Map<string, string>
 ```
 
-List of key-value pairs contained in the **object** tag that form a map of the Object type. Use the methods
-provided by the Object type, such as **embed.info?.param?.["name"]** to operate the map object.
+List of key-value pairs contained in the **object** tag that form a map of the Object type. Use the methods provided by the Object type, such as **embed.info?.param?.["name"]** to operate the map object.
 
 **Type:** Map<string, string>
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NativeEmbedInfo-params?: Map<string, string>--><!--Device-NativeEmbedInfo-params?: Map<string, string>-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -62,15 +68,15 @@ provided by the Object type, such as **embed.info?.param?.["name"]** to operate 
 position?: Position
 ```
 
-Position of the same-layer tag relative to the upper left corner of the **Web** component as the coordinate origin,
-This position is different from the standard position.
-<br>Unit: pixels.
+Position of the same-layer tag relative to the upper left corner of the **Web** component as the coordinate origin,This position is different from the standard position.<br>Unit: pixels.
 
 **Type:** Position
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NativeEmbedInfo-position?: Position--><!--Device-NativeEmbedInfo-position?: Position-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -88,6 +94,8 @@ src?: string
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-NativeEmbedInfo-src?: string--><!--Device-NativeEmbedInfo-src?: string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## tag
@@ -103,6 +111,8 @@ Tag name, which is in uppercase.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NativeEmbedInfo-tag?: string--><!--Device-NativeEmbedInfo-tag?: string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -120,6 +130,8 @@ Type of the same-layer tag. The value is in lowercase.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-NativeEmbedInfo-type?: string--><!--Device-NativeEmbedInfo-type?: string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## url
@@ -136,6 +148,8 @@ URL of the same-layer tag.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-NativeEmbedInfo-url?: string--><!--Device-NativeEmbedInfo-url?: string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## width
@@ -144,14 +158,15 @@ URL of the same-layer tag.
 width?: number
 ```
 
-The embed tag width.
-<br>Unit:px.
+The embed tag width.<br>Unit:px.
 
 **Type:** number
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NativeEmbedInfo-width?: number--><!--Device-NativeEmbedInfo-width?: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

@@ -16,6 +16,8 @@ Sets the battery configuration based on the specified scenario.
 
 **Since:** 11
 
+<!--Device-batteryInfo-function setBatteryConfig(sceneName: string, sceneValue: string): number--><!--Device-batteryInfo-function setBatteryConfig(sceneName: string, sceneValue: string): number-End-->
+
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 **System API:** This is a system API.
@@ -31,7 +33,7 @@ Sets the battery configuration based on the specified scenario.
 
 | Type | Description |
 | --- | --- |
-| number | Operation result. The value **0** indicates that the operation is successful, and a non-zerovalue indicates the opposite. |
+| number | Operation result. The value **0** indicates that the operation is successful, and a non-zero value indicates the opposite. |
 
 **Error codes:**
 

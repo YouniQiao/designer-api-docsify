@@ -1,9 +1,10 @@
 # ReaderIterator
 
-Provides a **ReaderIterator** object. Before calling APIs of **ReaderIterator**, you need to use **readLines()** to
-create a **ReaderIterator** instance.
+Provides a **ReaderIterator** object. Before calling APIs of **ReaderIterator**, you need to use **readLines()** to create a **ReaderIterator** instance.
 
 **Since:** 11
+
+<!--Device-unnamed-declare interface ReaderIterator--><!--Device-unnamed-declare interface ReaderIterator-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -23,13 +24,15 @@ Obtains the **ReaderIterator** result.
 
 **Since:** 11
 
+<!--Device-ReaderIterator-next(): ReaderIteratorResult--><!--Device-ReaderIterator-next(): ReaderIteratorResult-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ReaderIteratorResult | **ReaderIteratorResult** object obtained. |
+| [ReaderIteratorResult](arkts-corefile-readeriteratorresult-i.md) | **ReaderIteratorResult** object obtained. |
 
 **Error codes:**
 

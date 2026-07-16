@@ -1,5 +1,11 @@
 # getWorkStatus
 
+## 导入模块
+
+```TypeScript
+import { workScheduler } from '@kit.BackgroundTasksKit';
+```
+
 ## getWorkStatus
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getWorkStatus(workId: number, callback: AsyncCallback<WorkInfo>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-workScheduler-function getWorkStatus(workId: int, callback: AsyncCallback<WorkInfo>): void--><!--Device-workScheduler-function getWorkStatus(workId: int, callback: AsyncCallback<WorkInfo>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 **参数：**
@@ -19,7 +27,7 @@ function getWorkStatus(workId: number, callback: AsyncCallback<WorkInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | workId | number | 是 | 延迟任务Id。 |
-| callback | AsyncCallback&lt;WorkInfo&gt; | 是 | 回调函数。如果workId有效，则返回从WorkSchedulerService获取的任务，否则抛出异常。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<WorkInfo> | 是 | 回调函数。如果workId有效，则返回从WorkSchedulerService获取的任务，否则抛出异常。 |
 
 **错误码：**
 
@@ -60,6 +68,8 @@ function getWorkStatus(workId: number): Promise<WorkInfo>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-workScheduler-function getWorkStatus(workId: int): Promise<WorkInfo>--><!--Device-workScheduler-function getWorkStatus(workId: int): Promise<WorkInfo>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 **参数：**
@@ -72,7 +82,7 @@ function getWorkStatus(workId: number): Promise<WorkInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;WorkInfo&gt; | Promise对象，如果workId有效，则返回从WorkSchedulerService获取的任务，否则抛出异常。 |
+| Promise<WorkInfo> | Promise对象，如果workId有效，则返回从WorkSchedulerService获取的任务，否则抛出异常。 |
 
 **错误码：**
 

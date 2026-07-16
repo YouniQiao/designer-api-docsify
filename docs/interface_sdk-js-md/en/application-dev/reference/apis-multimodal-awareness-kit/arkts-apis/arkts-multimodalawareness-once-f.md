@@ -16,14 +16,16 @@ Obtains the device status.
 
 **Since:** 9
 
+<!--Device-stationary-function once(activity: ActivityType, callback: Callback<ActivityResponse>): void--><!--Device-stationary-function once(activity: ActivityType, callback: Callback<ActivityResponse>): void-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| activity | ActivityType | Yes | Device status type. |
-| callback | Callback&lt;ActivityResponse&gt; | Yes | Callback used to receive reported data. |
+| activity | [ActivityType](arkts-multimodalawareness-activitytype-t.md) | Yes | Device status type. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ActivityResponse> | Yes | Callback used to receive reported data. |
 
 **Example**
 

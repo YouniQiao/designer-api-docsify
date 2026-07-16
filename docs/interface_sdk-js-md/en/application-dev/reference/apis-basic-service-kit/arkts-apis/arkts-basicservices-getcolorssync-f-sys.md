@@ -18,6 +18,8 @@ Obtains the wallpaper colors for the wallpaper of the specified type. Returns rg
 
 **Deprecated since:** 23
 
+<!--Device-wallpaper-function getColorsSync(wallpaperType: WallpaperType): Array<RgbaColor>--><!--Device-wallpaper-function getColorsSync(wallpaperType: WallpaperType): Array<RgbaColor>-End-->
+
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Obtains the wallpaper colors for the wallpaper of the specified type. Returns rg
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | WallpaperType | Yes | indicates the wallpaper type. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;RgbaColor&gt; | the Array&lt;RgbaColor&gt; returned by the function. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<RgbaColor> | the Array&lt;RgbaColor&gt; returned by the function. |
 
 **Error codes:**
 

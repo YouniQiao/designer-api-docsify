@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare interface TextPickerOptions--><!--Device-unnamed-declare interface TextPickerOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## columnWidths
@@ -18,9 +20,7 @@ columnWidths?: LengthMetrics[]
 
 **说明**：
 
-1. 当文本长度大于列宽时，文本被截断。
-2. 当设置为异常值时，使用默认值。
-3. 支持设置为Undefined和Null，不支持Undefined[]和Null[]。
+1. 当文本长度大于列宽时，文本被截断。2. 当设置为异常值时，使用默认值。3. 支持设置为Undefined和Null，不支持Undefined[]和Null[]。
 
 **类型：** LengthMetrics[]
 
@@ -30,7 +30,9 @@ columnWidths?: LengthMetrics[]
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextPickerOptions-columnWidths?: LengthMetrics[]--><!--Device-TextPickerOptions-columnWidths?: LengthMetrics[]-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,18 +46,15 @@ range: string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascade
 
 **说明**：
 
-1. 单列数据选择器使用string[]，[Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md)，
-[TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[]类型。
-2. 多列非联动数据选择器使用string[][]类型。
-3. 多列联动数据选择器使用[TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md)[]类型。
-4. Resource类型只支持[strarray.json](../../../../quick-start/resource-categories-and-access.md#资源组目录)。
-5. range的类型及列数不可以动态修改。
+1. 单列数据选择器使用string[]，[Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md)，[TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[]类型。2. 多列非联动数据选择器使用string[][]类型。3. 多列联动数据选择器使用[TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md)[]类型。4. Resource类型只支持[strarray.json](../../../../quick-start/resource-categories-and-access.md#资源组目录)。5. range的类型及列数不可以动态修改。
 
 **类型：** string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascadePickerRangeContent[]
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextPickerOptions-range: string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascadePickerRangeContent[]--><!--Device-TextPickerOptions-range: string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascadePickerRangeContent[]-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -71,9 +70,7 @@ selected?: number | number[]
 
 **说明**：
 
-1. 单列数据选择器使用number类型。
-2. 多列数据选择器使用number[]类型。
-3. 从API version 10开始，该参数支持[$$](../../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+1. 单列数据选择器使用number类型。2. 多列数据选择器使用number[]类型。3. 从API version 10开始，该参数支持[$$](../../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 **类型：** number | number[]
 
@@ -81,7 +78,9 @@ selected?: number | number[]
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextPickerOptions-selected?: number | number[]--><!--Device-TextPickerOptions-selected?: number | number[]-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -97,11 +96,7 @@ value?: ResourceStr | ResourceStr[]
 
 **说明**：
 
-1. 从API version 10开始，该参数支持[$$](../../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
-2. 从API version 20开始，支持[Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md)类型。
-3. 只有显示文本列表时该值有效。显示图片或图文混排的列表时，该值无效。
-4. 单列数据选择器使用[ResourceStr](arkts-arkui-resourcestr-t.md)类型。
-5. 多列数据选择器使用[ResourceStr](arkts-arkui-resourcestr-t.md)[]类型。
+1. 从API version 10开始，该参数支持[$$](../../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。2. 从API version 20开始，支持[Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md)类型。3. 只有显示文本列表时该值有效。显示图片或图文混排的列表时，该值无效。4. 单列数据选择器使用[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)类型。5. 多列数据选择器使用[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)[]类型。
 
 **类型：** ResourceStr | ResourceStr[]
 
@@ -109,7 +104,9 @@ value?: ResourceStr | ResourceStr[]
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextPickerOptions-value?: ResourceStr | ResourceStr[]--><!--Device-TextPickerOptions-value?: ResourceStr | ResourceStr[]-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

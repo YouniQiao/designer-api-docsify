@@ -1,10 +1,10 @@
 # Direction
 
-Enumerates the screen directions, which are used in the
-[Configuration.direction](arkts-ability-configuration-i.md) field. You can use these predefined
-enumerated values to set or obtain the screen direction of the system or application.
+Enumerates the screen directions, which are used in the [Configuration.direction](arkts-ability-configuration-i.md) field. You can use these predefined enumerated values to set or obtain the screen direction of the system or application.
 
 **Since:** 9
+
+<!--Device-ConfigurationConstant-export enum Direction--><!--Device-ConfigurationConstant-export enum Direction-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -20,6 +20,8 @@ Unspecified direction.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Direction-DIRECTION_NOT_SET = -1--><!--Device-Direction-DIRECTION_NOT_SET = -1-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## DIRECTION_VERTICAL
@@ -34,6 +36,8 @@ Vertical direction.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Direction-DIRECTION_VERTICAL = 0--><!--Device-Direction-DIRECTION_VERTICAL = 0-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## DIRECTION_HORIZONTAL
@@ -47,6 +51,8 @@ Horizontal direction.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Direction-DIRECTION_HORIZONTAL = 1--><!--Device-Direction-DIRECTION_HORIZONTAL = 1-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 

@@ -12,12 +12,13 @@ import { connection } from '@kit.NetworkKit';
 function getConnectionPropertiesSync(netHandle: NetHandle): ConnectionProperties
 ```
 
-Queries the connection properties of a network.
-This method requires the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Queries the connection properties of a network.This method requires the {@code ohos.permission.GET_NETWORK_INFO} permission.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-connection-function getConnectionPropertiesSync(netHandle: NetHandle): ConnectionProperties--><!--Device-connection-function getConnectionPropertiesSync(netHandle: NetHandle): ConnectionProperties-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -25,13 +26,13 @@ This method requires the {@code ohos.permission.GET_NETWORK_INFO} permission.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the network to be queried. |
+| netHandle | [NetHandle](arkts-network-nethandle-i.md) | Yes | Indicates the network to be queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ConnectionProperties | Returns the connection properties of a network. |
+| [ConnectionProperties](arkts-network-connectionproperties-i.md) | Returns the connection properties of a network. |
 
 **Error codes:**
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-declare namespace remoteDevice--><!--Device-unnamed-declare namespace remoteDevice-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
+
+## 导入模块
+
+```TypeScript
+import { remoteDevice } from '@kit.ConnectivityKit';
+```
 
 ## 汇总
 
@@ -16,7 +24,7 @@
 | [offAcbStateChange](arkts-connectivity-offacbstatechange-f.md#offacbstatechange-1) | 取消订阅星闪 ACB连接状态更改事件。 |
 | [offConnectionStateChange](arkts-connectivity-offconnectionstatechange-f.md#offconnectionstatechange-1) | 取消订阅星闪连接状态更改事件。 |
 | [offPairingStateChange](arkts-connectivity-offpairingstatechange-f.md#offpairingstatechange-1) | 取消订阅星闪配对状态更改事件。 |
-| [onAcbStateChange](arkts-connectivity-onacbstatechange-f.md#onacbstatechange-1) | 订阅NearLink ACB连接状态变化事件。ACB采用异步双向链路。&gt; **说明**&gt; 如果该用户具有ohos.permission.GET_NEARLINK_PEER_MAC权限，则真实设备地址为&gt; 返回。&gt; 否则，将返回一个随机的设备地址。只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。回调返回真实设备地址，否则返回随机设备地址。 |
+| [onAcbStateChange](arkts-connectivity-onacbstatechange-f.md#onacbstatechange-1) | 订阅NearLink ACB连接状态变化事件。ACB采用异步双向链路。 &gt; **说明** &gt; 如果该用户具有ohos.permission.GET_NEARLINK_PEER_MAC权限，则真实设备地址为 &gt; 返回。 &gt; 否则，将返回一个随机的设备地址。只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。回调返回真实设备地址，否则返回随机设备地址。 |
 | [onConnectionStateChange](arkts-connectivity-onconnectionstatechange-f.md#onconnectionstatechange-1) | 订阅星闪连接状态更改事件。如果用户有ohos.permission.GET_NEARLINK_PEER_MAC权限，则返回真实设备地址。否则返回一个随机的设备地址。只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。回调返回真实设备地址，否则返回随机设备地址。 |
 | [onPairingStateChange](arkts-connectivity-onpairingstatechange-f.md#onpairingstatechange-1) | 订阅NearLink配对状态变更事件。只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。回调返回真实设备地址，否则返回随机设备地址。 |
 

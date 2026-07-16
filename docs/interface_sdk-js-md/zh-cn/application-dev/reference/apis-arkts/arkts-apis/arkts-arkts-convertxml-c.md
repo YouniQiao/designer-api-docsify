@@ -4,7 +4,15 @@ ConvertXML 表示可扩展标记语言。
 
 **起始版本：** 8
 
+<!--Device-xml-class ConvertXML--><!--Device-xml-class ConvertXML-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { convertxml } from '@kit.ArkTS';
+```
 
 ## convert
 
@@ -20,6 +28,8 @@ convert(xml: string, options?: ConvertOptions): Object
 
 **替代接口：** [fastConvertToJSObject](arkts-arkts-convertxml-c.md#fastconverttojsobject-1)
 
+<!--Device-ConvertXML-convert(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-convert(xml: string, options?: ConvertOptions): Object-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -27,7 +37,7 @@ convert(xml: string, options?: ConvertOptions): Object
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | xml | string | 是 | 传入的XML文本。 |
-| options | ConvertOptions | 否 | 转换选项，默认值是ConvertOptions对象，由其中各个属性的默认值组成。 |
+| options | [ConvertOptions](arkts-arkts-convertoptions-i.md) | 否 | 转换选项，默认值是ConvertOptions对象，由其中各个属性的默认值组成。 |
 
 **返回值：**
 
@@ -81,7 +91,9 @@ convertToJSObject(xml: string, options?: ConvertOptions): Object
 
 **替代接口：** [fastConvertToJSObject](arkts-arkts-convertxml-c.md#fastconverttojsobject-1)
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ConvertXML-convertToJSObject(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-convertToJSObject(xml: string, options?: ConvertOptions): Object-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -90,7 +102,7 @@ convertToJSObject(xml: string, options?: ConvertOptions): Object
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | xml | string | 是 | 传入的XML文本，若包含"&"字符，请使用实体引用 **&amp;** 替换。 |
-| options | ConvertOptions | 否 | 转换选项，默认值是ConvertOptions对象，由其中各个属性的默认值组成。 |
+| options | [ConvertOptions](arkts-arkts-convertoptions-i.md) | 否 | 转换选项，默认值是ConvertOptions对象，由其中各个属性的默认值组成。 |
 
 **返回值：**
 
@@ -148,15 +160,17 @@ fastConvertToJSObject(xml: string, options?: ConvertOptions): Object
 
 转换XML文本为Object类型对象。
 
-> **说明**
->
-> - 该接口无法满足解析大数据量的XML文件，当单元素文本内容超过10M时，会打印异常信息并返回一个仅包含XML标签头的基础Object对象。
->
+> **说明**  
+>  
+> - 该接口无法满足解析大数据量的XML文件，当单元素文本内容超过10M时，会打印异常信息并返回一个仅包含XML标签头的基础Object对象。  
+>  
 > - 在Windows环境中，通常以回车符（CR）和换行符（LF）一对字符来表示换行。fastConvertToJSObject接口转换后的对象以换行符（LF）表示换行。
 
 **起始版本：** 14
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ConvertXML-fastConvertToJSObject(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-fastConvertToJSObject(xml: string, options?: ConvertOptions): Object-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -165,7 +179,7 @@ fastConvertToJSObject(xml: string, options?: ConvertOptions): Object
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | xml | string | 是 | XML文本，若包含"&"字符，请使用实体引用 **&amp;** 替换。 |
-| options | ConvertOptions | 否 | 转换选项，默认值是ConvertOptions对象，由其中各个属性的默认值组成。 |
+| options | [ConvertOptions](arkts-arkts-convertoptions-i.md) | 否 | 转换选项，默认值是ConvertOptions对象，由其中各个属性的默认值组成。 |
 
 **返回值：**
 
@@ -226,7 +240,9 @@ largeConvertToJSObject(xml: string, options?: ConvertOptions): Object
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ConvertXML-largeConvertToJSObject(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-largeConvertToJSObject(xml: string, options?: ConvertOptions): Object-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -235,7 +251,7 @@ largeConvertToJSObject(xml: string, options?: ConvertOptions): Object
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | xml | string | 是 | XML文本，若包含"&"字符，请使用实体引用 &amp; 替换。 |
-| options | ConvertOptions | 否 | 转换选项，默认值是ConvertOptions对象，由其中各个属性的默认值组成。 |
+| options | [ConvertOptions](arkts-arkts-convertoptions-i.md) | 否 | 转换选项，默认值是ConvertOptions对象，由其中各个属性的默认值组成。 |
 
 **返回值：**
 

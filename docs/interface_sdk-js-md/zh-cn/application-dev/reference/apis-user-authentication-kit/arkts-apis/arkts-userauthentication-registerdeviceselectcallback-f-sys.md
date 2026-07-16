@@ -1,5 +1,11 @@
 # registerDeviceSelectCallback（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+```
+
 ## registerDeviceSelectCallback
 
 ```TypeScript
@@ -14,6 +20,8 @@ function registerDeviceSelectCallback(callback: DeviceSelectCallback): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-companionDeviceAuth-function registerDeviceSelectCallback(callback: DeviceSelectCallback): void--><!--Device-companionDeviceAuth-function registerDeviceSelectCallback(callback: DeviceSelectCallback): void-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ function registerDeviceSelectCallback(callback: DeviceSelectCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | DeviceSelectCallback | 是 | 伴随设备选择回调函数。系统调用时会传入选择目的（selectPurpose），应用需根据目的返回相应的DeviceSelectResult，包含用户选择的设备信息。 |
+| callback | [DeviceSelectCallback](arkts-userauthentication-deviceselectcallback-t-sys.md) | 是 | 伴随设备选择回调函数。系统调用时会传入选择目的（selectPurpose），应用需根据目的返回相应的DeviceSelectResult，包含用户选择的设备信息。 |
 
 **错误码：**
 

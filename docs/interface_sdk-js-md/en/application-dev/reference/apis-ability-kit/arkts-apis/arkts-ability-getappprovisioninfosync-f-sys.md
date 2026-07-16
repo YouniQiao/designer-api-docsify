@@ -12,14 +12,15 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAppProvisionInfoSync(bundleName: string, userId?: number): AppProvisionInfo
 ```
 
-Obtains the provision profile based on the given bundle name and user ID. This API returns the result
-synchronously.
+Obtains the provision profile based on the given bundle name and user ID. This API returns the result synchronously.
 
 No permission is required for obtaining the caller's own information.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getAppProvisionInfoSync(bundleName: string, userId?: int): AppProvisionInfo--><!--Device-bundleManager-function getAppProvisionInfoSync(bundleName: string, userId?: int): AppProvisionInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -30,13 +31,13 @@ No permission is required for obtaining the caller's own information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| userId | number | No | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AppProvisionInfo | Provision profile. |
+| [AppProvisionInfo](arkts-ability-appprovisioninfo-t-sys.md) | Provision profile. |
 
 **Error codes:**
 

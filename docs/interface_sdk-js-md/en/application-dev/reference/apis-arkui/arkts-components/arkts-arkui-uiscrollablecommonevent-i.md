@@ -6,6 +6,8 @@ Defines a UIScrollableCommonEvent which is used to set event to target component
 
 **Since:** 19
 
+<!--Device-unnamed-declare interface UIScrollableCommonEvent extends UICommonEvent--><!--Device-unnamed-declare interface UIScrollableCommonEvent extends UICommonEvent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## setOnReachEnd
@@ -22,13 +24,15 @@ Set or reset the callback which is triggered when the scrolling reaches the end 
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-UIScrollableCommonEvent-setOnReachEnd(callback: Callback<void> | undefined): void--><!--Device-UIScrollableCommonEvent-setOnReachEnd(callback: Callback<void> | undefined): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; \| undefined | Yes | callback function, triggered when thescrolling reaches the end position. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<void> \| undefined | Yes | callback function, triggered when the scrolling reaches the end position. |
 
 ## setOnReachStart
 
@@ -44,13 +48,15 @@ Set or reset the callback which is triggered when the scrolling reaches the star
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-UIScrollableCommonEvent-setOnReachStart(callback: Callback<void> | undefined): void--><!--Device-UIScrollableCommonEvent-setOnReachStart(callback: Callback<void> | undefined): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; \| undefined | Yes | callback function, triggered when thescrolling reaches the start position. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<void> \| undefined | Yes | callback function, triggered when the scrolling reaches the start position. |
 
 ## setOnScrollFrameBegin
 
@@ -66,13 +72,15 @@ Set or reset the callback which is triggered when scrolling begin each frame.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-UIScrollableCommonEvent-setOnScrollFrameBegin(callback: OnScrollFrameBeginCallback | undefined): void--><!--Device-UIScrollableCommonEvent-setOnScrollFrameBegin(callback: OnScrollFrameBeginCallback | undefined): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnScrollFrameBeginCallback \| undefined | Yes | callback function, triggered when thescrolling begin each frame. |
+| callback | OnScrollFrameBeginCallback \| undefined | Yes | callback function, triggered when the scrolling begin each frame. |
 
 ## setOnScrollStart
 
@@ -88,13 +96,15 @@ Set or reset the callback which is triggered when the scrolling started.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-UIScrollableCommonEvent-setOnScrollStart(callback: Callback<void> | undefined): void--><!--Device-UIScrollableCommonEvent-setOnScrollStart(callback: Callback<void> | undefined): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; \| undefined | Yes | callback function, triggered when the scrolling started. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<void> \| undefined | Yes | callback function, triggered when the scrolling started. |
 
 ## setOnScrollStop
 
@@ -110,11 +120,13 @@ Set or reset the callback which is triggered when the scrolling stoped.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-UIScrollableCommonEvent-setOnScrollStop(callback: Callback<void> | undefined): void--><!--Device-UIScrollableCommonEvent-setOnScrollStop(callback: Callback<void> | undefined): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; \| undefined | Yes | callback function, triggered when the scrolling stoped. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<void> \| undefined | Yes | callback function, triggered when the scrolling stoped. |
 

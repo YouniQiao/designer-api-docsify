@@ -18,9 +18,7 @@ In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 ar
 
 [LogType](arkts-mdm-logtype-e.md) is supported since API version 23.
 
-If there is no rule with [Action](arkts-mdm-action-e.md) being **ALLOW** after the rule is removed, the
-**DENY** rules that are added by default with [addFirewallRule](arkts-mdm-addfirewallrule-f.md#addfirewallrule-1) will be
-removed.
+If there is no rule with [Action](arkts-mdm-action-e.md) being **ALLOW** after the rule is removed, the **DENY** rules that are added by default with [addFirewallRule](arkts-mdm-addfirewallrule-f.md#addfirewallrule-1) will be removed.
 
 **Since:** 12
 
@@ -28,14 +26,16 @@ removed.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-networkManager-function removeFirewallRule(admin: Want, firewallRule?: FirewallRule): void--><!--Device-networkManager-function removeFirewallRule(admin: Want, firewallRule?: FirewallRule): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| firewallRule | FirewallRule | No | Firewall rule to remove. If the value is empty, all firewall rules will beremoved. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| firewallRule | [FirewallRule](arkts-mdm-firewallrule-i.md) | No | Firewall rule to remove. If the value is empty, all firewall rules will be removed. |
 
 **Error codes:**
 
@@ -43,7 +43,7 @@ removed.
 | --- | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Example**

@@ -1,11 +1,10 @@
 # TabContentTransitionProxy
 
-Implements the proxy object returned during the execution of the custom switching animation of the **Tabs**
-component. You can use this object to obtain the start and target pages for the custom tab switching animation. In
-addition, you can call the **finishTransition** API of this object to notify the **Tabs** component of the ending of
-the custom animation.
+Implements the proxy object returned during the execution of the custom switching animation of the **Tabs** component. You can use this object to obtain the start and target pages for the custom tab switching animation. In addition, you can call the **finishTransition** API of this object to notify the **Tabs** component of the ending of the custom animation.
 
 **Since:** 11
+
+<!--Device-unnamed-declare interface TabContentTransitionProxy--><!--Device-unnamed-declare interface TabContentTransitionProxy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,6 +23,8 @@ Notifies the **Tabs** component that the custom animation has finished playing.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-TabContentTransitionProxy-finishTransition(): void--><!--Device-TabContentTransitionProxy-finishTransition(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,6 +46,8 @@ Zero-based index of the source page in the custom animation.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-TabContentTransitionProxy-from: number--><!--Device-TabContentTransitionProxy-from: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## to
@@ -64,6 +67,8 @@ Zero-based index of the target page in the custom animation.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-TabContentTransitionProxy-to: number--><!--Device-TabContentTransitionProxy-to: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

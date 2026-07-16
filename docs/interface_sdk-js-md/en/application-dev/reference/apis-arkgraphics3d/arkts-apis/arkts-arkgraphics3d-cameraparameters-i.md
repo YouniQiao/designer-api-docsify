@@ -4,6 +4,8 @@ Camera creation parameters. Can be used to define extra options for camera creat
 
 **Since:** 21
 
+<!--Device-unnamed-export interface CameraParameters--><!--Device-unnamed-export interface CameraParameters-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## msaa
@@ -20,6 +22,8 @@ Select whether MSAA is enabled.
 
 **Since:** 22
 
+<!--Device-CameraParameters-msaa?: boolean--><!--Device-CameraParameters-msaa?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## renderingPipeline
@@ -35,6 +39,8 @@ Select the initial rendering pipeline type to use.
 **Default:** RenderingPipelineType.FORWARD_LIGHTWEIGHT
 
 **Since:** 21
+
+<!--Device-CameraParameters-renderingPipeline?: RenderingPipelineType--><!--Device-CameraParameters-renderingPipeline?: RenderingPipelineType-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

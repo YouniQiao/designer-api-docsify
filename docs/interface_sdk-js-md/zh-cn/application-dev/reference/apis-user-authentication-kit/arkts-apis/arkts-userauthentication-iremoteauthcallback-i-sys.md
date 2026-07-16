@@ -4,9 +4,17 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-userAuth-interface IRemoteAuthCallback--><!--Device-userAuth-interface IRemoteAuthCallback-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+```
 
 ## onGetRemoteAuthWidgetParam
 
@@ -22,6 +30,8 @@ onGetRemoteAuthWidgetParam: WidgetParamCallback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-IRemoteAuthCallback-onGetRemoteAuthWidgetParam: WidgetParamCallback--><!--Device-IRemoteAuthCallback-onGetRemoteAuthWidgetParam: WidgetParamCallback-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -32,14 +42,15 @@ onGetRemoteAuthWidgetParam: WidgetParamCallback
 onRemoteAuthResult: ResultCallback
 ```
 
-调用返回认证结果。如果鉴权成功。
-UserAuthResult中包含token信息。
+调用返回认证结果。如果鉴权成功。UserAuthResult中包含token信息。
 
 **类型：** ResultCallback
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-IRemoteAuthCallback-onRemoteAuthResult: ResultCallback--><!--Device-IRemoteAuthCallback-onRemoteAuthResult: ResultCallback-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

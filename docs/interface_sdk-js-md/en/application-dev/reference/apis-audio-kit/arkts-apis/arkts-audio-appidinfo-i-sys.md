@@ -4,6 +4,8 @@ Describes app ID information.
 
 **Since:** 26.0.0
 
+<!--Device-audio-interface AppIdInfo--><!--Device-audio-interface AppIdInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ App full token ID.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AppIdInfo-appFullTokenId: long--><!--Device-AppIdInfo-appFullTokenId: long-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
@@ -45,6 +49,8 @@ App PID.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AppIdInfo-appPid: int--><!--Device-AppIdInfo-appPid: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -64,6 +70,8 @@ App token ID.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AppIdInfo-appTokenId: int--><!--Device-AppIdInfo-appTokenId: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
@@ -81,6 +89,8 @@ App UID.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AppIdInfo-appUid: int--><!--Device-AppIdInfo-appUid: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 

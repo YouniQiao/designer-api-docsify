@@ -12,12 +12,13 @@ import { particleAbility } from '@kit.AbilityKit';
 function disconnectAbility(connection: number, callback: AsyncCallback<void>): void
 ```
 
-Disconnects this ability from a specific ServiceAbility. This API uses an asynchronous callback to return the
-result.
+Disconnects this ability from a specific ServiceAbility. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-particleAbility-function disconnectAbility(connection: number, callback: AsyncCallback<void>): void--><!--Device-particleAbility-function disconnectAbility(connection: number, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -26,7 +27,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | connection | number | Yes | ID of the ServiceAbility to disconnect. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the disconnection is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the disconnection is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -71,6 +72,8 @@ Disconnects this ability from a specific ServiceAbility. This API uses a promise
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-particleAbility-function disconnectAbility(connection: number): Promise<void>--><!--Device-particleAbility-function disconnectAbility(connection: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
@@ -83,7 +86,7 @@ Disconnects this ability from a specific ServiceAbility. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. Promise that returns no value. |
 
 **Example**
 

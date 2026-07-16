@@ -18,6 +18,8 @@ stop the collector.
 
 **Required permissions:** ohos.permission.QUERY_SECURITY_EVENT
 
+<!--Device-securityGuard-function stopSecurityEventCollector(rule: CollectorRule): void--><!--Device-securityGuard-function stopSecurityEventCollector(rule: CollectorRule): void-End-->
+
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ stop the collector.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rule | CollectorRule | Yes | rule of collect security event information. |
+| rule | [CollectorRule](arkts-securityguard-collectorrule-i-sys.md) | Yes | rule of collect security event information. |
 
 **Error codes:**
 

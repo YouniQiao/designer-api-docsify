@@ -12,14 +12,13 @@ import { i18n } from '@kit.LocalizationKit';
 export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleDateTimeFormat
 ```
 
-Obtains a **SimpleDateTimeFormat** object based on the specified skeleton. For details about the difference between
-the objects obtained by this API and
-[getSimpleDateTimeFormatByPattern](arkts-localization-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern-1)
-, see the examples in [SimpleDateTimeFormat.format](arkts-localization-simpledatetimeformat-c.md#format-1).
+Obtains a **SimpleDateTimeFormat** object based on the specified skeleton. For details about the difference between the objects obtained by this API and [getSimpleDateTimeFormatByPattern](arkts-localization-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern-1), see the examples in [SimpleDateTimeFormat.format](arkts-localization-simpledatetimeformat-c.md#format-1).
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-i18n-export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleDateTimeFormat--><!--Device-i18n-export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleDateTimeFormat-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -27,14 +26,14 @@ the objects obtained by this API and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| skeleton | string | Yes | Valid skeleton, which supports free combinations of field patterns in[Date Field Symbol Table](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table). Thisparameter does not support custom text. |
+| skeleton | string | Yes | Valid skeleton, which supports free combinations of field patterns in [Date Field Symbol Table](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table). This parameter does not support custom text. |
 | locale | Intl.Locale | No | **Locale** object. The default value is the current system locale. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SimpleDateTimeFormat | **SimpleDateTimeFormat** object. |
+| [SimpleDateTimeFormat](arkts-localization-simpledatetimeformat-c.md) | **SimpleDateTimeFormat** object. |
 
 **Error codes:**
 
@@ -49,10 +48,7 @@ the objects obtained by this API and
 export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: intl.Locale): SimpleDateTimeFormat
 ```
 
-Obtains a **SimpleDateTimeFormat** object based on the specified skeleton. For details about the difference between
-the objects obtained by this API and
-[getSimpleDateTimeFormatByPattern](arkts-localization-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern-2)
-, see the examples in [SimpleDateTimeFormat.format](arkts-localization-simpledatetimeformat-c.md#format-1).
+Obtains a **SimpleDateTimeFormat** object based on the specified skeleton. For details about the difference between the objects obtained by this API and [getSimpleDateTimeFormatByPattern](arkts-localization-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern-2), see the examples in [SimpleDateTimeFormat.format](arkts-localization-simpledatetimeformat-c.md#format-1).
 
 **Since:** 18
 
@@ -62,20 +58,22 @@ the objects obtained by this API and
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-i18n-export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: intl.Locale): SimpleDateTimeFormat--><!--Device-i18n-export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: intl.Locale): SimpleDateTimeFormat-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| skeleton | string | Yes | Valid skeleton, which supports free combinations of field patterns in[Date Field Symbol Table](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table). Thisparameter does not support custom text. |
+| skeleton | string | Yes | Valid skeleton, which supports free combinations of field patterns in [Date Field Symbol Table](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table). This parameter does not support custom text. |
 | locale | intl.Locale | No | **Locale** object. The default value is the current system locale. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SimpleDateTimeFormat | **SimpleDateTimeFormat** object. |
+| [SimpleDateTimeFormat](arkts-localization-simpledatetimeformat-c.md) | **SimpleDateTimeFormat** object. |
 
 **Error codes:**
 

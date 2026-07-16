@@ -8,14 +8,15 @@ function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySus
 
 Requests delayed suspension after the application switches to the background.
 
-The default duration of delayed suspension is 3 minutes when the battery level is higher than or equal to the
-broadcast low battery level and 1 minute when the battery level is lower than the broadcast low battery level.
+The default duration of delayed suspension is 3 minutes when the battery level is higher than or equal to the broadcast low battery level and 1 minute when the battery level is lower than the broadcast low battery level.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
 **Substitutes:** [requestSuspendDelay](arkts-backgroundtasks-requestsuspenddelay-f.md#requestsuspenddelay-1)
+
+<!--Device-backgroundTaskManager-function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySuspendInfo--><!--Device-backgroundTaskManager-function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySuspendInfo-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
@@ -24,13 +25,13 @@ broadcast low battery level and 1 minute when the battery level is lower than th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reason | string | Yes | Reason for delayed transition to the suspended state. |
-| callback | Callback&lt;void&gt; | Yes | Invoked when a delay is about to time out. Generally, this callback is used tonotify the application 6 seconds before the delay times out. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Invoked when a delay is about to time out. Generally, this callback is used to notify the application 6 seconds before the delay times out. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DelaySuspendInfo | Information about the suspension delay. |
+| [DelaySuspendInfo](arkts-backgroundtasks-delaysuspendinfo-i.md) | Information about the suspension delay. |
 
 **Example**
 

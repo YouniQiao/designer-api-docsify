@@ -4,6 +4,8 @@ Defines symbol item config.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export interface ChipGroupV2SymbolItemConfig--><!--Device-unnamed-export interface ChipGroupV2SymbolItemConfig-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Set accessibility description for symbol.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipGroupV2SymbolItemConfig-accessibilityDescription?: ResourceStr--><!--Device-ChipGroupV2SymbolItemConfig-accessibilityDescription?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityLevel
@@ -48,6 +52,8 @@ Set accessibility level for symbol.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipGroupV2SymbolItemConfig-accessibilityLevel?: string--><!--Device-ChipGroupV2SymbolItemConfig-accessibilityLevel?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
@@ -65,6 +71,8 @@ Set accessibility text for symbol.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2SymbolItemConfig-accessibilityText?: ResourceStr--><!--Device-ChipGroupV2SymbolItemConfig-accessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,6 +92,8 @@ Called when the symbol item is clicked.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipGroupV2SymbolItemConfig-action: VoidCallback--><!--Device-ChipGroupV2SymbolItemConfig-action: VoidCallback-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## symbol
@@ -101,6 +111,8 @@ Set symbol.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2SymbolItemConfig-symbol: SymbolGlyphModifier--><!--Device-ChipGroupV2SymbolItemConfig-symbol: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

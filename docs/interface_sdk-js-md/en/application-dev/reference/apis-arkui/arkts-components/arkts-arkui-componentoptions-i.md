@@ -4,6 +4,8 @@ Defines the options of Component ClassDecorator.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface ComponentOptions--><!--Device-unnamed-declare interface ComponentOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## freezeWhenInactive
@@ -26,6 +28,8 @@ freeze UI state.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-ComponentOptions-freezeWhenInactive : boolean--><!--Device-ComponentOptions-freezeWhenInactive : boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## poolAccepts
@@ -45,6 +49,8 @@ Collection of custom components to be reused.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
+
+<!--Device-ComponentOptions-poolAccepts?: Function[]--><!--Device-ComponentOptions-poolAccepts?: Function[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,6 +73,8 @@ the reuse type of a custom component.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
+
+<!--Device-ComponentOptions-reusePool?: ReusePoolOwnership--><!--Device-ComponentOptions-reusePool?: ReusePoolOwnership-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

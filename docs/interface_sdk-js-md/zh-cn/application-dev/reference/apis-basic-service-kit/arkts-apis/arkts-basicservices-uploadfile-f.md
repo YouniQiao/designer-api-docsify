@@ -1,22 +1,28 @@
 # uploadFile
 
+## 导入模块
+
+```TypeScript
+import { request } from '@kit.BasicServicesKit';
+```
+
 ## uploadFile
 
 ```TypeScript
 function uploadFile(context: BaseContext, config: UploadConfig, callback: AsyncCallback<UploadTask>): void
 ```
 
-创建并启动一个上传任务，使用callback异步回调，支持HTTP协议。通过
-[on('complete'|'fail')](arkts-basicservices-uploadtask-i.md#on-3)
-可获取任务上传时的成功信息或错误信息。
+创建并启动一个上传任务，使用callback异步回调，支持HTTP协议。通过[on('complete'|'fail')](arkts-basicservices-uploadtask-i.md#on-3)可获取任务上传时的成功信息或错误信息。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-request-function uploadFile(context: BaseContext, config: UploadConfig, callback: AsyncCallback<UploadTask>): void--><!--Device-request-function uploadFile(context: BaseContext, config: UploadConfig, callback: AsyncCallback<UploadTask>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
@@ -24,9 +30,9 @@ function uploadFile(context: BaseContext, config: UploadConfig, callback: AsyncC
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 基于应用程序的上下文。 |
-| config | UploadConfig | 是 | 上传的配置信息。 |
-| callback | AsyncCallback&lt;UploadTask&gt; | 是 | 回调函数，异步返回UploadTask对象。当上传成功，err为undefined，data为获取到的UploadTask对象；否则为错误对象。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 基于应用程序的上下文。 |
+| config | [UploadConfig](arkts-basicservices-uploadconfig-i.md) | 是 | 上传的配置信息。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<UploadTask> | 是 | 回调函数，异步返回UploadTask对象。当上传成功，err为undefined，data为获取到的UploadTask对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -73,17 +79,17 @@ try {
 function uploadFile(context: BaseContext, config: UploadConfig): Promise<UploadTask>
 ```
 
-创建并启动一个上传任务，使用Promise异步回调，支持HTTP协议。通过
-[on('complete'|'fail')](arkts-basicservices-uploadtask-i.md#on-3)
-可获取任务上传时的成功信息或错误信息。
+创建并启动一个上传任务，使用Promise异步回调，支持HTTP协议。通过[on('complete'|'fail')](arkts-basicservices-uploadtask-i.md#on-3)可获取任务上传时的成功信息或错误信息。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.INTERNET
+
+<!--Device-request-function uploadFile(context: BaseContext, config: UploadConfig): Promise<UploadTask>--><!--Device-request-function uploadFile(context: BaseContext, config: UploadConfig): Promise<UploadTask>-End-->
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
@@ -91,14 +97,14 @@ function uploadFile(context: BaseContext, config: UploadConfig): Promise<UploadT
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | BaseContext | 是 | 基于应用程序的上下文。 |
-| config | UploadConfig | 是 | 上传的配置信息。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | 是 | 基于应用程序的上下文。 |
+| config | [UploadConfig](arkts-basicservices-uploadconfig-i.md) | 是 | 上传的配置信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;UploadTask&gt; | 使用Promise方式，异步返回上传任务UploadTask的Promise对象。 |
+| Promise<UploadTask> | 使用Promise方式，异步返回上传任务UploadTask的Promise对象。 |
 
 **错误码：**
 

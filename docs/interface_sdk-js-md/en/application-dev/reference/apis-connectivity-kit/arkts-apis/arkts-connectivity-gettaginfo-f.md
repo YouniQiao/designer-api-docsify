@@ -18,19 +18,21 @@ Parse a {@link TagInfo} object from Want.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-tag-function getTagInfo(want: Want): TagInfo--><!--Device-tag-function getTagInfo(want: Want): TagInfo-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | The want object that contains the values of TagInfo. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | The want object that contains the values of TagInfo. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TagInfo | The {@link TagInfo} object. |
+| [TagInfo](arkts-connectivity-taginfo-i.md) | The {@link TagInfo} object. |
 
 **Error codes:**
 

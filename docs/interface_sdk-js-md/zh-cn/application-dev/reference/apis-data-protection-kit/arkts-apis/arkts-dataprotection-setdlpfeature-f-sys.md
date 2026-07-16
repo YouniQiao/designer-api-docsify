@@ -1,5 +1,11 @@
 # setDlpFeature（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { dlpSetDlpFeature } from '@kit.DataProtectionKit';
+```
+
 ## setDlpFeature
 
 ```TypeScript
@@ -16,6 +22,8 @@ function setDlpFeature(status: DlpFeatureStatus): Promise<StatusInfoResult>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-dlpSetDlpFeature-function setDlpFeature(status: DlpFeatureStatus): Promise<StatusInfoResult>--><!--Device-dlpSetDlpFeature-function setDlpFeature(status: DlpFeatureStatus): Promise<StatusInfoResult>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -24,13 +32,13 @@ function setDlpFeature(status: DlpFeatureStatus): Promise<StatusInfoResult>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| status | DlpFeatureStatus | 是 | DLP特性开关状态。ENABLED_FEATURE用于开启DLP特性，菜单中显示"加密保护"选项；NOT_ENABLED_FEATURE用于关闭DLP特性，菜单中不显示"加密保护"选项。超出此范围抛出错误码401。 |
+| status | [DlpFeatureStatus](arkts-dataprotection-dlpfeaturestatus-e-sys.md) | 是 | DLP特性开关状态。ENABLED_FEATURE用于开启DLP特性，菜单中显示"加密保护"选项；NOT_ENABLED_FEATURE用于关闭DLP特性，菜单中不显示"加密保护"选项。超出此范围抛出错误码401。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;StatusInfoResult&gt; | Promise对象。设置DLP特性开关状态，返回DLP特性开关状态设置的结果信息。 |
+| Promise<StatusInfoResult> | Promise对象。设置DLP特性开关状态，返回DLP特性开关状态设置的结果信息。 |
 
 **错误码：**
 

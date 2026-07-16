@@ -6,9 +6,17 @@
 
 **废弃版本：** 23
 
+<!--Device-fileExtensionInfo-namespace DocumentFlag--><!--Device-fileExtensionInfo-namespace DocumentFlag-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { fileExtensionInfo } from '@kit.CoreFileKit';
+```
 
 ## 汇总
 

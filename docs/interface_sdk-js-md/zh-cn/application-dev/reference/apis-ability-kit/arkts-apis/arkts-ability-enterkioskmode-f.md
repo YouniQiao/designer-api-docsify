@@ -1,17 +1,24 @@
 # enterKioskMode
 
+## 导入模块
+
+```TypeScript
+import { kioskManager } from '@kit.AbilityKit';
+```
+
 ## enterKioskMode
 
 ```TypeScript
 function enterKioskMode(context: UIAbilityContext): Promise<void>
 ```
 
-进入Kiosk模式。使用Promise异步回调。
-该接口仅在Phone、PC/2in1和Tablet设备中可正常调用，在其他设备中返回801错误码。
+进入Kiosk模式。使用Promise异步回调。该接口仅在Phone、PC/2in1和Tablet设备中可正常调用，在其他设备中返回801错误码。
 
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-kioskManager-function enterKioskMode(context: UIAbilityContext): Promise<void>--><!--Device-kioskManager-function enterKioskMode(context: UIAbilityContext): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -19,13 +26,13 @@ function enterKioskMode(context: UIAbilityContext): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | UIAbilityContext | 是 | 需要进入kiosk模式的UIAbility的上下文。 |
+| context | [UIAbilityContext](arkts-ability-uiabilitycontext-t.md) | 是 | 需要进入kiosk模式的UIAbility的上下文。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

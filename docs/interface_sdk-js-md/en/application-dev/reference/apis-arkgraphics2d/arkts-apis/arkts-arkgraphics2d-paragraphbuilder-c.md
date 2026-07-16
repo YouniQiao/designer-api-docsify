@@ -4,6 +4,8 @@ Implements a paragraph builder.
 
 **Since:** 12
 
+<!--Device-text-class ParagraphBuilder--><!--Device-text-class ParagraphBuilder-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Inserts a placeholder into the paragraph being built.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-ParagraphBuilder-addPlaceholder(placeholderSpan: PlaceholderSpan): void--><!--Device-ParagraphBuilder-addPlaceholder(placeholderSpan: PlaceholderSpan): void-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| placeholderSpan | PlaceholderSpan | Yes | Placeholder span, which describes the size, alignment, baseline type, and baseline offset of the placeholder. |
+| placeholderSpan | [PlaceholderSpan](arkts-arkgraphics2d-placeholderspan-i.md) | Yes | Placeholder span, which describes the size, alignment, baseline type, and baseline offset of the placeholder. |
 
 **Example**
 
@@ -83,13 +87,15 @@ Inserts a symbol into the paragraph being built.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-ParagraphBuilder-addSymbol(symbolId: int): void--><!--Device-ParagraphBuilder-addSymbol(symbolId: int): void-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| symbolId | number | Yes | Symbol code to insert. The value is a hexadecimal number in the range 0xF0000-0xF0C97.For details about the configurable symbol codes (unicode values in the list view), see[HarmonyOS Symbol](https://developer.huawei.com/consumer/en/design/harmonyos-symbol/). |
+| symbolId | number | Yes | Symbol code to insert. The value is a hexadecimal number in the range 0xF0000-0xF0C97.For details about the configurable symbol codes (unicode values in the list view), see [HarmonyOS Symbol](https://developer.huawei.com/consumer/en/design/harmonyos-symbol/). |
 
 **Example**
 
@@ -138,13 +144,15 @@ Inserts a text string into the paragraph being built.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-ParagraphBuilder-addText(text: string): void--><!--Device-ParagraphBuilder-addText(text: string): void-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Exact text string inserted into the paragraph. If an invalid Unicode character isprovided, it is displayed as ?. |
+| text | string | Yes | Exact text string inserted into the paragraph. If an invalid Unicode character is provided, it is displayed as ?. |
 
 **Example**
 
@@ -195,13 +203,15 @@ Creates a paragraph object that can be used for subsequent layout and rendering.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-ParagraphBuilder-build(): Paragraph--><!--Device-ParagraphBuilder-build(): Paragraph-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Paragraph | **Paragraph** object that can be used for subsequent rendering. |
+| [Paragraph](../../apis-arkui/arkts-apis/arkts-arkui-paragraph-t.md) | **Paragraph** object that can be used for subsequent rendering. |
 
 **Example**
 
@@ -251,13 +261,15 @@ Builds a line typesetter.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-ParagraphBuilder-buildLineTypeset(): LineTypeset--><!--Device-ParagraphBuilder-buildLineTypeset(): LineTypeset-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| LineTypeset | **LineTypeset** object that can be used for subsequent rendering. |
+| [LineTypeset](arkts-arkgraphics2d-linetypeset-c.md) | **LineTypeset** object that can be used for subsequent rendering. |
 
 **Example**
 
@@ -301,14 +313,16 @@ A constructor used to create a **ParagraphBuilder** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-ParagraphBuilder-constructor(paragraphStyle: ParagraphStyle, fontCollection: FontCollection)--><!--Device-ParagraphBuilder-constructor(paragraphStyle: ParagraphStyle, fontCollection: FontCollection)-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| paragraphStyle | ParagraphStyle | Yes | Paragraph style. |
-| fontCollection | FontCollection | Yes | Font collection. |
+| paragraphStyle | [ParagraphStyle](arkts-arkgraphics2d-paragraphstyle-i.md) | Yes | Paragraph style. |
+| fontCollection | [FontCollection](arkts-arkgraphics2d-fontcollection-c.md) | Yes | Font collection. |
 
 **Example**
 
@@ -354,6 +368,8 @@ Restores the previous text style.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-ParagraphBuilder-popStyle(): void--><!--Device-ParagraphBuilder-popStyle(): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -403,13 +419,15 @@ pushStyle(textStyle: TextStyle): void
 
 Applies a new style to the current text blob.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > When you update the style of the current text blob, all text added afterward will use this new style.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-ParagraphBuilder-pushStyle(textStyle: TextStyle): void--><!--Device-ParagraphBuilder-pushStyle(textStyle: TextStyle): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -417,7 +435,7 @@ Applies a new style to the current text blob.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| textStyle | TextStyle | Yes | Text style, which describes various visual attributes of text, such as font,font size, color, font weight, word spacing, line spacing, decoration (such as underline and strikethrough),and text shadow. |
+| textStyle | [TextStyle](arkts-arkgraphics2d-textstyle-i.md) | Yes | Text style, which describes various visual attributes of text, such as font,font size, color, font weight, word spacing, line spacing, decoration (such as underline and strikethrough),and text shadow. |
 
 **Example**
 

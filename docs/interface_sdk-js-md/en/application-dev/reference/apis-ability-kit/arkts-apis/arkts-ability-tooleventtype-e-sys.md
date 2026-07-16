@@ -4,6 +4,8 @@ Enum for query entity mode.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export enum ToolEventType--><!--Device-unnamed-export enum ToolEventType-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -19,6 +21,8 @@ stdout event.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ToolEventType-STDOUT = 'stdout'--><!--Device-ToolEventType-STDOUT = 'stdout'-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -36,6 +40,8 @@ stderr event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ToolEventType-STDERR = 'stderr'--><!--Device-ToolEventType-STDERR = 'stderr'-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -52,6 +58,8 @@ exit event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ToolEventType-EXIT = 'exit'--><!--Device-ToolEventType-EXIT = 'exit'-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -67,6 +75,8 @@ error event.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ToolEventType-ERROR = 'error'--><!--Device-ToolEventType-ERROR = 'error'-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 

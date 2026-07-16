@@ -1,10 +1,10 @@
 # StartAbilityParameter
 
-定义启动Ability参数，可以作为入参，调用
-[startAbility](arkts-ability-startability-f.md#startability-1)
-启动指定的Ability。
+定义启动Ability参数，可以作为入参，调用[startAbility](arkts-ability-startability-f.md#startability-1)启动指定的Ability。
 
 **起始版本：** 6
+
+<!--Device-unnamed-export interface StartAbilityParameter--><!--Device-unnamed-export interface StartAbilityParameter-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -22,6 +22,8 @@ abilityStartSetting?: { [key: string]: any }
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-StartAbilityParameter-abilityStartSetting?: { [key: string]: any }--><!--Device-StartAbilityParameter-abilityStartSetting?: { [key: string]: any }-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## abilityStartSettings
@@ -38,6 +40,8 @@ abilityStartSettings?: Record<string, Object>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-StartAbilityParameter-abilityStartSettings?: Record<string, Object>--><!--Device-StartAbilityParameter-abilityStartSettings?: Record<string, Object>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## want
@@ -53,6 +57,8 @@ want: Want
 **起始版本：** 6
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-StartAbilityParameter-want: Want--><!--Device-StartAbilityParameter-want: Want-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 

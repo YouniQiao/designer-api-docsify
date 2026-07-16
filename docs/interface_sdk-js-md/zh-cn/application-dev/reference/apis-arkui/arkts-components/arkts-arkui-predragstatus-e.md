@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare enum PreDragStatus--><!--Device-unnamed-declare enum PreDragStatus-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## ACTION_DETECTING_STATUS
@@ -18,7 +20,9 @@ ACTION_DETECTING_STATUS = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PreDragStatus-ACTION_DETECTING_STATUS = 0--><!--Device-PreDragStatus-ACTION_DETECTING_STATUS = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,7 +38,9 @@ READY_TO_TRIGGER_DRAG_ACTION = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PreDragStatus-READY_TO_TRIGGER_DRAG_ACTION = 1--><!--Device-PreDragStatus-READY_TO_TRIGGER_DRAG_ACTION = 1-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,7 +56,9 @@ PREVIEW_LIFT_STARTED = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PreDragStatus-PREVIEW_LIFT_STARTED = 2--><!--Device-PreDragStatus-PREVIEW_LIFT_STARTED = 2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,7 +74,9 @@ PREVIEW_LIFT_FINISHED = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PreDragStatus-PREVIEW_LIFT_FINISHED = 3--><!--Device-PreDragStatus-PREVIEW_LIFT_FINISHED = 3-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,7 +92,9 @@ PREVIEW_LANDING_STARTED = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PreDragStatus-PREVIEW_LANDING_STARTED = 4--><!--Device-PreDragStatus-PREVIEW_LANDING_STARTED = 4-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,7 +110,9 @@ PREVIEW_LANDING_FINISHED = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PreDragStatus-PREVIEW_LANDING_FINISHED = 5--><!--Device-PreDragStatus-PREVIEW_LANDING_FINISHED = 5-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -114,7 +128,9 @@ ACTION_CANCELED_BEFORE_DRAG = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PreDragStatus-ACTION_CANCELED_BEFORE_DRAG = 6--><!--Device-PreDragStatus-ACTION_CANCELED_BEFORE_DRAG = 6-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -130,7 +146,9 @@ PREPARING_FOR_DRAG_DETECTION = 7
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PreDragStatus-PREPARING_FOR_DRAG_DETECTION = 7--><!--Device-PreDragStatus-PREPARING_FOR_DRAG_DETECTION = 7-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

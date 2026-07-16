@@ -4,6 +4,8 @@ Enumerates the reasons for data loading status changes.
 
 **Since:** 18
 
+<!--Device-media-enum LoadingRequestError--><!--Device-media-enum LoadingRequestError-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## LOADING_ERROR_SUCCESS
@@ -17,6 +19,8 @@ Returned by the client to indicate that the end of the resource.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-LoadingRequestError-LOADING_ERROR_SUCCESS = 0--><!--Device-LoadingRequestError-LOADING_ERROR_SUCCESS = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -32,6 +36,8 @@ Returned by the client to indicate that the resource is not ready for access.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-LoadingRequestError-LOADING_ERROR_NOT_READY = 1--><!--Device-LoadingRequestError-LOADING_ERROR_NOT_READY = 1-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## LOADING_ERROR_NO_RESOURCE
@@ -46,6 +52,8 @@ Returned by the client to indicate that the requested resource URL does not exis
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-LoadingRequestError-LOADING_ERROR_NO_RESOURCE = 2--><!--Device-LoadingRequestError-LOADING_ERROR_NO_RESOURCE = 2-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## LOADING_ERROR_INVAID_HANDLE
@@ -54,12 +62,13 @@ Returned by the client to indicate that the requested resource URL does not exis
 LOADING_ERROR_INVAID_HANDLE = 3
 ```
 
-Returned by the client to indicate that the ID of the requested resource handle (specified by **uuid**) is
-invalid.
+Returned by the client to indicate that the ID of the requested resource handle (specified by **uuid**) is invalid.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-LoadingRequestError-LOADING_ERROR_INVAID_HANDLE = 3--><!--Device-LoadingRequestError-LOADING_ERROR_INVAID_HANDLE = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -75,6 +84,8 @@ Returned by the client to indicate that the client does not have permission to r
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-LoadingRequestError-LOADING_ERROR_ACCESS_DENIED = 4--><!--Device-LoadingRequestError-LOADING_ERROR_ACCESS_DENIED = 4-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## LOADING_ERROR_ACCESS_TIMEOUT
@@ -89,6 +100,8 @@ Returned by the client to indicate that the access to the resource times out.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-LoadingRequestError-LOADING_ERROR_ACCESS_TIMEOUT = 5--><!--Device-LoadingRequestError-LOADING_ERROR_ACCESS_TIMEOUT = 5-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## LOADING_ERROR_AUTHORIZE_FAILED
@@ -102,6 +115,8 @@ Returned by the client to indicate that authorization fails.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-LoadingRequestError-LOADING_ERROR_AUTHORIZE_FAILED = 6--><!--Device-LoadingRequestError-LOADING_ERROR_AUTHORIZE_FAILED = 6-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 

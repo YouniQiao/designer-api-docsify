@@ -4,9 +4,17 @@
 
 **起始版本：** 10
 
+<!--Device-dlpPermission-export interface DLPSandboxInfo--><!--Device-dlpPermission-export interface DLPSandboxInfo-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+```
 
 ## appIndex
 
@@ -19,6 +27,8 @@ appIndex: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-DLPSandboxInfo-appIndex: number--><!--Device-DLPSandboxInfo-appIndex: number-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -38,6 +48,8 @@ bindAppIndex?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DLPSandboxInfo-bindAppIndex?: number--><!--Device-DLPSandboxInfo-bindAppIndex?: number-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -53,6 +65,8 @@ tokenID: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-DLPSandboxInfo-tokenID: number--><!--Device-DLPSandboxInfo-tokenID: number-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

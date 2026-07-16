@@ -1,5 +1,11 @@
 # getLockState（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## getLockState
 
 ```TypeScript
@@ -12,6 +18,8 @@ Get the lock status of the SIM card in the specified slot.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getLockState(slotId: int, lockType: LockType, callback: AsyncCallback<LockState>): void--><!--Device-sim-function getLockState(slotId: int, lockType: LockType, callback: AsyncCallback<LockState>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -21,8 +29,8 @@ Get the lock status of the SIM card in the specified slot.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| lockType | LockType | 是 | Indicates the lock type. |
-| callback | AsyncCallback&lt;LockState&gt; | 是 | Indicates the callback for getting the sim card lock status. |
+| lockType | [LockType](arkts-telephony-locktype-e-sys.md) | 是 | Indicates the lock type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<LockState> | 是 | Indicates the callback for getting the sim card lock status. |
 
 **错误码：**
 
@@ -63,6 +71,8 @@ Get the lock status of the SIM card in the specified slot.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getLockState(slotId: int, lockType: LockType): Promise<LockState>--><!--Device-sim-function getLockState(slotId: int, lockType: LockType): Promise<LockState>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -72,13 +82,13 @@ Get the lock status of the SIM card in the specified slot.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| lockType | LockType | 是 | Indicates the lock type. |
+| lockType | [LockType](arkts-telephony-locktype-e-sys.md) | 是 | Indicates the lock type. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;LockState&gt; | Returns the sim card lock status. |
+| Promise<LockState> | Returns the sim card lock status. |
 
 **错误码：**
 

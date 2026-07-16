@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-cert-interface GeneralName--><!--Device-cert-interface GeneralName-End-->
+
 **系统能力：** SystemCapability.Security.Cert
+
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
 
 ## name
 
@@ -18,7 +26,9 @@ name?: Uint8Array
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-GeneralName-name?: Uint8Array--><!--Device-GeneralName-name?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -34,7 +44,9 @@ GeneralName类型。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-GeneralName-type: GeneralNameType--><!--Device-GeneralName-type: GeneralNameType-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

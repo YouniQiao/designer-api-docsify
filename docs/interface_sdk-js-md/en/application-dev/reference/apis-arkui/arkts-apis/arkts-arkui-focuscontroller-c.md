@@ -2,12 +2,14 @@
 
 Provides capabilities to control focus, including features such as clearing, moving, and activating focus.
 
-> **NOTE**
->
-> In the following API examples, you must first use [getFocusController()](arkts-arkui-uicontext-c.md#getfocuscontroller-1) in
+> **NOTE**  
+>  
+> In the following API examples, you must first use [getFocusController()](arkts-arkui-uicontext-c.md#getfocuscontroller-1) in  
 > **UIContext** to obtain a **FocusController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 12
+
+<!--Device-unnamed-export class FocusController--><!--Device-unnamed-export class FocusController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,14 +33,16 @@ Sets the [focus activation state](../../../../ui/arkts-common-events-focus-event
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-FocusController-activate(isActive: boolean, autoInactive?: boolean): void--><!--Device-FocusController-activate(isActive: boolean, autoInactive?: boolean): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isActive | boolean | Yes | Whether to enter or exit the focus activation state.<br>The value **true** means toenter the focus activation state, and **false** means to exit the focus activation state. |
-| autoInactive | boolean | No | Logic for exiting the focus activation state.<br>The value **true** means thefocus activation state will be exited automatically when touch or mouse events are triggered, and **false**means the state is controlled solely by API calls.<br>Default value: **true** |
+| isActive | boolean | Yes | Whether to enter or exit the focus activation state.<br>The value **true** means to enter the focus activation state, and **false** means to exit the focus activation state. |
+| autoInactive | boolean | No | Logic for exiting the focus activation state.<br>The value **true** means the focus activation state will be exited automatically when touch or mouse events are triggered, and **false** means the state is controlled solely by API calls.<br>Default value: **true** |
 
 ## clearFocus
 
@@ -46,14 +50,15 @@ Sets the [focus activation state](../../../../ui/arkts-common-events-focus-event
 clearFocus(): void
 ```
 
-Clears the focus and forcibly moves the focus to the root container node of the page, causing other nodes in the
-focus chain to lose focus.
+Clears the focus and forcibly moves the focus to the root container node of the page, causing other nodes in the focus chain to lose focus.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FocusController-clearFocus(): void--><!--Device-FocusController-clearFocus(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -65,8 +70,7 @@ isActive(): boolean
 
 Obtains the focus activation state of the UI instance.
 
-For details about the focus activation state, see
-[Basic Concepts](../../../../ui/arkts-common-events-focus-event.md#basic-concepts).
+For details about the focus activation state, see [Basic Concepts](../../../../ui/arkts-common-events-focus-event.md#basic-concepts).
 
 **Since:** 20
 
@@ -74,13 +78,15 @@ For details about the focus activation state, see
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-FocusController-isActive(): boolean--><!--Device-FocusController-isActive(): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Focus activation state of the UI instance. The value **true** means that the instance hasentered the focus activation state, and **false** means that the instance has exited the focus activationstate. |
+| boolean | Focus activation state of the UI instance. The value **true** means that the instance has entered the focus activation state, and **false** means that the instance has exited the focus activation state. |
 
 ## requestFocus
 
@@ -95,6 +101,8 @@ Transfers focus to a component node by the component ID, which is effective imme
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FocusController-requestFocus(key: string): void--><!--Device-FocusController-requestFocus(key: string): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,13 +134,15 @@ Sets whether the new page automatically obtains focus during page switching.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-FocusController-setAutoFocusTransfer(isAutoFocusTransfer: boolean): void--><!--Device-FocusController-setAutoFocusTransfer(isAutoFocusTransfer: boolean): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isAutoFocusTransfer | boolean | Yes | Whether the new page automatically obtains focus during page switchingusing navigation components or APIs, such as [Router](arkts-router.md),[Navigation](../arkts-components/arkts-arkui-navigation.md), [Menu](../arkts-components/arkts-arkui-menu.md), [Dialog](arkts-arkui-advanced-dialog.md), and[Popup](arkts-arkui-advanced-popup.md). The value **true** means the new page automatically obtains focus,and **false** means the opposite. Default value: **true**. |
+| isAutoFocusTransfer | boolean | Yes | Whether the new page automatically obtains focus during page switching using navigation components or APIs, such as [Router](arkts-router.md),[Navigation](../arkts-components/arkts-arkui-navigation.md), [Menu](../arkts-components/arkts-arkui-menu.md), [Dialog](arkts-arkui-advanced-dialog.md), and [Popup](arkts-arkui-advanced-popup.md). The value **true** means the new page automatically obtains focus,and **false** means the opposite. Default value: **true**. |
 
 ## setKeyProcessingMode
 
@@ -148,11 +158,13 @@ Sets the mode for processing key events.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-FocusController-setKeyProcessingMode(mode: KeyProcessingMode): void--><!--Device-FocusController-setKeyProcessingMode(mode: KeyProcessingMode): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | KeyProcessingMode | Yes | Mode for processing key events. |
+| mode | [KeyProcessingMode](arkts-arkui-keyprocessingmode-e.md) | Yes | Mode for processing key events. |
 

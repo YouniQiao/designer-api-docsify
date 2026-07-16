@@ -6,6 +6,8 @@ Represents a dynamic synchronization scene of Marquee.
 
 **Since:** 14
 
+<!--Device-unnamed-export class MarqueeDynamicSyncScene extends DynamicSyncScene--><!--Device-unnamed-export class MarqueeDynamicSyncScene extends DynamicSyncScene-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -29,6 +31,8 @@ Type of the MarqueeDynamicSyncSceneType.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-MarqueeDynamicSyncScene-readonly type: MarqueeDynamicSyncSceneType--><!--Device-MarqueeDynamicSyncScene-readonly type: MarqueeDynamicSyncSceneType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

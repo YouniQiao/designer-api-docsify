@@ -16,13 +16,15 @@ Obtains the default SIM ID for sending SMS messages.
 
 **Since:** 10
 
+<!--Device-sms-function getDefaultSmsSimId(callback: AsyncCallback<int>): void--><!--Device-sms-function getDefaultSmsSimId(callback: AsyncCallback<int>): void-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Returns the SIM ID of the default sms sim andSIM ID will increase from 1. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Returns the SIM ID of the default sms sim and SIM ID will increase from 1. |
 
 **Error codes:**
 
@@ -59,13 +61,15 @@ Obtains the default SIM ID for sending SMS messages.
 
 **Since:** 10
 
+<!--Device-sms-function getDefaultSmsSimId(): Promise<int>--><!--Device-sms-function getDefaultSmsSimId(): Promise<int>-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns the SIM ID of the default sms sim andSIM ID will increase from 1. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Returns the SIM ID of the default sms sim and SIM ID will increase from 1. |
 
 **Error codes:**
 

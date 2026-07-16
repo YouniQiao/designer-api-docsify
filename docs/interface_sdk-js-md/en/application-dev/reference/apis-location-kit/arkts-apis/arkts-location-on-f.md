@@ -22,6 +22,8 @@ Subscribe location changed
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function on(type: 'locationChange', request: LocationRequest, callback: Callback<Location>): void--><!--Device-geolocation-function on(type: 'locationChange', request: LocationRequest, callback: Callback<Location>): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **Parameters:**
@@ -29,8 +31,8 @@ Subscribe location changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'locationChange' | Yes | Indicates the location service event to be subscribed to. |
-| request | LocationRequest | Yes | Indicates the location request parameters. |
-| callback | Callback&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+| request | [LocationRequest](arkts-location-locationrequest-i.md) | Yes | Indicates the location request parameters. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Location> | Yes | Indicates the callback for reporting the location result. |
 
 **Example**
 
@@ -61,6 +63,8 @@ Subscribe location switch changed
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function on(type: 'locationServiceState', callback: Callback<boolean>): void--><!--Device-geolocation-function on(type: 'locationServiceState', callback: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **Parameters:**
@@ -68,7 +72,7 @@ Subscribe location switch changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'locationServiceState' | Yes | Indicates the location service event to be subscribed to. |
-| callback | Callback&lt;boolean&gt; | Yes | Indicates the callback for reporting the location result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | Yes | Indicates the callback for reporting the location result. |
 
 **Example**
 
@@ -98,6 +102,8 @@ Subscribe to cache GNSS locations update messages
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function on(type: 'cachedGnssLocationsReporting', request: CachedGnssLocationsRequest, callback: Callback<Array<Location>>): void--><!--Device-geolocation-function on(type: 'cachedGnssLocationsReporting', request: CachedGnssLocationsRequest, callback: Callback<Array<Location>>): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Gnss
 
 **Parameters:**
@@ -105,8 +111,8 @@ Subscribe to cache GNSS locations update messages
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cachedGnssLocationsReporting' | Yes | Indicates the location service event to be subscribed to. |
-| request | CachedGnssLocationsRequest | Yes | Indicates the cached GNSS locations request parameters. |
-| callback | Callback&lt;Array&lt;Location&gt;&gt; | Yes | Indicates the callback for reporting the cached GNSS locations. |
+| request | [CachedGnssLocationsRequest](arkts-location-cachedgnsslocationsrequest-i.md) | Yes | Indicates the cached GNSS locations request parameters. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<Location>> | Yes | Indicates the callback for reporting the cached GNSS locations. |
 
 **Example**
 
@@ -137,6 +143,8 @@ Subscribe gnss status changed
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function on(type: 'gnssStatusChange', callback: Callback<SatelliteStatusInfo>): void--><!--Device-geolocation-function on(type: 'gnssStatusChange', callback: Callback<SatelliteStatusInfo>): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Gnss
 
 **Parameters:**
@@ -144,7 +152,7 @@ Subscribe gnss status changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'gnssStatusChange' | Yes | Indicates the location service event to be subscribed to. |
-| callback | Callback&lt;SatelliteStatusInfo&gt; | Yes | Indicates the callback for reporting the gnss status change. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SatelliteStatusInfo> | Yes | Indicates the callback for reporting the gnss status change. |
 
 **Example**
 
@@ -174,6 +182,8 @@ Subscribe nmea message changed
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function on(type: 'nmeaMessageChange', callback: Callback<string>): void--><!--Device-geolocation-function on(type: 'nmeaMessageChange', callback: Callback<string>): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Gnss
 
 **Parameters:**
@@ -181,7 +191,7 @@ Subscribe nmea message changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'nmeaMessageChange' | Yes | Indicates the location service event to be subscribed to. |
-| callback | Callback&lt;string&gt; | Yes | Indicates the callback for reporting the nmea message. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<string> | Yes | Indicates the callback for reporting the nmea message. |
 
 **Example**
 
@@ -211,6 +221,8 @@ Add a geofence and subscribe geo fence status changed
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function on(type: 'fenceStatusChange', request: GeofenceRequest, want: WantAgent): void--><!--Device-geolocation-function on(type: 'fenceStatusChange', request: GeofenceRequest, want: WantAgent): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **Parameters:**
@@ -218,8 +230,8 @@ Add a geofence and subscribe geo fence status changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fenceStatusChange' | Yes | Indicates the location service event to be subscribed to. |
-| request | GeofenceRequest | Yes | Indicates the Geo-fence configuration parameters. |
-| want | WantAgent | Yes | Indicates which ability to start when the geofence event is triggered. |
+| request | [GeofenceRequest](arkts-location-geofencerequest-i.md) | Yes | Indicates the Geo-fence configuration parameters. |
+| want | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | Indicates which ability to start when the geofence event is triggered. |
 
 **Example**
 

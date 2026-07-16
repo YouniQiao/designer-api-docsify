@@ -1,5 +1,11 @@
 # @system.router
 
+## 导入模块
+
+```TypeScript
+import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, RouterState, EnableAlertBeforeBackPageOptions } from '@kit.ArkUI';
+```
+
 ## 汇总
 
 ### 类

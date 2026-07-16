@@ -18,13 +18,15 @@ Obtains an AudioManager instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-audio-function getAudioManager(): AudioManager--><!--Device-audio-function getAudioManager(): AudioManager-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AudioManager | AudioManager instance. |
+| [AudioManager](arkts-audio-audiomanager-i.md) | AudioManager instance. |
 
 **Example**
 

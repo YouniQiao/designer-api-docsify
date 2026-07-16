@@ -4,6 +4,8 @@ Provide a simple date time formatting interface.
 
 **Since:** 18
 
+<!--Device-i18n-export class SimpleDateTimeFormat--><!--Device-i18n-export class SimpleDateTimeFormat-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Formats the date and time.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SimpleDateTimeFormat-format(date: Date): string--><!--Device-SimpleDateTimeFormat-format(date: Date): string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | Yes | Date and time. Note: The month starts from **0**. For example, **0** indicates January. |
+| date | [Date](../../apis-na/arkts-apis/arkts-na-date-i.md) | Yes | Date and time. Note: The month starts from **0**. For example, **0** indicates January. |
 
 **Return value:**
 

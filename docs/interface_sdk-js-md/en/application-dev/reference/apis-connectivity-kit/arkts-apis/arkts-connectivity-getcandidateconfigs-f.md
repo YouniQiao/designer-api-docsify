@@ -12,8 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getCandidateConfigs(): Array<WifiDeviceConfig>
 ```
 
-Obtain the list of all existed candidate Wi-Fi configurations which added by ourself.
-You can obtain only the Wi-Fi configurations you created on your own application.
+Obtain the list of all existed candidate Wi-Fi configurations which added by ourself.You can obtain only the Wi-Fi configurations you created on your own application.
 
 **Since:** 12
 
@@ -21,13 +20,15 @@ You can obtain only the Wi-Fi configurations you created on your own application
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-wifiManager-function getCandidateConfigs(): Array<WifiDeviceConfig>--><!--Device-wifiManager-function getCandidateConfigs(): Array<WifiDeviceConfig>-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;WifiDeviceConfig&gt; | Returns the list of all existed Wi-Fi configurations you created on your application. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<WifiDeviceConfig> | Returns the list of all existed Wi-Fi configurations you created on your application. |
 
 **Error codes:**
 

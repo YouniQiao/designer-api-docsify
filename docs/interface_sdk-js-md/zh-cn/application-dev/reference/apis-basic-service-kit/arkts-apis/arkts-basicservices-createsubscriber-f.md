@@ -1,5 +1,11 @@
 # createSubscriber
 
+## 导入模块
+
+```TypeScript
+import { commonEventManager } from '@kit.BasicServicesKit';
+```
+
 ## createSubscriber
 
 ```TypeScript
@@ -13,7 +19,15 @@ function createSubscriber(
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-commonEventManager-function createSubscriber(
+    subscribeInfo: CommonEventSubscribeInfo,
+    callback: AsyncCallback<CommonEventSubscriber>
+  ): void--><!--Device-commonEventManager-function createSubscriber(
+    subscribeInfo: CommonEventSubscribeInfo,
+    callback: AsyncCallback<CommonEventSubscriber>
+  ): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -21,8 +35,8 @@ function createSubscriber(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscribeInfo | CommonEventSubscribeInfo | 是 | 表示订阅信息。 |
-| callback | AsyncCallback&lt;CommonEventSubscriber&gt; | 是 | 回调函数。当公共事件订阅者创建成功时，err为undefined，否则为错误对象。 |
+| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-t.md) | 是 | 表示订阅信息。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<CommonEventSubscriber> | 是 | 回调函数。当公共事件订阅者创建成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -71,7 +85,9 @@ function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<Comm
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-commonEventManager-function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<CommonEventSubscriber>--><!--Device-commonEventManager-function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<CommonEventSubscriber>-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -79,13 +95,13 @@ function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<Comm
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscribeInfo | CommonEventSubscribeInfo | 是 | 表示订阅信息。 |
+| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-t.md) | 是 | 表示订阅信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CommonEventSubscriber&gt; | Promise对象，返回创建成功的订阅者对象。 |
+| Promise<CommonEventSubscriber> | Promise对象，返回创建成功的订阅者对象。 |
 
 **错误码：**
 

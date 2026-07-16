@@ -16,9 +16,7 @@ Adds disallowed USB device types.
 
 A policy conflict is reported when this API is called in the following scenarios:
 
-1. The USB capability of the device has been disabled using the [setDisallowedPolicy](arkts-mdm-setdisallowedpolicy-f.md#setdisallowedpolicy-1) API.
-2. The available USB devices have been added through [addAllowedUsbDevices](arkts-mdm-addallowedusbdevices-f.md#addallowedusbdevices-1).
-3. USB storage write access has been disabled for specific users via the [setDisallowedPolicyForAccount](arkts-mdm-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount-1) API.
+1. The USB capability of the device has been disabled using the [setDisallowedPolicy](arkts-mdm-setdisallowedpolicy-f.md#setdisallowedpolicy-1) API.2. The available USB devices have been added through [addAllowedUsbDevices](arkts-mdm-addallowedusbdevices-f.md#addallowedusbdevices-1).3. USB storage write access has been disabled for specific users via the [setDisallowedPolicyForAccount](arkts-mdm-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount-1) API.
 
 **Since:** 14
 
@@ -26,14 +24,16 @@ A policy conflict is reported when this API is called in the following scenarios
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-usbManager-function addDisallowedUsbDevices(admin: Want, usbDevices: Array<UsbDeviceType>): void--><!--Device-usbManager-function addDisallowedUsbDevices(admin: Want, usbDevices: Array<UsbDeviceType>): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| usbDevices | Array&lt;UsbDeviceType&gt; | Yes | Array of the USB devices to be added, which can be obtained through[getDevices](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-getdevices-f.md#getdevices-1). The maximum number of USB devices is 200. If thereare already 100 USB device IDs, only 100 more can be added. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| usbDevices | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<UsbDeviceType> | Yes | Array of the USB devices to be added, which can be obtained through [getDevices](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-getdevices-f.md#getdevices-1). The maximum number of USB devices is 200. If there are already 100 USB device IDs, only 100 more can be added. |
 
 **Error codes:**
 
@@ -42,7 +42,7 @@ A policy conflict is reported when this API is called in the following scenarios
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) | A conflict policy has been configured. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Example**

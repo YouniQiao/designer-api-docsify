@@ -8,6 +8,8 @@ The Scope interface is used to describe the valid range of a field.
 
 **Substitutes:** [ScopeHelper](arkts-arkts-scopehelper-c.md)
 
+<!--Device-util-class Scope--><!--Device-util-class Scope-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -30,19 +32,21 @@ Limits a value to this **Scope**.
 
 **Substitutes:** [clamp](arkts-arkts-scopehelper-c.md#clamp-1)
 
+<!--Device-Scope-clamp(value: ScopeType): ScopeType--><!--Device-Scope-clamp(value: ScopeType): ScopeType-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ScopeType | Yes | Value specified. |
+| value | [ScopeType](arkts-arkts-scopetype-t.md) | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ScopeType | Returns **lowerObj** if the specified value is less than the lower limit; returns**upperObj** if the specified value is greater than the upper limit; returns the specified value if it iswithin this **Scope**. |
+| [ScopeType](arkts-arkts-scopetype-t.md) | Returns **lowerObj** if the specified value is less than the lower limit; returns **upperObj** if the specified value is greater than the upper limit; returns the specified value if it is within this **Scope**. |
 
 **Example**
 
@@ -91,14 +95,16 @@ A constructor used to create a **Scope** object with the specified upper and low
 
 **Substitutes:** constructor
 
+<!--Device-Scope-constructor(lowerObj: ScopeType, upperObj: ScopeType)--><!--Device-Scope-constructor(lowerObj: ScopeType, upperObj: ScopeType)-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | ScopeType | Yes | Lower limit of the **Scope** object. |
-| upperObj | ScopeType | Yes | Upper limit of the **Scope** object. |
+| lowerObj | [ScopeType](arkts-arkts-scopetype-t.md) | Yes | Lower limit of the **Scope** object. |
+| upperObj | [ScopeType](arkts-arkts-scopetype-t.md) | Yes | Upper limit of the **Scope** object. |
 
 **Example**
 
@@ -145,13 +151,15 @@ Checks whether a value is within this **Scope**.
 
 **Substitutes:** [contains](arkts-arkts-lrucache-c.md#contains-1)
 
+<!--Device-Scope-contains(value: ScopeType): boolean--><!--Device-Scope-contains(value: ScopeType): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ScopeType | Yes | Value specified. |
+| value | [ScopeType](arkts-arkts-scopetype-t.md) | Yes | Value specified. |
 
 **Return value:**
 
@@ -206,13 +214,15 @@ Checks whether a range is within this **Scope**.
 
 **Substitutes:** [contains](arkts-arkts-lrucache-c.md#contains-1)
 
+<!--Device-Scope-contains(range: Scope): boolean--><!--Device-Scope-contains(range: Scope): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | Scope | Yes | **Scope** specified. |
+| range | [Scope](arkts-arkts-scope-c.md) | Yes | **Scope** specified. |
 
 **Return value:**
 
@@ -269,20 +279,22 @@ Obtains the union set of this **Scope** and the given lower and upper limits.
 
 **Substitutes:** expand
 
+<!--Device-Scope-expand(lowerObj: ScopeType, upperObj: ScopeType): Scope--><!--Device-Scope-expand(lowerObj: ScopeType, upperObj: ScopeType): Scope-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | ScopeType | Yes | Lower limit. |
-| upperObj | ScopeType | Yes | Upper limit. |
+| lowerObj | [ScopeType](arkts-arkts-scopetype-t.md) | Yes | Lower limit. |
+| upperObj | [ScopeType](arkts-arkts-scopetype-t.md) | Yes | Upper limit. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Scope | Union set of this **Scope** and the given lower and upper limits. |
+| [Scope](arkts-arkts-scope-c.md) | Union set of this **Scope** and the given lower and upper limits. |
 
 **Example**
 
@@ -332,19 +344,21 @@ Obtains the union set of this **Scope** and the given **Scope**.
 
 **Substitutes:** expand
 
+<!--Device-Scope-expand(range: Scope): Scope--><!--Device-Scope-expand(range: Scope): Scope-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | Scope | Yes | **Scope** specified. |
+| range | [Scope](arkts-arkts-scope-c.md) | Yes | **Scope** specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Scope | Union set of this **Scope** and the given **Scope**. |
+| [Scope](arkts-arkts-scope-c.md) | Union set of this **Scope** and the given **Scope**. |
 
 **Example**
 
@@ -395,19 +409,21 @@ Obtains the union set of this **Scope** and the given value.
 
 **Substitutes:** expand
 
+<!--Device-Scope-expand(value: ScopeType): Scope--><!--Device-Scope-expand(value: ScopeType): Scope-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ScopeType | Yes | Value specified. |
+| value | [ScopeType](arkts-arkts-scopetype-t.md) | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Scope | Union set of this **Scope** and the given value. |
+| [Scope](arkts-arkts-scope-c.md) | Union set of this **Scope** and the given value. |
 
 **Example**
 
@@ -456,13 +472,15 @@ Obtains the lower limit of this **Scope**.
 
 **Substitutes:** [getLower](arkts-arkts-scopehelper-c.md#getlower-1)
 
+<!--Device-Scope-getLower(): ScopeType--><!--Device-Scope-getLower(): ScopeType-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ScopeType | Lower limit of this **Scope**. |
+| [ScopeType](arkts-arkts-scopetype-t.md) | Lower limit of this **Scope**. |
 
 **Example**
 
@@ -510,13 +528,15 @@ Obtains the upper limit of this **Scope**.
 
 **Substitutes:** [getUpper](arkts-arkts-scopehelper-c.md#getupper-1)
 
+<!--Device-Scope-getUpper(): ScopeType--><!--Device-Scope-getUpper(): ScopeType-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ScopeType | Upper limit of this **Scope**. |
+| [ScopeType](arkts-arkts-scopetype-t.md) | Upper limit of this **Scope**. |
 
 **Example**
 
@@ -564,19 +584,21 @@ Obtains the intersection of this **Scope** and the given **Scope**.
 
 **Substitutes:** intersect
 
+<!--Device-Scope-intersect(range: Scope): Scope--><!--Device-Scope-intersect(range: Scope): Scope-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | Scope | Yes | **Scope** specified. |
+| range | [Scope](arkts-arkts-scope-c.md) | Yes | **Scope** specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Scope | Intersection of this **Scope** and the given **Scope**. |
+| [Scope](arkts-arkts-scope-c.md) | Intersection of this **Scope** and the given **Scope**. |
 
 **Example**
 
@@ -627,20 +649,22 @@ Obtains the intersection of this **Scope** and the given lower and upper limits.
 
 **Substitutes:** intersect
 
+<!--Device-Scope-intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope--><!--Device-Scope-intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | ScopeType | Yes | Lower limit. |
-| upperObj | ScopeType | Yes | Upper limit. |
+| lowerObj | [ScopeType](arkts-arkts-scopetype-t.md) | Yes | Lower limit. |
+| upperObj | [ScopeType](arkts-arkts-scopetype-t.md) | Yes | Upper limit. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Scope | Intersection of this **Scope** and the given lower and upper limits. |
+| [Scope](arkts-arkts-scope-c.md) | Intersection of this **Scope** and the given lower and upper limits. |
 
 **Example**
 
@@ -689,6 +713,8 @@ Obtains a string representation that contains this **Scope**.
 **Deprecated since:** 9
 
 **Substitutes:** [toString](arkts-arkts-lrucache-c.md#tostring-1)
+
+<!--Device-Scope-toString(): string--><!--Device-Scope-toString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

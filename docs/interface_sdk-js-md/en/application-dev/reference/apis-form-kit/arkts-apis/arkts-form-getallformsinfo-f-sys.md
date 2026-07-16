@@ -12,12 +12,13 @@ import { formHost } from '@kit.FormKit';
 function getAllFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): void
 ```
 
-Obtains the widget information provided by all applications on the device (excluding template widgets). This API
-uses an asynchronous callback to return the result.
+Obtains the widget information provided by all applications on the device (excluding template widgets). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-formHost-function getAllFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): void--><!--Device-formHost-function getAllFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -27,7 +28,7 @@ uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the result. If the widgetinformation is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error**is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<formInfo.FormInfo>> | Yes | Callback used to return the result. If the widget information is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -47,12 +48,13 @@ uses an asynchronous callback to return the result.
 function getAllFormsInfo(): Promise<Array<formInfo.FormInfo>>
 ```
 
-Obtains the widget information provided by all applications on the device (excluding template widgets). This API
-uses a promise to return the result.
+Obtains the widget information provided by all applications on the device (excluding template widgets). This API uses a promise to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-formHost-function getAllFormsInfo(): Promise<Array<formInfo.FormInfo>>--><!--Device-formHost-function getAllFormsInfo(): Promise<Array<formInfo.FormInfo>>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -62,7 +64,7 @@ uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Promise used to return the information obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<formInfo.FormInfo>> | Promise used to return the information obtained. |
 
 **Error codes:**
 

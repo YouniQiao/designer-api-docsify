@@ -2,11 +2,13 @@
 
 壁纸管理服务为OpenHarmony系统服务，提供壁纸切换功能。从API 9开始壁纸管理的接口调整为系统API，壁纸的切换只能通过系统应用来完成。壁纸管理提供壁纸切换通道，使用壁纸的应用（如：桌面）需订阅壁纸变化通知并刷新壁纸显示。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 当前页面仅包含本模块的系统接口，其他公开接口参见[@ohos.wallpaper (壁纸)](arkts-wallpaper.md)。
 
 **起始版本：** 7
+
+<!--Device-unnamed-declare namespace wallpaper--><!--Device-unnamed-declare namespace wallpaper-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 

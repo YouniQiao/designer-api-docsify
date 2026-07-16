@@ -18,13 +18,15 @@ Removes an event watcher.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-hiAppEvent-function removeWatcher(watcher: Watcher): void--><!--Device-hiAppEvent-function removeWatcher(watcher: Watcher): void-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| watcher | Watcher | Yes | Event watcher. |
+| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-watcher-i.md) | Yes | Event watcher. |
 
 **Error codes:**
 

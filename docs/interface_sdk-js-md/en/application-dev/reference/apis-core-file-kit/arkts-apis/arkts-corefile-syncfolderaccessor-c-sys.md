@@ -1,9 +1,10 @@
 # SyncFolderAccessor (System API)
 
-A sync root management class that enables the File Manager to access the sync root information registered by third-
-party cloud disks.
+A sync root management class that enables the File Manager to access the sync root information registered by third-party cloud disks.
 
 **Since:** 21
+
+<!--Device-cloudDiskManager-class SyncFolderAccessor--><!--Device-cloudDiskManager-class SyncFolderAccessor-End-->
 
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 
@@ -26,6 +27,8 @@ A constructor used to create a **SyncFolderAccessor** instance.
 **Since:** 21
 
 **Required permissions:** ohos.permission.ACCESS_CLOUD_DISK_INFO
+
+<!--Device-SyncFolderAccessor-constructor()--><!--Device-SyncFolderAccessor-constructor()-End-->
 
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 
@@ -76,6 +79,8 @@ Obtains information about all registered sync roots. This API uses a promise to 
 
 **Required permissions:** ohos.permission.ACCESS_CLOUD_DISK_INFO
 
+<!--Device-SyncFolderAccessor-getAllSyncFolders(): Promise<Array<SyncFolder>>--><!--Device-SyncFolderAccessor-getAllSyncFolders(): Promise<Array<SyncFolder>>-End-->
+
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 
 **System API:** This is a system API.
@@ -84,7 +89,7 @@ Obtains information about all registered sync roots. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;SyncFolder&gt;&gt; | Promise that returns the sync root list of all cloud disk applications. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<SyncFolder>> | Promise that returns the sync root list of all cloud disk applications. |
 
 **Error codes:**
 

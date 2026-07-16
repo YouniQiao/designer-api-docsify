@@ -6,6 +6,8 @@ The HDR enabled Blender of backgroundColorEffect.
 
 **Since:** 20
 
+<!--Device-uiEffect-interface HdrBrightnessBlender extends BrightnessBlender--><!--Device-uiEffect-interface HdrBrightnessBlender extends BrightnessBlender-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.

@@ -1,5 +1,11 @@
 # enable（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { manager } from '@kit.ConnectivityKit';
+```
+
 ## enable
 
 ```TypeScript
@@ -13,6 +19,8 @@ function enable(): void
 **需要权限：** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-manager-function enable(): void--><!--Device-manager-function enable(): void-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 

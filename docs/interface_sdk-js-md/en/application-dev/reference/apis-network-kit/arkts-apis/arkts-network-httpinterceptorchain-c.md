@@ -4,6 +4,8 @@ Defines an HTTP Interceptor chain.
 
 **Since:** 22
 
+<!--Device-http-export class HttpInterceptorChain--><!--Device-http-export class HttpInterceptorChain-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Add an interceptor chain to the HTTP client.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-HttpInterceptorChain-public addChain(chain: HttpInterceptor[]): boolean--><!--Device-HttpInterceptorChain-public addChain(chain: HttpInterceptor[]): boolean-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chain | HttpInterceptor[] | Yes | The chain of interceptors. |
+| chain | [HttpInterceptor](arkts-network-httpinterceptor-i.md)[] | Yes | The chain of interceptors. |
 
 **Return value:**
 
@@ -52,12 +56,13 @@ Add an interceptor chain to the HTTP client.
 public apply(httpRequest: HttpRequest): boolean
 ```
 
-Attach the chain to the target http request.
-Only one chain can be attached to a given request.
+Attach the chain to the target http request.Only one chain can be attached to a given request.
 
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-HttpInterceptorChain-public apply(httpRequest: HttpRequest): boolean--><!--Device-HttpInterceptorChain-public apply(httpRequest: HttpRequest): boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -65,7 +70,7 @@ Only one chain can be attached to a given request.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| httpRequest | HttpRequest | Yes | Initiates an HTTP request to a given URL. |
+| httpRequest | [HttpRequest](arkts-network-httprequest-t.md) | Yes | Initiates an HTTP request to a given URL. |
 
 **Return value:**
 
@@ -92,11 +97,13 @@ The method to get the chain of interceptors.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-HttpInterceptorChain-public getChain(): HttpInterceptor[]--><!--Device-HttpInterceptorChain-public getChain(): HttpInterceptor[]-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| HttpInterceptor[] | The chain of interceptors. |
+| [HttpInterceptor](arkts-network-httpinterceptor-i.md)[] | The chain of interceptors. |
 

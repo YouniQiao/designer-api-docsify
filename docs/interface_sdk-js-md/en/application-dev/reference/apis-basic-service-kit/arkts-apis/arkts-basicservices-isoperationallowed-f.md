@@ -12,12 +12,13 @@ import { wallpaper } from '@kit.BasicServicesKit';
 function isOperationAllowed(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a user is allowed to set wallpapers.
-Returns true if a user is allowed to set wallpapers. returns false otherwise.
+Checks whether a user is allowed to set wallpapers.Returns true if a user is allowed to set wallpapers. returns false otherwise.
 
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-wallpaper-function isOperationAllowed(callback: AsyncCallback<boolean>): void--><!--Device-wallpaper-function isOperationAllowed(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -25,7 +26,7 @@ Returns true if a user is allowed to set wallpapers. returns false otherwise.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | the callback of isOperationAllowed. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | the callback of isOperationAllowed. |
 
 **Example**
 
@@ -49,12 +50,13 @@ wallpaper.isOperationAllowed((error: BusinessError, data: Boolean) => {
 function isOperationAllowed(): Promise<boolean>
 ```
 
-Checks whether a user is allowed to set wallpapers.
-Returns true if a user is allowed to set wallpapers. returns false otherwise.
+Checks whether a user is allowed to set wallpapers.Returns true if a user is allowed to set wallpapers. returns false otherwise.
 
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-wallpaper-function isOperationAllowed(): Promise<boolean>--><!--Device-wallpaper-function isOperationAllowed(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -62,7 +64,7 @@ Returns true if a user is allowed to set wallpapers. returns false otherwise.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | the promise returned by the function. |
 
 **Example**
 

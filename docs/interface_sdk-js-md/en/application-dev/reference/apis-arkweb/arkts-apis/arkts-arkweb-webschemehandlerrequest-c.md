@@ -4,6 +4,8 @@ Defines the Web resource request used for scheme handler.
 
 **Since:** 12
 
+<!--Device-webview-class WebSchemeHandlerRequest--><!--Device-webview-class WebSchemeHandlerRequest-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -21,6 +23,8 @@ getFrameUrl(): string
 Gets the URL of frame which trigger this request.
 
 **Since:** 12
+
+<!--Device-WebSchemeHandlerRequest-getFrameUrl(): string--><!--Device-WebSchemeHandlerRequest-getFrameUrl(): string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -42,13 +46,15 @@ Gets request headers.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WebSchemeHandlerRequest-getHeader(): Array<WebHeader>--><!--Device-WebSchemeHandlerRequest-getHeader(): Array<WebHeader>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;WebHeader&gt; | Return the request headers. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<WebHeader> | Return the request headers. |
 
 ## getHttpBodyStream
 
@@ -62,13 +68,15 @@ Get http body stream.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WebSchemeHandlerRequest-getHttpBodyStream(): WebHttpBodyStream | null--><!--Device-WebSchemeHandlerRequest-getHttpBodyStream(): WebHttpBodyStream | null-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| WebHttpBodyStream | Return http body stream. If request has no http body stream, return null. |
+| [WebHttpBodyStream](arkts-arkweb-webhttpbodystream-c.md) | Return http body stream. If request has no http body stream, return null. |
 
 ## getReferrer
 
@@ -81,6 +89,8 @@ Get referrer of request.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WebSchemeHandlerRequest-getReferrer(): string--><!--Device-WebSchemeHandlerRequest-getReferrer(): string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -102,6 +112,8 @@ Get request method.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WebSchemeHandlerRequest-getRequestMethod(): string--><!--Device-WebSchemeHandlerRequest-getRequestMethod(): string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -120,13 +132,15 @@ Get request's resource type.
 
 **Since:** 12
 
+<!--Device-WebSchemeHandlerRequest-getRequestResourceType(): WebResourceType--><!--Device-WebSchemeHandlerRequest-getRequestResourceType(): WebResourceType-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| WebResourceType | Return the request's resource type. |
+| [WebResourceType](arkts-arkweb-webresourcetype-e.md) | Return the request's resource type. |
 
 ## getRequestUrl
 
@@ -139,6 +153,8 @@ Gets the request URL.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WebSchemeHandlerRequest-getRequestUrl(): string--><!--Device-WebSchemeHandlerRequest-getRequestUrl(): string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -160,6 +176,8 @@ Check whether the request is associated with gesture.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WebSchemeHandlerRequest-hasGesture(): boolean--><!--Device-WebSchemeHandlerRequest-hasGesture(): boolean-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -179,6 +197,8 @@ Check whether the request is for getting the main frame.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WebSchemeHandlerRequest-isMainFrame(): boolean--><!--Device-WebSchemeHandlerRequest-isMainFrame(): boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

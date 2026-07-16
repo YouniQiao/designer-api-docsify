@@ -1,9 +1,10 @@
 # DriverExtensionAbility
 
-The **DriverExtensionAbility** module provides the ExtensionAbility related to drivers. It provides lifecycle
-callbacks to be invoked when a driver is created, destroyed, connected, or disconnected.
+The **DriverExtensionAbility** module provides the ExtensionAbility related to drivers. It provides lifecycle callbacks to be invoked when a driver is created, destroyed, connected, or disconnected.
 
 **Since:** 10
+
+<!--Device-unnamed-declare class DriverExtensionAbility--><!--Device-unnamed-declare class DriverExtensionAbility-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -19,12 +20,13 @@ import { DriverExtensionContext } from '@kit.DriverDevelopmentKit';
 onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>
 ```
 
-Called following **onCreate()** when a DriverExtensionAbility is started by calling **connectAbility()**. A
-**RemoteObject** object is returned for communication between the server and client.
+Called following **onCreate()** when a DriverExtensionAbility is started by calling **connectAbility()**. A **RemoteObject** object is returned for communication between the server and client.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DriverExtensionAbility-onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>--><!--Device-DriverExtensionAbility-onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -32,13 +34,13 @@ Called following **onCreate()** when a DriverExtensionAbility is started by call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information related to this DriverExtensionAbility, including the ability name andbundle name. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information related to this DriverExtensionAbility, including the ability name and bundle name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| rpc.RemoteObject | **RemoteObject** object used for communication betweenthe server and client, or promise used to return the value. |
+| rpc.RemoteObject | **RemoteObject** object used for communication between the server and client, or promise used to return the value. |
 
 **Example**
 
@@ -107,13 +109,15 @@ Called when a client is disconnected from this DriverExtensionAbility.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DriverExtensionAbility-onDisconnect(want: Want): void | Promise<void>--><!--Device-DriverExtensionAbility-onDisconnect(want: Want): void | Promise<void>-End-->
+
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information related to this DriverExtensionAbility, including the ability name andbundle name. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information related to this DriverExtensionAbility, including the ability name and bundle name. |
 
 **Example**
 
@@ -156,19 +160,21 @@ Dumps client information. It is recommended that developers don't DUMP sensitive
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DriverExtensionAbility-onDump(params: Array<string>): Array<string>--><!--Device-DriverExtensionAbility-onDump(params: Array<string>): Array<string>-End-->
+
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | Array&lt;string&gt; | Yes | Parameters in the form of a command. |
+| params | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Parameters in the form of a command. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | String array used to dump client information. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | String array used to dump client information. |
 
 **Example**
 
@@ -194,13 +200,15 @@ Called when a DriverExtensionAbility is created to initialize the service logic.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DriverExtensionAbility-onInit(want: Want): void--><!--Device-DriverExtensionAbility-onInit(want: Want): void-End-->
+
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information related to this DriverExtensionAbility, including the ability name and bundlename. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information related to this DriverExtensionAbility, including the ability name and bundle name. |
 
 **Example**
 
@@ -228,6 +236,8 @@ Called when this DriverExtensionAbility is destroyed to clear resources.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DriverExtensionAbility-onRelease(): void--><!--Device-DriverExtensionAbility-onRelease(): void-End-->
+
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **Example**
@@ -254,6 +264,8 @@ Context of the **DriverExtension**. This context is inherited from **ExtensionCo
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DriverExtensionAbility-context: DriverExtensionContext--><!--Device-DriverExtensionAbility-context: DriverExtensionContext-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 

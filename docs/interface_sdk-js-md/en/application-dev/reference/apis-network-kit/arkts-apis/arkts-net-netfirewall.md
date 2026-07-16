@@ -4,6 +4,8 @@ Provides interfaces to manage net firewall.
 
 **Since:** 14
 
+<!--Device-unnamed-declare namespace netFirewall--><!--Device-unnamed-declare namespace netFirewall-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## Modules to Import
@@ -23,7 +25,7 @@ import { netFirewall } from '@kit.NetworkKit';
 | [getNetFirewallRule](arkts-network-getnetfirewallrule-f.md#getnetfirewallrule-1) | Get a specified firewall rule by userId and ruleId. |
 | [getNetFirewallRules](arkts-network-getnetfirewallrules-f.md#getnetfirewallrules-1) | Get firewall rules by userId, and it is necessary to specify the pagination query parameters. |
 | [removeNetFirewallRule](arkts-network-removenetfirewallrule-f.md#removenetfirewallrule-1) | Delete a firewall rule by userId and ruleId. |
-| [setNetFirewallPolicy](arkts-network-setnetfirewallpolicy-f.md#setnetfirewallpolicy-1) | Set firewall policy by userId.&lt;p&gt;Enables or disables the firewall function, and specifies the default actions for inbound connections andoutbound connections.&lt;/p&gt; |
+| [setNetFirewallPolicy](arkts-network-setnetfirewallpolicy-f.md#setnetfirewallpolicy-1) | Set firewall policy by userId.&lt;p&gt;Enables or disables the firewall function, and specifies the default actions for inbound connections and outbound connections.&lt;/p&gt; |
 | [updateNetFirewallRule](arkts-network-updatenetfirewallrule-f.md#updatenetfirewallrule-1) | Update a firewall rule. |
 
 <!--Del-->

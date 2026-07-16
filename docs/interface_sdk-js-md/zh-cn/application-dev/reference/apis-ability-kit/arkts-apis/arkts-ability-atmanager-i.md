@@ -1,11 +1,18 @@
 # AtManager
 
-程序访问控制管理类，提供权限校验、运行时权限弹窗申请、设置页授权引导、全局开关请求和权限状态监听等能力。通过[createAtManager](arkts-ability-createatmanager-f.md#createatmanager-1)
-获取实例。
+程序访问控制管理类，提供权限校验、运行时权限弹窗申请、设置页授权引导、全局开关请求和权限状态监听等能力。通过[createAtManager](arkts-ability-createatmanager-f.md#createatmanager-1)获取实例。
 
 **起始版本：** 8
 
+<!--Device-abilityAccessCtrl-interface AtManager--><!--Device-abilityAccessCtrl-interface AtManager-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
+
+## 导入模块
+
+```TypeScript
+import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
+```
 
 ## checkAccessToken
 
@@ -19,7 +26,9 @@ checkAccessToken(tokenID: number, permissionName: Permissions): Promise<GrantSta
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AtManager-checkAccessToken(tokenID: int, permissionName: Permissions): Promise<GrantStatus>--><!--Device-AtManager-checkAccessToken(tokenID: int, permissionName: Permissions): Promise<GrantStatus>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -27,14 +36,14 @@ checkAccessToken(tokenID: number, permissionName: Permissions): Promise<GrantSta
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | number | 是 | 要校验的目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId]{@link./bundleManager/ApplicationInfo:ApplicationInfo.accessTokenId}字段获取。传入无效值时返回错误码12100001。<br>取值限定为整数。取值约束：该参数必须为大于0的整数。<br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1)；<br>若校验本应用，也可通过[bundleManager.getBundleInfoForSelfSync](arkts-ability-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync-1)获取。 |
+| tokenID | number | 是 | 要校验的目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。<br>取值限定为整数。取值约束：该参数必须为大于0的整数。<br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1)；<br>若校验本应用，也可通过[bundleManager.getBundleInfoForSelfSync](arkts-ability-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync-1)获取。 |
 | permissionName | Permissions | 是 | 需要校验的权限名称。传入无效值时返回错误码12100001。<br>取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;GrantStatus&gt; | Promise对象，返回授权状态结果。 |
+| Promise<GrantStatus> | Promise对象，返回授权状态结果。 |
 
 **错误码：**
 
@@ -80,7 +89,9 @@ checkAccessTokenSync(tokenID: number, permissionName: Permissions): GrantStatus
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AtManager-checkAccessTokenSync(tokenID: int, permissionName: Permissions): GrantStatus--><!--Device-AtManager-checkAccessTokenSync(tokenID: int, permissionName: Permissions): GrantStatus-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -88,14 +99,14 @@ checkAccessTokenSync(tokenID: number, permissionName: Permissions): GrantStatus
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | number | 是 | 要校验的目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId]{@link./bundleManager/ApplicationInfo:ApplicationInfo.accessTokenId}字段获取。传入无效值时返回错误码12100001。<br>取值限定为整数。取值约束：该参数必须为大于0的整数。<br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1)；<br>若校验本应用，也可通过[bundleManager.getBundleInfoForSelfSync](arkts-ability-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync-1)获取。 |
+| tokenID | number | 是 | 要校验的目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。<br>取值限定为整数。取值约束：该参数必须为大于0的整数。<br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1)；<br>若校验本应用，也可通过[bundleManager.getBundleInfoForSelfSync](arkts-ability-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync-1)获取。 |
 | permissionName | Permissions | 是 | 需要校验的权限名称。传入无效值时返回错误码12100001。<br>取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| GrantStatus | 枚举实例，返回授权状态。 |
+| [GrantStatus](arkts-ability-grantstatus-e.md) | 枚举实例，返回授权状态。 |
 
 **错误码：**
 
@@ -129,14 +140,15 @@ console.info(`Result: ${data}`);
 getSelfPermissionStatus(permissionName: Permissions): PermissionStatus
 ```
 
-查询当前应用的权限状态，同步返回结果。调用成功后，返回当前权限的状态。与[checkAccessToken](arkts-ability-atmanager-i.md#checkaccesstoken-1)不同，本接口无
-需传入应用身份标识，仅用于查询当前应用自身权限状态。
+查询当前应用的权限状态，同步返回结果。调用成功后，返回当前权限的状态。与[checkAccessToken](arkts-ability-atmanager-i.md#checkaccesstoken-1)不同，本接口无需传入应用身份标识，仅用于查询当前应用自身权限状态。
 
 适用于在判断是否需要请求权限前、权限申请后确认授权结果、或监听到权限状态变化后重新查询等场景。
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AtManager-getSelfPermissionStatus(permissionName: Permissions): PermissionStatus--><!--Device-AtManager-getSelfPermissionStatus(permissionName: Permissions): PermissionStatus-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -150,7 +162,7 @@ getSelfPermissionStatus(permissionName: Permissions): PermissionStatus
 
 | 类型 | 说明 |
 | --- | --- |
-| PermissionStatus | 枚举实例，返回权限状态。 |
+| [PermissionStatus](arkts-ability-permissionstatus-e.md) | 枚举实例，返回权限状态。 |
 
 **错误码：**
 
@@ -192,13 +204,23 @@ off(
 
 在无需继续监听权限变化、应用退出或切换页面等场景下，可调用该接口取消订阅。
 
-> **说明**
-> 当不传入callback参数时，将批量删除与permissionList相关联的所有回调函数。
+> **说明**  
+> 当不传入callback参数时，将批量删除与permissionList相关联的所有回调函数。  
 > 该接口通常与[on](abilityAccessCtrl.AtManager.on)配套使用，用于取消通过on创建的监听关系。
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AtManager-off(
+      type: 'selfPermissionStateChange',
+      permissionList: Array<Permissions>,
+      callback?: Callback<PermissionStateChangeInfo>
+    ): void--><!--Device-AtManager-off(
+      type: 'selfPermissionStateChange',
+      permissionList: Array<Permissions>,
+      callback?: Callback<PermissionStateChangeInfo>
+    ): void-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -207,14 +229,14 @@ off(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selfPermissionStateChange' | 是 | 取消订阅事件类型，固定为'selfPermissionStateChange'，权限状态变更事件。 |
-| permissionList | Array&lt;Permissions&gt; | 是 | 取消订阅的权限名列表，为空时表示取消订阅所有的权限状态变化，必须与on订阅时的权限列表匹配（不区分顺序）。<br>最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
-| callback | Callback&lt;PermissionStateChangeInfo&gt; | 否 | 回调函数。取消订阅指定权限名状态变更事件的回调。不传入此参数时，将批量删除与permissionList相关联的所有回调函数。 |
+| permissionList | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Permissions> | 是 | 取消订阅的权限名列表，为空时表示取消订阅所有的权限状态变化，必须与on订阅时的权限列表匹配（不区分顺序）。<br>最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<PermissionStateChangeInfo> | 否 | 回调函数。取消订阅指定权限名状态变更事件的回调。不传入此参数时，将批量删除与permissionList相关联的所有回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are leftunspecified; 2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [12100004](../errorcode-access-token.md#12100004-接口未配套使用) | The API is not used in pair with 'on'. |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
@@ -250,18 +272,28 @@ on(
 
 订阅本应用的指定权限列表的权限授权状态变化事件，使用callback异步回调。可在需要根据权限状态实时更新UI或业务逻辑、监听用户授权行为等场景中使用。不再需要监听时，调用[off](abilityAccessCtrl.AtManager.off)取消订阅。
 
-- 多次调用本订阅接口时，如果订阅的权限列表相同，callback不同，允许订阅成功。
+- 多次调用本订阅接口时，如果订阅的权限列表相同，callback不同，允许订阅成功。  
 - 多次调用本订阅接口时，如果订阅的权限列表间有相同的子集，callback相同时，订阅失败。
 
-> **说明**
-> 权限状态由“已授权”变更为“未授权”可能存在两种场景：
-> - 用户主动撤销：系统会终止对应应用进程。
-> - 系统主动回收：应用进程不会终止。典型场景如安全控件的单次授权，在授权周期结束后由系统自动回收。
+> **说明**  
+> 权限状态由“已授权”变更为“未授权”可能存在两种场景：  
+> - 用户主动撤销：系统会终止对应应用进程。  
+> - 系统主动回收：应用进程不会终止。典型场景如安全控件的单次授权，在授权周期结束后由系统自动回收。  
 > 该接口通常与[off](abilityAccessCtrl.AtManager.off)配套使用，当不再需要监听时应调用off取消订阅。
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AtManager-on(
+      type: 'selfPermissionStateChange',
+      permissionList: Array<Permissions>,
+      callback: Callback<PermissionStateChangeInfo>
+    ): void--><!--Device-AtManager-on(
+      type: 'selfPermissionStateChange',
+      permissionList: Array<Permissions>,
+      callback: Callback<PermissionStateChangeInfo>
+    ): void-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -270,15 +302,15 @@ on(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selfPermissionStateChange' | 是 | 订阅事件类型，固定为'selfPermissionStateChange'，自身权限状态变更事件。 |
-| permissionList | Array&lt;Permissions&gt; | 是 | 订阅的权限名列表，为空时表示订阅所有的权限状态变化。传入无效值时返回错误码12100001。<br>最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
-| callback | Callback&lt;PermissionStateChangeInfo&gt; | 是 | 回调函数。订阅指定权限名状态变更事件的回调。 |
+| permissionList | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Permissions> | 是 | 订阅的权限名列表，为空时表示订阅所有的权限状态变化。传入无效值时返回错误码12100001。<br>最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<PermissionStateChangeInfo> | 是 | 回调函数。订阅指定权限名状态变更事件的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are leftunspecified; 2. Incorrect parameter types. |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. Possible causes: 1. The permissionList exceedsthe size limit; 2. The permissionNames in the list are all invalid. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. Possible causes: 1. The permissionList exceeds the size limit; 2. The permissionNames in the list are all invalid. |
 | [12100004](../errorcode-access-token.md#12100004-接口未配套使用) | The API is used repeatedly with the same input. |
 | [12100005](../errorcode-access-token.md#12100005-监听器数量超过限制) | The registration time has exceeded the limit. |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
@@ -312,16 +344,15 @@ try {
 openPermissionOnSetting(context: Context, permission: Permissions): Promise<SelectedResult>
 ```
 
-用于[UIAbility](arkts-ability-uiability-c.md)/
-[UIExtensionAbility](arkts-ability-uiextensionability-c.md)拉起权限设置页面。调用成功后会打开权限设置页面，用户在页面中
-操作后，返回用户在设置页面中的选择结果。使用Promise异步回调。
+用于[UIAbility](arkts-ability-uiability-c.md)/[UIExtensionAbility](arkts-ability-uiextensionability-c.md)拉起权限设置页面。调用成功后会打开权限设置页面，用户在页面中操作后，返回用户在设置页面中的选择结果。使用Promise异步回调。
 
-适用于 [manual_settings](../../../../security/AccessToken/app-permission-mgmt-overview.md#manual_settings手动设置授权)
-类型权限无法通过普通授权弹窗申请、必须引导用户进入系统设置完成授权的场景。manual_settings类型权限是指只能由用户在系统设置中手动开启的权限，无法通过普通授权弹窗直接申请。
+适用于 [manual_settings](../../../../security/AccessToken/app-permission-mgmt-overview.md#manual_settings手动设置授权)类型权限无法通过普通授权弹窗申请、必须引导用户进入系统设置完成授权的场景。manual_settings类型权限是指只能由用户在系统设置中手动开启的权限，无法通过普通授权弹窗直接申请。
 
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AtManager-openPermissionOnSetting(context: Context, permission: Permissions): Promise<SelectedResult>--><!--Device-AtManager-openPermissionOnSetting(context: Context, permission: Permissions): Promise<SelectedResult>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -329,22 +360,22 @@ openPermissionOnSetting(context: Context, permission: Permissions): Promise<Sele
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 请求权限的UIAbility/UIExtensionAbility的Context。若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法打开设置页面。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 请求权限的UIAbility/UIExtensionAbility的Context。若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法打开设置页面。 |
 | permission | Permissions | 是 | 需要跳转设置页处理的权限名。传入无效或未在module.json中声明的权限时返回错误码12100001；仅支持授权方式为[manual_settings](../../../../security/AccessToken/app-permission-mgmt-overview.md#manual_settings手动设置授权)类型的权限，传入其他类型权限时返回错误码12100014。<br>取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;SelectedResult&gt; | Promise对象，返回用户在设置页面中的选择结果。 |
+| Promise<SelectedResult> | Promise对象，返回用户在设置页面中的选择结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. Possible causes: 1. The context is invalidbecause it does not belong to the application itself; 2. The permission is invalid or notdeclared in the module.json file. |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. An error occurs when creating the pop-up window orobtaining the user operation result. |
-| [12100014](../errorcode-access-token.md#12100014-非预期的权限) | Unexpected permission. The permission is not a manual_settingspermission. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. Possible causes: 1. The context is invalid because it does not belong to the application itself; 2. The permission is invalid or not declared in the module.json file. |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. An error occurs when creating the pop-up window or obtaining the user operation result. |
+| [12100014](../errorcode-access-token.md#12100014-非预期的权限) | Unexpected permission. The permission is not a manual_settings permission. |
 
 **示例：**
 
@@ -389,7 +420,9 @@ requestGlobalSwitch(context: Context, type: SwitchType): Promise<boolean>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AtManager-requestGlobalSwitch(context: Context, type: SwitchType): Promise<boolean>--><!--Device-AtManager-requestGlobalSwitch(context: Context, type: SwitchType): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -397,22 +430,22 @@ requestGlobalSwitch(context: Context, type: SwitchType): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 请求全局开关的UIAbility/UIExtensionAbility的Context。若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉起弹窗。 |
-| type | SwitchType | 是 | 指定需要请求开启的全局开关类型。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 请求全局开关的UIAbility/UIExtensionAbility的Context。若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉起弹窗。 |
+| type | [SwitchType](arkts-ability-switchtype-e.md) | 是 | 指定需要请求开启的全局开关类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示当前全局开关处于开启状态；返回false表示当前全局开关仍处于关闭状态。 |
+| Promise<boolean> | Promise对象。返回true表示当前全局开关处于开启状态；返回false表示当前全局开关仍处于关闭状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. Possible causes: 1. The context is invalid becauseit does not belong to the application itself; 2. The type of global switch is not support. |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. An error occurs when creating the pop-up windowor obtaining user operation result. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. Possible causes: 1. The context is invalid because it does not belong to the application itself; 2. The type of global switch is not support. |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. An error occurs when creating the pop-up window or obtaining user operation result. |
 | [12100013](../errorcode-access-token.md#12100013-全局开关已开启) | The specific global switch is already open. |
 
 **示例：**
@@ -442,15 +475,11 @@ atManager.requestGlobalSwitch(context, abilityAccessCtrl.SwitchType.CAMERA).then
 requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>): Promise<Array<GrantStatus>>
 ```
 
-用于[UIAbility](arkts-ability-uiability-c.md)/
-[UIExtensionAbility](arkts-ability-uiextensionability-c.md)二次拉起权限设置弹窗，返回授权状态数组。使用Promise异
-步回调。
+用于[UIAbility](arkts-ability-uiability-c.md)/[UIExtensionAbility](arkts-ability-uiextensionability-c.md)二次拉起权限设置弹窗，返回授权状态数组。使用Promise异步回调。
 
 适用于用户在首次弹窗中已拒绝过该权限授予，需要通过设置页面继续申请权限的场景。
 
-在调用此接口前，应用需要先调用
-[requestPermissionsFromUser](arkts-ability-atmanager-i.md#requestpermissionsfromuser-1)。
-如果用户已在首次弹窗中授权，则调用当前接口不会拉起授权弹窗。
+在调用此接口前，应用需要先调用[requestPermissionsFromUser](arkts-ability-atmanager-i.md#requestpermissionsfromuser-1)。如果用户已在首次弹窗中授权，则调用当前接口不会拉起授权弹窗。
 
 <!--RP4-->
 
@@ -462,7 +491,9 @@ requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AtManager-requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>): Promise<Array<GrantStatus>>--><!--Device-AtManager-requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>): Promise<Array<GrantStatus>>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -470,25 +501,25 @@ requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 请求权限的UIAbility/UIExtensionAbility的Context。若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉起弹窗。 |
-| permissionList | Array&lt;Permissions&gt; | 是 | 权限名列表。该数组不能为空，仅支持传入已声明且用户已撤销授权的user_grant权限，且传入权限需属于同一[权限组](../../../../security/AccessToken/app-permission-group-list.md)。<br>取值约束：权限名长度不能超过256个字符。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 请求权限的UIAbility/UIExtensionAbility的Context。若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉起弹窗。 |
+| permissionList | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Permissions> | 是 | 权限名列表。该数组不能为空，仅支持传入已声明且用户已撤销授权的user_grant权限，且传入权限需属于同一[权限组](../../../../security/AccessToken/app-permission-group-list.md)。<br>取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;GrantStatus&gt;&gt; | Promise对象，返回授权状态数组，数组中每个元素对应permissionList中相应权限的授权结果。 |
+| Promise<Array<GrantStatus>> | Promise对象，返回授权状态数组，数组中每个元素对应permissionList中相应权限的授权结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. Possible causes: 1. The context is invalidbecause it does not belong to the application itself; 2. The permission list contains the permissionthat is not declared in the module.json file; 3. The permission list is invalid because the permissions in itdo not belong to the same permission group; 4. The permission list contains one or more system_grantpermissions. |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. An error occurs when creating the pop-up window orobtaining the user operation result. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. Possible causes: 1. The context is invalid because it does not belong to the application itself; 2. The permission list contains the permission that is not declared in the module.json file; 3. The permission list is invalid because the permissions in it do not belong to the same permission group; 4. The permission list contains one or more system_grant permissions. |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. An error occurs when creating the pop-up window or obtaining the user operation result. |
 | [12100010](../errorcode-access-token.md#12100010-存在未被处理的请求) | The request already exists.<br>**适用版本：** 12 - 20 |
 | [12100011](../errorcode-access-token.md#12100011-输入的所有权限均已被授权) | All permissions in the permission list have been granted. |
-| [12100012](../errorcode-access-token.md#12100012-输入的权限中存在未被用户拒绝过的权限) | The permission list contains the permission that has not beenrevoked by the user. |
-| [12100014](../errorcode-access-token.md#12100014-非预期的权限) | Unexpected permission. You cannot request this type of permissionfrom users via a pop-up window.<br>**适用版本：** 21+ |
+| [12100012](../errorcode-access-token.md#12100012-输入的权限中存在未被用户拒绝过的权限) | The permission list contains the permission that has not been revoked by the user. |
+| [12100014](../errorcode-access-token.md#12100014-非预期的权限) | Unexpected permission. You cannot request this type of permission from users via a pop-up window.<br>**适用版本：** 21+ |
 
 **示例：**
 
@@ -517,14 +548,11 @@ atManager.requestPermissionOnSetting(context, ['ohos.permission.CAMERA']).then((
 requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>, requestCallback: AsyncCallback<PermissionRequestResult>) : void
 ```
 
-用于<!--RP1-->[UIAbility](arkts-ability-uiability-c.md)<!--RP1End-->拉起弹窗请求
-[用户授权](../../../../security/AccessToken/request-user-authorization.md)，返回本次请求权限的授权结果。使用callback异步回调。
+用于<!--RP1-->[UIAbility](arkts-ability-uiability-c.md)<!--RP1End-->拉起弹窗请求[用户授权](../../../../security/AccessToken/request-user-authorization.md)，返回本次请求权限的授权结果。使用callback异步回调。
 
-适用于应用首次访问受保护资源前主动向用户申请
-[user_grant](../../../../security/AccessToken/app-permission-mgmt-overview.md#user_grant用户授权) 权限的场景。
+适用于应用首次访问受保护资源前主动向用户申请[user_grant](../../../../security/AccessToken/app-permission-mgmt-overview.md#user_grant用户授权) 权限的场景。
 
-如果用户拒绝授权，将无法通过此接口再次拉起授权弹窗。开发者可引导用户前往系统设置界面手动授权，或调用
-[requestPermissionOnSetting](arkts-ability-atmanager-i.md#requestpermissiononsetting-1)拉起权限设置弹窗，引导用户完成授权。
+如果用户拒绝授权，将无法通过此接口再次拉起授权弹窗。开发者可引导用户前往系统设置界面手动授权，或调用[requestPermissionOnSetting](arkts-ability-atmanager-i.md#requestpermissiononsetting-1)拉起权限设置弹窗，引导用户完成授权。
 
 <!--RP3-->
 
@@ -536,7 +564,9 @@ requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>,
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AtManager-requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>, requestCallback: AsyncCallback<PermissionRequestResult>) : void--><!--Device-AtManager-requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>, requestCallback: AsyncCallback<PermissionRequestResult>) : void-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -544,17 +574,17 @@ requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 请求权限的&lt;!--RP1--&gt;UIAbility&lt;!--RP1End--&gt;的Context。<br>若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉起弹窗。 |
-| permissionList | Array&lt;Permissions&gt; | 是 | 权限名列表。建议仅传入当前业务场景必要的敏感权限，避免一次申请过多权限。<br>最小长度为1。取值约束：权限名长度不能超过256个字符。 |
-| requestCallback | AsyncCallback&lt;PermissionRequestResult&gt; | 是 | 回调函数。调用完成后通过err返回错误信息，通过data返回权限请求结果对象。开发者可根据权限请求结果判断用户是否授权、是否展示过弹窗以及失败原因。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 请求权限的&lt;!--RP1--&gt;UIAbility&lt;!--RP1End--&gt;的Context。<br>若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉起弹窗。 |
+| permissionList | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Permissions> | 是 | 权限名列表。建议仅传入当前业务场景必要的敏感权限，避免一次申请过多权限。<br>最小长度为1。取值约束：权限名长度不能超过256个字符。 |
+| requestCallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<PermissionRequestResult> | 是 | 回调函数。调用完成后通过err返回错误信息，通过data返回权限请求结果对象。开发者可根据权限请求结果判断用户是否授权、是否展示过弹窗以及失败原因。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are leftunspecified; 2. Incorrect parameter types. |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | (Deprecated in 12) Invalid parameter. The context is invalid when itdoes not belong to the application itself. |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. An error occurs when creating the pop-up windowor obtaining user operation results. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | (Deprecated in 12) Invalid parameter. The context is invalid when it does not belong to the application itself. |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. An error occurs when creating the pop-up window or obtaining user operation results. |
 
 **示例：**
 
@@ -589,20 +619,21 @@ atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA'], (err: 
 requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>) : Promise<PermissionRequestResult>
 ```
 
-用于<!--RP1-->[UIAbility](arkts-ability-uiability-c.md)<!--RP1End-->拉起弹窗请求
-[用户授权](../../../../security/AccessToken/request-user-authorization.md)，返回本次请求权限的授权结果。使用Promise异步回调。
+用于<!--RP1-->[UIAbility](arkts-ability-uiability-c.md)<!--RP1End-->拉起弹窗请求[用户授权](../../../../security/AccessToken/request-user-authorization.md)，返回本次请求权限的授权结果。使用Promise异步回调。
 
 适用于应用首次访问受保护资源前主动向用户申请user_grant权限的场景。
 
-> **说明**
-> 如果用户拒绝授权，将无法通过此接口再次拉起授权弹窗。开发者可引导用户前往系统设置界面手动授权，或调用
+> **说明**  
+> 如果用户拒绝授权，将无法通过此接口再次拉起授权弹窗。开发者可引导用户前往系统设置界面手动授权，或调用  
 > [requestPermissionOnSetting](arkts-ability-atmanager-i.md#requestpermissiononsetting-1)拉起权限设置弹窗，引导用户完成授权。
 
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AtManager-requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>) : Promise<PermissionRequestResult>--><!--Device-AtManager-requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>) : Promise<PermissionRequestResult>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -610,22 +641,22 @@ requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 请求权限的&lt;!--RP1--&gt;UIAbility&lt;!--RP1End--&gt;的Context。若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉起弹窗。 |
-| permissionList | Array&lt;Permissions&gt; | 是 | 权限名列表。建议仅传入当前业务场景必要的敏感权限，避免一次申请过多权限。<br>最小长度为1。取值约束：权限名长度不能超过256个字符。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 请求权限的&lt;!--RP1--&gt;UIAbility&lt;!--RP1End--&gt;的Context。若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉起弹窗。 |
+| permissionList | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Permissions> | 是 | 权限名列表。建议仅传入当前业务场景必要的敏感权限，避免一次申请过多权限。<br>最小长度为1。取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PermissionRequestResult&gt; | Promise对象，返回权限请求结果对象，包含权限数组、每个权限的授权结果、是否展示弹窗以及失败原因等信息。 |
+| Promise<PermissionRequestResult> | Promise对象，返回权限请求结果对象，包含权限数组、每个权限的授权结果、是否展示弹窗以及失败原因等信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are leftunspecified; 2. Incorrect parameter types. |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | (Deprecated in 12) Invalid parameter. The context is invalid when itdoes not belong to the application itself. |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. An error occurs when creating the pop-up window orobtaining the user operation result.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | (Deprecated in 12) Invalid parameter. The context is invalid when it does not belong to the application itself. |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. An error occurs when creating the pop-up window or obtaining the user operation result.<br>**适用版本：** 11+ |
 
 **示例：**
 
@@ -662,10 +693,12 @@ verifyAccessToken(tokenID: number, permissionName: Permissions): Promise<GrantSt
 
 适用于应用访问受保护资源前进行前置权限判断的场景。
 
-> **说明**
+> **说明**  
 > 建议使用[checkAccessToken](#checkaccesstoken9)替代。
 
 **起始版本：** 9
+
+<!--Device-AtManager-verifyAccessToken(tokenID: int, permissionName: Permissions): Promise<GrantStatus>--><!--Device-AtManager-verifyAccessToken(tokenID: int, permissionName: Permissions): Promise<GrantStatus>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -673,14 +706,14 @@ verifyAccessToken(tokenID: number, permissionName: Permissions): Promise<GrantSt
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | number | 是 | 要校验的目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId]{@link./bundleManager/ApplicationInfo:ApplicationInfo.accessTokenId}字段获取。传入无效值时返回错误码12100001。<br>取值限定为整数。取值约束：该参数必须为大于0的整数。<br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1)；<br>若校验本应用，也可通过[bundleManager.getBundleInfoForSelfSync](arkts-ability-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync-1)获取。 |
+| tokenID | number | 是 | 要校验的目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。<br>取值限定为整数。取值约束：该参数必须为大于0的整数。<br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1)；<br>若校验本应用，也可通过[bundleManager.getBundleInfoForSelfSync](arkts-ability-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync-1)获取。 |
 | permissionName | Permissions | 是 | 需要校验的权限名称。传入无效值时返回错误码12100001。<br>取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;GrantStatus&gt; | Promise对象，返回授权状态结果。 |
+| Promise<GrantStatus> | Promise对象，返回授权状态结果。 |
 
 **示例：**
 
@@ -713,7 +746,7 @@ verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>
 
 校验应用是否已被授予指定权限。调用成功后，返回当前权限的授权状态，开发者可据此决定后续操作。使用Promise异步回调。
 
-> **说明**
+> **说明**  
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[checkAccessToken](#checkaccesstoken9)替代。
 
 **起始版本：** 8
@@ -722,20 +755,22 @@ verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>
 
 **替代接口：** checkAccessToken
 
+<!--Device-AtManager-verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>--><!--Device-AtManager-verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | number | 是 | 要校验的目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId]{@link./bundleManager/ApplicationInfo:ApplicationInfo.accessTokenId}字段获取。传入无效值时返回错误码12100001。<br>取值限定为整数。取值约束：该参数必须为大于0的整数。<br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1)；<br>若校验本应用，也可通过[bundleManager.getBundleInfoForSelfSync](arkts-ability-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync-1)获取。 |
+| tokenID | number | 是 | 要校验的目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。<br>取值限定为整数。取值约束：该参数必须为大于0的整数。<br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-getbundleinfosync-f.md#getbundleinfosync-1)；<br>若校验本应用，也可通过[bundleManager.getBundleInfoForSelfSync](arkts-ability-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync-1)获取。 |
 | permissionName | string | 是 | 需要校验的权限名称。传入无效值时返回错误码12100001。<br>取值约束：权限名长度不能超过256个字符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;GrantStatus&gt; | Promise对象，返回授权状态结果。 |
+| Promise<GrantStatus> | Promise对象，返回授权状态结果。 |
 
 **示例：**
 
@@ -774,6 +809,8 @@ verifyAccessTokenSync(tokenID: number, permissionName: Permissions): GrantStatus
 
 **起始版本：** 9
 
+<!--Device-AtManager-verifyAccessTokenSync(tokenID: int, permissionName: Permissions): GrantStatus--><!--Device-AtManager-verifyAccessTokenSync(tokenID: int, permissionName: Permissions): GrantStatus-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **参数：**
@@ -787,7 +824,7 @@ verifyAccessTokenSync(tokenID: number, permissionName: Permissions): GrantStatus
 
 | 类型 | 说明 |
 | --- | --- |
-| GrantStatus | 枚举实例，返回授权状态。 |
+| [GrantStatus](arkts-ability-grantstatus-e.md) | 枚举实例，返回授权状态。 |
 
 **错误码：**
 

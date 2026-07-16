@@ -4,6 +4,8 @@ Path information for file migration.
 
 **Since:** 26.0.0
 
+<!--Device-backup-interface PathInfo--><!--Device-backup-interface PathInfo-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Destination path for migration.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PathInfo-destPath: string--><!--Device-PathInfo-destPath: string-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -45,6 +49,8 @@ Source path for migration.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PathInfo-srcPath: string--><!--Device-PathInfo-srcPath: string-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 

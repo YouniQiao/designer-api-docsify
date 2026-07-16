@@ -4,6 +4,8 @@ Defines the ad request parameters.
 
 **Since:** 11
 
+<!--Device-advertising-export interface AdRequestParams--><!--Device-advertising-export interface AdRequestParams-End-->
+
 **System capability:** SystemCapability.Advertising.Ads
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Number of ads requested. If not set, the business logic prevails.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AdRequestParams-adCount?: number--><!--Device-AdRequestParams-adCount?: number-End-->
+
 **System capability:** SystemCapability.Advertising.Ads
 
 ## adHeight
@@ -34,14 +38,15 @@ Number of ads requested. If not set, the business logic prevails.
 adHeight?: number
 ```
 
-Expected creative height when requesting an ad,
-in vp (mandatory for banner ads). If not set, the business logic prevails.
+Expected creative height when requesting an ad,in vp (mandatory for banner ads). If not set, the business logic prevails.
 
 **Type:** number
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AdRequestParams-adHeight?: number--><!--Device-AdRequestParams-adHeight?: number-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -61,6 +66,8 @@ Note: The getAdRequestBody API can omit this parameter.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AdRequestParams-adId: string--><!--Device-AdRequestParams-adId: string-End-->
+
 **System capability:** SystemCapability.Advertising.Ads
 
 ## adSearchKeyword
@@ -79,6 +86,8 @@ Note: Not supported for use currently.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AdRequestParams-adSearchKeyword?: string--><!--Device-AdRequestParams-adSearchKeyword?: string-End-->
+
 **System capability:** SystemCapability.Advertising.Ads
 
 ## adType
@@ -89,11 +98,11 @@ adType?: number
 
 Requested ad type.
 
-- 1: Splash ad.
-- 3: Native ad.
-- 7: Rewarded ad.
-- 8: Banner ad.
-- 12: Interstitial ad
+- 1: Splash ad.  
+- 3: Native ad.  
+- 7: Rewarded ad.  
+- 8: Banner ad.  
+- 12: Interstitial ad  
 - 60: Roll ad.
 
 If not set, the default is the native ad type.
@@ -104,6 +113,8 @@ If not set, the default is the native ad type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AdRequestParams-adType?: number--><!--Device-AdRequestParams-adType?: number-End-->
+
 **System capability:** SystemCapability.Advertising.Ads
 
 ## adWidth
@@ -112,14 +123,15 @@ If not set, the default is the native ad type.
 adWidth?: number
 ```
 
-Expected creative width when requesting an ad, in vp (mandatory for banner ads).
-If not set, the business logic prevails.
+Expected creative width when requesting an ad, in vp (mandatory for banner ads).If not set, the business logic prevails.
 
 **Type:** number
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AdRequestParams-adWidth?: number--><!--Device-AdRequestParams-adWidth?: number-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -138,6 +150,8 @@ Custom parameter.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AdRequestParams-[key: string]: number | boolean | string | undefined--><!--Device-AdRequestParams-[key: string]: number | boolean | string | undefined-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 

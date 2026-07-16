@@ -6,6 +6,8 @@ Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md) and has all attributes o
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface BadgeParamWithString extends BadgeParam--><!--Device-unnamed-declare interface BadgeParamWithString extends BadgeParam-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -27,6 +29,8 @@ The ResourceStr type is supported since API version 20.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-BadgeParamWithString-value: ResourceStr--><!--Device-BadgeParamWithString-value: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

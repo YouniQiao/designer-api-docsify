@@ -12,23 +12,22 @@ import { childProcessManager } from '@kit.AbilityKit';
 function startChildProcess(srcEntry: string, startMode: StartMode): Promise<number>
 ```
 
-Starts an [ArkTS child process](../../../../application-models/ability-terminology.md#arkts-child-process). This API
-uses a promise to return the result.
-This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 160
-00061 is returned.
+Starts an [ArkTS child process](../../../../application-models/ability-terminology.md#arkts-child-process). This API uses a promise to return the result.This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 16000061 is returned.
 
-> **NOTE**
->
-> If the child process is created successfully, its PID is returned, and its
-> [ChildProcess.onStart](arkts-ability-childprocess-c.md#onstart-1) function is executed. Once the
-> function is done, the child process is automatically destroyed.
->
-> The child process started by calling this API does not support asynchronous ArkTS API calls. It supports only
+> **NOTE**  
+>  
+> If the child process is created successfully, its PID is returned, and its  
+> [ChildProcess.onStart](arkts-ability-childprocess-c.md#onstart-1) function is executed. Once the  
+> function is done, the child process is automatically destroyed.  
+>  
+> The child process started by calling this API does not support asynchronous ArkTS API calls. It supports only  
 > synchronous ArkTS API calls.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-childProcessManager-function startChildProcess(srcEntry: string, startMode: StartMode): Promise<int>--><!--Device-childProcessManager-function startChildProcess(srcEntry: string, startMode: StartMode): Promise<int>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -36,14 +35,14 @@ This API can be properly called on PCs/2-in-1 devices and tablets. If it is call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| srcEntry | string | Yes | Path of the source file of the child process relative to the root directory **src/main**.The source file can be stored only in the module of the entry type. For example, if the source file of a childprocess is **src/main/ets/process/DemoProcess.ets** in the entry module, then **srcEntry** is **./ets/process/DemoProcess.ets**.<br>In addition, ensure that the source file of the child process is referenced by other files toprevent it from being optimized by the build tool. (For details, see the sample code below.) |
-| startMode | StartMode | Yes | Start mode of the child process. |
+| srcEntry | string | Yes | Path of the source file of the child process relative to the root directory **src/main**.The source file can be stored only in the module of the entry type. For example, if the source file of a child process is **src/main/ets/process/DemoProcess.ets** in the entry module, then **srcEntry** is **./ets/process/DemoProcess.ets**.<br>In addition, ensure that the source file of the child process is referenced by other files to prevent it from being optimized by the build tool. (For details, see the sample code below.) |
+| startMode | [StartMode](arkts-ability-startmode-e.md) | Yes | Start mode of the child process. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the PID of the child process. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the PID of the child process. |
 
 **Error codes:**
 
@@ -97,23 +96,22 @@ try {
 function startChildProcess(srcEntry: string, startMode: StartMode, callback: AsyncCallback<number>): void
 ```
 
-Starts an [ArkTS child process](../../../../application-models/ability-terminology.md#arkts-child-process). This API
-uses an asynchronous callback to return the result.
-This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 160
-00061 is returned.
+Starts an [ArkTS child process](../../../../application-models/ability-terminology.md#arkts-child-process). This API uses an asynchronous callback to return the result.This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 16000061 is returned.
 
-> **NOTE**
->
-> If the child process is created successfully, its PID is returned, and its
-> [ChildProcess.onStart](arkts-ability-childprocess-c.md#onstart-1) function is executed. Once the
-> function is done, the child process is automatically destroyed.
->
-> The child process started by calling this API does not support asynchronous ArkTS API calls. It supports only
+> **NOTE**  
+>  
+> If the child process is created successfully, its PID is returned, and its  
+> [ChildProcess.onStart](arkts-ability-childprocess-c.md#onstart-1) function is executed. Once the  
+> function is done, the child process is automatically destroyed.  
+>  
+> The child process started by calling this API does not support asynchronous ArkTS API calls. It supports only  
 > synchronous ArkTS API calls.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-childProcessManager-function startChildProcess(srcEntry: string, startMode: StartMode, callback: AsyncCallback<int>): void--><!--Device-childProcessManager-function startChildProcess(srcEntry: string, startMode: StartMode, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -121,9 +119,9 @@ This API can be properly called on PCs/2-in-1 devices and tablets. If it is call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| srcEntry | string | Yes | Path of the source file of the child process relative to the root directory **src/main**.The source file can be stored only in the module of the entry type. For example, if the source file of a childprocess is **src/main/ets/process/DemoProcess.ets** in the entry module, then **srcEntry** is **./ets/process/DemoProcess.ets**.<br>In addition, ensure that the source file of the child process is referenced by other files toprevent it from being optimized by the build tool. (For details, see the sample code below.) |
-| startMode | StartMode | Yes | Start mode of the child process. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the subprocess is started, **err** is**undefined** and **data** is the PID of the child process. Otherwise, **data** is an error object. |
+| srcEntry | string | Yes | Path of the source file of the child process relative to the root directory **src/main**.The source file can be stored only in the module of the entry type. For example, if the source file of a child process is **src/main/ets/process/DemoProcess.ets** in the entry module, then **srcEntry** is **./ets/process/DemoProcess.ets**.<br>In addition, ensure that the source file of the child process is referenced by other files to prevent it from being optimized by the build tool. (For details, see the sample code below.) |
+| startMode | [StartMode](arkts-ability-startmode-e.md) | Yes | Start mode of the child process. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the subprocess is started, **err** is **undefined** and **data** is the PID of the child process. Otherwise, **data** is an error object. |
 
 **Error codes:**
 

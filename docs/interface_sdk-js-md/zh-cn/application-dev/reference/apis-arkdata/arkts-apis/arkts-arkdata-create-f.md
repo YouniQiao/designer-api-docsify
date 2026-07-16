@@ -1,5 +1,11 @@
 # create
 
+## 导入模块
+
+```TypeScript
+import { distributedDataObject } from '@kit.ArkData';
+```
+
 ## create
 
 ```TypeScript
@@ -10,20 +16,22 @@ function create(context: Context, source: object): DataObject
 
 **起始版本：** 9
 
+<!--Device-distributedDataObject-function create(context: Context, source: object): DataObject--><!--Device-distributedDataObject-function create(context: Context, source: object): DataObject-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用的上下文。<br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md)。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用的上下文。<br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md)。 |
 | source | object | 是 | 设置分布式数据对象的属性。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DataObject | 创建完成的分布式数据对象。 |
+| [DataObject](arkts-arkdata-dataobject-i.md) | 创建完成的分布式数据对象。 |
 
 **错误码：**
 

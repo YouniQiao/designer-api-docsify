@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+<!--Device-unnamed-export interface RenderContext--><!--Device-unnamed-export interface RenderContext-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## getRenderResourceFactory
@@ -16,13 +18,15 @@ getRenderResourceFactory() : RenderResourceFactory
 
 **起始版本：** 20
 
+<!--Device-RenderContext-getRenderResourceFactory() : RenderResourceFactory--><!--Device-RenderContext-getRenderResourceFactory() : RenderResourceFactory-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| RenderResourceFactory | -- RenderResourceFactory实例 |
+| [RenderResourceFactory](arkts-arkgraphics3d-renderresourcefactory-i.md) | -- RenderResourceFactory实例 |
 
 ## loadPlugin
 
@@ -33,6 +37,8 @@ loadPlugin(name: string): Promise<boolean>
 加载外部插件
 
 **起始版本：** 20
+
+<!--Device-RenderContext-loadPlugin(name: string): Promise<boolean>--><!--Device-RenderContext-loadPlugin(name: string): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -46,7 +52,7 @@ loadPlugin(name: string): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | - 返回表示插件加载是否成功的Promise |
+| Promise<boolean> | - 返回表示插件加载是否成功的Promise |
 
 ## registerResourcePath
 
@@ -57,6 +63,8 @@ registerResourcePath(protocol: string, uri: string): boolean
 注册资源路径
 
 **起始版本：** 20
+
+<!--Device-RenderContext-registerResourcePath(protocol: string, uri: string): boolean--><!--Device-RenderContext-registerResourcePath(protocol: string, uri: string): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

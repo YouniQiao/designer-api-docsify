@@ -16,6 +16,8 @@ Join the conference call.
 
 **Since:** 8
 
+<!--Device-call-function joinConference(mainCallId: int, callNumberList: Array<string>, callback: AsyncCallback<void>): void--><!--Device-call-function joinConference(mainCallId: int, callNumberList: Array<string>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -25,8 +27,8 @@ Join the conference call.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mainCallId | number | Yes | Indicates the identifier of the main call. |
-| callNumberList | Array&lt;string&gt; | Yes | Indicates a call list. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of joinConference. |
+| callNumberList | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Indicates a call list. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of joinConference. |
 
 **Error codes:**
 
@@ -68,6 +70,8 @@ Join the conference call.
 
 **Since:** 8
 
+<!--Device-call-function joinConference(mainCallId: int, callNumberList: Array<string>): Promise<void>--><!--Device-call-function joinConference(mainCallId: int, callNumberList: Array<string>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -77,13 +81,13 @@ Join the conference call.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mainCallId | number | Yes | Indicates the identifier of the main call. |
-| callNumberList | Array&lt;string&gt; | Yes | Indicates a call list. |
+| callNumberList | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Indicates a call list. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the joinConference. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the joinConference. |
 
 **Error codes:**
 

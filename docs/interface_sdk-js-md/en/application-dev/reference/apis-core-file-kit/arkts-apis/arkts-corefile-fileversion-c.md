@@ -1,10 +1,10 @@
 # FileVersion
 
-Represents the device-cloud file version management class. It allows you to manage historical versions of client-
-cloud files, obtain the list of historical versions, download historical versions to the local device, replace the
-current local file with a historical version file, and query and remove conflict flags for version conflicts.
+Represents the device-cloud file version management class. It allows you to manage historical versions of client-cloud files, obtain the list of historical versions, download historical versions to the local device, replace the current local file with a historical version file, and query and remove conflict flags for version conflicts.
 
 **Since:** 20
+
+<!--Device-cloudSync-class FileVersion--><!--Device-cloudSync-class FileVersion-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -20,11 +20,11 @@ import { cloudSync } from '@kit.CoreFileKit';
 clearFileConflict(uri: string): Promise<void>
 ```
 
-Clears the version conflict flag of the local file. If a conflict occurs, you need to call this API to clear the
-conflict flag after the conflict is resolved locally and trigger automatic synchronization. This API uses a
-promise to return the result.
+Clears the version conflict flag of the local file. If a conflict occurs, you need to call this API to clear the conflict flag after the conflict is resolved locally and trigger automatic synchronization. This API uses a promise to return the result.
 
 **Since:** 20
+
+<!--Device-FileVersion-clearFileConflict(uri: string): Promise<void>--><!--Device-FileVersion-clearFileConflict(uri: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -38,7 +38,7 @@ promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -88,6 +88,8 @@ A constructor used to create a **FileVersion** instance.
 
 **Since:** 20
 
+<!--Device-FileVersion-constructor()--><!--Device-FileVersion-constructor()-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **Error codes:**
@@ -109,12 +111,11 @@ let fileVersion = new cloudSync.FileVersion();
 downloadHistoryVersion(uri: string, versionId: string, callback: Callback<VersionDownloadProgress>): Promise<string>
 ```
 
-Obtains the content of a file of a specified version based on the version number. You can download a file of a
-specified version from the cloud to a temporary local path. The application determines whether to replace the
-original file with the temporary file, or retain or delete the temporary file. The callback returns the file
-download progress, and the promise returns the URI of the temporary file of an earlier version.
+Obtains the content of a file of a specified version based on the version number. You can download a file of a specified version from the cloud to a temporary local path. The application determines whether to replace the original file with the temporary file, or retain or delete the temporary file. The callback returns the file download progress, and the promise returns the URI of the temporary file of an earlier version.
 
 **Since:** 20
+
+<!--Device-FileVersion-downloadHistoryVersion(uri: string, versionId: string, callback: Callback<VersionDownloadProgress>): Promise<string>--><!--Device-FileVersion-downloadHistoryVersion(uri: string, versionId: string, callback: Callback<VersionDownloadProgress>): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -123,14 +124,14 @@ download progress, and the promise returns the URI of the temporary file of an e
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | File URI. |
-| versionId | string | Yes | Version ID of a file. The format is returned by the[gethistoryversionlist](arkts-corefile-fileversion-c.md#gethistoryversionlist-1) API. |
-| callback | Callback&lt;VersionDownloadProgress&gt; | Yes | Callback used to return the download progress. |
+| versionId | string | Yes | Version ID of a file. The format is returned by the [gethistoryversionlist](arkts-corefile-fileversion-c.md#gethistoryversionlist-1) API. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VersionDownloadProgress> | Yes | Callback used to return the download progress. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the URI of the temporary file of a historical version. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the URI of the temporary file of a historical version. |
 
 **Error codes:**
 
@@ -151,16 +152,15 @@ download progress, and the promise returns the URI of the temporary file of an e
 getHistoryVersionList(uri: string, versionNumLimit: number): Promise<Array<HistoryVersion>>
 ```
 
-Obtains the list of historical versions. The returned versions are sorted by modification time. The earlier the
-modification time, the later the version. This API uses a promise to return the result.
+Obtains the list of historical versions. The returned versions are sorted by modification time. The earlier the modification time, the later the version. This API uses a promise to return the result.
 
-If the number of cloud versions is less than the length limit, the list will be returned with the actual number
-of versions.
+If the number of cloud versions is less than the length limit, the list will be returned with the actual number of versions.
 
-If the number of cloud versions is greater than or equal to the length limit, the number of the latest versions (
-specified by **versionNumLimit**) will be returned.
+If the number of cloud versions is greater than or equal to the length limit, the number of the latest versions (specified by **versionNumLimit**) will be returned.
 
 **Since:** 20
+
+<!--Device-FileVersion-getHistoryVersionList(uri: string, versionNumLimit: int): Promise<Array<HistoryVersion>>--><!--Device-FileVersion-getHistoryVersionList(uri: string, versionNumLimit: int): Promise<Array<HistoryVersion>>-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -169,13 +169,13 @@ specified by **versionNumLimit**) will be returned.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | File URI. |
-| versionNumLimit | number | Yes | Length limit of the historical version list. The value range is [0, 100000] (unit: number). If the input value is greater than 100,000, the list is returned according to the maximumvalue. |
+| versionNumLimit | number | Yes | Length limit of the historical version list. The value range is [0, 100000](unit: number). If the input value is greater than 100,000, the list is returned according to the maximum value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;HistoryVersion&gt;&gt; | Promise used to return the list of historical versions. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<HistoryVersion>> | Promise used to return the list of historical versions. |
 
 **Error codes:**
 
@@ -218,16 +218,13 @@ fileVersion.getHistoryVersionList(uri, limit).then((versionList: Array<cloudSync
 isFileConflict(uri: string): Promise<boolean>
 ```
 
-Obtains the version conflict flag of a local file. This API uses a promise to return the result. This API takes
-effect only when the application is configured for manual conflict resolution. Otherwise, conflicts are
-automatically resolved during synchronization, and the return value will be **false**.
+Obtains the version conflict flag of a local file. This API uses a promise to return the result. This API takes effect only when the application is configured for manual conflict resolution. Otherwise, conflicts are automatically resolved during synchronization, and the return value will be **false**.
 
-Once the application is configured for manual conflict resolution, calling this API returns whether the current
-local file conflicts with the cloud file. The application then prompts the user to handle the conflict. After the
-conflict is resolved, you need to call the [clearFileConflict](arkts-corefile-fileversion-c.md#clearfileconflict-1)
-method to clear the conflict flag and synchronize the file to the cloud.
+Once the application is configured for manual conflict resolution, calling this API returns whether the current local file conflicts with the cloud file. The application then prompts the user to handle the conflict. After the conflict is resolved, you need to call the [clearFileConflict](arkts-corefile-fileversion-c.md#clearfileconflict-1)method to clear the conflict flag and synchronize the file to the cloud.
 
 **Since:** 20
+
+<!--Device-FileVersion-isFileConflict(uri: string): Promise<boolean>--><!--Device-FileVersion-isFileConflict(uri: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -241,7 +238,7 @@ method to clear the conflict flag and synchronize the file to the cloud.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the conflict flag between the local file and the cloud file.The value **true** indicates that the local file conflicts with the cloud file, and the value **false**indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the conflict flag between the local file and the cloud file.The value **true** indicates that the local file conflicts with the cloud file, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -280,13 +277,11 @@ fileVersion.isFileConflict(uri).then((isConflict: boolean) => {
 replaceFileWithHistoryVersion(originalUri: string, versionUri: string): Promise<void>
 ```
 
-Replaces the local file with the file of a historical version. Before replacement, call the
-[downloadHistoryVersion](arkts-corefile-fileversion-c.md#downloadhistoryversion-1) method to download the selected
-historical version and obtain its version URI. If this API is called directly without prior download or the
-version URI is invalid, an exception will be thrown. Once replacement is complete, the temporary file will be
-automatically deleted. This API uses a promise to return the result.
+Replaces the local file with the file of a historical version. Before replacement, call the [downloadHistoryVersion](arkts-corefile-fileversion-c.md#downloadhistoryversion-1) method to download the selected historical version and obtain its version URI. If this API is called directly without prior download or the version URI is invalid, an exception will be thrown. Once replacement is complete, the temporary file will be automatically deleted. This API uses a promise to return the result.
 
 **Since:** 20
+
+<!--Device-FileVersion-replaceFileWithHistoryVersion(originalUri: string, versionUri: string): Promise<void>--><!--Device-FileVersion-replaceFileWithHistoryVersion(originalUri: string, versionUri: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -301,7 +296,7 @@ automatically deleted. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

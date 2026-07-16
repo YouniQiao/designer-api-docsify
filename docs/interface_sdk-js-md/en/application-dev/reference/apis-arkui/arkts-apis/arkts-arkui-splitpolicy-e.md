@@ -4,6 +4,8 @@ Enumerates the types of pages in **MultiNavigation**.
 
 **Since:** 14
 
+<!--Device-unnamed-export declare enum SplitPolicy--><!--Device-unnamed-export declare enum SplitPolicy-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## HOME_PAGE
@@ -19,6 +21,8 @@ Home page. Displayed in full-screen mode.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-SplitPolicy-HOME_PAGE = 0--><!--Device-SplitPolicy-HOME_PAGE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ Detail page. Displayed in split-screen mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-SplitPolicy-DETAIL_PAGE = 1--><!--Device-SplitPolicy-DETAIL_PAGE = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FULL_PAGE
@@ -51,6 +57,8 @@ Full-screen page. Displayed in full-screen mode.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-SplitPolicy-FULL_PAGE = 2--><!--Device-SplitPolicy-FULL_PAGE = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,5 +1,11 @@
 # attachGroup
 
+## 导入模块
+
+```TypeScript
+import { request } from '@kit.BasicServicesKit';
+```
+
 ## attachGroup
 
 ```TypeScript
@@ -11,6 +17,8 @@ function attachGroup(gid: string, tids: string[]): Promise<void>
 如果任意一个任务id不满足添加条件，则所有列表中的任务都不会添加到分组中。
 
 **起始版本：** 15
+
+<!--Device-agent-function attachGroup(gid: string, tids: string[]): Promise<void>--><!--Device-agent-function attachGroup(gid: string, tids: string[]): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -25,7 +33,7 @@ function attachGroup(gid: string, tids: string[]): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

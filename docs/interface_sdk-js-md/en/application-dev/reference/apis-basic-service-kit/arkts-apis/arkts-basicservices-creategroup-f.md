@@ -12,11 +12,11 @@ import { request } from '@kit.BasicServicesKit';
 function createGroup(config: GroupConfig): Promise<string>
 ```
 
-Creates a group based on
-[GroupConfig](arkts-basicservices-groupconfig-i.md). This API
-uses a promise to return the result.
+Creates a group based on [GroupConfig](arkts-basicservices-groupconfig-i.md). This API uses a promise to return the result.
 
 **Since:** 15
+
+<!--Device-agent-function createGroup(config: GroupConfig): Promise<string>--><!--Device-agent-function createGroup(config: GroupConfig): Promise<string>-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -24,13 +24,13 @@ uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | GroupConfig | Yes | Group options for a download task. |
+| config | [GroupConfig](arkts-basicservices-groupconfig-i.md) | Yes | Group options for a download task. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the ID of the created group. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the ID of the created group. |
 
 **Error codes:**
 

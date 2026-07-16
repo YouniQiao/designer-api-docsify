@@ -12,6 +12,8 @@ function offSystemPanelStatusChange(callback?: Callback<SystemPanelStatus>): voi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-inputMethodSystemPanelManager-function offSystemPanelStatusChange(callback?: Callback<SystemPanelStatus>): void--><!--Device-inputMethodSystemPanelManager-function offSystemPanelStatusChange(callback?: Callback<SystemPanelStatus>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +22,7 @@ function offSystemPanelStatusChange(callback?: Callback<SystemPanelStatus>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;SystemPanelStatus&gt; | 否 | 当系统面板状态改变时触发的回调。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SystemPanelStatus> | 否 | 当系统面板状态改变时触发的回调。 |
 
 **错误码：**
 

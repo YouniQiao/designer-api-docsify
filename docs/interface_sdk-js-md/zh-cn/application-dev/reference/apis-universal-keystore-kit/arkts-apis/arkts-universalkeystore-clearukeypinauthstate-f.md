@@ -1,5 +1,11 @@
 # clearUkeyPinAuthState
 
+## 导入模块
+
+```TypeScript
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
+```
+
 ## clearUkeyPinAuthState
 
 ```TypeScript
@@ -11,6 +17,8 @@ function clearUkeyPinAuthState(resourceId: string): Promise<void>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-huksExternalCrypto-function clearUkeyPinAuthState(resourceId: string): Promise<void>--><!--Device-huksExternalCrypto-function clearUkeyPinAuthState(resourceId: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -24,7 +32,7 @@ function clearUkeyPinAuthState(resourceId: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

@@ -20,6 +20,8 @@ Provides a permission grant for application-shared directories
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-fileShare-function grantSharedDirectoryPermission(): Promise<void>--><!--Device-fileShare-function grantSharedDirectoryPermission(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Provides a permission grant for application-shared directories
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 

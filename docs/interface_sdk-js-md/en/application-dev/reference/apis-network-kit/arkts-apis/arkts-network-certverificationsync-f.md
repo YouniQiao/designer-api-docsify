@@ -16,14 +16,16 @@ Certificate verification to the server.
 
 **Since:** 12
 
+<!--Device-networkSecurity-export function certVerificationSync(cert: CertBlob, caCert?: CertBlob): int--><!--Device-networkSecurity-export function certVerificationSync(cert: CertBlob, caCert?: CertBlob): int-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | CertBlob | Yes | Certificates to be verified. |
-| caCert | CertBlob | No | Incoming custom CA cert. |
+| cert | [CertBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certblob-i.md) | Yes | Certificates to be verified. |
+| caCert | [CertBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certblob-i.md) | No | Incoming custom CA cert. |
 
 **Return value:**
 

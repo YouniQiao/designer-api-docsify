@@ -1,5 +1,11 @@
 # createConnection
 
+## 导入模块
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+```
+
 ## createConnection
 
 ```TypeScript
@@ -14,6 +20,8 @@ function createConnection(deviceId: string, name: string): Connection
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-linkEnhance-function createConnection(deviceId: string, name: string): Connection--><!--Device-linkEnhance-function createConnection(deviceId: string, name: string): Connection-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**
@@ -27,14 +35,14 @@ function createConnection(deviceId: string, name: string): Connection
 
 | 类型 | 说明 |
 | --- | --- |
-| Connection | 创建成功的连接对象。 |
+| [Connection](arkts-distributedservice-connection-i.md) | 创建成功的连接对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supportedbecause the linkEnhance function has been trimmed<br>**适用版本：** 26.0.0+ |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the linkEnhance function has been trimmed<br>**适用版本：** 26.0.0+ |
 | [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
 
 **示例：**

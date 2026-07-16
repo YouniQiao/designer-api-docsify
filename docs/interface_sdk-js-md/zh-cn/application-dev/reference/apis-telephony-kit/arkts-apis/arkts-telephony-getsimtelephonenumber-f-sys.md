@@ -1,17 +1,24 @@
 # getSimTelephoneNumber（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## getSimTelephoneNumber
 
 ```TypeScript
 function getSimTelephoneNumber(slotId: number, callback: AsyncCallback<string>): void
 ```
 
-Obtains the MSISDN of the SIM card in a specified slot.
-The MSISDN is recorded in the EFMSISDN file of the SIM card.
+Obtains the MSISDN of the SIM card in a specified slot.The MSISDN is recorded in the EFMSISDN file of the SIM card.
 
 **起始版本：** 8
 
 **需要权限：** ohos.permission.GET_PHONE_NUMBERS
+
+<!--Device-sim-function getSimTelephoneNumber(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getSimTelephoneNumber(slotId: int, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -22,7 +29,7 @@ The MSISDN is recorded in the EFMSISDN file of the SIM card.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;string&gt; | 是 | Indicates the callback for getting the MSISDN;Returns an empty string if no SIM card is inserted orno MSISDN is recorded in the EFMSISDN file. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | Indicates the callback for getting the MSISDN;Returns an empty string if no SIM card is inserted or no MSISDN is recorded in the EFMSISDN file. |
 
 **错误码：**
 
@@ -56,12 +63,13 @@ sim.getSimTelephoneNumber(0, (err: BusinessError, data: string) => {
 function getSimTelephoneNumber(slotId: number): Promise<string>
 ```
 
-Obtains the MSISDN of the SIM card in a specified slot.
-The MSISDN is recorded in the EFMSISDN file of the SIM card.
+Obtains the MSISDN of the SIM card in a specified slot.The MSISDN is recorded in the EFMSISDN file of the SIM card.
 
 **起始版本：** 8
 
 **需要权限：** ohos.permission.GET_PHONE_NUMBERS
+
+<!--Device-sim-function getSimTelephoneNumber(slotId: int): Promise<string>--><!--Device-sim-function getSimTelephoneNumber(slotId: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -77,7 +85,7 @@ The MSISDN is recorded in the EFMSISDN file of the SIM card.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the MSISDN; returns an empty string if no SIM card is inserted orno MSISDN is recorded in the EFMSISDN file. |
+| Promise<string> | Returns the MSISDN; returns an empty string if no SIM card is inserted or no MSISDN is recorded in the EFMSISDN file. |
 
 **错误码：**
 

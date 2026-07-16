@@ -1,13 +1,14 @@
 # @ohos.filemanagement.userFileManager
 
-The **userFileManager** module provides user data management capabilities, including accessing and modifying user
-media data.
+The **userFileManager** module provides user data management capabilities, including accessing and modifying user media data.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [photoAccessHelper:photoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md)
+
+<!--Device-unnamed-declare namespace userFileManager--><!--Device-unnamed-declare namespace userFileManager-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

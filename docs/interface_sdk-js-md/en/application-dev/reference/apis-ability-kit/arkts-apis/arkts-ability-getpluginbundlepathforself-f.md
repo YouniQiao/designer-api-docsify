@@ -12,10 +12,11 @@ import { bundleManager } from '@kit.AbilityKit';
 function getPluginBundlePathForSelf(pluginBundleName: string): string
 ```
 
-Obtains the installation path of a specified plugin in the current
-[application sandbox](../../../../file-management/app-sandbox-directory.md).
+Obtains the installation path of a specified plugin in the current [application sandbox](../../../../file-management/app-sandbox-directory.md).
 
 **Since:** 22
+
+<!--Device-bundleManager-function getPluginBundlePathForSelf(pluginBundleName: string): string--><!--Device-bundleManager-function getPluginBundlePathForSelf(pluginBundleName: string): string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

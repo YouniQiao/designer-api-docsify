@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-webview-enum WebMessageType--><!--Device-webview-enum WebMessageType-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## NOT_SUPPORT
@@ -16,7 +18,9 @@ NOT_SUPPORT = 0
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessageType-NOT_SUPPORT = 0--><!--Device-WebMessageType-NOT_SUPPORT = 0-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -30,7 +34,9 @@ STRING = 1
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessageType-STRING = 1--><!--Device-WebMessageType-STRING = 1-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -44,7 +50,9 @@ NUMBER = 2
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessageType-NUMBER = 2--><!--Device-WebMessageType-NUMBER = 2-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -58,7 +66,9 @@ BOOLEAN = 3
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessageType-BOOLEAN = 3--><!--Device-WebMessageType-BOOLEAN = 3-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -72,7 +82,9 @@ ARRAY_BUFFER = 4
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessageType-ARRAY_BUFFER = 4--><!--Device-WebMessageType-ARRAY_BUFFER = 4-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -86,7 +98,9 @@ ARRAY = 5
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessageType-ARRAY = 5--><!--Device-WebMessageType-ARRAY = 5-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -100,7 +114,9 @@ ERROR = 6
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessageType-ERROR = 6--><!--Device-WebMessageType-ERROR = 6-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

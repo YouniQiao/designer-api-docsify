@@ -4,6 +4,8 @@ Describes the equivalent focal length information.
 
 **Since:** 26.0.0
 
+<!--Device-camera-interface ZoomPointInfo--><!--Device-camera-interface ZoomPointInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Equivalent focal length corresponding to the current focal length ratio.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ZoomPointInfo-readonly equivalentFocalLength: int--><!--Device-ZoomPointInfo-readonly equivalentFocalLength: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -45,6 +49,8 @@ Zoom ratio.
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ZoomPointInfo-readonly zoomRatio: double--><!--Device-ZoomPointInfo-readonly zoomRatio: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

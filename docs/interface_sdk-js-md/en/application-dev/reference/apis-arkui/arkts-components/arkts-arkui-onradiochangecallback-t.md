@@ -12,6 +12,8 @@ Defines the callback type for radio button selected state changes.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-unnamed-declare type OnRadioChangeCallback = (isChecked: boolean) => void--><!--Device-unnamed-declare type OnRadioChangeCallback = (isChecked: boolean) => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

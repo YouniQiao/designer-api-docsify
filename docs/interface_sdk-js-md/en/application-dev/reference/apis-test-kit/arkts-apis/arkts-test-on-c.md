@@ -1,21 +1,16 @@
 # On
 
-Since API version 9, the UiTest framework provides a wide range of UI component feature description APIs in the
-**On** class to filter and match components.
+Since API version 9, the UiTest framework provides a wide range of UI component feature description APIs in the **On** class to filter and match components.
 
 The APIs provided by the **On** class exhibit the following features:
 
-1. Allow one or more attributes as the match conditions.
-For example, you can specify both the **text** and **id** attributes to find the target component.
-2. Provide multiple match patterns for component attributes.
-3. Support absolute positioning and relative positioning for components.
-APIs such as [ON.isBefore](arkts-test-on-c.md#isbefore-1) and [ON.isAfter](arkts-test-on-c.md#isafter-1) can be used to specify
-the features of adjacent components to assist positioning.
+1. Allow one or more attributes as the match conditions.For example, you can specify both the **text** and **id** attributes to find the target component.2. Provide multiple match patterns for component attributes.3. Support absolute positioning and relative positioning for components.APIs such as [ON.isBefore](arkts-test-on-c.md#isbefore-1) and [ON.isAfter](arkts-test-on-c.md#isafter-1) can be used to specify the features of adjacent components to assist positioning.
 
-All APIs provided in the **On** class are synchronous. You are advised to use the static constructor **ON** to create
-an **On** object in chain mode.
+All APIs provided in the **On** class are synchronous. You are advised to use the static constructor **ON** to create an **On** object in chain mode.
 
 **Since:** 9
+
+<!--Device-unnamed-declare class On--><!--Device-unnamed-declare class On-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -31,12 +26,13 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 afterComponent(com: Component): On
 ```
 
-Requires that the target Component which is after another Component that specified by the given {@link Component}
-object,used to locate Component relatively.
+Requires that the target Component which is after another Component that specified by the given {@link Component}object,used to locate Component relatively.
 
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-On-afterComponent(com: Component): On--><!--Device-On-afterComponent(com: Component): On-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -44,13 +40,13 @@ object,used to locate Component relatively.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| com | Component | Yes | describes the Component which the target one is in back of. |
+| com | [Component](../../apis-image-kit/arkts-apis/arkts-image-component-i.md) | Yes | describes the Component which the target one is in back of. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| On | this {@link On} object. |
+| [On](arkts-test-on-c.md) | this {@link On} object. |
 
 **Error codes:**
 
@@ -64,12 +60,13 @@ object,used to locate Component relatively.
 beforeComponent(com: Component): On
 ```
 
-Requires that the target Component which is before another Component that specified by the given {@link Component}
-object,used to locate Component relatively.
+Requires that the target Component which is before another Component that specified by the given {@link Component}object,used to locate Component relatively.
 
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-On-beforeComponent(com: Component): On--><!--Device-On-beforeComponent(com: Component): On-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -77,13 +74,13 @@ object,used to locate Component relatively.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| com | Component | Yes | describes the Component which the target one is in front of. |
+| com | [Component](../../apis-image-kit/arkts-apis/arkts-image-component-i.md) | Yes | describes the Component which the target one is in front of. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| On | this {@link On} object. |
+| [On](arkts-test-on-c.md) | this {@link On} object. |
 
 **Error codes:**
 
@@ -103,19 +100,21 @@ Obtains the component object on the specified display.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-On-belongingDisplay(displayId: int): On--><!--Device-On-belongingDisplay(displayId: int): On-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | number | Yes | ID of the display to which the component belongs. The value is an integer greater thanor equal to 0.<br>**Note**: If the input **displayId** does not exist, the exception **17000007** is reported. You can use[getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-getalldisplays-f.md#getalldisplays-1) to obtainall current **display** objects and use them to obtain the corresponding display IDs.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
+| displayId | number | Yes | ID of the display to which the component belongs. The value is an integer greater than or equal to 0.<br>**Note**: If the input **displayId** does not exist, the exception **17000007** is reported. You can use [getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-getalldisplays-f.md#getalldisplays-1) to obtain all current **display** objects and use them to obtain the corresponding display IDs.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| On | - The **On** object of the display to which the specified component belongs. |
+| [On](arkts-test-on-c.md) | - The **On** object of the display to which the specified component belongs. |
 
 **Error codes:**
 
@@ -145,6 +144,8 @@ Specifies the checkable attribute of the target component.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-On-checkable(b?: boolean): On--><!--Device-On-checkable(b?: boolean): On-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -157,7 +158,7 @@ Specifies the checkable attribute of the target component.
 
 | Type | Description |
 | --- | --- |
-| On | - **On** object that matches the checkable attribute of the target component. |
+| [On](arkts-test-on-c.md) | - **On** object that matches the checkable attribute of the target component. |
 
 **Error codes:**
 
@@ -187,6 +188,8 @@ Specifies the checked attribute of the target component.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-On-checked(b?: boolean): On--><!--Device-On-checked(b?: boolean): On-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -199,13 +202,13 @@ Specifies the checked attribute of the target component.
 
 | Type | Description |
 | --- | --- |
-| On | - **On** object that matches the checked attribute of the target component. |
+| [On](arkts-test-on-c.md) | - **On** object that matches the checked attribute of the target component. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameterverification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 **Example**
 
@@ -229,6 +232,8 @@ Specifies the clickable attribute of the target component.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-On-clickable(b?: boolean): On--><!--Device-On-clickable(b?: boolean): On-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -241,13 +246,13 @@ Specifies the clickable attribute of the target component.
 
 | Type | Description |
 | --- | --- |
-| On | - **On** object that matches the clickable attribute of the target component. |
+| [On](arkts-test-on-c.md) | - **On** object that matches the clickable attribute of the target component. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameterverification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 **Example**
 
@@ -271,6 +276,8 @@ Specifies the description of the target component. Multiple match patterns are s
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-On-description(val: string, pattern?: MatchPattern): On--><!--Device-On-description(val: string, pattern?: MatchPattern): On-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -278,13 +285,13 @@ Specifies the description of the target component. Multiple match patterns are s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | val | string | Yes | Description of the component.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
-| pattern | MatchPattern | No | Match pattern {@link MatchPattern} .<br>Default value: {@link MatchPattern.EQUALS} |
+| pattern | [MatchPattern](arkts-test-matchpattern-e.md) | No | Match pattern {@link MatchPattern} .<br>Default value: {@link MatchPattern.EQUALS} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| On | - **On** object. |
+| [On](arkts-test-on-c.md) | - **On** object. |
 
 **Error codes:**
 
@@ -314,6 +321,8 @@ Specifies the enabled attribute of the target component.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-On-enabled(b?: boolean): On--><!--Device-On-enabled(b?: boolean): On-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -326,13 +335,13 @@ Specifies the enabled attribute of the target component.
 
 | Type | Description |
 | --- | --- |
-| On | - **On** object that matches the enabled attribute of the target component. |
+| [On](arkts-test-on-c.md) | - **On** object that matches the enabled attribute of the target component. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameterverification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 **Example**
 
@@ -356,6 +365,8 @@ Specifies the focused attribute of the target component.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-On-focused(b?: boolean): On--><!--Device-On-focused(b?: boolean): On-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -368,13 +379,13 @@ Specifies the focused attribute of the target component.
 
 | Type | Description |
 | --- | --- |
-| On | - **On** object that matches the focused attribute of the target component. |
+| [On](arkts-test-on-c.md) | - **On** object that matches the focused attribute of the target component. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameterverification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 **Example**
 
@@ -398,6 +409,8 @@ Obtains the component object of the specified hint text and returns the **On** o
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-On-hint(val: string, pattern?: MatchPattern): On--><!--Device-On-hint(val: string, pattern?: MatchPattern): On-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -405,13 +418,13 @@ Obtains the component object of the specified hint text and returns the **On** o
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | val | string | Yes | The specified hint text of the component.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
-| pattern | MatchPattern | No | Match pattern{@link MatchPattern}.<br>Default value: {@link MatchPattern.EQUALS} |
+| pattern | [MatchPattern](arkts-test-matchpattern-e.md) | No | Match pattern{@link MatchPattern}.<br>Default value: {@link MatchPattern.EQUALS} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| On | - The **On** object of the specified hint text component. |
+| [On](arkts-test-on-c.md) | - The **On** object of the specified hint text component. |
 
 **Error codes:**
 
@@ -441,6 +454,8 @@ Specifies the ID attribute of the target component.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-On-id(id: string): On--><!--Device-On-id(id: string): On-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -453,7 +468,7 @@ Specifies the ID attribute of the target component.
 
 | Type | Description |
 | --- | --- |
-| On | - **On** object that matches the ID attribute of the target component. |
+| [On](arkts-test-on-c.md) | - **On** object that matches the ID attribute of the target component. |
 
 **Error codes:**
 
@@ -483,6 +498,8 @@ Specifies the **id** attribute and match pattern of the target component.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-On-id(id: string, pattern: MatchPattern): On--><!--Device-On-id(id: string, pattern: MatchPattern): On-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -490,13 +507,13 @@ Specifies the **id** attribute and match pattern of the target component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | Component ID.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
-| pattern | MatchPattern | Yes | Text matching pattern {@link MatchPattern}. |
+| pattern | [MatchPattern](arkts-test-matchpattern-e.md) | Yes | Text matching pattern {@link MatchPattern}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| On | - **On** object that matches the ID attribute of the target component. |
+| [On](arkts-test-on-c.md) | - **On** object that matches the ID attribute of the target component. |
 
 **Error codes:**
 
@@ -526,6 +543,8 @@ Specifies that the target component is located within the given application wind
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-On-inWindow(bundleName: string): On--><!--Device-On-inWindow(bundleName: string): On-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -538,7 +557,7 @@ Specifies that the target component is located within the given application wind
 
 | Type | Description |
 | --- | --- |
-| On | - **On** object. |
+| [On](arkts-test-on-c.md) | - **On** object. |
 
 **Error codes:**
 
@@ -568,19 +587,21 @@ Specifies that the target component is located after the given attribute compone
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-On-isAfter(on: On): On--><!--Device-On-isAfter(on: On): On-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | On | Yes | Information about the attribute component.&lt;!--RP3--&gt;&lt;!--RP3End--&gt; |
+| on | [On](arkts-test-on-c.md) | Yes | Information about the attribute component.&lt;!--RP3--&gt;&lt;!--RP3End--&gt; |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| On | - **On** object. |
+| [On](arkts-test-on-c.md) | - **On** object. |
 
 **Error codes:**
 
@@ -611,19 +632,21 @@ Specifies that the target component is located before the given attribute compon
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-On-isBefore(on: On): On--><!--Device-On-isBefore(on: On): On-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | On | Yes | Information about the attribute component.&lt;!--RP3--&gt;&lt;!--RP3End--&gt; |
+| on | [On](arkts-test-on-c.md) | Yes | Information about the attribute component.&lt;!--RP3--&gt;&lt;!--RP3End--&gt; |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| On | - **On** object. |
+| [On](arkts-test-on-c.md) | - **On** object. |
 
 **Error codes:**
 
@@ -654,25 +677,27 @@ Specifies the long-clickable attribute of the target component.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-On-longClickable(b?: boolean): On--><!--Device-On-longClickable(b?: boolean): On-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Long-clickable status of the component. The value **true** indicates that the component is long-clickable, and **false** indicates the opposite. Default value: **true**&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
+| b | boolean | No | Long-clickable status of the component. The value **true** indicates that the component is long  -clickable, and **false** indicates the opposite. Default value: **true**&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| On | - **On** object that matches the long-clickable attribute of the target component. |
+| [On](arkts-test-on-c.md) | - **On** object that matches the long-clickable attribute of the target component. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameterverification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 **Example**
 
@@ -692,16 +717,18 @@ originalText(text: string, pattern?: MatchPattern): On
 
 Specifies the text content and text matching pattern of the component.
 
-> **NOTE**
->
-> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel-1)
-> of a component is set to **no** or **no-hide-descendants**, this API can be used to specify the text attribute of
-> the target component for searching for the component. In this case, the [On.text()](arkts-test-on-c.md#text-1) API does not
+> **NOTE**  
+>  
+> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel-1)  
+> of a component is set to **no** or **no-hide-descendants**, this API can be used to specify the text attribute of  
+> the target component for searching for the component. In this case, the [On.text()](arkts-test-on-c.md#text-1) API does not  
 > take effect.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-On-originalText(text: string, pattern?: MatchPattern): On--><!--Device-On-originalText(text: string, pattern?: MatchPattern): On-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -710,13 +737,13 @@ Specifies the text content and text matching pattern of the component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Component text, used to match the target component.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
-| pattern | MatchPattern | No | Match pattern{@link MatchPattern}.<br>Default value: {@link MatchPattern.EQUALS} |
+| pattern | [MatchPattern](arkts-test-matchpattern-e.md) | No | Match pattern{@link MatchPattern}.<br>Default value: {@link MatchPattern.EQUALS} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| On | - **On** object that matches the text attribute of the target component. |
+| [On](arkts-test-on-c.md) | - **On** object that matches the text attribute of the target component. |
 
 **Error codes:**
 
@@ -746,25 +773,27 @@ Specifies the scrollable attribute of the target component.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-On-scrollable(b?: boolean): On--><!--Device-On-scrollable(b?: boolean): On-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | Scrollable status of the component. The value **true** indicates that the component isscrollable, and **false** indicates the opposite. Default value: **true**&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
+| b | boolean | No | Scrollable status of the component. The value **true** indicates that the component is scrollable, and **false** indicates the opposite. Default value: **true**&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| On | - **On** object that matches the scrollable attribute of the target component. |
+| [On](arkts-test-on-c.md) | - **On** object that matches the scrollable attribute of the target component. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameterverification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 **Example**
 
@@ -788,6 +817,8 @@ Specifies the selected attribute of the target component.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-On-selected(b?: boolean): On--><!--Device-On-selected(b?: boolean): On-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -800,13 +831,13 @@ Specifies the selected attribute of the target component.
 
 | Type | Description |
 | --- | --- |
-| On | - **On** object that matches the selected attribute of the target component. |
+| [On](arkts-test-on-c.md) | - **On** object that matches the selected attribute of the target component. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameterverification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 **Example**
 
@@ -826,16 +857,18 @@ text(txt: string, pattern?: MatchPattern): On
 
 Specifies the text attribute of the target component. Multiple match patterns are supported.
 
-> **NOTE**
->
-> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel-1)
-> of a component is set to **no** or **no-hide-descendants**, this API cannot be used to specify the text attribute
-> of the target component for searching for the component. In this case, you can use the
+> **NOTE**  
+>  
+> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel-1)  
+> of a component is set to **no** or **no-hide-descendants**, this API cannot be used to specify the text attribute  
+> of the target component for searching for the component. In this case, you can use the  
 > [On.originalText()](arkts-test-on-c.md#originaltext-1) API.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-On-text(txt: string, pattern?: MatchPattern): On--><!--Device-On-text(txt: string, pattern?: MatchPattern): On-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -844,13 +877,13 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | txt | string | Yes | Component text, used to match the target component.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
-| pattern | MatchPattern | No | Match pattern {@link MatchPattern} .<br>Default value: {@link MatchPattern.EQUALS} |
+| pattern | [MatchPattern](arkts-test-matchpattern-e.md) | No | Match pattern {@link MatchPattern} .<br>Default value: {@link MatchPattern.EQUALS} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| On | - **On** object that matches the text attribute of the target component. |
+| [On](arkts-test-on-c.md) | - **On** object that matches the text attribute of the target component. |
 
 **Error codes:**
 
@@ -880,6 +913,8 @@ Specifies the type attribute of the target component.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-On-type(tp: string): On--><!--Device-On-type(tp: string): On-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -892,7 +927,7 @@ Specifies the type attribute of the target component.
 
 | Type | Description |
 | --- | --- |
-| On | - **On** object that matches the type attribute of the target component. |
+| [On](arkts-test-on-c.md) | - **On** object that matches the type attribute of the target component. |
 
 **Error codes:**
 
@@ -922,6 +957,8 @@ Specifies the **type** attribute and match pattern of the target component.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-On-type(tp: string, pattern: MatchPattern): On--><!--Device-On-type(tp: string, pattern: MatchPattern): On-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -929,13 +966,13 @@ Specifies the **type** attribute and match pattern of the target component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | tp | string | Yes | Component type.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
-| pattern | MatchPattern | Yes | Text matching pattern {@link MatchPattern}. |
+| pattern | [MatchPattern](arkts-test-matchpattern-e.md) | Yes | Text matching pattern {@link MatchPattern}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| On | - **On** object that matches the type attribute of the target component. |
+| [On](arkts-test-on-c.md) | - **On** object that matches the type attribute of the target component. |
 
 **Error codes:**
 
@@ -965,19 +1002,21 @@ Specifies that the target component is located within the given attribute compon
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-On-within(on: On): On--><!--Device-On-within(on: On): On-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | On | Yes | Information about the attribute component.&lt;!--RP3--&gt;&lt;!--RP3End--&gt; |
+| on | [On](arkts-test-on-c.md) | Yes | Information about the attribute component.&lt;!--RP3--&gt;&lt;!--RP3End--&gt; |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| On | - **On** object. |
+| [On](arkts-test-on-c.md) | - **On** object. |
 
 **Error codes:**
 
@@ -1002,12 +1041,13 @@ let on: On = ON.text('java').within(ON.type('Scroll')); // Search for the child 
 withinComponent(com: Component): On
 ```
 
-Requires that the target Component which is inside of another Component that specified by the given {@link Component}
-object,used to locate Component relatively.
+Requires that the target Component which is inside of another Component that specified by the given {@link Component}object,used to locate Component relatively.
 
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-On-withinComponent(com: Component): On--><!--Device-On-withinComponent(com: Component): On-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -1015,13 +1055,13 @@ object,used to locate Component relatively.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| com | Component | Yes | describes the Component which the target one is inside of. |
+| com | [Component](../../apis-image-kit/arkts-apis/arkts-image-component-i.md) | Yes | describes the Component which the target one is inside of. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| On | this {@link On} object. |
+| [On](arkts-test-on-c.md) | this {@link On} object. |
 
 **Error codes:**
 

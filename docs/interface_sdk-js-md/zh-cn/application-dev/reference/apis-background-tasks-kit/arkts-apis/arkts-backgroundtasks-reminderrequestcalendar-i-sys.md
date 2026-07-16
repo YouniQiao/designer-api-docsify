@@ -8,7 +8,15 @@ ReminderRequestCalendar extends ReminderRequest
 
 **起始版本：** 9
 
+<!--Device-reminderAgentManager-interface ReminderRequestCalendar extends ReminderRequest--><!--Device-reminderAgentManager-interface ReminderRequestCalendar extends ReminderRequest-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
+
+## 导入模块
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+```
 
 ## rruleWantAgent
 
@@ -21,6 +29,8 @@ rruleWantAgent?: WantAgent
 **类型：** WantAgent
 
 **起始版本：** 12
+
+<!--Device-ReminderRequestCalendar-rruleWantAgent?: WantAgent--><!--Device-ReminderRequestCalendar-rruleWantAgent?: WantAgent-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 

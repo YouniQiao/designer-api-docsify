@@ -18,6 +18,8 @@ Creates a media source for streaming media to be pre-downloaded.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-media-function createMediaSourceWithUrl(url: string, headers?: Record<string, string>): MediaSource--><!--Device-media-function createMediaSourceWithUrl(url: string, headers?: Record<string, string>): MediaSource-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 **Parameters:**
@@ -25,13 +27,13 @@ Creates a media source for streaming media to be pre-downloaded.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | - URL of the media source. The following streaming media formats are supported: HLS, HTTP-FLV, DASH, and HTTPS.<br> - FD path of the local M3U8 file. |
-| headers | Record&lt;string, string&gt; | No | HTTP header customized for streaming media pre-download. If thisparameter is not passed, the default HTTP header of the network request is used.<br>**Since:** 13 |
+| headers | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, string> | No | HTTP header customized for streaming media pre-download. If this parameter is not passed, the default HTTP header of the network request is used.<br>**Since:** 13 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MediaSource | MediaSource instance. |
+| [MediaSource](arkts-media-mediasource-i.md) | MediaSource instance. |
 
 **Error codes:**
 

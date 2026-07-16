@@ -1,13 +1,12 @@
 # MetadataFaceObject (System API)
 
-Implements the human face metadata object used for camera detection. It inherits from
-[MetadataObject](arkts-camera-metadataobjecttype-e.md) and is the data source of the camera information in
-[CameraInput](arkts-camera-camerainput-i.md). It is obtained by calling metadataOutput.
-[on('metadataObjectsAvailable')](arkts-camera-metadataoutput-i.md#on-1).
+Implements the human face metadata object used for camera detection. It inherits from [MetadataObject](arkts-camera-metadataobjecttype-e.md) and is the data source of the camera information in [CameraInput](arkts-camera-camerainput-i.md). It is obtained by calling metadataOutput.[on('metadataObjectsAvailable')](arkts-camera-metadataoutput-i.md#on-1).
 
 **Inheritance/Implementation:** MetadataFaceObject extends [MetadataObject](arkts-camera-metadataobject-i.md)
 
 **Since:** 26.0.0
+
+<!--Device-camera-interface MetadataFaceObject extends MetadataObject--><!--Device-camera-interface MetadataFaceObject extends MetadataObject-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -33,6 +32,8 @@ Detected emotion.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-MetadataFaceObject-readonly emotion: Emotion--><!--Device-MetadataFaceObject-readonly emotion: Emotion-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -50,6 +51,8 @@ Confidence of the emotion detection, with a value range of [0, 1].
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-MetadataFaceObject-readonly emotionConfidence: double--><!--Device-MetadataFaceObject-readonly emotionConfidence: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -69,6 +72,8 @@ Left eye area.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-MetadataFaceObject-readonly leftEyeBoundingBox: Rect--><!--Device-MetadataFaceObject-readonly leftEyeBoundingBox: Rect-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -86,6 +91,8 @@ Pitch angle, with a value range of [-90, 90], where downward is positive.
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-MetadataFaceObject-readonly pitchAngle: int--><!--Device-MetadataFaceObject-readonly pitchAngle: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -105,6 +112,8 @@ Right eye area.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-MetadataFaceObject-readonly rightEyeBoundingBox: Rect--><!--Device-MetadataFaceObject-readonly rightEyeBoundingBox: Rect-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -123,6 +132,8 @@ Row angle, with a value range of [-180, 180], where clockwise direction is posit
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-MetadataFaceObject-readonly rollAngle: int--><!--Device-MetadataFaceObject-readonly rollAngle: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -140,6 +151,8 @@ Yaw angle, with a value range of [-90, 90], where rightward is positive.
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-MetadataFaceObject-readonly yawAngle: int--><!--Device-MetadataFaceObject-readonly yawAngle: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

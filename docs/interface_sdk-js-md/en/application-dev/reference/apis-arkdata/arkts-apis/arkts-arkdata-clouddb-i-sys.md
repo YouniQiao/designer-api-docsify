@@ -4,6 +4,8 @@ Provides APIs for performing cloud database operations.
 
 **Since:** 11
 
+<!--Device-cloudExtension-export interface CloudDB--><!--Device-cloudExtension-export interface CloudDB-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -27,6 +29,14 @@ Deletes data from a cloud database table. This API uses a promise to return the 
 
 **Since:** 11
 
+<!--Device-CloudDB-delete(
+      table: string,
+      extensions: Array<Record<string, CloudType>>
+    ): Promise<Array<Result<Record<string, CloudType>>>>--><!--Device-CloudDB-delete(
+      table: string,
+      extensions: Array<Record<string, CloudType>>
+    ): Promise<Array<Result<Record<string, CloudType>>>>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -36,13 +46,13 @@ Deletes data from a cloud database table. This API uses a promise to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Table name. |
-| extensions | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes | Extended information about the current data. |
+| extensions | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Record<string, CloudType>> | Yes | Extended information about the current data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, CloudType&gt;&gt;&gt;&gt; | Promise used to return the deleted data andoperation result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Result<Record<string, CloudType>>>> | Promise used to return the deleted data and operation result. |
 
 **Example**
 
@@ -67,10 +77,11 @@ class MyCloudDB implements cloudExtension.CloudDB {
 generateId(count: number): Promise<Result<Array<string>>>
 ```
 
-Generates IDs for the data records inserted to the cloud database.
-The IDs are unique. This API uses a promise to return the result.
+Generates IDs for the data records inserted to the cloud database.The IDs are unique. This API uses a promise to return the result.
 
 **Since:** 11
+
+<!--Device-CloudDB-generateId(count: int): Promise<Result<Array<string>>>--><!--Device-CloudDB-generateId(count: int): Promise<Result<Array<string>>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -86,7 +97,7 @@ The IDs are unique. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;string&gt;&gt;&gt; | Promise used to return the generated IDs in Result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Result<Array<string>>> | Promise used to return the generated IDs in Result. |
 
 **Example**
 
@@ -117,6 +128,8 @@ Extends the lock period of the database. This API uses a promise to return the r
 
 **Since:** 11
 
+<!--Device-CloudDB-heartbeat(lockId: int): Promise<Result<LockInfo>>--><!--Device-CloudDB-heartbeat(lockId: int): Promise<Result<LockInfo>>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -131,7 +144,7 @@ Extends the lock period of the database. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;LockInfo&gt;&gt; | Promise used to return the lock ID and lock period. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Result<LockInfo>> | Promise used to return the lock ID and lock period. |
 
 **Example**
 
@@ -172,6 +185,16 @@ Inserts data to a cloud database table. This API uses a promise to return the re
 
 **Since:** 11
 
+<!--Device-CloudDB-insert(
+      table: string,
+      values: Array<Record<string, CloudType>>,
+      extensions: Array<Record<string, CloudType>>
+    ): Promise<Array<Result<Record<string, CloudType>>>>--><!--Device-CloudDB-insert(
+      table: string,
+      values: Array<Record<string, CloudType>>,
+      extensions: Array<Record<string, CloudType>>
+    ): Promise<Array<Result<Record<string, CloudType>>>>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -181,14 +204,14 @@ Inserts data to a cloud database table. This API uses a promise to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Table name. |
-| values | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes | Data to insert. |
-| extensions | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes | Extended information about the current data. |
+| values | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Record<string, CloudType>> | Yes | Data to insert. |
+| extensions | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Record<string, CloudType>> | Yes | Extended information about the current data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, CloudType&gt;&gt;&gt;&gt; | Promise used to return the inserted data andoperation result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Result<Record<string, CloudType>>>> | Promise used to return the inserted data and operation result. |
 
 **Example**
 
@@ -217,6 +240,8 @@ Locks this cloud database. This API uses a promise to return the result.
 
 **Since:** 11
 
+<!--Device-CloudDB-lock(): Promise<Result<LockInfo>>--><!--Device-CloudDB-lock(): Promise<Result<LockInfo>>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -225,7 +250,7 @@ Locks this cloud database. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;LockInfo&gt;&gt; | Promise used to return the lock ID and lock period. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Result<LockInfo>> | Promise used to return the lock ID and lock period. |
 
 **Example**
 
@@ -262,6 +287,8 @@ Queries data in a cloud database table. This API uses a promise to return the re
 
 **Since:** 11
 
+<!--Device-CloudDB-query(table: string, fields: Array<string>, queryCount: int, queryCursor: string): Promise<Result<CloudData>>--><!--Device-CloudDB-query(table: string, fields: Array<string>, queryCount: int, queryCursor: string): Promise<Result<CloudData>>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -271,7 +298,7 @@ Queries data in a cloud database table. This API uses a promise to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Table name. |
-| fields | Array&lt;string&gt; | Yes | Name of the fields to query. |
+| fields | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Name of the fields to query. |
 | queryCount | number | Yes | Number of data records to query. |
 | queryCursor | string | Yes | Cursor for the query. |
 
@@ -279,7 +306,7 @@ Queries data in a cloud database table. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;CloudData&gt;&gt; | Promise used to return the data and operation result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Result<CloudData>> | Promise used to return the data and operation result. |
 
 **Example**
 
@@ -315,6 +342,8 @@ Unlocks a cloud database. This API uses a promise to return the result.
 
 **Since:** 11
 
+<!--Device-CloudDB-unlock(lockId: int): Promise<Result<boolean>>--><!--Device-CloudDB-unlock(lockId: int): Promise<Result<boolean>>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -329,7 +358,7 @@ Unlocks a cloud database. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;boolean&gt;&gt; | Promise used to return the result.The value true means the operation is successful; the value false means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Result<boolean>> | Promise used to return the result.The value true means the operation is successful; the value false means the opposite. |
 
 **Example**
 
@@ -365,6 +394,16 @@ Updates data in the cloud. This API uses a promise to return the result.
 
 **Since:** 11
 
+<!--Device-CloudDB-update(
+      table: string,
+      values: Array<Record<string, CloudType>>,
+      extensions: Array<Record<string, CloudType>>
+    ): Promise<Array<Result<Record<string, CloudType>>>>--><!--Device-CloudDB-update(
+      table: string,
+      values: Array<Record<string, CloudType>>,
+      extensions: Array<Record<string, CloudType>>
+    ): Promise<Array<Result<Record<string, CloudType>>>>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -374,14 +413,14 @@ Updates data in the cloud. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Table name. |
-| values | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes | Data to insert. |
-| extensions | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes | Extended information about the current data. |
+| values | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Record<string, CloudType>> | Yes | Data to insert. |
+| extensions | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Record<string, CloudType>> | Yes | Extended information about the current data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, CloudType&gt;&gt;&gt;&gt; | Promise used to return the update result andupdated data. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Result<Record<string, CloudType>>>> | Promise used to return the update result and updated data. |
 
 **Example**
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-declare enum ScrollDirectionalLockType--><!--Device-unnamed-declare enum ScrollDirectionalLockType-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## ALL
@@ -18,6 +20,8 @@ ALL = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ScrollDirectionalLockType-ALL = 0--><!--Device-ScrollDirectionalLockType-ALL = 0-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## NESTED_SCROLL
@@ -31,6 +35,8 @@ NESTED_SCROLL = 1
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ScrollDirectionalLockType-NESTED_SCROLL = 1--><!--Device-ScrollDirectionalLockType-NESTED_SCROLL = 1-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

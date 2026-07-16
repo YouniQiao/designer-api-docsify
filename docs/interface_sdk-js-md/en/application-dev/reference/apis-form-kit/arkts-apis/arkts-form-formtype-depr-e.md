@@ -8,6 +8,8 @@ Enumerates the widget types.
 
 **Substitutes:** FormType
 
+<!--Device-formInfo-enum FormType--><!--Device-formInfo-enum FormType-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 ## JS
@@ -23,6 +25,8 @@ JS widget.
 **Deprecated since:** 9
 
 **Substitutes:** JS
+
+<!--Device-FormType-JS = 1--><!--Device-FormType-JS = 1-End-->
 
 **System capability:** SystemCapability.Ability.Form
 

@@ -20,13 +20,15 @@ Queries whether the screen lock is disabled.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-securityManager-function isScreenLockDisabledForAccount(admin: Want): boolean--><!--Device-securityManager-function isScreenLockDisabledForAccount(admin: Want): boolean-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | admin indicates the administrator ability information. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | admin indicates the administrator ability information. |
 
 **Return value:**
 

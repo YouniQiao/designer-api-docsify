@@ -18,6 +18,8 @@ Cast Audio to the remote devices or cast back local device
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.AudioDeviceDescriptor>, callback: AsyncCallback<void>): void--><!--Device-avSession-function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.AudioDeviceDescriptor>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -27,8 +29,8 @@ Cast Audio to the remote devices or cast back local device
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | session | SessionToken \| 'all' | Yes | Specifies the sessionId which to send to remote. |
-| audioDevices | Array&lt;audio.AudioDeviceDescriptor&gt; | Yes | Specifies the audio devices to cast. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully'all' means cast all the media audio of this device to remote. |
+| audioDevices | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<audio.AudioDeviceDescriptor> | Yes | Specifies the audio devices to cast. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The asyncCallback triggered when the command is executed successfully'all' means cast all the media audio of this device to remote. |
 
 **Error codes:**
 
@@ -74,6 +76,8 @@ Cast Audio to the remote devices or cast back local device
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.AudioDeviceDescriptor>): Promise<void>--><!--Device-avSession-function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.AudioDeviceDescriptor>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -83,13 +87,13 @@ Cast Audio to the remote devices or cast back local device
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | session | SessionToken \| 'all' | Yes | Specifies the sessionId which to send to remote. |
-| audioDevices | Array&lt;audio.AudioDeviceDescriptor&gt; | Yes | Specifies the audio devices to cast. |
+| audioDevices | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<audio.AudioDeviceDescriptor> | Yes | Specifies the audio devices to cast. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully'all' means cast all the media audio of this device to remote. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully'all' means cast all the media audio of this device to remote. |
 
 **Error codes:**
 

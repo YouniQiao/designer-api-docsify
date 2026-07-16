@@ -21,6 +21,8 @@ Removes the data control information set by [setAppShareOptions](arkts-arkdata-s
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-unifiedDataChannel-function removeAppShareOptions(intention: Intention): void--><!--Device-unifiedDataChannel-function removeAppShareOptions(intention: Intention): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 **System API:** This is a system API.
@@ -29,13 +31,13 @@ Removes the data control information set by [setAppShareOptions](arkts-arkdata-s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| intention | Intention | Yes | Type of the data channel. Currently, only the data channel of the **DRAG** typeis supported. |
+| intention | [Intention](arkts-arkdata-intention-e-sys.md) | Yes | Type of the data channel. Currently, only the data channel of the **DRAG** type is supported. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system applicationuses system API.<br>**Applicable version:** 12 - 13 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API.<br>**Applicable version:** 12 - 13 |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.MANAGE_UDMF_APP_SHARE_OPTION".<br>**Applicable version:** 14 and later |
 

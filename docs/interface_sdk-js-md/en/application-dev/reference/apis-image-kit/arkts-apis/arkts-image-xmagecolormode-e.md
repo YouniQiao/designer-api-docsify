@@ -4,6 +4,8 @@ Enumerates the XMAGE color modes.
 
 **Since:** 23
 
+<!--Device-image-enum XmageColorMode--><!--Device-image-enum XmageColorMode-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## NORMAL
@@ -17,6 +19,8 @@ Original.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-XmageColorMode-NORMAL = 0--><!--Device-XmageColorMode-NORMAL = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -32,6 +36,8 @@ Bright.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-XmageColorMode-BRIGHT = 1--><!--Device-XmageColorMode-BRIGHT = 1-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## SOFT
@@ -46,6 +52,8 @@ Vivid.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-XmageColorMode-SOFT = 2--><!--Device-XmageColorMode-SOFT = 2-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## MONO
@@ -59,6 +67,8 @@ Mono.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-XmageColorMode-MONO = 3--><!--Device-XmageColorMode-MONO = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

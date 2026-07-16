@@ -6,6 +6,8 @@
 
 **起始版本：** 20
 
+<!--Device-unnamed-export interface MetallicRoughnessMaterial extends Material--><!--Device-unnamed-export interface MetallicRoughnessMaterial extends Material-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## ambientOcclusion
@@ -14,12 +16,13 @@
 ambientOcclusion: MaterialProperty
 ```
 
-PBR材质的环境光遮蔽.
-factor.x定义环境光遮蔽因子.
+PBR材质的环境光遮蔽.factor.x定义环境光遮蔽因子.
 
 **类型：** MaterialProperty
 
 **起始版本：** 20
+
+<!--Device-MetallicRoughnessMaterial-ambientOcclusion: MaterialProperty--><!--Device-MetallicRoughnessMaterial-ambientOcclusion: MaterialProperty-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -29,12 +32,13 @@ factor.x定义环境光遮蔽因子.
 baseColor: MaterialProperty
 ```
 
-PBR材质的基础颜色因子.
-factor.xyzw的值定义rgba颜色.
+PBR材质的基础颜色因子.factor.xyzw的值定义rgba颜色.
 
 **类型：** MaterialProperty
 
 **起始版本：** 20
+
+<!--Device-MetallicRoughnessMaterial-baseColor: MaterialProperty--><!--Device-MetallicRoughnessMaterial-baseColor: MaterialProperty-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -44,12 +48,13 @@ factor.xyzw的值定义rgba颜色.
 clearCoat: MaterialProperty
 ```
 
-清漆强度.
-factor.x定义清漆层强度.
+清漆强度.factor.x定义清漆层强度.
 
 **类型：** MaterialProperty
 
 **起始版本：** 20
+
+<!--Device-MetallicRoughnessMaterial-clearCoat: MaterialProperty--><!--Device-MetallicRoughnessMaterial-clearCoat: MaterialProperty-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -59,12 +64,13 @@ factor.x定义清漆层强度.
 clearCoatNormal: MaterialProperty
 ```
 
-清漆法线.
-factor.xyz定义RGB清漆法线缩放.
+清漆法线.factor.xyz定义RGB清漆法线缩放.
 
 **类型：** MaterialProperty
 
 **起始版本：** 20
+
+<!--Device-MetallicRoughnessMaterial-clearCoatNormal: MaterialProperty--><!--Device-MetallicRoughnessMaterial-clearCoatNormal: MaterialProperty-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -74,12 +80,13 @@ factor.xyz定义RGB清漆法线缩放.
 clearCoatRoughness: MaterialProperty
 ```
 
-清漆粗糙度.
-factor.y定义清漆层粗糙度.
+清漆粗糙度.factor.y定义清漆层粗糙度.
 
 **类型：** MaterialProperty
 
 **起始版本：** 20
+
+<!--Device-MetallicRoughnessMaterial-clearCoatRoughness: MaterialProperty--><!--Device-MetallicRoughnessMaterial-clearCoatRoughness: MaterialProperty-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -95,6 +102,8 @@ PBR材质的自发光属性.
 
 **起始版本：** 20
 
+<!--Device-MetallicRoughnessMaterial-emissive: MaterialProperty--><!--Device-MetallicRoughnessMaterial-emissive: MaterialProperty-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## material
@@ -103,12 +112,13 @@ PBR材质的自发光属性.
 material: MaterialProperty
 ```
 
-金属粗糙度材质参数.
-factor.y定义粗糙度，factor.z定义金属度，factor.a定义反射率.
+金属粗糙度材质参数.factor.y定义粗糙度，factor.z定义金属度，factor.a定义反射率.
 
 **类型：** MaterialProperty
 
 **起始版本：** 20
+
+<!--Device-MetallicRoughnessMaterial-material: MaterialProperty--><!--Device-MetallicRoughnessMaterial-material: MaterialProperty-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -118,12 +128,13 @@ factor.y定义粗糙度，factor.z定义金属度，factor.a定义反射率.
 normal: MaterialProperty
 ```
 
-PBR材质的法线因子.
-factor.x的值定义法线缩放.
+PBR材质的法线因子.factor.x的值定义法线缩放.
 
 **类型：** MaterialProperty
 
 **起始版本：** 20
+
+<!--Device-MetallicRoughnessMaterial-normal: MaterialProperty--><!--Device-MetallicRoughnessMaterial-normal: MaterialProperty-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -133,13 +144,13 @@ factor.x的值定义法线缩放.
 sheen: MaterialProperty
 ```
 
-PBR材质的光泽颜色.
-Value of factor.xyz defines RGB sheen color,
-Value of factor.w defines sheen roughness.
+PBR材质的光泽颜色.Value of factor.xyz defines RGB sheen color,Value of factor.w defines sheen roughness.
 
 **类型：** MaterialProperty
 
 **起始版本：** 20
+
+<!--Device-MetallicRoughnessMaterial-sheen: MaterialProperty--><!--Device-MetallicRoughnessMaterial-sheen: MaterialProperty-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -149,13 +160,13 @@ Value of factor.w defines sheen roughness.
 specular: MaterialProperty
 ```
 
-PBR材质的镜面反射颜色.
-Value of factor.xyz defines RGB specular color,
-Value of factor.w defines specular intensity.
+PBR材质的镜面反射颜色.Value of factor.xyz defines RGB specular color,Value of factor.w defines specular intensity.
 
 **类型：** MaterialProperty
 
 **起始版本：** 20
+
+<!--Device-MetallicRoughnessMaterial-specular: MaterialProperty--><!--Device-MetallicRoughnessMaterial-specular: MaterialProperty-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

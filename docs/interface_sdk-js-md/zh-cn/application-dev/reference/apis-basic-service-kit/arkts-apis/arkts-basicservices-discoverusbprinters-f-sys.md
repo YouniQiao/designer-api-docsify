@@ -1,5 +1,11 @@
 # discoverUsbPrinters（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+```
+
 ## discoverUsbPrinters
 
 ```TypeScript
@@ -12,6 +18,8 @@ function discoverUsbPrinters(): Promise<Array<PrinterInformation>>
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function discoverUsbPrinters(): Promise<Array<PrinterInformation>>--><!--Device-print-function discoverUsbPrinters(): Promise<Array<PrinterInformation>>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function discoverUsbPrinters(): Promise<Array<PrinterInformation>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;PrinterInformation&gt;&gt; | Promise对象，返回发现到的usb打印机信息。 |
+| Promise<Array<PrinterInformation>> | Promise对象，返回发现到的usb打印机信息。 |
 
 **错误码：**
 

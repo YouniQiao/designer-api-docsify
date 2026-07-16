@@ -16,15 +16,17 @@ Reads data from the serial port device synchronously.
 
 **Since:** 19
 
+<!--Device-serialManager-function readSync(portId: int, buffer: Uint8Array, timeout?: int): int--><!--Device-serialManager-function readSync(portId: int, buffer: Uint8Array, timeout?: int): int-End-->
+
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPortreturned by [getPortList](arkts-basicservices-getportlist-f.md#getportlist-1). |
-| buffer | Uint8Array | Yes | Buffer for reading data, with a maximum length of 8192 bytes. |
-| timeout | number | No | Timeout interval.Unit: milliseconds. If the API has no data in the buffer of the target port, itreturns the result after waiting for the specified time. The default value **0** indicates that the API returns theresult without waiting. |
+| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-getportlist-f.md#getportlist-1). |
+| buffer | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Buffer for reading data, with a maximum length of 8192 bytes. |
+| timeout | number | No | Timeout interval.Unit: milliseconds. If the API has no data in the buffer of the target port, it returns the result after waiting for the specified time. The default value **0** indicates that the API returns the result without waiting. |
 
 **Return value:**
 

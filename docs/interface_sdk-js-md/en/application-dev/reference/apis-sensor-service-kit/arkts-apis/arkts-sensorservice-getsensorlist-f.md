@@ -16,13 +16,15 @@ Obtains information about all sensors on the device. This API uses an asynchrono
 
 **Since:** 9
 
+<!--Device-sensor-function getSensorList(callback: AsyncCallback<Array<Sensor>>): void--><!--Device-sensor-function getSensorList(callback: AsyncCallback<Array<Sensor>>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;Sensor&gt;&gt; | Yes | Callback used to return the sensor list. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Sensor>> | Yes | Callback used to return the sensor list. |
 
 **Error codes:**
 
@@ -66,13 +68,15 @@ Obtains information about all sensors on the device. This API uses a promise to 
 
 **Since:** 9
 
+<!--Device-sensor-function getSensorList(): Promise<Array<Sensor>>--><!--Device-sensor-function getSensorList(): Promise<Array<Sensor>>-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Sensor&gt;&gt; | Promise used to return the sensor list. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Sensor>> | Promise used to return the sensor list. |
 
 **Error codes:**
 

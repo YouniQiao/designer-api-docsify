@@ -12,15 +12,13 @@ import { featureAbility } from '@kit.AbilityKit';
 function terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>): void
 ```
 
-Terminates this ability. This API uses an asynchronous callback to return the result. If the ability is started by
-calling
-[startAbilityForResult](arkts-ability-startabilityforresult-f.md#startabilityforresult-1)
-, the result is returned to the caller when **terminateSelfWithResult** is called. Otherwise, no result is returned
-to the caller when **terminateSelfWithResult** is called.
+Terminates this ability. This API uses an asynchronous callback to return the result. If the ability is started by calling [startAbilityForResult](arkts-ability-startabilityforresult-f.md#startabilityforresult-1), the result is returned to the caller when **terminateSelfWithResult** is called. Otherwise, no result is returned to the caller when **terminateSelfWithResult** is called.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-featureAbility-function terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>): void--><!--Device-featureAbility-function terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -28,8 +26,8 @@ to the caller when **terminateSelfWithResult** is called.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | AbilityResult | Yes | Result returned after the ability is terminated. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| parameter | [AbilityResult](arkts-ability-abilityresult-i.md) | Yes | Result returned after the ability is terminated. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Example**
 
@@ -76,14 +74,13 @@ featureAbility.terminateSelfWithResult(
 function terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 ```
 
-Terminates this ability. This API uses a promise to return the result. If the ability is started by calling
-[startAbilityForResult](arkts-ability-startabilityforresult-f.md#startabilityforresult-1)
-, the result is returned to the caller when **terminateSelfWithResult** is called. Otherwise, no result is returned
-to the caller when **terminateSelfWithResult** is called.
+Terminates this ability. This API uses a promise to return the result. If the ability is started by calling [startAbilityForResult](arkts-ability-startabilityforresult-f.md#startabilityforresult-1), the result is returned to the caller when **terminateSelfWithResult** is called. Otherwise, no result is returned to the caller when **terminateSelfWithResult** is called.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-featureAbility-function terminateSelfWithResult(parameter: AbilityResult): Promise<void>--><!--Device-featureAbility-function terminateSelfWithResult(parameter: AbilityResult): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -91,13 +88,13 @@ to the caller when **terminateSelfWithResult** is called.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | AbilityResult | Yes | Result returned after the ability is terminated. |
+| parameter | [AbilityResult](arkts-ability-abilityresult-i.md) | Yes | Result returned after the ability is terminated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 

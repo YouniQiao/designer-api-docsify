@@ -1,16 +1,17 @@
 # ListScroller
 
-Implements the scroll controller of the **List** component. A **List** component is bound to a **ListScroller** on a
-one-to-one basis.
+Implements the scroll controller of the **List** component. A **List** component is bound to a **ListScroller** on a one-to-one basis.
 
-> **NOTE**
->
-> **ListScroller** inherits from [Scroller](arkts-arkui-scroller-c.md) and has all methods of
+> **NOTE**  
+>  
+> **ListScroller** inherits from [Scroller](arkts-arkui-scroller-c.md) and has all methods of  
 > [Scroller](arkts-arkui-scroller-c.md).
 
 **Inheritance/Implementation:** ListScroller extends [Scroller](arkts-arkui-scroller-c.md)
 
 **Since:** 11
+
+<!--Device-unnamed-declare class ListScroller extends Scroller--><!--Device-unnamed-declare class ListScroller extends Scroller-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,8 +21,7 @@ one-to-one basis.
 closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 ```
 
-Collapses the [list items](arkts-arkui-listitem.md) in the [EXPANDED](arkts-arkui-swipeactionstate-e.md) state and sets callback
-events.
+Collapses the [list items](arkts-arkui-listitem.md) in the [EXPANDED](arkts-arkui-swipeactionstate-e.md) state and sets callback events.
 
 **Since:** 11
 
@@ -29,13 +29,15 @@ events.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ListScroller-closeAllSwipeActions(options?: CloseSwipeActionOptions): void--><!--Device-ListScroller-closeAllSwipeActions(options?: CloseSwipeActionOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | CloseSwipeActionOptions | No | Callback events for collapsing [list items](arkts-arkui-listitem.md) in the[EXPANDED](arkts-arkui-swipeactionstate-e.md) state. |
+| options | [CloseSwipeActionOptions](arkts-arkui-closeswipeactionoptions-i.md) | No | Callback events for collapsing [list items](arkts-arkui-listitem.md) in the [EXPANDED](arkts-arkui-swipeactionstate-e.md) state. |
 
 **Error codes:**
 
@@ -50,17 +52,13 @@ events.
 getItemRectInGroup(index: number, indexInGroup: number): RectResult
 ```
 
-Obtains the size of a [list item](arkts-arkui-listitem.md) in a [list item group](arkts-arkui-listitemgroup.md) and its position
-relative to the list.
+Obtains the size of a [list item](arkts-arkui-listitem.md) in a [list item group](arkts-arkui-listitemgroup.md) and its position relative to the list.
 
-> **NOTE**
->
-> - The value of **index** must be the index of a child component visible in the display area.
-Otherwise, the value is considered invalid.
-> - The child component for which **index** is set must be a list item group. Otherwise,
-the **index** value is considered invalid.
-> - The value of **indexInGroup** must be the index of a list item in the list item group visible
-in the display area. Otherwise, the value is considered invalid.
+> **NOTE**  
+>  
+> - The value of **index** must be the index of a child component visible in the display area.Otherwise, the value is considered invalid.  
+> - The child component for which **index** is set must be a list item group. Otherwise,the **index** value is considered invalid.  
+> - The value of **indexInGroup** must be the index of a list item in the list item group visible in the display area. Otherwise, the value is considered invalid.  
 > - When **index** or **indexInGroup** is set to an invalid value, the returned size and position are both **0**.
 
 **Since:** 11
@@ -68,6 +66,8 @@ in the display area. Otherwise, the value is considered invalid.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ListScroller-getItemRectInGroup(index: number, indexInGroup: number): RectResult--><!--Device-ListScroller-getItemRectInGroup(index: number, indexInGroup: number): RectResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,7 +82,7 @@ in the display area. Otherwise, the value is considered invalid.
 
 | Type | Description |
 | --- | --- |
-| RectResult | Size of the list item in the list item group and its position relative to the list.<br>Unit: vp |
+| [RectResult](arkts-arkui-rectresult-i.md) | Size of the list item in the list item group and its position relative to the list.<br>Unit: vp |
 
 **Error codes:**
 
@@ -105,6 +105,8 @@ Obtains the index information of the child component at the specified coordinate
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-ListScroller-getVisibleListContentInfo(x: number, y: number): VisibleListContentInfo--><!--Device-ListScroller-getVisibleListContentInfo(x: number, y: number): VisibleListContentInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -118,7 +120,7 @@ Obtains the index information of the child component at the specified coordinate
 
 | Type | Description |
 | --- | --- |
-| VisibleListContentInfo | Index information of a child component at the specified coordinates. |
+| [VisibleListContentInfo](arkts-arkui-visiblelistcontentinfo-i.md) | Index information of a child component at the specified coordinates. |
 
 **Error codes:**
 
@@ -141,16 +143,18 @@ Scrolls to the specified list item in the specified list item group.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ListScroller-scrollToItemInGroup(index: number, indexInGroup:number, smooth?: boolean, align?: ScrollAlign): void--><!--Device-ListScroller-scrollToItemInGroup(index: number, indexInGroup:number, smooth?: boolean, align?: ScrollAlign): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the target list item group in the current container.<br>**NOTE**<br>If the valueset is a negative value or greater than the maximum index of the items in the container, the value is deemedabnormal, and no scrolling will be performed. |
-| indexInGroup | number | Yes | Index of the target list item in the list item group specified by **index**.<br>**NOTE**<br>If the value set is a negative value or greater than the maximum index of the items in the listitem group, the value is deemed abnormal, and no scrolling will be performed. |
-| smooth | boolean | No | Whether the scroll animation is enabled. The options are **true** (enabled) and**false** (disabled).<br>Default value: **false**<br>**NOTE**<br>When **smooth** is set to **true**, all passeditems are loaded and counted in layout calculation. This may result in performance issues if a large number ofitems are involved. |
-| align | ScrollAlign | No | How the list item to scroll to is aligned with the container.<br>Default value:**ScrollAlign.START** |
+| index | number | Yes | Index of the target list item group in the current container.<br>**NOTE**<br>If the value set is a negative value or greater than the maximum index of the items in the container, the value is deemed abnormal, and no scrolling will be performed. |
+| indexInGroup | number | Yes | Index of the target list item in the list item group specified by **index**.<br>**NOTE**<br>If the value set is a negative value or greater than the maximum index of the items in the list item group, the value is deemed abnormal, and no scrolling will be performed. |
+| smooth | boolean | No | Whether the scroll animation is enabled. The options are **true** (enabled) and **false** (disabled).<br>Default value: **false**<br>**NOTE**<br>When **smooth** is set to **true**, all passed items are loaded and counted in layout calculation. This may result in performance issues if a large number of items are involved. |
+| align | [ScrollAlign](arkts-arkui-scrollalign-e.md) | No | How the list item to scroll to is aligned with the container.<br>Default value:**ScrollAlign.START** |
 
 **Error codes:**
 

@@ -1,9 +1,10 @@
 # ChangeInfo (System API)
 
-Represents the data change information, including the data change type, URI of the data changed, and changed data
-content.
+Represents the data change information, including the data change type, URI of the data changed, and changed data content.
 
 **Since:** 12
+
+<!--Device-dataShare-interface ChangeInfo--><!--Device-dataShare-interface ChangeInfo-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -29,6 +30,8 @@ Data change type.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ChangeInfo-type: ChangeType--><!--Device-ChangeInfo-type: ChangeType-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **System API:** This is a system API.
@@ -47,6 +50,8 @@ URI of the data changed.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ChangeInfo-uri: string--><!--Device-ChangeInfo-uri: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **System API:** This is a system API.
@@ -64,6 +69,8 @@ Changed data.
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ChangeInfo-values: Array<ValuesBucket>--><!--Device-ChangeInfo-values: Array<ValuesBucket>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 

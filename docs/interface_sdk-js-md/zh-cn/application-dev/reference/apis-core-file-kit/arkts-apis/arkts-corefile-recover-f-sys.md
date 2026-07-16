@@ -1,5 +1,11 @@
 # recover（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { trash } from '@kit.CoreFileKit';
+```
+
 ## recover
 
 ```TypeScript
@@ -15,6 +21,8 @@ Recovers a file or directory from the trash.
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-trash-function recover(uri: string): void--><!--Device-trash-function recover(uri: string): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

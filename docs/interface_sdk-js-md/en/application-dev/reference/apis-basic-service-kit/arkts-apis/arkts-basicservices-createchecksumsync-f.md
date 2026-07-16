@@ -18,13 +18,15 @@ Creates this checksum object. A checksum instance is returned upon a success.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-zlib-function createChecksumSync(): Checksum--><!--Device-zlib-function createChecksumSync(): Checksum-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Checksum | Checksum object instance. |
+| [Checksum](arkts-basicservices-checksum-i.md) | Checksum object instance. |
 
 **Example**
 

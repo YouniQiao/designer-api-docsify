@@ -22,14 +22,16 @@ Deletes a contact. This API uses an asynchronous callback to return the result.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function deleteContact(key: string, callback: AsyncCallback<void>): void--><!--Device-contact-function deleteContact(key: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Unique query key of a contact. One contact corresponds to one key, which can be obtainedthrough [queryKey](arkts-contacts-querykey-f.md#querykey-2). |
-| callback | AsyncCallback&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, theID of the deleted contact is returned. If the operation fails, an error code is returned. |
+| key | string | Yes | Unique query key of a contact. One contact corresponds to one key, which can be obtained through [queryKey](arkts-contacts-querykey-f.md#querykey-2). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the deleted contact is returned. If the operation fails, an error code is returned. |
 
 **Example**
 
@@ -66,15 +68,17 @@ Deletes a contact. This API uses an asynchronous callback to return the result.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function deleteContact(context: Context, key: string, callback: AsyncCallback<void>): void--><!--Device-contact-function deleteContact(context: Context, key: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| key | string | Yes | Unique query key of a contact. One contact corresponds to one key, which can be obtainedthrough [queryKey](arkts-contacts-querykey-f.md#querykey-2). |
-| callback | AsyncCallback&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, theID of the deleted contact is returned. If the operation fails, an error code is returned. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| key | string | Yes | Unique query key of a contact. One contact corresponds to one key, which can be obtained through [queryKey](arkts-contacts-querykey-f.md#querykey-2). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the deleted contact is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -125,19 +129,21 @@ Deletes a contact. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function deleteContact(key: string): Promise<void>--><!--Device-contact-function deleteContact(key: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Unique query key of a contact. One contact corresponds to one key, which can be obtainedthrough [queryKey](arkts-contacts-querykey-f.md#querykey-2). |
+| key | string | Yes | Unique query key of a contact. One contact corresponds to one key, which can be obtained through [queryKey](arkts-contacts-querykey-f.md#querykey-2). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -168,20 +174,22 @@ Deletes a contact. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function deleteContact(context: Context, key: string): Promise<void>--><!--Device-contact-function deleteContact(context: Context, key: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| key | string | Yes | Unique query key of a contact. One contact corresponds to one key, which can be obtainedthrough [queryKey](arkts-contacts-querykey-f.md#querykey-2). |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| key | string | Yes | Unique query key of a contact. One contact corresponds to one key, which can be obtained through [queryKey](arkts-contacts-querykey-f.md#querykey-2). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

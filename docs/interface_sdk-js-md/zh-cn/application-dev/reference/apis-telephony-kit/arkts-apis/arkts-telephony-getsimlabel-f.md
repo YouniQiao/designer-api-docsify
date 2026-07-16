@@ -1,5 +1,11 @@
 # getSimLabel
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## getSimLabel
 
 ```TypeScript
@@ -10,6 +16,8 @@ Obtains the SIM card label.
 
 **起始版本：** 20
 
+<!--Device-sim-function getSimLabel(slotId: int, callback: AsyncCallback<SimLabel>): void--><!--Device-sim-function getSimLabel(slotId: int, callback: AsyncCallback<SimLabel>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -17,7 +25,7 @@ Obtains the SIM card label.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | SIM card slot ID. |
-| callback | AsyncCallback&lt;SimLabel&gt; | 是 | Callback used to return the SIM card label. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<SimLabel> | 是 | Callback used to return the SIM card label. |
 
 **错误码：**
 
@@ -51,6 +59,8 @@ function getSimLabel(slotId: number): Promise<SimLabel>
 
 **起始版本：** 20
 
+<!--Device-sim-function getSimLabel(slotId: int): Promise<SimLabel>--><!--Device-sim-function getSimLabel(slotId: int): Promise<SimLabel>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -63,7 +73,7 @@ function getSimLabel(slotId: number): Promise<SimLabel>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;SimLabel&gt; | 返回SIM卡标签： |
+| Promise<SimLabel> | 返回SIM卡标签： |
 
 **错误码：**
 

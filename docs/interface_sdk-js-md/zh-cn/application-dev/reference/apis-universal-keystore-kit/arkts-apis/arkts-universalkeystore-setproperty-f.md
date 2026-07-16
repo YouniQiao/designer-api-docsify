@@ -1,17 +1,24 @@
 # setProperty
 
+## 导入模块
+
+```TypeScript
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
+```
+
 ## setProperty
 
 ```TypeScript
 function setProperty(resourceId: string, propertyId: string, params?: HuksExternalCryptoParam[]): Promise<void>
 ```
 
-The set-type operations of the external crypto extension support calling custom interfaces.
-However, the custom interface must be registered with the provider.
+The set-type operations of the external crypto extension support calling custom interfaces.However, the custom interface must be registered with the provider.
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-huksExternalCrypto-function setProperty(resourceId: string, propertyId: string, params?: HuksExternalCryptoParam[]): Promise<void>--><!--Device-huksExternalCrypto-function setProperty(resourceId: string, propertyId: string, params?: HuksExternalCryptoParam[]): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -21,13 +28,13 @@ However, the custom interface must be registered with the provider.
 | --- | --- | --- | --- |
 | resourceId | string | 是 | 资源ID，可通过[导出证书的接口](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-openauthorizedialog-f.md#openauthorizedialog-2)获取，该接口的返回结果中附带resourceId。 |
 | propertyId | string | 是 | 查找操作的属性名称，是GMT 0016-2023中定义的SKF接口名，应用开发者需要针对接口名进行适配。 |
-| params | HuksExternalCryptoParam[] | 否 | 需要传递给[Extension Ability](arkts-security-cryptoextensionability.md)的输入参数。非系统应用传入[HUKS_EXT_CRYPTO_TAG_UID](arkts-universalkeystore-huksexternalcryptotagtype-e.md)是非法参数。 |
+| params | [HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcryptoparam-i.md)[] | 否 | 需要传递给[Extension Ability](arkts-security-cryptoextensionability.md)的输入参数。非系统应用传入[HUKS_EXT_CRYPTO_TAG_UID](arkts-universalkeystore-huksexternalcryptotagtype-e.md)是非法参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，返回调用接口的结果。 |
+| Promise<void> | Promise对象，返回调用接口的结果。 |
 
 **错误码：**
 

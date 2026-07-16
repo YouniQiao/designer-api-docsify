@@ -12,11 +12,10 @@ import { appManager } from '@kit.AbilityKit';
 function getSupportedProcessCachePids(bundleName : string): Promise<Array<number>>
 ```
 
-Obtains the PIDs of processes that support quick startup after caching in a specified application. This API uses a
-promise to return the result.
+Obtains the PIDs of processes that support quick startup after caching in a specified application. This API uses a promise to return the result.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > This API can only be used to obtain the PIDs of the system account to which the caller belongs.
 
 **Since:** 14
@@ -24,6 +23,8 @@ promise to return the result.
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-appManager-function getSupportedProcessCachePids(bundleName : string): Promise<Array<int>>--><!--Device-appManager-function getSupportedProcessCachePids(bundleName : string): Promise<Array<int>>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -39,7 +40,7 @@ promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return an array containing the PIDs. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | Promise used to return an array containing the PIDs. |
 
 **Error codes:**
 

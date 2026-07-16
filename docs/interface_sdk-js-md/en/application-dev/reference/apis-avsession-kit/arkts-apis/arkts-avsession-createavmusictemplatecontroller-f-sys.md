@@ -20,6 +20,8 @@ Create AVMusicTemplate controller instance.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-avMusicTemplate-function createAVMusicTemplateController(sessionId: string): AVMusicTemplateController--><!--Device-avMusicTemplate-function createAVMusicTemplateController(sessionId: string): AVMusicTemplateController-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **System API:** This is a system API.
@@ -34,7 +36,7 @@ Create AVMusicTemplate controller instance.
 
 | Type | Description |
 | --- | --- |
-| AVMusicTemplateController | a controller instance |
+| [AVMusicTemplateController](arkts-avsession-avmusictemplatecontroller-c.md) | a controller instance |
 
 **Error codes:**
 
@@ -42,7 +44,7 @@ Create AVMusicTemplate controller instance.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verify failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function createAVMusicTemplateControllercan not work correctly due to limited device capabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function createAVMusicTemplateController can not work correctly due to limited device capabilities. |
 | [35000002](../errorcode-avmusictemplate.md#35000002-audio-template-controller-creation-failure) | Failed to create the AVMusicTemplate controller. |
 | [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 

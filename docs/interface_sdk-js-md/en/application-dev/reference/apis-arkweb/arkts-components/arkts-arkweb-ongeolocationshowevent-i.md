@@ -4,6 +4,8 @@ Represents the callback invoked when a request to obtain the geolocation informa
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface OnGeolocationShowEvent--><!--Device-unnamed-declare interface OnGeolocationShowEvent-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## geolocation
@@ -20,6 +22,8 @@ User operation.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-OnGeolocationShowEvent-geolocation: JsGeolocation--><!--Device-OnGeolocationShowEvent-geolocation: JsGeolocation-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## origin
@@ -35,6 +39,8 @@ Index of the origin.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-OnGeolocationShowEvent-origin: string--><!--Device-OnGeolocationShowEvent-origin: string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

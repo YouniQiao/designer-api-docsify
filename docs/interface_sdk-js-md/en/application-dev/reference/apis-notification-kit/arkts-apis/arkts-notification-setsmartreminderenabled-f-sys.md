@@ -14,12 +14,13 @@ function setSmartReminderEnabled(deviceType: string, enable: boolean): Promise<v
 
 Sets a smart reminder for cross-device collaboration. This API uses a promise to return the result.
 
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,
-error code 801 is returned.
+This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function setSmartReminderEnabled(deviceType: string, enable: boolean): Promise<void>--><!--Device-notificationManager-function setSmartReminderEnabled(deviceType: string, enable: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -30,13 +31,13 @@ error code 801 is returned.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceType | string | Yes | Device type. |
-| enable | boolean | Yes | Indicates whether the specified application supports a smart reminder for cross-devicecollaboration (**true**: enabled; **false**: disabled). |
+| enable | boolean | Yes | Indicates whether the specified application supports a smart reminder for cross-device collaboration (**true**: enabled; **false**: disabled). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

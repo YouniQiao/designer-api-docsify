@@ -1,5 +1,11 @@
 # @ohos.app.ability.ShareExtensionAbility
 
+## 导入模块
+
+```TypeScript
+import { ShareExtensionAbility } from '@kit.AbilityKit';
+```
+
 ## 汇总
 
 ### 类

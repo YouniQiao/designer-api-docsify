@@ -4,6 +4,8 @@ The symbol rendering strategy.
 
 **Since:** 11
 
+<!--Device-unnamed-declare enum SymbolRenderingStrategy--><!--Device-unnamed-declare enum SymbolRenderingStrategy-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SINGLE
@@ -26,6 +28,8 @@ You can set one or multiple colors, but only the first color will be applied.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-SymbolRenderingStrategy-SINGLE = 0--><!--Device-SymbolRenderingStrategy-SINGLE = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## MULTIPLE_COLOR
@@ -36,11 +40,9 @@ MULTIPLE_COLOR = 1
 
 Multi-color mode.
 
-A maximum of three colors can be set. If only one color is set, it updates the color of the first layer, leaving
-other colors at their default values.
+A maximum of three colors can be set. If only one color is set, it updates the color of the first layer, leaving other colors at their default values.
 
-The sequence of color settings matches the layering order of the symbol; any colors beyond the number of symbol
-layers will not take effect.
+The sequence of color settings matches the layering order of the symbol; any colors beyond the number of symbol layers will not take effect.
 
 Only color values are accepted. Opacity settings do not take effect.
 
@@ -51,6 +53,8 @@ Only color values are accepted. Opacity settings do not take effect.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-SymbolRenderingStrategy-MULTIPLE_COLOR = 1--><!--Device-SymbolRenderingStrategy-MULTIPLE_COLOR = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,8 +68,7 @@ Layered mode.
 
 The default color is black. You can set one or multiple colors, but only the first color will be applied.
 
-Opacity is predefined for the layers: 100% for the first layer, 50% for the second layer, and 20% for the third
-layer.
+Opacity is predefined for the layers: 100% for the first layer, 50% for the second layer, and 20% for the third layer.
 
 **Since:** 11
 
@@ -74,6 +77,8 @@ layer.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-SymbolRenderingStrategy-MULTIPLE_OPACITY = 2--><!--Device-SymbolRenderingStrategy-MULTIPLE_OPACITY = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

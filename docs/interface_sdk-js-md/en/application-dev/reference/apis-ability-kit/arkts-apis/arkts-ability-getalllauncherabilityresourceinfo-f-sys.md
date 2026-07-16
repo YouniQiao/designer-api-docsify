@@ -12,12 +12,13 @@ import { bundleResourceManager } from '@kit.AbilityKit';
 function getAllLauncherAbilityResourceInfo(resourceFlags: number, callback: AsyncCallback<Array<LauncherAbilityResourceInfo>>): void
 ```
 
-Obtains the resource information of the entry abilities of the current application based on the given resource
-flags. This API uses an asynchronous callback to return the result.
+Obtains the resource information of the entry abilities of the current application based on the given resource flags. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.GET_INSTALLED_BUNDLE_LIST and ohos.permission.GET_BUNDLE_RESOURCES
+
+<!--Device-bundleResourceManager-function getAllLauncherAbilityResourceInfo(resourceFlags: int, callback: AsyncCallback<Array<LauncherAbilityResourceInfo>>): void--><!--Device-bundleResourceManager-function getAllLauncherAbilityResourceInfo(resourceFlags: int, callback: AsyncCallback<Array<LauncherAbilityResourceInfo>>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -28,7 +29,7 @@ flags. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resourceFlags | number | Yes | Type of the resource information to obtain. |
-| callback | AsyncCallback&lt;Array&lt;LauncherAbilityResourceInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)used to return the result. If the information is successfully obtained, **err** is **null** and **data** is aLauncherAbilityResourceInfo array. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<LauncherAbilityResourceInfo>> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)used to return the result. If the information is successfully obtained, **err** is **null** and **data** is a LauncherAbilityResourceInfo array. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -45,12 +46,13 @@ flags. This API uses an asynchronous callback to return the result.
 function getAllLauncherAbilityResourceInfo(resourceFlags: number): Promise<Array<LauncherAbilityResourceInfo>>
 ```
 
-Obtains the resource information of the entry abilities of the current application based on the given resource
-flags. This API uses a promise to return the result.
+Obtains the resource information of the entry abilities of the current application based on the given resource flags. This API uses a promise to return the result.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.GET_INSTALLED_BUNDLE_LIST and ohos.permission.GET_BUNDLE_RESOURCES
+
+<!--Device-bundleResourceManager-function getAllLauncherAbilityResourceInfo(resourceFlags: int): Promise<Array<LauncherAbilityResourceInfo>>--><!--Device-bundleResourceManager-function getAllLauncherAbilityResourceInfo(resourceFlags: int): Promise<Array<LauncherAbilityResourceInfo>>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -66,7 +68,7 @@ flags. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;LauncherAbilityResourceInfo&gt;&gt; | Promise used to return the LauncherAbilityResourceInfoarray. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<LauncherAbilityResourceInfo>> | Promise used to return the LauncherAbilityResourceInfo array. |
 
 **Error codes:**
 

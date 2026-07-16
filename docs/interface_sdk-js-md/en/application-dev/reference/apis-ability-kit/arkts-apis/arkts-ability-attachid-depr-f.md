@@ -14,6 +14,8 @@ Attaches the given ID to the end of the path component of the given uri.
 
 **Substitutes:** attachId
 
+<!--Device-dataUriUtils-function attachId(uri: string, id: number): string--><!--Device-dataUriUtils-function attachId(uri: string, id: number): string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**

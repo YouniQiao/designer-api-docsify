@@ -1,17 +1,24 @@
 # registerAppGroupCallBack（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+```
+
 ## registerAppGroupCallBack
 
 ```TypeScript
 function registerAppGroupCallBack(groupCallback: Callback<AppGroupCallbackInfo>, callback: AsyncCallback<void>): void
 ```
 
-应用注册分组变化监听，即用户名下的某个应用分组发生变化时，向所有已注册分组变化监听的应用返回[AppGroupCallbackInfo](arkts-backgroundtasks-appgroupcallbackinfo-i-sys.md)信息。
-使用Callback异步回调。
+应用注册分组变化监听，即用户名下的某个应用分组发生变化时，向所有已注册分组变化监听的应用返回[AppGroupCallbackInfo](arkts-backgroundtasks-appgroupcallbackinfo-i-sys.md)信息。使用Callback异步回调。
 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
+
+<!--Device-usageStatistics-function registerAppGroupCallBack(groupCallback: Callback<AppGroupCallbackInfo>, callback: AsyncCallback<void>): void--><!--Device-usageStatistics-function registerAppGroupCallBack(groupCallback: Callback<AppGroupCallbackInfo>, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -21,8 +28,8 @@ function registerAppGroupCallBack(groupCallback: Callback<AppGroupCallbackInfo>,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| groupCallback | Callback&lt;AppGroupCallbackInfo&gt; | 是 | 返回的应用分组变化信息。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当注册监听成功，err为undefined；否则为错误对象。 |
+| groupCallback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AppGroupCallbackInfo> | 是 | 返回的应用分组变化信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当注册监听成功，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -69,12 +76,13 @@ usageStatistics.registerAppGroupCallBack(onBundleGroupChanged, (err: BusinessErr
 function registerAppGroupCallBack(groupCallback: Callback<AppGroupCallbackInfo>): Promise<void>
 ```
 
-注册应用分组变化监听，即用户名下的某个应用分组发生变化时，向所有已注册分组变化监听的应用返回[AppGroupCallbackInfo](arkts-backgroundtasks-appgroupcallbackinfo-i-sys.md)信息。
-使用Promise异步回调。
+注册应用分组变化监听，即用户名下的某个应用分组发生变化时，向所有已注册分组变化监听的应用返回[AppGroupCallbackInfo](arkts-backgroundtasks-appgroupcallbackinfo-i-sys.md)信息。使用Promise异步回调。
 
 **起始版本：** 9
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
+
+<!--Device-usageStatistics-function registerAppGroupCallBack(groupCallback: Callback<AppGroupCallbackInfo>): Promise<void>--><!--Device-usageStatistics-function registerAppGroupCallBack(groupCallback: Callback<AppGroupCallbackInfo>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -84,13 +92,13 @@ function registerAppGroupCallBack(groupCallback: Callback<AppGroupCallbackInfo>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| groupCallback | Callback&lt;AppGroupCallbackInfo&gt; | 是 | 返回的应用分组变化信息。 |
+| groupCallback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AppGroupCallbackInfo> | 是 | 返回的应用分组变化信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

@@ -18,6 +18,8 @@ Start an application for media playback.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function startAVPlayback(bundleName: string, assetId: string): Promise<void>--><!--Device-avSession-function startAVPlayback(bundleName: string, assetId: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -33,7 +35,7 @@ Start an application for media playback.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 **Error codes:**
 
@@ -68,6 +70,8 @@ Start an application for media playback with command info.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function startAVPlayback(bundleName: string, assetId: string, info: CommandInfo): Promise<void>--><!--Device-avSession-function startAVPlayback(bundleName: string, assetId: string, info: CommandInfo): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -78,13 +82,13 @@ Start an application for media playback with command info.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Specifies the bundleName which to be started. |
 | assetId | string | Yes | Specifies the assetId to be started. |
-| info | CommandInfo | Yes | Specifies the specified command information. |
+| info | [CommandInfo](arkts-avsession-commandinfo-i.md) | Yes | Specifies the specified command information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 **Error codes:**
 

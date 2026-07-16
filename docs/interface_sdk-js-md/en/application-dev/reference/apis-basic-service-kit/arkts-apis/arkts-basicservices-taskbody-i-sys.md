@@ -4,6 +4,8 @@ Represents task data.
 
 **Since:** 9
 
+<!--Device-update-export interface TaskBody--><!--Device-update-export interface TaskBody-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Error message.
 
 **Since:** 9
 
+<!--Device-TaskBody-errorMessages: Array<ErrorMessage>--><!--Device-TaskBody-errorMessages: Array<ErrorMessage>-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Installation mode.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-TaskBody-installMode: int--><!--Device-TaskBody-installMode: int-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -58,6 +64,8 @@ Progress.
 
 **Since:** 9
 
+<!--Device-TaskBody-progress: int--><!--Device-TaskBody-progress: int-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Update status.
 **Type:** UpgradeStatus
 
 **Since:** 9
+
+<!--Device-TaskBody-status: UpgradeStatus--><!--Device-TaskBody-status: UpgradeStatus-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -90,6 +100,8 @@ Sub-status.
 
 **Since:** 9
 
+<!--Device-TaskBody-subStatus: int--><!--Device-TaskBody-subStatus: int-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -106,6 +118,8 @@ Version components.
 
 **Since:** 9
 
+<!--Device-TaskBody-versionComponents: Array<VersionComponent>--><!--Device-TaskBody-versionComponents: Array<VersionComponent>-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -121,6 +135,8 @@ Version digest information.
 **Type:** VersionDigestInfo
 
 **Since:** 9
+
+<!--Device-TaskBody-versionDigestInfo: VersionDigestInfo--><!--Device-TaskBody-versionDigestInfo: VersionDigestInfo-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 

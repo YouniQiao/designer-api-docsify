@@ -1,5 +1,11 @@
 # add
 
+## 导入模块
+
+```TypeScript
+import { asset } from '@kit.AssetStoreKit';
+```
+
 ## add
 
 ```TypeScript
@@ -8,12 +14,13 @@ function add(attributes: AssetMap): Promise<void>
 
 新增一条关键资产。使用Promise异步回调。
 
-设置[Tag.IS_PERSISTENT](arkts-assetstore-tagtype-e.md)属性时，需要申请ohos.permission.STORE_PERSISTENT_DATA权限，申请方式请参考
-[声明权限](../../../../security/AccessToken/declare-permissions.md)。
+设置[Tag.IS_PERSISTENT](arkts-assetstore-tagtype-e.md)属性时，需要申请ohos.permission.STORE_PERSISTENT_DATA权限，申请方式请参考[声明权限](../../../../security/AccessToken/declare-permissions.md)。
 
 **起始版本：** 11
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-asset-function add(attributes: AssetMap): Promise<void>--><!--Device-asset-function add(attributes: AssetMap): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -21,13 +28,13 @@ function add(attributes: AssetMap): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| attributes | AssetMap | 是 | 待新增关键资产的属性集合，包括关键资产明文、访问控制属性、自定义数据等。 |
+| attributes | [AssetMap](arkts-assetstore-assetmap-t.md) | 是 | 待新增关键资产的属性集合，包括关键资产明文、访问控制属性、自定义数据等。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

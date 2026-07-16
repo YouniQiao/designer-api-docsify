@@ -4,6 +4,8 @@ Remote device operation methods.
 
 **Since:** 26.0.0
 
+<!--Device-remoteDevice-interface RemoteDevice--><!--Device-remoteDevice-interface RemoteDevice-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Cancel an in-progress pairing request.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RemoteDevice-cancelDevicePairing(): Promise<void>--><!--Device-RemoteDevice-cancelDevicePairing(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **System API:** This is a system API.
@@ -34,7 +38,7 @@ Cancel an in-progress pairing request.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 
@@ -59,6 +63,8 @@ Connect all allowed profiles.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RemoteDevice-connect(): Promise<void>--><!--Device-RemoteDevice-connect(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **System API:** This is a system API.
@@ -67,7 +73,7 @@ Connect all allowed profiles.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the result of connecting to profiles as a Promise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the result of connecting to profiles as a Promise. |
 
 **Error codes:**
 
@@ -92,6 +98,8 @@ Disconnect all connected profiles.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RemoteDevice-disconnect(): Promise<void>--><!--Device-RemoteDevice-disconnect(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **System API:** This is a system API.
@@ -100,7 +108,7 @@ Disconnect all connected profiles.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the result of connecting to profiles as a Promise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the result of connecting to profiles as a Promise. |
 
 **Error codes:**
 
@@ -124,6 +132,8 @@ Gets the alias of a remote device.
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RemoteDevice-getDeviceAlias(): string--><!--Device-RemoteDevice-getDeviceAlias(): string-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -156,6 +166,8 @@ Obtains the model information of a remote device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RemoteDevice-getDeviceModel(): DeviceModel--><!--Device-RemoteDevice-getDeviceModel(): DeviceModel-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **System API:** This is a system API.
@@ -164,7 +176,7 @@ Obtains the model information of a remote device.
 
 | Type | Description |
 | --- | --- |
-| DeviceModel | Returns the remote device's model information. |
+| [DeviceModel](arkts-connectivity-devicemodel-i-sys.md) | Returns the remote device's model information. |
 
 **Error codes:**
 
@@ -188,6 +200,8 @@ Gets the RSSI value of a remote device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RemoteDevice-getRssiValue(): Promise<int>--><!--Device-RemoteDevice-getRssiValue(): Promise<int>-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **System API:** This is a system API.
@@ -196,7 +210,7 @@ Gets the RSSI value of a remote device.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns promise object of RSSI value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Returns promise object of RSSI value. |
 
 **Error codes:**
 
@@ -221,6 +235,8 @@ Remove a paired remote device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RemoteDevice-removePairedDevice(): Promise<void>--><!--Device-RemoteDevice-removePairedDevice(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **System API:** This is a system API.
@@ -229,7 +245,7 @@ Remove a paired remote device.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 
@@ -254,6 +270,8 @@ Sets the connection interval with a remote device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RemoteDevice-setConnectionInterval(interval: ConnectionInterval): void--><!--Device-RemoteDevice-setConnectionInterval(interval: ConnectionInterval): void-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **System API:** This is a system API.
@@ -262,7 +280,7 @@ Sets the connection interval with a remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| interval | ConnectionInterval | Yes | The connection interval to set. |
+| interval | [ConnectionInterval](arkts-connectivity-connectioninterval-t-sys.md) | Yes | The connection interval to set. |
 
 **Error codes:**
 
@@ -286,6 +304,8 @@ Sets the alias of a remote device.
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RemoteDevice-setDeviceAlias(alias: string): void--><!--Device-RemoteDevice-setDeviceAlias(alias: string): void-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -321,6 +341,8 @@ Set the confirmation to a pairing request.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RemoteDevice-setPairingConfirmation(accept: boolean): void--><!--Device-RemoteDevice-setPairingConfirmation(accept: boolean): void-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **System API:** This is a system API.
@@ -354,6 +376,8 @@ Set the passcode during pairing if the pairing type is passcode
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RemoteDevice-setPairingPasscode(passcode: string): Promise<void>--><!--Device-RemoteDevice-setPairingPasscode(passcode: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **System API:** This is a system API.
@@ -368,7 +392,7 @@ Set the passcode during pairing if the pairing type is passcode
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise object is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise object is returned. |
 
 **Error codes:**
 
@@ -386,14 +410,15 @@ Set the passcode during pairing if the pairing type is passcode
 startCrediblePairing(): Promise<void>
 ```
 
-Starts pairing with a credible remote NearLink device.
-This interface does not trigger a dialog box and does not require user authorization.
+Starts pairing with a credible remote NearLink device.This interface does not trigger a dialog box and does not require user authorization.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RemoteDevice-startCrediblePairing(): Promise<void>--><!--Device-RemoteDevice-startCrediblePairing(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -403,7 +428,7 @@ This interface does not trigger a dialog box and does not require user authoriza
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 

@@ -10,6 +10,8 @@ The type of ParseOptions attributeWithTagCallbackFunction.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-xml-type AttributeWithTagCb = (tagName: string, key: string, value: string) => boolean--><!--Device-xml-type AttributeWithTagCb = (tagName: string, key: string, value: string) => boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**

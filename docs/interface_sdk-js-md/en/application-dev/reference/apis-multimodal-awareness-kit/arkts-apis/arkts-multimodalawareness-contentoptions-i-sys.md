@@ -4,6 +4,8 @@ Defines the options for obtaining the onscreen content.
 
 **Since:** 20
 
+<!--Device-onScreen-export interface ContentOptions--><!--Device-onScreen-export interface ContentOptions-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Whether content understanding is required. The default value is **False**.
 
 **Since:** 20
 
+<!--Device-ContentOptions-contentUnderstand?: boolean--><!--Device-ContentOptions-contentUnderstand?: boolean-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Whether to obtain the page link. The default value is **False**.
 **Type:** boolean
 
 **Since:** 20
+
+<!--Device-ContentOptions-pageLink?: boolean--><!--Device-ContentOptions-pageLink?: boolean-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -58,6 +64,8 @@ Whether to obtain only the text and divide the text into paragraphs. The default
 
 **Since:** 20
 
+<!--Device-ContentOptions-textOnly?: boolean--><!--Device-ContentOptions-textOnly?: boolean-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -68,12 +76,13 @@ Whether to obtain only the text and divide the text into paragraphs. The default
 windowId?: number
 ```
 
-ID of the window whose content needs to be obtained. If this parameter is not set or is set to **undefined**, the
-content of the full-screen window is obtained by default.
+ID of the window whose content needs to be obtained. If this parameter is not set or is set to **undefined**, the content of the full-screen window is obtained by default.
 
 **Type:** number
 
 **Since:** 20
+
+<!--Device-ContentOptions-windowId?: int--><!--Device-ContentOptions-windowId?: int-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 

@@ -1,14 +1,14 @@
 # MediaQueryListener
 
-Implements the media query listener, including the first query result when the listener is applied for. The
-specified media query condition, for example, **'(width <= 600vp)'**, is compared system information. If related
-information is not initialized during the first query, **matches** returns **false**.
+Implements the media query listener, including the first query result when the listener is applied for. The specified media query condition, for example, **'(width <= 600vp)'**, is compared system information. If related information is not initialized during the first query, **matches** returns **false**.
 
 Inherits from [MediaQueryResult](arkts-arkui-mediaqueryresult-i.md).
 
 **Inheritance/Implementation:** MediaQueryListener extends [MediaQueryResult](arkts-arkui-mediaqueryresult-i.md)
 
 **Since:** 7
+
+<!--Device-mediaquery-interface MediaQueryListener extends MediaQueryResult--><!--Device-mediaquery-interface MediaQueryListener extends MediaQueryResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,6 +32,8 @@ Deregisters a media query listener, so that no callback is triggered when the me
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-MediaQueryListener-off(type: 'change', callback?: Callback<MediaQueryResult>): void--><!--Device-MediaQueryListener-off(type: 'change', callback?: Callback<MediaQueryResult>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -39,7 +41,7 @@ Deregisters a media query listener, so that no callback is triggered when the me
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Listener type. The value is fixed at **'change'**. |
-| callback | Callback&lt;MediaQueryResult&gt; | No | Callback to unregister. If this parameter is not specified, allcallbacks under this handle are unregistered. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<MediaQueryResult> | No | Callback to unregister. If this parameter is not specified, all callbacks under this handle are unregistered. |
 
 **Example**
 
@@ -67,8 +69,8 @@ on(type: 'change', callback: Callback<MediaQueryResult>): void
 
 Registers a media query listener. The callback is triggered when the media attributes change.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > The **on** or **off** function cannot be called in the registered callback.
 
 **Since:** 7
@@ -77,6 +79,8 @@ Registers a media query listener. The callback is triggered when the media attri
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-MediaQueryListener-on(type: 'change', callback: Callback<MediaQueryResult>): void--><!--Device-MediaQueryListener-on(type: 'change', callback: Callback<MediaQueryResult>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -84,7 +88,7 @@ Registers a media query listener. The callback is triggered when the media attri
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Listener type. The value is fixed at **'change'**. |
-| callback | Callback&lt;MediaQueryResult&gt; | Yes | Callback registered with media query. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<MediaQueryResult> | Yes | Callback registered with media query. |
 
 **Example**
 

@@ -1,5 +1,11 @@
 # createPixelMapFromSurfaceSync
 
+## 导入模块
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+```
+
 ## createPixelMapFromSurfaceSync
 
 ```TypeScript
@@ -10,6 +16,8 @@ Creates a PixelMap object from surface id.
 
 **起始版本：** 12
 
+<!--Device-image-function createPixelMapFromSurfaceSync(surfaceId: string, region: Region): PixelMap--><!--Device-image-function createPixelMapFromSurfaceSync(surfaceId: string, region: Region): PixelMap-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
@@ -17,13 +25,13 @@ Creates a PixelMap object from surface id.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | surfaceId | string | 是 | surface id. |
-| region | Region | 是 | The region to surface. |
+| region | [Region](arkts-image-region-i.md) | 是 | The region to surface. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| PixelMap | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
+| [PixelMap](arkts-image-pixelmap-i.md) | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
 
 **错误码：**
 
@@ -62,6 +70,8 @@ Creates a PixelMap object from surface id.
 
 **起始版本：** 15
 
+<!--Device-image-function createPixelMapFromSurfaceSync(surfaceId: string): PixelMap--><!--Device-image-function createPixelMapFromSurfaceSync(surfaceId: string): PixelMap-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
@@ -74,7 +84,7 @@ Creates a PixelMap object from surface id.
 
 | 类型 | 说明 |
 | --- | --- |
-| PixelMap | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
+| [PixelMap](arkts-image-pixelmap-i.md) | Returns the instance if the operation is successful;Otherwise, an exception will be thrown. |
 
 **错误码：**
 

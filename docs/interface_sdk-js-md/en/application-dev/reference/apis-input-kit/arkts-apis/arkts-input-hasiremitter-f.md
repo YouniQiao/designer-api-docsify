@@ -18,13 +18,15 @@ Checks whether the device has an infrared transmitter. This API uses a promise t
 
 **Required permissions:** ohos.permission.MANAGE_INPUT_INFRARED_EMITTER
 
+<!--Device-infraredEmitter-function hasIrEmitter(): Promise<boolean>--><!--Device-infraredEmitter-function hasIrEmitter(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InfraredEmitter
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** is returned if the device has an infraredemitter, and **false** is returned if the device does not have an infrared emitter. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. **true** is returned if the device has an infrared emitter, and **false** is returned if the device does not have an infrared emitter. |
 
 **Error codes:**
 

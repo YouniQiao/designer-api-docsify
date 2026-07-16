@@ -8,6 +8,8 @@
 
 **替代接口：** Configuration/Configuration
 
+<!--Device-unnamed-export interface Configuration--><!--Device-unnamed-export interface Configuration-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## colorMode
@@ -26,6 +28,8 @@ colorMode?: ConfigurationConstant.ColorMode
 
 **替代接口：** colorMode
 
+<!--Device-Configuration-colorMode?: ConfigurationConstant.ColorMode--><!--Device-Configuration-colorMode?: ConfigurationConstant.ColorMode-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## language
@@ -43,6 +47,8 @@ language?: string
 **废弃版本：** 9
 
 **替代接口：** language
+
+<!--Device-Configuration-language?: string--><!--Device-Configuration-language?: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 

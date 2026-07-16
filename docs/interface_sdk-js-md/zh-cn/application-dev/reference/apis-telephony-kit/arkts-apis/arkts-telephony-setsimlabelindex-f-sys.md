@@ -1,5 +1,11 @@
 # setSimLabelIndex（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## setSimLabelIndex
 
 ```TypeScript
@@ -11,6 +17,8 @@ function setSimLabelIndex(simId: number, simLabelIndex: number): Promise<void>
 **起始版本：** 23
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-sim-function setSimLabelIndex(simId: int, simLabelIndex: int): Promise<void>--><!--Device-sim-function setSimLabelIndex(simId: int, simLabelIndex: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -27,7 +35,7 @@ function setSimLabelIndex(simId: number, simLabelIndex: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setSimLabelIndex. |
+| Promise<void> | The promise returned by the setSimLabelIndex. |
 
 **错误码：**
 

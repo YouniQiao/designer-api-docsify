@@ -12,13 +12,13 @@ import { display } from '@kit.ArkUI';
 function getPrimaryDisplaySync(): Display
 ```
 
-Obtains the information about the primary display. For devices other than 2-in-1 devices, the Display object
-obtained is the built-in screen. For 2-in-1 devices with an external screen, the Display object obtained is the
-primary screen. For 2-in-1 devices without an external screen, the Display object obtained is the built-in screen.
+Obtains the information about the primary display. For devices other than 2-in-1 devices, the Display object obtained is the built-in screen. For 2-in-1 devices with an external screen, the Display object obtained is the primary screen. For 2-in-1 devices without an external screen, the Display object obtained is the built-in screen.
 
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-display-function getPrimaryDisplaySync(): Display--><!--Device-display-function getPrimaryDisplaySync(): Display-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -26,7 +26,7 @@ primary screen. For 2-in-1 devices without an external screen, the Display objec
 
 | Type | Description |
 | --- | --- |
-| Display | Display object of the primary screen. |
+| [Display](arkts-arkui-display-i.md) | Display object of the primary screen. |
 
 **Error codes:**
 

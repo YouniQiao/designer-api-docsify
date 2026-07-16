@@ -4,7 +4,15 @@ UIUtils提供一些方法，用于处理状态管理相关的数据转换。
 
 **起始版本：** 12
 
+<!--Device-unnamed-export declare class UIUtils--><!--Device-unnamed-export declare class UIUtils-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from '@kit.ArkUI';
+```
 
 ## addMonitor
 
@@ -12,14 +20,15 @@ UIUtils提供一些方法，用于处理状态管理相关的数据转换。
 static addMonitor(target: object, path: string | string[], monitorCallback: MonitorCallback, options?: MonitorOptions): void
 ```
 
-给状态管理V2的状态变量动态添加监听方法，详见
-[addMonitor/clearMonitor](../../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md)。
+给状态管理V2的状态变量动态添加监听方法，详见[addMonitor/clearMonitor](../../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md)。
 
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIUtils-static addMonitor(target: object, path: string | string[], monitorCallback: MonitorCallback, options?: MonitorOptions): void--><!--Device-UIUtils-static addMonitor(target: object, path: string | string[], monitorCallback: MonitorCallback, options?: MonitorOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,8 +38,8 @@ static addMonitor(target: object, path: string | string[], monitorCallback: Moni
 | --- | --- | --- | --- |
 | target | object | 是 | 目标对象，仅支持[@ComponentV2](../../../../ui/state-management/arkts-create-custom-components.md#componentv2)和[@ObservedV2](../../../../ui/state-management/arkts-new-observedV2-and-trace.md)实例。&lt;/br&gt;对于不支持的类型，会抛出运行时错误。 |
 | path | string \| string[] | 是 | 添加监听的变量名路径。可指定一个路径或者传入string数组用于一次性指定多个监听的变量路径。&lt;/br&gt;仅支持string和string数组，对于不支持的类型，会抛出运行时错误。 |
-| monitorCallback | MonitorCallback | 是 | 给对应的状态变量注册的监听函数，即path路径对应的状态变量改变时，会回调对应的函数。&lt;/br&gt;对于不支持的类型，会抛出运行时错误。 |
-| options | MonitorOptions | 否 | 监听函数的配置项，具体可见[MonitorOptions](arkts-arkui-monitoroptions-i.md)。默认为异步回调。 |
+| monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | 是 | 给对应的状态变量注册的监听函数，即path路径对应的状态变量改变时，会回调对应的函数。&lt;/br&gt;对于不支持的类型，会抛出运行时错误。 |
+| options | [MonitorOptions](arkts-arkui-monitoroptions-i.md) | 否 | 监听函数的配置项，具体可见[MonitorOptions](arkts-arkui-monitoroptions-i.md)。默认为异步回调。 |
 
 **错误码：**
 
@@ -46,15 +55,15 @@ static addMonitor(target: object, path: string | string[], monitorCallback: Moni
 static applySync<T>(task: TaskCallback): T
 ```
 
-同步刷新指定的状态变量，该接口接收一个闭包函数，仅刷新闭包函数内的修改，包括更新[@Computed计算](../../../../ui/state-management/arkts-new-computed.md)、
-[@Monitor回调](../../../../ui/state-management/arkts-new-monitor.md)以及重新渲染UI节点，详见
-[applySync/flushUpdates/flushUIUpdates接口：同步刷新](../../../../ui/state-management/arkts-new-applySync-flushUpdates-flushUIUpdates.md)。
+同步刷新指定的状态变量，该接口接收一个闭包函数，仅刷新闭包函数内的修改，包括更新[@Computed计算](../../../../ui/state-management/arkts-new-computed.md)、[@Monitor回调](../../../../ui/state-management/arkts-new-monitor.md)以及重新渲染UI节点，详见[applySync/flushUpdates/flushUIUpdates接口：同步刷新](../../../../ui/state-management/arkts-new-applySync-flushUpdates-flushUIUpdates.md)。
 
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIUtils-static applySync<T>(task: TaskCallback): T--><!--Device-UIUtils-static applySync<T>(task: TaskCallback): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,7 +71,7 @@ static applySync<T>(task: TaskCallback): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| task | TaskCallback | 是 | 闭包函数，该闭包中产生的状态变量修改会同步执行。 |
+| task | [TaskCallback](arkts-arkui-taskcallback-t.md) | 是 | 闭包函数，该闭包中产生的状态变量修改会同步执行。 |
 
 **返回值：**
 
@@ -135,7 +144,9 @@ static canBeObserved<T extends object>(source: T): ObservedResult
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIUtils-static canBeObserved<T extends object>(source: T): ObservedResult--><!--Device-UIUtils-static canBeObserved<T extends object>(source: T): ObservedResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -149,7 +160,7 @@ static canBeObserved<T extends object>(source: T): ObservedResult
 
 | 类型 | 说明 |
 | --- | --- |
-| ObservedResult | 返回对象是否可被观察的结果。 |
+| [ObservedResult](arkts-arkui-observedresult-i.md) | 返回对象是否可被观察的结果。 |
 
 **示例：**
 
@@ -269,14 +280,15 @@ export struct School {
 static clearMonitor(target: object, path: string | string[], monitorCallback?: MonitorCallback) : void
 ```
 
-删除通过[addMonitor](arkts-arkui-uiutils-c.md#addmonitor-1)给状态管理V2的状态变量添加的监听方法，详见
-[addMonitor/clearMonitor](../../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md)。
+删除通过[addMonitor](arkts-arkui-uiutils-c.md#addmonitor-1)给状态管理V2的状态变量添加的监听方法，详见[addMonitor/clearMonitor](../../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md)。
 
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIUtils-static clearMonitor(target: object, path: string | string[], monitorCallback?: MonitorCallback) : void--><!--Device-UIUtils-static clearMonitor(target: object, path: string | string[], monitorCallback?: MonitorCallback) : void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -286,7 +298,7 @@ static clearMonitor(target: object, path: string | string[], monitorCallback?: M
 | --- | --- | --- | --- |
 | target | object | 是 | 目标对象，仅支持[@ComponentV2](../../../../ui/state-management/arkts-create-custom-components.md#componentv2)和[@ObservedV2](../../../../ui/state-management/arkts-new-observedV2-and-trace.md)实例。&lt;/br&gt;对于不支持的类型，会抛出运行时错误。 |
 | path | string \| string[] | 是 | 删除监听的变量名路径。可指定一个路径或者传入string数组用于一次性指定删除多个状态变量的监听函数。&lt;/br&gt;仅支持string和数组，对于不支持的类型，会抛出运行时错误。 |
-| monitorCallback | MonitorCallback | 否 | 指定被删除的监听函数。&lt;/br&gt;当开发者不传此参数时，将删除path对应变量注册的所有监听函数。&lt;/br&gt;对于不支持的类型，会抛出运行时错误。 |
+| monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | 否 | 指定被删除的监听函数。&lt;/br&gt;当开发者不传此参数时，将删除path对应变量注册的所有监听函数。&lt;/br&gt;对于不支持的类型，会抛出运行时错误。 |
 
 **错误码：**
 
@@ -302,14 +314,15 @@ static clearMonitor(target: object, path: string | string[], monitorCallback?: M
 static enableV2Compatibility<T extends object>(source: T): T
 ```
 
-使V1的状态变量能够在\@ComponentV2中观察，主要应用于状态管理V1、V2混用场景。详见
-[状态管理V1和V2混用指导（API version 19及之后）](../../../../ui/state-management/arkts-v1-v2-mixusage.md)。
+使V1的状态变量能够在\@ComponentV2中观察，主要应用于状态管理V1、V2混用场景。详见[状态管理V1和V2混用指导（API version 19及之后）](../../../../ui/state-management/arkts-v1-v2-mixusage.md)。
 
 **起始版本：** 19
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本19开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIUtils-static enableV2Compatibility<T extends object>(source: T): T--><!--Device-UIUtils-static enableV2Compatibility<T extends object>(source: T): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -379,7 +392,9 @@ static flushUIUpdates(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIUtils-static flushUIUpdates(): void--><!--Device-UIUtils-static flushUIUpdates(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -443,14 +458,15 @@ struct Index {
 static flushUpdates(): void
 ```
 
-同步刷新在调用该函数之前所有的状态变量修改，包括更新@Computed计算、@Monitor回调以及重新渲染UI节点，详见
-[applySync/flushUpdates/flushUIUpdates接口：同步刷新](../../../../ui/state-management/arkts-new-applySync-flushUpdates-flushUIUpdates.md)。
+同步刷新在调用该函数之前所有的状态变量修改，包括更新@Computed计算、@Monitor回调以及重新渲染UI节点，详见[applySync/flushUpdates/flushUIUpdates接口：同步刷新](../../../../ui/state-management/arkts-new-applySync-flushUpdates-flushUIUpdates.md)。
 
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIUtils-static flushUpdates(): void--><!--Device-UIUtils-static flushUpdates(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -513,14 +529,15 @@ struct Index {
 static getCustomComponentContext<T extends BaseCustomComponent>(customComponent: T): CustomComponentContext
 ```
 
-返回给定@Component(V1)或@ComponentV2的[CustomComponentContext](arkts-arkui-customcomponentcontext-i.md)。使用它来访问组件的复用池。有关复用池的详细信息，请参阅
-[全局复用池：集中化的组件回收与复用](../../../../ui/state-management/arkts-global-reuse-pool.md)。
+返回给定@Component(V1)或@ComponentV2的[CustomComponentContext](arkts-arkui-customcomponentcontext-i.md)。使用它来访问组件的复用池。有关复用池的详细信息，请参阅[全局复用池：集中化的组件回收与复用](../../../../ui/state-management/arkts-global-reuse-pool.md)。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIUtils-static getCustomComponentContext<T extends BaseCustomComponent>(customComponent: T): CustomComponentContext--><!--Device-UIUtils-static getCustomComponentContext<T extends BaseCustomComponent>(customComponent: T): CustomComponentContext-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -534,7 +551,7 @@ static getCustomComponentContext<T extends BaseCustomComponent>(customComponent:
 
 | 类型 | 说明 |
 | --- | --- |
-| CustomComponentContext | 给定组件实例的上下文对象。 |
+| [CustomComponentContext](arkts-arkui-customcomponentcontext-i.md) | 给定组件实例的上下文对象。 |
 
 **示例：**
 
@@ -609,7 +626,9 @@ getLifecycle用于获取[自定义组件的生命周期](ComponentInit)实例。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIUtils-static getLifecycle<T extends BaseCustomComponent>(customComponent: T): CustomComponentLifecycle--><!--Device-UIUtils-static getLifecycle<T extends BaseCustomComponent>(customComponent: T): CustomComponentLifecycle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -623,7 +642,7 @@ getLifecycle用于获取[自定义组件的生命周期](ComponentInit)实例。
 
 | 类型 | 说明 |
 | --- | --- |
-| CustomComponentLifecycle | 自定义组件的生命周期实例。 |
+| [CustomComponentLifecycle](arkts-arkui-customcomponentlifecycle-i.md) | 自定义组件的生命周期实例。 |
 
 **示例：**
 
@@ -661,7 +680,9 @@ static getTarget<T extends object>(source: T): T
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIUtils-static getTarget<T extends object>(source: T): T--><!--Device-UIUtils-static getTarget<T extends object>(source: T): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -716,7 +737,9 @@ static makeBinding<T>(getter: GetterCallback<T>): Binding<T>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIUtils-static makeBinding<T>(getter: GetterCallback<T>): Binding<T>--><!--Device-UIUtils-static makeBinding<T>(getter: GetterCallback<T>): Binding<T>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -724,13 +747,13 @@ static makeBinding<T>(getter: GetterCallback<T>): Binding<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| getter | GetterCallback&lt;T&gt; | 是 | 获取值的回调函数，每次访问值都会重新执行函数，获取最新值。 |
+| getter | [GetterCallback](arkts-arkui-gettercallback-t.md)<T> | 是 | 获取值的回调函数，每次访问值都会重新执行函数，获取最新值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Binding&lt;T&gt; | 仅包含一个`value`属性，用于获取当前绑定的值。只能读取值，不能直接修改。 |
+| [Binding](arkts-arkui-binding-c.md)<T> | 仅包含一个`value`属性，用于获取当前绑定的值。只能读取值，不能直接修改。 |
 
 **示例：**
 
@@ -789,7 +812,9 @@ static makeBinding<T>(getter: GetterCallback<T>, setter: SetterCallback<T>): Mut
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIUtils-static makeBinding<T>(getter: GetterCallback<T>, setter: SetterCallback<T>): MutableBinding<T>--><!--Device-UIUtils-static makeBinding<T>(getter: GetterCallback<T>, setter: SetterCallback<T>): MutableBinding<T>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -797,14 +822,14 @@ static makeBinding<T>(getter: GetterCallback<T>, setter: SetterCallback<T>): Mut
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| getter | GetterCallback&lt;T&gt; | 是 | 获取值的回调函数，每次访问值都会重新执行函数，获取最新值。 |
-| setter | SetterCallback&lt;T&gt; | 是 | 定义如何更新值，当`.value`被修改时自动调用此函数。 |
+| getter | [GetterCallback](arkts-arkui-gettercallback-t.md)<T> | 是 | 获取值的回调函数，每次访问值都会重新执行函数，获取最新值。 |
+| setter | [SetterCallback](arkts-arkui-settercallback-t.md)<T> | 是 | 定义如何更新值，当`.value`被修改时自动调用此函数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| MutableBinding&lt;T&gt; | 包含一个`value`属性，支持通过`.value`读取和修改数据，设置值时会检查类型是否匹配泛型`T`。 |
+| [MutableBinding](arkts-arkui-mutablebinding-c.md)<T> | 包含一个`value`属性，支持通过`.value`读取和修改数据，设置值时会检查类型是否匹配泛型`T`。 |
 
 **示例：**
 
@@ -867,7 +892,9 @@ static makeObserved<T extends object>(source: T): T
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIUtils-static makeObserved<T extends object>(source: T): T--><!--Device-UIUtils-static makeObserved<T extends object>(source: T): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -923,14 +950,15 @@ static makeV1Observed<T extends object>(source: T): T
 
 将不可观察的对象包装成状态管理V1可观察的对象，其能力等同于@Observed，可初始化@ObjectLink。
 
-该接口可搭配[enableV2Compatibility](arkts-arkui-uiutils-c.md#enablev2compatibility-1)应用于状态管理V1和V2混用场景，详见
-[状态管理V1和V2混用指导（API version 19及之后）](../../../../ui/state-management/arkts-v1-v2-mixusage.md)。
+该接口可搭配[enableV2Compatibility](arkts-arkui-uiutils-c.md#enablev2compatibility-1)应用于状态管理V1和V2混用场景，详见[状态管理V1和V2混用指导（API version 19及之后）](../../../../ui/state-management/arkts-v1-v2-mixusage.md)。
 
 **起始版本：** 19
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本19开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIUtils-static makeV1Observed<T extends object>(source: T): T--><!--Device-UIUtils-static makeV1Observed<T extends object>(source: T): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

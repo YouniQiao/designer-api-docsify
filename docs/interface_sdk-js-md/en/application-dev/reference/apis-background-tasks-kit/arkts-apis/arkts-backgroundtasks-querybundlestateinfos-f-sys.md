@@ -22,6 +22,8 @@ This method queries usage information at the {@link #BY_OPTIMIZED} interval by d
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-bundleState-function queryBundleStateInfos(begin: number, end: number, callback: AsyncCallback<BundleActiveInfoResponse>): void--><!--Device-bundleState-function queryBundleStateInfos(begin: number, end: number, callback: AsyncCallback<BundleActiveInfoResponse>): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -32,7 +34,7 @@ This method queries usage information at the {@link #BY_OPTIMIZED} interval by d
 | --- | --- | --- | --- |
 | begin | number | Yes | Indicates the start time of the query period, in milliseconds. |
 | end | number | Yes | Indicates the end time of the query period, in milliseconds. |
-| callback | AsyncCallback&lt;BundleActiveInfoResponse&gt; | Yes | the callback of queryBundleStateInfos.the {@link BundleActiveInfoResponse} objects containing the usage information about each bundle. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<BundleActiveInfoResponse> | Yes | the callback of queryBundleStateInfos.the {@link BundleActiveInfoResponse} objects containing the usage information about each bundle. |
 
 **Example**
 
@@ -69,6 +71,8 @@ This method queries usage information at the {@link #BY_OPTIMIZED} interval by d
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-bundleState-function queryBundleStateInfos(begin: number, end: number): Promise<BundleActiveInfoResponse>--><!--Device-bundleState-function queryBundleStateInfos(begin: number, end: number): Promise<BundleActiveInfoResponse>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -84,7 +88,7 @@ This method queries usage information at the {@link #BY_OPTIMIZED} interval by d
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BundleActiveInfoResponse&gt; | the promise returned by queryBundleStatsInfos.the {@link BundleActiveInfoResponse} objects containing the usage information about each bundle. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<BundleActiveInfoResponse> | the promise returned by queryBundleStatsInfos.the {@link BundleActiveInfoResponse} objects containing the usage information about each bundle. |
 
 **Example**
 

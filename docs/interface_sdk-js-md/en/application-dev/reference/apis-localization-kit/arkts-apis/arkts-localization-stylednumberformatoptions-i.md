@@ -4,6 +4,8 @@ Represents optional configuration items for the **NumberFormat** object.
 
 **Since:** 18
 
+<!--Device-i18n-export interface StyledNumberFormatOptions--><!--Device-i18n-export interface StyledNumberFormatOptions-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Text style for the decimal point. The default value is the default text style of
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-StyledNumberFormatOptions-decimal?: TextStyle--><!--Device-StyledNumberFormatOptions-decimal?: TextStyle-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## fraction
@@ -41,6 +45,8 @@ Text style for the fraction part. The default value is the default text style of
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-StyledNumberFormatOptions-fraction?: TextStyle--><!--Device-StyledNumberFormatOptions-fraction?: TextStyle-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -58,6 +64,8 @@ Text style for the integer part. The default value is the default text style of 
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-StyledNumberFormatOptions-integer?: TextStyle--><!--Device-StyledNumberFormatOptions-integer?: TextStyle-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## unit
@@ -73,6 +81,8 @@ Text style for the unit. The default value is the default text style of StyledSt
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-StyledNumberFormatOptions-unit?: TextStyle--><!--Device-StyledNumberFormatOptions-unit?: TextStyle-End-->
 
 **System capability:** SystemCapability.Global.I18n
 

@@ -4,6 +4,8 @@ Provides the aperture query capability.
 
 **Since:** 24
 
+<!--Device-camera-interface ApertureQuery--><!--Device-camera-interface ApertureQuery-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -20,12 +22,13 @@ import { camera } from '@kit.CameraKit';
 getSupportedPhysicalApertures(): Array<PhysicalAperture>
 ```
 
-Gets the supported physical apertures.
-Move to ApertureQuery interface from Aperture since 12.
+Gets the supported physical apertures.Move to ApertureQuery interface from Aperture since 12.
 
 **Since:** 24
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-ApertureQuery-getSupportedPhysicalApertures(): Array<PhysicalAperture>--><!--Device-ApertureQuery-getSupportedPhysicalApertures(): Array<PhysicalAperture>-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -35,7 +38,7 @@ Move to ApertureQuery interface from Aperture since 12.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;PhysicalAperture&gt; | The array of supported physical apertures. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PhysicalAperture> | The array of supported physical apertures. |
 
 **Error codes:**
 
@@ -55,6 +58,8 @@ Obtains the supported virtual apertures.
 
 **Since:** 11
 
+<!--Device-ApertureQuery-getSupportedVirtualApertures(): Array<double>--><!--Device-ApertureQuery-getSupportedVirtualApertures(): Array<double>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -63,7 +68,7 @@ Obtains the supported virtual apertures.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Array of virtual apertures supported. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Array of virtual apertures supported. |
 
 **Error codes:**
 

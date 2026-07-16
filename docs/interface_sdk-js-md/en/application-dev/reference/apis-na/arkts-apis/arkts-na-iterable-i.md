@@ -1,14 +1,18 @@
 # Iterable
 
+<!--Device-unnamed-interface Iterable<T>--><!--Device-unnamed-interface Iterable<T>-End-->
+
 ## [Symbol.iterator]
 
 ```TypeScript
 [Symbol.iterator](): Iterator<T>
 ```
 
+<!--Device-Iterable-[Symbol.iterator](): Iterator<T>--><!--Device-Iterable-[Symbol.iterator](): Iterator<T>-End-->
+
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Iterator&lt;T&gt; |  |
+| [Iterator](arkts-na-iterator-i.md)<T> |  |
 

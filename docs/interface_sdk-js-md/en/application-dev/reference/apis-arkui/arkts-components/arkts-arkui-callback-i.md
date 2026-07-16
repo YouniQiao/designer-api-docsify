@@ -4,6 +4,8 @@ Defines the basic callback.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface Callback<T, V = void>--><!--Device-unnamed-declare interface Callback<T, V = void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -19,6 +21,8 @@ Defines the callback info.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Callback-(data: T): V--><!--Device-Callback-(data: T): V-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

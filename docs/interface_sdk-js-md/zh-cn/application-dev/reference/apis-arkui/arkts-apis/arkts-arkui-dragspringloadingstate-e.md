@@ -1,10 +1,10 @@
 # DragSpringLoadingState
 
-定义拖拽的悬停检测状态的枚举类型。
-默认系统配置下，如果没有触发CANCEL，状态报告如下：
-保持Hover-->500ms-->BEGIN-->100ms-->UPDATE-->100ms-->UPDATE-->100ms-->UPDATE-->100ms-->END
+定义拖拽的悬停检测状态的枚举类型。默认系统配置下，如果没有触发CANCEL，状态报告如下：保持Hover-->500ms-->BEGIN-->100ms-->UPDATE-->100ms-->UPDATE-->100ms-->UPDATE-->100ms-->END
 
 **起始版本：** 20
+
+<!--Device-dragController-const enum DragSpringLoadingState--><!--Device-dragController-const enum DragSpringLoadingState-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,7 +20,9 @@ BEGIN
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DragSpringLoadingState-BEGIN--><!--Device-DragSpringLoadingState-BEGIN-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,7 +38,9 @@ UPDATE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DragSpringLoadingState-UPDATE--><!--Device-DragSpringLoadingState-UPDATE-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,7 +56,9 @@ END
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DragSpringLoadingState-END--><!--Device-DragSpringLoadingState-END-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,7 +74,9 @@ CANCEL
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DragSpringLoadingState-CANCEL--><!--Device-DragSpringLoadingState-CANCEL-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

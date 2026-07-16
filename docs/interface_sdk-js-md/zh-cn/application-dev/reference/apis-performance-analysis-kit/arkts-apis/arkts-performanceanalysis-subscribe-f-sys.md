@@ -1,5 +1,11 @@
 # subscribe（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
+```
+
 ## subscribe
 
 ```TypeScript
@@ -12,6 +18,8 @@ function subscribe(rules: QueryRule[]): number
 
 **需要权限：** ohos.permission.READ_DFX_SYSEVENT
 
+<!--Device-hiSysEvent-function subscribe(rules: QueryRule[]): long--><!--Device-hiSysEvent-function subscribe(rules: QueryRule[]): long-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function subscribe(rules: QueryRule[]): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rules | QueryRule[] | 是 | 查询规则数组，每次订阅可配置多个查询规则。 |
+| rules | [QueryRule](arkts-performanceanalysis-queryrule-i-sys.md)[] | 是 | 查询规则数组，每次订阅可配置多个查询规则。 |
 
 **返回值：**
 

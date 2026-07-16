@@ -1,5 +1,11 @@
 # generateKeyItem
 
+## 导入模块
+
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+```
+
 ## generateKeyItem
 
 ```TypeScript
@@ -10,13 +16,15 @@ function generateKeyItem(keyAlias: string, options: HuksOptions, callback: Async
 
 基于密钥不出[TEE](../../../../security/UniversalKeystoreKit/huks-concepts.md#可信执行环境tee)原则，此接口不会返回密钥材料内容，只用于表示此次调用是否成功。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 生成[HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥需要ohos.permission.ACCESS_SE_KEY权限。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-huks-function generateKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<void>): void--><!--Device-huks-function generateKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -25,14 +33,14 @@ function generateKeyItem(keyAlias: string, options: HuksOptions, callback: Async
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 密钥别名。密钥别名的最大长度为128字节，建议不包含个人信息等敏感词汇。 |
-| options | HuksOptions | 是 | 用于存放生成key所需TAG。其中密钥使用的算法、密钥用途、密钥长度为必选参数。指定[HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)中定义的SE安全级别时，需要ohos.permission.ACCESS_SE_KEY权限。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当生成密钥成功时，err为undefined，否则为错误对象。 |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | 是 | 用于存放生成key所需TAG。其中密钥使用的算法、密钥用途、密钥长度为必选参数。指定[HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)中定义的SE安全级别时，需要ohos.permission.ACCESS_SE_KEY权限。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当生成密钥成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application permissions are insufficient, possibly becausethe ohos.permission.ACCESS_SE_KEY permission is missing.<br>**适用版本：** 26.0.0+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**适用版本：** 26.0.0+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified.2. Incorrect parameter types.3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | api is not supported |
 | [12000001](../errorcode-huks.md#12000001-该子功能不支持特性) | algorithm mode is not supported |
@@ -47,7 +55,7 @@ function generateKeyItem(keyAlias: string, options: HuksOptions, callback: Async
 | [12000015](../errorcode-huks.md#12000015-调用其他系统服务失败) | Failed to obtain the security information via UserIAM |
 | [12000017](../errorcode-huks.md#12000017-同名密钥已存在) | The key with the same alias already exists<br>**适用版本：** 20+ |
 | [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
-| [12000011](../errorcode-huks.md#12000011-目标对象不存在) | The queried entity does not exist. This may happen becausethe key resource ID specified by keyAlias has not been opened in the external crypto scenario.<br>**适用版本：** 26.0.0+ |
+| [12000011](../errorcode-huks.md#12000011-目标对象不存在) | The queried entity does not exist. This may happen because the key resource ID specified by keyAlias has not been opened in the external crypto scenario.<br>**适用版本：** 26.0.0+ |
 | [12000020](../errorcode-huks.md#12000020-依赖的模块报错) | the provider operation failed<br>**适用版本：** 26.0.0+ |
 | [12000021](../errorcode-huks.md#12000021-ukey-pin码被锁定) | the UKey PIN is locked<br>**适用版本：** 26.0.0+ |
 | [12000023](../errorcode-huks.md#12000023-ukey-pin码未认证) | the UKey PIN not authenticated<br>**适用版本：** 26.0.0+ |
@@ -192,13 +200,15 @@ function generateKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 
 基于密钥不出[TEE](../../../../security/UniversalKeystoreKit/huks-concepts.md#可信执行环境tee)原则，此接口不会返回密钥材料内容，只用于表示此次调用是否成功。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 生成[HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥需要ohos.permission.ACCESS_SE_KEY权限。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-huks-function generateKeyItem(keyAlias: string, options: HuksOptions): Promise<void>--><!--Device-huks-function generateKeyItem(keyAlias: string, options: HuksOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
@@ -207,19 +217,19 @@ function generateKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 密钥别名。密钥别名的最大长度为128字节，建议不包含个人信息等敏感词汇。 |
-| options | HuksOptions | 是 | 用于存放生成key所需TAG。其中密钥使用的算法、密钥用途、密钥长度为必选参数。指定[HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)中定义的SE安全级别时，需要ohos.permission.ACCESS_SE_KEY权限。 |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | 是 | 用于存放生成key所需TAG。其中密钥使用的算法、密钥用途、密钥长度为必选参数。指定[HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)中定义的SE安全级别时，需要ohos.permission.ACCESS_SE_KEY权限。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The application permissions are insufficient, possibly becausethe ohos.permission.ACCESS_SE_KEY permission is missing.<br>**适用版本：** 26.0.0+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**适用版本：** 26.0.0+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified.2. Incorrect parameter types.3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | api is not supported |
 | [12000001](../errorcode-huks.md#12000001-该子功能不支持特性) | algorithm mode is not supported |
@@ -234,7 +244,7 @@ function generateKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 | [12000015](../errorcode-huks.md#12000015-调用其他系统服务失败) | Failed to obtain the security information via UserIAM |
 | [12000017](../errorcode-huks.md#12000017-同名密钥已存在) | The key with the same alias already exists<br>**适用版本：** 20+ |
 | [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
-| [12000011](../errorcode-huks.md#12000011-目标对象不存在) | The queried entity does not exist. This may happen becausethe key resource ID specified by keyAlias has not been opened in the external crypto scenario.<br>**适用版本：** 26.0.0+ |
+| [12000011](../errorcode-huks.md#12000011-目标对象不存在) | The queried entity does not exist. This may happen because the key resource ID specified by keyAlias has not been opened in the external crypto scenario.<br>**适用版本：** 26.0.0+ |
 | [12000020](../errorcode-huks.md#12000020-依赖的模块报错) | the provider operation failed<br>**适用版本：** 26.0.0+ |
 | [12000021](../errorcode-huks.md#12000021-ukey-pin码被锁定) | the UKey PIN is locked<br>**适用版本：** 26.0.0+ |
 | [12000023](../errorcode-huks.md#12000023-ukey-pin码未认证) | the UKey PIN not authenticated<br>**适用版本：** 26.0.0+ |

@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-inputMethodEngine-export interface PanelRect--><!--Device-inputMethodEngine-export interface PanelRect-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+## 导入模块
+
+```TypeScript
+import { inputMethodEngine } from '@kit.IMEKit';
+```
 
 ## landscapeRect
 
@@ -17,6 +25,8 @@ landscapeRect: window.Rect
 **类型：** window.Rect
 
 **起始版本：** 12
+
+<!--Device-PanelRect-landscapeRect: window.Rect--><!--Device-PanelRect-landscapeRect: window.Rect-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -31,6 +41,8 @@ portraitRect: window.Rect
 **类型：** window.Rect
 
 **起始版本：** 12
+
+<!--Device-PanelRect-portraitRect: window.Rect--><!--Device-PanelRect-portraitRect: window.Rect-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

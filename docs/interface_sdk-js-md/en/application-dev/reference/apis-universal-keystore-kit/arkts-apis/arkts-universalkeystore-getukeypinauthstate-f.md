@@ -16,20 +16,22 @@ Obtains the PIN authentication state. This API uses a promise to return the resu
 
 **Since:** 22
 
+<!--Device-huksExternalCrypto-function getUkeyPinAuthState(resourceId: string, params?: Array<HuksExternalCryptoParam>): Promise<HuksExternalPinAuthState>--><!--Device-huksExternalCrypto-function getUkeyPinAuthState(resourceId: string, params?: Array<HuksExternalCryptoParam>): Promise<HuksExternalPinAuthState>-End-->
+
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceId | string | Yes | Resource ID, which can be obtained using[certificateManagerDialog.openAuthorizeDialog22+](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-openauthorizedialog-f.md#openauthorizedialog-2). The result contains **resourceId**. |
-| params | Array&lt;HuksExternalCryptoParam&gt; | No | Operation parameters. If a non-system application passes[HUKS_EXT_CRYPTO_TAG_UID](arkts-universalkeystore-huksexternalcryptotagtype-e.md), the parameter is invalid. |
+| resourceId | string | Yes | Resource ID, which can be obtained using [certificateManagerDialog.openAuthorizeDialog22+](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-openauthorizedialog-f.md#openauthorizedialog-2). The result contains **resourceId**. |
+| params | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<HuksExternalCryptoParam> | No | Operation parameters. If a non-system application passes [HUKS_EXT_CRYPTO_TAG_UID](arkts-universalkeystore-huksexternalcryptotagtype-e.md), the parameter is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksExternalPinAuthState&gt; | Promise used to return the authentication result.<br>**HUKS_EXT_CRYPTO_PIN_NO_AUTH**: The PIN authentication fails. **HUKS_EXT_CRYPTO_PIN_AUTH_SUCCEEDED**: The PINauthentication is successful. **HUKS_EXT_CRYPTO_PIN_LOCKED**: The PIN is locked. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HuksExternalPinAuthState> | Promise used to return the authentication result.<br>**HUKS_EXT_CRYPTO_PIN_NO_AUTH**: The PIN authentication fails. **HUKS_EXT_CRYPTO_PIN_AUTH_SUCCEEDED**: The PIN authentication is successful. **HUKS_EXT_CRYPTO_PIN_LOCKED**: The PIN is locked. |
 
 **Error codes:**
 
@@ -38,7 +40,7 @@ Obtains the PIN authentication state. This API uses a promise to return the resu
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported. |
 | [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
 | [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | the UKey driver operation failed. |
-| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist. This may happenbecause the resource ID has not been opened. |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist. This may happen because the resource ID has not been opened. |
 | [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter is abnormal.This error may occur if the process function is not found, or due to other issues. |
 | [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient. |
 | [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the input parameter is invalid. |

@@ -6,6 +6,8 @@ Defines the inline style options.
 
 **Since:** 11
 
+<!--Device-unnamed-declare class InlineStyleOptions extends CommonOptions--><!--Device-unnamed-declare class InlineStyleOptions extends CommonOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,6 +34,8 @@ Set maximum value of the counter component
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-InlineStyleOptions-max?: number--><!--Device-InlineStyleOptions-max?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## min
@@ -52,6 +56,8 @@ Set minimum value of the counter component
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-InlineStyleOptions-min?: number--><!--Device-InlineStyleOptions-min?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onChange
@@ -69,6 +75,8 @@ Trigger an event when the value of the counter has been changed.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-InlineStyleOptions-onChange?: (value: number) => void--><!--Device-InlineStyleOptions-onChange?: (value: number) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,6 +98,8 @@ Set text width of the counter component, ranges greater than or equal to 0
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-InlineStyleOptions-textWidth?: number--><!--Device-InlineStyleOptions-textWidth?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -109,6 +119,8 @@ Set initial value of the counter component, ranges from min to max.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-InlineStyleOptions-value?: number--><!--Device-InlineStyleOptions-value?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

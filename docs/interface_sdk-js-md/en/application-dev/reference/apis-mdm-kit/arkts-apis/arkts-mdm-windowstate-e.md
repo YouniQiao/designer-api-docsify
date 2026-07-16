@@ -4,6 +4,8 @@ The state of the window.
 
 **Since:** 26.0.0
 
+<!--Device-applicationManager-enum WindowState--><!--Device-applicationManager-enum WindowState-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## DISCONNECT
@@ -17,6 +19,8 @@ Disconnect state.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WindowState-DISCONNECT = 0--><!--Device-WindowState-DISCONNECT = 0-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -32,6 +36,8 @@ Connect state.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WindowState-CONNECT = 1--><!--Device-WindowState-CONNECT = 1-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## FOREGROUND
@@ -45,6 +51,8 @@ Foreground state.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WindowState-FOREGROUND = 2--><!--Device-WindowState-FOREGROUND = 2-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -60,6 +68,8 @@ Active state.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WindowState-ACTIVE = 3--><!--Device-WindowState-ACTIVE = 3-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## INACTIVE
@@ -74,6 +84,8 @@ Inactive state.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WindowState-INACTIVE = 4--><!--Device-WindowState-INACTIVE = 4-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## BACKGROUND
@@ -87,6 +99,8 @@ Background state.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WindowState-BACKGROUND = 5--><!--Device-WindowState-BACKGROUND = 5-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

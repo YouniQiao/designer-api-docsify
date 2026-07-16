@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-floatView-interface FloatViewStateChangeInfo--><!--Device-floatView-interface FloatViewStateChangeInfo-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
+
+## 导入模块
+
+```TypeScript
+import { floatView } from '@kit.ArkUI';
+```
 
 ## state
 
@@ -19,6 +27,8 @@ state: FloatViewState
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FloatViewStateChangeInfo-state: FloatViewState--><!--Device-FloatViewStateChangeInfo-state: FloatViewState-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -49,6 +59,8 @@ stopReason: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FloatViewStateChangeInfo-stopReason: string--><!--Device-FloatViewStateChangeInfo-stopReason: string-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 

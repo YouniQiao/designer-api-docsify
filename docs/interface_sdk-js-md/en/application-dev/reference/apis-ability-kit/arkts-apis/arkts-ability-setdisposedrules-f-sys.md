@@ -18,6 +18,8 @@ Sets disposed rules in batches for an application or an application clone.
 
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
+<!--Device-appControl-function setDisposedRules(disposedRuleConfigurations: Array<DisposedRuleConfiguration>): void--><!--Device-appControl-function setDisposedRules(disposedRuleConfigurations: Array<DisposedRuleConfiguration>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Sets disposed rules in batches for an application or an application clone.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| disposedRuleConfigurations | Array&lt;DisposedRuleConfiguration&gt; | Yes | Configuration for the disposed rules inbatches, including the appId of the target application, the index of the application clone, and the rulesthemselves. The maximum number of disposed rules in an array is 1000.<br>**NOTE**<br>1. If multiple**DisposedRuleConfiguration** entries in the array have the same appId and appIndex, the later entry willoverwrite the earlier one.<br>2. If an application has already set disposed rules, re-setting the rules willreplace the existing ones. Identical appId and appIndex values indicate the same application instance. |
+| disposedRuleConfigurations | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<DisposedRuleConfiguration> | Yes | Configuration for the disposed rules in batches, including the appId of the target application, the index of the application clone, and the rules themselves. The maximum number of disposed rules in an array is 1000.<br>**NOTE**<br>1. If multiple **DisposedRuleConfiguration** entries in the array have the same appId and appIndex, the later entry will overwrite the earlier one.<br>2. If an application has already set disposed rules, re-setting the rules will replace the existing ones. Identical appId and appIndex values indicate the same application instance. |
 
 **Error codes:**
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-export interface LazyVWaterFlowLayoutInterface--><!--Device-unnamed-export interface LazyVWaterFlowLayoutInterface-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayoutAttribute } from '@kit.ArkUI';
+```
 
 ## constructor
 
@@ -18,7 +26,9 @@
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LazyVWaterFlowLayoutInterface-(): LazyVWaterFlowLayoutAttribute--><!--Device-LazyVWaterFlowLayoutInterface-(): LazyVWaterFlowLayoutAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,5 +36,5 @@
 
 | 类型 | 说明 |
 | --- | --- |
-| LazyVWaterFlowLayoutAttribute | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
+| [LazyVWaterFlowLayoutAttribute](arkts-arkui-lazyvwaterflowlayoutattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 

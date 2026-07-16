@@ -4,6 +4,8 @@ The **deviceStatus** module provides the device status awareness functionality.
 
 **Since:** 18
 
+<!--Device-unnamed-declare namespace deviceStatus--><!--Device-unnamed-declare namespace deviceStatus-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
 
 ## Modules to Import
@@ -41,5 +43,5 @@ import { deviceStatus } from '@kit.MultimodalAwarenessKit';
 
 | Name | Description |
 | --- | --- |
-| [SteadyStandingStatus](arkts-multimodalawareness-steadystandingstatus-e.md) | Defines the steady standing state (that is, stand mode).A device enters stand mode when it is stationary, and its screen is at an angle between 45 and 135 degrees relativeto the horizontal plane. For foldable smartphones, the device must be in a folded state or fully unfolded state. |
+| [SteadyStandingStatus](arkts-multimodalawareness-steadystandingstatus-e.md) | Defines the steady standing state (that is, stand mode).A device enters stand mode when it is stationary, and its screen is at an angle between 45 and 135 degrees relative to the horizontal plane. For foldable smartphones, the device must be in a folded state or fully unfolded state. |
 

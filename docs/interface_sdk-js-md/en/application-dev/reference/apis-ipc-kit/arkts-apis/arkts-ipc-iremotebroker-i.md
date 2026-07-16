@@ -4,6 +4,8 @@ Represents the holder of a remote proxy object. It is used to obtain a proxy obj
 
 **Since:** 7
 
+<!--Device-rpc-interface IRemoteBroker--><!--Device-rpc-interface IRemoteBroker-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## Modules to Import
@@ -22,13 +24,15 @@ Obtains a proxy or remote object. This API must be implemented by its derived cl
 
 **Since:** 7
 
+<!--Device-IRemoteBroker-asObject(): IRemoteObject--><!--Device-IRemoteBroker-asObject(): IRemoteObject-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IRemoteObject | Returns the **RemoteObject** if it is the caller; returns the[IRemoteObject](arkts-ipc-iremoteobject-c.md), the holder of this **RemoteProxy** object, if the caller is a[RemoteProxy](arkts-ipc-remoteproxy-c.md) object. |
+| [IRemoteObject](arkts-ipc-iremoteobject-c.md) | Returns the **RemoteObject** if it is the caller; returns the [IRemoteObject](arkts-ipc-iremoteobject-c.md), the holder of this **RemoteProxy** object, if the caller is a [RemoteProxy](arkts-ipc-remoteproxy-c.md) object. |
 
 **Example**
 

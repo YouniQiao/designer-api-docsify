@@ -12,14 +12,15 @@ import { connection } from '@kit.NetworkKit';
 function deleteVlanIp(ifName: string, vlanId: number, address: LinkAddress): Promise<void>
 ```
 
-Delete ip of vlan interface by vlanId.
-To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission.
+Delete ip of vlan interface by vlanId.To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-connection-function deleteVlanIp(ifName: string, vlanId: int, address: LinkAddress): Promise<void>--><!--Device-connection-function deleteVlanIp(ifName: string, vlanId: int, address: LinkAddress): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -31,13 +32,13 @@ To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INT
 | --- | --- | --- | --- |
 | ifName | string | Yes | interface name. |
 | vlanId | number | Yes | vlan id. |
-| address | LinkAddress | Yes | vlan ip address. |
+| address | [LinkAddress](arkts-network-linkaddress-t.md) | Yes | vlan ip address. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - The promise returned by the function. |
 
 **Error codes:**
 

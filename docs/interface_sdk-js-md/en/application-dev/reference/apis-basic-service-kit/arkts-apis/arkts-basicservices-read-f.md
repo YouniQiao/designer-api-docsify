@@ -16,21 +16,23 @@ Reads data from the serial port device asynchronously. This API uses a promise t
 
 **Since:** 19
 
+<!--Device-serialManager-function read(portId: int, buffer: Uint8Array, timeout?: int): Promise<int>--><!--Device-serialManager-function read(portId: int, buffer: Uint8Array, timeout?: int): Promise<int>-End-->
+
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPortreturned by [getPortList](arkts-basicservices-getportlist-f.md#getportlist-1). |
-| buffer | Uint8Array | Yes | Buffer for reading data, with a maximum length of 8192 bytes. |
-| timeout | number | No | Timeout interval.Unit: milliseconds. If the API has no data in the buffer of the target port, itreturns the result after waiting for the specified time. The default value **0** indicates that the API returns theresult without waiting. |
+| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-getportlist-f.md#getportlist-1). |
+| buffer | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Buffer for reading data, with a maximum length of 8192 bytes. |
+| timeout | number | No | Timeout interval.Unit: milliseconds. If the API has no data in the buffer of the target port, it returns the result after waiting for the specified time. The default value **0** indicates that the API returns the result without waiting. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the length of the data read. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the length of the data read. |
 
 **Error codes:**
 

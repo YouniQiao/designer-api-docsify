@@ -4,6 +4,8 @@ The request data.
 
 **Since:** 22
 
+<!--Device-http-export interface HttpRequestContext--><!--Device-http-export interface HttpRequestContext-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -26,6 +28,8 @@ The header of an HTTP request interceptor. It can be modified in an interceptor.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-HttpRequestContext-body: Object--><!--Device-HttpRequestContext-body: Object-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## header
@@ -42,6 +46,8 @@ The header of an HTTP request interceptor. It can be modified in an interceptor.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-HttpRequestContext-header: Object--><!--Device-HttpRequestContext-header: Object-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## url
@@ -57,6 +63,8 @@ The URL of an HTTP request interceptor. It can be modified in an interceptor.
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-HttpRequestContext-url: string--><!--Device-HttpRequestContext-url: string-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

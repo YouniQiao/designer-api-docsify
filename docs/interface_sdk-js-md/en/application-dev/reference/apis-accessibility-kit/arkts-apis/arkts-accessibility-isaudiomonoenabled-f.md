@@ -18,13 +18,15 @@ Checks whether mono audio mode is enabled. This API uses a promise to return the
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-accessibility-function isAudioMonoEnabled(): Promise<boolean>--><!--Device-accessibility-function isAudioMonoEnabled(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if mono audio mode is enabled;returns **false** otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. Returns **true** if mono audio mode is enabled;returns **false** otherwise. |
 
 **Example**
 

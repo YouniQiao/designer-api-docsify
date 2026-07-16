@@ -20,6 +20,8 @@ Gets the list of disallowed USB devices.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-usbManager-function getDisallowedPermissiveUsbDevices(admin: Want | null): Array<PermissiveUsbDeviceType>--><!--Device-usbManager-function getDisallowedPermissiveUsbDevices(admin: Want | null): Array<PermissiveUsbDeviceType>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
@@ -32,7 +34,7 @@ Gets the list of disallowed USB devices.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;PermissiveUsbDeviceType&gt; | USB device types that are disallowed. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PermissiveUsbDeviceType> | USB device types that are disallowed. |
 
 **Error codes:**
 

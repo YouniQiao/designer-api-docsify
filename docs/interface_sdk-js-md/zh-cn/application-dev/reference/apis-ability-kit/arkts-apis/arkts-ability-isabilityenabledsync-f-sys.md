@@ -1,5 +1,11 @@
 # isAbilityEnabledSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## isAbilityEnabledSync
 
 ```TypeScript
@@ -10,6 +16,8 @@ function isAbilityEnabledSync(info: AbilityInfo): boolean
 
 **起始版本：** 10
 
+<!--Device-bundleManager-function isAbilityEnabledSync(info: AbilityInfo): boolean--><!--Device-bundleManager-function isAbilityEnabledSync(info: AbilityInfo): boolean-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -18,7 +26,7 @@ function isAbilityEnabledSync(info: AbilityInfo): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | AbilityInfo | 是 | 表示关于检查ability的信息。 |
+| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | 是 | 表示关于检查ability的信息。 |
 
 **返回值：**
 

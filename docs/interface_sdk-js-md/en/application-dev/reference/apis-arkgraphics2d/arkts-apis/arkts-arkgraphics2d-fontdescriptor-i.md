@@ -4,6 +4,8 @@ Describes the font descriptor information.
 
 **Since:** 14
 
+<!--Device-text-interface FontDescriptor--><!--Device-text-interface FontDescriptor-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Font copyright information. Any string is acceptable. The default value is an em
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-FontDescriptor-copyright?: string--><!--Device-FontDescriptor-copyright?: string-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## fontFamily
@@ -41,6 +45,8 @@ Family name of the font. Any string is acceptable. The default value is an empty
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FontDescriptor-fontFamily?: string--><!--Device-FontDescriptor-fontFamily?: string-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -60,6 +66,8 @@ Font features.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-FontDescriptor-fontFeatures?: Array<string>--><!--Device-FontDescriptor-fontFeatures?: Array<string>-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## fontSubfamily
@@ -75,6 +83,8 @@ Subfamily name of the font. Any string is acceptable. The default value is an em
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FontDescriptor-fontSubfamily?: string--><!--Device-FontDescriptor-fontSubfamily?: string-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -92,6 +102,8 @@ Font name. Any string is acceptable. The default value is an empty string.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-FontDescriptor-fullName?: string--><!--Device-FontDescriptor-fullName?: string-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## index
@@ -100,8 +112,7 @@ Font name. Any string is acceptable. The default value is an empty string.
 index?: number
 ```
 
-Font index. This parameter is valid only when the font file is in TTC format. The value is **0** for the TTF
-format.
+Font index. This parameter is valid only when the font file is in TTC format. The value is **0** for the TTF format.
 
 **Type:** number
 
@@ -111,6 +122,8 @@ format.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-FontDescriptor-index?: int--><!--Device-FontDescriptor-index?: int-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## italic
@@ -119,14 +132,15 @@ format.
 italic?: number
 ```
 
-Whether the font is italic. The value **0** means that the font is not italic, and **1** means the opposite. The
-default value is **0**.
+Whether the font is italic. The value **0** means that the font is not italic, and **1** means the opposite. The default value is **0**.
 
 **Type:** number
 
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FontDescriptor-italic?: int--><!--Device-FontDescriptor-italic?: int-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -146,6 +160,8 @@ Font languages.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-FontDescriptor-languages?: Array<string>--><!--Device-FontDescriptor-languages?: Array<string>-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## license
@@ -162,6 +178,8 @@ Font license information. Any string is acceptable. The default value is an empt
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-FontDescriptor-license?: string--><!--Device-FontDescriptor-license?: string-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## localFamilyName
@@ -170,14 +188,15 @@ Font license information. Any string is acceptable. The default value is an empt
 localFamilyName?: string
 ```
 
-Extracts the font family name based on the system language configuration. If the font file does not contain the
-configuration corresponding to the current language, the information corresponding to **en** is used.
+Extracts the font family name based on the system language configuration. If the font file does not contain the configuration corresponding to the current language, the information corresponding to **en** is used.
 
 **Type:** string
 
 **Since:** 23
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-FontDescriptor-localFamilyName?: string--><!--Device-FontDescriptor-localFamilyName?: string-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -187,14 +206,15 @@ configuration corresponding to the current language, the information correspondi
 localFullName?: string
 ```
 
-Extracts the full font name based on the system language configuration. If the font file does not contain the
-configuration corresponding to the current language, the information corresponding to **en** is used.
+Extracts the full font name based on the system language configuration. If the font file does not contain the configuration corresponding to the current language, the information corresponding to **en** is used.
 
 **Type:** string
 
 **Since:** 23
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-FontDescriptor-localFullName?: string--><!--Device-FontDescriptor-localFullName?: string-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -204,14 +224,15 @@ configuration corresponding to the current language, the information correspondi
 localPostscriptName?: string
 ```
 
-Extracts the unique font ID based on the system language configuration. If the font file does not contain the
-configuration corresponding to the current language, the information corresponding to **en** is used.
+Extracts the unique font ID based on the system language configuration. If the font file does not contain the configuration corresponding to the current language, the information corresponding to **en** is used.
 
 **Type:** string
 
 **Since:** 23
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-FontDescriptor-localPostscriptName?: string--><!--Device-FontDescriptor-localPostscriptName?: string-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -221,14 +242,15 @@ configuration corresponding to the current language, the information correspondi
 localSubFamilyName?: string
 ```
 
-Extracts the font subfamily name based on the system language configuration. If the font file does not contain
-the configuration corresponding to the current language, the information corresponding to **en** is used.
+Extracts the font subfamily name based on the system language configuration. If the font file does not contain the configuration corresponding to the current language, the information corresponding to **en** is used.
 
 **Type:** string
 
 **Since:** 23
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-FontDescriptor-localSubFamilyName?: string--><!--Device-FontDescriptor-localSubFamilyName?: string-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -246,6 +268,8 @@ Font manufacturer information. Any string is acceptable. The default value is an
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-FontDescriptor-manufacture?: string--><!--Device-FontDescriptor-manufacture?: string-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## monoSpace
@@ -254,14 +278,15 @@ Font manufacturer information. Any string is acceptable. The default value is an
 monoSpace?: boolean
 ```
 
-Whether the font is monospaced. The value **true** means that the font is monospaced, and **false** means the
-opposite. The default value is **false**.
+Whether the font is monospaced. The value **true** means that the font is monospaced, and **false** means the opposite. The default value is **false**.
 
 **Type:** boolean
 
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FontDescriptor-monoSpace?: boolean--><!--Device-FontDescriptor-monoSpace?: boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -271,14 +296,15 @@ opposite. The default value is **false**.
 path?: string
 ```
 
-Absolute path of the font. Any string that complies with the system restrictions is acceptable. The default value
-is an empty string.
+Absolute path of the font. Any string that complies with the system restrictions is acceptable. The default value is an empty string.
 
 **Type:** string
 
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FontDescriptor-path?: string--><!--Device-FontDescriptor-path?: string-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -296,6 +322,8 @@ Unique name of the font. Any string is acceptable. The default value is an empty
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-FontDescriptor-postScriptName?: string--><!--Device-FontDescriptor-postScriptName?: string-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## symbolic
@@ -304,14 +332,15 @@ Unique name of the font. Any string is acceptable. The default value is an empty
 symbolic?: boolean
 ```
 
-Whether the font is symbolic. The value **true** means that the font is symbolic, and **false** means the
-opposite.
+Whether the font is symbolic. The value **true** means that the font is symbolic, and **false** means the opposite.
 
 **Type:** boolean
 
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FontDescriptor-symbolic?: boolean--><!--Device-FontDescriptor-symbolic?: boolean-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -329,6 +358,8 @@ Font trademark information. Any string is acceptable. The default value is an em
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-FontDescriptor-trademark?: string--><!--Device-FontDescriptor-trademark?: string-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## variationAxisRecords
@@ -337,14 +368,15 @@ Font trademark information. Any string is acceptable. The default value is an em
 variationAxisRecords?: Array<FontVariationAxis>
 ```
 
-Font variable axis record array, which is used to describe the variable axis information supported by the font.
-For non-variable fonts, this field is **undefined**.
+Font variable axis record array, which is used to describe the variable axis information supported by the font.For non-variable fonts, this field is **undefined**.
 
 **Type:** Array<FontVariationAxis>
 
 **Since:** 24
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-FontDescriptor-variationAxisRecords?: Array<FontVariationAxis>--><!--Device-FontDescriptor-variationAxisRecords?: Array<FontVariationAxis>-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -354,14 +386,15 @@ For non-variable fonts, this field is **undefined**.
 variationInstanceRecords?: Array<FontVariationInstance>
 ```
 
-Font variable instance record array, which is used to describe the variable instance information supported by the
-font. For non-variable fonts, this field is **undefined**.
+Font variable instance record array, which is used to describe the variable instance information supported by the font. For non-variable fonts, this field is **undefined**.
 
 **Type:** Array<FontVariationInstance>
 
 **Since:** 24
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-FontDescriptor-variationInstanceRecords?: Array<FontVariationInstance>--><!--Device-FontDescriptor-variationInstanceRecords?: Array<FontVariationInstance>-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -379,6 +412,8 @@ Font version. Any string is acceptable. The default value is an empty string.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-FontDescriptor-version?: string--><!--Device-FontDescriptor-version?: string-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## weight
@@ -395,6 +430,8 @@ Font weight. The default value is **0**.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-FontDescriptor-weight?: FontWeight--><!--Device-FontDescriptor-weight?: FontWeight-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## width
@@ -410,6 +447,8 @@ Font width. The value is an integer ranging from 1 to 9. The default value is **
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-FontDescriptor-width?: int--><!--Device-FontDescriptor-width?: int-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

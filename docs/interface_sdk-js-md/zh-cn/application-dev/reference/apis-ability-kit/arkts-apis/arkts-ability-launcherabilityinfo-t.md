@@ -8,6 +8,8 @@ LauncherAbilityInfo信息。
 
 **起始版本：** 18
 
+<!--Device-launcherBundleManager-export type LauncherAbilityInfo = _LauncherAbilityInfo--><!--Device-launcherBundleManager-export type LauncherAbilityInfo = _LauncherAbilityInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **属性类型：** _LauncherAbilityInfo

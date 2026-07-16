@@ -6,7 +6,15 @@ Sendable PixelMap instance.
 
 **起始版本：** 12
 
+<!--Device-sendableImage-interface PixelMap extends ISendable--><!--Device-sendableImage-interface PixelMap extends ISendable-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
+
+## 导入模块
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+```
 
 ## applyColorSpace
 
@@ -14,15 +22,13 @@ Sendable PixelMap instance.
 applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>
 ```
 
-Apply color space of pixelmap, the pixels will be changed by input color space.
-This method uses a promise to return the result.
+Apply color space of pixelmap, the pixels will be changed by input color space.This method uses a promise to return the result.
 
-This method is used to change color space of PixelMap.
-Pixel data will be changed by calling this method.
-If you want to set the colorspace property of PixelMap only,
-use method {@Link #setColorSpace(colorSpaceManager.ColorSpaceManager)}.
+This method is used to change color space of PixelMap.Pixel data will be changed by calling this method.If you want to set the colorspace property of PixelMap only,use method {@Link #setColorSpace(colorSpaceManager.ColorSpaceManager)}.
 
 **起始版本：** 12
+
+<!--Device-PixelMap-applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>--><!--Device-PixelMap-applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -36,7 +42,7 @@ use method {@Link #setColorSpace(colorSpaceManager.ColorSpaceManager)}.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| Promise<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **错误码：**
 
@@ -76,7 +82,9 @@ Obtains new pixelmap with alpha information. This method uses a promise to retur
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-createAlphaPixelmap(): Promise<PixelMap>--><!--Device-PixelMap-createAlphaPixelmap(): Promise<PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -84,7 +92,7 @@ Obtains new pixelmap with alpha information. This method uses a promise to retur
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | A Promise instance used to return the new image pixelmap.If the operation fails, an error message is returned. |
+| Promise<PixelMap> | A Promise instance used to return the new image pixelmap.If the operation fails, an error message is returned. |
 
 **示例：**
 
@@ -114,7 +122,9 @@ Obtains new pixelmap with alpha information.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-createAlphaPixelmapSync(): PixelMap--><!--Device-PixelMap-createAlphaPixelmapSync(): PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -122,7 +132,7 @@ Obtains new pixelmap with alpha information.
 
 | 类型 | 说明 |
 | --- | --- |
-| PixelMap | return the new image pixelmap.If the operation fails, an error message is returned. |
+| [PixelMap](arkts-image-pixelmap-i.md) | return the new image pixelmap.If the operation fails, an error message is returned. |
 
 **错误码：**
 
@@ -153,7 +163,9 @@ Crop the image. This method uses a promise to return the result.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-crop(region: image.Region): Promise<void>--><!--Device-PixelMap-crop(region: image.Region): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -167,7 +179,7 @@ Crop the image. This method uses a promise to return the result.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| Promise<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **示例：**
 
@@ -200,7 +212,9 @@ Crop the image.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-cropSync(region: image.Region): void--><!--Device-PixelMap-cropSync(region: image.Region): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -242,7 +256,9 @@ Image flipping. This method uses a promise to return the result.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-flip(horizontal: boolean, vertical: boolean): Promise<void>--><!--Device-PixelMap-flip(horizontal: boolean, vertical: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -257,7 +273,7 @@ Image flipping. This method uses a promise to return the result.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| Promise<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **示例：**
 
@@ -290,7 +306,9 @@ Image flipping.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-flipSync(horizontal: boolean, vertical: boolean): void--><!--Device-PixelMap-flipSync(horizontal: boolean, vertical: boolean): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -333,7 +351,9 @@ Obtains the number of bytes in each line of the image pixelmap.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-getBytesNumberPerRow(): number--><!--Device-PixelMap-getBytesNumberPerRow(): number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -363,6 +383,8 @@ getColorSpace(): colorSpaceManager.ColorSpaceManager
 Get color space of pixelmap.
 
 **起始版本：** 12
+
+<!--Device-PixelMap-getColorSpace(): colorSpaceManager.ColorSpaceManager--><!--Device-PixelMap-getColorSpace(): colorSpaceManager.ColorSpaceManager-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -403,7 +425,9 @@ Obtains the density of the image pixelmap.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-getDensity(): number--><!--Device-PixelMap-getDensity(): number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -434,7 +458,9 @@ Obtains pixelmap information about this image. This method uses a promise to ret
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-getImageInfo(): Promise<image.ImageInfo>--><!--Device-PixelMap-getImageInfo(): Promise<image.ImageInfo>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -442,7 +468,7 @@ Obtains pixelmap information about this image. This method uses a promise to ret
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.ImageInfo&gt; | A Promise instance used to return the image pixelmap information.If the operation fails, an error message is returned. |
+| Promise<image.ImageInfo> | A Promise instance used to return the image pixelmap information.If the operation fails, an error message is returned. |
 
 **示例：**
 
@@ -475,7 +501,9 @@ Get image information from image source.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-getImageInfoSync(): image.ImageInfo--><!--Device-PixelMap-getImageInfoSync(): image.ImageInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -515,7 +543,9 @@ Obtains the total number of bytes of the image pixelmap.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-getPixelBytesNumber(): number--><!--Device-PixelMap-getPixelBytesNumber(): number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -545,6 +575,8 @@ marshalling(sequence: rpc.MessageSequence): void
 Marshalling PixelMap and write into MessageSequence.
 
 **起始版本：** 12
+
+<!--Device-PixelMap-marshalling(sequence: rpc.MessageSequence): void--><!--Device-PixelMap-marshalling(sequence: rpc.MessageSequence): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -632,7 +664,9 @@ Set the transparent rate of pixelmap. This method uses a promise to return the r
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-opacity(rate: number): Promise<void>--><!--Device-PixelMap-opacity(rate: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -646,7 +680,7 @@ Set the transparent rate of pixelmap. This method uses a promise to return the r
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| Promise<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **示例：**
 
@@ -677,7 +711,9 @@ Set the transparent rate of pixelmap.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-opacitySync(rate: number): void--><!--Device-PixelMap-opacitySync(rate: number): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -718,7 +754,9 @@ Reads image pixelmap data in an area. This method uses a promise to return the d
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-readPixels(area: image.PositionArea): Promise<void>--><!--Device-PixelMap-readPixels(area: image.PositionArea): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -732,7 +770,7 @@ Reads image pixelmap data in an area. This method uses a promise to return the d
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| Promise<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **示例：**
 
@@ -769,7 +807,9 @@ Reads image pixelmap data in an area.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-readPixelsSync(area: image.PositionArea): void--><!--Device-PixelMap-readPixelsSync(area: image.PositionArea): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -812,12 +852,13 @@ async function ReadPixelsSync(pixelMap : sendableImage.PixelMap) {
 readPixelsToBuffer(dst: ArrayBuffer): Promise<void>
 ```
 
-Reads image pixelmap data and writes the data to an ArrayBuffer. This method uses
-a promise to return the result.
+Reads image pixelmap data and writes the data to an ArrayBuffer. This method uses a promise to return the result.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-readPixelsToBuffer(dst: ArrayBuffer): Promise<void>--><!--Device-PixelMap-readPixelsToBuffer(dst: ArrayBuffer): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -825,13 +866,13 @@ a promise to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dst | ArrayBuffer | 是 | A buffer to which the image pixelmap data will be written. |
+| dst | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | A buffer to which the image pixelmap data will be written. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| Promise<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **示例：**
 
@@ -862,7 +903,9 @@ Reads image pixelmap data and writes the data to an ArrayBuffer.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-readPixelsToBufferSync(dst: ArrayBuffer): void--><!--Device-PixelMap-readPixelsToBufferSync(dst: ArrayBuffer): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -870,7 +913,7 @@ Reads image pixelmap data and writes the data to an ArrayBuffer.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dst | ArrayBuffer | 是 | A buffer to which the image pixelmap data will be written. |
+| dst | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | A buffer to which the image pixelmap data will be written. |
 
 **错误码：**
 
@@ -904,7 +947,9 @@ Releases this PixelMap object. This method uses a promise to return the result.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-release(): Promise<void>--><!--Device-PixelMap-release(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -912,7 +957,7 @@ Releases this PixelMap object. This method uses a promise to return the result.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the instance release result.If the operation fails, an error message is returned. |
+| Promise<void> | A Promise instance used to return the instance release result.If the operation fails, an error message is returned. |
 
 **示例：**
 
@@ -942,7 +987,9 @@ Image rotation. This method uses a promise to return the result.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-rotate(angle: number): Promise<void>--><!--Device-PixelMap-rotate(angle: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -956,7 +1003,7 @@ Image rotation. This method uses a promise to return the result.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| Promise<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **示例：**
 
@@ -987,7 +1034,9 @@ Image rotation.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-rotateSync(angle: number): void--><!--Device-PixelMap-rotateSync(angle: number): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1028,7 +1077,9 @@ Image zoom in width and height. This method uses a promise to return the result.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-scale(x: number, y: number): Promise<void>--><!--Device-PixelMap-scale(x: number, y: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1043,7 +1094,7 @@ Image zoom in width and height. This method uses a promise to return the result.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| Promise<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **示例：**
 
@@ -1076,7 +1127,9 @@ Image zoom in width and height.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-scaleSync(x: number, y: number): void--><!--Device-PixelMap-scaleSync(x: number, y: number): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1117,12 +1170,11 @@ setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void
 
 Set color space of pixelmap.
 
-This method is only used to set the colorspace property of PixelMap,
-while all pixel data remains the same after calling this method.
-If you want to change colorspace for all pixels, use method
-{@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)}.
+This method is only used to set the colorspace property of PixelMap,while all pixel data remains the same after calling this method.If you want to change colorspace for all pixels, use method{@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)}.
 
 **起始版本：** 12
+
+<!--Device-PixelMap-setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void--><!--Device-PixelMap-setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1165,7 +1217,9 @@ Image position transformation. This method uses a promise to return the result.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-translate(x: number, y: number): Promise<void>--><!--Device-PixelMap-translate(x: number, y: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1180,7 +1234,7 @@ Image position transformation. This method uses a promise to return the result.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| Promise<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **示例：**
 
@@ -1212,7 +1266,9 @@ Image position transformation.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-translateSync(x: number, y: number): void--><!--Device-PixelMap-translateSync(x: number, y: number): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1255,6 +1311,8 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 **起始版本：** 12
 
+<!--Device-PixelMap-unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>--><!--Device-PixelMap-unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
@@ -1267,7 +1325,7 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | A Promise instance used to return the PixelMap object. |
+| Promise<PixelMap> | A Promise instance used to return the PixelMap object. |
 
 **错误码：**
 
@@ -1344,12 +1402,13 @@ async function Unmarshalling() {
 writeBufferToPixels(src: ArrayBuffer): Promise<void>
 ```
 
-Reads image data in an ArrayBuffer and writes the data to a PixelMap object. This method
-uses a promise to return the result.
+Reads image data in an ArrayBuffer and writes the data to a PixelMap object. This method uses a promise to return the result.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-writeBufferToPixels(src: ArrayBuffer): Promise<void>--><!--Device-PixelMap-writeBufferToPixels(src: ArrayBuffer): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1357,13 +1416,13 @@ uses a promise to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | ArrayBuffer | 是 | A buffer from which the image data will be read. |
+| src | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | A buffer from which the image data will be read. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| Promise<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **示例：**
 
@@ -1398,7 +1457,9 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-writeBufferToPixelsSync(src: ArrayBuffer): void--><!--Device-PixelMap-writeBufferToPixelsSync(src: ArrayBuffer): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1406,7 +1467,7 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | ArrayBuffer | 是 | A buffer from which the image data will be read. |
+| src | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | A buffer from which the image data will be read. |
 
 **错误码：**
 
@@ -1440,12 +1501,13 @@ async function WriteBufferToPixelsSync(pixelMap: sendableImage.PixelMap) {
 writePixels(area: image.PositionArea): Promise<void>
 ```
 
-Writes image pixelmap data to the specified area. This method uses a promise to return
-the operation result.
+Writes image pixelmap data to the specified area. This method uses a promise to return the operation result.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-writePixels(area: image.PositionArea): Promise<void>--><!--Device-PixelMap-writePixels(area: image.PositionArea): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1459,7 +1521,7 @@ the operation result.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| Promise<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **示例：**
 
@@ -1500,7 +1562,9 @@ Writes image pixelmap data to the specified area.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-writePixelsSync(area: image.PositionArea): void--><!--Device-PixelMap-writePixelsSync(area: image.PositionArea): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1553,7 +1617,9 @@ Whether the image pixelmap can be edited.
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PixelMap-readonly isEditable: boolean--><!--Device-PixelMap-readonly isEditable: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1568,6 +1634,8 @@ Is it stride Alignment
 **类型：** boolean
 
 **起始版本：** 12
+
+<!--Device-PixelMap-readonly isStrideAlignment: boolean--><!--Device-PixelMap-readonly isStrideAlignment: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

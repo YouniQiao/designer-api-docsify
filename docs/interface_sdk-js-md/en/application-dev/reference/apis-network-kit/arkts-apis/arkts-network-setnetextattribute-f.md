@@ -12,12 +12,13 @@ import { connection } from '@kit.NetworkKit';
 function setNetExtAttribute(netHandle: NetHandle, netExtAttribute: string): Promise<void>
 ```
 
-Set the network extended attribute for a {@link NetHandle} object.
-To invoke this method, you must have the {@code ohos.permission.SET_NET_EXT_ATTRIBUTE} permission.
+Set the network extended attribute for a {@link NetHandle} object.To invoke this method, you must have the {@code ohos.permission.SET_NET_EXT_ATTRIBUTE} permission.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.SET_NET_EXT_ATTRIBUTE
+
+<!--Device-connection-function setNetExtAttribute(netHandle: NetHandle, netExtAttribute: string): Promise<void>--><!--Device-connection-function setNetExtAttribute(netHandle: NetHandle, netExtAttribute: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -25,14 +26,14 @@ To invoke this method, you must have the {@code ohos.permission.SET_NET_EXT_ATTR
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | NetHandle | Yes | Indicates the network to be set. See {@link NetHandle}. |
+| netHandle | [NetHandle](arkts-network-nethandle-i.md) | Yes | Indicates the network to be set. See {@link NetHandle}. |
 | netExtAttribute | string | Yes | Indicates the extended attribute of the network. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

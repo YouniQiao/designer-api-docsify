@@ -12,10 +12,11 @@ import { display } from '@kit.ArkUI';
 function addVirtualScreenBlocklist(windowIds: Array<number>): Promise<void>
 ```
 
-Adds windows to the list of windows that are not allowed to be displayed during casting. This API takes effect only
-for the main window of an application or system windows. This API uses a promise to return the result.
+Adds windows to the list of windows that are not allowed to be displayed during casting. This API takes effect only for the main window of an application or system windows. This API uses a promise to return the result.
 
 **Since:** 18
+
+<!--Device-display-function addVirtualScreenBlocklist(windowIds: Array<int>): Promise<void>--><!--Device-display-function addVirtualScreenBlocklist(windowIds: Array<int>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -25,13 +26,13 @@ for the main window of an application or system windows. This API uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowIds | Array&lt;number&gt; | Yes | List of window IDs. If a child window ID is passed in, it will not take effect.The window ID is an integer greater than 0. You are advised to call[getWindowProperties()](@ohos.window:window.getwindowproperties) toobtain the window ID. |
+| windowIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | List of window IDs. If a child window ID is passed in, it will not take effect.The window ID is an integer greater than 0. You are advised to call [getWindowProperties()](@ohos.window:window.getwindowproperties) to obtain the window ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -39,7 +40,7 @@ for the main window of an application or system windows. This API uses a promise
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Function addVirtualScreenBlocklist can not work correctlydue to limited device capabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Function addVirtualScreenBlocklist can not work correctly due to limited device capabilities. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 **Example**

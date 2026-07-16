@@ -1,13 +1,12 @@
 # IntentEntity
 
-Defines the struct of an intent entity. It represents key information objects involved during intent execution,
-including intent parameters and execution results.
+Defines the struct of an intent entity. It represents key information objects involved during intent execution,including intent parameters and execution results.
 
-You can define intent entities by inheriting this class. The child class must be decorated with
-[@InsightIntentEntity](../../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententity)
-.
+You can define intent entities by inheriting this class. The child class must be decorated with [@InsightIntentEntity](../../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententity).
 
 **Since:** 20
+
+<!--Device-insightIntent-interface IntentEntity--><!--Device-insightIntent-interface IntentEntity-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -32,6 +31,8 @@ ID of the intent entity.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-IntentEntity-entityId: string--><!--Device-IntentEntity-entityId: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

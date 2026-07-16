@@ -4,6 +4,8 @@ Provides interaction methods such as pairing and connection with remote devices.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare namespace remoteDevice--><!--Device-unnamed-declare namespace remoteDevice-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import

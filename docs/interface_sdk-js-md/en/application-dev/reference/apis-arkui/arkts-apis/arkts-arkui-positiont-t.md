@@ -12,6 +12,8 @@ Sets or returns the position of the component.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-unnamed-export type PositionT<T> = Vector2T<T>--><!--Device-unnamed-export type PositionT<T> = Vector2T<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** Vector2T<T>

@@ -16,6 +16,8 @@ Stop current cast and disconnect device connection.
 
 **Since:** 10
 
+<!--Device-avSession-function stopCasting(session: SessionToken, callback: AsyncCallback<void>): void--><!--Device-avSession-function stopCasting(session: SessionToken, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -24,8 +26,8 @@ Stop current cast and disconnect device connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| session | SessionToken | Yes | Specifies the sessionId which is to be stopped. |
-| callback | AsyncCallback&lt;void&gt; | Yes | A callback instance used to return when cast stopped completed. |
+| session | [SessionToken](arkts-avsession-sessiontoken-i-sys.md) | Yes | Specifies the sessionId which is to be stopped. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | A callback instance used to return when cast stopped completed. |
 
 **Error codes:**
 
@@ -59,6 +61,8 @@ Stop current cast and disconnect device connection.
 
 **Since:** 10
 
+<!--Device-avSession-function stopCasting(session: SessionToken): Promise<void>--><!--Device-avSession-function stopCasting(session: SessionToken): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -67,13 +71,13 @@ Stop current cast and disconnect device connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| session | SessionToken | Yes | Specifies the sessionId which is to be stopped. |
+| session | [SessionToken](arkts-avsession-sessiontoken-i-sys.md) | Yes | Specifies the sessionId which is to be stopped. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise for the result |
 
 **Error codes:**
 

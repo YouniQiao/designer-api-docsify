@@ -1,5 +1,11 @@
 # disableAbility（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { config } from '@kit.AccessibilityKit';
+```
+
 ## disableAbility
 
 ```TypeScript
@@ -11,6 +17,8 @@ function disableAbility(name: string): Promise<void>
 **起始版本：** 9
 
 **需要权限：** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
+
+<!--Device-config-function disableAbility(name: string): Promise<void>--><!--Device-config-function disableAbility(name: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -26,7 +34,7 @@ function disableAbility(name: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -66,6 +74,8 @@ function disableAbility(name: string, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
+<!--Device-config-function disableAbility(name: string, callback: AsyncCallback<void>): void--><!--Device-config-function disableAbility(name: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -75,7 +85,7 @@ function disableAbility(name: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 辅助应用的名称，格式为：'bundleName/abilityName'。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。 |
 
 **错误码：**
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace contact--><!--Device-unnamed-declare namespace contact-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
+
+## 导入模块
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+```
 
 ## 汇总
 
@@ -24,7 +32,7 @@
 | [deleteContact](arkts-contacts-deletecontact-f.md#deletecontact-4) | 删除联系人。使用Promise异步回调。 |
 | [hasMatchedCallLog](arkts-contacts-hasmatchedcalllog-f.md#hasmatchedcalllog-1) | 检查是否有符合条件的通话记录，默认查询6小时以内的通话记录，仅针对运营商通话。使用Promise异步回调。 |
 | [hasMatchedCallLog](arkts-contacts-hasmatchedcalllog-f.md#hasmatchedcalllog-2) | 检查是否有符合条件的通话记录，仅针对运营商通话。使用Promise异步回调。 |
-| [importContactsViaUI](arkts-contacts-importcontactsviaui-f.md#importcontactsviaui-1) | 通过UI交互批量导入多个联系人。 每次最多可导入100个联系人。 |
+| [importContactsViaUI](arkts-contacts-importcontactsviaui-f.md#importcontactsviaui-1) | 通过UI交互批量导入多个联系人。每次最多可导入100个联系人。 |
 | [isLocalContact](arkts-contacts-islocalcontact-f.md#islocalcontact-1) | 判断当前联系人id是否在电话簿中。使用callback异步回调。 |
 | [isLocalContact](arkts-contacts-islocalcontact-f.md#islocalcontact-2) | 判断当前联系人id是否在电话簿中。使用callback异步回调。 |
 | [isLocalContact](arkts-contacts-islocalcontact-f.md#islocalcontact-3) | 判断当前联系人id是否在电话簿中。使用Promise异步回调。 |
@@ -104,7 +112,7 @@
 | [selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2) | 调用选择联系人接口，打开选择联系人UI界面。使用Promise异步回调。 |
 | [selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-3) | 调用选择联系人接口，打开选择联系人UI界面（选择联系人时支持传入[筛选条件](arkts-contacts-contactselectionoptions-i.md)）。使用callback异步回调。 |
 | [selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-4) | 调用选择联系人接口，打开选择联系人UI界面（选择联系人时支持传入筛选条件）。使用Promise异步回调。 |
-| [syncContacts](arkts-contacts-synccontacts-f.md#synccontacts-1) | 批量同步多个联系人至联系人数据库。 最多可批量同步400个联系人。调用方必须处于前台。 |
+| [syncContacts](arkts-contacts-synccontacts-f.md#synccontacts-1) | 批量同步多个联系人至联系人数据库。最多可批量同步400个联系人。调用方必须处于前台。 |
 | [updateContact](arkts-contacts-updatecontact-f.md#updatecontact-1) | 更新联系人。使用callback异步回调。 |
 | [updateContact](arkts-contacts-updatecontact-f.md#updatecontact-2) | 更新联系人。使用callback异步回调。 |
 | [updateContact](arkts-contacts-updatecontact-f.md#updatecontact-3) | 更新联系人，支持传入联系人的属性列表。使用callback异步回调。 |
@@ -128,7 +136,7 @@
 | [Note](arkts-contacts-note-c.md) | 联系人的备注类。 |
 | [Organization](arkts-contacts-organization-c.md) | 联系人的组织类。 |
 | [PhoneNumber](arkts-contacts-phonenumber-c.md) | 联系人电话号码类。 |
-| [Portrait](arkts-contacts-portrait-c.md) | 联系人的头像类。@link @ohos.multimedia.image:image.PixelMap}格式设置联系人头像资源(暂不支持通过&gt; [addContactViaUI](arkts-contacts-addcontactviaui-f.md#addcontactviaui-1)、&gt; [saveToExistingContactViaUI](arkts-contacts-savetoexistingcontactviaui-f.md#savetoexistingcontactviaui-1)接口设置)。&gt; &gt; uri为可访问的联系人头像文件地址，[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md)为通过联系人头像资源生成的&gt; [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md)对象。&gt; &gt; 从API version 22开始，支持通过uri格式读取联系人头像资源，该格式仅支持以&gt; [fs.open](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-open-f.md#open-1)方式打开，无法直接在Image组件内显示，需读取后转换为&gt; [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md)格式显示。 |
+| [Portrait](arkts-contacts-portrait-c.md) | 联系人的头像类。 |
 | [PostalAddress](arkts-contacts-postaladdress-c.md) | 联系人的邮政地址类。 |
 | [Relation](arkts-contacts-relation-c.md) | 联系人的关系类。 |
 | [SipAddress](arkts-contacts-sipaddress-c.md) | 联系人的会话发起协议(SIP)地址类。 |

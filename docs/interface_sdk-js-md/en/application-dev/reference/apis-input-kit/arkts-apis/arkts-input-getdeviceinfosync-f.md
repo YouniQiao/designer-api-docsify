@@ -16,19 +16,21 @@ Obtains information about the specified input device.
 
 **Since:** 10
 
+<!--Device-inputDevice-function getDeviceInfoSync(deviceId: int): InputDeviceData--><!--Device-inputDevice-function getDeviceInfoSync(deviceId: int): InputDeviceData-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | number | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled orrestarted, its ID may change. |
+| deviceId | number | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| InputDeviceData | Information about the input device, including the device ID, name, supported source,physical address, version information, and product information. |
+| [InputDeviceData](arkts-input-inputdevicedata-i.md) | Information about the input device, including the device ID, name, supported source,physical address, version information, and product information. |
 
 **Error codes:**
 

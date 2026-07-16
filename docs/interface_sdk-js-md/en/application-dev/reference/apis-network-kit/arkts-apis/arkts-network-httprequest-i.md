@@ -1,9 +1,10 @@
 # HttpRequest
 
-<p>Defines an HTTP request task. Before invoking APIs provided by HttpRequest,
-you must call createHttp() to create an HttpRequestTask object.</p>
+<p>Defines an HTTP request task. Before invoking APIs provided by HttpRequest,you must call createHttp() to create an HttpRequestTask object.</p>
 
 **Since:** 11
+
+<!--Device-http-export interface HttpRequest--><!--Device-http-export interface HttpRequest-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -24,6 +25,8 @@ Destroys an HTTP request.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-HttpRequest-destroy(): void--><!--Device-HttpRequest-destroy(): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -56,6 +59,8 @@ Sets whether to automatically reply with cookies.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HttpRequest-enableAutoCookie(enable: boolean): void--><!--Device-HttpRequest-enableAutoCookie(enable: boolean): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -131,6 +136,8 @@ Unregisters the observer for HTTP Response Header events.
 
 **Substitutes:** [off_headersReceive](arkts-network-httprequest-i.md#off-2)
 
+<!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void--><!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -138,7 +145,7 @@ Unregisters the observer for HTTP Response Header events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "headerReceive" | Yes | Indicates Event name. |
-| callback | AsyncCallback&lt;Object&gt; | No | the callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Object> | No | the callback used to return the result. |
 
 **Example**
 
@@ -170,6 +177,8 @@ Unregisters the observer for HTTP Response Header events.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HttpRequest-off(type: "headersReceive", callback?: Callback<Object>): void--><!--Device-HttpRequest-off(type: "headersReceive", callback?: Callback<Object>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -177,7 +186,7 @@ Unregisters the observer for HTTP Response Header events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "headersReceive" | Yes | Indicates Event name. |
-| callback | Callback&lt;Object&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Object> | No | the callback used to return the result. |
 
 **Example**
 
@@ -215,6 +224,8 @@ Unregisters an observer for receiving HTTP Response data events continuously.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-HttpRequest-off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void--><!--Device-HttpRequest-off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -222,7 +233,7 @@ Unregisters an observer for receiving HTTP Response data events continuously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "dataReceive" | Yes | Indicates Event name. |
-| callback | Callback&lt;ArrayBuffer&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ArrayBuffer> | No | the callback used to return the result. |
 
 **Example**
 
@@ -260,6 +271,8 @@ Unregisters an observer for receiving HTTP Response data ends events.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-HttpRequest-off(type: "dataEnd", callback?: Callback<void>): void--><!--Device-HttpRequest-off(type: "dataEnd", callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -267,7 +280,7 @@ Unregisters an observer for receiving HTTP Response data ends events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "dataEnd" | Yes | Indicates Event name. |
-| callback | Callback&lt;void&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | the callback used to return the result. |
 
 **Example**
 
@@ -305,6 +318,8 @@ Unregisters an observer for progress of receiving HTTP Response data events.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-HttpRequest-off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): void--><!--Device-HttpRequest-off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -312,7 +327,7 @@ Unregisters an observer for progress of receiving HTTP Response data events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataReceiveProgress' | Yes | Indicates Event name. |
-| callback | Callback&lt;DataReceiveProgressInfo&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DataReceiveProgressInfo> | No | the callback used to return the result. |
 
 **Example**
 
@@ -350,6 +365,8 @@ Unregisters an observer for progress of sendSize HTTP Response data events.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-HttpRequest-off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void--><!--Device-HttpRequest-off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -357,7 +374,7 @@ Unregisters an observer for progress of sendSize HTTP Response data events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataSendProgress' | Yes | Indicates Event name. |
-| callback | Callback&lt;DataSendProgressInfo&gt; | No | the callback of off. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DataSendProgressInfo> | No | the callback of off. |
 
 **Example**
 
@@ -397,6 +414,8 @@ Registers an observer for HTTP Response Header events.
 
 **Substitutes:** [on_headersReceive](arkts-network-httprequest-i.md#on-2)
 
+<!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void--><!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -404,7 +423,7 @@ Registers an observer for HTTP Response Header events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "headerReceive" | Yes | Indicates Event name. |
-| callback | AsyncCallback&lt;Object&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Object> | Yes | the callback used to return the result. |
 
 **Example**
 
@@ -442,6 +461,8 @@ Registers an observer for HTTP Response Header events.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HttpRequest-on(type: "headersReceive", callback: Callback<Object>): void--><!--Device-HttpRequest-on(type: "headersReceive", callback: Callback<Object>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -449,7 +470,7 @@ Registers an observer for HTTP Response Header events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "headersReceive" | Yes | Indicates Event name. |
-| callback | Callback&lt;Object&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Object> | Yes | the callback used to return the result. |
 
 **Example**
 
@@ -487,6 +508,8 @@ Registers an observer for receiving HTTP Response data events continuously.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-HttpRequest-on(type: "dataReceive", callback: Callback<ArrayBuffer>): void--><!--Device-HttpRequest-on(type: "dataReceive", callback: Callback<ArrayBuffer>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -494,7 +517,7 @@ Registers an observer for receiving HTTP Response data events continuously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "dataReceive" | Yes | Indicates Event name. |
-| callback | Callback&lt;ArrayBuffer&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ArrayBuffer> | Yes | the callback used to return the result. |
 
 **Example**
 
@@ -532,6 +555,8 @@ Registers an observer for receiving HTTP Response data ends events.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-HttpRequest-on(type: "dataEnd", callback: Callback<void>): void--><!--Device-HttpRequest-on(type: "dataEnd", callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -539,7 +564,7 @@ Registers an observer for receiving HTTP Response data ends events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "dataEnd" | Yes | Indicates Event name. |
-| callback | Callback&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | the callback used to return the result. |
 
 **Example**
 
@@ -577,6 +602,8 @@ Registers an observer for progress of receiving HTTP Response data events.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-HttpRequest-on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void--><!--Device-HttpRequest-on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -584,7 +611,7 @@ Registers an observer for progress of receiving HTTP Response data events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataReceiveProgress' | Yes | Indicates Event name. |
-| callback | Callback&lt;DataReceiveProgressInfo&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DataReceiveProgressInfo> | Yes | the callback used to return the result. |
 
 **Example**
 
@@ -622,6 +649,8 @@ Registers an observer for progress of sendSize HTTP Response data events.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-HttpRequest-on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void--><!--Device-HttpRequest-on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -629,7 +658,7 @@ Registers an observer for progress of sendSize HTTP Response data events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataSendProgress' | Yes | Indicates Event name. |
-| callback | Callback&lt;DataSendProgressInfo&gt; | Yes | the callback of on. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DataSendProgressInfo> | Yes | the callback of on. |
 
 **Example**
 
@@ -667,6 +696,8 @@ Registers a one-time observer for HTTP Response Header events.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-HttpRequest-once(type: "headersReceive", callback: Callback<Object>): void--><!--Device-HttpRequest-once(type: "headersReceive", callback: Callback<Object>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -674,7 +705,7 @@ Registers a one-time observer for HTTP Response Header events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "headersReceive" | Yes | Indicates Event name. |
-| callback | Callback&lt;Object&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Object> | Yes | the callback used to return the result. |
 
 **Example**
 
@@ -706,18 +737,18 @@ request(url: string, callback: AsyncCallback<HttpResponse>): void
 
 Initiates an HTTP request to a given URL. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set
-> **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-httprequestoptions-i.md) or call
-> [requestInStream](arkts-network-httprequest-i.md#requestinstream-1) to
-> initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions
-> earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold
+> **NOTE**  
+>  
+> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set  
+> **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-httprequestoptions-i.md) or call  
+> [requestInStream](arkts-network-httprequest-i.md#requestinstream-1) to  
+> initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions  
+> earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold  
 > will fail to be received.
 
 > (2) If you need to pass in cookies, add them to the **options** parameter.
 
-> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an
+> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an  
 > HTTP request.
 
 **Since:** 6
@@ -726,6 +757,8 @@ Initiates an HTTP request to a given URL. This API uses an asynchronous callback
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HttpRequest-request(url: string, callback: AsyncCallback<HttpResponse>): void--><!--Device-HttpRequest-request(url: string, callback: AsyncCallback<HttpResponse>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -733,7 +766,7 @@ Initiates an HTTP request to a given URL. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
-| callback | AsyncCallback&lt;HttpResponse&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<HttpResponse> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -772,7 +805,7 @@ Initiates an HTTP request to a given URL. This API uses an asynchronous callback
 | [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
 | [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
 | [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
-| 2300996 | The request was intercepted by the HTTP globalinterceptor.<br>**Applicable version:** 26.0.0 dynamic&static and later |
+| 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 dynamic&static and later |
 
 **Example**
 
@@ -818,21 +851,20 @@ httpRequest.request("EXAMPLE_URL", (err: Error, data: http.HttpResponse) => {
 request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): void
 ```
 
-Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to
-return the result.
+Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set
-> **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-httprequestoptions-i.md) or call
-> [requestInStream](arkts-network-httprequest-i.md#requestinstream-1) to
-> initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions
-> earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold
+> **NOTE**  
+>  
+> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set  
+> **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-httprequestoptions-i.md) or call  
+> [requestInStream](arkts-network-httprequest-i.md#requestinstream-1) to  
+> initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions  
+> earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold  
 > will fail to be received.
 
 > (2) If you need to pass in cookies, add them to the **options** parameter.
 
-> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an
+> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an  
 > HTTP request.
 
 **Since:** 6
@@ -841,6 +873,8 @@ return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HttpRequest-request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): void--><!--Device-HttpRequest-request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -848,8 +882,8 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
-| options | HttpRequestOptions | Yes | Request options. For details, see[HttpRequestOptions](arkts-network-httprequestoptions-i.md). |
-| callback | AsyncCallback&lt;HttpResponse&gt; | Yes | Callback used to return the result. If the operation issuccessful, the callback content is an [HttpResponse](arkts-network-httpresponse-i.md) object; otherwise, thecallback content is undefined. |
+| options | [HttpRequestOptions](arkts-network-httprequestoptions-i.md) | Yes | Request options. For details, see [HttpRequestOptions](arkts-network-httprequestoptions-i.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<HttpResponse> | Yes | Callback used to return the result. If the operation is successful, the callback content is an [HttpResponse](arkts-network-httpresponse-i.md) object; otherwise, the callback content is undefined. |
 
 **Error codes:**
 
@@ -888,7 +922,7 @@ return the result.
 | [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
 | [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
 | [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
-| 2300996 | The request was intercepted by the HTTP globalinterceptor.<br>**Applicable version:** 26.0.0 dynamic&static and later |
+| 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 dynamic&static and later |
 
 **Example**
 
@@ -984,21 +1018,20 @@ httpRequest.request("EXAMPLE_URL", options, (err: Error, data: http.HttpResponse
 request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>
 ```
 
-Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the
-result.
+Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the result.
 
-> **NOTE**
->
-> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set
-> **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-httprequestoptions-i.md) or call
-> [requestInStream](arkts-network-httprequest-i.md#requestinstream-1) to
-> initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions
-> earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold
+> **NOTE**  
+>  
+> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set  
+> **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-httprequestoptions-i.md) or call  
+> [requestInStream](arkts-network-httprequest-i.md#requestinstream-1) to  
+> initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions  
+> earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold  
 > will fail to be received.
 
 > (2) If you need to pass in cookies, add them to the **options** parameter.
 
-> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an
+> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an  
 > HTTP request.
 
 **Since:** 6
@@ -1007,6 +1040,8 @@ result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HttpRequest-request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>--><!--Device-HttpRequest-request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -1014,13 +1049,13 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
-| options | HttpRequestOptions | No | Request options. For details, see[HttpRequestOptions](arkts-network-httprequestoptions-i.md). |
+| options | [HttpRequestOptions](arkts-network-httprequestoptions-i.md) | No | Request options. For details, see [HttpRequestOptions](arkts-network-httprequestoptions-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HttpResponse&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HttpResponse> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1059,7 +1094,7 @@ result.
 | [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
 | [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
 | [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
-| 2300996 | The request was intercepted by the HTTP globalinterceptor.<br>**Applicable version:** 26.0.0 dynamic&static and later |
+| 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 dynamic&static and later |
 
 **Example**
 
@@ -1133,14 +1168,15 @@ promise.then((data:http.HttpResponse) => {
 requestInStream(url: string, callback: AsyncCallback<number>): void
 ```
 
-Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to
-return the result, which is a streaming response.
+Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result, which is a streaming response.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-HttpRequest-requestInStream(url: string, callback: AsyncCallback<int>): void--><!--Device-HttpRequest-requestInStream(url: string, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -1149,7 +1185,7 @@ return the result, which is a streaming response.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the request is successful,**err** is **undefined**, and the HTTP result code is returned. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the request is successful,**err** is **undefined**, and the HTTP result code is returned. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1188,7 +1224,7 @@ return the result, which is a streaming response.
 | [2300999](../errorcode-net-http.md#2300999-internal-error) | Unknown error. |
 | [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
 | [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
-| 2300996 | The request was intercepted by the HTTP globalinterceptor.<br>**Applicable version:** 26.0.0 dynamic, 26.1.0 static and later |
+| 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 dynamic, 26.1.0 static and later |
 
 **Example**
 
@@ -1228,14 +1264,15 @@ httpRequest.requestInStream("EXAMPLE_URL", (err: BusinessError, data: number) =>
 requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<number>): void
 ```
 
-Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to
-return the result, which is a streaming response.
+Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result, which is a streaming response.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-HttpRequest-requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<int>): void--><!--Device-HttpRequest-requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -1244,8 +1281,8 @@ return the result, which is a streaming response.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
-| options | HttpRequestOptions | Yes | Request options. For details, see[HttpRequestOptions](arkts-network-httprequestoptions-i.md). |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the request is successful,**err** is **undefined**, and the [HTTP result code](arkts-network-responsecode-e.md) is returned. Otherwise, **err**is an error object. |
+| options | [HttpRequestOptions](arkts-network-httprequestoptions-i.md) | Yes | Request options. For details, see [HttpRequestOptions](arkts-network-httprequestoptions-i.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the request is successful,**err** is **undefined**, and the [HTTP result code](arkts-network-responsecode-e.md) is returned. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1284,7 +1321,7 @@ return the result, which is a streaming response.
 | [2300999](../errorcode-net-http.md#2300999-internal-error) | Unknown error. |
 | [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
 | [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
-| 2300996 | The request was intercepted by the HTTP globalinterceptor.<br>**Applicable version:** 26.0.0 dynamic, 26.1.0 static and later |
+| 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 dynamic, 26.1.0 static and later |
 
 **Example**
 
@@ -1368,14 +1405,15 @@ httpRequest.requestInStream("EXAMPLE_URL", options, (err: BusinessError<void> , 
 requestInStream(url: string, options?: HttpRequestOptions): Promise<number>
 ```
 
-Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the
-result, which is a streaming response.
+Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the result, which is a streaming response.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-HttpRequest-requestInStream(url: string, options?: HttpRequestOptions): Promise<int>--><!--Device-HttpRequest-requestInStream(url: string, options?: HttpRequestOptions): Promise<int>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -1384,13 +1422,13 @@ result, which is a streaming response.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
-| options | HttpRequestOptions | No | Request options. For details, see[HttpRequestOptions](arkts-network-httprequestoptions-i.md). |
+| options | [HttpRequestOptions](arkts-network-httprequestoptions-i.md) | No | Request options. For details, see [HttpRequestOptions](arkts-network-httprequestoptions-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the [result](arkts-network-responsecode-e.md). |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the [result](arkts-network-responsecode-e.md). |
 
 **Error codes:**
 
@@ -1429,7 +1467,7 @@ result, which is a streaming response.
 | [2300999](../errorcode-net-http.md#2300999-internal-error) | Unknown error. |
 | [2300998](../errorcode-net-http.md#2300998-domain-access-denied) | It is not allowed to access this domain.<br>**Applicable version:** 12 and later |
 | [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) | Cleartext traffic not permitted.<br>**Applicable version:** 18 and later |
-| 2300996 | The request was intercepted by the HTTP globalinterceptor.<br>**Applicable version:** 26.0.0 dynamic, 26.1.0 static and later |
+| 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 dynamic, 26.1.0 static and later |
 
 **Example**
 
@@ -1491,17 +1529,16 @@ promise.then((data: number) => {
 requestSync(url: string, options?: HttpRequestOptions): HttpResponse
 ```
 
-Initiates an HTTP network request based on the URL and related configuration options (optional). This API returns
-the response synchronously.
+Initiates an HTTP network request based on the URL and related configuration options (optional). This API returns the response synchronously.
 
-> **NOTE**
->
-> (1) This API can receive data of up to 50 MB. To receive more than 50 MB of data, set the **maxLimit**
+> **NOTE**  
+>  
+> (1) This API can receive data of up to 50 MB. To receive more than 50 MB of data, set the **maxLimit**  
 > parameter in [HttpRequestOptions](arkts-network-httprequestoptions-i.md).
 
 > (2) If you need to pass in cookies, add them to the **options** parameter.
 
-> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an
+> (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an  
 > HTTP request.
 
 > (4) This API is synchronous and blocks the current thread until an HTTP response or error code is returned.
@@ -1514,6 +1551,8 @@ the response synchronously.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HttpRequest-requestSync(url: string, options?: HttpRequestOptions): HttpResponse--><!--Device-HttpRequest-requestSync(url: string, options?: HttpRequestOptions): HttpResponse-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -1521,13 +1560,13 @@ the response synchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
-| options | HttpRequestOptions | No | Request options. For details, see[HttpRequestOptions](arkts-network-httprequestoptions-i.md). |
+| options | [HttpRequestOptions](arkts-network-httprequestoptions-i.md) | No | Request options. For details, see [HttpRequestOptions](arkts-network-httprequestoptions-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| HttpResponse | HTTP request response result that is returned synchronously. |
+| [HttpResponse](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-httpresponse-i.md) | HTTP request response result that is returned synchronously. |
 
 **Error codes:**
 

@@ -1,5 +1,11 @@
 # updateContinuationState
 
+## 导入模块
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+```
+
 ## updateContinuationState
 
 ```TypeScript
@@ -21,7 +27,19 @@ function updateContinuationState(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-continuationManager-function updateContinuationState(
+    token: number,
+    deviceId: string,
+    status: DeviceConnectState,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-continuationManager-function updateContinuationState(
+    token: number,
+    deviceId: string,
+    status: DeviceConnectState,
+    callback: AsyncCallback<void>
+  ): void-End-->
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
@@ -31,8 +49,8 @@ function updateContinuationState(
 | --- | --- | --- | --- |
 | token | number | 是 | 注册后的token。 |
 | deviceId | string | 是 | 设备ID。 |
-| status | DeviceConnectState | 是 | 设备连接状态。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当通知设备成功，err为undefined，否则返回错误对象。 |
+| status | [DeviceConnectState](arkts-ability-deviceconnectstate-e.md) | 是 | 设备连接状态。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当通知设备成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
@@ -81,7 +99,9 @@ function updateContinuationState(token: number, deviceId: string, status: Device
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-continuationManager-function updateContinuationState(token: number, deviceId: string, status: DeviceConnectState): Promise<void>--><!--Device-continuationManager-function updateContinuationState(token: number, deviceId: string, status: DeviceConnectState): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
@@ -91,13 +111,13 @@ function updateContinuationState(token: number, deviceId: string, status: Device
 | --- | --- | --- | --- |
 | token | number | 是 | 注册后的token。 |
 | deviceId | string | 是 | 设备ID。 |
-| status | DeviceConnectState | 是 | 设备连接状态。 |
+| status | [DeviceConnectState](arkts-ability-deviceconnectstate-e.md) | 是 | 设备连接状态。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise形式返回接口调用结果。 |
+| Promise<void> | Promise形式返回接口调用结果。 |
 
 **错误码：**
 

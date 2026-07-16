@@ -16,14 +16,16 @@ Obtains the bundle name of a WantAgent.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-wantAgent-function getBundleName(agent: WantAgent, callback: AsyncCallback<string>): void--><!--Device-wantAgent-function getBundleName(agent: WantAgent, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | WantAgent | Yes | whose bundle name to obtain. |
-| callback | AsyncCallback&lt;string&gt; | Yes | A callback method to obtain the package name of the WantAgent instance. |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | whose bundle name to obtain. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | A callback method to obtain the package name of the WantAgent instance. |
 
 **Example**
 
@@ -97,19 +99,21 @@ Obtains the bundle name of a WantAgent.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-wantAgent-function getBundleName(agent: WantAgent): Promise<string>--><!--Device-wantAgent-function getBundleName(agent: WantAgent): Promise<string>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | WantAgent | Yes | whose bundle name to obtain. |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | whose bundle name to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the bundle name of the {@link WantAgent} if any. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the bundle name of the {@link WantAgent} if any. |
 
 **Example**
 

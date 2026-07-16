@@ -8,6 +8,8 @@ The ResourceManager callback.
 
 **Substitutes:** [base:AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)
 
+<!--Device-resourceManager-export interface AsyncCallback<T>--><!--Device-resourceManager-export interface AsyncCallback<T>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 ## Modules to Import
@@ -30,12 +32,14 @@ Defines an asynchronous callback that carries an error parameter and asynchronou
 
 **Substitutes:** [base:AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)
 
+<!--Device-AsyncCallback-(err: Error, data: T): void--><!--Device-AsyncCallback-(err: Error, data: T): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| err | Error | Yes | Error message returned when the API fails to be called. |
+| err | [Error](../../apis-na/arkts-apis/arkts-na-error-i.md) | Yes | Error message returned when the API fails to be called. |
 | data | T | Yes | Callback invoked when the API is called. |
 

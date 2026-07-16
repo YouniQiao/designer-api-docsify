@@ -4,6 +4,8 @@
 
 **Deprecated since:** 6
 
+<!--Device-unnamed-export interface GetStorageOptions--><!--Device-unnamed-export interface GetStorageOptions-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 ## complete
@@ -22,6 +24,8 @@ Called when the execution is completed.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-GetStorageOptions-complete?: () => void--><!--Device-GetStorageOptions-complete?: () => void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 ## default
@@ -30,8 +34,7 @@ Called when the execution is completed.
 default?: string
 ```
 
-Default value returned when the key does not exist.
-If this parameter is not specified, an empty string is returned.
+Default value returned when the key does not exist.If this parameter is not specified, an empty string is returned.
 
 **Type:** string
 
@@ -40,6 +43,8 @@ If this parameter is not specified, an empty string is returned.
 **Deprecated since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-GetStorageOptions-default?: string--><!--Device-GetStorageOptions-default?: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
@@ -59,6 +64,8 @@ Called when the stored content fails to be read.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-GetStorageOptions-fail?: (data: string, code: number) => void--><!--Device-GetStorageOptions-fail?: (data: string, code: number) => void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 ## key
@@ -67,8 +74,7 @@ Called when the stored content fails to be read.
 key: string
 ```
 
-Content index.
-the value contains a maximum of 32 characters and cannot contain special characters such as \/"*+,:;<=>?[]|\x7F.
+Content index.the value contains a maximum of 32 characters and cannot contain special characters such as \/"*+,:;<=>?[]|\x7F.
 
 **Type:** string
 
@@ -77,6 +83,8 @@ the value contains a maximum of 32 characters and cannot contain special charact
 **Deprecated since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-GetStorageOptions-key: string--><!--Device-GetStorageOptions-key: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
@@ -95,6 +103,8 @@ Called when the stored content is read successfully.
 **Deprecated since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-GetStorageOptions-success?: (data: any) => void--><!--Device-GetStorageOptions-success?: (data: any) => void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 

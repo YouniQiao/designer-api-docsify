@@ -4,6 +4,8 @@ Firewall policy.
 
 **Since:** 15
 
+<!--Device-netFirewall-interface NetFirewallPolicy--><!--Device-netFirewall-interface NetFirewallPolicy-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Inbound connections are allowed or denied by default.
 
 **Since:** 15
 
+<!--Device-NetFirewallPolicy-inAction: FirewallRuleAction--><!--Device-NetFirewallPolicy-inAction: FirewallRuleAction-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## isOpen
@@ -38,6 +42,8 @@ Whether the firewall is open.
 
 **Since:** 15
 
+<!--Device-NetFirewallPolicy-isOpen: boolean--><!--Device-NetFirewallPolicy-isOpen: boolean-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## outAction
@@ -51,6 +57,8 @@ Outbound connections are allowed or denied by default.
 **Type:** FirewallRuleAction
 
 **Since:** 15
+
+<!--Device-NetFirewallPolicy-outAction: FirewallRuleAction--><!--Device-NetFirewallPolicy-outAction: FirewallRuleAction-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 

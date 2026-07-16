@@ -4,6 +4,8 @@ Represents statistics about SQL statements executed by the database.
 
 **Since:** 12
 
+<!--Device-relationalStore-interface SqlExecutionInfo--><!--Device-relationalStore-interface SqlExecutionInfo-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Time used to execute the SQL statements, in μs.
 
 **Since:** 12
 
+<!--Device-SqlExecutionInfo-executeTime: long--><!--Device-SqlExecutionInfo-executeTime: long-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## prepareTime
@@ -38,6 +42,8 @@ Time used to get the SQL statements ready and bind parameters, in μs.
 
 **Since:** 12
 
+<!--Device-SqlExecutionInfo-prepareTime: long--><!--Device-SqlExecutionInfo-prepareTime: long-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## sql
@@ -46,13 +52,13 @@ Time used to get the SQL statements ready and bind parameters, in μs.
 sql: Array<string>
 ```
 
-SQL statements executed. If the value of [batchInsert]
-{@link @ohos.data.relationalStore:relationalStore.RdbStore.batchInsert(table: string)} is too large, multiple
-SQL statements may be executed.
+SQL statements executed. If the value of [batchInsert](@ohos.data.relationalStore:relationalStore.RdbStore.batchInsert(table: string)) is too large, multiple SQL statements may be executed.
 
 **Type:** Array<string>
 
 **Since:** 12
+
+<!--Device-SqlExecutionInfo-sql: Array<string>--><!--Device-SqlExecutionInfo-sql: Array<string>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -68,6 +74,8 @@ Total time used to execute the SQL statements, in μs.
 
 **Since:** 12
 
+<!--Device-SqlExecutionInfo-totalTime: long--><!--Device-SqlExecutionInfo-totalTime: long-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## waitTime
@@ -81,6 +89,8 @@ Time used to obtain the handle, in μs.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-SqlExecutionInfo-waitTime: long--><!--Device-SqlExecutionInfo-waitTime: long-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 

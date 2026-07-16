@@ -24,14 +24,16 @@ Obtains the disabled status of a setting item.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-restrictions-function getUserRestricted(admin: Want, settingsItem: string): boolean--><!--Device-restrictions-function getUserRestricted(admin: Want, settingsItem: string): boolean-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| settingsItem | string | Yes | Setting item.<br>- **setEthernetIp**: Ethernet IP address configuration, currentlysupported only on PCs/2-in-1 devices.<br>- **setDeviceName**: device name configuration, currently supportedonly on PCs/2-in-1 devices, smartphones, and tablets. When it is disabled, the device name cannot be modifiedin the following settings: **About**, **Bluetooth**, and **More connectivity options** &gt; **NearLink** on PCs/2-in-1 devices, and **About**, **Bluetooth**, and **Personal hotspot** on smartphones and tablets.<br>-**setBiometricsAndScreenLock**: screen lock password configuration, currently supported only on PCs/2-in-1devices, smartphones, and tablets. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| settingsItem | string | Yes | Setting item.<br>- **setEthernetIp**: Ethernet IP address configuration, currently supported only on PCs/2-in-1 devices.<br>- **setDeviceName**: device name configuration, currently supported only on PCs/2-in-1 devices, smartphones, and tablets. When it is disabled, the device name cannot be modified in the following settings: **About**, **Bluetooth**, and **More connectivity options** &gt; **NearLink** on PCs/2-in-1 devices, and **About**, **Bluetooth**, and **Personal hotspot** on smartphones and tablets.<br>-**setBiometricsAndScreenLock**: screen lock password configuration, currently supported only on PCs/2-in-1devices, smartphones, and tablets. |
 
 **Return value:**
 
@@ -84,14 +86,16 @@ Gets whether users are restricted from changing specified settings items on the 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-restrictions-function getUserRestricted(admin: Want, settingsItem: SettingsForDevice): boolean--><!--Device-restrictions-function getUserRestricted(admin: Want, settingsItem: SettingsForDevice): boolean-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | admin indicates the administrator ability information. |
-| settingsItem | SettingsForDevice | Yes | settingsItem indicates the specific settings item to be disallowed. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md) | Yes | admin indicates the administrator ability information. |
+| settingsItem | [SettingsForDevice](arkts-mdm-settingsfordevice-e.md) | Yes | settingsItem indicates the specific settings item to be disallowed. |
 
 **Return value:**
 

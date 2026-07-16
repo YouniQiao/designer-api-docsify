@@ -1,11 +1,12 @@
 # ControlCenter
 
-ControlCenter inherits from [ControlCenterQuery](arkts-camera-controlcenterquery-i.md).
-It is used to enable the camera controller.
+ControlCenter inherits from [ControlCenterQuery](arkts-camera-controlcenterquery-i.md).It is used to enable the camera controller.
 
 **Inheritance/Implementation:** ControlCenter extends [ControlCenterQuery](arkts-camera-controlcenterquery-i.md)
 
 **Since:** 20
+
+<!--Device-camera-interface ControlCenter extends ControlCenterQuery--><!--Device-camera-interface ControlCenter extends ControlCenterQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -27,13 +28,15 @@ Enables the camera controller.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-ControlCenter-enableControlCenter(enabled: boolean): void--><!--Device-ControlCenter-enableControlCenter(enabled: boolean): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable or disable the camera controller. **true** to enable, **false**otherwise. |
+| enabled | boolean | Yes | Whether to enable or disable the camera controller. **true** to enable, **false** otherwise. |
 
 **Error codes:**
 

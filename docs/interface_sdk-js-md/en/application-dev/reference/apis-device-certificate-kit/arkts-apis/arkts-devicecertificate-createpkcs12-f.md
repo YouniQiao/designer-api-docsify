@@ -18,20 +18,22 @@ Creates P12. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-cert-function createPkcs12(data: Pkcs12Data, config: Pkcs12CreationConfig): Promise<Uint8Array>--><!--Device-cert-function createPkcs12(data: Pkcs12Data, config: Pkcs12CreationConfig): Promise<Uint8Array>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Pkcs12Data | Yes | P12 data object to be packed. |
-| config | Pkcs12CreationConfig | Yes | Configuration for creating the P12. |
+| data | [Pkcs12Data](arkts-devicecertificate-pkcs12data-i.md) | Yes | P12 data object to be packed. |
+| config | [Pkcs12CreationConfig](arkts-devicecertificate-pkcs12creationconfig-i.md) | Yes | Configuration for creating the P12. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the P12 created, in DER format. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Uint8Array> | Promise used to return the P12 created, in DER format. |
 
 **Error codes:**
 

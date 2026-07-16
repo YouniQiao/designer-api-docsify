@@ -4,6 +4,8 @@ Describes the contents of the discovery results
 
 **Since:** 18
 
+<!--Device-connection-interface DiscoveryResult--><!--Device-connection-interface DiscoveryResult-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ The class of the device
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DiscoveryResult-deviceClass: DeviceClass--><!--Device-DiscoveryResult-deviceClass: DeviceClass-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -45,6 +49,8 @@ Identify of the discovery device
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DiscoveryResult-deviceId: string--><!--Device-DiscoveryResult-deviceId: string-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -64,6 +70,8 @@ The local name of the device
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DiscoveryResult-deviceName: string--><!--Device-DiscoveryResult-deviceName: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -81,6 +89,8 @@ RSSI of the remote device
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DiscoveryResult-rssi: int--><!--Device-DiscoveryResult-rssi: int-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

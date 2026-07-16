@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare enum WindowMode--><!--Device-unnamed-declare enum WindowMode-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 ## FULLSCREEN
@@ -16,7 +18,9 @@ FULLSCREEN = 0
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WindowMode-FULLSCREEN = 0--><!--Device-WindowMode-FULLSCREEN = 0-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -30,7 +34,9 @@ PRIMARY = 1
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WindowMode-PRIMARY = 1--><!--Device-WindowMode-PRIMARY = 1-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -44,7 +50,9 @@ SECONDARY = 2
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WindowMode-SECONDARY = 2--><!--Device-WindowMode-SECONDARY = 2-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -58,7 +66,9 @@ FLOATING = 3
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WindowMode-FLOATING = 3--><!--Device-WindowMode-FLOATING = 3-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 

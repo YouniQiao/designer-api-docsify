@@ -18,6 +18,8 @@ Writes the NDEF data to the connected NFC tag.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
+<!--Device-connectedTag-function write(data: number[]): Promise<void>--><!--Device-connectedTag-function write(data: number[]): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.ConnectedTag
 
 **Parameters:**
@@ -30,7 +32,7 @@ Writes the NDEF data to the connected NFC tag.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The void. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The void. |
 
 **Error codes:**
 
@@ -69,6 +71,8 @@ Writes the NDEF data to the connected NFC tag.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
+<!--Device-connectedTag-function write(data: number[], callback: AsyncCallback<void>): void--><!--Device-connectedTag-function write(data: number[], callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.ConnectedTag
 
 **Parameters:**
@@ -76,7 +80,7 @@ Writes the NDEF data to the connected NFC tag.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | number[] | Yes | Indicates the NDEF data to send, which is a byte array. |
-| callback | AsyncCallback&lt;void&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes |  |
 
 **Error codes:**
 

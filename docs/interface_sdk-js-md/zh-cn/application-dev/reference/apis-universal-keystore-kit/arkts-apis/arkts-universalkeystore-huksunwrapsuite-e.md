@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-huks-export enum HuksUnwrapSuite--><!--Device-huks-export enum HuksUnwrapSuite-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
 - API版本9-11：SystemCapability.Security.Huks.Extension
@@ -18,7 +20,9 @@ HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING = 1
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HuksUnwrapSuite-HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING = 1--><!--Device-HuksUnwrapSuite-HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING = 1-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -34,7 +38,9 @@ HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING = 2
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HuksUnwrapSuite-HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING = 2--><!--Device-HuksUnwrapSuite-HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING = 2-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -50,7 +56,9 @@ HUKS_UNWRAP_SUITE_SM2_SM4_ECB_NOPADDING = 5
 
 **起始版本：** 23
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HuksUnwrapSuite-HUKS_UNWRAP_SUITE_SM2_SM4_ECB_NOPADDING = 5--><!--Device-HuksUnwrapSuite-HUKS_UNWRAP_SUITE_SM2_SM4_ECB_NOPADDING = 5-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core
 

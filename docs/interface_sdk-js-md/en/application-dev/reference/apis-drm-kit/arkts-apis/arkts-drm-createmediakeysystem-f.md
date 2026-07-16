@@ -18,6 +18,8 @@ Creates a MediaKeySystem instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-drm-function createMediaKeySystem(name: string): MediaKeySystem--><!--Device-drm-function createMediaKeySystem(name: string): MediaKeySystem-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 **Parameters:**
@@ -30,7 +32,7 @@ Creates a MediaKeySystem instance.
 
 | Type | Description |
 | --- | --- |
-| MediaKeySystem | The MediaKeySystem instance. |
+| [MediaKeySystem](arkts-drm-mediakeysystem-i.md) | The MediaKeySystem instance. |
 
 **Error codes:**
 

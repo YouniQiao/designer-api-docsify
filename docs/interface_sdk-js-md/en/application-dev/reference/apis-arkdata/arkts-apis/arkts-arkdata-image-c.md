@@ -1,11 +1,12 @@
 # Image
 
-Represents the image data. It is a child class of [File](arkts-arkdata-file-c.md) and is used to describe
-images.
+Represents the image data. It is a child class of [File](arkts-arkdata-file-c.md) and is used to describe images.
 
 **Inheritance/Implementation:** Image extends [File](arkts-arkdata-file-c.md)
 
 **Since:** 10
+
+<!--Device-unifiedDataChannel-class Image extends File--><!--Device-unifiedDataChannel-class Image extends File-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -30,6 +31,8 @@ Indicates the uri of image
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Image-set imageUri(value: string)--><!--Device-Image-set imageUri(value: string)-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 

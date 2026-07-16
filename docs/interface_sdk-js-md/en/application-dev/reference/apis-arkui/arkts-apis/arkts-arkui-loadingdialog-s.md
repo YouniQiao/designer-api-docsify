@@ -4,6 +4,8 @@ Declare CustomDialog LoadingDialog
 
 **Since:** 18
 
+<!--Device-unnamed-export declare struct LoadingDialog--><!--Device-unnamed-export declare struct LoadingDialog-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Sets the LoadingDialog Controller.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-LoadingDialog-Controller: CustomDialogController--><!--Device-LoadingDialog-Controller: CustomDialogController-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## content
@@ -45,6 +49,8 @@ Sets the LoadingDialog content.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-LoadingDialog-content?: ResourceStr--><!--Device-LoadingDialog-content?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +70,8 @@ Custom Theme.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LoadingDialog-theme?: Theme | CustomTheme--><!--Device-LoadingDialog-theme?: Theme | CustomTheme-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## themeColorMode
@@ -81,6 +89,8 @@ Sets the LoadingDialog dark or light Mode.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LoadingDialog-themeColorMode?: ThemeColorMode--><!--Device-LoadingDialog-themeColorMode?: ThemeColorMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

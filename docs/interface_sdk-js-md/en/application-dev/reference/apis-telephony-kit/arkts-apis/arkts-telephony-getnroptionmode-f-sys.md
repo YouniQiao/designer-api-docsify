@@ -16,6 +16,8 @@ Get the option mode of NR.
 
 **Since:** 10
 
+<!--Device-radio-function getNROptionMode(slotId: int, callback: AsyncCallback<NROptionMode>): void--><!--Device-radio-function getNROptionMode(slotId: int, callback: AsyncCallback<NROptionMode>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -24,8 +26,8 @@ Get the option mode of NR.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slotindex number supported by the device. |
-| callback | AsyncCallback&lt;NROptionMode&gt; | Yes | Indicates the callback for getting the selection mode of NR. |
+| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<NROptionMode> | Yes | Indicates the callback for getting the selection mode of NR. |
 
 **Error codes:**
 
@@ -65,6 +67,8 @@ Get the option mode of NR.
 
 **Since:** 10
 
+<!--Device-radio-function getNROptionMode(slotId: int): Promise<NROptionMode>--><!--Device-radio-function getNROptionMode(slotId: int): Promise<NROptionMode>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -73,13 +77,13 @@ Get the option mode of NR.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slotindex number supported by the device. |
+| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NROptionMode&gt; | Returns the selection mode of NR. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NROptionMode> | Returns the selection mode of NR. |
 
 **Error codes:**
 

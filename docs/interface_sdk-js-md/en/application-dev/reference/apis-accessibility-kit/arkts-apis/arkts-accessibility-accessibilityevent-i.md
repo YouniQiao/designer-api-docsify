@@ -4,6 +4,8 @@ Defines an accessibility event.
 
 **Since:** 9
 
+<!--Device-unnamed-export declare interface AccessibilityEvent--><!--Device-unnamed-export declare interface AccessibilityEvent-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## Modules to Import
@@ -23,6 +25,8 @@ Component ID for auto-focusing. The default value is **0**.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-AccessibilityEvent-elementId?: long--><!--Device-AccessibilityEvent-elementId?: long-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -49,6 +53,10 @@ Event type.
 
 **Since:** 9
 
+<!--Device-AccessibilityEvent-eventType: accessibility.EventType | accessibility.WindowUpdateType |
+        TouchGuideType | GestureType | PageUpdateType--><!--Device-AccessibilityEvent-eventType: accessibility.EventType | accessibility.WindowUpdateType |
+        TouchGuideType | GestureType | PageUpdateType-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## extraInfo
@@ -57,12 +65,13 @@ Event type.
 extraInfo?: string
 ```
 
-Added or deleted text content carried by the **TextArea**, **TextInput**, **SearchField**, or **RichEdit**
-component. Set this parameter based on site requirements. No special restrictions.
+Added or deleted text content carried by the **TextArea**, **TextInput**, **SearchField**, or **RichEdit** component. Set this parameter based on site requirements. No special restrictions.
 
 **Type:** string
 
 **Since:** 20
+
+<!--Device-AccessibilityEvent-extraInfo?: string--><!--Device-AccessibilityEvent-extraInfo?: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -78,6 +87,8 @@ Target component where the event occurs.
 
 **Since:** 9
 
+<!--Device-AccessibilityEvent-target?: AccessibilityElement--><!--Device-AccessibilityEvent-target?: AccessibilityElement-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## textAnnouncedForAccessibility
@@ -92,6 +103,8 @@ Content for auto-broadcasting. Set the broadcast content based on the actual sce
 
 **Since:** 12
 
+<!--Device-AccessibilityEvent-textAnnouncedForAccessibility?: string--><!--Device-AccessibilityEvent-textAnnouncedForAccessibility?: string-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## timeStamp
@@ -105,6 +118,8 @@ Timestamp of the event, in milliseconds. The default value is **0**.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-AccessibilityEvent-timeStamp?: long--><!--Device-AccessibilityEvent-timeStamp?: long-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 

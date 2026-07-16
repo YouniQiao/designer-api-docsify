@@ -1,42 +1,50 @@
 # Position
 
-Describes the position of the window or component.
+Defines the position.
 
-**Since:** 20
+**Since:** 11
 
-**System capability:** SystemCapability.Window.SessionManager
+<!--Device-unnamed-declare interface Position--><!--Device-unnamed-declare interface Position-End-->
 
-## Modules to Import
-
-```TypeScript
-import { window } from '@kit.ArkUI';
-```
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## x
 
 ```TypeScript
-x: number
+x?: Length
 ```
 
-X coordinate, in px. The value must be an integer.
+Coordinate x of the Position.
 
-**Type:** number
+**Type:** Length
 
-**Since:** 20
+**Since:** 11
 
-**System capability:** SystemCapability.Window.SessionManager
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-Position-x?: Length--><!--Device-Position-x?: Length-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
 
 ```TypeScript
-y: number
+y?: Length
 ```
 
-Y coordinate, in px. The value must be an integer.
+Coordinate y of the Position.
 
-**Type:** number
+**Type:** Length
 
-**Since:** 20
+**Since:** 11
 
-**System capability:** SystemCapability.Window.SessionManager
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-Position-y?: Length--><!--Device-Position-y?: Length-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 

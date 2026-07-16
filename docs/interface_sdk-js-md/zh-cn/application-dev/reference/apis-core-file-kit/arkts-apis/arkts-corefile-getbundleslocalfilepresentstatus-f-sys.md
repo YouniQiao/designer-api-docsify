@@ -1,5 +1,11 @@
 # getBundlesLocalFilePresentStatus（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { cloudSyncManager } from '@kit.CoreFileKit';
+```
+
 ## getBundlesLocalFilePresentStatus
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getBundlesLocalFilePresentStatus(bundleNames: Array<string>): Promise<A
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
+<!--Device-cloudSyncManager-function getBundlesLocalFilePresentStatus(bundleNames: Array<string>): Promise<Array<LocalFilePresentStatus>>--><!--Device-cloudSyncManager-function getBundlesLocalFilePresentStatus(bundleNames: Array<string>): Promise<Array<LocalFilePresentStatus>>-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **系统接口：** 此接口为系统接口。
@@ -20,13 +28,13 @@ function getBundlesLocalFilePresentStatus(bundleNames: Array<string>): Promise<A
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleNames | Array&lt;string&gt; | 是 | 需要检测的应用包名数组。每个元素为应用的包名字符串。 |
+| bundleNames | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 需要检测的应用包名数组。每个元素为应用的包名字符串。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;LocalFilePresentStatus&gt;&gt; | Promise对象，返回对象数组，数组内每个对象包含指定检测的应用包名及其本地文件存在状态。 |
+| Promise<Array<LocalFilePresentStatus>> | Promise对象，返回对象数组，数组内每个对象包含指定检测的应用包名及其本地文件存在状态。 |
 
 **错误码：**
 

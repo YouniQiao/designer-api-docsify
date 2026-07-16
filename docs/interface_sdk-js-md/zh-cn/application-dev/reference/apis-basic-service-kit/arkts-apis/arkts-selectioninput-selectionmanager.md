@@ -2,15 +2,23 @@
 
 本模块提供划词管理能力，包括创建窗口、显示窗口、移动窗口、隐藏窗口、销毁窗口、监听鼠标划词事件、获取选中文本等。
 
-> **说明：**
-> - 本模块仅支持PC/2in1设备。
+> **说明：**  
+> - 本模块仅支持PC/2in1设备。  
 > - 仅支持集成了划词扩展的应用调用。
 
 **起始版本：** 24
 
+<!--Device-unnamed-declare namespace selectionManager--><!--Device-unnamed-declare namespace selectionManager-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { selectionManager } from '@kit.BasicServicesKit';
+```
 
 ## 汇总
 

@@ -18,13 +18,15 @@ function getUserGrantedEnabledBundles(): Promise<GrantedBundleInfo[]>
 
 **需要权限：** ohos.permission.SUBSCRIBE_NOTIFICATION
 
+<!--Device-notificationExtensionSubscription-function getUserGrantedEnabledBundles(): Promise<GrantedBundleInfo[]>--><!--Device-notificationExtensionSubscription-function getUserGrantedEnabledBundles(): Promise<GrantedBundleInfo[]>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;GrantedBundleInfo[]&gt; | Promise对象，返回获取指定应用中“已获取的本机通知”通知开关开启的应用列表。 |
+| Promise<GrantedBundleInfo[]> | Promise对象，返回获取指定应用中“已获取的本机通知”通知开关开启的应用列表。 |
 
 **错误码：**
 

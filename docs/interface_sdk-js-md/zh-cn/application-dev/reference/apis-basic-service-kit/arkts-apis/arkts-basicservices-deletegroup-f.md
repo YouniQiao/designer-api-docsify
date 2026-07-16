@@ -1,5 +1,11 @@
 # deleteGroup
 
+## 导入模块
+
+```TypeScript
+import { request } from '@kit.BasicServicesKit';
+```
+
 ## deleteGroup
 
 ```TypeScript
@@ -11,6 +17,8 @@ function deleteGroup(gid: string): Promise<void>
 当分组中的所有任务处于完成、失败或移除状态，并且分组被移除时，显示该分组的完成或失败通知。
 
 **起始版本：** 15
+
+<!--Device-agent-function deleteGroup(gid: string): Promise<void>--><!--Device-agent-function deleteGroup(gid: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -24,7 +32,7 @@ function deleteGroup(gid: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

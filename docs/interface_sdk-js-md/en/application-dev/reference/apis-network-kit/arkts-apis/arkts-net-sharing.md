@@ -4,6 +4,8 @@ Provides network sharing related interfaces.
 
 **Since:** 9
 
+<!--Device-unnamed-declare namespace sharing--><!--Device-unnamed-declare namespace sharing-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 ## Modules to Import

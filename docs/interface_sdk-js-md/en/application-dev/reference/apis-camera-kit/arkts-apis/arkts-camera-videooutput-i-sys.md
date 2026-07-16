@@ -1,11 +1,12 @@
 # VideoOutput
 
-**VideoOutput** implements output information used in a video session. It inherits from
-[CameraOutput](arkts-camera-cameraoutput-i.md).
+**VideoOutput** implements output information used in a video session. It inherits from [CameraOutput](arkts-camera-cameraoutput-i.md).
 
 **Inheritance/Implementation:** VideoOutput extends [CameraOutput](arkts-camera-cameraoutput-i.md)
 
 **Since:** 10
+
+<!--Device-camera-interface VideoOutput extends CameraOutput--><!--Device-camera-interface VideoOutput extends CameraOutput-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -25,6 +26,8 @@ Attach a meta surface to VideoOutput.
 
 **Since:** 12
 
+<!--Device-VideoOutput-attachMetaSurface(surfaceId: string, type: VideoMetaType): void--><!--Device-VideoOutput-attachMetaSurface(surfaceId: string, type: VideoMetaType): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -34,7 +37,7 @@ Attach a meta surface to VideoOutput.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | surfaceId | string | Yes | Surface object id used for receiving meta infos. |
-| type | VideoMetaType | Yes | Video meta type. |
+| type | [VideoMetaType](arkts-camera-videometatype-e-sys.md) | Yes | Video meta type. |
 
 **Error codes:**
 
@@ -53,6 +56,8 @@ enableAutoDeferredVideoEnhancement(enabled: boolean): void
 Enable auto deferred video enhancement if needed.
 
 **Since:** 13
+
+<!--Device-VideoOutput-enableAutoDeferredVideoEnhancement(enabled: boolean): void--><!--Device-VideoOutput-enableAutoDeferredVideoEnhancement(enabled: boolean): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -82,6 +87,8 @@ Enable auto frame rate for video capture.
 
 **Since:** 18
 
+<!--Device-VideoOutput-enableAutoVideoFrameRate(enabled: boolean): void--><!--Device-VideoOutput-enableAutoVideoFrameRate(enabled: boolean): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -107,15 +114,14 @@ enableMirror(enabled: boolean): void
 
 Enables or disables mirror recording.
 
-- Before calling this API, check whether mirror recording is supported by using
-[isMirrorSupported](arkts-camera-videooutput-i-sys.md#ismirrorsupported-1).
-- After enabling or disabling mirror recording, call
-[getVideoRotation](arkts-camera-videooutput-i.md#getvideorotation-1) to obtain the rotation angle and
-[updateRotation](../../apis-media-kit/arkts-apis/arkts-media-avrecorder-i.md#updaterotation-1) to update the rotation angle.
+- Before calling this API, check whether mirror recording is supported by using [isMirrorSupported](arkts-camera-videooutput-i-sys.md#ismirrorsupported-1).  
+- After enabling or disabling mirror recording, call [getVideoRotation](arkts-camera-videooutput-i.md#getvideorotation-1) to obtain the rotation angle and [updateRotation](../../apis-media-kit/arkts-apis/arkts-media-avrecorder-i.md#updaterotation-1) to update the rotation angle.
 
 **Since:** 15
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-VideoOutput-enableMirror(enabled: boolean): void--><!--Device-VideoOutput-enableMirror(enabled: boolean): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -145,6 +151,8 @@ Get supported video rotations.
 
 **Since:** 14
 
+<!--Device-VideoOutput-getSupportedRotations(): Array<ImageRotation>--><!--Device-VideoOutput-getSupportedRotations(): Array<ImageRotation>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -153,7 +161,7 @@ Get supported video rotations.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ImageRotation&gt; | The array of supported video rotations. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ImageRotation> | The array of supported video rotations. |
 
 **Error codes:**
 
@@ -171,6 +179,8 @@ Get supported video meta types.
 
 **Since:** 12
 
+<!--Device-VideoOutput-getSupportedVideoMetaTypes(): Array<VideoMetaType>--><!--Device-VideoOutput-getSupportedVideoMetaTypes(): Array<VideoMetaType>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -179,7 +189,7 @@ Get supported video meta types.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;VideoMetaType&gt; | The array of supported video meta type. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<VideoMetaType> | The array of supported video meta type. |
 
 **Error codes:**
 
@@ -197,6 +207,8 @@ isAutoDeferredVideoEnhancementEnabled(): boolean
 Confirm if auto deferred video enhancement is enabled.
 
 **Since:** 13
+
+<!--Device-VideoOutput-isAutoDeferredVideoEnhancementEnabled(): boolean--><!--Device-VideoOutput-isAutoDeferredVideoEnhancementEnabled(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -225,6 +237,8 @@ Confirm if auto deferred video enhancement is supported in the specific device.
 
 **Since:** 13
 
+<!--Device-VideoOutput-isAutoDeferredVideoEnhancementSupported(): boolean--><!--Device-VideoOutput-isAutoDeferredVideoEnhancementSupported(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -251,6 +265,8 @@ isAutoVideoFrameRateSupported(): boolean
 Determine whether auto frame rate is supported.
 
 **Since:** 18
+
+<!--Device-VideoOutput-isAutoVideoFrameRateSupported(): boolean--><!--Device-VideoOutput-isAutoVideoFrameRateSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -280,6 +296,8 @@ Checks whether mirror recording is supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-VideoOutput-isMirrorSupported(): boolean--><!--Device-VideoOutput-isMirrorSupported(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -288,7 +306,7 @@ Checks whether mirror recording is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of mirror recording. **true** if supported, **false**otherwise. If the API call fails, undefined is returned. |
+| boolean | Check result for the support of mirror recording. **true** if supported, **false** otherwise. If the API call fails, undefined is returned. |
 
 **Error codes:**
 
@@ -305,6 +323,8 @@ isRotationSupported(): boolean
 Determine whether video rotation is supported.
 
 **Since:** 14
+
+<!--Device-VideoOutput-isRotationSupported(): boolean--><!--Device-VideoOutput-isRotationSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -332,6 +352,8 @@ Unsubscribes from deferred video enhancement info callback.
 
 **Since:** 13
 
+<!--Device-VideoOutput-off(type: 'deferredVideoEnhancementInfo', callback?: AsyncCallback<DeferredVideoEnhancementInfo>): void--><!--Device-VideoOutput-off(type: 'deferredVideoEnhancementInfo', callback?: AsyncCallback<DeferredVideoEnhancementInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -341,7 +363,7 @@ Unsubscribes from deferred video enhancement info callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deferredVideoEnhancementInfo' | Yes | Event type. |
-| callback | AsyncCallback&lt;DeferredVideoEnhancementInfo&gt; | No | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DeferredVideoEnhancementInfo> | No | Callback used to return the result. |
 
 **Error codes:**
 
@@ -359,6 +381,8 @@ Subscribes deferred video enhancement info callback.
 
 **Since:** 13
 
+<!--Device-VideoOutput-on(type: 'deferredVideoEnhancementInfo', callback: AsyncCallback<DeferredVideoEnhancementInfo>): void--><!--Device-VideoOutput-on(type: 'deferredVideoEnhancementInfo', callback: AsyncCallback<DeferredVideoEnhancementInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -368,7 +392,7 @@ Subscribes deferred video enhancement info callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deferredVideoEnhancementInfo' | Yes | Event type. |
-| callback | AsyncCallback&lt;DeferredVideoEnhancementInfo&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DeferredVideoEnhancementInfo> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -386,6 +410,8 @@ Set a video rotation.
 
 **Since:** 14
 
+<!--Device-VideoOutput-setRotation(rotation: ImageRotation): void--><!--Device-VideoOutput-setRotation(rotation: ImageRotation): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -394,7 +420,7 @@ Set a video rotation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotation | ImageRotation | Yes | The rotation angle. |
+| rotation | [ImageRotation](arkts-camera-imagerotation-e.md) | Yes | The rotation angle. |
 
 **Error codes:**
 

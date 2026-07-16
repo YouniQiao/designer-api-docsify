@@ -18,6 +18,8 @@ Creates a **KeyAgreement** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-cryptoFramework-function createKeyAgreement(algName: string): KeyAgreement--><!--Device-cryptoFramework-function createKeyAgreement(algName: string): KeyAgreement-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.KeyAgreement
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
@@ -26,13 +28,13 @@ Creates a **KeyAgreement** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algName | string | Yes | Key agreement algorithm to use. In addition to ECDH, X25519 and DH are supported sinceAPI version 11.<br>For details about the supported specifications, see[Key Agreement Overview and Algorithm Specifications](../../../../security/CryptoArchitectureKit/crypto-key-agreement-overview.md). |
+| algName | string | Yes | Key agreement algorithm to use. In addition to ECDH, X25519 and DH are supported since API version 11.<br>For details about the supported specifications, see [Key Agreement Overview and Algorithm Specifications](../../../../security/CryptoArchitectureKit/crypto-key-agreement-overview.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| KeyAgreement | Returns the **KeyAgreement** instance created. |
+| [KeyAgreement](arkts-cryptoarchitecture-keyagreement-i.md) | Returns the **KeyAgreement** instance created. |
 
 **Error codes:**
 

@@ -12,11 +12,11 @@ import { omapi } from '@kit.ConnectivityKit';
 function createService(): Promise<SEService>
 ```
 
-Establish a new connection that can be used to connect to all the SEs available in the system.
-The connection process can be quite long, so it happens in an asynchronous way. It is usable only
-if isConnected() returns true.
+Establish a new connection that can be used to connect to all the SEs available in the system.The connection process can be quite long, so it happens in an asynchronous way. It is usable only if isConnected() returns true.
 
 **Since:** 12
+
+<!--Device-omapi-function createService(): Promise<SEService>--><!--Device-omapi-function createService(): Promise<SEService>-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
 
@@ -24,7 +24,7 @@ if isConnected() returns true.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SEService&gt; | Returns the created SEService instance. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SEService> | Returns the created SEService instance. |
 
 **Error codes:**
 

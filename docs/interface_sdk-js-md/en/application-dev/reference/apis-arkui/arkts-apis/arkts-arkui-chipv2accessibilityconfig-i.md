@@ -4,6 +4,8 @@ Defines accessibility config.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export interface ChipV2AccessibilityConfig--><!--Device-unnamed-export interface ChipV2AccessibilityConfig-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Set accessibility description.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2AccessibilityConfig-accessibilityDescription?: ResourceStr--><!--Device-ChipV2AccessibilityConfig-accessibilityDescription?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityLevel
@@ -48,6 +52,8 @@ Set accessibility level.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2AccessibilityConfig-accessibilityLevel?: string--><!--Device-ChipV2AccessibilityConfig-accessibilityLevel?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
@@ -65,6 +71,8 @@ Set accessibility text.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipV2AccessibilityConfig-accessibilityText?: ResourceStr--><!--Device-ChipV2AccessibilityConfig-accessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

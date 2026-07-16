@@ -18,16 +18,18 @@ Import contacts from the specified vcf file.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS and ohos.permission.READ_CONTACTS
 
+<!--Device-vcard-function importVCard(context: Context, filePath: string, accountId: int, callback: AsyncCallback<void>): void--><!--Device-vcard-function importVCard(context: Context, filePath: string, accountId: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application orcapability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
 | filePath | string | Yes | Vcf file path. |
-| accountId | number | Yes | Contact account ID. When the app chooses toimport the vcf file into a contact account,it needs to pass in the accountId. If the accountId is not passed, a newcontact account will be added by default. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of the function. |
+| accountId | number | Yes | Contact account ID. When the app chooses to import the vcf file into a contact account,it needs to pass in the accountId. If the accountId is not passed, a new contact account will be added by default. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of the function. |
 
 **Error codes:**
 
@@ -73,21 +75,23 @@ Import contacts from the specified vcf file.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS and ohos.permission.READ_CONTACTS
 
+<!--Device-vcard-function importVCard(context: Context, filePath: string, accountId?: int): Promise<void>--><!--Device-vcard-function importVCard(context: Context, filePath: string, accountId?: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application orcapability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
 | filePath | string | Yes | Vcf file path. |
-| accountId | number | No | Contact account ID.When the app chooses toimport the vcf file into a contact account,it needs to pass in the accountId. If the accountId is not passed, a newcontact account will be added by default. |
+| accountId | number | No | Contact account ID.When the app chooses to import the vcf file into a contact account,it needs to pass in the accountId. If the accountId is not passed, a new contact account will be added by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -134,15 +138,17 @@ Import contacts from the specified vcf file.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS and ohos.permission.READ_CONTACTS
 
+<!--Device-vcard-function importVCard(context: Context, filePath: string, callback: AsyncCallback<void>): void--><!--Device-vcard-function importVCard(context: Context, filePath: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application orcapability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
 | filePath | string | Yes | Vcf file path. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of the function. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of the function. |
 
 **Error codes:**
 

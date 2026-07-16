@@ -1,9 +1,10 @@
 # WhiteBalanceQuery (System API)
 
-WhiteBalanceQuery provides APIs to check whether a white balance mode is supported and obtain the white balance
-mode range supported.
+WhiteBalanceQuery provides APIs to check whether a white balance mode is supported and obtain the white balance mode range supported.
 
 **Since:** 20
+
+<!--Device-camera-interface WhiteBalanceQuery--><!--Device-camera-interface WhiteBalanceQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -27,6 +28,8 @@ Obtains the range of white balance values in manual white balance mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-WhiteBalanceQuery-getWhiteBalanceRange(): Array<int>--><!--Device-WhiteBalanceQuery-getWhiteBalanceRange(): Array<int>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -35,7 +38,7 @@ Obtains the range of white balance values in manual white balance mode.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Range of white balance values, for example, [2800, ...,10000], in units of K (Kelvin).The actual value depends on the bottom-layer capability. If the API call fails, undefined is returned. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Range of white balance values, for example, [2800, ...,10000], in units of K (Kelvin).The actual value depends on the bottom-layer capability. If the API call fails, undefined is returned. |
 
 **Error codes:**
 
@@ -56,6 +59,8 @@ Checks whether a white balance mode is supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-WhiteBalanceQuery-isWhiteBalanceModeSupported(mode: WhiteBalanceMode): boolean--><!--Device-WhiteBalanceQuery-isWhiteBalanceModeSupported(mode: WhiteBalanceMode): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -64,13 +69,13 @@ Checks whether a white balance mode is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | WhiteBalanceMode | Yes | White balance mode. |
+| mode | [WhiteBalanceMode](arkts-camera-whitebalancemode-e-sys.md) | Yes | White balance mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the white balance mode. **true** if supported, **false**otherwise. If the API call fails, undefined is returned. |
+| boolean | Check result for the support of the white balance mode. **true** if supported, **false** otherwise. If the API call fails, undefined is returned. |
 
 **Error codes:**
 

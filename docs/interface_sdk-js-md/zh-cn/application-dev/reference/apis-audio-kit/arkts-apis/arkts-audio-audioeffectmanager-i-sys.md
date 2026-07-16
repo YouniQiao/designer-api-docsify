@@ -4,9 +4,17 @@ Implements audio effect management.
 
 **起始版本：** 18
 
+<!--Device-audio-interface AudioEffectManager--><!--Device-audio-interface AudioEffectManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## getAudioEffectProperty
 
@@ -20,6 +28,8 @@ Gets current audio effect properties.
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
+<!--Device-AudioEffectManager-getAudioEffectProperty(): Array<AudioEffectProperty>--><!--Device-AudioEffectManager-getAudioEffectProperty(): Array<AudioEffectProperty>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -28,7 +38,7 @@ Gets current audio effect properties.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;AudioEffectProperty&gt; | Array of current audio effect properties. |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<AudioEffectProperty> | Array of current audio effect properties. |
 
 **错误码：**
 
@@ -65,6 +75,8 @@ Gets supported audio effect properties based on current devices.
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
+<!--Device-AudioEffectManager-getSupportedAudioEffectProperty(): Array<AudioEffectProperty>--><!--Device-AudioEffectManager-getSupportedAudioEffectProperty(): Array<AudioEffectProperty>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -73,7 +85,7 @@ Gets supported audio effect properties based on current devices.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;AudioEffectProperty&gt; | Array of supported audio effect properties. |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<AudioEffectProperty> | Array of supported audio effect properties. |
 
 **错误码：**
 
@@ -109,6 +121,8 @@ isAudioSeparationEffectSupported(): boolean
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioEffectManager-isAudioSeparationEffectSupported(): boolean--><!--Device-AudioEffectManager-isAudioSeparationEffectSupported(): boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -148,6 +162,8 @@ offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioEffectManager-offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void--><!--Device-AudioEffectManager-offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **系统接口：** 此接口为系统接口。
@@ -156,7 +172,7 @@ offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;boolean&gt; | 否 | 订阅函数中用于取消订阅的回调。如果不使用此参数，则之前在当前进程中订阅的所有回调都将被取消订阅 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | 否 | 订阅函数中用于取消订阅的回调。如果不使用此参数，则之前在当前进程中订阅的所有回调都将被取消订阅 |
 
 **错误码：**
 
@@ -180,13 +196,13 @@ audioEffectManager.offAudioSeparationEffectEnabledChange();
 onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void
 ```
 
-订阅系统音频分离效果使能状态变更事件。
-系统中的音频分离效果状态可由系统播放控制器应用设定，
-其他应用程序可以使用此函数来监听change事件。
+订阅系统音频分离效果使能状态变更事件。系统中的音频分离效果状态可由系统播放控制器应用设定，其他应用程序可以使用此函数来监听change事件。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioEffectManager-onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void--><!--Device-AudioEffectManager-onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -196,7 +212,7 @@ onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;boolean&gt; | 是 | 监听系统音频分离效果的回调启用状态更改事件 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | 是 | 监听系统音频分离效果的回调启用状态更改事件 |
 
 **错误码：**
 
@@ -227,6 +243,8 @@ Sets current audio effect properties.
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
+<!--Device-AudioEffectManager-setAudioEffectProperty(propertyArray: Array<AudioEffectProperty>): void--><!--Device-AudioEffectManager-setAudioEffectProperty(propertyArray: Array<AudioEffectProperty>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -235,7 +253,7 @@ Sets current audio effect properties.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| propertyArray | Array&lt;AudioEffectProperty&gt; | 是 | array of audio effect property to be set.Notice that only one effect property name in each effect property category should be set. |
+| propertyArray | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<AudioEffectProperty> | 是 | array of audio effect property to be set.Notice that only one effect property name in each effect property category should be set. |
 
 **错误码：**
 
@@ -268,15 +286,15 @@ try {
 setAudioSeparationEffectEnabled(enabled: boolean, uid: number, streamId?: number): Promise<void>
 ```
 
-设置特定应用进程的音频分离效果开关。
-或用于特定的音频播放流。
-该接口使用promise返回结果。
+设置特定应用进程的音频分离效果开关。或用于特定的音频播放流。该接口使用promise返回结果。
 
 **起始版本：** 26.0.0
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioEffectManager-setAudioSeparationEffectEnabled(enabled: boolean, uid: int, streamId?: long): Promise<void>--><!--Device-AudioEffectManager-setAudioSeparationEffectEnabled(enabled: boolean, uid: int, streamId?: long): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -294,7 +312,7 @@ setAudioSeparationEffectEnabled(enabled: boolean, uid: number, streamId?: number
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 不会返回任何值的Promise。 |
+| Promise<void> | 不会返回任何值的Promise。 |
 
 **错误码：**
 
@@ -334,6 +352,8 @@ setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: number):
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioEffectManager-setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: double): Promise<void>--><!--Device-AudioEffectManager-setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: double): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **系统接口：** 此接口为系统接口。
@@ -342,14 +362,14 @@ setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: number):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | AudioSeparationVolumeType | 是 | 要设置音量的类型 |
+| type | [AudioSeparationVolumeType](arkts-audio-audioseparationvolumetype-e-sys.md) | 是 | 要设置音量的类型 |
 | volume | number | 是 | 目标卷值。<br>取值范围：[0,1]。<br>Value range: [0,1]. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise<void> | Promise that returns no value. |
 
 **错误码：**
 

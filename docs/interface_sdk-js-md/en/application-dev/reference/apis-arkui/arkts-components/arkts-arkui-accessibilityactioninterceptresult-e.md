@@ -4,6 +4,8 @@ Enum for the result of accessibility action intercept function
 
 **Since:** 20
 
+<!--Device-unnamed-declare enum AccessibilityActionInterceptResult--><!--Device-unnamed-declare enum AccessibilityActionInterceptResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ACTION_INTERCEPT
@@ -21,6 +23,8 @@ intercept the accessibility action
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
+
+<!--Device-AccessibilityActionInterceptResult-ACTION_INTERCEPT = 0--><!--Device-AccessibilityActionInterceptResult-ACTION_INTERCEPT = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ the accessibility action can be continued
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
 
+<!--Device-AccessibilityActionInterceptResult-ACTION_CONTINUE = 1--><!--Device-AccessibilityActionInterceptResult-ACTION_CONTINUE = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ACTION_RISE
@@ -57,6 +63,8 @@ the accessibility action need to bubble up for execution
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 20.
+
+<!--Device-AccessibilityActionInterceptResult-ACTION_RISE = 2--><!--Device-AccessibilityActionInterceptResult-ACTION_RISE = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

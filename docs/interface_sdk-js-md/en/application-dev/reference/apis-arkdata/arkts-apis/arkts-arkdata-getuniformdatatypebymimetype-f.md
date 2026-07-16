@@ -12,12 +12,13 @@ import { uniformTypeDescriptor } from '@kit.ArkData';
 function getUniformDataTypeByMIMEType(mimeType: string, belongsTo?: string): string
 ```
 
-Obtains the uniform data type ID based on the given MIME type and data type. If there are multiple uniform data
-type IDs matching the conditions, the first one is returned.
+Obtains the uniform data type ID based on the given MIME type and data type. If there are multiple uniform data type IDs matching the conditions, the first one is returned.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-uniformTypeDescriptor-function getUniformDataTypeByMIMEType(mimeType: string, belongsTo?: string): string--><!--Device-uniformTypeDescriptor-function getUniformDataTypeByMIMEType(mimeType: string, belongsTo?: string): string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -26,13 +27,13 @@ type IDs matching the conditions, the first one is returned.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mimeType | string | Yes | MIME type. |
-| belongsTo | string | No | ID of the uniform data type, to which the data type to be obtained belongs. Thisparameter has no default value. If it is not specified, the[uniform data type ID] is queried based on the MIME name. |
+| belongsTo | string | No | ID of the uniform data type, to which the data type to be obtained belongs. This parameter has no default value. If it is not specified, the [uniform data type ID] is queried based on the MIME name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | ID of the uniform data type that matches the specified MIME type and **belongsTo** (ifspecified). If no match is found, the data type dynamically generated based on the rules specified by the inputparameters is returned. |
+| string | ID of the uniform data type that matches the specified MIME type and **belongsTo** (if specified). If no match is found, the data type dynamically generated based on the rules specified by the input parameters is returned. |
 
 **Error codes:**
 

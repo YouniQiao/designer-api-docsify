@@ -1,10 +1,10 @@
 # State
 
-表示任务（Task）状态的枚举。当任务创建成功后，调用**execute()**，任务进入taskpool等待队列，状态设置为**WAITING**；
-任务从等待队列出来进入taskpool工作线程中，任务状态更新为**RUNNING**；当任务执行完成，返回结果后任务状态重置为**WAITING**；
-当主动cancel任务时，将任务状态更新为**CANCELED**。
+表示任务（Task）状态的枚举。当任务创建成功后，调用**execute()**，任务进入taskpool等待队列，状态设置为**WAITING**；任务从等待队列出来进入taskpool工作线程中，任务状态更新为**RUNNING**；当任务执行完成，返回结果后任务状态重置为**WAITING**；当主动cancel任务时，将任务状态更新为**CANCELED**。
 
 **起始版本：** 10
+
+<!--Device-taskpool-enum State--><!--Device-taskpool-enum State-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -18,7 +18,9 @@ WAITING = 1
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-State-WAITING = 1--><!--Device-State-WAITING = 1-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -32,7 +34,9 @@ RUNNING = 2
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-State-RUNNING = 2--><!--Device-State-RUNNING = 2-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -46,7 +50,9 @@ CANCELED = 3
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-State-CANCELED = 3--><!--Device-State-CANCELED = 3-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

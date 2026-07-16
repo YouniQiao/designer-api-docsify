@@ -12,8 +12,7 @@ import { notificationManager } from '@kit.NotificationKit';
 function isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether distributed notification is enabled for a specified application. This API uses an asynchronous
-callback to return the result.
+Checks whether distributed notification is enabled for a specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -23,6 +22,8 @@ callback to return the result.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -31,8 +32,8 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle of the application. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means thatdistributed notification is enabled, and **false** means the opposite. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle of the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means that distributed notification is enabled, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -74,8 +75,7 @@ notificationManager.isDistributedEnabledByBundle(bundle, isDistributedEnabledByB
 function isDistributedEnabledByBundle(bundle: BundleOption): Promise<boolean>
 ```
 
-Checks whether distributed notification is enabled for a specified application. This API uses a promise to return
-the result.
+Checks whether distributed notification is enabled for a specified application. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -85,6 +85,8 @@ the result.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isDistributedEnabledByBundle(bundle: BundleOption): Promise<boolean>--><!--Device-notificationManager-function isDistributedEnabledByBundle(bundle: BundleOption): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -93,13 +95,13 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle of the application. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that distributednotification is enabled, and **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means that distributed notification is enabled, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -138,15 +140,15 @@ notificationManager.isDistributedEnabledByBundle(bundle).then((data: boolean) =>
 function isDistributedEnabledByBundle(bundle: BundleOption, deviceType: string): Promise<boolean>
 ```
 
-Obtains whether a specified application enables cross-device collaboration. This API uses a promise to return the
-result.
+Obtains whether a specified application enables cross-device collaboration. This API uses a promise to return the result.
 
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,
-error code 801 is returned.
+This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function isDistributedEnabledByBundle(bundle: BundleOption, deviceType: string): Promise<boolean>--><!--Device-notificationManager-function isDistributedEnabledByBundle(bundle: BundleOption, deviceType: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -156,14 +158,14 @@ error code 801 is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
 | deviceType | string | Yes | Device type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the cross-devicecollaboration is enabled, and the value **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** indicates that the cross-device collaboration is enabled, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

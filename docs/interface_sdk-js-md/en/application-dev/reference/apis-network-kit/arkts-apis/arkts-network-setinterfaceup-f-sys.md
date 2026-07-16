@@ -20,6 +20,8 @@ Set a specific interface up.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function setInterfaceUp(ifaceName: string): Promise<void>--><!--Device-connection-function setInterfaceUp(ifaceName: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -28,13 +30,13 @@ Set a specific interface up.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ifaceName | string | Yes | the name of the interface to set up.<br>Value range:(0,1024]<br>Name of the actual network adapter to be startedIf the network adapter exists, try to up the network adapter.If the network adapter does not exist or does not meet the up condition, the network adapter fails to be up.The network adapter exists in the kernel, and the network adapter meets the up condition.NoneNone |
+| ifaceName | string | Yes | the name of the interface to set up.<br>Value range:(0,1024]<br>Name of the actual network adapter to be started If the network adapter exists, try to up the network adapter.If the network adapter does not exist or does not meet the up condition, the network adapter fails to be up.The network adapter exists in the kernel, and the network adapter meets the up condition.None None |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 

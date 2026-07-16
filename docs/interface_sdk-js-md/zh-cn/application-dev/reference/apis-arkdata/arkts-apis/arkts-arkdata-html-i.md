@@ -4,7 +4,15 @@ HTML类型数据，用于描述超文本标记语言数据。创建HTML对象后
 
 **起始版本：** 12
 
+<!--Device-uniformDataStruct-interface HTML--><!--Device-uniformDataStruct-interface HTML-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+## 导入模块
+
+```TypeScript
+import { uniformDataStruct } from '@kit.ArkData';
+```
 
 ## details
 
@@ -30,6 +38,8 @@ details?: Record<string, string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HTML-details?: Record<string, string>--><!--Device-HTML-details?: Record<string, string>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## htmlContent
@@ -38,14 +48,15 @@ details?: Record<string, string>
 htmlContent: string
 ```
 
-HTML格式的内容文本，支持标准HTML标签。可以是完整的HTML文档或HTML片段。长度限制为20MB。建议使用UTF-8编码。
-例如：<div>标题</div>。
+HTML格式的内容文本，支持标准HTML标签。可以是完整的HTML文档或HTML片段。长度限制为20MB。建议使用UTF-8编码。例如：<div>标题</div>。
 
 **类型：** string
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HTML-htmlContent: string--><!--Device-HTML-htmlContent: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -63,6 +74,8 @@ plainContent?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-HTML-plainContent?: string--><!--Device-HTML-plainContent?: string-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## uniformDataType
@@ -71,14 +84,15 @@ plainContent?: string
 readonly uniformDataType: 'general.html'
 ```
 
-统一数据类型标识为html类型数据，固定为“general.html”，数据类型描述信息见
-[UniformDataType](arkts-arkdata-uniformdatatype-e.md)。
+统一数据类型标识为html类型数据，固定为“general.html”，数据类型描述信息见[UniformDataType](arkts-arkdata-uniformdatatype-e.md)。
 
 **类型：** 'general.html'
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HTML-readonly uniformDataType: 'general.html'--><!--Device-HTML-readonly uniformDataType: 'general.html'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -88,14 +102,15 @@ readonly uniformDataType: 'general.html'
 uriAuthorizationPolicies?: Array<number>
 ```
 
-用于拖拽场景的URI授权策略。默认值为READ（仅读授权），仅在img标签等场景下生效。只针对单个record使用，优先级最高，具体策略见
-[UriPermission](arkts-arkdata-uripermission-e.md)。
+用于拖拽场景的URI授权策略。默认值为READ（仅读授权），仅在img标签等场景下生效。只针对单个record使用，优先级最高，具体策略见[UriPermission](arkts-arkdata-uripermission-e.md)。
 
 **类型：** Array<number>
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-HTML-uriAuthorizationPolicies?: Array<int>--><!--Device-HTML-uriAuthorizationPolicies?: Array<int>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 

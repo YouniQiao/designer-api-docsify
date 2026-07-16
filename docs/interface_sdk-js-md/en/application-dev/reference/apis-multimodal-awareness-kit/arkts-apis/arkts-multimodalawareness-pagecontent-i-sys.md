@@ -4,6 +4,8 @@ Defines the onscreen content.
 
 **Since:** 20
 
+<!--Device-onScreen-export interface PageContent--><!--Device-onScreen-export interface PageContent-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Bundle name of the onscreen content.
 
 **Since:** 20
 
+<!--Device-PageContent-bundleName: string--><!--Device-PageContent-bundleName: string-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -36,12 +40,13 @@ Bundle name of the onscreen content.
 content?: string
 ```
 
-Body of the onscreen content. This parameter is available only when **options.contentUnderstand** is set to
-**True**.
+Body of the onscreen content. This parameter is available only when **options.contentUnderstand** is set to **True**.
 
 **Type:** string
 
 **Since:** 20
+
+<!--Device-PageContent-content?: string--><!--Device-PageContent-content?: string-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -59,6 +64,8 @@ Page link of the onscreen content. This parameter is available only when **optio
 
 **Since:** 20
 
+<!--Device-PageContent-pageLink?: string--><!--Device-PageContent-pageLink?: string-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -69,12 +76,13 @@ Page link of the onscreen content. This parameter is available only when **optio
 paragraphs?: Paragraph[]
 ```
 
-Paragraph information of the onscreen content. This parameter is available only when **options.textOnly** is set
-to **True**.
+Paragraph information of the onscreen content. This parameter is available only when **options.textOnly** is set to **True**.
 
 **Type:** Paragraph[]
 
 **Since:** 20
+
+<!--Device-PageContent-paragraphs?: Paragraph[]--><!--Device-PageContent-paragraphs?: Paragraph[]-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -86,12 +94,13 @@ to **True**.
 scenario?: Scenario
 ```
 
-Scenario of the onscreen content. This parameter is available only when **options.contentUnderstand** is set to
-**True**.
+Scenario of the onscreen content. This parameter is available only when **options.contentUnderstand** is set to **True**.
 
 **Type:** Scenario
 
 **Since:** 20
+
+<!--Device-PageContent-scenario?: Scenario--><!--Device-PageContent-scenario?: Scenario-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -109,6 +118,8 @@ Session ID, which identifies the call action.
 
 **Since:** 20
 
+<!--Device-PageContent-sessionId: long--><!--Device-PageContent-sessionId: long-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -119,12 +130,13 @@ Session ID, which identifies the call action.
 title?: string
 ```
 
-Title of the onscreen content. This parameter is available only when **options.contentUnderstand** is set to
-**True**.
+Title of the onscreen content. This parameter is available only when **options.contentUnderstand** is set to **True**.
 
 **Type:** string
 
 **Since:** 20
+
+<!--Device-PageContent-title?: string--><!--Device-PageContent-title?: string-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -141,6 +153,8 @@ Window ID of the onscreen content.
 **Type:** number
 
 **Since:** 20
+
+<!--Device-PageContent-windowId: int--><!--Device-PageContent-windowId: int-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 

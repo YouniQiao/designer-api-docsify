@@ -4,7 +4,15 @@
 
 **起始版本：** 20
 
+<!--Device-sim-export interface SimLabel--><!--Device-sim-export interface SimLabel-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
+
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
 
 ## index
 
@@ -17,6 +25,8 @@ index: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-SimLabel-index: int--><!--Device-SimLabel-index: int-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -31,6 +41,8 @@ simType: SimType
 **类型：** SimType
 
 **起始版本：** 20
+
+<!--Device-SimLabel-simType: SimType--><!--Device-SimLabel-simType: SimType-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

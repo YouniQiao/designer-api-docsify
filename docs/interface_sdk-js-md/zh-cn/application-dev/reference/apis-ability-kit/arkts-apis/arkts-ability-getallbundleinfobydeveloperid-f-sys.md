@@ -1,5 +1,11 @@
 # getAllBundleInfoByDeveloperId（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getAllBundleInfoByDeveloperId
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getAllBundleInfoByDeveloperId(developerId: string): Array<BundleInfo>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getAllBundleInfoByDeveloperId(developerId: string): Array<BundleInfo>--><!--Device-bundleManager-function getAllBundleInfoByDeveloperId(developerId: string): Array<BundleInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -26,7 +34,7 @@ function getAllBundleInfoByDeveloperId(developerId: string): Array<BundleInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;BundleInfo&gt; | 同步返回Array&lt;BundleInfo&gt;。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<BundleInfo> | 同步返回Array&lt;BundleInfo&gt;。 |
 
 **错误码：**
 

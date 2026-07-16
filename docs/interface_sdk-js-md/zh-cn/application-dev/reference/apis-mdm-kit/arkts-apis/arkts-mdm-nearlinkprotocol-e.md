@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+<!--Device-systemManager-enum NearLinkProtocol--><!--Device-systemManager-enum NearLinkProtocol-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## SSAP
@@ -18,6 +20,8 @@ SSAP（SparkLink Service Access Protocol）协议。<!--RP1--><!--RP1End-->
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-NearLinkProtocol-SSAP = 0--><!--Device-NearLinkProtocol-SSAP = 0-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## DATA_TRANSFER
@@ -31,6 +35,8 @@ DATA_TRANSFER = 1
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-NearLinkProtocol-DATA_TRANSFER = 1--><!--Device-NearLinkProtocol-DATA_TRANSFER = 1-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

@@ -4,6 +4,8 @@ Defines the resolution for printing.
 
 **Since:** 24
 
+<!--Device-print-interface PrintResolution--><!--Device-print-interface PrintResolution-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Horizontal DPI.
 
 **Since:** 24
 
+<!--Device-PrintResolution-horizontalDpi: int--><!--Device-PrintResolution-horizontalDpi: int-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ Resolution ID.
 
 **Since:** 24
 
+<!--Device-PrintResolution-id: string--><!--Device-PrintResolution-id: string-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ Vertical DPI.
 **Type:** number
 
 **Since:** 24
+
+<!--Device-PrintResolution-verticalDpi: int--><!--Device-PrintResolution-verticalDpi: int-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 

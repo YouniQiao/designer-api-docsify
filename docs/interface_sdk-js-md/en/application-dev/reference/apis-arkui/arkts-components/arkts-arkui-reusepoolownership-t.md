@@ -12,6 +12,8 @@ Defining the reuse type of a custom component.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-unnamed-declare type ReusePoolOwnership = 'shared' | 'perInstance'--><!--Device-unnamed-declare type ReusePoolOwnership = 'shared' | 'perInstance'-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 | Type | Description |

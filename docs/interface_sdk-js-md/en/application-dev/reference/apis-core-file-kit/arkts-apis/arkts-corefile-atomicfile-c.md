@@ -2,12 +2,13 @@
 
 AtomicFile is a class used to perform atomic read and write operations on files.
 
-A temporary file is written and renamed to the original file location, which ensures file integrity. If the write
-operation fails, the temporary file is deleted without modifying the original file content.
+A temporary file is written and renamed to the original file location, which ensures file integrity. If the write operation fails, the temporary file is deleted without modifying the original file content.
 
 You can call **finishWrite()** or **failWrite()** to write or roll back file content.
 
 **Since:** 15
+
+<!--Device-unnamed-export class AtomicFile--><!--Device-unnamed-export class AtomicFile-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -26,6 +27,8 @@ constructor(path: string)
 Creates an **AtomicFile** class for a file in a specified path.
 
 **Since:** 15
+
+<!--Device-AtomicFile-constructor(path: string)--><!--Device-AtomicFile-constructor(path: string)-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -50,6 +53,8 @@ delete(): void
 Deletes the **AtomicFile** class, including the original files and temporary files.
 
 **Since:** 15
+
+<!--Device-AtomicFile-delete(): void--><!--Device-AtomicFile-delete(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -102,6 +107,8 @@ Rolls back the file after the file fails to be written.
 
 **Since:** 15
 
+<!--Device-AtomicFile-failWrite(): void--><!--Device-AtomicFile-failWrite(): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Error codes:**
@@ -141,6 +148,8 @@ finishWrite(): void
 Finishes writing file data when the write operation is complete.
 
 **Since:** 15
+
+<!--Device-AtomicFile-finishWrite(): void--><!--Device-AtomicFile-finishWrite(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -183,13 +192,15 @@ The FD needs to be closed by calling **close()**.
 
 **Since:** 15
 
+<!--Device-AtomicFile-getBaseFile(): File--><!--Device-AtomicFile-getBaseFile(): File-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| File | File object opened. |
+| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-file-i.md) | File object opened. |
 
 **Error codes:**
 
@@ -233,13 +244,15 @@ Creates a **ReadStream** instance.
 
 **Since:** 15
 
+<!--Device-AtomicFile-openRead(): ReadStream--><!--Device-AtomicFile-openRead(): ReadStream-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ReadStream | **ReadStream** instance obtained. |
+| [ReadStream](arkts-corefile-readstream-c.md) | **ReadStream** instance obtained. |
 
 **Error codes:**
 
@@ -292,13 +305,15 @@ Reads all content of a file.
 
 **Since:** 15
 
+<!--Device-AtomicFile-readFully(): ArrayBuffer--><!--Device-AtomicFile-readFully(): ArrayBuffer-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | Full content of a file. |
+| [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Full content of a file. |
 
 **Error codes:**
 
@@ -349,13 +364,15 @@ Call **finishWrite()** if the write operation is successful; call **failWrite()*
 
 **Since:** 15
 
+<!--Device-AtomicFile-startWrite(): WriteStream--><!--Device-AtomicFile-startWrite(): WriteStream-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| WriteStream | **WriteStream** instance obtained. |
+| [WriteStream](arkts-corefile-writestream-c.md) | **WriteStream** instance obtained. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Creates an **Animator** object.
 
 **Since:** 6
 
+<!--Device-unnamed-export default class Animator--><!--Device-unnamed-export default class Animator-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -20,10 +22,10 @@ static create(options: AnimatorOptions): AnimatorResult
 
 Creates an **AnimatorResult** object for animations.
 
-> **NOTE**
->
-> - Since API version 10, you can use the
-> [createAnimator](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#createanimator) API in
+> **NOTE**  
+>  
+> - Since API version 10, you can use the  
+> [createAnimator](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#createanimator) API in  
 > [UIContext](arkts-arkui-uicontext.md), which ensures that the object is created in the intended UI instance.
 
 **Since:** 9
@@ -34,19 +36,21 @@ Creates an **AnimatorResult** object for animations.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Animator-static create(options: AnimatorOptions): AnimatorResult--><!--Device-Animator-static create(options: AnimatorOptions): AnimatorResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | AnimatorOptions | Yes | Animator options. |
+| options | [AnimatorOptions](arkts-arkui-animatoroptions-i.md) | Yes | Animator options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AnimatorResult | Animator result. |
+| [AnimatorResult](arkts-arkui-animatorresult-i.md) | Animator result. |
 
 **Error codes:**
 
@@ -81,15 +85,15 @@ animator.create(options); // You are advised to use UIContext.createAnimator().
 static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-Creates an **AnimatorResult** object for animations. Compared with
-[create](Animator.create(options: AnimatorOptions)), this API accepts parameters of the
-[SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md) type.
+Creates an **AnimatorResult** object for animations. Compared with [create](Animator.create(options: AnimatorOptions)), this API accepts parameters of the [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md) type.
 
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-Animator-static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult--><!--Device-Animator-static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -103,7 +107,7 @@ Creates an **AnimatorResult** object for animations. Compared with
 
 | Type | Description |
 | --- | --- |
-| AnimatorResult | Animator result. |
+| [AnimatorResult](arkts-arkui-animatorresult-i.md) | Animator result. |
 
 **Error codes:**
 
@@ -136,19 +140,21 @@ Creates an animation.
 
 **Substitutes:** create
 
+<!--Device-Animator-static createAnimator(options: AnimatorOptions): AnimatorResult--><!--Device-Animator-static createAnimator(options: AnimatorOptions): AnimatorResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | AnimatorOptions | Yes | Animator options. |
+| options | [AnimatorOptions](arkts-arkui-animatoroptions-i.md) | Yes | Animator options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AnimatorResult | Animator result. |
+| [AnimatorResult](arkts-arkui-animatorresult-i.md) | Animator result. |
 
 **Example**
 

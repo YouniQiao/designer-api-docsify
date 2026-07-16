@@ -14,10 +14,11 @@ function setId(id: HiTraceId): void
 
 Sets a trace ID. This API returns the result synchronously.
 
-Sets the given HiTrace ID to the TLS of the current thread. If the given HiTrace ID is invalid, no operation is
-performed.
+Sets the given HiTrace ID to the TLS of the current thread. If the given HiTrace ID is invalid, no operation is performed.
 
 **Since:** 8
+
+<!--Device-hiTraceChain-function setId(id: HiTraceId): void--><!--Device-hiTraceChain-function setId(id: HiTraceId): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
@@ -25,7 +26,7 @@ performed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | HiTraceId | Yes | **HiTraceId** instance. |
+| id | [HiTraceId](arkts-performanceanalysis-hitraceid-i.md) | Yes | **HiTraceId** instance. |
 
 **Example**
 

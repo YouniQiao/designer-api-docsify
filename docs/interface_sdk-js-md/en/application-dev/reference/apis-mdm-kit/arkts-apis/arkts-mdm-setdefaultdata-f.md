@@ -20,13 +20,15 @@ Sets the default data traffic card.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-telephonyManager-function setDefaultData(admin: Want, slotId: number): void--><!--Device-telephonyManager-function setDefaultData(admin: Want, slotId: number): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | admin indicates the enterprise admin extension ability information.The admin must have the corresponding permission. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | admin indicates the enterprise admin extension ability information.The admin must have the corresponding permission. |
 | slotId | number | Yes | Indicates the card slot index number.Ranges from {@code 0} to the maximum card slot index number supported by the device. |
 
 **Error codes:**

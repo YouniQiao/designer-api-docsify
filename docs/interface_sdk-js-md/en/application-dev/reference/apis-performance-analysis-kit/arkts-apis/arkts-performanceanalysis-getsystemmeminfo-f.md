@@ -16,13 +16,15 @@ Obtains system memory information. This API is implemented by reading data from 
 
 **Since:** 12
 
+<!--Device-hidebug-function getSystemMemInfo(): SystemMemInfo--><!--Device-hidebug-function getSystemMemInfo(): SystemMemInfo-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SystemMemInfo | System memory information. |
+| [SystemMemInfo](arkts-performanceanalysis-systemmeminfo-i.md) | System memory information. |
 
 **Example**
 

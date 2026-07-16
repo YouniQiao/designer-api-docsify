@@ -1,5 +1,11 @@
 # getAllBundleInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getAllBundleInfo
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getAllBundleInfo(bundleFlags: number, callback: AsyncCallback<Array<Bun
 
 **需要权限：** ohos.permission.GET_INSTALLED_BUNDLE_LIST
 
+<!--Device-bundleManager-function getAllBundleInfo(bundleFlags: int, callback: AsyncCallback<Array<BundleInfo>>): void--><!--Device-bundleManager-function getAllBundleInfo(bundleFlags: int, callback: AsyncCallback<Array<BundleInfo>>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -21,7 +29,7 @@ function getAllBundleInfo(bundleFlags: number, callback: AsyncCallback<Array<Bun
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleFlags | number | 是 | 指定返回的BundleInfo所包含的信息。 |
-| callback | AsyncCallback&lt;Array&lt;BundleInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的Array&lt;BundleInfo&gt;；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<BundleInfo>> | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的Array&lt;BundleInfo&gt;；否则为错误对象。 |
 
 **错误码：**
 
@@ -68,6 +76,8 @@ function getAllBundleInfo(bundleFlags: number, userId: number, callback: AsyncCa
 
 **需要权限：** ohos.permission.GET_INSTALLED_BUNDLE_LIST
 
+<!--Device-bundleManager-function getAllBundleInfo(bundleFlags: int, userId: int, callback: AsyncCallback<Array<BundleInfo>>): void--><!--Device-bundleManager-function getAllBundleInfo(bundleFlags: int, userId: int, callback: AsyncCallback<Array<BundleInfo>>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -78,7 +88,7 @@ function getAllBundleInfo(bundleFlags: number, userId: number, callback: AsyncCa
 | --- | --- | --- | --- |
 | bundleFlags | number | 是 | 指定返回的BundleInfo所包含的信息。 |
 | userId | number | 是 | 表示用户ID，可以通过[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)获取。 |
-| callback | AsyncCallback&lt;Array&lt;BundleInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的Array&lt;BundleInfo&gt;；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<BundleInfo>> | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的Array&lt;BundleInfo&gt;；否则为错误对象。 |
 
 **错误码：**
 
@@ -127,6 +137,8 @@ function getAllBundleInfo(bundleFlags: number, userId?: number): Promise<Array<B
 
 **需要权限：** ohos.permission.GET_INSTALLED_BUNDLE_LIST
 
+<!--Device-bundleManager-function getAllBundleInfo(bundleFlags: int, userId?: int): Promise<Array<BundleInfo>>--><!--Device-bundleManager-function getAllBundleInfo(bundleFlags: int, userId?: int): Promise<Array<BundleInfo>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -142,7 +154,7 @@ function getAllBundleInfo(bundleFlags: number, userId?: number): Promise<Array<B
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;BundleInfo&gt;&gt; | Promise对象。返回Array&lt;BundleInfo&gt;。 |
+| Promise<Array<BundleInfo>> | Promise对象。返回Array&lt;BundleInfo&gt;。 |
 
 **错误码：**
 

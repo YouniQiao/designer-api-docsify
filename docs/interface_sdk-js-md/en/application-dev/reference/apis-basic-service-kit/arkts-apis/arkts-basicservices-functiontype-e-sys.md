@@ -4,6 +4,8 @@ Enumerates USB device function types.
 
 **Since:** 9
 
+<!--Device-usbManager-export enum FunctionType--><!--Device-usbManager-export enum FunctionType-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 **System API:** This is a system API.
@@ -17,6 +19,8 @@ NONE = 0
 No function.
 
 **Since:** 9
+
+<!--Device-FunctionType-NONE = 0--><!--Device-FunctionType-NONE = 0-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -32,6 +36,8 @@ ACM function.
 
 **Since:** 9
 
+<!--Device-FunctionType-ACM = 1--><!--Device-FunctionType-ACM = 1-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 **System API:** This is a system API.
@@ -45,6 +51,8 @@ ECM = 2
 ECM function.
 
 **Since:** 9
+
+<!--Device-FunctionType-ECM = 2--><!--Device-FunctionType-ECM = 2-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -60,6 +68,8 @@ HDC function.
 
 **Since:** 9
 
+<!--Device-FunctionType-HDC = 4--><!--Device-FunctionType-HDC = 4-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 **System API:** This is a system API.
@@ -73,6 +83,8 @@ MTP = 8
 Media transmission.
 
 **Since:** 9
+
+<!--Device-FunctionType-MTP = 8--><!--Device-FunctionType-MTP = 8-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -88,6 +100,8 @@ Image transmission.
 
 **Since:** 9
 
+<!--Device-FunctionType-PTP = 16--><!--Device-FunctionType-PTP = 16-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 **System API:** This is a system API.
@@ -101,6 +115,8 @@ RNDIS = 32
 Network sharing.
 
 **Since:** 9
+
+<!--Device-FunctionType-RNDIS = 32--><!--Device-FunctionType-RNDIS = 32-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -116,6 +132,8 @@ MIDI function.
 
 **Since:** 9
 
+<!--Device-FunctionType-MIDI = 64--><!--Device-FunctionType-MIDI = 64-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 **System API:** This is a system API.
@@ -130,6 +148,8 @@ Audio function.
 
 **Since:** 9
 
+<!--Device-FunctionType-AUDIO_SOURCE = 128--><!--Device-FunctionType-AUDIO_SOURCE = 128-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 **System API:** This is a system API.
@@ -143,6 +163,8 @@ NCM = 256
 NCM transmission.
 
 **Since:** 9
+
+<!--Device-FunctionType-NCM = 256--><!--Device-FunctionType-NCM = 256-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 

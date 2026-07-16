@@ -1,9 +1,10 @@
 # WindowChangeOptions
 
-Describes the extended configuration of window change event listening,
-which is used to specify the listening process configuration and event filtering conditions.
+Describes the extended configuration of window change event listening,which is used to specify the listening process configuration and event filtering conditions.
 
 **Since:** 22
+
+<!--Device-unnamed-declare interface WindowChangeOptions--><!--Device-unnamed-declare interface WindowChangeOptions-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -27,6 +28,8 @@ Bundle name of the window to be listened for. By default, all windows are listen
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-WindowChangeOptions-bundleName?: string--><!--Device-WindowChangeOptions-bundleName?: string-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 ## timeout
@@ -35,16 +38,15 @@ Bundle name of the window to be listened for. By default, all windows are listen
 timeout?: number
 ```
 
-Listening timeout interval, to prevent listening failures casued by event notification delay.
-<br>Value range: The value should be >= 500
-<br>Default value: 10000
-<br>Unit: ms
+Listening timeout interval, to prevent listening failures casued by event notification delay.<br>Value range: The value should be >= 500<br>Default value: 10000<br>Unit: ms
 
 **Type:** number
 
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-WindowChangeOptions-timeout?: int--><!--Device-WindowChangeOptions-timeout?: int-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 

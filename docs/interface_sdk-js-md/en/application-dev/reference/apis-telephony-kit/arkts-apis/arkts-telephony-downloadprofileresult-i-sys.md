@@ -4,6 +4,8 @@ Result of the given downloadable Profile.
 
 **Since:** 18
 
+<!--Device-eSIM-export interface DownloadProfileResult--><!--Device-eSIM-export interface DownloadProfileResult-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Gets the card Id. This value comes from EuiccService and is used when resolving 
 
 **Since:** 18
 
+<!--Device-DownloadProfileResult-cardId: int--><!--Device-DownloadProfileResult-cardId: int-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ Gets the result of the operation.
 
 **Since:** 18
 
+<!--Device-DownloadProfileResult-responseResult: ResultCode--><!--Device-DownloadProfileResult-responseResult: ResultCode-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ Gets the solvable errors.
 **Type:** SolvableErrors
 
 **Since:** 18
+
+<!--Device-DownloadProfileResult-solvableErrors: SolvableErrors--><!--Device-DownloadProfileResult-solvableErrors: SolvableErrors-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 

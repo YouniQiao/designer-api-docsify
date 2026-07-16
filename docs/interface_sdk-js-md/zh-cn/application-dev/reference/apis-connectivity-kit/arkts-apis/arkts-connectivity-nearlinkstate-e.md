@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-manager-enum NearlinkState--><!--Device-manager-enum NearlinkState-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## STATE_TURNING_ON
@@ -17,6 +19,8 @@ STATE_TURNING_ON = 0
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-NearlinkState-STATE_TURNING_ON = 0--><!--Device-NearlinkState-STATE_TURNING_ON = 0-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -32,6 +36,8 @@ STATE_ON = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-NearlinkState-STATE_ON = 1--><!--Device-NearlinkState-STATE_ON = 1-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## STATE_TURNING_OFF
@@ -46,6 +52,8 @@ STATE_TURNING_OFF = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-NearlinkState-STATE_TURNING_OFF = 2--><!--Device-NearlinkState-STATE_TURNING_OFF = 2-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## STATE_OFF
@@ -59,6 +67,8 @@ STATE_OFF = 3
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-NearlinkState-STATE_OFF = 3--><!--Device-NearlinkState-STATE_OFF = 3-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 

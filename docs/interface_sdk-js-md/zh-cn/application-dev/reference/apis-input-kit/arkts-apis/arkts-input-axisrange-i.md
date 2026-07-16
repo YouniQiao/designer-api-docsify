@@ -4,7 +4,15 @@
 
 **起始版本：** 8
 
+<!--Device-inputDevice-interface AxisRange--><!--Device-inputDevice-interface AxisRange-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
+
+## 导入模块
+
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+```
 
 ## axis
 
@@ -17,6 +25,8 @@ axis: AxisType
 **类型：** AxisType
 
 **起始版本：** 8
+
+<!--Device-AxisRange-axis: AxisType--><!--Device-AxisRange-axis: AxisType-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -32,6 +42,8 @@ flat: number
 
 **起始版本：** 9
 
+<!--Device-AxisRange-flat: int--><!--Device-AxisRange-flat: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## fuzz
@@ -45,6 +57,8 @@ fuzz: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-AxisRange-fuzz: int--><!--Device-AxisRange-fuzz: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -60,6 +74,8 @@ max: number
 
 **起始版本：** 8
 
+<!--Device-AxisRange-max: int--><!--Device-AxisRange-max: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## min
@@ -73,6 +89,8 @@ min: number
 **类型：** number
 
 **起始版本：** 8
+
+<!--Device-AxisRange-min: int--><!--Device-AxisRange-min: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -88,6 +106,8 @@ resolution: number
 
 **起始版本：** 9
 
+<!--Device-AxisRange-resolution: int--><!--Device-AxisRange-resolution: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## source
@@ -101,6 +121,8 @@ source: SourceType
 **类型：** SourceType
 
 **起始版本：** 8
+
+<!--Device-AxisRange-source: SourceType--><!--Device-AxisRange-source: SourceType-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 

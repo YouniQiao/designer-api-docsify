@@ -12,6 +12,8 @@ Application-related information for the agent.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-common-export type AgentAppInfo = _AgentAppInfo--><!--Device-common-export type AgentAppInfo = _AgentAppInfo-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **Property type:** _AgentAppInfo

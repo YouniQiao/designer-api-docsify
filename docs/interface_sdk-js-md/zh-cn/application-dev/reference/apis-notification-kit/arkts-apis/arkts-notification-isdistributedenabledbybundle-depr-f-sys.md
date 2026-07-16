@@ -16,6 +16,8 @@ function isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallb
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallback<boolean>): void--><!--Device-notification-function isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -24,8 +26,8 @@ function isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallb
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 应用的包。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 查询指定应用是否支持分布式通知的回调函数。 |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 应用的包。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 查询指定应用是否支持分布式通知的回调函数。 |
 
 
 ## isDistributedEnabledByBundle
@@ -44,6 +46,8 @@ function isDistributedEnabledByBundle(bundle: BundleOption): Promise<boolean>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function isDistributedEnabledByBundle(bundle: BundleOption): Promise<boolean>--><!--Device-notification-function isDistributedEnabledByBundle(bundle: BundleOption): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -52,11 +56,11 @@ function isDistributedEnabledByBundle(bundle: BundleOption): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 应用的包。 |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 应用的包。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise方式返回指定应用是否支持分布式通知的结果。 |
+| Promise<boolean> | Promise方式返回指定应用是否支持分布式通知的结果。 |
 

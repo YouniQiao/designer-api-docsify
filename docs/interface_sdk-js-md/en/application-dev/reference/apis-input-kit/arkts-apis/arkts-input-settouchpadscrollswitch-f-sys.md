@@ -16,6 +16,8 @@ Sets the touchpad scroll switch. This API uses an asynchronous callback to retur
 
 **Since:** 10
 
+<!--Device-pointer-function setTouchpadScrollSwitch(state: boolean, callback: AsyncCallback<void>): void--><!--Device-pointer-function setTouchpadScrollSwitch(state: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **System API:** This is a system API.
@@ -24,8 +26,8 @@ Sets the touchpad scroll switch. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | boolean | Yes | Scroll switch status. The value **true** indicates that the switch is enabled, and thevalue **false** indicates the opposite. The default value is **true**. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| state | boolean | Yes | Scroll switch status. The value **true** indicates that the switch is enabled, and the value **false** indicates the opposite. The default value is **true**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -77,6 +79,8 @@ Sets the touchpad scroll switch. This API uses a promise to return the result.
 
 **Since:** 10
 
+<!--Device-pointer-function setTouchpadScrollSwitch(state: boolean): Promise<void>--><!--Device-pointer-function setTouchpadScrollSwitch(state: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **System API:** This is a system API.
@@ -85,13 +89,13 @@ Sets the touchpad scroll switch. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | boolean | Yes | Scroll switch status. The value **true** indicates that the switch is enabled, and thevalue **false** indicates the opposite. The default value is **true**. |
+| state | boolean | Yes | Scroll switch status. The value **true** indicates that the switch is enabled, and the value **false** indicates the opposite. The default value is **true**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

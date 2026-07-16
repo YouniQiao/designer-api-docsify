@@ -18,6 +18,8 @@ Obtain the supported 5G channel list of the device.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
 
+<!--Device-wifiManager-function get5GChannelList(): Array<int>--><!--Device-wifiManager-function get5GChannelList(): Array<int>-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Obtain the supported 5G channel list of the device.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Returns 5G channel list. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Returns 5G channel list. |
 
 **Error codes:**
 

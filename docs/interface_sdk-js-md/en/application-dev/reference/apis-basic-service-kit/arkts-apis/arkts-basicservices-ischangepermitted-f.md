@@ -12,12 +12,13 @@ import { wallpaper } from '@kit.BasicServicesKit';
 function isChangePermitted(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether to allow the application to change the wallpaper for the current user.
-Returns true if the application is allowed to set a wallpaper for the current user. returns false otherwise.
+Checks whether to allow the application to change the wallpaper for the current user.Returns true if the application is allowed to set a wallpaper for the current user. returns false otherwise.
 
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-wallpaper-function isChangePermitted(callback: AsyncCallback<boolean>): void--><!--Device-wallpaper-function isChangePermitted(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -25,7 +26,7 @@ Returns true if the application is allowed to set a wallpaper for the current us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | the callback of isChangePermitted. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | the callback of isChangePermitted. |
 
 **Example**
 
@@ -49,12 +50,13 @@ wallpaper.isChangePermitted((error: BusinessError, data: Boolean) => {
 function isChangePermitted(): Promise<boolean>
 ```
 
-Checks whether to allow the application to change the wallpaper for the current user.
-Returns true if the application is allowed to set a wallpaper for the current user. returns false otherwise.
+Checks whether to allow the application to change the wallpaper for the current user.Returns true if the application is allowed to set a wallpaper for the current user. returns false otherwise.
 
 **Since:** 7
 
 **Deprecated since:** 9
+
+<!--Device-wallpaper-function isChangePermitted(): Promise<boolean>--><!--Device-wallpaper-function isChangePermitted(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -62,7 +64,7 @@ Returns true if the application is allowed to set a wallpaper for the current us
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | the promise returned by the function. |
 
 **Example**
 

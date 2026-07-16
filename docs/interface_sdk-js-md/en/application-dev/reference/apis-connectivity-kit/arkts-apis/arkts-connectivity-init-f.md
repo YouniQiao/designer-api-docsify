@@ -22,6 +22,8 @@ Initializes Connected Tag.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
+<!--Device-connectedTag-function init(): boolean--><!--Device-connectedTag-function init(): boolean-End-->
+
 **System capability:** SystemCapability.Communication.ConnectedTag
 
 **Return value:**

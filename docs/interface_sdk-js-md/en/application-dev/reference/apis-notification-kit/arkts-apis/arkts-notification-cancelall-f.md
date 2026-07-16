@@ -14,11 +14,11 @@ function cancelAll(callback: AsyncCallback<void>): void
 
 Cancels all notifications of this application. This API uses an asynchronous callback to return the result.
 
-After cancellation, all notifications of the current application will be removed from the notification
-center, status bar, and other locations, and will no longer be visible to the user. This is
-suitable for scenarios such as application exit or when the user manually clears all notifications.
+After cancellation, all notifications of the current application will be removed from the notification center, status bar, and other locations, and will no longer be visible to the user. This is suitable for scenarios such as application exit or when the user manually clears all notifications.
 
 **Since:** 9
+
+<!--Device-notificationManager-function cancelAll(callback: AsyncCallback<void>): void--><!--Device-notificationManager-function cancelAll(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -26,7 +26,7 @@ suitable for scenarios such as application exit or when the user manually clears
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -63,11 +63,11 @@ function cancelAll(): Promise<void>
 
 Cancels all notifications of this application. This API uses a promise to return the result.
 
-After cancellation, all notifications of the current application will be removed from the notification
-center, status bar, and other locations, and will no longer be visible to the user. This is
-suitable for scenarios such as application exit or when the user manually clears all notifications.
+After cancellation, all notifications of the current application will be removed from the notification center, status bar, and other locations, and will no longer be visible to the user. This is suitable for scenarios such as application exit or when the user manually clears all notifications.
 
 **Since:** 9
+
+<!--Device-notificationManager-function cancelAll(): Promise<void>--><!--Device-notificationManager-function cancelAll(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -75,7 +75,7 @@ suitable for scenarios such as application exit or when the user manually clears
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

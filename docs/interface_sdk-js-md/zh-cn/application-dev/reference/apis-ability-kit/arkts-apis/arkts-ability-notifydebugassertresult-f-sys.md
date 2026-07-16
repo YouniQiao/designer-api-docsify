@@ -1,5 +1,11 @@
 # notifyDebugAssertResult（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
+```
+
 ## notifyDebugAssertResult
 
 ```TypeScript
@@ -14,6 +20,8 @@ function notifyDebugAssertResult(sessionId: string, status: UserStatus): Promise
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-abilityManager-function notifyDebugAssertResult(sessionId: string, status: UserStatus): Promise<void>--><!--Device-abilityManager-function notifyDebugAssertResult(sessionId: string, status: UserStatus): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,13 +31,13 @@ function notifyDebugAssertResult(sessionId: string, status: UserStatus): Promise
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sessionId | string | 是 | 指示AssertFault的请求ID。 |
-| status | UserStatus | 是 | 用户的操作状态。 |
+| status | [UserStatus](arkts-ability-userstatus-e-sys.md) | 是 | 用户的操作状态。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

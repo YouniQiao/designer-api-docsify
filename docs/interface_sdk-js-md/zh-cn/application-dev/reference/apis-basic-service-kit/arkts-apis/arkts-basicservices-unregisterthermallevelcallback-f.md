@@ -1,5 +1,11 @@
 # unregisterThermalLevelCallback
 
+## 导入模块
+
+```TypeScript
+import { thermal } from '@kit.BasicServicesKit';
+```
+
 ## unregisterThermalLevelCallback
 
 ```TypeScript
@@ -10,13 +16,15 @@ function unregisterThermalLevelCallback(callback?: Callback<void>): void
 
 **起始版本：** 9
 
+<!--Device-thermal-function unregisterThermalLevelCallback(callback?: Callback<void>): void--><!--Device-thermal-function unregisterThermalLevelCallback(callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.PowerManager.ThermalManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; | 否 | 可选参数，回调函数，无返回值。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | 否 | 可选参数，回调函数，无返回值。 |
 
 **错误码：**
 

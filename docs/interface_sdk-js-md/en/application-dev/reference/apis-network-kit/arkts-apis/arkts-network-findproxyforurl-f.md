@@ -16,6 +16,8 @@ Find pac proxy info for the url.
 
 **Since:** 20
 
+<!--Device-connection-function findProxyForUrl(url: string): string--><!--Device-connection-function findProxyForUrl(url: string): string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**

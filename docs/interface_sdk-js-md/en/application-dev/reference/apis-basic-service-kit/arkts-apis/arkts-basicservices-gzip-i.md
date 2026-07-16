@@ -4,6 +4,8 @@ Describes gzip-related APIs.
 
 **Since:** 12
 
+<!--Device-zlib-interface GZip--><!--Device-zlib-interface GZip-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Sets the internal buffer size for the current library function. This API uses a 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GZip-gzbuffer(size: long): Promise<int>--><!--Device-GZip-gzbuffer(size: long): Promise<int>-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Parameters:**
@@ -36,13 +40,13 @@ Sets the internal buffer size for the current library function. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. If the operation is successful, **0** is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result. If the operation is successful, **0** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are leftunspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Example**
@@ -99,13 +103,15 @@ Clears the errors and end-of-file flags of a file. This API uses a promise to re
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GZip-gzclearerr(): Promise<void>--><!--Device-GZip-gzclearerr(): Promise<void>-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -165,12 +171,13 @@ struct Index {
 gzclose(): Promise<ReturnStatus>
 ```
 
-Clears all pending output of the file. Closes the file and releases the decompression or compression state if
-necessary. This API uses a promise to return the result.
+Clears all pending output of the file. Closes the file and releases the decompression or compression state if necessary. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzclose(): Promise<ReturnStatus>--><!--Device-GZip-gzclose(): Promise<ReturnStatus>-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -178,13 +185,13 @@ necessary. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ReturnStatus> | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by aninitialization error in the zlib stream structure or a modified structure. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 | [17800006](../../apis-basic-services-kit/errorcode-zlib.md#17800006-memory-allocation-failure) | Memory allocation failed. |
 
 **Example**
@@ -232,12 +239,13 @@ struct Index {
 gzcloser(): Promise<ReturnStatus>
 ```
 
-Implements the same functions as that of **gzclose()** for reading only. This API uses a promise to return the
-result.
+Implements the same functions as that of **gzclose()** for reading only. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzcloser(): Promise<ReturnStatus>--><!--Device-GZip-gzcloser(): Promise<ReturnStatus>-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -245,13 +253,13 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ReturnStatus> | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by aninitialization error in the zlib stream structure or a modified structure. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 **Example**
 
@@ -300,12 +308,13 @@ struct Index {
 gzclosew(): Promise<ReturnStatus>
 ```
 
-Implements the same functions as that of **gzclose()** for writing or appending. This API uses a promise to
-return the result.
+Implements the same functions as that of **gzclose()** for writing or appending. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzclosew(): Promise<ReturnStatus>--><!--Device-GZip-gzclosew(): Promise<ReturnStatus>-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -313,13 +322,13 @@ return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ReturnStatus> | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by aninitialization error in the zlib stream structure or a modified structure. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 | [17800006](../../apis-basic-services-kit/errorcode-zlib.md#17800006-memory-allocation-failure) | Memory allocation failed. |
 
 **Example**
@@ -367,12 +376,13 @@ struct Index {
 gzdirect(): Promise<number>
 ```
 
-Checks whether the specified gzip file handle directly accesses the original uncompressed data and reallocates
-the buffer. This API uses a promise to return the result.
+Checks whether the specified gzip file handle directly accesses the original uncompressed data and reallocates the buffer. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzdirect(): Promise<int>--><!--Device-GZip-gzdirect(): Promise<int>-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -380,7 +390,7 @@ the buffer. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. If the original uncompressed data is directlyaccessed, **1** is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result. If the original uncompressed data is directly accessed, **1** is returned. |
 
 **Example**
 
@@ -428,12 +438,13 @@ struct Index {
 gzdopen(fd: number, mode: string): Promise<void>
 ```
 
-Associates gzip file with the file descriptor (fd) and opens the file for reading and decompressing, or
-compressing and writing. This API uses a promise to return the result.
+Associates gzip file with the file descriptor (fd) and opens the file for reading and decompressing, or compressing and writing. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzdopen(fd: int, mode: string): Promise<void>--><!--Device-GZip-gzdopen(fd: int, mode: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -441,20 +452,20 @@ compressing and writing. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | File descriptor. Generally, the value is obtained by calling the **open** method or othermethods. |
-| mode | string | Yes | Specifies the access mode. For details, see the description of[gzopen](arkts-basicservices-gzip-i.md#gzopen-1). |
+| fd | number | Yes | File descriptor. Generally, the value is obtained by calling the **open** method or other methods. |
+| mode | string | Yes | Specifies the access mode. For details, see the description of [gzopen](arkts-basicservices-gzip-i.md#gzopen-1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are leftunspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800002](../../apis-basic-services-kit/errorcode-zlib.md#17800002-incorrect-file-or-access-mode) | No such file or access mode error. |
 
 **Example**
@@ -503,12 +514,13 @@ struct Index {
 gzeof(): Promise<number>
 ```
 
-Checks whether the position from which data is read has reached the end of the gzip file. This API uses a promise
-to return the result.
+Checks whether the position from which data is read has reached the end of the gzip file. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzeof(): Promise<int>--><!--Device-GZip-gzeof(): Promise<int>-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -516,7 +528,7 @@ to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. If the end-of-file indicator is set while reading,**1** is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result. If the end-of-file indicator is set while reading,**1** is returned. |
 
 **Example**
 
@@ -580,19 +592,21 @@ Describes the last error message that reported for the file. This API uses a pro
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GZip-gzerror(): Promise<GzErrorOutputInfo>--><!--Device-GZip-gzerror(): Promise<GzErrorOutputInfo>-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GzErrorOutputInfo&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<GzErrorOutputInfo> | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by aninitialization error in the zlib stream structure or a modified structure. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 **Example**
 
@@ -658,26 +672,28 @@ Flushes all pending output into a compressed file. This API uses a promise to re
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GZip-gzflush(flush: CompressFlushMode): Promise<ReturnStatus>--><!--Device-GZip-gzflush(flush: CompressFlushMode): Promise<ReturnStatus>-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flush | CompressFlushMode | Yes | Controls the flushing mode. For details, see[CompressFlushMode](arkts-basicservices-compressflushmode-e.md). |
+| flush | [CompressFlushMode](arkts-basicservices-compressflushmode-e.md) | Yes | Controls the flushing mode. For details, see [CompressFlushMode](arkts-basicservices-compressflushmode-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ReturnStatus> | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are leftunspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by aninitialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 **Example**
 
@@ -731,13 +747,15 @@ Decompresses and reads data from a gzip file. This API uses a promise to return 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GZip-gzfread(buf: ArrayBuffer, size: long, nitems: long): Promise<long>--><!--Device-GZip-gzfread(buf: ArrayBuffer, size: long, nitems: long): Promise<long>-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Destination buffer for storing read results. |
+| buf | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Destination buffer for storing read results. |
 | size | number | Yes | Number of bytes in a single data block. |
 | nitems | number | Yes | Number of data blocks to be written. |
 
@@ -745,13 +763,13 @@ Decompresses and reads data from a gzip file. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are leftunspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Example**
@@ -809,12 +827,13 @@ struct Index {
 gzfwrite(buf: ArrayBuffer, size: number, nitems: number): Promise<number>
 ```
 
-Compresses data blocks that are declared with size and nitems from the buffer and writes the data blocks to a
-file. This API uses a promise to return the result.
+Compresses data blocks that are declared with size and nitems from the buffer and writes the data blocks to a file. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzfwrite(buf: ArrayBuffer, size: long, nitems: long): Promise<long>--><!--Device-GZip-gzfwrite(buf: ArrayBuffer, size: long, nitems: long): Promise<long>-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -822,7 +841,7 @@ file. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Buffer to which data is to be written. |
+| buf | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Buffer to which data is to be written. |
 | size | number | Yes | Number of bytes in a single data block. |
 | nitems | number | Yes | Number of data blocks to be written. |
 
@@ -830,13 +849,13 @@ file. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are leftunspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Example**
@@ -896,13 +915,15 @@ Reads and decompresses a byte from a file. This API uses a promise to return the
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GZip-gzgetc(): Promise<int>--><!--Device-GZip-gzgetc(): Promise<int>-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -959,12 +980,13 @@ struct Index {
 gzgets(buf: ArrayBuffer): Promise<string>
 ```
 
-Reads bytes from a compressed file until len-1 characters are read, a newline character is read and transferred
-to a buffer, or an end-of-file condition is encountered. This API uses a promise to return the result.
+Reads bytes from a compressed file until len-1 characters are read, a newline character is read and transferred to a buffer, or an end-of-file condition is encountered. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzgets(buf: ArrayBuffer): Promise<string>--><!--Device-GZip-gzgets(buf: ArrayBuffer): Promise<string>-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -972,19 +994,19 @@ to a buffer, or an end-of-file condition is encountered. This API uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Stores the read row data. |
+| buf | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Stores the read row data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return a string ended with **null**. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return a string ended with **null**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are leftunspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Example**
@@ -1043,13 +1065,15 @@ Returns the current compressed read or write offset of the file. This API uses a
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GZip-gzoffset(): Promise<long>--><!--Device-GZip-gzoffset(): Promise<long>-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1103,12 +1127,13 @@ struct Index {
 gzopen(path: string, mode: string): Promise<void>
 ```
 
-Opens the .gz file in the specified path for reading and decompressing, or compressing and writing. This API uses
-a promise to return the result.
+Opens the .gz file in the specified path for reading and decompressing, or compressing and writing. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzopen(path: string, mode: string): Promise<void>--><!--Device-GZip-gzopen(path: string, mode: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -1117,19 +1142,19 @@ a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the file to be opened. |
-| mode | string | Yes | Specifies a mode for opening a file.<br>Basic modes (one of the following must beselected):<br>- **"r"** or **"rb"**: read mode. The system automatically detects and decompresses the gzipfile. If the file is not in gzip format, the original data is directly read.<br>- **"w"** or **"wb"**: writemode. The system creates a new file and compresses data.<br>- **"a"** or **"ab"**: append mode. The systemappends a new gzip stream to the end of the existing file without verifying the format of the original file.&lt;br&gt;Optional function parameters (can be used together):<br>- Compression level: **0** (no compression) to**9** (maximum compression). The default compression level is **6**. This parameter must be used togetherwith the write or append mode.<br>- Compression strategy: **"f"** (filtering strategy), **"h"** (Huffmancoding strategy), **"R"** (RLE compression strategy), or **"F"** (fixed encoding strategy). You can onlyselect one of the strategies.<br>- Transparent mode: **"T"**. In this mode, data is not compressed and nogzip header is generated during writing (a common file is generated). This parameter is mutually exclusivewith the compression strategy parameter.<br>- Exclusive creation: **"x"**. The file fails to be opened if italready exists. This parameter must be used together with the write or append mode.<br>- Close-on-exec flag:**"e"**. This parameter is used to set the **FD_CLOEXEC** property of the file descriptor (system-dependent).<br>Examples:<br>- **"r"**: read mode. Data is read in binary format.<br>- **"rb"**: read mode. Data is readin binary format.<br>- **"wb6"**: write mode. Data is written in binary format with the compression level of6.<br>- **"wb9f"**: write mode. Data is written in binary format with the maximum compression level andfiltering strategy.<br>- **"wbT"**: write mode. Data is not compressed and a common file is generated.<br>-**"wbx"**: write mode. Data is written to the exclusively created file in binary format.<br>- **"abx"**:append mode. Data is appended and written to the exclusively created file in binary format. |
+| mode | string | Yes | Specifies a mode for opening a file.<br>Basic modes (one of the following must be selected):<br>- **"r"** or **"rb"**: read mode. The system automatically detects and decompresses the gzip file. If the file is not in gzip format, the original data is directly read.<br>- **"w"** or **"wb"**: write mode. The system creates a new file and compresses data.<br>- **"a"** or **"ab"**: append mode. The system appends a new gzip stream to the end of the existing file without verifying the format of the original file.<br>Optional function parameters (can be used together):<br>- Compression level: **0** (no compression) to **9** (maximum compression). The default compression level is **6**. This parameter must be used together with the write or append mode.<br>- Compression strategy: **"f"** (filtering strategy), **"h"** (Huffman coding strategy), **"R"** (RLE compression strategy), or **"F"** (fixed encoding strategy). You can only select one of the strategies.<br>- Transparent mode: **"T"**. In this mode, data is not compressed and no gzip header is generated during writing (a common file is generated). This parameter is mutually exclusive with the compression strategy parameter.<br>- Exclusive creation: **"x"**. The file fails to be opened if it already exists. This parameter must be used together with the write or append mode.<br>- Close-on-exec flag:**"e"**. This parameter is used to set the **FD_CLOEXEC** property of the file descriptor (system-dependent).<br>Examples:<br>- **"r"**: read mode. Data is read in binary format.<br>- **"rb"**: read mode. Data is read in binary format.<br>- **"wb6"**: write mode. Data is written in binary format with the compression level of6.<br>- **"wb9f"**: write mode. Data is written in binary format with the maximum compression level and filtering strategy.<br>- **"wbT"**: write mode. Data is not compressed and a common file is generated.<br>-**"wbx"**: write mode. Data is written to the exclusively created file in binary format.<br>- **"abx"**:append mode. Data is appended and written to the exclusively created file in binary format. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are leftunspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800002](../../apis-basic-services-kit/errorcode-zlib.md#17800002-incorrect-file-or-access-mode) | No such file or access mode error. |
 
 **Example**
@@ -1177,12 +1202,13 @@ struct Index {
 gzprintf(format: string, ...args: Array<string | number>): Promise<number>
 ```
 
-Converts and formats the parameters under the control of the string format and then compresses and writes them
-into a file, as shown in the **fprintf()**. This API uses a promise to return the result.
+Converts and formats the parameters under the control of the string format and then compresses and writes them into a file, as shown in the **fprintf()**. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzprintf(format: string, ...args: Array<string | double>): Promise<int>--><!--Device-GZip-gzprintf(format: string, ...args: Array<string | double>): Promise<int>-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -1191,20 +1217,20 @@ into a file, as shown in the **fprintf()**. This API uses a promise to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | format | string | Yes | Format descriptors and plain text. |
-| args | Array&lt;string \| number&gt; | Yes | List of variable parameters. If variable parameters are passed, forexample, **gzprintf("name is %s, age is %d", "Tom", 23)**, the content **"name is Tom, age is 23"** iswritten. If no variable parameter is passed, for example, **gzprintf("name is %s, age is %d")**, the content**"name is %s, age is %d"** is written. |
+| args | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string \| number> | Yes | List of variable parameters. If variable parameters are passed, for example, **gzprintf("name is %s, age is %d", "Tom", 23)**, the content **"name is Tom, age is 23"** is written. If no variable parameter is passed, for example, **gzprintf("name is %s, age is %d")**, the content **"name is %s, age is %d"** is written. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Return the number of uncompressed bytes actually written. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Return the number of uncompressed bytes actually written. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are leftunspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by aninitialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Example**
@@ -1253,12 +1279,13 @@ struct Index {
 gzputc(ch: number): Promise<number>
 ```
 
-Compresses **char** converted to an unsigned character and writes it to a file. This API uses a promise to return
-the result.
+Compresses **char** converted to an unsigned character and writes it to a file. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzputc(ch: int): Promise<int>--><!--Device-GZip-gzputc(ch: int): Promise<int>-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -1272,13 +1299,13 @@ the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are leftunspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Example**
@@ -1327,12 +1354,13 @@ struct Index {
 gzputs(str: string): Promise<number>
 ```
 
-Compresses the given null-terminated strings and writes them to the file, excluding the null operator. This API
-uses a promise to return the result.
+Compresses the given null-terminated strings and writes them to the file, excluding the null operator. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzputs(str: string): Promise<int>--><!--Device-GZip-gzputs(str: string): Promise<int>-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -1346,13 +1374,13 @@ uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are leftunspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Example**
@@ -1401,12 +1429,13 @@ struct Index {
 gzread(buf: ArrayBuffer): Promise<number>
 ```
 
-Reads a maximum of **len** uncompressed bytes from a file and decompresses them into the buffer. This API uses a
-promise to return the result.
+Reads a maximum of **len** uncompressed bytes from a file and decompresses them into the buffer. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzread(buf: ArrayBuffer): Promise<long>--><!--Device-GZip-gzread(buf: ArrayBuffer): Promise<long>-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -1414,19 +1443,19 @@ promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Target offset position. |
+| buf | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Target offset position. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are leftunspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Example**
@@ -1484,12 +1513,13 @@ struct Index {
 gzrewind(): Promise<ReturnStatus>
 ```
 
-Repositions the file pointer to the beginning of the file. This feature is applied only for reading. This API
-uses a promise to return the result.
+Repositions the file pointer to the beginning of the file. This feature is applied only for reading. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzrewind(): Promise<ReturnStatus>--><!--Device-GZip-gzrewind(): Promise<ReturnStatus>-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -1497,7 +1527,7 @@ uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ReturnStatus> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1559,6 +1589,8 @@ Sets the start position to the offset position relative to the next **gzread** o
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GZip-gzseek(offset: long, whence: OffsetReferencePoint): Promise<long>--><!--Device-GZip-gzseek(offset: long, whence: OffsetReferencePoint): Promise<long>-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Parameters:**
@@ -1566,19 +1598,19 @@ Sets the start position to the offset position relative to the next **gzread** o
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | offset | number | Yes | Target offset position. |
-| whence | OffsetReferencePoint | Yes | Defines the reference point for the offset. For details, see[OffsetReferencePoint](arkts-basicservices-offsetreferencepoint-e.md). |
+| whence | [OffsetReferencePoint](arkts-basicservices-offsetreferencepoint-e.md) | Yes | Defines the reference point for the offset. For details, see [OffsetReferencePoint](arkts-basicservices-offsetreferencepoint-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are leftunspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Example**
@@ -1627,12 +1659,13 @@ struct Index {
 gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>
 ```
 
-Dynamically updates the compression level and compression strategy of a file. This API uses a promise to return
-the result.
+Dynamically updates the compression level and compression strategy of a file. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>--><!--Device-GZip-gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -1640,21 +1673,21 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | CompressLevel | Yes | Compression level. For details, see [CompressLevel](arkts-basicservices-compresslevel-e.md). |
-| strategy | CompressStrategy | Yes | Compression strategy. For details, see[CompressStrategy](arkts-basicservices-compressstrategy-e.md). |
+| level | [CompressLevel](arkts-basicservices-compresslevel-e.md) | Yes | Compression level. For details, see [CompressLevel](arkts-basicservices-compresslevel-e.md). |
+| strategy | [CompressStrategy](arkts-basicservices-compressstrategy-e.md) | Yes | Compression strategy. For details, see [CompressStrategy](arkts-basicservices-compressstrategy-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ReturnStatus> | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are leftunspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by aninitialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 **Example**
 
@@ -1703,12 +1736,13 @@ struct Index {
 gztell(): Promise<number>
 ```
 
-Returns the start position of the next **gzread** or **gzwrite** in the file. This API uses a promise to return
-the result.
+Returns the start position of the next **gzread** or **gzwrite** in the file. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gztell(): Promise<long>--><!--Device-GZip-gztell(): Promise<long>-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -1716,7 +1750,7 @@ the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1770,12 +1804,13 @@ struct Index {
 gzungetc(c: number): Promise<number>
 ```
 
-Pushes **c** back into the input stream so that it will be read as the first character the next time the file is
-read. This API uses a promise to return the result.
+Pushes **c** back into the input stream so that it will be read as the first character the next time the file is read. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzungetc(c: int): Promise<int>--><!--Device-GZip-gzungetc(c: int): Promise<int>-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -1789,13 +1824,13 @@ read. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are leftunspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Example**
@@ -1847,12 +1882,13 @@ struct Index {
 gzwrite(buf: ArrayBuffer, len: number): Promise<number>
 ```
 
-Compresses the uncompressed bytes of the declared length in the buffer and writes them to the file. This API uses
-a promise to return the result.
+Compresses the uncompressed bytes of the declared length in the buffer and writes them to the file. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzwrite(buf: ArrayBuffer, len: long): Promise<long>--><!--Device-GZip-gzwrite(buf: ArrayBuffer, len: long): Promise<long>-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -1860,20 +1896,20 @@ a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Data buffer pointed by an object to be written. |
+| buf | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Data buffer pointed by an object to be written. |
 | len | number | Yes | Length of uncompressed bytes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are leftunspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
 
 **Example**

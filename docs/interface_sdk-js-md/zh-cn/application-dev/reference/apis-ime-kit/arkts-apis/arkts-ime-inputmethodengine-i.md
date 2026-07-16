@@ -8,7 +8,15 @@
 
 **替代接口：** [InputMethodAbility](arkts-ime-inputmethodability-i.md)
 
+<!--Device-inputMethodEngine-interface InputMethodEngine--><!--Device-inputMethodEngine-interface InputMethodEngine-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+## 导入模块
+
+```TypeScript
+import { inputMethodEngine } from '@kit.IMEKit';
+```
 
 ## off('inputStart')
 
@@ -27,6 +35,14 @@ off(
 
 **替代接口：** off(type:
 
+<!--Device-InputMethodEngine-off(
+      type: 'inputStart',
+      callback?: (kbController: KeyboardController, textInputClient: TextInputClient) => void
+    ): void--><!--Device-InputMethodEngine-off(
+      type: 'inputStart',
+      callback?: (kbController: KeyboardController, textInputClient: TextInputClient) => void
+    ): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -34,7 +50,7 @@ off(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'inputStart' | 是 | 设置监听类型，固定取值为'inputStart'。 |
-| callback | (kbController: KeyboardController, textInputClient: TextInputClient) =&gt; void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | (kbController: KeyboardController, textInputClient: TextInputClient) => void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例：**
 
@@ -61,6 +77,8 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 
 **替代接口：** off(type:
 
+<!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void--><!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -68,7 +86,7 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | 是 | 要取消监听的输入法软键盘事件类型。<br/>-'keyboardShow'表示显示输入法软键盘。<br/>-'keyboardHide'表示隐藏输入法软键盘。 |
-| callback | () =&gt; void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | () => void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例：**
 
@@ -92,6 +110,8 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 
 **替代接口：** off(type:
 
+<!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void--><!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -99,7 +119,7 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | 是 | 要取消监听的输入法软键盘事件类型。<br/>-'keyboardShow'表示显示输入法软键盘。<br/>-'keyboardHide'表示隐藏输入法软键盘。 |
-| callback | () =&gt; void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | () => void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例：**
 
@@ -126,6 +146,14 @@ on(
 
 **替代接口：** on(type:
 
+<!--Device-InputMethodEngine-on(
+      type: 'inputStart',
+      callback: (kbController: KeyboardController, textInputClient: TextInputClient) => void
+    ): void--><!--Device-InputMethodEngine-on(
+      type: 'inputStart',
+      callback: (kbController: KeyboardController, textInputClient: TextInputClient) => void
+    ): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -133,7 +161,7 @@ on(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'inputStart' | 是 | 设置监听类型，固定取值为'inputStart'。 |
-| callback | (kbController: KeyboardController, textInputClient: TextInputClient) =&gt; void | 是 | 回调函数，返回订阅输入法的KeyboardController和TextInputClient实例。 |
+| callback | (kbController: KeyboardController, textInputClient: TextInputClient) => void | 是 | 回调函数，返回订阅输入法的KeyboardController和TextInputClient实例。 |
 
 **示例：**
 
@@ -160,6 +188,8 @@ on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 
 **替代接口：** on(type:
 
+<!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void--><!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -167,7 +197,7 @@ on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | 是 | 设置监听类型。<br/>-'keyboardShow'表示显示输入法软键盘。<br/>-'keyboardHide'表示隐藏输入法软键盘。 |
-| callback | () =&gt; void | 是 | 回调函数。 |
+| callback | () => void | 是 | 回调函数。 |
 
 **示例：**
 
@@ -195,6 +225,8 @@ on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 
 **替代接口：** on(type:
 
+<!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void--><!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -202,7 +234,7 @@ on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | 是 | 设置监听类型。<br/>-'keyboardShow'表示显示输入法软键盘。<br/>-'keyboardHide'表示隐藏输入法软键盘。 |
-| callback | () =&gt; void | 是 | 回调函数。 |
+| callback | () => void | 是 | 回调函数。 |
 
 **示例：**
 

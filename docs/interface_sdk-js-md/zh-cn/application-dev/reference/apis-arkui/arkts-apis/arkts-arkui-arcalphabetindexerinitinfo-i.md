@@ -4,7 +4,15 @@
 
 **起始版本：** 18
 
+<!--Device-unnamed-declare interface ArcAlphabetIndexerInitInfo--><!--Device-unnamed-declare interface ArcAlphabetIndexerInitInfo-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
+
+## 导入模块
+
+```TypeScript
+import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from '@kit.ArkUI';
+```
 
 ## arrayValue
 
@@ -18,7 +26,9 @@ arrayValue: string[]
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcAlphabetIndexerInitInfo-arrayValue: string[]--><!--Device-ArcAlphabetIndexerInitInfo-arrayValue: string[]-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -36,7 +46,9 @@ selected: number
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ArcAlphabetIndexerInitInfo-selected: number--><!--Device-ArcAlphabetIndexerInitInfo-selected: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-i18n-export interface HolidayLocalName--><!--Device-i18n-export interface HolidayLocalName-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
 
 ## language
 
@@ -18,7 +26,9 @@ language: string
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HolidayLocalName-language: string--><!--Device-HolidayLocalName-language: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -34,7 +44,9 @@ name: string
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HolidayLocalName-name: string--><!--Device-HolidayLocalName-name: string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

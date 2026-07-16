@@ -4,9 +4,17 @@
 
 **起始版本：** 23
 
+<!--Device-cloudData-interface DBSwitchInfo--><!--Device-cloudData-interface DBSwitchInfo-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { cloudData } from '@kit.ArkData';
+```
 
 ## enable
 
@@ -19,6 +27,8 @@ enable: boolean
 **类型：** boolean
 
 **起始版本：** 23
+
+<!--Device-DBSwitchInfo-enable: boolean--><!--Device-DBSwitchInfo-enable: boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -35,6 +45,8 @@ tableInfo?: Record<string, boolean>
 **类型：** Record<string, boolean>
 
 **起始版本：** 23
+
+<!--Device-DBSwitchInfo-tableInfo?: Record<string, boolean>--><!--Device-DBSwitchInfo-tableInfo?: Record<string, boolean>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 

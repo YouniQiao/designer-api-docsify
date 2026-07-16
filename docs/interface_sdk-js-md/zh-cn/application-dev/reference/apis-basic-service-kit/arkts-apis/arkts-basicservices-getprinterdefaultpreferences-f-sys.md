@@ -1,5 +1,11 @@
 # getPrinterDefaultPreferences（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+```
+
 ## getPrinterDefaultPreferences
 
 ```TypeScript
@@ -13,6 +19,8 @@ function getPrinterDefaultPreferences(printerId: string): Promise<PrinterPrefere
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-print-function getPrinterDefaultPreferences(printerId: string): Promise<PrinterPreferences>--><!--Device-print-function getPrinterDefaultPreferences(printerId: string): Promise<PrinterPreferences>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -28,7 +36,7 @@ function getPrinterDefaultPreferences(printerId: string): Promise<PrinterPrefere
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PrinterPreferences&gt; | - Promise that resolves with the default preferences of the printer. |
+| Promise<PrinterPreferences> | - Promise that resolves with the default preferences of the printer. |
 
 **错误码：**
 

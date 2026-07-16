@@ -4,6 +4,8 @@ Enum representing the supported types of AI sessions.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare enum AISessionType--><!--Device-unnamed-declare enum AISessionType-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## TRANSLATOR
@@ -17,6 +19,8 @@ Translator model
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AISessionType-TRANSLATOR = 1--><!--Device-AISessionType-TRANSLATOR = 1-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,6 +36,8 @@ Language detector model
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AISessionType-LANGUAGE_DETECTOR = 2--><!--Device-AISessionType-LANGUAGE_DETECTOR = 2-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## SUMMARIZER
@@ -45,6 +51,8 @@ Summarization generator model
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AISessionType-SUMMARIZER = 3--><!--Device-AISessionType-SUMMARIZER = 3-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -60,6 +68,8 @@ Writing assistant model
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AISessionType-WRITER = 4--><!--Device-AISessionType-WRITER = 4-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## REWRITER
@@ -73,6 +83,8 @@ Rewriting assistant model
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AISessionType-REWRITER = 5--><!--Device-AISessionType-REWRITER = 5-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -88,6 +100,8 @@ Prompt engineering model
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AISessionType-PROMPT = 6--><!--Device-AISessionType-PROMPT = 6-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## PROOFREADER
@@ -101,6 +115,8 @@ Proofreading assistant model
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AISessionType-PROOFREADER = 7--><!--Device-AISessionType-PROOFREADER = 7-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

@@ -1,11 +1,12 @@
 # SymbolNumberFormatOptions
 
-Represents optional configuration items for the SymbolNumberFormat object.
-Define the symbol element and value that need to be replaced.
+Represents optional configuration items for the SymbolNumberFormat object.Define the symbol element and value that need to be replaced.
 
 **Inheritance/Implementation:** SymbolNumberFormatOptions extends [Intl.NumberFormatOptions](../../apis-na/arkts-apis/arkts-na-numberformatoptions-i.md)
 
 **Since:** 26.0.0
+
+<!--Device-i18n-export interface SymbolNumberFormatOptions extends Intl.NumberFormatOptions--><!--Device-i18n-export interface SymbolNumberFormatOptions extends Intl.NumberFormatOptions-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -31,6 +32,8 @@ Grouping Separator symbol of localized number part, such as "," of "10,000".
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SymbolNumberFormatOptions-groupingSeparator?: string | undefined--><!--Device-SymbolNumberFormatOptions-groupingSeparator?: string | undefined-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## infinity
@@ -48,6 +51,8 @@ Infinity symbol of localized number part, such as "∞".
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SymbolNumberFormatOptions-infinity?: string | undefined--><!--Device-SymbolNumberFormatOptions-infinity?: string | undefined-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -67,6 +72,8 @@ Minus sign of localized number part, such as "-".
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SymbolNumberFormatOptions-minusSign?: string | undefined--><!--Device-SymbolNumberFormatOptions-minusSign?: string | undefined-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## nan
@@ -84,6 +91,8 @@ NaN symbol of localized number part, such as "null".
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SymbolNumberFormatOptions-nan?: string | undefined--><!--Device-SymbolNumberFormatOptions-nan?: string | undefined-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -103,6 +112,8 @@ Plus sign of localized number part, such as "+".
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SymbolNumberFormatOptions-plusSign?: string | undefined--><!--Device-SymbolNumberFormatOptions-plusSign?: string | undefined-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## zero
@@ -120,6 +131,8 @@ Zero symbol of localized number part, such as "0".
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SymbolNumberFormatOptions-zero?: string | undefined--><!--Device-SymbolNumberFormatOptions-zero?: string | undefined-End-->
 
 **System capability:** SystemCapability.Global.I18n
 

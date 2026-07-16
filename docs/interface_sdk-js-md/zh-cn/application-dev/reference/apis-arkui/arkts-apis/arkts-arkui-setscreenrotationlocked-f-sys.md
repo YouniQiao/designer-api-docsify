@@ -1,5 +1,11 @@
 # setScreenRotationLocked（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { screen } from '@kit.ArkUI';
+```
+
 ## setScreenRotationLocked
 
 ```TypeScript
@@ -10,6 +16,8 @@ function setScreenRotationLocked(isLocked:boolean, callback: AsyncCallback<void>
 
 **起始版本：** 9
 
+<!--Device-screen-function setScreenRotationLocked(isLocked:boolean, callback: AsyncCallback<void>): void--><!--Device-screen-function setScreenRotationLocked(isLocked:boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -19,7 +27,7 @@ function setScreenRotationLocked(isLocked:boolean, callback: AsyncCallback<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isLocked | boolean | 是 | 自动转屏开关是否锁定。true为锁定，false为未锁定。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当设置自动转屏是否锁定成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当设置自动转屏是否锁定成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -57,6 +65,8 @@ function setScreenRotationLocked(isLocked:boolean): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-screen-function setScreenRotationLocked(isLocked:boolean): Promise<void>--><!--Device-screen-function setScreenRotationLocked(isLocked:boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -71,7 +81,7 @@ function setScreenRotationLocked(isLocked:boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

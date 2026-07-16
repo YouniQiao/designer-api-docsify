@@ -8,6 +8,8 @@ Defines the options for fetching file attributes.
 
 **Substitutes:** [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchoptions-i.md)
 
+<!--Device-userFileManager-interface AlbumFetchOptions--><!--Device-userFileManager-interface AlbumFetchOptions-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -33,6 +35,8 @@ Predicates that specify the fetch criteria.
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [predicates](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchoptions-i.md#predicates)
+
+<!--Device-AlbumFetchOptions-predicates: dataSharePredicates.DataSharePredicates--><!--Device-AlbumFetchOptions-predicates: dataSharePredicates.DataSharePredicates-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

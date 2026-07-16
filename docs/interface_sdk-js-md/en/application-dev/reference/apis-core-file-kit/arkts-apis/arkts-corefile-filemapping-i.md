@@ -1,9 +1,10 @@
 # FileMapping
 
-File mapping object. Before invoking the FileMapping method, you need to use the mmap() method (synchronous or
-asynchronous) to construct a FileMapping instance.
+File mapping object. Before invoking the FileMapping method, you need to use the mmap() method (synchronous or asynchronous) to construct a FileMapping instance.
 
 **Since:** 26.0.0
+
+<!--Device-unnamed-declare interface FileMapping--><!--Device-unnamed-declare interface FileMapping-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -24,6 +25,8 @@ Obtains the capacity of the file mapping area.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FileMapping-capacity(): number--><!--Device-FileMapping-capacity(): number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -60,12 +63,13 @@ fileIo.closeSync(file);
 flip(): void
 ```
 
-Mode reversal. That is, the limit attribute is set to the current position, and then the current position is set
-to 0.
+Mode reversal. That is, the limit attribute is set to the current position, and then the current position is set to 0.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FileMapping-flip(): void--><!--Device-FileMapping-flip(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -109,6 +113,8 @@ Obtains the upper bound of the readable and writable area of the file mapping ar
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FileMapping-getLimit(): number--><!--Device-FileMapping-getLimit(): number-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
@@ -150,6 +156,8 @@ Gets the current location of the file mapping area.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FileMapping-getPosition(): number--><!--Device-FileMapping-getPosition(): number-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
@@ -185,14 +193,13 @@ fileIo.closeSync(file);
 msync(): Promise<void>
 ```
 
-Synchronizes the dirty page data in the entire file mapping area to the disk file and uses the promise
-asynchronous callback function.
-Note: If the file is not stored on the local device, calling this API does not ensure that all changes are
-stored persistently.
+Synchronizes the dirty page data in the entire file mapping area to the disk file and uses the promise asynchronous callback function.Note: If the file is not stored on the local device, calling this API does not ensure that all changes are stored persistently.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FileMapping-msync(): Promise<void>--><!--Device-FileMapping-msync(): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -200,7 +207,7 @@ stored persistently.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise object. No return value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise object. No return value. |
 
 **Error codes:**
 
@@ -242,14 +249,13 @@ mapping.msync().then(() => {
 msync(position: number, length: number): Promise<void>
 ```
 
-Synchronizes the dirty page data in the specified range of the file mapping area to the disk file and uses the
-promise asynchronous callback function.
-Note: If the file is not stored on the local device, calling this API does not ensure that all changes are
-stored persistently.
+Synchronizes the dirty page data in the specified range of the file mapping area to the disk file and uses the promise asynchronous callback function.Note: If the file is not stored on the local device, calling this API does not ensure that all changes are stored persistently.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FileMapping-msync(position: number, length: number): Promise<void>--><!--Device-FileMapping-msync(position: number, length: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -264,7 +270,7 @@ stored persistently.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise object. No return value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise object. No return value. |
 
 **Error codes:**
 
@@ -306,14 +312,13 @@ mapping.msync(50, buffer.byteLength).then(() => {
 msyncSync(): void
 ```
 
-Synchronizes the dirty page data of the entire file mapping area to the disk file by using the synchronization
-method.
-Note: If the file is not stored on the local device, calling this API does not ensure that all changes are
-stored persistently.
+Synchronizes the dirty page data of the entire file mapping area to the disk file by using the synchronization method.Note: If the file is not stored on the local device, calling this API does not ensure that all changes are stored persistently.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FileMapping-msyncSync(): void--><!--Device-FileMapping-msyncSync(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -354,14 +359,13 @@ fileIo.closeSync(file);
 msyncSync(position: number, length: number): void
 ```
 
-Synchronize the dirty page data in the specified range of the file mapping area to the disk file by using the
-synchronization method.
-Note: If the file is not stored on the local device, calling this API does not ensure that all changes are
-stored persistently.
+Synchronize the dirty page data in the specified range of the file mapping area to the disk file by using the synchronization method.Note: If the file is not stored on the local device, calling this API does not ensure that all changes are stored persistently.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FileMapping-msyncSync(position: number, length: number): void--><!--Device-FileMapping-msyncSync(position: number, length: number): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -415,13 +419,15 @@ Reads data from the current position and moves the position backward by the numb
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FileMapping-read(buffer: ArrayBuffer, length?: number): number--><!--Device-FileMapping-read(buffer: ArrayBuffer, length?: number): number-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer for storing the read file data. |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Buffer for storing the read file data. |
 | length | number | No | Length of the data to be read, in bytes. This parameter is optional.The default value is the buffer length. |
 
 **Return value:**
@@ -468,6 +474,8 @@ Reads data from the specified location without affecting the current location.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FileMapping-read(position: number, buffer: ArrayBuffer, length?: number): number--><!--Device-FileMapping-read(position: number, buffer: ArrayBuffer, length?: number): number-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
@@ -475,7 +483,7 @@ Reads data from the specified location without affecting the current location.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | position | number | Yes | Start position to read from. |
-| buffer | ArrayBuffer | Yes | Buffer for storing the read file data. |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Buffer for storing the read file data. |
 | length | number | No | Length of the data to be read, in bytes. This parameter is optional.The default value is the buffer length. |
 
 **Return value:**
@@ -516,12 +524,13 @@ fileIo.closeSync(file);
 remaining(): number
 ```
 
-Obtains the number of remaining bytes between the current position (position) and the upper bound (limit) of the
-readable and writable area.
+Obtains the number of remaining bytes between the current position (position) and the upper bound (limit) of the readable and writable area.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FileMapping-remaining(): number--><!--Device-FileMapping-remaining(): number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -561,12 +570,13 @@ fileIo.closeSync(file);
 setLimit(limit: number): void
 ```
 
-Sets the upper bound of the readable and writable area of the file mapping area. The upper bound does not exceed
-the total capacity of the mapping area (0 <= limit <= capacity).
+Sets the upper bound of the readable and writable area of the file mapping area. The upper bound does not exceed the total capacity of the mapping area (0 <= limit <= capacity).
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FileMapping-setLimit(limit: number): void--><!--Device-FileMapping-setLimit(limit: number): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -574,7 +584,7 @@ the total capacity of the mapping area (0 <= limit <= capacity).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| limit | number | Yes | Upper bound of the readable and writable area to be set, in bytes. If the currentposition is greater than the new upper bound, the value is automatically adjusted to limit. |
+| limit | number | Yes | Upper bound of the readable and writable area to be set, in bytes. If the current position is greater than the new upper bound, the value is automatically adjusted to limit. |
 
 **Error codes:**
 
@@ -609,13 +619,15 @@ Sets the current location of the file mapping area.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FileMapping-setPosition(position: number): void--><!--Device-FileMapping-setPosition(position: number): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | number | Yes | Target location, in bytes. The value must be a non-negative number and cannotbe greater than the current upper bound (limit). |
+| position | number | Yes | Target location, in bytes. The value must be a non-negative number and cannot be greater than the current upper bound (limit). |
 
 **Error codes:**
 
@@ -650,13 +662,15 @@ Releases the file mapping area and use the promise asynchronous callback functio
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FileMapping-unmap(): Promise<void>--><!--Device-FileMapping-unmap(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise object. No return value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise object. No return value. |
 
 **Error codes:**
 
@@ -698,6 +712,8 @@ Releases the file mapping area by using the synchronization method.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FileMapping-unmapSync(): void--><!--Device-FileMapping-unmapSync(): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Error codes:**
@@ -734,13 +750,15 @@ Writes data from the current location and moves the location backward by the num
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FileMapping-write(data: ArrayBuffer, length?: number): number--><!--Device-FileMapping-write(data: ArrayBuffer, length?: number): number-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | ArrayBuffer | Yes | Buffer data to be written to the file. |
+| data | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Buffer data to be written to the file. |
 | length | number | No | Length of the data to be written, in bytes. This parameter is optional.The default value is the buffer length. |
 
 **Return value:**
@@ -789,6 +807,8 @@ Writes data from the specified location without affecting the current location.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FileMapping-write(position: number, data: ArrayBuffer, length?: number): number--><!--Device-FileMapping-write(position: number, data: ArrayBuffer, length?: number): number-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
@@ -796,7 +816,7 @@ Writes data from the specified location without affecting the current location.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | position | number | Yes | Start position of the expected write. |
-| data | ArrayBuffer | Yes | Buffer data to be written to the file. |
+| data | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Buffer data to be written to the file. |
 | length | number | No | Length of the data to be written, in bytes. This parameter is optional.The default value is the buffer length. |
 
 **Return value:**

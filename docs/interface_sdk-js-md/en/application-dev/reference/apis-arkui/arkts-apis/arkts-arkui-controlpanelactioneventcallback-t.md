@@ -10,6 +10,8 @@ Describes the action event callback of the PiP controller.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PiPWindow-type ControlPanelActionEventCallback = (event: PiPActionEventType, status?: int) => void--><!--Device-PiPWindow-type ControlPanelActionEventCallback = (event: PiPActionEventType, status?: int) => void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**

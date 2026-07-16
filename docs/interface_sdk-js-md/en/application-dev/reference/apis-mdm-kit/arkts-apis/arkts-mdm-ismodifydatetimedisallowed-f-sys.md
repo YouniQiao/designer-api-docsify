@@ -12,8 +12,7 @@ import { dateTimeManager } from '@kit.MDMKit';
 function isModifyDateTimeDisallowed(admin: Want, callback: AsyncCallback<boolean>): void
 ```
 
-Queries whether the system time of a device can be modified. This API uses an asynchronous callback to return the
-result.
+Queries whether the system time of a device can be modified. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -25,6 +24,8 @@ result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-dateTimeManager-function isModifyDateTimeDisallowed(admin: Want, callback: AsyncCallback<boolean>): void--><!--Device-dateTimeManager-function isModifyDateTimeDisallowed(admin: Want, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -33,8 +34,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback invoked to return the result. The value **true** means thesystem time modification is disallowed, and **false** means the opposite. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback invoked to return the result. The value **true** means the system time modification is disallowed, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -87,6 +88,8 @@ Queries whether the system time of a device can be modified. This API uses a pro
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-dateTimeManager-function isModifyDateTimeDisallowed(admin: Want): Promise<boolean>--><!--Device-dateTimeManager-function isModifyDateTimeDisallowed(admin: Want): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -95,13 +98,13 @@ Queries whether the system time of a device can be modified. This API uses a pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the system timemodification is disallowed, and **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means the system time modification is disallowed, and **false** means the opposite. |
 
 **Error codes:**
 

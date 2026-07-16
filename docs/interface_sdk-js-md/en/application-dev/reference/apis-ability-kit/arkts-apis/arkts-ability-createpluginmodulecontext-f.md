@@ -12,12 +12,13 @@ import { application } from '@kit.AbilityKit';
 export function createPluginModuleContext(context: Context, pluginBundleName: string, pluginModuleName: string): Promise<Context>
 ```
 
-Creates the context of a plugin under the current application based on the context, plugin bundle name, and plugin
-module name, so as to obtain the basic information about the plugin. This API uses a promise to return the result.
+Creates the context of a plugin under the current application based on the context, plugin bundle name, and plugin module name, so as to obtain the basic information about the plugin. This API uses a promise to return the result.
 
 **Since:** 19
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-application-export function createPluginModuleContext(context: Context, pluginBundleName: string, pluginModuleName: string): Promise<Context>--><!--Device-application-export function createPluginModuleContext(context: Context, pluginBundleName: string, pluginModuleName: string): Promise<Context>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -25,7 +26,7 @@ module name, so as to obtain the basic information about the plugin. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. |
 | pluginBundleName | string | Yes | Bundle name of the plugin. |
 | pluginModuleName | string | Yes | Module name of the plugin. |
 
@@ -33,7 +34,7 @@ module name, so as to obtain the basic information about the plugin. This API us
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Context&gt; | Promise used to return the context created. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Context> | Promise used to return the context created. |
 
 **Example**
 

@@ -18,6 +18,8 @@ Switches a batch of missions to the foreground. This API uses an asynchronous ca
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-missionManager-function moveMissionsToForeground(missionIds: Array<int>, callback: AsyncCallback<void>): void--><!--Device-missionManager-function moveMissionsToForeground(missionIds: Array<int>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Switches a batch of missions to the foreground. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionIds | Array&lt;number&gt; | Yes | Array holding the mission IDs. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| missionIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Array holding the mission IDs. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -83,12 +85,13 @@ try {
 function moveMissionsToForeground(missionIds: Array<number>, topMission: number, callback: AsyncCallback<void>): void
 ```
 
-Switches a batch of missions to the foreground, and moves the mission with the specified ID to the top. This API
-uses an asynchronous callback to return the result.
+Switches a batch of missions to the foreground, and moves the mission with the specified ID to the top. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
+
+<!--Device-missionManager-function moveMissionsToForeground(missionIds: Array<int>, topMission: int, callback: AsyncCallback<void>): void--><!--Device-missionManager-function moveMissionsToForeground(missionIds: Array<int>, topMission: int, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -98,9 +101,9 @@ uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionIds | Array&lt;number&gt; | Yes | Array holding the mission IDs. |
+| missionIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Array holding the mission IDs. |
 | topMission | number | Yes | ID of the mission to be moved to the top. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -156,12 +159,13 @@ try {
 function moveMissionsToForeground(missionIds: Array<number>, topMission?: number): Promise<void>
 ```
 
-Switches a batch of missions to the foreground, and moves the mission with the specified ID to the top. This API
-uses a promise to return the result.
+Switches a batch of missions to the foreground, and moves the mission with the specified ID to the top. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
+
+<!--Device-missionManager-function moveMissionsToForeground(missionIds: Array<int>, topMission?: int): Promise<void>--><!--Device-missionManager-function moveMissionsToForeground(missionIds: Array<int>, topMission?: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -171,14 +175,14 @@ uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionIds | Array&lt;number&gt; | Yes | Array holding the mission IDs. |
-| topMission | number | No | ID of the mission to be moved to the top. The default value is **-1**, indicating thatthe default mission is moved to the top. |
+| missionIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Array holding the mission IDs. |
+| topMission | number | No | ID of the mission to be moved to the top. The default value is **-1**, indicating that the default mission is moved to the top. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

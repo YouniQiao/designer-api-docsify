@@ -1,5 +1,11 @@
 # createKeyAgreement
 
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+```
+
 ## createKeyAgreement
 
 ```TypeScript
@@ -10,7 +16,9 @@ function createKeyAgreement(algName: string): KeyAgreement
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cryptoFramework-function createKeyAgreement(algName: string): KeyAgreement--><!--Device-cryptoFramework-function createKeyAgreement(algName: string): KeyAgreement-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.KeyAgreement
@@ -26,7 +34,7 @@ function createKeyAgreement(algName: string): KeyAgreement
 
 | 类型 | 说明 |
 | --- | --- |
-| KeyAgreement | 返回由输入算法指定生成的KeyAgreement对象。 |
+| [KeyAgreement](arkts-cryptoarchitecture-keyagreement-i.md) | 返回由输入算法指定生成的KeyAgreement对象。 |
 
 **错误码：**
 

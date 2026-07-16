@@ -12,10 +12,11 @@ import { bundleManager } from '@kit.AbilityKit';
 function isAbilityEnabled(info: AbilityInfo, appIndex: number): Promise<boolean>
 ```
 
-Checks whether an ability of an application or an application clone is enabled. This API uses a promise to return
-the result.
+Checks whether an ability of an application or an application clone is enabled. This API uses a promise to return the result.
 
 **Since:** 12
+
+<!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo, appIndex: int): Promise<boolean>--><!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo, appIndex: int): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -25,14 +26,14 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | AbilityInfo | Yes | Information about the target ability. |
-| appIndex | number | Yes | Index of the application clone.<br> The value **0** means to obtain the enabled status ofthe ability of the main application. A value greater than 0 means to obtain the enabled status of the abilityof the application clone. |
+| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | Yes | Information about the target ability. |
+| appIndex | number | Yes | Index of the application clone.<br> The value **0** means to obtain the enabled status of the ability of the main application. A value greater than 0 means to obtain the enabled status of the ability of the application clone. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** if enabled, **false** otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. **true** if enabled, **false** otherwise. |
 
 **Error codes:**
 
@@ -90,6 +91,8 @@ Checks whether an ability is enabled. This API uses an asynchronous callback to 
 
 **Since:** 9
 
+<!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): void--><!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -98,8 +101,8 @@ Checks whether an ability is enabled. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | AbilityInfo | Yes | Information about the target ability. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result.**true** if enabled, **false** otherwise. |
+| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | Yes | Information about the target ability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result.**true** if enabled, **false** otherwise. |
 
 **Error codes:**
 
@@ -158,6 +161,8 @@ Checks whether an ability is enabled. This API uses a promise to return the resu
 
 **Since:** 9
 
+<!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo): Promise<boolean>--><!--Device-bundleManager-function isAbilityEnabled(info: AbilityInfo): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -166,13 +171,13 @@ Checks whether an ability is enabled. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | AbilityInfo | Yes | Information about the target ability. |
+| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | Yes | Information about the target ability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** if enabled, **false** otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. **true** if enabled, **false** otherwise. |
 
 **Error codes:**
 

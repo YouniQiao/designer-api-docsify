@@ -4,6 +4,8 @@ This module is used to manage plugins for applications.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare namespace pluginBundleManager--><!--Device-unnamed-declare namespace pluginBundleManager-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## Modules to Import

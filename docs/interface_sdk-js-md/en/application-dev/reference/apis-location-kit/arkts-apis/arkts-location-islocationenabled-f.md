@@ -22,13 +22,15 @@ Obtain current location switch status
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function isLocationEnabled(callback: AsyncCallback<boolean>): void--><!--Device-geolocation-function isLocationEnabled(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Indicates the callback for reporting the location switch result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Indicates the callback for reporting the location switch result. |
 
 **Example**
 
@@ -62,13 +64,15 @@ Obtain current location switch status
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function isLocationEnabled(): Promise<boolean>--><!--Device-geolocation-function isLocationEnabled(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | The promise returned by the function. |
 
 **Example**
 

@@ -21,6 +21,10 @@ Connects to an AgentExtensionAbility.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-agentManager-function connectAgentExtensionAbility(want: Want, agentId: string,
+    callback: AgentExtensionConnectCallback): Promise<AgentProxy>--><!--Device-agentManager-function connectAgentExtensionAbility(want: Want, agentId: string,
+    callback: AgentExtensionConnectCallback): Promise<AgentProxy>-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -29,15 +33,15 @@ Connects to an AgentExtensionAbility.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Indicates the want info to connect. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Indicates the want info to connect. |
 | agentId | string | Yes | The agent id to connect. |
-| callback | AgentExtensionConnectCallback | Yes | The callback of connection. |
+| callback | [AgentExtensionConnectCallback](arkts-ability-agentextensionconnectcallback-i-sys.md) | Yes | The callback of connection. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AgentProxy&gt; | The promise to get AgentProxy. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AgentProxy> | The promise to get AgentProxy. |
 
 **Error codes:**
 

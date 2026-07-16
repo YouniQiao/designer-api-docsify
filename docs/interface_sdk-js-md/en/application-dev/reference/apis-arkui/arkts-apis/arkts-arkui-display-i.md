@@ -2,11 +2,11 @@
 
 Implements a Display instance, with attributes and APIs defined.
 
-Before calling any API in Display, you must use
-[getAllDisplays()](arkts-arkui-getalldisplays-f.md#getalldisplays-1) or
-[getDefaultDisplaySync()](arkts-arkui-getdefaultdisplaysync-f.md#getdefaultdisplaysync-1) to obtain a Display instance.
+Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-getalldisplays-f.md#getalldisplays-1) or [getDefaultDisplaySync()](arkts-arkui-getdefaultdisplaysync-f.md#getdefaultdisplaysync-1) to obtain a Display instance.
 
 **Since:** 7
+
+<!--Device-display-interface Display--><!--Device-display-interface Display-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -24,18 +24,15 @@ getAvailableArea(): Promise<Rect>
 
 Obtains the available area of the display of the current device. This API uses a promise to return the result.
 
-The available area is the space left for applications after the system UI (such as the status bar and dock bar)
-is accounted for.
+The available area is the space left for applications after the system UI (such as the status bar and dock bar)is accounted for.
 
-This API can be properly called on devices running OpenHarmony 7.0.0 or later.
-For devices running versions earlier than OpenHarmony 7.0.0,
-this API can be properly called on PCs/2-in-1 devices and tablets,
-but does not work for other device types. To obtain the available area on the current device screen,
-you can use the width and height attributes in Display.
+This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets,but does not work for other device types. To obtain the available area on the current device screen,you can use the width and height attributes in Display.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Display-getAvailableArea(): Promise<Rect>--><!--Device-Display-getAvailableArea(): Promise<Rect>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -43,13 +40,13 @@ you can use the width and height attributes in Display.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Rect&gt; | Promise used to return the available area, which is a rectangle. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Rect> | Promise used to return the available area, which is a rectangle. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause:1. This display is abnormal.2. Internal task error. |
 
 **Example**
@@ -78,12 +75,13 @@ try {
 getCutoutInfo(callback: AsyncCallback<CutoutInfo>): void
 ```
 
-Obtains the cutout information of the display. This API uses an asynchronous callback to return the result. You
-are advised not to use the cutout area during application layout.
+Obtains the cutout information of the display. This API uses an asynchronous callback to return the result. You are advised not to use the cutout area during application layout.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Display-getCutoutInfo(callback: AsyncCallback<CutoutInfo>): void--><!--Device-Display-getCutoutInfo(callback: AsyncCallback<CutoutInfo>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -91,7 +89,7 @@ are advised not to use the cutout area during application layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;CutoutInfo&gt; | Yes | Callback used to return the **CutoutInfo** object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<CutoutInfo> | Yes | Callback used to return the **CutoutInfo** object. |
 
 **Error codes:**
 
@@ -124,12 +122,13 @@ displayClass.getCutoutInfo((err: BusinessError, data: display.CutoutInfo) => {
 getCutoutInfo(): Promise<CutoutInfo>
 ```
 
-Obtains the cutout information of the display. This API uses a promise to return the result. You are advised not
-to use the cutout area during application layout.
+Obtains the cutout information of the display. This API uses a promise to return the result. You are advised not to use the cutout area during application layout.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Display-getCutoutInfo(): Promise<CutoutInfo>--><!--Device-Display-getCutoutInfo(): Promise<CutoutInfo>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -137,7 +136,7 @@ to use the cutout area during application layout.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CutoutInfo&gt; | Promise used to return the CutoutInfo object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CutoutInfo> | Promise used to return the CutoutInfo object. |
 
 **Error codes:**
 
@@ -173,6 +172,8 @@ Get current display capability, including foldstatus, displaymode, rotation, and
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Display-getDisplayCapability(): string--><!--Device-Display-getDisplayCapability(): string-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Return value:**
@@ -185,7 +186,7 @@ Get current display capability, including foldstatus, displaymode, rotation, and
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Function getDisplayCapability can not work correctly dueto limited device capabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Function getDisplayCapability can not work correctly due to limited device capabilities. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
@@ -199,19 +200,21 @@ Obtains the live crease region of the foldable device in the current display mod
 
 **Since:** 20
 
+<!--Device-Display-getLiveCreaseRegion(): FoldCreaseRegion--><!--Device-Display-getLiveCreaseRegion(): FoldCreaseRegion-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| FoldCreaseRegion | Live crease region of the device. |
+| [FoldCreaseRegion](arkts-arkui-foldcreaseregion-i.md) | Live crease region of the device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 **Example**
@@ -234,13 +237,13 @@ try {
 getRoundedCorner(): Array<RoundedCorner>
 ```
 
-Obtains the rounded corner information of the display. The rounded corner information of the display is
-determined by the product configuration. Only physical screens that have a defined corner-radius value returns
-rounded corner information; otherwise, an empty array is returned. Virtual displays always return an empty array.
+Obtains the rounded corner information of the display. The rounded corner information of the display is determined by the product configuration. Only physical screens that have a defined corner-radius value returns rounded corner information; otherwise, an empty array is returned. Virtual displays always return an empty array.
 
 **Since:** 23
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Display-getRoundedCorner(): Array<RoundedCorner>--><!--Device-Display-getRoundedCorner(): Array<RoundedCorner>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -248,7 +251,7 @@ rounded corner information; otherwise, an empty array is returned. Virtual displ
 
 | Type | Description |
 | --- | --- |
-| Array&lt;RoundedCorner&gt; | Rounded corner information. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<RoundedCorner> | Rounded corner information. |
 
 **Error codes:**
 
@@ -282,14 +285,13 @@ off(type: 'availableAreaChange', callback?: Callback<Rect>): void
 
 Unsubscribes from changes of the available area on the display of the current device.
 
-This API can be properly called on devices running OpenHarmony 7.0.0 or later.
-For devices running versions earlier than OpenHarmony 7.0.0,
-this API can be properly called on PCs/2-in-1 devices and tablets.
-If being called on other device types, it does not take effect and no error is reported.
+This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets.If being called on other device types, it does not take effect and no error is reported.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Display-off(type: 'availableAreaChange', callback?: Callback<Rect>): void--><!--Device-Display-off(type: 'availableAreaChange', callback?: Callback<Rect>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -297,8 +299,8 @@ If being called on other device types, it does not take effect and no error is r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'availableAreaChange' | Yes | Event type. The event **'availableAreaChange'** is triggered when theavailable area of the display changes. |
-| callback | Callback&lt;Rect&gt; | No | Callback used to return the new available area. If this parameter is notspecified, all subscriptions to the specified event are canceled. |
+| type | 'availableAreaChange' | Yes | Event type. The event **'availableAreaChange'** is triggered when the available area of the display changes. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<Rect> | No | Callback used to return the new available area. If this parameter is not specified, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
@@ -331,18 +333,15 @@ try {
 on(type: 'availableAreaChange', callback: Callback<Rect>): void
 ```
 
-Subscribes to changes of the available area on the display of the current device. This callback function is
-triggered when the screen rotates, the freeform mode is enabled or disabled, or the visibility of system
-components such as the dock bar and status bar changes, and returns the available area information.
+Subscribes to changes of the available area on the display of the current device. This callback function is triggered when the screen rotates, the freeform mode is enabled or disabled, or the visibility of system components such as the dock bar and status bar changes, and returns the available area information.
 
-This API can be properly called on devices running OpenHarmony 7.0.0 or later.
-For devices running versions earlier than OpenHarmony 7.0.0,
-this API can be properly called on PCs/2-in-1 devices and tablets.
-If being called on other device types, it does not take effect and no error is reported.
+This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets.If being called on other device types, it does not take effect and no error is reported.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Display-on(type: 'availableAreaChange', callback: Callback<Rect>): void--><!--Device-Display-on(type: 'availableAreaChange', callback: Callback<Rect>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -350,8 +349,8 @@ If being called on other device types, it does not take effect and no error is r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'availableAreaChange' | Yes | Event type. The event **'availableAreaChange'** is triggered when theavailable area of the display changes. |
-| callback | Callback&lt;Rect&gt; | Yes | Callback used to return the new available area. |
+| type | 'availableAreaChange' | Yes | Event type. The event **'availableAreaChange'** is triggered when the available area of the display changes. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<Rect> | Yes | Callback used to return the new available area. |
 
 **Error codes:**
 
@@ -384,14 +383,15 @@ try {
 alive: boolean
 ```
 
-Whether the display is alive. The value **true** indicates that the display is alive
-and running properly, and **false** indicates the opposite.
+Whether the display is alive. The value **true** indicates that the display is alive and running properly, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Display-alive: boolean--><!--Device-Display-alive: boolean-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -403,17 +403,15 @@ availableHeight: number
 
 eight of the available area, in px. The value is an integer greater than 0.
 
-This API can be properly called on devices running OpenHarmony 7.0.0 or later.
-For devices running versions earlier than OpenHarmony 7.0.0,
-this API can be properly called on PCs/2-in-1 devices and tablets,
-but does not work for other device types.
-To obtain the height of the available area on the current device screen, you can use the height attribute.
+This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets,but does not work for other device types.To obtain the height of the available area on the current device screen, you can use the height attribute.
 
 **Type:** number
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Display-availableHeight: long--><!--Device-Display-availableHeight: long-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -425,17 +423,15 @@ availableWidth: number
 
 Width of the available area, in px. The value is an integer greater than 0.
 
-This API can be properly called on devices running OpenHarmony 7.0.0 or later.
-For devices running versions earlier than OpenHarmony 7.0.0,
-this API can be properly called on PCs/2-in-1 devices and tablets,
-but does not work for other device types.
-To obtain the width of the available area on the current device screen, you can use the width attribute.
+This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets,but does not work for other device types.To obtain the width of the available area on the current device screen, you can use the width attribute.
 
 **Type:** number
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Display-availableWidth: long--><!--Device-Display-availableWidth: long-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -453,6 +449,8 @@ All color spaces supported by the display.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Display-colorSpaces: Array<colorSpaceManager.ColorSpace>--><!--Device-Display-colorSpaces: Array<colorSpaceManager.ColorSpace>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## densityDPI
@@ -461,15 +459,15 @@ All color spaces supported by the display.
 densityDPI: number
 ```
 
-Physical pixel density of the display, that is, the number of pixels per inch. The
-value is a floating-point number, in px. Generally, the value is **160.0** or **480.0**. The actual value depends
-on the optional values provided by the device in use.
+Physical pixel density of the display, that is, the number of pixels per inch. The value is a floating-point number, in px. Generally, the value is **160.0** or **480.0**. The actual value depends on the optional values provided by the device in use.
 
 **Type:** number
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Display-densityDPI: double--><!--Device-Display-densityDPI: double-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -479,17 +477,15 @@ on the optional values provided by the device in use.
 densityPixels: number
 ```
 
-Logical pixel density of the display, which is the scaling coefficient between
-physical pixels and logical pixels. The calculation method is as follows:<br>!
-[densityPixels](figures/densityPixels.jpg)<br>The value is a floating-point number and is restricted by the range
-of **densityDPI**. The value range is [0.5, 4.0]. Generally, the value is **1.0** or **3.0**. The actual value
-depends on the density DPI provided by the device in use.
+Logical pixel density of the display, which is the scaling coefficient between physical pixels and logical pixels. The calculation method is as follows:<br>![densityPixels](figures/densityPixels.jpg)<br>The value is a floating-point number and is restricted by the range of **densityDPI**. The value range is [0.5, 4.0]. Generally, the value is **1.0** or **3.0**. The actual value depends on the density DPI provided by the device in use.
 
 **Type:** number
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Display-densityPixels: double--><!--Device-Display-densityPixels: double-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -507,6 +503,8 @@ All HDR formats supported by the display.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Display-hdrFormats: Array<hdrCapability.HDRFormat>--><!--Device-Display-hdrFormats: Array<hdrCapability.HDRFormat>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## height
@@ -522,6 +520,8 @@ Height of the display, in px. The value is an integer.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Display-height: long--><!--Device-Display-height: long-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -539,6 +539,8 @@ Display ID, which is an integer greater than or equal to 0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Display-id: long--><!--Device-Display-id: long-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## name
@@ -554,6 +556,8 @@ Name of the display.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Display-name: string--><!--Device-Display-name: string-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -571,6 +575,8 @@ Orientation of the display.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Display-orientation: Orientation--><!--Device-Display-orientation: Orientation-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## refreshRate
@@ -587,6 +593,8 @@ Refresh rate of the display, in Hz. The value is an integer.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Display-refreshRate: int--><!--Device-Display-refreshRate: int-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## rotation
@@ -595,17 +603,15 @@ Refresh rate of the display, in Hz. The value is an integer.
 rotation: number
 ```
 
-Clockwise rotation angle of the display.
-The value **0** indicates that the display rotates clockwise by 0��, which is the standard display direction.
-The value **1** indicates that the display rotates clockwise by 90��.
-The value **2** indicates that the display rotates clockwise by 180��.
-The value **3** indicates that the display rotates clockwise by 270��.
+Clockwise rotation angle of the display.The value **0** indicates that the display rotates clockwise by 0��, which is the standard display direction.The value **1** indicates that the display rotates clockwise by 90��.The value **2** indicates that the display rotates clockwise by 180��.The value **3** indicates that the display rotates clockwise by 270��.
 
 **Type:** number
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Display-rotation: int--><!--Device-Display-rotation: int-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -615,7 +621,7 @@ The value **3** indicates that the display rotates clockwise by 270��.
 scaledDensity: number
 ```
 
-Scaling factor for fonts displayed on the display. The value must be a floating
+Scaling factor for fonts displayed on the display. The value must be a floating  
 -point number. Generally, the value is the same as that of **densityPixels**.
 
 **Type:** number
@@ -623,6 +629,8 @@ Scaling factor for fonts displayed on the display. The value must be a floating
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Display-scaledDensity: double--><!--Device-Display-scaledDensity: double-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -640,6 +648,8 @@ Screen shape of the display. The default value is **RECTANGLE**.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Display-screenShape?: ScreenShape--><!--Device-Display-screenShape?: ScreenShape-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## sourceMode
@@ -655,6 +665,8 @@ Display mode for screen content. The default value is **DisplaySourceMode.NONE**
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-Display-sourceMode?: DisplaySourceMode--><!--Device-Display-sourceMode?: DisplaySourceMode-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -672,6 +684,8 @@ State of the display.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Display-state: DisplayState--><!--Device-Display-state: DisplayState-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## supportedRefreshRates
@@ -680,14 +694,15 @@ State of the display.
 supportedRefreshRates?: Array<number>
 ```
 
-All refresh rates supported by the display, sorted in ascending order. The refresh rate is a positive integer,
-in Hz. The default value is empty.
+All refresh rates supported by the display, sorted in ascending order. The refresh rate is a positive integer,in Hz. The default value is empty.
 
 **Type:** Array<number>
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-Display-supportedRefreshRates?: Array<int>--><!--Device-Display-supportedRefreshRates?: Array<int>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -705,6 +720,8 @@ Width of the display, in px. The value is an integer.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Display-width: long--><!--Device-Display-width: long-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## x
@@ -713,16 +730,15 @@ Width of the display, in px. The value is an integer.
 x?: number
 ```
 
-X coordinate of the top-left corner of the display relative to the origin,
-which is the top-left corner of the primary screen, measured in px. The value is an integer. The default value is
-**0**. The actual value is returned only when **DisplaySourceMode** is set to **MAIN** or **EXTEND**; otherwise,
-the default value **0** is returned.
+X coordinate of the top-left corner of the display relative to the origin,which is the top-left corner of the primary screen, measured in px. The value is an integer. The default value is **0**. The actual value is returned only when **DisplaySourceMode** is set to **MAIN** or **EXTEND**; otherwise,the default value **0** is returned.
 
 **Type:** number
 
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-Display-x?: long--><!--Device-Display-x?: long-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -732,14 +748,15 @@ the default value **0** is returned.
 xDPI: number
 ```
 
-Exact physical pixels per inch of the display in the X axis. The value must be a
-floating-point number.
+Exact physical pixels per inch of the display in the X axis. The value must be a floating-point number.
 
 **Type:** number
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Display-xDPI: double--><!--Device-Display-xDPI: double-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -749,16 +766,15 @@ floating-point number.
 y?: number
 ```
 
-Y coordinate of the top-left corner of the display relative to the origin,
-which is the top-left corner of the primary screen, measured in px. The value is an integer. The default value is
-**0**. The actual value is returned only when **DisplaySourceMode** is set to **MAIN** or **EXTEND**; otherwise,
-the default value **0** is returned.
+Y coordinate of the top-left corner of the display relative to the origin,which is the top-left corner of the primary screen, measured in px. The value is an integer. The default value is **0**. The actual value is returned only when **DisplaySourceMode** is set to **MAIN** or **EXTEND**; otherwise,the default value **0** is returned.
 
 **Type:** number
 
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-Display-y?: long--><!--Device-Display-y?: long-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -768,14 +784,15 @@ the default value **0** is returned.
 yDPI: number
 ```
 
-Exact physical pixels per inch of the display in the Y axis. The value must be a
-floating-point number.
+Exact physical pixels per inch of the display in the Y axis. The value must be a floating-point number.
 
 **Type:** number
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Display-yDPI: double--><!--Device-Display-yDPI: double-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

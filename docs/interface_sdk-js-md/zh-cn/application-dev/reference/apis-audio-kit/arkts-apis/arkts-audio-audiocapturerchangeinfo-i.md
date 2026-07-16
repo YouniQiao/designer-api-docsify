@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-audio-interface AudioCapturerChangeInfo--><!--Device-audio-interface AudioCapturerChangeInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## capturerInfo
 
@@ -17,6 +25,8 @@ readonly capturerInfo: AudioCapturerInfo
 **类型：** AudioCapturerInfo
 
 **起始版本：** 9
+
+<!--Device-AudioCapturerChangeInfo-readonly capturerInfo: AudioCapturerInfo--><!--Device-AudioCapturerChangeInfo-readonly capturerInfo: AudioCapturerInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -32,6 +42,8 @@ readonly deviceDescriptors: AudioDeviceDescriptors
 
 **起始版本：** 9
 
+<!--Device-AudioCapturerChangeInfo-readonly deviceDescriptors: AudioDeviceDescriptors--><!--Device-AudioCapturerChangeInfo-readonly deviceDescriptors: AudioDeviceDescriptors-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 ## muted
@@ -46,6 +58,8 @@ readonly muted?: boolean
 
 **起始版本：** 11
 
+<!--Device-AudioCapturerChangeInfo-readonly muted?: boolean--><!--Device-AudioCapturerChangeInfo-readonly muted?: boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 ## streamId
@@ -59,6 +73,8 @@ readonly streamId: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-AudioCapturerChangeInfo-readonly streamId: int--><!--Device-AudioCapturerChangeInfo-readonly streamId: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 

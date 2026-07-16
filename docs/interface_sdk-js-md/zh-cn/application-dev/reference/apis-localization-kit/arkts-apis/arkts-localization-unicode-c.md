@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-i18n-export class Unicode--><!--Device-i18n-export class Unicode-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
 
 ## detectEncoding
 
@@ -18,7 +26,9 @@ static detectEncoding(bytes: Uint8Array): EncodingInfo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Unicode-static detectEncoding(bytes: Uint8Array): EncodingInfo--><!--Device-Unicode-static detectEncoding(bytes: Uint8Array): EncodingInfo-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -26,13 +36,13 @@ static detectEncoding(bytes: Uint8Array): EncodingInfo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bytes | Uint8Array | 是 | 输入字节流。 |
+| bytes | [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 是 | 输入字节流。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| EncodingInfo | 编码信息，包含编码名称和置信度。 |
+| [EncodingInfo](arkts-localization-encodinginfo-i.md) | 编码信息，包含编码名称和置信度。 |
 
 **示例：**
 
@@ -54,7 +64,9 @@ static getType(ch: string): string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Unicode-static getType(ch: string): string--><!--Device-Unicode-static getType(ch: string): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -89,7 +101,9 @@ static isDigit(ch: string): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Unicode-static isDigit(ch: string): boolean--><!--Device-Unicode-static isDigit(ch: string): boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -124,7 +138,9 @@ static isIdeograph(ch: string): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Unicode-static isIdeograph(ch: string): boolean--><!--Device-Unicode-static isIdeograph(ch: string): boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -159,7 +175,9 @@ static isLetter(ch: string): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Unicode-static isLetter(ch: string): boolean--><!--Device-Unicode-static isLetter(ch: string): boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -194,7 +212,9 @@ static isLowerCase(ch: string): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Unicode-static isLowerCase(ch: string): boolean--><!--Device-Unicode-static isLowerCase(ch: string): boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -229,7 +249,9 @@ static isRTL(ch: string): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Unicode-static isRTL(ch: string): boolean--><!--Device-Unicode-static isRTL(ch: string): boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -264,7 +286,9 @@ static isSpaceChar(ch: string): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Unicode-static isSpaceChar(ch: string): boolean--><!--Device-Unicode-static isSpaceChar(ch: string): boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -299,7 +323,9 @@ static isUpperCase(ch: string): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Unicode-static isUpperCase(ch: string): boolean--><!--Device-Unicode-static isUpperCase(ch: string): boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -334,7 +360,9 @@ static isWhitespace(ch: string): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Unicode-static isWhitespace(ch: string): boolean--><!--Device-Unicode-static isWhitespace(ch: string): boolean-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

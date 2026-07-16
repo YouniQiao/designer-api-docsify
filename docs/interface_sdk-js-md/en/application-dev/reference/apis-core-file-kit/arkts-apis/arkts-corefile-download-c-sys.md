@@ -1,9 +1,10 @@
 # Download (System API)
 
-Provides APIs for downloading image files to **Gallery**. Before using the APIs of **Download**, you need to create
-a **Download** instance.
+Provides APIs for downloading image files to **Gallery**. Before using the APIs of **Download**, you need to create a **Download** instance.
 
 **Since:** 10
+
+<!--Device-cloudSync-class Download--><!--Device-cloudSync-class Download-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -24,6 +25,8 @@ constructor()
 A constructor used to create a **Download** instance.
 
 **Since:** 10
+
+<!--Device-Download-constructor()--><!--Device-Download-constructor()-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -48,6 +51,8 @@ Removes the specified callback from the device-cloud download progress.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-Download-off(evt: 'progress', callback: (pg: DownloadProgress) => void): void--><!--Device-Download-off(evt: 'progress', callback: (pg: DownloadProgress) => void): void-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
@@ -57,7 +62,7 @@ Removes the specified callback from the device-cloud download progress.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | evt | 'progress' | Yes | Event type. The value is **progress**, which indicates the sync progress event. |
-| callback | (pg: DownloadProgress) =&gt; void | Yes | Callback used to return the file download progress. The input parameter is[DownloadProgress](arkts-corefile-downloadprogress-i.md), and the return value is **void**. |
+| callback | (pg: DownloadProgress) => void | Yes | Callback used to return the file download progress. The input parameter is [DownloadProgress](arkts-corefile-downloadprogress-i.md), and the return value is **void**. |
 
 **Error codes:**
 
@@ -65,7 +70,7 @@ Removes the specified callback from the device-cloud download progress.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are leftunspecified;<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 **Example**
@@ -95,6 +100,8 @@ Removes all callbacks from the device-cloud download progress.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-Download-off(evt: 'progress'): void--><!--Device-Download-off(evt: 'progress'): void-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
@@ -103,7 +110,7 @@ Removes all callbacks from the device-cloud download progress.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| evt | 'progress' | Yes | Event type. The value is **progress**, which indicates the download progress event ofa cloud file. |
+| evt | 'progress' | Yes | Event type. The value is **progress**, which indicates the download progress event of a cloud file. |
 
 **Error codes:**
 
@@ -111,7 +118,7 @@ Removes all callbacks from the device-cloud download progress.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are leftunspecified;<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 **Example**
@@ -139,6 +146,8 @@ Registers a listener for the download progress of a cloud file.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-Download-on(evt: 'progress', callback: (pg: DownloadProgress) => void): void--><!--Device-Download-on(evt: 'progress', callback: (pg: DownloadProgress) => void): void-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
@@ -147,8 +156,8 @@ Registers a listener for the download progress of a cloud file.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| evt | 'progress' | Yes | Event. The value is **progress**, which indicates the download progress event of acloud file. |
-| callback | (pg: DownloadProgress) =&gt; void | Yes | Callback used to return the file download progress. The input parameter is[DownloadProgress](arkts-corefile-downloadprogress-i.md), and the return value is **void**. |
+| evt | 'progress' | Yes | Event. The value is **progress**, which indicates the download progress event of a cloud file. |
+| callback | (pg: DownloadProgress) => void | Yes | Callback used to return the file download progress. The input parameter is [DownloadProgress](arkts-corefile-downloadprogress-i.md), and the return value is **void**. |
 
 **Error codes:**
 
@@ -156,7 +165,7 @@ Registers a listener for the download progress of a cloud file.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are leftunspecified;<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 **Example**
@@ -182,6 +191,8 @@ Starts downloading a cloud file. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-Download-start(uri: string): Promise<void>--><!--Device-Download-start(uri: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
@@ -196,7 +207,7 @@ Starts downloading a cloud file. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -204,7 +215,7 @@ Starts downloading a cloud file. This API uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are leftunspecified;<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13900002 | No such file or directory. |
 | 13900025 | No space left on device. |
 
@@ -240,6 +251,8 @@ Starts downloading a cloud file. This API uses an asynchronous callback to retur
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-Download-start(uri: string, callback: AsyncCallback<void>): void--><!--Device-Download-start(uri: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
@@ -249,7 +262,7 @@ Starts downloading a cloud file. This API uses an asynchronous callback to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the target file. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to start downloading a cloud file. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to start downloading a cloud file. |
 
 **Error codes:**
 
@@ -257,7 +270,7 @@ Starts downloading a cloud file. This API uses an asynchronous callback to retur
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are leftunspecified;<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13900002 | No such file or directory. |
 | 13900025 | No space left on device. |
 
@@ -287,14 +300,16 @@ stop(uri: string): Promise<void>
 
 Stops downloading a cloud file. This API uses a promise to return the result.
 
-> **NOTE**
->
-> Calling **stop** will terminate the download of the current file and clear the cache file. You can use
+> **NOTE**  
+>  
+> Calling **stop** will terminate the download of the current file and clear the cache file. You can use  
 > **start** to start the download again.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
+
+<!--Device-Download-stop(uri: string): Promise<void>--><!--Device-Download-stop(uri: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -310,7 +325,7 @@ Stops downloading a cloud file. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -318,7 +333,7 @@ Stops downloading a cloud file. This API uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are leftunspecified;<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
 **Example**
 
@@ -344,14 +359,16 @@ stop(uri: string, callback: AsyncCallback<void>): void
 
 Stops downloading a cloud file. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> Calling **stop** will terminate the download of the current file and clear the cache file. You can use
+> **NOTE**  
+>  
+> Calling **stop** will terminate the download of the current file and clear the cache file. You can use  
 > **start** to start the download again.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
+
+<!--Device-Download-stop(uri: string, callback: AsyncCallback<void>): void--><!--Device-Download-stop(uri: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -362,7 +379,7 @@ Stops downloading a cloud file. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the target file. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to stop downloading a cloud file. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to stop downloading a cloud file. |
 
 **Error codes:**
 
@@ -370,7 +387,7 @@ Stops downloading a cloud file. This API uses an asynchronous callback to return
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are leftunspecified;<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
 **Example**
 

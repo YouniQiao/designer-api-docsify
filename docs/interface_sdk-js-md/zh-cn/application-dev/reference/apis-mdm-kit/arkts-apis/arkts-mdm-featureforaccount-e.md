@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-restrictions-enum FeatureForAccount--><!--Device-restrictions-enum FeatureForAccount-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MULTI_WINDOW
@@ -17,6 +19,8 @@ MULTI_WINDOW = 0
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureForAccount-MULTI_WINDOW = 0--><!--Device-FeatureForAccount-MULTI_WINDOW = 0-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -32,6 +36,8 @@ DISTRIBUTED_TRANSMISSION = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FeatureForAccount-DISTRIBUTED_TRANSMISSION = 1--><!--Device-FeatureForAccount-DISTRIBUTED_TRANSMISSION = 1-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## SUPER_HUB
@@ -45,6 +51,8 @@ SUPER_HUB = 2
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureForAccount-SUPER_HUB = 2--><!--Device-FeatureForAccount-SUPER_HUB = 2-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

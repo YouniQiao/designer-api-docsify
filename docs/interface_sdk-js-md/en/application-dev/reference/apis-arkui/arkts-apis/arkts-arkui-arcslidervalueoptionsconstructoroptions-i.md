@@ -4,6 +4,8 @@ Defines the constructor information for **ArcSliderValueOptions**.
 
 **Since:** 18
 
+<!--Device-unnamed-interface ArcSliderValueOptionsConstructorOptions--><!--Device-unnamed-interface ArcSliderValueOptionsConstructorOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
@@ -36,6 +38,8 @@ If the value is not within the [min, max] range, the value of **min** or **max**
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcSliderValueOptionsConstructorOptions-max?: number--><!--Device-ArcSliderValueOptionsConstructorOptions-max?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## min
@@ -56,6 +60,8 @@ Default value: **0**.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcSliderValueOptionsConstructorOptions-min?: number--><!--Device-ArcSliderValueOptionsConstructorOptions-min?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## progress
@@ -73,6 +79,8 @@ Default value: same as the value of **min**.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSliderValueOptionsConstructorOptions-progress?: number--><!--Device-ArcSliderValueOptionsConstructorOptions-progress?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 

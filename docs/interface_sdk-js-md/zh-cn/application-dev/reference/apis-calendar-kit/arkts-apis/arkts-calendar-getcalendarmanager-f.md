@@ -1,5 +1,11 @@
 # getCalendarManager
 
+## 导入模块
+
+```TypeScript
+import { calendarManager } from '@kit.CalendarKit';
+```
+
 ## getCalendarManager
 
 ```TypeScript
@@ -12,7 +18,9 @@ function getCalendarManager(context: Context) : CalendarManager
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-calendarManager-function getCalendarManager(context: Context) : CalendarManager--><!--Device-calendarManager-function getCalendarManager(context: Context) : CalendarManager-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -20,13 +28,13 @@ function getCalendarManager(context: Context) : CalendarManager
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文Context。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| CalendarManager | 返回创建的CalendarManager对象。 |
+| [CalendarManager](arkts-calendar-calendarmanager-i.md) | 返回创建的CalendarManager对象。 |
 
 **示例：**
 

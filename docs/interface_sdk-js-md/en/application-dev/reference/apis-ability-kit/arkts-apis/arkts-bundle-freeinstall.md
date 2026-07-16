@@ -1,13 +1,14 @@
 # @ohos.bundle.freeInstall
 
-The module provides APIs for setting and obtaining installation-free information and APIs for obtaining
-BundlePackInfo and DispatchInfo.
+The module provides APIs for setting and obtaining installation-free information and APIs for obtaining BundlePackInfo and DispatchInfo.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > The APIs provided by this module are system APIs.
 
 **Since:** 9
+
+<!--Device-unnamed-declare namespace freeInstall--><!--Device-unnamed-declare namespace freeInstall-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -26,8 +27,8 @@ import { freeInstall } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getBundlePackInfo](arkts-ability-getbundlepackinfo-f-sys.md#getbundlepackinfo-1) | Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API uses an asynchronous callback toreturn the result. |
-| [getBundlePackInfo](arkts-ability-getbundlepackinfo-f-sys.md#getbundlepackinfo-2) | Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API uses a promise to return theresult. |
+| [getBundlePackInfo](arkts-ability-getbundlepackinfo-f-sys.md#getbundlepackinfo-1) | Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API uses an asynchronous callback to return the result. |
+| [getBundlePackInfo](arkts-ability-getbundlepackinfo-f-sys.md#getbundlepackinfo-2) | Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API uses a promise to return the result. |
 | [getDispatchInfo](arkts-ability-getdispatchinfo-f-sys.md#getdispatchinfo-1) | Obtains the dispatch information. This API uses an asynchronous callback to return the result. |
 | [getDispatchInfo](arkts-ability-getdispatchinfo-f-sys.md#getdispatchinfo-2) | Obtains the dispatch information. This API uses a promise to return the result. |
 | [isHapModuleRemovable](arkts-ability-ishapmoduleremovable-f-sys.md#ishapmoduleremovable-1) | Checks whether a module can be removed. This API uses an asynchronous callback to return the result. |

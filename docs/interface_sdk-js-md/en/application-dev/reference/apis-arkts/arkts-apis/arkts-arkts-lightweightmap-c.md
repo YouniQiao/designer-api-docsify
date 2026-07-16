@@ -4,6 +4,8 @@ LightWeightMap stores key-value (KV) pairs. Each key must be unique and have onl
 
 **Since:** 8
 
+<!--Device-unnamed-declare class LightWeightMap<K, V>--><!--Device-unnamed-declare class LightWeightMap<K, V>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -24,13 +26,15 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightMap-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-LightWeightMap-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<[K, V]> | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
 
 **Error codes:**
 
@@ -94,6 +98,8 @@ Clears this LightWeightMap and sets its length to **0**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightMap-clear(): void--><!--Device-LightWeightMap-clear(): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
@@ -126,6 +132,8 @@ A constructor used to create a **LightWeightMap** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightMap-constructor()--><!--Device-LightWeightMap-constructor()-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
@@ -153,13 +161,15 @@ Returns an iterator that contains all the elements in this LightWeightMap.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightMap-entries(): IterableIterator<[K, V]>--><!--Device-LightWeightMap-entries(): IterableIterator<[K, V]>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | Iterator obtained. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<[K, V]> | Iterator obtained. |
 
 **Error codes:**
 
@@ -207,14 +217,16 @@ Uses a callback to traverse the elements in this LightWeightMap and obtain their
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightMap-forEach(callbackFn: (value?: V, key?: K, map?: LightWeightMap<K, V>) => void, thisArg?: Object): void--><!--Device-LightWeightMap-forEach(callbackFn: (value?: V, key?: K, map?: LightWeightMap<K, V>) => void, thisArg?: Object): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value?: V, key?: K, map?: LightWeightMap&lt;K, V&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the LightWeightMap. |
-| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is thisinstance. |
+| callbackFn | (value?: V, key?: K, map?: LightWeightMap<K, V>) => void | Yes | Callback invoked to traverse the elements in the LightWeightMap. |
+| thisArg | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
 
@@ -260,6 +272,8 @@ Obtains the value of the specified key in this LightWeightMap.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightMap-get(key: K): V--><!--Device-LightWeightMap-get(key: K): V-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -302,6 +316,8 @@ Obtains the index of the first occurrence of an element with the specified key i
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LightWeightMap-getIndexOfKey(key: K): int--><!--Device-LightWeightMap-getIndexOfKey(key: K): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -346,6 +362,8 @@ Obtains the index of the first occurrence of an element with the specified value
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightMap-getIndexOfValue(value: V): int--><!--Device-LightWeightMap-getIndexOfValue(value: V): int-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -388,6 +406,8 @@ Obtains the key of an element at the specified position in this LightWeightMap.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LightWeightMap-getKeyAt(index: number): K--><!--Device-LightWeightMap-getKeyAt(index: number): K-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -433,6 +453,8 @@ Obtains the value of an element at the specified position in this LightWeightMap
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightMap-getValueAt(index: number): V--><!--Device-LightWeightMap-getValueAt(index: number): V-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -477,19 +499,21 @@ Checks whether this LightWeightMap contains all elements of the specified **Ligh
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightMap-hasAll(map: LightWeightMap<K, V>): boolean--><!--Device-LightWeightMap-hasAll(map: LightWeightMap<K, V>): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| map | LightWeightMap&lt;K, V&gt; | Yes | **LightWeightMap** instance to be used for comparison. |
+| map | [LightWeightMap](arkts-arkts-lightweightmap-c.md)<K, V> | Yes | **LightWeightMap** instance to be used for comparison. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if all the elements in the specifiedLightWeightMap are contained; otherwise, **false** is returned. |
+| boolean | Check result. The value **true** is returned if all the elements in the specified LightWeightMap are contained; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -521,6 +545,8 @@ Checks whether this LightWeightMap has the specified key.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LightWeightMap-hasKey(key: K): boolean--><!--Device-LightWeightMap-hasKey(key: K): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -564,6 +590,8 @@ Checks whether this LightWeightMap has the specified value.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightMap-hasValue(value: V): boolean--><!--Device-LightWeightMap-hasValue(value: V): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -600,13 +628,13 @@ console.info("result:", result);  // result: true
 increaseCapacityTo(minimumCapacity: number): void
 ```
 
-Increases the capacity of this LightWeightMap. If the passed-in capacity is greater than or equal to the number of
-elements in this LightWeightMap, the capacity is changed to the new capacity. If the passed-in capacity is less
-than the number of elements in this LightWeightMap, the capacity is not changed.
+Increases the capacity of this LightWeightMap. If the passed-in capacity is greater than or equal to the number of elements in this LightWeightMap, the capacity is changed to the new capacity. If the passed-in capacity is less than the number of elements in this LightWeightMap, the capacity is not changed.
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LightWeightMap-increaseCapacityTo(minimumCapacity: int): void--><!--Device-LightWeightMap-increaseCapacityTo(minimumCapacity: int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -641,6 +669,8 @@ Checks whether this LightWeightMap is empty (contains no element).
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LightWeightMap-isEmpty(): boolean--><!--Device-LightWeightMap-isEmpty(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -677,13 +707,15 @@ Returns an iterator that contains all the keys in this LightWeightMap.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightMap-keys(): IterableIterator<K>--><!--Device-LightWeightMap-keys(): IterableIterator<K>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;K&gt; | Iterator obtained. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<K> | Iterator obtained. |
 
 **Error codes:**
 
@@ -717,6 +749,8 @@ Removes an element with the specified key from this LightWeightMap.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LightWeightMap-remove(key: K): V--><!--Device-LightWeightMap-remove(key: K): V-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -759,6 +793,8 @@ Removes an element at the specified position from this LightWeightMap.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LightWeightMap-removeAt(index: int): boolean--><!--Device-LightWeightMap-removeAt(index: int): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -803,6 +839,8 @@ Adds or updates an element in this LightWeightMap.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightMap-set(key: K, value: V): Object--><!--Device-LightWeightMap-set(key: K, value: V): Object-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -816,7 +854,7 @@ Adds or updates an element in this LightWeightMap.
 
 | Type | Description |
 | --- | --- |
-| Object | LightWeightMap that contains the new element. |
+| [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | LightWeightMap that contains the new element. |
 
 **Error codes:**
 
@@ -845,13 +883,15 @@ Adds all elements in a LightWeightMap to this LightWeightMap.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightMap-setAll(map: LightWeightMap<K, V>): void--><!--Device-LightWeightMap-setAll(map: LightWeightMap<K, V>): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| map | LightWeightMap&lt;K, V&gt; | Yes | LightWeightMap whose elements are to be added to the current LightWeightMap. |
+| map | [LightWeightMap](arkts-arkts-lightweightmap-c.md)<K, V> | Yes | LightWeightMap whose elements are to be added to the current LightWeightMap. |
 
 **Error codes:**
 
@@ -883,6 +923,8 @@ Sets a value for an element at the specified position in this LightWeightMap.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LightWeightMap-setValueAt(index: int, newValue: V): boolean--><!--Device-LightWeightMap-setValueAt(index: int, newValue: V): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -929,13 +971,15 @@ Concatenates the elements in this LightWeightMap into a string and returns the s
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightMap-toString(): String--><!--Device-LightWeightMap-toString(): String-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| String | String obtained. |
+| [String](../../apis-na/arkts-apis/arkts-na-string-i.md) | String obtained. |
 
 **Error codes:**
 
@@ -966,13 +1010,15 @@ Returns an iterator that contains all the values in this LightWeightMap.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightMap-values(): IterableIterator<V>--><!--Device-LightWeightMap-values(): IterableIterator<V>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;V&gt; | Iterator obtained. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<V> | Iterator obtained. |
 
 **Error codes:**
 
@@ -1008,6 +1054,8 @@ Number of elements in a LightWeightMap.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LightWeightMap-length: number--><!--Device-LightWeightMap-length: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

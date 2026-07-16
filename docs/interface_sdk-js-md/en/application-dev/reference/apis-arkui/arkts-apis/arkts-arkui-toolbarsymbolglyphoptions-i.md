@@ -4,6 +4,8 @@ Defines toolBar symbolGlyph options.
 
 **Since:** 18
 
+<!--Device-unnamed-export interface ToolBarSymbolGlyphOptions--><!--Device-unnamed-export interface ToolBarSymbolGlyphOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Modifier of toolbar's activated symbol.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ToolBarSymbolGlyphOptions-activated?: SymbolGlyphModifier--><!--Device-ToolBarSymbolGlyphOptions-activated?: SymbolGlyphModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## normal
@@ -45,6 +49,8 @@ Modifier of toolbar's normal symbol.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ToolBarSymbolGlyphOptions-normal?: SymbolGlyphModifier--><!--Device-ToolBarSymbolGlyphOptions-normal?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

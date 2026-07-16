@@ -20,6 +20,8 @@ Get all available shared hosts.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-print-function getSharedHosts(): Promise<SharedHost[]>--><!--Device-print-function getSharedHosts(): Promise<SharedHost[]>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Get all available shared hosts.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SharedHost[]&gt; | Promise that resolves with the list of shared hosts. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SharedHost[]> | Promise that resolves with the list of shared hosts. |
 
 **Error codes:**
 

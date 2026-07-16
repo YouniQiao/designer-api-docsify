@@ -4,6 +4,8 @@ Provides the container definition for network access policy key-value pairs.
 
 **Since:** 12
 
+<!--Device-policy-export interface UidNetworkAccessPolicy--><!--Device-policy-export interface UidNetworkAccessPolicy-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -23,6 +25,8 @@ import { policy } from '@kit.NetworkKit';
 **Type:** NetworkAccessPolicy
 
 **Since:** 12
+
+<!--Device-UidNetworkAccessPolicy-[uid: string]: NetworkAccessPolicy--><!--Device-UidNetworkAccessPolicy-[uid: string]: NetworkAccessPolicy-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

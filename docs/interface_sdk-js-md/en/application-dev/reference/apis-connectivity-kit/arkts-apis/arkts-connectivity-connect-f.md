@@ -20,19 +20,21 @@ Connects to a server. If the connection is successful, data can be sent to the s
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-dataTransfer-function connect(params: ConnectionParams): Promise<void>--><!--Device-dataTransfer-function connect(params: ConnectionParams): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | ConnectionParams | Yes | Indicates the connection params. |
+| params | [ConnectionParams](arkts-connectivity-connectionparams-i.md) | Yes | Indicates the connection params. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 

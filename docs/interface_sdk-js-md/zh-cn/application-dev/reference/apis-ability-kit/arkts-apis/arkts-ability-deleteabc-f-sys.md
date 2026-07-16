@@ -1,5 +1,11 @@
 # deleteAbc（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## deleteAbc
 
 ```TypeScript
@@ -11,6 +17,8 @@ function deleteAbc(abcPath: string): Promise<void>
 **起始版本：** 11
 
 **需要权限：** ohos.permission.RUN_DYN_CODE
+
+<!--Device-bundleManager-function deleteAbc(abcPath: string): Promise<void>--><!--Device-bundleManager-function deleteAbc(abcPath: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -26,7 +34,7 @@ function deleteAbc(abcPath: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

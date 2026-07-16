@@ -14,12 +14,14 @@ function getAppThreadCpuUsage(): ThreadCpuUsage[]
 
 Obtains the CPU usage of application threads.
 
-> **NOTE**
->
-> This API involves cross-process communication and takes a long time. To avoid performance problems, you are
+> **NOTE**  
+>  
+> This API involves cross-process communication and takes a long time. To avoid performance problems, you are  
 > advised not to call this API in the main thread.
 
 **Since:** 12
+
+<!--Device-hidebug-function getAppThreadCpuUsage(): ThreadCpuUsage[]--><!--Device-hidebug-function getAppThreadCpuUsage(): ThreadCpuUsage[]-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -27,7 +29,7 @@ Obtains the CPU usage of application threads.
 
 | Type | Description |
 | --- | --- |
-| ThreadCpuUsage[] | CPU usage of all threads of the current application process. |
+| [ThreadCpuUsage](arkts-performanceanalysis-threadcpuusage-i.md)[] | CPU usage of all threads of the current application process. |
 
 **Example**
 

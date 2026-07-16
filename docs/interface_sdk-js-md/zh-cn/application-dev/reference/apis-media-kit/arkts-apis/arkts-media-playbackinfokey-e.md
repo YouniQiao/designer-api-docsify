@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-enum PlaybackInfoKey--><!--Device-unnamed-enum PlaybackInfoKey-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## SERVER_IP_ADDRESS
@@ -15,6 +17,8 @@ SERVER_IP_ADDRESS = 'server_ip_address'
 表示服务器IP地址，其对应键值类型为string。
 
 **起始版本：** 12
+
+<!--Device-PlaybackInfoKey-SERVER_IP_ADDRESS = 'server_ip_address'--><!--Device-PlaybackInfoKey-SERVER_IP_ADDRESS = 'server_ip_address'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -28,6 +32,8 @@ AVG_DOWNLOAD_RATE = 'average_download_rate'
 
 **起始版本：** 12
 
+<!--Device-PlaybackInfoKey-AVG_DOWNLOAD_RATE = 'average_download_rate'--><!--Device-PlaybackInfoKey-AVG_DOWNLOAD_RATE = 'average_download_rate'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## DOWNLOAD_RATE
@@ -39,6 +45,8 @@ DOWNLOAD_RATE = 'download_rate'
 表示1s的下载速率，其对应键值类型为number，单位为比特率（bps）。
 
 **起始版本：** 12
+
+<!--Device-PlaybackInfoKey-DOWNLOAD_RATE = 'download_rate'--><!--Device-PlaybackInfoKey-DOWNLOAD_RATE = 'download_rate'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
@@ -52,6 +60,8 @@ IS_DOWNLOADING = 'is_downloading'
 
 **起始版本：** 12
 
+<!--Device-PlaybackInfoKey-IS_DOWNLOADING = 'is_downloading'--><!--Device-PlaybackInfoKey-IS_DOWNLOADING = 'is_downloading'-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## BUFFER_DURATION
@@ -63,6 +73,8 @@ BUFFER_DURATION = 'buffer_duration'
 表示缓存数据的可播放时长，其对应键值类型为number，单位为秒（s）。
 
 **起始版本：** 12
+
+<!--Device-PlaybackInfoKey-BUFFER_DURATION = 'buffer_duration'--><!--Device-PlaybackInfoKey-BUFFER_DURATION = 'buffer_duration'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 

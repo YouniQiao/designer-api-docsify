@@ -10,6 +10,8 @@ Represents the **AbilityDelegator** module.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-abilityDelegatorRegistry-export type AbilityDelegator = _AbilityDelegator--><!--Device-abilityDelegatorRegistry-export type AbilityDelegator = _AbilityDelegator-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Property type:** _AbilityDelegator

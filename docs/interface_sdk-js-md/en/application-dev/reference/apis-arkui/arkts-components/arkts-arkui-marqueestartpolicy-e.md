@@ -4,6 +4,8 @@ Enumerates the marquee scrolling modes.
 
 **Since:** 18
 
+<!--Device-unnamed-declare enum MarqueeStartPolicy--><!--Device-unnamed-declare enum MarqueeStartPolicy-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DEFAULT
@@ -20,6 +22,8 @@ The marquee scrolls continuously. Default value.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-MarqueeStartPolicy-DEFAULT = 0--><!--Device-MarqueeStartPolicy-DEFAULT = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ON_FOCUS
@@ -35,6 +39,8 @@ The marquee starts scrolling when it has focus or when the mouse hovers over it.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-MarqueeStartPolicy-ON_FOCUS = 1--><!--Device-MarqueeStartPolicy-ON_FOCUS = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

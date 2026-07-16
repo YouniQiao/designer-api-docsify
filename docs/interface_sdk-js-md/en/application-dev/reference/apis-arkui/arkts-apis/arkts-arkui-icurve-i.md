@@ -1,11 +1,10 @@
 # ICurve
 
-Represents a curve object. Different types of curve objects can be created using APIs in this module, including
-[curves.cubicBezierCurve](arkts-arkui-cubicbeziercurve-f.md#cubicbeziercurve-1) and
-[curves.interpolatingSpring](arkts-arkui-interpolatingspring-f.md#interpolatingspring-1). The curve object provides interpolation
-functionality through its member method [interpolate](arkts-arkui-icurve-i.md#interpolate-1).
+Represents a curve object. Different types of curve objects can be created using APIs in this module, including [curves.cubicBezierCurve](arkts-arkui-cubicbeziercurve-f.md#cubicbeziercurve-1) and [curves.interpolatingSpring](arkts-arkui-interpolatingspring-f.md#interpolatingspring-1). The curve object provides interpolation functionality through its member method [interpolate](arkts-arkui-icurve-i.md#interpolate-1).
 
 **Since:** 9
+
+<!--Device-curves-interface ICurve--><!--Device-curves-interface ICurve-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,6 +25,8 @@ Calculates the interpolated value along the curve at the specified normalized ti
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ICurve-interpolate(fraction : number) : number--><!--Device-ICurve-interpolate(fraction : number) : number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

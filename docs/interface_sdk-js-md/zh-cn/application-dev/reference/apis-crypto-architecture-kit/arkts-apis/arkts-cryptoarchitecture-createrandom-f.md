@@ -1,5 +1,11 @@
 # createRandom
 
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+```
+
 ## createRandom
 
 ```TypeScript
@@ -14,7 +20,9 @@ function createRandom(): Random
 - API版本12+：此接口可在Stage模型和FA模型下使用。
 - API版本9-11：此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cryptoFramework-function createRandom(): Random--><!--Device-cryptoFramework-function createRandom(): Random-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Rand
@@ -24,7 +32,7 @@ function createRandom(): Random
 
 | 类型 | 说明 |
 | --- | --- |
-| Random | 返回由输入算法指定生成的[Random](arkts-cryptoarchitecture-random-i.md)对象。<br>支持的规格详见框架概述[随机数算法规格](../../../../security/CryptoArchitectureKit/crypto-generate-random-number.md#支持的算法与规格)。 |
+| [Random](arkts-cryptoarchitecture-random-i.md) | 返回由输入算法指定生成的[Random](arkts-cryptoarchitecture-random-i.md)对象。<br>支持的规格详见框架概述[随机数算法规格](../../../../security/CryptoArchitectureKit/crypto-generate-random-number.md#支持的算法与规格)。 |
 
 **错误码：**
 

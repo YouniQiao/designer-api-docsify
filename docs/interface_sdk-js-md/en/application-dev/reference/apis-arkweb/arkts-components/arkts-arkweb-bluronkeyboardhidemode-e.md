@@ -4,6 +4,8 @@ Enumerates whether the **Web** component loses focus when the soft keyboard is h
 
 **Since:** 14
 
+<!--Device-unnamed-declare enum BlurOnKeyboardHideMode--><!--Device-unnamed-declare enum BlurOnKeyboardHideMode-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## SILENT
@@ -18,6 +20,8 @@ The **Web** component does not lose focus when the soft keyboard is hidden.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-BlurOnKeyboardHideMode-SILENT = 0--><!--Device-BlurOnKeyboardHideMode-SILENT = 0-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## BLUR
@@ -26,12 +30,13 @@ The **Web** component does not lose focus when the soft keyboard is hidden.
 BLUR = 1
 ```
 
-The **Web** component loses focus when the soft keyboard is hidden, and the focus moves from the text
-box to the web body.
+The **Web** component loses focus when the soft keyboard is hidden, and the focus moves from the text box to the web body.
 
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-BlurOnKeyboardHideMode-BLUR = 1--><!--Device-BlurOnKeyboardHideMode-BLUR = 1-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

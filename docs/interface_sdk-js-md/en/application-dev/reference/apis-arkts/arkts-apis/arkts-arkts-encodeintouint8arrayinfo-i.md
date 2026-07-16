@@ -4,6 +4,8 @@ Encrypted information, including the number of read characters and the number of
 
 **Since:** 11
 
+<!--Device-util-interface EncodeIntoUint8ArrayInfo--><!--Device-util-interface EncodeIntoUint8ArrayInfo-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Number of characters that have been read.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-EncodeIntoUint8ArrayInfo-read: number--><!--Device-EncodeIntoUint8ArrayInfo-read: number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## written
@@ -41,6 +45,8 @@ Number of bytes that have been written.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-EncodeIntoUint8ArrayInfo-written: number--><!--Device-EncodeIntoUint8ArrayInfo-written: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

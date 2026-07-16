@@ -6,6 +6,8 @@ Describes the linear acceleration sensor data. It extends from [Response](arkts-
 
 **Since:** 8
 
+<!--Device-sensor-interface LinearAccelerometerResponse extends Response--><!--Device-sensor-interface LinearAccelerometerResponse extends Response-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Linear acceleration along the x-axis of the device, in m/s?.
 
 **Since:** 8
 
+<!--Device-LinearAccelerometerResponse-x: double--><!--Device-LinearAccelerometerResponse-x: double-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## y
@@ -40,6 +44,8 @@ Linear acceleration along the y-axis of the device, in m/s?.
 
 **Since:** 8
 
+<!--Device-LinearAccelerometerResponse-y: double--><!--Device-LinearAccelerometerResponse-y: double-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## z
@@ -53,6 +59,8 @@ Linear acceleration along the z-axis of the device, in m/s?.
 **Type:** number
 
 **Since:** 8
+
+<!--Device-LinearAccelerometerResponse-z: double--><!--Device-LinearAccelerometerResponse-z: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 

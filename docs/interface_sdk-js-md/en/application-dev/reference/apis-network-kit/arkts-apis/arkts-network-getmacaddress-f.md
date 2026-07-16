@@ -18,13 +18,15 @@ Get the ethernet mac address list.
 
 **Required permissions:** ohos.permission.GET_ETHERNET_LOCAL_MAC
 
+<!--Device-ethernet-function getMacAddress(): Promise<Array<MacAddressInfo>>--><!--Device-ethernet-function getMacAddress(): Promise<Array<MacAddressInfo>>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;MacAddressInfo&gt;&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<MacAddressInfo>> | the promise returned by the function. |
 
 **Error codes:**
 

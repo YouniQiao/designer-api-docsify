@@ -4,7 +4,15 @@ CounterV2CommonOptions定义了CounterV2的共通属性和事件。
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-declare class CounterV2CommonOptions--><!--Device-unnamed-declare class CounterV2CommonOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { CounterV2Component, CounterV2Options, CounterV2Type, CounterV2DateData } from '@kit.ArkUI';
+```
 
 ## focusable
 
@@ -32,7 +40,9 @@ true：CounterV2可获焦；false：CounterV2不可获焦。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CounterV2CommonOptions-focusable?: boolean--><!--Device-CounterV2CommonOptions-focusable?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,7 +64,9 @@ onHoverDecrease?: OnCounterV2HoverCallback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CounterV2CommonOptions-onHoverDecrease?: OnCounterV2HoverCallback--><!--Device-CounterV2CommonOptions-onHoverDecrease?: OnCounterV2HoverCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,7 +88,9 @@ onHoverIncrease?: OnCounterV2HoverCallback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CounterV2CommonOptions-onHoverIncrease?: OnCounterV2HoverCallback--><!--Device-CounterV2CommonOptions-onHoverIncrease?: OnCounterV2HoverCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -102,7 +116,9 @@ step?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CounterV2CommonOptions-step?: int--><!--Device-CounterV2CommonOptions-step?: int-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

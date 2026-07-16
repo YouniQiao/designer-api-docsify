@@ -18,6 +18,8 @@ Deletes an uninstallation disposed rule for an application or an application clo
 
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
+<!--Device-appControl-function deleteUninstallDisposedRule(appIdentifier: string, appIndex?: int): void--><!--Device-appControl-function deleteUninstallDisposedRule(appIdentifier: string, appIndex?: int): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Deletes an uninstallation disposed rule for an application or an application clo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appIdentifier | string | Yes | appIdentifier of the target application.<br> If the application does not have anappIdentifier, use its appId instead. **appId** is the unique identifier of an application and is determined bythe bundle name and signature information of the application. For details about how to delete **appId**, see[How do I obtain appId from application information](../../../../quick-start/common_problem_of_application.md#how-do-i-obtain-appid-from-application-information). |
-| appIndex | number | No | Index of the application clone. The default value is **0**.<br> The value **0** meansto delete the uninstallation disposed rule of the main application. A value greater than 0 means to delete theuninstallation disposed rule of the application clone. |
+| appIdentifier | string | Yes | appIdentifier of the target application.<br> If the application does not have an appIdentifier, use its appId instead. **appId** is the unique identifier of an application and is determined by the bundle name and signature information of the application. For details about how to delete **appId**, see [How do I obtain appId from application information](../../../../quick-start/common_problem_of_application.md#how-do-i-obtain-appid-from-application-information). |
+| appIndex | number | No | Index of the application clone. The default value is **0**.<br> The value **0** means to delete the uninstallation disposed rule of the main application. A value greater than 0 means to delete the uninstallation disposed rule of the application clone. |
 
 **Error codes:**
 

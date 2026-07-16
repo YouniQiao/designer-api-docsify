@@ -6,6 +6,8 @@
 
 **废弃版本：** 10
 
+<!--Device-unnamed-export interface FileReadArrayBufferOption--><!--Device-unnamed-export interface FileReadArrayBufferOption-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## complete
@@ -21,6 +23,8 @@ complete?: () => void
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileReadArrayBufferOption-complete?: () => void--><!--Device-FileReadArrayBufferOption-complete?: () => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -38,6 +42,8 @@ fail?: (data: string, code: number) => void
 
 **废弃版本：** 10
 
+<!--Device-FileReadArrayBufferOption-fail?: (data: string, code: number) => void--><!--Device-FileReadArrayBufferOption-fail?: (data: string, code: number) => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## length
@@ -53,6 +59,8 @@ length?: number
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileReadArrayBufferOption-length?: number--><!--Device-FileReadArrayBufferOption-length?: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -70,6 +78,8 @@ position?: number
 
 **废弃版本：** 10
 
+<!--Device-FileReadArrayBufferOption-position?: number--><!--Device-FileReadArrayBufferOption-position?: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## success
@@ -86,6 +96,8 @@ success?: (data: FileReadArrayBufferResponse) => void
 
 **废弃版本：** 10
 
+<!--Device-FileReadArrayBufferOption-success?: (data: FileReadArrayBufferResponse) => void--><!--Device-FileReadArrayBufferOption-success?: (data: FileReadArrayBufferResponse) => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## uri
@@ -94,15 +106,15 @@ success?: (data: FileReadArrayBufferResponse) => void
 uri: string
 ```
 
-本地文件URI。由于轻量级穿戴设备底层文件系统的限制，该值必须满足以下要求：
-1. URI 中不得包含以下特殊字符：\"*+,:;<=>?[]|\x7F等。
-2. 最大允许字符长度为128个字符。
+本地文件URI。由于轻量级穿戴设备底层文件系统的限制，该值必须满足以下要求：1. URI 中不得包含以下特殊字符：\"*+,:;<=>?[]|\x7F等。2. 最大允许字符长度为128个字符。
 
 **类型：** string
 
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileReadArrayBufferOption-uri: string--><!--Device-FileReadArrayBufferOption-uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 

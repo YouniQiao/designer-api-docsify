@@ -4,6 +4,8 @@ Provides the shadow attributes, including the blur radius, color, and offset alo
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface ShadowOptions--><!--Device-unnamed-declare interface ShadowOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## color
@@ -18,14 +20,11 @@ The default color is black.
 
 **NOTE**
 
-Since API version 11, this API supports **ColoringStrategy**, which cannot be used with ArkTS widgets or the
-[textShadow](TextAttribute#textShadow) attribute.
+Since API version 11, this API supports **ColoringStrategy**, which cannot be used with ArkTS widgets or the [textShadow](TextAttribute#textShadow) attribute.
 
-With **ColoringStrategy**, the average color or primary color can be obtained, and the obtained color is applied to
-the shadow drawing area.
+With **ColoringStrategy**, the average color or primary color can be obtained, and the obtained color is applied to the shadow drawing area.
 
-The **'average'** string can be used to trigger the mode for obtaining the average color, and the **'primary'**
-string for obtaining the primary color.
+The **'average'** string can be used to trigger the mode for obtaining the average color, and the **'primary'** string for obtaining the primary color.
 
 **Type:** Color | string | Resource | ColoringStrategy
 
@@ -34,6 +33,8 @@ string for obtaining the primary color.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ShadowOptions-color?: Color | string | Resource | ColoringStrategy--><!--Device-ShadowOptions-color?: Color | string | Resource | ColoringStrategy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -63,6 +64,8 @@ This attribute does not take effect in [textShadow](TextAttribute#textShadow).
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ShadowOptions-fill?: boolean--><!--Device-ShadowOptions-fill?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## offsetX
@@ -79,8 +82,7 @@ Unit: px
 
 **NOTE**
 
-To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-uicontext-c.md#vp2px-1) to convert the
-value.
+To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-uicontext-c.md#vp2px-1) to convert the value.
 
 If **offsetX** is of the Resource type, its value must be of the number type.
 
@@ -91,6 +93,8 @@ If **offsetX** is of the Resource type, its value must be of the number type.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ShadowOptions-offsetX?: number | Resource--><!--Device-ShadowOptions-offsetX?: number | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -108,8 +112,7 @@ Unit: px
 
 **NOTE**
 
-To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-uicontext-c.md#vp2px-1) to convert the
-value.
+To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-uicontext-c.md#vp2px-1) to convert the value.
 
 If **offsetY** is of the Resource type, its value must be of the number type.
 
@@ -120,6 +123,8 @@ If **offsetY** is of the Resource type, its value must be of the number type.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ShadowOptions-offsetY?: number | Resource--><!--Device-ShadowOptions-offsetY?: number | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -139,8 +144,7 @@ Unit: px
 
 A value less than 0 evaluates to the value **0**.
 
-To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-uicontext-c.md#vp2px-1) to convert the
-value.
+To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-uicontext-c.md#vp2px-1) to convert the value.
 
 If **radius** is of the Resource type, its value must be of the number type.
 
@@ -151,6 +155,8 @@ If **radius** is of the Resource type, its value must be of the number type.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ShadowOptions-radius: number | Resource--><!--Device-ShadowOptions-radius: number | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -173,6 +179,8 @@ Default value: **COLOR**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ShadowOptions-type?: ShadowType--><!--Device-ShadowOptions-type?: ShadowType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

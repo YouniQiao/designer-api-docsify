@@ -4,6 +4,8 @@ Defines a tool class for updating the local firmware.
 
 **Since:** 9
 
+<!--Device-update-export interface LocalUpdater--><!--Device-update-export interface LocalUpdater-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Installs the update package. This API uses an asynchronous callback to return th
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-LocalUpdater-applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>): void--><!--Device-LocalUpdater-applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -34,8 +38,8 @@ Installs the update package. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| upgradeFiles | Array&lt;UpgradeFile&gt; | Yes | Update file. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the update package is installedsuccessfully, **err** is **undefined**; otherwise, **err** is an error object. |
+| upgradeFiles | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<UpgradeFile> | Yes | Update file. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the update package is installed successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -77,6 +81,8 @@ Installs the update package. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-LocalUpdater-applyNewVersion(upgradeFiles: Array<UpgradeFile>): Promise<void>--><!--Device-LocalUpdater-applyNewVersion(upgradeFiles: Array<UpgradeFile>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -85,13 +91,13 @@ Installs the update package. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| upgradeFiles | Array&lt;UpgradeFile&gt; | Yes | Update file. |
+| upgradeFiles | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<UpgradeFile> | Yes | Update file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -135,6 +141,8 @@ Disables listening for update events. This API uses an asynchronous callback to 
 
 **Since:** 9
 
+<!--Device-LocalUpdater-off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): void--><!--Device-LocalUpdater-off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): void-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -143,8 +151,8 @@ Disables listening for update events. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventClassifyInfo | EventClassifyInfo | Yes | Event information. |
-| taskCallback | UpgradeTaskCallback | No | Event callback. |
+| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-eventclassifyinfo-i-sys.md) | Yes | Event information. |
+| taskCallback | [UpgradeTaskCallback](arkts-basicservices-upgradetaskcallback-t-sys.md) | No | Event callback. |
 
 **Error codes:**
 
@@ -183,6 +191,8 @@ Enables listening for update events. This API uses an asynchronous callback to r
 
 **Since:** 9
 
+<!--Device-LocalUpdater-on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): void--><!--Device-LocalUpdater-on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): void-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -191,8 +201,8 @@ Enables listening for update events. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventClassifyInfo | EventClassifyInfo | Yes | Event information. |
-| taskCallback | UpgradeTaskCallback | Yes | Event callback. |
+| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-eventclassifyinfo-i-sys.md) | Yes | Event information. |
+| taskCallback | [UpgradeTaskCallback](arkts-basicservices-upgradetaskcallback-t-sys.md) | Yes | Event callback. |
 
 **Error codes:**
 
@@ -233,6 +243,8 @@ Verifies the update package. This API uses an asynchronous callback to return th
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-LocalUpdater-verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: AsyncCallback<void>): void--><!--Device-LocalUpdater-verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -241,9 +253,9 @@ Verifies the update package. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| upgradeFile | UpgradeFile | Yes | Update file. |
+| upgradeFile | [UpgradeFile](arkts-basicservices-upgradefile-i-sys.md) | Yes | Update file. |
 | certsFile | string | Yes | Path of the certificate file. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the verification is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the verification is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -285,6 +297,8 @@ Verifies the update package. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-LocalUpdater-verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string): Promise<void>--><!--Device-LocalUpdater-verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -293,14 +307,14 @@ Verifies the update package. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| upgradeFile | UpgradeFile | Yes | Update file. |
+| upgradeFile | [UpgradeFile](arkts-basicservices-upgradefile-i-sys.md) | Yes | Update file. |
 | certsFile | string | Yes | Path of the certificate file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

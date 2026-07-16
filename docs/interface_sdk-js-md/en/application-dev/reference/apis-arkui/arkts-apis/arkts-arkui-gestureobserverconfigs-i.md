@@ -1,9 +1,10 @@
 # GestureObserverConfigs
 
-Specifies the gesture callback phases to listen for (passing an empty array will be ineffective). Notifications are
-sent only when the gesture triggers the specified phases.
+Specifies the gesture callback phases to listen for (passing an empty array will be ineffective). Notifications are sent only when the gesture triggers the specified phases.
 
 **Since:** 20
+
+<!--Device-unnamed-export interface GestureObserverConfigs--><!--Device-unnamed-export interface GestureObserverConfigs-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,6 +29,8 @@ Gesture event object.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-GestureObserverConfigs-actionPhases: Array<GestureActionPhase>--><!--Device-GestureObserverConfigs-actionPhases: Array<GestureActionPhase>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

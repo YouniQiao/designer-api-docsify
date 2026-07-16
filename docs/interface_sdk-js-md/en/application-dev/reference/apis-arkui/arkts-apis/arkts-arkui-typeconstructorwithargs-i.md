@@ -4,6 +4,8 @@ Represents a class constructor that accepts arbitrary arguments.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface TypeConstructorWithArgs<T>--><!--Device-unnamed-export interface TypeConstructorWithArgs<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,6 +27,8 @@ Creates and returns an instance of the specified type T.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TypeConstructorWithArgs-new(...args: any): T--><!--Device-TypeConstructorWithArgs-new(...args: any): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

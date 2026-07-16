@@ -18,13 +18,15 @@ Obtains a system **ResourceManager** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-resourceManager-export function getSysResourceManager(): ResourceManager--><!--Device-resourceManager-export function getSysResourceManager(): ResourceManager-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ResourceManager | The system **ResourceManager** object. |
+| [ResourceManager](arkts-localization-resourcemanager-i.md) | The system **ResourceManager** object. |
 
 **Error codes:**
 

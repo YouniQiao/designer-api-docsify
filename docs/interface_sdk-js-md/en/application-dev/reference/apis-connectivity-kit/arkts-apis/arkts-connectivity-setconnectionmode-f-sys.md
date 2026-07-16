@@ -20,6 +20,8 @@ Sets the NearLink connection mode for a device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-manager-function setConnectionMode(mode: ConnectionMode, duration: int): Promise<void>--><!--Device-manager-function setConnectionMode(mode: ConnectionMode, duration: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **System API:** This is a system API.
@@ -28,14 +30,14 @@ Sets the NearLink connection mode for a device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | ConnectionMode | Yes | Indicates the NearLink connection mode to be set. |
+| mode | [ConnectionMode](arkts-connectivity-connectionmode-e-sys.md) | Yes | Indicates the NearLink connection mode to be set. |
 | duration | number | Yes | Indicates the duration in seconds for the setting mode. A value of 0 means unlimited.<br>Unit: Seconds, The value must be an integer greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 

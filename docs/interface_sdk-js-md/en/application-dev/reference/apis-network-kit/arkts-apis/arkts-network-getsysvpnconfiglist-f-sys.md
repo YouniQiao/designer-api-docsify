@@ -18,6 +18,8 @@ Get all system VPN network configuration.
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 
+<!--Device-vpn-function getSysVpnConfigList(): Promise<Array<SysVpnConfig>>--><!--Device-vpn-function getSysVpnConfigList(): Promise<Array<SysVpnConfig>>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Get all system VPN network configuration.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;SysVpnConfig&gt;&gt; | The promise returned by the all VPN network configuration. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<SysVpnConfig>> | The promise returned by the all VPN network configuration. |
 
 **Error codes:**
 

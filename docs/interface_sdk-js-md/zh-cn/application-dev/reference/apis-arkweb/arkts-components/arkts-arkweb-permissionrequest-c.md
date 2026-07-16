@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class PermissionRequest--><!--Device-unnamed-declare class PermissionRequest-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## constructor
@@ -16,7 +18,9 @@ PermissionRequest的构造函数。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PermissionRequest-constructor()--><!--Device-PermissionRequest-constructor()-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -30,7 +34,9 @@ Reject the request.
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PermissionRequest-deny(): void--><!--Device-PermissionRequest-deny(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -44,7 +50,9 @@ Gets the resource that the webpage is trying to access.
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PermissionRequest-getAccessibleResource(): Array<string>--><!--Device-PermissionRequest-getAccessibleResource(): Array<string>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -52,7 +60,7 @@ Gets the resource that the webpage is trying to access.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | @syscap SystemCapability.Web.Webview.Core@crossplatform |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | @syscap SystemCapability.Web.Webview.Core@crossplatform |
 
 ## getOrigin
 
@@ -64,7 +72,9 @@ Gets the source if the webpage that attempted to access the restricted resource.
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PermissionRequest-getOrigin(): string--><!--Device-PermissionRequest-getOrigin(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -84,7 +94,9 @@ Grant origin access to a given resource.
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PermissionRequest-grant(resources: Array<string>): void--><!--Device-PermissionRequest-grant(resources: Array<string>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -92,5 +104,5 @@ Grant origin access to a given resource.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resources | Array&lt;string&gt; | 是 | List of resources that can be requested by the web page with the permission to |
+| resources | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | List of resources that can be requested by the web page with the permission to |
 

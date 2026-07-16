@@ -1,5 +1,11 @@
 # parsePkcs12
 
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
+
 ## parsePkcs12
 
 ```TypeScript
@@ -10,7 +16,9 @@ function parsePkcs12(data: Uint8Array, config: Pkcs12ParsingConfig): Pkcs12Data
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cert-function parsePkcs12(data: Uint8Array, config: Pkcs12ParsingConfig): Pkcs12Data--><!--Device-cert-function parsePkcs12(data: Uint8Array, config: Pkcs12ParsingConfig): Pkcs12Data-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -18,14 +26,14 @@ function parsePkcs12(data: Uint8Array, config: Pkcs12ParsingConfig): Pkcs12Data
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Uint8Array | 是 | DER格式的P12文件原始数据。 |
-| config | Pkcs12ParsingConfig | 是 | P12文件的解析配置。 |
+| data | [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 是 | DER格式的P12文件原始数据。 |
+| config | [Pkcs12ParsingConfig](arkts-devicecertificate-pkcs12parsingconfig-i.md) | 是 | P12文件的解析配置。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Pkcs12Data | 表示解析后的P12数据。 |
+| [Pkcs12Data](arkts-devicecertificate-pkcs12data-i.md) | 表示解析后的P12数据。 |
 
 **错误码：**
 
@@ -226,7 +234,9 @@ function parsePkcs12(data: Uint8Array, password: string): Promise<Pkcs12Data>
 
 **起始版本：** 21
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cert-function parsePkcs12(data: Uint8Array, password: string): Promise<Pkcs12Data>--><!--Device-cert-function parsePkcs12(data: Uint8Array, password: string): Promise<Pkcs12Data>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -234,14 +244,14 @@ function parsePkcs12(data: Uint8Array, password: string): Promise<Pkcs12Data>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Uint8Array | 是 | DER格式的P12文件原始数据。 |
+| data | [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 是 | DER格式的P12文件原始数据。 |
 | password | string | 是 | 密码。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Pkcs12Data&gt; | Promise对象，返回解析后的P12数据。返回的Pkcs12Data中的私钥采用PEM编码。 |
+| Promise<Pkcs12Data> | Promise对象，返回解析后的P12数据。返回的Pkcs12Data中的私钥采用PEM编码。 |
 
 **错误码：**
 

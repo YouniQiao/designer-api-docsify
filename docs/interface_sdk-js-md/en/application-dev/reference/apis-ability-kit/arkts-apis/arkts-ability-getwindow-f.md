@@ -18,13 +18,15 @@ Obtains the window corresponding to this ability. This API uses an asynchronous 
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-featureAbility-function getWindow(callback: AsyncCallback<window.Window>): void--><!--Device-featureAbility-function getWindow(callback: AsyncCallback<window.Window>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;window.Window&gt; | Yes | Callback used to return the window. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<window.Window> | Yes | Callback used to return the window. |
 
 **Example**
 
@@ -56,13 +58,15 @@ Obtains the window corresponding to this ability. This API uses a promise to ret
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-featureAbility-function getWindow(): Promise<window.Window>--><!--Device-featureAbility-function getWindow(): Promise<window.Window>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;window.Window&gt; | Promise used to return the window. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<window.Window> | Promise used to return the window. |
 
 **Example**
 

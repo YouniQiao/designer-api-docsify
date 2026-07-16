@@ -18,6 +18,8 @@ Get the traffic usage details of the specified time period of the application.
 
 **Required permissions:** ohos.permission.GET_NETWORK_STATS
 
+<!--Device-statistics-function getTrafficStatsByUid(uidInfo: UidInfo, callback: AsyncCallback<NetStatsInfo>): void--><!--Device-statistics-function getTrafficStatsByUid(uidInfo: UidInfo, callback: AsyncCallback<NetStatsInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Get the traffic usage details of the specified time period of the application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uidInfo | UidInfo | Yes | Detailed query content. See {@link UidInfo}. |
-| callback | AsyncCallback&lt;NetStatsInfo&gt; | Yes | Returns the {@link NetStatsInfo} object; |
+| uidInfo | [UidInfo](arkts-network-uidinfo-i-sys.md) | Yes | Detailed query content. See {@link UidInfo}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<NetStatsInfo> | Yes | Returns the {@link NetStatsInfo} object; |
 
 **Error codes:**
 
@@ -94,6 +96,8 @@ Get the traffic usage details of the specified time period of the application.
 
 **Required permissions:** ohos.permission.GET_NETWORK_STATS
 
+<!--Device-statistics-function getTrafficStatsByUid(uidInfo: UidInfo): Promise<NetStatsInfo>--><!--Device-statistics-function getTrafficStatsByUid(uidInfo: UidInfo): Promise<NetStatsInfo>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -102,13 +106,13 @@ Get the traffic usage details of the specified time period of the application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uidInfo | UidInfo | Yes | Detailed query content. See {@link UidInfo}. |
+| uidInfo | [UidInfo](arkts-network-uidinfo-i-sys.md) | Yes | Detailed query content. See {@link UidInfo}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetStatsInfo&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetStatsInfo> | The promise returned by the function. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Enumerates the exposure modes.
 
 **Since:** 10
 
+<!--Device-camera-enum ExposureMode--><!--Device-camera-enum ExposureMode-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## EXPOSURE_MODE_MANUAL
@@ -17,6 +19,8 @@ Manual exposure mode.
 **Since:** 24
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-ExposureMode-EXPOSURE_MODE_MANUAL = 3--><!--Device-ExposureMode-EXPOSURE_MODE_MANUAL = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

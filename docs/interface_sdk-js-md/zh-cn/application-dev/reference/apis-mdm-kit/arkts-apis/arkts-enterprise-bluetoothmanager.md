@@ -2,18 +2,26 @@
 
 本模块提供设备蓝牙管理的能力，包括设置和查询蓝牙信息等。
 
-> **说明：**
->
-> 本模块接口仅可在Stage模型下使用。
->
-> 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../../mdm/mdm-kit-guide.md)。
->
-> 全局通用限制类策略由restrictions统一提供，若要全局禁用蓝牙，请参考
+> **说明：**  
+>  
+> 本模块接口仅可在Stage模型下使用。  
+>  
+> 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../../mdm/mdm-kit-guide.md)。  
+>  
+> 全局通用限制类策略由restrictions统一提供，若要全局禁用蓝牙，请参考  
 > [@ohos.enterprise.restrictions （限制类策略）](arkts-enterprise-restrictions.md)。
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace bluetoothManager--><!--Device-unnamed-declare namespace bluetoothManager-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { bluetoothManager } from '@kit.MDMKit';
+```
 
 ## 汇总
 

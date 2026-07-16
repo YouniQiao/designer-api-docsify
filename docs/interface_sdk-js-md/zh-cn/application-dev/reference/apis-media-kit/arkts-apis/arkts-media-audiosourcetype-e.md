@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-enum AudioSourceType--><!--Device-unnamed-enum AudioSourceType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## AUDIO_SOURCE_TYPE_DEFAULT
@@ -15,6 +17,8 @@ AUDIO_SOURCE_TYPE_DEFAULT = 0
 默认的音频输入源类型。
 
 **起始版本：** 9
+
+<!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_DEFAULT = 0--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_DEFAULT = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -30,7 +34,9 @@ AUDIO_SOURCE_TYPE_MIC = 1
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_MIC = 1--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_MIC = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -44,6 +50,8 @@ AUDIO_SOURCE_TYPE_VOICE_RECOGNITION = 2
 
 **起始版本：** 12
 
+<!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_RECOGNITION = 2--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_RECOGNITION = 2-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## AUDIO_SOURCE_TYPE_VOICE_COMMUNICATION
@@ -55,6 +63,8 @@ AUDIO_SOURCE_TYPE_VOICE_COMMUNICATION = 7
 表示语音通话场景的音频源。
 
 **起始版本：** 12
+
+<!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_COMMUNICATION = 7--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_COMMUNICATION = 7-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -68,6 +78,8 @@ AUDIO_SOURCE_TYPE_VOICE_MESSAGE = 10
 
 **起始版本：** 12
 
+<!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_MESSAGE = 10--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_MESSAGE = 10-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## AUDIO_SOURCE_TYPE_CAMCORDER
@@ -79,6 +91,8 @@ AUDIO_SOURCE_TYPE_CAMCORDER = 13
 表示相机录像的音频源。
 
 **起始版本：** 12
+
+<!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_CAMCORDER = 13--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_CAMCORDER = 13-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 

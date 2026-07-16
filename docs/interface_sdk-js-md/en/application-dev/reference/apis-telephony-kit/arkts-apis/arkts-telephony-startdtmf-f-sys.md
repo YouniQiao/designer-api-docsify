@@ -18,6 +18,8 @@ Start DTMF(Dual Tone Multi Frequency).
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function startDTMF(callId: int, character: string, callback: AsyncCallback<void>): void--><!--Device-call-function startDTMF(callId: int, character: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Start DTMF(Dual Tone Multi Frequency).
 | --- | --- | --- | --- |
 | callId | number | Yes | Indicates the identifier of the call. |
 | character | string | Yes | Indicates the characters sent. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of startDTMF. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of startDTMF. |
 
 **Error codes:**
 
@@ -70,6 +72,8 @@ Start DTMF(Dual Tone Multi Frequency).
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function startDTMF(callId: int, character: string): Promise<void>--><!--Device-call-function startDTMF(callId: int, character: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -85,7 +89,7 @@ Start DTMF(Dual Tone Multi Frequency).
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the startDTMF. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the startDTMF. |
 
 **Error codes:**
 

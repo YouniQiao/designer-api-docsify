@@ -12,12 +12,13 @@ import { adminManager } from '@kit.MDMKit';
 function isAdminEnabled(admin: Want, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a device administrator application of the current user is enabled. This API uses an asynchronous
-callback to return the result.
+Checks whether a device administrator application of the current user is enabled. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-adminManager-function isAdminEnabled(admin: Want, callback: AsyncCallback<boolean>): void--><!--Device-adminManager-function isAdminEnabled(admin: Want, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -27,8 +28,8 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback invoked to return the result. If the operation is successful,**err** is **null** and **data** is a Boolean value (**true** means that the device administrator applicationis enabled; and **false** means the opposite). If the operation fails, **err** is an error object. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback invoked to return the result. If the operation is successful,**err** is **null** and **data** is a Boolean value (**true** means that the device administrator application is enabled; and **false** means the opposite). If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -66,12 +67,13 @@ adminManager.isAdminEnabled(wantTemp, (err, result) => {
 function isAdminEnabled(admin: Want, userId: number, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a device administrator application of the specified user is enabled. This API uses an asynchronous
-callback to return the result.
+Checks whether a device administrator application of the specified user is enabled. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-adminManager-function isAdminEnabled(admin: Want, userId: number, callback: AsyncCallback<boolean>): void--><!--Device-adminManager-function isAdminEnabled(admin: Want, userId: number, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -81,9 +83,9 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| userId | number | Yes | User ID, which must be greater than or equal to 0.<br> The default value is the user IDof the caller. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback invoked to return the result. If the operation is successful,**err** is **null** and **data** is a Boolean value (**true** means that the device administrator applicationis enabled; and **false** means the opposite). If the operation fails, **err** is an error object. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| userId | number | Yes | User ID, which must be greater than or equal to 0.<br> The default value is the user ID of the caller. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback invoked to return the result. If the operation is successful,**err** is **null** and **data** is a Boolean value (**true** means that the device administrator application is enabled; and **false** means the opposite). If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -122,12 +124,13 @@ adminManager.isAdminEnabled(wantTemp, 100, (err, result) => {
 function isAdminEnabled(admin: Want, userId?: number): Promise<boolean>
 ```
 
-Checks whether a device administrator application of the current or specified user is enabled. This API uses a
-promise to return the result.
+Checks whether a device administrator application of the current or specified user is enabled. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-adminManager-function isAdminEnabled(admin: Want, userId?: number): Promise<boolean>--><!--Device-adminManager-function isAdminEnabled(admin: Want, userId?: number): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -137,14 +140,14 @@ promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| userId | number | No | User ID, which must be greater than or equal to 0.<br> - If **userId** is passed in,this API applies to the specified user.<br> - If **userId** is not passed in, this API applies to the currentuser. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| userId | number | No | User ID, which must be greater than or equal to 0.<br> - If **userId** is passed in,this API applies to the specified user.<br> - If **userId** is not passed in, this API applies to the current user. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the device administratorapplication is enabled; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means the device administrator application is enabled; the value **false** means the opposite. |
 
 **Error codes:**
 

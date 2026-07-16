@@ -12,9 +12,7 @@ import { adminManager } from '@kit.MDMKit';
 function disableDeviceAdmin(admin: Want): Promise<void>
 ```
 
-Allows a [super device administrator application](../../../../mdm/mdm-kit-term.md#sda) to disable other
-[device administrator applications](../../../../mdm/mdm-kit-term.md#da). This API uses a promise to return the
-result. This API can be called only by super device administrator applications.
+Allows a [super device administrator application](../../../../mdm/mdm-kit-term.md#sda) to disable other [device administrator applications](../../../../mdm/mdm-kit-term.md#da). This API uses a promise to return the result. This API can be called only by super device administrator applications.
 
 **Since:** 23
 
@@ -22,19 +20,21 @@ result. This API can be called only by super device administrator applications.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-adminManager-function disableDeviceAdmin(admin: Want): Promise<void>--><!--Device-adminManager-function disableDeviceAdmin(admin: Want): Promise<void>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. If the operation fails, an error object will be thrown. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. If the operation fails, an error object will be thrown. |
 
 **Error codes:**
 

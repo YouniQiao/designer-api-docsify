@@ -12,10 +12,11 @@ import { shortcutManager } from '@kit.AbilityKit';
 function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>
 ```
 
-Sets whether to display the specified shortcut for the current application. This API uses a promise to return the
-result.
+Sets whether to display the specified shortcut for the current application. This API uses a promise to return the result.
 
 **Since:** 20
+
+<!--Device-shortcutManager-function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>--><!--Device-shortcutManager-function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -23,14 +24,14 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Shortcut ID, which is the value of the **shortcutId** field under the **shortcuts** tag inthe [module.json5](../../../../quick-start/module-configuration-file.md) file. The value is a string of up to 63bytes. |
+| id | string | Yes | Shortcut ID, which is the value of the **shortcutId** field under the **shortcuts** tag in the [module.json5](../../../../quick-start/module-configuration-file.md) file. The value is a string of up to 63bytes. |
 | visible | boolean | Yes | Whether to display the shortcut. **true** to display, **false** otherwise. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

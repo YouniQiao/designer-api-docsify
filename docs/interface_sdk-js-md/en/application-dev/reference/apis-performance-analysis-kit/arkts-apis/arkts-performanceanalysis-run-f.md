@@ -18,6 +18,8 @@ Trigger the HiRetrieval functionality, make it start working.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-hiRetrieval-function run(): void--><!--Device-hiRetrieval-function run(): void-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiRetrieval
 
 **Error codes:**

@@ -4,7 +4,15 @@ ContextConstant提供Context相关的枚举，包含文件加密分区等级、U
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace contextConstant--><!--Device-unnamed-declare namespace contextConstant-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+## 导入模块
+
+```TypeScript
+import { contextConstant } from '@kit.AbilityKit';
+```
 
 ## 汇总
 

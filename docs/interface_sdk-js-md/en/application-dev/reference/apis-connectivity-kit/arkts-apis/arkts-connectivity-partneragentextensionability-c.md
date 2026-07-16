@@ -1,11 +1,12 @@
 # PartnerAgentExtensionAbility
 
-Class for the PartnerAgentExtensionAbility.
-Applications can use this ability to discover devices.
+Class for the PartnerAgentExtensionAbility.Applications can use this ability to discover devices.
 
 **Inheritance/Implementation:** PartnerAgentExtensionAbility extends [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-extensionability-c.md)
 
 **Since:** 23
+
+<!--Device-unnamed-export default class PartnerAgentExtensionAbility extends ExtensionAbility--><!--Device-unnamed-export default class PartnerAgentExtensionAbility extends ExtensionAbility-End-->
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -21,12 +22,13 @@ import { PartnerAgentExtensionAbility } from '@kit.ConnectivityKit';
 onDestroyWithReason(reason: PartnerAgentExtensionAbilityDestroyReason): void
 ```
 
-Called when the PartnerAgentExtensionAbility is to be destroyed.
-Applications can clean up resources in this callback function.
+Called when the PartnerAgentExtensionAbility is to be destroyed.Applications can clean up resources in this callback function.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PartnerAgentExtensionAbility-onDestroyWithReason(reason: PartnerAgentExtensionAbilityDestroyReason): void--><!--Device-PartnerAgentExtensionAbility-onDestroyWithReason(reason: PartnerAgentExtensionAbilityDestroyReason): void-End-->
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -34,7 +36,7 @@ Applications can clean up resources in this callback function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reason | PartnerAgentExtensionAbilityDestroyReason | Yes | The reason for Ability destruction. |
+| reason | [PartnerAgentExtensionAbilityDestroyReason](arkts-connectivity-partneragentextensionabilitydestroyreason-t.md) | Yes | The reason for Ability destruction. |
 
 **Example**
 
@@ -59,13 +61,15 @@ Called when a device is discovered.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PartnerAgentExtensionAbility-onDeviceDiscovered(deviceAddress: PartnerDeviceAddress): void--><!--Device-PartnerAgentExtensionAbility-onDeviceDiscovered(deviceAddress: PartnerDeviceAddress): void-End-->
+
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceAddress | PartnerDeviceAddress | Yes | Address of the discovered device. |
+| deviceAddress | [PartnerDeviceAddress](arkts-connectivity-partnerdeviceaddress-t.md) | Yes | Address of the discovered device. |
 
 **Example**
 
@@ -91,6 +95,8 @@ Context of the PartnerAgentExtensionAbility.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PartnerAgentExtensionAbility-context: PartnerAgentExtensionContext--><!--Device-PartnerAgentExtensionAbility-context: PartnerAgentExtensionContext-End-->
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 

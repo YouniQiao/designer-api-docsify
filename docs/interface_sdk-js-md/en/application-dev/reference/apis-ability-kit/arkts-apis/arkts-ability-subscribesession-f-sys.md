@@ -20,6 +20,8 @@ Subscribe session event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-cliManager-function subscribeSession(sessionId: string, callback: ToolEventCallback): Promise<void>--><!--Device-cliManager-function subscribeSession(sessionId: string, callback: ToolEventCallback): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -29,13 +31,13 @@ Subscribe session event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sessionId | string | Yes | The session id of target tool process. |
-| callback | ToolEventCallback | Yes | The input args of tool. |
+| callback | [ToolEventCallback](arkts-ability-tooleventcallback-i-sys.md) | Yes | The input args of tool. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

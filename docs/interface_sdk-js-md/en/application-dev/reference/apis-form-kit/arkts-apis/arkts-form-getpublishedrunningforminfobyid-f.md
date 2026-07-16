@@ -12,12 +12,13 @@ import { formProvider } from '@kit.FormKit';
 function getPublishedRunningFormInfoById(formId: string): Promise<formInfo.RunningFormInfo>
 ```
 
-Obtains the information of a specified widget that has been added to the home screen. This API uses a promise to
-return the result.
+Obtains the information of a specified widget that has been added to the home screen. This API uses a promise to return the result.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-formProvider-function getPublishedRunningFormInfoById(formId: string): Promise<formInfo.RunningFormInfo>--><!--Device-formProvider-function getPublishedRunningFormInfoById(formId: string): Promise<formInfo.RunningFormInfo>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -31,7 +32,7 @@ return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;formInfo.RunningFormInfo&gt; | Promise used to return the information about the widgets that meet therequirements, including the widget name and dimension. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<formInfo.RunningFormInfo> | Promise used to return the information about the widgets that meet the requirements, including the widget name and dimension. |
 
 **Error codes:**
 

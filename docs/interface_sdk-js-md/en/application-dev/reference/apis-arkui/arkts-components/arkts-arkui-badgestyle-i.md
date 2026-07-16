@@ -2,15 +2,17 @@
 
 Describes the badge style. It includes the font color, font size, badge color, badge size, etc.
 
-> **NOTE**
->
-> - When **borderWidth** is set to a value greater than 0 and **borderColor** is different from **badgeColor**, the
-> badge is drawn before the border. Edge pixels are anti-aliased, which produces semi-transparent pixels. This causes
-> the border in **badgeColor** to become visible at the four corners. To implement related scenarios, it is
-> recommended that you use the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md) component with its
+> **NOTE**  
+>  
+> - When **borderWidth** is set to a value greater than 0 and **borderColor** is different from **badgeColor**, the  
+> badge is drawn before the border. Edge pixels are anti-aliased, which produces semi-transparent pixels. This causes  
+> the border in **badgeColor** to become visible at the four corners. To implement related scenarios, it is  
+> recommended that you use the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md) component with its  
 > [outline](arkts-arkui-commonmethod-c.md#outline-1) attribute instead of the **Badge** component.
 
 **Since:** 7
+
+<!--Device-unnamed-declare interface BadgeStyle--><!--Device-unnamed-declare interface BadgeStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,6 +36,8 @@ Default value: **Color.Red**
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-BadgeStyle-badgeColor?: ResourceColor--><!--Device-BadgeStyle-badgeColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## badgeSize
@@ -42,17 +46,13 @@ Default value: **Color.Red**
 badgeSize?: number | ResourceStr
 ```
 
-Badge size. The value of this parameter is a string of the number type. The unit can be px, vp, fp, or lpx, for
-example, 10 or 16fp. If no unit is specified, fp is used by default. If the value is **0**, the badge is not
-displayed.
+Badge size. The value of this parameter is a string of the number type. The unit can be px, vp, fp, or lpx, for example, 10 or 16fp. If no unit is specified, fp is used by default. If the value is **0**, the badge is not displayed.
 
 Unit: fp. Default value: **16vp**.
 
 **NOTE**
 
-1. Percentage values are not supported. If a percentage value is set, the default value is used.
-2. If **fontSize** is set and **badgeSize** is smaller than fontSize, **badgeSize** will take effect based on the
-value of **fontSize**.
+1. Percentage values are not supported. If a percentage value is set, the default value is used.2. If **fontSize** is set and **badgeSize** is smaller than fontSize, **badgeSize** will take effect based on the value of **fontSize**.
 
 **Type:** number | ResourceStr
 
@@ -63,6 +63,8 @@ value of **fontSize**.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-BadgeStyle-badgeSize?: number | ResourceStr--><!--Device-BadgeStyle-badgeSize?: number | ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,6 +87,8 @@ Default value: **Color.Red**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-BadgeStyle-borderColor?: ResourceColor--><!--Device-BadgeStyle-borderColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -114,6 +118,8 @@ Percentage values are not supported. If a percentage value is set, the default v
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-BadgeStyle-borderWidth?: Length--><!--Device-BadgeStyle-borderWidth?: Length-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## color
@@ -136,6 +142,8 @@ Default value: **Color.White**
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-BadgeStyle-color?: ResourceColor--><!--Device-BadgeStyle-color?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableAutoAvoidance
@@ -152,10 +160,7 @@ Default value: **false**.
 
 **NOTE**
 
-1. The avoidance effect is that the badge text is extended to the inside of the component.
-2. When the width of the outer border is greater than 0, the extension start point of the badge is the inner side
-of the outer border.
-3. When position is set to a specific coordinate value, the badge does not perform avoidance.
+1. The avoidance effect is that the badge text is extended to the inside of the component.2. When the width of the outer border is greater than 0, the extension start point of the badge is the inner side of the outer border.3. When position is set to a specific coordinate value, the badge does not perform avoidance.
 
 **Type:** boolean
 
@@ -167,6 +172,8 @@ of the outer border.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-BadgeStyle-enableAutoAvoidance?: boolean--><!--Device-BadgeStyle-enableAutoAvoidance?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontSize
@@ -175,15 +182,13 @@ of the outer border.
 fontSize?: number | ResourceStr
 ```
 
-Font size. The value of this parameter is a string of the number type. The unit can be px, vp, fp, or lpx, for
-example, 10 or 10fp. If no unit is specified, fp is used by default.
+Font size. The value of this parameter is a string of the number type. The unit can be px, vp, fp, or lpx, for example, 10 or 10fp. If no unit is specified, fp is used by default.
 
 Default value: **10vp**
 
 Default unit: fp
 
-The value must be greater than 0. If the value is **0**, the text is not displayed. If the value is less than 0,
-the default value is used.
+The value must be greater than 0. If the value is **0**, the text is not displayed. If the value is less than 0,the default value is used.
 
 **NOTE**
 
@@ -199,6 +204,8 @@ the default value is used.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-BadgeStyle-fontSize?: number | ResourceStr--><!--Device-BadgeStyle-fontSize?: number | ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontWeight
@@ -207,17 +214,13 @@ the default value is used.
 fontWeight?: number | FontWeight | ResourceStr
 ```
 
-Font weight of the text. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger
-value indicates a bolder font. For the number type, if the value is not within the range, the default value **400**
-is used. For the string type, only strings that represent a number, for example, **400**, and the following
-enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.
+Font weight of the text. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a bolder font. For the number type, if the value is not within the range, the default value **400** is used. For the string type, only strings that represent a number, for example, **400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.
 
 Default value: **FontWeight.Normal**
 
 **NOTE**
 
-Percentage values are not supported. If a percentage value is set, the default value is used. The ResourceStr type
-is supported since API version 20.
+Percentage values are not supported. If a percentage value is set, the default value is used. The ResourceStr type is supported since API version 20.
 
 **Type:** number | FontWeight | ResourceStr
 
@@ -226,6 +229,8 @@ is supported since API version 20.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-BadgeStyle-fontWeight?: number | FontWeight | ResourceStr--><!--Device-BadgeStyle-fontWeight?: number | FontWeight | ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -248,6 +253,8 @@ Default value: **Color.White**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-BadgeStyle-outerBorderColor?: ResourceColor--><!--Device-BadgeStyle-outerBorderColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -274,6 +281,8 @@ Percentage values are not supported. If a percentage value is set, the default v
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-BadgeStyle-outerBorderWidth?: LengthMetrics--><!--Device-BadgeStyle-outerBorderWidth?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

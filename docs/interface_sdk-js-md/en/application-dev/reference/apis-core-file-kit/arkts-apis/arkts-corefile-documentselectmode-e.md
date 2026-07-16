@@ -4,6 +4,8 @@ Enumerates the types of documents selected.
 
 **Since:** 11
 
+<!--Device-picker-export enum DocumentSelectMode--><!--Device-picker-export enum DocumentSelectMode-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService.FolderSelection
 
 ## FILE
@@ -17,6 +19,8 @@ File (default).
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DocumentSelectMode-FILE = 0--><!--Device-DocumentSelectMode-FILE = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService.FolderSelection
 
@@ -32,6 +36,8 @@ Folder.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DocumentSelectMode-FOLDER = 1--><!--Device-DocumentSelectMode-FOLDER = 1-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService.FolderSelection
 
 ## MIXED
@@ -45,6 +51,8 @@ Mixed type of files and folders.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DocumentSelectMode-MIXED = 2--><!--Device-DocumentSelectMode-MIXED = 2-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService.FolderSelection
 

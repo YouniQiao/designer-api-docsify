@@ -14,12 +14,13 @@ function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void
 
 Obtains the DND time. This API uses an asynchronous callback to return the result.
 
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,
-error code 801 is returned.
+This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void--><!--Device-notificationManager-function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -29,7 +30,7 @@ error code 801 is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;DoNotDisturbDate&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DoNotDisturbDate> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -70,12 +71,13 @@ function getDoNotDisturbDate(): Promise<DoNotDisturbDate>
 
 Obtains the DND time. This API uses a promise to return the result.
 
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,
-error code 801 is returned.
+This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function getDoNotDisturbDate(): Promise<DoNotDisturbDate>--><!--Device-notificationManager-function getDoNotDisturbDate(): Promise<DoNotDisturbDate>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -85,7 +87,7 @@ error code 801 is returned.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DoNotDisturbDate&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DoNotDisturbDate> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -121,12 +123,13 @@ function getDoNotDisturbDate(userId: number, callback: AsyncCallback<DoNotDistur
 
 Obtains the DND time of a specified user. This API uses an asynchronous callback to return the result.
 
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,
-error code 801 is returned.
+This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function getDoNotDisturbDate(userId: int, callback: AsyncCallback<DoNotDisturbDate>): void--><!--Device-notificationManager-function getDoNotDisturbDate(userId: int, callback: AsyncCallback<DoNotDisturbDate>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -137,7 +140,7 @@ error code 801 is returned.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
-| callback | AsyncCallback&lt;DoNotDisturbDate&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DoNotDisturbDate> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -182,12 +185,13 @@ function getDoNotDisturbDate(userId: number): Promise<DoNotDisturbDate>
 
 Obtains the DND time of a specified user. This API uses a promise to return the result.
 
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,
-error code 801 is returned.
+This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function getDoNotDisturbDate(userId: int): Promise<DoNotDisturbDate>--><!--Device-notificationManager-function getDoNotDisturbDate(userId: int): Promise<DoNotDisturbDate>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -203,7 +207,7 @@ error code 801 is returned.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DoNotDisturbDate&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DoNotDisturbDate> | Promise used to return the result. |
 
 **Error codes:**
 

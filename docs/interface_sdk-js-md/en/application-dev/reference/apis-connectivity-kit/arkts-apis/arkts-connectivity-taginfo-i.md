@@ -1,10 +1,10 @@
 # TagInfo
 
-Provides tag information.
-<p>This class provides the technology a tag supports, for example, NFC-A. Applications can create
-different tags based on the supported technology.
+Provides tag information.<p>This class provides the technology a tag supports, for example, NFC-A. Applications can create different tags based on the supported technology.
 
 **Since:** 12
+
+<!--Device-tag-export interface TagInfo--><!--Device-tag-export interface TagInfo-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -32,6 +32,8 @@ The supported technology list of this tag.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
+<!--Device-TagInfo-supportedProfiles: number[]--><!--Device-TagInfo-supportedProfiles: number[]-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## technology
@@ -50,6 +52,8 @@ The supported technology list of this tag.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TagInfo-technology: int[]--><!--Device-TagInfo-technology: int[]-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## uid
@@ -67,6 +71,8 @@ The uid of this tag, it.
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TagInfo-uid: int[]--><!--Device-TagInfo-uid: int[]-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 

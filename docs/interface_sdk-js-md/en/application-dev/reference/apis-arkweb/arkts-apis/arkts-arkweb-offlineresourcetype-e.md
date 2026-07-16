@@ -1,9 +1,10 @@
 # OfflineResourceType
 
-Enumerates the offline resource types corresponding to the
-[OfflineResourceMap](arkts-arkweb-offlineresourcemap-i.md) object.
+Enumerates the offline resource types corresponding to the [OfflineResourceMap](arkts-arkweb-offlineresourcemap-i.md) object.
 
 **Since:** 12
+
+<!--Device-webview-enum OfflineResourceType--><!--Device-webview-enum OfflineResourceType-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -17,6 +18,8 @@ Resource of the image type.
 
 **Since:** 12
 
+<!--Device-OfflineResourceType-IMAGE--><!--Device-OfflineResourceType-IMAGE-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## CSS
@@ -28,6 +31,8 @@ CSS
 Resource of the CSS type.
 
 **Since:** 12
+
+<!--Device-OfflineResourceType-CSS--><!--Device-OfflineResourceType-CSS-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -41,6 +46,8 @@ Javascript resource loaded through the <script src="" /> tag.
 
 **Since:** 12
 
+<!--Device-OfflineResourceType-CLASSIC_JS--><!--Device-OfflineResourceType-CLASSIC_JS-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## MODULE_JS
@@ -52,6 +59,8 @@ MODULE_JS
 Javascript resource loaded through the <script src="" type="module" /> tag.
 
 **Since:** 12
+
+<!--Device-OfflineResourceType-MODULE_JS--><!--Device-OfflineResourceType-MODULE_JS-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

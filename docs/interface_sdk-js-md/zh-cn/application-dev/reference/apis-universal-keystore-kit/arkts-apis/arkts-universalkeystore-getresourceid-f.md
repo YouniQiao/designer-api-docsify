@@ -1,5 +1,11 @@
 # getResourceId
 
+## 导入模块
+
+```TypeScript
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
+```
+
 ## getResourceId
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getResourceId(providerName: string, params: HuksExternalCryptoParam[]):
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-huksExternalCrypto-function getResourceId(providerName: string, params: HuksExternalCryptoParam[]): Promise<string>--><!--Device-huksExternalCrypto-function getResourceId(providerName: string, params: HuksExternalCryptoParam[]): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 **参数：**
@@ -19,13 +27,13 @@ function getResourceId(providerName: string, params: HuksExternalCryptoParam[]):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | providerName | string | 是 | 提供者名称，建议包含厂商信息，全局唯一，长度最大为128字节。 |
-| params | HuksExternalCryptoParam[] | 是 | 获取资源ID所需的属性参数。必选TAG包括：[HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcryptotagtype-e.md)、[HUKS_EXT_CRYPTO_TAG_BUNDLE_NAME](arkts-universalkeystore-huksexternalcryptotagtype-e.md)、[HUKS_EXT_CRYPTO_TAG_RESOURCE_INFO](arkts-universalkeystore-huksexternalcryptotagtype-e.md)。 |
+| params | [HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcryptoparam-i.md)[] | 是 | 获取资源ID所需的属性参数。必选TAG包括：[HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcryptotagtype-e.md)、[HUKS_EXT_CRYPTO_TAG_BUNDLE_NAME](arkts-universalkeystore-huksexternalcryptotagtype-e.md)、[HUKS_EXT_CRYPTO_TAG_RESOURCE_INFO](arkts-universalkeystore-huksexternalcryptotagtype-e.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回资源ID。 |
+| Promise<string> | Promise对象，返回资源ID。 |
 
 **错误码：**
 

@@ -4,6 +4,8 @@ Describes detail of the cloud sync {@code Progress}.
 
 **Since:** 10
 
+<!--Device-relationalStore-interface ProgressDetails--><!--Device-relationalStore-interface ProgressDetails-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Describes the code of data sync progress.
 
 **Since:** 10
 
+<!--Device-ProgressDetails-code: ProgressCode--><!--Device-ProgressDetails-code: ProgressCode-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## details
@@ -39,6 +43,8 @@ The key indicates the table name, and the value indicates the device-cloud sync 
 **Type:** Record<string, TableDetails>
 
 **Since:** 10
+
+<!--Device-ProgressDetails-details: Record<string, TableDetails>--><!--Device-ProgressDetails-details: Record<string, TableDetails>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -56,6 +62,8 @@ Indicates the code message.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ProgressDetails-message?: string--><!--Device-ProgressDetails-message?: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## schedule
@@ -69,6 +77,8 @@ Describes the status of data sync progress.
 **Type:** Progress
 
 **Since:** 10
+
+<!--Device-ProgressDetails-schedule: Progress--><!--Device-ProgressDetails-schedule: Progress-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 

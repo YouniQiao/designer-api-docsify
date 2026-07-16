@@ -1,5 +1,11 @@
 # stop（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { inputDeviceCooperate } from '@kit.InputKit';
+```
+
 ## stop
 
 ```TypeScript
@@ -8,10 +14,10 @@ function stop(callback: AsyncCallback<void>): void
 
 停止键鼠穿越，使用callback异步回调。
 
-> **说明：**
->
-> 从 API version 9开始支持，从API version 23开始废弃。建议使用
-> [cooperate.deactivateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-deactivatecooperate-f-sys.md#deactivatecooperate-1)
+> **说明：**  
+>  
+> 从 API version 9开始支持，从API version 23开始废弃。建议使用  
+> [cooperate.deactivateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-deactivatecooperate-f-sys.md#deactivatecooperate-1)  
 > 替代。
 
 **起始版本：** 9
@@ -19,6 +25,8 @@ function stop(callback: AsyncCallback<void>): void
 **废弃版本：** 23
 
 **替代接口：** deactivateCooperate
+
+<!--Device-inputDeviceCooperate-function stop(callback: AsyncCallback<void>): void--><!--Device-inputDeviceCooperate-function stop(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Cooperator
 
@@ -28,7 +36,7 @@ function stop(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当停止键鼠穿越成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当停止键鼠穿越成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -77,9 +85,9 @@ function stop(): Promise<void>
 
 停止键鼠穿越，使用Promise异步回调。
 
-> **说明：**
->
-> 从 API version 9开始支持，从API version 23开始废弃。建议使用
+> **说明：**  
+>  
+> 从 API version 9开始支持，从API version 23开始废弃。建议使用  
 > [cooperate.deactivateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-deactivatecooperate-f-sys.md#deactivatecooperate-2)替代。
 
 **起始版本：** 9
@@ -87,6 +95,8 @@ function stop(): Promise<void>
 **废弃版本：** 23
 
 **替代接口：** deactivateCooperate
+
+<!--Device-inputDeviceCooperate-function stop(): Promise<void>--><!--Device-inputDeviceCooperate-function stop(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Cooperator
 
@@ -96,7 +106,7 @@ function stop(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

@@ -4,6 +4,8 @@ Enumerates the camera concurrency types.
 
 **Since:** 18
 
+<!--Device-camera-enum CameraConcurrentType--><!--Device-camera-enum CameraConcurrentType-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## CAMERA_FULL_CAPABILITY
@@ -18,6 +20,8 @@ Full camera concurrency.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraConcurrentType-CAMERA_FULL_CAPABILITY = 1--><!--Device-CameraConcurrentType-CAMERA_FULL_CAPABILITY = 1-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## CAMERA_LIMITED_CAPABILITY
@@ -31,6 +35,8 @@ Limited camera concurrency.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraConcurrentType-CAMERA_LIMITED_CAPABILITY = 0--><!--Device-CameraConcurrentType-CAMERA_LIMITED_CAPABILITY = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

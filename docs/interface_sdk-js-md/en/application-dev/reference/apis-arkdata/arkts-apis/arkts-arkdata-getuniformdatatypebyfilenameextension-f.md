@@ -12,12 +12,13 @@ import { uniformTypeDescriptor } from '@kit.ArkData';
 function getUniformDataTypeByFilenameExtension(filenameExtension: string, belongsTo?: string): string
 ```
 
-Obtains the uniform data type ID based on the given file name extension and data type. If there are multiple
-uniform data type IDs matching the conditions, the first one is returned.
+Obtains the uniform data type ID based on the given file name extension and data type. If there are multiple uniform data type IDs matching the conditions, the first one is returned.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-uniformTypeDescriptor-function getUniformDataTypeByFilenameExtension(filenameExtension: string, belongsTo?: string): string--><!--Device-uniformTypeDescriptor-function getUniformDataTypeByFilenameExtension(filenameExtension: string, belongsTo?: string): string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -26,13 +27,13 @@ uniform data type IDs matching the conditions, the first one is returned.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filenameExtension | string | Yes | File name extension. |
-| belongsTo | string | No | ID of the uniform data type, to which the data type to be obtained belongs. Thisparameter has no default value. If it is not specified, the[uniform data type ID] is queried based on the file nameextension. |
+| belongsTo | string | No | ID of the uniform data type, to which the data type to be obtained belongs. This parameter has no default value. If it is not specified, the [uniform data type ID] is queried based on the file name extension. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | ID of the uniform data type that matches the specified file name extension and **belongsTo** (if specified). If no match is found, the data type dynamically generated based on the rules specified by theinput parameters is returned. |
+| string | ID of the uniform data type that matches the specified file name extension and **belongsTo** (if specified). If no match is found, the data type dynamically generated based on the rules specified by the input parameters is returned. |
 
 **Error codes:**
 

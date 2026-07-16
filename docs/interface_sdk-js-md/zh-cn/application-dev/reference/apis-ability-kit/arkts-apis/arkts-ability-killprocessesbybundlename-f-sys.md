@@ -1,5 +1,11 @@
 # killProcessesByBundleName（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+```
+
 ## killProcessesByBundleName
 
 ```TypeScript
@@ -13,6 +19,8 @@ function killProcessesByBundleName(bundleName: string): Promise<void>
 **需要权限：** 
 - API版本14+：ohos.permission.KILL_APP_PROCESSES or ohos.permission.CLEAN_BACKGROUND_PROCESSES
 - API版本9 - 13：ohos.permission.CLEAN_BACKGROUND_PROCESSES
+
+<!--Device-appManager-function killProcessesByBundleName(bundleName: string): Promise<void>--><!--Device-appManager-function killProcessesByBundleName(bundleName: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -28,7 +36,7 @@ function killProcessesByBundleName(bundleName: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | The Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | The Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -76,6 +84,8 @@ function killProcessesByBundleName(bundleName: string, callback: AsyncCallback<v
 - API版本14+：ohos.permission.KILL_APP_PROCESSES or ohos.permission.CLEAN_BACKGROUND_PROCESSES
 - API版本9 - 13：ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
+<!--Device-appManager-function killProcessesByBundleName(bundleName: string, callback: AsyncCallback<void>): void--><!--Device-appManager-function killProcessesByBundleName(bundleName: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -85,7 +95,7 @@ function killProcessesByBundleName(bundleName: string, callback: AsyncCallback<v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示Bundle名称。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 以回调方式返回接口运行结果，可进行错误处理或其他自定义处理。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 以回调方式返回接口运行结果，可进行错误处理或其他自定义处理。 |
 
 **错误码：**
 

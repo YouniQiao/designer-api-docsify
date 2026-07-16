@@ -12,13 +12,13 @@ import { connection } from '@kit.NetworkKit';
 function setPacFileUrl(pacFileUrl: string): void
 ```
 
-Set the URL {@link pacFileUrl} of the current PAC script.
-Proxy information can be obtained through parsing the script address.
-To invoke this method, you must have the {@code ohos.permission.SET_PAC_URL} permission.
+Set the URL {@link pacFileUrl} of the current PAC script.Proxy information can be obtained through parsing the script address.To invoke this method, you must have the {@code ohos.permission.SET_PAC_URL} permission.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.SET_PAC_URL
+
+<!--Device-connection-function setPacFileUrl(pacFileUrl: string): void--><!--Device-connection-function setPacFileUrl(pacFileUrl: string): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

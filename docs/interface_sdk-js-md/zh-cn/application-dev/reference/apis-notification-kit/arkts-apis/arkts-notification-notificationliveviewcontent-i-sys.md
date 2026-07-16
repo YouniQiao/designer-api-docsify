@@ -6,6 +6,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface NotificationLiveViewContent extends NotificationBasicContent--><!--Device-unnamed-export interface NotificationLiveViewContent extends NotificationBasicContent-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -21,6 +23,8 @@ extensionWantAgent?: WantAgent
 **类型：** WantAgent
 
 **起始版本：** 20
+
+<!--Device-NotificationLiveViewContent-extensionWantAgent?: WantAgent--><!--Device-NotificationLiveViewContent-extensionWantAgent?: WantAgent-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -38,6 +42,8 @@ extraInfo?: Record<string, Object>
 
 **起始版本：** 11
 
+<!--Device-NotificationLiveViewContent-extraInfo?: Record<string, Object>--><!--Device-NotificationLiveViewContent-extraInfo?: Record<string, Object>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -50,12 +56,14 @@ isLocalUpdateOnly?: boolean
 
 实况窗是否只在本地更新。默认为false。
 
-- true：是。
+- true：是。  
 - false：否。
 
 **类型：** boolean
 
 **起始版本：** 12
+
+<!--Device-NotificationLiveViewContent-isLocalUpdateOnly?: boolean--><!--Device-NotificationLiveViewContent-isLocalUpdateOnly?: boolean-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -73,6 +81,8 @@ pictureInfo?: Record<string, Array<image.PixelMap>>
 
 **起始版本：** 11
 
+<!--Device-NotificationLiveViewContent-pictureInfo?: Record<string, Array<image.PixelMap>>--><!--Device-NotificationLiveViewContent-pictureInfo?: Record<string, Array<image.PixelMap>>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -89,6 +99,8 @@ status: LiveViewStatus
 
 **起始版本：** 11
 
+<!--Device-NotificationLiveViewContent-status: LiveViewStatus--><!--Device-NotificationLiveViewContent-status: LiveViewStatus-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -104,6 +116,8 @@ version?: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-NotificationLiveViewContent-version?: int--><!--Device-NotificationLiveViewContent-version?: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+<!--Device-osAccount-enum OsAccountType--><!--Device-osAccount-enum OsAccountType-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## ADMIN
@@ -15,6 +17,8 @@ ADMIN = 0
 管理员账号。
 
 **起始版本：** 7
+
+<!--Device-OsAccountType-ADMIN = 0--><!--Device-OsAccountType-ADMIN = 0-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -28,6 +32,8 @@ NORMAL = 1
 
 **起始版本：** 7
 
+<!--Device-OsAccountType-NORMAL = 1--><!--Device-OsAccountType-NORMAL = 1-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## GUEST
@@ -39,6 +45,8 @@ GUEST = 2
 访客账号。
 
 **起始版本：** 7
+
+<!--Device-OsAccountType-GUEST = 2--><!--Device-OsAccountType-GUEST = 2-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

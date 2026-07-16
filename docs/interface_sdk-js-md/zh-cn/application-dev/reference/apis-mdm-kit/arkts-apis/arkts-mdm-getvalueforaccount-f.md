@@ -1,5 +1,11 @@
 # getValueForAccount
 
+## 导入模块
+
+```TypeScript
+import { deviceSettings } from '@kit.MDMKit';
+```
+
 ## getValueForAccount
 
 ```TypeScript
@@ -14,21 +20,23 @@ function getValueForAccount(admin: Want, item: SettingsItem, accountId: number):
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-deviceSettings-function getValueForAccount(admin: Want, item: SettingsItem, accountId: number): string--><!--Device-deviceSettings-function getValueForAccount(admin: Want, item: SettingsItem, accountId: number): string-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| item | SettingsItem | 是 | 设备设置策略类型。 |
-| accountId | number | 是 | 用户ID，取值范围：大于等于0。<br/>accountId可以通过[getOsAccountLocalId](@ohos.account.osAccount:osAccount.AccountManager.getOsAccountLocalId(callback:AsyncCallback&lt;int&gt;))等接口来获取<br>取值范围为全体整数。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| item | [SettingsItem](arkts-mdm-settingsitem-e.md) | 是 | 设备设置策略类型。 |
+| accountId | number | 是 | 用户ID，取值范围：大于等于0。<br/>accountId可以通过[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)等接口来获取<br>取值范围为全体整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| string | Policy type value.<br>When **item** is set to [SettingsItem.DEVICE_NAME](arkts-mdm-settingsitem-e.md), this API returns thedevice name of the current user. If the device name of another user is queried, error code 9200012 is returned.<br>When **item** is set to [SettingsItem.FLOATING_NAVIGATION](arkts-mdm-settingsitem-e.md),this API returns the three-key navigation switch state for the specified user.<br>When **item** is set to [SettingsItem.FLOATING_NAVIGATION](arkts-mdm-settingsitem-e.md),this API can be called properly on phones and tablets but returns error code 801 on other devices. |
+| string | Policy type value.<br>When **item** is set to [SettingsItem.DEVICE_NAME](arkts-mdm-settingsitem-e.md), this API returns the device name of the current user. If the device name of another user is queried, error code 9200012 is returned.<br>When **item** is set to [SettingsItem.FLOATING_NAVIGATION](arkts-mdm-settingsitem-e.md),this API returns the three-key navigation switch state for the specified user.<br>When **item** is set to [SettingsItem.FLOATING_NAVIGATION](arkts-mdm-settingsitem-e.md),this API can be called properly on phones and tablets but returns error code 801 on other devices. |
 
 **错误码：**
 

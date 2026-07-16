@@ -4,6 +4,8 @@ ParallelStrategy作为[Options](arkts-basicservices-options-i.md)的一个属性
 
 **起始版本：** 18
 
+<!--Device-zlib-export enum ParallelStrategy--><!--Device-zlib-export enum ParallelStrategy-End-->
+
 **系统能力：** SystemCapability.BundleManager.Zlib
 
 ## PARALLEL_STRATEGY_SEQUENTIAL
@@ -16,7 +18,9 @@ PARALLEL_STRATEGY_SEQUENTIAL = 0
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ParallelStrategy-PARALLEL_STRATEGY_SEQUENTIAL = 0--><!--Device-ParallelStrategy-PARALLEL_STRATEGY_SEQUENTIAL = 0-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
@@ -30,7 +34,9 @@ PARALLEL_STRATEGY_PARALLEL_DECOMPRESSION = 1
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ParallelStrategy-PARALLEL_STRATEGY_PARALLEL_DECOMPRESSION = 1--><!--Device-ParallelStrategy-PARALLEL_STRATEGY_PARALLEL_DECOMPRESSION = 1-End-->
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 

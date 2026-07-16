@@ -18,6 +18,8 @@ Get a specified firewall rule by userId and ruleId.
 
 **Required permissions:** ohos.permission.GET_NET_FIREWALL
 
+<!--Device-netFirewall-function getNetFirewallRule(userId: number, ruleId: number): Promise<NetFirewallRule>--><!--Device-netFirewall-function getNetFirewallRule(userId: number, ruleId: number): Promise<NetFirewallRule>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 **Parameters:**
@@ -31,7 +33,7 @@ Get a specified firewall rule by userId and ruleId.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetFirewallRule&gt; | Firewall Rule. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetFirewallRule> | Firewall Rule. |
 
 **Error codes:**
 

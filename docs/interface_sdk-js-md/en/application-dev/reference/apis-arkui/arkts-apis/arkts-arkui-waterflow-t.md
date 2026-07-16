@@ -12,6 +12,8 @@ Represents a FrameNode of the **WaterFlow** type. Only [FlowItem](../arkts-compo
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-type WaterFlow = TypedFrameNode<WaterFlowInterface, WaterFlowAttribute>--><!--Device-typeNode-type WaterFlow = TypedFrameNode<WaterFlowInterface, WaterFlowAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** TypedFrameNode<WaterFlowInterface, WaterFlowAttribute>

@@ -8,15 +8,17 @@
 
 此类为抽象类，开发者无法自行创建实例。系统会在触发输入事件监听器时自动创建实例并传递回调函数。
 
-> **说明：**
->
-> 由于监听器在事件派发给具体组件之前执行，事件中的一些字段将无法提供有效值：如触发对象[target](arkts-arkui-eventtarget-i.md)、相对于组件的坐标
-> [x](arkts-arkui-mouseevent-i.md#x)和[y](arkts-arkui-mouseevent-i.md#y)、[getCurrentLocalPosition](arkts-arkui-touchobject-i.md#getcurrentlocalposition-1)和
-> [stopPropagation](arkts-arkui-touchevent-i.md#stoppropagation)方法、TouchEvent的[preventDefault](arkts-arkui-touchevent-i.md#preventdefault)和
-> [getHistoricalPoints](arkts-arkui-touchevent-i.md#gethistoricalpoints-1)方法以及KeyEvent的[metaKey](arkts-arkui-keyevent-i.md#metakey)属性和
+> **说明：**  
+>  
+> 由于监听器在事件派发给具体组件之前执行，事件中的一些字段将无法提供有效值：如触发对象[target](arkts-arkui-eventtarget-i.md)、相对于组件的坐标  
+> [x](arkts-arkui-mouseevent-i.md#x)和[y](arkts-arkui-mouseevent-i.md#y)、[getCurrentLocalPosition](arkts-arkui-touchobject-i.md#getcurrentlocalposition-1)和  
+> [stopPropagation](arkts-arkui-touchevent-i.md#stoppropagation)方法、TouchEvent的[preventDefault](arkts-arkui-touchevent-i.md#preventdefault)和  
+> [getHistoricalPoints](arkts-arkui-touchevent-i.md#gethistoricalpoints-1)方法以及KeyEvent的[metaKey](arkts-arkui-keyevent-i.md#metakey)属性和  
 > [getModifierKeyState](arkts-arkui-keyevent-i.md#getmodifierkeystate-1)方法。
 
 **起始版本：** 26.0.0
+
+<!--Device-unnamed-declare abstract class RawInputEventWrapper--><!--Device-unnamed-declare abstract class RawInputEventWrapper-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,7 +34,9 @@ asKeyEvent(): KeyEvent | null
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RawInputEventWrapper-asKeyEvent(): KeyEvent | null--><!--Device-RawInputEventWrapper-asKeyEvent(): KeyEvent | null-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,7 +44,7 @@ asKeyEvent(): KeyEvent | null
 
 | 类型 | 说明 |
 | --- | --- |
-| KeyEvent | Key event object if it is a key event, or **null** otherwise. |
+| [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-keyevent-i.md) | Key event object if it is a key event, or **null** otherwise. |
 
 ## asMouseEvent
 
@@ -54,7 +58,9 @@ asMouseEvent(): MouseEvent | null
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RawInputEventWrapper-asMouseEvent(): MouseEvent | null--><!--Device-RawInputEventWrapper-asMouseEvent(): MouseEvent | null-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,7 +68,7 @@ asMouseEvent(): MouseEvent | null
 
 | 类型 | 说明 |
 | --- | --- |
-| MouseEvent | Mouse event object if it is a mouse event, or **null** otherwise. |
+| [MouseEvent](arkts-arkui-mouseevent-i.md) | Mouse event object if it is a mouse event, or **null** otherwise. |
 
 ## asTouchEvent
 
@@ -76,7 +82,9 @@ asTouchEvent(): TouchEvent | null
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RawInputEventWrapper-asTouchEvent(): TouchEvent | null--><!--Device-RawInputEventWrapper-asTouchEvent(): TouchEvent | null-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,7 +92,7 @@ asTouchEvent(): TouchEvent | null
 
 | 类型 | 说明 |
 | --- | --- |
-| TouchEvent | Touch event object if it is a touch event, or **null** otherwise. |
+| [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-touchevent-i.md) | Touch event object if it is a touch event, or **null** otherwise. |
 
 ## isKeyEvent
 
@@ -98,7 +106,9 @@ isKeyEvent(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RawInputEventWrapper-isKeyEvent(): boolean--><!--Device-RawInputEventWrapper-isKeyEvent(): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -120,7 +130,9 @@ isMouseEvent(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RawInputEventWrapper-isMouseEvent(): boolean--><!--Device-RawInputEventWrapper-isMouseEvent(): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -142,7 +154,9 @@ isTouchEvent(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RawInputEventWrapper-isTouchEvent(): boolean--><!--Device-RawInputEventWrapper-isTouchEvent(): boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -24,6 +24,8 @@ Sets the component after layout or draw criteria and returns the corresponding l
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-inspector-function createComponentObserver(id: string): ComponentObserver--><!--Device-inspector-function createComponentObserver(id: string): ComponentObserver-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -36,7 +38,7 @@ Sets the component after layout or draw criteria and returns the corresponding l
 
 | Type | Description |
 | --- | --- |
-| ComponentObserver | create listener for observer component event. |
+| [ComponentObserver](arkts-arkui-componentobserver-i.md) | create listener for observer component event. |
 
 **Example**
 

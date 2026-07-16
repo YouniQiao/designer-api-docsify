@@ -4,6 +4,8 @@ Configuring parameters in single location requests.
 
 **Since:** 12
 
+<!--Device-geoLocationManager-export interface SingleLocationRequest--><!--Device-geoLocationManager-export interface SingleLocationRequest-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Priority of the location request.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SingleLocationRequest-locatingPriority: LocatingPriority--><!--Device-SingleLocationRequest-locatingPriority: LocatingPriority-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## locatingTimeoutMs
@@ -42,6 +46,8 @@ Timeout of a single location request, in milliseconds.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SingleLocationRequest-locatingTimeoutMs: int--><!--Device-SingleLocationRequest-locatingTimeoutMs: int-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## needPoi
@@ -57,6 +63,8 @@ Indicates whether to obtain POI information near the current location.
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-SingleLocationRequest-needPoi?: boolean--><!--Device-SingleLocationRequest-needPoi?: boolean-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 

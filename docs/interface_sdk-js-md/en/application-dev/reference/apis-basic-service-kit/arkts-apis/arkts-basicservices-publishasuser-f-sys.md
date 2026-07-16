@@ -16,6 +16,8 @@ Publishes a common event to a specified user. This API uses an asynchronous call
 
 **Since:** 9
 
+<!--Device-commonEventManager-function publishAsUser(event: string, userId: int, callback: AsyncCallback<void>): void--><!--Device-commonEventManager-function publishAsUser(event: string, userId: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Publishes a common event to a specified user. This API uses an asynchronous call
 | --- | --- | --- | --- |
 | event | string | Yes | Name of the common event to publish. |
 | userId | number | Yes | User ID. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -75,10 +77,21 @@ function publishAsUser(
   ): void
 ```
 
-Publishes a common event to a specified user and specifies the information to be published. This API uses an
-asynchronous callback to return the result.
+Publishes a common event to a specified user and specifies the information to be published. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-commonEventManager-function publishAsUser(
+    event: string,
+    userId: int,
+    options: CommonEventPublishData,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-commonEventManager-function publishAsUser(
+    event: string,
+    userId: int,
+    options: CommonEventPublishData,
+    callback: AsyncCallback<void>
+  ): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -90,8 +103,8 @@ asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | event | string | Yes | Name of the common event to publish. |
 | userId | number | Yes | User ID. |
-| options | CommonEventPublishData | Yes | Properties of the common event to publish. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-i.md) | Yes | Properties of the common event to publish. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

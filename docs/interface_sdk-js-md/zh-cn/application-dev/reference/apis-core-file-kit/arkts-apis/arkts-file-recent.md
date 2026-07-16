@@ -2,17 +2,25 @@
 
 该模块提供最近访问列表插入、移除、查询等常用能力。
 
-> **说明：**
->
+> **说明：**  
+>  
 > - 当前只支持文件管理器调用。
 
 **起始版本：** 10
 
 **废弃版本：** 23
 
+<!--Device-unnamed-declare namespace recent--><!--Device-unnamed-declare namespace recent-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { recent } from '@kit.CoreFileKit';
+```
 
 ## 汇总
 

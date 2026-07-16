@@ -8,6 +8,8 @@ Provides APIs for managing the **UserAuth** object.
 
 **Substitutes:** [AuthInstance](arkts-userauthentication-authinstance-i.md)
 
+<!--Device-userAuth-class UserAuth--><!--Device-userAuth-class UserAuth-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## Modules to Import
@@ -37,22 +39,34 @@ Starts user authentication. This API uses a callback to return the result.
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
+<!--Device-UserAuth-auth(
+      challenge: Uint8Array,
+      authType: UserAuthType,
+      authTrustLevel: AuthTrustLevel,
+      callback: IUserAuthCallback
+    ): Uint8Array--><!--Device-UserAuth-auth(
+      challenge: Uint8Array,
+      authType: UserAuthType,
+      authTrustLevel: AuthTrustLevel,
+      callback: IUserAuthCallback
+    ): Uint8Array-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| challenge | Uint8Array | Yes | Challenge value, which can be passed in Uint8Array([]) format. |
-| authType | UserAuthType | Yes | Authentication type. Currently, **FACE** and **FINGERPRINT** are supported. |
-| authTrustLevel | AuthTrustLevel | Yes | Authentication trust level. |
-| callback | IUserAuthCallback | Yes | Callback used to return the result. |
+| challenge | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Challenge value, which can be passed in Uint8Array([]) format. |
+| authType | [UserAuthType](arkts-userauthentication-userauthtype-e.md) | Yes | Authentication type. Currently, **FACE** and **FINGERPRINT** are supported. |
+| authTrustLevel | [AuthTrustLevel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-authtrustlevel-e-sys.md) | Yes | Authentication trust level. |
+| callback | [IUserAuthCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-iuserauthcallback-i-sys.md) | Yes | Callback used to return the result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Context ID, which is used as the input parameter of[cancelAuth](arkts-userauthentication-userauth-c.md#cancelauth-1). |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Context ID, which is used as the input parameter of [cancelAuth](arkts-userauthentication-userauth-c.md#cancelauth-1). |
 
 **Example**
 
@@ -94,19 +108,21 @@ Cancels the authentication based on the context ID.
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
+<!--Device-UserAuth-cancelAuth(contextID: Uint8Array): number--><!--Device-UserAuth-cancelAuth(contextID: Uint8Array): number-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contextID | Uint8Array | Yes | Context ID, which is obtained by [auth](arkts-userauthentication-userauth-c.md#auth-1). |
+| contextID | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Context ID, which is obtained by [auth](arkts-userauthentication-userauth-c.md#auth-1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Returns **SUCCESS** if the cancellation is successful. Returns a[ResultCode](arkts-userauthentication-resultcode-e.md) otherwise. |
+| number | Returns **SUCCESS** if the cancellation is successful. Returns a [ResultCode](arkts-userauthentication-resultcode-e.md) otherwise. |
 
 **Example**
 
@@ -139,6 +155,8 @@ A constructor used to create a **UserAuth** instance.
 
 **Substitutes:** [getAuthInstance](arkts-userauthentication-getauthinstance-f.md#getauthinstance-1)
 
+<!--Device-UserAuth-constructor()--><!--Device-UserAuth-constructor()-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **Example**
@@ -166,14 +184,16 @@ Checks whether the specified authentication capability is supported.
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
+<!--Device-UserAuth-getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLevel): number--><!--Device-UserAuth-getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLevel): number-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | UserAuthType | Yes | Authentication type. Currently, **FACE** and **FINGERPRINT** are supported. |
-| authTrustLevel | AuthTrustLevel | Yes | Authentication trust level. |
+| authType | [UserAuthType](arkts-userauthentication-userauthtype-e.md) | Yes | Authentication type. Currently, **FACE** and **FINGERPRINT** are supported. |
+| authTrustLevel | [AuthTrustLevel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-authtrustlevel-e-sys.md) | Yes | Authentication trust level. |
 
 **Return value:**
 
@@ -209,6 +229,8 @@ Obtains the version of this authenticator.
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
+
+<!--Device-UserAuth-getVersion(): number--><!--Device-UserAuth-getVersion(): number-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 

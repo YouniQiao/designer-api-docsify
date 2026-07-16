@@ -18,19 +18,21 @@ Get an AVSession instance if already created.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-avSession-function getAVSession(context: Context): Promise<AVSession>--><!--Device-avSession-function getAVSession(context: Context): Promise<AVSession>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | The context of application |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | The context of application |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVSession&gt; | Promise for AVSession |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AVSession> | Promise for AVSession |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Result of all eUICC profile information.
 
 **Since:** 18
 
+<!--Device-eSIM-export interface GetEuiccProfileInfoListResult--><!--Device-eSIM-export interface GetEuiccProfileInfoListResult-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Gets whether the eUICC can be removed.
 
 **Since:** 18
 
+<!--Device-GetEuiccProfileInfoListResult-isRemovable: boolean--><!--Device-GetEuiccProfileInfoListResult-isRemovable: boolean-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ Gets the profile list (only upon success).
 
 **Since:** 18
 
+<!--Device-GetEuiccProfileInfoListResult-profiles: Array<EuiccProfile>--><!--Device-GetEuiccProfileInfoListResult-profiles: Array<EuiccProfile>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ Gets the result of the operation.
 **Type:** ResultCode
 
 **Since:** 18
+
+<!--Device-GetEuiccProfileInfoListResult-responseResult: ResultCode--><!--Device-GetEuiccProfileInfoListResult-responseResult: ResultCode-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 

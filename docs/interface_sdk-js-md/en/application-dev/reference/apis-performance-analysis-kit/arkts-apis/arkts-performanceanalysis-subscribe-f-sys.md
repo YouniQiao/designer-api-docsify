@@ -12,13 +12,13 @@ import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 function subscribe(rules: QueryRule[]): number
 ```
 
-Subscribes to real-time system events that occur occasionally or occur in a low frequency. These events are written
-as a file to the fixed directory of the application sandbox (that is,
-/data/storage/el2/base/cache/hiview/event/).
+Subscribes to real-time system events that occur occasionally or occur in a low frequency. These events are written as a file to the fixed directory of the application sandbox (that is,/data/storage/el2/base/cache/hiview/event/).
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.READ_DFX_SYSEVENT
+
+<!--Device-hiSysEvent-function subscribe(rules: QueryRule[]): long--><!--Device-hiSysEvent-function subscribe(rules: QueryRule[]): long-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -28,7 +28,7 @@ as a file to the fixed directory of the application sandbox (that is,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rules | QueryRule[] | Yes | Array of event query rules for the subscription. |
+| rules | [QueryRule](arkts-performanceanalysis-queryrule-i-sys.md)[] | Yes | Array of event query rules for the subscription. |
 
 **Return value:**
 

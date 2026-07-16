@@ -12,14 +12,15 @@ import { notificationManager } from '@kit.NotificationKit';
 function getSyncNotificationEnabledWithoutApp(userId: number, callback: AsyncCallback<boolean>): void
 ```
 
-Obtains whether the notification sync feature is enabled for devices where the application is not installed. This
-API uses an asynchronous callback to return the result.
+Obtains whether the notification sync feature is enabled for devices where the application is not installed. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function getSyncNotificationEnabledWithoutApp(userId: int, callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function getSyncNotificationEnabledWithoutApp(userId: int, callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -30,7 +31,7 @@ API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that thenotification sync feature is enabled, and **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means that the notification sync feature is enabled, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -70,14 +71,15 @@ notificationManager.getSyncNotificationEnabledWithoutApp(userId, getSyncNotifica
 function getSyncNotificationEnabledWithoutApp(userId: number): Promise<boolean>
 ```
 
-Obtains whether the notification sync feature is enabled for devices where the application is not installed. This
-API uses a promise to return the result.
+Obtains whether the notification sync feature is enabled for devices where the application is not installed. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function getSyncNotificationEnabledWithoutApp(userId: int): Promise<boolean>--><!--Device-notificationManager-function getSyncNotificationEnabledWithoutApp(userId: int): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -93,7 +95,7 @@ API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the notificationsync feature is enabled, and **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means that the notification sync feature is enabled, and **false** means the opposite. |
 
 **Error codes:**
 

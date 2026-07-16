@@ -4,6 +4,8 @@ Enumerates the window modes.
 
 **Since:** 9
 
+<!--Device-unnamed-declare enum WindowMode--><!--Device-unnamed-declare enum WindowMode-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 ## FULLSCREEN
@@ -17,6 +19,8 @@ Full-screen mode.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WindowMode-FULLSCREEN = 0--><!--Device-WindowMode-FULLSCREEN = 0-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -32,6 +36,8 @@ Primary window mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WindowMode-PRIMARY = 1--><!--Device-WindowMode-PRIMARY = 1-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 ## SECONDARY
@@ -46,6 +52,8 @@ Secondary window mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WindowMode-SECONDARY = 2--><!--Device-WindowMode-SECONDARY = 2-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 ## FLOATING
@@ -59,6 +67,8 @@ Floating window mode.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WindowMode-FLOATING = 3--><!--Device-WindowMode-FLOATING = 3-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 

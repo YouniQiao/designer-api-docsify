@@ -4,6 +4,8 @@ Defines the offset area between the input method soft keyboard and the system pa
 
 **Since:** 21
 
+<!--Device-inputMethodEngine-interface SystemPanelInsets--><!--Device-inputMethodEngine-interface SystemPanelInsets-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Modules to Import
@@ -18,12 +20,13 @@ import { inputMethodEngine } from '@kit.IMEKit';
 readonly bottom: number
 ```
 
-Distance between the bottom border of the keyboard area and the bottom border of the system panel area, in px.
-The value is an integer.
+Distance between the bottom border of the keyboard area and the bottom border of the system panel area, in px.The value is an integer.
 
 **Type:** number
 
 **Since:** 21
+
+<!--Device-SystemPanelInsets-readonly bottom: int--><!--Device-SystemPanelInsets-readonly bottom: int-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -33,12 +36,13 @@ The value is an integer.
 readonly left: number
 ```
 
-Distance between the left border of the keyboard area and the left border of the system panel area, in px. The
-value is an integer.
+Distance between the left border of the keyboard area and the left border of the system panel area, in px. The value is an integer.
 
 **Type:** number
 
 **Since:** 21
+
+<!--Device-SystemPanelInsets-readonly left: int--><!--Device-SystemPanelInsets-readonly left: int-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -48,12 +52,13 @@ value is an integer.
 readonly right: number
 ```
 
-Distance between the right border of the keyboard area and the right border of the system panel area, in px. The
-value is an integer.
+Distance between the right border of the keyboard area and the right border of the system panel area, in px. The value is an integer.
 
 **Type:** number
 
 **Since:** 21
+
+<!--Device-SystemPanelInsets-readonly right: int--><!--Device-SystemPanelInsets-readonly right: int-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 

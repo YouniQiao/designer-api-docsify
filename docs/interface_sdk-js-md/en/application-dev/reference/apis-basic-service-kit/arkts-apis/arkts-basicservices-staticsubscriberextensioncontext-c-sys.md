@@ -1,13 +1,14 @@
 # StaticSubscriberExtensionContext (System API)
 
-The **StaticSubscriberExtensionContext** module, inherited from **StaticSubscriberExtensionAbility**, provides
-context for StaticSubscriberExtensionAbilities.
+The **StaticSubscriberExtensionContext** module, inherited from **StaticSubscriberExtensionAbility**, provides context for StaticSubscriberExtensionAbilities.
 
 You can use the APIs of this module to start StaticSubscriberExtensionAbilities.
 
 **Inheritance/Implementation:** StaticSubscriberExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **Since:** 10
+
+<!--Device-unnamed-declare class StaticSubscriberExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class StaticSubscriberExtensionContext extends ExtensionContext-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -25,21 +26,20 @@ import { StaticSubscriberExtensionContext } from '@kit.BasicServicesKit';
 startAbility(want: Want, callback: AsyncCallback<void>): void
 ```
 
-Starts an ability that belongs to the same application as this StaticSubscriberExtensionAbility. This API uses an
-asynchronous callback to return the result.
+Starts an ability that belongs to the same application as this StaticSubscriberExtensionAbility. This API uses an asynchronous callback to return the result.
 
 Observe the following when using this API:
 
-- If an application running in the background needs to call this API to start an ability, it must have the
-**ohos.permission.START_ABILITIES_FROM_BACKGROUND** permission.
-- If **visible** of the target ability is **false** in cross-application scenarios, the caller must have the
-**ohos.permission.START_INVISIBLE_ABILITY** permission.
+- If an application running in the background needs to call this API to start an ability, it must have the **ohos.permission.START_ABILITIES_FROM_BACKGROUND** permission.  
+- If **visible** of the target ability is **false** in cross-application scenarios, the caller must have the **ohos.permission.START_INVISIBLE_ABILITY** permission.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.START_ABILITIES_FROM_BACKGROUND
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StaticSubscriberExtensionContext-startAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-StaticSubscriberExtensionContext-startAbility(want: Want, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -49,14 +49,14 @@ Observe the following when using this API:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information about the target ability. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information about the target ability. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
@@ -115,21 +115,20 @@ class MyStaticSubscriberExtensionAbility extends StaticSubscriberExtensionAbilit
 startAbility(want: Want): Promise<void>
 ```
 
-Starts an ability that belongs to the same application as this StaticSubscriberExtensionAbility. This API uses a
-promise to return the result.
+Starts an ability that belongs to the same application as this StaticSubscriberExtensionAbility. This API uses a promise to return the result.
 
 Observe the following when using this API:
 
-- If an application running in the background needs to call this API to start an ability, it must have the
-**ohos.permission.START_ABILITIES_FROM_BACKGROUND** permission.
-- If **visible** of the target ability is **false** in cross-application scenarios, the caller must have the
-**ohos.permission.START_INVISIBLE_ABILITY** permission.
+- If an application running in the background needs to call this API to start an ability, it must have the **ohos.permission.START_ABILITIES_FROM_BACKGROUND** permission.  
+- If **visible** of the target ability is **false** in cross-application scenarios, the caller must have the **ohos.permission.START_INVISIBLE_ABILITY** permission.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.START_ABILITIES_FROM_BACKGROUND
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StaticSubscriberExtensionContext-startAbility(want: Want): Promise<void>--><!--Device-StaticSubscriberExtensionContext-startAbility(want: Want): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -139,19 +138,19 @@ Observe the following when using this API:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information about the target ability. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information about the target ability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |

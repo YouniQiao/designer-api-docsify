@@ -4,6 +4,8 @@ Describes the SSAP property.
 
 **Since:** 26.0.0
 
+<!--Device-ssap-interface Property--><!--Device-ssap-interface Property-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import
@@ -26,6 +28,8 @@ The list of {@link propertyDescriptor} contained in the property.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Property-descriptors?: PropertyDescriptor[]--><!--Device-Property-descriptors?: PropertyDescriptor[]-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## operation
@@ -34,15 +38,15 @@ The list of {@link propertyDescriptor} contained in the property.
 operation?: number
 ```
 
-Indications specify how data values and descriptor values are accessed {@link Operation}.
-The value is the OR operation of enumerated values.
-The value should be an integer. Default value: 3(READABLE | WRITE_NO_RESPONSE).
+Indications specify how data values and descriptor values are accessed {@link Operation}.The value is the OR operation of enumerated values.The value should be an integer. Default value: 3(READABLE | WRITE_NO_RESPONSE).
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Property-operation?: int--><!--Device-Property-operation?: int-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -52,16 +56,15 @@ The value should be an integer. Default value: 3(READABLE | WRITE_NO_RESPONSE).
 propertyUuid: string
 ```
 
-The UUID of a Property instance.
-The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),
-for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.
-<br>NearLink standard UUIDs are not allowed.
+The UUID of a Property instance.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.<br>NearLink standard UUIDs are not allowed.
 
 **Type:** string
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Property-propertyUuid: string--><!--Device-Property-propertyUuid: string-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -71,16 +74,15 @@ for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifi
 serviceUuid: string
 ```
 
-The UUID of the {@link Service} instance which the property belongs to.
-The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),
-for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.
-<br>NearLink standard UUIDs are not allowed.
+The UUID of the {@link Service} instance which the property belongs to.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.<br>NearLink standard UUIDs are not allowed.
 
 **Type:** string
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Property-serviceUuid: string--><!--Device-Property-serviceUuid: string-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -97,6 +99,8 @@ The value of a Property instance.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Property-value: ArrayBuffer--><!--Device-Property-value: ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 

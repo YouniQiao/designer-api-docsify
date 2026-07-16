@@ -2,13 +2,21 @@
 
 本模块提供MDM Kit中常用公共能力的纯类型定义，包含枚举类型和数据结构。本模块仅导出类型声明，不包含具体实现逻辑或可执行代码。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 本模块接口仅可在Stage模型下使用。
 
 **起始版本：** 22
 
+<!--Device-unnamed-declare namespace common--><!--Device-unnamed-declare namespace common-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { common } from '@kit.MDMKit';
+```
 
 ## 汇总
 

@@ -1,5 +1,11 @@
 # getTopAbility（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
+```
+
 ## getTopAbility
 
 ```TypeScript
@@ -10,6 +16,8 @@ function getTopAbility(): Promise<ElementName>
 
 **起始版本：** 9
 
+<!--Device-abilityManager-function getTopAbility(): Promise<ElementName>--><!--Device-abilityManager-function getTopAbility(): Promise<ElementName>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -18,7 +26,7 @@ function getTopAbility(): Promise<ElementName>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ElementName&gt; | Promise对象，返回接口运行结果及应用名。开发者可在此进行错误处理或其他自定义处理。 |
+| Promise<ElementName> | Promise对象，返回接口运行结果及应用名。开发者可在此进行错误处理或其他自定义处理。 |
 
 **错误码：**
 
@@ -38,6 +46,8 @@ function getTopAbility(callback: AsyncCallback<ElementName>): void
 
 **起始版本：** 9
 
+<!--Device-abilityManager-function getTopAbility(callback: AsyncCallback<ElementName>): void--><!--Device-abilityManager-function getTopAbility(callback: AsyncCallback<ElementName>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -46,7 +56,7 @@ function getTopAbility(callback: AsyncCallback<ElementName>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;ElementName&gt; | 是 | 回调函数。当获取窗口焦点所在的Ability成功，err为undefined，data为获取到的应用名；否则为错误对象。可进行错误处理或其他自定义处理。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ElementName> | 是 | 回调函数。当获取窗口焦点所在的Ability成功，err为undefined，data为获取到的应用名；否则为错误对象。可进行错误处理或其他自定义处理。 |
 
 **错误码：**
 

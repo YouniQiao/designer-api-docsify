@@ -4,6 +4,8 @@ Enumerates charging states.
 
 **Since:** 6
 
+<!--Device-batteryInfo-export enum BatteryChargeState--><!--Device-batteryInfo-export enum BatteryChargeState-End-->
+
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 ## NONE
@@ -17,6 +19,8 @@ Unknown state.
 **Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BatteryChargeState-NONE--><!--Device-BatteryChargeState-NONE-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -32,6 +36,8 @@ The battery is being charged.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BatteryChargeState-ENABLE--><!--Device-BatteryChargeState-ENABLE-End-->
+
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 ## DISABLE
@@ -46,6 +52,8 @@ The battery is not being charged.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BatteryChargeState-DISABLE--><!--Device-BatteryChargeState-DISABLE-End-->
+
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 ## FULL
@@ -59,6 +67,8 @@ The battery is fully charged.
 **Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BatteryChargeState-FULL--><!--Device-BatteryChargeState-FULL-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 

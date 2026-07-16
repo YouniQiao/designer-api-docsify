@@ -4,6 +4,8 @@ Declare type ToolBarOption
 
 **Since:** 18
 
+<!--Device-unnamed-export declare class ToolBarOption--><!--Device-unnamed-export declare class ToolBarOption-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ The accessibilityDescription of item.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ToolBarOption-accessibilityDescription?: ResourceStr--><!--Device-ToolBarOption-accessibilityDescription?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityLevel
@@ -48,6 +52,8 @@ The accessibilityLevel of item.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ToolBarOption-accessibilityLevel?: string--><!--Device-ToolBarOption-accessibilityLevel?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
@@ -65,6 +71,8 @@ The accessibilityText of item.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ToolBarOption-accessibilityText?: ResourceStr--><!--Device-ToolBarOption-accessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,6 +92,8 @@ Define the action event.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ToolBarOption-action?: () => void--><!--Device-ToolBarOption-action?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## activatedIconColor
@@ -101,6 +111,8 @@ Icon fillColor when the item is activated.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ToolBarOption-activatedIconColor?: ResourceColor--><!--Device-ToolBarOption-activatedIconColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -120,6 +132,8 @@ Text fontColor when the item is activated.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ToolBarOption-activatedTextColor?: ResourceColor--><!--Device-ToolBarOption-activatedTextColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## content
@@ -137,6 +151,8 @@ Define text content.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ToolBarOption-content: ResourceStr--><!--Device-ToolBarOption-content: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -156,6 +172,8 @@ Define icon resource.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ToolBarOption-icon?: Resource--><!--Device-ToolBarOption-icon?: Resource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## iconColor
@@ -173,6 +191,8 @@ Define icon fillColor.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ToolBarOption-iconColor?: ResourceColor--><!--Device-ToolBarOption-iconColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -192,6 +212,8 @@ Define item type.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ToolBarOption-state?: ItemState--><!--Device-ToolBarOption-state?: ItemState-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## textColor
@@ -210,6 +232,8 @@ Define text fontColor.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ToolBarOption-textColor?: ResourceColor--><!--Device-ToolBarOption-textColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## toolBarSymbolOptions
@@ -227,6 +251,8 @@ Item symbol icon.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ToolBarOption-toolBarSymbolOptions?: ToolBarSymbolGlyphOptions--><!--Device-ToolBarOption-toolBarSymbolOptions?: ToolBarSymbolGlyphOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

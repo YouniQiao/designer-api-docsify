@@ -2,20 +2,28 @@
 
 通过WebStorage可管理Web SQL数据库接口和HTML5 Web存储接口，每个应用中的所有Web组件共享一个WebStorage。
 
-> **说明：**
->
-> - 本Class首批接口从API version 9开始支持。
->
-> - 示例效果请以真机运行为准。
->
-> - 目前调用WebStorage下的方法，都需要先加载Web组件。
->
-> - 本Class下的接口在ArkWeb内核升级到M132版本后因内核废弃Web SQL，对Web SQL数据库的管理失效。ArkWeb内核版本参考ArkWeb简介
+> **说明：**  
+>  
+> - 本Class首批接口从API version 9开始支持。  
+>  
+> - 示例效果请以真机运行为准。  
+>  
+> - 目前调用WebStorage下的方法，都需要先加载Web组件。  
+>  
+> - 本Class下的接口在ArkWeb内核升级到M132版本后因内核废弃Web SQL，对Web SQL数据库的管理失效。ArkWeb内核版本参考ArkWeb简介  
 > [约束与限制](../../../../web/web-component-overview.md#约束与限制)。
 
 **起始版本：** 9
 
+<!--Device-webview-class WebStorage--><!--Device-webview-class WebStorage-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
+
+## 导入模块
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+```
 
 ## deleteAllData
 
@@ -27,7 +35,9 @@ static deleteAllData(incognito?: boolean): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebStorage-static deleteAllData(incognito?: boolean): void--><!--Device-WebStorage-static deleteAllData(incognito?: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -47,7 +57,9 @@ static deleteOrigin(origin: string): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebStorage-static deleteOrigin(origin: string): void--><!--Device-WebStorage-static deleteOrigin(origin: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -74,7 +86,9 @@ static getOriginQuota(origin: string): Promise<number>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebStorage-static getOriginQuota(origin: string): Promise<number>--><!--Device-WebStorage-static getOriginQuota(origin: string): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -88,7 +102,7 @@ static getOriginQuota(origin: string): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise实例，用于获取指定源的存储配额。<br>单位：byte。 |
+| Promise<number> | Promise实例，用于获取指定源的存储配额。<br>单位：byte。 |
 
 **错误码：**
 
@@ -107,7 +121,9 @@ static getOriginQuota(origin: string, callback: AsyncCallback<number>): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebStorage-static getOriginQuota(origin: string, callback: AsyncCallback<number>): void--><!--Device-WebStorage-static getOriginQuota(origin: string, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -116,7 +132,7 @@ static getOriginQuota(origin: string, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | origin | string | 是 | 指定源的字符串索引。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 指定源的存储配额。<br>number是long型整数，范围为[-2147483648, 2147483647]。<br>单位：byte。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 指定源的存储配额。<br>number是long型整数，范围为[-2147483648, 2147483647]。<br>单位：byte。 |
 
 **错误码：**
 
@@ -135,7 +151,9 @@ static getOriginUsage(origin: string): Promise<number>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebStorage-static getOriginUsage(origin: string): Promise<number>--><!--Device-WebStorage-static getOriginUsage(origin: string): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -149,7 +167,7 @@ static getOriginUsage(origin: string): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise实例，用于获取指定源的存储量。<br>单位：byte。 |
+| Promise<number> | Promise实例，用于获取指定源的存储量。<br>单位：byte。 |
 
 **错误码：**
 
@@ -168,7 +186,9 @@ static getOriginUsage(origin: string, callback: AsyncCallback<number>): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebStorage-static getOriginUsage(origin: string, callback: AsyncCallback<number>): void--><!--Device-WebStorage-static getOriginUsage(origin: string, callback: AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -177,7 +197,7 @@ static getOriginUsage(origin: string, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | origin | string | 是 | 指定源的字符串索引 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 指定源的存储量。<br>单位：byte。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 指定源的存储量。<br>单位：byte。 |
 
 **错误码：**
 
@@ -196,7 +216,9 @@ static getOrigins(): Promise<Array<WebStorageOrigin>>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebStorage-static getOrigins(): Promise<Array<WebStorageOrigin>>--><!--Device-WebStorage-static getOrigins(): Promise<Array<WebStorageOrigin>>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -204,7 +226,7 @@ static getOrigins(): Promise<Array<WebStorageOrigin>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;WebStorageOrigin&gt;&gt; | Promise used to return the information about the origins. |
+| Promise<Array<WebStorageOrigin>> | Promise used to return the information about the origins. |
 
 **错误码：**
 
@@ -223,7 +245,9 @@ static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebStorage-static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void--><!--Device-WebStorage-static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -231,7 +255,7 @@ static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;WebStorageOrigin&gt;&gt; | 是 | 以数组方式返回源的信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<WebStorageOrigin>> | 是 | 以数组方式返回源的信息。 |
 
 **错误码：**
 

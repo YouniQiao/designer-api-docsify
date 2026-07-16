@@ -20,6 +20,8 @@ Obtains partition table information based on the disk ID. This API uses a promis
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-volumeManager-function getPartitionTable(diskId: string): Promise<PartitionTableInfo>--><!--Device-volumeManager-function getPartitionTable(diskId: string): Promise<PartitionTableInfo>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -34,7 +36,7 @@ Obtains partition table information based on the disk ID. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PartitionTableInfo&gt; | Promise used to return the partition table information of thecurrent disk ID. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PartitionTableInfo> | Promise used to return the partition table information of the current disk ID. |
 
 **Error codes:**
 

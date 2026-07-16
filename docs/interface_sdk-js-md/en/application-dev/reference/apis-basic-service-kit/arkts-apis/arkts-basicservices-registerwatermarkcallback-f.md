@@ -20,13 +20,15 @@ Register to listen for watermark handling.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-print-function registerWatermarkCallback(callback: WatermarkCallback): void--><!--Device-print-function registerWatermarkCallback(callback: WatermarkCallback): void-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | WatermarkCallback | Yes | Indicates the callback type used in registering tolisten for watermark handling.<br>Indicates the callback type used in registering to listen for watermark handling. |
+| callback | [WatermarkCallback](arkts-basicservices-watermarkcallback-t.md) | Yes | Indicates the callback type used in registering to listen for watermark handling.<br>Indicates the callback type used in registering to listen for watermark handling. |
 
 **Error codes:**
 

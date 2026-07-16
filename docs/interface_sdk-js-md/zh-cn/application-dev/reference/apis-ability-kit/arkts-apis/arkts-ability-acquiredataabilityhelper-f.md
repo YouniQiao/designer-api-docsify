@@ -1,5 +1,11 @@
 # acquireDataAbilityHelper
 
+## 导入模块
+
+```TypeScript
+import { particleAbility } from '@kit.AbilityKit';
+```
+
 ## acquireDataAbilityHelper
 
 ```TypeScript
@@ -8,14 +14,16 @@ function acquireDataAbilityHelper(uri: string): DataAbilityHelper
 
 获取dataAbilityHelper对象。
 
-> **说明：**
->
-> 组件启动规则详见：[组件启动规则（FA模型）](../../../../application-models/component-startup-rules-fa.md)。
+> **说明：**  
+>  
+> 组件启动规则详见：[组件启动规则（FA模型）](../../../../application-models/component-startup-rules-fa.md)。  
 > 跨应用访问dataAbility，对端应用需配置关联启动。
 
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-particleAbility-function acquireDataAbilityHelper(uri: string): DataAbilityHelper--><!--Device-particleAbility-function acquireDataAbilityHelper(uri: string): DataAbilityHelper-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -29,7 +37,7 @@ function acquireDataAbilityHelper(uri: string): DataAbilityHelper
 
 | 类型 | 说明 |
 | --- | --- |
-| DataAbilityHelper | 用来协助其他Ability访问DataAbility的工具类。 |
+| [DataAbilityHelper](arkts-ability-dataabilityhelper-i.md) | 用来协助其他Ability访问DataAbility的工具类。 |
 
 **示例：**
 

@@ -18,6 +18,8 @@ Obtains information about the peer application in the specified session.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-abilityConnectionManager-function getPeerInfoById(sessionId: int): PeerInfo | undefined--><!--Device-abilityConnectionManager-function getPeerInfoById(sessionId: int): PeerInfo | undefined-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Parameters:**
@@ -30,7 +32,7 @@ Obtains information about the peer application in the specified session.
 
 | Type | Description |
 | --- | --- |
-| PeerInfo | Information about the peer application if the corresponding **peerInfo** exists;**undefined** if the session ID is not found. |
+| [PeerInfo](arkts-distributedservice-peerinfo-i.md) | Information about the peer application if the corresponding **peerInfo** exists;**undefined** if the session ID is not found. |
 
 **Error codes:**
 

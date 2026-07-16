@@ -6,6 +6,8 @@ File
 
 **Deprecated since:** 10
 
+<!--Device-unnamed-export default class File--><!--Device-unnamed-export default class File-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## access
@@ -22,13 +24,15 @@ Checks whether a file or directory exists.
 
 **Substitutes:** [fs:access](arkts-corefile-file-fs-access-f.md#access-1)
 
+<!--Device-File-static access(options: FileAccessOption): void--><!--Device-File-static access(options: FileAccessOption): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FileAccessOption | Yes | Options for checking whether a file or directory exists. |
+| options | [FileAccessOption](arkts-corefile-fileaccessoption-depr-i.md) | Yes | Options for checking whether a file or directory exists. |
 
 **Example**
 
@@ -129,13 +133,15 @@ Copies a file to the given URI.
 
 **Substitutes:** [fs:copyFile](arkts-corefile-file-fs-copyfile-f.md#copyfile-1)
 
+<!--Device-File-static copy(options: FileCopyOption): void--><!--Device-File-static copy(options: FileCopyOption): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FileCopyOption | Yes | Options for copying the files. |
+| options | [FileCopyOption](arkts-corefile-filecopyoption-depr-i.md) | Yes | Options for copying the files. |
 
 **Example**
 
@@ -238,13 +244,15 @@ Deletes a local file.
 
 **Substitutes:** [fs:unlink](arkts-corefile-file-fs-unlink-f.md#unlink-1)
 
+<!--Device-File-static delete(options: FileDeleteOption): void--><!--Device-File-static delete(options: FileDeleteOption): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FileDeleteOption | Yes | Options for deleting a local file. |
+| options | [FileDeleteOption](arkts-corefile-filedeleteoption-depr-i.md) | Yes | Options for deleting a local file. |
 
 **Example**
 
@@ -345,13 +353,15 @@ Obtains information about a local file.
 
 **Substitutes:** [fs:stat](arkts-corefile-file-fs-stat-f.md#stat-1)
 
+<!--Device-File-static get(options: FileGetOption): void--><!--Device-File-static get(options: FileGetOption): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FileGetOption | Yes | Options for obtaining information about a local file. |
+| options | [FileGetOption](arkts-corefile-filegetoption-depr-i.md) | Yes | Options for obtaining information about a local file. |
 
 **Example**
 
@@ -452,13 +462,15 @@ Obtains all files in the specified directory.
 
 **Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
 
+<!--Device-File-static list(options: FileListOption): void--><!--Device-File-static list(options: FileListOption): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FileListOption | Yes | Options for obtaining all files in the specified directory. |
+| options | [FileListOption](arkts-corefile-filelistoption-depr-i.md) | Yes | Options for obtaining all files in the specified directory. |
 
 **Example**
 
@@ -559,13 +571,15 @@ Creates a directory.
 
 **Substitutes:** [fs:mkdir](arkts-corefile-file-fs-mkdir-f.md#mkdir-1)
 
+<!--Device-File-static mkdir(options: FileMkdirOption): void--><!--Device-File-static mkdir(options: FileMkdirOption): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FileMkdirOption | Yes | Options for creating a directory. |
+| options | [FileMkdirOption](arkts-corefile-filemkdiroption-depr-i.md) | Yes | Options for creating a directory. |
 
 **Example**
 
@@ -666,13 +680,15 @@ Moves a specified file to a given location.
 
 **Substitutes:** [fs:moveFile](arkts-corefile-file-fs-movefile-f.md#movefile-1)
 
+<!--Device-File-static move(options: FileMoveOption): void--><!--Device-File-static move(options: FileMoveOption): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FileMoveOption | Yes | Options for moving the files. |
+| options | [FileMoveOption](arkts-corefile-filemoveoption-depr-i.md) | Yes | Options for moving the files. |
 
 **Example**
 
@@ -775,13 +791,15 @@ Reads buffer data from a file. Only text files can be read and written.
 
 **Substitutes:** [fs:read](arkts-corefile-file-fs-read-f.md#read-1)
 
+<!--Device-File-static readArrayBuffer(options: FileReadArrayBufferOption): void--><!--Device-File-static readArrayBuffer(options: FileReadArrayBufferOption): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FileReadArrayBufferOption | Yes | Options for reading buffer data from a file. |
+| options | [FileReadArrayBufferOption](arkts-corefile-filereadarraybufferoption-depr-i.md) | Yes | Options for reading buffer data from a file. |
 
 **Example**
 
@@ -886,13 +904,15 @@ Reads text from a file. Only text files can be read and written.
 
 **Substitutes:** [fs:readText](arkts-corefile-file-fs-readtext-f.md#readtext-1)
 
+<!--Device-File-static readText(options: FileReadTextOption): void--><!--Device-File-static readText(options: FileReadTextOption): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FileReadTextOption | Yes | Options for reading text from a file. |
+| options | [FileReadTextOption](arkts-corefile-filereadtextoption-depr-i.md) | Yes | Options for reading text from a file. |
 
 **Example**
 
@@ -993,13 +1013,15 @@ Deletes a directory.
 
 **Substitutes:** [fs:rmdir](arkts-corefile-file-fs-rmdir-f.md#rmdir-1)
 
+<!--Device-File-static rmdir(options: FileRmdirOption): void--><!--Device-File-static rmdir(options: FileRmdirOption): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FileRmdirOption | Yes | Options for deleting a directory. |
+| options | [FileRmdirOption](arkts-corefile-filermdiroption-depr-i.md) | Yes | Options for deleting a directory. |
 
 **Example**
 
@@ -1100,13 +1122,15 @@ Writes buffer data into a file. Only text files can be read and written.
 
 **Substitutes:** [fs:write](arkts-corefile-file-fs-write-f.md#write-1)
 
+<!--Device-File-static writeArrayBuffer(options: FileWriteArrayBufferOption): void--><!--Device-File-static writeArrayBuffer(options: FileWriteArrayBufferOption): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FileWriteArrayBufferOption | Yes | Options for writing buffer data into a file. |
+| options | [FileWriteArrayBufferOption](arkts-corefile-filewritearraybufferoption-depr-i.md) | Yes | Options for writing buffer data into a file. |
 
 **Example**
 
@@ -1209,13 +1233,15 @@ Writes text into a file. Only text files can be read and written.
 
 **Substitutes:** [fs:write](arkts-corefile-file-fs-write-f.md#write-1)
 
+<!--Device-File-static writeText(options: FileWriteTextOption): void--><!--Device-File-static writeText(options: FileWriteTextOption): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FileWriteTextOption | Yes | Options for writing text into a file. |
+| options | [FileWriteTextOption](arkts-corefile-filewritetextoption-depr-i.md) | Yes | Options for writing text into a file. |
 
 **Example**
 

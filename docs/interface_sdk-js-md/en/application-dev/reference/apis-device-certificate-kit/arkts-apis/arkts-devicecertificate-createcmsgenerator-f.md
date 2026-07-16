@@ -18,19 +18,21 @@ Creates a **CmsGenerator** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-cert-function createCmsGenerator(contentType: CmsContentType): CmsGenerator--><!--Device-cert-function createCmsGenerator(contentType: CmsContentType): CmsGenerator-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contentType | CmsContentType | Yes | CMS message type. |
+| contentType | [CmsContentType](arkts-devicecertificate-cmscontenttype-e.md) | Yes | CMS message type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CmsGenerator | **CmsGenerator** object created. |
+| [CmsGenerator](arkts-devicecertificate-cmsgenerator-i.md) | **CmsGenerator** object created. |
 
 **Error codes:**
 

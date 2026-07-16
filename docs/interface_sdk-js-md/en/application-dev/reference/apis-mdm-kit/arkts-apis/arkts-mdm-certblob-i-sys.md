@@ -8,6 +8,8 @@ Represents the certificate information.
 
 **Substitutes:** [CertBlob](arkts-mdm-certblob-i.md)
 
+<!--Device-deviceSettings-export interface CertBlob--><!--Device-deviceSettings-export interface CertBlob-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -36,6 +38,8 @@ Certificate alias. The value length must be less than 40 characters.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-CertBlob-alias: string--><!--Device-CertBlob-alias: string-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -57,6 +61,8 @@ Binary content of the certificate.
 **Substitutes:** inData
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CertBlob-inData: Uint8Array--><!--Device-CertBlob-inData: Uint8Array-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

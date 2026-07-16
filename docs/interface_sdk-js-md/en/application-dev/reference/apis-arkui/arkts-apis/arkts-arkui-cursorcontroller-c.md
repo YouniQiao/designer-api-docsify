@@ -2,14 +2,16 @@
 
 Provides the capability to set cursor styles.
 
-> **NOTE**
->
-> - The initial APIs of this class are supported since API version 12.
->
-> - In the following API examples, you must first use [getCursorController()](arkts-arkui-uicontext-c.md#getcursorcontroller-1) in
+> **NOTE**  
+>  
+> - The initial APIs of this class are supported since API version 12.  
+>  
+> - In the following API examples, you must first use [getCursorController()](arkts-arkui-uicontext-c.md#getcursorcontroller-1) in  
 > **UIContext** to obtain a **CursorController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 12
+
+<!--Device-unnamed-export class CursorController--><!--Device-unnamed-export class CursorController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,6 +35,8 @@ Restores the default cursor style.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CursorController-restoreDefault(): void--><!--Device-CursorController-restoreDefault(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## setCursor
@@ -43,8 +47,8 @@ setCursor(value: PointerStyle): void
 
 Sets the cursor style.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > This API does not take effect immediately. The cursor style will be updated in the next rendering frame.
 
 **Since:** 12
@@ -53,13 +57,15 @@ Sets the cursor style.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CursorController-setCursor(value: PointerStyle): void--><!--Device-CursorController-setCursor(value: PointerStyle): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | PointerStyle | Yes | Pointer style. |
+| value | [PointerStyle](arkts-arkui-pointerstyle-t.md) | Yes | Pointer style. |
 
 ## setCustomCursor
 
@@ -69,8 +75,8 @@ setCustomCursor(value: image.PixelMap, focusX?: number, focusY?: number): void
 
 Sets the custom cursor style.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > This API does not take effect immediately. The cursor style will be updated in the next rendering frame.
 
 **Since:** 26.0.0
@@ -79,6 +85,8 @@ Sets the custom cursor style.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CursorController-setCustomCursor(value: image.PixelMap, focusX?: int, focusY?: int): void--><!--Device-CursorController-setCustomCursor(value: image.PixelMap, focusX?: int, focusY?: int): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -86,6 +94,6 @@ Sets the custom cursor style.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | image.PixelMap | Yes | Pixel map of the custom mouse cursor style. |
-| focusX | number | No | X coordinate of the custom cursor's hotspot. The hotspot refers to the actual locationwhere the click occurs.<br>Default value: **0**<br>Unit: px<br>Value range: [0, +∞) |
-| focusY | number | No | Y coordinate of the custom cursor's hotspot.<br>Default value: **0**<br>Unit: px<br>Valuerange: [0, +∞) |
+| focusX | number | No | X coordinate of the custom cursor's hotspot. The hotspot refers to the actual location where the click occurs.<br>Default value: **0**<br>Unit: px<br>Value range: [0, +∞) |
+| focusY | number | No | Y coordinate of the custom cursor's hotspot.<br>Default value: **0**<br>Unit: px<br>Value range: [0, +∞) |
 

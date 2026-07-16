@@ -4,6 +4,8 @@ Represents the optional parameters of [DataShareHelper](arkts-arkdata-datashareh
 
 **Since:** 10
 
+<!--Device-dataShare-interface DataShareHelperOptions--><!--Device-dataShare-interface DataShareHelperOptions-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **System API:** This is a system API.
@@ -20,14 +22,9 @@ import { dataShare } from '@kit.ArkData';
 isProxy?: boolean
 ```
 
-Whether the [DataShareHelper](arkts-arkdata-datasharehelperoptions-i-sys.md) is in proxy mode. The default value is
-**false**.
+Whether the [DataShareHelper](arkts-arkdata-datasharehelperoptions-i-sys.md) is in proxy mode. The default value is **false**.
 
-If the value is **true**, the [DataShareHelper](arkts-arkdata-datasharehelperoptions-i-sys.md) to be created is in proxy
-mode, and all operations will not open the data provider application unless the database does not exist. If the
-database does not exist,
-[createDataShareHelper](dataShare.createDataShareHelper(context: Context, uri: string, options: DataShareHelperOptions, callback: AsyncCallback<DataShareHelper>))
-will start the data provider to create a database.
+If the value is **true**, the [DataShareHelper](arkts-arkdata-datasharehelperoptions-i-sys.md) to be created is in proxy mode, and all operations will not open the data provider application unless the database does not exist. If the database does not exist,[createDataShareHelper](arkts-arkdata-createdatasharehelper-f-sys.md#createdatasharehelper-2)will start the data provider to create a database.
 
 **Type:** boolean
 
@@ -36,6 +33,8 @@ will start the data provider to create a database.
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelperOptions-isProxy?: boolean--><!--Device-DataShareHelperOptions-isProxy?: boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -56,6 +55,8 @@ Waiting time for starting the data provider process, in seconds. The default val
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelperOptions-waitTime?: int--><!--Device-DataShareHelperOptions-waitTime?: int-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 

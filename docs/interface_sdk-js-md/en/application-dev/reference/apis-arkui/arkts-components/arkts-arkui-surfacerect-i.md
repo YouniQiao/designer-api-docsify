@@ -4,6 +4,8 @@ Surface Rectangle information.
 
 **Since:** 20
 
+<!--Device-unnamed-declare interface SurfaceRect--><!--Device-unnamed-declare interface SurfaceRect-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## offsetX
@@ -21,6 +23,8 @@ The horizontal offset of the surface relative to XComponent.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SurfaceRect-offsetX?: number--><!--Device-SurfaceRect-offsetX?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ The vertical offset of the surface relative to XComponent.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SurfaceRect-offsetY?: number--><!--Device-SurfaceRect-offsetY?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## surfaceHeight
@@ -58,6 +64,8 @@ The height of the surface created by XComponent
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SurfaceRect-surfaceHeight: number--><!--Device-SurfaceRect-surfaceHeight: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## surfaceWidth
@@ -75,6 +83,8 @@ The width of the surface created by XComponent
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SurfaceRect-surfaceWidth: number--><!--Device-SurfaceRect-surfaceWidth: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

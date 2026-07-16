@@ -12,16 +12,13 @@ import { appManager } from '@kit.AbilityKit';
 function getKeepAliveBundles(type: KeepAliveAppType, userId?: number): Promise<Array<KeepAliveBundleInfo>>
 ```
 
-Obtains information about a specified type of keep-alive application of a user. The application information is
-defined by [KeepAliveBundleInfo](arkts-ability-keepalivebundleinfo-i-sys.md). This API uses a promise to return the
-result.
-This API can be properly called on PCs/2-in-1 devices. If it is called on other devices, error code 801 is
-returned.
-**Required permissions**: ohos.permission.MANAGE_APP_KEEP_ALIVE
+Obtains information about a specified type of keep-alive application of a user. The application information is defined by [KeepAliveBundleInfo](arkts-ability-keepalivebundleinfo-i-sys.md). This API uses a promise to return the result.This API can be properly called on PCs/2-in-1 devices. If it is called on other devices, error code 801 is returned.**Required permissions**: ohos.permission.MANAGE_APP_KEEP_ALIVE
 
 **Since:** 14
 
 **Required permissions:** ohos.permission.MANAGE_APP_KEEP_ALIVE
+
+<!--Device-appManager-function getKeepAliveBundles(type: KeepAliveAppType, userId?: int): Promise<Array<KeepAliveBundleInfo>>--><!--Device-appManager-function getKeepAliveBundles(type: KeepAliveAppType, userId?: int): Promise<Array<KeepAliveBundleInfo>>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -31,14 +28,14 @@ returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | KeepAliveAppType | Yes | Type of the application. |
+| type | [KeepAliveAppType](arkts-ability-keepaliveapptype-e-sys.md) | Yes | Type of the application. |
 | userId | number | No | User ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;KeepAliveBundleInfo&gt;&gt; | Promise used to return the array of keep-alive application information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<KeepAliveBundleInfo>> | Promise used to return the array of keep-alive application information. |
 
 **Error codes:**
 

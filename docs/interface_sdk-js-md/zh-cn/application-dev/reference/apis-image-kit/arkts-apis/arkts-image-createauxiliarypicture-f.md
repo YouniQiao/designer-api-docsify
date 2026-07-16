@@ -1,5 +1,11 @@
 # createAuxiliaryPicture
 
+## 导入模块
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+```
+
 ## createAuxiliaryPicture
 
 ```TypeScript
@@ -8,10 +14,11 @@ function createAuxiliaryPicture(buffer: ArrayBuffer, size: Size, type: Auxiliary
 
 通过ArrayBuffer图片数据、辅助图尺寸、辅助图类型创建AuxiliaryPicture实例。该接口仅支持传入BGRA的连续像素数据，会创建出RGBA的辅助图。
 
-由于图片占用内存较大，所以当AuxiliaryPicture实例使用完成后，应主动调用[release](arkts-image-auxiliarypicture-i.md#release-1)方法及时释放内存。释放时应确保该实例的所有异步方法
-均执行完成，且后续不再使用该实例。
+由于图片占用内存较大，所以当AuxiliaryPicture实例使用完成后，应主动调用[release](arkts-image-auxiliarypicture-i.md#release-1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 13
+
+<!--Device-image-function createAuxiliaryPicture(buffer: ArrayBuffer, size: Size, type: AuxiliaryPictureType): AuxiliaryPicture--><!--Device-image-function createAuxiliaryPicture(buffer: ArrayBuffer, size: Size, type: AuxiliaryPictureType): AuxiliaryPicture-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -19,15 +26,15 @@ function createAuxiliaryPicture(buffer: ArrayBuffer, size: Size, type: Auxiliary
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 以buffer形式存放的图像数据。 |
-| size | Size | 是 | 辅助图的尺寸。单位：像素（px）。 |
-| type | AuxiliaryPictureType | 是 | 辅助图类型。 |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | 以buffer形式存放的图像数据。 |
+| size | [Size](../../apis-arkui/arkts-apis/arkts-arkui-size-i.md) | 是 | 辅助图的尺寸。单位：像素（px）。 |
+| type | [AuxiliaryPictureType](arkts-image-auxiliarypicturetype-e.md) | 是 | 辅助图类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AuxiliaryPicture | 如果操作成功，则返回AuxiliaryPicture实例。 |
+| [AuxiliaryPicture](arkts-image-auxiliarypicture-i.md) | 如果操作成功，则返回AuxiliaryPicture实例。 |
 
 **错误码：**
 

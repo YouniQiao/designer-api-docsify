@@ -4,6 +4,8 @@ Enumerates the digest algorithms of the CMS KeyAgree type.
 
 **Since:** 22
 
+<!--Device-cert-enum CmsKeyAgreeRecipientDigestAlgorithm--><!--Device-cert-enum CmsKeyAgreeRecipientDigestAlgorithm-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## SHA256
@@ -17,6 +19,8 @@ SHA-256.
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA256 = 0--><!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA256 = 0-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -32,6 +36,8 @@ SHA-384.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA384 = 1--><!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA384 = 1-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## SHA512
@@ -45,6 +51,8 @@ SHA-512.
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA512 = 2--><!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA512 = 2-End-->
 
 **System capability:** SystemCapability.Security.Cert
 

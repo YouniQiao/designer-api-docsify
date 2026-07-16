@@ -1,5 +1,11 @@
 # analyzePrintEvents（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+```
+
 ## analyzePrintEvents
 
 ```TypeScript
@@ -13,6 +19,8 @@ function analyzePrintEvents(printerId: string, eventType: string): Promise<strin
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-print-function analyzePrintEvents(printerId: string, eventType: string): Promise<string>--><!--Device-print-function analyzePrintEvents(printerId: string, eventType: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -29,7 +37,7 @@ function analyzePrintEvents(printerId: string, eventType: string): Promise<strin
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | the promise returned by the function. |
+| Promise<string> | the promise returned by the function. |
 
 **错误码：**
 

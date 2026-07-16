@@ -18,6 +18,8 @@ Removes a wallpaper of the specified type and restores the default one.
 
 **Required permissions:** ohos.permission.SET_WALLPAPER
 
+<!--Device-wallpaper-function restore(wallpaperType: WallpaperType, callback: AsyncCallback<void>): void--><!--Device-wallpaper-function restore(wallpaperType: WallpaperType, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Removes a wallpaper of the specified type and restores the default one.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | WallpaperType | Yes | indicates the wallpaper type. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of restore. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of restore. |
 
 **Error codes:**
 
@@ -65,6 +67,8 @@ Removes a wallpaper of the specified type and restores the default one.
 
 **Required permissions:** ohos.permission.SET_WALLPAPER
 
+<!--Device-wallpaper-function restore(wallpaperType: WallpaperType): Promise<void>--><!--Device-wallpaper-function restore(wallpaperType: WallpaperType): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **System API:** This is a system API.
@@ -73,13 +77,13 @@ Removes a wallpaper of the specified type and restores the default one.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | WallpaperType | Yes | indicates the wallpaper type. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 

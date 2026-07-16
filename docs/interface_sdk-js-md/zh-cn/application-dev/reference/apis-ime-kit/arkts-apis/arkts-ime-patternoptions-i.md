@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface PatternOptions--><!--Device-unnamed-export interface PatternOptions-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+## 导入模块
+
+```TypeScript
+import { Pattern, InputMethodListDialog, PatternOptions } from '@kit.IMEKit';
+```
 
 ## action
 
@@ -23,6 +31,8 @@ action: (index: number) => void
 **类型：** (index: number) => void
 
 **起始版本：** 11
+
+<!--Device-PatternOptions-action: (index: int) => void--><!--Device-PatternOptions-action: (index: int) => void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -48,6 +58,8 @@ defaultSelected?: number
 
 **起始版本：** 11
 
+<!--Device-PatternOptions-defaultSelected?: int--><!--Device-PatternOptions-defaultSelected?: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## patterns
@@ -67,6 +79,8 @@ patterns: Array<Pattern>
 **类型：** Array<Pattern>
 
 **起始版本：** 11
+
+<!--Device-PatternOptions-patterns: Array<Pattern>--><!--Device-PatternOptions-patterns: Array<Pattern>-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

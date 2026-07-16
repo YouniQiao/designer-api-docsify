@@ -4,6 +4,8 @@
 
 **起始版本：** 14
 
+<!--Device-unnamed-declare interface LunarSwitchStyle--><!--Device-unnamed-declare interface LunarSwitchStyle-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectedColor
@@ -24,7 +26,9 @@ selectedColor?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LunarSwitchStyle-selectedColor?: ResourceColor--><!--Device-LunarSwitchStyle-selectedColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,7 +50,9 @@ strokeColor?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LunarSwitchStyle-strokeColor?: ResourceColor--><!--Device-LunarSwitchStyle-strokeColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,7 +74,9 @@ unselectedColor?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LunarSwitchStyle-unselectedColor?: ResourceColor--><!--Device-LunarSwitchStyle-unselectedColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

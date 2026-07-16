@@ -12,10 +12,11 @@ import { thermal } from '@kit.BasicServicesKit';
 function registerThermalLevelCallback(callback: Callback<ThermalLevel>): void
 ```
 
-Registers a callback to be invoked when the thermal level changes. This API uses an asynchronous callback to return
-the result.
+Registers a callback to be invoked when the thermal level changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-thermal-function registerThermalLevelCallback(callback: Callback<ThermalLevel>): void--><!--Device-thermal-function registerThermalLevelCallback(callback: Callback<ThermalLevel>): void-End-->
 
 **System capability:** SystemCapability.PowerManager.ThermalManager
 
@@ -23,7 +24,7 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;ThermalLevel&gt; | Yes | Callback used to return thermal level. This parameter is of thefunction type. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ThermalLevel> | Yes | Callback used to return thermal level. This parameter is of the function type. |
 
 **Error codes:**
 

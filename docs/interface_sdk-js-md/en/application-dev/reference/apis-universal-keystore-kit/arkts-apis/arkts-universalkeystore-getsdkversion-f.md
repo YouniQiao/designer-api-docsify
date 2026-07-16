@@ -14,13 +14,15 @@ function getSdkVersion(options: HuksOptions): string
 
 Obtains the SDK version of the current system.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > This API is supported since API version 8 and deprecated since API version 11.
 
 **Since:** 8
 
 **Deprecated since:** 11
+
+<!--Device-huks-function getSdkVersion(options: HuksOptions): string--><!--Device-huks-function getSdkVersion(options: HuksOptions): string-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -28,7 +30,7 @@ Obtains the SDK version of the current system.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | HuksOptions | Yes | Empty object (leave this parameter empty). |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Empty object (leave this parameter empty). |
 
 **Return value:**
 

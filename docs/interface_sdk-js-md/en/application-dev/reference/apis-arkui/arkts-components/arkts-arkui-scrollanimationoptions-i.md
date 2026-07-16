@@ -4,6 +4,8 @@ Provides parameters for customizing scroll animations.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface ScrollAnimationOptions--><!--Device-unnamed-declare interface ScrollAnimationOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## canOverScroll
@@ -14,10 +16,7 @@ canOverScroll?: boolean
 
 Whether to enable overscroll.
 
-<p><strong>NOTE</strong>
-<br> Scrolling can exceed the boundary and initiate a bounce animation when this parameter is set to <em>true</em>,
-and the component's <em>edgeEffect</em> attribute is set to EdgeEffect.Spring.
-</p>
+<p><strong>NOTE</strong><br> Scrolling can exceed the boundary and initiate a bounce animation when this parameter is set to <em>true</em>,and the component's <em>edgeEffect</em> attribute is set to EdgeEffect.Spring.</p>
 
 **Type:** boolean
 
@@ -28,6 +27,8 @@ and the component's <em>edgeEffect</em> attribute is set to EdgeEffect.Spring.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ScrollAnimationOptions-canOverScroll?: boolean--><!--Device-ScrollAnimationOptions-canOverScroll?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,6 +50,8 @@ Scrolling curve.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ScrollAnimationOptions-curve?: Curve | ICurve--><!--Device-ScrollAnimationOptions-curve?: Curve | ICurve-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## duration
@@ -59,10 +62,7 @@ duration?: number
 
 Scrolling duration.
 
-<p><strong>NOTE</strong>
-<br>Scrolling duration.<br>Default value: **1000**<br>Unit: ms
-<br>**NOTE**<br>A value less than 0 evaluates to the default value.
-</p>
+<p><strong>NOTE</strong><br>Scrolling duration.<br>Default value: **1000**<br>Unit: ms<br>**NOTE**<br>A value less than 0 evaluates to the default value.</p>
 
 **Type:** number
 
@@ -73,6 +73,8 @@ Scrolling duration.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ScrollAnimationOptions-duration?: number--><!--Device-ScrollAnimationOptions-duration?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

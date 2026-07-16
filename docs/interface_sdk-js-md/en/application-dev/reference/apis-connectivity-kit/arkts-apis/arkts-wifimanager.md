@@ -4,6 +4,8 @@ Provides methods to operate or manage Wi-Fi.
 
 **Since:** 12
 
+<!--Device-unnamed-declare namespace wifiManager--><!--Device-unnamed-declare namespace wifiManager-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## Modules to Import
@@ -18,11 +20,11 @@ import { wifiManager } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [addCandidateConfig](arkts-connectivity-addcandidateconfig-f.md#addcandidateconfig-1) | Add a specified candidate hotspot configuration and returns the networkId.This method adds one configuration at a time. After this configuration is added, your device will determine whether to connect to the hotspot.The app must be in the foreground. |
-| [addCandidateConfig](arkts-connectivity-addcandidateconfig-f.md#addcandidateconfig-2) | Add a specified candidate hotspot configuration and returns the networkId.This method adds one configuration at a time. After this configuration is added, your device will determine whether to connect to the hotspot.The app must be in the foreground. |
+| [addCandidateConfig](arkts-connectivity-addcandidateconfig-f.md#addcandidateconfig-1) | Add a specified candidate hotspot configuration and returns the networkId.This method adds one configuration at a time. After this configuration is added,your device will determine whether to connect to the hotspot.The app must be in the foreground. |
+| [addCandidateConfig](arkts-connectivity-addcandidateconfig-f.md#addcandidateconfig-2) | Add a specified candidate hotspot configuration and returns the networkId.This method adds one configuration at a time. After this configuration is added,your device will determine whether to connect to the hotspot.The app must be in the foreground. |
 | [addDeviceConfig](arkts-connectivity-adddeviceconfig-f.md#adddeviceconfig-1) | Add Wi-Fi connection configuration to the device. The configuration will be updated when the configuration is added. |
 | [addDeviceConfig](arkts-connectivity-adddeviceconfig-f.md#adddeviceconfig-2) | Add Wi-Fi connection configuration to the device. The configuration will be updated when the configuration is added. |
-| [connectToCandidateConfig](arkts-connectivity-connecttocandidateconfig-f.md#connecttocandidateconfig-1) | Connect to a specified candidate hotspot by networkId, only the configuration which is added by ourselfis allowed to be connected. This method connect to a configuration at a time.The app must be in the foreground. |
+| [connectToCandidateConfig](arkts-connectivity-connecttocandidateconfig-f.md#connecttocandidateconfig-1) | Connect to a specified candidate hotspot by networkId, only the configuration which is added by ourself is allowed to be connected. This method connect to a configuration at a time.The app must be in the foreground. |
 | [connectToCandidateConfig](arkts-connectivity-connecttocandidateconfig-f.md#connecttocandidateconfig-2) | Connect to the specified candidate hotspot using connect settings. |
 | [connectToCandidateConfigWithUserAction](arkts-connectivity-connecttocandidateconfigwithuseraction-f.md#connecttocandidateconfigwithuseraction-1) | Connect to a specified candidate hotspot by networkId, and wait for user respond result.Only the configuration which is added by ourself is allowed to be connected.This method connect to a configuration at a time.The app must be in the foreground. |
 | [connectToNetwork](arkts-connectivity-connecttonetwork-f.md#connecttonetwork-1) | Connect to Wi-Fi hotspot by networkId. |
@@ -44,8 +46,8 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [getMultiLinkedInfo](arkts-connectivity-getmultilinkedinfo-f.md#getmultilinkedinfo-1) | Obtain multiple Wi-Fi connection information when Wi-Fi linked in MLO(Muti-Link Operation) state.If does't have the permission of ohos.permission.GET_WIFI_PEERS_MAC, return random bssid. |
 | [getP2pLinkedInfo](arkts-connectivity-getp2plinkedinfo-f.md#getp2plinkedinfo-1) | Obtain information about the P2P connection. |
 | [getP2pLinkedInfo](arkts-connectivity-getp2plinkedinfo-f.md#getp2plinkedinfo-2) | Obtain information about the P2P connection. |
-| [getP2pLocalDevice](arkts-connectivity-getp2plocaldevice-f.md#getp2plocaldevice-1) | Obtain the information about own device information. DeviceAddress in the returned WifiP2pDevice will be set "00:00:00:00:00:00",if ohos.permission.GET_WIFI_LOCAL_MAC is not granted. |
-| [getP2pLocalDevice](arkts-connectivity-getp2plocaldevice-f.md#getp2plocaldevice-2) | Obtain the information about own device information. DeviceAddress in the returned WifiP2pDevice will be set "00:00:00:00:00:00",if ohos.permission.GET_WIFI_LOCAL_MAC is not granted. |
+| [getP2pLocalDevice](arkts-connectivity-getp2plocaldevice-f.md#getp2plocaldevice-1) | Obtain the information about own device information.DeviceAddress in the returned WifiP2pDevice will be set "00:00:00:00:00:00",if ohos.permission.GET_WIFI_LOCAL_MAC is not granted. |
+| [getP2pLocalDevice](arkts-connectivity-getp2plocaldevice-f.md#getp2plocaldevice-2) | Obtain the information about own device information.DeviceAddress in the returned WifiP2pDevice will be set "00:00:00:00:00:00",if ohos.permission.GET_WIFI_LOCAL_MAC is not granted. |
 | [getP2pPeerDevices](arkts-connectivity-getp2ppeerdevices-f.md#getp2ppeerdevices-1) | Obtain the information about the found devices. |
 | [getP2pPeerDevices](arkts-connectivity-getp2ppeerdevices-f.md#getp2ppeerdevices-2) | Obtain the information about the found devices. |
 | [getScanInfoList](arkts-connectivity-getscaninfolist-f.md#getscaninfolist-1) | Obtain the scanned station list. If does't have the permission of ohos.permission.GET_WIFI_PEERS_MAC, return random bssid. |
@@ -84,8 +86,8 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [on](arkts-connectivity-on-f.md#on-15) | Subscribe P2P discovery events. |
 | [p2pCancelConnect](arkts-connectivity-p2pcancelconnect-f.md#p2pcancelconnect-1) | Stop an ongoing p2p connection that is being established. |
 | [p2pConnect](arkts-connectivity-p2pconnect-f.md#p2pconnect-1) | Initiate a P2P connection to a device with the specified configuration. |
-| [removeCandidateConfig](arkts-connectivity-removecandidateconfig-f.md#removecandidateconfig-1) | Remove a specified candidate hotspot configuration, only the configuration which is added by ourself is allowedto be removed.The app must be in the foreground. |
-| [removeCandidateConfig](arkts-connectivity-removecandidateconfig-f.md#removecandidateconfig-2) | Remove a specified candidate hotspot configuration, only the configuration which is added by ourself is allowedto be removed.The app must be in the foreground. |
+| [removeCandidateConfig](arkts-connectivity-removecandidateconfig-f.md#removecandidateconfig-1) | Remove a specified candidate hotspot configuration, only the configuration which is added by ourself is allowed to be removed.The app must be in the foreground. |
+| [removeCandidateConfig](arkts-connectivity-removecandidateconfig-f.md#removecandidateconfig-2) | Remove a specified candidate hotspot configuration, only the configuration which is added by ourself is allowed to be removed.The app must be in the foreground. |
 | [removeDevice](arkts-connectivity-removedevice-f.md#removedevice-1) | Remove a Wi-Fi DeviceConfig with networkId.After a Wi-Fi DeviceConfig is removed, its configuration will be deleted from the list of Wi-Fi configurations.If the Wi-Fi DeviceConfig is being connected, the connection will be interrupted.The application can only delete Wi-Fi DeviceConfig it has created. |
 | [removeGroup](arkts-connectivity-removegroup-f.md#removegroup-1) | Remove a P2P group. |
 | [scan](arkts-connectivity-scan-f.md#scan-1) | Scan Wi-Fi hotspot. |
@@ -123,7 +125,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [getWifiCapability](arkts-connectivity-getwificapability-f-sys.md#getwificapability-1) | Get Wi-Fi capability |
 | [getWifiDetailState](arkts-connectivity-getwifidetailstate-f-sys.md#getwifidetailstate-1) | Obtains information about a Wi-Fi detail state. |
 | [isHotspotDualBandSupported](arkts-connectivity-ishotspotdualbandsupported-f-sys.md#ishotspotdualbandsupported-1) | Check whether a device serving as a Wi-Fi hotspot supports both the 2.4 GHz and 5 GHz Wi-Fi. |
-| [isOpenSoftApAllowed](arkts-connectivity-isopensoftapallowed-f-sys.md#isopensoftapallowed-1) | Check whether Wi-Fi hotspot is can be operated under some situation. When the airplane mode is turned onand does not support the coexistence of softap and sta, nor does it support signal bridge,the hotspot switch cannot be operated. |
+| [isOpenSoftApAllowed](arkts-connectivity-isopensoftapallowed-f-sys.md#isopensoftapallowed-1) | Check whether Wi-Fi hotspot is can be operated under some situation. When the airplane mode is turned on and does not support the coexistence of softap and sta, nor does it support signal bridge,the hotspot switch cannot be operated. |
 | [isRandomMacDisabled](arkts-connectivity-israndommacdisabled-f-sys.md#israndommacdisabled-1) | is random mac disabled |
 | [off](arkts-connectivity-off-f-sys.md#off-5) | Unsubscribe Wi-Fi stream change events.All callback functions will be deregistered If there is no specific callback parameter. |
 | [off](arkts-connectivity-off-f-sys.md#off-6) | Subscribe Wi-Fi device config change events. |

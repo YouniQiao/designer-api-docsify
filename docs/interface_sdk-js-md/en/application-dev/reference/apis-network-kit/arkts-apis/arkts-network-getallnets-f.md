@@ -12,12 +12,13 @@ import { connection } from '@kit.NetworkKit';
 function getAllNets(callback: AsyncCallback<Array<NetHandle>>): void
 ```
 
-Obtains the list of data networks that are activated.
-To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Obtains the list of data networks that are activated.To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
 
 **Since:** 8
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-connection-function getAllNets(callback: AsyncCallback<Array<NetHandle>>): void--><!--Device-connection-function getAllNets(callback: AsyncCallback<Array<NetHandle>>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -25,7 +26,7 @@ To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;NetHandle&gt;&gt; | Yes | the callback of getAllNets. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<NetHandle>> | Yes | the callback of getAllNets. |
 
 **Error codes:**
 
@@ -59,12 +60,13 @@ connection.getAllNets((error: BusinessError, data: connection.NetHandle[]) => {
 function getAllNets(): Promise<Array<NetHandle>>
 ```
 
-Obtains the list of data networks that are activated.
-To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Obtains the list of data networks that are activated.To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
 
 **Since:** 8
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-connection-function getAllNets(): Promise<Array<NetHandle>>--><!--Device-connection-function getAllNets(): Promise<Array<NetHandle>>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -72,7 +74,7 @@ To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NetHandle&gt;&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<NetHandle>> | The promise returned by the function. |
 
 **Error codes:**
 

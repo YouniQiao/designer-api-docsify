@@ -18,6 +18,8 @@ function getActiveNotificationByFilter(filter: NotificationFilter, callback: Asy
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getActiveNotificationByFilter(filter: NotificationFilter, callback: AsyncCallback<NotificationRequest>): void--><!--Device-notificationManager-function getActiveNotificationByFilter(filter: NotificationFilter, callback: AsyncCallback<NotificationRequest>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,8 +28,8 @@ function getActiveNotificationByFilter(filter: NotificationFilter, callback: Asy
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | NotificationFilter | 是 | 查询普通实况窗的过滤条件。 |
-| callback | AsyncCallback&lt;NotificationRequest&gt; | 是 | 获取满足条件的普通实况通知信息的回调函数。 |
+| filter | [NotificationFilter](arkts-notification-notificationfilter-i-sys.md) | 是 | 查询普通实况窗的过滤条件。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<NotificationRequest> | 是 | 获取满足条件的普通实况通知信息的回调函数。 |
 
 **错误码：**
 
@@ -79,6 +81,8 @@ function getActiveNotificationByFilter(filter: NotificationFilter): Promise<Noti
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getActiveNotificationByFilter(filter: NotificationFilter): Promise<NotificationRequest>--><!--Device-notificationManager-function getActiveNotificationByFilter(filter: NotificationFilter): Promise<NotificationRequest>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -87,13 +91,13 @@ function getActiveNotificationByFilter(filter: NotificationFilter): Promise<Noti
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | NotificationFilter | 是 | 查询普通实况窗的过滤条件。 |
+| filter | [NotificationFilter](arkts-notification-notificationfilter-i-sys.md) | 是 | 查询普通实况窗的过滤条件。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;NotificationRequest&gt; | 以Promise形式返回获取的满足条件的普通实况通知信息。 |
+| Promise<NotificationRequest> | 以Promise形式返回获取的满足条件的普通实况通知信息。 |
 
 **错误码：**
 

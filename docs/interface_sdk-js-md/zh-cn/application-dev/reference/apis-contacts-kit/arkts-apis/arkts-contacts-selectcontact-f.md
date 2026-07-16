@@ -1,5 +1,11 @@
 # selectContact
 
+## 导入模块
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+```
+
 ## selectContact
 
 ```TypeScript
@@ -14,13 +20,15 @@ function selectContact(callback: AsyncCallback<Array<Contact>>): void
 
 **替代接口：** selectContacts(callback:
 
+<!--Device-contact-function selectContact(callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function selectContact(callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **系统能力：** SystemCapability.Applications.Contacts
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Contact>> | 是 | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
 
 **示例：**
 
@@ -54,13 +62,15 @@ function selectContact(): Promise<Array<Contact>>
 
 **替代接口：** [selectContacts()](arkts-contacts-selectcontacts-f.md#selectcontacts-2)
 
+<!--Device-contact-function selectContact(): Promise<Array<Contact>>--><!--Device-contact-function selectContact(): Promise<Array<Contact>>-End-->
+
 **系统能力：** SystemCapability.Applications.Contacts
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Contact&gt;&gt; | Promise对象。返回选择的联系人数组对象。 |
+| Promise<Array<Contact>> | Promise对象。返回选择的联系人数组对象。 |
 
 **示例：**
 

@@ -18,6 +18,8 @@ Set the hotspot configuration for the device.
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
 
+<!--Device-wifiManager-function setHotspotConfig(config: HotspotConfig): void--><!--Device-wifiManager-function setHotspotConfig(config: HotspotConfig): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Set the hotspot configuration for the device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | HotspotConfig | Yes | Indicates the Wi-Fi hotspot configuration.The SSID and {@code securityType} must be available and correct.If {@code securityType} is not {@code open}, {@code preSharedKey} must be available and correct. |
+| config | [HotspotConfig](arkts-connectivity-hotspotconfig-i-sys.md) | Yes | Indicates the Wi-Fi hotspot configuration.The SSID and {@code securityType} must be available and correct.If {@code securityType} is not {@code open}, {@code preSharedKey} must be available and correct. |
 
 **Error codes:**
 

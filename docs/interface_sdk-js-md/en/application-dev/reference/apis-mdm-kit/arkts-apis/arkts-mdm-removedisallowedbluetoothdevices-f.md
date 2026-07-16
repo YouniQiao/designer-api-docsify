@@ -12,9 +12,7 @@ import { bluetoothManager } from '@kit.MDMKit';
 function removeDisallowedBluetoothDevices(admin: Want, deviceIds: Array<string>): void
 ```
 
-Removes disallowed Bluetooth devices. If some Bluetooth devices are removed from the disallowed list, the current
-device cannot connect to the remaining ones; if all Bluetooth devices are removed, the current device can connect
-to any Bluetooth device.
+Removes disallowed Bluetooth devices. If some Bluetooth devices are removed from the disallowed list, the current device cannot connect to the remaining ones; if all Bluetooth devices are removed, the current device can connect to any Bluetooth device.
 
 **Since:** 20
 
@@ -22,14 +20,16 @@ to any Bluetooth device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-bluetoothManager-function removeDisallowedBluetoothDevices(admin: Want, deviceIds: Array<string>): void--><!--Device-bluetoothManager-function removeDisallowedBluetoothDevices(admin: Want, deviceIds: Array<string>): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| deviceIds | Array&lt;string&gt; | Yes | MAC addresses of the Bluetooth devices to remove. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| deviceIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | MAC addresses of the Bluetooth devices to remove. |
 
 **Error codes:**
 
@@ -37,7 +37,7 @@ to any Bluetooth device.
 | --- | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 **Example**
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-colorSpaceManager-interface ColorSpacePrimaries--><!--Device-colorSpaceManager-interface ColorSpacePrimaries-End-->
+
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
+
+## 导入模块
+
+```TypeScript
+import { colorSpaceManager } from '@kit.ArkGraphics2D';
+```
 
 ## blueX
 
@@ -17,6 +25,8 @@ blueX: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-ColorSpacePrimaries-blueX: double--><!--Device-ColorSpacePrimaries-blueX: double-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -32,6 +42,8 @@ blueY: number
 
 **起始版本：** 9
 
+<!--Device-ColorSpacePrimaries-blueY: double--><!--Device-ColorSpacePrimaries-blueY: double-End-->
+
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 ## greenX
@@ -45,6 +57,8 @@ greenX: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-ColorSpacePrimaries-greenX: double--><!--Device-ColorSpacePrimaries-greenX: double-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -60,6 +74,8 @@ greenY: number
 
 **起始版本：** 9
 
+<!--Device-ColorSpacePrimaries-greenY: double--><!--Device-ColorSpacePrimaries-greenY: double-End-->
+
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 ## redX
@@ -73,6 +89,8 @@ redX: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-ColorSpacePrimaries-redX: double--><!--Device-ColorSpacePrimaries-redX: double-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -88,6 +106,8 @@ redY: number
 
 **起始版本：** 9
 
+<!--Device-ColorSpacePrimaries-redY: double--><!--Device-ColorSpacePrimaries-redY: double-End-->
+
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 ## whitePointX
@@ -102,6 +122,8 @@ whitePointX: number
 
 **起始版本：** 9
 
+<!--Device-ColorSpacePrimaries-whitePointX: double--><!--Device-ColorSpacePrimaries-whitePointX: double-End-->
+
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 ## whitePointY
@@ -115,6 +137,8 @@ whitePointY: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-ColorSpacePrimaries-whitePointY: double--><!--Device-ColorSpacePrimaries-whitePointY: double-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 

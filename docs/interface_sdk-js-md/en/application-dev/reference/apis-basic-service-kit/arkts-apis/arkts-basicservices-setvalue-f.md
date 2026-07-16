@@ -20,16 +20,18 @@ Set settingsdata value.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-settings-function setValue(context: Context, name: string, value: string, callback: AsyncCallback<boolean>): void--><!--Device-settings-function setValue(context: Context, name: string, value: string, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
 | name | string | Yes | Indicates the name of the character string. |
 | value | string | Yes | Indicates the value of the character string. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | The callback of setValue result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | The callback of setValue result. |
 
 **Example**
 
@@ -61,13 +63,15 @@ Set settingsdata value.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-settings-function setValue(context: Context, name: string, value: string): Promise<boolean>--><!--Device-settings-function setValue(context: Context, name: string, value: string): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
 | name | string | Yes | Indicates the name of the character string. |
 | value | string | Yes | Indicates the value of the character string. |
 
@@ -75,7 +79,7 @@ Set settingsdata value.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns {@code true} if the operation is successful; returns {@code false} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns {@code true} if the operation is successful; returns {@code false} otherwise. |
 
 **Example**
 
@@ -99,9 +103,7 @@ settings.setValue(context, settings.display.SCREEN_BRIGHTNESS_STATUS, '100').the
 function setValue(context: Context, name: string, value: string, domainName: string): Promise<boolean>
 ```
 
-Set settingsdata value.
-[DEVICE_SHARED, USER_PROPERTY] domain need ohos.permission.MANAGE_SETTINGS permission.
-[USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
+Set settingsdata value.[DEVICE_SHARED, USER_PROPERTY] domain need ohos.permission.MANAGE_SETTINGS permission.[USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
 
 **Since:** 11
 
@@ -109,13 +111,15 @@ Set settingsdata value.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-settings-function setValue(context: Context, name: string, value: string, domainName: string): Promise<boolean>--><!--Device-settings-function setValue(context: Context, name: string, value: string, domainName: string): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
 | name | string | Yes | Indicates the name of the character string. |
 | value | string | Yes | Indicates the value of the character string. |
 | domainName | string | Yes | Indicates the name of the domain name to set. |
@@ -124,7 +128,7 @@ Set settingsdata value.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns {@code true} if the operation is successful; returns {@code false} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns {@code true} if the operation is successful; returns {@code false} otherwise. |
 
 **Error codes:**
 

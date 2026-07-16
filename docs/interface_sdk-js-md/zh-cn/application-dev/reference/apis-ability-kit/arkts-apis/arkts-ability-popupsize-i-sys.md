@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface PopupSize--><!--Device-unnamed-export interface PopupSize-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -22,6 +24,8 @@ height: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PopupSize-height: double--><!--Device-PopupSize-height: double-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -39,6 +43,8 @@ width: number
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PopupSize-width: double--><!--Device-PopupSize-width: double-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

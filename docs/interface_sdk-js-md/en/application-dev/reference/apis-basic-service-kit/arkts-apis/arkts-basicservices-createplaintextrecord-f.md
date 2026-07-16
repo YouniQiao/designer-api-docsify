@@ -20,6 +20,8 @@ Creates a **PasteDataRecord** object of the plain text type.
 
 **Substitutes:** createRecord(mimeType:
 
+<!--Device-pasteboard-function createPlainTextRecord(text: string): PasteDataRecord--><!--Device-pasteboard-function createPlainTextRecord(text: string): PasteDataRecord-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
@@ -32,7 +34,7 @@ Creates a **PasteDataRecord** object of the plain text type.
 
 | Type | Description |
 | --- | --- |
-| PasteDataRecord | New **PasteDataRecord** object of the plain text type. |
+| [PasteDataRecord](arkts-basicservices-pastedatarecord-i.md) | New **PasteDataRecord** object of the plain text type. |
 
 **Example**
 

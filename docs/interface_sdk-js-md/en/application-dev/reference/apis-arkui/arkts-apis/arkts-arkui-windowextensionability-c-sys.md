@@ -6,6 +6,8 @@ class of window extension ability.
 
 **Deprecated since:** 21
 
+<!--Device-unnamed-declare class WindowExtensionAbility--><!--Device-unnamed-declare class WindowExtensionAbility-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -30,6 +32,8 @@ Called back when a window extension is first connected to an ability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WindowExtensionAbility-onConnect(want: Want): void--><!--Device-WindowExtensionAbility-onConnect(want: Want): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -38,7 +42,7 @@ Called back when a window extension is first connected to an ability.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Indicates connection information about the Window ability. |
+| want | [Want](arkts-arkui-want-t-sys.md) | Yes | Indicates connection information about the Window ability. |
 
 **Example**
 
@@ -68,6 +72,8 @@ Called back when all abilities connected to a window extension are disconnected.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WindowExtensionAbility-onDisconnect(want: Want): void--><!--Device-WindowExtensionAbility-onDisconnect(want: Want): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -76,7 +82,7 @@ Called back when all abilities connected to a window extension are disconnected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Indicates disconnection information about the window extension. |
+| want | [Want](arkts-arkui-want-t-sys.md) | Yes | Indicates disconnection information about the window extension. |
 
 **Example**
 
@@ -105,6 +111,8 @@ Called back when window is created.
 **Deprecated since:** 21
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WindowExtensionAbility-onWindowReady(window: window.Window): void--><!--Device-WindowExtensionAbility-onWindowReady(window: window.Window): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -149,6 +157,8 @@ Indicates window extension ability context.
 **Deprecated since:** 21
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WindowExtensionAbility-context: WindowExtensionContext--><!--Device-WindowExtensionAbility-context: WindowExtensionContext-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

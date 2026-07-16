@@ -4,7 +4,15 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace power--><!--Device-unnamed-declare namespace power-End-->
+
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
+
+## 导入模块
+
+```TypeScript
+import { power } from '@kit.BasicServicesKit';
+```
 
 ## 汇总
 
@@ -13,7 +21,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [getPowerMode](arkts-basicservices-getpowermode-f.md#getpowermode-1) | 获取当前设备的电源模式。 |
-| [isActive](arkts-basicservices-isactive-f.md#isactive-1) | 检测当前设备是否处于活动状态。- 有屏的设备亮屏时为活动状态，熄屏时为非活动状态。- 无屏的设备非休眠时为活动状态，休眠时为非活动状态。 |
+| [isActive](arkts-basicservices-isactive-f.md#isactive-1) | 检测当前设备是否处于活动状态。- 有屏的设备亮屏时为活动状态，熄屏时为非活动状态。 - 无屏的设备非休眠时为活动状态，休眠时为非活动状态。 |
 | [isScreenOn](arkts-basicservices-isscreenon-f.md#isscreenon-1) | 检测当前设备的亮灭屏状态。使用callback异步回调。 |
 | [isScreenOn](arkts-basicservices-isscreenon-f.md#isscreenon-2) | 检测当前设备的亮灭屏状态。使用Promise异步回调。 |
 | [isStandby](arkts-basicservices-isstandby-f.md#isstandby-1) | 检测当前设备是否进入待机低功耗续航模式。 |

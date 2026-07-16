@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface UIGestureEvent--><!--Device-unnamed-declare interface UIGestureEvent-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## addGesture
@@ -18,7 +20,9 @@ addGesture<T>(gesture: GestureHandler<T>, priority?: GesturePriority, mask?: Ges
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIGestureEvent-addGesture<T>(gesture: GestureHandler<T>, priority?: GesturePriority, mask?: GestureMask): void--><!--Device-UIGestureEvent-addGesture<T>(gesture: GestureHandler<T>, priority?: GesturePriority, mask?: GestureMask): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,9 +30,9 @@ addGesture<T>(gesture: GestureHandler<T>, priority?: GesturePriority, mask?: Ges
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| gesture | GestureHandler&lt;T&gt; | 是 | 手势处理器对象。 |
-| priority | GesturePriority | 否 | 绑定手势的优先级。<br>默认值：GesturePriority.NORMAL |
-| mask | GestureMask | 否 | 事件响应设置。<br>默认值：GestureMask.Normal |
+| gesture | [GestureHandler](../arkts-apis/arkts-arkui-gesturehandler-c.md)<T> | 是 | 手势处理器对象。 |
+| priority | [GesturePriority](../arkts-apis/arkts-arkui-gesturepriority-e.md) | 否 | 绑定手势的优先级。<br>默认值：GesturePriority.NORMAL |
+| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | 否 | 事件响应设置。<br>默认值：GestureMask.Normal |
 
 ## addParallelGesture
 
@@ -42,7 +46,9 @@ addParallelGesture<T>(gesture: GestureHandler<T>, mask?: GestureMask): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIGestureEvent-addParallelGesture<T>(gesture: GestureHandler<T>, mask?: GestureMask): void--><!--Device-UIGestureEvent-addParallelGesture<T>(gesture: GestureHandler<T>, mask?: GestureMask): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,8 +56,8 @@ addParallelGesture<T>(gesture: GestureHandler<T>, mask?: GestureMask): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| gesture | GestureHandler&lt;T&gt; | 是 | 手势处理器对象。 |
-| mask | GestureMask | 否 | 事件响应设置。<br>默认值：GestureMask.Normal |
+| gesture | [GestureHandler](../arkts-apis/arkts-arkui-gesturehandler-c.md)<T> | 是 | 手势处理器对象。 |
+| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | 否 | 事件响应设置。<br>默认值：GestureMask.Normal |
 
 ## clearGestures
 
@@ -65,7 +71,9 @@ clearGestures(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIGestureEvent-clearGestures(): void--><!--Device-UIGestureEvent-clearGestures(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -81,7 +89,9 @@ removeGestureByTag(tag: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIGestureEvent-removeGestureByTag(tag: string): void--><!--Device-UIGestureEvent-removeGestureByTag(tag: string): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

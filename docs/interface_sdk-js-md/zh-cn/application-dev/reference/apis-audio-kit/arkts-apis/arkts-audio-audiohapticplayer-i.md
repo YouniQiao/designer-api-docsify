@@ -1,12 +1,18 @@
 # AudioHapticPlayer
 
-音振播放器，提供音振协同播放功能。在调用AudioHapticPlayer的接口前，需要先通过
-[createPlayer](arkts-audio-audiohapticmanager-i.md#createplayer-1)创建
-实例。
+音振播放器，提供音振协同播放功能。在调用AudioHapticPlayer的接口前，需要先通过[createPlayer](arkts-audio-audiohapticmanager-i.md#createplayer-1)创建实例。
 
 **起始版本：** 11
 
+<!--Device-audioHaptic-interface AudioHapticPlayer--><!--Device-audioHaptic-interface AudioHapticPlayer-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
+
+## 导入模块
+
+```TypeScript
+import { audioHaptic } from '@kit.AudioKit';
+```
 
 ## isMuted
 
@@ -18,13 +24,15 @@ isMuted(type: AudioHapticType): boolean
 
 **起始版本：** 11
 
+<!--Device-AudioHapticPlayer-isMuted(type: AudioHapticType): boolean--><!--Device-AudioHapticPlayer-isMuted(type: AudioHapticType): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | AudioHapticType | 是 | 音振类型。 |
+| type | [AudioHapticType](arkts-audio-audiohaptictype-e.md) | 是 | 音振类型。 |
 
 **返回值：**
 
@@ -57,6 +65,8 @@ off(type: 'endOfStream', callback?: Callback<void>): void
 
 **起始版本：** 11
 
+<!--Device-AudioHapticPlayer-off(type: 'endOfStream', callback?: Callback<void>): void--><!--Device-AudioHapticPlayer-off(type: 'endOfStream', callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 **参数：**
@@ -64,7 +74,7 @@ off(type: 'endOfStream', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'endOfStream' | 是 | 事件回调类型，支持的事件为'endOfStream'，当取消监听流结束事件时，触发该事件。 |
-| callback | Callback&lt;void&gt; | 否 | 回调函数，无返回结果。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | 否 | 回调函数，无返回结果。 |
 
 **示例：**
 
@@ -93,6 +103,8 @@ off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void
 
 **起始版本：** 11
 
+<!--Device-AudioHapticPlayer-off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void--><!--Device-AudioHapticPlayer-off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 **参数：**
@@ -100,7 +112,7 @@ off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioInterrupt' | 是 | 事件回调类型，支持的事件为'audioInterrupt'，当取消监听音频中断事件时，触发该事件。 |
-| callback | Callback&lt;audio.InterruptEvent&gt; | 否 | 回调函数，返回中断事件信息。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<audio.InterruptEvent> | 否 | 回调函数，返回中断事件信息。 |
 
 **示例：**
 
@@ -175,6 +187,8 @@ on(type: 'endOfStream', callback: Callback<void>): void
 
 **起始版本：** 11
 
+<!--Device-AudioHapticPlayer-on(type: 'endOfStream', callback: Callback<void>): void--><!--Device-AudioHapticPlayer-on(type: 'endOfStream', callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 **参数：**
@@ -182,7 +196,7 @@ on(type: 'endOfStream', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'endOfStream' | 是 | 事件回调类型，支持的事件为'endOfStream'，当音频流播放结束时，触发该事件。 |
-| callback | Callback&lt;void&gt; | 是 | 回调函数，无返回结果。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | 是 | 回调函数，无返回结果。 |
 
 **示例：**
 
@@ -203,6 +217,8 @@ on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
 
 **起始版本：** 11
 
+<!--Device-AudioHapticPlayer-on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void--><!--Device-AudioHapticPlayer-on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 **参数：**
@@ -210,7 +226,7 @@ on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioInterrupt' | 是 | 事件回调类型，支持的事件为'audioInterrupt'，当音频焦点状态发生变化时，触发该事件。 |
-| callback | Callback&lt;audio.InterruptEvent&gt; | 是 | 回调函数，返回中断事件信息。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<audio.InterruptEvent> | 是 | 回调函数，返回中断事件信息。 |
 
 **示例：**
 
@@ -278,13 +294,15 @@ release(): Promise<void>
 
 **起始版本：** 11
 
+<!--Device-AudioHapticPlayer-release(): Promise<void>--><!--Device-AudioHapticPlayer-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -313,11 +331,13 @@ setLoop(loop: boolean): Promise<void>
 
 设置音振播放器循环播放。使用Promise异步回调。
 
-> **注意：**
->
+> **注意：**  
+>  
 > 该方法需在音振播放器销毁前调用。
 
 **起始版本：** 20
+
+<!--Device-AudioHapticPlayer-setLoop(loop: boolean): Promise<void>--><!--Device-AudioHapticPlayer-setLoop(loop: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -331,7 +351,7 @@ setLoop(loop: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -360,11 +380,13 @@ setVolume(volume: number): Promise<void>
 
 设置音振播放器的音量。使用Promise异步回调。
 
-> **注意：**
->
+> **注意：**  
+>  
 > 该方法需在音振播放器释放前调用。
 
 **起始版本：** 20
+
+<!--Device-AudioHapticPlayer-setVolume(volume: double): Promise<void>--><!--Device-AudioHapticPlayer-setVolume(volume: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -378,7 +400,7 @@ setVolume(volume: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -411,13 +433,15 @@ start(): Promise<void>
 
 **起始版本：** 11
 
+<!--Device-AudioHapticPlayer-start(): Promise<void>--><!--Device-AudioHapticPlayer-start(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -450,13 +474,15 @@ stop(): Promise<void>
 
 **起始版本：** 11
 
+<!--Device-AudioHapticPlayer-stop(): Promise<void>--><!--Device-AudioHapticPlayer-stop(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

@@ -1,5 +1,11 @@
 # addWatcher（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
+```
+
 ## addWatcher
 
 ```TypeScript
@@ -12,6 +18,8 @@ function addWatcher(watcher: Watcher): void
 
 **需要权限：** ohos.permission.READ_DFX_SYSEVENT
 
+<!--Device-hiSysEvent-function addWatcher(watcher: Watcher): void--><!--Device-hiSysEvent-function addWatcher(watcher: Watcher): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function addWatcher(watcher: Watcher): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| watcher | Watcher | 是 | 系统事件订阅者对象。 |
+| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-watcher-i.md) | 是 | 系统事件订阅者对象。 |
 
 **错误码：**
 

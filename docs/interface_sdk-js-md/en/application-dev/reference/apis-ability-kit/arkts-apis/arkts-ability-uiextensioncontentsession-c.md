@@ -1,9 +1,10 @@
 # UIExtensionContentSession
 
-UIExtensionContentSession is the UI operation class for the UIExtensionAbility. It provides control over page loading
-and allows configuration of the window privacy mode of the host application.
+UIExtensionContentSession is the UI operation class for the UIExtensionAbility. It provides control over page loading and allows configuration of the window privacy mode of the host application.
 
 **Since:** 10
+
+<!--Device-unnamed-declare class UIExtensionContentSession--><!--Device-unnamed-declare class UIExtensionContentSession-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -24,6 +25,8 @@ Obtains the window proxy of this UIExtensionAbility.
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-getUIExtensionWindowProxy(): uiExtension.WindowProxy--><!--Device-UIExtensionContentSession-getUIExtensionWindowProxy(): uiExtension.WindowProxy-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -86,15 +89,13 @@ struct Extension {
 loadContent(path: string, storage?: LocalStorage): void
 ```
 
-Loads a page for the [UIExtensionAbility](arkts-ability-uiextensionability-c.md), with
-state properties passed to the page through [LocalStorage](../../../../ui/state-management/arkts-localstorage.md).
-This API is used to load a page in the
-[onSessionCreate](arkts-ability-uiextensionability-c.md#onsessioncreate-1) lifecycle of the
-UIExtensionAbility.
+Loads a page for the [UIExtensionAbility](arkts-ability-uiextensionability-c.md), with state properties passed to the page through [LocalStorage](../../../../ui/state-management/arkts-localstorage.md).This API is used to load a page in the [onSessionCreate](arkts-ability-uiextensionability-c.md#onsessioncreate-1) lifecycle of the UIExtensionAbility.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-loadContent(path: string, storage?: LocalStorage): void--><!--Device-UIExtensionContentSession-loadContent(path: string, storage?: LocalStorage): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -102,8 +103,8 @@ UIExtensionAbility.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the page to load. The path is configured using the[pages](../../../../quick-start/module-configuration-file.md#pages) tag in the[module.json5](../../../../quick-start/module-configuration-file.md) file. |
-| storage | LocalStorage | No | A page-level UI state storage unit, which is used to pass state properties to thepage. |
+| path | string | Yes | Path of the page to load. The path is configured using the [pages](../../../../quick-start/module-configuration-file.md#pages) tag in the [module.json5](../../../../quick-start/module-configuration-file.md) file. |
+| storage | [LocalStorage](../../apis-arkui/arkts-apis/arkts-arkui-localstorage-c.md) | No | A page-level UI state storage unit, which is used to pass state properties to the page. |
 
 **Error codes:**
 
@@ -145,16 +146,13 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 loadContentByName(name: string, storage?: LocalStorage): void
 ```
 
-Loads a [named route](../../../../ui/arkts-routing.md#named-route) page for a
-[UIExtensionAbility](arkts-ability-uiextensionability-c.md), with state properties passed
-to the page through [LocalStorage](../../../../ui/state-management/arkts-localstorage.md). This API is used to load a
-named route page in the
-[onSessionCreate](arkts-ability-uiextensionability-c.md#onsessioncreate-1) lifecycle of the
-UIExtensionAbility.
+Loads a [named route](../../../../ui/arkts-routing.md#named-route) page for a [UIExtensionAbility](arkts-ability-uiextensionability-c.md), with state properties passed to the page through [LocalStorage](../../../../ui/state-management/arkts-localstorage.md). This API is used to load a named route page in the [onSessionCreate](arkts-ability-uiextensionability-c.md#onsessioncreate-1) lifecycle of the UIExtensionAbility.
 
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-loadContentByName(name: string, storage?: LocalStorage): void--><!--Device-UIExtensionContentSession-loadContentByName(name: string, storage?: LocalStorage): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -163,7 +161,7 @@ UIExtensionAbility.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the named route page. |
-| storage | LocalStorage | No | A page-level UI state storage unit, which is used to pass state properties to thepage. |
+| storage | [LocalStorage](../../apis-arkui/arkts-apis/arkts-arkui-localstorage-c.md) | No | A page-level UI state storage unit, which is used to pass state properties to the page. |
 
 **Error codes:**
 
@@ -237,14 +235,15 @@ struct UIExtensionPage {
 setWindowPrivacyMode(isPrivacyMode: boolean): Promise<void>
 ```
 
-Enables or disables the window privacy mode of the host application. A window in privacy mode cannot be captured or
-recorded. This API uses a promise to return the result.
+Enables or disables the window privacy mode of the host application. A window in privacy mode cannot be captured or recorded. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.PRIVACY_WINDOW
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-setWindowPrivacyMode(isPrivacyMode: boolean): Promise<void>--><!--Device-UIExtensionContentSession-setWindowPrivacyMode(isPrivacyMode: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -258,7 +257,7 @@ recorded. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -305,14 +304,15 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void
 ```
 
-Enables or disables the window privacy mode of the host application. A window in privacy mode cannot be captured or
-recorded. This API uses an asynchronous callback to return the result.
+Enables or disables the window privacy mode of the host application. A window in privacy mode cannot be captured or recorded. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.PRIVACY_WINDOW
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -321,7 +321,7 @@ recorded. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isPrivacyMode | boolean | Yes | Whether to enable the privacy mode. **true** to enable, **false** otherwise. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the setting is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the setting is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -369,14 +369,15 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
     abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void
 ```
 
-Implicitly starts a given type of UIExtensionAbility. This API uses an asynchronous callback to return the result.
-It can be called only by applications running in the foreground.
-If the target ability is visible, you can start the target ability; If the target ability is invisible,
-you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.
+Implicitly starts a given type of UIExtensionAbility. This API uses an asynchronous callback to return the result.It can be called only by applications running in the foreground.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-startAbilityByType(type: string, wantParam: Record<string, Object>,
+    abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-startAbilityByType(type: string, wantParam: Record<string, Object>,
+    abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -384,10 +385,10 @@ you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to star
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the UIExtensionAbility. For details, see[Starting an Application of the Specified Type](../../../../application-models/start-intent-panel.md#matching-rules). |
-| wantParam | Record&lt;string, Object&gt; | Yes | Parameters passed for starting the UIExtensionAbility. |
-| abilityStartCallback | AbilityStartCallback | Yes | Execution result of starting the UIExtensionAbility. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| type | string | Yes | Type of the UIExtensionAbility. For details, see [Starting an Application of the Specified Type](../../../../application-models/start-intent-panel.md#matching-rules). |
+| wantParam | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Object> | Yes | Parameters passed for starting the UIExtensionAbility. |
+| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Execution result of starting the UIExtensionAbility. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -445,12 +446,15 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
 
-Implicitly starts a given type of UIExtensionAbility. This API uses a promise to return the result. It can be
-called only by applications running in the foreground.
+Implicitly starts a given type of UIExtensionAbility. This API uses a promise to return the result. It can be called only by applications running in the foreground.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-startAbilityByType(type: string, wantParam: Record<string, Object>,
+    abilityStartCallback: AbilityStartCallback): Promise<void>--><!--Device-UIExtensionContentSession-startAbilityByType(type: string, wantParam: Record<string, Object>,
+    abilityStartCallback: AbilityStartCallback): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -458,15 +462,15 @@ called only by applications running in the foreground.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the UIExtensionAbility. For details, see[Starting an Application of the Specified Type](../../../../application-models/start-intent-panel.md#matching-rules). |
-| wantParam | Record&lt;string, Object&gt; | Yes | Parameters passed for starting the UIExtensionAbility. |
-| abilityStartCallback | AbilityStartCallback | Yes | Execution result of starting the UIExtensionAbility. |
+| type | string | Yes | Type of the UIExtensionAbility. For details, see [Starting an Application of the Specified Type](../../../../application-models/start-intent-panel.md#matching-rules). |
+| wantParam | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Object> | Yes | Parameters passed for starting the UIExtensionAbility. |
+| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Execution result of starting the UIExtensionAbility. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -523,12 +527,13 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 terminateSelf(callback: AsyncCallback<void>): void
 ```
 
-Destroys this UIExtensionAbility and closes the corresponding window of the host application. This API uses an
-asynchronous callback to return the result.
+Destroys this UIExtensionAbility and closes the corresponding window of the host application. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-terminateSelf(callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-terminateSelf(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -536,7 +541,7 @@ asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -585,12 +590,13 @@ struct Index {
 terminateSelf(): Promise<void>
 ```
 
-Destroys this UIExtensionAbility and closes the corresponding window of the host application. This API uses a
-promise to return the result.
+Destroys this UIExtensionAbility and closes the corresponding window of the host application. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-terminateSelf(): Promise<void>--><!--Device-UIExtensionContentSession-terminateSelf(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -598,7 +604,7 @@ promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -641,12 +647,13 @@ struct Index {
 terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>): void
 ```
 
-Destroys this UIExtensionAbility, closes the corresponding window of the host application, and returns the result
-to the host application. This API uses an asynchronous callback to return the result.
+Destroys this UIExtensionAbility, closes the corresponding window of the host application, and returns the result to the host application. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -654,8 +661,8 @@ to the host application. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | AbilityResult | Yes | Information returned to the host application. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| parameter | [AbilityResult](arkts-ability-abilityresult-i.md) | Yes | Information returned to the host application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -714,12 +721,13 @@ struct Index {
 terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 ```
 
-Destroys this UIExtensionAbility, closes the corresponding window of the host application, and returns the result
-to the host application. This API uses a promise to return the result.
+Destroys this UIExtensionAbility, closes the corresponding window of the host application, and returns the result to the host application. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-terminateSelfWithResult(parameter: AbilityResult): Promise<void>--><!--Device-UIExtensionContentSession-terminateSelfWithResult(parameter: AbilityResult): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -727,13 +735,13 @@ to the host application. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | AbilityResult | Yes | Information returned to the host application. |
+| parameter | [AbilityResult](arkts-ability-abilityresult-i.md) | Yes | Information returned to the host application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

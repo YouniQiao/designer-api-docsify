@@ -12,16 +12,15 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function connectToCandidateConfigWithUserAction(networkId: number): Promise<void>
 ```
 
-Connect to a specified candidate hotspot by networkId, and wait for user respond result.
-Only the configuration which is added by ourself is allowed to be connected.
-This method connect to a configuration at a time.
-The app must be in the foreground.
+Connect to a specified candidate hotspot by networkId, and wait for user respond result.Only the configuration which is added by ourself is allowed to be connected.This method connect to a configuration at a time.The app must be in the foreground.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-wifiManager-function connectToCandidateConfigWithUserAction(networkId: int): Promise<void>--><!--Device-wifiManager-function connectToCandidateConfigWithUserAction(networkId: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -35,7 +34,7 @@ The app must be in the foreground.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Returns the promise object that used to return the operation result.If the operation fails, an error message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Returns the promise object that used to return the operation result.If the operation fails, an error message is returned. |
 
 **Error codes:**
 

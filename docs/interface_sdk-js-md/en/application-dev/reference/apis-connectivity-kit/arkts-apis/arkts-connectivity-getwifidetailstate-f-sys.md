@@ -18,6 +18,8 @@ Obtains information about a Wi-Fi detail state.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 
+<!--Device-wifiManager-function getWifiDetailState(): WifiDetailState--><!--Device-wifiManager-function getWifiDetailState(): WifiDetailState-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Obtains information about a Wi-Fi detail state.
 
 | Type | Description |
 | --- | --- |
-| WifiDetailState | Returns information about wifi state. |
+| [WifiDetailState](arkts-connectivity-wifidetailstate-e-sys.md) | Returns information about wifi state. |
 
 **Error codes:**
 

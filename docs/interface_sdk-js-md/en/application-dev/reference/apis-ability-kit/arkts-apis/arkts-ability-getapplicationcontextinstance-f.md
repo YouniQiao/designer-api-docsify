@@ -12,8 +12,7 @@ import { application } from '@kit.AbilityKit';
 export function getApplicationContextInstance(): ApplicationContext
 ```
 
-Obtains the application context. This API provides context access independent of the base class **Context**.
-Repeated calls to this API obtain the same ApplicationContext instance.
+Obtains the application context. This API provides context access independent of the base class **Context**.Repeated calls to this API obtain the same ApplicationContext instance.
 
 **Since:** 23
 
@@ -21,13 +20,15 @@ Repeated calls to this API obtain the same ApplicationContext instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-application-export function getApplicationContextInstance(): ApplicationContext--><!--Device-application-export function getApplicationContextInstance(): ApplicationContext-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ApplicationContext | Application context. |
+| [ApplicationContext](arkts-ability-applicationcontext-c.md) | Application context. |
 
 **Error codes:**
 

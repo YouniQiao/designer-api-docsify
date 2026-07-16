@@ -1,0 +1,28 @@
+# TextLayoutOptions
+
+Defines the text layout options.
+
+**Since:** 20
+
+<!--Device-unnamed-declare interface TextLayoutOptions--><!--Device-unnamed-declare interface TextLayoutOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## constraintWidth
+
+```TypeScript
+constraintWidth?: LengthMetrics
+```
+
+Layout width of the measured text. If not set, the width is the maximum width occupied by a single-line layout.
+
+**Type:** LengthMetrics
+
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TextLayoutOptions-constraintWidth?: LengthMetrics--><!--Device-TextLayoutOptions-constraintWidth?: LengthMetrics-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

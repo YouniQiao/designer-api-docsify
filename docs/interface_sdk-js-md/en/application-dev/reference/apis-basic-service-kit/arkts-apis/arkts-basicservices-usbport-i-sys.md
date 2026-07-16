@@ -4,6 +4,8 @@ Represents a USB port.
 
 **Since:** 9
 
+<!--Device-usbManager-interface USBPort--><!--Device-usbManager-interface USBPort-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Unique identifier of a USB port.
 
 **Since:** 9
 
+<!--Device-USBPort-id: int--><!--Device-USBPort-id: int-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ USB port role.
 
 **Since:** 9
 
+<!--Device-USBPort-status: USBPortStatus--><!--Device-USBPort-status: USBPortStatus-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ Numeric mask combination for the supported mode list.
 **Type:** PortModeType
 
 **Since:** 9
+
+<!--Device-USBPort-supportedModes: PortModeType--><!--Device-USBPort-supportedModes: PortModeType-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 

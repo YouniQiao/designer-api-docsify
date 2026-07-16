@@ -16,6 +16,8 @@ Get the operator name of the specified SIM card slot.
 
 **Since:** 7
 
+<!--Device-radio-function getOperatorName(slotId: int, callback: AsyncCallback<string>): void--><!--Device-radio-function getOperatorName(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -23,7 +25,7 @@ Get the operator name of the specified SIM card slot.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Indicates the callback for getting the operator name. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Indicates the callback for getting the operator name. |
 
 **Error codes:**
 
@@ -62,6 +64,8 @@ Get the operator name of the specified SIM card slot.
 
 **Since:** 7
 
+<!--Device-radio-function getOperatorName(slotId: int): Promise<string>--><!--Device-radio-function getOperatorName(slotId: int): Promise<string>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -74,7 +78,7 @@ Get the operator name of the specified SIM card slot.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the operator name. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the operator name. |
 
 **Error codes:**
 

@@ -1,9 +1,10 @@
 # TextDecoder
 
-Provides APIs to decode byte arrays into strings. It supports multiple formats, including UTF-8, UTF-16LE, UTF-16BE
-, ISO-8859, and Windows-1251.
+Provides APIs to decode byte arrays into strings. It supports multiple formats, including UTF-8, UTF-16LE, UTF-16BE, ISO-8859, and Windows-1251.
 
 **Since:** 7
+
+<!--Device-util-class TextDecoder--><!--Device-util-class TextDecoder-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -24,6 +25,8 @@ A constructor used to create a **TextDecoder** object.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextDecoder-constructor()--><!--Device-TextDecoder-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -50,6 +53,8 @@ A constructor used to create a **TextDecoder** object.
 **Deprecated since:** 9
 
 **Substitutes:** [create](arkts-arkts-textdecoder-c.md#create-1)
+
+<!--Device-TextDecoder-constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean })--><!--Device-TextDecoder-constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean })-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -79,6 +84,8 @@ Creates a **TextDecoder** object. It provides the same function as the deprecate
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextDecoder-static create(encoding?: string, options?: TextDecoderOptions): TextDecoder--><!--Device-TextDecoder-static create(encoding?: string, options?: TextDecoderOptions): TextDecoder-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -86,13 +93,13 @@ Creates a **TextDecoder** object. It provides the same function as the deprecate
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | encoding | string | No | Encoding format. The default format is **'utf-8'**.<br>**Since:** 11 |
-| options | TextDecoderOptions | No | Decoding-related options, which include **fatal** and **ignoreBOM**.<br>**Since:** 11 |
+| options | [TextDecoderOptions](arkts-arkts-textdecoderoptions-i.md) | No | Decoding-related options, which include **fatal** and **ignoreBOM**.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TextDecoder | **TextDecoder** object created. |
+| [TextDecoder](arkts-arkts-textdecoder-c.md) | **TextDecoder** object created. |
 
 **Example**
 
@@ -122,13 +129,15 @@ Decodes the input content into a string.
 
 **Substitutes:** [decodeToString](arkts-arkts-textdecoder-c.md#decodetostring-1)
 
+<!--Device-TextDecoder-decode(input: Uint8Array, options?: { stream?: false }): string--><!--Device-TextDecoder-decode(input: Uint8Array, options?: { stream?: false }): string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| input | Uint8Array | Yes | Uint8Array object to decode. |
+| input | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Uint8Array object to decode. |
 | options | { stream?: false } | No | Decoding-related options. |
 
 **Return value:**
@@ -167,14 +176,16 @@ Decodes the input content into a string.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextDecoder-decodeToString(input: Uint8Array, options?: DecodeToStringOptions): string--><!--Device-TextDecoder-decodeToString(input: Uint8Array, options?: DecodeToStringOptions): string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| input | Uint8Array | Yes | Uint8Array object to decode. |
-| options | DecodeToStringOptions | No | Decoding-related options. The default value is **undefined**. |
+| input | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Uint8Array object to decode. |
+| options | [DecodeToStringOptions](arkts-arkts-decodetostringoptions-i.md) | No | Decoding-related options. The default value is **undefined**. |
 
 **Return value:**
 
@@ -216,14 +227,16 @@ Decodes the input content into a string. If **input** is an empty array, **undef
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TextDecoder-decodeWithStream(input: Uint8Array, options?: DecodeWithStreamOptions): string--><!--Device-TextDecoder-decodeWithStream(input: Uint8Array, options?: DecodeWithStreamOptions): string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| input | Uint8Array | Yes | Uint8Array object to decode. |
-| options | DecodeWithStreamOptions | No | Decoding-related options.<br>**Since:** 11 |
+| input | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Uint8Array object to decode. |
+| options | [DecodeWithStreamOptions](arkts-arkts-decodewithstreamoptions-i.md) | No | Decoding-related options.<br>**Since:** 11 |
 
 **Return value:**
 
@@ -262,17 +275,17 @@ console.info("retStr = " + retStr);
 readonly encoding: string
 ```
 
-Encoding format.<br>The following formats are supported: utf-8, ibm866, iso-8859-2, iso-8859-3, iso-8859-4, iso-8
-859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-8-i, iso-8859-10, iso-8859-13, iso-8859-14, iso-8859-15, koi8
--r, koi8-u, macintosh, windows-874, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows
--1255, windows-1256, windows-1257, windows-1258, x-mac-cyrillic, gbk, gb18030, big5, euc-jp, iso-2022-jp,
-shift_jis, euc-kr, utf-16be, utf-16le, gb2312, and iso-8859-1.
+Encoding format.<br>The following formats are supported: utf-8, ibm866, iso-8859-2, iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-8-i, iso-8859-10, iso-8859-13, iso-8859-14, iso-8859-15, koi8  
+-r, koi8-u, macintosh, windows-874, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows  
+-1255, windows-1256, windows-1257, windows-1258, x-mac-cyrillic, gbk, gb18030, big5, euc-jp, iso-2022-jp,shift_jis, euc-kr, utf-16be, utf-16le, gb2312, and iso-8859-1.
 
 **Type:** string
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextDecoder-readonly encoding: string--><!--Device-TextDecoder-readonly encoding: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -282,14 +295,15 @@ shift_jis, euc-kr, utf-16be, utf-16le, gb2312, and iso-8859-1.
 readonly fatal: boolean
 ```
 
-Whether to display fatal errors. The value **true** means to display fatal errors, and **false** means the
-opposite.
+Whether to display fatal errors. The value **true** means to display fatal errors, and **false** means the opposite.
 
 **Type:** boolean
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextDecoder-readonly fatal: boolean--><!--Device-TextDecoder-readonly fatal: boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -299,14 +313,15 @@ opposite.
 readonly ignoreBOM = false
 ```
 
-Whether to ignore the byte order marker (BOM). The default value is **false**, which indicates that the result
-contains the BOM.
+Whether to ignore the byte order marker (BOM). The default value is **false**, which indicates that the result contains the BOM.
 
 **Type:** false
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextDecoder-readonly ignoreBOM = false--><!--Device-TextDecoder-readonly ignoreBOM = false-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

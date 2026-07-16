@@ -4,6 +4,8 @@ Provides unified dialog APIs.
 
 **Since:** 26.1.0
 
+<!--Device-unnamed-export class DialogPresenter--><!--Device-unnamed-export class DialogPresenter-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -18,8 +20,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 dismiss(target: number | ComponentContent<Object>): Promise<void>
 ```
 
-Dismisses a dialog box.
-Accepts either the dialog ID (returned by present) or the ComponentContent reference.
+Dismisses a dialog box.Accepts either the dialog ID (returned by present) or the ComponentContent reference.
 
 **Since:** 26.1.0
 
@@ -27,19 +28,21 @@ Accepts either the dialog ID (returned by present) or the ComponentContent refer
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
+<!--Device-DialogPresenter-dismiss(target: int | ComponentContent<Object>): Promise<void>--><!--Device-DialogPresenter-dismiss(target: int | ComponentContent<Object>): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | number \| ComponentContent&lt;Object&gt; | Yes | The dialog ID or ComponentContent to dismiss. |
+| target | number \| ComponentContent<Object> | Yes | The dialog ID or ComponentContent to dismiss. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -62,6 +65,8 @@ Presents a fixed-style dialog box.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
+<!--Device-DialogPresenter-present(options?: dialog.DialogStyleOptions): Promise<DialogResult>--><!--Device-DialogPresenter-present(options?: dialog.DialogStyleOptions): Promise<DialogResult>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -74,7 +79,7 @@ Presents a fixed-style dialog box.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DialogResult&gt; | Promise used to return the dialog result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DialogResult> | Promise used to return the dialog result. |
 
 **Error codes:**
 
@@ -91,8 +96,8 @@ present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>,
 
 Presents a custom-style dialog box with the provided content.
 
-The content parameter accepts CustomBuilder or ComponentContent via union type:
-- CustomBuilder: Builder function for custom dialog content.
+The content parameter accepts CustomBuilder or ComponentContent via union type:  
+- CustomBuilder: Builder function for custom dialog content.  
 - ComponentContent: ComponentContent supporting state-driven updates.
 
 isModal = true and showInSubWindow = true cannot be used at the same time.
@@ -103,20 +108,22 @@ isModal = true and showInSubWindow = true cannot be used at the same time.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
+<!--Device-DialogPresenter-present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>, options?: dialog.DialogCustomOptions): Promise<DialogResult>--><!--Device-DialogPresenter-present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>, options?: dialog.DialogCustomOptions): Promise<DialogResult>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | CustomBuilder \| CustomBuilderWithId \| ComponentContent&lt;Object&gt; | Yes | Custom dialog content. |
+| content | CustomBuilder \| CustomBuilderWithId \| ComponentContent<Object> | Yes | Custom dialog content. |
 | options | dialog.DialogCustomOptions | No | Custom dialog options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DialogResult&gt; | Promise used to return the dialog result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DialogResult> | Promise used to return the dialog result. |
 
 **Error codes:**
 
@@ -141,20 +148,22 @@ Updates a presented custom dialog box.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
+<!--Device-DialogPresenter-update(content: ComponentContent<Object>, options?: dialog.DialogBaseOptions): Promise<void>--><!--Device-DialogPresenter-update(content: ComponentContent<Object>, options?: dialog.DialogBaseOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent&lt;Object&gt; | Yes | The content used to identify the dialog. |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)<Object> | Yes | The content used to identify the dialog. |
 | options | dialog.DialogBaseOptions | No | Options to update. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -18,19 +18,21 @@ Converts a **SendableResource** object to a **Resource** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-sendableResourceManager-export function sendableResourceToResource(resource: SendableResource): Resource--><!--Device-sendableResourceManager-export function sendableResourceToResource(resource: SendableResource): Resource-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | SendableResource | Yes | **SendableResource** object. |
+| resource | [SendableResource](arkts-localization-sendableresource-t.md) | Yes | **SendableResource** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Resource | **Resource** object after conversion. |
+| [Resource](arkts-localization-resource-i.md) | **Resource** object after conversion. |
 
 **Error codes:**
 

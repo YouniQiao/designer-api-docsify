@@ -1,13 +1,20 @@
 # ScreenCaptureMonitor（系统接口）
 
-A class that provides APIs to query and monitor the system screen recorder status. Before calling any API,
-you must use getScreenCaptureMonitor() to obtain a ScreenCaptureMonitor instance.
+A class that provides APIs to query and monitor the system screen recorder status. Before calling any API,you must use getScreenCaptureMonitor() to obtain a ScreenCaptureMonitor instance.
 
 **起始版本：** 18
+
+<!--Device-unnamed-interface ScreenCaptureMonitor--><!--Device-unnamed-interface ScreenCaptureMonitor-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { media } from '@kit.MediaKit';
+```
 
 ## off('systemScreenRecorder')
 
@@ -19,6 +26,8 @@ Unsubscribes from state change events of the system screen recorder.
 
 **起始版本：** 18
 
+<!--Device-ScreenCaptureMonitor-off(type: 'systemScreenRecorder', callback?: Callback<ScreenCaptureEvent>): void--><!--Device-ScreenCaptureMonitor-off(type: 'systemScreenRecorder', callback?: Callback<ScreenCaptureEvent>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **系统接口：** 此接口为系统接口。
@@ -28,7 +37,7 @@ Unsubscribes from state change events of the system screen recorder.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'systemScreenRecorder' | 是 | Event type, which is **'systemScreenRecorder'** in this case.This event is triggered when the state of the system screen recorder changes. |
-| callback | Callback&lt;ScreenCaptureEvent&gt; | 否 | Callback invoked when the event is triggered,where ScreenCaptureEvent indicates the new state. If this parameter is not specified,the last subscription event is canceled. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ScreenCaptureEvent> | 否 | Callback invoked when the event is triggered,where ScreenCaptureEvent indicates the new state. If this parameter is not specified,the last subscription event is canceled. |
 
 **错误码：**
 
@@ -49,8 +58,9 @@ screenCaptureMonitor.off('systemScreenRecorder');
 on(type: 'systemScreenRecorder', callback: Callback<ScreenCaptureEvent>): void
 ```
 
-Subscribes to state change events of the system screen recorder. From the ScreenCaptureEvent event reported,
-you can determine whether the system screen recorder is working.
+Subscribes to state change events of the system screen recorder. From the ScreenCaptureEvent event reported,you can determine whether the system screen recorder is working.
+
+<!--Device-ScreenCaptureMonitor-on(type: 'systemScreenRecorder', callback: Callback<ScreenCaptureEvent>): void--><!--Device-ScreenCaptureMonitor-on(type: 'systemScreenRecorder', callback: Callback<ScreenCaptureEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -61,7 +71,7 @@ you can determine whether the system screen recorder is working.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'systemScreenRecorder' | 是 | Event type, which is **'systemScreenRecorder'** in this case.This event is triggered when the state of the system screen recorder changes. |
-| callback | Callback&lt;ScreenCaptureEvent&gt; | 是 | Callback invoked when the event is triggered,where ScreenCaptureEvent indicates the new state. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ScreenCaptureEvent> | 是 | Callback invoked when the event is triggered,where ScreenCaptureEvent indicates the new state. |
 
 **错误码：**
 
@@ -92,6 +102,8 @@ Whether the system screen recorder is working.
 **类型：** boolean
 
 **起始版本：** 18
+
+<!--Device-ScreenCaptureMonitor-readonly isSystemScreenRecorderWorking: boolean--><!--Device-ScreenCaptureMonitor-readonly isSystemScreenRecorderWorking: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 

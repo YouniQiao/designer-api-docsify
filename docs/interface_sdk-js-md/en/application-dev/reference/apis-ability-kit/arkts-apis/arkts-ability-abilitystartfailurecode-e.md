@@ -4,6 +4,8 @@ Enumerates the specific error codes for ability launch failures.
 
 **Since:** 21
 
+<!--Device-unnamed-export enum AbilityStartFailureCode--><!--Device-unnamed-export enum AbilityStartFailureCode-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## FAILURE_CODE_SYSTEM_MALFUNCTION
@@ -20,6 +22,8 @@ The ability cannot be launched due to a system error (for example, a crash in st
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-AbilityStartFailureCode-FAILURE_CODE_SYSTEM_MALFUNCTION = 0--><!--Device-AbilityStartFailureCode-FAILURE_CODE_SYSTEM_MALFUNCTION = 0-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## FAILURE_CODE_USER_CANCEL
@@ -35,6 +39,8 @@ The user canceled the operation.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-AbilityStartFailureCode-FAILURE_CODE_USER_CANCEL = 1--><!--Device-AbilityStartFailureCode-FAILURE_CODE_USER_CANCEL = 1-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

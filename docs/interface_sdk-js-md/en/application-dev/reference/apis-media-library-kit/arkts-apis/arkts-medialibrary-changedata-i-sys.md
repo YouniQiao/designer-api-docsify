@@ -4,6 +4,8 @@ Defines the return value of the listener callback.
 
 **Since:** 10
 
+<!--Device-photoAccessHelper-interface ChangeData--><!--Device-photoAccessHelper-interface ChangeData-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ sharedAlbumAssets of the same type
 
 **Since:** 14
 
+<!--Device-ChangeData-sharedAlbumAssets: Array<SharedAlbumAsset>--><!--Device-ChangeData-sharedAlbumAssets: Array<SharedAlbumAsset>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -40,6 +44,8 @@ sharedExtraPhotoAssets of the same type
 
 **Since:** 14
 
+<!--Device-ChangeData-sharedExtraPhotoAssets: Array<SharedPhotoAsset>--><!--Device-ChangeData-sharedExtraPhotoAssets: Array<SharedPhotoAsset>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -55,6 +61,8 @@ sharedPhotoAssets of the same type
 **Type:** Array<SharedPhotoAsset>
 
 **Since:** 14
+
+<!--Device-ChangeData-sharedPhotoAssets: Array<SharedPhotoAsset>--><!--Device-ChangeData-sharedPhotoAssets: Array<SharedPhotoAsset>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

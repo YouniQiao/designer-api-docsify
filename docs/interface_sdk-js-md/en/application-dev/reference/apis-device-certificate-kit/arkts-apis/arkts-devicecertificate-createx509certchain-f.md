@@ -18,19 +18,21 @@ Creates an **X509CertChain** instance. This API uses a promise to return the res
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-cert-function createX509CertChain(inStream: EncodingBlob): Promise<X509CertChain>--><!--Device-cert-function createX509CertChain(inStream: EncodingBlob): Promise<X509CertChain>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inStream | EncodingBlob | Yes | X.509 certificate serialization data. |
+| inStream | [EncodingBlob](arkts-devicecertificate-encodingblob-i.md) | Yes | X.509 certificate serialization data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;X509CertChain&gt; | Promise used to return the **X509CertChain** instance created. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<X509CertChain> | Promise used to return the **X509CertChain** instance created. |
 
 **Error codes:**
 
@@ -144,14 +146,16 @@ Creates an **X509CertChain** instance. This API uses an asynchronous callback to
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-cert-function createX509CertChain(inStream: EncodingBlob, callback: AsyncCallback<X509CertChain>): void--><!--Device-cert-function createX509CertChain(inStream: EncodingBlob, callback: AsyncCallback<X509CertChain>): void-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inStream | EncodingBlob | Yes | X.509 certificate serialization data. |
-| callback | AsyncCallback&lt;X509CertChain&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined**, and **data** is the **X509CertChain** instance created. Otherwise,**err** is an error object. |
+| inStream | [EncodingBlob](arkts-devicecertificate-encodingblob-i.md) | Yes | X.509 certificate serialization data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<X509CertChain> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the **X509CertChain** instance created. Otherwise,**err** is an error object. |
 
 **Error codes:**
 
@@ -254,12 +258,13 @@ cert.createX509CertChain(encodingBlob, (err, certChain) => {
 function createX509CertChain(certs: Array<X509Cert>): X509CertChain
 ```
 
-Creates an X.509 certificate chain object based on the specified certificates. This API returns the result
-synchronously.
+Creates an X.509 certificate chain object based on the specified certificates. This API returns the result synchronously.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-cert-function createX509CertChain(certs: Array<X509Cert>): X509CertChain--><!--Device-cert-function createX509CertChain(certs: Array<X509Cert>): X509CertChain-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -267,13 +272,13 @@ synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| certs | Array&lt;X509Cert&gt; | Yes | Array of X.509 certificates. |
+| certs | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<X509Cert> | Yes | Array of X.509 certificates. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| X509CertChain | **X509CertChain** object created. |
+| [X509CertChain](arkts-devicecertificate-x509certchain-i.md) | **X509CertChain** object created. |
 
 **Error codes:**
 

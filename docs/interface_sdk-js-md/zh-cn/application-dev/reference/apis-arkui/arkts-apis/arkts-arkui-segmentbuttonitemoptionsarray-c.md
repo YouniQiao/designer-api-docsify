@@ -2,15 +2,23 @@
 
 用于保存按钮信息的数组。
 
-> **说明：**
->
+> **说明：**  
+>  
 > SegmentButtonItemOptionsArray仅支持保存2到5个按钮信息元素。
 
 **继承/实现关系：** SegmentButtonItemOptionsArray extends [Array<SegmentButtonItemOptions>](Array<SegmentButtonItemOptions>)
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare class SegmentButtonItemOptionsArray extends Array<SegmentButtonItemOptions>--><!--Device-unnamed-declare class SegmentButtonItemOptionsArray extends Array<SegmentButtonItemOptions>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { CommonSegmentButtonOptions, SegmentButtonItemOptionsConstructorOptions, SegmentButtonIconTextItem, SegmentButtonItemOptions, SegmentButtonTextItem, CapsuleSegmentButtonOptions, SegmentButtonOptions, CapsuleSegmentButtonConstructionOptions, SegmentButtonItemTuple, SegmentButton, SegmentButtonItemArray, SegmentButtonItemOptionsArray, SegmentButtonIconItem, BorderRadiusMode, TabSegmentButtonConstructionOptions, TabSegmentButtonOptions, ItemRestriction, DimensionNoPercentage } from '@kit.ArkUI';
+```
 
 ## constructor
 
@@ -24,7 +32,9 @@ constructor(elements: SegmentButtonItemTuple)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SegmentButtonItemOptionsArray-constructor(elements: SegmentButtonItemTuple)--><!--Device-SegmentButtonItemOptionsArray-constructor(elements: SegmentButtonItemTuple)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,7 +42,7 @@ constructor(elements: SegmentButtonItemTuple)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| elements | SegmentButtonItemTuple | 是 | 按钮信息。 |
+| elements | [SegmentButtonItemTuple](arkts-arkui-segmentbuttonitemtuple-t.md) | 是 | 按钮信息。 |
 
 ## create
 
@@ -46,7 +56,9 @@ static create(elements: SegmentButtonItemTuple): SegmentButtonItemOptionsArray
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SegmentButtonItemOptionsArray-static create(elements: SegmentButtonItemTuple): SegmentButtonItemOptionsArray--><!--Device-SegmentButtonItemOptionsArray-static create(elements: SegmentButtonItemTuple): SegmentButtonItemOptionsArray-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,13 +66,13 @@ static create(elements: SegmentButtonItemTuple): SegmentButtonItemOptionsArray
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| elements | SegmentButtonItemTuple | 是 | 按钮信息。 |
+| elements | [SegmentButtonItemTuple](arkts-arkui-segmentbuttonitemtuple-t.md) | 是 | 按钮信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| SegmentButtonItemOptionsArray | 返回创建的SegmentButtonItemOptionsArray对象。 |
+| [SegmentButtonItemOptionsArray](arkts-arkui-segmentbuttonitemoptionsarray-c.md) | 返回创建的SegmentButtonItemOptionsArray对象。 |
 
 ## pop
 
@@ -74,7 +86,9 @@ pop(): SegmentButtonItemOptions | undefined
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SegmentButtonItemOptionsArray-pop(): SegmentButtonItemOptions | undefined--><!--Device-SegmentButtonItemOptionsArray-pop(): SegmentButtonItemOptions | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,7 +96,7 @@ pop(): SegmentButtonItemOptions | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| SegmentButtonItemOptions | Element removed from the array. |
+| [SegmentButtonItemOptions](arkts-arkui-segmentbuttonitemoptions-c.md) | Element removed from the array. |
 
 ## push
 
@@ -96,7 +110,9 @@ push(...items: SegmentButtonItemArray): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SegmentButtonItemOptionsArray-push(...items: SegmentButtonItemArray): number--><!--Device-SegmentButtonItemOptionsArray-push(...items: SegmentButtonItemArray): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,7 +120,7 @@ push(...items: SegmentButtonItemArray): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| items | SegmentButtonItemArray | 是 | 被添加的按钮信息数组。<br>默认值：0个被添加的按钮信息数组。 |
+| items | [SegmentButtonItemArray](arkts-arkui-segmentbuttonitemarray-t.md) | 是 | 被添加的按钮信息数组。<br>默认值：0个被添加的按钮信息数组。 |
 
 **返回值：**
 
@@ -124,7 +140,9 @@ shift(): SegmentButtonItemOptions | undefined
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SegmentButtonItemOptionsArray-shift(): SegmentButtonItemOptions | undefined--><!--Device-SegmentButtonItemOptionsArray-shift(): SegmentButtonItemOptions | undefined-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -132,7 +150,7 @@ shift(): SegmentButtonItemOptions | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| SegmentButtonItemOptions | Element removed from the array. |
+| [SegmentButtonItemOptions](arkts-arkui-segmentbuttonitemoptions-c.md) | Element removed from the array. |
 
 ## splice
 
@@ -146,7 +164,9 @@ splice(start: number, deleteCount: number, ...items: SegmentButtonItemOptions[])
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SegmentButtonItemOptionsArray-splice(start: number, deleteCount: number, ...items: SegmentButtonItemOptions[]): SegmentButtonItemOptions[]--><!--Device-SegmentButtonItemOptionsArray-splice(start: number, deleteCount: number, ...items: SegmentButtonItemOptions[]): SegmentButtonItemOptions[]-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -156,13 +176,13 @@ splice(start: number, deleteCount: number, ...items: SegmentButtonItemOptions[])
 | --- | --- | --- | --- |
 | start | number | 是 | 删除元素的起始位置。 |
 | deleteCount | number | 是 | 删除元素的数量。 |
-| items | SegmentButtonItemOptions[] | 是 | 从start开始要加入到数组中的元素。<br>默认值：不指定任何元素，将从数组中删除元素。 |
+| items | [SegmentButtonItemOptions](arkts-arkui-segmentbuttonitemoptions-c.md)[] | 是 | 从start开始要加入到数组中的元素。<br>默认值：不指定任何元素，将从数组中删除元素。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| SegmentButtonItemOptions[] | An array containing the removed elements. |
+| [SegmentButtonItemOptions](arkts-arkui-segmentbuttonitemoptions-c.md)[] | An array containing the removed elements. |
 
 ## unshift
 
@@ -176,7 +196,9 @@ unshift(...items: SegmentButtonItemArray): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SegmentButtonItemOptionsArray-unshift(...items: SegmentButtonItemArray): number--><!--Device-SegmentButtonItemOptionsArray-unshift(...items: SegmentButtonItemArray): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -184,7 +206,7 @@ unshift(...items: SegmentButtonItemArray): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| items | SegmentButtonItemArray | 是 | 添加的按钮信息数组。<br>默认值：0个被添加的按钮信息数组。 |
+| items | [SegmentButtonItemArray](arkts-arkui-segmentbuttonitemarray-t.md) | 是 | 添加的按钮信息数组。<br>默认值：0个被添加的按钮信息数组。 |
 
 **返回值：**
 

@@ -4,6 +4,8 @@ Enumerates the roles of the participants in a device-cloud share.
 
 **Since:** 11
 
+<!--Device-sharing-enum Role--><!--Device-sharing-enum Role-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **System API:** This is a system API.
@@ -18,6 +20,8 @@ Inviter, the one who shares data. Use the enum name rather than the enum value.
 
 **Since:** 11
 
+<!--Device-Role-ROLE_INVITER = 0--><!--Device-Role-ROLE_INVITER = 0-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **System API:** This is a system API.
@@ -31,6 +35,8 @@ ROLE_INVITEE = 1
 Invitee, the one who can use the shared data. Use the enum name rather than the enum value.
 
 **Since:** 11
+
+<!--Device-Role-ROLE_INVITEE = 1--><!--Device-Role-ROLE_INVITEE = 1-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 

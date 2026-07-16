@@ -12,8 +12,7 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 function setBluetoothScanMode(mode: ScanMode, duration: number): void
 ```
 
-Sets the Bluetooth scan mode for a device.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Sets the Bluetooth scan mode for a device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -25,13 +24,15 @@ On API 10 and above, the permission required by this interface is changed from U
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
+<!--Device-bluetoothManager-function setBluetoothScanMode(mode: ScanMode, duration: number): void--><!--Device-bluetoothManager-function setBluetoothScanMode(mode: ScanMode, duration: number): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | ScanMode | Yes | Indicates the Bluetooth scan mode to set, {@link ScanMode}. |
+| mode | [ScanMode](arkts-connectivity-scanmode-e.md) | Yes | Indicates the Bluetooth scan mode to set, {@link ScanMode}. |
 | duration | number | Yes | Indicates the duration in seconds, in which the host is discoverable. |
 
 **Error codes:**

@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-ssap-enum PropertyWriteType--><!--Device-ssap-enum PropertyWriteType-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## WRITE
@@ -18,6 +20,8 @@ WRITE = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PropertyWriteType-WRITE = 1--><!--Device-PropertyWriteType-WRITE = 1-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## WRITE_NO_RESPONSE
@@ -31,6 +35,8 @@ WRITE_NO_RESPONSE = 2
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PropertyWriteType-WRITE_NO_RESPONSE = 2--><!--Device-PropertyWriteType-WRITE_NO_RESPONSE = 2-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 

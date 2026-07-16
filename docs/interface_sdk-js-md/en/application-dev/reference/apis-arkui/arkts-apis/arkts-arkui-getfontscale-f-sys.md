@@ -18,8 +18,8 @@ Obtains the current font size scale factor.
 
 > **NOTE**
 
-> This API is a system API in API version 19 and earlier. Using this API requires the
-> [ohos.permission.UPDATE_CONFIGURATION](../../../../security/AccessToken/permissions-for-system-apps.md#ohospermissionupdate_configuration)
+> This API is a system API in API version 19 and earlier. Using this API requires the  
+> [ohos.permission.UPDATE_CONFIGURATION](../../../../security/AccessToken/permissions-for-system-apps.md#ohospermissionupdate_configuration)  
 > permission.
 
 <!--DelEnd-->
@@ -28,6 +28,8 @@ Obtains the current font size scale factor.
 
 **Required permissions:** 
 - API version 12 - 19: ohos.permission.UPDATE_CONFIGURATION
+
+<!--Device-uiAppearance-function getFontScale(): number--><!--Device-uiAppearance-function getFontScale(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.UiAppearance
 
@@ -44,7 +46,7 @@ Obtains the current font size scale factor.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 12 - 19 |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 - 19 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 - 19 |
 | [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
 
 **Example**

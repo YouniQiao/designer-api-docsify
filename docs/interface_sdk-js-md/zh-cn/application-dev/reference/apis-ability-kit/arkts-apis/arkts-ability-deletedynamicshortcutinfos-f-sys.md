@@ -1,5 +1,11 @@
 # deleteDynamicShortcutInfos（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { shortcutManager } from '@kit.AbilityKit';
+```
+
 ## deleteDynamicShortcutInfos
 
 ```TypeScript
@@ -12,6 +18,8 @@ function deleteDynamicShortcutInfos(bundleName: string, appIndex: number, userId
 
 **需要权限：** ohos.permission.MANAGE_SHORTCUTS or (ohos.permission.MANAGE_SHORTCUTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
+<!--Device-shortcutManager-function deleteDynamicShortcutInfos(bundleName: string, appIndex: int, userId: int, ids?: Array<string>): Promise<void>--><!--Device-shortcutManager-function deleteDynamicShortcutInfos(bundleName: string, appIndex: int, userId: int, ids?: Array<string>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **系统接口：** 此接口为系统接口。
@@ -23,13 +31,13 @@ function deleteDynamicShortcutInfos(bundleName: string, appIndex: number, userId
 | bundleName | string | 是 | 要删除的动态快捷方式所属的包名。 |
 | appIndex | number | 是 | 要删除的动态快捷方式所属的分身索引。支持取值为：1、2、3、4、5。 |
 | userId | number | 是 | 要删除的动态快捷方式所属的用户id。可以通过[getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)获取。默认值：调用方所在用户，取值范围：大于等于0。 |
-| ids | Array&lt;string&gt; | 否 | 要删除的动态快捷方式id列表。缺省或传入列表为空时，表示删除所有符合条件的动态快捷方式。 |
+| ids | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 否 | 要删除的动态快捷方式id列表。缺省或传入列表为空时，表示删除所有符合条件的动态快捷方式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

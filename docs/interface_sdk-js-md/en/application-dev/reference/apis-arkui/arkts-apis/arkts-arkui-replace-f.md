@@ -20,13 +20,15 @@ Replaces the current page with another one in the application and destroys the c
 
 **Substitutes:** replaceUrl(options:
 
+<!--Device-router-function replace(options: RouterOptions): void--><!--Device-router-function replace(options: RouterOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | RouterOptions | Yes | Description of the new page. |
+| options | [RouterOptions](arkts-arkui-routeroptions-i.md) | Yes | Description of the new page. |
 
 **Example**
 

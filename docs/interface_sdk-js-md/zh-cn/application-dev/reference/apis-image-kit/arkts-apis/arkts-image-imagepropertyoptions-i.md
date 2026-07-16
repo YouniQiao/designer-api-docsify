@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-image-interface ImagePropertyOptions--><!--Device-image-interface ImagePropertyOptions-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
+
+## 导入模块
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+```
 
 ## defaultValue
 
@@ -17,6 +25,8 @@ defaultValue?: string
 **类型：** string
 
 **起始版本：** 11
+
+<!--Device-ImagePropertyOptions-defaultValue?: string--><!--Device-ImagePropertyOptions-defaultValue?: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -31,6 +41,8 @@ index?: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-ImagePropertyOptions-index?: int--><!--Device-ImagePropertyOptions-index?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 

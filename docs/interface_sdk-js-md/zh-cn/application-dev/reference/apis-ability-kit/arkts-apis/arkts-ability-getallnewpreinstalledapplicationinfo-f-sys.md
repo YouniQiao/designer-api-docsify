@@ -1,5 +1,11 @@
 # getAllNewPreinstalledApplicationInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getAllNewPreinstalledApplicationInfo
 
 ```TypeScript
@@ -14,6 +20,8 @@ function getAllNewPreinstalledApplicationInfo(): Promise<Array<PreinstalledAppli
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bundleManager-function getAllNewPreinstalledApplicationInfo(): Promise<Array<PreinstalledApplicationInfo>>--><!--Device-bundleManager-function getAllNewPreinstalledApplicationInfo(): Promise<Array<PreinstalledApplicationInfo>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ function getAllNewPreinstalledApplicationInfo(): Promise<Array<PreinstalledAppli
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;PreinstalledApplicationInfo&gt;&gt; | Promise对象，设备OTA升级期间当前用户下新增的所有预置应用信息。 |
+| Promise<Array<PreinstalledApplicationInfo>> | Promise对象，设备OTA升级期间当前用户下新增的所有预置应用信息。 |
 
 **错误码：**
 

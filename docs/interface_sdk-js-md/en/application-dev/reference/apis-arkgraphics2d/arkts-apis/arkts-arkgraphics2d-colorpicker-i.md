@@ -1,9 +1,10 @@
 # ColorPicker
 
-A class used to obtain the color from an image. Before calling any method of ColorPicker, use createColorPicker to
-create a ColorPicker instance.
+A class used to obtain the color from an image. Before calling any method of ColorPicker, use createColorPicker to create a ColorPicker instance.
 
 **Since:** 9
+
+<!--Device-effectKit-interface ColorPicker--><!--Device-effectKit-interface ColorPicker-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -19,8 +20,7 @@ import { effectKit } from '@kit.ArkGraphics2D';
 getAverageColor(): Color
 ```
 
-Obtains the average color from the image and writes the result to a Color instance. This API returns the result
-synchronously.
+Obtains the average color from the image and writes the result to a Color instance. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -28,13 +28,15 @@ synchronously.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-ColorPicker-getAverageColor(): Color--><!--Device-ColorPicker-getAverageColor(): Color-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Color | Average color value. If the operation fails, null is returned. |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md) | Average color value. If the operation fails, null is returned. |
 
 **Example**
 
@@ -71,8 +73,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getHighestSaturationColor(): Color
 ```
 
-Obtains the color with the highest saturation from the image and writes the result to a Color instance. This API
-returns the result synchronously.
+Obtains the color with the highest saturation from the image and writes the result to a Color instance. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -80,13 +81,15 @@ returns the result synchronously.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-ColorPicker-getHighestSaturationColor(): Color--><!--Device-ColorPicker-getHighestSaturationColor(): Color-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Color | Color value of the color with the highest saturation. If the operation fails, null isreturned. |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md) | Color value of the color with the highest saturation. If the operation fails, null is returned. |
 
 **Example**
 
@@ -123,8 +126,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getLargestProportionColor(): Color
 ```
 
-Obtains the color with the largest proportion from the image and writes the result to a Color instance. This API
-returns the result synchronously.
+Obtains the color with the largest proportion from the image and writes the result to a Color instance. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -132,13 +134,15 @@ returns the result synchronously.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-ColorPicker-getLargestProportionColor(): Color--><!--Device-ColorPicker-getLargestProportionColor(): Color-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Color | Color value of the color with the largest proportion. If the operation fails, null isreturned. |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md) | Color value of the color with the largest proportion. If the operation fails, null is returned. |
 
 **Example**
 
@@ -175,8 +179,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getMainColor(): Promise<Color>
 ```
 
-Obtains the main color from the image and writes the result to a Color instance. This API uses a promise to
-return the result.
+Obtains the main color from the image and writes the result to a Color instance. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -184,13 +187,15 @@ return the result.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-ColorPicker-getMainColor(): Promise<Color>--><!--Device-ColorPicker-getMainColor(): Promise<Color>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Color&gt; | Promise used to return the color value of the main color. If the operation fails, anerror message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Color> | Promise used to return the color value of the main color. If the operation fails, an error message is returned. |
 
 **Example**
 
@@ -229,8 +234,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getMainColorSync(): Color
 ```
 
-Obtains the main color from the image and writes the result to a Color instance. This API returns the result
-synchronously.
+Obtains the main color from the image and writes the result to a Color instance. This API returns the result synchronously.
 
 **Since:** 9
 
@@ -238,13 +242,15 @@ synchronously.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-ColorPicker-getMainColorSync(): Color--><!--Device-ColorPicker-getMainColorSync(): Color-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Color | Color value of the main color. If the operation fails, null is returned. |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md) | Color value of the main color. If the operation fails, null is returned. |
 
 **Example**
 
@@ -281,14 +287,15 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getTopProportionColors(colorCount: number): Array<Color | null>
 ```
 
-Obtains a given number of colors with the top proportions in the image. This API returns the result
-synchronously.
+Obtains a given number of colors with the top proportions in the image. This API returns the result synchronously.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-ColorPicker-getTopProportionColors(colorCount: int): Array<Color | null>--><!--Device-ColorPicker-getTopProportionColors(colorCount: int): Array<Color | null>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -302,7 +309,7 @@ synchronously.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Color \| null&gt; | Array of colors, sorted by proportion.- If the number of colors obtained is less than the value of colorCount, the array size is the actual numberobtained.- If the colors fail to be obtained or the number of colors obtained is less than 1, [null] is returned.- If the value of colorCount is greater than 10, an array holding the first 10 colors with the topproportions is returned. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Color \| null> | Array of colors, sorted by proportion.  - If the number of colors obtained is less than the value of colorCount, the array size is the actual number obtained.  - If the colors fail to be obtained or the number of colors obtained is less than 1, [null] is returned.  - If the value of colorCount is greater than 10, an array holding the first 10 colors with the top proportions is returned. |
 
 **Example**
 
@@ -350,6 +357,8 @@ Determine whether the color is black or white or gray
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-ColorPicker-isBlackOrWhiteOrGrayColor(color: long): boolean--><!--Device-ColorPicker-isBlackOrWhiteOrGrayColor(color: long): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

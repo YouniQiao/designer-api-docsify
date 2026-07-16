@@ -4,6 +4,8 @@ Rotation Result.
 
 **Since:** 10
 
+<!--Device-componentUtils-interface RotateResult--><!--Device-componentUtils-interface RotateResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Unit: deg
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-RotateResult-angle: number--><!--Device-RotateResult-angle: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## centerX
@@ -49,6 +53,8 @@ Unit: vp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RotateResult-centerX: number--><!--Device-RotateResult-centerX: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,6 +76,8 @@ Unit: vp
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-RotateResult-centerY: number--><!--Device-RotateResult-centerY: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## x
@@ -87,6 +95,8 @@ X-coordinate of the rotation vector.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RotateResult-x: number--><!--Device-RotateResult-x: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -106,6 +116,8 @@ Y-coordinate of the rotation vector.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-RotateResult-y: number--><!--Device-RotateResult-y: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## z
@@ -123,6 +135,8 @@ Z coordinate of the rotation vector.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RotateResult-z: number--><!--Device-RotateResult-z: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

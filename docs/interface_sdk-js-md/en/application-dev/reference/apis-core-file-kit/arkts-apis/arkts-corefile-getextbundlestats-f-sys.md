@@ -12,14 +12,15 @@ import { storageStatistics } from '@kit.CoreFileKit';
 function getExtBundleStats(userId: number, businessName: string): Promise<ExtBundleStats>
 ```
 
-Obtains the space usage of a specified user, system application bundle name, or system service name. This API uses
-a promise to return the result.
+Obtains the space usage of a specified user, system application bundle name, or system service name. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-storageStatistics-function getExtBundleStats(userId: int, businessName: string): Promise<ExtBundleStats>--><!--Device-storageStatistics-function getExtBundleStats(userId: int, businessName: string): Promise<ExtBundleStats>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -36,7 +37,7 @@ a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ExtBundleStats&gt; | Promise used to return the space usage of a specified user, systemapplication bundle name, or system service name. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ExtBundleStats> | Promise used to return the space usage of a specified user, system application bundle name, or system service name. |
 
 **Error codes:**
 

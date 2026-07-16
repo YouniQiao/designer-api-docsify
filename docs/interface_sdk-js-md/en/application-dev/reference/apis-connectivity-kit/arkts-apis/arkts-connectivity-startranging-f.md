@@ -12,12 +12,7 @@ import { ranging } from '@kit.ConnectivityKit';
 function startRanging(params: RangingParams, callback: Callback<RangingResult>): void
 ```
 
-Initiates ranging with a specified device.
-If the link to the target device is already established, ranging starts directly.
-If not connected, this interface will:
-1. Attempt to establish connection and perform pairing/encryption.
-2. Query service to verify the device supports ranging. Initiate ranging upon confirmation.
-Ranging state updates are notified via onRangingStateChange callback.
+Initiates ranging with a specified device.If the link to the target device is already established, ranging starts directly.If not connected, this interface will:1. Attempt to establish connection and perform pairing/encryption.2. Query service to verify the device supports ranging. Initiate ranging upon confirmation.Ranging state updates are notified via onRangingStateChange callback.
 
 **Since:** 26.0.0
 
@@ -25,14 +20,16 @@ Ranging state updates are notified via onRangingStateChange callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ranging-function startRanging(params: RangingParams, callback: Callback<RangingResult>): void--><!--Device-ranging-function startRanging(params: RangingParams, callback: Callback<RangingResult>): void-End-->
+
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | RangingParams | Yes | Parameters for ranging. |
-| callback | Callback&lt;RangingResult&gt; | Yes | Indicates the callback for reporting the ranging result. |
+| params | [RangingParams](arkts-connectivity-rangingparams-i.md) | Yes | Parameters for ranging. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<RangingResult> | Yes | Indicates the callback for reporting the ranging result. |
 
 **Error codes:**
 

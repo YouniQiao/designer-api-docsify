@@ -18,6 +18,8 @@ Control if applications can use data on background.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function setBackgroundAllowed(isAllowed: boolean, callback: AsyncCallback<void>): void--><!--Device-policy-function setBackgroundAllowed(isAllowed: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Control if applications can use data on background.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isAllowed | boolean | Yes | Allow applications to use data on background. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of setBackgroundAllowed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of setBackgroundAllowed. |
 
 **Error codes:**
 
@@ -64,6 +66,8 @@ Control if applications can use data on background.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function setBackgroundAllowed(isAllowed: boolean): Promise<void>--><!--Device-policy-function setBackgroundAllowed(isAllowed: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -78,7 +82,7 @@ Control if applications can use data on background.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

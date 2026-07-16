@@ -1,5 +1,11 @@
 # @ohos.base
 
+## 导入模块
+
+```TypeScript
+import { Callback, BusinessError, ErrorCallback, AsyncCallback } from '@kit.BasicServicesKit';
+```
+
 ## 汇总
 
 ### 接口

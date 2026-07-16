@@ -4,7 +4,15 @@
 
 **起始版本：** 8
 
+<!--Device-uri-export class URI--><!--Device-uri-export class URI-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { uri } from '@kit.ArkTS';
+```
 
 ## addEncodedSegment
 
@@ -16,7 +24,9 @@ addEncodedSegment(pathSegment: string): URI
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-addEncodedSegment(pathSegment: string): URI--><!--Device-URI-addEncodedSegment(pathSegment: string): URI-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -30,7 +40,7 @@ addEncodedSegment(pathSegment: string): URI
 
 | 类型 | 说明 |
 | --- | --- |
-| URI | 返回已追加字段的URI对象。 |
+| [URI](arkts-arkts-uri-c.md) | 返回已追加字段的URI对象。 |
 
 **示例：**
 
@@ -51,7 +61,9 @@ addQueryValue(key: string, value: string): URI
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-addQueryValue(key: string, value: string): URI--><!--Device-URI-addQueryValue(key: string, value: string): URI-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -66,7 +78,7 @@ addQueryValue(key: string, value: string): URI
 
 | 类型 | 说明 |
 | --- | --- |
-| URI | 返回添加查询部分后的URI对象。 |
+| [URI](arkts-arkts-uri-c.md) | 返回添加查询部分后的URI对象。 |
 
 **示例：**
 
@@ -87,7 +99,9 @@ addSegment(pathSegment: string): URI
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-addSegment(pathSegment: string): URI--><!--Device-URI-addSegment(pathSegment: string): URI-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -101,7 +115,7 @@ addSegment(pathSegment: string): URI
 
 | 类型 | 说明 |
 | --- | --- |
-| URI | 返回已追加字段的URI对象。 |
+| [URI](arkts-arkts-uri-c.md) | 返回已追加字段的URI对象。 |
 
 **示例：**
 
@@ -122,7 +136,9 @@ checkHierarchical(): boolean
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-checkHierarchical(): boolean--><!--Device-URI-checkHierarchical(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -152,7 +168,9 @@ checkIsAbsolute(): boolean
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-checkIsAbsolute(): boolean--><!--Device-URI-checkIsAbsolute(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -182,7 +200,9 @@ checkOpaque(): boolean
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-checkOpaque(): boolean--><!--Device-URI-checkOpaque(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -212,7 +232,9 @@ checkRelative(): boolean
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-checkRelative(): boolean--><!--Device-URI-checkRelative(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -242,7 +264,9 @@ clearQuery(): URI
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-clearQuery(): URI--><!--Device-URI-clearQuery(): URI-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -250,7 +274,7 @@ clearQuery(): URI
 
 | 类型 | 说明 |
 | --- | --- |
-| URI | 返回一个已被清除查询部分的URI对象。 |
+| [URI](arkts-arkts-uri-c.md) | 返回一个已被清除查询部分的URI对象。 |
 
 **示例：**
 
@@ -270,7 +294,9 @@ constructor(uri: string)
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-constructor(uri: string)--><!--Device-URI-constructor(uri: string)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -309,7 +335,9 @@ static createFromParts(scheme: string, ssp: string, fragment: string): URI
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-static createFromParts(scheme: string, ssp: string, fragment: string): URI--><!--Device-URI-static createFromParts(scheme: string, ssp: string, fragment: string): URI-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -325,7 +353,7 @@ static createFromParts(scheme: string, ssp: string, fragment: string): URI
 
 | 类型 | 说明 |
 | --- | --- |
-| URI | 返回由给定协议、协议特定部分和片段创建的URI对象。 |
+| [URI](arkts-arkts-uri-c.md) | 返回由给定协议、协议特定部分和片段创建的URI对象。 |
 
 **示例：**
 
@@ -349,13 +377,15 @@ equals(other: URI): boolean
 
 **替代接口：** equalsTo
 
+<!--Device-URI-equals(other: URI): boolean--><!--Device-URI-equals(other: URI): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | URI | 是 | 需要比较的URI对象。 |
+| other | [URI](arkts-arkts-uri-c.md) | 是 | 需要比较的URI对象。 |
 
 **返回值：**
 
@@ -382,7 +412,9 @@ equalsTo(other: URI): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-equalsTo(other: URI): boolean--><!--Device-URI-equalsTo(other: URI): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -390,7 +422,7 @@ equalsTo(other: URI): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | URI | 是 | 需要比较的URI对象。 |
+| other | [URI](arkts-arkts-uri-c.md) | 是 | 需要比较的URI对象。 |
 
 **返回值：**
 
@@ -417,7 +449,9 @@ getBooleanQueryValue(key: string, defaultValue: boolean): boolean
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-getBooleanQueryValue(key: string, defaultValue: boolean): boolean--><!--Device-URI-getBooleanQueryValue(key: string, defaultValue: boolean): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -460,7 +494,9 @@ getLastSegment(): string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-getLastSegment(): string--><!--Device-URI-getLastSegment(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -488,7 +524,9 @@ getQueryNames(): string[]
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-getQueryNames(): string[]--><!--Device-URI-getQueryNames(): string[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -519,7 +557,9 @@ getQueryValue(key: string): string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-getQueryValue(key: string): string--><!--Device-URI-getQueryValue(key: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -558,7 +598,9 @@ getQueryValues(key: string): string[]
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-getQueryValues(key: string): string[]--><!--Device-URI-getQueryValues(key: string): string[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -593,7 +635,9 @@ getSegment(): string[]
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-getSegment(): string[]--><!--Device-URI-getSegment(): string[]-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -619,19 +663,21 @@ normalize(): URI
 
 规范化此URI的路径。
 
-> **说明：**
->
-> 如果此URI是不透明的，或者其路径已经是规范形式，则返回该URI。否则将构造一个新的URI，该URI与当前URI相同，唯一的区别是其路径通过规范化当前URI的路径来计算，具体规则如下：
->
-> 1.移除所有的 .（点）段。
->
-> 2.如果 ..（双点）段前面有一个非 .. 段，则将这两个段一起移除。重复此步骤，直到不再适用为止。
->
+> **说明：**  
+>  
+> 如果此URI是不透明的，或者其路径已经是规范形式，则返回该URI。否则将构造一个新的URI，该URI与当前URI相同，唯一的区别是其路径通过规范化当前URI的路径来计算，具体规则如下：  
+>  
+> 1.移除所有的 .（点）段。  
+>  
+> 2.如果 ..（双点）段前面有一个非 .. 段，则将这两个段一起移除。重复此步骤，直到不再适用为止。  
+>  
 > 如果路径规范化后以 ..（双点）段开头，这表明之前没有足够的非 .. 段可以移除，因此路径将以 .. 段开始。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-normalize(): URI--><!--Device-URI-normalize(): URI-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -639,7 +685,7 @@ normalize(): URI
 
 | 类型 | 说明 |
 | --- | --- |
-| URI | 返回一个path被规范化后的URI对象。 |
+| [URI](arkts-arkts-uri-c.md) | 返回一个path被规范化后的URI对象。 |
 
 **示例：**
 
@@ -667,7 +713,9 @@ toString(): string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-toString(): string--><!--Device-URI-toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -697,7 +745,9 @@ authority: string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-authority: string--><!--Device-URI-authority: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -713,7 +763,9 @@ encodedAuthority: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-encodedAuthority: string--><!--Device-URI-encodedAuthority: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -729,7 +781,9 @@ encodedFragment: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-encodedFragment: string--><!--Device-URI-encodedFragment: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -745,7 +799,9 @@ encodedPath: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-encodedPath: string--><!--Device-URI-encodedPath: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -761,7 +817,9 @@ encodedQuery: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-encodedQuery: string--><!--Device-URI-encodedQuery: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -777,7 +835,9 @@ encodedSSP: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-encodedSSP: string--><!--Device-URI-encodedSSP: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -793,7 +853,9 @@ encodedUserInfo: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-encodedUserInfo: string--><!--Device-URI-encodedUserInfo: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -809,7 +871,9 @@ fragment: string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-fragment: string--><!--Device-URI-fragment: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -825,7 +889,9 @@ host: string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-host: string--><!--Device-URI-host: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -841,7 +907,9 @@ path: string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-path: string--><!--Device-URI-path: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -857,7 +925,9 @@ port: string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-port: string--><!--Device-URI-port: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -873,7 +943,9 @@ query: string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-query: string--><!--Device-URI-query: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -889,7 +961,9 @@ scheme: string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-scheme: string--><!--Device-URI-scheme: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -905,7 +979,9 @@ ssp: string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-ssp: string--><!--Device-URI-ssp: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -921,7 +997,9 @@ userInfo: string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-URI-userInfo: string--><!--Device-URI-userInfo: string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

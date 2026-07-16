@@ -18,6 +18,8 @@ Stop DTMF(Dual Tone Multi Frequency).
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function stopDTMF(callId: int, callback: AsyncCallback<void>): void--><!--Device-call-function stopDTMF(callId: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Stop DTMF(Dual Tone Multi Frequency).
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | number | Yes | Indicates the identifier of the call. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of stopDTMF. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of stopDTMF. |
 
 **Error codes:**
 
@@ -69,6 +71,8 @@ Stop DTMF(Dual Tone Multi Frequency).
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function stopDTMF(callId: int): Promise<void>--><!--Device-call-function stopDTMF(callId: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -83,7 +87,7 @@ Stop DTMF(Dual Tone Multi Frequency).
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the stopDTMF. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the stopDTMF. |
 
 **Error codes:**
 

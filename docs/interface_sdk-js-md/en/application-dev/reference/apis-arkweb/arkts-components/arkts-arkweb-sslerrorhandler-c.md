@@ -4,6 +4,8 @@ Defines the ssl error request result, related to {@link onSslErrorEventReceive} 
 
 **Since:** 9
 
+<!--Device-unnamed-declare class SslErrorHandler--><!--Device-unnamed-declare class SslErrorHandler-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## constructor
@@ -17,6 +19,8 @@ Constructor.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SslErrorHandler-constructor()--><!--Device-SslErrorHandler-constructor()-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,6 +36,8 @@ Cancel this request.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SslErrorHandler-handleCancel(): void--><!--Device-SslErrorHandler-handleCancel(): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## handleCancel
@@ -40,10 +46,11 @@ Cancel this request.
 handleCancel(abortLoading: boolean): void
 ```
 
-ArkWeb has encountered an SSL certificate error, and this interface indicates whether to terminate or
-continue displaying the error to users.
+ArkWeb has encountered an SSL certificate error, and this interface indicates whether to terminate or continue displaying the error to users.
 
 **Since:** 20
+
+<!--Device-SslErrorHandler-handleCancel(abortLoading: boolean): void--><!--Device-SslErrorHandler-handleCancel(abortLoading: boolean): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -64,6 +71,8 @@ Confirm to use the SSL certificate.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SslErrorHandler-handleConfirm(): void--><!--Device-SslErrorHandler-handleConfirm(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

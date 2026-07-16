@@ -18,6 +18,8 @@ Unlock SIM card.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function unlockSimLock(slotId: int, lockInfo: PersoLockInfo, callback: AsyncCallback<LockStatusResponse>): void--><!--Device-sim-function unlockSimLock(slotId: int, lockInfo: PersoLockInfo, callback: AsyncCallback<LockStatusResponse>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -27,8 +29,8 @@ Unlock SIM card.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| lockInfo | PersoLockInfo | Yes | Indicates customized lock type information. |
-| callback | AsyncCallback&lt;LockStatusResponse&gt; | Yes | Indicates the callback used to obtain a responseto obtain the SIM card lock status for the specified card slot. |
+| lockInfo | [PersoLockInfo](arkts-telephony-persolockinfo-i-sys.md) | Yes | Indicates customized lock type information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<LockStatusResponse> | Yes | Indicates the callback used to obtain a response to obtain the SIM card lock status for the specified card slot. |
 
 **Error codes:**
 
@@ -73,6 +75,8 @@ Unlock SIM card.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function unlockSimLock(slotId: int, lockInfo: PersoLockInfo): Promise<LockStatusResponse>--><!--Device-sim-function unlockSimLock(slotId: int, lockInfo: PersoLockInfo): Promise<LockStatusResponse>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -82,13 +86,13 @@ Unlock SIM card.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| lockInfo | PersoLockInfo | Yes | Indicates customized lock type information. |
+| lockInfo | [PersoLockInfo](arkts-telephony-persolockinfo-i-sys.md) | Yes | Indicates customized lock type information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;LockStatusResponse&gt; | Returns the response to obtainthe SIM card lock status of the specified card slot. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<LockStatusResponse> | Returns the response to obtain the SIM card lock status of the specified card slot. |
 
 **Error codes:**
 

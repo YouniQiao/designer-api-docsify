@@ -4,6 +4,8 @@ class of print extensionAbility.
 
 **Since:** 14
 
+<!--Device-unnamed-declare class PrintExtensionAbility--><!--Device-unnamed-declare class PrintExtensionAbility-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Called once to remove the print job has been started.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PrintExtensionAbility-public onCancelPrintJob(jobInfo: print.PrintJob): void--><!--Device-PrintExtensionAbility-public onCancelPrintJob(jobInfo: print.PrintJob): void-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
@@ -43,6 +47,8 @@ Called once to connect to the specific printer.
 **Since:** 14
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PrintExtensionAbility-onConnectPrinter(printerId: int): void--><!--Device-PrintExtensionAbility-onConnectPrinter(printerId: int): void-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -78,13 +84,15 @@ Called once to initialize the extensionAbility.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PrintExtensionAbility-onCreate(want: Want): void--><!--Device-PrintExtensionAbility-onCreate(want: Want): void-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | call print page want params. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | call print page want params. |
 
 **Example**
 
@@ -113,6 +121,8 @@ Called once to finalize the extensionAbility.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PrintExtensionAbility-onDestroy(): void--><!--Device-PrintExtensionAbility-onDestroy(): void-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Example**
@@ -139,6 +149,8 @@ Called once to disconnect to the specific printer.
 **Since:** 14
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PrintExtensionAbility-onDisconnectPrinter(printerId: int): void--><!--Device-PrintExtensionAbility-onDisconnectPrinter(printerId: int): void-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -174,6 +186,8 @@ Called once to request the printer's capabilities.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PrintExtensionAbility-public onRequestPrinterCapability(printerId: int): print.PrinterCapability--><!--Device-PrintExtensionAbility-public onRequestPrinterCapability(printerId: int): print.PrinterCapability-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
@@ -199,6 +213,8 @@ Called once to start to discover the printers connected with the device.
 **Since:** 14
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PrintExtensionAbility-onStartDiscoverPrinter(): void--><!--Device-PrintExtensionAbility-onStartDiscoverPrinter(): void-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -228,6 +244,8 @@ Called once to start print job.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PrintExtensionAbility-public onStartPrintJob(jobInfo: print.PrintJob): void--><!--Device-PrintExtensionAbility-public onStartPrintJob(jobInfo: print.PrintJob): void-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
@@ -247,6 +265,8 @@ Called once to stop discovering the printer.
 **Since:** 14
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PrintExtensionAbility-onStopDiscoverPrinter(): void--><!--Device-PrintExtensionAbility-onStopDiscoverPrinter(): void-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -277,6 +297,8 @@ Indicates print service extension ability context.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PrintExtensionAbility-context: PrintExtensionContext--><!--Device-PrintExtensionAbility-context: PrintExtensionContext-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 

@@ -1,5 +1,11 @@
 # terminateMission（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+```
+
 ## terminateMission
 
 ```TypeScript
@@ -11,6 +17,8 @@ function terminateMission(missionId: number): Promise<void>
 **起始版本：** 13
 
 **需要权限：** ohos.permission.KILL_APP_PROCESSES
+
+<!--Device-appManager-function terminateMission(missionId: int): Promise<void>--><!--Device-appManager-function terminateMission(missionId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -26,7 +34,7 @@ function terminateMission(missionId: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

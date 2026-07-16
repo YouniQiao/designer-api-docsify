@@ -18,19 +18,21 @@ Create a VPN connection using the VpnExtensionContext.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-vpnExtension-function createVpnConnection(context: VpnExtensionContext): VpnConnection--><!--Device-vpnExtension-function createVpnConnection(context: VpnExtensionContext): VpnConnection-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | VpnExtensionContext | Yes | Indicates the context of application or capability. |
+| context | [VpnExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-vpnextensioncontext-t.md) | Yes | Indicates the context of application or capability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| VpnConnection | the VpnConnection of the construct VpnConnection instance. |
+| [VpnConnection](arkts-network-vpnconnection-i.md) | the VpnConnection of the construct VpnConnection instance. |
 
 **Error codes:**
 

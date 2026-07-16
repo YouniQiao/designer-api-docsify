@@ -1,5 +1,11 @@
 # deleteExcludeDates
 
+## 导入模块
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+```
+
 ## deleteExcludeDates
 
 ```TypeScript
@@ -9,6 +15,8 @@ function deleteExcludeDates(reminderId: number): Promise<void>
 为指定id的周期性的日历提醒，删除设置的所有不提醒日期。使用Promise异步回调。
 
 **起始版本：** 12
+
+<!--Device-reminderAgentManager-function deleteExcludeDates(reminderId: int): Promise<void>--><!--Device-reminderAgentManager-function deleteExcludeDates(reminderId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -22,7 +30,7 @@ function deleteExcludeDates(reminderId: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

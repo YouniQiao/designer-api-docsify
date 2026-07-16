@@ -16,13 +16,15 @@ Creates an AVMetadataExtractor instance. This API uses a promise to return the r
 
 **Since:** 11
 
+<!--Device-media-function createAVMetadataExtractor(): Promise<AVMetadataExtractor>--><!--Device-media-function createAVMetadataExtractor(): Promise<AVMetadataExtractor>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVMetadataExtractor&gt; | Promise used to return the AVMetadataExtractor instance. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AVMetadataExtractor> | Promise used to return the AVMetadataExtractor instance. |
 
 **Error codes:**
 
@@ -60,13 +62,15 @@ Creates an AVMetadataExtractor instance. This API uses an asynchronous callback 
 
 **Since:** 11
 
+<!--Device-media-function createAVMetadataExtractor(callback: AsyncCallback<AVMetadataExtractor>): void--><!--Device-media-function createAVMetadataExtractor(callback: AsyncCallback<AVMetadataExtractor>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;AVMetadataExtractor&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined** and **data** is the AVMetadataExtractor instance created; otherwise,**err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AVMetadataExtractor> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the AVMetadataExtractor instance created; otherwise,**err** is an error object. |
 
 **Error codes:**
 

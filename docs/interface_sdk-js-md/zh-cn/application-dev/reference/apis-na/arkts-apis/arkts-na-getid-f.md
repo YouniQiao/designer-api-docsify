@@ -12,14 +12,16 @@ function getId(wallpaperType: WallpaperType, callback: AsyncCallback<number>): v
 
 **废弃版本：** 9
 
+<!--Device-wallpaper-function getId(wallpaperType: WallpaperType, callback: AsyncCallback<number>): void--><!--Device-wallpaper-function getId(wallpaperType: WallpaperType, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wallpaperType | WallpaperType | 是 |  |
-| callback | AsyncCallback&lt;number&gt; | 是 |  |
+| wallpaperType | [WallpaperType](arkts-na-wallpapertype-e.md) | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 |  |
 
 **示例：**
 
@@ -49,19 +51,21 @@ function getId(wallpaperType: WallpaperType): Promise<number>
 
 **废弃版本：** 9
 
+<!--Device-wallpaper-function getId(wallpaperType: WallpaperType): Promise<number>--><!--Device-wallpaper-function getId(wallpaperType: WallpaperType): Promise<number>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wallpaperType | WallpaperType | 是 |  |
+| wallpaperType | [WallpaperType](arkts-na-wallpapertype-e.md) | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | 壁纸的ID。如果配置了这种壁纸类型的壁纸就返回一个大于等于0的数，否则返回-1。取值范围是-1到（2^31-1）。 |
+| Promise<number> | 壁纸的ID。如果配置了这种壁纸类型的壁纸就返回一个大于等于0的数，否则返回-1。取值范围是-1到（2^31-1）。 |
 
 **示例：**
 

@@ -4,6 +4,8 @@ Enumerates the priority levels for video recording quality.
 
 **Since:** 14
 
+<!--Device-camera-enum QualityPrioritization--><!--Device-camera-enum QualityPrioritization-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## HIGH_QUALITY
@@ -18,6 +20,8 @@ Prioritizes high-quality video recording.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-QualityPrioritization-HIGH_QUALITY = 0--><!--Device-QualityPrioritization-HIGH_QUALITY = 0-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## POWER_BALANCE
@@ -31,6 +35,8 @@ Prioritizes video recording quality while balancing power consumption.
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-QualityPrioritization-POWER_BALANCE = 1--><!--Device-QualityPrioritization-POWER_BALANCE = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

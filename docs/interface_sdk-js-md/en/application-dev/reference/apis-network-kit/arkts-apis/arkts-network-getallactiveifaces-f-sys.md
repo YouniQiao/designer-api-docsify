@@ -18,6 +18,8 @@ Gets the names of all active network interfaces.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-ethernet-function getAllActiveIfaces(callback: AsyncCallback<Array<string>>): void--><!--Device-ethernet-function getAllActiveIfaces(callback: AsyncCallback<Array<string>>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Gets the names of all active network interfaces.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | the callback of getAllActiveIfaces. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | the callback of getAllActiveIfaces. |
 
 **Error codes:**
 
@@ -69,6 +71,8 @@ Gets the names of all active network interfaces.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-ethernet-function getAllActiveIfaces(): Promise<Array<string>>--><!--Device-ethernet-function getAllActiveIfaces(): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
@@ -77,7 +81,7 @@ Gets the names of all active network interfaces.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | the promise returned by the function. |
 
 **Error codes:**
 

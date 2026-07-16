@@ -1,5 +1,11 @@
 # unsubscribe（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
+```
+
 ## unsubscribe
 
 ```TypeScript
@@ -11,6 +17,8 @@ function unsubscribe(): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.READ_DFX_SYSEVENT
+
+<!--Device-hiSysEvent-function unsubscribe(): void--><!--Device-hiSysEvent-function unsubscribe(): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 

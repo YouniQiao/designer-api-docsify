@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface PostProcessSettings--><!--Device-unnamed-export interface PostProcessSettings-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## bloom
@@ -17,6 +19,8 @@ bloom?: BloomSettings
 **类型：** BloomSettings
 
 **起始版本：** 18
+
+<!--Device-PostProcessSettings-bloom?: BloomSettings--><!--Device-PostProcessSettings-bloom?: BloomSettings-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -34,6 +38,8 @@ colorFringe?: ColorFringeSettings
 
 **起始版本：** 22
 
+<!--Device-PostProcessSettings-colorFringe?: ColorFringeSettings--><!--Device-PostProcessSettings-colorFringe?: ColorFringeSettings-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## toneMapping
@@ -47,6 +53,8 @@ toneMapping?: ToneMappingSettings
 **类型：** ToneMappingSettings
 
 **起始版本：** 12
+
+<!--Device-PostProcessSettings-toneMapping?: ToneMappingSettings--><!--Device-PostProcessSettings-toneMapping?: ToneMappingSettings-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -63,6 +71,8 @@ vignette?: VignetteSettings
 **默认值：** 暗角默认启用
 
 **起始版本：** 22
+
+<!--Device-PostProcessSettings-vignette?: VignetteSettings--><!--Device-PostProcessSettings-vignette?: VignetteSettings-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

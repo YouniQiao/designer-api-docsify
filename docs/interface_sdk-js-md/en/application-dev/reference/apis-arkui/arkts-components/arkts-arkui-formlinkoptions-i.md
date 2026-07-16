@@ -4,6 +4,8 @@ Defines the FormLink options.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface FormLinkOptions--><!--Device-unnamed-declare interface FormLinkOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## abilityName
@@ -24,6 +26,8 @@ This API can be used in ArkTS widgets since API version 10.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-FormLinkOptions-abilityName?: string--><!--Device-FormLinkOptions-abilityName?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## action
@@ -34,16 +38,9 @@ action: string
 
 Action type.
 
-- **"router"**: redirection to the specified UIAbility of the widget provider.
-- **"message"**: custom message. If this type of action is triggered, the
-[onFormEvent()](../../apis-form-kit/arkts-apis/arkts-form-formextensionability-c.md#onformevent-1)
-lifecycle callback of the provider FormExtensionAbility is called.
-- **"call"**: launch of the widget provider in the background. If this type of action is triggered, the specified
-UIAbility (whose launch type must be [singleton](../../../../application-models/uiability-launch-type.md#singleton)
-of the widget provider is started in the background, but not displayed in the foreground. This action type requires
-that the widget provider should have the
-[ohos.permission.KEEP_BACKGROUND_RUNNING](../../../../security/AccessToken/permissions-for-all.md#ohospermissionkeep_background_running)
-permission.
+- **"router"**: redirection to the specified UIAbility of the widget provider.  
+- **"message"**: custom message. If this type of action is triggered, the [onFormEvent()](../../apis-form-kit/arkts-apis/arkts-form-formextensionability-c.md#onformevent-1)lifecycle callback of the provider FormExtensionAbility is called.  
+- **"call"**: launch of the widget provider in the background. If this type of action is triggered, the specified UIAbility (whose launch type must be [singleton](../../../../application-models/uiability-launch-type.md#singleton)of the widget provider is started in the background, but not displayed in the foreground. This action type requires that the widget provider should have the [ohos.permission.KEEP_BACKGROUND_RUNNING](../../../../security/AccessToken/permissions-for-all.md#ohospermissionkeep_background_running)permission.
 
 **NOTE**
 
@@ -58,6 +55,8 @@ This API can be used in ArkTS widgets since API version 10.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-FormLinkOptions-action: string--><!--Device-FormLinkOptions-action: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -79,6 +78,8 @@ This API can be used in ArkTS widgets since API version 10.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-FormLinkOptions-bundleName?: string--><!--Device-FormLinkOptions-bundleName?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## moduleName
@@ -99,6 +100,8 @@ This API can be used in ArkTS widgets since API version 10.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-FormLinkOptions-moduleName?: string--><!--Device-FormLinkOptions-moduleName?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## params
@@ -107,8 +110,7 @@ This API can be used in ArkTS widgets since API version 10.
 params?: Object
 ```
 
-Additional parameters carried in the current action. The value is a key-value pair in JSON format. For the **"call"
-** action type, the **method** parameter must be set and its value type must be string.
+Additional parameters carried in the current action. The value is a key-value pair in JSON format. For the **"call"** action type, the **method** parameter must be set and its value type must be string.
 
 **NOTE**
 
@@ -124,6 +126,8 @@ This API can be used in ArkTS widgets since API version 10.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-FormLinkOptions-params?: Object--><!--Device-FormLinkOptions-params?: Object-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## uri
@@ -132,8 +136,7 @@ This API can be used in ArkTS widgets since API version 10.
 uri?: string
 ```
 
-URI of the target UIAbility when action is **"router"**. If both **uri** and **abilityName** are set,
-**abilityName** takes precedence.
+URI of the target UIAbility when action is **"router"**. If both **uri** and **abilityName** are set,**abilityName** takes precedence.
 
 This API can be used in ArkTS widgets since API version 11.
 
@@ -144,6 +147,8 @@ This API can be used in ArkTS widgets since API version 11.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-FormLinkOptions-uri?: string--><!--Device-FormLinkOptions-uri?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

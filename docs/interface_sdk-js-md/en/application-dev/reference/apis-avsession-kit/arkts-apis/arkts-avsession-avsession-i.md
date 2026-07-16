@@ -4,6 +4,8 @@ AVSession object.
 
 **Since:** 10
 
+<!--Device-avSession-interface AVSession--><!--Device-avSession-interface AVSession-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## Modules to Import
@@ -22,13 +24,15 @@ Activate the session, indicating that the session can accept control commands
 
 **Since:** 10
 
+<!--Device-AVSession-activate(callback: AsyncCallback<void>): void--><!--Device-AVSession-activate(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | The asyncCallback triggered when the session is activated. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The asyncCallback triggered when the session is activated. |
 
 **Error codes:**
 
@@ -49,13 +53,15 @@ Activate the session, indicating that the session can accept control commands
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-activate(): Promise<void>--><!--Device-AVSession-activate(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void result promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void result promise when executed successfully |
 
 **Error codes:**
 
@@ -74,13 +80,15 @@ Deactivate the session, indicating that the session not ready to accept control 
 
 **Since:** 10
 
+<!--Device-AVSession-deactivate(callback: AsyncCallback<void>): void--><!--Device-AVSession-deactivate(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | The asyncCallback triggered when the session is deactivated. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The asyncCallback triggered when the session is deactivated. |
 
 **Error codes:**
 
@@ -101,13 +109,15 @@ Deactivate the session, indicating that the session not ready to accept control 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-deactivate(): Promise<void>--><!--Device-AVSession-deactivate(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 **Error codes:**
 
@@ -126,13 +136,15 @@ Destroy this session, the server will clean up the session resources
 
 **Since:** 10
 
+<!--Device-AVSession-destroy(callback: AsyncCallback<void>): void--><!--Device-AVSession-destroy(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -153,13 +165,15 @@ Destroy this session, the server will clean up the session resources
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-destroy(): Promise<void>--><!--Device-AVSession-destroy(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 **Error codes:**
 
@@ -178,6 +192,8 @@ Dispatch the session event of this session.
 
 **Since:** 10
 
+<!--Device-AVSession-dispatchSessionEvent(event: string, args: {[key: string]: Object}, callback: AsyncCallback<void>): void--><!--Device-AVSession-dispatchSessionEvent(event: string, args: {[key: string]: Object}, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -186,7 +202,7 @@ Dispatch the session event of this session.
 | --- | --- | --- | --- |
 | event | string | Yes | Session event name to dispatch |
 | args | {[key: string]: Object} | Yes | The parameters of session event |
-| callback | AsyncCallback&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -208,6 +224,8 @@ Dispatch the session event of this session.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-dispatchSessionEvent(event: string, args: {[key: string]: Object}): Promise<void>--><!--Device-AVSession-dispatchSessionEvent(event: string, args: {[key: string]: Object}): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -221,7 +239,7 @@ Dispatch the session event of this session.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 **Error codes:**
 
@@ -243,6 +261,8 @@ Enable desktop lyric for this session.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVSession-enableDesktopLyric(enable: boolean): Promise<void>--><!--Device-AVSession-enableDesktopLyric(enable: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -255,7 +275,7 @@ Enable desktop lyric for this session.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 **Error codes:**
 
@@ -271,10 +291,11 @@ Enable desktop lyric for this session.
 getAVCastController(callback: AsyncCallback<AVCastController>): void
 ```
 
-Get the cast controller when the session is casted to remote device.
-If the avsession is not under casting state, the controller will return null.
+Get the cast controller when the session is casted to remote device.If the avsession is not under casting state, the controller will return null.
 
 **Since:** 10
+
+<!--Device-AVSession-getAVCastController(callback: AsyncCallback<AVCastController>): void--><!--Device-AVSession-getAVCastController(callback: AsyncCallback<AVCastController>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -282,7 +303,7 @@ If the avsession is not under casting state, the controller will return null.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;AVCastController&gt; | Yes | async callback for the AVCastController. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AVCastController> | Yes | async callback for the AVCastController. |
 
 **Error codes:**
 
@@ -297,12 +318,13 @@ If the avsession is not under casting state, the controller will return null.
 getAVCastController(): Promise<AVCastController>
 ```
 
-Get the cast controller when the session is casted to remote device.
-If the avsession is not under casting state, the controller will return null.
+Get the cast controller when the session is casted to remote device.If the avsession is not under casting state, the controller will return null.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-getAVCastController(): Promise<AVCastController>--><!--Device-AVSession-getAVCastController(): Promise<AVCastController>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -310,7 +332,7 @@ If the avsession is not under casting state, the controller will return null.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVCastController&gt; | Promise for the AVCastController |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AVCastController> | Promise for the AVCastController |
 
 **Error codes:**
 
@@ -331,13 +353,15 @@ Get all the current virtual display information for extended display.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-getAllCastDisplays(): Promise<Array<CastDisplayInfo>>--><!--Device-AVSession-getAllCastDisplays(): Promise<Array<CastDisplayInfo>>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.ExtendedDisplayCast
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;CastDisplayInfo&gt;&gt; | Promise for the CastDisplayInfo |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<CastDisplayInfo>> | Promise for the CastDisplayInfo |
 
 **Error codes:**
 
@@ -356,13 +380,15 @@ Get the current session's own controller
 
 **Since:** 10
 
+<!--Device-AVSession-getController(callback: AsyncCallback<AVSessionController>): void--><!--Device-AVSession-getController(callback: AsyncCallback<AVSessionController>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;AVSessionController&gt; | Yes | async callback for the AVSessionController. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AVSessionController> | Yes | async callback for the AVSessionController. |
 
 **Error codes:**
 
@@ -383,13 +409,15 @@ Get the current session's own controller
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-getController(): Promise<AVSessionController>--><!--Device-AVSession-getController(): Promise<AVSessionController>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVSessionController&gt; | Promise for the AVSessionController |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AVSessionController> | Promise for the AVSessionController |
 
 **Error codes:**
 
@@ -410,13 +438,15 @@ Get desktop lyric state such as lock state for this session.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVSession-getDesktopLyricState(): Promise<DesktopLyricState>--><!--Device-AVSession-getDesktopLyricState(): Promise<DesktopLyricState>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DesktopLyricState&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DesktopLyricState> | void promise when executed successfully |
 
 **Error codes:**
 
@@ -437,13 +467,15 @@ Get output device information
 
 **Since:** 10
 
+<!--Device-AVSession-getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void--><!--Device-AVSession-getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;OutputDeviceInfo&gt; | Yes | async callback for the OutputDeviceInfo. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<OutputDeviceInfo> | Yes | async callback for the OutputDeviceInfo. |
 
 **Error codes:**
 
@@ -464,13 +496,15 @@ Get output device information
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-getOutputDevice(): Promise<OutputDeviceInfo>--><!--Device-AVSession-getOutputDevice(): Promise<OutputDeviceInfo>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OutputDeviceInfo&gt; | Promise for the OutputDeviceInfo |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<OutputDeviceInfo> | Promise for the OutputDeviceInfo |
 
 **Error codes:**
 
@@ -491,13 +525,15 @@ Get output device information
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-getOutputDeviceSync(): OutputDeviceInfo--><!--Device-AVSession-getOutputDeviceSync(): OutputDeviceInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| OutputDeviceInfo | the OutputDeviceInfo |
+| [OutputDeviceInfo](arkts-avsession-outputdeviceinfo-i.md) | the OutputDeviceInfo |
 
 **Error codes:**
 
@@ -518,13 +554,15 @@ Query desktop lyric visible state for this session.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVSession-isDesktopLyricVisible(): Promise<boolean>--><!--Device-AVSession-isDesktopLyricVisible(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | return desktop lyric visible state |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | return desktop lyric visible state |
 
 **Error codes:**
 
@@ -541,12 +579,13 @@ Query desktop lyric visible state for this session.
 off(type: 'play', callback?: () => void): void
 ```
 
-Unregister play command callback.
-When canceling the callback, need to update the supported commands list.
+Unregister play command callback.When canceling the callback, need to update the supported commands list.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-off(type: 'play', callback?: () => void): void--><!--Device-AVSession-off(type: 'play', callback?: () => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -555,7 +594,7 @@ When canceling the callback, need to update the supported commands list.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'play' | Yes | Command to register 'play'. |
-| callback | () =&gt; void | No | Used to handle ('play') command |
+| callback | () => void | No | Used to handle ('play') command |
 
 **Error codes:**
 
@@ -571,12 +610,13 @@ When canceling the callback, need to update the supported commands list.
 off(type: 'pause', callback?: () => void): void
 ```
 
-Unregister pause command callback.
-When canceling the callback, need to update the supported commands list.
+Unregister pause command callback.When canceling the callback, need to update the supported commands list.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-off(type: 'pause', callback?: () => void): void--><!--Device-AVSession-off(type: 'pause', callback?: () => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -585,7 +625,7 @@ When canceling the callback, need to update the supported commands list.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pause' | Yes | Command to register 'pause'. |
-| callback | () =&gt; void | No | Used to handle ('pause') command |
+| callback | () => void | No | Used to handle ('pause') command |
 
 **Error codes:**
 
@@ -601,12 +641,13 @@ When canceling the callback, need to update the supported commands list.
 off(type: 'stop', callback?: () => void): void
 ```
 
-Unregister stop command callback.
-When canceling the callback, need to update the supported commands list.
+Unregister stop command callback.When canceling the callback, need to update the supported commands list.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-off(type: 'stop', callback?: () => void): void--><!--Device-AVSession-off(type: 'stop', callback?: () => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -615,7 +656,7 @@ When canceling the callback, need to update the supported commands list.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stop' | Yes | Command to register 'stop'. |
-| callback | () =&gt; void | No | Used to handle ('stop') command |
+| callback | () => void | No | Used to handle ('stop') command |
 
 **Error codes:**
 
@@ -631,12 +672,13 @@ When canceling the callback, need to update the supported commands list.
 off(type: 'playNext', callback?: () => void): void
 ```
 
-Unregister playNext command callback.
-When canceling the callback, need to update the supported commands list.
+Unregister playNext command callback.When canceling the callback, need to update the supported commands list.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-off(type: 'playNext', callback?: () => void): void--><!--Device-AVSession-off(type: 'playNext', callback?: () => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -645,7 +687,7 @@ When canceling the callback, need to update the supported commands list.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playNext' | Yes | Command to register 'playNext'. |
-| callback | () =&gt; void | No | Used to handle ('playNext') command |
+| callback | () => void | No | Used to handle ('playNext') command |
 
 **Error codes:**
 
@@ -661,12 +703,13 @@ When canceling the callback, need to update the supported commands list.
 off(type: 'playPrevious', callback?: () => void): void
 ```
 
-Unregister playPrevious command callback.
-When canceling the callback, need to update the supported commands list.
+Unregister playPrevious command callback.When canceling the callback, need to update the supported commands list.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-off(type: 'playPrevious', callback?: () => void): void--><!--Device-AVSession-off(type: 'playPrevious', callback?: () => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -675,7 +718,7 @@ When canceling the callback, need to update the supported commands list.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playPrevious' | Yes | Command to register 'playPrevious'. |
-| callback | () =&gt; void | No | Used to handle ('playPrevious') command |
+| callback | () => void | No | Used to handle ('playPrevious') command |
 
 **Error codes:**
 
@@ -691,12 +734,13 @@ When canceling the callback, need to update the supported commands list.
 off(type: 'fastForward', callback?: () => void): void
 ```
 
-Unregister fastForward command callback.
-When canceling the callback, need to update the supported commands list.
+Unregister fastForward command callback.When canceling the callback, need to update the supported commands list.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-off(type: 'fastForward', callback?: () => void): void--><!--Device-AVSession-off(type: 'fastForward', callback?: () => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -705,7 +749,7 @@ When canceling the callback, need to update the supported commands list.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fastForward' | Yes | Command to register 'fastForward'. |
-| callback | () =&gt; void | No | Used to handle ('fastForward') command |
+| callback | () => void | No | Used to handle ('fastForward') command |
 
 **Error codes:**
 
@@ -721,12 +765,13 @@ When canceling the callback, need to update the supported commands list.
 off(type: 'rewind', callback?: () => void): void
 ```
 
-Unregister rewind command callback.
-When canceling the callback, need to update the supported commands list.
+Unregister rewind command callback.When canceling the callback, need to update the supported commands list.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-off(type: 'rewind', callback?: () => void): void--><!--Device-AVSession-off(type: 'rewind', callback?: () => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -735,7 +780,7 @@ When canceling the callback, need to update the supported commands list.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'rewind' | Yes | Command to register 'rewind'. |
-| callback | () =&gt; void | No | Used to handle ('rewind') command |
+| callback | () => void | No | Used to handle ('rewind') command |
 
 **Error codes:**
 
@@ -761,6 +806,8 @@ Unregister playFromAssetId command callback.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'playFromAssetId', callback?: (assetId: number) => void): void--><!--Device-AVSession-off(type: 'playFromAssetId', callback?: (assetId: number) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -768,7 +815,7 @@ Unregister playFromAssetId command callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playFromAssetId' | Yes | Command to register 'playFromAssetId'. |
-| callback | (assetId: number) =&gt; void | No | Used to handle ('playFromAssetId') command |
+| callback | (assetId: number) => void | No | Used to handle ('playFromAssetId') command |
 
 **Error codes:**
 
@@ -790,6 +837,8 @@ Unsubscribes from playWithAssetId events.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-AVSession-off(type: 'playWithAssetId', callback?: Callback<string>): void--><!--Device-AVSession-off(type: 'playWithAssetId', callback?: Callback<string>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -797,7 +846,7 @@ Unsubscribes from playWithAssetId events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playWithAssetId' | Yes | Event type. |
-| callback | Callback&lt;string&gt; | No | Callback used to handle the 'playWithAssetId' command. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<string> | No | Callback used to handle the 'playWithAssetId' command. |
 
 **Error codes:**
 
@@ -818,6 +867,8 @@ Unregister seek command callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'seek', callback?: (time: long) => void): void--><!--Device-AVSession-off(type: 'seek', callback?: (time: long) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -825,7 +876,7 @@ Unregister seek command callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'seek' | Yes | Registration Type 'seek' |
-| callback | (time: number) =&gt; void | No | Used to handle seek command.The callback provides the seek time(ms) |
+| callback | (time: number) => void | No | Used to handle seek command.The callback provides the seek time(ms) |
 
 **Error codes:**
 
@@ -847,6 +898,8 @@ Unregister setSpeed command callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'setSpeed', callback?: (speed: double) => void): void--><!--Device-AVSession-off(type: 'setSpeed', callback?: (speed: double) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -854,7 +907,7 @@ Unregister setSpeed command callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setSpeed' | Yes | Registration Type 'setSpeed' |
-| callback | (speed: number) =&gt; void | No | Used to handle setSpeed command.The callback provides the speed value |
+| callback | (speed: number) => void | No | Used to handle setSpeed command.The callback provides the speed value |
 
 **Error codes:**
 
@@ -876,6 +929,8 @@ Unregister setLoopMode command callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'setLoopMode', callback?: (mode: LoopMode) => void): void--><!--Device-AVSession-off(type: 'setLoopMode', callback?: (mode: LoopMode) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -883,7 +938,7 @@ Unregister setLoopMode command callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setLoopMode' | Yes | Registration Type 'setLoopMode' |
-| callback | (mode: LoopMode) =&gt; void | No | Used to handle setLoopMode command.The callback provides the {@link LoopMode} |
+| callback | (mode: LoopMode) => void | No | Used to handle setLoopMode command.The callback provides the {@link LoopMode} |
 
 **Error codes:**
 
@@ -905,6 +960,8 @@ Unregister setTargetLoopMode command callback
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-AVSession-off(type: 'setTargetLoopMode', callback?: Callback<LoopMode>): void--><!--Device-AVSession-off(type: 'setTargetLoopMode', callback?: Callback<LoopMode>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -912,7 +969,7 @@ Unregister setTargetLoopMode command callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setTargetLoopMode' | Yes | Registration Type 'setTargetLoopMode' |
-| callback | Callback&lt;LoopMode&gt; | No | Used to handle setTargetLoopMode command.The callback provides the {@link LoopMode} |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<LoopMode> | No | Used to handle setTargetLoopMode command.The callback provides the {@link LoopMode} |
 
 **Error codes:**
 
@@ -933,6 +990,8 @@ Unregister toggle favorite command callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'toggleFavorite', callback?: (assetId: string) => void): void--><!--Device-AVSession-off(type: 'toggleFavorite', callback?: (assetId: string) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -940,7 +999,7 @@ Unregister toggle favorite command callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'toggleFavorite' | Yes | Registration Type 'toggleFavorite' |
-| callback | (assetId: string) =&gt; void | No | Used to handle toggleFavorite command.The callback providesthe assetId for which the favorite status needs to be switched. |
+| callback | (assetId: string) => void | No | Used to handle toggleFavorite command.The callback provides the assetId for which the favorite status needs to be switched. |
 
 **Error codes:**
 
@@ -962,6 +1021,8 @@ Unregister media key handling callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'handleKeyEvent', callback?: (event: KeyEvent) => void): void--><!--Device-AVSession-off(type: 'handleKeyEvent', callback?: (event: KeyEvent) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -969,7 +1030,7 @@ Unregister media key handling callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'handleKeyEvent' | Yes | Registration Type 'handleKeyEvent' |
-| callback | (event: KeyEvent) =&gt; void | No | Used to handle key events.The callback provides the KeyEvent |
+| callback | (event: KeyEvent) => void | No | Used to handle key events.The callback provides the KeyEvent |
 
 **Error codes:**
 
@@ -991,6 +1052,8 @@ Unregister session output device change callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void--><!--Device-AVSession-off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -998,7 +1061,7 @@ Unregister session output device change callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'outputDeviceChange' | Yes | Registration Type 'outputDeviceChange' |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | No | Used to handle output device changed.The callback provide the new device info {@link OutputDeviceInfo} and related connection state {@linkConnectionState}. |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) => void | No | Used to handle output device changed.The callback provide the new device info {@link OutputDeviceInfo} and related connection state {@link ConnectionState}. |
 
 **Error codes:**
 
@@ -1020,6 +1083,8 @@ Unregister session custom command change callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'commonCommand', callback?: (command: string, args: {[key: string]: Object}) => void): void--><!--Device-AVSession-off(type: 'commonCommand', callback?: (command: string, args: {[key: string]: Object}) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1027,7 +1092,7 @@ Unregister session custom command change callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'commonCommand' | Yes | Registration Type 'commonCommand' |
-| callback | (command: string, args: {[key: string]: Object}) =&gt; void | No | Used to cancel a specific listenerThe callback provide the command name and command args |
+| callback | (command: string, args: {[key: string]: Object}) => void | No | Used to cancel a specific listener The callback provide the command name and command args |
 
 **Error codes:**
 
@@ -1049,6 +1114,8 @@ Unregister the item to play from the playlist change callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'skipToQueueItem', callback?: (itemId: int) => void): void--><!--Device-AVSession-off(type: 'skipToQueueItem', callback?: (itemId: int) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1056,7 +1123,7 @@ Unregister the item to play from the playlist change callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'skipToQueueItem' | Yes | Registration Type 'skipToQueueItem' |
-| callback | (itemId: number) =&gt; void | No | Used to handle the item to be played.The callback provide the new device info {@link OutputDeviceInfo} |
+| callback | (itemId: number) => void | No | Used to handle the item to be played.The callback provide the new device info {@link OutputDeviceInfo} |
 
 **Error codes:**
 
@@ -1078,6 +1145,8 @@ Unregister answer command callback.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'answer', callback?: Callback<void>): void--><!--Device-AVSession-off(type: 'answer', callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1085,7 +1154,7 @@ Unregister answer command callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'answer' | Yes | Command to register 'answer'. |
-| callback | Callback&lt;void&gt; | No | Used to handle ('answer') command |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | Used to handle ('answer') command |
 
 **Error codes:**
 
@@ -1107,6 +1176,8 @@ Unregister hangUp command callback.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'hangUp', callback?: Callback<void>): void--><!--Device-AVSession-off(type: 'hangUp', callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1114,7 +1185,7 @@ Unregister hangUp command callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hangUp' | Yes | Command to register 'hangUp'. |
-| callback | Callback&lt;void&gt; | No | Used to handle ('hangUp') command |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | Used to handle ('hangUp') command |
 
 **Error codes:**
 
@@ -1136,6 +1207,8 @@ Unregister toggleCallMute command callback.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'toggleCallMute', callback?: Callback<void>): void--><!--Device-AVSession-off(type: 'toggleCallMute', callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1143,13 +1216,13 @@ Unregister toggleCallMute command callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'toggleCallMute' | Yes | Command to register 'toggleCallMute'. |
-| callback | Callback&lt;void&gt; | No | Used to handle ('toggleCallMute') command |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | Used to handle ('toggleCallMute') command |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified.2.Incorrectparameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
@@ -1165,6 +1238,8 @@ Unregister listener for cast display information changed.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-off(type: 'castDisplayChange', callback?: Callback<CastDisplayInfo>): void--><!--Device-AVSession-off(type: 'castDisplayChange', callback?: Callback<CastDisplayInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.ExtendedDisplayCast
 
 **Parameters:**
@@ -1172,7 +1247,7 @@ Unregister listener for cast display information changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castDisplayChange' | Yes | Type of the 'castDisplayChange' to listen for. |
-| callback | Callback&lt;CastDisplayInfo&gt; | No | Callback used to return cast display information. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CastDisplayInfo> | No | Callback used to return cast display information. |
 
 **Error codes:**
 
@@ -1194,6 +1269,8 @@ Unsubscribes from custom data changes.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-AVSession-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void--><!--Device-AVSession-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -1201,7 +1278,7 @@ Unsubscribes from custom data changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | Yes | Custom data type. |
-| callback | Callback&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to return the custom data. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Record<string, Object>> | No | Callback used to return the custom data. |
 
 **Error codes:**
 
@@ -1222,13 +1299,15 @@ Unregister desktop lyric state changed callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVSession-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void--><!--Device-AVSession-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;DesktopLyricState&gt; | No | a callback to receive desktop lyric state. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DesktopLyricState> | No | a callback to receive desktop lyric state. |
 
 **Error codes:**
 
@@ -1249,13 +1328,15 @@ Unregister desktop lyric visible state change callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVSession-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void--><!--Device-AVSession-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;boolean&gt; | No | a callback to receive desktop lyric window visible state. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | No | a callback to receive desktop lyric window visible state. |
 
 **Error codes:**
 
@@ -1270,10 +1351,11 @@ Unregister desktop lyric visible state change callback.
 offFastForward(callback?: TwoParamCallback<number, CommandInfo>): void
 ```
 
-Unregister fastForward command callback.
-When canceling the callback, need to update the supported commands list.
+Unregister fastForward command callback.When canceling the callback, need to update the supported commands list.
 
 **Since:** 22
+
+<!--Device-AVSession-offFastForward(callback?: TwoParamCallback<long, CommandInfo>): void--><!--Device-AVSession-offFastForward(callback?: TwoParamCallback<long, CommandInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1281,7 +1363,7 @@ When canceling the callback, need to update the supported commands list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | TwoParamCallback&lt;number, CommandInfo&gt; | No | Used to handle ('fastForward') command |
+| callback | [TwoParamCallback](arkts-avsession-twoparamcallback-t.md)<number, CommandInfo> | No | Used to handle ('fastForward') command |
 
 **Error codes:**
 
@@ -1296,10 +1378,11 @@ When canceling the callback, need to update the supported commands list.
 offPlay(callback?: Callback<CommandInfo>): void
 ```
 
-Unregister play command callback.
-When canceling the callback, need to update the supported commands list.
+Unregister play command callback.When canceling the callback, need to update the supported commands list.
 
 **Since:** 22
+
+<!--Device-AVSession-offPlay(callback?: Callback<CommandInfo>): void--><!--Device-AVSession-offPlay(callback?: Callback<CommandInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1307,7 +1390,7 @@ When canceling the callback, need to update the supported commands list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;CommandInfo&gt; | No | Used to handle ('play') command |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CommandInfo> | No | Used to handle ('play') command |
 
 **Error codes:**
 
@@ -1322,10 +1405,11 @@ When canceling the callback, need to update the supported commands list.
 offPlayNext(callback?: Callback<CommandInfo>): void
 ```
 
-Unregister playNext command callback.
-When canceling the callback, need to update the supported commands list.
+Unregister playNext command callback.When canceling the callback, need to update the supported commands list.
 
 **Since:** 22
+
+<!--Device-AVSession-offPlayNext(callback?: Callback<CommandInfo>): void--><!--Device-AVSession-offPlayNext(callback?: Callback<CommandInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1333,7 +1417,7 @@ When canceling the callback, need to update the supported commands list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;CommandInfo&gt; | No | Used to handle ('playNext') command |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CommandInfo> | No | Used to handle ('playNext') command |
 
 **Error codes:**
 
@@ -1348,10 +1432,11 @@ When canceling the callback, need to update the supported commands list.
 offPlayPrevious(callback?: Callback<CommandInfo>): void
 ```
 
-Unregister playPrevious command callback.
-When canceling the callback, need to update the supported commands list.
+Unregister playPrevious command callback.When canceling the callback, need to update the supported commands list.
 
 **Since:** 22
+
+<!--Device-AVSession-offPlayPrevious(callback?: Callback<CommandInfo>): void--><!--Device-AVSession-offPlayPrevious(callback?: Callback<CommandInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1359,7 +1444,7 @@ When canceling the callback, need to update the supported commands list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;CommandInfo&gt; | No | Used to handle ('playPrevious') command |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CommandInfo> | No | Used to handle ('playPrevious') command |
 
 **Error codes:**
 
@@ -1374,10 +1459,11 @@ When canceling the callback, need to update the supported commands list.
 offRewind(callback?: TwoParamCallback<number, CommandInfo>): void
 ```
 
-Unregister rewind command callback.
-When canceling the callback, need to update the supported commands list.
+Unregister rewind command callback.When canceling the callback, need to update the supported commands list.
 
 **Since:** 22
+
+<!--Device-AVSession-offRewind(callback?: TwoParamCallback<long, CommandInfo>): void--><!--Device-AVSession-offRewind(callback?: TwoParamCallback<long, CommandInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1385,7 +1471,7 @@ When canceling the callback, need to update the supported commands list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | TwoParamCallback&lt;number, CommandInfo&gt; | No | Used to handle ('rewind') command |
+| callback | [TwoParamCallback](arkts-avsession-twoparamcallback-t.md)<number, CommandInfo> | No | Used to handle ('rewind') command |
 
 **Error codes:**
 
@@ -1400,16 +1486,13 @@ When canceling the callback, need to update the supported commands list.
 on(type: 'play', callback: () => void): void
 ```
 
-Register play command callback.
-As long as it is registered, it means that the ability supports this command.
-If you cancel the callback, you need to call off {@link off}
-When canceling the callback, need to update the supported commands list.
-Each playback command only supports registering one callback,
-and the new callback will replace the previous one.
+Register play command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-on(type: 'play', callback: () => void): void--><!--Device-AVSession-on(type: 'play', callback: () => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1418,7 +1501,7 @@ and the new callback will replace the previous one.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'play' | Yes | Command to register 'play'. |
-| callback | () =&gt; void | Yes | Used to handle ('play') command |
+| callback | () => void | Yes | Used to handle ('play') command |
 
 **Error codes:**
 
@@ -1434,16 +1517,13 @@ and the new callback will replace the previous one.
 on(type: 'pause', callback: () => void): void
 ```
 
-Register pause command callback.
-As long as it is registered, it means that the ability supports this command.
-If you cancel the callback, you need to call off {@link off}
-When canceling the callback, need to update the supported commands list.
-Each playback command only supports registering one callback,
-and the new callback will replace the previous one.
+Register pause command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-on(type: 'pause', callback: () => void): void--><!--Device-AVSession-on(type: 'pause', callback: () => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1452,7 +1532,7 @@ and the new callback will replace the previous one.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pause' | Yes | Command to register 'pause'. |
-| callback | () =&gt; void | Yes | Used to handle ('pause') command |
+| callback | () => void | Yes | Used to handle ('pause') command |
 
 **Error codes:**
 
@@ -1468,16 +1548,13 @@ and the new callback will replace the previous one.
 on(type: 'stop', callback: () => void): void
 ```
 
-Register stop command callback.
-As long as it is registered, it means that the ability supports this command.
-If you cancel the callback, you need to call off {@link off}
-When canceling the callback, need to update the supported commands list.
-Each playback command only supports registering one callback,
-and the new callback will replace the previous one.
+Register stop command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-on(type: 'stop', callback: () => void): void--><!--Device-AVSession-on(type: 'stop', callback: () => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1486,7 +1563,7 @@ and the new callback will replace the previous one.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stop' | Yes | Command to register 'stop'. |
-| callback | () =&gt; void | Yes | Used to handle ('stop') command |
+| callback | () => void | Yes | Used to handle ('stop') command |
 
 **Error codes:**
 
@@ -1502,16 +1579,13 @@ and the new callback will replace the previous one.
 on(type: 'playNext', callback: () => void): void
 ```
 
-Register playNext command callback.
-As long as it is registered, it means that the ability supports this command.
-If you cancel the callback, you need to call off {@link off}
-When canceling the callback, need to update the supported commands list.
-Each playback command only supports registering one callback,
-and the new callback will replace the previous one.
+Register playNext command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-on(type: 'playNext', callback: () => void): void--><!--Device-AVSession-on(type: 'playNext', callback: () => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1520,7 +1594,7 @@ and the new callback will replace the previous one.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playNext' | Yes | Command to register 'playNext'. |
-| callback | () =&gt; void | Yes | Used to handle ('playNext') command |
+| callback | () => void | Yes | Used to handle ('playNext') command |
 
 **Error codes:**
 
@@ -1536,16 +1610,13 @@ and the new callback will replace the previous one.
 on(type: 'playPrevious', callback: () => void): void
 ```
 
-Register playPrevious command callback.
-As long as it is registered, it means that the ability supports this command.
-If you cancel the callback, you need to call off {@link off}
-When canceling the callback, need to update the supported commands list.
-Each playback command only supports registering one callback,
-and the new callback will replace the previous one.
+Register playPrevious command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-on(type: 'playPrevious', callback: () => void): void--><!--Device-AVSession-on(type: 'playPrevious', callback: () => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1554,7 +1625,7 @@ and the new callback will replace the previous one.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playPrevious' | Yes | Command to register 'playPrevious'. |
-| callback | () =&gt; void | Yes | Used to handle ('playPrevious') command |
+| callback | () => void | Yes | Used to handle ('playPrevious') command |
 
 **Error codes:**
 
@@ -1570,16 +1641,13 @@ and the new callback will replace the previous one.
 on(type: 'fastForward', callback: (time ?: number) => void): void
 ```
 
-Register fastForward command callback.
-As long as it is registered, it means that the ability supports this command.
-If you cancel the callback, you need to call off {@link off}
-When canceling the callback, need to update the supported commands list.
-Each playback command only supports registering one callback,
-and the new callback will replace the previous one.
+Register fastForward command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-on(type: 'fastForward', callback: (time ?: long) => void): void--><!--Device-AVSession-on(type: 'fastForward', callback: (time ?: long) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1588,7 +1656,7 @@ and the new callback will replace the previous one.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fastForward' | Yes | Command to register 'fastForward'. |
-| callback | (time ?: number) =&gt; void | Yes | Used to handle ('fastForward') command, described by milliseconds. |
+| callback | (time ?: number) => void | Yes | Used to handle ('fastForward') command, described by milliseconds. |
 
 **Error codes:**
 
@@ -1604,16 +1672,13 @@ and the new callback will replace the previous one.
 on(type: 'rewind', callback: (time ?: number) => void): void
 ```
 
-Register rewind command callback.
-As long as it is registered, it means that the ability supports this command.
-If you cancel the callback, you need to call off {@link off}
-When canceling the callback, need to update the supported commands list.
-Each playback command only supports registering one callback,
-and the new callback will replace the previous one.
+Register rewind command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-on(type: 'rewind', callback: (time ?: long) => void): void--><!--Device-AVSession-on(type: 'rewind', callback: (time ?: long) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1622,7 +1687,7 @@ and the new callback will replace the previous one.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'rewind' | Yes | Command to register 'rewind'. |
-| callback | (time ?: number) =&gt; void | Yes | Used to handle ('rewind') command, described by milliseconds. |
+| callback | (time ?: number) => void | Yes | Used to handle ('rewind') command, described by milliseconds. |
 
 **Error codes:**
 
@@ -1638,12 +1703,7 @@ and the new callback will replace the previous one.
 on(type: 'playFromAssetId', callback: (assetId: number) => void): void
 ```
 
-Register playFromAssetId command callback.
-As long as it is registered, it means that the ability supports this command.
-If you cancel the callback, you need to call off {@link off}
-When canceling the callback, need to update the supported commands list.
-Each playback command only supports registering one callback,
-and the new callback will replace the previous one.
+Register playFromAssetId command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
 
 **Since:** 11
 
@@ -1653,6 +1713,8 @@ and the new callback will replace the previous one.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-on(type: 'playFromAssetId', callback: (assetId: number) => void): void--><!--Device-AVSession-on(type: 'playFromAssetId', callback: (assetId: number) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1660,7 +1722,7 @@ and the new callback will replace the previous one.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playFromAssetId' | Yes | Command to register 'playFromAssetId'. |
-| callback | (assetId: number) =&gt; void | Yes | Used to handle ('playFromAssetId') command |
+| callback | (assetId: number) => void | Yes | Used to handle ('playFromAssetId') command |
 
 **Error codes:**
 
@@ -1682,6 +1744,8 @@ Subscribes to playWithAssetId events.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-AVSession-on(type: 'playWithAssetId', callback: Callback<string>): void--><!--Device-AVSession-on(type: 'playWithAssetId', callback: Callback<string>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1689,7 +1753,7 @@ Subscribes to playWithAssetId events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playWithAssetId' | Yes | Event type. |
-| callback | Callback&lt;string&gt; | Yes | Callback used to handle the 'playWithAssetId' command. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<string> | Yes | Callback used to handle the 'playWithAssetId' command. |
 
 **Error codes:**
 
@@ -1710,6 +1774,8 @@ Register seek command callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-on(type: 'seek', callback: (time: long) => void): void--><!--Device-AVSession-on(type: 'seek', callback: (time: long) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1717,7 +1783,7 @@ Register seek command callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'seek' | Yes | Registration Type 'seek' |
-| callback | (time: number) =&gt; void | Yes | Used to handle seek command.The callback provides the seek time(ms) |
+| callback | (time: number) => void | Yes | Used to handle seek command.The callback provides the seek time(ms) |
 
 **Error codes:**
 
@@ -1739,6 +1805,8 @@ Register setSpeed command callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-on(type: 'setSpeed', callback: (speed: double) => void): void--><!--Device-AVSession-on(type: 'setSpeed', callback: (speed: double) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1746,7 +1814,7 @@ Register setSpeed command callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setSpeed' | Yes | Registration Type 'setSpeed' |
-| callback | (speed: number) =&gt; void | Yes | Used to handle setSpeed command.The callback provides the speed value |
+| callback | (speed: number) => void | Yes | Used to handle setSpeed command.The callback provides the speed value |
 
 **Error codes:**
 
@@ -1768,6 +1836,8 @@ Register setLoopMode command callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-on(type: 'setLoopMode', callback: (mode: LoopMode) => void): void--><!--Device-AVSession-on(type: 'setLoopMode', callback: (mode: LoopMode) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1775,7 +1845,7 @@ Register setLoopMode command callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setLoopMode' | Yes | Registration Type 'setLoopMode' |
-| callback | (mode: LoopMode) =&gt; void | Yes | Used to handle setLoopMode command.The callback provides the {@link LoopMode} |
+| callback | (mode: LoopMode) => void | Yes | Used to handle setLoopMode command.The callback provides the {@link LoopMode} |
 
 **Error codes:**
 
@@ -1791,12 +1861,13 @@ Register setLoopMode command callback
 on(type: 'setTargetLoopMode', callback: Callback<LoopMode>): void
 ```
 
-Register setTargetLoopMode command callback
-Application should change playmode to the loopmode which is requested.
+Register setTargetLoopMode command callback Application should change playmode to the loopmode which is requested.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-AVSession-on(type: 'setTargetLoopMode', callback: Callback<LoopMode>): void--><!--Device-AVSession-on(type: 'setTargetLoopMode', callback: Callback<LoopMode>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1805,7 +1876,7 @@ Application should change playmode to the loopmode which is requested.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setTargetLoopMode' | Yes | Registration Type 'setTargetLoopMode' |
-| callback | Callback&lt;LoopMode&gt; | Yes | Used to handle setTargetLoopMode command.The callback provides the {@link LoopMode} |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<LoopMode> | Yes | Used to handle setTargetLoopMode command.The callback provides the {@link LoopMode} |
 
 **Error codes:**
 
@@ -1826,6 +1897,8 @@ Register toggle favorite command callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-on(type: 'toggleFavorite', callback: (assetId: string) => void): void--><!--Device-AVSession-on(type: 'toggleFavorite', callback: (assetId: string) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1833,7 +1906,7 @@ Register toggle favorite command callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'toggleFavorite' | Yes | Registration Type 'toggleFavorite' |
-| callback | (assetId: string) =&gt; void | Yes | Used to handle toggleFavorite command.The callback providesthe assetId for which the favorite status needs to be switched. |
+| callback | (assetId: string) => void | Yes | Used to handle toggleFavorite command.The callback provides the assetId for which the favorite status needs to be switched. |
 
 **Error codes:**
 
@@ -1855,6 +1928,8 @@ Register media key handling callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-on(type: 'handleKeyEvent', callback: (event: KeyEvent) => void): void--><!--Device-AVSession-on(type: 'handleKeyEvent', callback: (event: KeyEvent) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1862,7 +1937,7 @@ Register media key handling callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'handleKeyEvent' | Yes | Registration Type 'handleKeyEvent' |
-| callback | (event: KeyEvent) =&gt; void | Yes | Used to handle key events.The callback provides the KeyEvent |
+| callback | (event: KeyEvent) => void | Yes | Used to handle key events.The callback provides the KeyEvent |
 
 **Error codes:**
 
@@ -1884,6 +1959,8 @@ Register session output device change callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void--><!--Device-AVSession-on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1891,7 +1968,7 @@ Register session output device change callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'outputDeviceChange' | Yes | Registration Type 'outputDeviceChange' |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | Yes | Used to handle output device changed.The callback provide the new device info {@link OutputDeviceInfo} and related connection state {@linkConnectionState}. |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) => void | Yes | Used to handle output device changed.The callback provide the new device info {@link OutputDeviceInfo} and related connection state {@link ConnectionState}. |
 
 **Error codes:**
 
@@ -1913,6 +1990,8 @@ Register session custom command change callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-on(type: 'commonCommand', callback: (command: string, args: {[key: string]: Object}) => void): void--><!--Device-AVSession-on(type: 'commonCommand', callback: (command: string, args: {[key: string]: Object}) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1920,7 +1999,7 @@ Register session custom command change callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'commonCommand' | Yes | Registration Type 'commonCommand' |
-| callback | (command: string, args: {[key: string]: Object}) =&gt; void | Yes | Used to handle event when the common command is receivedThe callback provide the command name and command args |
+| callback | (command: string, args: {[key: string]: Object}) => void | Yes | Used to handle event when the common command is received The callback provide the command name and command args |
 
 **Error codes:**
 
@@ -1942,6 +2021,8 @@ Register the item to play from the playlist change callback
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-on(type: 'skipToQueueItem', callback: (itemId: int) => void): void--><!--Device-AVSession-on(type: 'skipToQueueItem', callback: (itemId: int) => void): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -1949,7 +2030,7 @@ Register the item to play from the playlist change callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'skipToQueueItem' | Yes | Registration Type 'skipToQueueItem' |
-| callback | (itemId: number) =&gt; void | Yes | Used to handle the item to be played.The callback provide the new device info {@link OutputDeviceInfo} |
+| callback | (itemId: number) => void | Yes | Used to handle the item to be played.The callback provide the new device info {@link OutputDeviceInfo} |
 
 **Error codes:**
 
@@ -1965,13 +2046,13 @@ Register the item to play from the playlist change callback
 on(type: 'answer', callback: Callback<void>): void
 ```
 
-Register answer command callback.
-As long as it is registered, it means that the ability supports this command.
-If you cancel the callback, you need to call off {@link off}
+Register answer command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-on(type: 'answer', callback: Callback<void>): void--><!--Device-AVSession-on(type: 'answer', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1980,7 +2061,7 @@ If you cancel the callback, you need to call off {@link off}
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'answer' | Yes | Command to register 'answer'. |
-| callback | Callback&lt;void&gt; | Yes | Used to handle ('answer') command |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Used to handle ('answer') command |
 
 **Error codes:**
 
@@ -1996,13 +2077,13 @@ If you cancel the callback, you need to call off {@link off}
 on(type: 'hangUp', callback: Callback<void>): void
 ```
 
-Register hangUp command callback.
-As long as it is registered, it means that the ability supports this command.
-If you cancel the callback, you need to call off {@link off}
+Register hangUp command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-on(type: 'hangUp', callback: Callback<void>): void--><!--Device-AVSession-on(type: 'hangUp', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2011,7 +2092,7 @@ If you cancel the callback, you need to call off {@link off}
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hangUp' | Yes | Command to register 'hangUp'. |
-| callback | Callback&lt;void&gt; | Yes | Used to handle ('hangUp') command |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Used to handle ('hangUp') command |
 
 **Error codes:**
 
@@ -2027,13 +2108,13 @@ If you cancel the callback, you need to call off {@link off}
 on(type: 'toggleCallMute', callback: Callback<void>): void
 ```
 
-Register toggleCallMute command callback.
-As long as it is registered, it means that the ability supports this command.
-If you cancel the callback, you need to call off {@link off}
+Register toggleCallMute command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-on(type: 'toggleCallMute', callback: Callback<void>): void--><!--Device-AVSession-on(type: 'toggleCallMute', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2042,7 +2123,7 @@ If you cancel the callback, you need to call off {@link off}
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'toggleCallMute' | Yes | Command to register 'toggleCallMute'. |
-| callback | Callback&lt;void&gt; | Yes | Used to handle ('toggleCallMute') command |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Used to handle ('toggleCallMute') command |
 
 **Error codes:**
 
@@ -2064,6 +2145,8 @@ Register listener for cast display information changed.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-on(type: 'castDisplayChange', callback: Callback<CastDisplayInfo>): void--><!--Device-AVSession-on(type: 'castDisplayChange', callback: Callback<CastDisplayInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.ExtendedDisplayCast
 
 **Parameters:**
@@ -2071,7 +2154,7 @@ Register listener for cast display information changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castDisplayChange' | Yes | Type of the 'castDisplayChange' to listen for. |
-| callback | Callback&lt;CastDisplayInfo&gt; | Yes | Callback used to return cast display information. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CastDisplayInfo> | Yes | Callback used to return cast display information. |
 
 **Error codes:**
 
@@ -2093,6 +2176,8 @@ Register listener for custom data sent from remote device.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-AVSession-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void--><!--Device-AVSession-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -2100,7 +2185,7 @@ Register listener for custom data sent from remote device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | Yes | Type of the 'customDataChange' to listen for. |
-| callback | Callback&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Record<string, Object>> | Yes | Callback used to retrieve custom data. |
 
 **Error codes:**
 
@@ -2121,13 +2206,15 @@ Register desktop lyric state changed callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVSession-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void--><!--Device-AVSession-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;DesktopLyricState&gt; | Yes | a callback to receive desktop lyric state. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DesktopLyricState> | Yes | a callback to receive desktop lyric state. |
 
 **Error codes:**
 
@@ -2148,13 +2235,15 @@ Register desktop lyric visible state change callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVSession-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void--><!--Device-AVSession-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;boolean&gt; | Yes | a callback to receive desktop lyric window visible state. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | Yes | a callback to receive desktop lyric window visible state. |
 
 **Error codes:**
 
@@ -2169,10 +2258,11 @@ Register desktop lyric visible state change callback.
 onFastForward(callback: TwoParamCallback<number, CommandInfo>): void
 ```
 
-Register fastForward command callback.
-The application will receive forward time and {@link CommandInfo} from a controller.
+Register fastForward command callback.The application will receive forward time and {@link CommandInfo} from a controller.
 
 **Since:** 22
+
+<!--Device-AVSession-onFastForward(callback: TwoParamCallback<long, CommandInfo>): void--><!--Device-AVSession-onFastForward(callback: TwoParamCallback<long, CommandInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2180,7 +2270,7 @@ The application will receive forward time and {@link CommandInfo} from a control
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | TwoParamCallback&lt;number, CommandInfo&gt; | Yes | Used to handle ('fastForward') command, described bymilliseconds. |
+| callback | [TwoParamCallback](arkts-avsession-twoparamcallback-t.md)<number, CommandInfo> | Yes | Used to handle ('fastForward') command, described by milliseconds. |
 
 **Error codes:**
 
@@ -2195,10 +2285,11 @@ The application will receive forward time and {@link CommandInfo} from a control
 onPlay(callback: Callback<CommandInfo>): void
 ```
 
-Register play command callback.
-The application will receive {@link CommandInfo} from a controller.
+Register play command callback.The application will receive {@link CommandInfo} from a controller.
 
 **Since:** 22
+
+<!--Device-AVSession-onPlay(callback: Callback<CommandInfo>): void--><!--Device-AVSession-onPlay(callback: Callback<CommandInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2206,7 +2297,7 @@ The application will receive {@link CommandInfo} from a controller.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;CommandInfo&gt; | Yes | Used to handle ('play') command |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CommandInfo> | Yes | Used to handle ('play') command |
 
 **Error codes:**
 
@@ -2221,10 +2312,11 @@ The application will receive {@link CommandInfo} from a controller.
 onPlayNext(callback: Callback<CommandInfo>): void
 ```
 
-Register playNext command callback.
-The application will receive {@link CommandInfo} from a controller.
+Register playNext command callback.The application will receive {@link CommandInfo} from a controller.
 
 **Since:** 22
+
+<!--Device-AVSession-onPlayNext(callback: Callback<CommandInfo>): void--><!--Device-AVSession-onPlayNext(callback: Callback<CommandInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2232,7 +2324,7 @@ The application will receive {@link CommandInfo} from a controller.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;CommandInfo&gt; | Yes | Used to handle ('playNext') command |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CommandInfo> | Yes | Used to handle ('playNext') command |
 
 **Error codes:**
 
@@ -2247,12 +2339,13 @@ The application will receive {@link CommandInfo} from a controller.
 onPlayPrevious(callback: Callback<CommandInfo>): void
 ```
 
-Register playPrevious command callback.
-The application will receive {@link CommandInfo} from a controller.
+Register playPrevious command callback.The application will receive {@link CommandInfo} from a controller.
 
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-AVSession-onPlayPrevious(callback: Callback<CommandInfo>): void--><!--Device-AVSession-onPlayPrevious(callback: Callback<CommandInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2260,7 +2353,7 @@ The application will receive {@link CommandInfo} from a controller.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;CommandInfo&gt; | Yes | Used to handle ('playPrevious') command |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CommandInfo> | Yes | Used to handle ('playPrevious') command |
 
 **Error codes:**
 
@@ -2275,10 +2368,11 @@ The application will receive {@link CommandInfo} from a controller.
 onRewind(callback: TwoParamCallback<number, CommandInfo>): void
 ```
 
-Register rewind command callback.
-The application will receive rewind time and {@link CommandInfo} from a controller.
+Register rewind command callback.The application will receive rewind time and {@link CommandInfo} from a controller.
 
 **Since:** 22
+
+<!--Device-AVSession-onRewind(callback: TwoParamCallback<long, CommandInfo>): void--><!--Device-AVSession-onRewind(callback: TwoParamCallback<long, CommandInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2286,7 +2380,7 @@ The application will receive rewind time and {@link CommandInfo} from a controll
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | TwoParamCallback&lt;number, CommandInfo&gt; | Yes | Used to handle ('rewind') command, described bymilliseconds. |
+| callback | [TwoParamCallback](arkts-avsession-twoparamcallback-t.md)<number, CommandInfo> | Yes | Used to handle ('rewind') command, described by milliseconds. |
 
 **Error codes:**
 
@@ -2307,19 +2401,21 @@ Sends custom data to a remote device.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-AVSession-sendCustomData(data: Record<string, Object>): Promise<void>--><!--Device-AVSession-sendCustomData(data: Record<string, Object>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | Yes | Custom data populated by the application. |
+| data | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Object> | Yes | Custom data populated by the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2338,14 +2434,16 @@ Set the call state of this session.
 
 **Since:** 11
 
+<!--Device-AVSession-setAVCallState(state: AVCallState, callback: AsyncCallback<void>): void--><!--Device-AVSession-setAVCallState(state: AVCallState, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | AVCallState | Yes | {@link AVCallState} |
-| callback | AsyncCallback&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| state | [AVCallState](arkts-avsession-avcallstate-i.md) | Yes | {@link AVCallState} |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -2365,19 +2463,21 @@ Set the call state of this session.
 
 **Since:** 11
 
+<!--Device-AVSession-setAVCallState(state: AVCallState): Promise<void>--><!--Device-AVSession-setAVCallState(state: AVCallState): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | AVCallState | Yes | {@link AVCallState} |
+| state | [AVCallState](arkts-avsession-avcallstate-i.md) | Yes | {@link AVCallState} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 **Error codes:**
 
@@ -2393,10 +2493,11 @@ Set the call state of this session.
 setAVMetadata(data: AVMetadata, callback: AsyncCallback<void>): void
 ```
 
-Set the metadata of this session.
-In addition to the required properties, users can fill in partially supported properties
+Set the metadata of this session.In addition to the required properties, users can fill in partially supported properties
 
 **Since:** 10
+
+<!--Device-AVSession-setAVMetadata(data: AVMetadata, callback: AsyncCallback<void>): void--><!--Device-AVSession-setAVMetadata(data: AVMetadata, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2404,8 +2505,8 @@ In addition to the required properties, users can fill in partially supported pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | AVMetadata | Yes | { |
-| callback | AsyncCallback&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| data | [AVMetadata](arkts-avsession-avmetadata-i.md) | Yes | { |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -2421,12 +2522,13 @@ In addition to the required properties, users can fill in partially supported pr
 setAVMetadata(data: AVMetadata): Promise<void>
 ```
 
-Set the metadata of this session.
-In addition to the required properties, users can fill in partially supported properties
+Set the metadata of this session.In addition to the required properties, users can fill in partially supported properties
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-setAVMetadata(data: AVMetadata): Promise<void>--><!--Device-AVSession-setAVMetadata(data: AVMetadata): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2434,13 +2536,13 @@ In addition to the required properties, users can fill in partially supported pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | AVMetadata | Yes | { |
+| data | [AVMetadata](arkts-avsession-avmetadata-i.md) | Yes | { |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 **Error codes:**
 
@@ -2460,14 +2562,16 @@ Set the playback state of this session.
 
 **Since:** 10
 
+<!--Device-AVSession-setAVPlaybackState(state: AVPlaybackState, callback: AsyncCallback<void>): void--><!--Device-AVSession-setAVPlaybackState(state: AVPlaybackState, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | AVPlaybackState | Yes | { |
-| callback | AsyncCallback&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| state | [AVPlaybackState](arkts-avsession-avplaybackstate-i.md) | Yes | { |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -2489,19 +2593,21 @@ Set the playback state of this session.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-setAVPlaybackState(state: AVPlaybackState): Promise<void>--><!--Device-AVSession-setAVPlaybackState(state: AVPlaybackState): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | AVPlaybackState | Yes | { |
+| state | [AVPlaybackState](arkts-avsession-avplaybackstate-i.md) | Yes | { |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 **Error codes:**
 
@@ -2521,14 +2627,16 @@ Set the playlist of queueItem. Identifies the content of the playlist presented 
 
 **Since:** 10
 
+<!--Device-AVSession-setAVQueueItems(items: Array<AVQueueItem>, callback: AsyncCallback<void>): void--><!--Device-AVSession-setAVQueueItems(items: Array<AVQueueItem>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | Array&lt;AVQueueItem&gt; | Yes | An array of the AVQueueItem |
-| callback | AsyncCallback&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| items | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<AVQueueItem> | Yes | An array of the AVQueueItem |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
@@ -2550,19 +2658,21 @@ Set the playlist of queueItem. Identifies the content of the playlist presented 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-setAVQueueItems(items: Array<AVQueueItem>): Promise<void>--><!--Device-AVSession-setAVQueueItems(items: Array<AVQueueItem>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | Array&lt;AVQueueItem&gt; | Yes | An array of the AVQueueItem |
+| items | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<AVQueueItem> | Yes | An array of the AVQueueItem |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 **Error codes:**
 
@@ -2582,6 +2692,8 @@ Set the name of the playlist presented by this session.
 
 **Since:** 10
 
+<!--Device-AVSession-setAVQueueTitle(title: string, callback: AsyncCallback<void>): void--><!--Device-AVSession-setAVQueueTitle(title: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -2589,7 +2701,7 @@ Set the name of the playlist presented by this session.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | title | string | Yes | The name of the playlist |
-| callback | AsyncCallback&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
@@ -2611,6 +2723,8 @@ Set the name of the playlist presented by this session.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-setAVQueueTitle(title: string): Promise<void>--><!--Device-AVSession-setAVQueueTitle(title: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -2623,7 +2737,7 @@ Set the name of the playlist presented by this session.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 **Error codes:**
 
@@ -2639,14 +2753,13 @@ Set the name of the playlist presented by this session.
 setBackgroundPlayMode(mode: BackgroundPlayMode): Promise<void>
 ```
 
-Set the background playback mode.
-It is recommended that you associate it with the background playback switch in the app.
-If not set, the default value for 'audio' session is {@link ENABLE_BACKGROUND_PLAY} and
-the default value for 'video' session is {@link DISENABLE_BACKGROUND_PLAY}.
+Set the background playback mode.It is recommended that you associate it with the background playback switch in the app.If not set, the default value for 'audio' session is {@link ENABLE_BACKGROUND_PLAY} and the default value for 'video' session is {@link DISENABLE_BACKGROUND_PLAY}.
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVSession-setBackgroundPlayMode(mode: BackgroundPlayMode): Promise<void>--><!--Device-AVSession-setBackgroundPlayMode(mode: BackgroundPlayMode): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -2654,13 +2767,13 @@ the default value for 'video' session is {@link DISENABLE_BACKGROUND_PLAY}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | BackgroundPlayMode | Yes | Background play mode |
+| mode | [BackgroundPlayMode](arkts-avsession-backgroundplaymode-e.md) | Yes | Background play mode |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully. |
 
 **Error codes:**
 
@@ -2679,14 +2792,16 @@ Set the metadata related with current call.
 
 **Since:** 11
 
+<!--Device-AVSession-setCallMetadata(data: CallMetadata, callback: AsyncCallback<void>): void--><!--Device-AVSession-setCallMetadata(data: CallMetadata, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | CallMetadata | Yes | {@link CallMetadata} |
-| callback | AsyncCallback&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| data | [CallMetadata](arkts-avsession-callmetadata-i.md) | Yes | {@link CallMetadata} |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -2706,19 +2821,21 @@ Set the metadata related with current call.
 
 **Since:** 11
 
+<!--Device-AVSession-setCallMetadata(data: CallMetadata): Promise<void>--><!--Device-AVSession-setCallMetadata(data: CallMetadata): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | CallMetadata | Yes | {@link CallMetadata} |
+| data | [CallMetadata](arkts-avsession-callmetadata-i.md) | Yes | {@link CallMetadata} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 **Error codes:**
 
@@ -2740,19 +2857,21 @@ Set desktop lyric state such as lock state for this session.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVSession-setDesktopLyricState(state: DesktopLyricState): Promise<void>--><!--Device-AVSession-setDesktopLyricState(state: DesktopLyricState): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | DesktopLyricState | Yes | The desktop lyric state |
+| state | [DesktopLyricState](arkts-avsession-desktoplyricstate-i.md) | Yes | The desktop lyric state |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 **Error codes:**
 
@@ -2775,6 +2894,8 @@ Set desktop lyric visible state for this session.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVSession-setDesktopLyricVisible(visible: boolean): Promise<void>--><!--Device-AVSession-setDesktopLyricVisible(visible: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -2787,7 +2908,7 @@ Set desktop lyric visible state for this session.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 **Error codes:**
 
@@ -2808,6 +2929,8 @@ Set the custom media packets for this session.
 
 **Since:** 10
 
+<!--Device-AVSession-setExtras(extras: {[key: string]: Object}, callback: AsyncCallback<void>): void--><!--Device-AVSession-setExtras(extras: {[key: string]: Object}, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -2815,7 +2938,7 @@ Set the custom media packets for this session.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | extras | {[key: string]: Object} | Yes | The custom media packets |
-| callback | AsyncCallback&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
@@ -2837,6 +2960,8 @@ Set the custom media packets for this session.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-setExtras(extras: {[key: string]: Object}): Promise<void>--><!--Device-AVSession-setExtras(extras: {[key: string]: Object}): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
@@ -2849,7 +2974,7 @@ Set the custom media packets for this session.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 **Error codes:**
 
@@ -2869,14 +2994,16 @@ Set the ability to start the session corresponding to
 
 **Since:** 10
 
+<!--Device-AVSession-setLaunchAbility(ability: WantAgent, callback: AsyncCallback<void>): void--><!--Device-AVSession-setLaunchAbility(ability: WantAgent, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | WantAgent | Yes | The WantAgent for launch the ability |
-| callback | AsyncCallback&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| ability | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | The WantAgent for launch the ability |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -2898,19 +3025,21 @@ Set the ability to start the session corresponding to
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-setLaunchAbility(ability: WantAgent): Promise<void>--><!--Device-AVSession-setLaunchAbility(ability: WantAgent): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | WantAgent | Yes | The WantAgent for launch the ability |
+| ability | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | The WantAgent for launch the ability |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 **Error codes:**
 
@@ -2932,19 +3061,21 @@ Set media control types that can be displayed on the media center.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVSession-setMediaCenterControlType(type: Array<AVMediaCenterControlType>): Promise<void>--><!--Device-AVSession-setMediaCenterControlType(type: Array<AVMediaCenterControlType>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | Array&lt;AVMediaCenterControlType&gt; | Yes | The control types that can be displayed on the media center.If the priority of control type is not set, the media center will display based on {@link AVSessionType}.The control type set must be registered by {@link on}, the media center prioritizes displayingthe set control type. |
+| type | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<AVMediaCenterControlType> | Yes | The control types that can be displayed on the media center.If the priority of control type is not set, the media center will display based on {@link AVSessionType}.The control type set must be registered by {@link on}, the media center prioritizes displaying the set control type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully. |
 
 **Error codes:**
 
@@ -2967,19 +3098,21 @@ Set supported loop modes supplied by application.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-AVSession-setSupportedLoopModes(loopModes: Array<LoopMode>): Promise<void>--><!--Device-AVSession-setSupportedLoopModes(loopModes: Array<LoopMode>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| loopModes | Array&lt;LoopMode&gt; | Yes | supported loop modes |
+| loopModes | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<LoopMode> | Yes | supported loop modes |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 **Error codes:**
 
@@ -3002,19 +3135,21 @@ Set supported speeds supplied by application.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-AVSession-setSupportedPlaySpeeds(speeds: Array<double>): Promise<void>--><!--Device-AVSession-setSupportedPlaySpeeds(speeds: Array<double>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speeds | Array&lt;number&gt; | Yes | supported speeds |
+| speeds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | supported speeds |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -3033,13 +3168,15 @@ Stop current cast and disconnect device connection.
 
 **Since:** 10
 
+<!--Device-AVSession-stopCasting(callback: AsyncCallback<void>): void--><!--Device-AVSession-stopCasting(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | A callback instance used to return when cast stopped completed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | A callback instance used to return when cast stopped completed. |
 
 **Error codes:**
 
@@ -3059,13 +3196,15 @@ Stop current cast and disconnect device connection.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-stopCasting(): Promise<void>--><!--Device-AVSession-stopCasting(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void result promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void result promise when executed successfully |
 
 **Error codes:**
 
@@ -3087,6 +3226,8 @@ unique session Id
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVSession-readonly sessionId: string--><!--Device-AVSession-readonly sessionId: string-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## sessionTag
@@ -3103,6 +3244,8 @@ Current session tag.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-AVSession-readonly sessionTag: string--><!--Device-AVSession-readonly sessionTag: string-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## sessionType
@@ -3118,6 +3261,8 @@ Get current session type
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSession-readonly sessionType: AVSessionType--><!--Device-AVSession-readonly sessionType: AVSessionType-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 

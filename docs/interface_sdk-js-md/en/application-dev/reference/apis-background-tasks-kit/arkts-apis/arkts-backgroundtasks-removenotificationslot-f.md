@@ -16,6 +16,8 @@ Removes a specified notification slot. This API uses an asynchronous callback to
 
 **Since:** 9
 
+<!--Device-reminderAgentManager-function removeNotificationSlot(slotType: notification.SlotType, callback: AsyncCallback<void>): void--><!--Device-reminderAgentManager-function removeNotificationSlot(slotType: notification.SlotType, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 **Parameters:**
@@ -23,7 +25,7 @@ Removes a specified notification slot. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotType | notification.SlotType | Yes | Type of the notification slot. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result.If the notification slot is removed,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result.If the notification slot is removed,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -60,6 +62,8 @@ Removes a specified notification slot. This API uses a promise to return the res
 
 **Since:** 9
 
+<!--Device-reminderAgentManager-function removeNotificationSlot(slotType: notification.SlotType): Promise<void>--><!--Device-reminderAgentManager-function removeNotificationSlot(slotType: notification.SlotType): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 **Parameters:**
@@ -72,7 +76,7 @@ Removes a specified notification slot. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

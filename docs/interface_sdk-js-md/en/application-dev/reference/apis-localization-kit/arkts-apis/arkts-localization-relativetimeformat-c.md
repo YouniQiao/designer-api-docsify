@@ -8,6 +8,8 @@ Provides the relative time formatting capability.
 
 **Substitutes:** org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat)
 
+<!--Device-intl-export class RelativeTimeFormat--><!--Device-intl-export class RelativeTimeFormat-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
@@ -31,6 +33,8 @@ Creates a **RelativeTimeFormat** object.
 **Substitutes:** org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RelativeTimeFormat-constructor()--><!--Device-RelativeTimeFormat-constructor()-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -60,14 +64,16 @@ Creates a **RelativeTimeFormat** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RelativeTimeFormat-constructor(locale: string | Array<string>, options?: RelativeTimeFormatInputOptions)--><!--Device-RelativeTimeFormat-constructor(locale: string | Array<string>, options?: RelativeTimeFormatInputOptions)-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, thefirst valid locale ID is used. |
-| options | RelativeTimeFormatInputOptions | No | Options for creating a **RelativeTimeFormat** object. |
+| locale | string \| Array<string> | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
+| options | [RelativeTimeFormatInputOptions](arkts-localization-relativetimeformatinputoptions-i.md) | No | Options for creating a **RelativeTimeFormat** object. |
 
 **Example**
 
@@ -98,6 +104,8 @@ Formats a relative time.
 **Substitutes:** org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RelativeTimeFormat-format(value: double, unit: string): string--><!--Device-RelativeTimeFormat-format(value: double, unit: string): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -142,6 +150,8 @@ Formats the relative time
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RelativeTimeFormat-formatToParts(value: double, unit: string): Array<object>--><!--Device-RelativeTimeFormat-formatToParts(value: double, unit: string): Array<object>-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -155,7 +165,7 @@ Formats the relative time
 
 | Type | Description |
 | --- | --- |
-| Array&lt;object&gt; | Components of the formatted result. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<object> | Components of the formatted result. |
 
 **Example**
 
@@ -184,13 +194,15 @@ Defines the formatting options for a **RelativeTimeFormat** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RelativeTimeFormat-resolvedOptions(): RelativeTimeFormatResolvedOptions--><!--Device-RelativeTimeFormat-resolvedOptions(): RelativeTimeFormatResolvedOptions-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RelativeTimeFormatResolvedOptions | Options for the **RelativeTimeFormat** object. |
+| [RelativeTimeFormatResolvedOptions](arkts-localization-relativetimeformatresolvedoptions-i.md) | Options for the **RelativeTimeFormat** object. |
 
 **Example**
 

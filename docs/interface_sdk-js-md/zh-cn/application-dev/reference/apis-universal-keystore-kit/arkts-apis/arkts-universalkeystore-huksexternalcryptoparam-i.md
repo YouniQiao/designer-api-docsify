@@ -4,7 +4,15 @@
 
 **起始版本：** 22
 
+<!--Device-huksExternalCrypto-export interface HuksExternalCryptoParam--><!--Device-huksExternalCrypto-export interface HuksExternalCryptoParam-End-->
+
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
+
+## 导入模块
+
+```TypeScript
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
+```
 
 ## tag
 
@@ -17,6 +25,8 @@ tag: HuksExternalCryptoTag
 **类型：** HuksExternalCryptoTag
 
 **起始版本：** 22
+
+<!--Device-HuksExternalCryptoParam-tag: HuksExternalCryptoTag--><!--Device-HuksExternalCryptoParam-tag: HuksExternalCryptoTag-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -31,6 +41,8 @@ value: boolean | number | bigint | Uint8Array
 **类型：** boolean | number | bigint | Uint8Array
 
 **起始版本：** 22
+
+<!--Device-HuksExternalCryptoParam-value: boolean | int | bigint | Uint8Array--><!--Device-HuksExternalCryptoParam-value: boolean | int | bigint | Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 

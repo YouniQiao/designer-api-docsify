@@ -4,7 +4,15 @@ wantConstant模块提供want中操作want常数和解释Flags说明的能力。
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace wantConstant--><!--Device-unnamed-declare namespace wantConstant-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityBase
+
+## 导入模块
+
+```TypeScript
+import { wantConstant } from '@kit.AbilityKit';
+```
 
 ## 汇总
 

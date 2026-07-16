@@ -12,5 +12,7 @@ Defines a callback used to obtain a value.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-unnamed-export declare type GetterCallback<T> = () => T--><!--Device-unnamed-export declare type GetterCallback<T> = () => T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

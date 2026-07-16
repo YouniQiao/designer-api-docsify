@@ -1,5 +1,11 @@
 # startOptimizeSpace（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { cloudSync } from '@kit.CoreFileKit';
+```
+
 ## startOptimizeSpace
 
 ```TypeScript
@@ -14,6 +20,8 @@ startOptimizeSpace的使用和stopOptimizeSpace方法调用一一对应，重复
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-cloudSync-function startOptimizeSpace(optimizePara: OptimizeSpaceParam, callback?: Callback<OptimizeSpaceProgress>): Promise<void>--><!--Device-cloudSync-function startOptimizeSpace(optimizePara: OptimizeSpaceParam, callback?: Callback<OptimizeSpaceProgress>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -22,21 +30,21 @@ startOptimizeSpace的使用和stopOptimizeSpace方法调用一一对应，重复
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| optimizePara | OptimizeSpaceParam | 是 | 优化参数。 |
-| callback | Callback&lt;OptimizeSpaceProgress&gt; | 否 | 回调函数。返回优化进度，缺省情况下返回401错误，不执行清理任务 |
+| optimizePara | [OptimizeSpaceParam](arkts-corefile-optimizespaceparam-i-sys.md) | 是 | 优化参数。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<OptimizeSpaceProgress> | 否 | 回调函数。返回优化进度，缺省情况下返回401错误，不执行清理任务 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application usessystem API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | 13600001 | IPC error. |
 | 22400005 | Inner error. |

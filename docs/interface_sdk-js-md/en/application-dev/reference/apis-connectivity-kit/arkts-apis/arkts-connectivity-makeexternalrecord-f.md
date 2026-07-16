@@ -18,6 +18,8 @@ Creates an NDEF record with external data.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ndef-function makeExternalRecord(domainName: string, type: string, externalData: int[]): NdefRecord--><!--Device-ndef-function makeExternalRecord(domainName: string, type: string, externalData: int[]): NdefRecord-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -32,7 +34,7 @@ Creates an NDEF record with external data.
 
 | Type | Description |
 | --- | --- |
-| NdefRecord | The instance of NdefRecord. |
+| [NdefRecord](arkts-connectivity-ndefrecord-i.md) | The instance of NdefRecord. |
 
 **Error codes:**
 

@@ -14,16 +14,18 @@ function connectAbility(request: Want, options: ConnectOptions): number
 
 Connects this ability to a ServiceAbility.
 
-> **NOTE**
->
-> For details about the startup rules for the components in the FA model, see
-> [Component Startup Rules (FA Model)](../../../../application-models/component-startup-rules-fa.md).
-> > To connect to a ServiceAbility of another application, the target application must be configured with
+> **NOTE**  
+>  
+> For details about the startup rules for the components in the FA model, see  
+> [Component Startup Rules (FA Model)](../../../../application-models/component-startup-rules-fa.md).  
+> > To connect to a ServiceAbility of another application, the target application must be configured with  
 > associated startup (**AssociateWakeUp** set to **true**).
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-particleAbility-function connectAbility(request: Want, options: ConnectOptions): number--><!--Device-particleAbility-function connectAbility(request: Want, options: ConnectOptions): number-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -31,14 +33,14 @@ Connects this ability to a ServiceAbility.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | Want | Yes | ServiceAbility to connect. |
-| options | ConnectOptions | Yes | Connection options. |
+| request | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | ServiceAbility to connect. |
+| options | [ConnectOptions](arkts-ability-connectoptions-t.md) | Yes | Connection options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | ID of the connected ServiceAbility. The ID starts from 0 and is incremented by 1 each time aconnection is set up. |
+| number | ID of the connected ServiceAbility. The ID starts from 0 and is incremented by 1 each time a connection is set up. |
 
 **Example**
 

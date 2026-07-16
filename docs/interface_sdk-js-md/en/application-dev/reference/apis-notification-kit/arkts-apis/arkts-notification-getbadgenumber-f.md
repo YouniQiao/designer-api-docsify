@@ -18,13 +18,15 @@ This API is used to query the badge number displayed on the current application'
 
 **Since:** 22
 
+<!--Device-notificationManager-function getBadgeNumber(): Promise<long>--><!--Device-notificationManager-function getBadgeNumber(): Promise<long>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the badge number. (The value is irrelevant to whethernotifications and home-screen badges of this application are enabled.) |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the badge number. (The value is irrelevant to whether notifications and home-screen badges of this application are enabled.) |
 
 **Error codes:**
 

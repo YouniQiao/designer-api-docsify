@@ -1,5 +1,11 @@
 # pick
 
+## 导入模块
+
+```TypeScript
+import { screenshot } from '@kit.ArkUI';
+```
+
 ## pick
 
 ```TypeScript
@@ -10,7 +16,9 @@ function pick(): Promise<PickInfo>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-screenshot-function pick(): Promise<PickInfo>--><!--Device-screenshot-function pick(): Promise<PickInfo>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -18,7 +26,7 @@ function pick(): Promise<PickInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PickInfo&gt; | Promise对象。返回一个PickInfo对象。 |
+| Promise<PickInfo> | Promise对象。返回一个PickInfo对象。 |
 
 **错误码：**
 

@@ -2,14 +2,16 @@
 
 A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-collections.md).
 
-> **NOTE**
->
-> - This module can be imported only to ArkTS files (with the file name extension .ets).
+> **NOTE**  
+>  
+> - This module can be imported only to ArkTS files (with the file name extension .ets).  
 > **Decorator**: \@Sendable
 
 **Since:** 12
 
 **Decorator:** @Sendable
+
+<!--Device-collections-class Float32Array--><!--Device-collections-class Float32Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -31,13 +33,15 @@ Returns an iterator that iterates over numbers.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-[Symbol.iterator](): IterableIterator<number>--><!--Device-Float32Array-[Symbol.iterator](): IterableIterator<number>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;number&gt; | Iterator object that yields numbers. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<number> | Iterator object that yields numbers. |
 
 **Error codes:**
 
@@ -56,6 +60,8 @@ Returns the element at the given index. If no element is found, **undefined** is
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Float32Array-at(index: number): number | undefined--><!--Device-Float32Array-at(index: number): number | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -90,6 +96,8 @@ A constructor used to create an empty ArkTS Float32Array.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-constructor()--><!--Device-Float32Array-constructor()-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
@@ -109,6 +117,8 @@ A constructor used to create an ArkTS Float32Array of a given length.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Float32Array-constructor(length: number)--><!--Device-Float32Array-constructor(length: number)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -136,13 +146,15 @@ A constructor that creates an ArkTS Float32Array from an iterable object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-constructor(elements: Iterable<number>)--><!--Device-Float32Array-constructor(elements: Iterable<number>)-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | Iterable&lt;number&gt; | Yes | An iterable collection of numbers used to construct an ArkTS Float32Arrayobject. |
+| elements | [Iterable](../../apis-na/arkts-apis/arkts-na-iterable-i.md)<number> | Yes | An iterable collection of numbers used to construct an ArkTS Float32Array object. |
 
 **Error codes:**
 
@@ -162,13 +174,15 @@ A constructor that creates an ArkTS Float32Array from an array-like object or Ar
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-constructor(array: ArrayLike<number> | ArrayBuffer)--><!--Device-Float32Array-constructor(array: ArrayLike<number> | ArrayBuffer)-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; \| ArrayBuffer | Yes | Object used to construct the ArkTS Float32Array. When theparameter type is ArrayBuffer, the number of bytes occupied by the buffer must be an integer multiple of 4. |
+| array | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)<number> \| ArrayBuffer | Yes | Object used to construct the ArkTS Float32Array. When the parameter type is ArrayBuffer, the number of bytes occupied by the buffer must be an integer multiple of 4. |
 
 **Error codes:**
 
@@ -188,13 +202,15 @@ A constructor that creates an ArkTS Float32Array from an ArrayBuffer.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)--><!--Device-Float32Array-constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | ArrayBuffer object used to construct the ArkTS Float32Array. The number of bytesoccupied by the buffer must be an integer multiple of 4. |
+| buffer | [ArrayBuffer](arkts-arkts-arraybuffer-c.md) | Yes | ArrayBuffer object used to construct the ArkTS Float32Array. The number of bytes occupied by the buffer must be an integer multiple of 4. |
 | byteOffset | number | No | Byte offset of the buffer, beginning at 0. The default value is **0**. |
 | length | number | No | Length of the ArkTS Float32Array. The default value is **0**. |
 
@@ -216,6 +232,8 @@ Copies elements within a given range from this ArkTS Float32Array to another pos
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-copyWithin(target: number, start: number, end?: number): Float32Array--><!--Device-Float32Array-copyWithin(target: number, start: number, end?: number): Float32Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -224,13 +242,13 @@ Copies elements within a given range from this ArkTS Float32Array to another pos
 | --- | --- | --- | --- |
 | target | number | Yes | Start index of the range. If a negative number is passed in, it refers to the index of`target + array.length`. |
 | start | number | Yes | Start index of the range. If a negative number is passed in, it refers to the index of`start + Float32Array.length`. |
-| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to theindex of `end + Float32Array.length`. The default value is the length of the ArkTS Float32Array. |
+| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to the index of `end + Float32Array.length`. The default value is the length of the ArkTS Float32Array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Float32Array | ArkTS Float32Array after being modified. |
+| [Float32Array](../../apis-na/arkts-apis/arkts-na-float32array-i.md) | ArkTS Float32Array after being modified. |
 
 **Error codes:**
 
@@ -251,13 +269,15 @@ Returns an iterator object that contains the key-value pair of each element in t
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-entries(): IterableIterator<[number, number]>--><!--Device-Float32Array-entries(): IterableIterator<[number, number]>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;[number, number]&gt; | Iterator object. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<[number, number]> | Iterator object. |
 
 **Error codes:**
 
@@ -278,13 +298,15 @@ Checks whether all elements in this ArkTS Float32Array meet a given condition.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-every(predicate: TypedArrayPredicateFn<number, Float32Array>): boolean--><!--Device-Float32Array-every(predicate: TypedArrayPredicateFn<number, Float32Array>): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | TypedArrayPredicateFn&lt;number, Float32Array&gt; | Yes | Assertion function used for the test. |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-typedarraypredicatefn-t.md)<number, Float32Array> | Yes | Assertion function used for the test. |
 
 **Return value:**
 
@@ -311,6 +333,8 @@ Fills all elements in a given range in this ArkTS Float32Array with a value.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-fill(value: number, start?: number, end?: number): Float32Array--><!--Device-Float32Array-fill(value: number, start?: number, end?: number): Float32Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -318,14 +342,14 @@ Fills all elements in a given range in this ArkTS Float32Array with a value.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | Value to fill in. |
-| start | number | No | Start index of the range. If a negative number is passed in, it refers to the indexof `start + Float32Array.length`. The default value is **0**. |
-| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to theindex of `end + Float32Array.length`. The default value is the length of the ArkTS Float32Array. |
+| start | number | No | Start index of the range. If a negative number is passed in, it refers to the index of `start + Float32Array.length`. The default value is **0**. |
+| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to the index of `end + Float32Array.length`. The default value is the length of the ArkTS Float32Array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Float32Array | Filled ArkTS Float32Array. |
+| [Float32Array](../../apis-na/arkts-apis/arkts-na-float32array-i.md) | Filled ArkTS Float32Array. |
 
 **Error codes:**
 
@@ -346,19 +370,21 @@ Returns a new ArkTS Float32Array that contains all elements that meet the given 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-filter(predicate: TypedArrayPredicateFn<number, Float32Array>): Float32Array--><!--Device-Float32Array-filter(predicate: TypedArrayPredicateFn<number, Float32Array>): Float32Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | TypedArrayPredicateFn&lt;number, Float32Array&gt; | Yes | Assertion function used for the test. |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-typedarraypredicatefn-t.md)<number, Float32Array> | Yes | Assertion function used for the test. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Float32Array | Filtered ArkTS Float32Array. |
+| [Float32Array](../../apis-na/arkts-apis/arkts-na-float32array-i.md) | Filtered ArkTS Float32Array. |
 
 **Error codes:**
 
@@ -373,12 +399,13 @@ Returns a new ArkTS Float32Array that contains all elements that meet the given 
 find(predicate: TypedArrayPredicateFn<number, Float32Array>): number | undefined
 ```
 
-Returns the value of the first element that passes a test provided by a callback function. If none of the
-elements pass the test, **undefined** is returned.
+Returns the value of the first element that passes a test provided by a callback function. If none of the elements pass the test, **undefined** is returned.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Float32Array-find(predicate: TypedArrayPredicateFn<number, Float32Array>): number | undefined--><!--Device-Float32Array-find(predicate: TypedArrayPredicateFn<number, Float32Array>): number | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -386,13 +413,13 @@ elements pass the test, **undefined** is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | TypedArrayPredicateFn&lt;number, Float32Array&gt; | Yes | Assertion function used for the test. |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-typedarraypredicatefn-t.md)<number, Float32Array> | Yes | Assertion function used for the test. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Value of the first element that passes the test. If none of the elements pass thetest, **undefined** is returned. |
+| number | Value of the first element that passes the test. If none of the elements pass the test, **undefined** is returned. |
 
 **Error codes:**
 
@@ -407,12 +434,13 @@ elements pass the test, **undefined** is returned.
 findIndex(predicate: TypedArrayPredicateFn<number, Float32Array>): number
 ```
 
-Returns the index of the first element that passes a test provided by a callback function. If none of the
-elements pass the test, **-1** is returned.
+Returns the index of the first element that passes a test provided by a callback function. If none of the elements pass the test, **-1** is returned.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Float32Array-findIndex(predicate: TypedArrayPredicateFn<number, Float32Array>): number--><!--Device-Float32Array-findIndex(predicate: TypedArrayPredicateFn<number, Float32Array>): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -420,7 +448,7 @@ elements pass the test, **-1** is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | TypedArrayPredicateFn&lt;number, Float32Array&gt; | Yes | Assertion function used for the test. |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-typedarraypredicatefn-t.md)<number, Float32Array> | Yes | Assertion function used for the test. |
 
 **Return value:**
 
@@ -447,13 +475,15 @@ Calls a callback function for each element in this ArkTS Float32Array.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-forEach(callbackFn: TypedArrayForEachCallback<number, Float32Array>): void--><!--Device-Float32Array-forEach(callbackFn: TypedArrayForEachCallback<number, Float32Array>): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | TypedArrayForEachCallback&lt;number, Float32Array&gt; | Yes | Callback function to run for eachelement. |
+| callbackFn | [TypedArrayForEachCallback](arkts-arkts-typedarrayforeachcallback-t.md)<number, Float32Array> | Yes | Callback function to run for each element. |
 
 **Error codes:**
 
@@ -474,19 +504,21 @@ Creates an ArkTS Float32Array from an array-like or iterator object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-static from(arrayLike: ArrayLike<number>): Float32Array--><!--Device-Float32Array-static from(arrayLike: ArrayLike<number>): Float32Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;number&gt; | Yes | Array-like object used to construct the ArkTS Float32Array. |
+| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)<number> | Yes | Array-like object used to construct the ArkTS Float32Array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Float32Array | New ArkTS Float32Array generated. |
+| [Float32Array](../../apis-na/arkts-apis/arkts-na-float32array-i.md) | New ArkTS Float32Array generated. |
 
 ## from
 
@@ -500,20 +532,22 @@ Creates an ArkTS Float32Array from an array-like object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): Float32Array--><!--Device-Float32Array-static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): Float32Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;T&gt; | Yes | An array-like object to convert to an Float32Array. |
-| mapFn | TypedArrayFromMapFn&lt;T, number&gt; | Yes | A mapping function to call on every element of the array. |
+| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)<T> | Yes | An array-like object to convert to an Float32Array. |
+| mapFn | [TypedArrayFromMapFn](arkts-arkts-typedarrayfrommapfn-t.md)<T, number> | Yes | A mapping function to call on every element of the array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Float32Array | New ArkTS Float32Array generated. |
+| [Float32Array](../../apis-na/arkts-apis/arkts-na-float32array-i.md) | New ArkTS Float32Array generated. |
 
 ## from
 
@@ -527,20 +561,22 @@ Creates an ArkTS Float32Array from an iterator object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, number>): Float32Array--><!--Device-Float32Array-static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, number>): Float32Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | Iterable&lt;number&gt; | Yes | An iterable object to convert to an Float32Array. |
-| mapFn | TypedArrayFromMapFn&lt;number, number&gt; | No | A mapping function tocall on every element of the array. |
+| arrayLike | [Iterable](../../apis-na/arkts-apis/arkts-na-iterable-i.md)<number> | Yes | An iterable object to convert to an Float32Array. |
+| mapFn | [TypedArrayFromMapFn](arkts-arkts-typedarrayfrommapfn-t.md)<number, number> | No | A mapping function to call on every element of the array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Float32Array | New ArkTS Float32Array generated. |
+| [Float32Array](../../apis-na/arkts-apis/arkts-na-float32array-i.md) | New ArkTS Float32Array generated. |
 
 ## includes
 
@@ -553,6 +589,8 @@ Checks whether elements are contained in this ArkTS Float32Array.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Float32Array-includes(searchElement: number, fromIndex?: number): boolean--><!--Device-Float32Array-includes(searchElement: number, fromIndex?: number): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -567,7 +605,7 @@ Checks whether elements are contained in this ArkTS Float32Array.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the element exists; otherwise, **false** isreturned. |
+| boolean | Check result. The value **true** is returned if the element exists; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -582,12 +620,13 @@ Checks whether elements are contained in this ArkTS Float32Array.
 indexOf(searchElement: number, fromIndex?: number): number
 ```
 
-Returns the index of the first occurrence of a value in this ArkTS Float32Array. If the value is not found,
-**-1** is returned.
+Returns the index of the first occurrence of a value in this ArkTS Float32Array. If the value is not found,**-1** is returned.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Float32Array-indexOf(searchElement: number, fromIndex?: number): number--><!--Device-Float32Array-indexOf(searchElement: number, fromIndex?: number): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -596,7 +635,7 @@ Returns the index of the first occurrence of a value in this ArkTS Float32Array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | number | Yes | Value to search for. |
-| fromIndex | number | No | Index from which the search starts. The default value is **0**. If the index isgreater than or equal to the length of the ArkTS Float32Array, **-1** is returned. If a negative number ispassed in, the search starts from the end of the ArkTS Float32Array. |
+| fromIndex | number | No | Index from which the search starts. The default value is **0**. If the index is greater than or equal to the length of the ArkTS Float32Array, **-1** is returned. If a negative number is passed in, the search starts from the end of the ArkTS Float32Array. |
 
 **Return value:**
 
@@ -623,13 +662,15 @@ Concatenates all elements in this ArkTS Float32Array into a string, with a given
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-join(separator?: string): string--><!--Device-Float32Array-join(separator?: string): string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| separator | string | No | Separator to be used. If no value is passed in, a comma (,) is used as theseparator. |
+| separator | string | No | Separator to be used. If no value is passed in, a comma (,) is used as the separator. |
 
 **Return value:**
 
@@ -656,13 +697,15 @@ Returns an iterator object that contains the key (index) of each element in this
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-keys(): IterableIterator<number>--><!--Device-Float32Array-keys(): IterableIterator<number>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;number&gt; | Iterator object. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<number> | Iterator object. |
 
 **Error codes:**
 
@@ -683,6 +726,8 @@ Obtains the index of the last occurrence of the specified value in this ArkTS Fl
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Float32Array-lastIndexOf(searchElement: number, fromIndex?: number): number--><!--Device-Float32Array-lastIndexOf(searchElement: number, fromIndex?: number): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -690,7 +735,7 @@ Obtains the index of the last occurrence of the specified value in this ArkTS Fl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | number | Yes | Value to search for. |
-| fromIndex | number | No | Index from which the search starts. The default value is **0**. If the index isgreater than or equal to the length of the ArkTS Float32Array, **-1** is returned. If a negative number ispassed in, the search starts from the end of the ArkTS Float32Array. |
+| fromIndex | number | No | Index from which the search starts. The default value is **0**. If the index is greater than or equal to the length of the ArkTS Float32Array, **-1** is returned. If a negative number is passed in, the search starts from the end of the ArkTS Float32Array. |
 
 **Return value:**
 
@@ -711,12 +756,13 @@ Obtains the index of the last occurrence of the specified value in this ArkTS Fl
 map(callbackFn: TypedArrayMapCallback<number, Float32Array>): Float32Array
 ```
 
-Applies a callback function to each element in this ArkTS Float32Array and uses the result to create an ArkTS
-Float32Array.
+Applies a callback function to each element in this ArkTS Float32Array and uses the result to create an ArkTS Float32Array.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Float32Array-map(callbackFn: TypedArrayMapCallback<number, Float32Array>): Float32Array--><!--Device-Float32Array-map(callbackFn: TypedArrayMapCallback<number, Float32Array>): Float32Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -724,13 +770,13 @@ Float32Array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | TypedArrayMapCallback&lt;number, Float32Array&gt; | Yes | A function thataccepts up to three arguments.The map method calls the callbackfn function one time for each element in the array. |
+| callbackFn | [TypedArrayMapCallback](arkts-arkts-typedarraymapcallback-t.md)<number, Float32Array> | Yes | A function that accepts up to three arguments.The map method calls the callbackfn function one time for each element in the array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Float32Array | New ArkTS Float32Array. |
+| [Float32Array](../../apis-na/arkts-apis/arkts-na-float32array-i.md) | New ArkTS Float32Array. |
 
 **Error codes:**
 
@@ -751,6 +797,8 @@ Creates an ArkTS Float32Array with a variable number of parameters.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Float32Array-static of(...items: number[]): Float32Array--><!--Device-Float32Array-static of(...items: number[]): Float32Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -763,7 +811,7 @@ Creates an ArkTS Float32Array with a variable number of parameters.
 
 | Type | Description |
 | --- | --- |
-| Float32Array | New ArkTS Float32Array instance. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+| [Float32Array](../../apis-na/arkts-apis/arkts-na-float32array-i.md) | New ArkTS Float32Array instance. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## reduce
 
@@ -777,13 +825,15 @@ Applies a reduce function on each element in this ArkTS Float32Array and returns
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Float32Array>): number--><!--Device-Float32Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Float32Array>): number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | TypedArrayReduceCallback&lt;number, number, Float32Array&gt; | Yes | A function thataccepts up to four arguments.The reduce method calls the callbackfn function one time for each element in the array. |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-typedarrayreducecallback-t.md)<number, number, Float32Array> | Yes | A function that accepts up to four arguments.The reduce method calls the callbackfn function one time for each element in the array. |
 
 **Return value:**
 
@@ -804,12 +854,13 @@ Applies a reduce function on each element in this ArkTS Float32Array and returns
 reduce<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Float32Array>, initialValue: U): U
 ```
 
-Applies a reduce function for each element in this ArkTS Float32Array, receives an initial value as the parameter
-called by the reduce function for the first time, and returns the final reduction result.
+Applies a reduce function for each element in this ArkTS Float32Array, receives an initial value as the parameter called by the reduce function for the first time, and returns the final reduction result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Float32Array-reduce<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Float32Array>, initialValue: U): U--><!--Device-Float32Array-reduce<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Float32Array>, initialValue: U): U-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -817,8 +868,8 @@ called by the reduce function for the first time, and returns the final reductio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | TypedArrayReduceCallback&lt;U, number, Float32Array&gt; | Yes | A function thataccepts up to four arguments.The reduce method calls the callbackfn function one time for each element in the array. |
-| initialValue | U | Yes | If initialValue is specified, it is used as the initial value to startthe accumulation. The first call to the callbackfn function provides this value as an argumentinstead of an array value. |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-typedarrayreducecallback-t.md)<U, number, Float32Array> | Yes | A function that accepts up to four arguments.The reduce method calls the callbackfn function one time for each element in the array. |
+| initialValue | U | Yes | If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value. |
 
 **Return value:**
 
@@ -839,13 +890,13 @@ called by the reduce function for the first time, and returns the final reductio
 reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Float32Array>, initialValue: U): U
 ```
 
-Reversely traverses this ArkTS Float32Array, applies a reduce function for each element in the array, receives an
-initial value as the parameter called by the reduce function for the first time, and returns the final reduction
-result.
+Reversely traverses this ArkTS Float32Array, applies a reduce function for each element in the array, receives an initial value as the parameter called by the reduce function for the first time, and returns the final reduction result.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-Float32Array-reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Float32Array>, initialValue: U): U--><!--Device-Float32Array-reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Float32Array>, initialValue: U): U-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -853,7 +904,7 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | TypedArrayReduceCallback&lt;U, number, Float32Array&gt; | Yes | A function that is calledfor each element in the Float32Array. |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-typedarrayreducecallback-t.md)<U, number, Float32Array> | Yes | A function that is called for each element in the Float32Array. |
 | initialValue | U | Yes | A value to use as the first argument to the first call of the callback.<br>If no initial value is provided, the last element of the Float32Array will be used,<br>and the callback will start with the second-to-last element. |
 
 **Return value:**
@@ -875,12 +926,13 @@ result.
 reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Float32Array>): number
 ```
 
-Reversely traverses this ArkTS Float32Array, applies a reduce function on each element in the array, and returns
-the final reduction result.
+Reversely traverses this ArkTS Float32Array, applies a reduce function on each element in the array, and returns the final reduction result.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-Float32Array-reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Float32Array>): number--><!--Device-Float32Array-reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Float32Array>): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -888,7 +940,7 @@ the final reduction result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | TypedArrayReduceCallback&lt;number, number, Float32Array&gt; | Yes | A function that is calledfor each element in the Float32Array. |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-typedarrayreducecallback-t.md)<number, number, Float32Array> | Yes | A function that is called for each element in the Float32Array. |
 
 **Return value:**
 
@@ -915,13 +967,15 @@ Reverses this ArkTS Float32Array.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-reverse(): Float32Array--><!--Device-Float32Array-reverse(): Float32Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Float32Array | Reversed ArkTS Float32Array. |
+| [Float32Array](../../apis-na/arkts-apis/arkts-na-float32array-i.md) | Reversed ArkTS Float32Array. |
 
 **Error codes:**
 
@@ -942,13 +996,15 @@ Writes the elements in an array-like object to the given start position in seque
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-set(array: ArrayLike<number>, offset?: number): void--><!--Device-Float32Array-set(array: ArrayLike<number>, offset?: number): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; | Yes | A typed or untyped array of values to set. |
+| array | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)<number> | Yes | A typed or untyped array of values to set. |
 | offset | number | No | The index in the current array at which the values are to be written. |
 
 **Error codes:**
@@ -970,20 +1026,22 @@ Selects a range of elements in this ArkTS Float32Array to create an ArkTS Float3
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-slice(start?: number, end?: number): Float32Array--><!--Device-Float32Array-slice(start?: number, end?: number): Float32Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | No | Start index of the range. If a negative number is passed in, it refers to the indexof `start + Float32Array.length`. The default value is **0**. |
-| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to theindex of `end + Float32Array.length`. The default value is the length of the ArkTS Float32Array. |
+| start | number | No | Start index of the range. If a negative number is passed in, it refers to the index of `start + Float32Array.length`. The default value is **0**. |
+| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to the index of `end + Float32Array.length`. The default value is the length of the ArkTS Float32Array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Float32Array | New ArkTS Float32Array. |
+| [Float32Array](../../apis-na/arkts-apis/arkts-na-float32array-i.md) | New ArkTS Float32Array. |
 
 **Error codes:**
 
@@ -1004,19 +1062,21 @@ Checks whether any element in this ArkTS Float32Array meets a given condition.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-some(predicate: TypedArrayPredicateFn<number, Float32Array>): boolean--><!--Device-Float32Array-some(predicate: TypedArrayPredicateFn<number, Float32Array>): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | TypedArrayPredicateFn&lt;number, Float32Array&gt; | Yes | Assertion function used for the test. |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-typedarraypredicatefn-t.md)<number, Float32Array> | Yes | Assertion function used for the test. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if an element meeting the given conditionexists; otherwise, **false** is returned. |
+| boolean | Check result. The value **true** is returned if an element meeting the given condition exists; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -1037,19 +1097,21 @@ Sorts elements in this ArkTS Float32Array and returns the sorted ArkTS Float32Ar
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-sort(compareFn?: TypedArrayCompareFn<number>): Float32Array--><!--Device-Float32Array-sort(compareFn?: TypedArrayCompareFn<number>): Float32Array-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| compareFn | TypedArrayCompareFn&lt;number&gt; | No | Function that determines the sort order. By default,elements are sorted in ascending order. |
+| compareFn | [TypedArrayCompareFn](arkts-arkts-typedarraycomparefn-t.md)<number> | No | Function that determines the sort order. By default,elements are sorted in ascending order. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Float32Array | Sorted ArkTS Float32Array. |
+| [Float32Array](../../apis-na/arkts-apis/arkts-na-float32array-i.md) | Sorted ArkTS Float32Array. |
 
 **Error codes:**
 
@@ -1064,12 +1126,13 @@ Sorts elements in this ArkTS Float32Array and returns the sorted ArkTS Float32Ar
 subarray(begin?: number, end?: number): Float32Array
 ```
 
-Truncates an array from a specified position and returns a new ArkTS Float32Array based on the same ArkTS
-ArrayBuffer.
+Truncates an array from a specified position and returns a new ArkTS Float32Array based on the same ArkTS ArrayBuffer.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Float32Array-subarray(begin?: number, end?: number): Float32Array--><!--Device-Float32Array-subarray(begin?: number, end?: number): Float32Array-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1077,14 +1140,14 @@ ArrayBuffer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | number | No | Start index of the range. If a negative number is passed in, it refers to the indexof `begin + Float32Array.length`. The default value is **0**. |
-| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to theindex of `end + Float32Array.length`. The default value is the length of the ArkTS Float32Array. |
+| begin | number | No | Start index of the range. If a negative number is passed in, it refers to the index of `begin + Float32Array.length`. The default value is **0**. |
+| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to the index of `end + Float32Array.length`. The default value is the length of the ArkTS Float32Array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Float32Array | New ArkTS Float32Array. |
+| [Float32Array](../../apis-na/arkts-apis/arkts-na-float32array-i.md) | New ArkTS Float32Array. |
 
 **Error codes:**
 
@@ -1099,13 +1162,13 @@ ArrayBuffer.
 toLocaleString(): string
 ```
 
-Generates a string of digits that matches the cultural conventions of the current system locale. Each element
-converts its digits to a string via its **toLocaleString** API, and these strings are then joined in sequence
-with commas (,).
+Generates a string of digits that matches the cultural conventions of the current system locale. Each element converts its digits to a string via its **toLocaleString** API, and these strings are then joined in sequence with commas (,).
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-Float32Array-toLocaleString(): string--><!--Device-Float32Array-toLocaleString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1134,6 +1197,8 @@ Converts an ArkTS Float32Array into a string.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Float32Array-toString(): string--><!--Device-Float32Array-toString(): string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -1161,13 +1226,15 @@ Returns an iterator object that contains the value of each element in this ArkTS
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-values(): IterableIterator<number>--><!--Device-Float32Array-values(): IterableIterator<number>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;number&gt; | Iterator object. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<number> | Iterator object. |
 
 **Error codes:**
 
@@ -1190,6 +1257,8 @@ Number of bytes occupied by each element in the ArkTS Float32Array.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-static readonly BYTES_PER_ELEMENT: number--><!--Device-Float32Array-static readonly BYTES_PER_ELEMENT: number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## buffer
@@ -1205,6 +1274,8 @@ Bottom-layer buffer used by an ArkTS Float32Array.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Float32Array-readonly buffer: ArrayBuffer--><!--Device-Float32Array-readonly buffer: ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1222,6 +1293,8 @@ Number of bytes occupied by an ArkTS Float32Array.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-readonly byteLength: number--><!--Device-Float32Array-readonly byteLength: number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## byteOffset
@@ -1237,6 +1310,8 @@ Offset between the ArkTS Float32Array and the start position of the ArrayBuffer.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Float32Array-readonly byteOffset: number--><!--Device-Float32Array-readonly byteOffset: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1254,6 +1329,8 @@ Returns the item at that index.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Float32Array-[index: number]: number--><!--Device-Float32Array-[index: number]: number-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## length
@@ -1269,6 +1346,8 @@ Number of elements in an ArkTS Float32Array.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Float32Array-readonly length: number--><!--Device-Float32Array-readonly length: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

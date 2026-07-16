@@ -1,5 +1,11 @@
 # supportKeysSync
 
+## 导入模块
+
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+```
+
 ## supportKeysSync
 
 ```TypeScript
@@ -10,6 +16,8 @@ function supportKeysSync(deviceId: number, keys: Array<KeyCode>): Array<boolean>
 
 **起始版本：** 10
 
+<!--Device-inputDevice-function supportKeysSync(deviceId: int, keys: Array<KeyCode>): Array<boolean>--><!--Device-inputDevice-function supportKeysSync(deviceId: int, keys: Array<KeyCode>): Array<boolean>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **参数：**
@@ -17,13 +25,13 @@ function supportKeysSync(deviceId: number, keys: Array<KeyCode>): Array<boolean>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | number | 是 | 输入设备的唯一标识，同一个物理设备反复插拔或重启，设备ID可能会发生变化。 |
-| keys | Array&lt;KeyCode&gt; | 是 | 需要查询的键值，最多支持查询5个按键。 |
+| keys | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<KeyCode> | 是 | 需要查询的键值，最多支持查询5个按键。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;boolean&gt; | 返回查询结果。true表示支持，false表示不支持。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<boolean> | 返回查询结果。true表示支持，false表示不支持。 |
 
 **错误码：**
 

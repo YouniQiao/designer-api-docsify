@@ -14,11 +14,11 @@ function isNotificationEnabledSync(): boolean
 
 Synchronously queries the notification authorization status of the current application.
 
-This API is used to quickly check whether the current application is allowed to send notifications
-before publishing. It is synchronous and returns the result immediately after being called,
-suitable for scenarios where the enabled status needs to be obtained in a synchronous code flow.
+This API is used to quickly check whether the current application is allowed to send notifications before publishing. It is synchronous and returns the result immediately after being called,suitable for scenarios where the enabled status needs to be obtained in a synchronous code flow.
 
 **Since:** 12
+
+<!--Device-notificationManager-function isNotificationEnabledSync(): boolean--><!--Device-notificationManager-function isNotificationEnabledSync(): boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -26,7 +26,7 @@ suitable for scenarios where the enabled status needs to be obtained in a synchr
 
 | Type | Description |
 | --- | --- |
-| boolean | Result of the notification enabling status. The value **true** means that the notification isenabled, and **false** means the opposite. |
+| boolean | Result of the notification enabling status. The value **true** means that the notification is enabled, and **false** means the opposite. |
 
 **Error codes:**
 

@@ -18,6 +18,8 @@ Obtains the dispatch information. This API uses an asynchronous callback to retu
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-freeInstall-function getDispatchInfo(callback: AsyncCallback<DispatchInfo>): void--><!--Device-freeInstall-function getDispatchInfo(callback: AsyncCallback<DispatchInfo>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Obtains the dispatch information. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;DispatchInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return theresult. If the operation is successful, **err** is **null**, and **data** is the[DispatchInfo](arkts-ability-dispatchinfo-i-sys.md) object obtained. otherwise, **err** is an errorobject. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DispatchInfo> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**, and **data** is the [DispatchInfo](arkts-ability-dispatchinfo-i-sys.md) object obtained. otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -49,6 +51,8 @@ Obtains the dispatch information. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-freeInstall-function getDispatchInfo(): Promise<DispatchInfo>--><!--Device-freeInstall-function getDispatchInfo(): Promise<DispatchInfo>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
@@ -57,7 +61,7 @@ Obtains the dispatch information. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DispatchInfo&gt; | Promise used to return the[DispatchInfo](arkts-ability-dispatchinfo-i-sys.md) object obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DispatchInfo> | Promise used to return the [DispatchInfo](arkts-ability-dispatchinfo-i-sys.md) object obtained. |
 
 **Error codes:**
 

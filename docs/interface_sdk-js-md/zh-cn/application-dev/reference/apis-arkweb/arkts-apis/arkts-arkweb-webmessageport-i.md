@@ -4,7 +4,15 @@ Define html web message port.
 
 **起始版本：** 9
 
+<!--Device-webview-interface WebMessagePort--><!--Device-webview-interface WebMessagePort-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
+
+## 导入模块
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+```
 
 ## close
 
@@ -16,7 +24,9 @@ close(): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessagePort-close(): void--><!--Device-WebMessagePort-close(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -30,7 +40,9 @@ onMessageEvent(callback: (result: WebMessage) => void): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessagePort-onMessageEvent(callback: (result: WebMessage) => void): void--><!--Device-WebMessagePort-onMessageEvent(callback: (result: WebMessage) => void): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -38,7 +50,7 @@ onMessageEvent(callback: (result: WebMessage) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (result: WebMessage) =&gt; void | 是 | 用于接收消息的回调函数。 |
+| callback | (result: WebMessage) => void | 是 | 用于接收消息的回调函数。 |
 
 **错误码：**
 
@@ -57,7 +69,9 @@ onMessageEventExt(callback: (result: WebMessageExt) => void): void
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessagePort-onMessageEventExt(callback: (result: WebMessageExt) => void): void--><!--Device-WebMessagePort-onMessageEventExt(callback: (result: WebMessageExt) => void): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -65,7 +79,7 @@ onMessageEventExt(callback: (result: WebMessageExt) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (result: WebMessageExt) =&gt; void | 是 | 接收到的消息。 |
+| callback | (result: WebMessageExt) => void | 是 | 接收到的消息。 |
 
 **错误码：**
 
@@ -84,7 +98,9 @@ postMessageEvent(message: WebMessage): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessagePort-postMessageEvent(message: WebMessage): void--><!--Device-WebMessagePort-postMessageEvent(message: WebMessage): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -92,7 +108,7 @@ postMessageEvent(message: WebMessage): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| message | WebMessage | 是 | 要发送的消息。 |
+| message | [WebMessage](arkts-arkweb-webmessage-t.md) | 是 | 要发送的消息。 |
 
 **错误码：**
 
@@ -111,7 +127,9 @@ postMessageEventExt(message: WebMessageExt): void
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessagePort-postMessageEventExt(message: WebMessageExt): void--><!--Device-WebMessagePort-postMessageEventExt(message: WebMessageExt): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -119,7 +137,7 @@ postMessageEventExt(message: WebMessageExt): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| message | WebMessageExt | 是 | 要发送的消息。 |
+| message | [WebMessageExt](arkts-arkweb-webmessageext-c.md) | 是 | 要发送的消息。 |
 
 **错误码：**
 
@@ -140,7 +158,9 @@ isExtentionType?: boolean
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessagePort-isExtentionType?: boolean--><!--Device-WebMessagePort-isExtentionType?: boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

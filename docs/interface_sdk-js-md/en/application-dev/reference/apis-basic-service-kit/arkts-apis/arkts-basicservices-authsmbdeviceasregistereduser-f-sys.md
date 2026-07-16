@@ -20,6 +20,8 @@ Authenticate SMB device as registered user and get available printers.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-print-function authSmbDeviceAsRegisteredUser(host: SharedHost, username: string, password: string): Promise<PrinterInformation[]>--><!--Device-print-function authSmbDeviceAsRegisteredUser(host: SharedHost, username: string, password: string): Promise<PrinterInformation[]>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Authenticate SMB device as registered user and get available printers.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| host | SharedHost | Yes | The SMB host to authenticate.<br>The SMB host to authenticate. |
+| host | [SharedHost](arkts-basicservices-sharedhost-i.md) | Yes | The SMB host to authenticate.<br>The SMB host to authenticate. |
 | username | string | Yes | The username for authentication.<br>User name used for authentication. |
 | password | string | Yes | The password for authentication.<br>Password used for authentication. |
 
@@ -36,7 +38,7 @@ Authenticate SMB device as registered user and get available printers.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PrinterInformation[]&gt; | Promise that resolves with the list of available printers. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PrinterInformation[]> | Promise that resolves with the list of available printers. |
 
 **Error codes:**
 

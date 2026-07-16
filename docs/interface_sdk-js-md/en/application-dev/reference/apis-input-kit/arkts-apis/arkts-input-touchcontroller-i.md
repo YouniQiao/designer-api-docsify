@@ -1,13 +1,12 @@
 # TouchController
 
-Provides the capability of simulating touch operations. The simulated touch operation sequence must meet the
-following requirements:
+Provides the capability of simulating touch operations. The simulated touch operation sequence must meet the following requirements:
 
-1. All touch points must share the same **displayId**.
-2. Each touch point must begin with a **touchDown()** call, followed by zero or more **touchMove()** calls, and end
-with an **touchUp()** call.
+1. All touch points must share the same **displayId**.2. Each touch point must begin with a **touchDown()** call, followed by zero or more **touchMove()** calls, and end with an **touchUp()** call.
 
 **Since:** 26.0.0
+
+<!--Device-inputEventClient-interface TouchController--><!--Device-inputEventClient-interface TouchController-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -31,19 +30,21 @@ Presses down a touch point. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-TouchController-touchDown(touch: TouchPoint): Promise<void>--><!--Device-TouchController-touchDown(touch: TouchPoint): Promise<void>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| touch | TouchPoint | Yes | Information about the touch point that is in contact with the display. |
+| touch | [TouchPoint](../../apis-arkui/arkts-apis/arkts-arkui-touchpoint-i.md) | Yes | Information about the touch point that is in contact with the display. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -122,19 +123,21 @@ Moves a touch point. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-TouchController-touchMove(touch: TouchPoint): Promise<void>--><!--Device-TouchController-touchMove(touch: TouchPoint): Promise<void>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| touch | TouchPoint | Yes | Information about the touch point to be moved. |
+| touch | [TouchPoint](../../apis-arkui/arkts-apis/arkts-arkui-touchpoint-i.md) | Yes | Information about the touch point to be moved. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -162,19 +165,21 @@ Releases a touch point. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-TouchController-touchUp(touch: TouchPoint): Promise<void>--><!--Device-TouchController-touchUp(touch: TouchPoint): Promise<void>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| touch | TouchPoint | Yes | Information about the touch point to be released. |
+| touch | [TouchPoint](../../apis-arkui/arkts-apis/arkts-arkui-touchpoint-i.md) | Yes | Information about the touch point to be released. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

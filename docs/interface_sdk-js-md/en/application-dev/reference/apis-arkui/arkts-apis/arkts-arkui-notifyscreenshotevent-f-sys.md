@@ -16,6 +16,8 @@ Notifies a screenshot event. This API uses a promise to return the result.
 
 **Since:** 20
 
+<!--Device-window-function notifyScreenshotEvent(eventType: ScreenshotEventType): Promise<void>--><!--Device-window-function notifyScreenshotEvent(eventType: ScreenshotEventType): Promise<void>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -24,13 +26,13 @@ Notifies a screenshot event. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventType | ScreenshotEventType | Yes | Type of the screenshot event. |
+| eventType | [ScreenshotEventType](arkts-arkui-screenshoteventtype-e.md) | Yes | Type of the screenshot event. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

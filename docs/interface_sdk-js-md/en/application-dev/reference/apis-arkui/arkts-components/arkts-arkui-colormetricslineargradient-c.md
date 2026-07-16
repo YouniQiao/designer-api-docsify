@@ -4,6 +4,8 @@ Sets the linear gradient background color of the track.
 
 **Since:** 23
 
+<!--Device-unnamed-declare class ColorMetricsLinearGradient--><!--Device-unnamed-declare class ColorMetricsLinearGradient-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -20,11 +22,13 @@ Constructor of **ColorMetricsLinearGradient**.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-ColorMetricsLinearGradient-constructor(colorStops: ColorMetricsStop[])--><!--Device-ColorMetricsLinearGradient-constructor(colorStops: ColorMetricsStop[])-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorStops | ColorMetricsStop[] | Yes | Array of linear gradient color stops. Each element describes a colorand its stop in the gradient. |
+| colorStops | [ColorMetricsStop](arkts-arkui-colormetricsstop-i.md)[] | Yes | Array of linear gradient color stops. Each element describes a color and its stop in the gradient. |
 

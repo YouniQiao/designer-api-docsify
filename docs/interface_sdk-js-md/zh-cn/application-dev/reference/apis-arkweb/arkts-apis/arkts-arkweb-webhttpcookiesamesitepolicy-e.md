@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+<!--Device-webview-enum WebHttpCookieSameSitePolicy--><!--Device-webview-enum WebHttpCookieSameSitePolicy-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## NONE
@@ -15,6 +17,8 @@ NONE = 0
 允许在跨站请求中携带cookie，但必须同时设置secure属性。
 
 **起始版本：** 23
+
+<!--Device-WebHttpCookieSameSitePolicy-NONE = 0--><!--Device-WebHttpCookieSameSitePolicy-NONE = 0-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -28,6 +32,8 @@ LAX = 1
 
 **起始版本：** 23
 
+<!--Device-WebHttpCookieSameSitePolicy-LAX = 1--><!--Device-WebHttpCookieSameSitePolicy-LAX = 1-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## STRICT
@@ -39,6 +45,8 @@ STRICT = 2
 禁止在跨站请求中携带cookie。
 
 **起始版本：** 23
+
+<!--Device-WebHttpCookieSameSitePolicy-STRICT = 2--><!--Device-WebHttpCookieSameSitePolicy-STRICT = 2-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

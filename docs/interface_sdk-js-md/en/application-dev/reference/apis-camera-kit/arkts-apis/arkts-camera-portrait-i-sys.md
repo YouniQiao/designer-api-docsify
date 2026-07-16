@@ -1,11 +1,12 @@
 # Portrait (System API)
 
-Portrait: inherits from [PortraitQuery](arkts-camera-portraitquery-i-sys.md).
-Provides the APIs for portrait photo settings.
+Portrait: inherits from [PortraitQuery](arkts-camera-portraitquery-i-sys.md).Provides the APIs for portrait photo settings.
 
 **Inheritance/Implementation:** Portrait extends [PortraitQuery](arkts-camera-portraitquery-i-sys.md)
 
 **Since:** 11
+
+<!--Device-camera-interface Portrait extends PortraitQuery--><!--Device-camera-interface Portrait extends PortraitQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -27,6 +28,8 @@ Obtains the portrait effect in use.
 
 **Since:** 10
 
+<!--Device-Portrait-getPortraitEffect(): PortraitEffect--><!--Device-Portrait-getPortraitEffect(): PortraitEffect-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -35,7 +38,7 @@ Obtains the portrait effect in use.
 
 | Type | Description |
 | --- | --- |
-| PortraitEffect | Portrait effect. |
+| [PortraitEffect](arkts-camera-portraiteffect-e-sys.md) | Portrait effect. |
 
 **Error codes:**
 
@@ -60,11 +63,11 @@ function getPortraitEffect(portraitPhotoSession: camera.PortraitPhotoSession): c
 setPortraitEffect(effect: PortraitEffect): void
 ```
 
-Sets a portrait effect. Before the setting, use
-[getSupportedPortraitEffects](arkts-camera-portraitquery-i-sys.md#getsupportedportraiteffects-1) to obtain the supported
-portrait effects and check whether the target portrait effect is supported.
+Sets a portrait effect. Before the setting, use [getSupportedPortraitEffects](arkts-camera-portraitquery-i-sys.md#getsupportedportraiteffects-1) to obtain the supported portrait effects and check whether the target portrait effect is supported.
 
 **Since:** 10
+
+<!--Device-Portrait-setPortraitEffect(effect: PortraitEffect): void--><!--Device-Portrait-setPortraitEffect(effect: PortraitEffect): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -74,7 +77,7 @@ portrait effects and check whether the target portrait effect is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effect | PortraitEffect | Yes | Effect Portrait effect to set. |
+| effect | [PortraitEffect](arkts-camera-portraiteffect-e-sys.md) | Yes | Effect Portrait effect to set. |
 
 **Error codes:**
 

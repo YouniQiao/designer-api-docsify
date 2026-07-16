@@ -6,6 +6,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface Light extends Node--><!--Device-unnamed-export interface Light extends Node-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## color
@@ -19,6 +21,8 @@ color: Color
 **类型：** Color
 
 **起始版本：** 12
+
+<!--Device-Light-color: Color--><!--Device-Light-color: Color-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -34,6 +38,8 @@ enabled: boolean
 
 **起始版本：** 12
 
+<!--Device-Light-enabled: boolean--><!--Device-Light-enabled: boolean-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## intensity
@@ -47,6 +53,8 @@ intensity: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-Light-intensity: double--><!--Device-Light-intensity: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -62,6 +70,8 @@ readonly lightType: LightType
 
 **起始版本：** 12
 
+<!--Device-Light-readonly lightType: LightType--><!--Device-Light-readonly lightType: LightType-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## shadowEnabled
@@ -75,6 +85,8 @@ shadowEnabled: boolean
 **类型：** boolean
 
 **起始版本：** 12
+
+<!--Device-Light-shadowEnabled: boolean--><!--Device-Light-shadowEnabled: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

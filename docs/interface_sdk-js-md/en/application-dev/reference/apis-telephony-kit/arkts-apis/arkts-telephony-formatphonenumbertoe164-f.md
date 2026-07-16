@@ -16,6 +16,8 @@ Formats a phone number into an E.164 representation.
 
 **Since:** 7
 
+<!--Device-call-function formatPhoneNumberToE164(phoneNumber: string, countryCode: string, callback: AsyncCallback<string>): void--><!--Device-call-function formatPhoneNumberToE164(phoneNumber: string, countryCode: string, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **Parameters:**
@@ -24,7 +26,7 @@ Formats a phone number into an E.164 representation.
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Indicates the phone number to format. |
 | countryCode | string | Yes | Indicates a two-digit country code defined in ISO 3166-1. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Returns an E.164 number.Returns an empty string if the input phone number is invalid. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Returns an E.164 number.Returns an empty string if the input phone number is invalid. |
 
 **Error codes:**
 
@@ -62,6 +64,8 @@ Formats a phone number into an E.164 representation.
 
 **Since:** 7
 
+<!--Device-call-function formatPhoneNumberToE164(phoneNumber: string, countryCode: string): Promise<string>--><!--Device-call-function formatPhoneNumberToE164(phoneNumber: string, countryCode: string): Promise<string>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **Parameters:**
@@ -75,7 +79,7 @@ Formats a phone number into an E.164 representation.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns an E.164 number.Returns an empty string if the input phone number is invalid. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns an E.164 number.Returns an empty string if the input phone number is invalid. |
 
 **Error codes:**
 

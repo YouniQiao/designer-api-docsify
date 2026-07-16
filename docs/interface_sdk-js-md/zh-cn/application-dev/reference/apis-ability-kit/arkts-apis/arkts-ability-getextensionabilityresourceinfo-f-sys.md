@@ -1,5 +1,11 @@
 # getExtensionAbilityResourceInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleResourceManager } from '@kit.AbilityKit';
+```
+
 ## getExtensionAbilityResourceInfo
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getExtensionAbilityResourceInfo(bundleName: string, extensionAbilityTyp
 **起始版本：** 20
 
 **需要权限：** ohos.permission.GET_BUNDLE_RESOURCES
+
+<!--Device-bundleResourceManager-function getExtensionAbilityResourceInfo(bundleName: string, extensionAbilityType: bundleManager.ExtensionAbilityType, resourceFlags: int, appIndex?: int): Array<LauncherAbilityResourceInfo>--><!--Device-bundleResourceManager-function getExtensionAbilityResourceInfo(bundleName: string, extensionAbilityType: bundleManager.ExtensionAbilityType, resourceFlags: int, appIndex?: int): Array<LauncherAbilityResourceInfo>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -29,7 +37,7 @@ function getExtensionAbilityResourceInfo(bundleName: string, extensionAbilityTyp
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;LauncherAbilityResourceInfo&gt; | 返回指定应用的扩展组件资源，包含图标和名称等信息。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<LauncherAbilityResourceInfo> | 返回指定应用的扩展组件资源，包含图标和名称等信息。 |
 
 **错误码：**
 

@@ -4,6 +4,8 @@ Provides basic parameters for creating an **ArcList** component.
 
 **Since:** 18
 
+<!--Device-unnamed-declare interface ArkListOptions--><!--Device-unnamed-declare interface ArkListOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Header component.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArkListOptions-header?: ComponentContent--><!--Device-ArkListOptions-header?: ComponentContent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## initialIndex
@@ -34,16 +38,15 @@ Header component.
 initialIndex?: number
 ```
 
-Item displayed at the beginning of the viewport when the **ArcList** component is loaded
-for the first time, that is, the first item to be displayed.<br/>Default value: **0**<br/>
-**NOTE**<br/>If the set value is a negative number or is greater than the index of the last
-item, the value is invalid. In this case, the default value will be used.
+Item displayed at the beginning of the viewport when the **ArcList** component is loaded for the first time, that is, the first item to be displayed.<br/>Default value: **0**<br/>**NOTE**<br/>If the set value is a negative number or is greater than the index of the last item, the value is invalid. In this case, the default value will be used.
 
 **Type:** number
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArkListOptions-initialIndex?: number--><!--Device-ArkListOptions-initialIndex?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -53,15 +56,15 @@ item, the value is invalid. In this case, the default value will be used.
 scroller?: Scroller
 ```
 
-Controller of the scrollable component. After being bound to **ArcList**, the controller
-can control the scrolling of **ArcList**.<br/>**NOTE**<br/>The scroller cannot be bound to
-other scrollable components.
+Controller of the scrollable component. After being bound to **ArcList**, the controller can control the scrolling of **ArcList**.<br/>**NOTE**<br/>The scroller cannot be bound to other scrollable components.
 
 **Type:** Scroller
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArkListOptions-scroller?: Scroller--><!--Device-ArkListOptions-scroller?: Scroller-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 

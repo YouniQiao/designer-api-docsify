@@ -12,8 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function getDefaultNet(callback: AsyncCallback<NetHandle>): void
 ```
 
-Obtains the data network that is activated by default.
-To call this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Obtains the data network that is activated by default.To call this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
 
 **Since:** 11
 
@@ -21,13 +20,15 @@ To call this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-connection-function getDefaultNet(callback: AsyncCallback<NetHandle>): void--><!--Device-connection-function getDefaultNet(callback: AsyncCallback<NetHandle>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;NetHandle&gt; | Yes | the callback of getDefaultNet. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<NetHandle> | Yes | the callback of getDefaultNet. |
 
 **Error codes:**
 
@@ -61,8 +62,7 @@ connection.getDefaultNet((error: BusinessError, data: connection.NetHandle) => {
 function getDefaultNet(): Promise<NetHandle>
 ```
 
-Obtains the data network that is activated by default.
-To call this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Obtains the data network that is activated by default.To call this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
 
 **Since:** 11
 
@@ -70,13 +70,15 @@ To call this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-connection-function getDefaultNet(): Promise<NetHandle>--><!--Device-connection-function getDefaultNet(): Promise<NetHandle>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetHandle&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetHandle> | The promise returned by the function. |
 
 **Error codes:**
 

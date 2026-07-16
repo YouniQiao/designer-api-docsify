@@ -16,6 +16,8 @@ Obtains a list of configuration level directories, in ascending order of priorit
 
 **Since:** 11
 
+<!--Device-configPolicy-function getCfgDirListSync(): Array<string>--><!--Device-configPolicy-function getCfgDirListSync(): Array<string>-End-->
+
 **System capability:** SystemCapability.Customization.ConfigPolicy
 
 **System API:** This is a system API.
@@ -24,5 +26,5 @@ Obtains a list of configuration level directories, in ascending order of priorit
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Obtains the list of configuration level directories. This API returns the resultsynchronously. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Obtains the list of configuration level directories. This API returns the result synchronously. |
 

@@ -4,9 +4,17 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace config--><!--Device-unnamed-declare namespace config-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { config } from '@kit.AccessibilityKit';
+```
 
 ## 汇总
 

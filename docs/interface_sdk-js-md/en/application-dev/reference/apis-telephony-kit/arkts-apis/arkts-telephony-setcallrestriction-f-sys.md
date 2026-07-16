@@ -18,6 +18,8 @@ Set call barring status.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function setCallRestriction(slotId: int, info: CallRestrictionInfo, callback: AsyncCallback<void>): void--><!--Device-call-function setCallRestriction(slotId: int, info: CallRestrictionInfo, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -27,8 +29,8 @@ Set call barring status.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| info | CallRestrictionInfo | Yes | Indicates the set call restriction information. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of setCallRestriction. |
+| info | [CallRestrictionInfo](arkts-telephony-callrestrictioninfo-i-sys.md) | Yes | Indicates the set call restriction information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of setCallRestriction. |
 
 **Error codes:**
 
@@ -75,6 +77,8 @@ Set call barring status.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function setCallRestriction(slotId: int, info: CallRestrictionInfo): Promise<void>--><!--Device-call-function setCallRestriction(slotId: int, info: CallRestrictionInfo): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -84,13 +88,13 @@ Set call barring status.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| info | CallRestrictionInfo | Yes | Indicates the set call restriction information. |
+| info | [CallRestrictionInfo](arkts-telephony-callrestrictioninfo-i-sys.md) | Yes | Indicates the set call restriction information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setCallRestriction. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the setCallRestriction. |
 
 **Error codes:**
 

@@ -1,5 +1,11 @@
 # getTimezone
 
+## 导入模块
+
+```TypeScript
+import { systemTime } from '@kit.BasicServicesKit';
+```
+
 ## getTimezone
 
 ```TypeScript
@@ -14,13 +20,15 @@ function getTimezone(callback: AsyncCallback<string>): void
 
 **替代接口：** getTimezone(callback:
 
+<!--Device-systemTime-function getTimezone(callback: AsyncCallback<string>): void--><!--Device-systemTime-function getTimezone(callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | 是 | 回调函数，返回系统时区。具体可见[支持的系统时区](../../../../reference/apis-basic-services-kit/js-apis-system-time.md#支持的系统时区) 。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | 是 | 回调函数，返回系统时区。具体可见[支持的系统时区](../../../../reference/apis-basic-services-kit/js-apis-system-time.md#支持的系统时区) 。 |
 
 **错误码：**
 
@@ -63,13 +71,15 @@ function getTimezone(): Promise<string>
 
 **替代接口：** [getTimezone()](arkts-basicservices-gettimezone-f.md#gettimezone-2)
 
+<!--Device-systemTime-function getTimezone(): Promise<string>--><!--Device-systemTime-function getTimezone(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回系统时区。具体可见[支持的系统时区](../../../../reference/apis-basic-services-kit/js-apis-system-time.md#支持的系统时区) 。 |
+| Promise<string> | Promise对象，返回系统时区。具体可见[支持的系统时区](../../../../reference/apis-basic-services-kit/js-apis-system-time.md#支持的系统时区) 。 |
 
 **错误码：**
 

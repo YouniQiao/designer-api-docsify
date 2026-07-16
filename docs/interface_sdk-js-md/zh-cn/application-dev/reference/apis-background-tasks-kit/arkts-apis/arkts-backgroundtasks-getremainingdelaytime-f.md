@@ -1,5 +1,11 @@
 # getRemainingDelayTime
 
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+```
+
 ## getRemainingDelayTime
 
 ```TypeScript
@@ -10,6 +16,8 @@ function getRemainingDelayTime(requestId: number, callback: AsyncCallback<number
 
 **起始版本：** 9
 
+<!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: int, callback: AsyncCallback<int>): void--><!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: int, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **参数：**
@@ -17,7 +25,7 @@ function getRemainingDelayTime(requestId: number, callback: AsyncCallback<number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | requestId | number | 是 | 短时任务的请求ID。通过申请短时任务[requestSuspendDelay](arkts-backgroundtasks-requestsuspenddelay-f.md#requestsuspenddelay-1)接口获取。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数，返回本次短时任务的剩余时间，单位：ms。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数，返回本次短时任务的剩余时间，单位：ms。 |
 
 **错误码：**
 
@@ -59,6 +67,8 @@ function getRemainingDelayTime(requestId: number): Promise<number>
 
 **起始版本：** 9
 
+<!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: int): Promise<int>--><!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: int): Promise<int>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **参数：**
@@ -71,7 +81,7 @@ function getRemainingDelayTime(requestId: number): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回本次短时任务的剩余时间，单位：ms。 |
+| Promise<number> | Promise对象，返回本次短时任务的剩余时间，单位：ms。 |
 
 **错误码：**
 

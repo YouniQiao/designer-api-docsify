@@ -8,6 +8,8 @@ Enumerates the flags that specify how the Want will be handled.
 
 **Substitutes:** Flags
 
+<!--Device-wantConstant-export enum Flags--><!--Device-wantConstant-export enum Flags-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## FLAG_AUTH_READ_URI_PERMISSION
@@ -23,6 +25,8 @@ Grants the permission to read the URI.
 **Deprecated since:** 9
 
 **Substitutes:** FLAG_AUTH_READ_URI_PERMISSION
+
+<!--Device-Flags-FLAG_AUTH_READ_URI_PERMISSION = 0x00000001--><!--Device-Flags-FLAG_AUTH_READ_URI_PERMISSION = 0x00000001-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -40,6 +44,8 @@ Grants the permission to write data to the URI.
 
 **Substitutes:** FLAG_AUTH_WRITE_URI_PERMISSION
 
+<!--Device-Flags-FLAG_AUTH_WRITE_URI_PERMISSION = 0x00000002--><!--Device-Flags-FLAG_AUTH_WRITE_URI_PERMISSION = 0x00000002-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## FLAG_ABILITY_FORWARD_RESULT
@@ -53,6 +59,8 @@ Returns the result to the ability.
 **Since:** 6
 
 **Deprecated since:** 9
+
+<!--Device-Flags-FLAG_ABILITY_FORWARD_RESULT = 0x00000004--><!--Device-Flags-FLAG_ABILITY_FORWARD_RESULT = 0x00000004-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -68,6 +76,8 @@ Indicates whether the ability on the local device can be continued on a remote d
 
 **Deprecated since:** 9
 
+<!--Device-Flags-FLAG_ABILITY_CONTINUATION = 0x00000008--><!--Device-Flags-FLAG_ABILITY_CONTINUATION = 0x00000008-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## FLAG_NOT_OHOS_COMPONENT
@@ -81,6 +91,8 @@ Indicates that a component does not belong to OHOS.
 **Since:** 6
 
 **Deprecated since:** 9
+
+<!--Device-Flags-FLAG_NOT_OHOS_COMPONENT = 0x00000010--><!--Device-Flags-FLAG_NOT_OHOS_COMPONENT = 0x00000010-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -96,6 +108,8 @@ Indicates that an ability is enabled.
 
 **Deprecated since:** 9
 
+<!--Device-Flags-FLAG_ABILITY_FORM_ENABLED = 0x00000020--><!--Device-Flags-FLAG_ABILITY_FORM_ENABLED = 0x00000020-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## FLAG_ABILITYSLICE_MULTI_DEVICE
@@ -110,6 +124,8 @@ Indicates the support for cross-device startup in the distributed scheduler.
 
 **Deprecated since:** 9
 
+<!--Device-Flags-FLAG_ABILITYSLICE_MULTI_DEVICE = 0x00000100--><!--Device-Flags-FLAG_ABILITYSLICE_MULTI_DEVICE = 0x00000100-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## FLAG_START_FOREGROUND_ABILITY
@@ -123,6 +139,8 @@ Indicates that the ServiceAbility is started regardless of whether the host appl
 **Since:** 6
 
 **Deprecated since:** 9
+
+<!--Device-Flags-FLAG_START_FOREGROUND_ABILITY = 0x00000200--><!--Device-Flags-FLAG_START_FOREGROUND_ABILITY = 0x00000200-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -140,6 +158,8 @@ Indicates that the specific ability will be installed if it has not been install
 
 **Substitutes:** FLAG_INSTALL_ON_DEMAND
 
+<!--Device-Flags-FLAG_INSTALL_ON_DEMAND = 0x00000800--><!--Device-Flags-FLAG_INSTALL_ON_DEMAND = 0x00000800-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## FLAG_INSTALL_WITH_BACKGROUND_MODE
@@ -154,6 +174,8 @@ Indicates that the specific ability will be installed in the background if it ha
 
 **Deprecated since:** 9
 
+<!--Device-Flags-FLAG_INSTALL_WITH_BACKGROUND_MODE = 0x80000000--><!--Device-Flags-FLAG_INSTALL_WITH_BACKGROUND_MODE = 0x80000000-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## FLAG_ABILITY_CLEAR_MISSION
@@ -162,13 +184,13 @@ Indicates that the specific ability will be installed in the background if it ha
 FLAG_ABILITY_CLEAR_MISSION = 0x00008000
 ```
 
-Clears other operation missions. This flag can be set for the Want passed in
-[startAbility](arkts-ability-startability-f.md#startability-1)
-. It must be used together with **FLAG_ABILITY_NEW_MISSION**.
+Clears other operation missions. This flag can be set for the Want passed in [startAbility](arkts-ability-startability-f.md#startability-1). It must be used together with **FLAG_ABILITY_NEW_MISSION**.
 
 **Since:** 6
 
 **Deprecated since:** 9
+
+<!--Device-Flags-FLAG_ABILITY_CLEAR_MISSION = 0x00008000--><!--Device-Flags-FLAG_ABILITY_CLEAR_MISSION = 0x00008000-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -184,6 +206,8 @@ Creates a mission on the history mission stack.
 
 **Deprecated since:** 9
 
+<!--Device-Flags-FLAG_ABILITY_NEW_MISSION = 0x10000000--><!--Device-Flags-FLAG_ABILITY_NEW_MISSION = 0x10000000-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## FLAG_ABILITY_MISSION_TOP
@@ -192,12 +216,13 @@ Creates a mission on the history mission stack.
 FLAG_ABILITY_MISSION_TOP = 0x20000000
 ```
 
-Reuses an ability instance if it is on the top of an existing mission stack; creates an ability instance
-otherwise.
+Reuses an ability instance if it is on the top of an existing mission stack; creates an ability instance otherwise.
 
 **Since:** 6
 
 **Deprecated since:** 9
+
+<!--Device-Flags-FLAG_ABILITY_MISSION_TOP = 0x20000000--><!--Device-Flags-FLAG_ABILITY_MISSION_TOP = 0x20000000-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 

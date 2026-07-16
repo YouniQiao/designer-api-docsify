@@ -1,12 +1,10 @@
 # SingleKVStore
 
-Provides APIs for data management in a single KV store, such as adding data, deleting data, and subscribing to data
-changes or across-device data sync completion events.
-Before calling any method in **SingleKVStore**, you must use
-[getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-1)
-to obtain a **SingleKVStore** instance.
+Provides APIs for data management in a single KV store, such as adding data, deleting data, and subscribing to data changes or across-device data sync completion events.Before calling any method in **SingleKVStore**, you must use [getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-1)to obtain a **SingleKVStore** instance.
 
 **Since:** 9
+
+<!--Device-distributedKVStore-interface SingleKVStore--><!--Device-distributedKVStore-interface SingleKVStore-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -28,14 +26,16 @@ Backs up a distributed KV store. This API uses an asynchronous callback to retur
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-backup(file: string, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-backup(file: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string | Yes | Name of the KV store. The value cannot be empty or exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| file | string | Yes | Name of the KV store. The value cannot be empty or exceed [MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -77,19 +77,21 @@ Backs up an RDB store. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-backup(file: string): Promise<void>--><!--Device-SingleKVStore-backup(file: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string | Yes | Name of the KV store. The value cannot be empty or exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
+| file | string | Yes | Name of the KV store. The value cannot be empty or exceed [MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -129,25 +131,27 @@ Backs up a database by specifying {@code BackupConfig}.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-backupEx(backupConfig: BackupConfig): Promise<void>--><!--Device-SingleKVStore-backupEx(backupConfig: BackupConfig): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| backupConfig | BackupConfig | Yes | Indicates the {@code BackupConfig} object for backup database. |
+| backupConfig | [BackupConfig](arkts-arkdata-backupconfig-i.md) | Yes | Indicates the {@code BackupConfig} object for backup database. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15100000](../errorcode-distributedKVStore.md#15100000-invalid-parameter) | Input parameters do not meet the API requirements, such as invalid valueranges, length limits, or incorrect formats. |
+| [15100000](../errorcode-distributedKVStore.md#15100000-invalid-parameter) | Input parameters do not meet the API requirements, such as invalid value ranges, length limits, or incorrect formats. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 
 **Example**
@@ -178,13 +182,13 @@ try {
 closeResultSet(resultSet: KVStoreResultSet, callback: AsyncCallback<void>): void
 ```
 
-Closes the **KVStoreResultSet** object returned by
-[SingleKvStore.getResultSet](arkts-arkdata-singlekvstore-i.md#getresultset-2). This API
-uses an asynchronous callback to return the result.
+Closes the **KVStoreResultSet** object returned by [SingleKvStore.getResultSet](arkts-arkdata-singlekvstore-i.md#getresultset-2). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SingleKVStore-closeResultSet(resultSet: KVStoreResultSet, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-closeResultSet(resultSet: KVStoreResultSet, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -192,8 +196,8 @@ uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resultSet | KVStoreResultSet | Yes | **KVStoreResultSet** object to close. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| resultSet | [KVStoreResultSet](arkts-arkdata-kvstoreresultset-i.md) | Yes | **KVStoreResultSet** object to close. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -239,13 +243,13 @@ try {
 closeResultSet(resultSet: KVStoreResultSet): Promise<void>
 ```
 
-Closes the **KVStoreResultSet** object returned by
-[SingleKvStore.getResultSet](arkts-arkdata-singlekvstore-i.md#getresultset-2). This API
-uses a promise to return the result.
+Closes the **KVStoreResultSet** object returned by [SingleKvStore.getResultSet](arkts-arkdata-singlekvstore-i.md#getresultset-2). This API uses a promise to return the result.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SingleKVStore-closeResultSet(resultSet: KVStoreResultSet): Promise<void>--><!--Device-SingleKVStore-closeResultSet(resultSet: KVStoreResultSet): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -253,13 +257,13 @@ uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resultSet | KVStoreResultSet | Yes | **KVStoreResultSet** object to close. |
+| resultSet | [KVStoreResultSet](arkts-arkdata-kvstoreresultset-i.md) | Yes | **KVStoreResultSet** object to close. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -307,13 +311,15 @@ Commits the transaction in this single KV store. This API uses an asynchronous c
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-commit(callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-commit(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -353,13 +359,15 @@ Commits the transaction in this single KV store. This API uses a promise to retu
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-commit(): Promise<void>--><!--Device-SingleKVStore-commit(): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -397,14 +405,16 @@ Deletes a KV pair from this KV store. This API uses an asynchronous callback to 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-delete(key: string, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-delete(key: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -458,19 +468,21 @@ Deletes a KV pair from this KV store. This API uses a promise to return the resu
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-delete(key: string): Promise<void>--><!--Device-SingleKVStore-delete(key: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
+| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -520,14 +532,16 @@ Deletes a backup file. This API uses an asynchronous callback to return the resu
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-deleteBackup(files: Array<string>, callback: AsyncCallback<Array<[string, int]>>): void--><!--Device-SingleKVStore-deleteBackup(files: Array<string>, callback: AsyncCallback<Array<[string, int]>>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| files | Array&lt;string&gt; | Yes | Name of the backup file to delete. The value cannot be empty or exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
-| callback | AsyncCallback&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback used to return the name of the backup file deletedand the operation result. |
+| files | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Name of the backup file to delete. The value cannot be empty or exceed [MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<[string, number]>> | Yes | Callback used to return the name of the backup file deleted and the operation result. |
 
 **Error codes:**
 
@@ -568,19 +582,21 @@ Deletes a backup file. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-deleteBackup(files: Array<string>): Promise<Array<[string, int]>>--><!--Device-SingleKVStore-deleteBackup(files: Array<string>): Promise<Array<[string, int]>>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| files | Array&lt;string&gt; | Yes | Name of the backup file to delete. The value cannot be empty or exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
+| files | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Name of the backup file to delete. The value cannot be empty or exceed [MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[string, number]&gt;&gt; | Promise used to return the name of the backup file deleted and the operationresult. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<[string, number]>> | Promise used to return the name of the backup file deleted and the operation result. |
 
 **Error codes:**
 
@@ -619,25 +635,27 @@ Delete database backup file by specifying {@code BackupConfig}.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-deleteBackupEx(backupConfig: BackupConfig): Promise<void>--><!--Device-SingleKVStore-deleteBackupEx(backupConfig: BackupConfig): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| backupConfig | BackupConfig | Yes | Indicates the {@code BackupConfig} object for delete backup file. |
+| backupConfig | [BackupConfig](arkts-arkdata-backupconfig-i.md) | Yes | Indicates the {@code BackupConfig} object for delete backup file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15100000](../errorcode-distributedKVStore.md#15100000-invalid-parameter) | Input parameters do not meet the API requirements, such as invalid valueranges, length limits, or incorrect formats. |
+| [15100000](../errorcode-distributedKVStore.md#15100000-invalid-parameter) | Input parameters do not meet the API requirements, such as invalid value ranges, length limits, or incorrect formats. |
 
 **Example**
 
@@ -673,6 +691,8 @@ Batch deletes KV pairs from this single KV store. This API uses an asynchronous 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-deleteBatch(keys: string[], callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-deleteBatch(keys: string[], callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
@@ -680,7 +700,7 @@ Batch deletes KV pairs from this single KV store. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keys | string[] | Yes | KV pairs to delete. This parameter cannot be empty. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -747,6 +767,8 @@ Batch deletes KV pairs from this single KV store. This API uses a promise to ret
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-deleteBatch(keys: string[]): Promise<void>--><!--Device-SingleKVStore-deleteBatch(keys: string[]): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
@@ -759,7 +781,7 @@ Batch deletes KV pairs from this single KV store. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -816,12 +838,13 @@ try {
 enableSync(enabled: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets cross-device data sync, which can be enabled or disabled. This API uses an asynchronous callback to return
-the result.
+Sets cross-device data sync, which can be enabled or disabled. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SingleKVStore-enableSync(enabled: boolean, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-enableSync(enabled: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -829,8 +852,8 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable data sync across devices. The value **true** means to enable data syncacross devices, and the value **false** means the opposite. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| enabled | boolean | Yes | Whether to enable data sync across devices. The value **true** means to enable data sync across devices, and the value **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -870,19 +893,21 @@ Sets cross-device data sync, which can be enabled or disabled. This API uses a p
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-enableSync(enabled: boolean): Promise<void>--><!--Device-SingleKVStore-enableSync(enabled: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable data sync across devices. The value **true** means to enable data syncacross devices, and the value **false** means the opposite. |
+| enabled | boolean | Yes | Whether to enable data sync across devices. The value **true** means to enable data sync across devices, and the value **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -920,14 +945,16 @@ Obtains the value of the specified key. This API uses an asynchronous callback t
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-get(key: string, callback: AsyncCallback<boolean | string | long | double | Uint8Array>): void--><!--Device-SingleKVStore-get(key: string, callback: AsyncCallback<boolean | string | long | double | Uint8Array>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the value to obtain. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
-| callback | AsyncCallback&lt;boolean \| string \| number \| number \| Uint8Array&gt; | Yes | Callback used to return the valueobtained. |
+| key | string | Yes | Key of the value to obtain. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean \| string \| number \| number \| Uint8Array> | Yes | Callback used to return the value obtained. |
 
 **Error codes:**
 
@@ -950,19 +977,21 @@ Obtains the value of the specified key. This API uses a promise to return the re
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-get(key: string): Promise<boolean | string | long | double | Uint8Array>--><!--Device-SingleKVStore-get(key: string): Promise<boolean | string | long | double | Uint8Array>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the value to obtain. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
+| key | string | Yes | Key of the value to obtain. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean \| string \| number \| number \| Uint8Array&gt; | Promise used to return the value obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean \| string \| number \| number \| Uint8Array> | Promise used to return the value obtained. |
 
 **Error codes:**
 
@@ -979,12 +1008,13 @@ Obtains the value of the specified key. This API uses a promise to return the re
 getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 ```
 
-Obtains all KV pairs that match the specified key prefix. This API uses an asynchronous callback to return the
-result.
+Obtains all KV pairs that match the specified key prefix. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SingleKVStore-getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void--><!--Device-SingleKVStore-getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -992,8 +1022,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid andall data in the RDB store will be returned. |
-| callback | AsyncCallback&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs that match the specified prefix. |
+| keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid and all data in the RDB store will be returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Entry[]> | Yes | Callback used to return the KV pairs that match the specified prefix. |
 
 **Error codes:**
 
@@ -1059,19 +1089,21 @@ Obtains all KV pairs that match the specified key prefix. This API uses a promis
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-getEntries(keyPrefix: string): Promise<Entry[]>--><!--Device-SingleKVStore-getEntries(keyPrefix: string): Promise<Entry[]>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid andall data in the RDB store will be returned. |
+| keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid and all data in the RDB store will be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise used to return the KV pairs that match the specified prefix. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Entry[]> | Promise used to return the KV pairs that match the specified prefix. |
 
 **Error codes:**
 
@@ -1127,12 +1159,13 @@ try {
 getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 ```
 
-Obtains the KV pairs that match the specified **Query** object. This API uses an asynchronous callback to return
-the result.
+Obtains the KV pairs that match the specified **Query** object. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SingleKVStore-getEntries(query: Query, callback: AsyncCallback<Entry[]>): void--><!--Device-SingleKVStore-getEntries(query: Query, callback: AsyncCallback<Entry[]>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -1140,8 +1173,8 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | Query | Yes | Key prefix to match. |
-| callback | AsyncCallback&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs that match the specified **Query**object. |
+| query | [Query](arkts-arkdata-query-c.md) | Yes | Key prefix to match. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Entry[]> | Yes | Callback used to return the KV pairs that match the specified **Query** object. |
 
 **Error codes:**
 
@@ -1210,19 +1243,21 @@ Obtains the KV pairs that match the specified **Query** object. This API uses a 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-getEntries(query: Query): Promise<Entry[]>--><!--Device-SingleKVStore-getEntries(query: Query): Promise<Entry[]>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | Query | Yes | **Query** object to match. |
+| query | [Query](arkts-arkdata-query-c.md) | Yes | **Query** object to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise used to return the KV pairs that match the specified **Query** object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Entry[]> | Promise used to return the KV pairs that match the specified **Query** object. |
 
 **Error codes:**
 
@@ -1280,12 +1315,13 @@ try {
 getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
-Obtains a result set with the specified prefix from this single KV store. This API uses an asynchronous callback
-to return the result.
+Obtains a result set with the specified prefix from this single KV store. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SingleKVStore-getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void--><!--Device-SingleKVStore-getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -1293,8 +1329,8 @@ to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid andall data in the RDB store will be returned. |
-| callback | AsyncCallback&lt;KVStoreResultSet&gt; | Yes | Callback used to return the result set with the specified prefix. |
+| keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid and all data in the RDB store will be returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<KVStoreResultSet> | Yes | Callback used to return the result set with the specified prefix. |
 
 **Error codes:**
 
@@ -1363,12 +1399,13 @@ try {
 getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
 ```
 
-Obtains a result set with the specified prefix from this single KV store. This API uses a promise to return the
-result.
+Obtains a result set with the specified prefix from this single KV store. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SingleKVStore-getResultSet(keyPrefix: string): Promise<KVStoreResultSet>--><!--Device-SingleKVStore-getResultSet(keyPrefix: string): Promise<KVStoreResultSet>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -1376,13 +1413,13 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid andall data in the RDB store will be returned. |
+| keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid and all data in the RDB store will be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KVStoreResultSet&gt; | Promise used to return the result set with the specified prefix. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<KVStoreResultSet> | Promise used to return the result set with the specified prefix. |
 
 **Error codes:**
 
@@ -1443,12 +1480,13 @@ try {
 getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
-Obtains a **KVStoreResultSet** object that matches the specified **Query** object. This API uses an asynchronous
-callback to return the result.
+Obtains a **KVStoreResultSet** object that matches the specified **Query** object. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SingleKVStore-getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void--><!--Device-SingleKVStore-getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -1456,8 +1494,8 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | Query | Yes | **Query** object to match. |
-| callback | AsyncCallback&lt;KVStoreResultSet&gt; | Yes | Callback used to return the **KVStoreResultSet** object obtained. |
+| query | [Query](arkts-arkdata-query-c.md) | Yes | **Query** object to match. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<KVStoreResultSet> | Yes | Callback used to return the **KVStoreResultSet** object obtained. |
 
 **Error codes:**
 
@@ -1518,12 +1556,13 @@ try {
 getResultSet(query: Query): Promise<KVStoreResultSet>
 ```
 
-Obtains a **KVStoreResultSet** object that matches the specified **Query** object. This API uses a promise to
-return the result.
+Obtains a **KVStoreResultSet** object that matches the specified **Query** object. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SingleKVStore-getResultSet(query: Query): Promise<KVStoreResultSet>--><!--Device-SingleKVStore-getResultSet(query: Query): Promise<KVStoreResultSet>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -1531,13 +1570,13 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | Query | Yes | **Query** object to match. |
+| query | [Query](arkts-arkdata-query-c.md) | Yes | **Query** object to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KVStoreResultSet&gt; | Promise used to return the **KVStoreResultSet** object obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<KVStoreResultSet> | Promise used to return the **KVStoreResultSet** object obtained. |
 
 **Error codes:**
 
@@ -1591,12 +1630,13 @@ try {
 getResultSize(query: Query, callback: AsyncCallback<number>): void
 ```
 
-Obtains the number of results that match the specified **Query** object. This API uses an asynchronous callback
-to return the result.
+Obtains the number of results that match the specified **Query** object. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SingleKVStore-getResultSize(query: Query, callback: AsyncCallback<int>): void--><!--Device-SingleKVStore-getResultSize(query: Query, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -1604,8 +1644,8 @@ to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | Query | Yes | **Query** object to match. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the number of results obtained. |
+| query | [Query](arkts-arkdata-query-c.md) | Yes | **Query** object to match. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the number of results obtained. |
 
 **Error codes:**
 
@@ -1665,12 +1705,13 @@ try {
 getResultSize(query: Query): Promise<number>
 ```
 
-Obtains the number of results that match the specified **Query** object. This API uses a promise to return the
-result.
+Obtains the number of results that match the specified **Query** object. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SingleKVStore-getResultSize(query: Query): Promise<int>--><!--Device-SingleKVStore-getResultSize(query: Query): Promise<int>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -1678,13 +1719,13 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | Query | Yes | **Query** object to match. |
+| query | [Query](arkts-arkdata-query-c.md) | Yes | **Query** object to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the number of results obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the number of results obtained. |
 
 **Error codes:**
 
@@ -1744,13 +1785,15 @@ Obtains the security level of this KV store. This API uses an asynchronous callb
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-getSecurityLevel(callback: AsyncCallback<SecurityLevel>): void--><!--Device-SingleKVStore-getSecurityLevel(callback: AsyncCallback<SecurityLevel>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;SecurityLevel&gt; | Yes | Callback used to return the security level of the KV store. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<SecurityLevel> | Yes | Callback used to return the security level of the KV store. |
 
 **Error codes:**
 
@@ -1790,13 +1833,15 @@ Obtains the security level of this KV store. This API uses a promise to return t
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-getSecurityLevel(): Promise<SecurityLevel>--><!--Device-SingleKVStore-getSecurityLevel(): Promise<SecurityLevel>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SecurityLevel&gt; | Promise used to return the security level of the KV store. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SecurityLevel> | Promise used to return the security level of the KV store. |
 
 **Error codes:**
 
@@ -1832,6 +1877,8 @@ Unsubscribes from data changes.
 
 **Since:** 9
 
+<!--Device-SingleKVStore-off(event: 'dataChange', listener?: Callback<ChangeNotification>): void--><!--Device-SingleKVStore-off(event: 'dataChange', listener?: Callback<ChangeNotification>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
@@ -1839,7 +1886,7 @@ Unsubscribes from data changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates a data change event. |
-| listener | Callback&lt;ChangeNotification&gt; | No | Callback to unregister. If this parameter is not specified, this APIunregisters all callbacks for data changes. |
+| listener | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ChangeNotification> | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
 
 **Error codes:**
 
@@ -1893,6 +1940,8 @@ Unsubscribes from the cross-device data sync completion events.
 
 **Since:** 9
 
+<!--Device-SingleKVStore-off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void--><!--Device-SingleKVStore-off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
@@ -1900,7 +1949,7 @@ Unsubscribes from the cross-device data sync completion events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates a sync completion event. |
-| syncCallback | Callback&lt;Array&lt;[string, number]&gt;&gt; | No | Callback to unregister. If this parameter is not set, allcallbacks used to listen for the data sync completion event are unregistered. When multiple ArkTS instances (obtained through the[getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-1)API) of the same database all register the callback used to listen for the sync completion event, if all thesecallbacks are unregistered by one of the ArkTS instances, then the callbacks of the others are also unregistered. |
+| syncCallback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<[string, number]>> | No | Callback to unregister. If this parameter is not set, all callbacks used to listen for the data sync completion event are unregistered. When multiple ArkTS instances (obtained through the [getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-1)API) of the same database all register the callback used to listen for the sync completion event, if all these callbacks are unregistered by one of the ArkTS instances, then the callbacks of the others are also unregistered. |
 
 **Error codes:**
 
@@ -1953,6 +2002,8 @@ Subscribes to data changes of the specified type.
 
 **Since:** 9
 
+<!--Device-SingleKVStore-on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void--><!--Device-SingleKVStore-on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
@@ -1960,8 +2011,8 @@ Subscribes to data changes of the specified type.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates a data change event. |
-| type | SubscribeType | Yes | Type of data change. |
-| listener | Callback&lt;ChangeNotification&gt; | Yes | Callback used to return the object to be notified when the datachanges. |
+| type | [SubscribeType](../../apis-notification-kit/arkts-apis/arkts-notification-subscribetype-e.md) | Yes | Type of data change. |
+| listener | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ChangeNotification> | Yes | Callback used to return the object to be notified when the data changes. |
 
 **Error codes:**
 
@@ -1997,6 +2048,8 @@ Subscribes to the cross-device data sync completion events.
 
 **Since:** 9
 
+<!--Device-SingleKVStore-on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void--><!--Device-SingleKVStore-on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
@@ -2004,7 +2057,7 @@ Subscribes to the cross-device data sync completion events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates the sync completion event. |
-| syncCallback | Callback&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback used to return the sync completion event. |
+| syncCallback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<[string, number]>> | Yes | Callback used to return the sync completion event. |
 
 **Error codes:**
 
@@ -2042,12 +2095,13 @@ try {
 put(key: string, value: Uint8Array | string | number | number | boolean, callback: AsyncCallback<void>): void
 ```
 
-Adds a KV pair of the specified type to this KV store. This API uses an asynchronous callback to return the
-result.
+Adds a KV pair of the specified type to this KV store. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SingleKVStore-put(key: string, value: Uint8Array | string | long | double | boolean, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-put(key: string, value: Uint8Array | string | long | double | boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -2055,9 +2109,9 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
-| value | Uint8Array \| string \| number \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array, long , double, string, or boolean. A value of the Uint8Array or string type cannot exceed[MAX_VALUE_LENGTH](arkts-arkdata-constants-i.md). |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
+| value | Uint8Array \| string \| number \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array, long , double, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-constants-i.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2080,20 +2134,22 @@ Adds a KV pair of the specified type to this KV store. This API uses a promise t
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-put(key: string, value: Uint8Array | string | long | double | boolean): Promise<void>--><!--Device-SingleKVStore-put(key: string, value: Uint8Array | string | long | double | boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
-| value | Uint8Array \| string \| number \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array, long , double, string, or boolean. A value of the Uint8Array or string type cannot exceed[MAX_VALUE_LENGTH](arkts-arkdata-constants-i.md). |
+| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
+| value | Uint8Array \| string \| number \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array, long , double, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-constants-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2116,14 +2172,16 @@ Batch inserts KV pairs to this single KV store. This API uses an asynchronous ca
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-putBatch(entries: Entry[], callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-putBatch(entries: Entry[], callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entries | Entry[] | Yes | KV pairs to insert, which cannot exceed 512 MB. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| entries | [Entry](arkts-arkdata-entry-i.md)[] | Yes | KV pairs to insert, which cannot exceed 512 MB. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2192,19 +2250,21 @@ Batch inserts KV pairs to this single KV store. This API uses a promise to retur
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-putBatch(entries: Entry[]): Promise<void>--><!--Device-SingleKVStore-putBatch(entries: Entry[]): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entries | Entry[] | Yes | KV pairs to insert, which cannot exceed 512 MB. |
+| entries | [Entry](arkts-arkdata-entry-i.md)[] | Yes | KV pairs to insert, which cannot exceed 512 MB. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2266,13 +2326,15 @@ Update the key used to encrypt the database.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-rekey(): Promise<void>--><!--Device-SingleKVStore-rekey(): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -2306,18 +2368,20 @@ removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 
 Deletes data of a device. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> **deviceId** is **networkId** in
-> [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md), which can be
-> obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1)
-> .
+> **NOTE**  
+>  
+> **deviceId** is **networkId** in  
+> [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md), which can be  
+> obtained by  
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1)  
+> .  
 > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-syncmode-e.md).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SingleKVStore-removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -2326,7 +2390,7 @@ Deletes data of a device. This API uses an asynchronous callback to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Network ID of the target device. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2384,18 +2448,20 @@ removeDeviceData(deviceId: string): Promise<void>
 
 Deletes data of a device. This API uses a promise to return the result.
 
-> **NOTE**
->
-> **deviceId** is **networkId** in
-> [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md), which can be
-> obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1)
-> .
+> **NOTE**  
+>  
+> **deviceId** is **networkId** in  
+> [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md), which can be  
+> obtained by  
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1)  
+> .  
 > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-syncmode-e.md).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SingleKVStore-removeDeviceData(deviceId: string): Promise<void>--><!--Device-SingleKVStore-removeDeviceData(deviceId: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -2409,7 +2475,7 @@ Deletes data of a device. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2455,12 +2521,13 @@ try {
 restore(file: string, callback: AsyncCallback<void>): void
 ```
 
-Restores a distributed KV store from a database file. This API uses an asynchronous callback to return the
-result.
+Restores a distributed KV store from a database file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SingleKVStore-restore(file: string, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-restore(file: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -2468,8 +2535,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string | Yes | Name of the database file. The value cannot be empty or exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| file | string | Yes | Name of the database file. The value cannot be empty or exceed [MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2511,19 +2578,21 @@ Restores a distributed KV store from a database file. This API uses a promise to
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-restore(file: string): Promise<void>--><!--Device-SingleKVStore-restore(file: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string | Yes | Name of the database file. The value cannot be empty or exceed[MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
+| file | string | Yes | Name of the database file. The value cannot be empty or exceed [MAX_KEY_LENGTH](arkts-arkdata-constants-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2563,25 +2632,27 @@ Restores a database by specifying {@code BackupConfig}.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-restoreEx(backupConfig: BackupConfig): Promise<void>--><!--Device-SingleKVStore-restoreEx(backupConfig: BackupConfig): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| backupConfig | BackupConfig | Yes | Indicates the {@code BackupConfig} object for restore database. |
+| backupConfig | [BackupConfig](arkts-arkdata-backupconfig-i.md) | Yes | Indicates the {@code BackupConfig} object for restore database. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15100000](../errorcode-distributedKVStore.md#15100000-invalid-parameter) | Input parameters do not meet the API requirements, such as invalid valueranges, length limits, or incorrect formats. |
+| [15100000](../errorcode-distributedKVStore.md#15100000-invalid-parameter) | Input parameters do not meet the API requirements, such as invalid value ranges, length limits, or incorrect formats. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 
 **Example**
@@ -2618,13 +2689,15 @@ Rolls back the transaction in this single KV store. This API uses an asynchronou
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-rollback(callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-rollback(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2664,13 +2737,15 @@ Rolls back the transaction in this single KV store. This API uses a promise to r
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-rollback(): Promise<void>--><!--Device-SingleKVStore-rollback(): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2704,14 +2779,16 @@ setSyncParam(defaultAllowedDelayMs: number, callback: AsyncCallback<void>): void
 
 Sets the default delay for cross-device data sync. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> After the default delay is set, calling [sync](arkts-arkdata-syncmode-e.md) will not trigger the cross-
+> **NOTE**  
+>  
+> After the default delay is set, calling [sync](arkts-arkdata-syncmode-e.md) will not trigger the cross-  
 > device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SingleKVStore-setSyncParam(defaultAllowedDelayMs: int, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-setSyncParam(defaultAllowedDelayMs: int, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -2720,7 +2797,7 @@ Sets the default delay for cross-device data sync. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | defaultAllowedDelayMs | number | Yes | Delay time to set, in ms. The value can be **0** or ranges from 100 to 86400000. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2757,14 +2834,16 @@ setSyncParam(defaultAllowedDelayMs: number): Promise<void>
 
 Sets the default delay for cross-device data sync. This API uses a promise to return the result.
 
-> **NOTE**
->
-> After the default delay is set, calling [sync](arkts-arkdata-syncmode-e.md) will not trigger the cross-
+> **NOTE**  
+>  
+> After the default delay is set, calling [sync](arkts-arkdata-syncmode-e.md) will not trigger the cross-  
 > device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SingleKVStore-setSyncParam(defaultAllowedDelayMs: int): Promise<void>--><!--Device-SingleKVStore-setSyncParam(defaultAllowedDelayMs: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -2778,7 +2857,7 @@ Sets the default delay for cross-device data sync. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2817,6 +2896,8 @@ Sets the data sync range. This API uses an asynchronous callback to return the r
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
@@ -2825,7 +2906,7 @@ Sets the data sync range. This API uses an asynchronous callback to return the r
 | --- | --- | --- | --- |
 | localLabels | string[] | Yes | Sync labels set for the local device. |
 | remoteSupportLabels | string[] | Yes | Sync labels set for remote devices. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2867,6 +2948,8 @@ Sets the data sync range. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void>--><!--Device-SingleKVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
@@ -2880,7 +2963,7 @@ Sets the data sync range. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2920,13 +3003,15 @@ Starts the transaction in this single KV store. This API uses an asynchronous ca
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-startTransaction(callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-startTransaction(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2998,13 +3083,15 @@ Starts the transaction in this single KV store. This API uses a promise to retur
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-startTransaction(): Promise<void>--><!--Device-SingleKVStore-startTransaction(): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -3040,15 +3127,14 @@ try {
 sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 ```
 
-Starts cross-device data sync manually. For details about the sync modes of KV stores, see
-[Cross-Device Synchronization of KV Stores](../../../../database/data-sync-of-kv-store.md).
+Starts cross-device data sync manually. For details about the sync modes of KV stores, see [Cross-Device Synchronization of KV Stores](../../../../database/data-sync-of-kv-store.md).
 
-> **NOTE**
->
-> **deviceIds** is **networkId** in
-> [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md), which can be
-> obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1)
+> **NOTE**  
+>  
+> **deviceIds** is **networkId** in  
+> [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md), which can be  
+> obtained by  
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1)  
 > .
 
 **Since:** 9
@@ -3057,15 +3143,17 @@ Starts cross-device data sync manually. For details about the sync modes of KV s
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-sync(deviceIds: string[], mode: SyncMode, delayMs?: int): void--><!--Device-SingleKVStore-sync(deviceIds: string[], mode: SyncMode, delayMs?: int): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceIds | string[] | Yes | List of **networkId**s of the devices in the same networking environment to besynchronized. |
-| mode | SyncMode | Yes | Sync mode. |
-| delayMs | number | No | Delay time allowed, in ms. The default value is **0**. If **delayMs** is set, data sync will beexecuted **delayMs** after **sync()** is called. If **delayMs** is not set, the delay set in[setSyncParam](arkts-arkdata-singlekvstore-i.md#setsyncparam-1)is used. |
+| deviceIds | string[] | Yes | List of **networkId**s of the devices in the same networking environment to be synchronized. |
+| mode | [SyncMode](arkts-arkdata-syncmode-e.md) | Yes | Sync mode. |
+| delayMs | number | No | Delay time allowed, in ms. The default value is **0**. If **delayMs** is set, data sync will be executed **delayMs** after **sync()** is called. If **delayMs** is not set, the delay set in [setSyncParam](arkts-arkdata-singlekvstore-i.md#setsyncparam-1)is used. |
 
 **Error codes:**
 
@@ -3137,15 +3225,14 @@ export default class EntryAbility extends UIAbility {
 sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: number): void
 ```
 
-Starts cross-device data sync manually. This API returns the result synchronously. For details about the sync
-modes of KV stores, see [Cross-Device Synchronization of KV Stores](../../../../database/data-sync-of-kv-store.md).
+Starts cross-device data sync manually. This API returns the result synchronously. For details about the sync modes of KV stores, see [Cross-Device Synchronization of KV Stores](../../../../database/data-sync-of-kv-store.md).
 
-> **NOTE**
->
-> **deviceIds** is **networkId** in
-> [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md), which can be
-> obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1)
+> **NOTE**  
+>  
+> **deviceIds** is **networkId** in  
+> [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicebasicinfo-i.md), which can be  
+> obtained by  
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-i.md#getavailabledevicelistsync-1)  
 > .
 
 **Since:** 9
@@ -3154,16 +3241,18 @@ modes of KV stores, see [Cross-Device Synchronization of KV Stores](../../../../
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: int): void--><!--Device-SingleKVStore-sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: int): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceIds | string[] | Yes | List of **networkId**s of the devices in the same networking environment to besynchronized. |
-| query | Query | Yes | **Query** object to match. |
-| mode | SyncMode | Yes | Sync mode. |
-| delayMs | number | No | Delay time allowed, in ms. The default value is **0**. If **delayMs** is set, data sync will beexecuted **delayMs** after **sync()** is called. If **delayMs** is not set, the delay set in[setSyncParam](arkts-arkdata-singlekvstore-i.md#setsyncparam-1)is used. |
+| deviceIds | string[] | Yes | List of **networkId**s of the devices in the same networking environment to be synchronized. |
+| query | [Query](arkts-arkdata-query-c.md) | Yes | **Query** object to match. |
+| mode | [SyncMode](arkts-arkdata-syncmode-e.md) | Yes | Sync mode. |
+| delayMs | number | No | Delay time allowed, in ms. The default value is **0**. If **delayMs** is set, data sync will be executed **delayMs** after **sync()** is called. If **delayMs** is not set, the delay set in [setSyncParam](arkts-arkdata-singlekvstore-i.md#setsyncparam-1)is used. |
 
 **Error codes:**
 

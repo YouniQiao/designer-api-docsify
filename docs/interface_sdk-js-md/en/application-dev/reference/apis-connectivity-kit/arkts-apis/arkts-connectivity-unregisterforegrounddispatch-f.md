@@ -20,13 +20,15 @@ Unregister tag foreground dispatch.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-tag-function unregisterForegroundDispatch(elementName: ElementName): void--><!--Device-tag-function unregisterForegroundDispatch(elementName: ElementName): void-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | ElementName | Yes | The element name of application, must include the bundleName and abilityName. |
+| elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-t.md) | Yes | The element name of application, must include the bundleName and abilityName. |
 
 **Error codes:**
 

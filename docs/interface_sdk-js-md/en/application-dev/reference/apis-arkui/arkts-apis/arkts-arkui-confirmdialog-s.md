@@ -4,6 +4,8 @@ Declare CustomDialog ConfirmDialog
 
 **Since:** 18
 
+<!--Device-unnamed-export declare struct ConfirmDialog--><!--Device-unnamed-export declare struct ConfirmDialog-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Sets the ConfirmDialog checkbox tips.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ConfirmDialog-checkTips?: ResourceStr--><!--Device-ConfirmDialog-checkTips?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## content
@@ -46,6 +50,8 @@ Sets the ConfirmDialog content.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ConfirmDialog-content?: ResourceStr--><!--Device-ConfirmDialog-content?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## controller
@@ -63,6 +69,8 @@ Sets the ConfirmDialog Controller.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ConfirmDialog-controller: CustomDialogController--><!--Device-ConfirmDialog-controller: CustomDialogController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,6 +92,8 @@ Sets the ConfirmDialog checkbox state.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ConfirmDialog-@Prop isChecked?: boolean--><!--Device-ConfirmDialog-@Prop isChecked?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onCheckedChange
@@ -101,6 +111,8 @@ Sets the ConfirmDialog CheckBox Callback.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ConfirmDialog-onCheckedChange?: Callback<boolean>--><!--Device-ConfirmDialog-onCheckedChange?: Callback<boolean>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -120,6 +132,8 @@ Sets the ConfirmDialog primary button.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ConfirmDialog-primaryButton?: ButtonOptions--><!--Device-ConfirmDialog-primaryButton?: ButtonOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## secondaryButton
@@ -137,6 +151,8 @@ Sets the ConfirmDialog secondary button.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ConfirmDialog-secondaryButton?: ButtonOptions--><!--Device-ConfirmDialog-secondaryButton?: ButtonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -156,6 +172,8 @@ Custom Theme.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ConfirmDialog-theme?: Theme | CustomTheme--><!--Device-ConfirmDialog-theme?: Theme | CustomTheme-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## themeColorMode
@@ -174,6 +192,8 @@ Sets the ConfirmDialog dark or light Mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ConfirmDialog-themeColorMode?: ThemeColorMode--><!--Device-ConfirmDialog-themeColorMode?: ThemeColorMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## title
@@ -191,6 +211,8 @@ Sets the ConfirmDialog title.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ConfirmDialog-title: ResourceStr--><!--Device-ConfirmDialog-title: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

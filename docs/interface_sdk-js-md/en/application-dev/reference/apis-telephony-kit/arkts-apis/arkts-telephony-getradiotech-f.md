@@ -12,12 +12,13 @@ import { radio } from '@kit.TelephonyKit';
 function getRadioTech(slotId: number, callback: AsyncCallback<NetworkRadioTech>): void
 ```
 
-Obtains radio access technology (RAT) of the registered network. The system
-returns RAT of the packet service (PS) and circuit service (CS) domain.
+Obtains radio access technology (RAT) of the registered network. The system returns RAT of the packet service (PS) and circuit service (CS) domain.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-radio-function getRadioTech(slotId: int, callback: AsyncCallback<NetworkRadioTech>): void--><!--Device-radio-function getRadioTech(slotId: int, callback: AsyncCallback<NetworkRadioTech>): void-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -26,7 +27,7 @@ returns RAT of the packet service (PS) and circuit service (CS) domain.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;NetworkRadioTech&gt; | Yes | Returnsthe RAT of PS domain and CS domain of registered network.The values of RAT are as follows:&lt;ul&gt;&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_UNKNOWN}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_GSM}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_1XRTT}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_WCDMA}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_HSPA}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_HSPAP}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_TD_SCDMA}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_EVDO}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_EHRPD}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_LTE}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_LTE_CA}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_IWLAN}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_NR}&lt;/ul&gt; |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<NetworkRadioTech> | Yes | Returns the RAT of PS domain and CS domain of registered network.The values of RAT are as follows:&lt;ul&gt;&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_UNKNOWN}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_GSM}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_1XRTT}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_WCDMA}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_HSPA}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_HSPAP}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_TD_SCDMA}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_EVDO}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_EHRPD}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_LTE}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_LTE_CA}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_IWLAN}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_NR}&lt;/ul&gt; |
 
 **Error codes:**
 
@@ -46,12 +47,13 @@ returns RAT of the packet service (PS) and circuit service (CS) domain.
 function getRadioTech(slotId: number): Promise<NetworkRadioTech>
 ```
 
-Obtains radio access technology (RAT) of the registered network. The system
-returns RAT of the packet service (PS) and circuit service (CS) domain.
+Obtains radio access technology (RAT) of the registered network. The system returns RAT of the packet service (PS) and circuit service (CS) domain.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-radio-function getRadioTech(slotId: int): Promise<NetworkRadioTech>--><!--Device-radio-function getRadioTech(slotId: int): Promise<NetworkRadioTech>-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -65,7 +67,7 @@ returns RAT of the packet service (PS) and circuit service (CS) domain.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetworkRadioTech&gt; | Returns the RAT of PS domain and CS domain of registered network.The values of RAT are as follows:&lt;ul&gt;&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_UNKNOWN}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_GSM}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_1XRTT}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_WCDMA}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_HSPA}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_HSPAP}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_TD_SCDMA}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_EVDO}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_EHRPD}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_LTE}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_LTE_CA}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_IWLAN}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_NR}&lt;/ul&gt; |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetworkRadioTech> | Returns the RAT of PS domain and CS domain of registered network.The values of RAT are as follows:&lt;ul&gt;&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_UNKNOWN}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_GSM}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_1XRTT}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_WCDMA}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_HSPA}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_HSPAP}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_TD_SCDMA}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_EVDO}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_EHRPD}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_LTE}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_LTE_CA}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_IWLAN}&lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_NR}&lt;/ul&gt; |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ The definition of member purchase information.
 
 **Since:** 23
 
+<!--Device-avMusicTemplate-interface MemberPurchaseInfo--><!--Device-avMusicTemplate-interface MemberPurchaseInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Member purchase diagram content.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MemberPurchaseInfo-diagramContent: string--><!--Device-MemberPurchaseInfo-diagramContent: string-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## diagramData
@@ -41,6 +45,8 @@ Member purchase diagram.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MemberPurchaseInfo-diagramData?: image.PixelMap--><!--Device-MemberPurchaseInfo-diagramData?: image.PixelMap-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -58,6 +64,8 @@ The URL for the member purchase illustration must be in 21:9 aspect ratio.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MemberPurchaseInfo-diagramUrl: string--><!--Device-MemberPurchaseInfo-diagramUrl: string-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## id
@@ -74,6 +82,8 @@ Unique id of the member purchase information.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MemberPurchaseInfo-id: string--><!--Device-MemberPurchaseInfo-id: string-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## memberPurchaseType
@@ -89,6 +99,8 @@ Member purchase type
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MemberPurchaseInfo-memberPurchaseType: MemberPurchaseType--><!--Device-MemberPurchaseInfo-memberPurchaseType: MemberPurchaseType-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 

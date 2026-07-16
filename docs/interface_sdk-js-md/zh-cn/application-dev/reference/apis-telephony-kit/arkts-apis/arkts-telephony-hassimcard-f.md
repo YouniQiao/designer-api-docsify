@@ -1,5 +1,11 @@
 # hasSimCard
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## hasSimCard
 
 ```TypeScript
@@ -10,6 +16,8 @@ Checks whether a SIM card is inserted in a specified slot.
 
 **起始版本：** 7
 
+<!--Device-sim-function hasSimCard(slotId: int, callback: AsyncCallback<boolean>): void--><!--Device-sim-function hasSimCard(slotId: int, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -17,7 +25,7 @@ Checks whether a SIM card is inserted in a specified slot.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | Indicates the callback for hasSimCard.Returns {@code true} if a SIM card is inserted; return {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | Indicates the callback for hasSimCard.Returns {@code true} if a SIM card is inserted; return {@code false} otherwise. |
 
 **错误码：**
 
@@ -52,6 +60,8 @@ Checks whether a SIM card is inserted in a specified slot.
 
 **起始版本：** 7
 
+<!--Device-sim-function hasSimCard(slotId: int): Promise<boolean>--><!--Device-sim-function hasSimCard(slotId: int): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -64,7 +74,7 @@ Checks whether a SIM card is inserted in a specified slot.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns {@code true} if a SIM card is inserted; return {@code false} otherwise. |
+| Promise<boolean> | Returns {@code true} if a SIM card is inserted; return {@code false} otherwise. |
 
 **错误码：**
 

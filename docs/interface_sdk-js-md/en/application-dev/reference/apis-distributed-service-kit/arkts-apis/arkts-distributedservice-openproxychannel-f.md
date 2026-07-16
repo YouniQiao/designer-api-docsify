@@ -20,26 +20,28 @@ Opens a proxy channel. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-proxyChannelManager-function openProxyChannel(channelInfo: ChannelInfo): Promise<int>--><!--Device-proxyChannelManager-function openProxyChannel(channelInfo: ChannelInfo): Promise<int>-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| channelInfo | ChannelInfo | Yes | Channel information, including the MAC address and service UUID of the peerdevice. |
+| channelInfo | [ChannelInfo](arkts-distributedservice-channelinfo-i.md) | Yes | Channel information, including the MAC address and service UUID of the peer device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Proxy channel ID. The value range is [1, 2147483647]. The lifecycle of **channelId** isthe same as that of the proxy channel. If the proxy is not closed, the returned **channelId** is the same asthat passed in the API. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Proxy channel ID. The value range is [1, 2147483647]. The lifecycle of **channelId** is the same as that of the proxy channel. If the proxy is not closed, the returned **channelId** is the same as that passed in the API. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because bluetooth proxy function hasbeen trimmed.<br>**Applicable version:** 26.0.0 and later |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because bluetooth proxy function has been trimmed.<br>**Applicable version:** 26.0.0 and later |
 | [32390001](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390001-bluetooth-disabled) | BR is disabled. |
 | [32390002](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390002-bluetooth-unpaired) | Device not paired. |
 | [32390006](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390006-parameter-verification-error) | Parameter error. |

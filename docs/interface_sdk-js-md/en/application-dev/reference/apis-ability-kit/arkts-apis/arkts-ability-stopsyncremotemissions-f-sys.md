@@ -20,6 +20,8 @@ Stops synchronizing the remote mission list. This API uses an asynchronous callb
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-distributedMissionManager-function stopSyncRemoteMissions(parameter: MissionDeviceInfo, callback: AsyncCallback<void>): void--><!--Device-distributedMissionManager-function stopSyncRemoteMissions(parameter: MissionDeviceInfo, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
@@ -28,8 +30,8 @@ Stops synchronizing the remote mission list. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | MissionDeviceInfo | Yes | Parameters required for synchronization. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the synchronization is stopped, **err**is **undefined**; otherwise, **err** is an error object. |
+| parameter | [MissionDeviceInfo](arkts-ability-missiondeviceinfo-i-sys.md) | Yes | Parameters required for synchronization. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the synchronization is stopped, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -77,6 +79,8 @@ Stops synchronizing the remote mission list. This API uses a promise to return t
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-distributedMissionManager-function stopSyncRemoteMissions(parameter: MissionDeviceInfo): Promise<void>--><!--Device-distributedMissionManager-function stopSyncRemoteMissions(parameter: MissionDeviceInfo): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
@@ -85,13 +89,13 @@ Stops synchronizing the remote mission list. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | MissionDeviceInfo | Yes | Parameters required for synchronization. |
+| parameter | [MissionDeviceInfo](arkts-ability-missiondeviceinfo-i-sys.md) | Yes | Parameters required for synchronization. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

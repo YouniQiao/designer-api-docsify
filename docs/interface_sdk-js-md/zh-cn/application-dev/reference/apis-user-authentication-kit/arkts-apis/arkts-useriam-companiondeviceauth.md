@@ -4,17 +4,25 @@
 
 该模块主要用于以下场景：
 
-- 管理伴随设备与主设备之间的认证关系。
-- 查询和订阅伴随设备的状态变化。
-- 管理伴随设备支持的业务范围。
-- 实现持续认证功能。
+- 管理伴随设备与主设备之间的认证关系。  
+- 查询和订阅伴随设备的状态变化。  
+- 管理伴随设备支持的业务范围。  
+- 实现持续认证功能。  
 - 处理设备选择和注册。
 
 **起始版本：** 23
 
+<!--Device-unnamed-declare namespace companionDeviceAuth--><!--Device-unnamed-declare namespace companionDeviceAuth-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+```
 
 ## 汇总
 

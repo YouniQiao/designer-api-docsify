@@ -1,12 +1,14 @@
 # AutoExposureQuery
 
-AutoExposureQuery provides APIs to query the automatic exposure feature of a camera device.
->
-> - In this version, a compatibility change was made that preserved the initial version information of inner
-> elements. As a result, you might see outer element's @since version number being higher than that of the inner
+AutoExposureQuery provides APIs to query the automatic exposure feature of a camera device.  
+>  
+> - In this version, a compatibility change was made that preserved the initial version information of inner  
+> elements. As a result, you might see outer element's @since version number being higher than that of the inner  
 > elements. However, this discrepancy does not affect the functionality of the interface.
 
 **Since:** 12
+
+<!--Device-camera-interface AutoExposureQuery--><!--Device-camera-interface AutoExposureQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -28,6 +30,8 @@ Checks whether a specified exposure metering mode is supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-AutoExposureQuery-isExposureMeteringModeSupported(aeMeteringMode: ExposureMeteringMode): boolean--><!--Device-AutoExposureQuery-isExposureMeteringModeSupported(aeMeteringMode: ExposureMeteringMode): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -36,7 +40,7 @@ Checks whether a specified exposure metering mode is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aeMeteringMode | ExposureMeteringMode | Yes | Exposure metering mode |
+| aeMeteringMode | [ExposureMeteringMode](arkts-camera-exposuremeteringmode-e-sys.md) | Yes | Exposure metering mode |
 
 **Return value:**
 

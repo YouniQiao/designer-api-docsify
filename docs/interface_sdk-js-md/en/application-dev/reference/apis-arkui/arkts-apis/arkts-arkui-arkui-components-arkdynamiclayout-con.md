@@ -6,10 +6,9 @@
 export declare const DynamicLayout: DynamicLayoutInterface
 ```
 
-Defines the dynamic layout container component, which supports dynamically switching between different layout
-algorithms at runtime without changing the status of child components.
-> **Child Components**
->
+Defines the dynamic layout container component, which supports dynamically switching between different layout algorithms at runtime without changing the status of child components.  
+> **Child Components**  
+>  
 > Child components are supported.
 
 **Since:** 24
@@ -19,6 +18,8 @@ algorithms at runtime without changing the status of child components.
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
+
+<!--Device-unnamed-export declare const DynamicLayout: DynamicLayoutInterface--><!--Device-unnamed-export declare const DynamicLayout: DynamicLayoutInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -37,6 +38,8 @@ Defines DynamicLayout Component instance.
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
+
+<!--Device-unnamed-export declare const DynamicLayoutInstance: DynamicLayoutAttribute--><!--Device-unnamed-export declare const DynamicLayoutInstance: DynamicLayoutAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,11 +1,18 @@
 # Stat
 
-文件具体信息，在调用Stat的方法前，需要先通过[stat()](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiostat)方法（同步或异步）构建一个
-Stat实例。
+文件具体信息，在调用Stat的方法前，需要先通过[stat()](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiostat)方法（同步或异步）构建一个Stat实例。
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare interface Stat--><!--Device-unnamed-declare interface Stat-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+```
 
 ## isBlockDevice
 
@@ -16,6 +23,8 @@ isBlockDevice(): boolean
 用于判断文件是否是块特殊文件。一个块特殊文件只能以块为粒度进行访问，且访问的时候带缓存。
 
 **起始版本：** 9
+
+<!--Device-Stat-isBlockDevice(): boolean--><!--Device-Stat-isBlockDevice(): boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -50,6 +59,8 @@ isCharacterDevice(): boolean
 
 **起始版本：** 9
 
+<!--Device-Stat-isCharacterDevice(): boolean--><!--Device-Stat-isCharacterDevice(): boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
@@ -83,7 +94,9 @@ isDirectory(): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stat-isDirectory(): boolean--><!--Device-Stat-isDirectory(): boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -118,6 +131,8 @@ isFIFO(): boolean
 
 **起始版本：** 9
 
+<!--Device-Stat-isFIFO(): boolean--><!--Device-Stat-isFIFO(): boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
@@ -151,7 +166,9 @@ isFile(): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stat-isFile(): boolean--><!--Device-Stat-isFile(): boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -186,6 +203,8 @@ isSocket(): boolean
 
 **起始版本：** 9
 
+<!--Device-Stat-isSocket(): boolean--><!--Device-Stat-isSocket(): boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
@@ -218,6 +237,8 @@ isSymbolicLink(): boolean
 判断文件是否为符号链接。
 
 **起始版本：** 9
+
+<!--Device-Stat-isSymbolicLink(): boolean--><!--Device-Stat-isSymbolicLink(): boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -256,7 +277,9 @@ readonly atime: number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stat-readonly atime: number--><!--Device-Stat-readonly atime: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -274,6 +297,8 @@ readonly atimeNs?:bigint
 
 **起始版本：** 15
 
+<!--Device-Stat-readonly atimeNs?:bigint--><!--Device-Stat-readonly atimeNs?:bigint-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## ctime
@@ -287,6 +312,8 @@ readonly ctime: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Stat-readonly ctime: number--><!--Device-Stat-readonly ctime: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -302,6 +329,8 @@ readonly ctimeNs?:bigint
 
 **起始版本：** 15
 
+<!--Device-Stat-readonly ctimeNs?:bigint--><!--Device-Stat-readonly ctimeNs?:bigint-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## gid
@@ -315,6 +344,8 @@ readonly gid: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Stat-readonly gid: number--><!--Device-Stat-readonly gid: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -330,6 +361,8 @@ readonly ino: bigint
 
 **起始版本：** 9
 
+<!--Device-Stat-readonly ino: bigint--><!--Device-Stat-readonly ino: bigint-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## location
@@ -343,6 +376,8 @@ readonly location: LocationType
 **类型：** LocationType
 
 **起始版本：** 11
+
+<!--Device-Stat-readonly location: LocationType--><!--Device-Stat-readonly location: LocationType-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -378,7 +413,9 @@ readonly mode: number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stat-readonly mode: number--><!--Device-Stat-readonly mode: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -394,7 +431,9 @@ readonly mtime: number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stat-readonly mtime: number--><!--Device-Stat-readonly mtime: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -410,6 +449,8 @@ readonly mtimeNs?:bigint
 
 **起始版本：** 15
 
+<!--Device-Stat-readonly mtimeNs?:bigint--><!--Device-Stat-readonly mtimeNs?:bigint-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## size
@@ -424,7 +465,9 @@ readonly size: number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Stat-readonly size: number--><!--Device-Stat-readonly size: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -439,6 +482,8 @@ readonly uid: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Stat-readonly uid: number--><!--Device-Stat-readonly uid: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

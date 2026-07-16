@@ -4,6 +4,8 @@ Indicates the options of call event.
 
 **Since:** 8
 
+<!--Device-call-export interface CallEventOptions--><!--Device-call-export interface CallEventOptions-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -25,6 +27,8 @@ Indicates the event ID of call ability.
 **Type:** CallAbilityEventId
 
 **Since:** 8
+
+<!--Device-CallEventOptions-eventId: CallAbilityEventId--><!--Device-CallEventOptions-eventId: CallAbilityEventId-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare class ColorMetrics--><!--Device-unnamed-declare class ColorMetrics-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## autoRefresh
@@ -12,14 +14,15 @@
 autoRefresh?(value: boolean): ColorMetrics
 ```
 
-设置ColorMetrics对象的自动刷新。
-启用时，当系统配置发生变化时，使用ColorMetrics.resourceColor()创建的对象的颜色值将自动更新
+设置ColorMetrics对象的自动刷新。启用时，当系统配置发生变化时，使用ColorMetrics.resourceColor()创建的对象的颜色值将自动更新
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ColorMetrics-autoRefresh?(value: boolean): ColorMetrics--><!--Device-ColorMetrics-autoRefresh?(value: boolean): ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,7 +36,7 @@ autoRefresh?(value: boolean): ColorMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| ColorMetrics | 返回用于链接的ColorMetrics对象。 |
+| [ColorMetrics](arkts-arkui-colormetrics-c.md) | 返回用于链接的ColorMetrics对象。 |
 
 ## blendColor
 
@@ -47,7 +50,9 @@ blendColor(overlayColor: ColorMetrics): ColorMetrics
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ColorMetrics-blendColor(overlayColor: ColorMetrics): ColorMetrics--><!--Device-ColorMetrics-blendColor(overlayColor: ColorMetrics): ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -55,13 +60,13 @@ blendColor(overlayColor: ColorMetrics): ColorMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| overlayColor | ColorMetrics | 是 | 要叠加在上方的颜色对象。alpha属性决定叠加强度。1.0表示完全覆盖，0.0表示完全透明，混合结果为原色。 |
+| overlayColor | [ColorMetrics](arkts-arkui-colormetrics-c.md) | 是 | 要叠加在上方的颜色对象。alpha属性决定叠加强度。1.0表示完全覆盖，0.0表示完全透明，混合结果为原色。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ColorMetrics | 新的颜色对象，其red、green、blue和alpha通道均为当前颜色与叠加颜色混合后的结果值。 |
+| [ColorMetrics](arkts-arkui-colormetrics-c.md) | 新的颜色对象，其red、green、blue和alpha通道均为当前颜色与叠加颜色混合后的结果值。 |
 
 **错误码：**
 
@@ -75,13 +80,15 @@ blendColor(overlayColor: ColorMetrics): ColorMetrics
 static colorWithSpace(colorSpace: ColorSpace, red: number, green: number, blue: number, alpha?: number): ColorMetrics
 ```
 
-使用[ColorSpace](../arkts-components/arkts-arkui-colorspace-e.md)和rgba格式颜色实例化ColorMetrics类。仅部分属性支持在display-p3色彩空间中设置颜色。
+使用[ColorSpace](arkts-arkui-colorspace-e.md)和rgba格式颜色实例化ColorMetrics类。仅部分属性支持在display-p3色彩空间中设置颜色。
 
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ColorMetrics-static colorWithSpace(colorSpace: ColorSpace, red: number, green: number, blue: number, alpha?: number): ColorMetrics--><!--Device-ColorMetrics-static colorWithSpace(colorSpace: ColorSpace, red: number, green: number, blue: number, alpha?: number): ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -89,7 +96,7 @@ static colorWithSpace(colorSpace: ColorSpace, red: number, green: number, blue: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorSpace | ColorSpace | 是 | 颜色空间，用于指定颜色的色彩空间。使用ColorSpace.DISPLAY_P3，需要对应窗口调用[setWindowColorSpace](../../../../reference/apis-arkui/arkts-apis-window-Window.md#setwindowcolorspace9-1)接口，将当前窗口设置为广色域模式。 |
+| colorSpace | [ColorSpace](arkts-arkui-colorspace-e.md) | 是 | 颜色空间，用于指定颜色的色彩空间。使用ColorSpace.DISPLAY_P3，需要对应窗口调用[setWindowColorSpace](../../../../reference/apis-arkui/arkts-apis-window-Window.md#setwindowcolorspace9-1)接口，将当前窗口设置为广色域模式。 |
 | red | number | 是 | 颜色的R分量（红色），值是0~1的浮动数值。 |
 | green | number | 是 | 颜色的G分量（绿色），值是0~1的浮动数值。 |
 | blue | number | 是 | 颜色的B分量（蓝色），值是0~1的浮动数值。 |
@@ -99,7 +106,7 @@ static colorWithSpace(colorSpace: ColorSpace, red: number, green: number, blue: 
 
 | 类型 | 说明 |
 | --- | --- |
-| ColorMetrics | ColorMetrics类的实例。 |
+| [ColorMetrics](arkts-arkui-colormetrics-c.md) | ColorMetrics类的实例。 |
 
 ## numeric
 
@@ -113,7 +120,9 @@ static numeric(value: number): ColorMetrics
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ColorMetrics-static numeric(value: number): ColorMetrics--><!--Device-ColorMetrics-static numeric(value: number): ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -127,7 +136,7 @@ static numeric(value: number): ColorMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| ColorMetrics | ColorMetrics 类的实例。 |
+| [ColorMetrics](arkts-arkui-colormetrics-c.md) | ColorMetrics 类的实例。 |
 
 ## resourceColor
 
@@ -141,7 +150,9 @@ static resourceColor(color: ResourceColor): ColorMetrics
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ColorMetrics-static resourceColor(color: ResourceColor): ColorMetrics--><!--Device-ColorMetrics-static resourceColor(color: ResourceColor): ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -149,13 +160,13 @@ static resourceColor(color: ResourceColor): ColorMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | ResourceColor | 是 | 资源格式颜色。 |
+| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 | 资源格式颜色。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ColorMetrics | ColorMetrics 类的实例。 |
+| [ColorMetrics](arkts-arkui-colormetrics-c.md) | ColorMetrics 类的实例。 |
 
 **错误码：**
 
@@ -176,7 +187,9 @@ static rgba(red: number, green: number, blue: number, alpha?: number): ColorMetr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ColorMetrics-static rgba(red: number, green: number, blue: number, alpha?: number): ColorMetrics--><!--Device-ColorMetrics-static rgba(red: number, green: number, blue: number, alpha?: number): ColorMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -193,7 +206,7 @@ static rgba(red: number, green: number, blue: number, alpha?: number): ColorMetr
 
 | 类型 | 说明 |
 | --- | --- |
-| ColorMetrics | ColorMetrics 类的实例。 |
+| [ColorMetrics](arkts-arkui-colormetrics-c.md) | ColorMetrics 类的实例。 |
 
 ## alpha
 
@@ -209,7 +222,9 @@ get alpha(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ColorMetrics-get alpha(): number--><!--Device-ColorMetrics-get alpha(): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -227,7 +242,9 @@ get blue(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ColorMetrics-get blue(): number--><!--Device-ColorMetrics-get blue(): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -245,7 +262,9 @@ get color(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ColorMetrics-get color(): string--><!--Device-ColorMetrics-get color(): string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -263,7 +282,9 @@ get green(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ColorMetrics-get green(): number--><!--Device-ColorMetrics-get green(): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -281,7 +302,9 @@ get red(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ColorMetrics-get red(): number--><!--Device-ColorMetrics-get red(): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

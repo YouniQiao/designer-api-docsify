@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-PiPWindow-enum VideoLiveControlGroup--><!--Device-PiPWindow-enum VideoLiveControlGroup-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## VIDEO_PLAY_PAUSE
@@ -16,7 +18,9 @@ VIDEO_PLAY_PAUSE = 401
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-VideoLiveControlGroup-VIDEO_PLAY_PAUSE = 401--><!--Device-VideoLiveControlGroup-VIDEO_PLAY_PAUSE = 401-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -30,7 +34,9 @@ MUTE_SWITCH = 402
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-VideoLiveControlGroup-MUTE_SWITCH = 402--><!--Device-VideoLiveControlGroup-MUTE_SWITCH = 402-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 

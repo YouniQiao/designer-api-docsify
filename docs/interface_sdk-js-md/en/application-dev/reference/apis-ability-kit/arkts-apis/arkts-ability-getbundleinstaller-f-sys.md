@@ -16,6 +16,8 @@ Obtains a BundleInstaller object. This API uses an asynchronous callback to retu
 
 **Since:** 9
 
+<!--Device-installer-function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void--><!--Device-installer-function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Obtains a BundleInstaller object. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;BundleInstaller&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return theresult. If the operation is successful, **err** is **null** and **data** is the BundleInstaller object obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<BundleInstaller> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the BundleInstaller object obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -44,6 +46,8 @@ Obtains a BundleInstaller object. This API uses a promise to return the result.
 
 **Since:** 9
 
+<!--Device-installer-function getBundleInstaller(): Promise<BundleInstaller>--><!--Device-installer-function getBundleInstaller(): Promise<BundleInstaller>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -52,7 +56,7 @@ Obtains a BundleInstaller object. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BundleInstaller&gt; | BundleInstaller object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<BundleInstaller> | BundleInstaller object. |
 
 **Error codes:**
 

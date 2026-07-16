@@ -4,6 +4,8 @@ Provides the conditions of on/off.
 
 **Since:** 12
 
+<!--Device-securityGuard-interface SecurityEventInfo--><!--Device-securityGuard-interface SecurityEventInfo-End-->
+
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
@@ -25,6 +27,8 @@ The security event id.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-SecurityEventInfo-eventId: number--><!--Device-SecurityEventInfo-eventId: number-End-->
 
 **System capability:** SystemCapability.Security.SecurityGuard
 

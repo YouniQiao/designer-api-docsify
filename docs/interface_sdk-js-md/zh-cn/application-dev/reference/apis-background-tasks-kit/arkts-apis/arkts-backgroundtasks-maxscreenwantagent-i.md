@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-reminderAgentManager-interface MaxScreenWantAgent--><!--Device-reminderAgentManager-interface MaxScreenWantAgent-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
+
+## 导入模块
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+```
 
 ## abilityName
 
@@ -17,6 +25,8 @@ abilityName: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-MaxScreenWantAgent-abilityName: string--><!--Device-MaxScreenWantAgent-abilityName: string-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -31,6 +41,8 @@ pkgName: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-MaxScreenWantAgent-pkgName: string--><!--Device-MaxScreenWantAgent-pkgName: string-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 

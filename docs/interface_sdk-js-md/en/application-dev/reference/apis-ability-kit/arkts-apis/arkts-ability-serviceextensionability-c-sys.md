@@ -1,9 +1,10 @@
 # ServiceExtensionAbility (System API)
 
-The ServiceExtensionAbility module provides extended capabilities for background services, including lifecycle
-callbacks for creating, destroying, connecting, and disconnecting background services.
+The ServiceExtensionAbility module provides extended capabilities for background services, including lifecycle callbacks for creating, destroying, connecting, and disconnecting background services.
 
 **Since:** 9
+
+<!--Device-unnamed-declare class ServiceExtensionAbility--><!--Device-unnamed-declare class ServiceExtensionAbility-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -27,6 +28,8 @@ Called when the configuration of this ServiceExtensionAbility is updated.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ServiceExtensionAbility-onConfigurationUpdate(newConfig: Configuration): void--><!--Device-ServiceExtensionAbility-onConfigurationUpdate(newConfig: Configuration): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -35,7 +38,7 @@ Called when the configuration of this ServiceExtensionAbility is updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newConfig | Configuration | Yes | New configuration. |
+| newConfig | [Configuration](../../apis-arkui/arkts-components/arkts-arkui-configuration-i.md) | Yes | New configuration. |
 
 **Example**
 
@@ -56,12 +59,13 @@ class ServiceExt extends ServiceExtensionAbility {
 onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>
 ```
 
-Called following **onCreate()** when a ServiceExtensionAbility is started by calling **connectAbility()**. A
-RemoteObject is returned for communication between the server and client.
+Called following **onCreate()** when a ServiceExtensionAbility is started by calling **connectAbility()**. A RemoteObject is returned for communication between the server and client.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ServiceExtensionAbility-onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>--><!--Device-ServiceExtensionAbility-onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -71,7 +75,7 @@ RemoteObject is returned for communication between the server and client.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information related to this ServiceExtensionAbility, including the ability name andbundle name. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information related to this ServiceExtensionAbility, including the ability name and bundle name. |
 
 **Return value:**
 
@@ -140,6 +144,8 @@ Called to initialize the service logic when a ServiceExtensionAbility is being c
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ServiceExtensionAbility-onCreate(want: Want): void--><!--Device-ServiceExtensionAbility-onCreate(want: Want): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -148,7 +154,7 @@ Called to initialize the service logic when a ServiceExtensionAbility is being c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information related to this ServiceExtensionAbility, including the ability name andbundle name. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information related to this ServiceExtensionAbility, including the ability name and bundle name. |
 
 **Example**
 
@@ -175,6 +181,8 @@ Called to clear resources when this ServiceExtensionAbility is being destroyed.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ServiceExtensionAbility-onDestroy(): void--><!--Device-ServiceExtensionAbility-onDestroy(): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -198,12 +206,13 @@ class ServiceExt extends ServiceExtensionAbility {
 onDisconnect(want: Want): void | Promise<void>
 ```
 
-Called when a client is disconnected from this ServiceExtensionAbility.
-This API returns the result synchronously or uses a promise to return the result.
+Called when a client is disconnected from this ServiceExtensionAbility.This API returns the result synchronously or uses a promise to return the result.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ServiceExtensionAbility-onDisconnect(want: Want): void | Promise<void>--><!--Device-ServiceExtensionAbility-onDisconnect(want: Want): void | Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -213,7 +222,7 @@ This API returns the result synchronously or uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information related to this ServiceExtensionAbility, including the ability name andbundle name. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information related to this ServiceExtensionAbility, including the ability name and bundle name. |
 
 **Example**
 
@@ -256,6 +265,8 @@ Dumps the client information.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ServiceExtensionAbility-onDump(params: Array<string>): Array<string>--><!--Device-ServiceExtensionAbility-onDump(params: Array<string>): Array<string>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -264,13 +275,13 @@ Dumps the client information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | Array&lt;string&gt; | Yes | Parameters in the form of a command. |
+| params | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Parameters in the form of a command. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Array of client information. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Array of client information. |
 
 **Example**
 
@@ -292,12 +303,13 @@ class ServiceExt extends ServiceExtensionAbility {
 onReconnect(want: Want): void
 ```
 
-Called when a new client attempts to connect to this ServiceExtensionAbility after all previous clients are
-disconnected. This capability is reserved.
+Called when a new client attempts to connect to this ServiceExtensionAbility after all previous clients are disconnected. This capability is reserved.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ServiceExtensionAbility-onReconnect(want: Want): void--><!--Device-ServiceExtensionAbility-onReconnect(want: Want): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -307,7 +319,7 @@ disconnected. This capability is reserved.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information related to this ServiceExtensionAbility, including the ability name andbundle name. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information related to this ServiceExtensionAbility, including the ability name and bundle name. |
 
 **Example**
 
@@ -328,13 +340,13 @@ class ServiceExt extends ServiceExtensionAbility {
 onRequest(want: Want, startId: number): void
 ```
 
-Called following **onCreate()** when a ServiceExtensionAbility is started by calling **startAbility()** or
-**startServiceExtensionAbility()**. The value of **startId** is incremented for each ServiceExtensionAbility that
-is started.
+Called following **onCreate()** when a ServiceExtensionAbility is started by calling **startAbility()** or **startServiceExtensionAbility()**. The value of **startId** is incremented for each ServiceExtensionAbility that is started.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ServiceExtensionAbility-onRequest(want: Want, startId: int): void--><!--Device-ServiceExtensionAbility-onRequest(want: Want, startId: int): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -344,8 +356,8 @@ is started.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information related to this ServiceExtensionAbility, including the ability name andbundle name. |
-| startId | number | Yes | Number of times the instance has been started. The initial value is **1** for the firststart, and it increments automatically for subsequent starts. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information related to this ServiceExtensionAbility, including the ability name and bundle name. |
+| startId | number | Yes | Number of times the instance has been started. The initial value is **1** for the first start, and it increments automatically for subsequent starts. |
 
 **Example**
 
@@ -373,6 +385,8 @@ Context of the ServiceExtensionAbility. This context inherits from **ExtensionCo
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ServiceExtensionAbility-context: ServiceExtensionContext--><!--Device-ServiceExtensionAbility-context: ServiceExtensionContext-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

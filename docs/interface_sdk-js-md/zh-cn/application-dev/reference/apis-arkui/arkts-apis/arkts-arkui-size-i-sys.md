@@ -4,9 +4,17 @@
 
 **起始版本：** 7
 
+<!--Device-screenshot-interface Size--><!--Device-screenshot-interface Size-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { screenshot } from '@kit.ArkUI';
+```
 
 ## height
 
@@ -19,6 +27,8 @@ height: number
 **类型：** number
 
 **起始版本：** 7
+
+<!--Device-Size-height: long--><!--Device-Size-height: long-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -35,6 +45,8 @@ width: number
 **类型：** number
 
 **起始版本：** 7
+
+<!--Device-Size-width: long--><!--Device-Size-width: long-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 

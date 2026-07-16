@@ -16,6 +16,8 @@ Obtains a **Restorer** object for restoring factory settings.
 
 **Since:** 9
 
+<!--Device-update-function getRestorer(): Restorer--><!--Device-update-function getRestorer(): Restorer-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Obtains a **Restorer** object for restoring factory settings.
 
 | Type | Description |
 | --- | --- |
-| Restorer | **Restorer** object for restoring factory settings. |
+| [Restorer](arkts-basicservices-restorer-i-sys.md) | **Restorer** object for restoring factory settings. |
 
 **Error codes:**
 

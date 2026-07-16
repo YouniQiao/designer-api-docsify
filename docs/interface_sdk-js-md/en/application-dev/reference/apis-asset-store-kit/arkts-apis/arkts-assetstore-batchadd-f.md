@@ -12,12 +12,13 @@ import { asset } from '@kit.AssetStoreKit';
 function batchAdd(attributesArray: Array<AssetMap>): Promise<BatchResult>
 ```
 
-Adds assets in batches based on an attributes array.
-To set {@link Tag.IS_PERSISTENT}, the application must have the ohos.permission.STORE_PERSISTENT_DATA permission.
+Adds assets in batches based on an attributes array.To set {@link Tag.IS_PERSISTENT}, the application must have the ohos.permission.STORE_PERSISTENT_DATA permission.
 
 Only assets with the same {@link Tag.GROUP_ID} and {@link Tag.REQUIRE_ATTR_ENCRYPTED} can be added in batches.
 
 **Since:** 26.0.0
+
+<!--Device-asset-function batchAdd(attributesArray: Array<AssetMap>): Promise<BatchResult>--><!--Device-asset-function batchAdd(attributesArray: Array<AssetMap>): Promise<BatchResult>-End-->
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -25,13 +26,13 @@ Only assets with the same {@link Tag.GROUP_ID} and {@link Tag.REQUIRE_ATTR_ENCRY
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| attributesArray | Array&lt;AssetMap&gt; | Yes | an array of assets to be added. |
+| attributesArray | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<AssetMap> | Yes | an array of assets to be added. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BatchResult&gt; | The result of the batch operation, including error information for addingfailed assets, if there are any failures. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<BatchResult> | The result of the batch operation, including error information for adding failed assets, if there are any failures. |
 
 **Error codes:**
 

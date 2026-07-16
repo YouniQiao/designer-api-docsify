@@ -12,18 +12,15 @@ import { audio } from '@kit.AudioKit';
 function createMicInAudioCapturer(config: AudioCapturerMicInConfig): Promise<AudioCapturer | null>
 ```
 
-Obtains a special {@link #AudioCapturer} instance. This method uses a promise to return the capturer instance.
-This capture can be used to record both Mic-In audio data and echo reference signal, for application to
-process algorithm.
-Mic-In audio data and echo reference signal will be put in one buffer or multiple buffers according to
-configuration set by application.
-Capturer is also not allowed to be created when application is in background.
+Obtains a special {@link #AudioCapturer} instance. This method uses a promise to return the capturer instance.This capture can be used to record both Mic-In audio data and echo reference signal, for application to process algorithm.Mic-In audio data and echo reference signal will be put in one buffer or multiple buffers according to configuration set by application.Capturer is also not allowed to be created when application is in background.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.MICROPHONE
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-audio-function createMicInAudioCapturer(config: AudioCapturerMicInConfig): Promise<AudioCapturer | null>--><!--Device-audio-function createMicInAudioCapturer(config: AudioCapturerMicInConfig): Promise<AudioCapturer | null>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -33,13 +30,13 @@ Capturer is also not allowed to be created when application is in background.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | AudioCapturerMicInConfig | Yes | Capturer configuration, see {@link #AudioCapturerMicInConfig}for details. |
+| config | [AudioCapturerMicInConfig](arkts-audio-audiocapturermicinconfig-i-sys.md) | Yes | Capturer configuration, see {@link #AudioCapturerMicInConfig}for details. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioCapturer \| null&gt; | Promise used to return the audio capturer instance,or null if any error occurs. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AudioCapturer \| null> | Promise used to return the audio capturer instance,or null if any error occurs. |
 
 **Error codes:**
 
@@ -48,7 +45,7 @@ Capturer is also not allowed to be created when application is in background.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied, including background recording. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Capturer creation is not supported, may caused by following problems:<br> 1. Source type is unsupported for this capturer, only {@link #SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT} issupported currently.<br> 2. Echo reference signal's config is unsupported, echo reference's sampling rate and format must be thesame as MicIn audio data currently. |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Capturer creation is not supported, may caused by following problems:<br> 1. Source type is unsupported for this capturer, only {@link #SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT} is supported currently.<br> 2. Echo reference signal's config is unsupported, echo reference's sampling rate and format must be the same as MicIn audio data currently. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio system internal error, such as system process crash. |
 
 **Example**

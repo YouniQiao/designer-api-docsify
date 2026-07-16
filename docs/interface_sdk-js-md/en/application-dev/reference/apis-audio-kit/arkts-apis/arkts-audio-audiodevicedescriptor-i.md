@@ -4,6 +4,8 @@ Describes an audio device.
 
 **Since:** 7
 
+<!--Device-audio-interface AudioDeviceDescriptor--><!--Device-audio-interface AudioDeviceDescriptor-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## Modules to Import
@@ -28,6 +30,8 @@ For a Bluetooth device, you must request the ohos.permission.USE_BLUETOOTH permi
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AudioDeviceDescriptor-readonly address: string--><!--Device-AudioDeviceDescriptor-readonly address: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## capabilities
@@ -41,6 +45,8 @@ Audio stream capabilities supported by the device.
 **Type:** Array<AudioStreamInfo>
 
 **Since:** 22
+
+<!--Device-AudioDeviceDescriptor-readonly capabilities?: Array<AudioStreamInfo>--><!--Device-AudioDeviceDescriptor-readonly capabilities?: Array<AudioStreamInfo>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -58,6 +64,8 @@ Number of channels supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AudioDeviceDescriptor-readonly channelCounts: Array<int>--><!--Device-AudioDeviceDescriptor-readonly channelCounts: Array<int>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## channelMasks
@@ -73,6 +81,8 @@ Supported channel masks.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AudioDeviceDescriptor-readonly channelMasks: Array<int>--><!--Device-AudioDeviceDescriptor-readonly channelMasks: Array<int>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -90,6 +100,8 @@ Device role.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AudioDeviceDescriptor-readonly deviceRole: DeviceRole--><!--Device-AudioDeviceDescriptor-readonly deviceRole: DeviceRole-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## deviceType
@@ -105,6 +117,8 @@ Device type.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AudioDeviceDescriptor-readonly deviceType: DeviceType--><!--Device-AudioDeviceDescriptor-readonly deviceType: DeviceType-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -122,6 +136,8 @@ Display name of the device.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AudioDeviceDescriptor-readonly displayName: string--><!--Device-AudioDeviceDescriptor-readonly displayName: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## encodingTypes
@@ -137,6 +153,8 @@ Supported encoding types.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AudioDeviceDescriptor-readonly encodingTypes?: Array<AudioEncodingType>--><!--Device-AudioDeviceDescriptor-readonly encodingTypes?: Array<AudioEncodingType>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -154,6 +172,8 @@ Audio device id.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AudioDeviceDescriptor-readonly id: int--><!--Device-AudioDeviceDescriptor-readonly id: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## model
@@ -167,6 +187,8 @@ Model of the device.
 **Type:** string
 
 **Since:** 22
+
+<!--Device-AudioDeviceDescriptor-readonly model?: string--><!--Device-AudioDeviceDescriptor-readonly model?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -186,6 +208,8 @@ For a Bluetooth device, you must request the ohos.permission.USE_BLUETOOTH permi
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AudioDeviceDescriptor-readonly name: string--><!--Device-AudioDeviceDescriptor-readonly name: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## sampleRates
@@ -204,6 +228,8 @@ SystemCapability.Multimedia.Audio.Device
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AudioDeviceDescriptor-readonly sampleRates: Array<int>--><!--Device-AudioDeviceDescriptor-readonly sampleRates: Array<int>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## spatializationSupported
@@ -217,6 +243,8 @@ Whether the device supports spatial audio rendering. **true** if supported, **fa
 **Type:** boolean
 
 **Since:** 18
+
+<!--Device-AudioDeviceDescriptor-readonly spatializationSupported?: boolean--><!--Device-AudioDeviceDescriptor-readonly spatializationSupported?: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 

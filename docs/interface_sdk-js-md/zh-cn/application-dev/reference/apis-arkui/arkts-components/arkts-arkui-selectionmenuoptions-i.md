@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare interface SelectionMenuOptions--><!--Device-unnamed-declare interface SelectionMenuOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## menuType
@@ -22,7 +24,9 @@ menuType?: MenuType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本13开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SelectionMenuOptions-menuType?: MenuType--><!--Device-SelectionMenuOptions-menuType?: MenuType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,7 +44,9 @@ onAppear?: MenuOnAppearCallback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SelectionMenuOptions-onAppear?: MenuOnAppearCallback--><!--Device-SelectionMenuOptions-onAppear?: MenuOnAppearCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,7 +64,9 @@ onDisappear?: Callback<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SelectionMenuOptions-onDisappear?: Callback<void>--><!--Device-SelectionMenuOptions-onDisappear?: Callback<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,7 +84,9 @@ onMenuHide?: MenuCallback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SelectionMenuOptions-onMenuHide?: MenuCallback--><!--Device-SelectionMenuOptions-onMenuHide?: MenuCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,7 +104,9 @@ onMenuShow?: MenuCallback
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SelectionMenuOptions-onMenuShow?: MenuCallback--><!--Device-SelectionMenuOptions-onMenuShow?: MenuCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,7 +128,9 @@ previewMenuOptions?: PreviewMenuOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SelectionMenuOptions-previewMenuOptions?: PreviewMenuOptions--><!--Device-SelectionMenuOptions-previewMenuOptions?: PreviewMenuOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

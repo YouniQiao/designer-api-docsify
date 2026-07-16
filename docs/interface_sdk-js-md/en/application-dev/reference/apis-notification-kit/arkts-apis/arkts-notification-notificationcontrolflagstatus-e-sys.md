@@ -1,9 +1,10 @@
 # NotificationControlFlagStatus (System API)
 
-Each bit can control the notification mode. When the bitwise OR operation is performed on
-**notificationControlFlags** and the enumerated values in the following table, the notification mode is disabled.
+Each bit can control the notification mode. When the bitwise OR operation is performed on **notificationControlFlags** and the enumerated values in the following table, the notification mode is disabled.
 
 **Since:** 12
+
+<!--Device-notificationManager-export enum NotificationControlFlagStatus--><!--Device-notificationManager-export enum NotificationControlFlagStatus-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -19,6 +20,8 @@ Disables the sound notification function.
 
 **Since:** 12
 
+<!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_SOUND = 1 << 0--><!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_SOUND = 1 << 0-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -32,6 +35,8 @@ NOTIFICATION_STATUS_CLOSE_LOCKSCREEN = 1 << 1
 Disables the screen lock notification function.
 
 **Since:** 12
+
+<!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_LOCKSCREEN = 1 << 1--><!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_LOCKSCREEN = 1 << 1-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -47,6 +52,8 @@ Disables the banner notification function.
 
 **Since:** 12
 
+<!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_BANNER = 1 << 2--><!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_BANNER = 1 << 2-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -60,6 +67,8 @@ NOTIFICATION_STATUS_CLOSE_LIGHT_SCREEN = 1 << 3
 Disables the screen-on notification function.
 
 **Since:** 12
+
+<!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_LIGHT_SCREEN = 1 << 3--><!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_LIGHT_SCREEN = 1 << 3-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -75,6 +84,8 @@ Disables the vibration notification function.
 
 **Since:** 12
 
+<!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_VIBRATION = 1 << 4--><!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_VIBRATION = 1 << 4-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -88,6 +99,8 @@ NOTIFICATION_STATUS_CLOSE_STATUSBAR_ICON = 1 << 5
 Disables the icon notification function in the status bar.
 
 **Since:** 12
+
+<!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_STATUSBAR_ICON = 1 << 5--><!--Device-NotificationControlFlagStatus-NOTIFICATION_STATUS_CLOSE_STATUSBAR_ICON = 1 << 5-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

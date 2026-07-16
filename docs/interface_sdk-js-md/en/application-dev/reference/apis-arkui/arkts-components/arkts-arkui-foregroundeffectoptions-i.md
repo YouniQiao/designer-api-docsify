@@ -4,6 +4,8 @@ Describes the foreground effect.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface ForegroundEffectOptions--><!--Device-unnamed-declare interface ForegroundEffectOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## radius
@@ -14,8 +16,7 @@ radius: number
 
 Blur radius. The value range is [0, +∞).
 
-This parameter takes effect only within the component scope. When it is used with other APIs, the effect beyond the
-component scope does not apply.
+This parameter takes effect only within the component scope. When it is used with other APIs, the effect beyond the component scope does not apply.
 
 **Type:** number
 
@@ -24,6 +25,8 @@ component scope does not apply.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ForegroundEffectOptions-radius: number--><!--Device-ForegroundEffectOptions-radius: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

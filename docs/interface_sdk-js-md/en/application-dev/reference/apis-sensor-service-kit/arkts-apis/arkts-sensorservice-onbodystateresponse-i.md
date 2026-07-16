@@ -8,6 +8,8 @@ Specifies whether the device that houses the sensor is worn.
 
 **Substitutes:** WearDetectionResponse
 
+<!--Device-unnamed-export interface OnBodyStateResponse--><!--Device-unnamed-export interface OnBodyStateResponse-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -22,8 +24,7 @@ import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, 
 value: boolean
 ```
 
-Boolean value indicating whether the device is worn. The value **true** indicates that the device is worn, and the
-value **false** indicates the opposite.
+Boolean value indicating whether the device is worn. The value **true** indicates that the device is worn, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -34,6 +35,8 @@ value **false** indicates the opposite.
 **Substitutes:** WearDetectionResponse.value
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-OnBodyStateResponse-value: boolean--><!--Device-OnBodyStateResponse-value: boolean-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 

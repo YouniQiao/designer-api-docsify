@@ -12,14 +12,15 @@ import { abilityManager } from '@kit.AbilityKit';
 function preloadUIExtensionAbility(want: Want): Promise<number>
 ```
 
-Preloads a [UIExtensionAbility](arkts-ability-uiextensionability-c.md) instance and returns
-the instance ID. This API uses a promise to return the result.
+Preloads a [UIExtensionAbility](arkts-ability-uiextensionability-c.md) instance and returns the instance ID. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.PRELOAD_UI_EXTENSION_ABILITY
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-abilityManager-function preloadUIExtensionAbility(want: Want): Promise<int>--><!--Device-abilityManager-function preloadUIExtensionAbility(want: Want): Promise<int>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -29,13 +30,13 @@ the instance ID. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information about the target ability. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information about the target ability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the ID of the preloaded[UIExtensionAbility](arkts-ability-uiextensionability-c.md) instance for furtherclearing or management. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the ID of the preloaded [UIExtensionAbility](arkts-ability-uiextensionability-c.md) instance for further clearing or management. |
 
 **Error codes:**
 

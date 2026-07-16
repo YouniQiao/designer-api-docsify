@@ -1,5 +1,11 @@
 # @system.request
 
+## 导入模块
+
+```TypeScript
+import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from '@kit.BasicServicesKit';
+```
+
 ## 汇总
 
 ### 类

@@ -4,6 +4,8 @@ Defines the outline of the drop-down menu.
 
 **Since:** 20
 
+<!--Device-unnamed-declare interface MenuOutlineOptions--><!--Device-unnamed-declare interface MenuOutlineOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## color
@@ -24,6 +26,8 @@ Default value: **#19ffffff**
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-MenuOutlineOptions-color?: ResourceColor | EdgeColors--><!--Device-MenuOutlineOptions-color?: ResourceColor | EdgeColors-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## width
@@ -43,6 +47,8 @@ Default value: **0**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-MenuOutlineOptions-width?: Dimension | EdgeOutlineWidths--><!--Device-MenuOutlineOptions-width?: Dimension | EdgeOutlineWidths-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

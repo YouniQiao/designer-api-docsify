@@ -4,6 +4,8 @@ The correspondence information between IP and MAC address.
 
 **Since:** 22
 
+<!--Device-connection-export interface NetIpMacInfo--><!--Device-connection-export interface NetIpMacInfo-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Interface name of the network.
 
 **Since:** 22
 
+<!--Device-NetIpMacInfo-iface: string--><!--Device-NetIpMacInfo-iface: string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## ipAddress
@@ -38,6 +42,8 @@ Link address of the network.
 
 **Since:** 22
 
+<!--Device-NetIpMacInfo-ipAddress: NetAddress--><!--Device-NetIpMacInfo-ipAddress: NetAddress-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## macAddress
@@ -51,6 +57,8 @@ Mac address of the network.
 **Type:** string
 
 **Since:** 22
+
+<!--Device-NetIpMacInfo-macAddress: string--><!--Device-NetIpMacInfo-macAddress: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

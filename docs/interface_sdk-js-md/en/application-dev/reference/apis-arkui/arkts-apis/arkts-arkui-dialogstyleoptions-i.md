@@ -6,6 +6,8 @@ Options for the fixed-style dialog.
 
 **Since:** 26.1.0
 
+<!--Device-dialog-declare interface DialogStyleOptions extends DialogBaseOptions--><!--Device-dialog-declare interface DialogStyleOptions extends DialogBaseOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,6 +34,8 @@ The arrangement of buttons.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
+<!--Device-DialogStyleOptions-buttonDirection?: DialogButtonOrientation--><!--Device-DialogStyleOptions-buttonDirection?: DialogButtonOrientation-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## buttons
@@ -40,9 +44,7 @@ The arrangement of buttons.
 buttons?: Array<DialogButton>
 ```
 
-Array of buttons in the dialog box.
-When provided, the dialog displays as an alert-style dialog with buttons.
-When used together with sheets, buttons are displayed below the sheet list.
+Array of buttons in the dialog box.When provided, the dialog displays as an alert-style dialog with buttons.When used together with sheets, buttons are displayed below the sheet list.
 
 **Type:** Array<DialogButton>
 
@@ -52,6 +54,8 @@ When used together with sheets, buttons are displayed below the sheet list.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
+<!--Device-DialogStyleOptions-buttons?: Array<DialogButton>--><!--Device-DialogStyleOptions-buttons?: Array<DialogButton>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## gridCount
@@ -60,8 +64,7 @@ When used together with sheets, buttons are displayed below the sheet list.
 gridCount?: number
 ```
 
-Grid count of dialog.
-The value should be an integer.
+Grid count of dialog.The value should be an integer.
 
 **Type:** number
 
@@ -70,6 +73,8 @@ The value should be an integer.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-DialogStyleOptions-gridCount?: int--><!--Device-DialogStyleOptions-gridCount?: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -89,6 +94,8 @@ Message content and text style of the dialog box.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
+<!--Device-DialogStyleOptions-message?: DialogMessage--><!--Device-DialogStyleOptions-message?: DialogMessage-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## sheets
@@ -97,8 +104,7 @@ Message content and text style of the dialog box.
 sheets?: Array<DialogSheet>
 ```
 
-Array of sheet items for action-sheet style.
-When provided, the dialog displays sheet items for user selection.
+Array of sheet items for action-sheet style.When provided, the dialog displays sheet items for user selection.
 
 **Type:** Array<DialogSheet>
 
@@ -107,6 +113,8 @@ When provided, the dialog displays sheet items for user selection.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-DialogStyleOptions-sheets?: Array<DialogSheet>--><!--Device-DialogStyleOptions-sheets?: Array<DialogSheet>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,6 +134,8 @@ Subtitle of the dialog box.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
+<!--Device-DialogStyleOptions-subtitle?: ResourceStr--><!--Device-DialogStyleOptions-subtitle?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## title
@@ -143,6 +153,8 @@ Title of the dialog box.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-DialogStyleOptions-title?: ResourceStr--><!--Device-DialogStyleOptions-title?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

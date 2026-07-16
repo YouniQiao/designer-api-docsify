@@ -4,6 +4,8 @@ Represents the status information of a single CLI permission declared by a CLI c
 
 **Since:** 26.0.0
 
+<!--Device-abilityAccessCtrl-interface CliPermissionDetail--><!--Device-abilityAccessCtrl-interface CliPermissionDetail-End-->
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Decision status of the CLI permission declared by the CLI command.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-CliPermissionDetail-cliPermissionStatus: PermissionDecisionStatus--><!--Device-CliPermissionDetail-cliPermissionStatus: PermissionDecisionStatus-End-->
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -46,6 +50,8 @@ CLI permission required to call the CLI.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-CliPermissionDetail-requiredCliPermission: Permissions--><!--Device-CliPermissionDetail-requiredCliPermission: Permissions-End-->
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -63,6 +69,8 @@ List of runtime permissions mapped from requiredCliPermission.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CliPermissionDetail-usedPermissions: Array<Permissions>--><!--Device-CliPermissionDetail-usedPermissions: Array<Permissions>-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 

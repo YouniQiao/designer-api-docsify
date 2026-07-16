@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+<!--Device-cloudSync-enum DownloadFileType--><!--Device-cloudSync-enum DownloadFileType-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## CONTENT
@@ -15,6 +17,8 @@ CONTENT = 0
 content类型文件。
 
 **起始版本：** 20
+
+<!--Device-DownloadFileType-CONTENT = 0--><!--Device-DownloadFileType-CONTENT = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -28,6 +32,8 @@ thumbnail类型文件。
 
 **起始版本：** 20
 
+<!--Device-DownloadFileType-THUMBNAIL = 1--><!--Device-DownloadFileType-THUMBNAIL = 1-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## LCD
@@ -39,6 +45,8 @@ LCD = 2
 lcd类型文件。
 
 **起始版本：** 20
+
+<!--Device-DownloadFileType-LCD = 2--><!--Device-DownloadFileType-LCD = 2-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

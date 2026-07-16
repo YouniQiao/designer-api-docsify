@@ -4,9 +4,17 @@
 
 **起始版本：** 12
 
+<!--Device-cloudData-interface SyncInfo--><!--Device-cloudData-interface SyncInfo-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { cloudData } from '@kit.ArkData';
+```
 
 ## code
 
@@ -19,6 +27,8 @@ code: relationalStore.ProgressCode
 **类型：** relationalStore.ProgressCode
 
 **起始版本：** 12
+
+<!--Device-SyncInfo-code: relationalStore.ProgressCode--><!--Device-SyncInfo-code: relationalStore.ProgressCode-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -36,6 +46,8 @@ finishTime: Date
 
 **起始版本：** 12
 
+<!--Device-SyncInfo-finishTime: Date--><!--Device-SyncInfo-finishTime: Date-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -52,6 +64,8 @@ startTime: Date
 
 **起始版本：** 12
 
+<!--Device-SyncInfo-startTime: Date--><!--Device-SyncInfo-startTime: Date-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -67,6 +81,8 @@ syncStatus?: SyncStatus
 **类型：** SyncStatus
 
 **起始版本：** 18
+
+<!--Device-SyncInfo-syncStatus?: SyncStatus--><!--Device-SyncInfo-syncStatus?: SyncStatus-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 

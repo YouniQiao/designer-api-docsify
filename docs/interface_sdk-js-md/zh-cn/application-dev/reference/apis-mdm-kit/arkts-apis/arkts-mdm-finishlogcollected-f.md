@@ -1,5 +1,11 @@
 # finishLogCollected
 
+## 导入模块
+
+```TypeScript
+import { systemManager } from '@kit.MDMKit';
+```
+
 ## finishLogCollected
 
 ```TypeScript
@@ -8,12 +14,12 @@ function finishLogCollected(admin: Want): void
 
 删除本MDM应用在当前用户下收集到的设备日志。
 
-> **说明：**
->
-> 在应用调用[startCollectLog](arkts-mdm-startcollectlog-f.md#startcollectlog-1)开始收集日志后，收到
-> [EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterpriseadminextensionability-c.md#onlogcollected-1)
-> 回调时，建议立即拷贝或者处理日志，并调用此接口删除收集到的日志。
->
+> **说明：**  
+>  
+> 在应用调用[startCollectLog](arkts-mdm-startcollectlog-f.md#startcollectlog-1)开始收集日志后，收到  
+> [EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterpriseadminextensionability-c.md#onlogcollected-1)  
+> 回调时，建议立即拷贝或者处理日志，并调用此接口删除收集到的日志。  
+>  
 > 若不调本接口，设备日志会占用系统存储空间，不影响下一次调用[startCollectLog](arkts-mdm-startcollectlog-f.md#startcollectlog-1)启动日志收集任务。
 
 **起始版本：** 23
@@ -22,13 +28,15 @@ function finishLogCollected(admin: Want): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-systemManager-function finishLogCollected(admin: Want): void--><!--Device-systemManager-function finishLogCollected(admin: Want): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 
 **错误码：**
 

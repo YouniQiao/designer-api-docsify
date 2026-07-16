@@ -4,6 +4,8 @@ Formats a number based on the specified skeleton string.
 
 **Since:** 18
 
+<!--Device-i18n-export class SimpleNumberFormat--><!--Device-i18n-export class SimpleNumberFormat-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
@@ -23,6 +25,8 @@ Formats a number.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SimpleNumberFormat-format(value: double): string--><!--Device-SimpleNumberFormat-format(value: double): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 

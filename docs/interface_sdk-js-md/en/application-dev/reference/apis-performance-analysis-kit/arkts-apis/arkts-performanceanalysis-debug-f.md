@@ -14,12 +14,13 @@ function debug(domain: number, tag: string, format: string, ...args: any[]): voi
 
 Prints DEBUG logs.
 
-DEBUG logs are not recorded in official versions by default. They are available in debug versions or in official
-versions with the debug function enabled.
+DEBUG logs are not recorded in official versions by default. They are available in debug versions or in official versions with the debug function enabled.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-hilog-function debug(domain: number, tag: string, format: string, ...args: any[]): void--><!--Device-hilog-function debug(domain: number, tag: string, format: string, ...args: any[]): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiLog
 
@@ -27,10 +28,10 @@ versions with the debug function enabled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domain | number | Yes | Service domain of logs. The value ranges from **0x0** to **0xFFFF**. If the valueexceeds the range, logs cannot be printed.<br>You can define the value as required. |
-| tag | string | Yes | Log tag in the string format. You are advised to use this parameter to identify aparticular service behavior or the class holding the ongoing method. A tag can contain a maximum of 31 bytes.If a tag exceeds this limit, it will be truncated. Chinese characters are not recommended because garbledcharacters or alignment problems may occur. |
-| format | string | Yes | Format string used to output logs in a specified format. It can contain several elements, where the parameter type and privacy identifier are mandatory.<br>Parameters labeled **{public}** are publicdata and are displayed in plaintext; parameters labeled **{private}** (default value) are private data and arefiltered by **&lt;private&gt;**. |
-| args | any[] | Yes | Variable-length parameter list corresponding to the format string. The number and type ofparameters must map to the identifier in the format string. |
+| domain | number | Yes | Service domain of logs. The value ranges from **0x0** to **0xFFFF**. If the value exceeds the range, logs cannot be printed.<br>You can define the value as required. |
+| tag | string | Yes | Log tag in the string format. You are advised to use this parameter to identify a particular service behavior or the class holding the ongoing method. A tag can contain a maximum of 31 bytes.If a tag exceeds this limit, it will be truncated. Chinese characters are not recommended because garbled characters or alignment problems may occur. |
+| format | string | Yes | Format string used to output logs in a specified format. It can contain several elements, where the parameter type and privacy identifier are mandatory.<br>Parameters labeled **{public}** are public data and are displayed in plaintext; parameters labeled **{private}** (default value) are private data and are filtered by **&lt;private&gt;**. |
+| args | any[] | Yes | Variable-length parameter list corresponding to the format string. The number and type of parameters must map to the identifier in the format string. |
 
 **Example**
 

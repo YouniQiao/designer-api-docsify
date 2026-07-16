@@ -1,5 +1,11 @@
 # createMd
 
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+```
+
 ## createMd
 
 ```TypeScript
@@ -8,8 +14,7 @@ function createMd(algName: string): Md
 
 生成Md实例，用于进行消息摘要的计算与操作。
 
-支持的规格详见
-[MD消息摘要算法规格](../../../../security/CryptoArchitectureKit/crypto-generate-message-digest-overview.md#支持的算法与规格)。
+支持的规格详见[MD消息摘要算法规格](../../../../security/CryptoArchitectureKit/crypto-generate-message-digest-overview.md#支持的算法与规格)。
 
 **起始版本：** 9
 
@@ -17,7 +22,9 @@ function createMd(algName: string): Md
 - API版本12+：此接口可在Stage模型和FA模型下使用。
 - API版本9-11：此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cryptoFramework-function createMd(algName: string): Md--><!--Device-cryptoFramework-function createMd(algName: string): Md-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.MessageDigest
@@ -33,7 +40,7 @@ function createMd(algName: string): Md
 
 | 类型 | 说明 |
 | --- | --- |
-| Md | 返回由输入算法指定生成的[Md](arkts-cryptoarchitecture-md-i.md)对象。 |
+| [Md](arkts-cryptoarchitecture-md-i.md) | 返回由输入算法指定生成的[Md](arkts-cryptoarchitecture-md-i.md)对象。 |
 
 **错误码：**
 

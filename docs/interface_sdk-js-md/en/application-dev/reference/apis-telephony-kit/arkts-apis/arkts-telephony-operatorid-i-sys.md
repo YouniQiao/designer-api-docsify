@@ -4,6 +4,8 @@ Information about the eUICC chip/device.
 
 **Since:** 18
 
+<!--Device-eSIM-export interface OperatorId--><!--Device-eSIM-export interface OperatorId-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Group id level 1.
 
 **Since:** 18
 
+<!--Device-OperatorId-gid1: string--><!--Device-OperatorId-gid1: string-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Group id level 2.
 **Type:** string
 
 **Since:** 18
+
+<!--Device-OperatorId-gid2: string--><!--Device-OperatorId-gid2: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -58,6 +64,8 @@ Mobile country code.
 
 **Since:** 18
 
+<!--Device-OperatorId-mcc: string--><!--Device-OperatorId-mcc: string-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Mobile network code.
 **Type:** string
 
 **Since:** 18
+
+<!--Device-OperatorId-mnc: string--><!--Device-OperatorId-mnc: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 

@@ -4,6 +4,8 @@ Enumerates the directions of pixel rounding at the component level.
 
 **Since:** 11
 
+<!--Device-unnamed-declare interface PixelRoundPolicy--><!--Device-unnamed-declare interface PixelRoundPolicy-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## bottom
@@ -12,8 +14,7 @@ Enumerates the directions of pixel rounding at the component level.
 bottom?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's bottom edge.
-<br>Invalid values are rounded using the round-half-up rule.
+Rounding alignment for the component's bottom edge.<br>Invalid values are rounded using the round-half-up rule.
 
 **Type:** PixelRoundCalcPolicy
 
@@ -26,6 +27,8 @@ Rounding alignment for the component's bottom edge.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-PixelRoundPolicy-bottom?: PixelRoundCalcPolicy--><!--Device-PixelRoundPolicy-bottom?: PixelRoundCalcPolicy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -35,8 +38,7 @@ Rounding alignment for the component's bottom edge.
 end?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's end edge.
-<br>Invalid values are rounded using the round-half-up rule.
+Rounding alignment for the component's end edge.<br>Invalid values are rounded using the round-half-up rule.
 
 **Type:** PixelRoundCalcPolicy
 
@@ -49,6 +51,8 @@ Rounding alignment for the component's end edge.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-PixelRoundPolicy-end?: PixelRoundCalcPolicy--><!--Device-PixelRoundPolicy-end?: PixelRoundCalcPolicy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,8 +62,7 @@ Rounding alignment for the component's end edge.
 start?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's start edge.
-<br>Invalid values are rounded using the round-half-up rule.
+Rounding alignment for the component's start edge.<br>Invalid values are rounded using the round-half-up rule.
 
 **Type:** PixelRoundCalcPolicy
 
@@ -72,6 +75,8 @@ Rounding alignment for the component's start edge.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-PixelRoundPolicy-start?: PixelRoundCalcPolicy--><!--Device-PixelRoundPolicy-start?: PixelRoundCalcPolicy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -81,8 +86,7 @@ Rounding alignment for the component's start edge.
 top?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's top edge.
-<br>Invalid values are rounded using the round-half-up rule.
+Rounding alignment for the component's top edge.<br>Invalid values are rounded using the round-half-up rule.
 
 **Type:** PixelRoundCalcPolicy
 
@@ -95,6 +99,8 @@ Rounding alignment for the component's top edge.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-PixelRoundPolicy-top?: PixelRoundCalcPolicy--><!--Device-PixelRoundPolicy-top?: PixelRoundCalcPolicy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

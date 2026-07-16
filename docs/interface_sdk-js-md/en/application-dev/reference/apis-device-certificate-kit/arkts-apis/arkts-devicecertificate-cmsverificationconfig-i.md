@@ -4,6 +4,8 @@ Represents CMS verification configuration.
 
 **Since:** 22
 
+<!--Device-cert-interface CmsVerificationConfig--><!--Device-cert-interface CmsVerificationConfig-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
@@ -18,14 +20,15 @@ import { cert } from '@kit.DeviceCertificateKit';
 contentData?: Uint8Array
 ```
 
-Content data. If the detached mode is used, you need to specify the plaintext data. This parameter can be left
-empty in attached mode.
+Content data. If the detached mode is used, you need to specify the plaintext data. This parameter can be left empty in attached mode.
 
 **Type:** Uint8Array
 
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-CmsVerificationConfig-contentData?: Uint8Array--><!--Device-CmsVerificationConfig-contentData?: Uint8Array-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -45,6 +48,8 @@ Format of the content. The default value is **CmsContentDataFormat.BINARY**.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-CmsVerificationConfig-contentDataFormat?: CmsContentDataFormat--><!--Device-CmsVerificationConfig-contentDataFormat?: CmsContentDataFormat-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## signerCerts
@@ -61,6 +66,8 @@ Signer certificates.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-CmsVerificationConfig-signerCerts?: Array<X509Cert>--><!--Device-CmsVerificationConfig-signerCerts?: Array<X509Cert>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## trustCerts
@@ -71,8 +78,8 @@ trustCerts: Array<X509Cert>
 
 Trusted certificates.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > You need to configure the trust certificates of all signers.
 
 **Type:** Array<X509Cert>
@@ -80,6 +87,8 @@ Trusted certificates.
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-CmsVerificationConfig-trustCerts: Array<X509Cert>--><!--Device-CmsVerificationConfig-trustCerts: Array<X509Cert>-End-->
 
 **System capability:** SystemCapability.Security.Cert
 

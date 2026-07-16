@@ -1,5 +1,11 @@
 # stopSyncRemoteMissions（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { distributedMissionManager } from '@kit.AbilityKit';
+```
+
 ## stopSyncRemoteMissions
 
 ```TypeScript
@@ -14,6 +20,8 @@ function stopSyncRemoteMissions(parameter: MissionDeviceInfo, callback: AsyncCal
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-distributedMissionManager-function stopSyncRemoteMissions(parameter: MissionDeviceInfo, callback: AsyncCallback<void>): void--><!--Device-distributedMissionManager-function stopSyncRemoteMissions(parameter: MissionDeviceInfo, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -22,8 +30,8 @@ function stopSyncRemoteMissions(parameter: MissionDeviceInfo, callback: AsyncCal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | MissionDeviceInfo | 是 | 同步信息。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，停止同步远端任务列表成功时，err为undefined，否则为错误对象。 |
+| parameter | [MissionDeviceInfo](arkts-ability-missiondeviceinfo-i-sys.md) | 是 | 同步信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，停止同步远端任务列表成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -72,6 +80,8 @@ function stopSyncRemoteMissions(parameter: MissionDeviceInfo): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-distributedMissionManager-function stopSyncRemoteMissions(parameter: MissionDeviceInfo): Promise<void>--><!--Device-distributedMissionManager-function stopSyncRemoteMissions(parameter: MissionDeviceInfo): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -80,13 +90,13 @@ function stopSyncRemoteMissions(parameter: MissionDeviceInfo): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | MissionDeviceInfo | 是 | 同步信息。 |
+| parameter | [MissionDeviceInfo](arkts-ability-missiondeviceinfo-i-sys.md) | 是 | 同步信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的promise对象。 |
+| Promise<void> | 无返回结果的promise对象。 |
 
 **错误码：**
 

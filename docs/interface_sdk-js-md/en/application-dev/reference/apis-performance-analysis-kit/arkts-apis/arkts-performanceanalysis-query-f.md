@@ -12,8 +12,7 @@ import { FaultLogger } from '@kit.PerformanceAnalysisKit';
 function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void
 ```
 
-Obtains the fault information about the current application. This API uses an asynchronous callback to return the
-fault information array obtained, which contains a maximum of 10 pieces of fault information.
+Obtains the fault information about the current application. This API uses an asynchronous callback to return the fault information array obtained, which contains a maximum of 10 pieces of fault information.
 
 **Since:** 9
 
@@ -21,14 +20,16 @@ fault information array obtained, which contains a maximum of 10 pieces of fault
 
 **Substitutes:** addWatcher
 
+<!--Device-FaultLogger-function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void--><!--Device-FaultLogger-function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void-End-->
+
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| faultType | FaultType | Yes | Fault type. |
-| callback | AsyncCallback&lt;Array&lt;FaultLogInfo&gt;&gt; | Yes | Callback used to return the fault information array.<br>**value** is the fault information array obtained. If **value** is **undefined**, an exception occurs duringthe information retrieval. In this case, an error string will be returned. |
+| faultType | [FaultType](arkts-performanceanalysis-faulttype-e.md) | Yes | Fault type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<FaultLogInfo>> | Yes | Callback used to return the fault information array.<br>**value** is the fault information array obtained. If **value** is **undefined**, an exception occurs during the information retrieval. In this case, an error string will be returned. |
 
 **Error codes:**
 
@@ -78,8 +79,7 @@ try {
 function query(faultType: FaultType): Promise<Array<FaultLogInfo>>
 ```
 
-Obtains the fault information about the current application. This API uses a promise to return the fault
-information array obtained, which contains a maximum of 10 pieces of fault information.
+Obtains the fault information about the current application. This API uses a promise to return the fault information array obtained, which contains a maximum of 10 pieces of fault information.
 
 **Since:** 9
 
@@ -87,19 +87,21 @@ information array obtained, which contains a maximum of 10 pieces of fault infor
 
 **Substitutes:** addWatcher
 
+<!--Device-FaultLogger-function query(faultType: FaultType): Promise<Array<FaultLogInfo>>--><!--Device-FaultLogger-function query(faultType: FaultType): Promise<Array<FaultLogInfo>>-End-->
+
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| faultType | FaultType | Yes | Fault type. |
+| faultType | [FaultType](arkts-performanceanalysis-faulttype-e.md) | Yes | Fault type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;FaultLogInfo&gt;&gt; | Promise used to return the fault information array. You can obtain thefault information instance in its **then()** method or use **await**.<br>**value** is the fault information array obtained. If **value** is **undefined**,an exception occurs during the information retrieval. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<FaultLogInfo>> | Promise used to return the fault information array. You can obtain the fault information instance in its **then()** method or use **await**.<br>**value** is the fault information array obtained. If **value** is **undefined**,an exception occurs during the information retrieval. |
 
 **Error codes:**
 

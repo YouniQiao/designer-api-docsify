@@ -4,6 +4,8 @@ Enumerates message type.
 
 **Since:** 8
 
+<!--Device-sms-export enum MessageType--><!--Device-sms-export enum MessageType-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -17,6 +19,8 @@ TYPE_MMS_SEND_REQ = 128
 Indicates an MMS message sending request.
 
 **Since:** 8
+
+<!--Device-MessageType-TYPE_MMS_SEND_REQ = 128--><!--Device-MessageType-TYPE_MMS_SEND_REQ = 128-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -32,6 +36,8 @@ Indicates an MMS message sending configuration.
 
 **Since:** 8
 
+<!--Device-MessageType-TYPE_MMS_SEND_CONF--><!--Device-MessageType-TYPE_MMS_SEND_CONF-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -45,6 +51,8 @@ TYPE_MMS_NOTIFICATION_IND
 Indicates an MMS notification.
 
 **Since:** 8
+
+<!--Device-MessageType-TYPE_MMS_NOTIFICATION_IND--><!--Device-MessageType-TYPE_MMS_NOTIFICATION_IND-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -60,6 +68,8 @@ Indicates an MMS message response.
 
 **Since:** 8
 
+<!--Device-MessageType-TYPE_MMS_RESP_IND--><!--Device-MessageType-TYPE_MMS_RESP_IND-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -73,6 +83,8 @@ TYPE_MMS_RETRIEVE_CONF
 Indicates an MMS message retrieval configuration.
 
 **Since:** 8
+
+<!--Device-MessageType-TYPE_MMS_RETRIEVE_CONF--><!--Device-MessageType-TYPE_MMS_RETRIEVE_CONF-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -88,6 +100,8 @@ Indicates the type of multimedia message confirmation index.
 
 **Since:** 8
 
+<!--Device-MessageType-TYPE_MMS_ACKNOWLEDGE_IND--><!--Device-MessageType-TYPE_MMS_ACKNOWLEDGE_IND-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -101,6 +115,8 @@ TYPE_MMS_DELIVERY_IND
 Indicates an MMS message delivery.
 
 **Since:** 8
+
+<!--Device-MessageType-TYPE_MMS_DELIVERY_IND--><!--Device-MessageType-TYPE_MMS_DELIVERY_IND-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -116,6 +132,8 @@ Indicates an MMS message read report on the recipient side.
 
 **Since:** 8
 
+<!--Device-MessageType-TYPE_MMS_READ_REC_IND--><!--Device-MessageType-TYPE_MMS_READ_REC_IND-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -129,6 +147,8 @@ TYPE_MMS_READ_ORIG_IND
 Indicates an original MMS message read report on the originating side.
 
 **Since:** 8
+
+<!--Device-MessageType-TYPE_MMS_READ_ORIG_IND--><!--Device-MessageType-TYPE_MMS_READ_ORIG_IND-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 

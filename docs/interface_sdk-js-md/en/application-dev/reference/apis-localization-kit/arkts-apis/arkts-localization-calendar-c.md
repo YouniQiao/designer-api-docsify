@@ -4,6 +4,8 @@ Provides calendar management capabilities, such as calendar name retrieval and d
 
 **Since:** 7
 
+<!--Device-i18n-export class Calendar--><!--Device-i18n-export class Calendar-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
@@ -23,6 +25,8 @@ Performs addition or subtraction on the calendar attributes of this **Calendar**
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Calendar-add(field: string, amount: int): void--><!--Device-Calendar-add(field: string, amount: int): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -64,12 +68,13 @@ try {
 compareDays(date: Date): number
 ```
 
-Compares the current date of this **Calendar** object with the specified date for the difference in the number of
-days.
+Compares the current date of this **Calendar** object with the specified date for the difference in the number of days.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Calendar-compareDays(date: Date): int--><!--Device-Calendar-compareDays(date: Date): int-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -77,7 +82,7 @@ days.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | Yes | Date and time. Note: The month starts from **0**. For example, **0** indicates January. |
+| date | [Date](../../apis-na/arkts-apis/arkts-na-date-i.md) | Yes | Date and time. Note: The month starts from **0**. For example, **0** indicates January. |
 
 **Return value:**
 
@@ -121,19 +126,21 @@ Obtains the values of the calendar attributes in this **Calendar** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Calendar-get(field: string): int--><!--Device-Calendar-get(field: string): int-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Calendar attributes. The following table lists the supported attribute values.The value can be"era": Era, for example, AD or BC."year": Year."month": Month. Note: The month starts from **0**. For example, **0** indicates January."date": Date."hour": Wall-clock hour."hour_of_day": Hour of day."minute": Minute."second": Second."millisecond": Millisecond."week_of_year": Week of year. Note that the algorithm for calculating the first week of a year variesaccording to regions. For example, the first seven days in a year are the first week."year_woy": Year used with the week of year field."week_of_month": Week of month."day_of_week_in_month": Day of week in month."day_of_year": Day of year."day_of_week": Day of week."milliseconds_in_day": Milliseconds in day."zone_offset": Fixed time zone offset in milliseconds (excluding DST)."dst_offset": DST offset in milliseconds."dow_local": Localized day of week."extended_year": Extended year, which can be a negative number."julian_day": Julian day."is_leap_month": Whether a month is a leap month. |
+| field | string | Yes | Calendar attributes. The following table lists the supported attribute values.The value can be"era": Era, for example, AD or BC."year": Year."month": Month. Note: The month starts from **0**. For example, **0** indicates January."date": Date."hour": Wall-clock hour."hour_of_day": Hour of day."minute": Minute."second": Second."millisecond": Millisecond."week_of_year": Week of year. Note that the algorithm for calculating the first week of a year varies according to regions. For example, the first seven days in a year are the first week."year_woy": Year used with the week of year field."week_of_month": Week of month."day_of_week_in_month": Day of week in month."day_of_year": Day of year."day_of_week": Day of week."milliseconds_in_day": Milliseconds in day."zone_offset": Fixed time zone offset in milliseconds (excluding DST)."dst_offset": DST offset in milliseconds."dow_local": Localized day of week."extended_year": Extended year, which can be a negative number."julian_day": Julian day."is_leap_month": Whether a month is a leap month. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Value of the calendar attribute. For example, if the year of the internal date of the current**Calendar** object is 1990, **get('year')** returns **1990**. |
+| number | Value of the calendar attribute. For example, if the year of the internal date of the current **Calendar** object is 1990, **get('year')** returns **1990**. |
 
 **Example**
 
@@ -158,6 +165,8 @@ Obtains calendar display name in the specified language.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Calendar-getDisplayName(locale: string): string--><!--Device-Calendar-getDisplayName(locale: string): string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -170,7 +179,7 @@ Obtains calendar display name in the specified language.
 
 | Type | Description |
 | --- | --- |
-| string | Calendar display name in the specified language. For example, **buddhist** is displayed as**Buddhist Calendar** if the locale is **en-US**. |
+| string | Calendar display name in the specified language. For example, **buddhist** is displayed as **Buddhist Calendar** if the locale is **en-US**. |
 
 **Example**
 
@@ -193,6 +202,8 @@ Obtains the first day of a week for this **Calendar** object.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Calendar-getFirstDayOfWeek(): int--><!--Device-Calendar-getFirstDayOfWeek(): int-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -224,6 +235,8 @@ Obtains the minimum number of days in the first week for this **Calendar** objec
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Calendar-getMinimalDaysInFirstWeek(): int--><!--Device-Calendar-getMinimalDaysInFirstWeek(): int-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
@@ -254,13 +267,15 @@ Obtains the timestamp of this **Calendar** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Calendar-getTimeInMillis(): long--><!--Device-Calendar-getTimeInMillis(): long-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Unix timestamp, which indicates the number of milliseconds that have elapsed since the Unixepoch. |
+| number | Unix timestamp, which indicates the number of milliseconds that have elapsed since the Unix epoch. |
 
 **Example**
 
@@ -284,6 +299,8 @@ Obtains the time zone ID of this **Calendar** object.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Calendar-getTimeZone(): string--><!--Device-Calendar-getTimeZone(): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -316,19 +333,21 @@ Checks whether a given date is a weekend in this **Calendar** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Calendar-isWeekend(date?: Date): boolean--><!--Device-Calendar-isWeekend(date?: Date): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | No | Date and time. Note: The month starts from **0**. For example, **0** indicates January.The default value is current date of the **Calendar** object. |
+| date | [Date](../../apis-na/arkts-apis/arkts-na-date-i.md) | No | Date and time. Note: The month starts from **0**. For example, **0** indicates January.The default value is current date of the **Calendar** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The value **true** indicates that the specified date is a weekend, and the value **false**indicates the opposite. |
+| boolean | The value **true** indicates that the specified date is a weekend, and the value **false** indicates the opposite. |
 
 **Example**
 
@@ -354,6 +373,8 @@ Sets the year, month, day, hour, minute, and second for this **Calendar** object
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Calendar-set(year: int, month: int, date:int, hour?: int, minute?: int, second?: int): void--><!--Device-Calendar-set(year: int, month: int, date:int, hour?: int, minute?: int, second?: int): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -390,13 +411,15 @@ Sets the first day of a week for this **Calendar** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Calendar-setFirstDayOfWeek(value: int): void--><!--Device-Calendar-setFirstDayOfWeek(value: int): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Start day of a week. The value **1** indicates Sunday, and the value **7** indicatesSaturday. |
+| value | number | Yes | Start day of a week. The value **1** indicates Sunday, and the value **7** indicates Saturday. |
 
 **Example**
 
@@ -420,6 +443,8 @@ Sets the minimum number of days in the first week for this **Calendar** object.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Calendar-setMinimalDaysInFirstWeek(value: int): void--><!--Device-Calendar-setMinimalDaysInFirstWeek(value: int): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -452,13 +477,15 @@ Sets the date and time for a **Calendar** object based on the input **Date** obj
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Calendar-setTime(date: Date): void--><!--Device-Calendar-setTime(date: Date): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | Yes | Date and time. Note: The month starts from **0**. For example, **0** indicates January. |
+| date | [Date](../../apis-na/arkts-apis/arkts-na-date-i.md) | Yes | Date and time. Note: The month starts from **0**. For example, **0** indicates January. |
 
 **Example**
 
@@ -483,13 +510,15 @@ Sets the date and time for a **Calendar** object based on the input timestamp.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Calendar-setTime(time: double): void--><!--Device-Calendar-setTime(time: double): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| time | number | Yes | Unix timestamp, which indicates the number of millisecondsthat have elapsed since the Unix epoch. |
+| time | number | Yes | Unix timestamp, which indicates the number of milliseconds that have elapsed since the Unix epoch. |
 
 **Example**
 
@@ -512,6 +541,8 @@ Sets the time zone of this **Calendar** object.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Calendar-setTimeZone(timezone: string): void--><!--Device-Calendar-setTimeZone(timezone: string): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 

@@ -18,6 +18,8 @@ Queries all print jobs. This API uses an asynchronous callback to return the res
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function queryPrintJobList(callback: AsyncCallback<Array<PrintJob>>): void--><!--Device-print-function queryPrintJobList(callback: AsyncCallback<Array<PrintJob>>): void-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Queries all print jobs. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;PrintJob&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<PrintJob>> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -64,6 +66,8 @@ Queries all print jobs. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function queryPrintJobList(): Promise<Array<PrintJob>>--><!--Device-print-function queryPrintJobList(): Promise<Array<PrintJob>>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -72,7 +76,7 @@ Queries all print jobs. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PrintJob&gt;&gt; | Promise used to return a list of all print jobs. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<PrintJob>> | Promise used to return a list of all print jobs. |
 
 **Error codes:**
 

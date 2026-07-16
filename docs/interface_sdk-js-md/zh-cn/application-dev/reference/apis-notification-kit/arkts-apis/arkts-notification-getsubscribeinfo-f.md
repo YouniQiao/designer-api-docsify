@@ -18,13 +18,15 @@ function getSubscribeInfo(): Promise<NotificationExtensionSubscriptionInfo[]>
 
 **需要权限：** ohos.permission.SUBSCRIBE_NOTIFICATION
 
+<!--Device-notificationExtensionSubscription-function getSubscribeInfo(): Promise<NotificationExtensionSubscriptionInfo[]>--><!--Device-notificationExtensionSubscription-function getSubscribeInfo(): Promise<NotificationExtensionSubscriptionInfo[]>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;NotificationExtensionSubscriptionInfo[]&gt; | Promise对象，返回一个[NotificationExtensionSubscriptionInfo](arkts-notification-notificationextensionsubscriptioninfo-i.md)对象数组，表示应用的订阅信息。 |
+| Promise<NotificationExtensionSubscriptionInfo[]> | Promise对象，返回一个[NotificationExtensionSubscriptionInfo](arkts-notification-notificationextensionsubscriptioninfo-i.md)对象数组，表示应用的订阅信息。 |
 
 **错误码：**
 

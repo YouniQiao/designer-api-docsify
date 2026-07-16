@@ -18,6 +18,8 @@ Callback used to clear the cloud data locally. This API uses a promise to return
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
+<!--Device-cloudSyncManager-function clean(accountId: string, appActions: Record<string, Action>): Promise<void>--><!--Device-cloudSyncManager-function clean(accountId: string, appActions: Record<string, Action>): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **System API:** This is a system API.
@@ -27,13 +29,13 @@ Callback used to clear the cloud data locally. This API uses a promise to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountId | string | Yes | Account ID. |
-| appActions | Record&lt;string, Action&gt; | Yes | Action to perform. The bundle name of the application whose data isto be cleared is a string. [Action](arkts-corefile-action-e-sys.md) specifies the action to perform. |
+| appActions | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Action> | Yes | Action to perform. The bundle name of the application whose data is to be cleared is a string. [Action](arkts-corefile-action-e-sys.md) specifies the action to perform. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -41,7 +43,7 @@ Callback used to clear the cloud data locally. This API uses a promise to return
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are leftunspecified;<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
 **Example**
 
@@ -74,6 +76,8 @@ Callback used to clear the cloud data locally. This API uses an asynchronous cal
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
+<!--Device-cloudSyncManager-function clean(accountId: string, appActions: Record<string, Action>, callback: AsyncCallback<void>): void--><!--Device-cloudSyncManager-function clean(accountId: string, appActions: Record<string, Action>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **System API:** This is a system API.
@@ -83,8 +87,8 @@ Callback used to clear the cloud data locally. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountId | string | Yes | Account ID. |
-| appActions | Record&lt;string, Action&gt; | Yes | Action to perform. The bundle name of the application whose data isto be cleared is a string. [Action](arkts-corefile-action-e-sys.md) specifies the action to perform. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to clear the cloud data locally. |
+| appActions | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Action> | Yes | Action to perform. The bundle name of the application whose data is to be cleared is a string. [Action](arkts-corefile-action-e-sys.md) specifies the action to perform. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to clear the cloud data locally. |
 
 **Error codes:**
 
@@ -92,7 +96,7 @@ Callback used to clear the cloud data locally. This API uses an asynchronous cal
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are leftunspecified;<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
 **Example**
 

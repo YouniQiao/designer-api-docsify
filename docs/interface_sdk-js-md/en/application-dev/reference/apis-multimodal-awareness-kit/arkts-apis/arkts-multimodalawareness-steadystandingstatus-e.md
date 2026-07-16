@@ -2,10 +2,11 @@
 
 Defines the steady standing state (that is, stand mode).
 
-A device enters stand mode when it is stationary, and its screen is at an angle between 45 and 135 degrees relative
-to the horizontal plane. For foldable smartphones, the device must be in a folded state or fully unfolded state.
+A device enters stand mode when it is stationary, and its screen is at an angle between 45 and 135 degrees relative to the horizontal plane. For foldable smartphones, the device must be in a folded state or fully unfolded state.
 
 **Since:** 18
+
+<!--Device-deviceStatus-export enum SteadyStandingStatus--><!--Device-deviceStatus-export enum SteadyStandingStatus-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
 
@@ -19,6 +20,8 @@ Exit of the stand mode.
 
 **Since:** 18
 
+<!--Device-SteadyStandingStatus-STATUS_EXIT = 0--><!--Device-SteadyStandingStatus-STATUS_EXIT = 0-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
 
 ## STATUS_ENTER
@@ -30,6 +33,8 @@ STATUS_ENTER = 1
 Entry to the stand mode.
 
 **Since:** 18
+
+<!--Device-SteadyStandingStatus-STATUS_ENTER = 1--><!--Device-SteadyStandingStatus-STATUS_ENTER = 1-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
 

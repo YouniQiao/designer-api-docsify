@@ -4,6 +4,8 @@ Defines the response to the request.
 
 **Since:** 9
 
+<!--Device-rpc-interface RequestResult--><!--Device-rpc-interface RequestResult-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Message code.
 
 **Since:** 9
 
+<!--Device-RequestResult-code: int--><!--Device-RequestResult-code: int-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## data
@@ -37,6 +41,8 @@ data: MessageSequence
 **Type:** MessageSequence
 
 **Since:** 9
+
+<!--Device-RequestResult-data: MessageSequence--><!--Device-RequestResult-data: MessageSequence-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -52,6 +58,8 @@ Error code.
 
 **Since:** 9
 
+<!--Device-RequestResult-errCode: int--><!--Device-RequestResult-errCode: int-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## reply
@@ -65,6 +73,8 @@ reply: MessageSequence
 **Type:** MessageSequence
 
 **Since:** 9
+
+<!--Device-RequestResult-reply: MessageSequence--><!--Device-RequestResult-reply: MessageSequence-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 

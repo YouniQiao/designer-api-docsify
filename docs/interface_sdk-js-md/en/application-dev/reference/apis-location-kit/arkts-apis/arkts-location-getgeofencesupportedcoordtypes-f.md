@@ -16,13 +16,15 @@ Obtains the coordinate system types supported by geofence.
 
 **Since:** 12
 
+<!--Device-geoLocationManager-function getGeofenceSupportedCoordTypes(): Array<CoordinateSystemType>--><!--Device-geoLocationManager-function getGeofenceSupportedCoordTypes(): Array<CoordinateSystemType>-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;CoordinateSystemType&gt; | Return the coordinate system types supported by geofence. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<CoordinateSystemType> | Return the coordinate system types supported by geofence. |
 
 **Error codes:**
 

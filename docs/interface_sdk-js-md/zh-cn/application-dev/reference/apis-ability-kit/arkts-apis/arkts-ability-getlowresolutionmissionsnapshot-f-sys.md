@@ -1,5 +1,11 @@
 # getLowResolutionMissionSnapShot（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+```
+
 ## getLowResolutionMissionSnapShot
 
 ```TypeScript
@@ -16,6 +22,16 @@ function getLowResolutionMissionSnapShot(
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-missionManager-function getLowResolutionMissionSnapShot(
+    deviceId: string,
+    missionId: int,
+    callback: AsyncCallback<MissionSnapshot>
+  ): void--><!--Device-missionManager-function getLowResolutionMissionSnapShot(
+    deviceId: string,
+    missionId: int,
+    callback: AsyncCallback<MissionSnapshot>
+  ): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -26,7 +42,7 @@ function getLowResolutionMissionSnapShot(
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备ID，本机默认为空字符串。 |
 | missionId | number | 是 | 任务ID。 |
-| callback | AsyncCallback&lt;MissionSnapshot&gt; | 是 | 执行结果回调函数，返回任务快照信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<MissionSnapshot> | 是 | 执行结果回调函数，返回任务快照信息。 |
 
 **错误码：**
 
@@ -74,6 +90,8 @@ function getLowResolutionMissionSnapShot(deviceId: string, missionId: number): P
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-missionManager-function getLowResolutionMissionSnapShot(deviceId: string, missionId: int): Promise<MissionSnapshot>--><!--Device-missionManager-function getLowResolutionMissionSnapShot(deviceId: string, missionId: int): Promise<MissionSnapshot>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -89,7 +107,7 @@ function getLowResolutionMissionSnapShot(deviceId: string, missionId: number): P
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;MissionSnapshot&gt; | Promise对象，返回任务快照信息。 |
+| Promise<MissionSnapshot> | Promise对象，返回任务快照信息。 |
 
 **错误码：**
 

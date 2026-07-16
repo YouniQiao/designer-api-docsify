@@ -1,8 +1,6 @@
 # FunctionIntentDecoratorInfo
 
-Parameter type of the
-[@InsightIntentFunctionMethod](../../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentfunctionmethod)
-decorator. All properties inherit from [IntentDecoratorInfo](arkts-ability-intentdecoratorinfo-i.md).
+Parameter type of the [@InsightIntentFunctionMethod](../../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentfunctionmethod)decorator. All properties inherit from [IntentDecoratorInfo](arkts-ability-intentdecoratorinfo-i.md).
 
 **Inheritance/Implementation:** FunctionIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-intentdecoratorinfo-i.md)
 
@@ -11,6 +9,8 @@ decorator. All properties inherit from [IntentDecoratorInfo](arkts-ability-inten
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-unnamed-declare interface FunctionIntentDecoratorInfo extends IntentDecoratorInfo--><!--Device-unnamed-declare interface FunctionIntentDecoratorInfo extends IntentDecoratorInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

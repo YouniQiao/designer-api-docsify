@@ -1,5 +1,11 @@
 # getLineInstance
 
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
+
 ## getLineInstance
 
 ```TypeScript
@@ -10,7 +16,9 @@ export function getLineInstance(locale: string): BreakIterator
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-i18n-export function getLineInstance(locale: string): BreakIterator--><!--Device-i18n-export function getLineInstance(locale: string): BreakIterator-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -24,5 +32,5 @@ export function getLineInstance(locale: string): BreakIterator
 
 | 类型 | 说明 |
 | --- | --- |
-| BreakIterator | 可换行点处理器。 |
+| [BreakIterator](arkts-localization-breakiterator-c.md) | 可换行点处理器。 |
 

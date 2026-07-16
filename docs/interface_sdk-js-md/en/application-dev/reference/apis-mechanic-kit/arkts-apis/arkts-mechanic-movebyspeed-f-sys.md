@@ -16,6 +16,8 @@ Move a mechanical device at the specified speed.
 
 **Since:** 26.0.0
 
+<!--Device-mechanicManager-function moveBySpeed(mechId: int, params: SpeedParams, duration: int): Promise<Result>--><!--Device-mechanicManager-function moveBySpeed(mechId: int, params: SpeedParams, duration: int): Promise<Result>-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -25,14 +27,14 @@ Move a mechanical device at the specified speed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mechId | number | Yes | ID of the mechanical device.<br>The value should be an integer. |
-| params | SpeedParams | Yes | Parameters to use when moving. |
+| params | [SpeedParams](arkts-mechanic-speedparams-i-sys.md) | Yes | Parameters to use when moving. |
 | duration | number | Yes | Duration of movement, in ms.<br>The value should be an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | Promise that returns the execution result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Result> | Promise that returns the execution result. |
 
 **Error codes:**
 

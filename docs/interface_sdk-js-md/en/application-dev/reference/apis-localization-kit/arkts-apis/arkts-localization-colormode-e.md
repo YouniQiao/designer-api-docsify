@@ -4,6 +4,8 @@ Defines the color mode of the current device.
 
 **Since:** 12
 
+<!--Device-resourceManager-export enum ColorMode--><!--Device-resourceManager-export enum ColorMode-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 ## DARK
@@ -18,6 +20,8 @@ Dark mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ColorMode-DARK = 0--><!--Device-ColorMode-DARK = 0-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 ## LIGHT
@@ -31,6 +35,8 @@ Light mode.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ColorMode-LIGHT = 1--><!--Device-ColorMode-LIGHT = 1-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 

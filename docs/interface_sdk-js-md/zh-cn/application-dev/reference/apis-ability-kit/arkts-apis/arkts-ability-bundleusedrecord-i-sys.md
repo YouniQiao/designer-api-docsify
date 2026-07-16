@@ -4,9 +4,17 @@
 
 **起始版本：** 9
 
+<!--Device-privacyManager-interface BundleUsedRecord--><!--Device-privacyManager-interface BundleUsedRecord-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+```
 
 ## bundleName
 
@@ -19,6 +27,8 @@ bundleName: string
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-BundleUsedRecord-bundleName: string--><!--Device-BundleUsedRecord-bundleName: string-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -36,6 +46,8 @@ deviceId: string
 
 **起始版本：** 9
 
+<!--Device-BundleUsedRecord-deviceId: string--><!--Device-BundleUsedRecord-deviceId: string-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -46,12 +58,13 @@ deviceId: string
 deviceName?: string
 ```
 
-使用权限的应用所在设备名称，仅用于分布式场景。可用于在界面中展示更易理解的设备标识。
-默认值：空字符串。
+使用权限的应用所在设备名称，仅用于分布式场景。可用于在界面中展示更易理解的设备标识。默认值：空字符串。
 
 **类型：** string
 
 **起始版本：** 24
+
+<!--Device-BundleUsedRecord-deviceName?: string--><!--Device-BundleUsedRecord-deviceName?: string-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -69,6 +82,8 @@ isRemote: boolean
 
 **起始版本：** 9
 
+<!--Device-BundleUsedRecord-isRemote: boolean--><!--Device-BundleUsedRecord-isRemote: boolean-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +100,8 @@ permissionRecords: Array<PermissionUsedRecord>
 
 **起始版本：** 9
 
+<!--Device-BundleUsedRecord-permissionRecords: Array<PermissionUsedRecord>--><!--Device-BundleUsedRecord-permissionRecords: Array<PermissionUsedRecord>-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -100,6 +117,8 @@ tokenId: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-BundleUsedRecord-tokenId: int--><!--Device-BundleUsedRecord-tokenId: int-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

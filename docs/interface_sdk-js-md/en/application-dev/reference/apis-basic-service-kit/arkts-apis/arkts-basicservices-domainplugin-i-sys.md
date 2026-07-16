@@ -4,6 +4,8 @@ Provides APIs for domain account authentication.
 
 **Since:** 9
 
+<!--Device-osAccount-interface DomainPlugin--><!--Device-osAccount-interface DomainPlugin-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -24,6 +26,8 @@ Authenticates a domain account.
 
 **Since:** 9
 
+<!--Device-DomainPlugin-auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callback: IUserAuthCallback): void--><!--Device-DomainPlugin-auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callback: IUserAuthCallback): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -32,9 +36,9 @@ Authenticates a domain account.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | DomainAccountInfo | Yes | Domain account information. |
-| credential | Uint8Array | Yes | Credentials of the domain account. |
-| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
+| credential | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Credentials of the domain account. |
+| callback | [IUserAuthCallback](arkts-basicservices-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
 
 **Example**
 
@@ -97,6 +101,8 @@ Authenticates a domain account in a pop-up window.
 
 **Since:** 10
 
+<!--Device-DomainPlugin-authWithPopup(domainAccountInfo: DomainAccountInfo, callback: IUserAuthCallback): void--><!--Device-DomainPlugin-authWithPopup(domainAccountInfo: DomainAccountInfo, callback: IUserAuthCallback): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -105,8 +111,8 @@ Authenticates a domain account in a pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | DomainAccountInfo | Yes | Domain account information. |
-| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
+| callback | [IUserAuthCallback](arkts-basicservices-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
 
 **Example**
 
@@ -154,6 +160,8 @@ Authenticates a domain account by the authorization token.
 
 **Since:** 10
 
+<!--Device-DomainPlugin-authWithToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array, callback: IUserAuthCallback): void--><!--Device-DomainPlugin-authWithToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array, callback: IUserAuthCallback): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -162,9 +170,9 @@ Authenticates a domain account by the authorization token.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | DomainAccountInfo | Yes | Domain account information. |
-| token | Uint8Array | Yes | Authorization token generated when the PIN orbiometric authentication is successful. |
-| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
+| token | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Authorization token generated when the PIN or biometric authentication is successful. |
+| callback | [IUserAuthCallback](arkts-basicservices-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
 
 **Example**
 
@@ -212,6 +220,8 @@ Binds a domain account.
 
 **Since:** 10
 
+<!--Device-DomainPlugin-bindAccount(domainAccountInfo: DomainAccountInfo, localId: number, callback: AsyncCallback<void>): void--><!--Device-DomainPlugin-bindAccount(domainAccountInfo: DomainAccountInfo, localId: number, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -220,9 +230,9 @@ Binds a domain account.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | DomainAccountInfo | Yes | Domain account information. |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
 | localId | number | Yes | ID of the target OS account. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -266,10 +276,11 @@ osAccount.DomainAccountManager.registerPlugin(plugin)
 getAccessToken(options: GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>): void
 ```
 
-Obtains the domain access token based on the specified conditions. This API uses an asynchronous callback to
-return the result.
+Obtains the domain access token based on the specified conditions. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-DomainPlugin-getAccessToken(options: GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>): void--><!--Device-DomainPlugin-getAccessToken(options: GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -279,8 +290,8 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | GetDomainAccessTokenOptions | Yes | Options specified for obtaining the domain access token. |
-| callback | AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the result. |
+| options | [GetDomainAccessTokenOptions](arkts-basicservices-getdomainaccesstokenoptions-i-sys.md) | Yes | Options specified for obtaining the domain access token. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Uint8Array> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -329,6 +340,8 @@ Obtains information about a domain account. This API uses an asynchronous callba
 
 **Since:** 10
 
+<!--Device-DomainPlugin-getAccountInfo(options: GetDomainAccountInfoPluginOptions, callback: AsyncCallback<DomainAccountInfo>): void--><!--Device-DomainPlugin-getAccountInfo(options: GetDomainAccountInfoPluginOptions, callback: AsyncCallback<DomainAccountInfo>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -337,8 +350,8 @@ Obtains information about a domain account. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | GetDomainAccountInfoPluginOptions | Yes | Domain account information. |
-| callback | AsyncCallback&lt;DomainAccountInfo&gt; | Yes | Callback used to return the result. |
+| options | [GetDomainAccountInfoPluginOptions](arkts-basicservices-getdomainaccountinfopluginoptions-i-sys.md) | Yes | Domain account information. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<DomainAccountInfo> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -391,6 +404,8 @@ Obtains the authentication status of a domain account.
 
 **Since:** 10
 
+<!--Device-DomainPlugin-getAuthStatusInfo(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<AuthStatusInfo>): void--><!--Device-DomainPlugin-getAuthStatusInfo(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<AuthStatusInfo>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -399,8 +414,8 @@ Obtains the authentication status of a domain account.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | DomainAccountInfo | Yes | Domain account information. |
-| callback | AsyncCallback&lt;AuthStatusInfo&gt; | Yes | Callback used to return the result. |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<AuthStatusInfo> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -454,6 +469,16 @@ Checks whether the specified domain account token is valid.
 
 **Since:** 10
 
+<!--Device-DomainPlugin-isAccountTokenValid(
+      domainAccountInfo: DomainAccountInfo,
+      token: Uint8Array,
+      callback: AsyncCallback<boolean>
+    ): void--><!--Device-DomainPlugin-isAccountTokenValid(
+      domainAccountInfo: DomainAccountInfo,
+      token: Uint8Array,
+      callback: AsyncCallback<boolean>
+    ): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -462,9 +487,9 @@ Checks whether the specified domain account token is valid.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | DomainAccountInfo | Yes | Domain account information. |
-| token | Uint8Array | Yes | Domain account token to check. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result.The value **true** means that the specified domain account token is valid;the value **false** means the opposite. |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
+| token | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Domain account token to check. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result.The value **true** means that the specified domain account token is valid;the value **false** means the opposite. |
 
 **Example**
 
@@ -512,6 +537,8 @@ Unbinds a domain account.
 
 **Since:** 10
 
+<!--Device-DomainPlugin-unbindAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<void>): void--><!--Device-DomainPlugin-unbindAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -520,8 +547,8 @@ Unbinds a domain account.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | DomainAccountInfo | Yes | Domain account information. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 

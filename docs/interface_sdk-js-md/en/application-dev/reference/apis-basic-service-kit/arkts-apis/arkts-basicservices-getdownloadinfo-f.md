@@ -12,19 +12,18 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 function getDownloadInfo(url: string): DownloadInfo | undefined
 ```
 
-Obtains the download information based on the URL. The download information is stored in the download information
-list in memory and is cleared when the application exits.
+Obtains the download information based on the URL. The download information is stored in the download information list in memory and is cleared when the application exits.
 
-- If the specified URL is found in the download information list, the latest
-[DownloadInfo](arkts-basicservices-downloadinfo-i.md) corresponding to the URL is returned.
-- If the specified URL cannot be found in the download information list, **undefined** is returned.
-- If the download information has already cached in the URL, the new cached information will overwrite the old
-one.
+- If the specified URL is found in the download information list, the latest [DownloadInfo](arkts-basicservices-downloadinfo-i.md) corresponding to the URL is returned.  
+- If the specified URL cannot be found in the download information list, **undefined** is returned.  
+- If the download information has already cached in the URL, the new cached information will overwrite the old one.  
 - When the target information is stored in the memory, the existing cache data is replaced in the LRU mode.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
+
+<!--Device-cacheDownload-function getDownloadInfo(url: string): DownloadInfo | undefined--><!--Device-cacheDownload-function getDownloadInfo(url: string): DownloadInfo | undefined-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -38,7 +37,7 @@ one.
 
 | Type | Description |
 | --- | --- |
-| DownloadInfo | Returns the download information of the corresponding URL if the operationis successful; returns **undefined** if the specified URL does not exist. |
+| [DownloadInfo](arkts-basicservices-downloadinfo-i.md) | Returns the download information of the corresponding URL if the operation is successful; returns **undefined** if the specified URL does not exist. |
 
 **Error codes:**
 

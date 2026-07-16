@@ -4,6 +4,8 @@ Provides methods for scanning and discovering nearby devices.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare namespace scan--><!--Device-unnamed-declare namespace scan-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import

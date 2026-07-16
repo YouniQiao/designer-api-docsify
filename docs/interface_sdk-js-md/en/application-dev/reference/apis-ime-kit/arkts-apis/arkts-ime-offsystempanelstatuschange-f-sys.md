@@ -18,6 +18,8 @@ Unsubscribe from the system panel status change event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-inputMethodSystemPanelManager-function offSystemPanelStatusChange(callback?: Callback<SystemPanelStatus>): void--><!--Device-inputMethodSystemPanelManager-function offSystemPanelStatusChange(callback?: Callback<SystemPanelStatus>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Unsubscribe from the system panel status change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;SystemPanelStatus&gt; | No | callback triggered when the system panel status changes. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SystemPanelStatus> | No | callback triggered when the system panel status changes. |
 
 **Error codes:**
 

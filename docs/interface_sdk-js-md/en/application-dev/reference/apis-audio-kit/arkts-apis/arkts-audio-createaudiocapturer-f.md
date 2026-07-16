@@ -16,14 +16,16 @@ Creates an AudioCapturer instance. This API uses an asynchronous callback to ret
 
 **Since:** 8
 
+<!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer>): void--><!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | AudioCapturerOptions | Yes | Capturer configurations. |
-| callback | AsyncCallback&lt;AudioCapturer&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined** and **data** is the AudioCapturer instance obtained; otherwise, **err** isan error object. If the operation fails, an error object with one of the following error codes is returned:<br>Error code 6800301: indicates a parameter verification exception, permission verification exception, or systemprocessing exception. For details, see system logs.<br>Error code 6800101: indicates that a mandatory parameteris null or the parameter type is incorrect. |
+| options | [AudioCapturerOptions](arkts-audio-audiocaptureroptions-i.md) | Yes | Capturer configurations. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AudioCapturer> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the AudioCapturer instance obtained; otherwise, **err** is an error object. If the operation fails, an error object with one of the following error codes is returned:<br>Error code 6800301: indicates a parameter verification exception, permission verification exception, or system processing exception. For details, see system logs.<br>Error code 6800101: indicates that a mandatory parameter is null or the parameter type is incorrect. |
 
 **Example**
 
@@ -71,19 +73,21 @@ Creates an AudioCapturer instance. This API uses a promise to return the result.
 
 **Since:** 8
 
+<!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer>--><!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | AudioCapturerOptions | Yes | Capturer configurations. |
+| options | [AudioCapturerOptions](arkts-audio-audiocaptureroptions-i.md) | Yes | Capturer configurations. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioCapturer&gt; | Promise used to return the result. If the operation is successful, anAudioCapturer instance is returned; otherwise, an error object with either of the following error codes isreturned:<br>Error code 6800301: indicates a parameter verification exception, permission verification exception, or systemprocessing exception. For details, see system logs.<br>Error code 6800101: indicates that a mandatory parameter is null or the parameter type is incorrect. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AudioCapturer> | Promise used to return the result. If the operation is successful, an AudioCapturer instance is returned; otherwise, an error object with either of the following error codes is returned:<br>Error code 6800301: indicates a parameter verification exception, permission verification exception, or system processing exception. For details, see system logs.<br>Error code 6800101: indicates that a mandatory parameter is null or the parameter type is incorrect. |
 
 **Example**
 

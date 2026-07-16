@@ -18,6 +18,8 @@ Subscribe to the rtt modify indication.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function onRttModifyInd(callback: Callback<RttEventInfo>): void--><!--Device-call-function onRttModifyInd(callback: Callback<RttEventInfo>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Subscribe to the rtt modify indication.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;RttEventInfo&gt; | Yes | Indicates the callback for getting the rtt event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<RttEventInfo> | Yes | Indicates the callback for getting the rtt event. |
 
 **Error codes:**
 

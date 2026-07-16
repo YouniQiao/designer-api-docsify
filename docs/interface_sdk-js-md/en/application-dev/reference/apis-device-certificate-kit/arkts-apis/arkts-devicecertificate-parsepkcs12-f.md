@@ -18,20 +18,22 @@ Parses P12.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-cert-function parsePkcs12(data: Uint8Array, config: Pkcs12ParsingConfig): Pkcs12Data--><!--Device-cert-function parsePkcs12(data: Uint8Array, config: Pkcs12ParsingConfig): Pkcs12Data-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Uint8Array | Yes | Raw data of P12 file, in DER format. |
-| config | Pkcs12ParsingConfig | Yes | Configuration for parsing the P12. |
+| data | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Raw data of P12 file, in DER format. |
+| config | [Pkcs12ParsingConfig](arkts-devicecertificate-pkcs12parsingconfig-i.md) | Yes | Configuration for parsing the P12. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Pkcs12Data | Indicates the parsed P12 data. |
+| [Pkcs12Data](arkts-devicecertificate-pkcs12data-i.md) | Indicates the parsed P12 data. |
 
 **Error codes:**
 
@@ -234,20 +236,22 @@ Parses P12. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-cert-function parsePkcs12(data: Uint8Array, password: string): Promise<Pkcs12Data>--><!--Device-cert-function parsePkcs12(data: Uint8Array, password: string): Promise<Pkcs12Data>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Uint8Array | Yes | Raw data of P12 file, in DER format. |
+| data | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Raw data of P12 file, in DER format. |
 | password | string | Yes | Password. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Pkcs12Data&gt; | Promise used to return the parsed P12 data. The private key in the returned**Pkcs12Data** is encoded in PEM format. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Pkcs12Data> | Promise used to return the parsed P12 data. The private key in the returned **Pkcs12Data** is encoded in PEM format. |
 
 **Error codes:**
 

@@ -2,8 +2,8 @@
 
 应用程序的模块信息。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 从API version 9开始，该模块不再维护，建议使用[bundleManager-HapModuleInfo](arkts-ability-hapmoduleinfo-depr-i.md)替代。
 
 **起始版本：** 7
@@ -11,6 +11,8 @@
 **废弃版本：** 9
 
 **替代接口：** [hapModuleInfo:HapModuleInfo](arkts-ability-hapmoduleinfo-depr-i.md)
+
+<!--Device-unnamed-export interface ModuleInfo--><!--Device-unnamed-export interface ModuleInfo-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -32,6 +34,8 @@ readonly moduleName: string
 
 **替代接口：** name
 
+<!--Device-ModuleInfo-readonly moduleName: string--><!--Device-ModuleInfo-readonly moduleName: string-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 ## moduleSourceDir
@@ -49,6 +53,8 @@ readonly moduleSourceDir: string
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-ModuleInfo-readonly moduleSourceDir: string--><!--Device-ModuleInfo-readonly moduleSourceDir: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

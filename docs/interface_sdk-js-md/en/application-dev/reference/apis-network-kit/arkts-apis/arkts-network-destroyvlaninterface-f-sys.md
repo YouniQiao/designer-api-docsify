@@ -12,14 +12,15 @@ import { connection } from '@kit.NetworkKit';
 function destroyVlanInterface(ifName: string, vlanId: number): Promise<void>
 ```
 
-Destroy vlan interface by vlanId.
-To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission.
+Destroy vlan interface by vlanId.To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INTERNAL} permission.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-connection-function destroyVlanInterface(ifName: string, vlanId: int): Promise<void>--><!--Device-connection-function destroyVlanInterface(ifName: string, vlanId: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -36,7 +37,7 @@ To invoke this method, you must have the {@code ohos.permission.CONNECTIVITY_INT
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - The promise returned by the function. |
 
 **Error codes:**
 

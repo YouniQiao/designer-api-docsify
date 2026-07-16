@@ -1,5 +1,11 @@
 # isBatteryConfigSupported（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { batteryInfo } from '@kit.BasicServicesKit';
+```
+
 ## isBatteryConfigSupported
 
 ```TypeScript
@@ -9,6 +15,8 @@ function isBatteryConfigSupported(sceneName: string): boolean
 检查是否按场景名称启用电池配置。
 
 **起始版本：** 11
+
+<!--Device-batteryInfo-function isBatteryConfigSupported(sceneName: string): boolean--><!--Device-batteryInfo-function isBatteryConfigSupported(sceneName: string): boolean-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 

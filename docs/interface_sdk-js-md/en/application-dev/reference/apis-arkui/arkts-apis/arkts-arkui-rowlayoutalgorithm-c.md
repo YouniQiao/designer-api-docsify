@@ -2,16 +2,18 @@
 
 Horizontal linear layout algorithm class.
 
-> **NOTE**
->
-> The object of the **RowLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as the
-> input parameter of the
-> [DynamicLayout](../../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the
+> **NOTE**  
+>  
+> The object of the **RowLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as the  
+> input parameter of the  
+> [DynamicLayout](../../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the  
 > layout algorithm.
 
 **Inheritance/Implementation:** RowLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md)
 
 **Since:** 24
+
+<!--Device-unnamed-export class RowLayoutAlgorithm implements LayoutAlgorithm--><!--Device-unnamed-export class RowLayoutAlgorithm implements LayoutAlgorithm-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,13 +33,15 @@ Constructs the horizontal linear layout algorithm class.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
+<!--Device-RowLayoutAlgorithm-constructor(option?: RowLayoutAlgorithmOptions)--><!--Device-RowLayoutAlgorithm-constructor(option?: RowLayoutAlgorithmOptions)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | RowLayoutAlgorithmOptions | No | Input parameters for constructing the horizontal linear layoutalgorithm, which are used to set the spacing, main axis alignment method, cross axis alignment method, andmain axis arrangement direction of the layout algorithm. |
+| option | [RowLayoutAlgorithmOptions](arkts-arkui-rowlayoutalgorithmoptions-i.md) | No | Input parameters for constructing the horizontal linear layout algorithm, which are used to set the spacing, main axis alignment method, cross axis alignment method, and main axis arrangement direction of the layout algorithm. |
 
 ## alignItems
 
@@ -61,6 +65,8 @@ Invalid values are treated as the default value.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
+<!--Device-RowLayoutAlgorithm-@Trace public alignItems?: VerticalAlign--><!--Device-RowLayoutAlgorithm-@Trace public alignItems?: VerticalAlign-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## isReverse
@@ -69,12 +75,7 @@ Invalid values are treated as the default value.
 @Trace public isReverse?: boolean
 ```
 
-Whether to reverse the horizontal arrangement of child components. **true** indicates to reverse the horizontal
-arrangement of child components. The horizontal direction is affected by the common attribute
-[direction](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction). If the
-[direction](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction) attribute takes
-effect, the arrangement is reversed again. **false** indicates to arrange child components in the horizontal
-direction in normal order.
+Whether to reverse the horizontal arrangement of child components. **true** indicates to reverse the horizontal arrangement of child components. The horizontal direction is affected by the common attribute [direction](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction). If the [direction](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction) attribute takes effect, the arrangement is reversed again. **false** indicates to arrange child components in the horizontal direction in normal order.
 
 Default value: **false**
 
@@ -89,6 +90,8 @@ Invalid values are treated as the default value.
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
+
+<!--Device-RowLayoutAlgorithm-@Trace public isReverse?: boolean--><!--Device-RowLayoutAlgorithm-@Trace public isReverse?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -114,6 +117,8 @@ Invalid values are treated as the default value.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
+<!--Device-RowLayoutAlgorithm-@Trace public justifyContent?: FlexAlign--><!--Device-RowLayoutAlgorithm-@Trace public justifyContent?: FlexAlign-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## space
@@ -137,6 +142,8 @@ Invalid values are treated as the default value.
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
+
+<!--Device-RowLayoutAlgorithm-@Trace public space?: LengthMetrics--><!--Device-RowLayoutAlgorithm-@Trace public space?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

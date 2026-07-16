@@ -24,19 +24,21 @@ The following pixel format is not supported for PixelMap creation: ASTC_4x4.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
+<!--Device-image-function createEmptyPixelMap(param: InitializationOptions): PixelMap--><!--Device-image-function createEmptyPixelMap(param: InitializationOptions): PixelMap-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | InitializationOptions | Yes | Initialization options for the PixelMap.If InitializationOptions.pixelFormat is set to ASTC_4x4, it will be reset to the default value RGBA_8888. |
+| param | [InitializationOptions](arkts-image-initializationoptions-i.md) | Yes | Initialization options for the PixelMap.If InitializationOptions.pixelFormat is set to ASTC_4x4, it will be reset to the default value RGBA_8888. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PixelMap | The new PixelMap created. |
+| [PixelMap](arkts-image-pixelmap-i.md) | The new PixelMap created. |
 
 **Error codes:**
 

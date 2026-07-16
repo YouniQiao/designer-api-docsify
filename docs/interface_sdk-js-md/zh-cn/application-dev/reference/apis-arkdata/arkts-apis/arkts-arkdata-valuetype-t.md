@@ -10,7 +10,9 @@ type ValueType = number | number | number | string | boolean | image.PixelMap | 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-unifiedDataChannel-type ValueType = int | long | double | string | boolean | image.PixelMap | Want | ArrayBuffer | object | null | undefined--><!--Device-unifiedDataChannel-type ValueType = int | long | double | string | boolean | image.PixelMap | Want | ArrayBuffer | object | null | undefined-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 

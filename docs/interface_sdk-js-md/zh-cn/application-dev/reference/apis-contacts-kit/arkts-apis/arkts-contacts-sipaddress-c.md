@@ -4,7 +4,15 @@
 
 **起始版本：** 7
 
+<!--Device-contact-class SipAddress--><!--Device-contact-class SipAddress-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
+
+## 导入模块
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+```
 
 ## CUSTOM_LABEL
 
@@ -18,7 +26,9 @@ static readonly CUSTOM_LABEL: 0
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SipAddress-static readonly CUSTOM_LABEL: 0--><!--Device-SipAddress-static readonly CUSTOM_LABEL: 0-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -34,7 +44,9 @@ static readonly INVALID_LABEL_ID: -1
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SipAddress-static readonly INVALID_LABEL_ID: -1--><!--Device-SipAddress-static readonly INVALID_LABEL_ID: -1-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -50,7 +62,9 @@ static readonly SIP_HOME: 1
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SipAddress-static readonly SIP_HOME: 1--><!--Device-SipAddress-static readonly SIP_HOME: 1-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -66,7 +80,9 @@ static readonly SIP_OTHER: 3
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SipAddress-static readonly SIP_OTHER: 3--><!--Device-SipAddress-static readonly SIP_OTHER: 3-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -82,7 +98,9 @@ static readonly SIP_WORK: 2
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SipAddress-static readonly SIP_WORK: 2--><!--Device-SipAddress-static readonly SIP_WORK: 2-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -98,7 +116,9 @@ labelId?: number
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SipAddress-labelId?: number--><!--Device-SipAddress-labelId?: number-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -114,7 +134,9 @@ labelName?: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SipAddress-labelName?: string--><!--Device-SipAddress-labelName?: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -130,7 +152,9 @@ sipAddress: string
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SipAddress-sipAddress: string--><!--Device-SipAddress-sipAddress: string-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 

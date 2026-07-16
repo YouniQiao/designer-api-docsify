@@ -4,6 +4,8 @@ Enumerates the arrangement modes of the sensor color filter.
 
 **Since:** 24
 
+<!--Device-camera-enum SensorColorFilterArrangement--><!--Device-camera-enum SensorColorFilterArrangement-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## BGGR
@@ -19,6 +21,8 @@ Blue-green-green-red filter arrangement.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-SensorColorFilterArrangement-BGGR = 0--><!--Device-SensorColorFilterArrangement-BGGR = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -36,6 +40,8 @@ Green-blue-red-green filter arrangement.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-SensorColorFilterArrangement-GBRG = 1--><!--Device-SensorColorFilterArrangement-GBRG = 1-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## GRBG
@@ -52,6 +58,8 @@ Green-red-blue-green arrangement mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-SensorColorFilterArrangement-GRBG = 2--><!--Device-SensorColorFilterArrangement-GRBG = 2-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## RGGB
@@ -67,6 +75,8 @@ Red-green-green-blue arrangement mode.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-SensorColorFilterArrangement-RGGB = 3--><!--Device-SensorColorFilterArrangement-RGGB = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

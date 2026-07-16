@@ -4,6 +4,8 @@ Plugin component template property.
 
 **Since:** 12
 
+<!--Device-unnamed-interface PluginComponentTemplate--><!--Device-unnamed-interface PluginComponentTemplate-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Defines the ability
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PluginComponentTemplate-ability: string--><!--Device-PluginComponentTemplate-ability: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## source
@@ -41,6 +45,8 @@ Defines the source
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PluginComponentTemplate-source: string--><!--Device-PluginComponentTemplate-source: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

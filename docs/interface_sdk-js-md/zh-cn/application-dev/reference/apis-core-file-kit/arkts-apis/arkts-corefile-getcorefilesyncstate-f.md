@@ -1,5 +1,11 @@
 # getCoreFileSyncState
 
+## 导入模块
+
+```TypeScript
+import { cloudSync } from '@kit.CoreFileKit';
+```
+
 ## getCoreFileSyncState
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getCoreFileSyncState(uri: string): FileState
 同步方法获取云盘文件同步上行状态。
 
 **起始版本：** 20
+
+<!--Device-cloudSync-function getCoreFileSyncState(uri: string): FileState--><!--Device-cloudSync-function getCoreFileSyncState(uri: string): FileState-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -22,7 +30,7 @@ function getCoreFileSyncState(uri: string): FileState
 
 | 类型 | 说明 |
 | --- | --- |
-| FileState | 返回给定云盘文件的同步上行状态。 |
+| [FileState](arkts-corefile-filestate-e.md) | 返回给定云盘文件的同步上行状态。 |
 
 **错误码：**
 

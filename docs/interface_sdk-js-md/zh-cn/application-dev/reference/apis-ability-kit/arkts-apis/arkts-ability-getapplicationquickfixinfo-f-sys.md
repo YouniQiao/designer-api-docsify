@@ -1,5 +1,11 @@
 # getApplicationQuickFixInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { quickFixManager } from '@kit.AbilityKit';
+```
+
 ## getApplicationQuickFixInfo
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getApplicationQuickFixInfo(bundleName: string, callback: AsyncCallback<
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-quickFixManager-function getApplicationQuickFixInfo(bundleName: string, callback: AsyncCallback<ApplicationQuickFixInfo>): void--><!--Device-quickFixManager-function getApplicationQuickFixInfo(bundleName: string, callback: AsyncCallback<ApplicationQuickFixInfo>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.QuickFix
 
 **系统接口：** 此接口为系统接口。
@@ -21,7 +29,7 @@ function getApplicationQuickFixInfo(bundleName: string, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
-| callback | AsyncCallback&lt;ApplicationQuickFixInfo&gt; | 是 | 回调函数。返回应用的快速修复信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ApplicationQuickFixInfo> | 是 | 回调函数。返回应用的快速修复信息。 |
 
 **错误码：**
 
@@ -67,6 +75,8 @@ function getApplicationQuickFixInfo(bundleName: string): Promise<ApplicationQuic
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-quickFixManager-function getApplicationQuickFixInfo(bundleName: string): Promise<ApplicationQuickFixInfo>--><!--Device-quickFixManager-function getApplicationQuickFixInfo(bundleName: string): Promise<ApplicationQuickFixInfo>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.QuickFix
 
 **系统接口：** 此接口为系统接口。
@@ -81,7 +91,7 @@ function getApplicationQuickFixInfo(bundleName: string): Promise<ApplicationQuic
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ApplicationQuickFixInfo&gt; | Promise对象。返回应用的快速修复信息。 |
+| Promise<ApplicationQuickFixInfo> | Promise对象。返回应用的快速修复信息。 |
 
 **错误码：**
 

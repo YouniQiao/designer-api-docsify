@@ -18,13 +18,15 @@ Obtains the number of subscriptions to a specified event.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-emitter-function getListenerCount(eventId: long | string): long--><!--Device-emitter-function getListenerCount(eventId: long | string): long-End-->
+
 **System capability:** SystemCapability.Notification.Emitter
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | number \| string | Yes | Event ID, which is a custom string with a maximum of 10240 bytes. The valuecannot be empty. |
+| eventId | number \| string | Yes | Event ID, which is a custom string with a maximum of 10240 bytes. The value cannot be empty. |
 
 **Return value:**
 

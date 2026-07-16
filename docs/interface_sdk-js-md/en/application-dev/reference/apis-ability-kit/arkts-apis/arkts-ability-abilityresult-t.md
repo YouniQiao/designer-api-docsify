@@ -12,6 +12,8 @@ Defines the result code and data returned when a started ability is terminated.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-common-export type AbilityResult = _AbilityResult--><!--Device-common-export type AbilityResult = _AbilityResult-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Property type:** _AbilityResult

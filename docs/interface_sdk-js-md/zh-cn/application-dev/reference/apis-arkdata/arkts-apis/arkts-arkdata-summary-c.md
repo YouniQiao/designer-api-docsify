@@ -4,7 +4,15 @@
 
 **起始版本：** 10
 
+<!--Device-unifiedDataChannel-class Summary--><!--Device-unifiedDataChannel-class Summary-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+## 导入模块
+
+```TypeScript
+import { unifiedDataChannel } from '@kit.ArkData';
+```
 
 ## overview
 
@@ -20,7 +28,9 @@ get overview(): Record<string, number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Summary-get overview(): Record<string, long>--><!--Device-Summary-get overview(): Record<string, long>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -30,9 +40,7 @@ get overview(): Record<string, number>
 set summary(value: Record<string, number>)
 ```
 
-是一个字典类型对象，key表示数据类型（见
-[UniformDataType](arkts-arkdata-uniformdatatype-e.md)），value为统一数据对象中该类型
-记录大小总和（单位：Byte）。
+是一个字典类型对象，key表示数据类型（见[UniformDataType](arkts-arkdata-uniformdatatype-e.md)），value为统一数据对象中该类型记录大小总和（单位：Byte）。
 
 **类型：** Record<string, number>
 
@@ -40,7 +48,9 @@ set summary(value: Record<string, number>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Summary-set summary(value: Record<string, long>)--><!--Device-Summary-set summary(value: Record<string, long>)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -58,7 +68,9 @@ set totalSize(value: number)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Summary-set totalSize(value: long)--><!--Device-Summary-set totalSize(value: long)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 

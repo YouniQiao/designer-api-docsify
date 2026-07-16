@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-cert-interface X509CRLEntry--><!--Device-cert-interface X509CRLEntry-End-->
+
 **系统能力：** SystemCapability.Security.Cert
+
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
 
 ## getCertIssuer
 
@@ -14,13 +22,15 @@ getCertIssuer(): DataBlob
 
 表示获取被吊销证书的颁发者名称。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 获取到的被吊销证书的颁发者名称数据带字符串结束符。
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRLEntry-getCertIssuer(): DataBlob--><!--Device-X509CRLEntry-getCertIssuer(): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -28,7 +38,7 @@ getCertIssuer(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 表示被吊销证书的颁发者名称。 |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | 表示被吊销证书的颁发者名称。 |
 
 **错误码：**
 
@@ -49,7 +59,9 @@ getCertIssuer(encodingType: EncodingType): string
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRLEntry-getCertIssuer(encodingType: EncodingType): string--><!--Device-X509CRLEntry-getCertIssuer(encodingType: EncodingType): string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -57,7 +69,7 @@ getCertIssuer(encodingType: EncodingType): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| encodingType | EncodingType | 是 | 表示编码类型。 |
+| encodingType | [EncodingType](arkts-devicecertificate-encodingtype-e.md) | 是 | 表示编码类型。 |
 
 **返回值：**
 
@@ -85,7 +97,9 @@ getCertIssuerX500DistinguishedName(): X500DistinguishedName
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRLEntry-getCertIssuerX500DistinguishedName(): X500DistinguishedName--><!--Device-X509CRLEntry-getCertIssuerX500DistinguishedName(): X500DistinguishedName-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -93,7 +107,7 @@ getCertIssuerX500DistinguishedName(): X500DistinguishedName
 
 | 类型 | 说明 |
 | --- | --- |
-| X500DistinguishedName | X.500可分辨名称对象。 |
+| [X500DistinguishedName](arkts-devicecertificate-x500distinguishedname-i.md) | X.500可分辨名称对象。 |
 
 **错误码：**
 
@@ -113,7 +127,9 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRLEntry-getEncoded(callback: AsyncCallback<EncodingBlob>): void--><!--Device-X509CRLEntry-getEncoded(callback: AsyncCallback<EncodingBlob>): void-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -121,7 +137,7 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;EncodingBlob&gt; | 是 | 回调函数。当获取证书吊销条目序列化数据成功时，err为undefined，data为获取到的证书吊销条目序列化数据；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<EncodingBlob> | 是 | 回调函数。当获取证书吊销条目序列化数据成功时，err为undefined，data为获取到的证书吊销条目序列化数据；否则为错误对象。 |
 
 **错误码：**
 
@@ -142,7 +158,9 @@ getEncoded(): Promise<EncodingBlob>
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRLEntry-getEncoded(): Promise<EncodingBlob>--><!--Device-X509CRLEntry-getEncoded(): Promise<EncodingBlob>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -150,7 +168,7 @@ getEncoded(): Promise<EncodingBlob>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;EncodingBlob&gt; | Promise对象，返回证书吊销条目的序列化数据。 |
+| Promise<EncodingBlob> | Promise对象，返回证书吊销条目的序列化数据。 |
 
 **错误码：**
 
@@ -171,7 +189,9 @@ getExtensions(): DataBlob
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRLEntry-getExtensions(): DataBlob--><!--Device-X509CRLEntry-getExtensions(): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -179,7 +199,7 @@ getExtensions(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 表示CRL条目的扩展数据。 |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | 表示CRL条目的扩展数据。 |
 
 **错误码：**
 
@@ -199,7 +219,9 @@ getExtensionsObject(): CertExtension
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRLEntry-getExtensionsObject(): CertExtension--><!--Device-X509CRLEntry-getExtensionsObject(): CertExtension-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -207,7 +229,7 @@ getExtensionsObject(): CertExtension
 
 | 类型 | 说明 |
 | --- | --- |
-| CertExtension | CRL条目的扩展对象。 |
+| [CertExtension](arkts-devicecertificate-certextension-i.md) | CRL条目的扩展对象。 |
 
 **错误码：**
 
@@ -227,7 +249,9 @@ getRevocationDate(): string
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRLEntry-getRevocationDate(): string--><!--Device-X509CRLEntry-getRevocationDate(): string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -255,7 +279,9 @@ getSerialNumber(): bigint
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRLEntry-getSerialNumber(): bigint--><!--Device-X509CRLEntry-getSerialNumber(): bigint-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -283,7 +309,9 @@ hasExtensions(): boolean
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRLEntry-hasExtensions(): boolean--><!--Device-X509CRLEntry-hasExtensions(): boolean-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -311,7 +339,9 @@ hashCode(): Uint8Array
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRLEntry-hashCode(): Uint8Array--><!--Device-X509CRLEntry-hashCode(): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -319,7 +349,7 @@ hashCode(): Uint8Array
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | DER格式数据的哈希值。 |
+| [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | DER格式数据的哈希值。 |
 
 **错误码：**
 
@@ -339,7 +369,9 @@ toString(): string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRLEntry-toString(): string--><!--Device-X509CRLEntry-toString(): string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

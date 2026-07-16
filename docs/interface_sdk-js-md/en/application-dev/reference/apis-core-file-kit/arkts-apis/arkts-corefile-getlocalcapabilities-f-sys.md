@@ -18,6 +18,8 @@ Obtain a Json file that describes local capabilities.
 
 **Required permissions:** ohos.permission.BACKUP
 
+<!--Device-backup-function getLocalCapabilities(): Promise<FileData>--><!--Device-backup-function getLocalCapabilities(): Promise<FileData>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Obtain a Json file that describes local capabilities.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FileData&gt; | A FileData holding all the local capabilities. The returned file is a temporal file that will bedeleted automatically when closed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<FileData> | A FileData holding all the local capabilities. The returned file is a temporal file that will be deleted automatically when closed. |
 
 **Error codes:**
 
@@ -91,6 +93,8 @@ Obtain a Json file that describes local capabilities.
 
 **Required permissions:** ohos.permission.BACKUP
 
+<!--Device-backup-function getLocalCapabilities(callback: AsyncCallback<FileData>): void--><!--Device-backup-function getLocalCapabilities(callback: AsyncCallback<FileData>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -99,7 +103,7 @@ Obtain a Json file that describes local capabilities.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;FileData&gt; | Yes | A callback method, the argument FileData will holding all the local capabilities. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FileData> | Yes | A callback method, the argument FileData will holding all the local capabilities. |
 
 **Error codes:**
 
@@ -167,6 +171,8 @@ Obtain a json file that describes local capabilities.
 
 **Required permissions:** ohos.permission.BACKUP
 
+<!--Device-backup-function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<FileData>--><!--Device-backup-function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<FileData>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -175,13 +181,13 @@ Obtain a json file that describes local capabilities.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataList | Array&lt;IncrementalBackupTime&gt; | Yes |  |
+| dataList | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<IncrementalBackupTime> | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FileData&gt; | A FileData holding all the local capabilities. The returned file is a temporal file that will bedeleted automatically when closed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<FileData> | A FileData holding all the local capabilities. The returned file is a temporal file that will be deleted automatically when closed. |
 
 **Error codes:**
 

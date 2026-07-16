@@ -18,13 +18,15 @@ Subscribes to state change events.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-manager-function onStateChange(callback: Callback<NearlinkState>): void--><!--Device-manager-function onStateChange(callback: Callback<NearlinkState>): void-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;NearlinkState&gt; | Yes | Callback used to listen for the state change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<NearlinkState> | Yes | Callback used to listen for the state change event. |
 
 **Error codes:**
 

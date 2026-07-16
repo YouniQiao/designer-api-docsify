@@ -10,6 +10,8 @@ Callback function invoked when a message is received.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-conversation-type DataCallback = (networkId: string, msg: ArrayBuffer) => void--><!--Device-conversation-type DataCallback = (networkId: string, msg: ArrayBuffer) => void-End-->
+
 **System capability:** SystemCapability.Communication.SoftBus.Core
 
 **System API:** This is a system API.

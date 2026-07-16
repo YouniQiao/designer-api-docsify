@@ -1,9 +1,10 @@
 # Attribute
 
-枚举，类型为number。联系人属性列表。
-通过JSON格式创建数据。
+枚举，类型为number。联系人属性列表。通过JSON格式创建数据。
 
 **起始版本：** 7
+
+<!--Device-contact-enum Attribute--><!--Device-contact-enum Attribute-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -17,7 +18,9 @@ ATTR_CONTACT_EVENT = 0
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Attribute-ATTR_CONTACT_EVENT = 0--><!--Device-Attribute-ATTR_CONTACT_EVENT = 0-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -31,7 +34,9 @@ ATTR_EMAIL = 1
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Attribute-ATTR_EMAIL = 1--><!--Device-Attribute-ATTR_EMAIL = 1-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -45,7 +50,9 @@ ATTR_GROUP_MEMBERSHIP = 2
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Attribute-ATTR_GROUP_MEMBERSHIP = 2--><!--Device-Attribute-ATTR_GROUP_MEMBERSHIP = 2-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -59,7 +66,9 @@ ATTR_IM = 3
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Attribute-ATTR_IM = 3--><!--Device-Attribute-ATTR_IM = 3-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -73,7 +82,9 @@ ATTR_NAME = 4
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Attribute-ATTR_NAME = 4--><!--Device-Attribute-ATTR_NAME = 4-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -87,7 +98,9 @@ ATTR_NICKNAME = 5
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Attribute-ATTR_NICKNAME = 5--><!--Device-Attribute-ATTR_NICKNAME = 5-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -101,7 +114,9 @@ ATTR_NOTE = 6
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Attribute-ATTR_NOTE = 6--><!--Device-Attribute-ATTR_NOTE = 6-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -115,7 +130,9 @@ ATTR_ORGANIZATION = 7
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Attribute-ATTR_ORGANIZATION = 7--><!--Device-Attribute-ATTR_ORGANIZATION = 7-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -129,7 +146,9 @@ ATTR_PHONE = 8
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Attribute-ATTR_PHONE = 8--><!--Device-Attribute-ATTR_PHONE = 8-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -143,7 +162,9 @@ ATTR_PORTRAIT = 9
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Attribute-ATTR_PORTRAIT = 9--><!--Device-Attribute-ATTR_PORTRAIT = 9-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -157,7 +178,9 @@ ATTR_POSTAL_ADDRESS = 10
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Attribute-ATTR_POSTAL_ADDRESS = 10--><!--Device-Attribute-ATTR_POSTAL_ADDRESS = 10-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -171,7 +194,9 @@ ATTR_RELATION = 11
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Attribute-ATTR_RELATION = 11--><!--Device-Attribute-ATTR_RELATION = 11-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -185,7 +210,9 @@ ATTR_SIP_ADDRESS = 12
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Attribute-ATTR_SIP_ADDRESS = 12--><!--Device-Attribute-ATTR_SIP_ADDRESS = 12-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
@@ -199,7 +226,9 @@ ATTR_WEBSITE = 13
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Attribute-ATTR_WEBSITE = 13--><!--Device-Attribute-ATTR_WEBSITE = 13-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
 

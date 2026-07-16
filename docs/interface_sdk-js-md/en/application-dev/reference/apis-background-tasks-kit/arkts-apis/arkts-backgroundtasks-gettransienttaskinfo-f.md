@@ -12,10 +12,11 @@ import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 function getTransientTaskInfo(): Promise<TransientTaskInfo>
 ```
 
-Obtains all transient task information, including the remaining quota of the current day. This API uses a promise
-to return the result.
+Obtains all transient task information, including the remaining quota of the current day. This API uses a promise to return the result.
 
 **Since:** 20
+
+<!--Device-backgroundTaskManager-function getTransientTaskInfo(): Promise<TransientTaskInfo>--><!--Device-backgroundTaskManager-function getTransientTaskInfo(): Promise<TransientTaskInfo>-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
@@ -23,7 +24,7 @@ to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;TransientTaskInfo&gt; | Promise that returns all transient task information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<TransientTaskInfo> | Promise that returns all transient task information. |
 
 **Error codes:**
 

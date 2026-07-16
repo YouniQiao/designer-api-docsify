@@ -14,16 +14,16 @@ export function createModuleContext(context: Context, bundleName: string, module
 
 Creates the context for a module. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - Starting from API version 18, the context can obtain the
-> [process name](../../../../reference/apis-ability-kit/js-apis-inner-application-context.md#context) of the current
-> application. The **processName** property in the context created by **createModuleContext** is the same as the
-> **processName** property in the input parameter **Context**. The values of other properties are obtained based on
-> the input parameters **Context**, **bundleName**, and **moduleName**.
->
-> - Creating a module context involves resource querying and initialization, which can be time-consuming. In
-> scenarios where application fluidity is critical, avoid frequently or repeatedly calling the
+> **NOTE**  
+>  
+> - Starting from API version 18, the context can obtain the  
+> [process name](../../../../reference/apis-ability-kit/js-apis-inner-application-context.md#context) of the current  
+> application. The **processName** property in the context created by **createModuleContext** is the same as the  
+> **processName** property in the input parameter **Context**. The values of other properties are obtained based on  
+> the input parameters **Context**, **bundleName**, and **moduleName**.  
+>  
+> - Creating a module context involves resource querying and initialization, which can be time-consuming. In  
+> scenarios where application fluidity is critical, avoid frequently or repeatedly calling the  
 > **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
 
 **Since:** 12
@@ -31,6 +31,8 @@ Creates the context for a module. This API uses a promise to return the result.
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-application-export function createModuleContext(context: Context, bundleName: string, moduleName: string): Promise<Context>--><!--Device-application-export function createModuleContext(context: Context, bundleName: string, moduleName: string): Promise<Context>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -40,15 +42,15 @@ Creates the context for a module. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. |
-| bundleName | string | Yes | Bundle name of the application. If an empty string is passed in, the current applicationis used by default. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. |
+| bundleName | string | Yes | Bundle name of the application. If an empty string is passed in, the current application is used by default. |
 | moduleName | string | Yes | Module name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Context&gt; | Promise used to return the context created. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Context> | Promise used to return the context created. |
 
 **Error codes:**
 

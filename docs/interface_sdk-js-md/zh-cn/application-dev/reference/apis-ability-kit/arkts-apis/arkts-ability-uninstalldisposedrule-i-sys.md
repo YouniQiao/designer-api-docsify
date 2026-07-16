@@ -4,9 +4,17 @@
 
 **起始版本：** 15
 
+<!--Device-appControl-export interface UninstallDisposedRule--><!--Device-appControl-export interface UninstallDisposedRule-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { appControl } from '@kit.AbilityKit';
+```
 
 ## priority
 
@@ -19,6 +27,8 @@ priority: number
 **类型：** number
 
 **起始版本：** 15
+
+<!--Device-UninstallDisposedRule-priority: int--><!--Device-UninstallDisposedRule-priority: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -36,6 +46,8 @@ uninstallComponentType: UninstallComponentType
 
 **起始版本：** 15
 
+<!--Device-UninstallDisposedRule-uninstallComponentType: UninstallComponentType--><!--Device-UninstallDisposedRule-uninstallComponentType: UninstallComponentType-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +63,8 @@ want: Want
 **类型：** Want
 
 **起始版本：** 15
+
+<!--Device-UninstallDisposedRule-want: Want--><!--Device-UninstallDisposedRule-want: Want-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 

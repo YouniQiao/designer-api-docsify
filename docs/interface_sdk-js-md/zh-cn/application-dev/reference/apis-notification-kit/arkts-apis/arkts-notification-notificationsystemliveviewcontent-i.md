@@ -1,17 +1,16 @@
 # NotificationSystemLiveViewContent
 
-描述系统实况窗通知内容，用于在实况窗中展示实时状态信息。
-不支持三方应用直接创建该类型通知，可以由系统代理创建系统实况窗类型通知后，
-三方应用发布同ID的通知来更新指定内容。
-继承自[NotificationBasicContent](arkts-notification-notificationbasiccontent-i.md)。
+描述系统实况窗通知内容，用于在实况窗中展示实时状态信息。不支持三方应用直接创建该类型通知，可以由系统代理创建系统实况窗类型通知后，三方应用发布同ID的通知来更新指定内容。继承自[NotificationBasicContent](arkts-notification-notificationbasiccontent-i.md)。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 实际显示效果依赖于设备能力和通知中心UI样式。
 
 **继承/实现关系：** NotificationSystemLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationbasiccontent-i.md)
 
 **起始版本：** 11
+
+<!--Device-unnamed-export interface NotificationSystemLiveViewContent extends NotificationBasicContent--><!--Device-unnamed-export interface NotificationSystemLiveViewContent extends NotificationBasicContent-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -27,6 +26,8 @@ button?: NotificationButton
 
 **起始版本：** 11
 
+<!--Device-NotificationSystemLiveViewContent-button?: NotificationButton--><!--Device-NotificationSystemLiveViewContent-button?: NotificationButton-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## capsule
@@ -40,6 +41,8 @@ capsule?: NotificationCapsule
 **类型：** NotificationCapsule
 
 **起始版本：** 11
+
+<!--Device-NotificationSystemLiveViewContent-capsule?: NotificationCapsule--><!--Device-NotificationSystemLiveViewContent-capsule?: NotificationCapsule-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -55,6 +58,8 @@ progress?: NotificationProgress
 
 **起始版本：** 11
 
+<!--Device-NotificationSystemLiveViewContent-progress?: NotificationProgress--><!--Device-NotificationSystemLiveViewContent-progress?: NotificationProgress-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## time
@@ -69,6 +74,8 @@ time?: NotificationTime
 
 **起始版本：** 11
 
+<!--Device-NotificationSystemLiveViewContent-time?: NotificationTime--><!--Device-NotificationSystemLiveViewContent-time?: NotificationTime-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## typeCode
@@ -82,6 +89,8 @@ typeCode: number
 **类型：** number
 
 **起始版本：** 11
+
+<!--Device-NotificationSystemLiveViewContent-typeCode: int--><!--Device-NotificationSystemLiveViewContent-typeCode: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

@@ -1,5 +1,11 @@
 # getOverlayModuleInfoByBundleName（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { overlay } from '@kit.AbilityKit';
+```
+
 ## getOverlayModuleInfoByBundleName
 
 ```TypeScript
@@ -15,6 +21,10 @@ function getOverlayModuleInfoByBundleName(bundleName: string,
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-overlay-function getOverlayModuleInfoByBundleName(bundleName: string,
+      callback: AsyncCallback<Array<OverlayModuleInfo>>): void--><!--Device-overlay-function getOverlayModuleInfoByBundleName(bundleName: string,
+      callback: AsyncCallback<Array<OverlayModuleInfo>>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 
 **系统接口：** 此接口为系统接口。
@@ -24,7 +34,7 @@ function getOverlayModuleInfoByBundleName(bundleName: string,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 指定应用的bundle名称。 |
-| callback | AsyncCallback&lt;Array&lt;OverlayModuleInfo&gt;&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取指定应用中所有module的[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)信息成功时，err返回undefined。否则回调函数返回具体错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<OverlayModuleInfo>> | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取指定应用中所有module的[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)信息成功时，err返回undefined。否则回调函数返回具体错误对象。 |
 
 **错误码：**
 
@@ -76,6 +86,8 @@ function getOverlayModuleInfoByBundleName(bundleName: string, moduleName: string
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-overlay-function getOverlayModuleInfoByBundleName(bundleName: string, moduleName: string, callback: AsyncCallback<Array<OverlayModuleInfo>>): void--><!--Device-overlay-function getOverlayModuleInfoByBundleName(bundleName: string, moduleName: string, callback: AsyncCallback<Array<OverlayModuleInfo>>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 
 **系统接口：** 此接口为系统接口。
@@ -86,7 +98,7 @@ function getOverlayModuleInfoByBundleName(bundleName: string, moduleName: string
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 指定应用的bundle名称。 |
 | moduleName | string | 是 | 指定应用中的overlay module的名称。缺省该字段时，查询接口将查询指定应用中所有module的OverlayModuleInfo信息。 |
-| callback | AsyncCallback&lt;Array&lt;OverlayModuleInfo&gt;&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取指定应用中指定module的[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)信息成功时，err返回undefined。否则回调函数返回具体错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<OverlayModuleInfo>> | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取指定应用中指定module的[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)信息成功时，err返回undefined。否则回调函数返回具体错误对象。 |
 
 **错误码：**
 
@@ -141,6 +153,8 @@ function getOverlayModuleInfoByBundleName(bundleName: string, moduleName?: strin
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-overlay-function getOverlayModuleInfoByBundleName(bundleName: string, moduleName?: string): Promise<Array<OverlayModuleInfo>>--><!--Device-overlay-function getOverlayModuleInfoByBundleName(bundleName: string, moduleName?: string): Promise<Array<OverlayModuleInfo>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 
 **系统接口：** 此接口为系统接口。
@@ -156,7 +170,7 @@ function getOverlayModuleInfoByBundleName(bundleName: string, moduleName?: strin
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Promise对象，返回&lt;Array&lt;[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)&gt;&gt;。 |
+| Promise<Array<OverlayModuleInfo>> | Promise对象，返回&lt;Array&lt;[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)&gt;&gt;。 |
 
 **错误码：**
 

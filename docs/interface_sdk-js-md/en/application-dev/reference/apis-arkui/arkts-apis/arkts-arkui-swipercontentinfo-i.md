@@ -4,6 +4,8 @@ Provides content area information of the **Swiper** component.
 
 **Since:** 22
 
+<!--Device-unnamed-export interface SwiperContentInfo--><!--Device-unnamed-export interface SwiperContentInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ ID of the **Swiper** component.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-SwiperContentInfo-id: string--><!--Device-SwiperContentInfo-id: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## swiperItemInfos
@@ -46,6 +50,8 @@ Information about the currently visible child components within the **Swiper** c
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-SwiperContentInfo-swiperItemInfos: Array<SwiperItemInfo>--><!--Device-SwiperContentInfo-swiperItemInfos: Array<SwiperItemInfo>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## uniqueId
@@ -63,6 +69,8 @@ Unique ID of the **Swiper** component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-SwiperContentInfo-uniqueId: number--><!--Device-SwiperContentInfo-uniqueId: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

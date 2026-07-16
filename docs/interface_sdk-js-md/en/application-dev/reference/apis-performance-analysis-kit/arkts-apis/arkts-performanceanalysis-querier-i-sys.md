@@ -4,6 +4,8 @@ Defines an event query instance.
 
 **Since:** 9
 
+<!--Device-hiSysEvent-interface Querier--><!--Device-hiSysEvent-interface Querier-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Callback used to return the query result statistics: (reason: int, total: int) =
 
 **Since:** 9
 
+<!--Device-Querier-onComplete: (reason: int, total: int) => void--><!--Device-Querier-onComplete: (reason: int, total: int) => void-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
@@ -36,12 +40,13 @@ Callback used to return the query result statistics: (reason: int, total: int) =
 onQuery: (infos: SysEventInfo[]) => void
 ```
 
-Callback used to return the queried system events: (infos: [SysEventInfo](arkts-performanceanalysis-syseventinfo-i-sys.md)[]) =>
-void.
+Callback used to return the queried system events: (infos: [SysEventInfo](arkts-performanceanalysis-syseventinfo-i-sys.md)[]) =>void.
 
 **Type:** (infos: SysEventInfo[]) => void
 
 **Since:** 9
+
+<!--Device-Querier-onQuery: (infos: SysEventInfo[]) => void--><!--Device-Querier-onQuery: (infos: SysEventInfo[]) => void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 

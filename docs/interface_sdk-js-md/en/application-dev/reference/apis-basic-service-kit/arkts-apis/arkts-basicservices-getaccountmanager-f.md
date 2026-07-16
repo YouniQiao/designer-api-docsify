@@ -16,13 +16,15 @@ Obtains an **AccountManager** instance.
 
 **Since:** 7
 
+<!--Device-osAccount-function getAccountManager(): AccountManager--><!--Device-osAccount-function getAccountManager(): AccountManager-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AccountManager | **AccountManager** instance obtained. |
+| [AccountManager](arkts-basicservices-accountmanager-i.md) | **AccountManager** instance obtained. |
 
 **Example**
 

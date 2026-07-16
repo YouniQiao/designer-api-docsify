@@ -4,6 +4,8 @@ Enumerates USB port roles.
 
 **Since:** 9
 
+<!--Device-usbManager-interface USBPortStatus--><!--Device-usbManager-interface USBPortStatus-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Current data role.
 
 **Since:** 9
 
+<!--Device-USBPortStatus-currentDataRole: int--><!--Device-USBPortStatus-currentDataRole: int-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ Current USB mode.
 
 **Since:** 9
 
+<!--Device-USBPortStatus-currentMode: int--><!--Device-USBPortStatus-currentMode: int-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ Current power role.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-USBPortStatus-currentPowerRole: int--><!--Device-USBPortStatus-currentPowerRole: int-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 

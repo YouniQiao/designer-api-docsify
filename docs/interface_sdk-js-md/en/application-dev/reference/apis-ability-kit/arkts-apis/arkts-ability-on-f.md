@@ -26,6 +26,8 @@ Subscribes to device connection events. This API uses an asynchronous callback t
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-continuationManager-function on(type: 'deviceSelected', token: number, callback: Callback<Array<ContinuationResult>>): void--><!--Device-continuationManager-function on(type: 'deviceSelected', token: number, callback: Callback<Array<ContinuationResult>>): void-End-->
+
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 **Parameters:**
@@ -34,7 +36,7 @@ Subscribes to device connection events. This API uses an asynchronous callback t
 | --- | --- | --- | --- |
 | type | 'deviceSelected' | Yes | Event type. The value is fixed at **deviceSelected**. |
 | token | number | Yes | Token obtained after the registration of the continuation management service. |
-| callback | Callback&lt;Array&lt;ContinuationResult&gt;&gt; | Yes | Callback invoked when a device is selected from the devicelist provided by the device selection module. This callback returns the device ID, type, and name. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<ContinuationResult>> | Yes | Callback invoked when a device is selected from the device list provided by the device selection module. This callback returns the device ID, type, and name. |
 
 **Error codes:**
 
@@ -88,6 +90,8 @@ Subscribes to device disconnection events. This API uses an asynchronous callbac
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-continuationManager-function on(type: 'deviceUnselected', token: number, callback: Callback<Array<ContinuationResult>>): void--><!--Device-continuationManager-function on(type: 'deviceUnselected', token: number, callback: Callback<Array<ContinuationResult>>): void-End-->
+
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 **Parameters:**
@@ -96,7 +100,7 @@ Subscribes to device disconnection events. This API uses an asynchronous callbac
 | --- | --- | --- | --- |
 | type | 'deviceUnselected' | Yes | Event type. The value is fixed at **deviceUnselected**. |
 | token | number | Yes | Token obtained after the registration of the continuation management service. |
-| callback | Callback&lt;Array&lt;ContinuationResult&gt;&gt; | Yes | Callback invoked when a device is unselected from the devicelist provided by the device selection module. This callback returns the device ID, type, and name. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<ContinuationResult>> | Yes | Callback invoked when a device is unselected from the device list provided by the device selection module. This callback returns the device ID, type, and name. |
 
 **Error codes:**
 
@@ -147,6 +151,8 @@ Subscribes to device connection events. This API uses an asynchronous callback t
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-continuationManager-function on(type: 'deviceConnect', callback: Callback<ContinuationResult>): void--><!--Device-continuationManager-function on(type: 'deviceConnect', callback: Callback<ContinuationResult>): void-End-->
+
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 **Parameters:**
@@ -154,7 +160,7 @@ Subscribes to device connection events. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceConnect' | Yes | Event type. The value is fixed at **deviceConnect**. |
-| callback | Callback&lt;ContinuationResult&gt; | Yes | Callback invoked when a device is selected from the device listprovided by the device selection module. This callback returns the device ID, type, and name. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ContinuationResult> | Yes | Callback invoked when a device is selected from the device list provided by the device selection module. This callback returns the device ID, type, and name. |
 
 **Example**
 
@@ -186,6 +192,8 @@ Subscribes to device disconnection events. This API uses an asynchronous callbac
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-continuationManager-function on(type: 'deviceDisconnect', callback: Callback<string>): void--><!--Device-continuationManager-function on(type: 'deviceDisconnect', callback: Callback<string>): void-End-->
+
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 **Parameters:**
@@ -193,7 +201,7 @@ Subscribes to device disconnection events. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceDisconnect' | Yes | Event type. The value is fixed at **deviceDisconnect**. |
-| callback | Callback&lt;string&gt; | Yes | Callback invoked when a device is unselected from the device list provided by thedevice selection module. This callback returns the device ID. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<string> | Yes | Callback invoked when a device is unselected from the device list provided by the device selection module. This callback returns the device ID. |
 
 **Example**
 

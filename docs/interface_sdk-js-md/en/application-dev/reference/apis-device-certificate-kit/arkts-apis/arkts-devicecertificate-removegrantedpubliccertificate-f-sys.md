@@ -12,14 +12,15 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 function removeGrantedPublicCertificate(keyUri: string, clientAppUid: number) : Promise<void>
 ```
 
-Removes the permission for an application to use the public credentials of a user. This API is called only by the
-certificate management application. This API uses a promise to return the result.
+Removes the permission for an application to use the public credentials of a user. This API is called only by the certificate management application. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-certificateManager-function removeGrantedPublicCertificate(keyUri: string, clientAppUid: int) : Promise<void>--><!--Device-certificateManager-function removeGrantedPublicCertificate(keyUri: string, clientAppUid: int) : Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -36,7 +37,7 @@ certificate management application. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

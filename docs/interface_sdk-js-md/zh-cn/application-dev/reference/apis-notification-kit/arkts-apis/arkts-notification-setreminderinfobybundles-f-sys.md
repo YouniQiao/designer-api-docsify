@@ -18,6 +18,8 @@ function setReminderInfoByBundles(reminderInfos: Array<NotificationReminderInfo>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function setReminderInfoByBundles(reminderInfos: Array<NotificationReminderInfo>) : Promise<void>--><!--Device-notificationManager-function setReminderInfoByBundles(reminderInfos: Array<NotificationReminderInfo>) : Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,13 +28,13 @@ function setReminderInfoByBundles(reminderInfos: Array<NotificationReminderInfo>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| reminderInfos | Array&lt;NotificationReminderInfo&gt; | 是 | 设置应用通知提醒信息的列表。 |
+| reminderInfos | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<NotificationReminderInfo> | 是 | 设置应用通知提醒信息的列表。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

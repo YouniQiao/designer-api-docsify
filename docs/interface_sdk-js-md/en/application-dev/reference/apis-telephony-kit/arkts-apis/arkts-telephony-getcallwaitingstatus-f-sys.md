@@ -18,6 +18,8 @@ Get call waiting status.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-call-function getCallWaitingStatus(slotId: int, callback: AsyncCallback<CallWaitingStatus>): void--><!--Device-call-function getCallWaitingStatus(slotId: int, callback: AsyncCallback<CallWaitingStatus>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Get call waiting status.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;CallWaitingStatus&gt; | Yes | Indicates the callback for getting the call waiting status. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<CallWaitingStatus> | Yes | Indicates the callback for getting the call waiting status. |
 
 **Error codes:**
 
@@ -69,6 +71,8 @@ Get call waiting status.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-call-function getCallWaitingStatus(slotId: int): Promise<CallWaitingStatus>--><!--Device-call-function getCallWaitingStatus(slotId: int): Promise<CallWaitingStatus>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -83,7 +87,7 @@ Get call waiting status.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CallWaitingStatus&gt; | Returns the callback for getting the call waiting status. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CallWaitingStatus> | Returns the callback for getting the call waiting status. |
 
 **Error codes:**
 

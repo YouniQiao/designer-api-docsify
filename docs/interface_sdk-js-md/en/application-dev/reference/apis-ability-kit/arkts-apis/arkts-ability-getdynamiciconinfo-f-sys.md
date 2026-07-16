@@ -12,12 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getDynamicIconInfo(bundleName: string): Promise<Array<DynamicIconInfo>>
 ```
 
-Obtains the dynamic icon information of all users and all application clones based on the given bundle name. This
-API uses a promise to return the result.
+Obtains the dynamic icon information of all users and all application clones based on the given bundle name. This API uses a promise to return the result.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-bundleManager-function getDynamicIconInfo(bundleName: string): Promise<Array<DynamicIconInfo>>--><!--Device-bundleManager-function getDynamicIconInfo(bundleName: string): Promise<Array<DynamicIconInfo>>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -27,13 +28,13 @@ API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application for which the dynamic icon information is to bequeried. |
+| bundleName | string | Yes | Bundle name of the application for which the dynamic icon information is to be queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DynamicIconInfo&gt;&gt; | Promise used to return the dynamic icon information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<DynamicIconInfo>> | Promise used to return the dynamic icon information. |
 
 **Error codes:**
 

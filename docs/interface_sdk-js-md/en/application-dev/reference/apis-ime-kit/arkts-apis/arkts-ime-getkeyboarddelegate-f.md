@@ -14,10 +14,11 @@ function getKeyboardDelegate(): KeyboardDelegate
 
 Obtains a [KeyboardDelegate](arkts-ime-keyboarddelegate-i.md) instance for the input method.
 
-The input method can use the obtained instance to subscribe to a physical keyboard event, text selection change
-event, and more.
+The input method can use the obtained instance to subscribe to a physical keyboard event, text selection change event, and more.
 
 **Since:** 9
+
+<!--Device-inputMethodEngine-function getKeyboardDelegate(): KeyboardDelegate--><!--Device-inputMethodEngine-function getKeyboardDelegate(): KeyboardDelegate-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -25,7 +26,7 @@ event, and more.
 
 | Type | Description |
 | --- | --- |
-| KeyboardDelegate | **KeyboardDelegate** instance. |
+| [KeyboardDelegate](arkts-ime-keyboarddelegate-i.md) | **KeyboardDelegate** instance. |
 
 **Example**
 

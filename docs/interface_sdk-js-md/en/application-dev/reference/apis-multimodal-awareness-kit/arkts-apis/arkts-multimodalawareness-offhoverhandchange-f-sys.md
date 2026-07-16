@@ -18,6 +18,8 @@ Unsubscribe to hover hand event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-motion-function offHoverHandChange(callback?: Callback<HoverHandAction>): void--><!--Device-motion-function offHoverHandChange(callback?: Callback<HoverHandAction>): void-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Unsubscribe to hover hand event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;HoverHandAction&gt; | No | Callback used to return hover hand action. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<HoverHandAction> | No | Callback used to return hover hand action. |
 
 **Error codes:**
 

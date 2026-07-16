@@ -1,5 +1,11 @@
 # queryEntityInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { insightIntentDriver } from '@kit.AbilityKit';
+```
+
 ## queryEntityInfo
 
 ```TypeScript
@@ -14,6 +20,8 @@ function queryEntityInfo(param: QueryParam): Promise<Array<Record<string, Object
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-insightIntentDriver-function queryEntityInfo(param: QueryParam): Promise<Array<Record<string, Object>>>--><!--Device-insightIntentDriver-function queryEntityInfo(param: QueryParam): Promise<Array<Record<string, Object>>>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -22,13 +30,13 @@ function queryEntityInfo(param: QueryParam): Promise<Array<Record<string, Object
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | QueryParam | 是 | 查询参数。 |
+| param | [QueryParam](arkts-ability-queryparam-i-sys.md) | 是 | 查询参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Record&lt;string, Object&gt;&gt;&gt; | - Returns the insight intent entity information. |
+| Promise<Array<Record<string, Object>>> | - Returns the insight intent entity information. |
 
 **错误码：**
 

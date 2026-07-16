@@ -16,19 +16,21 @@ Obtains the SQL statement used to delete data. This API returns the result synch
 
 **Since:** 20
 
+<!--Device-relationalStore-function getDeleteSqlInfo(predicates: RdbPredicates):SqlInfo--><!--Device-relationalStore-function getDeleteSqlInfo(predicates: RdbPredicates):SqlInfo-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | **RdbPredicates** object that matches the specified field. |
+| predicates | [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | Yes | **RdbPredicates** object that matches the specified field. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SqlInfo | **SqlInfo** object. **sql** indicates the returned SQL statement, and **args** indicates theparameters in the executed SQL statement. |
+| [SqlInfo](arkts-arkdata-sqlinfo-i.md) | **SqlInfo** object. **sql** indicates the returned SQL statement, and **args** indicates the parameters in the executed SQL statement. |
 
 **Error codes:**
 

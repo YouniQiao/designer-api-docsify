@@ -18,13 +18,15 @@ Returns true if encoding is the name of a supported character encoding, or false
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-fastbuffer-function isEncoding(encoding: string): boolean--><!--Device-fastbuffer-function isEncoding(encoding: string): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encoding | string | Yes | The character encoding name to validate |
+| encoding | string | Yes | The character encoding name to validate * |
 
 **Return value:**
 

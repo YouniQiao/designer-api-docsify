@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class PointerMatrix--><!--Device-unnamed-declare class PointerMatrix-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
+
+## 导入模块
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
+```
 
 ## create
 
@@ -16,7 +24,9 @@ static create(fingers: number, steps: number): PointerMatrix
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PointerMatrix-static create(fingers: int, steps: int): PointerMatrix--><!--Device-PointerMatrix-static create(fingers: int, steps: int): PointerMatrix-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -31,7 +41,7 @@ static create(fingers: number, steps: number): PointerMatrix
 
 | 类型 | 说明 |
 | --- | --- |
-| PointerMatrix | - 返回构造的PointerMatrix对象。 |
+| [PointerMatrix](arkts-test-pointermatrix-c.md) | - 返回构造的PointerMatrix对象。 |
 
 **错误码：**
 
@@ -61,7 +71,9 @@ setPoint(finger: number, step: number, point: Point): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PointerMatrix-setPoint(finger: int, step: int, point: Point): void--><!--Device-PointerMatrix-setPoint(finger: int, step: int, point: Point): void-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -71,7 +83,7 @@ setPoint(finger: number, step: number, point: Point): void
 | --- | --- | --- | --- |
 | finger | number | 是 | 手指的序号，取值大于等于0的整数，且不超过构造PointerMatrix对象时设置的手指数。 |
 | step | number | 是 | 步骤的序号，取值大于等于0的整数，且不超过构造PointerMatrix对象时设置的操作的步骤数。 |
-| point | Point | 是 | 该行为的坐标点。建议相邻的坐标点距离在10px至80px范围内。 |
+| point | [Point](arkts-test-point-i.md) | 是 | 该行为的坐标点。建议相邻的坐标点距离在10px至80px范围内。 |
 
 **错误码：**
 

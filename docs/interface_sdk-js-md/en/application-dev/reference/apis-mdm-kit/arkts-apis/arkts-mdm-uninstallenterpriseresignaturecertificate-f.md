@@ -20,15 +20,17 @@ Uninstalls the enterprise re-signing certificate.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-securityManager-function uninstallEnterpriseReSignatureCertificate(admin: Want, certificateAlias: string, accountId: int): void--><!--Device-securityManager-function uninstallEnterpriseReSignatureCertificate(admin: Want, certificateAlias: string, accountId: int): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | certificateAlias | string | Yes | Certificate alias, which must end with **.cer**. |
-| accountId | number | Yes | Account ID, which must be greater than or equal to 0. You can call[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2) of**@ohos.account.osAccount** to obtain the account ID. |
+| accountId | number | Yes | Account ID, which must be greater than or equal to 0. You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2) of **@ohos.account.osAccount** to obtain the account ID. |
 
 **Error codes:**
 

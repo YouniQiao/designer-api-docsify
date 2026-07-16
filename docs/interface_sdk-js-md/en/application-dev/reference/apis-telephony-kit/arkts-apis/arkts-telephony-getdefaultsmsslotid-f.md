@@ -16,13 +16,15 @@ Obtains the default SIM card for sending SMS messages.
 
 **Since:** 7
 
+<!--Device-sms-function getDefaultSmsSlotId(callback: AsyncCallback<int>): void--><!--Device-sms-function getDefaultSmsSlotId(callback: AsyncCallback<int>): void-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Indicates the callback for getting the default SIM card for sending SMSmessages.Returns {@code 0} if the default SIM card for sending SMS messages is in card slot 1;Returns {@code 1} if the default SIM card for sending SMS messages is in card slot 2. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Indicates the callback for getting the default SIM card for sending SMS messages.Returns {@code 0} if the default SIM card for sending SMS messages is in card slot 1;Returns {@code 1} if the default SIM card for sending SMS messages is in card slot 2. |
 
 **Example**
 
@@ -47,13 +49,15 @@ Obtains the default SIM card for sending SMS messages.
 
 **Since:** 7
 
+<!--Device-sms-function getDefaultSmsSlotId(): Promise<int>--><!--Device-sms-function getDefaultSmsSlotId(): Promise<int>-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns {@code 0} if the default SIM card for sending SMS messages is in card slot 1;Returns {@code 1} if the default SIM card for sending SMS messages is in card slot 2. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Returns {@code 0} if the default SIM card for sending SMS messages is in card slot 1;Returns {@code 1} if the default SIM card for sending SMS messages is in card slot 2. |
 
 **Example**
 

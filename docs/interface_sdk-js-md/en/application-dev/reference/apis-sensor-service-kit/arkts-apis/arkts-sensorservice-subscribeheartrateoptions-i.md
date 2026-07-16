@@ -10,6 +10,8 @@ Defines the type of data to return for a subscription to data changes of the hea
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
+<!--Device-unnamed-export interface SubscribeHeartRateOptions--><!--Device-unnamed-export interface SubscribeHeartRateOptions-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## Modules to Import
@@ -38,6 +40,8 @@ Callback invoked when an API call fails.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-SubscribeHeartRateOptions-fail?: (data: string, code: number) => void--><!--Device-SubscribeHeartRateOptions-fail?: (data: string, code: number) => void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
 ## success
@@ -59,6 +63,8 @@ Callback invoked when the heart rate sensor data changes. This callback is invok
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeHeartRateOptions-success: (data: HeartRateResponse) => void--><!--Device-SubscribeHeartRateOptions-success: (data: HeartRateResponse) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 

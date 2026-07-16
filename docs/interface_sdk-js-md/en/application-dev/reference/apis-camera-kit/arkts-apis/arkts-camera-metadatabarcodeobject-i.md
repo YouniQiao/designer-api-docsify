@@ -1,15 +1,14 @@
 # MetadataBarcodeObject (System API)
 
-Implements the barcode metadata object used for camera detection. It inherits from
-[MetadataObject](arkts-camera-metadataobjecttype-e.md) and is the data source of the camera information in
-[CameraInput](arkts-camera-camerainput-i.md). It is obtained by calling metadataOutput.
-[on('metadataObjectsAvailable')](arkts-camera-metadataoutput-i.md#on-1).
+Implements the barcode metadata object used for camera detection. It inherits from [MetadataObject](arkts-camera-metadataobjecttype-e.md) and is the data source of the camera information in [CameraInput](arkts-camera-camerainput-i.md). It is obtained by calling metadataOutput.[on('metadataObjectsAvailable')](arkts-camera-metadataoutput-i.md#on-1).
 
 **Inheritance/Implementation:** MetadataBarcodeObject extends [MetadataObject](arkts-camera-metadataobject-i.md)
 
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-camera-interface MetadataBarcodeObject extends MetadataObject--><!--Device-camera-interface MetadataBarcodeObject extends MetadataObject-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

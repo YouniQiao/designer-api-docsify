@@ -16,19 +16,21 @@ Check persistent permissions for the URI.
 
 **Since:** 17
 
+<!--Device-fileShare-function checkPersistentPermission(policies: Array<PolicyInfo>): Promise<Array<boolean>>--><!--Device-fileShare-function checkPersistentPermission(policies: Array<PolicyInfo>): Promise<Array<boolean>>-End-->
+
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policies | Array&lt;PolicyInfo&gt; | Yes | Policy information to grant permission on URIs. |
+| policies | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PolicyInfo> | Yes | Policy information to grant permission on URIs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;boolean&gt;&gt; | Returns the persistent state of uri permissions. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<boolean>> | Returns the persistent state of uri permissions. |
 
 **Error codes:**
 

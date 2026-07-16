@@ -4,6 +4,8 @@ Provides MSTensor definition
 
 **Since:** 10
 
+<!--Device-mindSporeLite-interface MSTensor--><!--Device-mindSporeLite-interface MSTensor-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Get MSTensor data
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MSTensor-getData(): ArrayBuffer--><!--Device-MSTensor-getData(): ArrayBuffer-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | the data of tensor |
+| [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | the data of tensor |
 
 **Example**
 
@@ -94,19 +98,21 @@ Set MSTensor data
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MSTensor-setData(inputArray: ArrayBuffer): void--><!--Device-MSTensor-setData(inputArray: ArrayBuffer): void-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputArray | ArrayBuffer | Yes | indicates the buffer of tensor |
+| inputArray | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | indicates the buffer of tensor |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1000013 | Failed to set MSTensor data. Possible causes: 1. The input array buffer sizeis incorrect.**ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| 1000013 | Failed to set MSTensor data. Possible causes: 1. The input array buffer size is incorrect.**ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 **Example**
 
@@ -158,6 +164,8 @@ The data size of the tensor, the unit is byte.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MSTensor-dataSize: int--><!--Device-MSTensor-dataSize: int-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 ## dtype
@@ -173,6 +181,8 @@ The data type of the tensor.
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MSTensor-dtype: DataType--><!--Device-MSTensor-dtype: DataType-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -190,6 +200,8 @@ The number of elements in the tensor.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MSTensor-elementNum: int--><!--Device-MSTensor-elementNum: int-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 ## format
@@ -205,6 +217,8 @@ The format of the tensor.
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MSTensor-format: Format--><!--Device-MSTensor-format: Format-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -222,6 +236,8 @@ The name of the tensor.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MSTensor-name: string--><!--Device-MSTensor-name: string-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 ## shape
@@ -237,6 +253,8 @@ The shape of the tensor.
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MSTensor-shape: int[]--><!--Device-MSTensor-shape: int[]-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 

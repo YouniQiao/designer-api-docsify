@@ -4,6 +4,8 @@ Defines the accessible resource type, related to {@link onPermissionRequest} met
 
 **Since:** 9
 
+<!--Device-unnamed-declare enum ProtectedResourceType--><!--Device-unnamed-declare enum ProtectedResourceType-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## MidiSysex
@@ -20,6 +22,8 @@ Currently, only permission events can be reported. MIDI devices are not yet supp
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ProtectedResourceType-MidiSysex = "TYPE_MIDI_SYSEX"--><!--Device-ProtectedResourceType-MidiSysex = "TYPE_MIDI_SYSEX"-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## VIDEO_CAPTURE
@@ -33,6 +37,8 @@ Video capture resource, such as a camera.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ProtectedResourceType-VIDEO_CAPTURE = "TYPE_VIDEO_CAPTURE"--><!--Device-ProtectedResourceType-VIDEO_CAPTURE = "TYPE_VIDEO_CAPTURE"-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -48,6 +54,8 @@ Audio capture resource, such as a microphone.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ProtectedResourceType-AUDIO_CAPTURE = "TYPE_AUDIO_CAPTURE"--><!--Device-ProtectedResourceType-AUDIO_CAPTURE = "TYPE_AUDIO_CAPTURE"-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## SENSOR
@@ -61,6 +69,8 @@ Sensor resource, such as an acceleration sensor.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ProtectedResourceType-SENSOR = 'TYPE_SENSOR'--><!--Device-ProtectedResourceType-SENSOR = 'TYPE_SENSOR'-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

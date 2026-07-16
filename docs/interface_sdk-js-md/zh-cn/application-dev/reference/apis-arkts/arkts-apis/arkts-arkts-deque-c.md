@@ -1,11 +1,18 @@
 # Deque
 
-Deque（double ended queue）是基于队列数据结构实现的序列容器，具备先进先出和先进后出的特点。
-支持在两端进行元素的插入和删除。
+Deque（double ended queue）是基于队列数据结构实现的序列容器，具备先进先出和先进后出的特点。支持在两端进行元素的插入和删除。
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare class Deque<T>--><!--Device-unnamed-declare class Deque<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { Deque } from '@kit.ArkTS';
+```
 
 ## [Symbol.iterator]
 
@@ -17,7 +24,9 @@ Deque（double ended queue）是基于队列数据结构实现的序列容器，
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-[Symbol.iterator](): IterableIterator<T>--><!--Device-Deque-[Symbol.iterator](): IterableIterator<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,7 +34,7 @@ Deque（double ended queue）是基于队列数据结构实现的序列容器，
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
+| IterableIterator<T> | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
 
 **错误码：**
 
@@ -81,7 +90,9 @@ Deque的构造函数。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-constructor()--><!--Device-Deque-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -108,7 +119,9 @@ forEach(callbackFn: (value: T, index?: number, deque?: Deque<T>) => void, thisAr
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-forEach(callbackFn: (value: T, index?: number, deque?: Deque<T>) => void, thisArg?: Object): void--><!--Device-Deque-forEach(callbackFn: (value: T, index?: number, deque?: Deque<T>) => void, thisArg?: Object): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -116,7 +129,7 @@ forEach(callbackFn: (value: T, index?: number, deque?: Deque<T>) => void, thisAr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, deque?: Deque&lt;T&gt;) =&gt; void | 是 | 回调函数。 |
+| callbackFn | (value: T, index?: number, deque?: Deque<T>) => void | 是 | 回调函数。 |
 | thisArg | Object | 否 | callbackFn被调用时用作this值，默认值为当前实例对象。 |
 
 **错误码：**
@@ -155,7 +168,9 @@ getFirst(): T
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-getFirst(): T--><!--Device-Deque-getFirst(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -195,7 +210,9 @@ getLast(): T
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-getLast(): T--><!--Device-Deque-getLast(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -235,7 +252,9 @@ has(element: T): boolean
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-has(element: T): boolean--><!--Device-Deque-has(element: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -277,7 +296,9 @@ insertEnd(element: T): void
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-insertEnd(element: T): void--><!--Device-Deque-insertEnd(element: T): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -323,7 +344,9 @@ insertFront(element: T): void
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-insertFront(element: T): void--><!--Device-Deque-insertFront(element: T): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -369,7 +392,9 @@ popFirst(): T
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-popFirst(): T--><!--Device-Deque-popFirst(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -410,7 +435,9 @@ popLast(): T
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-popLast(): T--><!--Device-Deque-popLast(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -453,7 +480,9 @@ Deque的元素个数。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-length: number--><!--Device-Deque-length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

@@ -20,6 +20,8 @@ Creates a **PasteDataRecord** object of the URI type.
 
 **Substitutes:** createRecord(mimeType:
 
+<!--Device-pasteboard-function createUriRecord(uri: string): PasteDataRecord--><!--Device-pasteboard-function createUriRecord(uri: string): PasteDataRecord-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
@@ -32,7 +34,7 @@ Creates a **PasteDataRecord** object of the URI type.
 
 | Type | Description |
 | --- | --- |
-| PasteDataRecord | New **PasteDataRecord** object of the URI type. |
+| [PasteDataRecord](arkts-basicservices-pastedatarecord-i.md) | New **PasteDataRecord** object of the URI type. |
 
 **Example**
 

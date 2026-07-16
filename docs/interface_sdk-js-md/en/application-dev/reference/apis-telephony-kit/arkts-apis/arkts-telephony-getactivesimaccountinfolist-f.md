@@ -18,13 +18,15 @@ Get the list of active SIM card account information.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getActiveSimAccountInfoList(callback: AsyncCallback<Array<IccAccountInfo>>): void--><!--Device-sim-function getActiveSimAccountInfoList(callback: AsyncCallback<Array<IccAccountInfo>>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;IccAccountInfo&gt;&gt; | Yes | The callback is used toreturn the array of {@link IccAccountInfo}. The ICCID and phone number will be nullif has no ohos.permission.GET_TELEPHONY_STATE. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<IccAccountInfo>> | Yes | The callback is used to return the array of {@link IccAccountInfo}. The ICCID and phone number will be null if has no ohos.permission.GET_TELEPHONY_STATE. |
 
 **Error codes:**
 
@@ -62,13 +64,15 @@ Get the list of active SIM card account information.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getActiveSimAccountInfoList(): Promise<Array<IccAccountInfo>>--><!--Device-sim-function getActiveSimAccountInfoList(): Promise<Array<IccAccountInfo>>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;IccAccountInfo&gt;&gt; | Returns the array of {@link IccAccountInfo}. The ICCIDand phone number will be null if has no ohos.permission.GET_TELEPHONY_STATE. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<IccAccountInfo>> | Returns the array of {@link IccAccountInfo}. The ICCID and phone number will be null if has no ohos.permission.GET_TELEPHONY_STATE. |
 
 **Error codes:**
 

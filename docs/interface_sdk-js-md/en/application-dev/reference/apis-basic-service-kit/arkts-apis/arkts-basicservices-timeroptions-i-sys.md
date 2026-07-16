@@ -4,6 +4,8 @@ Defines the initialization options for the system timer.
 
 **Since:** 7
 
+<!--Device-systemTimer-interface TimerOptions--><!--Device-systemTimer-interface TimerOptions-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **System API:** This is a system API.
@@ -22,17 +24,17 @@ autoRestore?: boolean
 
 Whether the timer is restored after the device is restarted.
 
-The value **true** means that the timer is restored after the restart, and the value **false** means the
-opposite.
+The value **true** means that the timer is restored after the restart, and the value **false** means the opposite.
 
-This parameter can be set to **true** only for timers that are not of the **TIMER_TYPE_REALTIME** type and have
-**wantAgent** configured.
+This parameter can be set to **true** only for timers that are not of the **TIMER_TYPE_REALTIME** type and have **wantAgent** configured.
 
 The default value is **false**.
 
 **Type:** boolean
 
 **Since:** 15
+
+<!--Device-TimerOptions-autoRestore?: boolean--><!--Device-TimerOptions-autoRestore?: boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -52,6 +54,8 @@ The default value is empty.
 
 **Since:** 7
 
+<!--Device-TimerOptions-callback?: () => void--><!--Device-TimerOptions-callback?: () => void-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **System API:** This is a system API.
@@ -64,8 +68,7 @@ interval?: number
 
 Interval between two consecutive timers, in milliseconds.
 
-For a repeating timer, the minimum value of **interval** is 1s and the maximum value is 365 days. It is
-recommended that the value be greater than or equal to 5000 ms.
+For a repeating timer, the minimum value of **interval** is 1s and the maximum value is 365 days. It is recommended that the value be greater than or equal to 5000 ms.
 
 For a one-shot timer, the value is **0**.
 
@@ -74,6 +77,8 @@ Default value: **0**.
 **Type:** number
 
 **Since:** 7
+
+<!--Device-TimerOptions-interval?: long--><!--Device-TimerOptions-interval?: long-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -87,14 +92,15 @@ name?: string
 
 Timer name, with a maximum length of 64 bytes.
 
-A UID cannot contain two timers with the same name. If a timer with the same name as an existing timer is created
-, the existing timer is destroyed.
+A UID cannot contain two timers with the same name. If a timer with the same name as an existing timer is created, the existing timer is destroyed.
 
 The default value is an empty string.
 
 **Type:** string
 
 **Since:** 15
+
+<!--Device-TimerOptions-name?: string--><!--Device-TimerOptions-name?: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -106,12 +112,13 @@ The default value is an empty string.
 repeat: boolean
 ```
 
-Whether the timer is a repeating timer. The value **true** means that the timer is a repeating timer, and
-**false** means that the timer is a one-shot timer.
+Whether the timer is a repeating timer. The value **true** means that the timer is a repeating timer, and **false** means that the timer is a one-shot timer.
 
 **Type:** boolean
 
 **Since:** 7
+
+<!--Device-TimerOptions-repeat: boolean--><!--Device-TimerOptions-repeat: boolean-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -129,6 +136,8 @@ Timer types. Use pipe (|) symbol
 
 **Since:** 7
 
+<!--Device-TimerOptions-type: int--><!--Device-TimerOptions-type: int-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **System API:** This is a system API.
@@ -139,14 +148,15 @@ Timer types. Use pipe (|) symbol
 wantAgent?: WantAgent
 ```
 
-**WantAgent** object of the notification to be sent when the timer expires. (An application **MainAbility** can
-be started, but not a **ServiceAbility**.)
+**WantAgent** object of the notification to be sent when the timer expires. (An application **MainAbility** can be started, but not a **ServiceAbility**.)
 
 The default value is empty.
 
 **Type:** WantAgent
 
 **Since:** 7
+
+<!--Device-TimerOptions-wantAgent?: WantAgent--><!--Device-TimerOptions-wantAgent?: WantAgent-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
 

@@ -20,6 +20,8 @@ Obtains the default pixel map of a wallpaper of the specified type. Returns the 
 
 **Required permissions:** ohos.permission.GET_WALLPAPER
 
+<!--Device-wallpaper-function getPixelMap(wallpaperType: WallpaperType, callback: AsyncCallback<image.PixelMap>): void--><!--Device-wallpaper-function getPixelMap(wallpaperType: WallpaperType, callback: AsyncCallback<image.PixelMap>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **System API:** This is a system API.
@@ -28,8 +30,8 @@ Obtains the default pixel map of a wallpaper of the specified type. Returns the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | WallpaperType | Yes | indicates the wallpaper type. |
-| callback | AsyncCallback&lt;image.PixelMap&gt; | Yes | the callback of getPixelMap. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<image.PixelMap> | Yes | the callback of getPixelMap. |
 
 **Example**
 
@@ -62,6 +64,8 @@ Obtains the default pixel map of a wallpaper of the specified type. Returns the 
 
 **Required permissions:** ohos.permission.GET_WALLPAPER
 
+<!--Device-wallpaper-function getPixelMap(wallpaperType: WallpaperType): Promise<image.PixelMap>--><!--Device-wallpaper-function getPixelMap(wallpaperType: WallpaperType): Promise<image.PixelMap>-End-->
+
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **System API:** This is a system API.
@@ -70,13 +74,13 @@ Obtains the default pixel map of a wallpaper of the specified type. Returns the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | WallpaperType | Yes | indicates the wallpaper type. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<image.PixelMap> | the promise returned by the function. |
 
 **Example**
 

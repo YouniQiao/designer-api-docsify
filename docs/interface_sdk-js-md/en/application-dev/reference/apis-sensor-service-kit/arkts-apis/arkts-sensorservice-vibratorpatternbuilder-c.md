@@ -4,6 +4,8 @@ Provide methods for adding long or short vibration events and generate VibratorP
 
 **Since:** 18
 
+<!--Device-vibrator-class VibratorPatternBuilder--><!--Device-vibrator-class VibratorPatternBuilder-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## Modules to Import
@@ -22,6 +24,8 @@ Adds a long vibration event as a **VibratorPattern** object.
 
 **Since:** 18
 
+<!--Device-VibratorPatternBuilder-addContinuousEvent(time: int, duration: int, options?: ContinuousParam): VibratorPatternBuilder--><!--Device-VibratorPatternBuilder-addContinuousEvent(time: int, duration: int, options?: ContinuousParam): VibratorPatternBuilder-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Parameters:**
@@ -30,13 +34,13 @@ Adds a long vibration event as a **VibratorPattern** object.
 | --- | --- | --- | --- |
 | time | number | Yes | Start time of the long vibration event, in ms. The value range is [0, 1800000]. |
 | duration | number | Yes | Duration of the long vibration event, in ms. The value range is (0,5000]. |
-| options | ContinuousParam | No | Optional parameters. |
+| options | [ContinuousParam](arkts-sensorservice-continuousparam-i.md) | No | Optional parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| VibratorPatternBuilder | **VibratorPatternBuilder** object representing a long vibration event. |
+| [VibratorPatternBuilder](arkts-sensorservice-vibratorpatternbuilder-c.md) | **VibratorPatternBuilder** object representing a long vibration event. |
 
 **Error codes:**
 
@@ -91,6 +95,8 @@ Adds a short vibration event as a **VibratorPattern** object.
 
 **Since:** 18
 
+<!--Device-VibratorPatternBuilder-addTransientEvent(time: int, options?: TransientParam): VibratorPatternBuilder--><!--Device-VibratorPatternBuilder-addTransientEvent(time: int, options?: TransientParam): VibratorPatternBuilder-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Parameters:**
@@ -98,13 +104,13 @@ Adds a short vibration event as a **VibratorPattern** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | time | number | Yes | Start time of the short vibration event, in ms. The value range is [0, 1800000]. |
-| options | TransientParam | No | Optional parameters. |
+| options | [TransientParam](arkts-sensorservice-transientparam-i.md) | No | Optional parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| VibratorPatternBuilder | **VibratorPatternBuilder** object representing a short vibration event. |
+| [VibratorPatternBuilder](arkts-sensorservice-vibratorpatternbuilder-c.md) | **VibratorPatternBuilder** object representing a short vibration event. |
 
 **Error codes:**
 
@@ -141,10 +147,11 @@ try {
 build(): VibratorPattern
 ```
 
-Constructor used to create a **VibratorPattern** object, which determines the vibration sequence of short or long
-events.
+Constructor used to create a **VibratorPattern** object, which determines the vibration sequence of short or long events.
 
 **Since:** 18
+
+<!--Device-VibratorPatternBuilder-build(): VibratorPattern--><!--Device-VibratorPatternBuilder-build(): VibratorPattern-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -152,7 +159,7 @@ events.
 
 | Type | Description |
 | --- | --- |
-| VibratorPattern | **VibratorPattern** object. |
+| [VibratorPattern](arkts-sensorservice-vibratorpattern-i.md) | **VibratorPattern** object. |
 
 **Example**
 

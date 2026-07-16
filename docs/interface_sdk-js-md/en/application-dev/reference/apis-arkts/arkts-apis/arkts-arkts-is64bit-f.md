@@ -18,13 +18,15 @@ Checks whether this process is running in a 64-bit environment.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-process-function is64Bit(): boolean--><!--Device-process-function is64Bit(): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the process is running in a 64-bitenvironment; otherwise, **false** is returned. |
+| boolean | Check result. The value **true** is returned if the process is running in a 64-bit environment; otherwise, **false** is returned. |
 
 **Example**
 

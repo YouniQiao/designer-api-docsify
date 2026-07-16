@@ -16,19 +16,21 @@ Checks whether a **HiTraceId** instance is valid. This API returns the result sy
 
 **Since:** 8
 
+<!--Device-hiTraceChain-function isValid(id: HiTraceId): boolean--><!--Device-hiTraceChain-function isValid(id: HiTraceId): boolean-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | HiTraceId | Yes | **HiTraceId** instance. |
+| id | [HiTraceId](arkts-performanceanalysis-hitraceid-i.md) | Yes | **HiTraceId** instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The value **true** indicates that **HiTraceId** is valid, and **false** indicates theopposite. |
+| boolean | The value **true** indicates that **HiTraceId** is valid, and **false** indicates the opposite. |
 
 **Example**
 

@@ -4,6 +4,8 @@ Declare dialog action.
 
 **Since:** 12
 
+<!--Device-unnamed-export declare class InterstitialDialogAction--><!--Device-unnamed-export declare class InterstitialDialogAction-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Execute a dialog close event.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-InterstitialDialogAction-closeDialog(): void--><!--Device-InterstitialDialogAction-closeDialog(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -38,13 +42,15 @@ The constructor transfers parameter settings.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-InterstitialDialogAction-constructor(dialogOptions: DialogOptions)--><!--Device-InterstitialDialogAction-constructor(dialogOptions: DialogOptions)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dialogOptions | DialogOptions | Yes | Creates a new dialog action object. |
+| dialogOptions | [DialogOptions](arkts-arkui-dialogoptions-i.md) | Yes | Creates a new dialog action object. |
 
 ## openDialog
 
@@ -57,6 +63,8 @@ Execute a dialog open event.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-InterstitialDialogAction-openDialog(): void--><!--Device-InterstitialDialogAction-openDialog(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

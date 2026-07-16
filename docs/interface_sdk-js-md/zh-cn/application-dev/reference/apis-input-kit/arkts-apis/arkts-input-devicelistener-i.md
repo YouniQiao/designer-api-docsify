@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-inputDevice-interface DeviceListener--><!--Device-inputDevice-interface DeviceListener-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
+
+## 导入模块
+
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+```
 
 ## deviceId
 
@@ -17,6 +25,8 @@ deviceId: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-DeviceListener-deviceId: int--><!--Device-DeviceListener-deviceId: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -31,6 +41,8 @@ type: ChangedType
 **类型：** ChangedType
 
 **起始版本：** 9
+
+<!--Device-DeviceListener-type: ChangedType--><!--Device-DeviceListener-type: ChangedType-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 

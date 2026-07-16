@@ -1,16 +1,14 @@
 # MessageParcel
 
-Provides APIs for reading and writing data in specific format. During RPC, the sender can use the **write()**
-method provided by **MessageParcel** to write data in specific format to a **MessageParcel** object. The
-receiver can use the **read()** method provided by **MessageParcel** to read data in specific format from a
-**MessageParcel** object. The data formats include basic data types and arrays, IPC objects, interface tokens,
-and custom sequenceable objects.
+Provides APIs for reading and writing data in specific format. During RPC, the sender can use the **write()** method provided by **MessageParcel** to write data in specific format to a **MessageParcel** object. The receiver can use the **read()** method provided by **MessageParcel** to read data in specific format from a **MessageParcel** object. The data formats include basic data types and arrays, IPC objects, interface tokens,and custom sequenceable objects.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
 **Substitutes:** [MessageSequence](arkts-ipc-messagesequence-c.md)
+
+<!--Device-rpc-class MessageParcel--><!--Device-rpc-class MessageParcel-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -33,6 +31,8 @@ Closes a file descriptor. This API is a static method.
 **Deprecated since:** 9
 
 **Substitutes:** closeFileDescriptor(fd:
+
+<!--Device-MessageParcel-static closeFileDescriptor(fd: number): void--><!--Device-MessageParcel-static closeFileDescriptor(fd: number): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -73,13 +73,15 @@ Checks whether this **MessageParcel** object contains file descriptors.
 
 **Substitutes:** [containFileDescriptors()](arkts-ipc-messagesequence-c.md#containfiledescriptors-1)
 
+<!--Device-MessageParcel-containFileDescriptors(): boolean--><!--Device-MessageParcel-containFileDescriptors(): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the **MessageParcel** object contains file descriptors; returns**false** otherwise. |
+| boolean | Returns **true** if the **MessageParcel** object contains file descriptors; returns **false** otherwise. |
 
 **Example**
 
@@ -116,13 +118,15 @@ Creates a **MessageParcel** object. This method is a static method.
 
 **Substitutes:** create()
 
+<!--Device-MessageParcel-static create(): MessageParcel--><!--Device-MessageParcel-static create(): MessageParcel-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MessageParcel | **MessageParcel** object created. |
+| [MessageParcel](arkts-ipc-messageparcel-c.md) | **MessageParcel** object created. |
 
 **Example**
 
@@ -155,6 +159,8 @@ Duplicates a file descriptor. This API is a static method.
 **Deprecated since:** 9
 
 **Substitutes:** dupFileDescriptor(fd:
+
+<!--Device-MessageParcel-static dupFileDescriptor(fd: number): number--><!--Device-MessageParcel-static dupFileDescriptor(fd: number): number-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -201,6 +207,8 @@ Obtains the capacity of this **MessageParcel** object.
 
 **Substitutes:** [getCapacity()](arkts-ipc-messagesequence-c.md#getcapacity-1)
 
+<!--Device-MessageParcel-getCapacity(): number--><!--Device-MessageParcel-getCapacity(): number-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -238,6 +246,8 @@ Obtains the maximum amount of raw data that can be held by this **MessageParcel*
 **Deprecated since:** 9
 
 **Substitutes:** [getRawDataCapacity()](arkts-ipc-messagesequence-c.md#getrawdatacapacity-1)
+
+<!--Device-MessageParcel-getRawDataCapacity(): number--><!--Device-MessageParcel-getRawDataCapacity(): number-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -277,6 +287,8 @@ Obtains the read position of this **MessageParcel** object.
 
 **Substitutes:** [getReadPosition()](arkts-ipc-messagesequence-c.md#getreadposition-1)
 
+<!--Device-MessageParcel-getReadPosition(): number--><!--Device-MessageParcel-getReadPosition(): number-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -314,6 +326,8 @@ Obtains the readable capacity of this **MessageParcel** object.
 **Deprecated since:** 9
 
 **Substitutes:** [getReadableBytes()](arkts-ipc-messagesequence-c.md#getreadablebytes-1)
+
+<!--Device-MessageParcel-getReadableBytes(): number--><!--Device-MessageParcel-getReadableBytes(): number-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -354,6 +368,8 @@ Obtains the data size of this **MessageParcel** object.
 
 **Substitutes:** [getSize()](arkts-ipc-messagesequence-c.md#getsize-1)
 
+<!--Device-MessageParcel-getSize(): number--><!--Device-MessageParcel-getSize(): number-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -392,6 +408,8 @@ Obtains the writable capacity of this **MessageParcel** object.
 **Deprecated since:** 9
 
 **Substitutes:** [getWritableBytes()](arkts-ipc-messagesequence-c.md#getwritablebytes-1)
+
+<!--Device-MessageParcel-getWritableBytes(): number--><!--Device-MessageParcel-getWritableBytes(): number-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -432,6 +450,8 @@ Obtains the write position of this **MessageParcel** object.
 
 **Substitutes:** [getWritePosition()](arkts-ipc-messagesequence-c.md#getwriteposition-1)
 
+<!--Device-MessageParcel-getWritePosition(): number--><!--Device-MessageParcel-getWritePosition(): number-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -471,13 +491,15 @@ Reads the anonymous shared object from this **MessageParcel** object.
 
 **Substitutes:** [readAshmem()](arkts-ipc-messagesequence-c.md#readashmem-1)
 
+<!--Device-MessageParcel-readAshmem(): Ashmem--><!--Device-MessageParcel-readAshmem(): Ashmem-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Ashmem | Anonymous share object obtained. |
+| [Ashmem](arkts-ipc-ashmem-c.md) | Anonymous share object obtained. |
 
 **Example**
 
@@ -511,6 +533,8 @@ Reads the Boolean value from this **MessageParcel** object.
 **Deprecated since:** 9
 
 **Substitutes:** [readBoolean()](arkts-ipc-messagesequence-c.md#readboolean-1)
+
+<!--Device-MessageParcel-readBoolean(): boolean--><!--Device-MessageParcel-readBoolean(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -551,6 +575,8 @@ Reads the Boolean array from this **MessageParcel** object and writes it to the 
 **Deprecated since:** 9
 
 **Substitutes:** readBooleanArray(dataIn:
+
+<!--Device-MessageParcel-readBooleanArray(dataIn: boolean[]): void--><!--Device-MessageParcel-readBooleanArray(dataIn: boolean[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -593,6 +619,8 @@ Reads the Boolean array from this **MessageParcel** object.
 
 **Substitutes:** [readBooleanArray()](arkts-ipc-messagesequence-c.md#readbooleanarray-2)
 
+<!--Device-MessageParcel-readBooleanArray(): boolean[]--><!--Device-MessageParcel-readBooleanArray(): boolean[]-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -633,6 +661,8 @@ Reads the byte value from this **MessageParcel** object.
 
 **Substitutes:** [readByte()](arkts-ipc-messagesequence-c.md#readbyte-1)
 
+<!--Device-MessageParcel-readByte(): number--><!--Device-MessageParcel-readByte(): number-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -672,6 +702,8 @@ Reads the byte array from this **MessageParcel** object and writes it to the cre
 **Deprecated since:** 9
 
 **Substitutes:** readByteArray(dataIn:
+
+<!--Device-MessageParcel-readByteArray(dataIn: number[]): void--><!--Device-MessageParcel-readByteArray(dataIn: number[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -714,6 +746,8 @@ Reads the byte array from this **MessageParcel** object.
 
 **Substitutes:** [readByteArray()](arkts-ipc-messagesequence-c.md#readbytearray-2)
 
+<!--Device-MessageParcel-readByteArray(): number[]--><!--Device-MessageParcel-readByteArray(): number[]-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -755,6 +789,8 @@ Reads the single character value from this **MessageParcel** object.
 
 **Substitutes:** [readChar()](arkts-ipc-messagesequence-c.md#readchar-1)
 
+<!--Device-MessageParcel-readChar(): number--><!--Device-MessageParcel-readChar(): number-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -794,6 +830,8 @@ Reads the character array from this **MessageParcel** object and writes it to th
 **Deprecated since:** 9
 
 **Substitutes:** readCharArray(dataIn:
+
+<!--Device-MessageParcel-readCharArray(dataIn: number[]): void--><!--Device-MessageParcel-readCharArray(dataIn: number[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -836,6 +874,8 @@ Reads the single character array from this **MessageParcel** object.
 
 **Substitutes:** [readCharArray()](arkts-ipc-messagesequence-c.md#readchararray-2)
 
+<!--Device-MessageParcel-readCharArray(): number[]--><!--Device-MessageParcel-readCharArray(): number[]-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -876,6 +916,8 @@ Reads the double value from this **MessageParcel** object.
 
 **Substitutes:** [readDouble()](arkts-ipc-messagesequence-c.md#readdouble-1)
 
+<!--Device-MessageParcel-readDouble(): number--><!--Device-MessageParcel-readDouble(): number-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -915,6 +957,8 @@ Reads the double array from this **MessageParcel** object and writes it to the c
 **Deprecated since:** 9
 
 **Substitutes:** readDoubleArray(dataIn:
+
+<!--Device-MessageParcel-readDoubleArray(dataIn: number[]): void--><!--Device-MessageParcel-readDoubleArray(dataIn: number[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -957,6 +1001,8 @@ Reads the double array from this **MessageParcel** object.
 
 **Substitutes:** [readDoubleArray()](arkts-ipc-messagesequence-c.md#readdoublearray-2)
 
+<!--Device-MessageParcel-readDoubleArray(): number[]--><!--Device-MessageParcel-readDoubleArray(): number[]-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -996,6 +1042,8 @@ Reads the exception information from this **MessageParcel** object.
 **Deprecated since:** 9
 
 **Substitutes:** [readException()](arkts-ipc-messagesequence-c.md#readexception-1)
+
+<!--Device-MessageParcel-readException(): void--><!--Device-MessageParcel-readException(): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1091,6 +1139,8 @@ Reads the file descriptor from this **MessageParcel** object.
 
 **Substitutes:** [readFileDescriptor()](arkts-ipc-messagesequence-c.md#readfiledescriptor-1)
 
+<!--Device-MessageParcel-readFileDescriptor(): number--><!--Device-MessageParcel-readFileDescriptor(): number-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -1133,6 +1183,8 @@ Reads the double value from this **MessageParcel** object.
 
 **Substitutes:** [readFloat()](arkts-ipc-messagesequence-c.md#readfloat-1)
 
+<!--Device-MessageParcel-readFloat(): number--><!--Device-MessageParcel-readFloat(): number-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -1172,6 +1224,8 @@ Reads the double array from this **MessageParcel** object and writes it to the c
 **Deprecated since:** 9
 
 **Substitutes:** readFloatArray(dataIn:
+
+<!--Device-MessageParcel-readFloatArray(dataIn: number[]): void--><!--Device-MessageParcel-readFloatArray(dataIn: number[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1214,6 +1268,8 @@ Reads the double array from this **MessageParcel** object.
 
 **Substitutes:** [readFloatArray()](arkts-ipc-messagesequence-c.md#readfloatarray-2)
 
+<!--Device-MessageParcel-readFloatArray(): number[]--><!--Device-MessageParcel-readFloatArray(): number[]-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -1254,6 +1310,8 @@ Reads the integer from this **MessageParcel** object.
 
 **Substitutes:** [readInt()](arkts-ipc-messagesequence-c.md#readint-1)
 
+<!--Device-MessageParcel-readInt(): number--><!--Device-MessageParcel-readInt(): number-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -1293,6 +1351,8 @@ Reads the integer array from this **MessageParcel** object and writes it to the 
 **Deprecated since:** 9
 
 **Substitutes:** readIntArray(dataIn:
+
+<!--Device-MessageParcel-readIntArray(dataIn: number[]): void--><!--Device-MessageParcel-readIntArray(dataIn: number[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1335,6 +1395,8 @@ Reads the integer array from this **MessageParcel** object.
 
 **Substitutes:** [readIntArray()](arkts-ipc-messagesequence-c.md#readintarray-2)
 
+<!--Device-MessageParcel-readIntArray(): number[]--><!--Device-MessageParcel-readIntArray(): number[]-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -1367,14 +1429,15 @@ try {
 readInterfaceToken(): string
 ```
 
-Reads the interface token from this **MessageParcel** object. The interface token is read in the sequence in
-which it is written to the **MessageParcel** object. The local object can use it to verify the communication.
+Reads the interface token from this **MessageParcel** object. The interface token is read in the sequence in which it is written to the **MessageParcel** object. The local object can use it to verify the communication.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
 **Substitutes:** [readInterfaceToken()](arkts-ipc-messagesequence-c.md#readinterfacetoken-1)
+
+<!--Device-MessageParcel-readInterfaceToken(): string--><!--Device-MessageParcel-readInterfaceToken(): string-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1415,6 +1478,8 @@ Reads the long int value from this **MessageParcel** object.
 
 **Substitutes:** [readLong()](arkts-ipc-messagesequence-c.md#readlong-1)
 
+<!--Device-MessageParcel-readLong(): number--><!--Device-MessageParcel-readLong(): number-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -1454,6 +1519,8 @@ Reads the long array from this **MessageParcel** object and writes it to the cre
 **Deprecated since:** 9
 
 **Substitutes:** readLongArray(dataIn:
+
+<!--Device-MessageParcel-readLongArray(dataIn: number[]): void--><!--Device-MessageParcel-readLongArray(dataIn: number[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1496,6 +1563,8 @@ Reads the long array from this **MessageParcel** object.
 
 **Substitutes:** [readLongArray()](arkts-ipc-messagesequence-c.md#readlongarray-2)
 
+<!--Device-MessageParcel-readLongArray(): number[]--><!--Device-MessageParcel-readLongArray(): number[]-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -1536,6 +1605,8 @@ Reads raw data from this **MessageParcel** object.
 
 **Substitutes:** readRawDataBuffer(size:
 
+<!--Device-MessageParcel-readRawData(size: number): number[]--><!--Device-MessageParcel-readRawData(size: number): number[]-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -1575,9 +1646,7 @@ try {
 readRemoteObject(): IRemoteObject
 ```
 
-Reads the remote object from this **MessageParcel** object. You can use this method to deserialize the
-**MessageParcel** object to generate an **IRemoteObject**. The remote objects are read in the order in which
-they are written to this **MessageParcel** object.
+Reads the remote object from this **MessageParcel** object. You can use this method to deserialize the **MessageParcel** object to generate an **IRemoteObject**. The remote objects are read in the order in which they are written to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -1585,13 +1654,15 @@ they are written to this **MessageParcel** object.
 
 **Substitutes:** [readRemoteObject()](arkts-ipc-messagesequence-c.md#readremoteobject-1)
 
+<!--Device-MessageParcel-readRemoteObject(): IRemoteObject--><!--Device-MessageParcel-readRemoteObject(): IRemoteObject-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IRemoteObject | Remote object obtained. |
+| [IRemoteObject](arkts-ipc-iremoteobject-c.md) | Remote object obtained. |
 
 **Example**
 
@@ -1636,13 +1707,15 @@ Reads the **IRemoteObject** array from this **MessageParcel** object and writes 
 
 **Substitutes:** readRemoteObjectArray(objects:
 
+<!--Device-MessageParcel-readRemoteObjectArray(objects: IRemoteObject[]): void--><!--Device-MessageParcel-readRemoteObjectArray(objects: IRemoteObject[]): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| objects | IRemoteObject[] | Yes | **IRemoteObject** array to read. |
+| objects | [IRemoteObject](arkts-ipc-iremoteobject-c.md)[] | Yes | **IRemoteObject** array to read. |
 
 **Example**
 
@@ -1689,13 +1762,15 @@ Reads the **IRemoteObject** array from this **MessageParcel** object.
 
 **Substitutes:** readRemoteObjectArray(objects:
 
+<!--Device-MessageParcel-readRemoteObjectArray(): IRemoteObject[]--><!--Device-MessageParcel-readRemoteObjectArray(): IRemoteObject[]-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IRemoteObject[] | **IRemoteObject** object array obtained. |
+| [IRemoteObject](arkts-ipc-iremoteobject-c.md)[] | **IRemoteObject** object array obtained. |
 
 **Example**
 
@@ -1742,13 +1817,15 @@ Reads member variables from this **MessageParcel** object.
 
 **Substitutes:** readParcelable(dataIn:
 
+<!--Device-MessageParcel-readSequenceable(dataIn: Sequenceable): boolean--><!--Device-MessageParcel-readSequenceable(dataIn: Sequenceable): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | Sequenceable | Yes | Object that reads member variables from the **MessageParcel** object. |
+| dataIn | [Sequenceable](arkts-ipc-sequenceable-i.md) | Yes | Object that reads member variables from the **MessageParcel** object. |
 
 **Return value:**
 
@@ -1809,13 +1886,15 @@ Reads the **Sequenceable** array from this **MessageParcel** object.
 
 **Substitutes:** readParcelableArray(parcelableArray:
 
+<!--Device-MessageParcel-readSequenceableArray(sequenceableArray: Sequenceable[]): void--><!--Device-MessageParcel-readSequenceableArray(sequenceableArray: Sequenceable[]): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sequenceableArray | Sequenceable[] | Yes | **Sequenceable** array to read. |
+| sequenceableArray | [Sequenceable](arkts-ipc-sequenceable-i.md)[] | Yes | **Sequenceable** array to read. |
 
 **Example**
 
@@ -1872,6 +1951,8 @@ Reads the short integer from this **MessageParcel** object.
 
 **Substitutes:** [readShort()](arkts-ipc-messagesequence-c.md#readshort-1)
 
+<!--Device-MessageParcel-readShort(): number--><!--Device-MessageParcel-readShort(): number-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -1911,6 +1992,8 @@ Reads the short array from this **MessageParcel** object and writes it to the cr
 **Deprecated since:** 9
 
 **Substitutes:** readShortArray(dataIn:
+
+<!--Device-MessageParcel-readShortArray(dataIn: number[]): void--><!--Device-MessageParcel-readShortArray(dataIn: number[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -1953,6 +2036,8 @@ Reads the short array from this **MessageParcel** object.
 
 **Substitutes:** [readShortArray()](arkts-ipc-messagesequence-c.md#readshortarray-2)
 
+<!--Device-MessageParcel-readShortArray(): number[]--><!--Device-MessageParcel-readShortArray(): number[]-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -1993,6 +2078,8 @@ Reads the string from this **MessageParcel** object.
 
 **Substitutes:** [readString()](arkts-ipc-messagesequence-c.md#readstring-1)
 
+<!--Device-MessageParcel-readString(): string--><!--Device-MessageParcel-readString(): string-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -2032,6 +2119,8 @@ Reads the string array from this **MessageParcel** object and writes it to the c
 **Deprecated since:** 9
 
 **Substitutes:** readStringArray(dataIn:
+
+<!--Device-MessageParcel-readStringArray(dataIn: string[]): void--><!--Device-MessageParcel-readStringArray(dataIn: string[]): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2074,6 +2163,8 @@ Reads the string array from this **MessageParcel** object.
 
 **Substitutes:** [readStringArray()](arkts-ipc-messagesequence-c.md#readstringarray-2)
 
+<!--Device-MessageParcel-readStringArray(): string[]--><!--Device-MessageParcel-readStringArray(): string[]-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -2114,6 +2205,8 @@ Reclaims the **MessageParcel** object that is no longer used.
 
 **Substitutes:** [reclaim()](arkts-ipc-messagesequence-c.md#reclaim-1)
 
+<!--Device-MessageParcel-reclaim(): void--><!--Device-MessageParcel-reclaim(): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Example**
@@ -2144,6 +2237,8 @@ Moves the read pointer to the specified position.
 **Deprecated since:** 9
 
 **Substitutes:** rewindRead(pos:
+
+<!--Device-MessageParcel-rewindRead(pos: number): boolean--><!--Device-MessageParcel-rewindRead(pos: number): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2194,6 +2289,8 @@ Moves the write pointer to the specified position.
 
 **Substitutes:** rewindWrite(pos:
 
+<!--Device-MessageParcel-rewindWrite(pos: number): boolean--><!--Device-MessageParcel-rewindWrite(pos: number): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -2241,6 +2338,8 @@ Sets the storage capacity of this **MessageParcel** object.
 
 **Substitutes:** setCapacity(size:
 
+<!--Device-MessageParcel-setCapacity(size: number): boolean--><!--Device-MessageParcel-setCapacity(size: number): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -2284,6 +2383,8 @@ Sets the size of data contained in this **MessageParcel** object.
 **Deprecated since:** 9
 
 **Substitutes:** setSize(size:
+
+<!--Device-MessageParcel-setSize(size: number): boolean--><!--Device-MessageParcel-setSize(size: number): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2329,13 +2430,15 @@ Writes an anonymous shared object to this **MessageParcel** object.
 
 **Substitutes:** writeAshmem(ashmem:
 
+<!--Device-MessageParcel-writeAshmem(ashmem: Ashmem): boolean--><!--Device-MessageParcel-writeAshmem(ashmem: Ashmem): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ashmem | Ashmem | Yes | Anonymous shared object to write. |
+| ashmem | [Ashmem](arkts-ipc-ashmem-c.md) | Yes | Anonymous shared object to write. |
 
 **Return value:**
 
@@ -2373,6 +2476,8 @@ Writes a Boolean value to this **MessageParcel** object.
 **Deprecated since:** 9
 
 **Substitutes:** writeBoolean(val:
+
+<!--Device-MessageParcel-writeBoolean(val: boolean): boolean--><!--Device-MessageParcel-writeBoolean(val: boolean): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2418,6 +2523,8 @@ Writes a Boolean array to this **MessageParcel** object.
 
 **Substitutes:** writeBooleanArray(booleanArray:
 
+<!--Device-MessageParcel-writeBooleanArray(booleanArray: boolean[]): boolean--><!--Device-MessageParcel-writeBooleanArray(booleanArray: boolean[]): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -2462,6 +2569,8 @@ Writes a Byte value to this **MessageParcel** object.
 
 **Substitutes:** writeByte(val:
 
+<!--Device-MessageParcel-writeByte(val: number): boolean--><!--Device-MessageParcel-writeByte(val: number): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -2505,6 +2614,8 @@ Writes a byte array to this **MessageParcel** object.
 **Deprecated since:** 9
 
 **Substitutes:** writeByteArray(byteArray:
+
+<!--Device-MessageParcel-writeByteArray(byteArray: number[]): boolean--><!--Device-MessageParcel-writeByteArray(byteArray: number[]): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2551,6 +2662,8 @@ Writes a single character value to this **MessageParcel** object.
 
 **Substitutes:** writeChar(val:
 
+<!--Device-MessageParcel-writeChar(val: number): boolean--><!--Device-MessageParcel-writeChar(val: number): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -2594,6 +2707,8 @@ Writes a single character array to this **MessageParcel** object.
 **Deprecated since:** 9
 
 **Substitutes:** writeCharArray(charArray:
+
+<!--Device-MessageParcel-writeCharArray(charArray: number[]): boolean--><!--Device-MessageParcel-writeCharArray(charArray: number[]): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2639,6 +2754,8 @@ Writes a double value to this **MessageParcel** object.
 
 **Substitutes:** writeDouble(val:
 
+<!--Device-MessageParcel-writeDouble(val: number): boolean--><!--Device-MessageParcel-writeDouble(val: number): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -2683,6 +2800,8 @@ Writes a double array to this **MessageParcel** object.
 
 **Substitutes:** writeDoubleArray(doubleArray:
 
+<!--Device-MessageParcel-writeDoubleArray(doubleArray: number[]): boolean--><!--Device-MessageParcel-writeDoubleArray(doubleArray: number[]): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -2726,6 +2845,8 @@ Writes a file descriptor to this **MessageParcel** object.
 **Deprecated since:** 9
 
 **Substitutes:** writeFileDescriptor(fd:
+
+<!--Device-MessageParcel-writeFileDescriptor(fd: number): boolean--><!--Device-MessageParcel-writeFileDescriptor(fd: number): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2774,6 +2895,8 @@ Writes a double value to this **MessageParcel** object.
 
 **Substitutes:** writeFloat(val:
 
+<!--Device-MessageParcel-writeFloat(val: number): boolean--><!--Device-MessageParcel-writeFloat(val: number): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -2818,13 +2941,15 @@ Writes a double array to this **MessageParcel** object.
 
 **Substitutes:** writeFloatArray(floatArray:
 
+<!--Device-MessageParcel-writeFloatArray(floatArray: number[]): boolean--><!--Device-MessageParcel-writeFloatArray(floatArray: number[]): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| floatArray | number[] | Yes | Double array to write. The system processes float data as that of the doubletype. Therefore, the total number of bytes occupied by a float array must be calculated as the double type. |
+| floatArray | number[] | Yes | Double array to write. The system processes float data as that of the double type. Therefore, the total number of bytes occupied by a float array must be calculated as the double type. |
 
 **Return value:**
 
@@ -2861,6 +2986,8 @@ Writes an int value to this **MessageParcel** object.
 **Deprecated since:** 9
 
 **Substitutes:** writeInt(val:
+
+<!--Device-MessageParcel-writeInt(val: number): boolean--><!--Device-MessageParcel-writeInt(val: number): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2906,6 +3033,8 @@ Writes an integer array to this **MessageParcel** object.
 
 **Substitutes:** writeIntArray(intArray:
 
+<!--Device-MessageParcel-writeIntArray(intArray: number[]): boolean--><!--Device-MessageParcel-writeIntArray(intArray: number[]): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -2942,14 +3071,15 @@ try {
 writeInterfaceToken(token: string): boolean
 ```
 
-Writes an interface token to this **MessageParcel** object. The remote object can use this interface token to
-verify the communication.
+Writes an interface token to this **MessageParcel** object. The remote object can use this interface token to verify the communication.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
 **Substitutes:** writeInterfaceToken(token:
+
+<!--Device-MessageParcel-writeInterfaceToken(token: string): boolean--><!--Device-MessageParcel-writeInterfaceToken(token: string): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -2995,6 +3125,8 @@ Writes a long int value to this **MessageParcel** object.
 
 **Substitutes:** writeLong(val:
 
+<!--Device-MessageParcel-writeLong(val: number): boolean--><!--Device-MessageParcel-writeLong(val: number): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -3039,6 +3171,8 @@ Writes a long array to this **MessageParcel** object.
 
 **Substitutes:** writeLongArray(longArray:
 
+<!--Device-MessageParcel-writeLongArray(longArray: number[]): boolean--><!--Device-MessageParcel-writeLongArray(longArray: number[]): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -3082,6 +3216,8 @@ Writes information to this **MessageParcel** object indicating that no exception
 **Deprecated since:** 9
 
 **Substitutes:** [writeNoException()](arkts-ipc-messagesequence-c.md#writenoexception-1)
+
+<!--Device-MessageParcel-writeNoException(): void--><!--Device-MessageParcel-writeNoException(): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -3129,6 +3265,8 @@ Writes raw data to this **MessageParcel** object.
 
 **Substitutes:** writeRawDataBuffer(rawData:
 
+<!--Device-MessageParcel-writeRawData(rawData: number[], size: number): boolean--><!--Device-MessageParcel-writeRawData(rawData: number[], size: number): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -3175,13 +3313,15 @@ Serializes a remote object and writes it to this **MessageParcel** object.
 
 **Substitutes:** writeRemoteObject(obj:
 
+<!--Device-MessageParcel-writeRemoteObject(object: IRemoteObject): boolean--><!--Device-MessageParcel-writeRemoteObject(object: IRemoteObject): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| object | IRemoteObject | Yes | Remote object to serialize and write to the **MessageParcel** object. |
+| object | [IRemoteObject](arkts-ipc-iremoteobject-c.md) | Yes | Remote object to serialize and write to the **MessageParcel** object. |
 
 **Return value:**
 
@@ -3229,13 +3369,15 @@ Writes an **IRemoteObject** array to this **MessageParcel** object.
 
 **Substitutes:** writeRemoteObjectArray(objectArray:
 
+<!--Device-MessageParcel-writeRemoteObjectArray(objectArray: IRemoteObject[]): boolean--><!--Device-MessageParcel-writeRemoteObjectArray(objectArray: IRemoteObject[]): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| objectArray | IRemoteObject[] | Yes | **IRemoteObject** array to write. |
+| objectArray | [IRemoteObject](arkts-ipc-iremoteobject-c.md)[] | Yes | **IRemoteObject** array to write. |
 
 **Return value:**
 
@@ -3285,13 +3427,15 @@ Writes a **Sequenceable** object to this **MessageParcel** object.
 
 **Substitutes:** writeParcelable(val:
 
+<!--Device-MessageParcel-writeSequenceable(val: Sequenceable): boolean--><!--Device-MessageParcel-writeSequenceable(val: Sequenceable): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | Sequenceable | Yes | **Sequenceable** object to write. |
+| val | [Sequenceable](arkts-ipc-sequenceable-i.md) | Yes | **Sequenceable** object to write. |
 
 **Return value:**
 
@@ -3349,13 +3493,15 @@ Writes a **Sequenceable** array to this **MessageParcel** object.
 
 **Substitutes:** writeParcelableArray(parcelableArray:
 
+<!--Device-MessageParcel-writeSequenceableArray(sequenceableArray: Sequenceable[]): boolean--><!--Device-MessageParcel-writeSequenceableArray(sequenceableArray: Sequenceable[]): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sequenceableArray | Sequenceable[] | Yes | **Sequenceable** array to write. |
+| sequenceableArray | [Sequenceable](arkts-ipc-sequenceable-i.md)[] | Yes | **Sequenceable** array to write. |
 
 **Return value:**
 
@@ -3416,6 +3562,8 @@ Writes a short int value to this **MessageParcel** object.
 
 **Substitutes:** writeShort(val:
 
+<!--Device-MessageParcel-writeShort(val: number): boolean--><!--Device-MessageParcel-writeShort(val: number): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -3459,6 +3607,8 @@ Writes a short array to this **MessageParcel** object.
 **Deprecated since:** 9
 
 **Substitutes:** writeShortArray(shortArray:
+
+<!--Device-MessageParcel-writeShortArray(shortArray: number[]): boolean--><!--Device-MessageParcel-writeShortArray(shortArray: number[]): boolean-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -3504,6 +3654,8 @@ Writes a string to this **MessageParcel** object.
 
 **Substitutes:** writeString(val:
 
+<!--Device-MessageParcel-writeString(val: string): boolean--><!--Device-MessageParcel-writeString(val: string): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -3548,13 +3700,15 @@ Writes a string array to this **MessageParcel** object.
 
 **Substitutes:** writeStringArray(stringArray:
 
+<!--Device-MessageParcel-writeStringArray(stringArray: string[]): boolean--><!--Device-MessageParcel-writeStringArray(stringArray: string[]): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stringArray | string[] | Yes | String array to write. The length of a single element in the array must be lessthan 40960. |
+| stringArray | string[] | Yes | String array to write. The length of a single element in the array must be less than 40960. |
 
 **Return value:**
 

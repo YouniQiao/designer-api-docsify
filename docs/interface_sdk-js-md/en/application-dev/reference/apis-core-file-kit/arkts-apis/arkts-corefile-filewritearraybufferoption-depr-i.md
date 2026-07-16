@@ -6,6 +6,8 @@ Defines the options used in writeArrayBuffer().
 
 **Deprecated since:** 10
 
+<!--Device-unnamed-export interface FileWriteArrayBufferOption--><!--Device-unnamed-export interface FileWriteArrayBufferOption-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## append
@@ -14,15 +16,15 @@ Defines the options used in writeArrayBuffer().
 append?: boolean
 ```
 
-Whether to enable the append mode. The default value is **false**. If the value is **true**, the **position**
-parameter will become invalid. The value **true** means to enable the append mode; the value **false** means the
-opposite.
+Whether to enable the append mode. The default value is **false**. If the value is **true**, the **position** parameter will become invalid. The value **true** means to enable the append mode; the value **false** means the opposite.
 
 **Type:** boolean
 
 **Since:** 3
 
 **Deprecated since:** 10
+
+<!--Device-FileWriteArrayBufferOption-append?: boolean--><!--Device-FileWriteArrayBufferOption-append?: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -40,6 +42,8 @@ Buffer from which the data is derived.
 
 **Deprecated since:** 10
 
+<!--Device-FileWriteArrayBufferOption-buffer: Uint8Array--><!--Device-FileWriteArrayBufferOption-buffer: Uint8Array-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## complete
@@ -56,6 +60,8 @@ Callback invoked when the API call is complete.
 
 **Deprecated since:** 10
 
+<!--Device-FileWriteArrayBufferOption-complete?: () => void--><!--Device-FileWriteArrayBufferOption-complete?: () => void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## fail
@@ -64,17 +70,15 @@ Callback invoked when the API call is complete.
 fail?: (data: string, code: number) => void
 ```
 
-Callback invoked when the API call fails.
-**data** indicates the error information.
-**code** indicates the returned error code:
-**202**: invalid parameter
-**300**: I/O error
+Callback invoked when the API call fails.**data** indicates the error information.**code** indicates the returned error code:**202**: invalid parameter **300**: I/O error
 
 **Type:** (data: string, code: number) => void
 
 **Since:** 3
 
 **Deprecated since:** 10
+
+<!--Device-FileWriteArrayBufferOption-fail?: (data: string, code: number) => void--><!--Device-FileWriteArrayBufferOption-fail?: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -92,6 +96,8 @@ Offset of the position in the file where writing starts, in bytes. The default v
 
 **Deprecated since:** 10
 
+<!--Device-FileWriteArrayBufferOption-position?: number--><!--Device-FileWriteArrayBufferOption-position?: number-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## success
@@ -108,6 +114,8 @@ Callback invoked when the API call is successful.
 
 **Deprecated since:** 10
 
+<!--Device-FileWriteArrayBufferOption-success?: () => void--><!--Device-FileWriteArrayBufferOption-success?: () => void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## uri
@@ -116,16 +124,15 @@ Callback invoked when the API call is successful.
 uri: string
 ```
 
-URI of a local file. If it does not exist, a file will be created. Restricted by the underlying file system of lite
-wearables, the value must meet the following requirements:
-1. The URI cannot contain the following special characters: \"*+,:;<=>?[]|\x7F.
-2. The value can contain a maximum of 128 characters.
+URI of a local file. If it does not exist, a file will be created. Restricted by the underlying file system of lite wearables, the value must meet the following requirements:1. The URI cannot contain the following special characters: \"*+,:;<=>?[]|\x7F.2. The value can contain a maximum of 128 characters.
 
 **Type:** string
 
 **Since:** 3
 
 **Deprecated since:** 10
+
+<!--Device-FileWriteArrayBufferOption-uri: string--><!--Device-FileWriteArrayBufferOption-uri: string-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 

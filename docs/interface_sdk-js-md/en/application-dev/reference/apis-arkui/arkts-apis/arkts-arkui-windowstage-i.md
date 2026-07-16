@@ -2,11 +2,11 @@
 
 Implements a window manager, which manages each basic window unit, that is, [Window](arkts-window.md) instance.
 
-Before calling any of the following APIs, you must use
-[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-uiability-c.md#onwindowstagecreate-1) to create a WindowStage
-instance.
+Before calling any of the following APIs, you must use [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-uiability-c.md#onwindowstagecreate-1) to create a WindowStage instance.
 
 **Since:** 9
+
+<!--Device-window-interface WindowStage--><!--Device-window-interface WindowStage-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -30,6 +30,8 @@ Create sub window of the stage.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WindowStage-createSubWindow(name: string): Promise<Window>--><!--Device-WindowStage-createSubWindow(name: string): Promise<Window>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -42,7 +44,7 @@ Create sub window of the stage.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Window&gt; | Promise used to return the subwindow. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Window> | Promise used to return the subwindow. |
 
 **Error codes:**
 
@@ -66,6 +68,8 @@ Create sub window of the stage.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WindowStage-createSubWindow(name: string, callback: AsyncCallback<Window>): void--><!--Device-WindowStage-createSubWindow(name: string, callback: AsyncCallback<Window>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -73,7 +77,7 @@ Create sub window of the stage.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | window name of sub window |
-| callback | AsyncCallback&lt;Window&gt; | Yes | Callback used to return the subwindow. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Window> | Yes | Callback used to return the subwindow. |
 
 **Error codes:**
 
@@ -97,6 +101,8 @@ Create sub window of the stage.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WindowStage-createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise<Window>--><!--Device-WindowStage-createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise<Window>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -104,20 +110,20 @@ Create sub window of the stage.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | window name of sub window |
-| options | SubWindowOptions | Yes | options of sub window creation |
+| options | [SubWindowOptions](arkts-arkui-subwindowoptions-i.md) | Yes | options of sub window creation |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Window&gt; | Promise used to return the subwindow. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Window> | Promise used to return the subwindow. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: 1. The window is not created or destroyed;2. The subWindow has been created and can not be created again. |
 | [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
 
@@ -135,13 +141,15 @@ Get main window of the stage.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WindowStage-getMainWindow(): Promise<Window>--><!--Device-WindowStage-getMainWindow(): Promise<Window>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Window&gt; | Callback used to return the subwindow. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Window> | Callback used to return the subwindow. |
 
 **Error codes:**
 
@@ -164,13 +172,15 @@ Get main window of the stage.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WindowStage-getMainWindow(callback: AsyncCallback<Window>): void--><!--Device-WindowStage-getMainWindow(callback: AsyncCallback<Window>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Window&gt; | Yes | Callback used to return the main window. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Window> | Yes | Callback used to return the main window. |
 
 **Error codes:**
 
@@ -193,13 +203,15 @@ Get main window of the stage.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WindowStage-getMainWindowSync(): Window--><!--Device-WindowStage-getMainWindowSync(): Window-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Window | @throws { BusinessError } 1300002 - This window state is abnormal.Possible cause: The window is not created or destroyed. |
+| [Window](arkts-arkui-window-i.md) | @throws { BusinessError } 1300002 - This window state is abnormal.Possible cause: The window is not created or destroyed. |
 
 **Error codes:**
 
@@ -222,19 +234,21 @@ Get sub window of the stage.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WindowStage-getSubWindow(): Promise<Array<Window>>--><!--Device-WindowStage-getSubWindow(): Promise<Array<Window>>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Window&gt;&gt; | @throws { BusinessError } 1300002 - This window state is abnormal. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Window>> | @throws { BusinessError } 1300002 - This window state is abnormal. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed.<br>**Applicable version:** 10 and later |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: The window is not created or destroyed.<br>**Applicable version:** 10 and later |
 | [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 and later |
 
 ## getSubWindow
@@ -251,19 +265,21 @@ Get sub window of the stage.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WindowStage-getSubWindow(callback: AsyncCallback<Array<Window>>): void--><!--Device-WindowStage-getSubWindow(callback: AsyncCallback<Array<Window>>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;Window&gt;&gt; | Yes | Callback used to return all the subwindows. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Window>> | Yes | Callback used to return all the subwindows. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed.<br>**Applicable version:** 10 and later |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: The window is not created or destroyed.<br>**Applicable version:** 10 and later |
 | [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 and later |
 
 ## isWindowRectAutoSave
@@ -280,13 +296,15 @@ Whether the window supports the window rect auto-save.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-WindowStage-isWindowRectAutoSave(): Promise<boolean>--><!--Device-WindowStage-isWindowRectAutoSave(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result.The value true means that the window rect auto-save is supported, and false means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result.The value true means that the window rect auto-save is supported, and false means the opposite. |
 
 **Error codes:**
 
@@ -302,18 +320,15 @@ Whether the window supports the window rect auto-save.
 loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void
 ```
 
-Loads the content of a page, with its path in the current project specified, to the main window
-of this window stage, and transfers the state attribute to the page through a local storage.
-This API uses an asynchronous callback to return the result.
-You are advised to call this API during UIAbility startup.
-If called multiple times, this API will destroy the existing page content (UIContent)
-before loading the new content. Exercise caution when using it.
+Loads the content of a page, with its path in the current project specified, to the main window of this window stage, and transfers the state attribute to the page through a local storage.This API uses an asynchronous callback to return the result.You are advised to call this API during UIAbility startup.If called multiple times, this API will destroy the existing page content (UIContent)before loading the new content. Exercise caution when using it.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WindowStage-loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void--><!--Device-WindowStage-loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -322,8 +337,8 @@ before loading the new content. Exercise caution when using it.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the page to which the content will be loaded |
-| storage | LocalStorage | Yes | The data object shared within the content instance loaded by the window |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | Yes | The data object shared within the content instance loaded by the window |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -339,17 +354,15 @@ before loading the new content. Exercise caution when using it.
 loadContent(path: string, storage?: LocalStorage): Promise<void>
 ```
 
-Loads the content of a page, with its path in the current project specified, to the main window
-of this window stage, and transfers the state attribute to the page through a local storage.
-This API uses a promise to return the result. You are advised to call this API during UIAbility startup.
-If called multiple times, this API will destroy the existing page content (UIContent)
-before loading the new content. Exercise caution when using it.
+Loads the content of a page, with its path in the current project specified, to the main window of this window stage, and transfers the state attribute to the page through a local storage.This API uses a promise to return the result. You are advised to call this API during UIAbility startup.If called multiple times, this API will destroy the existing page content (UIContent)before loading the new content. Exercise caution when using it.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WindowStage-loadContent(path: string, storage?: LocalStorage): Promise<void>--><!--Device-WindowStage-loadContent(path: string, storage?: LocalStorage): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -358,13 +371,13 @@ before loading the new content. Exercise caution when using it.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | of the page to which the content will be loaded |
-| storage | LocalStorage | No | The data object shared within the content instance loaded by the window |
+| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | No | The data object shared within the content instance loaded by the window |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | @throws { BusinessError } 401 - Parameter error. Possible cause:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Invalid path parameter. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | @throws { BusinessError } 401 - Parameter error. Possible cause:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Invalid path parameter. |
 
 **Error codes:**
 
@@ -380,16 +393,15 @@ before loading the new content. Exercise caution when using it.
 loadContent(path: string, callback: AsyncCallback<void>): void
 ```
 
-Loads content from a page to this window stage. This API uses an asynchronous callback to
-return the result. You are advised to call this API during UIAbility startup.
-If called multiple times, this API will destroy the existing page content (UIContent)
-before loading the new content. Exercise caution when using it.
+Loads content from a page to this window stage. This API uses an asynchronous callback to return the result. You are advised to call this API during UIAbility startup.If called multiple times, this API will destroy the existing page content (UIContent)before loading the new content. Exercise caution when using it.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WindowStage-loadContent(path: string, callback: AsyncCallback<void>): void--><!--Device-WindowStage-loadContent(path: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -398,7 +410,7 @@ before loading the new content. Exercise caution when using it.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | of the page to which the content will be loaded |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -414,19 +426,15 @@ before loading the new content. Exercise caution when using it.
 loadContentByName(name: string, storage: LocalStorage, callback: AsyncCallback<void>): void
 ```
 
-Loads the content of a [named route](../../ui/arkts-routing.md#named-route) page to this window, and transfers
-the state attribute to the page through a local storage. This API uses an asynchronous callback to return
-the result.
-You are advised to call this API during UIAbility startup. If called repeatedly, this API will destroy the
-existing page content (UIContent) before loading the new content. Exercise caution when using it.
-The execution context of the current UI may be unclear. Therefore, you are advised not to perform UI-related
-operations within the callback of this API.
+Loads the content of a [named route](../../ui/arkts-routing.md#named-route) page to this window, and transfers the state attribute to the page through a local storage. This API uses an asynchronous callback to return the result.You are advised to call this API during UIAbility startup. If called repeatedly, this API will destroy the existing page content (UIContent) before loading the new content. Exercise caution when using it.The execution context of the current UI may be unclear. Therefore, you are advised not to perform UI-related operations within the callback of this API.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WindowStage-loadContentByName(name: string, storage: LocalStorage, callback: AsyncCallback<void>): void--><!--Device-WindowStage-loadContentByName(name: string, storage: LocalStorage, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -435,8 +443,8 @@ operations within the callback of this API.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | name of the page to which the content will be loaded. |
-| storage | LocalStorage | Yes | The data object shared within the content instance loaded by the window. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | Yes | The data object shared within the content instance loaded by the window. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -451,18 +459,15 @@ operations within the callback of this API.
 loadContentByName(name: string, callback: AsyncCallback<void>): void
 ```
 
-Loads the content of a [named route](../../ui/arkts-routing.md#named-route) page to this window.
-This API uses an asynchronous callback to return the result.
-You are advised to call this API during UIAbility startup. If called repeatedly, this API will destroy
-the existing page content (UIContent) before loading the new content. Exercise caution when using it.
-The execution context of the current UI may be unclear. Therefore, you are advised not to perform
-UI-related operations within the callback of this API.
+Loads the content of a [named route](../../ui/arkts-routing.md#named-route) page to this window.This API uses an asynchronous callback to return the result.You are advised to call this API during UIAbility startup. If called repeatedly, this API will destroy the existing page content (UIContent) before loading the new content. Exercise caution when using it.The execution context of the current UI may be unclear. Therefore, you are advised not to perform UI-related operations within the callback of this API.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WindowStage-loadContentByName(name: string, callback: AsyncCallback<void>): void--><!--Device-WindowStage-loadContentByName(name: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -471,7 +476,7 @@ UI-related operations within the callback of this API.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | name of the page to which the content will be loaded. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -494,6 +499,8 @@ Loads content by named router
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WindowStage-loadContentByName(name: string, storage?: LocalStorage): Promise<void>--><!--Device-WindowStage-loadContentByName(name: string, storage?: LocalStorage): Promise<void>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -501,13 +508,13 @@ Loads content by named router
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | name of the page to which the content will be loaded. |
-| storage | LocalStorage | No | The data object shared within the content instance loaded by the window. |
+| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | No | The data object shared within the content instance loaded by the window. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -530,6 +537,8 @@ Unsubscribes from the window stage lifecycle change event.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WindowStage-off(eventType: 'windowStageEvent', callback?: Callback<WindowStageEventType>): void--><!--Device-WindowStage-off(eventType: 'windowStageEvent', callback?: Callback<WindowStageEventType>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -537,7 +546,7 @@ Unsubscribes from the window stage lifecycle change event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventType | 'windowStageEvent' | Yes | Event type. |
-| callback | Callback&lt;WindowStageEventType&gt; | No | Callback used to return the window stage lifecycle state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<WindowStageEventType> | No | Callback used to return the window stage lifecycle state. |
 
 **Error codes:**
 
@@ -559,6 +568,8 @@ Unsubscribes from the window stage lifecycle change event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WindowStage-off(eventType: 'windowStageLifecycleEvent', callback?: Callback<WindowStageLifecycleEventType>): void--><!--Device-WindowStage-off(eventType: 'windowStageLifecycleEvent', callback?: Callback<WindowStageLifecycleEventType>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -566,7 +577,7 @@ Unsubscribes from the window stage lifecycle change event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventType | 'windowStageLifecycleEvent' | Yes | Event type. |
-| callback | Callback&lt;WindowStageLifecycleEventType&gt; | No | Callback used to |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<WindowStageLifecycleEventType> | No | Callback used to |
 
 **Error codes:**
 
@@ -590,6 +601,8 @@ Window stage close callback off.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-WindowStage-off(eventType: 'windowStageClose', callback?: Callback<void>): void--><!--Device-WindowStage-off(eventType: 'windowStageClose', callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -597,14 +610,14 @@ Window stage close callback off.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventType | 'windowStageClose' | Yes | The value is fixed at 'windowStageClose', indicating the window stage |
-| callback | Callback&lt;void&gt; | No | Callback function requires a boolean return value to determine whether to |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<void> | No | Callback function requires a boolean return value to determine whether to |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
 
 ## on
@@ -621,6 +634,8 @@ Subscribes to the window stage lifecycle change event.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WindowStage-on(eventType: 'windowStageEvent', callback: Callback<WindowStageEventType>): void--><!--Device-WindowStage-on(eventType: 'windowStageEvent', callback: Callback<WindowStageEventType>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
@@ -628,7 +643,7 @@ Subscribes to the window stage lifecycle change event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventType | 'windowStageEvent' | Yes | Event type. |
-| callback | Callback&lt;WindowStageEventType&gt; | Yes | Callback used to return the window stage lifecycle state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<WindowStageEventType> | Yes | Callback used to return the window stage lifecycle state. |
 
 **Error codes:**
 
@@ -650,6 +665,8 @@ Subscribes to the window stage lifecycle change event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WindowStage-on(eventType: 'windowStageLifecycleEvent', callback: Callback<WindowStageLifecycleEventType>): void--><!--Device-WindowStage-on(eventType: 'windowStageLifecycleEvent', callback: Callback<WindowStageLifecycleEventType>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -657,7 +674,7 @@ Subscribes to the window stage lifecycle change event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventType | 'windowStageLifecycleEvent' | Yes | Event type. |
-| callback | Callback&lt;WindowStageLifecycleEventType&gt; | Yes | Callback used to |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<WindowStageLifecycleEventType> | Yes | Callback used to |
 
 **Error codes:**
 
@@ -681,6 +698,8 @@ Window stage close callback on.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-WindowStage-on(eventType: 'windowStageClose', callback: Callback<void>): void--><!--Device-WindowStage-on(eventType: 'windowStageClose', callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -688,14 +707,14 @@ Window stage close callback on.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventType | 'windowStageClose' | Yes | The value is fixed at 'windowStageClose', indicating the window stage |
-| callback | Callback&lt;void&gt; | Yes | Callback function requires a boolean return value to determine whether to |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<void> | Yes | Callback function requires a boolean return value to determine whether to |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
 
 ## releaseUIContent
@@ -704,12 +723,13 @@ Window stage close callback on.
 releaseUIContent(): Promise<void>
 ```
 
-Release the content of this window in the current project.
-This API uses a promise to return the result.
+Release the content of this window in the current project.This API uses a promise to return the result.
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WindowStage-releaseUIContent(): Promise<void>--><!--Device-WindowStage-releaseUIContent(): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -717,7 +737,7 @@ This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value, indicating successful completion.Throws exception if window state is abnormal. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value, indicating successful completion.Throws exception if window state is abnormal. |
 
 **Error codes:**
 
@@ -739,13 +759,15 @@ Remove the starting window, it must be used with configuration "enable.remove.st
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-WindowStage-removeStartingWindow(): Promise<void>--><!--Device-WindowStage-removeStartingWindow(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - The promise returned by the function. |
 
 **Error codes:**
 
@@ -763,9 +785,7 @@ setCustomDensity(density: number): void
 
 Allows the main window of the application to customize its display size scale factor.
 
-Existing child windows and system windows do not immediately re-layout to match the main window's new scale
-factor. They will re-layout to reflect this change only when their layout information (such as position,
-size, and system scale size) changes.
+Existing child windows and system windows do not immediately re-layout to match the main window's new scale factor. They will re-layout to reflect this change only when their layout information (such as position,size, and system scale size) changes.
 
 If both this API and [setDefaultDensityEnabled(true)](arkts-arkui-windowstage-i.md#setdefaultdensityenabled-1) are called, the setting from the last called API will be applied.
 
@@ -774,6 +794,8 @@ If both this API and [setDefaultDensityEnabled(true)](arkts-arkui-windowstage-i.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-WindowStage-setCustomDensity(density: number): void--><!--Device-WindowStage-setCustomDensity(density: number): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -798,15 +820,15 @@ If both this API and [setDefaultDensityEnabled(true)](arkts-arkui-windowstage-i.
 setCustomDensity(density: number, applyToSubWindow?: boolean): void
 ```
 
-Allows the main window of the application to customize its display size scale factor and control when child
-windows and system windows re-layout to match the main window.
+Allows the main window of the application to customize its display size scale factor and control when child windows and system windows re-layout to match the main window.
 
-If both this API and [setDefaultDensityEnabled(true)](arkts-arkui-windowstage-i.md#setdefaultdensityenabled-1) are called,
-the setting from the last called API will be applied.
+If both this API and [setDefaultDensityEnabled(true)](arkts-arkui-windowstage-i.md#setdefaultdensityenabled-1) are called,the setting from the last called API will be applied.
 
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WindowStage-setCustomDensity(density: double, applyToSubWindow?: boolean): void--><!--Device-WindowStage-setCustomDensity(density: double, applyToSubWindow?: boolean): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -831,9 +853,7 @@ the setting from the last called API will be applied.
 setDefaultDensityEnabled(enabled: boolean): void
 ```
 
-Sets whether the main window of the application uses the system's default density. Child windows and system
-windows will follow the main window's setting. Before calling this API, call [WindowStage.loadContent()](arkts-arkui-windowstage-i.md#loadcontent-1)
-to initialize the layout to ensure the correct call sequence.
+Sets whether the main window of the application uses the system's default density. Child windows and system windows will follow the main window's setting. Before calling this API, call [WindowStage.loadContent()](arkts-arkui-windowstage-i.md#loadcontent-1)to initialize the layout to ensure the correct call sequence.
 
 If this API is not called, the default density is not used.
 
@@ -844,6 +864,8 @@ When the default density is not used, if [setCustomDensity()](arkts-arkui-window
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WindowStage-setDefaultDensityEnabled(enabled: boolean): void--><!--Device-WindowStage-setDefaultDensityEnabled(enabled: boolean): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -858,7 +880,7 @@ When the default density is not used, if [setCustomDensity()](arkts-arkui-window
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: The main window is not created or destroyed. |
 | [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.Possible cause: The window stage is not created or destroyed. |
 
@@ -876,19 +898,21 @@ Sets the supported window modes.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-WindowStage-setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowMode>): Promise<void>--><!--Device-WindowStage-setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowMode>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | Yes | The supported modes of window. |
+| supportedWindowModes | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<bundleManager.SupportWindowMode> | Yes | The supported modes of window. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value |
 
 **Error codes:**
 
@@ -910,20 +934,22 @@ Sets the supported window modes of the main window.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WindowStage-setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowMode>, grayOutMaximizeButton: boolean): Promise<void>--><!--Device-WindowStage-setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowMode>, grayOutMaximizeButton: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | Yes | The supported modes of window. |
+| supportedWindowModes | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<bundleManager.SupportWindowMode> | Yes | The supported modes of window. |
 | grayOutMaximizeButton | boolean | Yes | Whether to gray out the window maximize button.The value true means to gray out the button, and false means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -948,6 +974,8 @@ Set the application modality of the windowStage.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-WindowStage-setWindowModal(isModal: boolean): Promise<void>--><!--Device-WindowStage-setWindowModal(isModal: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -960,14 +988,14 @@ Set the application modality of the windowStage.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. Possible cause:The window is not created or destroyed.<br>**Applicable version:** 20 and later |
@@ -986,6 +1014,8 @@ Set to automatically save the window rect.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-WindowStage-setWindowRectAutoSave(enabled: boolean): Promise<void>--><!--Device-WindowStage-setWindowRectAutoSave(enabled: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
@@ -998,7 +1028,7 @@ Set to automatically save the window rect.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1015,14 +1045,15 @@ Set to automatically save the window rect.
 setWindowRectAutoSave(enabled: boolean, isSaveBySpecifiedFlag: boolean): Promise<void>
 ```
 
-Set to automatically save the window rect and whether to enable specifiedFlag.
-Through the specifiedFlag flag, the window is marked and its rect is saved.
+Set to automatically save the window rect and whether to enable specifiedFlag.Through the specifiedFlag flag, the window is marked and its rect is saved.
 
 **Since:** 17
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
+
+<!--Device-WindowStage-setWindowRectAutoSave(enabled: boolean, isSaveBySpecifiedFlag: boolean): Promise<void>--><!--Device-WindowStage-setWindowRectAutoSave(enabled: boolean, isSaveBySpecifiedFlag: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -1037,7 +1068,7 @@ Through the specifiedFlag flag, the window is marked and its rect is saved.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

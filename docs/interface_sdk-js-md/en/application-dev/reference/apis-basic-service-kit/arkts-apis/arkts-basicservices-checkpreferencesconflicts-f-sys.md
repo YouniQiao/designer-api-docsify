@@ -20,6 +20,8 @@ Check preferences conflicts.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-print-function checkPreferencesConflicts(printerId: string, changedType: string, preferences: PrinterPreferences): Promise<string[]>--><!--Device-print-function checkPreferencesConflicts(printerId: string, changedType: string, preferences: PrinterPreferences): Promise<string[]>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -30,13 +32,13 @@ Check preferences conflicts.
 | --- | --- | --- | --- |
 | printerId | string | Yes | Indicates the printer ID.<br>Added printer ID in the system. |
 | changedType | string | Yes | Indicates the field name that was modified on the printing interface.<br>Field names set in the print preview or preferences interface. |
-| preferences | PrinterPreferences | Yes | Indicates the selected value on the printing interface.<br>The selected value on the printinginterface. |
+| preferences | [PrinterPreferences](arkts-basicservices-printerpreferences-i.md) | Yes | Indicates the selected value on the printing interface.<br>The selected value on the printinginterface. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string[]&gt; | Promise that resolves with the conflicting field names. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string[]> | Promise that resolves with the conflicting field names. |
 
 **Error codes:**
 

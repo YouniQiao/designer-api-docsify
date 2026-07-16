@@ -4,6 +4,8 @@ Sets the progress, maximum value, and color for a mask.
 
 **Since:** 10
 
+<!--Device-unnamed-declare class ProgressMask--><!--Device-unnamed-declare class ProgressMask-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -20,6 +22,8 @@ Constructs a **ProgressMask** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ProgressMask-constructor(value: number, total: number, color: ResourceColor)--><!--Device-ProgressMask-constructor(value: number, total: number, color: ResourceColor)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -28,7 +32,7 @@ Constructs a **ProgressMask** object.
 | --- | --- | --- | --- |
 | value | number | Yes | Current value of the progress mask.<br> Value range: [0.0, +∞) |
 | total | number | Yes | Maximum value of the progress mask.<br> Value range: [0.0, +∞) |
-| color | ResourceColor | Yes | Color of the progress mask. |
+| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the progress mask. |
 
 ## enableBreathingAnimation
 
@@ -36,8 +40,7 @@ Constructs a **ProgressMask** object.
 enableBreathingAnimation(value: boolean): void
 ```
 
-Sets whether to enable the breathing animation when the progress indicator is full. If this API is not set, the
-breathing animation is disabled by default.
+Sets whether to enable the breathing animation when the progress indicator is full. If this API is not set, the breathing animation is disabled by default.
 
 **Since:** 12
 
@@ -45,13 +48,15 @@ breathing animation is disabled by default.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ProgressMask-enableBreathingAnimation(value: boolean): void--><!--Device-ProgressMask-enableBreathingAnimation(value: boolean): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable the breathing animation.<br>**true**: The breathing animation isenabled.<br>**false**: The breathing halo animation is disabled. |
+| value | boolean | Yes | Whether to enable the breathing animation.<br>**true**: The breathing animation is enabled.<br>**false**: The breathing halo animation is disabled. |
 
 ## updateColor
 
@@ -67,13 +72,15 @@ Updates the color of the progress mask.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ProgressMask-updateColor(value: ResourceColor): void--><!--Device-ProgressMask-updateColor(value: ResourceColor): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Color of the progress mask. |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the progress mask. |
 
 ## updateProgress
 
@@ -88,6 +95,8 @@ Updates the progress value of the progress mask.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ProgressMask-updateProgress(value: number): void--><!--Device-ProgressMask-updateProgress(value: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

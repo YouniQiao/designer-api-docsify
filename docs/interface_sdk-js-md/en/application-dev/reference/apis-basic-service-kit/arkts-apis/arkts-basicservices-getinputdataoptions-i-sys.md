@@ -1,9 +1,10 @@
 # GetInputDataOptions (System API)
 
-Represents a set of optional parameters for
-[onGetData](../../../../reference/apis-basic-services-kit/js-apis-osAccount-sys.md#ongetdata8).
+Represents a set of optional parameters for [onGetData](../../../../reference/apis-basic-services-kit/js-apis-osAccount-sys.md#ongetdata8).
 
 **Since:** 12
+
+<!--Device-osAccount-interface GetInputDataOptions--><!--Device-osAccount-interface GetInputDataOptions-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -26,6 +27,8 @@ Challenge value, which is **undefined** by default.
 **Type:** Uint8Array
 
 **Since:** 12
+
+<!--Device-GetInputDataOptions-challenge?: Uint8Array--><!--Device-GetInputDataOptions-challenge?: Uint8Array-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 

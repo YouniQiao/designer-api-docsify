@@ -14,13 +14,13 @@ function end(id: HiTraceId): void
 
 Stops call chain trace. This API works in synchronous manner.
 
-If the given HiTrace ID is valid and is the same as the HiTrace ID in the current thread's TLS, the tracing is
-stopped and the HiTrace ID in the current thread's TLS is set to invalid.
+If the given HiTrace ID is valid and is the same as the HiTrace ID in the current thread's TLS, the tracing is stopped and the HiTrace ID in the current thread's TLS is set to invalid.
 
-If the given HiTrace ID is invalid or is not the same as the HiTrace ID in the current thread's TLS, the tracing
-fails to be stopped, and a tracing stop failure log is printed.
+If the given HiTrace ID is invalid or is not the same as the HiTrace ID in the current thread's TLS, the tracing fails to be stopped, and a tracing stop failure log is printed.
 
 **Since:** 8
+
+<!--Device-hiTraceChain-function end(id: HiTraceId): void--><!--Device-hiTraceChain-function end(id: HiTraceId): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
@@ -28,7 +28,7 @@ fails to be stopped, and a tracing stop failure log is printed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | HiTraceId | Yes | **HiTraceId** instance. |
+| id | [HiTraceId](arkts-performanceanalysis-hitraceid-i.md) | Yes | **HiTraceId** instance. |
 
 **Example**
 

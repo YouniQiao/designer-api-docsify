@@ -1,10 +1,10 @@
 # Panel
 
-In the following API examples, you must first use
-[createPanel](arkts-ime-inputmethodability-i.md#createpanel-1)
-to obtain a **Panel** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [createPanel](arkts-ime-inputmethodability-i.md#createpanel-1)to obtain a **Panel** instance, and then call the APIs using the obtained instance.
 
 **Since:** 10
+
+<!--Device-inputMethodEngine-interface Panel--><!--Device-inputMethodEngine-interface Panel-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -22,16 +22,18 @@ off(type: 'sizeUpdate', callback?: SizeUpdateCallback): void
 
 Disables listening for the panel size change. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state. When you call
-> [adjustPanelRect](arkts-ime-panel-i.md#adjustpanelrect-2)
-> to adjust the panel size, the system calculates the final value based on certain rules (for example, whether
-> the panel size exceeds the screen). This callback can be used to obtain the actual panel size to refresh the
+> **NOTE**  
+>  
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**  
+> state. When you call  
+> [adjustPanelRect](arkts-ime-panel-i.md#adjustpanelrect-2)  
+> to adjust the panel size, the system calculates the final value based on certain rules (for example, whether  
+> the panel size exceeds the screen). This callback can be used to obtain the actual panel size to refresh the  
 > panel layout.
 
 **Since:** 14
+
+<!--Device-Panel-off(type: 'sizeUpdate', callback?: SizeUpdateCallback): void--><!--Device-Panel-off(type: 'sizeUpdate', callback?: SizeUpdateCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -42,7 +44,7 @@ Disables listening for the panel size change. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sizeUpdate' | Yes | Event type, which is **'sizeUpdate'**. |
-| callback | SizeUpdateCallback | No | Callback used to return the size of the soft keyboard panel,including the width and height. |
+| callback | [SizeUpdateCallback](arkts-ime-sizeupdatecallback-t-sys.md) | No | Callback used to return the size of the soft keyboard panel,including the width and height. |
 
 **Example**
 
@@ -63,16 +65,18 @@ on(type: 'sizeUpdate', callback: SizeUpdateCallback): void
 
 Listens for the panel size change. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state. When you call
-> [adjustPanelRect](arkts-ime-panel-i.md#adjustpanelrect-2)
-> to adjust the panel size, the system calculates the final value based on certain rules (for example, whether
-> the panel size exceeds the screen). This callback can be used to obtain the actual panel size to refresh the
+> **NOTE**  
+>  
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**  
+> state. When you call  
+> [adjustPanelRect](arkts-ime-panel-i.md#adjustpanelrect-2)  
+> to adjust the panel size, the system calculates the final value based on certain rules (for example, whether  
+> the panel size exceeds the screen). This callback can be used to obtain the actual panel size to refresh the  
 > panel layout.
 
 **Since:** 14
+
+<!--Device-Panel-on(type: 'sizeUpdate', callback: SizeUpdateCallback): void--><!--Device-Panel-on(type: 'sizeUpdate', callback: SizeUpdateCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -83,7 +87,7 @@ Listens for the panel size change. This API uses an asynchronous callback to ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sizeUpdate' | Yes | Event type, which is **'sizeUpdate'**. |
-| callback | SizeUpdateCallback | Yes | Callback used to return the size of the soft keyboard panel, includingthe width and height. |
+| callback | [SizeUpdateCallback](arkts-ime-sizeupdatecallback-t-sys.md) | Yes | Callback used to return the size of the soft keyboard panel, including the width and height. |
 
 **Example**
 
@@ -105,12 +109,14 @@ setShadow(radius: number, color: string, offsetX: number, offsetY: number): void
 
 Sets the shadow effect of the input method window.
 
-> **NOTE**
->
-> Panels whose [PanelType](arkts-ime-paneltype-e.md) is **SOFT_KEYBOARD** and
+> **NOTE**  
+>  
+> Panels whose [PanelType](arkts-ime-paneltype-e.md) is **SOFT_KEYBOARD** and  
 > [PanelFlag](arkts-ime-panelflag-e.md) is **FLG_FIXED** are not supported.
 
 **Since:** 22
+
+<!--Device-Panel-setShadow(radius: double, color: string, offsetX: double, offsetY: double): void--><!--Device-Panel-setShadow(radius: double, color: string, offsetX: double, offsetY: double): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -121,9 +127,9 @@ Sets the shadow effect of the input method window.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | radius | number | Yes | Radius of the shadow. The value is a floating-point number greater than or equal to 0.0, in px. The value **0.0** means that the shadow is disabled for the window borders. |
-| color | string | Yes | Color of the shadow. The value is a hexadecimal RGB or ARGB color code and is caseinsensitive, for example, `#000000` or `#FF000000`. |
-| offsetX | number | Yes | Offset of the shadow along the x-axis, in pixels. The value is a floating-pointnumber. |
-| offsetY | number | Yes | Offset of the shadow along the y-axis, in pixels. The value is a floating-pointnumber. |
+| color | string | Yes | Color of the shadow. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, `#000000` or `#FF000000`. |
+| offsetX | number | Yes | Offset of the shadow along the x-axis, in pixels. The value is a floating-point number. |
+| offsetY | number | Yes | Offset of the shadow along the y-axis, in pixels. The value is a floating-point number. |
 
 **Error codes:**
 

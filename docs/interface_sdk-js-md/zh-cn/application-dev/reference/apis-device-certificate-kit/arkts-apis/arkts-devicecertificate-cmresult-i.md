@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-certificateManager-export interface CMResult--><!--Device-certificateManager-export interface CMResult-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
+
+## 导入模块
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+```
 
 ## appUidList
 
@@ -17,6 +25,8 @@ appUidList?: Array<string>
 **类型：** Array<string>
 
 **起始版本：** 11
+
+<!--Device-CMResult-appUidList?: Array<string>--><!--Device-CMResult-appUidList?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -32,6 +42,8 @@ certInfo?: CertInfo
 
 **起始版本：** 11
 
+<!--Device-CMResult-certInfo?: CertInfo--><!--Device-CMResult-certInfo?: CertInfo-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## certList
@@ -45,6 +57,8 @@ certList?: Array<CertAbstract>
 **类型：** Array<CertAbstract>
 
 **起始版本：** 11
+
+<!--Device-CMResult-certList?: Array<CertAbstract>--><!--Device-CMResult-certList?: Array<CertAbstract>-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -60,6 +74,8 @@ credential?: Credential
 
 **起始版本：** 11
 
+<!--Device-CMResult-credential?: Credential--><!--Device-CMResult-credential?: Credential-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## credentialDetailList
@@ -73,6 +89,8 @@ credentialDetailList?: Array<Credential>
 **类型：** Array<Credential>
 
 **起始版本：** 22
+
+<!--Device-CMResult-credentialDetailList?: Array<Credential>--><!--Device-CMResult-credentialDetailList?: Array<Credential>-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -88,6 +106,8 @@ credentialList?: Array<CredentialAbstract>
 
 **起始版本：** 11
 
+<!--Device-CMResult-credentialList?: Array<CredentialAbstract>--><!--Device-CMResult-credentialList?: Array<CredentialAbstract>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## outData
@@ -101,6 +121,8 @@ outData?: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 11
+
+<!--Device-CMResult-outData?: Uint8Array--><!--Device-CMResult-outData?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -116,6 +138,8 @@ uri?: string
 
 **起始版本：** 11
 
+<!--Device-CMResult-uri?: string--><!--Device-CMResult-uri?: string-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## uriList
@@ -124,14 +148,15 @@ uri?: string
 uriList?: Array<string>
 ```
 
-表示证书URI列表。
-26.0.0
+表示证书URI列表。26.0.0
 
 **类型：** Array<string>
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CMResult-uriList?: Array<string>--><!--Device-CMResult-uriList?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 

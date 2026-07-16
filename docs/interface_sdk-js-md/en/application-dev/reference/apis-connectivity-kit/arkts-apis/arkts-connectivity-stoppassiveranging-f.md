@@ -14,14 +14,15 @@ function stopPassiveRanging(handle: number, capabilityType: RangingTypes): void
 
 Stops passive ranging mode.
 
-Stops the passive ranging broadcast and cleans up associated resources
-based on the specified handle and ranging capability type.
+Stops the passive ranging broadcast and cleans up associated resources based on the specified handle and ranging capability type.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ranging-function stopPassiveRanging(handle: int, capabilityType: RangingTypes): void--><!--Device-ranging-function stopPassiveRanging(handle: int, capabilityType: RangingTypes): void-End-->
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
@@ -30,7 +31,7 @@ based on the specified handle and ranging capability type.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | handle | number | Yes | Indicates the handle number of ranging monitoring. |
-| capabilityType | RangingTypes | Yes | Indicates the capability type for ranging. |
+| capabilityType | [RangingTypes](arkts-connectivity-rangingtypes-e.md) | Yes | Indicates the capability type for ranging. |
 
 **Error codes:**
 

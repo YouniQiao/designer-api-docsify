@@ -4,6 +4,8 @@ Defines the OS account sub-profile manager class.
 
 **Since:** 26.0.0
 
+<!--Device-osAccount-interface OsAccountSubProfileManager--><!--Device-osAccount-interface OsAccountSubProfileManager-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Creates an OS account sub-profile.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OsAccountSubProfileManager-createOsAccountSubProfile(osAccountLocalId: int): Promise<OsAccountSubProfile>--><!--Device-OsAccountSubProfileManager-createOsAccountSubProfile(osAccountLocalId: int): Promise<OsAccountSubProfile>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -42,7 +46,7 @@ Creates an OS account sub-profile.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OsAccountSubProfile&gt; | Promise used to return the created sub-profile. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<OsAccountSubProfile> | Promise used to return the created sub-profile. |
 
 **Error codes:**
 
@@ -53,7 +57,7 @@ Creates an OS account sub-profile.
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 | [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | The OS account not found. |
 | [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted OS account. |
-| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target OS account is beingoperated. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target OS account is being operated. |
 | [12300402](../../apis-basic-services-kit/errorcode-account.md#12300402-number-of-os-account-subprofiles-has-reached-the-upper-limit) | The number of sub-profiles under the OS account has reached limit. |
 
 **Example**
@@ -92,6 +96,8 @@ Deletes an OS account sub-profile.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OsAccountSubProfileManager-deleteOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<void>--><!--Device-OsAccountSubProfileManager-deleteOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -107,7 +113,7 @@ Deletes an OS account sub-profile.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -116,7 +122,7 @@ Deletes an OS account sub-profile.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The OS account or sub-profile is beingoperated. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The OS account or sub-profile is being operated. |
 | [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-os-account-subprofile-not-found) | Sub-profile not found. |
 | [12300403](../../apis-basic-services-kit/errorcode-account.md#12300403-restricted-os-account-subprofile) | Restricted sub-profile cannot be deleted. |
 | [12300404](../../apis-basic-services-kit/errorcode-account.md#12300404-foreground-subprofile-of-the-os-account-cannot-be-deleted) | The foreground sub-profile cannot be deleted. |
@@ -156,6 +162,8 @@ Gets the foreground sub-profile ID of the OS account to which the caller belongs
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(): Promise<int>--><!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(): Promise<int>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -164,7 +172,7 @@ Gets the foreground sub-profile ID of the OS account to which the caller belongs
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the id of the OS account foreground sub-profile. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the id of the OS account foreground sub-profile. |
 
 **Error codes:**
 
@@ -205,6 +213,8 @@ Gets the foreground sub-profile ID of a specified OS account.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(osAccountLocalId: int): Promise<int>--><!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(osAccountLocalId: int): Promise<int>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -219,7 +229,7 @@ Gets the foreground sub-profile ID of a specified OS account.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the id of the OS account foreground sub-profile. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the id of the OS account foreground sub-profile. |
 
 **Error codes:**
 
@@ -264,6 +274,8 @@ Obtains the local ID of the OS account to which a sub-profile belongs.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OsAccountSubProfileManager-getOsAccountLocalIdForSubProfile(subProfileId: int): Promise<int>--><!--Device-OsAccountSubProfileManager-getOsAccountLocalIdForSubProfile(subProfileId: int): Promise<int>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -278,7 +290,7 @@ Obtains the local ID of the OS account to which a sub-profile belongs.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the local ID of the OS account to which a sub-profile belongs. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the local ID of the OS account to which a sub-profile belongs. |
 
 **Error codes:**
 
@@ -324,6 +336,8 @@ Gets the sub-profile object information of the OS account to which the caller be
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OsAccountSubProfileManager-getOsAccountSubProfile(subProfileId: int): Promise<OsAccountSubProfile>--><!--Device-OsAccountSubProfileManager-getOsAccountSubProfile(subProfileId: int): Promise<OsAccountSubProfile>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -338,7 +352,7 @@ Gets the sub-profile object information of the OS account to which the caller be
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OsAccountSubProfile&gt; | Promise used to return the sub-profile object information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<OsAccountSubProfile> | Promise used to return the sub-profile object information. |
 
 **Error codes:**
 
@@ -385,6 +399,8 @@ Gets the sub-profile object information of the specified OS account.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OsAccountSubProfileManager-getOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<OsAccountSubProfile>--><!--Device-OsAccountSubProfileManager-getOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<OsAccountSubProfile>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -400,7 +416,7 @@ Gets the sub-profile object information of the specified OS account.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OsAccountSubProfile&gt; | Promise used to return the sub-profile object information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<OsAccountSubProfile> | Promise used to return the sub-profile object information. |
 
 **Error codes:**
 
@@ -448,6 +464,8 @@ Gets the ID list of sub-profile of the OS account to which the caller belongs.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OsAccountSubProfileManager-getOsAccountSubProfileIds(): Promise<int[]>--><!--Device-OsAccountSubProfileManager-getOsAccountSubProfileIds(): Promise<int[]>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -456,7 +474,7 @@ Gets the ID list of sub-profile of the OS account to which the caller belongs.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number[]&gt; | Promise used to return the ID list of sub-profile. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number[]> | Promise used to return the ID list of sub-profile. |
 
 **Error codes:**
 
@@ -499,6 +517,8 @@ Gets the ID list of sub-profile of a specified OS account.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OsAccountSubProfileManager-getOsAccountSubProfileIds(osAccountLocalId: int): Promise<int[]>--><!--Device-OsAccountSubProfileManager-getOsAccountSubProfileIds(osAccountLocalId: int): Promise<int[]>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -513,7 +533,7 @@ Gets the ID list of sub-profile of a specified OS account.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number[]&gt; | Promise used to return the ID list of sub-profile. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number[]> | Promise used to return the ID list of sub-profile. |
 
 **Error codes:**
 
@@ -558,6 +578,8 @@ Unsubscribes from OS account sub-profile events.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OsAccountSubProfileManager-offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): void--><!--Device-OsAccountSubProfileManager-offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -566,7 +588,7 @@ Unsubscribes from OS account sub-profile events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;OsAccountSubProfileEventData&gt; | No | Callback to be unsubscribed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<OsAccountSubProfileEventData> | No | Callback to be unsubscribed. |
 
 **Error codes:**
 
@@ -604,6 +626,12 @@ Subscribes to OS account sub-profile events.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OsAccountSubProfileManager-onOsAccountSubProfileEvent(
+      events: OsAccountSubProfileEvent[],
+      callback: Callback<OsAccountSubProfileEventData>): void--><!--Device-OsAccountSubProfileManager-onOsAccountSubProfileEvent(
+      events: OsAccountSubProfileEvent[],
+      callback: Callback<OsAccountSubProfileEventData>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -612,8 +640,8 @@ Subscribes to OS account sub-profile events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| events | OsAccountSubProfileEvent[] | Yes | Array of events to be subscribed |
-| callback | Callback&lt;OsAccountSubProfileEventData&gt; | Yes | Callback invoked when an event occurs. |
+| events | [OsAccountSubProfileEvent](arkts-basicservices-osaccountsubprofileevent-e-sys.md)[] | Yes | Array of events to be subscribed |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<OsAccountSubProfileEventData> | Yes | Callback invoked when an event occurs. |
 
 **Error codes:**
 
@@ -657,6 +685,8 @@ Switches to an OS account sub-profile.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OsAccountSubProfileManager-switchOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<void>--><!--Device-OsAccountSubProfileManager-switchOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -672,7 +702,7 @@ Switches to an OS account sub-profile.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -681,10 +711,10 @@ Switches to an OS account sub-profile.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The OS account or sub-profile is beingoperated. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The OS account or sub-profile is being operated. |
 | [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-os-account-subprofile-not-found) | Sub-profile not found. |
 | [12300403](../../apis-basic-services-kit/errorcode-account.md#12300403-restricted-os-account-subprofile) | Restricted sub-profile cannot be switched to foreground. |
-| [12300405](../../apis-basic-services-kit/errorcode-account.md#12300405-foreground-subprofile-with-a-loggedin-distributed-account-cannot-be-directly-switched-to-the-background) | The foreground sub-profile bound with a logged-in distributed accountcannot be directly switched to background. |
+| [12300405](../../apis-basic-services-kit/errorcode-account.md#12300405-foreground-subprofile-with-a-loggedin-distributed-account-cannot-be-directly-switched-to-the-background) | The foreground sub-profile bound with a logged-in distributed account cannot be directly switched to background. |
 
 **Example**
 

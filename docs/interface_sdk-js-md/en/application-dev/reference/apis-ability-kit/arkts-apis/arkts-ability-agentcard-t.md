@@ -12,6 +12,8 @@ The AgentCard information describes the basic information and capabilities provi
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-common-export type AgentCard = _AgentCard--><!--Device-common-export type AgentCard = _AgentCard-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **Property type:** _AgentCard

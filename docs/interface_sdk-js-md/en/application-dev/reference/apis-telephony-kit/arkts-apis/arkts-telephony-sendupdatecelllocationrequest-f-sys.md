@@ -18,6 +18,8 @@ Actively requests to update location information.
 
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-radio-function sendUpdateCellLocationRequest(slotId: int, callback: AsyncCallback<void>): void--><!--Device-radio-function sendUpdateCellLocationRequest(slotId: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Actively requests to update location information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slotindex number supported by the device. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of sendUpdateCellLocationRequest. |
+| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of sendUpdateCellLocationRequest. |
 
 **Error codes:**
 
@@ -70,6 +72,8 @@ Actively requests to update location information.
 
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-radio-function sendUpdateCellLocationRequest(slotId?: int): Promise<void>--><!--Device-radio-function sendUpdateCellLocationRequest(slotId?: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -78,13 +82,13 @@ Actively requests to update location information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | No | Indicates the card slot index number, ranging from 0 to the maximum card slotindex number supported by the device. |
+| slotId | number | No | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the sendUpdateCellLocationRequest. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the sendUpdateCellLocationRequest. |
 
 **Error codes:**
 
@@ -125,6 +129,8 @@ Actively requests to update location information.
 
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-radio-function sendUpdateCellLocationRequest(callback: AsyncCallback<void>): void--><!--Device-radio-function sendUpdateCellLocationRequest(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -133,7 +139,7 @@ Actively requests to update location information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of sendUpdateCellLocationRequest. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of sendUpdateCellLocationRequest. |
 
 **Error codes:**
 

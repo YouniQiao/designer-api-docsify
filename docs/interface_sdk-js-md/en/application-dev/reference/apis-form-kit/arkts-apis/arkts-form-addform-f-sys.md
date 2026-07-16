@@ -22,6 +22,8 @@ You can use this method to create a theme form.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-formHost-function addForm(want: Want): Promise<formInfo.RunningFormInfo>--><!--Device-formHost-function addForm(want: Want): Promise<formInfo.RunningFormInfo>-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -30,13 +32,13 @@ You can use this method to create a theme form.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Indicates want of the form. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Indicates want of the form. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;formInfo.RunningFormInfo&gt; | Return the form info. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<formInfo.RunningFormInfo> | Return the form info. |
 
 **Error codes:**
 

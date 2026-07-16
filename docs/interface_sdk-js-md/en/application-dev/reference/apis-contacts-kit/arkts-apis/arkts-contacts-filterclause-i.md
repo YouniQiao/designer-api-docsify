@@ -1,9 +1,10 @@
 # FilterClause
 
-Defines the contact filter criteria. Multiple filter criteria are ORed. If the parameter is an array, the array can
-contain a maximum of three elements.
+Defines the contact filter criteria. Multiple filter criteria are ORed. If the parameter is an array, the array can contain a maximum of three elements.
 
 **Since:** 15
+
+<!--Device-contact-interface FilterClause--><!--Device-contact-interface FilterClause-End-->
 
 **System capability:** SystemCapability.Applications.Contacts
 
@@ -27,6 +28,8 @@ Contact data filter item.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-FilterClause-dataItem?: DataFilter--><!--Device-FilterClause-dataItem?: DataFilter-End-->
+
 **System capability:** SystemCapability.Applications.Contacts
 
 ## focusModeList
@@ -42,6 +45,8 @@ Focus mode list.
 **Since:** 15
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-FilterClause-focusModeList?: Array<FilterOptions>--><!--Device-FilterClause-focusModeList?: Array<FilterOptions>-End-->
 
 **System capability:** SystemCapability.Applications.Contacts
 
@@ -59,6 +64,8 @@ Contact ID.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-FilterClause-id?: Array<FilterOptions>--><!--Device-FilterClause-id?: Array<FilterOptions>-End-->
+
 **System capability:** SystemCapability.Applications.Contacts
 
 ## name
@@ -74,6 +81,8 @@ Contact name.
 **Since:** 15
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-FilterClause-name?: Array<FilterOptions>--><!--Device-FilterClause-name?: Array<FilterOptions>-End-->
 
 **System capability:** SystemCapability.Applications.Contacts
 

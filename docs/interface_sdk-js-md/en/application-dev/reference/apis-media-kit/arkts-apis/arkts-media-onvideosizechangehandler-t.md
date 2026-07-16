@@ -10,6 +10,8 @@ Describes the callback invoked for the video size change event.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-media-type OnVideoSizeChangeHandler = (width: int, height: int) => void--><!--Device-media-type OnVideoSizeChangeHandler = (width: int, height: int) => void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 **Parameters:**

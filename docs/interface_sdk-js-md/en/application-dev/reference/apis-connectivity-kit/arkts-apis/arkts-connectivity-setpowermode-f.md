@@ -20,13 +20,15 @@ Set the current Wi-Fi power mode.
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT_EXT
 
+<!--Device-wifiManagerExt-function setPowerMode(mode: PowerMode): void--><!--Device-wifiManagerExt-function setPowerMode(mode: PowerMode): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.AP.Extension
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | PowerMode | Yes |  |
+| mode | [PowerMode](arkts-connectivity-powermode-e.md) | Yes |  |
 
 **Error codes:**
 

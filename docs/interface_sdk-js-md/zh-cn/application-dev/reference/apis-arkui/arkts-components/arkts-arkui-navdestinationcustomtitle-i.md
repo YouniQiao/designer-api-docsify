@@ -4,6 +4,8 @@ NavDestination自定义标题。
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare interface NavDestinationCustomTitle--><!--Device-unnamed-declare interface NavDestinationCustomTitle-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## builder
@@ -18,7 +20,9 @@ builder: CustomBuilder
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NavDestinationCustomTitle-builder: CustomBuilder--><!--Device-NavDestinationCustomTitle-builder: CustomBuilder-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,7 +40,9 @@ height: TitleHeight | Length
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NavDestinationCustomTitle-height: TitleHeight | Length--><!--Device-NavDestinationCustomTitle-height: TitleHeight | Length-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

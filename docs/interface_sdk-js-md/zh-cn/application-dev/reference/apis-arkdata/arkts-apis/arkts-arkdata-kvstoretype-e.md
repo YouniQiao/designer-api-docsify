@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-distributedKVStore-enum KVStoreType--><!--Device-distributedKVStore-enum KVStoreType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## DEVICE_COLLABORATION
@@ -18,6 +20,8 @@ DEVICE_COLLABORATION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KVStoreType-DEVICE_COLLABORATION--><!--Device-KVStoreType-DEVICE_COLLABORATION-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## SINGLE_VERSION
@@ -31,6 +35,8 @@ SINGLE_VERSION
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KVStoreType-SINGLE_VERSION--><!--Device-KVStoreType-SINGLE_VERSION-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 

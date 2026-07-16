@@ -4,6 +4,8 @@ Provides information for history item in BackForwardList.
 
 **Since:** 9
 
+<!--Device-webview-interface HistoryItem--><!--Device-webview-interface HistoryItem-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Original request url of this history item.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HistoryItem-historyRawUrl: string--><!--Device-HistoryItem-historyRawUrl: string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## historyUrl
@@ -41,6 +45,8 @@ Url of this history item.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-HistoryItem-historyUrl: string--><!--Device-HistoryItem-historyUrl: string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -58,6 +64,8 @@ Pixelmap of icon.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HistoryItem-icon: image.PixelMap--><!--Device-HistoryItem-icon: image.PixelMap-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## title
@@ -73,6 +81,8 @@ Title of this history item.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-HistoryItem-title: string--><!--Device-HistoryItem-title: string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

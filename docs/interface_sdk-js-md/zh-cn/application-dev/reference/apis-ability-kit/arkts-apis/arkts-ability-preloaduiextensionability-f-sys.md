@@ -1,19 +1,26 @@
 # preloadUIExtensionAbility（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
+```
+
 ## preloadUIExtensionAbility
 
 ```TypeScript
 function preloadUIExtensionAbility(want: Want): Promise<number>
 ```
 
-预加载指定的[UIExtensionAbility](arkts-ability-uiextensionability-c.md)并返回预加载UIExtensionAbility实例
-的ID。使用Promise异步回调。
+预加载指定的[UIExtensionAbility](arkts-ability-uiextensionability-c.md)并返回预加载UIExtensionAbility实例的ID。使用Promise异步回调。
 
 **起始版本：** 23
 
 **需要权限：** ohos.permission.PRELOAD_UI_EXTENSION_ABILITY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-abilityManager-function preloadUIExtensionAbility(want: Want): Promise<int>--><!--Device-abilityManager-function preloadUIExtensionAbility(want: Want): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -23,13 +30,13 @@ function preloadUIExtensionAbility(want: Want): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | Want | 是 | 启动Ability的Want信息。 |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 启动Ability的Want信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回预加载的[UIExtensionAbility](arkts-ability-uiextensionability-c.md)的ID，用于后续清除或管理操作。 |
+| Promise<number> | Promise对象，返回预加载的[UIExtensionAbility](arkts-ability-uiextensionability-c.md)的ID，用于后续清除或管理操作。 |
 
 **错误码：**
 

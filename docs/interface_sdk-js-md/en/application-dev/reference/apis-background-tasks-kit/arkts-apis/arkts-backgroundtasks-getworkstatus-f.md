@@ -18,6 +18,8 @@ Obtains the information a deferred task. This API uses an asynchronous callback 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-workScheduler-function getWorkStatus(workId: int, callback: AsyncCallback<WorkInfo>): void--><!--Device-workScheduler-function getWorkStatus(workId: int, callback: AsyncCallback<WorkInfo>): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 **Parameters:**
@@ -25,7 +27,7 @@ Obtains the information a deferred task. This API uses an asynchronous callback 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | workId | number | Yes | ID of the deferred task. |
-| callback | AsyncCallback&lt;WorkInfo&gt; | Yes | Callback used to return the result. If **workId** is valid, the taskinformation obtained from WorkSchedulerService is returned. Otherwise, an exception is thrown. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<WorkInfo> | Yes | Callback used to return the result. If **workId** is valid, the task information obtained from WorkSchedulerService is returned. Otherwise, an exception is thrown. |
 
 **Error codes:**
 
@@ -66,6 +68,8 @@ Obtains the information a deferred task. This API uses a promise to return the r
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-workScheduler-function getWorkStatus(workId: int): Promise<WorkInfo>--><!--Device-workScheduler-function getWorkStatus(workId: int): Promise<WorkInfo>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 **Parameters:**
@@ -78,7 +82,7 @@ Obtains the information a deferred task. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WorkInfo&gt; | Promise used to return the result. If **workId** is valid, the task informationobtained from WorkSchedulerService is returned. Otherwise, an exception is thrown. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<WorkInfo> | Promise used to return the result. If **workId** is valid, the task information obtained from WorkSchedulerService is returned. Otherwise, an exception is thrown. |
 
 **Error codes:**
 

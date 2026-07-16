@@ -12,14 +12,15 @@ import { bundleManager } from '@kit.AbilityKit';
 function getApplicationLabel(bundleName: string, appIndex: number): Promise<string>
 ```
 
-Obtains the name of an application with the specified package name and clone index.
-This API uses a promise to return the result.
+Obtains the name of an application with the specified package name and clone index.This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-bundleManager-function getApplicationLabel(bundleName: string, appIndex: int): Promise<string>--><!--Device-bundleManager-function getApplicationLabel(bundleName: string, appIndex: int): Promise<string>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -34,7 +35,7 @@ This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the result. If the operation is successful, the applicationname is returned. Otherwise, an error object is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the result. If the operation is successful, the application name is returned. Otherwise, an error object is returned. |
 
 **Error codes:**
 

@@ -1,15 +1,16 @@
 # X963KdfSpec
 
-Defines the child class of [KdfSpec](arkts-cryptoarchitecture-kdfspec-i.md). It is a parameter for X963KDF key derivation
-function (KDF).
+Defines the child class of [KdfSpec](arkts-cryptoarchitecture-kdfspec-i.md). It is a parameter for X963KDF key derivation function (KDF).
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > **key** is the original key material entered by the user.
 
 **Inheritance/Implementation:** X963KdfSpec extends [KdfSpec](arkts-cryptoarchitecture-kdfspec-i.md)
 
 **Since:** 22
+
+<!--Device-cryptoFramework-interface X963KdfSpec extends KdfSpec--><!--Device-cryptoFramework-interface X963KdfSpec extends KdfSpec-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
@@ -33,6 +34,8 @@ Shared information.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-X963KdfSpec-info: Uint8Array--><!--Device-X963KdfSpec-info: Uint8Array-End-->
+
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
 ## key
@@ -49,6 +52,8 @@ Key material.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-X963KdfSpec-key: string | Uint8Array--><!--Device-X963KdfSpec-key: string | Uint8Array-End-->
+
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
 ## keySize
@@ -57,14 +62,15 @@ Key material.
 keySize: number
 ```
 
-Length of the derived key, in bytes.
-The value must be a positive integer.
+Length of the derived key, in bytes.The value must be a positive integer.
 
 **Type:** number
 
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-X963KdfSpec-keySize: int--><!--Device-X963KdfSpec-keySize: int-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 

@@ -4,6 +4,8 @@ Indicates the MMI code result.
 
 **Since:** 9
 
+<!--Device-call-export interface MmiCodeResults--><!--Device-call-export interface MmiCodeResults-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Indicates the message of MMI code.
 
 **Since:** 9
 
+<!--Device-MmiCodeResults-message: string--><!--Device-MmiCodeResults-message: string-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Indicates the result of MMI code.
 **Type:** MmiCodeResult
 
 **Since:** 9
+
+<!--Device-MmiCodeResults-result: MmiCodeResult--><!--Device-MmiCodeResults-result: MmiCodeResult-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 

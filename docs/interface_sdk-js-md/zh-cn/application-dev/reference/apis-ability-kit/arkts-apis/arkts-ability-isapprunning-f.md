@@ -1,5 +1,11 @@
 # isAppRunning
 
+## 导入模块
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+```
+
 ## isAppRunning
 
 ```TypeScript
@@ -8,13 +14,15 @@ function isAppRunning(bundleName: string, appCloneIndex?: number): Promise<boole
 
 判断所有用户下指定包名和分身应用索引的应用是否正在运行。使用Promise异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 如果当前用户未安装该应用，则返回错误码16000073；如果当前用户已安装该应用，则判断所有用户下该指定应用是否正在运行。
 
 **起始版本：** 14
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
+
+<!--Device-appManager-function isAppRunning(bundleName: string, appCloneIndex?: int): Promise<boolean>--><!--Device-appManager-function isAppRunning(bundleName: string, appCloneIndex?: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -29,7 +37,7 @@ function isAppRunning(bundleName: string, appCloneIndex?: number): Promise<boole
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示至少存在一个用户正在运行指定包名和分身应用索引的应用，返回false表示所有用户下指定包名和分身应用索引的应用都没有运行。 |
+| Promise<boolean> | Promise对象。返回true表示至少存在一个用户正在运行指定包名和分身应用索引的应用，返回false表示所有用户下指定包名和分身应用索引的应用都没有运行。 |
 
 **错误码：**
 

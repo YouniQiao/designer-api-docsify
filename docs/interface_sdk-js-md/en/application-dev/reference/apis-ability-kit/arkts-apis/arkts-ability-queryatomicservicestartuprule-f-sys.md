@@ -12,14 +12,13 @@ import { abilityManager } from '@kit.AbilityKit';
 function queryAtomicServiceStartupRule(context: Context, appId: string): Promise<AtomicServiceStartupRule>
 ```
 
-Obtains the rule for launching an
-[EmbeddableUIAbility](arkts-ability-embeddableuiability-c.md) in embedded mode. This API
-uses a promise to return the result.
-This API can be properly called only on phones and tablets. On other devices, it returns the error code 801.
+Obtains the rule for launching an [EmbeddableUIAbility](arkts-ability-embeddableuiability-c.md) in embedded mode. This API uses a promise to return the result.This API can be properly called only on phones and tablets. On other devices, it returns the error code 801.
 
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-abilityManager-function queryAtomicServiceStartupRule(context: Context, appId: string): Promise<AtomicServiceStartupRule>--><!--Device-abilityManager-function queryAtomicServiceStartupRule(context: Context, appId: string): Promise<AtomicServiceStartupRule>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -29,14 +28,14 @@ This API can be properly called only on phones and tablets. On other devices, it
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the caller.<br>Note: Currently, only[UIAbilityContext](arkts-ability-uiabilitycontext-c.md) is supported. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the caller.<br>Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) is supported. |
 | appId | string | Yes | Unique ID of the application, which is allocated by the cloud. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AtomicServiceStartupRule&gt; | Promise used to return the rule for launching the embedded atomicservice. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AtomicServiceStartupRule> | Promise used to return the rule for launching the embedded atomic service. |
 
 **Error codes:**
 

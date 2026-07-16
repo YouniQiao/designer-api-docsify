@@ -1,11 +1,12 @@
 # BlanklessFrameInterpolationInfo
 
-Defines the frame interpolation state information in the scenario where the ArkWeb blankless loading
-optimization is enabled.
+Defines the frame interpolation state information in the scenario where the ArkWeb blankless loading optimization is enabled.
 
 Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
 **Since:** 23
+
+<!--Device-webview-interface BlanklessFrameInterpolationInfo--><!--Device-webview-interface BlanklessFrameInterpolationInfo-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -31,6 +32,8 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BlanklessFrameInterpolationInfo-key: string--><!--Device-BlanklessFrameInterpolationInfo-key: string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## reason
@@ -48,6 +51,8 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BlanklessFrameInterpolationInfo-reason: string--><!--Device-BlanklessFrameInterpolationInfo-reason: string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -67,6 +72,8 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BlanklessFrameInterpolationInfo-state: BlanklessFrameInterpolationState--><!--Device-BlanklessFrameInterpolationInfo-state: BlanklessFrameInterpolationState-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## timestamp
@@ -77,15 +84,15 @@ timestamp: number
 
 Time when a frame is interpolated or removed.
 
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
-The value must be an integer.
-<br>Unit: ms.
+Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.The value must be an integer.<br>Unit: ms.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BlanklessFrameInterpolationInfo-timestamp: number--><!--Device-BlanklessFrameInterpolationInfo-timestamp: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

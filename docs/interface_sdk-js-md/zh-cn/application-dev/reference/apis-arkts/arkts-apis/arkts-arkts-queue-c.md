@@ -4,7 +4,15 @@ Queue的特点是先进先出，在尾部增加元素，在头部删除元素。
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare class Queue<T>--><!--Device-unnamed-declare class Queue<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { Queue } from '@kit.ArkTS';
+```
 
 ## [Symbol.iterator]
 
@@ -16,7 +24,9 @@ Queue的特点是先进先出，在尾部增加元素，在头部删除元素。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Queue-[Symbol.iterator](): IterableIterator<T>--><!--Device-Queue-[Symbol.iterator](): IterableIterator<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -24,7 +34,7 @@ Queue的特点是先进先出，在尾部增加元素，在头部删除元素。
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
+| IterableIterator<T> | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
 
 **错误码：**
 
@@ -76,7 +86,9 @@ add(element: T): boolean
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Queue-add(element: T): boolean--><!--Device-Queue-add(element: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -128,7 +140,9 @@ Queue的构造函数。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Queue-constructor()--><!--Device-Queue-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -157,7 +171,9 @@ forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisAr
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Queue-forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisArg?: Object): void--><!--Device-Queue-forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisArg?: Object): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -165,7 +181,7 @@ forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisAr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, Queue?: Queue&lt;T&gt;) =&gt; void | 是 | 回调函数。 |
+| callbackFn | (value: T, index?: number, Queue?: Queue<T>) => void | 是 | 回调函数。 |
 | thisArg | Object | 否 | callbackfn被调用时用作this值，默认值为当前实例对象。 |
 
 **错误码：**
@@ -203,7 +219,9 @@ getFirst(): T
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Queue-getFirst(): T--><!--Device-Queue-getFirst(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -244,7 +262,9 @@ pop(): T
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Queue-pop(): T--><!--Device-Queue-pop(): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -288,7 +308,9 @@ Queue的元素个数。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Queue-length: number--><!--Device-Queue-length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

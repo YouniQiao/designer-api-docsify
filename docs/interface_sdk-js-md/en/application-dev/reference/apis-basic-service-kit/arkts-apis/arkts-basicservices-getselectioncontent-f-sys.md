@@ -16,6 +16,8 @@ Obtains this selected text content. This API uses a promise to return the result
 
 **Since:** 24
 
+<!--Device-selectionManager-function getSelectionContent(): Promise<string>--><!--Device-selectionManager-function getSelectionContent(): Promise<string>-End-->
+
 **System capability:** SystemCapability.SelectionInput.Selection
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Obtains this selected text content. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the content of the selected text. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the content of the selected text. |
 
 **Error codes:**
 

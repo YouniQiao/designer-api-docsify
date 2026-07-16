@@ -6,6 +6,8 @@ Property elements that support the file queries.
 
 **废弃版本：** 23
 
+<!--Device-fileAccess-enum FileKey--><!--Device-fileAccess-enum FileKey-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -23,6 +25,8 @@ The key represents the file name.
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileKey-DISPLAY_NAME = 'display_name'--><!--Device-FileKey-DISPLAY_NAME = 'display_name'-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -42,6 +46,8 @@ The key represents the date of the file creation.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileKey-DATE_ADDED = 'date_added'--><!--Device-FileKey-DATE_ADDED = 'date_added'-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -59,6 +65,8 @@ The key represents the modify date of the file.
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileKey-DATE_MODIFIED = 'date_modified'--><!--Device-FileKey-DATE_MODIFIED = 'date_modified'-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -78,6 +86,8 @@ The key represents the relative path.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileKey-RELATIVE_PATH = 'relative_path'--><!--Device-FileKey-RELATIVE_PATH = 'relative_path'-End-->
+
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 **系统接口：** 此接口为系统接口。
@@ -95,6 +105,8 @@ The key represents the file size.
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileKey-FILE_SIZE = 'size'--><!--Device-FileKey-FILE_SIZE = 'size'-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

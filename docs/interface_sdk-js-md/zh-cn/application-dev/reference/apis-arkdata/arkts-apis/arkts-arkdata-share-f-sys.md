@@ -1,5 +1,11 @@
 # share（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { cloudData } from '@kit.ArkData';
+```
+
 ## share
 
 ```TypeScript
@@ -14,6 +20,16 @@ function share(
 
 **起始版本：** 11
 
+<!--Device-sharing-function share(
+      sharingResource: string,
+      participants: Array<Participant>,
+      callback: AsyncCallback<Result<Array<Result<Participant>>>>
+    ): void--><!--Device-sharing-function share(
+      sharingResource: string,
+      participants: Array<Participant>,
+      callback: AsyncCallback<Result<Array<Result<Participant>>>>
+    ): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **系统接口：** 此接口为系统接口。
@@ -23,8 +39,8 @@ function share(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sharingResource | string | 是 | 端云共享数据的资源标识。 |
-| participants | Array&lt;Participant&gt; | 是 | 端云共享的参与者。 |
-| callback | AsyncCallback&lt;Result&lt;Array&lt;Result&lt;Participant&gt;&gt;&gt;&gt; | 是 | 回调函数。返回端云共享的结果。 |
+| participants | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Participant> | 是 | 端云共享的参与者。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Result<Array<Result<Participant>>>> | 是 | 回调函数。返回端云共享的结果。 |
 
 **错误码：**
 
@@ -77,6 +93,14 @@ function share(
 
 **起始版本：** 11
 
+<!--Device-sharing-function share(
+      sharingResource: string,
+      participants: Array<Participant>
+    ): Promise<Result<Array<Result<Participant>>>>--><!--Device-sharing-function share(
+      sharingResource: string,
+      participants: Array<Participant>
+    ): Promise<Result<Array<Result<Participant>>>>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **系统接口：** 此接口为系统接口。
@@ -86,13 +110,13 @@ function share(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sharingResource | string | 是 | 端云共享数据的资源标识。 |
-| participants | Array&lt;Participant&gt; | 是 | 端云共享的参与者。 |
+| participants | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Participant> | 是 | 端云共享的参与者。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;Result&lt;Participant&gt;&gt;&gt;&gt; | Promise对象，返回端云共享的结果。 |
+| Promise<Result<Array<Result<Participant>>>> | Promise对象，返回端云共享的结果。 |
 
 **错误码：**
 

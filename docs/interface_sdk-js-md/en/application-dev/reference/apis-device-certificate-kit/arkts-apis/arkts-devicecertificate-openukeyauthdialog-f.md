@@ -12,17 +12,15 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 function openUkeyAuthDialog(context: common.Context, ukeyAuthRequest: UkeyAuthRequest): Promise<void>
 ```
 
-Opens the PIN authentication dialog box of the USB Key credential. On the displayed page, the user can enter the
-PIN to
-authorize the USB credential. After the call is successful, the USB key credential will be unlocked. The app can
-use the credential to perform operations such as signing and encryption. This API uses a promise to return the
-result.
+Opens the PIN authentication dialog box of the USB Key credential. On the displayed page, the user can enter the PIN to authorize the USB credential. After the call is successful, the USB key credential will be unlocked. The app can use the credential to perform operations such as signing and encryption. This API uses a promise to return the result.
 
 **Since:** 22
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-certificateManagerDialog-function openUkeyAuthDialog(context: common.Context, ukeyAuthRequest: UkeyAuthRequest): Promise<void>--><!--Device-certificateManagerDialog-function openUkeyAuthDialog(context: common.Context, ukeyAuthRequest: UkeyAuthRequest): Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 
@@ -31,24 +29,24 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | common.Context | Yes | Context of the application. |
-| ukeyAuthRequest | UkeyAuthRequest | Yes | Authentication request information of the USB Key credential |
+| ukeyAuthRequest | [UkeyAuthRequest](arkts-devicecertificate-ukeyauthrequest-i.md) | Yes | Authentication request information of the USB Key credential |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have thepermission required to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | [29700006](../errorcode-certManagerDialog.md#29700006-failed-to-validate-the-input-parameter) | Indicates that the input parameters validation failed.For example, the parameter format is incorrect or the value range is invalid. |
 | [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 | [29700002](../errorcode-certManagerDialog.md#29700002-operation-canceled) | The user cancels the authentication operation. |
-| [29700003](../errorcode-certManagerDialog.md#29700003-failed-to-install-the-certificate) | The authentication operation failed, such as the USB key certificatedoes not exist, the USB key status is abnormal. |
+| [29700003](../errorcode-certManagerDialog.md#29700003-failed-to-install-the-certificate) | The authentication operation failed, such as the USB key certificate does not exist, the USB key status is abnormal. |
 
 **Example**
 

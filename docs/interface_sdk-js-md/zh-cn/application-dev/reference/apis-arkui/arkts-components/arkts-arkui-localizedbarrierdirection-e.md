@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare enum LocalizedBarrierDirection--><!--Device-unnamed-declare enum LocalizedBarrierDirection-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## START
@@ -18,7 +20,9 @@ START = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LocalizedBarrierDirection-START = 0--><!--Device-LocalizedBarrierDirection-START = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,7 +38,9 @@ END = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LocalizedBarrierDirection-END = 1--><!--Device-LocalizedBarrierDirection-END = 1-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,7 +56,9 @@ TOP = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LocalizedBarrierDirection-TOP = 2--><!--Device-LocalizedBarrierDirection-TOP = 2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,7 +74,9 @@ BOTTOM = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LocalizedBarrierDirection-BOTTOM = 3--><!--Device-LocalizedBarrierDirection-BOTTOM = 3-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

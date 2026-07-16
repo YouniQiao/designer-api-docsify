@@ -1,10 +1,10 @@
 # StartAbilityParameter
 
-The module defines the parameters for starting an ability. The parameters can be used as input parameters in
-[startAbility](arkts-ability-startability-f.md#startability-1)
-to start the specified ability.
+The module defines the parameters for starting an ability. The parameters can be used as input parameters in [startAbility](arkts-ability-startability-f.md#startability-1)to start the specified ability.
 
 **Since:** 6
+
+<!--Device-unnamed-export interface StartAbilityParameter--><!--Device-unnamed-export interface StartAbilityParameter-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -22,6 +22,8 @@ Indicates the special start setting used in starting ability.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-StartAbilityParameter-abilityStartSetting?: { [key: string]: any }--><!--Device-StartAbilityParameter-abilityStartSetting?: { [key: string]: any }-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## abilityStartSettings
@@ -30,14 +32,15 @@ Indicates the special start setting used in starting ability.
 abilityStartSettings?: Record<string, Object>
 ```
 
-Indicates the special start setting used in starting ability.
-The ability of this property is same as abilityStartSetting. If both are set, this property will be used.
+Indicates the special start setting used in starting ability.The ability of this property is same as abilityStartSetting. If both are set, this property will be used.
 
 **Type:** Record<string, Object>
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-StartAbilityParameter-abilityStartSettings?: Record<string, Object>--><!--Device-StartAbilityParameter-abilityStartSettings?: Record<string, Object>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -54,6 +57,8 @@ Indicates the Want containing information about the target ability to start.
 **Since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-StartAbilityParameter-want: Want--><!--Device-StartAbilityParameter-want: Want-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 

@@ -18,6 +18,8 @@ Get the lock status of the SIM card in the specified slot.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getLockState(slotId: int, lockType: LockType, callback: AsyncCallback<LockState>): void--><!--Device-sim-function getLockState(slotId: int, lockType: LockType, callback: AsyncCallback<LockState>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -27,8 +29,8 @@ Get the lock status of the SIM card in the specified slot.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| lockType | LockType | Yes | Indicates the lock type. |
-| callback | AsyncCallback&lt;LockState&gt; | Yes | Indicates the callback for getting the sim card lock status. |
+| lockType | [LockType](arkts-telephony-locktype-e-sys.md) | Yes | Indicates the lock type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<LockState> | Yes | Indicates the callback for getting the sim card lock status. |
 
 **Error codes:**
 
@@ -69,6 +71,8 @@ Get the lock status of the SIM card in the specified slot.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getLockState(slotId: int, lockType: LockType): Promise<LockState>--><!--Device-sim-function getLockState(slotId: int, lockType: LockType): Promise<LockState>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -78,13 +82,13 @@ Get the lock status of the SIM card in the specified slot.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| lockType | LockType | Yes | Indicates the lock type. |
+| lockType | [LockType](arkts-telephony-locktype-e-sys.md) | Yes | Indicates the lock type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;LockState&gt; | Returns the sim card lock status. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<LockState> | Returns the sim card lock status. |
 
 **Error codes:**
 

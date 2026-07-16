@@ -4,6 +4,8 @@ Defines the options used to construct the **MessageOption** object.
 
 **Since:** 7
 
+<!--Device-rpc-class MessageOption--><!--Device-rpc-class MessageOption-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ A constructor used to create a **MessageOption** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-MessageOption-constructor(syncFlags?: number, waitTime?: number)--><!--Device-MessageOption-constructor(syncFlags?: number, waitTime?: number)-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
@@ -31,7 +35,7 @@ A constructor used to create a **MessageOption** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | syncFlags | number | No | Call flag to set. The options are as follows: 0 (synchronous call) and 1(asynchronous call). The default value is **synchronous**. |
-| waitTime | number | No | Maximum wait time for an RPC call, in seconds. The default value is**TF_WAIT_TIME**. |
+| waitTime | number | No | Maximum wait time for an RPC call, in seconds. The default value is **TF_WAIT_TIME**. |
 
 **Example**
 
@@ -58,13 +62,15 @@ A constructor used to create a **MessageOption** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-MessageOption-constructor(async?: boolean)--><!--Device-MessageOption-constructor(async?: boolean)-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| async | boolean | No | Whether to execute the call asynchronously. The value **true** means to execute thecall asynchronously; the value **false** means to execute the call synchronously. The default value is**synchronous**. |
+| async | boolean | No | Whether to execute the call asynchronously. The value **true** means to execute the call asynchronously; the value **false** means to execute the call synchronously. The default value is **synchronous**. |
 
 **Example**
 
@@ -90,6 +96,8 @@ Obtains the call flag, which can be synchronous or asynchronous.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-MessageOption-getFlags(): int--><!--Device-MessageOption-getFlags(): int-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -132,13 +140,15 @@ Obtains the maximum wait time for this RPC call.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-MessageOption-getWaitTime(): int--><!--Device-MessageOption-getWaitTime(): int-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Return the maximum waiting time obtained by the RPC, in seconds. The default value is**TF_WAIT_TIME**. |
+| number | Return the maximum waiting time obtained by the RPC, in seconds. The default value is **TF_WAIT_TIME**. |
 
 **Example**
 
@@ -171,13 +181,15 @@ Checks whether **SendMessageRequest** is called synchronously or asynchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-MessageOption-isAsync(): boolean--><!--Device-MessageOption-isAsync(): boolean-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if **SendMessageRequest** is called asynchronously; returns **false** if itis called synchronously. |
+| boolean | Returns **true** if **SendMessageRequest** is called asynchronously; returns **false** if it is called synchronously. |
 
 **Example**
 
@@ -206,13 +218,15 @@ Sets whether **SendMessageRequest** is called synchronously or asynchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-MessageOption-setAsync(isAsync: boolean): void--><!--Device-MessageOption-setAsync(isAsync: boolean): void-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isAsync | boolean | Yes | Whether to execute the call asynchronously. The value **true** means to execute thecall asynchronously; the value **false** means to execute the call synchronously. |
+| isAsync | boolean | Yes | Whether to execute the call asynchronously. The value **true** means to execute the call asynchronously; the value **false** means to execute the call synchronously. |
 
 **Example**
 
@@ -240,6 +254,8 @@ Sets the call flag, which can be synchronous or asynchronous.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-MessageOption-setFlags(flags: int): void--><!--Device-MessageOption-setFlags(flags: int): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -278,6 +294,8 @@ Sets the maximum wait time for this RPC call.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-MessageOption-setWaitTime(waitTime: int): void--><!--Device-MessageOption-setWaitTime(waitTime: int): void-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -320,6 +338,8 @@ Indication to **sendMessageRequest** for passing the file descriptor.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-MessageOption-static readonly TF_ACCEPT_FDS: number--><!--Device-MessageOption-static readonly TF_ACCEPT_FDS: number-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## TF_ASYNC
@@ -337,6 +357,8 @@ Asynchronous call.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-MessageOption-static readonly TF_ASYNC: number--><!--Device-MessageOption-static readonly TF_ASYNC: number-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -356,6 +378,8 @@ Synchronous call.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-MessageOption-static readonly TF_SYNC: number--><!--Device-MessageOption-static readonly TF_SYNC: number-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## TF_WAIT_TIME
@@ -364,8 +388,7 @@ Synchronous call.
 static readonly TF_WAIT_TIME: number
 ```
 
-RPC wait time, in seconds. This parameter cannot be used in IPC. The default waiting time is 8 seconds. You are
-advised not to change the waiting time.
+RPC wait time, in seconds. This parameter cannot be used in IPC. The default waiting time is 8 seconds. You are advised not to change the waiting time.
 
 **Type:** number
 
@@ -375,6 +398,8 @@ advised not to change the waiting time.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-MessageOption-static readonly TF_WAIT_TIME: number--><!--Device-MessageOption-static readonly TF_WAIT_TIME: number-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 

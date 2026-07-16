@@ -4,6 +4,8 @@ Defines application account information.
 
 **Since:** 7
 
+<!--Device-appAccount-interface AppAccountInfo--><!--Device-appAccount-interface AppAccountInfo-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Name of the application account.
 
 **Since:** 7
 
+<!--Device-AppAccountInfo-name: string--><!--Device-AppAccountInfo-name: string-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 ## owner
@@ -37,6 +41,8 @@ Owner of the application account. The value is the bundle name of the applicatio
 **Type:** string
 
 **Since:** 7
+
+<!--Device-AppAccountInfo-owner: string--><!--Device-AppAccountInfo-owner: string-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 

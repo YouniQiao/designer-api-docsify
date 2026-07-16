@@ -4,6 +4,8 @@ Wi-Fi IP configuration information.
 
 **Since:** 9
 
+<!--Device-wifiManager-interface IpConfig--><!--Device-wifiManager-interface IpConfig-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ DNS servers.
 
 **Since:** 9
 
+<!--Device-IpConfig-dnsServers: int[]--><!--Device-IpConfig-dnsServers: int[]-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Domains.
 **Type:** Array<string>
 
 **Since:** 9
+
+<!--Device-IpConfig-domains: Array<string>--><!--Device-IpConfig-domains: Array<string>-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -58,6 +64,8 @@ Gate way.
 
 **Since:** 9
 
+<!--Device-IpConfig-gateway: int--><!--Device-IpConfig-gateway: int-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -74,6 +82,8 @@ IP address.
 
 **Since:** 9
 
+<!--Device-IpConfig-ipAddress: int--><!--Device-IpConfig-ipAddress: int-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -89,6 +99,8 @@ Prefix length.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-IpConfig-prefixLength: int--><!--Device-IpConfig-prefixLength: int-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 

@@ -4,6 +4,8 @@ Enumerates application installation results.
 
 **Since:** 22
 
+<!--Device-common-export enum Result--><!--Device-common-export enum Result-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## SUCCESS
@@ -18,6 +20,8 @@ The application is installed successfully.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Result-SUCCESS = 0--><!--Device-Result-SUCCESS = 0-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## FAIL
@@ -31,6 +35,8 @@ The application fails to be installed.
 **Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Result-FAIL = -1--><!--Device-Result-FAIL = -1-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

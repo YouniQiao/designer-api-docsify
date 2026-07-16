@@ -24,15 +24,17 @@ Sets restrictions on user behaviors.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-restrictions-function setUserRestriction(admin: Want, settingsItem: string, restricted: boolean): void--><!--Device-restrictions-function setUserRestriction(admin: Want, settingsItem: string, restricted: boolean): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| settingsItem | string | Yes | User behavior.<br>- **setApn**: APN configuration, currently supported only onsmartphones and tablets.<br>- **powerLongPress**: capability to open the power menu by long-pressing the powerbutton. Currently, only smartphones and tablets are supported.<br>- **setEthernetIp**: Ethernet IP addressconfiguration, currently supported only on PCs/2-in-1 devices.<br>- **setDeviceName**: device nameconfiguration, currently supported only on PCs/2-in-1 devices, smartphones, and tablets. When it is disabled,the device name cannot be modified in the following settings: **About**, **Bluetooth**, and**More connectivity options** &gt; **NearLink** on PCs/2-in-1 devices, and **About**, **Bluetooth**, and**Personal hotspot** on smartphones and tablets.<br>- **setBiometricsAndScreenLock**: screen lock passwordconfiguration, currently supported only on PCs/2-in-1 devices, smartphones, and tablets. |
-| restricted | boolean | Yes | Whether to disable the action. The value **true** means to disable the action, and**false** means the opposite. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| settingsItem | string | Yes | User behavior.<br>- **setApn**: APN configuration, currently supported only on smartphones and tablets.<br>- **powerLongPress**: capability to open the power menu by long-pressing the power button. Currently, only smartphones and tablets are supported.<br>- **setEthernetIp**: Ethernet IP address configuration, currently supported only on PCs/2-in-1 devices.<br>- **setDeviceName**: device name configuration, currently supported only on PCs/2-in-1 devices, smartphones, and tablets. When it is disabled,the device name cannot be modified in the following settings: **About**, **Bluetooth**, and **More connectivity options** &gt; **NearLink** on PCs/2-in-1 devices, and **About**, **Bluetooth**, and **Personal hotspot** on smartphones and tablets.<br>- **setBiometricsAndScreenLock**: screen lock password configuration, currently supported only on PCs/2-in-1 devices, smartphones, and tablets. |
+| restricted | boolean | Yes | Whether to disable the action. The value **true** means to disable the action, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -40,7 +42,7 @@ Sets restrictions on user behaviors.
 | --- | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 **Example**
 
@@ -79,14 +81,16 @@ Restricting users from changing specified settings item on the device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-restrictions-function setUserRestriction(admin: Want, settingsItem: SettingsForDevice, restricted: boolean): void--><!--Device-restrictions-function setUserRestriction(admin: Want, settingsItem: SettingsForDevice, restricted: boolean): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | admin indicates the administrator ability information. |
-| settingsItem | SettingsForDevice | Yes | settingsItem indicates the specific settings item to be disallowed. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md) | Yes | admin indicates the administrator ability information. |
+| settingsItem | [SettingsForDevice](arkts-mdm-settingsfordevice-e.md) | Yes | settingsItem indicates the specific settings item to be disallowed. |
 | restricted | boolean | Yes | true if restrict the specific settings item of device, otherwise false. |
 
 **Error codes:**

@@ -8,5 +8,7 @@ Defines the base class for {@link ComponentContent} and {@link NodeContent}.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-unnamed-export abstract class Content--><!--Device-unnamed-export abstract class Content-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

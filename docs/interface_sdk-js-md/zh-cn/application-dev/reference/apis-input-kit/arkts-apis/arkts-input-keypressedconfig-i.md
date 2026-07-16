@@ -4,7 +4,15 @@
 
 **起始版本：** 16
 
+<!--Device-inputConsumer-interface KeyPressedConfig--><!--Device-inputConsumer-interface KeyPressedConfig-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
+
+## 导入模块
+
+```TypeScript
+import { inputConsumer } from '@kit.InputKit';
+```
 
 ## action
 
@@ -22,6 +30,8 @@ action: number
 
 **起始版本：** 16
 
+<!--Device-KeyPressedConfig-action: int--><!--Device-KeyPressedConfig-action: int-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 ## isRepeat
@@ -36,6 +46,8 @@ isRepeat: boolean
 
 **起始版本：** 16
 
+<!--Device-KeyPressedConfig-isRepeat: boolean--><!--Device-KeyPressedConfig-isRepeat: boolean-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 ## key
@@ -46,20 +58,17 @@ key: number
 
 按键键值。
 
-**说明：** 从API version 26.0.0开始，新增支持[KEYCODE_FINGERPRINT_SLIDE_UP](arkts-input-keycode-e.md)键和
-[KEYCODE_FINGERPRINT_SLIDE_DOWN](arkts-input-keycode-e.md)键，非设备通用键值，使用前请判断当前设备是否支持相关按键事件上报，请参考
-[优先响应系统功能键开发指导](../../../../device/input/keypressed-guidelines.md)。
+**说明：** 从API version 26.0.0开始，新增支持[KEYCODE_FINGERPRINT_SLIDE_UP](arkts-input-keycode-e.md)键和[KEYCODE_FINGERPRINT_SLIDE_DOWN](arkts-input-keycode-e.md)键，非设备通用键值，使用前请判断当前设备是否支持相关按键事件上报，请参考[优先响应系统功能键开发指导](../../../../device/input/keypressed-guidelines.md)。
 
-从API version 21开始，新增支持[KEYCODE_MEDIA_PLAY_PAUSE](arkts-input-keycode-e.md)键、
-[KEYCODE_MEDIA_NEXT](arkts-input-keycode-e.md)键和
-[KEYCODE_MEDIA_PREVIOUS](arkts-input-keycode-e.md)键。
+从API version 21开始，新增支持[KEYCODE_MEDIA_PLAY_PAUSE](arkts-input-keycode-e.md)键、[KEYCODE_MEDIA_NEXT](arkts-input-keycode-e.md)键和[KEYCODE_MEDIA_PREVIOUS](arkts-input-keycode-e.md)键。
 
-对于API version 20及之前的版本，仅支持[KEYCODE_VOLUME_UP](arkts-input-keycode-e.md)键和
-[KEYCODE_VOLUME_DOWN](arkts-input-keycode-e.md)键。
+对于API version 20及之前的版本，仅支持[KEYCODE_VOLUME_UP](arkts-input-keycode-e.md)键和[KEYCODE_VOLUME_DOWN](arkts-input-keycode-e.md)键。
 
 **类型：** number
 
 **起始版本：** 16
+
+<!--Device-KeyPressedConfig-key: int--><!--Device-KeyPressedConfig-key: int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 

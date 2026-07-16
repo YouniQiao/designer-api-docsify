@@ -12,17 +12,17 @@ import { dlpSetDlpFeature } from '@kit.DataProtectionKit';
 function setDlpFeature(status: DlpFeatureStatus): Promise<StatusInfoResult>
 ```
 
-Sets the DLP status. This API uses a promise to return the result. The system enables or disables the DLP
-protection function based on the DLP status specified using this API.
+Sets the DLP status. This API uses a promise to return the result. The system enables or disables the DLP protection function based on the DLP status specified using this API.
 
-When this feature is enabled, right-click the file to be encrypted, and the encryption option is displayed in the
-shortcut menu. Files in .txt, .pdf, .xls, .xlsx, .ppt, .pptx, .doc, and .docx formats can be encrypted.
+When this feature is enabled, right-click the file to be encrypted, and the encryption option is displayed in the shortcut menu. Files in .txt, .pdf, .xls, .xlsx, .ppt, .pptx, .doc, and .docx formats can be encrypted.
 
 This API is used to enable or disable the DLP function in enterprise policies.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-dlpSetDlpFeature-function setDlpFeature(status: DlpFeatureStatus): Promise<StatusInfoResult>--><!--Device-dlpSetDlpFeature-function setDlpFeature(status: DlpFeatureStatus): Promise<StatusInfoResult>-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -32,13 +32,13 @@ This API is used to enable or disable the DLP function in enterprise policies.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| status | DlpFeatureStatus | Yes | DLP status. The value **ENABLED_FEATURE** indicates the DLP feature isenabled, and the encryption option is displayed in the menu. The value **NOT_ENABLED_FEATURE**indicates the DLP feature is disabled, and the encryption option is not displayed in the menu.If the value is out of range, error code 401 is thrown. |
+| status | [DlpFeatureStatus](arkts-dataprotection-dlpfeaturestatus-e-sys.md) | Yes | DLP status. The value **ENABLED_FEATURE** indicates the DLP feature is enabled, and the encryption option is displayed in the menu. The value **NOT_ENABLED_FEATURE** indicates the DLP feature is disabled, and the encryption option is not displayed in the menu.If the value is out of range, error code 401 is thrown. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;StatusInfoResult&gt; | Promise used to return the DLP status that is set. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<StatusInfoResult> | Promise used to return the DLP status that is set. |
 
 **Error codes:**
 

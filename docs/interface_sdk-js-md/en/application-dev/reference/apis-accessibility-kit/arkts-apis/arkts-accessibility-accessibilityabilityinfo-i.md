@@ -4,6 +4,8 @@ Provides information about an accessibility application.
 
 **Since:** 7
 
+<!--Device-accessibility-interface AccessibilityAbilityInfo--><!--Device-accessibility-interface AccessibilityAbilityInfo-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Accessibility application type.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-AccessibilityAbilityInfo-readonly abilityTypes: Array<AbilityType>--><!--Device-AccessibilityAbilityInfo-readonly abilityTypes: Array<AbilityType>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## bundleName
@@ -45,6 +49,8 @@ Bundle name.
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-AccessibilityAbilityInfo-readonly bundleName: string--><!--Device-AccessibilityAbilityInfo-readonly bundleName: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -64,6 +70,8 @@ Capabilities list of the accessibility application.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-AccessibilityAbilityInfo-readonly capabilities: Array<Capability>--><!--Device-AccessibilityAbilityInfo-readonly capabilities: Array<Capability>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## description
@@ -81,6 +89,8 @@ Description of the accessibility application.
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-AccessibilityAbilityInfo-readonly description: string--><!--Device-AccessibilityAbilityInfo-readonly description: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -100,6 +110,8 @@ List of events that the accessibility application focuses on.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-AccessibilityAbilityInfo-readonly eventTypes: Array<EventType>--><!--Device-AccessibilityAbilityInfo-readonly eventTypes: Array<EventType>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## id
@@ -117,6 +129,8 @@ Ability ID.
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-AccessibilityAbilityInfo-readonly id: string--><!--Device-AccessibilityAbilityInfo-readonly id: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -136,6 +150,8 @@ Name of the application in the extended service list.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-AccessibilityAbilityInfo-readonly label: string--><!--Device-AccessibilityAbilityInfo-readonly label: string-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## name
@@ -154,6 +170,8 @@ Ability name.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-AccessibilityAbilityInfo-readonly name: string--><!--Device-AccessibilityAbilityInfo-readonly name: string-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## needHide
@@ -162,8 +180,7 @@ Ability name.
 readonly needHide: boolean
 ```
 
-Whether the auxiliary application is hidden in the list of installed extended services. The value **true** means
-the auxiliary application is hidden, and the value **false** means the opposite.
+Whether the auxiliary application is hidden in the list of installed extended services. The value **true** means the auxiliary application is hidden, and the value **false** means the opposite.
 
 **Type:** boolean
 
@@ -172,6 +189,8 @@ the auxiliary application is hidden, and the value **false** means the opposite.
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-AccessibilityAbilityInfo-readonly needHide: boolean--><!--Device-AccessibilityAbilityInfo-readonly needHide: boolean-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -190,6 +209,8 @@ Name of the target bundle.
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-AccessibilityAbilityInfo-readonly targetBundleNames: Array<string>--><!--Device-AccessibilityAbilityInfo-readonly targetBundleNames: Array<string>-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 

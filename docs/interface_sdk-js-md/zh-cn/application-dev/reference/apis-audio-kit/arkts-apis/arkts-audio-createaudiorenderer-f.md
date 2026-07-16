@@ -1,5 +1,11 @@
 # createAudioRenderer
 
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
+
 ## createAudioRenderer
 
 ```TypeScript
@@ -10,14 +16,16 @@ function createAudioRenderer(options: AudioRendererOptions, callback: AsyncCallb
 
 **起始版本：** 8
 
+<!--Device-audio-function createAudioRenderer(options: AudioRendererOptions, callback: AsyncCallback<AudioRenderer>): void--><!--Device-audio-function createAudioRenderer(options: AudioRendererOptions, callback: AsyncCallback<AudioRenderer>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | AudioRendererOptions | 是 | 配置渲染器。 |
-| callback | AsyncCallback&lt;AudioRenderer&gt; | 是 | 回调函数。当获取音频渲染器成功，err为undefined，data为获取到的音频渲染器对象；否则为错误对象。 |
+| options | [AudioRendererOptions](arkts-audio-audiorendereroptions-i.md) | 是 | 配置渲染器。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AudioRenderer> | 是 | 回调函数。当获取音频渲染器成功，err为undefined，data为获取到的音频渲染器对象；否则为错误对象。 |
 
 **示例：**
 
@@ -65,19 +73,21 @@ function createAudioRenderer(options: AudioRendererOptions): Promise<AudioRender
 
 **起始版本：** 8
 
+<!--Device-audio-function createAudioRenderer(options: AudioRendererOptions): Promise<AudioRenderer>--><!--Device-audio-function createAudioRenderer(options: AudioRendererOptions): Promise<AudioRenderer>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | AudioRendererOptions | 是 | 配置渲染器。 |
+| options | [AudioRendererOptions](arkts-audio-audiorendereroptions-i.md) | 是 | 配置渲染器。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AudioRenderer&gt; | Promise对象，返回音频渲染器对象。 |
+| Promise<AudioRenderer> | Promise对象，返回音频渲染器对象。 |
 
 **示例：**
 

@@ -4,6 +4,8 @@ Defines segmented button item.
 
 **Since:** 18
 
+<!--Device-unnamed-export declare class SegmentButtonV2Item--><!--Device-unnamed-export declare class SegmentButtonV2Item-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,13 +28,15 @@ Constructs a **SegmentButtonV2ItemOptions** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SegmentButtonV2Item-constructor(options: SegmentButtonV2ItemOptions)--><!--Device-SegmentButtonV2Item-constructor(options: SegmentButtonV2ItemOptions)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SegmentButtonV2ItemOptions | Yes | Options of the item of the **SegmentButtonV2** component. |
+| options | [SegmentButtonV2ItemOptions](arkts-arkui-segmentbuttonv2itemoptions-i.md) | Yes | Options of the item of the **SegmentButtonV2** component. |
 
 ## accessibilityDescription
 
@@ -40,8 +44,7 @@ Constructs a **SegmentButtonV2ItemOptions** instance.
 accessibilityDescription?: ResourceStr
 ```
 
-[Accessibility description](../arkts-components/arkts-arkui-commonmethod-c.md#accessibilitydescription-1) of the segmented button
-item.
+[Accessibility description](../arkts-components/arkts-arkui-commonmethod-c.md#accessibilitydescription-1) of the segmented button item.
 
 Default value: **""**
 
@@ -56,6 +59,8 @@ Decorator type: @Trace
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SegmentButtonV2Item-accessibilityDescription?: ResourceStr--><!--Device-SegmentButtonV2Item-accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -81,6 +86,8 @@ Decorator type: @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SegmentButtonV2Item-accessibilityLevel?: string--><!--Device-SegmentButtonV2Item-accessibilityLevel?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
@@ -104,6 +111,8 @@ Decorator type: @Trace
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SegmentButtonV2Item-accessibilityText?: ResourceStr--><!--Device-SegmentButtonV2Item-accessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -131,6 +140,8 @@ Decorator type: @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SegmentButtonV2Item-enabled: boolean--><!--Device-SegmentButtonV2Item-enabled: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## icon
@@ -152,6 +163,8 @@ Decorator type: @Trace
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SegmentButtonV2Item-icon?: ResourceStr--><!--Device-SegmentButtonV2Item-icon?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -175,6 +188,8 @@ Decorator type: @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SegmentButtonV2Item-iconModifier?: ImageModifier--><!--Device-SegmentButtonV2Item-iconModifier?: ImageModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## isHybrid
@@ -192,6 +207,8 @@ Checks whether the segmented button item contains both text and icon configurati
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SegmentButtonV2Item-get isHybrid(): boolean--><!--Device-SegmentButtonV2Item-get isHybrid(): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -215,6 +232,8 @@ Decorator type: @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SegmentButtonV2Item-symbol?: Resource--><!--Device-SegmentButtonV2Item-symbol?: Resource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## symbolModifier
@@ -236,6 +255,8 @@ Decorator type: @Trace
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SegmentButtonV2Item-symbolModifier?: SymbolGlyphModifier--><!--Device-SegmentButtonV2Item-symbolModifier?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -259,6 +280,8 @@ Decorator type: @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SegmentButtonV2Item-text?: ResourceStr--><!--Device-SegmentButtonV2Item-text?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## textModifier
@@ -280,6 +303,8 @@ Decorator type: @Trace
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SegmentButtonV2Item-textModifier?: TextModifier--><!--Device-SegmentButtonV2Item-textModifier?: TextModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

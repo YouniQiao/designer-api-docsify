@@ -4,6 +4,8 @@ Defines URI permissions for drag intention.
 
 **Since:** 26.0.0
 
+<!--Device-unifiedDataChannel-export const enum UriPermission--><!--Device-unifiedDataChannel-export const enum UriPermission-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## NONE
@@ -19,6 +21,8 @@ No permissions granted.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-UriPermission-NONE = 0--><!--Device-UriPermission-NONE = 0-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -36,6 +40,8 @@ Permission to read or view data.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-UriPermission-READ = 1--><!--Device-UriPermission-READ = 1-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## WRITE
@@ -52,6 +58,8 @@ Permission to modify data.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-UriPermission-WRITE = 2--><!--Device-UriPermission-WRITE = 2-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## PERSIST
@@ -67,6 +75,8 @@ Permission to persist files.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-UriPermission-PERSIST = 3--><!--Device-UriPermission-PERSIST = 3-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 

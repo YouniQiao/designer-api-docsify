@@ -18,13 +18,15 @@ Obtains an [AbilityDelegator](application/AbilityDelegator:AbilityDelegator) obj
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-abilityDelegatorRegistry-function getAbilityDelegator(): AbilityDelegator--><!--Device-abilityDelegatorRegistry-function getAbilityDelegator(): AbilityDelegator-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AbilityDelegator | [AbilityDelegator](application/AbilityDelegator:AbilityDelegator) object, which canbe used to schedule the functionalities of the test framework. |
+| [AbilityDelegator](arkts-test-abilitydelegator-t.md) | [AbilityDelegator](application/AbilityDelegator:AbilityDelegator) object, which can be used to schedule the functionalities of the test framework. |
 
 **Example**
 

@@ -6,7 +6,15 @@
 
 **废弃版本：** 7
 
+<!--Device-unnamed-export interface GetBrightnessOptions--><!--Device-unnamed-export interface GetBrightnessOptions-End-->
+
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
+
+## 导入模块
+
+```TypeScript
+import { BrightnessResponse, BrightnessModeResponse, SetBrightnessModeOptions, GetBrightnessModeOptions, SetBrightnessOptions, GetBrightnessOptions, SetKeepScreenOnOptions } from '@kit.BasicServicesKit';
+```
 
 ## complete
 
@@ -21,6 +29,8 @@ complete?: () => void
 **起始版本：** 3
 
 **废弃版本：** 7
+
+<!--Device-GetBrightnessOptions-complete?: () => void--><!--Device-GetBrightnessOptions-complete?: () => void-End-->
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -38,6 +48,8 @@ fail?: (data: string, code: number) => void
 
 **废弃版本：** 7
 
+<!--Device-GetBrightnessOptions-fail?: (data: string, code: number) => void--><!--Device-GetBrightnessOptions-fail?: (data: string, code: number) => void-End-->
+
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 ## success
@@ -53,6 +65,8 @@ success?: (data: BrightnessResponse) => void
 **起始版本：** 3
 
 **废弃版本：** 7
+
+<!--Device-GetBrightnessOptions-success?: (data: BrightnessResponse) => void--><!--Device-GetBrightnessOptions-success?: (data: BrightnessResponse) => void-End-->
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 

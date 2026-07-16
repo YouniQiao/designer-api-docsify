@@ -16,6 +16,8 @@ Obtains all screens. This API uses an asynchronous callback to return the result
 
 **Since:** 9
 
+<!--Device-screen-function getAllScreens(callback: AsyncCallback<Array<Screen>>): void--><!--Device-screen-function getAllScreens(callback: AsyncCallback<Array<Screen>>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Obtains all screens. This API uses an asynchronous callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;Screen&gt;&gt; | Yes | Callback used to return all the Screen objects obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Screen>> | Yes | Callback used to return all the Screen objects obtained. |
 
 **Error codes:**
 
@@ -67,6 +69,8 @@ Obtains all screens. This API uses an asynchronous callback to return the result
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-screen-function getAllScreens(callback: AsyncCallback<Array<Screen>>, isNeedUnused?: boolean): void--><!--Device-screen-function getAllScreens(callback: AsyncCallback<Array<Screen>>, isNeedUnused?: boolean): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -75,7 +79,7 @@ Obtains all screens. This API uses an asynchronous callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;Screen&gt;&gt; | Yes | Callback used to return the result. If obtaining all screens issuccessful is successful, **err** is **undefined**, and the returned object is screen object set obtained.Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Screen>> | Yes | Callback used to return the result. If obtaining all screens is successful is successful, **err** is **undefined**, and the returned object is screen object set obtained.Otherwise, **err** is an error object. |
 | isNeedUnused | boolean | No | Indicates whether unused screen information is required.This parameter is optional. If not provided, the unused screen information will not be returned<br>Default value: false. |
 
 **Error codes:**
@@ -117,6 +121,8 @@ Obtains all screens. This API uses a promise to return the result.
 
 **Since:** 9
 
+<!--Device-screen-function getAllScreens(): Promise<Array<Screen>>--><!--Device-screen-function getAllScreens(): Promise<Array<Screen>>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -125,7 +131,7 @@ Obtains all screens. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Screen&gt;&gt; | Promise used to return all the Screen objects obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Screen>> | Promise used to return all the Screen objects obtained. |
 
 **Error codes:**
 
@@ -166,6 +172,8 @@ Obtains all screens. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-screen-function getAllScreens(isNeedUnused?: boolean): Promise<Array<Screen>>--><!--Device-screen-function getAllScreens(isNeedUnused?: boolean): Promise<Array<Screen>>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -180,7 +188,7 @@ Obtains all screens. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Screen&gt;&gt; | Promise used to return all the Screen objects obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Screen>> | Promise used to return all the Screen objects obtained. |
 
 **Error codes:**
 

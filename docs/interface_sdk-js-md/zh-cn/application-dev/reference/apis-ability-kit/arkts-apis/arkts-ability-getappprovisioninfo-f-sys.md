@@ -1,5 +1,11 @@
 # getAppProvisionInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getAppProvisionInfo
 
 ```TypeScript
@@ -14,6 +20,8 @@ function getAppProvisionInfo(bundleName: string, callback: AsyncCallback<AppProv
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, callback: AsyncCallback<AppProvisionInfo>): void--><!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, callback: AsyncCallback<AppProvisionInfo>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -23,7 +31,7 @@ function getAppProvisionInfo(bundleName: string, callback: AsyncCallback<AppProv
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 指定应用的bundleName。 |
-| callback | AsyncCallback&lt;AppProvisionInfo&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为指定bundleName的provision配置文件信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AppProvisionInfo> | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为指定bundleName的provision配置文件信息。 |
 
 **错误码：**
 
@@ -73,6 +81,8 @@ function getAppProvisionInfo(bundleName: string, userId: number, callback: Async
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, userId: int, callback: AsyncCallback<AppProvisionInfo>): void--><!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, userId: int, callback: AsyncCallback<AppProvisionInfo>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -83,7 +93,7 @@ function getAppProvisionInfo(bundleName: string, userId: number, callback: Async
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 指定应用的bundleName。 |
 | userId | number | 是 | 指定用户ID，可以通过[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)获取。 |
-| callback | AsyncCallback&lt;AppProvisionInfo&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为指定bundleName的provision配置文件信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AppProvisionInfo> | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为指定bundleName的provision配置文件信息。 |
 
 **错误码：**
 
@@ -135,6 +145,8 @@ function getAppProvisionInfo(bundleName: string, userId?: number): Promise<AppPr
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, userId?: int): Promise<AppProvisionInfo>--><!--Device-bundleManager-function getAppProvisionInfo(bundleName: string, userId?: int): Promise<AppProvisionInfo>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -150,7 +162,7 @@ function getAppProvisionInfo(bundleName: string, userId?: number): Promise<AppPr
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AppProvisionInfo&gt; | Promise对象，返回应用的provision配置文件信息。 |
+| Promise<AppProvisionInfo> | Promise对象，返回应用的provision配置文件信息。 |
 
 **错误码：**
 

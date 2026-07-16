@@ -1,9 +1,10 @@
 # DrawableDescriptor
 
-Represents the base class providing overridable methods for [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md)
-acquisition and image resource loading.
+Represents the base class providing overridable methods for [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md)acquisition and image resource loading.
 
 **Since:** 10
+
+<!--Device-unnamed-export class DrawableDescriptor--><!--Device-unnamed-export class DrawableDescriptor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +28,8 @@ Obtains this **PixelMap** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DrawableDescriptor-getPixelMap(): image.PixelMap--><!--Device-DrawableDescriptor-getPixelMap(): image.PixelMap-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -39,7 +42,7 @@ Obtains this **PixelMap** instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced bythe drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
+| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced by the drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 
@@ -51,15 +54,15 @@ For details, see [LayeredDrawableDescriptor](#layereddrawabledescriptor).
 invalidate(): void
 ```
 
-Redraws **DrawableDescriptor**. Currently, this API is supported for the
-[PictureDrawableDescriptor](arkts-arkui-picturedrawabledescriptor-c.md) type, and does not take effect for other
-**DrawableDescriptor** subtypes. If no component is bound to **DrawableDescriptor**, no operation is performed.
+Redraws **DrawableDescriptor**. Currently, this API is supported for the [PictureDrawableDescriptor](arkts-arkui-picturedrawabledescriptor-c.md) type, and does not take effect for other **DrawableDescriptor** subtypes. If no component is bound to **DrawableDescriptor**, no operation is performed.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DrawableDescriptor-invalidate(): void--><!--Device-DrawableDescriptor-invalidate(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,12 +72,7 @@ Redraws **DrawableDescriptor**. Currently, this API is supported for the
 isReleased(): boolean
 ```
 
-Checks whether **DrawableDescriptor** is released. If **true** is returned, the object has been released. In this
-case, calling APIs such as [getPixelMap](arkts-arkui-drawabledescriptor-c.md#getpixelmap-1),
-[getForeground](arkts-arkui-layereddrawabledescriptor-c.md#getforeground-1),
-[getBackground](arkts-arkui-layereddrawabledescriptor-c.md#getbackground-1), [getMask](arkts-arkui-layereddrawabledescriptor-c.md#getmask-1),
-[loadSync](arkts-arkui-drawabledescriptor-c.md#loadsync-1), and [load](arkts-arkui-drawabledescriptor-c.md#load-1) will throw error code 1110
-02. If **false** is returned, the object has not been released and can be used normally.
+Checks whether **DrawableDescriptor** is released. If **true** is returned, the object has been released. In this case, calling APIs such as [getPixelMap](arkts-arkui-drawabledescriptor-c.md#getpixelmap-1),[getForeground](arkts-arkui-layereddrawabledescriptor-c.md#getforeground-1),[getBackground](arkts-arkui-layereddrawabledescriptor-c.md#getbackground-1), [getMask](arkts-arkui-layereddrawabledescriptor-c.md#getmask-1),[loadSync](arkts-arkui-drawabledescriptor-c.md#loadsync-1), and [load](arkts-arkui-drawabledescriptor-c.md#load-1) will throw error code 111002. If **false** is returned, the object has not been released and can be used normally.
 
 **Since:** 26.0.0
 
@@ -82,13 +80,15 @@ case, calling APIs such as [getPixelMap](arkts-arkui-drawabledescriptor-c.md#get
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-DrawableDescriptor-isReleased(): boolean--><!--Device-DrawableDescriptor-isReleased(): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether **DrawableDescriptor** is released. The value **true** indicates that the object isreleased, and **false** indicates that the object is not released. |
+| boolean | Whether **DrawableDescriptor** is released. The value **true** indicates that the object is released, and **false** indicates that the object is not released. |
 
 ## load
 
@@ -96,8 +96,7 @@ case, calling APIs such as [getPixelMap](arkts-arkui-drawabledescriptor-c.md#get
 load(): Promise<DrawableDescriptorLoadedResult>
 ```
 
-Asynchronously loads the image resource and returns the loading result. This API uses a promise to return the
-result.
+Asynchronously loads the image resource and returns the loading result. This API uses a promise to return the result.
 
 **Since:** 21
 
@@ -105,20 +104,22 @@ result.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-DrawableDescriptor-load(): Promise<DrawableDescriptorLoadedResult>--><!--Device-DrawableDescriptor-load(): Promise<DrawableDescriptorLoadedResult>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DrawableDescriptorLoadedResult&gt; | Image resource loading result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DrawableDescriptorLoadedResult> | Image resource loading result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [111001](../errorcode-drawable-descriptor.md#111001-failed-to-load-resources) | resource loading failed. |
-| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced bythe drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
+| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced by the drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 
@@ -138,20 +139,22 @@ Synchronously loads the image resource and returns the loading result.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-DrawableDescriptor-loadSync(): DrawableDescriptorLoadedResult--><!--Device-DrawableDescriptor-loadSync(): DrawableDescriptorLoadedResult-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DrawableDescriptorLoadedResult | Image resource loading result. |
+| [DrawableDescriptorLoadedResult](arkts-arkui-drawabledescriptorloadedresult-i.md) | Image resource loading result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [111001](../errorcode-drawable-descriptor.md#111001-failed-to-load-resources) | resource loading failed. |
-| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced bythe drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
+| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) | The native memory referenced by the drawableDescriptor has been released.<br>**Applicable version:** 26.0.0 and later |
 
 **Example**
 
@@ -163,18 +166,15 @@ For details, see [DrawableDescriptorLoadedResult](#drawabledescriptorloadedresul
 release(): void
 ```
 
-Releases the resource held by **DrawableDescriptor**. After the **release** API is called, the object becomes
-unavailable. In this case, if you call APIs such as [getPixelMap](arkts-arkui-drawabledescriptor-c.md#getpixelmap-1),
-[getForeground](arkts-arkui-layereddrawabledescriptor-c.md#getforeground-1),
-[getBackground](arkts-arkui-layereddrawabledescriptor-c.md#getbackground-1), [getMask](arkts-arkui-layereddrawabledescriptor-c.md#getmask-1),
-[loadSync](arkts-arkui-drawabledescriptor-c.md#loadsync-1), and [load](arkts-arkui-drawabledescriptor-c.md#load-1) again, error code 111002
-will be thrown. No crash occurs when the **release** API is called repeatedly.
+Releases the resource held by **DrawableDescriptor**. After the **release** API is called, the object becomes unavailable. In this case, if you call APIs such as [getPixelMap](arkts-arkui-drawabledescriptor-c.md#getpixelmap-1),[getForeground](arkts-arkui-layereddrawabledescriptor-c.md#getforeground-1),[getBackground](arkts-arkui-layereddrawabledescriptor-c.md#getbackground-1), [getMask](arkts-arkui-layereddrawabledescriptor-c.md#getmask-1),[loadSync](arkts-arkui-drawabledescriptor-c.md#loadsync-1), and [load](arkts-arkui-drawabledescriptor-c.md#load-1) again, error code 111002will be thrown. No crash occurs when the **release** API is called repeatedly.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DrawableDescriptor-release(): void--><!--Device-DrawableDescriptor-release(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

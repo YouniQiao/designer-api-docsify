@@ -20,6 +20,8 @@ Gets the permissions that are disallowed to be granted for an account.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-securityManager-function getDisallowedPermissions(admin: Want | null, accountId: number): Array<string>--><!--Device-securityManager-function getDisallowedPermissions(admin: Want | null, accountId: number): Array<string>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
@@ -33,7 +35,7 @@ Gets the permissions that are disallowed to be granted for an account.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | the list of permissions that are disallowed to be granted for the account. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | the list of permissions that are disallowed to be granted for the account. |
 
 **Error codes:**
 

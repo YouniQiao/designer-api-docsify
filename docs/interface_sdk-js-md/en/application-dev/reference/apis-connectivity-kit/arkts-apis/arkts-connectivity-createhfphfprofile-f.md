@@ -18,13 +18,15 @@ create the instance of HF(Hands-Free Unit) for HFP(Hands-Free Profile).
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-hfp-function createHfpHfProfile(): HandsFreeHfProfile--><!--Device-hfp-function createHfpHfProfile(): HandsFreeHfProfile-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| HandsFreeHfProfile | Returns the instance of profile. |
+| [HandsFreeHfProfile](arkts-connectivity-handsfreehfprofile-i-sys.md) | Returns the instance of profile. |
 
 **Error codes:**
 

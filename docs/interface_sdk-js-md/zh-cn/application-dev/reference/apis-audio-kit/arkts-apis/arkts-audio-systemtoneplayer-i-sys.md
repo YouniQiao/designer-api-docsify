@@ -1,10 +1,10 @@
 # SystemTonePlayer（系统接口）
 
-系统提示音播放器提供了短信提示音、通知提示音的播放、配置、获取信息等功能。在调用SystemTonePlayer的接口前，需要先通过
-[getSystemTonePlayer](arkts-audio-systemsoundmanager-i-sys.md#getsystemtoneplayer-1)
-创建实例。
+系统提示音播放器提供了短信提示音、通知提示音的播放、配置、获取信息等功能。在调用SystemTonePlayer的接口前，需要先通过[getSystemTonePlayer](arkts-audio-systemsoundmanager-i-sys.md#getsystemtoneplayer-1)创建实例。
 
 **起始版本：** 11
+
+<!--Device-unnamed-export declare interface SystemTonePlayer--><!--Device-unnamed-export declare interface SystemTonePlayer-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -19,6 +19,8 @@ getAudioVolumeScale(): number
 获取当前音频音量大小，同步返回当前音量。
 
 **起始版本：** 13
+
+<!--Device-SystemTonePlayer-getAudioVolumeScale(): double--><!--Device-SystemTonePlayer-getAudioVolumeScale(): double-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -45,6 +47,8 @@ getHapticsFeature(): systemSoundManager.ToneHapticsFeature
 获取播放铃音时的振动风格，同步返回振动风格枚举值。
 
 **起始版本：** 13
+
+<!--Device-SystemTonePlayer-getHapticsFeature(): systemSoundManager.ToneHapticsFeature--><!--Device-SystemTonePlayer-getHapticsFeature(): systemSoundManager.ToneHapticsFeature-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -73,6 +77,8 @@ getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeatu
 
 **起始版本：** 13
 
+<!--Device-SystemTonePlayer-getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeature>>--><!--Device-SystemTonePlayer-getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeature>>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -81,7 +87,7 @@ getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeatu
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;systemSoundManager.ToneHapticsFeature&gt;&gt; | Promise对象，返回当前支持的振动风格。 |
+| Promise<Array<systemSoundManager.ToneHapticsFeature>> | Promise对象，返回当前支持的振动风格。 |
 
 **错误码：**
 
@@ -100,6 +106,8 @@ getTitle(): Promise<string>
 
 **起始版本：** 11
 
+<!--Device-SystemTonePlayer-getTitle(): Promise<string>--><!--Device-SystemTonePlayer-getTitle(): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -108,7 +116,7 @@ getTitle(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回获取的系统提示音标题。 |
+| Promise<string> | Promise对象，返回获取的系统提示音标题。 |
 
 **错误码：**
 
@@ -127,6 +135,8 @@ off(type: 'playFinished', callback?: Callback<number>): void
 
 **起始版本：** 18
 
+<!--Device-SystemTonePlayer-off(type: 'playFinished', callback?: Callback<int>): void--><!--Device-SystemTonePlayer-off(type: 'playFinished', callback?: Callback<int>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -136,7 +146,7 @@ off(type: 'playFinished', callback?: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'playFinished' | 是 | 事件回调类型，支持的事件为'playFinished'，当取消监听铃音播放完成事件时，触发该事件。 |
-| callback | Callback&lt;number&gt; | 否 | 回调函数，返回结束事件的音频流的streamId。不填入此参数时，会取消该事件的所有监听。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | 否 | 回调函数，返回结束事件的音频流的streamId。不填入此参数时，会取消该事件的所有监听。 |
 
 **错误码：**
 
@@ -155,6 +165,8 @@ off(type: 'error', callback?: ErrorCallback): void
 
 **起始版本：** 18
 
+<!--Device-SystemTonePlayer-off(type: 'error', callback?: ErrorCallback): void--><!--Device-SystemTonePlayer-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -164,7 +176,7 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 事件回调类型，支持的事件为'error'，当取消监听铃音播放过程中的错误事件时，触发该事件。 |
-| callback | ErrorCallback | 否 | 回调函数，返回错误码和错误信息。不填入此参数时，会取消该事件的所有监听。 |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | 否 | 回调函数，返回错误码和错误信息。不填入此参数时，会取消该事件的所有监听。 |
 
 **错误码：**
 
@@ -185,6 +197,8 @@ on(type: 'playFinished', streamId: number, callback: Callback<number>): void
 
 **起始版本：** 18
 
+<!--Device-SystemTonePlayer-on(type: 'playFinished', streamId: int, callback: Callback<int>): void--><!--Device-SystemTonePlayer-on(type: 'playFinished', streamId: int, callback: Callback<int>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -195,7 +209,7 @@ on(type: 'playFinished', streamId: number, callback: Callback<number>): void
 | --- | --- | --- | --- |
 | type | 'playFinished' | 是 | 事件回调类型，支持的事件为'playFinished'，当铃音播放完成时，触发该事件。 |
 | streamId | number | 是 | 监听对象为指定streamId对应的音频流，streamId通过[start](arkts-audio-systemtoneplayer-i-sys.md#start-1)获取。当streamId传入0时，可监听当前播放器对应的所有音频流。 |
-| callback | Callback&lt;number&gt; | 是 | 'playFinished'的回调方法。返回播放完成的音频流的streamId。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | 是 | 'playFinished'的回调方法。返回播放完成的音频流的streamId。 |
 
 **错误码：**
 
@@ -214,6 +228,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 **起始版本：** 18
 
+<!--Device-SystemTonePlayer-on(type: 'error', callback: ErrorCallback): void--><!--Device-SystemTonePlayer-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -223,7 +239,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 事件回调类型，支持的事件为'error'，当铃音播放过程中发生错误时，触发该事件。 |
-| callback | ErrorCallback | 是 | 回调函数，返回错误码和错误信息。错误码请参考AVPlayer的[on('error')](@ohos.multimedia.media:media.AVPlayer.on(type: 'error', callback: ErrorCallback))。 |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | 是 | 回调函数，返回错误码和错误信息。错误码请参考AVPlayer的[on('error')](@ohos.multimedia.media:media.AVPlayer.on(type: 'error', callback: ErrorCallback))。 |
 
 **错误码：**
 
@@ -242,6 +258,8 @@ prepare(): Promise<void>
 
 **起始版本：** 11
 
+<!--Device-SystemTonePlayer-prepare(): Promise<void>--><!--Device-SystemTonePlayer-prepare(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -250,7 +268,7 @@ prepare(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -270,6 +288,8 @@ release(): Promise<void>
 
 **起始版本：** 11
 
+<!--Device-SystemTonePlayer-release(): Promise<void>--><!--Device-SystemTonePlayer-release(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -278,7 +298,7 @@ release(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -295,6 +315,8 @@ setAudioVolumeScale(scale: number): void
 设置音频音量大小，无返回结果。
 
 **起始版本：** 13
+
+<!--Device-SystemTonePlayer-setAudioVolumeScale(scale: double): void--><!--Device-SystemTonePlayer-setAudioVolumeScale(scale: double): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -323,10 +345,11 @@ setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void
 
 设置播放铃音时的振动风格。
 
-调用本接口前，应该先调用[getSupportedHapticsFeatures](arkts-audio-systemtoneplayer-i-sys.md#getsupportedhapticsfeatures-1)查询
-支持的振动风格，如果设置不支持的振动风格，则设置失败。
+调用本接口前，应该先调用[getSupportedHapticsFeatures](arkts-audio-systemtoneplayer-i-sys.md#getsupportedhapticsfeatures-1)查询支持的振动风格，如果设置不支持的振动风格，则设置失败。
 
 **起始版本：** 13
+
+<!--Device-SystemTonePlayer-setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void--><!--Device-SystemTonePlayer-setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -359,6 +382,8 @@ start(toneOptions?: SystemToneOptions): Promise<number>
 
 **需要权限：** ohos.permission.VIBRATE
 
+<!--Device-SystemTonePlayer-start(toneOptions?: SystemToneOptions): Promise<int>--><!--Device-SystemTonePlayer-start(toneOptions?: SystemToneOptions): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -367,13 +392,13 @@ start(toneOptions?: SystemToneOptions): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| toneOptions | SystemToneOptions | 否 | 系统提示音选项。 |
+| toneOptions | [SystemToneOptions](arkts-audio-systemtoneoptions-t-sys.md) | 否 | 系统提示音选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回streamID。 |
+| Promise<number> | Promise对象，返回streamID。 |
 
 **错误码：**
 
@@ -394,6 +419,8 @@ stop(id: number): Promise<void>
 
 **起始版本：** 11
 
+<!--Device-SystemTonePlayer-stop(id: int): Promise<void>--><!--Device-SystemTonePlayer-stop(id: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -408,7 +435,7 @@ stop(id: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise回调返回停止播放成功或失败。 |
+| Promise<void> | Promise回调返回停止播放成功或失败。 |
 
 **错误码：**
 

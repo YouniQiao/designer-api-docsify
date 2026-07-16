@@ -4,6 +4,8 @@
 
 **起始版本：** 21
 
+<!--Device-unnamed-declare interface NativeEmbedParamDataInfo--><!--Device-unnamed-declare interface NativeEmbedParamDataInfo-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## embedId
@@ -17,6 +19,8 @@ embedId: string
 **类型：** string
 
 **起始版本：** 21
+
+<!--Device-NativeEmbedParamDataInfo-embedId: string--><!--Device-NativeEmbedParamDataInfo-embedId: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -32,6 +36,8 @@ objectAttributeId?: string
 
 **起始版本：** 21
 
+<!--Device-NativeEmbedParamDataInfo-objectAttributeId?: string--><!--Device-NativeEmbedParamDataInfo-objectAttributeId?: string-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## paramItems
@@ -45,6 +51,8 @@ paramItems?: Array<NativeEmbedParamItem>
 **类型：** Array<NativeEmbedParamItem>
 
 **起始版本：** 21
+
+<!--Device-NativeEmbedParamDataInfo-paramItems?: Array<NativeEmbedParamItem>--><!--Device-NativeEmbedParamDataInfo-paramItems?: Array<NativeEmbedParamItem>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

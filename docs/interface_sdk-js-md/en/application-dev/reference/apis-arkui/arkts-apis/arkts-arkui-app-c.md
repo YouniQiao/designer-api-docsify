@@ -4,6 +4,8 @@ Defines static functions of App class
 
 **Since:** 3
 
+<!--Device-unnamed-export default class App--><!--Device-unnamed-export default class App-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 ## Modules to Import
@@ -18,16 +20,15 @@ import { AppResponse, ScreenOnVisibleOptions, RequestFullWindowOptions } from '@
 static getInfo(): AppResponse
 ```
 
-Obtains the declared information in the **config.json** file of an application. In the stage model, this API
-returns **null**.
+Obtains the declared information in the **config.json** file of an application. In the stage model, this API returns **null**.
 
-This API is deprecated since API version 9. You are advised to use
-[bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-getbundleinfoforself-f.md#getbundleinfoforself-1)
-instead.
+This API is deprecated since API version 9. You are advised to use [bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-getbundleinfoforself-f.md#getbundleinfoforself-1)instead.
 
 **Since:** 3
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-App-static getInfo(): AppResponse--><!--Device-App-static getInfo(): AppResponse-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
@@ -35,7 +36,7 @@ instead.
 
 | Type | Description |
 | --- | --- |
-| AppResponse | Application response information. |
+| [AppResponse](arkts-arkui-appresponse-i.md) | Application response information. |
 
 **Example**
 
@@ -162,10 +163,7 @@ export default {
 static requestFullWindow(options?: RequestFullWindowOptions): void
 ```
 
-Requests the application to run in full window.
-In some scenarios, such as semi-modal FA, the FA runs in non-full window.
-In this case, you can call this API.
-This API is invalid for an application already in full-window mode.
+Requests the application to run in full window.In some scenarios, such as semi-modal FA, the FA runs in non-full window.In this case, you can call this API.This API is invalid for an application already in full-window mode.
 
 **Since:** 3
 
@@ -173,13 +171,15 @@ This API is invalid for an application already in full-window mode.
 
 **Substitutes:** startAbility
 
+<!--Device-App-static requestFullWindow(options?: RequestFullWindowOptions): void--><!--Device-App-static requestFullWindow(options?: RequestFullWindowOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | RequestFullWindowOptions | No | Transition time from non-full window to full window, in milliseconds. |
+| options | [RequestFullWindowOptions](arkts-arkui-requestfullwindowoptions-i.md) | No | Transition time from non-full window to full window, in milliseconds. |
 
 **Example**
 
@@ -209,13 +209,15 @@ This API is deprecated since API version 8.
 
 **Deprecated since:** 8
 
+<!--Device-App-static screenOnVisible(options?: ScreenOnVisibleOptions): void--><!--Device-App-static screenOnVisible(options?: ScreenOnVisibleOptions): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ScreenOnVisibleOptions | No | With keep-alive, the system is prevented from returning to the homescreen when the screen is locked, so that the application is visible when the screen is woken up. |
+| options | [ScreenOnVisibleOptions](arkts-arkui-screenonvisibleoptions-i.md) | No | With keep-alive, the system is prevented from returning to the home screen when the screen is locked, so that the application is visible when the screen is woken up. |
 
 ## setImageCacheCount
 
@@ -223,12 +225,13 @@ This API is deprecated since API version 8.
 static setImageCacheCount(value: number): void
 ```
 
-Set image cache capacity of decoded image count.
-if not set, the application will not cache any decoded image.
+Set image cache capacity of decoded image count.if not set, the application will not cache any decoded image.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-App-static setImageCacheCount(value: number): void--><!--Device-App-static setImageCacheCount(value: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -274,12 +277,13 @@ struct Index {
 static setImageFileCacheSize(value: number): void
 ```
 
-Set image file cache size in bytes on disk before decode.
-if not set, the application will cache 100MB image files on disk.
+Set image file cache size in bytes on disk before decode.if not set, the application will cache 100MB image files on disk.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-App-static setImageFileCacheSize(value: number): void--><!--Device-App-static setImageFileCacheSize(value: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -314,12 +318,13 @@ export default class OnC {
 static setImageRawDataCacheSize(value: number): void
 ```
 
-Set image cache capacity of raw image data size in bytes before decode.
-if not set, the application will not cache any raw image data.
+Set image cache capacity of raw image data size in bytes before decode.if not set, the application will not cache any raw image data.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-App-static setImageRawDataCacheSize(value: number): void--><!--Device-App-static setImageRawDataCacheSize(value: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -367,12 +372,13 @@ static terminate(): void
 
 Terminates the current ability. In the stage model, this API has no effect.
 
-This API is deprecated since API version 7. You are advised to use
-[@ohos.ability.featureAbility](../../apis-ability-kit/arkts-apis/arkts-ability-featureability.md) instead.
+This API is deprecated since API version 7. You are advised to use [@ohos.ability.featureAbility](../../apis-ability-kit/arkts-apis/arkts-ability-featureability.md) instead.
 
 **Since:** 3
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-App-static terminate(): void--><!--Device-App-static terminate(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 

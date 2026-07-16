@@ -4,6 +4,8 @@ Defines the common options.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare class CounterV2CommonOptions--><!--Device-unnamed-declare class CounterV2CommonOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Set the focusable of the counter component.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CounterV2CommonOptions-focusable?: boolean--><!--Device-CounterV2CommonOptions-focusable?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onHoverDecrease
@@ -48,6 +52,8 @@ Trigger a mouse hover event at the decrease button.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-CounterV2CommonOptions-onHoverDecrease?: OnCounterV2HoverCallback--><!--Device-CounterV2CommonOptions-onHoverDecrease?: OnCounterV2HoverCallback-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onHoverIncrease
@@ -65,6 +71,8 @@ Trigger a mouse hover event at the increase button.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CounterV2CommonOptions-onHoverIncrease?: OnCounterV2HoverCallback--><!--Device-CounterV2CommonOptions-onHoverIncrease?: OnCounterV2HoverCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,6 +93,8 @@ Set the step of the counter component, ranges greater than or equal to 1
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CounterV2CommonOptions-step?: int--><!--Device-CounterV2CommonOptions-step?: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

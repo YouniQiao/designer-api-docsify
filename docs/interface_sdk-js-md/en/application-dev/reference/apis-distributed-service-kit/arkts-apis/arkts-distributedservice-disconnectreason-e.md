@@ -4,6 +4,8 @@ Enumerates the disconnection reasons.
 
 **Since:** 18
 
+<!--Device-abilityConnectionManager-enum DisconnectReason--><!--Device-abilityConnectionManager-enum DisconnectReason-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 ## PEER_APP_CLOSE_COLLABORATION
@@ -17,6 +19,8 @@ The peer application proactively disables collaboration.
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DisconnectReason-PEER_APP_CLOSE_COLLABORATION = 0--><!--Device-DisconnectReason-PEER_APP_CLOSE_COLLABORATION = 0-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -32,6 +36,8 @@ The peer application exits.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DisconnectReason-PEER_APP_EXIT = 1--><!--Device-DisconnectReason-PEER_APP_EXIT = 1-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 ## NETWORK_DISCONNECTED
@@ -45,6 +51,8 @@ The network is disconnected.
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DisconnectReason-NETWORK_DISCONNECTED = 2--><!--Device-DisconnectReason-NETWORK_DISCONNECTED = 2-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 

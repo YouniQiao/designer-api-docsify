@@ -18,6 +18,8 @@ function setDistributedEnabledBySlot(slot: SlotType, deviceType: string, enabled
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function setDistributedEnabledBySlot(slot: SlotType, deviceType: string, enabled: boolean): Promise<void>--><!--Device-notificationManager-function setDistributedEnabledBySlot(slot: SlotType, deviceType: string, enabled: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,7 +28,7 @@ function setDistributedEnabledBySlot(slot: SlotType, deviceType: string, enabled
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slot | SlotType | 是 | 通知渠道类型。 |
+| slot | [SlotType](arkts-notification-slottype-e-sys.md) | 是 | 通知渠道类型。 |
 | deviceType | string | 是 | 设备类型。<br>从API version 18开始，支持的设备类型如下：<br>- headset（可穿戴式音频设备）。<br>- liteWearable（轻量级智能穿戴设备）。<br>- wearable（智能穿戴设备）。<br>从API version 20开始，支持的设备类型如下：<br>- headset（可穿戴式音频设备）。<br>- liteWearable（轻量级智能穿戴设备）。<br>- wearable（智能穿戴设备）。<br>- current（本设备）。<br>- 2in1（PC设备）。<br>- tablet（平板）。 |
 | enabled | boolean | 是 | 是否开启通知跨设备协同开关。取值为true表示打开，取值为false表示关闭。 |
 
@@ -34,7 +36,7 @@ function setDistributedEnabledBySlot(slot: SlotType, deviceType: string, enabled
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

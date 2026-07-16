@@ -4,6 +4,8 @@ The play list information definition.
 
 **Since:** 11
 
+<!--Device-avSession-interface AVQueueInfo--><!--Device-avSession-interface AVQueueInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ The id of play list
 
 **Since:** 11
 
+<!--Device-AVQueueInfo-avQueueId: string--><!--Device-AVQueueInfo-avQueueId: string-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ The artwork of play list, can be a {@link PixelMap} or a URI formatted string,
 **Type:** image.PixelMap | string
 
 **Since:** 11
+
+<!--Device-AVQueueInfo-avQueueImage: image.PixelMap | string--><!--Device-AVQueueInfo-avQueueImage: image.PixelMap | string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -58,6 +64,8 @@ The name of play list
 
 **Since:** 11
 
+<!--Device-AVQueueInfo-avQueueName: string--><!--Device-AVQueueInfo-avQueueName: string-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **System API:** This is a system API.
@@ -74,6 +82,8 @@ The bundle name of application which current play list belongs to.
 
 **Since:** 11
 
+<!--Device-AVQueueInfo-bundleName: string--><!--Device-AVQueueInfo-bundleName: string-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **System API:** This is a system API.
@@ -84,12 +94,13 @@ The bundle name of application which current play list belongs to.
 lastPlayedTime?: number
 ```
 
-The time when the user last played the playlist.
-The time format can be system, such as 1611081385000, it means 2021-01-20 02:36:25.
+The time when the user last played the playlist.The time format can be system, such as 1611081385000, it means 2021-01-20 02:36:25.
 
 **Type:** number
 
 **Since:** 11
+
+<!--Device-AVQueueInfo-lastPlayedTime?: long--><!--Device-AVQueueInfo-lastPlayedTime?: long-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 

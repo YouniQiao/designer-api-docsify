@@ -4,7 +4,15 @@ Window manager.
 
 **起始版本：** 6
 
+<!--Device-unnamed-declare namespace window--><!--Device-unnamed-declare namespace window-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+## 导入模块
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+```
 
 ## 汇总
 
@@ -14,20 +22,20 @@ Window manager.
 | --- | --- |
 | [createWindow](arkts-arkui-createwindow-f.md#createwindow-1) | 创建子窗口或者系统窗口，使用callback异步回调。非[自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下，子窗口创建后默认是[沉浸式布局](../../../../windowmanager/window-terminology.md#沉浸式布局)。自由窗口状态下，子窗口参数[decorEnabled](arkts-arkui-configuration-i.md)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口创建后为非沉浸式布局。 |
 | [createWindow](arkts-arkui-createwindow-f.md#createwindow-2) | 创建子窗口或者系统窗口，使用Promise异步回调。非[自由窗口](../../../../windowmanager/window-terminology.md#自由窗口)状态下，子窗口创建后默认是[沉浸式布局](../../../../windowmanager/window-terminology.md#沉浸式布局)。自由窗口状态下，子窗口参数[decorEnabled](arkts-arkui-configuration-i.md)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口创建后为非沉浸式布局。 |
-| [create](arkts-arkui-create-f.md#create-1) | 创建子窗口，使用callback异步回调。子窗口创建后默认是[沉浸式布局](../../../../windowmanager/window-terminology.md#沉浸式布局)。@link window.createWindow(config: Configuration, callback: AsyncCallback&lt;Window&gt;)}替代。 |
-| [create](arkts-arkui-create-f.md#create-2) | 创建子窗口，使用Promise异步回调。子窗口创建后默认是[沉浸式布局](../../../../windowmanager/window-terminology.md#沉浸式布局)。@link window.createWindow(config: Configuration)}替代。 |
-| [create](arkts-arkui-create-f.md#create-3) | 创建系统窗口，使用Promise异步回调。@link window.createWindow(config: Configuration)}替代。 |
-| [create](arkts-arkui-create-f.md#create-4) | 创建系统窗口，使用callback异步回调。@link window.createWindow(config: Configuration, callback: AsyncCallback&lt;Window&gt;)}替代。 |
-| [find](arkts-arkui-find-f.md#find-1) | 查找id所对应的窗口，使用callback异步回调。@link window.findWindow}替代。 |
-| [find](arkts-arkui-find-f.md#find-2) | 查找id所对应的窗口，使用Promise异步回调。@link window.findWindow}替代。 |
+| [create](arkts-arkui-create-f.md#create-1) | 创建子窗口，使用callback异步回调。子窗口创建后默认是[沉浸式布局](../../../../windowmanager/window-terminology.md#沉浸式布局)。 |
+| [create](arkts-arkui-create-f.md#create-2) | 创建子窗口，使用Promise异步回调。子窗口创建后默认是[沉浸式布局](../../../../windowmanager/window-terminology.md#沉浸式布局)。 |
+| [create](arkts-arkui-create-f.md#create-3) | 创建系统窗口，使用Promise异步回调。 |
+| [create](arkts-arkui-create-f.md#create-4) | 创建系统窗口，使用callback异步回调。 |
+| [find](arkts-arkui-find-f.md#find-1) | 查找id所对应的窗口，使用callback异步回调。 |
+| [find](arkts-arkui-find-f.md#find-2) | 查找id所对应的窗口，使用Promise异步回调。 |
 | [findWindow](arkts-arkui-findwindow-f.md#findwindow-1) | 查找指定名称对应的窗口。 |
-| [getTopWindow](arkts-arkui-gettopwindow-f.md#gettopwindow-1) | 获取当前应用内最后显示的窗口，使用callback异步回调。@link window.getLastWindow(ctx: BaseContext, callback: AsyncCallback&lt;Window&gt;)}替代。 |
-| [getTopWindow](arkts-arkui-gettopwindow-f.md#gettopwindow-2) | 获取当前应用内最后显示的窗口，使用Promise异步回调。@link window.getLastWindow(ctx: BaseContext)}替代。 |
-| [getTopWindow](arkts-arkui-gettopwindow-f.md#gettopwindow-3) | 获取当前应用内最后显示的窗口，使用Promise异步回调。@link window.getLastWindow(ctx: BaseContext)}替代。 |
-| [getTopWindow](arkts-arkui-gettopwindow-f.md#gettopwindow-4) | 获取当前应用内最后显示的窗口，使用callback异步回调。@link window.getLastWindow(ctx: BaseContext, callback: AsyncCallback&lt;Window&gt;)}替代。 |
+| [getTopWindow](arkts-arkui-gettopwindow-f.md#gettopwindow-1) | 获取当前应用内最后显示的窗口，使用callback异步回调。 |
+| [getTopWindow](arkts-arkui-gettopwindow-f.md#gettopwindow-2) | 获取当前应用内最后显示的窗口，使用Promise异步回调。 |
+| [getTopWindow](arkts-arkui-gettopwindow-f.md#gettopwindow-3) | 获取当前应用内最后显示的窗口，使用Promise异步回调。 |
+| [getTopWindow](arkts-arkui-gettopwindow-f.md#gettopwindow-4) | 获取当前应用内最后显示的窗口，使用callback异步回调。 |
 | [getLastWindow](arkts-arkui-getlastwindow-f.md#getlastwindow-1) | 获取当前应用内层级最高的子窗口，使用callback异步回调。若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-i.md#showwindow-1)进行显示，则返回应用主窗口。 |
 | [getLastWindow](arkts-arkui-getlastwindow-f.md#getlastwindow-2) | 获取当前应用内层级最高的子窗口，使用Promise异步回调。若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-i.md#showwindow-1)进行显示，则返回应用主窗口。 |
-| [shiftAppWindowFocus](arkts-arkui-shiftappwindowfocus-f.md#shiftappwindowfocus-1) | 在同应用内将窗口焦点从源窗口转移到目标窗口，仅支持应用主窗、子窗范围内的焦点转移。使用Promise异步回调。目标窗口需确保具有获得焦点的能力（可通过[setWindowFocusable()](arkts-arkui-window-i.md#setwindowfocusable-2)设置），并确保调用[showWindow()](arkts-arkui-window-i.md#showwindow-1)成功且执行完毕。@link @ohos.window:window.Window.loadContent(path: string, storage: LocalStorage, callback: AsyncCallback&lt;void&gt;)}&gt; 或[setUIContent()](arkts-arkui-window-i.md#setuicontent-1)并生效，&gt; 否则可能会导致不可见窗口获取焦点，造成功能异常或影响用户体验。 |
+| [shiftAppWindowFocus](arkts-arkui-shiftappwindowfocus-f.md#shiftappwindowfocus-1) | 在同应用内将窗口焦点从源窗口转移到目标窗口，仅支持应用主窗、子窗范围内的焦点转移。使用Promise异步回调。目标窗口需确保具有获得焦点的能力（可通过[setWindowFocusable()](arkts-arkui-window-i.md#setwindowfocusable-2)设置），并确保调用[showWindow()](arkts-arkui-window-i.md#showwindow-1)成功且执行完毕。 |
 | [shiftAppWindowPointerEvent](arkts-arkui-shiftappwindowpointerevent-f.md#shiftappwindowpointerevent-1) | 主窗口和子窗口可正常调用，用于将鼠标输入事件从源窗口转移到目标窗口。使用Promise异步回调。源窗口仅在[onTouch](../../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#ontouch)事件（事件类型必须为TouchType.Down）的回调方法中调用此接口才会有鼠标输入事件转移效果，成功调用此接口后，系统会向源窗口补发鼠标按键抬起（TouchType.Up）事件，并且向目标窗口补发鼠标按键按下（TouchType.Down）事件。 |
 | [shiftAppWindowTouchEvent](arkts-arkui-shiftappwindowtouchevent-f.md#shiftappwindowtouchevent-1) | 主窗口和子窗口可正常调用，用于将触屏输入事件从源窗口转移到目标窗口。使用Promise异步回调。源窗口仅在[onTouch](../../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#ontouch)事件（事件类型必须为TouchType.Down）的回调方法中调用此接口才会有触屏输入事件转移效果，成功调用此接口后，系统会向源窗口补发触屏抬起（TouchType.Up）事件，并且向目标窗口补发触屏按下（TouchType.Down）事件。 |
 | [getWindowsByCoordinate](arkts-arkui-getwindowsbycoordinate-f.md#getwindowsbycoordinate-1) | 查询本应用指定坐标下的可见窗口数组，按当前窗口层级排列，层级最高的窗口对应数组下标为0，使用Promise异步回调。 |
@@ -70,7 +78,7 @@ Window manager.
 | [on](arkts-arkui-on-f-sys.md#on-3) | 添加水印启用状态变化的监听。 |
 | [off](arkts-arkui-off-f-sys.md#off-3) | 移除水印启用状态变化的监听。 |
 | [notifyScreenshotEvent](arkts-arkui-notifyscreenshotevent-f-sys.md#notifyscreenshotevent-1) | 通知屏幕截屏的事件类型，使用Promise异步回调。 |
-| [moveMainWindowToTargetDisplay](arkts-arkui-movemainwindowtotargetdisplay-f-sys.md#movemainwindowtotargetdisplay-1) | 将指定的主窗口迁移到指定的屏幕上。使用Promise异步回调。- 对于[主屏](../../../../displaymanager/display-terminology.md#主屏)/[扩展屏](../../../../displaymanager/display-terminology.md#扩展屏)与[虚拟屏](../../../../displaymanager/display-terminology.md#虚拟屏)之间以及虚拟屏与虚拟屏之间的窗口迁移，仅主窗及其子窗会一起被迁移到对应屏幕上且被抬升，如果存在子窗，最上层可获焦子窗会获取焦点，否则主窗口获焦。- 对于主屏与扩展屏之间的窗口迁移，只会将主窗口迁移到对应屏幕，抬升并获取焦点。&lt;!--RP3--&gt;&lt;!--RP3End--&gt; |
+| [moveMainWindowToTargetDisplay](arkts-arkui-movemainwindowtotargetdisplay-f-sys.md#movemainwindowtotargetdisplay-1) | 将指定的主窗口迁移到指定的屏幕上。使用Promise异步回调。- 对于[主屏](../../../../displaymanager/display-terminology.md#主屏)/[扩展屏](../../../../displaymanager/display-terminology.md#扩展屏)与[虚拟屏](../../../../displaymanager/display-terminology.md#虚拟屏)之间以及虚拟屏与虚拟屏之间的窗口迁移，仅主窗及其子窗会一起被迁移到对应屏幕上且被抬升，如果存在子窗，最上层可获焦子窗会获取焦点，否则主窗口获焦。 - 对于主屏与扩展屏之间的窗口迁移，只会将主窗口迁移到对应屏幕，抬升并获取焦点。&lt;!--RP3--&gt;&lt;!--RP3End--&gt; |
 <!--DelEnd-->
 
 ### 接口

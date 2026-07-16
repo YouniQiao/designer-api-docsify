@@ -4,6 +4,8 @@ SEService realizes the communication to available SEs on the device.
 
 **Since:** 10
 
+<!--Device-omapi-export interface SEService--><!--Device-omapi-export interface SEService-End-->
+
 **System capability:** SystemCapability.Communication.SecureElement
 
 ## Modules to Import
@@ -18,10 +20,11 @@ import { omapi } from '@kit.ConnectivityKit';
 getReaders(): Reader[]
 ```
 
-Returns the list of available SE readers. There must be no duplicated objects in the returned list.
-All available readers SHALL be listed even if no card is inserted.
+Returns the list of available SE readers. There must be no duplicated objects in the returned list.All available readers SHALL be listed even if no card is inserted.
 
 **Since:** 10
+
+<!--Device-SEService-getReaders(): Reader[]--><!--Device-SEService-getReaders(): Reader[]-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
 
@@ -29,7 +32,7 @@ All available readers SHALL be listed even if no card is inserted.
 
 | Type | Description |
 | --- | --- |
-| Reader[] | The list of available SE readers. |
+| [Reader](arkts-connectivity-reader-i.md)[] | The list of available SE readers. |
 
 **Error codes:**
 
@@ -74,6 +77,8 @@ Returns the version of the Open Mobile API Specification this implementation is 
 
 **Since:** 10
 
+<!--Device-SEService-getVersion(): string--><!--Device-SEService-getVersion(): string-End-->
+
 **System capability:** SystemCapability.Communication.SecureElement
 
 **Return value:**
@@ -117,6 +122,8 @@ isConnected(): boolean
 Checks whether or not the service is connected.
 
 **Since:** 10
+
+<!--Device-SEService-isConnected(): boolean--><!--Device-SEService-isConnected(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
 
@@ -165,6 +172,8 @@ shutdown(): void
 Releases all SE resources allocated by this SEService. As a result isConnected() will return false.
 
 **Since:** 10
+
+<!--Device-SEService-shutdown(): void--><!--Device-SEService-shutdown(): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
 

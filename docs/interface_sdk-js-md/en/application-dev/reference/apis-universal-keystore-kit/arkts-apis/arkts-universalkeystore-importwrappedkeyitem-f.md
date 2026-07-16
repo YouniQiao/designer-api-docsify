@@ -19,14 +19,26 @@ function importWrappedKeyItem(
 
 Imports keys in secure mode. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> Importing SE security level wrapped keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)
+> **NOTE**  
+>  
+> Importing SE security level wrapped keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)  
 > requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-huks-function importWrappedKeyItem(
+    keyAlias: string,
+    wrappingKeyAlias: string,
+    options: HuksOptions,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-huks-function importWrappedKeyItem(
+    keyAlias: string,
+    wrappingKeyAlias: string,
+    options: HuksOptions,
+    callback: AsyncCallback<void>
+  ): void-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -38,14 +50,14 @@ Imports keys in secure mode. This API uses an asynchronous callback to return th
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the wrapped key to import. |
 | wrappingKeyAlias | string | Yes | Alias of the data used to unwrap the key imported. |
-| options | HuksOptions | Yes | Tags required for the import and the wrapped key to import. The algorithm, keypurpose, and key length are mandatory. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no**err** value is returned; otherwise, an error code is returned. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Tags required for the import and the wrapped key to import. The algorithm, key purpose, and key length are mandatory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful, no **err** value is returned; otherwise, an error code is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly becausethe ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified.2. Incorrect parameter types.3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
 | [12000001](../errorcode-huks.md#12000001-feature-not-supported) | algorithm mode is not supported |
@@ -244,14 +256,16 @@ function importWrappedKeyItem(keyAlias: string, wrappingKeyAlias: string, option
 
 Imports keys in secure mode. This API uses a promise to return the result.
 
-> **NOTE**
->
-> Importing SE security level wrapped keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)
+> **NOTE**  
+>  
+> Importing SE security level wrapped keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)  
 > requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-huks-function importWrappedKeyItem(keyAlias: string, wrappingKeyAlias: string, options: HuksOptions): Promise<void>--><!--Device-huks-function importWrappedKeyItem(keyAlias: string, wrappingKeyAlias: string, options: HuksOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -261,19 +275,19 @@ Imports keys in secure mode. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the wrapped key to import. |
 | wrappingKeyAlias | string | Yes | Alias of the data used to unwrap the key imported. |
-| options | HuksOptions | Yes | Tags required for the import and the wrapped key to import. The algorithm, keypurpose, and key length are mandatory. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Tags required for the import and the wrapped key to import. The algorithm, key purpose, and key length are mandatory. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly becausethe ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified.2. Incorrect parameter types.3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
 | [12000001](../errorcode-huks.md#12000001-feature-not-supported) | algorithm mode is not supported |

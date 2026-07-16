@@ -8,6 +8,8 @@ export type NotificationMultiLineContent = _NotificationMultiLineContent
 
 **起始版本：** 9
 
+<!--Device-notificationManager-export type NotificationMultiLineContent = _NotificationMultiLineContent--><!--Device-notificationManager-export type NotificationMultiLineContent = _NotificationMultiLineContent-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **属性类型：** _NotificationMultiLineContent

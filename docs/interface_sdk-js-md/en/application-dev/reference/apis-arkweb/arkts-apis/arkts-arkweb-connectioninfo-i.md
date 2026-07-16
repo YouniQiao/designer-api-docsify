@@ -4,6 +4,8 @@ Represents the information object of the web native messaging connection.
 
 **Since:** 21
 
+<!--Device-unnamed-export interface ConnectionInfo--><!--Device-unnamed-export interface ConnectionInfo-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Application bundle name of the caller.
 
 **Since:** 21
 
+<!--Device-ConnectionInfo-bundleName: string--><!--Device-ConnectionInfo-bundleName: string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## connectionId
@@ -37,6 +41,8 @@ Connection ID.
 **Type:** number
 
 **Since:** 21
+
+<!--Device-ConnectionInfo-connectionId: number--><!--Device-ConnectionInfo-connectionId: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -52,6 +58,8 @@ Original URL of the caller extension.
 
 **Since:** 21
 
+<!--Device-ConnectionInfo-extensionOrigin: string--><!--Device-ConnectionInfo-extensionOrigin: string-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## fdRead
@@ -66,6 +74,8 @@ Pipe file descriptor used to read data.
 
 **Since:** 21
 
+<!--Device-ConnectionInfo-fdRead: number--><!--Device-ConnectionInfo-fdRead: number-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## fdWrite
@@ -79,6 +89,8 @@ Pipe file descriptor used to write data.
 **Type:** number
 
 **Since:** 21
+
+<!--Device-ConnectionInfo-fdWrite: number--><!--Device-ConnectionInfo-fdWrite: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

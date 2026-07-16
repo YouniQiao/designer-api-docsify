@@ -1,5 +1,11 @@
 # getPointerSizeSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+```
+
 ## getPointerSizeSync
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getPointerSizeSync(): number
 获取鼠标光标大小，使用同步方式返回结果。
 
 **起始版本：** 10
+
+<!--Device-pointer-function getPointerSizeSync(): int--><!--Device-pointer-function getPointerSizeSync(): int-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

@@ -4,9 +4,17 @@
 
 **起始版本：** 24
 
+<!--Device-osAccount-interface AuthorizationManager--><!--Device-osAccount-interface AuthorizationManager-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+```
 
 ## acquireAuthorization
 
@@ -22,6 +30,8 @@ acquireAuthorization(privilege: string, options?: AcquireAuthorizationOptions): 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AuthorizationManager-acquireAuthorization(privilege: string, options?: AcquireAuthorizationOptions): Promise<AcquireAuthorizationResult>--><!--Device-AuthorizationManager-acquireAuthorization(privilege: string, options?: AcquireAuthorizationOptions): Promise<AcquireAuthorizationResult>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -31,13 +41,13 @@ acquireAuthorization(privilege: string, options?: AcquireAuthorizationOptions): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | privilege | string | 是 | 目标权限，详见[配置文件](https://gitcode.com/openharmony/account_os_account/blob/master/services/accountmgr/authorization_manager/config/privileges.json)。 |
-| options | AcquireAuthorizationOptions | 否 | 获取授权的选项，默认为空。 |
+| options | [AcquireAuthorizationOptions](arkts-basicservices-acquireauthorizationoptions-i-sys.md) | 否 | 获取授权的选项，默认为空。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AcquireAuthorizationResult&gt; | Promise对象，返回获取授权的结果。 |
+| Promise<AcquireAuthorizationResult> | Promise对象，返回获取授权的结果。 |
 
 **错误码：**
 
@@ -85,6 +95,8 @@ hasAuthorization(privilege: string): Promise<boolean>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AuthorizationManager-hasAuthorization(privilege: string): Promise<boolean>--><!--Device-AuthorizationManager-hasAuthorization(privilege: string): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -99,7 +111,7 @@ hasAuthorization(privilege: string): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回true表示已获得指定特权的授权；返回false表示未获得指定特权的授权。 |
+| Promise<boolean> | Promise对象，返回true表示已获得指定特权的授权；返回false表示未获得指定特权的授权。 |
 
 **错误码：**
 
@@ -143,6 +155,8 @@ releaseAuthorization(privilege: string): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AuthorizationManager-releaseAuthorization(privilege: string): Promise<void>--><!--Device-AuthorizationManager-releaseAuthorization(privilege: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -157,7 +171,7 @@ releaseAuthorization(privilege: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

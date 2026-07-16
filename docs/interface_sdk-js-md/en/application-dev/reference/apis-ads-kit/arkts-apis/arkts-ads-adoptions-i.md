@@ -4,6 +4,8 @@ Defines the ad configuration.
 
 **Since:** 11
 
+<!--Device-advertising-export interface AdOptions--><!--Device-advertising-export interface AdOptions-End-->
+
 **System capability:** SystemCapability.Advertising.Ads
 
 ## Modules to Import
@@ -20,10 +22,7 @@ adContentClassification?: string
 
 Sets the maximum ad content rating.
 
-W: ages 3+, all audiences.
-PI: ages 7+, parental guidance.
-J: ages 12+, teen.
-A: ages 16+/18+, adult audience.
+W: ages 3+, all audiences.PI: ages 7+, parental guidance.J: ages 12+, teen.A: ages 16+/18+, adult audience.
 
 If not set, the business logic prevails.
 
@@ -32,6 +31,8 @@ If not set, the business logic prevails.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AdOptions-adContentClassification?: string--><!--Device-AdOptions-adContentClassification?: string-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -51,6 +52,8 @@ Custom parameters.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AdOptions-[key: string]: number | boolean | string | undefined--><!--Device-AdOptions-[key: string]: number | boolean | string | undefined-End-->
+
 **System capability:** SystemCapability.Advertising.Ads
 
 ## nonPersonalizedAd
@@ -61,8 +64,7 @@ nonPersonalizedAd?: number
 
 Sets whether to request only non-personalized ads.
 
-0: Request both personalized and non-personalized ads.
-1: Request only non-personalized ads.
+0: Request both personalized and non-personalized ads.1: Request only non-personalized ads.
 
 If not set, the business logic prevails.
 
@@ -71,6 +73,8 @@ If not set, the business logic prevails.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AdOptions-nonPersonalizedAd?: number--><!--Device-AdOptions-nonPersonalizedAd?: number-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -82,9 +86,7 @@ tagForChildProtection?: number
 
 Whether you want your content to be treated as child-directed for purposes of COPPA.
 
--1: Default value, unspecified.
-0: No.
-1: Yes.
+-1: Default value, unspecified.0: No.1: Yes.
 
 The default value is -1.
 
@@ -93,6 +95,8 @@ The default value is -1.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AdOptions-tagForChildProtection?: number--><!--Device-AdOptions-tagForChildProtection?: number-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 

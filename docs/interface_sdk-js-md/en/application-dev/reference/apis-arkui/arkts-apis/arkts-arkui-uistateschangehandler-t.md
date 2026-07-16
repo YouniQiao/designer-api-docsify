@@ -4,15 +4,15 @@
 declare type UIStatesChangeHandler = (node: FrameNode, currentUIStates: number) => void
 ```
 
-Defines the callback triggered when the UI state changes. Defines the callback triggered on UI state changes. It
-receives the current [UIState](arkts-arkui-uistate-e.md) value when triggered. The parameter represents **UIState** enumerated
-values or their bitwise combinations.
+Defines the callback triggered when the UI state changes. Defines the callback triggered on UI state changes. It receives the current [UIState](arkts-arkui-uistate-e.md) value when triggered. The parameter represents **UIState** enumerated values or their bitwise combinations.
 
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-unnamed-declare type UIStatesChangeHandler = (node: FrameNode, currentUIStates: number) => void--><!--Device-unnamed-declare type UIStatesChangeHandler = (node: FrameNode, currentUIStates: number) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

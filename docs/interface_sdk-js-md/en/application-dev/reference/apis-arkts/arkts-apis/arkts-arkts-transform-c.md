@@ -1,11 +1,12 @@
 # Transform
 
-A special duplex stream that supports data conversion and result output. The **Transform** class inherits from
-[Duplex](arkts-arkts-duplex-c.md) and supports all the APIs in **Duplex**.
+A special duplex stream that supports data conversion and result output. The **Transform** class inherits from [Duplex](arkts-arkts-duplex-c.md) and supports all the APIs in **Duplex**.
 
 **Inheritance/Implementation:** Transform extends [Duplex](arkts-arkts-duplex-c.md)
 
 **Since:** 12
+
+<!--Device-stream-export class Transform extends Duplex--><!--Device-stream-export class Transform extends Duplex-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,6 +28,8 @@ A constructor used to create a **Transform** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Transform-constructor()--><!--Device-Transform-constructor()-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Example**
@@ -42,12 +45,13 @@ let transform = new stream.Transform();
 doFlush(callback: Function): void
 ```
 
-Called at the end of the stream to process the remaining data. This API uses an asynchronous callback to return
-the result.
+Called at the end of the stream to process the remaining data. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Transform-doFlush(callback: Function): void--><!--Device-Transform-doFlush(callback: Function): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -55,7 +59,7 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Function | Yes | Callback function. |
+| callback | [Function](../../apis-na/arkts-apis/arkts-na-function-i.md) | Yes | Callback function. |
 
 **Example**
 
@@ -94,6 +98,8 @@ Converts or processes input data chunks and uses a callback to notify that the p
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Transform-doTransform(chunk: string, encoding: string, callback: Function): void--><!--Device-Transform-doTransform(chunk: string, encoding: string, callback: Function): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -101,8 +107,8 @@ Converts or processes input data chunks and uses a callback to notify that the p
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | chunk | string | Yes | Data to write. |
-| encoding | string | Yes | Encoding format. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'**are supported. |
-| callback | Function | Yes | Callback function. |
+| encoding | string | Yes | Encoding format. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
+| callback | [Function](../../apis-na/arkts-apis/arkts-na-function-i.md) | Yes | Callback function. |
 
 **Example**
 

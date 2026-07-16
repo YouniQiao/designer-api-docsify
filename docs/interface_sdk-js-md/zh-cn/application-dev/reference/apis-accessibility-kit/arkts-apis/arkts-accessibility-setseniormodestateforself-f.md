@@ -1,5 +1,11 @@
 # setSeniorModeStateForSelf
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+```
+
 ## setSeniorModeStateForSelf
 
 ```TypeScript
@@ -11,6 +17,8 @@ Set this application's senior mode.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-accessibility-function setSeniorModeStateForSelf(state: boolean): Promise<void>--><!--Device-accessibility-function setSeniorModeStateForSelf(state: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -24,7 +32,7 @@ Set this application's senior mode.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise<void> | The promise returned by the function. |
 
 **错误码：**
 

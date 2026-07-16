@@ -12,15 +12,15 @@ import { insightIntentDriver } from '@kit.AbilityKit';
 function getInsightIntentInfoByFilter(filter: InsightIntentInfoFilter): Promise<Array<InsightIntentInfo>>
 ```
 
-Obtains the intent information on the current device based on the given intent filter. This API uses a promise to
-return the result.<br>If the user ID of the calling application is different from the user ID of the intent, the
-calling application must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission.
+Obtains the intent information on the current device based on the given intent filter. This API uses a promise to return the result.<br>If the user ID of the calling application is different from the user ID of the intent, the calling application must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-insightIntentDriver-function getInsightIntentInfoByFilter(filter: InsightIntentInfoFilter): Promise<Array<InsightIntentInfo>>--><!--Device-insightIntentDriver-function getInsightIntentInfoByFilter(filter: InsightIntentInfoFilter): Promise<Array<InsightIntentInfo>>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -30,13 +30,13 @@ calling application must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOU
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | InsightIntentInfoFilter | Yes | Intent filter, which specifies the criteria for selecting a targetintent. It is used to filter intents on the device that meet these criteria. |
+| filter | [InsightIntentInfoFilter](arkts-ability-insightintentinfofilter-i-sys.md) | Yes | Intent filter, which specifies the criteria for selecting a target intent. It is used to filter intents on the device that meet these criteria. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;InsightIntentInfo&gt;&gt; | Promise used to return an array holding InsightIntentInfo objects. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<InsightIntentInfo>> | Promise used to return an array holding InsightIntentInfo objects. |
 
 **Error codes:**
 

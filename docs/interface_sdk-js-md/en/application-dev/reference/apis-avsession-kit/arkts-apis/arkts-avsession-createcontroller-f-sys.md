@@ -18,6 +18,8 @@ Create an avsession controller
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function createController(sessionId: string, callback: AsyncCallback<AVSessionController>): void--><!--Device-avSession-function createController(sessionId: string, callback: AsyncCallback<AVSessionController>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Create an avsession controller
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sessionId | string | Yes | Specifies the sessionId to create the controller. |
-| callback | AsyncCallback&lt;AVSessionController&gt; | Yes | async callback for AVSessionController.If provided 'default', the system will create a default controller, Used to control the system default session |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AVSessionController> | Yes | async callback for AVSessionController.If provided 'default', the system will create a default controller, Used to control the system default session |
 
 **Error codes:**
 
@@ -85,6 +87,8 @@ Create an avsession controller
 - API version 23+: ohos.permission.MANAGE_MEDIA_RESOURCES or ohos.permission.MANAGE_MEDIA_RESOURCES_FOR_PUBLIC
 - API version 9 - 22: ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function createController(sessionId: string): Promise<AVSessionController>--><!--Device-avSession-function createController(sessionId: string): Promise<AVSessionController>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -99,7 +103,7 @@ Create an avsession controller
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVSessionController&gt; | Promise for AVSessionController |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AVSessionController> | Promise for AVSessionController |
 
 **Error codes:**
 

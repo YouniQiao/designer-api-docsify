@@ -1,5 +1,11 @@
 # getProcessMemoryByPid（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+```
+
 ## getProcessMemoryByPid
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getProcessMemoryByPid(pid: number): Promise<number>
 通过pid查询对应进程占用的内存大小。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-appManager-function getProcessMemoryByPid(pid: int): Promise<int>--><!--Device-appManager-function getProcessMemoryByPid(pid: int): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -24,7 +32,7 @@ function getProcessMemoryByPid(pid: number): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | 以Promise方式返回接口运行结果及进程占用的内存大小（单位KB），可进行错误处理或其他自定义处理。 |
+| Promise<number> | 以Promise方式返回接口运行结果及进程占用的内存大小（单位KB），可进行错误处理或其他自定义处理。 |
 
 **错误码：**
 
@@ -67,6 +75,8 @@ function getProcessMemoryByPid(pid: number, callback: AsyncCallback<number>): vo
 
 **起始版本：** 10
 
+<!--Device-appManager-function getProcessMemoryByPid(pid: int, callback: AsyncCallback<int>): void--><!--Device-appManager-function getProcessMemoryByPid(pid: int, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -76,7 +86,7 @@ function getProcessMemoryByPid(pid: number, callback: AsyncCallback<number>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pid | number | 是 | 表示进程id，详情参考[getRunningProcessInfoByBundleName](arkts-ability-getrunningprocessinfobybundlename-f-sys.md#getrunningprocessinfobybundlename-1)。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 以回调方式返回接口运行结果及进程占用的内存大小（单位KB），可进行错误处理或其他自定义处理。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 以回调方式返回接口运行结果及进程占用的内存大小（单位KB），可进行错误处理或其他自定义处理。 |
 
 **错误码：**
 

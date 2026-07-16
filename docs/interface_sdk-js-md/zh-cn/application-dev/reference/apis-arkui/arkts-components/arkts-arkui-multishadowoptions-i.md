@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+<!--Device-unnamed-declare interface MultiShadowOptions--><!--Device-unnamed-declare interface MultiShadowOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## offsetX
@@ -24,9 +26,11 @@ X轴偏移量。number类型取值范围不做限制。默认值：5。单位：
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-MultiShadowOptions-offsetX?: number | Resource--><!--Device-MultiShadowOptions-offsetX?: number | Resource-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,9 +52,11 @@ X轴偏移量。number类型取值范围不做限制。默认值：5。单位：
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-MultiShadowOptions-offsetY?: number | Resource--><!--Device-MultiShadowOptions-offsetY?: number | Resource-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,9 +78,11 @@ API version 10及以前，默认值：5；API version 11及以后，默认值：
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-MultiShadowOptions-radius?: number | Resource--><!--Device-MultiShadowOptions-radius?: number | Resource-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

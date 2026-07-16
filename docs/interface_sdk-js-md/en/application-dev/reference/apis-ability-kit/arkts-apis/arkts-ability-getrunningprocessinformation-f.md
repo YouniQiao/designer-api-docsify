@@ -12,15 +12,14 @@ import { appManager } from '@kit.AbilityKit';
 function getRunningProcessInformation(): Promise<Array<ProcessInformation>>
 ```
 
-Obtains information about the running processes of the current application. This API uses a promise to return the
-result.
+Obtains information about the running processes of the current application. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - In versions earlier than API version 11, this API requires the ohos.permission.GET_RUNNING_INFO permission,
-> which is available only for system applications.
->
-> - Starting from API version 11, this API is used only to obtain the process information of the caller. No
+> **NOTE**  
+>  
+> - In versions earlier than API version 11, this API requires the ohos.permission.GET_RUNNING_INFO permission,  
+> which is available only for system applications.  
+>  
+> - Starting from API version 11, this API is used only to obtain the process information of the caller. No  
 > permission is required.
 
 **Since:** 9
@@ -30,13 +29,15 @@ result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-appManager-function getRunningProcessInformation(): Promise<Array<ProcessInformation>>--><!--Device-appManager-function getRunningProcessInformation(): Promise<Array<ProcessInformation>>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ProcessInformation&gt;&gt; | Promise used to return the API call result and the process runninginformation. You can perform error handling or custom processing in this callback. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ProcessInformation>> | Promise used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 
@@ -65,15 +66,14 @@ appManager.getRunningProcessInformation().then((data) => {
 function getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInformation>>): void
 ```
 
-Obtains information about the running processes of the current application. This API uses an asynchronous callback
-to return the result.
+Obtains information about the running processes of the current application. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> - In versions earlier than API version 11, this API requires the ohos.permission.GET_RUNNING_INFO permission,
-> which is available only for system applications.
->
-> - Starting from API version 11, this API is used only to obtain the process information of the caller. No
+> **NOTE**  
+>  
+> - In versions earlier than API version 11, this API requires the ohos.permission.GET_RUNNING_INFO permission,  
+> which is available only for system applications.  
+>  
+> - Starting from API version 11, this API is used only to obtain the process information of the caller. No  
 > permission is required.
 
 **Since:** 9
@@ -83,13 +83,15 @@ to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-appManager-function getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInformation>>): void--><!--Device-appManager-function getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInformation>>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;ProcessInformation&gt;&gt; | Yes | Callback used to return the result. If the API call issuccessful, **err** is **undefined** and **data** is the information about the running processes. Otherwise, **err**is an error object. You can perform error handling or other custom processing. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<ProcessInformation>> | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the information about the running processes. Otherwise, **err** is an error object. You can perform error handling or other custom processing. |
 
 **Error codes:**
 

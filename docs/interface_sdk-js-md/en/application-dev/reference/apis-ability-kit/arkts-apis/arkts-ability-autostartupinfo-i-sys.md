@@ -4,6 +4,8 @@ The module defines information about the application component that automaticall
 
 **Since:** 11
 
+<!--Device-unnamed-export interface AutoStartupInfo--><!--Device-unnamed-export interface AutoStartupInfo-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -21,6 +23,8 @@ Ability name.
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AutoStartupInfo-abilityName: string--><!--Device-AutoStartupInfo-abilityName: string-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -40,6 +44,8 @@ Ability type.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AutoStartupInfo-abilityTypeName?: string--><!--Device-AutoStartupInfo-abilityTypeName?: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ Index of an application clone.
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AutoStartupInfo-appCloneIndex?: int--><!--Device-AutoStartupInfo-appCloneIndex?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -76,6 +84,8 @@ Bundle name.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AutoStartupInfo-bundleName: string--><!--Device-AutoStartupInfo-bundleName: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -86,14 +96,15 @@ Bundle name.
 readonly canUserModify?: boolean
 ```
 
-Whether the developer is allowed to modify the auto-startup status of this application. The options include
-**true** (yes) and **false** (no).
+Whether the developer is allowed to modify the auto-startup status of this application. The options include **true** (yes) and **false** (no).
 
 **Type:** boolean
 
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AutoStartupInfo-readonly canUserModify?: boolean--><!--Device-AutoStartupInfo-readonly canUserModify?: boolean-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -113,6 +124,8 @@ Module name.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AutoStartupInfo-moduleName?: string--><!--Device-AutoStartupInfo-moduleName?: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -131,6 +144,8 @@ User ID of the person who set the application to automatically start upon system
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AutoStartupInfo-readonly setterUserId?: int--><!--Device-AutoStartupInfo-readonly setterUserId?: int-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -141,14 +156,15 @@ User ID of the person who set the application to automatically start upon system
 readonly userId?: number
 ```
 
-User ID associated with the application, used to differentiate applications belonging to different user accounts on
-the same device.
+User ID associated with the application, used to differentiate applications belonging to different user accounts on the same device.
 
 **Type:** number
 
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AutoStartupInfo-readonly userId?: int--><!--Device-AutoStartupInfo-readonly userId?: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

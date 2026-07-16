@@ -4,6 +4,8 @@ Describes the information of an Metrics Event.
 
 **Since:** 23
 
+<!--Device-media-interface AVMetricsEvent--><!--Device-media-interface AVMetricsEvent-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 ## Modules to Import
@@ -26,6 +28,8 @@ The detailed information of the event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMetricsEvent-details: Record<string, Object>--><!--Device-AVMetricsEvent-details: Record<string, Object>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 ## event
@@ -42,6 +46,8 @@ Type of the metrics event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMetricsEvent-event: AVMetricsEventType--><!--Device-AVMetricsEvent-event: AVMetricsEventType-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 ## playbackPosition
@@ -56,6 +62,8 @@ The playback progress position when the event occurs, in ms.
 
 **Since:** 23
 
+<!--Device-AVMetricsEvent-playbackPosition: int--><!--Device-AVMetricsEvent-playbackPosition: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 ## timeStamp
@@ -69,6 +77,8 @@ Absolute timestamp when the event occurred, in ms.
 **Type:** number
 
 **Since:** 23
+
+<!--Device-AVMetricsEvent-timeStamp: long--><!--Device-AVMetricsEvent-timeStamp: long-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 

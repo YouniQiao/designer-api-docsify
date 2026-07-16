@@ -4,9 +4,17 @@
 
 **起始版本：** 24
 
+<!--Device-selectionManager-interface Panel--><!--Device-selectionManager-interface Panel-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { selectionManager } from '@kit.BasicServicesKit';
+```
 
 ## hide
 
@@ -18,6 +26,8 @@ hide(): Promise<void>
 
 **起始版本：** 24
 
+<!--Device-Panel-hide(): Promise<void>--><!--Device-Panel-hide(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
@@ -26,7 +36,7 @@ hide(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -57,8 +67,8 @@ moveTo(x: number, y: number): Promise<void>
 
 移动划词面板至屏幕指定位置。使用Promise异步回调。
 
-> **说明：**
-> 从API version 20开始支持，从API version 24开始废弃。建议使用
+> **说明：**  
+> 从API version 20开始支持，从API version 24开始废弃。建议使用  
 > [moveToGlobalDisplay](arkts-basicservices-panel-i.md#movetoglobaldisplay-1)替代。
 
 **起始版本：** 20
@@ -66,6 +76,8 @@ moveTo(x: number, y: number): Promise<void>
 **废弃版本：** 24
 
 **替代接口：** [moveToGlobalDisplay](arkts-basicservices-panel-i.md#movetoglobaldisplay-1)
+
+<!--Device-Panel-moveTo(x: int, y: int): Promise<void>--><!--Device-Panel-moveTo(x: int, y: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 
@@ -82,7 +94,7 @@ moveTo(x: number, y: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -119,6 +131,8 @@ off(type: 'destroyed', callback?: Callback<void>): void
 
 **起始版本：** 24
 
+<!--Device-Panel-off(type: 'destroyed', callback?: Callback<void>): void--><!--Device-Panel-off(type: 'destroyed', callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
@@ -128,7 +142,7 @@ off(type: 'destroyed', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'destroyed' | 是 | 设置监听类型，固定取值为'destroyed'。 |
-| callback | Callback&lt;void&gt; | 否 | 回调函数，返回值为空。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | 否 | 回调函数，返回值为空。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例：**
 
@@ -152,6 +166,8 @@ off(type: 'hidden', callback?: Callback<void>): void
 
 **起始版本：** 24
 
+<!--Device-Panel-off(type: 'hidden', callback?: Callback<void>): void--><!--Device-Panel-off(type: 'hidden', callback?: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
@@ -161,7 +177,7 @@ off(type: 'hidden', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hidden' | 是 | 设置监听类型，固定取值为'hidden'。 |
-| callback | Callback&lt;void&gt; | 否 | 回调函数，返回值为空。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | 否 | 回调函数，返回值为空。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例：**
 
@@ -185,6 +201,8 @@ on(type: 'destroyed', callback: Callback<void>): void
 
 **起始版本：** 24
 
+<!--Device-Panel-on(type: 'destroyed', callback: Callback<void>): void--><!--Device-Panel-on(type: 'destroyed', callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
@@ -194,7 +212,7 @@ on(type: 'destroyed', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'destroyed' | 是 | 设置监听类型，固定取值为'destroyed'。 |
-| callback | Callback&lt;void&gt; | 是 | 回调函数，返回值为空。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | 是 | 回调函数，返回值为空。 |
 
 **示例：**
 
@@ -220,6 +238,8 @@ on(type: 'hidden', callback: Callback<void>): void
 
 **起始版本：** 24
 
+<!--Device-Panel-on(type: 'hidden', callback: Callback<void>): void--><!--Device-Panel-on(type: 'hidden', callback: Callback<void>): void-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
@@ -229,7 +249,7 @@ on(type: 'hidden', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hidden' | 是 | 设置监听类型，固定取值为'hidden'。 |
-| callback | Callback&lt;void&gt; | 是 | 回调函数，返回值为空。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | 是 | 回调函数，返回值为空。 |
 
 **示例：**
 
@@ -257,6 +277,8 @@ setUiContent(path: string): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Panel-setUiContent(path: string): Promise<void>--><!--Device-Panel-setUiContent(path: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
@@ -271,7 +293,7 @@ setUiContent(path: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -310,6 +332,8 @@ show(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Panel-show(): Promise<void>--><!--Device-Panel-show(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
@@ -318,7 +342,7 @@ show(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -353,6 +377,8 @@ startMoving(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Panel-startMoving(): Promise<void>--><!--Device-Panel-startMoving(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
@@ -361,7 +387,7 @@ startMoving(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

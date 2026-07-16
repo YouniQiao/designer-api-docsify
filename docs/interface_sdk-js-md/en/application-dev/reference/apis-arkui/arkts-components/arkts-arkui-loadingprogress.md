@@ -11,6 +11,9 @@ event callback: If the value is greater than 0, the component is visible.
 
 > - This component supports [WithTheme]{@link with_theme} since API version 26.0.0.
 
+## Child Components
+
+Not supported
 
 ## LoadingProgress
 
@@ -25,6 +28,8 @@ Creates a loading progress component.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-LoadingProgressInterface-(): LoadingProgressAttribute--><!--Device-LoadingProgressInterface-(): LoadingProgressAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

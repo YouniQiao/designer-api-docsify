@@ -4,6 +4,8 @@ MacroQuery provides the API to check the support for macro photography.
 
 **Since:** 19
 
+<!--Device-camera-interface MacroQuery--><!--Device-camera-interface MacroQuery-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -20,12 +22,13 @@ import { camera } from '@kit.CameraKit';
 isMacroSupported(): boolean
 ```
 
-Checks whether macro photography is supported in the current state. This API must be called after
-[commitConfig](arkts-camera-session-i.md#commitconfig-1).
+Checks whether macro photography is supported in the current state. This API must be called after [commitConfig](arkts-camera-session-i.md#commitconfig-1).
 
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-MacroQuery-isMacroSupported(): boolean--><!--Device-MacroQuery-isMacroSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -35,7 +38,7 @@ Checks whether macro photography is supported in the current state. This API mus
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of macro photography. **true** if supported, **false**otherwise. |
+| boolean | Check result for the support of macro photography. **true** if supported, **false** otherwise. |
 
 **Error codes:**
 

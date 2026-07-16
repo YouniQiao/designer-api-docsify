@@ -12,12 +12,13 @@ import { notificationManager } from '@kit.NotificationKit';
 function setTargetDeviceStatus(deviceType: string, status: number): Promise<void>
 ```
 
-Sets the status of a device after it is successfully connected. Device status determines the notification mode of
-the current device when a notification is published.
+Sets the status of a device after it is successfully connected. Device status determines the notification mode of the current device when a notification is published.
 
 **Since:** 18
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function setTargetDeviceStatus(deviceType: string, status: long): Promise<void>--><!--Device-notificationManager-function setTargetDeviceStatus(deviceType: string, status: long): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -28,13 +29,13 @@ the current device when a notification is published.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceType | string | Yes | Device type. Currently, only **headset**, **liteWearable**, **wearable**,**glasses**, and **current** are supported. |
-| status | number | Yes | Device status.<br>- Bit 0: whether the device is in use. The value **0** indicates thatthe device is available; **1** indicates that the device is in use.<br>- Bit 1: whether the device user is theowner. The value **0** indicates that the user is not the owner; **1** indicates the opposite.<br>- Bit 2:whether the device is in the Do Not Disturb mode. The value **0** indicates that the device is not in the DoNot Disturb mode; **1** indicates the opposite. |
+| status | number | Yes | Device status.<br>- Bit 0: whether the device is in use. The value **0** indicates that the device is available; **1** indicates that the device is in use.<br>- Bit 1: whether the device user is the owner. The value **0** indicates that the user is not the owner; **1** indicates the opposite.<br>- Bit 2:whether the device is in the Do Not Disturb mode. The value **0** indicates that the device is not in the Do Not Disturb mode; **1** indicates the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

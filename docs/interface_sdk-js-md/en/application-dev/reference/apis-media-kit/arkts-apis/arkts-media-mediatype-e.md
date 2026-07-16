@@ -4,6 +4,8 @@ Enumerates the media types.
 
 **Since:** 8
 
+<!--Device-media-enum MediaType--><!--Device-media-enum MediaType-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## MEDIA_TYPE_UNSUPPORTED
@@ -17,6 +19,8 @@ The media type is not supported.
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-MediaType-MEDIA_TYPE_UNSUPPORTED = -1--><!--Device-MediaType-MEDIA_TYPE_UNSUPPORTED = -1-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -32,6 +36,8 @@ Media.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-MediaType-MEDIA_TYPE_AUD = 0--><!--Device-MediaType-MEDIA_TYPE_AUD = 0-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## MEDIA_TYPE_VID
@@ -45,6 +51,8 @@ Video.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-MediaType-MEDIA_TYPE_VID = 1--><!--Device-MediaType-MEDIA_TYPE_VID = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -60,6 +68,8 @@ Subtitle.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MediaType-MEDIA_TYPE_SUBTITLE = 2--><!--Device-MediaType-MEDIA_TYPE_SUBTITLE = 2-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## MEDIA_TYPE_ATTACHMENT
@@ -73,6 +83,8 @@ Attachment information (for example, an embedded external file).
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-MediaType-MEDIA_TYPE_ATTACHMENT = 3--><!--Device-MediaType-MEDIA_TYPE_ATTACHMENT = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -88,6 +100,8 @@ Data.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-MediaType-MEDIA_TYPE_DATA = 4--><!--Device-MediaType-MEDIA_TYPE_DATA = 4-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## MEDIA_TYPE_TIMED_METADATA
@@ -102,6 +116,8 @@ Metadata with a timestamp.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-MediaType-MEDIA_TYPE_TIMED_METADATA = 5--><!--Device-MediaType-MEDIA_TYPE_TIMED_METADATA = 5-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## MEDIA_TYPE_AUXILIARY
@@ -115,6 +131,8 @@ Auxiliary (track) information.
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-MediaType-MEDIA_TYPE_AUXILIARY = 6--><!--Device-MediaType-MEDIA_TYPE_AUXILIARY = 6-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 

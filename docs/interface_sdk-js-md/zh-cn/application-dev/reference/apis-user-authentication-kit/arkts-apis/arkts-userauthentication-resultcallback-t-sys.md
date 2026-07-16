@@ -4,12 +4,13 @@
 type ResultCallback = (challenge: Uint8Array, result: UserAuthResult) => void
 ```
 
-调用返回认证结果。如果鉴权成功。
-UserAuthResult中包含token信息。
+调用返回认证结果。如果鉴权成功。UserAuthResult中包含token信息。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-userAuth-type ResultCallback = (challenge: Uint8Array, result: UserAuthResult) => void--><!--Device-userAuth-type ResultCallback = (challenge: Uint8Array, result: UserAuthResult) => void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

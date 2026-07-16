@@ -1,5 +1,11 @@
 # getSystemAppCertificate（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+```
+
 ## getSystemAppCertificate
 
 ```TypeScript
@@ -13,6 +19,8 @@ function getSystemAppCertificate(keyUri: string) : Promise<CMResult>
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_SYSTEM_APP_CERT
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-certificateManager-function getSystemAppCertificate(keyUri: string) : Promise<CMResult>--><!--Device-certificateManager-function getSystemAppCertificate(keyUri: string) : Promise<CMResult>-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -28,7 +36,7 @@ function getSystemAppCertificate(keyUri: string) : Promise<CMResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise对象，返回获取系统应用凭据详细信息的结果，返回值为[CMResult](arkts-devicecertificate-cmresult-i.md)对象中的credential属性。 |
+| Promise<CMResult> | Promise对象，返回获取系统应用凭据详细信息的结果，返回值为[CMResult](arkts-devicecertificate-cmresult-i.md)对象中的credential属性。 |
 
 **错误码：**
 

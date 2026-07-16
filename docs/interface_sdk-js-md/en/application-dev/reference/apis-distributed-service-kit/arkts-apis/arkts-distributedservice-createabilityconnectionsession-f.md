@@ -21,16 +21,20 @@ Creates a collaboration session between applications.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-abilityConnectionManager-function createAbilityConnectionSession(serviceName: string, context: Context, peerInfo: PeerInfo,
+        connectOptions: ConnectOptions): int--><!--Device-abilityConnectionManager-function createAbilityConnectionSession(serviceName: string, context: Context, peerInfo: PeerInfo,
+        connectOptions: ConnectOptions): int-End-->
+
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serviceName | string | Yes | Service name for the application. The service name must be the same on the local end andpeer end. The value contains a maximum of 256 characters. |
-| context | Context | Yes | Application context. |
-| peerInfo | PeerInfo | Yes | Collaboration information of the peer end. |
-| connectOptions | ConnectOptions | Yes | Connection options for the application. |
+| serviceName | string | Yes | Service name for the application. The service name must be the same on the local end and peer end. The value contains a maximum of 256 characters. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. |
+| peerInfo | [PeerInfo](arkts-distributedservice-peerinfo-i.md) | Yes | Collaboration information of the peer end. |
+| connectOptions | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-t.md) | Yes | Connection options for the application. |
 
 **Return value:**
 

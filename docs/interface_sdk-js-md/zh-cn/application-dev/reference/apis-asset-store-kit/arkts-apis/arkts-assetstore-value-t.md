@@ -8,7 +8,9 @@ declare type Value = boolean | number | Uint8Array
 
 **起始版本：** 11
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-asset-declare type Value = boolean | number | Uint8Array--><!--Device-asset-declare type Value = boolean | number | Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 

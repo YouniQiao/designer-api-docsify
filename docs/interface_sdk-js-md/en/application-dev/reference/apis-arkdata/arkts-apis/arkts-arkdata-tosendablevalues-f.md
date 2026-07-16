@@ -16,19 +16,21 @@ Converts the array data that cannot be passed across threads into the data that 
 
 **Since:** 20
 
+<!--Device-sendableRelationalStore-function toSendableValues(values: NonSendableValues): collections.Array<ValueType>--><!--Device-sendableRelationalStore-function toSendableValues(values: NonSendableValues): collections.Array<ValueType>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | NonSendableValues | Yes | Array data that cannot be passed across threads. |
+| values | [NonSendableValues](arkts-arkdata-nonsendablevalues-t.md) | Yes | Array data that cannot be passed across threads. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| collections.Array&lt;ValueType&gt; | Array data that can be passed across threads. |
+| collections.Array<ValueType> | Array data that can be passed across threads. |
 
 **Error codes:**
 

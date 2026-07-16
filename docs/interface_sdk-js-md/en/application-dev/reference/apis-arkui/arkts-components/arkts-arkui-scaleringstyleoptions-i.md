@@ -8,6 +8,8 @@ Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoption
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface ScaleRingStyleOptions extends CommonProgressStyleOptions--><!--Device-unnamed-declare interface ScaleRingStyleOptions extends CommonProgressStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## scaleCount
@@ -20,8 +22,7 @@ Number of divisions on the ring-style process indicator.
 
 Default value: **120**
 
-Value range: [2, min(width, height)/scaleWidth/2/π]. If the value is outside this range, the progress indicator is
-displayed in the indeterminate ring style. By default, the minimum width and height are 77 vp.
+Value range: [2, min(width, height)/scaleWidth/2/π]. If the value is outside this range, the progress indicator is displayed in the indeterminate ring style. By default, the minimum width and height are 77 vp.
 
 **Type:** number
 
@@ -31,6 +32,8 @@ displayed in the indeterminate ring style. By default, the minimum width and hei
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScaleRingStyleOptions-scaleCount?: number--><!--Device-ScaleRingStyleOptions-scaleCount?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## scaleWidth
@@ -39,8 +42,7 @@ displayed in the indeterminate ring style. By default, the minimum width and hei
 scaleWidth?: Length
 ```
 
-Scale width of the ring-style progress indicator. Percentage values are not supported. If the scale width is
-greater than the stroke width of the progress indicator, the default scale width is used.
+Scale width of the ring-style progress indicator. Percentage values are not supported. If the scale width is greater than the stroke width of the progress indicator, the default scale width is used.
 
 Default value: **2.0vp**
 
@@ -51,6 +53,8 @@ Default value: **2.0vp**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScaleRingStyleOptions-scaleWidth?: Length--><!--Device-ScaleRingStyleOptions-scaleWidth?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -71,6 +75,8 @@ Default value: **4.0vp**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScaleRingStyleOptions-strokeWidth?: Length--><!--Device-ScaleRingStyleOptions-strokeWidth?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

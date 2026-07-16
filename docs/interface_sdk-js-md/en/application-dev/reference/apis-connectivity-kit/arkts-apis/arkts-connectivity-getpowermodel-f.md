@@ -22,13 +22,15 @@ Obtains the current Wi-Fi power mode.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiext-function getPowerModel(): Promise<PowerModel>--><!--Device-wifiext-function getPowerModel(): Promise<PowerModel>-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.AP.Extension
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PowerModel&gt; | Returns the current Wi-Fi power mode. If a value less than zero is returned, it indicates a failure. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PowerModel> | Returns the current Wi-Fi power mode. If a value less than zero is returned, it indicates a failure. |
 
 
 ## getPowerModel
@@ -47,11 +49,13 @@ Obtains the current Wi-Fi power mode.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiext-function getPowerModel(callback: AsyncCallback<PowerModel>): void--><!--Device-wifiext-function getPowerModel(callback: AsyncCallback<PowerModel>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.AP.Extension
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;PowerModel&gt; | Yes | callback function, no return value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<PowerModel> | Yes | callback function, no return value. |
 

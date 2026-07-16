@@ -20,13 +20,15 @@ Creates a touch controller for simulating touch operations. This API uses a prom
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-inputEventClient-function createTouchController(): Promise<TouchController>--><!--Device-inputEventClient-function createTouchController(): Promise<TouchController>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;TouchController&gt; | Promise used to return the touch controller instance. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<TouchController> | Promise used to return the touch controller instance. |
 
 **Error codes:**
 

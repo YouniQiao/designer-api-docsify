@@ -12,21 +12,21 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, property: DLPProperty, customProperty: CustomProperty): Promise<void>
 ```
 
-Encrypts a plaintext file to generate a DLP file for an enterprise account. This API can be called only by
-enterprise accounts. This API uses a promise to return the result.
+Encrypts a plaintext file to generate a DLP file for an enterprise account. This API can be called only by enterprise accounts. This API uses a promise to return the result.
 
-This API encrypts a plaintext file to generate a DLP file that can be accessed only by enterprise accounts,
-implementing enterprise-level file permission management.
+This API encrypts a plaintext file to generate a DLP file that can be accessed only by enterprise accounts,implementing enterprise-level file permission management.
 
-> **NOTE**
->
-> This API can be called only by enterprise accounts. Enterprises need to set up their own enterprise account
-> servers. This API generates a DLP file, which is an encrypted file that can be accessed only by accounts
+> **NOTE**  
+>  
+> This API can be called only by enterprise accounts. Enterprises need to set up their own enterprise account  
+> servers. This API generates a DLP file, which is an encrypted file that can be accessed only by accounts  
 > authorized by the enterprise server.
 
 **Since:** 21
 
 **Required permissions:** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
+
+<!--Device-dlpPermission-function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, property: DLPProperty, customProperty: CustomProperty): Promise<void>--><!--Device-dlpPermission-function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, property: DLPProperty, customProperty: CustomProperty): Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -36,16 +36,16 @@ implementing enterprise-level file permission management.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| plaintextFd | number | Yes | FD of a plaintext file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of**fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** isgreater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
-| dlpFd | number | Yes | FD of an encrypted file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of**fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd**is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
-| property | DLPProperty | Yes | General policy of DLP files. |
-| customProperty | CustomProperty | Yes | Enterprise custom policy. |
+| plaintextFd | number | Yes | FD of a plaintext file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
+| dlpFd | number | Yes | FD of an encrypted file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
+| property | [DLPProperty](arkts-dataprotection-dlpproperty-i-sys.md) | Yes | General policy of DLP files. |
+| customProperty | [CustomProperty](arkts-dataprotection-customproperty-i-sys.md) | Yes | Enterprise custom policy. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

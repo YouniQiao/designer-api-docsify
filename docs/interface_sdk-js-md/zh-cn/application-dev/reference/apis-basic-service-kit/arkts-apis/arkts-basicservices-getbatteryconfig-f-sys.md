@@ -1,5 +1,11 @@
 # getBatteryConfig（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { batteryInfo } from '@kit.BasicServicesKit';
+```
+
 ## getBatteryConfig
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getBatteryConfig(sceneName: string): string
 按场景名称查询电池配置。
 
 **起始版本：** 11
+
+<!--Device-batteryInfo-function getBatteryConfig(sceneName: string): string--><!--Device-batteryInfo-function getBatteryConfig(sceneName: string): string-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 

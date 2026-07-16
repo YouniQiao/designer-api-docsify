@@ -18,6 +18,8 @@ Returns a list of all eUICC profile information.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_ESIM_STATE
 
+<!--Device-eSIM-function getEuiccProfileInfoList(slotId: int): Promise<GetEuiccProfileInfoListResult>--><!--Device-eSIM-function getEuiccProfileInfoList(slotId: int): Promise<GetEuiccProfileInfoListResult>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -32,7 +34,7 @@ Returns a list of all eUICC profile information.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GetEuiccProfileInfoListResult&gt; | Return a list of eUICC profile information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<GetEuiccProfileInfoListResult> | Return a list of eUICC profile information. |
 
 **Error codes:**
 

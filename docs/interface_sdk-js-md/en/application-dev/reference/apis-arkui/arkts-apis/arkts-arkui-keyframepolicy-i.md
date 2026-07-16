@@ -4,6 +4,8 @@ Describes the configuration for keyframe policies.
 
 **Since:** 20
 
+<!--Device-window-interface KeyFramePolicy--><!--Device-window-interface KeyFramePolicy-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
@@ -18,14 +20,15 @@ import { window } from '@kit.ArkUI';
 animationDelay?: number
 ```
 
-Delay before the animation for keyframe layout changes starts, in ms. The default value is **100**. The value is
-**0** or a positive integer. Floating-point values are rounded down.
+Delay before the animation for keyframe layout changes starts, in ms. The default value is **100**. The value is **0** or a positive integer. Floating-point values are rounded down.
 
 **Type:** number
 
 **Default:** 100
 
 **Since:** 20
+
+<!--Device-KeyFramePolicy-animationDelay?: long--><!--Device-KeyFramePolicy-animationDelay?: long-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -35,14 +38,15 @@ Delay before the animation for keyframe layout changes starts, in ms. The defaul
 animationDuration?: number
 ```
 
-Duration of the animation for keyframe layout changes, in ms. The default value is **100**. The value is **0** or
-a positive integer. Floating-point values are rounded down.
+Duration of the animation for keyframe layout changes, in ms. The default value is **100**. The value is **0** or a positive integer. Floating-point values are rounded down.
 
 **Type:** number
 
 **Default:** 100
 
 **Since:** 20
+
+<!--Device-KeyFramePolicy-animationDuration?: long--><!--Device-KeyFramePolicy-animationDuration?: long-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -52,16 +56,15 @@ a positive integer. Floating-point values are rounded down.
 distance?: number
 ```
 
-Distance interval for triggering keyframe layout changes via dragging, in px. The default value is **1000**. The
-value is **0** or a positive integer. Floating-point values are rounded down. If the value is 0, the drag
-distance is ignored. It works with **interval** using an OR condition. If either of them is met, the layout
-change starts.
+Distance interval for triggering keyframe layout changes via dragging, in px. The default value is **1000**. The value is **0** or a positive integer. Floating-point values are rounded down. If the value is 0, the drag distance is ignored. It works with **interval** using an OR condition. If either of them is met, the layout change starts.
 
 **Type:** number
 
 **Default:** 1000
 
 **Since:** 20
+
+<!--Device-KeyFramePolicy-distance?: int--><!--Device-KeyFramePolicy-distance?: int-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -77,6 +80,8 @@ Whether to enable keyframes. **true** to enable, **false** otherwise.
 
 **Since:** 20
 
+<!--Device-KeyFramePolicy-enable: boolean--><!--Device-KeyFramePolicy-enable: boolean-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## interval
@@ -85,15 +90,15 @@ Whether to enable keyframes. **true** to enable, **false** otherwise.
 interval?: number
 ```
 
-Time interval for triggering keyframe layout changes via dragging, in ms. The default value is **1000**. The
-value is a positive integer. Floating-point values are rounded down. It works with **distance** using an OR
-condition. If either of them is met, the layout change starts.
+Time interval for triggering keyframe layout changes via dragging, in ms. The default value is **1000**. The value is a positive integer. Floating-point values are rounded down. It works with **distance** using an OR condition. If either of them is met, the layout change starts.
 
 **Type:** number
 
 **Default:** 1000
 
 **Since:** 20
+
+<!--Device-KeyFramePolicy-interval?: long--><!--Device-KeyFramePolicy-interval?: long-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

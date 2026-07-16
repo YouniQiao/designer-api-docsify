@@ -12,14 +12,9 @@ import { applicationManager } from '@kit.MDMKit';
 function addFreezeExemptedApps(admin: Want, applicationInstances: Array<common.ApplicationInstance>): void
 ```
 
-Adds applications to the background freeze-exempt application list for a specified user. This policy applies only
-to installed applications and becomes invalid after the device is restarted. If the parameter list contains
-uninstalled applications, error code 9200012 will be returned. If an application in the list is uninstalled after
-the policy is set, the uninstalled application will be removed from the list. Adding an application that already
-exists in the list will return success, but the application will not be added repeatedly to the policy list.
+Adds applications to the background freeze-exempt application list for a specified user. This policy applies only to installed applications and becomes invalid after the device is restarted. If the parameter list contains uninstalled applications, error code 9200012 will be returned. If an application in the list is uninstalled after the policy is set, the uninstalled application will be removed from the list. Adding an application that already exists in the list will return success, but the application will not be added repeatedly to the policy list.
 
-Freezing operations include suspending the target application, and managing software resource agents, hardware
-resource agents, and high-power consumption.
+Freezing operations include suspending the target application, and managing software resource agents, hardware resource agents, and high-power consumption.
 
 **Since:** 22
 
@@ -27,14 +22,16 @@ resource agents, and high-power consumption.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function addFreezeExemptedApps(admin: Want, applicationInstances: Array<common.ApplicationInstance>): void--><!--Device-applicationManager-function addFreezeExemptedApps(admin: Want, applicationInstances: Array<common.ApplicationInstance>): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| applicationInstances | Array&lt;common.ApplicationInstance&gt; | Yes | Array of the background freeze-exemptapplication list. A maximum of 10 applications can be added to the list. This limit is not divided among users.Specifically, the total number of such applications added by all users cannot exceed 10. For example, if thereare already 3 applications in the current list, a maximum of 7 more can be added for a specified user via thisAPI. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| applicationInstances | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<common.ApplicationInstance> | Yes | Array of the background freeze-exempt application list. A maximum of 10 applications can be added to the list. This limit is not divided among users.Specifically, the total number of such applications added by all users cannot exceed 10. For example, if there are already 3 applications in the current list, a maximum of 7 more can be added for a specified user via this API. |
 
 **Error codes:**
 

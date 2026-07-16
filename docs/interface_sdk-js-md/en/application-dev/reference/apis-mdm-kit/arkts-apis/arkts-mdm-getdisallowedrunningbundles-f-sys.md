@@ -12,8 +12,7 @@ import { applicationManager } from '@kit.MDMKit';
 function getDisallowedRunningBundles(admin: Want, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains applications that are not allowed to run by the current user. This API uses an asynchronous callback to
-return the result.
+Obtains applications that are not allowed to run by the current user. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -25,6 +24,8 @@ return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function getDisallowedRunningBundles(admin: Want, callback: AsyncCallback<Array<string>>): void--><!--Device-applicationManager-function getDisallowedRunningBundles(admin: Want, callback: AsyncCallback<Array<string>>): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -33,8 +34,8 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to obtain the applications that are not allowed torun. If the operation is successful, **err** is **null**; otherwise, **err** is an error object.<br>Note: ForAPI version 20 and earlier versions, the return value is the **appId** list. In API version 21 and laterversions, the return value is the **appId** or **appIdentifier** list. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback used to obtain the applications that are not allowed to run. If the operation is successful, **err** is **null**; otherwise, **err** is an error object.<br>Note: For API version 20 and earlier versions, the return value is the **appId** list. In API version 21 and later versions, the return value is the **appId** or **appIdentifier** list. |
 
 **Error codes:**
 
@@ -75,8 +76,7 @@ applicationManager.getDisallowedRunningBundles(wantTemp, (err, result) => {
 function getDisallowedRunningBundles(admin: Want, userId: number, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains an application from the applications that are not allowed to run by the current user (specified by
-**userId**). This API uses an asynchronous callback to return the result.
+Obtains an application from the applications that are not allowed to run by the current user (specified by **userId**). This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -88,6 +88,8 @@ Obtains an application from the applications that are not allowed to run by the 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function getDisallowedRunningBundles(admin: Want, userId: number, callback: AsyncCallback<Array<string>>): void--><!--Device-applicationManager-function getDisallowedRunningBundles(admin: Want, userId: number, callback: AsyncCallback<Array<string>>): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -96,9 +98,9 @@ Obtains an application from the applications that are not allowed to run by the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | userId | number | Yes | User ID, which must be greater than or equal to 0. |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to obtain the applications that are not allowed torun. If the operation is successful, **err** is **null**; otherwise, **err** is an error object.<br>Note: ForAPI version 20 and earlier versions, the return value is the **appId** list. In API version 21 and laterversions, the return value is the **appId** or **appIdentifier** list. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback used to obtain the applications that are not allowed to run. If the operation is successful, **err** is **null**; otherwise, **err** is an error object.<br>Note: For API version 20 and earlier versions, the return value is the **appId** list. In API version 21 and later versions, the return value is the **appId** or **appIdentifier** list. |
 
 **Error codes:**
 
@@ -139,8 +141,7 @@ applicationManager.getDisallowedRunningBundles(wantTemp, 100, (err, result) => {
 function getDisallowedRunningBundles(admin: Want, userId?: number): Promise<Array<string>>
 ```
 
-Obtains applications that are not allowed to run by the current user or a specified user. This API uses a promise
-to return the result.
+Obtains applications that are not allowed to run by the current user or a specified user. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -152,6 +153,8 @@ to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function getDisallowedRunningBundles(admin: Want, userId?: number): Promise<Array<string>>--><!--Device-applicationManager-function getDisallowedRunningBundles(admin: Want, userId?: number): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -160,14 +163,14 @@ to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| userId | number | No | User ID, which must be greater than or equal to 0.<br> - If **userId** is passed in, theapplications cannot be run by the specified user.<br> - If **userId** is not passed in, the applications cannotbe run by the current user. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| userId | number | No | User ID, which must be greater than or equal to 0.<br> - If **userId** is passed in, the applications cannot be run by the specified user.<br> - If **userId** is not passed in, the applications cannot be run by the current user. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the applications that are not allowed to run by thecurrent user or specified user.<br>Note: For API version 20 and earlier versions, the return value is the **appId** list. In API version 21 andlater versions, the return value is the **appId** or **appIdentifier** list. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return the applications that are not allowed to run by the current user or specified user.<br>Note: For API version 20 and earlier versions, the return value is the **appId** list. In API version 21 and later versions, the return value is the **appId** or **appIdentifier** list. |
 
 **Error codes:**
 

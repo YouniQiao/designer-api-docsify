@@ -4,9 +4,17 @@ PIN码认证基类。
 
 **起始版本：** 8
 
+<!--Device-osAccount-class PINAuth--><!--Device-osAccount-class PINAuth-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+```
 
 ## constructor
 
@@ -17,6 +25,8 @@ constructor()
 创建PIN码认证的实例。
 
 **起始版本：** 8
+
+<!--Device-PINAuth-constructor()--><!--Device-PINAuth-constructor()-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -47,6 +57,8 @@ registerInputer(inputer: IInputer): void
 
 **需要权限：** ohos.permission.ACCESS_PIN_AUTH
 
+<!--Device-PINAuth-registerInputer(inputer: IInputer): void--><!--Device-PINAuth-registerInputer(inputer: IInputer): void-End-->
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -55,7 +67,7 @@ registerInputer(inputer: IInputer): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inputer | IInputer | 是 | PIN码输入器，用于获取PIN码。 |
+| inputer | [IInputer](arkts-basicservices-iinputer-i-sys.md) | 是 | PIN码输入器，用于获取PIN码。 |
 
 **错误码：**
 
@@ -100,6 +112,8 @@ unregisterInputer(): void
 **起始版本：** 8
 
 **需要权限：** ohos.permission.ACCESS_PIN_AUTH
+
+<!--Device-PINAuth-unregisterInputer(): void--><!--Device-PINAuth-unregisterInputer(): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 

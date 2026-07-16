@@ -1,9 +1,10 @@
 # UIAbilityIntentInfo (System API)
 
-Describes the information of the UIAbility bound to the
-[intent developed using a configuration file](../../../../application-models/insight-intent-config-development.md).
+Describes the information of the UIAbility bound to the [intent developed using a configuration file](../../../../application-models/insight-intent-config-development.md).
 
 **Since:** 23
+
+<!--Device-insightIntentDriver-interface UIAbilityIntentInfo--><!--Device-insightIntentDriver-interface UIAbilityIntentInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -29,6 +30,8 @@ Name of the UIAbility bound to the intent.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UIAbilityIntentInfo-readonly abilityName: string--><!--Device-UIAbilityIntentInfo-readonly abilityName: string-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -46,6 +49,8 @@ Intent execution mode.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIAbilityIntentInfo-readonly executeMode: ExecuteModeForConfiguration[]--><!--Device-UIAbilityIntentInfo-readonly executeMode: ExecuteModeForConfiguration[]-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

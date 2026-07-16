@@ -8,6 +8,8 @@ Defines the AbsAlbum.
 
 **Substitutes:** [AbsAlbum](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-absalbum-i.md)
 
+<!--Device-userFileManager-interface AbsAlbum--><!--Device-userFileManager-interface AbsAlbum-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -34,6 +36,8 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-AbsAlbum-getPhotoAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<FileAsset>>): void--><!--Device-AbsAlbum-getPhotoAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<FileAsset>>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -42,8 +46,8 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FetchOptions | Yes | Retrieval options. |
-| callback | AsyncCallback&lt;FetchResult&lt;FileAsset&gt;&gt; | Yes | Callback used to return the image and video assetsobtained. |
+| options | [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchoptions-i.md) | Yes | Retrieval options. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FetchResult<FileAsset>> | Yes | Callback used to return the image and video assets obtained. |
 
 **Error codes:**
 
@@ -67,6 +71,8 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-AbsAlbum-getPhotoAssets(options: FetchOptions): Promise<FetchResult<FileAsset>>--><!--Device-AbsAlbum-getPhotoAssets(options: FetchOptions): Promise<FetchResult<FileAsset>>-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -75,13 +81,13 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | FetchOptions | Yes | Retrieval options. |
+| options | [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchoptions-i.md) | Yes | Retrieval options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;FileAsset&gt;&gt; | Promise that returns the image and video assets obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<FetchResult<FileAsset>> | Promise that returns the image and video assets obtained. |
 
 **Error codes:**
 
@@ -97,8 +103,8 @@ albumName: string
 
 Name of the album.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > The user album is writable, but the system album is not writable.
 
 **Type:** string
@@ -108,6 +114,8 @@ Name of the album.
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [albumName](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-absalbum-i.md#albumname)
+
+<!--Device-AbsAlbum-albumName: string--><!--Device-AbsAlbum-albumName: string-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -129,6 +137,8 @@ Subtype of the album.
 
 **Substitutes:** albumSubType
 
+<!--Device-AbsAlbum-readonly albumSubType: AlbumSubType--><!--Device-AbsAlbum-readonly albumSubType: AlbumSubType-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -148,6 +158,8 @@ Type of the album to obtain.
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [albumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-absalbum-i.md#albumtype)
+
+<!--Device-AbsAlbum-readonly albumType: AlbumType--><!--Device-AbsAlbum-readonly albumType: AlbumType-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -169,6 +181,8 @@ URI of the album.
 
 **Substitutes:** [albumUri](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-absalbum-i.md#albumuri)
 
+<!--Device-AbsAlbum-readonly albumUri: string--><!--Device-AbsAlbum-readonly albumUri: string-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -189,6 +203,8 @@ Number of files in the album.
 
 **Substitutes:** [count](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-absalbum-i.md#count)
 
+<!--Device-AbsAlbum-readonly count: number--><!--Device-AbsAlbum-readonly count: number-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -201,8 +217,8 @@ coverUri: string
 
 URI of the cover file of the album.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > The user album is writable, but the system album is not writable.
 
 **Type:** string
@@ -212,6 +228,8 @@ URI of the cover file of the album.
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [coverUri](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-absalbum-i.md#coveruri)
+
+<!--Device-AbsAlbum-coverUri: string--><!--Device-AbsAlbum-coverUri: string-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -223,8 +241,7 @@ URI of the cover file of the album.
 readonly dateModified: number
 ```
 
-Time when the album was modified.
-Unit: ms, The value must be an integer greater than or equal to 0.
+Time when the album was modified.Unit: ms, The value must be an integer greater than or equal to 0.
 
 **Type:** number
 
@@ -233,6 +250,8 @@ Unit: ms, The value must be an integer greater than or equal to 0.
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [dateModified](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-album-i-sys.md#datemodified)
+
+<!--Device-AbsAlbum-readonly dateModified: number--><!--Device-AbsAlbum-readonly dateModified: number-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

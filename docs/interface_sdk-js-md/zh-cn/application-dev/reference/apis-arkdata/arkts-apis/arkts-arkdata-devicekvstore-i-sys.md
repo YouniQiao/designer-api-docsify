@@ -6,15 +6,21 @@
 
 比如，可以使用设备协同数据库实现设备间的图片分享，可以查看其他设备的图片，但无法修改和删除其他设备的图片。
 
-在调用DeviceKVStore的方法前，需要先通过
-[getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-1)
-构建一个DeviceKVStore实例。
+在调用DeviceKVStore的方法前，需要先通过[getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-1)构建一个DeviceKVStore实例。
 
 **继承/实现关系：** DeviceKVStore extends [SingleKVStore](arkts-arkdata-singlekvstore-i.md)
 
 **起始版本：** 9
 
+<!--Device-distributedKVStore-interface DeviceKVStore extends SingleKVStore--><!--Device-distributedKVStore-interface DeviceKVStore extends SingleKVStore-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
+## 导入模块
+
+```TypeScript
+import { distributedKVStore } from '@kit.ArkData';
+```
 
 ## getResultSet
 
@@ -28,6 +34,8 @@ getResultSet(predicates: dataSharePredicates.DataSharePredicates, callback: Asyn
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceKVStore-getResultSet(predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<KVStoreResultSet>): void--><!--Device-DeviceKVStore-getResultSet(predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<KVStoreResultSet>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **系统接口：** 此接口为系统接口。
@@ -37,7 +45,7 @@ getResultSet(predicates: dataSharePredicates.DataSharePredicates, callback: Asyn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 指示筛选条件，不允许为null。 |
-| callback | AsyncCallback&lt;KVStoreResultSet&gt; | 是 | Promise对象。返回KVStoreResultSet对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<KVStoreResultSet> | 是 | Promise对象。返回KVStoreResultSet对象。 |
 
 **错误码：**
 
@@ -61,6 +69,8 @@ getResultSet(predicates: dataSharePredicates.DataSharePredicates): Promise<KVSto
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceKVStore-getResultSet(predicates: dataSharePredicates.DataSharePredicates): Promise<KVStoreResultSet>--><!--Device-DeviceKVStore-getResultSet(predicates: dataSharePredicates.DataSharePredicates): Promise<KVStoreResultSet>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **系统接口：** 此接口为系统接口。
@@ -75,7 +85,7 @@ getResultSet(predicates: dataSharePredicates.DataSharePredicates): Promise<KVSto
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;KVStoreResultSet&gt; | Promise对象。返回KVStoreResultSet对象。 |
+| Promise<KVStoreResultSet> | Promise对象。返回KVStoreResultSet对象。 |
 
 **错误码：**
 
@@ -99,6 +109,8 @@ getResultSet(deviceId: string, predicates: dataSharePredicates.DataSharePredicat
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceKVStore-getResultSet(deviceId: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<KVStoreResultSet>): void--><!--Device-DeviceKVStore-getResultSet(deviceId: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<KVStoreResultSet>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **系统接口：** 此接口为系统接口。
@@ -109,7 +121,7 @@ getResultSet(deviceId: string, predicates: dataSharePredicates.DataSharePredicat
 | --- | --- | --- | --- |
 | deviceId | string | 是 | Indicates the ID of the device to which the results belong. |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 指示筛选条件，不允许为null。 |
-| callback | AsyncCallback&lt;KVStoreResultSet&gt; | 是 | 回调函数，获取与指定Predicates对象匹配的KVStoreResultSet对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<KVStoreResultSet> | 是 | 回调函数，获取与指定Predicates对象匹配的KVStoreResultSet对象。 |
 
 **错误码：**
 
@@ -133,6 +145,8 @@ getResultSet(deviceId: string, predicates: dataSharePredicates.DataSharePredicat
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DeviceKVStore-getResultSet(deviceId: string, predicates: dataSharePredicates.DataSharePredicates): Promise<KVStoreResultSet>--><!--Device-DeviceKVStore-getResultSet(deviceId: string, predicates: dataSharePredicates.DataSharePredicates): Promise<KVStoreResultSet>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **系统接口：** 此接口为系统接口。
@@ -148,7 +162,7 @@ getResultSet(deviceId: string, predicates: dataSharePredicates.DataSharePredicat
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;KVStoreResultSet&gt; | Promise对象。返回KVStoreResultSet对象。 |
+| Promise<KVStoreResultSet> | Promise对象。返回KVStoreResultSet对象。 |
 
 **错误码：**
 

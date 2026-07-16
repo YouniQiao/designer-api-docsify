@@ -6,7 +6,15 @@
 
 **废弃版本：** 6
 
+<!--Device-unnamed-export default class Battery--><!--Device-unnamed-export default class Battery-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Lite
+
+## 导入模块
+
+```TypeScript
+import { GetStatusOptions, BatteryResponse } from '@kit.BasicServicesKit';
+```
 
 ## getStatus
 
@@ -20,13 +28,15 @@ static getStatus(options?: GetStatusOptions): void
 
 **废弃版本：** 6
 
+<!--Device-Battery-static getStatus(options?: GetStatusOptions): void--><!--Device-Battery-static getStatus(options?: GetStatusOptions): void-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Lite
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | GetStatusOptions | 否 | 包含接口调用结果的对象。可选，默认为空。 |
+| options | [GetStatusOptions](arkts-basicservices-getstatusoptions-i.md) | 否 | 包含接口调用结果的对象。可选，默认为空。 |
 
 **示例：**
 

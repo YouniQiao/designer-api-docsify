@@ -20,14 +20,16 @@ Adds disallowed USB devices via an array of {@link PermissiveUsbDeviceType}.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-usbManager-function addDisallowedPermissiveUsbDevices(admin: Want, usbDevices: Array<PermissiveUsbDeviceType>): void--><!--Device-usbManager-function addDisallowedPermissiveUsbDevices(admin: Want, usbDevices: Array<PermissiveUsbDeviceType>): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | admin indicates the enterprise admin extension ability information.The admin must have the corresponding permission. |
-| usbDevices | Array&lt;PermissiveUsbDeviceType&gt; | Yes | list of USB device types. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | admin indicates the enterprise admin extension ability information.The admin must have the corresponding permission. |
+| usbDevices | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PermissiveUsbDeviceType> | Yes | list of USB device types. |
 
 **Error codes:**
 

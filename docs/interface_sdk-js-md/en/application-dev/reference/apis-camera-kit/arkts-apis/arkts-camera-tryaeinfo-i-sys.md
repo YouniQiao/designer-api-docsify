@@ -1,9 +1,10 @@
 # TryAEInfo (System API)
 
-Describes the Try AE parameters. Try AE indicates that the hardware reports the status based on the ambient
-illumination change during time-lapse photographing.
+Describes the Try AE parameters. Try AE indicates that the hardware reports the status based on the ambient illumination change during time-lapse photographing.
 
 **Since:** 12
+
+<!--Device-camera-interface TryAEInfo--><!--Device-camera-interface TryAEInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -27,6 +28,8 @@ Timelapse capture interval.
 
 **Since:** 12
 
+<!--Device-TryAEInfo-readonly captureInterval?: int--><!--Device-TryAEInfo-readonly captureInterval?: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -42,6 +45,8 @@ Determine whether try AE is done.
 **Type:** boolean
 
 **Since:** 12
+
+<!--Device-TryAEInfo-readonly isTryAEDone: boolean--><!--Device-TryAEInfo-readonly isTryAEDone: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -59,6 +64,8 @@ Determine whether AE hint is needed.
 
 **Since:** 12
 
+<!--Device-TryAEInfo-readonly isTryAEHintNeeded?: boolean--><!--Device-TryAEInfo-readonly isTryAEHintNeeded?: boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -74,6 +81,8 @@ Timelapse preview type.
 **Type:** TimeLapsePreviewType
 
 **Since:** 12
+
+<!--Device-TryAEInfo-readonly previewType?: TimeLapsePreviewType--><!--Device-TryAEInfo-readonly previewType?: TimeLapsePreviewType-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

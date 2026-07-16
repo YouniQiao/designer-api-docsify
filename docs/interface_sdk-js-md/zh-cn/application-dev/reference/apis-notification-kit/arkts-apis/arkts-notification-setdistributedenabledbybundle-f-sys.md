@@ -18,6 +18,8 @@ function setDistributedEnabledByBundle(bundle: BundleOption, deviceType: string,
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function setDistributedEnabledByBundle(bundle: BundleOption, deviceType: string, enable: boolean): Promise<void>--><!--Device-notificationManager-function setDistributedEnabledByBundle(bundle: BundleOption, deviceType: string, enable: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,7 +28,7 @@ function setDistributedEnabledByBundle(bundle: BundleOption, deviceType: string,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 应用的包信息。 |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 应用的包信息。 |
 | deviceType | string | 是 | 设备类型。 |
 | enable | boolean | 是 | 指定应用是否支持跨设备协同（true：支持，false：不支持）。 |
 
@@ -34,7 +36,7 @@ function setDistributedEnabledByBundle(bundle: BundleOption, deviceType: string,
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

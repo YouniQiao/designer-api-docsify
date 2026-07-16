@@ -1,5 +1,11 @@
 # getDisplayLanguage
 
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
+
 ## getDisplayLanguage
 
 ```TypeScript
@@ -13,6 +19,8 @@ export function getDisplayLanguage(language: string, locale: string, sentenceCas
 **废弃版本：** 9
 
 **替代接口：** [getDisplayLanguage](arkts-localization-system-c.md#getdisplaylanguage-1)
+
+<!--Device-i18n-export function getDisplayLanguage(language: string, locale: string, sentenceCase?: boolean): string--><!--Device-i18n-export function getDisplayLanguage(language: string, locale: string, sentenceCase?: boolean): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

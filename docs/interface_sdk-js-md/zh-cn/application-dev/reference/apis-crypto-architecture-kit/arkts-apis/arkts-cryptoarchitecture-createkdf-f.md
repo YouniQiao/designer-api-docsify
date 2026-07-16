@@ -1,5 +1,11 @@
 # createKdf
 
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+```
+
 ## createKdf
 
 ```TypeScript
@@ -10,7 +16,9 @@ function createKdf(algName: string): Kdf
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cryptoFramework-function createKdf(algName: string): Kdf--><!--Device-cryptoFramework-function createKdf(algName: string): Kdf-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Kdf
@@ -26,7 +34,7 @@ function createKdf(algName: string): Kdf
 
 | 类型 | 说明 |
 | --- | --- |
-| Kdf | 返回由输入算法指定生成的Kdf对象。 |
+| [Kdf](arkts-cryptoarchitecture-kdf-i.md) | 返回由输入算法指定生成的Kdf对象。 |
 
 **错误码：**
 

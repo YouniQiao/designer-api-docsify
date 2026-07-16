@@ -4,6 +4,8 @@ Firewall port parameters.
 
 **Since:** 15
 
+<!--Device-netFirewall-interface NetFirewallPortParams--><!--Device-netFirewall-interface NetFirewallPortParams-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## Modules to Import
@@ -24,6 +26,8 @@ End port, when there is only one port, the start port is the same as the end por
 
 **Since:** 15
 
+<!--Device-NetFirewallPortParams-endPort: number--><!--Device-NetFirewallPortParams-endPort: number-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## startPort
@@ -37,6 +41,8 @@ Start port, when there is only one port, the start port is the same as the end p
 **Type:** number
 
 **Since:** 15
+
+<!--Device-NetFirewallPortParams-startPort: number--><!--Device-NetFirewallPortParams-startPort: number-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 

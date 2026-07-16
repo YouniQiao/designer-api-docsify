@@ -6,6 +6,8 @@ Inherits from [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md) and has 
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface DataPanelShadowOptions extends MultiShadowOptions--><!--Device-unnamed-declare interface DataPanelShadowOptions extends MultiShadowOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## colors
@@ -20,11 +22,9 @@ Default value: same as the value of **valueColors**
 
 **NOTE**
 
-If the number of the set shadow colors is less than that of the data segments, the number of the displayed shadow
-colors is the same as the former.
+If the number of the set shadow colors is less than that of the data segments, the number of the displayed shadow colors is the same as the former.
 
-If the number of the set shadow colors is greater than that of the data segments, the number of the displayed
-shadow colors is the same as the latter.
+If the number of the set shadow colors is greater than that of the data segments, the number of the displayed shadow colors is the same as the latter.
 
 **Type:** Array<ResourceColor | LinearGradient>
 
@@ -35,6 +35,8 @@ shadow colors is the same as the latter.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DataPanelShadowOptions-colors?: Array<ResourceColor | LinearGradient>--><!--Device-DataPanelShadowOptions-colors?: Array<ResourceColor | LinearGradient>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

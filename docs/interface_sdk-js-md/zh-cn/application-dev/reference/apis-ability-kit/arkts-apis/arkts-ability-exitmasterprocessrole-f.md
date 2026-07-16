@@ -1,17 +1,24 @@
 # exitMasterProcessRole
 
+## 导入模块
+
+```TypeScript
+import { application } from '@kit.AbilityKit';
+```
+
 ## exitMasterProcessRole
 
 ```TypeScript
 export function exitMasterProcessRole(): Promise<void>
 ```
 
-放弃当前进程的[主控进程](../../../../application-models/ability-terminology.md#masterprocess主控进程)身份。使用Promise异步回调。
-该接口仅在2in1、Tablet设备中可正常调用，在其他设备中返回801错误码。
+放弃当前进程的[主控进程](../../../../application-models/ability-terminology.md#masterprocess主控进程)身份。使用Promise异步回调。该接口仅在2in1、Tablet设备中可正常调用，在其他设备中返回801错误码。
 
 **起始版本：** 21
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-application-export function exitMasterProcessRole(): Promise<void>--><!--Device-application-export function exitMasterProcessRole(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -19,7 +26,7 @@ export function exitMasterProcessRole(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

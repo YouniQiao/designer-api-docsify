@@ -10,6 +10,8 @@
 
 **起始版本：** 20
 
+<!--Device-audio-enum AudioSessionStateChangeHint--><!--Device-audio-enum AudioSessionStateChangeHint-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## AUDIO_SESSION_STATE_CHANGE_HINT_RESUME
@@ -21,6 +23,8 @@ AUDIO_SESSION_STATE_CHANGE_HINT_RESUME = 0
 提示音频会话恢复，应用可主动触发开始渲染等操作。
 
 **起始版本：** 20
+
+<!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_RESUME = 0--><!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_RESUME = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -34,6 +38,8 @@ AUDIO_SESSION_STATE_CHANGE_HINT_PAUSE = 1
 
 **起始版本：** 20
 
+<!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_PAUSE = 1--><!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_PAUSE = 1-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## AUDIO_SESSION_STATE_CHANGE_HINT_STOP
@@ -45,6 +51,8 @@ AUDIO_SESSION_STATE_CHANGE_HINT_STOP = 2
 提示音频会话因焦点被抢占而停止，彻底失去音频焦点。
 
 **起始版本：** 20
+
+<!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_STOP = 2--><!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_STOP = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -58,6 +66,8 @@ AUDIO_SESSION_STATE_CHANGE_HINT_TIME_OUT_STOP = 3
 
 **起始版本：** 20
 
+<!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_TIME_OUT_STOP = 3--><!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_TIME_OUT_STOP = 3-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## AUDIO_SESSION_STATE_CHANGE_HINT_DUCK
@@ -68,11 +78,11 @@ AUDIO_SESSION_STATE_CHANGE_HINT_DUCK = 4
 
 提示音频会话躲避开始，降低音量播放。
 
-如果已启用
-[enableMuteSuggestionWhenMixWithOthers](arkts-audio-audiosessionmanager-i.md#enablemutesuggestionwhenmixwithothers-1)，此时
-可以选择执行静音操作。
+如果已启用[enableMuteSuggestionWhenMixWithOthers](arkts-audio-audiosessionmanager-i.md#enablemutesuggestionwhenmixwithothers-1)，此时可以选择执行静音操作。
 
 **起始版本：** 20
+
+<!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_DUCK = 4--><!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_DUCK = 4-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -84,11 +94,11 @@ AUDIO_SESSION_STATE_CHANGE_HINT_UNDUCK = 5
 
 提示音频会话躲避结束，恢复音量播放。
 
-如果已启用
-[enableMuteSuggestionWhenMixWithOthers](arkts-audio-audiosessionmanager-i.md#enablemutesuggestionwhenmixwithothers-1)，此时
-可取消静音。
+如果已启用[enableMuteSuggestionWhenMixWithOthers](arkts-audio-audiosessionmanager-i.md#enablemutesuggestionwhenmixwithothers-1)，此时可取消静音。
 
 **起始版本：** 20
+
+<!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_UNDUCK = 5--><!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_UNDUCK = 5-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -106,6 +116,8 @@ AUDIO_SESSION_STATE_CHANGE_HINT_MUTE_SUGGESTION = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_MUTE_SUGGESTION = 6--><!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_MUTE_SUGGESTION = 6-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## AUDIO_SESSION_STATE_CHANGE_HINT_UNMUTE_SUGGESTION
@@ -122,6 +134,8 @@ AUDIO_SESSION_STATE_CHANGE_HINT_UNMUTE_SUGGESTION = 7
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_UNMUTE_SUGGESTION = 7--><!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_UNMUTE_SUGGESTION = 7-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## AUDIO_SESSION_STATE_CHANGE_HINT_MUTE
@@ -132,13 +146,13 @@ AUDIO_SESSION_STATE_CHANGE_HINT_MUTE = 8
 
 提示音频会话静音。
 
-该提示仅在以下条件满足后才会收到：通过接口[setAudioSessionBehavior](arkts-audio-audiosessionmanager-i.md#setaudiosessionbehavior-1)设置参数
-[AudioSessionBehaviorFlags](arkts-audio-audiosessionbehaviorflags-e.md).MUTE_WHEN_INTERRUPTED，并已调用
-[setAudioSessionScene](arkts-audio-audiosessionmanager-i.md#setaudiosessionscene-1)，且音频会话已激活。
+该提示仅在以下条件满足后才会收到：通过接口[setAudioSessionBehavior](arkts-audio-audiosessionmanager-i.md#setaudiosessionbehavior-1)设置参数[AudioSessionBehaviorFlags](arkts-audio-audiosessionbehaviorflags-e.md).MUTE_WHEN_INTERRUPTED，并已调用[setAudioSessionScene](arkts-audio-audiosessionmanager-i.md#setaudiosessionscene-1)，且音频会话已激活。
 
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_MUTE = 8--><!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_MUTE = 8-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -150,13 +164,13 @@ AUDIO_SESSION_STATE_CHANGE_HINT_UNMUTE = 9
 
 提示音频会话解除静音，恢复播放。
 
-该提示仅在以下条件满足后才会收到：通过接口[setAudioSessionBehavior](arkts-audio-audiosessionmanager-i.md#setaudiosessionbehavior-1)设置参数
-[AudioSessionBehaviorFlags](arkts-audio-audiosessionbehaviorflags-e.md).MUTE_WHEN_INTERRUPTED，并已调用
-[setAudioSessionScene](arkts-audio-audiosessionmanager-i.md#setaudiosessionscene-1)，且音频会话已激活。
+该提示仅在以下条件满足后才会收到：通过接口[setAudioSessionBehavior](arkts-audio-audiosessionmanager-i.md#setaudiosessionbehavior-1)设置参数[AudioSessionBehaviorFlags](arkts-audio-audiosessionbehaviorflags-e.md).MUTE_WHEN_INTERRUPTED，并已调用[setAudioSessionScene](arkts-audio-audiosessionmanager-i.md#setaudiosessionscene-1)，且音频会话已激活。
 
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_UNMUTE = 9--><!--Device-AudioSessionStateChangeHint-AUDIO_SESSION_STATE_CHANGE_HINT_UNMUTE = 9-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 

@@ -4,16 +4,23 @@
 
 该模块提供以下音频相关的常用功能：
 
-- [AudioManager](arkts-audio-audiomanager-i.md)：音频管理器。
-- [AudioDeviceEnhanceManager](../../../../reference/apis-audio-kit/arkts-apis-audio-AudioDeviceEnhanceManager.md)：音频设备增
-强管理器。
-- [AudioRenderer](arkts-audio-audiorenderer-i.md)：音频渲染，用于播放PCM（Pulse Code Modulation）音频数据。
+- [AudioManager](arkts-audio-audiomanager-i.md)：音频管理器。  
+- [AudioDeviceEnhanceManager](../../../../reference/apis-audio-kit/arkts-apis-audio-AudioDeviceEnhanceManager.md)：音频设备增强管理器。  
+- [AudioRenderer](arkts-audio-audiorenderer-i.md)：音频渲染，用于播放PCM（Pulse Code Modulation）音频数据。  
 - [AudioCapturer](arkts-audio-audiocapturer-i.md)：音频采集，用于录制PCM音频数据。
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare namespace audio--><!--Device-unnamed-declare namespace audio-End-->
+
 **系统能力：** 
 - API版本12+：SystemCapability.Multimedia.Audio.Core
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## 汇总
 
@@ -34,7 +41,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [createAsrProcessingController](arkts-audio-createasrprocessingcontroller-f-sys.md#createasrprocessingcontroller-1) | Create ASR processing controller on one audio capturer. |
-| [createGlobalAudioLoopback](arkts-audio-createglobalaudioloopback-f-sys.md#createglobalaudioloopback-1) | 创建全局音频环回实例，提供低时延入耳监听功能。硬件音频环回只能在支持的平台中创建，应用程序可以使用&gt; **说明**&gt; {@link AudioStreamManager#isAudioLoopbackSupported}先检查。&gt; 系统中应该只有一个拥有全局环回的主实例，其他&gt; 是控制器。控制器可以通过向主设备发送命令来管理全局环回。&gt; 实例，并从中监听状态变化。 |
+| [createGlobalAudioLoopback](arkts-audio-createglobalaudioloopback-f-sys.md#createglobalaudioloopback-1) | 创建全局音频环回实例，提供低时延入耳监听功能。硬件音频环回只能在支持的平台中创建，应用程序可以使用 &gt; **说明** &gt; {@link AudioStreamManager#isAudioLoopbackSupported}先检查。 &gt; 系统中应该只有一个拥有全局环回的主实例，其他 &gt; 是控制器。控制器可以通过向主设备发送命令来管理全局环回。 &gt; 实例，并从中监听状态变化。 |
 | [createMicInAudioCapturer](arkts-audio-createmicinaudiocapturer-f-sys.md#createmicinaudiocapturer-1) | 获取一个特殊的{@link #AudioCapturer}实例。该方法使用promise返回录音实例。此捕获可用于记录Mic-In音频数据和回声参考信号，以便应用处理算法。Mic-In音频数据和回声参考信号将根据应用程序设置的配置被放入一个或多个缓冲。当应用程序处于后台时，不允许创建录音实例。 |
 | [createTonePlayer](arkts-audio-createtoneplayer-f-sys.md#createtoneplayer-1) | Obtains a {@link TonePlayer} instance. This method uses an asynchronous callback to return the renderer instance. |
 | [createTonePlayer](arkts-audio-createtoneplayer-f-sys.md#createtoneplayer-2) | Obtains a {@link TonePlayer} instance. This method uses a promise to return the renderer instance. |
@@ -95,7 +102,7 @@
 | [AudioCapturer](arkts-audio-audiocapturer-i-sys.md) | 提供音频采集的相关接口。在使用AudioCapturer的接口之前，需先通过[createAudioCapturer](arkts-audio-createaudiocapturer-f.md#createaudiocapturer-1)获取AudioCapturer实例。 |
 | [AudioCapturerChangeInfo](arkts-audio-audiocapturerchangeinfo-i-sys.md) | 描述音频采集器更改信息。 |
 | [AudioCapturerFilter](arkts-audio-audiocapturerfilter-i-sys.md) |  |
-| [AudioCapturerMicInConfig](arkts-audio-audiocapturermicinconfig-i-sys.md) | Describes audio capturer configuration options that can capturemicrophone input (mic-in) audio data before any processing. |
+| [AudioCapturerMicInConfig](arkts-audio-audiocapturermicinconfig-i-sys.md) | Describes audio capturer configuration options that can capture microphone input (mic-in) audio data before any processing. |
 | [AudioCapturerMicInData](arkts-audio-audiocapturermicindata-i-sys.md) | 描述音频录音数据，其中包含已处理的音频数据和进行音频处理前的纯净麦克风输入（mic-in）音频数据。 |
 | [AudioCapturerOptions](arkts-audio-audiocaptureroptions-i-sys.md) | 音频采集器选项信息。 |
 | [AudioCollaborativeManager](arkts-audio-audiocollaborativemanager-i-sys.md) | Implements audio collaborative management. |
@@ -113,7 +120,7 @@
 | [AudioRendererOptions](arkts-audio-audiorendereroptions-i-sys.md) | 音频渲染器选项信息。 |
 | [AudioRoutingManager](arkts-audio-audioroutingmanager-i-sys.md) | 音频路由管理。在使用AudioRoutingManager的接口之前，需先通过[getRoutingManager](arkts-audio-audiomanager-i.md#getroutingmanager-1)获取AudioRoutingManager实例。 |
 | [AudioSpatialDeviceState](arkts-audio-audiospatialdevicestate-i-sys.md) |  |
-| [AudioSpatialEnabledStateForDevice](arkts-audio-audiospatialenabledstatefordevice-i-sys.md) | This interface is used to notify the listener of any device Spatialization or Head Tracking enableor Adaptive Spatial Rendering state change. |
+| [AudioSpatialEnabledStateForDevice](arkts-audio-audiospatialenabledstatefordevice-i-sys.md) | This interface is used to notify the listener of any device Spatialization or Head Tracking enable or Adaptive Spatial Rendering state change. |
 | [AudioSpatializationManager](arkts-audio-audiospatializationmanager-i-sys.md) | 空间音频管理。在使用AudioSpatializationManager的接口之前，需先通过[getSpatializationManager](arkts-audio-audiomanager-i.md#getspatializationmanager-1)获取AudioSpatializationManager实例。 |
 | [AudioVolumeGroupManager](arkts-audio-audiovolumegroupmanager-i-sys.md) | 管理音频组音量。在使用AudioVolumeGroupManager的接口之前，需先通过[getVolumeGroupManager](arkts-audio-audiovolumemanager-i.md#getvolumegroupmanager-1)获取AudioVolumeGroupManager实例。 |
 | [AudioVolumeManager](arkts-audio-audiovolumemanager-i-sys.md) | 音量管理。在使用AudioVolumeManager的接口之前，需先通过[getVolumeManager](arkts-audio-audiomanager-i.md#getvolumemanager-1)获取AudioVolumeManager实例。 |
@@ -139,7 +146,7 @@
 | [AudioEffectMode](arkts-audio-audioeffectmode-e.md) | 表示音效模式的枚举。 |
 | [AudioEncodingType](arkts-audio-audioencodingtype-e.md) | 表示音频编码类型的枚举。 |
 | [AudioErrors](arkts-audio-audioerrors-e.md) | 表示音频错误码的枚举。 |
-| [AudioLatencyType](arkts-audio-audiolatencytype-e.md) | 表示音频时延类型的枚举。\| 名称 \| 值 \| 说明 \|\| ---- \| -- \| ---- \|\| LATENCY_TYPE_ALL \| 0 \| 计算包含软件和硬件在内的整体音频处理链路时延。 \|\| LATENCY_TYPE_SOFTWARE \| 1 \| 计算软件侧时延，包含软件音效。 \|\| LATENCY_TYPE_HARDWARE \| 2 \| 计算硬件侧时延，包含HAL、驱动和硬件。 \| |
+| [AudioLatencyType](arkts-audio-audiolatencytype-e.md) | 表示音频时延类型的枚举。\| 名称 \| 值 \| 说明 \| \| ---- \| -- \| ---- \| \| LATENCY_TYPE_ALL \| 0 \| 计算包含软件和硬件在内的整体音频处理链路时延。 \| \| LATENCY_TYPE_SOFTWARE \| 1 \| 计算软件侧时延，包含软件音效。 \| \| LATENCY_TYPE_HARDWARE \| 2 \| 计算硬件侧时延，包含HAL、驱动和硬件。 \| |
 | [AudioLoopbackEqualizerPreset](arkts-audio-audioloopbackequalizerpreset-e.md) | 表示返听均衡器类型的枚举。 |
 | [AudioLoopbackMode](arkts-audio-audioloopbackmode-e.md) | 表示返听模式的枚举。 |
 | [AudioLoopbackReverbPreset](arkts-audio-audioloopbackreverbpreset-e.md) | 表示返听混响模式的枚举。 |

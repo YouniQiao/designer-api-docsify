@@ -8,6 +8,8 @@ The enum of bluetooth state.
 
 **Substitutes:** BluetoothState
 
+<!--Device-bluetoothManager-enum BluetoothState--><!--Device-bluetoothManager-enum BluetoothState-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## STATE_OFF
@@ -23,6 +25,8 @@ Indicates the local Bluetooth is off
 **Deprecated since:** 10
 
 **Substitutes:** STATE_OFF
+
+<!--Device-BluetoothState-STATE_OFF = 0--><!--Device-BluetoothState-STATE_OFF = 0-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -40,6 +44,8 @@ Indicates the local Bluetooth is turning on
 
 **Substitutes:** STATE_TURNING_ON
 
+<!--Device-BluetoothState-STATE_TURNING_ON = 1--><!--Device-BluetoothState-STATE_TURNING_ON = 1-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## STATE_ON
@@ -55,6 +61,8 @@ Indicates the local Bluetooth is on, and ready for use
 **Deprecated since:** 10
 
 **Substitutes:** STATE_ON
+
+<!--Device-BluetoothState-STATE_ON = 2--><!--Device-BluetoothState-STATE_ON = 2-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -72,6 +80,8 @@ Indicates the local Bluetooth is turning off
 
 **Substitutes:** STATE_TURNING_OFF
 
+<!--Device-BluetoothState-STATE_TURNING_OFF = 3--><!--Device-BluetoothState-STATE_TURNING_OFF = 3-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## STATE_BLE_TURNING_ON
@@ -87,6 +97,8 @@ Indicates the local Bluetooth is turning LE mode on
 **Deprecated since:** 10
 
 **Substitutes:** STATE_BLE_TURNING_ON
+
+<!--Device-BluetoothState-STATE_BLE_TURNING_ON = 4--><!--Device-BluetoothState-STATE_BLE_TURNING_ON = 4-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -104,6 +116,8 @@ Indicates the local Bluetooth is in LE only mode
 
 **Substitutes:** STATE_BLE_ON
 
+<!--Device-BluetoothState-STATE_BLE_ON = 5--><!--Device-BluetoothState-STATE_BLE_ON = 5-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## STATE_BLE_TURNING_OFF
@@ -119,6 +133,8 @@ Indicates the local Bluetooth is turning off LE only mode
 **Deprecated since:** 10
 
 **Substitutes:** STATE_BLE_TURNING_OFF
+
+<!--Device-BluetoothState-STATE_BLE_TURNING_OFF = 6--><!--Device-BluetoothState-STATE_BLE_TURNING_OFF = 6-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

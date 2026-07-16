@@ -8,6 +8,8 @@ Provides the configuration items for application event logging.
 
 **Substitutes:** ConfigOption
 
+<!--Device-hiAppEvent-interface ConfigOption--><!--Device-hiAppEvent-interface ConfigOption-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## disable
@@ -16,8 +18,7 @@ Provides the configuration items for application event logging.
 disable?: boolean
 ```
 
-Application event logging switch. The value **true** means to disable the application event logging function, and
-the value **false** means the opposite.
+Application event logging switch. The value **true** means to disable the application event logging function, and the value **false** means the opposite.
 
 **Type:** boolean
 
@@ -27,6 +28,8 @@ the value **false** means the opposite.
 
 **Substitutes:** disable
 
+<!--Device-ConfigOption-disable?: boolean--><!--Device-ConfigOption-disable?: boolean-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## maxStorage
@@ -35,8 +38,7 @@ the value **false** means the opposite.
 maxStorage?: string
 ```
 
-Maximum size of the event file storage directory. The default value is **10M**. If the specified size is
-exceeded, the oldest event logging files in the directory will be deleted to free up space.
+Maximum size of the event file storage directory. The default value is **10M**. If the specified size is exceeded, the oldest event logging files in the directory will be deleted to free up space.
 
 **Type:** string
 
@@ -45,6 +47,8 @@ exceeded, the oldest event logging files in the directory will be deleted to fre
 **Deprecated since:** 9
 
 **Substitutes:** maxStorage
+
+<!--Device-ConfigOption-maxStorage?: string--><!--Device-ConfigOption-maxStorage?: string-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 

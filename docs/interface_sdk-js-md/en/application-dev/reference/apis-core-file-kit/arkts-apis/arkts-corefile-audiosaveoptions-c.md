@@ -4,6 +4,8 @@ Defines the options for saving audio clips.
 
 **Since:** 9
 
+<!--Device-picker-class AudioSaveOptions--><!--Device-picker-class AudioSaveOptions-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 ## Modules to Import
@@ -25,6 +27,8 @@ Name of the document to save. If this parameter is not specified, the user needs
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AudioSaveOptions-newFileNames?: Array<string>--><!--Device-AudioSaveOptions-newFileNames?: Array<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 

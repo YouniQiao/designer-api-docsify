@@ -4,6 +4,8 @@ Implements an **Analysis** album.
 
 **Since:** 18
 
+<!--Device-photoAccessHelper-class AnalysisAlbum--><!--Device-photoAccessHelper-class AnalysisAlbum-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -24,6 +26,8 @@ Constructor.
 
 **Since:** 18
 
+<!--Device-AnalysisAlbum-constructor(album: Album)--><!--Device-AnalysisAlbum-constructor(album: Album)-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -32,7 +36,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| album | Album | Yes | **Highlights** album. |
+| album | [Album](arkts-medialibrary-album-i-sys.md) | Yes | **Highlights** album. |
 
 **Error codes:**
 
@@ -78,6 +82,8 @@ Obtains the sequence of assets in the **Analysis** album.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-AnalysisAlbum-getOrderPosition(assets: Array<PhotoAsset>): Promise<Array<int>>--><!--Device-AnalysisAlbum-getOrderPosition(assets: Array<PhotoAsset>): Promise<Array<int>>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -86,13 +92,13 @@ Obtains the sequence of assets in the **Analysis** album.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Assets in the album whose sequence needs to be obtained. |
+| assets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PhotoAsset> | Yes | Assets in the album whose sequence needs to be obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Sequence number of an asset in the album. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | Sequence number of an asset in the album. |
 
 **Error codes:**
 
@@ -154,6 +160,8 @@ Obtains the relationships of a person in the portrait album.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-AnalysisAlbum-getRelationship(): Promise<string>--><!--Device-AnalysisAlbum-getRelationship(): Promise<string>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -162,7 +170,7 @@ Obtains the relationships of a person in the portrait album.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Relationships of the person in the portrait album. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Relationships of the person in the portrait album. |
 
 **Error codes:**
 

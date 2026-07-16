@@ -4,6 +4,8 @@ Describes the physical aperture object.
 
 **Since:** 24
 
+<!--Device-camera-interface PhysicalAperture--><!--Device-camera-interface PhysicalAperture-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Supported physical aperture.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-PhysicalAperture-apertures: Array<double>--><!--Device-PhysicalAperture-apertures: Array<double>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -45,6 +49,8 @@ Zoom range of a given physical aperture.
 **Since:** 24
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-PhysicalAperture-zoomRange: ZoomRange--><!--Device-PhysicalAperture-zoomRange: ZoomRange-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

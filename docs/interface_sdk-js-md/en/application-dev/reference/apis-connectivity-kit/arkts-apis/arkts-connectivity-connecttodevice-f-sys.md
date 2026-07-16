@@ -18,6 +18,8 @@ Connect to Wi-Fi hotspot by WifiDeviceConfig.
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG and ohos.permission.MANAGE_WIFI_CONNECTION
 
+<!--Device-wifiManager-function connectToDevice(config: WifiDeviceConfig): void--><!--Device-wifiManager-function connectToDevice(config: WifiDeviceConfig): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Connect to Wi-Fi hotspot by WifiDeviceConfig.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi hotspot. |
+| config | [WifiDeviceConfig](arkts-connectivity-wifideviceconfig-i-sys.md) | Yes | Indicates the device configuration for connection to the Wi-Fi hotspot. |
 
 **Error codes:**
 

@@ -2,13 +2,15 @@
 
 Implements a **WebDataBase** object.
 
-> **NOTE**
->
-> - The sample effect is subject to the actual device.
->
+> **NOTE**  
+>  
+> - The sample effect is subject to the actual device.  
+>  
 > - You must load the **Web** component before calling the APIs in **WebDataBase**.
 
 **Since:** 9
+
+<!--Device-webview-class WebDataBase--><!--Device-webview-class WebDataBase-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -30,6 +32,8 @@ Deletes all HTTP authentication credentials saved in the cache. This API returns
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebDataBase-static deleteHttpAuthCredentials(): void--><!--Device-WebDataBase-static deleteHttpAuthCredentials(): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## existHttpAuthCredentials
@@ -43,6 +47,8 @@ Checks whether any saved HTTP authentication credentials exist. This API returns
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebDataBase-static existHttpAuthCredentials(): boolean--><!--Device-WebDataBase-static existHttpAuthCredentials(): boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -64,6 +70,8 @@ Retrieves HTTP authentication credentials for a given host and realm. This API r
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebDataBase-static getHttpAuthCredentials(host: string, realm: string): Array<string>--><!--Device-WebDataBase-static getHttpAuthCredentials(host: string, realm: string): Array<string>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -77,7 +85,7 @@ Retrieves HTTP authentication credentials for a given host and realm. This API r
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Array of the matching user names and passwords is returned if the operation issuccessful; otherwise, an empty array is returned. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Array of the matching user names and passwords is returned if the operation is successful; otherwise, an empty array is returned. |
 
 **Error codes:**
 
@@ -96,6 +104,8 @@ Saves HTTP authentication credentials for a given host and realm. This API retur
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebDataBase-static saveHttpAuthCredentials(host: string, realm: string, username: string, password: string): void--><!--Device-WebDataBase-static saveHttpAuthCredentials(host: string, realm: string, username: string, password: string): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

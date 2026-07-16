@@ -1,21 +1,28 @@
 # setAppResourceLimit
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+```
+
 ## setAppResourceLimit
 
 ```TypeScript
 function setAppResourceLimit(type: string, value: number, enableDebugLog: boolean): void
 ```
 
-����Ӧ�õ��ļ��������������߳�������JS�ڴ��Native�ڴ���Դ���ơ�
-��ҪӦ�ó������ڹ����ڴ�й©���ϡ�
+����Ӧ�õ��ļ��������������߳�������JS�ڴ��Native�ڴ���Դ���ơ���ҪӦ�ó������ڹ����ڴ�й©���ϡ�
 
-> **ע��**
->
+> **ע��**  
+>  
 > �������еĿ�����ѡ����ڿ�����ѡ���б����ҵ�"ϵͳ��Դй©��־"�����ã������豸��ӿ���Ч��
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-hidebug-function setAppResourceLimit(type: string, value: int, enableDebugLog: boolean): void--><!--Device-hidebug-function setAppResourceLimit(type: string, value: int, enableDebugLog: boolean): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -23,8 +30,8 @@ function setAppResourceLimit(type: string, value: number, enableDebugLog: boolea
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 是 | й©��Դ���ͣ������֣�- pss_memory��native�ڴ棩- js_heap��js���ڴ棩- fd���ļ���������- thread���̣߳� |
-| value | number | 是 | ��Ӧй©��Դ���͵����ֵ����Χ��- pss_memory���ͣ�[1024, 4 * 1024 * 1024]����λ��KB��- js_heap���ͣ�[85, 95]�������JS���ڴ����޵�85%~95%��- fd���ͣ�[10, 10000]- thread���ͣ�[1, 1000]��������Χ�ᵼ�¹���ʧЧ�� |
+| type | string | 是 | й©��Դ���ͣ������֣�  - pss_memory��native�ڴ棩  - js_heap��js���ڴ棩  - fd���ļ���������  - thread���̣߳� |
+| value | number | 是 | ��Ӧй©��Դ���͵����ֵ����Χ��  - pss_memory���ͣ�[1024, 4 * 1024 * 1024]����λ��KB��  - js_heap���ͣ�[85, 95]�������JS���ڴ����޵�85%~95%��  - fd���ͣ�[10, 10000]  - thread���ͣ�[1, 1000]��������Χ�ᵼ�¹���ʧЧ�� |
 | enableDebugLog | boolean | 是 | �Ƿ������ⲿ������־���ⲿ������־����ڻҶȰ汾����ʽ�汾����֮ǰ������һС�����û��Ƴ��Ĳ��԰汾�������ã���Ϊ�ռ�������־��ռ�ô�����cpu��Դ���ڴ���Դ�����ܻ�����Ӧ�����������⡣true�������ⲿ������־��false�������ⲿ������־�� |
 
 **错误码：**

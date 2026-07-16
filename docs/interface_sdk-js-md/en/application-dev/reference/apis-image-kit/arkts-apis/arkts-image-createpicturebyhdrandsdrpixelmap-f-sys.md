@@ -12,11 +12,11 @@ import { image } from '@kit.ImageKit';
 function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap): Promise<Picture>
 ```
 
-Creates a Picture object based on an HDR PixelMap and an SDR PixelMap. The system uses the HDR PixelMap and SDR
-PixelMap to generate a gainmap. The returned Picture object contains the SDR PixelMap and the generated gainmap,
-both in RGBA8888 format. This API uses a promise to return the result.
+Creates a Picture object based on an HDR PixelMap and an SDR PixelMap. The system uses the HDR PixelMap and SDR PixelMap to generate a gainmap. The returned Picture object contains the SDR PixelMap and the generated gainmap,both in RGBA8888 format. This API uses a promise to return the result.
 
 **Since:** 20
+
+<!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap): Promise<Picture>--><!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap): Promise<Picture>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -26,20 +26,20 @@ both in RGBA8888 format. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hdrPixelMap | PixelMap | Yes | HDR PixelMap, with 16-bit or 10-bit depth, in FP16/RGBA1010102/YCBCR_P010 format,and BT2020_HLG color space. |
-| sdrPixelMap | PixelMap | Yes | SDR PixelMap, with 8-bit depth, in RGBA8888/NV21 format, and P3 color space. |
+| hdrPixelMap | [PixelMap](arkts-image-pixelmap-i.md) | Yes | HDR PixelMap, with 16-bit or 10-bit depth, in FP16/RGBA1010102/YCBCR_P010 format,and BT2020_HLG color space. |
+| sdrPixelMap | [PixelMap](arkts-image-pixelmap-i.md) | Yes | SDR PixelMap, with 8-bit depth, in RGBA8888/NV21 format, and P3 color space. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Picture&gt; | Picture object that contains the SDR PixelMap and gainmap, both in RGBA8888 format. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Picture> | Picture object that contains the SDR PixelMap and gainmap, both in RGBA8888 format. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation. HdrPixelMap's PixelMapFormat is notRGBA_F16\RGBA_1010102\YCBCR_P010, or its color space is not BT2020_HLG. Or sdrPixelMap's PixelMapFormat is notRGBA_8888\NV21\NV12, or its color space is not P3. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation. HdrPixelMap's PixelMapFormat is not RGBA_F16\RGBA_1010102\YCBCR_P010, or its color space is not BT2020_HLG. Or sdrPixelMap's PixelMapFormat is not RGBA_8888\NV21\NV12, or its color space is not P3. |
 
 **Example**
 
@@ -88,12 +88,15 @@ function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: Pi
       params: GainmapParams): Promise<Picture>
 ```
 
-Creates a Picture object by a HDR PixelMap and a SDR PixelMap with specified options. A gainmap will be generated
-using the HDR and SDR PixelMap, and the returned Picture will contain the SDR PixelMap and the generated gainmap.
+Creates a Picture object by a HDR PixelMap and a SDR PixelMap with specified options. A gainmap will be generated using the HDR and SDR PixelMap, and the returned Picture will contain the SDR PixelMap and the generated gainmap.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap, 
+      params: GainmapParams): Promise<Picture>--><!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap, 
+      params: GainmapParams): Promise<Picture>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -103,20 +106,20 @@ using the HDR and SDR PixelMap, and the returned Picture will contain the SDR Pi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hdrPixelMap | PixelMap | Yes | A HDR PixelMap, whose PixelMapFormat should beRGBA_F16\RGBA_1010102\YCBCR_P010 and color space should be BT2020_HLG |
-| sdrPixelMap | PixelMap | Yes | A SDR PixelMap, whose PixelMapFormat should be RGBA_8888\NV21\NV12and color space should be P3. |
-| params | GainmapParams | Yes | Gainmap generation parameters. |
+| hdrPixelMap | [PixelMap](arkts-image-pixelmap-i.md) | Yes | A HDR PixelMap, whose PixelMapFormat should be RGBA_F16\RGBA_1010102\YCBCR_P010 and color space should be BT2020_HLG |
+| sdrPixelMap | [PixelMap](arkts-image-pixelmap-i.md) | Yes | A SDR PixelMap, whose PixelMapFormat should be RGBA_8888\NV21\NV12and color space should be P3. |
+| params | [GainmapParams](arkts-image-gainmapparams-i-sys.md) | Yes | Gainmap generation parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Picture&gt; | Returns the Picture object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Picture> | Returns the Picture object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation. HdrPixelMap's PixelMapFormat is notRGBA_F16\RGBA_1010102\YCBCR_P010, or its color space is not BT2020_HLG. Or sdrPixelMap's PixelMapFormat isnot RGBA_8888\NV21\NV12, or its color space is not P3. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation. HdrPixelMap's PixelMapFormat is not RGBA_F16\RGBA_1010102\YCBCR_P010, or its color space is not BT2020_HLG. Or sdrPixelMap's PixelMapFormat is not RGBA_8888\NV21\NV12, or its color space is not P3. |
 

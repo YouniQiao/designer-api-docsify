@@ -18,6 +18,8 @@ Set rtt capability.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
+<!--Device-call-function setRttCapability(accountId: int, isEnable: boolean): Promise<void>--><!--Device-call-function setRttCapability(accountId: int, isEnable: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -33,7 +35,7 @@ Set rtt capability.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setRttCapability. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the setRttCapability. |
 
 **Error codes:**
 

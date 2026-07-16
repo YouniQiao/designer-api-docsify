@@ -1,9 +1,10 @@
 # Stack
 
-Stack is implemented based on the array data structure.
-It follows the principle Last In First Out (LIFO) and supports data insertion and removal at one end.
+Stack is implemented based on the array data structure.It follows the principle Last In First Out (LIFO) and supports data insertion and removal at one end.
 
 **Since:** 8
+
+<!--Device-unnamed-declare class Stack<T>--><!--Device-unnamed-declare class Stack<T>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,13 +26,15 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Stack-[Symbol.iterator](): IterableIterator<T>--><!--Device-Stack-[Symbol.iterator](): IterableIterator<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;T&gt; | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<T> | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
 
 **Error codes:**
 
@@ -83,6 +86,8 @@ A constructor used to create a **Stack** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Stack-constructor()--><!--Device-Stack-constructor()-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
@@ -110,14 +115,16 @@ Uses a callback to traverse each element in the **Stack** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Stack-forEach(callbackFn: (value: T, index?: number, stack?: Stack<T>) => void, thisArg?: Object): void--><!--Device-Stack-forEach(callbackFn: (value: T, index?: number, stack?: Stack<T>) => void, thisArg?: Object): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, stack?: Stack&lt;T&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the Stack. |
-| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is thisinstance. |
+| callbackFn | (value: T, index?: number, stack?: Stack<T>) => void | Yes | Callback invoked to traverse the elements in the Stack. |
+| thisArg | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
 
@@ -154,6 +161,8 @@ Checks whether this Stack is empty (contains no elements).
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Stack-isEmpty(): boolean--><!--Device-Stack-isEmpty(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -193,6 +202,8 @@ Obtains the index of the first occurrence of the specified element in this Stack
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Stack-locate(element: T): int--><!--Device-Stack-locate(element: T): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -239,6 +250,8 @@ Obtains the top element of this Stack. If the Stack is empty, **undefined** is r
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Stack-peek(): T--><!--Device-Stack-peek(): T-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -278,6 +291,8 @@ Removes the top element from this Stack.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Stack-pop(): T--><!--Device-Stack-pop(): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -319,6 +334,8 @@ Adds an element at the top of this Stack.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Stack-push(item: T): T--><!--Device-Stack-push(item: T): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -369,6 +386,8 @@ Number of elements in a Stack.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Stack-length: number--><!--Device-Stack-length: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

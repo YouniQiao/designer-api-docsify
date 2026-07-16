@@ -2,11 +2,13 @@
 
 Defines the common icon options of the chip.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > **fillColor** and **activatedFillColor** take effect only when the icon format is SVG.
 
 **Since:** 11
+
+<!--Device-unnamed-export interface IconCommonOptions--><!--Device-unnamed-export interface IconCommonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +38,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-IconCommonOptions-activatedFillColor?: ResourceColor--><!--Device-IconCommonOptions-activatedFillColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fillColor
@@ -58,6 +62,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-IconCommonOptions-fillColor?: ResourceColor--><!--Device-IconCommonOptions-fillColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## size
@@ -70,10 +76,8 @@ Icon size. This parameter cannot be set in percentage.
 
 Default value:
 
-- When **ChipSize.SMALL** is used:
-**{width: $r('sys.float.chip_small_icon_size'), height: $r('sys.float.chip_small_icon_size')}**.
-- When **ChipSize.NORMAL** is used:
-**{width: $r('sys.float.chip_normal_icon_size'), height: $r('sys.float.chip_normal_icon_size')}**.
+- When **ChipSize.SMALL** is used:**{width: $r('sys.float.chip_small_icon_size'), height: $r('sys.float.chip_small_icon_size')}**.  
+- When **ChipSize.NORMAL** is used:**{width: $r('sys.float.chip_normal_icon_size'), height: $r('sys.float.chip_normal_icon_size')}**.
 
 Unit: vp.
 
@@ -86,6 +90,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-IconCommonOptions-size?: SizeOptions--><!--Device-IconCommonOptions-size?: SizeOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,6 +110,8 @@ Icon source, which can be a specific image path or an image reference.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-IconCommonOptions-src: ResourceStr--><!--Device-IconCommonOptions-src: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

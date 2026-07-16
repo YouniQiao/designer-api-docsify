@@ -20,21 +20,23 @@ Checks whether a specified user is prohibited from canceling application auto-st
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function isModifyAutoStartAppsDisallowed(admin: Want, autoStartApp: Want, accountId: number): boolean--><!--Device-applicationManager-function isModifyAutoStartAppsDisallowed(admin: Want, autoStartApp: Want, accountId: number): boolean-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| autoStartApp | Want | Yes | Auto-start applications to add. **Want** must contain **bundleName** and**abilityName**. |
-| accountId | number | Yes | Account ID, which must be greater than or equal to 0.<br> You can call[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2) of @ohos.account.osAccount to obtain the ID. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| autoStartApp | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Auto-start applications to add. **Want** must contain **bundleName** and **abilityName**. |
+| accountId | number | Yes | Account ID, which must be greater than or equal to 0.<br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2) of @ohos.account.osAccount to obtain the ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the user is prohibited from canceling application auto-startup. The value **true**indicates yes and the value **false** indicates no.&lt;!--PR1--&gt;&lt;!--PR1End--&gt; |
+| boolean | Whether the user is prohibited from canceling application auto-startup. The value **true** indicates yes and the value **false** indicates no.&lt;!--PR1--&gt;&lt;!--PR1End--&gt; |
 
 **Error codes:**
 

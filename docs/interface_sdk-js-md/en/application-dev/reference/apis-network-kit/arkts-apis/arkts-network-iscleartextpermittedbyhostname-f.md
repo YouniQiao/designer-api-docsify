@@ -12,12 +12,13 @@ import { networkSecurity } from '@kit.NetworkKit';
 export function isCleartextPermittedByHostName(hostName: string): boolean
 ```
 
-Checks whether the Cleartext traffic for a specified hostname is permitted.
-To invoke this method, you must have the {@code ohos.permission.INTERNET} permission.
+Checks whether the Cleartext traffic for a specified hostname is permitted.To invoke this method, you must have the {@code ohos.permission.INTERNET} permission.
 
 **Since:** 18
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-networkSecurity-export function isCleartextPermittedByHostName(hostName: string): boolean--><!--Device-networkSecurity-export function isCleartextPermittedByHostName(hostName: string): boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

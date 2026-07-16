@@ -12,6 +12,8 @@ The context of the agent service ability.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-common-export type AgentExtensionContext = _AgentExtensionContext--><!--Device-common-export type AgentExtensionContext = _AgentExtensionContext-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **Property type:** _AgentExtensionContext

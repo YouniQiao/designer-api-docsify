@@ -16,19 +16,21 @@ Obtains a text embedding model.
 
 **Since:** 15
 
+<!--Device-intelligence-function getTextEmbeddingModel(config: ModelConfig): Promise<TextEmbedding>--><!--Device-intelligence-function getTextEmbeddingModel(config: ModelConfig): Promise<TextEmbedding>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | ModelConfig | Yes | The configuration of the embedding model. |
+| config | [ModelConfig](arkts-arkdata-modelconfig-i.md) | Yes | The configuration of the embedding model. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;TextEmbedding&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<TextEmbedding> | The promise returned by the function. |
 
 **Error codes:**
 

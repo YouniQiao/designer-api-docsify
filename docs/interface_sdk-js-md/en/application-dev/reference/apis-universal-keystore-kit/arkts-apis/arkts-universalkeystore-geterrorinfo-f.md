@@ -18,13 +18,15 @@ Get the detailed error information.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-huksExternalCrypto-function getErrorInfo(): HuksExternalErrorInfo--><!--Device-huksExternalCrypto-function getErrorInfo(): HuksExternalErrorInfo-End-->
+
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| HuksExternalErrorInfo | The returned error information. |
+| [HuksExternalErrorInfo](arkts-universalkeystore-huksexternalerrorinfo-i.md) | The returned error information. |
 
 **Example**
 

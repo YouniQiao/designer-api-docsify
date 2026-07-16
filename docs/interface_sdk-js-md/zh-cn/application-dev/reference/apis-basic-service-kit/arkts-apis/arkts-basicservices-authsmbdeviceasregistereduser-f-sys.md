@@ -1,5 +1,11 @@
 # authSmbDeviceAsRegisteredUser（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+```
+
 ## authSmbDeviceAsRegisteredUser
 
 ```TypeScript
@@ -14,6 +20,8 @@ function authSmbDeviceAsRegisteredUser(host: SharedHost, username: string, passw
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-print-function authSmbDeviceAsRegisteredUser(host: SharedHost, username: string, password: string): Promise<PrinterInformation[]>--><!--Device-print-function authSmbDeviceAsRegisteredUser(host: SharedHost, username: string, password: string): Promise<PrinterInformation[]>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ function authSmbDeviceAsRegisteredUser(host: SharedHost, username: string, passw
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| host | SharedHost | 是 | 要进行身份验证的SMB主机。 |
+| host | [SharedHost](arkts-basicservices-sharedhost-i.md) | 是 | 要进行身份验证的SMB主机。 |
 | username | string | 是 | 用于鉴权的用户名。 |
 | password | string | 是 | 用于身份验证的密码。 |
 
@@ -30,7 +38,7 @@ function authSmbDeviceAsRegisteredUser(host: SharedHost, username: string, passw
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PrinterInformation[]&gt; | Promise that resolves with the list of available printers. |
+| Promise<PrinterInformation[]> | Promise that resolves with the list of available printers. |
 
 **错误码：**
 

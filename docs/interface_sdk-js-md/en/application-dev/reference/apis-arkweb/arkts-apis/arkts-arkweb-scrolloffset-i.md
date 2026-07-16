@@ -4,6 +4,8 @@ Represents the current scrolling offset of a web page.
 
 **Since:** 13
 
+<!--Device-webview-interface ScrollOffset--><!--Device-webview-interface ScrollOffset-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -18,8 +20,7 @@ import { webview } from '@kit.ArkWeb';
 x: number
 ```
 
-Horizontal scrolling offset of a web page. The value is the difference between the x-coordinate of the left
-boundary of the web page and that of the left boundary of the **Web** component.
+Horizontal scrolling offset of a web page. The value is the difference between the x-coordinate of the left boundary of the web page and that of the left boundary of the **Web** component.
 
 When the web page is scrolled rightwards, the value is negative.
 
@@ -33,6 +34,8 @@ Unit: vp
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-ScrollOffset-x: number--><!--Device-ScrollOffset-x: number-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## y
@@ -41,8 +44,7 @@ Unit: vp
 y: number
 ```
 
-Vertical scrolling offset of a web page. The value is the difference between the y-coordinate of the upper
-boundary of the web page and that of the upper boundary of the **Web** component.
+Vertical scrolling offset of a web page. The value is the difference between the y-coordinate of the upper boundary of the web page and that of the upper boundary of the **Web** component.
 
 When the web page is scrolled downwards, the value is negative.
 
@@ -55,6 +57,8 @@ Unit: vp
 **Since:** 13
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-ScrollOffset-y: number--><!--Device-ScrollOffset-y: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

@@ -18,11 +18,13 @@ Constructs an identity matrix.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-matrix4-function identity(): Matrix4Transit--><!--Device-matrix4-function identity(): Matrix4Transit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Identity matrix object. |
+| [Matrix4Transit](arkts-arkui-matrix4transit-i.md) | Identity matrix object. |
 

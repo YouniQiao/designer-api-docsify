@@ -16,14 +16,16 @@ Enables the trace flag specified in HiTraceId. This API returns the result synch
 
 **Since:** 8
 
+<!--Device-hiTraceChain-function enableFlag(id: HiTraceId, flag: HiTraceFlag): void--><!--Device-hiTraceChain-function enableFlag(id: HiTraceId, flag: HiTraceFlag): void-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | HiTraceId | Yes | **HiTraceId** instance for which the trace flag is enabled. |
-| flag | HiTraceFlag | Yes | Specified trace flag. |
+| id | [HiTraceId](arkts-performanceanalysis-hitraceid-i.md) | Yes | **HiTraceId** instance for which the trace flag is enabled. |
+| flag | [HiTraceFlag](arkts-performanceanalysis-hitraceflag-e.md) | Yes | Specified trace flag. |
 
 **Example**
 

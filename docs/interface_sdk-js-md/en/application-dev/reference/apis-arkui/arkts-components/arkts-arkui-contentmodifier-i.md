@@ -4,6 +4,8 @@ Defines the content modifier.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface ContentModifier<T>--><!--Device-unnamed-declare interface ContentModifier<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## applyContent
@@ -20,11 +22,13 @@ Defining applyContent function.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ContentModifier-applyContent(): WrappedBuilder<[T]>--><!--Device-ContentModifier-applyContent(): WrappedBuilder<[T]>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| WrappedBuilder&lt;[T]&gt; | Component attribute class, which is used to distinguish different information required by different componentsafter content areas are customized, for example, ButtonConfiguration for the Button component andCheckBoxConfiguration of the Checkbox component. |
+| [WrappedBuilder](arkts-arkui-wrappedbuilder-c.md)<[T]> | Component attribute class, which is used to distinguish different information required by different components after content areas are customized, for example, ButtonConfiguration for the Button component and CheckBoxConfiguration of the Checkbox component.* |
 

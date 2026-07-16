@@ -4,6 +4,8 @@ Describes the event indicating that the audio session state changes.
 
 **Since:** 20
 
+<!--Device-audio-interface AudioSessionStateChangedEvent--><!--Device-audio-interface AudioSessionStateChangedEvent-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## Modules to Import
@@ -23,6 +25,8 @@ Hint for the audio session state change.
 **Type:** AudioSessionStateChangeHint
 
 **Since:** 20
+
+<!--Device-AudioSessionStateChangedEvent-stateChangeHint: AudioSessionStateChangeHint--><!--Device-AudioSessionStateChangedEvent-stateChangeHint: AudioSessionStateChangeHint-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 

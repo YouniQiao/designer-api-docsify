@@ -18,6 +18,8 @@ Creates an NDEF Record with OpenHarmony application bundle name.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ndef-function makeApplicationRecord(bundleName: string): NdefRecord--><!--Device-ndef-function makeApplicationRecord(bundleName: string): NdefRecord-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
@@ -30,7 +32,7 @@ Creates an NDEF Record with OpenHarmony application bundle name.
 
 | Type | Description |
 | --- | --- |
-| NdefRecord | The instance of NdefRecord. |
+| [NdefRecord](arkts-connectivity-ndefrecord-i.md) | The instance of NdefRecord. |
 
 **Error codes:**
 

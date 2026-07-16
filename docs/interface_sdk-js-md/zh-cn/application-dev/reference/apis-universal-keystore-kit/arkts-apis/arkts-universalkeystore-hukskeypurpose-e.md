@@ -6,6 +6,8 @@
 
 **起始版本：** 8
 
+<!--Device-huks-export enum HuksKeyPurpose--><!--Device-huks-export enum HuksKeyPurpose-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Core
 
 ## HUKS_KEY_PURPOSE_ENCRYPT
@@ -18,7 +20,9 @@ HUKS_KEY_PURPOSE_ENCRYPT = 1
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_ENCRYPT = 1--><!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_ENCRYPT = 1-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -32,7 +36,9 @@ HUKS_KEY_PURPOSE_DECRYPT = 2
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_DECRYPT = 2--><!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_DECRYPT = 2-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -46,7 +52,9 @@ HUKS_KEY_PURPOSE_SIGN = 4
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_SIGN = 4--><!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_SIGN = 4-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -62,7 +70,9 @@ HUKS_KEY_PURPOSE_VERIFY = 8
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_VERIFY = 8--><!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_VERIFY = 8-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -78,7 +88,9 @@ HUKS_KEY_PURPOSE_DERIVE = 16
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_DERIVE = 16--><!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_DERIVE = 16-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -94,7 +106,9 @@ HUKS_KEY_PURPOSE_WRAP = 32
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_WRAP = 32--><!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_WRAP = 32-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -110,7 +124,9 @@ HUKS_KEY_PURPOSE_UNWRAP = 64
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_UNWRAP = 64--><!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_UNWRAP = 64-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -126,7 +142,9 @@ HUKS_KEY_PURPOSE_MAC = 128
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_MAC = 128--><!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_MAC = 128-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -142,7 +160,9 @@ HUKS_KEY_PURPOSE_AGREE = 256
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_AGREE = 256--><!--Device-HuksKeyPurpose-HUKS_KEY_PURPOSE_AGREE = 256-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core

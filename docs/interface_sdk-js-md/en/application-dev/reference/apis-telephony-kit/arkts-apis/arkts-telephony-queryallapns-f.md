@@ -18,13 +18,15 @@ Query all APN info.
 
 **Required permissions:** ohos.permission.MANAGE_APN_SETTING
 
+<!--Device-data-function queryAllApns(): Promise<Array<ApnInfo>>--><!--Device-data-function queryAllApns(): Promise<Array<ApnInfo>>-End-->
+
 **System capability:** SystemCapability.Telephony.CellularData
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ApnInfo&gt;&gt; | Returns all APN info of default cellular data card. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ApnInfo>> | Returns all APN info of default cellular data card. |
 
 **Error codes:**
 

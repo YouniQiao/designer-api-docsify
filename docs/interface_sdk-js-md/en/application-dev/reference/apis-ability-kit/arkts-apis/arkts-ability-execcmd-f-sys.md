@@ -20,6 +20,8 @@ Execute a command. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-cliManager-function execCmd(cmd: string, execCmdOptions?: ExecCmdOptions): Promise<CliSessionInfo>--><!--Device-cliManager-function execCmd(cmd: string, execCmdOptions?: ExecCmdOptions): Promise<CliSessionInfo>-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -29,13 +31,13 @@ Execute a command. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | cmd | string | Yes | The command to execute. |
-| execCmdOptions | ExecCmdOptions | No | The options of this action. |
+| execCmdOptions | [ExecCmdOptions](arkts-ability-execcmdoptions-i-sys.md) | No | The options of this action. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CliSessionInfo&gt; | Promise used to return CliSessionInfo. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CliSessionInfo> | Promise used to return CliSessionInfo. |
 
 **Error codes:**
 

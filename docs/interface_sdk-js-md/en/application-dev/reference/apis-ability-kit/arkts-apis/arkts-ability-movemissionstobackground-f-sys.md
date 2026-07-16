@@ -12,12 +12,13 @@ import { missionManager } from '@kit.AbilityKit';
 function moveMissionsToBackground(missionIds: Array<number>, callback: AsyncCallback<Array<number>>): void
 ```
 
-Switches a batch of missions to the background. The mission IDs returned are sorted by mission level when the
-missions are switched. This API uses an asynchronous callback to return the result.
+Switches a batch of missions to the background. The mission IDs returned are sorted by mission level when the missions are switched. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
+
+<!--Device-missionManager-function moveMissionsToBackground(missionIds: Array<int>, callback: AsyncCallback<Array<int>>): void--><!--Device-missionManager-function moveMissionsToBackground(missionIds: Array<int>, callback: AsyncCallback<Array<int>>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -27,8 +28,8 @@ missions are switched. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionIds | Array&lt;number&gt; | Yes | Array holding the mission IDs. |
-| callback | AsyncCallback&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the result. |
+| missionIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Array holding the mission IDs. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<number>> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -81,12 +82,13 @@ try {
 function moveMissionsToBackground(missionIds: Array<number>): Promise<Array<number>>
 ```
 
-Switches a batch of missions to the background. The mission IDs returned are sorted by mission level when the
-missions are switched. This API uses a promise to return the result.
+Switches a batch of missions to the background. The mission IDs returned are sorted by mission level when the missions are switched. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
+
+<!--Device-missionManager-function moveMissionsToBackground(missionIds: Array<int>): Promise<Array<int>>--><!--Device-missionManager-function moveMissionsToBackground(missionIds: Array<int>): Promise<Array<int>>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -96,13 +98,13 @@ missions are switched. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionIds | Array&lt;number&gt; | Yes | Array holding the mission IDs. |
+| missionIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Array holding the mission IDs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return an array of mission IDs. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | Promise used to return an array of mission IDs. |
 
 **Error codes:**
 

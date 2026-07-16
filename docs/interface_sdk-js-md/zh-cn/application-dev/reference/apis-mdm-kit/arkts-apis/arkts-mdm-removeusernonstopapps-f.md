@@ -1,5 +1,11 @@
 # removeUserNonStopApps
 
+## 导入模块
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+```
+
 ## removeUserNonStopApps
 
 ```TypeScript
@@ -14,14 +20,16 @@ function removeUserNonStopApps(admin: Want, applicationInstances: Array<common.A
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function removeUserNonStopApps(admin: Want, applicationInstances: Array<common.ApplicationInstance>): void--><!--Device-applicationManager-function removeUserNonStopApps(admin: Want, applicationInstances: Array<common.ApplicationInstance>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| applicationInstances | Array&lt;common.ApplicationInstance&gt; | 是 | 不可关停应用名单数组。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| applicationInstances | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<common.ApplicationInstance> | 是 | 不可关停应用名单数组。 |
 
 **错误码：**
 

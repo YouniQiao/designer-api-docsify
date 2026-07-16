@@ -18,6 +18,8 @@ Unsubscribe system keys.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-inputConsumer-function offKey(keyOptions: KeyOptions, callback?: KeyCommandCallback): void--><!--Device-inputConsumer-function offKey(keyOptions: KeyOptions, callback?: KeyCommandCallback): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Unsubscribe system keys.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyOptions | KeyOptions | Yes | the key events about input which is to be subscribed. |
-| callback | KeyCommandCallback | No | Callback function that receives reported data. |
+| keyOptions | [KeyOptions](../../apis-test-kit/arkts-apis/arkts-test-keyoptions-i.md) | Yes | the key events about input which is to be subscribed. |
+| callback | [KeyCommandCallback](arkts-input-keycommandcallback-t-sys.md) | No | Callback function that receives reported data. |
 
 **Error codes:**
 

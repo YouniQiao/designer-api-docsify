@@ -13,15 +13,14 @@ function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
       params: HuksParam[]): Promise<HuksReturnResult>
 ```
 
-Obtains an anonymous key certificate in offline mode for a specified user. This API uses a promise to return the
-result.
+Obtains an anonymous key certificate in offline mode for a specified user. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - Offline key attestation depends on the network. You need to periodically connect to the network to use this API
-> to update the offline certificate.
->
-> - Offline anonymous key attestation requires that the local time be accurate. Otherwise, the peer end may fail to
+> **NOTE**  
+>  
+> - Offline key attestation depends on the network. You need to periodically connect to the network to use this API  
+> to update the offline certificate.  
+>  
+> - Offline anonymous key attestation requires that the local time be accurate. Otherwise, the peer end may fail to  
 > verify the certificate expiration.
 
 **Since:** 26.0.0
@@ -29,6 +28,10 @@ result.
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-huks-function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
+      params: HuksParam[]): Promise<HuksReturnResult>--><!--Device-huks-function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
+      params: HuksParam[]): Promise<HuksReturnResult>-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -40,19 +43,19 @@ result.
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID<br>The value range is all integers. |
 | keyAlias | string | Yes | Alias of the key. The certificate to be obtained stores the key. |
-| params | HuksParam[] | Yes | Options for attesting the key. |
+| params | [HuksParam](arkts-universalkeystore-huksparam-i.md)[] | Yes | Options for attesting the key. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | Promise used to return the result. When the call is successful, the**certChains** member of the **HuksReturnResult** object is the obtained certificate chain. Otherwise, themember is empty. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HuksReturnResult> | Promise used to return the result. When the call is successful, the **certChains** member of the **HuksReturnResult** object is the obtained certificate chain. Otherwise, the member is empty. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The app does not have sufficient permissions. Possible causes: Thecross-account permission is not granted, the system is not unlocked by the user, or the user does notexist. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The app does not have sufficient permissions. Possible causes: The cross-account permission is not granted, the system is not unlocked by the user, or the user does not exist. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system apps use system APIs. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The API is not supported. |
 | [12000001](../errorcode-huks.md#12000001-feature-not-supported) | The function is not supported. Possible causes:1. The algorithm mode is not supported.2. The group key is not supported.3. The extended encryption key is not supported. |

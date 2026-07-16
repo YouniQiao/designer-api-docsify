@@ -1,9 +1,10 @@
 # FormInfoFilter
 
-The optional options used as filters to ask
-getFormsInfo to return formInfos from only forms that match the options.
+The optional options used as filters to ask getFormsInfo to return formInfos from only forms that match the options.
 
 **Since:** 9
+
+<!--Device-formInfo-interface FormInfoFilter--><!--Device-formInfo-interface FormInfoFilter-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -19,12 +20,13 @@ import { formInfo } from '@kit.FormKit';
 bundleName?: string
 ```
 
-optional bundleName that used to ask getFormsInfo to return
-form infos with the same bundleName.
+optional bundleName that used to ask getFormsInfo to return form infos with the same bundleName.
 
 **Type:** string
 
 **Since:** 12
+
+<!--Device-FormInfoFilter-bundleName?: string--><!--Device-FormInfoFilter-bundleName?: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -36,13 +38,13 @@ form infos with the same bundleName.
 supportedDimensions?: Array<number>
 ```
 
-optional supportedDimensions that used to ask getFormsInfo to return
-form infos with the same supportedDimensions.
-The minimum length is 1, refer to {@link formInfo.FormDimension}.
+optional supportedDimensions that used to ask getFormsInfo to return form infos with the same supportedDimensions.The minimum length is 1, refer to {@link formInfo.FormDimension}.
 
 **Type:** Array<number>
 
 **Since:** 12
+
+<!--Device-FormInfoFilter-supportedDimensions?: Array<int>--><!--Device-FormInfoFilter-supportedDimensions?: Array<int>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -54,13 +56,13 @@ The minimum length is 1, refer to {@link formInfo.FormDimension}.
 supportedShapes?: Array<number>
 ```
 
-optional supportedShapes that used to ask getFormsInfo to return
-form infos with the same supportedShapes.
-The minimum length is 1, Refer to {@link formInfo.FormShape}.
+optional supportedShapes that used to ask getFormsInfo to return form infos with the same supportedShapes.The minimum length is 1, Refer to {@link formInfo.FormShape}.
 
 **Type:** Array<number>
 
 **Since:** 12
+
+<!--Device-FormInfoFilter-supportedShapes?: Array<int>--><!--Device-FormInfoFilter-supportedShapes?: Array<int>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 

@@ -10,6 +10,8 @@ Exact type. (If the system time is changed, the offset may be 1s at most.)
 
 **Since:** 7
 
+<!--Device-systemTimer-const TIMER_TYPE_EXACT: int--><!--Device-systemTimer-const TIMER_TYPE_EXACT: int-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **System API:** This is a system API.
@@ -23,6 +25,8 @@ const TIMER_TYPE_IDLE: number
 Idle timer type (supported only for system services).
 
 **Since:** 7
+
+<!--Device-systemTimer-const TIMER_TYPE_IDLE: int--><!--Device-systemTimer-const TIMER_TYPE_IDLE: int-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -38,6 +42,8 @@ CPU time type. (The start time of the timer cannot be later than the current sys
 
 **Since:** 7
 
+<!--Device-systemTimer-const TIMER_TYPE_REALTIME: int--><!--Device-systemTimer-const TIMER_TYPE_REALTIME: int-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **System API:** This is a system API.
@@ -51,6 +57,8 @@ const TIMER_TYPE_WAKEUP: number
 Wakeup type. (If the wakeup type is not set, the system does not wake up until it exits the sleep state.)
 
 **Since:** 7
+
+<!--Device-systemTimer-const TIMER_TYPE_WAKEUP: int--><!--Device-systemTimer-const TIMER_TYPE_WAKEUP: int-End-->
 
 **System capability:** SystemCapability.MiscServices.Time
 

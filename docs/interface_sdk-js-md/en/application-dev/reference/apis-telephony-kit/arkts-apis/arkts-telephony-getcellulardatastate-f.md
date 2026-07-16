@@ -18,13 +18,15 @@ Obtain the connection state of the PS domain.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-data-function getCellularDataState(callback: AsyncCallback<DataConnectState>): void--><!--Device-data-function getCellularDataState(callback: AsyncCallback<DataConnectState>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CellularData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;DataConnectState&gt; | Yes | Indicates the callback for getting the connection state,which can be any of the following:&lt;ul&gt;&lt;li&gt;{@code DataConnectState#DATA_STATE_UNKNOWN}&lt;li&gt;{@code DataConnectState#DATA_STATE_DISCONNECTED}&lt;li&gt;{@code DataConnectState#DATA_STATE_CONNECTING}&lt;li&gt;{@code DataConnectState#DATA_STATE_CONNECTED}&lt;li&gt;{@code DataConnectState#DATA_STATE_SUSPENDED}&lt;/ul&gt; |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DataConnectState> | Yes | Indicates the callback for getting the connection state,which can be any of the following:&lt;ul&gt;&lt;li&gt;{@code DataConnectState#DATA_STATE_UNKNOWN}&lt;li&gt;{@code DataConnectState#DATA_STATE_DISCONNECTED}&lt;li&gt;{@code DataConnectState#DATA_STATE_CONNECTING}&lt;li&gt;{@code DataConnectState#DATA_STATE_CONNECTED}&lt;li&gt;{@code DataConnectState#DATA_STATE_SUSPENDED}&lt;/ul&gt; |
 
 **Error codes:**
 
@@ -61,13 +63,15 @@ Obtain the connection state of the PS domain.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-data-function getCellularDataState(): Promise<DataConnectState>--><!--Device-data-function getCellularDataState(): Promise<DataConnectState>-End-->
+
 **System capability:** SystemCapability.Telephony.CellularData
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataConnectState&gt; | Returns the connection state,which can be any of the following:&lt;ul&gt;&lt;li&gt;{@code DataConnectState#DATA_STATE_UNKNOWN}&lt;li&gt;{@code DataConnectState#DATA_STATE_DISCONNECTED}&lt;li&gt;{@code DataConnectState#DATA_STATE_CONNECTING}&lt;li&gt;{@code DataConnectState#DATA_STATE_CONNECTED}&lt;li&gt;{@code DataConnectState#DATA_STATE_SUSPENDED}&lt;/ul&gt; |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DataConnectState> | Returns the connection state,which can be any of the following:&lt;ul&gt;&lt;li&gt;{@code DataConnectState#DATA_STATE_UNKNOWN}&lt;li&gt;{@code DataConnectState#DATA_STATE_DISCONNECTED}&lt;li&gt;{@code DataConnectState#DATA_STATE_CONNECTING}&lt;li&gt;{@code DataConnectState#DATA_STATE_CONNECTED}&lt;li&gt;{@code DataConnectState#DATA_STATE_SUSPENDED}&lt;/ul&gt; |
 
 **Error codes:**
 

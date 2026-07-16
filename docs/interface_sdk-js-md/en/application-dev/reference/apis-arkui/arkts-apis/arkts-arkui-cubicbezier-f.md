@@ -20,6 +20,8 @@ Creates a cubic Bézier curve. The curve values must be between 0 and 1.
 
 **Substitutes:** [cubicBezierCurve](arkts-arkui-cubicbeziercurve-f.md#cubicbeziercurve-1)
 
+<!--Device-curves-function cubicBezier(x1: number, y1: number, x2: number, y2: number): string--><!--Device-curves-function cubicBezier(x1: number, y1: number, x2: number, y2: number): string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**

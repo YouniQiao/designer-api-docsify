@@ -4,9 +4,17 @@ Mask效果类，作为Filter以及VisualEffect的输入使用。
 
 **起始版本：** 20
 
+<!--Device-uiEffect-class Mask--><!--Device-uiEffect-class Mask-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
+```
 
 ## createPixelMapMask
 
@@ -19,6 +27,10 @@ static createPixelMapMask(pixelMap: image.PixelMap, srcRect: common2D.Rect, dstR
 
 **起始版本：** 20
 
+<!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap, srcRect: common2D.Rect, dstRect: common2D.Rect,
+      fillColor?: Color): Mask--><!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap, srcRect: common2D.Rect, dstRect: common2D.Rect,
+      fillColor?: Color): Mask-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -30,13 +42,13 @@ static createPixelMapMask(pixelMap: image.PixelMap, srcRect: common2D.Rect, dstR
 | pixelMap | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得。 |
 | srcRect | common2D.Rect | 是 | pixelMap的待绘制区域。图片最左侧和最上侧对应位置0，最右侧和最下侧对应位置1。right需大于left，bottom需大于top。 |
 | dstRect | common2D.Rect | 是 | pixelMap在mask挂载的节点上的绘制区域。节点最左侧和最上侧对应位置0，最右侧和最下侧对应位置1。right需大于left，bottom需大于top。 |
-| fillColor | Color | 否 | 节点上在pixelMap绘制区域之外的区域填充的颜色，各元素取值范围为[0, 1]，默认透明色，小于0的转为0，大于1的转为1。 |
+| fillColor | [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-color-i.md) | 否 | 节点上在pixelMap绘制区域之外的区域填充的颜色，各元素取值范围为[0, 1]，默认透明色，小于0的转为0，大于1的转为1。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Mask | - 返回具有pixelMap缩放效果的Mask。 |
+| [Mask](arkts-arkgraphics2d-mask-c-sys.md) | - 返回具有pixelMap缩放效果的Mask。 |
 
 **错误码：**
 
@@ -96,6 +108,8 @@ static createPixelMapMask(pixelMap: image.PixelMap): Mask
 
 **起始版本：** 22
 
+<!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap): Mask--><!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap): Mask-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -110,7 +124,7 @@ static createPixelMapMask(pixelMap: image.PixelMap): Mask
 
 | 类型 | 说明 |
 | --- | --- |
-| Mask | - 返回具有pixelMap的Mask。 |
+| [Mask](arkts-arkgraphics2d-mask-c-sys.md) | - 返回具有pixelMap的Mask。 |
 
 **错误码：**
 
@@ -221,6 +235,10 @@ static createRadialGradientMask(center: common2D.Point, radiusX: number, radiusY
 
 **起始版本：** 20
 
+<!--Device-Mask-static createRadialGradientMask(center: common2D.Point, radiusX: double, radiusY: double,
+      gradients: Array<[double, double]>): Mask--><!--Device-Mask-static createRadialGradientMask(center: common2D.Point, radiusX: double, radiusY: double,
+      gradients: Array<[double, double]>): Mask-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -232,13 +250,13 @@ static createRadialGradientMask(center: common2D.Point, radiusX: number, radiusY
 | center | common2D.Point | 是 | 设置椭圆的中心点，[0, 0]为组件左上角，[1, 1]为组件的右下角。取值范围[-10, 10]，可取浮点数，超出边界会在实现时自动截断。 |
 | radiusX | number | 是 | 设置椭圆的长轴，半径为1等于组件的高度。取值范围[0, 10]，可取浮点数，超出边界会在实现时自动截断。 |
 | radiusY | number | 是 | 设置椭圆的短轴，半径为1等于组件的高度。取值范围[0, 10]，可取浮点数，超出边界会在实现时自动截断。 |
-| gradients | Array&lt;[number, number]&gt; | 是 | 数组中保存的二元数组表示梯度：[RGBA颜色, 位置]。RGBA颜色四通道使用相同的值，可看作一个灰度值；位置表示沿径向方向向外时RGBA颜色对应的分布位置；RGBA颜色与位置的取值范围均为[0, 1]，可取浮点数，小于0的转为0，大于1的转为1。位置参数值须严格递增，Array数组中二元数组个数必须大于等于2，二元数组中的元素不能为空，否则该椭圆分布效果不生效。 |
+| gradients | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<[number, number]> | 是 | 数组中保存的二元数组表示梯度：[RGBA颜色, 位置]。RGBA颜色四通道使用相同的值，可看作一个灰度值；位置表示沿径向方向向外时RGBA颜色对应的分布位置；RGBA颜色与位置的取值范围均为[0, 1]，可取浮点数，小于0的转为0，大于1的转为1。位置参数值须严格递增，Array数组中二元数组个数必须大于等于2，二元数组中的元素不能为空，否则该椭圆分布效果不生效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Mask | - 返回椭圆形状的径向分布效果的灰度Mask。 |
+| [Mask](arkts-arkgraphics2d-mask-c-sys.md) | - 返回椭圆形状的径向分布效果的灰度Mask。 |
 
 **错误码：**
 
@@ -255,6 +273,8 @@ static createRippleMask(center: common2D.Point, radius: number, width: number, o
 通过输入波环圆心的位置、半径和宽度创建波环遮罩效果Mask实例，具体的效果由输入的参数决定。
 
 **起始版本：** 20
+
+<!--Device-Mask-static createRippleMask(center: common2D.Point, radius: double, width: double, offset?: double): Mask--><!--Device-Mask-static createRippleMask(center: common2D.Point, radius: double, width: double, offset?: double): Mask-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -273,7 +293,7 @@ static createRippleMask(center: common2D.Point, radius: number, width: number, o
 
 | 类型 | 说明 |
 | --- | --- |
-| Mask | - 返回具有波环遮罩效果的Mask。 |
+| [Mask](arkts-arkgraphics2d-mask-c-sys.md) | - 返回具有波环遮罩效果的Mask。 |
 
 **错误码：**
 
@@ -298,6 +318,8 @@ static createUseEffectMask(useEffect: boolean): Mask
 
 **起始版本：** 22
 
+<!--Device-Mask-static createUseEffectMask(useEffect: boolean): Mask--><!--Device-Mask-static createUseEffectMask(useEffect: boolean): Mask-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -312,7 +334,7 @@ static createUseEffectMask(useEffect: boolean): Mask
 
 | 类型 | 说明 |
 | --- | --- |
-| Mask | - 返回是否使用模糊缓存标记的Mask。 |
+| [Mask](arkts-arkgraphics2d-mask-c-sys.md) | - 返回是否使用模糊缓存标记的Mask。 |
 
 **错误码：**
 
@@ -390,6 +412,10 @@ static createWaveGradientMask(center: common2D.Point, width: number, propagation
 
 **起始版本：** 20
 
+<!--Device-Mask-static createWaveGradientMask(center: common2D.Point, width: double, propagationRadius: double,
+      blurRadius: double, turbulenceStrength?: double): Mask--><!--Device-Mask-static createWaveGradientMask(center: common2D.Point, width: double, propagationRadius: double,
+      blurRadius: double, turbulenceStrength?: double): Mask-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -408,7 +434,7 @@ static createWaveGradientMask(center: common2D.Point, width: number, propagation
 
 | 类型 | 说明 |
 | --- | --- |
-| Mask | - 返回单个水波形状的灰度Mask。 |
+| [Mask](arkts-arkgraphics2d-mask-c-sys.md) | - 返回单个水波形状的灰度Mask。 |
 
 **错误码：**
 

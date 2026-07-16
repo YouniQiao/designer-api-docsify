@@ -13,8 +13,7 @@ function getAngleModify(currentRotationMatrix: Array<number>, preRotationMatrix:
     callback: AsyncCallback<Array<number>>): void
 ```
 
-Obtains the angle change between two rotation matrices. This API uses an asynchronous callback to return the
-result.
+Obtains the angle change between two rotation matrices. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -22,15 +21,19 @@ result.
 
 **Substitutes:** getAngleVariation(currentRotationMatrix:
 
+<!--Device-sensor-function getAngleModify(currentRotationMatrix: Array<number>, preRotationMatrix: Array<number>,
+    callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function getAngleModify(currentRotationMatrix: Array<number>, preRotationMatrix: Array<number>,
+    callback: AsyncCallback<Array<number>>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| currentRotationMatrix | Array&lt;number&gt; | Yes | Current rotation matrix. |
-| preRotationMatrix | Array&lt;number&gt; | Yes | The other rotation matrix. |
-| callback | AsyncCallback&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the angle change around the z, x, and yaxes, in degrees. |
+| currentRotationMatrix | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Current rotation matrix. |
+| preRotationMatrix | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | The other rotation matrix. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<number>> | Yes | Callback used to return the angle change around the z, x, and y axes, in degrees. |
 
 **Example**
 
@@ -66,20 +69,22 @@ Obtains the angle change between two rotation matrices. This API uses a promise 
 
 **Substitutes:** getAngleVariation(currentRotationMatrix:
 
+<!--Device-sensor-function getAngleModify(currentRotationMatrix: Array<number>, preRotationMatrix: Array<number>): Promise<Array<number>>--><!--Device-sensor-function getAngleModify(currentRotationMatrix: Array<number>, preRotationMatrix: Array<number>): Promise<Array<number>>-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| currentRotationMatrix | Array&lt;number&gt; | Yes | Current rotation matrix. |
-| preRotationMatrix | Array&lt;number&gt; | Yes | The other rotation matrix. |
+| currentRotationMatrix | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Current rotation matrix. |
+| preRotationMatrix | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | The other rotation matrix. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the angle change around the z, x, and y axes, indegrees. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | Promise used to return the angle change around the z, x, and y axes, in degrees. |
 
 **Example**
 

@@ -4,6 +4,8 @@ Defines the lazy column layout component.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export interface LazyColumnLayoutInterface--><!--Device-unnamed-export interface LazyColumnLayoutInterface-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,11 +28,13 @@ Construct the lazy column layout attribute.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-LazyColumnLayoutInterface-(): LazyColumnLayoutAttribute--><!--Device-LazyColumnLayoutInterface-(): LazyColumnLayoutAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| LazyColumnLayoutAttribute | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
+| [LazyColumnLayoutAttribute](arkts-arkui-lazycolumnlayoutattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 

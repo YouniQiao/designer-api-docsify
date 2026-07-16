@@ -18,6 +18,8 @@ Obtains a list of applications that allow notifications. This API uses a promise
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getAllNotificationEnabledBundles(): Promise<Array<BundleOption>>--><!--Device-notificationManager-function getAllNotificationEnabledBundles(): Promise<Array<BundleOption>>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Obtains a list of applications that allow notifications. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleOption&gt;&gt; | Returns a list of applications that allow notifications. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<BundleOption>> | Returns a list of applications that allow notifications. |
 
 **Error codes:**
 
@@ -62,12 +64,13 @@ notificationManager.getAllNotificationEnabledBundles().then((data: Array<notific
 function getAllNotificationEnabledBundles(userId: number): Promise<Array<BundleOption>>
 ```
 
-Obtains the list of applications that are allowed to publish notifications by a specified user. This API uses a
-promise to return the result.
+Obtains the list of applications that are allowed to publish notifications by a specified user. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function getAllNotificationEnabledBundles(userId: int): Promise<Array<BundleOption>>--><!--Device-notificationManager-function getAllNotificationEnabledBundles(userId: int): Promise<Array<BundleOption>>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -83,7 +86,7 @@ promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleOption&gt;&gt; | Returns a list of applications that allow notifications. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<BundleOption>> | Returns a list of applications that allow notifications. |
 
 **Error codes:**
 

@@ -1,51 +1,28 @@
 # InputClient
 
-InputClient是输入法客户端对象，代表当前绑定到输入法应用的编辑框客户端。InputClient实例通过InputMethodAbility的
-[on('inputStart')](arkts-ime-inputmethodability-i.md#on-1)
-事件回调获取，每个绑定事件对应一个InputClient实例，输入法应用通过该实例与编辑框进行文本交互。
-**核心功能概述：**
+InputClient是输入法客户端对象，代表当前绑定到输入法应用的编辑框客户端。InputClient实例通过InputMethodAbility的[on('inputStart')](arkts-ime-inputmethodability-i.md#on-1)事件回调获取，每个绑定事件对应一个InputClient实例，输入法应用通过该实例与编辑框进行文本交互。**核心功能概述：**
 
-- **文本获取**：通过
-[getForward](arkts-ime-inputclient-i.md#getforward-1)/
-[getForwardSync](arkts-ime-inputclient-i.md#getforwardsync-1)获取光标前的文本，通过
-[getBackward](arkts-ime-inputclient-i.md#getbackward-1)/
-[getBackwardSync](arkts-ime-inputclient-i.md#getbackwardsync-1)获取光标后的文本，用于分析已输入内容并提供智能补全。
-- **文本编辑**：通过
-[insertText](arkts-ime-inputclient-i.md#inserttext-1)/
-[insertTextSync](arkts-ime-inputclient-i.md#inserttextsync-1)插入文本，通过
-[deleteForward](arkts-ime-inputclient-i.md#deleteforward-1)/
-[deleteForwardSync](arkts-ime-inputclient-i.md#deleteforwardsync-1)删除光标前的文本，通过
-[deleteBackward](arkts-ime-inputclient-i.md#deletebackward-1)
-/[deleteBackwardSync](arkts-ime-inputclient-i.md#deletebackwardsync-1)删除光标后的文本。
-- **功能键与光标**：通过
-[sendKeyFunction](arkts-ime-inputclient-i.md#sendkeyfunction-1)
-发送功能键（如回车键），通过
-[moveCursor](arkts-ime-inputclient-i.md#movecursor-1)/
-[moveCursorSync](arkts-ime-inputclient-i.md#movecursorsync-1)移动光标。
-- **选区操作**：通过
-[selectByRange](arkts-ime-inputclient-i.md#selectbyrange-1)/
-[selectByRangeSync](arkts-ime-inputclient-i.md#selectbyrangesync-1)按范围选中文本，通过
-[selectByMovement](arkts-ime-inputclient-i.md#selectbymovement-1)
-/[selectByMovementSync](arkts-ime-inputclient-i.md#selectbymovementsync-1)按方向选中文本。
-- **编辑框属性**：通过
-[getEditorAttribute](arkts-ime-inputclient-i.md#geteditorattribute-1)
-/[getEditorAttributeSync](arkts-ime-inputclient-i.md#geteditorattributesync-1)获取编辑框属性信息（输入类型、回车键类型等），据此调整键
-盘布局。
-- **文本预览**：通过[setPreviewText](arkts-ime-inputclient-i.md#setpreviewtext-1)/
-[setPreviewTextSync](arkts-ime-inputclient-i.md#setpreviewtextsync-1)设置预览文本，通过
-[finishTextPreview](arkts-ime-inputclient-i.md#finishtextpreview-1)/
-[finishTextPreviewSync](arkts-ime-inputclient-i.md#finishtextpreviewsync-1)结束文本预览。
-- **私有通信**：通过[sendPrivateCommand](arkts-ime-inputclient-i.md#sendprivatecommand-1)向应用发送私有命令，通过
-[sendMessage](arkts-ime-inputclient-i.md#sendmessage-1)/
-[recvMessage](arkts-ime-inputclient-i.md#recvmessage-1)进行消息通信。
+- **文本获取**：通过[getForward](arkts-ime-inputclient-i.md#getforward-1)/[getForwardSync](arkts-ime-inputclient-i.md#getforwardsync-1)获取光标前的文本，通过[getBackward](arkts-ime-inputclient-i.md#getbackward-1)/[getBackwardSync](arkts-ime-inputclient-i.md#getbackwardsync-1)获取光标后的文本，用于分析已输入内容并提供智能补全。  
+- **文本编辑**：通过[insertText](arkts-ime-inputclient-i.md#inserttext-1)/[insertTextSync](arkts-ime-inputclient-i.md#inserttextsync-1)插入文本，通过[deleteForward](arkts-ime-inputclient-i.md#deleteforward-1)/[deleteForwardSync](arkts-ime-inputclient-i.md#deleteforwardsync-1)删除光标前的文本，通过[deleteBackward](arkts-ime-inputclient-i.md#deletebackward-1)/[deleteBackwardSync](arkts-ime-inputclient-i.md#deletebackwardsync-1)删除光标后的文本。  
+- **功能键与光标**：通过[sendKeyFunction](arkts-ime-inputclient-i.md#sendkeyfunction-1)发送功能键（如回车键），通过[moveCursor](arkts-ime-inputclient-i.md#movecursor-1)/[moveCursorSync](arkts-ime-inputclient-i.md#movecursorsync-1)移动光标。  
+- **选区操作**：通过[selectByRange](arkts-ime-inputclient-i.md#selectbyrange-1)/[selectByRangeSync](arkts-ime-inputclient-i.md#selectbyrangesync-1)按范围选中文本，通过[selectByMovement](arkts-ime-inputclient-i.md#selectbymovement-1)/[selectByMovementSync](arkts-ime-inputclient-i.md#selectbymovementsync-1)按方向选中文本。  
+- **编辑框属性**：通过[getEditorAttribute](arkts-ime-inputclient-i.md#geteditorattribute-1)/[getEditorAttributeSync](arkts-ime-inputclient-i.md#geteditorattributesync-1)获取编辑框属性信息（输入类型、回车键类型等），据此调整键盘布局。  
+- **文本预览**：通过[setPreviewText](arkts-ime-inputclient-i.md#setpreviewtext-1)/[setPreviewTextSync](arkts-ime-inputclient-i.md#setpreviewtextsync-1)设置预览文本，通过[finishTextPreview](arkts-ime-inputclient-i.md#finishtextpreview-1)/[finishTextPreviewSync](arkts-ime-inputclient-i.md#finishtextpreviewsync-1)结束文本预览。  
+- **私有通信**：通过[sendPrivateCommand](arkts-ime-inputclient-i.md#sendprivatecommand-1)向应用发送私有命令，通过[sendMessage](arkts-ime-inputclient-i.md#sendmessage-1)/[recvMessage](arkts-ime-inputclient-i.md#recvmessage-1)进行消息通信。
 
-下列API均需使用
-[on('inputStart')](arkts-ime-inputmethodability-i.md#on-1)
-获取到InputClient实例后，通过实例调用。
+下列API均需使用[on('inputStart')](arkts-ime-inputmethodability-i.md#on-1)获取到InputClient实例后，通过实例调用。
 
 **起始版本：** 9
 
+<!--Device-inputMethodEngine-interface InputClient--><!--Device-inputMethodEngine-interface InputClient-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+## 导入模块
+
+```TypeScript
+import { inputMethodEngine } from '@kit.IMEKit';
+```
 
 ## deleteBackward
 
@@ -61,6 +38,8 @@ deleteBackward(length: number, callback: AsyncCallback<boolean>): void
 
 **起始版本：** 9
 
+<!--Device-InputClient-deleteBackward(length: int, callback: AsyncCallback<boolean>): void--><!--Device-InputClient-deleteBackward(length: int, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -68,7 +47,7 @@ deleteBackward(length: number, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | length | number | 是 | 文本长度。不能小于0。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。当光标后固定长度的文本删除成功，err为undefined，data为true；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。当光标后固定长度的文本删除成功，err为undefined，data为true；否则为错误对象。 |
 
 **错误码：**
 
@@ -108,6 +87,8 @@ deleteBackward(length: number): Promise<boolean>
 
 **起始版本：** 9
 
+<!--Device-InputClient-deleteBackward(length: int): Promise<boolean>--><!--Device-InputClient-deleteBackward(length: int): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -120,7 +101,7 @@ deleteBackward(length: number): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。resolve返回true表示删除光标后固定长度的文本成功；resolve返回false表示删除光标后固定长度的文本失败；reject时抛出错误对象，表示执行过程中发生错误。 |
+| Promise<boolean> | Promise对象。resolve返回true表示删除光标后固定长度的文本成功；resolve返回false表示删除光标后固定长度的文本失败；reject时抛出错误对象，表示执行过程中发生错误。 |
 
 **错误码：**
 
@@ -157,6 +138,8 @@ deleteBackwardSync(length: number): void
 删除光标后固定长度的文本。
 
 **起始版本：** 10
+
+<!--Device-InputClient-deleteBackwardSync(length: int): void--><!--Device-InputClient-deleteBackwardSync(length: int): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -196,6 +179,8 @@ deleteForward(length: number, callback: AsyncCallback<boolean>): void
 
 **起始版本：** 9
 
+<!--Device-InputClient-deleteForward(length: int, callback: AsyncCallback<boolean>): void--><!--Device-InputClient-deleteForward(length: int, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -203,7 +188,7 @@ deleteForward(length: number, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | length | number | 是 | 文本长度。不能小于0。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。当光标前固定长度的文本删除成功，err为undefined，data为true；当光标前固定长度的文本删除失败，err为undefined，data为false；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。当光标前固定长度的文本删除成功，err为undefined，data为true；当光标前固定长度的文本删除失败，err为undefined，data为false；否则为错误对象。 |
 
 **错误码：**
 
@@ -243,6 +228,8 @@ deleteForward(length: number): Promise<boolean>
 
 **起始版本：** 9
 
+<!--Device-InputClient-deleteForward(length: int): Promise<boolean>--><!--Device-InputClient-deleteForward(length: int): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -255,7 +242,7 @@ deleteForward(length: number): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。resolve返回true表示删除光标前固定长度的文本成功；resolve返回false表示删除光标前固定长度的文本失败；reject时抛出错误对象，表示执行过程中发生错误。 |
+| Promise<boolean> | Promise对象。resolve返回true表示删除光标前固定长度的文本成功；resolve返回false表示删除光标前固定长度的文本失败；reject时抛出错误对象，表示执行过程中发生错误。 |
 
 **错误码：**
 
@@ -293,6 +280,8 @@ deleteForwardSync(length: number): void
 
 **起始版本：** 10
 
+<!--Device-InputClient-deleteForwardSync(length: int): void--><!--Device-InputClient-deleteForwardSync(length: int): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -327,13 +316,15 @@ finishTextPreview(): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-InputClient-finishTextPreview(): Promise<void>--><!--Device-InputClient-finishTextPreview(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -365,6 +356,8 @@ finishTextPreviewSync(): void
 
 **起始版本：** 12
 
+<!--Device-InputClient-finishTextPreviewSync(): void--><!--Device-InputClient-finishTextPreviewSync(): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **错误码：**
@@ -391,13 +384,15 @@ getAttachOptions(): AttachOptions
 
 **起始版本：** 19
 
+<!--Device-InputClient-getAttachOptions(): AttachOptions--><!--Device-InputClient-getAttachOptions(): AttachOptions-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AttachOptions | 返回绑定输入法时的附加选项内容。 |
+| [AttachOptions](arkts-ime-attachoptions-i.md) | 返回绑定输入法时的附加选项内容。 |
 
 **错误码：**
 
@@ -423,6 +418,8 @@ getBackward(length: number, callback: AsyncCallback<string>): void
 
 **起始版本：** 9
 
+<!--Device-InputClient-getBackward(length: int, callback: AsyncCallback<string>): void--><!--Device-InputClient-getBackward(length: int, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -430,7 +427,7 @@ getBackward(length: number, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | length | number | 是 | 文本长度。不能小于0。 |
-| callback | AsyncCallback&lt;string&gt; | 是 | 回调函数。当光标后固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | 回调函数。当光标后固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
 
 **错误码：**
 
@@ -466,6 +463,8 @@ getBackward(length: number): Promise<string>
 
 **起始版本：** 9
 
+<!--Device-InputClient-getBackward(length: int): Promise<string>--><!--Device-InputClient-getBackward(length: int): Promise<string>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -478,7 +477,7 @@ getBackward(length: number): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回光标后固定长度的文本。 |
+| Promise<string> | Promise对象，返回光标后固定长度的文本。 |
 
 **错误码：**
 
@@ -511,6 +510,8 @@ getBackwardSync(length: number): string
 获取光标后固定长度的文本。
 
 **起始版本：** 10
+
+<!--Device-InputClient-getBackwardSync(length: int): string--><!--Device-InputClient-getBackwardSync(length: int): string-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -553,13 +554,15 @@ getCallingWindowInfo(): Promise<WindowInfo>
 
 **起始版本：** 12
 
+<!--Device-InputClient-getCallingWindowInfo(): Promise<WindowInfo>--><!--Device-InputClient-getCallingWindowInfo(): Promise<WindowInfo>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;WindowInfo&gt; | Promise对象，返回拉起输入法的输入框所在应用窗口信息。 |
+| Promise<WindowInfo> | Promise对象，返回拉起输入法的输入框所在应用窗口信息。 |
 
 **错误码：**
 
@@ -597,13 +600,15 @@ getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void
 
 **起始版本：** 9
 
+<!--Device-InputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void--><!--Device-InputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;EditorAttribute&gt; | 是 | 回调函数。当编辑框属性值获取成功，err为undefined，data为编辑框属性值；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<EditorAttribute> | 是 | 回调函数。当编辑框属性值获取成功，err为undefined，data为编辑框属性值；否则为错误对象。 |
 
 **错误码：**
 
@@ -621,13 +626,15 @@ getEditorAttribute(): Promise<EditorAttribute>
 
 **起始版本：** 9
 
+<!--Device-InputClient-getEditorAttribute(): Promise<EditorAttribute>--><!--Device-InputClient-getEditorAttribute(): Promise<EditorAttribute>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;EditorAttribute&gt; | Promise对象，返回编辑框属性值。 |
+| Promise<EditorAttribute> | Promise对象，返回编辑框属性值。 |
 
 **错误码：**
 
@@ -659,13 +666,15 @@ getEditorAttributeSync(): EditorAttribute
 
 **起始版本：** 10
 
+<!--Device-InputClient-getEditorAttributeSync(): EditorAttribute--><!--Device-InputClient-getEditorAttributeSync(): EditorAttribute-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| EditorAttribute | 编辑框属性对象。 |
+| [EditorAttribute](arkts-ime-editorattribute-i.md) | 编辑框属性对象。 |
 
 **错误码：**
 
@@ -688,11 +697,11 @@ console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
 getForward(length: number, callback: AsyncCallback<string>): void
 ```
 
-获取光标前固定长度的文本。使用callback异步回调。
-**使用场景：** 分析已输入文本内容以提供智能补全建议、检查文本格式、实现文本预测功能、实现文本语义分析等。
-**使用后效果：** 成功时返回光标前指定长度的文本字符串，输入法应用可据此更新候选词或输入建议。
+获取光标前固定长度的文本。使用callback异步回调。**使用场景：** 分析已输入文本内容以提供智能补全建议、检查文本格式、实现文本预测功能、实现文本语义分析等。**使用后效果：** 成功时返回光标前指定长度的文本字符串，输入法应用可据此更新候选词或输入建议。
 
 **起始版本：** 9
+
+<!--Device-InputClient-getForward(length: int, callback: AsyncCallback<string>): void--><!--Device-InputClient-getForward(length: int, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -701,7 +710,7 @@ getForward(length: number, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | length | number | 是 | 文本长度。不能小于0。 |
-| callback | AsyncCallback&lt;string&gt; | 是 | 回调函数。当光标前固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | 回调函数。当光标前固定长度的文本获取成功，err为undefined，data为获取到的文本；否则为错误对象。 |
 
 **错误码：**
 
@@ -737,6 +746,8 @@ getForward(length: number): Promise<string>
 
 **起始版本：** 9
 
+<!--Device-InputClient-getForward(length: int): Promise<string>--><!--Device-InputClient-getForward(length: int): Promise<string>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -749,7 +760,7 @@ getForward(length: number): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回光标前固定长度的文本。 |
+| Promise<string> | Promise对象，返回光标前固定长度的文本。 |
 
 **错误码：**
 
@@ -782,6 +793,8 @@ getForwardSync(length: number): string
 获取光标前固定长度的文本。
 
 **起始版本：** 10
+
+<!--Device-InputClient-getForwardSync(length: int): string--><!--Device-InputClient-getForwardSync(length: int): string-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -824,13 +837,15 @@ getTextIndexAtCursor(callback: AsyncCallback<number>): void
 
 **起始版本：** 10
 
+<!--Device-InputClient-getTextIndexAtCursor(callback: AsyncCallback<int>): void--><!--Device-InputClient-getTextIndexAtCursor(callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。当文本索引获取成功，err为undefined，index为光标所在处的文本索引；否则err为错误对象，index为undefined。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。当文本索引获取成功，err为undefined，index为光标所在处的文本索引；否则err为错误对象，index为undefined。 |
 
 **错误码：**
 
@@ -864,13 +879,15 @@ getTextIndexAtCursor(): Promise<number>
 
 **起始版本：** 10
 
+<!--Device-InputClient-getTextIndexAtCursor(): Promise<int>--><!--Device-InputClient-getTextIndexAtCursor(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回光标所在处的文本索引。 |
+| Promise<number> | Promise对象，返回光标所在处的文本索引。 |
 
 **错误码：**
 
@@ -901,6 +918,8 @@ getTextIndexAtCursorSync(): number
 获取光标所在处的文本索引。
 
 **起始版本：** 10
+
+<!--Device-InputClient-getTextIndexAtCursorSync(): int--><!--Device-InputClient-getTextIndexAtCursorSync(): int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -939,6 +958,8 @@ insertText(text: string, callback: AsyncCallback<boolean>): void
 
 **起始版本：** 9
 
+<!--Device-InputClient-insertText(text: string, callback: AsyncCallback<boolean>): void--><!--Device-InputClient-insertText(text: string, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -946,7 +967,7 @@ insertText(text: string, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 文本内容。建议长度不超过1KB。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。当文本插入成功，err为undefined，data为true；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。当文本插入成功，err为undefined，data为true；否则为错误对象。 |
 
 **错误码：**
 
@@ -986,6 +1007,8 @@ insertText(text: string): Promise<boolean>
 
 **起始版本：** 9
 
+<!--Device-InputClient-insertText(text: string): Promise<boolean>--><!--Device-InputClient-insertText(text: string): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -998,7 +1021,7 @@ insertText(text: string): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。resolve返回true表示插入文本成功；resolve返回false表示插入文本失败；reject时抛出错误对象，表示执行过程中发生错误。 |
+| Promise<boolean> | Promise对象。resolve返回true表示插入文本成功；resolve返回false表示插入文本失败；reject时抛出错误对象，表示执行过程中发生错误。 |
 
 **错误码：**
 
@@ -1034,6 +1057,8 @@ insertTextSync(text: string): void
 插入文本。
 
 **起始版本：** 10
+
+<!--Device-InputClient-insertTextSync(text: string): void--><!--Device-InputClient-insertTextSync(text: string): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1072,6 +1097,8 @@ moveCursor(direction: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-InputClient-moveCursor(direction: int, callback: AsyncCallback<void>): void--><!--Device-InputClient-moveCursor(direction: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1079,7 +1106,7 @@ moveCursor(direction: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | direction | number | 是 | 光标移动方向。<br/>- 当值为1时，表示向上。<br/>- 当值为2时，表示向下。<br/>- 当值为3时，表示向左。<br/>- 当值为4时，表示向右。不能小于0。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当光标移动成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当光标移动成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1113,6 +1140,8 @@ moveCursor(direction: number): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-InputClient-moveCursor(direction: int): Promise<void>--><!--Device-InputClient-moveCursor(direction: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1125,7 +1154,7 @@ moveCursor(direction: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1156,6 +1185,8 @@ moveCursorSync(direction: number): void
 移动光标。
 
 **起始版本：** 10
+
+<!--Device-InputClient-moveCursorSync(direction: int): void--><!--Device-InputClient-moveCursorSync(direction: int): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1189,6 +1220,8 @@ off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void
 
 **起始版本：** 19
 
+<!--Device-InputClient-off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void--><!--Device-InputClient-off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1196,7 +1229,7 @@ off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'attachOptionsDidChange' | 是 | 绑定输入法时的附加选项变更事件，固定取值为'attachOptionsDidChange'。 |
-| callback | Callback&lt;AttachOptions&gt; | 否 | 取消订阅的回调函数。参数不填写时，默认取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AttachOptions> | 否 | 取消订阅的回调函数。参数不填写时，默认取消订阅type对应的所有回调事件。 |
 
 **示例：**
 
@@ -1223,6 +1256,8 @@ on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void
 
 **起始版本：** 19
 
+<!--Device-InputClient-on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void--><!--Device-InputClient-on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1230,7 +1265,7 @@ on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'attachOptionsDidChange' | 是 | 绑定输入法时的附加选项变更事件，固定取值为'attachOptionsDidChange'。 |
-| callback | Callback&lt;AttachOptions&gt; | 是 | 回调函数，返回绑定输入法时的附加选项。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AttachOptions> | 是 | 回调函数，返回绑定输入法时的附加选项。 |
 
 **错误码：**
 
@@ -1266,13 +1301,15 @@ recvMessage(msgHandler?: MessageHandler): void
 
 **起始版本：** 15
 
+<!--Device-InputClient-recvMessage(msgHandler?: MessageHandler): void--><!--Device-InputClient-recvMessage(msgHandler?: MessageHandler): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| msgHandler | MessageHandler | 否 | 该对象将通过[onMessage](arkts-ime-messagehandler-i.md#onmessage-1)接收来自已绑定当前输入法应用的编辑框应用所发送的自定义通信数据，并通过[onTerminated](arkts-ime-messagehandler-i.md#onterminated-1)接收终止此对象订阅的消息。<br>若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-messagehandler-i.md)对象，同时触发其[onTerminated](arkts-ime-messagehandler-i.md#onterminated-1)回调函数。 |
+| msgHandler | [MessageHandler](arkts-ime-messagehandler-i.md) | 否 | 该对象将通过[onMessage](arkts-ime-messagehandler-i.md#onmessage-1)接收来自已绑定当前输入法应用的编辑框应用所发送的自定义通信数据，并通过[onTerminated](arkts-ime-messagehandler-i.md#onterminated-1)接收终止此对象订阅的消息。<br>若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-messagehandler-i.md)对象，同时触发其[onTerminated](arkts-ime-messagehandler-i.md#onterminated-1)回调函数。 |
 
 **错误码：**
 
@@ -1311,14 +1348,16 @@ selectByMovement(movement: Movement, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-InputClient-selectByMovement(movement: Movement, callback: AsyncCallback<void>): void--><!--Device-InputClient-selectByMovement(movement: Movement, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| movement | Movement | 是 | 选中时光标移动的方向。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当成功发送选中事件后，err为undefined，否则为错误对象。 |
+| movement | [Movement](arkts-ime-movement-i.md) | 是 | 选中时光标移动的方向。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当成功发送选中事件后，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1355,19 +1394,21 @@ selectByMovement(movement: Movement): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-InputClient-selectByMovement(movement: Movement): Promise<void>--><!--Device-InputClient-selectByMovement(movement: Movement): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| movement | Movement | 是 | 选中时光标移动的方向。 |
+| movement | [Movement](arkts-ime-movement-i.md) | 是 | 选中时光标移动的方向。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1402,13 +1443,15 @@ selectByMovementSync(movement: Movement): void
 
 **起始版本：** 10
 
+<!--Device-InputClient-selectByMovementSync(movement: Movement): void--><!--Device-InputClient-selectByMovementSync(movement: Movement): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| movement | Movement | 是 | 选中时光标移动的方向。 |
+| movement | [Movement](arkts-ime-movement-i.md) | 是 | 选中时光标移动的方向。 |
 
 **错误码：**
 
@@ -1437,14 +1480,16 @@ selectByRange(range: Range, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-InputClient-selectByRange(range: Range, callback: AsyncCallback<void>): void--><!--Device-InputClient-selectByRange(range: Range, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | Range | 是 | 选中文本的范围。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当成功发送选中事件后，err为undefined，否则为错误对象。 |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | 是 | 选中文本的范围。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当成功发送选中事件后，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1483,19 +1528,21 @@ selectByRange(range: Range): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-InputClient-selectByRange(range: Range): Promise<void>--><!--Device-InputClient-selectByRange(range: Range): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | Range | 是 | 选中文本的范围。 |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | 是 | 选中文本的范围。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1532,13 +1579,15 @@ selectByRangeSync(range: Range): void
 
 **起始版本：** 10
 
+<!--Device-InputClient-selectByRangeSync(range: Range): void--><!--Device-InputClient-selectByRangeSync(range: Range): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | Range | 是 | 选中文本的范围。 |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | 是 | 选中文本的范围。 |
 
 **错误码：**
 
@@ -1569,14 +1618,16 @@ sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
+<!--Device-InputClient-sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void--><!--Device-InputClient-sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| action | ExtendAction | 是 | 要发送的扩展操作。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。发送成功，err为undefined，否则为错误对象。 |
+| action | [ExtendAction](arkts-ime-extendaction-e.md) | 是 | 要发送的扩展操作。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。发送成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1611,19 +1662,21 @@ sendExtendAction(action: ExtendAction): Promise<void>
 
 **起始版本：** 10
 
+<!--Device-InputClient-sendExtendAction(action: ExtendAction): Promise<void>--><!--Device-InputClient-sendExtendAction(action: ExtendAction): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| action | ExtendAction | 是 | 要发送的扩展操作。 |
+| action | [ExtendAction](arkts-ime-extendaction-e.md) | 是 | 要发送的扩展操作。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1656,6 +1709,8 @@ sendKeyFunction(action: number, callback: AsyncCallback<boolean>): void
 
 **起始版本：** 9
 
+<!--Device-InputClient-sendKeyFunction(action: int, callback: AsyncCallback<boolean>): void--><!--Device-InputClient-sendKeyFunction(action: int, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1663,7 +1718,7 @@ sendKeyFunction(action: number, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | action | number | 是 | 功能键键值。<br/>- 当值为0时，表示无效按键。<br/>- 当值为1时，表示确认键（即回车键）。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。当功能键发送成功，err为undefined，data为true；当功能键发送失败，err为undefined，data为false；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。当功能键发送成功，err为undefined，data为true；当功能键发送失败，err为undefined，data为false；否则为错误对象。 |
 
 **错误码：**
 
@@ -1703,6 +1758,8 @@ sendKeyFunction(action: number): Promise<boolean>
 
 **起始版本：** 9
 
+<!--Device-InputClient-sendKeyFunction(action: int): Promise<boolean>--><!--Device-InputClient-sendKeyFunction(action: int): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1715,7 +1772,7 @@ sendKeyFunction(action: number): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。resolve返回true表示功能键发送成功；resolve返回false表示功能键发送失败；reject时抛出错误对象，表示执行过程中发生错误。 |
+| Promise<boolean> | Promise对象。resolve返回true表示功能键发送成功；resolve返回false表示功能键发送失败；reject时抛出错误对象，表示执行过程中发生错误。 |
 
 **错误码：**
 
@@ -1752,6 +1809,8 @@ sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 
 **起始版本：** 15
 
+<!--Device-InputClient-sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>--><!--Device-InputClient-sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1759,13 +1818,13 @@ sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | msgId | string | 是 | 需要发送至已绑定当前输入法应用的编辑框应用的自定义数据的标识符。最大长度256字节。最大长度256字节。 |
-| msgParam | ArrayBuffer | 否 | 需要发送至已绑定当前输入法应用的编辑框应用的自定义数据的消息体。 |
+| msgParam | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 否 | 需要发送至已绑定当前输入法应用的编辑框应用的自定义数据的消息体。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1803,19 +1862,21 @@ sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-InputClient-sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>--><!--Device-InputClient-sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| commandData | Record&lt;string, CommandDataType&gt; | 是 | 私有数据。 |
+| commandData | Record<string, CommandDataType> | 是 | 私有数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1856,6 +1917,8 @@ setPreviewText(text: string, range: Range): Promise<void>
 
 **起始版本：** 12
 
+<!--Device-InputClient-setPreviewText(text: string, range: Range): Promise<void>--><!--Device-InputClient-setPreviewText(text: string, range: Range): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1863,13 +1926,13 @@ setPreviewText(text: string, range: Range): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 预上屏的文本。建议长度不超过1KB。 |
-| range | Range | 是 | 替换的文本范围。<br/>- 当值为{ start: -1, end: -1 }时，默认将参数text替换当前预上屏区域全部文本。<br/>- 当start等于end，默认将参数text插入start对应的光标位置。<br/>- 当start不等于end，将参数text替换range对应区域的文本。<br/>- 当start与end为其他含有负数值的组合，按照参数错误返回。<br/>- 当输入框已有预上屏文本，参数range不得超过预上屏文本范围，否则按照参数错误返回。<br/>- 当输入框无预上屏文本，参数range不得超过输入框文本范围，否则按照参数错误返回。 |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | 是 | 替换的文本范围。<br/>- 当值为{ start: -1, end: -1 }时，默认将参数text替换当前预上屏区域全部文本。<br/>- 当start等于end，默认将参数text插入start对应的光标位置。<br/>- 当start不等于end，将参数text替换range对应区域的文本。<br/>- 当start与end为其他含有负数值的组合，按照参数错误返回。<br/>- 当输入框已有预上屏文本，参数range不得超过预上屏文本范围，否则按照参数错误返回。<br/>- 当输入框无预上屏文本，参数range不得超过输入框文本范围，否则按照参数错误返回。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1907,6 +1970,8 @@ setPreviewTextSync(text: string, range: Range): void
 
 **起始版本：** 12
 
+<!--Device-InputClient-setPreviewTextSync(text: string, range: Range): void--><!--Device-InputClient-setPreviewTextSync(text: string, range: Range): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -1914,7 +1979,7 @@ setPreviewTextSync(text: string, range: Range): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 预上屏的文本。建议长度不超过1KB。 |
-| range | Range | 是 | 替换的文本范围。<br/>- 当值为{ start: -1, end: -1 }时，默认将参数text替换当前预上屏区域全部文本。<br/>- 当start等于end，默认将参数text插入start对应的光标位置。<br/>- 当start不等于end，将参数text替换range对应区域的文本。<br/>- 当start与end为其他含有负数值的组合，按照参数错误返回。<br/>- 当输入框已有预上屏文本，参数range不得超过预上屏文本范围，否则按照参数错误返回。<br/>- 当输入框无预上屏文本，参数range不得超过输入框文本范围，否则按照参数错误返回。 |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | 是 | 替换的文本范围。<br/>- 当值为{ start: -1, end: -1 }时，默认将参数text替换当前预上屏区域全部文本。<br/>- 当start等于end，默认将参数text插入start对应的光标位置。<br/>- 当start不等于end，将参数text替换range对应区域的文本。<br/>- 当start与end为其他含有负数值的组合，按照参数错误返回。<br/>- 当输入框已有预上屏文本，参数range不得超过预上屏文本范围，否则按照参数错误返回。<br/>- 当输入框无预上屏文本，参数range不得超过输入框文本范围，否则按照参数错误返回。 |
 
 **错误码：**
 

@@ -4,6 +4,8 @@ Defines the network packet filtering rule to remove.
 
 **Since:** 10
 
+<!--Device-networkManager-interface RemoveFilterRule--><!--Device-networkManager-interface RemoveFilterRule-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Action to take, that is, receive or discard the data packets.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RemoveFilterRule-action?: Action--><!--Device-RemoveFilterRule-action?: Action-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -45,6 +49,8 @@ Destination IP address.
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RemoveFilterRule-destAddr?: string--><!--Device-RemoveFilterRule-destAddr?: string-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -64,6 +70,8 @@ Port of the destination IP address.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RemoveFilterRule-destPort?: string--><!--Device-RemoveFilterRule-destPort?: string-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -81,6 +89,8 @@ Direction chains to which the rule applies.
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RemoveFilterRule-direction: Direction--><!--Device-RemoveFilterRule-direction: Direction-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -100,6 +110,8 @@ Network protocol.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RemoveFilterRule-protocol?: Protocol--><!--Device-RemoveFilterRule-protocol?: Protocol-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -117,6 +129,8 @@ Source IP address.
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RemoveFilterRule-srcAddr?: string--><!--Device-RemoveFilterRule-srcAddr?: string-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -136,6 +150,8 @@ Port of the source IP address.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RemoveFilterRule-srcPort?: string--><!--Device-RemoveFilterRule-srcPort?: string-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -153,6 +169,8 @@ UID of the application.
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RemoveFilterRule-uid?: string--><!--Device-RemoveFilterRule-uid?: string-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

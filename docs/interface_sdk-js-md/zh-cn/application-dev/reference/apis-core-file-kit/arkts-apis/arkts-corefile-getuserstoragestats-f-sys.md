@@ -1,5 +1,11 @@
 # getUserStorageStats（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { storageStatistics } from '@kit.CoreFileKit';
+```
+
 ## getUserStorageStats
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getUserStorageStats(): Promise<StorageStats>
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
+<!--Device-storageStatistics-function getUserStorageStats(): Promise<StorageStats>--><!--Device-storageStatistics-function getUserStorageStats(): Promise<StorageStats>-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function getUserStorageStats(): Promise<StorageStats>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;StorageStats&gt; | Promise对象，返回当前用户各类别存储空间大小（单位为Byte）。 |
+| Promise<StorageStats> | Promise对象，返回当前用户各类别存储空间大小（单位为Byte）。 |
 
 **错误码：**
 
@@ -57,6 +65,8 @@ function getUserStorageStats(callback: AsyncCallback<StorageStats>): void
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
+<!--Device-storageStatistics-function getUserStorageStats(callback: AsyncCallback<StorageStats>): void--><!--Device-storageStatistics-function getUserStorageStats(callback: AsyncCallback<StorageStats>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -65,7 +75,7 @@ function getUserStorageStats(callback: AsyncCallback<StorageStats>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;StorageStats&gt; | 是 | 返回用户各类别存储空间大小之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<StorageStats> | 是 | 返回用户各类别存储空间大小之后的回调。 |
 
 **错误码：**
 
@@ -105,6 +115,8 @@ function getUserStorageStats(userId: number): Promise<StorageStats>
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
+<!--Device-storageStatistics-function getUserStorageStats(userId: long): Promise<StorageStats>--><!--Device-storageStatistics-function getUserStorageStats(userId: long): Promise<StorageStats>-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -119,7 +131,7 @@ function getUserStorageStats(userId: number): Promise<StorageStats>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;StorageStats&gt; | Promise对象，返回指定用户各类别存储空间大小（单位为Byte）。 |
+| Promise<StorageStats> | Promise对象，返回指定用户各类别存储空间大小（单位为Byte）。 |
 
 **错误码：**
 
@@ -158,6 +170,8 @@ function getUserStorageStats(userId: number, callback: AsyncCallback<StorageStat
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
+<!--Device-storageStatistics-function getUserStorageStats(userId: long, callback: AsyncCallback<StorageStats>): void--><!--Device-storageStatistics-function getUserStorageStats(userId: long, callback: AsyncCallback<StorageStats>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -167,7 +181,7 @@ function getUserStorageStats(userId: number, callback: AsyncCallback<StorageStat
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户id。 |
-| callback | AsyncCallback&lt;StorageStats&gt; | 是 | 返回指定用户各类别存储空间大小之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<StorageStats> | 是 | 返回指定用户各类别存储空间大小之后的回调。 |
 
 **错误码：**
 

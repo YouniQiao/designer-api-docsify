@@ -4,6 +4,8 @@ Describes the priority type of a notification.
 
 **Since:** 23
 
+<!--Device-notificationManager-export enum PriorityNotificationType--><!--Device-notificationManager-export enum PriorityNotificationType-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## OTHER
@@ -15,6 +17,8 @@ OTHER = 'OTHER'
 Default.
 
 **Since:** 23
+
+<!--Device-PriorityNotificationType-OTHER = 'OTHER'--><!--Device-PriorityNotificationType-OTHER = 'OTHER'-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -28,6 +32,8 @@ Primary contact.
 
 **Since:** 23
 
+<!--Device-PriorityNotificationType-PRIMARY_CONTACT = 'PRIMARY_CONTACT'--><!--Device-PriorityNotificationType-PRIMARY_CONTACT = 'PRIMARY_CONTACT'-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## AT_ME
@@ -39,6 +45,8 @@ AT_ME = 'AT_ME'
 Message that mentions me.
 
 **Since:** 23
+
+<!--Device-PriorityNotificationType-AT_ME = 'AT_ME'--><!--Device-PriorityNotificationType-AT_ME = 'AT_ME'-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -52,6 +60,8 @@ Urgent message.
 
 **Since:** 23
 
+<!--Device-PriorityNotificationType-URGENT_MESSAGE = 'URGENT_MESSAGE'--><!--Device-PriorityNotificationType-URGENT_MESSAGE = 'URGENT_MESSAGE'-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## SCHEDULE_REMINDER
@@ -63,6 +73,8 @@ SCHEDULE_REMINDER = 'SCHEDULE_REMINDER'
 Schedule reminder.
 
 **Since:** 23
+
+<!--Device-PriorityNotificationType-SCHEDULE_REMINDER = 'SCHEDULE_REMINDER'--><!--Device-PriorityNotificationType-SCHEDULE_REMINDER = 'SCHEDULE_REMINDER'-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

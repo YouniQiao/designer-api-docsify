@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-abilityToolAccessCtrl-interface TicketInfo--><!--Device-abilityToolAccessCtrl-interface TicketInfo-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -19,6 +21,8 @@ challenge: string
 **类型：** string
 
 **起始版本：** 26.0.0
+
+<!--Device-TicketInfo-challenge: string--><!--Device-TicketInfo-challenge: string-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -36,6 +40,8 @@ message: string
 
 **起始版本：** 26.0.0
 
+<!--Device-TicketInfo-message: string--><!--Device-TicketInfo-message: string-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +57,8 @@ ticket: string
 **类型：** string
 
 **起始版本：** 26.0.0
+
+<!--Device-TicketInfo-ticket: string--><!--Device-TicketInfo-ticket: string-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 

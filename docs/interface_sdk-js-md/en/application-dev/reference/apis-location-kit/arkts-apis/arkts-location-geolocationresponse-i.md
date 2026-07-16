@@ -6,6 +6,8 @@
 
 **Substitutes:** Location
 
+<!--Device-unnamed-export interface GeolocationResponse--><!--Device-unnamed-export interface GeolocationResponse-End-->
+
 **System capability:** SystemCapability.Location.Location.Lite
 
 ## Modules to Import
@@ -32,6 +34,8 @@ Location accuracy.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-GeolocationResponse-accuracy: number--><!--Device-GeolocationResponse-accuracy: number-End-->
+
 **System capability:** SystemCapability.Location.Location.Lite
 
 ## altitude
@@ -51,6 +55,8 @@ Altitude.
 **Substitutes:** altitude
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-GeolocationResponse-altitude: number--><!--Device-GeolocationResponse-altitude: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Lite
 
@@ -72,6 +78,8 @@ Latitude.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-GeolocationResponse-latitude: number--><!--Device-GeolocationResponse-latitude: number-End-->
+
 **System capability:** SystemCapability.Location.Location.Lite
 
 ## longitude
@@ -92,6 +100,8 @@ Longitude.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-GeolocationResponse-longitude: number--><!--Device-GeolocationResponse-longitude: number-End-->
+
 **System capability:** SystemCapability.Location.Location.Lite
 
 ## time
@@ -111,6 +121,8 @@ Time when the location is obtained.
 **Substitutes:** timeStamp
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-GeolocationResponse-time: number--><!--Device-GeolocationResponse-time: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Lite
 

@@ -4,9 +4,17 @@
 
 **起始版本：** 13
 
+<!--Device-screen-interface MultiScreenPositionOptions--><!--Device-screen-interface MultiScreenPositionOptions-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { screen } from '@kit.ArkUI';
+```
 
 ## id
 
@@ -19,6 +27,8 @@ id: number
 **类型：** number
 
 **起始版本：** 13
+
+<!--Device-MultiScreenPositionOptions-id: long--><!--Device-MultiScreenPositionOptions-id: long-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -36,6 +46,8 @@ startX: number
 
 **起始版本：** 13
 
+<!--Device-MultiScreenPositionOptions-startX: long--><!--Device-MultiScreenPositionOptions-startX: long-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +63,8 @@ startY: number
 **类型：** number
 
 **起始版本：** 13
+
+<!--Device-MultiScreenPositionOptions-startY: long--><!--Device-MultiScreenPositionOptions-startY: long-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 

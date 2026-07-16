@@ -4,6 +4,8 @@ The definition of the AVMusicTemplateController.
 
 **Since:** 23
 
+<!--Device-avMusicTemplate-class AVMusicTemplateController--><!--Device-avMusicTemplate-class AVMusicTemplateController-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Clear search history.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-clearSearchHistory(): Promise<OperResult>--><!--Device-AVMusicTemplateController-clearSearchHistory(): Promise<OperResult>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OperResult&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<OperResult> | Promise for the result |
 
 **Error codes:**
 
@@ -53,13 +57,15 @@ Destroy the controller.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-destroy(): Promise<void>--><!--Device-AVMusicTemplateController-destroy(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 **Error codes:**
 
@@ -79,20 +85,22 @@ Download media entity.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-downloadMediaEntity(controlType: DownloadControlType, mediaEntity: MediaEntity): Promise<OperResult>--><!--Device-AVMusicTemplateController-downloadMediaEntity(controlType: DownloadControlType, mediaEntity: MediaEntity): Promise<OperResult>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controlType | DownloadControlType | Yes | control type |
-| mediaEntity | MediaEntity | Yes | media entity |
+| controlType | [DownloadControlType](arkts-avsession-downloadcontroltype-t.md) | Yes | control type |
+| mediaEntity | [MediaEntity](arkts-avsession-mediaentity-i.md) | Yes | media entity |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OperResult&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<OperResult> | Promise for the result |
 
 **Error codes:**
 
@@ -115,6 +123,8 @@ Execute action.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-executeAction(actionType: string, params: string): Promise<string>--><!--Device-AVMusicTemplateController-executeAction(actionType: string, params: string): Promise<string>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
@@ -128,7 +138,7 @@ Execute action.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise for the result |
 
 **Error codes:**
 
@@ -151,20 +161,22 @@ Favorite media entity.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-favoriteMediaEntity(actionType: MediaFavoriteType, mediaEntity: MediaEntity): Promise<OperResult>--><!--Device-AVMusicTemplateController-favoriteMediaEntity(actionType: MediaFavoriteType, mediaEntity: MediaEntity): Promise<OperResult>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionType | MediaFavoriteType | Yes | action type |
-| mediaEntity | MediaEntity | Yes | media entity |
+| actionType | [MediaFavoriteType](arkts-avsession-mediafavoritetype-t.md) | Yes | action type |
+| mediaEntity | [MediaEntity](arkts-avsession-mediaentity-i.md) | Yes | media entity |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OperResult&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<OperResult> | Promise for the result |
 
 **Error codes:**
 
@@ -187,19 +199,21 @@ Handle member purchase.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-handleMemberPurchase(info: MemberPurchaseInfo): Promise<DialogInfo>--><!--Device-AVMusicTemplateController-handleMemberPurchase(info: MemberPurchaseInfo): Promise<DialogInfo>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | MemberPurchaseInfo | Yes | info |
+| info | [MemberPurchaseInfo](arkts-avsession-memberpurchaseinfo-i.md) | Yes | info |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DialogInfo&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DialogInfo> | Promise for the result |
 
 **Error codes:**
 
@@ -222,20 +236,22 @@ Login.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-login(controlType: LoginType, id?: string): Promise<QrCodeInfo[]>--><!--Device-AVMusicTemplateController-login(controlType: LoginType, id?: string): Promise<QrCodeInfo[]>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controlType | LoginType | Yes | control type |
+| controlType | [LoginType](arkts-avsession-logintype-t.md) | Yes | control type |
 | id | string | No | id |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;QrCodeInfo[]&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<QrCodeInfo[]> | Promise for the result |
 
 **Error codes:**
 
@@ -258,13 +274,15 @@ Unregister report current single callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-offCurrentSingleChange(callback?: Callback<Single>): void--><!--Device-AVMusicTemplateController-offCurrentSingleChange(callback?: Callback<Single>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;Single&gt; | No | The callback used to handle ('reportCurrentSingle') event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Single> | No | The callback used to handle ('reportCurrentSingle') event. |
 
 **Error codes:**
 
@@ -286,13 +304,15 @@ Unregister report custom elements change callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-offCustomElementsChange(callback?: ReportCustomElementsChangeEvent): void--><!--Device-AVMusicTemplateController-offCustomElementsChange(callback?: ReportCustomElementsChangeEvent): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ReportCustomElementsChangeEvent | No | The callbackused to handle ('reportCustomElementsChange') event. |
+| callback | [ReportCustomElementsChangeEvent](arkts-avsession-reportcustomelementschangeevent-t.md) | No | The callback used to handle ('reportCustomElementsChange') event. |
 
 **Error codes:**
 
@@ -314,13 +334,15 @@ Unregister report dialog command callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-offDialogCommandChange(callback?: ReportDialogCommandEvent): void--><!--Device-AVMusicTemplateController-offDialogCommandChange(callback?: ReportDialogCommandEvent): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ReportDialogCommandEvent | No | The callback used to handle ('reportDialogCommand') event. |
+| callback | [ReportDialogCommandEvent](arkts-avsession-reportdialogcommandevent-t.md) | No | The callback used to handle ('reportDialogCommand') event. |
 
 **Error codes:**
 
@@ -342,13 +364,15 @@ Unregister report download media entity status callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-offDownloadMediaEntityStatusChange(callback?: Callback<MediaEntity>): void--><!--Device-AVMusicTemplateController-offDownloadMediaEntityStatusChange(callback?: Callback<MediaEntity>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;MediaEntity&gt; | No | The callbackused to handle ('reportDownloadMediaEntityStatus') event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<MediaEntity> | No | The callback used to handle ('reportDownloadMediaEntityStatus') event. |
 
 **Error codes:**
 
@@ -370,13 +394,15 @@ Unregister report extension ability callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-offExtensionAbilityChange(callback?: ReportExecuteAbilityEvent): void--><!--Device-AVMusicTemplateController-offExtensionAbilityChange(callback?: ReportExecuteAbilityEvent): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ReportExecuteAbilityEvent | No | The callback used to handle ('setExtensionAbility') event. |
+| callback | [ReportExecuteAbilityEvent](arkts-avsession-reportexecuteabilityevent-t.md) | No | The callback used to handle ('setExtensionAbility') event. |
 
 **Error codes:**
 
@@ -398,13 +424,15 @@ Unregister report media entities change callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-offMediaEntitiesChange(callback?: Callback<MediaEntity[]>): void--><!--Device-AVMusicTemplateController-offMediaEntitiesChange(callback?: Callback<MediaEntity[]>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;MediaEntity[]&gt; | No | The callback used to handle ('reportMediaEntitiesChange') event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<MediaEntity[]> | No | The callback used to handle ('reportMediaEntitiesChange') event. |
 
 **Error codes:**
 
@@ -426,13 +454,15 @@ Unregister report playlist callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-offPlaylistChange(callback?: Callback<PageMediaEntity>): void--><!--Device-AVMusicTemplateController-offPlaylistChange(callback?: Callback<PageMediaEntity>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;PageMediaEntity&gt; | No | The callback used to handle ('reportPlaylist') event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<PageMediaEntity> | No | The callback used to handle ('reportPlaylist') event. |
 
 **Error codes:**
 
@@ -454,13 +484,15 @@ Unregister report execute action callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-offReportExecuteAction(callback?: ReportExecuteActionEvent): void--><!--Device-AVMusicTemplateController-offReportExecuteAction(callback?: ReportExecuteActionEvent): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ReportExecuteActionEvent | No | The callback used to handle ('reportExecuteAction') event. |
+| callback | [ReportExecuteActionEvent](arkts-avsession-reportexecuteactionevent-t.md) | No | The callback used to handle ('reportExecuteAction') event. |
 
 **Error codes:**
 
@@ -482,13 +514,15 @@ Unregister report settings callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-offSettingsChange(callback?: Callback<SettingItem[]>): void--><!--Device-AVMusicTemplateController-offSettingsChange(callback?: Callback<SettingItem[]>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;SettingItem[]&gt; | No | The callback used to handle ('reportSettings') event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SettingItem[]> | No | The callback used to handle ('reportSettings') event. |
 
 **Error codes:**
 
@@ -510,13 +544,15 @@ Unregister report tab content callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-offTabContentChange(callback?: ReportTabContentEvent): void--><!--Device-AVMusicTemplateController-offTabContentChange(callback?: ReportTabContentEvent): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ReportTabContentEvent | No | The callback used to handle ('reportTabContent') event. |
+| callback | [ReportTabContentEvent](arkts-avsession-reporttabcontentevent-t.md) | No | The callback used to handle ('reportTabContent') event. |
 
 **Error codes:**
 
@@ -538,13 +574,15 @@ Unregister report user info callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-offUserInfoChange(callback?: Callback<UserInfo>): void--><!--Device-AVMusicTemplateController-offUserInfoChange(callback?: Callback<UserInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;UserInfo&gt; | No | The callback used to handle ('reportUserInfo') event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<UserInfo> | No | The callback used to handle ('reportUserInfo') event. |
 
 **Error codes:**
 
@@ -566,13 +604,15 @@ Register report current single callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-onCurrentSingleChange(callback: Callback<Single>): void--><!--Device-AVMusicTemplateController-onCurrentSingleChange(callback: Callback<Single>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;Single&gt; | Yes | The callback used to handle ('reportCurrentSingle') event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Single> | Yes | The callback used to handle ('reportCurrentSingle') event. |
 
 **Error codes:**
 
@@ -594,13 +634,15 @@ Register report custom elements change callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-onCustomElementsChange(callback: ReportCustomElementsChangeEvent): void--><!--Device-AVMusicTemplateController-onCustomElementsChange(callback: ReportCustomElementsChangeEvent): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ReportCustomElementsChangeEvent | Yes | The callbackused to handle ('reportCustomElementsChange') event. |
+| callback | [ReportCustomElementsChangeEvent](arkts-avsession-reportcustomelementschangeevent-t.md) | Yes | The callback used to handle ('reportCustomElementsChange') event. |
 
 **Error codes:**
 
@@ -622,13 +664,15 @@ Register report dialog command callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-onDialogCommandChange(callback: ReportDialogCommandEvent): void--><!--Device-AVMusicTemplateController-onDialogCommandChange(callback: ReportDialogCommandEvent): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ReportDialogCommandEvent | Yes | The callback used to handle ('reportDialogCommand') event. |
+| callback | [ReportDialogCommandEvent](arkts-avsession-reportdialogcommandevent-t.md) | Yes | The callback used to handle ('reportDialogCommand') event. |
 
 **Error codes:**
 
@@ -650,13 +694,15 @@ Register report download media entity status callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-onDownloadMediaEntityStatusChange(callback: Callback<MediaEntity>): void--><!--Device-AVMusicTemplateController-onDownloadMediaEntityStatusChange(callback: Callback<MediaEntity>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;MediaEntity&gt; | Yes | The callbackused to handle ('reportDownloadMediaEntityStatus') event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<MediaEntity> | Yes | The callback used to handle ('reportDownloadMediaEntityStatus') event. |
 
 **Error codes:**
 
@@ -678,13 +724,15 @@ Register report extension ability callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-onExtensionAbilityChange(callback: ReportExecuteAbilityEvent): void--><!--Device-AVMusicTemplateController-onExtensionAbilityChange(callback: ReportExecuteAbilityEvent): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ReportExecuteAbilityEvent | Yes | The callback used to handle ('setExtensionAbility') event. |
+| callback | [ReportExecuteAbilityEvent](arkts-avsession-reportexecuteabilityevent-t.md) | Yes | The callback used to handle ('setExtensionAbility') event. |
 
 **Error codes:**
 
@@ -706,13 +754,15 @@ Register report media entities change callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-onMediaEntitiesChange(callback: Callback<MediaEntity[]>): void--><!--Device-AVMusicTemplateController-onMediaEntitiesChange(callback: Callback<MediaEntity[]>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;MediaEntity[]&gt; | Yes | The callback used to handle ('reportMediaEntitiesChange') event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<MediaEntity[]> | Yes | The callback used to handle ('reportMediaEntitiesChange') event. |
 
 **Error codes:**
 
@@ -734,13 +784,15 @@ Register report playlist callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-onPlaylistChange(callback: Callback<PageMediaEntity>): void--><!--Device-AVMusicTemplateController-onPlaylistChange(callback: Callback<PageMediaEntity>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;PageMediaEntity&gt; | Yes | The callback used to handle ('reportPlaylist') event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<PageMediaEntity> | Yes | The callback used to handle ('reportPlaylist') event. |
 
 **Error codes:**
 
@@ -762,13 +814,15 @@ Register report execute action callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-onReportExecuteAction(callback: ReportExecuteActionEvent): void--><!--Device-AVMusicTemplateController-onReportExecuteAction(callback: ReportExecuteActionEvent): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ReportExecuteActionEvent | Yes | The callback used to handle ('reportExecuteAction') event. |
+| callback | [ReportExecuteActionEvent](arkts-avsession-reportexecuteactionevent-t.md) | Yes | The callback used to handle ('reportExecuteAction') event. |
 
 **Error codes:**
 
@@ -790,13 +844,15 @@ Register report settings callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-onSettingsChange(callback: Callback<SettingItem[]>): void--><!--Device-AVMusicTemplateController-onSettingsChange(callback: Callback<SettingItem[]>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;SettingItem[]&gt; | Yes | The callback used to handle ('reportSettings') event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SettingItem[]> | Yes | The callback used to handle ('reportSettings') event. |
 
 **Error codes:**
 
@@ -818,13 +874,15 @@ Register report tab content callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-onTabContentChange(callback: ReportTabContentEvent): void--><!--Device-AVMusicTemplateController-onTabContentChange(callback: ReportTabContentEvent): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ReportTabContentEvent | Yes | The callback used to handle ('reportTabContent') event. |
+| callback | [ReportTabContentEvent](arkts-avsession-reporttabcontentevent-t.md) | Yes | The callback used to handle ('reportTabContent') event. |
 
 **Error codes:**
 
@@ -846,13 +904,15 @@ Register report user info callback.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-onUserInfoChange(callback: Callback<UserInfo>): void--><!--Device-AVMusicTemplateController-onUserInfoChange(callback: Callback<UserInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;UserInfo&gt; | Yes | The callback used to handle ('reportUserInfo') event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<UserInfo> | Yes | The callback used to handle ('reportUserInfo') event. |
 
 **Error codes:**
 
@@ -874,20 +934,22 @@ Play for search.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-playForSearch(command: SearchPlayInfoType, args: SearchPlayInfo): Promise<OperResult>--><!--Device-AVMusicTemplateController-playForSearch(command: SearchPlayInfoType, args: SearchPlayInfo): Promise<OperResult>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | SearchPlayInfoType | Yes | command |
-| args | SearchPlayInfo | Yes | args |
+| command | [SearchPlayInfoType](arkts-avsession-searchplayinfotype-e.md) | Yes | command |
+| args | [SearchPlayInfo](arkts-avsession-searchplayinfo-i.md) | Yes | args |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OperResult&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<OperResult> | Promise for the result |
 
 **Error codes:**
 
@@ -910,19 +972,21 @@ Play media entity.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-playMediaEntity(mediaEntity: MediaEntity): Promise<void>--><!--Device-AVMusicTemplateController-playMediaEntity(mediaEntity: MediaEntity): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mediaEntity | MediaEntity | Yes | media entity |
+| mediaEntity | [MediaEntity](arkts-avsession-mediaentity-i.md) | Yes | media entity |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise for the result |
 
 **Error codes:**
 
@@ -945,6 +1009,8 @@ Query compilation.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-queryCompilation(compilationId: string, pageIndex: int): Promise<PageMediaEntity>--><!--Device-AVMusicTemplateController-queryCompilation(compilationId: string, pageIndex: int): Promise<PageMediaEntity>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
@@ -958,7 +1024,7 @@ Query compilation.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PageMediaEntity&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PageMediaEntity> | Promise for the result |
 
 **Error codes:**
 
@@ -981,6 +1047,8 @@ Query compilation by keyword.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-queryCompilationByKeyword(keyword: string): Promise<Compilation[]>--><!--Device-AVMusicTemplateController-queryCompilationByKeyword(keyword: string): Promise<Compilation[]>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
@@ -993,7 +1061,7 @@ Query compilation by keyword.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Compilation[]&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Compilation[]> | Promise for the result |
 
 **Error codes:**
 
@@ -1016,13 +1084,15 @@ Query current single.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-queryCurrentSingle(): Promise<Single>--><!--Device-AVMusicTemplateController-queryCurrentSingle(): Promise<Single>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Single&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Single> | Promise for the result |
 
 **Error codes:**
 
@@ -1045,19 +1115,21 @@ Query custom content.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-queryCustomContent(queryType: CustomType[]): Promise<CustomElement>--><!--Device-AVMusicTemplateController-queryCustomContent(queryType: CustomType[]): Promise<CustomElement>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| queryType | CustomType[] | Yes | query type |
+| queryType | [CustomType](arkts-avsession-customtype-t.md)[] | Yes | query type |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CustomElement&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CustomElement> | Promise for the result |
 
 **Error codes:**
 
@@ -1080,13 +1152,15 @@ Query hot words.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-queryHotWords(): Promise<string[]>--><!--Device-AVMusicTemplateController-queryHotWords(): Promise<string[]>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string[]&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string[]> | Promise for the result |
 
 **Error codes:**
 
@@ -1109,13 +1183,15 @@ Query main tabs.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-queryMainTabs(): Promise<MediaTab[]>--><!--Device-AVMusicTemplateController-queryMainTabs(): Promise<MediaTab[]>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MediaTab[]&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<MediaTab[]> | Promise for the result |
 
 **Error codes:**
 
@@ -1138,19 +1214,21 @@ Query media entity.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-queryMediaEntity(params: QueryMediaEntityParam): Promise<PageMediaEntity>--><!--Device-AVMusicTemplateController-queryMediaEntity(params: QueryMediaEntityParam): Promise<PageMediaEntity>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | QueryMediaEntityParam | Yes | query params |
+| params | [QueryMediaEntityParam](arkts-avsession-querymediaentityparam-i.md) | Yes | query params |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PageMediaEntity&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PageMediaEntity> | Promise for the result |
 
 **Error codes:**
 
@@ -1173,6 +1251,8 @@ Query media entity by keyword.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-queryMediaEntityByKeyword(keyword: string, searchType: EntityType, pageIndex: int): Promise<PageMediaEntity>--><!--Device-AVMusicTemplateController-queryMediaEntityByKeyword(keyword: string, searchType: EntityType, pageIndex: int): Promise<PageMediaEntity>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
@@ -1180,14 +1260,14 @@ Query media entity by keyword.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyword | string | Yes | keyword |
-| searchType | EntityType | Yes | search type |
+| searchType | [EntityType](arkts-avsession-entitytype-e.md) | Yes | search type |
 | pageIndex | number | Yes | page index |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PageMediaEntity&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PageMediaEntity> | Promise for the result |
 
 **Error codes:**
 
@@ -1210,6 +1290,8 @@ Query media tab content.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-queryMediaTabContent(tabId: string): Promise<MediaTabContent>--><!--Device-AVMusicTemplateController-queryMediaTabContent(tabId: string): Promise<MediaTabContent>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
@@ -1222,7 +1304,7 @@ Query media tab content.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MediaTabContent&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<MediaTabContent> | Promise for the result |
 
 **Error codes:**
 
@@ -1245,19 +1327,21 @@ Query member purchase.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-queryMemberPurchase(memberPurchaseType: MemberPurchaseType): Promise<MemberPurchaseInfo[]>--><!--Device-AVMusicTemplateController-queryMemberPurchase(memberPurchaseType: MemberPurchaseType): Promise<MemberPurchaseInfo[]>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| memberPurchaseType | MemberPurchaseType | Yes | memberPurchase type |
+| memberPurchaseType | [MemberPurchaseType](arkts-avsession-memberpurchasetype-e.md) | Yes | memberPurchase type |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MemberPurchaseInfo[]&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<MemberPurchaseInfo[]> | Promise for the result |
 
 **Error codes:**
 
@@ -1280,6 +1364,8 @@ Query playlist.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-queryPlaylist(pageIndex: int, sort: Sort): Promise<PageMediaEntity>--><!--Device-AVMusicTemplateController-queryPlaylist(pageIndex: int, sort: Sort): Promise<PageMediaEntity>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
@@ -1287,13 +1373,13 @@ Query playlist.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pageIndex | number | Yes | page index |
-| sort | Sort | Yes | sort type |
+| sort | [Sort](arkts-avsession-sort-e.md) | Yes | sort type |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PageMediaEntity&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PageMediaEntity> | Promise for the result |
 
 **Error codes:**
 
@@ -1316,13 +1402,15 @@ Query recommend media entity list.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-queryRecommendMediaEntityList(): Promise<MediaEntity[]>--><!--Device-AVMusicTemplateController-queryRecommendMediaEntityList(): Promise<MediaEntity[]>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MediaEntity[]&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<MediaEntity[]> | Promise for the result |
 
 **Error codes:**
 
@@ -1345,13 +1433,15 @@ Query search history.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-querySearchHistory(): Promise<string[]>--><!--Device-AVMusicTemplateController-querySearchHistory(): Promise<string[]>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string[]&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string[]> | Promise for the result |
 
 **Error codes:**
 
@@ -1374,6 +1464,8 @@ Report problem and advice.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-reportProblemAndAdvice(advice: string): Promise<OperResult>--><!--Device-AVMusicTemplateController-reportProblemAndAdvice(advice: string): Promise<OperResult>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
@@ -1386,7 +1478,7 @@ Report problem and advice.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OperResult&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<OperResult> | Promise for the result |
 
 **Error codes:**
 
@@ -1409,20 +1501,22 @@ Request dialog info.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-requestDialogInfo(actionType: DialogActionType, actionInfo?: DialogActionInfo): Promise<DialogInfo>--><!--Device-AVMusicTemplateController-requestDialogInfo(actionType: DialogActionType, actionInfo?: DialogActionInfo): Promise<DialogInfo>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionType | DialogActionType | Yes | action type |
-| actionInfo | DialogActionInfo | No | action info |
+| actionType | [DialogActionType](arkts-avsession-dialogactiontype-t.md) | Yes | action type |
+| actionInfo | [DialogActionInfo](arkts-avsession-dialogactioninfo-i.md) | No | action info |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DialogInfo&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DialogInfo> | Promise for the result |
 
 **Error codes:**
 
@@ -1445,19 +1539,21 @@ Report settings change.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-updateSettings(settingItem: SettingItem): Promise<SettingItem>--><!--Device-AVMusicTemplateController-updateSettings(settingItem: SettingItem): Promise<SettingItem>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| settingItem | SettingItem | Yes | setting item |
+| settingItem | [SettingItem](arkts-avsession-settingitem-i.md) | Yes | setting item |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SettingItem&gt; | Promise for the result |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SettingItem> | Promise for the result |
 
 **Error codes:**
 
@@ -1482,6 +1578,8 @@ Mark the controller is or not destroy.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVMusicTemplateController-isDestroy: boolean--><!--Device-AVMusicTemplateController-isDestroy: boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## sessionId
@@ -1497,6 +1595,8 @@ Unique id of the AVMusicTemplateController.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVMusicTemplateController-sessionId: string--><!--Device-AVMusicTemplateController-sessionId: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 

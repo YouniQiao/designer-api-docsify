@@ -16,13 +16,15 @@ Creates an AVImageGenerator instance. This API uses a promise to return the resu
 
 **Since:** 12
 
+<!--Device-media-function createAVImageGenerator(): Promise<AVImageGenerator>--><!--Device-media-function createAVImageGenerator(): Promise<AVImageGenerator>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVImageGenerator&gt; | Promise used to return the result. If the operation is successful, anAVImageGenerator instance is returned; otherwise, **null** is returned. The API can be used to obtain a videothumbnail. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AVImageGenerator> | Promise used to return the result. If the operation is successful, an AVImageGenerator instance is returned; otherwise, **null** is returned. The API can be used to obtain a video thumbnail. |
 
 **Error codes:**
 
@@ -60,13 +62,15 @@ Creates an AVImageGenerator instance. This API uses an asynchronous callback to 
 
 **Since:** 12
 
+<!--Device-media-function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator>): void--><!--Device-media-function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;AVImageGenerator&gt; | Yes | Callback used to return the result. If the operation issuccessful, an AVImageGenerator instance is returned; otherwise, **null** is returned. The API can be used toobtain a video thumbnail. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AVImageGenerator> | Yes | Callback used to return the result. If the operation is successful, an AVImageGenerator instance is returned; otherwise, **null** is returned. The API can be used to obtain a video thumbnail. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Get network status information.
 
 **Since:** 11
 
+<!--Device-connection-export interface NetBlockStatusInfo--><!--Device-connection-export interface NetBlockStatusInfo-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Check whether the current state is blocked.
 
 **Since:** 11
 
+<!--Device-NetBlockStatusInfo-blocked: boolean--><!--Device-NetBlockStatusInfo-blocked: boolean-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## netHandle
@@ -37,6 +41,8 @@ Defines the handle of the data network.
 **Type:** NetHandle
 
 **Since:** 11
+
+<!--Device-NetBlockStatusInfo-netHandle: NetHandle--><!--Device-NetBlockStatusInfo-netHandle: NetHandle-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

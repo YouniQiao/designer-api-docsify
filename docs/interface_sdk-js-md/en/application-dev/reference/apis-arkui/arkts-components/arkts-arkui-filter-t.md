@@ -12,6 +12,8 @@ Represents a filter object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-unnamed-declare type Filter = import('../api/@ohos.graphics.uiEffect').default.Filter--><!--Device-unnamed-declare type Filter = import('../api/@ohos.graphics.uiEffect').default.Filter-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** import('../api/@ohos.graphics.uiEffect').default.Filter

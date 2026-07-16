@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-export interface CommonEventSubscriber--><!--Device-unnamed-export interface CommonEventSubscriber-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## abortCommonEvent
@@ -12,11 +14,11 @@
 abortCommonEvent(callback: AsyncCallback<void>): void
 ```
 
-添加有序公共事件的中止状态。当该接口与
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1)配合使用时，可以中止当前的有序公共事
-件，使该公共事件不再向下一个订阅者传递。使用callback异步回调。
+添加有序公共事件的中止状态。当该接口与[finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1)配合使用时，可以中止当前的有序公共事件，使该公共事件不再向下一个订阅者传递。使用callback异步回调。
 
 **起始版本：** 7
+
+<!--Device-CommonEventSubscriber-abortCommonEvent(callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-abortCommonEvent(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -24,7 +26,7 @@ abortCommonEvent(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当添加有序公共事件中止状态成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当添加有序公共事件中止状态成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -38,11 +40,11 @@ abortCommonEvent(callback: AsyncCallback<void>): void
 abortCommonEvent(): Promise<void>
 ```
 
-添加有序公共事件的中止状态。当该接口与
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1)配合使用时，可以中止当前的有序公共事
-件，使该公共事件不再向下一个订阅者传递。使用Promise异步回调。
+添加有序公共事件的中止状态。当该接口与[finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1)配合使用时，可以中止当前的有序公共事件，使该公共事件不再向下一个订阅者传递。使用Promise异步回调。
 
 **起始版本：** 7
+
+<!--Device-CommonEventSubscriber-abortCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-abortCommonEvent(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -50,7 +52,7 @@ abortCommonEvent(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 ## abortCommonEventSync
 
@@ -58,11 +60,11 @@ abortCommonEvent(): Promise<void>
 abortCommonEventSync(): void
 ```
 
-添加有序公共事件的中止状态。当该接口与
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1)配合使用时，可以中止当前的有序公共事
-件，使该公共事件不再向下一个订阅者传递。
+添加有序公共事件的中止状态。当该接口与[finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1)配合使用时，可以中止当前的有序公共事件，使该公共事件不再向下一个订阅者传递。
 
 **起始版本：** 10
+
+<!--Device-CommonEventSubscriber-abortCommonEventSync(): void--><!--Device-CommonEventSubscriber-abortCommonEventSync(): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -72,11 +74,11 @@ abortCommonEventSync(): void
 clearAbortCommonEvent(callback: AsyncCallback<void>): void
 ```
 
-清理有序公共事件的中止状态。当该接口与
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1)配合使用时，可以使该公共事件继续向下
-一个订阅者传递。使用callback异步回调。
+清理有序公共事件的中止状态。当该接口与[finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1)配合使用时，可以使该公共事件继续向下一个订阅者传递。使用callback异步回调。
 
 **起始版本：** 7
+
+<!--Device-CommonEventSubscriber-clearAbortCommonEvent(callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-clearAbortCommonEvent(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -84,7 +86,7 @@ clearAbortCommonEvent(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当清理有序公共事件中止状态成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当清理有序公共事件中止状态成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -98,11 +100,11 @@ clearAbortCommonEvent(callback: AsyncCallback<void>): void
 clearAbortCommonEvent(): Promise<void>
 ```
 
-清理有序公共事件的中止状态。当该接口与
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1)配合使用时，可以使该公共事件继续向下
-一个订阅者传递。使用Promise异步回调。
+清理有序公共事件的中止状态。当该接口与[finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1)配合使用时，可以使该公共事件继续向下一个订阅者传递。使用Promise异步回调。
 
 **起始版本：** 7
+
+<!--Device-CommonEventSubscriber-clearAbortCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-clearAbortCommonEvent(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -110,7 +112,7 @@ clearAbortCommonEvent(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 ## clearAbortCommonEventSync
 
@@ -118,11 +120,11 @@ clearAbortCommonEvent(): Promise<void>
 clearAbortCommonEventSync(): void
 ```
 
-清理有序公共事件的中止状态。当该接口与
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1)配合使用时，可以使该公共事件继续向下
-一个订阅者传递。
+清理有序公共事件的中止状态。当该接口与[finishCommonEvent](arkts-basicservices-commoneventsubscriber-i.md#finishcommonevent-1)配合使用时，可以使该公共事件继续向下一个订阅者传递。
 
 **起始版本：** 10
+
+<!--Device-CommonEventSubscriber-clearAbortCommonEventSync(): void--><!--Device-CommonEventSubscriber-clearAbortCommonEventSync(): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -136,13 +138,15 @@ finishCommonEvent(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-CommonEventSubscriber-finishCommonEvent(callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-finishCommonEvent(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当订阅者结束当前有序公共事件成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当订阅者结束当前有序公共事件成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -160,13 +164,15 @@ finishCommonEvent(): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-CommonEventSubscriber-finishCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-finishCommonEvent(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 ## getAbortCommonEvent
 
@@ -178,13 +184,15 @@ getAbortCommonEvent(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 7
 
+<!--Device-CommonEventSubscriber-getAbortCommonEvent(callback: AsyncCallback<boolean>): void--><!--Device-CommonEventSubscriber-getAbortCommonEvent(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。返回true表示当前有序公共事件处于中止状态；返回false表示当前有序公共事件没有处于中止状态。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。返回true表示当前有序公共事件处于中止状态；返回false表示当前有序公共事件没有处于中止状态。 |
 
 **错误码：**
 
@@ -202,13 +210,15 @@ getAbortCommonEvent(): Promise<boolean>
 
 **起始版本：** 7
 
+<!--Device-CommonEventSubscriber-getAbortCommonEvent(): Promise<boolean>--><!--Device-CommonEventSubscriber-getAbortCommonEvent(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示当前有序公共事件处于中止状态；返回false表示当前有序公共事件没有处于中止状态。 |
+| Promise<boolean> | Promise对象。返回true表示当前有序公共事件处于中止状态；返回false表示当前有序公共事件没有处于中止状态。 |
 
 ## getAbortCommonEventSync
 
@@ -219,6 +229,8 @@ getAbortCommonEventSync(): boolean
 获取当前有序公共事件是否处于中止状态。
 
 **起始版本：** 10
+
+<!--Device-CommonEventSubscriber-getAbortCommonEventSync(): boolean--><!--Device-CommonEventSubscriber-getAbortCommonEventSync(): boolean-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -238,7 +250,9 @@ getCode(callback: AsyncCallback<number>): void
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscriber-getCode(callback: AsyncCallback<int>): void--><!--Device-CommonEventSubscriber-getCode(callback: AsyncCallback<int>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -246,7 +260,7 @@ getCode(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。返回有序公共事件传递的数据（number类型）。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。返回有序公共事件传递的数据（number类型）。 |
 
 **错误码：**
 
@@ -264,7 +278,9 @@ getCode(): Promise<number>
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscriber-getCode(): Promise<int>--><!--Device-CommonEventSubscriber-getCode(): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -272,7 +288,7 @@ getCode(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回有序公共事件传递的数据（number类型）。 |
+| Promise<number> | Promise对象。返回有序公共事件传递的数据（number类型）。 |
 
 ## getCodeSync
 
@@ -284,7 +300,9 @@ getCodeSync(): number
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscriber-getCodeSync(): int--><!--Device-CommonEventSubscriber-getCodeSync(): int-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -304,7 +322,9 @@ getData(callback: AsyncCallback<string>): void
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscriber-getData(callback: AsyncCallback<string>): void--><!--Device-CommonEventSubscriber-getData(callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -312,7 +332,7 @@ getData(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | 是 | 回调函数。返回有序公共事件传递的数据（string类型）。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | 是 | 回调函数。返回有序公共事件传递的数据（string类型）。 |
 
 **错误码：**
 
@@ -330,7 +350,9 @@ getData(): Promise<string>
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscriber-getData(): Promise<string>--><!--Device-CommonEventSubscriber-getData(): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -338,7 +360,7 @@ getData(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象。返回有序公共事件传递的数据（string类型）。 |
+| Promise<string> | Promise对象。返回有序公共事件传递的数据（string类型）。 |
 
 ## getDataSync
 
@@ -350,7 +372,9 @@ getDataSync(): string
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscriber-getDataSync(): string--><!--Device-CommonEventSubscriber-getDataSync(): string-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -370,7 +394,9 @@ getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo>): void
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscriber-getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo>): void--><!--Device-CommonEventSubscriber-getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -378,7 +404,7 @@ getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;CommonEventSubscribeInfo&gt; | 是 | 回调函数。返回订阅者的订阅信息。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<CommonEventSubscribeInfo> | 是 | 回调函数。返回订阅者的订阅信息。 |
 
 **错误码：**
 
@@ -396,7 +422,9 @@ getSubscribeInfo(): Promise<CommonEventSubscribeInfo>
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscriber-getSubscribeInfo(): Promise<CommonEventSubscribeInfo>--><!--Device-CommonEventSubscriber-getSubscribeInfo(): Promise<CommonEventSubscribeInfo>-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -404,7 +432,7 @@ getSubscribeInfo(): Promise<CommonEventSubscribeInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CommonEventSubscribeInfo&gt; | Promise对象。返回订阅者的订阅信息。 |
+| Promise<CommonEventSubscribeInfo> | Promise对象。返回订阅者的订阅信息。 |
 
 ## getSubscribeInfoSync
 
@@ -416,7 +444,9 @@ getSubscribeInfoSync(): CommonEventSubscribeInfo
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscriber-getSubscribeInfoSync(): CommonEventSubscribeInfo--><!--Device-CommonEventSubscriber-getSubscribeInfoSync(): CommonEventSubscribeInfo-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -424,7 +454,7 @@ getSubscribeInfoSync(): CommonEventSubscribeInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| CommonEventSubscribeInfo | 表示订阅者的订阅信息。 |
+| [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-t.md) | 表示订阅者的订阅信息。 |
 
 ## isOrderedCommonEvent
 
@@ -436,13 +466,15 @@ isOrderedCommonEvent(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 7
 
+<!--Device-CommonEventSubscriber-isOrderedCommonEvent(callback: AsyncCallback<boolean>): void--><!--Device-CommonEventSubscriber-isOrderedCommonEvent(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。返回true表示有序公共事件；返回false表示无序公共事件。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。返回true表示有序公共事件；返回false表示无序公共事件。 |
 
 **错误码：**
 
@@ -460,13 +492,15 @@ isOrderedCommonEvent(): Promise<boolean>
 
 **起始版本：** 7
 
+<!--Device-CommonEventSubscriber-isOrderedCommonEvent(): Promise<boolean>--><!--Device-CommonEventSubscriber-isOrderedCommonEvent(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示有序公共事件；返回false表示无序公共事件。 |
+| Promise<boolean> | Promise对象。返回true表示有序公共事件；返回false表示无序公共事件。 |
 
 ## isOrderedCommonEventSync
 
@@ -477,6 +511,8 @@ isOrderedCommonEventSync(): boolean
 查询当前公共事件是否为有序公共事件。
 
 **起始版本：** 10
+
+<!--Device-CommonEventSubscriber-isOrderedCommonEventSync(): boolean--><!--Device-CommonEventSubscriber-isOrderedCommonEventSync(): boolean-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -496,13 +532,15 @@ isStickyCommonEvent(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 7
 
+<!--Device-CommonEventSubscriber-isStickyCommonEvent(callback: AsyncCallback<boolean>): void--><!--Device-CommonEventSubscriber-isStickyCommonEvent(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。返回true表示是粘性公共事件；返回false表示不是粘性公共事件。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。返回true表示是粘性公共事件；返回false表示不是粘性公共事件。 |
 
 **错误码：**
 
@@ -520,13 +558,15 @@ isStickyCommonEvent(): Promise<boolean>
 
 **起始版本：** 7
 
+<!--Device-CommonEventSubscriber-isStickyCommonEvent(): Promise<boolean>--><!--Device-CommonEventSubscriber-isStickyCommonEvent(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示是粘性公共事件；返回false表示不是粘性公共事件。 |
+| Promise<boolean> | Promise对象。返回true表示是粘性公共事件；返回false表示不是粘性公共事件。 |
 
 ## isStickyCommonEventSync
 
@@ -537,6 +577,8 @@ isStickyCommonEventSync(): boolean
 检查当前公共事件是否为一个粘性事件。
 
 **起始版本：** 10
+
+<!--Device-CommonEventSubscriber-isStickyCommonEventSync(): boolean--><!--Device-CommonEventSubscriber-isStickyCommonEventSync(): boolean-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -556,7 +598,9 @@ setCode(code: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscriber-setCode(code: int, callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-setCode(code: int, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -565,7 +609,7 @@ setCode(code: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | code | number | 是 | 有序公共事件传递的数据（number类型）。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当设置有序公共事件传递的数据（number类型）成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当设置有序公共事件传递的数据（number类型）成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -583,7 +627,9 @@ setCode(code: number): Promise<void>
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscriber-setCode(code: int): Promise<void>--><!--Device-CommonEventSubscriber-setCode(code: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -597,7 +643,7 @@ setCode(code: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -615,7 +661,9 @@ setCodeAndData(code: number, data: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscriber-setCodeAndData(code: int, data: string, callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-setCodeAndData(code: int, data: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -625,7 +673,7 @@ setCodeAndData(code: number, data: string, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | code | number | 是 | 有序公共事件传递的数据（number类型）。 |
 | data | string | 是 | 有序公共事件传递的数据（string类型）。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当设置有序公共事件传递的数据成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当设置有序公共事件传递的数据成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -643,7 +691,9 @@ setCodeAndData(code: number, data: string): Promise<void>
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscriber-setCodeAndData(code: int, data: string): Promise<void>--><!--Device-CommonEventSubscriber-setCodeAndData(code: int, data: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -658,7 +708,7 @@ setCodeAndData(code: number, data: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -676,7 +726,9 @@ setCodeAndDataSync(code: number, data: string): void
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscriber-setCodeAndDataSync(code: int, data: string): void--><!--Device-CommonEventSubscriber-setCodeAndDataSync(code: int, data: string): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -703,7 +755,9 @@ setCodeSync(code: number): void
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscriber-setCodeSync(code: int): void--><!--Device-CommonEventSubscriber-setCodeSync(code: int): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -729,7 +783,9 @@ setData(data: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscriber-setData(data: string, callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-setData(data: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -738,7 +794,7 @@ setData(data: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | string | 是 | 有序公共事件传递的数据（string类型）。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当设置有序公共事件传递的数据（string类型）成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当设置有序公共事件传递的数据（string类型）成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -756,7 +812,9 @@ setData(data: string): Promise<void>
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscriber-setData(data: string): Promise<void>--><!--Device-CommonEventSubscriber-setData(data: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -770,7 +828,7 @@ setData(data: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -788,7 +846,9 @@ setDataSync(data: string): void
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonEventSubscriber-setDataSync(data: string): void--><!--Device-CommonEventSubscriber-setDataSync(data: string): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 

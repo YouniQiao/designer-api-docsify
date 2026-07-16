@@ -12,12 +12,13 @@ import { print } from '@kit.BasicServicesKit';
 function cancelPrintJob(jobId: string, callback: AsyncCallback<void>): void
 ```
 
-Cancels the specified print job, which is on the print queue of the printer. This API uses an asynchronous callback
-to return the result.
+Cancels the specified print job, which is on the print queue of the printer. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
+
+<!--Device-print-function cancelPrintJob(jobId: string, callback: AsyncCallback<void>): void--><!--Device-print-function cancelPrintJob(jobId: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -28,7 +29,7 @@ to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | jobId | string | Yes | Print job ID. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -62,12 +63,13 @@ print.cancelPrintJob(jobId, (err: BusinessError) => {
 function cancelPrintJob(jobId: string): Promise<void>
 ```
 
-Cancels the specified print job, which is on the print queue of the printer. This API uses a promise to return the
-result.
+Cancels the specified print job, which is on the print queue of the printer. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
+
+<!--Device-print-function cancelPrintJob(jobId: string): Promise<void>--><!--Device-print-function cancelPrintJob(jobId: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -83,7 +85,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-batteryInfo-export enum BatteryCapacityLevel--><!--Device-batteryInfo-export enum BatteryCapacityLevel-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## LEVEL_NONE
@@ -15,6 +17,8 @@ LEVEL_NONE
 表示电池电量等级为未知电量。
 
 **起始版本：** 23
+
+<!--Device-BatteryCapacityLevel-LEVEL_NONE--><!--Device-BatteryCapacityLevel-LEVEL_NONE-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -28,6 +32,8 @@ LEVEL_FULL
 
 **起始版本：** 9
 
+<!--Device-BatteryCapacityLevel-LEVEL_FULL--><!--Device-BatteryCapacityLevel-LEVEL_FULL-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## LEVEL_HIGH
@@ -39,6 +45,8 @@ LEVEL_HIGH
 表示电池电量等级为高电量。
 
 **起始版本：** 9
+
+<!--Device-BatteryCapacityLevel-LEVEL_HIGH--><!--Device-BatteryCapacityLevel-LEVEL_HIGH-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -52,6 +60,8 @@ LEVEL_NORMAL
 
 **起始版本：** 9
 
+<!--Device-BatteryCapacityLevel-LEVEL_NORMAL--><!--Device-BatteryCapacityLevel-LEVEL_NORMAL-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## LEVEL_LOW
@@ -63,6 +73,8 @@ LEVEL_LOW
 表示电池电量等级为低电量。
 
 **起始版本：** 9
+
+<!--Device-BatteryCapacityLevel-LEVEL_LOW--><!--Device-BatteryCapacityLevel-LEVEL_LOW-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -76,6 +88,8 @@ LEVEL_WARNING
 
 **起始版本：** 9
 
+<!--Device-BatteryCapacityLevel-LEVEL_WARNING--><!--Device-BatteryCapacityLevel-LEVEL_WARNING-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## LEVEL_CRITICAL
@@ -88,6 +102,8 @@ LEVEL_CRITICAL
 
 **起始版本：** 9
 
+<!--Device-BatteryCapacityLevel-LEVEL_CRITICAL--><!--Device-BatteryCapacityLevel-LEVEL_CRITICAL-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## LEVEL_SHUTDOWN
@@ -99,6 +115,8 @@ LEVEL_SHUTDOWN
 表示电池电量等级为关机电量。
 
 **起始版本：** 9
+
+<!--Device-BatteryCapacityLevel-LEVEL_SHUTDOWN--><!--Device-BatteryCapacityLevel-LEVEL_SHUTDOWN-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 

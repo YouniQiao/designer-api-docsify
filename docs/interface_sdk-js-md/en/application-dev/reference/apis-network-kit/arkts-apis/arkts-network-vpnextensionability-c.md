@@ -4,6 +4,8 @@ class of vpn extension ability.
 
 **Since:** 11
 
+<!--Device-unnamed-export default class VpnExtensionAbility--><!--Device-unnamed-export default class VpnExtensionAbility-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Called back when a vpn extension is started for initialization.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-VpnExtensionAbility-onCreate(want: Want): void--><!--Device-VpnExtensionAbility-onCreate(want: Want): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Indicates the want of created service extension. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Indicates the want of created service extension. |
 
 **Example**
 
@@ -57,6 +61,8 @@ Called back before a vpn extension is destroyed.
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-VpnExtensionAbility-onDestroy(): void--><!--Device-VpnExtensionAbility-onDestroy(): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -86,6 +92,8 @@ Indicates service extension ability context.
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-VpnExtensionAbility-context: VpnExtensionContext--><!--Device-VpnExtensionAbility-context: VpnExtensionContext-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

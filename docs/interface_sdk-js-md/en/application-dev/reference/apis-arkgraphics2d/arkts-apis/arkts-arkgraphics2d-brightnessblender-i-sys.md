@@ -4,6 +4,8 @@ The Blender of backgroundColorEffect.
 
 **Since:** 12
 
+<!--Device-uiEffect-interface BrightnessBlender--><!--Device-uiEffect-interface BrightnessBlender-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Defines third-order rate for grayscale adjustment.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
+<!--Device-BrightnessBlender-cubicRate: double--><!--Device-BrightnessBlender-cubicRate: double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -45,6 +49,8 @@ Defines grayscale adjustment degree.
 **Since:** 12
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
+
+<!--Device-BrightnessBlender-degree: double--><!--Device-BrightnessBlender-degree: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -64,6 +70,8 @@ Defines the blending fraction for brightness effect.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
+<!--Device-BrightnessBlender-fraction: double--><!--Device-BrightnessBlender-fraction: double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -81,6 +89,8 @@ Defines linear rate for grayscale adjustment.
 **Since:** 12
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
+
+<!--Device-BrightnessBlender-linearRate: double--><!--Device-BrightnessBlender-linearRate: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -100,6 +110,8 @@ Defines the negative adjustment coefficients in RGB channels based on the refere
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
+<!--Device-BrightnessBlender-negativeCoefficient: [double, double, double]--><!--Device-BrightnessBlender-negativeCoefficient: [double, double, double]-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -117,6 +129,8 @@ Defines the positive adjustment coefficients in RGB channels based on the refere
 **Since:** 12
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
+
+<!--Device-BrightnessBlender-positiveCoefficient: [double, double, double]--><!--Device-BrightnessBlender-positiveCoefficient: [double, double, double]-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -136,6 +150,8 @@ Defines second-order rate for grayscale adjustment.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
+<!--Device-BrightnessBlender-quadraticRate: double--><!--Device-BrightnessBlender-quadraticRate: double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -153,6 +169,8 @@ Defines the reference saturation for brightness.
 **Since:** 12
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
+
+<!--Device-BrightnessBlender-saturation: double--><!--Device-BrightnessBlender-saturation: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

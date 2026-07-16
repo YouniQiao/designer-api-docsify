@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-text-enum TextDecorationType--><!--Device-text-enum TextDecorationType-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## NONE
@@ -16,7 +18,9 @@ NONE = 0
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextDecorationType-NONE = 0--><!--Device-TextDecorationType-NONE = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -30,7 +34,9 @@ UNDERLINE = 1
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextDecorationType-UNDERLINE = 1--><!--Device-TextDecorationType-UNDERLINE = 1-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -44,7 +50,9 @@ OVERLINE = 2
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextDecorationType-OVERLINE = 2--><!--Device-TextDecorationType-OVERLINE = 2-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -58,7 +66,9 @@ LINE_THROUGH = 4
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextDecorationType-LINE_THROUGH = 4--><!--Device-TextDecorationType-LINE_THROUGH = 4-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

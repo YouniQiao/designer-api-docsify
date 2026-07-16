@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-interface CommonSegmentButtonOptions--><!--Device-unnamed-interface CommonSegmentButtonOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { CommonSegmentButtonOptions, SegmentButtonItemOptionsConstructorOptions, SegmentButtonIconTextItem, SegmentButtonItemOptions, SegmentButtonTextItem, CapsuleSegmentButtonOptions, SegmentButtonOptions, CapsuleSegmentButtonConstructionOptions, SegmentButtonItemTuple, SegmentButton, SegmentButtonItemArray, SegmentButtonItemOptionsArray, SegmentButtonIconItem, BorderRadiusMode, TabSegmentButtonConstructionOptions, TabSegmentButtonOptions, ItemRestriction, DimensionNoPercentage } from '@kit.ArkUI';
+```
 
 ## backgroundBlurStyle
 
@@ -22,7 +30,9 @@ backgroundBlurStyle?: BlurStyle
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonSegmentButtonOptions-backgroundBlurStyle?: BlurStyle--><!--Device-CommonSegmentButtonOptions-backgroundBlurStyle?: BlurStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,7 +62,9 @@ backgroundBorderRadius?: LengthMetrics
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonSegmentButtonOptions-backgroundBorderRadius?: LengthMetrics--><!--Device-CommonSegmentButtonOptions-backgroundBorderRadius?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,7 +88,9 @@ backgroundColor?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonSegmentButtonOptions-backgroundColor?: ResourceColor--><!--Device-CommonSegmentButtonOptions-backgroundColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,7 +114,9 @@ borderRadiusMode?: BorderRadiusMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonSegmentButtonOptions-borderRadiusMode?: BorderRadiusMode--><!--Device-CommonSegmentButtonOptions-borderRadiusMode?: BorderRadiusMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -131,7 +147,9 @@ For text & icon buttons Padding { top: 6, right: 8, bottom: 6, left: 8 }.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonSegmentButtonOptions-buttonPadding?: Padding | Dimension--><!--Device-CommonSegmentButtonOptions-buttonPadding?: Padding | Dimension-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -153,7 +171,9 @@ direction?: Direction
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonSegmentButtonOptions-direction?: Direction--><!--Device-CommonSegmentButtonOptions-direction?: Direction-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -173,7 +193,9 @@ fontColor?: ResourceColor
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonSegmentButtonOptions-fontColor?: ResourceColor--><!--Device-CommonSegmentButtonOptions-fontColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -197,7 +219,9 @@ fontSize?: DimensionNoPercentage
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonSegmentButtonOptions-fontSize?: DimensionNoPercentage--><!--Device-CommonSegmentButtonOptions-fontSize?: DimensionNoPercentage-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -221,7 +245,9 @@ fontWeight?: FontWeight
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonSegmentButtonOptions-fontWeight?: FontWeight--><!--Device-CommonSegmentButtonOptions-fontWeight?: FontWeight-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -251,7 +277,9 @@ imageSize?: SizeOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonSegmentButtonOptions-imageSize?: SizeOptions--><!--Device-CommonSegmentButtonOptions-imageSize?: SizeOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -281,7 +309,9 @@ itemBorderRadius?: LengthMetrics
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonSegmentButtonOptions-itemBorderRadius?: LengthMetrics--><!--Device-CommonSegmentButtonOptions-itemBorderRadius?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -295,11 +325,9 @@ localizedButtonPadding?: LocalizedPadding
 
 默认值：
 
-仅图标按钮和仅文字按钮默认值：
-`{ top: LengthMetrics.vp(4), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(4), start: LengthMetrics.vp(8) }`
+仅图标按钮和仅文字按钮默认值：`{ top: LengthMetrics.vp(4), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(4), start: LengthMetrics.vp(8) }`
 
-图标+文本按钮默认值：
-`{ top: LengthMetrics.vp(6), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(6), start: LengthMetrics.vp(8) }`
+图标+文本按钮默认值：`{ top: LengthMetrics.vp(6), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(6), start: LengthMetrics.vp(8) }`
 
 值为undefined时，按默认值处理。
 
@@ -316,7 +344,9 @@ For text & icon buttons LocalizedPadding
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonSegmentButtonOptions-localizedButtonPadding?: LocalizedPadding--><!--Device-CommonSegmentButtonOptions-localizedButtonPadding?: LocalizedPadding-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -338,7 +368,9 @@ localizedTextPadding?: LocalizedPadding
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonSegmentButtonOptions-localizedTextPadding?: LocalizedPadding--><!--Device-CommonSegmentButtonOptions-localizedTextPadding?: LocalizedPadding-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -360,7 +392,9 @@ type为"capsule"时，背景板颜色为`$r('sys.color.ohos_id_color_emphasize')
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonSegmentButtonOptions-selectedBackgroundColor?: ResourceColor--><!--Device-CommonSegmentButtonOptions-selectedBackgroundColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -382,7 +416,9 @@ type为"capsule"时，颜色为`$r('sys.color.ohos_id_color_foreground_contrary'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonSegmentButtonOptions-selectedFontColor?: ResourceColor--><!--Device-CommonSegmentButtonOptions-selectedFontColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -406,7 +442,9 @@ selectedFontSize?: DimensionNoPercentage
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonSegmentButtonOptions-selectedFontSize?: DimensionNoPercentage--><!--Device-CommonSegmentButtonOptions-selectedFontSize?: DimensionNoPercentage-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -430,7 +468,9 @@ selectedFontWeight?: FontWeight
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonSegmentButtonOptions-selectedFontWeight?: FontWeight--><!--Device-CommonSegmentButtonOptions-selectedFontWeight?: FontWeight-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -456,7 +496,9 @@ textPadding?: Padding | Dimension
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CommonSegmentButtonOptions-textPadding?: Padding | Dimension--><!--Device-CommonSegmentButtonOptions-textPadding?: Padding | Dimension-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

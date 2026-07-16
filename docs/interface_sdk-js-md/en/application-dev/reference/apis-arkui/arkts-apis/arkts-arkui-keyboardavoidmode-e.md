@@ -4,6 +4,8 @@ Enumerates the modes in which the layout responds when the keyboard is displayed
 
 **Since:** 11
 
+<!--Device-unnamed-export const enum KeyboardAvoidMode--><!--Device-unnamed-export const enum KeyboardAvoidMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## OFFSET
@@ -19,6 +21,8 @@ Offset Type, the layout moves up.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-KeyboardAvoidMode-OFFSET = 0--><!--Device-KeyboardAvoidMode-OFFSET = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ Resize Type, the layout is resized.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-KeyboardAvoidMode-RESIZE = 1--><!--Device-KeyboardAvoidMode-RESIZE = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## OFFSET_WITH_CARET
@@ -51,6 +57,8 @@ Offset Type, the layout moves up, and this adjustment also occurs if the caret p
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-KeyboardAvoidMode-OFFSET_WITH_CARET = 2--><!--Device-KeyboardAvoidMode-OFFSET_WITH_CARET = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +76,8 @@ Resize Type, the layout moves up, and this adjustment also occurs if the caret p
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-KeyboardAvoidMode-RESIZE_WITH_CARET = 3--><!--Device-KeyboardAvoidMode-RESIZE_WITH_CARET = 3-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NONE
@@ -83,6 +93,8 @@ None Type, the layout is not adjusted to avoid the keyboard.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-KeyboardAvoidMode-NONE = 4--><!--Device-KeyboardAvoidMode-NONE = 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+<!--Device-i18n-export enum WeekDay--><!--Device-i18n-export enum WeekDay-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## MON
@@ -16,7 +18,9 @@ MON = 1
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WeekDay-MON = 1--><!--Device-WeekDay-MON = 1-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -30,7 +34,9 @@ TUE = 2
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WeekDay-TUE = 2--><!--Device-WeekDay-TUE = 2-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -44,7 +50,9 @@ WED = 3
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WeekDay-WED = 3--><!--Device-WeekDay-WED = 3-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -58,7 +66,9 @@ THU = 4
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WeekDay-THU = 4--><!--Device-WeekDay-THU = 4-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -72,7 +82,9 @@ FRI = 5
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WeekDay-FRI = 5--><!--Device-WeekDay-FRI = 5-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -86,7 +98,9 @@ SAT = 6
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WeekDay-SAT = 6--><!--Device-WeekDay-SAT = 6-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -100,7 +114,9 @@ SUN = 7
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WeekDay-SUN = 7--><!--Device-WeekDay-SUN = 7-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

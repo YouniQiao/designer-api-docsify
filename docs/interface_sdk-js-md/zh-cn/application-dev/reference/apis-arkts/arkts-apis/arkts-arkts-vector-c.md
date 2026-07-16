@@ -1,15 +1,12 @@
 # Vector
 
-Vector是基于数组实现的线性数据结构。当Vector的内存用完时，会自动分配一块更大的连续内存区域，并将所有元素复制到新内存区域，回收当前内存区域。Vector可用于高效访问元素。
-Vector和[ArrayList](arkts-util-arraylist.md)都是基于数组实现，但Vector提供了更多的数组操作接口。两者都可以动态调整容量，Vector每次扩容为原来的两倍，ArrayList每次扩容为原来的1.5倍。
-**推荐使用场景：** 当数据量较大时，推荐使用Vector。
-文档中使用了泛型，涉及以下泛型标记符：
+Vector是基于数组实现的线性数据结构。当Vector的内存用完时，会自动分配一块更大的连续内存区域，并将所有元素复制到新内存区域，回收当前内存区域。Vector可用于高效访问元素。Vector和[ArrayList](arkts-util-arraylist.md)都是基于数组实现，但Vector提供了更多的数组操作接口。两者都可以动态调整容量，Vector每次扩容为原来的两倍，ArrayList每次扩容为原来的1.5倍。**推荐使用场景：** 当数据量较大时，推荐使用Vector。文档中使用了泛型，涉及以下泛型标记符：
 
 - T：Type，类
 
-> **说明**
->
-> - 此模块提供的接口从API version 9开始废弃。建议使用
+> **说明**  
+>  
+> - 此模块提供的接口从API version 9开始废弃。建议使用  
 > [@ohos.util.ArrayList](arkts-util-arraylist.md)。
 
 **起始版本：** 8
@@ -18,7 +15,15 @@ Vector和[ArrayList](arkts-util-arraylist.md)都是基于数组实现，但Vecto
 
 **替代接口：** ArrayList
 
+<!--Device-unnamed-declare class Vector<T>--><!--Device-unnamed-declare class Vector<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { Vector } from '@kit.ArkTS';
+```
 
 ## [Symbol.iterator]
 
@@ -32,13 +37,15 @@ Vector和[ArrayList](arkts-util-arraylist.md)都是基于数组实现，但Vecto
 
 **废弃版本：** 9
 
+<!--Device-Vector-[Symbol.iterator](): IterableIterator<T>--><!--Device-Vector-[Symbol.iterator](): IterableIterator<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;T&gt; | @syscap SystemCapability.Utils.Lang |
+| IterableIterator<T> | @syscap SystemCapability.Utils.Lang |
 
 **示例：**
 
@@ -76,6 +83,8 @@ add(element: T): boolean
 **起始版本：** 8
 
 **废弃版本：** 9
+
+<!--Device-Vector-add(element: T): boolean--><!--Device-Vector-add(element: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -126,6 +135,8 @@ clear(): void
 
 **废弃版本：** 9
 
+<!--Device-Vector-clear(): void--><!--Device-Vector-clear(): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **示例：**
@@ -152,13 +163,15 @@ clone(): Vector<T>
 
 **废弃版本：** 9
 
+<!--Device-Vector-clone(): Vector<T>--><!--Device-Vector-clone(): Vector<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Vector&lt;T&gt; | 返回新的Vector实例。 |
+| [Vector](arkts-arkts-vector-c.md)<T> | 返回新的Vector实例。 |
 
 **示例：**
 
@@ -184,6 +197,8 @@ Vector的构造函数。
 
 **废弃版本：** 9
 
+<!--Device-Vector-constructor()--><!--Device-Vector-constructor()-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **示例：**
@@ -205,13 +220,15 @@ convertToArray(): Array<T>
 
 **废弃版本：** 9
 
+<!--Device-Vector-convertToArray(): Array<T>--><!--Device-Vector-convertToArray(): Array<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;T&gt; | 返回数组。 |
+| [Array](arkts-arkts-array-c.md)<T> | 返回数组。 |
 
 **示例：**
 
@@ -237,13 +254,15 @@ copyToArray(array: Array<T>): void
 
 **废弃版本：** 9
 
+<!--Device-Vector-copyToArray(array: Array<T>): void--><!--Device-Vector-copyToArray(array: Array<T>): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | Array&lt;T&gt; | 是 | 接收Vector中复制元素的数组。 |
+| array | [Array](arkts-arkts-array-c.md)<T> | 是 | 接收Vector中复制元素的数组。 |
 
 ## forEach
 
@@ -257,13 +276,15 @@ forEach(callbackFn: (value: T, index?: number, vector?: Vector<T>) => void, this
 
 **废弃版本：** 9
 
+<!--Device-Vector-forEach(callbackFn: (value: T, index?: number, vector?: Vector<T>) => void, thisArg?: Object): void--><!--Device-Vector-forEach(callbackFn: (value: T, index?: number, vector?: Vector<T>) => void, thisArg?: Object): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; void | 是 | 回调函数。 |
+| callbackFn | (value: T, index?: number, vector?: Vector<T>) => void | 是 | 回调函数。 |
 | thisArg | Object | 否 | callbackFn被调用时用作this值，默认值为当前实例对象。 |
 
 **示例：**
@@ -293,6 +314,8 @@ get(index: number): T
 **起始版本：** 8
 
 **废弃版本：** 9
+
+<!--Device-Vector-get(index: number): T--><!--Device-Vector-get(index: number): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -332,6 +355,8 @@ getCapacity(): number
 
 **废弃版本：** 9
 
+<!--Device-Vector-getCapacity(): number--><!--Device-Vector-getCapacity(): number-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -364,6 +389,8 @@ getFirstElement(): T
 
 **废弃版本：** 9
 
+<!--Device-Vector-getFirstElement(): T--><!--Device-Vector-getFirstElement(): T-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -395,6 +422,8 @@ getIndexFrom(element: T, index: number): number
 **起始版本：** 8
 
 **废弃版本：** 9
+
+<!--Device-Vector-getIndexFrom(element: T, index: number): number--><!--Device-Vector-getIndexFrom(element: T, index: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -434,6 +463,8 @@ getIndexOf(element: T): number
 **起始版本：** 8
 
 **废弃版本：** 9
+
+<!--Device-Vector-getIndexOf(element: T): number--><!--Device-Vector-getIndexOf(element: T): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -476,6 +507,8 @@ getLastElement(): T
 
 **废弃版本：** 9
 
+<!--Device-Vector-getLastElement(): T--><!--Device-Vector-getLastElement(): T-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -507,6 +540,8 @@ getLastIndexFrom(element: T, index: number): number
 **起始版本：** 8
 
 **废弃版本：** 9
+
+<!--Device-Vector-getLastIndexFrom(element: T, index: number): number--><!--Device-Vector-getLastIndexFrom(element: T, index: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -546,6 +581,8 @@ getLastIndexOf(element: T): number
 **起始版本：** 8
 
 **废弃版本：** 9
+
+<!--Device-Vector-getLastIndexOf(element: T): number--><!--Device-Vector-getLastIndexOf(element: T): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -588,6 +625,8 @@ has(element: T): boolean
 
 **废弃版本：** 9
 
+<!--Device-Vector-has(element: T): boolean--><!--Device-Vector-has(element: T): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -628,6 +667,8 @@ increaseCapacityTo(newCapacity: number): void
 
 **废弃版本：** 9
 
+<!--Device-Vector-increaseCapacityTo(newCapacity: number): void--><!--Device-Vector-increaseCapacityTo(newCapacity: number): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -664,6 +705,8 @@ insert(element: T, index: number): void
 
 **废弃版本：** 9
 
+<!--Device-Vector-insert(element: T, index: number): void--><!--Device-Vector-insert(element: T, index: number): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -699,6 +742,8 @@ isEmpty(): boolean
 
 **废弃版本：** 9
 
+<!--Device-Vector-isEmpty(): boolean--><!--Device-Vector-isEmpty(): boolean-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **返回值：**
@@ -730,6 +775,8 @@ remove(element: T): boolean
 **起始版本：** 8
 
 **废弃版本：** 9
+
+<!--Device-Vector-remove(element: T): boolean--><!--Device-Vector-remove(element: T): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -768,6 +815,8 @@ removeByIndex(index: number): T
 **起始版本：** 8
 
 **废弃版本：** 9
+
+<!--Device-Vector-removeByIndex(index: number): T--><!--Device-Vector-removeByIndex(index: number): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -808,6 +857,8 @@ removeByRange(fromIndex: number, toIndex: number): void
 
 **废弃版本：** 9
 
+<!--Device-Vector-removeByRange(fromIndex: number, toIndex: number): void--><!--Device-Vector-removeByRange(fromIndex: number, toIndex: number): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -843,13 +894,15 @@ replaceAllElements(callbackFn: (value: T, index?: number, vector?: Vector<T>) =>
 
 **废弃版本：** 9
 
+<!--Device-Vector-replaceAllElements(callbackFn: (value: T, index?: number, vector?: Vector<T>) => T, thisArg?: Object): void--><!--Device-Vector-replaceAllElements(callbackFn: (value: T, index?: number, vector?: Vector<T>) => T, thisArg?: Object): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; T | 是 | 回调函数。 |
+| callbackFn | (value: T, index?: number, vector?: Vector<T>) => T | 是 | 回调函数。 |
 | thisArg | Object | 否 | callbackFn被调用时用作this值，默认值为当前实例对象。 |
 
 **示例：**
@@ -881,6 +934,8 @@ set(index: number, element: T): T
 
 **废弃版本：** 9
 
+<!--Device-Vector-set(index: number, element: T): T--><!--Device-Vector-set(index: number, element: T): T-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -907,6 +962,8 @@ setLength(newSize: number): void
 **起始版本：** 8
 
 **废弃版本：** 9
+
+<!--Device-Vector-setLength(newSize: number): void--><!--Device-Vector-setLength(newSize: number): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -941,13 +998,15 @@ sort(comparator?: (firstValue: T, secondValue: T) => number): void
 
 **废弃版本：** 9
 
+<!--Device-Vector-sort(comparator?: (firstValue: T, secondValue: T) => number): void--><!--Device-Vector-sort(comparator?: (firstValue: T, secondValue: T) => number): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| comparator | (firstValue: T, secondValue: T) =&gt; number | 否 | 排序的回调函数。默认值为当前实例对象。 |
+| comparator | (firstValue: T, secondValue: T) => number | 否 | 排序的回调函数。默认值为当前实例对象。 |
 
 **示例：**
 
@@ -979,6 +1038,8 @@ subVector(fromIndex: number, toIndex: number): Vector<T>
 
 **废弃版本：** 9
 
+<!--Device-Vector-subVector(fromIndex: number, toIndex: number): Vector<T>--><!--Device-Vector-subVector(fromIndex: number, toIndex: number): Vector<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **参数：**
@@ -992,7 +1053,7 @@ subVector(fromIndex: number, toIndex: number): Vector<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| Vector&lt;T&gt; | 返回新的Vector实例。 |
+| [Vector](arkts-arkts-vector-c.md)<T> | 返回新的Vector实例。 |
 
 **示例：**
 
@@ -1024,6 +1085,8 @@ toString(): string
 **起始版本：** 8
 
 **废弃版本：** 9
+
+<!--Device-Vector-toString(): string--><!--Device-Vector-toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1057,6 +1120,8 @@ trimToCurrentLength(): void
 
 **废弃版本：** 9
 
+<!--Device-Vector-trimToCurrentLength(): void--><!--Device-Vector-trimToCurrentLength(): void-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
 
 **示例：**
@@ -1084,6 +1149,8 @@ Vector的元素个数。
 **起始版本：** 8
 
 **废弃版本：** 9
+
+<!--Device-Vector-length: number--><!--Device-Vector-length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

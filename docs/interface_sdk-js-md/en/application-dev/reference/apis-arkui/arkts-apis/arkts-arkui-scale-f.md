@@ -20,17 +20,19 @@ Scales this matrix object along the x, y, and z axes.
 
 **Substitutes:** [scale](arkts-arkui-matrix4transit-i.md#scale-1)
 
+<!--Device-matrix4-function scale(options: ScaleOption): Matrix4Transit--><!--Device-matrix4-function scale(options: ScaleOption): Matrix4Transit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ScaleOption | Yes | Scaling configuration. |
+| options | [ScaleOption](arkts-arkui-scaleoption-i.md) | Yes | Scaling configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Matrix object after scaling. |
+| [Matrix4Transit](arkts-arkui-matrix4transit-i.md) | Matrix object after scaling. |
 

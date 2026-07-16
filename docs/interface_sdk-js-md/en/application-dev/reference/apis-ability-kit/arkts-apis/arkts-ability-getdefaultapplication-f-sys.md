@@ -12,14 +12,13 @@ import { defaultAppManager } from '@kit.AbilityKit';
 function getDefaultApplication(type: string, userId: number, callback: AsyncCallback<BundleInfo>) : void
 ```
 
-Obtains the default application based on a system-defined application type, a file type that complies with the
-media type format (either specified by **type** or **subtype**), or a
-[uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses an asynchronous
-callback to return the result.
+Obtains the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_DEFAULT_APPLICATION
+
+<!--Device-defaultAppManager-function getDefaultApplication(type: string, userId: int, callback: AsyncCallback<BundleInfo>) : void--><!--Device-defaultAppManager-function getDefaultApplication(type: string, userId: int, callback: AsyncCallback<BundleInfo>) : void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
@@ -29,9 +28,9 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the target application. It must be set to a value defined by[ApplicationType](arkts-ability-applicationtype-e.md), a file type thatcomplies with the media type format, or a value defined by[UniformDataType](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). |
-| userId | number | Yes | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). |
-| callback | AsyncCallback&lt;BundleInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return theresult. If the information is successfully obtained, **err** is **null** and **data** is the applicationinformation. Otherwise, **err** is an error object. |
+| type | string | Yes | Type of the target application. It must be set to a value defined by [ApplicationType](arkts-ability-applicationtype-e.md), a file type that complies with the media type format, or a value defined by [UniformDataType](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). |
+| userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<BundleInfo> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. If the information is successfully obtained, **err** is **null** and **data** is the application information. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -86,14 +85,13 @@ defaultAppManager.getDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
 function getDefaultApplication(type: string, callback: AsyncCallback<BundleInfo>) : void
 ```
 
-Obtains the default application based on a system-defined application type, a file type that complies with the
-media type format (either specified by **type** or **subtype**), or a
-[uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses an asynchronous
-callback to return the result.
+Obtains the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_DEFAULT_APPLICATION
+
+<!--Device-defaultAppManager-function getDefaultApplication(type: string, callback: AsyncCallback<BundleInfo>) : void--><!--Device-defaultAppManager-function getDefaultApplication(type: string, callback: AsyncCallback<BundleInfo>) : void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
@@ -103,8 +101,8 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the target application. It must be set to a value defined by[ApplicationType](arkts-ability-applicationtype-e.md), a file type thatcomplies with the media type format, or a value defined by[UniformDataType](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). |
-| callback | AsyncCallback&lt;BundleInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return theresult. If the information is successfully obtained, **err** is **null** and **data** is the applicationinformation. Otherwise, **err** is an error object. |
+| type | string | Yes | Type of the target application. It must be set to a value defined by [ApplicationType](arkts-ability-applicationtype-e.md), a file type that complies with the media type format, or a value defined by [UniformDataType](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<BundleInfo> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. If the information is successfully obtained, **err** is **null** and **data** is the application information. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -157,14 +155,13 @@ defaultAppManager.getDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
 function getDefaultApplication(type: string, userId?: number) : Promise<BundleInfo>
 ```
 
-Obtains the default application based on a system-defined application type, a file type that complies with the
-media type format (either specified by **type** or **subtype**), or a
-[uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses a promise to
-return the result.
+Obtains the default application based on a system-defined application type, a file type that complies with the media type format (either specified by **type** or **subtype**), or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API uses a promise to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_DEFAULT_APPLICATION
+
+<!--Device-defaultAppManager-function getDefaultApplication(type: string, userId?: int) : Promise<BundleInfo>--><!--Device-defaultAppManager-function getDefaultApplication(type: string, userId?: int) : Promise<BundleInfo>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
@@ -174,14 +171,14 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of the target application. It must be set to a value defined by[ApplicationType](arkts-ability-applicationtype-e.md), a file type thatcomplies with the media type format, or a value defined by[UniformDataType](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). |
-| userId | number | No | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. |
+| type | string | Yes | Type of the target application. It must be set to a value defined by [ApplicationType](arkts-ability-applicationtype-e.md), a file type that complies with the media type format, or a value defined by [UniformDataType](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). |
+| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BundleInfo&gt; | Promise used to return the default application. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<BundleInfo> | Promise used to return the default application. |
 
 **Error codes:**
 

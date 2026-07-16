@@ -4,9 +4,17 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace hiSysEvent--><!--Device-unnamed-declare namespace hiSysEvent-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
+```
 
 ## 汇总
 

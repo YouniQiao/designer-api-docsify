@@ -20,14 +20,16 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 
 **Substitutes:** [getTime](arkts-basicservices-gettime-f.md#gettime-1)
 
+<!--Device-systemTime-function getCurrentTime(isNano: boolean, callback: AsyncCallback<number>): void--><!--Device-systemTime-function getCurrentTime(isNano: boolean, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isNano | boolean | Yes | Whether the time to return is in nanoseconds.<br>- **true**: The result is innanoseconds.<br>- **false**: The result is in milliseconds. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the time elapsed since the Unix epoch. |
+| isNano | boolean | Yes | Whether the time to return is in nanoseconds.<br>- **true**: The result is in nanoseconds.<br>- **false**: The result is in milliseconds. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the time elapsed since the Unix epoch. |
 
 **Error codes:**
 
@@ -70,13 +72,15 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 
 **Substitutes:** [getTime](arkts-basicservices-gettime-f.md#gettime-1)
 
+<!--Device-systemTime-function getCurrentTime(callback: AsyncCallback<number>): void--><!--Device-systemTime-function getCurrentTime(callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the time elapsed since the Unix epoch, inmilliseconds. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the time elapsed since the Unix epoch, in milliseconds. |
 
 **Error codes:**
 
@@ -119,19 +123,21 @@ Obtains the time elapsed since the Unix epoch. This API uses a promise to return
 
 **Substitutes:** [getTime](arkts-basicservices-gettime-f.md#gettime-1)
 
+<!--Device-systemTime-function getCurrentTime(isNano?: boolean): Promise<number>--><!--Device-systemTime-function getCurrentTime(isNano?: boolean): Promise<number>-End-->
+
 **System capability:** SystemCapability.MiscServices.Time
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isNano | boolean | No | Whether the time to return is in nanoseconds. The default value is **false**.<br>Thedefault value is false.<br>- **true**: The result is in nanoseconds.<br>- **false**: The result is inmilliseconds. |
+| isNano | boolean | No | Whether the time to return is in nanoseconds. The default value is **false**.<br>The default value is false.<br>- **true**: The result is in nanoseconds.<br>- **false**: The result is in milliseconds. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the time elapsed since the Unix epoch. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the time elapsed since the Unix epoch. |
 
 **Error codes:**
 

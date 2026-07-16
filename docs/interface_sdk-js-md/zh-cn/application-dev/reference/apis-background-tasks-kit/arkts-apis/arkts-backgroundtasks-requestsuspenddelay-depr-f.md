@@ -16,6 +16,8 @@ function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySus
 
 **替代接口：** [requestSuspendDelay](arkts-backgroundtasks-requestsuspenddelay-f.md#requestsuspenddelay-1)
 
+<!--Device-backgroundTaskManager-function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySuspendInfo--><!--Device-backgroundTaskManager-function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySuspendInfo-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **参数：**
@@ -23,13 +25,13 @@ function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySus
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | reason | string | 是 | 延迟挂起申请的原因。 |
-| callback | Callback&lt;void&gt; | 是 | 延迟即将超时的回调函数，一般在超时前6秒通过此回调通知应用。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | 是 | 延迟即将超时的回调函数，一般在超时前6秒通过此回调通知应用。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DelaySuspendInfo | 返回延迟挂起信息。 |
+| [DelaySuspendInfo](arkts-backgroundtasks-delaysuspendinfo-i.md) | 返回延迟挂起信息。 |
 
 **示例：**
 

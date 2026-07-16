@@ -4,6 +4,8 @@ Defines the status of the socket connection.
 
 **Since:** 10
 
+<!--Device-socket-export interface SocketStateBase--><!--Device-socket-export interface SocketStateBase-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Whether the connection is in the bound state.
 
 **Since:** 10
 
+<!--Device-SocketStateBase-isBound: boolean--><!--Device-SocketStateBase-isBound: boolean-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## isClose
@@ -38,6 +42,8 @@ Whether the connection is in the closed state.
 
 **Since:** 10
 
+<!--Device-SocketStateBase-isClose: boolean--><!--Device-SocketStateBase-isClose: boolean-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## isConnected
@@ -51,6 +57,8 @@ Whether the connection is in the connected state.
 **Type:** boolean
 
 **Since:** 10
+
+<!--Device-SocketStateBase-isConnected: boolean--><!--Device-SocketStateBase-isConnected: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

@@ -1,5 +1,11 @@
 # createCustomizedToneAttrs（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { systemSoundManager } from '@kit.AudioKit';
+```
+
 ## createCustomizedToneAttrs
 
 ```TypeScript
@@ -10,6 +16,8 @@ function createCustomizedToneAttrs(): ToneAttrs
 
 **起始版本：** 12
 
+<!--Device-systemSoundManager-function createCustomizedToneAttrs(): ToneAttrs--><!--Device-systemSoundManager-function createCustomizedToneAttrs(): ToneAttrs-End-->
+
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -18,7 +26,7 @@ function createCustomizedToneAttrs(): ToneAttrs
 
 | 类型 | 说明 |
 | --- | --- |
-| ToneAttrs | 铃声属性类。 |
+| [ToneAttrs](arkts-audio-toneattrs-i-sys.md) | 铃声属性类。 |
 
 **错误码：**
 

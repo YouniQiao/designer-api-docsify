@@ -1,9 +1,10 @@
 # SimpleAnimatorOptions
 
-Defines a simple animation parameter object. Unlike **AnimatorOptions**, this object comes with some default values
-for certain animation parameters, so you do not have to set them manually.
+Defines a simple animation parameter object. Unlike **AnimatorOptions**, this object comes with some default values for certain animation parameters, so you do not have to set them manually.
 
 **Since:** 18
+
+<!--Device-unnamed-export declare class SimpleAnimatorOptions--><!--Device-unnamed-export declare class SimpleAnimatorOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,6 +27,8 @@ A constructor used to create a **SimpleAnimatorOptions** instance.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SimpleAnimatorOptions-constructor(begin: number, end: number)--><!--Device-SimpleAnimatorOptions-constructor(begin: number, end: number)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,19 +77,21 @@ Sets the playback delay for this animation.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SimpleAnimatorOptions-delay(delay: number): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-delay(delay: number): SimpleAnimatorOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| delay | number | Yes | Playback delay, in milliseconds. The value **0** indicates no delay. If the valuespecified is a negative number, the animation starts playing ahead of its scheduled time. If the amount of timeby which the playback is advanced exceeds the total duration of the animation, the animation immediately skipsto its end state.<br>Default value: **0** |
+| delay | number | Yes | Playback delay, in milliseconds. The value **0** indicates no delay. If the value specified is a negative number, the animation starts playing ahead of its scheduled time. If the amount of time by which the playback is advanced exceeds the total duration of the animation, the animation immediately skips to its end state.<br>Default value: **0** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SimpleAnimatorOptions | **SimpleAnimatorOptions** object for animation parameters. |
+| [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md) | **SimpleAnimatorOptions** object for animation parameters. |
 
 **Example**
 
@@ -126,19 +131,21 @@ Sets the playback direction for this animator animation.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SimpleAnimatorOptions-direction(direction: PlayMode): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-direction(direction: PlayMode): SimpleAnimatorOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | PlayMode | Yes | Playback direction.<br>Default value: **PlayMode.Normal** |
+| direction | [PlayMode](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-playmode-e.md) | Yes | Playback direction.<br>Default value: **PlayMode.Normal** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SimpleAnimatorOptions | **SimpleAnimatorOptions** object for animation parameters. |
+| [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md) | **SimpleAnimatorOptions** object for animation parameters. |
 
 ## duration
 
@@ -154,6 +161,8 @@ Sets the animation duration.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SimpleAnimatorOptions-duration(duration: number): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-duration(duration: number): SimpleAnimatorOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -166,7 +175,7 @@ Sets the animation duration.
 
 | Type | Description |
 | --- | --- |
-| SimpleAnimatorOptions | **SimpleAnimatorOptions** object for animation parameters. |
+| [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md) | **SimpleAnimatorOptions** object for animation parameters. |
 
 **Example**
 
@@ -206,6 +215,8 @@ Sets the interpolation curve for this animation.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SimpleAnimatorOptions-easing(curve: string): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-easing(curve: string): SimpleAnimatorOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -218,7 +229,7 @@ Sets the interpolation curve for this animation.
 
 | Type | Description |
 | --- | --- |
-| SimpleAnimatorOptions | **SimpleAnimatorOptions** object for animation parameters. |
+| [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md) | **SimpleAnimatorOptions** object for animation parameters. |
 
 **Example**
 
@@ -258,19 +269,21 @@ Sets the fill mode for this animation.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SimpleAnimatorOptions-fill(fillMode: FillMode): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-fill(fillMode: FillMode): SimpleAnimatorOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillMode | FillMode | Yes | Fill mode, which affects how the animation behaves during the delay period and afterit ends.<br>Default value: **FillMode.Forwards** |
+| fillMode | [FillMode](arkts-arkui-fillmode-e.md) | Yes | Fill mode, which affects how the animation behaves during the delay period and after it ends.<br>Default value: **FillMode.Forwards** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SimpleAnimatorOptions | **SimpleAnimatorOptions** object for animation parameters. |
+| [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md) | **SimpleAnimatorOptions** object for animation parameters. |
 
 ## iterations
 
@@ -286,19 +299,21 @@ Sets the number of times that this animation is played.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-SimpleAnimatorOptions-iterations(iterations: number): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-iterations(iterations: number): SimpleAnimatorOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iterations | number | Yes | Number of times that the animation is played. The value **0** means the animation isnot played, and **-1** means the animation is played for an unlimited number of times.<br>Default value: **1** |
+| iterations | number | Yes | Number of times that the animation is played. The value **0** means the animation is not played, and **-1** means the animation is played for an unlimited number of times.<br>Default value: **1** |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SimpleAnimatorOptions | **SimpleAnimatorOptions** object for animation parameters. |
+| [SimpleAnimatorOptions](arkts-arkui-simpleanimatoroptions-c.md) | **SimpleAnimatorOptions** object for animation parameters. |
 
 **Example**
 

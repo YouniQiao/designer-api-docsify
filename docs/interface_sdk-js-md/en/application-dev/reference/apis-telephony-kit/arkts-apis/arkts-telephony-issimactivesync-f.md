@@ -16,6 +16,8 @@ Checks whether the SIM card in a specified slot is activated.
 
 **Since:** 10
 
+<!--Device-sim-function isSimActiveSync(slotId: int): boolean--><!--Device-sim-function isSimActiveSync(slotId: int): boolean-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**

@@ -22,13 +22,15 @@ Obtain the scanned sta list.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and (ohos.permission.GET_WIFI_PEERS_MAC or (ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION))
 
+<!--Device-wifiManager-function getScanResults(): Promise<Array<WifiScanInfo>>--><!--Device-wifiManager-function getScanResults(): Promise<Array<WifiScanInfo>>-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;WifiScanInfo&gt;&gt; | Returns information about scanned Wi-Fi hotspot if any. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<WifiScanInfo>> | Returns information about scanned Wi-Fi hotspot if any. |
 
 **Error codes:**
 
@@ -55,13 +57,15 @@ Obtain the scanned sta list.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and (ohos.permission.GET_WIFI_PEERS_MAC or (ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION))
 
+<!--Device-wifiManager-function getScanResults(callback: AsyncCallback<Array<WifiScanInfo>>): void--><!--Device-wifiManager-function getScanResults(callback: AsyncCallback<Array<WifiScanInfo>>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;WifiScanInfo&gt;&gt; | Yes | Returns information about scanned Wi-Fi hotspot if any. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<WifiScanInfo>> | Yes | Returns information about scanned Wi-Fi hotspot if any. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ A helper to enable a picker to select output devices
 
 **Since:** 14
 
+<!--Device-avSession-class AVCastPickerHelper--><!--Device-avSession-class AVCastPickerHelper-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## Modules to Import
@@ -24,13 +26,15 @@ The constructor used to create a AVCastPickerHelper object.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-AVCastPickerHelper-constructor(context: Context)--><!--Device-AVCastPickerHelper-constructor(context: Context)-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | represents the context. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | represents the context. |
 
 **Error codes:**
 
@@ -51,6 +55,8 @@ Unregister picker state change callback.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-AVCastPickerHelper-off(type: 'pickerStateChange', callback?: Callback<AVCastPickerState>) : void--><!--Device-AVCastPickerHelper-off(type: 'pickerStateChange', callback?: Callback<AVCastPickerState>) : void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -58,7 +64,7 @@ Unregister picker state change callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pickerStateChange' | Yes | 'pickerStateChange' |
-| callback | Callback&lt;AVCastPickerState&gt; | No | The callback used to handle picker state changed event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AVCastPickerState> | No | The callback used to handle picker state changed event. |
 
 **Error codes:**
 
@@ -79,6 +85,8 @@ Register picker state change callback.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-AVCastPickerHelper-on(type: 'pickerStateChange', callback: Callback<AVCastPickerState>) : void--><!--Device-AVCastPickerHelper-on(type: 'pickerStateChange', callback: Callback<AVCastPickerState>) : void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -86,7 +94,7 @@ Register picker state change callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pickerStateChange' | Yes | 'pickerStateChange' |
-| callback | Callback&lt;AVCastPickerState&gt; | Yes | The callback used to handle picker state changed event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AVCastPickerState> | Yes | The callback used to handle picker state changed event. |
 
 **Error codes:**
 
@@ -101,14 +109,13 @@ Register picker state change callback.
 resetCommunicationDevice(): Promise<void>
 ```
 
-Reset audio device to be default set by the platform which is used for communication use cases
-including voice or video calls.
-For example, the audio output device will be switched to earpiece for voice call and
-to speaker for video call on phone.
+Reset audio device to be default set by the platform which is used for communication use cases including voice or video calls.For example, the audio output device will be switched to earpiece for voice call and to speaker for video call on phone.
 
 **Since:** 21
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-AVCastPickerHelper-resetCommunicationDevice(): Promise<void>--><!--Device-AVCastPickerHelper-resetCommunicationDevice(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -116,7 +123,7 @@ to speaker for video call on phone.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 ## select
 
@@ -130,19 +137,21 @@ Pull up the avcastpicker based on the options.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-AVCastPickerHelper-select(options?: AVCastPickerOptions): Promise<void>--><!--Device-AVCastPickerHelper-select(options?: AVCastPickerOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | AVCastPickerOptions | No | represents the options provided to the picker. |
+| options | [AVCastPickerOptions](arkts-avsession-avcastpickeroptions-i.md) | No | represents the options provided to the picker. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 **Error codes:**
 

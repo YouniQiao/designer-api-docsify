@@ -1,5 +1,11 @@
 # getAudioManager
 
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
+
 ## getAudioManager
 
 ```TypeScript
@@ -10,7 +16,9 @@ function getAudioManager(): AudioManager
 
 **起始版本：** 7
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-audio-function getAudioManager(): AudioManager--><!--Device-audio-function getAudioManager(): AudioManager-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -18,7 +26,7 @@ function getAudioManager(): AudioManager
 
 | 类型 | 说明 |
 | --- | --- |
-| AudioManager | 音频管理器对象。 |
+| [AudioManager](arkts-audio-audiomanager-i.md) | 音频管理器对象。 |
 
 **示例：**
 

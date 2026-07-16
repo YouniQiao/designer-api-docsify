@@ -2,13 +2,15 @@
 
 Provides APIs for generating the messages in CMS format.
 
-> **NOTE**
->
-> PKCS #7 is a standard syntax for storing signed or encrypted data. CMS is an extension of PKCS #7. PKCS #7
-> supports data types including data, signed data, enveloped data, signed and enveloped data, digested
+> **NOTE**  
+>  
+> PKCS #7 is a standard syntax for storing signed or encrypted data. CMS is an extension of PKCS #7. PKCS #7  
+> supports data types including data, signed data, enveloped data, signed and enveloped data, digested  
 > data, and encrypted data. It is often used to protect data integrity and confidentiality.
 
 **Since:** 18
+
+<!--Device-cert-interface CmsGenerator--><!--Device-cert-interface CmsGenerator-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -24,15 +26,15 @@ import { cert } from '@kit.DeviceCertificateKit';
 addCert(cert: X509Cert): void
 ```
 
-Adds a CMS certificate of the **SIGNED_DATA** content type, for example, the issuer certificate of a signing
-certificate.
+Adds a CMS certificate of the **SIGNED_DATA** content type, for example, the issuer certificate of a signing certificate.
 
-If the **addSigner** API is not called and only the certificate is added, the generated CMS signed data
-contains only the certificate.
+If the **addSigner** API is not called and only the certificate is added, the generated CMS signed data contains only the certificate.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CmsGenerator-addCert(cert: X509Cert): void--><!--Device-CmsGenerator-addCert(cert: X509Cert): void-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -40,7 +42,7 @@ contains only the certificate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | X509Cert | Yes | X.509 certificate to add. |
+| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-x509cert-t.md) | Yes | X.509 certificate to add. |
 
 **Error codes:**
 
@@ -115,8 +117,7 @@ function testAddCert() {
 addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>
 ```
 
-Adds recipient information to a CMS with the content type of **ENVELOPED_DATA**. This API uses a promise to
-return the result.
+Adds recipient information to a CMS with the content type of **ENVELOPED_DATA**. This API uses a promise to return the result.
 
 At least one recipient needs to be set.
 
@@ -124,19 +125,21 @@ At least one recipient needs to be set.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-CmsGenerator-addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>--><!--Device-CmsGenerator-addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recipientInfo | CmsRecipientInfo | Yes | Recipient information. |
+| recipientInfo | [CmsRecipientInfo](arkts-devicecertificate-cmsrecipientinfo-i.md) | Yes | Recipient information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -243,15 +246,17 @@ Adds signer information to the CMS whose content type is **SIGNED_DATA**.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-CmsGenerator-addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): void--><!--Device-CmsGenerator-addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): void-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | X509Cert | Yes | X.509 certificate. |
-| keyInfo | PrivateKeyInfo | Yes | Private key information. |
-| config | CmsSignerConfig | Yes | Signer configuration. |
+| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-x509cert-t.md) | Yes | X.509 certificate. |
+| keyInfo | [PrivateKeyInfo](arkts-devicecertificate-privatekeyinfo-i.md) | Yes | Private key information. |
+| config | [CmsSignerConfig](arkts-devicecertificate-cmssignerconfig-i.md) | Yes | Signer configuration. |
 
 **Error codes:**
 
@@ -356,12 +361,13 @@ function testAddSigner() {
 doFinal(data: Uint8Array, options?: CmsGeneratorOptions): Promise<Uint8Array | string>
 ```
 
-Obtains the CMS message, for example, the CMS signed data or CMS enveloped data. This API uses a promise to
-return the result.
+Obtains the CMS message, for example, the CMS signed data or CMS enveloped data. This API uses a promise to return the result.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CmsGenerator-doFinal(data: Uint8Array, options?: CmsGeneratorOptions): Promise<Uint8Array | string>--><!--Device-CmsGenerator-doFinal(data: Uint8Array, options?: CmsGeneratorOptions): Promise<Uint8Array | string>-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -369,14 +375,14 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Uint8Array | Yes | Data to be operated. |
-| options | CmsGeneratorOptions | No | Configuration of the CMS operation. |
+| data | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Data to be operated. |
+| options | [CmsGeneratorOptions](arkts-devicecertificate-cmsgeneratoroptions-i.md) | No | Configuration of the CMS operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array \| string&gt; | Promise used to return the CMS message. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Uint8Array \| string> | Promise used to return the CMS message. |
 
 **Error codes:**
 
@@ -493,12 +499,13 @@ async function testDoFinalByPromise() {
 doFinalSync(data: Uint8Array, options?: CmsGeneratorOptions): Uint8Array | string
 ```
 
-Obtains the CMS message, for example, the CMS signed data or CMS enveloped data. This API returns the result
-synchronously.
+Obtains the CMS message, for example, the CMS signed data or CMS enveloped data. This API returns the result synchronously.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-CmsGenerator-doFinalSync(data: Uint8Array, options?: CmsGeneratorOptions): Uint8Array | string--><!--Device-CmsGenerator-doFinalSync(data: Uint8Array, options?: CmsGeneratorOptions): Uint8Array | string-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -506,14 +513,14 @@ synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Uint8Array | Yes | Data to be operated. |
-| options | CmsGeneratorOptions | No | Configuration of the CMS operation. |
+| data | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Data to be operated. |
+| options | [CmsGeneratorOptions](arkts-devicecertificate-cmsgeneratoroptions-i.md) | No | Configuration of the CMS operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | CMS message generated. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | CMS message generated. |
 
 **Error codes:**
 
@@ -627,15 +634,15 @@ function testDoFinalSync() {
 getEncryptedContentData(): Promise<Uint8Array>
 ```
 
-Obtains the encrypted content data of the CMS whose content type is **ENVELOPED_DATA**. This API uses a promise
-to return the result.
+Obtains the encrypted content data of the CMS whose content type is **ENVELOPED_DATA**. This API uses a promise to return the result.
 
-Obtains the encrypted content data if the **CmsGenerator** of the **ENVELOPED_DATA** type is created and data
-separation is used to generate detached CMS enveloped data.
+Obtains the encrypted content data if the **CmsGenerator** of the **ENVELOPED_DATA** type is created and data separation is used to generate detached CMS enveloped data.
 
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-CmsGenerator-getEncryptedContentData(): Promise<Uint8Array>--><!--Device-CmsGenerator-getEncryptedContentData(): Promise<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -643,7 +650,7 @@ separation is used to generate detached CMS enveloped data.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the encrypted data. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Uint8Array> | Promise used to return the encrypted data. |
 
 **Error codes:**
 
@@ -759,12 +766,13 @@ setRecipientEncryptionAlgorithm(algorithm: CmsRecipientEncryptionAlgorithm): voi
 
 Sets the encryption algorithm for the CMS whose content type is **ENVELOPED_DATA**.
 
-This method should be called immediately after the **CmsGenerator** of the **ENVELOPED_DATA** type is created. If
-this method is not called, AES_256_GCM is used as the encryption algorithm by default.
+This method should be called immediately after the **CmsGenerator** of the **ENVELOPED_DATA** type is created. If this method is not called, AES_256_GCM is used as the encryption algorithm by default.
 
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-CmsGenerator-setRecipientEncryptionAlgorithm(algorithm: CmsRecipientEncryptionAlgorithm): void--><!--Device-CmsGenerator-setRecipientEncryptionAlgorithm(algorithm: CmsRecipientEncryptionAlgorithm): void-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -772,7 +780,7 @@ this method is not called, AES_256_GCM is used as the encryption algorithm by de
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algorithm | CmsRecipientEncryptionAlgorithm | Yes | Encryption algorithm used by the CMS to encapsulate data. |
+| algorithm | [CmsRecipientEncryptionAlgorithm](arkts-devicecertificate-cmsrecipientencryptionalgorithm-e.md) | Yes | Encryption algorithm used by the CMS to encapsulate data. |
 
 **Error codes:**
 

@@ -20,6 +20,8 @@ Disconnects to an AgentExtensionAbility.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-agentManager-function disconnectAgentExtensionAbility(proxy: AgentProxy): Promise<void>--><!--Device-agentManager-function disconnectAgentExtensionAbility(proxy: AgentProxy): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -28,13 +30,13 @@ Disconnects to an AgentExtensionAbility.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| proxy | AgentProxy | Yes | The agent proxy to disconnect. |
+| proxy | [AgentProxy](arkts-ability-agentproxy-t-sys.md) | Yes | The agent proxy to disconnect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@
 
 **Deprecated since:** 6
 
+<!--Device-unnamed-export interface ClearStorageOptions--><!--Device-unnamed-export interface ClearStorageOptions-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 ## complete
@@ -21,6 +23,8 @@ Called when the execution is completed.
 **Deprecated since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-ClearStorageOptions-complete?: () => void--><!--Device-ClearStorageOptions-complete?: () => void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
@@ -40,6 +44,8 @@ Called when the stored content fails to be cleared.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-ClearStorageOptions-fail?: (data: string, code: number) => void--><!--Device-ClearStorageOptions-fail?: (data: string, code: number) => void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 ## success
@@ -57,6 +63,8 @@ Called when the stored content is cleared successfully.
 **Deprecated since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-ClearStorageOptions-success?: () => void--><!--Device-ClearStorageOptions-success?: () => void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 

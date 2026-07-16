@@ -1,5 +1,11 @@
 # on
 
+## 导入模块
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+```
+
 ## on('openDLPFile')
 
 ```TypeScript
@@ -12,6 +18,8 @@ function on(type: 'openDLPFile', listener: Callback<AccessedDLPFileInfo>): void
 
 **起始版本：** 10
 
+<!--Device-dlpPermission-function on(type: 'openDLPFile', listener: Callback<AccessedDLPFileInfo>): void--><!--Device-dlpPermission-function on(type: 'openDLPFile', listener: Callback<AccessedDLPFileInfo>): void-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**
@@ -19,7 +27,7 @@ function on(type: 'openDLPFile', listener: Callback<AccessedDLPFileInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'openDLPFile' | 是 | 监听事件类型。固定值为'openDLPFile'：打开DLP文件事件。 |
-| listener | Callback&lt;AccessedDLPFileInfo&gt; | 是 | DLP文件打开事件的回调。在当前应用的沙箱应用打开DLP文件时，通知当前应用。 |
+| listener | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AccessedDLPFileInfo> | 是 | DLP文件打开事件的回调。在当前应用的沙箱应用打开DLP文件时，通知当前应用。 |
 
 **错误码：**
 

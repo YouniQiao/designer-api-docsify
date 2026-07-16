@@ -12,6 +12,8 @@ Enumerates the movement units for traversing the node text.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-accessibility-type TextMoveUnit = 'char' | 'word' | 'line' | 'page' | 'paragraph'--><!--Device-accessibility-type TextMoveUnit = 'char' | 'word' | 'line' | 'page' | 'paragraph'-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 | Type | Description |

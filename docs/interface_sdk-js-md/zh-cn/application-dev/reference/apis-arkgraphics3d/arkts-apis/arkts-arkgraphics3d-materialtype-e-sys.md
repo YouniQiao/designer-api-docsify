@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export enum MaterialType--><!--Device-unnamed-export enum MaterialType-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## UNLIT_SHADOW_ALPHA
@@ -17,6 +19,8 @@ UNLIT_SHADOW_ALPHA = 100
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-MaterialType-UNLIT_SHADOW_ALPHA = 100--><!--Device-MaterialType-UNLIT_SHADOW_ALPHA = 100-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

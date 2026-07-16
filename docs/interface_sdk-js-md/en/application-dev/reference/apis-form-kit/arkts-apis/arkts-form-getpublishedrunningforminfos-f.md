@@ -12,12 +12,13 @@ import { formProvider } from '@kit.FormKit';
 function getPublishedRunningFormInfos(): Promise<Array<formInfo.RunningFormInfo>>
 ```
 
-Obtains information about all widgets that have been added to the home screen. This API uses a promise to return
-the result.
+Obtains information about all widgets that have been added to the home screen. This API uses a promise to return the result.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-formProvider-function getPublishedRunningFormInfos(): Promise<Array<formInfo.RunningFormInfo>>--><!--Device-formProvider-function getPublishedRunningFormInfos(): Promise<Array<formInfo.RunningFormInfo>>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -25,7 +26,7 @@ the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Promise used to return the information about widgets that meet therequirements. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<formInfo.RunningFormInfo>> | Promise used to return the information about widgets that meet the requirements. |
 
 **Error codes:**
 

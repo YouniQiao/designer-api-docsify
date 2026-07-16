@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export declare enum PopupPlacement--><!--Device-unnamed-export declare enum PopupPlacement-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -19,6 +21,8 @@ LEFT = 0
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PopupPlacement-LEFT = 0--><!--Device-PopupPlacement-LEFT = 0-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -36,6 +40,8 @@ RIGHT = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PopupPlacement-RIGHT = 1--><!--Device-PopupPlacement-RIGHT = 1-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +57,8 @@ TOP = 2
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PopupPlacement-TOP = 2--><!--Device-PopupPlacement-TOP = 2-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -68,6 +76,8 @@ BOTTOM = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PopupPlacement-BOTTOM = 3--><!--Device-PopupPlacement-BOTTOM = 3-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -83,6 +93,8 @@ TOP_LEFT = 4
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PopupPlacement-TOP_LEFT = 4--><!--Device-PopupPlacement-TOP_LEFT = 4-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -100,6 +112,8 @@ TOP_RIGHT = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PopupPlacement-TOP_RIGHT = 5--><!--Device-PopupPlacement-TOP_RIGHT = 5-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -115,6 +129,8 @@ BOTTOM_LEFT = 6
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PopupPlacement-BOTTOM_LEFT = 6--><!--Device-PopupPlacement-BOTTOM_LEFT = 6-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -132,6 +148,8 @@ BOTTOM_RIGHT = 7
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PopupPlacement-BOTTOM_RIGHT = 7--><!--Device-PopupPlacement-BOTTOM_RIGHT = 7-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -147,6 +165,8 @@ LEFT_TOP = 8
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PopupPlacement-LEFT_TOP = 8--><!--Device-PopupPlacement-LEFT_TOP = 8-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -164,6 +184,8 @@ LEFT_BOTTOM = 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PopupPlacement-LEFT_BOTTOM = 9--><!--Device-PopupPlacement-LEFT_BOTTOM = 9-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -179,6 +201,8 @@ RIGHT_TOP = 10
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PopupPlacement-RIGHT_TOP = 10--><!--Device-PopupPlacement-RIGHT_TOP = 10-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -196,6 +220,8 @@ RIGHT_BOTTOM = 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PopupPlacement-RIGHT_BOTTOM = 11--><!--Device-PopupPlacement-RIGHT_BOTTOM = 11-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -211,6 +237,8 @@ NONE = 12
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PopupPlacement-NONE = 12--><!--Device-PopupPlacement-NONE = 12-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

@@ -18,20 +18,22 @@ Registers a specified external Provider. This API uses a promise to return the r
 
 **Required permissions:** ohos.permission.CRYPTO_EXTENSION_REGISTER
 
+<!--Device-huksExternalCrypto-function registerProvider(providerName: string, params: Array<HuksExternalCryptoParam>): Promise<void>--><!--Device-huksExternalCrypto-function registerProvider(providerName: string, params: Array<HuksExternalCryptoParam>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| providerName | string | Yes | Provider name, which contains a maximum of 128 characters. It is recommended thatthe value contain the vendor information, be globally unique, and not contain sensitive data such as personalcontact information.<br>A maximum of 10 providers can be registered. |
-| params | Array&lt;HuksExternalCryptoParam&gt; | Yes | Parameters to be passed during the operation. The mandatory tagis [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcryptotagtype-e.md), indicating theability name. Set this parameter based on the actual service requirements. |
+| providerName | string | Yes | Provider name, which contains a maximum of 128 characters. It is recommended that the value contain the vendor information, be globally unique, and not contain sensitive data such as personal contact information.<br>A maximum of 10 providers can be registered. |
+| params | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<HuksExternalCryptoParam> | Yes | Parameters to be passed during the operation. The mandatory tag is [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcryptotagtype-e.md), indicating the ability name. Set this parameter based on the actual service requirements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

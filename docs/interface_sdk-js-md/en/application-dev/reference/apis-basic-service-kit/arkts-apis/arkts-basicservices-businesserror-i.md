@@ -6,6 +6,8 @@ Defines the error parameter.
 
 **Since:** 6
 
+<!--Device-unnamed-export interface BusinessError<T = void> extends Error--><!--Device-unnamed-export interface BusinessError<T = void> extends Error-End-->
+
 **System capability:** SystemCapability.Base
 
 ## Modules to Import
@@ -30,6 +32,8 @@ Error code returned when the API fails to be called.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-BusinessError-code: number--><!--Device-BusinessError-code: number-End-->
+
 **System capability:** SystemCapability.Base
 
 ## data
@@ -38,8 +42,7 @@ Error code returned when the API fails to be called.
 data?: T
 ```
 
-Error message returned when the API fails to be called. If this parameter is left empty, the error object does
-not contain additional data.
+Error message returned when the API fails to be called. If this parameter is left empty, the error object does not contain additional data.
 
 **Type:** T
 
@@ -48,6 +51,8 @@ not contain additional data.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-BusinessError-data?: T--><!--Device-BusinessError-data?: T-End-->
 
 **System capability:** SystemCapability.Base
 

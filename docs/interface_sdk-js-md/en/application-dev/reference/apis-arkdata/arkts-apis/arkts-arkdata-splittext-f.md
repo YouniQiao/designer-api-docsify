@@ -16,6 +16,8 @@ Splits text.
 
 **Since:** 15
 
+<!--Device-intelligence-function splitText(text: string, config: SplitConfig): Promise<Array<string>>--><!--Device-intelligence-function splitText(text: string, config: SplitConfig): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 **Parameters:**
@@ -23,13 +25,13 @@ Splits text.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Text for chunking. The length of the text is no longer then 100k tokens. |
-| config | SplitConfig | Yes | Configurations of text chunking. |
+| config | [SplitConfig](arkts-arkdata-splitconfig-i.md) | Yes | Configurations of text chunking. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | The promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | The promise used to return the result. |
 
 **Error codes:**
 

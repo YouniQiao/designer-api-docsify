@@ -6,6 +6,8 @@ Provide an interface to set transition style when a page exits.
 
 **Since:** 7
 
+<!--Device-unnamed-interface PageTransitionExitInterface extends CommonTransition<PageTransitionExitInterface>--><!--Device-unnamed-interface PageTransitionExitInterface extends CommonTransition<PageTransitionExitInterface>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -20,19 +22,21 @@ Sets the page exit animation.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PageTransitionExitInterface-(value: PageTransitionOptions): PageTransitionExitInterface--><!--Device-PageTransitionExitInterface-(value: PageTransitionOptions): PageTransitionExitInterface-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | PageTransitionOptions | Yes | pageTransition options |
+| value | [PageTransitionOptions](arkts-arkui-pagetransitionoptions-i.md) | Yes | pageTransition options |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PageTransitionExitInterface | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform |
+| [PageTransitionExitInterface](arkts-arkui-pagetransitionexitinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform |
 
 ## onExit
 
@@ -40,12 +44,13 @@ Sets the page exit animation.
 onExit(event: PageTransitionCallback): PageTransitionExitInterface
 ```
 
-Invoked on a per-frame basis until the exit animation is complete, with the **progress** parameter changing from 0
-to 1.
+Invoked on a per-frame basis until the exit animation is complete, with the **progress** parameter changing from 0to 1.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PageTransitionExitInterface-onExit(event: PageTransitionCallback): PageTransitionExitInterface--><!--Device-PageTransitionExitInterface-onExit(event: PageTransitionCallback): PageTransitionExitInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -53,11 +58,11 @@ to 1.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | PageTransitionCallback | Yes | Callback invoked on a per-frame basis until the exit animation iscomplete, with the **progress** parameter changing from 0 to 1.<br>**Since:** 18 |
+| event | [PageTransitionCallback](arkts-arkui-pagetransitioncallback-t.md) | Yes | Callback invoked on a per-frame basis until the exit animation is complete, with the **progress** parameter changing from 0 to 1.<br>**Since:** 18 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PageTransitionExitInterface | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform |
+| [PageTransitionExitInterface](arkts-arkui-pagetransitionexitinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform |
 

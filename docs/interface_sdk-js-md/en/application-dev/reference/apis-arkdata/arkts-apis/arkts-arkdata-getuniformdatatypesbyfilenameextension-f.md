@@ -18,6 +18,8 @@ Obtains the uniform data type IDs based on the given file name extension and dat
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-uniformTypeDescriptor-function getUniformDataTypesByFilenameExtension(filenameExtension: string, belongsTo?: string): Array<string>--><!--Device-uniformTypeDescriptor-function getUniformDataTypesByFilenameExtension(filenameExtension: string, belongsTo?: string): Array<string>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 **Parameters:**
@@ -25,13 +27,13 @@ Obtains the uniform data type IDs based on the given file name extension and dat
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filenameExtension | string | Yes | File name extension. |
-| belongsTo | string | No | ID of the uniform data type, to which the data type to be obtained belongs. Thisparameter has no default value. If it is not specified, the[uniform data type ID] is queried based on the file nameextension. |
+| belongsTo | string | No | ID of the uniform data type, to which the data type to be obtained belongs. This parameter has no default value. If it is not specified, the [uniform data type ID] is queried based on the file name extension. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Uniform data type IDs that match the specified file name extension and **belongsTo** (ifspecified). If no match is found, the data types dynamically generated based on the rules specified by theinput parameters are returned. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Uniform data type IDs that match the specified file name extension and **belongsTo** (if specified). If no match is found, the data types dynamically generated based on the rules specified by the input parameters are returned. |
 
 **Error codes:**
 

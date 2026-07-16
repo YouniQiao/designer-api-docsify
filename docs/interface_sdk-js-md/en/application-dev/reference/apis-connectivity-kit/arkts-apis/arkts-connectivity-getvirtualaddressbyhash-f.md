@@ -20,13 +20,15 @@ Obtain the virtual address of the corresponding device based on the hash value o
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function getVirtualAddressByHash(algorithmType: HashAlgorithmType, hashValue: string): string--><!--Device-connection-function getVirtualAddressByHash(algorithmType: HashAlgorithmType, hashValue: string): string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algorithmType | HashAlgorithmType | Yes | Indicate the hash algorithm type. |
+| algorithmType | [HashAlgorithmType](arkts-connectivity-hashalgorithmtype-e.md) | Yes | Indicate the hash algorithm type. |
 | hashValue | string | Yes | Indicate the hash value of the device MAC address. |
 
 **Return value:**

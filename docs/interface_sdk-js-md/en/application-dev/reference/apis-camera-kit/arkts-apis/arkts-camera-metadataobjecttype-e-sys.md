@@ -4,6 +4,8 @@ Enumerates the types of metadata objects used for camera detection.
 
 **Since:** 10
 
+<!--Device-camera-enum MetadataObjectType--><!--Device-camera-enum MetadataObjectType-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## HUMAN_BODY
@@ -17,6 +19,8 @@ Metadata object used for human body detection.
 **Since:** 23
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-MetadataObjectType-HUMAN_BODY = 1--><!--Device-MetadataObjectType-HUMAN_BODY = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -34,6 +38,8 @@ Metadata object used for cat face detection.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-MetadataObjectType-CAT_FACE = 2--><!--Device-MetadataObjectType-CAT_FACE = 2-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -49,6 +55,8 @@ Metadata object used for cat body detection.
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-MetadataObjectType-CAT_BODY = 3--><!--Device-MetadataObjectType-CAT_BODY = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -66,6 +74,8 @@ Metadata object used for dog face detection.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-MetadataObjectType-DOG_FACE = 4--><!--Device-MetadataObjectType-DOG_FACE = 4-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -81,6 +91,8 @@ Metadata object used for dog body detection.
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-MetadataObjectType-DOG_BODY = 5--><!--Device-MetadataObjectType-DOG_BODY = 5-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -98,6 +110,8 @@ Metadata object used for salient detection.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-MetadataObjectType-SALIENT_DETECTION = 6--><!--Device-MetadataObjectType-SALIENT_DETECTION = 6-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -113,6 +127,8 @@ Barcode detection type.
 **Since:** 26.0.0
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-MetadataObjectType-BAR_CODE_DETECTION = 7--><!--Device-MetadataObjectType-BAR_CODE_DETECTION = 7-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -130,6 +146,8 @@ Basic face detection type.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-MetadataObjectType-BASIC_FACE_DETECTION = 8--><!--Device-MetadataObjectType-BASIC_FACE_DETECTION = 8-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -145,6 +163,8 @@ Text detection type.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MetadataObjectType-TEXT_DETECTION = 9--><!--Device-MetadataObjectType-TEXT_DETECTION = 9-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

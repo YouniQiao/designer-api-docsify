@@ -4,6 +4,8 @@ Enumerates the properties available for the metadata of a DNG image.
 
 **Since:** 24
 
+<!--Device-image-enum DngPropertyKey--><!--Device-image-enum DngPropertyKey-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## DNG_VERSION
@@ -17,6 +19,8 @@ The DNG version.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-DNG_VERSION = 'DNGVersion'--><!--Device-DngPropertyKey-DNG_VERSION = 'DNGVersion'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -32,6 +36,8 @@ The DNG backward version.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-DNG_BACKWARD_VERSION = 'DNGBackwardVersion'--><!--Device-DngPropertyKey-DNG_BACKWARD_VERSION = 'DNGBackwardVersion'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## UNIQUE_CAMERA_MODEL
@@ -45,6 +51,8 @@ A unique camera model.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-UNIQUE_CAMERA_MODEL = 'UniqueCameraModel'--><!--Device-DngPropertyKey-UNIQUE_CAMERA_MODEL = 'UniqueCameraModel'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -60,6 +68,8 @@ A localized camera model.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-LOCALIZED_CAMERA_MODEL = 'LocalizedCameraModel'--><!--Device-DngPropertyKey-LOCALIZED_CAMERA_MODEL = 'LocalizedCameraModel'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## CFA_PLANE_COLOR
@@ -73,6 +83,8 @@ The CFA (color filter array) plane color.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-CFA_PLANE_COLOR = 'CFAPlaneColor'--><!--Device-DngPropertyKey-CFA_PLANE_COLOR = 'CFAPlaneColor'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -88,6 +100,8 @@ The CFA (color filter array) layout.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-CFA_LAYOUT = 'CFALayout'--><!--Device-DngPropertyKey-CFA_LAYOUT = 'CFALayout'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## LINEARIZATION_TABLE
@@ -101,6 +115,8 @@ The linearization table.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-LINEARIZATION_TABLE = 'LinearizationTable'--><!--Device-DngPropertyKey-LINEARIZATION_TABLE = 'LinearizationTable'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -116,6 +132,8 @@ The black level repeat dimension.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-BLACK_LEVEL_REPEAT_DIM = 'BlackLevelRepeatDim'--><!--Device-DngPropertyKey-BLACK_LEVEL_REPEAT_DIM = 'BlackLevelRepeatDim'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## BLACK_LEVEL
@@ -129,6 +147,8 @@ The zero light encoding level.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-BLACK_LEVEL = 'BlackLevel'--><!--Device-DngPropertyKey-BLACK_LEVEL = 'BlackLevel'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -144,6 +164,8 @@ The black level delta H.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-BLACK_LEVEL_DELTA_H = 'BlackLevelDeltaH'--><!--Device-DngPropertyKey-BLACK_LEVEL_DELTA_H = 'BlackLevelDeltaH'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## BLACK_LEVEL_DELTA_V
@@ -157,6 +179,8 @@ The black level delta V.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-BLACK_LEVEL_DELTA_V = 'BlackLevelDeltaV'--><!--Device-DngPropertyKey-BLACK_LEVEL_DELTA_V = 'BlackLevelDeltaV'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -172,6 +196,8 @@ The white level.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-WHITE_LEVEL = 'WhiteLevel'--><!--Device-DngPropertyKey-WHITE_LEVEL = 'WhiteLevel'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## DEFAULT_SCALE
@@ -185,6 +211,8 @@ The default scale.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-DEFAULT_SCALE = 'DefaultScale'--><!--Device-DngPropertyKey-DEFAULT_SCALE = 'DefaultScale'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -200,6 +228,8 @@ The default crop origin.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-DEFAULT_CROP_ORIGIN = 'DefaultCropOrigin'--><!--Device-DngPropertyKey-DEFAULT_CROP_ORIGIN = 'DefaultCropOrigin'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## DEFAULT_CROP_SIZE
@@ -213,6 +243,8 @@ The default crop size.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-DEFAULT_CROP_SIZE = 'DefaultCropSize'--><!--Device-DngPropertyKey-DEFAULT_CROP_SIZE = 'DefaultCropSize'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -228,6 +260,8 @@ A transformation matrix under the first calibration illuminant.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-COLOR_MATRIX1 = 'ColorMatrix1'--><!--Device-DngPropertyKey-COLOR_MATRIX1 = 'ColorMatrix1'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## COLOR_MATRIX2
@@ -241,6 +275,8 @@ A transformation matrix under the second calibration illuminant.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-COLOR_MATRIX2 = 'ColorMatrix2'--><!--Device-DngPropertyKey-COLOR_MATRIX2 = 'ColorMatrix2'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -256,6 +292,8 @@ A calibration matrix under the first calibration illuminant.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-CAMERA_CALIBRATION1 = 'CameraCalibration1'--><!--Device-DngPropertyKey-CAMERA_CALIBRATION1 = 'CameraCalibration1'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## CAMERA_CALIBRATION2
@@ -269,6 +307,8 @@ A calibration matrix under the second calibration illuminant.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-CAMERA_CALIBRATION2 = 'CameraCalibration2'--><!--Device-DngPropertyKey-CAMERA_CALIBRATION2 = 'CameraCalibration2'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -284,6 +324,8 @@ A dimensionality reduction matrix under the first calibration illuminant.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-REDUCTION_MATRIX1 = 'ReductionMatrix1'--><!--Device-DngPropertyKey-REDUCTION_MATRIX1 = 'ReductionMatrix1'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## REDUCTION_MATRIX2
@@ -297,6 +339,8 @@ A dimensionality reduction matrix under the second calibration illuminant.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-REDUCTION_MATRIX2 = 'ReductionMatrix2'--><!--Device-DngPropertyKey-REDUCTION_MATRIX2 = 'ReductionMatrix2'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -312,6 +356,8 @@ The analog balance.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-ANALOG_BALANCE = 'AnalogBalance'--><!--Device-DngPropertyKey-ANALOG_BALANCE = 'AnalogBalance'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## AS_SHOT_NEUTRAL
@@ -325,6 +371,8 @@ The as-shot neutral.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-AS_SHOT_NEUTRAL = 'AsShotNeutral'--><!--Device-DngPropertyKey-AS_SHOT_NEUTRAL = 'AsShotNeutral'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -340,6 +388,8 @@ The as-shot white, encoded as X‑Y chromaticity coordinates.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-AS_SHOT_WHITEXY = 'AsShotWhiteXY'--><!--Device-DngPropertyKey-AS_SHOT_WHITEXY = 'AsShotWhiteXY'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## BASELINE_EXPOSURE
@@ -353,6 +403,8 @@ The baseline exposure.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-BASELINE_EXPOSURE = 'BaselineExposure'--><!--Device-DngPropertyKey-BASELINE_EXPOSURE = 'BaselineExposure'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -368,6 +420,8 @@ The baseline noise.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-BASELINE_NOISE = 'BaselineNoise'--><!--Device-DngPropertyKey-BASELINE_NOISE = 'BaselineNoise'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## BASELINE_SHARPNESS
@@ -381,6 +435,8 @@ The baseline sharpness.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-BASELINE_SHARPNESS = 'BaselineSharpness'--><!--Device-DngPropertyKey-BASELINE_SHARPNESS = 'BaselineSharpness'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -396,6 +452,8 @@ The Bayer green split.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-BAYER_GREEN_SPLIT = 'BayerGreenSplit'--><!--Device-DngPropertyKey-BAYER_GREEN_SPLIT = 'BayerGreenSplit'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## LINEAR_RESPONSE_LIMIT
@@ -409,6 +467,8 @@ The linear response limit.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-LINEAR_RESPONSE_LIMIT = 'LinearResponseLimit'--><!--Device-DngPropertyKey-LINEAR_RESPONSE_LIMIT = 'LinearResponseLimit'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -424,6 +484,8 @@ The serial number of the camera.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-CAMERA_SERIAL_NUMBER = 'CameraSerialNumber'--><!--Device-DngPropertyKey-CAMERA_SERIAL_NUMBER = 'CameraSerialNumber'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## LENS_INFO
@@ -437,6 +499,8 @@ Information about the lens.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-LENS_INFO = 'LensInfo'--><!--Device-DngPropertyKey-LENS_INFO = 'LensInfo'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -452,6 +516,8 @@ The chroma blur radius.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-CHROMA_BLUR_RADIUS = 'ChromaBlurRadius'--><!--Device-DngPropertyKey-CHROMA_BLUR_RADIUS = 'ChromaBlurRadius'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## ANTI_ALIAS_STRENGTH
@@ -465,6 +531,8 @@ The anti-alias strength.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-ANTI_ALIAS_STRENGTH = 'AntiAliasStrength'--><!--Device-DngPropertyKey-ANTI_ALIAS_STRENGTH = 'AntiAliasStrength'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -480,6 +548,8 @@ The shadow scale.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-SHADOW_SCALE = 'ShadowScale'--><!--Device-DngPropertyKey-SHADOW_SCALE = 'ShadowScale'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## DNG_PRIVATE_DATA
@@ -493,6 +563,8 @@ The private data.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-DNG_PRIVATE_DATA = 'DNGPrivateData'--><!--Device-DngPropertyKey-DNG_PRIVATE_DATA = 'DNGPrivateData'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -508,6 +580,8 @@ Whether the EXIF MakerNote tag is safe.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-MAKER_NOTE_SAFETY = 'MakerNoteSafety'--><!--Device-DngPropertyKey-MAKER_NOTE_SAFETY = 'MakerNoteSafety'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## CALIBRATION_ILLUMINANT1
@@ -521,6 +595,8 @@ The first calibration illuminant.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-CALIBRATION_ILLUMINANT1 = 'CalibrationIlluminant1'--><!--Device-DngPropertyKey-CALIBRATION_ILLUMINANT1 = 'CalibrationIlluminant1'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -536,6 +612,8 @@ The second calibration illuminant.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-CALIBRATION_ILLUMINANT2 = 'CalibrationIlluminant2'--><!--Device-DngPropertyKey-CALIBRATION_ILLUMINANT2 = 'CalibrationIlluminant2'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## BEST_QUALITY_SCALE
@@ -549,6 +627,8 @@ The best quality scale.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-BEST_QUALITY_SCALE = 'BestQualityScale'--><!--Device-DngPropertyKey-BEST_QUALITY_SCALE = 'BestQualityScale'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -564,6 +644,8 @@ The unique identifier of raw image data.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-RAW_DATA_UNIQUE_ID = 'RawDataUniqueID'--><!--Device-DngPropertyKey-RAW_DATA_UNIQUE_ID = 'RawDataUniqueID'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## ORIGINAL_RAW_FILE_NAME
@@ -577,6 +659,8 @@ The original raw file name.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-ORIGINAL_RAW_FILE_NAME = 'OriginalRawFileName'--><!--Device-DngPropertyKey-ORIGINAL_RAW_FILE_NAME = 'OriginalRawFileName'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -592,6 +676,8 @@ The original raw file data.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-ORIGINAL_RAW_FILE_DATA = 'OriginalRawFileData'--><!--Device-DngPropertyKey-ORIGINAL_RAW_FILE_DATA = 'OriginalRawFileData'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## ACTIVE_AREA
@@ -605,6 +691,8 @@ The active area.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-ACTIVE_AREA = 'ActiveArea'--><!--Device-DngPropertyKey-ACTIVE_AREA = 'ActiveArea'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -620,6 +708,8 @@ The masked areas.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-MASKED_AREAS = 'MaskedAreas'--><!--Device-DngPropertyKey-MASKED_AREAS = 'MaskedAreas'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## AS_SHOT_ICC_PROFILE
@@ -633,6 +723,8 @@ An ICC profile.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-AS_SHOT_ICC_PROFILE = 'AsShotICCProfile'--><!--Device-DngPropertyKey-AS_SHOT_ICC_PROFILE = 'AsShotICCProfile'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -648,6 +740,8 @@ The as-shot pre-profile matrix.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-AS_SHOT_PRE_PROFILE_MATRIX = 'AsShotPreProfileMatrix'--><!--Device-DngPropertyKey-AS_SHOT_PRE_PROFILE_MATRIX = 'AsShotPreProfileMatrix'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## CURRENT_ICC_PROFILE
@@ -661,6 +755,8 @@ The current ICC profile.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-CURRENT_ICC_PROFILE = 'CurrentICCProfile'--><!--Device-DngPropertyKey-CURRENT_ICC_PROFILE = 'CurrentICCProfile'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -676,6 +772,8 @@ The current pre-profile matrix.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-CURRENT_PRE_PROFILE_MATRIX = 'CurrentPreProfileMatrix'--><!--Device-DngPropertyKey-CURRENT_PRE_PROFILE_MATRIX = 'CurrentPreProfileMatrix'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## COLORIMETRIC_REFERENCE
@@ -689,6 +787,8 @@ The colorimetric reference.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-COLORIMETRIC_REFERENCE = 'ColorimetricReference'--><!--Device-DngPropertyKey-COLORIMETRIC_REFERENCE = 'ColorimetricReference'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -704,6 +804,8 @@ The camera calibration signature.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-CAMERA_CALIBRATION_SIGNATURE = 'CameraCalibrationSignature'--><!--Device-DngPropertyKey-CAMERA_CALIBRATION_SIGNATURE = 'CameraCalibrationSignature'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## PROFILE_CALIBRATION_SIGNATURE
@@ -717,6 +819,8 @@ The profile calibration signature.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-PROFILE_CALIBRATION_SIGNATURE = 'ProfileCalibrationSignature'--><!--Device-DngPropertyKey-PROFILE_CALIBRATION_SIGNATURE = 'ProfileCalibrationSignature'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -732,6 +836,8 @@ The extra camera profiles.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-EXTRA_CAMERA_PROFILES = 'ExtraCameraProfiles'--><!--Device-DngPropertyKey-EXTRA_CAMERA_PROFILES = 'ExtraCameraProfiles'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## AS_SHOT_PROFILE_NAME
@@ -745,6 +851,8 @@ The "as-shot" camera profile.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-AS_SHOT_PROFILE_NAME = 'AsShotProfileName'--><!--Device-DngPropertyKey-AS_SHOT_PROFILE_NAME = 'AsShotProfileName'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -760,6 +868,8 @@ The applied noise reduction.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-NOISE_REDUCTION_APPLIED = 'NoiseReductionApplied'--><!--Device-DngPropertyKey-NOISE_REDUCTION_APPLIED = 'NoiseReductionApplied'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## PROFILE_NAME
@@ -773,6 +883,8 @@ The profile name.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-PROFILE_NAME = 'ProfileName'--><!--Device-DngPropertyKey-PROFILE_NAME = 'ProfileName'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -788,6 +900,8 @@ The profile hue/saturation map dimensions.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-PROFILE_HUE_SAT_MAP_DIMS = 'ProfileHueSatMapDims'--><!--Device-DngPropertyKey-PROFILE_HUE_SAT_MAP_DIMS = 'ProfileHueSatMapDims'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## PROFILE_HUE_SAT_MAP_DATA1
@@ -801,6 +915,8 @@ The first hue/saturation mapping table data.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-PROFILE_HUE_SAT_MAP_DATA1 = 'ProfileHueSatMapData1'--><!--Device-DngPropertyKey-PROFILE_HUE_SAT_MAP_DATA1 = 'ProfileHueSatMapData1'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -816,6 +932,8 @@ The second hue/saturation mapping table data.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-PROFILE_HUE_SAT_MAP_DATA2 = 'ProfileHueSatMapData2'--><!--Device-DngPropertyKey-PROFILE_HUE_SAT_MAP_DATA2 = 'ProfileHueSatMapData2'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## PROFILE_TONE_CURVE
@@ -829,6 +947,8 @@ The profile tone curve.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-PROFILE_TONE_CURVE = 'ProfileToneCurve'--><!--Device-DngPropertyKey-PROFILE_TONE_CURVE = 'ProfileToneCurve'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -844,6 +964,8 @@ The profile embed policy.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-PROFILE_EMBED_POLICY = 'ProfileEmbedPolicy'--><!--Device-DngPropertyKey-PROFILE_EMBED_POLICY = 'ProfileEmbedPolicy'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## PROFILE_COPYRIGHT
@@ -857,6 +979,8 @@ The profile copyright.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-PROFILE_COPYRIGHT = 'ProfileCopyright'--><!--Device-DngPropertyKey-PROFILE_COPYRIGHT = 'ProfileCopyright'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -872,6 +996,8 @@ The first forward matrix.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-FORWARD_MATRIX1 = 'ForwardMatrix1'--><!--Device-DngPropertyKey-FORWARD_MATRIX1 = 'ForwardMatrix1'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## FORWARD_MATRIX2
@@ -885,6 +1011,8 @@ The second forward matrix.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-FORWARD_MATRIX2 = 'ForwardMatrix2'--><!--Device-DngPropertyKey-FORWARD_MATRIX2 = 'ForwardMatrix2'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -900,6 +1028,8 @@ The preview application name.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-PREVIEW_APPLICATION_NAME = 'PreviewApplicationName'--><!--Device-DngPropertyKey-PREVIEW_APPLICATION_NAME = 'PreviewApplicationName'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## PREVIEW_APPLICATION_VERSION
@@ -913,6 +1043,8 @@ The preview application version.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-PREVIEW_APPLICATION_VERSION = 'PreviewApplicationVersion'--><!--Device-DngPropertyKey-PREVIEW_APPLICATION_VERSION = 'PreviewApplicationVersion'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -928,6 +1060,8 @@ The preview settings name.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-PREVIEW_SETTINGS_NAME = 'PreviewSettingsName'--><!--Device-DngPropertyKey-PREVIEW_SETTINGS_NAME = 'PreviewSettingsName'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## PREVIEW_SETTINGS_DIGEST
@@ -941,6 +1075,8 @@ The preview settings digest.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-PREVIEW_SETTINGS_DIGEST = 'PreviewSettingsDigest'--><!--Device-DngPropertyKey-PREVIEW_SETTINGS_DIGEST = 'PreviewSettingsDigest'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -956,6 +1092,8 @@ The preview color space.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-PREVIEW_COLOR_SPACE = 'PreviewColorSpace'--><!--Device-DngPropertyKey-PREVIEW_COLOR_SPACE = 'PreviewColorSpace'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## PREVIEW_DATE_TIME
@@ -969,6 +1107,8 @@ The preview date time.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-PREVIEW_DATE_TIME = 'PreviewDateTime'--><!--Device-DngPropertyKey-PREVIEW_DATE_TIME = 'PreviewDateTime'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -984,6 +1124,8 @@ An MD5 digest of the raw image data.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-RAW_IMAGE_DIGEST = 'RawImageDigest'--><!--Device-DngPropertyKey-RAW_IMAGE_DIGEST = 'RawImageDigest'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## ORIGINAL_RAW_FILE_DIGEST
@@ -997,6 +1139,8 @@ An MD5 digest of the data stored in the OriginalRawFileData.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-ORIGINAL_RAW_FILE_DIGEST = 'OriginalRawFileDigest'--><!--Device-DngPropertyKey-ORIGINAL_RAW_FILE_DIGEST = 'OriginalRawFileDigest'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1012,6 +1156,8 @@ The sub‑tile block size.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-SUB_TILE_BLOCK_SIZE = 'SubTileBlockSize'--><!--Device-DngPropertyKey-SUB_TILE_BLOCK_SIZE = 'SubTileBlockSize'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## ROW_INTERLEAVE_FACTOR
@@ -1025,6 +1171,8 @@ The row interleave factor.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-ROW_INTERLEAVE_FACTOR = 'RowInterleaveFactor'--><!--Device-DngPropertyKey-ROW_INTERLEAVE_FACTOR = 'RowInterleaveFactor'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1040,6 +1188,8 @@ The profile look table dimensions.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-PROFILE_LOOK_TABLE_DIMS = 'ProfileLookTableDims'--><!--Device-DngPropertyKey-PROFILE_LOOK_TABLE_DIMS = 'ProfileLookTableDims'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## PROFILE_LOOK_TABLE_DATA
@@ -1053,6 +1203,8 @@ The profile look table data.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-PROFILE_LOOK_TABLE_DATA = 'ProfileLookTableData'--><!--Device-DngPropertyKey-PROFILE_LOOK_TABLE_DATA = 'ProfileLookTableData'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1068,6 +1220,8 @@ The first opcode list.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-OPCODE_LIST1 = 'OpcodeList1'--><!--Device-DngPropertyKey-OPCODE_LIST1 = 'OpcodeList1'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## OPCODE_LIST2
@@ -1081,6 +1235,8 @@ The second opcode list.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-OPCODE_LIST2 = 'OpcodeList2'--><!--Device-DngPropertyKey-OPCODE_LIST2 = 'OpcodeList2'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1096,6 +1252,8 @@ The third opcode list.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-OPCODE_LIST3 = 'OpcodeList3'--><!--Device-DngPropertyKey-OPCODE_LIST3 = 'OpcodeList3'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## NOISE_PROFILE
@@ -1109,6 +1267,8 @@ The noise profile.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-NOISE_PROFILE = 'NoiseProfile'--><!--Device-DngPropertyKey-NOISE_PROFILE = 'NoiseProfile'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1124,6 +1284,8 @@ The original default final size.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-ORIGINAL_DEFAULT_FINAL_SIZE = 'OriginalDefaultFinalSize'--><!--Device-DngPropertyKey-ORIGINAL_DEFAULT_FINAL_SIZE = 'OriginalDefaultFinalSize'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## ORIGINAL_BEST_QUALITY_FINAL_SIZE
@@ -1137,6 +1299,8 @@ The original best quality final size.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-ORIGINAL_BEST_QUALITY_FINAL_SIZE = 'OriginalBestQualityFinalSize'--><!--Device-DngPropertyKey-ORIGINAL_BEST_QUALITY_FINAL_SIZE = 'OriginalBestQualityFinalSize'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1152,6 +1316,8 @@ The original default crop size.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-ORIGINAL_DEFAULT_CROP_SIZE = 'OriginalDefaultCropSize'--><!--Device-DngPropertyKey-ORIGINAL_DEFAULT_CROP_SIZE = 'OriginalDefaultCropSize'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## PROFILE_HUE_SAT_MAP_ENCODING
@@ -1165,6 +1331,8 @@ The profile hue/saturation map encoding.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-PROFILE_HUE_SAT_MAP_ENCODING = 'ProfileHueSatMapEncoding'--><!--Device-DngPropertyKey-PROFILE_HUE_SAT_MAP_ENCODING = 'ProfileHueSatMapEncoding'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1180,6 +1348,8 @@ The profile look table encoding.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-PROFILE_LOOK_TABLE_ENCODING = 'ProfileLookTableEncoding'--><!--Device-DngPropertyKey-PROFILE_LOOK_TABLE_ENCODING = 'ProfileLookTableEncoding'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## BASELINE_EXPOSURE_OFFSET
@@ -1193,6 +1363,8 @@ The baseline exposure offset.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-BASELINE_EXPOSURE_OFFSET = 'BaselineExposureOffset'--><!--Device-DngPropertyKey-BASELINE_EXPOSURE_OFFSET = 'BaselineExposureOffset'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1208,6 +1380,8 @@ The default black render.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-DEFAULT_BLACK_RENDER = 'DefaultBlackRender'--><!--Device-DngPropertyKey-DEFAULT_BLACK_RENDER = 'DefaultBlackRender'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## NEW_RAW_IMAGE_DIGEST
@@ -1221,6 +1395,8 @@ A modified MD5 digest of the raw image data.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-NEW_RAW_IMAGE_DIGEST = 'NewRawImageDigest'--><!--Device-DngPropertyKey-NEW_RAW_IMAGE_DIGEST = 'NewRawImageDigest'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1236,6 +1412,8 @@ The gain between the main raw IFD and the preview IFD.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DngPropertyKey-RAW_TO_PREVIEW_GAIN = 'RawToPreviewGain'--><!--Device-DngPropertyKey-RAW_TO_PREVIEW_GAIN = 'RawToPreviewGain'-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## DEFAULT_USER_CROP
@@ -1249,6 +1427,8 @@ The default user crop.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DngPropertyKey-DEFAULT_USER_CROP = 'DefaultUserCrop'--><!--Device-DngPropertyKey-DEFAULT_USER_CROP = 'DefaultUserCrop'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

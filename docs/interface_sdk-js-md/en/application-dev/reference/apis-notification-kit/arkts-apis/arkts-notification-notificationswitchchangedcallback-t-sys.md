@@ -4,12 +4,13 @@
 export type NotificationSwitchChangedCallback = (callbackData: NotificationSwitchChangedCallbackData) => void
 ```
 
-Register the callback function type for notification switch state changes set by the interface of
-[notificationManager.setNotificationSwitch](arkts-notification-setnotificationswitch-f-sys.md#setnotificationswitch-1).
+Register the callback function type for notification switch state changes set by the interface of [notificationManager.setNotificationSwitch](arkts-notification-setnotificationswitch-f-sys.md#setnotificationswitch-1).
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-unnamed-export type NotificationSwitchChangedCallback = (callbackData: NotificationSwitchChangedCallbackData) => void--><!--Device-unnamed-export type NotificationSwitchChangedCallback = (callbackData: NotificationSwitchChangedCallbackData) => void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

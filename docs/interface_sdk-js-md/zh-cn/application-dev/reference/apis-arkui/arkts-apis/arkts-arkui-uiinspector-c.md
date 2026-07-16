@@ -4,7 +4,15 @@ class UIInspector
 
 **起始版本：** 10
 
+<!--Device-unnamed-export class UIInspector--><!--Device-unnamed-export class UIInspector-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
+```
 
 ## createComponentObserver
 
@@ -18,7 +26,9 @@ Sets the component after layout or draw criteria and returns the corresponding l
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIInspector-createComponentObserver(id: string): inspector.ComponentObserver--><!--Device-UIInspector-createComponentObserver(id: string): inspector.ComponentObserver-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,7 +42,7 @@ Sets the component after layout or draw criteria and returns the corresponding l
 
 | 类型 | 说明 |
 | --- | --- |
-| inspector.ComponentObserver | Component observer, which is used to register or unregister listenersfor completion of component layout or drawing display. |
+| inspector.ComponentObserver | Component observer, which is used to register or unregister listeners for completion of component layout or drawing display. |
 
 ## createComponentObserver
 
@@ -46,7 +56,9 @@ createComponentObserver(id: string | number): inspector.ComponentObserver
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIInspector-createComponentObserver(id: string | number): inspector.ComponentObserver--><!--Device-UIInspector-createComponentObserver(id: string | number): inspector.ComponentObserver-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,5 +72,5 @@ createComponentObserver(id: string | number): inspector.ComponentObserver
 
 | 类型 | 说明 |
 | --- | --- |
-| inspector.ComponentObserver | Component observer, which is used to register or unregister listenersfor completion of component layout or drawing display. |
+| inspector.ComponentObserver | Component observer, which is used to register or unregister listeners for completion of component layout or drawing display. |
 

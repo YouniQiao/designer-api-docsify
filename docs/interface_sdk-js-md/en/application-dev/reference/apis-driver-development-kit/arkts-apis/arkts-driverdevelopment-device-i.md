@@ -4,6 +4,8 @@ Represents the peripheral device information.
 
 **Since:** 10
 
+<!--Device-deviceManager-interface Device--><!--Device-deviceManager-interface Device-End-->
+
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Bus type.
 
 **Since:** 10
 
+<!--Device-Device-busType: BusType--><!--Device-Device-busType: BusType-End-->
+
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 ## description
@@ -38,6 +42,8 @@ Description of the peripheral device.
 
 **Since:** 10
 
+<!--Device-Device-description: string--><!--Device-Device-description: string-End-->
+
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 ## deviceId
@@ -51,6 +57,8 @@ ID of the peripheral device.
 **Type:** number
 
 **Since:** 10
+
+<!--Device-Device-deviceId: long--><!--Device-Device-deviceId: long-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 

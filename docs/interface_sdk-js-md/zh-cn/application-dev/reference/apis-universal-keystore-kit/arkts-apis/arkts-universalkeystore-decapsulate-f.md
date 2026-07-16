@@ -1,5 +1,11 @@
 # decapsulate
 
+## 导入模块
+
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+```
+
 ## decapsulate
 
 ```TypeScript
@@ -7,11 +13,13 @@ function decapsulate(keyAlias: string, params: HuksParam[], encapData: Uint8Arra
       sharedKeyAlias?: string, sharedKeyParams?:  HuksParam[]): Promise<HuksReturnResult>
 ```
 
-Post-Quantum Cryptography密钥解封装操作，支持HUKS密钥管理
-或由应用程序本身决定。如果应用程序选择管理密钥，
-对称密钥包含在HuksReturnResult的outData字段中。
+Post-Quantum Cryptography密钥解封装操作，支持HUKS密钥管理或由应用程序本身决定。如果应用程序选择管理密钥，对称密钥包含在HuksReturnResult的outData字段中。
 
 **起始版本：** 26.0.0
+
+<!--Device-huks-function decapsulate(keyAlias: string, params: HuksParam[], encapData: Uint8Array,
+      sharedKeyAlias?: string, sharedKeyParams?:  HuksParam[]): Promise<HuksReturnResult>--><!--Device-huks-function decapsulate(keyAlias: string, params: HuksParam[], encapData: Uint8Array,
+      sharedKeyAlias?: string, sharedKeyParams?:  HuksParam[]): Promise<HuksReturnResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -20,16 +28,16 @@ Post-Quantum Cryptography密钥解封装操作，支持HUKS密钥管理
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 后量子加密算法的密钥名称。 |
-| params | HuksParam[] | 是 | 表示解封装属性。 |
-| encapData | Uint8Array | 是 | 表示封装后的共享密钥。 |
+| params | [HuksParam](arkts-universalkeystore-huksparam-i.md)[] | 是 | 表示解封装属性。 |
+| encapData | [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 是 | 表示封装后的共享密钥。 |
 | sharedKeyAlias | string | 否 | 表示解封装密钥的密钥别名。如果使用HUKS进行密钥管理，则必须指定该参数。如果应用程序自己管理密钥，则忽略此参数。 |
-| sharedKeyParams | HuksParam[] | 否 | 表示解封装后的key的属性。如果使用HUKS进行密钥管理，则必须指定该参数。如果应用程序自己管理密钥，则忽略此参数。 |
+| sharedKeyParams | [HuksParam](arkts-universalkeystore-huksparam-i.md)[] | 否 | 表示解封装后的key的属性。如果使用HUKS进行密钥管理，则必须指定该参数。如果应用程序自己管理密钥，则忽略此参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | 返回值 |
+| Promise<HuksReturnResult> | 返回值 |
 
 **错误码：**
 

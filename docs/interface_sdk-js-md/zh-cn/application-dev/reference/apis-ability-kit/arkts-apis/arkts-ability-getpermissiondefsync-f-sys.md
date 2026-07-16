@@ -1,5 +1,11 @@
 # getPermissionDefSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getPermissionDefSync
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getPermissionDefSync(permissionName: string): PermissionDef
 **起始版本：** 10
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getPermissionDefSync(permissionName: string): PermissionDef--><!--Device-bundleManager-function getPermissionDefSync(permissionName: string): PermissionDef-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -26,7 +34,7 @@ function getPermissionDefSync(permissionName: string): PermissionDef
 
 | 类型 | 说明 |
 | --- | --- |
-| PermissionDef | PermissionDef对象。 |
+| [PermissionDef](arkts-ability-permissiondef-i-sys.md) | PermissionDef对象。 |
 
 **错误码：**
 

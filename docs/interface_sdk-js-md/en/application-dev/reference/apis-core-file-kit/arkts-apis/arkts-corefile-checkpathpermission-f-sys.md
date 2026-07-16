@@ -18,6 +18,8 @@ Check permissions for the path.
 
 **Required permissions:** ohos.permission.CHECK_SANDBOX_POLICY
 
+<!--Device-fileShare-function checkPathPermission(tokenID: int, policies: Array<PathPolicyInfo>, policyType: PolicyType): Promise<Array<boolean>>--><!--Device-fileShare-function checkPathPermission(tokenID: int, policies: Array<PathPolicyInfo>, policyType: PolicyType): Promise<Array<boolean>>-End-->
+
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 **System API:** This is a system API.
@@ -27,14 +29,14 @@ Check permissions for the path.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | tokenID | number | Yes | Token ID of the application. |
-| policies | Array&lt;PathPolicyInfo&gt; | Yes | Policy information to check on paths. |
-| policyType | PolicyType | Yes | Persistent or temporary type. |
+| policies | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PathPolicyInfo> | Yes | Policy information to check on paths. |
+| policyType | [PolicyType](../../apis-mdm-kit/arkts-apis/arkts-mdm-policytype-e.md) | Yes | Persistent or temporary type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;boolean&gt;&gt; | Returns the permission state of paths. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<boolean>> | Returns the permission state of paths. |
 
 **Error codes:**
 

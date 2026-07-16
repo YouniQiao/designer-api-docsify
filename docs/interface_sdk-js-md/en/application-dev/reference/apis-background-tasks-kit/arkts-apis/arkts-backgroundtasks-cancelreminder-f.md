@@ -16,14 +16,16 @@ Cancels a reminder published. This API uses an asynchronous callback to return t
 
 **Since:** 9
 
+<!--Device-reminderAgentManager-function cancelReminder(reminderId: int, callback: AsyncCallback<void>): void--><!--Device-reminderAgentManager-function cancelReminder(reminderId: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderId | number | Yes | ID of the agent-powered reminder to be canceled.The reminder ID is returned when the[publishReminder](arkts-backgroundtasks-publishreminder-f.md#publishreminder-1)API is called. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result.If all the reminders are canceled,**err** is **undefined**. Otherwise, **err** is an error object. |
+| reminderId | number | Yes | ID of the agent-powered reminder to be canceled.The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-publishreminder-f.md#publishreminder-1)API is called. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result.If all the reminders are canceled,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -61,19 +63,21 @@ Cancels a reminder published. This API uses a promise to return the result.
 
 **Since:** 9
 
+<!--Device-reminderAgentManager-function cancelReminder(reminderId: int): Promise<void>--><!--Device-reminderAgentManager-function cancelReminder(reminderId: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderId | number | Yes | ID of the agent-powered reminder to be canceled.The reminder ID is returned when the[publishReminder](arkts-backgroundtasks-publishreminder-f.md#publishreminder-1)API is called. |
+| reminderId | number | Yes | ID of the agent-powered reminder to be canceled.The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-publishreminder-f.md#publishreminder-1)API is called. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -1,10 +1,10 @@
 # BarGridColumnOptions
 
-Implements a **BarGridColumnOptions** object for setting the visible area of the tab bar in grid mode, including the
-column margin and gutter, as well as the number of columns occupied by tabs under small, medium, and large screen
-sizes.
+Implements a **BarGridColumnOptions** object for setting the visible area of the tab bar in grid mode, including the column margin and gutter, as well as the number of columns occupied by tabs under small, medium, and large screen sizes.
 
 **Since:** 10
+
+<!--Device-unnamed-interface BarGridColumnOptions--><!--Device-unnamed-interface BarGridColumnOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,6 +28,8 @@ Unit: vp
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-BarGridColumnOptions-gutter?: Dimension--><!--Device-BarGridColumnOptions-gutter?: Dimension-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## lg
@@ -36,11 +38,9 @@ Unit: vp
 lg?: number
 ```
 
-Number of columns occupied by a tab on a screen whose width is greater than or equal to 840 vp but less than 1024
-vp.
+Number of columns occupied by a tab on a screen whose width is greater than or equal to 840 vp but less than 1024vp.
 
-The value must be a non-negative even number. The default value is **-1**, indicating that the tab takes up the
-entire width of the tab bar.
+The value must be a non-negative even number. The default value is **-1**, indicating that the tab takes up the entire width of the tab bar.
 
 **Type:** number
 
@@ -49,6 +49,8 @@ entire width of the tab bar.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-BarGridColumnOptions-lg?: number--><!--Device-BarGridColumnOptions-lg?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,6 +74,8 @@ Unit: vp
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-BarGridColumnOptions-margin?: Dimension--><!--Device-BarGridColumnOptions-margin?: Dimension-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## md
@@ -80,11 +84,9 @@ Unit: vp
 md?: number
 ```
 
-Number of columns occupied by a tab on a screen whose width is greater than or equal to 600 vp but less than 800
-vp.
+Number of columns occupied by a tab on a screen whose width is greater than or equal to 600 vp but less than 800vp.
 
-The value must be a non-negative even number. The default value is **-1**, indicating that the tab takes up the
-entire width of the tab bar.
+The value must be a non-negative even number. The default value is **-1**, indicating that the tab takes up the entire width of the tab bar.
 
 **Type:** number
 
@@ -93,6 +95,8 @@ entire width of the tab bar.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-BarGridColumnOptions-md?: number--><!--Device-BarGridColumnOptions-md?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -102,11 +106,9 @@ entire width of the tab bar.
 sm?: number
 ```
 
-Number of columns occupied by a tab on a screen whose width is greater than or equal to 320 vp but less than 600
-vp.
+Number of columns occupied by a tab on a screen whose width is greater than or equal to 320 vp but less than 600vp.
 
-The value must be a non-negative even number. The default value is **-1**, indicating that the tab takes up the
-entire width of the tab bar.
+The value must be a non-negative even number. The default value is **-1**, indicating that the tab takes up the entire width of the tab bar.
 
 **Type:** number
 
@@ -115,6 +117,8 @@ entire width of the tab bar.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-BarGridColumnOptions-sm?: number--><!--Device-BarGridColumnOptions-sm?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

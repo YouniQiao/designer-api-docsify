@@ -1,10 +1,10 @@
 # KeyAgreement
 
-Provides APIs for key agreement operations. Before using any API of the **KeyAgreement** class, you must create a
-**KeyAgreement** instance by using
-[createKeyAgreement(algName: string): KeyAgreement](arkts-cryptoarchitecture-createkeyagreement-f.md#createkeyagreement-1).
+Provides APIs for key agreement operations. Before using any API of the **KeyAgreement** class, you must create a **KeyAgreement** instance by using [createKeyAgreement(algName: string): KeyAgreement](arkts-cryptoarchitecture-createkeyagreement-f.md#createkeyagreement-1).
 
 **Since:** 9
+
+<!--Device-cryptoFramework-interface KeyAgreement--><!--Device-cryptoFramework-interface KeyAgreement-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.KeyAgreement
@@ -22,12 +22,13 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 generateSecret(priKey: PriKey, pubKey: PubKey, callback: AsyncCallback<DataBlob>): void
 ```
 
-Generates a shared secret based on the given private key and public key. This API uses an asynchronous callback
-to return the result.
+Generates a shared secret based on the given private key and public key. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-KeyAgreement-generateSecret(priKey: PriKey, pubKey: PubKey, callback: AsyncCallback<DataBlob>): void--><!--Device-KeyAgreement-generateSecret(priKey: PriKey, pubKey: PubKey, callback: AsyncCallback<DataBlob>): void-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.KeyAgreement
@@ -37,9 +38,9 @@ to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| priKey | PriKey | Yes | Private key used for key agreement. |
-| pubKey | PubKey | Yes | Public key used for key agreement. |
-| callback | AsyncCallback&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the shared secret obtained. Otherwise, **err** is an error object. |
+| priKey | [PriKey](arkts-cryptoarchitecture-prikey-i.md) | Yes | Private key used for key agreement. |
+| pubKey | [PubKey](arkts-cryptoarchitecture-pubkey-i.md) | Yes | Public key used for key agreement. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DataBlob> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the shared secret obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -56,12 +57,13 @@ to return the result.
 generateSecret(priKey: PriKey, pubKey: PubKey): Promise<DataBlob>
 ```
 
-Generates a shared secret based on the given private key and public key. This API uses a promise to return the
-result.
+Generates a shared secret based on the given private key and public key. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-KeyAgreement-generateSecret(priKey: PriKey, pubKey: PubKey): Promise<DataBlob>--><!--Device-KeyAgreement-generateSecret(priKey: PriKey, pubKey: PubKey): Promise<DataBlob>-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.KeyAgreement
@@ -71,14 +73,14 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| priKey | PriKey | Yes | Private key used for key agreement. |
-| pubKey | PubKey | Yes | Public key used for key agreement. |
+| priKey | [PriKey](arkts-cryptoarchitecture-prikey-i.md) | Yes | Private key used for key agreement. |
+| pubKey | [PubKey](arkts-cryptoarchitecture-pubkey-i.md) | Yes | Public key used for key agreement. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise used to return the shared secret of key agreement. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DataBlob> | Promise used to return the shared secret of key agreement. |
 
 **Error codes:**
 
@@ -95,17 +97,15 @@ result.
 generateSecretSync(priKey: PriKey, pubKey: PubKey): DataBlob
 ```
 
-Generates a shared secret based on the given private key and public key. This API returns the shared secret
-generated synchronously.
+Generates a shared secret based on the given private key and public key. This API returns the shared secret generated synchronously.
 
-<br><br>**NOTE**
-<br>It is recommended to prioritize the use of asynchronous API, {@link generateSecret}. Synchronous API may
-take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,
-it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link generateSecret}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-KeyAgreement-generateSecretSync(priKey: PriKey, pubKey: PubKey): DataBlob--><!--Device-KeyAgreement-generateSecretSync(priKey: PriKey, pubKey: PubKey): DataBlob-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.KeyAgreement
 
@@ -113,14 +113,14 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| priKey | PriKey | Yes | Private key used for key agreement. |
-| pubKey | PubKey | Yes | Public key used for key agreement. |
+| priKey | [PriKey](arkts-cryptoarchitecture-prikey-i.md) | Yes | Private key used for key agreement. |
+| pubKey | [PubKey](arkts-cryptoarchitecture-pubkey-i.md) | Yes | Public key used for key agreement. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DataBlob | Returns the shared secret generated. |
+| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Returns the shared secret generated. |
 
 **Error codes:**
 
@@ -195,6 +195,8 @@ Indicates the algorithm name.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-KeyAgreement-readonly algName: string--><!--Device-KeyAgreement-readonly algName: string-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.KeyAgreement

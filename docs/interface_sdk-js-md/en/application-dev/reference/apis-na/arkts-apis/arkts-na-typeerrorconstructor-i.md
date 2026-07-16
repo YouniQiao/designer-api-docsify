@@ -2,11 +2,15 @@
 
 **Inheritance/Implementation:** TypeErrorConstructor extends [ErrorConstructor](arkts-na-errorconstructor-i.md)
 
+<!--Device-unnamed-interface TypeErrorConstructor extends ErrorConstructor--><!--Device-unnamed-interface TypeErrorConstructor extends ErrorConstructor-End-->
+
 ## constructor
 
 ```TypeScript
 new(message?: string): TypeError
 ```
+
+<!--Device-TypeErrorConstructor-new(message?: string): TypeError--><!--Device-TypeErrorConstructor-new(message?: string): TypeError-End-->
 
 **Parameters:**
 
@@ -18,7 +22,7 @@ new(message?: string): TypeError
 
 | Type | Description |
 | --- | --- |
-| TypeError |  |
+| [TypeError](arkts-na-typeerror-i.md) |  |
 
 ## constructor
 
@@ -26,6 +30,8 @@ new(message?: string): TypeError
 (message?: string): TypeError
 ```
 
+<!--Device-TypeErrorConstructor-(message?: string): TypeError--><!--Device-TypeErrorConstructor-(message?: string): TypeError-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -36,7 +42,7 @@ new(message?: string): TypeError
 
 | Type | Description |
 | --- | --- |
-| TypeError |  |
+| [TypeError](arkts-na-typeerror-i.md) |  |
 
 ## prototype
 
@@ -45,4 +51,6 @@ readonly prototype: TypeError
 ```
 
 **Type:** TypeError
+
+<!--Device-TypeErrorConstructor-readonly prototype: TypeError--><!--Device-TypeErrorConstructor-readonly prototype: TypeError-End-->
 

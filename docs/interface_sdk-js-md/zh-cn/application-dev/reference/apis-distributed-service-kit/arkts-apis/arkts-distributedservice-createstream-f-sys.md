@@ -1,5 +1,11 @@
 # createStream（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+```
+
 ## createStream
 
 ```TypeScript
@@ -12,6 +18,8 @@ Creating a Stream.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-abilityConnectionManager-function createStream(sessionId: int, param: StreamParam): Promise<int>--><!--Device-abilityConnectionManager-function createStream(sessionId: int, param: StreamParam): Promise<int>-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **系统接口：** 此接口为系统接口。
@@ -21,13 +29,13 @@ Creating a Stream.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sessionId | number | 是 | Ability connection Session id. |
-| param | StreamParam | 是 | Transport Stream Parameters |
+| param | [StreamParam](arkts-distributedservice-streamparam-i-sys.md) | 是 | Transport Stream Parameters |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | The promise returned by the function, contain the ID of a transport stream. |
+| Promise<number> | The promise returned by the function, contain the ID of a transport stream. |
 
 **错误码：**
 

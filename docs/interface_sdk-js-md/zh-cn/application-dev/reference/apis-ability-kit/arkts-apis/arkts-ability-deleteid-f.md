@@ -1,5 +1,11 @@
 # deleteId
 
+## 导入模块
+
+```TypeScript
+import { dataUriUtils } from '@kit.AbilityKit';
+```
+
 ## deleteId
 
 ```TypeScript
@@ -9,6 +15,8 @@ function deleteId(uri: string): string
 删除指定uri路径末尾的ID。
 
 **起始版本：** 9
+
+<!--Device-dataUriUtils-function deleteId(uri: string): string--><!--Device-dataUriUtils-function deleteId(uri: string): string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

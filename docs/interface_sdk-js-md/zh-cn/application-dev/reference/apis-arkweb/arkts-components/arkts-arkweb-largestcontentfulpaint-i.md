@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface LargestContentfulPaint--><!--Device-unnamed-declare interface LargestContentfulPaint-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## imageBPP
@@ -18,7 +20,9 @@ imageBPP?: number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LargestContentfulPaint-imageBPP?: number--><!--Device-LargestContentfulPaint-imageBPP?: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -34,7 +38,9 @@ largestImagePaintTime?: number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LargestContentfulPaint-largestImagePaintTime?: number--><!--Device-LargestContentfulPaint-largestImagePaintTime?: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -50,7 +56,9 @@ largestTextPaintTime?: number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LargestContentfulPaint-largestTextPaintTime?: number--><!--Device-LargestContentfulPaint-largestTextPaintTime?: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -66,7 +74,9 @@ navigationStartTime?: number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LargestContentfulPaint-navigationStartTime?: number--><!--Device-LargestContentfulPaint-navigationStartTime?: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

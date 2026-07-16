@@ -1,12 +1,10 @@
 # SingleKVStore
 
-Provides APIs for data management in a single KV store, such as adding data, deleting data, and subscribing to data
-changes or across-device data sync completion events.
-Before calling any method in **SingleKVStore**, you must use
-[getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-1)
-to obtain a **SingleKVStore** instance.
+Provides APIs for data management in a single KV store, such as adding data, deleting data, and subscribing to data changes or across-device data sync completion events.Before calling any method in **SingleKVStore**, you must use [getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-1)to obtain a **SingleKVStore** instance.
 
 **Since:** 9
+
+<!--Device-distributedKVStore-interface SingleKVStore--><!--Device-distributedKVStore-interface SingleKVStore-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -28,6 +26,8 @@ Deletes the key-value pairs based on the dataSharePredicates.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-delete(predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-delete(predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **System API:** This is a system API.
@@ -37,7 +37,7 @@ Deletes the key-value pairs based on the dataSharePredicates.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the dataSharePredicates. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of delete. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of delete. |
 
 **Error codes:**
 
@@ -61,6 +61,8 @@ Deletes the key-value pairs based on the dataSharePredicates.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-delete(predicates: dataSharePredicates.DataSharePredicates): Promise<void>--><!--Device-SingleKVStore-delete(predicates: dataSharePredicates.DataSharePredicates): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **System API:** This is a system API.
@@ -75,7 +77,7 @@ Deletes the key-value pairs based on the dataSharePredicates.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -99,6 +101,8 @@ Obtains the KVStoreResultSet object matching the specified predicate object.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-getResultSet(predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<KVStoreResultSet>): void--><!--Device-SingleKVStore-getResultSet(predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<KVStoreResultSet>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **System API:** This is a system API.
@@ -108,7 +112,7 @@ Obtains the KVStoreResultSet object matching the specified predicate object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the datasharePredicates. |
-| callback | AsyncCallback&lt;KVStoreResultSet&gt; | Yes | {KVStoreResultSet}: the {@code KVStoreResultSet}object matching the specified {@code dataSharePredicates.DataSharePredicates} object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<KVStoreResultSet> | Yes | {KVStoreResultSet}: the {@code KVStoreResultSet}object matching the specified {@code dataSharePredicates.DataSharePredicates} object. |
 
 **Error codes:**
 
@@ -132,6 +136,8 @@ Obtains the KVStoreResultSet object matching the specified predicate object.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-getResultSet(predicates: dataSharePredicates.DataSharePredicates): Promise<KVStoreResultSet>--><!--Device-SingleKVStore-getResultSet(predicates: dataSharePredicates.DataSharePredicates): Promise<KVStoreResultSet>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **System API:** This is a system API.
@@ -146,7 +152,7 @@ Obtains the KVStoreResultSet object matching the specified predicate object.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KVStoreResultSet&gt; | {KVStoreResultSet}: the {@code KVStoreResultSet}object matching the specified {@code dataSharePredicates.DataSharePredicates} object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<KVStoreResultSet> | {KVStoreResultSet}: the {@code KVStoreResultSet}object matching the specified {@code dataSharePredicates.DataSharePredicates} object. |
 
 **Error codes:**
 
@@ -170,6 +176,8 @@ Writes values of ValuesBucket type into the {@code SingleKVStore} database.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-putBatch(value: Array<ValuesBucket>, callback: AsyncCallback<void>): void--><!--Device-SingleKVStore-putBatch(value: Array<ValuesBucket>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **System API:** This is a system API.
@@ -178,8 +186,8 @@ Writes values of ValuesBucket type into the {@code SingleKVStore} database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;ValuesBucket&gt; | Yes | Indicates the ValuesBucket array to be inserted. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of putBatch. |
+| value | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ValuesBucket> | Yes | Indicates the ValuesBucket array to be inserted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of putBatch. |
 
 **Error codes:**
 
@@ -203,6 +211,8 @@ Writes values of ValuesBucket type into the {@code SingleKVStore} database.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SingleKVStore-putBatch(value: Array<ValuesBucket>): Promise<void>--><!--Device-SingleKVStore-putBatch(value: Array<ValuesBucket>): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 **System API:** This is a system API.
@@ -211,13 +221,13 @@ Writes values of ValuesBucket type into the {@code SingleKVStore} database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;ValuesBucket&gt; | Yes | Indicates the ValuesBucket array to be inserted. |
+| value | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ValuesBucket> | Yes | Indicates the ValuesBucket array to be inserted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 

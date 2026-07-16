@@ -4,6 +4,8 @@ Enumerates the toolbar item states.
 
 **Since:** 10
 
+<!--Device-unnamed-declare enum ToolbarItemStatus--><!--Device-unnamed-declare enum ToolbarItemStatus-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NORMAL
@@ -12,14 +14,15 @@ Enumerates the toolbar item states.
 NORMAL = 0
 ```
 
-Normal state. In this state, the toolbar item takes on the default style and can switch to another state-specific
-style by responding to the hover, press, and focus events.
+Normal state. In this state, the toolbar item takes on the default style and can switch to another state-specific style by responding to the hover, press, and focus events.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ToolbarItemStatus-NORMAL = 0--><!--Device-ToolbarItemStatus-NORMAL = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -37,6 +40,8 @@ Disabled state. In this state, the toolbar item is disabled and does not allow f
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ToolbarItemStatus-DISABLED = 1--><!--Device-ToolbarItemStatus-DISABLED = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ACTIVE
@@ -45,14 +50,15 @@ Disabled state. In this state, the toolbar item is disabled and does not allow f
 ACTIVE = 2
 ```
 
-Active state. In this state, the toolbar item can update its icon to the one specified by **activeIcon** by
-responding to a click event.
+Active state. In this state, the toolbar item can update its icon to the one specified by **activeIcon** by responding to a click event.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ToolbarItemStatus-ACTIVE = 2--><!--Device-ToolbarItemStatus-ACTIVE = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

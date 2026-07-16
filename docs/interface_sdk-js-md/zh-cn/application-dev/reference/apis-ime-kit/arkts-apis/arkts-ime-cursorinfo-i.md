@@ -4,7 +4,15 @@
 
 **起始版本：** 10
 
+<!--Device-inputMethod-export interface CursorInfo--><!--Device-inputMethod-export interface CursorInfo-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+## 导入模块
+
+```TypeScript
+import { inputMethod } from '@kit.IMEKit';
+```
 
 ## displayId
 
@@ -20,6 +28,8 @@ displayId?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-CursorInfo-displayId?: long--><!--Device-CursorInfo-displayId?: long-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## height
@@ -33,6 +43,8 @@ height: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-CursorInfo-height: double--><!--Device-CursorInfo-height: double-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -48,6 +60,8 @@ left: number
 
 **起始版本：** 10
 
+<!--Device-CursorInfo-left: double--><!--Device-CursorInfo-left: double-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## top
@@ -62,6 +76,8 @@ top: number
 
 **起始版本：** 10
 
+<!--Device-CursorInfo-top: double--><!--Device-CursorInfo-top: double-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## width
@@ -75,6 +91,8 @@ width: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-CursorInfo-width: double--><!--Device-CursorInfo-width: double-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

@@ -8,6 +8,8 @@
 
 **起始版本：** 13
 
+<!--Device-image-enum AuxiliaryPictureType--><!--Device-image-enum AuxiliaryPictureType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GAINMAP
@@ -23,6 +25,8 @@ GAINMAP = 1
 HDR合成通常需要同时使用SDR主图、增益图和HDR元数据（[getMetadata](arkts-image-pixelmap-i.md#getmetadata-1)）共同计算亮度映射关系。
 
 **起始版本：** 13
+
+<!--Device-AuxiliaryPictureType-GAINMAP = 1--><!--Device-AuxiliaryPictureType-GAINMAP = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -40,6 +44,8 @@ DEPTH_MAP = 2
 
 **起始版本：** 13
 
+<!--Device-AuxiliaryPictureType-DEPTH_MAP = 2--><!--Device-AuxiliaryPictureType-DEPTH_MAP = 2-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## UNREFOCUS_MAP
@@ -55,6 +61,8 @@ UNREFOCUS_MAP = 3
 可用于人像虚化等后期处理，便于用户自由选择焦点区域。
 
 **起始版本：** 13
+
+<!--Device-AuxiliaryPictureType-UNREFOCUS_MAP = 3--><!--Device-AuxiliaryPictureType-UNREFOCUS_MAP = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -72,6 +80,8 @@ LINEAR_MAP = 4
 
 **起始版本：** 13
 
+<!--Device-AuxiliaryPictureType-LINEAR_MAP = 4--><!--Device-AuxiliaryPictureType-LINEAR_MAP = 4-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## FRAGMENT_MAP
@@ -88,6 +98,8 @@ FRAGMENT_MAP = 5
 
 **起始版本：** 13
 
+<!--Device-AuxiliaryPictureType-FRAGMENT_MAP = 5--><!--Device-AuxiliaryPictureType-FRAGMENT_MAP = 5-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## LHDR_GAINMAP
@@ -101,6 +113,8 @@ LHDR_GAINMAP = 10
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AuxiliaryPictureType-LHDR_GAINMAP = 10--><!--Device-AuxiliaryPictureType-LHDR_GAINMAP = 10-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

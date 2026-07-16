@@ -6,6 +6,8 @@ Device connection state.
 
 **Deprecated since:** 22
 
+<!--Device-continuationManager-export enum DeviceConnectState--><!--Device-continuationManager-export enum DeviceConnectState-End-->
+
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 ## IDLE
@@ -23,6 +25,8 @@ The device is in the initial state.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DeviceConnectState-IDLE = 0--><!--Device-DeviceConnectState-IDLE = 0-End-->
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
@@ -42,6 +46,8 @@ The device is being connected.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DeviceConnectState-CONNECTING = 1--><!--Device-DeviceConnectState-CONNECTING = 1-End-->
+
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 ## CONNECTED
@@ -60,6 +66,8 @@ The device is connected.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DeviceConnectState-CONNECTED = 2--><!--Device-DeviceConnectState-CONNECTED = 2-End-->
+
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 ## DISCONNECTING
@@ -77,6 +85,8 @@ The device is being disconnected.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DeviceConnectState-DISCONNECTING = 3--><!--Device-DeviceConnectState-DISCONNECTING = 3-End-->
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 

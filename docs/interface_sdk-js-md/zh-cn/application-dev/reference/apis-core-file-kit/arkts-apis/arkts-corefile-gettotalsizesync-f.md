@@ -1,5 +1,11 @@
 # getTotalSizeSync
 
+## 导入模块
+
+```TypeScript
+import { statfs } from '@kit.CoreFileKit';
+```
+
 ## getTotalSizeSync
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getTotalSizeSync(path: string): number
 以同步方法获取指定文件系统总字节数。
 
 **起始版本：** 10
+
+<!--Device-statfs-function getTotalSizeSync(path: string): long--><!--Device-statfs-function getTotalSizeSync(path: string): long-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

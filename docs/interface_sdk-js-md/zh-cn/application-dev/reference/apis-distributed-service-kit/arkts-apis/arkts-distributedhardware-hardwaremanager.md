@@ -4,9 +4,17 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace hardwareManager--><!--Device-unnamed-declare namespace hardwareManager-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { hardwareManager } from '@kit.DistributedServiceKit';
+```
 
 ## 汇总
 

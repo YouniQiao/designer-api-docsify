@@ -14,10 +14,11 @@ function getActiveNotifications(callback: AsyncCallback<Array<NotificationReques
 
 Obtains the active notifications of this application. This API uses an asynchronous callback to return the result.
 
-This API is used to query the detailed information list of all stored notifications of the current application in
-the notification center, including the ID, tag, content, and creation time of each notification.
+This API is used to query the detailed information list of all stored notifications of the current application in the notification center, including the ID, tag, content, and creation time of each notification.
 
 **Since:** 9
+
+<!--Device-notificationManager-function getActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void--><!--Device-notificationManager-function getActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -25,7 +26,7 @@ the notification center, including the ID, tag, content, and creation time of ea
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;NotificationRequest&gt;&gt; | Yes | Callback used to return the result. If theoperation is successful, **err** is **undefined** and data is the obtained **NotificationRequest** array;otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<NotificationRequest>> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the obtained **NotificationRequest** array;otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -61,10 +62,11 @@ function getActiveNotifications(): Promise<Array<NotificationRequest>>
 
 Obtains the active notifications of this application. This API uses a promise to return the result.
 
-This API is used to query the detailed information list of all stored notifications of the current application in
-the notification center, including the ID, tag, content, and creation time of each notification.
+This API is used to query the detailed information list of all stored notifications of the current application in the notification center, including the ID, tag, content, and creation time of each notification.
 
 **Since:** 9
+
+<!--Device-notificationManager-function getActiveNotifications(): Promise<Array<NotificationRequest>>--><!--Device-notificationManager-function getActiveNotifications(): Promise<Array<NotificationRequest>>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -72,7 +74,7 @@ the notification center, including the ID, tag, content, and creation time of ea
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NotificationRequest&gt;&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<NotificationRequest>> | Promise used to return the result. |
 
 **Error codes:**
 

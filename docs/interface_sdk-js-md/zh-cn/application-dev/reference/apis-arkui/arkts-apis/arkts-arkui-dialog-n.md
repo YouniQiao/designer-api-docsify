@@ -4,7 +4,15 @@
 
 **起始版本：** 26.1.0
 
+<!--Device-unnamed-declare namespace dialog--><!--Device-unnamed-declare namespace dialog-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from '@kit.ArkUI';
+```
 
 ## 汇总
 

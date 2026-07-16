@@ -16,6 +16,8 @@ Obtains the touchpad tap switch state. This API uses an asynchronous callback to
 
 **Since:** 10
 
+<!--Device-pointer-function getTouchpadTapSwitch(callback: AsyncCallback<boolean>): void--><!--Device-pointer-function getTouchpadTapSwitch(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Obtains the touchpad tap switch state. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **state** indicates whether the touchpad tap switch is enabled (**true**indicates yes and **false** indicates no; default value: **true**). Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **state** indicates whether the touchpad tap switch is enabled (**true** indicates yes and **false** indicates no; default value: **true**). Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -76,6 +78,8 @@ Obtains the touchpad tap switch state. This API uses a promise to return the res
 
 **Since:** 10
 
+<!--Device-pointer-function getTouchpadTapSwitch(): Promise<boolean>--><!--Device-pointer-function getTouchpadTapSwitch(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **System API:** This is a system API.
@@ -84,7 +88,7 @@ Obtains the touchpad tap switch state. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the touchpad tapswitch is enabled, and the value **false** indicates that the touchpad tap switch is disabled. The defaultvalue is **true**. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** indicates that the touchpad tap switch is enabled, and the value **false** indicates that the touchpad tap switch is disabled. The default value is **true**. |
 
 **Error codes:**
 

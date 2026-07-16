@@ -1,9 +1,10 @@
 # @ohos.resourceschedule.systemload
 
-The **systemload** module allows the system to determine the system load level based on the current temperature,
-load, and scenario, and notifies registered applications of level changes, if any.
+The **systemload** module allows the system to determine the system load level based on the current temperature,load, and scenario, and notifies registered applications of level changes, if any.
 
 **Since:** 12
+
+<!--Device-unnamed-declare namespace systemLoad--><!--Device-unnamed-declare namespace systemLoad-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.SystemLoad
 

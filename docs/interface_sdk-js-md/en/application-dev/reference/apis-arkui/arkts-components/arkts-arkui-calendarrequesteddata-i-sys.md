@@ -6,6 +6,8 @@ Defines the struct of CalendarRequestedData.
 
 **Deprecated since:** 20
 
+<!--Device-unnamed-declare interface CalendarRequestedData--><!--Device-unnamed-declare interface CalendarRequestedData-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -25,6 +27,8 @@ Current Month
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-CalendarRequestedData-currentMonth: number--><!--Device-CalendarRequestedData-currentMonth: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,6 +50,8 @@ Current Year
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-CalendarRequestedData-currentYear: number--><!--Device-CalendarRequestedData-currentYear: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -65,6 +71,8 @@ Previous month
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-CalendarRequestedData-month: number--><!--Device-CalendarRequestedData-month: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,6 +94,8 @@ State of month
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-CalendarRequestedData-monthState: number--><!--Device-CalendarRequestedData-monthState: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -105,6 +115,8 @@ Previous year
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-CalendarRequestedData-year: number--><!--Device-CalendarRequestedData-year: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

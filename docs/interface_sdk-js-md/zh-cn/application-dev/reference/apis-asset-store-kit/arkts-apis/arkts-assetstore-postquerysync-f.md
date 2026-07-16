@@ -1,5 +1,11 @@
 # postQuerySync
 
+## 导入模块
+
+```TypeScript
+import { asset } from '@kit.AssetStoreKit';
+```
+
 ## postQuerySync
 
 ```TypeScript
@@ -10,7 +16,9 @@ function postQuerySync(handle: AssetMap): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-asset-function postQuerySync(handle: AssetMap): void--><!--Device-asset-function postQuerySync(handle: AssetMap): void-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -18,7 +26,7 @@ function postQuerySync(handle: AssetMap): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handle | AssetMap | 是 | 待处理的查询句柄，包含[asset.preQuerySync](arkts-assetstore-prequerysync-f.md#prequerysync-1)执行成功返回的挑战值。 |
+| handle | [AssetMap](arkts-assetstore-assetmap-t.md) | 是 | 待处理的查询句柄，包含[asset.preQuerySync](arkts-assetstore-prequerysync-f.md#prequerysync-1)执行成功返回的挑战值。 |
 
 **错误码：**
 

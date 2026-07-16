@@ -4,7 +4,15 @@
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare struct ContentFormCard--><!--Device-unnamed-declare struct ContentFormCard-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+## 导入模块
+
+```TypeScript
+import { ContentFormCard, FormType } from '@kit.ArkData';
+```
 
 ## contentFormData
 
@@ -20,6 +28,8 @@ contentFormData: uniformDataStruct.ContentForm
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContentFormCard-contentFormData: uniformDataStruct.ContentForm--><!--Device-ContentFormCard-contentFormData: uniformDataStruct.ContentForm-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## formHeight
@@ -28,8 +38,7 @@ contentFormData: uniformDataStruct.ContentForm
 formHeight?: number
 ```
 
-卡片高度，当contentFormData中的title为空字符串时，卡片高度为传入的值，否则其范围在设置的内容卡片类型默认宽度的0.8 ~ 1.2倍之间，当formType为TYPE_SMALL时，其范围在设置的内容卡片类型默认
-宽度的0.4 ~ 1.2倍之间。单位为vp。省略时使用内容卡片类型的默认高度。
+卡片高度，当contentFormData中的title为空字符串时，卡片高度为传入的值，否则其范围在设置的内容卡片类型默认宽度的0.8 ~ 1.2倍之间，当formType为TYPE_SMALL时，其范围在设置的内容卡片类型默认宽度的0.4 ~ 1.2倍之间。单位为vp。省略时使用内容卡片类型的默认高度。
 
 **类型：** number
 
@@ -38,6 +47,8 @@ formHeight?: number
 **装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContentFormCard-formHeight?: double--><!--Device-ContentFormCard-formHeight?: double-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -57,6 +68,8 @@ formType: FormType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContentFormCard-formType: FormType--><!--Device-ContentFormCard-formType: FormType-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## formWidth
@@ -75,6 +88,8 @@ formWidth?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ContentFormCard-formWidth?: double--><!--Device-ContentFormCard-formWidth?: double-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## handleOnClick
@@ -90,6 +105,8 @@ handleOnClick?: Function
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContentFormCard-handleOnClick?: Function--><!--Device-ContentFormCard-handleOnClick?: Function-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 

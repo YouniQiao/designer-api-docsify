@@ -1,5 +1,11 @@
 # setRestartWant
 
+## 导入模块
+
+```TypeScript
+import { appRecovery } from '@kit.AbilityKit';
+```
+
 ## setRestartWant
 
 ```TypeScript
@@ -12,7 +18,9 @@ function setRestartWant(want: Want): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-appRecovery-function setRestartWant(want: Want): void--><!--Device-appRecovery-function setRestartWant(want: Want): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -20,7 +28,7 @@ function setRestartWant(want: Want): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | Want | 是 | 通过设置Want中"bundleName"和"abilityName"字段来指定恢复重启的Ability。 |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 通过设置Want中"bundleName"和"abilityName"字段来指定恢复重启的Ability。 |
 
 **示例：**
 

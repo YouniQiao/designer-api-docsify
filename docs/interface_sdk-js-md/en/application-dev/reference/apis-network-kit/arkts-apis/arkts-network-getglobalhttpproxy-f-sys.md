@@ -16,6 +16,8 @@ Obtains the network independent global {@link HttpProxy} proxy settings.
 
 **Since:** 10
 
+<!--Device-connection-function getGlobalHttpProxy(callback: AsyncCallback<HttpProxy>): void--><!--Device-connection-function getGlobalHttpProxy(callback: AsyncCallback<HttpProxy>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Obtains the network independent global {@link HttpProxy} proxy settings.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;HttpProxy&gt; | Yes | Returns the proxy settings. For details, see {@link HttpProxy}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<HttpProxy> | Yes | Returns the proxy settings. For details, see {@link HttpProxy}. |
 
 **Error codes:**
 
@@ -59,6 +61,8 @@ Obtains the network independent global {@link HttpProxy} proxy settings.
 
 **Since:** 10
 
+<!--Device-connection-function getGlobalHttpProxy(): Promise<HttpProxy>--><!--Device-connection-function getGlobalHttpProxy(): Promise<HttpProxy>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -67,7 +71,7 @@ Obtains the network independent global {@link HttpProxy} proxy settings.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HttpProxy&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HttpProxy> | the promise returned by the function. |
 
 **Error codes:**
 

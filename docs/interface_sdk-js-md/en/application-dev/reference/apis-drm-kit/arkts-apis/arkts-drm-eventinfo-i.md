@@ -4,6 +4,8 @@ Used to indicate the event info attached to specific event type.
 
 **Since:** 12
 
+<!--Device-drm-interface EventInfo--><!--Device-drm-interface EventInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Event extra info.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-EventInfo-extraInfo: string--><!--Device-EventInfo-extraInfo: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## info
@@ -41,6 +45,8 @@ Event info.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-EventInfo-info: Uint8Array--><!--Device-EventInfo-info: Uint8Array-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 

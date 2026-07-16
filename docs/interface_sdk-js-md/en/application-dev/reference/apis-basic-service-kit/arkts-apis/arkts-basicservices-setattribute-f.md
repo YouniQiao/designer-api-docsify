@@ -12,10 +12,11 @@ import { serialManager } from '@kit.BasicServicesKit';
 function setAttribute(portId: number, attribute: SerialAttribute): void
 ```
 
-Sets the parameters of the serial port. If this method is not called, the default configuration parameters are used
-(baud rate: 9600 bit/s; data bit: 8; parity bit: 0; stop bit: 1).
+Sets the parameters of the serial port. If this method is not called, the default configuration parameters are used(baud rate: 9600 bit/s; data bit: 8; parity bit: 0; stop bit: 1).
 
 **Since:** 19
+
+<!--Device-serialManager-function setAttribute(portId: int, attribute: SerialAttribute): void--><!--Device-serialManager-function setAttribute(portId: int, attribute: SerialAttribute): void-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -23,8 +24,8 @@ Sets the parameters of the serial port. If this method is not called, the defaul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPortreturned by [getPortList](arkts-basicservices-getportlist-f.md#getportlist-1). |
-| attribute | SerialAttribute | Yes | Configuration parameters of the serial port. |
+| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-getportlist-f.md#getportlist-1). |
+| attribute | [SerialAttribute](arkts-basicservices-serialattribute-i.md) | Yes | Configuration parameters of the serial port. |
 
 **Error codes:**
 

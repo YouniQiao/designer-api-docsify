@@ -20,13 +20,15 @@ Obtains an **Authenticator** instance for user authentication.
 
 **Substitutes:** [getAuthInstance](arkts-userauthentication-getauthinstance-f.md#getauthinstance-1)
 
+<!--Device-userAuth-function getAuthenticator(): Authenticator--><!--Device-userAuth-function getAuthenticator(): Authenticator-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Authenticator | **Authenticator** instance obtained. |
+| [Authenticator](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-authenticator-c.md) | **Authenticator** instance obtained. |
 
 **Example**
 

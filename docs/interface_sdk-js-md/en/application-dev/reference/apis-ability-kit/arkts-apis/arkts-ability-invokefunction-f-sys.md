@@ -21,6 +21,10 @@ Invoke a function by functionNamespace and functionName.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-functionManager-function invokeFunction(functionNamespace: string, functionName: string,
+    args: Record<string, Object>, options?: InvokeOptions): Promise<InvokeResult>--><!--Device-functionManager-function invokeFunction(functionNamespace: string, functionName: string,
+    args: Record<string, Object>, options?: InvokeOptions): Promise<InvokeResult>-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -31,14 +35,14 @@ Invoke a function by functionNamespace and functionName.
 | --- | --- | --- | --- |
 | functionNamespace | string | Yes | The namespace of the target function. |
 | functionName | string | Yes | The name of the target function. |
-| args | Record&lt;string, Object&gt; | Yes | The input arguments for the function. |
-| options | InvokeOptions | No | The options for this invocation. |
+| args | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Object> | Yes | The input arguments for the function. |
+| options | [InvokeOptions](arkts-ability-invokeoptions-i-sys.md) | No | The options for this invocation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;InvokeResult&gt; | The promise used to return the result of function invocation. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<InvokeResult> | The promise used to return the result of function invocation. |
 
 **Error codes:**
 

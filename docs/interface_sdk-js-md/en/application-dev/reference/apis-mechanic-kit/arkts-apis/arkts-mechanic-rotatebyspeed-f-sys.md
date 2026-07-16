@@ -16,6 +16,8 @@ Rotates a mechanical device at the specified speed.
 
 **Since:** 20
 
+<!--Device-mechanicManager-function rotateBySpeed(mechId: int, speed: RotationSpeed, duration: int): Promise<Result>--><!--Device-mechanicManager-function rotateBySpeed(mechId: int, speed: RotationSpeed, duration: int): Promise<Result>-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -25,14 +27,14 @@ Rotates a mechanical device at the specified speed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mechId | number | Yes | ID of the mechanical device. |
-| speed | RotationSpeed | Yes | Rotation speed. |
+| speed | [RotationSpeed](arkts-mechanic-rotationspeed-i-sys.md) | Yes | Rotation speed. |
 | duration | number | Yes | Rotation duration. Unit: millisecond. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | Promise that return the execution result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Result> | Promise that return the execution result. |
 
 **Error codes:**
 

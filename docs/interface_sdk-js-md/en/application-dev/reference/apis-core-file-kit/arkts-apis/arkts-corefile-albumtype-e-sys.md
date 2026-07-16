@@ -8,6 +8,8 @@ Enumerates the album types.
 
 **Substitutes:** [AlbumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumtype-e.md)
 
+<!--Device-userFileManager-enum AlbumType--><!--Device-userFileManager-enum AlbumType-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ User album.
 
 **Substitutes:** [USER](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumtype-e.md#user)
 
+<!--Device-AlbumType-USER = 0--><!--Device-AlbumType-USER = 0-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -43,6 +47,8 @@ System album.
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [SYSTEM](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-albumtype-e.md#system)
+
+<!--Device-AlbumType-SYSTEM = 1024--><!--Device-AlbumType-SYSTEM = 1024-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

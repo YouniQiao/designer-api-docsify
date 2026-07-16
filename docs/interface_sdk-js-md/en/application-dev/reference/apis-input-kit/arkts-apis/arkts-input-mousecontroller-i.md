@@ -1,15 +1,12 @@
 # MouseController
 
-Provides the capability of simulating mouse operations. The simulated mouse operation sequence must meet the
-following requirements:
+Provides the capability of simulating mouse operations. The simulated mouse operation sequence must meet the following requirements:
 
-1. A mouse button can be pressed only when it is in the released state.
-2. A mouse button can only be released after it has been pressed.
-3. A valid axis event sequence must begin with a **beginAxis** call, followed by zero or more **updateAxis** calls,
-and end with an **endAxis** call.
-4. Only one axis event sequence can be in progress at a time.
+1. A mouse button can be pressed only when it is in the released state.2. A mouse button can only be released after it has been pressed.3. A valid axis event sequence must begin with a **beginAxis** call, followed by zero or more **updateAxis** calls,and end with an **endAxis** call.4. Only one axis event sequence can be in progress at a time.
 
 **Since:** 26.0.0
+
+<!--Device-inputEventClient-interface MouseController--><!--Device-inputEventClient-interface MouseController-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -33,20 +30,22 @@ Starts an axis event. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MouseController-beginAxis(axis: Axis, value: int): Promise<void>--><!--Device-MouseController-beginAxis(axis: Axis, value: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| axis | Axis | Yes | Axis type. |
+| axis | [Axis](../../apis-arkui/arkts-apis/arkts-arkui-axis-e.md) | Yes | Axis type. |
 | value | number | Yes | Axis value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -108,19 +107,21 @@ Ends an axis event. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MouseController-endAxis(axis: Axis): Promise<void>--><!--Device-MouseController-endAxis(axis: Axis): Promise<void>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| axis | Axis | Yes | Axis type. |
+| axis | [Axis](../../apis-arkui/arkts-apis/arkts-arkui-axis-e.md) | Yes | Axis type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -148,6 +149,8 @@ Moves the mouse cursor to the specified display coordinates. This API uses a pro
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MouseController-moveTo(displayId: int, displayX: int, displayY: int): Promise<void>--><!--Device-MouseController-moveTo(displayId: int, displayX: int, displayY: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **Parameters:**
@@ -155,14 +158,14 @@ Moves the mouse cursor to the specified display coordinates. This API uses a pro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayId | number | Yes | ID of the target display. |
-| displayX | number | Yes | X coordinate relative to the left edge of the display, in px. If the value exceeds thevalid range of the display, the actual coordinate will be clamped to the valid range [0, display width - 1]. |
-| displayY | number | Yes | Y coordinate relative to the top edge of the display, in px. If the value exceeds thevalid range of the display, the actual coordinate will be clamped to the valid range [0, display height - 1]. |
+| displayX | number | Yes | X coordinate relative to the left edge of the display, in px. If the value exceeds the valid range of the display, the actual coordinate will be clamped to the valid range [0, display width - 1]. |
+| displayY | number | Yes | Y coordinate relative to the top edge of the display, in px. If the value exceeds the valid range of the display, the actual coordinate will be clamped to the valid range [0, display height - 1]. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -216,19 +219,21 @@ Presses a mouse button. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MouseController-pressButton(button: Button): Promise<void>--><!--Device-MouseController-pressButton(button: Button): Promise<void>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| button | Button | Yes | Mouse button to be pressed. |
+| button | [Button](../../apis-arkui/arkts-apis/arkts-arkui-button-i.md) | Yes | Mouse button to be pressed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -286,19 +291,21 @@ Release a mouse button. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MouseController-releaseButton(button: Button): Promise<void>--><!--Device-MouseController-releaseButton(button: Button): Promise<void>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| button | Button | Yes | Mouse button to be released. |
+| button | [Button](../../apis-arkui/arkts-apis/arkts-arkui-button-i.md) | Yes | Mouse button to be released. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -326,20 +333,22 @@ Updates an axis event. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MouseController-updateAxis(axis: Axis, value: int): Promise<void>--><!--Device-MouseController-updateAxis(axis: Axis, value: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| axis | Axis | Yes | Axis type. |
+| axis | [Axis](../../apis-arkui/arkts-apis/arkts-arkui-axis-e.md) | Yes | Axis type. |
 | value | number | Yes | Axis value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

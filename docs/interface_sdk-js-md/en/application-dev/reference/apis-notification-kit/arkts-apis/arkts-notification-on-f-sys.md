@@ -12,19 +12,17 @@ import { notificationManager } from '@kit.NotificationKit';
 function on(type: 'checkNotification', callback: (checkInfo: NotificationCheckInfo) => NotificationCheckResult): void
 ```
 
-Subscribes to notification events. The notification service sends the notification information in the callback to
-the verification program. The verification program returns the verification result to determine whether to publish
-the notification, for example, controlling the publication frequency of marketing notifications.
+Subscribes to notification events. The notification service sends the notification information in the callback to the verification program. The verification program returns the verification result to determine whether to publish the notification, for example, controlling the publication frequency of marketing notifications.
 
-Each [SlotType](arkts-notification-slottype-e.md) in the system can have only one
-registrant.
+Each [SlotType](arkts-notification-slottype-e.md) in the system can have only one registrant.
 
-This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is
-returned.
+This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
+
+<!--Device-notificationManager-function on(type: 'checkNotification', callback: (checkInfo: NotificationCheckInfo) => NotificationCheckResult): void--><!--Device-notificationManager-function on(type: 'checkNotification', callback: (checkInfo: NotificationCheckInfo) => NotificationCheckResult): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -35,7 +33,7 @@ returned.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'checkNotification' | Yes | Event type. The value is fixed to **'checkNotification'**. |
-| callback | (checkInfo: NotificationCheckInfo) =&gt; NotificationCheckResult | Yes | Pointer to the notification verification function. |
+| callback | (checkInfo: NotificationCheckInfo) => NotificationCheckResult | Yes | Pointer to the notification verification function. |
 
 **Error codes:**
 
@@ -76,20 +74,19 @@ function on(type: 'checkNotification', checkRequest: NotificationCheckRequest,
     callback: (checkInfo: NotificationCheckInfo) => Promise<NotificationCheckResult>): void
 ```
 
-Subscribes to notification events. The notification service sends the notification information in the callback to
-the verification program. The verification program returns the verification result to determine whether to publish
-the notification, for example, controlling the publication frequency of marketing notifications. This API uses a
-promise to return the result.
+Subscribes to notification events. The notification service sends the notification information in the callback to the verification program. The verification program returns the verification result to determine whether to publish the notification, for example, controlling the publication frequency of marketing notifications. This API uses a promise to return the result.
 
-Each [SlotType](arkts-notification-slottype-e.md) in the system can have only one
-registrant.
+Each [SlotType](arkts-notification-slottype-e.md) in the system can have only one registrant.
 
-This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is
-returned.
+This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
+
+<!--Device-notificationManager-function on(type: 'checkNotification', checkRequest: NotificationCheckRequest,
+    callback: (checkInfo: NotificationCheckInfo) => Promise<NotificationCheckResult>): void--><!--Device-notificationManager-function on(type: 'checkNotification', checkRequest: NotificationCheckRequest,
+    callback: (checkInfo: NotificationCheckInfo) => Promise<NotificationCheckResult>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -100,8 +97,8 @@ returned.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'checkNotification' | Yes | Event type. The value is fixed to **'checkNotification'**. |
-| checkRequest | NotificationCheckRequest | Yes | Notification verification content. |
-| callback | (checkInfo: NotificationCheckInfo) =&gt; Promise&lt;NotificationCheckResult&gt; | Yes | Pointer to the notification verification function. |
+| checkRequest | [NotificationCheckRequest](arkts-notification-notificationcheckrequest-i-sys.md) | Yes | Notification verification content. |
+| callback | (checkInfo: NotificationCheckInfo) => Promise<NotificationCheckResult> | Yes | Pointer to the notification verification function. |
 
 **Error codes:**
 

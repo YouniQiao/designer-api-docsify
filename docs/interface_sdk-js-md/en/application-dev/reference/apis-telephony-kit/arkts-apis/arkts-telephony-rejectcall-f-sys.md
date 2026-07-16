@@ -18,6 +18,8 @@ Reject the incoming call.
 
 **Required permissions:** ohos.permission.ANSWER_CALL
 
+<!--Device-call-function rejectCall(callId: int, options: RejectMessageOptions, callback: AsyncCallback<void>): void--><!--Device-call-function rejectCall(callId: int, options: RejectMessageOptions, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -27,8 +29,8 @@ Reject the incoming call.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | number | Yes | Indicates the identifier of the call to reject. |
-| options | RejectMessageOptions | Yes | Indicates the text message to reject. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of rejectCall. |
+| options | [RejectMessageOptions](arkts-telephony-rejectmessageoptions-i-sys.md) | Yes | Indicates the text message to reject. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of rejectCall. |
 
 **Error codes:**
 
@@ -73,6 +75,8 @@ Reject the incoming call.
 
 **Required permissions:** ohos.permission.ANSWER_CALL
 
+<!--Device-call-function rejectCall(callId?: int, options?: RejectMessageOptions): Promise<void>--><!--Device-call-function rejectCall(callId?: int, options?: RejectMessageOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -82,13 +86,13 @@ Reject the incoming call.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | number | No | Indicates the identifier of the call to reject. |
-| options | RejectMessageOptions | No | Indicates the text message to reject. |
+| options | [RejectMessageOptions](arkts-telephony-rejectmessageoptions-i-sys.md) | No | Indicates the text message to reject. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the rejectCall. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the rejectCall. |
 
 **Error codes:**
 
@@ -131,6 +135,8 @@ Reject the incoming call.
 
 **Required permissions:** ohos.permission.ANSWER_CALL
 
+<!--Device-call-function rejectCall(callId: int, callback: AsyncCallback<void>): void--><!--Device-call-function rejectCall(callId: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -140,7 +146,7 @@ Reject the incoming call.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | number | Yes | Indicates the identifier of the call to reject. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of rejectCall. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of rejectCall. |
 
 **Error codes:**
 
@@ -182,6 +188,8 @@ Reject the incoming call without callId.
 
 **Required permissions:** ohos.permission.ANSWER_CALL or ohos.permission.MANAGE_CALL_FOR_DEVICES
 
+<!--Device-call-function rejectCall(callback: AsyncCallback<void>): void--><!--Device-call-function rejectCall(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -190,7 +198,7 @@ Reject the incoming call without callId.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of rejectCall. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of rejectCall. |
 
 **Error codes:**
 
@@ -232,6 +240,8 @@ Reject the incoming call without callId.
 
 **Required permissions:** ohos.permission.ANSWER_CALL
 
+<!--Device-call-function rejectCall(options: RejectMessageOptions, callback: AsyncCallback<void>): void--><!--Device-call-function rejectCall(options: RejectMessageOptions, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -240,8 +250,8 @@ Reject the incoming call without callId.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | RejectMessageOptions | Yes | Indicates the text message to reject. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of rejectCall. |
+| options | [RejectMessageOptions](arkts-telephony-rejectmessageoptions-i-sys.md) | Yes | Indicates the text message to reject. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of rejectCall. |
 
 **Error codes:**
 

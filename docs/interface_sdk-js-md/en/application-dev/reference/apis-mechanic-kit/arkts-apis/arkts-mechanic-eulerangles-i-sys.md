@@ -4,6 +4,8 @@ Absolute euler angles relative to the home position.
 
 **Since:** 20
 
+<!--Device-mechanicManager-export interface EulerAngles--><!--Device-mechanicManager-export interface EulerAngles-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Pitch angle, ranging from -Math.PI to Math.PI, measured in radians.
 
 **Since:** 20
 
+<!--Device-EulerAngles-pitch?: double--><!--Device-EulerAngles-pitch?: double-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ Roll angle, ranging from -Math.PI to Math.PI, measured in radians.
 
 **Since:** 20
 
+<!--Device-EulerAngles-roll?: double--><!--Device-EulerAngles-roll?: double-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ Yaw angle, ranging from -Math.PI to Math.PI, measured in radians.
 **Type:** number
 
 **Since:** 20
+
+<!--Device-EulerAngles-yaw?: double--><!--Device-EulerAngles-yaw?: double-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
 

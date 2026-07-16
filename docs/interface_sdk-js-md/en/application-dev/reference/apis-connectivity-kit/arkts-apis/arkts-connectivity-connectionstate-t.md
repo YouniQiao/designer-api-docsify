@@ -10,6 +10,8 @@ Indicates the connection state.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ssap-type ConnectionState = nearlinkConstant.ConnectionState--><!--Device-ssap-type ConnectionState = nearlinkConstant.ConnectionState-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Property type:** nearlinkConstant.ConnectionState

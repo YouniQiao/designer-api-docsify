@@ -4,6 +4,8 @@ Represents the database information.
 
 **Since:** 11
 
+<!--Device-cloudExtension-export interface Database--><!--Device-cloudExtension-export interface Database-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Alias of the database on the server.
 
 **Since:** 11
 
+<!--Device-Database-alias: string--><!--Device-Database-alias: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ Name of the database.
 
 **Since:** 11
 
+<!--Device-Database-name: string--><!--Device-Database-name: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ Table in the database, including the detailed data information.
 **Type:** Array<Table>
 
 **Since:** 11
+
+<!--Device-Database-tables: Array<Table>--><!--Device-Database-tables: Array<Table>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 

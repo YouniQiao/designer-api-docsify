@@ -18,6 +18,8 @@ Query security event information from security guard.
 
 **Required permissions:** ohos.permission.QUERY_SECURITY_EVENT
 
+<!--Device-securityGuard-function querySecurityEvent(rules: Array<SecurityEventRule>, querier: Querier): void--><!--Device-securityGuard-function querySecurityEvent(rules: Array<SecurityEventRule>, querier: Querier): void-End-->
+
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Query security event information from security guard.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rules | Array&lt;SecurityEventRule&gt; | Yes | rule of get security event information. |
-| querier | Querier | Yes | callback of receiving the query data. |
+| rules | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<SecurityEventRule> | Yes | rule of get security event information. |
+| querier | [Querier](arkts-securityguard-querier-i-sys.md) | Yes | callback of receiving the query data. |
 
 **Error codes:**
 

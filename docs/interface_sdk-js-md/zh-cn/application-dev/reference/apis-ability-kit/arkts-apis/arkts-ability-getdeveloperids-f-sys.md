@@ -1,5 +1,11 @@
 # getDeveloperIds（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getDeveloperIds
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getDeveloperIds(appDistributionType?: number): Array<string>
 **起始版本：** 12
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getDeveloperIds(appDistributionType?: int): Array<string>--><!--Device-bundleManager-function getDeveloperIds(appDistributionType?: int): Array<string>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -26,7 +34,7 @@ function getDeveloperIds(appDistributionType?: number): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 同步返回Array&lt;string&gt;。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 同步返回Array&lt;string&gt;。 |
 
 **错误码：**
 

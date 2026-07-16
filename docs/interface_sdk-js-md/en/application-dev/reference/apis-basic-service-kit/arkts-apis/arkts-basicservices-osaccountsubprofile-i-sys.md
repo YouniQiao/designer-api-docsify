@@ -4,6 +4,8 @@ Definition of an OS account sub-profile.
 
 **Since:** 26.0.0
 
+<!--Device-osAccount-interface OsAccountSubProfile--><!--Device-osAccount-interface OsAccountSubProfile-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Distributed account information bound to the OS account sub-profile.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OsAccountSubProfile-distributedInfo?: distributedAccount.DistributedInfo--><!--Device-OsAccountSubProfile-distributedInfo?: distributedAccount.DistributedInfo-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -46,6 +50,8 @@ Identifier of the OS account sub-profile.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-OsAccountSubProfile-id: int--><!--Device-OsAccountSubProfile-id: int-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -56,15 +62,15 @@ Identifier of the OS account sub-profile.
 index: number
 ```
 
-Position index of the OS account sub-profile, ranging from 0 to the number of sub-profiles minus 1.
-This index is unique within each OS account and is automatically assigned by the system
-when the sub-profile is created.
+Position index of the OS account sub-profile, ranging from 0 to the number of sub-profiles minus 1.This index is unique within each OS account and is automatically assigned by the system when the sub-profile is created.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OsAccountSubProfile-index: int--><!--Device-OsAccountSubProfile-index: int-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -83,6 +89,8 @@ Local ID of the OS account to which the sub-profile belongs.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OsAccountSubProfile-osAccountLocalId: int--><!--Device-OsAccountSubProfile-osAccountLocalId: int-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 

@@ -4,6 +4,8 @@ Deferred video enhancement info.
 
 **Since:** 13
 
+<!--Device-camera-interface DeferredVideoEnhancementInfo--><!--Device-camera-interface DeferredVideoEnhancementInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Check whether deferred video enhancement available.
 
 **Since:** 13
 
+<!--Device-DeferredVideoEnhancementInfo-readonly isDeferredVideoEnhancementAvailable: boolean--><!--Device-DeferredVideoEnhancementInfo-readonly isDeferredVideoEnhancementAvailable: boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Video identifier.
 **Type:** string
 
 **Since:** 13
+
+<!--Device-DeferredVideoEnhancementInfo-readonly videoId?: string--><!--Device-DeferredVideoEnhancementInfo-readonly videoId?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

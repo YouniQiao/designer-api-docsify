@@ -1,5 +1,11 @@
 # getCardTypeSync
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## getCardTypeSync
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getCardTypeSync(slotId: number): CardType
 Obtains the type of the SIM card inserted in a specified slot.
 
 **起始版本：** 10
+
+<!--Device-sim-function getCardTypeSync(slotId: int): CardType--><!--Device-sim-function getCardTypeSync(slotId: int): CardType-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -22,7 +30,7 @@ Obtains the type of the SIM card inserted in a specified slot.
 
 | 类型 | 说明 |
 | --- | --- |
-| CardType | Returns the SIM card type. |
+| [CardType](arkts-telephony-cardtype-e.md) | Returns the SIM card type. |
 
 **示例：**
 

@@ -12,12 +12,13 @@ import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 function submitMetadata(metadata: string): void
 ```
 
-Transfers the metadata to be encoded to the MSDP. The MSDP determines whether to transfer the metadata to the
-system application or service that calls the encoding API.
+Transfers the metadata to be encoded to the MSDP. The MSDP determines whether to transfer the metadata to the system application or service that calls the encoding API.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-metadataBinding-function submitMetadata(metadata: string): void--><!--Device-metadataBinding-function submitMetadata(metadata: string): void-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.MetadataBinding
 

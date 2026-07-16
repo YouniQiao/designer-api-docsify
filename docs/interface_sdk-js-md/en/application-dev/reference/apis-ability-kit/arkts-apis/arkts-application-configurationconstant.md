@@ -8,6 +8,8 @@ The ConfigurationConstant module provides the enumerated values of the environme
 
 **Substitutes:** ConfigurationConstant/ConfigurationConstant
 
+<!--Device-unnamed-declare namespace ConfigurationConstant--><!--Device-unnamed-declare namespace ConfigurationConstant-End-->
+
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## Summary

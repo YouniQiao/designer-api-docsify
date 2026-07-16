@@ -12,12 +12,13 @@ import { notificationExtensionSubscription } from '@kit.NotificationKit';
 function getUserGrantedEnabledBundles(): Promise<GrantedBundleInfo[]>
 ```
 
-Obtains the applications that are allowed to access device notifications. This API uses a promise to return the
-result.
+Obtains the applications that are allowed to access device notifications. This API uses a promise to return the result.
 
 **Since:** 22
 
 **Required permissions:** ohos.permission.SUBSCRIBE_NOTIFICATION
+
+<!--Device-notificationExtensionSubscription-function getUserGrantedEnabledBundles(): Promise<GrantedBundleInfo[]>--><!--Device-notificationExtensionSubscription-function getUserGrantedEnabledBundles(): Promise<GrantedBundleInfo[]>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -25,7 +26,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GrantedBundleInfo[]&gt; | Promise used to return the applications obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<GrantedBundleInfo[]> | Promise used to return the applications obtained. |
 
 **Error codes:**
 

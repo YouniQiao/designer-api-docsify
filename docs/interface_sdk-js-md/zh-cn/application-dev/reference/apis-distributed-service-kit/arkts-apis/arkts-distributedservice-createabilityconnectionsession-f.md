@@ -1,5 +1,11 @@
 # createAbilityConnectionSession
 
+## 导入模块
+
+```TypeScript
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+```
+
 ## createAbilityConnectionSession
 
 ```TypeScript
@@ -15,6 +21,10 @@ function createAbilityConnectionSession(serviceName: string, context: Context, p
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-abilityConnectionManager-function createAbilityConnectionSession(serviceName: string, context: Context, peerInfo: PeerInfo,
+        connectOptions: ConnectOptions): int--><!--Device-abilityConnectionManager-function createAbilityConnectionSession(serviceName: string, context: Context, peerInfo: PeerInfo,
+        connectOptions: ConnectOptions): int-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**
@@ -22,9 +32,9 @@ function createAbilityConnectionSession(serviceName: string, context: Context, p
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | serviceName | string | 是 | 应用设置的服务名称（两端必须一致），最大长度为256字符。 |
-| context | Context | 是 | 表示应用上下文。 |
-| peerInfo | PeerInfo | 是 | 对端的协同信息。 |
-| connectOptions | ConnectOptions | 是 | 应用设置的连接选项。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 表示应用上下文。 |
+| peerInfo | [PeerInfo](arkts-distributedservice-peerinfo-i.md) | 是 | 对端的协同信息。 |
+| connectOptions | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-t.md) | 是 | 应用设置的连接选项。 |
 
 **返回值：**
 

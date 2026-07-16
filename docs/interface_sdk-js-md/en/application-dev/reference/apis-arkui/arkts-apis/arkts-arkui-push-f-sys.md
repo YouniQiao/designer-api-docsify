@@ -18,6 +18,8 @@ Plugin component push method used to send the information of the template it pro
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-pluginComponentManager-function push(param: PushParameterForStage, callback: AsyncCallback<void>): void--><!--Device-pluginComponentManager-function push(param: PushParameterForStage, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -26,6 +28,6 @@ Plugin component push method used to send the information of the template it pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | PushParameterForStage | Yes | Plugin component push parameters for stage. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Plugin component push event callback. |
+| param | [PushParameterForStage](arkts-arkui-pushparameterforstage-i-sys.md) | Yes | Plugin component push parameters for stage. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Plugin component push event callback. |
 

@@ -2,12 +2,19 @@
 
 保存文本内容及样式的载体，支持排版与绘制操作。
 
-下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-paragraphbuilder-c.md)类的[build()](arkts-arkgraphics2d-paragraphbuilder-c.md#build-1)接口获取到
-Paragraph对象实例，再通过此实例调用对应方法。
+下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-paragraphbuilder-c.md)类的[build()](arkts-arkgraphics2d-paragraphbuilder-c.md#build-1)接口获取到Paragraph对象实例，再通过此实例调用对应方法。
 
 **起始版本：** 12
 
+<!--Device-text-class Paragraph--><!--Device-text-class Paragraph-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
+
+## 导入模块
+
+```TypeScript
+import { text } from '@kit.ArkGraphics2D';
+```
 
 ## didExceedMaxLines
 
@@ -19,7 +26,9 @@ didExceedMaxLines(): boolean
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-didExceedMaxLines(): boolean--><!--Device-Paragraph-didExceedMaxLines(): boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -48,7 +57,9 @@ forceReuseRasterResult(isForce: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-forceReuseRasterResult(isForce: boolean): void--><!--Device-Paragraph-forceReuseRasterResult(isForce: boolean): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -116,7 +127,9 @@ getActualTextRange(lineNumber: number, includeSpaces: boolean): Range
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getActualTextRange(lineNumber: int, includeSpaces: boolean): Range--><!--Device-Paragraph-getActualTextRange(lineNumber: int, includeSpaces: boolean): Range-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -131,7 +144,7 @@ getActualTextRange(lineNumber: number, includeSpaces: boolean): Range
 
 | 类型 | 说明 |
 | --- | --- |
-| Range | 返回对应行数的实际文本范围。如果行索引非法，返回的start和end均为0。 |
+| [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | 返回对应行数的实际文本范围。如果行索引非法，返回的start和end均为0。 |
 
 **示例：**
 
@@ -150,7 +163,9 @@ getAlphabeticBaseline(): number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getAlphabeticBaseline(): double--><!--Device-Paragraph-getAlphabeticBaseline(): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -179,7 +194,9 @@ getCharacterPositionAtCoordinate(x: number, y: number, encoding: drawing.TextEnc
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本24开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getCharacterPositionAtCoordinate(x: double, y: double, encoding: drawing.TextEncoding): PositionWithAffinity--><!--Device-Paragraph-getCharacterPositionAtCoordinate(x: double, y: double, encoding: drawing.TextEncoding): PositionWithAffinity-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -195,7 +212,7 @@ getCharacterPositionAtCoordinate(x: number, y: number, encoding: drawing.TextEnc
 
 | 类型 | 说明 |
 | --- | --- |
-| PositionWithAffinity | 字符位置信息。 |
+| [PositionWithAffinity](../../apis-arkui/arkts-apis/arkts-arkui-positionwithaffinity-i.md) | 字符位置信息。 |
 
 **错误码：**
 
@@ -252,7 +269,9 @@ getCharacterRangeForGlyphRange(glyphRange: Range, encoding: drawing.TextEncoding
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本24开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getCharacterRangeForGlyphRange(glyphRange: Range, encoding: drawing.TextEncoding): Array<Range>--><!--Device-Paragraph-getCharacterRangeForGlyphRange(glyphRange: Range, encoding: drawing.TextEncoding): Array<Range>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -260,14 +279,14 @@ getCharacterRangeForGlyphRange(glyphRange: Range, encoding: drawing.TextEncoding
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| glyphRange | Range | 是 | 字形范围。 |
+| glyphRange | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | 是 | 字形范围。 |
 | encoding | drawing.TextEncoding | 是 | 文本编码类型。目前仅支持UTF-8和UTF-16编码类型。对于UTF-8编码，返回的字符范围表示字节范围。对于UTF-16编码，返回的字符范围表示UTF-16编码单元范围。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Range&gt; | 字符范围。如果数组包含一个元素，它表示字符范围。如果包含两个元素，第一个是字符范围，第二个是实际的字形范围。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Range> | 字符范围。如果数组包含一个元素，它表示字符范围。如果包含两个元素，第一个是字符范围，第二个是实际的字形范围。 |
 
 **错误码：**
 
@@ -321,7 +340,9 @@ getGlyphPositionAtCoordinate(x: number, y: number): PositionWithAffinity
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getGlyphPositionAtCoordinate(x: double, y: double): PositionWithAffinity--><!--Device-Paragraph-getGlyphPositionAtCoordinate(x: double, y: double): PositionWithAffinity-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -336,7 +357,7 @@ getGlyphPositionAtCoordinate(x: number, y: number): PositionWithAffinity
 
 | 类型 | 说明 |
 | --- | --- |
-| PositionWithAffinity | 字形位置信息。 |
+| [PositionWithAffinity](../../apis-arkui/arkts-apis/arkts-arkui-positionwithaffinity-i.md) | 字形位置信息。 |
 
 **示例：**
 
@@ -357,7 +378,9 @@ getGlyphRangeForCharacterRange(characterRange: Range, encoding: drawing.TextEnco
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本24开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getGlyphRangeForCharacterRange(characterRange: Range, encoding: drawing.TextEncoding): Array<Range>--><!--Device-Paragraph-getGlyphRangeForCharacterRange(characterRange: Range, encoding: drawing.TextEncoding): Array<Range>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -365,14 +388,14 @@ getGlyphRangeForCharacterRange(characterRange: Range, encoding: drawing.TextEnco
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| characterRange | Range | 是 | 字符范围。 |
+| characterRange | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | 是 | 字符范围。 |
 | encoding | drawing.TextEncoding | 是 | 文本编码类型。目前仅支持UTF-8和UTF-16编码类型。对于UTF-8编码，返回的实际字符范围表示字节范围。对于UTF-16编码，返回的实际字符范围表示UTF-16编码单元范围。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Range&gt; | 字形范围。数组包含两个元素，第一个是字形范围，第二个是实际的字符范围。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Range> | 字形范围。数组包含两个元素，第一个是字形范围，第二个是实际的字符范围。 |
 
 **错误码：**
 
@@ -426,7 +449,9 @@ getHeight(): number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getHeight(): double--><!--Device-Paragraph-getHeight(): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -453,7 +478,9 @@ getIdeographicBaseline(): number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getIdeographicBaseline(): double--><!--Device-Paragraph-getIdeographicBaseline(): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -480,7 +507,9 @@ getLineCount(): number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getLineCount(): int--><!--Device-Paragraph-getLineCount(): int-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -507,7 +536,9 @@ getLineHeight(line: number): number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getLineHeight(line: int): double--><!--Device-Paragraph-getLineHeight(line: int): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -540,7 +571,9 @@ getLineMetrics(): Array<LineMetrics>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getLineMetrics(): Array<LineMetrics>--><!--Device-Paragraph-getLineMetrics(): Array<LineMetrics>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -548,7 +581,7 @@ getLineMetrics(): Array<LineMetrics>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;LineMetrics&gt; | 文本行的行度量数组。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<LineMetrics> | 文本行的行度量数组。 |
 
 **示例：**
 
@@ -567,7 +600,9 @@ getLineMetrics(lineNumber: number): LineMetrics | undefined
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getLineMetrics(lineNumber: int): LineMetrics | undefined--><!--Device-Paragraph-getLineMetrics(lineNumber: int): LineMetrics | undefined-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -581,7 +616,7 @@ getLineMetrics(lineNumber: number): LineMetrics | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| LineMetrics | **LineMetrics** object containing the measurement information if thespecified line number is valid and the measurement information exists. If the line number is invalid or themeasurement information cannot be obtained, **undefined** is returned. |
+| [LineMetrics](../../apis-arkui/arkts-apis/arkts-arkui-linemetrics-t.md) | **LineMetrics** object containing the measurement information if the specified line number is valid and the measurement information exists. If the line number is invalid or the measurement information cannot be obtained, **undefined** is returned. |
 
 **示例：**
 
@@ -600,7 +635,9 @@ getLineWidth(line: number): number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getLineWidth(line: int): double--><!--Device-Paragraph-getLineWidth(line: int): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -633,7 +670,9 @@ getLongestLine(): number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getLongestLine(): double--><!--Device-Paragraph-getLongestLine(): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -660,7 +699,9 @@ getLongestLineWithIndent(): number
 
 **起始版本：** 13
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getLongestLineWithIndent(): double--><!--Device-Paragraph-getLongestLineWithIndent(): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -687,7 +728,9 @@ getMaxIntrinsicWidth(): number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getMaxIntrinsicWidth(): double--><!--Device-Paragraph-getMaxIntrinsicWidth(): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -714,7 +757,9 @@ getMaxWidth(): number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getMaxWidth(): double--><!--Device-Paragraph-getMaxWidth(): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -741,7 +786,9 @@ getMinIntrinsicWidth(): number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getMinIntrinsicWidth(): double--><!--Device-Paragraph-getMinIntrinsicWidth(): double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -770,7 +817,9 @@ getParagraphStyle(): ParagraphStyle
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getParagraphStyle(): ParagraphStyle--><!--Device-Paragraph-getParagraphStyle(): ParagraphStyle-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -778,7 +827,7 @@ getParagraphStyle(): ParagraphStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| ParagraphStyle | 段落的样式配置。 |
+| [ParagraphStyle](arkts-arkgraphics2d-paragraphstyle-i.md) | 段落的样式配置。 |
 
 **示例：**
 
@@ -841,7 +890,9 @@ getProcessState(): TextProcessState
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getProcessState(): TextProcessState--><!--Device-Paragraph-getProcessState(): TextProcessState-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -849,7 +900,7 @@ getProcessState(): TextProcessState
 
 | 类型 | 说明 |
 | --- | --- |
-| TextProcessState | 段落的文本处理状态。 |
+| [TextProcessState](arkts-arkgraphics2d-textprocessstate-e.md) | 段落的文本处理状态。 |
 
 **示例：**
 
@@ -897,7 +948,9 @@ getRectsForPlaceholders(): Array<TextBox>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getRectsForPlaceholders(): Array<TextBox>--><!--Device-Paragraph-getRectsForPlaceholders(): Array<TextBox>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -905,7 +958,7 @@ getRectsForPlaceholders(): Array<TextBox>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;TextBox&gt; | 矩形区域数组。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<TextBox> | 矩形区域数组。 |
 
 **示例：**
 
@@ -924,7 +977,9 @@ getRectsForRange(range: Range, widthStyle: RectWidthStyle, heightStyle: RectHeig
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getRectsForRange(range: Range, widthStyle: RectWidthStyle, heightStyle: RectHeightStyle): Array<TextBox>--><!--Device-Paragraph-getRectsForRange(range: Range, widthStyle: RectWidthStyle, heightStyle: RectHeightStyle): Array<TextBox>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -932,15 +987,15 @@ getRectsForRange(range: Range, widthStyle: RectWidthStyle, heightStyle: RectHeig
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | Range | 是 | 需要获取的区域的文本区间。 |
-| widthStyle | RectWidthStyle | 是 | 返回的矩形区域的宽度的规格。 |
-| heightStyle | RectHeightStyle | 是 | 返回的矩形区域的高度的规格。 |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | 是 | 需要获取的区域的文本区间。 |
+| widthStyle | [RectWidthStyle](arkts-arkgraphics2d-rectwidthstyle-e.md) | 是 | 返回的矩形区域的宽度的规格。 |
+| heightStyle | [RectHeightStyle](arkts-arkgraphics2d-rectheightstyle-e.md) | 是 | 返回的矩形区域的高度的规格。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;TextBox&gt; | 矩形区域数组。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<TextBox> | 矩形区域数组。 |
 
 **示例：**
 
@@ -962,7 +1017,9 @@ getTextDisplayState(): TextDisplayState
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getTextDisplayState(): TextDisplayState--><!--Device-Paragraph-getTextDisplayState(): TextDisplayState-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -970,7 +1027,7 @@ getTextDisplayState(): TextDisplayState
 
 | 类型 | 说明 |
 | --- | --- |
-| TextDisplayState | 段落的文本显示状态。 |
+| [TextDisplayState](arkts-arkgraphics2d-textdisplaystate-e.md) | 段落的文本显示状态。 |
 
 **示例：**
 
@@ -1018,7 +1075,9 @@ getTextLines(): Array<TextLine>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getTextLines(): Array<TextLine>--><!--Device-Paragraph-getTextLines(): Array<TextLine>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1026,7 +1085,7 @@ getTextLines(): Array<TextLine>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;TextLine&gt; | 文本行载体数组。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<TextLine> | 文本行载体数组。 |
 
 **示例：**
 
@@ -1041,14 +1100,15 @@ let lines = paragraph.getTextLines();
 getVisibleTextRanges(): Array<Range>
 ```
 
-获取段落中在屏幕上可见的文本范围。不包含因最大行数（[ParagraphStyle](arkts-arkgraphics2d-paragraphstyle-i.md)的maxLines属性）截断或省略号模式（
-[EllipsisMode](arkts-arkgraphics2d-ellipsismode-e.md)）替换而未显示的文本。
+获取段落中在屏幕上可见的文本范围。不包含因最大行数（[ParagraphStyle](arkts-arkgraphics2d-paragraphstyle-i.md)的maxLines属性）截断或省略号模式（[EllipsisMode](arkts-arkgraphics2d-ellipsismode-e.md)）替换而未显示的文本。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getVisibleTextRanges(): Array<Range>--><!--Device-Paragraph-getVisibleTextRanges(): Array<Range>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1056,7 +1116,7 @@ getVisibleTextRanges(): Array<Range>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Range&gt; | 段落可见文本范围数组，范围为UTF-16编码单元索引。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Range> | 段落可见文本范围数组，范围为UTF-16编码单元索引。 |
 
 **示例：**
 
@@ -1075,7 +1135,9 @@ getWordBoundary(offset: number): Range
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-getWordBoundary(offset: int): Range--><!--Device-Paragraph-getWordBoundary(offset: int): Range-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1089,7 +1151,7 @@ getWordBoundary(offset: number): Range
 
 | 类型 | 说明 |
 | --- | --- |
-| Range | 单词的索引区间。 |
+| [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-range-i.md) | 单词的索引区间。 |
 
 **示例：**
 
@@ -1108,7 +1170,9 @@ layout(width: number): Promise<void>
 
 **起始版本：** 18
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-layout(width: double): Promise<void>--><!--Device-Paragraph-layout(width: double): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1122,7 +1186,7 @@ layout(width: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1214,7 +1278,9 @@ layoutSync(width: number): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-layoutSync(width: double): void--><!--Device-Paragraph-layoutSync(width: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1243,7 +1309,9 @@ layoutWithConstraints(size: TextRectSize): TextLayoutResult
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本24开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-layoutWithConstraints(size: TextRectSize): TextLayoutResult--><!--Device-Paragraph-layoutWithConstraints(size: TextRectSize): TextLayoutResult-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1251,13 +1319,13 @@ layoutWithConstraints(size: TextRectSize): TextLayoutResult
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | TextRectSize | 是 | 约束的高度和宽度，单位为物理像素px。 |
+| size | [TextRectSize](arkts-arkgraphics2d-textrectsize-i.md) | 是 | 约束的高度和宽度，单位为物理像素px。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| TextLayoutResult | 布局后的实际尺寸和排版后容下的字符范围。 |
+| [TextLayoutResult](arkts-arkgraphics2d-textlayoutresult-i.md) | 布局后的实际尺寸和排版后容下的字符范围。 |
 
 **示例：**
 
@@ -1281,7 +1349,9 @@ paint(canvas: drawing.Canvas, x: number, y: number): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-paint(canvas: drawing.Canvas, x: double, y: double): void--><!--Device-Paragraph-paint(canvas: drawing.Canvas, x: double, y: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1314,7 +1384,9 @@ paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: number, vOffset
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: double, vOffset: double): void--><!--Device-Paragraph-paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: double, vOffset: double): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1350,7 +1422,9 @@ updateColor(color: common2D.Color): void
 
 **起始版本：** 20
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-updateColor(color: common2D.Color): void--><!--Device-Paragraph-updateColor(color: common2D.Color): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1377,7 +1451,9 @@ updateDecoration(decoration: Decoration): void
 
 **起始版本：** 20
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Paragraph-updateDecoration(decoration: Decoration): void--><!--Device-Paragraph-updateDecoration(decoration: Decoration): void-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1385,7 +1461,7 @@ updateDecoration(decoration: Decoration): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| decoration | Decoration | 是 | 更新后的装饰线。 |
+| decoration | [Decoration](arkts-arkgraphics2d-decoration-i.md) | 是 | 更新后的装饰线。 |
 
 **示例：**
 

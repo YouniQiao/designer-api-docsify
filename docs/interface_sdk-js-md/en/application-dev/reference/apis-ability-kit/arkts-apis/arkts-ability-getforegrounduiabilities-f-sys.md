@@ -12,12 +12,13 @@ import { abilityManager } from '@kit.AbilityKit';
 function getForegroundUIAbilities(callback: AsyncCallback<Array<AbilityStateData>>): void
 ```
 
-Obtains the information about the UIAbility components of an application that is running in the foreground. This
-API uses an asynchronous callback to return the result.
+Obtains the information about the UIAbility components of an application that is running in the foreground. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
+
+<!--Device-abilityManager-function getForegroundUIAbilities(callback: AsyncCallback<Array<AbilityStateData>>): void--><!--Device-abilityManager-function getForegroundUIAbilities(callback: AsyncCallback<Array<AbilityStateData>>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -27,7 +28,7 @@ API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;AbilityStateData&gt;&gt; | Yes | Callback used to return the API call result and theUIAbility information. You can perform error handling or custom processing in it. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<AbilityStateData>> | Yes | Callback used to return the API call result and the UIAbility information. You can perform error handling or custom processing in it. |
 
 **Error codes:**
 
@@ -61,12 +62,13 @@ abilityManager.getForegroundUIAbilities((err: BusinessError, data: Array<ability
 function getForegroundUIAbilities(): Promise<Array<AbilityStateData>>
 ```
 
-Obtains the information about the UIAbility components of an application that is running in the foreground. This
-API uses a promise to return the result.
+Obtains the information about the UIAbility components of an application that is running in the foreground. This API uses a promise to return the result.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
+
+<!--Device-abilityManager-function getForegroundUIAbilities(): Promise<Array<AbilityStateData>>--><!--Device-abilityManager-function getForegroundUIAbilities(): Promise<Array<AbilityStateData>>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -76,7 +78,7 @@ API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AbilityStateData&gt;&gt; | Promise used to return the API call result and the UIAbility information.You can perform error handling or custom processing in it. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AbilityStateData>> | Promise used to return the API call result and the UIAbility information.You can perform error handling or custom processing in it. |
 
 **Error codes:**
 

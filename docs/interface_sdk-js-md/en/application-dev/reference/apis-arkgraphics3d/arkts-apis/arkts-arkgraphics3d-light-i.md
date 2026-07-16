@@ -6,6 +6,8 @@ Defines light interface.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface Light extends Node--><!--Device-unnamed-export interface Light extends Node-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## color
@@ -19,6 +21,8 @@ The color of the light.
 **Type:** Color
 
 **Since:** 12
+
+<!--Device-Light-color: Color--><!--Device-Light-color: Color-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -34,6 +38,8 @@ Whether enable the light.
 
 **Since:** 12
 
+<!--Device-Light-enabled: boolean--><!--Device-Light-enabled: boolean-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## intensity
@@ -47,6 +53,8 @@ The intensity of the light, the unit is candela.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-Light-intensity: double--><!--Device-Light-intensity: double-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -62,6 +70,8 @@ The type of the light.
 
 **Since:** 12
 
+<!--Device-Light-readonly lightType: LightType--><!--Device-Light-readonly lightType: LightType-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## shadowEnabled
@@ -75,6 +85,8 @@ Whether casting shadows.
 **Type:** boolean
 
 **Since:** 12
+
+<!--Device-Light-shadowEnabled: boolean--><!--Device-Light-shadowEnabled: boolean-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

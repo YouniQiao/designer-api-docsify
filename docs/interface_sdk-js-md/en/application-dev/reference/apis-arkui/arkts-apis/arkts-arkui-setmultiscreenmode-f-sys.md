@@ -13,11 +13,13 @@ function setMultiScreenMode(primaryScreenId: number, secondaryScreenId: number,
     secondaryScreenMode: MultiScreenMode): Promise<void>
 ```
 
-Sets the display mode (mirror or extend) of the secondary screen. This API uses a promise to return the result. If
-both **primaryScreenId** and **secondaryScreenId** are set to **0**, the content is displayed only on the secondary
-screen.
+Sets the display mode (mirror or extend) of the secondary screen. This API uses a promise to return the result. If both **primaryScreenId** and **secondaryScreenId** are set to **0**, the content is displayed only on the secondary screen.
 
 **Since:** 13
+
+<!--Device-screen-function setMultiScreenMode(primaryScreenId: long, secondaryScreenId: long,
+    secondaryScreenMode: MultiScreenMode): Promise<void>--><!--Device-screen-function setMultiScreenMode(primaryScreenId: long, secondaryScreenId: long,
+    secondaryScreenMode: MultiScreenMode): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -29,13 +31,13 @@ screen.
 | --- | --- | --- | --- |
 | primaryScreenId | number | Yes | ID of the primary screen. The value must be a non-negative integer. Floating-point numbers are rounded down. |
 | secondaryScreenId | number | Yes | ID of the secondary screen. The value must be a non-negative integer. Floating-point numbers are rounded down. |
-| secondaryScreenMode | MultiScreenMode | Yes | Display mode of the secondary screen. |
+| secondaryScreenMode | [MultiScreenMode](arkts-arkui-multiscreenmode-e-sys.md) | Yes | Display mode of the secondary screen. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

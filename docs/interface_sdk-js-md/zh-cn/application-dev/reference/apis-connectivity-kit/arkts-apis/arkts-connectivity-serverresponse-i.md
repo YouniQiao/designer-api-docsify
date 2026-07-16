@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-ssap-interface ServerResponse--><!--Device-ssap-interface ServerResponse-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
+
+## 导入模块
+
+```TypeScript
+import { ssap } from '@kit.ConnectivityKit';
+```
 
 ## address
 
@@ -12,14 +20,15 @@
 address: string
 ```
 
-设备地址。
-长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
+设备地址。长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
 
 **类型：** string
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServerResponse-address: string--><!--Device-ServerResponse-address: string-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -29,14 +38,15 @@ address: string
 requestId: number
 ```
 
-请求ID。
-取值范围为全体整数。
+请求ID。取值范围为全体整数。
 
 **类型：** number
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServerResponse-requestId: int--><!--Device-ServerResponse-requestId: int-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -53,6 +63,8 @@ value: ArrayBuffer
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ServerResponse-value: ArrayBuffer--><!--Device-ServerResponse-value: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 

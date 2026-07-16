@@ -1,5 +1,11 @@
 # connectAbility
 
+## 导入模块
+
+```TypeScript
+import { particleAbility } from '@kit.AbilityKit';
+```
+
 ## connectAbility
 
 ```TypeScript
@@ -8,14 +14,16 @@ function connectAbility(request: Want, options: ConnectOptions): number
 
 将当前ability与指定的ServiceAbility进行连接。
 
-> **说明：**
->
-> 组件启动规则详见：[组件启动规则（FA模型）](../../../../application-models/component-startup-rules-fa.md)。
+> **说明：**  
+>  
+> 组件启动规则详见：[组件启动规则（FA模型）](../../../../application-models/component-startup-rules-fa.md)。  
 > > 跨应用连接serviceAbility，对端应用需配置关联启动。
 
 **起始版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-particleAbility-function connectAbility(request: Want, options: ConnectOptions): number--><!--Device-particleAbility-function connectAbility(request: Want, options: ConnectOptions): number-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -23,8 +31,8 @@ function connectAbility(request: Want, options: ConnectOptions): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | Want | 是 | 表示被连接的ServiceAbility。 |
-| options | ConnectOptions | 是 | 连接回调方法。 |
+| request | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 表示被连接的ServiceAbility。 |
+| options | [ConnectOptions](arkts-ability-connectoptions-t.md) | 是 | 连接回调方法。 |
 
 **返回值：**
 

@@ -1,14 +1,12 @@
 # KeyboardController
 
-Provides the capability of simulating key operations. The simulated key operation sequence must meet the following
-requirements:
+Provides the capability of simulating key operations. The simulated key operation sequence must meet the following requirements:
 
-1. A key can only be pressed when it is in the released state, or when it is the most recently pressed key and
-has not been released.
-2. A key can only be released after it has been pressed.
-3. A maximum of five keys can be pressed and held simultaneously.
+1. A key can only be pressed when it is in the released state, or when it is the most recently pressed key and has not been released.2. A key can only be released after it has been pressed.3. A maximum of five keys can be pressed and held simultaneously.
 
 **Since:** 26.0.0
+
+<!--Device-inputEventClient-interface KeyboardController--><!--Device-inputEventClient-interface KeyboardController-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -32,26 +30,28 @@ Presses a key. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-KeyboardController-pressKey(keyCode: KeyCode): Promise<void>--><!--Device-KeyboardController-pressKey(keyCode: KeyCode): Promise<void>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | KeyCode | Yes | Key code of the key to be pressed. |
+| keyCode | [KeyCode](arkts-input-keycode-e.md) | Yes | Key code of the key to be pressed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | The key is already pressed and is not the most recentlypressed key. |
+| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | The key is already pressed and is not the most recently pressed key. |
 | [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
 
 **Example**
@@ -102,19 +102,21 @@ Releases a key. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-KeyboardController-releaseKey(keyCode: KeyCode): Promise<void>--><!--Device-KeyboardController-releaseKey(keyCode: KeyCode): Promise<void>-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | KeyCode | Yes | Key code of the key to be released. |
+| keyCode | [KeyCode](arkts-input-keycode-e.md) | Yes | Key code of the key to be released. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

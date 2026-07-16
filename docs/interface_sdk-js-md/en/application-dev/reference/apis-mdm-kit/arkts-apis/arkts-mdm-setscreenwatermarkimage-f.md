@@ -20,13 +20,15 @@ Sets the watermark image to be displayed on the screen.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-securityManager-function setScreenWatermarkImage(admin: Want, pixelMap: image.PixelMap): void--><!--Device-securityManager-function setScreenWatermarkImage(admin: Want, pixelMap: image.PixelMap): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | admin indicates the administrator ability information. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | admin indicates the administrator ability information. |
 | pixelMap | image.PixelMap | Yes | pixelMap indicates the PixelMap of watermark image |
 
 **Error codes:**

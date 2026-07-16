@@ -22,13 +22,15 @@ Set the current Wi-Fi power mode.
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT_EXT
 
+<!--Device-wifiext-function setPowerModel(model: PowerModel): boolean--><!--Device-wifiext-function setPowerModel(model: PowerModel): boolean-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.AP.Extension
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| model | PowerModel | Yes | model indicates model file description to be loaded. |
+| model | [PowerModel](arkts-connectivity-powermodel-e.md) | Yes | model indicates model file description to be loaded. |
 
 **Return value:**
 

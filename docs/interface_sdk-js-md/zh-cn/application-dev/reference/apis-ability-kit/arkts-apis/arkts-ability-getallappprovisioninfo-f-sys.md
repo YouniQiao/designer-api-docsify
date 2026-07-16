@@ -1,5 +1,11 @@
 # getAllAppProvisionInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getAllAppProvisionInfo
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getAllAppProvisionInfo(userId?: number): Promise<Array<AppProvisionInfo
 **起始版本：** 23
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or (ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
+
+<!--Device-bundleManager-function getAllAppProvisionInfo(userId?: int): Promise<Array<AppProvisionInfo>>--><!--Device-bundleManager-function getAllAppProvisionInfo(userId?: int): Promise<Array<AppProvisionInfo>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -26,7 +34,7 @@ function getAllAppProvisionInfo(userId?: number): Promise<Array<AppProvisionInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;AppProvisionInfo&gt;&gt; | Promise对象，返回应用的provision配置文件信息。 |
+| Promise<Array<AppProvisionInfo>> | Promise对象，返回应用的provision配置文件信息。 |
 
 **错误码：**
 

@@ -4,6 +4,8 @@ Sets the alignment mode of child components in the cross-axis direction of the l
 
 **Since:** 9
 
+<!--Device-unnamed-declare enum ListItemAlign--><!--Device-unnamed-declare enum ListItemAlign-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Start
@@ -19,6 +21,8 @@ The list items are packed toward the start edge of the **List** component along 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ListItemAlign-Start--><!--Device-ListItemAlign-Start-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ The list items are centered in the **List** component along the cross axis.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-ListItemAlign-Center--><!--Device-ListItemAlign-Center-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## End
@@ -51,6 +57,8 @@ The list items are packed toward the end edge of the **List** component along th
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ListItemAlign-End--><!--Device-ListItemAlign-End-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

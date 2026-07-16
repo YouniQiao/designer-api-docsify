@@ -12,14 +12,15 @@ import { notificationManager } from '@kit.NotificationKit';
 function setPriorityEnabledByBundles(switches: Map<BundleOption, boolean>): Promise<void>
 ```
 
-Sets whether priority notifications are enabled for applications in batches. This API uses a promise to return the
-result.
+Sets whether priority notifications are enabled for applications in batches. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-notificationManager-function setPriorityEnabledByBundles(switches: Map<BundleOption, boolean>): Promise<void>--><!--Device-notificationManager-function setPriorityEnabledByBundles(switches: Map<BundleOption, boolean>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -29,13 +30,13 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| switches | Map&lt;BundleOption, boolean&gt; | Yes | Key-value pair set of the application notification priorityenabling status. |
+| switches | [Map](../../apis-na/arkts-apis/arkts-na-map-i.md)<BundleOption, boolean> | Yes | Key-value pair set of the application notification priority enabling status. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

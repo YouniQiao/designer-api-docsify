@@ -4,6 +4,8 @@ Describes the injected simulated mouse button.
 
 **Since:** 10
 
+<!--Device-unnamed-declare enum MouseButton--><!--Device-unnamed-declare enum MouseButton-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 ## MOUSE_BUTTON_LEFT
@@ -17,6 +19,8 @@ Left button on the mouse.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-MouseButton-MOUSE_BUTTON_LEFT = 0--><!--Device-MouseButton-MOUSE_BUTTON_LEFT = 0-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -32,6 +36,8 @@ Right button on the mouse.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-MouseButton-MOUSE_BUTTON_RIGHT = 1--><!--Device-MouseButton-MOUSE_BUTTON_RIGHT = 1-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 ## MOUSE_BUTTON_MIDDLE
@@ -45,6 +51,8 @@ MIDDLE button on the mouse.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-MouseButton-MOUSE_BUTTON_MIDDLE = 2--><!--Device-MouseButton-MOUSE_BUTTON_MIDDLE = 2-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 

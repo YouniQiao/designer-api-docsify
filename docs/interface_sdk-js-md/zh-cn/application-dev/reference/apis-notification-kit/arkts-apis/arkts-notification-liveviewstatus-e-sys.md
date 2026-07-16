@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-export enum LiveViewStatus--><!--Device-unnamed-export enum LiveViewStatus-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -17,6 +19,8 @@ LIVE_VIEW_CREATE = 0
 创建
 
 **起始版本：** 11
+
+<!--Device-LiveViewStatus-LIVE_VIEW_CREATE = 0--><!--Device-LiveViewStatus-LIVE_VIEW_CREATE = 0-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -32,6 +36,8 @@ LIVE_VIEW_INCREMENTAL_UPDATE = 1
 
 **起始版本：** 11
 
+<!--Device-LiveViewStatus-LIVE_VIEW_INCREMENTAL_UPDATE = 1--><!--Device-LiveViewStatus-LIVE_VIEW_INCREMENTAL_UPDATE = 1-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +52,8 @@ LIVE_VIEW_END = 2
 
 **起始版本：** 11
 
+<!--Device-LiveViewStatus-LIVE_VIEW_END = 2--><!--Device-LiveViewStatus-LIVE_VIEW_END = 2-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -59,6 +67,8 @@ LIVE_VIEW_FULL_UPDATE = 3
 全量更新
 
 **起始版本：** 11
+
+<!--Device-LiveViewStatus-LIVE_VIEW_FULL_UPDATE = 3--><!--Device-LiveViewStatus-LIVE_VIEW_FULL_UPDATE = 3-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -76,6 +86,8 @@ LIVE_VIEW_PENDING_CREATE = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-LiveViewStatus-LIVE_VIEW_PENDING_CREATE = 4--><!--Device-LiveViewStatus-LIVE_VIEW_PENDING_CREATE = 4-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -91,6 +103,8 @@ LIVE_VIEW_PENDING_END = 6
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-LiveViewStatus-LIVE_VIEW_PENDING_END = 6--><!--Device-LiveViewStatus-LIVE_VIEW_PENDING_END = 6-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

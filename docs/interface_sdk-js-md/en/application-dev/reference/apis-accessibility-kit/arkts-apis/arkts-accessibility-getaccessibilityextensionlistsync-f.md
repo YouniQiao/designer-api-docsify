@@ -23,18 +23,26 @@ Query the list of accessibility applications in the current system, which can be
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-accessibility-function getAccessibilityExtensionListSync(
+    abilityType: AbilityType,
+    stateType: AbilityState
+  ): Array<AccessibilityAbilityInfo>--><!--Device-accessibility-function getAccessibilityExtensionListSync(
+    abilityType: AbilityType,
+    stateType: AbilityState
+  ): Array<AccessibilityAbilityInfo>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| abilityType | AbilityType | Yes | Accessibility application type. |
-| stateType | AbilityState | Yes | Accessibility application status. |
+| abilityType | [AbilityType](arkts-accessibility-abilitytype-t.md) | Yes | Accessibility application type. |
+| stateType | [AbilityState](arkts-accessibility-abilitystate-t.md) | Yes | Accessibility application status. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;AccessibilityAbilityInfo&gt; | Promise used to return the accessibility application list. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<AccessibilityAbilityInfo> | Promise used to return the accessibility application list. |
 

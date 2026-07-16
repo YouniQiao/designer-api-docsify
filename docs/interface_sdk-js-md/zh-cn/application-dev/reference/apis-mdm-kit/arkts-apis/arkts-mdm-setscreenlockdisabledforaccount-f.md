@@ -1,5 +1,11 @@
 # setScreenLockDisabledForAccount
 
+## 导入模块
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+```
+
 ## setScreenLockDisabledForAccount
 
 ```TypeScript
@@ -8,14 +14,14 @@ function setScreenLockDisabledForAccount(admin: Want, disable: boolean): void
 
 禁用/启用当前用户的滑动解锁能力。启用时：设备灭屏后再亮屏，用户需要在屏幕上滑动后才能进入桌面。禁用时：设备灭屏后再亮屏会直接进入桌面。
 
-> **说明：**
->
-> 1.该接口能力仅在设备无锁屏密码时生效。
->
-> 2.设备默认属于启用滑动解锁的状态。
->
-> 3.设备上存在密码时，设置禁用滑动解锁会失败，抛出9201021错误码。
->
+> **说明：**  
+>  
+> 1.该接口能力仅在设备无锁屏密码时生效。  
+>  
+> 2.设备默认属于启用滑动解锁的状态。  
+>  
+> 3.设备上存在密码时，设置禁用滑动解锁会失败，抛出9201021错误码。  
+>  
 > 4.下发禁用滑动解锁的策略后，用户输入了设备密码，此时密码会生效，设备需要验证密码后才能进入桌面，之前下发的策略失效。
 
 **起始版本：** 26.0.0
@@ -24,13 +30,15 @@ function setScreenLockDisabledForAccount(admin: Want, disable: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-securityManager-function setScreenLockDisabledForAccount(admin: Want, disable: boolean): void--><!--Device-securityManager-function setScreenLockDisabledForAccount(admin: Want, disable: boolean): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | disable | boolean | 是 | 是否禁用当前用户的滑动解锁能力。true表示禁用，false表示不禁用。 |
 
 **错误码：**

@@ -20,6 +20,8 @@ Deletes the AgentCard within specified agent id.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-agentManager-function deleteAgentCard(bundleName: string, agentId: string): Promise<void>--><!--Device-agentManager-function deleteAgentCard(bundleName: string, agentId: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -35,7 +37,7 @@ Deletes the AgentCard within specified agent id.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

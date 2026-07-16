@@ -4,6 +4,8 @@ Provides APIs for tone playing.
 
 **Since:** 9
 
+<!--Device-audio-interface TonePlayer--><!--Device-audio-interface TonePlayer-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -24,6 +26,8 @@ Loads tone. This method uses an asynchronous callback to return the result.
 
 **Since:** 9
 
+<!--Device-TonePlayer-load(type: ToneType, callback: AsyncCallback<void>): void--><!--Device-TonePlayer-load(type: ToneType, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -32,8 +36,8 @@ Loads tone. This method uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | ToneType | Yes | Tone type to play. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| type | [ToneType](arkts-audio-tonetype-e-sys.md) | Yes | Tone type to play. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -61,6 +65,8 @@ Loads tone. This method uses a promise to return the result.
 
 **Since:** 9
 
+<!--Device-TonePlayer-load(type: ToneType): Promise<void>--><!--Device-TonePlayer-load(type: ToneType): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -69,13 +75,13 @@ Loads tone. This method uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | ToneType | Yes | Tone type to play. |
+| type | [ToneType](arkts-audio-tonetype-e-sys.md) | Yes | Tone type to play. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Example**
 
@@ -98,6 +104,8 @@ Releases the player. This method uses an asynchronous callback to return the res
 
 **Since:** 9
 
+<!--Device-TonePlayer-release(callback: AsyncCallback<void>): void--><!--Device-TonePlayer-release(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -106,7 +114,7 @@ Releases the player. This method uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -134,6 +142,8 @@ Releases the player. This method uses a promise to return the result.
 
 **Since:** 9
 
+<!--Device-TonePlayer-release(): Promise<void>--><!--Device-TonePlayer-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -142,7 +152,7 @@ Releases the player. This method uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Example**
 
@@ -165,6 +175,8 @@ Starts player. This method uses an asynchronous callback to return the result.
 
 **Since:** 9
 
+<!--Device-TonePlayer-start(callback: AsyncCallback<void>): void--><!--Device-TonePlayer-start(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -173,7 +185,7 @@ Starts player. This method uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -201,6 +213,8 @@ Starts player. This method uses a promise to return the result.
 
 **Since:** 9
 
+<!--Device-TonePlayer-start(): Promise<void>--><!--Device-TonePlayer-start(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -209,7 +223,7 @@ Starts player. This method uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> |  |
 
 **Example**
 
@@ -232,6 +246,8 @@ Stops player. This method uses an asynchronous callback to return the result.
 
 **Since:** 9
 
+<!--Device-TonePlayer-stop(callback: AsyncCallback<void>): void--><!--Device-TonePlayer-stop(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -240,7 +256,7 @@ Stops player. This method uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -268,6 +284,8 @@ Stops player. This method uses a promise to return the result.
 
 **Since:** 9
 
+<!--Device-TonePlayer-stop(): Promise<void>--><!--Device-TonePlayer-stop(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -276,7 +294,7 @@ Stops player. This method uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Example**
 

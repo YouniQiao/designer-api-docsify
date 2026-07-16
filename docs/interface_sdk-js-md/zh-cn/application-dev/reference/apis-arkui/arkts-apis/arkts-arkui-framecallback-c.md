@@ -2,15 +2,23 @@
 
 用于设置下一帧渲染时需要执行的任务。
 
-> **说明：**
->
-> - 以下API需要配合[UIContext](arkts-arkui-uicontext.md)中的[postFrameCallback](arkts-arkui-uicontext-c.md#postframecallback-1)和
-> [postDelayedFrameCallback](arkts-arkui-uicontext-c.md#postdelayedframecallback-1)使用。开发者需要继承该类并重写
+> **说明：**  
+>  
+> - 以下API需要配合[UIContext](arkts-arkui-uicontext.md)中的[postFrameCallback](arkts-arkui-uicontext-c.md#postframecallback-1)和  
+> [postDelayedFrameCallback](arkts-arkui-uicontext-c.md#postdelayedframecallback-1)使用。开发者需要继承该类并重写  
 > [onFrame](arkts-arkui-framecallback-c.md#onframe-1)或[onIdle](arkts-arkui-framecallback-c.md#onidle-1)方法，实现具体的业务逻辑。
 
 **起始版本：** 12
 
+<!--Device-unnamed-export abstract class FrameCallback--><!--Device-unnamed-export abstract class FrameCallback-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
+```
 
 ## onFrame
 
@@ -24,7 +32,9 @@ onFrame(frameTimeInNano: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FrameCallback-onFrame(frameTimeInNano: number): void--><!--Device-FrameCallback-onFrame(frameTimeInNano: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,7 +56,9 @@ onIdle(timeLeftInNano: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FrameCallback-onIdle(timeLeftInNano: number): void--><!--Device-FrameCallback-onIdle(timeLeftInNano: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

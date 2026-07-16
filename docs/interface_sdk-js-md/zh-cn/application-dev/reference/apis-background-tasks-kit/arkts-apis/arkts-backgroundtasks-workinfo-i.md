@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-workScheduler-export interface WorkInfo--><!--Device-workScheduler-export interface WorkInfo-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
+
+## 导入模块
+
+```TypeScript
+import { workScheduler } from '@kit.BackgroundTasksKit';
+```
 
 ## abilityName
 
@@ -19,6 +27,8 @@ abilityName: string
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WorkInfo-abilityName: string--><!--Device-WorkInfo-abilityName: string-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -38,6 +48,8 @@ batteryLevel?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WorkInfo-batteryLevel?: int--><!--Device-WorkInfo-batteryLevel?: int-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## batteryStatus
@@ -53,6 +65,8 @@ batteryStatus?: BatteryStatus
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WorkInfo-batteryStatus?: BatteryStatus--><!--Device-WorkInfo-batteryStatus?: BatteryStatus-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -70,6 +84,8 @@ bundleName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WorkInfo-bundleName: string--><!--Device-WorkInfo-bundleName: string-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## chargerType
@@ -86,6 +102,8 @@ chargerType?: ChargingType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WorkInfo-chargerType?: ChargingType--><!--Device-WorkInfo-chargerType?: ChargingType-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## earliestStartTime
@@ -94,14 +112,15 @@ chargerType?: ChargingType
 earliestStartTime?: number
 ```
 
-任务首次执行时间距离任务申请时间的间隔，单位：ms，默认为0，范围大于等于0。
-取值范围为全体整数。
+任务首次执行时间距离任务申请时间的间隔，单位：ms，默认为0，范围大于等于0。取值范围为全体整数。
 
 **类型：** number
 
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WorkInfo-earliestStartTime?: int--><!--Device-WorkInfo-earliestStartTime?: int-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -119,6 +138,8 @@ idleWaitTime?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WorkInfo-idleWaitTime?: int--><!--Device-WorkInfo-idleWaitTime?: int-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## isCharging
@@ -129,7 +150,7 @@ isCharging?: boolean
 
 是否充电，默认为false。
 
-- true表示充电触发延迟任务回调。
+- true表示充电触发延迟任务回调。  
 - false表示不充电触发延迟任务回调。
 
 **类型：** boolean
@@ -137,6 +158,8 @@ isCharging?: boolean
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WorkInfo-isCharging?: boolean--><!--Device-WorkInfo-isCharging?: boolean-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -148,7 +171,7 @@ isDeepIdle?: boolean
 
 是否要求设备进入空闲状态，默认为false。
 
-- true表示需要。
+- true表示需要。  
 - false表示不需要。
 
 **类型：** boolean
@@ -156,6 +179,8 @@ isDeepIdle?: boolean
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WorkInfo-isDeepIdle?: boolean--><!--Device-WorkInfo-isDeepIdle?: boolean-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -167,7 +192,7 @@ isPersisted?: boolean
 
 注册的延迟任务是否可保存在系统中，默认为false。
 
-- true表示可保存，即系统重启后，任务可恢复。
+- true表示可保存，即系统重启后，任务可恢复。  
 - false表示不可保存。
 
 **类型：** boolean
@@ -175,6 +200,8 @@ isPersisted?: boolean
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WorkInfo-isPersisted?: boolean--><!--Device-WorkInfo-isPersisted?: boolean-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -186,7 +213,7 @@ isRepeat?: boolean
 
 是否循环任务，默认为false。
 
-- true表示循环任务。
+- true表示循环任务。  
 - false表示非循环任务。
 
 **类型：** boolean
@@ -194,6 +221,8 @@ isRepeat?: boolean
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WorkInfo-isRepeat?: boolean--><!--Device-WorkInfo-isRepeat?: boolean-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -211,6 +240,8 @@ networkType?: NetworkType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WorkInfo-networkType?: NetworkType--><!--Device-WorkInfo-networkType?: NetworkType-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## parameters
@@ -226,6 +257,8 @@ parameters?: Record<string, number | number | string | boolean>
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WorkInfo-parameters?: Record<string, int | double | string | boolean>--><!--Device-WorkInfo-parameters?: Record<string, int | double | string | boolean>-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -243,6 +276,8 @@ repeatCount?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WorkInfo-repeatCount?: int--><!--Device-WorkInfo-repeatCount?: int-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## repeatCycleTime
@@ -258,6 +293,8 @@ repeatCycleTime?: number
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WorkInfo-repeatCycleTime?: int--><!--Device-WorkInfo-repeatCycleTime?: int-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -275,6 +312,8 @@ storageRequest?: StorageRequest
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-WorkInfo-storageRequest?: StorageRequest--><!--Device-WorkInfo-storageRequest?: StorageRequest-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## workId
@@ -290,6 +329,8 @@ workId: number
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WorkInfo-workId: int--><!--Device-WorkInfo-workId: int-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 

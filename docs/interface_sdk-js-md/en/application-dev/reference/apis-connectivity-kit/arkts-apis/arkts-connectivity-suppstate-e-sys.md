@@ -4,6 +4,8 @@ The state of the supplicant enumeration.
 
 **Since:** 9
 
+<!--Device-wifiManager-export enum SuppState--><!--Device-wifiManager-export enum SuppState-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -17,6 +19,8 @@ DISCONNECTED
 The supplicant is not associated with or is disconnected from the AP.
 
 **Since:** 9
+
+<!--Device-SuppState-DISCONNECTED--><!--Device-SuppState-DISCONNECTED-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -32,6 +36,8 @@ The network interface is disabled.
 
 **Since:** 9
 
+<!--Device-SuppState-INTERFACE_DISABLED--><!--Device-SuppState-INTERFACE_DISABLED-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -45,6 +51,8 @@ INACTIVE
 The supplicant is disabled.
 
 **Since:** 9
+
+<!--Device-SuppState-INACTIVE--><!--Device-SuppState-INACTIVE-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -60,6 +68,8 @@ The supplicant is scanning for a Wi-Fi connection.
 
 **Since:** 9
 
+<!--Device-SuppState-SCANNING--><!--Device-SuppState-SCANNING-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -73,6 +83,8 @@ AUTHENTICATING
 The supplicant is authenticating with a specified AP.
 
 **Since:** 9
+
+<!--Device-SuppState-AUTHENTICATING--><!--Device-SuppState-AUTHENTICATING-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -88,6 +100,8 @@ The supplicant is associating with a specified AP.
 
 **Since:** 9
 
+<!--Device-SuppState-ASSOCIATING--><!--Device-SuppState-ASSOCIATING-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -101,6 +115,8 @@ ASSOCIATED
 The supplicant is associated with a specified AP.
 
 **Since:** 9
+
+<!--Device-SuppState-ASSOCIATED--><!--Device-SuppState-ASSOCIATED-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -116,6 +132,8 @@ The four-way handshake is ongoing.
 
 **Since:** 9
 
+<!--Device-SuppState-FOUR_WAY_HANDSHAKE--><!--Device-SuppState-FOUR_WAY_HANDSHAKE-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -129,6 +147,8 @@ GROUP_HANDSHAKE
 The group handshake is ongoing.
 
 **Since:** 9
+
+<!--Device-SuppState-GROUP_HANDSHAKE--><!--Device-SuppState-GROUP_HANDSHAKE-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -144,6 +164,8 @@ All authentication is completed.
 
 **Since:** 9
 
+<!--Device-SuppState-COMPLETED--><!--Device-SuppState-COMPLETED-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -158,6 +180,8 @@ Failed to establish a connection to the supplicant.
 
 **Since:** 9
 
+<!--Device-SuppState-UNINITIALIZED--><!--Device-SuppState-UNINITIALIZED-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -171,6 +195,8 @@ INVALID
 The supplicant is in an unknown or invalid state.
 
 **Since:** 9
+
+<!--Device-SuppState-INVALID--><!--Device-SuppState-INVALID-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 

@@ -1,9 +1,10 @@
 # Watcher
 
-Provides APIs for observing the changes of files or directories. Before using the APIs of **Watcher**, call
-**createWatcher()** to create a **Watcher** object.
+Provides APIs for observing the changes of files or directories. Before using the APIs of **Watcher**, call **createWatcher()** to create a **Watcher** object.
 
 **Since:** 10
+
+<!--Device-unnamed-export interface Watcher--><!--Device-unnamed-export interface Watcher-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -22,6 +23,8 @@ start(): void
 Starts listening.
 
 **Since:** 10
+
+<!--Device-Watcher-start(): void--><!--Device-Watcher-start(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -62,6 +65,8 @@ stop(): void
 Stops listening and removes the **Watcher** object.
 
 **Since:** 10
+
+<!--Device-Watcher-stop(): void--><!--Device-Watcher-stop(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

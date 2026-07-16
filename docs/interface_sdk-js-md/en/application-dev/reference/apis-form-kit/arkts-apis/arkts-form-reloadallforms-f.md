@@ -12,9 +12,7 @@ import { formProvider } from '@kit.FormKit';
 function reloadAllForms(context: UIAbilityContext): Promise<number>
 ```
 
-Reloads all widgets. Invoked in the main process of the application, this API notifies the FormExtension process to
-perform batch updates of all widgets added to the current application. It can only be called within a
-[UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md) and uses a promise to return the result.
+Reloads all widgets. Invoked in the main process of the application, this API notifies the FormExtension process to perform batch updates of all widgets added to the current application. It can only be called within a [UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md) and uses a promise to return the result.
 
 **Since:** 22
 
@@ -22,19 +20,21 @@ perform batch updates of all widgets added to the current application. It can on
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-formProvider-function reloadAllForms(context: UIAbilityContext): Promise<int>--><!--Device-formProvider-function reloadAllForms(context: UIAbilityContext): Promise<int>-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIAbilityContext | Yes | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md) context, which is used forverification. |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-t.md) | Yes | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md) context, which is used for verification. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the number of widgets requested for update. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the number of widgets requested for update. |
 
 **Error codes:**
 

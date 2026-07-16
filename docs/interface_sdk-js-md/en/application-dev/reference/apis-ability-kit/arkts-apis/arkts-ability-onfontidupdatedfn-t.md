@@ -12,6 +12,8 @@ Defines an OnFontIdUpdatedFn function.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-systemConfiguration-type OnFontIdUpdatedFn = (fontId: string) => void--><!--Device-systemConfiguration-type OnFontIdUpdatedFn = (fontId: string) => void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**

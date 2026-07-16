@@ -20,6 +20,8 @@ Query printer capabilityies by printer uri.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-print-function queryPrinterCapabilityByUri(printerUri: string, printerId: string): Promise<PrinterCapabilities>--><!--Device-print-function queryPrinterCapabilityByUri(printerUri: string, printerId: string): Promise<PrinterCapabilities>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -35,7 +37,7 @@ Query printer capabilityies by printer uri.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PrinterCapabilities&gt; | - Promise that resolves with the printer capabilityies. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PrinterCapabilities> | - Promise that resolves with the printer capabilityies. |
 
 **Error codes:**
 

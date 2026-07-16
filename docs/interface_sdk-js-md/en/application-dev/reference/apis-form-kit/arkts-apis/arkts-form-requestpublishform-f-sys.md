@@ -16,10 +16,19 @@ function requestPublishForm(
   ): void
 ```
 
-Requests to publish a widget to the widget host (usually the home screen). This API uses an asynchronous callback
-to return the result.
+Requests to publish a widget to the widget host (usually the home screen). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-formProvider-function requestPublishForm(
+    want: Want,
+    formBindingData: formBindingData.FormBindingData,
+    callback: AsyncCallback<string>
+  ): void--><!--Device-formProvider-function requestPublishForm(
+    want: Want,
+    formBindingData: formBindingData.FormBindingData,
+    callback: AsyncCallback<string>
+  ): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -29,9 +38,9 @@ to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Publish request, which must contain the following fields:<br>Information about the target widget.<br>**abilityName**: ability of the target widget.<br>**parameters**:<br>'ohos.extra.param.key.form_dimension'<br>'ohos.extra.param.key.form_name'<br>'ohos.extra.param.key.module_name' |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Publish request, which must contain the following fields:<br>Information about the target widget.<br>**abilityName**: ability of the target widget.<br>**parameters**:<br>'ohos.extra.param.key.form_dimension'<br>'ohos.extra.param.key.form_name'<br>'ohos.extra.param.key.module_name' |
 | formBindingData | formBindingData.FormBindingData | Yes | Data used for creating the widget. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the widget ID. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the widget ID. |
 
 **Error codes:**
 
@@ -50,10 +59,11 @@ to return the result.
 function requestPublishForm(want: Want, callback: AsyncCallback<string>): void
 ```
 
-Requests to publish a widget to the widget host (usually the home screen). This API uses an asynchronous callback
-to return the result.
+Requests to publish a widget to the widget host (usually the home screen). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-formProvider-function requestPublishForm(want: Want, callback: AsyncCallback<string>): void--><!--Device-formProvider-function requestPublishForm(want: Want, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -63,8 +73,8 @@ to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Publish request, which must contain the following fields:<br>Information about the target widget.<br>**abilityName**: ability of the target widget.<br>**parameters**:<br>'ohos.extra.param.key.form_dimension'<br>'ohos.extra.param.key.form_name'<br>'ohos.extra.param.key.module_name' |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the widget ID. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Publish request, which must contain the following fields:<br>Information about the target widget.<br>**abilityName**: ability of the target widget.<br>**parameters**:<br>'ohos.extra.param.key.form_dimension'<br>'ohos.extra.param.key.form_name'<br>'ohos.extra.param.key.module_name' |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the widget ID. |
 
 **Error codes:**
 
@@ -83,10 +93,11 @@ to return the result.
 function requestPublishForm(want: Want, formBindingData?: formBindingData.FormBindingData): Promise<string>
 ```
 
-Requests to publish a widget to the widget host (usually the home screen). This API uses a promise to return the
-result.
+Requests to publish a widget to the widget host (usually the home screen). This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-formProvider-function requestPublishForm(want: Want, formBindingData?: formBindingData.FormBindingData): Promise<string>--><!--Device-formProvider-function requestPublishForm(want: Want, formBindingData?: formBindingData.FormBindingData): Promise<string>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -96,14 +107,14 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Publish request, which must contain the following fields:<br>Information about the target widget.<br>**abilityName**: ability of the target widget.<br>**parameters**:<br>'ohos.extra.param.key.form_dimension'<br>'ohos.extra.param.key.form_name'<br>'ohos.extra.param.key.module_name' |
-| formBindingData | formBindingData.FormBindingData | No | Data used for creating the widget. By default, no valueis passed, indicating that no data is provided. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Publish request, which must contain the following fields:<br>Information about the target widget.<br>**abilityName**: ability of the target widget.<br>**parameters**:<br>'ohos.extra.param.key.form_dimension'<br>'ohos.extra.param.key.form_name'<br>'ohos.extra.param.key.module_name' |
+| formBindingData | formBindingData.FormBindingData | No | Data used for creating the widget. By default, no value is passed, indicating that no data is provided. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the widget ID. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the widget ID. |
 
 **Error codes:**
 

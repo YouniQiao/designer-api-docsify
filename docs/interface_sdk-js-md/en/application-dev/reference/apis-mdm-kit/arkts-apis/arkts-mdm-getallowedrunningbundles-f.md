@@ -20,20 +20,22 @@ Obtains the list of applications allowed to run by a specified user.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function getAllowedRunningBundles(admin: Want | null, accountId: number): Array<string>--><!--Device-applicationManager-function getAllowedRunningBundles(admin: Want | null, accountId: number): Array<string>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application.<br>If the device has multiple MDMapplications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policiesthat actually take effect on the device are returned.<br>**Since:** 26.0.0 |
+| admin | Want \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application.<br>If the device has multiple MDM applications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policies that actually take effect on the device are returned.<br>**Since:** 26.0.0 |
 | accountId | number | Yes | Account ID, which must be greater than or equal to 0.<br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2)of @ohos.account.osAccount to obtain the ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | List of applications allowed to run by a specified user. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | List of applications allowed to run by a specified user. |
 
 **Error codes:**
 

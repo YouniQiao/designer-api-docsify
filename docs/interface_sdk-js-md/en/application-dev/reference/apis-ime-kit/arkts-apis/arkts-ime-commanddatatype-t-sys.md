@@ -10,6 +10,8 @@ Indicates the possible data types of the command.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-inputMethodSystemPanelManager-type CommandDataType = int | string | boolean--><!--Device-inputMethodSystemPanelManager-type CommandDataType = int | string | boolean-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **System API:** This is a system API.

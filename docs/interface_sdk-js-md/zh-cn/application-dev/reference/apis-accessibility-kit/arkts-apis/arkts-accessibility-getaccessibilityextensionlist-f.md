@@ -1,5 +1,11 @@
 # getAccessibilityExtensionList
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+```
+
 ## getAccessibilityExtensionList
 
 ```TypeScript
@@ -10,9 +16,11 @@ function getAccessibilityExtensionList(abilityType: AbilityType, stateType: Abil
 
 **起始版本：** 9
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-accessibility-function getAccessibilityExtensionList(abilityType: AbilityType, stateType: AbilityState): Promise<Array<AccessibilityAbilityInfo>>--><!--Device-accessibility-function getAccessibilityExtensionList(abilityType: AbilityType, stateType: AbilityState): Promise<Array<AccessibilityAbilityInfo>>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -20,14 +28,14 @@ function getAccessibilityExtensionList(abilityType: AbilityType, stateType: Abil
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| abilityType | AbilityType | 是 | 辅助应用的类型。 |
-| stateType | AbilityState | 是 | 辅助应用的状态。 |
+| abilityType | [AbilityType](arkts-accessibility-abilitytype-t.md) | 是 | 辅助应用的类型。 |
+| stateType | [AbilityState](arkts-accessibility-abilitystate-t.md) | 是 | 辅助应用的状态。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;AccessibilityAbilityInfo&gt;&gt; | Promise对象，返回辅助应用信息列表。 |
+| Promise<Array<AccessibilityAbilityInfo>> | Promise对象，返回辅助应用信息列表。 |
 
 **错误码：**
 
@@ -92,9 +100,11 @@ function getAccessibilityExtensionList(abilityType: AbilityType, stateType: Abil
 
 **起始版本：** 9
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-accessibility-function getAccessibilityExtensionList(abilityType: AbilityType, stateType: AbilityState, callback: AsyncCallback<Array<AccessibilityAbilityInfo>>): void--><!--Device-accessibility-function getAccessibilityExtensionList(abilityType: AbilityType, stateType: AbilityState, callback: AsyncCallback<Array<AccessibilityAbilityInfo>>): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -102,9 +112,9 @@ function getAccessibilityExtensionList(abilityType: AbilityType, stateType: Abil
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| abilityType | AbilityType | 是 | 辅助应用的类型。 |
-| stateType | AbilityState | 是 | 辅助应用的状态。 |
-| callback | AsyncCallback&lt;Array&lt;AccessibilityAbilityInfo&gt;&gt; | 是 | 回调函数，返回辅助应用信息列表。若返回成功，err为undefined，data为辅助应用信息列表；否则为错误对象。 |
+| abilityType | [AbilityType](arkts-accessibility-abilitytype-t.md) | 是 | 辅助应用的类型。 |
+| stateType | [AbilityState](arkts-accessibility-abilitystate-t.md) | 是 | 辅助应用的状态。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<AccessibilityAbilityInfo>> | 是 | 回调函数，返回辅助应用信息列表。若返回成功，err为undefined，data为辅助应用信息列表；否则为错误对象。 |
 
 **错误码：**
 

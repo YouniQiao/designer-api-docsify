@@ -18,6 +18,8 @@ Obtains radio access technology (RAT) of the registered network.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-radio-function getRadioTechSync(slotId: int): NetworkRadioTech--><!--Device-radio-function getRadioTechSync(slotId: int): NetworkRadioTech-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -30,7 +32,7 @@ Obtains radio access technology (RAT) of the registered network.
 
 | Type | Description |
 | --- | --- |
-| NetworkRadioTech | Returns the RAT of PS domain and CS domain of registered network. |
+| [NetworkRadioTech](arkts-telephony-networkradiotech-i.md) | Returns the RAT of PS domain and CS domain of registered network. |
 
 **Error codes:**
 

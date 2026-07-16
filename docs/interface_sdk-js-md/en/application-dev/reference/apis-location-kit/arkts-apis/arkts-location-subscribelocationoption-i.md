@@ -8,6 +8,8 @@
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-unnamed-export interface SubscribeLocationOption--><!--Device-unnamed-export interface SubscribeLocationOption-End-->
+
 **System capability:** SystemCapability.Location.Location.Lite
 
 ## Modules to Import
@@ -22,8 +24,7 @@ import { GetLocationTypeOption, SubscribeLocationOption, GeolocationResponse, Ge
 coordType?: string
 ```
 
-Coordinate system type. Available types can be obtained using getSupportedCoordTypes.
-The default type is wgs84.
+Coordinate system type. Available types can be obtained using getSupportedCoordTypes.The default type is wgs84.
 
 **Type:** string
 
@@ -32,6 +33,8 @@ The default type is wgs84.
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeLocationOption-coordType?: string--><!--Device-SubscribeLocationOption-coordType?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Lite
 
@@ -51,6 +54,8 @@ Called when the listening fails.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-SubscribeLocationOption-fail?: (data: string, code: number) => void--><!--Device-SubscribeLocationOption-fail?: (data: string, code: number) => void-End-->
+
 **System capability:** SystemCapability.Location.Location.Lite
 
 ## success
@@ -68,6 +73,8 @@ Called whenever the geographical location changes.
 **Deprecated since:** 9
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SubscribeLocationOption-success: (data: GeolocationResponse) => void--><!--Device-SubscribeLocationOption-success: (data: GeolocationResponse) => void-End-->
 
 **System capability:** SystemCapability.Location.Location.Lite
 

@@ -1,5 +1,11 @@
 # stepsCurve
 
+## 导入模块
+
+```TypeScript
+import { curves } from '@kit.ArkUI';
+```
+
 ## stepsCurve
 
 ```TypeScript
@@ -10,7 +16,9 @@ function stepsCurve(count: number, end: boolean): ICurve
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-curves-function stepsCurve(count: number, end: boolean): ICurve--><!--Device-curves-function stepsCurve(count: number, end: boolean): ICurve-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,7 +33,7 @@ function stepsCurve(count: number, end: boolean): ICurve
 
 | 类型 | 说明 |
 | --- | --- |
-| ICurve | 曲线的插值对象。 |
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) | 曲线的插值对象。 |
 
 **示例：**
 

@@ -12,13 +12,13 @@ import { asset } from '@kit.AssetStoreKit';
 function preQuerySync(query: AssetMap): Uint8Array
 ```
 
-Performs preprocessing for the asset query. This API is used when user authentication is required for the access to
-the asset. After the user authentication is successful, call [asset.querySync](arkts-assetstore-querysync-f.md#querysync-1) and
-[asset.postQuerySync](arkts-assetstore-postquerysync-f.md#postquerysync-1). This API returns the result synchronously.
+Performs preprocessing for the asset query. This API is used when user authentication is required for the access to the asset. After the user authentication is successful, call [asset.querySync](arkts-assetstore-querysync-f.md#querysync-1) and [asset.postQuerySync](arkts-assetstore-postquerysync-f.md#postquerysync-1). This API returns the result synchronously.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-asset-function preQuerySync(query: AssetMap): Uint8Array--><!--Device-asset-function preQuerySync(query: AssetMap): Uint8Array-End-->
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -26,13 +26,13 @@ the asset. After the user authentication is successful, call [asset.querySync](a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | AssetMap | Yes | Attributes of the asset to query, such as the asset alias, access control attributes,and custom data. |
+| query | [AssetMap](arkts-assetstore-assetmap-t.md) | Yes | Attributes of the asset to query, such as the asset alias, access control attributes,and custom data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Challenge value.<br>**Note**: The challenge value is used for subsequent user authentication. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Challenge value.<br>**Note**: The challenge value is used for subsequent user authentication. |
 
 **Error codes:**
 

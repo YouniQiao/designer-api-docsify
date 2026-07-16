@@ -14,18 +14,19 @@ function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 
 Attests a key. This API uses an asynchronous callback to return the result.
 
-<!--RP6-->
-> **NOTE**
->
-> The certificate chain generated during non-anonymous certificate key attestation may contain the device
-> identifier (confirm the specific implementation with the vendor). If the device identifier is included, you can
-> determine its use, retention, and destruction. It is recommended that you describe the use purpose, retention
-> policy, and destruction method in the privacy statement.
-<!--RP6End-->
+<!--RP6-->  
+> **NOTE**  
+>  
+> The certificate chain generated during non-anonymous certificate key attestation may contain the device  
+> identifier (confirm the specific implementation with the vendor). If the device identifier is included, you can  
+> determine its use, retention, and destruction. It is recommended that you describe the use purpose, retention  
+> policy, and destruction method in the privacy statement.<!--RP6End-->
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.ATTEST_KEY
+
+<!--Device-huks-function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void--><!--Device-huks-function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -34,8 +35,8 @@ Attests a key. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key. The certificate to be obtained stores the key. |
-| options | HuksOptions | Yes | Parameters and data required for obtaining the certificate. |
-| callback | AsyncCallback&lt;HuksReturnResult&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** isan error object. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Parameters and data required for obtaining the certificate. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<HuksReturnResult> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -156,18 +157,19 @@ function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksRetu
 
 Attests a key. This API uses a promise to return the result.
 
-<!--RP6-->
-> **NOTE**
->
-> The certificate chain generated during non-anonymous certificate key attestation may contain the device
-> identifier (confirm the specific implementation with the vendor). If the device identifier is included, you can
-> determine its use, retention, and destruction. It is recommended that you describe the use purpose, retention
-> policy, and destruction method in the privacy statement.
-<!--RP6End-->
+<!--RP6-->  
+> **NOTE**  
+>  
+> The certificate chain generated during non-anonymous certificate key attestation may contain the device  
+> identifier (confirm the specific implementation with the vendor). If the device identifier is included, you can  
+> determine its use, retention, and destruction. It is recommended that you describe the use purpose, retention  
+> policy, and destruction method in the privacy statement.<!--RP6End-->
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.ATTEST_KEY
+
+<!--Device-huks-function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>--><!--Device-huks-function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -176,13 +178,13 @@ Attests a key. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key. The certificate to be obtained stores the key. |
-| options | HuksOptions | Yes | Parameters and data required for obtaining the certificate. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Parameters and data required for obtaining the certificate. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | Promise that returns the operation result. When the call is successful, the**certChains** member of **HuksReturnResult** is the obtained certificate chain. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HuksReturnResult> | Promise that returns the operation result. When the call is successful, the **certChains** member of **HuksReturnResult** is the obtained certificate chain. |
 
 **Error codes:**
 

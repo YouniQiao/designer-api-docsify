@@ -4,6 +4,8 @@ Defines a contact's event.
 
 **Since:** 7
 
+<!--Device-contact-class Event--><!--Device-contact-class Event-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Custom mailbox type, the default value is **0**.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Event-static readonly CUSTOM_LABEL: 0--><!--Device-Event-static readonly CUSTOM_LABEL: 0-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## EVENT_ANNIVERSARY
@@ -41,6 +45,8 @@ Custom mailbox type, the default value is **0**.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Event-static readonly EVENT_ANNIVERSARY: 1--><!--Device-Event-static readonly EVENT_ANNIVERSARY: 1-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -58,6 +64,8 @@ Birthday event, the default value is **3**.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Event-static readonly EVENT_BIRTHDAY: 3--><!--Device-Event-static readonly EVENT_BIRTHDAY: 3-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## EVENT_OTHER
@@ -73,6 +81,8 @@ Custom mailbox type, the default value is **0**.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Event-static readonly EVENT_OTHER: 2--><!--Device-Event-static readonly EVENT_OTHER: 2-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -90,6 +100,8 @@ Invalid mailbox, the default value is **-1**.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Event-static readonly INVALID_LABEL_ID: -1--><!--Device-Event-static readonly INVALID_LABEL_ID: -1-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## eventDate
@@ -105,6 +117,8 @@ Event date.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Event-eventDate: string--><!--Device-Event-eventDate: string-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -122,6 +136,8 @@ Mailbox type.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Event-labelId?: number--><!--Device-Event-labelId?: number-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## labelName
@@ -137,6 +153,8 @@ Name of the mailbox type.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Event-labelName?: string--><!--Device-Event-labelName?: string-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 

@@ -2,25 +2,33 @@
 
 提供访问应用资源和系统资源的能力。
 
-> **说明：**
->
-> - ResourceManager涉及到的方法，仅限基于TS扩展的声明式开发范式使用。
->
-> - 资源文件在工程的resources目录中定义，通过resName、resId、Resource对象等可以获取对应的字符串、字符串数组、颜色等资源值，resName为资源名称，resId可通过`$r(资源地址).id`的方式
-> 获取，例如`$r('app.string.test').id`。
->
-> - 单HAP包获取自身资源、跨HAP/HSP包获取资源，由于入参为Resource的接口相比于入参为resName、resId的接口耗时更长，因此更推荐使用参数为resName或resId的接口。跨HAP/HSP包获取资源，
-> **需要先使用[createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-createmodulecontext-f.md#createmodulecontext-1)创建对应module的context**
-> ，再调用参数为resName或resId的接口。更多请参考[资源访问](../../../../quick-start/resource-categories-and-access.md#资源访问)。
->
-> - 在API version 22及之前版本，中间码HAR、字节码HAR通过资源ID相关接口访问资源时，因ID无效会抛出异常；从API version 23开始，中间码HAR、字节码HAR通过资源ID相关接口可以正常访问资源，
-> 更多请参考[资源访问](../../../../quick-start/resource-categories-and-access.md#资源访问)。
->
+> **说明：**  
+>  
+> - ResourceManager涉及到的方法，仅限基于TS扩展的声明式开发范式使用。  
+>  
+> - 资源文件在工程的resources目录中定义，通过resName、resId、Resource对象等可以获取对应的字符串、字符串数组、颜色等资源值，resName为资源名称，resId可通过`$r(资源地址).id`的方式  
+> 获取，例如`$r('app.string.test').id`。  
+>  
+> - 单HAP包获取自身资源、跨HAP/HSP包获取资源，由于入参为Resource的接口相比于入参为resName、resId的接口耗时更长，因此更推荐使用参数为resName或resId的接口。跨HAP/HSP包获取资源，  
+> **需要先使用[createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-createmodulecontext-f.md#createmodulecontext-1)创建对应module的context**  
+> ，再调用参数为resName或resId的接口。更多请参考[资源访问](../../../../quick-start/resource-categories-and-access.md#资源访问)。  
+>  
+> - 在API version 22及之前版本，中间码HAR、字节码HAR通过资源ID相关接口访问资源时，因ID无效会抛出异常；从API version 23开始，中间码HAR、字节码HAR通过资源ID相关接口可以正常访问资源，  
+> 更多请参考[资源访问](../../../../quick-start/resource-categories-and-access.md#资源访问)。  
+>  
 > - 示例代码中test文件的具体内容请参考[附录](../../../../reference/apis-localization-kit/js-apis-resource-manager.md#附录)。
 
 **起始版本：** 6
 
+<!--Device-resourceManager-export interface ResourceManager--><!--Device-resourceManager-export interface ResourceManager-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
+
+## 导入模块
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+```
 
 ## addResource
 
@@ -30,13 +38,15 @@ addResource(path: string) : void
 
 应用运行时加载指定的资源路径，实现资源覆盖。
 
-> **说明**
->
+> **说明**  
+>  
 > rawfile和resfile目录不支持资源覆盖。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-addResource(path: string) : void--><!--Device-ResourceManager-addResource(path: string) : void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -85,7 +95,9 @@ closeRawFd(path: string, callback: _AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-closeRawFd(path: string, callback: _AsyncCallback<void>): void--><!--Device-ResourceManager-closeRawFd(path: string, callback: _AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -94,7 +106,7 @@ closeRawFd(path: string, callback: _AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | rawfile文件路径。 |
-| callback | _AsyncCallback&lt;void&gt; | 是 | 回调函数。当关闭rawfile所在HAP的文件描述符（fd）成功，err为undefined，否则为错误对象。 |
+| callback | _AsyncCallback<void> | 是 | 回调函数。当关闭rawfile所在HAP的文件描述符（fd）成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -142,7 +154,9 @@ closeRawFd(path: string): Promise<void>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-closeRawFd(path: string): Promise<void>--><!--Device-ResourceManager-closeRawFd(path: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -156,7 +170,7 @@ closeRawFd(path: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -199,7 +213,9 @@ closeRawFdSync(path: string): void
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-closeRawFdSync(path: string): void--><!--Device-ResourceManager-closeRawFdSync(path: string): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -255,6 +271,8 @@ closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void
 
 **替代接口：** closeRawFd(path:
 
+<!--Device-ResourceManager-closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void--><!--Device-ResourceManager-closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 **参数：**
@@ -262,7 +280,7 @@ closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | rawfile文件路径。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当关闭rawfile文件的文件描述符（fd）成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当关闭rawfile文件的文件描述符（fd）成功，err为undefined，否则为错误对象。 |
 
 **示例：**
 
@@ -293,6 +311,8 @@ closeRawFileDescriptor(path: string): Promise<void>
 
 **替代接口：** closeRawFd(path:
 
+<!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>--><!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 **参数：**
@@ -305,7 +325,7 @@ closeRawFileDescriptor(path: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **示例：**
 
@@ -328,7 +348,9 @@ getBoolean(resId: number): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getBoolean(resId: long): boolean--><!--Device-ResourceManager-getBoolean(resId: long): boolean-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -405,7 +427,9 @@ getBoolean(resource: Resource): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getBoolean(resource: Resource): boolean--><!--Device-ResourceManager-getBoolean(resource: Resource): boolean-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -413,7 +437,7 @@ getBoolean(resource: Resource): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
 
 **返回值：**
 
@@ -476,7 +500,9 @@ getBooleanByName(resName: string): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getBooleanByName(resName: string): boolean--><!--Device-ResourceManager-getBooleanByName(resName: string): boolean-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -547,7 +573,9 @@ getColor(resId: number, callback: _AsyncCallback<number>): void
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getColor(resId: long, callback: _AsyncCallback<long>): void--><!--Device-ResourceManager-getColor(resId: long, callback: _AsyncCallback<long>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -556,7 +584,7 @@ getColor(resId: number, callback: _AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
-| callback | _AsyncCallback&lt;number&gt; | 是 | 回调函数，返回资源ID值对应的颜色值（十进制）。 |
+| callback | _AsyncCallback<number> | 是 | 回调函数，返回资源ID值对应的颜色值（十进制）。 |
 
 **错误码：**
 
@@ -577,7 +605,9 @@ getColor(resId: number): Promise<number>
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getColor(resId: long): Promise<long>--><!--Device-ResourceManager-getColor(resId: long): Promise<long>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -591,7 +621,7 @@ getColor(resId: number): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回资源ID值对应的颜色值（十进制）。 |
+| Promise<number> | Promise对象，返回资源ID值对应的颜色值（十进制）。 |
 
 **错误码：**
 
@@ -653,7 +683,9 @@ getColor(resource: Resource, callback: _AsyncCallback<number>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getColor(resource: Resource, callback: _AsyncCallback<number>): void--><!--Device-ResourceManager-getColor(resource: Resource, callback: _AsyncCallback<number>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -661,8 +693,8 @@ getColor(resource: Resource, callback: _AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
-| callback | _AsyncCallback&lt;number&gt; | 是 | 回调函数，返回resource对象对应的颜色值（十进制）。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
+| callback | _AsyncCallback<number> | 是 | 回调函数，返回resource对象对应的颜色值（十进制）。 |
 
 **错误码：**
 
@@ -724,7 +756,9 @@ getColor(resource: Resource): Promise<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getColor(resource: Resource): Promise<number>--><!--Device-ResourceManager-getColor(resource: Resource): Promise<number>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -732,13 +766,13 @@ getColor(resource: Resource): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回resource对象对应的颜色值（十进制）。 |
+| Promise<number> | Promise对象，返回resource对象对应的颜色值（十进制）。 |
 
 **错误码：**
 
@@ -794,7 +828,9 @@ getColorByName(resName: string, callback: _AsyncCallback<number>): void
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getColorByName(resName: string, callback: _AsyncCallback<long>): void--><!--Device-ResourceManager-getColorByName(resName: string, callback: _AsyncCallback<long>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -803,7 +839,7 @@ getColorByName(resName: string, callback: _AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
-| callback | _AsyncCallback&lt;number&gt; | 是 | 回调函数，返回资源名称对应的颜色值（十进制）。 |
+| callback | _AsyncCallback<number> | 是 | 回调函数，返回资源名称对应的颜色值（十进制）。 |
 
 **错误码：**
 
@@ -859,7 +895,9 @@ getColorByName(resName: string): Promise<number>
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getColorByName(resName: string): Promise<long>--><!--Device-ResourceManager-getColorByName(resName: string): Promise<long>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -873,7 +911,7 @@ getColorByName(resName: string): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回资源名称对应的颜色值（十进制）。 |
+| Promise<number> | Promise对象，返回资源名称对应的颜色值（十进制）。 |
 
 **错误码：**
 
@@ -929,7 +967,9 @@ getColorByNameSync(resName: string) : number
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getColorByNameSync(resName: string) : long--><!--Device-ResourceManager-getColorByNameSync(resName: string) : long-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1000,7 +1040,9 @@ getColorSync(resId: number) : number
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getColorSync(resId: long) : long--><!--Device-ResourceManager-getColorSync(resId: long) : long-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1077,7 +1119,9 @@ getColorSync(resource: Resource) : number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getColorSync(resource: Resource) : number--><!--Device-ResourceManager-getColorSync(resource: Resource) : number-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1085,7 +1129,7 @@ getColorSync(resource: Resource) : number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
 
 **返回值：**
 
@@ -1148,7 +1192,9 @@ getConfiguration(callback: _AsyncCallback<Configuration>): void
 
 **起始版本：** 6
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getConfiguration(callback: _AsyncCallback<Configuration>): void--><!--Device-ResourceManager-getConfiguration(callback: _AsyncCallback<Configuration>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1156,7 +1202,7 @@ getConfiguration(callback: _AsyncCallback<Configuration>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | _AsyncCallback&lt;Configuration&gt; | 是 | 回调函数，返回设备的Configuration。 |
+| callback | _AsyncCallback<Configuration> | 是 | 回调函数，返回设备的Configuration。 |
 
 **示例：**
 
@@ -1194,7 +1240,9 @@ getConfiguration(): Promise<Configuration>
 
 **起始版本：** 6
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getConfiguration(): Promise<Configuration>--><!--Device-ResourceManager-getConfiguration(): Promise<Configuration>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1202,7 +1250,7 @@ getConfiguration(): Promise<Configuration>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Configuration&gt; | Promise对象，返回设备的Configuration。 |
+| Promise<Configuration> | Promise对象，返回设备的Configuration。 |
 
 **示例：**
 
@@ -1238,7 +1286,9 @@ getConfigurationSync(): Configuration
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getConfigurationSync(): Configuration--><!--Device-ResourceManager-getConfigurationSync(): Configuration-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1246,7 +1296,7 @@ getConfigurationSync(): Configuration
 
 | 类型 | 说明 |
 | --- | --- |
-| Configuration | 设备的Configuration。 |
+| [Configuration](../../apis-arkui/arkts-apis/arkts-arkui-configuration-i.md) | 设备的Configuration。 |
 
 **示例：**
 
@@ -1277,7 +1327,9 @@ getDeviceCapability(callback: _AsyncCallback<DeviceCapability>): void
 
 **起始版本：** 6
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getDeviceCapability(callback: _AsyncCallback<DeviceCapability>): void--><!--Device-ResourceManager-getDeviceCapability(callback: _AsyncCallback<DeviceCapability>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1285,7 +1337,7 @@ getDeviceCapability(callback: _AsyncCallback<DeviceCapability>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | _AsyncCallback&lt;DeviceCapability&gt; | 是 | 回调函数，返回设备的DeviceCapability。 |
+| callback | _AsyncCallback<DeviceCapability> | 是 | 回调函数，返回设备的DeviceCapability。 |
 
 **示例：**
 
@@ -1323,7 +1375,9 @@ getDeviceCapability(): Promise<DeviceCapability>
 
 **起始版本：** 6
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getDeviceCapability(): Promise<DeviceCapability>--><!--Device-ResourceManager-getDeviceCapability(): Promise<DeviceCapability>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1331,7 +1385,7 @@ getDeviceCapability(): Promise<DeviceCapability>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DeviceCapability&gt; | Promise对象，返回设备的DeviceCapability。 |
+| Promise<DeviceCapability> | Promise对象，返回设备的DeviceCapability。 |
 
 **示例：**
 
@@ -1367,7 +1421,9 @@ getDeviceCapabilitySync(): DeviceCapability
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getDeviceCapabilitySync(): DeviceCapability--><!--Device-ResourceManager-getDeviceCapabilitySync(): DeviceCapability-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1375,7 +1431,7 @@ getDeviceCapabilitySync(): DeviceCapability
 
 | 类型 | 说明 |
 | --- | --- |
-| DeviceCapability | 设备的DeviceCapability。 |
+| [DeviceCapability](arkts-localization-devicecapability-c.md) | 设备的DeviceCapability。 |
 
 **示例：**
 
@@ -1404,16 +1460,18 @@ getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<str
 
 获取指定资源名称对应的[单复数](../../../../internationalization/l10n-singular-plural.md)字符串，并根据args参数对字符串进行格式化，使用同步方式返回。
 
-> **说明**
->
-> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
-> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
->
+> **说明**  
+>  
+> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考  
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。  
+>  
 > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1423,7 +1481,7 @@ getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<str
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
 | num | number | 是 | 数量值（浮点数）。根据当前语言的[单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
-| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。<br>支持参数类型：`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`、`%数字$s`。<br>说明：`%%`转义为`%`; `%数字$d`中的数字表示使用args中的第几个参数。<br>举例：`%%d`格式化后为`%d`字符串; `%1$d`表示使用第一个参数。 |
+| args | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string \| number> | 是 | 格式化字符串资源参数。<br>支持参数类型：`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`、`%数字$s`。<br>说明：`%%`转义为`%`; `%数字$d`中的数字表示使用args中的第几个参数。<br>举例：`%%d`格式化后为`%d`字符串; `%1$d`表示使用第一个参数。 |
 
 **返回值：**
 
@@ -1495,16 +1553,18 @@ getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string
 
 获取指定资源ID对应的[单复数](../../../../internationalization/l10n-singular-plural.md)字符串，并根据args参数对字符串进行格式化，使用同步方式返回。
 
-> **说明**
->
-> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
-> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
->
+> **说明**  
+>  
+> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考  
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。  
+>  
 > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string | number>): string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1514,7 +1574,7 @@ getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
 | num | number | 是 | 数量值（浮点数）。根据当前语言的[单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
-| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。<br>支持参数类型：`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`、`%数字$s`。<br>说明：`%%`转义为`%`; `%数字$d`中的数字表示使用args中的第几个参数。<br>举例：`%%d`格式化后为`%d`字符串; `%1$d`表示使用第一个参数。 |
+| args | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string \| number> | 是 | 格式化字符串资源参数。<br>支持参数类型：`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`、`%数字$s`。<br>说明：`%%`转义为`%`; `%数字$d`中的数字表示使用args中的第几个参数。<br>举例：`%%d`格式化后为`%d`字符串; `%1$d`表示使用第一个参数。 |
 
 **返回值：**
 
@@ -1586,9 +1646,9 @@ getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<s
 
 获取指定resource对象对应的[单复数](../../../../internationalization/l10n-singular-plural.md)字符串，并根据args参数对字符串进行格式化，使用同步方式返回。
 
-> **说明**
->
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> **说明**  
+>  
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考  
 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 18
@@ -1599,7 +1659,9 @@ getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<s
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1607,9 +1669,9 @@ getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<s
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
 | num | number | 是 | 数量值（浮点数）。根据当前语言的[单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
-| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。<br>支持参数类型：`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`、`%数字$s`。<br>说明：`%%`转义为`%`; `%数字$d`中的数字表示使用args中的第几个参数。<br>举例：`%%d`格式化后为`%d`字符串; `%1$d`表示使用第一个参数。 |
+| args | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string \| number> | 是 | 格式化字符串资源参数。<br>支持参数类型：`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`、`%数字$s`。<br>说明：`%%`转义为`%`; `%数字$d`中的数字表示使用args中的第几个参数。<br>举例：`%%d`格式化后为`%d`字符串; `%1$d`表示使用第一个参数。 |
 
 **返回值：**
 
@@ -1684,7 +1746,9 @@ getDrawableDescriptor(resId: number, density?: number, type?: number): DrawableD
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getDrawableDescriptor(resId: long, density?: int, type?: int): DrawableDescriptor--><!--Device-ResourceManager-getDrawableDescriptor(resId: long, density?: int, type?: int): DrawableDescriptor-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1700,7 +1764,7 @@ getDrawableDescriptor(resId: number, density?: number, type?: number): DrawableD
 
 | 类型 | 说明 |
 | --- | --- |
-| DrawableDescriptor | 资源ID值对应的DrawableDescriptor对象。 |
+| [DrawableDescriptor](../../apis-arkui/arkts-components/arkts-arkui-drawabledescriptor-t.md) | 资源ID值对应的DrawableDescriptor对象。 |
 
 **错误码：**
 
@@ -1756,11 +1820,11 @@ getDrawableDescriptor(resource: Resource, density?: number, type?: number): Draw
 
 获取指定resource对应的DrawableDescriptor对象，用于图标的显示，使用同步方式返回。
 
-> **说明**
->
-> 从API version 10开始支持，从API version 20开始废弃，建议使用
-> [getDrawableDescriptorByName](arkts-localization-resourcemanager-i.md#getdrawabledescriptorbyname-1)或
-> [getDrawableDescriptor](arkts-localization-resourcemanager-i.md#getdrawabledescriptor-1)
+> **说明**  
+>  
+> 从API version 10开始支持，从API version 20开始废弃，建议使用  
+> [getDrawableDescriptorByName](arkts-localization-resourcemanager-i.md#getdrawabledescriptorbyname-1)或  
+> [getDrawableDescriptor](arkts-localization-resourcemanager-i.md#getdrawabledescriptor-1)  
 > 替代。
 
 **起始版本：** 10
@@ -1771,7 +1835,9 @@ getDrawableDescriptor(resource: Resource, density?: number, type?: number): Draw
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getDrawableDescriptor(resource: Resource, density?: number, type?: number): DrawableDescriptor--><!--Device-ResourceManager-getDrawableDescriptor(resource: Resource, density?: number, type?: number): DrawableDescriptor-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1779,7 +1845,7 @@ getDrawableDescriptor(resource: Resource, density?: number, type?: number): Draw
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
 | density | number | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。 |
 | type | number | 否 | 图标类型。默认值为0。<br>0：表示获取应用自身图标资源。<br>1：表示获取主题资源包中应用的分层图标资源。 |
 
@@ -1787,7 +1853,7 @@ getDrawableDescriptor(resource: Resource, density?: number, type?: number): Draw
 
 | 类型 | 说明 |
 | --- | --- |
-| DrawableDescriptor | 资源ID值对应的DrawableDescriptor对象。 |
+| [DrawableDescriptor](../../apis-arkui/arkts-components/arkts-arkui-drawabledescriptor-t.md) | 资源ID值对应的DrawableDescriptor对象。 |
 
 **错误码：**
 
@@ -1843,7 +1909,9 @@ getDrawableDescriptorByName(resName: string, density?: number, type?: number): D
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getDrawableDescriptorByName(resName: string, density?: int, type?: int): DrawableDescriptor--><!--Device-ResourceManager-getDrawableDescriptorByName(resName: string, density?: int, type?: int): DrawableDescriptor-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1859,7 +1927,7 @@ getDrawableDescriptorByName(resName: string, density?: number, type?: number): D
 
 | 类型 | 说明 |
 | --- | --- |
-| DrawableDescriptor | 资源名称对应的DrawableDescriptor对象。 |
+| [DrawableDescriptor](../../apis-arkui/arkts-components/arkts-arkui-drawabledescriptor-t.md) | 资源名称对应的DrawableDescriptor对象。 |
 
 **错误码：**
 
@@ -1915,16 +1983,18 @@ getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string
 
 获取指定资源名称对应的[单复数](../../../../internationalization/l10n-singular-plural.md)字符串，并根据args参数对字符串进行格式化，使用同步方式返回。
 
-> **说明**
->
-> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
-> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
->
+> **说明**  
+>  
+> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考  
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。  
+>  
 > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -1934,7 +2004,7 @@ getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
 | num | number | 是 | 数量值（整数）。根据当前语言的[单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
-| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。<br>支持参数类型：`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`、`%数字$s`。<br>说明：`%%`转义为`%`; `%数字$d`中的数字表示使用args中的第几个参数。<br>举例：`%%d`格式化后为`%d`字符串; `%1$d`表示使用第一个参数。 |
+| args | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string \| number> | 是 | 格式化字符串资源参数。<br>支持参数类型：`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`、`%数字$s`。<br>说明：`%%`转义为`%`; `%数字$d`中的数字表示使用args中的第几个参数。<br>举例：`%%d`格式化后为`%d`字符串; `%1$d`表示使用第一个参数。 |
 
 **返回值：**
 
@@ -2006,16 +2076,18 @@ getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | n
 
 获取指定资源ID对应的[单复数](../../../../internationalization/l10n-singular-plural.md)字符串，并根据args参数对字符串进行格式化，使用同步方式返回。
 
-> **说明**
->
-> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
-> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
->
+> **说明**  
+>  
+> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考  
+> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。  
+>  
 > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | number>): string--><!--Device-ResourceManager-getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | number>): string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2025,7 +2097,7 @@ getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | n
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
 | num | number | 是 | 数量值（整数）。根据当前语言的[单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
-| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。<br>支持参数类型：`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`、`%数字$s`。<br>说明：`%%`转义为`%`; `%数字$d`中的数字表示使用args中的第几个参数。<br>举例：`%%d`格式化后为`%d`字符串; `%1$d`表示使用第一个参数。 |
+| args | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string \| number> | 是 | 格式化字符串资源参数。<br>支持参数类型：`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`、`%数字$s`。<br>说明：`%%`转义为`%`; `%数字$d`中的数字表示使用args中的第几个参数。<br>举例：`%%d`格式化后为`%d`字符串; `%1$d`表示使用第一个参数。 |
 
 **返回值：**
 
@@ -2097,9 +2169,9 @@ getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<stri
 
 获取指定resource对象对应的[单复数](../../../../internationalization/l10n-singular-plural.md)字符串，并根据args参数对字符串进行格式化，使用同步方式返回。
 
-> **说明**
->
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> **说明**  
+>  
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考  
 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 18
@@ -2110,7 +2182,9 @@ getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<stri
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2118,9 +2192,9 @@ getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<stri
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
 | num | number | 是 | 数量值（整数）。根据当前语言的[单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
-| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。<br>支持参数类型：`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`、`%数字$s`。<br>说明：`%%`转义为`%`; `%数字$d`中的数字表示使用args中的第几个参数。<br>举例：`%%d`格式化后为`%d`字符串; `%1$d`表示使用第一个参数。 |
+| args | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string \| number> | 是 | 格式化字符串资源参数。<br>支持参数类型：`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`、`%数字$s`。<br>说明：`%%`转义为`%`; `%数字$d`中的数字表示使用args中的第几个参数。<br>举例：`%%d`格式化后为`%d`字符串; `%1$d`表示使用第一个参数。 |
 
 **返回值：**
 
@@ -2195,7 +2269,9 @@ getLocales(includeSystem?: boolean): Array<string>
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getLocales(includeSystem?: boolean): Array<string>--><!--Device-ResourceManager-getLocales(includeSystem?: boolean): Array<string>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2209,7 +2285,7 @@ getLocales(includeSystem?: boolean): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 返回获取的语言列表，列表中的字符串由语言、脚本（可选）、地区（可选），按照顺序使用中划线“-”连接组成。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 返回获取的语言列表，列表中的字符串由语言、脚本（可选）、地区（可选），按照顺序使用中划线“-”连接组成。 |
 
 **错误码：**
 
@@ -2268,6 +2344,8 @@ getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void
 
 **替代接口：** getMediaContent(resId:
 
+<!--Device-ResourceManager-getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 **参数：**
@@ -2275,7 +2353,7 @@ getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
-| callback | AsyncCallback&lt;Uint8Array&gt; | 是 | 回调函数，返回资源ID值对应的媒体文件内容。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Uint8Array> | 是 | 回调函数，返回资源ID值对应的媒体文件内容。 |
 
 **示例：**
 
@@ -2306,6 +2384,8 @@ getMedia(resId: number): Promise<Uint8Array>
 
 **替代接口：** getMediaContent(resId:
 
+<!--Device-ResourceManager-getMedia(resId: number): Promise<Uint8Array>--><!--Device-ResourceManager-getMedia(resId: number): Promise<Uint8Array>-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 **参数：**
@@ -2318,7 +2398,7 @@ getMedia(resId: number): Promise<Uint8Array>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回资源ID值对应的媒体文件内容。 |
+| Promise<Uint8Array> | Promise对象，返回资源ID值对应的媒体文件内容。 |
 
 **示例：**
 
@@ -2349,6 +2429,8 @@ getMediaBase64(resId: number, callback: AsyncCallback<string>): void
 
 **替代接口：** getMediaContentBase64(resId:
 
+<!--Device-ResourceManager-getMediaBase64(resId: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaBase64(resId: number, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 **参数：**
@@ -2356,7 +2438,7 @@ getMediaBase64(resId: number, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
-| callback | AsyncCallback&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的图片资源Base64编码。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | 回调函数，返回资源ID值对应的图片资源Base64编码。 |
 
 **示例：**
 
@@ -2387,6 +2469,8 @@ getMediaBase64(resId: number): Promise<string>
 
 **替代接口：** getMediaContentBase64(resId:
 
+<!--Device-ResourceManager-getMediaBase64(resId: number): Promise<string>--><!--Device-ResourceManager-getMediaBase64(resId: number): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 **参数：**
@@ -2399,7 +2483,7 @@ getMediaBase64(resId: number): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回资源ID值对应的图片资源Base64编码。 |
+| Promise<string> | Promise对象，返回资源ID值对应的图片资源Base64编码。 |
 
 **示例：**
 
@@ -2426,7 +2510,9 @@ getMediaBase64ByName(resName: string, callback: _AsyncCallback<string>): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaBase64ByName(resName: string, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaBase64ByName(resName: string, callback: _AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2435,7 +2521,7 @@ getMediaBase64ByName(resName: string, callback: _AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
-| callback | _AsyncCallback&lt;string&gt; | 是 | 回调函数，返回资源名称的图片资源Base64编码。 |
+| callback | _AsyncCallback<string> | 是 | 回调函数，返回资源名称的图片资源Base64编码。 |
 
 **错误码：**
 
@@ -2482,7 +2568,9 @@ getMediaBase64ByName(resName: string, density: number, callback: _AsyncCallback<
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaBase64ByName(resName: string, density: int, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaBase64ByName(resName: string, density: int, callback: _AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2492,7 +2580,7 @@ getMediaBase64ByName(resName: string, density: number, callback: _AsyncCallback<
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
 | density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。 |
-| callback | _AsyncCallback&lt;string&gt; | 是 | 回调函数，返回资源名称的图片资源Base64编码。 |
+| callback | _AsyncCallback<string> | 是 | 回调函数，返回资源名称的图片资源Base64编码。 |
 
 **错误码：**
 
@@ -2539,7 +2627,9 @@ getMediaBase64ByName(resName: string): Promise<string>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaBase64ByName(resName: string): Promise<string>--><!--Device-ResourceManager-getMediaBase64ByName(resName: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2553,7 +2643,7 @@ getMediaBase64ByName(resName: string): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回资源名称对应的图片资源Base64编码。 |
+| Promise<string> | Promise对象，返回资源名称对应的图片资源Base64编码。 |
 
 **错误码：**
 
@@ -2598,7 +2688,9 @@ getMediaBase64ByName(resName: string, density: number): Promise<string>
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaBase64ByName(resName: string, density: int): Promise<string>--><!--Device-ResourceManager-getMediaBase64ByName(resName: string, density: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2613,7 +2705,7 @@ getMediaBase64ByName(resName: string, density: number): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回资源名称对应的图片资源Base64编码。 |
+| Promise<string> | Promise对象，返回资源名称对应的图片资源Base64编码。 |
 
 **错误码：**
 
@@ -2658,7 +2750,9 @@ getMediaBase64ByNameSync(resName: string, density?: number): string
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaBase64ByNameSync(resName: string, density?: int): string--><!--Device-ResourceManager-getMediaBase64ByNameSync(resName: string, density?: int): string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2723,7 +2817,9 @@ getMediaByName(resName: string, callback: _AsyncCallback<Uint8Array>): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaByName(resName: string, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaByName(resName: string, callback: _AsyncCallback<Uint8Array>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2732,7 +2828,7 @@ getMediaByName(resName: string, callback: _AsyncCallback<Uint8Array>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
-| callback | _AsyncCallback&lt;Uint8Array&gt; | 是 | 回调函数，返回资源名称对应的媒体文件内容。 |
+| callback | _AsyncCallback<Uint8Array> | 是 | 回调函数，返回资源名称对应的媒体文件内容。 |
 
 **错误码：**
 
@@ -2779,7 +2875,9 @@ getMediaByName(resName: string, density: number, callback: _AsyncCallback<Uint8A
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaByName(resName: string, density: int, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaByName(resName: string, density: int, callback: _AsyncCallback<Uint8Array>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2789,7 +2887,7 @@ getMediaByName(resName: string, density: number, callback: _AsyncCallback<Uint8A
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
 | density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。 |
-| callback | _AsyncCallback&lt;Uint8Array&gt; | 是 | 回调函数，返回资源名称对应的媒体文件内容。 |
+| callback | _AsyncCallback<Uint8Array> | 是 | 回调函数，返回资源名称对应的媒体文件内容。 |
 
 **错误码：**
 
@@ -2836,7 +2934,9 @@ getMediaByName(resName: string): Promise<Uint8Array>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaByName(resName: string): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaByName(resName: string): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2850,7 +2950,7 @@ getMediaByName(resName: string): Promise<Uint8Array>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回资源名称对应的媒体文件内容。 |
+| Promise<Uint8Array> | Promise对象，返回资源名称对应的媒体文件内容。 |
 
 **错误码：**
 
@@ -2895,7 +2995,9 @@ getMediaByName(resName: string, density: number): Promise<Uint8Array>
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaByName(resName: string, density: int): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaByName(resName: string, density: int): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2910,7 +3012,7 @@ getMediaByName(resName: string, density: number): Promise<Uint8Array>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回资源名称对应的媒体文件内容。 |
+| Promise<Uint8Array> | Promise对象，返回资源名称对应的媒体文件内容。 |
 
 **错误码：**
 
@@ -2955,7 +3057,9 @@ getMediaByNameSync(resName: string, density?: number): Uint8Array
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaByNameSync(resName: string, density?: int): Uint8Array--><!--Device-ResourceManager-getMediaByNameSync(resName: string, density?: int): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -2970,7 +3074,7 @@ getMediaByNameSync(resName: string, density?: number): Uint8Array
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 资源名称对应的媒体文件内容。 |
+| [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 资源名称对应的媒体文件内容。 |
 
 **错误码：**
 
@@ -3026,7 +3130,9 @@ getMediaContent(resource: Resource, callback: _AsyncCallback<Uint8Array>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaContent(resource: Resource, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaContent(resource: Resource, callback: _AsyncCallback<Uint8Array>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3034,8 +3140,8 @@ getMediaContent(resource: Resource, callback: _AsyncCallback<Uint8Array>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
-| callback | _AsyncCallback&lt;Uint8Array&gt; | 是 | 回调函数，返回resource对象对应的媒体文件内容。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
+| callback | _AsyncCallback<Uint8Array> | 是 | 回调函数，返回resource对象对应的媒体文件内容。 |
 
 **错误码：**
 
@@ -3088,7 +3194,9 @@ getMediaContent(resource: Resource, density: number, callback: _AsyncCallback<Ui
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaContent(resource: Resource, density: number, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaContent(resource: Resource, density: number, callback: _AsyncCallback<Uint8Array>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3096,9 +3204,9 @@ getMediaContent(resource: Resource, density: number, callback: _AsyncCallback<Ui
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
 | density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。 |
-| callback | _AsyncCallback&lt;Uint8Array&gt; | 是 | 回调函数，返回resource对象对应的媒体文件内容。 |
+| callback | _AsyncCallback<Uint8Array> | 是 | 回调函数，返回resource对象对应的媒体文件内容。 |
 
 **错误码：**
 
@@ -3151,7 +3259,9 @@ getMediaContent(resource: Resource): Promise<Uint8Array>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaContent(resource: Resource): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaContent(resource: Resource): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3159,13 +3269,13 @@ getMediaContent(resource: Resource): Promise<Uint8Array>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回resource对象对应的媒体文件内容。 |
+| Promise<Uint8Array> | Promise对象，返回resource对象对应的媒体文件内容。 |
 
 **错误码：**
 
@@ -3216,7 +3326,9 @@ getMediaContent(resource: Resource, density: number): Promise<Uint8Array>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaContent(resource: Resource, density: number): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaContent(resource: Resource, density: number): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3224,14 +3336,14 @@ getMediaContent(resource: Resource, density: number): Promise<Uint8Array>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
 | density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回resource对象对应的媒体文件内容。 |
+| Promise<Uint8Array> | Promise对象，返回resource对象对应的媒体文件内容。 |
 
 **错误码：**
 
@@ -3276,7 +3388,9 @@ getMediaContent(resId: number, callback: _AsyncCallback<Uint8Array>): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaContent(resId: long, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaContent(resId: long, callback: _AsyncCallback<Uint8Array>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3285,7 +3399,7 @@ getMediaContent(resId: number, callback: _AsyncCallback<Uint8Array>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
-| callback | _AsyncCallback&lt;Uint8Array&gt; | 是 | 回调函数，返回资源ID对应的媒体文件内容。 |
+| callback | _AsyncCallback<Uint8Array> | 是 | 回调函数，返回资源ID对应的媒体文件内容。 |
 
 **错误码：**
 
@@ -3333,7 +3447,9 @@ getMediaContent(resId: number, density: number, callback: _AsyncCallback<Uint8Ar
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaContent(resId: long, density: int, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaContent(resId: long, density: int, callback: _AsyncCallback<Uint8Array>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3343,7 +3459,7 @@ getMediaContent(resId: number, density: number, callback: _AsyncCallback<Uint8Ar
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
 | density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。 |
-| callback | _AsyncCallback&lt;Uint8Array&gt; | 是 | 回调函数，返回资源ID对应的媒体文件内容。 |
+| callback | _AsyncCallback<Uint8Array> | 是 | 回调函数，返回资源ID对应的媒体文件内容。 |
 
 **错误码：**
 
@@ -3390,7 +3506,9 @@ getMediaContent(resId: number): Promise<Uint8Array>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaContent(resId: long): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaContent(resId: long): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3404,7 +3522,7 @@ getMediaContent(resId: number): Promise<Uint8Array>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回资源ID值对应的媒体文件内容。 |
+| Promise<Uint8Array> | Promise对象，返回资源ID值对应的媒体文件内容。 |
 
 **错误码：**
 
@@ -3449,7 +3567,9 @@ getMediaContent(resId: number, density: number): Promise<Uint8Array>
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaContent(resId: long, density: int): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaContent(resId: long, density: int): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3464,7 +3584,7 @@ getMediaContent(resId: number, density: number): Promise<Uint8Array>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回资源ID值对应的媒体文件内容。 |
+| Promise<Uint8Array> | Promise对象，返回资源ID值对应的媒体文件内容。 |
 
 **错误码：**
 
@@ -3515,7 +3635,9 @@ getMediaContentBase64(resource: Resource, callback: _AsyncCallback<string>): voi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaContentBase64(resource: Resource, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaContentBase64(resource: Resource, callback: _AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3523,8 +3645,8 @@ getMediaContentBase64(resource: Resource, callback: _AsyncCallback<string>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
-| callback | _AsyncCallback&lt;string&gt; | 是 | 回调函数，返回resource对象对应的图片资源Base64编码。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
+| callback | _AsyncCallback<string> | 是 | 回调函数，返回resource对象对应的图片资源Base64编码。 |
 
 **错误码：**
 
@@ -3577,7 +3699,9 @@ getMediaContentBase64(resource: Resource, density: number, callback: _AsyncCallb
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaContentBase64(resource: Resource, density: number, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaContentBase64(resource: Resource, density: number, callback: _AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3585,9 +3709,9 @@ getMediaContentBase64(resource: Resource, density: number, callback: _AsyncCallb
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
 | density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。 |
-| callback | _AsyncCallback&lt;string&gt; | 是 | 回调函数，返回resource对象对应的图片资源Base64编码。 |
+| callback | _AsyncCallback<string> | 是 | 回调函数，返回resource对象对应的图片资源Base64编码。 |
 
 **错误码：**
 
@@ -3640,7 +3764,9 @@ getMediaContentBase64(resource: Resource): Promise<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaContentBase64(resource: Resource): Promise<string>--><!--Device-ResourceManager-getMediaContentBase64(resource: Resource): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3648,13 +3774,13 @@ getMediaContentBase64(resource: Resource): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回resource对象对应的图片资源Base64编码。 |
+| Promise<string> | Promise对象，返回resource对象对应的图片资源Base64编码。 |
 
 **错误码：**
 
@@ -3705,7 +3831,9 @@ getMediaContentBase64(resource: Resource, density: number): Promise<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaContentBase64(resource: Resource, density: number): Promise<string>--><!--Device-ResourceManager-getMediaContentBase64(resource: Resource, density: number): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3713,14 +3841,14 @@ getMediaContentBase64(resource: Resource, density: number): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
 | density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回resource对象对应的图片资源Base64编码。 |
+| Promise<string> | Promise对象，返回resource对象对应的图片资源Base64编码。 |
 
 **错误码：**
 
@@ -3765,7 +3893,9 @@ getMediaContentBase64(resId: number, callback: _AsyncCallback<string>): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaContentBase64(resId: long, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaContentBase64(resId: long, callback: _AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3774,7 +3904,7 @@ getMediaContentBase64(resId: number, callback: _AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
-| callback | _AsyncCallback&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的图片资源Base64编码。 |
+| callback | _AsyncCallback<string> | 是 | 回调函数，返回资源ID值对应的图片资源Base64编码。 |
 
 **错误码：**
 
@@ -3821,7 +3951,9 @@ getMediaContentBase64(resId: number, density: number, callback: _AsyncCallback<s
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaContentBase64(resId: long, density: int, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaContentBase64(resId: long, density: int, callback: _AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3831,7 +3963,7 @@ getMediaContentBase64(resId: number, density: number, callback: _AsyncCallback<s
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
 | density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。 |
-| callback | _AsyncCallback&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的图片资源Base64编码。 |
+| callback | _AsyncCallback<string> | 是 | 回调函数，返回资源ID值对应的图片资源Base64编码。 |
 
 **错误码：**
 
@@ -3878,7 +4010,9 @@ getMediaContentBase64(resId: number): Promise<string>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaContentBase64(resId: long): Promise<string>--><!--Device-ResourceManager-getMediaContentBase64(resId: long): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3892,7 +4026,7 @@ getMediaContentBase64(resId: number): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回资源ID值对应的图片资源Base64编码。 |
+| Promise<string> | Promise对象，返回资源ID值对应的图片资源Base64编码。 |
 
 **错误码：**
 
@@ -3937,7 +4071,9 @@ getMediaContentBase64(resId: number, density: number): Promise<string>
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaContentBase64(resId: long, density: int): Promise<string>--><!--Device-ResourceManager-getMediaContentBase64(resId: long, density: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -3952,7 +4088,7 @@ getMediaContentBase64(resId: number, density: number): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回资源ID值对应的图片资源Base64编码。 |
+| Promise<string> | Promise对象，返回资源ID值对应的图片资源Base64编码。 |
 
 **错误码：**
 
@@ -3997,7 +4133,9 @@ getMediaContentBase64Sync(resId: number, density?: number): string
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaContentBase64Sync(resId: long, density?: int): string--><!--Device-ResourceManager-getMediaContentBase64Sync(resId: long, density?: int): string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4068,7 +4206,9 @@ getMediaContentBase64Sync(resource: Resource, density?: number): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaContentBase64Sync(resource: Resource, density?: number): string--><!--Device-ResourceManager-getMediaContentBase64Sync(resource: Resource, density?: number): string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4076,7 +4216,7 @@ getMediaContentBase64Sync(resource: Resource, density?: number): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
 | density | number | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。 |
 
 **返回值：**
@@ -4132,7 +4272,9 @@ getMediaContentSync(resId: number, density?: number): Uint8Array
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaContentSync(resId: long, density?: int): Uint8Array--><!--Device-ResourceManager-getMediaContentSync(resId: long, density?: int): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4147,7 +4289,7 @@ getMediaContentSync(resId: number, density?: number): Uint8Array
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 资源ID对应的媒体文件内容。 |
+| [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 资源ID对应的媒体文件内容。 |
 
 **错误码：**
 
@@ -4203,7 +4345,9 @@ getMediaContentSync(resource: Resource, density?: number): Uint8Array
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getMediaContentSync(resource: Resource, density?: number): Uint8Array--><!--Device-ResourceManager-getMediaContentSync(resource: Resource, density?: number): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4211,14 +4355,14 @@ getMediaContentSync(resource: Resource, density?: number): Uint8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
 | density | number | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | resource对象对应的媒体文件内容。 |
+| [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | resource对象对应的媒体文件内容。 |
 
 **错误码：**
 
@@ -4267,7 +4411,9 @@ getNumber(resId: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getNumber(resId: number): number--><!--Device-ResourceManager-getNumber(resId: number): number-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4281,7 +4427,7 @@ getNumber(resId: number): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 资源ID值对应的数值。integer对应的是原数值，float不带单位时对应的是原数值，带"vp","fp"单位时对应的是px值，具体参考示例代码。 |
+| number | 资源ID值对应的数值。* integer对应的是原数值，float不带单位时对应的是原数值，带"vp","fp"单位时对应的是px值，具体参考示例代码。 |
 
 **错误码：**
 
@@ -4371,7 +4517,9 @@ getNumber(resource: Resource): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getNumber(resource: Resource): number--><!--Device-ResourceManager-getNumber(resource: Resource): number-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4379,7 +4527,7 @@ getNumber(resource: Resource): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
 
 **返回值：**
 
@@ -4443,7 +4591,9 @@ getNumberByName(resName: string): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getNumberByName(resName: string): number--><!--Device-ResourceManager-getNumberByName(resName: string): number-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4537,13 +4687,13 @@ export default class EntryAbility extends UIAbility {
 getOverrideConfiguration(): Configuration
 ```
 
-获取差异化资源的配置，使用同步方式返回。普通资源管理对象与通过它的
-[getOverrideResourceManager](arkts-localization-resourcemanager-i.md#getoverrideresourcemanager-1)接口获取的差异化资源管理对象调用该方法
-可获得相同的返回值。
+获取差异化资源的配置，使用同步方式返回。普通资源管理对象与通过它的[getOverrideResourceManager](arkts-localization-resourcemanager-i.md#getoverrideresourcemanager-1)接口获取的差异化资源管理对象调用该方法可获得相同的返回值。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getOverrideConfiguration(): Configuration--><!--Device-ResourceManager-getOverrideConfiguration(): Configuration-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4551,7 +4701,7 @@ getOverrideConfiguration(): Configuration
 
 | 类型 | 说明 |
 | --- | --- |
-| Configuration | 差异化资源的配置。 |
+| [Configuration](../../apis-arkui/arkts-apis/arkts-arkui-configuration-i.md) | 差异化资源的配置。 |
 
 **示例：**
 
@@ -4583,12 +4733,13 @@ export default class EntryAbility extends UIAbility {
 getOverrideResourceManager(configuration?: Configuration): ResourceManager
 ```
 
-获取可以加载差异化资源的资源管理对象，使用同步方式返回。
-普通的资源管理对象获取的资源的配置（语言、深浅色、分辨率、横竖屏等）是由系统决定的，而通过该接口返回的对象，应用可以获取符合指定配置的资源，即差异化资源，比如在浅色模式时可以获取深色资源。
+获取可以加载差异化资源的资源管理对象，使用同步方式返回。普通的资源管理对象获取的资源的配置（语言、深浅色、分辨率、横竖屏等）是由系统决定的，而通过该接口返回的对象，应用可以获取符合指定配置的资源，即差异化资源，比如在浅色模式时可以获取深色资源。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getOverrideResourceManager(configuration?: Configuration): ResourceManager--><!--Device-ResourceManager-getOverrideResourceManager(configuration?: Configuration): ResourceManager-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4596,13 +4747,13 @@ getOverrideResourceManager(configuration?: Configuration): ResourceManager
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| configuration | Configuration | 否 | 指定想要获取的资源配置。<br>通过[getOverrideConfiguration](arkts-localization-resourcemanager-i.md#getoverrideconfiguration-1)获取差异化配置后，根据需求修改配置项，再作为参数传入该函数。<br>若缺省则表示使用当前系统的configuration。 |
+| configuration | [Configuration](../../apis-arkui/arkts-apis/arkts-arkui-configuration-i.md) | 否 | 指定想要获取的资源配置。<br>通过[getOverrideConfiguration](arkts-localization-resourcemanager-i.md#getoverrideconfiguration-1)获取差异化配置后，根据需求修改配置项，再作为参数传入该函数。<br>若缺省则表示使用当前系统的configuration。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ResourceManager | 可以加载差异化资源的资源管理对象。 |
+| [ResourceManager](arkts-localization-resourcemanager-i.md) | 可以加载差异化资源的资源管理对象。 |
 
 **错误码：**
 
@@ -4642,9 +4793,9 @@ getPluralString(resId: number, num: number, callback: AsyncCallback<string>): vo
 
 获取指定资源ID，指定资源数量的单复数字符串，使用callback异步回调。
 
-> **说明**
->
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> **说明**  
+>  
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考  
 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 6
@@ -4652,6 +4803,8 @@ getPluralString(resId: number, num: number, callback: AsyncCallback<string>): vo
 **废弃版本：** 9
 
 **替代接口：** getPluralStringValue(resId:
+
+<!--Device-ResourceManager-getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4661,7 +4814,7 @@ getPluralString(resId: number, num: number, callback: AsyncCallback<string>): vo
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
 | num | number | 是 | 数量值。根据当前语言的复数规则获取该数量值对应的字符串数字，语言的复数规则参见[语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 |
-| callback | AsyncCallback&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的指定数量的单复数字符串。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | 回调函数，返回资源ID值对应的指定数量的单复数字符串。 |
 
 **示例：**
 
@@ -4688,9 +4841,9 @@ getPluralString(resId: number, num: number): Promise<string>
 
 获取指定资源ID，指定资源数量的单复数字符串，使用Promise异步回调。
 
-> **说明**
->
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> **说明**  
+>  
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考  
 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 6
@@ -4698,6 +4851,8 @@ getPluralString(resId: number, num: number): Promise<string>
 **废弃版本：** 9
 
 **替代接口：** getPluralStringValue(resId:
+
+<!--Device-ResourceManager-getPluralString(resId: number, num: number): Promise<string>--><!--Device-ResourceManager-getPluralString(resId: number, num: number): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4712,7 +4867,7 @@ getPluralString(resId: number, num: number): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回资源ID值对应的指定数量的单复数字符串。 |
+| Promise<string> | Promise对象，返回资源ID值对应的指定数量的单复数字符串。 |
 
 **示例：**
 
@@ -4737,9 +4892,9 @@ getPluralStringByName(resName: string, num: number, callback: _AsyncCallback<str
 
 获取指定资源名称，指定资源数量的单复数字符串，使用callback异步回调。
 
-> **说明**
->
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> **说明**  
+>  
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考  
 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
@@ -4748,7 +4903,9 @@ getPluralStringByName(resName: string, num: number, callback: _AsyncCallback<str
 
 **替代接口：** getIntPluralStringByNameSync(resName:
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getPluralStringByName(resName: string, num: number, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getPluralStringByName(resName: string, num: number, callback: _AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4758,7 +4915,7 @@ getPluralStringByName(resName: string, num: number, callback: _AsyncCallback<str
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
 | num | number | 是 | 数量值。根据当前语言的复数规则获取该数量值对应的字符串数字，语言的复数规则参见[语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 |
-| callback | _AsyncCallback&lt;string&gt; | 是 | 回调函数，返回资源名称对应的指定数量的单复数字符串。 |
+| callback | _AsyncCallback<string> | 是 | 回调函数，返回资源名称对应的指定数量的单复数字符串。 |
 
 **错误码：**
 
@@ -4817,9 +4974,9 @@ getPluralStringByName(resName: string, num: number): Promise<string>
 
 获取指定资源名称，指定资源数量的单复数字符串，使用Promise异步回调。
 
-> **说明**
->
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> **说明**  
+>  
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考  
 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
@@ -4828,7 +4985,9 @@ getPluralStringByName(resName: string, num: number): Promise<string>
 
 **替代接口：** getIntPluralStringByNameSync(resName:
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getPluralStringByName(resName: string, num: number): Promise<string>--><!--Device-ResourceManager-getPluralStringByName(resName: string, num: number): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4843,7 +5002,7 @@ getPluralStringByName(resName: string, num: number): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | 根据传入的数量值，获取资源名称对应的字符串资源。 |
+| Promise<string> | 根据传入的数量值，获取资源名称对应的字符串资源。 |
 
 **错误码：**
 
@@ -4902,9 +5061,9 @@ getPluralStringByNameSync(resName: string, num: number): string
 
 获取指定资源名称，指定资源数量的单复数字符串，使用同步方式返回。
 
-> **说明**
->
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> **说明**  
+>  
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考  
 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 10
@@ -4913,7 +5072,9 @@ getPluralStringByNameSync(resName: string, num: number): string
 
 **替代接口：** getIntPluralStringByNameSync(resName:
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getPluralStringByNameSync(resName: string, num: number): string--><!--Device-ResourceManager-getPluralStringByNameSync(resName: string, num: number): string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -4988,9 +5149,9 @@ getPluralStringValue(resource: Resource, num: number, callback: _AsyncCallback<s
 
 获取指定资源信息，指定资源数量的单复数字符串，使用callback异步回调。
 
-> **说明**
->
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> **说明**  
+>  
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考  
 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
@@ -5001,7 +5162,9 @@ getPluralStringValue(resource: Resource, num: number, callback: _AsyncCallback<s
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getPluralStringValue(resource: Resource, num: number, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getPluralStringValue(resource: Resource, num: number, callback: _AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -5009,9 +5172,9 @@ getPluralStringValue(resource: Resource, num: number, callback: _AsyncCallback<s
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
 | num | number | 是 | 数量值。根据当前语言的复数规则获取该数量值对应的字符串数字，语言的复数规则参见[语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 |
-| callback | _AsyncCallback&lt;string&gt; | 是 | 回调函数，返回resource对象对应的指定数量的单复数字符串。 |
+| callback | _AsyncCallback<string> | 是 | 回调函数，返回resource对象对应的指定数量的单复数字符串。 |
 
 **错误码：**
 
@@ -5077,9 +5240,9 @@ getPluralStringValue(resource: Resource, num: number): Promise<string>
 
 获取指定资源信息，指定资源数量的单复数字符串，使用Promise异步回调。
 
-> **说明**
->
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> **说明**  
+>  
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考  
 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
@@ -5090,7 +5253,9 @@ getPluralStringValue(resource: Resource, num: number): Promise<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getPluralStringValue(resource: Resource, num: number): Promise<string>--><!--Device-ResourceManager-getPluralStringValue(resource: Resource, num: number): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -5098,14 +5263,14 @@ getPluralStringValue(resource: Resource, num: number): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
 | num | number | 是 | 数量值。根据当前语言的复数规则获取该数量值对应的字符串数字，语言的复数规则参见[语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回resource对象对应的指定数量的单复数字符串。 |
+| Promise<string> | Promise对象，返回resource对象对应的指定数量的单复数字符串。 |
 
 **错误码：**
 
@@ -5170,9 +5335,9 @@ getPluralStringValue(resId: number, num: number, callback: _AsyncCallback<string
 
 获取指定资源ID，指定资源数量的单复数字符串，使用callback异步回调。
 
-> **说明**
->
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> **说明**  
+>  
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考  
 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
@@ -5181,7 +5346,9 @@ getPluralStringValue(resId: number, num: number, callback: _AsyncCallback<string
 
 **替代接口：** getIntPluralStringValueSync(resId:
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getPluralStringValue(resId: number, num: number, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getPluralStringValue(resId: number, num: number, callback: _AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -5191,7 +5358,7 @@ getPluralStringValue(resId: number, num: number, callback: _AsyncCallback<string
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
 | num | number | 是 | 数量值。根据当前语言的复数规则获取该数量值对应的字符串数字，语言的复数规则参见[语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 |
-| callback | _AsyncCallback&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的指定数量的单复数字符串。 |
+| callback | _AsyncCallback<string> | 是 | 回调函数，返回资源ID值对应的指定数量的单复数字符串。 |
 
 **错误码：**
 
@@ -5251,9 +5418,9 @@ getPluralStringValue(resId: number, num: number): Promise<string>
 
 获取指定资源ID，指定资源数量的单复数字符串，使用Promise异步回调。
 
-> **说明**
->
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> **说明**  
+>  
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考  
 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
@@ -5262,7 +5429,9 @@ getPluralStringValue(resId: number, num: number): Promise<string>
 
 **替代接口：** getIntPluralStringValueSync(resId:
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getPluralStringValue(resId: number, num: number): Promise<string>--><!--Device-ResourceManager-getPluralStringValue(resId: number, num: number): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -5277,7 +5446,7 @@ getPluralStringValue(resId: number, num: number): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回资源ID值对应的指定数量的单复数字符串。 |
+| Promise<string> | Promise对象，返回资源ID值对应的指定数量的单复数字符串。 |
 
 **错误码：**
 
@@ -5336,9 +5505,9 @@ getPluralStringValueSync(resId: number, num: number): string
 
 获取指定资源ID，指定资源数量的单复数字符串，使用同步方式返回。
 
-> **说明**
->
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> **说明**  
+>  
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考  
 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 10
@@ -5347,7 +5516,9 @@ getPluralStringValueSync(resId: number, num: number): string
 
 **替代接口：** getIntPluralStringValueSync(resId:
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getPluralStringValueSync(resId: number, num: number): string--><!--Device-ResourceManager-getPluralStringValueSync(resId: number, num: number): string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -5422,9 +5593,9 @@ getPluralStringValueSync(resource: Resource, num: number): string
 
 获取指定资源信息，指定资源数量的单复数字符串，使用同步方式返回。
 
-> **说明**
->
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
+> **说明**  
+>  
+> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考  
 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 10
@@ -5435,7 +5606,9 @@ getPluralStringValueSync(resource: Resource, num: number): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getPluralStringValueSync(resource: Resource, num: number): string--><!--Device-ResourceManager-getPluralStringValueSync(resource: Resource, num: number): string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -5443,7 +5616,7 @@ getPluralStringValueSync(resource: Resource, num: number): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
 | num | number | 是 | 数量值。根据当前语言的复数规则获取该数量值对应的字符串数字，语言的复数规则参见[语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 |
 
 **返回值：**
@@ -5516,15 +5689,17 @@ getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void
 
 获取resources/rawfile目录下对应rawfile文件所在HAP的文件描述符（fd），使用callback异步回调。
 
-> **说明**
->
-> 文件描述符（fd）使用完毕后需调用[closeRawFdSync](arkts-localization-resourcemanager-i.md#closerawfdsync-1)或
-> [closeRawFd](arkts-localization-resourcemanager-i.md#closerawfd-1)关闭
+> **说明**  
+>  
+> 文件描述符（fd）使用完毕后需调用[closeRawFdSync](arkts-localization-resourcemanager-i.md#closerawfdsync-1)或  
+> [closeRawFd](arkts-localization-resourcemanager-i.md#closerawfd-1)关闭  
 > fd，避免资源泄露。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void--><!--Device-ResourceManager-getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -5533,7 +5708,7 @@ getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | rawfile文件路径。 |
-| callback | _AsyncCallback&lt;RawFileDescriptor&gt; | 是 | 回调函数，返回的rawfile文件所在HAP的文件描述符（fd）。 |
+| callback | _AsyncCallback<RawFileDescriptor> | 是 | 回调函数，返回的rawfile文件所在HAP的文件描述符（fd）。 |
 
 **错误码：**
 
@@ -5580,15 +5755,17 @@ getRawFd(path: string): Promise<RawFileDescriptor>
 
 获取resources/rawfile目录下rawfile文件所在HAP的文件描述符（fd），使用Promise异步回调。
 
-> **说明**
->
-> 文件描述符（fd）使用完毕后需调用[closeRawFdSync](arkts-localization-resourcemanager-i.md#closerawfdsync-1)或
-> [closeRawFd](arkts-localization-resourcemanager-i.md#closerawfd-1)关闭
+> **说明**  
+>  
+> 文件描述符（fd）使用完毕后需调用[closeRawFdSync](arkts-localization-resourcemanager-i.md#closerawfdsync-1)或  
+> [closeRawFd](arkts-localization-resourcemanager-i.md#closerawfd-1)关闭  
 > fd，避免资源泄露。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getRawFd(path: string): Promise<RawFileDescriptor>--><!--Device-ResourceManager-getRawFd(path: string): Promise<RawFileDescriptor>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -5602,7 +5779,7 @@ getRawFd(path: string): Promise<RawFileDescriptor>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;RawFileDescriptor&gt; | Promise对象，返回rawfile文件所在HAP的文件描述符（fd）。 |
+| Promise<RawFileDescriptor> | Promise对象，返回rawfile文件所在HAP的文件描述符（fd）。 |
 
 **错误码：**
 
@@ -5647,15 +5824,17 @@ getRawFdSync(path: string): RawFileDescriptor
 
 获取resources/rawfile目录下rawfile文件所在HAP的文件描述符（fd），使用同步方式返回。
 
-> **说明**
->
-> 文件描述符（fd）使用完毕后需调用[closeRawFdSync](arkts-localization-resourcemanager-i.md#closerawfdsync-1)或
-> [closeRawFd](arkts-localization-resourcemanager-i.md#closerawfd-1)关闭
+> **说明**  
+>  
+> 文件描述符（fd）使用完毕后需调用[closeRawFdSync](arkts-localization-resourcemanager-i.md#closerawfdsync-1)或  
+> [closeRawFd](arkts-localization-resourcemanager-i.md#closerawfd-1)关闭  
 > fd，避免资源泄露。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getRawFdSync(path: string): RawFileDescriptor--><!--Device-ResourceManager-getRawFdSync(path: string): RawFileDescriptor-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -5669,7 +5848,7 @@ getRawFdSync(path: string): RawFileDescriptor
 
 | 类型 | 说明 |
 | --- | --- |
-| RawFileDescriptor | rawfile文件所在HAP的文件描述符（fd）。 |
+| [RawFileDescriptor](arkts-localization-rawfiledescriptor-t.md) | rawfile文件所在HAP的文件描述符（fd）。 |
 
 **错误码：**
 
@@ -5713,6 +5892,8 @@ getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void
 
 **替代接口：** getRawFileContent(path:
 
+<!--Device-ResourceManager-getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 **参数：**
@@ -5720,7 +5901,7 @@ getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | rawfile文件路径。 |
-| callback | AsyncCallback&lt;Uint8Array&gt; | 是 | 回调函数，返回rawfile文件内容。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Uint8Array> | 是 | 回调函数，返回rawfile文件内容。 |
 
 **示例：**
 
@@ -5753,6 +5934,8 @@ getRawFile(path: string): Promise<Uint8Array>
 
 **替代接口：** getRawFileContent(path:
 
+<!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>--><!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 **参数：**
@@ -5765,7 +5948,7 @@ getRawFile(path: string): Promise<Uint8Array>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回rawfile文件内容。 |
+| Promise<Uint8Array> | Promise对象，返回rawfile文件内容。 |
 
 **示例：**
 
@@ -5792,7 +5975,9 @@ getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -5801,7 +5986,7 @@ getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | rawfile文件路径。 |
-| callback | _AsyncCallback&lt;Uint8Array&gt; | 是 | 回调函数，返回获取的rawfile文件内容。 |
+| callback | _AsyncCallback<Uint8Array> | 是 | 回调函数，返回获取的rawfile文件内容。 |
 
 **错误码：**
 
@@ -5847,7 +6032,9 @@ getRawFileContent(path: string): Promise<Uint8Array>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getRawFileContent(path: string): Promise<Uint8Array>--><!--Device-ResourceManager-getRawFileContent(path: string): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -5861,7 +6048,7 @@ getRawFileContent(path: string): Promise<Uint8Array>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回获取的rawfile文件内容。 |
+| Promise<Uint8Array> | Promise对象，返回获取的rawfile文件内容。 |
 
 **错误码：**
 
@@ -5905,7 +6092,9 @@ getRawFileContentSync(path: string): Uint8Array
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getRawFileContentSync(path: string): Uint8Array--><!--Device-ResourceManager-getRawFileContentSync(path: string): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -5919,7 +6108,7 @@ getRawFileContentSync(path: string): Uint8Array
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 返回获取的rawfile文件内容。 |
+| [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 返回获取的rawfile文件内容。 |
 
 **错误码：**
 
@@ -5963,6 +6152,8 @@ getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): 
 
 **替代接口：** getRawFd(path:
 
+<!--Device-ResourceManager-getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): void--><!--Device-ResourceManager-getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): void-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 **参数：**
@@ -5970,7 +6161,7 @@ getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | rawfile文件路径。 |
-| callback | AsyncCallback&lt;RawFileDescriptor&gt; | 是 | 回调函数，返回rawfile文件的文件描述符（fd）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<RawFileDescriptor> | 是 | 回调函数，返回rawfile文件的文件描述符（fd）。 |
 
 **示例：**
 
@@ -6005,6 +6196,8 @@ getRawFileDescriptor(path: string): Promise<RawFileDescriptor>
 
 **替代接口：** getRawFd(path:
 
+<!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>--><!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 **参数：**
@@ -6017,7 +6210,7 @@ getRawFileDescriptor(path: string): Promise<RawFileDescriptor>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;RawFileDescriptor&gt; | Promise对象，返回rawfile文件的文件描述符（fd）。 |
+| Promise<RawFileDescriptor> | Promise对象，返回rawfile文件的文件描述符（fd）。 |
 
 **示例：**
 
@@ -6044,13 +6237,15 @@ getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void
 
 获取resources/rawfile目录下文件夹及文件列表，使用callback异步回调。
 
-> **说明**
->
+> **说明**  
+>  
 > 若文件夹中无文件，则抛出异常；若文件夹中有文件，则返回文件夹及文件列表。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6059,7 +6254,7 @@ getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | rawfile文件夹路径。 |
-| callback | _AsyncCallback&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回rawfile文件目录下的文件夹及文件列表。 |
+| callback | _AsyncCallback<Array<string>> | 是 | 回调函数，返回rawfile文件目录下的文件夹及文件列表。 |
 
 **错误码：**
 
@@ -6099,13 +6294,15 @@ getRawFileList(path: string): Promise<Array<string>>
 
 获取resources/rawfile目录下文件夹及文件列表，使用Promise异步回调。
 
-> **说明**
->
+> **说明**  
+>  
 > 若文件夹中无文件，则抛出异常；若文件夹中有文件，则返回文件夹及文件列表。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getRawFileList(path: string): Promise<Array<string>>--><!--Device-ResourceManager-getRawFileList(path: string): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6119,7 +6316,7 @@ getRawFileList(path: string): Promise<Array<string>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回rawfile文件目录下的文件夹及文件列表。 |
+| Promise<Array<string>> | Promise对象，返回rawfile文件目录下的文件夹及文件列表。 |
 
 **错误码：**
 
@@ -6159,13 +6356,15 @@ getRawFileListSync(path: string): Array<string>
 
 获取resources/rawfile目录下文件夹及文件列表，使用同步形式返回。
 
-> **说明**
->
+> **说明**  
+>  
 > 若文件夹中无文件，则抛出异常；若文件夹中有文件，则返回文件夹及文件列表。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getRawFileListSync(path: string): Array<string>--><!--Device-ResourceManager-getRawFileListSync(path: string): Array<string>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6179,7 +6378,7 @@ getRawFileListSync(path: string): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | rawfile文件目录下的文件夹及文件列表。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | rawfile文件目录下的文件夹及文件列表。 |
 
 **错误码：**
 
@@ -6224,7 +6423,9 @@ getResourceName(resId: number): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getResourceName(resId: long): string--><!--Device-ResourceManager-getResourceName(resId: long): string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6296,6 +6497,8 @@ getString(resId: number, callback: AsyncCallback<string>): void
 
 **替代接口：** getStringValue(resId:
 
+<!--Device-ResourceManager-getString(resId: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getString(resId: number, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 **参数：**
@@ -6303,7 +6506,7 @@ getString(resId: number, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
-| callback | AsyncCallback&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的字符串。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | 回调函数，返回资源ID值对应的字符串。 |
 
 **示例：**
 
@@ -6334,6 +6537,8 @@ getString(resId: number): Promise<string>
 
 **替代接口：** getStringValue(resId:
 
+<!--Device-ResourceManager-getString(resId: number): Promise<string>--><!--Device-ResourceManager-getString(resId: number): Promise<string>-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 **参数：**
@@ -6346,7 +6551,7 @@ getString(resId: number): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回资源ID值对应的字符串。 |
+| Promise<string> | Promise对象，返回资源ID值对应的字符串。 |
 
 **示例：**
 
@@ -6377,6 +6582,8 @@ getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void
 
 **替代接口：** getStringArrayValue(resId:
 
+<!--Device-ResourceManager-getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 **参数：**
@@ -6384,7 +6591,7 @@ getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回资源ID值对应的字符串数组。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | 是 | 回调函数，返回资源ID值对应的字符串数组。 |
 
 **示例：**
 
@@ -6415,6 +6622,8 @@ getStringArray(resId: number): Promise<Array<string>>
 
 **替代接口：** getStringArrayValue(resId:
 
+<!--Device-ResourceManager-getStringArray(resId: number): Promise<Array<string>>--><!--Device-ResourceManager-getStringArray(resId: number): Promise<Array<string>>-End-->
+
 **系统能力：** SystemCapability.Global.ResourceManager
 
 **参数：**
@@ -6427,7 +6636,7 @@ getStringArray(resId: number): Promise<Array<string>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回资源ID值对应的字符串数组。 |
+| Promise<Array<string>> | Promise对象，返回资源ID值对应的字符串数组。 |
 
 **示例：**
 
@@ -6454,7 +6663,9 @@ getStringArrayByName(resName: string, callback: _AsyncCallback<Array<string>>): 
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getStringArrayByName(resName: string, callback: _AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getStringArrayByName(resName: string, callback: _AsyncCallback<Array<string>>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6463,7 +6674,7 @@ getStringArrayByName(resName: string, callback: _AsyncCallback<Array<string>>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
-| callback | _AsyncCallback&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回资源名称对应的字符串数组。 |
+| callback | _AsyncCallback<Array<string>> | 是 | 回调函数，返回资源名称对应的字符串数组。 |
 
 **错误码：**
 
@@ -6524,7 +6735,9 @@ getStringArrayByName(resName: string): Promise<Array<string>>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getStringArrayByName(resName: string): Promise<Array<string>>--><!--Device-ResourceManager-getStringArrayByName(resName: string): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6538,7 +6751,7 @@ getStringArrayByName(resName: string): Promise<Array<string>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回资源名称对应的字符串数组。 |
+| Promise<Array<string>> | Promise对象，返回资源名称对应的字符串数组。 |
 
 **错误码：**
 
@@ -6598,7 +6811,9 @@ getStringArrayByNameSync(resName: string): Array<string>
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getStringArrayByNameSync(resName: string): Array<string>--><!--Device-ResourceManager-getStringArrayByNameSync(resName: string): Array<string>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6612,7 +6827,7 @@ getStringArrayByNameSync(resName: string): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 对应资源名称的字符串数组。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 对应资源名称的字符串数组。 |
 
 **错误码：**
 
@@ -6679,7 +6894,9 @@ getStringArrayValue(resource: Resource, callback: _AsyncCallback<Array<string>>)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getStringArrayValue(resource: Resource, callback: _AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getStringArrayValue(resource: Resource, callback: _AsyncCallback<Array<string>>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6687,8 +6904,8 @@ getStringArrayValue(resource: Resource, callback: _AsyncCallback<Array<string>>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
-| callback | _AsyncCallback&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回resource对象对应的字符串数组。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
+| callback | _AsyncCallback<Array<string>> | 是 | 回调函数，返回resource对象对应的字符串数组。 |
 
 **错误码：**
 
@@ -6754,7 +6971,9 @@ getStringArrayValue(resource: Resource): Promise<Array<string>>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getStringArrayValue(resource: Resource): Promise<Array<string>>--><!--Device-ResourceManager-getStringArrayValue(resource: Resource): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6762,13 +6981,13 @@ getStringArrayValue(resource: Resource): Promise<Array<string>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回resource对象对应的字符串数组。 |
+| Promise<Array<string>> | Promise对象，返回resource对象对应的字符串数组。 |
 
 **错误码：**
 
@@ -6828,7 +7047,9 @@ getStringArrayValue(resId: number, callback: _AsyncCallback<Array<string>>): voi
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getStringArrayValue(resId: long, callback: _AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getStringArrayValue(resId: long, callback: _AsyncCallback<Array<string>>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6837,7 +7058,7 @@ getStringArrayValue(resId: number, callback: _AsyncCallback<Array<string>>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
-| callback | _AsyncCallback&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回资源ID值对应的字符串数组。 |
+| callback | _AsyncCallback<Array<string>> | 是 | 回调函数，返回资源ID值对应的字符串数组。 |
 
 **错误码：**
 
@@ -6898,7 +7119,9 @@ getStringArrayValue(resId: number): Promise<Array<string>>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getStringArrayValue(resId: long): Promise<Array<string>>--><!--Device-ResourceManager-getStringArrayValue(resId: long): Promise<Array<string>>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6912,7 +7135,7 @@ getStringArrayValue(resId: number): Promise<Array<string>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回资源ID值对应的字符串数组。 |
+| Promise<Array<string>> | Promise对象，返回资源ID值对应的字符串数组。 |
 
 **错误码：**
 
@@ -6972,7 +7195,9 @@ getStringArrayValueSync(resId: number): Array<string>
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getStringArrayValueSync(resId: long): Array<string>--><!--Device-ResourceManager-getStringArrayValueSync(resId: long): Array<string>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -6986,7 +7211,7 @@ getStringArrayValueSync(resId: number): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 资源ID值对应的字符串数组。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 资源ID值对应的字符串数组。 |
 
 **错误码：**
 
@@ -7053,7 +7278,9 @@ getStringArrayValueSync(resource: Resource): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getStringArrayValueSync(resource: Resource): Array<string>--><!--Device-ResourceManager-getStringArrayValueSync(resource: Resource): Array<string>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7061,13 +7288,13 @@ getStringArrayValueSync(resource: Resource): Array<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | resource对象对应的字符串数组。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | resource对象对应的字符串数组。 |
 
 **错误码：**
 
@@ -7128,7 +7355,9 @@ getStringByName(resName: string, callback: _AsyncCallback<string>): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getStringByName(resName: string, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getStringByName(resName: string, callback: _AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7137,7 +7366,7 @@ getStringByName(resName: string, callback: _AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
-| callback | _AsyncCallback&lt;string&gt; | 是 | 返回获取的字符串。 |
+| callback | _AsyncCallback<string> | 是 | 返回获取的字符串。 |
 
 **错误码：**
 
@@ -7193,7 +7422,9 @@ getStringByName(resName: string): Promise<string>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getStringByName(resName: string): Promise<string>--><!--Device-ResourceManager-getStringByName(resName: string): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7207,7 +7438,7 @@ getStringByName(resName: string): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回资源名称对应的字符串。 |
+| Promise<string> | Promise对象，返回资源名称对应的字符串。 |
 
 **错误码：**
 
@@ -7261,7 +7492,9 @@ getStringByNameSync(resName: string): string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getStringByNameSync(resName: string): string--><!--Device-ResourceManager-getStringByNameSync(resName: string): string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7332,7 +7565,9 @@ getStringByNameSync(resName: string, ...args: Array<string | number>): string
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getStringByNameSync(resName: string, ...args: Array<string | number>): string--><!--Device-ResourceManager-getStringByNameSync(resName: string, ...args: Array<string | number>): string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7341,7 +7576,7 @@ getStringByNameSync(resName: string, ...args: Array<string | number>): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
-| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。<br>支持参数类型：`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`、`%数字$s`。<br>说明：`%%`转义为`%`; `%数字$d`中的数字表示使用args中的第几个参数。<br>举例：`%%d`格式化后为`%d`字符串; `%1$d`表示使用第一个参数。 |
+| args | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string \| number> | 是 | 格式化字符串资源参数。<br>支持参数类型：`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`、`%数字$s`。<br>说明：`%%`转义为`%`; `%数字$d`中的数字表示使用args中的第几个参数。<br>举例：`%%d`格式化后为`%d`字符串; `%1$d`表示使用第一个参数。 |
 
 **返回值：**
 
@@ -7405,7 +7640,9 @@ getStringSync(resId: number): string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getStringSync(resId: long): string--><!--Device-ResourceManager-getStringSync(resId: long): string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7476,7 +7713,9 @@ getStringSync(resId: number, ...args: Array<string | number>): string
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getStringSync(resId: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getStringSync(resId: number, ...args: Array<string | number>): string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7485,7 +7724,7 @@ getStringSync(resId: number, ...args: Array<string | number>): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
-| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。<br>支持参数类型：`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`、`%数字$s`。<br>说明：`%%`转义为`%`; `%数字$d`中的数字表示使用args中的第几个参数。<br>举例：`%%d`格式化后为`%d`字符串; `%1$d`表示使用第一个参数。 |
+| args | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string \| number> | 是 | 格式化字符串资源参数。<br>支持参数类型：`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`、`%数字$s`。<br>说明：`%%`转义为`%`; `%数字$d`中的数字表示使用args中的第几个参数。<br>举例：`%%d`格式化后为`%d`字符串; `%1$d`表示使用第一个参数。 |
 
 **返回值：**
 
@@ -7555,7 +7794,9 @@ getStringSync(resource: Resource): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getStringSync(resource: Resource): string--><!--Device-ResourceManager-getStringSync(resource: Resource): string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7563,7 +7804,7 @@ getStringSync(resource: Resource): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
 
 **返回值：**
 
@@ -7632,7 +7873,9 @@ getStringSync(resource: Resource, ...args: Array<string | number>): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getStringSync(resource: Resource, ...args: Array<string | number>): string--><!--Device-ResourceManager-getStringSync(resource: Resource, ...args: Array<string | number>): string-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7640,8 +7883,8 @@ getStringSync(resource: Resource, ...args: Array<string | number>): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
-| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。<br>支持参数类型：`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`、`%数字$s`。<br>说明：`%%`转义为`%`; `%数字$d`中的数字表示使用args中的第几个参数。<br>举例：`%%d`格式化后为`%d`字符串; `%1$d`表示使用第一个参数。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
+| args | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string \| number> | 是 | 格式化字符串资源参数。<br>支持参数类型：`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`、`%数字$s`。<br>说明：`%%`转义为`%`; `%数字$d`中的数字表示使用args中的第几个参数。<br>举例：`%%d`格式化后为`%d`字符串; `%1$d`表示使用第一个参数。 |
 
 **返回值：**
 
@@ -7711,7 +7954,9 @@ getStringValue(resource: Resource, callback: _AsyncCallback<string>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getStringValue(resource: Resource, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getStringValue(resource: Resource, callback: _AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7719,8 +7964,8 @@ getStringValue(resource: Resource, callback: _AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
-| callback | _AsyncCallback&lt;string&gt; | 是 | 回调函数，返回resource对象对应的字符串。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
+| callback | _AsyncCallback<string> | 是 | 回调函数，返回resource对象对应的字符串。 |
 
 **错误码：**
 
@@ -7782,7 +8027,9 @@ getStringValue(resource: Resource): Promise<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getStringValue(resource: Resource): Promise<string>--><!--Device-ResourceManager-getStringValue(resource: Resource): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7790,13 +8037,13 @@ getStringValue(resource: Resource): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回resource对象对应的字符串。 |
+| Promise<string> | Promise对象，返回resource对象对应的字符串。 |
 
 **错误码：**
 
@@ -7839,7 +8086,9 @@ getStringValue(resId: number, callback: _AsyncCallback<string>): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getStringValue(resId: long, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getStringValue(resId: long, callback: _AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7848,7 +8097,7 @@ getStringValue(resId: number, callback: _AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
-| callback | _AsyncCallback&lt;string&gt; | 是 | 回调函数，返回获取的字符串。 |
+| callback | _AsyncCallback<string> | 是 | 回调函数，返回获取的字符串。 |
 
 **错误码：**
 
@@ -7869,7 +8118,9 @@ getStringValue(resId: number): Promise<string>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getStringValue(resId: long): Promise<string>--><!--Device-ResourceManager-getStringValue(resId: long): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -7883,7 +8134,7 @@ getStringValue(resId: number): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回资源ID值对应的字符串。 |
+| Promise<string> | Promise对象，返回资源ID值对应的字符串。 |
 
 **错误码：**
 
@@ -7937,7 +8188,9 @@ getSymbol(resId: number) : number
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getSymbol(resId: long) : long--><!--Device-ResourceManager-getSymbol(resId: long) : long-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -8001,7 +8254,9 @@ getSymbol(resource: Resource) : number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getSymbol(resource: Resource) : number--><!--Device-ResourceManager-getSymbol(resource: Resource) : number-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -8009,7 +8264,7 @@ getSymbol(resource: Resource) : number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | Resource | 是 | 资源信息。 |
+| resource | [Resource](arkts-localization-resource-i.md) | 是 | 资源信息。 |
 
 **返回值：**
 
@@ -8059,7 +8314,9 @@ getSymbolByName(resName: string) : number
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getSymbolByName(resName: string) : long--><!--Device-ResourceManager-getSymbolByName(resName: string) : long-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -8117,7 +8374,9 @@ isRawDir(path: string): boolean
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-isRawDir(path: string): boolean--><!--Device-ResourceManager-isRawDir(path: string): boolean-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -8131,7 +8390,7 @@ isRawDir(path: string): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 是否为rawfile下的目录。- true：表示是rawfile下的目录。- false：表示非rawfile下的目录。 |
+| boolean | 是否为rawfile下的目录。  - true：表示是rawfile下的目录。  - false：表示非rawfile下的目录。 |
 
 **错误码：**
 
@@ -8182,7 +8441,9 @@ release()
 
 **废弃版本：** 12
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-release()--><!--Device-ResourceManager-release()-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -8205,13 +8466,15 @@ removeResource(path: string) : void
 
 应用运行时移除指定的资源路径，还原被覆盖前的资源。
 
-> **说明**
->
+> **说明**  
+>  
 > rawfile和resfile目录不支持资源覆盖。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-removeResource(path: string) : void--><!--Device-ResourceManager-removeResource(path: string) : void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -8256,13 +8519,13 @@ export default class EntryAbility extends UIAbility {
 updateOverrideConfiguration(configuration: Configuration): void
 ```
 
-更新差异化资源配置。普通资源管理对象与通过它的
-[getOverrideResourceManager](arkts-localization-resourcemanager-i.md#getoverrideresourcemanager-1)接口获取的差异化资源管理对象调用该方法
-均可更新差异化资源管理对象的配置。
+更新差异化资源配置。普通资源管理对象与通过它的[getOverrideResourceManager](arkts-localization-resourcemanager-i.md#getoverrideresourcemanager-1)接口获取的差异化资源管理对象调用该方法均可更新差异化资源管理对象的配置。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-updateOverrideConfiguration(configuration: Configuration): void--><!--Device-ResourceManager-updateOverrideConfiguration(configuration: Configuration): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -8270,7 +8533,7 @@ updateOverrideConfiguration(configuration: Configuration): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| configuration | Configuration | 是 | 指定差异化资源的配置。通过[getOverrideConfiguration](arkts-localization-resourcemanager-i.md#getoverrideconfiguration-1)获取差异化配置后，根据需求修改配置项，再作为参数传入。 |
+| configuration | [Configuration](../../apis-arkui/arkts-apis/arkts-arkui-configuration-i.md) | 是 | 指定差异化资源的配置。通过[getOverrideConfiguration](arkts-localization-resourcemanager-i.md#getoverrideconfiguration-1)获取差异化配置后，根据需求修改配置项，再作为参数传入。 |
 
 **错误码：**
 

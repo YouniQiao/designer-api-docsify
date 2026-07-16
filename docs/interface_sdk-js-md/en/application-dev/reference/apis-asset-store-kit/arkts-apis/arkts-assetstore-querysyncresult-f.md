@@ -16,19 +16,21 @@ Queries the result of the sync operation. This API uses a promise to return the 
 
 **Since:** 20
 
+<!--Device-asset-function querySyncResult(query: AssetMap): Promise<SyncResult>--><!--Device-asset-function querySyncResult(query: AssetMap): Promise<SyncResult>-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | AssetMap | Yes | Attributes of the sync result to query, such as the group to which the asset belongsand whether the custom attribute information is encrypted. |
+| query | [AssetMap](arkts-assetstore-assetmap-t.md) | Yes | Attributes of the sync result to query, such as the group to which the asset belongs and whether the custom attribute information is encrypted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SyncResult&gt; | Promise used to return the result obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SyncResult> | Promise used to return the result obtained. |
 
 **Error codes:**
 

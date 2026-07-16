@@ -1,5 +1,11 @@
 # start（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { inputDeviceCooperate } from '@kit.InputKit';
+```
+
 ## start
 
 ```TypeScript
@@ -8,10 +14,10 @@ function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback:
 
 启动键鼠穿越，使用callback异步回调。
 
-> **说明：**
->
-> 从 API version 9开始支持，从API version 23开始废弃。建议使用
-> [cooperate.activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-activatecooperate-f-sys.md#activatecooperate-1)
+> **说明：**  
+>  
+> 从 API version 9开始支持，从API version 23开始废弃。建议使用  
+> [cooperate.activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-activatecooperate-f-sys.md#activatecooperate-1)  
 > 替代。
 
 **起始版本：** 9
@@ -19,6 +25,8 @@ function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback:
 **废弃版本：** 23
 
 **替代接口：** activateCooperate
+
+<!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback: AsyncCallback<void>): void--><!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Cooperator
 
@@ -30,7 +38,7 @@ function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback:
 | --- | --- | --- | --- |
 | sinkDeviceDescriptor | string | 是 | 键鼠穿越目标设备描述符。 |
 | srcInputDeviceId | number | 是 | 键鼠穿越待穿越外设标识符。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当启动键鼠穿越成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当启动键鼠穿越成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -83,10 +91,10 @@ function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<
 
 启动键鼠穿越，使用Promise异步回调。
 
-> **说明：**
->
-> 从 API version 9开始支持，从API version 23开始废弃。建议使用
-> [cooperate.activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-activatecooperate-f-sys.md#activatecooperate-2)
+> **说明：**  
+>  
+> 从 API version 9开始支持，从API version 23开始废弃。建议使用  
+> [cooperate.activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-activatecooperate-f-sys.md#activatecooperate-2)  
 > 替代。
 
 **起始版本：** 9
@@ -94,6 +102,8 @@ function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<
 **废弃版本：** 23
 
 **替代接口：** activateCooperate
+
+<!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<void>--><!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<void>-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Cooperator
 
@@ -110,7 +120,7 @@ function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

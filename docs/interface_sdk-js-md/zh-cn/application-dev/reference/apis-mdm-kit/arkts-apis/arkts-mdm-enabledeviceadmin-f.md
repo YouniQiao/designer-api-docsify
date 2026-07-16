@@ -1,13 +1,18 @@
 # enableDeviceAdmin
 
+## 导入模块
+
+```TypeScript
+import { adminManager } from '@kit.MDMKit';
+```
+
 ## enableDeviceAdmin
 
 ```TypeScript
 function enableDeviceAdmin(admin: Want): Promise<void>
 ```
 
-[超级设备管理应用](../../../../mdm/mdm-kit-term.md#sda)通过该接口可以激活其他[普通设备管理应用](../../../../mdm/mdm-kit-term.md#da)，使用Promise异步回调。
-该接口仅支持超级设备管理应用调用。
+[超级设备管理应用](../../../../mdm/mdm-kit-term.md#sda)通过该接口可以激活其他[普通设备管理应用](../../../../mdm/mdm-kit-term.md#da)，使用Promise异步回调。该接口仅支持超级设备管理应用调用。
 
 **起始版本：** 23
 
@@ -15,19 +20,21 @@ function enableDeviceAdmin(admin: Want): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-adminManager-function enableDeviceAdmin(admin: Want): Promise<void>--><!--Device-adminManager-function enableDeviceAdmin(admin: Want): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。当激活设备管理应用失败时，会抛出错误对象。 |
+| Promise<void> | 无返回结果的Promise对象。当激活设备管理应用失败时，会抛出错误对象。 |
 
 **错误码：**
 

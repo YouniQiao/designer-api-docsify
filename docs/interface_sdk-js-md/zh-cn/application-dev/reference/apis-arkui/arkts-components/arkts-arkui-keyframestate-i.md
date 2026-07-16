@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare interface KeyframeState--><!--Device-unnamed-declare interface KeyframeState-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## curve
@@ -16,16 +18,13 @@ curve?: Curve | string | ICurve
 
 推荐以Curve或ICurve形式指定。
 
-当类型为string时，为动画插值曲线，取值参考
-[AnimateParam](../../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#animateparam对象说明)的curve参数。
+当类型为string时，为动画插值曲线，取值参考[AnimateParam](../../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#animateparam对象说明)的curve参数。
 
 默认值：Curve.EaseInOut
 
 **说明：**
 
-由于[springMotion](../arkts-apis/arkts-arkui-springmotion-f.md#springmotion-1)、
-[responsiveSpringMotion](../arkts-apis/arkts-arkui-responsivespringmotion-f.md#responsivespringmotion-1)、
-[interpolatingSpring](../arkts-apis/arkts-arkui-interpolatingspring-f.md#interpolatingspring-1)曲线时长不生效，故不支持这三种曲线。
+由于[springMotion](../arkts-apis/arkts-arkui-springmotion-f.md#springmotion-1)、[responsiveSpringMotion](../arkts-apis/arkts-arkui-responsivespringmotion-f.md#responsivespringmotion-1)、[interpolatingSpring](../arkts-apis/arkts-arkui-interpolatingspring-f.md#interpolatingspring-1)曲线时长不生效，故不支持这三种曲线。
 
 **类型：** Curve | string | ICurve
 
@@ -35,7 +34,9 @@ curve?: Curve | string | ICurve
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-KeyframeState-curve?: Curve | string | ICurve--><!--Device-KeyframeState-curve?: Curve | string | ICurve-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,7 +62,9 @@ duration: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-KeyframeState-duration: number--><!--Device-KeyframeState-duration: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -79,7 +82,9 @@ event: () => void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-KeyframeState-event: () => void--><!--Device-KeyframeState-event: () => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,7 +4,15 @@ DateData定义了日期通用属性和方法，包括年、月、日。
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare class DateData--><!--Device-unnamed-declare class DateData-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { CounterType, DateData, CounterComponent, CounterOptions } from '@kit.ArkUI';
+```
 
 ## constructor
 
@@ -18,7 +26,9 @@ DateData的构造函数用于初始化日期对象。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DateData-constructor(year: number, month: number, day: number)--><!--Device-DateData-constructor(year: number, month: number, day: number)-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,7 +52,9 @@ toString(): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DateData-toString(): string--><!--Device-DateData-toString(): string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,7 +84,9 @@ day: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DateData-day: number--><!--Device-DateData-day: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,7 +110,9 @@ month: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DateData-month: number--><!--Device-DateData-month: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -120,7 +136,9 @@ year: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DateData-year: number--><!--Device-DateData-year: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

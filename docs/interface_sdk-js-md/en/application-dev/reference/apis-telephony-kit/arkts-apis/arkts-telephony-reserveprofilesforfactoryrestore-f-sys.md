@@ -18,6 +18,8 @@ Ensure that profiles will be retained on the next factory reset.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE
 
+<!--Device-eSIM-function reserveProfilesForFactoryRestore(slotId: int): Promise<ResultCode>--><!--Device-eSIM-function reserveProfilesForFactoryRestore(slotId: int): Promise<ResultCode>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -32,7 +34,7 @@ Ensure that profiles will be retained on the next factory reset.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultCode&gt; | Returns the result code. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ResultCode> | Returns the result code. |
 
 **Error codes:**
 

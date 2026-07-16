@@ -13,13 +13,9 @@ function bindDevice(deviceAddress: PartnerDeviceAddress, deviceCapability: Devic
     businessCapability: BusinessCapability, partnerAgentExtensionAbilityName: string): Promise<void>
 ```
 
-Bind the partner device.
-After successfully binding the device, if the device meets the discovery requirements,
-the {@link PartnerAgentExtensionAbility} of the application will be launched.
-- If the {@link DeviceCapability.supportBR} in the capability variable is set to true,
-the application's ability will be launched when the device is connected via Bluetooth.
-- If the {@link DeviceCapability.supportBleAdvertiser} in the capability variable is set to true,
-the application's ability will be launched when the device is detected via Bluetooth scanning.
+Bind the partner device.After successfully binding the device, if the device meets the discovery requirements,the {@link PartnerAgentExtensionAbility} of the application will be launched.  
+- If the {@link DeviceCapability.supportBR} in the capability variable is set to true,the application's ability will be launched when the device is connected via Bluetooth.  
+- If the {@link DeviceCapability.supportBleAdvertiser} in the capability variable is set to true,the application's ability will be launched when the device is detected via Bluetooth scanning.
 
 Note: The device must be paired first.
 
@@ -29,22 +25,26 @@ Note: The device must be paired first.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-partnerAgent-function bindDevice(deviceAddress: PartnerDeviceAddress, deviceCapability: DeviceCapability,
+    businessCapability: BusinessCapability, partnerAgentExtensionAbilityName: string): Promise<void>--><!--Device-partnerAgent-function bindDevice(deviceAddress: PartnerDeviceAddress, deviceCapability: DeviceCapability,
+    businessCapability: BusinessCapability, partnerAgentExtensionAbilityName: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceAddress | PartnerDeviceAddress | Yes | The address of partner device. |
-| deviceCapability | DeviceCapability | Yes | The capability of partner device. |
-| businessCapability | BusinessCapability | Yes | The business capability of application. |
+| deviceAddress | [PartnerDeviceAddress](arkts-connectivity-partnerdeviceaddress-t.md) | Yes | The address of partner device. |
+| deviceCapability | [DeviceCapability](arkts-connectivity-devicecapability-i.md) | Yes | The capability of partner device. |
+| businessCapability | [BusinessCapability](arkts-connectivity-businesscapability-i.md) | Yes | The business capability of application. |
 | partnerAgentExtensionAbilityName | string | Yes | The name of PartnerAgentExtensionAbility. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 

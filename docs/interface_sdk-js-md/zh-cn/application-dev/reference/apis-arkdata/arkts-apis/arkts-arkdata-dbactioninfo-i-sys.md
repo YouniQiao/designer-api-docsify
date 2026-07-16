@@ -4,9 +4,17 @@
 
 **起始版本：** 23
 
+<!--Device-cloudData-interface DBActionInfo--><!--Device-cloudData-interface DBActionInfo-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { cloudData } from '@kit.ArkData';
+```
 
 ## action
 
@@ -19,6 +27,8 @@ action: ClearAction
 **类型：** ClearAction
 
 **起始版本：** 23
+
+<!--Device-DBActionInfo-action: ClearAction--><!--Device-DBActionInfo-action: ClearAction-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -35,6 +45,8 @@ tableInfo?: Record<string, ClearAction>
 **类型：** Record<string, ClearAction>
 
 **起始版本：** 23
+
+<!--Device-DBActionInfo-tableInfo?: Record<string, ClearAction>--><!--Device-DBActionInfo-tableInfo?: Record<string, ClearAction>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 

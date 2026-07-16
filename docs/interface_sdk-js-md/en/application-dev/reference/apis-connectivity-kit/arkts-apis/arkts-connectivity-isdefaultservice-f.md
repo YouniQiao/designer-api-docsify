@@ -20,14 +20,16 @@ Checks whether a service is default for given type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-cardEmulation-function isDefaultService(elementName: ElementName, type: CardType): boolean--><!--Device-cardEmulation-function isDefaultService(elementName: ElementName, type: CardType): boolean-End-->
+
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | ElementName | Yes | The element name of the service ability |
-| type | CardType | Yes | The type to query, payment or other. |
+| elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-t.md) | Yes | The element name of the service ability |
+| type | [CardType](arkts-connectivity-cardtype-e.md) | Yes | The type to query, payment or other. |
 
 **Return value:**
 

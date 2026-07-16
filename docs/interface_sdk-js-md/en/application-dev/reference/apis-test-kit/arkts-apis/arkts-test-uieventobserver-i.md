@@ -4,6 +4,8 @@ Observer to monitor UI events.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface UIEventObserver--><!--Device-unnamed-declare interface UIEventObserver-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Subscribes to events of the toast component. This API uses a callback to return 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-UIEventObserver-once(type: 'toastShow', callback: Callback<UIElementInfo>): void--><!--Device-UIEventObserver-once(type: 'toastShow', callback: Callback<UIElementInfo>): void-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -31,7 +35,7 @@ Subscribes to events of the toast component. This API uses a callback to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'toastShow' | Yes | Event type. The value is fixed at **'toastShow'**. |
-| callback | Callback&lt;UIElementInfo&gt; | Yes | Callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<UIElementInfo> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -70,6 +74,8 @@ Subscribes to events of the dialog component. This API uses a callback to return
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-UIEventObserver-once(type: 'dialogShow', callback: Callback<UIElementInfo>): void--><!--Device-UIEventObserver-once(type: 'dialogShow', callback: Callback<UIElementInfo>): void-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -77,7 +83,7 @@ Subscribes to events of the dialog component. This API uses a callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dialogShow' | Yes | Event type. The value is fixed at **'dialogShow'**. |
-| callback | Callback&lt;UIElementInfo&gt; | Yes | Callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<UIElementInfo> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -110,13 +116,13 @@ async function demo() {
 once(type: 'windowChange', windowChangeType: WindowChangeType, options: WindowChangeOptions, callback: Callback<UIElementInfo>): void
 ```
 
-Starts listening for window change events of the specified type with extended configuration supported. This API
-triggers a callback when a specified window change event is detected.
-This API can be used only in [free windows](../../../../windowmanager/window-terminology.md#free-windows) mode.
+Starts listening for window change events of the specified type with extended configuration supported. This API triggers a callback when a specified window change event is detected.This API can be used only in [free windows](../../../../windowmanager/window-terminology.md#free-windows) mode.
 
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-UIEventObserver-once(type: 'windowChange', windowChangeType: WindowChangeType, options: WindowChangeOptions, callback: Callback<UIElementInfo>): void--><!--Device-UIEventObserver-once(type: 'windowChange', windowChangeType: WindowChangeType, options: WindowChangeOptions, callback: Callback<UIElementInfo>): void-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -124,10 +130,10 @@ This API can be used only in [free windows](../../../../windowmanager/window-ter
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowChange' | Yes | Type of the event to subscribe to, which can be **windowChange**. This event istriggered when the window changes. |
-| windowChangeType | WindowChangeType | Yes | Type of the window change event. |
-| options | WindowChangeOptions | Yes | Extended configuration, including the listening timeout interval and thebundle name of the window to be listened for. |
-| callback | Callback&lt;UIElementInfo&gt; | Yes | Callback triggered to return event information when an event occurs. |
+| type | 'windowChange' | Yes | Type of the event to subscribe to, which can be **windowChange**. This event is triggered when the window changes. |
+| windowChangeType | [WindowChangeType](arkts-test-windowchangetype-e.md) | Yes | Type of the window change event. |
+| options | [WindowChangeOptions](arkts-test-windowchangeoptions-i.md) | Yes | Extended configuration, including the listening timeout interval and the bundle name of the window to be listened for. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<UIElementInfo> | Yes | Callback triggered to return event information when an event occurs. |
 
 **Error codes:**
 
@@ -167,12 +173,13 @@ async function demo() {
 once(type: 'componentEventOccur', componentEventType: ComponentEventType, options: ComponentEventOptions, callback: Callback<UIElementInfo>): void
 ```
 
-Starts listening for component operation events of the specified type with extended configuration supported. This
-API triggers a callback when a specified component operation event is detected.
+Starts listening for component operation events of the specified type with extended configuration supported. This API triggers a callback when a specified component operation event is detected.
 
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-UIEventObserver-once(type: 'componentEventOccur', componentEventType: ComponentEventType, options: ComponentEventOptions, callback: Callback<UIElementInfo>): void--><!--Device-UIEventObserver-once(type: 'componentEventOccur', componentEventType: ComponentEventType, options: ComponentEventOptions, callback: Callback<UIElementInfo>): void-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -181,9 +188,9 @@ API triggers a callback when a specified component operation event is detected.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'componentEventOccur' | Yes | Type of the event to subscribe to, which can be **componentEventOccur**.This event is triggered when the component operation is detected. |
-| componentEventType | ComponentEventType | Yes | Type of the component operation event. |
-| options | ComponentEventOptions | Yes | Extended configuration, including the listening timeout interval andthe matching condition of the component to be listened for. |
-| callback | Callback&lt;UIElementInfo&gt; | Yes | Callback used to return the result. |
+| componentEventType | [ComponentEventType](arkts-test-componenteventtype-e.md) | Yes | Type of the component operation event. |
+| options | [ComponentEventOptions](arkts-test-componenteventoptions-i.md) | Yes | Extended configuration, including the listening timeout interval and the matching condition of the component to be listened for. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<UIElementInfo> | Yes | Callback used to return the result. |
 
 **Error codes:**
 

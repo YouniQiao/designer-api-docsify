@@ -18,6 +18,8 @@ Obtains the sandbox directory of an application based on the given bundle name a
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-bundleManager-function getSandboxDataDir(bundleName: string, appIndex: int): string--><!--Device-bundleManager-function getSandboxDataDir(bundleName: string, appIndex: int): string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Obtains the sandbox directory of an application based on the given bundle name a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application. This API can be called only when the application orits clone is available for the current user. Otherwise, error code 17700001 is returned. |
-| appIndex | number | Yes | Index of the application. The value ranges from 0 to 5. The value **0** indicates themain application, and the values 1 to 5 indicate the indexes of application clones. |
+| bundleName | string | Yes | Bundle name of the application. This API can be called only when the application or its clone is available for the current user. Otherwise, error code 17700001 is returned. |
+| appIndex | number | Yes | Index of the application. The value ranges from 0 to 5. The value **0** indicates the main application, and the values 1 to 5 indicate the indexes of application clones. |
 
 **Return value:**
 

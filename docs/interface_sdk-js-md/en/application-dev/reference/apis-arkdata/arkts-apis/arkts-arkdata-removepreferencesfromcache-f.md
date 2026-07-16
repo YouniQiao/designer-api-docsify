@@ -12,16 +12,13 @@ import { sendablePreferences } from '@kit.ArkData';
 function removePreferencesFromCache(context: Context, options: Options): Promise<void>
 ```
 
-Removes a **Preferences** instance from the cache. This API uses a promise to return the result.
-After an application calls [getPreferences](arkts-arkdata-getpreferences-f.md#getpreferences-1) for the first time to obtain
-a **Preferences** instance, the obtained **Preferences** instance is cached. When the application calls
-[getPreferences](arkts-arkdata-getpreferences-f.md#getpreferences-1) again, the **Preferences** instance will be read from
-the cache instead of from the persistent file. After this API is called to remove the instance from the cache,
-calling **getPreferences** again will read data from the persistent file and create a **Preferences** instance.
+Removes a **Preferences** instance from the cache. This API uses a promise to return the result.After an application calls [getPreferences](arkts-arkdata-getpreferences-f.md#getpreferences-1) for the first time to obtain a **Preferences** instance, the obtained **Preferences** instance is cached. When the application calls [getPreferences](arkts-arkdata-getpreferences-f.md#getpreferences-1) again, the **Preferences** instance will be read from the cache instead of from the persistent file. After this API is called to remove the instance from the cache,calling **getPreferences** again will read data from the persistent file and create a **Preferences** instance.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-sendablePreferences-function removePreferencesFromCache(context: Context, options: Options): Promise<void>--><!--Device-sendablePreferences-function removePreferencesFromCache(context: Context, options: Options): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -29,14 +26,14 @@ calling **getPreferences** again will read data from the persistent file and cre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. |
-| options | Options | Yes | Configuration options of the **Preferences** instance. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. |
+| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-options-i.md) | Yes | Configuration options of the **Preferences** instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

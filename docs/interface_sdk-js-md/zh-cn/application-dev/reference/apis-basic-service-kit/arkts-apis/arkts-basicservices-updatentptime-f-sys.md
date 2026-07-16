@@ -1,5 +1,11 @@
 # updateNtpTime（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { systemDateTime } from '@kit.BasicServicesKit';
+```
+
 ## updateNtpTime
 
 ```TypeScript
@@ -10,6 +16,8 @@ function updateNtpTime(): Promise<void>
 
 **起始版本：** 14
 
+<!--Device-systemDateTime-function updateNtpTime(): Promise<void>--><!--Device-systemDateTime-function updateNtpTime(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **系统接口：** 此接口为系统接口。
@@ -18,7 +26,7 @@ function updateNtpTime(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

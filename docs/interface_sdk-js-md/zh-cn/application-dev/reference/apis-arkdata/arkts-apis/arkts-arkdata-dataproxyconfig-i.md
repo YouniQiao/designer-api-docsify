@@ -4,7 +4,15 @@
 
 **起始版本：** 20
 
+<!--Device-dataShare-interface DataProxyConfig--><!--Device-dataShare-interface DataProxyConfig-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+## 导入模块
+
+```TypeScript
+import { dataShare } from '@kit.ArkData';
+```
 
 ## maxValueLength
 
@@ -19,6 +27,8 @@ maxValueLength?: DataProxyMaxValueLength
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataProxyConfig-maxValueLength?: DataProxyMaxValueLength--><!--Device-DataProxyConfig-maxValueLength?: DataProxyMaxValueLength-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -35,6 +45,8 @@ type: DataProxyType
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataProxyConfig-type: DataProxyType--><!--Device-DataProxyConfig-type: DataProxyType-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 

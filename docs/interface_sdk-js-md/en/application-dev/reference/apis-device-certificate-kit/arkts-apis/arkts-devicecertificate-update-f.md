@@ -12,13 +12,13 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 function update(handle: Uint8Array, data: Uint8Array, callback: AsyncCallback<void>): void
 ```
 
-Updates the data for the signing or signature verification operation. It needs to be invoked after the init
-operation to transfer the data to be signed and verified. This API uses an asynchronous callback to
-return the result.
+Updates the data for the signing or signature verification operation. It needs to be invoked after the init operation to transfer the data to be signed and verified. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
+
+<!--Device-certificateManager-function update(handle: Uint8Array, data: Uint8Array, callback: AsyncCallback<void>): void--><!--Device-certificateManager-function update(handle: Uint8Array, data: Uint8Array, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -26,15 +26,15 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | Uint8Array | Yes | Handle of initialization which needs to be obtained by calling the init method. |
-| data | Uint8Array | Yes | Data to be signed or verified. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
+| handle | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Handle of initialization which needs to be obtained by calling the init method. |
+| data | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Data to be signed or verified. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 
@@ -77,26 +77,28 @@ Updates the data for the signing or signature verification operation. This API u
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
+<!--Device-certificateManager-function update(handle: Uint8Array, data: Uint8Array): Promise<void>--><!--Device-certificateManager-function update(handle: Uint8Array, data: Uint8Array): Promise<void>-End-->
+
 **System capability:** SystemCapability.Security.CertificateManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | Uint8Array | Yes | Handle of initialization, which needs to be obtained by calling the init method |
-| data | Uint8Array | Yes | Data to be signed or verified. |
+| handle | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Handle of initialization, which needs to be obtained by calling the init method |
+| data | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Data to be signed or verified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 

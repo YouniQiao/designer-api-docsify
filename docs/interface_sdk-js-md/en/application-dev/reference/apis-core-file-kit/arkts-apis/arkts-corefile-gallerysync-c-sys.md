@@ -1,9 +1,10 @@
 # GallerySync (System API)
 
-Provides APIs to implement device-cloud sync of media assets in **Gallery**. Before using the APIs of
-**GallerySync**, you need to create a **GallerySync** instance.
+Provides APIs to implement device-cloud sync of media assets in **Gallery**. Before using the APIs of **GallerySync**, you need to create a **GallerySync** instance.
 
 **Since:** 10
+
+<!--Device-cloudSync-class GallerySync--><!--Device-cloudSync-class GallerySync-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -24,6 +25,8 @@ constructor()
 A constructor used to create a **GallerySync** instance.
 
 **Since:** 10
+
+<!--Device-GallerySync-constructor()--><!--Device-GallerySync-constructor()-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -48,6 +51,8 @@ Removes the specified callback from the device-cloud sync progress.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-GallerySync-off(evt: 'progress', callback: (pg: SyncProgress) => void): void--><!--Device-GallerySync-off(evt: 'progress', callback: (pg: SyncProgress) => void): void-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
@@ -57,7 +62,7 @@ Removes the specified callback from the device-cloud sync progress.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | evt | 'progress' | Yes | Event type. The value is **progress**, which indicates the sync progress event. |
-| callback | (pg: SyncProgress) =&gt; void | Yes | Callback used to return the sync progress. The input parameter is[SyncProgress](arkts-corefile-syncprogress-i.md), and the return value is **void**. |
+| callback | (pg: SyncProgress) => void | Yes | Callback used to return the sync progress. The input parameter is [SyncProgress](arkts-corefile-syncprogress-i.md), and the return value is **void**. |
 
 **Error codes:**
 
@@ -65,7 +70,7 @@ Removes the specified callback from the device-cloud sync progress.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are leftunspecified;<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 **Example**
@@ -95,6 +100,8 @@ Removes all callbacks from the device-cloud sync progress.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-GallerySync-off(evt: 'progress'): void--><!--Device-GallerySync-off(evt: 'progress'): void-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
@@ -111,7 +118,7 @@ Removes all callbacks from the device-cloud sync progress.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are leftunspecified;<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 **Example**
@@ -139,6 +146,8 @@ Registers a listener for the device-cloud sync progress.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-GallerySync-on(evt: 'progress', callback: (pg: SyncProgress) => void): void--><!--Device-GallerySync-on(evt: 'progress', callback: (pg: SyncProgress) => void): void-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
@@ -148,7 +157,7 @@ Registers a listener for the device-cloud sync progress.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | evt | 'progress' | Yes | Event type. The value is **progress**, which indicates the sync progress event. |
-| callback | (pg: SyncProgress) =&gt; void | Yes | Callback used to return the sync progress. The input parameter is[SyncProgress](arkts-corefile-syncprogress-i.md), and the return value is **void**. |
+| callback | (pg: SyncProgress) => void | Yes | Callback used to return the sync progress. The input parameter is [SyncProgress](arkts-corefile-syncprogress-i.md), and the return value is **void**. |
 
 **Error codes:**
 
@@ -156,7 +165,7 @@ Registers a listener for the device-cloud sync progress.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are leftunspecified;<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 **Example**
@@ -182,6 +191,8 @@ Starts device-cloud sync. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-GallerySync-start(): Promise<void>--><!--Device-GallerySync-start(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
@@ -190,7 +201,7 @@ Starts device-cloud sync. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -234,6 +245,8 @@ Starts device-cloud sync. This API uses an asynchronous callback to return the r
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
+<!--Device-GallerySync-start(callback: AsyncCallback<void>): void--><!--Device-GallerySync-start(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
@@ -242,7 +255,7 @@ Starts device-cloud sync. This API uses an asynchronous callback to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to start device-cloud sync. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to start device-cloud sync. |
 
 **Error codes:**
 
@@ -250,7 +263,7 @@ Starts device-cloud sync. This API uses an asynchronous callback to return the r
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are leftunspecified;<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 22400001 | Cloud status not ready. |
 | 22400002 | Network unavailable. |
 | 22400003 | Low battery level. |
@@ -280,14 +293,16 @@ stop(): Promise<void>
 
 Stops device-cloud sync. This API uses a promise to return the result.
 
-> **NOTE**
->
-> Calling **stop** will stop the sync process. To resume the sync, call
+> **NOTE**  
+>  
+> Calling **stop** will stop the sync process. To resume the sync, call  
 > [start](arkts-corefile-gallerysync-c-sys.md#start-1).
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
+
+<!--Device-GallerySync-stop(): Promise<void>--><!--Device-GallerySync-stop(): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -297,7 +312,7 @@ Stops device-cloud sync. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -330,14 +345,16 @@ stop(callback: AsyncCallback<void>): void
 
 Stops device-cloud sync. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> Calling **stop** will stop the sync process. To resume the sync, call
+> **NOTE**  
+>  
+> Calling **stop** will stop the sync process. To resume the sync, call  
 > [start](arkts-corefile-gallerysync-c-sys.md#start-1).
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
+
+<!--Device-GallerySync-stop(callback: AsyncCallback<void>): void--><!--Device-GallerySync-stop(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -347,7 +364,7 @@ Stops device-cloud sync. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to stop device-cloud sync. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to stop device-cloud sync. |
 
 **Error codes:**
 
@@ -355,7 +372,7 @@ Stops device-cloud sync. This API uses an asynchronous callback to return the re
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are leftunspecified;<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
 **Example**
 

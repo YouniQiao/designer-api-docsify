@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-interface ParticlePropertyOptions<TYPE, UPDATER extends ParticleUpdater>--><!--Device-unnamed-interface ParticlePropertyOptions<TYPE, UPDATER extends ParticleUpdater>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## range
@@ -36,7 +38,9 @@ range: ParticleTuple<TYPE, TYPE>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ParticlePropertyOptions-range: ParticleTuple<TYPE, TYPE>--><!--Device-ParticlePropertyOptions-range: ParticleTuple<TYPE, TYPE>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,14 +52,11 @@ updater?: ParticleUpdaterOptions<TYPE, UPDATER>
 
 属性变化配置。属性变化类型type有三类：
 
-1、当type为ParticleUpdater.NONE，表示无变化，则config类型为[ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md)
-[ParticleUpdater.NONE]。
+1、当type为ParticleUpdater.NONE，表示无变化，则config类型为[ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md)[ParticleUpdater.NONE]。
 
-2、当type为ParticleUpdater.RANDOM，表示变化类型为随机变化，则config类型为
-[ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md)[ParticleUpdater.RANDOM]。
+2、当type为ParticleUpdater.RANDOM，表示变化类型为随机变化，则config类型为[ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md)[ParticleUpdater.RANDOM]。
 
-3、当type为ParticleUpdater.CURVE，表示变化类型为曲线变化，则config类型为
-[ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md)[ParticleUpdater.CURVE]
+3、当type为ParticleUpdater.CURVE，表示变化类型为曲线变化，则config类型为[ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md)[ParticleUpdater.CURVE]
 
 默认值：type默认为ParticleUpdater.NONE。
 
@@ -67,7 +68,9 @@ updater?: ParticleUpdaterOptions<TYPE, UPDATER>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ParticlePropertyOptions-updater?: ParticleUpdaterOptions<TYPE, UPDATER>--><!--Device-ParticlePropertyOptions-updater?: ParticleUpdaterOptions<TYPE, UPDATER>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

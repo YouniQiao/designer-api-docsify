@@ -18,19 +18,21 @@ Checks whether an application is allowed to run in kiosk mode.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function isAppKioskAllowed(appIdentifier: string): boolean--><!--Device-applicationManager-function isAppKioskAllowed(appIdentifier: string): boolean-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appIdentifier | string | Yes | [Unique identifiers](../../apis-ability-kit/arkts-apis/arkts-ability-signatureinfo-i.md) of anapplication. You can call the[bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-getbundleinfo-f.md#getbundleinfo-3)API to obtain the **bundleInfo.signatureInfo.appIdentifier**. |
+| appIdentifier | string | Yes | [Unique identifiers](../../apis-ability-kit/arkts-apis/arkts-ability-signatureinfo-i.md) of an application. You can call the [bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-getbundleinfo-f.md#getbundleinfo-3)API to obtain the **bundleInfo.signatureInfo.appIdentifier**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The value **true** means the application can run in kiosk mode; the value **false** means theopposite. |
+| boolean | The value **true** means the application can run in kiosk mode; the value **false** means the opposite. |
 
 **Example**
 

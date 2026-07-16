@@ -18,6 +18,8 @@ Obtain information about the groups.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function getP2pGroups(): Promise<Array<WifiP2pGroupInfo>>--><!--Device-wifiManager-function getP2pGroups(): Promise<Array<WifiP2pGroupInfo>>-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Obtain information about the groups.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;WifiP2pGroupInfo&gt;&gt; | Returns the information about own device info. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<WifiP2pGroupInfo>> | Returns the information about own device info. |
 
 **Error codes:**
 
@@ -71,6 +73,8 @@ Obtain information about the groups.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManager-function getP2pGroups(callback: AsyncCallback<Array<WifiP2pGroupInfo>>): void--><!--Device-wifiManager-function getP2pGroups(callback: AsyncCallback<Array<WifiP2pGroupInfo>>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 **System API:** This is a system API.
@@ -79,7 +83,7 @@ Obtain information about the groups.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;WifiP2pGroupInfo&gt;&gt; | Yes | Indicates callback of function. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<WifiP2pGroupInfo>> | Yes | Indicates callback of function. |
 
 **Error codes:**
 

@@ -8,6 +8,8 @@ Inherits [RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.m
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface RichEditorUpdateTextSpanStyleOptions extends RichEditorSpanStyleOptions--><!--Device-unnamed-declare interface RichEditorUpdateTextSpanStyleOptions extends RichEditorSpanStyleOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## textStyle
@@ -25,6 +27,8 @@ Text style.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RichEditorUpdateTextSpanStyleOptions-textStyle: RichEditorTextStyle--><!--Device-RichEditorUpdateTextSpanStyleOptions-textStyle: RichEditorTextStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,6 +49,8 @@ Default value: **undefined**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-RichEditorUpdateTextSpanStyleOptions-urlStyle?: RichEditorUrlStyle--><!--Device-RichEditorUpdateTextSpanStyleOptions-urlStyle?: RichEditorUrlStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

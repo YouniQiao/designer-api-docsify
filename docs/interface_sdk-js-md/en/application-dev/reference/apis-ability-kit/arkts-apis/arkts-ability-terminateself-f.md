@@ -18,13 +18,15 @@ Terminates this ParticleAbility. This API uses an asynchronous callback to retur
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-particleAbility-function terminateSelf(callback: AsyncCallback<void>): void--><!--Device-particleAbility-function terminateSelf(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the ParticleAbility is terminated,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the ParticleAbility is terminated,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Example**
 
@@ -54,13 +56,15 @@ Terminates this ParticleAbility. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-particleAbility-function terminateSelf(): Promise<void>--><!--Device-particleAbility-function terminateSelf(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. Promise that returns no value. |
 
 **Example**
 

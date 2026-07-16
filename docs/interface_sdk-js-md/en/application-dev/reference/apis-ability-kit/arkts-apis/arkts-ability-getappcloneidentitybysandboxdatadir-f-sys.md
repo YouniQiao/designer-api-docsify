@@ -12,10 +12,11 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAppCloneIdentityBySandboxDataDir(sandboxDataDir: string): AppCloneIdentity
 ```
 
-Obtains the identity information of an application, including the bundle name and clone index, based on the given
-sandbox directory name.
+Obtains the identity information of an application, including the bundle name and clone index, based on the given sandbox directory name.
 
 **Since:** 20
+
+<!--Device-bundleManager-function getAppCloneIdentityBySandboxDataDir(sandboxDataDir: string): AppCloneIdentity--><!--Device-bundleManager-function getAppCloneIdentityBySandboxDataDir(sandboxDataDir: string): AppCloneIdentity-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -25,13 +26,13 @@ sandbox directory name.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sandboxDataDir | string | Yes | Name of the[sandbox directory of the application](../../../../file-management/app-sandbox-directory.md).<br>**NOTE**<br> Thevalidity of this parameter is not verified. If the input **sandboxDataDir** does not match the directory nameformat for application clones or atomic services, **sandboxDataDir** is returned as**AppCloneIdentity.bundleName**, and **AppCloneIdentity.appIndex** is **0**.<br> 1. Directory name format forapplication clones: `+clone-{appIndex}+{bundleName}`, where **appIndex** and **bundleName** are variablescorresponding to the clone index and bundle name, respectively. Example: `+clone-1+com.example.myapplication`.&lt;br&gt; 2. Directory name format for atomic services: `+auid-{uid}+{bundleName}`, where **uid** and **bundleName**are variables corresponding to the UID and bundle name, respectively. Example: `+auid-20000000+com.example.myapplication`. |
+| sandboxDataDir | string | Yes | Name of the [sandbox directory of the application](../../../../file-management/app-sandbox-directory.md).<br>**NOTE**<br> The validity of this parameter is not verified. If the input **sandboxDataDir** does not match the directory name format for application clones or atomic services, **sandboxDataDir** is returned as **AppCloneIdentity.bundleName**, and **AppCloneIdentity.appIndex** is **0**.<br> 1. Directory name format for application clones: `+clone-{appIndex}+{bundleName}`, where **appIndex** and **bundleName** are variables corresponding to the clone index and bundle name, respectively. Example: `+clone-1+com.example.myapplication`.<br> 2. Directory name format for atomic services: `+auid-{uid}+{bundleName}`, where **uid** and **bundleName** are variables corresponding to the UID and bundle name, respectively. Example: `+auid-20000000+com.example.myapplication`. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AppCloneIdentity | Bundle name and clone index of the application. |
+| [AppCloneIdentity](arkts-ability-appcloneidentity-t.md) | Bundle name and clone index of the application. |
 
 **Example**
 

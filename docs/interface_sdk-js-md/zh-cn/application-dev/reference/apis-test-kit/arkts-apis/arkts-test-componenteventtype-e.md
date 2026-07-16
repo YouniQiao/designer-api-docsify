@@ -4,6 +4,8 @@
 
 **起始版本：** 22
 
+<!--Device-unnamed-declare enum ComponentEventType--><!--Device-unnamed-declare enum ComponentEventType-End-->
+
 **系统能力：** SystemCapability.Test.UiTest
 
 ## COMPONENT_UNDEFINED
@@ -18,7 +20,9 @@ COMPONENT_UNDEFINED = 0
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ComponentEventType-COMPONENT_UNDEFINED = 0--><!--Device-ComponentEventType-COMPONENT_UNDEFINED = 0-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -32,7 +36,9 @@ COMPONENT_CLICKED = 1
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ComponentEventType-COMPONENT_CLICKED = 1--><!--Device-ComponentEventType-COMPONENT_CLICKED = 1-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -46,7 +52,9 @@ COMPONENT_LONG_CLICKED = 2
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ComponentEventType-COMPONENT_LONG_CLICKED = 2--><!--Device-ComponentEventType-COMPONENT_LONG_CLICKED = 2-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -60,7 +68,9 @@ COMPONENT_SCROLL_START = 3
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ComponentEventType-COMPONENT_SCROLL_START = 3--><!--Device-ComponentEventType-COMPONENT_SCROLL_START = 3-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -74,7 +84,9 @@ COMPONENT_SCROLL_END = 4
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ComponentEventType-COMPONENT_SCROLL_END = 4--><!--Device-ComponentEventType-COMPONENT_SCROLL_END = 4-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -88,7 +100,9 @@ COMPONENT_TEXT_CHANGED = 5
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ComponentEventType-COMPONENT_TEXT_CHANGED = 5--><!--Device-ComponentEventType-COMPONENT_TEXT_CHANGED = 5-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 

@@ -4,6 +4,8 @@ Enumerates the match patterns supported for component attributes.
 
 **Since:** 8
 
+<!--Device-unnamed-declare enum MatchPattern--><!--Device-unnamed-declare enum MatchPattern-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 ## EQUALS
@@ -17,6 +19,8 @@ Equals the given value.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-MatchPattern-EQUALS = 0--><!--Device-MatchPattern-EQUALS = 0-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -32,6 +36,8 @@ Contains the given value.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-MatchPattern-CONTAINS = 1--><!--Device-MatchPattern-CONTAINS = 1-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 ## STARTS_WITH
@@ -45,6 +51,8 @@ Starts with the given value.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-MatchPattern-STARTS_WITH = 2--><!--Device-MatchPattern-STARTS_WITH = 2-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -60,6 +68,8 @@ Ends with the given value.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-MatchPattern-ENDS_WITH = 3--><!--Device-MatchPattern-ENDS_WITH = 3-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 ## REG_EXP
@@ -74,6 +84,8 @@ Uses regular expression matching.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-MatchPattern-REG_EXP = 4--><!--Device-MatchPattern-REG_EXP = 4-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 ## REG_EXP_ICASE
@@ -87,6 +99,8 @@ Uses case-insensitive regular expression matching.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-MatchPattern-REG_EXP_ICASE = 5--><!--Device-MatchPattern-REG_EXP_ICASE = 5-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 

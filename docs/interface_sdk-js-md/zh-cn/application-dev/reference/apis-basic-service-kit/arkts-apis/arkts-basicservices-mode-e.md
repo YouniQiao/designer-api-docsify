@@ -6,6 +6,8 @@
 
 **起始版本：** 10
 
+<!--Device-agent-enum Mode--><!--Device-agent-enum Mode-End-->
+
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## BACKGROUND
@@ -18,7 +20,9 @@ BACKGROUND
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Mode-BACKGROUND--><!--Device-Mode-BACKGROUND-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -32,7 +36,9 @@ FOREGROUND
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Mode-FOREGROUND--><!--Device-Mode-FOREGROUND-End-->
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 

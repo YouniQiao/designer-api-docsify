@@ -4,6 +4,8 @@ Describes the scene feature detection result.
 
 **Since:** 12
 
+<!--Device-camera-interface SceneFeatureDetectionResult--><!--Device-camera-interface SceneFeatureDetectionResult-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Whether the specified scene feature is detected. **true** if detected, **false**
 
 **Since:** 12
 
+<!--Device-SceneFeatureDetectionResult-readonly detected: boolean--><!--Device-SceneFeatureDetectionResult-readonly detected: boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Scene feature type.
 **Type:** SceneFeatureType
 
 **Since:** 12
+
+<!--Device-SceneFeatureDetectionResult-readonly featureType: SceneFeatureType--><!--Device-SceneFeatureDetectionResult-readonly featureType: SceneFeatureType-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

@@ -4,6 +4,8 @@ Class for declaring the result of smart gesture handling.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export class GestureHandlingResolution--><!--Device-unnamed-export class GestureHandlingResolution-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,13 +28,15 @@ Constructor for the smart gesture handling result.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-GestureHandlingResolution-constructor(isConsumed: boolean)--><!--Device-GestureHandlingResolution-constructor(isConsumed: boolean)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isConsumed | boolean | Yes | Whether to consume the current smart gesture.<br/>**true**: The smart gesture isconsumed. If [selectedProposal](arkts-arkui-gesturehandlingresolution-c.md#selectedproposal)is not set, the system default action handling is used. If **selectedProposal** is set, the custom actionhandling is used.<br/>**false**: The smart gesture is not consumed, and the system treats it as unhandled. |
+| isConsumed | boolean | Yes | Whether to consume the current smart gesture.<br/>**true**: The smart gesture is consumed. If [selectedProposal](arkts-arkui-gesturehandlingresolution-c.md#selectedproposal)is not set, the system default action handling is used. If **selectedProposal** is set, the custom action handling is used.<br/>**false**: The smart gesture is not consumed, and the system treats it as unhandled. |
 
 ## isConsumed
 
@@ -42,8 +46,7 @@ isConsumed: boolean
 
 Whether to consume the current smart gesture.
 
-**true**: The smart gesture is consumed. If **selectedProposal** is not set, the system default action handling is
-used. If **selectedProposal** is set, the custom action handling is used.
+**true**: The smart gesture is consumed. If **selectedProposal** is not set, the system default action handling is used. If **selectedProposal** is set, the custom action handling is used.
 
 **false**: The smart gesture is not consumed, and the system treats it as unhandled.
 
@@ -55,6 +58,8 @@ used. If **selectedProposal** is set, the custom action handling is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-GestureHandlingResolution-isConsumed: boolean--><!--Device-GestureHandlingResolution-isConsumed: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectedProposal
@@ -65,8 +70,7 @@ selectedProposal?: BaseGestureHandlingProposal
 
 The smart gesture handling behavior specified by the user.
 
-When **isConsumed** is **true**: If **selectedProposal** is not set, the system default action handling is used. If
-**selectedProposal** is set, the custom action handling is used.
+When **isConsumed** is **true**: If **selectedProposal** is not set, the system default action handling is used. If **selectedProposal** is set, the custom action handling is used.
 
 When **isConsumed** is **false**, the **selectedProposal** setting does not take effect.
 
@@ -77,6 +81,8 @@ When **isConsumed** is **false**, the **selectedProposal** setting does not take
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-GestureHandlingResolution-selectedProposal?: BaseGestureHandlingProposal--><!--Device-GestureHandlingResolution-selectedProposal?: BaseGestureHandlingProposal-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

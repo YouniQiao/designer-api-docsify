@@ -4,6 +4,8 @@ Implements configuration, acquisition, and listening for properties.
 
 **Since:** 9
 
+<!--Device-config-interface Config<T>--><!--Device-config-interface Config<T>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -24,6 +26,8 @@ Obtains the value of a property. This API uses a promise to return the result.
 
 **Since:** 9
 
+<!--Device-Config-get(): Promise<T>--><!--Device-Config-get(): Promise<T>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -32,7 +36,7 @@ Obtains the value of a property. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;T&gt; | Promise used to return the value obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<T> | Promise used to return the value obtained. |
 
 **Error codes:**
 
@@ -65,6 +69,8 @@ Obtains the property value. This API uses an asynchronous callback to return the
 
 **Since:** 9
 
+<!--Device-Config-get(callback: AsyncCallback<T>): void--><!--Device-Config-get(callback: AsyncCallback<T>): void-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -73,7 +79,7 @@ Obtains the property value. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;T&gt; | Yes | Callback used to return the property value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<T> | Yes | Callback used to return the property value. |
 
 **Error codes:**
 
@@ -109,6 +115,8 @@ Cancels the listener for property changes. This API uses an asynchronous callbac
 
 **Required permissions:** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
+<!--Device-Config-off(callback?: Callback<T>): void--><!--Device-Config-off(callback?: Callback<T>): void-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -117,7 +125,7 @@ Cancels the listener for property changes. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;T&gt; | No | Callback used to unregister. The value must be the same as the value of**callback** in **on()**. If this parameter is not specified, listening will be disabled for all callbackscorresponding to the specified type. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<T> | No | Callback used to unregister. The value must be the same as the value of **callback** in **on()**. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Error codes:**
 
@@ -149,6 +157,8 @@ Adds a listener for property changes. This API uses an asynchronous callback to 
 
 **Required permissions:** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
+<!--Device-Config-on(callback: Callback<T>): void--><!--Device-Config-on(callback: Callback<T>): void-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -157,7 +167,7 @@ Adds a listener for property changes. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;T&gt; | Yes | Callback invoked when the property changes. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<T> | Yes | Callback invoked when the property changes. |
 
 **Error codes:**
 
@@ -190,6 +200,8 @@ Sets the value of a property. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
+<!--Device-Config-set(value: T): Promise<void>--><!--Device-Config-set(value: T): Promise<void>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -204,7 +216,7 @@ Sets the value of a property. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -242,6 +254,8 @@ Sets the property value. This API uses an asynchronous callback to return the re
 
 **Required permissions:** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
+<!--Device-Config-set(value: T, callback: AsyncCallback<void>): void--><!--Device-Config-set(value: T, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -251,7 +265,7 @@ Sets the property value. This API uses an asynchronous callback to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | T | Yes | Property value to set. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 

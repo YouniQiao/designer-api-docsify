@@ -1,9 +1,10 @@
 # RectType
 
-Enumerates the types of rectangles used to fill the lattices. Used only in
-[Lattice](arkts-graphics-drawing.md).
+Enumerates the types of rectangles used to fill the lattices. Used only in [Lattice](arkts-graphics-drawing.md).
 
 **Since:** 12
+
+<!--Device-drawing-enum RectType--><!--Device-drawing-enum RectType-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -17,6 +18,8 @@ Draws an image into the lattice.
 
 **Since:** 12
 
+<!--Device-RectType-DEFAULT = 0--><!--Device-RectType-DEFAULT = 0-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## TRANSPARENT
@@ -29,6 +32,8 @@ Sets the lattice to transparent.
 
 **Since:** 12
 
+<!--Device-RectType-TRANSPARENT = 1--><!--Device-RectType-TRANSPARENT = 1-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## FIXEDCOLOR
@@ -40,6 +45,8 @@ FIXEDCOLOR = 2
 Draws the colors in the **fColors** array in [Lattice](arkts-graphics-drawing.md) into a lattice.
 
 **Since:** 12
+
+<!--Device-RectType-FIXEDCOLOR = 2--><!--Device-RectType-FIXEDCOLOR = 2-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

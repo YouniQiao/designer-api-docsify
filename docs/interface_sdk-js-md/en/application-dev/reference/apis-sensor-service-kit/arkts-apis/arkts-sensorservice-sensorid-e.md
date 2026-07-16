@@ -4,6 +4,8 @@ Enumerates the sensor types.
 
 **Since:** 9
 
+<!--Device-sensor-enum SensorId--><!--Device-sensor-enum SensorId-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## ACCELEROMETER
@@ -19,6 +21,8 @@ This API can be used in atomic services since API version 11.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SensorId-ACCELEROMETER = 1--><!--Device-SensorId-ACCELEROMETER = 1-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -36,6 +40,8 @@ This API can be used in atomic services since API version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SensorId-GYROSCOPE = 2--><!--Device-SensorId-GYROSCOPE = 2-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## AMBIENT_LIGHT
@@ -47,6 +53,8 @@ AMBIENT_LIGHT = 5
 Ambient light sensor.
 
 **Since:** 9
+
+<!--Device-SensorId-AMBIENT_LIGHT = 5--><!--Device-SensorId-AMBIENT_LIGHT = 5-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -60,6 +68,8 @@ Magnetic field sensor.
 
 **Since:** 9
 
+<!--Device-SensorId-MAGNETIC_FIELD = 6--><!--Device-SensorId-MAGNETIC_FIELD = 6-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## BAROMETER
@@ -71,6 +81,8 @@ BAROMETER = 8
 Barometer sensor.
 
 **Since:** 9
+
+<!--Device-SensorId-BAROMETER = 8--><!--Device-SensorId-BAROMETER = 8-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -84,6 +96,8 @@ Hall effect sensor.
 
 **Since:** 9
 
+<!--Device-SensorId-HALL = 10--><!--Device-SensorId-HALL = 10-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## PROXIMITY
@@ -96,6 +110,8 @@ Proximity sensor.
 
 **Since:** 9
 
+<!--Device-SensorId-PROXIMITY = 12--><!--Device-SensorId-PROXIMITY = 12-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## HUMIDITY
@@ -107,6 +123,8 @@ HUMIDITY = 13
 Humidity sensor.
 
 **Since:** 9
+
+<!--Device-SensorId-HUMIDITY = 13--><!--Device-SensorId-HUMIDITY = 13-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -124,6 +142,8 @@ This API can be used in atomic services since API version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SensorId-ORIENTATION = 256--><!--Device-SensorId-ORIENTATION = 256-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## GRAVITY
@@ -135,6 +155,8 @@ GRAVITY = 257
 Gravity sensor.
 
 **Since:** 9
+
+<!--Device-SensorId-GRAVITY = 257--><!--Device-SensorId-GRAVITY = 257-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -148,6 +170,8 @@ Linear acceleration sensor.
 
 **Since:** 9
 
+<!--Device-SensorId-LINEAR_ACCELEROMETER = 258--><!--Device-SensorId-LINEAR_ACCELEROMETER = 258-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## ROTATION_VECTOR
@@ -159,6 +183,8 @@ ROTATION_VECTOR = 259
 Rotation vector sensor.
 
 **Since:** 9
+
+<!--Device-SensorId-ROTATION_VECTOR = 259--><!--Device-SensorId-ROTATION_VECTOR = 259-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -172,6 +198,8 @@ Ambient temperature sensor.
 
 **Since:** 9
 
+<!--Device-SensorId-AMBIENT_TEMPERATURE = 260--><!--Device-SensorId-AMBIENT_TEMPERATURE = 260-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## MAGNETIC_FIELD_UNCALIBRATED
@@ -183,6 +211,8 @@ MAGNETIC_FIELD_UNCALIBRATED = 261
 Uncalibrated magnetic field sensor.
 
 **Since:** 9
+
+<!--Device-SensorId-MAGNETIC_FIELD_UNCALIBRATED = 261--><!--Device-SensorId-MAGNETIC_FIELD_UNCALIBRATED = 261-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -196,6 +226,8 @@ Uncalibrated gyroscope sensor.
 
 **Since:** 9
 
+<!--Device-SensorId-GYROSCOPE_UNCALIBRATED = 263--><!--Device-SensorId-GYROSCOPE_UNCALIBRATED = 263-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## SIGNIFICANT_MOTION
@@ -207,6 +239,8 @@ SIGNIFICANT_MOTION = 264
 Significant motion sensor.
 
 **Since:** 9
+
+<!--Device-SensorId-SIGNIFICANT_MOTION = 264--><!--Device-SensorId-SIGNIFICANT_MOTION = 264-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -220,6 +254,8 @@ Pedometer detection sensor.
 
 **Since:** 9
 
+<!--Device-SensorId-PEDOMETER_DETECTION = 265--><!--Device-SensorId-PEDOMETER_DETECTION = 265-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## PEDOMETER
@@ -231,6 +267,8 @@ PEDOMETER = 266
 Pedometer sensor.
 
 **Since:** 9
+
+<!--Device-SensorId-PEDOMETER = 266--><!--Device-SensorId-PEDOMETER = 266-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -244,6 +282,8 @@ Heart rate sensor.
 
 **Since:** 9
 
+<!--Device-SensorId-HEART_RATE = 278--><!--Device-SensorId-HEART_RATE = 278-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## WEAR_DETECTION
@@ -256,6 +296,8 @@ Wear detection sensor.
 
 **Since:** 9
 
+<!--Device-SensorId-WEAR_DETECTION = 280--><!--Device-SensorId-WEAR_DETECTION = 280-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## ACCELEROMETER_UNCALIBRATED
@@ -267,6 +309,8 @@ ACCELEROMETER_UNCALIBRATED = 281
 Uncalibrated acceleration sensor.
 
 **Since:** 9
+
+<!--Device-SensorId-ACCELEROMETER_UNCALIBRATED = 281--><!--Device-SensorId-ACCELEROMETER_UNCALIBRATED = 281-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -281,6 +325,8 @@ Fused pressure sensor.
 This sensor is available only on smart watches.
 
 **Since:** 22
+
+<!--Device-SensorId-FUSION_PRESSURE = 283--><!--Device-SensorId-FUSION_PRESSURE = 283-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 

@@ -12,6 +12,8 @@ FrameNode of the [Toggle](../arkts-components/arkts-arkui-toggle.md) type.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-typeNode-type Toggle = TypedFrameNode<ToggleInterface, ToggleAttribute>--><!--Device-typeNode-type Toggle = TypedFrameNode<ToggleInterface, ToggleAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** TypedFrameNode<ToggleInterface, ToggleAttribute>

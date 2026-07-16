@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-interface ContextMenuAnimationOptions--><!--Device-unnamed-interface ContextMenuAnimationOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## hoverScale
@@ -12,15 +14,13 @@
 hoverScale?: AnimationRange<number>
 ```
 
-在自定义预览图（preview为CustomBuilder类型）以及长按弹出（responseType指定为LongPress）菜单的场景下，hoverScale用于为绑定组件的截图浮起动画设置两个参数：相对于预览原图的起始与结束
-缩放比例。hoverScale设置后，浮起动画和预览图之间会有切换过渡动效。
+在自定义预览图（preview为CustomBuilder类型）以及长按弹出（responseType指定为LongPress）菜单的场景下，hoverScale用于为绑定组件的截图浮起动画设置两个参数：相对于预览原图的起始与结束缩放比例。hoverScale设置后，浮起动画和预览图之间会有切换过渡动效。
 
 **说明：**
 
 倍率设置参数小于等于0时，不生效。
 
-[bindContextMenu<sup>12+</sup>](arkts-arkui-commonmethod-c.md#bindcontextmenu-2)
-场景下，不生效。
+[bindContextMenu<sup>12+</sup>](arkts-arkui-commonmethod-c.md#bindcontextmenu-2)场景下，不生效。
 
 设置transition接口时，不生效。
 
@@ -34,7 +34,9 @@ hoverScale?: AnimationRange<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ContextMenuAnimationOptions-hoverScale?: AnimationRange<number>--><!--Device-ContextMenuAnimationOptions-hoverScale?: AnimationRange<number>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,15 +46,13 @@ hoverScale?: AnimationRange<number>
 hoverScaleInterruption?: boolean
 ```
 
-在自定义预览图（preview为CustomBuilder类型）以及长按弹出（responseType指定为LongPress）菜单的场景下，且hoverScaleInterruption为true时，在触发拖拽效果前抬起手是否允
-许取消预览菜单弹出。true表示允许取消预览菜单弹出，false表示不允许取消预览菜单弹出。
+在自定义预览图（preview为CustomBuilder类型）以及长按弹出（responseType指定为LongPress）菜单的场景下，且hoverScaleInterruption为true时，在触发拖拽效果前抬起手是否允许取消预览菜单弹出。true表示允许取消预览菜单弹出，false表示不允许取消预览菜单弹出。
 
 默认值：false
 
 **说明：**
 
-未设置hoverScale接口或设置了transition接口时，该参数不生效。长按时长不足以触发拖拽效果时抬起手，预览菜单hoverScale效果回退，预览菜单不弹出，并可触发原组件上绑定的click等手势事件。长按时长足以触发
-拖拽效果后抬起手，预览菜单正常弹出，并不再触发原组件上绑定的click等手势事件。
+未设置hoverScale接口或设置了transition接口时，该参数不生效。长按时长不足以触发拖拽效果时抬起手，预览菜单hoverScale效果回退，预览菜单不弹出，并可触发原组件上绑定的click等手势事件。长按时长足以触发拖拽效果后抬起手，预览菜单正常弹出，并不再触发原组件上绑定的click等手势事件。
 
 **类型：** boolean
 
@@ -62,7 +62,9 @@ hoverScaleInterruption?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ContextMenuAnimationOptions-hoverScaleInterruption?: boolean--><!--Device-ContextMenuAnimationOptions-hoverScaleInterruption?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -88,7 +90,9 @@ scale?: AnimationRange<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ContextMenuAnimationOptions-scale?: AnimationRange<number>--><!--Device-ContextMenuAnimationOptions-scale?: AnimationRange<number>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -112,7 +116,9 @@ transition?: TransitionEffect
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ContextMenuAnimationOptions-transition?: TransitionEffect--><!--Device-ContextMenuAnimationOptions-transition?: TransitionEffect-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

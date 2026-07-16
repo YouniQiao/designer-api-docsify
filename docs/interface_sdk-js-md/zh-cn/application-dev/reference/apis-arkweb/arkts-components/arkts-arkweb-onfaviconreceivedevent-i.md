@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface OnFaviconReceivedEvent--><!--Device-unnamed-declare interface OnFaviconReceivedEvent-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## favicon
@@ -18,7 +20,9 @@ favicon: PixelMap
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnFaviconReceivedEvent-favicon: PixelMap--><!--Device-OnFaviconReceivedEvent-favicon: PixelMap-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

@@ -4,9 +4,17 @@
 
 **起始版本：** 19
 
+<!--Device-installer-export interface PluginParam--><!--Device-installer-export interface PluginParam-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+```
 
 ## parameters
 
@@ -20,6 +28,8 @@ parameters?: Array<Parameters>
 
 **起始版本：** 19
 
+<!--Device-PluginParam-parameters?: Array<Parameters>--><!--Device-PluginParam-parameters?: Array<Parameters>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -30,13 +40,13 @@ parameters?: Array<Parameters>
 userId?: number
 ```
 
-指定安装、卸载插件程序所在的用户ID，可以通过
-[getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)
-获取。默认值：调用方所在用户。
+指定安装、卸载插件程序所在的用户ID，可以通过[getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)获取。默认值：调用方所在用户。
 
 **类型：** number
 
 **起始版本：** 19
+
+<!--Device-PluginParam-userId?: int--><!--Device-PluginParam-userId?: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

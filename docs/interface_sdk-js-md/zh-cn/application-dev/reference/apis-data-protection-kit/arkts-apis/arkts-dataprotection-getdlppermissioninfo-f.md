@@ -1,5 +1,11 @@
 # getDLPPermissionInfo
 
+## 导入模块
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+```
+
 ## getDLPPermissionInfo
 
 ```TypeScript
@@ -12,13 +18,15 @@ function getDLPPermissionInfo(): Promise<DLPPermissionInfo>
 
 **起始版本：** 10
 
+<!--Device-dlpPermission-function getDLPPermissionInfo(): Promise<DLPPermissionInfo>--><!--Device-dlpPermission-function getDLPPermissionInfo(): Promise<DLPPermissionInfo>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DLPPermissionInfo&gt; | Promise对象。返回查询的DLP文件的权限信息，无异常则表明查询成功。 |
+| Promise<DLPPermissionInfo> | Promise对象。返回查询的DLP文件的权限信息，无异常则表明查询成功。 |
 
 **错误码：**
 
@@ -58,13 +66,15 @@ function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void
 
 **起始版本：** 10
 
+<!--Device-dlpPermission-function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void--><!--Device-dlpPermission-function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;DLPPermissionInfo&gt; | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DLPPermissionInfo> | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
 
 **错误码：**
 

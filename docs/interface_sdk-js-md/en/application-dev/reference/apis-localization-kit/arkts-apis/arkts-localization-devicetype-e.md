@@ -4,6 +4,8 @@ Enumerates the device types.
 
 **Since:** 6
 
+<!--Device-resourceManager-export enum DeviceType--><!--Device-resourceManager-export enum DeviceType-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 ## DEVICE_TYPE_PHONE
@@ -17,6 +19,8 @@ Phone
 **Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DeviceType-DEVICE_TYPE_PHONE = 0x00--><!--Device-DeviceType-DEVICE_TYPE_PHONE = 0x00-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -32,6 +36,8 @@ Tablet
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DeviceType-DEVICE_TYPE_TABLET = 0x01--><!--Device-DeviceType-DEVICE_TYPE_TABLET = 0x01-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 ## DEVICE_TYPE_CAR
@@ -45,6 +51,8 @@ Head unit
 **Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DeviceType-DEVICE_TYPE_CAR = 0x02--><!--Device-DeviceType-DEVICE_TYPE_CAR = 0x02-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -60,6 +68,8 @@ Indicates a PC.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DeviceType-DEVICE_TYPE_PC = 0x03--><!--Device-DeviceType-DEVICE_TYPE_PC = 0x03-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 ## DEVICE_TYPE_TV
@@ -73,6 +83,8 @@ Smart TV
 **Since:** 6
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DeviceType-DEVICE_TYPE_TV = 0x04--><!--Device-DeviceType-DEVICE_TYPE_TV = 0x04-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -88,6 +100,8 @@ Wearable
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DeviceType-DEVICE_TYPE_WEARABLE = 0x06--><!--Device-DeviceType-DEVICE_TYPE_WEARABLE = 0x06-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 ## DEVICE_TYPE_2IN1
@@ -101,6 +115,8 @@ PC/2-in-1 device
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DeviceType-DEVICE_TYPE_2IN1 = 0x07--><!--Device-DeviceType-DEVICE_TYPE_2IN1 = 0x07-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 

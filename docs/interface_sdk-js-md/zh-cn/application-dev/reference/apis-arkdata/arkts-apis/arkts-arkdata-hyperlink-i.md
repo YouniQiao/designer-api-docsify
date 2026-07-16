@@ -4,7 +4,15 @@
 
 **起始版本：** 12
 
+<!--Device-uniformDataStruct-interface Hyperlink--><!--Device-uniformDataStruct-interface Hyperlink-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+## 导入模块
+
+```TypeScript
+import { uniformDataStruct } from '@kit.ArkData';
+```
 
 ## description
 
@@ -19,6 +27,8 @@ description?: string
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Hyperlink-description?: string--><!--Device-Hyperlink-description?: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -46,6 +56,8 @@ details?: Record<string, string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Hyperlink-details?: Record<string, string>--><!--Device-Hyperlink-details?: Record<string, string>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## uniformDataType
@@ -54,14 +66,15 @@ details?: Record<string, string>
 readonly uniformDataType: 'general.hyperlink'
 ```
 
-统一数据类型标识为超链接类型数据，固定为“general.hyperlink”，数据类型描述信息见
-[UniformDataType](arkts-arkdata-uniformdatatype-e.md)。
+统一数据类型标识为超链接类型数据，固定为“general.hyperlink”，数据类型描述信息见[UniformDataType](arkts-arkdata-uniformdatatype-e.md)。
 
 **类型：** 'general.hyperlink'
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Hyperlink-readonly uniformDataType: 'general.hyperlink'--><!--Device-Hyperlink-readonly uniformDataType: 'general.hyperlink'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -78,6 +91,8 @@ url: string
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Hyperlink-url: string--><!--Device-Hyperlink-url: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 

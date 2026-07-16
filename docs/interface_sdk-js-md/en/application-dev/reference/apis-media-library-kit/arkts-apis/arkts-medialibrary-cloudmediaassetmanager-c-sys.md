@@ -1,9 +1,10 @@
 # CloudMediaAssetManager (System API)
 
-A class used for cloud media asset management. It is used to manage download tasks for media assets stored in the
-cloud and delete local data and files pertaining to these cloud-based assets.
+A class used for cloud media asset management. It is used to manage download tasks for media assets stored in the cloud and delete local data and files pertaining to these cloud-based assets.
 
 **Since:** 14
+
+<!--Device-photoAccessHelper-class CloudMediaAssetManager--><!--Device-photoAccessHelper-class CloudMediaAssetManager-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -27,6 +28,8 @@ Cancels a task that downloads cloud media assets.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
+<!--Device-CloudMediaAssetManager-cancelDownloadCloudMedia(): Promise<void>--><!--Device-CloudMediaAssetManager-cancelDownloadCloudMedia(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -35,7 +38,7 @@ Cancels a task that downloads cloud media assets.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -73,6 +76,8 @@ Cancels a batch download for the specified cloud media assets. This API uses a p
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-CloudMediaAssetManager-cancelDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>--><!--Device-CloudMediaAssetManager-cancelDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -81,13 +86,13 @@ Cancels a batch download for the specified cloud media assets. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assetUris | string[] \| null | Yes | Array of URIs pointing to the original-quality images and videos to becanceled.<br>If null, undefined, or an empty list is passed, it represents all existing individual download items. |
+| assetUris | string[] \| null | Yes | Array of URIs pointing to the original-quality images and videos to be canceled.<br>If null, undefined, or an empty list is passed, it represents all existing individual download items. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -126,6 +131,8 @@ Obtains a CloudMediaAssetManager instance.
 
 **Since:** 14
 
+<!--Device-CloudMediaAssetManager-static getCloudMediaAssetManagerInstance(context: Context): CloudMediaAssetManager--><!--Device-CloudMediaAssetManager-static getCloudMediaAssetManagerInstance(context: Context): CloudMediaAssetManager-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -134,13 +141,13 @@ Obtains a CloudMediaAssetManager instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability instance. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the ability instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CloudMediaAssetManager | CloudMediaAssetManager instance. |
+| [CloudMediaAssetManager](arkts-medialibrary-cloudmediaassetmanager-c-sys.md) | CloudMediaAssetManager instance. |
 
 **Error codes:**
 
@@ -178,6 +185,8 @@ Obtains the status of a task that downloads cloud media assets.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-CloudMediaAssetManager-getCloudMediaAssetStatus(): Promise<CloudMediaAssetStatus>--><!--Device-CloudMediaAssetManager-getCloudMediaAssetStatus(): Promise<CloudMediaAssetStatus>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -186,7 +195,7 @@ Obtains the status of a task that downloads cloud media assets.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CloudMediaAssetStatus&gt; | Promise used to return the task status. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CloudMediaAssetStatus> | Promise used to return the task status. |
 
 **Error codes:**
 
@@ -229,6 +238,8 @@ Unregisters a callback to monitor changes in the progress of a batch download fo
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-CloudMediaAssetManager-offDownloadProgressChange(callback?: Callback<CloudAssetDownloadProgressInfo>): void--><!--Device-CloudMediaAssetManager-offDownloadProgressChange(callback?: Callback<CloudAssetDownloadProgressInfo>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -237,7 +248,7 @@ Unregisters a callback to monitor changes in the progress of a batch download fo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;CloudAssetDownloadProgressInfo&gt; | No | Callback to unregister, which is registered by[onDownloadProgressChange](photoAccessHelper.CloudMediaAssetManager.on). If this parameter is leftempty, all progress-related callbacks are unregistered. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CloudAssetDownloadProgressInfo> | No | Callback to unregister, which is registered by [onDownloadProgressChange](photoAccessHelper.CloudMediaAssetManager.on). If this parameter is left empty, all progress-related callbacks are unregistered. |
 
 **Error codes:**
 
@@ -275,6 +286,8 @@ Registers a callback to monitor changes in the progress of a batch download for 
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-CloudMediaAssetManager-onDownloadProgressChange(callback: Callback<CloudAssetDownloadProgressInfo>): void--><!--Device-CloudMediaAssetManager-onDownloadProgressChange(callback: Callback<CloudAssetDownloadProgressInfo>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -283,7 +296,7 @@ Registers a callback to monitor changes in the progress of a batch download for 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;CloudAssetDownloadProgressInfo&gt; | Yes | Callback to register. The callback returnsprogress information of the batch download. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CloudAssetDownloadProgressInfo> | Yes | Callback to register. The callback returns progress information of the batch download. |
 
 **Error codes:**
 
@@ -325,6 +338,8 @@ Suspends a task that downloads cloud media assets.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
+<!--Device-CloudMediaAssetManager-pauseDownloadCloudMedia(): Promise<void>--><!--Device-CloudMediaAssetManager-pauseDownloadCloudMedia(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -333,7 +348,7 @@ Suspends a task that downloads cloud media assets.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -371,6 +386,8 @@ Pauses a batch download for the specified cloud media assets. This API uses a pr
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-CloudMediaAssetManager-pauseDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>--><!--Device-CloudMediaAssetManager-pauseDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -379,13 +396,13 @@ Pauses a batch download for the specified cloud media assets. This API uses a pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assetUris | string[] \| null | Yes | Array of URIs pointing to the original-quality images and videos to bepaused.<br>If null, undefined, or an empty list is passed, it represents all existing individual download items. |
+| assetUris | string[] \| null | Yes | Array of URIs pointing to the original-quality images and videos to be paused.<br>If null, undefined, or an empty list is passed, it represents all existing individual download items. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -426,6 +443,8 @@ Obtains the details of a batch download for cloud media assets. This API uses a 
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-CloudMediaAssetManager-queryDownloadSpecificCloudMediaDetails(predicates: dataSharePredicates.DataSharePredicates): Promise<CloudAssetDownloadStatus>--><!--Device-CloudMediaAssetManager-queryDownloadSpecificCloudMediaDetails(predicates: dataSharePredicates.DataSharePredicates): Promise<CloudAssetDownloadStatus>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -440,7 +459,7 @@ Obtains the details of a batch download for cloud media assets. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CloudAssetDownloadStatus&gt; | Promise used to return the details obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CloudAssetDownloadStatus> | Promise used to return the details obtained. |
 
 **Error codes:**
 
@@ -483,6 +502,8 @@ Obtains the number of batch download tasks for cloud media assets. This API uses
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-CloudMediaAssetManager-queryDownloadSpecificCloudMediaTaskCount(predicates: dataSharePredicates.DataSharePredicates): Promise<int>--><!--Device-CloudMediaAssetManager-queryDownloadSpecificCloudMediaTaskCount(predicates: dataSharePredicates.DataSharePredicates): Promise<int>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -497,7 +518,7 @@ Obtains the number of batch download tasks for cloud media assets. This API uses
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the number of batch download tasks. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the number of batch download tasks. |
 
 **Error codes:**
 
@@ -540,6 +561,8 @@ Resumes a batch download for the specified cloud media assets. This API uses a p
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-CloudMediaAssetManager-resumeDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>--><!--Device-CloudMediaAssetManager-resumeDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -548,13 +571,13 @@ Resumes a batch download for the specified cloud media assets. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assetUris | string[] \| null | Yes | Array of URIs pointing to the original-quality images and videos to beresumed.<br>If null, undefined, or an empty list is passed, it represents all existing individual download items. |
+| assetUris | string[] \| null | Yes | Array of URIs pointing to the original-quality images and videos to be resumed.<br>If null, undefined, or an empty list is passed, it represents all existing individual download items. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -595,6 +618,8 @@ Deletes local metadata and files of cloud media assets.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
+<!--Device-CloudMediaAssetManager-retainCloudMediaAsset(retainType: CloudMediaRetainType): Promise<void>--><!--Device-CloudMediaAssetManager-retainCloudMediaAsset(retainType: CloudMediaRetainType): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -603,13 +628,13 @@ Deletes local metadata and files of cloud media assets.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| retainType | CloudMediaRetainType | Yes | Mode for deleting cloud media assets. |
+| retainType | [CloudMediaRetainType](arkts-medialibrary-cloudmediaretaintype-e-sys.md) | Yes | Mode for deleting cloud media assets. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -648,6 +673,8 @@ Starts or resumes a task to download cloud media assets.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
+<!--Device-CloudMediaAssetManager-startDownloadCloudMedia(downloadType: CloudMediaDownloadType): Promise<void>--><!--Device-CloudMediaAssetManager-startDownloadCloudMedia(downloadType: CloudMediaDownloadType): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -656,13 +683,13 @@ Starts or resumes a task to download cloud media assets.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| downloadType | CloudMediaDownloadType | Yes | Type of the download task. |
+| downloadType | [CloudMediaDownloadType](arkts-medialibrary-cloudmediadownloadtype-e-sys.md) | Yes | Type of the download task. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -701,6 +728,8 @@ Starts a batch download for the specified cloud media assets. This API uses a pr
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-CloudMediaAssetManager-startDownloadSpecificCloudMedia(assetUris: string[]): Promise<Map<string, CloudAssetDownloadCode>>--><!--Device-CloudMediaAssetManager-startDownloadSpecificCloudMedia(assetUris: string[]): Promise<Map<string, CloudAssetDownloadCode>>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -709,13 +738,13 @@ Starts a batch download for the specified cloud media assets. This API uses a pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assetUris | string[] | Yes | Array of URIs pointing to the original-quality images and videos to bedownloaded. |
+| assetUris | string[] | Yes | Array of URIs pointing to the original-quality images and videos to be downloaded. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Map&lt;string, CloudAssetDownloadCode&gt;&gt; | Promise used to return a map, where each key is a URIand its value indicates the status of that individual download item. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Map<string, CloudAssetDownloadCode>> | Promise used to return a map, where each key is a URI and its value indicates the status of that individual download item. |
 
 **Error codes:**
 

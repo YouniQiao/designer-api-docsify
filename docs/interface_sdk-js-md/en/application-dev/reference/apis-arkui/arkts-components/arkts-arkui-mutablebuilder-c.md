@@ -10,5 +10,7 @@ Defines the MutableBuilder class.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-unnamed-declare class MutableBuilder<Args extends Object[]> extends WrappedBuilder<Args>--><!--Device-unnamed-declare class MutableBuilder<Args extends Object[]> extends WrappedBuilder<Args>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

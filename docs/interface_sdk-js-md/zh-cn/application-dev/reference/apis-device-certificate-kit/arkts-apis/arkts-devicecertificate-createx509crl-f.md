@@ -1,5 +1,11 @@
 # createX509CRL
 
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
+
 ## createX509CRL
 
 ```TypeScript
@@ -10,7 +16,9 @@ function createX509CRL(inStream: EncodingBlob, callback: AsyncCallback<X509CRL>)
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cert-function createX509CRL(inStream: EncodingBlob, callback: AsyncCallback<X509CRL>): void--><!--Device-cert-function createX509CRL(inStream: EncodingBlob, callback: AsyncCallback<X509CRL>): void-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -18,8 +26,8 @@ function createX509CRL(inStream: EncodingBlob, callback: AsyncCallback<X509CRL>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inStream | EncodingBlob | 是 | 表示证书吊销列表序列化数据。当前支持的数据长度不超过8192字节。 |
-| callback | AsyncCallback&lt;X509CRL&gt; | 是 | 回调函数。当创建X509证书吊销列表对象成功时，err为undefined，data为获取到的X509CRL实例；否则为错误对象。 |
+| inStream | [EncodingBlob](arkts-devicecertificate-encodingblob-i.md) | 是 | 表示证书吊销列表序列化数据。当前支持的数据长度不超过8192字节。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<X509CRL> | 是 | 回调函数。当创建X509证书吊销列表对象成功时，err为undefined，data为获取到的X509CRL实例；否则为错误对象。 |
 
 **错误码：**
 
@@ -80,7 +88,9 @@ function createX509CRL(inStream: EncodingBlob): Promise<X509CRL>
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cert-function createX509CRL(inStream: EncodingBlob): Promise<X509CRL>--><!--Device-cert-function createX509CRL(inStream: EncodingBlob): Promise<X509CRL>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -88,13 +98,13 @@ function createX509CRL(inStream: EncodingBlob): Promise<X509CRL>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inStream | EncodingBlob | 是 | 表示证书吊销列表序列化数据。当前支持的数据长度不超过8192字节。 |
+| inStream | [EncodingBlob](arkts-devicecertificate-encodingblob-i.md) | 是 | 表示证书吊销列表序列化数据。当前支持的数据长度不超过8192字节。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;X509CRL&gt; | Promise对象，返回创建的X509CRL实例。 |
+| Promise<X509CRL> | Promise对象，返回创建的X509CRL实例。 |
 
 **错误码：**
 

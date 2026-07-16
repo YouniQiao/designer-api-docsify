@@ -18,6 +18,8 @@ Deletes dynamic shortcuts.
 
 **Required permissions:** ohos.permission.MANAGE_SHORTCUTS or (ohos.permission.MANAGE_SHORTCUTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
+<!--Device-shortcutManager-function deleteDynamicShortcutInfos(bundleName: string, appIndex: int, userId: int, ids?: Array<string>): Promise<void>--><!--Device-shortcutManager-function deleteDynamicShortcutInfos(bundleName: string, appIndex: int, userId: int, ids?: Array<string>): Promise<void>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **System API:** This is a system API.
@@ -28,14 +30,14 @@ Deletes dynamic shortcuts.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application to which the dynamic shortcuts belong. |
 | appIndex | number | Yes | Clone index of the application to which the dynamic shortcuts belong. The value can be 1,2, 3, 4, or 5. |
-| userId | number | Yes | ID of the user to which the dynamic shortcuts belong. The user ID can be obtained bycalling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
-| ids | Array&lt;string&gt; | No | Array of IDs of the dynamic shortcuts to be deleted. If the default value is usedor an empty array is passed, all dynamic shortcuts that meet the conditions are deleted. |
+| userId | number | Yes | ID of the user to which the dynamic shortcuts belong. The user ID can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| ids | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | No | Array of IDs of the dynamic shortcuts to be deleted. If the default value is used or an empty array is passed, all dynamic shortcuts that meet the conditions are deleted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

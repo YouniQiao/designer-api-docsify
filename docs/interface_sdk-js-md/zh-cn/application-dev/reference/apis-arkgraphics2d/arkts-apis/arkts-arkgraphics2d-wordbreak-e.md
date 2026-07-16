@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-text-enum WordBreak--><!--Device-text-enum WordBreak-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## NORMAL
@@ -16,7 +18,9 @@ NORMAL = 0
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WordBreak-NORMAL = 0--><!--Device-WordBreak-NORMAL = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -30,7 +34,9 @@ BREAK_ALL = 1
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WordBreak-BREAK_ALL = 1--><!--Device-WordBreak-BREAK_ALL = 1-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -44,7 +50,9 @@ BREAK_WORD = 2
 
 **起始版本：** 12
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WordBreak-BREAK_WORD = 2--><!--Device-WordBreak-BREAK_WORD = 2-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -60,7 +68,9 @@ BREAK_HYPHEN = 3
 
 **起始版本：** 18
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WordBreak-BREAK_HYPHEN = 3--><!--Device-WordBreak-BREAK_HYPHEN = 3-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

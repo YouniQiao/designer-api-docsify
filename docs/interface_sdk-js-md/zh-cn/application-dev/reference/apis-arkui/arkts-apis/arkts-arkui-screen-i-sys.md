@@ -2,15 +2,21 @@
 
 [物理屏](../../../../displaymanager/display-terminology.md#物理屏)屏幕实例。
 
-下列API示例中都需先使用[getAllScreens()](arkts-arkui-getallscreens-f-sys.md#getallscreens-1)、
-[createVirtualScreen()](arkts-arkui-createvirtualscreen-f-sys.md#createvirtualscreen-1)
-中的任一方法获取到Screen实例，再通过此实例调用对应方法。
+下列API示例中都需先使用[getAllScreens()](arkts-arkui-getallscreens-f-sys.md#getallscreens-1)、[createVirtualScreen()](arkts-arkui-createvirtualscreen-f-sys.md#createvirtualscreen-1)中的任一方法获取到Screen实例，再通过此实例调用对应方法。
 
 **起始版本：** 9
+
+<!--Device-screen-interface Screen--><!--Device-screen-interface Screen-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { screen } from '@kit.ArkUI';
+```
 
 ## setDensityDpi
 
@@ -22,6 +28,8 @@ setDensityDpi(densityDpi: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-Screen-setDensityDpi(densityDpi: double, callback: AsyncCallback<void>): void--><!--Device-Screen-setDensityDpi(densityDpi: double, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -31,7 +39,7 @@ setDensityDpi(densityDpi: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | densityDpi | number | 是 | 像素密度。支持的输入范围为[80, 640]，该参数仅支持整数输入。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当设置屏幕的像素密度成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当设置屏幕的像素密度成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -94,6 +102,8 @@ setDensityDpi(densityDpi: number): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-Screen-setDensityDpi(densityDpi: double): Promise<void>--><!--Device-Screen-setDensityDpi(densityDpi: double): Promise<void>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -108,7 +118,7 @@ setDensityDpi(densityDpi: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -164,10 +174,11 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 setOrientation(orientation: Orientation, callback: AsyncCallback<void>): void
 ```
 
-设置屏幕方向，使用callback异步回调。当设置的方向符合[应用旋转策略](../../../../quick-start/module-configuration-file.md#abilities标签)（可通过配置
-module.json5文件中abilities标签的orientation字段设置应用旋转策略）时，屏幕方向才会发生改变；当设置方向不符合应用旋转策略时，屏幕方向不会发生变化，且接口不会抛异常。
+设置屏幕方向，使用callback异步回调。当设置的方向符合[应用旋转策略](../../../../quick-start/module-configuration-file.md#abilities标签)（可通过配置module.json5文件中abilities标签的orientation字段设置应用旋转策略）时，屏幕方向才会发生改变；当设置方向不符合应用旋转策略时，屏幕方向不会发生变化，且接口不会抛异常。
 
 **起始版本：** 9
+
+<!--Device-Screen-setOrientation(orientation: Orientation, callback: AsyncCallback<void>): void--><!--Device-Screen-setOrientation(orientation: Orientation, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -177,8 +188,8 @@ module.json5文件中abilities标签的orientation字段设置应用旋转策略
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| orientation | Orientation | 是 | 屏幕方向。orientation值必须来自Orientation枚举方向。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当设置屏幕方向成功，err为undefined，否则为错误对象。 |
+| orientation | [Orientation](arkts-arkui-orientation-e.md) | 是 | 屏幕方向。orientation值必须来自Orientation枚举方向。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当设置屏幕方向成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -236,10 +247,11 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 setOrientation(orientation: Orientation): Promise<void>
 ```
 
-设置屏幕方向，使用Promise异步回调。当设置的方向符合[应用旋转策略](../../../../quick-start/module-configuration-file.md#abilities标签)（可通过配置
-module.json5文件中abilities标签的orientation字段设置应用旋转策略）时，屏幕方向才会发生改变；当设置方向不符合应用旋转策略时，屏幕方向不会发生变化，且接口不会抛异常。
+设置屏幕方向，使用Promise异步回调。当设置的方向符合[应用旋转策略](../../../../quick-start/module-configuration-file.md#abilities标签)（可通过配置module.json5文件中abilities标签的orientation字段设置应用旋转策略）时，屏幕方向才会发生改变；当设置方向不符合应用旋转策略时，屏幕方向不会发生变化，且接口不会抛异常。
 
 **起始版本：** 9
+
+<!--Device-Screen-setOrientation(orientation: Orientation): Promise<void>--><!--Device-Screen-setOrientation(orientation: Orientation): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -249,13 +261,13 @@ module.json5文件中abilities标签的orientation字段设置应用旋转策略
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| orientation | Orientation | 是 | 屏幕方向。orientation值必须来自Orientation枚举方向。 |
+| orientation | [Orientation](arkts-arkui-orientation-e.md) | 是 | 屏幕方向。orientation值必须来自Orientation枚举方向。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -317,6 +329,8 @@ setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Screen-setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions): Promise<void>--><!--Device-Screen-setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **系统接口：** 此接口为系统接口。
@@ -325,14 +339,14 @@ setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| orientation | Orientation | 是 | 屏幕方向。方向值必须来自方向枚举值。 |
-| orientationOptions | OrientationOptions | 否 | Options of setting orientation. |
+| orientation | [Orientation](arkts-arkui-orientation-e.md) | 是 | 屏幕方向。方向值必须来自方向枚举值。 |
+| orientationOptions | [OrientationOptions](arkts-arkui-orientationoptions-i-sys.md) | 否 | Options of setting orientation. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise<void> | Promise that returns no value. |
 
 **错误码：**
 
@@ -381,6 +395,8 @@ setScreenActiveMode(modeIndex: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+<!--Device-Screen-setScreenActiveMode(modeIndex: long, callback: AsyncCallback<void>): void--><!--Device-Screen-setScreenActiveMode(modeIndex: long, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -390,7 +406,7 @@ setScreenActiveMode(modeIndex: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | modeIndex | number | 是 | 模式索引。模式索引的当前值和值的范围，会根据屏幕当前分辨率、刷新率和设备硬件差异产生变化，该参数仅支持整数输入。索引为screen中[ScreenModeInfo](arkts-arkui-screenmodeinfo-i-sys.md)属性的模式id。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当设置屏幕当前显示模式成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当设置屏幕当前显示模式成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -453,6 +469,8 @@ setScreenActiveMode(modeIndex: number): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-Screen-setScreenActiveMode(modeIndex: long): Promise<void>--><!--Device-Screen-setScreenActiveMode(modeIndex: long): Promise<void>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -467,7 +485,7 @@ setScreenActiveMode(modeIndex: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -530,6 +548,8 @@ readonly activeModeIndex: number
 
 **起始版本：** 9
 
+<!--Device-Screen-readonly activeModeIndex: long--><!--Device-Screen-readonly activeModeIndex: long-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -545,6 +565,8 @@ readonly id: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Screen-readonly id: long--><!--Device-Screen-readonly id: long-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -562,6 +584,8 @@ readonly orientation: Orientation
 
 **起始版本：** 9
 
+<!--Device-Screen-readonly orientation: Orientation--><!--Device-Screen-readonly orientation: Orientation-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -577,6 +601,8 @@ readonly parent: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-Screen-readonly parent: long--><!--Device-Screen-readonly parent: long-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -594,6 +620,8 @@ readonly rsId: number
 
 **起始版本：** 21
 
+<!--Device-Screen-readonly rsId: long--><!--Device-Screen-readonly rsId: long-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -609,6 +637,8 @@ readonly serialNumber?: string
 **类型：** string
 
 **起始版本：** 15
+
+<!--Device-Screen-readonly serialNumber?: string--><!--Device-Screen-readonly serialNumber?: string-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -626,6 +656,8 @@ readonly sourceMode: ScreenSourceMode
 
 **起始版本：** 10
 
+<!--Device-Screen-readonly sourceMode: ScreenSourceMode--><!--Device-Screen-readonly sourceMode: ScreenSourceMode-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -641,6 +673,8 @@ readonly supportedModeInfo: Array<ScreenModeInfo>
 **类型：** Array<ScreenModeInfo>
 
 **起始版本：** 9
+
+<!--Device-Screen-readonly supportedModeInfo: Array<ScreenModeInfo>--><!--Device-Screen-readonly supportedModeInfo: Array<ScreenModeInfo>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 

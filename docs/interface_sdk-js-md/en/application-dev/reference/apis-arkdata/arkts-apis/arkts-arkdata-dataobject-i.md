@@ -1,9 +1,10 @@
 # DataObject
 
-Provides APIs for managing a distributed data object. Before using any API of this class, use create() to create a
-DataObject object.
+Provides APIs for managing a distributed data object. Before using any API of this class, use create() to create a DataObject object.
 
 **Since:** 9
+
+<!--Device-distributedDataObject-interface DataObject--><!--Device-distributedDataObject-interface DataObject-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -19,10 +20,11 @@ import { distributedDataObject } from '@kit.ArkData';
 bindAssetStore(assetKey: string, bindInfo: BindInfo, callback: AsyncCallback<void>): void
 ```
 
-Binds joint assets. Currently, only the binding between an asset in a distributed data object and an asset in an
-RDB store is supported. This API uses an asynchronous callback to return the result.
+Binds joint assets. Currently, only the binding between an asset in a distributed data object and an asset in an RDB store is supported. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+<!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo, callback: AsyncCallback<void>): void--><!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -31,8 +33,8 @@ RDB store is supported. This API uses an asynchronous callback to return the res
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | assetKey | string | Yes | Key of the joint asset in the distributed data object. |
-| bindInfo | BindInfo | Yes | Information about the joint asset in the RDB store, including the RDB store name,table name, primary key, column name, and asset name in the RDB store. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| bindInfo | [BindInfo](arkts-arkdata-bindinfo-i.md) | Yes | Information about the joint asset in the RDB store, including the RDB store name,table name, primary key, column name, and asset name in the RDB store. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -103,10 +105,11 @@ class EntryAbility extends UIAbility {
 bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>
 ```
 
-Binds joint assets. Currently, only the binding between an asset in a distributed data object and an asset in an
-RDB store is supported. This API uses a promise to return the result.
+Binds joint assets. Currently, only the binding between an asset in a distributed data object and an asset in an RDB store is supported. This API uses a promise to return the result.
 
 **Since:** 11
+
+<!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>--><!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -115,13 +118,13 @@ RDB store is supported. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | assetKey | string | Yes | Key of the joint asset in the distributed data object. |
-| bindInfo | BindInfo | Yes | Information about the joint asset in the RDB store, including the RDB store name,table name, primary key, column name, and asset name in the RDB store. |
+| bindInfo | [BindInfo](arkts-arkdata-bindinfo-i.md) | Yes | Information about the joint asset in the RDB store, including the RDB store name,table name, primary key, column name, and asset name in the RDB store. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -195,6 +198,8 @@ Unsubscribes from data changes of this distributed data object.
 
 **Since:** 9
 
+<!--Device-DataObject-off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void ): void--><!--Device-DataObject-off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void ): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
@@ -202,7 +207,7 @@ Unsubscribes from data changes of this distributed data object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. The value is 'change', which indicates data changes. |
-| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unsubscribesfrom all callbacks for data changes of this distributed object. sessionId indicates the session ID ofthe distributed data object. fields indicates the changed properties of the distributed data object. |
+| callback | (sessionId: string, fields: Array<string>) => void | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for data changes of this distributed object. sessionId indicates the session ID of the distributed data object. fields indicates the changed properties of the distributed data object. |
 
 **Error codes:**
 
@@ -240,14 +245,22 @@ Unsubscribes from the status change of this distributed data object.
 
 **Since:** 9
 
+<!--Device-DataObject-off(
+      type: 'status',
+      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
+    ): void--><!--Device-DataObject-off(
+      type: 'status',
+      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
+    ): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'status' | Yes | Event type. The value is 'status', which indicates the status change (online oroffline) of the distributed object. |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unsubscribesfrom all callbacks for status changes of this distributed object. sessionId indicates the session IDdistributed data object. networkId identifies the distributed data object. status indicates theindicates the object status, which can be online or offline. |
+| type | 'status' | Yes | Event type. The value is 'status', which indicates the status change (online or offline) of the distributed object. |
+| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) => void | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for status changes of this distributed object. sessionId indicates the session ID distributed data object. networkId identifies the distributed data object. status indicates the indicates the object status, which can be online or offline. |
 
 **Error codes:**
 
@@ -277,6 +290,8 @@ Unsubscribes from data changes of this distributed object.
 
 **Since:** 20
 
+<!--Device-DataObject-off(type: 'change', callback?: DataObserver): void--><!--Device-DataObject-off(type: 'change', callback?: DataObserver): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
@@ -284,7 +299,7 @@ Unsubscribes from data changes of this distributed object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. The value is 'change', which indicates data changes. |
-| callback | DataObserver | No | Callback to unregister. If this parameter is not specified, this APIunsubscribes from all callbacks for data changes of this distributed object. |
+| callback | [DataObserver](arkts-arkdata-dataobserver-t.md) | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for data changes of this distributed object. |
 
 **Example**
 
@@ -332,14 +347,16 @@ Unsubscribes from status changes of this distributed object.
 
 **Since:** 20
 
+<!--Device-DataObject-off(type: 'status', callback?: StatusObserver): void--><!--Device-DataObject-off(type: 'status', callback?: StatusObserver): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'status' | Yes | Event type. The value is 'status', which indicates the status changes of adistributed object. |
-| callback | StatusObserver | No | Callback to unregister. If this parameter is not specified, this APIunsubscribes from all callbacks for status changes of this distributed object. |
+| type | 'status' | Yes | Event type. The value is 'status', which indicates the status changes of a distributed object. |
+| callback | [StatusObserver](arkts-arkdata-statusobserver-t.md) | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for status changes of this distributed object. |
 
 **Example**
 
@@ -376,14 +393,16 @@ Unsubscribes from asset transfer progress changes.
 
 **Since:** 20
 
+<!--Device-DataObject-off(type: 'progressChanged', callback?: ProgressObserver): void--><!--Device-DataObject-off(type: 'progressChanged', callback?: ProgressObserver): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'progressChanged' | Yes | Event type. The value is 'progressChanged', which indicates the assettransfer progress changes. |
-| callback | ProgressObserver | No | Callback to unregister. If this parameter is not specified, this APIunsubscribes from all callbacks for progress changes of this distributed object. |
+| type | 'progressChanged' | Yes | Event type. The value is 'progressChanged', which indicates the asset transfer progress changes. |
+| callback | [ProgressObserver](arkts-arkdata-progressobserver-t.md) | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for progress changes of this distributed object. |
 
 **Example**
 
@@ -422,6 +441,8 @@ Subscribes to data changes of this distributed data object.
 
 **Since:** 9
 
+<!--Device-DataObject-on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void ): void--><!--Device-DataObject-on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void ): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
@@ -429,7 +450,7 @@ Subscribes to data changes of this distributed data object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. The value is **'change'**, which indicates data changes. sessionId |
-| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | Yes | Callback used to return the changes of the distributed data object.indicates the session ID of the distributed data object. fields indicates the changed properties of thedistributed data object. |
+| callback | (sessionId: string, fields: Array<string>) => void | Yes | Callback used to return the changes of the distributed data object.indicates the session ID of the distributed data object. fields indicates the changed properties of the distributed data object. |
 
 **Error codes:**
 
@@ -464,14 +485,22 @@ Subscribes to status changes of this distributed data object.
 
 **Since:** 9
 
+<!--Device-DataObject-on(
+      type: 'status',
+      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
+    ): void--><!--Device-DataObject-on(
+      type: 'status',
+      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
+    ): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'status' | Yes | Event type. The value is 'status', which indicates the status change (online oroffline) of the distributed object. |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | Yes | Callback used to return the status change. sessionId indicates the sessionID of the distributed data object. networkId identifies the device. status indicates the object status,which can be online or offline. |
+| type | 'status' | Yes | Event type. The value is 'status', which indicates the status change (online or offline) of the distributed object. |
+| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) => void | Yes | Callback used to return the status change. sessionId indicates the session ID of the distributed data object. networkId identifies the device. status indicates the object status,which can be online or offline. |
 
 **Error codes:**
 
@@ -498,6 +527,8 @@ Subscribes to data changes of this distributed data object.
 
 **Since:** 20
 
+<!--Device-DataObject-on(type: 'change', callback: DataObserver): void--><!--Device-DataObject-on(type: 'change', callback: DataObserver): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
@@ -505,7 +536,7 @@ Subscribes to data changes of this distributed data object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. The value is 'change', which indicates data changes. |
-| callback | DataObserver | Yes | Callback used to listen for data changes of a distributed object. |
+| callback | [DataObserver](arkts-arkdata-dataobserver-t.md) | Yes | Callback used to listen for data changes of a distributed object. |
 
 **Example**
 
@@ -536,14 +567,16 @@ Subscribes to the status changes of this distributed object.
 
 **Since:** 20
 
+<!--Device-DataObject-on(type: 'status', callback: StatusObserver): void--><!--Device-DataObject-on(type: 'status', callback: StatusObserver): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'status' | Yes | Event type. The value is 'status', which indicates the status changes of adistributed object. |
-| callback | StatusObserver | Yes | Callback used to listen for status changes of a distributed object. |
+| type | 'status' | Yes | Event type. The value is 'status', which indicates the status changes of a distributed object. |
+| callback | [StatusObserver](arkts-arkdata-statusobserver-t.md) | Yes | Callback used to listen for status changes of a distributed object. |
 
 **Example**
 
@@ -569,14 +602,16 @@ Subscribes to the asset transfer progress changes.
 
 **Since:** 20
 
+<!--Device-DataObject-on(type: 'progressChanged', callback: ProgressObserver): void--><!--Device-DataObject-on(type: 'progressChanged', callback: ProgressObserver): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'progressChanged' | Yes | Event type. The value is 'progressChanged', which indicates the assettransfer progress changes. |
-| callback | ProgressObserver | Yes | Callback used to listen for the asset transfer progress changes. |
+| type | 'progressChanged' | Yes | Event type. The value is 'progressChanged', which indicates the asset transfer progress changes. |
+| callback | [ProgressObserver](arkts-arkdata-progressobserver-t.md) | Yes | Callback used to listen for the asset transfer progress changes. |
 
 **Example**
 
@@ -599,10 +634,11 @@ try {
 revokeSave(callback: AsyncCallback<RevokeSaveSuccessResponse>): void
 ```
 
-Revokes the data of this distributed data object saved. This API uses an asynchronous callback to return the
-result.
+Revokes the data of this distributed data object saved. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-DataObject-revokeSave(callback: AsyncCallback<RevokeSaveSuccessResponse>): void--><!--Device-DataObject-revokeSave(callback: AsyncCallback<RevokeSaveSuccessResponse>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -610,7 +646,7 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;RevokeSaveSuccessResponse&gt; | Yes | Callback used to returnRevokeSaveSuccessResponse, which contains the session ID. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<RevokeSaveSuccessResponse> | Yes | Callback used to return RevokeSaveSuccessResponse, which contains the session ID. |
 
 **Error codes:**
 
@@ -655,13 +691,15 @@ Revokes the data of this distributed data object saved. This API uses a promise 
 
 **Since:** 9
 
+<!--Device-DataObject-revokeSave(): Promise<RevokeSaveSuccessResponse>--><!--Device-DataObject-revokeSave(): Promise<RevokeSaveSuccessResponse>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RevokeSaveSuccessResponse&gt; | Promise used to return RevokeSaveSuccessResponse, whichcontains the session ID. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<RevokeSaveSuccessResponse> | Promise used to return RevokeSaveSuccessResponse, which contains the session ID. |
 
 **Error codes:**
 
@@ -702,14 +740,16 @@ Saves a distributed data object. This API uses an asynchronous callback to retur
 
 **Since:** 9
 
+<!--Device-DataObject-save(deviceId: string, callback: AsyncCallback<SaveSuccessResponse>): void--><!--Device-DataObject-save(deviceId: string, callback: AsyncCallback<SaveSuccessResponse>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | ID of the device where the data is stored. The value local indicates a localdevice. |
-| callback | AsyncCallback&lt;SaveSuccessResponse&gt; | Yes | Callback used to return SaveSuccessResponse, whichcontains information such as session ID, version, and device ID. |
+| deviceId | string | Yes | ID of the device where the data is stored. The value local indicates a local device. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<SaveSuccessResponse> | Yes | Callback used to return SaveSuccessResponse, which contains information such as session ID, version, and device ID. |
 
 **Error codes:**
 
@@ -745,19 +785,21 @@ Saves a distributed data object. This API uses a promise to return the result.
 
 **Since:** 9
 
+<!--Device-DataObject-save(deviceId: string): Promise<SaveSuccessResponse>--><!--Device-DataObject-save(deviceId: string): Promise<SaveSuccessResponse>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | ID of the device where the data is saved. The default value is local, whichindicates a local device. |
+| deviceId | string | Yes | ID of the device where the data is saved. The default value is local, which indicates a local device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SaveSuccessResponse&gt; | Promise used to return SaveSuccessResponse, which containsinformation such as session ID, version, and device ID. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SaveSuccessResponse> | Promise used to return SaveSuccessResponse, which contains information such as session ID, version, and device ID. |
 
 **Error codes:**
 
@@ -787,10 +829,11 @@ g_object.save('local').then((callbackInfo: distributedDataObject.SaveSuccessResp
 setAsset(assetKey: string, uri: string): Promise<void>
 ```
 
-Sets the property information about a single asset in a distributed object. This API must be called before the
-setSessionId API is called. This API uses a promise to return the result.
+Sets the property information about a single asset in a distributed object. This API must be called before the setSessionId API is called. This API uses a promise to return the result.
 
 **Since:** 20
+
+<!--Device-DataObject-setAsset(assetKey: string, uri: string): Promise<void>--><!--Device-DataObject-setAsset(assetKey: string, uri: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -805,7 +848,7 @@ setSessionId API is called. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -865,11 +908,11 @@ class EntryAbility extends UIAbility {
 setAssets(assetsKey: string, uris: Array<string>): Promise<void>
 ```
 
-Sets the property information about multiple assets in a distributed object. This API must be called before the
-setSessionId API is called. The number of values contained in the uris array ranges from 1 to 50.
-This API uses a promise to return the result.
+Sets the property information about multiple assets in a distributed object. This API must be called before the setSessionId API is called. The number of values contained in the uris array ranges from 1 to 50.This API uses a promise to return the result.
 
 **Since:** 20
+
+<!--Device-DataObject-setAssets(assetsKey: string, uris: Array<string>): Promise<void>--><!--Device-DataObject-setAssets(assetsKey: string, uris: Array<string>): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -878,13 +921,13 @@ This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | assetsKey | string | Yes | Property name of the assets in the distributed object. |
-| uris | Array&lt;string&gt; | Yes | URIs of the new asset array to be set, indicating the distributed paths forstoring each element of the asset. The number of array elements ranges from 1 to 50. The URI of an elementmust be the distributed path corresponding to an actual asset. |
+| uris | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | URIs of the new asset array to be set, indicating the distributed paths for storing each element of the asset. The number of array elements ranges from 1 to 50. The URI of an element must be the distributed path corresponding to an actual asset. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -944,13 +987,13 @@ class EntryAbility extends UIAbility {
 setSessionId(sessionId: string, callback: AsyncCallback<void>): void
 ```
 
-Sets a session ID. This API uses an asynchronous callback to return the result. For the devices in the
-collaboration state in a trusted network, data of the distributed objects with the same session ID can be
-automatically synced across devices.
+Sets a session ID. This API uses an asynchronous callback to return the result. For the devices in the collaboration state in a trusted network, data of the distributed objects with the same session ID can be automatically synced across devices.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DataObject-setSessionId(sessionId: string, callback: AsyncCallback<void>): void--><!--Device-DataObject-setSessionId(sessionId: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -958,8 +1001,8 @@ automatically synced across devices.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | string | Yes | ID of a distributed data object on a trusted network. The value can contain onlyletters, digits, and underscores (_), and cannot exceed 128 characters. If this parameter is set to "" ornull, the distributed data object exits the network. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Asynchronous callback invoked when the session ID is successfully set. |
+| sessionId | string | Yes | ID of a distributed data object on a trusted network. The value can contain only letters, digits, and underscores (_), and cannot exceed 128 characters. If this parameter is set to "" or null, the distributed data object exits the network. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Asynchronous callback invoked when the session ID is successfully set. |
 
 **Error codes:**
 
@@ -996,13 +1039,15 @@ Exits all sessions. This API uses an asynchronous callback to return the result.
 **Required permissions:** 
 - API version 9 - 19: ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DataObject-setSessionId(callback: AsyncCallback<void>): void--><!--Device-DataObject-setSessionId(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback invoked when the distributed data object exits all sessions. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback invoked when the distributed data object exits all sessions. |
 
 **Error codes:**
 
@@ -1032,14 +1077,13 @@ g_object.setSessionId(() => {
 setSessionId(sessionId?: string): Promise<void>
 ```
 
-Sets a session ID or exits the distributed network. This API uses a promise to return the result. If this
-parameter is set to "" or null, or left empty, the distributed data object exits the network. For the devices in
-the collaboration state in a trusted network, data of the distributed objects with the same session ID can be
-automatically synced across devices.
+Sets a session ID or exits the distributed network. This API uses a promise to return the result. If this parameter is set to "" or null, or left empty, the distributed data object exits the network. For the devices in the collaboration state in a trusted network, data of the distributed objects with the same session ID can be automatically synced across devices.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DataObject-setSessionId(sessionId?: string): Promise<void>--><!--Device-DataObject-setSessionId(sessionId?: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -1047,13 +1091,13 @@ automatically synced across devices.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | string | No | ID of a distributed data object on a trusted network. The value can contain onlyletters, digits, and underscores (_), and cannot exceed 128 characters. If this parameter is set to "" ornull, or left empty, the distributed data object exits the network. |
+| sessionId | string | No | ID of a distributed data object on a trusted network. The value can contain only letters, digits, and underscores (_), and cannot exceed 128 characters. If this parameter is set to "" or null, or left empty, the distributed data object exits the network. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

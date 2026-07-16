@@ -6,6 +6,8 @@
 
 **废弃版本：** 9
 
+<!--Device-wallpaper-interface RgbaColor--><!--Device-wallpaper-interface RgbaColor-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 ## alpha
@@ -21,6 +23,8 @@ alpha: number
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-RgbaColor-alpha: long--><!--Device-RgbaColor-alpha: long-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
@@ -38,6 +42,8 @@ blue: number
 
 **废弃版本：** 9
 
+<!--Device-RgbaColor-blue: long--><!--Device-RgbaColor-blue: long-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 ## green
@@ -54,6 +60,8 @@ green: number
 
 **废弃版本：** 9
 
+<!--Device-RgbaColor-green: long--><!--Device-RgbaColor-green: long-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 ## red
@@ -69,6 +77,8 @@ red: number
 **起始版本：** 7
 
 **废弃版本：** 9
+
+<!--Device-RgbaColor-red: long--><!--Device-RgbaColor-red: long-End-->
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 

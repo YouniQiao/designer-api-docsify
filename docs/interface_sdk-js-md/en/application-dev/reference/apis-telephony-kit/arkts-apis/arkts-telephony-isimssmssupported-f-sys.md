@@ -16,6 +16,8 @@ SMS over IMS is supported if IMS is registered and SMS is supported on IMS.
 
 **Since:** 8
 
+<!--Device-sms-function isImsSmsSupported(slotId: int, callback: AsyncCallback<boolean>): void--><!--Device-sms-function isImsSmsSupported(slotId: int, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -25,7 +27,7 @@ SMS over IMS is supported if IMS is registered and SMS is supported on IMS.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the default SIM card for Ims Sms. The value {@code 0} indicates card slot 1,and the value {@code 1} indicates card slot 2. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Indicates the callback of isImsSmsSupported.Returns {@code true} if SMS over IMS is supported, {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Indicates the callback of isImsSmsSupported.Returns {@code true} if SMS over IMS is supported, {@code false} otherwise. |
 
 **Error codes:**
 
@@ -62,6 +64,8 @@ SMS over IMS is supported if IMS is registered and SMS is supported on IMS.
 
 **Since:** 8
 
+<!--Device-sms-function isImsSmsSupported(slotId: int): Promise<boolean>--><!--Device-sms-function isImsSmsSupported(slotId: int): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -76,7 +80,7 @@ SMS over IMS is supported if IMS is registered and SMS is supported on IMS.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns {@code true} if SMS over IMS is supported, {@code false} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns {@code true} if SMS over IMS is supported, {@code false} otherwise. |
 
 **Error codes:**
 

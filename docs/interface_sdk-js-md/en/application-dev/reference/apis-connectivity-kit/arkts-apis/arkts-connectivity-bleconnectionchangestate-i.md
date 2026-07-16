@@ -4,6 +4,8 @@ Describes the Gatt profile connection state.
 
 **Since:** 10
 
+<!--Device-ble-interface BLEConnectionChangeState--><!--Device-ble-interface BLEConnectionChangeState-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Indicates the peer device address
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BLEConnectionChangeState-deviceId: string--><!--Device-BLEConnectionChangeState-deviceId: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## reason
@@ -45,6 +49,8 @@ Reason of the disconnection of the gatt connection.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-BLEConnectionChangeState-reason?: GattDisconnectReason--><!--Device-BLEConnectionChangeState-reason?: GattDisconnectReason-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -64,6 +70,8 @@ Reason message of the disconnection of the gatt connection.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-BLEConnectionChangeState-reasonMessage?: string--><!--Device-BLEConnectionChangeState-reasonMessage?: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## state
@@ -81,6 +89,8 @@ Connection state of the Gatt profile
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BLEConnectionChangeState-state: ProfileConnectionState--><!--Device-BLEConnectionChangeState-state: ProfileConnectionState-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

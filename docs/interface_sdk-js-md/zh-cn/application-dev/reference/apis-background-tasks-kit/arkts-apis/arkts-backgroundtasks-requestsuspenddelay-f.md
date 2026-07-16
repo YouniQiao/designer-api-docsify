@@ -1,5 +1,11 @@
 # requestSuspendDelay
 
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+```
+
 ## requestSuspendDelay
 
 ```TypeScript
@@ -8,11 +14,13 @@ function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySus
 
 申请短时任务。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 短时任务的申请和使用过程中的约束与限制请参考[指南](../../../../task-management/transient-task.md#约束与限制)。
 
 **起始版本：** 9
+
+<!--Device-backgroundTaskManager-function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySuspendInfo--><!--Device-backgroundTaskManager-function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySuspendInfo-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
@@ -21,13 +29,13 @@ function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySus
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | reason | string | 是 | 申请短时任务的原因。 |
-| callback | Callback&lt;void&gt; | 是 | 短时任务即将超时的回调函数，一般在超时前6秒，通过此回调通知应用。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | 是 | 短时任务即将超时的回调函数，一般在超时前6秒，通过此回调通知应用。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DelaySuspendInfo | 返回短时任务信息。 |
+| [DelaySuspendInfo](arkts-backgroundtasks-delaysuspendinfo-i.md) | 返回短时任务信息。 |
 
 **错误码：**
 

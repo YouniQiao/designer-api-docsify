@@ -4,6 +4,8 @@ Enumerates the directions of barriers with mirror mode support.
 
 **Since:** 12
 
+<!--Device-unnamed-declare enum LocalizedBarrierDirection--><!--Device-unnamed-declare enum LocalizedBarrierDirection-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## START
@@ -12,14 +14,15 @@ Enumerates the directions of barriers with mirror mode support.
 START = 0
 ```
 
-The barrier is on the left (for left-to-right scripts) or right (for right-to-left scripts) side of
-all the referenced components specified by [referencedId](arkts-arkui-localizedbarrierstyle-i.md).
+The barrier is on the left (for left-to-right scripts) or right (for right-to-left scripts) side of all the referenced components specified by [referencedId](arkts-arkui-localizedbarrierstyle-i.md).
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LocalizedBarrierDirection-START = 0--><!--Device-LocalizedBarrierDirection-START = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,14 +32,15 @@ all the referenced components specified by [referencedId](arkts-arkui-localizedb
 END = 1
 ```
 
-The barrier is on the right (for left-to-right scripts) or left (for right-to-left scripts) side of
-all the referenced components specified by [referencedId](arkts-arkui-localizedbarrierstyle-i.md).
+The barrier is on the right (for left-to-right scripts) or left (for right-to-left scripts) side of all the referenced components specified by [referencedId](arkts-arkui-localizedbarrierstyle-i.md).
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LocalizedBarrierDirection-END = 1--><!--Device-LocalizedBarrierDirection-END = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,14 +50,15 @@ all the referenced components specified by [referencedId](arkts-arkui-localizedb
 TOP = 2
 ```
 
-The barrier is at the top of all the referenced components specified by
-[referencedId](arkts-arkui-localizedbarrierstyle-i.md).
+The barrier is at the top of all the referenced components specified by [referencedId](arkts-arkui-localizedbarrierstyle-i.md).
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LocalizedBarrierDirection-TOP = 2--><!--Device-LocalizedBarrierDirection-TOP = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -63,14 +68,15 @@ The barrier is at the top of all the referenced components specified by
 BOTTOM = 3
 ```
 
-The barrier is at the bottom of all the referenced components specified by
-[referencedId](arkts-arkui-localizedbarrierstyle-i.md).
+The barrier is at the bottom of all the referenced components specified by [referencedId](arkts-arkui-localizedbarrierstyle-i.md).
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LocalizedBarrierDirection-BOTTOM = 3--><!--Device-LocalizedBarrierDirection-BOTTOM = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

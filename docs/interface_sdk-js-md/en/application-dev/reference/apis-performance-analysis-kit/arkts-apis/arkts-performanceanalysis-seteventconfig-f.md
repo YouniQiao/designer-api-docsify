@@ -12,24 +12,19 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 function setEventConfig(name: string, config: Record<string, ParamType>): Promise<void>
 ```
 
-Sets event configuration. This method uses a promise to return the result. In the same lifecycle, you can set event
-configuration by event name.
+Sets event configuration. This method uses a promise to return the result. In the same lifecycle, you can set event configuration by event name.
 
 Configuration items vary depending on events. Currently, only the following events are supported:
 
-- **MAIN_THREAD_JANK**. (For details about the parameter configuration, see
-[Main Thread Jank Event Overview](../../../../dfx/hiappevent-watcher-mainthreadjank-events.md#parameters-of-seteventconfig)
-.)
-- **APP_CRASH** (For details about the parameter configuration, see
-[Customizing Crash Log Specifications](../../../../dfx/hiappevent-watcher-crash-events.md#customizing-crash-log-specifications)
-.)
-- **RESOURCE_OVERLIMIT** (For details about the parameter configuration, see
-[Resource Leak Event Overview](../../../../dfx/hiappevent-watcher-resourceleak-events.md#customizing-specifications).
-)
+- **MAIN_THREAD_JANK**. (For details about the parameter configuration, see [Main Thread Jank Event Overview](../../../../dfx/hiappevent-watcher-mainthreadjank-events.md#parameters-of-seteventconfig).)  
+- **APP_CRASH** (For details about the parameter configuration, see [Customizing Crash Log Specifications](../../../../dfx/hiappevent-watcher-crash-events.md#customizing-crash-log-specifications).)  
+- **RESOURCE_OVERLIMIT** (For details about the parameter configuration, see [Resource Leak Event Overview](../../../../dfx/hiappevent-watcher-resourceleak-events.md#customizing-specifications).)
 
 **Since:** 15
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-hiAppEvent-function setEventConfig(name: string, config: Record<string, ParamType>): Promise<void>--><!--Device-hiAppEvent-function setEventConfig(name: string, config: Record<string, ParamType>): Promise<void>-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -38,13 +33,13 @@ Configuration items vary depending on events. Currently, only the following even
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Event name. |
-| config | Record&lt;string, ParamType&gt; | Yes | Custom parameter object. The parameter name and value are defined asfollows:<br>- The parameter name contains a maximum of 1024 characters, which is of the string type and cannotbe empty.<br>- The parameter value is of the ParamType and contains a maximum of 1024 characters. |
+| config | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, ParamType> | Yes | Custom parameter object. The parameter name and value are defined as follows:<br>- The parameter name contains a maximum of 1024 characters, which is of the string type and cannot be empty.<br>- The parameter value is of the ParamType and contains a maximum of 1024 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

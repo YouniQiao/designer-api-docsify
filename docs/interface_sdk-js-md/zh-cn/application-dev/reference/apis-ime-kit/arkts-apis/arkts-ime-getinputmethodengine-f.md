@@ -1,5 +1,11 @@
 # getInputMethodEngine
 
+## 导入模块
+
+```TypeScript
+import { inputMethodEngine } from '@kit.IMEKit';
+```
+
 ## getInputMethodEngine
 
 ```TypeScript
@@ -16,13 +22,15 @@ function getInputMethodEngine(): InputMethodEngine
 
 **替代接口：** [getInputMethodAbility()](arkts-ime-getinputmethodability-f.md#getinputmethodability-1)
 
+<!--Device-inputMethodEngine-function getInputMethodEngine(): InputMethodEngine--><!--Device-inputMethodEngine-function getInputMethodEngine(): InputMethodEngine-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| InputMethodEngine | 输入法应用客户端。 |
+| [InputMethodEngine](arkts-ime-inputmethodengine-i.md) | 输入法应用客户端。 |
 
 **示例：**
 

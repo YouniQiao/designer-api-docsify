@@ -18,6 +18,8 @@ Set call waiting.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function setCallWaiting(slotId: int, activate: boolean, callback: AsyncCallback<void>): void--><!--Device-call-function setCallWaiting(slotId: int, activate: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Set call waiting.
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
 | activate | boolean | Yes | Indicates whether to activate or call wait. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of setCallWaiting. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of setCallWaiting. |
 
 **Error codes:**
 
@@ -70,6 +72,8 @@ Set call waiting.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function setCallWaiting(slotId: int, activate: boolean): Promise<void>--><!--Device-call-function setCallWaiting(slotId: int, activate: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -85,7 +89,7 @@ Set call waiting.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setCallWaiting. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the setCallWaiting. |
 
 **Error codes:**
 

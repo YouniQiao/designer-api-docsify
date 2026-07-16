@@ -18,6 +18,8 @@ Obtains the session information based on the session ID.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-dialogSession-function getDialogSessionInfo(dialogSessionId: string): DialogSessionInfo--><!--Device-dialogSession-function getDialogSessionInfo(dialogSessionId: string): DialogSessionInfo-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -32,7 +34,7 @@ Obtains the session information based on the session ID.
 
 | Type | Description |
 | --- | --- |
-| DialogSessionInfo | Session information. |
+| [DialogSessionInfo](arkts-ability-dialogsessioninfo-i-sys.md) | Session information. |
 
 **Error codes:**
 

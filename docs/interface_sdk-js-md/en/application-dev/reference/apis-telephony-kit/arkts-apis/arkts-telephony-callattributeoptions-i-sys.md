@@ -4,6 +4,8 @@ Indicates the options of call attribute.
 
 **Since:** 7
 
+<!--Device-call-export interface CallAttributeOptions--><!--Device-call-export interface CallAttributeOptions-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Indicates the id of account.
 
 **Since:** 7
 
+<!--Device-CallAttributeOptions-accountId: int--><!--Device-CallAttributeOptions-accountId: int-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Indicates the number of account.
 **Type:** string
 
 **Since:** 7
+
+<!--Device-CallAttributeOptions-accountNumber: string--><!--Device-CallAttributeOptions-accountNumber: string-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -58,6 +64,8 @@ Indicates the id of call.
 
 **Since:** 7
 
+<!--Device-CallAttributeOptions-callId: int--><!--Device-CallAttributeOptions-callId: int-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Indicates the detailed state of call.
 **Type:** DetailedCallState
 
 **Since:** 7
+
+<!--Device-CallAttributeOptions-callState: DetailedCallState--><!--Device-CallAttributeOptions-callState: DetailedCallState-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -90,6 +100,8 @@ Indicates the type of call.
 
 **Since:** 7
 
+<!--Device-CallAttributeOptions-callType: CallType--><!--Device-CallAttributeOptions-callType: CallType-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -105,6 +117,8 @@ Indicates the state of conference.
 **Type:** ConferenceState
 
 **Since:** 7
+
+<!--Device-CallAttributeOptions-conferenceState: ConferenceState--><!--Device-CallAttributeOptions-conferenceState: ConferenceState-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -122,6 +136,8 @@ Indicates the color tone type.
 
 **Since:** 11
 
+<!--Device-CallAttributeOptions-crsType: int--><!--Device-CallAttributeOptions-crsType: int-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -137,6 +153,8 @@ Indicates the extra call parameters.
 **Type:** Record<string, Object>
 
 **Since:** 14
+
+<!--Device-CallAttributeOptions-extraParams?: Record<string, Object>--><!--Device-CallAttributeOptions-extraParams?: Record<string, Object>-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -154,6 +172,8 @@ Indicates is custom accessibility enabled.
 
 **Since:** 26.0.0
 
+<!--Device-CallAttributeOptions-isCustomAccessibility?: boolean--><!--Device-CallAttributeOptions-isCustomAccessibility?: boolean-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -169,6 +189,8 @@ Indicates if this is an emergency call.
 **Type:** boolean
 
 **Since:** 7
+
+<!--Device-CallAttributeOptions-isEcc: boolean--><!--Device-CallAttributeOptions-isEcc: boolean-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -186,6 +208,8 @@ Indicates the location of the phone number.
 
 **Since:** 12
 
+<!--Device-CallAttributeOptions-numberLocation?: string--><!--Device-CallAttributeOptions-numberLocation?: string-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -201,6 +225,8 @@ Indicates the mark information of the phone number.
 **Type:** NumberMarkInfo
 
 **Since:** 12
+
+<!--Device-CallAttributeOptions-numberMarkInfo?: NumberMarkInfo--><!--Device-CallAttributeOptions-numberMarkInfo?: NumberMarkInfo-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -218,6 +244,8 @@ Indicates the initial type of this call.
 
 **Since:** 11
 
+<!--Device-CallAttributeOptions-originalCallType: int--><!--Device-CallAttributeOptions-originalCallType: int-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -233,6 +261,8 @@ Indicates the rtt state.
 **Type:** RttState
 
 **Since:** 22
+
+<!--Device-CallAttributeOptions-rttState?: RttState--><!--Device-CallAttributeOptions-rttState?: RttState-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -250,6 +280,8 @@ Indicates if the call is start with speaker.
 
 **Since:** 7
 
+<!--Device-CallAttributeOptions-speakerphoneOn: boolean--><!--Device-CallAttributeOptions-speakerphoneOn: boolean-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -265,6 +297,8 @@ Indicates the start time.
 **Type:** number
 
 **Since:** 7
+
+<!--Device-CallAttributeOptions-startTime: int--><!--Device-CallAttributeOptions-startTime: int-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -282,6 +316,8 @@ Indicates the type of video state.
 
 **Since:** 7
 
+<!--Device-CallAttributeOptions-videoState: VideoStateType--><!--Device-CallAttributeOptions-videoState: VideoStateType-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -298,6 +334,8 @@ Indicates the detail information of voip call.
 
 **Since:** 11
 
+<!--Device-CallAttributeOptions-voipCallAttribute?: VoipCallAttribute--><!--Device-CallAttributeOptions-voipCallAttribute?: VoipCallAttribute-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -313,6 +351,8 @@ Indicates the xcall type.
 **Type:** XCallType
 
 **Since:** 26.0.0
+
+<!--Device-CallAttributeOptions-xCallType?: XCallType--><!--Device-CallAttributeOptions-xCallType?: XCallType-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 

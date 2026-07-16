@@ -6,6 +6,8 @@ Provides APIs for encapsulating file asset attributes.
 
 **Since:** 12
 
+<!--Device-sendablePhotoAccessHelper-interface PhotoAsset extends lang.ISendable--><!--Device-sendablePhotoAccessHelper-interface PhotoAsset extends lang.ISendable-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -28,13 +30,15 @@ Commits the modification on the file metadata to the database. This API uses a p
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PhotoAsset-commitModify(): Promise<void>--><!--Device-PhotoAsset-commitModify(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -86,13 +90,15 @@ Converts a Sendable PhotoAsset object to a non-Sendable PhotoAsset object.
 
 **Since:** 12
 
+<!--Device-PhotoAsset-convertToPhotoAsset(): photoAccessHelper.PhotoAsset--><!--Device-PhotoAsset-convertToPhotoAsset(): photoAccessHelper.PhotoAsset-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| photoAccessHelper.PhotoAsset | [PhotoAsset](arkts-file-photoaccesshelper.md) ofthe non-Sendable type. |
+| photoAccessHelper.PhotoAsset | [PhotoAsset](arkts-file-photoaccesshelper.md) of the non-Sendable type. |
 
 **Error codes:**
 
@@ -138,13 +144,15 @@ Obtains a **PhotoAsset** member parameter.
 
 **Since:** 12
 
+<!--Device-PhotoAsset-get(member: string): photoAccessHelper.MemberType--><!--Device-PhotoAsset-get(member: string): photoAccessHelper.MemberType-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| member | string | Yes | Name of the member parameter to obtain.<br>Except **'uri'**, **'media_type'**, **'subtype'**, and **'display_name'**, you must pass in[PhotoKeys](arkts-medialibrary-photokeys-e.md) in **fetchColumns**. For example,to obtain the title, pass in **fetchColumns: ['title']**. |
+| member | string | Yes | Name of the member parameter to obtain.<br>Except **'uri'**, **'media_type'**, **'subtype'**, and **'display_name'**, you must pass in [PhotoKeys](arkts-medialibrary-photokeys-e.md) in **fetchColumns**. For example,to obtain the title, pass in **fetchColumns: ['title']**. |
 
 **Return value:**
 
@@ -202,6 +210,8 @@ Obtains the file thumbnail of the given size. This API uses a promise to return 
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-PhotoAsset-getThumbnail(size?: image.Size): Promise<image.PixelMap>--><!--Device-PhotoAsset-getThumbnail(size?: image.Size): Promise<image.PixelMap>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -214,7 +224,7 @@ Obtains the file thumbnail of the given size. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the PixelMap of the thumbnail. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<image.PixelMap> | Promise used to return the PixelMap of the thumbnail. |
 
 **Error codes:**
 
@@ -268,14 +278,16 @@ Sets a **PhotoAsset** member parameter.
 
 **Since:** 12
 
+<!--Device-PhotoAsset-set(member: string, value: string): void--><!--Device-PhotoAsset-set(member: string, value: string): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| member | string | Yes | Name of the parameter to set, for example,[PhotoKeys](arkts-medialibrary-photokeys-e.md).TITLE. The string length rangesfrom 1 to 255. |
-| value | string | Yes | Value to set. Only the value of[PhotoKeys](arkts-medialibrary-photokeys-e.md).TITLE can be changed. The titlemust meet the following requirements:<br>- It must not contain a file name extension.<br>- The string length ranges from 1 to 255. (The asset file name is in the format of title + file nameextension.)<br>- It must not contain any invalid characters, which are:\ / : * ? " ' ` &lt; &gt; \| { } [ ] |
+| member | string | Yes | Name of the parameter to set, for example,[PhotoKeys](arkts-medialibrary-photokeys-e.md).TITLE. The string length ranges from 1 to 255. |
+| value | string | Yes | Value to set. Only the value of [PhotoKeys](arkts-medialibrary-photokeys-e.md).TITLE can be changed. The title must meet the following requirements:<br>- It must not contain a file name extension.<br>- The string length ranges from 1 to 255. (The asset file name is in the format of title + file name extension.)<br>- It must not contain any invalid characters, which are:\ / : * ? " ' ` &lt; &gt; \| { } [ ] |
 
 **Error codes:**
 
@@ -322,6 +334,8 @@ Display name (with a file name extension) of the asset.
 
 **Since:** 12
 
+<!--Device-PhotoAsset-readonly displayName: string--><!--Device-PhotoAsset-readonly displayName: string-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## photoType
@@ -335,6 +349,8 @@ Photo type, image or video
 **Type:** PhotoType
 
 **Since:** 12
+
+<!--Device-PhotoAsset-readonly photoType: PhotoType--><!--Device-PhotoAsset-readonly photoType: PhotoType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -351,6 +367,8 @@ uri of the asset.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PhotoAsset-readonly uri: string--><!--Device-PhotoAsset-readonly uri: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

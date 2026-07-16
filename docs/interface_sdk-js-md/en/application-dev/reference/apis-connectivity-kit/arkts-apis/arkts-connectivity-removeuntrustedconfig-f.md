@@ -24,19 +24,21 @@ Removes a specified untrusted hotspot configuration.
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO
 
+<!--Device-wifi-function removeUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>--><!--Device-wifi-function removeUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
+| config | [WifiDeviceConfig](arkts-connectivity-wifideviceconfig-i.md) | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns {@code true} if the untrusted hotspot configuration is removed, returns {@code false} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns {@code true} if the untrusted hotspot configuration is removed, returns {@code false} otherwise. |
 
 **Example**
 
@@ -91,14 +93,16 @@ Removes a specified untrusted hotspot configuration.
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO
 
+<!--Device-wifi-function removeUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<boolean>): void--><!--Device-wifi-function removeUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes |  |
+| config | [WifiDeviceConfig](arkts-connectivity-wifideviceconfig-i.md) | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes |  |
 
 **Example**
 

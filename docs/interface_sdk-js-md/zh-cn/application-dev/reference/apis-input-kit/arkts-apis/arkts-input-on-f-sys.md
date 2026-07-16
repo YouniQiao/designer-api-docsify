@@ -1,5 +1,11 @@
 # on（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { inputMonitor } from '@kit.InputKit';
+```
+
 ## on('touch')
 
 ```TypeScript
@@ -12,6 +18,8 @@ function on(type: 'touch', receiver: TouchEventReceiver): void
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'touch', receiver: TouchEventReceiver): void--><!--Device-inputMonitor-function on(type: 'touch', receiver: TouchEventReceiver): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -21,7 +29,7 @@ function on(type: 'touch', receiver: TouchEventReceiver): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'touch' | 是 | 输入设备事件类型，取值'touch'。 |
-| receiver | TouchEventReceiver | 是 | 回调函数，返回触摸屏输入事件。 |
+| receiver | [TouchEventReceiver](arkts-input-toucheventreceiver-t-sys.md) | 是 | 回调函数，返回触摸屏输入事件。 |
 
 **错误码：**
 
@@ -74,6 +82,8 @@ function on(type: 'mouse', receiver: Callback<MouseEvent>): void
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'mouse', receiver: Callback<MouseEvent>): void--><!--Device-inputMonitor-function on(type: 'mouse', receiver: Callback<MouseEvent>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -83,7 +93,7 @@ function on(type: 'mouse', receiver: Callback<MouseEvent>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'mouse' | 是 | 输入设备事件类型，取值'mouse'。 |
-| receiver | Callback&lt;MouseEvent&gt; | 是 | 回调函数，返回鼠标输入事件。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<MouseEvent> | 是 | 回调函数，返回鼠标输入事件。 |
 
 **错误码：**
 
@@ -136,6 +146,8 @@ function on(type: 'mouse', rect: display.Rect[], receiver: Callback<MouseEvent>)
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'mouse', rect: display.Rect[], receiver: Callback<MouseEvent>): void--><!--Device-inputMonitor-function on(type: 'mouse', rect: display.Rect[], receiver: Callback<MouseEvent>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -146,7 +158,7 @@ function on(type: 'mouse', rect: display.Rect[], receiver: Callback<MouseEvent>)
 | --- | --- | --- | --- |
 | type | 'mouse' | 是 | 输入设备事件类型，取值'mouse'。 |
 | rect | display.Rect[] | 是 | 可以触发回调任务的矩形区域，可传入1至2个。 |
-| receiver | Callback&lt;MouseEvent&gt; | 是 | 回调函数，返回鼠标输入事件。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<MouseEvent> | 是 | 回调函数，返回鼠标输入事件。 |
 
 **错误码：**
 
@@ -223,6 +235,8 @@ function on(type: 'pinch', receiver: Callback<Pinch>): void
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'pinch', receiver: Callback<Pinch>): void--><!--Device-inputMonitor-function on(type: 'pinch', receiver: Callback<Pinch>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -232,7 +246,7 @@ function on(type: 'pinch', receiver: Callback<Pinch>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'pinch' | 是 | 输入设备事件类型，取值'pinch'。 |
-| receiver | Callback&lt;Pinch&gt; | 是 | 回调函数，返回捏合输入事件。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Pinch> | 是 | 回调函数，返回捏合输入事件。 |
 
 **错误码：**
 
@@ -284,6 +298,8 @@ function on(type: 'pinch', fingers: number, receiver: Callback<Pinch>): void
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'pinch', fingers: number, receiver: Callback<Pinch>): void--><!--Device-inputMonitor-function on(type: 'pinch', fingers: number, receiver: Callback<Pinch>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -294,7 +310,7 @@ function on(type: 'pinch', fingers: number, receiver: Callback<Pinch>): void
 | --- | --- | --- | --- |
 | type | 'pinch' | 是 | 输入设备事件类型，取值'pinch'。 |
 | fingers | number | 是 | 捏合的手指数，取值范围：大于等于2。 |
-| receiver | Callback&lt;Pinch&gt; | 是 | 回调函数，返回捏合输入事件。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Pinch> | 是 | 回调函数，返回捏合输入事件。 |
 
 **错误码：**
 
@@ -347,6 +363,8 @@ function on(type: 'rotate', fingers: number, receiver: Callback<Rotate>): void
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'rotate', fingers: number, receiver: Callback<Rotate>): void--><!--Device-inputMonitor-function on(type: 'rotate', fingers: number, receiver: Callback<Rotate>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -357,7 +375,7 @@ function on(type: 'rotate', fingers: number, receiver: Callback<Rotate>): void
 | --- | --- | --- | --- |
 | type | 'rotate' | 是 | 输入设备事件类型，取值'rotate'。 |
 | fingers | number | 是 | 旋转的手指数，目前支持监听手指数是2。 |
-| receiver | Callback&lt;Rotate&gt; | 是 | 回调函数，返回旋转输入事件。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Rotate> | 是 | 回调函数，返回旋转输入事件。 |
 
 **错误码：**
 
@@ -410,6 +428,8 @@ function on(type: 'threeFingersSwipe', receiver: Callback<ThreeFingersSwipe>): v
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'threeFingersSwipe', receiver: Callback<ThreeFingersSwipe>): void--><!--Device-inputMonitor-function on(type: 'threeFingersSwipe', receiver: Callback<ThreeFingersSwipe>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -419,7 +439,7 @@ function on(type: 'threeFingersSwipe', receiver: Callback<ThreeFingersSwipe>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'threeFingersSwipe' | 是 | 输入设备事件类型，取值'threeFingersSwipe'。 |
-| receiver | Callback&lt;ThreeFingersSwipe&gt; | 是 | 回调函数，返回三指滑动输入事件。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ThreeFingersSwipe> | 是 | 回调函数，返回三指滑动输入事件。 |
 
 **错误码：**
 
@@ -471,6 +491,8 @@ function on(type: 'fourFingersSwipe', receiver: Callback<FourFingersSwipe>): voi
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'fourFingersSwipe', receiver: Callback<FourFingersSwipe>): void--><!--Device-inputMonitor-function on(type: 'fourFingersSwipe', receiver: Callback<FourFingersSwipe>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -480,7 +502,7 @@ function on(type: 'fourFingersSwipe', receiver: Callback<FourFingersSwipe>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'fourFingersSwipe' | 是 | 输入设备事件类型，取值'fourFingersSwipe'。 |
-| receiver | Callback&lt;FourFingersSwipe&gt; | 是 | 回调函数，返回四指滑动输入事件。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<FourFingersSwipe> | 是 | 回调函数，返回四指滑动输入事件。 |
 
 **错误码：**
 
@@ -532,6 +554,8 @@ function on(type: 'threeFingersTap', receiver: Callback<ThreeFingersTap>): void
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'threeFingersTap', receiver: Callback<ThreeFingersTap>): void--><!--Device-inputMonitor-function on(type: 'threeFingersTap', receiver: Callback<ThreeFingersTap>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -541,7 +565,7 @@ function on(type: 'threeFingersTap', receiver: Callback<ThreeFingersTap>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'threeFingersTap' | 是 | 输入设备事件类型，取值'threeFingersTap'。 |
-| receiver | Callback&lt;ThreeFingersTap&gt; | 是 | 回调函数，返回三指轻点输入事件。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ThreeFingersTap> | 是 | 回调函数，返回三指轻点输入事件。 |
 
 **错误码：**
 
@@ -593,6 +617,8 @@ function on(type: 'fingerprint', receiver: Callback<FingerprintEvent>): void
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'fingerprint', receiver: Callback<FingerprintEvent>): void--><!--Device-inputMonitor-function on(type: 'fingerprint', receiver: Callback<FingerprintEvent>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -602,7 +628,7 @@ function on(type: 'fingerprint', receiver: Callback<FingerprintEvent>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'fingerprint' | 是 | 输入事件类型，取唯一值'fingerprint'。 |
-| receiver | Callback&lt;FingerprintEvent&gt; | 是 | 回调函数，返回指纹器件手势输入事件。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<FingerprintEvent> | 是 | 回调函数，返回指纹器件手势输入事件。 |
 
 **错误码：**
 
@@ -654,6 +680,8 @@ function on(type: 'swipeInward', receiver: Callback<SwipeInward>): void
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'swipeInward', receiver: Callback<SwipeInward>): void--><!--Device-inputMonitor-function on(type: 'swipeInward', receiver: Callback<SwipeInward>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -663,7 +691,7 @@ function on(type: 'swipeInward', receiver: Callback<SwipeInward>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'swipeInward' | 是 | 输入事件类型，取唯一值'SwipeInward'。 |
-| receiver | Callback&lt;SwipeInward&gt; | 是 | 回调函数，返回向内滑动事件。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SwipeInward> | 是 | 回调函数，返回向内滑动事件。 |
 
 **错误码：**
 
@@ -715,6 +743,8 @@ function on(type: 'touchscreenSwipe', fingers: number, receiver: Callback<TouchG
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'touchscreenSwipe', fingers: number, receiver: Callback<TouchGestureEvent>): void--><!--Device-inputMonitor-function on(type: 'touchscreenSwipe', fingers: number, receiver: Callback<TouchGestureEvent>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -725,7 +755,7 @@ function on(type: 'touchscreenSwipe', fingers: number, receiver: Callback<TouchG
 | --- | --- | --- | --- |
 | type | 'touchscreenSwipe' | 是 | 输入设备事件类型，取值'touchscreenSwipe'。 |
 | fingers | number | 是 | 滑动手势的手指数，取值范围：[3,5]。 |
-| receiver | Callback&lt;TouchGestureEvent&gt; | 是 | 回调函数，返回触摸屏滑动手势事件。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<TouchGestureEvent> | 是 | 回调函数，返回触摸屏滑动手势事件。 |
 
 **错误码：**
 
@@ -778,6 +808,8 @@ function on(type: 'touchscreenPinch', fingers: number, receiver: Callback<TouchG
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'touchscreenPinch', fingers: number, receiver: Callback<TouchGestureEvent>): void--><!--Device-inputMonitor-function on(type: 'touchscreenPinch', fingers: number, receiver: Callback<TouchGestureEvent>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -788,7 +820,7 @@ function on(type: 'touchscreenPinch', fingers: number, receiver: Callback<TouchG
 | --- | --- | --- | --- |
 | type | 'touchscreenPinch' | 是 | 输入设备事件类型，取值'touchscreenPinch'。 |
 | fingers | number | 是 | 捏合手势的手指数，取值范围：[4,5]。 |
-| receiver | Callback&lt;TouchGestureEvent&gt; | 是 | 回调函数，返回触摸屏捏合手势事件。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<TouchGestureEvent> | 是 | 回调函数，返回触摸屏捏合手势事件。 |
 
 **错误码：**
 
@@ -841,6 +873,8 @@ function on(type: 'keyPressed', keys: Array<KeyCode>, receiver: Callback<KeyEven
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
+<!--Device-inputMonitor-function on(type: 'keyPressed', keys: Array<KeyCode>, receiver: Callback<KeyEvent>): void--><!--Device-inputMonitor-function on(type: 'keyPressed', keys: Array<KeyCode>, receiver: Callback<KeyEvent>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputMonitor
 
 **系统接口：** 此接口为系统接口。
@@ -850,8 +884,8 @@ function on(type: 'keyPressed', keys: Array<KeyCode>, receiver: Callback<KeyEven
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'keyPressed' | 是 | 按键事件类型，取唯一值'keyPressed'。 |
-| keys | Array&lt;KeyCode&gt; | 是 | 键值，支持如下键值：KEYCODE_META_LEFT、KEYCODE_META_RIGHT、KEYCODE_POWER、KEYCODE_VOLUME_DOWN、KEYCODE_VOLUME_UP。 |
-| receiver | Callback&lt;KeyEvent&gt; | 是 | 回调函数，返回按键输入事件。 |
+| keys | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<KeyCode> | 是 | 键值，支持如下键值：KEYCODE_META_LEFT、KEYCODE_META_RIGHT、KEYCODE_POWER、KEYCODE_VOLUME_DOWN、KEYCODE_VOLUME_UP。 |
+| receiver | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<KeyEvent> | 是 | 回调函数，返回按键输入事件。 |
 
 **错误码：**
 

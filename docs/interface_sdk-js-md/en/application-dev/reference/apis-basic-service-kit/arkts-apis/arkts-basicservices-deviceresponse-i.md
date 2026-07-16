@@ -4,6 +4,8 @@
 
 **Deprecated since:** 6
 
+<!--Device-unnamed-export interface DeviceResponse--><!--Device-unnamed-export interface DeviceResponse-End-->
+
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
 ## Modules to Import
@@ -26,6 +28,8 @@ API version.
 
 **Deprecated since:** 6
 
+<!--Device-DeviceResponse-apiVersion: number--><!--Device-DeviceResponse-apiVersion: number-End-->
+
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
 ## brand
@@ -42,6 +46,8 @@ Brand.
 
 **Deprecated since:** 6
 
+<!--Device-DeviceResponse-brand: string--><!--Device-DeviceResponse-brand: string-End-->
+
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
 ## deviceType
@@ -50,25 +56,15 @@ Brand.
 deviceType: string
 ```
 
-Device type. The options are as follows:
-phone: smartphone
-tablet: tablet
-tv: smart TV
-wearable: wearable
-liteWearable: lite wearable
-ar: AR
-vr: virtual reality
-earphones: headset
-pc: personal computer
-speaker: speaker
-smartVision: smart visual device
-linkIoT: connection module
+Device type. The options are as follows:phone: smartphone tablet: tablet tv: smart TV wearable: wearable liteWearable: lite wearable ar: AR vr: virtual reality earphones: headset pc: personal computer speaker: speaker smartVision: smart visual device linkIoT: connection module
 
 **Type:** string
 
 **Since:** 4
 
 **Deprecated since:** 6
+
+<!--Device-DeviceResponse-deviceType: string--><!--Device-DeviceResponse-deviceType: string-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -86,6 +82,8 @@ System language.
 
 **Deprecated since:** 6
 
+<!--Device-DeviceResponse-language: string--><!--Device-DeviceResponse-language: string-End-->
+
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
 ## manufacturer
@@ -101,6 +99,8 @@ Manufacturer.
 **Since:** 3
 
 **Deprecated since:** 6
+
+<!--Device-DeviceResponse-manufacturer: string--><!--Device-DeviceResponse-manufacturer: string-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -118,6 +118,8 @@ Model.
 
 **Deprecated since:** 6
 
+<!--Device-DeviceResponse-model: string--><!--Device-DeviceResponse-model: string-End-->
+
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
 ## product
@@ -133,6 +135,8 @@ Product number.
 **Since:** 3
 
 **Deprecated since:** 6
+
+<!--Device-DeviceResponse-product: string--><!--Device-DeviceResponse-product: string-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -150,6 +154,8 @@ System region.
 
 **Deprecated since:** 6
 
+<!--Device-DeviceResponse-region: string--><!--Device-DeviceResponse-region: string-End-->
+
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
 ## screenDensity
@@ -166,6 +172,8 @@ Screen density, unit dpi.
 
 **Deprecated since:** 6
 
+<!--Device-DeviceResponse-screenDensity: number--><!--Device-DeviceResponse-screenDensity: number-End-->
+
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
 ## screenShape
@@ -174,15 +182,15 @@ Screen density, unit dpi.
 screenShape: 'rect' | 'circle'
 ```
 
-Screen shape. The options are as follows:
-rect: Rectangle screen.
-circle: Circle screen.
+Screen shape. The options are as follows:rect: Rectangle screen.circle: Circle screen.
 
 **Type:** 'rect' | 'circle'
 
 **Since:** 4
 
 **Deprecated since:** 6
+
+<!--Device-DeviceResponse-screenShape: 'rect' | 'circle'--><!--Device-DeviceResponse-screenShape: 'rect' | 'circle'-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -192,11 +200,7 @@ circle: Circle screen.
 sdkMinorApiVersion: number
 ```
 
-Minor API version of the system software.
-From API 26 and later versions, the system API version format is
-sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion.
-Example: 26.0.0
-Value range: (-∞,+∞).
+Minor API version of the system software.From API 26 and later versions, the system API version format is sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion.Example: 26.0.0Value range: (-∞,+∞).
 
 **Type:** number
 
@@ -205,6 +209,8 @@ Value range: (-∞,+∞).
 **Deprecated since:** 26.0.0
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-DeviceResponse-sdkMinorApiVersion: number--><!--Device-DeviceResponse-sdkMinorApiVersion: number-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -214,11 +220,7 @@ Value range: (-∞,+∞).
 sdkPatchApiVersion: number
 ```
 
-Minor API version of the system software.
-From API 26 and later versions, the system API version format is
-sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion.
-Example: 26.0.0
-Value range: (-∞,+∞).
+Minor API version of the system software.From API 26 and later versions, the system API version format is sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion.Example: 26.0.0Value range: (-∞,+∞).
 
 **Type:** number
 
@@ -227,6 +229,8 @@ Value range: (-∞,+∞).
 **Deprecated since:** 26.0.0
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-DeviceResponse-sdkPatchApiVersion: number--><!--Device-DeviceResponse-sdkPatchApiVersion: number-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -244,6 +248,8 @@ Window Height, unit px.
 
 **Deprecated since:** 6
 
+<!--Device-DeviceResponse-windowHeight: number--><!--Device-DeviceResponse-windowHeight: number-End-->
+
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
 ## windowWidth
@@ -259,6 +265,8 @@ Window width, unit px.
 **Since:** 3
 
 **Deprecated since:** 6
+
+<!--Device-DeviceResponse-windowWidth: number--><!--Device-DeviceResponse-windowWidth: number-End-->
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 

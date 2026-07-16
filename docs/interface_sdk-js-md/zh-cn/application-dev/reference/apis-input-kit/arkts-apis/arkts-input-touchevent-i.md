@@ -6,7 +6,15 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-export declare interface TouchEvent extends InputEvent--><!--Device-unnamed-export declare interface TouchEvent extends InputEvent-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+## 导入模块
+
+```TypeScript
+import { SourceType, ToolType, TouchEvent, FixedMode, KeyAction, Touch } from '@kit.InputKit';
+```
 
 ## action
 
@@ -19,6 +27,8 @@ action: Action
 **类型：** Action
 
 **起始版本：** 9
+
+<!--Device-TouchEvent-action: Action--><!--Device-TouchEvent-action: Action-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -34,6 +44,8 @@ sourceType: SourceType
 
 **起始版本：** 9
 
+<!--Device-TouchEvent-sourceType: SourceType--><!--Device-TouchEvent-sourceType: SourceType-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## touch
@@ -48,6 +60,8 @@ touch: Touch
 
 **起始版本：** 9
 
+<!--Device-TouchEvent-touch: Touch--><!--Device-TouchEvent-touch: Touch-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## touches
@@ -61,6 +75,8 @@ touches: Touch[]
 **类型：** Touch[]
 
 **起始版本：** 9
+
+<!--Device-TouchEvent-touches: Touch[]--><!--Device-TouchEvent-touches: Touch[]-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 

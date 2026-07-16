@@ -16,13 +16,15 @@ Subscribe the attachment failure event.
 
 **Since:** 22
 
+<!--Device-inputMethod-function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void--><!--Device-inputMethod-function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AttachFailureReason&gt; | Yes | the callback is invoked only when the attachmenttriggered by the registrant's process fails. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AttachFailureReason> | Yes | the callback is invoked only when the attachment triggered by the registrant's process fails. |
 
 **Example**
 

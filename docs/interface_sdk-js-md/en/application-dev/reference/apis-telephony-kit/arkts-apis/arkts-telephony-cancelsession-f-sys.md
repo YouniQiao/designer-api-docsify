@@ -12,13 +12,13 @@ import { eSIM } from '@kit.TelephonyKit';
 function cancelSession(slotId: number, transactionId: string, cancelReason: CancelReason): Promise<ResultCode>
 ```
 
-Cancel session can be used in the
-1.after the response to "ES9+.AuthenticateClient"
-2.after the response to "ES9+.GetBoundProfilePackage"
+Cancel session can be used in the1.after the response to "ES9+.AuthenticateClient"2.after the response to "ES9+.GetBoundProfilePackage"
 
 **Since:** 18
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE
+
+<!--Device-eSIM-function cancelSession(slotId: int, transactionId: string, cancelReason: CancelReason): Promise<ResultCode>--><!--Device-eSIM-function cancelSession(slotId: int, transactionId: string, cancelReason: CancelReason): Promise<ResultCode>-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -30,13 +30,13 @@ Cancel session can be used in the
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number. |
 | transactionId | string | Yes | The transaction ID returned by SM-DP+ server. |
-| cancelReason | CancelReason | Yes | The cancel reason. |
+| cancelReason | [CancelReason](arkts-telephony-cancelreason-e-sys.md) | Yes | The cancel reason. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultCode&gt; | Returns the result code. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ResultCode> | Returns the result code. |
 
 **Error codes:**
 

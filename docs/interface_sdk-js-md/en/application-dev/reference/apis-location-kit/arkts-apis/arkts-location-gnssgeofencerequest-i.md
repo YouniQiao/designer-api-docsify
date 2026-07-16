@@ -4,6 +4,8 @@ Configuring parameters in GNSS geofence requests.
 
 **Since:** 12
 
+<!--Device-geoLocationManager-export interface GnssGeofenceRequest--><!--Device-geoLocationManager-export interface GnssGeofenceRequest-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Indicates the name of FenceExtensionAbility.
 
 **Since:** 23
 
+<!--Device-GnssGeofenceRequest-fenceExtensionAbilityName?: string--><!--Device-GnssGeofenceRequest-fenceExtensionAbilityName?: string-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## geofence
@@ -37,6 +41,8 @@ Circular fence information.
 **Type:** Geofence
 
 **Since:** 12
+
+<!--Device-GnssGeofenceRequest-geofence: Geofence--><!--Device-GnssGeofenceRequest-geofence: Geofence-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -52,6 +58,8 @@ Indicates the callback for reporting the geofence transition status.
 
 **Since:** 12
 
+<!--Device-GnssGeofenceRequest-geofenceTransitionCallback: AsyncCallback<GeofenceTransition>--><!--Device-GnssGeofenceRequest-geofenceTransitionCallback: AsyncCallback<GeofenceTransition>-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## loiterTimeMs
@@ -60,14 +68,13 @@ Indicates the callback for reporting the geofence transition status.
 loiterTimeMs?: number
 ```
 
-Indicates time for which a device is dwelling in the geofence, in milliseconds.
-If the device dwelling time reaches the value specified by this parameter,
-a GEOFENCE_TRANSITION_EVENT_DWELL event is reported.
-The value should be an integer.
+Indicates time for which a device is dwelling in the geofence, in milliseconds.If the device dwelling time reaches the value specified by this parameter,a GEOFENCE_TRANSITION_EVENT_DWELL event is reported.The value should be an integer.
 
 **Type:** number
 
 **Since:** 23
+
+<!--Device-GnssGeofenceRequest-loiterTimeMs?: int--><!--Device-GnssGeofenceRequest-loiterTimeMs?: int-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -83,6 +90,8 @@ Indicates geofence transition status monitored.
 
 **Since:** 12
 
+<!--Device-GnssGeofenceRequest-monitorTransitionEvents: Array<GeofenceTransitionEvent>--><!--Device-GnssGeofenceRequest-monitorTransitionEvents: Array<GeofenceTransitionEvent>-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## notifications
@@ -96,6 +105,8 @@ Indicates the geofence notifications to publish.
 **Type:** Array<NotificationRequest>
 
 **Since:** 12
+
+<!--Device-GnssGeofenceRequest-notifications?: Array<NotificationRequest>--><!--Device-GnssGeofenceRequest-notifications?: Array<NotificationRequest>-End-->
 
 **System capability:** SystemCapability.Location.Location.Geofence
 

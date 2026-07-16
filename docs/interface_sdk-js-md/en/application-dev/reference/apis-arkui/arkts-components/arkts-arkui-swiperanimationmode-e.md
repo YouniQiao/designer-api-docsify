@@ -4,6 +4,8 @@ Enumerates the animation mode for moving to a specific page in the **Swiper** co
 
 **Since:** 15
 
+<!--Device-unnamed-declare enum SwiperAnimationMode--><!--Device-unnamed-declare enum SwiperAnimationMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NO_ANIMATION
@@ -21,6 +23,8 @@ Move to the specified page without any animation.
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 15.
+
+<!--Device-SwiperAnimationMode-NO_ANIMATION = 0--><!--Device-SwiperAnimationMode-NO_ANIMATION = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ Move to the specified page with the default animation.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 15.
 
+<!--Device-SwiperAnimationMode-DEFAULT_ANIMATION = 1--><!--Device-SwiperAnimationMode-DEFAULT_ANIMATION = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FAST_ANIMATION
@@ -48,8 +54,7 @@ Move to the specified page with the default animation.
 FAST_ANIMATION = 2
 ```
 
-Move to a page near the specified page without animation, and then navigate to the specified page with the default
-animation.
+Move to a page near the specified page without animation, and then navigate to the specified page with the default animation.
 
 **Since:** 15
 
@@ -58,6 +63,8 @@ animation.
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 15.
+
+<!--Device-SwiperAnimationMode-FAST_ANIMATION = 2--><!--Device-SwiperAnimationMode-FAST_ANIMATION = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

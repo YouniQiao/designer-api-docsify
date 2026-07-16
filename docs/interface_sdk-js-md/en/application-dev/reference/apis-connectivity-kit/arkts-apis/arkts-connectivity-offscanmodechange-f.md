@@ -20,13 +20,15 @@ Unsubscribe to an event indicating that the scanning mode of the local device ha
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function offScanModeChange(callback?: Callback<ScanMode>): void--><!--Device-connection-function offScanModeChange(callback?: Callback<ScanMode>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;ScanMode&gt; | No | Callback used to listen. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ScanMode> | No | Callback used to listen. |
 
 **Error codes:**
 

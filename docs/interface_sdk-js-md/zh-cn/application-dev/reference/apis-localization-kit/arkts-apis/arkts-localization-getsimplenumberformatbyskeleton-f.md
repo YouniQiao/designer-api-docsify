@@ -1,5 +1,11 @@
 # getSimpleNumberFormatBySkeleton
 
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
+
 ## getSimpleNumberFormatBySkeleton
 
 ```TypeScript
@@ -10,7 +16,9 @@ export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: Intl.
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-i18n-export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleNumberFormat--><!--Device-i18n-export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleNumberFormat-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -25,7 +33,7 @@ export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: Intl.
 
 | 类型 | 说明 |
 | --- | --- |
-| SimpleNumberFormat | SimpleNumberFormat对象。 |
+| [SimpleNumberFormat](arkts-localization-simplenumberformat-c.md) | SimpleNumberFormat对象。 |
 
 **错误码：**
 
@@ -48,7 +56,9 @@ export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: intl.
 
 **替代接口：** getSimpleNumberFormatBySkeleton(skeleton:
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-i18n-export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: intl.Locale): SimpleNumberFormat--><!--Device-i18n-export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: intl.Locale): SimpleNumberFormat-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -63,7 +73,7 @@ export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: intl.
 
 | 类型 | 说明 |
 | --- | --- |
-| SimpleNumberFormat | SimpleNumberFormat对象。 |
+| [SimpleNumberFormat](arkts-localization-simplenumberformat-c.md) | SimpleNumberFormat对象。 |
 
 **错误码：**
 

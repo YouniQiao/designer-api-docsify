@@ -4,6 +4,8 @@ Defines the data summary of the dragged object.
 
 **Since:** 11
 
+<!--Device-dragInteraction-interface Summary--><!--Device-dragInteraction-interface Summary-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Drag
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Data length of the dragged object.
 
 **Since:** 11
 
+<!--Device-Summary-dataSize: int--><!--Device-Summary-dataSize: int-End-->
+
 **System capability:** SystemCapability.Msdp.DeviceStatus.Drag
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Type of the dragged object.
 **Type:** string
 
 **Since:** 11
+
+<!--Device-Summary-dataType: string--><!--Device-Summary-dataType: string-End-->
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Drag
 

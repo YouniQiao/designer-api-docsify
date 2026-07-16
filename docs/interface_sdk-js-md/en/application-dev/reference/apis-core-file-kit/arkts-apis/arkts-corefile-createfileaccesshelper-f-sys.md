@@ -12,8 +12,7 @@ import { fileAccess } from '@kit.CoreFileKit';
 function createFileAccessHelper(context: Context): FileAccessHelper
 ```
 
-Creates a **Helper** object to bind with all file management services in the system. This API returns the result
-synchronously.
+Creates a **Helper** object to bind with all file management services in the system. This API returns the result synchronously.
 
 **Since:** 9
 
@@ -23,6 +22,8 @@ synchronously.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-fileAccess-function createFileAccessHelper(context: Context): FileAccessHelper--><!--Device-fileAccess-function createFileAccessHelper(context: Context): FileAccessHelper-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -31,13 +32,13 @@ synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the application context. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the application context. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| FileAccessHelper | Returns the fileAccessHelper. |
+| [FileAccessHelper](arkts-corefile-fileaccesshelper-i-sys.md) | Returns the fileAccessHelper. |
 
 **Error codes:**
 
@@ -105,8 +106,7 @@ function createFileAccessHelper02(context: common.UIAbilityContext) {
 function createFileAccessHelper(context: Context, wants: Array<Want>): FileAccessHelper
 ```
 
-Creates a **Helper** object to bind with the specified Wants. This API returns the result synchronously. The
-**Helper** object provides file access and management capabilities.
+Creates a **Helper** object to bind with the specified Wants. This API returns the result synchronously. The **Helper** object provides file access and management capabilities.
 
 **Since:** 9
 
@@ -116,6 +116,8 @@ Creates a **Helper** object to bind with the specified Wants. This API returns t
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-fileAccess-function createFileAccessHelper(context: Context, wants: Array<Want>): FileAccessHelper--><!--Device-fileAccess-function createFileAccessHelper(context: Context, wants: Array<Want>): FileAccessHelper-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -124,14 +126,14 @@ Creates a **Helper** object to bind with the specified Wants. This API returns t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the application context. |
-| wants | Array&lt;Want&gt; | Yes | Represents the connected data provider. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the application context. |
+| wants | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Want> | Yes | Represents the connected data provider. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| FileAccessHelper | Returns the fileAccessHelper. |
+| [FileAccessHelper](arkts-corefile-fileaccesshelper-i-sys.md) | Returns the fileAccessHelper. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Defines chip label class.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class ChipV2Label--><!--Device-unnamed-export declare class ChipV2Label-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,13 +28,15 @@ The constructor of ChipLabel
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2Label-constructor(config: ChipV2LabelConfig)--><!--Device-ChipV2Label-constructor(config: ChipV2LabelConfig)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | ChipV2LabelConfig | Yes | config of the chip label |
+| config | [ChipV2LabelConfig](arkts-arkui-chipv2labelconfig-i.md) | Yes | config of the chip label |
 
 ## activatedFontColor
 
@@ -49,6 +53,8 @@ Text font color when chip is activated.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipV2Label-public activatedFontColor?: ColorMetrics--><!--Device-ChipV2Label-public activatedFontColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +74,8 @@ Text font color.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2Label-public fontColor?: ColorMetrics--><!--Device-ChipV2Label-public fontColor?: ColorMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontFamily
@@ -85,6 +93,8 @@ Text font family.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipV2Label-public fontFamily?: string--><!--Device-ChipV2Label-public fontFamily?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,6 +114,8 @@ Text font size.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2Label-public fontSize?: LengthMetrics--><!--Device-ChipV2Label-public fontSize?: LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## labelMargin
@@ -121,6 +133,8 @@ Label margin.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipV2Label-public labelMargin?: ChipV2LabelMarginConfig--><!--Device-ChipV2Label-public labelMargin?: ChipV2LabelMarginConfig-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -140,6 +154,8 @@ Localized label margin.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2Label-public localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig--><!--Device-ChipV2Label-public localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## modifier
@@ -158,6 +174,8 @@ Modifier for the label text.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipV2Label-public modifier?: TextModifier--><!--Device-ChipV2Label-public modifier?: TextModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## text
@@ -175,6 +193,8 @@ Text content.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipV2Label-public text: string--><!--Device-ChipV2Label-public text: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,6 +4,8 @@ Defines the MediaQuery event.
 
 **Since:** 11
 
+<!--Device-unnamed-export interface MediaQueryEvent--><!--Device-unnamed-export interface MediaQueryEvent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,6 +27,8 @@ The result of match result.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-MediaQueryEvent-matches: boolean--><!--Device-MediaQueryEvent-matches: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -8,6 +8,8 @@
 
 **替代接口：** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
 
+<!--Device-unnamed-declare interface Dirent--><!--Device-unnamed-declare interface Dirent-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## isBlockDevice
@@ -23,6 +25,8 @@ isBlockDevice(): boolean
 **废弃版本：** 9
 
 **替代接口：** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+
+<!--Device-Dirent-isBlockDevice(): boolean--><!--Device-Dirent-isBlockDevice(): boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -54,6 +58,8 @@ isCharacterDevice(): boolean
 
 **替代接口：** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
 
+<!--Device-Dirent-isCharacterDevice(): boolean--><!--Device-Dirent-isCharacterDevice(): boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
@@ -83,6 +89,8 @@ isDirectory(): boolean
 **废弃版本：** 9
 
 **替代接口：** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+
+<!--Device-Dirent-isDirectory(): boolean--><!--Device-Dirent-isDirectory(): boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -114,6 +122,8 @@ isFIFO(): boolean
 
 **替代接口：** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
 
+<!--Device-Dirent-isFIFO(): boolean--><!--Device-Dirent-isFIFO(): boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
@@ -143,6 +153,8 @@ isFile(): boolean
 **废弃版本：** 9
 
 **替代接口：** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+
+<!--Device-Dirent-isFile(): boolean--><!--Device-Dirent-isFile(): boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -174,6 +186,8 @@ isSocket(): boolean
 
 **替代接口：** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
 
+<!--Device-Dirent-isSocket(): boolean--><!--Device-Dirent-isSocket(): boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
@@ -203,6 +217,8 @@ isSymbolicLink(): boolean
 **废弃版本：** 9
 
 **替代接口：** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+
+<!--Device-Dirent-isSymbolicLink(): boolean--><!--Device-Dirent-isSymbolicLink(): boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -235,6 +251,8 @@ readonly name: string
 **废弃版本：** 9
 
 **替代接口：** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+
+<!--Device-Dirent-readonly name: string--><!--Device-Dirent-readonly name: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

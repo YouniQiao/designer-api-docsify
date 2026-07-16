@@ -1,8 +1,8 @@
 # DownloadRequestOptions
 
-> **NOTE**
->
-> This API has been supported since API version 3 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API has been supported since API version 3 and deprecated since API version 9. You are advised to use  
 > [UploadConfig](arkts-basicservices-config-i.md) instead.
 
 **Since:** 3
@@ -10,6 +10,8 @@
 **Deprecated since:** 9
 
 **Substitutes:** [UploadConfig](arkts-basicservices-uploadconfig-i.md)
+
+<!--Device-unnamed-export interface DownloadRequestOptions--><!--Device-unnamed-export interface DownloadRequestOptions-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -35,6 +37,8 @@ Called when API call is complete.
 
 **Substitutes:** on
 
+<!--Device-DownloadRequestOptions-complete?: () => void--><!--Device-DownloadRequestOptions-complete?: () => void-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 ## description
@@ -43,8 +47,7 @@ Called when API call is complete.
 description?: string
 ```
 
-Download description.
-The default value is the file name.
+Download description.The default value is the file name.
 
 **Type:** string
 
@@ -53,6 +56,8 @@ The default value is the file name.
 **Deprecated since:** 9
 
 **Substitutes:** description
+
+<!--Device-DownloadRequestOptions-description?: string--><!--Device-DownloadRequestOptions-description?: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -72,6 +77,8 @@ Called when downloading fails.
 
 **Substitutes:** on
 
+<!--Device-DownloadRequestOptions-fail?: (data: any, code: number) => void--><!--Device-DownloadRequestOptions-fail?: (data: any, code: number) => void-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 ## filename
@@ -80,8 +87,7 @@ Called when downloading fails.
 filename?: string
 ```
 
-Name of the file to downloaded.
-The value is obtained from the current request or resource URL by default.
+Name of the file to downloaded.The value is obtained from the current request or resource URL by default.
 
 **Type:** string
 
@@ -90,6 +96,8 @@ The value is obtained from the current request or resource URL by default.
 **Deprecated since:** 9
 
 **Substitutes:** saveas
+
+<!--Device-DownloadRequestOptions-filename?: string--><!--Device-DownloadRequestOptions-filename?: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -109,6 +117,8 @@ Request header.
 
 **Substitutes:** headers
 
+<!--Device-DownloadRequestOptions-header?: string--><!--Device-DownloadRequestOptions-header?: string-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 ## success
@@ -127,6 +137,8 @@ Called when the files are successfully downloaded.
 
 **Substitutes:** on
 
+<!--Device-DownloadRequestOptions-success?: (data: DownloadResponse) => void--><!--Device-DownloadRequestOptions-success?: (data: DownloadResponse) => void-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 ## url
@@ -144,6 +156,8 @@ Resource URL.
 **Deprecated since:** 9
 
 **Substitutes:** url
+
+<!--Device-DownloadRequestOptions-url: string--><!--Device-DownloadRequestOptions-url: string-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 

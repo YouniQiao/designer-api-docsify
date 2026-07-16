@@ -20,13 +20,15 @@ Sets an ability that will be recovered. The ability must be a UIAbility in the c
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-appRecovery-function setRestartWant(want: Want): void--><!--Device-appRecovery-function setRestartWant(want: Want): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want of the target ability. You can set the **bundleName** and **abilityName** fields in**Want** to specify the ability. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want of the target ability. You can set the **bundleName** and **abilityName** fields in **Want** to specify the ability. |
 
 **Example**
 

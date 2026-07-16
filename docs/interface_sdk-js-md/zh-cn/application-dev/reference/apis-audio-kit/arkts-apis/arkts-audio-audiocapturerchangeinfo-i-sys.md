@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-audio-interface AudioCapturerChangeInfo--><!--Device-audio-interface AudioCapturerChangeInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## capturerState
 
@@ -15,6 +23,8 @@ readonly capturerState: AudioState
 **类型：** AudioState
 
 **起始版本：** 9
+
+<!--Device-AudioCapturerChangeInfo-readonly capturerState: AudioState--><!--Device-AudioCapturerChangeInfo-readonly capturerState: AudioState-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -31,6 +41,8 @@ Uid for audio capturer client application.
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-AudioCapturerChangeInfo-readonly clientUid: int--><!--Device-AudioCapturerChangeInfo-readonly clientUid: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 

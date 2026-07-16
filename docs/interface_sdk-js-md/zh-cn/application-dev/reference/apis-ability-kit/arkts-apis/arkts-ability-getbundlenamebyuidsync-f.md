@@ -1,5 +1,11 @@
 # getBundleNameByUidSync
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getBundleNameByUidSync
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getBundleNameByUidSync(uid: number): string
 **起始版本：** 14
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getBundleNameByUidSync(uid: int): string--><!--Device-bundleManager-function getBundleNameByUidSync(uid: int): string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

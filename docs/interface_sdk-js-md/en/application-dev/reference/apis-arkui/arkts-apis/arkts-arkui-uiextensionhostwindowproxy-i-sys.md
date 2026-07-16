@@ -4,6 +4,8 @@ Transition Controller
 
 **Since:** 11
 
+<!--Device-uiExtensionHost-interface UIExtensionHostWindowProxy--><!--Device-uiExtensionHost-interface UIExtensionHostWindowProxy-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -20,12 +22,13 @@ import { uiExtensionHost } from '@kit.ArkUI';
 createSubWindowWithOptions(name: string, subWindowOptions: window.SubWindowOptions): Promise<window.Window>
 ```
 
-Creates a subwindow for this **UIExtensionHostWindowProxy** instance. This API uses a promise to return the
-result.
+Creates a subwindow for this **UIExtensionHostWindowProxy** instance. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionHostWindowProxy-createSubWindowWithOptions(name: string, subWindowOptions: window.SubWindowOptions): Promise<window.Window>--><!--Device-UIExtensionHostWindowProxy-createSubWindowWithOptions(name: string, subWindowOptions: window.SubWindowOptions): Promise<window.Window>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,14 +45,14 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;window.Window&gt; | Promise used to return the subwindow created. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<window.Window> | Promise used to return the subwindow created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified.2. Incorrect parameters types.3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible causes:1. The window is not created or destroyed.2. Internal task error.3. The subWindow has been created and can not be created again.4. It is not allowed to create non-secure window when secure extension exists. |
 | 1300035 | Creating a subwindow is not allowed in the current context. Possible cause:1. An AgentUIExtensionAbility cannot create a subwindow. |
 
@@ -114,6 +117,10 @@ Create subwindow.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UIExtensionHostWindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,
+        followCreatorLifecycle: boolean): Promise<window.Window>--><!--Device-UIExtensionHostWindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,
+        followCreatorLifecycle: boolean): Promise<window.Window>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -124,13 +131,13 @@ Create subwindow.
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the subwindow. |
 | subWindowConfig | window.SubWindowOptions | Yes | Configuration parameters for creating the subwindow. |
-| followCreatorLifecycle | boolean | Yes | Whether the lifecycle of the subwindow follows creator ofsubwindow. If true, when the creator goes to background, the subwindow will also go to background, when thecreator returns to foreground, the subwindow will also return to foreground. If false, the subwindow willnot change when the creator goes to background or returns to foreground. |
+| followCreatorLifecycle | boolean | Yes | Whether the lifecycle of the subwindow follows creator of subwindow. If true, when the creator goes to background, the subwindow will also go to background, when the creator returns to foreground, the subwindow will also return to foreground. If false, the subwindow will not change when the creator goes to background or returns to foreground. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;window.Window&gt; | Promise used to return the subwindow. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<window.Window> | Promise used to return the subwindow. |
 
 **Error codes:**
 
@@ -194,12 +201,13 @@ export default class EntryAbility extends UIExtensionAbility {
 getWindowAvoidArea(type: window.AvoidAreaType): window.AvoidArea
 ```
 
-Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area,
-and soft keyboard area.
+Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area,and soft keyboard area.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionHostWindowProxy-getWindowAvoidArea(type: window.AvoidAreaType): window.AvoidArea--><!--Device-UIExtensionHostWindowProxy-getWindowAvoidArea(type: window.AvoidAreaType): window.AvoidArea-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -250,19 +258,19 @@ hideNonSecureWindows(shouldHide: boolean): Promise<void>
 
 Sets whether to hide non-secure windows. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - A non-secure window refers to any window that may obstruct the
-> [EmbeddedComponent](./@internal/component/ets/embedded_component) or
-> [UIExtensionComponent](./@internal/component/ets/ui_extension_component), such as global floating windows
-> , host subwindows, and dialog box windows created by the host application (excluding windows of these types
-> created by system applications).
->
-> - When using the **EmbeddedComponent** or **UIExtensionComponent** to display sensitive information, call this
-> API to hide non-secure windows and prevent information obstruction. Hidden non-secure windows will reappear
-> when the **EmbeddedComponent** or **UIExtensionComponent** is hidden or destroyed.
->
-> - On PCs/2-in-1 devices, global floating windows within non-secure windows remain visible when
+> **NOTE**  
+>  
+> - A non-secure window refers to any window that may obstruct the  
+> [EmbeddedComponent](./@internal/component/ets/embedded_component) or  
+> [UIExtensionComponent](./@internal/component/ets/ui_extension_component), such as global floating windows  
+> , host subwindows, and dialog box windows created by the host application (excluding windows of these types  
+> created by system applications).  
+>  
+> - When using the **EmbeddedComponent** or **UIExtensionComponent** to display sensitive information, call this  
+> API to hide non-secure windows and prevent information obstruction. Hidden non-secure windows will reappear  
+> when the **EmbeddedComponent** or **UIExtensionComponent** is hidden or destroyed.  
+>  
+> - On PCs/2-in-1 devices, global floating windows within non-secure windows remain visible when  
 > **hideNonSecureWindows(true)** is called.
 
 **Since:** 11
@@ -272,6 +280,8 @@ Sets whether to hide non-secure windows. This API uses a promise to return the r
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UIExtensionHostWindowProxy-hideNonSecureWindows(shouldHide: boolean): Promise<void>--><!--Device-UIExtensionHostWindowProxy-hideNonSecureWindows(shouldHide: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -280,19 +290,19 @@ Sets whether to hide non-secure windows. This API uses a promise to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shouldHide | boolean | Yes | Whether to hide insecure windows. The value **true** means to hide insecurewindows, and **false** means the opposite. |
+| shouldHide | boolean | Yes | Whether to hide insecure windows. The value **true** means to hide insecure windows, and **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified.2. Incorrect parameters types.3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes:1. Permission denied. Interface caller does not have permission "ohos.permission.ALLOW_SHOW_NON_SECURE_WINDOWS".2. The UIExtension window proxy is abnormal.<br>**Applicable version:** 12 and later |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 12 and later |
@@ -334,19 +344,20 @@ export default class EntryAbility extends UIExtensionAbility {
 hidePrivacyContentForHost(shouldHide: boolean): Promise<void>
 ```
 
-Sets whether to enable privacy protection for the UIExtension component during non-system screenshots. This API
-uses a promise to return the result.
+Sets whether to enable privacy protection for the UIExtension component during non-system screenshots. This API uses a promise to return the result.
 
-> **NOTE**
->
-> When privacy protection is enabled, neither
-> [window.snapshot](@ohos.window:window.snapshot) nor
-> [UIContext.getComponentSnapshot](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getcomponentsnapshot12)
+> **NOTE**  
+>  
+> When privacy protection is enabled, neither  
+> [window.snapshot](@ohos.window:window.snapshot) nor  
+> [UIContext.getComponentSnapshot](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getcomponentsnapshot12)  
 > will capture the content of the current component (excluding subwindows created under this component).
 
 **Since:** 13
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionHostWindowProxy-hidePrivacyContentForHost(shouldHide: boolean): Promise<void>--><!--Device-UIExtensionHostWindowProxy-hidePrivacyContentForHost(shouldHide: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -356,13 +367,13 @@ uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shouldHide | boolean | Yes | Whether to enable privacy protection for screenshots. The value **true** means toenable privacy protection for screenshots, and **false** means the opposite. |
+| shouldHide | boolean | Yes | Whether to enable privacy protection for screenshots. The value **true** means to enable privacy protection for screenshots, and **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -405,6 +416,8 @@ Unsubscribes from events of system avoidance area changes.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UIExtensionHostWindowProxy-off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void--><!--Device-UIExtensionHostWindowProxy-off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -413,8 +426,8 @@ Unsubscribes from events of system avoidance area changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'avoidAreaChange' | Yes | Event type. The value is fixed at **'avoidAreaChange'**, indicating the eventof changes to the area where the window cannot be displayed. |
-| callback | Callback&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | No |  |
+| type | 'avoidAreaChange' | Yes | Event type. The value is fixed at **'avoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<{ type: window.AvoidAreaType, area: window.AvoidArea }> | No |  |
 
 **Error codes:**
 
@@ -451,6 +464,8 @@ Unsubscribes from size change events of the component (**EmbeddedComponent** or 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UIExtensionHostWindowProxy-off(type: 'windowSizeChange', callback?: Callback<window.Size>): void--><!--Device-UIExtensionHostWindowProxy-off(type: 'windowSizeChange', callback?: Callback<window.Size>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -459,8 +474,8 @@ Unsubscribes from size change events of the component (**EmbeddedComponent** or 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowSizeChange' | Yes | Event type. The value is fixed at **'windowSizeChange'**, indicating thecomponent (**EmbeddedComponent** or **UIExtensionComponent**) size change events. |
-| callback | Callback&lt;window.Size&gt; | No | Callback used to return the size of the current component (**EmbeddedComponent** or **UIExtensionComponent**). If a value is passed in, the corresponding subscriptionis canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'windowSizeChange' | Yes | Event type. The value is fixed at **'windowSizeChange'**, indicating the component (**EmbeddedComponent** or **UIExtensionComponent**) size change events. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<window.Size> | No | Callback used to return the size of the current component (**EmbeddedComponent** or **UIExtensionComponent**). If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
@@ -497,6 +512,8 @@ Subscribes to events of system avoidance area changes.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UIExtensionHostWindowProxy-on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void--><!--Device-UIExtensionHostWindowProxy-on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -505,8 +522,8 @@ Subscribes to events of system avoidance area changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'avoidAreaChange' | Yes | Event type. The value is fixed at **'avoidAreaChange'**, indicating the eventof changes to the area where the window cannot be displayed. |
-| callback | Callback&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | Yes |  |
+| type | 'avoidAreaChange' | Yes | Event type. The value is fixed at **'avoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<{ type: window.AvoidAreaType, area: window.AvoidArea }> | Yes |  |
 
 **Error codes:**
 
@@ -545,6 +562,8 @@ Subscribes to size change events of the component (**EmbeddedComponent** or **UI
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UIExtensionHostWindowProxy-on(type: 'windowSizeChange', callback: Callback<window.Size>): void--><!--Device-UIExtensionHostWindowProxy-on(type: 'windowSizeChange', callback: Callback<window.Size>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -553,8 +572,8 @@ Subscribes to size change events of the component (**EmbeddedComponent** or **UI
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowSizeChange' | Yes | Event type. The value is fixed at **'windowSizeChange'**, indicating thecomponent (**EmbeddedComponent** or **UIExtensionComponent**) size change events. |
-| callback | Callback&lt;window.Size&gt; | Yes | Callback function that receives the current component size as theinput parameter. |
+| type | 'windowSizeChange' | Yes | Event type. The value is fixed at **'windowSizeChange'**, indicating the component (**EmbeddedComponent** or **UIExtensionComponent**) size change events. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<window.Size> | Yes | Callback function that receives the current component size as the input parameter. |
 
 **Error codes:**
 
@@ -589,14 +608,16 @@ setWaterMarkFlag(enable: boolean): Promise<void>
 
 Adds or deletes the watermark flag for this window. This API uses a promise to return the result.
 
-> **NOTE**
->
-> With the watermark flag added, the watermark is applied on the full screen when the window is in the foreground
+> **NOTE**  
+>  
+> With the watermark flag added, the watermark is applied on the full screen when the window is in the foreground  
 > , regardless of whether the window is displayed in full screen, floating, and split screen mode.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionHostWindowProxy-setWaterMarkFlag(enable: boolean): Promise<void>--><!--Device-UIExtensionHostWindowProxy-setWaterMarkFlag(enable: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -612,7 +633,7 @@ Adds or deletes the watermark flag for this window. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -660,17 +681,15 @@ properties: UIExtensionHostWindowProxyProperties
 
 Information about the host application window and the **UIExtensionComponent**.
 
-Note: Due to architecture restrictions, avoid obtaining the value in
-[onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensionability-c.md#onsessioncreate-1). Instead, when
-possible, obtain the value after receiving the
-[on('windowSizeChange')](arkts-arkui-uiextensionhostwindowproxy-i-sys.md#on-2)
-callback.
+Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensionability-c.md#onsessioncreate-1). Instead, when possible, obtain the value after receiving the [on('windowSizeChange')](arkts-arkui-uiextensionhostwindowproxy-i-sys.md#on-2)callback.
 
 **Type:** UIExtensionHostWindowProxyProperties
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionHostWindowProxy-properties: UIExtensionHostWindowProxyProperties--><!--Device-UIExtensionHostWindowProxy-properties: UIExtensionHostWindowProxyProperties-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

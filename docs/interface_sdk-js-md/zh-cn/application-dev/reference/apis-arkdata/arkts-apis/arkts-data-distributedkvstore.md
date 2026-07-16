@@ -4,16 +4,23 @@
 
 该模块提供以下常用功能：
 
-- [KVManager](arkts-arkdata-kvmanager-i.md)：分布式键值数据库管理实例，用于获取数据库的相关信息。
-- [KVStoreResultSet](arkts-arkdata-kvstoreresultset-i.md)：提供获取数据库结果集的相关方法，包括查询和移动数据读取位置等。
-- [Query](arkts-arkdata-query-c.md)：使用谓词表示数据库查询，提供创建Query实例、查询数据库中的数据和添加谓词的方法。
-- [SingleKVStore](arkts-arkdata-singlekvstore-i.md)：单版本分布式键值数据库，不对数据所属设备进行区分，提供查询数据和端端同步数据的方法。
-- [DeviceKVStore](arkts-arkdata-devicekvstore-i.md)：设备协同数据库，继承自
-[SingleKVStore](arkts-arkdata-singlekvstore-i.md)，以设备维度对数据进行区分，提供查询数据和端端同步数据的方法。
+- [KVManager](arkts-arkdata-kvmanager-i.md)：分布式键值数据库管理实例，用于获取数据库的相关信息。  
+- [KVStoreResultSet](arkts-arkdata-kvstoreresultset-i.md)：提供获取数据库结果集的相关方法，包括查询和移动数据读取位置等。  
+- [Query](arkts-arkdata-query-c.md)：使用谓词表示数据库查询，提供创建Query实例、查询数据库中的数据和添加谓词的方法。  
+- [SingleKVStore](arkts-arkdata-singlekvstore-i.md)：单版本分布式键值数据库，不对数据所属设备进行区分，提供查询数据和端端同步数据的方法。  
+- [DeviceKVStore](arkts-arkdata-devicekvstore-i.md)：设备协同数据库，继承自[SingleKVStore](arkts-arkdata-singlekvstore-i.md)，以设备维度对数据进行区分，提供查询数据和端端同步数据的方法。
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace distributedKVStore--><!--Device-unnamed-declare namespace distributedKVStore-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
+## 导入模块
+
+```TypeScript
+import { distributedKVStore } from '@kit.ArkData';
+```
 
 ## 汇总
 
@@ -61,7 +68,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [KVStoreType](arkts-arkdata-kvstoretype-e.md) | 分布式键值数据库类型枚举。 |
-| [SecurityLevel](arkts-arkdata-securitylevel-e.md) | 数据库的安全级别枚举。@link distributedKVStore.KVManager.getKVStore&lt;T&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;)}&gt; 接口重新打开数据库。&gt;&gt; * 该操作仅支持升级，例如从S2到S3，不支持降级，例如从S3到S2。 |
+| [SecurityLevel](arkts-arkdata-securitylevel-e.md) | 数据库的安全级别枚举。 |
 | [SubscribeType](arkts-arkdata-subscribetype-e.md) | 订阅类型枚举。 |
 | [SyncMode](arkts-arkdata-syncmode-e.md) | 同步模式枚举。 |
 | [ValueType](arkts-arkdata-valuetype-e.md) | 数据类型枚举。 |

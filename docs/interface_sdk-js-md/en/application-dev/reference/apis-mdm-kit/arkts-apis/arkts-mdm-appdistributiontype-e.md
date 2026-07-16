@@ -1,9 +1,10 @@
 # AppDistributionType
 
-Defines the distribution type of the application signing certificate. For details, please refer to the
-**appDistributionType** attribute of [ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md).
+Defines the distribution type of the application signing certificate. For details, please refer to the **appDistributionType** attribute of [ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md).
 
 **Since:** 20
+
+<!--Device-bundleManager-enum AppDistributionType--><!--Device-bundleManager-enum AppDistributionType-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -19,6 +20,8 @@ Application installed from AppGallery.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AppDistributionType-APP_GALLERY = 1--><!--Device-AppDistributionType-APP_GALLERY = 1-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## ENTERPRISE
@@ -32,6 +35,8 @@ Enterprise application.
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AppDistributionType-ENTERPRISE = 2--><!--Device-AppDistributionType-ENTERPRISE = 2-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -47,6 +52,8 @@ Common enterprise application.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AppDistributionType-ENTERPRISE_NORMAL = 3--><!--Device-AppDistributionType-ENTERPRISE_NORMAL = 3-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## ENTERPRISE_MDM
@@ -60,6 +67,8 @@ Enterprise MDM application.
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AppDistributionType-ENTERPRISE_MDM = 4--><!--Device-AppDistributionType-ENTERPRISE_MDM = 4-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -75,6 +84,8 @@ Application under internal testing of AppGallery.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AppDistributionType-INTERNALTESTING = 5--><!--Device-AppDistributionType-INTERNALTESTING = 5-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## CROWDTESTING
@@ -88,6 +99,8 @@ Crowdtesting application.
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AppDistributionType-CROWDTESTING = 6--><!--Device-AppDistributionType-CROWDTESTING = 6-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

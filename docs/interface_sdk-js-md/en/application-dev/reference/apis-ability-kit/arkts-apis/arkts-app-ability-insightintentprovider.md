@@ -4,6 +4,8 @@ Insight intent Provider.
 
 **Since:** 23
 
+<!--Device-unnamed-declare namespace insightIntentProvider--><!--Device-unnamed-declare namespace insightIntentProvider-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import

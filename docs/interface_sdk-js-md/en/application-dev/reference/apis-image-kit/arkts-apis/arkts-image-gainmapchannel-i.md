@@ -4,6 +4,8 @@ Describes the data content of a single channel of the gain map. For details, see
 
 **Since:** 12
 
+<!--Device-image-interface GainmapChannel--><!--Device-image-interface GainmapChannel-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ The per-component alternate offset.
 
 **Since:** 12
 
+<!--Device-GainmapChannel-alternateOffset: double--><!--Device-GainmapChannel-alternateOffset: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## baseOffset
@@ -37,6 +41,8 @@ The per-component baseline offset.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-GainmapChannel-baseOffset: double--><!--Device-GainmapChannel-baseOffset: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -52,6 +58,8 @@ The per-component max gain map values.
 
 **Since:** 12
 
+<!--Device-GainmapChannel-gainmapMax: double--><!--Device-GainmapChannel-gainmapMax: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gainmapMin
@@ -66,6 +74,8 @@ The per-component min gain map values.
 
 **Since:** 12
 
+<!--Device-GainmapChannel-gainmapMin: double--><!--Device-GainmapChannel-gainmapMin: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gamma
@@ -79,6 +89,8 @@ The per-component gamma values.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-GainmapChannel-gamma: double--><!--Device-GainmapChannel-gamma: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

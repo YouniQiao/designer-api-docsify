@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-usageStatistics-export enum GroupType--><!--Device-usageStatistics-export enum GroupType-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **系统接口：** 此接口为系统接口。
@@ -17,6 +19,8 @@ ALIVE_GROUP = 10
 活跃分组。
 
 **起始版本：** 9
+
+<!--Device-GroupType-ALIVE_GROUP = 10--><!--Device-GroupType-ALIVE_GROUP = 10-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -32,6 +36,8 @@ DAILY_GROUP = 20
 
 **起始版本：** 9
 
+<!--Device-GroupType-DAILY_GROUP = 20--><!--Device-GroupType-DAILY_GROUP = 20-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +51,8 @@ FIXED_GROUP = 30
 常用分组，定期使用，但不是每天使用。
 
 **起始版本：** 9
+
+<!--Device-GroupType-FIXED_GROUP = 30--><!--Device-GroupType-FIXED_GROUP = 30-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -60,6 +68,8 @@ RARE_GROUP = 40
 
 **起始版本：** 9
 
+<!--Device-GroupType-RARE_GROUP = 40--><!--Device-GroupType-RARE_GROUP = 40-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **系统接口：** 此接口为系统接口。
@@ -74,6 +84,8 @@ LIMITED_GROUP = 50
 
 **起始版本：** 9
 
+<!--Device-GroupType-LIMITED_GROUP = 50--><!--Device-GroupType-LIMITED_GROUP = 50-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **系统接口：** 此接口为系统接口。
@@ -87,6 +99,8 @@ NEVER_GROUP = 60
 从未使用分组，安装但是从未运行过。
 
 **起始版本：** 9
+
+<!--Device-GroupType-NEVER_GROUP = 60--><!--Device-GroupType-NEVER_GROUP = 60-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 

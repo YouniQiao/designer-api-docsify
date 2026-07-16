@@ -4,6 +4,8 @@ Defines the ParticleOptions Interface.
 
 **Since:** 10
 
+<!--Device-unnamed-interface ParticleOptions<  PARTICLE extends ParticleType,  COLOR_UPDATER extends ParticleUpdater,  OPACITY_UPDATER extends ParticleUpdater,  SCALE_UPDATER extends ParticleUpdater,  ACC_SPEED_UPDATER extends ParticleUpdater,  ACC_ANGLE_UPDATER extends ParticleUpdater,  SPIN_UPDATER extends ParticleUpdater>--><!--Device-unnamed-interface ParticleOptions<  PARTICLE extends ParticleType,  COLOR_UPDATER extends ParticleUpdater,  OPACITY_UPDATER extends ParticleUpdater,  SCALE_UPDATER extends ParticleUpdater,  ACC_SPEED_UPDATER extends ParticleUpdater,  ACC_ANGLE_UPDATER extends ParticleUpdater,  SPIN_UPDATER extends ParticleUpdater>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## acceleration
@@ -30,6 +32,8 @@ Default value: **{ speed:{range:[0.0,0.0]},angle:{range:[0.0,0.0]} }**
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ParticleOptions-acceleration?: AccelerationOptions<ACC_SPEED_UPDATER, ACC_ANGLE_UPDATER>--><!--Device-ParticleOptions-acceleration?: AccelerationOptions<ACC_SPEED_UPDATER, ACC_ANGLE_UPDATER>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## color
@@ -54,6 +58,8 @@ Default value: **{ range:[Color.White,Color.White] }.** Colors cannot be set for
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ParticleOptions-color?: ParticleColorPropertyOptions<COLOR_UPDATER>--><!--Device-ParticleOptions-color?: ParticleColorPropertyOptions<COLOR_UPDATER>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## emitter
@@ -71,6 +77,8 @@ Particle emitter.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ParticleOptions-emitter: EmitterOptions<PARTICLE>--><!--Device-ParticleOptions-emitter: EmitterOptions<PARTICLE>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,6 +102,8 @@ Default value: **{ range:[1.0,1.0] }**
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ParticleOptions-opacity?: ParticlePropertyOptions<number, OPACITY_UPDATER>--><!--Device-ParticleOptions-opacity?: ParticlePropertyOptions<number, OPACITY_UPDATER>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## scale
@@ -115,6 +125,8 @@ Default value: **{ range:[1.0,1.0] }**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ParticleOptions-scale?: ParticlePropertyOptions<number, SCALE_UPDATER>--><!--Device-ParticleOptions-scale?: ParticlePropertyOptions<number, SCALE_UPDATER>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -140,6 +152,8 @@ Direction: A positive number indicates clockwise spinning, and a negative number
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ParticleOptions-spin?: ParticlePropertyOptions<number, SPIN_UPDATER>--><!--Device-ParticleOptions-spin?: ParticlePropertyOptions<number, SPIN_UPDATER>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## velocity
@@ -152,9 +166,7 @@ Particle velocity.
 
 **NOTE**
 
-**speed** indicates the time rate at which the particle moves. **angle** indicates the direction (in angles) in
-which the particle moves, with the geometric center of the element as the coordinate origin and the horizontal
-direction as the x-axis. A positive number indicates clockwise rotation.
+**speed** indicates the time rate at which the particle moves. **angle** indicates the direction (in angles) in which the particle moves, with the geometric center of the element as the coordinate origin and the horizontal direction as the x-axis. A positive number indicates clockwise rotation.
 
 Default value: **{speed: [0.0,0.0],angle: [0.0,0.0] }**
 
@@ -167,6 +179,8 @@ Default value: **{speed: [0.0,0.0],angle: [0.0,0.0] }**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ParticleOptions-velocity?: VelocityOptions--><!--Device-ParticleOptions-velocity?: VelocityOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

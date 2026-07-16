@@ -1,12 +1,12 @@
 # DialogCustomOptions
 
-Options for the custom-style dialog.
-The dialog content is provided as the first parameter of present() method,
-not inside this options object.
+Options for the custom-style dialog.The dialog content is provided as the first parameter of present() method,not inside this options object.
 
 **Inheritance/Implementation:** DialogCustomOptions extends [DialogBaseOptions](arkts-arkui-dialogbaseoptions-i.md)
 
 **Since:** 26.1.0
+
+<!--Device-dialog-declare interface DialogCustomOptions extends DialogBaseOptions--><!--Device-dialog-declare interface DialogCustomOptions extends DialogBaseOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,6 +33,8 @@ Whether to enable the custom style.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-DialogCustomOptions-customStyle?: boolean--><!--Device-DialogCustomOptions-customStyle?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

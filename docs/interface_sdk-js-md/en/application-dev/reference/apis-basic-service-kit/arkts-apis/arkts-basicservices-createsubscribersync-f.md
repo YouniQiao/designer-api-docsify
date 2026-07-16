@@ -18,19 +18,21 @@ Creates a subscriber. The API returns the result synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-commonEventManager-function createSubscriberSync(subscribeInfo: CommonEventSubscribeInfo): CommonEventSubscriber--><!--Device-commonEventManager-function createSubscriberSync(subscribeInfo: CommonEventSubscribeInfo): CommonEventSubscriber-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeInfo | CommonEventSubscribeInfo | Yes | Subscriber information. |
+| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-t.md) | Yes | Subscriber information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CommonEventSubscriber | Promise used to return the subscriber object. |
+| [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-i.md) | Promise used to return the subscriber object. |
 
 **Error codes:**
 

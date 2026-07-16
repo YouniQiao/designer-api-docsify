@@ -1,5 +1,11 @@
 # setLockState（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## setLockState
 
 ```TypeScript
@@ -12,6 +18,8 @@ Set the lock status of the SIM card in the specified slot.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function setLockState(slotId: int, options: LockInfo, callback: AsyncCallback<LockStatusResponse>): void--><!--Device-sim-function setLockState(slotId: int, options: LockInfo, callback: AsyncCallback<LockStatusResponse>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -21,8 +29,8 @@ Set the lock status of the SIM card in the specified slot.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| options | LockInfo | 是 | Indicates lock information. |
-| callback | AsyncCallback&lt;LockStatusResponse&gt; | 是 | Indicates the callback for gettingthe response to obtain the SIM card lock status of the specified card slot. |
+| options | [LockInfo](../../apis-arkdata/arkts-apis/arkts-arkdata-lockinfo-i-sys.md) | 是 | Indicates lock information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<LockStatusResponse> | 是 | Indicates the callback for getting the response to obtain the SIM card lock status of the specified card slot. |
 
 **错误码：**
 
@@ -68,6 +76,8 @@ Set the lock status of the SIM card in the specified slot.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function setLockState(slotId: int, options: LockInfo): Promise<LockStatusResponse>--><!--Device-sim-function setLockState(slotId: int, options: LockInfo): Promise<LockStatusResponse>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -77,13 +87,13 @@ Set the lock status of the SIM card in the specified slot.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| options | LockInfo | 是 | Indicates lock information. |
+| options | [LockInfo](../../apis-arkdata/arkts-apis/arkts-arkdata-lockinfo-i-sys.md) | 是 | Indicates lock information. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;LockStatusResponse&gt; | Returns the response to obtainthe SIM card lock status of the specified card slot. |
+| Promise<LockStatusResponse> | Returns the response to obtain the SIM card lock status of the specified card slot. |
 
 **错误码：**
 

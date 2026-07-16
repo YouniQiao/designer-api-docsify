@@ -4,6 +4,8 @@ Describes the parameters used for creating a child window.
 
 **Since:** 11
 
+<!--Device-window-interface SubWindowOptions--><!--Device-window-interface SubWindowOptions-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
@@ -23,6 +25,8 @@ Whether the child window is topmost. **true** if topmost, **false** otherwise. T
 **Type:** boolean
 
 **Since:** 12
+
+<!--Device-SubWindowOptions-isTopmost?: boolean--><!--Device-SubWindowOptions-isTopmost?: boolean-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

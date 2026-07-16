@@ -4,6 +4,8 @@ Device Information Definition
 
 **Since:** 10
 
+<!--Device-avSession-interface DeviceInfo--><!--Device-avSession-interface DeviceInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Audio capabilities supported by the device.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-DeviceInfo-audioCapabilities?: AudioCapabilities--><!--Device-DeviceInfo-audioCapabilities?: AudioCapabilities-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## castCategory
@@ -42,6 +46,8 @@ The playback type supported by the device. See {@link AVCastCategory}
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DeviceInfo-castCategory: AVCastCategory--><!--Device-DeviceInfo-castCategory: AVCastCategory-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## deviceId
@@ -50,14 +56,15 @@ The playback type supported by the device. See {@link AVCastCategory}
 deviceId: string
 ```
 
-Audio device id.The length of the audioDeviceId array is greater than 1
-if output to multiple devices at the same time.
+Audio device id.The length of the audioDeviceId array is greater than 1if output to multiple devices at the same time.
 
 **Type:** string
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DeviceInfo-deviceId: string--><!--Device-DeviceInfo-deviceId: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -67,14 +74,15 @@ if output to multiple devices at the same time.
 deviceName: string
 ```
 
-Device name. The length of the deviceName array is greater than 1
-if output to multiple devices at the same time.
+Device name. The length of the deviceName array is greater than 1if output to multiple devices at the same time.
 
 **Type:** string
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DeviceInfo-deviceName: string--><!--Device-DeviceInfo-deviceName: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -92,6 +100,8 @@ device type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DeviceInfo-deviceType: DeviceType--><!--Device-DeviceInfo-deviceType: DeviceType-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## manufacturer
@@ -107,6 +117,8 @@ Device manufacturer.
 **Since:** 13
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-DeviceInfo-manufacturer?: string--><!--Device-DeviceInfo-manufacturer?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -124,6 +136,8 @@ Device model name.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-DeviceInfo-modelName?: string--><!--Device-DeviceInfo-modelName?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## supportedDrmCapabilities
@@ -139,6 +153,8 @@ The drm capability supported by current device, each drm is represented by uuid.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DeviceInfo-supportedDrmCapabilities?: Array<string>--><!--Device-DeviceInfo-supportedDrmCapabilities?: Array<string>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -156,6 +172,8 @@ The protocols supported by current device, can be union of {@link ProtocolType}.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DeviceInfo-supportedProtocols?: int--><!--Device-DeviceInfo-supportedProtocols?: int-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## supportedPullClients
@@ -171,6 +189,8 @@ Whether the device supports pull-end playback, including a collection of pull-en
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-DeviceInfo-supportedPullClients?: Array<int>--><!--Device-DeviceInfo-supportedPullClients?: Array<int>-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 

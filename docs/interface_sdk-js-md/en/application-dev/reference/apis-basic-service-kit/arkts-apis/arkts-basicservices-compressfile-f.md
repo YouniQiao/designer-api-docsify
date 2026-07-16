@@ -14,14 +14,16 @@ function compressFile(inFile: string, outFile: string, options: Options, callbac
 
 Compresses a file. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive
+> **NOTE**  
+>  
+> To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive  
 > periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-zlib-function compressFile(inFile: string, outFile: string, options: Options, callback: AsyncCallback<void>): void--><!--Device-zlib-function compressFile(inFile: string, outFile: string, options: Options, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -29,10 +31,10 @@ Compresses a file. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inFile | string | Yes | Path of the folder or file to compress. The path must be an application sandbox path,which can be obtained from the context. For details about the context, see [FA Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md) and[Stage Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md). The folder to compress cannot be empty. Otherwise, an error will bereported when[decompressFile](zlib.decompressFile(inFile: string, outFile: string, options: Options,callback: AsyncCallback&lt;void&gt;)) is used to decompress the folder. |
-| outFile | string | Yes | Path of the compressed file. When multiple threads compress files at the same time, thevalues of **outFile** must be different. |
-| options | Options | Yes | Compression parameters. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**null** is returned; otherwise, a specific error code is returned. |
+| inFile | string | Yes | Path of the folder or file to compress. The path must be an application sandbox path,which can be obtained from the context. For details about the context, see [FA Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md) and [Stage Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md). The folder to compress cannot be empty. Otherwise, an error will be reported when [decompressFile](arkts-basicservices-decompressfile-f.md#decompressfile-1) is used to decompress the folder. |
+| outFile | string | Yes | Path of the compressed file. When multiple threads compress files at the same time, the values of **outFile** must be different. |
+| options | [Options](arkts-basicservices-options-i.md) | Yes | Compression parameters. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**null** is returned; otherwise, a specific error code is returned. |
 
 **Error codes:**
 
@@ -81,14 +83,16 @@ function compressFile(inFile: string, outFile: string, options: Options): Promis
 
 Compresses a file. This API uses a promise to return the result.
 
-> **NOTE**
->
-> To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive
+> **NOTE**  
+>  
+> To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive  
 > periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-zlib-function compressFile(inFile: string, outFile: string, options: Options): Promise<void>--><!--Device-zlib-function compressFile(inFile: string, outFile: string, options: Options): Promise<void>-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -96,15 +100,15 @@ Compresses a file. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inFile | string | Yes | Path of the folder or file to compress. The path must be an application sandbox path,which can be obtained from the context. For details about the context, see [FA Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md) and[Stage Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md). The folder to compress cannot be empty. Otherwise, an error will bereported when[decompressFile](zlib.decompressFile(inFile: string, outFile: string, options: Options,callback: AsyncCallback&lt;void&gt;)) is used to decompress the folder. |
-| outFile | string | Yes | Path of the compressed file. When multiple threads compress files at the same time, thevalues of **outFile** must be different. |
-| options | Options | Yes | Compression parameters. |
+| inFile | string | Yes | Path of the folder or file to compress. The path must be an application sandbox path,which can be obtained from the context. For details about the context, see [FA Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md) and [Stage Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md). The folder to compress cannot be empty. Otherwise, an error will be reported when [decompressFile](arkts-basicservices-decompressfile-f.md#decompressfile-1) is used to decompress the folder. |
+| outFile | string | Yes | Path of the compressed file. When multiple threads compress files at the same time, the values of **outFile** must be different. |
+| options | [Options](arkts-basicservices-options-i.md) | Yes | Compression parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Gzip header information passed to and from zlib routines.
 
 **Since:** 12
 
+<!--Device-zlib-interface GzHeader--><!--Device-zlib-interface GzHeader-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Comment.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GzHeader-comment?: ArrayBuffer--><!--Device-GzHeader-comment?: ArrayBuffer-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 ## done
@@ -41,6 +45,8 @@ Returns **True** after reading the gzip file header.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GzHeader-done?: boolean--><!--Device-GzHeader-done?: boolean-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -58,6 +64,8 @@ Extra field.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GzHeader-extra?: ArrayBuffer--><!--Device-GzHeader-extra?: ArrayBuffer-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 ## extraLen
@@ -73,6 +81,8 @@ Length of the extra field.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GzHeader-extraLen?: int--><!--Device-GzHeader-extraLen?: int-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -90,6 +100,8 @@ Returns **True** if the **crc** header exists.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GzHeader-hcrc?: boolean--><!--Device-GzHeader-hcrc?: boolean-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 ## isText
@@ -105,6 +117,8 @@ Returns **True** if the compressed data is considered text.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GzHeader-isText?: boolean--><!--Device-GzHeader-isText?: boolean-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -122,6 +136,8 @@ File name.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GzHeader-name?: ArrayBuffer--><!--Device-GzHeader-name?: ArrayBuffer-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 ## os
@@ -137,6 +153,8 @@ Operating system.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GzHeader-os?: int--><!--Device-GzHeader-os?: int-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -154,6 +172,8 @@ Modification time.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GzHeader-time?: long--><!--Device-GzHeader-time?: long-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 ## xflags
@@ -169,6 +189,8 @@ Extra flag.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GzHeader-xflags?: int--><!--Device-GzHeader-xflags?: int-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 

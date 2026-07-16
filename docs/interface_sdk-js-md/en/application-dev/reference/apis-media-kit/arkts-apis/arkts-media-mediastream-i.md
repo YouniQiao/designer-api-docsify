@@ -4,6 +4,8 @@ Media Stream. AVPlayer use this for mediaData access, current version only suppo
 
 **Since:** 19
 
+<!--Device-media-interface MediaStream--><!--Device-media-interface MediaStream-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ biterate of this mediaStream.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-MediaStream-bitrate: int--><!--Device-MediaStream-bitrate: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## height
@@ -41,6 +45,8 @@ video height.
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-MediaStream-height: int--><!--Device-MediaStream-height: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -58,6 +64,8 @@ url for this mediaStream
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-MediaStream-url: string--><!--Device-MediaStream-url: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## width
@@ -73,6 +81,8 @@ video width.
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-MediaStream-width: int--><!--Device-MediaStream-width: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 

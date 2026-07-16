@@ -1,20 +1,26 @@
 # checkPermissionInUse（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+```
+
 ## checkPermissionInUse
 
 ```TypeScript
 function checkPermissionInUse(permissionName: Permissions): boolean
 ```
 
-查询指定敏感权限是否正在被使用，可用于权限管理界面展示权限实时使用状态场景。
-判断依据为当前是否存在通过[startUsingPermission](arkts-ability-startusingpermission-f-sys.md#startusingpermission-1)
-标记开始使用且尚未通过[stopUsingPermission](arkts-ability-stopusingpermission-f-sys.md#stopusingpermission-1)标记停止使用的活跃调用。
+查询指定敏感权限是否正在被使用，可用于权限管理界面展示权限实时使用状态场景。判断依据为当前是否存在通过[startUsingPermission](arkts-ability-startusingpermission-f-sys.md#startusingpermission-1)标记开始使用且尚未通过[stopUsingPermission](arkts-ability-stopusingpermission-f-sys.md#stopusingpermission-1)标记停止使用的活跃调用。
 
 **起始版本：** 26.0.0
 
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-privacyManager-function checkPermissionInUse(permissionName: Permissions): boolean--><!--Device-privacyManager-function checkPermissionInUse(permissionName: Permissions): boolean-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

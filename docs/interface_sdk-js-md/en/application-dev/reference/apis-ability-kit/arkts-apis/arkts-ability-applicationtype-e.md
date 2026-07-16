@@ -4,6 +4,8 @@ Enumerates the default application types.
 
 **Since:** 9
 
+<!--Device-defaultAppManager-export enum ApplicationType--><!--Device-defaultAppManager-export enum ApplicationType-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
 ## BROWSER
@@ -15,6 +17,8 @@ BROWSER = "Web Browser"
 Default browser.
 
 **Since:** 9
+
+<!--Device-ApplicationType-BROWSER = "Web Browser"--><!--Device-ApplicationType-BROWSER = "Web Browser"-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
@@ -28,6 +32,8 @@ Default image viewer.
 
 **Since:** 9
 
+<!--Device-ApplicationType-IMAGE = "Image Gallery"--><!--Device-ApplicationType-IMAGE = "Image Gallery"-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
 ## AUDIO
@@ -39,6 +45,8 @@ AUDIO = "Audio Player"
 Default audio player.
 
 **Since:** 9
+
+<!--Device-ApplicationType-AUDIO = "Audio Player"--><!--Device-ApplicationType-AUDIO = "Audio Player"-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
@@ -52,6 +60,8 @@ Default video player.
 
 **Since:** 9
 
+<!--Device-ApplicationType-VIDEO = "Video Player"--><!--Device-ApplicationType-VIDEO = "Video Player"-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
 ## PDF
@@ -63,6 +73,8 @@ PDF = "PDF Viewer"
 Default PDF reader.
 
 **Since:** 9
+
+<!--Device-ApplicationType-PDF = "PDF Viewer"--><!--Device-ApplicationType-PDF = "PDF Viewer"-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
@@ -76,6 +88,8 @@ Default Word viewer.
 
 **Since:** 9
 
+<!--Device-ApplicationType-WORD = "Word Viewer"--><!--Device-ApplicationType-WORD = "Word Viewer"-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
 ## EXCEL
@@ -87,6 +101,8 @@ EXCEL = "Excel Viewer"
 Default Excel viewer.
 
 **Since:** 9
+
+<!--Device-ApplicationType-EXCEL = "Excel Viewer"--><!--Device-ApplicationType-EXCEL = "Excel Viewer"-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
@@ -100,6 +116,8 @@ Default PowerPoint viewer.
 
 **Since:** 9
 
+<!--Device-ApplicationType-PPT = "PPT Viewer"--><!--Device-ApplicationType-PPT = "PPT Viewer"-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
 ## EMAIL
@@ -111,6 +129,8 @@ EMAIL = 'Email'
 Default email.
 
 **Since:** 12
+
+<!--Device-ApplicationType-EMAIL = 'Email'--><!--Device-ApplicationType-EMAIL = 'Email'-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 

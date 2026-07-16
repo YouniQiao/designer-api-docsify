@@ -4,6 +4,8 @@ Provides VPN related interfaces.
 
 **Since:** 10
 
+<!--Device-unnamed-declare namespace vpn--><!--Device-unnamed-declare namespace vpn-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 ## Modules to Import

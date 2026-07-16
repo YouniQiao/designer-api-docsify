@@ -1,9 +1,10 @@
 # UnifiedDataProperties
 
-Defines the properties of the data records in the unified data object, including the timestamp, tag, pasting range,
-and additional data.
+Defines the properties of the data records in the unified data object, including the timestamp, tag, pasting range,and additional data.
 
 **Since:** 12
+
+<!--Device-unifiedDataChannel-class UnifiedDataProperties--><!--Device-unifiedDataChannel-class UnifiedDataProperties-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -29,6 +30,8 @@ Object of the dictionary type used to set other properties. The default value is
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UnifiedDataProperties-extras?: Record<string, object>--><!--Device-UnifiedDataProperties-extras?: Record<string, object>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## getDelayData
@@ -37,8 +40,7 @@ Object of the dictionary type used to set other properties. The default value is
 getDelayData?: GetDelayData
 ```
 
-Callback for obtaining the deferred data. Currently, it can be used only in the pasteboard application of the
-same device. The default value is **undefined**.
+Callback for obtaining the deferred data. Currently, it can be used only in the pasteboard application of the same device. The default value is **undefined**.
 
 **Type:** GetDelayData
 
@@ -48,6 +50,8 @@ same device. The default value is **undefined**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UnifiedDataProperties-getDelayData?: GetDelayData--><!--Device-UnifiedDataProperties-getDelayData?: GetDelayData-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## shareOptions
@@ -56,8 +60,7 @@ same device. The default value is **undefined**.
 shareOptions?: ShareOptions
 ```
 
-Range, in which [UnifiedData](arkts-arkdata-unifieddataproperties-c.md) can be used. The default value is
-**CROSS_APP**.
+Range, in which [UnifiedData](arkts-arkdata-unifieddataproperties-c.md) can be used. The default value is **CROSS_APP**.
 
 **Type:** ShareOptions
 
@@ -66,6 +69,8 @@ Range, in which [UnifiedData](arkts-arkdata-unifieddataproperties-c.md) can be u
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UnifiedDataProperties-shareOptions?: ShareOptions--><!--Device-UnifiedDataProperties-shareOptions?: ShareOptions-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -85,6 +90,8 @@ Customized tag. The default value is an empty string.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UnifiedDataProperties-tag?: string--><!--Device-UnifiedDataProperties-tag?: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## timestamp
@@ -93,8 +100,7 @@ Customized tag. The default value is an empty string.
 readonly timestamp?: Date
 ```
 
-Timestamp when [UnifiedData](arkts-arkdata-unifieddataproperties-c.md) is generated. The default value is
-January 1, 1970 (UTC).
+Timestamp when [UnifiedData](arkts-arkdata-unifieddataproperties-c.md) is generated. The default value is January 1, 1970 (UTC).
 
 **Type:** Date
 
@@ -103,6 +109,8 @@ January 1, 1970 (UTC).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UnifiedDataProperties-readonly timestamp?: Date--><!--Device-UnifiedDataProperties-readonly timestamp?: Date-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -121,6 +129,8 @@ Defines URI authorization policies for drag intention.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-UnifiedDataProperties-uriAuthorizationPolicies?: Array<UriPermission>--><!--Device-UnifiedDataProperties-uriAuthorizationPolicies?: Array<UriPermission>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 

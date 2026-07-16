@@ -1,5 +1,7 @@
 # Set
 
+<!--Device-unnamed-interface Set<T>--><!--Device-unnamed-interface Set<T>-End-->
+
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -8,11 +10,13 @@
 
 Iterates over values in the set.
 
+<!--Device-Set-[Symbol.iterator](): IterableIterator<T>--><!--Device-Set-[Symbol.iterator](): IterableIterator<T>-End-->
+
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;T&gt; |  |
+| [IterableIterator](arkts-na-iterableiterator-i.md)<T> |  |
 
 ## entries
 
@@ -22,11 +26,13 @@ entries(): IterableIterator<[T, T]>
 
 Returns an iterable of [v,v] pairs for every value `v` in the set.
 
+<!--Device-Set-entries(): IterableIterator<[T, T]>--><!--Device-Set-entries(): IterableIterator<[T, T]>-End-->
+
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;[T, T]&gt; |  |
+| [IterableIterator](arkts-na-iterableiterator-i.md)<[T, T]> |  |
 
 ## keys
 
@@ -36,11 +42,13 @@ keys(): IterableIterator<T>
 
 Despite its name, returns an iterable of the values in the set.
 
+<!--Device-Set-keys(): IterableIterator<T>--><!--Device-Set-keys(): IterableIterator<T>-End-->
+
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;T&gt; |  |
+| [IterableIterator](arkts-na-iterableiterator-i.md)<T> |  |
 
 ## values
 
@@ -50,9 +58,11 @@ values(): IterableIterator<T>
 
 Returns an iterable of values in the set.
 
+<!--Device-Set-values(): IterableIterator<T>--><!--Device-Set-values(): IterableIterator<T>-End-->
+
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;T&gt; |  |
+| [IterableIterator](arkts-na-iterableiterator-i.md)<T> |  |
 

@@ -18,6 +18,8 @@ Check whether roaming is enabled for cellular data services.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-data-function isCellularDataRoamingEnabledSync(slotId: int): boolean--><!--Device-data-function isCellularDataRoamingEnabledSync(slotId: int): boolean-End-->
+
 **System capability:** SystemCapability.Telephony.CellularData
 
 **Parameters:**

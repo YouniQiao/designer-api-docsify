@@ -4,6 +4,8 @@ Construct parameters for SegmentButtonItemOptions.
 
 **Since:** 11
 
+<!--Device-unnamed-interface SegmentButtonItemOptionsConstructorOptions--><!--Device-unnamed-interface SegmentButtonItemOptionsConstructorOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -18,9 +20,7 @@ import { CommonSegmentButtonOptions, SegmentButtonItemOptionsConstructorOptions,
 accessibilityDescription?: ResourceStr
 ```
 
-Accessibility description, which is used to explain component operations to users. You can set detailed description
-text to help users understand the operation consequences. If a component has both text and accessibility
-description, the text is read first, and then the accessibility description is read.
+Accessibility description, which is used to explain component operations to users. You can set detailed description text to help users understand the operation consequences. If a component has both text and accessibility description, the text is read first, and then the accessibility description is read.
 
 The default value is an empty string.
 
@@ -36,6 +36,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-SegmentButtonItemOptionsConstructorOptions-accessibilityDescription?: ResourceStr--><!--Device-SegmentButtonItemOptionsConstructorOptions-accessibilityDescription?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityLevel
@@ -44,8 +46,7 @@ If the value is **undefined**, the default value is used.
 accessibilityLevel?: string
 ```
 
-Accessibility level, which is used to set whether the current component can be recognized by accessibility
-services.
+Accessibility level, which is used to set whether the current component can be recognized by accessibility services.
 
 The options are as follows:
 
@@ -55,8 +56,7 @@ The options are as follows:
 
 **"no"**: The component cannot be recognized by accessibility services.
 
-**"no-hide-descendants"**: Neither the component nor its child components can be recognized by accessibility
-services.
+**"no-hide-descendants"**: Neither the component nor its child components can be recognized by accessibility services.
 
 Default value: **"auto"**
 
@@ -71,6 +71,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-SegmentButtonItemOptionsConstructorOptions-accessibilityLevel?: string--><!--Device-SegmentButtonItemOptionsConstructorOptions-accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -91,6 +93,8 @@ If the value is undefined, no icon is displayed.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SegmentButtonItemOptionsConstructorOptions-icon?: ResourceStr--><!--Device-SegmentButtonItemOptionsConstructorOptions-icon?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,6 +120,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-SegmentButtonItemOptionsConstructorOptions-iconAccessibilityText?: ResourceStr--><!--Device-SegmentButtonItemOptionsConstructorOptions-iconAccessibilityText?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectedIcon
@@ -135,6 +141,8 @@ If the value is undefined, no icon is displayed.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SegmentButtonItemOptionsConstructorOptions-selectedIcon?: ResourceStr--><!--Device-SegmentButtonItemOptionsConstructorOptions-selectedIcon?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -160,6 +168,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-SegmentButtonItemOptionsConstructorOptions-selectedIconAccessibilityText?: ResourceStr--><!--Device-SegmentButtonItemOptionsConstructorOptions-selectedIconAccessibilityText?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## text
@@ -179,6 +189,8 @@ If the value is undefined, no text is displayed.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SegmentButtonItemOptionsConstructorOptions-text?: ResourceStr--><!--Device-SegmentButtonItemOptionsConstructorOptions-text?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

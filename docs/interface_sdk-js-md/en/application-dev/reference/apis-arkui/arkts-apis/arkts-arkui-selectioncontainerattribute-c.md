@@ -6,6 +6,8 @@ Defines the attributes of SelectionContainer.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class SelectionContainerAttribute extends CommonMethod<SelectionContainerAttribute>--><!--Device-unnamed-export declare class SelectionContainerAttribute extends CommonMethod<SelectionContainerAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,12 +25,7 @@ bindSelectionMenu(spanType: Optional<TextSpanType>, content: Optional<CustomBuil
 
 Bind to the selection menu.
 
-<p><strong>NOTE</strong>:
-<br>The duration required for a long-press gesture is 600 ms for bindSelectionMenu and 800 ms for bindContextMenu.
-<br>When both bindSelectionMenu and bindContextMenu are set and both are configured to be triggered by a
-long-press gesture, bindSelectionMenu is triggered first.
-<br>If the custom menu is too long, embed a Scroll component to prevent the keyboard from being blocked.
-</p>
+<p><strong>NOTE</strong>:<br>The duration required for a long-press gesture is 600 ms for bindSelectionMenu and 800 ms for bindContextMenu.<br>When both bindSelectionMenu and bindContextMenu are set and both are configured to be triggered by a long-press gesture, bindSelectionMenu is triggered first.<br>If the custom menu is too long, embed a Scroll component to prevent the keyboard from being blocked.</p>
 
 **Since:** 26.0.0
 
@@ -36,22 +33,26 @@ long-press gesture, bindSelectionMenu is triggered first.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SelectionContainerAttribute-bindSelectionMenu(spanType: Optional<TextSpanType>, content: Optional<CustomBuilder>,
+    responseType: Optional<TextResponseType>, options?: Optional<SelectionContainerMenuOptions>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-bindSelectionMenu(spanType: Optional<TextSpanType>, content: Optional<CustomBuilder>,
+    responseType: Optional<TextResponseType>, options?: Optional<SelectionContainerMenuOptions>): SelectionContainerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| spanType | Optional&lt;TextSpanType&gt; | Yes | Indicates the type of selection menu. Default value isTextSpanType.TEXT. |
-| content | Optional&lt;CustomBuilder&gt; | Yes | Indicates the content of selection menu. |
-| responseType | Optional&lt;TextResponseType&gt; | Yes | Indicates response type of selection menu. Default value isTextResponseType.LONG_PRESS. |
-| options | Optional&lt;SelectionContainerMenuOptions&gt; | No | Indicates the options of selection menu. |
+| spanType | [Optional](../arkts-components/arkts-arkui-optional-t.md)<TextSpanType> | Yes | Indicates the type of selection menu. Default value is TextSpanType.TEXT. |
+| content | [Optional](../arkts-components/arkts-arkui-optional-t.md)<CustomBuilder> | Yes | Indicates the content of selection menu. |
+| responseType | [Optional](../arkts-components/arkts-arkui-optional-t.md)<TextResponseType> | Yes | Indicates response type of selection menu. Default value is TextResponseType.LONG_PRESS. |
+| options | [Optional](../arkts-components/arkts-arkui-optional-t.md)<SelectionContainerMenuOptions> | No | Indicates the options of selection menu. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SelectionContainerAttribute | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## caretColor
 
@@ -67,19 +68,21 @@ Set the caret color for selected text.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SelectionContainerAttribute-caretColor(color: Optional<ResourceColor>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-caretColor(color: Optional<ResourceColor>): SelectionContainerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Optional&lt;ResourceColor&gt; | Yes | caret color. |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)<ResourceColor> | Yes | caret color. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SelectionContainerAttribute | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## copyOption
 
@@ -95,19 +98,21 @@ Set whether to allow copy and where data can be copied.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SelectionContainerAttribute-copyOption(value: Optional<CopyOptions>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-copyOption(value: Optional<CopyOptions>): SelectionContainerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Optional&lt;CopyOptions&gt; | Yes | copy option for selected text. Default value is CopyOptions.InApp. |
+| value | [Optional](../arkts-components/arkts-arkui-optional-t.md)<CopyOptions> | Yes | copy option for selected text. Default value is CopyOptions.InApp. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SelectionContainerAttribute | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## editMenuOptions
 
@@ -115,9 +120,7 @@ Set whether to allow copy and where data can be copied.
 editMenuOptions(editMenu: Optional<SelectionContainerEditMenuOptions>): SelectionContainerAttribute
 ```
 
-Set the custom text menu.
-Sets the extended options of the custom context menu on selection,
-including the text content, icon, and callback.
+Set the custom text menu.Sets the extended options of the custom context menu on selection,including the text content, icon, and callback.
 
 **Since:** 26.0.0
 
@@ -125,19 +128,21 @@ including the text content, icon, and callback.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SelectionContainerAttribute-editMenuOptions(editMenu: Optional<SelectionContainerEditMenuOptions>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-editMenuOptions(editMenu: Optional<SelectionContainerEditMenuOptions>): SelectionContainerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| editMenu | Optional&lt;SelectionContainerEditMenuOptions&gt; | Yes | Customize text menu options. |
+| editMenu | [Optional](../arkts-components/arkts-arkui-optional-t.md)<SelectionContainerEditMenuOptions> | Yes | Customize text menu options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SelectionContainerAttribute | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## enableHapticFeedback
 
@@ -153,19 +158,21 @@ Enable or disable haptic feedback.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SelectionContainerAttribute-enableHapticFeedback(isEnabled: Optional<boolean>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-enableHapticFeedback(isEnabled: Optional<boolean>): SelectionContainerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEnabled | Optional&lt;boolean&gt; | Yes | whether to enable haptic feedback. Default value is true. |
+| isEnabled | [Optional](../arkts-components/arkts-arkui-optional-t.md)<boolean> | Yes | whether to enable haptic feedback. Default value is true. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SelectionContainerAttribute | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## onCopy
 
@@ -173,8 +180,7 @@ Enable or disable haptic feedback.
 onCopy(callback: Optional<Callback<string>>): SelectionContainerAttribute
 ```
 
-Called when selected text is copied.
-Currently, only text can be copied.
+Called when selected text is copied.Currently, only text can be copied.
 
 **Since:** 26.0.0
 
@@ -182,19 +188,21 @@ Currently, only text can be copied.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SelectionContainerAttribute-onCopy(callback: Optional<Callback<string>>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-onCopy(callback: Optional<Callback<string>>): SelectionContainerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Optional&lt;Callback&lt;string&gt;&gt; | Yes | callback of copy event.The callback parameter (string) is the selected text concatenated in the visual order of Text components. |
+| callback | [Optional](../arkts-components/arkts-arkui-optional-t.md)<Callback<string>> | Yes | callback of copy event.The callback parameter (string) is the selected text concatenated in the visual order of Text components. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SelectionContainerAttribute | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## onTextSelectionChange
 
@@ -210,19 +218,21 @@ Called when text selection changes in SelectionContainer.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SelectionContainerAttribute-onTextSelectionChange(callback: Optional<Callback<Array<string>>>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-onTextSelectionChange(callback: Optional<Callback<Array<string>>>): SelectionContainerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Optional&lt;Callback&lt;Array&lt;string&gt;&gt;&gt; | Yes | callback of selection change event.The order of items in the first callback parameter array is consistent with the visual order of Textcomponents. |
+| callback | [Optional](../arkts-components/arkts-arkui-optional-t.md)<Callback<Array<string>>> | Yes | callback of selection change event.The order of items in the first callback parameter array is consistent with the visual order of Text components. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SelectionContainerAttribute | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## onWillCopy
 
@@ -230,8 +240,7 @@ Called when text selection changes in SelectionContainer.
 onWillCopy(callback: Optional<Callback<string, boolean>>): SelectionContainerAttribute
 ```
 
-Called before using the Clipboard copy menu.
-Currently, only text can be copied.
+Called before using the Clipboard copy menu.Currently, only text can be copied.
 
 **Since:** 26.0.0
 
@@ -239,19 +248,21 @@ Currently, only text can be copied.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SelectionContainerAttribute-onWillCopy(callback: Optional<Callback<string, boolean>>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-onWillCopy(callback: Optional<Callback<string, boolean>>): SelectionContainerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Optional&lt;Callback&lt;string, boolean&gt;&gt; | Yes | callback used to check whether copy is allowed.The first callback parameter (string) is the selected text concatenated in the visual order of Text components. |
+| callback | [Optional](../arkts-components/arkts-arkui-optional-t.md)<Callback<string, boolean>> | Yes | callback used to check whether copy is allowed.The first callback parameter (string) is the selected text concatenated in the visual order of Text components. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SelectionContainerAttribute | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## selectedBackgroundColor
 
@@ -267,19 +278,21 @@ Set selected text background color.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SelectionContainerAttribute-selectedBackgroundColor(color: Optional<ResourceColor>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-selectedBackgroundColor(color: Optional<ResourceColor>): SelectionContainerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Optional&lt;ResourceColor&gt; | Yes | selected text background color. |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)<ResourceColor> | Yes | selected text background color. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SelectionContainerAttribute | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## textJoinStyle
 
@@ -289,11 +302,7 @@ textJoinStyle(style: Optional<SelectionContainerTextJoinStyle>): SelectionContai
 
 Set text join style for aggregated text in SelectionContainer.
 
-<p><strong>NOTE</strong>:
-<br>This setting affects the string value used in callbacks such as onWillCopy and onCopy.
-<br>It also affects built-in text menu item logic that depends on string concatenation, such as copy.
-<br>The default style is SelectionContainerTextJoinStyle.NEWLINE.
-</p>
+<p><strong>NOTE</strong>:<br>This setting affects the string value used in callbacks such as onWillCopy and onCopy.<br>It also affects built-in text menu item logic that depends on string concatenation, such as copy.<br>The default style is SelectionContainerTextJoinStyle.NEWLINE.</p>
 
 **Since:** 26.0.0
 
@@ -301,17 +310,19 @@ Set text join style for aggregated text in SelectionContainer.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SelectionContainerAttribute-textJoinStyle(style: Optional<SelectionContainerTextJoinStyle>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-textJoinStyle(style: Optional<SelectionContainerTextJoinStyle>): SelectionContainerAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | Optional&lt;SelectionContainerTextJoinStyle&gt; | Yes | text join style for aggregated text. |
+| style | [Optional](../arkts-components/arkts-arkui-optional-t.md)<SelectionContainerTextJoinStyle> | Yes | text join style for aggregated text. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SelectionContainerAttribute | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 

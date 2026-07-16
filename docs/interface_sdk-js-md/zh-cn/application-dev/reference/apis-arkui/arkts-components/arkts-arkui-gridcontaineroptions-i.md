@@ -8,6 +8,8 @@ Defines the options of GridContainer.
 
 **替代接口：** grid_col/GridColOptions
 
+<!--Device-unnamed-declare interface GridContainerOptions--><!--Device-unnamed-declare interface GridContainerOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## columns
@@ -28,6 +30,8 @@ columns?: number | "auto"
 
 **替代接口：** grid_col/GridColOptions
 
+<!--Device-GridContainerOptions-columns?: number | "auto"--><!--Device-GridContainerOptions-columns?: number | "auto"-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## gutter
@@ -46,6 +50,8 @@ gutter?: number | string
 
 **替代接口：** grid_col/GridColOptions
 
+<!--Device-GridContainerOptions-gutter?: number | string--><!--Device-GridContainerOptions-gutter?: number | string-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## margin
@@ -63,6 +69,8 @@ margin?: number | string
 **废弃版本：** 9
 
 **替代接口：** grid_col/GridColOptions
+
+<!--Device-GridContainerOptions-margin?: number | string--><!--Device-GridContainerOptions-margin?: number | string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -83,6 +91,8 @@ sizeType?: SizeType
 **废弃版本：** 9
 
 **替代接口：** grid_col/GridColOptions
+
+<!--Device-GridContainerOptions-sizeType?: SizeType--><!--Device-GridContainerOptions-sizeType?: SizeType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

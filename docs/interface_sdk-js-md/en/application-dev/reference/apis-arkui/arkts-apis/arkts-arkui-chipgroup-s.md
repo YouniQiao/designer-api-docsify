@@ -1,19 +1,21 @@
 # ChipGroup
 
-> **NOTE**
->
-> 1. When **multiple** is set to **false**, if **selectedIndexes** is not passed in, the first chip is automatically
-> selected by default. However, if the provided **selectedIndexes** includes multiple elements, the chip at the first
-> index is selected by default.
->
-> 2. To use the suffix functionality, the **IconGroupSuffix** API must be imported. If this API is not provided, the
-> suffix area will remain empty.
->
-> 3. The icon fill colors (**fillColor** and **activedFillColor**) must match the font color (**fontColor**). If
-> different colors need to be set, use **prefixSymbol** when passing in
+> **NOTE**  
+>  
+> 1. When **multiple** is set to **false**, if **selectedIndexes** is not passed in, the first chip is automatically  
+> selected by default. However, if the provided **selectedIndexes** includes multiple elements, the chip at the first  
+> index is selected by default.  
+>  
+> 2. To use the suffix functionality, the **IconGroupSuffix** API must be imported. If this API is not provided, the  
+> suffix area will remain empty.  
+>  
+> 3. The icon fill colors (**fillColor** and **activedFillColor**) must match the font color (**fontColor**). If  
+> different colors need to be set, use **prefixSymbol** when passing in  
 > [ChipGroupSpaceOptions](arkts-arkui-chipgroupspaceoptions-i.md).
 
 **Since:** 12
+
+<!--Device-unnamed-export declare struct ChipGroup--><!--Device-unnamed-export declare struct ChipGroup-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,8 +31,7 @@ import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixI
 backgroundSystemMaterial?: uiMaterial.Material
 ```
 
-Set system-styled materials for the component. Different materials have different effects, which can influence
-the backgroundColor, border, shadow, and other visual attributes of the component.
+Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
 
 **Type:** uiMaterial.Material
 
@@ -42,6 +43,8 @@ the backgroundColor, border, shadow, and other visual attributes of the componen
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipGroup-backgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipGroup-backgroundSystemMaterial?: uiMaterial.Material-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## chipGroupPadding
@@ -50,8 +53,7 @@ the backgroundColor, border, shadow, and other visual attributes of the componen
 chipGroupPadding?: ChipGroupPaddingOptions
 ```
 
-Top and bottom padding, used to control the overall height. The type is
-[ChipGroupPaddingOptions](arkts-arkui-chipgrouppaddingoptions-i.md).
+Top and bottom padding, used to control the overall height. The type is [ChipGroupPaddingOptions](arkts-arkui-chipgrouppaddingoptions-i.md).
 
 Default value: { top: 14, bottom: 14 }
 
@@ -69,6 +71,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ChipGroup-chipGroupPadding?: ChipGroupPaddingOptions--><!--Device-ChipGroup-chipGroupPadding?: ChipGroupPaddingOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## chipGroupSpace
@@ -77,8 +81,7 @@ If the value is **undefined**, the default value is used.
 chipGroupSpace?: ChipGroupSpaceOptions
 ```
 
-Left and right padding and spacing between chips. For details, see
-[ChipGroupSpaceOptions](arkts-arkui-chipgroupspaceoptions-i.md).
+Left and right padding and spacing between chips. For details, see [ChipGroupSpaceOptions](arkts-arkui-chipgroupspaceoptions-i.md).
 
 Default value: { itemSpace: 8, startSpace: 16, endSpace: 16 }
 
@@ -96,6 +99,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ChipGroup-chipGroupSpace?: ChipGroupSpaceOptions--><!--Device-ChipGroup-chipGroupSpace?: ChipGroupSpaceOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## itemStyle
@@ -108,9 +113,7 @@ Style attributes of the chip, such as the color and size. For details, see [Chip
 
 Default value:
 
-{ size: ChipSize.NORMAL, backgroundColor: $r('sys.color.ohos_id_color_button_normal'), fontColor: $r('
-sys.color.ohos_id_color_text_primary'), selectedFontColor: $r('sys.color.ohos_id_color_text_primary_contrary'),
-selectedBackgroundColor: $r('sys.color.ohos_id_color_emphasize') }
+{ size: ChipSize.NORMAL, backgroundColor: $r('sys.color.ohos_id_color_button_normal'), fontColor: $r('sys.color.ohos_id_color_text_primary'), selectedFontColor: $r('sys.color.ohos_id_color_text_primary_contrary'),selectedBackgroundColor: $r('sys.color.ohos_id_color_emphasize') }
 
 If the value is **undefined**, the default value is used.
 
@@ -123,6 +126,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ChipGroup-itemStyle?: ChipItemStyle--><!--Device-ChipGroup-itemStyle?: ChipItemStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -145,6 +150,8 @@ If the value is **undefined**, the **ChipGroup** component is empty by default.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ChipGroup-items: ChipGroupItemOptions[]--><!--Device-ChipGroup-items: ChipGroupItemOptions[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -172,6 +179,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ChipGroup-multiple?: boolean--><!--Device-ChipGroup-multiple?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onChange
@@ -192,6 +201,8 @@ If the value is **undefined**, the event is unbound.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ChipGroup-onChange?: Callback<Array<number>>--><!--Device-ChipGroup-onChange?: Callback<Array<number>>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectedBackgroundSystemMaterial
@@ -200,8 +211,7 @@ If the value is **undefined**, the event is unbound.
 selectedBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
-Set system-styled materials for the component when selected. Different materials have different effects,
-which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
+Set system-styled materials for the component when selected. Different materials have different effects,which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
 
 **Type:** uiMaterial.Material
 
@@ -212,6 +222,8 @@ which can influence the backgroundColor, border, shadow, and other visual attrib
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroup-selectedBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipGroup-selectedBackgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -237,6 +249,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ChipGroup-selectedIndexes?: Array<number>--><!--Device-ChipGroup-selectedIndexes?: Array<number>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## suffix
@@ -245,9 +259,7 @@ If the value is **undefined**, the default value is used.
 suffix?: Callback<void>
 ```
 
-Callback used to customize a builder. To display custom content on the rightmost side of the component, configure
-the **suffix** property. Use of the **suffix** property requires referencing the
-[IconGroupSuffix](arkts-arkui-icongroupsuffix-s.md) API.
+Callback used to customize a builder. To display custom content on the rightmost side of the component, configure the **suffix** property. Use of the **suffix** property requires referencing the [IconGroupSuffix](arkts-arkui-icongroupsuffix-s.md) API.
 
 By default, if this parameter is not passed, there is no suffix.
 
@@ -262,6 +274,8 @@ If the value is **undefined**, there is no suffix.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ChipGroup-suffix?: Callback<void>--><!--Device-ChipGroup-suffix?: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

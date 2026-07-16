@@ -4,6 +4,8 @@ Provides APIs for custom user behavior recording for Gallery.
 
 **Since:** 20
 
+<!--Device-photoAccessHelper-class PhotoAssetCustomRecordManager--><!--Device-photoAccessHelper-class PhotoAssetCustomRecordManager-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -20,11 +22,11 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 addLcdJumpCount(ids: Array<number>): Promise<Array<number>>
 ```
 
-Increases the value of **LcdJumpCount** by 1 for the data in the database based on **fileId** in
-[PhotoAssetCustomRecord](arkts-medialibrary-photoassetcustomrecord-i-sys.md). This API uses a promise to return the
-result.
+Increases the value of **LcdJumpCount** by 1 for the data in the database based on **fileId** in [PhotoAssetCustomRecord](arkts-medialibrary-photoassetcustomrecord-i-sys.md). This API uses a promise to return the result.
 
 **Since:** 20
+
+<!--Device-PhotoAssetCustomRecordManager-addLcdJumpCount(ids: Array<int>): Promise<Array<int>>--><!--Device-PhotoAssetCustomRecordManager-addLcdJumpCount(ids: Array<int>): Promise<Array<int>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,13 +36,13 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ids | Array&lt;number&gt; | Yes | Array of file IDs in[PhotoAssetCustomRecord](arkts-medialibrary-photoassetcustomrecord-i-sys.md). |
+| ids | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Array of file IDs in [PhotoAssetCustomRecord](arkts-medialibrary-photoassetcustomrecord-i-sys.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the file ID in the custom user behavior recordings thatfail to be updated. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | Promise used to return the file ID in the custom user behavior recordings that fail to be updated. |
 
 **Error codes:**
 
@@ -56,11 +58,11 @@ result.
 addShareCount(ids: Array<number>): Promise<Array<number>>
 ```
 
-Increases the value of **shareCount** by 1 for the data in the database based on **fileId** in
-[PhotoAssetCustomRecord](arkts-medialibrary-photoassetcustomrecord-i-sys.md). This API uses a promise to return the
-result.
+Increases the value of **shareCount** by 1 for the data in the database based on **fileId** in [PhotoAssetCustomRecord](arkts-medialibrary-photoassetcustomrecord-i-sys.md). This API uses a promise to return the result.
 
 **Since:** 20
+
+<!--Device-PhotoAssetCustomRecordManager-addShareCount(ids: Array<int>): Promise<Array<int>>--><!--Device-PhotoAssetCustomRecordManager-addShareCount(ids: Array<int>): Promise<Array<int>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -70,13 +72,13 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ids | Array&lt;number&gt; | Yes | Array of file IDs in[PhotoAssetCustomRecord](arkts-medialibrary-photoassetcustomrecord-i-sys.md). |
+| ids | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Array of file IDs in [PhotoAssetCustomRecord](arkts-medialibrary-photoassetcustomrecord-i-sys.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the file ID in the custom user behavior recordings thatfail to be updated. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | Promise used to return the file ID in the custom user behavior recordings that fail to be updated. |
 
 **Error codes:**
 
@@ -96,6 +98,8 @@ Adds custom user behavior recordings. This API uses a promise to return the resu
 
 **Since:** 20
 
+<!--Device-PhotoAssetCustomRecordManager-createCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<void>--><!--Device-PhotoAssetCustomRecordManager-createCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -104,13 +108,13 @@ Adds custom user behavior recordings. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| customRecords | Array&lt;PhotoAssetCustomRecord&gt; | Yes | Custom user behavior recordings. |
+| customRecords | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PhotoAssetCustomRecord> | Yes | Custom user behavior recordings. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -150,6 +154,8 @@ Obtains an instance of custom user behavior recording for Gallery.
 
 **Since:** 20
 
+<!--Device-PhotoAssetCustomRecordManager-static getCustomRecordManagerInstance(context: Context): PhotoAssetCustomRecordManager--><!--Device-PhotoAssetCustomRecordManager-static getCustomRecordManagerInstance(context: Context): PhotoAssetCustomRecordManager-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -158,13 +164,13 @@ Obtains an instance of custom user behavior recording for Gallery.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability instance. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the ability instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PhotoAssetCustomRecordManager | Custom user behavior recording instance. |
+| [PhotoAssetCustomRecordManager](arkts-medialibrary-photoassetcustomrecordmanager-c-sys.md) | Custom user behavior recording instance. |
 
 **Error codes:**
 
@@ -200,6 +206,8 @@ Obtains custom user behavior recordings based on retrieval options. This API use
 
 **Since:** 20
 
+<!--Device-PhotoAssetCustomRecordManager-getCustomRecords(optionCheck: FetchOptions): Promise<FetchResult<PhotoAssetCustomRecord>>--><!--Device-PhotoAssetCustomRecordManager-getCustomRecords(optionCheck: FetchOptions): Promise<FetchResult<PhotoAssetCustomRecord>>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -208,13 +216,13 @@ Obtains custom user behavior recordings based on retrieval options. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| optionCheck | FetchOptions | Yes | Retrieval options. |
+| optionCheck | [FetchOptions](arkts-medialibrary-fetchoptions-i.md) | Yes | Retrieval options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;PhotoAssetCustomRecord&gt;&gt; | Promise used to return the collection of custom userbehavior recordings. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<FetchResult<PhotoAssetCustomRecord>> | Promise used to return the collection of custom user behavior recordings. |
 
 **Error codes:**
 
@@ -259,6 +267,8 @@ Removes custom user behavior recordings based on retrieval options. This API use
 
 **Since:** 20
 
+<!--Device-PhotoAssetCustomRecordManager-removeCustomRecords(optionCheck: FetchOptions): Promise<void>--><!--Device-PhotoAssetCustomRecordManager-removeCustomRecords(optionCheck: FetchOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -267,13 +277,13 @@ Removes custom user behavior recordings based on retrieval options. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| optionCheck | FetchOptions | Yes | Retrieval options. |
+| optionCheck | [FetchOptions](arkts-medialibrary-fetchoptions-i.md) | Yes | Retrieval options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -313,10 +323,11 @@ async function example(context: Context) {
 setCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<Array<number>>
 ```
 
-Updates the existing database fields based on custom user behavior recordings. This API uses a promise to return
-the result.
+Updates the existing database fields based on custom user behavior recordings. This API uses a promise to return the result.
 
 **Since:** 20
+
+<!--Device-PhotoAssetCustomRecordManager-setCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<Array<int>>--><!--Device-PhotoAssetCustomRecordManager-setCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<Array<int>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -326,13 +337,13 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| customRecords | Array&lt;PhotoAssetCustomRecord&gt; | Yes | Custom user behavior recordings. |
+| customRecords | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PhotoAssetCustomRecord> | Yes | Custom user behavior recordings. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the file ID in the custom user behavior recordings thatfail to be updated. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | Promise used to return the file ID in the custom user behavior recordings that fail to be updated. |
 
 **Error codes:**
 

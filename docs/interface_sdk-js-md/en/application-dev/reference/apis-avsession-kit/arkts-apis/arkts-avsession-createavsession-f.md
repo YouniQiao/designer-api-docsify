@@ -16,16 +16,18 @@ Create an AVSession instance. An ability can only create one AVSession
 
 **Since:** 10
 
+<!--Device-avSession-function createAVSession(context: Context, tag: string, type: AVSessionType, callback: AsyncCallback<AVSession>): void--><!--Device-avSession-function createAVSession(context: Context, tag: string, type: AVSessionType, callback: AsyncCallback<AVSession>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | The context of application |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | The context of application |
 | tag | string | Yes | A user-defined name for this session |
-| type | AVSessionType | Yes | The type of session {@link AVSessionType} |
-| callback | AsyncCallback&lt;AVSession&gt; | Yes | async callback for AVSession. |
+| type | [AVSessionType](arkts-avsession-avsessiontype-t.md) | Yes | The type of session {@link AVSessionType} |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AVSession> | Yes | async callback for AVSession. |
 
 **Error codes:**
 
@@ -79,21 +81,23 @@ Create an AVSession instance. An ability can only create one AVSession
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-avSession-function createAVSession(context: Context, tag: string, type: AVSessionType): Promise<AVSession>--><!--Device-avSession-function createAVSession(context: Context, tag: string, type: AVSessionType): Promise<AVSession>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | The context of application |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | The context of application |
 | tag | string | Yes | A user-defined name for this session |
-| type | AVSessionType | Yes | The type of session {@link AVSessionType} |
+| type | [AVSessionType](arkts-avsession-avsessiontype-t.md) | Yes | The type of session {@link AVSessionType} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVSession&gt; | Promise for AVSession |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AVSession> | Promise for AVSession |
 
 **Error codes:**
 

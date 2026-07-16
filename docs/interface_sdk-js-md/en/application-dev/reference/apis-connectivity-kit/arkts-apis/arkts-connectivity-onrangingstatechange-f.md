@@ -22,13 +22,15 @@ Notifies state changes for both active ranging and passive ranging operations.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ranging-function onRangingStateChange(callback: Callback<RangingStateChangeInfo>): void--><!--Device-ranging-function onRangingStateChange(callback: Callback<RangingStateChangeInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;RangingStateChangeInfo&gt; | Yes | Callback used to listen for the ranging state. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<RangingStateChangeInfo> | Yes | Callback used to listen for the ranging state. |
 
 **Error codes:**
 

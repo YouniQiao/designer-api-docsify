@@ -4,6 +4,8 @@ Defines AtomicServiceNavigation.
 
 **Since:** 12
 
+<!--Device-unnamed-export declare struct AtomicServiceNavigation--><!--Device-unnamed-export declare struct AtomicServiceNavigation-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ The background with gradient colors of Navigation.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-AtomicServiceNavigation-gradientBackground?: GradientBackground--><!--Device-AtomicServiceNavigation-gradientBackground?: GradientBackground-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## hideTitleBar
@@ -45,6 +49,8 @@ Hide navigation title bar.
 **Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AtomicServiceNavigation-hideTitleBar?: boolean--><!--Device-AtomicServiceNavigation-hideTitleBar?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +70,8 @@ The layout style users defined and inserted.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-AtomicServiceNavigation-menus?: CustomBuilder | Array<NavigationMenuItem>--><!--Device-AtomicServiceNavigation-menus?: CustomBuilder | Array<NavigationMenuItem>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## minContentWidth
@@ -81,6 +89,8 @@ Sets the minimum width of content.
 **Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AtomicServiceNavigation-minContentWidth?: Dimension--><!--Device-AtomicServiceNavigation-minContentWidth?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +110,8 @@ Sets the mode of navigation.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AtomicServiceNavigation-mode?: NavigationMode--><!--Device-AtomicServiceNavigation-mode?: NavigationMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## modeChangeCallback
@@ -115,6 +127,8 @@ Trigger callback when navigation mode changes.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AtomicServiceNavigation-modeChangeCallback?: Callback<NavigationMode>--><!--Device-AtomicServiceNavigation-modeChangeCallback?: Callback<NavigationMode>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -133,6 +147,8 @@ Sets the width of navigation bar.
 **Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AtomicServiceNavigation-navBarWidth?: Length--><!--Device-AtomicServiceNavigation-navBarWidth?: Length-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -158,6 +174,14 @@ Sets the minimum width and the maximum width of navigation bar.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AtomicServiceNavigation-navBarWidthRange?: [
+    Dimension,
+    Dimension
+  ]--><!--Device-AtomicServiceNavigation-navBarWidthRange?: [
+    Dimension,
+    Dimension
+  ]-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## navDestinationBuilder
@@ -175,6 +199,8 @@ The builder of navDestination.
 **Decorator:** @BuilderParam
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AtomicServiceNavigation-navDestinationBuilder?: NavDestinationBuilder--><!--Device-AtomicServiceNavigation-navDestinationBuilder?: NavDestinationBuilder-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -194,6 +220,8 @@ the information of route page.Providers methods for controlling destination page
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AtomicServiceNavigation-navPathStack?: NavPathStack--><!--Device-AtomicServiceNavigation-navPathStack?: NavPathStack-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## navigationContent
@@ -211,6 +239,8 @@ the content of Navigation.
 **Decorator:** @BuilderParam
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AtomicServiceNavigation-navigationContent?: Callback<void>--><!--Device-AtomicServiceNavigation-navigationContent?: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -230,6 +260,8 @@ Set side bar content.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-AtomicServiceNavigation-sideBarContent?: Callback<void>--><!--Device-AtomicServiceNavigation-sideBarContent?: Callback<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## sideBarOptions
@@ -248,6 +280,8 @@ Set side bar options.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-AtomicServiceNavigation-sideBarOptions?: SideBarOptions--><!--Device-AtomicServiceNavigation-sideBarOptions?: SideBarOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## stateChangeCallback
@@ -263,6 +297,8 @@ Trigger callback when the visibility of navigation bar change.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AtomicServiceNavigation-stateChangeCallback?: Callback<boolean>--><!--Device-AtomicServiceNavigation-stateChangeCallback?: Callback<boolean>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -282,6 +318,8 @@ Sets the Navigation title.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AtomicServiceNavigation-title?: ResourceStr--><!--Device-AtomicServiceNavigation-title?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## titleOptions
@@ -299,6 +337,8 @@ The color of Navigation's TitleBar.
 **Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AtomicServiceNavigation-titleOptions?: TitleOptions--><!--Device-AtomicServiceNavigation-titleOptions?: TitleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

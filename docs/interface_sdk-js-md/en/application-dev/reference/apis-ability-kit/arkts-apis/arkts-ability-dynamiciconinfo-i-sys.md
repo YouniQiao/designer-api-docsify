@@ -4,6 +4,8 @@ Obtains dynamic icon information about a bundle
 
 **Since:** 20
 
+<!--Device-unnamed-export interface DynamicIconInfo--><!--Device-unnamed-export interface DynamicIconInfo-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -19,6 +21,8 @@ Indicates the index of the bundle.
 **Type:** number
 
 **Since:** 20
+
+<!--Device-DynamicIconInfo-readonly appIndex: int--><!--Device-DynamicIconInfo-readonly appIndex: int-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -36,6 +40,8 @@ Indicates the name of the bundle.
 
 **Since:** 20
 
+<!--Device-DynamicIconInfo-readonly bundleName: string--><!--Device-DynamicIconInfo-readonly bundleName: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -52,6 +58,8 @@ Indicates the name of the dynamic icon.
 
 **Since:** 20
 
+<!--Device-DynamicIconInfo-readonly moduleName: string--><!--Device-DynamicIconInfo-readonly moduleName: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -67,6 +75,8 @@ Indicates the user id of the bundle.
 **Type:** number
 
 **Since:** 20
+
+<!--Device-DynamicIconInfo-readonly userId: int--><!--Device-DynamicIconInfo-readonly userId: int-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

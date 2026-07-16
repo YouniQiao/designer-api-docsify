@@ -18,6 +18,8 @@ Sets the voice mail information.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function setVoiceMailInfo(slotId: int, mailName: string, mailNumber: string, callback: AsyncCallback<void>): void--><!--Device-sim-function setVoiceMailInfo(slotId: int, mailName: string, mailNumber: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -29,7 +31,7 @@ Sets the voice mail information.
 | slotId | number | Yes | Indicates the card slot index number,ranging from {@code 0} to the maximum card slot index number supported by the device. |
 | mailName | string | Yes | Indicates the name of voice mail. |
 | mailNumber | string | Yes | Indicates the number of voice mail. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of setVoiceMailInfo. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of setVoiceMailInfo. |
 
 **Error codes:**
 
@@ -70,6 +72,8 @@ Sets the voice mail information.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function setVoiceMailInfo(slotId: int, mailName: string, mailNumber: string): Promise<void>--><!--Device-sim-function setVoiceMailInfo(slotId: int, mailName: string, mailNumber: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -86,7 +90,7 @@ Sets the voice mail information.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setVoiceMailInfo. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the setVoiceMailInfo. |
 
 **Error codes:**
 

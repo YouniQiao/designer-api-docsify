@@ -1,11 +1,18 @@
 # PlainArray
 
-PlainArray可用于存储具有关联关系的key-value键值对集合，其中key值唯一且类型为number，每个key对应一个value。
-PlainArray依据泛型定义，采用轻量级结构。
+PlainArray可用于存储具有关联关系的key-value键值对集合，其中key值唯一且类型为number，每个key对应一个value。PlainArray依据泛型定义，采用轻量级结构。
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare class PlainArray<T>--><!--Device-unnamed-declare class PlainArray<T>-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { PlainArray } from '@kit.ArkTS';
+```
 
 ## [Symbol.iterator]
 
@@ -17,7 +24,9 @@ PlainArray依据泛型定义，采用轻量级结构。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-[Symbol.iterator](): IterableIterator<[number, T]>--><!--Device-PlainArray-[Symbol.iterator](): IterableIterator<[number, T]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -25,7 +34,7 @@ PlainArray依据泛型定义，采用轻量级结构。
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[number, T]&gt; | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
+| IterableIterator<[number, T]> | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
 
 **错误码：**
 
@@ -71,7 +80,9 @@ add(key: number, value: T): void
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-add(key: int, value: T): void--><!--Device-PlainArray-add(key: int, value: T): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -107,7 +118,9 @@ clear(): void
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-clear(): void--><!--Device-PlainArray-clear(): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -139,7 +152,9 @@ clone(): PlainArray<T>
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-clone(): PlainArray<T>--><!--Device-PlainArray-clone(): PlainArray<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -147,7 +162,7 @@ clone(): PlainArray<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| PlainArray&lt;T&gt; | 返回新的对象实例。 |
+| [PlainArray](arkts-arkts-plainarray-c.md)<T> | 返回新的对象实例。 |
 
 **错误码：**
 
@@ -176,7 +191,9 @@ PlainArray的构造函数。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-constructor()--><!--Device-PlainArray-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -203,7 +220,9 @@ forEach(callbackFn: (value: T, index?: number, PlainArray?: PlainArray<T>) => vo
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-forEach(callbackFn: (value: T, index?: number, PlainArray?: PlainArray<T>) => void, thisArg?: Object): void--><!--Device-PlainArray-forEach(callbackFn: (value: T, index?: number, PlainArray?: PlainArray<T>) => void, thisArg?: Object): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -211,7 +230,7 @@ forEach(callbackFn: (value: T, index?: number, PlainArray?: PlainArray<T>) => vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, PlainArray?: PlainArray&lt;T&gt;) =&gt; void | 是 | 回调函数。 |
+| callbackFn | (value: T, index?: number, PlainArray?: PlainArray<T>) => void | 是 | 回调函数。 |
 | thisArg | Object | 否 | callbackFn被调用时用作this值，默认值为当前实例对象。 |
 
 **错误码：**
@@ -257,7 +276,9 @@ get(key: number): T
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-get(key: number): T--><!--Device-PlainArray-get(key: number): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -300,7 +321,9 @@ getIndexOfKey(key: number): number
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-getIndexOfKey(key: int): int--><!--Device-PlainArray-getIndexOfKey(key: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -343,7 +366,9 @@ getIndexOfValue(value: T): number
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-getIndexOfValue(value: T): int--><!--Device-PlainArray-getIndexOfValue(value: T): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -386,7 +411,9 @@ getKeyAt(index: number): number
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-getKeyAt(index: int): int--><!--Device-PlainArray-getKeyAt(index: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -429,7 +456,9 @@ getValueAt(index: number): T
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-getValueAt(index: int): T--><!--Device-PlainArray-getValueAt(index: int): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -473,7 +502,9 @@ has(key: number): boolean
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-has(key: int): boolean--><!--Device-PlainArray-has(key: int): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -515,7 +546,9 @@ isEmpty(): boolean
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-isEmpty(): boolean--><!--Device-PlainArray-isEmpty(): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -550,7 +583,9 @@ remove(key: number): T
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-remove(key: number): T--><!--Device-PlainArray-remove(key: number): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -593,7 +628,9 @@ removeAt(index: number): T
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-removeAt(index: number): T--><!--Device-PlainArray-removeAt(index: number): T-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -636,7 +673,9 @@ removeRangeFrom(index: number, size: number): number
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-removeRangeFrom(index: int, size: int): int--><!--Device-PlainArray-removeRangeFrom(index: int, size: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -682,7 +721,9 @@ setValueAt(index: number, value: T): void
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-setValueAt(index: int, value: T): void--><!--Device-PlainArray-setValueAt(index: int, value: T): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -724,7 +765,9 @@ toString(): String
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-toString(): String--><!--Device-PlainArray-toString(): String-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -763,7 +806,9 @@ PlainArray的元素个数。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-length: number--><!--Device-PlainArray-length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

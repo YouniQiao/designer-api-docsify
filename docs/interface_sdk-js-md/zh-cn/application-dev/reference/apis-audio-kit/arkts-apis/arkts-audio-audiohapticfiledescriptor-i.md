@@ -2,13 +2,21 @@
 
 描述音振文件描述符。
 
-> **注意：**
->
+> **注意：**  
+>  
 > 开发者需要确保fd是可用的文件描述符，且offset和length的值都是正确的。
 
 **起始版本：** 20
 
+<!--Device-audioHaptic-interface AudioHapticFileDescriptor--><!--Device-audioHaptic-interface AudioHapticFileDescriptor-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
+
+## 导入模块
+
+```TypeScript
+import { audioHaptic } from '@kit.AudioKit';
+```
 
 ## fd
 
@@ -21,6 +29,8 @@ fd: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-AudioHapticFileDescriptor-fd: int--><!--Device-AudioHapticFileDescriptor-fd: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -36,6 +46,8 @@ length?: number
 
 **起始版本：** 20
 
+<!--Device-AudioHapticFileDescriptor-length?: long--><!--Device-AudioHapticFileDescriptor-length?: long-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 ## offset
@@ -49,6 +61,8 @@ offset?: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-AudioHapticFileDescriptor-offset?: long--><!--Device-AudioHapticFileDescriptor-offset?: long-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 

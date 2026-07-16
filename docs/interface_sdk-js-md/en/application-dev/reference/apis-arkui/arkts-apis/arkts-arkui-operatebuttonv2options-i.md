@@ -4,6 +4,8 @@ Declare interface OperateButtonV2Options
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export interface OperateButtonV2Options--><!--Device-unnamed-export interface OperateButtonV2Options-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ The accessibilityDescription of the button.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-OperateButtonV2Options-accessibilityDescription?: ResourceStr--><!--Device-OperateButtonV2Options-accessibilityDescription?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityLevel
@@ -48,6 +52,8 @@ The accessibilityLevel of the button.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-OperateButtonV2Options-accessibilityLevel?: string--><!--Device-OperateButtonV2Options-accessibilityLevel?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
@@ -66,6 +72,8 @@ The accessibilityText of the button.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-OperateButtonV2Options-accessibilityText?: ResourceStr--><!--Device-OperateButtonV2Options-accessibilityText?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## text
@@ -83,6 +91,8 @@ The text on the button
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateButtonV2Options-text?: ResourceStr--><!--Device-OperateButtonV2Options-text?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

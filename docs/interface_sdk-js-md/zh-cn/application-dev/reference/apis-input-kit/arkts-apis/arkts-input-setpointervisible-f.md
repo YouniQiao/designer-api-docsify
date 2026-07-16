@@ -1,5 +1,11 @@
 # setPointerVisible
 
+## 导入模块
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+```
+
 ## setPointerVisible
 
 ```TypeScript
@@ -10,6 +16,8 @@ function setPointerVisible(visible: boolean, callback: AsyncCallback<void>): voi
 
 **起始版本：** 9
 
+<!--Device-pointer-function setPointerVisible(visible: boolean, callback: AsyncCallback<void>): void--><!--Device-pointer-function setPointerVisible(visible: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **参数：**
@@ -17,7 +25,7 @@ function setPointerVisible(visible: boolean, callback: AsyncCallback<void>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | visible | boolean | 是 | 当前窗口鼠标光标是否显示。true表示显示，false表示不显示。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当设置鼠标光标显示状态成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当设置鼠标光标显示状态成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -69,6 +77,8 @@ function setPointerVisible(visible: boolean): Promise<void>
 
 **起始版本：** 9
 
+<!--Device-pointer-function setPointerVisible(visible: boolean): Promise<void>--><!--Device-pointer-function setPointerVisible(visible: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 **参数：**
@@ -81,7 +91,7 @@ function setPointerVisible(visible: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

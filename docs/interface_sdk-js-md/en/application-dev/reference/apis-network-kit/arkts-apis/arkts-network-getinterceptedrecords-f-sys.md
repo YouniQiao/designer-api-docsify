@@ -18,6 +18,8 @@ Get intercepted records by userId, and it is necessary to specify the pagination
 
 **Required permissions:** ohos.permission.GET_NET_FIREWALL
 
+<!--Device-netFirewall-function getInterceptedRecords(userId: number, requestParam: RequestParam): Promise<InterceptedRecordPage>--><!--Device-netFirewall-function getInterceptedRecords(userId: number, requestParam: RequestParam): Promise<InterceptedRecordPage>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 **System API:** This is a system API.
@@ -27,13 +29,13 @@ Get intercepted records by userId, and it is necessary to specify the pagination
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | Indicates the user ID. It cannot be the ID of a user that does not exist. |
-| requestParam | RequestParam | Yes | Paging query input parameters. |
+| requestParam | [RequestParam](arkts-network-requestparam-i.md) | Yes | Paging query input parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;InterceptedRecordPage&gt; | Block Record List. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<InterceptedRecordPage> | Block Record List. |
 
 **Error codes:**
 

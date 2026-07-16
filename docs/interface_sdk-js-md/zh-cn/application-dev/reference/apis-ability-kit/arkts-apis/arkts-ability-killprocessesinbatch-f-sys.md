@@ -1,18 +1,24 @@
 # killProcessesInBatch（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+```
+
 ## killProcessesInBatch
 
 ```TypeScript
 function killProcessesInBatch(pids: Array<number>): Promise<void>
 ```
 
-批量终止进程。使用Promise异步回调。
-该接口在PC/2in1中可正常调用，在其他设备类型中返回801错误码。
-**需要权限**：ohos.permission.KILL_APP_PROCESSES
+批量终止进程。使用Promise异步回调。该接口在PC/2in1中可正常调用，在其他设备类型中返回801错误码。**需要权限**：ohos.permission.KILL_APP_PROCESSES
 
 **起始版本：** 14
 
 **需要权限：** ohos.permission.KILL_APP_PROCESSES
+
+<!--Device-appManager-function killProcessesInBatch(pids: Array<int>): Promise<void>--><!--Device-appManager-function killProcessesInBatch(pids: Array<int>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -22,13 +28,13 @@ function killProcessesInBatch(pids: Array<number>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pids | Array&lt;number&gt; | 是 | 要终止的进程ID。 |
+| pids | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<number> | 是 | 要终止的进程ID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

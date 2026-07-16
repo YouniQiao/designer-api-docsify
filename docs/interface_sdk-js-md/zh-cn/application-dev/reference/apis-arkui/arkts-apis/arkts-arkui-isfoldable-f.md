@@ -1,5 +1,11 @@
 # isFoldable
 
+## 导入模块
+
+```TypeScript
+import { display } from '@kit.ArkUI';
+```
+
 ## isFoldable
 
 ```TypeScript
@@ -10,7 +16,9 @@ function isFoldable(): boolean
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-display-function isFoldable(): boolean--><!--Device-display-function isFoldable(): boolean-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 

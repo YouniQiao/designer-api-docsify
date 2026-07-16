@@ -4,6 +4,8 @@ Provides information about the check box.
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface CheckboxOptions--><!--Device-unnamed-declare interface CheckboxOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## group
@@ -16,8 +18,7 @@ Group name of the check box (that is, the name of the check box group to which t
 
 **NOTE**
 
-For the settings to take effect, this parameter must be used with the [CheckboxGroup](arkts-arkui-checkboxgroup.md)
-component.
+For the settings to take effect, this parameter must be used with the [CheckboxGroup](arkts-arkui-checkboxgroup.md)component.
 
 **Type:** string
 
@@ -27,6 +28,8 @@ component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-CheckboxOptions-group?: string--><!--Device-CheckboxOptions-group?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## indicatorBuilder
@@ -35,8 +38,7 @@ component.
 indicatorBuilder?: CustomBuilder
 ```
 
-Custom component to indicate that the check box is selected. This custom component is center aligned with the check
-box. When **indicatorBuilder** is set to **undefined** or **null**, it defaults to the state where it is not set.
+Custom component to indicate that the check box is selected. This custom component is center aligned with the check box. When **indicatorBuilder** is set to **undefined** or **null**, it defaults to the state where it is not set.
 
 **Type:** CustomBuilder
 
@@ -45,6 +47,8 @@ box. When **indicatorBuilder** is set to **undefined** or **null**, it defaults 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CheckboxOptions-indicatorBuilder?: CustomBuilder--><!--Device-CheckboxOptions-indicatorBuilder?: CustomBuilder-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -63,6 +67,8 @@ Name of the check box.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-CheckboxOptions-name?: string--><!--Device-CheckboxOptions-name?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

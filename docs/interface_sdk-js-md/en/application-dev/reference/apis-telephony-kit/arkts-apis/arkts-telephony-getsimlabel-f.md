@@ -16,6 +16,8 @@ Obtains the SIM card label.
 
 **Since:** 20
 
+<!--Device-sim-function getSimLabel(slotId: int, callback: AsyncCallback<SimLabel>): void--><!--Device-sim-function getSimLabel(slotId: int, callback: AsyncCallback<SimLabel>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -23,7 +25,7 @@ Obtains the SIM card label.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | SIM card slot ID. |
-| callback | AsyncCallback&lt;SimLabel&gt; | Yes | Callback used to return the SIM card label. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<SimLabel> | Yes | Callback used to return the SIM card label. |
 
 **Error codes:**
 
@@ -57,6 +59,8 @@ Obtains the SIM card label.
 
 **Since:** 20
 
+<!--Device-sim-function getSimLabel(slotId: int): Promise<SimLabel>--><!--Device-sim-function getSimLabel(slotId: int): Promise<SimLabel>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -69,7 +73,7 @@ Obtains the SIM card label.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SimLabel&gt; | Promise used to return the SIM card label. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SimLabel> | Promise used to return the SIM card label. |
 
 **Error codes:**
 

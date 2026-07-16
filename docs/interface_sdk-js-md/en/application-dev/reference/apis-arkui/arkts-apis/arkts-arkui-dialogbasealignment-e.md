@@ -4,6 +4,8 @@ The alignment of dialog.
 
 **Since:** 26.1.0
 
+<!--Device-unnamed-export enum DialogBaseAlignment--><!--Device-unnamed-export enum DialogBaseAlignment-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TOP
@@ -19,6 +21,8 @@ Vertical top alignment.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-DialogBaseAlignment-TOP = 0--><!--Device-DialogBaseAlignment-TOP = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ Align vertically to the center.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
+<!--Device-DialogBaseAlignment-CENTER = 1--><!--Device-DialogBaseAlignment-CENTER = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BOTTOM
@@ -51,6 +57,8 @@ Vertical bottom alignment.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-DialogBaseAlignment-BOTTOM = 2--><!--Device-DialogBaseAlignment-BOTTOM = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +76,8 @@ Default alignment.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
+<!--Device-DialogBaseAlignment-DEFAULT = 3--><!--Device-DialogBaseAlignment-DEFAULT = 3-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TOP_START
@@ -83,6 +93,8 @@ Align the upper left corner.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-DialogBaseAlignment-TOP_START = 4--><!--Device-DialogBaseAlignment-TOP_START = 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +112,8 @@ Align the upper right corner.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
+<!--Device-DialogBaseAlignment-TOP_END = 5--><!--Device-DialogBaseAlignment-TOP_END = 5-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CENTER_START
@@ -115,6 +129,8 @@ Left center alignment.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-DialogBaseAlignment-CENTER_START = 6--><!--Device-DialogBaseAlignment-CENTER_START = 6-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -132,6 +148,8 @@ Right center alignment.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
+<!--Device-DialogBaseAlignment-CENTER_END = 7--><!--Device-DialogBaseAlignment-CENTER_END = 7-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BOTTOM_START
@@ -148,6 +166,8 @@ Align the lower left corner.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
+<!--Device-DialogBaseAlignment-BOTTOM_START = 8--><!--Device-DialogBaseAlignment-BOTTOM_START = 8-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BOTTOM_END
@@ -163,6 +183,8 @@ Align the lower right corner.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-DialogBaseAlignment-BOTTOM_END = 9--><!--Device-DialogBaseAlignment-BOTTOM_END = 9-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

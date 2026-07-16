@@ -14,12 +14,13 @@ function queryAppGroup(callback: AsyncCallback<number>): void
 
 Queries the app group of the calling application.
 
-The priority defined in a priority group restricts the resource usage of an application,
-for example, restricting the running of background tasks.
+The priority defined in a priority group restricts the resource usage of an application,for example, restricting the running of background tasks.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
+
+<!--Device-usageStatistics-function queryAppGroup(callback: AsyncCallback<int>): void--><!--Device-usageStatistics-function queryAppGroup(callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -29,7 +30,7 @@ for example, restricting the running of background tasks.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result.If the query is successful, **err** is **undefined**, and data is the app group of the calling application.Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result.If the query is successful, **err** is **undefined**, and data is the app group of the calling application.Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -72,12 +73,13 @@ function queryAppGroup(): Promise<number>
 
 Queries the app group of the calling application.
 
-The priority defined in a priority group restricts the resource usage of an application,
-for example, restricting the running of background tasks.
+The priority defined in a priority group restricts the resource usage of an application,for example, restricting the running of background tasks.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
+
+<!--Device-usageStatistics-function queryAppGroup(): Promise<int>--><!--Device-usageStatistics-function queryAppGroup(): Promise<int>-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -87,7 +89,7 @@ for example, restricting the running of background tasks.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | the promise returned by queryAppGroup.Returns the app group of the calling application. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | the promise returned by queryAppGroup.Returns the app group of the calling application. |
 
 **Error codes:**
 
@@ -127,12 +129,13 @@ function queryAppGroup(bundleName: string, callback: AsyncCallback<number>): voi
 
 Queries the usage priority group by bundleName.
 
-The priority defined in a priority group restricts the resource usage of an application,
-for example, restricting the running of background tasks.
+The priority defined in a priority group restricts the resource usage of an application,for example, restricting the running of background tasks.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
+
+<!--Device-usageStatistics-function queryAppGroup(bundleName: string, callback: AsyncCallback<int>): void--><!--Device-usageStatistics-function queryAppGroup(bundleName: string, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -143,7 +146,7 @@ for example, restricting the running of background tasks.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | name of the application. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result.If the query is successful, **err** is **undefined**, and data is the usage priority group of the callingapplication. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result.If the query is successful, **err** is **undefined**, and data is the usage priority group of the calling application. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -187,12 +190,13 @@ function queryAppGroup(bundleName: string): Promise<number>
 
 Queries the usage priority group by bundleName.
 
-The priority defined in a priority group restricts the resource usage of an application,
-for example, restricting the running of background tasks.
+The priority defined in a priority group restricts the resource usage of an application,for example, restricting the running of background tasks.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
+
+<!--Device-usageStatistics-function queryAppGroup(bundleName: string): Promise<int>--><!--Device-usageStatistics-function queryAppGroup(bundleName: string): Promise<int>-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -208,7 +212,7 @@ for example, restricting the running of background tasks.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the calling application. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the calling application. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Defines the options used in listFileExt().
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export interface ListFileExtOptions--><!--Device-unnamed-export interface ListFileExtOptions-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## Modules to Import
@@ -18,14 +20,15 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 fileFilter?: FileFilter
 ```
 
-File name filtering interface. This parameter is optional.
-Filtering rules can be defined based on file names.
+File name filtering interface. This parameter is optional.Filtering rules can be defined based on file names.
 
 **Type:** FileFilter
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ListFileExtOptions-fileFilter?: FileFilter--><!--Device-ListFileExtOptions-fileFilter?: FileFilter-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -35,14 +38,15 @@ Filtering rules can be defined based on file names.
 listNum?: number
 ```
 
-Number of file names to list. This parameter is optional. The default value is 0, which means to list all files.
-The value should be an integer.
+Number of file names to list. This parameter is optional. The default value is 0, which means to list all files.The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ListFileExtOptions-listNum?: number--><!--Device-ListFileExtOptions-listNum?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -52,16 +56,15 @@ The value should be an integer.
 recursion?: boolean
 ```
 
-Whether to list all files in the subdirectories recursively. This parameter is optional.
-The default value is false. If recursion is false, the names of files and directories that meet the filtering
-requirements in the current directory are returned. If recursion is true, relative paths (starting with"/")
-of all files that meet the specified conditions in the current directory are returned.
+Whether to list all files in the subdirectories recursively. This parameter is optional.The default value is false. If recursion is false, the names of files and directories that meet the filtering requirements in the current directory are returned. If recursion is true, relative paths (starting with"/")of all files that meet the specified conditions in the current directory are returned.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ListFileExtOptions-recursion?: boolean--><!--Device-ListFileExtOptions-recursion?: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

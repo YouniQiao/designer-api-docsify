@@ -18,13 +18,15 @@ Whether desktop lyric feature is supported.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-avSession-function isDesktopLyricSupported(): Promise<boolean>--><!--Device-avSession-function isDesktopLyricSupported(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - result returned to indicate desktop lyric is supported. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | - result returned to indicate desktop lyric is supported. |
 
 **Error codes:**
 

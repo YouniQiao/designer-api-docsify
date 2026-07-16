@@ -1,5 +1,11 @@
 # configEventPolicy
 
+## 导入模块
+
+```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+```
+
 ## configEventPolicy
 
 ```TypeScript
@@ -12,7 +18,9 @@ function configEventPolicy(policy: EventPolicy): Promise<void>
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-hiAppEvent-function configEventPolicy(policy: EventPolicy): Promise<void>--><!--Device-hiAppEvent-function configEventPolicy(policy: EventPolicy): Promise<void>-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -20,13 +28,13 @@ function configEventPolicy(policy: EventPolicy): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| policy | EventPolicy | 是 | 系统事件配置策略。 |
+| policy | [EventPolicy](arkts-performanceanalysis-eventpolicy-i.md) | 是 | 系统事件配置策略。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。<br>各个事件的事件配置策略，详细规格见[EventPolicy](arkts-performanceanalysis-eventpolicy-i.md)类型说明。若配置策略设置有误，会导致接口返回失败。<br>- 参数类型设置有误，则返回401通用错误信息；<br>- 参数规格设置有误，则在hilog日志输出相关错误信息。 |
+| Promise<void> | Promise对象，无返回结果。<br>各个事件的事件配置策略，详细规格见[EventPolicy](arkts-performanceanalysis-eventpolicy-i.md)类型说明。若配置策略设置有误，会导致接口返回失败。<br>- 参数类型设置有误，则返回401通用错误信息；<br>- 参数规格设置有误，则在hilog日志输出相关错误信息。 |
 
 **示例：**
 

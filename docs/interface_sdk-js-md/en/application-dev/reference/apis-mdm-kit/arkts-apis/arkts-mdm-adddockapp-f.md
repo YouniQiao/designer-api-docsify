@@ -12,11 +12,9 @@ import { applicationManager } from '@kit.MDMKit';
 function addDockApp(admin: Want, bundleName: string, abilityName: string, index?: number): void
 ```
 
-Adds an application to the bottom shortcut bar of a PC/2-in-1 device based on the location index. Then users can
-tap the application icon in the shortcut bar to directly launch the application. The application icon is the
-default icon displayed on the home screen.
+Adds an application to the bottom shortcut bar of a PC/2-in-1 device based on the location index. Then users can tap the application icon in the shortcut bar to directly launch the application. The application icon is the default icon displayed on the home screen.
 
-> **NOTE**
+> **NOTE**  
 >
 
 **Since:** 24
@@ -25,13 +23,15 @@ default icon displayed on the home screen.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function addDockApp(admin: Want, bundleName: string, abilityName: string, index?: number): void--><!--Device-applicationManager-function addDockApp(admin: Want, bundleName: string, abilityName: string, index?: number): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | bundleName | string | Yes | Bundle name of the application. |
 | abilityName | string | Yes | Ability name of the application. Only the application entry ability is supported. |
 | index | number | No | Location index of the application in the shortcut bar.<br>The value must be an integer within [0,99]. Default value: 99. |

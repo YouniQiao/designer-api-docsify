@@ -4,6 +4,8 @@ TabBar布局模式枚举。
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare enum BarMode--><!--Device-unnamed-declare enum BarMode-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## Scrollable
@@ -12,12 +14,13 @@ TabBar布局模式枚举。
 Scrollable = 0
 ```
 
-每一个TabBar均使用实际布局宽度，超过总长度（横向Tabs的[barWidth](TabsAttribute#barWidth)，纵向Tabs的
-[barHeight](TabsAttribute#barHeight(value: Length))）后可滑动。
+每一个TabBar均使用实际布局宽度，超过总长度（横向Tabs的[barWidth](TabsAttribute#barWidth)，纵向Tabs的[barHeight](TabsAttribute#barHeight(value: Length))）后可滑动。
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BarMode-Scrollable = 0--><!--Device-BarMode-Scrollable = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,7 +34,9 @@ Fixed = 1
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BarMode-Fixed = 1--><!--Device-BarMode-Fixed = 1-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

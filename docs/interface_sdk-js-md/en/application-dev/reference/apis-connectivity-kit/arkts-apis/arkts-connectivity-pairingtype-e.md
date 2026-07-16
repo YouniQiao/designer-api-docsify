@@ -4,6 +4,8 @@ Enum for the pairing type.
 
 **Since:** 26.0.0
 
+<!--Device-remoteDevice-enum PairingType--><!--Device-remoteDevice-enum PairingType-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## NO_PASSKEY_CONFIRMATION
@@ -17,6 +19,8 @@ Without passkey, the user needs to accept or reject the pairing request.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PairingType-NO_PASSKEY_CONFIRMATION = 0--><!--Device-PairingType-NO_PASSKEY_CONFIRMATION = 0-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -32,6 +36,8 @@ The user needs to enter the passcode displayed on the peer device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PairingType-PAIRING_TYPE_PASSCODE = 1--><!--Device-PairingType-PAIRING_TYPE_PASSCODE = 1-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## PAIRING_TYPE_NUMBER_COMPARE
@@ -45,6 +51,8 @@ The user needs to compare the number displayed on both devices.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PairingType-PAIRING_TYPE_NUMBER_COMPARE = 2--><!--Device-PairingType-PAIRING_TYPE_NUMBER_COMPARE = 2-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 

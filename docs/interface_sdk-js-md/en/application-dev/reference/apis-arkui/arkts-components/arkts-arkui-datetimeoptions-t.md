@@ -12,6 +12,8 @@ Defines the options for a **DateTimeOptions** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-unnamed-declare type DateTimeOptions = import('../api/@ohos.intl').default.DateTimeOptions--><!--Device-unnamed-declare type DateTimeOptions = import('../api/@ohos.intl').default.DateTimeOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** import('../api/@ohos.intl').default.DateTimeOptions

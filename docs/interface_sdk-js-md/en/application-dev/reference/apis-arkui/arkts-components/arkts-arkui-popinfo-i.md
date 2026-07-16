@@ -4,6 +4,8 @@ Provides the callback information returned when a page is popped out of the rout
 
 **Since:** 11
 
+<!--Device-unnamed-declare interface PopInfo--><!--Device-unnamed-declare interface PopInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## info
@@ -12,8 +14,7 @@ Provides the callback information returned when a page is popped out of the rout
 info: NavPathInfo
 ```
 
-Information about the current page when a back action is performed. The value is automatically obtained by the
-system.
+Information about the current page when a back action is performed. The value is automatically obtained by the system.
 
 **Type:** NavPathInfo
 
@@ -22,6 +23,8 @@ system.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopInfo-info: NavPathInfo--><!--Device-PopInfo-info: NavPathInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +43,8 @@ Result returned when a back action is performed. You must customize the object.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopInfo-result: Object--><!--Device-PopInfo-result: Object-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

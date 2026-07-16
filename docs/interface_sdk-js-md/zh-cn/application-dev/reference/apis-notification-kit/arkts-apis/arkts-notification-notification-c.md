@@ -8,6 +8,8 @@
 
 **替代接口：** notification/notification
 
+<!--Device-unnamed-declare class Notification--><!--Device-unnamed-declare class Notification-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 ## 导入模块
@@ -30,11 +32,13 @@ static show(options?: ShowNotificationOptions): void
 
 **替代接口：** notification/notification
 
+<!--Device-Notification-static show(options?: ShowNotificationOptions): void--><!--Device-Notification-static show(options?: ShowNotificationOptions): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | ShowNotificationOptions | 否 | 通知标题。 |
+| options | [ShowNotificationOptions](arkts-notification-shownotificationoptions-i.md) | 否 | 通知标题。 |
 

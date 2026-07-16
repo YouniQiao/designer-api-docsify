@@ -18,6 +18,8 @@ Gets the default SM-DP+ address stored in an eUICC.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_ESIM_STATE
 
+<!--Device-eSIM-function getDefaultSmdpAddress(slotId: int): Promise<string>--><!--Device-eSIM-function getDefaultSmdpAddress(slotId: int): Promise<string>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -32,7 +34,7 @@ Gets the default SM-DP+ address stored in an eUICC.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the default SM-DP+ address. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the default SM-DP+ address. |
 
 **Error codes:**
 

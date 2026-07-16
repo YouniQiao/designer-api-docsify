@@ -2,9 +2,9 @@
 
 Provides OAuth authenticator callbacks.
 
-> **NOTE**
->
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> **NOTE**  
+>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
 > [AuthCallback](arkts-basicservices-authcallback-i.md) instead.
 
 **Since:** 8
@@ -12,6 +12,8 @@ Provides OAuth authenticator callbacks.
 **Deprecated since:** 9
 
 **Substitutes:** [AuthCallback](arkts-basicservices-authcallback-i.md)
+
+<!--Device-appAccount-interface AuthenticatorCallback--><!--Device-appAccount-interface AuthenticatorCallback-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -29,8 +31,8 @@ onRequestRedirected: (request: Want) => void
 
 Called to redirect a request.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > This API is supported since API version 8 and deprecated since API version 9. Use [onRequestRedirected](#onrequestredirected9) instead.
 
 **Type:** (request: Want) => void
@@ -40,6 +42,8 @@ Called to redirect a request.
 **Deprecated since:** 9
 
 **Substitutes:** onRequestRedirected
+
+<!--Device-AuthenticatorCallback-onRequestRedirected: (request: Want) => void--><!--Device-AuthenticatorCallback-onRequestRedirected: (request: Want) => void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -51,8 +55,8 @@ onResult: (code: number, result: { [key: string]: any }) => void
 
 Called to return the result of an authentication request.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > This API is supported since API version 8 and deprecated since API version 9. Use [onResult](#onresult9) instead.
 
 **Type:** (code: number, result: { [key: string]: any }) => void
@@ -62,6 +66,8 @@ Called to return the result of an authentication request.
 **Deprecated since:** 9
 
 **Substitutes:** onResult
+
+<!--Device-AuthenticatorCallback-onResult: (code: number, result: { [key: string]: any }) => void--><!--Device-AuthenticatorCallback-onResult: (code: number, result: { [key: string]: any }) => void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 

@@ -18,13 +18,15 @@ Checks whether a function is a concurrent function.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-taskpool-function isConcurrent(func: Function): boolean--><!--Device-taskpool-function isConcurrent(func: Function): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| func | Function | Yes | Function to check. |
+| func | [Function](../../apis-na/arkts-apis/arkts-na-function-i.md) | Yes | Function to check. |
 
 **Return value:**
 

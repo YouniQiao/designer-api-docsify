@@ -20,6 +20,8 @@ Obtains the localized name of the specified country/region.
 
 **Substitutes:** [getDisplayCountry](arkts-localization-system-c.md#getdisplaycountry-1)
 
+<!--Device-i18n-export function getDisplayCountry(country: string, locale: string, sentenceCase?: boolean): string--><!--Device-i18n-export function getDisplayCountry(country: string, locale: string, sentenceCase?: boolean): string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -28,7 +30,7 @@ Obtains the localized name of the specified country/region.
 | --- | --- | --- | --- |
 | country | string | Yes | Specified country. |
 | locale | string | Yes | [System locale](../../../../internationalization/i18n-locale-culture.md#how-it-works),which consists of the language, script, and country/region. |
-| sentenceCase | boolean | No | Whether to use sentence case to display the text. The value **true** means todisplay the text in title case format, and the value **false** means to display the text in the default caseformat of the locale. The default value is **true**. |
+| sentenceCase | boolean | No | Whether to use sentence case to display the text. The value **true** means to display the text in title case format, and the value **false** means to display the text in the default case format of the locale. The default value is **true**. |
 
 **Return value:**
 

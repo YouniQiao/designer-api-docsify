@@ -4,6 +4,8 @@ The APIs of this module return exceptions since API version 9. The following tab
 
 **Since:** 9
 
+<!--Device-rpc-enum ErrorCode--><!--Device-rpc-enum ErrorCode-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## CHECK_PARAM_ERROR
@@ -15,6 +17,8 @@ CHECK_PARAM_ERROR = 401
 Parameter check failed.
 
 **Since:** 9
+
+<!--Device-ErrorCode-CHECK_PARAM_ERROR = 401--><!--Device-ErrorCode-CHECK_PARAM_ERROR = 401-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -28,6 +32,8 @@ Failed to call mmap.
 
 **Since:** 9
 
+<!--Device-ErrorCode-OS_MMAP_ERROR = 1900001--><!--Device-ErrorCode-OS_MMAP_ERROR = 1900001-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## OS_IOCTL_ERROR
@@ -39,6 +45,8 @@ OS_IOCTL_ERROR = 1900002
 Failed to call **ioctl** with the shared memory file descriptor.
 
 **Since:** 9
+
+<!--Device-ErrorCode-OS_IOCTL_ERROR = 1900002--><!--Device-ErrorCode-OS_IOCTL_ERROR = 1900002-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -52,6 +60,8 @@ Failed to write data to the shared memory.
 
 **Since:** 9
 
+<!--Device-ErrorCode-WRITE_TO_ASHMEM_ERROR = 1900003--><!--Device-ErrorCode-WRITE_TO_ASHMEM_ERROR = 1900003-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## READ_FROM_ASHMEM_ERROR
@@ -63,6 +73,8 @@ READ_FROM_ASHMEM_ERROR = 1900004
 Failed to read data from the shared memory.
 
 **Since:** 9
+
+<!--Device-ErrorCode-READ_FROM_ASHMEM_ERROR = 1900004--><!--Device-ErrorCode-READ_FROM_ASHMEM_ERROR = 1900004-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -76,6 +88,8 @@ This operation is allowed only on the proxy object.
 
 **Since:** 9
 
+<!--Device-ErrorCode-ONLY_PROXY_OBJECT_PERMITTED_ERROR = 1900005--><!--Device-ErrorCode-ONLY_PROXY_OBJECT_PERMITTED_ERROR = 1900005-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## ONLY_REMOTE_OBJECT_PERMITTED_ERROR
@@ -87,6 +101,8 @@ ONLY_REMOTE_OBJECT_PERMITTED_ERROR = 1900006
 This operation is allowed only on the remote object.
 
 **Since:** 9
+
+<!--Device-ErrorCode-ONLY_REMOTE_OBJECT_PERMITTED_ERROR = 1900006--><!--Device-ErrorCode-ONLY_REMOTE_OBJECT_PERMITTED_ERROR = 1900006-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -100,6 +116,8 @@ Failed to communicate with the remote object over IPC.
 
 **Since:** 9
 
+<!--Device-ErrorCode-COMMUNICATION_ERROR = 1900007--><!--Device-ErrorCode-COMMUNICATION_ERROR = 1900007-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## PROXY_OR_REMOTE_OBJECT_INVALID_ERROR
@@ -111,6 +129,8 @@ PROXY_OR_REMOTE_OBJECT_INVALID_ERROR = 1900008
 Invalid proxy or remote object.
 
 **Since:** 9
+
+<!--Device-ErrorCode-PROXY_OR_REMOTE_OBJECT_INVALID_ERROR = 1900008--><!--Device-ErrorCode-PROXY_OR_REMOTE_OBJECT_INVALID_ERROR = 1900008-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -124,6 +144,8 @@ Failed to write data to MessageSequence.
 
 **Since:** 9
 
+<!--Device-ErrorCode-WRITE_DATA_TO_MESSAGE_SEQUENCE_ERROR = 1900009--><!--Device-ErrorCode-WRITE_DATA_TO_MESSAGE_SEQUENCE_ERROR = 1900009-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## READ_DATA_FROM_MESSAGE_SEQUENCE_ERROR
@@ -135,6 +157,8 @@ READ_DATA_FROM_MESSAGE_SEQUENCE_ERROR = 1900010
 Failed to read data from MessageSequence.
 
 **Since:** 9
+
+<!--Device-ErrorCode-READ_DATA_FROM_MESSAGE_SEQUENCE_ERROR = 1900010--><!--Device-ErrorCode-READ_DATA_FROM_MESSAGE_SEQUENCE_ERROR = 1900010-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -148,6 +172,8 @@ Failed to allocate memory during serialization.
 
 **Since:** 9
 
+<!--Device-ErrorCode-PARCEL_MEMORY_ALLOC_ERROR = 1900011--><!--Device-ErrorCode-PARCEL_MEMORY_ALLOC_ERROR = 1900011-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## CALL_JS_METHOD_ERROR
@@ -160,6 +186,8 @@ Failed to invoke the JS callback.
 
 **Since:** 9
 
+<!--Device-ErrorCode-CALL_JS_METHOD_ERROR = 1900012--><!--Device-ErrorCode-CALL_JS_METHOD_ERROR = 1900012-End-->
+
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## OS_DUP_ERROR
@@ -171,6 +199,8 @@ OS_DUP_ERROR = 1900013
 Failed to call dup.
 
 **Since:** 9
+
+<!--Device-ErrorCode-OS_DUP_ERROR = 1900013--><!--Device-ErrorCode-OS_DUP_ERROR = 1900013-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 

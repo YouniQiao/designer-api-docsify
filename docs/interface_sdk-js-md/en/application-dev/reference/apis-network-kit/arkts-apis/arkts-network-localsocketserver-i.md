@@ -4,6 +4,8 @@ Defines a LocalSocket server connection.
 
 **Since:** 12
 
+<!--Device-socket-export interface LocalSocketServer--><!--Device-socket-export interface LocalSocketServer-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -22,13 +24,15 @@ Close the LocalSocketServer. Close the LocalSocketServer listening port.
 
 **Since:** 24
 
+<!--Device-LocalSocketServer-close(): Promise<void>--><!--Device-LocalSocketServer-close(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -75,13 +79,15 @@ Gets other attributes of the LocalSocket connection.
 
 **Since:** 12
 
+<!--Device-LocalSocketServer-getExtraOptions(): Promise<ExtraOptionsBase>--><!--Device-LocalSocketServer-getExtraOptions(): Promise<ExtraOptionsBase>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ExtraOptionsBase&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ExtraOptionsBase> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -126,13 +132,15 @@ Obtains the local address of the LocalSocketServer connection.
 
 **Since:** 24
 
+<!--Device-LocalSocketServer-getLocalAddress(): Promise<string>--><!--Device-LocalSocketServer-getLocalAddress(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -181,13 +189,15 @@ Obtains the file descriptor of the LocalSocketServer.
 
 **Since:** 24
 
+<!--Device-LocalSocketServer-getSocketFd(): Promise<int>--><!--Device-LocalSocketServer-getSocketFd(): Promise<int>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The promise returns the file descriptor of the local socket server. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | The promise returns the file descriptor of the local socket server. |
 
 **Example**
 
@@ -227,13 +237,15 @@ Obtains the status of the LocalSocketServer connection.
 
 **Since:** 12
 
+<!--Device-LocalSocketServer-getState(): Promise<SocketStateBase>--><!--Device-LocalSocketServer-getState(): Promise<SocketStateBase>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SocketStateBase&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SocketStateBase> | The promise returned by the function. |
 
 **Example**
 
@@ -269,11 +281,11 @@ server.getState().then((data: socket.SocketStateBase) => {
 listen(address: LocalAddress): Promise<void>
 ```
 
-Binds the Local address.
-<p>Listens for a LocalSocket connection to be made to this socket and accepts it. This interface uses multiple threads
-for accept processing and uses poll multiplex to process client connections.</p>
+Binds the Local address.<p>Listens for a LocalSocket connection to be made to this socket and accepts it. This interface uses multiple threads for accept processing and uses poll multiplex to process client connections.</p>
 
 **Since:** 12
+
+<!--Device-LocalSocketServer-listen(address: LocalAddress): Promise<void>--><!--Device-LocalSocketServer-listen(address: LocalAddress): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -281,13 +293,13 @@ for accept processing and uses poll multiplex to process client connections.</p>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | LocalAddress | Yes | Network address information {@link LocalAddress}. |
+| address | [LocalAddress](arkts-network-localaddress-i.md) | Yes | Network address information {@link LocalAddress}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -331,6 +343,8 @@ Cancels listening for connect events of the LocalSocketServer connection.
 
 **Since:** 12
 
+<!--Device-LocalSocketServer-off(type: 'connect', callback?: Callback<LocalSocketConnection>): void--><!--Device-LocalSocketServer-off(type: 'connect', callback?: Callback<LocalSocketConnection>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -338,7 +352,7 @@ Cancels listening for connect events of the LocalSocketServer connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' | Yes | Indicates Event name. |
-| callback | Callback&lt;LocalSocketConnection&gt; | No | The callback of off. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<LocalSocketConnection> | No | The callback of off. |
 
 **Error codes:**
 
@@ -374,6 +388,8 @@ Cancels listening for error events of the LocalSocketServer connection.
 
 **Since:** 12
 
+<!--Device-LocalSocketServer-off(type: 'error', callback?: ErrorCallback): void--><!--Device-LocalSocketServer-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -381,7 +397,7 @@ Cancels listening for error events of the LocalSocketServer connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Indicates Event name. |
-| callback | ErrorCallback | No | The callback of off. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | The callback of off. |
 
 **Error codes:**
 
@@ -415,6 +431,8 @@ Listens for connect events of the LocalSocketServer connection.
 
 **Since:** 12
 
+<!--Device-LocalSocketServer-on(type: 'connect', callback: Callback<LocalSocketConnection>): void--><!--Device-LocalSocketServer-on(type: 'connect', callback: Callback<LocalSocketConnection>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -422,7 +440,7 @@ Listens for connect events of the LocalSocketServer connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' | Yes | Indicates Event name. |
-| callback | Callback&lt;LocalSocketConnection&gt; | Yes | The callback of on. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<LocalSocketConnection> | Yes | The callback of on. |
 
 **Error codes:**
 
@@ -454,6 +472,8 @@ Listens for error events of the LocalSocketServer connection.
 
 **Since:** 12
 
+<!--Device-LocalSocketServer-on(type: 'error', callback: ErrorCallback): void--><!--Device-LocalSocketServer-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -461,7 +481,7 @@ Listens for error events of the LocalSocketServer connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Indicates Event name. |
-| callback | ErrorCallback | Yes | The callback of on. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | The callback of on. |
 
 **Error codes:**
 
@@ -491,19 +511,21 @@ Sets other attributes of the LocalSocketServer connection.
 
 **Since:** 12
 
+<!--Device-LocalSocketServer-setExtraOptions(options: ExtraOptionsBase): Promise<void>--><!--Device-LocalSocketServer-setExtraOptions(options: ExtraOptionsBase): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ExtraOptionsBase | Yes | Parameters of the attributes {@link ExtraOptionsBase}. |
+| options | [ExtraOptionsBase](arkts-network-extraoptionsbase-i.md) | Yes | Parameters of the attributes {@link ExtraOptionsBase}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

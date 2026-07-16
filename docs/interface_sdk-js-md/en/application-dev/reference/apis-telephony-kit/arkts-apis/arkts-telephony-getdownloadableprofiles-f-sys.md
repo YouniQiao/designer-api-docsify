@@ -19,6 +19,10 @@ Gets downloadable profile List which are available for download on this device.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_ESIM_STATE
 
+<!--Device-eSIM-function getDownloadableProfiles(slotId: int, portIndex: int,
+                                   forceDisableProfile: boolean): Promise<GetDownloadableProfilesResult>--><!--Device-eSIM-function getDownloadableProfiles(slotId: int, portIndex: int,
+                                   forceDisableProfile: boolean): Promise<GetDownloadableProfilesResult>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -29,13 +33,13 @@ Gets downloadable profile List which are available for download on this device.
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number. |
 | portIndex | number | Yes | Index of the port for the slot. |
-| forceDisableProfile | boolean | Yes | If true, the active profile must be disabled in order to perform theoperation. Otherwise, the resultCode should return {@link RESULT_MUST_DISABLE_PROFILE} to allowthe user to agree to this operation first. |
+| forceDisableProfile | boolean | Yes | If true, the active profile must be disabled in order to perform the operation. Otherwise, the resultCode should return {@link RESULT_MUST_DISABLE_PROFILE} to allow the user to agree to this operation first. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GetDownloadableProfilesResult&gt; | Return metadata for downloadableProfile which areavailable for download on this device. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<GetDownloadableProfilesResult> | Return metadata for downloadableProfile which are available for download on this device. |
 
 **Error codes:**
 

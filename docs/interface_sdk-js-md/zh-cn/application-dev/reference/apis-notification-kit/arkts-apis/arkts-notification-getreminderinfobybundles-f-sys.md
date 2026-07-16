@@ -18,6 +18,8 @@ function getReminderInfoByBundles(bundles: Array<BundleOption>) : Promise<Array<
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getReminderInfoByBundles(bundles: Array<BundleOption>) : Promise<Array<NotificationReminderInfo>>--><!--Device-notificationManager-function getReminderInfoByBundles(bundles: Array<BundleOption>) : Promise<Array<NotificationReminderInfo>>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,13 +28,13 @@ function getReminderInfoByBundles(bundles: Array<BundleOption>) : Promise<Array<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundles | Array&lt;BundleOption&gt; | 是 | 待获取应用提醒信息的应用包信息数组。 |
+| bundles | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<BundleOption> | 是 | 待获取应用提醒信息的应用包信息数组。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;NotificationReminderInfo&gt;&gt; | Promise对象，返回包含应用提醒信息的Promise对象。 |
+| Promise<Array<NotificationReminderInfo>> | Promise对象，返回包含应用提醒信息的Promise对象。 |
 
 **错误码：**
 

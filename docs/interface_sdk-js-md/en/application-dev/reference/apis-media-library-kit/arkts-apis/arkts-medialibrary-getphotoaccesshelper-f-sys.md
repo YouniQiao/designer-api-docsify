@@ -20,6 +20,8 @@ Obtains a PhotoAccessHelper instance for the specified user, letting you access 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-sendablePhotoAccessHelper-function getPhotoAccessHelper(context: Context, userId: number): PhotoAccessHelper--><!--Device-sendablePhotoAccessHelper-function getPhotoAccessHelper(context: Context, userId: number): PhotoAccessHelper-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -28,14 +30,14 @@ Obtains a PhotoAccessHelper instance for the specified user, letting you access 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability instance. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the ability instance. |
 | userId | number | Yes | ID of the user. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PhotoAccessHelper | PhotoAccessHelper instance obtained. |
+| [PhotoAccessHelper](arkts-medialibrary-photoaccesshelper-i-sys.md) | PhotoAccessHelper instance obtained. |
 
 **Error codes:**
 

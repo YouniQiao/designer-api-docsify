@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-image-enum PackingDynamicRange--><!--Device-image-enum PackingDynamicRange-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## AUTO
@@ -16,6 +18,8 @@ AUTO = 0
 
 **起始版本：** 12
 
+<!--Device-PackingDynamicRange-AUTO = 0--><!--Device-PackingDynamicRange-AUTO = 0-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SDR
@@ -27,6 +31,8 @@ SDR = 1
 按照标准动态范围处理图片。
 
 **起始版本：** 12
+
+<!--Device-PackingDynamicRange-SDR = 1--><!--Device-PackingDynamicRange-SDR = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

@@ -4,6 +4,8 @@ The result for closing a WebSocket connection.
 
 **Since:** 11
 
+<!--Device-webSocket-export interface CloseResult--><!--Device-webSocket-export interface CloseResult-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Error code.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CloseResult-code: int--><!--Device-CloseResult-code: int-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## reason
@@ -41,6 +45,8 @@ Error cause.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CloseResult-reason: string--><!--Device-CloseResult-reason: string-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

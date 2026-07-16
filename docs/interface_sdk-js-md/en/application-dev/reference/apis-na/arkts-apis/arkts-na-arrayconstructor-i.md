@@ -1,10 +1,14 @@
 # ArrayConstructor
 
+<!--Device-unnamed-interface ArrayConstructor--><!--Device-unnamed-interface ArrayConstructor-End-->
+
 ## constructor
 
 ```TypeScript
 new(arrayLength?: number): any[]
 ```
+
+<!--Device-ArrayConstructor-new(arrayLength?: number): any[]--><!--Device-ArrayConstructor-new(arrayLength?: number): any[]-End-->
 
 **Parameters:**
 
@@ -24,6 +28,8 @@ new(arrayLength?: number): any[]
 new <T>(arrayLength: number): T[]
 ```
 
+<!--Device-ArrayConstructor-new <T>(arrayLength: number): T[]--><!--Device-ArrayConstructor-new <T>(arrayLength: number): T[]-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -41,6 +47,8 @@ new <T>(arrayLength: number): T[]
 ```TypeScript
 new <T>(...items: T[]): T[]
 ```
+
+<!--Device-ArrayConstructor-new <T>(...items: T[]): T[]--><!--Device-ArrayConstructor-new <T>(...items: T[]): T[]-End-->
 
 **Parameters:**
 
@@ -60,6 +68,8 @@ new <T>(...items: T[]): T[]
 (arrayLength?: number): any[]
 ```
 
+<!--Device-ArrayConstructor-(arrayLength?: number): any[]--><!--Device-ArrayConstructor-(arrayLength?: number): any[]-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -77,6 +87,8 @@ new <T>(...items: T[]): T[]
 ```TypeScript
 <T>(arrayLength: number): T[]
 ```
+
+<!--Device-ArrayConstructor-<T>(arrayLength: number): T[]--><!--Device-ArrayConstructor-<T>(arrayLength: number): T[]-End-->
 
 **Parameters:**
 
@@ -96,6 +108,8 @@ new <T>(...items: T[]): T[]
 <T>(...items: T[]): T[]
 ```
 
+<!--Device-ArrayConstructor-<T>(...items: T[]): T[]--><!--Device-ArrayConstructor-<T>(...items: T[]): T[]-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -113,6 +127,8 @@ new <T>(...items: T[]): T[]
 ```TypeScript
 isArray(arg: any): arg is any[]
 ```
+
+<!--Device-ArrayConstructor-isArray(arg: any): arg is any[]--><!--Device-ArrayConstructor-isArray(arg: any): arg is any[]-End-->
 
 **Parameters:**
 
@@ -133,4 +149,6 @@ readonly prototype: any[]
 ```
 
 **Type:** any[]
+
+<!--Device-ArrayConstructor-readonly prototype: any[]--><!--Device-ArrayConstructor-readonly prototype: any[]-End-->
 

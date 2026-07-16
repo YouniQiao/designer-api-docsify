@@ -12,12 +12,13 @@ import { kioskManager } from '@kit.AbilityKit';
 function getKioskStatus(): Promise<KioskStatus>
 ```
 
-Obtains the Kiosk mode status information, including whether the system is in kiosk mode, and the name and UID of
-the application that has entered Kiosk mode. This API uses a promise to return the result.
+Obtains the Kiosk mode status information, including whether the system is in kiosk mode, and the name and UID of the application that has entered Kiosk mode. This API uses a promise to return the result.
 
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-kioskManager-function getKioskStatus(): Promise<KioskStatus>--><!--Device-kioskManager-function getKioskStatus(): Promise<KioskStatus>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -27,7 +28,7 @@ the application that has entered Kiosk mode. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KioskStatus&gt; | Promise used to return the kiosk mode status information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<KioskStatus> | Promise used to return the kiosk mode status information. |
 
 **Error codes:**
 

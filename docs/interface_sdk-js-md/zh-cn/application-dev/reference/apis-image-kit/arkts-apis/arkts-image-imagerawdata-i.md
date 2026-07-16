@@ -4,7 +4,15 @@
 
 **起始版本：** 24
 
+<!--Device-image-interface ImageRawData--><!--Device-image-interface ImageRawData-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
+
+## 导入模块
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+```
 
 ## bitsPerPixel
 
@@ -19,6 +27,8 @@ bitsPerPixel: number
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ImageRawData-bitsPerPixel: int--><!--Device-ImageRawData-bitsPerPixel: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -35,6 +45,8 @@ buffer: ArrayBuffer
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ImageRawData-buffer: ArrayBuffer--><!--Device-ImageRawData-buffer: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 

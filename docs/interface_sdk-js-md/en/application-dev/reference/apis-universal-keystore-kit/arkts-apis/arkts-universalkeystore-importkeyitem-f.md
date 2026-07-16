@@ -18,6 +18,8 @@ Imports a key in plaintext. This API uses an asynchronous callback to return the
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-huks-function importKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<void>): void--><!--Device-huks-function importKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
 - API version 9 to 11: SystemCapability.Security.Huks.Extension
@@ -26,9 +28,9 @@ Imports a key in plaintext. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not includesensitive data such as personal information. |
-| options | HuksOptions | Yes | Tags required for the import and key to import. The algorithm, key purpose, andkey length are mandatory. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not include sensitive data such as personal information. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Tags required for the import and key to import. The algorithm, key purpose, and key length are mandatory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -116,20 +118,22 @@ Imports a key in plaintext. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-huks-function importKeyItem(keyAlias: string, options: HuksOptions): Promise<void>--><!--Device-huks-function importKeyItem(keyAlias: string, options: HuksOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not includesensitive data such as personal information. |
-| options | HuksOptions | Yes | Tags required for the import and key to import. The algorithm, key purpose, andkey length are mandatory. |
+| keyAlias | string | Yes | Alias of the key. The value can contain up to 128 bytes and should not include sensitive data such as personal information. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Tags required for the import and key to import. The algorithm, key purpose, and key length are mandatory. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

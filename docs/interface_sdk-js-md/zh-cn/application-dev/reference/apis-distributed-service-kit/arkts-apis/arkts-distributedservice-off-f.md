@@ -1,5 +1,11 @@
 # off
 
+## 导入模块
+
+```TypeScript
+import { proxyChannelManager } from '@kit.DistributedServiceKit';
+```
+
 ## off('receiveData')
 
 ```TypeScript
@@ -14,6 +20,8 @@ function off(type: 'receiveData', channelId: number, callback?: Callback<DataInf
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-proxyChannelManager-function off(type: 'receiveData', channelId: number, callback?: Callback<DataInfo>): void--><!--Device-proxyChannelManager-function off(type: 'receiveData', channelId: number, callback?: Callback<DataInfo>): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**
@@ -22,7 +30,7 @@ function off(type: 'receiveData', channelId: number, callback?: Callback<DataInf
 | --- | --- | --- | --- |
 | type | 'receiveData' | 是 | 设置订阅类型，固定取值为'receiveData'。 |
 | channelId | number | 是 | 打开代理通道时获取的channelId。 |
-| callback | Callback&lt;DataInfo&gt; | 否 | 注册的回调函数。如果为空、undefined、null，则取消订阅所有的数据接收事件。如果不为空，传入最后一次注册的回调函数。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DataInfo> | 否 | 注册的回调函数。如果为空、undefined、null，则取消订阅所有的数据接收事件。如果不为空，传入最后一次注册的回调函数。 |
 
 **错误码：**
 
@@ -77,6 +85,8 @@ function off(type: 'channelStateChange', channelId: number, callback?: Callback<
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-proxyChannelManager-function off(type: 'channelStateChange', channelId: number, callback?: Callback<ChannelStateInfo>): void--><!--Device-proxyChannelManager-function off(type: 'channelStateChange', channelId: number, callback?: Callback<ChannelStateInfo>): void-End-->
+
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **参数：**
@@ -85,7 +95,7 @@ function off(type: 'channelStateChange', channelId: number, callback?: Callback<
 | --- | --- | --- | --- |
 | type | 'channelStateChange' | 是 | 设置订阅类型为'channelStateChange'。 |
 | channelId | number | 是 | 打开代理通道时获取的channelId。 |
-| callback | Callback&lt;ChannelStateInfo&gt; | 否 | 注册的回调函数。如果为空、undefined、null，则取消订阅所有的数据接收事件。如果不为空，传入最后一次注册的回调函数。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ChannelStateInfo> | 否 | 注册的回调函数。如果为空、undefined、null，则取消订阅所有的数据接收事件。如果不为空，传入最后一次注册的回调函数。 |
 
 **错误码：**
 

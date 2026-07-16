@@ -8,6 +8,8 @@ The enum of BLE match mode.
 
 **Substitutes:** MatchMode
 
+<!--Device-bluetoothManager-enum MatchMode--><!--Device-bluetoothManager-enum MatchMode-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## MATCH_MODE_AGGRESSIVE
@@ -24,6 +26,8 @@ aggressive mode
 
 **Substitutes:** MATCH_MODE_AGGRESSIVE
 
+<!--Device-MatchMode-MATCH_MODE_AGGRESSIVE = 1--><!--Device-MatchMode-MATCH_MODE_AGGRESSIVE = 1-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## MATCH_MODE_STICKY
@@ -39,6 +43,8 @@ sticky mode
 **Deprecated since:** 10
 
 **Substitutes:** MATCH_MODE_STICKY
+
+<!--Device-MatchMode-MATCH_MODE_STICKY = 2--><!--Device-MatchMode-MATCH_MODE_STICKY = 2-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

@@ -1,9 +1,10 @@
 # NotificationSlot
 
-The **NotificationSlot** module provides APIs for defining the notification slots. The notification reminder modes
-vary according to notification slots.
+The **NotificationSlot** module provides APIs for defining the notification slots. The notification reminder modes vary according to notification slots.
 
 **Since:** 7
+
+<!--Device-unnamed-export interface NotificationSlot--><!--Device-unnamed-export interface NotificationSlot-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -15,12 +16,14 @@ badgeFlag?: boolean
 
 Whether to display the badge. The default value is **true**.
 
-- **true**: Display the badge.
+- **true**: Display the badge.  
 - **false**: Do not display the badge.
 
 **Type:** boolean
 
 **Since:** 7
+
+<!--Device-NotificationSlot-badgeFlag?: boolean--><!--Device-NotificationSlot-badgeFlag?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -32,12 +35,14 @@ bypassDnd?: boolean
 
 Whether to bypass Do Not Disturb mode in the system. The default value is **false**.
 
-- **true**: Bypass Do Not Disturb mode, and notifications will still be alerted in Do Not Disturb mode.
+- **true**: Bypass Do Not Disturb mode, and notifications will still be alerted in Do Not Disturb mode.  
 - **false**: Do not bypass Do Not Disturb mode, and notifications will not be alerted in Do Not Disturb mode.
 
 **Type:** boolean
 
 **Since:** 7
+
+<!--Device-NotificationSlot-bypassDnd?: boolean--><!--Device-NotificationSlot-bypassDnd?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -47,12 +52,13 @@ Whether to bypass Do Not Disturb mode in the system. The default value is **fals
 desc?: string
 ```
 
-Description of the notification channel. The size cannot exceed 243 bytes, and the excess part will be
-truncated.
+Description of the notification channel. The size cannot exceed 243 bytes, and the excess part will be truncated.
 
 **Type:** string
 
 **Since:** 7
+
+<!--Device-NotificationSlot-desc?: string--><!--Device-NotificationSlot-desc?: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -64,12 +70,14 @@ readonly enabled?: boolean
 
 Whether to allow notifications to be published from this notification channel.
 
-- **true**: yes.
+- **true**: yes.  
 - **false**: no.
 
 **Type:** boolean
 
 **Since:** 9
+
+<!--Device-NotificationSlot-readonly enabled?: boolean--><!--Device-NotificationSlot-readonly enabled?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -81,8 +89,7 @@ level?: notification.SlotLevel
 
 Notification level.
 
-This attribute is supported since API version 7 and deprecated since API version 20. You are advised to use
-**notificationLevel** instead.
+This attribute is supported since API version 7 and deprecated since API version 20. You are advised to use **notificationLevel** instead.
 
 **Type:** notification.SlotLevel
 
@@ -91,6 +98,8 @@ This attribute is supported since API version 7 and deprecated since API version
 **Deprecated since:** 20
 
 **Substitutes:** [notificationLevel](arkts-notification-notificationslot-i.md#notificationlevel)
+
+<!--Device-NotificationSlot-level?: notification.SlotLevel--><!--Device-NotificationSlot-level?: notification.SlotLevel-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -106,6 +115,8 @@ Indicator color of the notification. This is a reserved capability and is not su
 
 **Since:** 7
 
+<!--Device-NotificationSlot-lightColor?: int--><!--Device-NotificationSlot-lightColor?: int-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## lightEnabled
@@ -116,12 +127,14 @@ lightEnabled?: boolean
 
 Whether to enable the light. The default value is **false**.
 
-- **true**: yes.
+- **true**: yes.  
 - **false**: no.
 
 **Type:** boolean
 
 **Since:** 7
+
+<!--Device-NotificationSlot-lightEnabled?: boolean--><!--Device-NotificationSlot-lightEnabled?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -131,12 +144,13 @@ Whether to enable the light. The default value is **false**.
 lockscreenVisibility?: number
 ```
 
-Mode for displaying the notification on the lock screen. This is a reserved capability and is not supported
-currently.
+Mode for displaying the notification on the lock screen. This is a reserved capability and is not supported currently.
 
 **Type:** number
 
 **Since:** 7
+
+<!--Device-NotificationSlot-lockscreenVisibility?: int--><!--Device-NotificationSlot-lockscreenVisibility?: int-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -152,6 +166,8 @@ Notification level.
 
 **Since:** 20
 
+<!--Device-NotificationSlot-notificationLevel?: notificationManager.SlotLevel--><!--Device-NotificationSlot-notificationLevel?: notificationManager.SlotLevel-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## notificationType
@@ -166,6 +182,8 @@ Notification slot type.
 
 **Since:** 11
 
+<!--Device-NotificationSlot-notificationType?: notificationManager.SlotType--><!--Device-NotificationSlot-notificationType?: notificationManager.SlotType-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 ## sound
@@ -174,13 +192,13 @@ Notification slot type.
 sound?: string
 ```
 
-File name of the custom ringtone for notifications from this channel. The file is placed in the
-**resources/rawfile** directory, and formats such as M4A, AAC, MP3, OGG, WAV, FLAC, and AMR are supported. The
-size cannot exceed 243 bytes, and the excess part will be truncated.
+File name of the custom ringtone for notifications from this channel. The file is placed in the **resources/rawfile** directory, and formats such as M4A, AAC, MP3, OGG, WAV, FLAC, and AMR are supported. The size cannot exceed 243 bytes, and the excess part will be truncated.
 
 **Type:** string
 
 **Since:** 7
+
+<!--Device-NotificationSlot-sound?: string--><!--Device-NotificationSlot-sound?: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -192,8 +210,7 @@ type?: notification.SlotType
 
 Channel type.
 
-This attribute is supported since API version 7 and deprecated since API version 11. It is recommended to use
-**notificationType** instead.
+This attribute is supported since API version 7 and deprecated since API version 11. It is recommended to use **notificationType** instead.
 
 **Type:** notification.SlotType
 
@@ -202,6 +219,8 @@ This attribute is supported since API version 7 and deprecated since API version
 **Deprecated since:** 11
 
 **Substitutes:** [notificationType](arkts-notification-notificationslot-i.md#notificationtype)
+
+<!--Device-NotificationSlot-type?: notification.SlotType--><!--Device-NotificationSlot-type?: notification.SlotType-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -213,12 +232,14 @@ vibrationEnabled?: boolean
 
 Whether to enable vibration. The default value is **false**.
 
-- **true**: yes.
+- **true**: yes.  
 - **false**: no.
 
 **Type:** boolean
 
 **Since:** 7
+
+<!--Device-NotificationSlot-vibrationEnabled?: boolean--><!--Device-NotificationSlot-vibrationEnabled?: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -233,6 +254,8 @@ Vibration mode of the notification. This is a reserved capability and is not sup
 **Type:** Array<number>
 
 **Since:** 7
+
+<!--Device-NotificationSlot-vibrationValues?: Array<long>--><!--Device-NotificationSlot-vibrationValues?: Array<long>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

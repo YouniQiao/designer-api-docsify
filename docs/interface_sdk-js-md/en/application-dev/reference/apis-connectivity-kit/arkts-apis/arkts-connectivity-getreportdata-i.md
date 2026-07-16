@@ -4,6 +4,8 @@ Describe the GET_REPORT data is received from remote host.
 
 **Since:** 23
 
+<!--Device-hid-interface GetReportData--><!--Device-hid-interface GetReportData-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ bufferSize of GET_REPORT data, maximum number of octets to transfer during data 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-GetReportData-bufferSize: int--><!--Device-GetReportData-bufferSize: int-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## id
@@ -42,6 +46,8 @@ id of GET_REPORT data.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-GetReportData-id: int--><!--Device-GetReportData-id: int-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## type
@@ -57,6 +63,8 @@ reportType of GET_REPORT data.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GetReportData-type: ReportType--><!--Device-GetReportData-type: ReportType-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

@@ -12,12 +12,13 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function disableNetwork(netId: number): void
 ```
 
-Disable the specified DeviceConfig by networkId.
-The disabled DeviceConfig will not be associated with again.
+Disable the specified DeviceConfig by networkId.The disabled DeviceConfig will not be associated with again.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
+
+<!--Device-wifiManager-function disableNetwork(netId: int): void--><!--Device-wifiManager-function disableNetwork(netId: int): void-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -61,12 +62,13 @@ try {
 function disableNetwork(netId: number, blockDuration: number): void
 ```
 
-Disable the specified DeviceConfig by networkId for a period of time.
-The disabled DeviceConfig will not be associated with again.
+Disable the specified DeviceConfig by networkId for a period of time.The disabled DeviceConfig will not be associated with again.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
+
+<!--Device-wifiManager-function disableNetwork(netId: int, blockDuration: int): void--><!--Device-wifiManager-function disableNetwork(netId: int, blockDuration: int): void-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 

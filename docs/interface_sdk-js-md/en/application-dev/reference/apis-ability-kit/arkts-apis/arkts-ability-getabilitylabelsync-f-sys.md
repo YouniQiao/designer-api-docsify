@@ -12,14 +12,15 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAbilityLabelSync(bundleName: string, moduleName: string, abilityName: string): string
 ```
 
-Obtains the ability label based on the given bundle name, module name, and ability name. This API returns the
-result synchronously.
+Obtains the ability label based on the given bundle name, module name, and ability name. This API returns the result synchronously.
 
 No permission is required for obtaining the caller's own information.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getAbilityLabelSync(bundleName: string, moduleName: string, abilityName: string): string--><!--Device-bundleManager-function getAbilityLabelSync(bundleName: string, moduleName: string, abilityName: string): string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 

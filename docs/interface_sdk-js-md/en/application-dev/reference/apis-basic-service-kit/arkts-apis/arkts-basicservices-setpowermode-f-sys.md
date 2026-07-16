@@ -18,6 +18,8 @@ Sets the power mode of a device. This API uses an asynchronous callback to retur
 
 **Required permissions:** ohos.permission.POWER_OPTIMIZATION
 
+<!--Device-power-function setPowerMode(mode: DevicePowerMode, callback: AsyncCallback<void>): void--><!--Device-power-function setPowerMode(mode: DevicePowerMode, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 **System API:** This is a system API.
@@ -26,14 +28,14 @@ Sets the power mode of a device. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | DevicePowerMode | Yes | Power mode. The value must be an enum. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback invoked to return the result.<br> If the power mode issuccessfully set, **err** is **undefined**; otherwise, **err** is an error object. |
+| mode | [DevicePowerMode](arkts-basicservices-devicepowermode-e.md) | Yes | Power mode. The value must be an enum. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback invoked to return the result.<br> If the power mode is successfully set, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Parameter verification failed. |
 | [4900301](../../apis-basic-services-kit/errorcode-power.md#4900301-power-mode-setting-failed) | Setting the power mode failed.<br>**Applicable version:** 23 and later |
@@ -64,6 +66,8 @@ Sets the power mode of a device. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.POWER_OPTIMIZATION
 
+<!--Device-power-function setPowerMode(mode: DevicePowerMode): Promise<void>--><!--Device-power-function setPowerMode(mode: DevicePowerMode): Promise<void>-End-->
+
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 **System API:** This is a system API.
@@ -72,19 +76,19 @@ Sets the power mode of a device. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | DevicePowerMode | Yes | Power mode. The value must be an enum. |
+| mode | [DevicePowerMode](arkts-basicservices-devicepowermode-e.md) | Yes | Power mode. The value must be an enum. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Parameter verification failed. |
 | [4900301](../../apis-basic-services-kit/errorcode-power.md#4900301-power-mode-setting-failed) | Setting the power mode failed.<br>**Applicable version:** 23 and later |

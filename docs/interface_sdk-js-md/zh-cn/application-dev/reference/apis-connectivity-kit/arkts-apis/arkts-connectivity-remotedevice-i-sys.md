@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-remoteDevice-interface RemoteDevice--><!--Device-remoteDevice-interface RemoteDevice-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
+
+## 导入模块
+
+```TypeScript
+import { remoteDevice } from '@kit.ConnectivityKit';
+```
 
 ## cancelDevicePairing
 
@@ -20,6 +28,8 @@ cancelDevicePairing(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RemoteDevice-cancelDevicePairing(): Promise<void>--><!--Device-RemoteDevice-cancelDevicePairing(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -28,7 +38,7 @@ cancelDevicePairing(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise<void> | 返回promise对象。 |
 
 **错误码：**
 
@@ -53,6 +63,8 @@ connect(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RemoteDevice-connect(): Promise<void>--><!--Device-RemoteDevice-connect(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -61,7 +73,7 @@ connect(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 将profile连接结果作为Promise返回。 |
+| Promise<void> | 将profile连接结果作为Promise返回。 |
 
 **错误码：**
 
@@ -86,6 +98,8 @@ disconnect(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RemoteDevice-disconnect(): Promise<void>--><!--Device-RemoteDevice-disconnect(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -94,7 +108,7 @@ disconnect(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 将profile连接结果作为Promise返回。 |
+| Promise<void> | 将profile连接结果作为Promise返回。 |
 
 **错误码：**
 
@@ -118,6 +132,8 @@ getDeviceAlias(): string
 **需要权限：** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RemoteDevice-getDeviceAlias(): string--><!--Device-RemoteDevice-getDeviceAlias(): string-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -150,6 +166,8 @@ getDeviceModel(): DeviceModel
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RemoteDevice-getDeviceModel(): DeviceModel--><!--Device-RemoteDevice-getDeviceModel(): DeviceModel-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -158,7 +176,7 @@ getDeviceModel(): DeviceModel
 
 | 类型 | 说明 |
 | --- | --- |
-| DeviceModel | 返回远程设备的型号信息。 |
+| [DeviceModel](arkts-connectivity-devicemodel-i-sys.md) | 返回远程设备的型号信息。 |
 
 **错误码：**
 
@@ -182,6 +200,8 @@ getRssiValue(): Promise<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RemoteDevice-getRssiValue(): Promise<int>--><!--Device-RemoteDevice-getRssiValue(): Promise<int>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -190,7 +210,7 @@ getRssiValue(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | 返回RSSI值的promise对象。 |
+| Promise<number> | 返回RSSI值的promise对象。 |
 
 **错误码：**
 
@@ -215,6 +235,8 @@ removePairedDevice(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RemoteDevice-removePairedDevice(): Promise<void>--><!--Device-RemoteDevice-removePairedDevice(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -223,7 +245,7 @@ removePairedDevice(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise<void> | 返回promise对象。 |
 
 **错误码：**
 
@@ -248,6 +270,8 @@ setConnectionInterval(interval: ConnectionInterval): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RemoteDevice-setConnectionInterval(interval: ConnectionInterval): void--><!--Device-RemoteDevice-setConnectionInterval(interval: ConnectionInterval): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -256,7 +280,7 @@ setConnectionInterval(interval: ConnectionInterval): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| interval | ConnectionInterval | 是 | 要设置的连接间隔 |
+| interval | [ConnectionInterval](arkts-connectivity-connectioninterval-t-sys.md) | 是 | 要设置的连接间隔 |
 
 **错误码：**
 
@@ -280,6 +304,8 @@ setDeviceAlias(alias: string): void
 **需要权限：** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RemoteDevice-setDeviceAlias(alias: string): void--><!--Device-RemoteDevice-setDeviceAlias(alias: string): void-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -315,6 +341,8 @@ setPairingConfirmation(accept: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RemoteDevice-setPairingConfirmation(accept: boolean): void--><!--Device-RemoteDevice-setPairingConfirmation(accept: boolean): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -348,6 +376,8 @@ setPairingPasscode(passcode: string): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-RemoteDevice-setPairingPasscode(passcode: string): Promise<void>--><!--Device-RemoteDevice-setPairingPasscode(passcode: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -362,7 +392,7 @@ setPairingPasscode(passcode: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise<void> | 返回promise对象。 |
 
 **错误码：**
 
@@ -380,14 +410,15 @@ setPairingPasscode(passcode: string): Promise<void>
 startCrediblePairing(): Promise<void>
 ```
 
-发起与可信的远端星闪设备的配对。
-该接口不触发对话框，不需要用户授权。
+发起与可信的远端星闪设备的配对。该接口不触发对话框，不需要用户授权。
 
 **起始版本：** 26.0.0
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RemoteDevice-startCrediblePairing(): Promise<void>--><!--Device-RemoteDevice-startCrediblePairing(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -397,7 +428,7 @@ startCrediblePairing(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise<void> | 返回promise对象。 |
 
 **错误码：**
 

@@ -18,6 +18,8 @@ Enables or disables an application. This API returns the result synchronously.
 
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
+<!--Device-bundleManager-function setApplicationEnabledSync(bundleName: string, isEnabled: boolean): void--><!--Device-bundleManager-function setApplicationEnabledSync(bundleName: string, isEnabled: boolean): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -72,6 +74,8 @@ Set whether an application is enabled or disabled, with control over whether the
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-bundleManager-function setApplicationEnabledSync(bundleName: string, appIndex: int, isEnabled: boolean, killProcess: boolean): void--><!--Device-bundleManager-function setApplicationEnabledSync(bundleName: string, appIndex: int, isEnabled: boolean, killProcess: boolean): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -82,8 +86,8 @@ Set whether an application is enabled or disabled, with control over whether the
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Indicates the bundle name. |
 | appIndex | number | Yes | Indicates the index of clone app. |
-| isEnabled | boolean | Yes | The value true means to enable the application, and the value false means todisable the application. |
-| killProcess | boolean | Yes | The value true indicates that the application process will be killed whendisabled, while the value false indicates that the application process will not be killed when disabled. |
+| isEnabled | boolean | Yes | The value true means to enable the application, and the value false means to disable the application. |
+| killProcess | boolean | Yes | The value true indicates that the application process will be killed when disabled, while the value false indicates that the application process will not be killed when disabled. |
 
 **Error codes:**
 

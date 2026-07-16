@@ -1,5 +1,11 @@
 # activateSim（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## activateSim
 
 ```TypeScript
@@ -12,6 +18,8 @@ Activate the SIM card in the specified slot.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function activateSim(slotId: int, callback: AsyncCallback<void>): void--><!--Device-sim-function activateSim(slotId: int, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -21,7 +29,7 @@ Activate the SIM card in the specified slot.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;void&gt; | 是 | The callback of activateSim. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | The callback of activateSim. |
 
 **错误码：**
 
@@ -61,6 +69,8 @@ Activate the SIM card in the specified slot.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function activateSim(slotId: int): Promise<void>--><!--Device-sim-function activateSim(slotId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -75,7 +85,7 @@ Activate the SIM card in the specified slot.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the activateSim. |
+| Promise<void> | The promise returned by the activateSim. |
 
 **错误码：**
 

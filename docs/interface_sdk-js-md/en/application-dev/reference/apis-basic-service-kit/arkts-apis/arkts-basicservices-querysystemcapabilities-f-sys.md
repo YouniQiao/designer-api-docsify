@@ -16,6 +16,8 @@ Get System Capability.
 
 **Since:** 9
 
+<!--Device-systemCapability-function querySystemCapabilities(callback: AsyncCallback<string>): void--><!--Device-systemCapability-function querySystemCapabilities(callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Developtools.Syscap
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Get System Capability.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes |  |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | Yes |  |
 
 **Example**
 
@@ -53,6 +55,8 @@ Get System Capability.
 
 **Since:** 9
 
+<!--Device-systemCapability-function querySystemCapabilities(): Promise<string>--><!--Device-systemCapability-function querySystemCapabilities(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Developtools.Syscap
 
 **System API:** This is a system API.
@@ -61,7 +65,7 @@ Get System Capability.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | system capability string. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | system capability string. |
 
 **Example**
 

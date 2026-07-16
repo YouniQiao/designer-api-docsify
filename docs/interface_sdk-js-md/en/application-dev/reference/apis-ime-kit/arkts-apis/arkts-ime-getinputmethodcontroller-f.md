@@ -20,13 +20,15 @@ Input method controller
 
 **Substitutes:** [getController](arkts-ime-getcontroller-f.md#getcontroller-1)
 
+<!--Device-inputMethod-function getInputMethodController(): InputMethodController--><!--Device-inputMethod-function getInputMethodController(): InputMethodController-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| InputMethodController | the object of InputMethodController. |
+| [InputMethodController](arkts-ime-inputmethodcontroller-i.md) | the object of InputMethodController. |
 
 **Example**
 

@@ -8,6 +8,8 @@ Enumerates screen hopping events.
 
 **Substitutes:** CooperateState
 
+<!--Device-inputDeviceCooperate-enum EventMsg--><!--Device-inputDeviceCooperate-enum EventMsg-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Cooperator
 
 **System API:** This is a system API.
@@ -25,6 +27,8 @@ Screen hopping starts.
 **Deprecated since:** 23
 
 **Substitutes:** COOPERATE_ACTIVATE
+
+<!--Device-EventMsg-MSG_COOPERATE_INFO_START = 200--><!--Device-EventMsg-MSG_COOPERATE_INFO_START = 200-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Cooperator
 
@@ -44,6 +48,8 @@ Screen hopping succeeds.
 
 **Substitutes:** COOPERATE_ACTIVATE_SUCCESS
 
+<!--Device-EventMsg-MSG_COOPERATE_INFO_SUCCESS = 201--><!--Device-EventMsg-MSG_COOPERATE_INFO_SUCCESS = 201-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Cooperator
 
 **System API:** This is a system API.
@@ -61,6 +67,8 @@ Screen hopping fails.
 **Deprecated since:** 23
 
 **Substitutes:** COOPERATE_ACTIVATE_FAILURE
+
+<!--Device-EventMsg-MSG_COOPERATE_INFO_FAIL = 202--><!--Device-EventMsg-MSG_COOPERATE_INFO_FAIL = 202-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Cooperator
 
@@ -80,6 +88,8 @@ Screen hopping is enabled.
 
 **Substitutes:** COOPERATE_PREPARE
 
+<!--Device-EventMsg-MSG_COOPERATE_STATE_ON = 500--><!--Device-EventMsg-MSG_COOPERATE_STATE_ON = 500-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Cooperator
 
 **System API:** This is a system API.
@@ -97,6 +107,8 @@ Screen hopping is disabled.
 **Deprecated since:** 23
 
 **Substitutes:** COOPERATE_UNPREPARE
+
+<!--Device-EventMsg-MSG_COOPERATE_STATE_OFF = 501--><!--Device-EventMsg-MSG_COOPERATE_STATE_OFF = 501-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Cooperator
 

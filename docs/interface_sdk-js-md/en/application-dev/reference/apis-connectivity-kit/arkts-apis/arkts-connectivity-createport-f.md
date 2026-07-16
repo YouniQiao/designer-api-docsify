@@ -20,6 +20,8 @@ Creates a NearLink listening port that can receive data by UUID.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-dataTransfer-function createPort(uuid: string): void--><!--Device-dataTransfer-function createPort(uuid: string): void-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**

@@ -4,6 +4,8 @@ Describes the type of the extended edit action on the text box.
 
 **Since:** 10
 
+<!--Device-inputMethodEngine-export enum ExtendAction--><!--Device-inputMethodEngine-export enum ExtendAction-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## SELECT_ALL
@@ -15,6 +17,8 @@ SELECT_ALL = 0
 Select all.
 
 **Since:** 10
+
+<!--Device-ExtendAction-SELECT_ALL = 0--><!--Device-ExtendAction-SELECT_ALL = 0-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -28,6 +32,8 @@ Cut.
 
 **Since:** 10
 
+<!--Device-ExtendAction-CUT = 3--><!--Device-ExtendAction-CUT = 3-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## COPY
@@ -40,6 +46,8 @@ Copy.
 
 **Since:** 10
 
+<!--Device-ExtendAction-COPY = 4--><!--Device-ExtendAction-COPY = 4-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## PASTE
@@ -51,6 +59,8 @@ PASTE = 5
 Paste.
 
 **Since:** 10
+
+<!--Device-ExtendAction-PASTE = 5--><!--Device-ExtendAction-PASTE = 5-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 

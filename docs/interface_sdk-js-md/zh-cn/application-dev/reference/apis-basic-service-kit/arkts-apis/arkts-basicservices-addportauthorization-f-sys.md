@@ -1,17 +1,24 @@
 # addPortAuthorization（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { serial } from '@kit.BasicServicesKit';
+```
+
 ## addPortAuthorization
 
 ```TypeScript
 function addPortAuthorization(tokenId: string, deviceId: string): Promise<void>
 ```
 
-添加应用访问串口端口的权限
-仅面向串口授权弹窗系统应用开放
+添加应用访问串口端口的权限仅面向串口授权弹窗系统应用开放
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-serial-function addPortAuthorization(tokenId: string, deviceId: string): Promise<void>--><!--Device-serial-function addPortAuthorization(tokenId: string, deviceId: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BusManager.Serial
 
@@ -28,7 +35,7 @@ function addPortAuthorization(tokenId: string, deviceId: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象，无返回结果 |
+| Promise<void> | - Promise对象，无返回结果 |
 
 **错误码：**
 

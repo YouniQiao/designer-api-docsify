@@ -16,14 +16,16 @@ Obtains a WantAgent object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-wantAgent-function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): void--><!--Device-wantAgent-function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | WantAgentInfo | Yes | about the WantAgent object to obtain. |
-| callback | AsyncCallback&lt;WantAgent&gt; | Yes | Callback method for obtaining the user ID of WantAgent instance. |
+| info | [WantAgentInfo](arkts-ability-wantagentinfo-t.md) | Yes | about the WantAgent object to obtain. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<WantAgent> | Yes | Callback method for obtaining the user ID of WantAgent instance. |
 
 **Example**
 
@@ -86,19 +88,21 @@ Obtains a WantAgent object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-wantAgent-function getWantAgent(info: WantAgentInfo): Promise<WantAgent>--><!--Device-wantAgent-function getWantAgent(info: WantAgentInfo): Promise<WantAgent>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | WantAgentInfo | Yes | about the WantAgent object to obtain. |
+| info | [WantAgentInfo](arkts-ability-wantagentinfo-t.md) | Yes | about the WantAgent object to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WantAgent&gt; | Returns the created {@link WantAgent} object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<WantAgent> | Returns the created {@link WantAgent} object. |
 
 **Example**
 

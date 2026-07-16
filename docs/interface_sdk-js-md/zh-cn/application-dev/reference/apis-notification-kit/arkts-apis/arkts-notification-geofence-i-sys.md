@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+<!--Device-unnamed-export interface Geofence--><!--Device-unnamed-export interface Geofence-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -19,6 +21,8 @@ coordinateSystemType:CoordinateSystemType
 **类型：** CoordinateSystemType
 
 **起始版本：** 23
+
+<!--Device-Geofence-coordinateSystemType:CoordinateSystemType--><!--Device-Geofence-coordinateSystemType:CoordinateSystemType-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -36,6 +40,8 @@ delayTime?:number
 
 **起始版本：** 23
 
+<!--Device-Geofence-delayTime?:int--><!--Device-Geofence-delayTime?:int-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +57,8 @@ latitude:number
 **类型：** number
 
 **起始版本：** 23
+
+<!--Device-Geofence-latitude:double--><!--Device-Geofence-latitude:double-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -68,6 +76,8 @@ longitude:number
 
 **起始版本：** 23
 
+<!--Device-Geofence-longitude:double--><!--Device-Geofence-longitude:double-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -84,6 +94,8 @@ monitorEvent:MonitorEvent
 
 **起始版本：** 23
 
+<!--Device-Geofence-monitorEvent:MonitorEvent--><!--Device-Geofence-monitorEvent:MonitorEvent-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -99,6 +111,8 @@ radius:number
 **类型：** number
 
 **起始版本：** 23
+
+<!--Device-Geofence-radius:double--><!--Device-Geofence-radius:double-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

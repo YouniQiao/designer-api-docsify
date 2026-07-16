@@ -1,5 +1,11 @@
 # getAllShortcutInfoForSelf
 
+## 导入模块
+
+```TypeScript
+import { shortcutManager } from '@kit.AbilityKit';
+```
+
 ## getAllShortcutInfoForSelf
 
 ```TypeScript
@@ -10,13 +16,15 @@ function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>
 
 **起始版本：** 20
 
+<!--Device-shortcutManager-function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>--><!--Device-shortcutManager-function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;ShortcutInfo&gt;&gt; | Promise对象，返回应用配置文件中定义的所有快捷方式信息。 |
+| Promise<Array<ShortcutInfo>> | Promise对象，返回应用配置文件中定义的所有快捷方式信息。 |
 
 **示例：**
 

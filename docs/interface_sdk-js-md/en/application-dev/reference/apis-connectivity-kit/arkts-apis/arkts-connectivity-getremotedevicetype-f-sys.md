@@ -21,6 +21,8 @@ Get remote device custom type.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function getRemoteDeviceType(deviceId: string): Promise<DeviceType>--><!--Device-connection-function getRemoteDeviceType(deviceId: string): Promise<DeviceType>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -35,7 +37,7 @@ Get remote device custom type.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DeviceType&gt; | Returns the device type. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DeviceType> | Returns the device type. |
 
 **Error codes:**
 

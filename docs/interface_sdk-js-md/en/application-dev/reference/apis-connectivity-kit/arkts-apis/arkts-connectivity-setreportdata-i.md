@@ -4,6 +4,8 @@ Describe the SET_REPORT data is received from remote host.
 
 **Since:** 23
 
+<!--Device-hid-interface SetReportData--><!--Device-hid-interface SetReportData-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ data of SET_REPORT data.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SetReportData-data: Uint8Array--><!--Device-SetReportData-data: Uint8Array-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## id
@@ -42,6 +46,8 @@ id of SET_REPORT data.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SetReportData-id: int--><!--Device-SetReportData-id: int-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## type
@@ -57,6 +63,8 @@ reportType of SET_REPORT data.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SetReportData-type: ReportType--><!--Device-SetReportData-type: ReportType-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

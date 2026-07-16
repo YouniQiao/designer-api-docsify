@@ -12,10 +12,11 @@ import { abilityManager } from '@kit.AbilityKit';
 function getTopAbility(): Promise<ElementName>
 ```
 
-Obtains the top ability, which is the ability that has the window focus. This API uses a promise to return the
-result.
+Obtains the top ability, which is the ability that has the window focus. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-abilityManager-function getTopAbility(): Promise<ElementName>--><!--Device-abilityManager-function getTopAbility(): Promise<ElementName>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -25,7 +26,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ElementName&gt; | Promise used to return the API call result and the element name. You can perform errorhandling or other custom processing. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ElementName> | Promise used to return the API call result and the element name. You can perform error handling or other custom processing. |
 
 **Error codes:**
 
@@ -41,10 +42,11 @@ result.
 function getTopAbility(callback: AsyncCallback<ElementName>): void
 ```
 
-Obtains the top ability, which is the ability that has the window focus. This API uses an asynchronous callback to
-return the result.
+Obtains the top ability, which is the ability that has the window focus. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-abilityManager-function getTopAbility(callback: AsyncCallback<ElementName>): void--><!--Device-abilityManager-function getTopAbility(callback: AsyncCallback<ElementName>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -54,7 +56,7 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;ElementName&gt; | Yes | Callback used to return the result. If the API call is successful,**err** is **undefined** and **data** is the top ability name obtained. Otherwise, **err** is an error object. Youcan perform error handling or other custom processing. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ElementName> | Yes | Callback used to return the result. If the API call is successful,**err** is **undefined** and **data** is the top ability name obtained. Otherwise, **err** is an error object. You can perform error handling or other custom processing. |
 
 **Error codes:**
 

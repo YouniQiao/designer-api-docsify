@@ -18,6 +18,8 @@ Sets an uninstallation disposed rule for an application or an application clone.
 
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
+<!--Device-appControl-function setUninstallDisposedRule(appIdentifier: string, rule: UninstallDisposedRule, appIndex?: int): void--><!--Device-appControl-function setUninstallDisposedRule(appIdentifier: string, rule: UninstallDisposedRule, appIndex?: int): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **System API:** This is a system API.
@@ -26,9 +28,9 @@ Sets an uninstallation disposed rule for an application or an application clone.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appIdentifier | string | Yes | appIdentifier of the target application.<br> If the application does not have anappIdentifier, use its appId instead. **appId** is the unique identifier of an application and is determined bythe bundle name and signature information of the application. For details about how to obtain **appId**, see[How do I obtain appId from application information](../../../../quick-start/common_problem_of_application.md#how-do-i-obtain-appid-from-application-information). |
-| rule | UninstallDisposedRule | Yes | Uninstallation disposed rule. |
-| appIndex | number | No | Index of the application clone. The default value is **0**.<br> The value **0** meansto set the uninstallation disposed rule for the main application. A value greater than 0 means to set theuninstallation disposed rule for the application clone. |
+| appIdentifier | string | Yes | appIdentifier of the target application.<br> If the application does not have an appIdentifier, use its appId instead. **appId** is the unique identifier of an application and is determined by the bundle name and signature information of the application. For details about how to obtain **appId**, see [How do I obtain appId from application information](../../../../quick-start/common_problem_of_application.md#how-do-i-obtain-appid-from-application-information). |
+| rule | [UninstallDisposedRule](arkts-ability-uninstalldisposedrule-i-sys.md) | Yes | Uninstallation disposed rule. |
+| appIndex | number | No | Index of the application clone. The default value is **0**.<br> The value **0** means to set the uninstallation disposed rule for the main application. A value greater than 0 means to set the uninstallation disposed rule for the application clone. |
 
 **Error codes:**
 

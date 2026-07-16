@@ -4,6 +4,8 @@ Defines the Web resource error.
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare class WebResourceError--><!--Device-unnamed-declare class WebResourceError-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## constructor
@@ -16,7 +18,9 @@ Constructor.
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceError-constructor()--><!--Device-WebResourceError-constructor()-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -30,7 +34,9 @@ getErrorCode(): number
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceError-getErrorCode(): number--><!--Device-WebResourceError-getErrorCode(): number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -50,7 +56,9 @@ getErrorInfo(): string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceError-getErrorInfo(): string--><!--Device-WebResourceError-getErrorInfo(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

@@ -12,14 +12,15 @@ import { overlay } from '@kit.AbilityKit';
 function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isEnabled: boolean, callback: AsyncCallback<void>): void
 ```
 
-Enables or disables a module with the overlay feature in another application. This API uses an asynchronous
-callback to return the result.
+Enables or disables a module with the overlay feature in another application. This API uses an asynchronous callback to return the result.
 
 No permission is required when the specified application is the caller itself.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.CHANGE_OVERLAY_ENABLED_STATE
+
+<!--Device-overlay-function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isEnabled: boolean, callback: AsyncCallback<void>): void--><!--Device-overlay-function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isEnabled: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Overlay
 
@@ -31,8 +32,8 @@ No permission is required when the specified application is the caller itself.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
 | moduleName | string | Yes | Name of the module with the overlay feature. |
-| isEnabled | boolean | Yes | Whether to enable the module with the overlay feature. **true** to enable, **false**otherwise. |
-| callback | AsyncCallback&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. Ifthe operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| isEnabled | boolean | Yes | Whether to enable the module with the overlay feature. **true** to enable, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -80,14 +81,15 @@ try {
 function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isEnabled: boolean): Promise<void>
 ```
 
-Enables or disables a module with the overlay feature in another application. This API uses a promise to return the
-result.
+Enables or disables a module with the overlay feature in another application. This API uses a promise to return the result.
 
 No permission is required when the specified application is the caller itself.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.CHANGE_OVERLAY_ENABLED_STATE
+
+<!--Device-overlay-function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isEnabled: boolean): Promise<void>--><!--Device-overlay-function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isEnabled: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Overlay
 
@@ -99,13 +101,13 @@ No permission is required when the specified application is the caller itself.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
 | moduleName | string | Yes | Name of the module with the overlay feature. |
-| isEnabled | boolean | Yes | Whether to enable the module with the overlay feature. **true** to enable, **false**otherwise. |
+| isEnabled | boolean | Yes | Whether to enable the module with the overlay feature. **true** to enable, **false** otherwise. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

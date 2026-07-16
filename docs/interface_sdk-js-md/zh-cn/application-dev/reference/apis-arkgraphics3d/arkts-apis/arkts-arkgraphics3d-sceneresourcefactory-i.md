@@ -6,6 +6,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface SceneResourceFactory extends RenderResourceFactory--><!--Device-unnamed-export interface SceneResourceFactory extends RenderResourceFactory-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## createCamera
@@ -18,19 +20,21 @@ Create a camera.
 
 **起始版本：** 12
 
+<!--Device-SceneResourceFactory-createCamera(params: SceneNodeParameters): Promise<Camera>--><!--Device-SceneResourceFactory-createCamera(params: SceneNodeParameters): Promise<Camera>-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | SceneNodeParameters | 是 | 创建相机的参数 |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scenenodeparameters-i.md) | 是 | 创建相机的参数 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Camera&gt; | 返回创建的相机 |
+| Promise<Camera> | 返回创建的相机 |
 
 ## createCamera
 
@@ -42,20 +46,22 @@ Create a camera.
 
 **起始版本：** 21
 
+<!--Device-SceneResourceFactory-createCamera(params: SceneNodeParameters, cameraParams: CameraParameters): Promise<Camera>--><!--Device-SceneResourceFactory-createCamera(params: SceneNodeParameters, cameraParams: CameraParameters): Promise<Camera>-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | SceneNodeParameters | 是 | 创建相机的参数 |
-| cameraParams | CameraParameters | 是 | 相机特定的额外参数 |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scenenodeparameters-i.md) | 是 | 创建相机的参数 |
+| cameraParams | [CameraParameters](arkts-arkgraphics3d-cameraparameters-i.md) | 是 | 相机特定的额外参数 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Camera&gt; | 返回创建的相机 |
+| Promise<Camera> | 返回创建的相机 |
 
 ## createEffect
 
@@ -67,19 +73,21 @@ createEffect(params: EffectParameters): Promise<Effect>
 
 **起始版本：** 21
 
+<!--Device-SceneResourceFactory-createEffect(params: EffectParameters): Promise<Effect>--><!--Device-SceneResourceFactory-createEffect(params: EffectParameters): Promise<Effect>-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | EffectParameters | 是 | 创建特效的参数. |
+| params | [EffectParameters](arkts-arkgraphics3d-effectparameters-i.md) | 是 | 创建特效的参数. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Effect&gt; | 返回创建的特效. |
+| Promise<Effect> | 返回创建的特效. |
 
 ## createEnvironment
 
@@ -91,19 +99,21 @@ Create an environment.
 
 **起始版本：** 12
 
+<!--Device-SceneResourceFactory-createEnvironment(params: SceneResourceParameters): Promise<Environment>--><!--Device-SceneResourceFactory-createEnvironment(params: SceneResourceParameters): Promise<Environment>-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | SceneResourceParameters | 是 | 创建环境对象的参数 |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-sceneresourceparameters-i.md) | 是 | 创建环境对象的参数 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Environment&gt; | 返回创建的环境 |
+| Promise<Environment> | 返回创建的环境 |
 
 ## createGeometry
 
@@ -115,20 +125,22 @@ createGeometry(params: SceneNodeParameters, mesh:MeshResource): Promise<Geometry
 
 **起始版本：** 18
 
+<!--Device-SceneResourceFactory-createGeometry(params: SceneNodeParameters, mesh:MeshResource): Promise<Geometry>--><!--Device-SceneResourceFactory-createGeometry(params: SceneNodeParameters, mesh:MeshResource): Promise<Geometry>-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | SceneNodeParameters | 是 | 创建几何体的参数 |
-| mesh | MeshResource | 是 | resource - 几何体的网格数据 |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scenenodeparameters-i.md) | 是 | 创建几何体的参数 |
+| mesh | [MeshResource](arkts-arkgraphics3d-meshresource-i.md) | 是 | resource - 几何体的网格数据 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Geometry&gt; | 返回创建的几何体 |
+| Promise<Geometry> | 返回创建的几何体 |
 
 ## createLight
 
@@ -140,20 +152,22 @@ Create a light.
 
 **起始版本：** 12
 
+<!--Device-SceneResourceFactory-createLight(params: SceneNodeParameters, lightType: LightType): Promise<Light>--><!--Device-SceneResourceFactory-createLight(params: SceneNodeParameters, lightType: LightType): Promise<Light>-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | SceneNodeParameters | 是 | the param of creating a light |
-| lightType | LightType | 是 | 光源类型 |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scenenodeparameters-i.md) | 是 | the param of creating a light |
+| lightType | [LightType](arkts-arkgraphics3d-lighttype-e.md) | 是 | 光源类型 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Light&gt; | 返回创建的光源 |
+| Promise<Light> | 返回创建的光源 |
 
 ## createMaterial
 
@@ -165,20 +179,22 @@ Create a material.
 
 **起始版本：** 12
 
+<!--Device-SceneResourceFactory-createMaterial(params: SceneResourceParameters, materialType: MaterialType): Promise<Material>--><!--Device-SceneResourceFactory-createMaterial(params: SceneResourceParameters, materialType: MaterialType): Promise<Material>-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | SceneResourceParameters | 是 | the param of creating a material |
-| materialType | MaterialType | 是 | 材质类型 |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-sceneresourceparameters-i.md) | 是 | the param of creating a material |
+| materialType | [MaterialType](../../apis-arkui/arkts-apis/arkts-arkui-materialtype-e.md) | 是 | 材质类型 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Material&gt; | 返回创建的材质 |
+| Promise<Material> | 返回创建的材质 |
 
 ## createNode
 
@@ -190,17 +206,19 @@ Create a node.
 
 **起始版本：** 12
 
+<!--Device-SceneResourceFactory-createNode(params: SceneNodeParameters): Promise<Node>--><!--Device-SceneResourceFactory-createNode(params: SceneNodeParameters): Promise<Node>-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | SceneNodeParameters | 是 | 创建节点的参数 |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scenenodeparameters-i.md) | 是 | 创建节点的参数 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Node&gt; | 返回创建的节点 |
+| Promise<Node> | 返回创建的节点 |
 

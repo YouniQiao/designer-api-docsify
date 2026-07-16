@@ -1,13 +1,12 @@
 # Calendar
 
-In the following API examples, you need to use
-[createCalendar()](calendarManager.CalendarManager.createCalendar(calendarAccount: CalendarAccount,
-callback: AsyncCallback<Calendar>)) or [getCalendar()](calendarManager.CalendarManager.getCalendar
-(callback: AsyncCallback<Calendar>)) to obtain
+In the following API examples, you need to use [createCalendar()](arkts-calendar-calendarmanager-i.md#createcalendar-2) or [getCalendar()](arkts-calendar-calendarmanager-i.md#getcalendar-3) to obtain
 
 a **Calendar** object before calling related APIs.
 
 **Since:** 10
+
+<!--Device-calendarManager-export interface Calendar--><!--Device-calendarManager-export interface Calendar-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -23,8 +22,7 @@ import { calendarManager } from '@kit.CalendarKit';
 addEvent(event: Event): Promise<number>
 ```
 
-Adds an event, with no event ID, instanceStartTime, and instanceEndTime specified in Event.
-This API uses a promise to return the result.
+Adds an event, with no event ID, instanceStartTime, and instanceEndTime specified in Event.This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -33,19 +31,21 @@ This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Calendar-addEvent(event: Event): Promise<number>--><!--Device-Calendar-addEvent(event: Event): Promise<number>-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Event | Yes | Event object. |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-event-c.md) | Yes | Event object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the event ID. The ID is greater than 0. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the event ID. The ID is greater than 0. |
 
 **Error codes:**
 
@@ -93,8 +93,7 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 addEvent(event: Event, callback: AsyncCallback<number>): void
 ```
 
-Adds an event, with no event ID, instanceStartTime, and instanceEndTime specified in Event.
-This API uses an asynchronous callback to return the result.
+Adds an event, with no event ID, instanceStartTime, and instanceEndTime specified in Event.This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -103,14 +102,16 @@ This API uses an asynchronous callback to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Calendar-addEvent(event: Event, callback: AsyncCallback<number>): void--><!--Device-Calendar-addEvent(event: Event, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Event | Yes | Event object. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the event ID. The event ID is the uniqueidentifier of an event and is the auto-increment primary key of the database. If the value is less than 0,the event creation fails; if the value is greater than 0, the event creation succeeds. |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-event-c.md) | Yes | Event object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the event ID. The event ID is the unique identifier of an event and is the auto-increment primary key of the database. If the value is less than 0,the event creation fails; if the value is greater than 0, the event creation succeeds. |
 
 **Error codes:**
 
@@ -158,13 +159,14 @@ calendarMgr?.getCalendar().then((data: calendarManager.Calendar) => {
 addEvents(events: Event[]): Promise<void>
 ```
 
-Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime specified in Event.
-This API uses a promise to return the result.
+Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime specified in Event.This API uses a promise to return the result.
 
 **Since:** 10
 
 **Required permissions:** 
 - API version 23+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+
+<!--Device-Calendar-addEvents(events: Event[]): Promise<void>--><!--Device-Calendar-addEvents(events: Event[]): Promise<void>-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -172,13 +174,13 @@ This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| events | Event[] | Yes | Array of Event objects. |
+| events | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-event-c.md)[] | Yes | Array of Event objects. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -233,13 +235,14 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 addEvents(events: Event[], callback: AsyncCallback<void>): void
 ```
 
-Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime specified in Event.
-This API uses an asynchronous callback to return the result.
+Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime specified in Event.This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** 
 - API version 23+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+
+<!--Device-Calendar-addEvents(events: Event[], callback: AsyncCallback<void>): void--><!--Device-Calendar-addEvents(events: Event[], callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -247,8 +250,8 @@ This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| events | Event[] | Yes | Array of Event objects. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| events | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-event-c.md)[] | Yes | Array of Event objects. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -309,6 +312,8 @@ Deletes an event with the specified ID. This API uses a promise to return the re
 
 **Since:** 10
 
+<!--Device-Calendar-deleteEvent(id: number): Promise<void>--><!--Device-Calendar-deleteEvent(id: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
@@ -321,7 +326,7 @@ Deletes an event with the specified ID. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -376,6 +381,8 @@ Deletes an event with the specified ID. This API uses an asynchronous callback t
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-Calendar-deleteEvent(id: number, callback: AsyncCallback<void>): void--><!--Device-Calendar-deleteEvent(id: number, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
@@ -383,7 +390,7 @@ Deletes an event with the specified ID. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | number | Yes | Event ID, which is the unique identifier of an event. If the input event ID is an integer,the event is created. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -438,6 +445,8 @@ Deletes a batch of events with the specified IDs. This API uses a promise to ret
 
 **Since:** 10
 
+<!--Device-Calendar-deleteEvents(ids: number[]): Promise<void>--><!--Device-Calendar-deleteEvents(ids: number[]): Promise<void>-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
@@ -450,7 +459,7 @@ Deletes a batch of events with the specified IDs. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -518,6 +527,8 @@ Deletes a batch of events with the specified IDs. This API uses an asynchronous 
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-Calendar-deleteEvents(ids: number[], callback: AsyncCallback<void>): void--><!--Device-Calendar-deleteEvents(ids: number[], callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
@@ -525,7 +536,7 @@ Deletes a batch of events with the specified IDs. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ids | number[] | Yes | Array of event IDs. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -593,13 +604,15 @@ Obtains the calendar account information.
 
 **Since:** 10
 
+<!--Device-Calendar-getAccount(): CalendarAccount--><!--Device-Calendar-getAccount(): CalendarAccount-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CalendarAccount | Calendar account information. |
+| [CalendarAccount](arkts-calendar-calendaraccount-i.md) | Calendar account information. |
 
 **Example**
 
@@ -634,13 +647,15 @@ Obtains the calendar configuration information.
 
 **Since:** 10
 
+<!--Device-Calendar-getConfig(): CalendarConfig--><!--Device-Calendar-getConfig(): CalendarConfig-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CalendarConfig | Calendar configuration information. |
+| [CalendarConfig](arkts-calendar-calendarconfig-i.md) | Calendar configuration information. |
 
 **Example**
 
@@ -671,14 +686,14 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[]>
 ```
 
-Obtains all events in a calendar that match the filter criteria. This API uses a promise to return the result.
-If there is only one input parameter, the filter criteria, corresponding to the type EventFilter, must be set as the parameter.
-If no input parameter is specified, all events under the specified calendar account can be queried.
+Obtains all events in a calendar that match the filter criteria. This API uses a promise to return the result.If there is only one input parameter, the filter criteria, corresponding to the type EventFilter, must be set as the parameter.If no input parameter is specified, all events under the specified calendar account can be queried.
 
 **Since:** 10
 
 **Required permissions:** 
 - API version 23+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+
+<!--Device-Calendar-getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[]>--><!--Device-Calendar-getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[]>-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -686,14 +701,14 @@ If no input parameter is specified, all events under the specified calendar acco
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventFilter | EventFilter | No | Filter criteria. |
-| eventKey | (keyof Event)[] | No | Filter field. For versions earlier than API version 20, the defaultfields to be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone, location,service, attendee, and reminderTime if this parameter is left empty. Since API version 20, the default fieldsto be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone, location, service,attendee, reminderTime, and identifier if this parameter is left empty. The field is not returned if it is empty. |
+| eventFilter | [EventFilter](arkts-calendar-eventfilter-c.md) | No | Filter criteria. |
+| eventKey | (keyof Event)[] | No | Filter field. For versions earlier than API version 20, the default fields to be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone, location,service, attendee, and reminderTime if this parameter is left empty. Since API version 20, the default fields to be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone, location, service,attendee, reminderTime, and identifier if this parameter is left empty. The field is not returned if it is empty. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Event[]&gt; | Promise used to return the result, which is an array of Event objects. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Event[]> | Promise used to return the result, which is an array of Event objects. |
 
 **Error codes:**
 
@@ -750,13 +765,14 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
 getEvents(eventFilter: EventFilter, eventKey: (keyof Event)[], callback: AsyncCallback<Event[]>):void
 ```
 
-Obtains all events in a calendar that match the filter criteria. This API uses an asynchronous
-callback to return the result.
+Obtains all events in a calendar that match the filter criteria. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** 
 - API version 23+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+
+<!--Device-Calendar-getEvents(eventFilter: EventFilter, eventKey: (keyof Event)[], callback: AsyncCallback<Event[]>):void--><!--Device-Calendar-getEvents(eventFilter: EventFilter, eventKey: (keyof Event)[], callback: AsyncCallback<Event[]>):void-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -764,9 +780,9 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventFilter | EventFilter | Yes | Filter criteria. |
+| eventFilter | [EventFilter](arkts-calendar-eventfilter-c.md) | Yes | Filter criteria. |
 | eventKey | (keyof Event)[] | Yes | Filter field. |
-| callback | AsyncCallback&lt;Event[]&gt; | Yes | Callback used to return an array of events. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Event[]> | Yes | Callback used to return an array of events. |
 
 **Error codes:**
 
@@ -838,15 +854,14 @@ getEvents(callback: AsyncCallback<Event[]>):void
 
 Obtains all events in the current calendar. This API uses an asynchronous callback to return the result.
 
-For versions earlier than API version 20, the default fields to be obtained include id, type, title, startTime,
-endTime, isAllDay, description, timeZone, location, service, attendee, and reminderTime. Since API version 20,
-the default fields to be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone,
-location, service, attendee, reminderTime, and identifier. The field is not returned if it is empty.
+For versions earlier than API version 20, the default fields to be obtained include id, type, title, startTime,endTime, isAllDay, description, timeZone, location, service, attendee, and reminderTime. Since API version 20,the default fields to be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone,location, service, attendee, reminderTime, and identifier. The field is not returned if it is empty.
 
 **Since:** 10
 
 **Required permissions:** 
 - API version 23+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+
+<!--Device-Calendar-getEvents(callback: AsyncCallback<Event[]>):void--><!--Device-Calendar-getEvents(callback: AsyncCallback<Event[]>):void-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -854,7 +869,7 @@ location, service, attendee, reminderTime, and identifier. The field is not retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Event[]&gt; | Yes | Callback used to return an array of events. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Event[]> | Yes | Callback used to return an array of events. |
 
 **Error codes:**
 
@@ -905,6 +920,8 @@ Opens the event edit page.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-Calendar-openEventEditPage(id: number): Promise<void>--><!--Device-Calendar-openEventEditPage(id: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
@@ -917,7 +934,7 @@ Opens the event edit page.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -993,6 +1010,8 @@ Queries the event instance with a specified event key in a calendar. This API us
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Calendar-queryEventInstances(start: number, end: number, ids?: number[], eventKey?: (keyof Event)[]): Promise<Event[]>--><!--Device-Calendar-queryEventInstances(start: number, end: number, ids?: number[], eventKey?: (keyof Event)[]): Promise<Event[]>-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
@@ -1002,13 +1021,13 @@ Queries the event instance with a specified event key in a calendar. This API us
 | start | number | Yes | Start time of an event. The value is a 13-digit timestamp. |
 | end | number | Yes | End time of an event. The value is a 13-digit timestamp. |
 | ids | number[] | No | Array of event IDs to be queried, which can be empty or undefined. |
-| eventKey | (keyof Event)[] | No | Event key for querying events. If this parameter is left empty, thedefault fields for filtering are id, title, startTime, endTime, instanceStartTime, instanceEndTime,isAllDay, description, timeZone, location, and service. The field is not returned if it is empty. |
+| eventKey | (keyof Event)[] | No | Event key for querying events. If this parameter is left empty, the default fields for filtering are id, title, startTime, endTime, instanceStartTime, instanceEndTime,isAllDay, description, timeZone, location, and service. The field is not returned if it is empty. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Event[]&gt; | Promise used to return the result, which is an array of Event objects. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Event[]> | Promise used to return the result, which is an array of Event objects. |
 
 **Error codes:**
 
@@ -1069,19 +1088,21 @@ Sets the calendar configuration information. This API uses a promise to return t
 
 **Since:** 10
 
+<!--Device-Calendar-setConfig(config: CalendarConfig): Promise<void>--><!--Device-Calendar-setConfig(config: CalendarConfig): Promise<void>-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | CalendarConfig | Yes | Calendar configuration information. |
+| config | [CalendarConfig](arkts-calendar-calendarconfig-i.md) | Yes | Calendar configuration information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1130,14 +1151,16 @@ Sets the calendar configuration information. This API uses an asynchronous callb
 
 **Since:** 10
 
+<!--Device-Calendar-setConfig(config: CalendarConfig, callback: AsyncCallback<void>): void--><!--Device-Calendar-setConfig(config: CalendarConfig, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | CalendarConfig | Yes | Calendar configuration information. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| config | [CalendarConfig](arkts-calendar-calendarconfig-i.md) | Yes | Calendar configuration information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1188,19 +1211,21 @@ Updates an event. This API uses a promise to return the result.
 
 **Since:** 10
 
+<!--Device-Calendar-updateEvent(event: Event): Promise<void>--><!--Device-Calendar-updateEvent(event: Event): Promise<void>-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Event | Yes | Event object. |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-event-c.md) | Yes | Event object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -1255,14 +1280,16 @@ Updates an event. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
+<!--Device-Calendar-updateEvent(event: Event, callback: AsyncCallback<void>): void--><!--Device-Calendar-updateEvent(event: Event, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Applications.CalendarData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Event | Yes | Event object. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of updateEvent. |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-event-c.md) | Yes | Event object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of updateEvent. |
 
 **Example**
 
@@ -1315,15 +1342,15 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
 readonly id: number
 ```
 
-Calendar account ID, which is the unique identifier of a calendar account and is the auto-increment primary
-key of the database. If the value is less than 0, the account creation fails;
-if the value is greater than 0, the account creation succeeds.
+Calendar account ID, which is the unique identifier of a calendar account and is the auto-increment primary key of the database. If the value is less than 0, the account creation fails;if the value is greater than 0, the account creation succeeds.
 
 **Type:** number
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Calendar-readonly id: number--><!--Device-Calendar-readonly id: number-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
 

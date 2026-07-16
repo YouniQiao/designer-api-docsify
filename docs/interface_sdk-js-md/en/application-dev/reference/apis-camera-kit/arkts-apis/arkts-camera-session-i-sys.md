@@ -1,10 +1,10 @@
 # Session
 
-**Session** implements a session, which saves all [CameraInput](arkts-camera-camerainput-i.md) and
-[CameraOutput](arkts-camera-cameraoutput-i.md) instances required to run the camera and requests the camera
-to take a photo or record a video.
+**Session** implements a session, which saves all [CameraInput](arkts-camera-camerainput-i.md) and [CameraOutput](arkts-camera-cameraoutput-i.md) instances required to run the camera and requests the camera to take a photo or record a video.
 
 **Since:** 11
+
+<!--Device-camera-interface Session--><!--Device-camera-interface Session-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -25,6 +25,8 @@ Gets the active value of the given key in camera metadata.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Session-getActiveParameter(key: string): string--><!--Device-Session-getActiveParameter(key: string): string-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -61,6 +63,8 @@ Get the supported camera output capability set.
 
 **Since:** 13
 
+<!--Device-Session-getCameraOutputCapabilities(camera: CameraDevice): Array<CameraOutputCapability>--><!--Device-Session-getCameraOutputCapabilities(camera: CameraDevice): Array<CameraOutputCapability>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -69,13 +73,13 @@ Get the supported camera output capability set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| camera | CameraDevice | Yes | Camera device. |
+| camera | [CameraDevice](arkts-camera-cameradevice-i-sys.md) | Yes | Camera device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;CameraOutputCapability&gt; | The array of the output capability. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<CameraOutputCapability> | The array of the output capability. |
 
 **Error codes:**
 
@@ -97,6 +101,8 @@ Gets the values of the given key in camera metadata.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Session-getParameters(key: string): Array<string>--><!--Device-Session-getParameters(key: string): Array<string>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -111,7 +117,7 @@ Gets the values of the given key in camera metadata.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | The values of the key in camera metadata. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | The values of the key in camera metadata. |
 
 **Error codes:**
 
@@ -134,6 +140,8 @@ Gets the supported keys in camera metadata.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Session-getSupportedKeys(): Array<string>--><!--Device-Session-getSupportedKeys(): Array<string>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -142,7 +150,7 @@ Gets the supported keys in camera metadata.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | The supported keys in camera metadata. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | The supported keys in camera metadata. |
 
 **Error codes:**
 
@@ -164,6 +172,8 @@ Sets key-value pairs parameters for the session.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Session-setParameters(kvpairs: Record<string, string>): void--><!--Device-Session-setParameters(kvpairs: Record<string, string>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -172,7 +182,7 @@ Sets key-value pairs parameters for the session.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| kvpairs | Record&lt;string, string&gt; | Yes | The pairs of tag name and value in camera metadata. |
+| kvpairs | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, string> | Yes | The pairs of tag name and value in camera metadata. |
 
 **Error codes:**
 
@@ -193,6 +203,8 @@ Set usage for the capture session.
 
 **Since:** 13
 
+<!--Device-Session-setUsage(usage: UsageType, enabled: boolean): void--><!--Device-Session-setUsage(usage: UsageType, enabled: boolean): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -201,7 +213,7 @@ Set usage for the capture session.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| usage | UsageType | Yes | The capture session usage. |
+| usage | [UsageType](arkts-camera-usagetype-e-sys.md) | Yes | The capture session usage. |
 | enabled | boolean | Yes | Enable usage for session if TRUE. |
 
 **Error codes:**

@@ -16,10 +16,7 @@ Adds disallowed Wi-Fi networks. The current device cannot connect to the disallo
 
 A policy conflict is reported when this API is called in the following scenarios:
 
-1. Wi-Fi networks have been disabled by calling [setDisallowedPolicy](arkts-mdm-setdisallowedpolicy-f.md#setdisallowedpolicy-1).
-You can resolve the conflict by enabling the Wi-Fi networks through [setDisallowedPolicy](arkts-mdm-setdisallowedpolicy-f.md#setdisallowedpolicy-1).
-2. Allowed Wi-Fi networks have been added by calling [addAllowedWifiList](arkts-mdm-addallowedwifilist-f.md#addallowedwifilist-1).
-You can resolve the conflict by removing the allowed Wi-Fi networks through [removeAllowedWifiList](arkts-mdm-removeallowedwifilist-f.md#removeallowedwifilist-1).
+1. Wi-Fi networks have been disabled by calling [setDisallowedPolicy](arkts-mdm-setdisallowedpolicy-f.md#setdisallowedpolicy-1).You can resolve the conflict by enabling the Wi-Fi networks through [setDisallowedPolicy](arkts-mdm-setdisallowedpolicy-f.md#setdisallowedpolicy-1).2. Allowed Wi-Fi networks have been added by calling [addAllowedWifiList](arkts-mdm-addallowedwifilist-f.md#addallowedwifilist-1).You can resolve the conflict by removing the allowed Wi-Fi networks through [removeAllowedWifiList](arkts-mdm-removeallowedwifilist-f.md#removeallowedwifilist-1).
 
 **Since:** 19
 
@@ -27,14 +24,16 @@ You can resolve the conflict by removing the allowed Wi-Fi networks through [rem
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-wifiManager-function addDisallowedWifiList(admin: Want, list: Array<WifiAccessInfo>): void--><!--Device-wifiManager-function addDisallowedWifiList(admin: Want, list: Array<WifiAccessInfo>): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| list | Array&lt;WifiAccessInfo&gt; | Yes | Array of disallowed Wi-Fi networks. The maximum length of the array is 200.For example, if there are already 100 Wi-Fi networks, a maximum of 100 more can be added. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| list | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<WifiAccessInfo> | Yes | Array of disallowed Wi-Fi networks. The maximum length of the array is 200.For example, if there are already 100 Wi-Fi networks, a maximum of 100 more can be added. |
 
 **Error codes:**
 
@@ -43,7 +42,7 @@ You can resolve the conflict by removing the allowed Wi-Fi networks through [rem
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) | A conflict policy has been configured. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 **Example**
 

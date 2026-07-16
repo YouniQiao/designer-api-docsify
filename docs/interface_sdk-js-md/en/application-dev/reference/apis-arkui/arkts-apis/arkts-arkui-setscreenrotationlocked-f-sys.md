@@ -16,6 +16,8 @@ Sets whether to lock auto rotate. This API uses an asynchronous callback to retu
 
 **Since:** 9
 
+<!--Device-screen-function setScreenRotationLocked(isLocked:boolean, callback: AsyncCallback<void>): void--><!--Device-screen-function setScreenRotationLocked(isLocked:boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -25,7 +27,7 @@ Sets whether to lock auto rotate. This API uses an asynchronous callback to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isLocked | boolean | Yes | Whether to lock auto rotate. **true** to lock; **false** otherwise. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -63,6 +65,8 @@ Sets whether to lock auto rotate. This API uses a promise to return the result.
 
 **Since:** 9
 
+<!--Device-screen-function setScreenRotationLocked(isLocked:boolean): Promise<void>--><!--Device-screen-function setScreenRotationLocked(isLocked:boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -77,7 +81,7 @@ Sets whether to lock auto rotate. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

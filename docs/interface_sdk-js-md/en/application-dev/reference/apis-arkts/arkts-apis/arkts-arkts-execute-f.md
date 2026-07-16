@@ -12,13 +12,13 @@ import { taskpool } from '@kit.ArkTS';
 function execute(func: Function, ...args: Object[]): Promise<Object>
 ```
 
-Places a function to be executed in the internal queue of the task pool. The function is not executed immediately.
-It waits to be distributed to the worker thread for execution. In this mode, the function cannot be canceled. This
-API uses a promise to return the result.
+Places a function to be executed in the internal queue of the task pool. The function is not executed immediately.It waits to be distributed to the worker thread for execution. In this mode, the function cannot be canceled. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-taskpool-function execute(func: Function, ...args: Object[]): Promise<Object>--><!--Device-taskpool-function execute(func: Function, ...args: Object[]): Promise<Object>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,15 +26,15 @@ API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| func | Function | Yes | Function to be executed. The function must be decorated using[@Concurrent](../../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about thesupported return value types of the function, see[Sequenceable Data Types](../../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
-| args | Object[] | Yes | Arguments of the function. For details about the supported parameter types, see[Sequenceable Data Types](../../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). Thedefault value is **undefined**. |
+| func | [Function](../../apis-na/arkts-apis/arkts-na-function-i.md) | Yes | Function to be executed. The function must be decorated using [@Concurrent](../../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types of the function, see [Sequenceable Data Types](../../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
+| args | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md)[] | Yes | Arguments of the function. For details about the supported parameter types, see [Sequenceable Data Types](../../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). The default value is **undefined**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;unknown&gt; | <br>**Applicable version:** 9 - 11 |
-| Promise&lt;Object&gt; | Promise used to return an object that carries the function execution result.<br>**Applicable version:** 11 and later |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<unknown> | <br>**Applicable version:** 9 - 11 |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Object> | Promise used to return an object that carries the function execution result.<br>**Applicable version:** 11 and later |
 
 **Error codes:**
 
@@ -66,12 +66,13 @@ taskpool.execute(printArgs, 100).then((value: Object) => { // 100: test number
 function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R>, ...args: A): Promise<R>
 ```
 
-Verifies the passed-in parameter types and return value type of a concurrent function, and places the function in
-the queue of the task pool. This API uses a promise to return the result.
+Verifies the passed-in parameter types and return value type of a concurrent function, and places the function in the queue of the task pool. This API uses a promise to return the result.
 
 **Since:** 13
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-taskpool-function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R>, ...args: A): Promise<R>--><!--Device-taskpool-function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R>, ...args: A): Promise<R>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -79,14 +80,14 @@ the queue of the task pool. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| func | (...args: A) =&gt; R \| Promise&lt;R&gt; | Yes | Function to be executed. The function must be decorated using[@Concurrent](../../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about thesupported return value types of the function, see[Sequenceable Data Types](../../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
-| args | A | Yes | Arguments of the function. For details about the supported parameter types, see[Sequenceable Data Types](../../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). Thedefault value is **undefined**. |
+| func | (...args: A) => R \| Promise<R> | Yes | Function to be executed. The function must be decorated using [@Concurrent](../../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types of the function, see [Sequenceable Data Types](../../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
+| args | A | Yes | Arguments of the function. For details about the supported parameter types, see [Sequenceable Data Types](../../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). The default value is **undefined**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;R&gt; | Promise used to return an object that carries the function execution result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<R> | Promise used to return an object that carries the function execution result. |
 
 **Error codes:**
 
@@ -135,14 +136,13 @@ taskpool.execute<[[number, string]], string>(testWithArray, [100, "test"]).then(
 function execute(task: Task, priority?: Priority): Promise<Object>
 ```
 
-Places a task in the internal queue of the task pool. The task will not be executed immediately; instead, it waits
-to be distributed to a worker thread for execution. In the current mode, you can set the task priority and cancel
-the task. Note that the task cannot belong to a task group, serial queue, or asynchronous queue. For non-continuous
-tasks, this API can be called multiple times. This API uses a promise to return the result.
+Places a task in the internal queue of the task pool. The task will not be executed immediately; instead, it waits to be distributed to a worker thread for execution. In the current mode, you can set the task priority and cancel the task. Note that the task cannot belong to a task group, serial queue, or asynchronous queue. For non-continuous tasks, this API can be called multiple times. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-taskpool-function execute(task: Task, priority?: Priority): Promise<Object>--><!--Device-taskpool-function execute(task: Task, priority?: Priority): Promise<Object>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -150,15 +150,15 @@ tasks, this API can be called multiple times. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| task | Task | Yes | Task to be executed. |
-| priority | Priority | No | Priority of the task to be executed. The default value is**taskpool.Priority.MEDIUM**. |
+| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-task-i.md) | Yes | Task to be executed. |
+| priority | [Priority](arkts-arkts-priority-e.md) | No | Priority of the task to be executed. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;unknown&gt; | <br>**Applicable version:** 9 - 17 |
-| Promise&lt;Object&gt; | Promise used to return an object that carries the function execution result.<br>**Applicable version:** 11 and later |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<unknown> | <br>**Applicable version:** 9 - 17 |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Object> | Promise used to return an object that carries the function execution result.<br>**Applicable version:** 11 and later |
 
 **Error codes:**
 
@@ -201,14 +201,13 @@ taskpool.execute(task3, taskpool.Priority.HIGH).then((value: Object) => {
 function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?: Priority): Promise<R>
 ```
 
-Places the generic task in the internal queue of the task pool. The parameter type and return value type of the
-task are not verified. This API uses a promise to return the result.
-The verification of the **execute** task works in conjunction with **new GenericsTask**, requiring that the
-parameter and return value types match those specified in **new GenericsTask**.
+Places the generic task in the internal queue of the task pool. The parameter type and return value type of the task are not verified. This API uses a promise to return the result.The verification of the **execute** task works in conjunction with **new GenericsTask**, requiring that the parameter and return value types match those specified in **new GenericsTask**.
 
 **Since:** 13
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?: Priority): Promise<R>--><!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?: Priority): Promise<R>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -216,14 +215,14 @@ parameter and return value types match those specified in **new GenericsTask**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| task | GenericsTask&lt;A, R&gt; | Yes | Generic task to be executed. |
-| priority | Priority | No | Priority of the task to be executed. The default value is**taskpool.Priority.MEDIUM**. |
+| task | [GenericsTask](arkts-arkts-genericstask-c.md)<A, R> | Yes | Generic task to be executed. |
+| priority | [Priority](arkts-arkts-priority-e.md) | No | Priority of the task to be executed. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;R&gt; | Promise used to return an object that carries the function execution result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<R> | Promise used to return an object that carries the function execution result. |
 
 **Error codes:**
 
@@ -265,14 +264,13 @@ taskpool.execute<[number], number>(task3, taskpool.Priority.HIGH).then((value: n
 function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>
 ```
 
-Places a task group in the internal queue of the task pool. The tasks in the task group are not executed
-immediately. They wait to be distributed to the worker thread for execution. After all tasks in the task group are
-executed, a result array is returned. This mode is applicable to the execution of associated tasks. This API uses a
-promise to return the result.
+Places a task group in the internal queue of the task pool. The tasks in the task group are not executed immediately. They wait to be distributed to the worker thread for execution. After all tasks in the task group are executed, a result array is returned. This mode is applicable to the execution of associated tasks. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-taskpool-function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>--><!--Device-taskpool-function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -280,14 +278,14 @@ promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| group | TaskGroup | Yes | Task group to be executed. |
-| priority | Priority | No | Priority of the task group. The default value is **taskpool.Priority.MEDIUM**. |
+| group | [TaskGroup](arkts-arkts-taskgroup-c.md) | Yes | Task group to be executed. |
+| priority | [Priority](arkts-arkts-priority-e.md) | No | Priority of the task group. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Object[]&gt; | Promise used to return an object array that carries the function execution result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Object[]> | Promise used to return an object array that carries the function execution result. |
 
 **Error codes:**
 
@@ -339,20 +337,22 @@ Execute a concurrent task with Configs.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-taskpool-function execute(task: Task, configs: Configs): Promise<Object>--><!--Device-taskpool-function execute(task: Task, configs: Configs): Promise<Object>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| task | Task | Yes | Task to be executed. |
-| configs | Configs | Yes | Configs of the task. |
+| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-task-i.md) | Yes | Task to be executed. |
+| configs | [Configs](arkts-arkts-configs-i.md) | Yes | Configs of the task. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Object&gt; | @throws { BusinessError } 10200006 - An exception occurred during serialization. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Object> | @throws { BusinessError } 10200006 - An exception occurred during serialization. |
 
 **Error codes:**
 
@@ -377,20 +377,22 @@ Execute a concurrent generics task with Configs.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: Configs): Promise<R>--><!--Device-taskpool-function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: Configs): Promise<R>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| task | GenericsTask&lt;A, R&gt; | Yes | Generic task to be executed. |
-| configs | Configs | Yes | Configs of the task. |
+| task | [GenericsTask](arkts-arkts-genericstask-c.md)<A, R> | Yes | Generic task to be executed. |
+| configs | [Configs](arkts-arkts-configs-i.md) | Yes | Configs of the task. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;R&gt; | @throws { BusinessError } 10200006 - An exception occurred during serialization. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<R> | @throws { BusinessError } 10200006 - An exception occurred during serialization. |
 
 **Error codes:**
 
@@ -415,20 +417,22 @@ Execute a concurrent task group with Configs.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-taskpool-function execute(group: TaskGroup, configs: Configs): Promise<Object[]>--><!--Device-taskpool-function execute(group: TaskGroup, configs: Configs): Promise<Object[]>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| group | TaskGroup | Yes | Task group to be executed. |
-| configs | Configs | Yes | Configs of each task in the TaskGroup. |
+| group | [TaskGroup](arkts-arkts-taskgroup-c.md) | Yes | Task group to be executed. |
+| configs | [Configs](arkts-arkts-configs-i.md) | Yes | Configs of each task in the TaskGroup. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Object[]&gt; | @throws { BusinessError } 10200006 - An exception occurred during serialization. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Object[]> | @throws { BusinessError } 10200006 - An exception occurred during serialization. |
 
 **Error codes:**
 

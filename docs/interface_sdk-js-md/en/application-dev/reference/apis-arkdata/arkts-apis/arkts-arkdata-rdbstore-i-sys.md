@@ -2,16 +2,13 @@
 
 Provides APIs for managing data in an RDB store.
 
-Before using the following APIs, you should obtain an **RdbStore** instance by calling the
-[getRdbStore](arkts-arkdata-getrdbstore-f.md#getrdbstore-2)
-method and then call the corresponding method through the instance.
+Before using the following APIs, you should obtain an **RdbStore** instance by calling the [getRdbStore](arkts-arkdata-getrdbstore-f.md#getrdbstore-2)method and then call the corresponding method through the instance.
 
-In addition, use
-[execute](arkts-arkdata-rdbstore-i.md#execute-1)
-to initialize the database table structure and related data first, ensuring that the prerequisites for related API
-calls are met.
+In addition, use [execute](arkts-arkdata-rdbstore-i.md#execute-1)to initialize the database table structure and related data first, ensuring that the prerequisites for related API calls are met.
 
 **Since:** 9
+
+<!--Device-relationalStore-interface RdbStore--><!--Device-relationalStore-interface RdbStore-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -27,13 +24,13 @@ import { relationalStore } from '@kit.ArkData';
 cleanDeviceDirtyData(table: string, cursor?: number): Promise<void>
 ```
 
-Cleans dirty data deleted in the cross-device sync.
-If a cursor is specified, data whose cursor is smaller than the specified cursor is cleaned.
-Otherwise, all data is cleaned.
+Cleans dirty data deleted in the cross-device sync.If a cursor is specified, data whose cursor is smaller than the specified cursor is cleaned.Otherwise, all data is cleaned.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RdbStore-cleanDeviceDirtyData(table: string, cursor?: long): Promise<void>--><!--Device-RdbStore-cleanDeviceDirtyData(table: string, cursor?: long): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -50,7 +47,7 @@ Otherwise, all data is cleaned.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | -The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | -The promise returned by the function. |
 
 **Error codes:**
 
@@ -80,6 +77,18 @@ Sync data to cloud.
 
 **Since:** 11
 
+<!--Device-RdbStore-cloudSync(
+      mode: SyncMode,
+      predicates: RdbPredicates,
+      progress: Callback<ProgressDetails>,
+      callback: AsyncCallback<void>
+    ): void--><!--Device-RdbStore-cloudSync(
+      mode: SyncMode,
+      predicates: RdbPredicates,
+      progress: Callback<ProgressDetails>,
+      callback: AsyncCallback<void>
+    ): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **System API:** This is a system API.
@@ -88,10 +97,10 @@ Sync data to cloud.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | SyncMode | Yes | indicates the database synchronization mode. |
-| predicates | RdbPredicates | Yes | The specified sync condition by the instance object of {@link RdbPredicates}. |
-| progress | Callback&lt;ProgressDetails&gt; | Yes | Callback used to return the {@link ProgressDetails} result. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of cloudSync. |
+| mode | [SyncMode](arkts-arkdata-syncmode-e.md) | Yes | indicates the database synchronization mode. |
+| predicates | [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | Yes | The specified sync condition by the instance object of {@link RdbPredicates}. |
+| progress | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ProgressDetails> | Yes | Callback used to return the {@link ProgressDetails} result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of cloudSync. |
 
 **Error codes:**
 
@@ -112,6 +121,8 @@ Sync data to cloud.
 
 **Since:** 11
 
+<!--Device-RdbStore-cloudSync(mode: SyncMode, predicates: RdbPredicates, progress: Callback<ProgressDetails>): Promise<void>--><!--Device-RdbStore-cloudSync(mode: SyncMode, predicates: RdbPredicates, progress: Callback<ProgressDetails>): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **System API:** This is a system API.
@@ -120,22 +131,22 @@ Sync data to cloud.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | SyncMode | Yes | indicates the database synchronization mode. |
-| predicates | RdbPredicates | Yes | The specified sync condition by the instance object of {@link RdbPredicates}. |
-| progress | Callback&lt;ProgressDetails&gt; | Yes | Callback used to return the {@link ProgressDetails} result. |
+| mode | [SyncMode](arkts-arkdata-syncmode-e.md) | Yes | indicates the database synchronization mode. |
+| predicates | [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | Yes | The specified sync condition by the instance object of {@link RdbPredicates}. |
+| progress | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ProgressDetails> | Yes | Callback used to return the {@link ProgressDetails} result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | : The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | : The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Need 2 - 4 parameter(s). 2. The RdbStore must be not nullptr.3. The mode must be a SyncMode of cloud. 4. The tablesNames must be not empty.5. The progress must be a callback type. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | if permission verification failed, application which is not a systemapplication uses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | if permission verification failed, application which is not a system application uses system API. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
@@ -151,6 +162,8 @@ Deletes data from the database based on a specified instance object of RdbPredic
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RdbStore-delete(table: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<long>): void--><!--Device-RdbStore-delete(table: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<long>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **System API:** This is a system API.
@@ -161,7 +174,7 @@ Deletes data from the database based on a specified instance object of RdbPredic
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | The specified delete condition by the instance object of {@link dataSharePredicates.DataSharePredicates}. |
-| callback | AsyncCallback&lt;number&gt; | Yes | The number of affected rows. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | The number of affected rows. |
 
 **Error codes:**
 
@@ -201,6 +214,8 @@ Deletes data from the database based on a specified instance object of RdbPredic
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RdbStore-delete(table: string, predicates: dataSharePredicates.DataSharePredicates): Promise<long>--><!--Device-RdbStore-delete(table: string, predicates: dataSharePredicates.DataSharePredicates): Promise<long>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **System API:** This is a system API.
@@ -216,7 +231,7 @@ Deletes data from the database based on a specified instance object of RdbPredic
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The number of affected rows. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | The number of affected rows. |
 
 **Error codes:**
 
@@ -254,6 +269,8 @@ Lock cloud container before non-auto cloud sync.
 
 **Since:** 12
 
+<!--Device-RdbStore-lockCloudContainer(): Promise<int>--><!--Device-RdbStore-lockCloudContainer(): Promise<int>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **System API:** This is a system API.
@@ -262,7 +279,7 @@ Lock cloud container before non-auto cloud sync.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The expired time of the lock, in ms. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | The expired time of the lock, in ms. |
 
 **Error codes:**
 
@@ -282,6 +299,8 @@ Queries data in the database based on specified conditions.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RdbStore-query(table: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-query(table: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<ResultSet>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **System API:** This is a system API.
@@ -292,7 +311,7 @@ Queries data in the database based on specified conditions.
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | The specified query condition by the instance object of {@link dataSharePredicates.DataSharePredicates}. |
-| callback | AsyncCallback&lt;ResultSet&gt; | Yes | The {@link ResultSet} object if the operation is successful. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ResultSet> | Yes | The {@link ResultSet} object if the operation is successful. |
 
 **Error codes:**
 
@@ -321,6 +340,18 @@ Queries data in the database based on specified conditions.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RdbStore-query(
+      table: string,
+      predicates: dataSharePredicates.DataSharePredicates,
+      columns: Array<string>,
+      callback: AsyncCallback<ResultSet>
+    ): void--><!--Device-RdbStore-query(
+      table: string,
+      predicates: dataSharePredicates.DataSharePredicates,
+      columns: Array<string>,
+      callback: AsyncCallback<ResultSet>
+    ): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **System API:** This is a system API.
@@ -331,8 +362,8 @@ Queries data in the database based on specified conditions.
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | The specified query condition by the instance object of {@link dataSharePredicates.DataSharePredicates}. |
-| columns | Array&lt;string&gt; | Yes | The columns to query. If the value is empty array, the query applies to all columns. |
-| callback | AsyncCallback&lt;ResultSet&gt; | Yes | The {@link ResultSet} object if the operation is successful. |
+| columns | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | The columns to query. If the value is empty array, the query applies to all columns. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ResultSet> | Yes | The {@link ResultSet} object if the operation is successful. |
 
 **Error codes:**
 
@@ -360,6 +391,16 @@ Queries data in the database based on specified conditions.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RdbStore-query(
+      table: string,
+      predicates: dataSharePredicates.DataSharePredicates,
+      columns?: Array<string>
+    ): Promise<ResultSet>--><!--Device-RdbStore-query(
+      table: string,
+      predicates: dataSharePredicates.DataSharePredicates,
+      columns?: Array<string>
+    ): Promise<ResultSet>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **System API:** This is a system API.
@@ -370,13 +411,13 @@ Queries data in the database based on specified conditions.
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | The specified query condition by the instance object of {@link dataSharePredicates.DataSharePredicates}. |
-| columns | Array&lt;string&gt; | No | The columns to query. If the value is null, the query applies to all columns. |
+| columns | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | No | The columns to query. If the value is null, the query applies to all columns. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultSet&gt; | The {@link ResultSet} object if the operation is successful. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ResultSet> | The {@link ResultSet} object if the operation is successful. |
 
 **Error codes:**
 
@@ -398,6 +439,8 @@ Obtains sharing resource of rows corresponding to the predicates.
 
 **Since:** 11
 
+<!--Device-RdbStore-querySharingResource(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>--><!--Device-RdbStore-querySharingResource(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **System API:** This is a system API.
@@ -406,14 +449,14 @@ Obtains sharing resource of rows corresponding to the predicates.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of {@link RdbPredicates}. |
-| columns | Array&lt;string&gt; | No | The specified columns to query. |
+| predicates | [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | Yes | The specified query condition by the instance object of {@link RdbPredicates}. |
+| columns | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | No | The specified columns to query. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultSet&gt; | -The promise returned by the function.{@link ResultSet} is query result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ResultSet> | -The promise returned by the function.{@link ResultSet} is query result. |
 
 **Error codes:**
 
@@ -450,6 +493,8 @@ Obtains sharing resource of rows corresponding to the predicates.
 
 **Since:** 11
 
+<!--Device-RdbStore-querySharingResource(predicates: RdbPredicates, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-querySharingResource(predicates: RdbPredicates, callback: AsyncCallback<ResultSet>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **System API:** This is a system API.
@@ -458,8 +503,8 @@ Obtains sharing resource of rows corresponding to the predicates.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of {@link RdbPredicates}. |
-| callback | AsyncCallback&lt;ResultSet&gt; | Yes | The callback of querySharingResource.{@link ResultSet} is query result. |
+| predicates | [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | Yes | The specified query condition by the instance object of {@link RdbPredicates}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ResultSet> | Yes | The callback of querySharingResource.{@link ResultSet} is query result. |
 
 **Error codes:**
 
@@ -496,6 +541,8 @@ Obtains sharing resource of rows corresponding to the predicates.
 
 **Since:** 11
 
+<!--Device-RdbStore-querySharingResource(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-querySharingResource(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback<ResultSet>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **System API:** This is a system API.
@@ -504,9 +551,9 @@ Obtains sharing resource of rows corresponding to the predicates.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of {@link RdbPredicates}. |
-| columns | Array&lt;string&gt; | Yes | The specified columns to query. |
-| callback | AsyncCallback&lt;ResultSet&gt; | Yes | The callback of querySharingResource.{@link ResultSet} is query result. |
+| predicates | [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | Yes | The specified query condition by the instance object of {@link RdbPredicates}. |
+| columns | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | The specified columns to query. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ResultSet> | Yes | The callback of querySharingResource.{@link ResultSet} is query result. |
 
 **Error codes:**
 
@@ -543,6 +590,8 @@ Restores a database from a specified database file.
 
 **Since:** 12
 
+<!--Device-RdbStore-restore(): Promise<void>--><!--Device-RdbStore-restore(): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **System API:** This is a system API.
@@ -551,7 +600,7 @@ Restores a database from a specified database file.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -590,6 +639,8 @@ Remove distributed table remote data.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RdbStore-retainDeviceData(retainDevices?: Record<string, Array<string>>): Promise<void>--><!--Device-RdbStore-retainDeviceData(retainDevices?: Record<string, Array<string>>): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **System API:** This is a system API.
@@ -598,13 +649,13 @@ Remove distributed table remote data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| retainDevices | Record&lt;string, Array&lt;string&gt;&gt; | No | key is the name of the table where the data is to be deleted,value is the device ID list of cross device end needs to be retained. |
+| retainDevices | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Array<string>> | No | key is the name of the table where the data is to be deleted,value is the device ID list of cross device end needs to be retained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -629,6 +680,8 @@ Unlock cloud container.
 
 **Since:** 12
 
+<!--Device-RdbStore-unlockCloudContainer(): Promise<void>--><!--Device-RdbStore-unlockCloudContainer(): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **System API:** This is a system API.
@@ -637,7 +690,7 @@ Unlock cloud container.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -662,6 +715,18 @@ Updates data in the database based on a specified instance object of RdbPredicat
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RdbStore-update(
+      table: string,
+      values: ValuesBucket,
+      predicates: dataSharePredicates.DataSharePredicates,
+      callback: AsyncCallback<long>
+    ): void--><!--Device-RdbStore-update(
+      table: string,
+      values: ValuesBucket,
+      predicates: dataSharePredicates.DataSharePredicates,
+      callback: AsyncCallback<long>
+    ): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **System API:** This is a system API.
@@ -671,9 +736,9 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| values | ValuesBucket | Yes | Indicates the row of data to be updated in the database.The key-value pairs are associated with column names of the database table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the specified update condition bythe instance object of {@link dataSharePredicates.DataSharePredicates}. |
-| callback | AsyncCallback&lt;number&gt; | Yes | The number of affected rows. |
+| values | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Indicates the row of data to be updated in the database.The key-value pairs are associated with column names of the database table. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the specified update condition by the instance object of {@link dataSharePredicates.DataSharePredicates}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | The number of affected rows. |
 
 **Error codes:**
 
@@ -713,6 +778,8 @@ Updates data in the database based on a specified instance object of RdbPredicat
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RdbStore-update(table: string, values: ValuesBucket, predicates: dataSharePredicates.DataSharePredicates): Promise<long>--><!--Device-RdbStore-update(table: string, values: ValuesBucket, predicates: dataSharePredicates.DataSharePredicates): Promise<long>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **System API:** This is a system API.
@@ -722,14 +789,14 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
-| values | ValuesBucket | Yes | Indicates the row of data to be updated in the database.The key-value pairs are associated with column names of the database table. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the specified update condition bythe instance object of {@link dataSharePredicates.DataSharePredicates}. |
+| values | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Indicates the row of data to be updated in the database.The key-value pairs are associated with column names of the database table. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the specified update condition by the instance object of {@link dataSharePredicates.DataSharePredicates}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The number of affected rows. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | The number of affected rows. |
 
 **Error codes:**
 
@@ -769,6 +836,8 @@ Update distributed table log.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RdbStore-updateDistributedInfo(info: DistributedInfo, predicates: RdbPredicates): Promise<long>--><!--Device-RdbStore-updateDistributedInfo(info: DistributedInfo, predicates: RdbPredicates): Promise<long>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **System API:** This is a system API.
@@ -777,14 +846,14 @@ Update distributed table log.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | DistributedInfo | Yes | Indicates the table log needs to be updated. |
-| predicates | RdbPredicates | Yes | The specified query condition by the instance object of {@link RdbPredicates}. |
+| info | [DistributedInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-distributedinfo-i.md) | Yes | Indicates the table log needs to be updated. |
+| predicates | [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | Yes | The specified query condition by the instance object of {@link RdbPredicates}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns the number of updated logs. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Returns the number of updated logs. |
 
 **Error codes:**
 

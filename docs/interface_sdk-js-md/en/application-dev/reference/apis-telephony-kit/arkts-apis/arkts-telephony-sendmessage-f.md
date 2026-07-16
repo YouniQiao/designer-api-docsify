@@ -14,8 +14,7 @@ function sendMessage(options: SendMessageOptions): void
 
 Sends a text or data SMS message.
 
-<p>This method checks whether the length of an SMS message exceeds the maximum length. If the
-maximum length is exceeded, the SMS message is split into multiple parts and sent separately.
+<p>This method checks whether the length of an SMS message exceeds the maximum length. If the maximum length is exceeded, the SMS message is split into multiple parts and sent separately.
 
 **Since:** 6
 
@@ -25,13 +24,15 @@ maximum length is exceeded, the SMS message is split into multiple parts and sen
 
 **Required permissions:** ohos.permission.SEND_MESSAGES
 
+<!--Device-sms-function sendMessage(options: SendMessageOptions): void--><!--Device-sms-function sendMessage(options: SendMessageOptions): void-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SendMessageOptions | Yes | Indicates the parameters and callback for sending the SMS message. |
+| options | [SendMessageOptions](../../apis-arkui/arkts-apis/arkts-arkui-sendmessageoptions-i.md) | Yes | Indicates the parameters and callback for sending the SMS message. |
 
 **Error codes:**
 

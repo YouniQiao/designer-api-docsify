@@ -1,5 +1,11 @@
 # getSystemTrustedCertificateList（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+```
+
 ## getSystemTrustedCertificateList
 
 ```TypeScript
@@ -14,6 +20,8 @@ function getSystemTrustedCertificateList(): Promise<CMResult>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-certificateManager-function getSystemTrustedCertificateList(): Promise<CMResult>--><!--Device-certificateManager-function getSystemTrustedCertificateList(): Promise<CMResult>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ function getSystemTrustedCertificateList(): Promise<CMResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise对象，返回获取系统信任CA证书列表的结果，返回值为[CMResult](arkts-devicecertificate-cmresult-i.md)对象中的certList属性。 |
+| Promise<CMResult> | Promise对象，返回获取系统信任CA证书列表的结果，返回值为[CMResult](arkts-devicecertificate-cmresult-i.md)对象中的certList属性。 |
 
 **错误码：**
 

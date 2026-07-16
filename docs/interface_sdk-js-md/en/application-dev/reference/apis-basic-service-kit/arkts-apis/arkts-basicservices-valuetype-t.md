@@ -10,6 +10,8 @@ Indicates type of value.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-pasteboard-type ValueType = string | image.PixelMap | Want | ArrayBuffer--><!--Device-pasteboard-type ValueType = string | image.PixelMap | Want | ArrayBuffer-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 | Type | Description |

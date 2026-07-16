@@ -18,13 +18,15 @@ function isUserGranted(): Promise<boolean>
 
 **需要权限：** ohos.permission.SUBSCRIBE_NOTIFICATION
 
+<!--Device-notificationExtensionSubscription-function isUserGranted(): Promise<boolean>--><!--Device-notificationExtensionSubscription-function isUserGranted(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示功能已启用；返回false表示功能未启用。 |
+| Promise<boolean> | Promise对象。返回true表示功能已启用；返回false表示功能未启用。 |
 
 **错误码：**
 

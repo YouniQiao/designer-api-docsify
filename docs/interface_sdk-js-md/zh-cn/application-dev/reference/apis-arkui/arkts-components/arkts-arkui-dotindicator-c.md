@@ -6,6 +6,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare class DotIndicator extends Indicator<DotIndicator>--><!--Device-unnamed-declare class DotIndicator extends Indicator<DotIndicator>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## color
@@ -20,9 +22,11 @@ Swiper组件圆点导航指示器的颜色。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DotIndicator-color(value: ResourceColor): DotIndicator--><!--Device-DotIndicator-color(value: ResourceColor): DotIndicator-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,13 +34,13 @@ Swiper组件圆点导航指示器的颜色。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ResourceColor | 是 | 设置Swiper组件圆点导航指示器的颜色。<br/>默认值：'#1A182431'，浅灰色。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 设置Swiper组件圆点导航指示器的颜色。<br/>默认值：'#1A182431'，浅灰色。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DotIndicator | 返回当前圆点指示器。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器。 |
 
 ## constructor
 
@@ -48,18 +52,20 @@ DotIndicator的构造函数。
 
 > **说明：**
 
-> - 按压导航点时，导航点会放大至1.33倍显示，因此非按压态时导航点的可见范围边界至实际范围边界存在一定距离，该距离会随着itemWidth、itemHeight、selectedItemWidth、
-> selectedItemHeight等参数变大而变大。
->
+> - 按压导航点时，导航点会放大至1.33倍显示，因此非按压态时导航点的可见范围边界至实际范围边界存在一定距离，该距离会随着itemWidth、itemHeight、selectedItemWidth、  
+> selectedItemHeight等参数变大而变大。  
+>  
 > - 若页面数量较多、圆点导航点超出页面时，建议使用maxDisplayCount设置导航点显示个数。
 
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DotIndicator-constructor()--><!--Device-DotIndicator-constructor()-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -75,9 +81,11 @@ indicatorIcon(iconList: Array<IndicatorIconInfo>): DotIndicator
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DotIndicator-indicatorIcon(iconList: Array<IndicatorIconInfo>): DotIndicator--><!--Device-DotIndicator-indicatorIcon(iconList: Array<IndicatorIconInfo>): DotIndicator-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,13 +93,13 @@ indicatorIcon(iconList: Array<IndicatorIconInfo>): DotIndicator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| iconList | Array&lt;IndicatorIconInfo&gt; | 是 | 需要设置的导航点索引。 |
+| iconList | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<IndicatorIconInfo> | 是 | 需要设置的导航点索引。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DotIndicator | 返回DotIndicator。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回DotIndicator。 |
 
 ## itemHeight
 
@@ -105,9 +113,11 @@ Swiper组件圆点导航指示器的高。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DotIndicator-itemHeight(value: Length): DotIndicator--><!--Device-DotIndicator-itemHeight(value: Length): DotIndicator-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -115,13 +125,13 @@ Swiper组件圆点导航指示器的高。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Length | 是 | 设置Swiper组件圆点导航指示器的高，不支持设置百分比。<br/>默认值：6<br/>单位：vp<br/>取值范围：(0, +∞) |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 设置Swiper组件圆点导航指示器的高，不支持设置百分比。<br/>默认值：6<br/>单位：vp<br/>取值范围：(0, +∞) |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DotIndicator | 返回当前圆点指示器。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器。 |
 
 ## itemWidth
 
@@ -135,9 +145,11 @@ Swiper组件圆点导航指示器的宽。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DotIndicator-itemWidth(value: Length): DotIndicator--><!--Device-DotIndicator-itemWidth(value: Length): DotIndicator-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -145,13 +157,13 @@ Swiper组件圆点导航指示器的宽。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Length | 是 | 设置Swiper组件圆点导航指示器的宽，不支持设置百分比。<br/>默认值：6<br/>单位：vp<br/>取值范围：(0, +∞) |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 设置Swiper组件圆点导航指示器的宽，不支持设置百分比。<br/>默认值：6<br/>单位：vp<br/>取值范围：(0, +∞) |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DotIndicator | 返回当前圆点指示器。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器。 |
 
 ## mask
 
@@ -165,9 +177,11 @@ mask(value: boolean): DotIndicator
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DotIndicator-mask(value: boolean): DotIndicator--><!--Device-DotIndicator-mask(value: boolean): DotIndicator-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -181,7 +195,7 @@ mask(value: boolean): DotIndicator
 
 | 类型 | 说明 |
 | --- | --- |
-| DotIndicator | 返回当前圆点指示器。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器。 |
 
 ## maxDisplayCount
 
@@ -195,7 +209,9 @@ maxDisplayCount(maxDisplayCount: number): DotIndicator
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-DotIndicator-maxDisplayCount(maxDisplayCount: number): DotIndicator--><!--Device-DotIndicator-maxDisplayCount(maxDisplayCount: number): DotIndicator-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -209,7 +225,7 @@ maxDisplayCount(maxDisplayCount: number): DotIndicator
 
 | 类型 | 说明 |
 | --- | --- |
-| DotIndicator | 返回当前圆点指示器。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器。 |
 
 ## selectedColor
 
@@ -223,9 +239,11 @@ selectedColor(value: ResourceColor): DotIndicator
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DotIndicator-selectedColor(value: ResourceColor): DotIndicator--><!--Device-DotIndicator-selectedColor(value: ResourceColor): DotIndicator-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -233,13 +251,13 @@ selectedColor(value: ResourceColor): DotIndicator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ResourceColor | 是 | 设置选中Swiper组件圆点导航指示器的颜色。<br/>默认值：'#007DFF'，蓝色。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 设置选中Swiper组件圆点导航指示器的颜色。<br/>默认值：'#007DFF'，蓝色。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DotIndicator | 返回当前圆点指示器。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器。 |
 
 ## selectedItemHeight
 
@@ -253,9 +271,11 @@ selectedItemHeight(value: Length): DotIndicator
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DotIndicator-selectedItemHeight(value: Length): DotIndicator--><!--Device-DotIndicator-selectedItemHeight(value: Length): DotIndicator-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -263,13 +283,13 @@ selectedItemHeight(value: Length): DotIndicator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Length | 是 | 设置选中Swiper组件圆点导航指示器的高，不支持设置百分比。<br/>默认值：6<br/>单位：vp<br/>取值范围：(0, +∞) |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 设置选中Swiper组件圆点导航指示器的高，不支持设置百分比。<br/>默认值：6<br/>单位：vp<br/>取值范围：(0, +∞) |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DotIndicator | 返回当前圆点指示器。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器。 |
 
 ## selectedItemWidth
 
@@ -283,9 +303,11 @@ selectedItemWidth(value: Length): DotIndicator
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DotIndicator-selectedItemWidth(value: Length): DotIndicator--><!--Device-DotIndicator-selectedItemWidth(value: Length): DotIndicator-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -293,13 +315,13 @@ selectedItemWidth(value: Length): DotIndicator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Length | 是 | 设置选中Swiper组件圆点导航指示器的宽，不支持设置百分比。<br/>默认值：6<br/>单位：vp<br/>取值范围：(0, +∞) |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 设置选中Swiper组件圆点导航指示器的宽，不支持设置百分比。<br/>默认值：6<br/>单位：vp<br/>取值范围：(0, +∞) |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DotIndicator | 返回当前圆点指示器。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器。 |
 
 ## space
 
@@ -313,9 +335,11 @@ space(space: LengthMetrics): DotIndicator
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本19开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本19开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DotIndicator-space(space: LengthMetrics): DotIndicator--><!--Device-DotIndicator-space(space: LengthMetrics): DotIndicator-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -323,11 +347,11 @@ space(space: LengthMetrics): DotIndicator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| space | LengthMetrics | 是 | 设置圆点导航点间距，不支持设置百分比。<br/>默认值：PC/2in1设备上为10，其他设备为8。<br/>单位：vp<br/>取值范围：[0, +∞) |
+| space | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | 是 | 设置圆点导航点间距，不支持设置百分比。<br/>默认值：PC/2in1设备上为10，其他设备为8。<br/>单位：vp<br/>取值范围：[0, +∞) |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| DotIndicator | 返回当前圆点指示器。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器。 |
 

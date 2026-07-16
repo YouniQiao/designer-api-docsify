@@ -18,19 +18,21 @@ Obtains the execution result of a startup task or .so file preloading task.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-startupManager-function getStartupTaskResult(startupTask: string): Object--><!--Device-startupManager-function getStartupTaskResult(startupTask: string): Object-End-->
+
 **System capability:** SystemCapability.Ability.AppStartup
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startupTask | string | Yes | Name of the [StartupTask](arkts-ability-startuptask-c.md) orname of the .so file to be preloaded. |
+| startupTask | string | Yes | Name of the [StartupTask](arkts-ability-startuptask-c.md) or name of the .so file to be preloaded. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Object | Execution result of[init](arkts-ability-startuptask-c.md#init-1) of the startuptask if a startup task name is passed.<br>undefined if a .so file name is passed. |
+| [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Execution result of [init](@ohos.app.appstartup.StartupTask:StartupTask#init(context: AbilityStageContext)) of the startup task if a startup task name is passed.<br>undefined if a .so file name is passed. |
 
 **Error codes:**
 

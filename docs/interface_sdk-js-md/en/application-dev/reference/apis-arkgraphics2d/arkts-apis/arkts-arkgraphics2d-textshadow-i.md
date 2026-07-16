@@ -4,6 +4,8 @@ Describes the text shadow.
 
 **Since:** 12
 
+<!--Device-text-interface TextShadow--><!--Device-text-interface TextShadow-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Blur radius, a floating-point value in physical pixels (px), with a default valu
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TextShadow-blurRadius?: double--><!--Device-TextShadow-blurRadius?: double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## color
@@ -42,6 +46,8 @@ Color of the text shadow. The default value is black (255, 0, 0, 0).
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-TextShadow-color?: common2D.Color--><!--Device-TextShadow-color?: common2D.Color-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## point
@@ -50,14 +56,15 @@ Color of the text shadow. The default value is black (255, 0, 0, 0).
 point?: common2D.Point
 ```
 
-Shadow offset position of the font based on the current text, in which the horizontal and vertical coordinates
-are greater than or equal to 0, with the unit being physical pixels (px).
+Shadow offset position of the font based on the current text, in which the horizontal and vertical coordinates are greater than or equal to 0, with the unit being physical pixels (px).
 
 **Type:** common2D.Point
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-TextShadow-point?: common2D.Point--><!--Device-TextShadow-point?: common2D.Point-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

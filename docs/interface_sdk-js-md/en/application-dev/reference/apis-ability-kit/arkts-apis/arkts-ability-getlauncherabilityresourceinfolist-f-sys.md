@@ -12,14 +12,15 @@ import { bundleResourceManager } from '@kit.AbilityKit';
 function getLauncherAbilityResourceInfoList(optionsList: Array<BundleOptions>, resourceFlags: number): Promise<Array<LauncherAbilityResourceInfo>>
 ```
 
-Obtains the launcher ability resource information of each application corresponding to the **BundleOptions**
-element in **optionsList**. This API uses a promise to return the result.
+Obtains the launcher ability resource information of each application corresponding to the **BundleOptions** element in **optionsList**. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.GET_INSTALLED_BUNDLE_LIST and ohos.permission.GET_BUNDLE_RESOURCES
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-bundleResourceManager-function getLauncherAbilityResourceInfoList(optionsList: Array<BundleOptions>, resourceFlags: int): Promise<Array<LauncherAbilityResourceInfo>>--><!--Device-bundleResourceManager-function getLauncherAbilityResourceInfoList(optionsList: Array<BundleOptions>, resourceFlags: int): Promise<Array<LauncherAbilityResourceInfo>>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -29,14 +30,14 @@ element in **optionsList**. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| optionsList | Array&lt;BundleOptions&gt; | Yes | Parameters of the applications to query.<br>**bundleName**,**moduleName**, and **abilityName** are mandatory parameters.<br>Value range of **appIndex**: [0, 5]. Thedefault value is **0** if not specified.<br>**userId** is an invalid parameter. It does not need to be passed,and will not take effect if passed. |
-| resourceFlags | number | Yes | Resource information flags, which indicate the type of resource information toobtain. The value is an enumerated value of [ResourceFlag](arkts-ability-resourceflag-e-sys.md), excluding[ResourceFlag](arkts-ability-resourceflag-e-sys.md).GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL and[ResourceFlag](arkts-ability-resourceflag-e-sys.md).GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY. |
+| optionsList | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<BundleOptions> | Yes | Parameters of the applications to query.<br>**bundleName**,**moduleName**, and **abilityName** are mandatory parameters.<br>Value range of **appIndex**: [0, 5]. The default value is **0** if not specified.<br>**userId** is an invalid parameter. It does not need to be passed,and will not take effect if passed. |
+| resourceFlags | number | Yes | Resource information flags, which indicate the type of resource information to obtain. The value is an enumerated value of [ResourceFlag](arkts-ability-resourceflag-e-sys.md), excluding [ResourceFlag](arkts-ability-resourceflag-e-sys.md).GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL and [ResourceFlag](arkts-ability-resourceflag-e-sys.md).GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;LauncherAbilityResourceInfo&gt;&gt; | Promise used to return the launcher ability resourceinformation of the specified application list. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<LauncherAbilityResourceInfo>> | Promise used to return the launcher ability resource information of the specified application list. |
 
 **Error codes:**
 

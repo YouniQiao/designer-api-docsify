@@ -8,6 +8,8 @@
 
 **替代接口：** ConfigOption
 
+<!--Device-hiAppEvent-interface ConfigOption--><!--Device-hiAppEvent-interface ConfigOption-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## disable
@@ -26,6 +28,8 @@ disable?: boolean
 
 **替代接口：** disable
 
+<!--Device-ConfigOption-disable?: boolean--><!--Device-ConfigOption-disable?: boolean-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## maxStorage
@@ -43,6 +47,8 @@ maxStorage?: string
 **废弃版本：** 9
 
 **替代接口：** maxStorage
+
+<!--Device-ConfigOption-maxStorage?: string--><!--Device-ConfigOption-maxStorage?: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 

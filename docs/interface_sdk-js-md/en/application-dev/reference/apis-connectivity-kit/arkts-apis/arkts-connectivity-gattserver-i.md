@@ -1,13 +1,14 @@
 # GattServer
 
-Manages GATT server. Before calling an Gatt server method, you must use {@link createGattServer} to create an
-GattServer instance.
+Manages GATT server. Before calling an Gatt server method, you must use {@link createGattServer} to create an GattServer instance.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
 **Substitutes:** GattServer
+
+<!--Device-bluetoothManager-interface GattServer--><!--Device-bluetoothManager-interface GattServer-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -25,8 +26,7 @@ addService(service: GattService): void
 
 Adds a specified service to be hosted.
 
-The added service and its characteristics are provided by the local device.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+The added service and its characteristics are provided by the local device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -38,13 +38,15 @@ On API 10 and above, the permission required by this interface is changed from U
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-addService(service: GattService): void--><!--Device-GattServer-addService(service: GattService): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| service | GattService | Yes | Indicates the service to add. |
+| service | [GattService](arkts-connectivity-gattservice-i.md) | Yes | Indicates the service to add. |
 
 **Error codes:**
 
@@ -100,8 +102,7 @@ try {
 close(): void
 ```
 
-Closes this {@code GattServer} object and unregisters its callbacks.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Closes this {@code GattServer} object and unregisters its callbacks.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -112,6 +113,8 @@ On API 10 and above, the permission required by this interface is changed from U
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattServer-close(): void--><!--Device-GattServer-close(): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -146,8 +149,7 @@ notifyCharacteristicChanged(deviceId: string, notifyCharacteristic: NotifyCharac
 
 Sends a notification of a change in a specified local characteristic.
 
-This method should be called for every BLE peripheral device that has requested notifications.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+This method should be called for every BLE peripheral device that has requested notifications.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -159,6 +161,8 @@ On API 10 and above, the permission required by this interface is changed from U
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-notifyCharacteristicChanged(deviceId: string, notifyCharacteristic: NotifyCharacteristic): void--><!--Device-GattServer-notifyCharacteristicChanged(deviceId: string, notifyCharacteristic: NotifyCharacteristic): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -166,7 +170,7 @@ On API 10 and above, the permission required by this interface is changed from U
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates the address of the BLE peripheral device to receive the notification. |
-| notifyCharacteristic | NotifyCharacteristic | Yes | Indicates the local characteristic that has changed. |
+| notifyCharacteristic | [NotifyCharacteristic](arkts-connectivity-notifycharacteristic-i.md) | Yes | Indicates the local characteristic that has changed. |
 
 **Error codes:**
 
@@ -212,8 +216,7 @@ try {
 off(type: 'characteristicRead', callback?: Callback<CharacteristicReadRequest>): void
 ```
 
-Unsubscribe characteristic read event.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Unsubscribe characteristic read event.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -225,6 +228,8 @@ On API 10 and above, the permission required by this interface is changed from U
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-off(type: 'characteristicRead', callback?: Callback<CharacteristicReadRequest>): void--><!--Device-GattServer-off(type: 'characteristicRead', callback?: Callback<CharacteristicReadRequest>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -232,7 +237,7 @@ On API 10 and above, the permission required by this interface is changed from U
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicRead' | Yes | Type of the characteristic read event to listen for. |
-| callback | Callback&lt;CharacteristicReadRequest&gt; | No | Callback used to listen for the characteristic readevent. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CharacteristicReadRequest> | No | Callback used to listen for the characteristic read event. |
 
 **Error codes:**
 
@@ -261,8 +266,7 @@ gattServer.off("characteristicRead");
 off(type: 'characteristicWrite', callback?: Callback<CharacteristicWriteRequest>): void
 ```
 
-Unsubscribe characteristic write event.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Unsubscribe characteristic write event.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -274,6 +278,8 @@ On API 10 and above, the permission required by this interface is changed from U
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-off(type: 'characteristicWrite', callback?: Callback<CharacteristicWriteRequest>): void--><!--Device-GattServer-off(type: 'characteristicWrite', callback?: Callback<CharacteristicWriteRequest>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -281,7 +287,7 @@ On API 10 and above, the permission required by this interface is changed from U
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicWrite' | Yes | Type of the characteristic write event to listen for. |
-| callback | Callback&lt;CharacteristicWriteRequest&gt; | No | Callback used to listen for the characteristic writeevent. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CharacteristicWriteRequest> | No | Callback used to listen for the characteristic write event. |
 
 **Error codes:**
 
@@ -310,8 +316,7 @@ gattServer.off("characteristicWrite");
 off(type: 'descriptorRead', callback?: Callback<DescriptorReadRequest>): void
 ```
 
-Unsubscribe descriptor read event.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Unsubscribe descriptor read event.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -323,6 +328,8 @@ On API 10 and above, the permission required by this interface is changed from U
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-off(type: 'descriptorRead', callback?: Callback<DescriptorReadRequest>): void--><!--Device-GattServer-off(type: 'descriptorRead', callback?: Callback<DescriptorReadRequest>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -330,7 +337,7 @@ On API 10 and above, the permission required by this interface is changed from U
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorRead' | Yes | Type of the descriptor read event to listen for. |
-| callback | Callback&lt;DescriptorReadRequest&gt; | No | Callback used to listen for the descriptor read event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DescriptorReadRequest> | No | Callback used to listen for the descriptor read event. |
 
 **Error codes:**
 
@@ -359,8 +366,7 @@ gattServer.off("descriptorRead");
 off(type: 'descriptorWrite', callback?: Callback<DescriptorWriteRequest>): void
 ```
 
-Unsubscribe descriptor write event.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Unsubscribe descriptor write event.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -372,6 +378,8 @@ On API 10 and above, the permission required by this interface is changed from U
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-off(type: 'descriptorWrite', callback?: Callback<DescriptorWriteRequest>): void--><!--Device-GattServer-off(type: 'descriptorWrite', callback?: Callback<DescriptorWriteRequest>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -379,7 +387,7 @@ On API 10 and above, the permission required by this interface is changed from U
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorWrite' | Yes | Type of the descriptor write event to listen for. |
-| callback | Callback&lt;DescriptorWriteRequest&gt; | No | Callback used to listen for the descriptor write event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DescriptorWriteRequest> | No | Callback used to listen for the descriptor write event. |
 
 **Error codes:**
 
@@ -408,8 +416,7 @@ gattServer.off("descriptorWrite");
 off(type: 'connectStateChange', callback?: Callback<BLEConnectChangedState>): void
 ```
 
-Unsubscribe server connection state changed event.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Unsubscribe server connection state changed event.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -421,6 +428,8 @@ On API 10 and above, the permission required by this interface is changed from U
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-off(type: 'connectStateChange', callback?: Callback<BLEConnectChangedState>): void--><!--Device-GattServer-off(type: 'connectStateChange', callback?: Callback<BLEConnectChangedState>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -428,7 +437,7 @@ On API 10 and above, the permission required by this interface is changed from U
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | Callback&lt;BLEConnectChangedState&gt; | No | Callback used to listen for the connection state changedevent. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<BLEConnectChangedState> | No | Callback used to listen for the connection state changed event. |
 
 **Error codes:**
 
@@ -457,8 +466,7 @@ gattServer.off("connectStateChange");
 on(type: 'characteristicRead', callback: Callback<CharacteristicReadRequest>): void
 ```
 
-Subscribe characteristic read event.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Subscribe characteristic read event.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -470,6 +478,8 @@ On API 10 and above, the permission required by this interface is changed from U
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-on(type: 'characteristicRead', callback: Callback<CharacteristicReadRequest>): void--><!--Device-GattServer-on(type: 'characteristicRead', callback: Callback<CharacteristicReadRequest>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -477,7 +487,7 @@ On API 10 and above, the permission required by this interface is changed from U
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicRead' | Yes | Type of the characteristic read event to listen for. |
-| callback | Callback&lt;CharacteristicReadRequest&gt; | Yes | Callback used to listen for the characteristic readevent. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CharacteristicReadRequest> | Yes | Callback used to listen for the characteristic read event. |
 
 **Error codes:**
 
@@ -520,8 +530,7 @@ gattServer.on("characteristicRead", ReadCharacteristicReq);
 on(type: 'characteristicWrite', callback: Callback<CharacteristicWriteRequest>): void
 ```
 
-Subscribe characteristic write event.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Subscribe characteristic write event.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -533,6 +542,8 @@ On API 10 and above, the permission required by this interface is changed from U
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-on(type: 'characteristicWrite', callback: Callback<CharacteristicWriteRequest>): void--><!--Device-GattServer-on(type: 'characteristicWrite', callback: Callback<CharacteristicWriteRequest>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -540,7 +551,7 @@ On API 10 and above, the permission required by this interface is changed from U
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicWrite' | Yes | Type of the characteristic write event to listen for. |
-| callback | Callback&lt;CharacteristicWriteRequest&gt; | Yes | Callback used to listen for the characteristic writeevent. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<CharacteristicWriteRequest> | Yes | Callback used to listen for the characteristic write event. |
 
 **Error codes:**
 
@@ -586,8 +597,7 @@ gattServer.on("characteristicWrite", WriteCharacteristicReq);
 on(type: 'descriptorRead', callback: Callback<DescriptorReadRequest>): void
 ```
 
-Subscribe descriptor read event.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Subscribe descriptor read event.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -599,6 +609,8 @@ On API 10 and above, the permission required by this interface is changed from U
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-on(type: 'descriptorRead', callback: Callback<DescriptorReadRequest>): void--><!--Device-GattServer-on(type: 'descriptorRead', callback: Callback<DescriptorReadRequest>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -606,7 +618,7 @@ On API 10 and above, the permission required by this interface is changed from U
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorRead' | Yes | Type of the descriptor read event to listen for. |
-| callback | Callback&lt;DescriptorReadRequest&gt; | Yes | Callback used to listen for the descriptor read event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DescriptorReadRequest> | Yes | Callback used to listen for the descriptor read event. |
 
 **Error codes:**
 
@@ -649,8 +661,7 @@ gattServer.on("descriptorRead", ReadDescriptorReq);
 on(type: 'descriptorWrite', callback: Callback<DescriptorWriteRequest>): void
 ```
 
-Subscribe descriptor write event.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Subscribe descriptor write event.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -662,6 +673,8 @@ On API 10 and above, the permission required by this interface is changed from U
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-on(type: 'descriptorWrite', callback: Callback<DescriptorWriteRequest>): void--><!--Device-GattServer-on(type: 'descriptorWrite', callback: Callback<DescriptorWriteRequest>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -669,7 +682,7 @@ On API 10 and above, the permission required by this interface is changed from U
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorWrite' | Yes | Type of the descriptor write event to listen for. |
-| callback | Callback&lt;DescriptorWriteRequest&gt; | Yes | Callback used to listen for the descriptor write event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DescriptorWriteRequest> | Yes | Callback used to listen for the descriptor write event. |
 
 **Error codes:**
 
@@ -715,8 +728,7 @@ gattServer.on("descriptorWrite", WriteDescriptorReq);
 on(type: 'connectStateChange', callback: Callback<BLEConnectChangedState>): void
 ```
 
-Subscribe server connection state changed event.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Subscribe server connection state changed event.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -728,6 +740,8 @@ On API 10 and above, the permission required by this interface is changed from U
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-on(type: 'connectStateChange', callback: Callback<BLEConnectChangedState>): void--><!--Device-GattServer-on(type: 'connectStateChange', callback: Callback<BLEConnectChangedState>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -735,7 +749,7 @@ On API 10 and above, the permission required by this interface is changed from U
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | Callback&lt;BLEConnectChangedState&gt; | Yes | Callback used to listen for the connection state changedevent. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<BLEConnectChangedState> | Yes | Callback used to listen for the connection state changed event. |
 
 **Error codes:**
 
@@ -768,8 +782,7 @@ gattServer.on("connectStateChange", Connected);
 removeService(serviceUuid: string): void
 ```
 
-Removes a specified service from the list of GATT services provided by this device.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Removes a specified service from the list of GATT services provided by this device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -780,6 +793,8 @@ On API 10 and above, the permission required by this interface is changed from U
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattServer-removeService(serviceUuid: string): void--><!--Device-GattServer-removeService(serviceUuid: string): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -820,8 +835,7 @@ try {
 sendResponse(serverResponse: ServerResponse): void
 ```
 
-Sends a response to a specified read or write request to a given BLE peripheral device.
-On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Sends a response to a specified read or write request to a given BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -833,13 +847,15 @@ On API 10 and above, the permission required by this interface is changed from U
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
+<!--Device-GattServer-sendResponse(serverResponse: ServerResponse): void--><!--Device-GattServer-sendResponse(serverResponse: ServerResponse): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serverResponse | ServerResponse | Yes | Indicates the response parameters {@link ServerResponse}. |
+| serverResponse | [ServerResponse](arkts-connectivity-serverresponse-i.md) | Yes | Indicates the response parameters {@link ServerResponse}. |
 
 **Error codes:**
 
@@ -883,9 +899,7 @@ try {
 startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, advResponse?: AdvertiseData): void
 ```
 
-Starts BLE advertising.
-On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to
-ACCESS_BLUETOOTH.
+Starts BLE advertising.On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -897,15 +911,17 @@ ACCESS_BLUETOOTH.
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.DISCOVER_BLUETOOTH
 
+<!--Device-GattServer-startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, advResponse?: AdvertiseData): void--><!--Device-GattServer-startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, advResponse?: AdvertiseData): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| setting | AdvertiseSetting | Yes | Indicates the settings for BLE advertising.If you need to use the default value, set this parameter to {@code null}. |
-| advData | AdvertiseData | Yes | Indicates the advertising data. |
-| advResponse | AdvertiseData | No | Indicates the scan response associated with the advertising data. |
+| setting | [AdvertiseSetting](arkts-connectivity-advertisesetting-i.md) | Yes | Indicates the settings for BLE advertising.If you need to use the default value, set this parameter to {@code null}. |
+| advData | [AdvertiseData](arkts-connectivity-advertisedata-i.md) | Yes | Indicates the advertising data. |
+| advResponse | [AdvertiseData](arkts-connectivity-advertisedata-i.md) | No | Indicates the scan response associated with the advertising data. |
 
 **Error codes:**
 
@@ -973,9 +989,7 @@ try {
 stopAdvertising(): void
 ```
 
-Stops BLE advertising.
-On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to
-ACCESS_BLUETOOTH.
+Stops BLE advertising.On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -986,6 +1000,8 @@ ACCESS_BLUETOOTH.
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.DISCOVER_BLUETOOTH
+
+<!--Device-GattServer-stopAdvertising(): void--><!--Device-GattServer-stopAdvertising(): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

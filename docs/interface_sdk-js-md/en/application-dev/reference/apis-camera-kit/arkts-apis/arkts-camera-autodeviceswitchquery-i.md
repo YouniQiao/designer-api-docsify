@@ -1,12 +1,12 @@
 # AutoDeviceSwitchQuery
 
-**AutoDeviceSwitchQuery** is used to check whether a device supports automatic camera switch.
-[Automatic Camera Switching](../../../../media/camera/camera-auto-switch.md) is supported only on foldable devices.
+**AutoDeviceSwitchQuery** is used to check whether a device supports automatic camera switch.[Automatic Camera Switching](../../../../media/camera/camera-auto-switch.md) is supported only on foldable devices.
 
-For details about how to enable this capability, see
-[enableAutoDeviceSwitch](arkts-camera-autodeviceswitch-i.md#enableautodeviceswitch-1).
+For details about how to enable this capability, see [enableAutoDeviceSwitch](arkts-camera-autodeviceswitch-i.md#enableautodeviceswitch-1).
 
 **Since:** 13
+
+<!--Device-camera-interface AutoDeviceSwitchQuery--><!--Device-camera-interface AutoDeviceSwitchQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -28,13 +28,15 @@ Checks whether the device supports automatic camera switch.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-AutoDeviceSwitchQuery-isAutoDeviceSwitchSupported(): boolean--><!--Device-AutoDeviceSwitchQuery-isAutoDeviceSwitchSupported(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of automatic camera switch. **true** if supported, **false**otherwise. |
+| boolean | Check result for the support of automatic camera switch. **true** if supported, **false** otherwise. |
 
 **Error codes:**
 

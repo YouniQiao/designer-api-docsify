@@ -16,6 +16,8 @@ Subscribe to the specified events.
 
 **Since:** 26.0.0
 
+<!--Device-mechanicManager-function subscribe(events: MechEventType[], callback: Callback<MechEvent>): void--><!--Device-mechanicManager-function subscribe(events: MechEventType[], callback: Callback<MechEvent>): void-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -24,8 +26,8 @@ Subscribe to the specified events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| events | MechEventType[] | Yes | Events to subscribe to. |
-| callback | Callback&lt;MechEvent&gt; | Yes | Callback of event. |
+| events | [MechEventType](arkts-mechanic-mecheventtype-e-sys.md)[] | Yes | Events to subscribe to. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<MechEvent> | Yes | Callback of event. |
 
 **Error codes:**
 

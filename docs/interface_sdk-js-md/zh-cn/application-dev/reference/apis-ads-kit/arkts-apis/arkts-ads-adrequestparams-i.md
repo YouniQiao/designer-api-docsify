@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-advertising-export interface AdRequestParams--><!--Device-advertising-export interface AdRequestParams-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
+
+## 导入模块
+
+```TypeScript
+import { advertising } from '@kit.AdsKit';
+```
 
 ## adCount
 
@@ -18,7 +26,9 @@ adCount?: number
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AdRequestParams-adCount?: number--><!--Device-AdRequestParams-adCount?: number-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -34,7 +44,9 @@ adHeight?: number
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AdRequestParams-adHeight?: number--><!--Device-AdRequestParams-adHeight?: number-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -52,7 +64,9 @@ adId: string
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AdRequestParams-adId: string--><!--Device-AdRequestParams-adId: string-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -70,7 +84,9 @@ adSearchKeyword?: string
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AdRequestParams-adSearchKeyword?: string--><!--Device-AdRequestParams-adSearchKeyword?: string-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -82,11 +98,11 @@ adType?: number
 
 请求的广告类型。
 
-- 1：开屏广告。
-- 3：原生广告。
-- 7：激励广告。
-- 8：横幅广告。
-- 12：插屏广告。
+- 1：开屏广告。  
+- 3：原生广告。  
+- 7：激励广告。  
+- 8：横幅广告。  
+- 12：插屏广告。  
 - 60：贴片广告。
 
 不填默认为原生广告类型。
@@ -95,7 +111,9 @@ adType?: number
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AdRequestParams-adType?: number--><!--Device-AdRequestParams-adType?: number-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -111,7 +129,9 @@ adWidth?: number
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AdRequestParams-adWidth?: number--><!--Device-AdRequestParams-adWidth?: number-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -129,7 +149,9 @@ adWidth?: number
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AdRequestParams-[key: string]: number | boolean | string | undefined--><!--Device-AdRequestParams-[key: string]: number | boolean | string | undefined-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 

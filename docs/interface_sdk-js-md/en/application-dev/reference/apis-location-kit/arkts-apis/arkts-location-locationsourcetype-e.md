@@ -4,6 +4,8 @@ Enum for the source of the location.
 
 **Since:** 12
 
+<!--Device-geoLocationManager-export enum LocationSourceType--><!--Device-geoLocationManager-export enum LocationSourceType-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## GNSS
@@ -17,6 +19,8 @@ The location is obtained from the GNSS.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LocationSourceType-GNSS = 1--><!--Device-LocationSourceType-GNSS = 1-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -32,6 +36,8 @@ The location comes from the network positioning technology.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LocationSourceType-NETWORK = 2--><!--Device-LocationSourceType-NETWORK = 2-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## INDOOR
@@ -46,6 +52,8 @@ The location comes from the indoor positioning technology.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LocationSourceType-INDOOR = 3--><!--Device-LocationSourceType-INDOOR = 3-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## RTK
@@ -59,6 +67,8 @@ The location comes from the GNSS RTK technology.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LocationSourceType-RTK = 4--><!--Device-LocationSourceType-RTK = 4-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 

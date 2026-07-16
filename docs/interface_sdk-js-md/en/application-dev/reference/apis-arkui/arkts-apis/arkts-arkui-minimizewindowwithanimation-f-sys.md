@@ -17,6 +17,10 @@ Minimize the window target with animation.
 
 **Since:** 9
 
+<!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget,
+    callback: AsyncCallback<WindowAnimationFinishedCallback>): void--><!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget,
+    callback: AsyncCallback<WindowAnimationFinishedCallback>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -25,8 +29,8 @@ Minimize the window target with animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowTarget | WindowAnimationTarget | Yes | The window target to be minimized. |
-| callback | AsyncCallback&lt;WindowAnimationFinishedCallback&gt; | Yes | Returns the animation finished callback. |
+| windowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | Yes | The window target to be minimized. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<WindowAnimationFinishedCallback> | Yes | Returns the animation finished callback. |
 
 **Example**
 
@@ -104,6 +108,8 @@ Minimize the window target with animation.
 
 **Since:** 9
 
+<!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promise<WindowAnimationFinishedCallback>--><!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promise<WindowAnimationFinishedCallback>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -112,13 +118,13 @@ Minimize the window target with animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowTarget | WindowAnimationTarget | Yes |  |
+| windowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WindowAnimationFinishedCallback&gt; | Promise used to return the animation finished callback. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<WindowAnimationFinishedCallback> | Promise used to return the animation finished callback. |
 
 **Example**
 

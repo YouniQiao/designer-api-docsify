@@ -13,14 +13,17 @@ export function createPluginModuleContextForHostBundle(context: Context, pluginB
     hostBundleName: string): Promise<Context>
 ```
 
-Creates the context for a plugin based on a given context, plugin bundle name, plugin module name, and application
-bundle name to obtain the basic information about the plugin. This API uses a promise to return the result.
+Creates the context for a plugin based on a given context, plugin bundle name, plugin module name, and application bundle name to obtain the basic information about the plugin. This API uses a promise to return the result.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-application-export function createPluginModuleContextForHostBundle(context: Context, pluginBundleName: string, pluginModuleName: string,
+    hostBundleName: string): Promise<Context>--><!--Device-application-export function createPluginModuleContextForHostBundle(context: Context, pluginBundleName: string, pluginModuleName: string,
+    hostBundleName: string): Promise<Context>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -30,7 +33,7 @@ bundle name to obtain the basic information about the plugin. This API uses a pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. |
 | pluginBundleName | string | Yes | Bundle name of the plugin. |
 | pluginModuleName | string | Yes | Module name of the plugin. |
 | hostBundleName | string | Yes | Bundle name of the application for which the plugin is installed. |
@@ -39,7 +42,7 @@ bundle name to obtain the basic information about the plugin. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Context&gt; | Promise used to return the context created, in which the **processName** and **config**properties are the same as those of the input context. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Context> | Promise used to return the context created, in which the **processName** and **config** properties are the same as those of the input context. |
 
 **Error codes:**
 

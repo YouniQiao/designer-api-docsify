@@ -14,10 +14,11 @@ function cancelAll(callback: AsyncCallback<void>): void
 
 取消当前应用所有已发布的通知。使用callback异步回调。
 
-取消后，当前应用的所有通知将从通知中心、状态栏等位置移除，用户不再可见。
-适用于应用退出或用户手动清除全部通知的场景。
+取消后，当前应用的所有通知将从通知中心、状态栏等位置移除，用户不再可见。适用于应用退出或用户手动清除全部通知的场景。
 
 **起始版本：** 9
+
+<!--Device-notificationManager-function cancelAll(callback: AsyncCallback<void>): void--><!--Device-notificationManager-function cancelAll(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -25,7 +26,7 @@ function cancelAll(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当取消当前应用所有已发布的通知成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当取消当前应用所有已发布的通知成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -62,10 +63,11 @@ function cancelAll(): Promise<void>
 
 取消当前应用所有已发布的通知。使用Promise异步回调。
 
-取消后，当前应用的所有通知将从通知中心、状态栏等位置移除，用户不再可见。
-适用于应用退出或用户手动清除全部通知的场景。
+取消后，当前应用的所有通知将从通知中心、状态栏等位置移除，用户不再可见。适用于应用退出或用户手动清除全部通知的场景。
 
 **起始版本：** 9
+
+<!--Device-notificationManager-function cancelAll(): Promise<void>--><!--Device-notificationManager-function cancelAll(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -73,7 +75,7 @@ function cancelAll(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

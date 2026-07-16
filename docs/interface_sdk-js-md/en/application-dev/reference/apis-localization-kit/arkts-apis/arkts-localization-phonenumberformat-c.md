@@ -1,9 +1,10 @@
 # PhoneNumberFormat
 
-Provides phone number management capabilities, such as phone number validity verification, formatting, and home
-location retrieval.
+Provides phone number management capabilities, such as phone number validity verification, formatting, and home location retrieval.
 
 **Since:** 8
+
+<!--Device-i18n-export class PhoneNumberFormat--><!--Device-i18n-export class PhoneNumberFormat-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -25,6 +26,8 @@ Creates a **PhoneNumberFormat** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PhoneNumberFormat-constructor(country: string, options?: PhoneNumberFormatOptions)--><!--Device-PhoneNumberFormat-constructor(country: string, options?: PhoneNumberFormatOptions)-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -32,7 +35,7 @@ Creates a **PhoneNumberFormat** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | country | string | Yes | Country/region to which the phone number to be formatted belongs. |
-| options | PhoneNumberFormatOptions | No | Options for **PhoneNumberFormat** object initialization. Thedefault value is **NATIONAL**. |
+| options | [PhoneNumberFormatOptions](arkts-localization-phonenumberformatoptions-i.md) | No | Options for **PhoneNumberFormat** object initialization. The default value is **NATIONAL**. |
 
 **Example**
 
@@ -52,12 +55,14 @@ format(phoneNumber: string): string
 
 Formats a phone number.
 
-> **Description**
+> **Description**  
 > > Formatting dialed phone numbers is supported since API version 12.
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PhoneNumberFormat-format(phoneNumber: string): string--><!--Device-PhoneNumberFormat-format(phoneNumber: string): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -102,12 +107,14 @@ getLocationName(phoneNumber: string, locale: string): string
 
 Obtains the home location of a phone number.
 
-> **Description**
+> **Description**  
 > > This API can be used to obtain the home location of a dialed number in real time since API version 23.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PhoneNumberFormat-getLocationName(phoneNumber: string, locale: string): string--><!--Device-PhoneNumberFormat-getLocationName(phoneNumber: string, locale: string): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -158,6 +165,8 @@ Checks whether the phone number is valid for the country/region in the **PhoneNu
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PhoneNumberFormat-isValidNumber(phoneNumber: string): boolean--><!--Device-PhoneNumberFormat-isValidNumber(phoneNumber: string): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -170,7 +179,7 @@ Checks whether the phone number is valid for the country/region in the **PhoneNu
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the phone number is valid. The value **true** indicates that the phone number isvalid, and the value **false** indicates the opposite. |
+| boolean | Whether the phone number is valid. The value **true** indicates that the phone number is valid, and the value **false** indicates the opposite. |
 
 **Example**
 

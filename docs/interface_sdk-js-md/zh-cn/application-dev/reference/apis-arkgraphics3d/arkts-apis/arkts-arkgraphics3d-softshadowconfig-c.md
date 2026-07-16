@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-export declare abstract class SoftShadowConfig--><!--Device-unnamed-export declare abstract class SoftShadowConfig-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## shadowAlgorithmType
@@ -19,6 +21,8 @@ get shadowAlgorithmType(): ShadowAlgorithmType
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SoftShadowConfig-get shadowAlgorithmType(): ShadowAlgorithmType--><!--Device-SoftShadowConfig-get shadowAlgorithmType(): ShadowAlgorithmType-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

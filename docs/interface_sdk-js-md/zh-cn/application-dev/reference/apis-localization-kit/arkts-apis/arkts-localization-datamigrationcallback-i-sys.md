@@ -4,9 +4,17 @@
 
 **起始版本：** 23
 
+<!--Device-fontManager-interface DataMigrationCallback--><!--Device-fontManager-interface DataMigrationCallback-End-->
+
 **系统能力：** SystemCapability.Global.FontManager
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { fontManager } from '@kit.LocalizationKit';
+```
 
 ## onHeartBeat
 
@@ -17,6 +25,8 @@ onHeartBeat(): void
 回调函数，用于返回心跳回调。
 
 **起始版本：** 23
+
+<!--Device-DataMigrationCallback-onHeartBeat(): void--><!--Device-DataMigrationCallback-onHeartBeat(): void-End-->
 
 **系统能力：** SystemCapability.Global.FontManager
 
@@ -59,6 +69,8 @@ onProgress(progress : DataMigrationProgress): void
 
 **起始版本：** 23
 
+<!--Device-DataMigrationCallback-onProgress(progress : DataMigrationProgress): void--><!--Device-DataMigrationCallback-onProgress(progress : DataMigrationProgress): void-End-->
+
 **系统能力：** SystemCapability.Global.FontManager
 
 **系统接口：** 此接口为系统接口。
@@ -67,7 +79,7 @@ onProgress(progress : DataMigrationProgress): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| progress | DataMigrationProgress | 是 | 数据迁移进度信息。 |
+| progress | [DataMigrationProgress](arkts-localization-datamigrationprogress-i-sys.md) | 是 | 数据迁移进度信息。 |
 
 **示例：**
 
@@ -105,6 +117,8 @@ onResult(result : number): void
 回调函数，用于返回数据迁移的结果。
 
 **起始版本：** 23
+
+<!--Device-DataMigrationCallback-onResult(result : int): void--><!--Device-DataMigrationCallback-onResult(result : int): void-End-->
 
 **系统能力：** SystemCapability.Global.FontManager
 

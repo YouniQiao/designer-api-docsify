@@ -4,6 +4,8 @@ ToolInfo describes the basic summary information of a cli tool.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export interface ToolSummary--><!--Device-unnamed-export interface ToolSummary-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -21,6 +23,8 @@ The description of the CLI tool.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ToolSummary-readonly description: string--><!--Device-ToolSummary-readonly description: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -40,6 +44,8 @@ The name of the CLI tool.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ToolSummary-readonly name: string--><!--Device-ToolSummary-readonly name: string-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ The version of the CLI tool (format defined by provider, e.g., "1.0.0").
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ToolSummary-readonly version: string--><!--Device-ToolSummary-readonly version: string-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 

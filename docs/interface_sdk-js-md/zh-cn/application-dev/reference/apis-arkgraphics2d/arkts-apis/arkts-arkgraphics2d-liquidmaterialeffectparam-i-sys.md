@@ -4,9 +4,17 @@
 
 **起始版本：** 22
 
+<!--Device-uiEffect-interface LiquidMaterialEffectParam--><!--Device-uiEffect-interface LiquidMaterialEffectParam-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
+```
 
 ## distortFactor
 
@@ -19,6 +27,8 @@ distortFactor : number
 **类型：** number
 
 **起始版本：** 22
+
+<!--Device-LiquidMaterialEffectParam-distortFactor : double--><!--Device-LiquidMaterialEffectParam-distortFactor : double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -36,6 +46,8 @@ distortProgress : number
 
 **起始版本：** 22
 
+<!--Device-LiquidMaterialEffectParam-distortProgress : double--><!--Device-LiquidMaterialEffectParam-distortProgress : double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +63,8 @@ enable : boolean
 **类型：** boolean
 
 **起始版本：** 22
+
+<!--Device-LiquidMaterialEffectParam-enable : boolean--><!--Device-LiquidMaterialEffectParam-enable : boolean-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -68,6 +82,8 @@ materialFactor : number
 
 **起始版本：** 22
 
+<!--Device-LiquidMaterialEffectParam-materialFactor : double--><!--Device-LiquidMaterialEffectParam-materialFactor : double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -83,6 +99,8 @@ reflectionFactor : number
 **类型：** number
 
 **起始版本：** 22
+
+<!--Device-LiquidMaterialEffectParam-reflectionFactor : double--><!--Device-LiquidMaterialEffectParam-reflectionFactor : double-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -100,6 +118,8 @@ refractionFactor : number
 
 **起始版本：** 22
 
+<!--Device-LiquidMaterialEffectParam-refractionFactor : double--><!--Device-LiquidMaterialEffectParam-refractionFactor : double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -115,6 +135,8 @@ ripplePosition?: Array<[number, number]>
 **类型：** Array<[number, number]>
 
 **起始版本：** 22
+
+<!--Device-LiquidMaterialEffectParam-ripplePosition?: Array<[double, double]>--><!--Device-LiquidMaterialEffectParam-ripplePosition?: Array<[double, double]>-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -132,6 +154,8 @@ rippleProgress : number
 
 **起始版本：** 22
 
+<!--Device-LiquidMaterialEffectParam-rippleProgress : double--><!--Device-LiquidMaterialEffectParam-rippleProgress : double-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -147,6 +171,8 @@ tintColor : [number, number, number, number]
 **类型：** [number, number, number, number]
 
 **起始版本：** 22
+
+<!--Device-LiquidMaterialEffectParam-tintColor : [double, double, double, double]--><!--Device-LiquidMaterialEffectParam-tintColor : [double, double, double, double]-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

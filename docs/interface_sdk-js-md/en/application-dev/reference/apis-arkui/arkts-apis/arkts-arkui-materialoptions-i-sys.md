@@ -4,6 +4,8 @@ System material options.
 
 **Since:** 23
 
+<!--Device-uiMaterial-interface MaterialOptions--><!--Device-uiMaterial-interface MaterialOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -33,6 +35,8 @@ Default value: **MaterialType.NONE**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-MaterialOptions-type?: MaterialType--><!--Device-MaterialOptions-type?: MaterialType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

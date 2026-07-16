@@ -4,6 +4,8 @@ Defines the configuration of a geofence.
 
 **Since:** 23
 
+<!--Device-unnamed-export interface Geofence--><!--Device-unnamed-export interface Geofence-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -20,6 +22,8 @@ Coordinate system type of the center point.
 
 **Since:** 23
 
+<!--Device-Geofence-coordinateSystemType:CoordinateSystemType--><!--Device-Geofence-coordinateSystemType:CoordinateSystemType-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -30,12 +34,13 @@ Coordinate system type of the center point.
 delayTime?:number
 ```
 
-Delay time from geofence entry to event trigger, in seconds.
-The value ranges from 0 to 300. The default value is **0**.
+Delay time from geofence entry to event trigger, in seconds.The value ranges from 0 to 300. The default value is **0**.
 
 **Type:** number
 
 **Since:** 23
+
+<!--Device-Geofence-delayTime?:int--><!--Device-Geofence-delayTime?:int-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -53,6 +58,8 @@ Latitude of the geofence center. The value ranges from -90 to 90.
 
 **Since:** 23
 
+<!--Device-Geofence-latitude:double--><!--Device-Geofence-latitude:double-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -68,6 +75,8 @@ Longitude of the geofence center. The value ranges from -180 to 180.
 **Type:** number
 
 **Since:** 23
+
+<!--Device-Geofence-longitude:double--><!--Device-Geofence-longitude:double-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -85,6 +94,8 @@ Event type for monitoring a geofence.
 
 **Since:** 23
 
+<!--Device-Geofence-monitorEvent:MonitorEvent--><!--Device-Geofence-monitorEvent:MonitorEvent-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -100,6 +111,8 @@ Geofence radius, in meters. The value ranges from 200 to 2000.
 **Type:** number
 
 **Since:** 23
+
+<!--Device-Geofence-radius:double--><!--Device-Geofence-radius:double-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

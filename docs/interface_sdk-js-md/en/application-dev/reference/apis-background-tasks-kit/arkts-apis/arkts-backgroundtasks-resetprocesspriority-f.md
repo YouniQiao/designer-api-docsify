@@ -12,11 +12,11 @@ import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
 function resetProcessPriority(pid: number): Promise<void>
 ```
 
-Unsuppresses the child process. In this case, the child process follows the scheduling policy of the main
-process. If the scheduling policy of the main process changes, for example, from the background to the foreground
-, the child process changes with the main process. The effect is the same as calling **resetProcessPriority**.
+Unsuppresses the child process. In this case, the child process follows the scheduling policy of the main process. If the scheduling policy of the main process changes, for example, from the background to the foreground, the child process changes with the main process. The effect is the same as calling **resetProcessPriority**.
 
 **Since:** 17
+
+<!--Device-backgroundProcessManager-function resetProcessPriority(pid: int): Promise<void>--><!--Device-backgroundProcessManager-function resetProcessPriority(pid: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Resourceschedule.BackgroundProcessManager
 
@@ -24,13 +24,13 @@ process. If the scheduling policy of the main process changes, for example, from
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pid | number | Yes | ID of the child process, which is the **pid** parameter of the[OH_Ability_StartNativeChildProcess](../../../../reference/apis-ability-kit/capi-native-child-process-h.md#oh_ability_startnativechildprocess)API. |
+| pid | number | Yes | ID of the child process, which is the **pid** parameter of the [OH_Ability_StartNativeChildProcess](../../../../reference/apis-ability-kit/capi-native-child-process-h.md#oh_ability_startnativechildprocess)API. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 

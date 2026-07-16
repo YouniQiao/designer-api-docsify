@@ -4,6 +4,8 @@ Enumerates the scrolling states.
 
 **Since:** 7
 
+<!--Device-unnamed-declare enum ScrollState--><!--Device-unnamed-declare enum ScrollState-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Idle
@@ -12,14 +14,15 @@ Enumerates the scrolling states.
 Idle
 ```
 
-Idle state. Triggered when the scroll state returns to idle, and when the controller's non-animated methods are
-used to control the scroll.
+Idle state. Triggered when the scroll state returns to idle, and when the controller's non-animated methods are used to control the scroll.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ScrollState-Idle--><!--Device-ScrollState-Idle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,14 +32,15 @@ used to control the scroll.
 Scroll
 ```
 
-Scrolling state. Triggered when the list is dragged with the finger, when the scrollbar is dragged, or when the
-mouse scroll wheel is used.
+Scrolling state. Triggered when the list is dragged with the finger, when the scrollbar is dragged, or when the mouse scroll wheel is used.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ScrollState-Scroll--><!--Device-ScrollState-Scroll-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,11 +50,9 @@ mouse scroll wheel is used.
 Fling
 ```
 
-Inertial scrolling state. Triggered by all animated scroll actions. This includes: Inertial scrolling that occurs
-after a fling;
+Inertial scrolling state. Triggered by all animated scroll actions. This includes: Inertial scrolling that occurs after a fling;
 
-Bounce-back scrolling when the swipe reaches the edge; Inertial scrolling after quickly dragging the built-in
-scrollbar and releasing;
+Bounce-back scrolling when the swipe reaches the edge; Inertial scrolling after quickly dragging the built-in scrollbar and releasing;
 
 Scrolling controlled by the animated methods provided by the scroller.
 
@@ -59,6 +61,8 @@ Scrolling controlled by the animated methods provided by the scroller.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ScrollState-Fling--><!--Device-ScrollState-Fling-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

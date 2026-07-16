@@ -12,15 +12,15 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAllAppCloneBundleInfo(bundleName: string, bundleFlags: number, userId?: number): Promise<Array<BundleInfo>>
 ```
 
-Obtains all the bundle information of applications and application clones based on the given bundle name,
-[bundleFlags](arkts-ability-bundleflag-e.md), and user ID. This API uses a promise to
-return the result.
+Obtains all the bundle information of applications and application clones based on the given bundle name,[bundleFlags](arkts-ability-bundleflag-e.md), and user ID. This API uses a promise to return the result.
 
 No permission is required for obtaining the caller's own information.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getAllAppCloneBundleInfo(bundleName: string, bundleFlags: int, userId?: int): Promise<Array<BundleInfo>>--><!--Device-bundleManager-function getAllAppCloneBundleInfo(bundleName: string, bundleFlags: int, userId?: int): Promise<Array<BundleInfo>>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -32,13 +32,13 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | bundleFlags | number | Yes | Type of the bundle information to obtain. |
-| userId | number | No | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleInfo&gt;&gt; | Promise used to return an array of bundle information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<BundleInfo>> | Promise used to return an array of bundle information. |
 
 **Error codes:**
 

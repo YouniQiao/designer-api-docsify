@@ -1,9 +1,10 @@
 # System
 
-Provides system attribute configuration functions, including translating language and country/region names,
-obtaining the list of supported languages and countries/regions, and obtaining the system language and region.
+Provides system attribute configuration functions, including translating language and country/region names,obtaining the list of supported languages and countries/regions, and obtaining the system language and region.
 
 **Since:** 9
+
+<!--Device-i18n-export class System--><!--Device-i18n-export class System-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -24,6 +25,8 @@ Obtains the preferred language of an application.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-System-static getAppPreferredLanguage(): string--><!--Device-System-static getAppPreferredLanguage(): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -54,15 +57,17 @@ Obtains the country/region display name in the specified language.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-System-static getDisplayCountry(country: string, locale: string, sentenceCase?: boolean): string--><!--Device-System-static getDisplayCountry(country: string, locale: string, sentenceCase?: boolean): string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| country | string | Yes | Valid country/region code. For details, see[System Locale](../../../../internationalization/i18n-locale-culture.md#how-it-works). |
+| country | string | Yes | Valid country/region code. For details, see [System Locale](../../../../internationalization/i18n-locale-culture.md#how-it-works). |
 | locale | string | Yes | [System locale](../../../../internationalization/i18n-locale-culture.md#how-it-works),which consists of the language, script, and country/region. |
-| sentenceCase | boolean | No | Whether to use sentence case to display the text. The value **true** means todisplay the text in title case format, and the value **false** means to display the text in the default caseformat of the locale. The default value is **true**. |
+| sentenceCase | boolean | No | Whether to use sentence case to display the text. The value **true** means to display the text in title case format, and the value **false** means to display the text in the default case format of the locale. The default value is **true**. |
 
 **Return value:**
 
@@ -104,15 +109,17 @@ Obtains the language display name in the specified language.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-System-static getDisplayLanguage(language: string, locale: string, sentenceCase?: boolean): string--><!--Device-System-static getDisplayLanguage(language: string, locale: string, sentenceCase?: boolean): string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| language | string | Yes | Valid language ID. For details, see[System Locale](../../../../internationalization/i18n-locale-culture.md#how-it-works). |
+| language | string | Yes | Valid language ID. For details, see [System Locale](../../../../internationalization/i18n-locale-culture.md#how-it-works). |
 | locale | string | Yes | [System locale](../../../../internationalization/i18n-locale-culture.md#how-it-works),which consists of the language, script, and country/region. |
-| sentenceCase | boolean | No | Whether to use sentence case to display the text. The value **true** means todisplay the text in title case format, and the value **false** means to display the text in the default caseformat of the locale. The default value is **true**. |
+| sentenceCase | boolean | No | Whether to use sentence case to display the text. The value **true** means to display the text in title case format, and the value **false** means to display the text in the default case format of the locale. The default value is **true**. |
 
 **Return value:**
 
@@ -155,13 +162,15 @@ Obtains the first day of a week in the system settings.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-System-static getFirstDayOfWeek(): WeekDay--><!--Device-System-static getFirstDayOfWeek(): WeekDay-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| WeekDay | Start day of a week. |
+| [WeekDay](arkts-localization-weekday-e.md) | Start day of a week. |
 
 **Example**
 
@@ -183,6 +192,8 @@ Obtains the first language in the preferred language list.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-System-static getFirstPreferredLanguage(): string--><!--Device-System-static getFirstPreferredLanguage(): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -213,13 +224,15 @@ Obtains the list of preferred languages.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-System-static getPreferredLanguageList(): Array<string>--><!--Device-System-static getPreferredLanguageList(): Array<string>-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | List of preferred languages. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | List of preferred languages. |
 
 **Example**
 
@@ -236,12 +249,13 @@ let preferredLanguageList: Array<string> = i18n.System.getPreferredLanguageList(
 static getSimplifiedLanguage(language?: string): string
 ```
 
-Obtains the simplified representation of a language. For example, the simplified representation of **en-Latn-US**
-is **en**, and that of **en-Latn-GB** is **en-GB**.
+Obtains the simplified representation of a language. For example, the simplified representation of **en-Latn-US** is **en**, and that of **en-Latn-GB** is **en-GB**.
 
 **Since:** 15
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-System-static getSimplifiedLanguage(language?: string): string--><!--Device-System-static getSimplifiedLanguage(language?: string): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -249,13 +263,13 @@ is **en**, and that of **en-Latn-GB** is **en-GB**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| language | string | No | [Valid language ID](../../../../internationalization/i18n-locale-culture.md#how-it-works). The default value isthe system language. |
+| language | string | No | [Valid language ID](../../../../internationalization/i18n-locale-culture.md#how-it-works). The default value is the system language. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | If **language** is not passed, the application checks for dialects supported by the systembased on the system language and locale. If such a dialect is found, the simplified representation of thedialect is returned. Otherwise, the simplified representation of the system language is returned.If **language** is passed, the simplified representation of the specified language is returned. |
+| string | If **language** is not passed, the application checks for dialects supported by the system based on the system language and locale. If such a dialect is found, the simplified representation of the dialect is returned. Otherwise, the simplified representation of the system language is returned.If **language** is passed, the simplified representation of the specified language is returned. |
 
 **Error codes:**
 
@@ -294,6 +308,8 @@ Obtains the list of countries/regions supported for the specified language.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-System-static getSystemCountries(language: string): Array<string>--><!--Device-System-static getSystemCountries(language: string): Array<string>-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -306,7 +322,7 @@ Obtains the list of countries/regions supported for the specified language.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | List of countries/regions supported for the specified language. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | List of countries/regions supported for the specified language. |
 
 **Error codes:**
 
@@ -337,16 +353,15 @@ try {
 static getSystemLanguage(): string
 ```
 
-Obtains the current system language. To listen for system language changes, enable listening for
-[COMMON_EVENT_LOCALE_CHANGED](../../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed)
-. For details, see
-[System Language and Region](../../../../internationalization/i18n-system-language-region.md#how-to-develop).
+Obtains the current system language. To listen for system language changes, enable listening for [COMMON_EVENT_LOCALE_CHANGED](../../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed). For details, see [System Language and Region](../../../../internationalization/i18n-system-language-region.md#how-to-develop).
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-System-static getSystemLanguage(): string--><!--Device-System-static getSystemLanguage(): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -371,12 +386,13 @@ let systemLanguage: string = i18n.System.getSystemLanguage(); // If the system l
 static getSystemLanguages(): Array<string>
 ```
 
-Obtains the list of system languages.
-Since API version 11, this API is supported in ArkTS widgets.
+Obtains the list of system languages.Since API version 11, this API is supported in ArkTS widgets.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-System-static getSystemLanguages(): Array<string>--><!--Device-System-static getSystemLanguages(): Array<string>-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -384,7 +400,7 @@ Since API version 11, this API is supported in ArkTS widgets.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | List of system languages. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | List of system languages. |
 
 **Example**
 
@@ -412,6 +428,8 @@ Obtains the current system locale.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-System-static getSystemLocale(): string--><!--Device-System-static getSystemLocale(): string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
@@ -435,14 +453,13 @@ let systemLocale: string = i18n.System.getSystemLocale(); // If the system langu
 static getSystemLocaleInstance(): Intl.Locale
 ```
 
-Obtains the current system locale. To listen for system locale changes, enable listening for
-[COMMON_EVENT_LOCALE_CHANGED](../../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed)
-. For details, see
-[System Language and Region](../../../../internationalization/i18n-system-language-region.md#how-to-develop).
+Obtains the current system locale. To listen for system locale changes, enable listening for [COMMON_EVENT_LOCALE_CHANGED](../../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed). For details, see [System Language and Region](../../../../internationalization/i18n-system-language-region.md#how-to-develop).
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-System-static getSystemLocaleInstance(): Intl.Locale--><!--Device-System-static getSystemLocaleInstance(): Intl.Locale-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -467,14 +484,13 @@ let systemLocale: Intl.Locale = i18n.System.getSystemLocaleInstance();
 static getSystemRegion(): string
 ```
 
-Obtains the current system country/region. To listen for system region changes, enable listening for
-[COMMON_EVENT_LOCALE_CHANGED](../../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed)
-. For details, see
-[System Language and Region](../../../../internationalization/i18n-system-language-region.md#how-to-develop).
+Obtains the current system country/region. To listen for system region changes, enable listening for [COMMON_EVENT_LOCALE_CHANGED](../../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed). For details, see [System Language and Region](../../../../internationalization/i18n-system-language-region.md#how-to-develop).
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-System-static getSystemRegion(): string--><!--Device-System-static getSystemRegion(): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -505,13 +521,15 @@ Obtains the name of a temperature unit.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-System-static getTemperatureName(type: TemperatureType): string--><!--Device-System-static getTemperatureName(type: TemperatureType): string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | TemperatureType | Yes | Temperature unit. |
+| type | [TemperatureType](arkts-localization-temperaturetype-e.md) | Yes | Temperature unit. |
 
 **Return value:**
 
@@ -553,13 +571,15 @@ Obtains the temperature unit of the system.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-System-static getTemperatureType(): TemperatureType--><!--Device-System-static getTemperatureType(): TemperatureType-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TemperatureType | Temperature unit. |
+| [TemperatureType](arkts-localization-temperaturetype-e.md) | Temperature unit. |
 
 **Example**
 
@@ -582,13 +602,15 @@ Checks whether use of local digits is enabled.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-System-static getUsingLocalDigit(): boolean--><!--Device-System-static getUsingLocalDigit(): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether use of local digits is enabled. The value **true** indicates that use of localdigits is enabled, and the value **false** indicates the opposite. |
+| boolean | Whether use of local digits is enabled. The value **true** indicates that use of local digits is enabled, and the value **false** indicates the opposite. |
 
 **Example**
 
@@ -605,9 +627,7 @@ let usingLocalDigit: boolean = i18n.System.getUsingLocalDigit();
 static is24HourClock(): boolean
 ```
 
-Checks whether the 24-hour clock is used. To listen for system time format changes, enable listening for
-[COMMON_EVENT_TIME_CHANGED](../../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_time_changed)
-. For details, see [User Preference](../../../../internationalization/i18n-user-preferences.md#how-to-develop).
+Checks whether the 24-hour clock is used. To listen for system time format changes, enable listening for [COMMON_EVENT_TIME_CHANGED](../../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_time_changed). For details, see [User Preference](../../../../internationalization/i18n-user-preferences.md#how-to-develop).
 
 **Since:** 9
 
@@ -615,13 +635,15 @@ Checks whether the 24-hour clock is used. To listen for system time format chang
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-System-static is24HourClock(): boolean--><!--Device-System-static is24HourClock(): boolean-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the 24-hour clock is used. The value **true** indicates that the 24-hour clock isused, the the value **false** means the opposite. |
+| boolean | Whether the 24-hour clock is used. The value **true** indicates that the 24-hour clock is used, the the value **false** means the opposite. |
 
 **Example**
 
@@ -638,12 +660,13 @@ let is24HourClock: boolean = i18n.System.is24HourClock(); // If the 24-hour cloc
 static isSuggested(language: string, region?: string): boolean
 ```
 
-Checks whether a language is a suggested language in the specified region. It can be used for region-based
-language recommendation or language-based region recommendation.
+Checks whether a language is a suggested language in the specified region. It can be used for region-based language recommendation or language-based region recommendation.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-System-static isSuggested(language: string, region?: string): boolean--><!--Device-System-static isSuggested(language: string, region?: string): boolean-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -658,7 +681,7 @@ language recommendation or language-based region recommendation.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether a language is a suggested language. The value **true** indicates that the languageis a suggested language of the region, the the value false indicates the opposite. |
+| boolean | Whether a language is a suggested language. The value **true** indicates that the language is a suggested language of the region, the the value false indicates the opposite. |
 
 **Error codes:**
 
@@ -689,13 +712,13 @@ try {
 static setAppPreferredLanguage(language: string): void
 ```
 
-Sets the preferred language of the application. Resources are loaded in the preferred language when the
-application is launched. If the preferred language is set to **default**, the application's language will be the
-same as the system language, and the setting will take effect upon cold starting of the application.
+Sets the preferred language of the application. Resources are loaded in the preferred language when the application is launched. If the preferred language is set to **default**, the application's language will be the same as the system language, and the setting will take effect upon cold starting of the application.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-System-static setAppPreferredLanguage(language: string): void--><!--Device-System-static setAppPreferredLanguage(language: string): void-End-->
 
 **System capability:** SystemCapability.Global.I18n
 

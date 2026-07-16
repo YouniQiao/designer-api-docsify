@@ -1,13 +1,14 @@
 # Dirent
 
-Provides information about files and directories. Before calling an API of the **Dirent** class, use
-[dir.read()](arkts-corefile-fileio-read-f.md#read-1) synchronously or asynchronously to create a **Dirent** instance.
+Provides information about files and directories. Before calling an API of the **Dirent** class, use [dir.read()](arkts-corefile-fileio-read-f.md#read-1) synchronously or asynchronously to create a **Dirent** instance.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
 **Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+
+<!--Device-unnamed-declare interface Dirent--><!--Device-unnamed-declare interface Dirent-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -17,14 +18,15 @@ Provides information about files and directories. Before calling an API of the *
 isBlockDevice(): boolean
 ```
 
-Checks whether this directory entry is a block special file. A block special file supports access by block only,
-and it is cached when accessed.
+Checks whether this directory entry is a block special file. A block special file supports access by block only,and it is cached when accessed.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
 **Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+
+<!--Device-Dirent-isBlockDevice(): boolean--><!--Device-Dirent-isBlockDevice(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -48,14 +50,15 @@ let isBLockDevice = dir.readSync().isBlockDevice();
 isCharacterDevice(): boolean
 ```
 
-Checks whether this directory entry is a character special file. A character special file supports random access,
-and it is not cached when accessed.
+Checks whether this directory entry is a character special file. A character special file supports random access,and it is not cached when accessed.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
 **Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+
+<!--Device-Dirent-isCharacterDevice(): boolean--><!--Device-Dirent-isCharacterDevice(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -87,6 +90,8 @@ Checks whether this directory entry is a directory.
 
 **Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
 
+<!--Device-Dirent-isDirectory(): boolean--><!--Device-Dirent-isDirectory(): boolean-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
@@ -109,14 +114,15 @@ let isDirectory = dir.readSync().isDirectory();
 isFIFO(): boolean
 ```
 
-Checks whether this directory entry is a named pipe (also called FIFO). Named pipes are used for inter-process
-communication.
+Checks whether this directory entry is a named pipe (also called FIFO). Named pipes are used for inter-process communication.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
 **Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+
+<!--Device-Dirent-isFIFO(): boolean--><!--Device-Dirent-isFIFO(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -148,6 +154,8 @@ Checks whether this directory entry is a regular file.
 
 **Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
 
+<!--Device-Dirent-isFile(): boolean--><!--Device-Dirent-isFile(): boolean-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
@@ -178,6 +186,8 @@ Checks whether this directory entry is a socket.
 
 **Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
 
+<!--Device-Dirent-isSocket(): boolean--><!--Device-Dirent-isSocket(): boolean-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
@@ -207,6 +217,8 @@ Checks whether this directory entry is a symbolic link.
 **Deprecated since:** 9
 
 **Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+
+<!--Device-Dirent-isSymbolicLink(): boolean--><!--Device-Dirent-isSymbolicLink(): boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -239,6 +251,8 @@ Directory entry name.
 **Deprecated since:** 9
 
 **Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+
+<!--Device-Dirent-readonly name: string--><!--Device-Dirent-readonly name: string-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

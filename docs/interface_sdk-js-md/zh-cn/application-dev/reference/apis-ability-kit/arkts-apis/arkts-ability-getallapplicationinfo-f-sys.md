@@ -1,5 +1,11 @@
 # getAllApplicationInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getAllApplicationInfo
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getAllApplicationInfo(appFlags: number, callback: AsyncCallback<Array<A
 
 **需要权限：** ohos.permission.GET_INSTALLED_BUNDLE_LIST
 
+<!--Device-bundleManager-function getAllApplicationInfo(appFlags: int, callback: AsyncCallback<Array<ApplicationInfo>>): void--><!--Device-bundleManager-function getAllApplicationInfo(appFlags: int, callback: AsyncCallback<Array<ApplicationInfo>>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -21,7 +29,7 @@ function getAllApplicationInfo(appFlags: number, callback: AsyncCallback<Array<A
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | appFlags | number | 是 | 指定返回的ApplicationInfo所包含的信息，具体取值及不同含义参考[ApplicationFlag](arkts-ability-applicationflag-e-sys.md)。 |
-| callback | AsyncCallback&lt;Array&lt;ApplicationInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的Array&lt;ApplicationInfo&gt;；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<ApplicationInfo>> | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的Array&lt;ApplicationInfo&gt;；否则为错误对象。 |
 
 **错误码：**
 
@@ -69,6 +77,10 @@ function getAllApplicationInfo(appFlags: number,
 
 **需要权限：** ohos.permission.GET_INSTALLED_BUNDLE_LIST
 
+<!--Device-bundleManager-function getAllApplicationInfo(appFlags: int,
+    userId: int, callback: AsyncCallback<Array<ApplicationInfo>>): void--><!--Device-bundleManager-function getAllApplicationInfo(appFlags: int,
+    userId: int, callback: AsyncCallback<Array<ApplicationInfo>>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -79,7 +91,7 @@ function getAllApplicationInfo(appFlags: number,
 | --- | --- | --- | --- |
 | appFlags | number | 是 | 指定返回的ApplicationInfo所包含的信息，具体取值及不同含义参考[ApplicationFlag](arkts-ability-applicationflag-e-sys.md)。 |
 | userId | number | 是 | 表示用户ID，可以通过[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)获取。 |
-| callback | AsyncCallback&lt;Array&lt;ApplicationInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的Array&lt;ApplicationInfo&gt;；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<ApplicationInfo>> | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的Array&lt;ApplicationInfo&gt;；否则为错误对象。 |
 
 **错误码：**
 
@@ -128,6 +140,8 @@ function getAllApplicationInfo(appFlags: number, userId?: number): Promise<Array
 
 **需要权限：** ohos.permission.GET_INSTALLED_BUNDLE_LIST
 
+<!--Device-bundleManager-function getAllApplicationInfo(appFlags: int, userId?: int): Promise<Array<ApplicationInfo>>--><!--Device-bundleManager-function getAllApplicationInfo(appFlags: int, userId?: int): Promise<Array<ApplicationInfo>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -143,7 +157,7 @@ function getAllApplicationInfo(appFlags: number, userId?: number): Promise<Array
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;ApplicationInfo&gt;&gt; | Promise对象，返回Array&lt;ApplicationInfo&gt;。 |
+| Promise<Array<ApplicationInfo>> | Promise对象，返回Array&lt;ApplicationInfo&gt;。 |
 
 **错误码：**
 

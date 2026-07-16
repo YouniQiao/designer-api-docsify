@@ -4,6 +4,8 @@ Declare Component ToolBarV2
 
 **Since:** 18
 
+<!--Device-unnamed-export declare struct ToolBarV2--><!--Device-unnamed-export declare struct ToolBarV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Define toolbarV2 activate item index, default is -1.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ToolBarV2-activatedIndex?: number--><!--Device-ToolBarV2-activatedIndex?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## dividerModifier
@@ -45,6 +49,8 @@ Define divider Modifier.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ToolBarV2-@Param dividerModifier?: DividerModifier--><!--Device-ToolBarV2-@Param dividerModifier?: DividerModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +70,8 @@ Define toolbarV2 item list.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ToolBarV2-toolBarList: ToolBarV2Item[]--><!--Device-ToolBarV2-toolBarList: ToolBarV2Item[]-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## toolBarModifier
@@ -81,6 +89,8 @@ Define toolbarV2 modifier.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ToolBarV2-@Param toolBarModifier?: ToolBarV2Modifier--><!--Device-ToolBarV2-@Param toolBarModifier?: ToolBarV2Modifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

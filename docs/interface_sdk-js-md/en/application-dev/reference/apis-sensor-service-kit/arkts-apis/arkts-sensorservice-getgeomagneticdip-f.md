@@ -12,8 +12,7 @@ import { sensor } from '@kit.SensorServiceKit';
 function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCallback<number>): void
 ```
 
-Obtains the magnetic dip based on the inclination matrix. This API uses an asynchronous callback to return the
-result.
+Obtains the magnetic dip based on the inclination matrix. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -21,14 +20,16 @@ result.
 
 **Substitutes:** getInclination(inclinationMatrix:
 
+<!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCallback<number>): void--><!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inclinationMatrix | Array&lt;number&gt; | Yes | Inclination matrix. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the magnetic dip, in radians. |
+| inclinationMatrix | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Inclination matrix. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the magnetic dip, in radians. |
 
 **Example**
 
@@ -61,19 +62,21 @@ Obtains the magnetic dip based on the inclination matrix. This API uses a promis
 
 **Substitutes:** getInclination(inclinationMatrix:
 
+<!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>--><!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inclinationMatrix | Array&lt;number&gt; | Yes | Inclination matrix. |
+| inclinationMatrix | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Inclination matrix. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the magnetic dip, in radians. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the magnetic dip, in radians. |
 
 **Example**
 

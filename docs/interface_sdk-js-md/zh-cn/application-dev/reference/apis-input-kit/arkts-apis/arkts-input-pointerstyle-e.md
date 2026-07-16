@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-pointer-enum PointerStyle--><!--Device-pointer-enum PointerStyle-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## DEFAULT
@@ -15,6 +17,8 @@ DEFAULT = 0
 Default
 
 **起始版本：** 9
+
+<!--Device-PointerStyle-DEFAULT = 0--><!--Device-PointerStyle-DEFAULT = 0-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -28,6 +32,8 @@ East arrow
 
 **起始版本：** 9
 
+<!--Device-PointerStyle-EAST = 1--><!--Device-PointerStyle-EAST = 1-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## WEST
@@ -39,6 +45,8 @@ WEST = 2
 West arrow
 
 **起始版本：** 9
+
+<!--Device-PointerStyle-WEST = 2--><!--Device-PointerStyle-WEST = 2-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -52,6 +60,8 @@ South arrow
 
 **起始版本：** 9
 
+<!--Device-PointerStyle-SOUTH = 3--><!--Device-PointerStyle-SOUTH = 3-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## NORTH
@@ -63,6 +73,8 @@ NORTH = 4
 North arrow
 
 **起始版本：** 9
+
+<!--Device-PointerStyle-NORTH = 4--><!--Device-PointerStyle-NORTH = 4-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -76,6 +88,8 @@ West-east arrow
 
 **起始版本：** 9
 
+<!--Device-PointerStyle-WEST_EAST = 5--><!--Device-PointerStyle-WEST_EAST = 5-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## NORTH_SOUTH
@@ -87,6 +101,8 @@ NORTH_SOUTH = 6
 North-south arrow
 
 **起始版本：** 9
+
+<!--Device-PointerStyle-NORTH_SOUTH = 6--><!--Device-PointerStyle-NORTH_SOUTH = 6-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -100,6 +116,8 @@ North-east arrow
 
 **起始版本：** 9
 
+<!--Device-PointerStyle-NORTH_EAST = 7--><!--Device-PointerStyle-NORTH_EAST = 7-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## NORTH_WEST
@@ -111,6 +129,8 @@ NORTH_WEST = 8
 North-west arrow
 
 **起始版本：** 9
+
+<!--Device-PointerStyle-NORTH_WEST = 8--><!--Device-PointerStyle-NORTH_WEST = 8-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -124,6 +144,8 @@ South-east arrow
 
 **起始版本：** 9
 
+<!--Device-PointerStyle-SOUTH_EAST = 9--><!--Device-PointerStyle-SOUTH_EAST = 9-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## SOUTH_WEST
@@ -135,6 +157,8 @@ SOUTH_WEST = 10
 South-west arrow
 
 **起始版本：** 9
+
+<!--Device-PointerStyle-SOUTH_WEST = 10--><!--Device-PointerStyle-SOUTH_WEST = 10-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -148,6 +172,8 @@ North-east and south-west adjustment
 
 **起始版本：** 9
 
+<!--Device-PointerStyle-NORTH_EAST_SOUTH_WEST = 11--><!--Device-PointerStyle-NORTH_EAST_SOUTH_WEST = 11-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## NORTH_WEST_SOUTH_EAST
@@ -159,6 +185,8 @@ NORTH_WEST_SOUTH_EAST = 12
 North-west and south-east adjustment
 
 **起始版本：** 9
+
+<!--Device-PointerStyle-NORTH_WEST_SOUTH_EAST = 12--><!--Device-PointerStyle-NORTH_WEST_SOUTH_EAST = 12-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -172,6 +200,8 @@ Cross (accurate selection)
 
 **起始版本：** 9
 
+<!--Device-PointerStyle-CROSS = 13--><!--Device-PointerStyle-CROSS = 13-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## CURSOR_COPY
@@ -183,6 +213,8 @@ CURSOR_COPY = 14
 Copy
 
 **起始版本：** 9
+
+<!--Device-PointerStyle-CURSOR_COPY = 14--><!--Device-PointerStyle-CURSOR_COPY = 14-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -196,6 +228,8 @@ Forbid
 
 **起始版本：** 9
 
+<!--Device-PointerStyle-CURSOR_FORBID = 15--><!--Device-PointerStyle-CURSOR_FORBID = 15-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## COLOR_SUCKER
@@ -207,6 +241,8 @@ COLOR_SUCKER = 16
 Color picker
 
 **起始版本：** 9
+
+<!--Device-PointerStyle-COLOR_SUCKER = 16--><!--Device-PointerStyle-COLOR_SUCKER = 16-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -220,6 +256,8 @@ Grabbing hand
 
 **起始版本：** 9
 
+<!--Device-PointerStyle-HAND_GRABBING = 17--><!--Device-PointerStyle-HAND_GRABBING = 17-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## HAND_OPEN
@@ -231,6 +269,8 @@ HAND_OPEN = 18
 Opening hand
 
 **起始版本：** 9
+
+<!--Device-PointerStyle-HAND_OPEN = 18--><!--Device-PointerStyle-HAND_OPEN = 18-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -244,6 +284,8 @@ Hand-shaped pointer
 
 **起始版本：** 9
 
+<!--Device-PointerStyle-HAND_POINTING = 19--><!--Device-PointerStyle-HAND_POINTING = 19-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## HELP
@@ -255,6 +297,8 @@ HELP = 20
 Help
 
 **起始版本：** 9
+
+<!--Device-PointerStyle-HELP = 20--><!--Device-PointerStyle-HELP = 20-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -268,6 +312,8 @@ Move
 
 **起始版本：** 9
 
+<!--Device-PointerStyle-MOVE = 21--><!--Device-PointerStyle-MOVE = 21-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## RESIZE_LEFT_RIGHT
@@ -279,6 +325,8 @@ RESIZE_LEFT_RIGHT = 22
 Left and right resizing
 
 **起始版本：** 9
+
+<!--Device-PointerStyle-RESIZE_LEFT_RIGHT = 22--><!--Device-PointerStyle-RESIZE_LEFT_RIGHT = 22-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -292,6 +340,8 @@ Up and down resizing
 
 **起始版本：** 9
 
+<!--Device-PointerStyle-RESIZE_UP_DOWN = 23--><!--Device-PointerStyle-RESIZE_UP_DOWN = 23-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## SCREENSHOT_CHOOSE
@@ -303,6 +353,8 @@ SCREENSHOT_CHOOSE = 24
 Screenshot crosshair
 
 **起始版本：** 9
+
+<!--Device-PointerStyle-SCREENSHOT_CHOOSE = 24--><!--Device-PointerStyle-SCREENSHOT_CHOOSE = 24-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -316,6 +368,8 @@ Screenshot
 
 **起始版本：** 9
 
+<!--Device-PointerStyle-SCREENSHOT_CURSOR = 25--><!--Device-PointerStyle-SCREENSHOT_CURSOR = 25-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## TEXT_CURSOR
@@ -327,6 +381,8 @@ TEXT_CURSOR = 26
 Text selection
 
 **起始版本：** 9
+
+<!--Device-PointerStyle-TEXT_CURSOR = 26--><!--Device-PointerStyle-TEXT_CURSOR = 26-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -340,6 +396,8 @@ Zoom in
 
 **起始版本：** 9
 
+<!--Device-PointerStyle-ZOOM_IN = 27--><!--Device-PointerStyle-ZOOM_IN = 27-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## ZOOM_OUT
@@ -351,6 +409,8 @@ ZOOM_OUT = 28
 Zoom out
 
 **起始版本：** 9
+
+<!--Device-PointerStyle-ZOOM_OUT = 28--><!--Device-PointerStyle-ZOOM_OUT = 28-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -364,6 +424,8 @@ Scrolling east
 
 **起始版本：** 9
 
+<!--Device-PointerStyle-MIDDLE_BTN_EAST = 29--><!--Device-PointerStyle-MIDDLE_BTN_EAST = 29-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## MIDDLE_BTN_WEST
@@ -375,6 +437,8 @@ MIDDLE_BTN_WEST = 30
 Scrolling west
 
 **起始版本：** 9
+
+<!--Device-PointerStyle-MIDDLE_BTN_WEST = 30--><!--Device-PointerStyle-MIDDLE_BTN_WEST = 30-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -388,6 +452,8 @@ Scrolling south
 
 **起始版本：** 9
 
+<!--Device-PointerStyle-MIDDLE_BTN_SOUTH = 31--><!--Device-PointerStyle-MIDDLE_BTN_SOUTH = 31-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## MIDDLE_BTN_NORTH
@@ -399,6 +465,8 @@ MIDDLE_BTN_NORTH = 32
 Scrolling north
 
 **起始版本：** 9
+
+<!--Device-PointerStyle-MIDDLE_BTN_NORTH = 32--><!--Device-PointerStyle-MIDDLE_BTN_NORTH = 32-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -412,6 +480,8 @@ Scrolling north-south
 
 **起始版本：** 9
 
+<!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH = 33--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH = 33-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## MIDDLE_BTN_NORTH_EAST
@@ -423,6 +493,8 @@ MIDDLE_BTN_NORTH_EAST = 34
 Scrolling north-east
 
 **起始版本：** 9
+
+<!--Device-PointerStyle-MIDDLE_BTN_NORTH_EAST = 34--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_EAST = 34-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -436,6 +508,8 @@ Scrolling north-west
 
 **起始版本：** 9
 
+<!--Device-PointerStyle-MIDDLE_BTN_NORTH_WEST = 35--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_WEST = 35-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## MIDDLE_BTN_SOUTH_EAST
@@ -447,6 +521,8 @@ MIDDLE_BTN_SOUTH_EAST = 36
 Scrolling south-east
 
 **起始版本：** 9
+
+<!--Device-PointerStyle-MIDDLE_BTN_SOUTH_EAST = 36--><!--Device-PointerStyle-MIDDLE_BTN_SOUTH_EAST = 36-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -460,6 +536,8 @@ Scrolling south-west
 
 **起始版本：** 9
 
+<!--Device-PointerStyle-MIDDLE_BTN_SOUTH_WEST = 37--><!--Device-PointerStyle-MIDDLE_BTN_SOUTH_WEST = 37-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## MIDDLE_BTN_NORTH_SOUTH_WEST_EAST
@@ -471,6 +549,8 @@ MIDDLE_BTN_NORTH_SOUTH_WEST_EAST = 38
 Moving as a cone in four directions
 
 **起始版本：** 9
+
+<!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH_WEST_EAST = 38--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH_WEST_EAST = 38-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -484,6 +564,8 @@ Horizontal text selection
 
 **起始版本：** 10
 
+<!--Device-PointerStyle-HORIZONTAL_TEXT_CURSOR = 39--><!--Device-PointerStyle-HORIZONTAL_TEXT_CURSOR = 39-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## CURSOR_CROSS
@@ -495,6 +577,8 @@ CURSOR_CROSS = 40
 Cross
 
 **起始版本：** 10
+
+<!--Device-PointerStyle-CURSOR_CROSS = 40--><!--Device-PointerStyle-CURSOR_CROSS = 40-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -508,6 +592,8 @@ Circle
 
 **起始版本：** 10
 
+<!--Device-PointerStyle-CURSOR_CIRCLE = 41--><!--Device-PointerStyle-CURSOR_CIRCLE = 41-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## LOADING
@@ -520,7 +606,9 @@ Animation loading
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PointerStyle-LOADING = 42--><!--Device-PointerStyle-LOADING = 42-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -534,7 +622,9 @@ Animation running in the background
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PointerStyle-RUNNING = 43--><!--Device-PointerStyle-RUNNING = 43-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -548,6 +638,8 @@ Scrolling east-west
 
 **起始版本：** 18
 
+<!--Device-PointerStyle-MIDDLE_BTN_EAST_WEST = 44--><!--Device-PointerStyle-MIDDLE_BTN_EAST_WEST = 44-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## RUNNING_LEFT
@@ -559,6 +651,8 @@ RUNNING_LEFT = 45
 后台运行中动画光标(拓展1)
 
 **起始版本：** 22
+
+<!--Device-PointerStyle-RUNNING_LEFT = 45--><!--Device-PointerStyle-RUNNING_LEFT = 45-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -572,6 +666,8 @@ RUNNING_RIGHT = 46
 
 **起始版本：** 22
 
+<!--Device-PointerStyle-RUNNING_RIGHT = 46--><!--Device-PointerStyle-RUNNING_RIGHT = 46-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## AECH_DEVELOPER_DEFINED_ICON
@@ -584,6 +680,8 @@ AECH_DEVELOPER_DEFINED_ICON = 47
 
 **起始版本：** 22
 
+<!--Device-PointerStyle-AECH_DEVELOPER_DEFINED_ICON = 47--><!--Device-PointerStyle-AECH_DEVELOPER_DEFINED_ICON = 47-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## SCREENRECORDER_CURSOR
@@ -595,6 +693,8 @@ SCREENRECORDER_CURSOR = 48
 录屏光标
 
 **起始版本：** 20
+
+<!--Device-PointerStyle-SCREENRECORDER_CURSOR = 48--><!--Device-PointerStyle-SCREENRECORDER_CURSOR = 48-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -610,6 +710,8 @@ LASER_CURSOR = 49
 
 **起始版本：** 22
 
+<!--Device-PointerStyle-LASER_CURSOR = 49--><!--Device-PointerStyle-LASER_CURSOR = 49-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## LASER_CURSOR_DOT
@@ -623,6 +725,8 @@ LASER_CURSOR_DOT = 50
 空鼠模式支持通过手写笔在空中转动来控制屏幕上虚拟光标的移动，并借助笔身按键实现上下翻页功能，用于演示PPT、隔空操作等场景。
 
 **起始版本：** 22
+
+<!--Device-PointerStyle-LASER_CURSOR_DOT = 50--><!--Device-PointerStyle-LASER_CURSOR_DOT = 50-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -638,6 +742,8 @@ LASER_CURSOR_DOT_RED = 51
 
 **起始版本：** 22
 
+<!--Device-PointerStyle-LASER_CURSOR_DOT_RED = 51--><!--Device-PointerStyle-LASER_CURSOR_DOT_RED = 51-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## DEVELOPER_DEFINED_ICON
@@ -646,11 +752,11 @@ LASER_CURSOR_DOT_RED = 51
 DEVELOPER_DEFINED_ICON = -100
 ```
 
-自定义光标，开发者可使用
-[setCustomCursor](arkts-input-setcustomcursor-f.md#setcustomcursor-2)设置自定义光
-标，不支持使用[setPointerStyle](arkts-input-setpointerstyle-f.md#setpointerstyle-2)直接设置。
+自定义光标，开发者可使用[setCustomCursor](arkts-input-setcustomcursor-f.md#setcustomcursor-2)设置自定义光标，不支持使用[setPointerStyle](arkts-input-setpointerstyle-f.md#setpointerstyle-2)直接设置。
 
 **起始版本：** 22
+
+<!--Device-PointerStyle-DEVELOPER_DEFINED_ICON = -100--><!--Device-PointerStyle-DEVELOPER_DEFINED_ICON = -100-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 

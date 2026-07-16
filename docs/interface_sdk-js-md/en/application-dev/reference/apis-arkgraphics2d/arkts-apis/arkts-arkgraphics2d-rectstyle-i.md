@@ -4,6 +4,8 @@ Describes the style of a rectangle.
 
 **Since:** 12
 
+<!--Device-text-interface RectStyle--><!--Device-text-interface RectStyle-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Color of the rectangle.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-RectStyle-color: common2D.Color--><!--Device-RectStyle-color: common2D.Color-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## leftBottomRadius
@@ -41,6 +45,8 @@ Lower left radius of the rectangle, in physical pixels (px).
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-RectStyle-leftBottomRadius: double--><!--Device-RectStyle-leftBottomRadius: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -58,6 +64,8 @@ Upper left radius of the rectangle, in physical pixels (px).
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-RectStyle-leftTopRadius: double--><!--Device-RectStyle-leftTopRadius: double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## rightBottomRadius
@@ -74,6 +82,8 @@ Lower right radius of the rectangle, in physical pixels (px).
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-RectStyle-rightBottomRadius: double--><!--Device-RectStyle-rightBottomRadius: double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## rightTopRadius
@@ -89,6 +99,8 @@ Upper right radius of the rectangle, in physical pixels (px).
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-RectStyle-rightTopRadius: double--><!--Device-RectStyle-rightTopRadius: double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

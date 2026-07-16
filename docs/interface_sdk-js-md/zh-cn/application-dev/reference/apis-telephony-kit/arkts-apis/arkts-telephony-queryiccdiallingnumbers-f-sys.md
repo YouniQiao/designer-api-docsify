@@ -1,5 +1,11 @@
 # queryIccDiallingNumbers（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## queryIccDiallingNumbers
 
 ```TypeScript
@@ -12,6 +18,8 @@ Query dialing number information on SIM card.
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-sim-function queryIccDiallingNumbers(slotId: int, type: ContactType, callback: AsyncCallback<Array<DiallingNumbersInfo>>): void--><!--Device-sim-function queryIccDiallingNumbers(slotId: int, type: ContactType, callback: AsyncCallback<Array<DiallingNumbersInfo>>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -21,8 +29,8 @@ Query dialing number information on SIM card.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| type | ContactType | 是 | Indicates contact type. |
-| callback | AsyncCallback&lt;Array&lt;DiallingNumbersInfo&gt;&gt; | 是 | Indicates the callback forgetting the dialing number information. |
+| type | [ContactType](arkts-telephony-contacttype-e-sys.md) | 是 | Indicates contact type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<DiallingNumbersInfo>> | 是 | Indicates the callback for getting the dialing number information. |
 
 **错误码：**
 
@@ -63,6 +71,8 @@ Query dialing number information on SIM card.
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
+<!--Device-sim-function queryIccDiallingNumbers(slotId: int, type: ContactType): Promise<Array<DiallingNumbersInfo>>--><!--Device-sim-function queryIccDiallingNumbers(slotId: int, type: ContactType): Promise<Array<DiallingNumbersInfo>>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -72,13 +82,13 @@ Query dialing number information on SIM card.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| type | ContactType | 是 | Indicates contact type. |
+| type | [ContactType](arkts-telephony-contacttype-e-sys.md) | 是 | Indicates contact type. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;DiallingNumbersInfo&gt;&gt; | Returns the dialing number information. |
+| Promise<Array<DiallingNumbersInfo>> | Returns the dialing number information. |
 
 **错误码：**
 

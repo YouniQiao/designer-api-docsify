@@ -1,5 +1,11 @@
 # getDisallowedPolicy
 
+## 导入模块
+
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+```
+
 ## getDisallowedPolicy
 
 ```TypeScript
@@ -18,6 +24,8 @@ function getDisallowedPolicy(admin: Want | null, feature: string): boolean
 - API版本12 - 14：ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-restrictions-function getDisallowedPolicy(admin: Want | null, feature: string): boolean--><!--Device-restrictions-function getDisallowedPolicy(admin: Want | null, feature: string): boolean-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -79,6 +87,8 @@ function getDisallowedPolicy(admin: Want | null, feature: FeatureForDevice): boo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-restrictions-function getDisallowedPolicy(admin: Want | null, feature: FeatureForDevice): boolean--><!--Device-restrictions-function getDisallowedPolicy(admin: Want | null, feature: FeatureForDevice): boolean-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -86,7 +96,7 @@ function getDisallowedPolicy(admin: Want | null, feature: FeatureForDevice): boo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | Want \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| feature | FeatureForDevice | 是 | 指定要查询的设备特性。 |
+| feature | [FeatureForDevice](arkts-mdm-featurefordevice-e.md) | 是 | 指定要查询的设备特性。 |
 
 **返回值：**
 

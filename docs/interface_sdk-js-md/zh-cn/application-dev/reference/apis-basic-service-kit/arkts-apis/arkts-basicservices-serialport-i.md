@@ -4,7 +4,15 @@
 
 **起始版本：** 19
 
+<!--Device-serialManager-interface SerialPort--><!--Device-serialManager-interface SerialPort-End-->
+
 **系统能力：** SystemCapability.USB.USBManager.Serial
+
+## 导入模块
+
+```TypeScript
+import { serialManager } from '@kit.BasicServicesKit';
+```
 
 ## deviceName
 
@@ -17,6 +25,8 @@ deviceName: string
 **类型：** string
 
 **起始版本：** 19
+
+<!--Device-SerialPort-deviceName: string--><!--Device-SerialPort-deviceName: string-End-->
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -31,6 +41,8 @@ portId: number
 **类型：** number
 
 **起始版本：** 19
+
+<!--Device-SerialPort-portId: int--><!--Device-SerialPort-portId: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 

@@ -12,17 +12,15 @@ import { window } from '@kit.ArkUI';
 function shiftAppWindowPointerEvent(sourceWindowId: number, targetWindowId: number): Promise<void>
 ```
 
-Transfers a mouse input event from one window to another within the same application. This API takes effect only
-for the main window and its child windows. This API uses a promise to return the result.
+Transfers a mouse input event from one window to another within the same application. This API takes effect only for the main window and its child windows. This API uses a promise to return the result.
 
-To transfer mouse input events, the source window must call this API within the callback of the
-[onTouch](onTouch) event (the event type must
-be **TouchType.Down**). After a successful call, the system sends a **TouchType.Up** event to the source window and
-a **TouchType.Down** event to the target window.
+To transfer mouse input events, the source window must call this API within the callback of the [onTouch](onTouch) event (the event type must be **TouchType.Down**). After a successful call, the system sends a **TouchType.Up** event to the source window and a **TouchType.Down** event to the target window.
 
 **Since:** 15
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-window-function shiftAppWindowPointerEvent(sourceWindowId: int, targetWindowId: int): Promise<void>--><!--Device-window-function shiftAppWindowPointerEvent(sourceWindowId: int, targetWindowId: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -30,21 +28,21 @@ a **TouchType.Down** event to the target window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceWindowId | number | Yes | ID of the source window. You are advised to call[getWindowProperties()](arkts-arkui-window-i.md#getwindowproperties-1) to obtain the window ID. |
-| targetWindowId | number | Yes | ID of the target window. You are advised to call[getWindowProperties()](arkts-arkui-window-i.md#getwindowproperties-1) to obtain the window ID. |
+| sourceWindowId | number | Yes | ID of the source window. You are advised to call [getWindowProperties()](arkts-arkui-window-i.md#getwindowproperties-1) to obtain the window ID. |
+| targetWindowId | number | Yes | ID of the target window. You are advised to call [getWindowProperties()](arkts-arkui-window-i.md#getwindowproperties-1) to obtain the window ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible cause: 1. Mandatory parameters are left unspecified;2. Failed to convert parameter to sourceWindowId;3. Failed to convert parameter to targetWindowId;4. Invalid sourceWindowId or targetWindowId. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: 1. SourceWindow cannot find: not created or not belong to current process;2. TargetWindow cannot find: not created or not belong to current process;3. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation.Possible cause: 1. Invalid window type. Only main windows and subwindows are supported;2. The two windows are not from the same process. |

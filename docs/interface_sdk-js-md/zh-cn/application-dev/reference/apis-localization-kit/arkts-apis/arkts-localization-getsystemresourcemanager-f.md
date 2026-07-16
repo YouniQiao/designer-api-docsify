@@ -1,5 +1,11 @@
 # getSystemResourceManager
 
+## 导入模块
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+```
+
 ## getSystemResourceManager
 
 ```TypeScript
@@ -8,9 +14,9 @@ export function getSystemResourceManager(): ResourceManager
 
 获取系统资源管理ResourceManager对象。
 
-> **说明**
->
-> 当前接口获取到的系统资源管理ResourceManager对象中的Configuration为默认值。默认值如下：
+> **说明**  
+>  
+> 当前接口获取到的系统资源管理ResourceManager对象中的Configuration为默认值。默认值如下：  
 > {"locale": "", "direction": -1, "deviceType": -1, "screenDensity": 0, "colorMode": 1, "mcc": 0, "mnc": 0}。
 
 **起始版本：** 10
@@ -19,7 +25,9 @@ export function getSystemResourceManager(): ResourceManager
 
 **替代接口：** [getSysResourceManager](arkts-localization-getsysresourcemanager-f.md#getsysresourcemanager-1)
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-resourceManager-export function getSystemResourceManager(): ResourceManager--><!--Device-resourceManager-export function getSystemResourceManager(): ResourceManager-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -27,7 +35,7 @@ export function getSystemResourceManager(): ResourceManager
 
 | 类型 | 说明 |
 | --- | --- |
-| ResourceManager | 系统资源管理对象。 |
+| [ResourceManager](arkts-localization-resourcemanager-i.md) | 系统资源管理对象。 |
 
 **错误码：**
 

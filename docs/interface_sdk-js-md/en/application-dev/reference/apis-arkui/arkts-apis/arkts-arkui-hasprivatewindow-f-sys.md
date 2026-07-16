@@ -12,11 +12,11 @@ import { display } from '@kit.ArkUI';
 function hasPrivateWindow(displayId: number): boolean
 ```
 
-Checks whether there is a visible privacy window on a display. The privacy window can be set by calling
-[setWindowPrivacyMode()](@ohos.window:window.setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>)). The
-content in the privacy window cannot be captured or recorded.
+Checks whether there is a visible privacy window on a display. The privacy window can be set by calling [setWindowPrivacyMode()](@ohos.window:window.setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>)). The content in the privacy window cannot be captured or recorded.
 
 **Since:** 9
+
+<!--Device-display-function hasPrivateWindow(displayId: long): boolean--><!--Device-display-function hasPrivateWindow(displayId: long): boolean-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -32,7 +32,7 @@ content in the privacy window cannot be captured or recorded.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether there is a visible privacy window on the display. **true** if yes, **false**otherwise. |
+| boolean | Whether there is a visible privacy window on the display. **true** if yes, **false** otherwise. |
 
 **Error codes:**
 

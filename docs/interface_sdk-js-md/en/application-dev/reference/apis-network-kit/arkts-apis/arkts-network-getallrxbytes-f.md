@@ -18,13 +18,15 @@ Queries the data traffic (including all TCP and UDP data packets) received throu
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-statistics-function getAllRxBytes(callback: AsyncCallback<long>): void--><!--Device-statistics-function getAllRxBytes(callback: AsyncCallback<long>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Returns the data traffic received through all NICs. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Returns the data traffic received through all NICs. |
 
 **Error codes:**
 
@@ -64,13 +66,15 @@ Queries the data traffic (including all TCP and UDP data packets) received throu
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-statistics-function getAllRxBytes(): Promise<long>--><!--Device-statistics-function getAllRxBytes(): Promise<long>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | The promise returned by the function. |
 
 **Error codes:**
 

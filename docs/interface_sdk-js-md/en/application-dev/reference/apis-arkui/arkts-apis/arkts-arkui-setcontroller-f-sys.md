@@ -16,6 +16,8 @@ Set the window animation controller.
 
 **Since:** 9
 
+<!--Device-windowAnimationManager-function setController(controller: WindowAnimationController): void--><!--Device-windowAnimationManager-function setController(controller: WindowAnimationController): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Set the window animation controller.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | WindowAnimationController | Yes | Window animation controller. |
+| controller | [WindowAnimationController](arkts-arkui-windowanimationcontroller-i-sys.md) | Yes | Window animation controller. |
 
 **Example**
 

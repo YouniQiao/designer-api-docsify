@@ -4,6 +4,8 @@ Describes the EAP information.
 
 **Since:** 20
 
+<!--Device-eap-interface EapData--><!--Device-eap-interface EapData-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## Modules to Import
@@ -24,6 +26,8 @@ EAP packet length.
 
 **Since:** 20
 
+<!--Device-EapData-bufferLen: number--><!--Device-EapData-bufferLen: number-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## eapBuffer
@@ -38,6 +42,8 @@ EAP packet buffer.
 
 **Since:** 20
 
+<!--Device-EapData-eapBuffer: Uint8Array--><!--Device-EapData-eapBuffer: Uint8Array-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## msgId
@@ -51,6 +57,8 @@ EAP message ID.
 **Type:** number
 
 **Since:** 20
+
+<!--Device-EapData-msgId: number--><!--Device-EapData-msgId: number-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 

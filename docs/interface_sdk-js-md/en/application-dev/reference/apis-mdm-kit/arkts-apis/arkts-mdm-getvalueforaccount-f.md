@@ -12,8 +12,7 @@ import { deviceSettings } from '@kit.MDMKit';
 function getValueForAccount(admin: Want, item: SettingsItem, accountId: number): string
 ```
 
-Obtains the device policy of a specified user. This API allows you to obtain a specific parameter of a given user,
-such as obtaining the device name of user 100.
+Obtains the device policy of a specified user. This API allows you to obtain a specific parameter of a given user,such as obtaining the device name of user 100.
 
 **Since:** 24
 
@@ -21,21 +20,23 @@ such as obtaining the device name of user 100.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-deviceSettings-function getValueForAccount(admin: Want, item: SettingsItem, accountId: number): string--><!--Device-deviceSettings-function getValueForAccount(admin: Want, item: SettingsItem, accountId: number): string-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| item | SettingsItem | Yes | Type of the policy to set. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| item | [SettingsItem](arkts-mdm-settingsitem-e.md) | Yes | Type of the policy to set. |
 | accountId | number | Yes | Account ID, which must be greater than or equal to 0.<br>You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)to obtain the account ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Policy type value.<br>When **item** is set to [SettingsItem.DEVICE_NAME](arkts-mdm-settingsitem-e.md), this API returns thedevice name of the current user. If the device name of another user is queried, error code 9200012 is returned.<br>When **item** is set to [SettingsItem.FLOATING_NAVIGATION](arkts-mdm-settingsitem-e.md),this API returns the three-key navigation switch state for the specified user.<br>When **item** is set to [SettingsItem.FLOATING_NAVIGATION](arkts-mdm-settingsitem-e.md),this API can be called properly on phones and tablets but returns error code 801 on other devices. |
+| string | Policy type value.<br>When **item** is set to [SettingsItem.DEVICE_NAME](arkts-mdm-settingsitem-e.md), this API returns the device name of the current user. If the device name of another user is queried, error code 9200012 is returned.<br>When **item** is set to [SettingsItem.FLOATING_NAVIGATION](arkts-mdm-settingsitem-e.md),this API returns the three-key navigation switch state for the specified user.<br>When **item** is set to [SettingsItem.FLOATING_NAVIGATION](arkts-mdm-settingsitem-e.md),this API can be called properly on phones and tablets but returns error code 801 on other devices. |
 
 **Error codes:**
 

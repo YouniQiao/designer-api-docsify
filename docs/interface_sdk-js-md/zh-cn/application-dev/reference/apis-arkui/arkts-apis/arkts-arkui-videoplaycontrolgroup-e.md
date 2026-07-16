@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-PiPWindow-enum VideoPlayControlGroup--><!--Device-PiPWindow-enum VideoPlayControlGroup-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## VIDEO_PREVIOUS_NEXT
@@ -18,7 +20,9 @@ VIDEO_PREVIOUS_NEXT = 101
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-VideoPlayControlGroup-VIDEO_PREVIOUS_NEXT = 101--><!--Device-VideoPlayControlGroup-VIDEO_PREVIOUS_NEXT = 101-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -34,7 +38,9 @@ FAST_FORWARD_BACKWARD = 102
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-VideoPlayControlGroup-FAST_FORWARD_BACKWARD = 102--><!--Device-VideoPlayControlGroup-FAST_FORWARD_BACKWARD = 102-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 23
 
+<!--Device-systemManager-interface KeyItem--><!--Device-systemManager-interface KeyItem-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { systemManager } from '@kit.MDMKit';
+```
 
 ## downTime
 
@@ -12,14 +20,15 @@
 downTime: number
 ```
 
-按键动作发生时间，系统开机后微秒级时间戳。导航按键不支持组合扩展，发生时间显示为0。
-取值范围为全体整数。
+按键动作发生时间，系统开机后微秒级时间戳。导航按键不支持组合扩展，发生时间显示为0。取值范围为全体整数。
 
 **类型：** number
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyItem-downTime: number--><!--Device-KeyItem-downTime: number-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -37,6 +46,8 @@ keyCode: KeyCode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KeyItem-keyCode: KeyCode--><!--Device-KeyItem-keyCode: KeyCode-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## pressed
@@ -52,6 +63,8 @@ pressed: boolean
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyItem-pressed: boolean--><!--Device-KeyItem-pressed: boolean-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

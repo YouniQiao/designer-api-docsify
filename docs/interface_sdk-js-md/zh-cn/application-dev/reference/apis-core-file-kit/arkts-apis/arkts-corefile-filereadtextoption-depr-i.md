@@ -6,6 +6,8 @@
 
 **废弃版本：** 10
 
+<!--Device-unnamed-export interface FileReadTextOption--><!--Device-unnamed-export interface FileReadTextOption-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## complete
@@ -21,6 +23,8 @@ complete?: () => void
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileReadTextOption-complete?: () => void--><!--Device-FileReadTextOption-complete?: () => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -38,6 +42,8 @@ encoding?: string
 
 **废弃版本：** 10
 
+<!--Device-FileReadTextOption-encoding?: string--><!--Device-FileReadTextOption-encoding?: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## fail
@@ -53,6 +59,8 @@ fail?: (data: string, code: number) => void
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileReadTextOption-fail?: (data: string, code: number) => void--><!--Device-FileReadTextOption-fail?: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -70,6 +78,8 @@ length?: number
 
 **废弃版本：** 10
 
+<!--Device-FileReadTextOption-length?: number--><!--Device-FileReadTextOption-length?: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## position
@@ -85,6 +95,8 @@ position?: number
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileReadTextOption-position?: number--><!--Device-FileReadTextOption-position?: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -102,6 +114,8 @@ success?: (data: FileReadTextResponse) => void
 
 **废弃版本：** 10
 
+<!--Device-FileReadTextOption-success?: (data: FileReadTextResponse) => void--><!--Device-FileReadTextOption-success?: (data: FileReadTextResponse) => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## uri
@@ -110,15 +124,15 @@ success?: (data: FileReadTextResponse) => void
 uri: string
 ```
 
-本地文件URI。由于轻量级穿戴设备底层文件系统的限制，该值必须满足以下要求：
-1. URI 中不得包含以下特殊字符：\"*+,:;<=>?[]|\x7F等。
-2. 最大允许字符长度为128个字符。
+本地文件URI。由于轻量级穿戴设备底层文件系统的限制，该值必须满足以下要求：1. URI 中不得包含以下特殊字符：\"*+,:;<=>?[]|\x7F等。2. 最大允许字符长度为128个字符。
 
 **类型：** string
 
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileReadTextOption-uri: string--><!--Device-FileReadTextOption-uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 

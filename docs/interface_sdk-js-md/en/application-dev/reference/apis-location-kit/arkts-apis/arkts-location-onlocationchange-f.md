@@ -20,6 +20,10 @@ Subscribe location changed.
 **Required permissions:** 
 - API version 23+: ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-geoLocationManager-function onLocationChange(request: LocationRequest | ContinuousLocationRequest,
+  callback: Callback<Location>): void--><!--Device-geoLocationManager-function onLocationChange(request: LocationRequest | ContinuousLocationRequest,
+  callback: Callback<Location>): void-End-->
+
 **System capability:** 
 - API version 23 and later: SystemCapability.Location.Location.Core
 
@@ -27,8 +31,8 @@ Subscribe location changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | LocationRequest \| ContinuousLocationRequest | Yes | Indicates the location requestparameters.<br>**Since:** 23 |
-| callback | Callback&lt;Location&gt; | Yes | Indicates the callback for reporting the location result.<br>**Since:** 23 |
+| request | LocationRequest \| ContinuousLocationRequest | Yes | Indicates the location request parameters.<br>**Since:** 23 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Location> | Yes | Indicates the callback for reporting the location result.<br>**Since:** 23 |
 
 **Error codes:**
 

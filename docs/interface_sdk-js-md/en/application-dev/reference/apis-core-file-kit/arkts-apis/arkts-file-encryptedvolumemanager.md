@@ -4,6 +4,8 @@ Provides encryptedVolumeManager statistics APIs
 
 **Since:** 24
 
+<!--Device-unnamed-declare namespace encryptedVolumeManager--><!--Device-unnamed-declare namespace encryptedVolumeManager-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.

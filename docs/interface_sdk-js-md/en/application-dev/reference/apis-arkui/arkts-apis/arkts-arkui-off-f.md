@@ -18,14 +18,16 @@ Unsubscribes from display changes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-display-function off(type: 'add' | 'remove' | 'change', callback?: Callback<long>): void--><!--Device-display-function off(type: 'add' | 'remove' | 'change', callback?: Callback<long>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'add' \| 'remove' \| 'change' | Yes | Event type.<br>- **add**, indicating the display addition event.Example: event that a display is connected.<br>- **remove**, indicating the display removal event. Example:event that a display is disconnected.<br>- **change**, indicating the display change event. Example: event thatthe display orientation is changed. |
-| callback | Callback&lt;number&gt; | No | Callback used to return the ID of the display, which is an integer. If thisparameter is not specified, all subscriptions to the specified event are canceled.<br>**Since:** 20 |
+| type | 'add' \| 'remove' \| 'change' | Yes | Event type.<br>- **add**, indicating the display addition event.Example: event that a display is connected.<br>- **remove**, indicating the display removal event. Example:event that a display is disconnected.<br>- **change**, indicating the display change event. Example: event that the display orientation is changed. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<number> | No | Callback used to return the ID of the display, which is an integer. If this parameter is not specified, all subscriptions to the specified event are canceled.<br>**Since:** 20 |
 
 **Error codes:**
 
@@ -60,14 +62,16 @@ Unsubscribes from display changes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-display-function off(type: 'add' | 'remove' | 'change', callback?: Callback<long>): void--><!--Device-display-function off(type: 'add' | 'remove' | 'change', callback?: Callback<long>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'add' \| 'remove' \| 'change' | Yes | Event type.<br>- **add**, indicating the display addition event.Example: event that a display is connected.<br>- **remove**, indicating the display removal event. Example:event that a display is disconnected.<br>- **change**, indicating the display change event. Example: event thatthe display orientation is changed. |
-| callback | Callback&lt;number&gt; | No | Callback used to return the ID of the display, which is an integer. If thisparameter is not specified, all subscriptions to the specified event are canceled.<br>**Since:** 20 |
+| type | 'add' \| 'remove' \| 'change' | Yes | Event type.<br>- **add**, indicating the display addition event.Example: event that a display is connected.<br>- **remove**, indicating the display removal event. Example:event that a display is disconnected.<br>- **change**, indicating the display change event. Example: event that the display orientation is changed. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<number> | No | Callback used to return the ID of the display, which is an integer. If this parameter is not specified, all subscriptions to the specified event are canceled.<br>**Since:** 20 |
 
 **Error codes:**
 
@@ -102,14 +106,16 @@ Unsubscribes from display changes.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-display-function off(type: 'add' | 'remove' | 'change', callback?: Callback<long>): void--><!--Device-display-function off(type: 'add' | 'remove' | 'change', callback?: Callback<long>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'add' \| 'remove' \| 'change' | Yes | Event type.<br>- **add**, indicating the display addition event.Example: event that a display is connected.<br>- **remove**, indicating the display removal event. Example:event that a display is disconnected.<br>- **change**, indicating the display change event. Example: event thatthe display orientation is changed. |
-| callback | Callback&lt;number&gt; | No | Callback used to return the ID of the display, which is an integer. If thisparameter is not specified, all subscriptions to the specified event are canceled.<br>**Since:** 20 |
+| type | 'add' \| 'remove' \| 'change' | Yes | Event type.<br>- **add**, indicating the display addition event.Example: event that a display is connected.<br>- **remove**, indicating the display removal event. Example:event that a display is disconnected.<br>- **change**, indicating the display change event. Example: event that the display orientation is changed. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<number> | No | Callback used to return the ID of the display, which is an integer. If this parameter is not specified, all subscriptions to the specified event are canceled.<br>**Since:** 20 |
 
 **Error codes:**
 
@@ -144,14 +150,16 @@ Unsubscribes from fold status change events of the foldable device.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-display-function off(type: 'foldStatusChange', callback?: Callback<FoldStatus>): void--><!--Device-display-function off(type: 'foldStatusChange', callback?: Callback<FoldStatus>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'foldStatusChange' | Yes | Event type. The event **'foldStatusChange'** is triggered when the fold statusof the device changes. |
-| callback | Callback&lt;FoldStatus&gt; | No | Callback used to return the fold status. If this parameter is notspecified, all subscriptions to the specified event are canceled.<br>**Since:** 20 |
+| type | 'foldStatusChange' | Yes | Event type. The event **'foldStatusChange'** is triggered when the fold status of the device changes. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<FoldStatus> | No | Callback used to return the fold status. If this parameter is not specified, all subscriptions to the specified event are canceled.<br>**Since:** 20 |
 
 **Error codes:**
 
@@ -187,14 +195,16 @@ Unsubscribes from folding angle change events of the foldable device.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-display-function off(type: 'foldAngleChange', callback?: Callback<Array<double>>): void--><!--Device-display-function off(type: 'foldAngleChange', callback?: Callback<Array<double>>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'foldAngleChange' | Yes | Event type. The event **'foldAngleChange'** is triggered when the folding angleof the device changes. |
-| callback | Callback&lt;Array&lt;number&gt;&gt; | No | Callback used to return the folding angle (0�C180 degrees). If thisparameter is not specified, all subscriptions to the specified event are canceled.<br>**Since:** 20 |
+| type | 'foldAngleChange' | Yes | Event type. The event **'foldAngleChange'** is triggered when the folding angle of the device changes. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<Array<number>> | No | Callback used to return the folding angle (0�C180 degrees). If this parameter is not specified, all subscriptions to the specified event are canceled.<br>**Since:** 20 |
 
 **Error codes:**
 
@@ -232,14 +242,16 @@ Unsubscribes from events indicating whether the device's screen content is being
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-display-function off(type: 'captureStatusChange', callback?: Callback<boolean>): void--><!--Device-display-function off(type: 'captureStatusChange', callback?: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'captureStatusChange' | Yes | Event type. The event **'captureStatusChange'** is triggered when thescreen capture status changes. |
-| callback | Callback&lt;boolean&gt; | No | Callback used to return the result indicating whether the device's screencontent is being captured. **true** is returned when screen content is being captured (including active screencapture, casting, recording, or the creation of a virtual screen that could be captured). **false** is returnedwhen screen content is no longer being captured. In the case of screen capture, **true** is returned only once.If this parameter is not specified, all subscriptions to the specified event are canceled. |
+| type | 'captureStatusChange' | Yes | Event type. The event **'captureStatusChange'** is triggered when the screen capture status changes. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<boolean> | No | Callback used to return the result indicating whether the device's screen content is being captured. **true** is returned when screen content is being captured (including active screen capture, casting, recording, or the creation of a virtual screen that could be captured). **false** is returned when screen content is no longer being captured. In the case of screen capture, **true** is returned only once.If this parameter is not specified, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
@@ -277,14 +289,16 @@ Unsubscribes from display mode change events of the foldable device.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-display-function off(type: 'foldDisplayModeChange', callback?: Callback<FoldDisplayMode>): void--><!--Device-display-function off(type: 'foldDisplayModeChange', callback?: Callback<FoldDisplayMode>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'foldDisplayModeChange' | Yes | Event type. The event **'foldDisplayModeChange'** is triggered when thedisplay mode of the device changes. |
-| callback | Callback&lt;FoldDisplayMode&gt; | No | Callback used to return the display mode. If this parameter isnot specified, all subscriptions to the specified event are canceled.<br>**Since:** 20 |
+| type | 'foldDisplayModeChange' | Yes | Event type. The event **'foldDisplayModeChange'** is triggered when the display mode of the device changes. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<FoldDisplayMode> | No | Callback used to return the display mode. If this parameter is not specified, all subscriptions to the specified event are canceled.<br>**Since:** 20 |
 
 **Error codes:**
 
@@ -322,14 +336,16 @@ Unsubscribes from events related to screen brightness information changes.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-display-function off(type: 'brightnessInfoChange', callback?: BrightnessCallback<long, BrightnessInfo>): void--><!--Device-display-function off(type: 'brightnessInfoChange', callback?: BrightnessCallback<long, BrightnessInfo>): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'brightnessInfoChange' | Yes | Event type. The value is fixed at **'brightnessInfoChange'**, indicatingthat the screen brightness information is changed. |
-| callback | BrightnessCallback&lt;number, BrightnessInfo&gt; | No | Callback used to return the brightnessInfo statuschange. If this parameter is not specified, all subscriptions to the specified event are canceled. The firstparameter indicates the display ID, and the second parameter indicates the screen brightness information. |
+| type | 'brightnessInfoChange' | Yes | Event type. The value is fixed at **'brightnessInfoChange'**, indicating that the screen brightness information is changed. |
+| callback | [BrightnessCallback](arkts-arkui-brightnesscallback-t.md)<number, BrightnessInfo> | No | Callback used to return the brightnessInfo status change. If this parameter is not specified, all subscriptions to the specified event are canceled. The first parameter indicates the display ID, and the second parameter indicates the screen brightness information. |
 
 **Error codes:**
 

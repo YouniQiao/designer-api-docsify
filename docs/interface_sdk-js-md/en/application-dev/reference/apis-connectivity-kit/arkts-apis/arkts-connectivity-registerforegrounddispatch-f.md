@@ -20,15 +20,17 @@ Register tag foreground dispatch. Dispatches to this application only if a tag d
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-tag-function registerForegroundDispatch(elementName: ElementName, discTech: int[], callback: AsyncCallback<TagInfo>): void--><!--Device-tag-function registerForegroundDispatch(elementName: ElementName, discTech: int[], callback: AsyncCallback<TagInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | ElementName | Yes | The element name of application, must include the bundleName and abilityName. |
+| elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-t.md) | Yes | The element name of application, must include the bundleName and abilityName. |
 | discTech | number[] | Yes | The technologies list to set for discovering. From {@link NFC_A} to {@link MIFARE_ULTRALIGHT}. |
-| callback | AsyncCallback&lt;TagInfo&gt; | Yes | The callback to dispatched the TagInfo object for application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<TagInfo> | Yes | The callback to dispatched the TagInfo object for application. |
 
 **Error codes:**
 

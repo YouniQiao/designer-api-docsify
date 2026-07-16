@@ -12,15 +12,13 @@ import { window } from '@kit.ArkUI';
 function shiftAppWindowTouchEvent(sourceWindowId: number, targetWindowId: number, fingerId: number): Promise<void>
 ```
 
-Transfers a touchscreen input event from one window to another within the same application. This API takes effect
-only for the main window and its child windows. This API uses a promise to return the result.
+Transfers a touchscreen input event from one window to another within the same application. This API takes effect only for the main window and its child windows. This API uses a promise to return the result.
 
-To transfer touchscreen input events, the source window must call this API within the callback of the
-[onTouch](onTouch) event (the event type must
-be **TouchType.Down**). After a successful call, the system sends a **TouchType.Up** event to the source window and
-a **TouchType.Down** event to the target window.
+To transfer touchscreen input events, the source window must call this API within the callback of the [onTouch](onTouch) event (the event type must be **TouchType.Down**). After a successful call, the system sends a **TouchType.Up** event to the source window and a **TouchType.Down** event to the target window.
 
 **Since:** 20
+
+<!--Device-window-function shiftAppWindowTouchEvent(sourceWindowId: int, targetWindowId: int, fingerId: int): Promise<void>--><!--Device-window-function shiftAppWindowTouchEvent(sourceWindowId: int, targetWindowId: int, fingerId: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -28,15 +26,15 @@ a **TouchType.Down** event to the target window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceWindowId | number | Yes | ID of the source window. You are advised to call[getWindowProperties()](arkts-arkui-window-i.md#getwindowproperties-1) to obtain the window ID. Thevalue must be an integer greater than 0. If it is less than or equal to 0, error code 1300016 is returned. |
-| targetWindowId | number | Yes | ID of the target window. You are advised to call[getWindowProperties()](arkts-arkui-window-i.md#getwindowproperties-1) to obtain the window ID. Thevalue must be an integer greater than 0. If it is less than or equal to 0, error code 1300016 is returned. |
-| fingerId | number | Yes | Unique ID of the finger in the touchscreen input event. You are advised to use the**touches** attribute in the [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-touchevent-i.md) object to obtainthe ID. This parameter must be an integer greater than or equal to 0. If the value is less than 0, error code 1300016 is returned. |
+| sourceWindowId | number | Yes | ID of the source window. You are advised to call [getWindowProperties()](arkts-arkui-window-i.md#getwindowproperties-1) to obtain the window ID. The value must be an integer greater than 0. If it is less than or equal to 0, error code 1300016 is returned. |
+| targetWindowId | number | Yes | ID of the target window. You are advised to call [getWindowProperties()](arkts-arkui-window-i.md#getwindowproperties-1) to obtain the window ID. The value must be an integer greater than 0. If it is less than or equal to 0, error code 1300016 is returned. |
+| fingerId | number | Yes | Unique ID of the finger in the touchscreen input event. You are advised to use the **touches** attribute in the [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-touchevent-i.md) object to obtain the ID. This parameter must be an integer greater than or equal to 0. If the value is less than 0, error code 1300016 is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

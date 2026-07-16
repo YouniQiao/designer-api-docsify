@@ -16,6 +16,8 @@ Obtains the operator name of the SIM card in a specified slot.
 
 **Since:** 10
 
+<!--Device-sim-function getOpNameSync(slotId: int): string--><!--Device-sim-function getOpNameSync(slotId: int): string-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -28,7 +30,7 @@ Obtains the operator name of the SIM card in a specified slot.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the operator name; returns an empty string if no SIM card is inserted orno operator name is matched. |
+| string | Returns the operator name; returns an empty string if no SIM card is inserted or no operator name is matched. |
 
 **Example**
 

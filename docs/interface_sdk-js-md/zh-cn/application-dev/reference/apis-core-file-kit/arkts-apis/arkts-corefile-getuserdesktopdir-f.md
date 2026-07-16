@@ -1,5 +1,11 @@
 # getUserDesktopDir
 
+## 导入模块
+
+```TypeScript
+import { Environment } from '@kit.CoreFileKit';
+```
+
 ## getUserDesktopDir
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getUserDesktopDir(): string
 
 **需要权限：** 
 - API版本11：ohos.permission.READ_WRITE_DESKTOP_DIRECTORY
+
+<!--Device-Environment-function getUserDesktopDir(): string--><!--Device-Environment-function getUserDesktopDir(): string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.Environment.FolderObtain
 

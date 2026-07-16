@@ -14,13 +14,15 @@ function getDevices(): Array<Readonly<USBDevice>>
 
 Obtains the list of USB devices connected to the host.
 
-> **NOTE**
->
-> Third-party applications are not allowed to obtain the device serial number from the **serial** field unless they
-> request permission using [usbManager.requestRight](arkts-basicservices-requestright-f.md#requestright-1)
+> **NOTE**  
+>  
+> Third-party applications are not allowed to obtain the device serial number from the **serial** field unless they  
+> request permission using [usbManager.requestRight](arkts-basicservices-requestright-f.md#requestright-1)  
 > and then initiate a control transfer to obtain it.
 
 **Since:** 9
+
+<!--Device-usbManager-function getDevices(): Array<Readonly<USBDevice>>--><!--Device-usbManager-function getDevices(): Array<Readonly<USBDevice>>-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -28,7 +30,7 @@ Obtains the list of USB devices connected to the host.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Readonly&lt;USBDevice&gt;&gt; | USB device list. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Readonly<USBDevice>> | USB device list. |
 
 **Error codes:**
 

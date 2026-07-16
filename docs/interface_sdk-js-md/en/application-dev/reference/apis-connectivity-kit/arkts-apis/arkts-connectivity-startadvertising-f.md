@@ -20,19 +20,21 @@ Starts advertising.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-advertising-function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>--><!--Device-advertising-function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| advertisingParams | AdvertisingParams | Yes | Indicates the param for advertising. |
+| advertisingParams | [AdvertisingParams](arkts-connectivity-advertisingparams-i.md) | Yes | Indicates the param for advertising. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns the promise object advertise handle. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Returns the promise object advertise handle. |
 
 **Error codes:**
 

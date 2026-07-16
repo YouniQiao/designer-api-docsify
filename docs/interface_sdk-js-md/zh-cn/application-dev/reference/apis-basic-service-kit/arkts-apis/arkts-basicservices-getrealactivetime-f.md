@@ -1,5 +1,11 @@
 # getRealActiveTime
 
+## 导入模块
+
+```TypeScript
+import { systemTime } from '@kit.BasicServicesKit';
+```
+
 ## getRealActiveTime
 
 ```TypeScript
@@ -14,6 +20,8 @@ function getRealActiveTime(isNano: boolean, callback: AsyncCallback<number>): vo
 
 **替代接口：** [getUptime](arkts-basicservices-getuptime-f.md#getuptime-1)
 
+<!--Device-systemTime-function getRealActiveTime(isNano: boolean, callback: AsyncCallback<number>): void--><!--Device-systemTime-function getRealActiveTime(isNano: boolean, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **参数：**
@@ -21,7 +29,7 @@ function getRealActiveTime(isNano: boolean, callback: AsyncCallback<number>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isNano | boolean | 是 | 返回结果是否为纳秒数。<br/>- true：表示返回结果为纳秒数（ns）。 <br/>- false：表示返回结果为毫秒数（ms）。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数，返回自系统启动以来经过的时间，不包括深度睡眠时间。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数，返回自系统启动以来经过的时间，不包括深度睡眠时间。 |
 
 **错误码：**
 
@@ -64,13 +72,15 @@ function getRealActiveTime(callback: AsyncCallback<number>): void
 
 **替代接口：** [getUptime](arkts-basicservices-getuptime-f.md#getuptime-1)
 
+<!--Device-systemTime-function getRealActiveTime(callback: AsyncCallback<number>): void--><!--Device-systemTime-function getRealActiveTime(callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数，返回自系统启动以来经过的时间（ms），不包括深度睡眠时间。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数，返回自系统启动以来经过的时间（ms），不包括深度睡眠时间。 |
 
 **错误码：**
 
@@ -113,6 +123,8 @@ function getRealActiveTime(isNano?: boolean): Promise<number>
 
 **替代接口：** [getUptime](arkts-basicservices-getuptime-f.md#getuptime-1)
 
+<!--Device-systemTime-function getRealActiveTime(isNano?: boolean): Promise<number>--><!--Device-systemTime-function getRealActiveTime(isNano?: boolean): Promise<number>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **参数：**
@@ -125,7 +137,7 @@ function getRealActiveTime(isNano?: boolean): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回自系统启动以来经过的时间，但不包括深度睡眠时间。 |
+| Promise<number> | Promise对象，返回自系统启动以来经过的时间，但不包括深度睡眠时间。 |
 
 **错误码：**
 

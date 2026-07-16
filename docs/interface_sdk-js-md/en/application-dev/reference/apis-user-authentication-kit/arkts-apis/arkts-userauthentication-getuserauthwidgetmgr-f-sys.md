@@ -12,17 +12,18 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 function getUserAuthWidgetMgr(version: number): UserAuthWidgetMgr
 ```
 
-Obtains the authentication widget manager object. It is used to obtain the **UserAuthWidgetMgr** instance, which
-can be used to register custom authentication widgets with the system for unified management.
+Obtains the authentication widget manager object. It is used to obtain the **UserAuthWidgetMgr** instance, which can be used to register custom authentication widgets with the system for unified management.
 
 > **NOTE**
 
-> Each **UserAuthWidgetMgr** instance can manage one authentication widget. To manage multiple widgets, you need to
+> Each **UserAuthWidgetMgr** instance can manage one authentication widget. To manage multiple widgets, you need to  
 > obtain multiple instances.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.SUPPORT_USER_AUTH
+
+<!--Device-userAuth-function getUserAuthWidgetMgr(version: int): UserAuthWidgetMgr--><!--Device-userAuth-function getUserAuthWidgetMgr(version: int): UserAuthWidgetMgr-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -32,13 +33,13 @@ can be used to register custom authentication widgets with the system for unifie
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| version | number | Yes | Version number of the authentication widget. Currently, version 1 is supported. The widgetversion determines the communication protocol and supported features between the widget and the framework. |
+| version | number | Yes | Version number of the authentication widget. Currently, version 1 is supported. The widget version determines the communication protocol and supported features between the widget and the framework. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| UserAuthWidgetMgr | Authentication widget manager object. It can be used to subscribe to and unsubscribefrom commands from the user authentication framework. |
+| [UserAuthWidgetMgr](arkts-userauthentication-userauthwidgetmgr-i-sys.md) | Authentication widget manager object. It can be used to subscribe to and unsubscribe from commands from the user authentication framework. |
 
 **Error codes:**
 

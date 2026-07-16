@@ -8,6 +8,8 @@ Describes input parameters of audio interruption events.
 
 **Substitutes:** AudioRendererOptions
 
+<!--Device-audio-interface AudioInterrupt--><!--Device-audio-interface AudioInterrupt-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 ## Modules to Import
@@ -32,6 +34,8 @@ Audio content type.
 
 **Substitutes:** rendererInfo
 
+<!--Device-AudioInterrupt-contentType: ContentType--><!--Device-AudioInterrupt-contentType: ContentType-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 ## pauseWhenDucked
@@ -40,8 +44,7 @@ Audio content type.
 pauseWhenDucked: boolean
 ```
 
-Whether audio playback can be paused during an audio interruption. **true** if audio playback can be paused,
-**false** otherwise.
+Whether audio playback can be paused during an audio interruption. **true** if audio playback can be paused,**false** otherwise.
 
 **Type:** boolean
 
@@ -50,6 +53,8 @@ Whether audio playback can be paused during an audio interruption. **true** if a
 **Deprecated since:** 9
 
 **Substitutes:** hintType
+
+<!--Device-AudioInterrupt-pauseWhenDucked: boolean--><!--Device-AudioInterrupt-pauseWhenDucked: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -68,6 +73,8 @@ Audio stream usage.
 **Deprecated since:** 9
 
 **Substitutes:** rendererInfo
+
+<!--Device-AudioInterrupt-streamUsage: StreamUsage--><!--Device-AudioInterrupt-streamUsage: StreamUsage-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 

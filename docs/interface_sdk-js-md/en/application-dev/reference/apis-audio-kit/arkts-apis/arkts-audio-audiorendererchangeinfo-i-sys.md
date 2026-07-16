@@ -4,6 +4,8 @@ Describes the audio renderer change event.
 
 **Since:** 9
 
+<!--Device-audio-interface AudioRendererChangeInfo--><!--Device-audio-interface AudioRendererChangeInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Uid for audio renderer client application.
 
 **Since:** 9
 
+<!--Device-AudioRendererChangeInfo-readonly clientUid: int--><!--Device-AudioRendererChangeInfo-readonly clientUid: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **System API:** This is a system API.
@@ -39,6 +43,8 @@ Audio state.
 **Type:** AudioState
 
 **Since:** 9
+
+<!--Device-AudioRendererChangeInfo-readonly rendererState: AudioState--><!--Device-AudioRendererChangeInfo-readonly rendererState: AudioState-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 

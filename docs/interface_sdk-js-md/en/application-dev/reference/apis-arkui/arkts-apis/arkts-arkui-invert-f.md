@@ -20,11 +20,13 @@ Inverts this matrix object.
 
 **Substitutes:** [invert](arkts-arkui-matrix4transit-i.md#invert-1)
 
+<!--Device-matrix4-function invert(): Matrix4Transit--><!--Device-matrix4-function invert(): Matrix4Transit-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Inverse matrix object of the current matrix. |
+| [Matrix4Transit](arkts-arkui-matrix4transit-i.md) | Inverse matrix object of the current matrix. |
 

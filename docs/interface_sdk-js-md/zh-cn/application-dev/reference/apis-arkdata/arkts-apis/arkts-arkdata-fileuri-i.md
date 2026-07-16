@@ -4,7 +4,15 @@
 
 **起始版本：** 15
 
+<!--Device-uniformDataStruct-interface FileUri--><!--Device-uniformDataStruct-interface FileUri-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+## 导入模块
+
+```TypeScript
+import { uniformDataStruct } from '@kit.ArkData';
+```
 
 ## details
 
@@ -20,6 +28,8 @@ details?: Record<string, number | number | number | string | Uint8Array>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FileUri-details?: Record<string, int | long | double | string | Uint8Array>--><!--Device-FileUri-details?: Record<string, int | long | double | string | Uint8Array>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## fileType
@@ -28,14 +38,15 @@ details?: Record<string, number | number | number | string | Uint8Array>
 fileType: string
 ```
 
-文件类型（必须是标准化数据类型（即[UTD预置列表](../../../../database/uniform-data-type-list.md)中各类型对应的UTD-ID或自定义UTD-ID）。fileType最大长度限制为1
-024个字节，超出限制时抛出异常。
+文件类型（必须是标准化数据类型（即[UTD预置列表](../../../../database/uniform-data-type-list.md)中各类型对应的UTD-ID或自定义UTD-ID）。fileType最大长度限制为1024个字节，超出限制时抛出异常。
 
 **类型：** string
 
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileUri-fileType: string--><!--Device-FileUri-fileType: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -45,14 +56,15 @@ fileType: string
 oriUri: string
 ```
 
-文件的原始URI路径。支持本地文件绝对路径、file://协议和http/https网络URL格式。长度限制为4096字节。例如：`/data/local/tmp/test.txt`、
-`file:///data/local/tmp/test.txt`或`http://example.com/file.txt`。
+文件的原始URI路径。支持本地文件绝对路径、file://协议和http/https网络URL格式。长度限制为4096字节。例如：`/data/local/tmp/test.txt`、`file:///data/local/tmp/test.txt`或`http://example.com/file.txt`。
 
 **类型：** string
 
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileUri-oriUri: string--><!--Device-FileUri-oriUri: string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -62,14 +74,15 @@ oriUri: string
 readonly uniformDataType: 'general.file-uri'
 ```
 
-统一数据类型标识为文件地址类型数据，固定为“general.file-uri”，数据类型描述信息见
-[UniformDataType](arkts-arkdata-uniformdatatype-e.md)。
+统一数据类型标识为文件地址类型数据，固定为“general.file-uri”，数据类型描述信息见[UniformDataType](arkts-arkdata-uniformdatatype-e.md)。
 
 **类型：** 'general.file-uri'
 
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileUri-readonly uniformDataType: 'general.file-uri'--><!--Device-FileUri-readonly uniformDataType: 'general.file-uri'-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -79,14 +92,15 @@ readonly uniformDataType: 'general.file-uri'
 uriAuthorizationPolicies?: Array<number>
 ```
 
-用于拖拽场景的URI授权策略。默认值为READ+WRITE+PERSIST（读+写+持久化授权）。只针对单个record使用，优先级最高，具体策略见
-[UriPermission](arkts-arkdata-uripermission-e.md)。
+用于拖拽场景的URI授权策略。默认值为READ+WRITE+PERSIST（读+写+持久化授权）。只针对单个record使用，优先级最高，具体策略见[UriPermission](arkts-arkdata-uripermission-e.md)。
 
 **类型：** Array<number>
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FileUri-uriAuthorizationPolicies?: Array<int>--><!--Device-FileUri-uriAuthorizationPolicies?: Array<int>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 

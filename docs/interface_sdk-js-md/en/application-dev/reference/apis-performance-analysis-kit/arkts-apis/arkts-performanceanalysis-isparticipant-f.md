@@ -18,6 +18,8 @@ Query if the app is participating the HiRetrieval project.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-hiRetrieval-function isParticipant(): boolean--><!--Device-hiRetrieval-function isParticipant(): boolean-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiRetrieval
 
 **Return value:**

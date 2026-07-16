@@ -5,5 +5,6 @@
 - [@ohos.arkui.modifier](arkts-arkui-modifier.md)
 - [@ohos.arkui.node](arkts-arkui-node.md)
 - [@ohos.graphics.scene](arkts-graphics-scene.md)
+- [index-full](arkts-index-full.md)
 - common
   - [index](arkts-index.md)

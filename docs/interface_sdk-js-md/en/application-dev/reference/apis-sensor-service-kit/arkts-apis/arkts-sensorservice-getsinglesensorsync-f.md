@@ -16,19 +16,21 @@ Obtains information about the sensor of a specific type. This API returns the re
 
 **Since:** 12
 
+<!--Device-sensor-function getSingleSensorSync(type: SensorId): Sensor--><!--Device-sensor-function getSingleSensorSync(type: SensorId): Sensor-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId | Yes | Sensor type. |
+| type | [SensorId](arkts-sensorservice-sensorid-e.md) | Yes | Sensor type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Sensor | Sensor information. |
+| [Sensor](arkts-sensorservice-sensor-c.md) | Sensor information. |
 
 **Error codes:**
 

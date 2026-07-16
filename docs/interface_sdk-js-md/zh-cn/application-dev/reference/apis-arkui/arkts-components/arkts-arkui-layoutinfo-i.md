@@ -8,6 +8,8 @@
 
 **替代接口：** [Layoutable](arkts-arkui-layoutable-i.md)
 
+<!--Device-unnamed-declare interface LayoutInfo--><!--Device-unnamed-declare interface LayoutInfo-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## constraint
@@ -28,6 +30,8 @@ constraint: ConstraintSizeOptions
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
+<!--Device-LayoutInfo-constraint: ConstraintSizeOptions--><!--Device-LayoutInfo-constraint: ConstraintSizeOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## position
@@ -47,6 +51,8 @@ position: Position
 **替代接口：** [Layoutable](arkts-arkui-layoutable-i.md)
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-LayoutInfo-position: Position--><!--Device-LayoutInfo-position: Position-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

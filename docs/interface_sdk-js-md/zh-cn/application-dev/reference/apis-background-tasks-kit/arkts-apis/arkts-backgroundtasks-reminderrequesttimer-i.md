@@ -8,7 +8,15 @@ ReminderRequestTimer extends ReminderRequest
 
 **起始版本：** 9
 
+<!--Device-reminderAgentManager-interface ReminderRequestTimer extends ReminderRequest--><!--Device-reminderAgentManager-interface ReminderRequestTimer extends ReminderRequest-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
+
+## 导入模块
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+```
 
 ## repeatCount
 
@@ -25,6 +33,8 @@ repeatCount?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ReminderRequestTimer-repeatCount?: int--><!--Device-ReminderRequestTimer-repeatCount?: int-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -44,6 +54,8 @@ repeatInterval?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ReminderRequestTimer-repeatInterval?: long--><!--Device-ReminderRequestTimer-repeatInterval?: long-End-->
+
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## triggerTimeInSeconds
@@ -59,6 +71,8 @@ triggerTimeInSeconds: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-ReminderRequestTimer-triggerTimeInSeconds: long--><!--Device-ReminderRequestTimer-triggerTimeInSeconds: long-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 

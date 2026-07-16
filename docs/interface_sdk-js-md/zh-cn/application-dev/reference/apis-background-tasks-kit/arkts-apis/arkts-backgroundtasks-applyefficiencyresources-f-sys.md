@@ -1,5 +1,11 @@
 # applyEfficiencyResources（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+```
+
 ## applyEfficiencyResources
 
 ```TypeScript
@@ -10,6 +16,8 @@ function applyEfficiencyResources(request: EfficiencyResourcesRequest): void
 
 **起始版本：** 9
 
+<!--Device-backgroundTaskManager-function applyEfficiencyResources(request: EfficiencyResourcesRequest): void--><!--Device-backgroundTaskManager-function applyEfficiencyResources(request: EfficiencyResourcesRequest): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
 **系统接口：** 此接口为系统接口。
@@ -18,7 +26,7 @@ function applyEfficiencyResources(request: EfficiencyResourcesRequest): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | EfficiencyResourcesRequest | 是 | 请求的必要信息，包括资源类型、超时时间等。 |
+| request | [EfficiencyResourcesRequest](arkts-backgroundtasks-efficiencyresourcesrequest-i-sys.md) | 是 | 请求的必要信息，包括资源类型、超时时间等。 |
 
 **错误码：**
 

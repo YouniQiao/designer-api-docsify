@@ -12,6 +12,8 @@ Default value: **0.0**
 
 **Since:** 10
 
+<!--Device-config-const audioBalance: Config<double>--><!--Device-config-const audioBalance: Config<double>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -22,12 +24,13 @@ Default value: **0.0**
 const audioMono: Config<boolean>
 ```
 
-Whether to enable mono audio. The value **true** indicates that mono audio is enabled, and **false** indicates the
-opposite.
+Whether to enable mono audio. The value **true** indicates that mono audio is enabled, and **false** indicates the opposite.
 
 Default value: **false**
 
 **Since:** 10
+
+<!--Device-config-const audioMono: Config<boolean>--><!--Device-config-const audioMono: Config<boolean>-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -43,6 +46,8 @@ Length of time required for a click.
 
 **Since:** 11
 
+<!--Device-config-const clickResponseTime: Config<ClickResponseTime>--><!--Device-config-const clickResponseTime: Config<ClickResponseTime>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -53,12 +58,13 @@ Length of time required for a click.
 const daltonizationState: Config<boolean>
 ```
 
-Whether to enable daltonization. It must be used with **daltonizationColorFilter**. The value **true** indicates
-that daltonization is enabled, and **false** indicates the opposite.
+Whether to enable daltonization. It must be used with **daltonizationColorFilter**. The value **true** indicates that daltonization is enabled, and **false** indicates the opposite.
 
 Default value: **false**
 
 **Since:** 11
+
+<!--Device-config-const daltonizationState: Config<boolean>--><!--Device-config-const daltonizationState: Config<boolean>-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -70,12 +76,13 @@ Default value: **false**
 const ignoreRepeatClick: Config<boolean>
 ```
 
-Whether to ignore repeated clicks. This parameter must be used together with **repeatClickInterval**. The value
-**true** indicates that the feature of ignoring repeated clicks is enabled, and **false** indicates the opposite.
+Whether to ignore repeated clicks. This parameter must be used together with **repeatClickInterval**. The value **true** indicates that the feature of ignoring repeated clicks is enabled, and **false** indicates the opposite.
 
 Default value: **false**
 
 **Since:** 11
+
+<!--Device-config-const ignoreRepeatClick: Config<boolean>--><!--Device-config-const ignoreRepeatClick: Config<boolean>-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -91,6 +98,8 @@ Interval between repeated clicks.
 
 **Since:** 11
 
+<!--Device-config-const repeatClickInterval: Config<RepeatClickInterval>--><!--Device-config-const repeatClickInterval: Config<RepeatClickInterval>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -105,6 +114,8 @@ Indicates the configuration of screen magnification.
 
 **Since:** 12
 
+<!--Device-config-const screenMagnification: Config<boolean>--><!--Device-config-const screenMagnification: Config<boolean>-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -118,6 +129,8 @@ const shortkeyMultiTargets: Config<Array<string>>
 List of target applications for the accessibility shortcut keys. The value format is ['bundleName/abilityName'].
 
 **Since:** 11
+
+<!--Device-config-const shortkeyMultiTargets: Config<Array<string>>--><!--Device-config-const shortkeyMultiTargets: Config<Array<string>>-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 

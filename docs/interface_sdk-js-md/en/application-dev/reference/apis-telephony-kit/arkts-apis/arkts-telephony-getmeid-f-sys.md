@@ -18,6 +18,8 @@ Obtains the MEID of a specified card slot of the device.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-radio-function getMEID(slotId: int, callback: AsyncCallback<string>): void--><!--Device-radio-function getMEID(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Obtains the MEID of a specified card slot of the device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slotindex number supported by the device. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Indicates the callback for getting the MEID.Returns an empty string if the MEID does not exist. |
+| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Indicates the callback for getting the MEID.Returns an empty string if the MEID does not exist. |
 
 **Error codes:**
 
@@ -70,6 +72,8 @@ Obtains the MEID of a specified card slot of the device.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-radio-function getMEID(slotId?: int): Promise<string>--><!--Device-radio-function getMEID(slotId?: int): Promise<string>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -78,13 +82,13 @@ Obtains the MEID of a specified card slot of the device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | No | Indicates the card slot index number, ranging from 0 to the maximum card slotindex number supported by the device. |
+| slotId | number | No | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the MEID. Returns an empty string if the MEID does not exist. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the MEID. Returns an empty string if the MEID does not exist. |
 
 **Error codes:**
 
@@ -125,6 +129,8 @@ Obtains the MEID of a specified card slot of the device.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-radio-function getMEID(callback: AsyncCallback<string>): void--><!--Device-radio-function getMEID(callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -133,7 +139,7 @@ Obtains the MEID of a specified card slot of the device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes | Indicates the callback for getting the MEID.Returns an empty string if the MEID does not exist. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Indicates the callback for getting the MEID.Returns an empty string if the MEID does not exist. |
 
 **Error codes:**
 

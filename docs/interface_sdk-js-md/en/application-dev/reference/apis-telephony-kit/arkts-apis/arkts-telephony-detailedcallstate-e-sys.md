@@ -4,6 +4,8 @@ Indicates the detailed state of call.
 
 **Since:** 7
 
+<!--Device-call-export enum DetailedCallState--><!--Device-call-export enum DetailedCallState-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -17,6 +19,8 @@ CALL_STATUS_ACTIVE = 0
 Indicates the call is active.
 
 **Since:** 7
+
+<!--Device-DetailedCallState-CALL_STATUS_ACTIVE = 0--><!--Device-DetailedCallState-CALL_STATUS_ACTIVE = 0-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -32,6 +36,8 @@ Indicates the call is holding.
 
 **Since:** 7
 
+<!--Device-DetailedCallState-CALL_STATUS_HOLDING = 1--><!--Device-DetailedCallState-CALL_STATUS_HOLDING = 1-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -45,6 +51,8 @@ CALL_STATUS_DIALING = 2
 Indicates the call is dialing.
 
 **Since:** 7
+
+<!--Device-DetailedCallState-CALL_STATUS_DIALING = 2--><!--Device-DetailedCallState-CALL_STATUS_DIALING = 2-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -60,6 +68,8 @@ Indicates the call is alerting.
 
 **Since:** 7
 
+<!--Device-DetailedCallState-CALL_STATUS_ALERTING = 3--><!--Device-DetailedCallState-CALL_STATUS_ALERTING = 3-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -73,6 +83,8 @@ CALL_STATUS_INCOMING = 4
 Indicates the call is incoming.
 
 **Since:** 7
+
+<!--Device-DetailedCallState-CALL_STATUS_INCOMING = 4--><!--Device-DetailedCallState-CALL_STATUS_INCOMING = 4-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -88,6 +100,8 @@ Indicates the call is waiting.
 
 **Since:** 7
 
+<!--Device-DetailedCallState-CALL_STATUS_WAITING = 5--><!--Device-DetailedCallState-CALL_STATUS_WAITING = 5-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -101,6 +115,8 @@ CALL_STATUS_DISCONNECTED = 6
 Indicates the call is disconnected.
 
 **Since:** 7
+
+<!--Device-DetailedCallState-CALL_STATUS_DISCONNECTED = 6--><!--Device-DetailedCallState-CALL_STATUS_DISCONNECTED = 6-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -116,6 +132,8 @@ Indicates the call is disconnecting.
 
 **Since:** 7
 
+<!--Device-DetailedCallState-CALL_STATUS_DISCONNECTING = 7--><!--Device-DetailedCallState-CALL_STATUS_DISCONNECTING = 7-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -129,6 +147,8 @@ CALL_STATUS_IDLE = 8
 Indicates the call is idle.
 
 **Since:** 7
+
+<!--Device-DetailedCallState-CALL_STATUS_IDLE = 8--><!--Device-DetailedCallState-CALL_STATUS_IDLE = 8-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 

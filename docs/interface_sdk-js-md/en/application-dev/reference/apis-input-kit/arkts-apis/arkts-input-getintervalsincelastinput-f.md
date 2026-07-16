@@ -12,10 +12,11 @@ import { inputDevice } from '@kit.InputKit';
 function getIntervalSinceLastInput(): Promise<number>
 ```
 
-Obtains the interval (including the device sleep time) elapsed since the last system input event. This API uses a
-promise to return the result.
+Obtains the interval (including the device sleep time) elapsed since the last system input event. This API uses a promise to return the result.
 
 **Since:** 14
+
+<!--Device-inputDevice-function getIntervalSinceLastInput(): Promise<long>--><!--Device-inputDevice-function getIntervalSinceLastInput(): Promise<long>-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -23,7 +24,7 @@ promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the time elapsed since the last system input event, inmicroseconds (μs). |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the time elapsed since the last system input event, in microseconds (μs). |
 
 **Example**
 

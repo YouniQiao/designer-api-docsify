@@ -20,6 +20,8 @@ Unregister the observer for application's senior mode state changes.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-config-function offSeniorModeStateChangeForApp(callback?: Callback<AppSeniorModeInfo>): void--><!--Device-config-function offSeniorModeStateChangeForApp(callback?: Callback<AppSeniorModeInfo>): void-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Unregister the observer for application's senior mode state changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AppSeniorModeInfo&gt; | No | Asynchronous callback interface. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AppSeniorModeInfo> | No | Asynchronous callback interface. |
 
 **Error codes:**
 

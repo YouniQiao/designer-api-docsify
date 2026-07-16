@@ -1,10 +1,10 @@
 # SecurityUIExtensionProxy（系统接口）
 
-该接口用于向UIExtensionAbility发送数据。<br/>
-当UIExtensionAbility连接成功时，<br/>
-它从UIExtensionComponent的onRemoteReady回调中返回。
+该接口用于向UIExtensionAbility发送数据。<br/>当UIExtensionAbility连接成功时，<br/>它从UIExtensionComponent的onRemoteReady回调中返回。
 
 **起始版本：** 26.0.0
+
+<!--Device-unnamed-declare interface SecurityUIExtensionProxy--><!--Device-unnamed-declare interface SecurityUIExtensionProxy-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,6 +22,8 @@ off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SecurityUIExtensionProxy-off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void--><!--Device-SecurityUIExtensionProxy-off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -31,7 +33,7 @@ off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'asyncReceiverRegister' | 是 | 监听事件的类型。 |
-| callback | Callback&lt;UIExtensionProxy&gt; | 否 | 监听事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<UIExtensionProxy> | 否 | 监听事件的回调。 |
 
 ## off('syncReceiverRegister')
 
@@ -45,6 +47,8 @@ off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SecurityUIExtensionProxy-off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void--><!--Device-SecurityUIExtensionProxy-off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -54,7 +58,7 @@ off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'syncReceiverRegister' | 是 | 监听事件的类型。 |
-| callback | Callback&lt;UIExtensionProxy&gt; | 否 | 监听事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<UIExtensionProxy> | 否 | 监听事件的回调。 |
 
 ## on('asyncReceiverRegister')
 
@@ -68,6 +72,8 @@ on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SecurityUIExtensionProxy-on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void--><!--Device-SecurityUIExtensionProxy-on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -77,7 +83,7 @@ on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'asyncReceiverRegister' | 是 | 表示事件的类型。 |
-| callback | Callback&lt;UIExtensionProxy&gt; | 是 | 监听事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<UIExtensionProxy> | 是 | 监听事件的回调。 |
 
 ## on('syncReceiverRegister')
 
@@ -91,6 +97,8 @@ on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SecurityUIExtensionProxy-on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void--><!--Device-SecurityUIExtensionProxy-on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -100,7 +108,7 @@ on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'syncReceiverRegister' | 是 | 表示事件的类型。 |
-| callback | Callback&lt;UIExtensionProxy&gt; | 是 | 监听事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<UIExtensionProxy> | 是 | 监听事件的回调。 |
 
 ## send
 
@@ -114,6 +122,8 @@ send(data: Record<string, Object>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SecurityUIExtensionProxy-send(data: Record<string, Object>): void--><!--Device-SecurityUIExtensionProxy-send(data: Record<string, Object>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -122,7 +132,7 @@ send(data: Record<string, Object>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | 是 |  |
+| data | Record<string, Object> | 是 |  |
 
 ## sendSync
 
@@ -136,6 +146,8 @@ sendSync(data: Record<string, Object>): Record<string, Object>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SecurityUIExtensionProxy-sendSync(data: Record<string, Object>): Record<string, Object>--><!--Device-SecurityUIExtensionProxy-sendSync(data: Record<string, Object>): Record<string, Object>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -144,13 +156,13 @@ sendSync(data: Record<string, Object>): Record<string, Object>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | 是 | 发送给UIExtensionAbility的数据。 |
+| data | Record<string, Object> | 是 | 发送给UIExtensionAbility的数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Record&lt;string, Object&gt; | data - 从UIExtensionAbility传输回来的数据。 |
+| Record<string, Object> | data - 从UIExtensionAbility传输回来的数据。 |
 
 **错误码：**
 

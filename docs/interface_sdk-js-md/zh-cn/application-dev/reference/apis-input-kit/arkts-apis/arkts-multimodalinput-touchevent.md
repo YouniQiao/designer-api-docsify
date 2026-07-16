@@ -1,5 +1,11 @@
 # @ohos.multimodalInput.touchEvent
 
+## 导入模块
+
+```TypeScript
+import { SourceType, ToolType, TouchEvent, FixedMode, KeyAction, Touch } from '@kit.InputKit';
+```
+
 ## 汇总
 
 ### 接口

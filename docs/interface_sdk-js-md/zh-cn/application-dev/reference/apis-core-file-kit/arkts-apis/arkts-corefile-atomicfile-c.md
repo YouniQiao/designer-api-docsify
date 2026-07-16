@@ -8,7 +8,15 @@ AtomicFile是一个用于对文件进行原子读写操作的类。
 
 **起始版本：** 15
 
+<!--Device-unnamed-export class AtomicFile--><!--Device-unnamed-export class AtomicFile-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+```
 
 ## constructor
 
@@ -19,6 +27,8 @@ constructor(path: string)
 对于给定路径的文件创建一个AtomicFile类。
 
 **起始版本：** 15
+
+<!--Device-AtomicFile-constructor(path: string)--><!--Device-AtomicFile-constructor(path: string)-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -43,6 +53,8 @@ delete(): void
 删除AtomicFile类，会删除原始文件和临时文件。
 
 **起始版本：** 15
+
+<!--Device-AtomicFile-delete(): void--><!--Device-AtomicFile-delete(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -95,6 +107,8 @@ failWrite(): void
 
 **起始版本：** 15
 
+<!--Device-AtomicFile-failWrite(): void--><!--Device-AtomicFile-failWrite(): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
@@ -134,6 +148,8 @@ finishWrite(): void
 在完成对startWrite返回流的写入操作时调用，表示文件写入成功。
 
 **起始版本：** 15
+
+<!--Device-AtomicFile-finishWrite(): void--><!--Device-AtomicFile-finishWrite(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -176,13 +192,15 @@ getBaseFile(): File
 
 **起始版本：** 15
 
+<!--Device-AtomicFile-getBaseFile(): File--><!--Device-AtomicFile-getBaseFile(): File-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| File | 打开的File对象。 |
+| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-file-i.md) | 打开的File对象。 |
 
 **错误码：**
 
@@ -226,13 +244,15 @@ openRead(): ReadStream
 
 **起始版本：** 15
 
+<!--Device-AtomicFile-openRead(): ReadStream--><!--Device-AtomicFile-openRead(): ReadStream-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ReadStream | 文件可读流。 |
+| [ReadStream](arkts-corefile-readstream-c.md) | 文件可读流。 |
 
 **错误码：**
 
@@ -285,13 +305,15 @@ readFully(): ArrayBuffer
 
 **起始版本：** 15
 
+<!--Device-AtomicFile-readFully(): ArrayBuffer--><!--Device-AtomicFile-readFully(): ArrayBuffer-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArrayBuffer | 文件的全部内容。 |
+| [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 文件的全部内容。 |
 
 **错误码：**
 
@@ -342,13 +364,15 @@ startWrite(): WriteStream
 
 **起始版本：** 15
 
+<!--Device-AtomicFile-startWrite(): WriteStream--><!--Device-AtomicFile-startWrite(): WriteStream-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| WriteStream | 文件可写流。 |
+| [WriteStream](arkts-corefile-writestream-c.md) | 文件可写流。 |
 
 **错误码：**
 

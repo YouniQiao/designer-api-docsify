@@ -8,6 +8,8 @@ export type GrantedBundleInfo = _GrantedBundleInfo
 
 **起始版本：** 22
 
+<!--Device-notificationExtensionSubscription-export type GrantedBundleInfo = _GrantedBundleInfo--><!--Device-notificationExtensionSubscription-export type GrantedBundleInfo = _GrantedBundleInfo-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **属性类型：** _GrantedBundleInfo

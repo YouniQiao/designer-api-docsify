@@ -1,5 +1,11 @@
 # getDisposedRulesByBundle（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appControl } from '@kit.AbilityKit';
+```
+
 ## getDisposedRulesByBundle
 
 ```TypeScript
@@ -13,6 +19,8 @@ function getDisposedRulesByBundle(bundleName: string): Array<DisposedRuleConfigu
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS or ohos.permission.GET_DISPOSED_APP_STATUS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-appControl-function getDisposedRulesByBundle(bundleName: string): Array<DisposedRuleConfiguration>--><!--Device-appControl-function getDisposedRulesByBundle(bundleName: string): Array<DisposedRuleConfiguration>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -28,7 +36,7 @@ function getDisposedRulesByBundle(bundleName: string): Array<DisposedRuleConfigu
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;DisposedRuleConfiguration&gt; | 指定应用程序包已设置的拦截规则。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<DisposedRuleConfiguration> | 指定应用程序包已设置的拦截规则。 |
 
 **错误码：**
 

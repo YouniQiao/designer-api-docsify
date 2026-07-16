@@ -1,5 +1,11 @@
 # offAcbStateChange
 
+## 导入模块
+
+```TypeScript
+import { remoteDevice } from '@kit.ConnectivityKit';
+```
+
 ## offAcbStateChange
 
 ```TypeScript
@@ -12,13 +18,15 @@ function offAcbStateChange(callback?: Callback<AcbStateParam>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-remoteDevice-function offAcbStateChange(callback?: Callback<AcbStateParam>): void--><!--Device-remoteDevice-function offAcbStateChange(callback?: Callback<AcbStateParam>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AcbStateParam&gt; | 否 | 要监听的事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<AcbStateParam> | 否 | 要监听的事件的回调。 |
 
 **错误码：**
 

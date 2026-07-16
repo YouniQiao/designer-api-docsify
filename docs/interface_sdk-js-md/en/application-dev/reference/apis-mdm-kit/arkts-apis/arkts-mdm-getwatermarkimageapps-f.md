@@ -20,20 +20,22 @@ Gets the bundle names of the applications that have been set watermark.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-securityManager-function getWatermarkImageApps(admin: Want, accountId: number): Array<string>--><!--Device-securityManager-function getWatermarkImageApps(admin: Want, accountId: number): Array<string>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | admin indicates the administrator ability information. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | admin indicates the administrator ability information. |
 | accountId | number | Yes | accountId indicates the ID of OS account.<br>The value must be an integer greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; |  |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> |  |
 
 **Error codes:**
 

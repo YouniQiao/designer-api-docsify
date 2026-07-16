@@ -1,10 +1,10 @@
 # Component
 
-Represents a component on the UI and provides APIs for obtaining component attributes, clicking a component,
-scrolling to search for a component, and text injection.
-All APIs provided in this class use a promise to return the result and must be invoked using **await**.
+Represents a component on the UI and provides APIs for obtaining component attributes, clicking a component,scrolling to search for a component, and text injection.All APIs provided in this class use a promise to return the result and must be invoked using **await**.
 
 **Since:** 9
+
+<!--Device-unnamed-declare class Component--><!--Device-unnamed-declare class Component-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -20,12 +20,13 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 clearText(): Promise<void>
 ```
 
-Clears the text information of a component. This API takes effect only for editable text components. This API
-uses a promise to return the result.
+Clears the text information of a component. This API takes effect only for editable text components. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Component-clearText(): Promise<void>--><!--Device-Component-clearText(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -33,7 +34,7 @@ uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Error codes:**
 
@@ -68,13 +69,15 @@ Clicks this component. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Component-click(): Promise<void>--><!--Device-Component-click(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Error codes:**
 
@@ -109,13 +112,15 @@ Double-clicks this component. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Component-doubleClick(): Promise<void>--><!--Device-Component-doubleClick(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Error codes:**
 
@@ -150,19 +155,21 @@ Drags a component to the target component. This API uses a promise to return the
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Component-dragTo(target: Component): Promise<void>--><!--Device-Component-dragTo(target: Component): Promise<void>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | Component | Yes | Target component. |
+| target | [Component](../../apis-image-kit/arkts-apis/arkts-image-component-i.md) | Yes | Target component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Error codes:**
 
@@ -199,13 +206,15 @@ Obtains the bounds information of this component. This API uses a promise to ret
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Component-getBounds(): Promise<Rect>--><!--Device-Component-getBounds(): Promise<Rect>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Rect&gt; | - Promise used to return the bound information of the component object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Rect> | - Promise used to return the bound information of the component object. |
 
 **Error codes:**
 
@@ -240,13 +249,15 @@ Obtains the center point of the area occupied by this component. This API uses a
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Component-getBoundsCenter(): Promise<Point>--><!--Device-Component-getBoundsCenter(): Promise<Point>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Point&gt; | - Promise used to return the center point of the area occupied by the component object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Point> | - Promise used to return the center point of the area occupied by the component object. |
 
 **Error codes:**
 
@@ -281,13 +292,15 @@ Obtains the description of this component. This API uses a promise to return the
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Component-getDescription(): Promise<string>--><!--Device-Component-getDescription(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | - Promise used to return the description of the component. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | - Promise used to return the description of the component. |
 
 **Error codes:**
 
@@ -322,13 +335,15 @@ Obtains the ID of the display to which the component belongs. This API uses a pr
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-Component-getDisplayId(): Promise<int>--><!--Device-Component-getDisplayId(): Promise<int>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | - Promise used to return the ID of the display to which the component belongs. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | - Promise used to return the ID of the display to which the component belongs. |
 
 **Error codes:**
 
@@ -363,13 +378,15 @@ Obtains the hint text of a component. This API uses a promise to return the resu
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-Component-getHint(): Promise<string>--><!--Device-Component-getHint(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | - Promise used to return the hint text of a component. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | - Promise used to return the hint text of a component. |
 
 **Error codes:**
 
@@ -404,13 +421,15 @@ Obtains the ID of this component. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Component-getId(): Promise<string>--><!--Device-Component-getId(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | - Promise used to return the component ID. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | - Promise used to return the component ID. |
 
 **Error codes:**
 
@@ -439,14 +458,13 @@ async function demo() {
 getOriginalText(): Promise<string>
 ```
 
-Obtains the text information of this component. This API uses a promise to return the result. If the
-[accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel-1)
-attribute of the component is set to **no** or **no-hide-descendants**, this API can be used
-to obtain the text information of the component, but [Component.getText()](arkts-test-component-c.md#gettext-1) cannot.
+Obtains the text information of this component. This API uses a promise to return the result. If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel-1)attribute of the component is set to **no** or **no-hide-descendants**, this API can be used to obtain the text information of the component, but [Component.getText()](arkts-test-component-c.md#gettext-1) cannot.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-Component-getOriginalText(): Promise<string>--><!--Device-Component-getOriginalText(): Promise<string>-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -454,7 +472,7 @@ to obtain the text information of the component, but [Component.getText()](arkts
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | - Promise used to return the text information of the component. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | - Promise used to return the text information of the component. |
 
 **Error codes:**
 
@@ -485,16 +503,18 @@ getText(): Promise<string>
 
 Obtains the text information of this component. This API uses a promise to return the result.
 
-> **NOTE**
->
-> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel-1)
-> attribute of the component is set to **no** or **no-hide-descendants**, this API cannot be used to obtain the
-> text information of the component. In this case, you can use
+> **NOTE**  
+>  
+> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel-1)  
+> attribute of the component is set to **no** or **no-hide-descendants**, this API cannot be used to obtain the  
+> text information of the component. In this case, you can use  
 > [Component.getOriginalText ()](arkts-test-component-c.md#getoriginaltext-1) instead.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Component-getText(): Promise<string>--><!--Device-Component-getText(): Promise<string>-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -502,7 +522,7 @@ Obtains the text information of this component. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | - Promise used to return the text information of the component. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | - Promise used to return the text information of the component. |
 
 **Error codes:**
 
@@ -537,13 +557,15 @@ Obtains the type of this component. This API uses a promise to return the result
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Component-getType(): Promise<string>--><!--Device-Component-getType(): Promise<string>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | - Promise used to return the component type. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | - Promise used to return the component type. |
 
 **Error codes:**
 
@@ -572,12 +594,13 @@ async function demo() {
 inputText(text: string): Promise<void>
 ```
 
-Clears the original text in a component and inputs the specified text. This API takes effect only for editable
-text components. This API uses a promise to return the result.
+Clears the original text in a component and inputs the specified text. This API takes effect only for editable text components. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Component-inputText(text: string): Promise<void>--><!--Device-Component-inputText(text: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -591,7 +614,7 @@ text components. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Error codes:**
 
@@ -621,12 +644,13 @@ async function demo() {
 inputText(text: string, mode: InputTextMode): Promise<void>
 ```
 
-Inputs text to a component in a specified text input mode. This API takes effect only for editable text
-components. This API uses a promise to return the result.
+Inputs text to a component in a specified text input mode. This API takes effect only for editable text components. This API uses a promise to return the result.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-Component-inputText(text: string, mode: InputTextMode): Promise<void>--><!--Device-Component-inputText(text: string, mode: InputTextMode): Promise<void>-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -635,20 +659,20 @@ components. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Input text. Currently, English, Chinese, and special characters are supported. |
-| mode | InputTextMode | Yes | Text input mode.For details, see [InputTextMode](arkts-test-inputtextmode-i.md).<br> **Note**: If **InputTextMode.addition** is set to **true**, the specified text is added to the end of theexisting text in the component. Otherwise, the specified text overwrites the existing text of the component. |
+| mode | [InputTextMode](arkts-test-inputtextmode-i.md) | Yes | Text input mode.For details, see [InputTextMode](arkts-test-inputtextmode-i.md).<br> **Note**: If **InputTextMode.addition** is set to **true**, the specified text is added to the end of the existing text in the component. Otherwise, the specified text overwrites the existing text of the component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function can not work correctly due to limited devicecapabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function can not work correctly due to limited device capabilities. |
 | [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
 
@@ -678,13 +702,15 @@ Obtains the checkable status of this component. This API uses a promise to retur
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Component-isCheckable(): Promise<boolean>--><!--Device-Component-isCheckable(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the component object is checkable.The value **true** indicates indicates that the component is checkable, and **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | - Promise used to return whether the component object is checkable.The value **true** indicates indicates that the component is checkable, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -723,13 +749,15 @@ Obtains the checked status of this component. This API uses a promise to return 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Component-isChecked(): Promise<boolean>--><!--Device-Component-isChecked(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return the checked status of the component object.The value **true** indicates indicates that the component is checked, and **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | - Promise used to return the checked status of the component object.The value **true** indicates indicates that the component is checked, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -768,13 +796,15 @@ Obtains the clickable status of this component. This API uses a promise to retur
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Component-isClickable(): Promise<boolean>--><!--Device-Component-isClickable(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the component object is clickable.The value **true** indicates that the component is clickable, and **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | - Promise used to return whether the component object is clickable.The value **true** indicates that the component is clickable, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -813,13 +843,15 @@ Obtains the enabled status of this component. This API uses a promise to return 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Component-isEnabled(): Promise<boolean>--><!--Device-Component-isEnabled(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the component is enabled.The value **true** indicates that the component is enabled, and **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | - Promise used to return whether the component is enabled.The value **true** indicates that the component is enabled, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -858,13 +890,15 @@ Checks whether a component is focused. This API uses a promise to return the res
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Component-isFocused(): Promise<boolean>--><!--Device-Component-isFocused(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the component is focused.The value **true** indicates that the component is focused, and **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | - Promise used to return whether the component is focused.The value **true** indicates that the component is focused, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -903,13 +937,15 @@ Obtains the clickable status of this component. This API uses a promise to retur
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Component-isLongClickable(): Promise<boolean>--><!--Device-Component-isLongClickable(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the component object is clickable.The value **true** indicates that the component is clickable, and **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | - Promise used to return whether the component object is clickable.The value **true** indicates that the component is clickable, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -948,13 +984,15 @@ Obtains the scrollable status of this component. This API uses a promise to retu
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Component-isScrollable(): Promise<boolean>--><!--Device-Component-isScrollable(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the component object is scrollable.The value **true** indicates that the component is scrollable, and **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | - Promise used to return whether the component object is scrollable.The value **true** indicates that the component is scrollable, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -993,13 +1031,15 @@ Obtains the selected status of this component. This API uses a promise to return
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Component-isSelected(): Promise<boolean>--><!--Device-Component-isSelected(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the component is selected.The value **true** indicates that the component is selected, and **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | - Promise used to return whether the component is selected.The value **true** indicates that the component is selected, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -1038,13 +1078,15 @@ Long-clicks this component. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Component-longClick(): Promise<void>--><!--Device-Component-longClick(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Error codes:**
 
@@ -1079,6 +1121,8 @@ Pinches in a component at the specified scale. This API uses a promise to return
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Component-pinchIn(scale: double): Promise<void>--><!--Device-Component-pinchIn(scale: double): Promise<void>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -1091,7 +1135,7 @@ Pinches in a component at the specified scale. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Error codes:**
 
@@ -1127,6 +1171,8 @@ Pinches out a component at the specified scale. This API uses a promise to retur
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Component-pinchOut(scale: double): Promise<void>--><!--Device-Component-pinchOut(scale: double): Promise<void>-End-->
+
 **System capability:** SystemCapability.Test.UiTest
 
 **Parameters:**
@@ -1139,7 +1185,7 @@ Pinches out a component at the specified scale. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Error codes:**
 
@@ -1169,12 +1215,13 @@ async function demo() {
 scrollSearch(on: On): Promise<Component>
 ```
 
-Scrolls on this component to search for the target component. This API is applicable to components that support
-scrolling. This API uses a promise to return the result.
+Scrolls on this component to search for the target component. This API is applicable to components that support scrolling. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Component-scrollSearch(on: On): Promise<Component>--><!--Device-Component-scrollSearch(on: On): Promise<Component>-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -1182,13 +1229,13 @@ scrolling. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | On | Yes | Attributes of the target component. |
+| on | [On](arkts-test-on-c.md) | Yes | Attributes of the target component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Component&gt; | - Promise used to return the target component. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Component> | - Promise used to return the target component. |
 
 **Error codes:**
 
@@ -1218,13 +1265,13 @@ async function demo() {
 scrollSearch(on: On, vertical?: boolean, offset?: number): Promise<Component>
 ```
 
-Scrolls on this component to search for the target component. This API is applicable to components that support
-scrolling. You can specify the scrolling direction and the offset between the scrolling start and end points and
-the component border. This API uses a promise to return the result.
+Scrolls on this component to search for the target component. This API is applicable to components that support scrolling. You can specify the scrolling direction and the offset between the scrolling start and end points and the component border. This API uses a promise to return the result.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-Component-scrollSearch(on: On, vertical?: boolean, offset?: number): Promise<Component>--><!--Device-Component-scrollSearch(on: On, vertical?: boolean, offset?: number): Promise<Component>-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -1232,15 +1279,15 @@ the component border. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | On | Yes | Attributes of the target component. |
-| vertical | boolean | No | Whether the search direction is vertical. The default value **true** indicates that thesearch direction is vertical. **false** indicates that the search direction is horizontal. |
-| offset | number | No | Offset from the scrolling start/end point to the component border, in pixels. The defaultvalue is **80**. The value is an integer greater than or equal to 0.<br>Default value: 80<br>Unit: px |
+| on | [On](arkts-test-on-c.md) | Yes | Attributes of the target component. |
+| vertical | boolean | No | Whether the search direction is vertical. The default value **true** indicates that the search direction is vertical. **false** indicates that the search direction is horizontal. |
+| offset | number | No | Offset from the scrolling start/end point to the component border, in pixels. The default value is **80**. The value is an integer greater than or equal to 0.<br>Default value: 80<br>Unit: px |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Component&gt; | - Promise used to return the target component. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Component> | - Promise used to return the target component. |
 
 **Error codes:**
 
@@ -1270,12 +1317,13 @@ async function demo() {
 scrollToBottom(speed?: number): Promise<void>
 ```
 
-Scrolls to the bottom of this component. This API is applicable to components that support scrolling. This API
-uses a promise to return the result.
+Scrolls to the bottom of this component. This API is applicable to components that support scrolling. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Component-scrollToBottom(speed?: int): Promise<void>--><!--Device-Component-scrollToBottom(speed?: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -1289,13 +1337,13 @@ uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameterverification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
 
@@ -1319,12 +1367,13 @@ async function demo() {
 scrollToTop(speed?: number): Promise<void>
 ```
 
-Scrolls to the top of this component. This API is applicable to components that support scrolling. This API uses
-a promise to return the result.
+Scrolls to the top of this component. This API is applicable to components that support scrolling. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Component-scrollToTop(speed?: int): Promise<void>--><!--Device-Component-scrollToTop(speed?: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -1338,13 +1387,13 @@ a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameterverification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 | [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
 

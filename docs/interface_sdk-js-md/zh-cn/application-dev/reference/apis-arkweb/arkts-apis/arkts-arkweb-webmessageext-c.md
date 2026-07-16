@@ -4,7 +4,15 @@ The message received or sent from web message port.
 
 **起始版本：** 10
 
+<!--Device-webview-class WebMessageExt--><!--Device-webview-class WebMessageExt-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
+
+## 导入模块
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+```
 
 ## getArray
 
@@ -16,7 +24,9 @@ getArray(): Array<string | number | boolean>
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessageExt-getArray(): Array<string | number | boolean>--><!--Device-WebMessageExt-getArray(): Array<string | number | boolean>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -24,7 +34,7 @@ getArray(): Array<string | number | boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string \| number \| boolean&gt; | - Returns data of Array type |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string \| number \| boolean> | - Returns data of Array type |
 
 **错误码：**
 
@@ -42,7 +52,9 @@ getArrayBuffer(): ArrayBuffer
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessageExt-getArrayBuffer(): ArrayBuffer--><!--Device-WebMessageExt-getArrayBuffer(): ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -50,7 +62,7 @@ getArrayBuffer(): ArrayBuffer
 
 | 类型 | 说明 |
 | --- | --- |
-| ArrayBuffer | - 返回原始二进制数据。 |
+| [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | - 返回原始二进制数据。 |
 
 **错误码：**
 
@@ -68,7 +80,9 @@ getBoolean(): boolean
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessageExt-getBoolean(): boolean--><!--Device-WebMessageExt-getBoolean(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -94,7 +108,9 @@ getError(): Error
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessageExt-getError(): Error--><!--Device-WebMessageExt-getError(): Error-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -120,7 +136,9 @@ getNumber(): number
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessageExt-getNumber(): number--><!--Device-WebMessageExt-getNumber(): number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -146,7 +164,9 @@ getString(): string
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessageExt-getString(): string--><!--Device-WebMessageExt-getString(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -172,7 +192,9 @@ getType(): WebMessageType
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessageExt-getType(): WebMessageType--><!--Device-WebMessageExt-getType(): WebMessageType-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -180,7 +202,7 @@ getType(): WebMessageType
 
 | 类型 | 说明 |
 | --- | --- |
-| WebMessageType | - 返回类型为 WebMessageType 的数据。 |
+| [WebMessageType](arkts-arkweb-webmessagetype-e.md) | - 返回类型为 WebMessageType 的数据。 |
 
 ## setArray
 
@@ -192,7 +214,9 @@ setArray(message: Array<string | number | boolean>): void
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessageExt-setArray(message: Array<string | number | boolean>): void--><!--Device-WebMessageExt-setArray(message: Array<string | number | boolean>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -200,7 +224,7 @@ setArray(message: Array<string | number | boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| message | Array&lt;string \| number \| boolean&gt; | 是 | 数组类型数据。 |
+| message | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string \| number \| boolean> | 是 | 数组类型数据。 |
 
 **错误码：**
 
@@ -219,7 +243,9 @@ setArrayBuffer(message: ArrayBuffer): void
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessageExt-setArrayBuffer(message: ArrayBuffer): void--><!--Device-WebMessageExt-setArrayBuffer(message: ArrayBuffer): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -227,7 +253,7 @@ setArrayBuffer(message: ArrayBuffer): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| message | ArrayBuffer | 是 | 原始二进制类型数据。 |
+| message | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | 原始二进制类型数据。 |
 
 **错误码：**
 
@@ -246,7 +272,9 @@ setBoolean(message: boolean): void
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessageExt-setBoolean(message: boolean): void--><!--Device-WebMessageExt-setBoolean(message: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -273,7 +301,9 @@ setError(message: Error): void
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessageExt-setError(message: Error): void--><!--Device-WebMessageExt-setError(message: Error): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -300,7 +330,9 @@ setNumber(message: number): void
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessageExt-setNumber(message: number): void--><!--Device-WebMessageExt-setNumber(message: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -327,7 +359,9 @@ setString(message: string): void
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessageExt-setString(message: string): void--><!--Device-WebMessageExt-setString(message: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -354,7 +388,9 @@ setType(type: WebMessageType): void
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebMessageExt-setType(type: WebMessageType): void--><!--Device-WebMessageExt-setType(type: WebMessageType): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -362,7 +398,7 @@ setType(type: WebMessageType): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | WebMessageType | 是 | 设置 WebMessageType 类型数据。 |
+| type | [WebMessageType](arkts-arkweb-webmessagetype-e.md) | 是 | 设置 WebMessageType 类型数据。 |
 
 **错误码：**
 

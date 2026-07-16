@@ -12,12 +12,13 @@ import { onScreen } from '@kit.MultimodalAwarenessKit';
 function sendControlEvent(event: ControlEvent): Promise<void>
 ```
 
-If the target window is displayed on the screen, you can use this API to send screen control events based on the
-paragraph information obtained via [onScreen.getPageContent](arkts-multimodalawareness-getpagecontent-f-sys.md#getpagecontent-1).
+If the target window is displayed on the screen, you can use this API to send screen control events based on the paragraph information obtained via [onScreen.getPageContent](arkts-multimodalawareness-getpagecontent-f-sys.md#getpagecontent-1).
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.SIMULATE_USER_INPUT
+
+<!--Device-onScreen-function sendControlEvent(event: ControlEvent): Promise<void>--><!--Device-onScreen-function sendControlEvent(event: ControlEvent): Promise<void>-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -27,13 +28,13 @@ paragraph information obtained via [onScreen.getPageContent](arkts-multimodalawa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | ControlEvent | Yes | Onscreen control event. |
+| event | [ControlEvent](arkts-multimodalawareness-controlevent-i-sys.md) | Yes | Onscreen control event. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 

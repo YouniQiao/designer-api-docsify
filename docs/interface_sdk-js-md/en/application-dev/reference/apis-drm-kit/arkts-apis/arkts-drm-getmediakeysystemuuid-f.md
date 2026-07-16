@@ -18,6 +18,8 @@ Get a MediaKeySystem's UUID.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-drm-function getMediaKeySystemUuid(name: string): string--><!--Device-drm-function getMediaKeySystemUuid(name: string): string-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 **Parameters:**

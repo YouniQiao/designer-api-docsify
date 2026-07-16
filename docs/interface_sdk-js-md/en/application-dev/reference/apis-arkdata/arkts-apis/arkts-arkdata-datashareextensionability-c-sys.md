@@ -4,6 +4,8 @@ This module provides data sharing and expansion capabilities.
 
 **Since:** 9
 
+<!--Device-unnamed-declare class DataShareExtensionAbility--><!--Device-unnamed-declare class DataShareExtensionAbility-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Batch inserts data into the database. This API is called by the server and can b
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataShareExtensionAbility-batchInsert?(uri: string, valueBuckets: Array<ValuesBucket>, callback: AsyncCallback<number>): void--><!--Device-DataShareExtensionAbility-batchInsert?(uri: string, valueBuckets: Array<ValuesBucket>, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **System API:** This is a system API.
@@ -35,8 +39,8 @@ Batch inserts data into the database. This API is called by the server and can b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to insert. |
-| valueBuckets | Array&lt;ValuesBucket&gt; | Yes | Data to insert. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the number of inserted data records. |
+| valueBuckets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ValuesBucket> | Yes | Data to insert. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the number of inserted data records. |
 
 **Example**
 
@@ -77,6 +81,14 @@ Batch updates data into the database. This API is called by the server and can b
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataShareExtensionAbility-batchUpdate?(
+    operations: Record<string, Array<UpdateOperation>>,
+    callback: AsyncCallback<Record<string, Array<number>>>
+  ): void--><!--Device-DataShareExtensionAbility-batchUpdate?(
+    operations: Record<string, Array<UpdateOperation>>,
+    callback: AsyncCallback<Record<string, Array<number>>>
+  ): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **System API:** This is a system API.
@@ -85,8 +97,8 @@ Batch updates data into the database. This API is called by the server and can b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| operations | Record&lt;string, Array&lt;UpdateOperation&gt;&gt; | Yes | Collection of the path of the data to update, updateconditions, and new data. |
-| callback | AsyncCallback&lt;Record&lt;string, Array&lt;number&gt;&gt;&gt; | Yes | Callback used to return an array of updated datarecords. The value **-1** means the update operation fails. |
+| operations | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Array<UpdateOperation>> | Yes | Collection of the path of the data to update, update conditions, and new data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Record<string, Array<number>>> | Yes | Callback used to return an array of updated data records. The value **-1** means the update operation fails. |
 
 **Example**
 
@@ -135,6 +147,8 @@ Deletes data from the database. This API can be overridden as required.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataShareExtensionAbility-delete?(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<number>): void--><!--Device-DataShareExtensionAbility-delete?(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **System API:** This is a system API.
@@ -145,7 +159,7 @@ Deletes data from the database. This API can be overridden as required.
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to delete. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Filter criteria for deleting data. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the number of deleted data records. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the number of deleted data records. |
 
 **Example**
 
@@ -182,6 +196,8 @@ Denormalizes a URI. This API can be overridden as required.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataShareExtensionAbility-denormalizeUri?(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataShareExtensionAbility-denormalizeUri?(uri: string, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **System API:** This is a system API.
@@ -191,7 +207,7 @@ Denormalizes a URI. This API can be overridden as required.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-c.md) to denormalize. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, thedenormalized URI is returned. If the URI passed in is returned, denormalization is not required. Ifdenormalization is not supported, **null** is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the result. If the operation is successful, the denormalized URI is returned. If the URI passed in is returned, denormalization is not required. If denormalization is not supported, **null** is returned. |
 
 **Example**
 
@@ -227,6 +243,8 @@ Inserts data into the database. This API can be overridden as required.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataShareExtensionAbility-insert?(uri: string, valueBucket: ValuesBucket, callback: AsyncCallback<number>): void--><!--Device-DataShareExtensionAbility-insert?(uri: string, valueBucket: ValuesBucket, callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **System API:** This is a system API.
@@ -236,8 +254,8 @@ Inserts data into the database. This API can be overridden as required.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to insert. |
-| valueBucket | ValuesBucket | Yes | Data to insert. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the index of the inserted data record. |
+| valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Data to insert. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the index of the inserted data record. |
 
 **Example**
 
@@ -276,6 +294,8 @@ Normalizes a URI. This API can be overridden as required.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataShareExtensionAbility-normalizeUri?(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataShareExtensionAbility-normalizeUri?(uri: string, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **System API:** This is a system API.
@@ -285,7 +305,7 @@ Normalizes a URI. This API can be overridden as required.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-c.md) to normalize. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, thenormalized URI is returned. Otherwise, **null** is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the result. If the operation is successful, the normalized URI is returned. Otherwise, **null** is returned. |
 
 **Example**
 
@@ -315,12 +335,13 @@ export default class DataShareExtAbility extends DataShareExtensionAbility {
 onCreate?(want: Want, callback: AsyncCallback<void>): void
 ```
 
-Called by the server to initialize service logic when the DataShare client connects to the
-DataShareExtensionAbility server. This API can be overridden as required.
+Called by the server to initialize service logic when the DataShare client connects to the DataShareExtensionAbility server. This API can be overridden as required.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareExtensionAbility-onCreate?(want: Want, callback: AsyncCallback<void>): void--><!--Device-DataShareExtensionAbility-onCreate?(want: Want, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
 
@@ -330,8 +351,8 @@ DataShareExtensionAbility server. This API can be overridden as required.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information, including the ability name and bundle name. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback that returns no value. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information, including the ability name and bundle name. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback that returns no value. |
 
 **Example**
 
@@ -383,6 +404,18 @@ Queries data from the database. This API can be overridden as required.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataShareExtensionAbility-query?(
+    uri: string,
+    predicates: dataSharePredicates.DataSharePredicates,
+    columns: Array<string>,
+    callback: AsyncCallback<Object>
+  ): void--><!--Device-DataShareExtensionAbility-query?(
+    uri: string,
+    predicates: dataSharePredicates.DataSharePredicates,
+    columns: Array<string>,
+    callback: AsyncCallback<Object>
+  ): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **System API:** This is a system API.
@@ -393,8 +426,8 @@ Queries data from the database. This API can be overridden as required.
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to query. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Filter criteria for querying data. |
-| columns | Array&lt;string&gt; | Yes | Columns to query. If this parameter is empty, all columns will be queried. |
-| callback | AsyncCallback&lt;Object&gt; | Yes | Callback used to return the result set obtained. |
+| columns | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Columns to query. If this parameter is empty, all columns will be queried. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Object> | Yes | Callback used to return the result set obtained. |
 
 **Example**
 
@@ -439,6 +472,18 @@ Updates data in the database. This API can be overridden as required.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataShareExtensionAbility-update?(
+    uri: string,
+    predicates: dataSharePredicates.DataSharePredicates,
+    valueBucket: ValuesBucket,
+    callback: AsyncCallback<number>
+  ): void--><!--Device-DataShareExtensionAbility-update?(
+    uri: string,
+    predicates: dataSharePredicates.DataSharePredicates,
+    valueBucket: ValuesBucket,
+    callback: AsyncCallback<number>
+  ): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **System API:** This is a system API.
@@ -449,8 +494,8 @@ Updates data in the database. This API can be overridden as required.
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to update. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Filter criteria for updating data. |
-| valueBucket | ValuesBucket | Yes | New data. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the number of data records updated. |
+| valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | New data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the number of data records updated. |
 
 **Example**
 
@@ -488,6 +533,8 @@ Context of the DataShare ExtensionAbility.
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareExtensionAbility-context: ExtensionContext--><!--Device-DataShareExtensionAbility-context: ExtensionContext-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
 

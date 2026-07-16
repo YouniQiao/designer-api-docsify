@@ -2,17 +2,15 @@
 
 Provides APIs for basic image operations, including obtaining image information and reading and writing image data.
 
-An Image instance is returned when [readNextImage](arkts-image-imagereceiver-i.md#readnextimage-1) and
-[readLatestImage](arkts-image-imagereceiver-i.md#readlatestimage-1) are called. This class inherits from
-[ISendable](../../../../arkts-utils/arkts-sendable.md#isendable).
+An Image instance is returned when [readNextImage](arkts-image-imagereceiver-i.md#readnextimage-1) and [readLatestImage](arkts-image-imagereceiver-i.md#readlatestimage-1) are called. This class inherits from [ISendable](../../../../arkts-utils/arkts-sendable.md#isendable).
 
-Images occupy a large amount of memory. When you finish using an Image instance, call
-[release](arkts-image-pixelmap-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure
-that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Images occupy a large amount of memory. When you finish using an Image instance, call [release](arkts-image-pixelmap-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Inheritance/Implementation:** Image extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-isendable-i.md)
 
 **Since:** 12
+
+<!--Device-sendableImage-interface Image extends lang.ISendable--><!--Device-sendableImage-interface Image extends lang.ISendable-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -28,10 +26,11 @@ import { sendableImage } from '@kit.ImageKit';
 getComponent(componentType: image.ComponentType): Promise<image.Component>
 ```
 
-Obtains the component buffer from the Image instance based on the color component type. This API uses a promise
-to return the result. The thread that runs **getComponent** is insecure.
+Obtains the component buffer from the Image instance based on the color component type. This API uses a promise to return the result. The thread that runs **getComponent** is insecure.
 
 **Since:** 12
+
+<!--Device-Image-getComponent(componentType: image.ComponentType): Promise<image.Component>--><!--Device-Image-getComponent(componentType: image.ComponentType): Promise<image.Component>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -45,7 +44,7 @@ to return the result. The thread that runs **getComponent** is insecure.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.Component&gt; | Promise used to return the component buffer. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<image.Component> | Promise used to return the component buffer. |
 
 **Example**
 
@@ -80,13 +79,13 @@ Releases this Image instance. This API uses a promise to return the result.
 
 The corresponding resources must be released before another image arrives.
 
-Images occupy a large amount of memory. When you finish using an Image instance, call this API to free the memory
-promptly.
+Images occupy a large amount of memory. When you finish using an Image instance, call this API to free the memory promptly.
 
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished
-and the instance is no longer needed.
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 12
+
+<!--Device-Image-release(): Promise<void>--><!--Device-Image-release(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -94,7 +93,7 @@ and the instance is no longer needed.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Example**
 
@@ -131,6 +130,8 @@ Image area to be cropped.
 
 **Since:** 12
 
+<!--Device-Image-clipRect: Region--><!--Device-Image-clipRect: Region-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## format
@@ -139,12 +140,13 @@ Image area to be cropped.
 readonly format: number
 ```
 
-Image format. For details, see
-[OH_NativeBuffer_Format](../../../../reference/apis-arkgraphics2d/c-apis/capi-buffer-common-h.md#oh_nativebuffer_format).
+Image format. For details, see [OH_NativeBuffer_Format](../../../../reference/apis-arkgraphics2d/c-apis/capi-buffer-common-h.md#oh_nativebuffer_format).
 
 **Type:** number
 
 **Since:** 12
+
+<!--Device-Image-readonly format: number--><!--Device-Image-readonly format: number-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -156,22 +158,19 @@ readonly size: Size
 
 Image size.
 
-If the Image object stores camera preview stream data (YUV image data), the width and height in **size**
-reflect the dimensions of the YUV image.
+If the Image object stores camera preview stream data (YUV image data), the width and height in **size** reflect the dimensions of the YUV image.
 
-If the Image object stores camera capture stream data (JPEG image data), given that it is an encoded file,
-the width in **size** is the size of the JPEG file, while the height is set to **1**.
+If the Image object stores camera capture stream data (JPEG image data), given that it is an encoded file,the width in **size** is the size of the JPEG file, while the height is set to **1**.
 
-The type of data stored in the Image object depends on whether the application passes the surface ID in the
-receiver to a previewOutput or captureOutput object of the camera.
+The type of data stored in the Image object depends on whether the application passes the surface ID in the receiver to a previewOutput or captureOutput object of the camera.
 
-For details about the best practices of camera preview and photo capture, see
-[Dual-Channel Preview (ArkTS)](../../../../media/camera/camera-dual-channel-preview.md) and
-[Photo Capture Sample (ArkTS)](../../../../media/camera/camera-shooting-case.md).
+For details about the best practices of camera preview and photo capture, see [Dual-Channel Preview (ArkTS)](../../../../media/camera/camera-dual-channel-preview.md) and [Photo Capture Sample (ArkTS)](../../../../media/camera/camera-shooting-case.md).
 
 **Type:** Size
 
 **Since:** 12
+
+<!--Device-Image-readonly size: Size--><!--Device-Image-readonly size: Size-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -181,17 +180,13 @@ For details about the best practices of camera preview and photo capture, see
 readonly timestamp: number
 ```
 
-Image timestamp. Timestamps, measured in nanoseconds, are usually monotonically increasing. The specific meaning
-and baseline of these timestamps are determined by the image producer, which is the camera in the camera preview
-and photo scenarios. As a result, images from different producers may carry timestamps with distinct meanings and
-baselines, making direct comparison between them infeasible. To obtain the generation time of a photo, you can
-use
-[getImageProperty](arkts-image-imagesource-i.md#getimageproperty-1)
-to read the related Exif information.
+Image timestamp. Timestamps, measured in nanoseconds, are usually monotonically increasing. The specific meaning and baseline of these timestamps are determined by the image producer, which is the camera in the camera preview and photo scenarios. As a result, images from different producers may carry timestamps with distinct meanings and baselines, making direct comparison between them infeasible. To obtain the generation time of a photo, you can use [getImageProperty](arkts-image-imagesource-i.md#getimageproperty-1)to read the related Exif information.
 
 **Type:** number
 
 **Since:** 12
+
+<!--Device-Image-readonly timestamp: number--><!--Device-Image-readonly timestamp: number-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

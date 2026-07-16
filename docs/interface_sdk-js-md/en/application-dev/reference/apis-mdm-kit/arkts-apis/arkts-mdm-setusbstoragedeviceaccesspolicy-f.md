@@ -14,26 +14,19 @@ function setUsbStorageDeviceAccessPolicy(admin: Want, usbPolicy: UsbPolicy): voi
 
 Sets the access policy of the USB storage device.
 
-> **NOTE**
-> > Before calling the API, read and write operations on the USB storage device should be suspended to ensure
+> **NOTE**  
+> > Before calling the API, read and write operations on the USB storage device should be suspended to ensure  
 > operational stability and data integrity. Otherwise, unexpected exceptions may occur.
 
-A policy conflict occurs when you set the USB storage device access policy to read, write, or read-only in the
-following scenarios:
+A policy conflict occurs when you set the USB storage device access policy to read, write, or read-only in the following scenarios:
 
-1. The USB capability of the device has been disabled using the [setDisallowedPolicy](arkts-mdm-setdisallowedpolicy-f.md#setdisallowedpolicy-1) API.
-2. The USB storage device has been disallowed to use through [addDisallowedUsbDevices](arkts-mdm-adddisallowedusbdevices-f.md#adddisallowedusbdevices-1).
-3. USB storage write access has been disabled for specific users via the [setDisallowedPolicyForAccount](arkts-mdm-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount-1) API.
+1. The USB capability of the device has been disabled using the [setDisallowedPolicy](arkts-mdm-setdisallowedpolicy-f.md#setdisallowedpolicy-1) API.2. The USB storage device has been disallowed to use through [addDisallowedUsbDevices](arkts-mdm-adddisallowedusbdevices-f.md#adddisallowedusbdevices-1).3. USB storage write access has been disabled for specific users via the [setDisallowedPolicyForAccount](arkts-mdm-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount-1) API.
 
-A policy conflict is reported if the USB storage device access policy is disabled by calling this API in the
-following scenarios:
+A policy conflict is reported if the USB storage device access policy is disabled by calling this API in the following scenarios:
 
-1. The USB capability of the device has been disabled using the [setDisallowedPolicy](arkts-mdm-setdisallowedpolicy-f.md#setdisallowedpolicy-1) API.
-2. The available USB devices have been added through [addAllowedUsbDevices](arkts-mdm-addallowedusbdevices-f.md#addallowedusbdevices-1).
-3. USB storage write access has been disabled for specific users via the [setDisallowedPolicyForAccount](arkts-mdm-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount-1) API.
+1. The USB capability of the device has been disabled using the [setDisallowedPolicy](arkts-mdm-setdisallowedpolicy-f.md#setdisallowedpolicy-1) API.2. The available USB devices have been added through [addAllowedUsbDevices](arkts-mdm-addallowedusbdevices-f.md#addallowedusbdevices-1).3. USB storage write access has been disabled for specific users via the [setDisallowedPolicyForAccount](arkts-mdm-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount-1) API.
 
-You can disable a USB storage device by calling this API or
-[addDisallowedUsbDevices](arkts-mdm-adddisallowedusbdevices-f.md#adddisallowedusbdevices-1). The latter is recommended.
+You can disable a USB storage device by calling this API or [addDisallowedUsbDevices](arkts-mdm-adddisallowedusbdevices-f.md#adddisallowedusbdevices-1). The latter is recommended.
 
 **Since:** 12
 
@@ -43,14 +36,16 @@ You can disable a USB storage device by calling this API or
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-usbManager-function setUsbStorageDeviceAccessPolicy(admin: Want, usbPolicy: UsbPolicy): void--><!--Device-usbManager-function setUsbStorageDeviceAccessPolicy(admin: Want, usbPolicy: UsbPolicy): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| usbPolicy | UsbPolicy | Yes | Access policy of the USB storage device. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| usbPolicy | [UsbPolicy](arkts-mdm-usbpolicy-e.md) | Yes | Access policy of the USB storage device. |
 
 **Error codes:**
 

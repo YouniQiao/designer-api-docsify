@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-i18n-export enum NormalizerMode--><!--Device-i18n-export enum NormalizerMode-End-->
+
 **系统能力：** SystemCapability.Global.I18n
 
 ## NFC
@@ -16,7 +18,9 @@ NFC范式。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NormalizerMode-NFC = 1--><!--Device-NormalizerMode-NFC = 1-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -30,7 +34,9 @@ NFD范式。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NormalizerMode-NFD = 2--><!--Device-NormalizerMode-NFD = 2-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -44,7 +50,9 @@ NFKC范式。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NormalizerMode-NFKC = 3--><!--Device-NormalizerMode-NFKC = 3-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -58,7 +66,9 @@ NFKD范式。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-NormalizerMode-NFKD = 4--><!--Device-NormalizerMode-NFKD = 4-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

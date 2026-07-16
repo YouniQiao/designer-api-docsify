@@ -1,5 +1,11 @@
 # alterPin2（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## alterPin2
 
 ```TypeScript
@@ -12,6 +18,8 @@ Change Pin2 password.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function alterPin2(slotId: int, newPin2: string, oldPin2: string, callback: AsyncCallback<LockStatusResponse>): void--><!--Device-sim-function alterPin2(slotId: int, newPin2: string, oldPin2: string, callback: AsyncCallback<LockStatusResponse>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -23,7 +31,7 @@ Change Pin2 password.
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
 | newPin2 | string | 是 | Indicates a new password. |
 | oldPin2 | string | 是 | Indicates old password. |
-| callback | AsyncCallback&lt;LockStatusResponse&gt; | 是 | Indicates the callback for gettingthe response to obtain the SIM card lock status of the specified card slot. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<LockStatusResponse> | 是 | Indicates the callback for getting the response to obtain the SIM card lock status of the specified card slot. |
 
 **错误码：**
 
@@ -64,6 +72,8 @@ Change Pin2 password.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function alterPin2(slotId: int, newPin2: string, oldPin2: string): Promise<LockStatusResponse>--><!--Device-sim-function alterPin2(slotId: int, newPin2: string, oldPin2: string): Promise<LockStatusResponse>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -80,7 +90,7 @@ Change Pin2 password.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;LockStatusResponse&gt; | Returns the response to obtainthe SIM card lock status of the specified card slot. |
+| Promise<LockStatusResponse> | Returns the response to obtain the SIM card lock status of the specified card slot. |
 
 **错误码：**
 

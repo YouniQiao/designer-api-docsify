@@ -1,5 +1,11 @@
 # @ohos.enterprise.EnterpriseAdminExtensionAbility
 
+## 导入模块
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
+```
+
 ## 汇总
 
 ### 类

@@ -4,6 +4,8 @@ Device Information Definition
 
 **Since:** 10
 
+<!--Device-avSession-interface DeviceInfo--><!--Device-avSession-interface DeviceInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## Modules to Import
@@ -18,13 +20,13 @@ import { avSession } from '@kit.AVSessionKit';
 authenticationStatus?: number
 ```
 
-Define different authentication status.
-0: Device not authenticated.
-1: Device already authenticated.
+Define different authentication status.0: Device not authenticated.1: Device already authenticated.
 
 **Type:** number
 
 **Since:** 11
+
+<!--Device-DeviceInfo-authenticationStatus?: int--><!--Device-DeviceInfo-authenticationStatus?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -36,14 +38,15 @@ Define different authentication status.
 hiPlayDeviceInfo?: HiPlayDeviceInfo
 ```
 
-HiPlayDeviceInfo is used to obtain device-specific information for HiPlay.
-transmit info during casting.
+HiPlayDeviceInfo is used to obtain device-specific information for HiPlay.transmit info during casting.
 
 **Type:** HiPlayDeviceInfo
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DeviceInfo-hiPlayDeviceInfo?: HiPlayDeviceInfo--><!--Device-DeviceInfo-hiPlayDeviceInfo?: HiPlayDeviceInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -61,6 +64,8 @@ device ip address if available.
 
 **Since:** 10
 
+<!--Device-DeviceInfo-ipAddress?: string--><!--Device-DeviceInfo-ipAddress?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -77,6 +82,8 @@ Indicates the current device is legacy or not.
 
 **Since:** 13
 
+<!--Device-DeviceInfo-isLegacy?: boolean--><!--Device-DeviceInfo-isLegacy?: boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -87,13 +94,13 @@ Indicates the current device is legacy or not.
 mediumTypes?: number
 ```
 
-Medium types used to discover devices.
-1: BLE
-2: COAP
+Medium types used to discover devices.1: BLE2: COAP
 
 **Type:** number
 
 **Since:** 13
+
+<!--Device-DeviceInfo-mediumTypes?: int--><!--Device-DeviceInfo-mediumTypes?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -111,6 +118,8 @@ Network id.
 
 **Since:** 13
 
+<!--Device-DeviceInfo-networkId?: string--><!--Device-DeviceInfo-networkId?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -126,6 +135,8 @@ device provider which supplies the route capability.
 **Type:** number
 
 **Since:** 10
+
+<!--Device-DeviceInfo-providerId?: int--><!--Device-DeviceInfo-providerId?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 

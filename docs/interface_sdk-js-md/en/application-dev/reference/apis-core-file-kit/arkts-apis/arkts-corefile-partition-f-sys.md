@@ -12,12 +12,13 @@ import { volumeManager } from '@kit.CoreFileKit';
 function partition(diskId: string, type: number, callback: AsyncCallback<void>): void
 ```
 
-Partitions a disk. This API uses an asynchronous callback to return the result. The system supports access to
-multi-partition disks. Currently, this API can partition a disk into only one partition.
+Partitions a disk. This API uses an asynchronous callback to return the result. The system supports access to multi-partition disks. Currently, this API can partition a disk into only one partition.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.MOUNT_FORMAT_MANAGER
+
+<!--Device-volumeManager-function partition(diskId: string, type: int, callback: AsyncCallback<void>): void--><!--Device-volumeManager-function partition(diskId: string, type: int, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -29,7 +30,7 @@ multi-partition disks. Currently, this API can partition a disk into only one pa
 | --- | --- | --- | --- |
 | diskId | string | Yes | ID of the disk to partition. |
 | type | number | Yes | Partition type. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -49,12 +50,13 @@ multi-partition disks. Currently, this API can partition a disk into only one pa
 function partition(diskId: string, type: number): Promise<void>
 ```
 
-Partitions a disk. This API uses a promise to return the result. The system supports access to multi-partition
-disks. Currently, this API can partition a disk into only one partition.
+Partitions a disk. This API uses a promise to return the result. The system supports access to multi-partition disks. Currently, this API can partition a disk into only one partition.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.MOUNT_FORMAT_MANAGER
+
+<!--Device-volumeManager-function partition(diskId: string, type: int): Promise<void>--><!--Device-volumeManager-function partition(diskId: string, type: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -71,7 +73,7 @@ disks. Currently, this API can partition a disk into only one partition.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -1,9 +1,10 @@
 # WebDestroyMode
 
-Enumerates the destroy modes of the **Web** component. When the Web component is destroyed, the destroy mode
-affects the resource release time of the Web kernel, such as the JavaScript running context and rendering context.
+Enumerates the destroy modes of the **Web** component. When the Web component is destroyed, the destroy mode affects the resource release time of the Web kernel, such as the JavaScript running context and rendering context.
 
 **Since:** 20
+
+<!--Device-webview-enum WebDestroyMode--><!--Device-webview-enum WebDestroyMode-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -17,6 +18,8 @@ Normal mode. The system determines the destroy time of **Web** component resourc
 
 **Since:** 20
 
+<!--Device-WebDestroyMode-NORMAL_MODE = 0--><!--Device-WebDestroyMode-NORMAL_MODE = 0-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## FAST_MODE
@@ -25,10 +28,11 @@ Normal mode. The system determines the destroy time of **Web** component resourc
 FAST_MODE = 1
 ```
 
-Quick mode. When the **Web** component is destroyed, the related internal resources are
-destroyed immediately.
+Quick mode. When the **Web** component is destroyed, the related internal resources are destroyed immediately.
 
 **Since:** 20
+
+<!--Device-WebDestroyMode-FAST_MODE = 1--><!--Device-WebDestroyMode-FAST_MODE = 1-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

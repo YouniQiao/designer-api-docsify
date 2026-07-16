@@ -12,13 +12,13 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function isInSandbox(): Promise<boolean>
 ```
 
-Checks whether this application is running in a DLP sandbox environment. This API uses a promise to return the
-result.
+Checks whether this application is running in a DLP sandbox environment. This API uses a promise to return the result.
 
-This API is used to determine whether the current application is running in a DLP sandbox environment. If it is,
-the system can perform operations or call APIs for sandbox applications.
+This API is used to determine whether the current application is running in a DLP sandbox environment. If it is,the system can perform operations or call APIs for sandbox applications.
 
 **Since:** 10
+
+<!--Device-dlpPermission-function isInSandbox(): Promise<boolean>--><!--Device-dlpPermission-function isInSandbox(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -26,7 +26,7 @@ the system can perform operations or call APIs for sandbox applications.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the application isrunning in a sandbox; the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means the application is running in a sandbox; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -55,13 +55,13 @@ dlpPermission.isInSandbox().then((isInSandbox) => { // Check whether the applica
 function isInSandbox(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether this application is running in a DLP sandbox environment. This API uses an asynchronous callback
-to return the result.
+Checks whether this application is running in a DLP sandbox environment. This API uses an asynchronous callback to return the result.
 
-This API is used to determine whether the current application is running in a DLP sandbox environment. If it is,
-the system can perform operations or call APIs for sandbox applications.
+This API is used to determine whether the current application is running in a DLP sandbox environment. If it is,the system can perform operations or call APIs for sandbox applications.
 
 **Since:** 10
+
+<!--Device-dlpPermission-function isInSandbox(callback: AsyncCallback<boolean>): void--><!--Device-dlpPermission-function isInSandbox(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -69,7 +69,7 @@ the system can perform operations or call APIs for sandbox applications.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. The value **true** means the application isrunning in a sandbox; the value **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. The value **true** means the application is running in a sandbox; the value **false** means the opposite. |
 
 **Error codes:**
 

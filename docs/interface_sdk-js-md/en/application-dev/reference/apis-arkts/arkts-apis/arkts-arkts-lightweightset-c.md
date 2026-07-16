@@ -4,6 +4,8 @@ LightWeightSet stores a set of values, each of which must be unique.
 
 **Since:** 8
 
+<!--Device-unnamed-declare class LightWeightSet<T>--><!--Device-unnamed-declare class LightWeightSet<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -24,13 +26,15 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightSet-[Symbol.iterator](): IterableIterator<T>--><!--Device-LightWeightSet-[Symbol.iterator](): IterableIterator<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;T&gt; | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<T> | @throws { BusinessError } 10200011 - The Symbol.iterator method cannot be bound. |
 
 **Error codes:**
 
@@ -88,6 +92,8 @@ Adds an element to this LightWeightSet.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightSet-add(obj: T): boolean--><!--Device-LightWeightSet-add(obj: T): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -100,7 +106,7 @@ Adds an element to this LightWeightSet.
 
 | Type | Description |
 | --- | --- |
-| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false**is returned. |
+| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -129,19 +135,21 @@ Adds all elements in a LightWeightSet to this LightWeightSet.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightSet-addAll(set: LightWeightSet<T>): boolean--><!--Device-LightWeightSet-addAll(set: LightWeightSet<T>): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| set | LightWeightSet&lt;T&gt; | Yes | LightWeightSet whose elements are to be added to the current LightWeightSet. |
+| set | [LightWeightSet](arkts-arkts-lightweightset-c.md)<T> | Yes | LightWeightSet whose elements are to be added to the current LightWeightSet. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false**is returned. |
+| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -175,6 +183,8 @@ Clears this LightWeightSet and sets its length to **0**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightSet-clear(): void--><!--Device-LightWeightSet-clear(): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
@@ -207,6 +217,8 @@ A constructor used to create a **LightWeightSet** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightSet-constructor()--><!--Device-LightWeightSet-constructor()-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
@@ -234,13 +246,15 @@ Returns an iterator that contains all the elements in this LightWeightSet.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightSet-entries(): IterableIterator<[T, T]>--><!--Device-LightWeightSet-entries(): IterableIterator<[T, T]>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;[T, T]&gt; | Iterator obtained. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<[T, T]> | Iterator obtained. |
 
 **Error codes:**
 
@@ -283,13 +297,15 @@ equal(obj: Object): boolean
 
 Checks whether the elements of this LightWeightSet are the same as those of **obj**.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > This API is supported since API version 8 and deprecated since API version 12. There is no substitute API.
 
 **Since:** 8
 
 **Deprecated since:** 12
+
+<!--Device-LightWeightSet-equal(obj: Object): boolean--><!--Device-LightWeightSet-equal(obj: Object): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -297,13 +313,13 @@ Checks whether the elements of this LightWeightSet are the same as those of **ob
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | Object | Yes | **LightWeightSet** instance to be used for comparison. |
+| obj | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | **LightWeightSet** instance to be used for comparison. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if **obj** is a LightWeightSet or an array containing only strings or numbersand the elements in them are the same; returns **false** in other cases. |
+| boolean | Returns **true** if **obj** is a LightWeightSet or an array containing only strings or numbers and the elements in them are the same; returns **false** in other cases. |
 
 **Error codes:**
 
@@ -335,14 +351,16 @@ Uses a callback to traverse the elements in this LightWeightSet and obtain their
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightSet-forEach(callbackFn: (value?: T, key?: T, set?: LightWeightSet<T>) => void, thisArg?: Object): void--><!--Device-LightWeightSet-forEach(callbackFn: (value?: T, key?: T, set?: LightWeightSet<T>) => void, thisArg?: Object): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value?: T, key?: T, set?: LightWeightSet&lt;T&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the LightWeightSet. |
-| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is thisinstance. |
+| callbackFn | (value?: T, key?: T, set?: LightWeightSet<T>) => void | Yes | Callback invoked to traverse the elements in the LightWeightSet. |
+| thisArg | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
 
@@ -388,6 +406,8 @@ Obtains the position index of the element with the specified key in this LightWe
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightSet-getIndexOf(key: T): int--><!--Device-LightWeightSet-getIndexOf(key: T): int-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -400,7 +420,7 @@ Obtains the position index of the element with the specified key in this LightWe
 
 | Type | Description |
 | --- | --- |
-| number | Position index of the element. If the element does not exist, a negative value is returned. Thenegative value consists of a minus sign and the position where the element (if available) should be. Theposition starts from 1. |
+| number | Position index of the element. If the element does not exist, a negative value is returned. The negative value consists of a minus sign and the position where the element (if available) should be. The position starts from 1. |
 
 **Error codes:**
 
@@ -430,6 +450,8 @@ Obtains the value of the element at the specified position in this LightWeightSe
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LightWeightSet-getValueAt(index: number): T--><!--Device-LightWeightSet-getValueAt(index: number): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -462,6 +484,8 @@ Checks whether this LightWeightSet has the specified key.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LightWeightSet-has(key: T): boolean--><!--Device-LightWeightSet-has(key: T): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -505,19 +529,21 @@ Checks whether this LightWeightSet contains all elements of the specified LightW
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightSet-hasAll(set: LightWeightSet<T>): boolean--><!--Device-LightWeightSet-hasAll(set: LightWeightSet<T>): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| set | LightWeightSet&lt;T&gt; | Yes | **LightWeightSet** instance to be used for comparison. |
+| set | [LightWeightSet](arkts-arkts-lightweightset-c.md)<T> | Yes | **LightWeightSet** instance to be used for comparison. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if all the elements in the specifiedLightWeightSet are contained; otherwise, **false** is returned. |
+| boolean | Check result. The value **true** is returned if all the elements in the specified LightWeightSet are contained; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -544,13 +570,13 @@ console.info("result:", result);  // result: true
 increaseCapacityTo(minimumCapacity: number): void
 ```
 
-Increases the capacity of this LightWeightSet. If the passed-in capacity is greater than or equal to the number of
-elements in this LightWeightSet, the capacity is changed to the new capacity. If the passed-in capacity is less
-than the number of elements in this LightWeightSet, the capacity is not changed.
+Increases the capacity of this LightWeightSet. If the passed-in capacity is greater than or equal to the number of elements in this LightWeightSet, the capacity is changed to the new capacity. If the passed-in capacity is less than the number of elements in this LightWeightSet, the capacity is not changed.
 
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LightWeightSet-increaseCapacityTo(minimumCapacity: int): void--><!--Device-LightWeightSet-increaseCapacityTo(minimumCapacity: int): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -587,6 +613,8 @@ Checks whether this LightWeightSet is empty (contains no element).
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightSet-isEmpty(): boolean--><!--Device-LightWeightSet-isEmpty(): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -621,6 +649,8 @@ Removes an element of the specified key from this LightWeightSet.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LightWeightSet-remove(key: T): T--><!--Device-LightWeightSet-remove(key: T): T-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -665,6 +695,8 @@ Removes the element at the specified position from this LightWeightSet.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightSet-removeAt(index: int): boolean--><!--Device-LightWeightSet-removeAt(index: int): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -708,13 +740,15 @@ Obtains an array that contains all objects in this LightWeightSet.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightSet-toArray(): Array<T>--><!--Device-LightWeightSet-toArray(): Array<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | Array obtained. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<T> | Array obtained. |
 
 **Error codes:**
 
@@ -744,13 +778,15 @@ Obtains a string that contains all elements in this LightWeightSet.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightSet-toString(): String--><!--Device-LightWeightSet-toString(): String-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| String | String obtained. |
+| [String](../../apis-na/arkts-apis/arkts-na-string-i.md) | String obtained. |
 
 **Example**
 
@@ -775,13 +811,15 @@ Returns an iterator that contains all the values in this LightWeightSet.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-LightWeightSet-values(): IterableIterator<T>--><!--Device-LightWeightSet-values(): IterableIterator<T>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;T&gt; | Iterator obtained. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<T> | Iterator obtained. |
 
 **Error codes:**
 
@@ -817,6 +855,8 @@ Number of elements in a LightWeightSet.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LightWeightSet-length: number--><!--Device-LightWeightSet-length: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

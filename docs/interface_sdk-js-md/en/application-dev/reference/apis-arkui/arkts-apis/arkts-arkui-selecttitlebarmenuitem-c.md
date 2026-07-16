@@ -4,6 +4,8 @@ Declaration of the menu item on the right side.
 
 **Since:** 20
 
+<!--Device-unnamed-export declare class SelectTitleBarMenuItem--><!--Device-unnamed-export declare class SelectTitleBarMenuItem-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ The accessibilityDescription of this menu item.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SelectTitleBarMenuItem-accessibilityDescription?: ResourceStr--><!--Device-SelectTitleBarMenuItem-accessibilityDescription?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityLevel
@@ -48,6 +52,8 @@ The accessibilityLevel of this menu item.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SelectTitleBarMenuItem-accessibilityLevel?: string--><!--Device-SelectTitleBarMenuItem-accessibilityLevel?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
@@ -65,6 +71,8 @@ The accessibilityText of this menu item.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SelectTitleBarMenuItem-accessibilityText?: ResourceStr--><!--Device-SelectTitleBarMenuItem-accessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,6 +92,8 @@ Callback function when click on this menu item.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SelectTitleBarMenuItem-action?: () => void--><!--Device-SelectTitleBarMenuItem-action?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## isEnabled
@@ -101,6 +111,8 @@ Whether to enable this menu item.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SelectTitleBarMenuItem-isEnabled?: boolean--><!--Device-SelectTitleBarMenuItem-isEnabled?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -120,6 +132,8 @@ Icon label for this menu item.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SelectTitleBarMenuItem-label?: ResourceStr--><!--Device-SelectTitleBarMenuItem-label?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## symbolStyle
@@ -138,6 +152,8 @@ Symbol resource for this menu item.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SelectTitleBarMenuItem-symbolStyle?: SymbolGlyphModifier--><!--Device-SelectTitleBarMenuItem-symbolStyle?: SymbolGlyphModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
@@ -155,6 +171,8 @@ Icon resource for this menu item.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SelectTitleBarMenuItem-value: ResourceStr--><!--Device-SelectTitleBarMenuItem-value: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

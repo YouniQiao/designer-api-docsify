@@ -20,6 +20,8 @@ Get default preferences by printer ID.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-print-function getPrinterDefaultPreferences(printerId: string): Promise<PrinterPreferences>--><!--Device-print-function getPrinterDefaultPreferences(printerId: string): Promise<PrinterPreferences>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -34,7 +36,7 @@ Get default preferences by printer ID.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PrinterPreferences&gt; | - Promise that resolves with the default preferences of the printer. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PrinterPreferences> | - Promise that resolves with the default preferences of the printer. |
 
 **Error codes:**
 

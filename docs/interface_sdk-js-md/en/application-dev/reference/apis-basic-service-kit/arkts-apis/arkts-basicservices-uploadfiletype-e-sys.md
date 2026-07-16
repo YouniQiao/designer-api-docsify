@@ -4,6 +4,8 @@ Enumerates upload file type.
 
 **Since:** 12
 
+<!--Device-intelligentVoice-enum UploadFileType--><!--Device-intelligentVoice-enum UploadFileType-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -18,6 +20,8 @@ Enroll file.
 
 **Since:** 12
 
+<!--Device-UploadFileType-ENROLL_FILE = 0--><!--Device-UploadFileType-ENROLL_FILE = 0-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -31,6 +35,8 @@ WAKEUP_FILE = 1
 Wakeup file.
 
 **Since:** 12
+
+<!--Device-UploadFileType-WAKEUP_FILE = 1--><!--Device-UploadFileType-WAKEUP_FILE = 1-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 

@@ -1,9 +1,10 @@
 # XComponentController
 
-定义XComponent的控制器。
-您可以将该控制器绑定到XComponent，以通过控制器调用组件接口。
+定义XComponent的控制器。您可以将该控制器绑定到XComponent，以通过控制器调用组件接口。
 
 **起始版本：** 12
+
+<!--Device-unnamed-declare class XComponentController--><!--Device-unnamed-declare class XComponentController-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -17,7 +18,9 @@ constructor()
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XComponentController-constructor()--><!--Device-XComponentController-constructor()-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,12 +30,13 @@ constructor()
 getXComponentContext(): Object
 ```
 
-获取XComponent对象的context。
-该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+获取XComponent对象的context。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XComponentController-getXComponentContext(): Object--><!--Device-XComponentController-getXComponentContext(): Object-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,12 +52,13 @@ getXComponentContext(): Object
 getXComponentSurfaceId(): string
 ```
 
-获取XComponent所持有的surface的ID，可用于@ohos相关接口。
-该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+获取XComponent所持有的surface的ID，可用于@ohos相关接口。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XComponentController-getXComponentSurfaceId(): string--><!--Device-XComponentController-getXComponentSurfaceId(): string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -75,7 +80,9 @@ getXComponentSurfaceRect(): SurfaceRect
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XComponentController-getXComponentSurfaceRect(): SurfaceRect--><!--Device-XComponentController-getXComponentSurfaceRect(): SurfaceRect-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -83,7 +90,7 @@ getXComponentSurfaceRect(): SurfaceRect
 
 | 类型 | 说明 |
 | --- | --- |
-| SurfaceRect | surface的矩形信息。 |
+| [SurfaceRect](arkts-arkui-surfacerect-i.md) | surface的矩形信息。 |
 
 ## getXComponentSurfaceRotation
 
@@ -97,7 +104,9 @@ getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XComponentController-getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>--><!--Device-XComponentController-getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -105,7 +114,7 @@ getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>
 
 | 类型 | 说明 |
 | --- | --- |
-| Required&lt;SurfaceRotationOptions&gt; | surface旋转选项的结果。 |
+| Required<SurfaceRotationOptions> | surface旋转选项的结果。 |
 
 ## lockCanvas
 
@@ -119,7 +128,9 @@ lockCanvas(): DrawingCanvas | null
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XComponentController-lockCanvas(): DrawingCanvas | null--><!--Device-XComponentController-lockCanvas(): DrawingCanvas | null-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -127,7 +138,7 @@ lockCanvas(): DrawingCanvas | null
 
 | 类型 | 说明 |
 | --- | --- |
-| DrawingCanvas | 返回用于在XComponent创建的surface上绘制的Canvas。如果surface不可用，则返回null。 |
+| [DrawingCanvas](arkts-arkui-drawingcanvas-t.md) | 返回用于在XComponent创建的surface上绘制的Canvas。如果surface不可用，则返回null。 |
 
 ## onSurfaceChanged
 
@@ -141,7 +152,9 @@ onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XComponentController-onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void--><!--Device-XComponentController-onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -150,7 +163,7 @@ onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | surfaceId | string | 是 | XComponent创建的surface的id。 |
-| rect | SurfaceRect | 是 | XComponent创建的surface的矩形信息。 |
+| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | 是 | XComponent创建的surface的矩形信息。 |
 
 ## onSurfaceCreated
 
@@ -164,7 +177,9 @@ onSurfaceCreated(surfaceId: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XComponentController-onSurfaceCreated(surfaceId: string): void--><!--Device-XComponentController-onSurfaceCreated(surfaceId: string): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -186,7 +201,9 @@ onSurfaceDestroyed(surfaceId: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XComponentController-onSurfaceDestroyed(surfaceId: string): void--><!--Device-XComponentController-onSurfaceDestroyed(surfaceId: string): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -208,7 +225,9 @@ setXComponentSurfaceConfig(config: SurfaceConfig):void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XComponentController-setXComponentSurfaceConfig(config: SurfaceConfig):void--><!--Device-XComponentController-setXComponentSurfaceConfig(config: SurfaceConfig):void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -216,7 +235,7 @@ setXComponentSurfaceConfig(config: SurfaceConfig):void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | SurfaceConfig | 是 | surface配置 |
+| config | [SurfaceConfig](arkts-arkui-surfaceconfig-i.md) | 是 | surface配置 |
 
 ## setXComponentSurfaceRect
 
@@ -230,7 +249,9 @@ setXComponentSurfaceRect(rect: SurfaceRect): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XComponentController-setXComponentSurfaceRect(rect: SurfaceRect): void--><!--Device-XComponentController-setXComponentSurfaceRect(rect: SurfaceRect): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -238,7 +259,7 @@ setXComponentSurfaceRect(rect: SurfaceRect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | SurfaceRect | 是 | surface的矩形信息。 |
+| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | 是 | surface的矩形信息。 |
 
 ## setXComponentSurfaceRotation
 
@@ -252,7 +273,9 @@ setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XComponentController-setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void--><!--Device-XComponentController-setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -260,7 +283,7 @@ setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rotationOptions | SurfaceRotationOptions | 是 | surface的旋转选项。 |
+| rotationOptions | [SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md) | 是 | surface的旋转选项。 |
 
 ## setXComponentSurfaceSize
 
@@ -271,8 +294,7 @@ setXComponentSurfaceSize(value: {
   }): void
 ```
 
-设置XComponent所持有的surface的宽度和高度。
-该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+设置XComponent所持有的surface的宽度和高度。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
 **起始版本：** 9
 
@@ -280,13 +302,21 @@ setXComponentSurfaceSize(value: {
 
 **替代接口：** [setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect-1)
 
+<!--Device-XComponentController-setXComponentSurfaceSize(value: {
+    surfaceWidth: number;
+    surfaceHeight: number;
+  }): void--><!--Device-XComponentController-setXComponentSurfaceSize(value: {
+    surfaceWidth: number;
+    surfaceHeight: number;
+  }): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | {    surfaceWidth: number;    surfaceHeight: number;  } | 是 | XComponent所持有的surface的宽度和高度。 |
+| value | {     surfaceWidth: number;     surfaceHeight: number;   } | 是 | XComponent所持有的surface的宽度和高度。 |
 
 ## startImageAnalyzer
 
@@ -294,16 +324,15 @@ setXComponentSurfaceSize(value: {
 startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 ```
 
-在给定设置中启动AI图像分析。
-调用此接口前，请确保已启用AI图像分析器。
-由于用于分析的图像帧是调用此接口时捕获的帧，因此请注意此接口的调用时机。
-如果在执行完成之前重复调用此接口，将触发错误回调。
+在给定设置中启动AI图像分析。调用此接口前，请确保已启用AI图像分析器。由于用于分析的图像帧是调用此接口时捕获的帧，因此请注意此接口的调用时机。如果在执行完成之前重复调用此接口，将触发错误回调。
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XComponentController-startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>--><!--Device-XComponentController-startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -311,13 +340,13 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | ImageAnalyzerConfig | 是 | AI图像分析器的设置。 |
+| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | 是 | AI图像分析器的设置。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 用于返回结果的Promise。 |
+| Promise<void> | 用于返回结果的Promise。 |
 
 **错误码：**
 
@@ -333,14 +362,15 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 stopImageAnalyzer(): void
 ```
 
-停止AI图像分析。
-AI图像分析器显示的内容将被销毁。
+停止AI图像分析。AI图像分析器显示的内容将被销毁。
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XComponentController-stopImageAnalyzer(): void--><!--Device-XComponentController-stopImageAnalyzer(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -356,7 +386,9 @@ unlockCanvasAndPost(canvas: DrawingCanvas):void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XComponentController-unlockCanvasAndPost(canvas: DrawingCanvas):void--><!--Device-XComponentController-unlockCanvasAndPost(canvas: DrawingCanvas):void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -364,5 +396,5 @@ unlockCanvasAndPost(canvas: DrawingCanvas):void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| canvas | DrawingCanvas | 是 | 之前通过lockCanvas获取的canvas。 |
+| canvas | [DrawingCanvas](arkts-arkui-drawingcanvas-t.md) | 是 | 之前通过lockCanvas获取的canvas。 |
 

@@ -18,21 +18,23 @@ Verifies the server certificate chain and returns a sorted chain.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-networkSecurity-export function verifyCertChain(cert: CertBlob[], caCert?: CertBlob, hostname?: string): Promise<CertBlob[]>--><!--Device-networkSecurity-export function verifyCertChain(cert: CertBlob[], caCert?: CertBlob, hostname?: string): Promise<CertBlob[]>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | CertBlob[] | Yes | Certificate chain to be verified. |
-| caCert | CertBlob | No | Incoming custom CA cert. |
+| cert | [CertBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certblob-i.md)[] | Yes | Certificate chain to be verified. |
+| caCert | [CertBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certblob-i.md) | No | Incoming custom CA cert. |
 | hostname | string | No | Hostname to be verified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CertBlob[]&gt; | Returns a promise that resolves to the sorted certificate chain(ordered from leaf to root) if verification succeeds. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CertBlob[]> | Returns a promise that resolves to the sorted certificate chain(ordered from leaf to root) if verification succeeds. |
 
 **Error codes:**
 

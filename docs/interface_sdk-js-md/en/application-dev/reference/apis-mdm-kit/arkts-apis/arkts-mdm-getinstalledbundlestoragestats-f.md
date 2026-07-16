@@ -20,21 +20,23 @@ Get the storage statistics of installed bundles on the device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-bundleManager-function getInstalledBundleStorageStats(admin: Want, bundleNames: Array<string>, accountId: number): Promise<Array<BundleStorageStats>>--><!--Device-bundleManager-function getInstalledBundleStorageStats(admin: Want, bundleNames: Array<string>, accountId: number): Promise<Array<BundleStorageStats>>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | admin indicates the enterprise admin extension ability information. |
-| bundleNames | Array&lt;string&gt; | Yes | bundleNames indicates the list of application bundle names. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | admin indicates the enterprise admin extension ability information. |
+| bundleNames | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | bundleNames indicates the list of application bundle names. |
 | accountId | number | Yes | Account ID.<br>The value must be an integer greater than or equal to 0.<br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2)of @ ohos.account.osAccount to obtain the account ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleStorageStats&gt;&gt; | Returns the bundle statistics of the installed applications. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<BundleStorageStats>> | Returns the bundle statistics of the installed applications. |
 
 **Error codes:**
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 21
 
+<!--Device-audio-interface CurrentInputDeviceChangedEvent--><!--Device-audio-interface CurrentInputDeviceChangedEvent-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## changeReason
 
@@ -17,6 +25,8 @@ changeReason: AudioStreamDeviceChangeReason
 **类型：** AudioStreamDeviceChangeReason
 
 **起始版本：** 21
+
+<!--Device-CurrentInputDeviceChangedEvent-changeReason: AudioStreamDeviceChangeReason--><!--Device-CurrentInputDeviceChangedEvent-changeReason: AudioStreamDeviceChangeReason-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -31,6 +41,8 @@ devices: AudioDeviceDescriptors
 **类型：** AudioDeviceDescriptors
 
 **起始版本：** 21
+
+<!--Device-CurrentInputDeviceChangedEvent-devices: AudioDeviceDescriptors--><!--Device-CurrentInputDeviceChangedEvent-devices: AudioDeviceDescriptors-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 

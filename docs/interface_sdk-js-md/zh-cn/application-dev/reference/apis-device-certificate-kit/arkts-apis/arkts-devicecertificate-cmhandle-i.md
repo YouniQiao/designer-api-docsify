@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-certificateManager-export interface CMHandle--><!--Device-certificateManager-export interface CMHandle-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
+
+## 导入模块
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+```
 
 ## handle
 
@@ -17,6 +25,8 @@ handle: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 11
+
+<!--Device-CMHandle-handle: Uint8Array--><!--Device-CMHandle-handle: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 

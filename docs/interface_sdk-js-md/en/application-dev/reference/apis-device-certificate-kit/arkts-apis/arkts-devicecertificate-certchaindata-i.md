@@ -4,6 +4,8 @@ Defines the certificate chain data, which is passed in as input parameters durin
 
 **Since:** 9
 
+<!--Device-cert-interface CertChainData--><!--Device-cert-interface CertChainData-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Number of certificates contained in the input data.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CertChainData-count: int--><!--Device-CertChainData-count: int-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## data
@@ -42,6 +46,8 @@ Certificate data.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CertChainData-data: Uint8Array--><!--Device-CertChainData-data: Uint8Array-End-->
+
 **System capability:** SystemCapability.Security.Cert
 
 ## encodingFormat
@@ -57,6 +63,8 @@ Certificate encoding format.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CertChainData-encodingFormat: EncodingFormat--><!--Device-CertChainData-encodingFormat: EncodingFormat-End-->
 
 **System capability:** SystemCapability.Security.Cert
 

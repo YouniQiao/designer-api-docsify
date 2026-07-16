@@ -1,5 +1,11 @@
 # getId
 
+## 导入模块
+
+```TypeScript
+import { dataUriUtils } from '@kit.AbilityKit';
+```
+
 ## getId
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getId(uri: string): number
 获取指定uri路径末尾的ID。
 
 **起始版本：** 9
+
+<!--Device-dataUriUtils-function getId(uri: string): double--><!--Device-dataUriUtils-function getId(uri: string): double-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

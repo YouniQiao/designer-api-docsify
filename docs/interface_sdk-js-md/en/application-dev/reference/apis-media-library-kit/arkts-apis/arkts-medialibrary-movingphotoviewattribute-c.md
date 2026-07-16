@@ -6,6 +6,8 @@ Defines the moving photo view attribute functions.
 
 **Since:** 12
 
+<!--Device-unnamed-declare class MovingPhotoViewAttribute extends CommonMethod<MovingPhotoViewAttribute>--><!--Device-unnamed-declare class MovingPhotoViewAttribute extends CommonMethod<MovingPhotoViewAttribute>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -20,12 +22,13 @@ import { PixelMapFormat, MovingPhotoViewAttribute, MovingPhotoView, MovingPhotoV
 autoPlay(isAutoPlay: boolean): MovingPhotoViewAttribute
 ```
 
-Sets whether to allow automatic play. If the value is true, the moving photo starts
-automatic after the resource is loaded.
+Sets whether to allow automatic play. If the value is true, the moving photo starts automatic after the resource is loaded.
 
 **Since:** 13
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-MovingPhotoViewAttribute-autoPlay(isAutoPlay: boolean): MovingPhotoViewAttribute--><!--Device-MovingPhotoViewAttribute-autoPlay(isAutoPlay: boolean): MovingPhotoViewAttribute-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -39,7 +42,7 @@ automatic after the resource is loaded.
 
 | Type | Description |
 | --- | --- |
-| MovingPhotoViewAttribute | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
+| [MovingPhotoViewAttribute](arkts-medialibrary-movingphotoviewattribute-c.md) | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
 
 ## autoPlayPeriod
 
@@ -47,12 +50,13 @@ automatic after the resource is loaded.
 autoPlayPeriod(startTime: number, endTime: number): MovingPhotoViewAttribute
 ```
 
-Sets automatic play period, If not set, the moving photo plays in the full video duration.
-If set, the moving photo plays in the automatic play period.
+Sets automatic play period, If not set, the moving photo plays in the full video duration.If set, the moving photo plays in the automatic play period.
 
 **Since:** 13
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-MovingPhotoViewAttribute-autoPlayPeriod(startTime: double, endTime: double): MovingPhotoViewAttribute--><!--Device-MovingPhotoViewAttribute-autoPlayPeriod(startTime: double, endTime: double): MovingPhotoViewAttribute-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -67,7 +71,7 @@ If set, the moving photo plays in the automatic play period.
 
 | Type | Description |
 | --- | --- |
-| MovingPhotoViewAttribute | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
+| [MovingPhotoViewAttribute](arkts-medialibrary-movingphotoviewattribute-c.md) | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
 
 ## enableAnalyzer
 
@@ -75,12 +79,13 @@ If set, the moving photo plays in the automatic play period.
 enableAnalyzer(enabled: boolean): MovingPhotoViewAttribute
 ```
 
-Sets whether to enable moving photo analyzer. If the value is true, the moving photo can
-be analyzed by AI.
+Sets whether to enable moving photo analyzer. If the value is true, the moving photo can be analyzed by AI.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-MovingPhotoViewAttribute-enableAnalyzer(enabled: boolean): MovingPhotoViewAttribute--><!--Device-MovingPhotoViewAttribute-enableAnalyzer(enabled: boolean): MovingPhotoViewAttribute-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -94,7 +99,7 @@ be analyzed by AI.
 
 | Type | Description |
 | --- | --- |
-| MovingPhotoViewAttribute | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
+| [MovingPhotoViewAttribute](arkts-medialibrary-movingphotoviewattribute-c.md) | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
 
 ## muted
 
@@ -108,6 +113,8 @@ Called when judging whether the video is muted.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MovingPhotoViewAttribute-muted(isMuted: boolean): MovingPhotoViewAttribute--><!--Device-MovingPhotoViewAttribute-muted(isMuted: boolean): MovingPhotoViewAttribute-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -120,7 +127,7 @@ Called when judging whether the video is muted.
 
 | Type | Description |
 | --- | --- |
-| MovingPhotoViewAttribute | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
+| [MovingPhotoViewAttribute](arkts-medialibrary-movingphotoviewattribute-c.md) | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
 
 ## objectFit
 
@@ -134,19 +141,21 @@ Called when determining the zoom type of the view.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MovingPhotoViewAttribute-objectFit(value: ImageFit): MovingPhotoViewAttribute--><!--Device-MovingPhotoViewAttribute-objectFit(value: ImageFit): MovingPhotoViewAttribute-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ImageFit | Yes |  |
+| value | [ImageFit](../../apis-arkui/arkts-apis/arkts-arkui-imagefit-e.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MovingPhotoViewAttribute | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
+| [MovingPhotoViewAttribute](arkts-medialibrary-movingphotoviewattribute-c.md) | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
 
 ## onComplete
 
@@ -160,19 +169,21 @@ Called when the image load completed.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
+<!--Device-MovingPhotoViewAttribute-onComplete(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute--><!--Device-MovingPhotoViewAttribute-onComplete(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | MovingPhotoViewEventCallback | Yes |  |
+| callback | [MovingPhotoViewEventCallback](arkts-medialibrary-movingphotovieweventcallback-t.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MovingPhotoViewAttribute | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
+| [MovingPhotoViewAttribute](arkts-medialibrary-movingphotoviewattribute-c.md) | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
 
 ## onError
 
@@ -186,19 +197,21 @@ Called when playback fails.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MovingPhotoViewAttribute-onError(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute--><!--Device-MovingPhotoViewAttribute-onError(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | MovingPhotoViewEventCallback | Yes |  |
+| callback | [MovingPhotoViewEventCallback](arkts-medialibrary-movingphotovieweventcallback-t.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MovingPhotoViewAttribute | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
+| [MovingPhotoViewAttribute](arkts-medialibrary-movingphotoviewattribute-c.md) | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
 
 ## onFinish
 
@@ -212,19 +225,21 @@ Called when the video playback ends.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MovingPhotoViewAttribute-onFinish(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute--><!--Device-MovingPhotoViewAttribute-onFinish(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | MovingPhotoViewEventCallback | Yes |  |
+| callback | [MovingPhotoViewEventCallback](arkts-medialibrary-movingphotovieweventcallback-t.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MovingPhotoViewAttribute | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
+| [MovingPhotoViewAttribute](arkts-medialibrary-movingphotoviewattribute-c.md) | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
 
 ## onPause
 
@@ -238,19 +253,21 @@ Called when the video playback paused.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MovingPhotoViewAttribute-onPause(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute--><!--Device-MovingPhotoViewAttribute-onPause(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | MovingPhotoViewEventCallback | Yes |  |
+| callback | [MovingPhotoViewEventCallback](arkts-medialibrary-movingphotovieweventcallback-t.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MovingPhotoViewAttribute | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
+| [MovingPhotoViewAttribute](arkts-medialibrary-movingphotoviewattribute-c.md) | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
 
 ## onPrepared
 
@@ -264,19 +281,21 @@ Called when playback prepared.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-MovingPhotoViewAttribute-onPrepared(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute--><!--Device-MovingPhotoViewAttribute-onPrepared(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | MovingPhotoViewEventCallback | Yes |  |
+| callback | [MovingPhotoViewEventCallback](arkts-medialibrary-movingphotovieweventcallback-t.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MovingPhotoViewAttribute | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
+| [MovingPhotoViewAttribute](arkts-medialibrary-movingphotoviewattribute-c.md) | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
 
 ## onStart
 
@@ -290,19 +309,21 @@ Called when the video is played.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MovingPhotoViewAttribute-onStart(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute--><!--Device-MovingPhotoViewAttribute-onStart(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | MovingPhotoViewEventCallback | Yes |  |
+| callback | [MovingPhotoViewEventCallback](arkts-medialibrary-movingphotovieweventcallback-t.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MovingPhotoViewAttribute | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
+| [MovingPhotoViewAttribute](arkts-medialibrary-movingphotoviewattribute-c.md) | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
 
 ## onStop
 
@@ -316,19 +337,21 @@ Called when the video playback stopped.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MovingPhotoViewAttribute-onStop(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute--><!--Device-MovingPhotoViewAttribute-onStop(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | MovingPhotoViewEventCallback | Yes |  |
+| callback | [MovingPhotoViewEventCallback](arkts-medialibrary-movingphotovieweventcallback-t.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MovingPhotoViewAttribute | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
+| [MovingPhotoViewAttribute](arkts-medialibrary-movingphotoviewattribute-c.md) | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
 
 ## repeatPlay
 
@@ -336,12 +359,13 @@ Called when the video playback stopped.
 repeatPlay(isRepeatPlay: boolean): MovingPhotoViewAttribute
 ```
 
-Sets whether to allow repeat play. If the value is true, the moving photo plays
-repeat after the resource is loaded.
+Sets whether to allow repeat play. If the value is true, the moving photo plays repeat after the resource is loaded.
 
 **Since:** 13
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-MovingPhotoViewAttribute-repeatPlay(isRepeatPlay: boolean): MovingPhotoViewAttribute--><!--Device-MovingPhotoViewAttribute-repeatPlay(isRepeatPlay: boolean): MovingPhotoViewAttribute-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -355,5 +379,5 @@ repeat after the resource is loaded.
 
 | Type | Description |
 | --- | --- |
-| MovingPhotoViewAttribute | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
+| [MovingPhotoViewAttribute](arkts-medialibrary-movingphotoviewattribute-c.md) | @syscap SystemCapability.FileManagement.PhotoAccessHelper.Core@crossplatform@atomicservice |
 

@@ -20,6 +20,8 @@ Controls the actions of Bluetooth peripherals.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function controlDeviceAction(controlDeviceActionParams: ControlDeviceActionParams): Promise<void>--><!--Device-connection-function controlDeviceAction(controlDeviceActionParams: ControlDeviceActionParams): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -28,13 +30,13 @@ Controls the actions of Bluetooth peripherals.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controlDeviceActionParams | ControlDeviceActionParams | Yes | Indicates the action for Bluetooth peripherals. |
+| controlDeviceActionParams | [ControlDeviceActionParams](arkts-connectivity-controldeviceactionparams-i-sys.md) | Yes | Indicates the action for Bluetooth peripherals. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 

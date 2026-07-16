@@ -16,19 +16,21 @@ Obtains the information about all sensors on the device.
 
 **Since:** 19
 
+<!--Device-sensor-function getSensorListByDeviceSync(deviceId?: int): Array<Sensor>--><!--Device-sensor-function getSensorListByDeviceSync(deviceId?: int): Array<Sensor>-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | number | No | Device ID. The default value is **-1**, indicating the local device. You can use[getSensorList](arkts-sensorservice-getsensorlist-f.md#getsensorlist-1) or[sensorStatusChange](arkts-sensorservice-on-f.md#on-46) toobtain the device ID. |
+| deviceId | number | No | Device ID. The default value is **-1**, indicating the local device. You can use [getSensorList](arkts-sensorservice-getsensorlist-f.md#getsensorlist-1) or [sensorStatusChange](arkts-sensorservice-on-f.md#on-46) to obtain the device ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Sensor&gt; | Sensor attribute list. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Sensor> | Sensor attribute list. |
 
 **Example**
 

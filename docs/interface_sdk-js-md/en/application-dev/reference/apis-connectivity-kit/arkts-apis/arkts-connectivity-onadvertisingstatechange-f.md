@@ -20,13 +20,15 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-advertising-function onAdvertisingStateChange(callback: Callback<AdvertisingStateChangeInfo>): void--><!--Device-advertising-function onAdvertisingStateChange(callback: Callback<AdvertisingStateChangeInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AdvertisingStateChangeInfo&gt; | Yes | Callback used to listen for the advertising state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<AdvertisingStateChangeInfo> | Yes | Callback used to listen for the advertising state. |
 
 **Error codes:**
 

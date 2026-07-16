@@ -4,6 +4,8 @@ Knowledge Content class, used for geting related entity.
 
 **Since:** 23
 
+<!--Device-photoAccessHelper-class KnowledgeContent--><!--Device-photoAccessHelper-class KnowledgeContent-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Get Related Entities, Smart Label
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-KnowledgeContent-static getRelatedEntity (topic: string, context: ContextMap, option?: Options): Promise<Entity[]>--><!--Device-KnowledgeContent-static getRelatedEntity (topic: string, context: ContextMap, option?: Options): Promise<Entity[]>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -37,14 +41,14 @@ Get Related Entities, Smart Label
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | topic | string | Yes | Searching topic string. |
-| context | ContextMap | Yes | Context Map indicates topic filed. |
-| option | Options | No | Options for getRelatedEntity. |
+| context | [ContextMap](arkts-medialibrary-contextmap-i-sys.md) | Yes | Context Map indicates topic filed. |
+| option | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-options-i.md) | No | Options for getRelatedEntity. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Entity[]&gt; | Returns Array of Related Entities |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Entity[]> | Returns Array of Related Entities |
 
 **Error codes:**
 
@@ -69,6 +73,8 @@ Get Search Suggestion.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-KnowledgeContent-static getSearchSuggestion( searchSuggestionTypes: Array<SearchSuggestionType>): Promise<Array<SearchSuggestionResult>>--><!--Device-KnowledgeContent-static getSearchSuggestion( searchSuggestionTypes: Array<SearchSuggestionType>): Promise<Array<SearchSuggestionResult>>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -77,13 +83,13 @@ Get Search Suggestion.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchSuggestionTypes | Array&lt;SearchSuggestionType&gt; | Yes | Array of search suggestion types<br>The maximum length is 7 and cannot be empty. |
+| searchSuggestionTypes | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<SearchSuggestionType> | Yes | Array of search suggestion types<br>The maximum length is 7 and cannot be empty. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;SearchSuggestionResult&gt;&gt; | Result of searching for recommended words |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<SearchSuggestionResult>> | Result of searching for recommended words |
 
 **Error codes:**
 

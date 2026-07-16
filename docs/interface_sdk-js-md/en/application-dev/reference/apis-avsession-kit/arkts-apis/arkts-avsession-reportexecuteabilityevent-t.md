@@ -10,6 +10,8 @@ The report extension ability event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-avMusicTemplate-type ReportExecuteAbilityEvent = (want: WantAgent) => void--><!--Device-avMusicTemplate-type ReportExecuteAbilityEvent = (want: WantAgent) => void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **Parameters:**

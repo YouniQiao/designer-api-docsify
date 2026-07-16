@@ -2,15 +2,15 @@
 
 This interface implements audio volume management.
 
-Before calling any API in AudioVolumeManager, you must use
-[getVolumeManager](arkts-audio-audiomanager-i.md#getvolumemanager-1) to obtain an
-AudioVolumeManager instance.
+Before calling any API in AudioVolumeManager, you must use [getVolumeManager](arkts-audio-audiomanager-i.md#getvolumemanager-1) to obtain an AudioVolumeManager instance.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > - The initial APIs of this interface are supported since API version 9.
 
 **Since:** 9
+
+<!--Device-audio-interface AudioVolumeManager--><!--Device-audio-interface AudioVolumeManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -26,12 +26,13 @@ import { audio } from '@kit.AudioKit';
 getAppVolumePercentage(): Promise<number>
 ```
 
-Obtains the volume of the application. (The volume range is 0 to 100.) This API uses a promise to return the
-result.
+Obtains the volume of the application. (The volume range is 0 to 100.) This API uses a promise to return the result.
 
 **Since:** 19
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-AudioVolumeManager-getAppVolumePercentage(): Promise<int>--><!--Device-AudioVolumeManager-getAppVolumePercentage(): Promise<int>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -39,7 +40,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the application volume. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the application volume. |
 
 ## getMaxVolumeByStream
 
@@ -53,13 +54,15 @@ Obtains the maximum volume of a specified audio stream.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-AudioVolumeManager-getMaxVolumeByStream(streamUsage: StreamUsage): int--><!--Device-AudioVolumeManager-getMaxVolumeByStream(streamUsage: StreamUsage): int-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamUsage | StreamUsage | Yes | Audio stream for which the maximum volume is to be obtained. |
+| streamUsage | [StreamUsage](arkts-audio-streamusage-e.md) | Yes | Audio stream for which the maximum volume is to be obtained. |
 
 **Return value:**
 
@@ -85,13 +88,15 @@ Obtains the minimum volume of a specified audio stream.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-AudioVolumeManager-getMinVolumeByStream(streamUsage: StreamUsage): int--><!--Device-AudioVolumeManager-getMinVolumeByStream(streamUsage: StreamUsage): int-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamUsage | StreamUsage | Yes | Audio stream for which the minimum volume is to be obtained. |
+| streamUsage | [StreamUsage](arkts-audio-streamusage-e.md) | Yes | Audio stream for which the minimum volume is to be obtained. |
 
 **Return value:**
 
@@ -117,13 +122,15 @@ Obtains the volume of a specified audio stream.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-AudioVolumeManager-getVolumeByStream(streamUsage: StreamUsage): int--><!--Device-AudioVolumeManager-getVolumeByStream(streamUsage: StreamUsage): int-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamUsage | StreamUsage | Yes | Audio stream for which the volume is to be obtained. |
+| streamUsage | [StreamUsage](arkts-audio-streamusage-e.md) | Yes | Audio stream for which the volume is to be obtained. |
 
 **Return value:**
 
@@ -147,6 +154,8 @@ Obtains a VolumeGroupManager instance. This API uses an asynchronous callback to
 
 **Since:** 9
 
+<!--Device-AudioVolumeManager-getVolumeGroupManager(groupId: int, callback: AsyncCallback<AudioVolumeGroupManager>): void--><!--Device-AudioVolumeManager-getVolumeGroupManager(groupId: int, callback: AsyncCallback<AudioVolumeGroupManager>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -154,7 +163,7 @@ Obtains a VolumeGroupManager instance. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | groupId | number | Yes | Volume group ID. The default value is **DEFAULT_VOLUME_GROUP_ID**. |
-| callback | AsyncCallback&lt;AudioVolumeGroupManager&gt; | Yes | Callback used to return the result. If the operationis successful, **err** is **undefined** and **data** is the VolumeGroupManager instance obtained; otherwise,**err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AudioVolumeGroupManager> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the VolumeGroupManager instance obtained; otherwise,**err** is an error object. |
 
 ## getVolumeGroupManager
 
@@ -165,6 +174,8 @@ getVolumeGroupManager(groupId: number): Promise<AudioVolumeGroupManager>
 Obtains a VolumeGroupManager instance. This API uses a promise to return the result.
 
 **Since:** 9
+
+<!--Device-AudioVolumeManager-getVolumeGroupManager(groupId: int): Promise<AudioVolumeGroupManager>--><!--Device-AudioVolumeManager-getVolumeGroupManager(groupId: int): Promise<AudioVolumeGroupManager>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -178,7 +189,7 @@ Obtains a VolumeGroupManager instance. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioVolumeGroupManager&gt; | Promise used to return the VolumeGroupManager instance. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AudioVolumeGroupManager> | Promise used to return the VolumeGroupManager instance. |
 
 ## getVolumeGroupManagerSync
 
@@ -192,6 +203,8 @@ Obtains a VolumeGroupManager instance. This API returns the result synchronously
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-AudioVolumeManager-getVolumeGroupManagerSync(groupId: int): AudioVolumeGroupManager--><!--Device-AudioVolumeManager-getVolumeGroupManagerSync(groupId: int): AudioVolumeGroupManager-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -204,7 +217,7 @@ Obtains a VolumeGroupManager instance. This API returns the result synchronously
 
 | Type | Description |
 | --- | --- |
-| AudioVolumeGroupManager | VolumeGroupManager instance. |
+| [AudioVolumeGroupManager](arkts-audio-audiovolumegroupmanager-i.md) | VolumeGroupManager instance. |
 
 **Error codes:**
 
@@ -223,15 +236,17 @@ Obtains the volume (in dB) calculated by the system based on the audio stream, v
 
 **Since:** 20
 
+<!--Device-AudioVolumeManager-getVolumeInUnitOfDbByStream(streamUsage: StreamUsage, volumeLevel: int, device: DeviceType): double--><!--Device-AudioVolumeManager-getVolumeInUnitOfDbByStream(streamUsage: StreamUsage, volumeLevel: int, device: DeviceType): double-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamUsage | StreamUsage | Yes | Audio stream. |
+| streamUsage | [StreamUsage](arkts-audio-streamusage-e.md) | Yes | Audio stream. |
 | volumeLevel | number | Yes | Volume level. |
-| device | DeviceType | Yes | Device type. |
+| device | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-devicetype-e.md) | Yes | Device type. |
 
 **Return value:**
 
@@ -255,13 +270,15 @@ Checks whether a specified audio stream is muted.
 
 **Since:** 20
 
+<!--Device-AudioVolumeManager-isSystemMutedForStream(streamUsage: StreamUsage): boolean--><!--Device-AudioVolumeManager-isSystemMutedForStream(streamUsage: StreamUsage): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamUsage | StreamUsage | Yes | Audio stream to check. |
+| streamUsage | [StreamUsage](arkts-audio-streamusage-e.md) | Yes | Audio stream to check. |
 
 **Return value:**
 
@@ -289,14 +306,16 @@ Unsubscribes from the system volume change event. This API uses an asynchronous 
 
 **Substitutes:** event:streamVolumeChange
 
+<!--Device-AudioVolumeManager-off(type: 'volumeChange', callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'volumeChange', callback?: Callback<VolumeEvent>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'volumeChange' | Yes | Event type. The event **'volumeChange'** is triggered when the system volume ischanged. |
-| callback | Callback&lt;VolumeEvent&gt; | No | Callback used to return the changed volume. |
+| type | 'volumeChange' | Yes | Event type. The event **'volumeChange'** is triggered when the system volume is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VolumeEvent> | No | Callback used to return the changed volume. |
 
 **Error codes:**
 
@@ -311,10 +330,11 @@ Unsubscribes from the system volume change event. This API uses an asynchronous 
 off(type: 'appVolumeChange', callback?: Callback<VolumeEvent>): void
 ```
 
-Unsubscribes from the application-level volume change event of the application. This API uses an asynchronous
-callback to return the result.
+Unsubscribes from the application-level volume change event of the application. This API uses an asynchronous callback to return the result.
 
 **Since:** 19
+
+<!--Device-AudioVolumeManager-off(type: 'appVolumeChange', callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'appVolumeChange', callback?: Callback<VolumeEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -322,8 +342,8 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'appVolumeChange' | Yes | Event type. The event **'appVolumeChange'** is triggered when the application-level volume is changed. |
-| callback | Callback&lt;VolumeEvent&gt; | No | Callback used to return the changed volume. |
+| type | 'appVolumeChange' | Yes | Event type. The event **'appVolumeChange'** is triggered when the application  -level volume is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VolumeEvent> | No | Callback used to return the changed volume. |
 
 **Error codes:**
 
@@ -337,10 +357,11 @@ callback to return the result.
 off(type: 'streamVolumeChange', callback?: Callback<StreamVolumeEvent>): void
 ```
 
-Unsubscribes from the system audio volume change event, which is triggered when the system audio volume is
-changed. This API uses an asynchronous callback to return the result.
+Unsubscribes from the system audio volume change event, which is triggered when the system audio volume is changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
+
+<!--Device-AudioVolumeManager-off(type: 'streamVolumeChange', callback?: Callback<StreamVolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'streamVolumeChange', callback?: Callback<StreamVolumeEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -348,8 +369,8 @@ changed. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'streamVolumeChange' | Yes | Event type. The event **'volumeChange'** is triggered when the systemvolume is changed. |
-| callback | Callback&lt;StreamVolumeEvent&gt; | No | Callback used to return the changed volume. |
+| type | 'streamVolumeChange' | Yes | Event type. The event **'volumeChange'** is triggered when the system volume is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<StreamVolumeEvent> | No | Callback used to return the changed volume. |
 
 ## on('volumeChange')
 
@@ -357,8 +378,7 @@ changed. This API uses an asynchronous callback to return the result.
 on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
 ```
 
-Subscribes to the system volume change event, which is triggered when the system volume is changed. This API uses
-an asynchronous callback to return the result.
+Subscribes to the system volume change event, which is triggered when the system volume is changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -366,14 +386,16 @@ an asynchronous callback to return the result.
 
 **Substitutes:** event:streamVolumeChange
 
+<!--Device-AudioVolumeManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'volumeChange' | Yes | Event type. The event **'volumeChange'** is triggered when the system volume ischanged. |
-| callback | Callback&lt;VolumeEvent&gt; | Yes | Callback used to return the changed volume. |
+| type | 'volumeChange' | Yes | Event type. The event **'volumeChange'** is triggered when the system volume is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VolumeEvent> | Yes | Callback used to return the changed volume. |
 
 **Error codes:**
 
@@ -388,10 +410,11 @@ an asynchronous callback to return the result.
 on(type: 'appVolumeChange', callback: Callback<VolumeEvent>): void
 ```
 
-Subscribes to the application-level volume change event of the application (triggered when the application-level
-volume is changed). This API uses an asynchronous callback to return the result.
+Subscribes to the application-level volume change event of the application (triggered when the application-level volume is changed). This API uses an asynchronous callback to return the result.
 
 **Since:** 19
+
+<!--Device-AudioVolumeManager-on(type: 'appVolumeChange', callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-on(type: 'appVolumeChange', callback: Callback<VolumeEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -399,8 +422,8 @@ volume is changed). This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'appVolumeChange' | Yes | Event type. The event **'appVolumeChange'** is triggered when the application-level volume is changed. |
-| callback | Callback&lt;VolumeEvent&gt; | Yes | Callback used to return the changed volume. |
+| type | 'appVolumeChange' | Yes | Event type. The event **'appVolumeChange'** is triggered when the application  -level volume is changed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<VolumeEvent> | Yes | Callback used to return the changed volume. |
 
 **Error codes:**
 
@@ -414,10 +437,11 @@ volume is changed). This API uses an asynchronous callback to return the result.
 on(type: 'streamVolumeChange', streamUsage: StreamUsage, callback: Callback<StreamVolumeEvent>): void
 ```
 
-Subscribes to the system audio volume change event, which is triggered when the system audio volume is changed.
-This API uses an asynchronous callback to return the result.
+Subscribes to the system audio volume change event, which is triggered when the system audio volume is changed.This API uses an asynchronous callback to return the result.
 
 **Since:** 20
+
+<!--Device-AudioVolumeManager-on(type: 'streamVolumeChange', streamUsage: StreamUsage, callback: Callback<StreamVolumeEvent>): void--><!--Device-AudioVolumeManager-on(type: 'streamVolumeChange', streamUsage: StreamUsage, callback: Callback<StreamVolumeEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -425,9 +449,9 @@ This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'streamVolumeChange' | Yes | Event type. The event **'streamVolumeChange'** is triggered when thesystem audio volume is changed. |
-| streamUsage | StreamUsage | Yes | Audio stream usage. |
-| callback | Callback&lt;StreamVolumeEvent&gt; | Yes | Callback used to return the changed volume. |
+| type | 'streamVolumeChange' | Yes | Event type. The event **'streamVolumeChange'** is triggered when the system audio volume is changed. |
+| streamUsage | [StreamUsage](arkts-audio-streamusage-e.md) | Yes | Audio stream usage. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<StreamVolumeEvent> | Yes | Callback used to return the changed volume. |
 
 **Error codes:**
 
@@ -447,6 +471,8 @@ Sets the volume (within a range of 0 to 100) for the application. This API uses 
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-AudioVolumeManager-setAppVolumePercentage(volume: int): Promise<void>--><!--Device-AudioVolumeManager-setAppVolumePercentage(volume: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **Parameters:**
@@ -459,7 +485,7 @@ Sets the volume (within a range of 0 to 100) for the application. This API uses 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

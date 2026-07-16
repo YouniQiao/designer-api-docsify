@@ -8,6 +8,8 @@ The [universal events](arkts-arkui-commonmethod-c.md) are supported.
 
 **Since:** 7
 
+<!--Device-unnamed-declare class RowAttribute extends CommonMethod<RowAttribute>--><!--Device-unnamed-declare class RowAttribute extends CommonMethod<RowAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## alignItems
@@ -24,13 +26,15 @@ Sets the alignment mode of child components in the vertical direction.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-RowAttribute-alignItems(value: VerticalAlign): RowAttribute--><!--Device-RowAttribute-alignItems(value: VerticalAlign): RowAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | VerticalAlign | Yes | Alignment mode of child components in the vertical direction.<br>Default value:**VerticalAlign.Center** |
+| value | [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md) | Yes | Alignment mode of child components in the vertical direction.<br>Default value:**VerticalAlign.Center** |
 
 ## justifyContent
 
@@ -46,13 +50,15 @@ Sets the alignment mode of the child components in the horizontal direction.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-RowAttribute-justifyContent(value: FlexAlign): RowAttribute--><!--Device-RowAttribute-justifyContent(value: FlexAlign): RowAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | FlexAlign | Yes | Alignment mode of child components in the horizontal direction.<br>Default value:**FlexAlign.Start** |
+| value | [FlexAlign](../arkts-apis/arkts-arkui-flexalign-e.md) | Yes | Alignment mode of child components in the horizontal direction.<br>Default value:**FlexAlign.Start** |
 
 ## reverse
 
@@ -70,11 +76,13 @@ Sets whether to reverse the horizontal arrangement of child components.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-RowAttribute-reverse(isReversed: Optional<boolean>): RowAttribute--><!--Device-RowAttribute-reverse(isReversed: Optional<boolean>): RowAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isReversed | Optional&lt;boolean&gt; | Yes | Whether to reverse the horizontal arrangement of child components.<br>Default value: **true**. **true**: Child components are arranged in reverse order horizontally. **false**:Child components are arranged in normal order horizontally. |
+| isReversed | [Optional](arkts-arkui-optional-t.md)<boolean> | Yes | Whether to reverse the horizontal arrangement of child components.<br>Default value: **true**. **true**: Child components are arranged in reverse order horizontally. **false**:Child components are arranged in normal order horizontally. |
 

@@ -18,6 +18,8 @@ Queries the data traffic (including all TCP and UDP data packets) sent by a spec
 
 **Required permissions:** ohos.permission.GET_NETWORK_STATS
 
+<!--Device-statistics-function getUidTxBytes(uid: int, callback: AsyncCallback<long>): void--><!--Device-statistics-function getUidTxBytes(uid: int, callback: AsyncCallback<long>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -25,7 +27,7 @@ Queries the data traffic (including all TCP and UDP data packets) sent by a spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | number | Yes | Indicates the process ID of the application. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Returns the data traffic sent by the specified application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Returns the data traffic sent by the specified application. |
 
 **Error codes:**
 
@@ -68,6 +70,8 @@ Queries the data traffic (including all TCP and UDP data packets) sent by a spec
 
 **Required permissions:** ohos.permission.GET_NETWORK_STATS
 
+<!--Device-statistics-function getUidTxBytes(uid: int): Promise<long>--><!--Device-statistics-function getUidTxBytes(uid: int): Promise<long>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -80,7 +84,7 @@ Queries the data traffic (including all TCP and UDP data packets) sent by a spec
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | The promise returned by the function. |
 
 **Error codes:**
 

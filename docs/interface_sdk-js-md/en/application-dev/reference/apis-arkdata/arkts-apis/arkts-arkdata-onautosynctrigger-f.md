@@ -18,13 +18,15 @@ Describes the triggering method for automatic device-cloud synchronization subsc
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-cloudData-function onAutoSyncTrigger(observer: Callback<AutoSyncTriggerInfo>): void--><!--Device-cloudData-function onAutoSyncTrigger(observer: Callback<AutoSyncTriggerInfo>): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | Callback&lt;AutoSyncTriggerInfo&gt; | Yes | Callback for automatic synchronization trigger interception. |
+| observer | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AutoSyncTriggerInfo> | Yes | Callback for automatic synchronization trigger interception. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ The parameters of brightness.
 
 **Since:** 22
 
+<!--Device-uiEffect-interface BrightnessParam--><!--Device-uiEffect-interface BrightnessParam-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Defines cubicCoeff of brightness.
 
 **Since:** 22
 
+<!--Device-BrightnessParam-cubicCoeff : double--><!--Device-BrightnessParam-cubicCoeff : double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Defines fraction of brightness.
 **Type:** number
 
 **Since:** 22
+
+<!--Device-BrightnessParam-fraction : double--><!--Device-BrightnessParam-fraction : double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -58,6 +64,8 @@ Defines lightUpDegree of brightness.
 
 **Since:** 22
 
+<!--Device-BrightnessParam-lightUpDegree : double--><!--Device-BrightnessParam-lightUpDegree : double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Defines negative RGB of brightness.
 **Type:** [number, number, number]
 
 **Since:** 22
+
+<!--Device-BrightnessParam-negRgb : [double, double, double]--><!--Device-BrightnessParam-negRgb : [double, double, double]-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -90,6 +100,8 @@ Defines positive RGB of brightness.
 
 **Since:** 22
 
+<!--Device-BrightnessParam-posRgb : [double, double, double]--><!--Device-BrightnessParam-posRgb : [double, double, double]-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -105,6 +117,8 @@ Defines quadCoeff of brightness.
 **Type:** number
 
 **Since:** 22
+
+<!--Device-BrightnessParam-quadCoeff : double--><!--Device-BrightnessParam-quadCoeff : double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -122,6 +136,8 @@ Defines rate of brightness.
 
 **Since:** 22
 
+<!--Device-BrightnessParam-rate : double--><!--Device-BrightnessParam-rate : double-End-->
+
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -137,6 +153,8 @@ Defines saturation of brightness.
 **Type:** number
 
 **Since:** 22
+
+<!--Device-BrightnessParam-saturation : double--><!--Device-BrightnessParam-saturation : double-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

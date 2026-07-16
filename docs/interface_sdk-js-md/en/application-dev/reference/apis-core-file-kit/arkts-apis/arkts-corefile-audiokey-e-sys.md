@@ -8,6 +8,8 @@ Defines the key information about an audio file.
 
 **Substitutes:** [AudioViewPicker](arkts-corefile-audioviewpicker-c.md)
 
+<!--Device-userFileManager-enum AudioKey--><!--Device-userFileManager-enum AudioKey-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -25,6 +27,8 @@ URI of the file.
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [AudioViewPicker](arkts-corefile-audioviewpicker-c.md)
+
+<!--Device-AudioKey-URI--><!--Device-AudioKey-URI-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -44,6 +48,8 @@ File name displayed.
 
 **Substitutes:** [AudioViewPicker](arkts-corefile-audioviewpicker-c.md)
 
+<!--Device-AudioKey-DISPLAY_NAME--><!--Device-AudioKey-DISPLAY_NAME-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -54,14 +60,15 @@ File name displayed.
 DATE_ADDED
 ```
 
-Date when the file was added. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on
-January 1, 1970).
+Date when the file was added. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970).
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [AudioViewPicker](arkts-corefile-audioviewpicker-c.md)
+
+<!--Device-AudioKey-DATE_ADDED--><!--Device-AudioKey-DATE_ADDED-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -73,14 +80,15 @@ January 1, 1970).
 DATE_MODIFIED
 ```
 
-Date when the file content (not the file name) was last modified. The value is the number of seconds elapsed
-since the Epoch time (00:00:00 UTC on January 1, 1970).
+Date when the file content (not the file name) was last modified. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970).
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [AudioViewPicker](arkts-corefile-audioviewpicker-c.md)
+
+<!--Device-AudioKey-DATE_MODIFIED--><!--Device-AudioKey-DATE_MODIFIED-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -100,6 +108,8 @@ Title of the file.
 
 **Substitutes:** [AudioViewPicker](arkts-corefile-audioviewpicker-c.md)
 
+<!--Device-AudioKey-TITLE--><!--Device-AudioKey-TITLE-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -117,6 +127,8 @@ Author of the file.
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [AudioViewPicker](arkts-corefile-audioviewpicker-c.md)
+
+<!--Device-AudioKey-ARTIST--><!--Device-AudioKey-ARTIST-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -136,6 +148,8 @@ Audio album.
 
 **Substitutes:** [AudioViewPicker](arkts-corefile-audioviewpicker-c.md)
 
+<!--Device-AudioKey-AUDIOALBUM--><!--Device-AudioKey-AUDIOALBUM-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -154,6 +168,8 @@ Duration, in ms.
 
 **Substitutes:** [AudioViewPicker](arkts-corefile-audioviewpicker-c.md)
 
+<!--Device-AudioKey-DURATION--><!--Device-AudioKey-DURATION-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
@@ -171,6 +187,8 @@ Whether the file is added to favorites.
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [AudioViewPicker](arkts-corefile-audioviewpicker-c.md)
+
+<!--Device-AudioKey-FAVORITE--><!--Device-AudioKey-FAVORITE-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

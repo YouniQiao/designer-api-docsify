@@ -4,6 +4,8 @@ Describes the data origin sources.
 
 **Since:** 24
 
+<!--Device-relationalStore-enum DistributedOrigin--><!--Device-relationalStore-enum DistributedOrigin-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **System API:** This is a system API.
@@ -19,6 +21,8 @@ Indicates the data source is local.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DistributedOrigin-ORI_LOCAL = 0--><!--Device-DistributedOrigin-ORI_LOCAL = 0-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -36,6 +40,8 @@ Indicates the data source is cloud.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DistributedOrigin-ORI_CLOUD = 1--><!--Device-DistributedOrigin-ORI_CLOUD = 1-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **System API:** This is a system API.
@@ -51,6 +57,8 @@ Indicates the data source is remote.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DistributedOrigin-ORI_REMOTE = 2--><!--Device-DistributedOrigin-ORI_REMOTE = 2-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 

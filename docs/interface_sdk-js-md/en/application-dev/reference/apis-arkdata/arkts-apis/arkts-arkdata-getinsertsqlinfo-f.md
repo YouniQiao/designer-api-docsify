@@ -16,6 +16,8 @@ Obtains the SQL statement used to insert data. This API returns the result synch
 
 **Since:** 20
 
+<!--Device-relationalStore-function getInsertSqlInfo(table: string, values: ValuesBucket, conflict?: ConflictResolution):SqlInfo--><!--Device-relationalStore-function getInsertSqlInfo(table: string, values: ValuesBucket, conflict?: ConflictResolution):SqlInfo-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
@@ -23,14 +25,14 @@ Obtains the SQL statement used to insert data. This API returns the result synch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Name of the database table to which data is to be written. |
-| values | ValuesBucket | Yes | Field information and corresponding values of the data to be written to thedatabase. |
-| conflict | ConflictResolution | No | Resolution used to resolve the conflict. <br>Default value:**relationalStore.ConflictResolution.ON_CONFLICT_NONE**. |
+| values | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Field information and corresponding values of the data to be written to the database. |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-conflictresolution-e.md) | No | Resolution used to resolve the conflict. <br>Default value:**relationalStore.ConflictResolution.ON_CONFLICT_NONE**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SqlInfo | **SqlInfo** object. **sql** indicates the returned SQL statement, and **args** indicates theparameters in the executed SQL statement. |
+| [SqlInfo](arkts-arkdata-sqlinfo-i.md) | **SqlInfo** object. **sql** indicates the returned SQL statement, and **args** indicates the parameters in the executed SQL statement. |
 
 **Error codes:**
 

@@ -6,6 +6,8 @@ Describes the magnetic field sensor data. It extends from [Response](arkts-senso
 
 **Since:** 8
 
+<!--Device-sensor-interface MagneticFieldResponse extends Response--><!--Device-sensor-interface MagneticFieldResponse extends Response-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Magnetic field strength on the x-axis, in ��T.
 
 **Since:** 8
 
+<!--Device-MagneticFieldResponse-x: double--><!--Device-MagneticFieldResponse-x: double-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## y
@@ -40,6 +44,8 @@ Magnetic field strength on the y-axis, in ��T.
 
 **Since:** 8
 
+<!--Device-MagneticFieldResponse-y: double--><!--Device-MagneticFieldResponse-y: double-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## z
@@ -53,6 +59,8 @@ Magnetic field strength on the z-axis, in ��T.
 **Type:** number
 
 **Since:** 8
+
+<!--Device-MagneticFieldResponse-z: double--><!--Device-MagneticFieldResponse-z: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 

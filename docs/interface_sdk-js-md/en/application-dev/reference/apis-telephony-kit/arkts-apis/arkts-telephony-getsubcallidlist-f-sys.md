@@ -16,6 +16,8 @@ Get the list of sub-call Ids.
 
 **Since:** 7
 
+<!--Device-call-function getSubCallIdList(callId: int, callback: AsyncCallback<Array<string>>): void--><!--Device-call-function getSubCallIdList(callId: int, callback: AsyncCallback<Array<string>>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -25,7 +27,7 @@ Get the list of sub-call Ids.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | number | Yes | Indicates the identifier of the call. |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Indicates the callback for getting the list of sub call ids. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Indicates the callback for getting the list of sub call ids. |
 
 **Error codes:**
 
@@ -64,6 +66,8 @@ Get the list of sub-call Ids.
 
 **Since:** 7
 
+<!--Device-call-function getSubCallIdList(callId: int): Promise<Array<string>>--><!--Device-call-function getSubCallIdList(callId: int): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -78,7 +82,7 @@ Get the list of sub-call Ids.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Returns the list of sub call ids. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Returns the list of sub call ids. |
 
 **Error codes:**
 

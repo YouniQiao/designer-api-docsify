@@ -4,6 +4,8 @@ Socks5 Proxy Configuration Information.
 
 **Since:** 26.0.0
 
+<!--Device-connection-export interface Socks5Proxy--><!--Device-connection-export interface Socks5Proxy-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import
@@ -18,14 +20,15 @@ import { connection } from '@kit.NetworkKit';
 dnsStrategy?: Socks5DnsStrategy
 ```
 
-DNS resolution strategy.
-Determines whether the client or the proxy server resolves the domain name.
+DNS resolution strategy.Determines whether the client or the proxy server resolves the domain name.
 
 **Type:** Socks5DnsStrategy
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Socks5Proxy-dnsStrategy?: Socks5DnsStrategy--><!--Device-Socks5Proxy-dnsStrategy?: Socks5DnsStrategy-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -43,6 +46,8 @@ Exclusion list for proxy servers.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Socks5Proxy-exclusionList?: Array<string>--><!--Device-Socks5Proxy-exclusionList?: Array<string>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## host
@@ -58,6 +63,8 @@ Proxy server host name.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Socks5Proxy-host: string--><!--Device-Socks5Proxy-host: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -75,6 +82,8 @@ Proxy password.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Socks5Proxy-password?: string--><!--Device-Socks5Proxy-password?: string-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## port
@@ -91,6 +100,8 @@ Host port.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Socks5Proxy-port: int--><!--Device-Socks5Proxy-port: int-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## username
@@ -106,6 +117,8 @@ Proxy username.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Socks5Proxy-username?: string--><!--Device-Socks5Proxy-username?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

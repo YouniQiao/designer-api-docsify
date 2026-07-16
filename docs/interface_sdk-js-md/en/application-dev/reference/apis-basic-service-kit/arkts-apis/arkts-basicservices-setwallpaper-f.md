@@ -24,6 +24,16 @@ Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG 
 
 **Required permissions:** ohos.permission.SET_WALLPAPER
 
+<!--Device-wallpaper-function setWallpaper(
+    source: string | image.PixelMap,
+    wallpaperType: WallpaperType,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-wallpaper-function setWallpaper(
+    source: string | image.PixelMap,
+    wallpaperType: WallpaperType,
+    callback: AsyncCallback<void>
+  ): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **Parameters:**
@@ -31,8 +41,8 @@ Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | source | string \| image.PixelMap | Yes | indicates the uri path from a JPEG or PNG file or the pixel map of the PNG file. |
-| wallpaperType | WallpaperType | Yes | indicates the wallpaper type. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of setWallpaper. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of setWallpaper. |
 
 **Example**
 
@@ -87,6 +97,8 @@ Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG 
 
 **Required permissions:** ohos.permission.SET_WALLPAPER
 
+<!--Device-wallpaper-function setWallpaper(source: string | image.PixelMap, wallpaperType: WallpaperType): Promise<void>--><!--Device-wallpaper-function setWallpaper(source: string | image.PixelMap, wallpaperType: WallpaperType): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **Parameters:**
@@ -94,13 +106,13 @@ Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | source | string \| image.PixelMap | Yes | indicates the uri path from a JPEG or PNG file or the pixel map of the PNG file. |
-| wallpaperType | WallpaperType | Yes | indicates the wallpaper type. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Example**
 

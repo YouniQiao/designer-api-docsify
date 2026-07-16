@@ -1,5 +1,11 @@
 # setDarkMode（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { uiAppearance } from '@kit.ArkUI';
+```
+
 ## setDarkMode
 
 ```TypeScript
@@ -12,6 +18,8 @@ function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-uiAppearance-function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void--><!--Device-uiAppearance-function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.ArkUI.UiAppearance
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +28,8 @@ function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | DarkMode | 是 | indicates the dark-mode to set |
-| callback | AsyncCallback&lt;void&gt; | 是 | the callback of setDarkMode |
+| mode | [DarkMode](arkts-arkui-darkmode-e-sys.md) | 是 | indicates the dark-mode to set |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | the callback of setDarkMode |
 
 **错误码：**
 
@@ -65,6 +73,8 @@ function setDarkMode(mode: DarkMode): Promise<void>
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-uiAppearance-function setDarkMode(mode: DarkMode): Promise<void>--><!--Device-uiAppearance-function setDarkMode(mode: DarkMode): Promise<void>-End-->
+
 **系统能力：** SystemCapability.ArkUI.UiAppearance
 
 **系统接口：** 此接口为系统接口。
@@ -73,13 +83,13 @@ function setDarkMode(mode: DarkMode): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | DarkMode | 是 | indicates the dark-mode to set |
+| mode | [DarkMode](arkts-arkui-darkmode-e-sys.md) | 是 | indicates the dark-mode to set |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

@@ -1,5 +1,11 @@
 # getSecurityLabelSync
 
+## 导入模块
+
+```TypeScript
+import { securityLabel } from '@kit.CoreFileKit';
+```
+
 ## getSecurityLabelSync
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getSecurityLabelSync(path: string): string
 以同步方法获取文件或目录的数据安全等级。若未设置过数据安全等级则默认返回“s3”。
 
 **起始版本：** 9
+
+<!--Device-securityLabel-function getSecurityLabelSync(path: string): string--><!--Device-securityLabel-function getSecurityLabelSync(path: string): string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

@@ -12,7 +12,9 @@ const ADDRESS_SANITIZER: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-event-const ADDRESS_SANITIZER: string--><!--Device-event-const ADDRESS_SANITIZER: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -28,7 +30,9 @@ const APP_CRASH: string
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-event-const APP_CRASH: string--><!--Device-event-const APP_CRASH: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -44,7 +48,9 @@ const APP_FREEZE: string
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-event-const APP_FREEZE: string--><!--Device-event-const APP_FREEZE: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -60,7 +66,9 @@ const APP_HICOLLIE: string
 
 **起始版本：** 21
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+<!--Device-event-const APP_HICOLLIE: string--><!--Device-event-const APP_HICOLLIE: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -76,7 +84,9 @@ const APP_KILLED: string
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-event-const APP_KILLED: string--><!--Device-event-const APP_KILLED: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -92,7 +102,9 @@ const APP_LAUNCH: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-event-const APP_LAUNCH: string--><!--Device-event-const APP_LAUNCH: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -108,7 +120,9 @@ const AUDIO_JANK_FRAME: string
 
 **起始版本：** 21
 
-**元服务API：** 从API版本21开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+
+<!--Device-event-const AUDIO_JANK_FRAME: string--><!--Device-event-const AUDIO_JANK_FRAME: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -124,7 +138,9 @@ const BATTERY_USAGE: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-event-const BATTERY_USAGE: string--><!--Device-event-const BATTERY_USAGE: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -140,7 +156,9 @@ const CPU_USAGE_HIGH: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-event-const CPU_USAGE_HIGH: string--><!--Device-event-const CPU_USAGE_HIGH: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -156,7 +174,9 @@ const DISTRIBUTED_SERVICE_START: string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-event-const DISTRIBUTED_SERVICE_START: string--><!--Device-event-const DISTRIBUTED_SERVICE_START: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -172,7 +192,9 @@ const MAIN_THREAD_JANK: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-event-const MAIN_THREAD_JANK: string--><!--Device-event-const MAIN_THREAD_JANK: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -188,7 +210,9 @@ const RESOURCE_OVERLIMIT: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-event-const RESOURCE_OVERLIMIT: string--><!--Device-event-const RESOURCE_OVERLIMIT: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -204,7 +228,9 @@ ArkWeb抛滑丢帧事件。系统事件名称常量。
 
 **起始版本：** 23
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-event-const SCROLL_ARKWEB_FLING_JANK: string--><!--Device-event-const SCROLL_ARKWEB_FLING_JANK: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -220,7 +246,9 @@ const SCROLL_JANK: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-event-const SCROLL_JANK: string--><!--Device-event-const SCROLL_JANK: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -236,7 +264,9 @@ const USER_LOGIN: string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-event-const USER_LOGIN: string--><!--Device-event-const USER_LOGIN: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -252,7 +282,9 @@ const USER_LOGOUT: string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-event-const USER_LOGOUT: string--><!--Device-event-const USER_LOGOUT: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -274,7 +306,9 @@ const appFreezeWarning: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-event-const appFreezeWarning: string--><!--Device-event-const appFreezeWarning: string-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 

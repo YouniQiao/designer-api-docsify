@@ -4,9 +4,17 @@
 
 **起始版本：** 10
 
+<!--Device-installer-export interface UninstallParam--><!--Device-installer-export interface UninstallParam-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+```
 
 ## bundleName
 
@@ -19,6 +27,8 @@ bundleName: string
 **类型：** string
 
 **起始版本：** 10
+
+<!--Device-UninstallParam-bundleName: string--><!--Device-UninstallParam-bundleName: string-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -35,6 +45,8 @@ versionCode?: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-UninstallParam-versionCode?: int--><!--Device-UninstallParam-versionCode?: int-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

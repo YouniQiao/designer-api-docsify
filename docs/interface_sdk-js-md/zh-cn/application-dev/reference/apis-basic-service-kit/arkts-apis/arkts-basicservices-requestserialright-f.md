@@ -1,5 +1,11 @@
 # requestSerialRight
 
+## 导入模块
+
+```TypeScript
+import { serialManager } from '@kit.BasicServicesKit';
+```
+
 ## requestSerialRight
 
 ```TypeScript
@@ -9,6 +15,8 @@ function requestSerialRight(portId: number): Promise<boolean>
 请求应用程序访问串口设备的权限。应用退出自动移除对串口设备的访问权限，在应用重启后需要重新申请授权。使用Promise异步回调。
 
 **起始版本：** 19
+
+<!--Device-serialManager-function requestSerialRight(portId: int): Promise<boolean>--><!--Device-serialManager-function requestSerialRight(portId: int): Promise<boolean>-End-->
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -22,7 +30,7 @@ function requestSerialRight(portId: number): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，true表示请求权限成功，false表示请求权限失败。 |
+| Promise<boolean> | Promise对象，true表示请求权限成功，false表示请求权限失败。 |
 
 **错误码：**
 

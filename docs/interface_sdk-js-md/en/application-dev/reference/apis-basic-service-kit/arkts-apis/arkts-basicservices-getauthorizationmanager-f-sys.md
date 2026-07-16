@@ -18,6 +18,8 @@ Obtains this OS account authorization manager.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-osAccount-function getAuthorizationManager(): AuthorizationManager--><!--Device-osAccount-function getAuthorizationManager(): AuthorizationManager-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Obtains this OS account authorization manager.
 
 | Type | Description |
 | --- | --- |
-| AuthorizationManager | Instance object of the OS account authorization manager. |
+| [AuthorizationManager](arkts-basicservices-authorizationmanager-i-sys.md) | Instance object of the OS account authorization manager. |
 
 **Error codes:**
 

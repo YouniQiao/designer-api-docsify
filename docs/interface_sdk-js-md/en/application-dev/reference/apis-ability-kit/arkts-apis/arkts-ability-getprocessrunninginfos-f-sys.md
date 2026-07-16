@@ -12,8 +12,7 @@ import { appManager } from '@kit.AbilityKit';
 function getProcessRunningInfos(): Promise<Array<ProcessInformation>>
 ```
 
-Obtains information about the running processes of the current application. This API uses a promise to return the
-result.
+Obtains information about the running processes of the current application. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -24,6 +23,8 @@ result.
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.GET_RUNNING_INFO
 
+<!--Device-appManager-function getProcessRunningInfos(): Promise<Array<ProcessInformation>>--><!--Device-appManager-function getProcessRunningInfos(): Promise<Array<ProcessInformation>>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -32,7 +33,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ProcessInformation&gt;&gt; | Promise used to return the API call result and the process runninginformation. You can perform error handling or custom processing in this callback. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ProcessInformation>> | Promise used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 
@@ -47,8 +48,7 @@ result.
 function getProcessRunningInfos(callback: AsyncCallback<Array<ProcessInformation>>): void
 ```
 
-Obtains information about the running processes of the current application. This API uses an asynchronous callback
-to return the result.
+Obtains information about the running processes of the current application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -59,6 +59,8 @@ to return the result.
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.GET_RUNNING_INFO
 
+<!--Device-appManager-function getProcessRunningInfos(callback: AsyncCallback<Array<ProcessInformation>>): void--><!--Device-appManager-function getProcessRunningInfos(callback: AsyncCallback<Array<ProcessInformation>>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -67,7 +69,7 @@ to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;ProcessInformation&gt;&gt; | Yes | Callback used to return the result. If the API call issuccessful, **err** is **undefined** and **data** is the information about the running processes. Otherwise, **err**is an error object. You can perform error handling or other custom processing. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<ProcessInformation>> | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the information about the running processes. Otherwise, **err** is an error object. You can perform error handling or other custom processing. |
 
 **Error codes:**
 

@@ -20,15 +20,17 @@ Allows the specified device administrator application to operate devices.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-deviceControl-function operateDevice(admin: Want, operate: string, addition?: string): void--><!--Device-deviceControl-function operateDevice(admin: Want, operate: string, addition?: string): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| operate | string | Yes | Operation to be performed, which can be any of the following:<br>- **resetFactory**:restore device factory settings. After this API is called, the device will be restored to factory settingsimmediately. Once the restoration is complete, all device data will be erased and cannot be restored. Toprotect against data loss caused by potential application attacks, enterprises should implement robust securitymeasures for their applications.<br>- **reboot**: restart devices.<br>- **shutDown**: shut down devices.<br>-**lockScreen**: lock device screens. Once this capability is used, the device screen will become inaccessible.It only supports lock screen text customization but does not allow for interactive function customization onthe lock screen. To implement custom behaviors on the lock screen, you are advised to use the[setAllowedKioskApps](arkts-mdm-setallowedkioskapps-f.md#setallowedkioskapps-1) API toconfigure apps that support the [Kiosk mode](../../apis-ability-kit/arkts-apis/arkts-ability-enterkioskmode-f.md#enterkioskmode-1).&lt;!--RP1--&gt;&lt;!--RP1End--&gt; |
-| addition | string | No | &lt;!--RP2--&gt;Additional parameter for the operation. Currently, this parameter does notneed to be passed in.&lt;!--RP2End--&gt; |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| operate | string | Yes | Operation to be performed, which can be any of the following:<br>- **resetFactory**:restore device factory settings. After this API is called, the device will be restored to factory settings immediately. Once the restoration is complete, all device data will be erased and cannot be restored. To protect against data loss caused by potential application attacks, enterprises should implement robust security measures for their applications.<br>- **reboot**: restart devices.<br>- **shutDown**: shut down devices.<br>-**lockScreen**: lock device screens. Once this capability is used, the device screen will become inaccessible.It only supports lock screen text customization but does not allow for interactive function customization on the lock screen. To implement custom behaviors on the lock screen, you are advised to use the [setAllowedKioskApps](arkts-mdm-setallowedkioskapps-f.md#setallowedkioskapps-1) API to configure apps that support the [Kiosk mode](../../apis-ability-kit/arkts-apis/arkts-ability-enterkioskmode-f.md#enterkioskmode-1).&lt;!--RP1--&gt;&lt;!--RP1End--&gt; |
+| addition | string | No | &lt;!--RP2--&gt;Additional parameter for the operation. Currently, this parameter does not need to be passed in.&lt;!--RP2End--&gt; |
 
 **Error codes:**
 
@@ -75,15 +77,17 @@ Allows the administrator to operate devices.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-deviceControl-function operateDevice(admin: Want, operation: Operation, addition?: string): void--><!--Device-deviceControl-function operateDevice(admin: Want, operation: Operation, addition?: string): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | admin indicates the enterprise admin extension ability information. |
-| operation | Operation | Yes | operation indicates the operation to performed. |
-| addition | string | No | addition indicates the specified additional parameterswhen performing the operation. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | admin indicates the enterprise admin extension ability information. |
+| operation | [Operation](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-operation-e.md) | Yes | operation indicates the operation to performed. |
+| addition | string | No | addition indicates the specified additional parameters when performing the operation. |
 
 **Error codes:**
 

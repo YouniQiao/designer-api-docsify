@@ -1,11 +1,12 @@
 # CopyResult (System API)
 
-Defines the information returned when the file copy operation fails. If the copy operation is successful, no
-information is returned.
+Defines the information returned when the file copy operation fails. If the copy operation is successful, no information is returned.
 
 **Since:** 10
 
 **Deprecated since:** 23
+
+<!--Device-fileAccess-interface CopyResult--><!--Device-fileAccess-interface CopyResult-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -35,6 +36,8 @@ URI of the conflicting file. If the error is not caused by a file conflict, **de
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-CopyResult-destUri: string--><!--Device-CopyResult-destUri: string-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -56,6 +59,8 @@ Error code.
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CopyResult-errCode: number--><!--Device-CopyResult-errCode: number-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
@@ -79,6 +84,8 @@ Error message.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-CopyResult-errMsg: string--><!--Device-CopyResult-errMsg: string-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
@@ -100,6 +107,8 @@ URI of the source file or directory.
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CopyResult-sourceUri: string--><!--Device-CopyResult-sourceUri: string-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 

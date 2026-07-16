@@ -4,6 +4,8 @@ Describes an opaque object of a template, which is created using the createPatte
 
 **Since:** 11
 
+<!--Device-unnamed-export interface CanvasPattern--><!--Device-unnamed-export interface CanvasPattern-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## setTransform
@@ -22,11 +24,13 @@ Adds the matrix transformation effect to the current template.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-CanvasPattern-setTransform(transform?: Matrix2D): void--><!--Device-CanvasPattern-setTransform(transform?: Matrix2D): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transform | Matrix2D | No | transformation matrix |
+| transform | [Matrix2D](arkts-arkui-matrix2d-c.md) | No | transformation matrix |
 

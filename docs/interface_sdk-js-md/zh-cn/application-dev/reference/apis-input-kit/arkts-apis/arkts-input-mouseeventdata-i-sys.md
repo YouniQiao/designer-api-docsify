@@ -4,9 +4,17 @@
 
 **起始版本：** 11
 
+<!--Device-inputEventClient-interface MouseEventData--><!--Device-inputEventClient-interface MouseEventData-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { inputEventClient } from '@kit.InputKit';
+```
 
 ## mouseEvent
 
@@ -19,6 +27,8 @@ mouseEvent: MouseEvent
 **类型：** MouseEvent
 
 **起始版本：** 11
+
+<!--Device-MouseEventData-mouseEvent: MouseEvent--><!--Device-MouseEventData-mouseEvent: MouseEvent-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -35,6 +45,8 @@ useGlobalCoordinate? : boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-MouseEventData-useGlobalCoordinate? : boolean--><!--Device-MouseEventData-useGlobalCoordinate? : boolean-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 

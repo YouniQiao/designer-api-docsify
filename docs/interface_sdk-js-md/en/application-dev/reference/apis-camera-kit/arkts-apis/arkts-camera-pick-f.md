@@ -12,18 +12,19 @@ import { cameraPicker } from '@kit.CameraKit';
 function pick(context: Context, mediaTypes: Array<PickerMediaType>, pickerProfile: PickerProfile): Promise<PickerResult>
 ```
 
-Starts the camera picker and enters the corresponding mode based on the media type. This API uses a promise to
-return the result.
+Starts the camera picker and enters the corresponding mode based on the media type. This API uses a promise to return the result.
 
-> **NOTE**
->
-> When an application is running on a widescreen foldable device and the camera picker is launched while the device
-> is unfolded, switching the device from unfolded to folded will automatically move the camera picker to the
+> **NOTE**  
+>  
+> When an application is running on a widescreen foldable device and the camera picker is launched while the device  
+> is unfolded, switching the device from unfolded to folded will automatically move the camera picker to the  
 > background.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-cameraPicker-function pick(context: Context, mediaTypes: Array<PickerMediaType>, pickerProfile: PickerProfile): Promise<PickerResult>--><!--Device-cameraPicker-function pick(context: Context, mediaTypes: Array<PickerMediaType>, pickerProfile: PickerProfile): Promise<PickerResult>-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -31,15 +32,15 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. |
-| mediaTypes | Array&lt;PickerMediaType&gt; | Yes | Media type. |
-| pickerProfile | PickerProfile | Yes | Profile of the camera picker. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. |
+| mediaTypes | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PickerMediaType> | Yes | Media type. |
+| pickerProfile | [PickerProfile](arkts-camera-pickerprofile-c.md) | Yes | Profile of the camera picker. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PickerResult&gt; | Promise used to return the processing result ([PickerResult](arkts-camera-pickerresult-c.md)) of the camera picker. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PickerResult> | Promise used to return the processing result ([PickerResult](arkts-camera-pickerresult-c.md)) of the camera picker. |
 
 **Example**
 

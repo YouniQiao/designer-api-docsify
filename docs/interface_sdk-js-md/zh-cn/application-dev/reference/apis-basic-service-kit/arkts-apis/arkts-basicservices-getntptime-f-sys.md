@@ -1,5 +1,11 @@
 # getNtpTime（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { systemDateTime } from '@kit.BasicServicesKit';
+```
+
 ## getNtpTime
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getNtpTime(): number
 使用同步方式获取基于上次更新的NTP时间所计算出的真实时间。
 
 **起始版本：** 14
+
+<!--Device-systemDateTime-function getNtpTime(): long--><!--Device-systemDateTime-function getNtpTime(): long-End-->
 
 **系统能力：** SystemCapability.MiscServices.Time
 

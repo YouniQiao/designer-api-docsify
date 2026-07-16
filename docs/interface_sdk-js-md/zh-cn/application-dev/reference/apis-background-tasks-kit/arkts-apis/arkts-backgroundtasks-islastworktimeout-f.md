@@ -1,5 +1,11 @@
 # isLastWorkTimeOut
 
+## 导入模块
+
+```TypeScript
+import { workScheduler } from '@kit.BackgroundTasksKit';
+```
+
 ## isLastWorkTimeOut
 
 ```TypeScript
@@ -16,6 +22,8 @@ function isLastWorkTimeOut(workId: number, callback: AsyncCallback<void>): boole
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-workScheduler-function isLastWorkTimeOut(workId: number, callback: AsyncCallback<void>): boolean--><!--Device-workScheduler-function isLastWorkTimeOut(workId: number, callback: AsyncCallback<void>): boolean-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 **参数：**
@@ -23,7 +31,7 @@ function isLastWorkTimeOut(workId: number, callback: AsyncCallback<void>): boole
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | workId | number | 是 | 指定延迟任务的Id。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。 |
 
 **返回值：**
 
@@ -54,6 +62,8 @@ function isLastWorkTimeOut(workId: number, callback: AsyncCallback<boolean>): vo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-workScheduler-function isLastWorkTimeOut(workId: int, callback: AsyncCallback<boolean>): void--><!--Device-workScheduler-function isLastWorkTimeOut(workId: int, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 **参数：**
@@ -61,7 +71,7 @@ function isLastWorkTimeOut(workId: number, callback: AsyncCallback<boolean>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | workId | number | 是 | 指定延迟任务的Id。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -102,6 +112,8 @@ function isLastWorkTimeOut(workId: number): Promise<boolean>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-workScheduler-function isLastWorkTimeOut(workId: int): Promise<boolean>--><!--Device-workScheduler-function isLastWorkTimeOut(workId: int): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 **参数：**
@@ -114,7 +126,7 @@ function isLastWorkTimeOut(workId: number): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示指定任务的最后一次执行超时，false表示未超时。 |
+| Promise<boolean> | Promise对象。返回true表示指定任务的最后一次执行超时，false表示未超时。 |
 
 **错误码：**
 

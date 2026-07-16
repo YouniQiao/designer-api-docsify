@@ -12,12 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAllAppProvisionInfo(userId?: number): Promise<Array<AppProvisionInfo>>
 ```
 
-Obtains the [provision](bundleManager/AppProvisionInfo) configuration file information of all applications
-based on the given user ID. This API uses a promise to return the result.
+Obtains the [provision](bundleManager/AppProvisionInfo) configuration file information of all applications based on the given user ID. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or (ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
+
+<!--Device-bundleManager-function getAllAppProvisionInfo(userId?: int): Promise<Array<AppProvisionInfo>>--><!--Device-bundleManager-function getAllAppProvisionInfo(userId?: int): Promise<Array<AppProvisionInfo>>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -27,13 +28,13 @@ based on the given user ID. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | No | User ID, which can be obtained by calling[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1).<br>The default value is the user ID of the caller.<br>The value must be greater than or equal to 0. |
+| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1).<br>The default value is the user ID of the caller.<br>The value must be greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AppProvisionInfo&gt;&gt; | Promise used to return the provision profile obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AppProvisionInfo>> | Promise used to return the provision profile obtained. |
 
 **Error codes:**
 

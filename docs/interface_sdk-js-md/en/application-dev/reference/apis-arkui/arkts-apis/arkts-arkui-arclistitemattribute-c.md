@@ -1,11 +1,12 @@
 # ArcListItemAttribute
 
-In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following attributes are
-supported.
+In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following attributes are supported.
 
 **Inheritance/Implementation:** ArcListItemAttribute extends [CommonMethod<ArcListItemAttribute>](CommonMethod<ArcListItemAttribute>)
 
 **Since:** 18
+
+<!--Device-unnamed-export declare class ArcListItemAttribute extends CommonMethod<ArcListItemAttribute>--><!--Device-unnamed-export declare class ArcListItemAttribute extends CommonMethod<ArcListItemAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -27,19 +28,21 @@ Sets whether to enable auto-scaling for the **ArcListItem** component.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcListItemAttribute-autoScale(enable: Optional<boolean>): ArcListItemAttribute--><!--Device-ArcListItemAttribute-autoScale(enable: Optional<boolean>): ArcListItemAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | Optional&lt;boolean&gt; | Yes | Whether to enable auto-scaling.<br>**true**: Enable auto-scaling.<br>**false**: Disable auto-scaling.<br>Default value: **true**. |
+| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)<boolean> | Yes | Whether to enable auto-scaling.<br>**true**: Enable auto-scaling.<br>**false**: Disable auto-scaling.<br>Default value: **true**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArcListItemAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcListItemAttribute](arkts-arkui-arclistitemattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
 ## swipeAction
 
@@ -53,17 +56,19 @@ Sets the swipe action item displayed when the **ArcListItem** component is swipe
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcListItemAttribute-swipeAction(options: Optional<SwipeActionOptions>): ArcListItemAttribute--><!--Device-ArcListItemAttribute-swipeAction(options: Optional<SwipeActionOptions>): ArcListItemAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | Optional&lt;SwipeActionOptions&gt; | Yes | Swipe action item displayed when the **ArcListItem** component isswiped out from the screen edge. |
+| options | [Optional](../arkts-components/arkts-arkui-optional-t.md)<SwipeActionOptions> | Yes | Swipe action item displayed when the **ArcListItem** component is swiped out from the screen edge. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArcListItemAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcListItemAttribute](arkts-arkui-arclistitemattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 

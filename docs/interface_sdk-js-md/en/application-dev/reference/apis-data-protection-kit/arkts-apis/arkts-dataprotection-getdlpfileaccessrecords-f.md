@@ -12,14 +12,13 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function getDLPFileAccessRecords(): Promise<Array<AccessedDLPFileInfo>>
 ```
 
-Obtains the list of DLP files that are accessed recently. After the API is successfully called, the file access
-records are returned, which can be used to track and manage the usage of DLP files. This API can be called only
-in non-DLP sandbox applications. This API uses a promise to return the result.
+Obtains the list of DLP files that are accessed recently. After the API is successfully called, the file access records are returned, which can be used to track and manage the usage of DLP files. This API can be called only in non-DLP sandbox applications. This API uses a promise to return the result.
 
-This API is used to obtain the list of DLP files that are accessed recently, which can be used to track and
-manage file usage.
+This API is used to obtain the list of DLP files that are accessed recently, which can be used to track and manage file usage.
 
 **Since:** 10
+
+<!--Device-dlpPermission-function getDLPFileAccessRecords(): Promise<Array<AccessedDLPFileInfo>>--><!--Device-dlpPermission-function getDLPFileAccessRecords(): Promise<Array<AccessedDLPFileInfo>>-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -27,7 +26,7 @@ manage file usage.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AccessedDLPFileInfo&gt;&gt; | Promise used to return the list of recently accessed DLP filesobtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AccessedDLPFileInfo>> | Promise used to return the list of recently accessed DLP files obtained. |
 
 **Error codes:**
 
@@ -57,14 +56,13 @@ dlpPermission.getDLPFileAccessRecords().then((accessRecords) => { // Obtain the 
 function getDLPFileAccessRecords(callback: AsyncCallback<Array<AccessedDLPFileInfo>>): void
 ```
 
-Obtains the list of DLP files that are accessed recently. After the API is successfully called, the file access
-records are returned, which can be used to track and manage the usage of DLP files. This API uses an asynchronous
-callback to return the result.
+Obtains the list of DLP files that are accessed recently. After the API is successfully called, the file access records are returned, which can be used to track and manage the usage of DLP files. This API uses an asynchronous callback to return the result.
 
-This API is used to obtain the list of DLP files that are accessed recently, which can be used to track and
-manage file usage.
+This API is used to obtain the list of DLP files that are accessed recently, which can be used to track and manage file usage.
 
 **Since:** 10
+
+<!--Device-dlpPermission-function getDLPFileAccessRecords(callback: AsyncCallback<Array<AccessedDLPFileInfo>>): void--><!--Device-dlpPermission-function getDLPFileAccessRecords(callback: AsyncCallback<Array<AccessedDLPFileInfo>>): void-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -72,7 +70,7 @@ manage file usage.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;AccessedDLPFileInfo&gt;&gt; | Yes | Callback used to return the result. If theoperation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<AccessedDLPFileInfo>> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

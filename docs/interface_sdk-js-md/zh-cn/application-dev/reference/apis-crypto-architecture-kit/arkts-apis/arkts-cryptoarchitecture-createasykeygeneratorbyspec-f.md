@@ -1,5 +1,11 @@
 # createAsyKeyGeneratorBySpec
 
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+```
+
 ## createAsyKeyGeneratorBySpec
 
 ```TypeScript
@@ -10,7 +16,9 @@ function createAsyKeyGeneratorBySpec(asyKeySpec: AsyKeySpec): AsyKeyGeneratorByS
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cryptoFramework-function createAsyKeyGeneratorBySpec(asyKeySpec: AsyKeySpec): AsyKeyGeneratorBySpec--><!--Device-cryptoFramework-function createAsyKeyGeneratorBySpec(asyKeySpec: AsyKeySpec): AsyKeyGeneratorBySpec-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -20,13 +28,13 @@ function createAsyKeyGeneratorBySpec(asyKeySpec: AsyKeySpec): AsyKeyGeneratorByS
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| asyKeySpec | AsyKeySpec | 是 | 密钥参数。非对称密钥生成器根据指定的这些参数生成公/私钥。<br>支持的规格详见[非对称密钥生成和转换规格](../../../../security/CryptoArchitectureKit/crypto-asym-key-generation-conversion-spec.md)。 |
+| asyKeySpec | [AsyKeySpec](arkts-cryptoarchitecture-asykeyspec-i.md) | 是 | 密钥参数。非对称密钥生成器根据指定的这些参数生成公/私钥。<br>支持的规格详见[非对称密钥生成和转换规格](../../../../security/CryptoArchitectureKit/crypto-asym-key-generation-conversion-spec.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AsyKeyGeneratorBySpec | 返回AsyKeyGeneratorBySpec非对称密钥生成器实例。 |
+| [AsyKeyGeneratorBySpec](arkts-cryptoarchitecture-asykeygeneratorbyspec-i.md) | 返回AsyKeyGeneratorBySpec非对称密钥生成器实例。 |
 
 **错误码：**
 

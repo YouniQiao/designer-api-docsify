@@ -4,6 +4,8 @@ Enumerates the scrolling directions.
 
 **Since:** 8
 
+<!--Device-unnamed-declare enum ScrollBarDirection--><!--Device-unnamed-declare enum ScrollBarDirection-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Vertical
@@ -18,6 +20,8 @@ Vertical scrollbar.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ScrollBarDirection-Vertical--><!--Device-ScrollBarDirection-Vertical-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Horizontal
@@ -31,6 +35,8 @@ Horizontal scrollbar.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ScrollBarDirection-Horizontal--><!--Device-ScrollBarDirection-Horizontal-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

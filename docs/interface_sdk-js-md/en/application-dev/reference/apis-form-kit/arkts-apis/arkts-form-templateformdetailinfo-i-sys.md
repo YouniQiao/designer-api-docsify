@@ -4,6 +4,8 @@ TemplateFormDetailInfo
 
 **Since:** 23
 
+<!--Device-formInfo-interface TemplateFormDetailInfo--><!--Device-formInfo-interface TemplateFormDetailInfo-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Obtains the ability name of the template form.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-TemplateFormDetailInfo-abilityName: string--><!--Device-TemplateFormDetailInfo-abilityName: string-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -45,6 +49,8 @@ Obtains the bundle name of the template form.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TemplateFormDetailInfo-bundleName: string--><!--Device-TemplateFormDetailInfo-bundleName: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -64,6 +70,8 @@ Obtains the form description of the template form.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-TemplateFormDetailInfo-description: string--><!--Device-TemplateFormDetailInfo-description: string-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -81,6 +89,8 @@ Obtains the form detail Id of the template form.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TemplateFormDetailInfo-detailId: string--><!--Device-TemplateFormDetailInfo-detailId: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -100,6 +110,8 @@ Obtains the form dimension of the template form.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-TemplateFormDetailInfo-dimension: FormDimension--><!--Device-TemplateFormDetailInfo-dimension: FormDimension-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -117,6 +129,8 @@ Obtains the form display name of the template form.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TemplateFormDetailInfo-displayName: string--><!--Device-TemplateFormDetailInfo-displayName: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -136,6 +150,8 @@ Obtains the form name of the template form.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-TemplateFormDetailInfo-formName: string--><!--Device-TemplateFormDetailInfo-formName: string-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -153,6 +169,8 @@ Obtains the module name of the template form.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TemplateFormDetailInfo-moduleName: string--><!--Device-TemplateFormDetailInfo-moduleName: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 

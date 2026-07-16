@@ -14,11 +14,11 @@ function getStateByUrl(url: string): Array<RouterState>
 
 Obtains the status information about a page by its URL.
 
-> **NOTE**
->
-> - Since API version 12, you can use the
-> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> **NOTE**  
+>  
+> - Since API version 12, you can use the  
+> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in  
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated  
 > with the current UI context.
 
 **Since:** 12
@@ -30,6 +30,8 @@ Obtains the status information about a page by its URL.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-router-function getStateByUrl(url: string): Array<RouterState>--><!--Device-router-function getStateByUrl(url: string): Array<RouterState>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,7 +45,7 @@ Obtains the status information about a page by its URL.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;RouterState&gt; | Page routing state. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<RouterState> | Page routing state. |
 
 **Example**
 

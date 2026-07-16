@@ -1,5 +1,11 @@
 # addAllowedDistributeAbilityConnBundles
 
+## 导入模块
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+```
+
 ## addAllowedDistributeAbilityConnBundles
 
 ```TypeScript
@@ -10,10 +16,10 @@ function addAllowedDistributeAbilityConnBundles(admin: Want, appIdentifiers: Arr
 
 当前支持的分布式类型有：[协同服务](arkts-mdm-servicetype-e.md)。
 
-> **说明：**
->
-> 1.如果要设置允许使用协同服务的应用名单，在调用本接口前必须已经通过
-> [setDisallowedPolicyForAccount](arkts-mdm-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount-1)
+> **说明：**  
+>  
+> 1.如果要设置允许使用协同服务的应用名单，在调用本接口前必须已经通过  
+> [setDisallowedPolicyForAccount](arkts-mdm-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount-1)  
 > 接口禁用了向其他设备传输数据的设备间单向传输数据的能力，否则会抛出错误码9201043。
 
 > 2.当向其他设备传输数据的设备间单向传输数据的能力被解除禁用时，通过本接口设置的允许使用协同服务的应用名单会被同步清除。
@@ -24,15 +30,17 @@ function addAllowedDistributeAbilityConnBundles(admin: Want, appIdentifiers: Arr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function addAllowedDistributeAbilityConnBundles(admin: Want, appIdentifiers: Array<string>, serviceType: ServiceType, accountId: number): void--><!--Device-applicationManager-function addAllowedDistributeAbilityConnBundles(admin: Want, appIdentifiers: Array<string>, serviceType: ServiceType, accountId: number): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| appIdentifiers | Array&lt;string&gt; | 是 | 应用[唯一标识符](../../apis-ability-kit/arkts-apis/arkts-ability-signatureinfo-i.md)的数组，可以通过接口[bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-getbundleinfo-f.md#getbundleinfo-3)获取bundleInfo.signatureInfo.appIdentifier。允许列表总数不能超过200个。 |
-| serviceType | ServiceType | 是 | 分布式能力类型。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| appIdentifiers | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 应用[唯一标识符](../../apis-ability-kit/arkts-apis/arkts-ability-signatureinfo-i.md)的数组，可以通过接口[bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-getbundleinfo-f.md#getbundleinfo-3)获取bundleInfo.signatureInfo.appIdentifier。允许列表总数不能超过200个。 |
+| serviceType | [ServiceType](../../apis-calendar-kit/arkts-apis/arkts-calendar-servicetype-e.md) | 是 | 分布式能力类型。 |
 | accountId | number | 是 | 用户ID，取值范围：大于等于0的整数。<br> accountId可以通过@ohos.account.osAccount中的[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2)等接口来获取。 |
 
 **错误码：**
@@ -42,7 +50,7 @@ function addAllowedDistributeAbilityConnBundles(admin: Want, appIdentifiers: Arr
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) | Parameter verification failed. |
-| [9201043](../errorcode-enterpriseDeviceManager.md#9201043-api调用的前置条件未满足) | Prerequisites for the API call have not been satisfied. For example,distributed outgoing transmission is not disallowed before adding the distributed bidirectional collaborationtrustlist. |
+| [9201043](../errorcode-enterpriseDeviceManager.md#9201043-api调用的前置条件未满足) | Prerequisites for the API call have not been satisfied. For example,distributed outgoing transmission is not disallowed before adding the distributed bidirectional collaboration trustlist. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
 
 **示例：**

@@ -4,6 +4,8 @@ Represents the word selection panel.
 
 **Since:** 24
 
+<!--Device-selectionManager-interface Panel--><!--Device-selectionManager-interface Panel-End-->
+
 **System capability:** SystemCapability.SelectionInput.Selection
 
 **System API:** This is a system API.
@@ -20,12 +22,13 @@ import { selectionManager } from '@kit.BasicServicesKit';
 moveToGlobalDisplay(x: number, y: number): Promise<void>
 ```
 
-Moves the word selection panel to the specified coordinates on the screen. This API uses a promise to return the
-result.
+Moves the word selection panel to the specified coordinates on the screen. This API uses a promise to return the result.
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Panel-moveToGlobalDisplay(x: int, y: int): Promise<void>--><!--Device-Panel-moveToGlobalDisplay(x: int, y: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.SelectionInput.Selection
 
@@ -40,7 +43,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

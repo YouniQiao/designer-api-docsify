@@ -1,9 +1,10 @@
 # CameraManager
 
-Implements camera management. Before calling any API in CameraManager, you must use
-[getCameraManager](arkts-camera-getcameramanager-f.md#getcameramanager-1) to obtain a CameraManager instance.
+Implements camera management. Before calling any API in CameraManager, you must use [getCameraManager](arkts-camera-getcameramanager-f.md#getcameramanager-1) to obtain a CameraManager instance.
 
 **Since:** 10
+
+<!--Device-camera-interface CameraManager--><!--Device-camera-interface CameraManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -19,11 +20,7 @@ import { camera } from '@kit.CameraKit';
 createCameraInput(camera: CameraDevice): CameraInput
 ```
 
-Creates a **CameraInput** instance with the specified **CameraDevice** instance. This API returns the result
-synchronously.
-Before calling this API, call [getSupportedCameras](arkts-camera-cameramanager-i.md#getsupportedcameras-1) to obtain the
-list of supported camera devices, select the camera device that meets the requirements based on the actual usage
-scenario, and then create the **CameraInput** instance.
+Creates a **CameraInput** instance with the specified **CameraDevice** instance. This API returns the result synchronously.Before calling this API, call [getSupportedCameras](arkts-camera-cameramanager-i.md#getsupportedcameras-1) to obtain the list of supported camera devices, select the camera device that meets the requirements based on the actual usage scenario, and then create the **CameraInput** instance.
 
 **Since:** 10
 
@@ -31,19 +28,21 @@ scenario, and then create the **CameraInput** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraManager-createCameraInput(camera: CameraDevice): CameraInput--><!--Device-CameraManager-createCameraInput(camera: CameraDevice): CameraInput-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| camera | CameraDevice | Yes | **CameraDevice** instance, which is obtained through[getSupportedCameras](arkts-camera-cameramanager-i.md#getsupportedcameras-1). |
+| camera | [CameraDevice](arkts-camera-cameradevice-i.md) | Yes | **CameraDevice** instance, which is obtained through [getSupportedCameras](arkts-camera-cameramanager-i.md#getsupportedcameras-1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CameraInput | **CameraInput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [CameraInput](arkts-camera-camerainput-i.md) | **CameraInput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -59,10 +58,7 @@ scenario, and then create the **CameraInput** instance.
 createCameraInput(position: CameraPosition, type: CameraType): CameraInput
 ```
 
-Creates a **CameraInput** instance with the specified camera position and type. This API returns the result
-synchronously.
-Before calling this API, specify the camera position and type based on the usage scenario. For example, open the
-front camera for the selfie feature
+Creates a **CameraInput** instance with the specified camera position and type. This API returns the result synchronously.Before calling this API, specify the camera position and type based on the usage scenario. For example, open the front camera for the selfie feature
 
 **Since:** 10
 
@@ -70,20 +66,22 @@ front camera for the selfie feature
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraManager-createCameraInput(position: CameraPosition, type: CameraType): CameraInput--><!--Device-CameraManager-createCameraInput(position: CameraPosition, type: CameraType): CameraInput-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | CameraPosition | Yes | Camera position. You need to obtain the supported camera object by calling[getSupportedCameras](arkts-camera-cameramanager-i.md#getsupportedcameras-1) and then obtain the device positioninformation based on the returned camera object. |
-| type | CameraType | Yes | Camera type. You need to obtain the supported camera object by calling[getSupportedCameras](arkts-camera-cameramanager-i.md#getsupportedcameras-1) and then obtain the camera type basedon the returned camera object. |
+| position | [CameraPosition](arkts-camera-cameraposition-e.md) | Yes | Camera position. You need to obtain the supported camera object by calling [getSupportedCameras](arkts-camera-cameramanager-i.md#getsupportedcameras-1) and then obtain the device position information based on the returned camera object. |
+| type | [CameraType](arkts-camera-cameratype-e.md) | Yes | Camera type. You need to obtain the supported camera object by calling [getSupportedCameras](arkts-camera-cameramanager-i.md#getsupportedcameras-1) and then obtain the camera type based on the returned camera object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CameraInput | **CameraInput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [CameraInput](arkts-camera-camerainput-i.md) | **CameraInput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -107,13 +105,15 @@ Creates a **CaptureSession** instance. This API returns the result synchronously
 
 **Substitutes:** [createSession](arkts-camera-cameramanager-i.md#createsession-1)
 
+<!--Device-CameraManager-createCaptureSession(): CaptureSession--><!--Device-CameraManager-createCaptureSession(): CaptureSession-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CaptureSession | **CaptureSession** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [CaptureSession](arkts-camera-capturesession-i.md) | **CaptureSession** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -133,19 +133,21 @@ Creates a **MetadataOutput** instance. This API returns the result synchronously
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraManager-createMetadataOutput(metadataObjectTypes: Array<MetadataObjectType>): MetadataOutput--><!--Device-CameraManager-createMetadataOutput(metadataObjectTypes: Array<MetadataObjectType>): MetadataOutput-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| metadataObjectTypes | Array&lt;MetadataObjectType&gt; | Yes | Metadata object types, which are obtained through[getSupportedOutputCapability](arkts-camera-cameramanager-i.md#getsupportedoutputcapability-2). |
+| metadataObjectTypes | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<MetadataObjectType> | Yes | Metadata object types, which are obtained through [getSupportedOutputCapability](arkts-camera-cameramanager-i.md#getsupportedoutputcapability-2). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MetadataOutput | **MetadataOutput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [MetadataOutput](arkts-camera-metadataoutput-i.md) | **MetadataOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -162,8 +164,8 @@ createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput
 
 Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > - This API can only be used to create a **PhotoOutput** object in JPEG format.
 
 **Since:** 10
@@ -172,20 +174,22 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
 **Substitutes:** createPhotoOutput(profile?:
 
+<!--Device-CameraManager-createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput--><!--Device-CameraManager-createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | Profile | Yes | Supported photo profile, which is obtained through[getSupportedOutputCapability](arkts-camera-cameramanager-i.md#getsupportedoutputcapability-2). |
-| surfaceId | string | Yes | Surface ID, which is obtained from[ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-imagereceiver-i.md). |
+| profile | [Profile](arkts-camera-profile-i.md) | Yes | Supported photo profile, which is obtained through [getSupportedOutputCapability](arkts-camera-cameramanager-i.md#getsupportedoutputcapability-2). |
+| surfaceId | string | Yes | Surface ID, which is obtained from [ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-imagereceiver-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PhotoOutput | **PhotoOutput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [PhotoOutput](arkts-camera-photooutput-i.md) | **PhotoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -205,19 +209,21 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraManager-createPhotoOutput(profile?: Profile): PhotoOutput--><!--Device-CameraManager-createPhotoOutput(profile?: Profile): PhotoOutput-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | Profile | No | Supported photo profile, which is obtained through[getSupportedOutputCapability](arkts-camera-cameramanager-i.md#getsupportedoutputcapability-2).<br>In API version 11, this parameter is mandatory. Starting from API version 12, it will overwrite thepreconfigured parameters passed in through [preconfig](arkts-camera-photosession-i.md#preconfig-1). |
+| profile | [Profile](arkts-camera-profile-i.md) | No | Supported photo profile, which is obtained through [getSupportedOutputCapability](arkts-camera-cameramanager-i.md#getsupportedoutputcapability-2).<br>In API version 11, this parameter is mandatory. Starting from API version 12, it will overwrite the preconfigured parameters passed in through [preconfig](arkts-camera-photosession-i.md#preconfig-1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PhotoOutput | **PhotoOutput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [PhotoOutput](arkts-camera-photooutput-i.md) | **PhotoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -238,20 +244,22 @@ Creates a **PreviewOutput** instance. This API returns the result synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraManager-createPreviewOutput(profile: Profile, surfaceId: string): PreviewOutput--><!--Device-CameraManager-createPreviewOutput(profile: Profile, surfaceId: string): PreviewOutput-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | Profile | Yes | Supported preview profile, which is obtained through[getSupportedOutputCapability](arkts-camera-cameramanager-i.md#getsupportedoutputcapability-2). |
-| surfaceId | string | Yes | Surface ID, which is obtained from[XComponent](XComponent) or [ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-imagereceiver-i.md). |
+| profile | [Profile](arkts-camera-profile-i.md) | Yes | Supported preview profile, which is obtained through [getSupportedOutputCapability](arkts-camera-cameramanager-i.md#getsupportedoutputcapability-2). |
+| surfaceId | string | Yes | Surface ID, which is obtained from [XComponent](XComponent) or [ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-imagereceiver-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PreviewOutput | **PreviewOutput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [PreviewOutput](arkts-camera-previewoutput-i.md) | **PreviewOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -266,12 +274,13 @@ Creates a **PreviewOutput** instance. This API returns the result synchronously.
 createPreviewOutput(surfaceId: string): PreviewOutput
 ```
 
-Creates a **PreviewOutput** instance without configuration. This API returns the result synchronously. It must be
-used with [preconfig](arkts-camera-photosession-i.md#preconfig-1).
+Creates a **PreviewOutput** instance without configuration. This API returns the result synchronously. It must be used with [preconfig](arkts-camera-photosession-i.md#preconfig-1).
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraManager-createPreviewOutput(surfaceId: string): PreviewOutput--><!--Device-CameraManager-createPreviewOutput(surfaceId: string): PreviewOutput-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -279,13 +288,13 @@ used with [preconfig](arkts-camera-photosession-i.md#preconfig-1).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| surfaceId | string | Yes | Surface ID, which is obtained from[XComponent](XComponent) or [ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-imagereceiver-i.md). |
+| surfaceId | string | Yes | Surface ID, which is obtained from [XComponent](XComponent) or [ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-imagereceiver-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PreviewOutput | **PreviewOutput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [PreviewOutput](arkts-camera-previewoutput-i.md) | **PreviewOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -306,19 +315,21 @@ Creates a **Session** instance with a given scene mode. This API returns the res
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraManager-createSession<T extends Session>(mode: SceneMode): T--><!--Device-CameraManager-createSession<T extends Session>(mode: SceneMode): T-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | SceneMode | Yes | Scene mode. The API does not take effect if the input parameter is invalid (forexample, the value is out of range, null, or undefined). |
+| mode | [SceneMode](arkts-camera-scenemode-e.md) | Yes | Scene mode. The API does not take effect if the input parameter is invalid (for example, the value is out of range, null, or undefined). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | **Session** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| T | **Session** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -333,18 +344,17 @@ Creates a **Session** instance with a given scene mode. This API returns the res
 createVideoOutput(profile: VideoProfile, surfaceId: string): VideoOutput
 ```
 
-Creates a **VideoOutput** instance. This API returns the result synchronously.
-In video recording mode, if SDR or HDR VIVID is enabled, the camera format and color space must be configured
-according to the relationships specified in the table below. Configurations that do not match the table will
-cause issues such as preview exceptions.
-| SDR/HDR Photo Capture | CameraFormat | ColorSpace |
-|--------------------|--------------------------|------------------|
-| SDR | CAMERA_FORMAT_YUV_420_SP | BT709_LIMIT |
+Creates a **VideoOutput** instance. This API returns the result synchronously.In video recording mode, if SDR or HDR VIVID is enabled, the camera format and color space must be configured according to the relationships specified in the table below. Configurations that do not match the table will cause issues such as preview exceptions.  
+| SDR/HDR Photo Capture | CameraFormat | ColorSpace |  
+|--------------------|--------------------------|------------------|  
+| SDR | CAMERA_FORMAT_YUV_420_SP | BT709_LIMIT |  
 | HDR_VIVID | CAMERA_FORMAT_YCRCB_P010<br>CAMERA_FORMAT_YCBCR_P010 | BT2020_HLG_LIMIT<br>BT2020_HLG_FULL |
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraManager-createVideoOutput(profile: VideoProfile, surfaceId: string): VideoOutput--><!--Device-CameraManager-createVideoOutput(profile: VideoProfile, surfaceId: string): VideoOutput-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -352,14 +362,14 @@ cause issues such as preview exceptions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | VideoProfile | Yes | Supported video profile, which is obtained through[getSupportedOutputCapability](arkts-camera-cameramanager-i.md#getsupportedoutputcapability-2). |
+| profile | [VideoProfile](arkts-camera-videoprofile-i.md) | Yes | Supported video profile, which is obtained through [getSupportedOutputCapability](arkts-camera-cameramanager-i.md#getsupportedoutputcapability-2). |
 | surfaceId | string | Yes | Surface ID, which is obtained from [AVRecorder](../../apis-media-kit/arkts-apis/arkts-multimedia-media.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| VideoOutput | **VideoOutput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [VideoOutput](arkts-camera-videooutput-i.md) | **VideoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -374,12 +384,13 @@ cause issues such as preview exceptions.
 createVideoOutput(surfaceId: string): VideoOutput
 ```
 
-Creates a **VideoOutput** instance without configuration. This API returns the result synchronously. It must be
-used with [preconfig](arkts-camera-videosession-i.md#preconfig-1).
+Creates a **VideoOutput** instance without configuration. This API returns the result synchronously. It must be used with [preconfig](arkts-camera-videosession-i.md#preconfig-1).
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraManager-createVideoOutput(surfaceId: string): VideoOutput--><!--Device-CameraManager-createVideoOutput(surfaceId: string): VideoOutput-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -393,7 +404,7 @@ used with [preconfig](arkts-camera-videosession-i.md#preconfig-1).
 
 | Type | Description |
 | --- | --- |
-| VideoOutput | **VideoOutput** instance created. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [VideoOutput](arkts-camera-videooutput-i.md) | **VideoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -408,12 +419,13 @@ used with [preconfig](arkts-camera-videosession-i.md#preconfig-1).
 getCameraConcurrentInfos(cameras: Array<CameraDevice>): Array<CameraConcurrentInfo>
 ```
 
-Obtains the concurrency information of the specified cameras. If the return value is an empty array, concurrency
-is not supported.
+Obtains the concurrency information of the specified cameras. If the return value is an empty array, concurrency is not supported.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraManager-getCameraConcurrentInfos(cameras: Array<CameraDevice>): Array<CameraConcurrentInfo>--><!--Device-CameraManager-getCameraConcurrentInfos(cameras: Array<CameraDevice>): Array<CameraConcurrentInfo>-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -421,13 +433,13 @@ is not supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameras | Array&lt;CameraDevice&gt; | Yes | Array of **CameraDevice** objects. You are advised to use the front andrear cameras obtained by calling [getCameraDevice](arkts-camera-cameramanager-i.md#getcameradevice-1). |
+| cameras | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<CameraDevice> | Yes | Array of **CameraDevice** objects. You are advised to use the front and rear cameras obtained by calling [getCameraDevice](arkts-camera-cameramanager-i.md#getcameradevice-1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;CameraConcurrentInfo&gt; | Array of concurrency information corresponding to the providedCameraDevice objects, with a one-to-one mapping. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<CameraConcurrentInfo> | Array of concurrency information corresponding to the provided CameraDevice objects, with a one-to-one mapping. |
 
 **Error codes:**
 
@@ -441,14 +453,13 @@ is not supported.
 getCameraDevice(position: CameraPosition, type: CameraType): CameraDevice
 ```
 
-Obtains the specified camera based on the camera position and type.
-Obtains the camera lens of the specified [CameraPosition](arkts-camera-cameraposition-e.md)
-and [CameraType](arkts-camera-cameratype-e.md). If the returned result is undefined, the
-camera lens is not found on the current device.
+Obtains the specified camera based on the camera position and type.Obtains the camera lens of the specified [CameraPosition](arkts-camera-cameraposition-e.md)and [CameraType](arkts-camera-cameratype-e.md). If the returned result is undefined, the camera lens is not found on the current device.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraManager-getCameraDevice(position: CameraPosition, type: CameraType): CameraDevice--><!--Device-CameraManager-getCameraDevice(position: CameraPosition, type: CameraType): CameraDevice-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -456,14 +467,14 @@ camera lens is not found on the current device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | CameraPosition | Yes | Camera position. |
-| type | CameraType | Yes | Camera type. |
+| position | [CameraPosition](arkts-camera-cameraposition-e.md) | Yes | Camera position. |
+| type | [CameraType](arkts-camera-cameratype-e.md) | Yes | Camera type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CameraDevice | Camera obtained. |
+| [CameraDevice](arkts-camera-cameradevice-i.md) | Camera obtained. |
 
 **Error codes:**
 
@@ -477,12 +488,13 @@ camera lens is not found on the current device.
 getCameraDevices(position: CameraPosition, types: Array<CameraType>, connectType: ConnectionType): Array<CameraDevice>
 ```
 
-Obtains the list of cameras that meet the search criteria based on the camera position, camera types, and
-connection type.
+Obtains the list of cameras that meet the search criteria based on the camera position, camera types, and connection type.
 
 **Since:** 23
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-CameraManager-getCameraDevices(position: CameraPosition, types: Array<CameraType>, connectType: ConnectionType): Array<CameraDevice>--><!--Device-CameraManager-getCameraDevices(position: CameraPosition, types: Array<CameraType>, connectType: ConnectionType): Array<CameraDevice>-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -490,15 +502,15 @@ connection type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | CameraPosition | Yes | Camera position. |
-| types | Array&lt;CameraType&gt; | Yes | Array of camera types. |
-| connectType | ConnectionType | Yes | Camera connection type. |
+| position | [CameraPosition](arkts-camera-cameraposition-e.md) | Yes | Camera position. |
+| types | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<CameraType> | Yes | Array of camera types. |
+| connectType | [ConnectionType](arkts-camera-connectiontype-e.md) | Yes | Camera connection type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;CameraDevice&gt; | Array of cameras that meet the search criteria. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<CameraDevice> | Array of cameras that meet the search criteria. |
 
 **Error codes:**
 
@@ -518,13 +530,15 @@ Obtains the supported camera devices. This API returns the result synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraManager-getSupportedCameras(): Array<CameraDevice>--><!--Device-CameraManager-getSupportedCameras(): Array<CameraDevice>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;CameraDevice&gt; | Array of camera devices supported. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<CameraDevice> | Array of camera devices supported. |
 
 ## getSupportedFullOutputCapability
 
@@ -532,12 +546,11 @@ Obtains the supported camera devices. This API returns the result synchronously.
 getSupportedFullOutputCapability(camera: CameraDevice, mode: SceneMode): CameraOutputCapability
 ```
 
-Obtains the complete output capabilities supported by a specified camera in a specified mode, including YUV, HEIF
-, and HDR.
+Obtains the complete output capabilities supported by a specified camera in a specified mode, including YUV, HEIF, and HDR.
 
-> **NOTE**
->
-> Before using YUV, HEIF, or HDR, you need to explicitly call this method to ensure that the complete output
+> **NOTE**  
+>  
+> Before using YUV, HEIF, or HDR, you need to explicitly call this method to ensure that the complete output  
 > capabilities are obtained.
 
 **Since:** 23
@@ -546,20 +559,22 @@ Obtains the complete output capabilities supported by a specified camera in a sp
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-CameraManager-getSupportedFullOutputCapability(camera: CameraDevice, mode: SceneMode): CameraOutputCapability--><!--Device-CameraManager-getSupportedFullOutputCapability(camera: CameraDevice, mode: SceneMode): CameraOutputCapability-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| camera | CameraDevice | Yes | Camera device. |
-| mode | SceneMode | Yes | Scene mode. |
+| camera | [CameraDevice](arkts-camera-cameradevice-i.md) | Yes | Camera device. |
+| mode | [SceneMode](arkts-camera-scenemode-e.md) | Yes | Scene mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CameraOutputCapability | Camera output capability obtained. |
+| [CameraOutputCapability](arkts-camera-cameraoutputcapability-i.md) | Camera output capability obtained. |
 
 ## getSupportedOutputCapability
 
@@ -575,19 +590,21 @@ Obtains the output capability supported by a camera device. This API returns the
 
 **Substitutes:** getSupportedOutputCapability(camera:
 
+<!--Device-CameraManager-getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability--><!--Device-CameraManager-getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| camera | CameraDevice | Yes | Camera device. |
+| camera | [CameraDevice](arkts-camera-cameradevice-i.md) | Yes | Camera device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CameraOutputCapability | Camera output capability obtained. |
+| [CameraOutputCapability](arkts-camera-cameraoutputcapability-i.md) | Camera output capability obtained. |
 
 ## getSupportedOutputCapability
 
@@ -595,12 +612,13 @@ Obtains the output capability supported by a camera device. This API returns the
 getSupportedOutputCapability(camera: CameraDevice, mode: SceneMode): CameraOutputCapability
 ```
 
-Obtains the output capability supported by a camera device in a given scene mode. This API returns the result
-synchronously.
+Obtains the output capability supported by a camera device in a given scene mode. This API returns the result synchronously.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraManager-getSupportedOutputCapability(camera: CameraDevice, mode: SceneMode): CameraOutputCapability--><!--Device-CameraManager-getSupportedOutputCapability(camera: CameraDevice, mode: SceneMode): CameraOutputCapability-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -608,14 +626,14 @@ synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| camera | CameraDevice | Yes | Camera device. |
-| mode | SceneMode | Yes | Scene mode. |
+| camera | [CameraDevice](arkts-camera-cameradevice-i.md) | Yes | Camera device. |
+| mode | [SceneMode](arkts-camera-scenemode-e.md) | Yes | Scene mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CameraOutputCapability | Camera output capability obtained. |
+| [CameraOutputCapability](arkts-camera-cameraoutputcapability-i.md) | Camera output capability obtained. |
 
 ## getSupportedSceneModes
 
@@ -629,19 +647,21 @@ Obtains the scene modes supported by a camera device. This API returns the resul
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraManager-getSupportedSceneModes(camera: CameraDevice): Array<SceneMode>--><!--Device-CameraManager-getSupportedSceneModes(camera: CameraDevice): Array<SceneMode>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| camera | CameraDevice | Yes | Camera device. |
+| camera | [CameraDevice](arkts-camera-cameradevice-i.md) | Yes | Camera device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;SceneMode&gt; | Array of scene modes supported. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<SceneMode> | Array of scene modes supported. |
 
 ## getTorchMode
 
@@ -655,13 +675,15 @@ Obtains the flashlight mode of this camera device.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraManager-getTorchMode(): TorchMode--><!--Device-CameraManager-getTorchMode(): TorchMode-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TorchMode | Flashlight mode. |
+| [TorchMode](arkts-camera-torchmode-e.md) | Flashlight mode. |
 
 ## isCameraMuted
 
@@ -674,6 +696,8 @@ Checks whether this camera is muted.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraManager-isCameraMuted(): boolean--><!--Device-CameraManager-isCameraMuted(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -695,19 +719,21 @@ Checks whether a flashlight mode is supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraManager-isTorchModeSupported(mode: TorchMode): boolean--><!--Device-CameraManager-isTorchModeSupported(mode: TorchMode): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | TorchMode | Yes | Flashlight mode. If the input parameter is null or undefined, it is treated as 0 andthe flashlight is turned off. |
+| mode | [TorchMode](arkts-camera-torchmode-e.md) | Yes | Flashlight mode. If the input parameter is null or undefined, it is treated as 0 and the flashlight is turned off. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the flashlight mode. **true** if supported, **false**otherwise. If the API call fails, undefined is returned. |
+| boolean | Check result for the support of the flashlight mode. **true** if supported, **false** otherwise. If the API call fails, undefined is returned. |
 
 ## isTorchSupported
 
@@ -720,6 +746,8 @@ Checks whether the camera device supports the flashlight.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraManager-isTorchSupported(): boolean--><!--Device-CameraManager-isTorchSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -741,14 +769,16 @@ Unsubscribes from camera status events. This API uses an asynchronous callback t
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraManager-off(type: 'cameraStatus', callback?: AsyncCallback<CameraStatusInfo>): void--><!--Device-CameraManager-off(type: 'cameraStatus', callback?: AsyncCallback<CameraStatusInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cameraStatus' | Yes | Event type. The value is fixed at **'cameraStatus'**. The event can be listenedfor when a **CameraManager** instance is obtained. |
-| callback | AsyncCallback&lt;CameraStatusInfo&gt; | No | Callback used to return the result. If this parameter isspecified, the subscription to the specified event with the specified callback is canceled. (The callbackobject cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all thecallbacks are canceled. |
+| type | 'cameraStatus' | Yes | Event type. The value is fixed at **'cameraStatus'**. The event can be listened for when a **CameraManager** instance is obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<CameraStatusInfo> | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## off('foldStatusChange')
 
@@ -762,14 +792,16 @@ Unsubscribes from fold state change events of the foldable device.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraManager-off(type: 'foldStatusChange', callback?: AsyncCallback<FoldStatusInfo>): void--><!--Device-CameraManager-off(type: 'foldStatusChange', callback?: AsyncCallback<FoldStatusInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'foldStatusChange' | Yes | Event type. The value is fixed at **'foldStatusChange'**. The event istriggered when the fold state of the foldable device changes. |
-| callback | AsyncCallback&lt;FoldStatusInfo&gt; | No | Callback used to return the fold state information about thefoldable device. If this parameter is specified, the subscription to the specified event with the specifiedcallback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions tothe specified event with all the callbacks are canceled. |
+| type | 'foldStatusChange' | Yes | Event type. The value is fixed at **'foldStatusChange'**. The event is triggered when the fold state of the foldable device changes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FoldStatusInfo> | No | Callback used to return the fold state information about the foldable device. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## off('torchStatusChange')
 
@@ -783,14 +815,16 @@ Unsubscribes from flashlight status change events. This API uses an asynchronous
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraManager-off(type: 'torchStatusChange', callback?: AsyncCallback<TorchStatusInfo>): void--><!--Device-CameraManager-off(type: 'torchStatusChange', callback?: AsyncCallback<TorchStatusInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'torchStatusChange' | Yes | Event type. The value is fixed at **'torchStatusChange'**. The event can belistened for when a **CameraManager** instance is obtained. |
-| callback | AsyncCallback&lt;TorchStatusInfo&gt; | No | Callback used to return the result. If this parameter isspecified, the subscription to the specified event with the specified callback is canceled. (The callbackobject cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all thecallbacks are canceled. |
+| type | 'torchStatusChange' | Yes | Event type. The value is fixed at **'torchStatusChange'**. The event can be listened for when a **CameraManager** instance is obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<TorchStatusInfo> | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## on('cameraStatus')
 
@@ -800,13 +834,15 @@ on(type: 'cameraStatus', callback: AsyncCallback<CameraStatusInfo>): void
 
 Subscribes to camera status events. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraManager-on(type: 'cameraStatus', callback: AsyncCallback<CameraStatusInfo>): void--><!--Device-CameraManager-on(type: 'cameraStatus', callback: AsyncCallback<CameraStatusInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -814,8 +850,8 @@ Subscribes to camera status events. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cameraStatus' | Yes | Event type. The value is fixed at **'cameraStatus'**. The event can be listenedfor when a **CameraManager** instance is obtained. This event is triggered and the corresponding informationis returned only when the camera device is enabled or disabled. |
-| callback | AsyncCallback&lt;CameraStatusInfo&gt; | Yes | Callback used to return the camera status change. |
+| type | 'cameraStatus' | Yes | Event type. The value is fixed at **'cameraStatus'**. The event can be listened for when a **CameraManager** instance is obtained. This event is triggered and the corresponding information is returned only when the camera device is enabled or disabled. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<CameraStatusInfo> | Yes | Callback used to return the camera status change. |
 
 ## on('foldStatusChange')
 
@@ -823,16 +859,17 @@ Subscribes to camera status events. This API uses an asynchronous callback to re
 on(type: 'foldStatusChange', callback: AsyncCallback<FoldStatusInfo>): void
 ```
 
-Subscribes to fold status change events of the foldable device. This API uses an asynchronous callback to return
-the result.
+Subscribes to fold status change events of the foldable device. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraManager-on(type: 'foldStatusChange', callback: AsyncCallback<FoldStatusInfo>): void--><!--Device-CameraManager-on(type: 'foldStatusChange', callback: AsyncCallback<FoldStatusInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -840,8 +877,8 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'foldStatusChange' | Yes | Event type. The value is fixed at **'foldStatusChange'**. The event istriggered when the fold state of the foldable device changes. |
-| callback | AsyncCallback&lt;FoldStatusInfo&gt; | Yes | Callback used to return the fold state information about thefoldable device. |
+| type | 'foldStatusChange' | Yes | Event type. The value is fixed at **'foldStatusChange'**. The event is triggered when the fold state of the foldable device changes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FoldStatusInfo> | Yes | Callback used to return the fold state information about the foldable device. |
 
 ## on('torchStatusChange')
 
@@ -851,13 +888,15 @@ on(type: 'torchStatusChange', callback: AsyncCallback<TorchStatusInfo>): void
 
 Subscribes to flashlight status change events. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-CameraManager-on(type: 'torchStatusChange', callback: AsyncCallback<TorchStatusInfo>): void--><!--Device-CameraManager-on(type: 'torchStatusChange', callback: AsyncCallback<TorchStatusInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -865,8 +904,8 @@ Subscribes to flashlight status change events. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'torchStatusChange' | Yes | Event type. The value is fixed at **'torchStatusChange'**. The event can belistened for when a **CameraManager** instance is obtained. Currently, this event is triggered only in thefollowing scenarios: The flashlight is turned on or turned off, or becomes unavailable or available. |
-| callback | AsyncCallback&lt;TorchStatusInfo&gt; | Yes | Callback used to return the flashlight status. |
+| type | 'torchStatusChange' | Yes | Event type. The value is fixed at **'torchStatusChange'**. The event can be listened for when a **CameraManager** instance is obtained. Currently, this event is triggered only in the following scenarios: The flashlight is turned on or turned off, or becomes unavailable or available. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<TorchStatusInfo> | Yes | Callback used to return the flashlight status. |
 
 ## setTorchMode
 
@@ -880,13 +919,15 @@ Sets the flashlight mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-CameraManager-setTorchMode(mode: TorchMode): void--><!--Device-CameraManager-setTorchMode(mode: TorchMode): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | TorchMode | Yes | Flashlight mode. If the input parameter is null or undefined, it is treated as 0 andthe flashlight is turned off. |
+| mode | [TorchMode](arkts-camera-torchmode-e.md) | Yes | Flashlight mode. If the input parameter is null or undefined, it is treated as 0 and the flashlight is turned off. |
 
 **Error codes:**
 

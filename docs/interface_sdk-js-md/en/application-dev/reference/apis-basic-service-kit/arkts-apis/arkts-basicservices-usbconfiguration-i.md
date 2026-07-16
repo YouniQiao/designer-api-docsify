@@ -1,9 +1,10 @@
 # USBConfiguration
 
-Represents the USB configuration. One [USBDevice](arkts-basicservices-usbdevice-i.md) can contain multiple **USBConfig**
-instances.
+Represents the USB configuration. One [USBDevice](arkts-basicservices-usbdevice-i.md) can contain multiple **USBConfig** instances.
 
 **Since:** 9
+
+<!--Device-usbManager-interface USBConfiguration--><!--Device-usbManager-interface USBConfiguration-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -25,6 +26,8 @@ Configuration attributes.
 
 **Since:** 9
 
+<!--Device-USBConfiguration-attributes: int--><!--Device-USBConfiguration-attributes: int-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## id
@@ -38,6 +41,8 @@ Unique ID of the USB configuration.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-USBConfiguration-id: int--><!--Device-USBConfiguration-id: int-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -53,6 +58,8 @@ Supported interface attributes.
 
 **Since:** 9
 
+<!--Device-USBConfiguration-interfaces: Array<USBInterface>--><!--Device-USBConfiguration-interfaces: Array<USBInterface>-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## isRemoteWakeup
@@ -61,12 +68,13 @@ Supported interface attributes.
 isRemoteWakeup: boolean
 ```
 
-Whether remote wakeup is supported. The value **true** indicates that the remote wakeup is supported, and **false
-** indicates the opposite.
+Whether remote wakeup is supported. The value **true** indicates that the remote wakeup is supported, and **false ** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 9
+
+<!--Device-USBConfiguration-isRemoteWakeup: boolean--><!--Device-USBConfiguration-isRemoteWakeup: boolean-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -76,12 +84,13 @@ Whether remote wakeup is supported. The value **true** indicates that the remote
 isSelfPowered: boolean
 ```
 
-Whether an independent power supply is supported. The value **true** indicates that an independent power supply
-is supported, and **false** indicates the opposite.
+Whether an independent power supply is supported. The value **true** indicates that an independent power supply is supported, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 9
+
+<!--Device-USBConfiguration-isSelfPowered: boolean--><!--Device-USBConfiguration-isSelfPowered: boolean-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -97,6 +106,8 @@ Maximum power consumption.Unit: mA.
 
 **Since:** 9
 
+<!--Device-USBConfiguration-maxPower: int--><!--Device-USBConfiguration-maxPower: int-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## name
@@ -110,6 +121,8 @@ Configuration name, which can be left empty.
 **Type:** string
 
 **Since:** 9
+
+<!--Device-USBConfiguration-name: string--><!--Device-USBConfiguration-name: string-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 

@@ -2,12 +2,14 @@
 
 Defines the configuration policy for the high CPU usage event.
 
-> **NOTE**
->
-> After this API is called, the setting is persisted. If this API is called again and the corresponding parameter
+> **NOTE**  
+>  
+> After this API is called, the setting is persisted. If this API is called again and the corresponding parameter  
 > is not set, the value used by the system last time is used.
 
 **Since:** 22
+
+<!--Device-hiAppEvent-interface CpuUsageHighPolicy--><!--Device-hiAppEvent-interface CpuUsageHighPolicy-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -23,8 +25,7 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 backgroundLoadThreshold?: number
 ```
 
-High CPU usage threshold of the application background, in percentage. The value range is **[1, 100]**. The
-default value is **10**. If the value is not within the threshold range, the default value **10** is used.
+High CPU usage threshold of the application background, in percentage. The value range is **[1, 100]**. The default value is **10**. If the value is not within the threshold range, the default value **10** is used.
 
 **Note**: It is recommended that the value be less than **10**.
 
@@ -34,6 +35,8 @@ default value is **10**. If the value is not within the threshold range, the def
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-CpuUsageHighPolicy-backgroundLoadThreshold?: int--><!--Device-CpuUsageHighPolicy-backgroundLoadThreshold?: int-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## foregroundLoadThreshold
@@ -42,8 +45,7 @@ default value is **10**. If the value is not within the threshold range, the def
 foregroundLoadThreshold?: number
 ```
 
-High CPU usage threshold of the application foreground, in percentage. The value range is **[1, 100]**. The
-default value is **30**. If the value is not within the threshold range, the default value **30** is used.
+High CPU usage threshold of the application foreground, in percentage. The value range is **[1, 100]**. The default value is **30**. If the value is not within the threshold range, the default value **30** is used.
 
 **Note**: It is recommended that the value be less than **30**.
 
@@ -53,6 +55,8 @@ default value is **30**. If the value is not within the threshold range, the def
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-CpuUsageHighPolicy-foregroundLoadThreshold?: int--><!--Device-CpuUsageHighPolicy-foregroundLoadThreshold?: int-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## perfLogCaptureCount
@@ -61,9 +65,7 @@ default value is **30**. If the value is not within the threshold range, the def
 perfLogCaptureCount?: number
 ```
 
-Number of log collection times per day. Once the system detects that the number of log collection times exceeds
-the set value, the system still reports the event normally, but the **external_log** field in the exception event
-is not attached with the log file path information.
+Number of log collection times per day. Once the system detects that the number of log collection times exceeds the set value, the system still reports the event normally, but the **external_log** field in the exception event is not attached with the log file path information.
 
 For debug-type applications, the threshold range is **[-1, 100]**.
 
@@ -75,15 +77,15 @@ If the value is not within the threshold range, the default value **1** is used.
 
 **NOTE**
 
-1. The value **-1** indicates that log collection times are not limited.
-2. The value **0** indicates that logs are not collected.
-3. A value greater than **0** indicates the maximum number of daily collection times.
+1. The value **-1** indicates that log collection times are not limited.2. The value **0** indicates that logs are not collected.3. A value greater than **0** indicates the maximum number of daily collection times.
 
 **Type:** number
 
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-CpuUsageHighPolicy-perfLogCaptureCount?: int--><!--Device-CpuUsageHighPolicy-perfLogCaptureCount?: int-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -93,8 +95,7 @@ If the value is not within the threshold range, the default value **1** is used.
 threadLoadInterval?: number
 ```
 
-Interval for detecting high CPU usage of application threads, in seconds. The value range is **[5, 3600]**. The
-default value is **60**.
+Interval for detecting high CPU usage of application threads, in seconds. The value range is **[5, 3600]**. The default value is **60**.
 
 If the value is not within the threshold range, the default value **60** is used.
 
@@ -104,6 +105,8 @@ If the value is not within the threshold range, the default value **60** is used
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-CpuUsageHighPolicy-threadLoadInterval?: int--><!--Device-CpuUsageHighPolicy-threadLoadInterval?: int-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## threadLoadThreshold
@@ -112,14 +115,15 @@ If the value is not within the threshold range, the default value **60** is used
 threadLoadThreshold?: number
 ```
 
-High CPU usage threshold of the application thread, in percentage. The value range is **[15, 100]**. The default
-value is **70**. If the value is not within the threshold range, the default value **70** is used.
+High CPU usage threshold of the application thread, in percentage. The value range is **[15, 100]**. The default value is **70**. If the value is not within the threshold range, the default value **70** is used.
 
 **Type:** number
 
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-CpuUsageHighPolicy-threadLoadThreshold?: int--><!--Device-CpuUsageHighPolicy-threadLoadThreshold?: int-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 

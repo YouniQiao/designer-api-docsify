@@ -4,6 +4,8 @@ Describe the HID device capability fields of this endpoint being queried.
 
 **Since:** 23
 
+<!--Device-hid-interface HidDeviceSdp--><!--Device-hid-interface HidDeviceSdp-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ description for this Bluetooth hid device. Maximum length is 50 bytes.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HidDeviceSdp-description: string--><!--Device-HidDeviceSdp-description: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## descriptors
@@ -41,6 +45,8 @@ descriptors identifies the descriptors associated with the bluetooth hid device.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HidDeviceSdp-descriptors: Uint8Array--><!--Device-HidDeviceSdp-descriptors: Uint8Array-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -58,6 +64,8 @@ name of this Bluetooth hid device. Maximum length is 50 bytes.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HidDeviceSdp-name: string--><!--Device-HidDeviceSdp-name: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## provider
@@ -74,6 +82,8 @@ provider of this Bluetooth hid device. Maximum length is 50 bytes.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-HidDeviceSdp-provider: string--><!--Device-HidDeviceSdp-provider: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## subclass
@@ -89,6 +99,8 @@ Subclass of this Bluetooth HID device. Subclass represents the specific HID devi
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HidDeviceSdp-subclass: Subclass--><!--Device-HidDeviceSdp-subclass: Subclass-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

@@ -16,6 +16,8 @@ getForegroundApplications.
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
+<!--Device-appManager-function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>): void--><!--Device-appManager-function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ getForegroundApplications.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;AppStateData&gt;&gt; | Yes | Return all application information currently in theforeground in the form of callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<AppStateData>> | Yes | Return all application information currently in the foreground in the form of callback. |
 
 **Example**
 
@@ -58,6 +60,8 @@ getForegroundApplications.
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
+<!--Device-appManager-function getForegroundApplications(): Promise<Array<AppStateData>>--><!--Device-appManager-function getForegroundApplications(): Promise<Array<AppStateData>>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -66,7 +70,7 @@ getForegroundApplications.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AppStateData&gt;&gt; | Returns the list of AppStateData. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AppStateData>> | Returns the list of AppStateData. |
 
 **Example**
 

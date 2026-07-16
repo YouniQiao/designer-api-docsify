@@ -4,6 +4,8 @@ Obtains NR cell information.
 
 **Since:** 8
 
+<!--Device-radio-export interface NrCellInformation--><!--Device-radio-export interface NrCellInformation-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Indicates the mobile country code.
 
 **Since:** 8
 
+<!--Device-NrCellInformation-mcc: string--><!--Device-NrCellInformation-mcc: string-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Indicates the mobile network code.
 **Type:** string
 
 **Since:** 8
+
+<!--Device-NrCellInformation-mnc: string--><!--Device-NrCellInformation-mnc: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -58,6 +64,8 @@ Indicates the 5G network cell ID.
 
 **Since:** 8
 
+<!--Device-NrCellInformation-nci: int--><!--Device-NrCellInformation-nci: int-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Indicates the NR-ARFCN(NR Absolute Radio Frequency Channel Number).
 **Type:** number
 
 **Since:** 8
+
+<!--Device-NrCellInformation-nrArfcn: int--><!--Device-NrCellInformation-nrArfcn: int-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -90,6 +100,8 @@ Indicates the physical cell identification.
 
 **Since:** 8
 
+<!--Device-NrCellInformation-pci: int--><!--Device-NrCellInformation-pci: int-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -105,6 +117,8 @@ Indicates the tracking area code.
 **Type:** number
 
 **Since:** 8
+
+<!--Device-NrCellInformation-tac: int--><!--Device-NrCellInformation-tac: int-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 

@@ -1,9 +1,10 @@
 # TitleButtonRect
 
-Describes the rectangle used to hold the minimize, maximize, and close buttons on the title bar. This rectangle is
-located in the top-right corner of the window.
+Describes the rectangle used to hold the minimize, maximize, and close buttons on the title bar. This rectangle is located in the top-right corner of the window.
 
 **Since:** 11
+
+<!--Device-window-interface TitleButtonRect--><!--Device-window-interface TitleButtonRect-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -27,6 +28,8 @@ Height of the rectangle, in vp. The value must be an integer.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TitleButtonRect-height: int--><!--Device-TitleButtonRect-height: int-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## right
@@ -42,6 +45,8 @@ Right boundary of the rectangle, in vp. The value must be an integer.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TitleButtonRect-right: int--><!--Device-TitleButtonRect-right: int-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -59,6 +64,8 @@ Top boundary of the rectangle, in vp. The value must be an integer.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TitleButtonRect-top: int--><!--Device-TitleButtonRect-top: int-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## width
@@ -74,6 +81,8 @@ Width of the rectangle, in vp. The value must be an integer.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TitleButtonRect-width: int--><!--Device-TitleButtonRect-width: int-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

@@ -18,6 +18,8 @@ Discovers USB printers. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function discoverUsbPrinters(): Promise<Array<PrinterInformation>>--><!--Device-print-function discoverUsbPrinters(): Promise<Array<PrinterInformation>>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Discovers USB printers. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PrinterInformation&gt;&gt; | Promise used to return the information about the discovered USBprinters. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<PrinterInformation>> | Promise used to return the information about the discovered USB printers. |
 
 **Error codes:**
 

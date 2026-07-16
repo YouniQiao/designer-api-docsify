@@ -4,6 +4,8 @@ Describes the layout and alignment of child components within the **Flex** compo
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface FlexOptions--><!--Device-unnamed-declare interface FlexOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## alignContent
@@ -12,9 +14,7 @@ Describes the layout and alignment of child components within the **Flex** compo
 alignContent?: FlexAlign
 ```
 
-Alignment mode of multiple lines when there is extra space along the cross axis. This parameter is valid only when
-**wrap** is set to **Wrap** or **WrapReverse**.
-If an invalid value is passed, the default value will be used. Default value: **FlexAlign.Start**.
+Alignment mode of multiple lines when there is extra space along the cross axis. This parameter is valid only when **wrap** is set to **Wrap** or **WrapReverse**.If an invalid value is passed, the default value will be used. Default value: **FlexAlign.Start**.
 
 **Type:** FlexAlign
 
@@ -23,6 +23,8 @@ If an invalid value is passed, the default value will be used. Default value: **
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-FlexOptions-alignContent?: FlexAlign--><!--Device-FlexOptions-alignContent?: FlexAlign-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,8 +34,7 @@ If an invalid value is passed, the default value will be used. Default value: **
 alignItems?: ItemAlign
 ```
 
-Alignment mode of the child components in the **Flex** component along the cross axis.
-If an invalid value is passed, the default value will be used. Default value: **ItemAlign.Start**.
+Alignment mode of the child components in the **Flex** component along the cross axis.If an invalid value is passed, the default value will be used. Default value: **ItemAlign.Start**.
 
 **Type:** ItemAlign
 
@@ -43,6 +44,8 @@ If an invalid value is passed, the default value will be used. Default value: **
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-FlexOptions-alignItems?: ItemAlign--><!--Device-FlexOptions-alignItems?: ItemAlign-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## direction
@@ -51,9 +54,7 @@ If an invalid value is passed, the default value will be used. Default value: **
 direction?: FlexDirection
 ```
 
-Direction in which child components are arranged in the **Flex** component, that is, the direction of the main
-axis.
-If an invalid value is passed, the default value will be used. Default value: **FlexDirection.Row**.
+Direction in which child components are arranged in the **Flex** component, that is, the direction of the main axis.If an invalid value is passed, the default value will be used. Default value: **FlexDirection.Row**.
 
 **Type:** FlexDirection
 
@@ -63,6 +64,8 @@ If an invalid value is passed, the default value will be used. Default value: **
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-FlexOptions-direction?: FlexDirection--><!--Device-FlexOptions-direction?: FlexDirection-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## justifyContent
@@ -71,8 +74,7 @@ If an invalid value is passed, the default value will be used. Default value: **
 justifyContent?: FlexAlign
 ```
 
-Alignment mode of the child components in the **Flex** component along the main axis.
-If an invalid value is passed, the default value will be used. Default value: **FlexAlign.Start**.
+Alignment mode of the child components in the **Flex** component along the main axis.If an invalid value is passed, the default value will be used. Default value: **FlexAlign.Start**.
 
 **Type:** FlexAlign
 
@@ -82,6 +84,8 @@ If an invalid value is passed, the default value will be used. Default value: **
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-FlexOptions-justifyContent?: FlexAlign--><!--Device-FlexOptions-justifyContent?: FlexAlign-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## space
@@ -90,11 +94,7 @@ If an invalid value is passed, the default value will be used. Default value: **
 space?: FlexSpaceOptions
 ```
 
-Spacing between child components along the main axis or cross axis of the **Flex** component.
-Invalid values are treated as the default value. This parameter does not take effect if the value specified is a
-negative number or percentage, or if **justifyContent** is set to **FlexAlign.SpaceBetween**,
-**FlexAlign.SpaceAround**, or **FlexAlign.SpaceEvenly**.
-Default value: **{main: LengthMetrics.px(0), cross: LengthMetrics.px(0)}**.
+Spacing between child components along the main axis or cross axis of the **Flex** component.Invalid values are treated as the default value. This parameter does not take effect if the value specified is a negative number or percentage, or if **justifyContent** is set to **FlexAlign.SpaceBetween**,**FlexAlign.SpaceAround**, or **FlexAlign.SpaceEvenly**.Default value: **{main: LengthMetrics.px(0), cross: LengthMetrics.px(0)}**.
 
 **Type:** FlexSpaceOptions
 
@@ -104,6 +104,8 @@ Default value: **{main: LengthMetrics.px(0), cross: LengthMetrics.px(0)}**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-FlexOptions-space?: FlexSpaceOptions--><!--Device-FlexOptions-space?: FlexSpaceOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## wrap
@@ -112,11 +114,10 @@ Default value: **{main: LengthMetrics.px(0), cross: LengthMetrics.px(0)}**.
 wrap?: FlexWrap
 ```
 
-Whether the **Flex** component has a single line or multiple lines.
-If an invalid value is passed, the default value will be used.
-> **NOTE**
->
-> When wrapped onto multiple lines, the child elements on the new line are stacked in the direction based on the
+Whether the **Flex** component has a single line or multiple lines.If an invalid value is passed, the default value will be used.  
+> **NOTE**  
+>  
+> When wrapped onto multiple lines, the child elements on the new line are stacked in the direction based on the  
 > cross axis direction. Default value: **FlexWrap.NoWrap**.
 
 **Type:** FlexWrap
@@ -126,6 +127,8 @@ If an invalid value is passed, the default value will be used.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-FlexOptions-wrap?: FlexWrap--><!--Device-FlexOptions-wrap?: FlexWrap-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,5 +1,11 @@
 # removeProcessor
 
+## 导入模块
+
+```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+```
+
 ## removeProcessor
 
 ```TypeScript
@@ -10,7 +16,9 @@ function removeProcessor(id: number): void
 
 **起始版本：** 11
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-hiAppEvent-function removeProcessor(id: long): void--><!--Device-hiAppEvent-function removeProcessor(id: long): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 

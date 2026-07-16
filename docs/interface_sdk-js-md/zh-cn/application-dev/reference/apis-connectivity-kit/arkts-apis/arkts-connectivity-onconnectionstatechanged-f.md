@@ -1,5 +1,11 @@
 # onConnectionStateChanged
 
+## 导入模块
+
+```TypeScript
+import { dataTransfer } from '@kit.ConnectivityKit';
+```
+
 ## onConnectionStateChanged
 
 ```TypeScript
@@ -14,13 +20,15 @@ function onConnectionStateChanged(callback: Callback<ConnectionResult>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-dataTransfer-function onConnectionStateChanged(callback: Callback<ConnectionResult>): void--><!--Device-dataTransfer-function onConnectionStateChanged(callback: Callback<ConnectionResult>): void-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;ConnectionResult&gt; | 是 | 用于监听状态改变事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<ConnectionResult> | 是 | 用于监听状态改变事件的回调。 |
 
 **错误码：**
 

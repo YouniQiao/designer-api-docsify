@@ -4,6 +4,8 @@ Data source of **LazyForEach**.
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface IDataSource--><!--Device-unnamed-declare interface IDataSource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## getData
@@ -18,6 +20,8 @@ Obtains the data item that matches the specified index.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-IDataSource-getData(index: number): any--><!--Device-IDataSource-getData(index: number): any-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -30,7 +34,7 @@ Obtains the data item that matches the specified index.
 
 | Type | Description |
 | --- | --- |
-| any | Data item that matches the specified index. The actual type is determined by the data sourceimplementation. |
+| any | Data item that matches the specified index. The actual type is determined by the data source implementation. |
 
 ## registerDataChangeListener
 
@@ -44,13 +48,15 @@ Registers a listener for data changes.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-IDataSource-registerDataChangeListener(listener: DataChangeListener): void--><!--Device-IDataSource-registerDataChangeListener(listener: DataChangeListener): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listener | DataChangeListener | Yes | Listener for data changes. |
+| listener | [DataChangeListener](arkts-arkui-datachangelistener-i.md) | Yes | Listener for data changes. |
 
 ## totalCount
 
@@ -63,6 +69,8 @@ Obtains the total number of data items.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-IDataSource-totalCount(): number--><!--Device-IDataSource-totalCount(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,11 +92,13 @@ Unregisters the listener for data changes.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-IDataSource-unregisterDataChangeListener(listener: DataChangeListener): void--><!--Device-IDataSource-unregisterDataChangeListener(listener: DataChangeListener): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listener | DataChangeListener | Yes | Listener for data changes. |
+| listener | [DataChangeListener](arkts-arkui-datachangelistener-i.md) | Yes | Listener for data changes. |
 

@@ -1,24 +1,30 @@
 # createPixelMapFromPixelsSync
 
+## 导入模块
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+```
+
 ## createPixelMapFromPixelsSync
 
 ```TypeScript
 function createPixelMapFromPixelsSync(pixels: ArrayBuffer, param: InitializationOptions): PixelMap
 ```
 
-Creates a PixelMap from existing pixel data. The pixel data will be copied and converted to the specified
-pixel format to initialize the PixelMap.
+Creates a PixelMap from existing pixel data. The pixel data will be copied and converted to the specified pixel format to initialize the PixelMap.
 
-The following pixel formats are not supported for PixelMap creation:
-RGBA_1010102, YCBCR_P010, YCRCB_P010, ASTC_4x4.
+The following pixel formats are not supported for PixelMap creation:RGBA_1010102, YCBCR_P010, YCRCB_P010, ASTC_4x4.
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-image-function createPixelMapFromPixelsSync(pixels: ArrayBuffer, param: InitializationOptions): PixelMap--><!--Device-image-function createPixelMapFromPixelsSync(pixels: ArrayBuffer, param: InitializationOptions): PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -26,14 +32,14 @@ RGBA_1010102, YCBCR_P010, YCRCB_P010, ASTC_4x4.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixels | ArrayBuffer | 是 | The pixel data buffer used to initialize the PixelMap.The format of the pixel data can be specified by InitializationOptions.srcPixelFormat.The size of the buffer should be: image width * image height * bytes per pixel. |
-| param | InitializationOptions | 是 | Initialization options for the PixelMap.If InitializationOptions.pixelFormat is set to ASTC_4x4, it will be reset to the default value RGBA_8888.If InitializationOptions.srcPixelFormat is set to ASTC_4x4, it will be reset to the default value BGRA_8888. |
+| pixels | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | The pixel data buffer used to initialize the PixelMap.The format of the pixel data can be specified by InitializationOptions.srcPixelFormat.The size of the buffer should be: image width * image height * bytes per pixel. |
+| param | [InitializationOptions](arkts-image-initializationoptions-i.md) | 是 | Initialization options for the PixelMap.If InitializationOptions.pixelFormat is set to ASTC_4x4, it will be reset to the default value RGBA_8888.If InitializationOptions.srcPixelFormat is set to ASTC_4x4, it will be reset to the default value BGRA_8888. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| PixelMap | The new PixelMap created. |
+| [PixelMap](arkts-image-pixelmap-i.md) | The new PixelMap created. |
 
 **错误码：**
 

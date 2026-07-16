@@ -4,6 +4,8 @@ Defines the MMS message sending configuration.
 
 **Since:** 8
 
+<!--Device-sms-export interface MmsSendConf--><!--Device-sms-export interface MmsSendConf-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Indicates the message ID for the MMS message sending configuration.
 
 **Since:** 8
 
+<!--Device-MmsSendConf-messageId?: string--><!--Device-MmsSendConf-messageId?: string-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Indicates the response status for the MMS message sending configuration.
 **Type:** number
 
 **Since:** 8
+
+<!--Device-MmsSendConf-responseState: int--><!--Device-MmsSendConf-responseState: int-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -58,6 +64,8 @@ Indicates the transaction ID for the MMS message sending configuration.
 
 **Since:** 8
 
+<!--Device-MmsSendConf-transactionId: string--><!--Device-MmsSendConf-transactionId: string-End-->
+
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Indicates the version for the MMS message sending configuration.
 **Type:** MmsVersionType
 
 **Since:** 8
+
+<!--Device-MmsSendConf-version: MmsVersionType--><!--Device-MmsSendConf-version: MmsVersionType-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 

@@ -8,6 +8,8 @@ Exchangeable Image File Format (Exif) metadata.
 
 **Since:** 23
 
+<!--Device-image-class ExifMetadata implements Metadata--><!--Device-image-class ExifMetadata implements Metadata-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
@@ -28,13 +30,15 @@ Clones the Exif metadata. This API returns the result asynchronously through a p
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-clone(): Promise<ExifMetadata>--><!--Device-ExifMetadata-clone(): Promise<ExifMetadata>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ExifMetadata&gt; | Promise used to return the Exif metadata instance if the operation issuccessful. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ExifMetadata> | Promise used to return the Exif metadata instance if the operation is successful. |
 
 ## createInstance
 
@@ -48,13 +52,15 @@ Creates an empty [ExifMetadata](arkts-image-exifmetadata-c.md) instance.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-static createInstance(): ExifMetadata--><!--Device-ExifMetadata-static createInstance(): ExifMetadata-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ExifMetadata | Empty **ExifMetadata** instance. |
+| [ExifMetadata](arkts-image-exifmetadata-c.md) | Empty **ExifMetadata** instance. |
 
 ## getAllProperties
 
@@ -62,12 +68,13 @@ Creates an empty [ExifMetadata](arkts-image-exifmetadata-c.md) instance.
 getAllProperties(): Promise<Record<string, string | null>>
 ```
 
-Obtains all properties and their values from the image metadata. This API returns the result asynchronously
-through a promise.
+Obtains all properties and their values from the image metadata. This API returns the result asynchronously through a promise.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-getAllProperties(): Promise<Record<string, string | null>>--><!--Device-ExifMetadata-getAllProperties(): Promise<Record<string, string | null>>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -75,7 +82,7 @@ through a promise.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the values of all properties. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Record<string, string \| null>> | Promise used to return the values of all properties. |
 
 ## getBlob
 
@@ -89,13 +96,15 @@ Obtains the metadata in binary format. This API uses a promise to return the res
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-getBlob(): Promise<ArrayBuffer>--><!--Device-ExifMetadata-getBlob(): Promise<ArrayBuffer>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise that returns the binary data of the metadata. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ArrayBuffer> | Promise that returns the binary data of the metadata. |
 
 ## getProperties
 
@@ -111,19 +120,21 @@ For details about the properties, see [PropertyKey](arkts-image-propertykey-e.md
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-getProperties(key: Array<string>): Promise<Record<string, string | null>>--><!--Device-ExifMetadata-getProperties(key: Array<string>): Promise<Record<string, string | null>>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | Array&lt;string&gt; | Yes | Names of the properties to query. |
+| key | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Names of the properties to query. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the obtained image metadata propertyvalues. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Record<string, string \| null>> | Promise used to return the obtained image metadata property values. |
 
 **Error codes:**
 
@@ -143,19 +154,21 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-setBlob(blob: ArrayBuffer): Promise<void>--><!--Device-ExifMetadata-setBlob(blob: ArrayBuffer): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blob | ArrayBuffer | Yes | Binary data used to replace the metadata. |
+| blob | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Binary data used to replace the metadata. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -169,8 +182,7 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously
-through a promise.
+Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise.
 
 For details about the properties, see [PropertyKey](arkts-image-propertykey-e.md).
 
@@ -178,19 +190,21 @@ For details about the properties, see [PropertyKey](arkts-image-propertykey-e.md
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-setProperties(records: Record<string, string | null>): Promise<void>--><!--Device-ExifMetadata-setProperties(records: Record<string, string | null>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | Yes | Set of key-value pairs representing properties andcorresponding values of the **ExifMetadata** object. |
+| records | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, string \| null> | Yes | Set of key-value pairs representing properties and corresponding values of the **ExifMetadata** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -212,6 +226,8 @@ Lens aperture. The unit is APEX.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-apertureValue?: double--><!--Device-ExifMetadata-apertureValue?: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## artist
@@ -227,6 +243,8 @@ Name of the person who creates the image.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-artist?: string--><!--Device-ExifMetadata-artist?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -244,6 +262,8 @@ Number of bits for each pixel component. For example, RGB has 3 components with 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-bitsPerSample?: int[]--><!--Device-ExifMetadata-bitsPerSample?: int[]-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## bodySerialNumber
@@ -259,6 +279,8 @@ Serial number of the camera body.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-bodySerialNumber?: string--><!--Device-ExifMetadata-bodySerialNumber?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -276,6 +298,8 @@ Image brightness. The unit is APEX.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-brightnessValue?: double--><!--Device-ExifMetadata-brightnessValue?: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## cameraOwnerName
@@ -291,6 +315,8 @@ Name of the camera owner.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-cameraOwnerName?: string--><!--Device-ExifMetadata-cameraOwnerName?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -308,6 +334,8 @@ Color filter array (CFA) geometric pattern of the image sensor.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-cfaPattern?: ArrayBuffer--><!--Device-ExifMetadata-cfaPattern?: ArrayBuffer-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## colorSpace
@@ -316,14 +344,15 @@ Color filter array (CFA) geometric pattern of the image sensor.
 colorSpace?: number
 ```
 
-Color space information, which is usually recorded as a color space descriptor.
-The value range is all integers.
+Color space information, which is usually recorded as a color space descriptor.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-colorSpace?: int--><!--Device-ExifMetadata-colorSpace?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -341,6 +370,8 @@ Information about the compressed data.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-componentsConfiguration?: string--><!--Device-ExifMetadata-componentsConfiguration?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## compositeImage
@@ -349,14 +380,15 @@ Information about the compressed data.
 compositeImage?: number
 ```
 
-Whether the image is a composite image.
-The value range is all integers.
+Whether the image is a composite image.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-compositeImage?: int--><!--Device-ExifMetadata-compositeImage?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -374,6 +406,8 @@ Image compression scheme. The unit is bit/pixel.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-compressedBitsPerPixel?: double--><!--Device-ExifMetadata-compressedBitsPerPixel?: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## compression
@@ -382,14 +416,15 @@ Image compression scheme. The unit is bit/pixel.
 compression?: number
 ```
 
-Algorithm standard for image compression.
-The value range is all integers.
+Algorithm standard for image compression.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-compression?: int--><!--Device-ExifMetadata-compression?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -399,14 +434,15 @@ The value range is all integers.
 contrast?: number
 ```
 
-Contrast optimization policy applied by the camera. For example, standard processing and contrast reduction.
-The value range is all integers.
+Contrast optimization policy applied by the camera. For example, standard processing and contrast reduction.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-contrast?: int--><!--Device-ExifMetadata-contrast?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -424,6 +460,8 @@ Copyright notice of the image.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-copyright?: string--><!--Device-ExifMetadata-copyright?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## customRendered
@@ -432,14 +470,15 @@ Copyright notice of the image.
 customRendered?: number
 ```
 
-Special processing of image data, such as HDR composition and AI scene enhancement.
-The value range is all integers.
+Special processing of image data, such as HDR composition and AI scene enhancement.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-customRendered?: int--><!--Device-ExifMetadata-customRendered?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -449,15 +488,15 @@ The value range is all integers.
 dateTime?: string
 ```
 
-Date and time when the image is created.
-In this standard, it refers to the file date and time. The value format is *YYYY:MM:DD HH:MM:SS* (24-hour clock).
-For example, 2025:12:15 18:44:59.
+Date and time when the image is created.In this standard, it refers to the file date and time. The value format is *YYYY:MM:DD HH:MM:SS* (24-hour clock).For example, 2025:12:15 18:44:59.
 
 **Type:** string
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-dateTime?: string--><!--Device-ExifMetadata-dateTime?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -467,15 +506,15 @@ For example, 2025:12:15 18:44:59.
 dateTimeDigitized?: string
 ```
 
-Date and time when the image is stored as digital data.
-For example, if a DSC captures an image and records the file at the same time, the values of **DateTimeOriginal**
-and **DateTimeDigitized** are the same. The value format is *YYYY:MM:DD HH:MM:SS* (24-hour clock).
+Date and time when the image is stored as digital data.For example, if a DSC captures an image and records the file at the same time, the values of **DateTimeOriginal** and **DateTimeDigitized** are the same. The value format is *YYYY:MM:DD HH:MM:SS* (24-hour clock).
 
 **Type:** string
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-dateTimeDigitized?: string--><!--Device-ExifMetadata-dateTimeDigitized?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -485,15 +524,15 @@ and **DateTimeDigitized** are the same. The value format is *YYYY:MM:DD HH:MM:SS
 dateTimeOriginal?: string
 ```
 
-Date and time when the original image data is generated.
-For a digital still camera (DSC), the date and time when a photo is taken are recorded. The value format is *YYYY
-:MM:DD HH:MM:SS* (24-hour clock).
+Date and time when the original image data is generated.For a digital still camera (DSC), the date and time when a photo is taken are recorded. The value format is *YYYY:MM:DD HH:MM:SS* (24-hour clock).
 
 **Type:** string
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-dateTimeOriginal?: string--><!--Device-ExifMetadata-dateTimeOriginal?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -511,6 +550,8 @@ Capture condition information of a specific camera model.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-deviceSettingDescription?: ArrayBuffer--><!--Device-ExifMetadata-deviceSettingDescription?: ArrayBuffer-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## digitalZoomRatio
@@ -526,6 +567,8 @@ Digital zoom ratio used when the image is captured.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-digitalZoomRatio?: double--><!--Device-ExifMetadata-digitalZoomRatio?: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -543,6 +586,8 @@ Version of the supported Exif standard.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-exifVersion?: string--><!--Device-ExifMetadata-exifVersion?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## exposureBiasValue
@@ -558,6 +603,8 @@ Exposure bias.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-exposureBiasValue?: double--><!--Device-ExifMetadata-exposureBiasValue?: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -575,6 +622,8 @@ Exposure index selected at the time the image is captured.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-exposureIndex?: double--><!--Device-ExifMetadata-exposureIndex?: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## exposureMode
@@ -583,14 +632,15 @@ Exposure index selected at the time the image is captured.
 exposureMode?: number
 ```
 
-Exposure mode.
-The value range is all integers.
+Exposure mode.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-exposureMode?: int--><!--Device-ExifMetadata-exposureMode?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -600,14 +650,15 @@ The value range is all integers.
 exposureProgram?: number
 ```
 
-Class used for exposure setting when the camera captures a photo.
-The value range is all integers.
+Class used for exposure setting when the camera captures a photo.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-exposureProgram?: int--><!--Device-ExifMetadata-exposureProgram?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -625,6 +676,8 @@ Exposure time.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-exposureTime?: double--><!--Device-ExifMetadata-exposureTime?: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## fNumber
@@ -640,6 +693,8 @@ F number, for example, f/1.8.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-fNumber?: double--><!--Device-ExifMetadata-fNumber?: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -657,6 +712,8 @@ Image source.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-fileSource?: ArrayBuffer--><!--Device-ExifMetadata-fileSource?: ArrayBuffer-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## flash
@@ -665,14 +722,15 @@ Image source.
 flash?: number
 ```
 
-Flash.
-The value range is all integers.
+Flash.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-flash?: int--><!--Device-ExifMetadata-flash?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -690,6 +748,8 @@ Flash energy at the time the image is captured. The unit is beam candlepower sec
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-flashEnergy?: double--><!--Device-ExifMetadata-flashEnergy?: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## flashpixVersion
@@ -698,14 +758,15 @@ Flash energy at the time the image is captured. The unit is beam candlepower sec
 flashpixVersion?: string
 ```
 
-FlashPix format version supported by the FlashPix Extension Resource (FPXR), which is used to enhance device
-compatibility.
+FlashPix format version supported by the FlashPix Extension Resource (FPXR), which is used to enhance device compatibility.
 
 **Type:** string
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-flashpixVersion?: string--><!--Device-ExifMetadata-flashpixVersion?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -723,6 +784,8 @@ Focal length of the lens, in milliseconds.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-focalLength?: double--><!--Device-ExifMetadata-focalLength?: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## focalLengthIn35mmFilm
@@ -731,14 +794,15 @@ Focal length of the lens, in milliseconds.
 focalLengthIn35mmFilm?: number
 ```
 
-Focal length of the 35 mm film.
-The value should be an integer.
+Focal length of the 35 mm film.The value should be an integer.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-focalLengthIn35mmFilm?: int--><!--Device-ExifMetadata-focalLengthIn35mmFilm?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -748,14 +812,15 @@ The value should be an integer.
 focalPlaneResolutionUnit?: number
 ```
 
-Measurement unit of **FocalPlaneXResolution** and **FocalPlaneYResolution**.
-The value range is all integers.
+Measurement unit of **FocalPlaneXResolution** and **FocalPlaneYResolution**.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-focalPlaneResolutionUnit?: int--><!--Device-ExifMetadata-focalPlaneResolutionUnit?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -773,6 +838,8 @@ Number of pixels per unit physical length in the X-axis of the sensor's physical
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-focalPlaneXResolution?: double--><!--Device-ExifMetadata-focalPlaneXResolution?: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## focalPlaneYResolution
@@ -789,6 +856,8 @@ Number of pixels per unit physical length in the Y-axis of the sensor's physical
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-focalPlaneYResolution?: double--><!--Device-ExifMetadata-focalPlaneYResolution?: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gainControl
@@ -797,14 +866,15 @@ Number of pixels per unit physical length in the Y-axis of the sensor's physical
 gainControl?: number
 ```
 
-Degree of overall image gain adjustment.
-The value range is all integers.
+Degree of overall image gain adjustment.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-gainControl?: int--><!--Device-ExifMetadata-gainControl?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -822,6 +892,8 @@ Gamma value of each component.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-gamma?: double--><!--Device-ExifMetadata-gamma?: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gpsAltitude
@@ -838,6 +910,8 @@ GPS altitude based on **GPSAltitudeRef**.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-gpsAltitude?: double--><!--Device-ExifMetadata-gpsAltitude?: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gpsAltitudeRef
@@ -846,14 +920,15 @@ GPS altitude based on **GPSAltitudeRef**.
 gpsAltitudeRef?: number
 ```
 
-GPS altitude reference.
-The value range is all integers.
+GPS altitude reference.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-gpsAltitudeRef?: int--><!--Device-ExifMetadata-gpsAltitudeRef?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -871,6 +946,8 @@ String of the GPS area name.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-gpsAreaInformation?: string--><!--Device-ExifMetadata-gpsAreaInformation?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gpsDateStamp
@@ -886,6 +963,8 @@ GPS date stamp.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-gpsDateStamp?: string--><!--Device-ExifMetadata-gpsDateStamp?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -903,6 +982,8 @@ Bearing to the destination.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-gpsDestBearing?: double--><!--Device-ExifMetadata-gpsDestBearing?: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gpsDestBearingRef
@@ -918,6 +999,8 @@ Bearing reference to the destination.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-gpsDestBearingRef?: string--><!--Device-ExifMetadata-gpsDestBearingRef?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -935,6 +1018,8 @@ Distance to the destination.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-gpsDestDistance?: double--><!--Device-ExifMetadata-gpsDestDistance?: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gpsDestDistanceRef
@@ -950,6 +1035,8 @@ Unit used to express the distance to the destination.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-gpsDestDistanceRef?: string--><!--Device-ExifMetadata-gpsDestDistanceRef?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -967,6 +1054,8 @@ Latitude of the destination.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-gpsDestLatitude?: double[]--><!--Device-ExifMetadata-gpsDestLatitude?: double[]-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gpsDestLatitudeRef
@@ -982,6 +1071,8 @@ Latitude reference of the destination.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-gpsDestLatitudeRef?: string--><!--Device-ExifMetadata-gpsDestLatitudeRef?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -999,6 +1090,8 @@ Longitude of the destination.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-gpsDestLongitude?: double[]--><!--Device-ExifMetadata-gpsDestLongitude?: double[]-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gpsDestLongitudeRef
@@ -1015,6 +1108,8 @@ Longitude reference of the destination.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-gpsDestLongitudeRef?: string--><!--Device-ExifMetadata-gpsDestLongitudeRef?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gpsDifferential
@@ -1023,15 +1118,15 @@ Longitude reference of the destination.
 gpsDifferential?: number
 ```
 
-Whether differential correction has been applied to the GPS data, which is crucial for precise positioning
-accuracy.
-The value range is all integers.
+Whether differential correction has been applied to the GPS data, which is crucial for precise positioning accuracy.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-gpsDifferential?: int--><!--Device-ExifMetadata-gpsDifferential?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1049,6 +1144,8 @@ Dilution of Precision (DOP) of the GPS data.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-gpsDop?: double--><!--Device-ExifMetadata-gpsDop?: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gpsHPositioningError
@@ -1064,6 +1161,8 @@ Horizontal positioning error, in meters.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-gpsHPositioningError?: double--><!--Device-ExifMetadata-gpsHPositioningError?: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1081,6 +1180,8 @@ Image orientation at the time of capture.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-gpsImgDirection?: double--><!--Device-ExifMetadata-gpsImgDirection?: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gpsImgDirectionRef
@@ -1097,6 +1198,8 @@ Reference of the image orientation.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-gpsImgDirectionRef?: string--><!--Device-ExifMetadata-gpsImgDirectionRef?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gpsLatitude
@@ -1105,17 +1208,15 @@ Reference of the image orientation.
 gpsLatitude?: number[]
 ```
 
-GPS latitude.
-The latitude is represented by three RATIONAL values (numeric values stored in fractional form), corresponding to
-degrees, minutes, and seconds, in the **dd/1, mm/1, ss/1** format.
-When using degrees and minutes, the minutes are stored with up to two decimal places, in the
-**dd/1, mmmm/100, 0/1** format.
+GPS latitude.The latitude is represented by three RATIONAL values (numeric values stored in fractional form), corresponding to degrees, minutes, and seconds, in the **dd/1, mm/1, ss/1** format.When using degrees and minutes, the minutes are stored with up to two decimal places, in the **dd/1, mmmm/100, 0/1** format.
 
 **Type:** number[]
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-gpsLatitude?: double[]--><!--Device-ExifMetadata-gpsLatitude?: double[]-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1133,6 +1234,8 @@ GPS latitude reference. For example, **N** indicates north latitude, and **S** i
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-gpsLatitudeRef?: string--><!--Device-ExifMetadata-gpsLatitudeRef?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gpsLongitude
@@ -1141,17 +1244,15 @@ GPS latitude reference. For example, **N** indicates north latitude, and **S** i
 gpsLongitude?: number[]
 ```
 
-GPS longitude.
-The longitude is represented by three RATIONAL values (numeric values stored in fractional form), corresponding
-to degrees, minutes, and seconds, in the **dd/1, mm/1, ss/1** format.
-When using degrees and minutes, the minutes are stored with up to two decimal places, in the
-**dd/1, mmmm/100, 0/1** format.
+GPS longitude.The longitude is represented by three RATIONAL values (numeric values stored in fractional form), corresponding to degrees, minutes, and seconds, in the **dd/1, mm/1, ss/1** format.When using degrees and minutes, the minutes are stored with up to two decimal places, in the **dd/1, mmmm/100, 0/1** format.
 
 **Type:** number[]
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-gpsLongitude?: double[]--><!--Device-ExifMetadata-gpsLongitude?: double[]-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1169,6 +1270,8 @@ GPS longitude reference. For example, **E** indicates east longitude, and **W** 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-gpsLongitudeRef?: string--><!--Device-ExifMetadata-gpsLongitudeRef?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gpsMapDatum
@@ -1184,6 +1287,8 @@ Geodetic data used by the GPS receiver.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-gpsMapDatum?: string--><!--Device-ExifMetadata-gpsMapDatum?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1201,6 +1306,8 @@ GPS measurement mode.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-gpsMeasureMode?: string--><!--Device-ExifMetadata-gpsMeasureMode?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gpsProcessingMethod
@@ -1216,6 +1323,8 @@ Name of the positioning method.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-gpsProcessingMethod?: string--><!--Device-ExifMetadata-gpsProcessingMethod?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1233,6 +1342,8 @@ GPS satellite used for measurement. Generally, the value is the GPS satellite's 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-gpsSatellites?: string--><!--Device-ExifMetadata-gpsSatellites?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gpsSpeed
@@ -1248,6 +1359,8 @@ Speed of the GPS receiver.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-gpsSpeed?: double--><!--Device-ExifMetadata-gpsSpeed?: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1265,6 +1378,8 @@ Speed unit of the GPS receiver.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-gpsSpeedRef?: string--><!--Device-ExifMetadata-gpsSpeedRef?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gpsStatus
@@ -1280,6 +1395,8 @@ Status of the GPS receiver when the image is recorded.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-gpsStatus?: string--><!--Device-ExifMetadata-gpsStatus?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1297,6 +1414,8 @@ GPS timestamp.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-gpsTimestamp?: double[]--><!--Device-ExifMetadata-gpsTimestamp?: double[]-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gpsTrack
@@ -1312,6 +1431,8 @@ Movement direction of the GPS receiver.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-gpsTrack?: double--><!--Device-ExifMetadata-gpsTrack?: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1329,6 +1450,8 @@ Reference for the GPS receiver movement direction.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-gpsTrackRef?: string--><!--Device-ExifMetadata-gpsTrackRef?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gpsVersionID
@@ -1344,6 +1467,8 @@ GPS information format version identifier.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-gpsVersionID?: int[]--><!--Device-ExifMetadata-gpsVersionID?: int[]-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1361,6 +1486,8 @@ Image description.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-imageDescription?: string--><!--Device-ExifMetadata-imageDescription?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## imageLength
@@ -1376,6 +1503,8 @@ Image length. The unit is px.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-imageLength?: int--><!--Device-ExifMetadata-imageLength?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1393,6 +1522,8 @@ Unique ID assigned to each image.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-imageUniqueId?: string--><!--Device-ExifMetadata-imageUniqueId?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## imageWidth
@@ -1409,6 +1540,8 @@ Image width. The unit is px.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-imageWidth?: int--><!--Device-ExifMetadata-imageWidth?: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## isoSpeedLatitudeyyy
@@ -1417,14 +1550,15 @@ Image width. The unit is px.
 isoSpeedLatitudeyyy?: number
 ```
 
-Maximum dynamic range recordable by the camera sensor in a single exposure. The unit is EV.
-The value should be an integer.
+Maximum dynamic range recordable by the camera sensor in a single exposure. The unit is EV.The value should be an integer.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-isoSpeedLatitudeyyy?: int--><!--Device-ExifMetadata-isoSpeedLatitudeyyy?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1434,14 +1568,15 @@ The value should be an integer.
 isoSpeedLatitudezzz?: number
 ```
 
-Highlight retention capacity of the camera sensor in overexposure. The unit is EV.
-The value should be an integer.
+Highlight retention capacity of the camera sensor in overexposure. The unit is EV.The value should be an integer.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-isoSpeedLatitudezzz?: int--><!--Device-ExifMetadata-isoSpeedLatitudezzz?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1451,14 +1586,15 @@ The value should be an integer.
 isoSpeedRatings?: number
 ```
 
-ISO speed and latitude of the camera or input device, which are specified in ISO 12232.
-The value range is all integers.
+ISO speed and latitude of the camera or input device, which are specified in ISO 12232.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-isoSpeedRatings?: int--><!--Device-ExifMetadata-isoSpeedRatings?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1468,14 +1604,15 @@ The value range is all integers.
 jpegInterchangeFormat?: number
 ```
 
-Start of Image (SOI) marker of the JPEG bitstream in interchange format.
-The value range is all integers.
+Start of Image (SOI) marker of the JPEG bitstream in interchange format.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-jpegInterchangeFormat?: int--><!--Device-ExifMetadata-jpegInterchangeFormat?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1485,14 +1622,15 @@ The value range is all integers.
 jpegInterchangeFormatLength?: number
 ```
 
-Number of bytes in the JPEG stream.
-The value range is all integers.
+Number of bytes in the JPEG stream.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-jpegInterchangeFormatLength?: int--><!--Device-ExifMetadata-jpegInterchangeFormatLength?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1510,6 +1648,8 @@ Manufacturer of the lens.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-lensMake?: string--><!--Device-ExifMetadata-lensMake?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## lensModel
@@ -1525,6 +1665,8 @@ Model of the lens.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-lensModel?: string--><!--Device-ExifMetadata-lensModel?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1542,6 +1684,8 @@ Serial number of the lens.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-lensSerialNumber?: string--><!--Device-ExifMetadata-lensSerialNumber?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## lensSpecification
@@ -1558,6 +1702,8 @@ Specifications of the lens.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-lensSpecification?: double[]--><!--Device-ExifMetadata-lensSpecification?: double[]-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## lightSource
@@ -1566,14 +1712,15 @@ Specifications of the lens.
 lightSource?: number
 ```
 
-Light source.
-The value range is all integers.
+Light source.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-lightSource?: int--><!--Device-ExifMetadata-lightSource?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1591,6 +1738,8 @@ Manufacturer name of the capture device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-make?: string--><!--Device-ExifMetadata-make?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## makerNote
@@ -1606,6 +1755,8 @@ Information required by the Exif/Design rule for Camera File system (DCF) writer
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-makerNote?: ArrayBuffer--><!--Device-ExifMetadata-makerNote?: ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1623,6 +1774,8 @@ Minimum aperture value of the lens.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-maxApertureValue?: double--><!--Device-ExifMetadata-maxApertureValue?: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## meteringMode
@@ -1631,14 +1784,15 @@ Minimum aperture value of the lens.
 meteringMode?: number
 ```
 
-Metering mode.
-The value range is all integers.
+Metering mode.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-meteringMode?: int--><!--Device-ExifMetadata-meteringMode?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1656,6 +1810,8 @@ Camera model.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-model?: string--><!--Device-ExifMetadata-model?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## newSubfileType
@@ -1664,14 +1820,15 @@ Camera model.
 newSubfileType?: number
 ```
 
-Data type of a subfile (for example, basic types such as text or image, rather than specific storage formats).
-The value range is all integers.
+Data type of a subfile (for example, basic types such as text or image, rather than specific storage formats).The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-newSubfileType?: int--><!--Device-ExifMetadata-newSubfileType?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1689,6 +1846,8 @@ Opto-Electric Conversion Function (OECF) specified in ISO 14524.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-oecf?: ArrayBuffer--><!--Device-ExifMetadata-oecf?: ArrayBuffer-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## offsetTime
@@ -1705,6 +1864,8 @@ Geographical time zone of the device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-offsetTime?: string--><!--Device-ExifMetadata-offsetTime?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## offsetTimeDigitized
@@ -1713,14 +1874,15 @@ Geographical time zone of the device.
 offsetTimeDigitized?: string
 ```
 
-Coordinated Universal Time (UTC) offset at the time of image digitization, which helps to precisely adjust the
-timestamp.
+Coordinated Universal Time (UTC) offset at the time of image digitization, which helps to precisely adjust the timestamp.
 
 **Type:** string
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-offsetTimeDigitized?: string--><!--Device-ExifMetadata-offsetTimeDigitized?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1738,6 +1900,8 @@ Geographical time zone of the device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-offsetTimeOriginal?: string--><!--Device-ExifMetadata-offsetTimeOriginal?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## orientation
@@ -1754,6 +1918,8 @@ Image orientation.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-orientation?: Orientation--><!--Device-ExifMetadata-orientation?: Orientation-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## photoMode
@@ -1762,14 +1928,15 @@ Image orientation.
 photoMode?: number
 ```
 
-Image mode.
-The value range is all integers.
+Image mode.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-photoMode?: int--><!--Device-ExifMetadata-photoMode?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1787,6 +1954,8 @@ Sensitivity of the camera or input device during image capture.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-photographicSensitivity?: int[]--><!--Device-ExifMetadata-photographicSensitivity?: int[]-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## photometricInterpretation
@@ -1795,15 +1964,15 @@ Sensitivity of the camera or input device during image capture.
 photometricInterpretation?: number
 ```
 
-Pixel composition, such as RGB (Red, Green, Blue) and YCbCr (Luma, Blue-difference Chroma, Red-difference Chroma)
-.
-The value range is all integers.
+Pixel composition, such as RGB (Red, Green, Blue) and YCbCr (Luma, Blue-difference Chroma, Red-difference Chroma).The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-photometricInterpretation?: int--><!--Device-ExifMetadata-photometricInterpretation?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1813,14 +1982,15 @@ The value range is all integers.
 pixelXDimension?: number
 ```
 
-Image size on the X axis (horizontal axis in a two-dimensional coordinate system).
-The value range is all integers.
+Image size on the X axis (horizontal axis in a two-dimensional coordinate system).The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-pixelXDimension?: int--><!--Device-ExifMetadata-pixelXDimension?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1830,14 +2000,15 @@ The value range is all integers.
 pixelYDimension?: number
 ```
 
-Image size on the Y axis (vertical axis in a two-dimensional coordinate system).
-The value range is all integers.
+Image size on the Y axis (vertical axis in a two-dimensional coordinate system).The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-pixelYDimension?: int--><!--Device-ExifMetadata-pixelYDimension?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1847,14 +2018,15 @@ The value range is all integers.
 planarConfiguration?: number
 ```
 
-Whether the pixel components are recorded in chunked or planar format.
-The value range is all integers.
+Whether the pixel components are recorded in chunked or planar format.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-planarConfiguration?: int--><!--Device-ExifMetadata-planarConfiguration?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1872,6 +2044,8 @@ Chromaticity of the image primaries.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-primaryChromaticities?: double[]--><!--Device-ExifMetadata-primaryChromaticities?: double[]-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## recommendedExposureIndex
@@ -1880,14 +2054,15 @@ Chromaticity of the image primaries.
 recommendedExposureIndex?: number
 ```
 
-GPS measurement mode.
-The value range is all integers.
+GPS measurement mode.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-recommendedExposureIndex?: int--><!--Device-ExifMetadata-recommendedExposureIndex?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1905,6 +2080,8 @@ Reference black point value and white point value.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-referenceBlackWhite?: double[]--><!--Device-ExifMetadata-referenceBlackWhite?: double[]-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## relatedSoundFile
@@ -1921,6 +2098,8 @@ Name of the audio file related to the image data.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-relatedSoundFile?: string--><!--Device-ExifMetadata-relatedSoundFile?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## resolutionUnit
@@ -1929,14 +2108,15 @@ Name of the audio file related to the image data.
 resolutionUnit?: number
 ```
 
-Unit of the image resolution in the width and height directions.
-The value range is all integers.
+Unit of the image resolution in the width and height directions.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-resolutionUnit?: int--><!--Device-ExifMetadata-resolutionUnit?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1946,14 +2126,15 @@ The value range is all integers.
 rowsPerStrip?: number
 ```
 
-Number of rows per image strip.
-The value range is all integers.
+Number of rows per image strip.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-rowsPerStrip?: int--><!--Device-ExifMetadata-rowsPerStrip?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1963,17 +2144,15 @@ The value range is all integers.
 samplesPerPixel?: number
 ```
 
-Number of color components per pixel, applicable to RGB and YCbCr color models.
-Since both the models are three-component models (three color channels, or one luminance component plus two
-chroma components), the standard value for this property is 3.
-For JPEG-compressed images, this property will be replaced by the corresponding JPEG marker.
-The value range is all integers.
+Number of color components per pixel, applicable to RGB and YCbCr color models.Since both the models are three-component models (three color channels, or one luminance component plus two chroma components), the standard value for this property is 3.For JPEG-compressed images, this property will be replaced by the corresponding JPEG marker.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-samplesPerPixel?: int--><!--Device-ExifMetadata-samplesPerPixel?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1983,15 +2162,15 @@ The value range is all integers.
 saturation?: number
 ```
 
-Color saturation adjustment policy applied by the camera. For example, standard processing and saturation
-reduction.
-The value range is all integers.
+Color saturation adjustment policy applied by the camera. For example, standard processing and saturation reduction.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-saturation?: int--><!--Device-ExifMetadata-saturation?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2001,14 +2180,15 @@ The value range is all integers.
 sceneCaptureType?: number
 ```
 
-Type of the scene that is captured.
-The value range is all integers.
+Type of the scene that is captured.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-sceneCaptureType?: int--><!--Device-ExifMetadata-sceneCaptureType?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2026,6 +2206,8 @@ Scene type.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-sceneType?: ArrayBuffer--><!--Device-ExifMetadata-sceneType?: ArrayBuffer-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## sensingMethod
@@ -2034,14 +2216,15 @@ Scene type.
 sensingMethod?: number
 ```
 
-Type of the image sensor on the camera.
-The value range is all integers.
+Type of the image sensor on the camera.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-sensingMethod?: int--><!--Device-ExifMetadata-sensingMethod?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2051,14 +2234,15 @@ The value range is all integers.
 sensitivityType?: number
 ```
 
-Sensitivity type.
-The value range is all integers.
+Sensitivity type.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-sensitivityType?: int--><!--Device-ExifMetadata-sensitivityType?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2068,14 +2252,15 @@ The value range is all integers.
 sharpness?: number
 ```
 
-Edge enhancement processing method applied by the camera. For example, weak sharpening and standard sharpening.
-The value range is all integers.
+Edge enhancement processing method applied by the camera. For example, weak sharpening and standard sharpening.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-sharpness?: int--><!--Device-ExifMetadata-sharpness?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2093,6 +2278,8 @@ Shutter speed, expressed as an Additive System of Photographic Exposure (APEX) v
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-shutterSpeedValue?: double--><!--Device-ExifMetadata-shutterSpeedValue?: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## software
@@ -2108,6 +2295,8 @@ Name and version number of the software used to create the image.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-software?: string--><!--Device-ExifMetadata-software?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2125,6 +2314,8 @@ Exposure time of source images for the composite image, for example, 1/33 s.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-sourceExposureTimesOfCompositeImage?: ArrayBuffer--><!--Device-ExifMetadata-sourceExposureTimesOfCompositeImage?: ArrayBuffer-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## sourceImageNumberOfCompositeImage
@@ -2140,6 +2331,8 @@ Number of source images of the composite image.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-sourceImageNumberOfCompositeImage?: int[]--><!--Device-ExifMetadata-sourceImageNumberOfCompositeImage?: int[]-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2157,6 +2350,8 @@ Spatial frequency table of the camera or input device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-spatialFrequencyResponse?: ArrayBuffer--><!--Device-ExifMetadata-spatialFrequencyResponse?: ArrayBuffer-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## spectralSensitivity
@@ -2173,6 +2368,8 @@ Spectral sensitivity of each channel of the camera.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-spectralSensitivity?: string--><!--Device-ExifMetadata-spectralSensitivity?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## standardOutputSensitivity
@@ -2181,14 +2378,15 @@ Spectral sensitivity of each channel of the camera.
 standardOutputSensitivity?: number
 ```
 
-Standard output sensitivity.
-The value range is all integers.
+Standard output sensitivity.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-standardOutputSensitivity?: int--><!--Device-ExifMetadata-standardOutputSensitivity?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2206,6 +2404,8 @@ Number of bytes in each strip after compression.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-stripByteCounts?: int[]--><!--Device-ExifMetadata-stripByteCounts?: int[]-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## stripOffsets
@@ -2214,16 +2414,15 @@ Number of bytes in each strip after compression.
 stripOffsets?: number[]
 ```
 
-Strip storage offset of the image data, in bytes.
-To improve the efficiency of large image access, the original pixel data is divided into multiple contiguous
-blocks (called strips).
-This property stores the starting offset of each strip in the file sequentially.
+Strip storage offset of the image data, in bytes.To improve the efficiency of large image access, the original pixel data is divided into multiple contiguous blocks (called strips).This property stores the starting offset of each strip in the file sequentially.
 
 **Type:** number[]
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-stripOffsets?: int[]--><!--Device-ExifMetadata-stripOffsets?: int[]-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2233,14 +2432,15 @@ This property stores the starting offset of each strip in the file sequentially.
 subfileType?: number
 ```
 
-Data type of a subfile. It has been deprecated. Use **newSubfileType** instead.
-The value range is all integers.
+Data type of a subfile. It has been deprecated. Use **newSubfileType** instead.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-subfileType?: int--><!--Device-ExifMetadata-subfileType?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2258,6 +2458,8 @@ Location and area of the main object in the entire scene.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-subjectArea?: int[]--><!--Device-ExifMetadata-subjectArea?: int[]-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## subjectDistance
@@ -2274,6 +2476,8 @@ Distance from the capture device to the photographed object, in meters.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-subjectDistance?: double--><!--Device-ExifMetadata-subjectDistance?: double-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## subjectDistanceRange
@@ -2282,14 +2486,15 @@ Distance from the capture device to the photographed object, in meters.
 subjectDistanceRange?: number
 ```
 
-Distance range to the object.
-The value range is all integers.
+Distance range to the object.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-subjectDistanceRange?: int--><!--Device-ExifMetadata-subjectDistanceRange?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2307,6 +2512,8 @@ Pixel coordinates of the primary object in the image (based on the origin in the
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-subjectLocation?: int[]--><!--Device-ExifMetadata-subjectLocation?: int[]-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## subsecTime
@@ -2322,6 +2529,8 @@ Second fraction of **DateTime**.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-subsecTime?: string--><!--Device-ExifMetadata-subsecTime?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2339,6 +2548,8 @@ Second of **DateTimeDigitized**.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-subsecTimeDigitized?: string--><!--Device-ExifMetadata-subsecTimeDigitized?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## subsecTimeOriginal
@@ -2354,6 +2565,8 @@ Second of **DateTimeOriginal**.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-subsecTimeOriginal?: string--><!--Device-ExifMetadata-subsecTimeOriginal?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2371,6 +2584,8 @@ Transfer function for the image, which is usually used for color correction.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-transferFunction?: string--><!--Device-ExifMetadata-transferFunction?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## userComment
@@ -2387,6 +2602,8 @@ User comments.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-userComment?: string--><!--Device-ExifMetadata-userComment?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## whiteBalance
@@ -2395,14 +2612,15 @@ User comments.
 whiteBalance?: number
 ```
 
-White balance.
-The value range is all integers.
+White balance.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-whiteBalance?: int--><!--Device-ExifMetadata-whiteBalance?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2420,6 +2638,8 @@ Chromaticity of the image white point.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-whitePoint?: double[]--><!--Device-ExifMetadata-whitePoint?: double[]-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## xResolution
@@ -2435,6 +2655,8 @@ Image resolution in the width direction.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-xResolution?: double--><!--Device-ExifMetadata-xResolution?: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2452,6 +2674,8 @@ Transformation matrix coefficients for converting RGB image data to YCbCr image 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-yCbCrCoefficients?: double[]--><!--Device-ExifMetadata-yCbCrCoefficients?: double[]-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## yCbCrPositioning
@@ -2460,14 +2684,15 @@ Transformation matrix coefficients for converting RGB image data to YCbCr image 
 yCbCrPositioning?: number
 ```
 
-Position of chroma components relative to the luminance component.
-The value range is all integers.
+Position of chroma components relative to the luminance component.The value range is all integers.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-yCbCrPositioning?: int--><!--Device-ExifMetadata-yCbCrPositioning?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2485,6 +2710,8 @@ Sampling ratios of the chroma components and luminance component.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExifMetadata-yCbCrSubSampling?: int[]--><!--Device-ExifMetadata-yCbCrSubSampling?: int[]-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## yResolution
@@ -2500,6 +2727,8 @@ Image resolution in the height direction.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExifMetadata-yResolution?: double--><!--Device-ExifMetadata-yResolution?: double-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

@@ -2,11 +2,13 @@
 
 本模块提供Shell命令执行结果的能力。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 本模块接口仅可在[单元测试框架](../../../../application-test/unittest-guidelines.md)中使用。
 
 **起始版本：** 8
+
+<!--Device-unnamed-export interface ShellCmdResult--><!--Device-unnamed-export interface ShellCmdResult-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -22,7 +24,9 @@ Shell命令的结果码。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ShellCmdResult-exitCode: int--><!--Device-ShellCmdResult-exitCode: int-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -38,7 +42,9 @@ Shell命令的标准输出内容。
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ShellCmdResult-stdResult: string--><!--Device-ShellCmdResult-stdResult: string-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

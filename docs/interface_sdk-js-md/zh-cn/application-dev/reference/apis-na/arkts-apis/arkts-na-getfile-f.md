@@ -14,14 +14,16 @@ function getFile(wallpaperType: WallpaperType, callback: AsyncCallback<number>):
 
 **需要权限：** ohos.permission.GET_WALLPAPER
 
+<!--Device-wallpaper-function getFile(wallpaperType: WallpaperType, callback: AsyncCallback<number>): void--><!--Device-wallpaper-function getFile(wallpaperType: WallpaperType, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wallpaperType | WallpaperType | 是 |  |
-| callback | AsyncCallback&lt;number&gt; | 是 |  |
+| wallpaperType | [WallpaperType](arkts-na-wallpapertype-e.md) | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 |  |
 
 **示例：**
 
@@ -53,19 +55,21 @@ function getFile(wallpaperType: WallpaperType): Promise<number>
 
 **需要权限：** ohos.permission.GET_WALLPAPER
 
+<!--Device-wallpaper-function getFile(wallpaperType: WallpaperType): Promise<number>--><!--Device-wallpaper-function getFile(wallpaperType: WallpaperType): Promise<number>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wallpaperType | WallpaperType | 是 |  |
+| wallpaperType | [WallpaperType](arkts-na-wallpapertype-e.md) | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | 调用成功则返回壁纸文件描述符ID，调用失败则返回error信息。 |
+| Promise<number> | 调用成功则返回壁纸文件描述符ID，调用失败则返回error信息。 |
 
 **示例：**
 

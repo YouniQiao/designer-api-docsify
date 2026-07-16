@@ -18,6 +18,8 @@ Set call barring password.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function setCallRestrictionPassword(slotId: int, oldPassword: string, newPassword: string, callback: AsyncCallback<void>): void--><!--Device-call-function setCallRestrictionPassword(slotId: int, oldPassword: string, newPassword: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -29,7 +31,7 @@ Set call barring password.
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
 | oldPassword | string | Yes | Indicates the call restriction old password. |
 | newPassword | string | Yes | Indicates the call restriction new password. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of setCallRestrictionPassword. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of setCallRestrictionPassword. |
 
 **Error codes:**
 
@@ -71,6 +73,8 @@ Set call barring password.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function setCallRestrictionPassword(slotId: int, oldPassword: string, newPassword: string): Promise<void>--><!--Device-call-function setCallRestrictionPassword(slotId: int, oldPassword: string, newPassword: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -87,7 +91,7 @@ Set call barring password.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setCallRestrictionPassword. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the setCallRestrictionPassword. |
 
 **Error codes:**
 

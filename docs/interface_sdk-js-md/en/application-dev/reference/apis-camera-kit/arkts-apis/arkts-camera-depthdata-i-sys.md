@@ -4,6 +4,8 @@ Describes a depth data object.
 
 **Since:** 13
 
+<!--Device-camera-interface DepthData--><!--Device-camera-interface DepthData-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -24,6 +26,8 @@ Releases depth data output resources. This API uses a promise to return the resu
 
 **Since:** 13
 
+<!--Device-DepthData-release(): Promise<void>--><!--Device-DepthData-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -32,7 +36,7 @@ Releases depth data output resources. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -61,6 +65,8 @@ Accuracy of the depth data, which can be either relative accuracy or absolute ac
 
 **Since:** 13
 
+<!--Device-DepthData-readonly dataAccuracy: DepthDataAccuracy--><!--Device-DepthData-readonly dataAccuracy: DepthDataAccuracy-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -76,6 +82,8 @@ Depth map.
 **Type:** image.PixelMap
 
 **Since:** 13
+
+<!--Device-DepthData-readonly depthMap: image.PixelMap--><!--Device-DepthData-readonly depthMap: image.PixelMap-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -93,6 +101,8 @@ Camera output format.
 
 **Since:** 13
 
+<!--Device-DepthData-readonly format: CameraFormat--><!--Device-DepthData-readonly format: CameraFormat-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -108,6 +118,8 @@ Quality level of the depth map.
 **Type:** DepthDataQualityLevel
 
 **Since:** 13
+
+<!--Device-DepthData-readonly qualityLevel: DepthDataQualityLevel--><!--Device-DepthData-readonly qualityLevel: DepthDataQualityLevel-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

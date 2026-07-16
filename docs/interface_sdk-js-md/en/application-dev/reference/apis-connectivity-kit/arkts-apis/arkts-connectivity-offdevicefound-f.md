@@ -18,13 +18,15 @@ Unsubscribes from NearLink scan results.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-scan-function offDeviceFound(callback?: Callback<ScanResults[]>): void--><!--Device-scan-function offDeviceFound(callback?: Callback<ScanResults[]>): void-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;ScanResults[]&gt; | No | Callback used to listen for the scan result event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<ScanResults[]> | No | Callback used to listen for the scan result event. |
 
 **Error codes:**
 

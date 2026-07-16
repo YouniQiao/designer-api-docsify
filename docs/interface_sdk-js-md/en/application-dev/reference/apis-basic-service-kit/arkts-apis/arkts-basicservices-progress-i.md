@@ -4,6 +4,8 @@ Describes the data structure of the task progress.
 
 **Since:** 10
 
+<!--Device-agent-interface Progress--><!--Device-agent-interface Progress-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## Modules to Import
@@ -18,14 +20,15 @@ import { request } from '@kit.BasicServicesKit';
 readonly extras?: object
 ```
 
-Extra information of the task, for example, the header and body of the response from the server. The default
-value is empty.
+Extra information of the task, for example, the header and body of the response from the server. The default value is empty.
 
 **Type:** object
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Progress-readonly extras?: object--><!--Device-Progress-readonly extras?: object-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -43,6 +46,8 @@ Index of the file that is being processed in the task.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Progress-readonly index: int--><!--Device-Progress-readonly index: int-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## processed
@@ -59,6 +64,8 @@ Size of processed data in the current file in the task, in bytes.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Progress-readonly processed: long--><!--Device-Progress-readonly processed: long-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## sizes
@@ -67,14 +74,15 @@ Size of processed data in the current file in the task, in bytes.
 readonly sizes: Array<number>
 ```
 
-Size of a file in a task, in bytes. If the server uses the chunk mode for data transmission and the total file
-size cannot be obtained from the request header, the value of **sizes** is treated as **-1**.
+Size of a file in a task, in bytes. If the server uses the chunk mode for data transmission and the total file size cannot be obtained from the request header, the value of **sizes** is treated as **-1**.
 
 **Type:** Array<number>
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Progress-readonly sizes: Array<long>--><!--Device-Progress-readonly sizes: Array<long>-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -91,6 +99,8 @@ Current task status.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Progress-readonly state: State--><!--Device-Progress-readonly state: State-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 

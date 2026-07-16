@@ -1,11 +1,10 @@
 # AVScreenCaptureRecorder
 
-AVScreenCaptureRecorder is a class for screen capture management. It provides APIs for screen capture. Before
-calling any API in AVScreenCaptureRecorder, you must use
-[createAVScreenCaptureRecorder()](arkts-media-createavscreencapturerecorder-f.md#createavscreencapturerecorder-1) to create an
-AVScreenCaptureRecorder instance.
+AVScreenCaptureRecorder is a class for screen capture management. It provides APIs for screen capture. Before calling any API in AVScreenCaptureRecorder, you must use [createAVScreenCaptureRecorder()](arkts-media-createavscreencapturerecorder-f.md#createavscreencapturerecorder-1) to create an AVScreenCaptureRecorder instance.
 
 **Since:** 12
+
+<!--Device-media-interface AVScreenCaptureRecorder--><!--Device-media-interface AVScreenCaptureRecorder-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -21,13 +20,13 @@ import { media } from '@kit.MediaKit';
 addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise<number>
 ```
 
-add a watermark for the AVScreenCaptureRecorder. This API uses a promise to return the result.
-App can add up to 5 watermarks.
-This API can be called only before calling startRecording().
+add a watermark for the AVScreenCaptureRecorder. This API uses a promise to return the result.App can add up to 5 watermarks.This API can be called only before calling startRecording().
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVScreenCaptureRecorder-addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise<int>--><!--Device-AVScreenCaptureRecorder-addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise<int>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -36,13 +35,13 @@ This API can be called only before calling startRecording().
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | watermark | image.PixelMap | Yes | : Watermark image. |
-| config | WatermarkConfiguration | Yes | : Configuration of the watermark. |
+| config | [WatermarkConfiguration](arkts-media-watermarkconfiguration-i.md) | Yes | : Configuration of the watermark. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise that returns the watermark id. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise that returns the watermark id. |
 
 **Error codes:**
 
@@ -59,10 +58,11 @@ This API can be called only before calling startRecording().
 excludePickerWindows(excludedWindows: Array<number>): Promise<void>
 ```
 
-Sets the list of windows to be hidden in the picker. The setting takes effect the next time the picker is
-displayed. This API uses a promise to return the result.
+Sets the list of windows to be hidden in the picker. The setting takes effect the next time the picker is displayed. This API uses a promise to return the result.
 
 **Since:** 22
+
+<!--Device-AVScreenCaptureRecorder-excludePickerWindows(excludedWindows: Array<int>): Promise<void>--><!--Device-AVScreenCaptureRecorder-excludePickerWindows(excludedWindows: Array<int>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -70,13 +70,13 @@ displayed. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| excludedWindows | Array&lt;number&gt; | Yes | List of windows to be hidden in the picker. For details about how toobtain window properties, see[getWindowProperties](../../../../reference/apis-arkui/arkts-apis-window-Window.md#getwindowproperties9). |
+| excludedWindows | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | List of windows to be hidden in the picker. For details about how to obtain window properties, see [getWindowProperties](../../../../reference/apis-arkui/arkts-apis-window-Window.md#getwindowproperties9). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -96,19 +96,21 @@ Initializes screen capture and sets screen capture parameters. This API uses a p
 
 **Since:** 12
 
+<!--Device-AVScreenCaptureRecorder-init(config: AVScreenCaptureRecordConfig): Promise<void>--><!--Device-AVScreenCaptureRecorder-init(config: AVScreenCaptureRecordConfig): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | AVScreenCaptureRecordConfig | Yes | Screen capture parameters to set. |
+| config | [AVScreenCaptureRecordConfig](arkts-media-avscreencapturerecordconfig-i.md) | Yes | Screen capture parameters to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -128,6 +130,8 @@ Unsubscribes from screen capture state changes. You can specify a callback to ca
 
 **Since:** 12
 
+<!--Device-AVScreenCaptureRecorder-off(type: 'stateChange', callback?: Callback<AVScreenCaptureStateCode>): void--><!--Device-AVScreenCaptureRecorder-off(type: 'stateChange', callback?: Callback<AVScreenCaptureStateCode>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **Parameters:**
@@ -135,7 +139,7 @@ Unsubscribes from screen capture state changes. You can specify a callback to ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type, which is **'stateChange'** in this case. |
-| callback | Callback&lt;AVScreenCaptureStateCode&gt; | No | Callback used for unsubscription.[AVScreenCaptureStateCode](arkts-media-avscreencapturestatecode-e.md) indicates the newstate. If this parameter is not specified, the last subscription is canceled. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AVScreenCaptureStateCode> | No | Callback used for unsubscription.[AVScreenCaptureStateCode](arkts-media-avscreencapturestatecode-e.md) indicates the new state. If this parameter is not specified, the last subscription is canceled. |
 
 ## off('error')
 
@@ -143,10 +147,11 @@ Unsubscribes from screen capture state changes. You can specify a callback to ca
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-Unsubscribes from AVScreenCaptureRecorder errors. You can specify a callback to cancel the specified
-subscription.
+Unsubscribes from AVScreenCaptureRecorder errors. You can specify a callback to cancel the specified subscription.
 
 **Since:** 12
+
+<!--Device-AVScreenCaptureRecorder-off(type: 'error', callback?: ErrorCallback): void--><!--Device-AVScreenCaptureRecorder-off(type: 'error', callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -155,7 +160,7 @@ subscription.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type, which is **'error'** in this case. |
-| callback | ErrorCallback | No | Callback used for unsubscription. If this parameter is not specified, thelast subscription is canceled. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | Callback used for unsubscription. If this parameter is not specified, the last subscription is canceled. |
 
 ## on('stateChange')
 
@@ -163,10 +168,11 @@ subscription.
 on(type: 'stateChange', callback: Callback<AVScreenCaptureStateCode>): void
 ```
 
-Subscribes to screen capture state changes. An application can subscribe to only one screen capture state change
-event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
+Subscribes to screen capture state changes. An application can subscribe to only one screen capture state change event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
 **Since:** 12
+
+<!--Device-AVScreenCaptureRecorder-on(type: 'stateChange', callback: Callback<AVScreenCaptureStateCode>): void--><!--Device-AVScreenCaptureRecorder-on(type: 'stateChange', callback: Callback<AVScreenCaptureStateCode>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -175,7 +181,7 @@ event. When the application initiates multiple subscriptions to this event, the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type, which is **'stateChange'** in this case. |
-| callback | Callback&lt;AVScreenCaptureStateCode&gt; | Yes | Callback invoked when the event is triggered.[AVScreenCaptureStateCode](arkts-media-avscreencapturestatecode-e.md) indicates the newstate. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AVScreenCaptureStateCode> | Yes | Callback invoked when the event is triggered.[AVScreenCaptureStateCode](arkts-media-avscreencapturestatecode-e.md) indicates the new state. |
 
 ## on('error')
 
@@ -183,11 +189,11 @@ event. When the application initiates multiple subscriptions to this event, the 
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to AVScreenCaptureRecorder errors. You can handle the errors based on the application logic. An
-application can subscribe to only one AVScreenCaptureRecorder error event. When the application initiates
-multiple subscriptions to this event, the last subscription is applied.
+Subscribes to AVScreenCaptureRecorder errors. You can handle the errors based on the application logic. An application can subscribe to only one AVScreenCaptureRecorder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
 **Since:** 12
+
+<!--Device-AVScreenCaptureRecorder-on(type: 'error', callback: ErrorCallback): void--><!--Device-AVScreenCaptureRecorder-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -196,7 +202,7 @@ multiple subscriptions to this event, the last subscription is applied.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type, which is **'error'** in this case. |
-| callback | ErrorCallback | Yes | Callback invoked when the event is triggered. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback invoked when the event is triggered. |
 
 **Error codes:**
 
@@ -218,13 +224,15 @@ Pause screen capture. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVScreenCaptureRecorder-pauseRecording(): Promise<void>--><!--Device-AVScreenCaptureRecorder-pauseRecording(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -240,17 +248,18 @@ Pause screen capture. This API uses a promise to return the result.
 presentPicker(): Promise<void>
 ```
 
-Displays the Picker once more after the screen capture starts, allowing for dynamic updates to the recording
-source, such as changing the window or screen being recorded. This API uses a promise to return the result.
+Displays the Picker once more after the screen capture starts, allowing for dynamic updates to the recording source, such as changing the window or screen being recorded. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - The ongoing capture process remains uninterrupted while updating the recording source.
->
-> - Following the dynamic update of the recording source through the Picker, the capture proceeds with the newly
+> **NOTE**  
+>  
+> - The ongoing capture process remains uninterrupted while updating the recording source.  
+>  
+> - Following the dynamic update of the recording source through the Picker, the capture proceeds with the newly  
 > selected source.
 
 **Since:** 22
+
+<!--Device-AVScreenCaptureRecorder-presentPicker(): Promise<void>--><!--Device-AVScreenCaptureRecorder-presentPicker(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -258,7 +267,7 @@ source, such as changing the window or screen being recorded. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -278,13 +287,15 @@ Releases this AVScreenCaptureRecorder instance. This API uses a promise to retur
 
 **Since:** 12
 
+<!--Device-AVScreenCaptureRecorder-release(): Promise<void>--><!--Device-AVScreenCaptureRecorder-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -305,13 +316,15 @@ Resume screen capture. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVScreenCaptureRecorder-resumeRecording(): Promise<void>--><!--Device-AVScreenCaptureRecorder-resumeRecording(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -333,6 +346,8 @@ Sets whether the captured screen content automatically rotates to keep the image
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-AVScreenCaptureRecorder-setContentAutoRotation(enable: boolean): Promise<void>--><!--Device-AVScreenCaptureRecorder-setContentAutoRotation(enable: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **Parameters:**
@@ -345,7 +360,7 @@ Sets whether the captured screen content automatically rotates to keep the image
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -365,6 +380,8 @@ Enables or disables the microphone. This API uses a promise to return the result
 
 **Since:** 12
 
+<!--Device-AVScreenCaptureRecorder-setMicEnabled(enable: boolean): Promise<void>--><!--Device-AVScreenCaptureRecorder-setMicEnabled(enable: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **Parameters:**
@@ -377,7 +394,7 @@ Enables or disables the microphone. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -392,10 +409,11 @@ Enables or disables the microphone. This API uses a promise to return the result
 setPickerMode(pickerMode: PickerMode): Promise<void>
 ```
 
-Sets the display mode of the picker. The setting takes effect the next time the picker is displayed. This API
-uses a promise to return the result.
+Sets the display mode of the picker. The setting takes effect the next time the picker is displayed. This API uses a promise to return the result.
 
 **Since:** 22
+
+<!--Device-AVScreenCaptureRecorder-setPickerMode(pickerMode: PickerMode): Promise<void>--><!--Device-AVScreenCaptureRecorder-setPickerMode(pickerMode: PickerMode): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -403,13 +421,13 @@ uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pickerMode | PickerMode | Yes | Picker mode.<br>It defines the content type displayed in the picker. Theoptions are as follows:<br>- **SCREEN_ONLY**: Displays only a list of screens.<br>- **WINDOW_ONLY**: Displaysonly a list of windows.<br>- **SCREEN_AND_WINDOW**: Displays both screens and windows. It is the defaultvalue. |
+| pickerMode | [PickerMode](arkts-media-pickermode-e.md) | Yes | Picker mode.<br>It defines the content type displayed in the picker. The options are as follows:<br>- **SCREEN_ONLY**: Displays only a list of screens.<br>- **WINDOW_ONLY**: Displays only a list of windows.<br>- **SCREEN_AND_WINDOW**: Displays both screens and windows. It is the default value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -425,13 +443,13 @@ uses a promise to return the result.
 skipPrivacyMode(windowIDs: Array<number>): Promise<void>
 ```
 
-During screen capture, the application can exempt its privacy windows from security purposes. This API uses a
-promise to return the result.
+During screen capture, the application can exempt its privacy windows from security purposes. This API uses a promise to return the result.
 
-For example, if a user enters a password in this application during screen capture, the application will not
-display a black screen.
+For example, if a user enters a password in this application during screen capture, the application will not display a black screen.
 
 **Since:** 12
+
+<!--Device-AVScreenCaptureRecorder-skipPrivacyMode(windowIDs: Array<int>): Promise<void>--><!--Device-AVScreenCaptureRecorder-skipPrivacyMode(windowIDs: Array<int>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -439,13 +457,13 @@ display a black screen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowIDs | Array&lt;number&gt; | Yes | IDs of windows that require privacy exemption, including the main window IDsand subwindow IDs. For details about how to obtain window properties, see[getWindowProperties](../../../../reference/apis-arkui/arkts-apis-window-Window.md#getwindowproperties9). |
+| windowIDs | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | IDs of windows that require privacy exemption, including the main window IDs and subwindow IDs. For details about how to obtain window properties, see [getWindowProperties](../../../../reference/apis-arkui/arkts-apis-window-Window.md#getwindowproperties9). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -460,11 +478,11 @@ display a black screen.
 startRecording(): Promise<void>
 ```
 
-Starts screen recording. Before using this API, you must call
-[init](arkts-media-avscreencapturerecorder-i.md#init-1). This API uses a promise to return the
-result.
+Starts screen recording. Before using this API, you must call [init](arkts-media-avscreencapturerecorder-i.md#init-1). This API uses a promise to return the result.
 
 **Since:** 12
+
+<!--Device-AVScreenCaptureRecorder-startRecording(): Promise<void>--><!--Device-AVScreenCaptureRecorder-startRecording(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -472,7 +490,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -491,13 +509,15 @@ Stops screen recording. This API uses a promise to return the result.
 
 **Since:** 12
 
+<!--Device-AVScreenCaptureRecorder-stopRecording(): Promise<void>--><!--Device-AVScreenCaptureRecorder-stopRecording(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

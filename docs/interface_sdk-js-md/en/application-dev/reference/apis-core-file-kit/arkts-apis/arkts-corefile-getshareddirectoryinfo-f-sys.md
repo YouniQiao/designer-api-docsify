@@ -20,6 +20,8 @@ Gets the shared sandbox directories of applications
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-fileShare-function getSharedDirectoryInfo(): Promise<Array<SharedDirectoryInfo>>--><!--Device-fileShare-function getSharedDirectoryInfo(): Promise<Array<SharedDirectoryInfo>>-End-->
+
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Gets the shared sandbox directories of applications
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;SharedDirectoryInfo&gt;&gt; | Returns the shared sandbox directories on paths. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<SharedDirectoryInfo>> | Returns the shared sandbox directories on paths. |
 
 **Error codes:**
 

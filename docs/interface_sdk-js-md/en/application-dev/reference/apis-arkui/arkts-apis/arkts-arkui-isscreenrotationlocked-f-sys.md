@@ -16,6 +16,8 @@ Checks whether auto rotate is locked. This API uses an asynchronous callback to 
 
 **Since:** 9
 
+<!--Device-screen-function isScreenRotationLocked(callback: AsyncCallback<boolean>): void--><!--Device-screen-function isScreenRotationLocked(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Checks whether auto rotate is locked. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. If **true** is returned, autorotate is locked. If **false** is returned, auto rotate is unlocked. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. If **true** is returned, auto rotate is locked. If **false** is returned, auto rotate is unlocked. |
 
 **Error codes:**
 
@@ -60,6 +62,8 @@ Checks whether auto rotate is locked. This API uses a promise to return the resu
 
 **Since:** 9
 
+<!--Device-screen-function isScreenRotationLocked(): Promise<boolean>--><!--Device-screen-function isScreenRotationLocked(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -68,7 +72,7 @@ Checks whether auto rotate is locked. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. If **true** is returned, auto rotate is locked. If**false** is returned, auto rotate is unlocked. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. If **true** is returned, auto rotate is locked. If **false** is returned, auto rotate is unlocked. |
 
 **Error codes:**
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 19
 
+<!--Device-accountManager-interface DomainAccountPolicy--><!--Device-accountManager-interface DomainAccountPolicy-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { accountManager } from '@kit.MDMKit';
+```
 
 ## authenticationValidityPeriod
 
@@ -22,6 +30,8 @@ authenticationValidityPeriod?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DomainAccountPolicy-authenticationValidityPeriod?: number--><!--Device-DomainAccountPolicy-authenticationValidityPeriod?: number-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## passwordExpirationNotification
@@ -34,14 +44,15 @@ passwordExpirationNotification?: number
 
 默认值为0，表示域账号密码过期不提示。
 
-**说明**：passwordExpirationNotification需与passwordValidityPeriod配合使用，当系统时间大于或等于（设备侧最后一次修改域账号密码时间 +
-passwordValidityPeriod - passwordExpirationNotification）时，会发页面通知提示密码即将过期。
+**说明**：passwordExpirationNotification需与passwordValidityPeriod配合使用，当系统时间大于或等于（设备侧最后一次修改域账号密码时间 +passwordValidityPeriod - passwordExpirationNotification）时，会发页面通知提示密码即将过期。
 
 **类型：** number
 
 **起始版本：** 19
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DomainAccountPolicy-passwordExpirationNotification?: number--><!--Device-DomainAccountPolicy-passwordExpirationNotification?: number-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -60,6 +71,8 @@ passwordValidityPeriod?: number
 **起始版本：** 19
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DomainAccountPolicy-passwordValidityPeriod?: number--><!--Device-DomainAccountPolicy-passwordValidityPeriod?: number-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

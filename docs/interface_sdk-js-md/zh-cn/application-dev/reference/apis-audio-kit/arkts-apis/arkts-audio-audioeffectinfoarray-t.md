@@ -8,6 +8,8 @@ type AudioEffectInfoArray = Array<Readonly<AudioEffectMode>>
 
 **起始版本：** 10
 
+<!--Device-audio-type AudioEffectInfoArray = Array<Readonly<AudioEffectMode>>--><!--Device-audio-type AudioEffectInfoArray = Array<Readonly<AudioEffectMode>>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **属性类型：** Array<Readonly<AudioEffectMode>>

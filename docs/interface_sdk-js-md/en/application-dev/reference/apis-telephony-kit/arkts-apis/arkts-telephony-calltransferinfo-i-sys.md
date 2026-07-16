@@ -4,6 +4,8 @@ Indicates the information of call transfer.
 
 **Since:** 8
 
+<!--Device-call-export interface CallTransferInfo--><!--Device-call-export interface CallTransferInfo-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ End time hours.
 
 **Since:** 9
 
+<!--Device-CallTransferInfo-endHour?: int--><!--Device-CallTransferInfo-endHour?: int-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ End time minutes.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-CallTransferInfo-endMinute?: int--><!--Device-CallTransferInfo-endMinute?: int-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -58,6 +64,8 @@ Call forwarding setting type.
 
 **Since:** 8
 
+<!--Device-CallTransferInfo-settingType: CallTransferSettingType--><!--Device-CallTransferInfo-settingType: CallTransferSettingType-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ Start time hours.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-CallTransferInfo-startHour?: int--><!--Device-CallTransferInfo-startHour?: int-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -90,6 +100,8 @@ Start time minutes.
 
 **Since:** 9
 
+<!--Device-CallTransferInfo-startMinute?: int--><!--Device-CallTransferInfo-startMinute?: int-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -106,6 +118,8 @@ Phone number.
 
 **Since:** 8
 
+<!--Device-CallTransferInfo-transferNum: string--><!--Device-CallTransferInfo-transferNum: string-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -121,6 +135,8 @@ Call forwarding type.
 **Type:** CallTransferType
 
 **Since:** 8
+
+<!--Device-CallTransferInfo-type: CallTransferType--><!--Device-CallTransferInfo-type: CallTransferType-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 

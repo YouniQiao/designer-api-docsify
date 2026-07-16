@@ -8,6 +8,8 @@ export type Rotation3 = Vec3
 
 **Since:** 12
 
+<!--Device-unnamed-export type Rotation3 = Vec3--><!--Device-unnamed-export type Rotation3 = Vec3-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Property type:** Vec3

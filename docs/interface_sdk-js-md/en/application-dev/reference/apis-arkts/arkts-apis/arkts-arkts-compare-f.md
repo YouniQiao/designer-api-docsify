@@ -18,6 +18,8 @@ Compares buf1 to buf2
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-fastbuffer-function compare(buf1: FastBuffer | Uint8Array, buf2: FastBuffer | Uint8Array): -1 | 0 | 1--><!--Device-fastbuffer-function compare(buf1: FastBuffer | Uint8Array, buf2: FastBuffer | Uint8Array): -1 | 0 | 1-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -31,7 +33,7 @@ Compares buf1 to buf2
 
 | Type | Description |
 | --- | --- |
-| -1 | 0 is returned if target is the same as buf1 is returned if target should come before buf when sorted.-1 is returned if target should come after buf when sorted. |
+| -1 | 0 is returned if target is the same as buf1 is returned if target should come before buf when sorted.  -1 is returned if target should come after buf when sorted. |
 
 **Error codes:**
 

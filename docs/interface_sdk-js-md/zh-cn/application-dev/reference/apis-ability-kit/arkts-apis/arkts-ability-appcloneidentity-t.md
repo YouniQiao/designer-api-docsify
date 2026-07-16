@@ -8,6 +8,8 @@ export type AppCloneIdentity = _BundleInfo.AppCloneIdentity
 
 **起始版本：** 15
 
+<!--Device-bundleManager-export type AppCloneIdentity = _BundleInfo.AppCloneIdentity--><!--Device-bundleManager-export type AppCloneIdentity = _BundleInfo.AppCloneIdentity-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **属性类型：** _BundleInfo.AppCloneIdentity

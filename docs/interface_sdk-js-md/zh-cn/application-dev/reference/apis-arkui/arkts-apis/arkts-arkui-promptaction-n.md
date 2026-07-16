@@ -4,17 +4,24 @@
 
 > **说明：**
 
-> - 本模块不支持在[UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md)的文件声明处使用，即不能在UIAbility的生命周期中调用，需要在
-创建组件实例后使用。
->
-> - 本模块功能依赖UI的执行上下文，不可在[UI上下文不明确](../../../../ui/arkts-global-interface.md#ui上下文不明确)的地方使用，参见
-> [UIContext](arkts-arkui-uicontext.md)说明。建议<!--Del-->在除
-> [ServiceExtensionAbility](../../../../application-models/serviceextensionability-sys.md)等无UI界面的场景外，均<!--DelEnd-->使用
+> - 本模块不支持在[UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md)的文件声明处使用，即不能在UIAbility的生命周期中调用，需要在创建组件实例后使用。  
+>  
+> - 本模块功能依赖UI的执行上下文，不可在[UI上下文不明确](../../../../ui/arkts-global-interface.md#ui上下文不明确)的地方使用，参见  
+> [UIContext](arkts-arkui-uicontext.md)说明。建议<!--Del-->在除  
+> [ServiceExtensionAbility](../../../../application-models/serviceextensionability-sys.md)等无UI界面的场景外，均<!--DelEnd-->使用  
 > UIContext中的弹窗方法。
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace promptAction--><!--Device-unnamed-declare namespace promptAction-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+```
 
 ## 汇总
 
@@ -23,7 +30,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [showToast](arkts-arkui-showtoast-f.md#showtoast-1) | Creates and displays a toast.创建并显示即时反馈。 |
-| [openToast](arkts-arkui-opentoast-f.md#opentoast-1) | 显示即时反馈并通过Promise返回其id。@link @ohos.inputMethodEngine:inputMethodEngine.InputMethodAbility.createPanel(ctx: BaseContext, info: PanelInfo)}&gt; 。&gt;&gt; - 直接使用openToast可能导致[UI上下文不明确](../../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用UIContext中的getPromptAction方法获&gt; 取到PromptAction对象，再通过该对象调用&gt; [openToast](../../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#opentoast18)实现。 |
+| [openToast](arkts-arkui-opentoast-f.md#opentoast-1) | 显示即时反馈并通过Promise返回其id。 |
 | [closeToast](arkts-arkui-closetoast-f.md#closetoast-1) | 关闭即时反馈。 |
 | [showDialog](arkts-arkui-showdialog-f.md#showdialog-1) | 创建并显示对话框，对话框响应结果使用callback异步回调返回。 |
 | [showDialog](arkts-arkui-showdialog-f.md#showdialog-2) | 创建并显示对话框，对话框通过Promise返回结果。 |

@@ -18,6 +18,8 @@ Carries parameters to request a widget update. This API uses a promise to return
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
+<!--Device-formHost-function requestFormWithParams(formId: string, wantParams?: Record<string, Object>): Promise<void>--><!--Device-formHost-function requestFormWithParams(formId: string, wantParams?: Record<string, Object>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -27,13 +29,13 @@ Carries parameters to request a widget update. This API uses a promise to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
-| wantParams | Record&lt;string, Object&gt; | No | Parameters used for the update. |
+| wantParams | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Object> | No | Parameters used for the update. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

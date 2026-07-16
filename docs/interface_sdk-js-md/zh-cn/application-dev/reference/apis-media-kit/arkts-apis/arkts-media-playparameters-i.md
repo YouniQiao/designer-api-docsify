@@ -6,6 +6,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-export interface PlayParameters--><!--Device-unnamed-export interface PlayParameters-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 ## leftVolume
@@ -21,6 +23,8 @@ leftVolume?: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-PlayParameters-leftVolume?: double--><!--Device-PlayParameters-leftVolume?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -44,6 +48,8 @@ loop?: number
 
 **起始版本：** 10
 
+<!--Device-PlayParameters-loop?: int--><!--Device-PlayParameters-loop?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 ## pitch
@@ -59,6 +65,8 @@ Pitch of the sound. The value ranges from 0.25 to 4.0 with a step size of 0.001.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PlayParameters-pitch?: double--><!--Device-PlayParameters-pitch?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -78,6 +86,8 @@ priority?: number
 
 **起始版本：** 10
 
+<!--Device-PlayParameters-priority?: int--><!--Device-PlayParameters-priority?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 ## rate
@@ -91,6 +101,8 @@ rate?: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-PlayParameters-rate?: int--><!--Device-PlayParameters-rate?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -107,6 +119,8 @@ rightVolume?: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-PlayParameters-rightVolume?: double--><!--Device-PlayParameters-rightVolume?: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 

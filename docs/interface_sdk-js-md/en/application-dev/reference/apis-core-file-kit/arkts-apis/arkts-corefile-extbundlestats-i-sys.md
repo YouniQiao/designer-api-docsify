@@ -4,6 +4,8 @@ Details the space usage of system applications or system services.
 
 **Since:** 23
 
+<!--Device-storageStatistics-export interface ExtBundleStats--><!--Device-storageStatistics-export interface ExtBundleStats-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ System application bundle name or system service name.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ExtBundleStats-businessName: string--><!--Device-ExtBundleStats-businessName: string-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **System API:** This is a system API.
@@ -38,15 +42,15 @@ System application bundle name or system service name.
 flag: boolean
 ```
 
-Whether the space occupied by system applications or system services needs to be displayed separately on the
-**Settings** > **Storage** page. A value of **true** enables independent display; a value of **false** merges
-the usage data into the application specified by **businessName**.
+Whether the space occupied by system applications or system services needs to be displayed separately on the **Settings** > **Storage** page. A value of **true** enables independent display; a value of **false** merges the usage data into the application specified by **businessName**.
 
 **Type:** boolean
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExtBundleStats-flag: boolean--><!--Device-ExtBundleStats-flag: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -58,14 +62,15 @@ the usage data into the application specified by **businessName**.
 size: number
 ```
 
-The business size.
-<br>Unit: Byte.
+The business size.<br>Unit: Byte.
 
 **Type:** number
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ExtBundleStats-size: long--><!--Device-ExtBundleStats-size: long-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 

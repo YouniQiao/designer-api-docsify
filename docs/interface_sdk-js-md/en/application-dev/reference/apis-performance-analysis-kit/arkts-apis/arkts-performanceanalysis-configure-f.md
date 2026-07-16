@@ -18,13 +18,15 @@ Configures the application event logging function, such as setting the logging s
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-hiAppEvent-function configure(config: ConfigOption): void--><!--Device-hiAppEvent-function configure(config: ConfigOption): void-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | ConfigOption | Yes | Configuration items for application event logging. |
+| config | [ConfigOption](arkts-performanceanalysis-configoption-i.md) | Yes | Configuration items for application event logging. |
 
 **Error codes:**
 

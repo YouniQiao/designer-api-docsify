@@ -16,6 +16,8 @@ Decodes the information carried in the image. This API uses a promise to return 
 
 **Since:** 18
 
+<!--Device-metadataBinding-function decodeImage(encodedImage: image.PixelMap): Promise<string>--><!--Device-metadataBinding-function decodeImage(encodedImage: image.PixelMap): Promise<string>-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.MetadataBinding
 
 **System API:** This is a system API.
@@ -30,7 +32,7 @@ Decodes the information carried in the image. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise object, which is used to return the encoded metadata of the image. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise object, which is used to return the encoded metadata of the image. |
 
 **Error codes:**
 

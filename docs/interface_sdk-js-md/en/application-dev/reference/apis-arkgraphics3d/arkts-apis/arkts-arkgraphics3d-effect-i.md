@@ -6,6 +6,8 @@ Effect resource.
 
 **Since:** 21
 
+<!--Device-unnamed-export interface Effect extends SceneResource--><!--Device-unnamed-export interface Effect extends SceneResource-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## getPropertyValue
@@ -20,6 +22,8 @@ Get the value of a specific effect property.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Effect-getPropertyValue(propertyName: string): Object | null | undefined--><!--Device-Effect-getPropertyValue(propertyName: string): Object | null | undefined-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
@@ -32,7 +36,7 @@ Get the value of a specific effect property.
 
 | Type | Description |
 | --- | --- |
-| Object | effect property value, return null if the "get" operation failed. |
+| [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | effect property value, return null if the "get" operation failed. |
 
 ## setPropertyValue
 
@@ -45,6 +49,8 @@ Set the value of a specific effect property
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Effect-setPropertyValue(propertyName: string, value: Object | undefined): boolean--><!--Device-Effect-setPropertyValue(propertyName: string, value: Object | undefined): boolean-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -67,12 +73,13 @@ Set the value of a specific effect property
 readonly effectId: string
 ```
 
-The id of the effect.
-This is the id that was used to create the effect.
+The id of the effect.This is the id that was used to create the effect.
 
 **Type:** string
 
 **Since:** 21
+
+<!--Device-Effect-readonly effectId: string--><!--Device-Effect-readonly effectId: string-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -87,6 +94,8 @@ Controls whether the effect is enabled or not.
 **Type:** boolean
 
 **Since:** 21
+
+<!--Device-Effect-enabled: boolean--><!--Device-Effect-enabled: boolean-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

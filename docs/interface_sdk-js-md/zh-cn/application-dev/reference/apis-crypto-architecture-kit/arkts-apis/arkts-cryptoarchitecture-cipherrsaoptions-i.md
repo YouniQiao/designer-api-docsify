@@ -8,7 +8,15 @@
 
 **替代接口：** Cipher
 
+<!--Device-unnamed-export interface CipherRsaOptions--><!--Device-unnamed-export interface CipherRsaOptions-End-->
+
 **系统能力：** SystemCapability.Security.Cipher
+
+## 导入模块
+
+```TypeScript
+import { CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit.CryptoArchitectureKit';
+```
 
 ## action
 
@@ -18,8 +26,7 @@ action: string
 
 加解密操作类型，可选项有：
 
-1. encrypt 加密；
-2. decrypt 解密。
+1. encrypt 加密；2. decrypt 解密。
 
 **类型：** string
 
@@ -28,6 +35,8 @@ action: string
 **废弃版本：** 11
 
 **替代接口：** Cipher
+
+<!--Device-CipherRsaOptions-action: string--><!--Device-CipherRsaOptions-action: string-End-->
 
 **系统能力：** SystemCapability.Security.Cipher
 
@@ -47,6 +56,8 @@ complete: () => void
 
 **替代接口：** Cipher
 
+<!--Device-CipherRsaOptions-complete: () => void--><!--Device-CipherRsaOptions-complete: () => void-End-->
+
 **系统能力：** SystemCapability.Security.Cipher
 
 ## fail
@@ -64,6 +75,8 @@ fail: (data: string, code: number) => void
 **废弃版本：** 11
 
 **替代接口：** Cipher
+
+<!--Device-CipherRsaOptions-fail: (data: string, code: number) => void--><!--Device-CipherRsaOptions-fail: (data: string, code: number) => void-End-->
 
 **系统能力：** SystemCapability.Security.Cipher
 
@@ -83,6 +96,8 @@ key: string
 
 **替代接口：** Cipher
 
+<!--Device-CipherRsaOptions-key: string--><!--Device-CipherRsaOptions-key: string-End-->
+
 **系统能力：** SystemCapability.Security.Cipher
 
 ## success
@@ -101,6 +116,8 @@ success: (data: CipherResponse) => void
 
 **替代接口：** Cipher
 
+<!--Device-CipherRsaOptions-success: (data: CipherResponse) => void--><!--Device-CipherRsaOptions-success: (data: CipherResponse) => void-End-->
+
 **系统能力：** SystemCapability.Security.Cipher
 
 ## text
@@ -109,9 +126,7 @@ success: (data: CipherResponse) => void
 text: string
 ```
 
-待加密或解密的文本内容。待加密的文本内容应该是一段普通文本，长度不能超过keySize / 8 - 66，其中keySize是密钥的长度
-（例如密钥长度为1024时，text不能超过62个字节）。待解密的文本内容应该是经过base64编码的一段二进制值。base64编码使用
-默认风格。
+待加密或解密的文本内容。待加密的文本内容应该是一段普通文本，长度不能超过keySize / 8 - 66，其中keySize是密钥的长度（例如密钥长度为1024时，text不能超过62个字节）。待解密的文本内容应该是经过base64编码的一段二进制值。base64编码使用默认风格。
 
 **类型：** string
 
@@ -120,6 +135,8 @@ text: string
 **废弃版本：** 11
 
 **替代接口：** Cipher
+
+<!--Device-CipherRsaOptions-text: string--><!--Device-CipherRsaOptions-text: string-End-->
 
 **系统能力：** SystemCapability.Security.Cipher
 
@@ -138,6 +155,8 @@ RSA算法的填充项，默认为RSA/None/OAEPWithSHA256AndMGF1Padding。
 **废弃版本：** 11
 
 **替代接口：** Cipher
+
+<!--Device-CipherRsaOptions-transformation?: string--><!--Device-CipherRsaOptions-transformation?: string-End-->
 
 **系统能力：** SystemCapability.Security.Cipher
 

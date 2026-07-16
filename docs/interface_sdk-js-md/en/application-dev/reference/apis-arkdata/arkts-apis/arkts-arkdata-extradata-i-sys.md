@@ -4,6 +4,8 @@ Represents the transparently transmitted data, which contains information requir
 
 **Since:** 11
 
+<!--Device-cloudData-interface ExtraData--><!--Device-cloudData-interface ExtraData-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Event ID. The value **cloud_data_change** indicates cloud data changes.
 
 **Since:** 11
 
+<!--Device-ExtraData-eventId: string--><!--Device-ExtraData-eventId: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -36,13 +40,13 @@ Event ID. The value **cloud_data_change** indicates cloud data changes.
 extraData: string
 ```
 
-Data to be transmitted transparently. **extraData** is a JSON string that must contain the **data** field. The
-**data** field contains information required for a change notification, including the account ID, application
-name, database name, database type, and database table name. All the fields cannot be empty.
+Data to be transmitted transparently. **extraData** is a JSON string that must contain the **data** field. The **data** field contains information required for a change notification, including the account ID, application name, database name, database type, and database table name. All the fields cannot be empty.
 
 **Type:** string
 
 **Since:** 11
+
+<!--Device-ExtraData-extraData: string--><!--Device-ExtraData-extraData: string-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 

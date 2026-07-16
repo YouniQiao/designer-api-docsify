@@ -16,6 +16,8 @@ Requests efficiency resources.
 
 **Since:** 9
 
+<!--Device-backgroundTaskManager-function applyEfficiencyResources(request: EfficiencyResourcesRequest): void--><!--Device-backgroundTaskManager-function applyEfficiencyResources(request: EfficiencyResourcesRequest): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Requests efficiency resources.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | EfficiencyResourcesRequest | Yes | Necessary information carried in the request, including theresource type and timeout interval. |
+| request | [EfficiencyResourcesRequest](arkts-backgroundtasks-efficiencyresourcesrequest-i-sys.md) | Yes | Necessary information carried in the request, including the resource type and timeout interval. |
 
 **Error codes:**
 

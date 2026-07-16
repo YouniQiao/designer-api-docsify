@@ -1,5 +1,11 @@
 # setDate
 
+## 导入模块
+
+```TypeScript
+import { systemTime } from '@kit.BasicServicesKit';
+```
+
 ## setDate
 
 ```TypeScript
@@ -16,6 +22,8 @@ function setDate(date: Date, callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.SET_TIME
 
+<!--Device-systemTime-function setDate(date: Date, callback: AsyncCallback<void>): void--><!--Device-systemTime-function setDate(date: Date, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **参数：**
@@ -23,7 +31,7 @@ function setDate(date: Date, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | date | Date | 是 | 目标日期。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -69,6 +77,8 @@ function setDate(date: Date): Promise<void>
 
 **需要权限：** ohos.permission.SET_TIME
 
+<!--Device-systemTime-function setDate(date: Date): Promise<void>--><!--Device-systemTime-function setDate(date: Date): Promise<void>-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
 
 **参数：**
@@ -81,7 +91,7 @@ function setDate(date: Date): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

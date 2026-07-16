@@ -1,13 +1,19 @@
 # contains
 
+## 导入模块
+
+```TypeScript
+import { hichecker } from '@kit.PerformanceAnalysisKit';
+```
+
 ## contains
 
 ```TypeScript
 function contains(rule: bigint): boolean
 ```
 
-> **˵����**
->
+> **˵����**  
+>  
 > ��API version 8��ʼ֧�֣���API version 9��ʼ����������ʹ��[hichecker.containsCheckRule](arkts-performanceanalysis-containscheckrule-f.md#containscheckrule-1)�����
 
 ��ǰ�����ӵĹ������Ƿ������ĳһ���ض��Ĺ����������Ĺ��򼶱�Ϊ�̼߳�������ڵ�ǰ�߳��н��в�ѯ��
@@ -17,6 +23,8 @@ function contains(rule: bigint): boolean
 **废弃版本：** 9
 
 **替代接口：** [containsCheckRule](arkts-performanceanalysis-containscheckrule-f.md#containscheckrule-1)
+
+<!--Device-hichecker-function contains(rule: bigint): boolean--><!--Device-hichecker-function contains(rule: bigint): boolean-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 

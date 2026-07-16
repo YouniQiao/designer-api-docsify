@@ -16,13 +16,15 @@ Obtain the list of connected mechanical devices.
 
 **Since:** 20
 
+<!--Device-mechanicManager-function getAttachedMechDevices(): MechInfo[]--><!--Device-mechanicManager-function getAttachedMechDevices(): MechInfo[]-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MechInfo[] | List of connected mechanical devices. |
+| [MechInfo](arkts-mechanic-mechinfo-i.md)[] | List of connected mechanical devices. |
 
 **Error codes:**
 

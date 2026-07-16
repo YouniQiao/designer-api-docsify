@@ -4,6 +4,8 @@ Enumerates the camera connection types.
 
 **Since:** 10
 
+<!--Device-camera-enum ConnectionType--><!--Device-camera-enum ConnectionType-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## CAMERA_CONNECTION_BUILT_IN
@@ -17,6 +19,8 @@ Built-in camera.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-ConnectionType-CAMERA_CONNECTION_BUILT_IN = 0--><!--Device-ConnectionType-CAMERA_CONNECTION_BUILT_IN = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -32,6 +36,8 @@ Camera connected using USB.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-ConnectionType-CAMERA_CONNECTION_USB_PLUGIN = 1--><!--Device-ConnectionType-CAMERA_CONNECTION_USB_PLUGIN = 1-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## CAMERA_CONNECTION_REMOTE
@@ -45,6 +51,8 @@ Remote camera.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-ConnectionType-CAMERA_CONNECTION_REMOTE = 2--><!--Device-ConnectionType-CAMERA_CONNECTION_REMOTE = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

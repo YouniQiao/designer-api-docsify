@@ -14,12 +14,11 @@ function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>):
 
 Obtains a notification slot of a specified type. This API uses an asynchronous callback to return the result.
 
-This API is used to query the detailed configuration information of a created notification slot,
-including settings such as reminder method, level, and lock screen display. A corresponding type
-of notification slot must be created first through addSlot, otherwise the obtained result will be
-empty.
+This API is used to query the detailed configuration information of a created notification slot,including settings such as reminder method, level, and lock screen display. A corresponding type of notification slot must be created first through addSlot, otherwise the obtained result will be empty.
 
 **Since:** 9
+
+<!--Device-notificationManager-function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>): void--><!--Device-notificationManager-function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -27,8 +26,8 @@ empty.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotType | SlotType | Yes | Notification slot type, such as social communication, service reminder,and content consultation. |
-| callback | AsyncCallback&lt;NotificationSlot&gt; | Yes | Callback used to return the result. If thenotification slot is obtained successfully, **err** is **undefined** and **data** is the obtained**NotificationSlot**; otherwise, **err** is an error object. |
+| slotType | [SlotType](arkts-notification-slottype-e.md) | Yes | Notification slot type, such as social communication, service reminder,and content consultation. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<NotificationSlot> | Yes | Callback used to return the result. If the notification slot is obtained successfully, **err** is **undefined** and **data** is the obtained **NotificationSlot**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -66,12 +65,11 @@ function getSlot(slotType: SlotType): Promise<NotificationSlot>
 
 Obtains a notification slot of a specified type. This API uses a promise to return the result.
 
-This API is used to query the detailed configuration information of a created notification slot,
-including settings such as reminder method, level, and lock screen display. A corresponding type
-of notification slot must be created first through addSlot, otherwise the obtained result will be
-empty.
+This API is used to query the detailed configuration information of a created notification slot,including settings such as reminder method, level, and lock screen display. A corresponding type of notification slot must be created first through addSlot, otherwise the obtained result will be empty.
 
 **Since:** 9
+
+<!--Device-notificationManager-function getSlot(slotType: SlotType): Promise<NotificationSlot>--><!--Device-notificationManager-function getSlot(slotType: SlotType): Promise<NotificationSlot>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -79,13 +77,13 @@ empty.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotType | SlotType | Yes | Notification slot type, such as social communication, service reminder,and content consultation. |
+| slotType | [SlotType](arkts-notification-slottype-e.md) | Yes | Notification slot type, such as social communication, service reminder,and content consultation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NotificationSlot&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NotificationSlot> | Promise used to return the result. |
 
 **Error codes:**
 

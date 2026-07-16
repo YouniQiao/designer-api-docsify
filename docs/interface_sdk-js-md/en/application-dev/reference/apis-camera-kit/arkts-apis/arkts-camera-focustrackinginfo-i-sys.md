@@ -1,9 +1,10 @@
 # FocusTrackingInfo (System API)
 
-Describes the focus tracking information, which is obtained by calling VideoSessionForSys.
-[on('focusTrackingInfoAvailable')](arkts-camera-videosession-i-sys.md#on-8).
+Describes the focus tracking information, which is obtained by calling VideoSessionForSys.[on('focusTrackingInfoAvailable')](arkts-camera-videosession-i-sys.md#on-8).
 
 **Since:** 15
+
+<!--Device-camera-interface FocusTrackingInfo--><!--Device-camera-interface FocusTrackingInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -27,6 +28,8 @@ Tracing mode.
 
 **Since:** 15
 
+<!--Device-FocusTrackingInfo-trackingMode: FocusTrackingMode--><!--Device-FocusTrackingInfo-trackingMode: FocusTrackingMode-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -42,6 +45,8 @@ Tracking region.
 **Type:** Rect
 
 **Since:** 15
+
+<!--Device-FocusTrackingInfo-trackingRegion: Rect--><!--Device-FocusTrackingInfo-trackingRegion: Rect-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

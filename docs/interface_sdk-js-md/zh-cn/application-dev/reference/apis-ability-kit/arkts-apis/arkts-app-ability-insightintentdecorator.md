@@ -1,5 +1,11 @@
 # @ohos.app.ability.InsightIntentDecorator
 
+## 导入模块
+
+```TypeScript
+import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightIntentEntity, LinkParamCategory, InsightIntentPage, InsightIntentEntry, InsightIntentFunctionMethod } from '@kit.AbilityKit';
+```
+
 ## 汇总
 
 ### 接口

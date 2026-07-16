@@ -12,16 +12,13 @@ import { agentManager } from '@kit.AbilityKit';
 function connectServiceExtensionAbility(context: AgentExtensionContext, want: Want, callback: ConnectOptions): number
 ```
 
-Connects an AgentExtensionAbility to a ServiceExtensionAbility.
-If the target service extension ability is visible, you can connect to it.
-If the target service extension ability is invisible, you need to apply for
-permission:ohos.permission.START_INVISIBLE_ABILITY to connect to it.
-If the target service extension ability is on a remote device, you need to apply for
-permission:ohos.permission.DISTRIBUTED_DATASYNC.
+Connects an AgentExtensionAbility to a ServiceExtensionAbility.If the target service extension ability is visible, you can connect to it.If the target service extension ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to connect to it.If the target service extension ability is on a remote device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-agentManager-function connectServiceExtensionAbility(context: AgentExtensionContext, want: Want, callback: ConnectOptions): long--><!--Device-agentManager-function connectServiceExtensionAbility(context: AgentExtensionContext, want: Want, callback: ConnectOptions): long-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -31,9 +28,9 @@ permission:ohos.permission.DISTRIBUTED_DATASYNC.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | AgentExtensionContext | Yes | The context of the current agent extension ability. |
-| want | Want | Yes | Indicates the service extension ability to connect. |
-| callback | ConnectOptions | Yes | Indicates the callback of connection. |
+| context | [AgentExtensionContext](arkts-ability-agentextensioncontext-t.md) | Yes | The context of the current agent extension ability. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Indicates the service extension ability to connect. |
+| callback | [ConnectOptions](arkts-ability-connectoptions-t.md) | Yes | Indicates the callback of connection. |
 
 **Return value:**
 

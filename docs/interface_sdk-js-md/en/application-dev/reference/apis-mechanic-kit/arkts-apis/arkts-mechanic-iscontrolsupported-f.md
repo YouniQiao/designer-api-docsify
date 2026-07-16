@@ -16,13 +16,15 @@ Checks whether the current device supports embodied control for a specific type 
 
 **Since:** 26.0.0
 
+<!--Device-mechanicManager-function isControlSupported(mechDeviceType?: MechDeviceType): boolean--><!--Device-mechanicManager-function isControlSupported(mechDeviceType?: MechDeviceType): boolean-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mechDeviceType | MechDeviceType | No | Associated device type.<br>Default: If this parameter is not provided, it represents all device types. As long as one or more typesare supported, the result returned will be supported. |
+| mechDeviceType | [MechDeviceType](arkts-mechanic-mechdevicetype-e.md) | No | Associated device type.<br>Default: If this parameter is not provided, it represents all device types. As long as one or more types are supported, the result returned will be supported. |
 
 **Return value:**
 

@@ -12,10 +12,11 @@ import { sensor } from '@kit.SensorServiceKit';
 function getSingleSensor(type: SensorId, callback: AsyncCallback<Sensor>): void
 ```
 
-Obtains information about the sensor of a specific type. This API uses an asynchronous callback to return the
-result.
+Obtains information about the sensor of a specific type. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-sensor-function getSingleSensor(type: SensorId, callback: AsyncCallback<Sensor>): void--><!--Device-sensor-function getSingleSensor(type: SensorId, callback: AsyncCallback<Sensor>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -23,8 +24,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId | Yes | Sensor type. |
-| callback | AsyncCallback&lt;Sensor&gt; | Yes | Callback used to return the sensor information. |
+| type | [SensorId](arkts-sensorservice-sensorid-e.md) | Yes | Sensor type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Sensor> | Yes | Callback used to return the sensor information. |
 
 **Error codes:**
 
@@ -75,19 +76,21 @@ Obtains information about the sensor of a specific type. This API uses a promise
 
 **Since:** 9
 
+<!--Device-sensor-function getSingleSensor(type: SensorId): Promise<Sensor>--><!--Device-sensor-function getSingleSensor(type: SensorId): Promise<Sensor>-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId | Yes | Sensor type. |
+| type | [SensorId](arkts-sensorservice-sensorid-e.md) | Yes | Sensor type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Sensor&gt; | Promise used to return the sensor information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Sensor> | Promise used to return the sensor information. |
 
 **Error codes:**
 

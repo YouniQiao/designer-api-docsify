@@ -20,13 +20,15 @@ Checks whether touch guide mode is enabled.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-accessibility-function isOpenTouchGuideSync(): boolean--><!--Device-accessibility-function isOpenTouchGuideSync(): boolean-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Vision
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether touch guide mode is enabled. Returns **true** if touch guide mode is enabled; returns**false** otherwise. |
+| boolean | Whether touch guide mode is enabled. Returns **true** if touch guide mode is enabled; returns **false** otherwise. |
 
 **Example**
 

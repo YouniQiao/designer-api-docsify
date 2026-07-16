@@ -4,6 +4,8 @@ Sets the single-line text box type.
 
 **Since:** 7
 
+<!--Device-unnamed-declare enum InputType--><!--Device-unnamed-declare enum InputType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Normal
@@ -19,6 +21,8 @@ The inline style supports only the **InputType.Normal** type.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-InputType-Normal--><!--Device-InputType-Normal-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ Negative numbers and decimals are not supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-InputType-Number--><!--Device-InputType-Number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PhoneNumber
@@ -46,12 +52,13 @@ PhoneNumber
 
 Phone number input mode.
 
-In this mode, the following characters are allowed: digits, spaces, plus signs (+), hyphens (-), asterisks (*), and
-number signs (#), opening parentheses ((), and closing parenthesis ()); the length is not limited.
+In this mode, the following characters are allowed: digits, spaces, plus signs (+), hyphens (-), asterisks (*), and number signs (#), opening parentheses ((), and closing parenthesis ()); the length is not limited.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-InputType-PhoneNumber--><!--Device-InputType-PhoneNumber-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -63,12 +70,13 @@ Email
 
 Email address input mode.
 
-This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # $ % &
-' " * + - / = ? ^ ` { | } ~ @. The at sign can appear only once.
+This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # $ % &' " * + - / = ? ^ ` { | } ~ @. The at sign can appear only once.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-InputType-Email--><!--Device-InputType-Email-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -80,19 +88,19 @@ Password
 
 Password input mode.
 
-The entered text is briefly displayed before turning to dots by default. Since API version 12, the entered text is
-directly displayed as dots on PCs and 2-in-1 devices.
+The entered text is briefly displayed before turning to dots by default. Since API version 12, the entered text is directly displayed as dots on PCs and 2-in-1 devices.
 
 The eye icon at the end of the input box is hidden by default on TV devices, and shown by default on other devices.
 
-The [decoration](TextInputAttribute#decoration), [showUnderline](TextInputAttribute#showUnderline), and
-[lineHeight](TextInputAttribute#lineHeight) attributes do not take effect in password input mode.
+The [decoration](TextInputAttribute#decoration), [showUnderline](TextInputAttribute#showUnderline), and [lineHeight](TextInputAttribute#lineHeight) attributes do not take effect in password input mode.
 
 If Password Vault is enabled, autofill is available for the username and password.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-InputType-Password--><!--Device-InputType-Password-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,19 +112,19 @@ NUMBER_PASSWORD = 8
 
 Numeric password input mode.
 
-The entered text is briefly displayed before turning to dots by default. Since API version 12, the entered text is
-directly displayed as dots on PCs and 2-in-1 devices.
+The entered text is briefly displayed before turning to dots by default. Since API version 12, the entered text is directly displayed as dots on PCs and 2-in-1 devices.
 
 The eye icon at the end of the input box is hidden by default on TV devices, and shown by default on other devices.
 
-The password input mode does not support underlines. If Password Vault is enabled, autofill is available for the
-username and password.
+The password input mode does not support underlines. If Password Vault is enabled, autofill is available for the username and password.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-InputType-NUMBER_PASSWORD = 8--><!--Device-InputType-NUMBER_PASSWORD = 8-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -136,6 +144,8 @@ If Password Vault is enabled, autofill is available for the username and passwor
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-InputType-USER_NAME = 10--><!--Device-InputType-USER_NAME = 10-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NEW_PASSWORD
@@ -146,8 +156,7 @@ NEW_PASSWORD = 11
 
 New password input mode with no special restrictions.
 
-The entered text is briefly displayed before turning to dots by default. Since API version 12, the entered text is
-directly displayed as dots on PCs and 2-in-1 devices.
+The entered text is briefly displayed before turning to dots by default. Since API version 12, the entered text is directly displayed as dots on PCs and 2-in-1 devices.
 
 The eye icon at the end of the input box is hidden by default on TV devices, and shown by default on other devices.
 
@@ -159,6 +168,8 @@ If Password Vault is enabled, a new password can be automatically generated.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-InputType-NEW_PASSWORD = 11--><!--Device-InputType-NEW_PASSWORD = 11-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NUMBER_DECIMAL
@@ -169,14 +180,15 @@ NUMBER_DECIMAL = 12
 
 Number input mode with a decimal point.
 
-The value can contain digits and only one decimal point. Negative decimals are not supported. For the input mode of
-negative decimals, use **inputFilter**.
+The value can contain digits and only one decimal point. Negative decimals are not supported. For the input mode of negative decimals, use **inputFilter**.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-InputType-NUMBER_DECIMAL = 12--><!--Device-InputType-NUMBER_DECIMAL = 12-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -194,6 +206,8 @@ URL input mode with no special restrictions.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-InputType-URL = 13--><!--Device-InputType-URL = 13-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ONE_TIME_CODE
@@ -209,6 +223,8 @@ One-time code (verification code) input mode with no special restrictions.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-InputType-ONE_TIME_CODE = 14--><!--Device-InputType-ONE_TIME_CODE = 14-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

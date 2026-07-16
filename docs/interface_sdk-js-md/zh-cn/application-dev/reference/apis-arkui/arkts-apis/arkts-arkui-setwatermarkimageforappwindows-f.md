@@ -1,17 +1,22 @@
 # setWatermarkImageForAppWindows
 
+## 导入模块
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+```
+
 ## setWatermarkImageForAppWindows
 
 ```TypeScript
 function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): Promise<void>
 ```
 
-设置或取消本应用进程下窗口的水印图片，使用Promise异步回调。该接口需要在
-[loadContent()](arkts-arkui-window-i.md#loadcontent-1)
-或[setUIContent()](arkts-arkui-window-i.md#setuicontent-1)调用生效后使
-用。
+设置或取消本应用进程下窗口的水印图片，使用Promise异步回调。该接口需要在[loadContent()](arkts-arkui-window-i.md#loadcontent-1)或[setUIContent()](arkts-arkui-window-i.md#setuicontent-1)调用生效后使用。
 
 **起始版本：** 21
+
+<!--Device-window-function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): Promise<void>--><!--Device-window-function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -25,7 +30,7 @@ function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): P
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 

@@ -1,10 +1,14 @@
 # StringConstructor
 
+<!--Device-unnamed-interface StringConstructor--><!--Device-unnamed-interface StringConstructor-End-->
+
 ## constructor
 
 ```TypeScript
 new(value?: any): String
 ```
+
+<!--Device-StringConstructor-new(value?: any): String--><!--Device-StringConstructor-new(value?: any): String-End-->
 
 **Parameters:**
 
@@ -16,13 +20,15 @@ new(value?: any): String
 
 | Type | Description |
 | --- | --- |
-| String |  |
+| [String](arkts-na-string-i.md) |  |
 
 ## constructor
 
 ```TypeScript
 (value?: any): string
 ```
+
+<!--Device-StringConstructor-(value?: any): string--><!--Device-StringConstructor-(value?: any): string-End-->
 
 **Parameters:**
 
@@ -41,6 +47,8 @@ new(value?: any): String
 ```TypeScript
 fromCharCode(...codes: number[]): string
 ```
+
+<!--Device-StringConstructor-fromCharCode(...codes: number[]): string--><!--Device-StringConstructor-fromCharCode(...codes: number[]): string-End-->
 
 **Parameters:**
 
@@ -61,4 +69,6 @@ readonly prototype: String
 ```
 
 **Type:** String
+
+<!--Device-StringConstructor-readonly prototype: String--><!--Device-StringConstructor-readonly prototype: String-End-->
 

@@ -4,6 +4,8 @@ Enumerates offline media key status.
 
 **Since:** 14
 
+<!--Device-drm-enum OfflineMediaKeyStatus--><!--Device-drm-enum OfflineMediaKeyStatus-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## OFFLINE_MEDIA_KEY_STATUS_UNKNOWN
@@ -17,6 +19,8 @@ Offline media key status unknown.
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-OfflineMediaKeyStatus-OFFLINE_MEDIA_KEY_STATUS_UNKNOWN = 0--><!--Device-OfflineMediaKeyStatus-OFFLINE_MEDIA_KEY_STATUS_UNKNOWN = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -32,6 +36,8 @@ Offline media key status usable.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-OfflineMediaKeyStatus-OFFLINE_MEDIA_KEY_STATUS_USABLE = 1--><!--Device-OfflineMediaKeyStatus-OFFLINE_MEDIA_KEY_STATUS_USABLE = 1-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## OFFLINE_MEDIA_KEY_STATUS_INACTIVE
@@ -45,6 +51,8 @@ Offline media key status inactive.
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-OfflineMediaKeyStatus-OFFLINE_MEDIA_KEY_STATUS_INACTIVE = 2--><!--Device-OfflineMediaKeyStatus-OFFLINE_MEDIA_KEY_STATUS_INACTIVE = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 

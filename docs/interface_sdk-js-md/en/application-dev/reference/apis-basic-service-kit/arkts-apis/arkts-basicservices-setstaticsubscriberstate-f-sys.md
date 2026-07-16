@@ -12,12 +12,13 @@ import { commonEventManager } from '@kit.BasicServicesKit';
 function setStaticSubscriberState(enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Enables or disables static subscription for an application. This API uses an asynchronous callback to return the
-result.
+Enables or disables static subscription for an application. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-commonEventManager-function setStaticSubscriberState(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-commonEventManager-function setStaticSubscriberState(enable: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -28,7 +29,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Whether static subscription is enabled.<br> **true**: enabled.<br>**false**: disabled. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -67,6 +68,8 @@ Enables or disables static subscription for an application. This API uses a prom
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-commonEventManager-function setStaticSubscriberState(enable: boolean): Promise<void>--><!--Device-commonEventManager-function setStaticSubscriberState(enable: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **System API:** This is a system API.
@@ -81,7 +84,7 @@ Enables or disables static subscription for an application. This API uses a prom
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -112,12 +115,13 @@ commonEventManager.setStaticSubscriberState(false).then(() => {
 function setStaticSubscriberState(enable: boolean, events?: Array<string>): Promise<void>
 ```
 
-Enables or disables the static subscription event for the current application and records the event name. This API
-uses a promise to return the result.
+Enables or disables the static subscription event for the current application and records the event name. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-commonEventManager-function setStaticSubscriberState(enable: boolean, events?: Array<string>): Promise<void>--><!--Device-commonEventManager-function setStaticSubscriberState(enable: boolean, events?: Array<string>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -128,13 +132,13 @@ uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Whether static subscription is enabled.<br> **true**: enabled.<br>**false**: disabled. |
-| events | Array&lt;string&gt; | No | Name of a recorded event. |
+| events | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | No | Name of a recorded event. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

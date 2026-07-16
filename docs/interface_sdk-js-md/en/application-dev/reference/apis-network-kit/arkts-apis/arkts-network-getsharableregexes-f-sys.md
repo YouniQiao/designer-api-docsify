@@ -18,6 +18,8 @@ Get a list regular expression that defines any interface that can support networ
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-sharing-function getSharableRegexes(type: SharingIfaceType, callback: AsyncCallback<Array<string>>): void--><!--Device-sharing-function getSharableRegexes(type: SharingIfaceType, callback: AsyncCallback<Array<string>>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Get a list regular expression that defines any interface that can support networ
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SharingIfaceType | Yes | Is the enumeration of shareable interface types. |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | the callback of getSharableRegexes. |
+| type | [SharingIfaceType](arkts-network-sharingifacetype-e-sys.md) | Yes | Is the enumeration of shareable interface types. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | the callback of getSharableRegexes. |
 
 **Error codes:**
 
@@ -67,6 +69,8 @@ Get a list regular expression that defines any interface that can support networ
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-sharing-function getSharableRegexes(type: SharingIfaceType): Promise<Array<string>>--><!--Device-sharing-function getSharableRegexes(type: SharingIfaceType): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
@@ -75,13 +79,13 @@ Get a list regular expression that defines any interface that can support networ
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SharingIfaceType | Yes | Is the enumeration of shareable interface types. |
+| type | [SharingIfaceType](arkts-network-sharingifacetype-e-sys.md) | Yes | Is the enumeration of shareable interface types. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | The promise returned by the function. |
 
 **Error codes:**
 

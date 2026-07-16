@@ -20,19 +20,21 @@ Requests trace collection with the specified configuration.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-hidebug-function requestTrace(config: RequestTraceConfig): Promise<string>--><!--Device-hidebug-function requestTrace(config: RequestTraceConfig): Promise<string>-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | RequestTraceConfig | Yes | Trace request configuration. |
+| config | [RequestTraceConfig](arkts-performanceanalysis-requesttraceconfig-i.md) | Yes | Trace request configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the path of the trace file. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the path of the trace file. |
 
 **Error codes:**
 

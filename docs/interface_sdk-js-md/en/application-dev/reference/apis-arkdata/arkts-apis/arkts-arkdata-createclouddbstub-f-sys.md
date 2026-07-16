@@ -12,11 +12,11 @@ import { cloudExtension } from '@kit.ArkData';
 function createCloudDBStub(instance: CloudDB): Promise<rpc.RemoteObject>
 ```
 
-Creates a RemoteObject instance based on a CloudDB instance.
-The system uses this object to call the APIs of the CloudDB instance.
-This API uses a promise to return the result.
+Creates a RemoteObject instance based on a CloudDB instance.The system uses this object to call the APIs of the CloudDB instance.This API uses a promise to return the result.
 
 **Since:** 11
+
+<!--Device-cloudExtension-function createCloudDBStub(instance: CloudDB): Promise<rpc.RemoteObject>--><!--Device-cloudExtension-function createCloudDBStub(instance: CloudDB): Promise<rpc.RemoteObject>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -26,13 +26,13 @@ This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instance | CloudDB | Yes | CloudDB instance. |
+| instance | [CloudDB](arkts-arkdata-clouddb-i-sys.md) | Yes | CloudDB instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the rpc.RemoteObject instance of CloudDB. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<rpc.RemoteObject> | Promise used to return the rpc.RemoteObject instance of CloudDB. |
 
 **Example**
 

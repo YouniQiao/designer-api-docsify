@@ -14,10 +14,11 @@ function createMessage(pdu: Array<number>, specification: string, callback: Asyn
 
 Creates an SMS message instance based on the protocol data unit (PDU) and the specified SMS protocol.
 
-<p>After receiving the original PDU data, the system creates an SMS message instance according to the specified
-SMS protocol.
+<p>After receiving the original PDU data, the system creates an SMS message instance according to the specified SMS protocol.
 
 **Since:** 6
+
+<!--Device-sms-function createMessage(pdu: Array<int>, specification: string, callback: AsyncCallback<ShortMessage>): void--><!--Device-sms-function createMessage(pdu: Array<int>, specification: string, callback: AsyncCallback<ShortMessage>): void-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -25,9 +26,9 @@ SMS protocol.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pdu | Array&lt;number&gt; | Yes | Indicates the original data, which is obtained from the received SMS. |
-| specification | string | Yes | Indicates the SMS protocol type. The value {@code 3gpp} indicates GSM/UMTS/LTESMS, and the value {@code 3gpp2} indicates CDMA/LTE SMS. |
-| callback | AsyncCallback&lt;ShortMessage&gt; | Yes | Indicates the callback for getting an SMS message instance;returns {@code null} if {@code pdu} is empty or {@code specification} is not supported. |
+| pdu | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Indicates the original data, which is obtained from the received SMS. |
+| specification | string | Yes | Indicates the SMS protocol type. The value {@code 3gpp} indicates GSM/UMTS/LTE SMS, and the value {@code 3gpp2} indicates CDMA/LTE SMS. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ShortMessage> | Yes | Indicates the callback for getting an SMS message instance;returns {@code null} if {@code pdu} is empty or {@code specification} is not supported. |
 
 **Error codes:**
 
@@ -63,10 +64,11 @@ function createMessage(pdu: Array<number>, specification: string): Promise<Short
 
 Creates an SMS message instance based on the protocol data unit (PDU) and the specified SMS protocol.
 
-<p>After receiving the original PDU data, the system creates an SMS message instance according to the specified
-SMS protocol.
+<p>After receiving the original PDU data, the system creates an SMS message instance according to the specified SMS protocol.
 
 **Since:** 6
+
+<!--Device-sms-function createMessage(pdu: Array<int>, specification: string): Promise<ShortMessage>--><!--Device-sms-function createMessage(pdu: Array<int>, specification: string): Promise<ShortMessage>-End-->
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -74,14 +76,14 @@ SMS protocol.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pdu | Array&lt;number&gt; | Yes | Indicates the original data, which is obtained from the received SMS. |
-| specification | string | Yes | Indicates the SMS protocol type. The value {@code 3gpp} indicates GSM/UMTS/LTESMS, and the value {@code 3gpp2} indicates CDMA/LTE SMS. |
+| pdu | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Indicates the original data, which is obtained from the received SMS. |
+| specification | string | Yes | Indicates the SMS protocol type. The value {@code 3gpp} indicates GSM/UMTS/LTE SMS, and the value {@code 3gpp2} indicates CDMA/LTE SMS. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ShortMessage&gt; | Returns an SMS message instance;returns {@code null} if {@code pdu} is empty or {@code specification} is not supported. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ShortMessage> | Returns an SMS message instance;returns {@code null} if {@code pdu} is empty or {@code specification} is not supported. |
 
 **Error codes:**
 

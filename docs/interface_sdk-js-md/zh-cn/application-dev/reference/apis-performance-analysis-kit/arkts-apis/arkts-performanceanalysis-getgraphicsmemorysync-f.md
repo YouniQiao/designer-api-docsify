@@ -1,5 +1,11 @@
 # getGraphicsMemorySync
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+```
+
 ## getGraphicsMemorySync
 
 ```TypeScript
@@ -8,13 +14,15 @@ function getGraphicsMemorySync(): number
 
 ʹ��ͬ����ʽ��ȡӦ���Դ��ܴ�С��gl + graph����
 
-> **ע��**
->
+> **ע��**  
+>  
 > ���ڸýӿ��漰��ο����ͨ�ţ����ʱ���ܴﵽ�뼶��Ϊ�˱��������������⣬���鲻Ҫ�����̵߳��øýӿڣ��Ƽ�ʹ���첽�ӿ�`getGraphicsMemory`��
 
 **起始版本：** 14
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-hidebug-function getGraphicsMemorySync(): int--><!--Device-hidebug-function getGraphicsMemorySync(): int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 

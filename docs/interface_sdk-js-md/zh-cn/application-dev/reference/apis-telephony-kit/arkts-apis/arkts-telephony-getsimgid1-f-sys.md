@@ -1,17 +1,24 @@
 # getSimGid1（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## getSimGid1
 
 ```TypeScript
 function getSimGid1(slotId: number, callback: AsyncCallback<string>): void
 ```
 
-Obtains the Group Identifier Level 1 (GID1) of the SIM card in a specified slot.
-The GID1 is recorded in the EFGID1 file of the SIM card.
+Obtains the Group Identifier Level 1 (GID1) of the SIM card in a specified slot.The GID1 is recorded in the EFGID1 file of the SIM card.
 
 **起始版本：** 7
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-sim-function getSimGid1(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getSimGid1(slotId: int, callback: AsyncCallback<string>): void-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -22,7 +29,7 @@ The GID1 is recorded in the EFGID1 file of the SIM card.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;string&gt; | 是 | Indicates the callback for getting the GID1;Returns an empty string if no SIM card is inserted or no GID1 in the SIM card. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | Indicates the callback for getting the GID1;Returns an empty string if no SIM card is inserted or no GID1 in the SIM card. |
 
 **错误码：**
 
@@ -56,12 +63,13 @@ sim.getSimGid1(0, (err: BusinessError, data: string) => {
 function getSimGid1(slotId: number): Promise<string>
 ```
 
-Obtains the Group Identifier Level 1 (GID1) of the SIM card in a specified slot.
-The GID1 is recorded in the EFGID1 file of the SIM card.
+Obtains the Group Identifier Level 1 (GID1) of the SIM card in a specified slot.The GID1 is recorded in the EFGID1 file of the SIM card.
 
 **起始版本：** 7
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
+
+<!--Device-sim-function getSimGid1(slotId: int): Promise<string>--><!--Device-sim-function getSimGid1(slotId: int): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -77,7 +85,7 @@ The GID1 is recorded in the EFGID1 file of the SIM card.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the GID1; returns an empty string if no SIM card is inserted orno GID1 in the SIM card. |
+| Promise<string> | Returns the GID1; returns an empty string if no SIM card is inserted or no GID1 in the SIM card. |
 
 **错误码：**
 

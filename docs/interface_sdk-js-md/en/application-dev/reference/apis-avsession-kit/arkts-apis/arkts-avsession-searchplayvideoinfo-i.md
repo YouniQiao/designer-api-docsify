@@ -4,6 +4,8 @@ The definition of SearchPlayVideoInfo.
 
 **Since:** 23
 
+<!--Device-avMusicTemplate-interface SearchPlayVideoInfo--><!--Device-avMusicTemplate-interface SearchPlayVideoInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Unique id of the Media.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SearchPlayVideoInfo-entityId: string--><!--Device-SearchPlayVideoInfo-entityId: string-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## episodeId
@@ -41,6 +45,8 @@ The episodeId of the video.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SearchPlayVideoInfo-episodeId?: string--><!--Device-SearchPlayVideoInfo-episodeId?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -58,6 +64,8 @@ The episodeNumber of the video.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-SearchPlayVideoInfo-episodeNumber?: int--><!--Device-SearchPlayVideoInfo-episodeNumber?: int-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## extras
@@ -73,6 +81,8 @@ The extras of the video.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SearchPlayVideoInfo-extras?: string--><!--Device-SearchPlayVideoInfo-extras?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 

@@ -18,6 +18,8 @@ Starts a migration task during device upgrade.
 
 **Required permissions:** ohos.permission.UPDATE_FONT
 
+<!--Device-fontManager-function dataMigration(callback: DataMigrationCallback): int--><!--Device-fontManager-function dataMigration(callback: DataMigrationCallback): int-End-->
+
 **System capability:** SystemCapability.Global.FontManager
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Starts a migration task during device upgrade.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | DataMigrationCallback | Yes | Callback function for data migration. |
+| callback | [DataMigrationCallback](arkts-localization-datamigrationcallback-i-sys.md) | Yes | Callback function for data migration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Result of starting the data migration task. The value **0** indicates that the process is startedsuccessfully. Otherwise, the process fails to be started. |
+| number | Result of starting the data migration task. The value **0** indicates that the process is started successfully. Otherwise, the process fails to be started. |
 
 **Error codes:**
 

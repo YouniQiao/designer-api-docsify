@@ -1,5 +1,11 @@
 # getPermissionUsedRecord（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+```
+
 ## getPermissionUsedRecord
 
 ```TypeScript
@@ -12,6 +18,8 @@ function getPermissionUsedRecord(request: PermissionUsedRequest): Promise<Permis
 
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
+<!--Device-privacyManager-function getPermissionUsedRecord(request: PermissionUsedRequest): Promise<PermissionUsedResponse>--><!--Device-privacyManager-function getPermissionUsedRecord(request: PermissionUsedRequest): Promise<PermissionUsedResponse>-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -20,13 +28,13 @@ function getPermissionUsedRecord(request: PermissionUsedRequest): Promise<Permis
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | PermissionUsedRequest | 是 | 查询权限使用记录的请求。 |
+| request | [PermissionUsedRequest](arkts-ability-permissionusedrequest-i-sys.md) | 是 | 查询权限使用记录的请求。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PermissionUsedResponse&gt; | Promise对象，返回查询的权限使用记录。 |
+| Promise<PermissionUsedResponse> | Promise对象，返回查询的权限使用记录。 |
 
 **错误码：**
 
@@ -79,6 +87,12 @@ function getPermissionUsedRecord(
 
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
+<!--Device-privacyManager-function getPermissionUsedRecord(
+    request: PermissionUsedRequest,
+    callback: AsyncCallback<PermissionUsedResponse>): void--><!--Device-privacyManager-function getPermissionUsedRecord(
+    request: PermissionUsedRequest,
+    callback: AsyncCallback<PermissionUsedResponse>): void-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -87,8 +101,8 @@ function getPermissionUsedRecord(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | PermissionUsedRequest | 是 | 查询权限使用记录的请求。 |
-| callback | AsyncCallback&lt;PermissionUsedResponse&gt; | 是 | 回调函数。当查询记录成功，err为undefined，data为获取到的权限使用记录；否则为错误对象。 |
+| request | [PermissionUsedRequest](arkts-ability-permissionusedrequest-i-sys.md) | 是 | 查询权限使用记录的请求。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<PermissionUsedResponse> | 是 | 回调函数。当查询记录成功，err为undefined，data为获取到的权限使用记录；否则为错误对象。 |
 
 **错误码：**
 

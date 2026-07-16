@@ -18,6 +18,8 @@ Get the connected VPN network configuration.
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 
+<!--Device-vpn-function getConnectedSysVpnConfig(): Promise<SysVpnConfig>--><!--Device-vpn-function getConnectedSysVpnConfig(): Promise<SysVpnConfig>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Get the connected VPN network configuration.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SysVpnConfig&gt; | The promise returned by the connected VPN network configuration. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SysVpnConfig> | The promise returned by the connected VPN network configuration. |
 
 **Error codes:**
 

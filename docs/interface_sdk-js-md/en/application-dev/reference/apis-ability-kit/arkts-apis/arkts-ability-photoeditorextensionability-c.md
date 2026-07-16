@@ -6,6 +6,8 @@ Class of the photo editor ExtensionAbility, which provides APIs for you to edit 
 
 **Since:** 12
 
+<!--Device-unnamed-declare class PhotoEditorExtensionAbility extends ExtensionAbility--><!--Device-unnamed-declare class PhotoEditorExtensionAbility extends ExtensionAbility-End-->
+
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 
 ## Modules to Import
@@ -25,6 +27,8 @@ Called back when the state of an UI extension changes to background.
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PhotoEditorExtensionAbility-onBackground(): void--><!--Device-PhotoEditorExtensionAbility-onBackground(): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -56,6 +60,8 @@ Called back when an UI extension is started for initialization.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoEditorExtensionAbility-onCreate(): void--><!--Device-PhotoEditorExtensionAbility-onCreate(): void-End-->
+
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 
 **Example**
@@ -85,6 +91,8 @@ Called back before an UI extension is destroyed.
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PhotoEditorExtensionAbility-onDestroy(): void | Promise<void>--><!--Device-PhotoEditorExtensionAbility-onDestroy(): void | Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 
@@ -136,6 +144,8 @@ Called back when the state of an UI extension changes to foreground.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoEditorExtensionAbility-onForeground(): void--><!--Device-PhotoEditorExtensionAbility-onForeground(): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Example**
@@ -166,6 +176,8 @@ Called back when an UI extension session is created and original image is ready.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PhotoEditorExtensionAbility-onStartContentEditing(uri: string, want: Want, session: UIExtensionContentSession): void--><!--Device-PhotoEditorExtensionAbility-onStartContentEditing(uri: string, want: Want, session: UIExtensionContentSession): void-End-->
+
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 
 **Parameters:**
@@ -173,8 +185,8 @@ Called back when an UI extension session is created and original image is ready.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the uri info of the original image. |
-| want | Want | Yes | Indicates the want info of the UI extension. |
-| session | UIExtensionContentSession | Yes | Indicates the session of the UI extension page. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Indicates the want info of the UI extension. |
+| session | [UIExtensionContentSession](arkts-ability-uiextensioncontentsession-c.md) | Yes | Indicates the session of the UI extension page. |
 
 **Example**
 
@@ -205,6 +217,8 @@ Indicates configuration information about an Photo editor extension ability cont
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PhotoEditorExtensionAbility-context: PhotoEditorExtensionContext--><!--Device-PhotoEditorExtensionAbility-context: PhotoEditorExtensionContext-End-->
 
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 

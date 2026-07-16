@@ -4,6 +4,8 @@ Describes evaluation result.
 
 **Since:** 12
 
+<!--Device-intelligentVoice-interface EvaluationResult--><!--Device-intelligentVoice-interface EvaluationResult-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Describes evaluation result code.
 
 **Since:** 12
 
+<!--Device-EvaluationResult-resultCode: EvaluationResultCode--><!--Device-EvaluationResult-resultCode: EvaluationResultCode-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ Evaluation score.
 **Type:** number
 
 **Since:** 12
+
+<!--Device-EvaluationResult-score: int--><!--Device-EvaluationResult-score: int-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 

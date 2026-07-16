@@ -20,6 +20,8 @@ Queries state data of all bundles within a specified period identified by the st
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-bundleState-function queryBundleActiveStates(begin: number, end: number, callback: AsyncCallback<Array<BundleActiveState>>): void--><!--Device-bundleState-function queryBundleActiveStates(begin: number, end: number, callback: AsyncCallback<Array<BundleActiveState>>): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -30,7 +32,7 @@ Queries state data of all bundles within a specified period identified by the st
 | --- | --- | --- | --- |
 | begin | number | Yes | Indicates the start time of the query period, in milliseconds. |
 | end | number | Yes | Indicates the end time of the query period, in milliseconds. |
-| callback | AsyncCallback&lt;Array&lt;BundleActiveState&gt;&gt; | Yes | the state data of all bundles. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<BundleActiveState>> | Yes | the state data of all bundles. |
 
 **Example**
 
@@ -67,6 +69,8 @@ Queries state data of all bundles within a specified period identified by the st
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-bundleState-function queryBundleActiveStates(begin: number, end: number): Promise<Array<BundleActiveState>>--><!--Device-bundleState-function queryBundleActiveStates(begin: number, end: number): Promise<Array<BundleActiveState>>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -82,7 +86,7 @@ Queries state data of all bundles within a specified period identified by the st
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleActiveState&gt;&gt; | the state data of all bundles. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<BundleActiveState>> | the state data of all bundles. |
 
 **Example**
 

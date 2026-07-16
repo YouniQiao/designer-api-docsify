@@ -16,6 +16,8 @@ Subscribes to the change of a file. The callback returns the changed data.
 
 **Since:** 12
 
+<!--Device-cloudSync-function registerChange(uri: string, recursion: boolean, callback: Callback<ChangeData>): void--><!--Device-cloudSync-function registerChange(uri: string, recursion: boolean, callback: Callback<ChangeData>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **Parameters:**
@@ -23,14 +25,14 @@ Subscribes to the change of a file. The callback returns the changed data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file to download. |
-| recursion | boolean | Yes | Whether to listen for the change of the URI, subfiles, and subdirectories. The value**true** means to listen for the change of the URI, subfiles, and subdirectories; the value **false** means toonly listen for the change of the URI. |
-| callback | Callback&lt;ChangeData&gt; | Yes | Callback used to return the changed data. |
+| recursion | boolean | Yes | Whether to listen for the change of the URI, subfiles, and subdirectories. The value **true** means to listen for the change of the URI, subfiles, and subdirectories; the value **false** means to only listen for the change of the URI. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ChangeData> | Yes | Callback used to return the changed data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are leftunspecified;<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory. |
 | 13900012 | Permission denied |

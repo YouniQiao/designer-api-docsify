@@ -4,6 +4,8 @@
 
 **起始版本：** 14
 
+<!--Device-unnamed-declare interface NestedScrollOptionsExt--><!--Device-unnamed-declare interface NestedScrollOptionsExt-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## scrollDown
@@ -19,6 +21,8 @@ scrollDown?: NestedScrollMode
 **类型：** NestedScrollMode
 
 **起始版本：** 14
+
+<!--Device-NestedScrollOptionsExt-scrollDown?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollDown?: NestedScrollMode-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -36,6 +40,8 @@ scrollLeft?: NestedScrollMode
 
 **起始版本：** 14
 
+<!--Device-NestedScrollOptionsExt-scrollLeft?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollLeft?: NestedScrollMode-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## scrollRight
@@ -52,6 +58,8 @@ scrollRight?: NestedScrollMode
 
 **起始版本：** 14
 
+<!--Device-NestedScrollOptionsExt-scrollRight?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollRight?: NestedScrollMode-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## scrollUp
@@ -67,6 +75,8 @@ scrollUp?: NestedScrollMode
 **类型：** NestedScrollMode
 
 **起始版本：** 14
+
+<!--Device-NestedScrollOptionsExt-scrollUp?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollUp?: NestedScrollMode-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

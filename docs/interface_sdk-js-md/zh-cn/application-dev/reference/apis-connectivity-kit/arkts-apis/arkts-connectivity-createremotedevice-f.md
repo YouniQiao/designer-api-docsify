@@ -1,5 +1,11 @@
 # createRemoteDevice
 
+## 导入模块
+
+```TypeScript
+import { remoteDevice } from '@kit.ConnectivityKit';
+```
+
 ## createRemoteDevice
 
 ```TypeScript
@@ -11,6 +17,8 @@ function createRemoteDevice(address: string): RemoteDevice
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-remoteDevice-function createRemoteDevice(address: string): RemoteDevice--><!--Device-remoteDevice-function createRemoteDevice(address: string): RemoteDevice-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -24,7 +32,7 @@ function createRemoteDevice(address: string): RemoteDevice
 
 | 类型 | 说明 |
 | --- | --- |
-| RemoteDevice | 返回近链路远程设备实例。 |
+| [RemoteDevice](arkts-connectivity-remotedevice-i.md) | 返回近链路远程设备实例。 |
 
 **错误码：**
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+<!--Device-unnamed-declare interface CanvasParams--><!--Device-unnamed-declare interface CanvasParams-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## imageAIOptions
@@ -20,7 +22,9 @@ imageAIOptions?: ImageAIOptions
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CanvasParams-imageAIOptions?: ImageAIOptions--><!--Device-CanvasParams-imageAIOptions?: ImageAIOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,9 +34,7 @@ imageAIOptions?: ImageAIOptions
 unit?: LengthMetricsUnit
 ```
 
-用于描述Canvas绘制时所采用的单位模式。
-<br>仅可在创建Canvas时设置，后续不可修改。
-<br>默认值：**LengthMetricsUnit.DEFAULT**
+用于描述Canvas绘制时所采用的单位模式。<br>仅可在创建Canvas时设置，后续不可修改。<br>默认值：**LengthMetricsUnit.DEFAULT**
 
 **类型：** LengthMetricsUnit
 
@@ -40,7 +42,9 @@ unit?: LengthMetricsUnit
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CanvasParams-unit?: LengthMetricsUnit--><!--Device-CanvasParams-unit?: LengthMetricsUnit-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

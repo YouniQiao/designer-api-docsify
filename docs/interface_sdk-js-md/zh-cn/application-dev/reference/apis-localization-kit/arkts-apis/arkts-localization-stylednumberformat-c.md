@@ -4,7 +4,15 @@
 
 **起始版本：** 18
 
+<!--Device-i18n-export class StyledNumberFormat--><!--Device-i18n-export class StyledNumberFormat-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+```
 
 ## constructor
 
@@ -16,7 +24,9 @@ constructor(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: Styl
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-StyledNumberFormat-constructor(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)--><!--Device-StyledNumberFormat-constructor(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -25,7 +35,7 @@ constructor(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: Styl
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | numberFormat | Intl.NumberFormat \| SimpleNumberFormat | 是 | 用于格式化数字的对象。 |
-| options | StyledNumberFormatOptions | 否 |  |
+| options | [StyledNumberFormatOptions](arkts-localization-stylednumberformatoptions-i.md) | 否 |  |
 
 **示例：**
 
@@ -78,7 +88,9 @@ constructor(numberFormat: intl.NumberFormat | SimpleNumberFormat, options?: Styl
 
 **替代接口：** constructor(numberFormat:
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-StyledNumberFormat-constructor(numberFormat: intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)--><!--Device-StyledNumberFormat-constructor(numberFormat: intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -87,7 +99,7 @@ constructor(numberFormat: intl.NumberFormat | SimpleNumberFormat, options?: Styl
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | numberFormat | intl.NumberFormat \| SimpleNumberFormat | 是 | 用于格式化数字的对象。 |
-| options | StyledNumberFormatOptions | 否 |  |
+| options | [StyledNumberFormatOptions](arkts-localization-stylednumberformatoptions-i.md) | 否 |  |
 
 **示例：**
 
@@ -136,7 +148,9 @@ format(value: number): StyledString
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-StyledNumberFormat-format(value: double): StyledString--><!--Device-StyledNumberFormat-format(value: double): StyledString-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -150,7 +164,7 @@ format(value: number): StyledString
 
 | 类型 | 说明 |
 | --- | --- |
-| StyledString | 格式化后的富文本对象。 |
+| [StyledString](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-c.md) | 格式化后的富文本对象。 |
 
 **示例：**
 

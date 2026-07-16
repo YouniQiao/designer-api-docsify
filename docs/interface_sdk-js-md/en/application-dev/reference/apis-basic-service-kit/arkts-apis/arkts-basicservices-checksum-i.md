@@ -4,6 +4,8 @@ Checksum object.
 
 **Since:** 12
 
+<!--Device-zlib-interface Checksum--><!--Device-zlib-interface Checksum-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Calculates the Adler-32 checksum. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Checksum-adler32(adler: long, buf: ArrayBuffer): Promise<long>--><!--Device-Checksum-adler32(adler: long, buf: ArrayBuffer): Promise<long>-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Parameters:**
@@ -31,13 +35,13 @@ Calculates the Adler-32 checksum. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | adler | number | Yes | Initial value of the Adler-32 checksum. |
-| buf | ArrayBuffer | Yes | Data buffer for calculating the checksum. |
+| buf | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Data buffer for calculating the checksum. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the calculated Adler-32 checksum. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the calculated Adler-32 checksum. |
 
 **Error codes:**
 
@@ -78,6 +82,8 @@ Combines two Adler-32 checksums. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Checksum-adler32Combine(adler1: long, adler2: long, len2: long): Promise<long>--><!--Device-Checksum-adler32Combine(adler1: long, adler2: long, len2: long): Promise<long>-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Parameters:**
@@ -92,7 +98,7 @@ Combines two Adler-32 checksums. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the combined Adler-32 checksum. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the combined Adler-32 checksum. |
 
 **Error codes:**
 
@@ -144,6 +150,8 @@ Updates a CRC-32 checksum. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Checksum-crc32(crc: long, buf: ArrayBuffer): Promise<long>--><!--Device-Checksum-crc32(crc: long, buf: ArrayBuffer): Promise<long>-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Parameters:**
@@ -151,13 +159,13 @@ Updates a CRC-32 checksum. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | crc | number | Yes | Initial value of the CRC-32 checksum. |
-| buf | ArrayBuffer | Yes | Data buffer for calculating the checksum. |
+| buf | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Data buffer for calculating the checksum. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the updated CRC-32 checksum. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the updated CRC-32 checksum. |
 
 **Error codes:**
 
@@ -200,6 +208,8 @@ Combines two CRC-32 checksums. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Checksum-crc32Combine(crc1: long, crc2: long, len2: long): Promise<long>--><!--Device-Checksum-crc32Combine(crc1: long, crc2: long, len2: long): Promise<long>-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Parameters:**
@@ -214,7 +224,7 @@ Combines two CRC-32 checksums. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the combined CRC-32 checksum. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the combined CRC-32 checksum. |
 
 **Error codes:**
 
@@ -266,6 +276,8 @@ Updates a CRC-64 checksum. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Checksum-crc64(crc: long, buf: ArrayBuffer): Promise<long>--><!--Device-Checksum-crc64(crc: long, buf: ArrayBuffer): Promise<long>-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Parameters:**
@@ -273,13 +285,13 @@ Updates a CRC-64 checksum. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | crc | number | Yes | Initial value of the CRC-64 checksum. |
-| buf | ArrayBuffer | Yes | Data buffer for calculating the checksum. |
+| buf | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | Data buffer for calculating the checksum. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the updated CRC-64 checksum. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the updated CRC-64 checksum. |
 
 **Error codes:**
 
@@ -322,13 +334,15 @@ Obtains this CRC-64 checksum table. This API uses a promise to return the result
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Checksum-getCrc64Table(): Promise<Array<long>>--><!--Device-Checksum-getCrc64Table(): Promise<Array<long>>-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the CRC-64 checksum table. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | Promise used to return the CRC-64 checksum table. |
 
 **Example**
 
@@ -357,13 +371,15 @@ Obtains this CRC-32 checksum table. This API uses a promise to return the result
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Checksum-getCrcTable(): Promise<Array<long>>--><!--Device-Checksum-getCrcTable(): Promise<Array<long>>-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the CRC-32 checksum table. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | Promise used to return the CRC-32 checksum table. |
 
 **Example**
 

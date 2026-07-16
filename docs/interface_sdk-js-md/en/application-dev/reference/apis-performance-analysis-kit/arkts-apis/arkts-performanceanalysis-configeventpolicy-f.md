@@ -20,19 +20,21 @@ In the same lifecycle, you can set system event configuration by policy.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-hiAppEvent-function configEventPolicy(policy: EventPolicy): Promise<void>--><!--Device-hiAppEvent-function configEventPolicy(policy: EventPolicy): Promise<void>-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policy | EventPolicy | Yes | System event configuration policy. |
+| policy | [EventPolicy](arkts-performanceanalysis-eventpolicy-i.md) | Yes | System event configuration policy. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value.<br>For details about the event configuration policy, see [EventPolicy](arkts-performanceanalysis-eventpolicy-i.md). If theconfiguration policy is incorrect, the API returns a failure message.<br>- If the parameter type is incorrect, error code 401 is returned.<br>- If the parameter specifications are incorrect, the error information is output in HiLog logs. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value.<br>For details about the event configuration policy, see [EventPolicy](arkts-performanceanalysis-eventpolicy-i.md). If the configuration policy is incorrect, the API returns a failure message.<br>- If the parameter type is incorrect, error code 401 is returned.<br>- If the parameter specifications are incorrect, the error information is output in HiLog logs. |
 
 **Example**
 

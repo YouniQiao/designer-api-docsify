@@ -4,9 +4,17 @@
 
 **起始版本：** 9
 
+<!--Device-update-export interface Restorer--><!--Device-update-export interface Restorer-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { update } from '@kit.BasicServicesKit';
+```
 
 ## deepFactoryReset
 
@@ -22,6 +30,8 @@ deepFactoryReset(factoryResetStrategy: FactoryResetStrategy): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Restorer-deepFactoryReset(factoryResetStrategy: FactoryResetStrategy): Promise<void>--><!--Device-Restorer-deepFactoryReset(factoryResetStrategy: FactoryResetStrategy): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -30,13 +40,13 @@ deepFactoryReset(factoryResetStrategy: FactoryResetStrategy): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| factoryResetStrategy | FactoryResetStrategy | 是 | 恢复出厂设置策略。 |
+| factoryResetStrategy | [FactoryResetStrategy](arkts-basicservices-factoryresetstrategy-i-sys.md) | 是 | 恢复出厂设置策略。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -83,6 +93,8 @@ factoryReset(callback: AsyncCallback<void>): void
 
 **需要权限：** ohos.permission.FACTORY_RESET
 
+<!--Device-Restorer-factoryReset(callback: AsyncCallback<void>): void--><!--Device-Restorer-factoryReset(callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -91,7 +103,7 @@ factoryReset(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当恢复出厂执行成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当恢复出厂执行成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -137,6 +149,8 @@ factoryReset(): Promise<void>
 
 **需要权限：** ohos.permission.FACTORY_RESET
 
+<!--Device-Restorer-factoryReset(): Promise<void>--><!--Device-Restorer-factoryReset(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -145,7 +159,7 @@ factoryReset(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -188,6 +202,8 @@ forceFactoryReset(): Promise<void>
 
 **需要权限：** ohos.permission.FORCE_FACTORY_RESET
 
+<!--Device-Restorer-forceFactoryReset(): Promise<void>--><!--Device-Restorer-forceFactoryReset(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -196,7 +212,7 @@ forceFactoryReset(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -240,6 +256,8 @@ getDeepFactoryResetInfo(factoryResetStrategy: FactoryResetStrategy): Promise<Fac
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-Restorer-getDeepFactoryResetInfo(factoryResetStrategy: FactoryResetStrategy): Promise<FactoryResetInfo>--><!--Device-Restorer-getDeepFactoryResetInfo(factoryResetStrategy: FactoryResetStrategy): Promise<FactoryResetInfo>-End-->
+
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -248,13 +266,13 @@ getDeepFactoryResetInfo(factoryResetStrategy: FactoryResetStrategy): Promise<Fac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| factoryResetStrategy | FactoryResetStrategy | 是 | 恢复出厂设置策略。 |
+| factoryResetStrategy | [FactoryResetStrategy](arkts-basicservices-factoryresetstrategy-i-sys.md) | 是 | 恢复出厂设置策略。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;FactoryResetInfo&gt; | Promise对象，返回深度恢复出厂设置信息。 |
+| Promise<FactoryResetInfo> | Promise对象，返回深度恢复出厂设置信息。 |
 
 **错误码：**
 

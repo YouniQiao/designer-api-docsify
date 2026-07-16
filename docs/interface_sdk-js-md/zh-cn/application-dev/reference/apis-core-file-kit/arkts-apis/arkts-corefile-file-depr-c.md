@@ -6,6 +6,8 @@
 
 **废弃版本：** 10
 
+<!--Device-unnamed-export default class File--><!--Device-unnamed-export default class File-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## access
@@ -22,13 +24,15 @@ static access(options: FileAccessOption): void
 
 **替代接口：** [fs:access](arkts-corefile-file-fs-access-f.md#access-1)
 
+<!--Device-File-static access(options: FileAccessOption): void--><!--Device-File-static access(options: FileAccessOption): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | FileAccessOption | 是 | 接口选项。 |
+| options | [FileAccessOption](arkts-corefile-fileaccessoption-depr-i.md) | 是 | 接口选项。 |
 
 **示例：**
 
@@ -129,13 +133,15 @@ static copy(options: FileCopyOption): void
 
 **替代接口：** [fs:copyFile](arkts-corefile-file-fs-copyfile-f.md#copyfile-1)
 
+<!--Device-File-static copy(options: FileCopyOption): void--><!--Device-File-static copy(options: FileCopyOption): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | FileCopyOption | 是 | 接口选项。 |
+| options | [FileCopyOption](arkts-corefile-filecopyoption-depr-i.md) | 是 | 接口选项。 |
 
 **示例：**
 
@@ -238,13 +244,15 @@ static delete(options: FileDeleteOption): void
 
 **替代接口：** [fs:unlink](arkts-corefile-file-fs-unlink-f.md#unlink-1)
 
+<!--Device-File-static delete(options: FileDeleteOption): void--><!--Device-File-static delete(options: FileDeleteOption): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | FileDeleteOption | 是 | 接口选项。 |
+| options | [FileDeleteOption](arkts-corefile-filedeleteoption-depr-i.md) | 是 | 接口选项。 |
 
 **示例：**
 
@@ -345,13 +353,15 @@ static get(options: FileGetOption): void
 
 **替代接口：** [fs:stat](arkts-corefile-file-fs-stat-f.md#stat-1)
 
+<!--Device-File-static get(options: FileGetOption): void--><!--Device-File-static get(options: FileGetOption): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | FileGetOption | 是 | 接口选项。 |
+| options | [FileGetOption](arkts-corefile-filegetoption-depr-i.md) | 是 | 接口选项。 |
 
 **示例：**
 
@@ -452,13 +462,15 @@ static list(options: FileListOption): void
 
 **替代接口：** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
 
+<!--Device-File-static list(options: FileListOption): void--><!--Device-File-static list(options: FileListOption): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | FileListOption | 是 | 接口选项。 |
+| options | [FileListOption](arkts-corefile-filelistoption-depr-i.md) | 是 | 接口选项。 |
 
 **示例：**
 
@@ -559,13 +571,15 @@ static mkdir(options: FileMkdirOption): void
 
 **替代接口：** [fs:mkdir](arkts-corefile-file-fs-mkdir-f.md#mkdir-1)
 
+<!--Device-File-static mkdir(options: FileMkdirOption): void--><!--Device-File-static mkdir(options: FileMkdirOption): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | FileMkdirOption | 是 | 接口选项。 |
+| options | [FileMkdirOption](arkts-corefile-filemkdiroption-depr-i.md) | 是 | 接口选项。 |
 
 **示例：**
 
@@ -666,13 +680,15 @@ static move(options: FileMoveOption): void
 
 **替代接口：** [fs:moveFile](arkts-corefile-file-fs-movefile-f.md#movefile-1)
 
+<!--Device-File-static move(options: FileMoveOption): void--><!--Device-File-static move(options: FileMoveOption): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | FileMoveOption | 是 | 文件过滤选项。默认不进行过滤。 |
+| options | [FileMoveOption](arkts-corefile-filemoveoption-depr-i.md) | 是 | 文件过滤选项。默认不进行过滤。 |
 
 **示例：**
 
@@ -775,13 +791,15 @@ static readArrayBuffer(options: FileReadArrayBufferOption): void
 
 **替代接口：** [fs:read](arkts-corefile-file-fs-read-f.md#read-1)
 
+<!--Device-File-static readArrayBuffer(options: FileReadArrayBufferOption): void--><!--Device-File-static readArrayBuffer(options: FileReadArrayBufferOption): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | FileReadArrayBufferOption | 是 | 接口选项。 |
+| options | [FileReadArrayBufferOption](arkts-corefile-filereadarraybufferoption-depr-i.md) | 是 | 接口选项。 |
 
 **示例：**
 
@@ -886,13 +904,15 @@ static readText(options: FileReadTextOption): void
 
 **替代接口：** [fs:readText](arkts-corefile-file-fs-readtext-f.md#readtext-1)
 
+<!--Device-File-static readText(options: FileReadTextOption): void--><!--Device-File-static readText(options: FileReadTextOption): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | FileReadTextOption | 是 | 接口选项。 |
+| options | [FileReadTextOption](arkts-corefile-filereadtextoption-depr-i.md) | 是 | 接口选项。 |
 
 **示例：**
 
@@ -993,13 +1013,15 @@ static rmdir(options: FileRmdirOption): void
 
 **替代接口：** [fs:rmdir](arkts-corefile-file-fs-rmdir-f.md#rmdir-1)
 
+<!--Device-File-static rmdir(options: FileRmdirOption): void--><!--Device-File-static rmdir(options: FileRmdirOption): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | FileRmdirOption | 是 | 接口选项。 |
+| options | [FileRmdirOption](arkts-corefile-filermdiroption-depr-i.md) | 是 | 接口选项。 |
 
 **示例：**
 
@@ -1100,13 +1122,15 @@ static writeArrayBuffer(options: FileWriteArrayBufferOption): void
 
 **替代接口：** [fs:write](arkts-corefile-file-fs-write-f.md#write-1)
 
+<!--Device-File-static writeArrayBuffer(options: FileWriteArrayBufferOption): void--><!--Device-File-static writeArrayBuffer(options: FileWriteArrayBufferOption): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | FileWriteArrayBufferOption | 是 | 接口选项。 |
+| options | [FileWriteArrayBufferOption](arkts-corefile-filewritearraybufferoption-depr-i.md) | 是 | 接口选项。 |
 
 **示例：**
 
@@ -1209,13 +1233,15 @@ static writeText(options: FileWriteTextOption): void
 
 **替代接口：** [fs:write](arkts-corefile-file-fs-write-f.md#write-1)
 
+<!--Device-File-static writeText(options: FileWriteTextOption): void--><!--Device-File-static writeText(options: FileWriteTextOption): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | FileWriteTextOption | 是 | 接口选项。 |
+| options | [FileWriteTextOption](arkts-corefile-filewritetextoption-depr-i.md) | 是 | 接口选项。 |
 
 **示例：**
 

@@ -21,25 +21,27 @@ Remove a beacon fence.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-geoLocationManager-function removeBeaconFence(beaconFence?: BeaconFence): Promise<void>--><!--Device-geoLocationManager-function removeBeaconFence(beaconFence?: BeaconFence): Promise<void>-End-->
+
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| beaconFence | BeaconFence | No | Indicates the details of the beacon fence. |
+| beaconFence | [BeaconFence](arkts-location-beaconfence-i.md) | No | Indicates the details of the beacon fence. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API.<br>**Applicable version:** 20 - 24 |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 20 - 24 |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call ${geoLocationManager.removeBeaconFence}due to limited device capabilities. |
 | [3501602](../errorcode-geoLocationManager.md#3501602-failed-to-delete-a-beacon-fence-because-of-incorrect-information) | Failed to delete the fence due to incorrect beacon fence information. |
 

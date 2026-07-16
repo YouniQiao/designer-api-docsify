@@ -1,10 +1,10 @@
 # IntentionCode
 
-The **intentionCode** module maps the original events of the keyboard to intention codes for normalized interaction.
-For example, if the mapped event of the space bar on the keyboard is **INTENTION_SELECT**, the intent is to select an
-item.
+The **intentionCode** module maps the original events of the keyboard to intention codes for normalized interaction.For example, if the mapped event of the space bar on the keyboard is **INTENTION_SELECT**, the intent is to select an item.
 
 **Since:** 10
+
+<!--Device-unnamed-export declare enum IntentionCode--><!--Device-unnamed-export declare enum IntentionCode-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -20,6 +20,8 @@ Unknown intent
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-IntentionCode-INTENTION_UNKNOWN = -1--><!--Device-IntentionCode-INTENTION_UNKNOWN = -1-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## INTENTION_UP
@@ -33,6 +35,8 @@ Up
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-IntentionCode-INTENTION_UP = 1--><!--Device-IntentionCode-INTENTION_UP = 1-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -48,6 +52,8 @@ Down
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-IntentionCode-INTENTION_DOWN = 2--><!--Device-IntentionCode-INTENTION_DOWN = 2-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## INTENTION_LEFT
@@ -61,6 +67,8 @@ Left
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-IntentionCode-INTENTION_LEFT = 3--><!--Device-IntentionCode-INTENTION_LEFT = 3-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -76,6 +84,8 @@ Right
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-IntentionCode-INTENTION_RIGHT = 4--><!--Device-IntentionCode-INTENTION_RIGHT = 4-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## INTENTION_SELECT
@@ -89,6 +99,8 @@ Select
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-IntentionCode-INTENTION_SELECT = 5--><!--Device-IntentionCode-INTENTION_SELECT = 5-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -104,6 +116,8 @@ Escape
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-IntentionCode-INTENTION_ESCAPE = 6--><!--Device-IntentionCode-INTENTION_ESCAPE = 6-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## INTENTION_BACK
@@ -117,6 +131,8 @@ Back
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-IntentionCode-INTENTION_BACK = 7--><!--Device-IntentionCode-INTENTION_BACK = 7-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -132,6 +148,8 @@ Forward
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-IntentionCode-INTENTION_FORWARD = 8--><!--Device-IntentionCode-INTENTION_FORWARD = 8-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## INTENTION_MENU
@@ -145,6 +163,8 @@ Menu
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-IntentionCode-INTENTION_MENU = 9--><!--Device-IntentionCode-INTENTION_MENU = 9-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -160,6 +180,8 @@ Page up
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-IntentionCode-INTENTION_PAGE_UP = 11--><!--Device-IntentionCode-INTENTION_PAGE_UP = 11-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## INTENTION_PAGE_DOWN
@@ -173,6 +195,8 @@ Page down
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-IntentionCode-INTENTION_PAGE_DOWN = 12--><!--Device-IntentionCode-INTENTION_PAGE_DOWN = 12-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -188,6 +212,8 @@ Zoom out
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-IntentionCode-INTENTION_ZOOM_OUT = 13--><!--Device-IntentionCode-INTENTION_ZOOM_OUT = 13-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## INTENTION_ZOOM_IN
@@ -201,6 +227,8 @@ Zoom in
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-IntentionCode-INTENTION_ZOOM_IN = 14--><!--Device-IntentionCode-INTENTION_ZOOM_IN = 14-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 

@@ -12,12 +12,13 @@ import { notificationManager } from '@kit.NotificationKit';
 function setAdditionalConfig(key: string, value: string): Promise<number>
 ```
 
-Sets the additional system configuration information of the notification. This API uses a promise to return the
-result.
+Sets the additional system configuration information of the notification. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.NOTIFICATION_AGENT_CONTROLLER
+
+<!--Device-notificationManager-function setAdditionalConfig(key: string, value: string): Promise<int>--><!--Device-notificationManager-function setAdditionalConfig(key: string, value: string): Promise<int>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -34,7 +35,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. **0** indicates successful; other values indicatefailed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result. **0** indicates successful; other values indicate failed. |
 
 **Error codes:**
 

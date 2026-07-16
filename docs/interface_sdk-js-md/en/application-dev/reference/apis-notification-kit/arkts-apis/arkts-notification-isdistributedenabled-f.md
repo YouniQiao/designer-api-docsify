@@ -12,8 +12,7 @@ import { notificationManager } from '@kit.NotificationKit';
 function isDistributedEnabled(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the device supports cross-device notifications. This API uses an asynchronous callback to return the
-result.
+Checks whether the device supports cross-device notifications. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -21,13 +20,15 @@ result.
 
 **Substitutes:** isDistributedEnabled(deviceType:
 
+<!--Device-notificationManager-function isDistributedEnabled(callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isDistributedEnabled(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that thecross-device notification is supported; **false** means the opposite. If this API call fails, an error objectis returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means that the cross-device notification is supported; **false** means the opposite. If this API call fails, an error object is returned. |
 
 **Error codes:**
 
@@ -71,13 +72,15 @@ Checks whether the device supports cross-device notifications. This API uses a p
 
 **Substitutes:** isDistributedEnabled(deviceType:
 
+<!--Device-notificationManager-function isDistributedEnabled(): Promise<boolean>--><!--Device-notificationManager-function isDistributedEnabled(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the cross-devicenotification is supported; **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means that the cross-device notification is supported; **false** means the opposite. |
 
 **Error codes:**
 

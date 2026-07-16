@@ -18,6 +18,8 @@ Judge whether a system that specifies name, mimetype and content protection leve
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-drm-function isMediaKeySystemSupported(name: string, mimeType: string, level: ContentProtectionLevel): boolean--><!--Device-drm-function isMediaKeySystemSupported(name: string, mimeType: string, level: ContentProtectionLevel): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 **Parameters:**
@@ -26,7 +28,7 @@ Judge whether a system that specifies name, mimetype and content protection leve
 | --- | --- | --- | --- |
 | name | string | Yes | Used to point a Digital Right Management solution. |
 | mimeType | string | Yes | Used to specifies the media type. |
-| level | ContentProtectionLevel | Yes | Used to specifies the ContentProtectionLevel. |
+| level | [ContentProtectionLevel](arkts-drm-contentprotectionlevel-e.md) | Yes | Used to specifies the ContentProtectionLevel. |
 
 **Return value:**
 
@@ -64,6 +66,8 @@ Judge whether a system that specifies name, mimetype is supported.
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-drm-function isMediaKeySystemSupported(name: string, mimeType: string): boolean--><!--Device-drm-function isMediaKeySystemSupported(name: string, mimeType: string): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -110,6 +114,8 @@ Judge whether a system that specifies name is supported.
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-drm-function isMediaKeySystemSupported(name: string): boolean--><!--Device-drm-function isMediaKeySystemSupported(name: string): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 

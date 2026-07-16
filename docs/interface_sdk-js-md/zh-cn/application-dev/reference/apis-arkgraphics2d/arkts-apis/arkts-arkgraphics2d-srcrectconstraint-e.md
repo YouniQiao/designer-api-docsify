@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-drawing-enum SrcRectConstraint--><!--Device-drawing-enum SrcRectConstraint-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## STRICT
@@ -16,6 +18,8 @@ STRICT = 0
 
 **起始版本：** 12
 
+<!--Device-SrcRectConstraint-STRICT = 0--><!--Device-SrcRectConstraint-STRICT = 0-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## FAST
@@ -27,6 +31,8 @@ FAST = 1
 允许采样范围超出源矩形范围，速度较快。
 
 **起始版本：** 12
+
+<!--Device-SrcRectConstraint-FAST = 1--><!--Device-SrcRectConstraint-FAST = 1-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

@@ -4,6 +4,8 @@ Defines shadow style properties.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface MultiShadowOptions--><!--Device-unnamed-declare interface MultiShadowOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## offsetX
@@ -12,8 +14,7 @@ Defines shadow style properties.
 offsetX?: number | Resource
 ```
 
-X-axis offset.
-Unit: vp. Default value: 5.
+X-axis offset.Unit: vp. Default value: 5.
 
 **Type:** number | Resource
 
@@ -26,6 +27,8 @@ Unit: vp. Default value: 5.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-MultiShadowOptions-offsetX?: number | Resource--><!--Device-MultiShadowOptions-offsetX?: number | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -35,8 +38,7 @@ Unit: vp. Default value: 5.
 offsetY?: number | Resource
 ```
 
-Y-axis offset.
-Unit: vp. Default value: 5.
+Y-axis offset.Unit: vp. Default value: 5.
 
 **Type:** number | Resource
 
@@ -49,6 +51,8 @@ Unit: vp. Default value: 5.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-MultiShadowOptions-offsetY?: number | Resource--><!--Device-MultiShadowOptions-offsetY?: number | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,6 +86,8 @@ A value less than or equal to 0 is handled as the default value.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-MultiShadowOptions-radius?: number | Resource--><!--Device-MultiShadowOptions-radius?: number | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,5 +1,11 @@
 # getGwpAsanGrayscaleState
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+```
+
 ## getGwpAsanGrayscaleState
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getGwpAsanGrayscaleState(): number
 ��ȡ��ǰGWP-ASanʣ��ʹ��������
 
 **起始版本：** 20
+
+<!--Device-hidebug-function getGwpAsanGrayscaleState(): number--><!--Device-hidebug-function getGwpAsanGrayscaleState(): number-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -44,6 +52,8 @@ function getGwpAsanGrayscaleState(): number
 ��ȡ��ǰGWP-ASanʣ��ʹ��������
 
 **起始版本：** 20
+
+<!--Device-hidebug-function getGwpAsanGrayscaleState(): int--><!--Device-hidebug-function getGwpAsanGrayscaleState(): int-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 

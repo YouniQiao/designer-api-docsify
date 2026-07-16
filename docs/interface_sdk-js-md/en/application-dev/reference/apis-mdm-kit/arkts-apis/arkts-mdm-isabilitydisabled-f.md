@@ -12,8 +12,7 @@ import { applicationManager } from '@kit.MDMKit';
 function isAbilityDisabled(admin: Want | null, bundleName: string, accountId: number, abilityName: string): boolean
 ```
 
-Checks whether the Ability component of a specified application (system application or third-party application) is
-disabled.
+Checks whether the Ability component of a specified application (system application or third-party application) is disabled.
 
 **Since:** 23
 
@@ -21,22 +20,24 @@ disabled.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function isAbilityDisabled(admin: Want | null, bundleName: string, accountId: number, abilityName: string): boolean--><!--Device-applicationManager-function isAbilityDisabled(admin: Want | null, bundleName: string, accountId: number, abilityName: string): boolean-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application.<br>If the device has multiple MDMapplications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policiesthat actually take effect on the device are returned.<br>**Since:** 26.0.0 |
+| admin | Want \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application.<br>If the device has multiple MDM applications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policies that actually take effect on the device are returned.<br>**Since:** 26.0.0 |
 | bundleName | string | Yes | App bundle name. |
 | accountId | number | Yes | Account ID. The value is an integer greater than or equal to 0.<br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2)of @ohos.account.osAccount to obtain the ID. |
-| abilityName | string | Yes | Name of the ability to be disabled or enabled. Currently, only UIAbility issupported. |
+| abilityName | string | Yes | Name of the ability to be disabled or enabled. Currently, only UIAbility is supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the ability is disabled. **true**: The ability is disabled. **false**: The ability isnot disabled. |
+| boolean | Whether the ability is disabled. **true**: The ability is disabled. **false**: The ability is not disabled. |
 
 **Error codes:**
 

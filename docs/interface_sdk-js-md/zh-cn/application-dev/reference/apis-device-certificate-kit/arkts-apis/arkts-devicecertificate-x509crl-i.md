@@ -4,7 +4,15 @@ X.509 CRL操作。
 
 **起始版本：** 11
 
+<!--Device-cert-interface X509CRL--><!--Device-cert-interface X509CRL-End-->
+
 **系统能力：** SystemCapability.Security.Cert
+
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
 
 ## getEncoded
 
@@ -16,7 +24,9 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-getEncoded(callback: AsyncCallback<EncodingBlob>): void--><!--Device-X509CRL-getEncoded(callback: AsyncCallback<EncodingBlob>): void-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -24,7 +34,7 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;EncodingBlob&gt; | 是 | 回调函数。当获取X509证书吊销列表序列化数据成功时，err为undefined，data为获取到的X509证书吊销列表序列化数据；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<EncodingBlob> | 是 | 回调函数。当获取X509证书吊销列表序列化数据成功时，err为undefined，data为获取到的X509证书吊销列表序列化数据；否则为错误对象。 |
 
 **错误码：**
 
@@ -45,7 +55,9 @@ getEncoded(): Promise<EncodingBlob>
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-getEncoded(): Promise<EncodingBlob>--><!--Device-X509CRL-getEncoded(): Promise<EncodingBlob>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -53,7 +65,7 @@ getEncoded(): Promise<EncodingBlob>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;EncodingBlob&gt; | Promise对象，返回X509证书吊销列表的序列化数据。 |
+| Promise<EncodingBlob> | Promise对象，返回X509证书吊销列表的序列化数据。 |
 
 **错误码：**
 
@@ -74,7 +86,9 @@ getExtensions(): DataBlob
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-getExtensions(): DataBlob--><!--Device-X509CRL-getExtensions(): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -82,7 +96,7 @@ getExtensions(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 表示CRL扩展的DER格式数据。 |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | 表示CRL扩展的DER格式数据。 |
 
 **错误码：**
 
@@ -102,7 +116,9 @@ getExtensionsObject(): CertExtension
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-getExtensionsObject(): CertExtension--><!--Device-X509CRL-getExtensionsObject(): CertExtension-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -110,7 +126,7 @@ getExtensionsObject(): CertExtension
 
 | 类型 | 说明 |
 | --- | --- |
-| CertExtension | CRL扩展对象。 |
+| [CertExtension](arkts-devicecertificate-certextension-i.md) | CRL扩展对象。 |
 
 **错误码：**
 
@@ -128,13 +144,15 @@ getIssuerName(): DataBlob
 
 表示获取X509证书吊销列表颁发者名称。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 获取到的X509证书吊销列表颁发者名称数据带字符串结束符。
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-getIssuerName(): DataBlob--><!--Device-X509CRL-getIssuerName(): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -142,7 +160,7 @@ getIssuerName(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 表示X509证书吊销列表颁发者名称。 |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | 表示X509证书吊销列表颁发者名称。 |
 
 **错误码：**
 
@@ -162,7 +180,9 @@ getIssuerName(encodingType: EncodingType): string
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-getIssuerName(encodingType: EncodingType): string--><!--Device-X509CRL-getIssuerName(encodingType: EncodingType): string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -170,7 +190,7 @@ getIssuerName(encodingType: EncodingType): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| encodingType | EncodingType | 是 | 表示编码类型。 |
+| encodingType | [EncodingType](arkts-devicecertificate-encodingtype-e.md) | 是 | 表示编码类型。 |
 
 **返回值：**
 
@@ -197,7 +217,9 @@ getIssuerX500DistinguishedName(): X500DistinguishedName
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-getIssuerX500DistinguishedName(): X500DistinguishedName--><!--Device-X509CRL-getIssuerX500DistinguishedName(): X500DistinguishedName-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -205,7 +227,7 @@ getIssuerX500DistinguishedName(): X500DistinguishedName
 
 | 类型 | 说明 |
 | --- | --- |
-| X500DistinguishedName | X.500可分辨名称对象。 |
+| [X500DistinguishedName](arkts-devicecertificate-x500distinguishedname-i.md) | X.500可分辨名称对象。 |
 
 **错误码：**
 
@@ -225,7 +247,9 @@ getLastUpdate(): string
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-getLastUpdate(): string--><!--Device-X509CRL-getLastUpdate(): string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -253,7 +277,9 @@ getNextUpdate(): string
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-getNextUpdate(): string--><!--Device-X509CRL-getNextUpdate(): string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -281,7 +307,9 @@ getRevokedCert(serialNumber: bigint): X509CRLEntry
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-getRevokedCert(serialNumber: bigint): X509CRLEntry--><!--Device-X509CRL-getRevokedCert(serialNumber: bigint): X509CRLEntry-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -295,7 +323,7 @@ getRevokedCert(serialNumber: bigint): X509CRLEntry
 
 | 类型 | 说明 |
 | --- | --- |
-| X509CRLEntry | 表示证书吊销条目。 |
+| [X509CRLEntry](arkts-devicecertificate-x509crlentry-i.md) | 表示证书吊销条目。 |
 
 **错误码：**
 
@@ -315,7 +343,9 @@ getRevokedCertWithCert(cert: X509Cert): X509CRLEntry
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-getRevokedCertWithCert(cert: X509Cert): X509CRLEntry--><!--Device-X509CRL-getRevokedCertWithCert(cert: X509Cert): X509CRLEntry-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -323,13 +353,13 @@ getRevokedCertWithCert(cert: X509Cert): X509CRLEntry
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cert | X509Cert | 是 | 表示证书对象。 |
+| cert | [X509Cert](arkts-devicecertificate-x509cert-i.md) | 是 | 表示证书对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| X509CRLEntry | 表示证书吊销条目。 |
+| [X509CRLEntry](arkts-devicecertificate-x509crlentry-i.md) | 表示证书吊销条目。 |
 
 **错误码：**
 
@@ -349,7 +379,9 @@ getRevokedCerts(callback: AsyncCallback<Array<X509CRLEntry>>): void
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-getRevokedCerts(callback: AsyncCallback<Array<X509CRLEntry>>): void--><!--Device-X509CRL-getRevokedCerts(callback: AsyncCallback<Array<X509CRLEntry>>): void-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -357,7 +389,7 @@ getRevokedCerts(callback: AsyncCallback<Array<X509CRLEntry>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;X509CRLEntry&gt;&gt; | 是 | 回调函数。当获取证书吊销条目列表成功时，err为undefined，data为获取到的证书吊销条目列表；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<X509CRLEntry>> | 是 | 回调函数。当获取证书吊销条目列表成功时，err为undefined，data为获取到的证书吊销条目列表；否则为错误对象。 |
 
 **错误码：**
 
@@ -377,7 +409,9 @@ getRevokedCerts(): Promise<Array<X509CRLEntry>>
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-getRevokedCerts(): Promise<Array<X509CRLEntry>>--><!--Device-X509CRL-getRevokedCerts(): Promise<Array<X509CRLEntry>>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -385,7 +419,7 @@ getRevokedCerts(): Promise<Array<X509CRLEntry>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;X509CRLEntry&gt;&gt; | Promise对象，返回证书吊销条目列表。 |
+| Promise<Array<X509CRLEntry>> | Promise对象，返回证书吊销条目列表。 |
 
 **错误码：**
 
@@ -405,7 +439,9 @@ getSignature(): DataBlob
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-getSignature(): DataBlob--><!--Device-X509CRL-getSignature(): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -413,7 +449,7 @@ getSignature(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 表示X509证书吊销列表的签名数据。 |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | 表示X509证书吊销列表的签名数据。 |
 
 **错误码：**
 
@@ -433,7 +469,9 @@ getSignatureAlgName(): string
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-getSignatureAlgName(): string--><!--Device-X509CRL-getSignatureAlgName(): string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -461,7 +499,9 @@ getSignatureAlgOid(): string
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-getSignatureAlgOid(): string--><!--Device-X509CRL-getSignatureAlgOid(): string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -489,7 +529,9 @@ getSignatureAlgParams(): DataBlob
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-getSignatureAlgParams(): DataBlob--><!--Device-X509CRL-getSignatureAlgParams(): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -497,7 +539,7 @@ getSignatureAlgParams(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 表示X509证书吊销列表签名的算法参数。 |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | 表示X509证书吊销列表签名的算法参数。 |
 
 **错误码：**
 
@@ -518,7 +560,9 @@ getTBSInfo(): DataBlob
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-getTBSInfo(): DataBlob--><!--Device-X509CRL-getTBSInfo(): DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -526,7 +570,7 @@ getTBSInfo(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 表示证书吊销列表的tbsCertList信息。 |
+| [DataBlob](arkts-devicecertificate-datablob-i.md) | 表示证书吊销列表的tbsCertList信息。 |
 
 **错误码：**
 
@@ -546,7 +590,9 @@ getType(): string
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-getType(): string--><!--Device-X509CRL-getType(): string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -566,7 +612,9 @@ getVersion(): number
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-getVersion(): int--><!--Device-X509CRL-getVersion(): int-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -586,7 +634,9 @@ hashCode(): Uint8Array
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-hashCode(): Uint8Array--><!--Device-X509CRL-hashCode(): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -594,7 +644,7 @@ hashCode(): Uint8Array
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | DER格式数据的哈希值。 |
+| [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | DER格式数据的哈希值。 |
 
 **错误码：**
 
@@ -614,7 +664,9 @@ isRevoked(cert: X509Cert): boolean
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-isRevoked(cert: X509Cert): boolean--><!--Device-X509CRL-isRevoked(cert: X509Cert): boolean-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -622,7 +674,7 @@ isRevoked(cert: X509Cert): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cert | X509Cert | 是 | 表示被检查的证书对象。 |
+| cert | [X509Cert](arkts-devicecertificate-x509cert-i.md) | 是 | 表示被检查的证书对象。 |
 
 **返回值：**
 
@@ -646,7 +698,9 @@ match(param: X509CRLMatchParameters): boolean
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-match(param: X509CRLMatchParameters): boolean--><!--Device-X509CRL-match(param: X509CRLMatchParameters): boolean-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -654,7 +708,7 @@ match(param: X509CRLMatchParameters): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | X509CRLMatchParameters | 是 | 表示需要匹配的参数。 |
+| param | [X509CRLMatchParameters](arkts-devicecertificate-x509crlmatchparameters-i.md) | 是 | 表示需要匹配的参数。 |
 
 **返回值：**
 
@@ -680,7 +734,9 @@ toString(): string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-toString(): string--><!--Device-X509CRL-toString(): string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -708,7 +764,9 @@ toString(encodingType: EncodingType): string
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-toString(encodingType: EncodingType): string--><!--Device-X509CRL-toString(encodingType: EncodingType): string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -716,7 +774,7 @@ toString(encodingType: EncodingType): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| encodingType | EncodingType | 是 | 表示编码类型。 |
+| encodingType | [EncodingType](arkts-devicecertificate-encodingtype-e.md) | 是 | 表示编码类型。 |
 
 **返回值：**
 
@@ -743,7 +801,9 @@ verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void--><!--Device-X509CRL-verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -752,7 +812,7 @@ verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | cryptoFramework.PubKey | 是 | 表示用于验签的公钥对象。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当验签成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当验签成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -771,7 +831,9 @@ verify(key: cryptoFramework.PubKey): Promise<void>
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CRL-verify(key: cryptoFramework.PubKey): Promise<void>--><!--Device-X509CRL-verify(key: cryptoFramework.PubKey): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -785,7 +847,7 @@ verify(key: cryptoFramework.PubKey): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

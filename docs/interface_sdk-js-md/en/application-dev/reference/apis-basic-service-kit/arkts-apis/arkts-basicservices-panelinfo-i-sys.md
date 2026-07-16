@@ -4,6 +4,8 @@ Describes the properties of the word selection panel.
 
 **Since:** 24
 
+<!--Device-unnamed-export interface PanelInfo--><!--Device-unnamed-export interface PanelInfo-End-->
+
 **System capability:** SystemCapability.SelectionInput.Selection
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Height of the word selection panel, in px.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PanelInfo-height: int--><!--Device-PanelInfo-height: int-End-->
+
 **System capability:** SystemCapability.SelectionInput.Selection
 
 **System API:** This is a system API.
@@ -48,6 +52,8 @@ Type of the word selection panel.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PanelInfo-panelType: PanelType--><!--Device-PanelInfo-panelType: PanelType-End-->
+
 **System capability:** SystemCapability.SelectionInput.Selection
 
 **System API:** This is a system API.
@@ -65,6 +71,8 @@ Width of the word selection panel, in px.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PanelInfo-width: int--><!--Device-PanelInfo-width: int-End-->
 
 **System capability:** SystemCapability.SelectionInput.Selection
 
@@ -84,6 +92,8 @@ X-coordinate of the upper left corner of the word selection panel, in px.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PanelInfo-x: int--><!--Device-PanelInfo-x: int-End-->
+
 **System capability:** SystemCapability.SelectionInput.Selection
 
 **System API:** This is a system API.
@@ -101,6 +111,8 @@ Y-coordinate of the upper left corner of the word selection panel, in px.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PanelInfo-y: int--><!--Device-PanelInfo-y: int-End-->
 
 **System capability:** SystemCapability.SelectionInput.Selection
 

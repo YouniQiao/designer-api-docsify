@@ -10,6 +10,8 @@ Indicates the device class.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-remoteDevice-type DeviceClass = nearlinkConstant.DeviceClass--><!--Device-remoteDevice-type DeviceClass = nearlinkConstant.DeviceClass-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Property type:** nearlinkConstant.DeviceClass

@@ -4,6 +4,8 @@ Enumerates the types of device administrator applications.
 
 **Since:** 15
 
+<!--Device-adminManager-export enum AdminType--><!--Device-adminManager-export enum AdminType-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## ADMIN_TYPE_NORMAL
@@ -15,6 +17,8 @@ ADMIN_TYPE_NORMAL = 0x00
 Common device administrator application.
 
 **Since:** 9
+
+<!--Device-AdminType-ADMIN_TYPE_NORMAL = 0x00--><!--Device-AdminType-ADMIN_TYPE_NORMAL = 0x00-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -29,6 +33,8 @@ ADMIN_TYPE_SUPER = 0x01
 Super device administrator application.
 
 **Since:** 9
+
+<!--Device-AdminType-ADMIN_TYPE_SUPER = 0x01--><!--Device-AdminType-ADMIN_TYPE_SUPER = 0x01-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

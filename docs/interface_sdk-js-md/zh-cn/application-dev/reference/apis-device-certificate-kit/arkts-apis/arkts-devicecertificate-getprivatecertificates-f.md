@@ -1,5 +1,11 @@
 # getPrivateCertificates
 
+## 导入模块
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+```
+
 ## getPrivateCertificates
 
 ```TypeScript
@@ -12,19 +18,21 @@ function getPrivateCertificates(): Promise<CMResult>
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
+<!--Device-certificateManager-function getPrivateCertificates(): Promise<CMResult>--><!--Device-certificateManager-function getPrivateCertificates(): Promise<CMResult>-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise对象，返回获取应用安装的凭据列表的结果，返回值为[CMResult](arkts-devicecertificate-cmresult-i.md)对象中的credentialList属性。 |
+| Promise<CMResult> | Promise对象，返回获取应用安装的凭据列表的结果，返回值为[CMResult](arkts-devicecertificate-cmresult-i.md)对象中的credentialList属性。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 
 **示例：**

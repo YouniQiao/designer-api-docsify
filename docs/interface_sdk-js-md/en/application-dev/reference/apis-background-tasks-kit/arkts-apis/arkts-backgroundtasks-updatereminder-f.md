@@ -12,13 +12,13 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 function updateReminder(reminderId: number, reminderReq: ReminderRequest): Promise<void>
 ```
 
-Updates the agent-powered reminder with the specified ID. This API uses a promise to return the result. Only
-[valid (not yet expired) reminders](../../../../task-management/agent-powered-reminder.md#constraints) that are not
-displayed in the notification panel can be updated.
+Updates the agent-powered reminder with the specified ID. This API uses a promise to return the result. Only [valid (not yet expired) reminders](../../../../task-management/agent-powered-reminder.md#constraints) that are not displayed in the notification panel can be updated.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.PUBLISH_AGENT_REMINDER
+
+<!--Device-reminderAgentManager-function updateReminder(reminderId: int, reminderReq: ReminderRequest): Promise<void>--><!--Device-reminderAgentManager-function updateReminder(reminderId: int, reminderReq: ReminderRequest): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -26,14 +26,14 @@ displayed in the notification panel can be updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderId | number | Yes | ID of the agent-powered reminder to be updated.The reminder ID is returned when the[publishReminder](arkts-backgroundtasks-publishreminder-f.md#publishreminder-1)API is called. |
-| reminderReq | ReminderRequest | Yes | Request instance used to set detailed information such as the remindertype and ringing duration. |
+| reminderId | number | Yes | ID of the agent-powered reminder to be updated.The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-publishreminder-f.md#publishreminder-1)API is called. |
+| reminderReq | [ReminderRequest](arkts-backgroundtasks-reminderrequest-i.md) | Yes | Request instance used to set detailed information such as the reminder type and ringing duration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

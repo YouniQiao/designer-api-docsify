@@ -18,19 +18,21 @@ Add Wi-Fi connection configuration to the device. The configuration will be upda
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG
 
+<!--Device-wifiManager-function addDeviceConfig(config: WifiDeviceConfig): Promise<int>--><!--Device-wifiManager-function addDeviceConfig(config: WifiDeviceConfig): Promise<int>-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
+| config | [WifiDeviceConfig](arkts-connectivity-wifideviceconfig-i.md) | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns {@code networkId} if the configuration is added; returns {@code -1} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Returns {@code networkId} if the configuration is added; returns {@code -1} otherwise. |
 
 **Error codes:**
 
@@ -77,14 +79,16 @@ Add Wi-Fi connection configuration to the device. The configuration will be upda
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG
 
+<!--Device-wifiManager-function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<int>): void--><!--Device-wifiManager-function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<int>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Indicates call back of addDeviceConfig. |
+| config | [WifiDeviceConfig](arkts-connectivity-wifideviceconfig-i.md) | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Indicates call back of addDeviceConfig. |
 
 **Error codes:**
 

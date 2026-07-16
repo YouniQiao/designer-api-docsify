@@ -4,6 +4,8 @@ Size information of the text.
 
 **Since:** 8
 
+<!--Device-unnamed-declare interface TextMetrics--><!--Device-unnamed-declare interface TextMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## actualBoundingBoxAscent
@@ -12,9 +14,7 @@ Size information of the text.
 readonly actualBoundingBoxAscent: number
 ```
 
-Distance from the horizontal line specified by the
-[CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the top
-of the bounding rectangle used to render the text. Read-only.
+Distance from the horizontal line specified by the [CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the top of the bounding rectangle used to render the text. Read-only.
 
 **Type:** number
 
@@ -23,6 +23,8 @@ of the bounding rectangle used to render the text. Read-only.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-TextMetrics-readonly actualBoundingBoxAscent: number--><!--Device-TextMetrics-readonly actualBoundingBoxAscent: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,9 +34,7 @@ of the bounding rectangle used to render the text. Read-only.
 readonly actualBoundingBoxDescent: number
 ```
 
-Distance from the horizontal line specified by the
-[CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the bottom
-of the bounding rectangle used to render the text. Read-only.
+Distance from the horizontal line specified by the [CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the bottom of the bounding rectangle used to render the text. Read-only.
 
 **Type:** number
 
@@ -43,6 +43,8 @@ of the bounding rectangle used to render the text. Read-only.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-TextMetrics-readonly actualBoundingBoxDescent: number--><!--Device-TextMetrics-readonly actualBoundingBoxDescent: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,9 +54,7 @@ of the bounding rectangle used to render the text. Read-only.
 readonly actualBoundingBoxLeft: number
 ```
 
-Distance parallel to the baseline from the alignment point determined by the
-[CanvasRenderingContext2D.textAlign](#canvastextalign) attribute to the left side
-of the bounding rectangle of the text. Read-only.
+Distance parallel to the baseline from the alignment point determined by the [CanvasRenderingContext2D.textAlign](#canvastextalign) attribute to the left side of the bounding rectangle of the text. Read-only.
 
 **Type:** number
 
@@ -63,6 +63,8 @@ of the bounding rectangle of the text. Read-only.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-TextMetrics-readonly actualBoundingBoxLeft: number--><!--Device-TextMetrics-readonly actualBoundingBoxLeft: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,9 +74,7 @@ of the bounding rectangle of the text. Read-only.
 readonly actualBoundingBoxRight: number
 ```
 
-Distance parallel to the baseline from the alignment point determined by the
-[CanvasRenderingContext2D.textAlign](#canvastextalign) attribute to the right side
-of the bounding rectangle of the text. Read-only.
+Distance parallel to the baseline from the alignment point determined by the [CanvasRenderingContext2D.textAlign](#canvastextalign) attribute to the right side of the bounding rectangle of the text. Read-only.
 
 **Type:** number
 
@@ -83,6 +83,8 @@ of the bounding rectangle of the text. Read-only.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-TextMetrics-readonly actualBoundingBoxRight: number--><!--Device-TextMetrics-readonly actualBoundingBoxRight: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -92,9 +94,7 @@ of the bounding rectangle of the text. Read-only.
 readonly alphabeticBaseline: number
 ```
 
-Distance from the horizontal line specified by the
-[CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the alphabetic
-baseline of the line box. Read-only.
+Distance from the horizontal line specified by the [CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the alphabetic baseline of the line box. Read-only.
 
 **Type:** number
 
@@ -103,6 +103,8 @@ baseline of the line box. Read-only.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-TextMetrics-readonly alphabeticBaseline: number--><!--Device-TextMetrics-readonly alphabeticBaseline: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -112,9 +114,7 @@ baseline of the line box. Read-only.
 readonly emHeightAscent: number
 ```
 
-Distance from the horizontal line specified by the
-[CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the top of the
-em square in the line box. Read-only.
+Distance from the horizontal line specified by the [CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the top of the em square in the line box. Read-only.
 
 **Type:** number
 
@@ -123,6 +123,8 @@ em square in the line box. Read-only.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-TextMetrics-readonly emHeightAscent: number--><!--Device-TextMetrics-readonly emHeightAscent: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -132,9 +134,7 @@ em square in the line box. Read-only.
 readonly emHeightDescent: number
 ```
 
-Distance from the horizontal line specified by the
-[CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the bottom of the
-em square in the line box. Read-only.
+Distance from the horizontal line specified by the [CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the bottom of the em square in the line box. Read-only.
 
 **Type:** number
 
@@ -143,6 +143,8 @@ em square in the line box. Read-only.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-TextMetrics-readonly emHeightDescent: number--><!--Device-TextMetrics-readonly emHeightDescent: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -152,9 +154,7 @@ em square in the line box. Read-only.
 readonly fontBoundingBoxAscent: number
 ```
 
-Distance from the horizontal line specified by the
-[CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the top of the
-bounding rectangle of all the fonts used to render the text. Read-only.
+Distance from the horizontal line specified by the [CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the top of the bounding rectangle of all the fonts used to render the text. Read-only.
 
 **Type:** number
 
@@ -163,6 +163,8 @@ bounding rectangle of all the fonts used to render the text. Read-only.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-TextMetrics-readonly fontBoundingBoxAscent: number--><!--Device-TextMetrics-readonly fontBoundingBoxAscent: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -172,9 +174,7 @@ bounding rectangle of all the fonts used to render the text. Read-only.
 readonly fontBoundingBoxDescent: number
 ```
 
-Distance from the horizontal line specified by the
-[CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the bottom of the
-bounding rectangle of all the fonts used to render the text. Read-only.
+Distance from the horizontal line specified by the [CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the bottom of the bounding rectangle of all the fonts used to render the text. Read-only.
 
 **Type:** number
 
@@ -183,6 +183,8 @@ bounding rectangle of all the fonts used to render the text. Read-only.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-TextMetrics-readonly fontBoundingBoxDescent: number--><!--Device-TextMetrics-readonly fontBoundingBoxDescent: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -192,9 +194,7 @@ bounding rectangle of all the fonts used to render the text. Read-only.
 readonly hangingBaseline: number
 ```
 
-Distance from the horizontal line specified by the
-[CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the hanging
-baseline of the line box. Read-only.
+Distance from the horizontal line specified by the [CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the hanging baseline of the line box. Read-only.
 
 **Type:** number
 
@@ -203,6 +203,8 @@ baseline of the line box. Read-only.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-TextMetrics-readonly hangingBaseline: number--><!--Device-TextMetrics-readonly hangingBaseline: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -226,6 +228,8 @@ If the unit mode of the **CanvasRenderingContext2D** object is set to px, the un
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-TextMetrics-readonly height: number--><!--Device-TextMetrics-readonly height: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ideographicBaseline
@@ -234,9 +238,7 @@ If the unit mode of the **CanvasRenderingContext2D** object is set to px, the un
 readonly ideographicBaseline: number
 ```
 
-Distance from the horizontal line specified by the
-[CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the ideographic
-baseline of the line box. Read-only.
+Distance from the horizontal line specified by the [CanvasRenderingContext2D.textBaseline](#canvastextbaseline) attribute to the ideographic baseline of the line box. Read-only.
 
 **Type:** number
 
@@ -245,6 +247,8 @@ baseline of the line box. Read-only.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-TextMetrics-readonly ideographicBaseline: number--><!--Device-TextMetrics-readonly ideographicBaseline: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -267,6 +271,8 @@ If the unit mode of the **CanvasRenderingContext2D** object is set to px, the un
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-TextMetrics-readonly width: number--><!--Device-TextMetrics-readonly width: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

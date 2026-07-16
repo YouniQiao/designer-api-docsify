@@ -12,8 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function getConnectOwnerUidSync(protocol: ProtocolType, local: NetAddress, remote: NetAddress): number
 ```
 
-Obtains the data network that is activated by default.
-You can only call this method in VPN application.
+Obtains the data network that is activated by default.You can only call this method in VPN application.
 
 **Since:** 23
 
@@ -21,15 +20,17 @@ You can only call this method in VPN application.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function getConnectOwnerUidSync(protocol: ProtocolType, local: NetAddress, remote: NetAddress): int--><!--Device-connection-function getConnectOwnerUidSync(protocol: ProtocolType, local: NetAddress, remote: NetAddress): int-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| protocol | ProtocolType | Yes | Protocol type. |
-| local | NetAddress | Yes | Local net address. |
-| remote | NetAddress | Yes | Remote net address. |
+| protocol | [ProtocolType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-protocoltype-e.md) | Yes | Protocol type. |
+| local | [NetAddress](arkts-network-netaddress-i.md) | Yes | Local net address. |
+| remote | [NetAddress](arkts-network-netaddress-i.md) | Yes | Remote net address. |
 
 **Return value:**
 

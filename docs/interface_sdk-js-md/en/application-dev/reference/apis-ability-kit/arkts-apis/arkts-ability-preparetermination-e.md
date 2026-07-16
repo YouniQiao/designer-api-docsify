@@ -1,11 +1,10 @@
 # PrepareTermination
 
-Enumerates the actions triggered when an application is closed by the user. You can use it in
-[onPrepareTermination](arkts-ability-abilitystage-c.md#onpreparetermination-1) or
-[onPrepareTerminationAsync](arkts-ability-abilitystage-c.md#onprepareterminationasync-1) of
-[AbilityStage](arkts-ability-abilitystage-c.md).
+Enumerates the actions triggered when an application is closed by the user. You can use it in [onPrepareTermination](arkts-ability-abilitystage-c.md#onpreparetermination-1) or [onPrepareTerminationAsync](arkts-ability-abilitystage-c.md#onprepareterminationasync-1) of [AbilityStage](arkts-ability-abilitystage-c.md).
 
 **Since:** 15
+
+<!--Device-AbilityConstant-export enum PrepareTermination--><!--Device-AbilityConstant-export enum PrepareTermination-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -23,6 +22,8 @@ Executes the termination action immediately. This is the default behavior.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-PrepareTermination-TERMINATE_IMMEDIATELY = 0--><!--Device-PrepareTermination-TERMINATE_IMMEDIATELY = 0-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## CANCEL
@@ -38,6 +39,8 @@ Cancels the termination action.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-PrepareTermination-CANCEL = 1--><!--Device-PrepareTermination-CANCEL = 1-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

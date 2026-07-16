@@ -1,5 +1,11 @@
 # preloadApplication（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+```
+
 ## preloadApplication
 
 ```TypeScript
@@ -14,6 +20,8 @@ function preloadApplication(bundleName: string, userId: number, mode: PreloadMod
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-appManager-function preloadApplication(bundleName: string, userId: int, mode: PreloadMode, appIndex?: int): Promise<void>--><!--Device-appManager-function preloadApplication(bundleName: string, userId: int, mode: PreloadMode, appIndex?: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -24,14 +32,14 @@ function preloadApplication(bundleName: string, userId: number, mode: PreloadMod
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 预加载的应用包名。 |
 | userId | number | 是 | 预加载的用户Id。 |
-| mode | PreloadMode | 是 | 预加载模式。 |
+| mode | [PreloadMode](arkts-ability-preloadmode-e-sys.md) | 是 | 预加载模式。 |
 | appIndex | number | 否 | 预加载应用分身的appIndex。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

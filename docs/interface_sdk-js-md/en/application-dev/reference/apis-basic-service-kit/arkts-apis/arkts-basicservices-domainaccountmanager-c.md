@@ -4,6 +4,8 @@ Provides APIs for domain account management.
 
 **Since:** 18
 
+<!--Device-osAccount-class DomainAccountManager--><!--Device-osAccount-class DomainAccountManager-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 ## Modules to Import
@@ -24,20 +26,22 @@ Updates information of a domain account. This API uses a promise to return the r
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.MANAGE_DOMAIN_ACCOUNTS
 
+<!--Device-DomainAccountManager-static updateAccountInfo(oldAccountInfo: DomainAccountInfo, newAccountInfo: DomainAccountInfo): Promise<void>--><!--Device-DomainAccountManager-static updateAccountInfo(oldAccountInfo: DomainAccountInfo, newAccountInfo: DomainAccountInfo): Promise<void>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oldAccountInfo | DomainAccountInfo | Yes | Domain account information. |
-| newAccountInfo | DomainAccountInfo | Yes | New domain account information. |
+| oldAccountInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i.md) | Yes | Domain account information. |
+| newAccountInfo | [DomainAccountInfo](arkts-basicservices-domainaccountinfo-i.md) | Yes | New domain account information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -1,9 +1,10 @@
 # SpringLoadingContext
 
-Defines callback context information passed to applications during hover detection. It enables access to drag
-states, dynamic UI effect updates, and drag data for operation handling decisions.
+Defines callback context information passed to applications during hover detection. It enables access to drag states, dynamic UI effect updates, and drag data for operation handling decisions.
 
 **Since:** 20
+
+<!--Device-dragController-class SpringLoadingContext--><!--Device-dragController-class SpringLoadingContext-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,14 +20,15 @@ import { dragController } from '@kit.ArkUI';
 abort(): void
 ```
 
-Terminates subsequent hover detection. This API does not trigger CANCEL state notifications, and the application
-needs to perform state cleanup when executing this API.
+Terminates subsequent hover detection. This API does not trigger CANCEL state notifications, and the application needs to perform state cleanup when executing this API.
 
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SpringLoadingContext-abort(): void--><!--Device-SpringLoadingContext-abort(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,12 +38,7 @@ needs to perform state cleanup when executing this API.
 updateConfiguration(config: DragSpringLoadingConfiguration): void
 ```
 
-Updates the hover detection configuration. This API is effective only when the hover detection state is BEGIN.
-Applications typically set the hover detection configuration when binding
-[onDragSpringLoading](../arkts-components/arkts-arkui-commonmethod-c.md#ondragspringloading-1) or use the default configuration. This API does not
-modify the original configuration set during binding, but updates dynamic configuration information for
-subsequent hover detection. Use this API with caution, as different drag data types may require different UX
-timing.
+Updates the hover detection configuration. This API is effective only when the hover detection state is BEGIN.Applications typically set the hover detection configuration when binding [onDragSpringLoading](../arkts-components/arkts-arkui-commonmethod-c.md#ondragspringloading-1) or use the default configuration. This API does not modify the original configuration set during binding, but updates dynamic configuration information for subsequent hover detection. Use this API with caution, as different drag data types may require different UX timing.
 
 **Since:** 20
 
@@ -49,13 +46,15 @@ timing.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SpringLoadingContext-updateConfiguration(config: DragSpringLoadingConfiguration): void--><!--Device-SpringLoadingContext-updateConfiguration(config: DragSpringLoadingConfiguration): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | DragSpringLoadingConfiguration | Yes | New configuration for hover detection. |
+| config | [DragSpringLoadingConfiguration](../arkts-components/arkts-arkui-dragspringloadingconfiguration-t.md) | Yes | New configuration for hover detection. |
 
 ## currentConfig
 
@@ -63,9 +62,7 @@ timing.
 currentConfig?: DragSpringLoadingConfiguration
 ```
 
-Configuration information in the current callback. Omitted in CANCEL state; uses the
-[DragSpringLoadingConfiguration](arkts-arkui-dragspringloadingconfiguration-i.md) default value when
-**undefined**.
+Configuration information in the current callback. Omitted in CANCEL state; uses the [DragSpringLoadingConfiguration](arkts-arkui-dragspringloadingconfiguration-i.md) default value when **undefined**.
 
 **Type:** DragSpringLoadingConfiguration
 
@@ -74,6 +71,8 @@ Configuration information in the current callback. Omitted in CANCEL state; uses
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SpringLoadingContext-currentConfig?: DragSpringLoadingConfiguration--><!--Device-SpringLoadingContext-currentConfig?: DragSpringLoadingConfiguration-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -93,6 +92,8 @@ Callback notification sequence number in the current hover detection cycle. The 
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-SpringLoadingContext-currentNotifySequence: number--><!--Device-SpringLoadingContext-currentNotifySequence: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## dragInfos
@@ -101,8 +102,7 @@ Callback notification sequence number in the current hover detection cycle. The 
 dragInfos?: SpringLoadingDragInfos
 ```
 
-Drag information. Omitted in CANCEL state; uses the
-[SpringLoadingDragInfos](arkts-arkui-springloadingdraginfos-i.md) default value when **undefined**.
+Drag information. Omitted in CANCEL state; uses the [SpringLoadingDragInfos](arkts-arkui-springloadingdraginfos-i.md) default value when **undefined**.
 
 **Type:** SpringLoadingDragInfos
 
@@ -111,6 +111,8 @@ Drag information. Omitted in CANCEL state; uses the
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SpringLoadingContext-dragInfos?: SpringLoadingDragInfos--><!--Device-SpringLoadingContext-dragInfos?: SpringLoadingDragInfos-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -129,6 +131,8 @@ Current state of hover detection.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SpringLoadingContext-state: DragSpringLoadingState--><!--Device-SpringLoadingContext-state: DragSpringLoadingState-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

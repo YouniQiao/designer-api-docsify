@@ -18,6 +18,8 @@ Go to the dial screen and the called number is displayed.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-call-function makeCall(phoneNumber: string, callback: AsyncCallback<void>): void--><!--Device-call-function makeCall(phoneNumber: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Applications.Contacts
 
 **Parameters:**
@@ -25,7 +27,7 @@ Go to the dial screen and the called number is displayed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Indicates the called number. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of makeCall. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of makeCall. |
 
 **Error codes:**
 
@@ -65,6 +67,8 @@ Go to the dial screen and the called number is displayed.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-call-function makeCall(phoneNumber: string): Promise<void>--><!--Device-call-function makeCall(phoneNumber: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Applications.Contacts
 
 **Parameters:**
@@ -77,7 +81,7 @@ Go to the dial screen and the called number is displayed.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the makeCall. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the makeCall. |
 
 **Error codes:**
 
@@ -115,6 +119,8 @@ Go to the dial screen and the called number is displayed.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-call-function makeCall(phoneNumber: string, options?: MakeCallOptions): Promise<void>--><!--Device-call-function makeCall(phoneNumber: string, options?: MakeCallOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Applications.Contacts
 
 **Parameters:**
@@ -122,13 +128,13 @@ Go to the dial screen and the called number is displayed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Indicates the called number. |
-| options | MakeCallOptions | No | Indicates additional information carried in the call.<br>Default value: false. |
+| options | [MakeCallOptions](arkts-telephony-makecalloptions-i.md) | No | Indicates additional information carried in the call.<br>Default value: false. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - The promise returned by the makeCall. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - The promise returned by the makeCall. |
 
 **Error codes:**
 
@@ -170,20 +176,22 @@ Go to the dial screen and the called number is displayed.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-call-function makeCall(context: Context, phoneNumber: string): Promise<void>--><!--Device-call-function makeCall(context: Context, phoneNumber: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Applications.Contacts
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context. |
 | phoneNumber | string | Yes | Indicates the called number. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the makeCall. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the makeCall. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+<!--Device-unnamed-export interface Sampler--><!--Device-unnamed-export interface Sampler-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## addressModeU
@@ -17,6 +19,8 @@ U寻址模式
 **类型：** SamplerAddressMode
 
 **起始版本：** 20
+
+<!--Device-Sampler-addressModeU?: SamplerAddressMode--><!--Device-Sampler-addressModeU?: SamplerAddressMode-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -32,6 +36,8 @@ V寻址模式
 
 **起始版本：** 20
 
+<!--Device-Sampler-addressModeV?: SamplerAddressMode--><!--Device-Sampler-addressModeV?: SamplerAddressMode-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## magFilter
@@ -45,6 +51,8 @@ magFilter?: SamplerFilter
 **类型：** SamplerFilter
 
 **起始版本：** 20
+
+<!--Device-Sampler-magFilter?: SamplerFilter--><!--Device-Sampler-magFilter?: SamplerFilter-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -60,6 +68,8 @@ minFilter?: SamplerFilter
 
 **起始版本：** 20
 
+<!--Device-Sampler-minFilter?: SamplerFilter--><!--Device-Sampler-minFilter?: SamplerFilter-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## mipMapMode
@@ -73,6 +83,8 @@ Mip-map模式
 **类型：** SamplerFilter
 
 **起始版本：** 20
+
+<!--Device-Sampler-mipMapMode?: SamplerFilter--><!--Device-Sampler-mipMapMode?: SamplerFilter-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

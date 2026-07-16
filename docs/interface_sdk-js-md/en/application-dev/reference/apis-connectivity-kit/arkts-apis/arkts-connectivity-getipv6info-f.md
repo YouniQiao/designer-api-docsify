@@ -12,12 +12,13 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getIpv6Info(): Ipv6Info
 ```
 
-Obtain the IPv6 information of the Wi-Fi connection.
-The IPv6 information includes the host IP address, gateway address, and DNS information.
+Obtain the IPv6 information of the Wi-Fi connection.The IPv6 information includes the host IP address, gateway address, and DNS information.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
+
+<!--Device-wifiManager-function getIpv6Info(): Ipv6Info--><!--Device-wifiManager-function getIpv6Info(): Ipv6Info-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -25,7 +26,7 @@ The IPv6 information includes the host IP address, gateway address, and DNS info
 
 | Type | Description |
 | --- | --- |
-| Ipv6Info | Returns the IPv6 information of the Wi-Fi connection. |
+| [Ipv6Info](arkts-connectivity-ipv6info-i.md) | Returns the IPv6 information of the Wi-Fi connection. |
 
 **Error codes:**
 

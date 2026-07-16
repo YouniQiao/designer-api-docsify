@@ -4,6 +4,8 @@ Implements a **NestedScrollOptionsExt** object to set up, down, left, and right 
 
 **Since:** 14
 
+<!--Device-unnamed-declare interface NestedScrollOptionsExt--><!--Device-unnamed-declare interface NestedScrollOptionsExt-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## scrollDown
@@ -19,6 +21,8 @@ Default value: **NestedScrollMode.SELF_FIRST**.
 **Type:** NestedScrollMode
 
 **Since:** 14
+
+<!--Device-NestedScrollOptionsExt-scrollDown?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollDown?: NestedScrollMode-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -36,6 +40,8 @@ Default value: **NestedScrollMode.SELF_FIRST**.
 
 **Since:** 14
 
+<!--Device-NestedScrollOptionsExt-scrollLeft?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollLeft?: NestedScrollMode-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## scrollRight
@@ -52,6 +58,8 @@ Default value: **NestedScrollMode.SELF_FIRST**.
 
 **Since:** 14
 
+<!--Device-NestedScrollOptionsExt-scrollRight?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollRight?: NestedScrollMode-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## scrollUp
@@ -67,6 +75,8 @@ Default value: **NestedScrollMode.SELF_FIRST**.
 **Type:** NestedScrollMode
 
 **Since:** 14
+
+<!--Device-NestedScrollOptionsExt-scrollUp?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollUp?: NestedScrollMode-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

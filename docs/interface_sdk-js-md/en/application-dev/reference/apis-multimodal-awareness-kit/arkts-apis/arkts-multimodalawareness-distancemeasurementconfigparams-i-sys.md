@@ -4,6 +4,8 @@ Configuration parameters for the distance measurement interface
 
 **Since:** 23
 
+<!--Device-spatialAwareness-export interface DistanceMeasurementConfigParams--><!--Device-spatialAwareness-export interface DistanceMeasurementConfigParams-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ distance measurement supported devices list
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DistanceMeasurementConfigParams-deviceList: string[]--><!--Device-DistanceMeasurementConfigParams-deviceList: string[]-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **System API:** This is a system API.
@@ -45,6 +49,8 @@ distance measurement result reporting frequency
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DistanceMeasurementConfigParams-reportFrequency: int--><!--Device-DistanceMeasurementConfigParams-reportFrequency: int-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
@@ -64,6 +70,8 @@ distance measurement result reporting mode
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DistanceMeasurementConfigParams-reportMode: ReportingMode--><!--Device-DistanceMeasurementConfigParams-reportMode: ReportingMode-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **System API:** This is a system API.
@@ -81,6 +89,8 @@ distance measurement technology type
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DistanceMeasurementConfigParams-techType: TechnologyType--><!--Device-DistanceMeasurementConfigParams-techType: TechnologyType-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 

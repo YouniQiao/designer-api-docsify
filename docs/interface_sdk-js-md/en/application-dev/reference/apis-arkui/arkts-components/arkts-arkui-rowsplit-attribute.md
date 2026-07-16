@@ -8,6 +8,8 @@ The [universal events](arkts-arkui-commonmethod-c.md) are supported.
 
 **Since:** 7
 
+<!--Device-unnamed-declare class RowSplitAttribute extends CommonMethod<RowSplitAttribute>--><!--Device-unnamed-declare class RowSplitAttribute extends CommonMethod<RowSplitAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## resizeable
@@ -18,12 +20,14 @@ resizeable(value: boolean)
 
 Sets whether the divider can be dragged.
 
-> The divider of **RowSplit** can change the width of the left and right child components, but only to the
+> The divider of **RowSplit** can change the width of the left and right child components, but only to the  
 > extent that the resultant width falls within the maximum and minimum widths of the child components.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RowSplitAttribute-resizeable(value: boolean): RowSplitAttribute--><!--Device-RowSplitAttribute-resizeable(value: boolean): RowSplitAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

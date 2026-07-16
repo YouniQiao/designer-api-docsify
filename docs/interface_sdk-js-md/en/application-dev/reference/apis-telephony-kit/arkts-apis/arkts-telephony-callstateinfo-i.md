@@ -4,6 +4,8 @@ Indicates call state and number.
 
 **Since:** 11
 
+<!--Device-observer-export interface CallStateInfo--><!--Device-observer-export interface CallStateInfo-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Indicates call number.
 
 **Since:** 11
 
+<!--Device-CallStateInfo-number: string--><!--Device-CallStateInfo-number: string-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## state
@@ -37,6 +41,8 @@ Indicates call state.
 **Type:** CallState
 
 **Since:** 11
+
+<!--Device-CallStateInfo-state: CallState--><!--Device-CallStateInfo-state: CallState-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 

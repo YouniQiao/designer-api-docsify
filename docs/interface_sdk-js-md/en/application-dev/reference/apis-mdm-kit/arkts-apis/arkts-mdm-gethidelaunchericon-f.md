@@ -20,6 +20,8 @@ Gets applications that hide launcher icons.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function getHideLauncherIcon(admin: Want | null): Array<string>--><!--Device-applicationManager-function getHideLauncherIcon(admin: Want | null): Array<string>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
@@ -32,7 +34,7 @@ Gets applications that hide launcher icons.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | the bundle name list of the applications. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | the bundle name list of the applications. |
 
 **Error codes:**
 

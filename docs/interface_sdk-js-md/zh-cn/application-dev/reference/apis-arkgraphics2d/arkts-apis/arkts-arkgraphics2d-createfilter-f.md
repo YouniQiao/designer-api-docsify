@@ -1,5 +1,11 @@
 # createFilter
 
+## 导入模块
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
+```
+
 ## createFilter
 
 ```TypeScript
@@ -10,13 +16,15 @@ function createFilter(): Filter
 
 **起始版本：** 12
 
+<!--Device-uiEffect-function createFilter(): Filter--><!--Device-uiEffect-function createFilter(): Filter-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Filter | 返回Filter的头节点。 |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-filter-i.md) | 返回Filter的头节点。 |
 
 **示例：**
 

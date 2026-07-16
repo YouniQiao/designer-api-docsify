@@ -20,13 +20,15 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-dataTransfer-function onReadData(callback: Callback<DataParams>): void--><!--Device-dataTransfer-function onReadData(callback: Callback<DataParams>): void-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;DataParams&gt; | Yes | Callback used to listen for the port read event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<DataParams> | Yes | Callback used to listen for the port read event. |
 
 **Error codes:**
 

@@ -12,8 +12,7 @@ import { cardEmulation } from '@kit.ConnectivityKit';
 function isSupported(feature: number): boolean
 ```
 
-Checks whether a specified type of card emulation is supported.
-<p>This method is used to check Whether the host or secure element supports card emulation.
+Checks whether a specified type of card emulation is supported.<p>This method is used to check Whether the host or secure element supports card emulation.
 
 **Since:** 6
 
@@ -22,6 +21,8 @@ Checks whether a specified type of card emulation is supported.
 **Substitutes:** hasHceCapability
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-cardEmulation-function isSupported(feature: number): boolean--><!--Device-cardEmulation-function isSupported(feature: number): boolean-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 

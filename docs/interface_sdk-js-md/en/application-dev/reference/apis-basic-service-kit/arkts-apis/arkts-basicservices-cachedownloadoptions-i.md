@@ -1,9 +1,10 @@
 # CacheDownloadOptions
 
-Provides configuration options for download and cache, including HTTP options, transmission options, and task
-options.
+Provides configuration options for download and cache, including HTTP options, transmission options, and task options.
 
 **Since:** 18
+
+<!--Device-cacheDownload-interface CacheDownloadOptions--><!--Device-cacheDownload-interface CacheDownloadOptions-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -19,12 +20,13 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 caPath?: string
 ```
 
-CA certificate path. Currently, only the .pem certificate is supported. The CA certificate preset by the
-system is used by default.
+CA certificate path. Currently, only the .pem certificate is supported. The CA certificate preset by the system is used by default.
 
 **Type:** string
 
 **Since:** 21
+
+<!--Device-CacheDownloadOptions-caPath?: string--><!--Device-CacheDownloadOptions-caPath?: string-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -40,6 +42,8 @@ Cache update strategies, including **FORCE** or **LAZY**. The **FORCE** policy i
 
 **Since:** 23
 
+<!--Device-CacheDownloadOptions-cacheStrategy?: CacheStrategy--><!--Device-CacheDownloadOptions-cacheStrategy?: CacheStrategy-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## headers
@@ -53,6 +57,8 @@ Request header used by a download task during HTTP transfer. The default value i
 **Type:** Record<string, string>
 
 **Since:** 18
+
+<!--Device-CacheDownloadOptions-headers?: Record<string, string>--><!--Device-CacheDownloadOptions-headers?: Record<string, string>-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -70,6 +76,8 @@ Task retry configuration.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-CacheDownloadOptions-retry?: RetryOptions--><!--Device-CacheDownloadOptions-retry?: RetryOptions-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## sslType
@@ -78,12 +86,13 @@ Task retry configuration.
 sslType?: SslType
 ```
 
-Secure communication protocol, such as TSL or TLCP. TLS is used by default. Currently, TLS and TLCP do not
-support two-way authentication.
+Secure communication protocol, such as TSL or TLCP. TLS is used by default. Currently, TLS and TLCP do not support two-way authentication.
 
 **Type:** SslType
 
 **Since:** 21
+
+<!--Device-CacheDownloadOptions-sslType?: SslType--><!--Device-CacheDownloadOptions-sslType?: SslType-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -100,6 +109,8 @@ Task timeout configuration.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CacheDownloadOptions-timeout?: TimeoutOptions--><!--Device-CacheDownloadOptions-timeout?: TimeoutOptions-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 

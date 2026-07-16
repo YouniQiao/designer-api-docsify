@@ -16,14 +16,16 @@ Obtains the list of signal strength information of the registered network corres
 
 **Since:** 7
 
+<!--Device-radio-function getSignalInformation(slotId: int, callback: AsyncCallback<Array<SignalInformation>>): void--><!--Device-radio-function getSignalInformation(slotId: int, callback: AsyncCallback<Array<SignalInformation>>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slotindex number supported by the device. |
-| callback | AsyncCallback&lt;Array&lt;SignalInformation&gt;&gt; | Yes | Indicates the callback for gettingthe instance list of the child classes derived from {@link SignalInformation}. |
+| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<SignalInformation>> | Yes | Indicates the callback for getting the instance list of the child classes derived from {@link SignalInformation}. |
 
 **Error codes:**
 
@@ -62,19 +64,21 @@ Obtains the list of signal strength information of the registered network corres
 
 **Since:** 7
 
+<!--Device-radio-function getSignalInformation(slotId: int): Promise<Array<SignalInformation>>--><!--Device-radio-function getSignalInformation(slotId: int): Promise<Array<SignalInformation>>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slotindex number supported by the device. |
+| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;SignalInformation&gt;&gt; | Returns the callback for getting the instance list ofthe child classes derived from {@link SignalInformation}. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<SignalInformation>> | Returns the callback for getting the instance list of the child classes derived from {@link SignalInformation}. |
 
 **Error codes:**
 

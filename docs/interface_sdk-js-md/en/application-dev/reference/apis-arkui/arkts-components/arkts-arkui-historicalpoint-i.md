@@ -4,6 +4,8 @@ Provides historical touch point information.
 
 **Since:** 10
 
+<!--Device-unnamed-declare interface HistoricalPoint--><!--Device-unnamed-declare interface HistoricalPoint-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## force
@@ -26,6 +28,8 @@ Value range: [0, 65535), where higher values indicate stronger pressure.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HistoricalPoint-force: number--><!--Device-HistoricalPoint-force: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## size
@@ -34,8 +38,7 @@ Value range: [0, 65535), where higher values indicate stronger pressure.
 size: number
 ```
 
-Size of the contact area size between the finger and screen in the touch event corresponding to the historical
-point.
+Size of the contact area size between the finger and screen in the touch event corresponding to the historical point.
 
 Default value: **0**
 
@@ -47,6 +50,8 @@ Default value: **0**
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-HistoricalPoint-size: number--><!--Device-HistoricalPoint-size: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## timestamp
@@ -55,8 +60,7 @@ Default value: **0**
 timestamp: number
 ```
 
-Timestamp of the touch event corresponding to the historical point, representing the time interval from system boot
-when the event is triggered.
+Timestamp of the touch event corresponding to the historical point, representing the time interval from system boot when the event is triggered.
 
 Unit: ns
 
@@ -67,6 +71,8 @@ Unit: ns
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-HistoricalPoint-timestamp: number--><!--Device-HistoricalPoint-timestamp: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,6 +91,8 @@ Basic touch event information for the historical point.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-HistoricalPoint-touchObject: TouchObject--><!--Device-HistoricalPoint-touchObject: TouchObject-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

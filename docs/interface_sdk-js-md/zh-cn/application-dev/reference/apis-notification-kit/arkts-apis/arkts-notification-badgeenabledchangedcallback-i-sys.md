@@ -1,9 +1,10 @@
 # BadgeEnabledChangedCallback
 
-注册应用角标使能状态变化的回调函数类型。
-type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) => void
+注册应用角标使能状态变化的回调函数类型。type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) => void
 
 **起始版本：** 12
+
+<!--Device-unnamed-export interface BadgeEnabledChangedCallback--><!--Device-unnamed-export interface BadgeEnabledChangedCallback-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -17,6 +18,8 @@ type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) => vo
 
 **起始版本：** 12
 
+<!--Device-BadgeEnabledChangedCallback-(data: EnabledNotificationCallbackData): void--><!--Device-BadgeEnabledChangedCallback-(data: EnabledNotificationCallbackData): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -25,5 +28,5 @@ type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) => vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | EnabledNotificationCallbackData | 是 |  |
+| data | [EnabledNotificationCallbackData](arkts-notification-enablednotificationcallbackdata-i-sys.md) | 是 |  |
 

@@ -18,6 +18,8 @@ Checks whether flash alerts mode is enabled with a synchronous method.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-accessibility-function isFlashReminderEnabledSync(): boolean--><!--Device-accessibility-function isFlashReminderEnabledSync(): boolean-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Return value:**

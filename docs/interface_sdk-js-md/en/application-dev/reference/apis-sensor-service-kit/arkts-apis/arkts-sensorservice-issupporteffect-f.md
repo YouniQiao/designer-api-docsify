@@ -16,6 +16,8 @@ Checks whether an effect ID is supported. This API uses an asynchronous callback
 
 **Since:** 10
 
+<!--Device-vibrator-function isSupportEffect(effectId: string, callback: AsyncCallback<boolean>): void--><!--Device-vibrator-function isSupportEffect(effectId: string, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Parameters:**
@@ -23,7 +25,7 @@ Checks whether an effect ID is supported. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | effectId | string | Yes | Effect ID. The value is a string of a maximum of 64 characters. If the length exceeds64 characters, the first 64 characters are used. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that theeffect ID is supported, and the value **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means that the effect ID is supported, and the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -87,6 +89,8 @@ Checks whether an effect ID is supported. This API uses a promise to return the 
 
 **Since:** 10
 
+<!--Device-vibrator-function isSupportEffect(effectId: string): Promise<boolean>--><!--Device-vibrator-function isSupportEffect(effectId: string): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Parameters:**
@@ -99,7 +103,7 @@ Checks whether an effect ID is supported. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise that returns the result. The value **true** means that the effect ID issupported, and the value **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise that returns the result. The value **true** means that the effect ID is supported, and the value **false** means the opposite. |
 
 **Error codes:**
 

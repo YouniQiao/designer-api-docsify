@@ -20,6 +20,8 @@ Sets the notification switch state. This API uses a promise to return the result
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-notificationManager-function setNotificationSwitch(switchName: string, switchState: boolean, userId: int): Promise<void>--><!--Device-notificationManager-function setNotificationSwitch(switchName: string, switchState: boolean, userId: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Sets the notification switch state. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| switchName | string | Yes | Name of the notification switch. The value can be **DEAL** (aggregatedswitch for transaction notifications) or **LOGISTICS** (aggregated switch for logisticsnotifications). |
+| switchName | string | Yes | Name of the notification switch. The value can be **DEAL** (aggregated switch for transaction notifications) or **LOGISTICS** (aggregated switch for logistics notifications). |
 | switchState | boolean | Yes | Whether to enable the notification switch.<br> - **true**: enable.<br> - **false**: disable. |
 | userId | number | Yes | User ID. |
 
@@ -36,7 +38,7 @@ Sets the notification switch state. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

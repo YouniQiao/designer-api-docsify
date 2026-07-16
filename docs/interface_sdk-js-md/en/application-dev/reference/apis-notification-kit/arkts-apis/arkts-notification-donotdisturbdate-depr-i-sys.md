@@ -1,7 +1,7 @@
 # DoNotDisturbDate (System API)
 
-> **NOTE**<br>
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> **NOTE**<br>  
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
 > [notificationManager.DoNotDisturbDate](arkts-notification-donotdisturbdate-i-sys.md) instead.
 
 **Since:** 8
@@ -9,6 +9,8 @@
 **Deprecated since:** 9
 
 **Substitutes:** DoNotDisturbDate
+
+<!--Device-notification-export interface DoNotDisturbDate--><!--Device-notification-export interface DoNotDisturbDate-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -30,6 +32,8 @@ DND start time.
 
 **Substitutes:** begin
 
+<!--Device-DoNotDisturbDate-begin: Date--><!--Device-DoNotDisturbDate-begin: Date-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -50,6 +54,8 @@ DND end time.
 
 **Substitutes:** end
 
+<!--Device-DoNotDisturbDate-end: Date--><!--Device-DoNotDisturbDate-end: Date-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -69,6 +75,8 @@ DND time type.
 **Deprecated since:** 9
 
 **Substitutes:** type
+
+<!--Device-DoNotDisturbDate-type: DoNotDisturbType--><!--Device-DoNotDisturbDate-type: DoNotDisturbType-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

@@ -4,6 +4,8 @@ systemScreenLock
 
 **Since:** 7
 
+<!--Device-unnamed-declare namespace screenLock--><!--Device-unnamed-declare namespace screenLock-End-->
+
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 ## Modules to Import

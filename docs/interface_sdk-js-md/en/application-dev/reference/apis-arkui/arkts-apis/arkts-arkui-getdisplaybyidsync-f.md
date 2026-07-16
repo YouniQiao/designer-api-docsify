@@ -18,19 +18,21 @@ Obtains a Display object based on the display ID.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-display-function getDisplayByIdSync(displayId: long): Display--><!--Device-display-function getDisplayByIdSync(displayId: long): Display-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | number | Yes | Display ID. The value must be an integer greater than or equal to 0. An object can beobtained only when the passed-in display ID is correct. You can use the value of the **displayId** property in[WindowProperties](arkts-arkui-windowproperties-i.md) as the input parameter. |
+| displayId | number | Yes | Display ID. The value must be an integer greater than or equal to 0. An object can be obtained only when the passed-in display ID is correct. You can use the value of the **displayId** property in [WindowProperties](arkts-arkui-windowproperties-i.md) as the input parameter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Display | Display object. |
+| [Display](arkts-arkui-display-i.md) | Display object. |
 
 **Error codes:**
 

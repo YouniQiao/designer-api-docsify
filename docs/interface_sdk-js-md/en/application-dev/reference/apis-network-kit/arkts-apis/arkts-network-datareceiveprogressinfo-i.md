@@ -4,6 +4,8 @@ This interface is used to obtain the progress information of file upload or down
 
 **Since:** 15
 
+<!--Device-http-export interface DataReceiveProgressInfo--><!--Device-http-export interface DataReceiveProgressInfo-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Number of data bytes received.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-DataReceiveProgressInfo-receiveSize: int--><!--Device-DataReceiveProgressInfo-receiveSize: int-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## totalSize
@@ -41,6 +45,8 @@ Total number of bytes to receive.
 **Since:** 15
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-DataReceiveProgressInfo-totalSize: int--><!--Device-DataReceiveProgressInfo-totalSize: int-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

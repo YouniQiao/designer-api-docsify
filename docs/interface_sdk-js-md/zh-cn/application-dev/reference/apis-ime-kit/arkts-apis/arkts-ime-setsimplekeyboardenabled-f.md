@@ -1,5 +1,11 @@
 # setSimpleKeyboardEnabled
 
+## 导入模块
+
+```TypeScript
+import { inputMethod } from '@kit.IMEKit';
+```
+
 ## setSimpleKeyboardEnabled
 
 ```TypeScript
@@ -9,6 +15,8 @@ function setSimpleKeyboardEnabled(enable: boolean): void
 编辑框应用设置简单键盘标志。
 
 **起始版本：** 20
+
+<!--Device-inputMethod-function setSimpleKeyboardEnabled(enable: boolean): void--><!--Device-inputMethod-function setSimpleKeyboardEnabled(enable: boolean): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

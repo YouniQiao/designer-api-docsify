@@ -18,6 +18,8 @@ Close the resource with a specific resource ID.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-huksExternalCrypto-function closeResource(resourceId: string, params?: HuksExternalCryptoParam[]): Promise<void>--><!--Device-huksExternalCrypto-function closeResource(resourceId: string, params?: HuksExternalCryptoParam[]): Promise<void>-End-->
+
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 **Parameters:**
@@ -25,13 +27,13 @@ Close the resource with a specific resource ID.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resourceId | string | Yes | Indicates the resource ID of the provider. |
-| params | HuksExternalCryptoParam[] | No | Indicates the input operation parameters. |
+| params | [HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcryptoparam-i.md)[] | No | Indicates the input operation parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

@@ -4,9 +4,17 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-abilityAccessCtrl-interface PermissionDialogDetail--><!--Device-abilityAccessCtrl-interface PermissionDialogDetail-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
+```
 
 ## authResult
 
@@ -21,6 +29,8 @@ authResult: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PermissionDialogDetail-authResult: string--><!--Device-PermissionDialogDetail-authResult: string-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -40,6 +50,8 @@ needPermissionDialog: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PermissionDialogDetail-needPermissionDialog: boolean--><!--Device-PermissionDialogDetail-needPermissionDialog: boolean-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -58,6 +70,8 @@ permissionNameList: Array<Permissions>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PermissionDialogDetail-permissionNameList: Array<Permissions>--><!--Device-PermissionDialogDetail-permissionNameList: Array<Permissions>-End-->
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -75,6 +89,8 @@ statusList: Array<PermissionDecisionStatus>
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PermissionDialogDetail-statusList: Array<PermissionDecisionStatus>--><!--Device-PermissionDialogDetail-statusList: Array<PermissionDecisionStatus>-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
 

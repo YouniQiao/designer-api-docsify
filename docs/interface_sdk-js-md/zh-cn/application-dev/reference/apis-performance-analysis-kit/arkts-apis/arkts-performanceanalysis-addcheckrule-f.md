@@ -1,5 +1,11 @@
 # addCheckRule
 
+## 导入模块
+
+```TypeScript
+import { hichecker } from '@kit.PerformanceAnalysisKit';
+```
+
 ## addCheckRule
 
 ```TypeScript
@@ -9,6 +15,8 @@ function addCheckRule(rule: bigint) : void
 ����һ�����������ϵͳ��ϵͳ�������ӵĹ�����м�������������Ӧ���򴥷�ʱ����hilog��grep HiChecker�鿴������Ϣ��
 
 **起始版本：** 9
+
+<!--Device-hichecker-function addCheckRule(rule: bigint) : void--><!--Device-hichecker-function addCheckRule(rule: bigint) : void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 

@@ -12,10 +12,7 @@ import { applicationManager } from '@kit.MDMKit';
 function addAutoStartApps(admin: Want, autoStartApps: Array<Want>): void
 ```
 
-Adds the auto-start applications for the current user. Applications added to the auto-start list via this API
-cannot be manually disabled for auto-start by users on the device<!--RP4--><!--RP4End-->. However, they can be
-removed from the auto-start list using the
-[removeAutoStartApps](arkts-mdm-removeautostartapps-f.md#removeautostartapps-1) API.
+Adds the auto-start applications for the current user. Applications added to the auto-start list via this API cannot be manually disabled for auto-start by users on the device<!--RP4--><!--RP4End-->. However, they can be removed from the auto-start list using the [removeAutoStartApps](arkts-mdm-removeautostartapps-f.md#removeautostartapps-1) API.
 
 **Since:** 12
 
@@ -23,14 +20,16 @@ removed from the auto-start list using the
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function addAutoStartApps(admin: Want, autoStartApps: Array<Want>): void--><!--Device-applicationManager-function addAutoStartApps(admin: Want, autoStartApps: Array<Want>): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| autoStartApps | Array&lt;Want&gt; | Yes | Array of auto-start applications. The maximum array length is 10. Forexample, if there are already 5 applications in the list, a maximum of 5 more can be added via this API.**Want** must contain **bundleName** and **abilityName**. The ability can be UIAbility orServiceExtensionAbility. If the value of **exported** in the[abilities](../../../../quick-start/module-configuration-file.md#abilities) tag is **false**, the ability cannotbe started. Since API version 24, you can specify whether to hide the UI when applications automatically startupon device startup by setting **isHiddenStart** in the **parameters** attribute of Want. The value **true**indicates that yes, and the value **false** indicates no. The default value is **false**. If the **true** valueis used, the applications must be &lt;!--RP8--&gt;integrated with the status bar&lt;!--RP8End--&gt;. Otherwise, the auto-start setting fails. (If only one application is set to hide the UI upon auto-start but the application is notintegrated with the status bar, error 401 is reported. This API returns success as long as one application issuccessfully set.) After the setting is successful, the applications do not display the UI but their UIprocesses exist. The capability of hiding the UI is available only on PCs/2-in-1 devices and tablets in PCmode. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| autoStartApps | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Want> | Yes | Array of auto-start applications. The maximum array length is 10. For example, if there are already 5 applications in the list, a maximum of 5 more can be added via this API.**Want** must contain **bundleName** and **abilityName**. The ability can be UIAbility or ServiceExtensionAbility. If the value of **exported** in the [abilities](../../../../quick-start/module-configuration-file.md#abilities) tag is **false**, the ability cannot be started. Since API version 24, you can specify whether to hide the UI when applications automatically start upon device startup by setting **isHiddenStart** in the **parameters** attribute of Want. The value **true** indicates that yes, and the value **false** indicates no. The default value is **false**. If the **true** value is used, the applications must be &lt;!--RP8--&gt;integrated with the status bar&lt;!--RP8End--&gt;. Otherwise, the auto-start setting fails. (If only one application is set to hide the UI upon auto-start but the application is not integrated with the status bar, error 401 is reported. This API returns success as long as one application is successfully set.) After the setting is successful, the applications do not display the UI but their UI processes exist. The capability of hiding the UI is available only on PCs/2-in-1 devices and tablets in PC mode. |
 
 **Error codes:**
 
@@ -81,14 +80,9 @@ try {
 function addAutoStartApps(admin: Want, autoStartApps: Array<Want>, accountId: number, disallowModify: boolean): void
 ```
 
-Adds a list of applications that automatically start upon device startup for a specified user, and sets whether to
-prohibit the user from manually canceling application auto-start<!--RP4--><!--RP4End-->.
+Adds a list of applications that automatically start upon device startup for a specified user, and sets whether to prohibit the user from manually canceling application auto-start<!--RP4--><!--RP4End-->.
 
-Applications can be added to the auto-start list via this API and the
-[addAutoStartApps](arkts-mdm-addautostartapps-f.md#addautostartapps-1) API.
-Settings from both APIs can take effect simultaneously. For a single user, the auto-start list supports a maximum
-of 10 applications. For example, if there are already 3 applications in the current list, a maximum of 7 more can
-be added for the user via this API.
+Applications can be added to the auto-start list via this API and the [addAutoStartApps](arkts-mdm-addautostartapps-f.md#addautostartapps-1) API.Settings from both APIs can take effect simultaneously. For a single user, the auto-start list supports a maximum of 10 applications. For example, if there are already 3 applications in the current list, a maximum of 7 more can be added for the user via this API.
 
 **Since:** 20
 
@@ -96,15 +90,17 @@ be added for the user via this API.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function addAutoStartApps(admin: Want, autoStartApps: Array<Want>, accountId: number, disallowModify: boolean): void--><!--Device-applicationManager-function addAutoStartApps(admin: Want, autoStartApps: Array<Want>, accountId: number, disallowModify: boolean): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| autoStartApps | Array&lt;Want&gt; | Yes | Array of auto-start applications. The array can contain a maximum of 10applications. **Want** must contain **bundleName** and **abilityName**. The ability can be UIAbility orServiceExtensionAbility. If the value of **exported** in the[abilities](../../../../quick-start/module-configuration-file.md#abilities) tag is **false**, the ability cannotbe started. Since API version 24, you can specify whether to hide the UI when applications automatically startupon device startup by setting **isHiddenStart** in the **parameters** attribute of Want. The value **true**indicates that yes, and the value **false** indicates no. The default value is **false**. If the **true** valueis used, the applications must be &lt;!--RP8--&gt;integrated with the status bar&lt;!--RP8End--&gt;. Otherwise, the auto-start setting fails. (If only one application is set to hide the UI upon auto-start but the application is notintegrated with the status bar, error 401 is reported. This API returns success as long as one application issuccessfully set.) After the setting is successful, the applications do not display the UI but their UIprocesses exist. The capability of hiding the UI is available only on PCs/2-in-1 devices and tablets in PCmode. |
-| accountId | number | Yes | Account ID, which must be greater than or equal to 0.<br> You can call[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2) of @ohos.account.osAccount to obtain the ID. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| autoStartApps | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Want> | Yes | Array of auto-start applications. The array can contain a maximum of 10applications. **Want** must contain **bundleName** and **abilityName**. The ability can be UIAbility or ServiceExtensionAbility. If the value of **exported** in the [abilities](../../../../quick-start/module-configuration-file.md#abilities) tag is **false**, the ability cannot be started. Since API version 24, you can specify whether to hide the UI when applications automatically start upon device startup by setting **isHiddenStart** in the **parameters** attribute of Want. The value **true** indicates that yes, and the value **false** indicates no. The default value is **false**. If the **true** value is used, the applications must be &lt;!--RP8--&gt;integrated with the status bar&lt;!--RP8End--&gt;. Otherwise, the auto-start setting fails. (If only one application is set to hide the UI upon auto-start but the application is not integrated with the status bar, error 401 is reported. This API returns success as long as one application is successfully set.) After the setting is successful, the applications do not display the UI but their UI processes exist. The capability of hiding the UI is available only on PCs/2-in-1 devices and tablets in PC mode. |
+| accountId | number | Yes | Account ID, which must be greater than or equal to 0.<br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-2) of @ohos.account.osAccount to obtain the ID. |
 | disallowModify | boolean | Yes | Whether to prohibit the user from manually disabling application auto-start.The value **true** indicates yes and the value **false** indicates no.&lt;!--RP1--&gt;&lt;!--RP1End--&gt; |
 
 **Error codes:**

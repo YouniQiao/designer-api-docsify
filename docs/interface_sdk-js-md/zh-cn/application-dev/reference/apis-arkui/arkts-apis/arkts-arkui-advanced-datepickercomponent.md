@@ -1,12 +1,18 @@
 # @ohos.arkui.advanced.DatePickerComponent
 
+## 导入模块
+
+```TypeScript
+import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerComponentOptions, DatePickerComponentResult } from '@kit.ArkUI';
+```
+
 ## 汇总
 
 ### 类
 
 | 名称 | 说明 |
 | --- | --- |
-| [CommonOptions](arkts-arkui-commonoptions-c.md) | CommonOptions定义日期时间选择器的通用选项。@link DateOptions}中设置start、end、selected时仅日期部分（年月日）设置生效，&gt; 在[TimeOptions](arkts-arkui-timeoptions-c.md)中设置start、end、selected时仅时间部分（时分秒）设置生效。 |
+| [CommonOptions](arkts-arkui-commonoptions-c.md) | CommonOptions定义日期时间选择器的通用选项。 |
 | [DateOptions](arkts-arkui-dateoptions-c.md) | DateOptions定义日期选择器的选项。继承于[CommonOptions](arkts-arkui-commonoptions-c.md)。 |
 | [DatePickerComponentOptions](arkts-arkui-datepickercomponentoptions-c.md) | DatePickerComponentOptions定义日期时间选择器组件的选项。 |
 | [DatePickerComponentResult](arkts-arkui-datepickercomponentresult-c.md) | DatePickerComponentResult定义日期时间选择器的选择结果。 |

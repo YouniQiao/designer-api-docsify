@@ -1,10 +1,10 @@
 # InputMethodController
 
-A control class that encapsulates APIs for input method management, which can only be invoked after an
-**InputMethodController** instance is obtained via
-[getController](arkts-ime-getcontroller-f.md#getcontroller-1).
+A control class that encapsulates APIs for input method management, which can only be invoked after an **InputMethodController** instance is obtained via [getController](arkts-ime-getcontroller-f.md#getcontroller-1).
 
 **Since:** 6
+
+<!--Device-inputMethod-interface InputMethodController--><!--Device-inputMethod-interface InputMethodController-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -24,6 +24,8 @@ Attach application to the input method service.
 
 **Since:** 10
 
+<!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig, callback: AsyncCallback<void>): void--><!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -31,8 +33,8 @@ Attach application to the input method service.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | showKeyboard | boolean | Yes | show the keyboard or not when attach the input method. |
-| textConfig | TextConfig | Yes | indicates the config of the textInput. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of attach. |
+| textConfig | [TextConfig](arkts-ime-textconfig-i.md) | Yes | indicates the config of the textInput. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of attach. |
 
 **Error codes:**
 
@@ -72,6 +74,8 @@ Attach application to the input method service.
 
 **Since:** 10
 
+<!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>--><!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -79,13 +83,13 @@ Attach application to the input method service.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | showKeyboard | boolean | Yes | show the keyboard or not when attach the input method. |
-| textConfig | TextConfig | Yes | indicates the config of the textInput. |
+| textConfig | [TextConfig](arkts-ime-textconfig-i.md) | Yes | indicates the config of the textInput. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -123,6 +127,8 @@ Attach application to the input method service.
 
 **Since:** 15
 
+<!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: RequestKeyboardReason): Promise<void>--><!--Device-InputMethodController-attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: RequestKeyboardReason): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -130,14 +136,14 @@ Attach application to the input method service.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | showKeyboard | boolean | Yes | show the keyboard or not when attach the input method. |
-| textConfig | TextConfig | Yes | indicates the config of the textInput. |
-| requestKeyboardReason | RequestKeyboardReason | Yes | requestKeyboardReason of show the keyboard . |
+| textConfig | [TextConfig](arkts-ime-textconfig-i.md) | Yes | indicates the config of the textInput. |
+| requestKeyboardReason | [RequestKeyboardReason](arkts-ime-requestkeyboardreason-e.md) | Yes | requestKeyboardReason of show the keyboard . |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -179,21 +185,23 @@ Attach application to the input method service with UI context.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-InputMethodController-attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?: AttachOptions): Promise<void>--><!--Device-InputMethodController-attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?: AttachOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | UIContext | Yes | indicates the ui context where the attachment will be performed. |
-| textConfig | TextConfig | Yes | indicates the config of the textInput. |
-| attachOptions | AttachOptions | No | indicates the attach options. |
+| uiContext | [UIContext](../../apis-arkui/arkts-components/arkts-arkui-uicontext-t.md) | Yes | indicates the ui context where the attachment will be performed. |
+| textConfig | [TextConfig](arkts-ime-textconfig-i.md) | Yes | indicates the config of the textInput. |
+| attachOptions | [AttachOptions](arkts-ime-attachoptions-i.md) | No | indicates the attach options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -233,6 +241,8 @@ Notify the input method the selected text and the selection range of the current
 
 **Since:** 10
 
+<!--Device-InputMethodController-changeSelection(text: string, start: int, end: int, callback: AsyncCallback<void>): void--><!--Device-InputMethodController-changeSelection(text: string, start: int, end: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -242,7 +252,7 @@ Notify the input method the selected text and the selection range of the current
 | text | string | Yes | the whole input text. |
 | start | number | Yes | start position of selected text. |
 | end | number | Yes | end position of selected text. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of changeSelection. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of changeSelection. |
 
 **Error codes:**
 
@@ -278,6 +288,8 @@ Notify the input method the selected text and the selection range of the current
 
 **Since:** 10
 
+<!--Device-InputMethodController-changeSelection(text: string, start: int, end: int): Promise<void>--><!--Device-InputMethodController-changeSelection(text: string, start: int, end: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -292,7 +304,7 @@ Notify the input method the selected text and the selection range of the current
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -326,13 +338,15 @@ Detach the applications from the input method manager service.
 
 **Since:** 10
 
+<!--Device-InputMethodController-detach(callback: AsyncCallback<void>): void--><!--Device-InputMethodController-detach(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of detach. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of detach. |
 
 **Error codes:**
 
@@ -366,13 +380,15 @@ Detach the applications from the input method manager service.
 
 **Since:** 10
 
+<!--Device-InputMethodController-detach(): Promise<void>--><!--Device-InputMethodController-detach(): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -404,13 +420,15 @@ Discard the typing text
 
 **Since:** 20
 
+<!--Device-InputMethodController-discardTypingText(): Promise<void>--><!--Device-InputMethodController-discardTypingText(): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -439,12 +457,13 @@ inputMethod.getController().discardTypingText().then(() => {
 hideSoftKeyboard(callback: AsyncCallback<void>): void
 ```
 
-Hide soft keyboard.
-This API can be called only by system applications.
+Hide soft keyboard.This API can be called only by system applications.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.CONNECT_IME_ABILITY
+
+<!--Device-InputMethodController-hideSoftKeyboard(callback: AsyncCallback<void>): void--><!--Device-InputMethodController-hideSoftKeyboard(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -452,7 +471,7 @@ This API can be called only by system applications.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of hideSoftKeyboard. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of hideSoftKeyboard. |
 
 **Error codes:**
 
@@ -483,12 +502,13 @@ inputMethod.getController().hideSoftKeyboard((err: BusinessError) => {
 hideSoftKeyboard(): Promise<void>
 ```
 
-Hide soft keyboard.
-This API can be called only by system applications.
+Hide soft keyboard.This API can be called only by system applications.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.CONNECT_IME_ABILITY
+
+<!--Device-InputMethodController-hideSoftKeyboard(): Promise<void>--><!--Device-InputMethodController-hideSoftKeyboard(): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -496,7 +516,7 @@ This API can be called only by system applications.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -529,13 +549,15 @@ Hide the text input and stop typing.
 
 **Since:** 10
 
+<!--Device-InputMethodController-hideTextInput(callback: AsyncCallback<void>): void--><!--Device-InputMethodController-hideTextInput(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of hideTextInput. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of hideTextInput. |
 
 **Error codes:**
 
@@ -570,13 +592,15 @@ Hide the text input and stop typing.
 
 **Since:** 10
 
+<!--Device-InputMethodController-hideTextInput(): Promise<void>--><!--Device-InputMethodController-hideTextInput(): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -609,6 +633,8 @@ Unregister the callback of selectedByRange.
 
 **Since:** 10
 
+<!--Device-InputMethodController-off(type: 'selectByRange', callback?: Callback<Range>): void--><!--Device-InputMethodController-off(type: 'selectByRange', callback?: Callback<Range>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -616,7 +642,7 @@ Unregister the callback of selectedByRange.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selectByRange' | Yes | event type, fixed as 'selectByRange'. |
-| callback | Callback&lt;Range&gt; | No | the callback of 'selectByRange',when subscriber unsubscribes all callback functions of event 'selectByRange', this parameter can be leftblank. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Range> | No | the callback of 'selectByRange',when subscriber unsubscribes all callback functions of event 'selectByRange', this parameter can be left blank. |
 
 **Example**
 
@@ -643,6 +669,8 @@ Unregister the callback of selectedByMovement.
 
 **Since:** 10
 
+<!--Device-InputMethodController-off(type: 'selectByMovement', callback?: Callback<Movement>): void--><!--Device-InputMethodController-off(type: 'selectByMovement', callback?: Callback<Movement>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -650,7 +678,7 @@ Unregister the callback of selectedByMovement.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selectByMovement' | Yes | event type, fixed as 'selectByMovement'. |
-| callback | Callback&lt;Movement&gt; | No | the callback of 'selectByMovement',when subscriber unsubscribes all callback functions of event 'selectByMovement', this parameter can be leftblank. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Movement> | No | the callback of 'selectByMovement',when subscriber unsubscribes all callback functions of event 'selectByMovement', this parameter can be left blank. |
 
 **Example**
 
@@ -677,6 +705,8 @@ Unregister the callback of insertText.
 
 **Since:** 10
 
+<!--Device-InputMethodController-off(type: 'insertText', callback?: (text: string) => void): void--><!--Device-InputMethodController-off(type: 'insertText', callback?: (text: string) => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -684,7 +714,7 @@ Unregister the callback of insertText.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'insertText' | Yes | event type, fixed as 'insertText'. |
-| callback | (text: string) =&gt; void | No | the callback of 'insertText',when subscriber unsubscribes all callback functions of event 'insertText', this parameter can be left blank. |
+| callback | (text: string) => void | No | the callback of 'insertText',when subscriber unsubscribes all callback functions of event 'insertText', this parameter can be left blank. |
 
 **Example**
 
@@ -711,6 +741,8 @@ Unregister the callback of deleteLeft.
 
 **Since:** 10
 
+<!--Device-InputMethodController-off(type: 'deleteLeft', callback?: (length: number) => void): void--><!--Device-InputMethodController-off(type: 'deleteLeft', callback?: (length: number) => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -718,7 +750,7 @@ Unregister the callback of deleteLeft.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deleteLeft' | Yes | event type, fixed as 'deleteLeft'. |
-| callback | (length: number) =&gt; void | No | the callback of 'deleteLeft',when subscriber unsubscribes all callback functions of event 'deleteLeft', this parameter can be left blank. |
+| callback | (length: number) => void | No | the callback of 'deleteLeft',when subscriber unsubscribes all callback functions of event 'deleteLeft', this parameter can be left blank. |
 
 **Example**
 
@@ -745,6 +777,8 @@ Unregister the callback of deleteRight.
 
 **Since:** 10
 
+<!--Device-InputMethodController-off(type: 'deleteRight', callback?: (length: number) => void): void--><!--Device-InputMethodController-off(type: 'deleteRight', callback?: (length: number) => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -752,7 +786,7 @@ Unregister the callback of deleteRight.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deleteRight' | Yes | event type, fixed as 'deleteRight'. |
-| callback | (length: number) =&gt; void | No | the callback of 'deleteRight',when subscriber unsubscribes all callback functions of event 'deleteRight', this parameter can be left blank. |
+| callback | (length: number) => void | No | the callback of 'deleteRight',when subscriber unsubscribes all callback functions of event 'deleteRight', this parameter can be left blank. |
 
 **Example**
 
@@ -778,6 +812,8 @@ Unregister the callback of sendKeyboardStatus.
 
 **Since:** 10
 
+<!--Device-InputMethodController-off(type: 'sendKeyboardStatus', callback?: (keyboardStatus: KeyboardStatus) => void): void--><!--Device-InputMethodController-off(type: 'sendKeyboardStatus', callback?: (keyboardStatus: KeyboardStatus) => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -785,7 +821,7 @@ Unregister the callback of sendKeyboardStatus.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sendKeyboardStatus' | Yes | event type, fixed as 'sendKeyboardStatus'. |
-| callback | (keyboardStatus: KeyboardStatus) =&gt; void | No | the callback of 'sendKeyboardStatus',when subscriber unsubscribes all callback functions of event 'sendKeyboardStatus', this parameter can be leftblank. |
+| callback | (keyboardStatus: KeyboardStatus) => void | No | the callback of 'sendKeyboardStatus',when subscriber unsubscribes all callback functions of event 'sendKeyboardStatus', this parameter can be left blank. |
 
 **Example**
 
@@ -812,6 +848,8 @@ Unregister the callback of sendFunctionKey.
 
 **Since:** 10
 
+<!--Device-InputMethodController-off(type: 'sendFunctionKey', callback?: (functionKey: FunctionKey) => void): void--><!--Device-InputMethodController-off(type: 'sendFunctionKey', callback?: (functionKey: FunctionKey) => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -819,7 +857,7 @@ Unregister the callback of sendFunctionKey.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sendFunctionKey' | Yes | event type, fixed as 'sendFunctionKey'. |
-| callback | (functionKey: FunctionKey) =&gt; void | No | the callback of 'sendFunctionKey',when subscriber unsubscribes all callback functions of event 'sendFunctionKey', this parameter can be leftblank. |
+| callback | (functionKey: FunctionKey) => void | No | the callback of 'sendFunctionKey',when subscriber unsubscribes all callback functions of event 'sendFunctionKey', this parameter can be left blank. |
 
 **Example**
 
@@ -846,6 +884,8 @@ Unregister the callback of moveCursor.
 
 **Since:** 10
 
+<!--Device-InputMethodController-off(type: 'moveCursor', callback?: (direction: Direction) => void): void--><!--Device-InputMethodController-off(type: 'moveCursor', callback?: (direction: Direction) => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -853,7 +893,7 @@ Unregister the callback of moveCursor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'moveCursor' | Yes | event type, fixed as 'moveCursor'. |
-| callback | (direction: Direction) =&gt; void | No | the callback of 'moveCursor',when subscriber unsubscribes all callback functions of event 'moveCursor', this parameter can be left blank. |
+| callback | (direction: Direction) => void | No | the callback of 'moveCursor',when subscriber unsubscribes all callback functions of event 'moveCursor', this parameter can be left blank. |
 
 **Example**
 
@@ -880,6 +920,8 @@ Unregister the callback of handleExtendAction.
 
 **Since:** 10
 
+<!--Device-InputMethodController-off(type: 'handleExtendAction', callback?: (action: ExtendAction) => void): void--><!--Device-InputMethodController-off(type: 'handleExtendAction', callback?: (action: ExtendAction) => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -887,7 +929,7 @@ Unregister the callback of handleExtendAction.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'handleExtendAction' | Yes | event type, fixed as 'handleExtendAction'. |
-| callback | (action: ExtendAction) =&gt; void | No | the callback of 'handleExtendAction',when subscriber unsubscribes all callback functions of event 'handleExtendAction', this parameter can be leftblank. |
+| callback | (action: ExtendAction) => void | No | the callback of 'handleExtendAction',when subscriber unsubscribes all callback functions of event 'handleExtendAction', this parameter can be left blank. |
 
 **Example**
 
@@ -914,6 +956,8 @@ Unregister the callback of getLeftTextOfCursor event.
 
 **Since:** 10
 
+<!--Device-InputMethodController-off(type: 'getLeftTextOfCursor', callback?: (length: number) => string): void--><!--Device-InputMethodController-off(type: 'getLeftTextOfCursor', callback?: (length: number) => string): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -921,7 +965,7 @@ Unregister the callback of getLeftTextOfCursor event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'getLeftTextOfCursor' | Yes | event type, fixed as 'getLeftTextOfCursor'. |
-| callback | (length: number) =&gt; string | No | the callback of 'getLeftTextOfCursor',when subscriber unsubscribes all callback functions of event 'getLeftTextOfCursor', this parameter can beleft blank. |
+| callback | (length: number) => string | No | the callback of 'getLeftTextOfCursor',when subscriber unsubscribes all callback functions of event 'getLeftTextOfCursor', this parameter can be left blank. |
 
 **Example**
 
@@ -948,6 +992,8 @@ Unregister the callback of getRightTextOfCursor event.
 
 **Since:** 10
 
+<!--Device-InputMethodController-off(type: 'getRightTextOfCursor', callback?: (length: number) => string): void--><!--Device-InputMethodController-off(type: 'getRightTextOfCursor', callback?: (length: number) => string): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -955,7 +1001,7 @@ Unregister the callback of getRightTextOfCursor event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'getRightTextOfCursor' | Yes | event type, fixed as 'getRightTextOfCursor'. |
-| callback | (length: number) =&gt; string | No | the callback of 'getRightTextOfCursor',when subscriber unsubscribes all callback functions of event 'getRightTextOfCursor', this parameter can beleft blank. |
+| callback | (length: number) => string | No | the callback of 'getRightTextOfCursor',when subscriber unsubscribes all callback functions of event 'getRightTextOfCursor', this parameter can be left blank. |
 
 **Example**
 
@@ -982,6 +1028,8 @@ Unregister the callback of getTextIndexAtCursor.
 
 **Since:** 10
 
+<!--Device-InputMethodController-off(type: 'getTextIndexAtCursor', callback?: () => number): void--><!--Device-InputMethodController-off(type: 'getTextIndexAtCursor', callback?: () => number): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -989,7 +1037,7 @@ Unregister the callback of getTextIndexAtCursor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'getTextIndexAtCursor' | Yes | event type, fixed as 'getTextIndexAtCursor'. |
-| callback | () =&gt; number | No | the callback of 'getTextIndexAtCursor',when subscriber unsubscribes all callback functions of event 'getTextIndexAtCursor', this parameter can beleft blank. |
+| callback | () => number | No | the callback of 'getTextIndexAtCursor',when subscriber unsubscribes all callback functions of event 'getTextIndexAtCursor', this parameter can be left blank. |
 
 **Example**
 
@@ -1016,6 +1064,8 @@ Unsubscribe 'setPreviewText' event.
 
 **Since:** 17
 
+<!--Device-InputMethodController-off(type: 'setPreviewText', callback?: SetPreviewTextCallback): void--><!--Device-InputMethodController-off(type: 'setPreviewText', callback?: SetPreviewTextCallback): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -1023,7 +1073,7 @@ Unsubscribe 'setPreviewText' event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setPreviewText' | Yes | the type of unsubscribe event. |
-| callback | SetPreviewTextCallback | No | optional, the callback of off('setPreviewText'). |
+| callback | [SetPreviewTextCallback](arkts-ime-setpreviewtextcallback-t.md) | No | optional, the callback of off('setPreviewText'). |
 
 **Example**
 
@@ -1060,6 +1110,8 @@ Unsubscribe 'finishTextPreview' event.
 
 **Since:** 17
 
+<!--Device-InputMethodController-off(type: 'finishTextPreview', callback?: Callback<void>): void--><!--Device-InputMethodController-off(type: 'finishTextPreview', callback?: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -1067,7 +1119,7 @@ Unsubscribe 'finishTextPreview' event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'finishTextPreview' | Yes | the type of unsubscribe event. |
-| callback | Callback&lt;void&gt; | No | optional, the callback of off('finishTextPreview'). |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | optional, the callback of off('finishTextPreview'). |
 
 **Example**
 
@@ -1101,10 +1153,11 @@ console.info(`All callbacks unsubscribed from finishTextPreview`);
 on(type: 'selectByRange', callback: Callback<Range>): void
 ```
 
-Register a callback and when IME sends select event with range of selection,
-the callback will be invoked.
+Register a callback and when IME sends select event with range of selection,the callback will be invoked.
 
 **Since:** 10
+
+<!--Device-InputMethodController-on(type: 'selectByRange', callback: Callback<Range>): void--><!--Device-InputMethodController-on(type: 'selectByRange', callback: Callback<Range>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1113,7 +1166,7 @@ the callback will be invoked.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selectByRange' | Yes | event type, fixed as 'selectByRange'. |
-| callback | Callback&lt;Range&gt; | Yes | processes selectByRange command. The range of selection is provided forthis callback, and subscribers are expected to select corresponding text in callback according tothe range. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Range> | Yes | processes selectByRange command. The range of selection is provided for this callback, and subscribers are expected to select corresponding text in callback according to the range. |
 
 **Error codes:**
 
@@ -1136,10 +1189,11 @@ inputMethod.getController().on('selectByRange', (range: inputMethod.Range) => {
 on(type: 'selectByMovement', callback: Callback<Movement>): void
 ```
 
-Register a callback and when IME sends select event witch movement of cursor,
-the callback will be invoked.
+Register a callback and when IME sends select event witch movement of cursor,the callback will be invoked.
 
 **Since:** 10
+
+<!--Device-InputMethodController-on(type: 'selectByMovement', callback: Callback<Movement>): void--><!--Device-InputMethodController-on(type: 'selectByMovement', callback: Callback<Movement>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1148,7 +1202,7 @@ the callback will be invoked.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selectByMovement' | Yes | event type, fixed as 'selectByMovement'. |
-| callback | Callback&lt;Movement&gt; | Yes | processes selectByMovement command. The movement of cursor is providedfor this callback, and subscribers are expected to select corresponding text in callback according tothe movement. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Movement> | Yes | processes selectByMovement command. The movement of cursor is provided for this callback, and subscribers are expected to select corresponding text in callback according to the movement. |
 
 **Error codes:**
 
@@ -1175,6 +1229,8 @@ Register a callback and when IME sends insert text event, the callback will be i
 
 **Since:** 10
 
+<!--Device-InputMethodController-on(type: 'insertText', callback: (text: string) => void): void--><!--Device-InputMethodController-on(type: 'insertText', callback: (text: string) => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -1182,7 +1238,7 @@ Register a callback and when IME sends insert text event, the callback will be i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'insertText' | Yes | event type, fixed as 'insertText'. |
-| callback | (text: string) =&gt; void | Yes | processes insertText command. The text of insert is provided for this callback.Subscribers are expected to process the inserted text and update changes in editor by changeSelection andupdateCursor as needed. |
+| callback | (text: string) => void | Yes | processes insertText command. The text of insert is provided for this callback.Subscribers are expected to process the inserted text and update changes in editor by changeSelection and updateCursor as needed. |
 
 **Error codes:**
 
@@ -1219,10 +1275,11 @@ inputMethodController.off('insertText');
 on(type: 'deleteLeft', callback: (length: number) => void): void
 ```
 
-Register a callback and when IME sends delete left event with length,
-the callback will be invoked.
+Register a callback and when IME sends delete left event with length,the callback will be invoked.
 
 **Since:** 10
+
+<!--Device-InputMethodController-on(type: 'deleteLeft', callback: (length: number) => void): void--><!--Device-InputMethodController-on(type: 'deleteLeft', callback: (length: number) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1231,7 +1288,7 @@ the callback will be invoked.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deleteLeft' | Yes | event type, fixed as 'deleteLeft'. |
-| callback | (length: number) =&gt; void | Yes | processes deleteLeft command. The length ofdelete is provided for this callback. Subscribers are expected to delete specified length of textto the left of the cursor and update changes in editor by changeSelection and updateCursor as needed. |
+| callback | (length: number) => void | Yes | processes deleteLeft command. The length of delete is provided for this callback. Subscribers are expected to delete specified length of text to the left of the cursor and update changes in editor by changeSelection and updateCursor as needed. |
 
 **Error codes:**
 
@@ -1255,10 +1312,11 @@ inputMethod.getController().on('deleteLeft', (length: number) => {
 on(type: 'deleteRight', callback: (length: number) => void): void
 ```
 
-Register a callback and when IME sends delete right event with length,
-the callback will be invoked.
+Register a callback and when IME sends delete right event with length,the callback will be invoked.
 
 **Since:** 10
+
+<!--Device-InputMethodController-on(type: 'deleteRight', callback: (length: number) => void): void--><!--Device-InputMethodController-on(type: 'deleteRight', callback: (length: number) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1267,7 +1325,7 @@ the callback will be invoked.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deleteRight' | Yes | event type, fixed as 'deleteRight'. |
-| callback | (length: number) =&gt; void | Yes | processes deleteRight command. The length ofdelete is provided for this callback. Subscribers are expected to delete specified length of textto the right of the cursor and update changes in editor by changeSelection and updateCursor as needed. |
+| callback | (length: number) => void | Yes | processes deleteRight command. The length of delete is provided for this callback. Subscribers are expected to delete specified length of text to the right of the cursor and update changes in editor by changeSelection and updateCursor as needed. |
 
 **Error codes:**
 
@@ -1295,6 +1353,8 @@ Register a callback and when IME sends keyboard status, the callback will be inv
 
 **Since:** 10
 
+<!--Device-InputMethodController-on(type: 'sendKeyboardStatus', callback: (keyboardStatus: KeyboardStatus) => void): void--><!--Device-InputMethodController-on(type: 'sendKeyboardStatus', callback: (keyboardStatus: KeyboardStatus) => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -1302,7 +1362,7 @@ Register a callback and when IME sends keyboard status, the callback will be inv
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sendKeyboardStatus' | Yes | event type, fixed as 'sendKeyboardStatus'. |
-| callback | (keyboardStatus: KeyboardStatus) =&gt; void | Yes | processes sendKeyboardStatus command.The keyboardStatus is provided for this callback. |
+| callback | (keyboardStatus: KeyboardStatus) => void | Yes | processes sendKeyboardStatus command.The keyboardStatus is provided for this callback. |
 
 **Error codes:**
 
@@ -1330,6 +1390,8 @@ Register a callback and when IME sends functionKey, the callback will be invoked
 
 **Since:** 10
 
+<!--Device-InputMethodController-on(type: 'sendFunctionKey', callback: (functionKey: FunctionKey) => void): void--><!--Device-InputMethodController-on(type: 'sendFunctionKey', callback: (functionKey: FunctionKey) => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -1337,7 +1399,7 @@ Register a callback and when IME sends functionKey, the callback will be invoked
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sendFunctionKey' | Yes | event type, fixed as 'sendFunctionKey'. |
-| callback | (functionKey: FunctionKey) =&gt; void | Yes | processes sendFunctionKey command.The functionKey is provided for this callback.Subscribers are expected to complete thecorresponding task based on the value of functionKey. |
+| callback | (functionKey: FunctionKey) => void | Yes | processes sendFunctionKey command.The functionKey is provided for this callback.Subscribers are expected to complete the corresponding task based on the value of functionKey. |
 
 **Error codes:**
 
@@ -1365,6 +1427,8 @@ Register a callback and when IME sends move cursor, the callback will be invoked
 
 **Since:** 10
 
+<!--Device-InputMethodController-on(type: 'moveCursor', callback: (direction: Direction) => void): void--><!--Device-InputMethodController-on(type: 'moveCursor', callback: (direction: Direction) => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -1372,7 +1436,7 @@ Register a callback and when IME sends move cursor, the callback will be invoked
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'moveCursor' | Yes | event type, fixed as 'moveCursor'. |
-| callback | (direction: Direction) =&gt; void | Yes | processes moveCursor command. The direction ofcursor is provided for this callback. Subscribers are expected to move the cursor and update changesin editor by changeSelection and updateCursor. |
+| callback | (direction: Direction) => void | Yes | processes moveCursor command. The direction of cursor is provided for this callback. Subscribers are expected to move the cursor and update changes in editor by changeSelection and updateCursor. |
 
 **Error codes:**
 
@@ -1400,6 +1464,8 @@ Register a callback and when IME sends extend action code, the callback will be 
 
 **Since:** 10
 
+<!--Device-InputMethodController-on(type: 'handleExtendAction', callback: (action: ExtendAction) => void): void--><!--Device-InputMethodController-on(type: 'handleExtendAction', callback: (action: ExtendAction) => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -1407,7 +1473,7 @@ Register a callback and when IME sends extend action code, the callback will be 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'handleExtendAction' | Yes | event type, fixed as 'handleExtendAction'. |
-| callback | (action: ExtendAction) =&gt; void | Yes | processes handleExtendAction command. The action codeis provided for this callback. |
+| callback | (action: ExtendAction) => void | Yes | processes handleExtendAction command. The action code is provided for this callback. |
 
 **Error codes:**
 
@@ -1435,6 +1501,8 @@ Register a callback and when input method ability gets left text of cursor, the 
 
 **Since:** 10
 
+<!--Device-InputMethodController-on(type: 'getLeftTextOfCursor', callback: (length: number) => string): void--><!--Device-InputMethodController-on(type: 'getLeftTextOfCursor', callback: (length: number) => string): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -1442,7 +1510,7 @@ Register a callback and when input method ability gets left text of cursor, the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'getLeftTextOfCursor' | Yes | event type, fixed as 'getLeftTextOfCursor'. |
-| callback | (length: number) =&gt; string | Yes | processes getLeftTextOfCursor command. The callbackmust be a synchronization method and will block the input method application. |
+| callback | (length: number) => string | Yes | processes getLeftTextOfCursor command. The callback must be a synchronization method and will block the input method application. |
 
 **Error codes:**
 
@@ -1472,6 +1540,8 @@ Register a callback and when input method ability gets right text of cursor, the
 
 **Since:** 10
 
+<!--Device-InputMethodController-on(type: 'getRightTextOfCursor', callback: (length: number) => string): void--><!--Device-InputMethodController-on(type: 'getRightTextOfCursor', callback: (length: number) => string): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -1479,7 +1549,7 @@ Register a callback and when input method ability gets right text of cursor, the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'getRightTextOfCursor' | Yes | event type, fixed as 'getRightTextOfCursor'. |
-| callback | (length: number) =&gt; string | Yes | processes getRightTextOfCursor command. The callbackmust be a synchronization method and will block the input method application. |
+| callback | (length: number) => string | Yes | processes getRightTextOfCursor command. The callback must be a synchronization method and will block the input method application. |
 
 **Error codes:**
 
@@ -1509,6 +1579,8 @@ Register a callback and when input method ability gets the text index at cursor,
 
 **Since:** 10
 
+<!--Device-InputMethodController-on(type: 'getTextIndexAtCursor', callback: () => number): void--><!--Device-InputMethodController-on(type: 'getTextIndexAtCursor', callback: () => number): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -1516,7 +1588,7 @@ Register a callback and when input method ability gets the text index at cursor,
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'getTextIndexAtCursor' | Yes | event type, fixed as 'getTextIndexAtCursor'. |
-| callback | () =&gt; number | Yes | processes getTextIndexAtCursor command. The callbackmust be a synchronization method, and should return the text index at the cursor. |
+| callback | () => number | Yes | processes getTextIndexAtCursor command. The callback must be a synchronization method, and should return the text index at the cursor. |
 
 **Error codes:**
 
@@ -1542,10 +1614,11 @@ inputMethod.getController().on('getTextIndexAtCursor', () => {
 on(type: 'setPreviewText', callback: SetPreviewTextCallback): void
 ```
 
-<p>Subscribe 'setPreviewText' event.</p>
-<p>To support the preview text feature, developers should subscribe to this event before calling attach.</p>
+<p>Subscribe 'setPreviewText' event.</p><p>To support the preview text feature, developers should subscribe to this event before calling attach.</p>
 
 **Since:** 17
+
+<!--Device-InputMethodController-on(type: 'setPreviewText', callback: SetPreviewTextCallback): void--><!--Device-InputMethodController-on(type: 'setPreviewText', callback: SetPreviewTextCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1554,7 +1627,7 @@ on(type: 'setPreviewText', callback: SetPreviewTextCallback): void
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setPreviewText' | Yes | the type of subscribe event. |
-| callback | SetPreviewTextCallback | Yes | the callback of on('setPreviewText'). |
+| callback | [SetPreviewTextCallback](arkts-ime-setpreviewtextcallback-t.md) | Yes | the callback of on('setPreviewText'). |
 
 **Error codes:**
 
@@ -1593,10 +1666,11 @@ console.info(`All callbacks unsubscribed from setPreviewText`);
 on(type: 'finishTextPreview', callback: Callback<void>): void
 ```
 
-<p>Subscribe 'finishTextPreview' event.</p>
-<p>To support the preview text feature, developers should subscribe to this event before calling attach.</p>
+<p>Subscribe 'finishTextPreview' event.</p><p>To support the preview text feature, developers should subscribe to this event before calling attach.</p>
 
 **Since:** 17
+
+<!--Device-InputMethodController-on(type: 'finishTextPreview', callback: Callback<void>): void--><!--Device-InputMethodController-on(type: 'finishTextPreview', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1605,7 +1679,7 @@ on(type: 'finishTextPreview', callback: Callback<void>): void
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'finishTextPreview' | Yes | the type of subscribe event. |
-| callback | Callback&lt;void&gt; | Yes | the callback of on('finishTextPreview'). |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | the callback of on('finishTextPreview'). |
 
 **Error codes:**
 
@@ -1649,13 +1723,15 @@ Start receiving message from input method.
 
 **Since:** 15
 
+<!--Device-InputMethodController-recvMessage(msgHandler?: MessageHandler): void--><!--Device-InputMethodController-recvMessage(msgHandler?: MessageHandler): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgHandler | MessageHandler | No | optional, the handler of the custom message. |
+| msgHandler | [MessageHandler](arkts-ime-messagehandler-i.md) | No | optional, the handler of the custom message. |
 
 **Error codes:**
 
@@ -1693,6 +1769,8 @@ Send message to input method.
 
 **Since:** 15
 
+<!--Device-InputMethodController-sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>--><!--Device-InputMethodController-sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -1700,13 +1778,13 @@ Send message to input method.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | msgId | string | Yes | the identifier of the message. Max size is 256B. |
-| msgParam | ArrayBuffer | No | the param of the custom message. Max size is 128KB. |
+| msgParam | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | No | the param of the custom message. Max size is 128KB. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -1740,10 +1818,11 @@ inputMethod.getController().sendMessage(msgId, msgParam).then(() => {
 setCallingWindow(windowId: number, callback: AsyncCallback<void>): void
 ```
 
-Inform the system of the window ID of the application currently bound to the input method.
-After the correct setting, the window where the client is located can avoid the input method window.
+Inform the system of the window ID of the application currently bound to the input method.After the correct setting, the window where the client is located can avoid the input method window.
 
 **Since:** 10
+
+<!--Device-InputMethodController-setCallingWindow(windowId: int, callback: AsyncCallback<void>): void--><!--Device-InputMethodController-setCallingWindow(windowId: int, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1752,7 +1831,7 @@ After the correct setting, the window where the client is located can avoid the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | windowId | number | Yes | the window ID of the application currently bound to the input method. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of setCallingWindow. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of setCallingWindow. |
 
 **Error codes:**
 
@@ -1785,10 +1864,11 @@ inputMethod.getController().setCallingWindow(windowId, (err: BusinessError) => {
 setCallingWindow(windowId: number): Promise<void>
 ```
 
-Inform the system of the window ID of the application currently bound to the input method.
-After the correct setting, the window where the client is located can avoid the input method window.
+Inform the system of the window ID of the application currently bound to the input method.After the correct setting, the window where the client is located can avoid the input method window.
 
 **Since:** 10
+
+<!--Device-InputMethodController-setCallingWindow(windowId: int): Promise<void>--><!--Device-InputMethodController-setCallingWindow(windowId: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1802,7 +1882,7 @@ After the correct setting, the window where the client is located can avoid the 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -1833,12 +1913,13 @@ inputMethod.getController().setCallingWindow(windowId).then(() => {
 showSoftKeyboard(callback: AsyncCallback<void>): void
 ```
 
-Show soft keyboard.
-This API can be called only by system applications.
+Show soft keyboard.This API can be called only by system applications.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.CONNECT_IME_ABILITY
+
+<!--Device-InputMethodController-showSoftKeyboard(callback: AsyncCallback<void>): void--><!--Device-InputMethodController-showSoftKeyboard(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1846,7 +1927,7 @@ This API can be called only by system applications.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of showSoftKeyboard. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of showSoftKeyboard. |
 
 **Error codes:**
 
@@ -1877,12 +1958,13 @@ inputMethod.getController().showSoftKeyboard((err: BusinessError) => {
 showSoftKeyboard(): Promise<void>
 ```
 
-Show soft keyboard.
-This API can be called only by system applications.
+Show soft keyboard.This API can be called only by system applications.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.CONNECT_IME_ABILITY
+
+<!--Device-InputMethodController-showSoftKeyboard(): Promise<void>--><!--Device-InputMethodController-showSoftKeyboard(): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1890,7 +1972,7 @@ This API can be called only by system applications.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -1923,13 +2005,15 @@ Show the text input and start typing.
 
 **Since:** 10
 
+<!--Device-InputMethodController-showTextInput(callback: AsyncCallback<void>): void--><!--Device-InputMethodController-showTextInput(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of showTextInput. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of showTextInput. |
 
 **Error codes:**
 
@@ -1964,13 +2048,15 @@ Show the text input and start typing.
 
 **Since:** 10
 
+<!--Device-InputMethodController-showTextInput(): Promise<void>--><!--Device-InputMethodController-showTextInput(): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -2003,19 +2089,21 @@ Show the text input and start typing.
 
 **Since:** 15
 
+<!--Device-InputMethodController-showTextInput(requestKeyboardReason: RequestKeyboardReason): Promise<void>--><!--Device-InputMethodController-showTextInput(requestKeyboardReason: RequestKeyboardReason): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestKeyboardReason | RequestKeyboardReason | Yes | requestKeyboardReason of show the keyboard . |
+| requestKeyboardReason | [RequestKeyboardReason](arkts-ime-requestkeyboardreason-e.md) | Yes | requestKeyboardReason of show the keyboard . |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -2054,13 +2142,15 @@ Stop input
 
 **Substitutes:** [stopInputSession](arkts-ime-inputmethodcontroller-i.md#stopinputsession-1)
 
+<!--Device-InputMethodController-stopInput(callback: AsyncCallback<boolean>): void--><!--Device-InputMethodController-stopInput(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | the callback of stopInput. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | the callback of stopInput. |
 
 **Example**
 
@@ -2095,13 +2185,15 @@ Stop input
 
 **Substitutes:** [stopInputSession](arkts-ime-inputmethodcontroller-i.md#stopinputsession-1)
 
+<!--Device-InputMethodController-stopInput(): Promise<boolean>--><!--Device-InputMethodController-stopInput(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | the promise returned by the function. |
 
 **Example**
 
@@ -2130,13 +2222,15 @@ Stop input session
 
 **Since:** 9
 
+<!--Device-InputMethodController-stopInputSession(callback: AsyncCallback<boolean>): void--><!--Device-InputMethodController-stopInputSession(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | the callback of stopInputSession. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | the callback of stopInputSession. |
 
 **Error codes:**
 
@@ -2174,13 +2268,15 @@ Stop input session
 
 **Since:** 9
 
+<!--Device-InputMethodController-stopInputSession(): Promise<boolean>--><!--Device-InputMethodController-stopInputSession(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -2216,14 +2312,16 @@ Update InputAttribute information of input text.
 
 **Since:** 10
 
+<!--Device-InputMethodController-updateAttribute(attribute: InputAttribute, callback: AsyncCallback<void>): void--><!--Device-InputMethodController-updateAttribute(attribute: InputAttribute, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| attribute | InputAttribute | Yes | the InputAttribute object. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of updateAttribute. |
+| attribute | [InputAttribute](arkts-ime-inputattribute-i.md) | Yes | the InputAttribute object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of updateAttribute. |
 
 **Error codes:**
 
@@ -2260,19 +2358,21 @@ Update InputAttribute information of input text.
 
 **Since:** 10
 
+<!--Device-InputMethodController-updateAttribute(attribute: InputAttribute): Promise<void>--><!--Device-InputMethodController-updateAttribute(attribute: InputAttribute): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| attribute | InputAttribute | Yes | the InputAttribute object. |
+| attribute | [InputAttribute](arkts-ime-inputattribute-i.md) | Yes | the InputAttribute object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -2307,14 +2407,16 @@ Update Cursor and notify the input method that the current application cursor ha
 
 **Since:** 10
 
+<!--Device-InputMethodController-updateCursor(cursorInfo: CursorInfo, callback: AsyncCallback<void>): void--><!--Device-InputMethodController-updateCursor(cursorInfo: CursorInfo, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cursorInfo | CursorInfo | Yes | the CursorInfo object. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of updateCursor. |
+| cursorInfo | [CursorInfo](arkts-ime-cursorinfo-i.md) | Yes | the CursorInfo object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of updateCursor. |
 
 **Error codes:**
 
@@ -2357,19 +2459,21 @@ Update Cursor and notify the input method that the current application cursor ha
 
 **Since:** 10
 
+<!--Device-InputMethodController-updateCursor(cursorInfo: CursorInfo): Promise<void>--><!--Device-InputMethodController-updateCursor(cursorInfo: CursorInfo): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cursorInfo | CursorInfo | Yes | the CursorInfo object. |
+| cursorInfo | [CursorInfo](arkts-ime-cursorinfo-i.md) | Yes | the CursorInfo object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 

@@ -16,20 +16,22 @@ Create PixelMap by data buffer.
 
 **Since:** 12
 
+<!--Device-sendableImage-function createPixelMap(colors: ArrayBuffer, options: image.InitializationOptions): Promise<PixelMap>--><!--Device-sendableImage-function createPixelMap(colors: ArrayBuffer, options: image.InitializationOptions): Promise<PixelMap>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colors | ArrayBuffer | Yes | The image color buffer. |
+| colors | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | The image color buffer. |
 | options | image.InitializationOptions | Yes | Initialization options for PixelMap. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | A Promise instance used to return the PixelMap object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PixelMap> | A Promise instance used to return the PixelMap object. |
 
 **Example**
 

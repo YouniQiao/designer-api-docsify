@@ -12,12 +12,13 @@ import { appMemoryOptimizer } from '@kit.AbilityKit';
 function evictFilePages(fileNames: Array<string>): Promise<void>
 ```
 
-Sends a request to the system to release file page cache of specified files. The system determines
-whether to actually perform the release based on the current memory status, and success is not guaranteed.
+Sends a request to the system to release file page cache of specified files. The system determines whether to actually perform the release based on the current memory status, and success is not guaranteed.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-appMemoryOptimizer-function evictFilePages(fileNames: Array<string>): Promise<void>--><!--Device-appMemoryOptimizer-function evictFilePages(fileNames: Array<string>): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -27,13 +28,13 @@ whether to actually perform the release based on the current memory status, and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fileNames | Array&lt;string&gt; | Yes | Array of file names for which file page cache needs to be released.File names must end with .so, .hap, or .hsp. |
+| fileNames | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Array of file names for which file page cache needs to be released.File names must end with .so, .hap, or .hsp. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

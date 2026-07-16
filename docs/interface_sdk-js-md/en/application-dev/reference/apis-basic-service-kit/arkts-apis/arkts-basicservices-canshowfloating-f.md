@@ -18,13 +18,15 @@ Checks whether a specified application can show as a floating window.
 
 **Deprecated since:** 26.0.0
 
+<!--Device-settings-function canShowFloating(callback: AsyncCallback<boolean>): void--><!--Device-settings-function canShowFloating(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | The callback of canShowFloating result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | The callback of canShowFloating result. |
 
 **Example**
 
@@ -52,13 +54,15 @@ Checks whether a specified application can show as a floating window.
 
 **Deprecated since:** 26.0.0
 
+<!--Device-settings-function canShowFloating(): Promise<boolean>--><!--Device-settings-function canShowFloating(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns {@code true} if the application can draw over other applications; returns{@code false} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns {@code true} if the application can draw over other applications; returns{@code false} otherwise. |
 
 **Example**
 

@@ -8,6 +8,8 @@
 
 **替代接口：** [InstallParam](arkts-ability-installparam-i-sys.md)
 
+<!--Device-unnamed-export interface InstallParam--><!--Device-unnamed-export interface InstallParam-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -29,6 +31,8 @@ installFlag: number
 **废弃版本：** 9
 
 **替代接口：** [installFlag](arkts-ability-installparam-i-sys.md#installflag)
+
+<!--Device-InstallParam-installFlag: number--><!--Device-InstallParam-installFlag: number-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
@@ -52,6 +56,8 @@ isKeepData: boolean
 
 **替代接口：** [isKeepData](arkts-ability-installparam-i-sys.md#iskeepdata)
 
+<!--Device-InstallParam-isKeepData: boolean--><!--Device-InstallParam-isKeepData: boolean-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -73,6 +79,8 @@ userId: number
 **废弃版本：** 9
 
 **替代接口：** [userId](arkts-ability-installparam-i-sys.md#userid)
+
+<!--Device-InstallParam-userId: number--><!--Device-InstallParam-userId: number-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

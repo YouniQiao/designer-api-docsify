@@ -1,11 +1,18 @@
 # HistoryVersion
 
-端云文件历史版本信息，调用端云文件版本管理类[FileVersion](arkts-corefile-fileversion-c.md)的
-[gethistoryversionlist](arkts-corefile-fileversion-c.md#gethistoryversionlist-1)方法时，历史版本列表中的属性。
+端云文件历史版本信息，调用端云文件版本管理类[FileVersion](arkts-corefile-fileversion-c.md)的[gethistoryversionlist](arkts-corefile-fileversion-c.md#gethistoryversionlist-1)方法时，历史版本列表中的属性。
 
 **起始版本：** 20
 
+<!--Device-cloudSync-interface HistoryVersion--><!--Device-cloudSync-interface HistoryVersion-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+## 导入模块
+
+```TypeScript
+import { cloudSync } from '@kit.CoreFileKit';
+```
 
 ## autoResolved
 
@@ -23,6 +30,8 @@ autoResolved: boolean
 
 **起始版本：** 20
 
+<!--Device-HistoryVersion-autoResolved: boolean--><!--Device-HistoryVersion-autoResolved: boolean-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## editedTime
@@ -36,6 +45,8 @@ editedTime: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-HistoryVersion-editedTime: long--><!--Device-HistoryVersion-editedTime: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -51,6 +62,8 @@ fileSize: number
 
 **起始版本：** 20
 
+<!--Device-HistoryVersion-fileSize: long--><!--Device-HistoryVersion-fileSize: long-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## originalFileName
@@ -64,6 +77,8 @@ originalFileName: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-HistoryVersion-originalFileName: string--><!--Device-HistoryVersion-originalFileName: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -79,6 +94,8 @@ sha256: string
 
 **起始版本：** 20
 
+<!--Device-HistoryVersion-sha256: string--><!--Device-HistoryVersion-sha256: string-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## versionId
@@ -92,6 +109,8 @@ versionId: string
 **类型：** string
 
 **起始版本：** 20
+
+<!--Device-HistoryVersion-versionId: string--><!--Device-HistoryVersion-versionId: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

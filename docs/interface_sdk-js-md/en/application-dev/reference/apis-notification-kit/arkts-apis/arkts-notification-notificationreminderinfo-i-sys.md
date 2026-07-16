@@ -4,6 +4,8 @@ Describes the information about the application reminder.
 
 **Since:** 21
 
+<!--Device-notificationManager-export interface NotificationReminderInfo--><!--Device-notificationManager-export interface NotificationReminderInfo-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Bundle information of the application.
 
 **Since:** 21
 
+<!--Device-NotificationReminderInfo-bundle: BundleOption--><!--Device-NotificationReminderInfo-bundle: BundleOption-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -36,16 +40,13 @@ Bundle information of the application.
 reminderFlags: number
 ```
 
-Notification reminder mode flags.<br>- bit0: sound prompt. The value **0** indicates disabled, and **1**
-indicates enabled. <br>- bit1: lock screen. The value **0** indicates disabled, and **1** indicates
-enabled. <br>- bit2: banner. The value **0** indicates disabled, and **1** indicates enabled. <br>- bit3:
-screen on. The value **0** indicates disabled, and **1** indicates enabled. <br>- bit4: vibration. The
-value **0** indicates disabled, and **1** indicates enabled. <br>- bit5: status bar notification icon. The
-value **0** indicates disabled, and **1** indicates enabled.
+Notification reminder mode flags.<br>- bit0: sound prompt. The value **0** indicates disabled, and **1** indicates enabled. <br>- bit1: lock screen. The value **0** indicates disabled, and **1** indicates enabled. <br>- bit2: banner. The value **0** indicates disabled, and **1** indicates enabled. <br>- bit3:screen on. The value **0** indicates disabled, and **1** indicates enabled. <br>- bit4: vibration. The value **0** indicates disabled, and **1** indicates enabled. <br>- bit5: status bar notification icon. The value **0** indicates disabled, and **1** indicates enabled.
 
 **Type:** number
 
 **Since:** 21
+
+<!--Device-NotificationReminderInfo-reminderFlags: long--><!--Device-NotificationReminderInfo-reminderFlags: long-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -57,12 +58,13 @@ value **0** indicates disabled, and **1** indicates enabled.
 silentReminderEnabled: boolean
 ```
 
-Whether the silent reminder is enabled. The value **true** indicates that the silent reminder is enabled, and
-the value **false** indicates the opposite.
+Whether the silent reminder is enabled. The value **true** indicates that the silent reminder is enabled, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 21
+
+<!--Device-NotificationReminderInfo-silentReminderEnabled: boolean--><!--Device-NotificationReminderInfo-silentReminderEnabled: boolean-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

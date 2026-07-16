@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-deviceSettings-enum PowerPolicyAction--><!--Device-deviceSettings-enum PowerPolicyAction-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -19,6 +21,8 @@ NONE = 0
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PowerPolicyAction-NONE = 0--><!--Device-PowerPolicyAction-NONE = 0-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -36,6 +40,8 @@ AUTO_SUSPEND = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PowerPolicyAction-AUTO_SUSPEND = 1--><!--Device-PowerPolicyAction-AUTO_SUSPEND = 1-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +57,8 @@ FORCE_SUSPEND = 2
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PowerPolicyAction-FORCE_SUSPEND = 2--><!--Device-PowerPolicyAction-FORCE_SUSPEND = 2-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -68,6 +76,8 @@ HIBERNATE = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-PowerPolicyAction-HIBERNATE = 3--><!--Device-PowerPolicyAction-HIBERNATE = 3-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -83,6 +93,8 @@ SHUTDOWN = 4
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PowerPolicyAction-SHUTDOWN = 4--><!--Device-PowerPolicyAction-SHUTDOWN = 4-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

@@ -6,7 +6,15 @@ GesturePoint表示手势触摸点。
 
 **起始版本：** 9
 
+<!--Device-unnamed-export declare class GesturePoint--><!--Device-unnamed-export declare class GesturePoint-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
+
+## 导入模块
+
+```TypeScript
+import { GesturePoint } from '@kit.AccessibilityKit';
+```
 
 ## constructor
 
@@ -19,6 +27,8 @@ constructor(positionX: number, positionY: number)
 **起始版本：** 9
 
 **废弃版本：** 12
+
+<!--Device-GesturePoint-constructor(positionX: double, positionY: double)--><!--Device-GesturePoint-constructor(positionX: double, positionY: double)-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -50,6 +60,8 @@ positionX: number
 
 **起始版本：** 9
 
+<!--Device-GesturePoint-positionX: double--><!--Device-GesturePoint-positionX: double-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## positionY
@@ -63,6 +75,8 @@ positionY: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-GesturePoint-positionY: double--><!--Device-GesturePoint-positionY: double-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

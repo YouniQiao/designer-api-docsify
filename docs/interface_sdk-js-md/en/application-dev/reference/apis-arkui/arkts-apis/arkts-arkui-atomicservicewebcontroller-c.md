@@ -4,6 +4,8 @@ Provides methods for controlling the AtomicServiceWeb controller.
 
 **Since:** 12
 
+<!--Device-unnamed-export declare class AtomicServiceWebController--><!--Device-unnamed-export declare class AtomicServiceWebController-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Checks whether the web page can go back.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AtomicServiceWebController-accessBackward(): boolean--><!--Device-AtomicServiceWebController-accessBackward(): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -36,7 +40,7 @@ Checks whether the web page can go back.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with aAtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## accessForward
 
@@ -50,6 +54,8 @@ Checks whether the web page can go forward.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AtomicServiceWebController-accessForward(): boolean--><!--Device-AtomicServiceWebController-accessForward(): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -62,7 +68,7 @@ Checks whether the web page can go forward.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with aAtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## accessStep
 
@@ -75,6 +81,8 @@ Checks whether the web page can go back or forward the given number of steps.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AtomicServiceWebController-accessStep(step: number): boolean--><!--Device-AtomicServiceWebController-accessStep(step: number): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -95,7 +103,7 @@ Checks whether the web page can go back or forward the given number of steps.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with aAtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## backward
 
@@ -109,13 +117,15 @@ Goes back in the history of the web page.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AtomicServiceWebController-backward(): void--><!--Device-AtomicServiceWebController-backward(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with aAtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## forward
 
@@ -129,13 +139,15 @@ Goes forward in the history of the web page.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AtomicServiceWebController-forward(): void--><!--Device-AtomicServiceWebController-forward(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with aAtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## getCustomUserAgent
 
@@ -149,6 +161,8 @@ Get custom user agent.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AtomicServiceWebController-getCustomUserAgent(): string--><!--Device-AtomicServiceWebController-getCustomUserAgent(): string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -161,7 +175,7 @@ Get custom user agent.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with aAtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## getUserAgent
 
@@ -175,6 +189,8 @@ Gets the default user agent.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AtomicServiceWebController-getUserAgent(): string--><!--Device-AtomicServiceWebController-getUserAgent(): string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -187,7 +203,7 @@ Gets the default user agent.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with aAtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## loadUrl
 
@@ -201,6 +217,8 @@ Loads the URL.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AtomicServiceWebController-loadUrl(url: string | Resource, headers?: Array<WebHeader>): void--><!--Device-AtomicServiceWebController-loadUrl(url: string | Resource, headers?: Array<WebHeader>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -208,14 +226,14 @@ Loads the URL.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string \| Resource | Yes | The URL to load. |
-| headers | Array&lt;WebHeader&gt; | No | Additional HTTP request header for URL. |
+| headers | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<WebHeader> | No | Additional HTTP request header for URL. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with aAtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 | [17100002](../../apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) | Invalid url. |
 | [17100003](../../apis-arkweb/errorcode-webview.md#17100003-incorrect-resource-path) | Invalid resource path or file type. |
 
@@ -231,13 +249,15 @@ Refreshes the current URL.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AtomicServiceWebController-refresh(): void--><!--Device-AtomicServiceWebController-refresh(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with aAtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 
 ## setCustomUserAgent
 
@@ -250,6 +270,8 @@ Set custom user agent.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AtomicServiceWebController-setCustomUserAgent(userAgent: string): void--><!--Device-AtomicServiceWebController-setCustomUserAgent(userAgent: string): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -264,5 +286,5 @@ Set custom user agent.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
-| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with aAtomicServiceWeb component. |
+| [17100001](../../apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The AtomicServiceWebController must be associated with a AtomicServiceWeb component. |
 

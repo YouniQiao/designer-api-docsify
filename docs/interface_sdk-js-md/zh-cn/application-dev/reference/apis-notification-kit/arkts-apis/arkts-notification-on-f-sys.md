@@ -20,6 +20,8 @@ function on(type: 'checkNotification', callback: (checkInfo: NotificationCheckIn
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
+<!--Device-notificationManager-function on(type: 'checkNotification', callback: (checkInfo: NotificationCheckInfo) => NotificationCheckResult): void--><!--Device-notificationManager-function on(type: 'checkNotification', callback: (checkInfo: NotificationCheckInfo) => NotificationCheckResult): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -29,7 +31,7 @@ function on(type: 'checkNotification', callback: (checkInfo: NotificationCheckIn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'checkNotification' | 是 | 回调函数类型名，固定为'checkNotification'。 |
-| callback | (checkInfo: NotificationCheckInfo) =&gt; NotificationCheckResult | 是 | 消息验证函数指针。 |
+| callback | (checkInfo: NotificationCheckInfo) => NotificationCheckResult | 是 | 消息验证函数指针。 |
 
 **错误码：**
 
@@ -78,6 +80,10 @@ function on(type: 'checkNotification', checkRequest: NotificationCheckRequest,
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
+<!--Device-notificationManager-function on(type: 'checkNotification', checkRequest: NotificationCheckRequest,
+    callback: (checkInfo: NotificationCheckInfo) => Promise<NotificationCheckResult>): void--><!--Device-notificationManager-function on(type: 'checkNotification', checkRequest: NotificationCheckRequest,
+    callback: (checkInfo: NotificationCheckInfo) => Promise<NotificationCheckResult>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -87,8 +93,8 @@ function on(type: 'checkNotification', checkRequest: NotificationCheckRequest,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'checkNotification' | 是 | 回调函数类型名，固定为'checkNotification'。 |
-| checkRequest | NotificationCheckRequest | 是 | 通知请求验证内容。 |
-| callback | (checkInfo: NotificationCheckInfo) =&gt; Promise&lt;NotificationCheckResult&gt; | 是 | 消息验证函数指针。 |
+| checkRequest | [NotificationCheckRequest](arkts-notification-notificationcheckrequest-i-sys.md) | 是 | 通知请求验证内容。 |
+| callback | (checkInfo: NotificationCheckInfo) => Promise<NotificationCheckResult> | 是 | 消息验证函数指针。 |
 
 **错误码：**
 

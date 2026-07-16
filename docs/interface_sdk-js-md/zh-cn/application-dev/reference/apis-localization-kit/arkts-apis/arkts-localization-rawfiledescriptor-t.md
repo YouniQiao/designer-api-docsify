@@ -8,7 +8,9 @@ export type RawFileDescriptor = _RawFileDescriptor
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-resourceManager-export type RawFileDescriptor = _RawFileDescriptor--><!--Device-resourceManager-export type RawFileDescriptor = _RawFileDescriptor-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 

@@ -1,18 +1,24 @@
 # @ohos.graphics.drawing
 
-应用在开发中，经常需要针对不同的元素内容进行绘制，开发者通常可以选择直接使用ArkUI组件来绘制想要的元素或效果，但有些自定义图形或
-效果无法满足，此时可以选择使用Drawing来实现灵活的自定义绘制效果。Drawing模块提供基本的绘
-制能力，如绘制矩形、圆形、点、直线、自定义Path和字体等。
+应用在开发中，经常需要针对不同的元素内容进行绘制，开发者通常可以选择直接使用ArkUI组件来绘制想要的元素或效果，但有些自定义图形或效果无法满足，此时可以选择使用Drawing来实现灵活的自定义绘制效果。Drawing模块提供基本的绘制能力，如绘制矩形、圆形、点、直线、自定义Path和字体等。
 
-> **说明：**
->
-> - 本模块使用屏幕物理像素单位px。
->
+> **说明：**  
+>  
+> - 本模块使用屏幕物理像素单位px。  
+>  
 > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare namespace drawing--><!--Device-unnamed-declare namespace drawing-End-->
+
 **系统能力：** SystemCapability.Graphics.Drawing
+
+## 导入模块
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+```
 
 ## 汇总
 
@@ -57,7 +63,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [BlendMode](arkts-arkgraphics2d-blendmode-e.md) | 混合模式枚举。混合模式会将两种颜色（源色、目标色）以特定的方式混合生成一种新的颜色，通常用于叠加、滤镜和遮罩等图形操作场景。混合操作会分别作用于红、绿、蓝三个颜色通道，采用相同的混合逻辑，而透明度（Alpha通道）则根据各模式的定义另行处理。为简洁起见，我们使用以下缩写：s : source 源的缩写。d : destination 目标的缩写。sa : source alpha 源透明度的缩写。da : destination alpha 目标透明度的缩写。计算结果用如下缩写表示：r : 如果4个通道（透明度、红、绿、蓝）的计算方式相同，用r表示。ra : 如果只操作透明度通道，用ra表示。rc : 如果操作3个颜色通道，用rc表示。以黄色矩形为源图像，蓝色圆形为目标图像，各混合模式枚举生成的效果示意图请参考下表。 |
-| [BlurType](arkts-arkgraphics2d-blurtype-e.md) | 定义蒙版滤镜模糊中操作类型的枚举。\| 名称 \| 值 \| 说明 \| 示意图 \|\| ------ \| - \| ------------------ \| -------- \|\| NORMAL \| 0 \| 全面模糊，外圈边缘和内部实体一起模糊。 \| ![image_BlueType_Normal.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Normal.png) \|\| SOLID \| 1 \| 内部实体不变，只模糊外圈边缘部分。 \| ![image_BlueType_Solid.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Solid.png) \|\| OUTER \| 2 \| 只有外圈边缘模糊，内部实体完全透明。 \| ![image_BlueType_Outer.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Outer.png) \|\| INNER \| 3 \| 只有内部实体模糊，外圈边缘清晰。 \| ![image_BlueType_Inner.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Inner.png) \| |
+| [BlurType](arkts-arkgraphics2d-blurtype-e.md) | 定义蒙版滤镜模糊中操作类型的枚举。 \| 名称 \| 值 \| 说明 \| 示意图 \| \| ------ \| - \| ------------------ \| -------- \| \| NORMAL \| 0 \| 全面模糊，外圈边缘和内部实体一起模糊。 \| ![image_BlueType_Normal.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Normal.png) \| \| SOLID \| 1 \| 内部实体不变，只模糊外圈边缘部分。 \| ![image_BlueType_Solid.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Solid.png) \| \| OUTER \| 2 \| 只有外圈边缘模糊，内部实体完全透明。 \| ![image_BlueType_Outer.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Outer.png) \| \| INNER \| 3 \| 只有内部实体模糊，外圈边缘清晰。 \| ![image_BlueType_Inner.png](../../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Inner.png) \| |
 | [CapStyle](arkts-arkgraphics2d-capstyle-e.md) | 定义线帽样式的枚举，即画笔在绘制线段时，在线段头尾端点的样式。 |
 | [ClipOp](arkts-arkgraphics2d-clipop-e.md) | 画布裁剪方式的枚举。 |
 | [CornerPos](arkts-arkgraphics2d-cornerpos-e.md) | 圆角位置枚举。 |
@@ -66,7 +72,7 @@
 | [FontHinting](arkts-arkgraphics2d-fonthinting-e.md) | 字型轮廓效果类型枚举。 |
 | [FontMetricsFlags](arkts-arkgraphics2d-fontmetricsflags-e.md) | 字体度量标志枚举，指示字体度量中的各字段数据是否有效。 |
 | [JoinStyle](arkts-arkgraphics2d-joinstyle-e.md) | 定义线条转角样式的枚举，即画笔在绘制折线段时，在折线转角处的样式。 |
-| [PathDashStyle](arkts-arkgraphics2d-pathdashstyle-e.md) | 路径效果的绘制样式枚举。\| 名称 \| 值 \| 说明 \|\| ------ \| - \| ------------------ \|\| TRANSLATE \| 0 \| 不会随着路径旋转，只会平移。 \|\| ROTATE \| 1 \| 随着路径的旋转而旋转。 \|\| MORPH \| 2 \| 随着路径的旋转而旋转，并在转折处进行拉伸或压缩等操作以增加平滑度。 \| |
+| [PathDashStyle](arkts-arkgraphics2d-pathdashstyle-e.md) | 路径效果的绘制样式枚举。 \| 名称 \| 值 \| 说明 \| \| ------ \| - \| ------------------ \| \| TRANSLATE \| 0 \| 不会随着路径旋转，只会平移。 \| \| ROTATE \| 1 \| 随着路径的旋转而旋转。 \| \| MORPH \| 2 \| 随着路径的旋转而旋转，并在转折处进行拉伸或压缩等操作以增加平滑度。 \| |
 | [PathDirection](arkts-arkgraphics2d-pathdirection-e.md) | 添加闭合轮廓方向的枚举。 |
 | [PathFillType](arkts-arkgraphics2d-pathfilltype-e.md) | 定义路径的填充类型枚举。 |
 | [PathIteratorVerb](arkts-arkgraphics2d-pathiteratorverb-e.md) | 迭代器包含的路径操作类型枚举，可用于读取path的操作指令。 |

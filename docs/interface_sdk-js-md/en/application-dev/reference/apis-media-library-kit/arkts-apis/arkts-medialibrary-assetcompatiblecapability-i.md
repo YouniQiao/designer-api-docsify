@@ -4,6 +4,8 @@ Defines the asset compatibility capability.
 
 **Since:** 24
 
+<!--Device-photoAccessHelper-interface AssetCompatibleCapability--><!--Device-photoAccessHelper-interface AssetCompatibleCapability-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Whether high-resolution assets are supported. **true**: yes; **false**: no.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-AssetCompatibleCapability-supportedHighResolution: boolean--><!--Device-AssetCompatibleCapability-supportedHighResolution: boolean-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## supportedMimeType
@@ -45,6 +49,8 @@ Supported MIME types.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AssetCompatibleCapability-supportedMimeType?: Array<string>--><!--Device-AssetCompatibleCapability-supportedMimeType?: Array<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

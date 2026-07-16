@@ -2,10 +2,11 @@
 
 Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.
 
-Before calling any of the following APIs, you must use
-[PiPWindow.create()](arkts-arkui-create-f.md#create-1) to create a PiPController instance.
+Before calling any of the following APIs, you must use [PiPWindow.create()](arkts-arkui-create-f.md#create-1) to create a PiPController instance.
 
 **Since:** 11
+
+<!--Device-PiPWindow-interface PiPController--><!--Device-PiPWindow-interface PiPController-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -24,6 +25,8 @@ isPiPSupported(): boolean
 Returns a Boolean value that indicates whether picture-in-picture is supported
 
 **Since:** 18
+
+<!--Device-PiPController-isPiPSupported(): boolean--><!--Device-PiPController-isPiPSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

@@ -14,6 +14,8 @@ Publishes a common event. This API uses an asynchronous callback to return the r
 
 **Substitutes:** publish(event:
 
+<!--Device-commonEvent-function publish(event: string, callback: AsyncCallback<void>): void--><!--Device-commonEvent-function publish(event: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Parameters:**
@@ -21,7 +23,7 @@ Publishes a common event. This API uses an asynchronous callback to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Name of the common event to publish. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -57,6 +59,8 @@ Publishes a common event with given properties. This API uses an asynchronous ca
 
 **Substitutes:** publish(event:
 
+<!--Device-commonEvent-function publish(event: string, options: CommonEventPublishData, callback: AsyncCallback<void>): void--><!--Device-commonEvent-function publish(event: string, options: CommonEventPublishData, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Parameters:**
@@ -64,8 +68,8 @@ Publishes a common event with given properties. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Name of the common event to publish. |
-| options | CommonEventPublishData | Yes | Properties of the common event to publish. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-i.md) | Yes | Properties of the common event to publish. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Example**
 

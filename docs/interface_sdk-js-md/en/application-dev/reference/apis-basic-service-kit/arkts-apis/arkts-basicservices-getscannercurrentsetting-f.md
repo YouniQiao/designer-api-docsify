@@ -18,6 +18,8 @@ Obtains the current scanner settings. This API uses a promise to return the resu
 
 **Required permissions:** ohos.permission.PRINT
 
+<!--Device-scan-function getScannerCurrentSetting(scannerId: string, optionIndex: int): Promise<ScannerOptionValue>--><!--Device-scan-function getScannerCurrentSetting(scannerId: string, optionIndex: int): Promise<ScannerOptionValue>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
@@ -31,7 +33,7 @@ Obtains the current scanner settings. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ScannerOptionValue&gt; | Promise used to return the scanner option value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ScannerOptionValue> | Promise used to return the scanner option value. |
 
 **Error codes:**
 

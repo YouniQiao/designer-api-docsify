@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-image-interface PackingSizeLimit--><!--Device-image-interface PackingSizeLimit-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
+
+## 导入模块
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+```
 
 ## level
 
@@ -19,6 +27,8 @@ level: AntiAliasingLevel
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PackingSizeLimit-level: AntiAliasingLevel--><!--Device-PackingSizeLimit-level: AntiAliasingLevel-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
@@ -41,6 +51,8 @@ maxSize: Size
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PackingSizeLimit-maxSize: Size--><!--Device-PackingSizeLimit-maxSize: Size-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 

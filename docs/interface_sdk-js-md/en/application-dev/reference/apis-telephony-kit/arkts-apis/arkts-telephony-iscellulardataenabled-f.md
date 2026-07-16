@@ -18,13 +18,15 @@ Check whether cellular data services are enabled.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-data-function isCellularDataEnabled(callback: AsyncCallback<boolean>): void--><!--Device-data-function isCellularDataEnabled(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CellularData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Indicates the callback for checking whether cellular data servicesare enabled. Returns {@code true} if cellular data services are enabled; returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Indicates the callback for checking whether cellular data services are enabled. Returns {@code true} if cellular data services are enabled; returns {@code false} otherwise. |
 
 **Error codes:**
 
@@ -66,13 +68,15 @@ Check whether cellular data services are enabled.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
+<!--Device-data-function isCellularDataEnabled(): Promise<boolean>--><!--Device-data-function isCellularDataEnabled(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Telephony.CellularData
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns {@code true} if cellular data services are enabled.Returns {@code false} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns {@code true} if cellular data services are enabled.Returns {@code false} otherwise. |
 
 **Error codes:**
 

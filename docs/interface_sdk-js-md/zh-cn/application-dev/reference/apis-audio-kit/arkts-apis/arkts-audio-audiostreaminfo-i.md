@@ -4,7 +4,15 @@
 
 **起始版本：** 8
 
+<!--Device-audio-interface AudioStreamInfo--><!--Device-audio-interface AudioStreamInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## channelLayout
 
@@ -17,6 +25,8 @@ channelLayout?: AudioChannelLayout
 **类型：** AudioChannelLayout
 
 **起始版本：** 11
+
+<!--Device-AudioStreamInfo-channelLayout?: AudioChannelLayout--><!--Device-AudioStreamInfo-channelLayout?: AudioChannelLayout-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -32,6 +42,8 @@ channels: AudioChannel
 
 **起始版本：** 8
 
+<!--Device-AudioStreamInfo-channels: AudioChannel--><!--Device-AudioStreamInfo-channels: AudioChannel-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## encodingType
@@ -45,6 +57,8 @@ encodingType: AudioEncodingType
 **类型：** AudioEncodingType
 
 **起始版本：** 8
+
+<!--Device-AudioStreamInfo-encodingType: AudioEncodingType--><!--Device-AudioStreamInfo-encodingType: AudioEncodingType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -60,6 +74,8 @@ sampleFormat: AudioSampleFormat
 
 **起始版本：** 8
 
+<!--Device-AudioStreamInfo-sampleFormat: AudioSampleFormat--><!--Device-AudioStreamInfo-sampleFormat: AudioSampleFormat-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## samplingRate
@@ -72,7 +88,7 @@ samplingRate: AudioSamplingRate | number
 
 从API版本26.0.0开始：
 
-- 参数samplingRate支持number类型。
+- 参数samplingRate支持number类型。  
 - 音频渲染扩展支持8000Hz到384000Hz范围内以10Hz为步长的采样率值。具体设备支持的采样率规格会存在差异。
 
 **类型：** AudioSamplingRate | number
@@ -81,6 +97,8 @@ samplingRate: AudioSamplingRate | number
 
 **模型约束：** 
 - API版本26.0.0+：此接口可在Stage模型和FA模型下使用。
+
+<!--Device-AudioStreamInfo-samplingRate: AudioSamplingRate | int--><!--Device-AudioStreamInfo-samplingRate: AudioSamplingRate | int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 

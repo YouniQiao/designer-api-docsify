@@ -4,6 +4,8 @@ Disk information.
 
 **Since:** 26.0.0
 
+<!--Device-volumeManager-export interface Disk--><!--Device-volumeManager-export interface Disk-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Disk ID, in the disk-{Primary device ID}-{Secondary device ID} format.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Disk-diskId: string--><!--Device-Disk-diskId: string-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -45,6 +49,8 @@ Disk type.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Disk-diskType: DiskType--><!--Device-Disk-diskType: DiskType-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -64,6 +70,8 @@ Disk information extension field.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Disk-extraInfo: string--><!--Device-Disk-extraInfo: string-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -82,6 +90,8 @@ Indicates that the disk can be removed.The value true indicates that the disk ca
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Disk-removable: boolean--><!--Device-Disk-removable: boolean-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -92,14 +102,15 @@ Indicates that the disk can be removed.The value true indicates that the disk ca
 sizeBytes: number
 ```
 
-Disk total size.
-<br>Unit: Byte.
+Disk total size.<br>Unit: Byte.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Disk-sizeBytes: long--><!--Device-Disk-sizeBytes: long-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -118,6 +129,8 @@ Indicates the volume of a disk. A disk may contain multiple volumes.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Disk-volumeIds: Array<string>--><!--Device-Disk-volumeIds: Array<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 

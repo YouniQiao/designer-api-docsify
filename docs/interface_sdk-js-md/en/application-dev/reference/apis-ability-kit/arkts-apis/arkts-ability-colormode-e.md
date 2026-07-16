@@ -1,7 +1,7 @@
 # ColorMode
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > This API has been supported since API version 7 and deprecated since API version 9. No substitute is provided.
 
 Enumerates the color modes of applications and widgets.
@@ -11,6 +11,8 @@ Enumerates the color modes of applications and widgets.
 **Deprecated since:** 9
 
 **Substitutes:** [null]
+
+<!--Device-bundle-export enum ColorMode--><!--Device-bundle-export enum ColorMode-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -28,6 +30,8 @@ Auto mode.
 
 **Substitutes:** COLOR_MODE_NOT_SET
 
+<!--Device-ColorMode-AUTO_MODE = -1--><!--Device-ColorMode-AUTO_MODE = -1-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## DARK_MODE
@@ -44,6 +48,8 @@ Dark mode.
 
 **Substitutes:** COLOR_MODE_DARK
 
+<!--Device-ColorMode-DARK_MODE = 0--><!--Device-ColorMode-DARK_MODE = 0-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 ## LIGHT_MODE
@@ -59,6 +65,8 @@ Light mode.
 **Deprecated since:** 9
 
 **Substitutes:** COLOR_MODE_LIGHT
+
+<!--Device-ColorMode-LIGHT_MODE = 1--><!--Device-ColorMode-LIGHT_MODE = 1-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 

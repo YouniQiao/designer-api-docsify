@@ -13,8 +13,7 @@ function getRemoteAbilityInfos(elementNames: Array<ElementName>,
     callback: AsyncCallback<Array<RemoteAbilityInfo>>): void
 ```
 
-Obtains the information about remote abilities that match the given element names. This API uses an asynchronous
-callback to return the result.
+Obtains the information about remote abilities that match the given element names. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -24,6 +23,10 @@ callback to return the result.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-distributedBundle-function getRemoteAbilityInfos(elementNames: Array<ElementName>,
+    callback: AsyncCallback<Array<RemoteAbilityInfo>>): void--><!--Device-distributedBundle-function getRemoteAbilityInfos(elementNames: Array<ElementName>,
+    callback: AsyncCallback<Array<RemoteAbilityInfo>>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
 
 **System API:** This is a system API.
@@ -32,8 +35,8 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementNames | Array&lt;ElementName&gt; | Yes | **ElementName** array, whose maximum length is 10. |
-| callback | AsyncCallback&lt;Array&lt;RemoteAbilityInfo&gt;&gt; | Yes | Callback used to return an array of the remoteability information. |
+| elementNames | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ElementName> | Yes | **ElementName** array, whose maximum length is 10. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<RemoteAbilityInfo>> | Yes | Callback used to return an array of the remote ability information. |
 
 
 ## getRemoteAbilityInfos
@@ -42,8 +45,7 @@ callback to return the result.
 function getRemoteAbilityInfos(elementNames: Array<ElementName>): Promise<Array<RemoteAbilityInfo>>
 ```
 
-Obtains the information about remote abilities that match the given element names. This API uses a promise to
-return the result.
+Obtains the information about remote abilities that match the given element names. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -53,6 +55,8 @@ return the result.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
+<!--Device-distributedBundle-function getRemoteAbilityInfos(elementNames: Array<ElementName>): Promise<Array<RemoteAbilityInfo>>--><!--Device-distributedBundle-function getRemoteAbilityInfos(elementNames: Array<ElementName>): Promise<Array<RemoteAbilityInfo>>-End-->
+
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
 
 **System API:** This is a system API.
@@ -61,11 +65,11 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementNames | Array&lt;ElementName&gt; | Yes | **ElementName** array, whose maximum length is 10. |
+| elementNames | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ElementName> | Yes | **ElementName** array, whose maximum length is 10. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;RemoteAbilityInfo&gt;&gt; | Promise used to return an array of the remote ability information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<RemoteAbilityInfo>> | Promise used to return an array of the remote ability information. |
 

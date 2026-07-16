@@ -2,25 +2,27 @@
 
 Provides APIs for measuring text metrics, such as text height and width.
 
-> **NOTE**
->
-> - In the following API examples, you must first use [getMeasureUtils()](arkts-arkui-uicontext-c.md#getmeasureutils-1) in
-> **UIContext** to obtain a **MeasureUtils** instance, and then call the APIs using the obtained instance.
->
-> - To perform more complex text measurements, use the [Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraph-c.md) API.
->
-> - Avoid using
-> [ApplicationContext.setFontSizeScale](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#setfontsizescale-1)
-> during text measurement API calls. To ensure timing correctness and the accuracy of measurement results, manually
-> listen for font scale changes.
->
-> - For measuring text after truncation, direct use of the string length for truncation may lead to inaccuracies.
-> This is because certain Unicode characters (for example, emojis) have code points with a length greater than 1, and
-> truncating by string length can split these multi-code-point characters, resulting in incorrect text display or
-> measurement errors. As such, you are advised to perform iterative truncation processing based on Unicode code
+> **NOTE**  
+>  
+> - In the following API examples, you must first use [getMeasureUtils()](arkts-arkui-uicontext-c.md#getmeasureutils-1) in  
+> **UIContext** to obtain a **MeasureUtils** instance, and then call the APIs using the obtained instance.  
+>  
+> - To perform more complex text measurements, use the [Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraph-c.md) API.  
+>  
+> - Avoid using  
+> [ApplicationContext.setFontSizeScale](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#setfontsizescale-1)  
+> during text measurement API calls. To ensure timing correctness and the accuracy of measurement results, manually  
+> listen for font scale changes.  
+>  
+> - For measuring text after truncation, direct use of the string length for truncation may lead to inaccuracies.  
+> This is because certain Unicode characters (for example, emojis) have code points with a length greater than 1, and  
+> truncating by string length can split these multi-code-point characters, resulting in incorrect text display or  
+> measurement errors. As such, you are advised to perform iterative truncation processing based on Unicode code  
 > points. For details, see [Example 2 in measureTextSize](arkts-arkui-measureutils-c.md#measuretextsize-1).
 
 **Since:** 12
+
+<!--Device-unnamed-export class MeasureUtils--><!--Device-unnamed-export class MeasureUtils-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,12 +38,13 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 getParagraphs(styledString: StyledString, options?: TextLayoutOptions): Array<Paragraph>
 ```
 
-Converts a styled string into an array of corresponding [Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraph-c.md)
-objects based on text layout options.
+Converts a styled string into an array of corresponding [Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraph-c.md)objects based on text layout options.
 
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MeasureUtils-getParagraphs(styledString: StyledString, options?: TextLayoutOptions): Array<Paragraph>--><!--Device-MeasureUtils-getParagraphs(styledString: StyledString, options?: TextLayoutOptions): Array<Paragraph>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,14 +52,14 @@ objects based on text layout options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | StyledString | Yes | Styled string to be converted. |
-| options | TextLayoutOptions | No | Text layout options. |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | Styled string to be converted. |
+| options | [TextLayoutOptions](arkts-arkui-textlayoutoptions-i.md) | No | Text layout options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Paragraph&gt; | Array of [Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraph-c.md) objects. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Paragraph> | Array of [Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraph-c.md) objects. |
 
 ## measureText
 
@@ -64,13 +67,12 @@ objects based on text layout options.
 measureText(options: MeasureOptions): number
 ```
 
-Measures the single-line display width of the specified text. For multi-line text (separated by newline characters
-**\n**), this API returns the width of the longest line.
+Measures the single-line display width of the specified text. For multi-line text (separated by newline characters **\n**), this API returns the width of the longest line.
 
-> **NOTE**
->
-> **measureText** always measures single-line text width. Layout constraints in **options** (**constraintWidth**,
-> **maxLines**, and more) do not affect results. For layout-constrained width measurement, use
+> **NOTE**  
+>  
+> **measureText** always measures single-line text width. Layout constraints in **options** (**constraintWidth**,  
+> **maxLines**, and more) do not affect results. For layout-constrained width measurement, use  
 > [measureTextSize](arkts-arkui-measureutils-c.md#measuretextsize-1).
 
 **Since:** 12
@@ -79,13 +81,15 @@ Measures the single-line display width of the specified text. For multi-line tex
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MeasureUtils-measureText(options: MeasureOptions): number--><!--Device-MeasureUtils-measureText(options: MeasureOptions): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | MeasureOptions | Yes | Options of the target text. |
+| options | [MeasureOptions](arkts-arkui-measureoptions-i.md) | Yes | Options of the target text. |
 
 **Return value:**
 
@@ -107,17 +111,19 @@ Measures the width and height of the given single-line text.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-MeasureUtils-measureTextSize(options: MeasureOptions): SizeOptions--><!--Device-MeasureUtils-measureTextSize(options: MeasureOptions): SizeOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | MeasureOptions | Yes | Options of the target text. |
+| options | [MeasureOptions](arkts-arkui-measureoptions-i.md) | Yes | Options of the target text. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SizeOptions | Width and height of the text.<br>**NOTE**<br>If **constraintWidth** is not specified, the floating-point value of the text width will be rounded up.<br>The return values for text width and height are both in px. |
+| [SizeOptions](arkts-arkui-sizeoptions-i.md) | Width and height of the text.<br>**NOTE**<br>If **constraintWidth** is not specified, the floating-point value of the text width will be rounded up.<br>The return values for text width and height are both in px. |
 

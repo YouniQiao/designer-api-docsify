@@ -16,13 +16,15 @@ Unsubscribe the attachment failure event.
 
 **Since:** 22
 
+<!--Device-inputMethod-function offAttachmentDidFail(callback?: Callback<AttachFailureReason>): void--><!--Device-inputMethod-function offAttachmentDidFail(callback?: Callback<AttachFailureReason>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AttachFailureReason&gt; | No | the callback is invoked only when the attachmenttriggered by the registrant's process fails. When subscriber unsubscribes all callback, this parametercan be left blank. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AttachFailureReason> | No | the callback is invoked only when the attachment triggered by the registrant's process fails. When subscriber unsubscribes all callback, this parameter can be left blank. |
 
 **Example**
 

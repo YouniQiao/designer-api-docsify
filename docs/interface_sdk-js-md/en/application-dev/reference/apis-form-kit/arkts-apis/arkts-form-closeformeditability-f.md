@@ -18,13 +18,15 @@ Closes the widget editing page.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-formProvider-function closeFormEditAbility(isMainPage?: boolean): void--><!--Device-formProvider-function closeFormEditAbility(isMainPage?: boolean): void-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isMainPage | boolean | No | Whether to close the main editing page. The value **true** means closing the mainediting page, and **false** means closing a non-main editing page.<br>Default value: **true**. |
+| isMainPage | boolean | No | Whether to close the main editing page. The value **true** means closing the main editing page, and **false** means closing a non-main editing page.<br>Default value: **true**. |
 
 **Error codes:**
 

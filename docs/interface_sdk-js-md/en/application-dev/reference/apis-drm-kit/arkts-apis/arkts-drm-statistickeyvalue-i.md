@@ -4,6 +4,8 @@ Used to indicate the statistic info.
 
 **Since:** 14
 
+<!--Device-drm-interface StatisticKeyValue--><!--Device-drm-interface StatisticKeyValue-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Statistic info name.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-StatisticKeyValue-name: string--><!--Device-StatisticKeyValue-name: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## value
@@ -41,6 +45,8 @@ Statistic info value.
 **Since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-StatisticKeyValue-value: string--><!--Device-StatisticKeyValue-value: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 

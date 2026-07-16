@@ -20,22 +20,24 @@ Enables the device administrator application to open a page for the BYOD adminis
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-adminManager-function startAdminProvision(admin: Want, type: AdminType, context: common.Context, parameters: Record<string, string>): void--><!--Device-adminManager-function startAdminProvision(admin: Want, type: AdminType, context: common.Context, parameters: Record<string, string>): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| type | AdminType | Yes | Type of the activated device administrator application. Only the **ADMIN_TYPE_BYOD**type is supported. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| type | [AdminType](arkts-mdm-admintype-e.md) | Yes | Type of the activated device administrator application. Only the **ADMIN_TYPE_BYOD** type is supported. |
 | context | common.Context | Yes | Context information of the administrator application. |
-| parameters | Record&lt;string, string&gt; | Yes | Custom parameters. The key value must contain **activateId** and mayoptionally include **customizedInfo** and **localDeactivationPolicy**.<br>- **activateId**: project activationID.<br>- **customizedInfo**: enterprise-defined information.<br>- **localDeactivationPolicy**: localdeactivation delay (unit: hour). This parameter is supported since API version 22&lt;!--RP1--&gt;&lt;!--RP1End--&gt;. |
+| parameters | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, string> | Yes | Custom parameters. The key value must contain **activateId** and may optionally include **customizedInfo** and **localDeactivationPolicy**.<br>- **activateId**: project activation ID.<br>- **customizedInfo**: enterprise-defined information.<br>- **localDeactivationPolicy**: local deactivation delay (unit: hour). This parameter is supported since API version 22&lt;!--RP1--&gt;&lt;!--RP1End--&gt;. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Example**

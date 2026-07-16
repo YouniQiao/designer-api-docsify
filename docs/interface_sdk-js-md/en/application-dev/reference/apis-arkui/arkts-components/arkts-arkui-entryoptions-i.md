@@ -4,6 +4,8 @@ Defines the options of Entry ClassDecorator.
 
 **Since:** 23
 
+<!--Device-unnamed-declare interface EntryOptions--><!--Device-unnamed-declare interface EntryOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## routeName
@@ -23,6 +25,8 @@ Named route name.
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-EntryOptions-routeName? : string--><!--Device-EntryOptions-routeName? : string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,6 +48,8 @@ LocalStorage to be passed.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-EntryOptions-storage? : LocalStorage--><!--Device-EntryOptions-storage? : LocalStorage-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## useSharedStorage
@@ -63,6 +69,8 @@ Determines whether to use the LocalStorage instance object returned by the Local
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-EntryOptions-useSharedStorage? : boolean--><!--Device-EntryOptions-useSharedStorage? : boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

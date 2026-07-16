@@ -2,6 +2,12 @@
 
 辅助功能
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+```
+
 ## 汇总
 
 ### 命名空间

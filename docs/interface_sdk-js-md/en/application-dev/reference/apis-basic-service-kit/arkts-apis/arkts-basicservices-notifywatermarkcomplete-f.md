@@ -20,6 +20,8 @@ Notify watermark complete.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-print-function notifyWatermarkComplete(jobId: string, result: WatermarkHandleResult): void--><!--Device-print-function notifyWatermarkComplete(jobId: string, result: WatermarkHandleResult): void-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
@@ -27,7 +29,7 @@ Notify watermark complete.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | jobId | string | Yes | Indicates the job ID.<br>Print job ID in preview. |
-| result | WatermarkHandleResult | Yes | Indicates the result.<br>Watermark processing results. |
+| result | [WatermarkHandleResult](arkts-basicservices-watermarkhandleresult-e.md) | Yes | Indicates the result.<br>Watermark processing results. |
 
 **Error codes:**
 

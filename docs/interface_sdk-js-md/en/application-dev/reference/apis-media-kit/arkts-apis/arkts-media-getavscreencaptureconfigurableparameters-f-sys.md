@@ -16,6 +16,8 @@ get Configurations which user can changes from AVScreenCapture server
 
 **Since:** 20
 
+<!--Device-media-function getAVScreenCaptureConfigurableParameters(sessionId: int): Promise<string>--><!--Device-media-function getAVScreenCaptureConfigurableParameters(sessionId: int): Promise<string>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
 **System API:** This is a system API.
@@ -30,7 +32,7 @@ get Configurations which user can changes from AVScreenCapture server
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns a configurable configuration item string. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns a configurable configuration item string. |
 
 **Error codes:**
 

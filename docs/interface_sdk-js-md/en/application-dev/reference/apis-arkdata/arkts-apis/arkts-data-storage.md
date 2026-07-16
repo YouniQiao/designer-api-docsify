@@ -1,12 +1,10 @@
 # @ohos.data.storage
 
-Lightweight storage provides applications with data processing capability and allows applications to perform
-lightweight data storage and query. Data is stored in key-value (KV) pairs. Keys are of the string type, and values
-can be of the number, string, or Boolean type.
+Lightweight storage provides applications with data processing capability and allows applications to perform lightweight data storage and query. Data is stored in key-value (KV) pairs. Keys are of the string type, and values can be of the number, string, or Boolean type.
 
 > **NOTE**
 
-> - The APIs of this module are no longer maintained since API version 9. You are advised to use
+> - The APIs of this module are no longer maintained since API version 9. You are advised to use  
 > [@ohos.data.preferences](arkts-data-preferences.md).
 
 **Since:** 6
@@ -14,6 +12,8 @@ can be of the number, string, or Boolean type.
 **Deprecated since:** 9
 
 **Substitutes:** preferences
+
+<!--Device-unnamed-declare namespace storage--><!--Device-unnamed-declare namespace storage-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 

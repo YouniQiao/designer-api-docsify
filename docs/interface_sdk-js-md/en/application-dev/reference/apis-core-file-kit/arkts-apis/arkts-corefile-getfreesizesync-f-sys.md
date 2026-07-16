@@ -19,6 +19,8 @@ Obtains the available space of the built-in storage, in bytes. This API returns 
 **Required permissions:** 
 - API version 10 - 14: ohos.permission.STORAGE_MANAGER
 
+<!--Device-storageStatistics-function getFreeSizeSync(): long--><!--Device-storageStatistics-function getFreeSizeSync(): long-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **System API:** This is a system API.

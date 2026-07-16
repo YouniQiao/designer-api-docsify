@@ -1,5 +1,11 @@
 # createDataProxyHandle
 
+## 导入模块
+
+```TypeScript
+import { dataShare } from '@kit.ArkData';
+```
+
 ## createDataProxyHandle
 
 ```TypeScript
@@ -12,19 +18,21 @@ function createDataProxyHandle(): Promise<DataProxyHandle>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-dataShare-function createDataProxyHandle(): Promise<DataProxyHandle>--><!--Device-dataShare-function createDataProxyHandle(): Promise<DataProxyHandle>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DataProxyHandle&gt; | Promise对象。返回DataProxyHandle实例。 |
+| Promise<DataProxyHandle> | Promise对象。返回DataProxyHandle实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is beingrestarted abnormally. |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 **示例：**
 

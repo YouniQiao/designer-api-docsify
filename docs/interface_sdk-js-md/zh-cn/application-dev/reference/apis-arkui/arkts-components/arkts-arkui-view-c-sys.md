@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class View--><!--Device-unnamed-declare class View-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -19,6 +21,8 @@ create(value: any): any
 **起始版本：** 9
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-View-create(value: any): any--><!--Device-View-create(value: any): any-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

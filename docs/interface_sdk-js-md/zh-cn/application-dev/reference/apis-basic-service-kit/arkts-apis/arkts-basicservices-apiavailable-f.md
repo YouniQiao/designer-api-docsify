@@ -1,17 +1,24 @@
 # apiAvailable
 
+## 导入模块
+
+```TypeScript
+import { deviceInfo } from '@kit.BasicServicesKit';
+```
+
 ## apiAvailable
 
 ```TypeScript
 function apiAvailable(version: string | number): boolean
 ```
 
-检查指定的API版本在当前设备上是否可用。
-此方法提供跨不同OpenHarmony/分布式操作系统版本的兼容性检查。它会根据输入格式和API版本范围自动选择合适的版本检查方法。
+检查指定的API版本在当前设备上是否可用。此方法提供跨不同OpenHarmony/分布式操作系统版本的兼容性检查。它会根据输入格式和API版本范围自动选择合适的版本检查方法。
 
 **起始版本：** 26.0.0
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-deviceInfo-function apiAvailable(version: string | number): boolean--><!--Device-deviceInfo-function apiAvailable(version: string | number): boolean-End-->
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 

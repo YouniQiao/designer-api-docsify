@@ -1,5 +1,11 @@
 # getDsdsMode（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## getDsdsMode
 
 ```TypeScript
@@ -12,6 +18,8 @@ Obtains the value of dsds mode.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getDsdsMode(callback: AsyncCallback<DsdsMode>): void--><!--Device-sim-function getDsdsMode(callback: AsyncCallback<DsdsMode>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ Obtains the value of dsds mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;DsdsMode&gt; | 是 | Indicates the callback forgetting one of the following dsds mode states:&lt;ul&gt;&lt;li&gt;{@code DsdsMode#DSDS_MODE_V2}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V3}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_TDM}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_DSDA}&lt;/ul&gt; |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DsdsMode> | 是 | Indicates the callback for getting one of the following dsds mode states:&lt;ul&gt;&lt;li&gt;{@code DsdsMode#DSDS_MODE_V2}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V3}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_TDM}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_DSDA}&lt;/ul&gt; |
 
 **错误码：**
 
@@ -29,7 +37,7 @@ Obtains the value of dsds mode.
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. |
-| [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect toservice. |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error. |
 
@@ -62,6 +70,8 @@ Obtains the value of dsds mode.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getDsdsMode(): Promise<DsdsMode>--><!--Device-sim-function getDsdsMode(): Promise<DsdsMode>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -70,7 +80,7 @@ Obtains the value of dsds mode.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DsdsMode&gt; | Returns one of the following dsds modestates:&lt;ul&gt;&lt;li&gt;{@code DsdsMode#DSDS_MODE_V2}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V3}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_TDM}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_DSDA}&lt;/ul&gt; |
+| Promise<DsdsMode> | Returns one of the following dsds mode states:&lt;ul&gt;&lt;li&gt;{@code DsdsMode#DSDS_MODE_V2}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V3}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_TDM}&lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_DSDA}&lt;/ul&gt; |
 
 **错误码：**
 
@@ -79,7 +89,7 @@ Obtains the value of dsds mode.
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. |
-| [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect toservice. |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error. |
 

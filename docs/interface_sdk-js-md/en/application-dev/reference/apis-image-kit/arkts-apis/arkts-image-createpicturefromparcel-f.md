@@ -14,12 +14,11 @@ function createPictureFromParcel(sequence: rpc.MessageSequence): Picture
 
 Creates a Picture object from a MessageSequence object.
 
-Images occupy a large amount of memory. When you finish using a Picture instance, call
-[release](arkts-image-picture-i.md#release-1) to free the memory promptly. Before releasing the
-instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no
-longer needed.
+Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-picture-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 13
+
+<!--Device-image-function createPictureFromParcel(sequence: rpc.MessageSequence): Picture--><!--Device-image-function createPictureFromParcel(sequence: rpc.MessageSequence): Picture-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -33,14 +32,14 @@ longer needed.
 
 | Type | Description |
 | --- | --- |
-| Picture | Picture object. |
+| [Picture](arkts-image-picture-i.md) | Picture object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types; 3.Parameter verification failed. |
-| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image uploadexception.3. Decode process exception. 4. Insufficient memory. |
+| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception.3. Decode process exception. 4. Insufficient memory. |
 
 **Example**
 

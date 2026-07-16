@@ -6,6 +6,8 @@ Defines the moving photo view attribute functions.
 
 **Since:** 12
 
+<!--Device-unnamed-declare class MovingPhotoViewAttribute extends CommonMethod<MovingPhotoViewAttribute>--><!--Device-unnamed-declare class MovingPhotoViewAttribute extends CommonMethod<MovingPhotoViewAttribute>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Sets playback strategy.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-MovingPhotoViewAttribute-setPlaybackStrategy(strategy: media.PlaybackStrategy): MovingPhotoViewAttribute--><!--Device-MovingPhotoViewAttribute-setPlaybackStrategy(strategy: media.PlaybackStrategy): MovingPhotoViewAttribute-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -40,7 +44,7 @@ Sets playback strategy.
 
 | Type | Description |
 | --- | --- |
-| MovingPhotoViewAttribute | @throws { BusinessError } 202 - Non-system applications are not allowed to use system APIs. |
+| [MovingPhotoViewAttribute](arkts-medialibrary-movingphotoviewattribute-c-sys.md) | @throws { BusinessError } 202 - Non-system applications are not allowed to use system APIs. |
 
 **Error codes:**
 

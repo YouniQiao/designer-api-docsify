@@ -1,5 +1,11 @@
 # getUserNonStopApps
 
+## 导入模块
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+```
+
 ## getUserNonStopApps
 
 ```TypeScript
@@ -14,19 +20,21 @@ function getUserNonStopApps(admin: Want): Array<common.ApplicationInstance>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-applicationManager-function getUserNonStopApps(admin: Want): Array<common.ApplicationInstance>--><!--Device-applicationManager-function getUserNonStopApps(admin: Want): Array<common.ApplicationInstance>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common.ApplicationInstance&gt; | Array of non-stoppable applications. |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<common.ApplicationInstance> | Array of non-stoppable applications. |
 
 **错误码：**
 

@@ -12,6 +12,8 @@ Represents a FrameNode of the **ListItem** type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-typeNode-type ListItem = TypedFrameNode<ListItemInterface, ListItemAttribute>--><!--Device-typeNode-type ListItem = TypedFrameNode<ListItemInterface, ListItemAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** TypedFrameNode<ListItemInterface, ListItemAttribute>

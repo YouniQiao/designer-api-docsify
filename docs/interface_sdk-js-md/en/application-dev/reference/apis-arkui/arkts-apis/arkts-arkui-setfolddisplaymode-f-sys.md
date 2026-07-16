@@ -16,6 +16,8 @@ Sets the display mode of the foldable device.
 
 **Since:** 10
 
+<!--Device-display-function setFoldDisplayMode(mode: FoldDisplayMode): void--><!--Device-display-function setFoldDisplayMode(mode: FoldDisplayMode): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Sets the display mode of the foldable device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | FoldDisplayMode | Yes | Display mode. |
+| mode | [FoldDisplayMode](arkts-arkui-folddisplaymode-e.md) | Yes | Display mode. |
 
 **Error codes:**
 
@@ -60,6 +62,8 @@ Sets the display mode of the foldable device, with the reason for the change spe
 
 **Since:** 19
 
+<!--Device-display-function setFoldDisplayMode(mode: FoldDisplayMode, reason: string): void--><!--Device-display-function setFoldDisplayMode(mode: FoldDisplayMode, reason: string): void-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
@@ -68,8 +72,8 @@ Sets the display mode of the foldable device, with the reason for the change spe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | FoldDisplayMode | Yes | Display mode. |
-| reason | string | Yes | Reason for changing the display mode. If this parameter is not set, an empty string isused by default. |
+| mode | [FoldDisplayMode](arkts-arkui-folddisplaymode-e.md) | Yes | Display mode. |
+| reason | string | Yes | Reason for changing the display mode. If this parameter is not set, an empty string is used by default. |
 
 **Error codes:**
 

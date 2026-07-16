@@ -18,6 +18,8 @@ Send system control command.The system automatically selects the recipient.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function sendSystemControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): void--><!--Device-avSession-function sendSystemControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Send system control command.The system automatically selects the recipient.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | AVControlCommand | Yes | The command to be sent. See {@link AVControlCommand} |
-| callback | AsyncCallback&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| command | [AVControlCommand](arkts-avsession-avcontrolcommand-i.md) | Yes | The command to be sent. See {@link AVControlCommand} |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -78,6 +80,8 @@ Send system control command.The system automatically selects the recipient.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
+<!--Device-avSession-function sendSystemControlCommand(command: AVControlCommand): Promise<void>--><!--Device-avSession-function sendSystemControlCommand(command: AVControlCommand): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -86,13 +90,13 @@ Send system control command.The system automatically selects the recipient.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | AVControlCommand | Yes | The command to be sent. See {@link AVControlCommand} |
+| command | [AVControlCommand](arkts-avsession-avcontrolcommand-i.md) | Yes | The command to be sent. See {@link AVControlCommand} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | void promise when executed successfully |
 
 **Error codes:**
 

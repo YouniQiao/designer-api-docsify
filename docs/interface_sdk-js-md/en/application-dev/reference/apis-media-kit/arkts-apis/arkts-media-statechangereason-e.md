@@ -1,9 +1,10 @@
 # StateChangeReason
 
-Enumerates the reasons for the state transition of the AVPlayer or AVRecorder instance. The enum value is reported
-together with **state**.
+Enumerates the reasons for the state transition of the AVPlayer or AVRecorder instance. The enum value is reported together with **state**.
 
 **Since:** 9
+
+<!--Device-media-enum StateChangeReason--><!--Device-media-enum StateChangeReason-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -19,6 +20,8 @@ State transition triggered by user behavior. It happens when a user or the clien
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-StateChangeReason-USER = 1--><!--Device-StateChangeReason-USER = 1-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## BACKGROUND
@@ -27,13 +30,13 @@ State transition triggered by user behavior. It happens when a user or the clien
 BACKGROUND = 2
 ```
 
-State transition caused by background system behavior. For example, if an application does not have the
-permission of Media Controller, the application is forcibly suspended or stopped by the system when it switches
-to the background.
+State transition caused by background system behavior. For example, if an application does not have the permission of Media Controller, the application is forcibly suspended or stopped by the system when it switches to the background.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-StateChangeReason-BACKGROUND = 2--><!--Device-StateChangeReason-BACKGROUND = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 

@@ -18,13 +18,15 @@ Get all media key systems supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-drm-function getMediaKeySystems(): MediaKeySystemDescription[]--><!--Device-drm-function getMediaKeySystems(): MediaKeySystemDescription[]-End-->
+
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MediaKeySystemDescription[] | The MediaKeySystem name and uuid info list. |
+| [MediaKeySystemDescription](arkts-drm-mediakeysystemdescription-i.md)[] | The MediaKeySystem name and uuid info list. |
 
 **Error codes:**
 

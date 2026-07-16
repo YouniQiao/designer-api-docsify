@@ -14,13 +14,13 @@ function createSymKeyGenerator(algName: string): SymKeyGenerator
 
 Creates a symmetric key generator instance with the specified algorithm.
 
-For details about the supported specifications, see
-[Symmetric Key Generation and Conversion Specifications](../../../../security/CryptoArchitectureKit/crypto-sym-key-generation-conversion-spec.md)
-.
+For details about the supported specifications, see [Symmetric Key Generation and Conversion Specifications](../../../../security/CryptoArchitectureKit/crypto-sym-key-generation-conversion-spec.md).
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-cryptoFramework-function createSymKeyGenerator(algName: string): SymKeyGenerator--><!--Device-cryptoFramework-function createSymKeyGenerator(algName: string): SymKeyGenerator-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.SymKey
@@ -30,13 +30,13 @@ For details about the supported specifications, see
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algName | string | Yes | Algorithm to be used by the **symKeyGenerator** instance.<br>For details, see**String Parameter** in[Symmetric Key Generation and Conversion Specifications](../../../../security/CryptoArchitectureKit/crypto-sym-key-generation-conversion-spec.md). |
+| algName | string | Yes | Algorithm to be used by the **symKeyGenerator** instance.<br>For details, see **String Parameter** in [Symmetric Key Generation and Conversion Specifications](../../../../security/CryptoArchitectureKit/crypto-sym-key-generation-conversion-spec.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SymKeyGenerator | **SymKeyGenerator** instance created. |
+| [SymKeyGenerator](arkts-cryptoarchitecture-symkeygenerator-i.md) | **SymKeyGenerator** instance created. |
 
 **Error codes:**
 

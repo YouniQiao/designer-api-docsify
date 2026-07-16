@@ -4,6 +4,8 @@ Provides the file information of a table item.
 
 **Since:** 10
 
+<!--Device-agent-interface FileSpec--><!--Device-agent-interface FileSpec-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## Modules to Import
@@ -18,12 +20,13 @@ import { request } from '@kit.BasicServicesKit';
 contentType?: string
 ```
 
-Content type of the file. The default value is the file name extension. This option is filled in the
-**Content-Type** field specified in the HTTP form.
+Content type of the file. The default value is the file name extension. This option is filled in the **Content-Type** field specified in the HTTP form.
 
 **Type:** string
 
 **Since:** 18
+
+<!--Device-FileSpec-contentType?: string--><!--Device-FileSpec-contentType?: string-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -41,6 +44,8 @@ Additional information. This parameter is not included in HTTP requests. The def
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-FileSpec-extras?: object--><!--Device-FileSpec-extras?: object-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## filename
@@ -56,6 +61,8 @@ File name. The default value is obtained from the file path.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-FileSpec-filename?: string--><!--Device-FileSpec-filename?: string-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -79,6 +86,8 @@ This API is deprecated since API version 18. You are advised to use **contentTyp
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-FileSpec-mimeType?: string--><!--Device-FileSpec-mimeType?: string-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## path
@@ -93,9 +102,7 @@ File path.
 
 Example: **./xxx/yyy/zzz.html** or **xxx/yyy/zzz.html**
 
-- Internal protocol path, which can be **internal://** or its subdirectory. **internal** indicates the cache
-directory of the caller (that is, the input **context**), and **internal://cache** corresponds to
-**context.cacheDir**.
+- Internal protocol path, which can be **internal://** or its subdirectory. **internal** indicates the cache directory of the caller (that is, the input **context**), and **internal://cache** corresponds to **context.cacheDir**.
 
 Example: **internal://cache/path/to/file.txt**
 
@@ -103,8 +110,7 @@ Example: **internal://cache/path/to/file.txt**
 
 Example: **./data/storage/el1/base/path/to/file.txt**
 
-- File protocol path, which must match the application bundle name. Only the **base** directory and its
-subdirectories are supported.
+- File protocol path, which must match the application bundle name. Only the **base** directory and its subdirectories are supported.
 
 Example: **file://com.example.test/data/storage/el2/base/file.txt**
 
@@ -117,6 +123,8 @@ Example: **file://media/Photo/path/to/file.img**. Only foreground tasks are supp
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-FileSpec-path: string--><!--Device-FileSpec-path: string-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 

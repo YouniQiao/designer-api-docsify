@@ -1,11 +1,10 @@
 # DataShareHelper (System API)
 
-Provides a **DataShareHelper** instance to access or manage data on the server. Before calling an API provided by
-**DataShareHelper**, you must create a **DataShareHelper** instance using
-[createDataShareHelper](arkts-arkdata-createdatasharehelper-f-sys.md#createdatasharehelper-1)
-.
+Provides a **DataShareHelper** instance to access or manage data on the server. Before calling an API provided by **DataShareHelper**, you must create a **DataShareHelper** instance using [createDataShareHelper](arkts-arkdata-createdatasharehelper-f-sys.md#createdatasharehelper-1).
 
 **Since:** 9
+
+<!--Device-dataShare-interface DataShareHelper--><!--Device-dataShare-interface DataShareHelper-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -25,12 +24,13 @@ addTemplate(uri: string, subscriberId: string, template: Template): void
 
 Adds a data template with the specified subscriber. Only silent access is supported.
 
-In silent scenarios, the total size of the **uri**, **subscriberId**, and **template** parameters passed in this
-API cannot exceed 200 KB. If the size exceeds the limit, the operation fails or an exception is thrown.
+In silent scenarios, the total size of the **uri**, **subscriberId**, and **template** parameters passed in this API cannot exceed 200 KB. If the size exceeds the limit, the operation fails or an exception is thrown.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-addTemplate(uri: string, subscriberId: string, template: Template): void--><!--Device-DataShareHelper-addTemplate(uri: string, subscriberId: string, template: Template): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -42,13 +42,13 @@ API cannot exceed 200 KB. If the size exceeds the limit, the operation fails or 
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to add. |
 | subscriberId | string | Yes | Unique ID of the template subscriber. |
-| template | Template | Yes | Data template to add. |
+| template | [Template](arkts-arkdata-template-i-sys.md) | Yes | Data template to add. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700011](../errorcode-datashare.md#15700011-uri-not-exist) | The URI is not exist. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
@@ -82,15 +82,15 @@ if (dataShareHelper != undefined) {
 batchInsert(uri: string, values: Array<ValuesBucket>, callback: AsyncCallback<number>): void
 ```
 
-Batch inserts data into the database. This API uses an asynchronous callback to return the result. Silent access
-is not supported currently.
+Batch inserts data into the database. This API uses an asynchronous callback to return the result. Silent access is not supported currently.
 
-In non-silent scenarios, the size of the **values** parameter and the **uri** parameter passed in this API cannot
-exceed 128 MB and 900 KB, respectively. Otherwise, the operation fails or an exception is thrown.
+In non-silent scenarios, the size of the **values** parameter and the **uri** parameter passed in this API cannot exceed 128 MB and 900 KB, respectively. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-batchInsert(uri: string, values: Array<ValuesBucket>, callback: AsyncCallback<int>): void--><!--Device-DataShareHelper-batchInsert(uri: string, values: Array<ValuesBucket>, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -101,14 +101,14 @@ exceed 128 MB and 900 KB, respectively. Otherwise, the operation fails or an exc
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to insert. |
-| values | Array&lt;ValuesBucket&gt; | Yes | Data to insert. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the number of data records inserted. Otherwise, **err** is an errorobject.The number of inserted data records is not returned if the APIs of the database in use (forexample, KVDB) do not support this return. |
+| values | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ValuesBucket> | Yes | Data to insert. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the number of data records inserted. Otherwise, **err** is an error object.The number of inserted data records is not returned if the APIs of the database in use (for example, KVDB) do not support this return. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
@@ -147,15 +147,15 @@ try {
 batchInsert(uri: string, values: Array<ValuesBucket>): Promise<number>
 ```
 
-Batch inserts data into the database. This API uses a promise to return the result. Silent access is not
-supported currently.
+Batch inserts data into the database. This API uses a promise to return the result. Silent access is not supported currently.
 
-In non-silent scenarios, the size of the **values** parameter and the **uri** parameter passed in this API cannot
-exceed 128 MB and 900 KB, respectively. Otherwise, the operation fails or an exception is thrown.
+In non-silent scenarios, the size of the **values** parameter and the **uri** parameter passed in this API cannot exceed 128 MB and 900 KB, respectively. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-batchInsert(uri: string, values: Array<ValuesBucket>): Promise<int>--><!--Device-DataShareHelper-batchInsert(uri: string, values: Array<ValuesBucket>): Promise<int>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -166,19 +166,19 @@ exceed 128 MB and 900 KB, respectively. Otherwise, the operation fails or an exc
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to insert. |
-| values | Array&lt;ValuesBucket&gt; | Yes | Data to insert. |
+| values | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ValuesBucket> | Yes | Data to insert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the number of data records inserted.The number of inserted data records is not returned if the APIs of the database in use(for example, KVDB) do not support this return. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the number of data records inserted.The number of inserted data records is not returned if the APIs of the database in use(for example, KVDB) do not support this return. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
@@ -215,16 +215,15 @@ try {
 batchUpdate(operations: Record<string, Array<UpdateOperation>>): Promise<Record<string, Array<number>>>
 ```
 
-Batch updates data in the database. The total number of objects for operations (that is, KV pairs of the objects)
-cannot exceed 4000. If the number exceeds 4000, the update will fail. The transaction of this API depends on the
-data provider. This API uses a promise to return the result. Silent access is not supported currently.
+Batch updates data in the database. The total number of objects for operations (that is, KV pairs of the objects)cannot exceed 4000. If the number exceeds 4000, the update will fail. The transaction of this API depends on the data provider. This API uses a promise to return the result. Silent access is not supported currently.
 
-In non-silent scenarios, the size of the **operations** parameter passed in this API called cannot exceed 900 KB.
-Otherwise, the operation fails or an exception is thrown.
+In non-silent scenarios, the size of the **operations** parameter passed in this API called cannot exceed 900 KB.Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-batchUpdate(operations: Record<string, Array<UpdateOperation>>): Promise<Record<string, Array<int>>>--><!--Device-DataShareHelper-batchUpdate(operations: Record<string, Array<UpdateOperation>>): Promise<Record<string, Array<int>>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -234,13 +233,13 @@ Otherwise, the operation fails or an exception is thrown.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| operations | Record&lt;string, Array&lt;UpdateOperation&gt;&gt; | Yes | Collection of the path of the data to update,update conditions, and new data. |
+| operations | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Array<UpdateOperation>> | Yes | Collection of the path of the data to update,update conditions, and new data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, Array&lt;number&gt;&gt;&gt; | Promise used to return an array of updated data records. The value**-1** means the update operation fails.The number of updated data records is not returned if the APIs of the database in use(for example, KVDB) do not support this return. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Record<string, Array<number>>> | Promise used to return an array of updated data records. The value **-1** means the update operation fails.The number of updated data records is not returned if the APIs of the database in use(for example, KVDB) do not support this return. |
 
 **Error codes:**
 
@@ -316,12 +315,13 @@ try {
 close(): Promise<void>
 ```
 
-Closes the **DataShareHelper** instance. After this API is called, the instance becomes invalid. This API uses a
-promise to return the result.
+Closes the **DataShareHelper** instance. After this API is called, the instance becomes invalid. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-close(): Promise<void>--><!--Device-DataShareHelper-close(): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -331,13 +331,13 @@ promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 19 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 19 and later |
 | [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. |
 
 **Example**
@@ -357,12 +357,13 @@ delTemplate(uri: string, subscriberId: string): void
 
 Deletes a data template based on the specified subscriber. Only silent access is supported.
 
-In silent scenarios, the total size of the **uri** and **subscriberId** parameters passed in this API cannot
-exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
+In silent scenarios, the total size of the **uri** and **subscriberId** parameters passed in this API cannot exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-delTemplate(uri: string, subscriberId: string): void--><!--Device-DataShareHelper-delTemplate(uri: string, subscriberId: string): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -379,7 +380,7 @@ exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700011](../errorcode-datashare.md#15700011-uri-not-exist) | The URI is not exist. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
@@ -415,15 +416,15 @@ delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callbac
 
 Deletes one or more data records from the database. This API uses an asynchronous callback to return the result.
 
-In non-silent scenarios, the total size of the **uri** and **predicates** parameters passed in this API cannot
-exceed 900 KB. Otherwise, the operation fails or an exception is thrown.
+In non-silent scenarios, the total size of the **uri** and **predicates** parameters passed in this API cannot exceed 900 KB. Otherwise, the operation fails or an exception is thrown.
 
-In silent scenarios, the total size of the **uri** and **predicates** parameters passed in this API cannot exceed
-200 KB. Otherwise, the operation fails or an exception is thrown.
+In silent scenarios, the total size of the **uri** and **predicates** parameters passed in this API cannot exceed200 KB. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<int>): void--><!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -434,14 +435,14 @@ In silent scenarios, the total size of the **uri** and **predicates** parameters
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to delete. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for deleting data.The predicatemethods supported by **delete()** vary depending on the database in use. For example, the KVDB supports only**inKeys**. If this parameter is left empty, the entire table will be deleted by default. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the number of deleted data records. Otherwise, **err** is an errorobject.The number of deleted data records is not returned if the APIs of the database in use (for example, KVDB) do not support this return. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for deleting data.The predicate methods supported by **delete()** vary depending on the database in use. For example, the KVDB supports only **inKeys**. If this parameter is left empty, the entire table will be deleted by default. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the number of deleted data records. Otherwise, **err** is an error object.The number of deleted data records is not returned if the APIs of the database in use (for example, KVDB) do not support this return. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
@@ -480,15 +481,15 @@ delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promis
 
 Deletes one or more data records from the database. This API uses a promise to return the result.
 
-In non-silent scenarios, the total size of the **uri** and **predicates** parameters passed in this API cannot
-exceed 900 KB. Otherwise, the operation fails or an exception is thrown.
+In non-silent scenarios, the total size of the **uri** and **predicates** parameters passed in this API cannot exceed 900 KB. Otherwise, the operation fails or an exception is thrown.
 
-In silent scenarios, the total size of the **uri** and **predicates** parameters passed in this API cannot exceed
-200 KB. Otherwise, the operation fails or an exception is thrown.
+In silent scenarios, the total size of the **uri** and **predicates** parameters passed in this API cannot exceed200 KB. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promise<int>--><!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promise<int>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -499,19 +500,19 @@ In silent scenarios, the total size of the **uri** and **predicates** parameters
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to delete. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for deleting data.The predicatemethods supported by **delete()** vary depending on the database in use. For example, the KVDB supports only**inKeys**. If this parameter is left empty, the entire table will be deleted by default. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for deleting data.The predicate methods supported by **delete()** vary depending on the database in use. For example, the KVDB supports only **inKeys**. If this parameter is left empty, the entire table will be deleted by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the number of deleted data records.The number of deleted data records is not returned if the APIs of the database in use(for example, KVDB) do not support this return. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the number of deleted data records.The number of deleted data records is not returned if the APIs of the database in use(for example, KVDB) do not support this return. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
@@ -546,12 +547,13 @@ try {
 denormalizeUri(uri: string, callback: AsyncCallback<string>): void
 ```
 
-Denormalizes a URI. This API uses an asynchronous callback to return the result. Silent access is not supported
-currently.
+Denormalizes a URI. This API uses an asynchronous callback to return the result. Silent access is not supported currently.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-denormalizeUri(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataShareHelper-denormalizeUri(uri: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -562,13 +564,13 @@ currently.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-c.md) to denormalize. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the URI obtained. If the original URI is returned, denormalizationis not required. If **null** is returned, denormalization is not supported. If the operation fails, **err**is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the URI obtained. If the original URI is returned, denormalization is not required. If **null** is returned, denormalization is not supported. If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types.<br>**Applicable version:** 12 and later |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
@@ -602,6 +604,8 @@ Denormalizes a URI. This API uses a promise to return the result. Silent access 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataShareHelper-denormalizeUri(uri: string): Promise<string>--><!--Device-DataShareHelper-denormalizeUri(uri: string): Promise<string>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **System API:** This is a system API.
@@ -616,13 +620,13 @@ Denormalizes a URI. This API uses a promise to return the result. Silent access 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the result. If the denormalization is successful, the URIobtained is returned. If no operation is required, the original URI is returned. If denormalization is notsupported, **null** is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the result. If the denormalization is successful, the URI obtained is returned. If no operation is required, the original URI is returned. If denormalization is not supported, **null** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types.<br>**Applicable version:** 12 and later |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
@@ -648,15 +652,15 @@ if (dataShareHelper != undefined) {
 getPublishedData(bundleName: string, callback: AsyncCallback<Array<PublishedItem>>): void
 ```
 
-Obtains the published data of an application. Only silent access is supported. This API uses an asynchronous
-callback to return the result.
+Obtains the published data of an application. Only silent access is supported. This API uses an asynchronous callback to return the result.
 
-In silent scenarios, the size of the **bundleName** parameter passed in this API cannot exceed 200 KB. Otherwise,
-the operation fails or an exception is thrown.
+In silent scenarios, the size of the **bundleName** parameter passed in this API cannot exceed 200 KB. Otherwise,the operation fails or an exception is thrown.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-getPublishedData(bundleName: string, callback: AsyncCallback<Array<PublishedItem>>): void--><!--Device-DataShareHelper-getPublishedData(bundleName: string, callback: AsyncCallback<Array<PublishedItem>>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -667,13 +671,13 @@ the operation fails or an exception is thrown.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Application to which the data belongs. |
-| callback | AsyncCallback&lt;Array&lt;PublishedItem&gt;&gt; | Yes | Callback used to return the published data obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<PublishedItem>> | Yes | Callback used to return the published data obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700012](../errorcode-datashare.md#15700012-data-area-not-exist) | The data area does not exist. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
@@ -698,15 +702,15 @@ if (dataShareHelper != undefined) {
 getPublishedData(bundleName: string): Promise<Array<PublishedItem>>
 ```
 
-Obtains the published data of an application. Only silent access is supported. This API uses a promise to return
-the result.
+Obtains the published data of an application. Only silent access is supported. This API uses a promise to return the result.
 
-In silent scenarios, the size of the **bundleName** parameter passed in this API cannot exceed 200 KB. Otherwise,
-the operation fails or an exception is thrown.
+In silent scenarios, the size of the **bundleName** parameter passed in this API cannot exceed 200 KB. Otherwise,the operation fails or an exception is thrown.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-getPublishedData(bundleName: string): Promise<Array<PublishedItem>>--><!--Device-DataShareHelper-getPublishedData(bundleName: string): Promise<Array<PublishedItem>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -722,13 +726,13 @@ the operation fails or an exception is thrown.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PublishedItem&gt;&gt; | Promise used to return the published data obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<PublishedItem>> | Promise used to return the published data obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700012](../errorcode-datashare.md#15700012-data-area-not-exist) | The data area does not exist. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
@@ -750,15 +754,15 @@ insert(uri: string, value: ValuesBucket, callback: AsyncCallback<number>): void
 
 Inserts a single data record into the database. This API uses an asynchronous callback to return the result.
 
-In non-silent scenarios, the total size of the **uri** and **value** parameters passed in this API cannot exceed
-900 KB. Otherwise, the operation fails or an exception is thrown.
+In non-silent scenarios, the total size of the **uri** and **value** parameters passed in this API cannot exceed900 KB. Otherwise, the operation fails or an exception is thrown.
 
-In silent scenarios, the total size of the **uri** and **value** parameters passed in this API cannot exceed 200
-KB. Otherwise, the operation fails or an exception is thrown.
+In silent scenarios, the total size of the **uri** and **value** parameters passed in this API cannot exceed 200KB. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-insert(uri: string, value: ValuesBucket, callback: AsyncCallback<int>): void--><!--Device-DataShareHelper-insert(uri: string, value: ValuesBucket, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -769,14 +773,14 @@ KB. Otherwise, the operation fails or an exception is thrown.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to insert. |
-| value | ValuesBucket | Yes | Value of the data to insert. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the index of the inserted data record. Otherwise, **err** is anerror object.The data index is not returned if the APIs of the database in use, for example, the key-value database (KVDB), do not support the return of indexes. |
+| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Value of the data to insert. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the index of the inserted data record. Otherwise, **err** is an error object.The data index is not returned if the APIs of the database in use, for example, the key-value database (KVDB), do not support the return of indexes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
@@ -824,15 +828,15 @@ insert(uri: string, value: ValuesBucket): Promise<number>
 
 Inserts a single data record into the database. This API uses a promise to return the result.
 
-In non-silent scenarios, the total size of the **uri** and **value** parameters passed in this API cannot exceed
-900 KB. Otherwise, the operation fails or an exception is thrown.
+In non-silent scenarios, the total size of the **uri** and **value** parameters passed in this API cannot exceed900 KB. Otherwise, the operation fails or an exception is thrown.
 
-In silent scenarios, the total size of the **uri** and **value** parameters passed in this API cannot exceed 200
-KB. Otherwise, the operation fails or an exception is thrown.
+In silent scenarios, the total size of the **uri** and **value** parameters passed in this API cannot exceed 200KB. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-insert(uri: string, value: ValuesBucket): Promise<int>--><!--Device-DataShareHelper-insert(uri: string, value: ValuesBucket): Promise<int>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -843,19 +847,19 @@ KB. Otherwise, the operation fails or an exception is thrown.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to insert. |
-| value | ValuesBucket | Yes | Value of the data to insert. |
+| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Value of the data to insert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the index of the inserted data record.The data index is not returned if the APIs of the database in use (for example, KVDB) do not support thisreturn. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the index of the inserted data record.The data index is not returned if the APIs of the database in use (for example, KVDB) do not support this return. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
@@ -899,13 +903,13 @@ try {
 normalizeUri(uri: string, callback: AsyncCallback<string>): void
 ```
 
-Normalizes a **DataShare** URI. The **DataShare** URI can be used only by the local device, but the normalized
-URI can be used across devices. This API uses an asynchronous callback to return the result. Silent access is not
-supported currently.
+Normalizes a **DataShare** URI. The **DataShare** URI can be used only by the local device, but the normalized URI can be used across devices. This API uses an asynchronous callback to return the result. Silent access is not supported currently.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-normalizeUri(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataShareHelper-normalizeUri(uri: string, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -916,13 +920,13 @@ supported currently.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-c.md) to normalize. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the normalized URI (if **null** is returned, URI normalization isnot supported). Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the normalized URI (if **null** is returned, URI normalization is not supported). Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types.<br>**Applicable version:** 12 and later |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
@@ -950,13 +954,13 @@ if (dataShareHelper != undefined) {
 normalizeUri(uri: string): Promise<string>
 ```
 
-Normalizes a **DataShare** URI. The **DataShare** URI can be used only by the local device, but the normalized
-URI can be used across devices. This API uses a promise to return the result. Silent access is not supported
-currently.
+Normalizes a **DataShare** URI. The **DataShare** URI can be used only by the local device, but the normalized URI can be used across devices. This API uses a promise to return the result. Silent access is not supported currently.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-normalizeUri(uri: string): Promise<string>--><!--Device-DataShareHelper-normalizeUri(uri: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -972,13 +976,13 @@ currently.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the result. If URI normalization is supported, the normalizedURI is returned. Otherwise, **null** is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the result. If URI normalization is supported, the normalized URI is returned. Otherwise, **null** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types.<br>**Applicable version:** 12 and later |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
@@ -1004,15 +1008,15 @@ if (dataShareHelper != undefined) {
 notifyChange(uri: string, callback: AsyncCallback<void>): void
 ```
 
-Notifies the registered observer of data changes. This API uses an asynchronous callback to return the result.
-Silent access is not supported currently.
+Notifies the registered observer of data changes. This API uses an asynchronous callback to return the result.Silent access is not supported currently.
 
-In non-silent scenarios, the size of the **uri** parameter passed in this API called cannot exceed 200 KB.
-Otherwise, the operation fails or an exception is thrown.
+In non-silent scenarios, the size of the **uri** parameter passed in this API called cannot exceed 200 KB.Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-notifyChange(uri: string, callback: AsyncCallback<void>): void--><!--Device-DataShareHelper-notifyChange(uri: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1023,13 +1027,13 @@ Otherwise, the operation fails or an exception is thrown.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the observer is notified of thedata changes, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the observer is notified of the data changes, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Mandatory parameters are left unspecified.<br>**Applicable version:** 12 and later |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
@@ -1051,15 +1055,15 @@ if (dataShareHelper != undefined) {
 notifyChange(uri: string): Promise<void>
 ```
 
-Notifies the registered observer of data changes. This API uses a promise to return the result. Silent access is
-not supported currently.
+Notifies the registered observer of data changes. This API uses a promise to return the result. Silent access is not supported currently.
 
-In non-silent scenarios, the size of the **uri** parameter passed in this API called cannot exceed 200 KB.
-Otherwise, the operation fails or an exception is thrown.
+In non-silent scenarios, the size of the **uri** parameter passed in this API called cannot exceed 200 KB.Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-notifyChange(uri: string): Promise<void>--><!--Device-DataShareHelper-notifyChange(uri: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1075,13 +1079,13 @@ Otherwise, the operation fails or an exception is thrown.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Mandatory parameters are left unspecified.<br>**Applicable version:** 12 and later |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
@@ -1101,15 +1105,15 @@ if (dataShareHelper != undefined) {
 notifyChange(data: ChangeInfo): Promise<void>
 ```
 
-Notifies the observer of the data change of the specified URI. This API uses a promise to return the result.
-Silent access is not supported currently.
+Notifies the observer of the data change of the specified URI. This API uses a promise to return the result.Silent access is not supported currently.
 
-In non-silent scenarios, the size of the **data** parameter passed in this API called cannot exceed 200 KB.
-Otherwise, the operation fails or an exception is thrown.
+In non-silent scenarios, the size of the **data** parameter passed in this API called cannot exceed 200 KB.Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-notifyChange(data: ChangeInfo): Promise<void>--><!--Device-DataShareHelper-notifyChange(data: ChangeInfo): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1119,13 +1123,13 @@ Otherwise, the operation fails or an exception is thrown.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | ChangeInfo | Yes | Information about the data change type, URI of the data changed, and changed data. |
+| data | [ChangeInfo](arkts-arkdata-changeinfo-i.md) | Yes | Information about the data change type, URI of the data changed, and changed data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1160,12 +1164,13 @@ if (dataShareHelper != undefined) {
 off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void
 ```
 
-Unsubscribes from the data change of the specified URI. This API corresponds to the
-[on](arkts-arkdata-datasharehelper-i-sys.md#on-1) API.
+Unsubscribes from the data change of the specified URI. This API corresponds to the [on](arkts-arkdata-datasharehelper-i-sys.md#on-1) API.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void--><!--Device-DataShareHelper-off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1175,15 +1180,15 @@ Unsubscribes from the data change of the specified URI. This API corresponds to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'dataChange' | Yes | Event/callback type. The value is **'dataChange'**, which indicates the datachange. |
+| type | 'dataChange' | Yes | Event/callback type. The value is **'dataChange'**, which indicates the data change. |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | AsyncCallback&lt;void&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**,or left empty, this API unregisters all callbacks for the specified URI. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | No | Callback to unregister. If this parameter is **undefined**, **null**,or left empty, this API unregisters all callbacks for the specified URI. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types.<br>**Applicable version:** 12 and later |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
@@ -1207,13 +1212,13 @@ if (dataShareHelper != undefined) {
 off(event: 'dataChange', type:SubscriptionType, uri: string, callback?: AsyncCallback<ChangeInfo>): void
 ```
 
-Unsubscribes from the data change of the specified URI. This API corresponds to the
-[on](arkts-arkdata-datasharehelper-i-sys.md#on-2)
-API.
+Unsubscribes from the data change of the specified URI. This API corresponds to the [on](arkts-arkdata-datasharehelper-i-sys.md#on-2)API.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-off(event: 'dataChange', type:SubscriptionType, uri: string, callback?: AsyncCallback<ChangeInfo>): void--><!--Device-DataShareHelper-off(event: 'dataChange', type:SubscriptionType, uri: string, callback?: AsyncCallback<ChangeInfo>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1223,10 +1228,10 @@ API.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'dataChange' | Yes | Event/callback type. The value is **'dataChange'**, which indicates the datachange. |
-| type | SubscriptionType | Yes | Subscription type. |
+| event | 'dataChange' | Yes | Event/callback type. The value is **'dataChange'**, which indicates the data change. |
+| type | [SubscriptionType](arkts-arkdata-subscriptiontype-e-sys.md) | Yes | Subscription type. |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | AsyncCallback&lt;ChangeInfo&gt; | No | Callback to unregister. If this parameter is **undefined**,**null**, or left empty, this API unregisters all callbacks for the specified URI. If this parameter isspecified, the callback must be the one registered in[on('datachange')](arkts-arkdata-datasharehelper-i-sys.md#on-2). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ChangeInfo> | No | Callback to unregister. If this parameter is **undefined**,**null**, or left empty, this API unregisters all callbacks for the specified URI. If this parameter is specified, the callback must be the one registered in [on('datachange')](arkts-arkdata-datasharehelper-i-sys.md#on-2). |
 
 **Error codes:**
 
@@ -1263,12 +1268,23 @@ off(
      ): Array<OperationResult>
 ```
 
-Unsubscribes from the changes of the data corresponding to the specified URI and template. Only silent access is
-supported.
+Unsubscribes from the changes of the data corresponding to the specified URI and template. Only silent access is supported.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-off(
+       type: 'rdbDataChange',
+       uris: Array<string>,
+       templateId: TemplateId,
+       callback?: AsyncCallback<RdbDataChangeNode>
+     ): Array<OperationResult>--><!--Device-DataShareHelper-off(
+       type: 'rdbDataChange',
+       uris: Array<string>,
+       templateId: TemplateId,
+       callback?: AsyncCallback<RdbDataChangeNode>
+     ): Array<OperationResult>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1278,22 +1294,22 @@ supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'rdbDataChange' | Yes | Event type. The value is **rdbDataChange**, which indicates the change of theRDB data. |
-| uris | Array&lt;string&gt; | Yes | URIs of the target data. |
-| templateId | TemplateId | Yes | ID of the template that triggers the callback. |
-| callback | AsyncCallback&lt;RdbDataChangeNode&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
+| type | 'rdbDataChange' | Yes | Event type. The value is **rdbDataChange**, which indicates the change of the RDB data. |
+| uris | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | URIs of the target data. |
+| templateId | [TemplateId](arkts-arkdata-templateid-i-sys.md) | Yes | ID of the template that triggers the callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<RdbDataChangeNode> | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;OperationResult&gt; | Returns the operation result. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<OperationResult> | Returns the operation result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
@@ -1325,6 +1341,18 @@ Unsubscribes from the change of the published data. Only silent access is suppor
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DataShareHelper-off(
+       type: 'publishedDataChange',
+       uris: Array<string>,
+       subscriberId: string,
+       callback?: AsyncCallback<PublishedDataChangeNode>
+     ): Array<OperationResult>--><!--Device-DataShareHelper-off(
+       type: 'publishedDataChange',
+       uris: Array<string>,
+       subscriberId: string,
+       callback?: AsyncCallback<PublishedDataChangeNode>
+     ): Array<OperationResult>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **System API:** This is a system API.
@@ -1333,22 +1361,22 @@ Unsubscribes from the change of the published data. Only silent access is suppor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'publishedDataChange' | Yes | Event type. The value is **publishedDataChange**, which indicates thechange of the published data. |
-| uris | Array&lt;string&gt; | Yes | URIs of the target data. |
+| type | 'publishedDataChange' | Yes | Event type. The value is **publishedDataChange**, which indicates the change of the published data. |
+| uris | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | URIs of the target data. |
 | subscriberId | string | Yes | Subscriber ID of the callback. |
-| callback | AsyncCallback&lt;PublishedDataChangeNode&gt; | No | Callback to unregister. If this parameter is**undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<PublishedDataChangeNode> | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;OperationResult&gt; | Returns the operation result. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<OperationResult> | Returns the operation result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
@@ -1374,18 +1402,15 @@ if (dataShareHelper != undefined) {
 on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
 ```
 
-Subscribes to the data change of the specified URI. After an observer is registered, the subscriber will receive
-a notification when the **notifyChange** API is called. This API uses an asynchronous callback to return the
-result. This function does not support cross-user notification subscription. An application can subscribe to a
-single URI for a maximum of 51 times.
+Subscribes to the data change of the specified URI. After an observer is registered, the subscriber will receive a notification when the **notifyChange** API is called. This API uses an asynchronous callback to return the result. This function does not support cross-user notification subscription. An application can subscribe to a single URI for a maximum of 51 times.
 
-Notification triggering: In non-silent scenarios, a notification is published if the
-[notifyChange](arkts-arkdata-datasharehelper-i-sys.md#notifychange-2) method is called. In silent scenarios,
-a notification is automatically published if data is modified via silent access.
+Notification triggering: In non-silent scenarios, a notification is published if the [notifyChange](arkts-arkdata-datasharehelper-i-sys.md#notifychange-2) method is called. In silent scenarios,a notification is automatically published if data is modified via silent access.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void--><!--Device-DataShareHelper-on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1397,13 +1422,13 @@ a notification is automatically published if data is modified via silent access.
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | Event/callback type. The value is **dataChange**, which indicates the data change. |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the data is changed, **err** is**undefined**. Otherwise, this callback is not invoked or **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the data is changed, **err** is **undefined**. Otherwise, this callback is not invoked or **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types.<br>**Applicable version:** 12 and later |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
@@ -1426,20 +1451,15 @@ if (dataShareHelper !== undefined) {
 on(event: 'dataChange', type:SubscriptionType, uri: string, callback: AsyncCallback<ChangeInfo>): void
 ```
 
-Subscribes to the data change of the specified URI. After a change notification is registered, the subscriber
-will receive a notification when the **notifyChange** API is called. The change notification contains the data
-change type, URI of the data changed, and the changed data. This API uses an asynchronous callback to return the
-result. This function does not support cross-user notification subscription. An application can subscribe to a
-single URI for a maximum of 51 times.
+Subscribes to the data change of the specified URI. After a change notification is registered, the subscriber will receive a notification when the **notifyChange** API is called. The change notification contains the data change type, URI of the data changed, and the changed data. This API uses an asynchronous callback to return the result. This function does not support cross-user notification subscription. An application can subscribe to a single URI for a maximum of 51 times.
 
-Notification triggering: In non-silent scenarios, a notification is published if the
-[notifyChange](arkts-arkdata-datasharehelper-i-sys.md#notifychange-3) method is called. In silent
-scenarios, a notification is automatically published if data is modified via silent access, but **changeInfo** in
-the callback is invalid.
+Notification triggering: In non-silent scenarios, a notification is published if the [notifyChange](arkts-arkdata-datasharehelper-i-sys.md#notifychange-3) method is called. In silent scenarios, a notification is automatically published if data is modified via silent access, but **changeInfo** in the callback is invalid.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-on(event: 'dataChange', type:SubscriptionType, uri: string, callback: AsyncCallback<ChangeInfo>): void--><!--Device-DataShareHelper-on(event: 'dataChange', type:SubscriptionType, uri: string, callback: AsyncCallback<ChangeInfo>): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1449,10 +1469,10 @@ the callback is invalid.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'dataChange' | Yes | Event/callback type. The value is **dataChange**, which indicates the datachange. |
-| type | SubscriptionType | Yes | Subscription type. |
+| event | 'dataChange' | Yes | Event/callback type. The value is **dataChange**, which indicates the data change. |
+| type | [SubscriptionType](arkts-arkdata-subscriptiontype-e-sys.md) | Yes | Subscription type. |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | AsyncCallback&lt;ChangeInfo&gt; | Yes | Callback to be invoked when data is changed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ChangeInfo> | Yes | Callback to be invoked when data is changed. |
 
 **Error codes:**
 
@@ -1488,12 +1508,23 @@ on(
      ): Array<OperationResult>
 ```
 
-Subscribes to the changes of the data corresponding to the specified URI and template. Only silent access is
-supported. This function does not support cross-user notification subscription.
+Subscribes to the changes of the data corresponding to the specified URI and template. Only silent access is supported. This function does not support cross-user notification subscription.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-on(
+       type: 'rdbDataChange',
+       uris: Array<string>,
+       templateId: TemplateId,
+       callback: AsyncCallback<RdbDataChangeNode>
+     ): Array<OperationResult>--><!--Device-DataShareHelper-on(
+       type: 'rdbDataChange',
+       uris: Array<string>,
+       templateId: TemplateId,
+       callback: AsyncCallback<RdbDataChangeNode>
+     ): Array<OperationResult>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1503,22 +1534,22 @@ supported. This function does not support cross-user notification subscription.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'rdbDataChange' | Yes | Event type. The value is **rdbDataChange**, which indicates the change of theRDB data. If **type** is any other value, there is no response to this API. |
-| uris | Array&lt;string&gt; | Yes | URIs of the target data. |
-| templateId | TemplateId | Yes | ID of the template that triggers the callback. |
-| callback | AsyncCallback&lt;RdbDataChangeNode&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is notinvoked or **err** is an error object. |
+| type | 'rdbDataChange' | Yes | Event type. The value is **rdbDataChange**, which indicates the change of the RDB data. If **type** is any other value, there is no response to this API. |
+| uris | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | URIs of the target data. |
+| templateId | [TemplateId](arkts-arkdata-templateid-i-sys.md) | Yes | ID of the template that triggers the callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<RdbDataChangeNode> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is not invoked or **err** is an error object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;OperationResult&gt; | Returns the operation result. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<OperationResult> | Returns the operation result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
@@ -1559,12 +1590,23 @@ on(
      ): Array<OperationResult>
 ```
 
-Subscribes to the change of the published data. Only silent access is supported. This function does not support
-cross-user notification subscription.
+Subscribes to the change of the published data. Only silent access is supported. This function does not support cross-user notification subscription.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-on(
+       type: 'publishedDataChange',
+       uris: Array<string>,
+       subscriberId: string,
+       callback: AsyncCallback<PublishedDataChangeNode>
+     ): Array<OperationResult>--><!--Device-DataShareHelper-on(
+       type: 'publishedDataChange',
+       uris: Array<string>,
+       subscriberId: string,
+       callback: AsyncCallback<PublishedDataChangeNode>
+     ): Array<OperationResult>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1574,22 +1616,22 @@ cross-user notification subscription.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'publishedDataChange' | Yes | Event type. The value is **publishedDataChange**, which indicates thechange of the published data. |
-| uris | Array&lt;string&gt; | Yes | URIs of the target data. |
+| type | 'publishedDataChange' | Yes | Event type. The value is **publishedDataChange**, which indicates the change of the published data. |
+| uris | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | URIs of the target data. |
 | subscriberId | string | Yes | Subscriber ID of the callback. |
-| callback | AsyncCallback&lt;PublishedDataChangeNode&gt; | Yes | Callback used to return the result. If the operationis successful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is notinvoked or **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<PublishedDataChangeNode> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is not invoked or **err** is an error object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;OperationResult&gt; | Returns the operation result. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<OperationResult> | Returns the operation result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
@@ -1630,16 +1672,25 @@ publish(
      ): void
 ```
 
-Publishes data to the database. You should pass in the version of the data to be published. If the passed version
-is later than the version recorded in the current database, the operation is successful. Only silent access is
-supported. This API uses an asynchronous callback to return the result.
+Publishes data to the database. You should pass in the version of the data to be published. If the passed version is later than the version recorded in the current database, the operation is successful. Only silent access is supported. This API uses an asynchronous callback to return the result.
 
-In silent scenarios, the total size of the **data** and **bundleName** parameters passed in this API cannot
-exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
+In silent scenarios, the total size of the **data** and **bundleName** parameters passed in this API cannot exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-publish(
+       data: Array<PublishedItem>,
+       bundleName: string,
+       version: int,
+       callback: AsyncCallback<Array<OperationResult>>
+     ): void--><!--Device-DataShareHelper-publish(
+       data: Array<PublishedItem>,
+       bundleName: string,
+       version: int,
+       callback: AsyncCallback<Array<OperationResult>>
+     ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1649,16 +1700,16 @@ exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Array&lt;PublishedItem&gt; | Yes | Data to publish. |
-| bundleName | string | Yes | Application of the data to publish. This parameter is valid only for the privatedata published. Only the application can read the data. |
-| version | number | Yes | Version of the data to publish. A larger value indicates a later version. If the versionof the data published is earlier than that of the data in the database, the data in the database will not beupdated. |
-| callback | AsyncCallback&lt;Array&lt;OperationResult&gt;&gt; | Yes | Callback used to return the result. If data ispublished, **err** is **undefined**, and **result** is the data publish result. Otherwise, this callback isnot triggered or **err** is an error object. |
+| data | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PublishedItem> | Yes | Data to publish. |
+| bundleName | string | Yes | Application of the data to publish. This parameter is valid only for the private data published. Only the application can read the data. |
+| version | number | Yes | Version of the data to publish. A larger value indicates a later version. If the version of the data published is earlier than that of the data in the database, the data in the database will not be updated. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<OperationResult>> | Yes | Callback used to return the result. If data is published, **err** is **undefined**, and **result** is the data publish result. Otherwise, this callback is not triggered or **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700012](../errorcode-datashare.md#15700012-data-area-not-exist) | The data area is not exist. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
@@ -1695,15 +1746,23 @@ publish(
      ): void
 ```
 
-Publishes data to the database. Only silent access is supported. This API uses an asynchronous callback to return
-the result.
+Publishes data to the database. Only silent access is supported. This API uses an asynchronous callback to return the result.
 
-In silent scenarios, the total size of the **data** and **bundleName** parameters passed in this API cannot
-exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
+In silent scenarios, the total size of the **data** and **bundleName** parameters passed in this API cannot exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-publish(
+       data: Array<PublishedItem>,
+       bundleName: string,
+       callback: AsyncCallback<Array<OperationResult>>
+     ): void--><!--Device-DataShareHelper-publish(
+       data: Array<PublishedItem>,
+       bundleName: string,
+       callback: AsyncCallback<Array<OperationResult>>
+     ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1713,15 +1772,15 @@ exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Array&lt;PublishedItem&gt; | Yes | Data to publish. |
-| bundleName | string | Yes | Application of the data to publish. This parameter is valid only for the privatedata published. Only the application can read the data. |
-| callback | AsyncCallback&lt;Array&lt;OperationResult&gt;&gt; | Yes | Callback used to return the result. If data ispublished, **err** is **undefined**, and **result** is the data publish result. Otherwise, this callback isnot triggered or **err** is an error object. |
+| data | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PublishedItem> | Yes | Data to publish. |
+| bundleName | string | Yes | Application of the data to publish. This parameter is valid only for the private data published. Only the application can read the data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<OperationResult>> | Yes | Callback used to return the result. If data is published, **err** is **undefined**, and **result** is the data publish result. Otherwise, this callback is not triggered or **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700012](../errorcode-datashare.md#15700012-data-area-not-exist) | The data area is not exist. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
@@ -1750,16 +1809,15 @@ if (dataShareHelper != undefined) {
 publish(data: Array<PublishedItem>, bundleName: string, version?: number): Promise<Array<OperationResult>>
 ```
 
-Publishes data to the database. You should pass in the version of the data to be published. If the passed version
-is later than the version recorded in the current database, the operation is successful. Only silent access is
-supported. This API uses a promise to return the result.
+Publishes data to the database. You should pass in the version of the data to be published. If the passed version is later than the version recorded in the current database, the operation is successful. Only silent access is supported. This API uses a promise to return the result.
 
-In silent scenarios, the total size of the **data** and **bundleName** parameters passed in this API cannot
-exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
+In silent scenarios, the total size of the **data** and **bundleName** parameters passed in this API cannot exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-publish(data: Array<PublishedItem>, bundleName: string, version?: int): Promise<Array<OperationResult>>--><!--Device-DataShareHelper-publish(data: Array<PublishedItem>, bundleName: string, version?: int): Promise<Array<OperationResult>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1769,21 +1827,21 @@ exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Array&lt;PublishedItem&gt; | Yes | Data to publish. |
-| bundleName | string | Yes | Application of the data to publish. This parameter is valid only for the privatedata published. Only the application can read the data. |
-| version | number | No | Version of the data to publish. A larger value indicates a later version. If the versionof the data published is earlier than that of the data in the database, the data in the database will not beupdated. If the data version is not checked, leave this parameter unspecified. |
+| data | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PublishedItem> | Yes | Data to publish. |
+| bundleName | string | Yes | Application of the data to publish. This parameter is valid only for the private data published. Only the application can read the data. |
+| version | number | No | Version of the data to publish. A larger value indicates a later version. If the version of the data published is earlier than that of the data in the database, the data in the database will not be updated. If the data version is not checked, leave this parameter unspecified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;OperationResult&gt;&gt; | Returns the operation result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<OperationResult>> | Returns the operation result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700012](../errorcode-datashare.md#15700012-data-area-not-exist) | The data area is not exist. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
@@ -1814,23 +1872,27 @@ query(
 
 Queries data in the database. This API uses an asynchronous callback to return the result.
 
-In non-silent scenarios, the size of the **predicates** parameter and the total size of the **uri** and
-**columns** parameters passed in this API cannot exceed 128 MB and 200 KB, respectively. Otherwise, the operation
-fails or an exception is thrown.
+In non-silent scenarios, the size of the **predicates** parameter and the total size of the **uri** and **columns** parameters passed in this API cannot exceed 128 MB and 200 KB, respectively. Otherwise, the operation fails or an exception is thrown.
 
-In silent scenarios, the total size of the **uri**, **predicates**, and **columns** parameters passed in this API
-cannot exceed 200 KB. If the size exceeds the limit, the operation fails or an exception is thrown.
+In silent scenarios, the total size of the **uri**, **predicates**, and **columns** parameters passed in this API cannot exceed 200 KB. If the size exceeds the limit, the operation fails or an exception is thrown.
 
-When this API is used to query database data, if the query content exceeds the resource limit, the operation
-fails and an error is returned. You can retry the operation based on the scenario. For details about the resource
-limit, see [Silent Access via DatamgrService](../../../../database/share-data-by-silent-access-sys.md#constraints)
-and
-[Sharing Data Using DataShareExtensionAbility](../../../../database/share-data-by-datashareextensionability-sys.md#constraints)
-.
+When this API is used to query database data, if the query content exceeds the resource limit, the operation fails and an error is returned. You can retry the operation based on the scenario. For details about the resource limit, see [Silent Access via DatamgrService](../../../../database/share-data-by-silent-access-sys.md#constraints)and [Sharing Data Using DataShareExtensionAbility](../../../../database/share-data-by-datashareextensionability-sys.md#constraints).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-query(
+       uri: string,
+       predicates: dataSharePredicates.DataSharePredicates,
+       columns: Array<string>,
+       callback: AsyncCallback<DataShareResultSet>
+     ): void--><!--Device-DataShareHelper-query(
+       uri: string,
+       predicates: dataSharePredicates.DataSharePredicates,
+       columns: Array<string>,
+       callback: AsyncCallback<DataShareResultSet>
+     ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1841,15 +1903,15 @@ and
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to query. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for querying data.The predicatemethods supported by **query()** vary depending on the database used. For example, the KVDB supports only**inKeys** and **prefixKey**. If this parameter is left empty, the entire table will be queried by default. |
-| columns | Array&lt;string&gt; | Yes | Column to query. If this parameter is left empty, all columns will be queried. |
-| callback | AsyncCallback&lt;DataShareResultSet&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined** and **data** is the result set obtained. Otherwise, **err** is an errorobject. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for querying data.The predicate methods supported by **query()** vary depending on the database used. For example, the KVDB supports only **inKeys** and **prefixKey**. If this parameter is left empty, the entire table will be queried by default. |
+| columns | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Column to query. If this parameter is left empty, all columns will be queried. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DataShareResultSet> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the result set obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
@@ -1893,24 +1955,25 @@ query(
 
 Queries data in the database. This API uses a promise to return the result.
 
-In non-silent scenarios, the size of the **predicates** parameter and the total size of the **uri** and
-**columns** parameters passed in this API cannot exceed 128 MB and 200 KB, respectively. Otherwise, the operation
-fails or an exception is thrown.
+In non-silent scenarios, the size of the **predicates** parameter and the total size of the **uri** and **columns** parameters passed in this API cannot exceed 128 MB and 200 KB, respectively. Otherwise, the operation fails or an exception is thrown.
 
-In silent scenarios, the total size of the **uri**, **predicates**, and **columns** parameters passed in this API
-cannot exceed 200 KB. If the size exceeds the limit, the operation fails or an exception is thrown.
+In silent scenarios, the total size of the **uri**, **predicates**, and **columns** parameters passed in this API cannot exceed 200 KB. If the size exceeds the limit, the operation fails or an exception is thrown.
 
-When this API is used to query database data, if the query content exceeds the resource limit, the operation
-fails and an error is returned. You can retry the operation based on the scenario. For details about the resource
-limit, see
-[Silent Access via DatamgrService (ArkTS) (for System Applications Only)](../../../../database/share-data-by-silent-access-sys.md#constraints)
-and
-[Sharing Data Using DataShareExtensionAbility (ArkTS) (for System Applications Only)](../../../../database/share-data-by-datashareextensionability-sys.md#constraints)
-.
+When this API is used to query database data, if the query content exceeds the resource limit, the operation fails and an error is returned. You can retry the operation based on the scenario. For details about the resource limit, see [Silent Access via DatamgrService (ArkTS) (for System Applications Only)](../../../../database/share-data-by-silent-access-sys.md#constraints)and [Sharing Data Using DataShareExtensionAbility (ArkTS) (for System Applications Only)](../../../../database/share-data-by-datashareextensionability-sys.md#constraints).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-query(
+       uri: string,
+       predicates: dataSharePredicates.DataSharePredicates,
+       columns: Array<string>
+     ): Promise<DataShareResultSet>--><!--Device-DataShareHelper-query(
+       uri: string,
+       predicates: dataSharePredicates.DataSharePredicates,
+       columns: Array<string>
+     ): Promise<DataShareResultSet>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1921,20 +1984,20 @@ and
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to query. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for querying data.The predicatemethods supported by **query()** vary depending on the database used. For example, the KVDB supports only**inKeys** and **prefixKey**. If this parameter is left empty, the entire table will be queried by default. |
-| columns | Array&lt;string&gt; | Yes | Column to query. If this parameter is left empty, all columns will be queried. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for querying data.The predicate methods supported by **query()** vary depending on the database used. For example, the KVDB supports only **inKeys** and **prefixKey**. If this parameter is left empty, the entire table will be queried by default. |
+| columns | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Column to query. If this parameter is left empty, all columns will be queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataShareResultSet&gt; | Promise used to return the result set obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DataShareResultSet> | Promise used to return the result set obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
@@ -1977,15 +2040,25 @@ update(
 
 Updates data in the database. This API uses an asynchronous callback to return the result.
 
-In non-silent scenarios, the total size of the **uri**, **predicates**, and **value** parameters passed in this
-API cannot exceed 900 KB. Otherwise, the operation fails or an exception is thrown.
+In non-silent scenarios, the total size of the **uri**, **predicates**, and **value** parameters passed in this API cannot exceed 900 KB. Otherwise, the operation fails or an exception is thrown.
 
-In silent scenarios, the total size of the **uri**, **predicates**, and **value** parameters passed when this API
-is called cannot exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
+In silent scenarios, the total size of the **uri**, **predicates**, and **value** parameters passed when this API is called cannot exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-update(
+       uri: string,
+       predicates: dataSharePredicates.DataSharePredicates,
+       value: ValuesBucket,
+       callback: AsyncCallback<int>
+     ): void--><!--Device-DataShareHelper-update(
+       uri: string,
+       predicates: dataSharePredicates.DataSharePredicates,
+       value: ValuesBucket,
+       callback: AsyncCallback<int>
+     ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1996,15 +2069,15 @@ is called cannot exceed 200 KB. Otherwise, the operation fails or an exception i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to update. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for updating data.The predicatemethods supported by **update()** vary depending on the database in use. For example, only the relationaldatabase (RDB) supports predicates. If this parameter is left empty, the entire table will be updated bydefault. |
-| value | ValuesBucket | Yes | Value of the data to update. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the number of updated data records. Otherwise, **err** is an errorobject.The number of updated data records is not returned if the APIs of the database in use (for example, KVDB) do not support this return. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for updating data.The predicate methods supported by **update()** vary depending on the database in use. For example, only the relational database (RDB) supports predicates. If this parameter is left empty, the entire table will be updated by default. |
+| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Value of the data to update. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the number of updated data records. Otherwise, **err** is an error object.The number of updated data records is not returned if the APIs of the database in use (for example, KVDB) do not support this return. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
@@ -2054,15 +2127,15 @@ update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: 
 
 Updates data in the database. This API uses a promise to return the result.
 
-In non-silent scenarios, the total size of the **uri**, **predicates**, and **value** parameters passed in this
-API cannot exceed 900 KB. Otherwise, the operation fails or an exception is thrown.
+In non-silent scenarios, the total size of the **uri**, **predicates**, and **value** parameters passed in this API cannot exceed 900 KB. Otherwise, the operation fails or an exception is thrown.
 
-In silent scenarios, the total size of the **uri**, **predicates**, and **value** parameters passed when this API
-is called cannot exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
+In silent scenarios, the total size of the **uri**, **predicates**, and **value** parameters passed when this API is called cannot exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareHelper-update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: ValuesBucket): Promise<int>--><!--Device-DataShareHelper-update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: ValuesBucket): Promise<int>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -2073,20 +2146,20 @@ is called cannot exceed 200 KB. Otherwise, the operation fails or an exception i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to update. |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for updating data.The predicatemethods supported by **update()** vary depending on the database in use. For example, only the relationaldatabase (RDB) supports predicates. If this parameter is left empty, the entire table will be updated bydefault. |
-| value | ValuesBucket | Yes | Value of the data to update. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for updating data.The predicate methods supported by **update()** vary depending on the database in use. For example, only the relational database (RDB) supports predicates. If this parameter is left empty, the entire table will be updated by default. |
+| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Value of the data to update. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the number of data records updated.The number of updated data records is not returned if the APIs of the database in use(for example, KVDB) do not support this return. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the number of data records updated.The number of updated data records is not returned if the APIs of the database in use(for example, KVDB) do not support this return. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 

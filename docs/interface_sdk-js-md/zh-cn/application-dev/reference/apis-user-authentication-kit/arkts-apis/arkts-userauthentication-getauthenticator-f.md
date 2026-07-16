@@ -1,5 +1,11 @@
 # getAuthenticator
 
+## 导入模块
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+```
+
 ## getAuthenticator
 
 ```TypeScript
@@ -14,13 +20,15 @@ function getAuthenticator(): Authenticator
 
 **替代接口：** [getAuthInstance](arkts-userauthentication-getauthinstance-f.md#getauthinstance-1)
 
+<!--Device-userAuth-function getAuthenticator(): Authenticator--><!--Device-userAuth-function getAuthenticator(): Authenticator-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Authenticator | 认证器对象。 |
+| [Authenticator](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-authenticator-c.md) | 认证器对象。 |
 
 **示例：**
 

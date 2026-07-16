@@ -14,13 +14,15 @@ Obtains the **AbilityDelegator** object of the application.
 
 **Substitutes:** [getAbilityDelegator](arkts-test-getabilitydelegator-f.md#getabilitydelegator-1)
 
+<!--Device-abilityDelegatorRegistry-function getAbilityDelegator(): AbilityDelegator--><!--Device-abilityDelegatorRegistry-function getAbilityDelegator(): AbilityDelegator-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AbilityDelegator | [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md) object,which can be used to schedule functions related to the test framework. |
+| [AbilityDelegator](arkts-test-abilitydelegator-t.md) | [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md) object,which can be used to schedule functions related to the test framework. |
 
 **Example**
 

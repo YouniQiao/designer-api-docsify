@@ -1,5 +1,11 @@
 # offPreloadedUIExtensionAbilityDestroyed（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
+```
+
 ## offPreloadedUIExtensionAbilityDestroyed
 
 ```TypeScript
@@ -14,6 +20,8 @@ function offPreloadedUIExtensionAbilityDestroyed(callback?: PreloadedUIExtension
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-abilityManager-function offPreloadedUIExtensionAbilityDestroyed(callback?: PreloadedUIExtensionAbilityDestroyedFn): void--><!--Device-abilityManager-function offPreloadedUIExtensionAbilityDestroyed(callback?: PreloadedUIExtensionAbilityDestroyedFn): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ function offPreloadedUIExtensionAbilityDestroyed(callback?: PreloadedUIExtension
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | PreloadedUIExtensionAbilityDestroyedFn | 否 | 需要注销监听的回调函数。如果不传入任何回调函数，则会注销当前进程中所有该事件类型的监听。 |
+| callback | [PreloadedUIExtensionAbilityDestroyedFn](arkts-ability-preloadeduiextensionabilitydestroyedfn-t-sys.md) | 否 | 需要注销监听的回调函数。如果不传入任何回调函数，则会注销当前进程中所有该事件类型的监听。 |
 
 **错误码：**
 

@@ -13,12 +13,15 @@ function getBundlePackInfo(bundleName: string,
     bundlePackFlag : BundlePackFlag, callback: AsyncCallback<BundlePackInfo>): void
 ```
 
-Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API uses an asynchronous callback to
-return the result.
+Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-freeInstall-function getBundlePackInfo(bundleName: string, 
+    bundlePackFlag : BundlePackFlag, callback: AsyncCallback<BundlePackInfo>): void--><!--Device-freeInstall-function getBundlePackInfo(bundleName: string, 
+    bundlePackFlag : BundlePackFlag, callback: AsyncCallback<BundlePackInfo>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -29,8 +32,8 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| bundlePackFlag | BundlePackFlag | Yes | Flag of the bundle package. |
-| callback | AsyncCallback&lt;BundlePackInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return theresult. If the operation is successful, **err** is **null** and **data** is the BundlePackInfo object obtained;otherwise, **err** is an error object. |
+| bundlePackFlag | [BundlePackFlag](arkts-ability-bundlepackflag-e-sys.md) | Yes | Flag of the bundle package. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<BundlePackInfo> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the BundlePackInfo object obtained;otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -49,12 +52,13 @@ return the result.
 function getBundlePackInfo(bundleName: string, bundlePackFlag : BundlePackFlag): Promise<BundlePackInfo>
 ```
 
-Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API uses a promise to return the
-result.
+Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-freeInstall-function getBundlePackInfo(bundleName: string, bundlePackFlag : BundlePackFlag): Promise<BundlePackInfo>--><!--Device-freeInstall-function getBundlePackInfo(bundleName: string, bundlePackFlag : BundlePackFlag): Promise<BundlePackInfo>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -65,13 +69,13 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| bundlePackFlag | BundlePackFlag | Yes | Flag of the bundle package. |
+| bundlePackFlag | [BundlePackFlag](arkts-ability-bundlepackflag-e-sys.md) | Yes | Flag of the bundle package. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BundlePackInfo&gt; | Promise used to return the BundlePackInfo object obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<BundlePackInfo> | Promise used to return the BundlePackInfo object obtained. |
 
 **Error codes:**
 

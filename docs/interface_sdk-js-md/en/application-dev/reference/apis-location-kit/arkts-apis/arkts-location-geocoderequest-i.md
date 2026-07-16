@@ -10,6 +10,8 @@ Configuring parameters in geocode requests
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-export interface GeoCodeRequest--><!--Device-geolocation-export interface GeoCodeRequest-End-->
+
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## Modules to Import
@@ -32,6 +34,8 @@ description: string
 
 **Substitutes:** description
 
+<!--Device-GeoCodeRequest-description: string--><!--Device-GeoCodeRequest-description: string-End-->
+
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## locale
@@ -47,6 +51,8 @@ locale?: string
 **Deprecated since:** 9
 
 **Substitutes:** locale
+
+<!--Device-GeoCodeRequest-locale?: string--><!--Device-GeoCodeRequest-locale?: string-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -64,6 +70,8 @@ maxItems?: number
 
 **Substitutes:** maxItems
 
+<!--Device-GeoCodeRequest-maxItems?: number--><!--Device-GeoCodeRequest-maxItems?: number-End-->
+
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## maxLatitude
@@ -79,6 +87,8 @@ maxLatitude?: number
 **Deprecated since:** 9
 
 **Substitutes:** maxLatitude
+
+<!--Device-GeoCodeRequest-maxLatitude?: number--><!--Device-GeoCodeRequest-maxLatitude?: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -96,6 +106,8 @@ maxLongitude?: number
 
 **Substitutes:** maxLongitude
 
+<!--Device-GeoCodeRequest-maxLongitude?: number--><!--Device-GeoCodeRequest-maxLongitude?: number-End-->
+
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## minLatitude
@@ -112,6 +124,8 @@ minLatitude?: number
 
 **Substitutes:** minLatitude
 
+<!--Device-GeoCodeRequest-minLatitude?: number--><!--Device-GeoCodeRequest-minLatitude?: number-End-->
+
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## minLongitude
@@ -127,6 +141,8 @@ minLongitude?: number
 **Deprecated since:** 9
 
 **Substitutes:** minLongitude
+
+<!--Device-GeoCodeRequest-minLongitude?: number--><!--Device-GeoCodeRequest-minLongitude?: number-End-->
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 

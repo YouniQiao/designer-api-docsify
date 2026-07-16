@@ -18,13 +18,15 @@ Obtains an [AbilityDelegatorArgs](application/abilityDelegatorArgs:AbilityDelega
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-abilityDelegatorRegistry-function getArguments(): AbilityDelegatorArgs--><!--Device-abilityDelegatorRegistry-function getArguments(): AbilityDelegatorArgs-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AbilityDelegatorArgs | [AbilityDelegatorArgs](application/abilityDelegatorArgs:AbilityDelegatorArgs)object, which can be used to obtain test parameters. |
+| [AbilityDelegatorArgs](arkts-test-abilitydelegatorargs-t.md) | [AbilityDelegatorArgs](application/abilityDelegatorArgs:AbilityDelegatorArgs)object, which can be used to obtain test parameters. |
 
 **Example**
 

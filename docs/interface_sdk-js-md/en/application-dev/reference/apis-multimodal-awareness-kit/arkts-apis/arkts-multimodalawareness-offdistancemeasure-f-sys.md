@@ -21,6 +21,10 @@ Unsubscribe from distance measurement result data.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-spatialAwareness-function offDistanceMeasure(configParams: DistanceMeasurementConfigParams,
+    callback?: Callback<DistanceMeasurementResponse>): void--><!--Device-spatialAwareness-function offDistanceMeasure(configParams: DistanceMeasurementConfigParams,
+    callback?: Callback<DistanceMeasurementResponse>): void-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **System API:** This is a system API.
@@ -29,8 +33,8 @@ Unsubscribe from distance measurement result data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configParams | DistanceMeasurementConfigParams | Yes | Configuration parameters of the distance measurement. |
-| callback | Callback&lt;DistanceMeasurementResponse&gt; | No | Callback of the ranging result |
+| configParams | [DistanceMeasurementConfigParams](arkts-multimodalawareness-distancemeasurementconfigparams-i-sys.md) | Yes | Configuration parameters of the distance measurement. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DistanceMeasurementResponse> | No | Callback of the ranging result |
 
 **Error codes:**
 

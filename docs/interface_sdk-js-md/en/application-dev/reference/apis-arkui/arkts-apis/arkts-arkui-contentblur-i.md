@@ -4,6 +4,8 @@ Defines the content blur effect.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export interface ContentBlur--><!--Device-unnamed-export interface ContentBlur-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## grayscale
@@ -12,8 +14,7 @@ Defines the content blur effect.
 grayscale?: [number, number]
 ```
 
-Grayscale parameters for the blur effect.
-Value range for each parameter: [0, 127].
+Grayscale parameters for the blur effect.Value range for each parameter: [0, 127].
 
 **Type:** [number, number]
 
@@ -23,6 +24,8 @@ Value range for each parameter: [0, 127].
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ContentBlur-grayscale?: [int, int]--><!--Device-ContentBlur-grayscale?: [int, int]-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## radius
@@ -31,9 +34,7 @@ Value range for each parameter: [0, 127].
 radius: number
 ```
 
-Blur radius for content blur.
-The value must be greater than or equal to 0, the larger the value, the more blurred the content.
-The value 0 indicates no blur.
+Blur radius for content blur.The value must be greater than or equal to 0, the larger the value, the more blurred the content.The value 0 indicates no blur.
 
 **Type:** number
 
@@ -42,6 +43,8 @@ The value 0 indicates no blur.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ContentBlur-radius: double--><!--Device-ContentBlur-radius: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

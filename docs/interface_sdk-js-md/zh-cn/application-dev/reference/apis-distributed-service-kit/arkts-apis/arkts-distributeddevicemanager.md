@@ -1,17 +1,24 @@
 # @ohos.distributedDeviceManager
 
-本模块提供分布式设备管理能力。
-应用可调用接口实现如下功能：
+本模块提供分布式设备管理能力。应用可调用接口实现如下功能：
 
-- 注册和解除注册设备上下线变化监听。
-- 发现周边不可信设备。
-- 认证和取消认证设备。
-- 查询可信设备列表。
+- 注册和解除注册设备上下线变化监听。  
+- 发现周边不可信设备。  
+- 认证和取消认证设备。  
+- 查询可信设备列表。  
 - 查询本地设备信息，包括设备名称，设备类型和设备标识等。
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace distributedDeviceManager--><!--Device-unnamed-declare namespace distributedDeviceManager-End-->
+
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+## 导入模块
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+```
 
 ## 汇总
 

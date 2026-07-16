@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface FillRequestCallback--><!--Device-unnamed-export interface FillRequestCallback-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -19,6 +21,8 @@ onCancel(fillContent?: string): void
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FillRequestCallback-onCancel(fillContent?: string): void--><!--Device-FillRequestCallback-onCancel(fillContent?: string): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -50,6 +54,8 @@ onFailure(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FillRequestCallback-onFailure(): void--><!--Device-FillRequestCallback-onFailure(): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -73,6 +79,8 @@ onSuccess(response: FillResponse): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FillRequestCallback-onSuccess(response: FillResponse): void--><!--Device-FillRequestCallback-onSuccess(response: FillResponse): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -81,7 +89,7 @@ onSuccess(response: FillResponse): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| response | FillResponse | 是 | 自动填充响应信息。 |
+| response | [FillResponse](arkts-ability-fillresponse-i-sys.md) | 是 | 自动填充响应信息。 |
 
 **错误码：**
 
@@ -103,6 +111,8 @@ setAutoFillPopupConfig(autoFillPopupConfig: AutoFillPopupConfig): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-FillRequestCallback-setAutoFillPopupConfig(autoFillPopupConfig: AutoFillPopupConfig): void--><!--Device-FillRequestCallback-setAutoFillPopupConfig(autoFillPopupConfig: AutoFillPopupConfig): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -111,7 +121,7 @@ setAutoFillPopupConfig(autoFillPopupConfig: AutoFillPopupConfig): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| autoFillPopupConfig | AutoFillPopupConfig | 是 | 气泡弹窗尺寸和位置信息。 |
+| autoFillPopupConfig | [AutoFillPopupConfig](arkts-ability-autofillpopupconfig-i-sys.md) | 是 | 气泡弹窗尺寸和位置信息。 |
 
 **错误码：**
 

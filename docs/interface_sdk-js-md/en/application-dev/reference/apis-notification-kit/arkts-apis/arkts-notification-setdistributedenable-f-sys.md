@@ -12,8 +12,7 @@ import { notificationManager } from '@kit.NotificationKit';
 function setDistributedEnable(enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to enable distributed notification on this device. This API uses an asynchronous callback to return
-the result.
+Sets whether to enable distributed notification on this device. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -23,6 +22,8 @@ the result.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function setDistributedEnable(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function setDistributedEnable(enable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -31,8 +32,8 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable distributed notification. The value **true** means to enabledistributed notification, and **false** means the opposite. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| enable | boolean | Yes | Whether to enable distributed notification. The value **true** means to enable distributed notification, and **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -81,6 +82,8 @@ Sets whether to enable distributed notification on this device. This API uses a 
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function setDistributedEnable(enable: boolean): Promise<void>--><!--Device-notificationManager-function setDistributedEnable(enable: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -89,13 +92,13 @@ Sets whether to enable distributed notification on this device. This API uses a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable distributed notification. The value **true** means to enabledistributed notification, and **false** means the opposite. |
+| enable | boolean | Yes | Whether to enable distributed notification. The value **true** means to enable distributed notification, and **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

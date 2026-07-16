@@ -1,11 +1,12 @@
 # ManualExposure (System API)
 
-ManualExposure extends [ManualExposureQuery](arkts-camera-manualexposurequery-i.md)
-Provides APIs to obtain and set the exposure duration.
+ManualExposure extends [ManualExposureQuery](arkts-camera-manualexposurequery-i-sys.md)Provides APIs to obtain and set the exposure duration.
 
-**Inheritance/Implementation:** ManualExposure extends [ManualExposureQuery](arkts-camera-manualexposurequery-i.md)
+**Inheritance/Implementation:** ManualExposure extends [ManualExposureQuery](arkts-camera-manualexposurequery-i-sys.md)
 
 **Since:** 24
+
+<!--Device-camera-interface ManualExposure extends ManualExposureQuery--><!--Device-camera-interface ManualExposure extends ManualExposureQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -26,6 +27,8 @@ getExposure(): number
 Obtains the manual exposure duration in use.
 
 **Since:** 11
+
+<!--Device-ManualExposure-getExposure(): int--><!--Device-ManualExposure-getExposure(): int-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -65,11 +68,11 @@ function getExposure(nightPhotoSession: camera.NightPhotoSession): number | unde
 setExposure(exposure: number): void
 ```
 
-Sets the manual exposure duration. Before using this API, call
-[getSupportedExposureRange](arkts-camera-manualexposurequery-i-sys.md#getsupportedexposurerange-1) to obtain the supported
-manual exposure durations, in ms.
+Sets the manual exposure duration. Before using this API, call [getSupportedExposureRange](arkts-camera-manualexposurequery-i-sys.md#getsupportedexposurerange-1) to obtain the supported manual exposure durations, in ms.
 
 **Since:** 11
+
+<!--Device-ManualExposure-setExposure(exposure: int): void--><!--Device-ManualExposure-setExposure(exposure: int): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -79,7 +82,7 @@ manual exposure durations, in ms.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exposure | number | Yes | Manual exposure duration, which must be one of the supported durations obtained byrunning [getSupportedExposureRange](arkts-camera-manualexposurequery-i-sys.md#getsupportedexposurerange-1). |
+| exposure | number | Yes | Manual exposure duration, which must be one of the supported durations obtained by running [getSupportedExposureRange](arkts-camera-manualexposurequery-i-sys.md#getsupportedexposurerange-1). |
 
 **Error codes:**
 

@@ -6,6 +6,8 @@ Defines a UIScrollableCommonEvent which is used to set event to target component
 
 **起始版本：** 19
 
+<!--Device-unnamed-declare interface UIScrollableCommonEvent extends UICommonEvent--><!--Device-unnamed-declare interface UIScrollableCommonEvent extends UICommonEvent-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## setOnReachEnd
@@ -20,7 +22,9 @@ Set or reset the callback which is triggered when the scrolling reaches the end 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本19开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIScrollableCommonEvent-setOnReachEnd(callback: Callback<void> | undefined): void--><!--Device-UIScrollableCommonEvent-setOnReachEnd(callback: Callback<void> | undefined): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,7 +32,7 @@ Set or reset the callback which is triggered when the scrolling reaches the end 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; \| undefined | 是 | callback function, triggered when thescrolling reaches the end position. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<void> \| undefined | 是 | callback function, triggered when the scrolling reaches the end position. |
 
 ## setOnReachStart
 
@@ -42,7 +46,9 @@ Set or reset the callback which is triggered when the scrolling reaches the star
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本19开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIScrollableCommonEvent-setOnReachStart(callback: Callback<void> | undefined): void--><!--Device-UIScrollableCommonEvent-setOnReachStart(callback: Callback<void> | undefined): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,7 +56,7 @@ Set or reset the callback which is triggered when the scrolling reaches the star
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; \| undefined | 是 | callback function, triggered when thescrolling reaches the start position. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<void> \| undefined | 是 | callback function, triggered when the scrolling reaches the start position. |
 
 ## setOnScrollFrameBegin
 
@@ -64,7 +70,9 @@ Set or reset the callback which is triggered when scrolling begin each frame.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本19开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIScrollableCommonEvent-setOnScrollFrameBegin(callback: OnScrollFrameBeginCallback | undefined): void--><!--Device-UIScrollableCommonEvent-setOnScrollFrameBegin(callback: OnScrollFrameBeginCallback | undefined): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,7 +80,7 @@ Set or reset the callback which is triggered when scrolling begin each frame.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | OnScrollFrameBeginCallback \| undefined | 是 | callback function, triggered when thescrolling begin each frame. |
+| callback | OnScrollFrameBeginCallback \| undefined | 是 | callback function, triggered when the scrolling begin each frame. |
 
 ## setOnScrollStart
 
@@ -86,7 +94,9 @@ Set or reset the callback which is triggered when the scrolling started.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本19开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIScrollableCommonEvent-setOnScrollStart(callback: Callback<void> | undefined): void--><!--Device-UIScrollableCommonEvent-setOnScrollStart(callback: Callback<void> | undefined): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,7 +104,7 @@ Set or reset the callback which is triggered when the scrolling started.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; \| undefined | 是 | callback function, triggered when the scrolling started. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<void> \| undefined | 是 | callback function, triggered when the scrolling started. |
 
 ## setOnScrollStop
 
@@ -108,7 +118,9 @@ Set or reset the callback which is triggered when the scrolling stoped.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本19开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIScrollableCommonEvent-setOnScrollStop(callback: Callback<void> | undefined): void--><!--Device-UIScrollableCommonEvent-setOnScrollStop(callback: Callback<void> | undefined): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,5 +128,5 @@ Set or reset the callback which is triggered when the scrolling stoped.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; \| undefined | 是 | callback function, triggered when the scrolling stoped. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<void> \| undefined | 是 | callback function, triggered when the scrolling stoped. |
 

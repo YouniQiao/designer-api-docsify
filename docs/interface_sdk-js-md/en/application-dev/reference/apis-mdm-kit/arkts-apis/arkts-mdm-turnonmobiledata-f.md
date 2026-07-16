@@ -20,14 +20,16 @@ Turns on mobile data.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-networkManager-function turnOnMobileData(admin: Want, isForce: boolean): void--><!--Device-networkManager-function turnOnMobileData(admin: Want, isForce: boolean): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| isForce | boolean | Yes | Whether to forcibly enable mobile data. <br>The value **true** means to forciblyenable mobile data. Once enabled, it cannot be turned off manually; it can only be disabled via the[turnOffMobileData](arkts-mdm-turnoffmobiledata-f.md#turnoffmobiledata-1) API. The value **false** means not to forciblyenable mobile data. It can be turned off manually. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| isForce | boolean | Yes | Whether to forcibly enable mobile data. <br>The value **true** means to forcibly enable mobile data. Once enabled, it cannot be turned off manually; it can only be disabled via the [turnOffMobileData](arkts-mdm-turnoffmobiledata-f.md#turnoffmobiledata-1) API. The value **false** means not to forcibly enable mobile data. It can be turned off manually. |
 
 **Error codes:**
 
@@ -35,7 +37,7 @@ Turns on mobile data.
 | --- | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 **Example**
 

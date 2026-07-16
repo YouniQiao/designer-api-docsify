@@ -2,12 +2,14 @@
 
 Enumerates styles of grid items.
 
-> **NOTE**
->
-> To set the focused style for the grid item, the grid container must have paddings of greater than 4 vp for
+> **NOTE**  
+>  
+> To set the focused style for the grid item, the grid container must have paddings of greater than 4 vp for  
 > accommodating the focus frame of the grid item.
 
 **Since:** 11
+
+<!--Device-unnamed-declare enum GridItemStyle--><!--Device-unnamed-declare enum GridItemStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ No style.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-GridItemStyle-NONE = 0--><!--Device-GridItemStyle-NONE = 0-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PLAIN
@@ -40,6 +44,8 @@ Hover or press style.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GridItemStyle-PLAIN = 1--><!--Device-GridItemStyle-PLAIN = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

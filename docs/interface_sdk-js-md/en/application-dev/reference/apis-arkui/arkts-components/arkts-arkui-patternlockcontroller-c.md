@@ -1,15 +1,16 @@
 # PatternLockController
 
-Controller of the **PatternLock** component, which is used to reset the component status and challenge result of the
-pattern password.
+Controller of the **PatternLock** component, which is used to reset the component status and challenge result of the pattern password.
 
-###### Objects to Import
+## Objects to Import
 
 ```ts
 patternLockController: PatternLockController = new PatternLockController()
 ```
 
 **Since:** 9
+
+<!--Device-unnamed-declare class PatternLockController--><!--Device-unnamed-declare class PatternLockController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +26,8 @@ A constructor used to create a **PatternLockController** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PatternLockController-constructor()--><!--Device-PatternLockController-constructor()-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## reset
@@ -38,6 +41,8 @@ Resets the component status.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PatternLockController-reset()--><!--Device-PatternLockController-reset()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -55,11 +60,13 @@ Challenge result of the pattern password.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PatternLockController-setChallengeResult(result: PatternLockChallengeResult): void--><!--Device-PatternLockController-setChallengeResult(result: PatternLockChallengeResult): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | PatternLockChallengeResult | Yes | Authentication challenge result of the pattern password. The statuscan be correct or incorrect. |
+| result | [PatternLockChallengeResult](arkts-arkui-patternlockchallengeresult-e.md) | Yes | Authentication challenge result of the pattern password. The status can be correct or incorrect. |
 

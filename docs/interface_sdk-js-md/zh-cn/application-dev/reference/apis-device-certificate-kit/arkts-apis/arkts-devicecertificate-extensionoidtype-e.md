@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-cert-enum ExtensionOidType--><!--Device-cert-enum ExtensionOidType-End-->
+
 **系统能力：** SystemCapability.Security.Cert
 
 ## EXTENSION_OID_TYPE_ALL
@@ -16,7 +18,9 @@ EXTENSION_OID_TYPE_ALL = 0
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ExtensionOidType-EXTENSION_OID_TYPE_ALL = 0--><!--Device-ExtensionOidType-EXTENSION_OID_TYPE_ALL = 0-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -30,7 +34,9 @@ EXTENSION_OID_TYPE_CRITICAL = 1
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ExtensionOidType-EXTENSION_OID_TYPE_CRITICAL = 1--><!--Device-ExtensionOidType-EXTENSION_OID_TYPE_CRITICAL = 1-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -44,7 +50,9 @@ EXTENSION_OID_TYPE_UNCRITICAL = 2
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ExtensionOidType-EXTENSION_OID_TYPE_UNCRITICAL = 2--><!--Device-ExtensionOidType-EXTENSION_OID_TYPE_UNCRITICAL = 2-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

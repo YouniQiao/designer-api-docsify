@@ -1,9 +1,10 @@
 # Mac
 
-Provides APIs for message authentication code (MAC) operations. Before using any API of the **Mac** class, you must
-create a **Mac** instance by using [createMac](arkts-cryptoarchitecture-createmac-f.md#createmac-1).
+Provides APIs for message authentication code (MAC) operations. Before using any API of the **Mac** class, you must create a **Mac** instance by using [createMac](arkts-cryptoarchitecture-createmac-f.md#createmac-1).
 
 **Since:** 9
+
+<!--Device-cryptoFramework-interface Mac--><!--Device-cryptoFramework-interface Mac-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Mac
@@ -21,12 +22,13 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 doFinal(callback: AsyncCallback<DataBlob>): void
 ```
 
-Finishes the MAC computation and obtains the MAC computation result. This API uses an asynchronous callback to
-return the result.
+Finishes the MAC computation and obtains the MAC computation result. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Mac-doFinal(callback: AsyncCallback<DataBlob>): void--><!--Device-Mac-doFinal(callback: AsyncCallback<DataBlob>): void-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Mac
@@ -36,7 +38,7 @@ return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined**, and **data** is the MAC computation result obtained. Otherwise,**err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DataBlob> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the MAC computation result obtained. Otherwise,**err** is an error object. |
 
 **Error codes:**
 
@@ -77,12 +79,13 @@ function hmacByCallback() {
 doFinal(): Promise<DataBlob>
 ```
 
-Finishes the MAC computation and obtains the MAC computation result. This API uses a promise to return the
-result.
+Finishes the MAC computation and obtains the MAC computation result. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Mac-doFinal(): Promise<DataBlob>--><!--Device-Mac-doFinal(): Promise<DataBlob>-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Mac
@@ -92,7 +95,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise used to return the MAC computation result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DataBlob> | Promise used to return the MAC computation result. |
 
 **Error codes:**
 
@@ -131,14 +134,13 @@ doFinalSync(): DataBlob
 
 Finishes the MAC computation. This API returns the result synchronously.
 
-<br><br>**NOTE**
-<br>It is recommended to prioritize the use of asynchronous API, {@link doFinal}. Synchronous API may
-take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,
-it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link doFinal}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Mac-doFinalSync(): DataBlob--><!--Device-Mac-doFinalSync(): DataBlob-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Mac
 
@@ -146,7 +148,7 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 
 | Type | Description |
 | --- | --- |
-| DataBlob | MAC computation result. |
+| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | MAC computation result. |
 
 **Error codes:**
 
@@ -190,6 +192,8 @@ Obtains the MAC length, in bytes.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Mac-getMacLength(): int--><!--Device-Mac-getMacLength(): int-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Mac
@@ -251,13 +255,13 @@ function testGetMacLength() {
 init(key: SymKey, callback: AsyncCallback<void>): void
 ```
 
-Initializes the MAC computation using a symmetric key. This API uses an asynchronous callback to return the
-result. **init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and
-**update** is optional.
+Initializes the MAC computation using a symmetric key. This API uses an asynchronous callback to return the result. **init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and **update** is optional.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Mac-init(key: SymKey, callback: AsyncCallback<void>): void--><!--Device-Mac-init(key: SymKey, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Mac
@@ -267,8 +271,8 @@ result. **init**, **update**, and **doFinal** must be used together. **init** an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | SymKey | Yes | Symmetric key obtained. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| key | [SymKey](arkts-cryptoarchitecture-symkey-i.md) | Yes | Symmetric key obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -284,13 +288,13 @@ result. **init**, **update**, and **doFinal** must be used together. **init** an
 init(key: SymKey): Promise<void>
 ```
 
-Initializes the MAC computation using a symmetric key. This API uses a promise to return the result. **init**,
-**update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and **update** is
-optional.
+Initializes the MAC computation using a symmetric key. This API uses a promise to return the result. **init**,**update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and **update** is optional.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Mac-init(key: SymKey): Promise<void>--><!--Device-Mac-init(key: SymKey): Promise<void>-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Mac
@@ -300,13 +304,13 @@ optional.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | SymKey | Yes | Symmetric key obtained. |
+| key | [SymKey](arkts-cryptoarchitecture-symkey-i.md) | Yes | Symmetric key obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -322,18 +326,15 @@ optional.
 initSync(key: SymKey): void
 ```
 
-Initializes the MAC computation using a symmetric key. This API returns the result synchronously. **initSync**,
-**updateSync**, and **doFinalSync** must be used together. **initSync** and **doFinalSync** are mandatory, and
-**updateSync** is optional.
+Initializes the MAC computation using a symmetric key. This API returns the result synchronously. **initSync**,**updateSync**, and **doFinalSync** must be used together. **initSync** and **doFinalSync** are mandatory, and **updateSync** is optional.
 
-<br><br>**NOTE**
-<br>It is recommended to prioritize the use of asynchronous API, {@link init}. Synchronous API may
-take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,
-it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link init}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Mac-initSync(key: SymKey): void--><!--Device-Mac-initSync(key: SymKey): void-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Mac
 
@@ -341,7 +342,7 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | SymKey | Yes | Symmetric key obtained. |
+| key | [SymKey](arkts-cryptoarchitecture-symkey-i.md) | Yes | Symmetric key obtained. |
 
 **Error codes:**
 
@@ -359,15 +360,17 @@ update(input: DataBlob, callback: AsyncCallback<void>): void
 
 Updates the MAC status. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> For details about the sample code for calling **update** multiple times in an HMAC operation, see
-> [Generating an HMAC by Passing In Data by Segment](../../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment)
+> **NOTE**  
+>  
+> For details about the sample code for calling **update** multiple times in an HMAC operation, see  
+> [Generating an HMAC by Passing In Data by Segment](../../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment)  
 > .
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Mac-update(input: DataBlob, callback: AsyncCallback<void>): void--><!--Device-Mac-update(input: DataBlob, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Mac
@@ -377,8 +380,8 @@ Updates the MAC status. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| input | DataBlob | Yes | Data to pass in. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| input | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | Data to pass in. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -396,15 +399,17 @@ update(input: DataBlob): Promise<void>
 
 Updates the MAC status. This API uses a promise to return the result.
 
-> **NOTE**
->
-> For details about the sample code for calling **update** multiple times in an HMAC operation, see
-> [Generating an HMAC by Passing In Data by Segment](../../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment)
+> **NOTE**  
+>  
+> For details about the sample code for calling **update** multiple times in an HMAC operation, see  
+> [Generating an HMAC by Passing In Data by Segment](../../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment)  
 > .
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Mac-update(input: DataBlob): Promise<void>--><!--Device-Mac-update(input: DataBlob): Promise<void>-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Mac
@@ -414,13 +419,13 @@ Updates the MAC status. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| input | DataBlob | Yes | Data to pass in. |
+| input | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | Data to pass in. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -438,20 +443,19 @@ updateSync(input: DataBlob): void
 
 Updates the MAC status. This API returns the result synchronously.
 
-> **NOTE**
->
-> For details about the sample code for calling **updateSync** multiple times in an HMAC operation, see
-> [Generating an HMAC by Passing In Data by Segment](../../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment)
+> **NOTE**  
+>  
+> For details about the sample code for calling **updateSync** multiple times in an HMAC operation, see  
+> [Generating an HMAC by Passing In Data by Segment](../../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment)  
 > .
 
-<br><br>**NOTE**
-<br>It is recommended to prioritize the use of asynchronous API, {@link update}. Synchronous API may
-take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,
-it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link update}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Mac-updateSync(input: DataBlob): void--><!--Device-Mac-updateSync(input: DataBlob): void-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Mac
 
@@ -459,7 +463,7 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| input | DataBlob | Yes | Data to pass in. |
+| input | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | Data to pass in. |
 
 **Error codes:**
 
@@ -482,6 +486,8 @@ Indicates the algorithm name.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Mac-readonly algName: string--><!--Device-Mac-readonly algName: string-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Mac

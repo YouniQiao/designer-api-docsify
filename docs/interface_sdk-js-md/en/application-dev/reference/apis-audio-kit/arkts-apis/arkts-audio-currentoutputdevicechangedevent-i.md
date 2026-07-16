@@ -4,6 +4,8 @@ Describes the event indicating that the output device changes.
 
 **Since:** 20
 
+<!--Device-audio-interface CurrentOutputDeviceChangedEvent--><!--Device-audio-interface CurrentOutputDeviceChangedEvent-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Audio device change reason.
 
 **Since:** 20
 
+<!--Device-CurrentOutputDeviceChangedEvent-changeReason: AudioStreamDeviceChangeReason--><!--Device-CurrentOutputDeviceChangedEvent-changeReason: AudioStreamDeviceChangeReason-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## devices
@@ -37,6 +41,8 @@ Audio device descriptors after change.
 **Type:** AudioDeviceDescriptors
 
 **Since:** 20
+
+<!--Device-CurrentOutputDeviceChangedEvent-devices: AudioDeviceDescriptors--><!--Device-CurrentOutputDeviceChangedEvent-devices: AudioDeviceDescriptors-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -54,6 +60,8 @@ Audio device descriptors before change.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-CurrentOutputDeviceChangedEvent-preDevices?: AudioDeviceDescriptors--><!--Device-CurrentOutputDeviceChangedEvent-preDevices?: AudioDeviceDescriptors-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## recommendedAction
@@ -67,6 +75,8 @@ Recommend action when device change.
 **Type:** OutputDeviceChangeRecommendedAction
 
 **Since:** 20
+
+<!--Device-CurrentOutputDeviceChangedEvent-recommendedAction: OutputDeviceChangeRecommendedAction--><!--Device-CurrentOutputDeviceChangedEvent-recommendedAction: OutputDeviceChangeRecommendedAction-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 

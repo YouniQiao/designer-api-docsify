@@ -14,9 +14,9 @@ function removeDockApp(admin: Want, bundleName: string, abilityName: string): vo
 
 Removes an application from the shortcut bar.
 
-> **NOTE**
->
-> The following applications cannot be removed from the shortcut bar using this API: Application Center, Task
+> **NOTE**  
+>  
+> The following applications cannot be removed from the shortcut bar using this API: Application Center, Task  
 > Center, Files, and Recycle Bin. Otherwise, error code 9201018 will be reported.
 
 **Since:** 24
@@ -25,13 +25,15 @@ Removes an application from the shortcut bar.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function removeDockApp(admin: Want, bundleName: string, abilityName: string): void--><!--Device-applicationManager-function removeDockApp(admin: Want, bundleName: string, abilityName: string): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | bundleName | string | Yes | Bundle name of the application. |
 | abilityName | string | Yes | Ability name of the application. |
 

@@ -1,10 +1,10 @@
 # Panel
 
-In the following API examples, you must first use
-[createPanel](arkts-ime-inputmethodability-i.md#createpanel-1)
-to obtain a **Panel** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [createPanel](arkts-ime-inputmethodability-i.md#createpanel-1)to obtain a **Panel** instance, and then call the APIs using the obtained instance.
 
 **Since:** 10
+
+<!--Device-inputMethodEngine-interface Panel--><!--Device-inputMethodEngine-interface Panel-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -20,22 +20,23 @@ import { inputMethodEngine } from '@kit.IMEKit';
 adjustPanelRect(flag: PanelFlag, rect: PanelRect): void
 ```
 
-Adjusts the panel rectangle. After the API is called, the adjust request is submitted to the input method
-framework, but the execution is not complete.
+Adjusts the panel rectangle. After the API is called, the adjust request is submitted to the input method framework, but the execution is not complete.
 
-> **NOTE**
->
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state.
->
-> This API returns the result synchronously. The return only indicates that the system receives the setting
-> request, not that the setting is complete.
->
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
-> function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To
+> **NOTE**  
+>  
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**  
+> state.  
+>  
+> This API returns the result synchronously. The return only indicates that the system receives the setting  
+> request, not that the setting is complete.  
+>  
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the  
+> function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To  
 > ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 12
+
+<!--Device-Panel-adjustPanelRect(flag: PanelFlag, rect: PanelRect): void--><!--Device-Panel-adjustPanelRect(flag: PanelFlag, rect: PanelRect): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -43,8 +44,8 @@ framework, but the execution is not complete.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | PanelFlag | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
-| rect | PanelRect | Yes | Landscape rectangle and portrait rectangle of the target panel. For the panel of thefixed state, the height cannot exceed 70% of the screen height, and the width cannot exceed the screen width.For the panel of the floating state, the height cannot exceed the screen height, and the width cannot exceedthe screen width. |
+| flag | [PanelFlag](arkts-ime-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| rect | [PanelRect](arkts-ime-panelrect-i.md) | Yes | Landscape rectangle and portrait rectangle of the target panel. For the panel of the fixed state, the height cannot exceed 70% of the screen height, and the width cannot exceed the screen width.For the panel of the floating state, the height cannot exceed the screen height, and the width cannot exceed the screen width. |
 
 **Error codes:**
 
@@ -91,23 +92,25 @@ adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
 
 Adjusts the panel rectangle, and customizes the avoid area and touch area.
 
-> **NOTE**
->
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state. This API is compatible with
-> [adjustPanelRect](arkts-ime-panel-i.md#adjustpanelrect-1). If the
-> input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes,
-> [adjustPanelRect](arkts-ime-panel-i.md#adjustpanelrect-1) is called by
-> default.
->
-> This API returns the result synchronously. The return only indicates that the system receives the setting
-> request, not that the setting is complete.
->
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
-> function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To
+> **NOTE**  
+>  
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**  
+> state. This API is compatible with  
+> [adjustPanelRect](arkts-ime-panel-i.md#adjustpanelrect-1). If the  
+> input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes,  
+> [adjustPanelRect](arkts-ime-panel-i.md#adjustpanelrect-1) is called by  
+> default.  
+>  
+> This API returns the result synchronously. The return only indicates that the system receives the setting  
+> request, not that the setting is complete.  
+>  
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the  
+> function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To  
 > ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 15
+
+<!--Device-Panel-adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void--><!--Device-Panel-adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -115,8 +118,8 @@ Adjusts the panel rectangle, and customizes the avoid area and touch area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | PanelFlag | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
-| rect | EnhancedPanelRect | Yes | The target panel rectangle, avoid area, and touch area. |
+| flag | [PanelFlag](arkts-ime-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| rect | [EnhancedPanelRect](arkts-ime-enhancedpanelrect-i.md) | Yes | The target panel rectangle, avoid area, and touch area. |
 
 **Error codes:**
 
@@ -166,10 +169,11 @@ panel.adjustPanelRect(panelFlag, panelRect);
 changeFlag(flag: PanelFlag): void
 ```
 
-Changes the state type ([PanelFlag](arkts-ime-panelflag-e.md)) of this input method panel. This API only
-works for [SOFT_KEYBOARD](arkts-ime-paneltype-e.md) panels.
+Changes the state type ([PanelFlag](arkts-ime-panelflag-e.md)) of this input method panel. This API only works for [SOFT_KEYBOARD](arkts-ime-paneltype-e.md) panels.
 
 **Since:** 10
+
+<!--Device-Panel-changeFlag(flag: PanelFlag): void--><!--Device-Panel-changeFlag(flag: PanelFlag): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -177,7 +181,7 @@ works for [SOFT_KEYBOARD](arkts-ime-paneltype-e.md) panels.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | PanelFlag | Yes | Type of the state of the target panel. |
+| flag | [PanelFlag](arkts-ime-panelflag-e.md) | Yes | Type of the state of the target panel. |
 
 **Error codes:**
 
@@ -203,13 +207,15 @@ Obtains the window ID. This API uses a promise to return the result.
 
 **Since:** 15
 
+<!--Device-Panel-getDisplayId(): Promise<long>--><!--Device-Panel-getDisplayId(): Promise<long>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. It returns **displayId** of the window. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result. It returns **displayId** of the window. |
 
 **Error codes:**
 
@@ -241,13 +247,15 @@ Obtains the immersive mode of the input method application.
 
 **Since:** 15
 
+<!--Device-Panel-getImmersiveMode(): ImmersiveMode--><!--Device-Panel-getImmersiveMode(): ImmersiveMode-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ImmersiveMode | Immersive mode. |
+| [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-immersivemode-t.md) | Immersive mode. |
 
 **Example**
 
@@ -262,11 +270,11 @@ let mode: inputMethodEngine.ImmersiveMode = panel.getImmersiveMode();
 getSystemPanelCurrentInsets(displayId: number): Promise<SystemPanelInsets>
 ```
 
-Obtains the offset area of the soft keyboard relative to the system panel under the current state of the
-specified screen (for example, folded or unfolded) and the current state of the input method keyboard (for
-example, floating or fixed). This API uses a promise to return the result.
+Obtains the offset area of the soft keyboard relative to the system panel under the current state of the specified screen (for example, folded or unfolded) and the current state of the input method keyboard (for example, floating or fixed). This API uses a promise to return the result.
 
 **Since:** 21
+
+<!--Device-Panel-getSystemPanelCurrentInsets(displayId: number): Promise<SystemPanelInsets>--><!--Device-Panel-getSystemPanelCurrentInsets(displayId: number): Promise<SystemPanelInsets>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -274,13 +282,13 @@ example, floating or fixed). This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | number | Yes | Display ID of the screen where the input method keyboard is located. It can beobtained by calling [getDisplayId](arkts-ime-panel-i.md#getdisplayid-1). |
+| displayId | number | Yes | Display ID of the screen where the input method keyboard is located. It can be obtained by calling [getDisplayId](arkts-ime-panel-i.md#getdisplayid-1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SystemPanelInsets&gt; | Promise used to return the offset area between the input method keyboardand the system panel. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SystemPanelInsets> | Promise used to return the offset area between the input method keyboard and the system panel. |
 
 **Error codes:**
 
@@ -324,13 +332,15 @@ Hides this panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
+<!--Device-Panel-hide(callback: AsyncCallback<void>): void--><!--Device-Panel-hide(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -357,13 +367,15 @@ Hides this panel. This API uses a promise to return the result.
 
 **Since:** 10
 
+<!--Device-Panel-hide(): Promise<void>--><!--Device-Panel-hide(): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -384,10 +396,11 @@ panel.hide().then(() => {
 moveTo(x: number, y: number, callback: AsyncCallback<void>): void
 ```
 
-Moves this input method panel to the specified position. This API uses an asynchronous callback to return the
-result. This API does not work on panels in the [FLG_FIXED](arkts-ime-panelflag-e.md) state.
+Moves this input method panel to the specified position. This API uses an asynchronous callback to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-panelflag-e.md) state.
 
 **Since:** 10
+
+<!--Device-Panel-moveTo(x: int, y: int, callback: AsyncCallback<void>): void--><!--Device-Panel-moveTo(x: int, y: int, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -395,9 +408,9 @@ result. This API does not work on panels in the [FLG_FIXED](arkts-ime-panelflag-
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | Distance to move along the horizontal axis, in px. A positive value indicates movingrightwards. The value must be an integer. |
+| x | number | Yes | Distance to move along the horizontal axis, in px. A positive value indicates moving rightwards. The value must be an integer. |
 | y | number | Yes | Distance to move along the vertical axis, in px. A positive value indicates moving downwards.The value must be an integer. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -426,10 +439,11 @@ panel.moveTo(300, 300, (err: BusinessError) => {
 moveTo(x: number, y: number): Promise<void>
 ```
 
-Moves this input method panel to the specified position. This API uses a promise to return the result. This API
-does not work on panels in the [FLG_FIXED](arkts-ime-panelflag-e.md) state.
+Moves this input method panel to the specified position. This API uses a promise to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-panelflag-e.md) state.
 
 **Since:** 10
+
+<!--Device-Panel-moveTo(x: int, y: int): Promise<void>--><!--Device-Panel-moveTo(x: int, y: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -437,14 +451,14 @@ does not work on panels in the [FLG_FIXED](arkts-ime-panelflag-e.md) state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | Distance to move along the horizontal axis, in px. A positive value indicates movingrightwards. The value must be an integer. |
+| x | number | Yes | Distance to move along the horizontal axis, in px. A positive value indicates moving rightwards. The value must be an integer. |
 | y | number | Yes | Distance to move along the vertical axis, in px. A positive value indicates moving downwards.The value must be an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -475,6 +489,8 @@ Disables listening for the show event of this panel. This API uses an asynchrono
 
 **Since:** 10
 
+<!--Device-Panel-off(type: 'show', callback?: () => void): void--><!--Device-Panel-off(type: 'show', callback?: () => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -482,7 +498,7 @@ Disables listening for the show event of this panel. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'show' | Yes | Event type, which is **'show'**. |
-| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregistersall callbacks for the specified type. |
+| callback | () => void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Error codes:**
 
@@ -507,6 +523,8 @@ Disables listening for the hide event of this panel. This API uses an asynchrono
 
 **Since:** 10
 
+<!--Device-Panel-off(type: 'hide', callback?: () => void): void--><!--Device-Panel-off(type: 'hide', callback?: () => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -514,7 +532,7 @@ Disables listening for the hide event of this panel. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hide' | Yes | Event type, which is **'hide'**. |
-| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregistersall callbacks for the specified type. |
+| callback | () => void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Error codes:**
 
@@ -537,22 +555,24 @@ off(type: 'sizeChange', callback?: SizeChangeCallback): void
 
 Disables listening for the panel size change. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based
-> on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain
-> the actual panel size to refresh the panel layout.
->
-> - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory
-> parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-size-i.md) type.
->
-> - Since API version 15, after the
-> [adjustPanelRect](arkts-ime-panel-i.md#adjustpanelrect-2) API
-> is called, an optional parameter of the [KeyboardArea](arkts-ime-keyboardarea-i.md) type is added to
+> **NOTE**  
+>  
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**  
+> state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based  
+> on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain  
+> the actual panel size to refresh the panel layout.  
+>  
+> - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory  
+> parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-size-i.md) type.  
+>  
+> - Since API version 15, after the  
+> [adjustPanelRect](arkts-ime-panel-i.md#adjustpanelrect-2) API  
+> is called, an optional parameter of the [KeyboardArea](arkts-ime-keyboardarea-i.md) type is added to  
 > the callback function of this API.
 
 **Since:** 12
+
+<!--Device-Panel-off(type: 'sizeChange', callback?: SizeChangeCallback): void--><!--Device-Panel-off(type: 'sizeChange', callback?: SizeChangeCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -561,7 +581,7 @@ Disables listening for the panel size change. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sizeChange' | Yes | Event type, which is **'sizeChange'**. |
-| callback | SizeChangeCallback | No | Callback used to return the size of the soft keyboard panel,including the width and height.<br>**Since:** 15 |
+| callback | [SizeChangeCallback](../../apis-arkui/arkts-components/arkts-arkui-sizechangecallback-t.md) | No | Callback used to return the size of the soft keyboard panel,including the width and height.<br>**Since:** 15 |
 
 **Example**
 
@@ -584,6 +604,8 @@ Enables listening for the show event of this panel. This API uses an asynchronou
 
 **Since:** 10
 
+<!--Device-Panel-on(type: 'show', callback: () => void): void--><!--Device-Panel-on(type: 'show', callback: () => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -591,7 +613,7 @@ Enables listening for the show event of this panel. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'show' | Yes | Event type, which is **'show'**. |
-| callback | () =&gt; void | Yes | Callback used to return the result. |
+| callback | () => void | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -612,6 +634,8 @@ Enables listening for the hide event of this panel. This API uses an asynchronou
 
 **Since:** 10
 
+<!--Device-Panel-on(type: 'hide', callback: () => void): void--><!--Device-Panel-on(type: 'hide', callback: () => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -619,7 +643,7 @@ Enables listening for the hide event of this panel. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hide' | Yes | Event type, which is **'hide'**. |
-| callback | () =&gt; void | Yes | Callback used to return the result. |
+| callback | () => void | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -638,22 +662,24 @@ on(type: 'sizeChange', callback: SizeChangeCallback): void
 
 Enables listening for the panel size change. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based
-> on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain
-> the actual panel size to refresh the panel layout.
->
-> - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory
-> parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-size-i.md) type.
->
-> - Since API version 15, after the
-> [adjustPanelRect](arkts-ime-panel-i.md#adjustpanelrect-2) API
-> is called, an optional parameter of the [KeyboardArea](arkts-ime-keyboardarea-i.md) type is added to
+> **NOTE**  
+>  
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**  
+> state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based  
+> on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain  
+> the actual panel size to refresh the panel layout.  
+>  
+> - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory  
+> parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-size-i.md) type.  
+>  
+> - Since API version 15, after the  
+> [adjustPanelRect](arkts-ime-panel-i.md#adjustpanelrect-2) API  
+> is called, an optional parameter of the [KeyboardArea](arkts-ime-keyboardarea-i.md) type is added to  
 > the callback function of this API.
 
 **Since:** 12
+
+<!--Device-Panel-on(type: 'sizeChange', callback: SizeChangeCallback): void--><!--Device-Panel-on(type: 'sizeChange', callback: SizeChangeCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -662,7 +688,7 @@ Enables listening for the panel size change. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sizeChange' | Yes | Event type, which is **'sizeChange'**. |
-| callback | SizeChangeCallback | Yes | Callback used to return the size of the soft keyboard panel, includingthe width and height.<br>**Since:** 15 |
+| callback | [SizeChangeCallback](../../apis-arkui/arkts-components/arkts-arkui-sizechangecallback-t.md) | Yes | Callback used to return the size of the soft keyboard panel, including the width and height.<br>**Since:** 15 |
 
 **Example**
 
@@ -688,16 +714,18 @@ resize(width: number, height: number, callback: AsyncCallback<void>): void
 
 Resizes this input method panel. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times higher than the screen
-> height.
->
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
-> function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To
+> **NOTE**  
+>  
+> The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times higher than the screen  
+> height.  
+>  
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the  
+> function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To  
 > ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 10
+
+<!--Device-Panel-resize(width: long, height: long, callback: AsyncCallback<void>): void--><!--Device-Panel-resize(width: long, height: long, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -705,9 +733,9 @@ Resizes this input method panel. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | number | Yes | Target width of the panel, in px. The value is an integer greater than or equal to 0, andcannot be greater than the screen width. |
+| width | number | Yes | Target width of the panel, in px. The value is an integer greater than or equal to 0, and cannot be greater than the screen width. |
 | height | number | Yes | Target height of the panel, in px. The value is an integer greater than or equal to 0,and cannot be greater than 0.7 times the screen height. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -738,16 +766,18 @@ resize(width: number, height: number): Promise<void>
 
 Resizes this input method panel. This API uses a promise to return the result.
 
-> **NOTE**
->
-> The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times higher than the screen
-> height.
->
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
-> function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To
+> **NOTE**  
+>  
+> The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times higher than the screen  
+> height.  
+>  
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the  
+> function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To  
 > ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 10
+
+<!--Device-Panel-resize(width: long, height: long): Promise<void>--><!--Device-Panel-resize(width: long, height: long): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -755,14 +785,14 @@ Resizes this input method panel. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | number | Yes | Target width of the panel, in px. The value is an integer greater than or equal to 0, andcannot be greater than the screen width. |
+| width | number | Yes | Target width of the panel, in px. The value is an integer greater than or equal to 0, and cannot be greater than the screen width. |
 | height | number | Yes | Target height of the panel, in px. The value is an integer greater than or equal to 0,and cannot be greater than 0.7 times the screen height. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -791,20 +821,18 @@ setImmersiveEffect(effect: ImmersiveEffect): void
 
 Sets the immersive effect of the input method application.
 
-- Gradient mode and fluid light mode can be used only when the
-[immersive mode](arkts-ime-panel-i.md#setimmersivemode-1) is enabled.
-- The fluid light mode can be used only when the gradient mode is enabled.
-- If the gradient mode is disabled, the gradient height must be 0 px.
-- Only system applications can set the fluid light mode.
-- The current API can be called only after any of the following APIs is called:
-- [adjustPanelRect](arkts-ime-panel-i.md#adjustpanelrect-1) (available
-since API version 12)
-- [adjustPanelRect](arkts-ime-panel-i.md#adjustpanelrect-2) (
-available since API version 15)
-- [resize](arkts-ime-panel-i.md#resize-1) (
-available since API version 10)
+- Gradient mode and fluid light mode can be used only when the [immersive mode](arkts-ime-panel-i.md#setimmersivemode-1) is enabled.  
+- The fluid light mode can be used only when the gradient mode is enabled.  
+- If the gradient mode is disabled, the gradient height must be 0 px.  
+- Only system applications can set the fluid light mode.  
+- The current API can be called only after any of the following APIs is called:  
+- [adjustPanelRect](arkts-ime-panel-i.md#adjustpanelrect-1) (available since API version 12)  
+- [adjustPanelRect](arkts-ime-panel-i.md#adjustpanelrect-2) (available since API version 15)  
+- [resize](arkts-ime-panel-i.md#resize-1) (available since API version 10)
 
 **Since:** 20
+
+<!--Device-Panel-setImmersiveEffect(effect: ImmersiveEffect): void--><!--Device-Panel-setImmersiveEffect(effect: ImmersiveEffect): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -812,7 +840,7 @@ available since API version 10)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effect | ImmersiveEffect | Yes | Immersive effect. |
+| effect | [ImmersiveEffect](arkts-ime-immersiveeffect-i.md) | Yes | Immersive effect. |
 
 **Error codes:**
 
@@ -841,10 +869,11 @@ panel.setImmersiveEffect(effect);
 setImmersiveMode(mode: ImmersiveMode): void
 ```
 
-Sets the immersive mode of the input method application. You can only set the immersion mode to
-**NONE_IMMERSIVE**, **LIGHT_IMMERSIVE**, or **DARK_IMMERSIVE**. **IMMERSIVE** cannot be set.
+Sets the immersive mode of the input method application. You can only set the immersion mode to **NONE_IMMERSIVE**, **LIGHT_IMMERSIVE**, or **DARK_IMMERSIVE**. **IMMERSIVE** cannot be set.
 
 **Since:** 15
+
+<!--Device-Panel-setImmersiveMode(mode: ImmersiveMode): void--><!--Device-Panel-setImmersiveMode(mode: ImmersiveMode): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -852,7 +881,7 @@ Sets the immersive mode of the input method application. You can only set the im
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | ImmersiveMode | Yes | Immersive mode. |
+| mode | [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-immersivemode-t.md) | Yes | Immersive mode. |
 
 **Error codes:**
 
@@ -877,15 +906,17 @@ setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 
 Sets to keep the screen always on. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - When the keyboard is displayed, the screen stays on. When the keyboard is hidden, the screen turns off.
->
-> - You need to use this API properly. Set the attribute to **true** in necessary scenarios (for example, voice
-> input) and reset this attribute to **false** after exiting necessary scenarios. In other scenarios, do not use
+> **NOTE**  
+>  
+> - When the keyboard is displayed, the screen stays on. When the keyboard is hidden, the screen turns off.  
+>  
+> - You need to use this API properly. Set the attribute to **true** in necessary scenarios (for example, voice  
+> input) and reset this attribute to **false** after exiting necessary scenarios. In other scenarios, do not use  
 > this API.
 
 **Since:** 20
+
+<!--Device-Panel-setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>--><!--Device-Panel-setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -893,13 +924,13 @@ Sets to keep the screen always on. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isKeepScreenOn | boolean | Yes | Whether to keep the screen always on. The value **true** means that thescreen is always on; the value **false** means the opposite. |
+| isKeepScreenOn | boolean | Yes | Whether to keep the screen always on. The value **true** means that the screen is always on; the value **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -932,6 +963,8 @@ Sets the input method panel to privacy mode. In privacy mode, screenshot and scr
 
 **Required permissions:** ohos.permission.PRIVACY_WINDOW
 
+<!--Device-Panel-setPrivacyMode(isPrivacyMode: boolean): void--><!--Device-Panel-setPrivacyMode(isPrivacyMode: boolean): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -961,10 +994,11 @@ panel.setPrivacyMode(isPrivacyMode);
 setSystemPanelButtonColor(fillColor: string | undefined, backgroundColor: string | undefined): Promise<void>
 ```
 
-Sets the color of the function buttons and their background color on the current panel. This API uses a promise
-to return the result.
+Sets the color of the function buttons and their background color on the current panel. This API uses a promise to return the result.
 
 **Since:** 22
+
+<!--Device-Panel-setSystemPanelButtonColor(fillColor: string | undefined, backgroundColor: string | undefined): Promise<void>--><!--Device-Panel-setSystemPanelButtonColor(fillColor: string | undefined, backgroundColor: string | undefined): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -973,13 +1007,13 @@ to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | fillColor | string \| undefined | Yes | Color of the function buttons. The value can be [#01000000, #FFFFFFFF]or [#000000, #FFFFFF]. The value of the fully transparent alpha channel (**#00xxxxxx**) is not supported. |
-| backgroundColor | string \| undefined | Yes | Background color of the function buttons. The value can be[#01000000, #FFFFFFFF] or [#000000, #FFFFFF]. The value of the fully transparent alpha channel (#00xxxxxx) isnot supported. |
+| backgroundColor | string \| undefined | Yes | Background color of the function buttons. The value can be [#01000000, #FFFFFFFF] or [#000000, #FFFFFF]. The value of the fully transparent alpha channel (#00xxxxxx) is not supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no result. |
 
 **Example**
 
@@ -1007,10 +1041,11 @@ try {
 setUiContent(path: string, callback: AsyncCallback<void>): void
 ```
 
-Loads content from a page to this input method panel. This API uses an asynchronous callback to return the
-result.
+Loads content from a page to this input method panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-Panel-setUiContent(path: string, callback: AsyncCallback<void>): void--><!--Device-Panel-setUiContent(path: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1019,7 +1054,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the page from which the content will be loaded. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1052,6 +1087,8 @@ Loads content from a page to this input method panel. This API uses a promise to
 
 **Since:** 10
 
+<!--Device-Panel-setUiContent(path: string): Promise<void>--><!--Device-Panel-setUiContent(path: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -1064,7 +1101,7 @@ Loads content from a page to this input method panel. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1091,10 +1128,11 @@ panel.setUiContent('pages/page2/page2').then(() => {
 setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void
 ```
 
-Loads content from a page linked to LocalStorage to this input method panel. This API uses an asynchronous
-callback to return the result.
+Loads content from a page linked to LocalStorage to this input method panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-Panel-setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void--><!--Device-Panel-setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1103,8 +1141,8 @@ callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the page linked to LocalStorage. |
-| storage | LocalStorage | Yes | Storage unit that provides storage for mutable and immutable state variables inthe application. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| storage | [LocalStorage](../../apis-arkui/arkts-apis/arkts-arkui-localstorage-c.md) | Yes | Storage unit that provides storage for mutable and immutable state variables in the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1139,6 +1177,8 @@ Loads content from a page linked to LocalStorage to this panel. This API uses a 
 
 **Since:** 10
 
+<!--Device-Panel-setUiContent(path: string, storage: LocalStorage): Promise<void>--><!--Device-Panel-setUiContent(path: string, storage: LocalStorage): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -1146,13 +1186,13 @@ Loads content from a page linked to LocalStorage to this panel. This API uses a 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the page from which the content will be loaded. |
-| storage | LocalStorage | Yes | Storage unit that provides storage for mutable and immutable state variables inthe application. |
+| storage | [LocalStorage](../../apis-arkui/arkts-apis/arkts-arkui-localstorage-c.md) | Yes | Storage unit that provides storage for mutable and immutable state variables in the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1181,10 +1221,11 @@ panel.setUiContent('pages/page2/page2', storage).then(() => {
 show(callback: AsyncCallback<void>): void
 ```
 
-Shows this input method panel. This API uses an asynchronous callback to return the result. It can be called when
-the input method is bound to the edit box.
+Shows this input method panel. This API uses an asynchronous callback to return the result. It can be called when the input method is bound to the edit box.
 
 **Since:** 10
+
+<!--Device-Panel-show(callback: AsyncCallback<void>): void--><!--Device-Panel-show(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1192,7 +1233,7 @@ the input method is bound to the edit box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -1215,10 +1256,11 @@ panel.show((err: BusinessError) => {
 show(): Promise<void>
 ```
 
-Shows this input method panel. This API uses a promise to return the result. It can be called when the input
-method is bound to the edit box.
+Shows this input method panel. This API uses a promise to return the result. It can be called when the input method is bound to the edit box.
 
 **Since:** 10
+
+<!--Device-Panel-show(): Promise<void>--><!--Device-Panel-show(): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1226,7 +1268,7 @@ method is bound to the edit box.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -1250,6 +1292,8 @@ startMoving(): void
 Sends a command to start moving the window. The window can be moved only when the mouse is clicked.
 
 **Since:** 15
+
+<!--Device-Panel-startMoving(): void--><!--Device-Panel-startMoving(): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1275,19 +1319,21 @@ panel.startMoving();
 updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 ```
 
-Update the panel rectangle. This API uses a promise to return the result.
-> **NOTE**
->
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state.
->
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
-> function buttons at the bottom of the panel will dynamically update their size according to the panel width. To
+Update the panel rectangle. This API uses a promise to return the result.  
+> **NOTE**  
+>  
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**  
+> state.  
+>  
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the  
+> function buttons at the bottom of the panel will dynamically update their size according to the panel width. To  
 > ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Panel-updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>--><!--Device-Panel-updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1295,14 +1341,14 @@ Update the panel rectangle. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | PanelFlag | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
-| rect | PanelRect | Yes | Landscape rectangle and portrait rectangle of the target panel. For the panel of thefixed state, the height cannot exceed 70% of the screen height, and the width cannot exceed the screen width.For the panel of the floating state, the height cannot exceed the screen height, and the width cannot exceedthe screen width. |
+| flag | [PanelFlag](arkts-ime-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| rect | [PanelRect](arkts-ime-panelrect-i.md) | Yes | Landscape rectangle and portrait rectangle of the target panel. For the panel of the fixed state, the height cannot exceed 70% of the screen height, and the width cannot exceed the screen width.For the panel of the floating state, the height cannot exceed the screen height, and the width cannot exceed the screen width. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1316,24 +1362,25 @@ Update the panel rectangle. This API uses a promise to return the result.
 updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 ```
 
-Update the panel rectangle, and customizes the avoid area and touch area. This API
-uses a promise to return the result.
-> **NOTE**
->
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state. This API is compatible with
-> [updatePanelRect](arkts-ime-panel-i.md#updatepanelrect-1).
-> If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes,
-> [updatePanelRect](arkts-ime-panel-i.md#updatepanelrect-1)
-> is called by default.
->
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
-> function buttons at the bottom of the panel will dynamically update their size according to the panel width. To
+Update the panel rectangle, and customizes the avoid area and touch area. This API uses a promise to return the result.  
+> **NOTE**  
+>  
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**  
+> state. This API is compatible with  
+> [updatePanelRect](arkts-ime-panel-i.md#updatepanelrect-1).  
+> If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes,  
+> [updatePanelRect](arkts-ime-panel-i.md#updatepanelrect-1)  
+> is called by default.  
+>  
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the  
+> function buttons at the bottom of the panel will dynamically update their size according to the panel width. To  
 > ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Panel-updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>--><!--Device-Panel-updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1341,14 +1388,14 @@ uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | PanelFlag | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
-| rect | EnhancedPanelRect | Yes | The target panel rectangle, avoid area, and touch area. |
+| flag | [PanelFlag](arkts-ime-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| rect | [EnhancedPanelRect](arkts-ime-enhancedpanelrect-i.md) | Yes | The target panel rectangle, avoid area, and touch area. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1363,19 +1410,21 @@ uses a promise to return the result.
 updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void
 ```
 
-Update the panel rectangle.
-> **NOTE**
->
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state.
->
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
-> function buttons at the bottom of the panel will dynamically update their size according to the panel width. To
+Update the panel rectangle.  
+> **NOTE**  
+>  
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**  
+> state.  
+>  
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the  
+> function buttons at the bottom of the panel will dynamically update their size according to the panel width. To  
 > ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Panel-updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void--><!--Device-Panel-updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1383,8 +1432,8 @@ Update the panel rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | PanelFlag | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
-| rect | PanelRect | Yes | Landscape rectangle and portrait rectangle of the target panel. For the panel of thefixed state, the height cannot exceed 70% of the screen height, and the width cannot exceed the screen width.For the panel of the floating state, the height cannot exceed the screen height, and the width cannot exceedthe screen width. |
+| flag | [PanelFlag](arkts-ime-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| rect | [PanelRect](arkts-ime-panelrect-i.md) | Yes | Landscape rectangle and portrait rectangle of the target panel. For the panel of the fixed state, the height cannot exceed 70% of the screen height, and the width cannot exceed the screen width.For the panel of the floating state, the height cannot exceed the screen height, and the width cannot exceed the screen width. |
 
 **Error codes:**
 
@@ -1398,23 +1447,25 @@ Update the panel rectangle.
 updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
-Update the panel rectangle, and customizes the avoid area and touch area.
-> **NOTE**
->
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state. This API is compatible with
-> [updatePanelRectSync](arkts-ime-panel-i.md#updatepanelrectsync-1).
-> If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes,
-> [updatePanelRectSync](arkts-ime-panel-i.md#updatepanelrectsync-1)
-> is called by default.
->
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
-> function buttons at the bottom of the panel will dynamically update their size according to the panel width. To
+Update the panel rectangle, and customizes the avoid area and touch area.  
+> **NOTE**  
+>  
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**  
+> state. This API is compatible with  
+> [updatePanelRectSync](arkts-ime-panel-i.md#updatepanelrectsync-1).  
+> If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes,  
+> [updatePanelRectSync](arkts-ime-panel-i.md#updatepanelrectsync-1)  
+> is called by default.  
+>  
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the  
+> function buttons at the bottom of the panel will dynamically update their size according to the panel width. To  
 > ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Panel-updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void--><!--Device-Panel-updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1422,8 +1473,8 @@ Update the panel rectangle, and customizes the avoid area and touch area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | PanelFlag | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
-| rect | EnhancedPanelRect | Yes | The target panel rectangle, avoid area, and touch area. |
+| flag | [PanelFlag](arkts-ime-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| rect | [EnhancedPanelRect](arkts-ime-enhancedpanelrect-i.md) | Yes | The target panel rectangle, avoid area, and touch area. |
 
 **Error codes:**
 
@@ -1440,15 +1491,17 @@ updateRegion(inputRegion: Array<window.Rect>): void
 
 Updates the hot zone on the input method panel in the current state.
 
-> **NOTE**
->
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state.
->
-> This API returns the result synchronously. The return only indicates that the system has received the request
+> **NOTE**  
+>  
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**  
+> state.  
+>  
+> This API returns the result synchronously. The return only indicates that the system has received the request  
 > for updating the hot zone, not that the hot zone has been updated.
 
 **Since:** 15
+
+<!--Device-Panel-updateRegion(inputRegion: Array<window.Rect>): void--><!--Device-Panel-updateRegion(inputRegion: Array<window.Rect>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -1456,7 +1509,7 @@ Updates the hot zone on the input method panel in the current state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputRegion | Array&lt;window.Rect&gt; | Yes | Region for receiving input events.<br>- The array size is limited to [1, 4].<br>- The input hot zone is relative to the left vertex of the input method panel window. |
+| inputRegion | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<window.Rect> | Yes | Region for receiving input events.<br>- The array size is limited to [1, 4].<br>- The input hot zone is relative to the left vertex of the input method panel window. |
 
 **Error codes:**
 

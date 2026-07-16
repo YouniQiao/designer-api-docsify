@@ -12,16 +12,13 @@ import { audio } from '@kit.AudioKit';
 function createGlobalAudioLoopback(mode: AudioLoopbackMode, isController: boolean): Promise<AudioLoopback | null>
 ```
 
-Creates a global audio loopback instance, which provides low-latency in-ear monitor function.
-Hardware audio loopback can only be created in supported platform, application can use
-{@link AudioStreamManager#isAudioLoopbackSupported} to check first.
-There should be only one main instance that own the global loopback in the system, the others
-are controllers. A controller can manage the global loopback by sending commands to the main
-instance, and listen status change from it.
+Creates a global audio loopback instance, which provides low-latency in-ear monitor function.Hardware audio loopback can only be created in supported platform, application can use{@link AudioStreamManager#isAudioLoopbackSupported} to check first.There should be only one main instance that own the global loopback in the system, the others are controllers. A controller can manage the global loopback by sending commands to the main instance, and listen status change from it.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-audio-function createGlobalAudioLoopback(mode: AudioLoopbackMode, isController: boolean): Promise<AudioLoopback | null>--><!--Device-audio-function createGlobalAudioLoopback(mode: AudioLoopbackMode, isController: boolean): Promise<AudioLoopback | null>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -31,14 +28,14 @@ instance, and listen status change from it.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | AudioLoopbackMode | Yes | Audio loopback mode to create. |
+| mode | [AudioLoopbackMode](arkts-audio-audioloopbackmode-e.md) | Yes | Audio loopback mode to create. |
 | isController | boolean | Yes | Create an object that own the audio loopback or only a controller. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioLoopback \| null&gt; | Promise used to return the audio loopback instance,or null when an error happens. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AudioLoopback \| null> | Promise used to return the audio loopback instance,or null when an error happens. |
 
 **Error codes:**
 

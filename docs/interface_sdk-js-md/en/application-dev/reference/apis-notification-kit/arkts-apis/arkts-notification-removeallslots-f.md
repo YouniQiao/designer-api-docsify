@@ -14,13 +14,11 @@ function removeAllSlots(callback: AsyncCallback<void>): void
 
 Removes all notification slots for this application. This API uses an asynchronous callback to return the result.
 
-After deletion, all notification slots and their configurations of the current application will be
-permanently removed. When notifications are published subsequently, the system will automatically
-create slots of the corresponding types. Notifications already published through these slots are
-not affected and can still be viewed in the notification center. This is suitable for scenarios
-where all slot configurations need to be cleared at once.
+After deletion, all notification slots and their configurations of the current application will be permanently removed. When notifications are published subsequently, the system will automatically create slots of the corresponding types. Notifications already published through these slots are not affected and can still be viewed in the notification center. This is suitable for scenarios where all slot configurations need to be cleared at once.
 
 **Since:** 9
+
+<!--Device-notificationManager-function removeAllSlots(callback: AsyncCallback<void>): void--><!--Device-notificationManager-function removeAllSlots(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -28,7 +26,7 @@ where all slot configurations need to be cleared at once.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -64,13 +62,11 @@ function removeAllSlots(): Promise<void>
 
 Removes all notification slots for this application. This API uses a promise to return the result.
 
-After deletion, all notification slots and their configurations of the current application will be
-permanently removed. When notifications are published subsequently, the system will automatically
-create slots of the corresponding types. Notifications already published through these slots are
-not affected and can still be viewed in the notification center. This is suitable for scenarios
-where all slot configurations need to be cleared at once.
+After deletion, all notification slots and their configurations of the current application will be permanently removed. When notifications are published subsequently, the system will automatically create slots of the corresponding types. Notifications already published through these slots are not affected and can still be viewed in the notification center. This is suitable for scenarios where all slot configurations need to be cleared at once.
 
 **Since:** 9
+
+<!--Device-notificationManager-function removeAllSlots(): Promise<void>--><!--Device-notificationManager-function removeAllSlots(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -78,7 +74,7 @@ where all slot configurations need to be cleared at once.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

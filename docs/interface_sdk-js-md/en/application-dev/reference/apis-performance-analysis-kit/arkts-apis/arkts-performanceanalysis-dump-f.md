@@ -16,6 +16,8 @@ Dumps the list of leaked objects and VM memory snapshot.
 
 **Since:** 12
 
+<!--Device-jsLeakWatcher-function dump(filePath: string): Array<string>--><!--Device-jsLeakWatcher-function dump(filePath: string): Array<string>-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 **Parameters:**
@@ -28,7 +30,7 @@ Dumps the list of leaked objects and VM memory snapshot.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Export result. The file name extension is **.jsleaklist** for the list of leaked objectsand **.heapsnapshot** for the VM memory snapshot.<br>Note: If the dump is successful, the path of the leaked object list file and the VM memory snapshot path arereturned. Otherwise, an empty array is returned. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Export result. The file name extension is **.jsleaklist** for the list of leaked objects and **.heapsnapshot** for the VM memory snapshot.<br>Note: If the dump is successful, the path of the leaked object list file and the VM memory snapshot path are returned. Otherwise, an empty array is returned. |
 
 **Example**
 

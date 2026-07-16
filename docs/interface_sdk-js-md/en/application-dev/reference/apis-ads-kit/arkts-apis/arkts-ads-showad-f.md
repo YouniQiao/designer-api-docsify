@@ -18,21 +18,23 @@ Shows a full-screen ad.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-advertising-function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.UIAbilityContext): void--><!--Device-advertising-function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.UIAbilityContext): void-End-->
+
 **System capability:** SystemCapability.Advertising.Ads
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ad | Advertisement | Yes | Ad object. |
-| options | AdDisplayOptions | Yes | Ad display parameters. |
-| context | common.UIAbilityContext | No | Context of the UIAbility. If this parameter is not set, the value isobtained from @ohos.app.ability.common.<br>**Since:** 12 |
+| ad | [Advertisement](arkts-ads-advertisement-i.md) | Yes | Ad object. |
+| options | [AdDisplayOptions](arkts-ads-addisplayoptions-i.md) | Yes | Ad display parameters. |
+| context | common.UIAbilityContext | No | Context of the UIAbility. If this parameter is not set, the value is obtained from @ohos.app.ability.common.<br>**Since:** 12 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are leftunspecified. |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 | [21800004](../errorcode-ads.md#21800004-ad-display-failure) | Failed to display the ad. |
 

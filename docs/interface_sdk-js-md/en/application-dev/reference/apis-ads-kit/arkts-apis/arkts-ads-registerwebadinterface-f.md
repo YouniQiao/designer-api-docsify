@@ -12,12 +12,13 @@ import { advertising } from '@kit.AdsKit';
 function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext): void
 ```
 
-Injects an ad JavaScript object to the **Web** component
-(this API is only open to some pre-installed system applications).
+Injects an ad JavaScript object to the **Web** component(this API is only open to some pre-installed system applications).
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext): void--><!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext): void-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -32,7 +33,7 @@ Injects an ad JavaScript object to the **Web** component
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are leftunspecified. |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 
 **Example**
@@ -73,12 +74,15 @@ function registerWebAdInterface(controller: web_webview.WebviewController, conte
     needRefresh: boolean): void
 ```
 
-Injects an ad JavaScript object to the **Web** component
-(this API is only open to some pre-installed system applications).
+Injects an ad JavaScript object to the **Web** component(this API is only open to some pre-installed system applications).
 
 **Since:** 16
 
 **Atomic service API:** This API can be used in atomic services since API version 16.
+
+<!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext, 
+    needRefresh: boolean): void--><!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext, 
+    needRefresh: boolean): void-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -94,7 +98,7 @@ Injects an ad JavaScript object to the **Web** component
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: Mandatory parameters are leftunspecified. |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: Mandatory parameters are left unspecified. |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 
 **Example**

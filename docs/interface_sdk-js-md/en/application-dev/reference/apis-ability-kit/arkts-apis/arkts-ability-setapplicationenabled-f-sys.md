@@ -18,6 +18,8 @@ Enables or disables an application or an application clone. This API uses a prom
 
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
+<!--Device-bundleManager-function setApplicationEnabled(bundleName: string, appIndex: int, isEnabled: boolean): Promise<void>--><!--Device-bundleManager-function setApplicationEnabled(bundleName: string, appIndex: int, isEnabled: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -27,14 +29,14 @@ Enables or disables an application or an application clone. This API uses a prom
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| appIndex | number | Yes | Index of the application clone.<br> The value **0** means to enable or disable the mainapplication. A value greater than 0 means to enable or disable the application clone. |
+| appIndex | number | Yes | Index of the application clone.<br> The value **0** means to enable or disable the main application. A value greater than 0 means to enable or disable the application clone. |
 | isEnabled | boolean | Yes | Whether to enable the application. **true** to enable, **false** otherwise. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -75,14 +77,15 @@ try {
 function setApplicationEnabled(bundleName: string, appIndex: number, isEnabled: boolean, killProcess: boolean): Promise<void>
 ```
 
-Sets the enabled or disabled state of a specified application or application clone, and controls whether
-to exit the application process when the application is disabled. This API uses a promise to return the result.
+Sets the enabled or disabled state of a specified application or application clone, and controls whether to exit the application process when the application is disabled. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-bundleManager-function setApplicationEnabled(bundleName: string, appIndex: int, isEnabled: boolean, killProcess: boolean): Promise<void>--><!--Device-bundleManager-function setApplicationEnabled(bundleName: string, appIndex: int, isEnabled: boolean, killProcess: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -93,15 +96,15 @@ to exit the application process when the application is disabled. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
-| appIndex | number | Yes | Application index. The value is an integer ranging from 0 to 5. The value 0 indicatesthe main application, and the values 1 to 5 indicate the application clone indexes. |
-| isEnabled | boolean | Yes | Whether to enable the application. The value true indicates that the applicationis enabled, and false indicates that the application is disabled. |
-| killProcess | boolean | Yes | Whether to exit the application process when the application is disabled. Thevalue true indicates that the application process exits when the application is disabled, and falseindicates that the application process does not exit when the application is disabled. |
+| appIndex | number | Yes | Application index. The value is an integer ranging from 0 to 5. The value 0 indicates the main application, and the values 1 to 5 indicate the application clone indexes. |
+| isEnabled | boolean | Yes | Whether to enable the application. The value true indicates that the application is enabled, and false indicates that the application is disabled. |
+| killProcess | boolean | Yes | Whether to exit the application process when the application is disabled. The value true indicates that the application process exits when the application is disabled, and false indicates that the application process does not exit when the application is disabled. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -153,6 +156,8 @@ Enables or disables an application. This API uses an asynchronous callback to re
 
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
+<!--Device-bundleManager-function setApplicationEnabled(bundleName: string, isEnabled: boolean, callback: AsyncCallback<void>): void--><!--Device-bundleManager-function setApplicationEnabled(bundleName: string, isEnabled: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -163,7 +168,7 @@ Enables or disables an application. This API uses an asynchronous callback to re
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | isEnabled | boolean | Yes | Whether to enable the application. **true** to enable, **false** otherwise. |
-| callback | AsyncCallback&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. Ifthe operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -211,6 +216,8 @@ Enables or disables an application. This API uses a promise to return the result
 
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
+<!--Device-bundleManager-function setApplicationEnabled(bundleName: string, isEnabled: boolean): Promise<void>--><!--Device-bundleManager-function setApplicationEnabled(bundleName: string, isEnabled: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -226,7 +233,7 @@ Enables or disables an application. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

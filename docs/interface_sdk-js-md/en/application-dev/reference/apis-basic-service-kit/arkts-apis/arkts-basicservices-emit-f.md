@@ -14,17 +14,15 @@ function emit(event: InnerEvent, data?: EventData): void
 
 Emits a specified event.
 
-This API can be used to emit data objects across threads. The data objects must meet the specifications specified
-in [Overview of Inter-Thread Communication Objects](../../../../arkts-utils/serializable-overview.md). Currently,
-complex data decorated by decorators such as [@State](../../../../ui/state-management/arkts-state.md) and
-[@Observed](../../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.
+This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../../arkts-utils/serializable-overview.md). Currently,complex data decorated by decorators such as [@State](../../../../ui/state-management/arkts-state.md) and [@Observed](../../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.
 
-After an event is published using this API, the event may not be executed immediately. When the execution starts
-depends on the number of events in the event queue and the execution efficiency of each event.
+After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-emitter-function emit(event: InnerEvent, data?: EventData): void--><!--Device-emitter-function emit(event: InnerEvent, data?: EventData): void-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
 
@@ -32,8 +30,8 @@ depends on the number of events in the event queue and the execution efficiency 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | InnerEvent | Yes | Event to emit, where [EventPriority](arkts-basicservices-eventpriority-e.md) specifies the emitpriority of the event. |
-| data | EventData | No | Data carried by the event. This parameter is left empty by default. |
+| event | [InnerEvent](arkts-basicservices-innerevent-i.md) | Yes | Event to emit, where [EventPriority](arkts-basicservices-eventpriority-e.md) specifies the emit priority of the event. |
+| data | [EventData](arkts-basicservices-eventdata-i.md) | No | Data carried by the event. This parameter is left empty by default. |
 
 **Example**
 
@@ -63,17 +61,15 @@ function emit(eventId: string, data?: EventData): void
 
 Emits a specified event.
 
-This API can be used to emit data objects across threads. The data objects must meet the specifications specified
-in [Overview of Inter-Thread Communication Objects](../../../../arkts-utils/serializable-overview.md). Currently,
-complex data decorated by decorators such as [@State](../../../../ui/state-management/arkts-state.md) and
-[@Observed](../../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.
+This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../../arkts-utils/serializable-overview.md). Currently,complex data decorated by decorators such as [@State](../../../../ui/state-management/arkts-state.md) and [@Observed](../../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.
 
-After an event is published using this API, the event may not be executed immediately. When the execution starts
-depends on the number of events in the event queue and the execution efficiency of each event.
+After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-emitter-function emit(eventId: string, data?: EventData): void--><!--Device-emitter-function emit(eventId: string, data?: EventData): void-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
 
@@ -81,8 +77,8 @@ depends on the number of events in the event queue and the execution efficiency 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | Event ID, which is a custom string with a maximum of 10240 bytes. The value cannot beempty. |
-| data | EventData | No | Data carried by the event. This parameter is left empty by default. |
+| eventId | string | Yes | Event ID, which is a custom string with a maximum of 10240 bytes. The value cannot be empty. |
+| data | [EventData](arkts-basicservices-eventdata-i.md) | No | Data carried by the event. This parameter is left empty by default. |
 
 **Example**
 
@@ -107,17 +103,15 @@ function emit<T>(eventId: string, data?: GenericEventData<T>): void
 
 Emits a specified event.
 
-This API can be used to emit data objects across threads. The data objects must meet the specifications specified
-in [Overview of Inter-Thread Communication Objects](../../../../arkts-utils/serializable-overview.md). Currently,
-complex data decorated by decorators such as [@State](../../../../ui/state-management/arkts-state.md) and
-[@Observed](../../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.
+This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../../arkts-utils/serializable-overview.md). Currently,complex data decorated by decorators such as [@State](../../../../ui/state-management/arkts-state.md) and [@Observed](../../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.
 
-After an event is published using this API, the event may not be executed immediately. When the execution starts
-depends on the number of events in the event queue and the execution efficiency of each event.
+After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-emitter-function emit<T>(eventId: string, data?: GenericEventData<T>): void--><!--Device-emitter-function emit<T>(eventId: string, data?: GenericEventData<T>): void-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
 
@@ -125,8 +119,8 @@ depends on the number of events in the event queue and the execution efficiency 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | Event ID, which is a custom string with a maximum of 10240 bytes. The value cannot beempty. |
-| data | GenericEventData&lt;T&gt; | No | Data carried by the event. This parameter is left empty by default. |
+| eventId | string | Yes | Event ID, which is a custom string with a maximum of 10240 bytes. The value cannot be empty. |
+| data | [GenericEventData](arkts-basicservices-genericeventdata-i.md)<T> | No | Data carried by the event. This parameter is left empty by default. |
 
 **Example**
 
@@ -158,17 +152,15 @@ function emit(eventId: string, options: Options, data?: EventData): void
 
 Emits an event of a specified priority.
 
-This API can be used to emit data objects across threads. The data objects must meet the specifications specified
-in [Overview of Inter-Thread Communication Objects](../../../../arkts-utils/serializable-overview.md). Currently,
-complex data decorated by decorators such as [@State](../../../../ui/state-management/arkts-state.md) and
-[@Observed](../../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.
+This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../../arkts-utils/serializable-overview.md). Currently,complex data decorated by decorators such as [@State](../../../../ui/state-management/arkts-state.md) and [@Observed](../../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.
 
-After an event is published using this API, the event may not be executed immediately. When the execution starts
-depends on the number of events in the event queue and the execution efficiency of each event.
+After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-emitter-function emit(eventId: string, options: Options, data?: EventData): void--><!--Device-emitter-function emit(eventId: string, options: Options, data?: EventData): void-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
 
@@ -176,9 +168,9 @@ depends on the number of events in the event queue and the execution efficiency 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | Event ID, which is a custom string with a maximum of 10240 bytes. The value cannot beempty. |
-| options | Options | Yes | Event emit priority. |
-| data | EventData | No | Data carried by the event. This parameter is left empty by default. |
+| eventId | string | Yes | Event ID, which is a custom string with a maximum of 10240 bytes. The value cannot be empty. |
+| options | [Options](arkts-basicservices-options-i.md) | Yes | Event emit priority. |
+| data | [EventData](arkts-basicservices-eventdata-i.md) | No | Data carried by the event. This parameter is left empty by default. |
 
 **Example**
 
@@ -207,17 +199,15 @@ function emit<T>(eventId: string, options: Options, data?: GenericEventData<T>):
 
 Emits an event of a specified priority.
 
-This API can be used to emit data objects across threads. The data objects must meet the specifications specified
-in [Overview of Inter-Thread Communication Objects](../../../../arkts-utils/serializable-overview.md). Currently,
-complex data decorated by decorators such as [@State](../../../../ui/state-management/arkts-state.md) and
-[@Observed](../../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.
+This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../../arkts-utils/serializable-overview.md). Currently,complex data decorated by decorators such as [@State](../../../../ui/state-management/arkts-state.md) and [@Observed](../../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.
 
-After an event is published using this API, the event may not be executed immediately. When the execution starts
-depends on the number of events in the event queue and the execution efficiency of each event.
+After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-emitter-function emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void--><!--Device-emitter-function emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void-End-->
 
 **System capability:** SystemCapability.Notification.Emitter
 
@@ -225,9 +215,9 @@ depends on the number of events in the event queue and the execution efficiency 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | Event ID, which is a custom string with a maximum of 10240 bytes. The value cannot beempty. |
-| options | Options | Yes | Event emit priority. |
-| data | GenericEventData&lt;T&gt; | No | Data carried by the event. This parameter is left empty by default. |
+| eventId | string | Yes | Event ID, which is a custom string with a maximum of 10240 bytes. The value cannot be empty. |
+| options | [Options](arkts-basicservices-options-i.md) | Yes | Event emit priority. |
+| data | [GenericEventData](arkts-basicservices-genericeventdata-i.md)<T> | No | Data carried by the event. This parameter is left empty by default. |
 
 **Example**
 

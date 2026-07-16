@@ -12,13 +12,11 @@ import { window } from '@kit.ArkUI';
 function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): Promise<void>
 ```
 
-Sets a watermark image for windows in the current application process. This API uses a promise to return the
-result. This API must be called after
-[loadContent()](arkts-arkui-window-i.md#loadcontent-1)
-or [setUIContent()](arkts-arkui-window-i.md#setuicontent-1)
-takes effect.
+Sets a watermark image for windows in the current application process. This API uses a promise to return the result. This API must be called after [loadContent()](arkts-arkui-window-i.md#loadcontent-1)or [setUIContent()](arkts-arkui-window-i.md#setuicontent-1)takes effect.
 
 **Since:** 21
+
+<!--Device-window-function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): Promise<void>--><!--Device-window-function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -26,13 +24,13 @@ takes effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap \| undefined | Yes | If this parameter is set to **image.PixelMap**, a watermarkimage is set. If this parameter is set to **undefined**, the watermark is removed.<br>If the width and heightof the image both surpass the window and screen sizes, error code 1300016 is returned.<br>If the width orheight of the image goes beyond the window dimensions, the excess part is trimmed.<br>If the width or height ofthe image falls short of the window dimensions, the shortfall is automatically repeated to complete the image. |
+| pixelMap | image.PixelMap \| undefined | Yes | If this parameter is set to **image.PixelMap**, a watermark image is set. If this parameter is set to **undefined**, the watermark is removed.<br>If the width and height of the image both surpass the window and screen sizes, error code 1300016 is returned.<br>If the width or height of the image goes beyond the window dimensions, the excess part is trimmed.<br>If the width or height of the image falls short of the window dimensions, the shortfall is automatically repeated to complete the image. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

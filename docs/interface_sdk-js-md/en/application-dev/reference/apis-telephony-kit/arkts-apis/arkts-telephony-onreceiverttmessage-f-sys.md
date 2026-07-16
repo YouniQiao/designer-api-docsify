@@ -18,6 +18,8 @@ Subscribe to the rtt message event.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function onReceiveRttMessage(callback: Callback<RttMessageInfo>): void--><!--Device-call-function onReceiveRttMessage(callback: Callback<RttMessageInfo>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Subscribe to the rtt message event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;RttMessageInfo&gt; | Yes | Indicates the callback for getting the rtt message. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<RttMessageInfo> | Yes | Indicates the callback for getting the rtt message. |
 
 **Error codes:**
 

@@ -20,6 +20,8 @@ Update a VPN dialog authorize information
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-vpnExtension-function updateVpnAuthorizedState(bundleName: string): boolean--><!--Device-vpnExtension-function updateVpnAuthorizedState(bundleName: string): boolean-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.

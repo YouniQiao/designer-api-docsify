@@ -12,5 +12,7 @@ The [drag-and-drop sorting](../../apis-ability-kit/arkts-apis/arkts-app-ability-
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-unnamed-declare class ForEachAttribute extends DynamicNode<ForEachAttribute>--><!--Device-unnamed-declare class ForEachAttribute extends DynamicNode<ForEachAttribute>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

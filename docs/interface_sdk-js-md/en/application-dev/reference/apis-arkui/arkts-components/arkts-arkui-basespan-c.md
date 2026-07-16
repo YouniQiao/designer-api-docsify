@@ -6,6 +6,8 @@ Defines the base class **BaseSpan**, including the universal attributes of the *
 
 **Since:** 11
 
+<!--Device-unnamed-declare class BaseSpan<T> extends CommonMethod<T>--><!--Device-unnamed-declare class BaseSpan<T> extends CommonMethod<T>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## baselineOffset
@@ -14,8 +16,7 @@ Defines the base class **BaseSpan**, including the universal attributes of the *
 baselineOffset(value: LengthMetrics): T
 ```
 
-Sets the offset of the baseline. This attribute coexists with the **baselineOffset** attribute of the parent
-component.
+Sets the offset of the baseline. This attribute coexists with the **baselineOffset** attribute of the parent component.
 
 **Since:** 12
 
@@ -23,13 +24,15 @@ component.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BaseSpan-baselineOffset(value: LengthMetrics): T--><!--Device-BaseSpan-baselineOffset(value: LengthMetrics): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | LengthMetrics | Yes | Offset of the baseline. If the value specified is a percentage, the default valueis used.<br>A positive value moves the content upwards, while a negative value moves it downwards.<br>Defaultvalue: **0**<br>In the **ImageSpan**, when this parameter is set to a non-zero value, the[verticalAlign](ImageSpanAttribute#verticalAlign) is fixed to **ImageSpanAlignment.BASELINE**; when thisparameter is set to **0**, [verticalAlign](ImageSpanAttribute#verticalAlign) must be set to**ImageSpanAlignment.BASELINE** for the baseline alignment strategy to take effect. |
+| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes | Offset of the baseline. If the value specified is a percentage, the default value is used.<br>A positive value moves the content upwards, while a negative value moves it downwards.<br>Default value: **0**<br>In the **ImageSpan**, when this parameter is set to a non-zero value, the [verticalAlign](ImageSpanAttribute#verticalAlign) is fixed to **ImageSpanAlignment.BASELINE**; when this parameter is set to **0**, [verticalAlign](ImageSpanAttribute#verticalAlign) must be set to **ImageSpanAlignment.BASELINE** for the baseline alignment strategy to take effect. |
 
 **Return value:**
 
@@ -43,8 +46,7 @@ component.
 textBackgroundStyle(style: TextBackgroundStyle): T
 ```
 
-Background style. This attribute prioritizes the value separately set for the component. If it is not set, the
-component can inherit the settings from its parent [ContainerSpan](arkts-arkui-containerspan.md).
+Background style. This attribute prioritizes the value separately set for the component. If it is not set, the component can inherit the settings from its parent [ContainerSpan](arkts-arkui-containerspan.md).
 
 **Since:** 11
 
@@ -52,13 +54,15 @@ component can inherit the settings from its parent [ContainerSpan](arkts-arkui-c
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-BaseSpan-textBackgroundStyle(style: TextBackgroundStyle): T--><!--Device-BaseSpan-textBackgroundStyle(style: TextBackgroundStyle): T-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | TextBackgroundStyle | Yes | Sets the background style.<br>Default value:<br>{<br> color:Color.Transparent,<br> radius: 0<br>} |
+| style | [TextBackgroundStyle](arkts-arkui-textbackgroundstyle-i.md) | Yes | Sets the background style.<br>Default value:<br>{<br> color:Color.Transparent,<br> radius: 0<br>} |
 
 **Return value:**
 

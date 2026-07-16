@@ -1,9 +1,10 @@
 # AccessibilityGrid (System API)
 
-Defines accessibility grid information. For details, see the currentItem attribute in
-[AccessibilityElement](arkts-accessibility-accessibilityelement-i.md).
+Defines accessibility grid information. For details, see the currentItem attribute in [AccessibilityElement](arkts-accessibility-accessibilityelement-i.md).
 
 **Since:** 20
+
+<!--Device-unnamed-interface AccessibilityGrid--><!--Device-unnamed-interface AccessibilityGrid-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -21,6 +22,8 @@ Column index.
 
 **Since:** 20
 
+<!--Device-AccessibilityGrid-columnIndex: int--><!--Device-AccessibilityGrid-columnIndex: int-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -36,6 +39,8 @@ Row index.
 **Type:** number
 
 **Since:** 20
+
+<!--Device-AccessibilityGrid-rowIndex: int--><!--Device-AccessibilityGrid-rowIndex: int-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 

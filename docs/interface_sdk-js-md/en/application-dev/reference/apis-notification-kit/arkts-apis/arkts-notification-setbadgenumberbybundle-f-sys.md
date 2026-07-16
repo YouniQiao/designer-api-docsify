@@ -14,13 +14,13 @@ function setBadgeNumberByBundle(bundle: BundleOption, badgeNumber: number): Prom
 
 Sets the badge count for other applications. This API uses a promise to return the result.
 
-The current application must have a proxy relationship with another application, or the
-**ohos.permission.NOTIFICATION_AGENT_CONTROLLER** permission is granted to the current application.
+The current application must have a proxy relationship with another application, or the **ohos.permission.NOTIFICATION_AGENT_CONTROLLER** permission is granted to the current application.
 
-This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is
-returned.
+This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
 
 **Since:** 12
+
+<!--Device-notificationManager-function setBadgeNumberByBundle(bundle: BundleOption, badgeNumber: int): Promise<void>--><!--Device-notificationManager-function setBadgeNumberByBundle(bundle: BundleOption, badgeNumber: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -30,14 +30,14 @@ returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
 | badgeNumber | number | Yes | Notification badge number to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

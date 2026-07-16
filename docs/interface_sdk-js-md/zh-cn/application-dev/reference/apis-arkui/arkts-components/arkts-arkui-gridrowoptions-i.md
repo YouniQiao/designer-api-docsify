@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare interface GridRowOptions--><!--Device-unnamed-declare interface GridRowOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## breakpoints
@@ -32,9 +34,11 @@ reference: BreakpointsReference.WindowSize
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-GridRowOptions-breakpoints?: BreakPoints--><!--Device-GridRowOptions-breakpoints?: BreakPoints-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,7 +52,7 @@ columns?: number | GridRowColumnOption
 
 取值为大于0的整数。
 
-- API version 20之前：默认值为12。
+- API version 20之前：默认值为12。  
 - API version 20及之后：默认值为{ xs: 2, sm: 4, md: 8, lg: 12, xl: 12, xxl: 12 }
 
 非法值：按默认值处理。
@@ -57,9 +61,11 @@ columns?: number | GridRowColumnOption
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-GridRowOptions-columns?: number | GridRowColumnOption--><!--Device-GridRowOptions-columns?: number | GridRowColumnOption-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -79,9 +85,11 @@ direction?: GridRowDirection
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-GridRowOptions-direction?: GridRowDirection--><!--Device-GridRowOptions-direction?: GridRowDirection-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -103,9 +111,11 @@ gutter?: Length | GutterOption
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-GridRowOptions-gutter?: Length | GutterOption--><!--Device-GridRowOptions-gutter?: Length | GutterOption-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -18,6 +18,8 @@ Obtains the progress of scanning a picture. This API uses a promise to return th
 
 **Required permissions:** ohos.permission.PRINT
 
+<!--Device-scan-function getPictureScanProgress(scannerId: string): Promise<PictureScanProgress>--><!--Device-scan-function getPictureScanProgress(scannerId: string): Promise<PictureScanProgress>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
@@ -30,7 +32,7 @@ Obtains the progress of scanning a picture. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PictureScanProgress&gt; | Promise used to return the progress. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PictureScanProgress> | Promise used to return the progress. |
 
 **Error codes:**
 

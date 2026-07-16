@@ -2,6 +2,8 @@
 
 **起始版本：** 11
 
+<!--Device-configPolicy-export enum FollowXMode--><!--Device-configPolicy-export enum FollowXMode-End-->
+
 **系统能力：** SystemCapability.Customization.ConfigPolicy
 
 **系统接口：** 此接口为系统接口。
@@ -15,6 +17,8 @@ DEFAULT = 0
 默认模式，会根据各配置层级下的followx_file_list.cfg文件配置的跟随规则进行文件查找。
 
 **起始版本：** 11
+
+<!--Device-FollowXMode-DEFAULT = 0--><!--Device-FollowXMode-DEFAULT = 0-End-->
 
 **系统能力：** SystemCapability.Customization.ConfigPolicy
 
@@ -30,6 +34,8 @@ NO_RULE_FOLLOWED = 1
 
 **起始版本：** 11
 
+<!--Device-FollowXMode-NO_RULE_FOLLOWED = 1--><!--Device-FollowXMode-NO_RULE_FOLLOWED = 1-End-->
+
 **系统能力：** SystemCapability.Customization.ConfigPolicy
 
 **系统接口：** 此接口为系统接口。
@@ -43,6 +49,8 @@ SIM_DEFAULT = 10
 跟随默认卡模式，会根据默认卡的opkey在各配置层级下的etc/carrier/${opkey}下查找文件。
 
 **起始版本：** 11
+
+<!--Device-FollowXMode-SIM_DEFAULT = 10--><!--Device-FollowXMode-SIM_DEFAULT = 10-End-->
 
 **系统能力：** SystemCapability.Customization.ConfigPolicy
 
@@ -58,6 +66,8 @@ SIM_1 = 11
 
 **起始版本：** 11
 
+<!--Device-FollowXMode-SIM_1 = 11--><!--Device-FollowXMode-SIM_1 = 11-End-->
+
 **系统能力：** SystemCapability.Customization.ConfigPolicy
 
 **系统接口：** 此接口为系统接口。
@@ -72,6 +82,8 @@ SIM_2 = 12
 
 **起始版本：** 11
 
+<!--Device-FollowXMode-SIM_2 = 12--><!--Device-FollowXMode-SIM_2 = 12-End-->
+
 **系统能力：** SystemCapability.Customization.ConfigPolicy
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +97,8 @@ USER_DEFINED = 100
 用户自定义模式，会根据入参extra提供的跟随规则进行配置文件获取，忽略各配置层级下的followx_file_list.cfg文件。
 
 **起始版本：** 11
+
+<!--Device-FollowXMode-USER_DEFINED = 100--><!--Device-FollowXMode-USER_DEFINED = 100-End-->
 
 **系统能力：** SystemCapability.Customization.ConfigPolicy
 

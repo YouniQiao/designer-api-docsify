@@ -4,6 +4,8 @@ Represents a USB device pipe, which is used to determine a USB device.
 
 **Since:** 9
 
+<!--Device-usbManager-interface USBDevicePipe--><!--Device-usbManager-interface USBDevicePipe-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Bus address.
 
 **Since:** 9
 
+<!--Device-USBDevicePipe-busNum: int--><!--Device-USBDevicePipe-busNum: int-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## devAddress
@@ -37,6 +41,8 @@ Device address.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-USBDevicePipe-devAddress: int--><!--Device-USBDevicePipe-devAddress: int-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 

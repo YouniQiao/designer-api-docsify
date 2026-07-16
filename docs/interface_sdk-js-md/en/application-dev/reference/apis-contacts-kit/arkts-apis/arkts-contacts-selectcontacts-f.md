@@ -18,13 +18,15 @@ Selects a contact. This API uses an asynchronous callback to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-contact-function selectContacts(callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function selectContacts(callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **System capability:** SystemCapability.Applications.Contacts
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation issuccessful, an array of selected contacts is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Contact>> | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of selected contacts is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -62,13 +64,15 @@ Selects a contact. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-contact-function selectContacts(): Promise<Array<Contact>>--><!--Device-contact-function selectContacts(): Promise<Array<Contact>>-End-->
+
 **System capability:** SystemCapability.Applications.Contacts
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Contact&gt;&gt; | Promise used to return the result, which is an array of selected contacts. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Contact>> | Promise used to return the result, which is an array of selected contacts. |
 
 **Example**
 
@@ -90,12 +94,13 @@ promise.then((data) => {
 function selectContacts(options: ContactSelectionOptions, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Selects a contact. (Filter criteria can be transferred during contact selection.) This API uses an asynchronous
-callback to return the result.
+Selects a contact. (Filter criteria can be transferred during contact selection.) This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-contact-function selectContacts(options: ContactSelectionOptions, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function selectContacts(options: ContactSelectionOptions, callback: AsyncCallback<Array<Contact>>): void-End-->
 
 **System capability:** SystemCapability.Applications.Contacts
 
@@ -103,8 +108,8 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ContactSelectionOptions | Yes | Contact selection options, which specifies whether one contact ormultiple contacts can be selected. |
-| callback | AsyncCallback&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation issuccessful, an array of selected contacts is returned. If the operation fails, an error code is returned. |
+| options | [ContactSelectionOptions](arkts-contacts-contactselectionoptions-i.md) | Yes | Contact selection options, which specifies whether one contact or multiple contacts can be selected. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Contact>> | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of selected contacts is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -138,12 +143,13 @@ contact.selectContacts({
 function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact>>
 ```
 
-Selects a contact. (Filter criteria can be transferred during contact selection.) This API uses a promise to return
-the result.
+Selects a contact. (Filter criteria can be transferred during contact selection.) This API uses a promise to return the result.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-contact-function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact>>--><!--Device-contact-function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact>>-End-->
 
 **System capability:** SystemCapability.Applications.Contacts
 
@@ -151,13 +157,13 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ContactSelectionOptions | Yes | Contact selection options, which specifies whether one contact ormultiple contacts can be selected. |
+| options | [ContactSelectionOptions](arkts-contacts-contactselectionoptions-i.md) | Yes | Contact selection options, which specifies whether one contact or multiple contacts can be selected. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Contact&gt;&gt; | Promise used to return the result, which is an array of selected contacts. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Contact>> | Promise used to return the result, which is an array of selected contacts. |
 
 **Error codes:**
 

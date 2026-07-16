@@ -1,5 +1,11 @@
 # acquireAccess（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { screenLockFileManager } from '@kit.AbilityKit';
+```
+
 ## acquireAccess
 
 ```TypeScript
@@ -14,6 +20,8 @@ function acquireAccess(dataType: DataType): AccessStatus
 
 **需要权限：** ohos.permission.ACCESS_SCREEN_LOCK_MEDIA_DATA or ohos.permission.ACCESS_SCREEN_LOCK_ALL_DATA
 
+<!--Device-screenLockFileManager-function acquireAccess(dataType: DataType): AccessStatus--><!--Device-screenLockFileManager-function acquireAccess(dataType: DataType): AccessStatus-End-->
+
 **系统能力：** SystemCapability.Security.ScreenLockFileManager
 
 **系统接口：** 此接口为系统接口。
@@ -22,13 +30,13 @@ function acquireAccess(dataType: DataType): AccessStatus
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dataType | DataType | 是 | 锁屏下访问的敏感数据类型。 |
+| dataType | [DataType](arkts-ability-datatype-e.md) | 是 | 锁屏下访问的敏感数据类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AccessStatus | 锁屏下敏感数据访问权限的申请状态。 |
+| [AccessStatus](arkts-ability-accessstatus-e.md) | 锁屏下敏感数据访问权限的申请状态。 |
 
 **错误码：**
 

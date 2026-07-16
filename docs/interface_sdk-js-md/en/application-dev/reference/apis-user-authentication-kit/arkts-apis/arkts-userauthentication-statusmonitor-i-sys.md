@@ -1,10 +1,10 @@
 # StatusMonitor (System API)
 
-Status monitor object. It is used to listen for or obtain information such as the template status, continuous
-authentication status, and available device status. This object can be obtained by calling
-[getStatusMonitor](arkts-userauthentication-getstatusmonitor-f-sys.md#getstatusmonitor-1).
+Status monitor object. It is used to listen for or obtain information such as the template status, continuous authentication status, and available device status. This object can be obtained by calling [getStatusMonitor](arkts-userauthentication-getstatusmonitor-f-sys.md#getstatusmonitor-1).
 
 **Since:** 23
+
+<!--Device-companionDeviceAuth-interface StatusMonitor--><!--Device-companionDeviceAuth-interface StatusMonitor-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -22,15 +22,15 @@ import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 getTemplateStatus(): Promise<TemplateStatus[]>
 ```
 
-Obtains the status of the companion device template. This API is used to query the status of all registered
-companion device authentication templates of the current user, including the template validity, supported
-services, and associated device status. This API uses a promise to return the result.
+Obtains the status of the companion device template. This API is used to query the status of all registered companion device authentication templates of the current user, including the template validity, supported services, and associated device status. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StatusMonitor-getTemplateStatus(): Promise<TemplateStatus[]>--><!--Device-StatusMonitor-getTemplateStatus(): Promise<TemplateStatus[]>-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -40,7 +40,7 @@ services, and associated device status. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;TemplateStatus[]&gt; | Promise used to return the status list of all templates of the currentuser. The status of each template contains the template ID, validity, and device information. If theoperation fails, an error code is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<TemplateStatus[]> | Promise used to return the status list of all templates of the current user. The status of each template contains the template ID, validity, and device information. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -54,14 +54,15 @@ services, and associated device status. This API uses a promise to return the re
 offAvailableDeviceChange(callback?: AvailableDeviceStatusCallback): void
 ```
 
-Unsubscribes from the events for status changes of companion devices that can be added. This API uses an
-asynchronous callback to return the result.
+Unsubscribes from the events for status changes of companion devices that can be added. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StatusMonitor-offAvailableDeviceChange(callback?: AvailableDeviceStatusCallback): void--><!--Device-StatusMonitor-offAvailableDeviceChange(callback?: AvailableDeviceStatusCallback): void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -71,7 +72,7 @@ asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AvailableDeviceStatusCallback | No | Callback to unregister. If this parameter is notspecified, all callbacks corresponding to the event type are unsubscribed. |
+| callback | [AvailableDeviceStatusCallback](arkts-userauthentication-availabledevicestatuscallback-t-sys.md) | No | Callback to unregister. If this parameter is not specified, all callbacks corresponding to the event type are unsubscribed. |
 
 **Error codes:**
 
@@ -85,15 +86,15 @@ asynchronous callback to return the result.
 offContinuousAuthChange(callback?: ContinuousAuthStatusCallback): void
 ```
 
-Unsubscribes from the continuous authentication status change event of the companion device. After the
-unsubscription, the application will no longer receive notifications of continuous authentication status
-changes. This API uses an asynchronous callback to return the result.
+Unsubscribes from the continuous authentication status change event of the companion device. After the unsubscription, the application will no longer receive notifications of continuous authentication status changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StatusMonitor-offContinuousAuthChange(callback?: ContinuousAuthStatusCallback): void--><!--Device-StatusMonitor-offContinuousAuthChange(callback?: ContinuousAuthStatusCallback): void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -103,7 +104,7 @@ changes. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ContinuousAuthStatusCallback | No | Callback to unregister. If this parameter is passed,only the specified callback is unregistered. If this parameter is not passed, all callbacks registeredwith **onContinuousAuthChange** are unregistered. |
+| callback | [ContinuousAuthStatusCallback](arkts-userauthentication-continuousauthstatuscallback-t-sys.md) | No | Callback to unregister. If this parameter is passed,only the specified callback is unregistered. If this parameter is not passed, all callbacks registered with **onContinuousAuthChange** are unregistered. |
 
 **Error codes:**
 
@@ -125,6 +126,8 @@ Unsubscribes from template status change events. This API uses an asynchronous c
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-StatusMonitor-offTemplateChange(callback?: TemplateStatusCallback): void--><!--Device-StatusMonitor-offTemplateChange(callback?: TemplateStatusCallback): void-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **System API:** This is a system API.
@@ -133,7 +136,7 @@ Unsubscribes from template status change events. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | TemplateStatusCallback | No | Callback to unregister. If this parameter is not specified,all callbacks corresponding to the event type are unsubscribed. |
+| callback | [TemplateStatusCallback](arkts-userauthentication-templatestatuscallback-t-sys.md) | No | Callback to unregister. If this parameter is not specified,all callbacks corresponding to the event type are unsubscribed. |
 
 **Error codes:**
 
@@ -147,14 +150,15 @@ Unsubscribes from template status change events. This API uses an asynchronous c
 onAvailableDeviceChange(callback: AvailableDeviceStatusCallback): void
 ```
 
-Subscribes to the events for status changes of companion devices that can be added. This API uses an
-asynchronous callback to return the result.
+Subscribes to the events for status changes of companion devices that can be added. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StatusMonitor-onAvailableDeviceChange(callback: AvailableDeviceStatusCallback): void--><!--Device-StatusMonitor-onAvailableDeviceChange(callback: AvailableDeviceStatusCallback): void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -164,7 +168,7 @@ asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AvailableDeviceStatusCallback | Yes | Callback used to return the available device status. |
+| callback | [AvailableDeviceStatusCallback](arkts-userauthentication-availabledevicestatuscallback-t-sys.md) | Yes | Callback used to return the available device status. |
 
 **Error codes:**
 
@@ -178,14 +182,15 @@ asynchronous callback to return the result.
 onContinuousAuthChange(param: ContinuousAuthParam, callback: ContinuousAuthStatusCallback): void
 ```
 
-Subscribes to the events for continuous authentication status of companion devices. This API uses an
-asynchronous callback to return the result.
+Subscribes to the events for continuous authentication status of companion devices. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StatusMonitor-onContinuousAuthChange(param: ContinuousAuthParam, callback: ContinuousAuthStatusCallback): void--><!--Device-StatusMonitor-onContinuousAuthChange(param: ContinuousAuthParam, callback: ContinuousAuthStatusCallback): void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
@@ -195,8 +200,8 @@ asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | ContinuousAuthParam | Yes | Device for which the events are subscribed to. |
-| callback | ContinuousAuthStatusCallback | Yes | Called when the continuous authentication status of thedevice changes. |
+| param | [ContinuousAuthParam](arkts-userauthentication-continuousauthparam-i-sys.md) | Yes | Device for which the events are subscribed to. |
+| callback | [ContinuousAuthStatusCallback](arkts-userauthentication-continuousauthstatuscallback-t-sys.md) | Yes | Called when the continuous authentication status of the device changes. |
 
 **Error codes:**
 
@@ -219,6 +224,8 @@ Subscribes to template status change events. This API uses an asynchronous callb
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-StatusMonitor-onTemplateChange(callback: TemplateStatusCallback): void--><!--Device-StatusMonitor-onTemplateChange(callback: TemplateStatusCallback): void-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **System API:** This is a system API.
@@ -227,7 +234,7 @@ Subscribes to template status change events. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | TemplateStatusCallback | Yes | Callback used to receive the template status. |
+| callback | [TemplateStatusCallback](arkts-userauthentication-templatestatuscallback-t-sys.md) | Yes | Callback used to receive the template status. |
 
 **Error codes:**
 

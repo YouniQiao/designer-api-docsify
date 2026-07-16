@@ -1,5 +1,11 @@
 # addDisallowedInstallBundles（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+```
+
 ## addDisallowedInstallBundles
 
 ```TypeScript
@@ -18,6 +24,8 @@ function addDisallowedInstallBundles(admin: Want, appIds: Array<string>, callbac
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bundleManager-function addDisallowedInstallBundles(admin: Want, appIds: Array<string>, callback: AsyncCallback<void>): void--><!--Device-bundleManager-function addDisallowedInstallBundles(admin: Want, appIds: Array<string>, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -26,9 +34,9 @@ function addDisallowedInstallBundles(admin: Want, appIds: Array<string>, callbac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| appIds | Array&lt;string&gt; | 是 | 应用ID数组。<br/>**说明：** 从API version 21版本开始，支持传入应用的[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)和[appIdentifier](../../../../quick-start/common-problem-of-application.md#什么是appidentifier)，推荐使用[appIdentifier](../../../../quick-start/common-problem-of-application.md#什么是appidentifier)。API version 20及之前版本，仅支持[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当接口调用成功，err为null，否则为错误对象。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| appIds | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 应用ID数组。<br/>**说明：** 从API version 21版本开始，支持传入应用的[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)和[appIdentifier](../../../../quick-start/common-problem-of-application.md#什么是appidentifier)，推荐使用[appIdentifier](../../../../quick-start/common-problem-of-application.md#什么是appidentifier)。API version 20及之前版本，仅支持[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当接口调用成功，err为null，否则为错误对象。 |
 
 **错误码：**
 
@@ -83,6 +91,8 @@ function addDisallowedInstallBundles(admin: Want, appIds: Array<string>, userId:
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bundleManager-function addDisallowedInstallBundles(admin: Want, appIds: Array<string>, userId: number, callback: AsyncCallback<void>): void--><!--Device-bundleManager-function addDisallowedInstallBundles(admin: Want, appIds: Array<string>, userId: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -91,10 +101,10 @@ function addDisallowedInstallBundles(admin: Want, appIds: Array<string>, userId:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| appIds | Array&lt;string&gt; | 是 | 应用ID数组。<br/>**说明：** 从API version 21版本开始，支持传入应用的[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)和[appIdentifier](../../../../quick-start/common-problem-of-application.md#什么是appidentifier)，推荐使用[appIdentifier](../../../../quick-start/common-problem-of-application.md#什么是appidentifier)。API version 20及之前版本，仅支持[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| appIds | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 应用ID数组。<br/>**说明：** 从API version 21版本开始，支持传入应用的[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)和[appIdentifier](../../../../quick-start/common-problem-of-application.md#什么是appidentifier)，推荐使用[appIdentifier](../../../../quick-start/common-problem-of-application.md#什么是appidentifier)。API version 20及之前版本，仅支持[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)。 |
 | userId | number | 是 | 用户ID，指定具体用户。取值范围：大于等于0。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数，当接口调用成功，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数，当接口调用成功，err为null，否则为错误对象。 |
 
 **错误码：**
 
@@ -149,6 +159,8 @@ function addDisallowedInstallBundles(admin: Want, appIds: Array<string>, userId?
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bundleManager-function addDisallowedInstallBundles(admin: Want, appIds: Array<string>, userId?: number): Promise<void>--><!--Device-bundleManager-function addDisallowedInstallBundles(admin: Want, appIds: Array<string>, userId?: number): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -157,15 +169,15 @@ function addDisallowedInstallBundles(admin: Want, appIds: Array<string>, userId?
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| appIds | Array&lt;string&gt; | 是 | 应用ID数组。<br/>**说明：** 从API version 21版本开始，支持传入应用的[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)和[appIdentifier](../../../../quick-start/common-problem-of-application.md#什么是appidentifier)，推荐使用[appIdentifier](../../../../quick-start/common-problem-of-application.md#什么是appidentifier)。API version 20及之前版本，仅支持[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| appIds | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 应用ID数组。<br/>**说明：** 从API version 21版本开始，支持传入应用的[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)和[appIdentifier](../../../../quick-start/common-problem-of-application.md#什么是appidentifier)，推荐使用[appIdentifier](../../../../quick-start/common-problem-of-application.md#什么是appidentifier)。API version 20及之前版本，仅支持[appId](../../../../quick-start/common-problem-of-application.md#什么是appid)。 |
 | userId | number | 否 | 用户ID，取值范围：大于等于0。<br> - 调用接口时，若传入userId，表示指定用户。<br> - 调用接口时，若未传入userId，表示当前用户。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。当添加应用程序包安装禁止名单失败时，会抛出错误对象。 |
+| Promise<void> | 无返回结果的Promise对象。当添加应用程序包安装禁止名单失败时，会抛出错误对象。 |
 
 **错误码：**
 

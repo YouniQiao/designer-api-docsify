@@ -2,11 +2,13 @@
 
 定义背景图选项。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 背景图片的同步加载可能会带来潜在性能问题，详情可见[Image](../../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#image-1)中说明。
 
 **起始版本：** 18
+
+<!--Device-unnamed-interface BackgroundImageOptions--><!--Device-unnamed-interface BackgroundImageOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,9 +26,11 @@ repeat?: ImageRepeat
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BackgroundImageOptions-repeat?: ImageRepeat--><!--Device-BackgroundImageOptions-repeat?: ImageRepeat-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,9 +54,11 @@ true：同步加载图片。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-BackgroundImageOptions-syncLoad?: boolean--><!--Device-BackgroundImageOptions-syncLoad?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

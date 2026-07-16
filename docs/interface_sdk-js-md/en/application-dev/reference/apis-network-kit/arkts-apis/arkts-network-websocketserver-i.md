@@ -1,9 +1,10 @@
 # WebSocketServer
 
-<p>Defines a WebSocketServer object. Before invoking WebSocketServer APIs,
-you need to call webSocketServer.createWebSocketServer to create a WebSocket Server.</p>
+<p>Defines a WebSocketServer object. Before invoking WebSocketServer APIs,you need to call webSocketServer.createWebSocketServer to create a WebSocket Server.</p>
 
 **Since:** 24
+
+<!--Device-webSocket-export interface WebSocketServer--><!--Device-webSocket-export interface WebSocketServer-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -25,20 +26,22 @@ Close a given WebSocket connection.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-WebSocketServer-close(connection: WebSocketConnection, options?: webSocket.WebSocketCloseOptions): Promise<boolean>--><!--Device-WebSocketServer-close(connection: WebSocketConnection, options?: webSocket.WebSocketCloseOptions): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | WebSocketConnection | Yes | which on to be closed. |
+| connection | [WebSocketConnection](arkts-network-websocketconnection-i.md) | Yes | which on to be closed. |
 | options | webSocket.WebSocketCloseOptions | No | Optional parameters {@link WebSocketCloseOptions}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Indicating whether the connection is closed sucessfully. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Indicating whether the connection is closed sucessfully. |
 
 **Error codes:**
 
@@ -96,13 +99,15 @@ List all alive connections.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-WebSocketServer-listAllConnections(): WebSocketConnection[]--><!--Device-WebSocketServer-listAllConnections(): WebSocketConnection[]-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| WebSocketConnection[] | an array consists connections from all clients. |
+| [WebSocketConnection](arkts-network-websocketconnection-i.md)[] | an array consists connections from all clients. |
 
 **Error codes:**
 
@@ -161,6 +166,8 @@ Cancels listening for the error events of a WebSocket Server.
 
 **Since:** 24
 
+<!--Device-WebSocketServer-off(type: 'error', callback?: ErrorCallback): void--><!--Device-WebSocketServer-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -168,7 +175,7 @@ Cancels listening for the error events of a WebSocket Server.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | event indicating that the WebSocket Server has encountered an error. |
-| callback | ErrorCallback | No | the callback used to return the result. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | the callback used to return the result. |
 
 **Example**
 
@@ -191,6 +198,8 @@ Cancels listening for events that a client requested to connect the server.
 
 **Since:** 24
 
+<!--Device-WebSocketServer-off(type: 'connect', callback?: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-off(type: 'connect', callback?: Callback<WebSocketConnection>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -198,7 +207,7 @@ Cancels listening for events that a client requested to connect the server.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' | Yes | event indicating that a client requested to connect the server. |
-| callback | Callback&lt;WebSocketConnection&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<WebSocketConnection> | No | the callback used to return the result. |
 
 **Example**
 
@@ -221,6 +230,8 @@ Cancels listening for events that a connection from a given client has been clos
 
 **Since:** 24
 
+<!--Device-WebSocketServer-off(type: 'close', callback?: ClientConnectionCloseCallback): void--><!--Device-WebSocketServer-off(type: 'close', callback?: ClientConnectionCloseCallback): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -228,7 +239,7 @@ Cancels listening for events that a connection from a given client has been clos
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'close' | Yes | event indicating that a connection from a given client has been closed. |
-| callback | ClientConnectionCloseCallback | No | the callback used to return the result. |
+| callback | [ClientConnectionCloseCallback](arkts-network-clientconnectionclosecallback-t.md) | No | the callback used to return the result. |
 
 **Example**
 
@@ -251,6 +262,8 @@ Cancels listening for events that the server received a message.
 
 **Since:** 24
 
+<!--Device-WebSocketServer-off(type: 'messageReceive', callback?: Callback<WebSocketMessage>): void--><!--Device-WebSocketServer-off(type: 'messageReceive', callback?: Callback<WebSocketMessage>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -258,7 +271,7 @@ Cancels listening for events that the server received a message.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'messageReceive' | Yes | event indicating that the server received a message. |
-| callback | Callback&lt;WebSocketMessage&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<WebSocketMessage> | No | the callback used to return the result. |
 
 **Example**
 
@@ -281,6 +294,8 @@ Enables listening for the error events of a WebSocket Server.
 
 **Since:** 24
 
+<!--Device-WebSocketServer-on(type: 'error', callback: ErrorCallback): void--><!--Device-WebSocketServer-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -288,7 +303,7 @@ Enables listening for the error events of a WebSocket Server.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | event indicating that the WebSocket Server has encountered an error. |
-| callback | ErrorCallback | Yes | the callback used to return the result. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | the callback used to return the result. |
 
 **Example**
 
@@ -313,6 +328,8 @@ Enables listening for events that a client requested to connect the server.
 
 **Since:** 24
 
+<!--Device-WebSocketServer-on(type: 'connect', callback: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-on(type: 'connect', callback: Callback<WebSocketConnection>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -320,7 +337,7 @@ Enables listening for events that a client requested to connect the server.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' | Yes | event indicating that a client requested to connect the server. |
-| callback | Callback&lt;WebSocketConnection&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<WebSocketConnection> | Yes | the callback used to return the result. |
 
 **Example**
 
@@ -345,6 +362,8 @@ Enables listening for events that the server received a message.
 
 **Since:** 24
 
+<!--Device-WebSocketServer-on(type: 'messageReceive', callback: Callback<WebSocketMessage>): void--><!--Device-WebSocketServer-on(type: 'messageReceive', callback: Callback<WebSocketMessage>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -352,7 +371,7 @@ Enables listening for events that the server received a message.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'messageReceive' | Yes | event indicating that the server received a message. |
-| callback | Callback&lt;WebSocketMessage&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<WebSocketMessage> | Yes | the callback used to return the result. |
 
 **Example**
 
@@ -377,6 +396,8 @@ Enables listening for events that a connection from a given client has been clos
 
 **Since:** 24
 
+<!--Device-WebSocketServer-on(type: 'close', callback: ClientConnectionCloseCallback): void--><!--Device-WebSocketServer-on(type: 'close', callback: ClientConnectionCloseCallback): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -384,7 +405,7 @@ Enables listening for events that a connection from a given client has been clos
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'close' | Yes | event indicating that a connection from a given client has been closed. |
-| callback | ClientConnectionCloseCallback | Yes | the callback function when a client connection is closed. |
+| callback | [ClientConnectionCloseCallback](arkts-network-clientconnectionclosecallback-t.md) | Yes | the callback function when a client connection is closed. |
 
 **Example**
 
@@ -411,6 +432,8 @@ Send a message using a specific connection.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-WebSocketServer-send(data: string | ArrayBuffer, connection: WebSocketConnection): Promise<boolean>--><!--Device-WebSocketServer-send(data: string | ArrayBuffer, connection: WebSocketConnection): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -418,13 +441,13 @@ Send a message using a specific connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | string \| ArrayBuffer | Yes | What to send. It can be a string or an ArrayBuffer. |
-| connection | WebSocketConnection | Yes | Where to sent. |
+| connection | [WebSocketConnection](arkts-network-websocketconnection-i.md) | Yes | Where to sent. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Indicating whether the message is sent sucessfully. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Indicating whether the message is sent sucessfully. |
 
 **Error codes:**
 
@@ -485,19 +508,21 @@ Start the WebSocket Server, and listen to a given port.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-WebSocketServer-start(config: WebSocketServerConfig): Promise<boolean>--><!--Device-WebSocketServer-start(config: WebSocketServerConfig): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | WebSocketServerConfig | Yes | setting for the server, such as ip address and port to listen to. |
+| config | [WebSocketServerConfig](arkts-network-websocketserverconfig-i.md) | Yes | setting for the server, such as ip address and port to listen to. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Indicating whether the server starts sucessfully. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Indicating whether the server starts sucessfully. |
 
 **Error codes:**
 
@@ -548,13 +573,15 @@ Stop listening.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-WebSocketServer-stop(): Promise<boolean>--><!--Device-WebSocketServer-stop(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The Indicating whether the server stops sucessfully. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | The Indicating whether the server stops sucessfully. |
 
 **Error codes:**
 

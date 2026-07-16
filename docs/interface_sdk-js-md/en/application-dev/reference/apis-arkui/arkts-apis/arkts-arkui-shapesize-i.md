@@ -4,6 +4,8 @@ Describes the size of a shape.
 
 **Since:** 12
 
+<!--Device-unnamed-interface ShapeSize--><!--Device-unnamed-interface ShapeSize-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -20,8 +22,7 @@ height?: number | string
 
 Height of the shape.
 
-When the parameter type is number, the valid value range is
-[0, +∞). When the parameter type is string, the value must conform to the [Length](../arkts-components/arkts-arkui-length-t.md) type specification.
+When the parameter type is number, the valid value range is [0, +∞). When the parameter type is string, the value must conform to the [Length](arkts-arkui-length-t.md) type specification.
 
 Unit: vp.
 
@@ -36,6 +37,8 @@ If the value is invalid, 0 vp is used.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-ShapeSize-height?: number | string--><!--Device-ShapeSize-height?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,8 +50,7 @@ width?: number | string
 
 Width of the shape.
 
-When the parameter type is number, the valid value range is
-[0, +∞). When the parameter type is string, the value must conform to the [Length](../arkts-components/arkts-arkui-length-t.md) type specification.
+When the parameter type is number, the valid value range is [0, +∞). When the parameter type is string, the value must conform to the [Length](arkts-arkui-length-t.md) type specification.
 
 Unit: vp.
 
@@ -63,6 +65,8 @@ If the value is invalid, 0 vp is used.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-ShapeSize-width?: number | string--><!--Device-ShapeSize-width?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

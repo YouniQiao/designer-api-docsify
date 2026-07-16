@@ -4,6 +4,8 @@ Define Preview property
 
 **Since:** 11
 
+<!--Device-unnamed-interface PreviewParams--><!--Device-unnamed-interface PreviewParams-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## colorMode
@@ -21,6 +23,8 @@ Define Preview colorMode
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-PreviewParams-colorMode?: string--><!--Device-PreviewParams-colorMode?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ Define Preview deviceType
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-PreviewParams-deviceType?: string--><!--Device-PreviewParams-deviceType?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## dpi
@@ -57,6 +63,8 @@ Define Preview dpi
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-PreviewParams-dpi?: number--><!--Device-PreviewParams-dpi?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,6 +84,8 @@ Define Preview height
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-PreviewParams-height?: number--><!--Device-PreviewParams-height?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## locale
@@ -93,6 +103,8 @@ Define Preview locale
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-PreviewParams-locale?: string--><!--Device-PreviewParams-locale?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -112,6 +124,8 @@ Define Preview orientation
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-PreviewParams-orientation?: string--><!--Device-PreviewParams-orientation?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## roundScreen
@@ -129,6 +143,8 @@ Define Preview roundScreen
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-PreviewParams-roundScreen?: boolean--><!--Device-PreviewParams-roundScreen?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -148,6 +164,8 @@ Define Preview title
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
+<!--Device-PreviewParams-title?: string--><!--Device-PreviewParams-title?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## width
@@ -165,6 +183,8 @@ Define Preview width
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-PreviewParams-width?: number--><!--Device-PreviewParams-width?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

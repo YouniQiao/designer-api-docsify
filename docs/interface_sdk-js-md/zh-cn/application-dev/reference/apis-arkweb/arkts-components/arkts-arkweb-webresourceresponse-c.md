@@ -4,6 +4,8 @@ Web组件资源响应对象。
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare class WebResourceResponse--><!--Device-unnamed-declare class WebResourceResponse-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## constructor
@@ -16,7 +18,9 @@ Constructor.
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceResponse-constructor()--><!--Device-WebResourceResponse-constructor()-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -30,7 +34,9 @@ getReasonMessage(): string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceResponse-getReasonMessage(): string--><!--Device-WebResourceResponse-getReasonMessage(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -50,7 +56,9 @@ getResponseCode(): number
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceResponse-getResponseCode(): number--><!--Device-WebResourceResponse-getResponseCode(): number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -70,7 +78,9 @@ getResponseData(): string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceResponse-getResponseData(): string--><!--Device-WebResourceResponse-getResponseData(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -90,6 +100,8 @@ getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined
 
 **起始版本：** 13
 
+<!--Device-WebResourceResponse-getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined--><!--Device-WebResourceResponse-getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -108,7 +120,9 @@ getResponseEncoding(): string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceResponse-getResponseEncoding(): string--><!--Device-WebResourceResponse-getResponseEncoding(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -128,7 +142,9 @@ getResponseHeader(): Array<Header>
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceResponse-getResponseHeader(): Array<Header>--><!--Device-WebResourceResponse-getResponseHeader(): Array<Header>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -136,7 +152,7 @@ getResponseHeader(): Array<Header>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Header&gt; | 返回资源响应头。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Header> | 返回资源响应头。 |
 
 ## getResponseIsReady
 
@@ -147,6 +163,8 @@ getResponseIsReady(): boolean
 获取响应数据是否已准备就绪。
 
 **起始版本：** 13
+
+<!--Device-WebResourceResponse-getResponseIsReady(): boolean--><!--Device-WebResourceResponse-getResponseIsReady(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -166,7 +184,9 @@ getResponseMimeType(): string
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceResponse-getResponseMimeType(): string--><!--Device-WebResourceResponse-getResponseMimeType(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -186,7 +206,9 @@ setReasonMessage(reason: string): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceResponse-setReasonMessage(reason: string): void--><!--Device-WebResourceResponse-setReasonMessage(reason: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -206,7 +228,9 @@ setResponseCode(code: number): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceResponse-setResponseCode(code: number): void--><!--Device-WebResourceResponse-setResponseCode(code: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -226,7 +250,9 @@ setResponseData(data: string | number | Resource | ArrayBuffer): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceResponse-setResponseData(data: string | number | Resource | ArrayBuffer): void--><!--Device-WebResourceResponse-setResponseData(data: string | number | Resource | ArrayBuffer): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -246,7 +272,9 @@ setResponseEncoding(encoding: string): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceResponse-setResponseEncoding(encoding: string): void--><!--Device-WebResourceResponse-setResponseEncoding(encoding: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -266,7 +294,9 @@ setResponseHeader(header: Array<Header>): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceResponse-setResponseHeader(header: Array<Header>): void--><!--Device-WebResourceResponse-setResponseHeader(header: Array<Header>): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -274,7 +304,7 @@ setResponseHeader(header: Array<Header>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| header | Array&lt;Header&gt; | 是 | 要设置的资源响应头。 |
+| header | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Header> | 是 | 要设置的资源响应头。 |
 
 ## setResponseIsReady
 
@@ -286,7 +316,9 @@ setResponseIsReady(IsReady: boolean): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceResponse-setResponseIsReady(IsReady: boolean): void--><!--Device-WebResourceResponse-setResponseIsReady(IsReady: boolean): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -306,7 +338,9 @@ setResponseMimeType(mimeType: string): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceResponse-setResponseMimeType(mimeType: string): void--><!--Device-WebResourceResponse-setResponseMimeType(mimeType: string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

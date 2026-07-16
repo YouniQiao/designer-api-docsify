@@ -14,13 +14,15 @@ function configure(config: ConfigOption): boolean
 
 **替代接口：** configure
 
+<!--Device-hiAppEvent-function configure(config: ConfigOption): boolean--><!--Device-hiAppEvent-function configure(config: ConfigOption): boolean-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | ConfigOption | 是 | 应用事件打点配置项对象。 |
+| config | [ConfigOption](arkts-performanceanalysis-configoption-i.md) | 是 | 应用事件打点配置项对象。 |
 
 **返回值：**
 

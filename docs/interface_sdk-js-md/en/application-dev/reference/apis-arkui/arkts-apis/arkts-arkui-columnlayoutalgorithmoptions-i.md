@@ -1,9 +1,10 @@
 # ColumnLayoutAlgorithmOptions
 
-Sets the spacing, main axis alignment method, cross axis alignment method, and main axis arrangement direction of the
-vertical linear layout algorithm.
+Sets the spacing, main axis alignment method, cross axis alignment method, and main axis arrangement direction of the vertical linear layout algorithm.
 
 **Since:** 24
+
+<!--Device-unnamed-interface ColumnLayoutAlgorithmOptions--><!--Device-unnamed-interface ColumnLayoutAlgorithmOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -31,6 +32,8 @@ Invalid values are treated as the default value.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
+<!--Device-ColumnLayoutAlgorithmOptions-alignItems?: HorizontalAlign--><!--Device-ColumnLayoutAlgorithmOptions-alignItems?: HorizontalAlign-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## isReverse
@@ -39,9 +42,7 @@ Invalid values are treated as the default value.
 isReverse?: boolean
 ```
 
-Whether to reverse the vertical arrangement of child components. **true** indicates to reverse the vertical
-arrangement of child components. **false** indicates to arrange child components in the vertical direction in
-normal order.
+Whether to reverse the vertical arrangement of child components. **true** indicates to reverse the vertical arrangement of child components. **false** indicates to arrange child components in the vertical direction in normal order.
 
 Default value: **false**
 
@@ -58,6 +59,8 @@ Invalid values are treated as the default value.
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
+
+<!--Device-ColumnLayoutAlgorithmOptions-isReverse?: boolean--><!--Device-ColumnLayoutAlgorithmOptions-isReverse?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,6 +88,8 @@ Invalid values are treated as the default value.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
+<!--Device-ColumnLayoutAlgorithmOptions-justifyContent?: FlexAlign--><!--Device-ColumnLayoutAlgorithmOptions-justifyContent?: FlexAlign-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## space
@@ -110,6 +115,8 @@ Invalid values are treated as the default value.
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
+
+<!--Device-ColumnLayoutAlgorithmOptions-space?: LengthMetrics--><!--Device-ColumnLayoutAlgorithmOptions-space?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

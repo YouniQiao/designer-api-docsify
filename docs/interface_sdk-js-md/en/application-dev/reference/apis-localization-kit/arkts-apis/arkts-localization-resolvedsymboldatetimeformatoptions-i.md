@@ -1,11 +1,12 @@
 # ResolvedSymbolDateTimeFormatOptions
 
-Represents optional element for the ResolvedSymbolDateTimeFormatOptions object.
-Define the resolved symbol element and value that need to get.
+Represents optional element for the ResolvedSymbolDateTimeFormatOptions object.Define the resolved symbol element and value that need to get.
 
 **Inheritance/Implementation:** ResolvedSymbolDateTimeFormatOptions extends [Intl.ResolvedDateTimeFormatOptions](../../apis-na/arkts-apis/arkts-na-resolveddatetimeformatoptions-i.md)
 
 **Since:** 26.0.0
+
+<!--Device-i18n-export interface ResolvedSymbolDateTimeFormatOptions extends Intl.ResolvedDateTimeFormatOptions--><!--Device-i18n-export interface ResolvedSymbolDateTimeFormatOptions extends Intl.ResolvedDateTimeFormatOptions-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -21,8 +22,7 @@ import { i18n } from '@kit.LocalizationKit';
 amPMSymbol?: string[]
 ```
 
-AM and PM symbol of date time period part, such as "PM" of "2:23 PM". First parameter is AM,
-second parameter is PM.
+AM and PM symbol of date time period part, such as "PM" of "2:23 PM". First parameter is AM,second parameter is PM.
 
 **Type:** string[]
 
@@ -31,6 +31,8 @@ second parameter is PM.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ResolvedSymbolDateTimeFormatOptions-amPMSymbol?: string[]--><!--Device-ResolvedSymbolDateTimeFormatOptions-amPMSymbol?: string[]-End-->
 
 **System capability:** SystemCapability.Global.I18n
 

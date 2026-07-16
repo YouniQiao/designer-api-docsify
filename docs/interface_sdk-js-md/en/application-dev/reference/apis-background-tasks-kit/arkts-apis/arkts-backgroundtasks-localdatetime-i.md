@@ -4,6 +4,8 @@ Defines the time information for a calendar reminder.
 
 **Since:** 9
 
+<!--Device-reminderAgentManager-interface LocalDateTime--><!--Device-reminderAgentManager-interface LocalDateTime-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Day. The value ranges from 1 to 31.
 
 **Since:** 9
 
+<!--Device-LocalDateTime-day: int--><!--Device-LocalDateTime-day: int-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## hour
@@ -37,6 +41,8 @@ Hour. The value ranges from 0 to 23.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-LocalDateTime-hour: int--><!--Device-LocalDateTime-hour: int-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -52,6 +58,8 @@ Minute. The value ranges from 0 to 59.
 
 **Since:** 9
 
+<!--Device-LocalDateTime-minute: int--><!--Device-LocalDateTime-minute: int-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## month
@@ -65,6 +73,8 @@ Month. The value ranges from 1 to 12.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-LocalDateTime-month: int--><!--Device-LocalDateTime-month: int-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -80,6 +90,8 @@ Second. The value ranges from 0 to 59.
 
 **Since:** 9
 
+<!--Device-LocalDateTime-second?: int--><!--Device-LocalDateTime-second?: int-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## year
@@ -93,6 +105,8 @@ Year.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-LocalDateTime-year: int--><!--Device-LocalDateTime-year: int-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 

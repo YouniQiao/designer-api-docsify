@@ -14,16 +14,18 @@ function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<n
 
 Publishes a reminder. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API can be called only after the
-> [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-requestenablenotification-f.md#requestenablenotification-2)
-> permission is obtained.
+> **NOTE**  
+>  
+> This API can be called only after the  
+> [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-requestenablenotification-f.md#requestenablenotification-2)  
+> permission is obtained.  
 >
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.PUBLISH_AGENT_REMINDER
+
+<!--Device-reminderAgentManager-function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<int>): void--><!--Device-reminderAgentManager-function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -31,8 +33,8 @@ Publishes a reminder. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderReq | ReminderRequest | Yes | Request used for publishing the reminder. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result.After the agent-powered reminder ispublished, **err** is **undefined**, and **data** is the ID of the published reminder. Otherwise, **err** is anerror object. |
+| reminderReq | [ReminderRequest](arkts-backgroundtasks-reminderrequest-i.md) | Yes | Request used for publishing the reminder. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result.After the agent-powered reminder is published, **err** is **undefined**, and **data** is the ID of the published reminder. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -72,16 +74,18 @@ function publishReminder(reminderReq: ReminderRequest): Promise<number>
 
 Publishes a reminder. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API can be called only after the
-> [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-requestenablenotification-f.md#requestenablenotification-2)
-> permission is obtained.
+> **NOTE**  
+>  
+> This API can be called only after the  
+> [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-requestenablenotification-f.md#requestenablenotification-2)  
+> permission is obtained.  
 >
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.PUBLISH_AGENT_REMINDER
+
+<!--Device-reminderAgentManager-function publishReminder(reminderReq: ReminderRequest): Promise<int>--><!--Device-reminderAgentManager-function publishReminder(reminderReq: ReminderRequest): Promise<int>-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -89,13 +93,13 @@ Publishes a reminder. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderReq | ReminderRequest | Yes | Request used for publishing the reminder. |
+| reminderReq | [ReminderRequest](arkts-backgroundtasks-reminderrequest-i.md) | Yes | Request used for publishing the reminder. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the published reminder ID. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the published reminder ID. |
 
 **Error codes:**
 

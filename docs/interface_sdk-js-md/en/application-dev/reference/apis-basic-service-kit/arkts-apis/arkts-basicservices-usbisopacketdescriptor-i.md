@@ -4,6 +4,8 @@ Describes packet information returned in real time by the transfer callback.
 
 **Since:** 18
 
+<!--Device-usbManager-interface UsbIsoPacketDescriptor--><!--Device-usbManager-interface UsbIsoPacketDescriptor-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Actual length of the read or written data.Unit: bytes.
 
 **Since:** 18
 
+<!--Device-UsbIsoPacketDescriptor-actualLength: int--><!--Device-UsbIsoPacketDescriptor-actualLength: int-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## length
@@ -38,6 +42,8 @@ Expected length of the read or written data.Unit: bytes.
 
 **Since:** 18
 
+<!--Device-UsbIsoPacketDescriptor-length: int--><!--Device-UsbIsoPacketDescriptor-length: int-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## status
@@ -51,6 +57,8 @@ Status returned by callback.
 **Type:** UsbTransferStatus
 
 **Since:** 18
+
+<!--Device-UsbIsoPacketDescriptor-status: UsbTransferStatus--><!--Device-UsbIsoPacketDescriptor-status: UsbTransferStatus-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 

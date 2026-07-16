@@ -4,6 +4,8 @@ Defines the constructor information for **ArcSliderStyleOptions**.
 
 **Since:** 18
 
+<!--Device-unnamed-interface ArcSliderStyleOptionsConstructorOptions--><!--Device-unnamed-interface ArcSliderStyleOptionsConstructorOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
@@ -32,6 +34,8 @@ Value range: [24, 36]. If the value is invalid, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcSliderStyleOptionsConstructorOptions-activeTrackThickness?: number--><!--Device-ArcSliderStyleOptionsConstructorOptions-activeTrackThickness?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## selectedColor
@@ -51,6 +55,8 @@ Default value: **#FF5EA1FF**
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSliderStyleOptionsConstructorOptions-selectedColor?: string--><!--Device-ArcSliderStyleOptionsConstructorOptions-selectedColor?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -74,6 +80,8 @@ If a value less than 0 is set, the default is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcSliderStyleOptionsConstructorOptions-trackBlur?: number--><!--Device-ArcSliderStyleOptionsConstructorOptions-trackBlur?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## trackColor
@@ -93,6 +101,8 @@ Default value: **#33FFFFFF**
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSliderStyleOptionsConstructorOptions-trackColor?: string--><!--Device-ArcSliderStyleOptionsConstructorOptions-trackColor?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -115,6 +125,8 @@ Value range: [5, 16]. If the value is invalid, the default value is used.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSliderStyleOptionsConstructorOptions-trackThickness?: number--><!--Device-ArcSliderStyleOptionsConstructorOptions-trackThickness?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 

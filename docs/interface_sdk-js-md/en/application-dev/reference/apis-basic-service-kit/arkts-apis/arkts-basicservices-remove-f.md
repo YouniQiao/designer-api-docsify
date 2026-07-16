@@ -12,13 +12,13 @@ import { request } from '@kit.BasicServicesKit';
 function remove(id: string, callback: AsyncCallback<void>): void
 ```
 
-Removes a specified task of the invoker. If the task is being executed, the task is forced to stop. This API uses
-an asynchronous callback to return the result. After this API is called, the **task** object and its callback
-function are released.
+Removes a specified task of the invoker. If the task is being executed, the task is forced to stop. This API uses an asynchronous callback to return the result. After this API is called, the **task** object and its callback function are released.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-agent-function remove(id: string, callback: AsyncCallback<void>): void--><!--Device-agent-function remove(id: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -27,7 +27,7 @@ function are released.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | Task ID. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -44,13 +44,13 @@ function are released.
 function remove(id: string): Promise<void>
 ```
 
-Removes a specified task of the invoker. If the task is being executed, the task is forced to stop. This API uses
-a promise to return the result. After this API is called, the **task** object and its callback function are
-released.
+Removes a specified task of the invoker. If the task is being executed, the task is forced to stop. This API uses a promise to return the result. After this API is called, the **task** object and its callback function are released.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-agent-function remove(id: string): Promise<void>--><!--Device-agent-function remove(id: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -64,7 +64,7 @@ released.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

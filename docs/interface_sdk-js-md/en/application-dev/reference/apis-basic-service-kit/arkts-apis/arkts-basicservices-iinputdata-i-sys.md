@@ -4,6 +4,8 @@ Provides callbacks for PIN operations.
 
 **Since:** 8
 
+<!--Device-osAccount-interface IInputData--><!--Device-osAccount-interface IInputData-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -24,6 +26,8 @@ Called to notify the caller the data is set.
 
 **Since:** 8
 
+<!--Device-IInputData-onSetData(authSubType: AuthSubType, data: Uint8Array): void--><!--Device-IInputData-onSetData(authSubType: AuthSubType, data: Uint8Array): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -32,8 +36,8 @@ Called to notify the caller the data is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authSubType | AuthSubType | Yes | Credential subtype. |
-| data | Uint8Array | Yes | Data (credential) to set. The data is used for authentication andoperations for adding and modifying credentials. |
+| authSubType | [AuthSubType](arkts-basicservices-authsubtype-e-sys.md) | Yes | Credential subtype. |
+| data | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Data (credential) to set. The data is used for authentication and operations for adding and modifying credentials. |
 
 **Error codes:**
 

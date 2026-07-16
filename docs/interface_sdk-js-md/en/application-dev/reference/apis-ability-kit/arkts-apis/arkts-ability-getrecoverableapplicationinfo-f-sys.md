@@ -12,12 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getRecoverableApplicationInfo(callback: AsyncCallback<Array<RecoverableApplicationInfo>>): void
 ```
 
-Obtains information about all preinstalled applications that can be restored. This API uses an asynchronous
-callback to return the result.
+Obtains information about all preinstalled applications that can be restored. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getRecoverableApplicationInfo(callback: AsyncCallback<Array<RecoverableApplicationInfo>>): void--><!--Device-bundleManager-function getRecoverableApplicationInfo(callback: AsyncCallback<Array<RecoverableApplicationInfo>>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -27,7 +28,7 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;RecoverableApplicationInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)used to return the result. If the operation is successful, **err** is **null** and **data** is the informationabout all preinstalled applications. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<RecoverableApplicationInfo>> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)used to return the result. If the operation is successful, **err** is **null** and **data** is the information about all preinstalled applications. |
 
 **Error codes:**
 
@@ -65,12 +66,13 @@ try {
 function getRecoverableApplicationInfo(): Promise<Array<RecoverableApplicationInfo>>
 ```
 
-Obtains information about all preinstalled applications that can be restored. This API uses a promise to return the
-result.
+Obtains information about all preinstalled applications that can be restored. This API uses a promise to return the result.
 
 **Since:** 11
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getRecoverableApplicationInfo(): Promise<Array<RecoverableApplicationInfo>>--><!--Device-bundleManager-function getRecoverableApplicationInfo(): Promise<Array<RecoverableApplicationInfo>>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -80,7 +82,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;RecoverableApplicationInfo&gt;&gt; | Promise used to return the information about allrecoverable applications. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<RecoverableApplicationInfo>> | Promise used to return the information about all recoverable applications. |
 
 **Error codes:**
 

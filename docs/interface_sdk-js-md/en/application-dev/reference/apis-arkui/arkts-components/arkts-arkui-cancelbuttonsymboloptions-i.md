@@ -4,6 +4,8 @@ Defines the CancelButton symbol options.
 
 **Since:** 12
 
+<!--Device-unnamed-interface CancelButtonSymbolOptions--><!--Device-unnamed-interface CancelButtonSymbolOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## icon
@@ -22,6 +24,8 @@ Symbol icon of the Cancel button on the right.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CancelButtonSymbolOptions-icon?: SymbolGlyphModifier--><!--Device-CancelButtonSymbolOptions-icon?: SymbolGlyphModifier-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## style
@@ -39,6 +43,8 @@ Display state of the Cancel button on the right.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CancelButtonSymbolOptions-style?: CancelButtonStyle--><!--Device-CancelButtonSymbolOptions-style?: CancelButtonStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

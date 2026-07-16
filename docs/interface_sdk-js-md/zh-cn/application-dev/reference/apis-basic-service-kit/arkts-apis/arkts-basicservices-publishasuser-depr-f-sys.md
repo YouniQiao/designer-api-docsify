@@ -14,6 +14,8 @@ function publishAsUser(event: string, userId: number, callback: AsyncCallback<vo
 
 **替代接口：** publishAsUser(event:
 
+<!--Device-commonEvent-function publishAsUser(event: string, userId: number, callback: AsyncCallback<void>): void--><!--Device-commonEvent-function publishAsUser(event: string, userId: number, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -24,7 +26,7 @@ function publishAsUser(event: string, userId: number, callback: AsyncCallback<vo
 | --- | --- | --- | --- |
 | event | string | 是 | 表示要发送的公共事件。 |
 | userId | number | 是 | 表示指定向该用户ID发送此公共事件。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 表示被指定的回调方法。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 表示被指定的回调方法。 |
 
 **示例：**
 
@@ -68,6 +70,18 @@ function publishAsUser(
 
 **替代接口：** publishAsUser(
 
+<!--Device-commonEvent-function publishAsUser(
+    event: string,
+    userId: number,
+    options: CommonEventPublishData,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-commonEvent-function publishAsUser(
+    event: string,
+    userId: number,
+    options: CommonEventPublishData,
+    callback: AsyncCallback<void>
+  ): void-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -78,8 +92,8 @@ function publishAsUser(
 | --- | --- | --- | --- |
 | event | string | 是 | 表示要发布的公共事件。 |
 | userId | number | 是 | 表示指定向该用户ID发送此公共事件。 |
-| options | CommonEventPublishData | 是 | 表示发布公共事件的属性。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 表示被指定的回调方法。 |
+| options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-i.md) | 是 | 表示发布公共事件的属性。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 表示被指定的回调方法。 |
 
 **示例：**
 

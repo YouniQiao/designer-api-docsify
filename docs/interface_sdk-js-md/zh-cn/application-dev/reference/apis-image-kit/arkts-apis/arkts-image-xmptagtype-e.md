@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-image-enum XMPTagType--><!--Device-image-enum XMPTagType-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## UNKNOWN
@@ -17,6 +19,8 @@ UNKNOWN = 0
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-XMPTagType-UNKNOWN = 0--><!--Device-XMPTagType-UNKNOWN = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -32,6 +36,8 @@ STRING = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-XMPTagType-STRING = 1--><!--Device-XMPTagType-STRING = 1-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## UNORDERED_ARRAY
@@ -45,6 +51,8 @@ UNORDERED_ARRAY = 2
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-XMPTagType-UNORDERED_ARRAY = 2--><!--Device-XMPTagType-UNORDERED_ARRAY = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -60,6 +68,8 @@ ORDERED_ARRAY = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-XMPTagType-ORDERED_ARRAY = 3--><!--Device-XMPTagType-ORDERED_ARRAY = 3-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## ALTERNATE_ARRAY
@@ -73,6 +83,8 @@ ALTERNATE_ARRAY = 4
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-XMPTagType-ALTERNATE_ARRAY = 4--><!--Device-XMPTagType-ALTERNATE_ARRAY = 4-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -88,6 +100,8 @@ ALTERNATE_TEXT = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-XMPTagType-ALTERNATE_TEXT = 5--><!--Device-XMPTagType-ALTERNATE_TEXT = 5-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## STRUCTURE
@@ -101,6 +115,8 @@ STRUCTURE = 6
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-XMPTagType-STRUCTURE = 6--><!--Device-XMPTagType-STRUCTURE = 6-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

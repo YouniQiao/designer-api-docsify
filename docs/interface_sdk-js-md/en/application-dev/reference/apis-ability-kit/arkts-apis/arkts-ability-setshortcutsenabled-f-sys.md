@@ -18,6 +18,8 @@ Enables or disables the specified static shortcuts. This API uses a promise to r
 
 **Required permissions:** ohos.permission.MANAGE_SHORTCUTS
 
+<!--Device-shortcutManager-function setShortcutsEnabled(shortcutsInfo: Array<ShortcutInfo>, isEnabled: boolean): Promise<void>--><!--Device-shortcutManager-function setShortcutsEnabled(shortcutsInfo: Array<ShortcutInfo>, isEnabled: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **System API:** This is a system API.
@@ -26,14 +28,14 @@ Enables or disables the specified static shortcuts. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shortcutsInfo | Array&lt;ShortcutInfo&gt; | Yes | Array of static shortcuts.<br>**NOTE**<br>This API does notdistinguish between the main application and the cloned application, and only takes effect for staticshortcuts. Therefore, the **appIndex** and **sourceType** fields in **ShortcutInfo** do not take effect. |
+| shortcutsInfo | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ShortcutInfo> | Yes | Array of static shortcuts.<br>**NOTE**<br>This API does not distinguish between the main application and the cloned application, and only takes effect for static shortcuts. Therefore, the **appIndex** and **sourceType** fields in **ShortcutInfo** do not take effect. |
 | isEnabled | boolean | Yes | Whether to enable the static shortcuts. **true** to enable, **false** otherwise. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

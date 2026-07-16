@@ -16,6 +16,8 @@ Sets the screen to independent display mode. This API uses a promise to return t
 
 **Since:** 18
 
+<!--Device-screen-function makeUnique(uniqueScreen: Array<long>): Promise<Array<long>>--><!--Device-screen-function makeUnique(uniqueScreen: Array<long>): Promise<Array<long>>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
@@ -24,13 +26,13 @@ Sets the screen to independent display mode. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uniqueScreen | Array&lt;number&gt; | Yes | Arry of independent screen IDs. Each ID must be an integer greater than 0;otherwise, error code 401 is returned. |
+| uniqueScreen | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Arry of independent screen IDs. Each ID must be an integer greater than 0;otherwise, error code 401 is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the independent screen IDs, where each ID is an integergreater than 0. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | Promise used to return the independent screen IDs, where each ID is an integer greater than 0. |
 
 **Error codes:**
 

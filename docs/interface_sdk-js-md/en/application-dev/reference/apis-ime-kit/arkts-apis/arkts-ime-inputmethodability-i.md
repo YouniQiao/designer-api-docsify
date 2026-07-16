@@ -1,10 +1,10 @@
 # InputMethodAbility
 
-In the following API examples, you must first use
-[getInputMethodAbility](arkts-ime-getinputmethodability-f.md#getinputmethodability-1) to obtain an **InputMethodAbility**
-instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [getInputMethodAbility](arkts-ime-getinputmethodability-f.md#getinputmethodability-1) to obtain an **InputMethodAbility** instance, and then call the APIs using the obtained instance.
 
 **Since:** 9
+
+<!--Device-inputMethodEngine-interface InputMethodAbility--><!--Device-inputMethodEngine-interface InputMethodAbility-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -20,25 +20,25 @@ import { inputMethodEngine } from '@kit.IMEKit';
 createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): void
 ```
 
-Creates an input method panel. This API can be called only by the input method application in the
-[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This
-API uses an asynchronous callback to return the result.
+Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> Only one [SOFT_KEYBOARD](arkts-ime-paneltype-e.md) panel and one
+> **NOTE**  
+>  
+> Only one [SOFT_KEYBOARD](arkts-ime-paneltype-e.md) panel and one  
 > [STATUS_BAR](arkts-ime-paneltype-e.md) panel can be created for a single input method.
 
-> The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such
-> as
-> [window.createWindow](../../apis-arkui/arkts-apis/arkts-arkui-createwindow-f.md#createwindow-1)
-> , [bindContextMenu](CommonMethod<T>.bindContextMenu),
-> and [CustomDialog](./@internal/component/ets/custom_dialog_controller). You are advised to adopt
-> alternative solutions to sub-windows, such as using a [dialog box](../../apis-arkui/arkts-apis/arkts-arkui-advanced-dialog.md) or
-> [bindMenu](CommonMethod<T>.bindMenu), or set
+> The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such  
+> as  
+> [window.createWindow](../../apis-arkui/arkts-apis/arkts-arkui-createwindow-f.md#createwindow-1)  
+> , [bindContextMenu](CommonMethod<T>.bindContextMenu),  
+> and [CustomDialog](./@internal/component/ets/custom_dialog_controller). You are advised to adopt  
+> alternative solutions to sub-windows, such as using a [dialog box](../../apis-arkui/arkts-apis/arkts-arkui-advanced-dialog.md) or  
+> [bindMenu](CommonMethod<T>.bindMenu), or set  
 > **showInSubwindow** to **false**.
 
 **Since:** 10
+
+<!--Device-InputMethodAbility-createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): void--><!--Device-InputMethodAbility-createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -46,9 +46,9 @@ API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ctx | BaseContext | Yes | Current context of the input method. |
-| info | PanelInfo | Yes | Information about the input method panel. |
-| callback | AsyncCallback&lt;Panel&gt; | Yes | Callback used to return the result. If the operation is successful,the created input method panel is returned. |
+| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current context of the input method. |
+| info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-panelinfo-i-sys.md) | Yes | Information about the input method panel. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Panel> | Yes | Callback used to return the result. If the operation is successful,the created input method panel is returned. |
 
 **Error codes:**
 
@@ -93,25 +93,25 @@ class InputMethodExt extends InputMethodExtensionAbility {
 createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 ```
 
-Creates an input method panel. This API can be called only by the input method application in the
-[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This
-API uses a promise to return the result.
+Creates an input method panel. This API can be called only by the input method application in the [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This API uses a promise to return the result.
 
-> **NOTE**
->
-> Only one [SOFT_KEYBOARD](arkts-ime-paneltype-e.md) panel and one
+> **NOTE**  
+>  
+> Only one [SOFT_KEYBOARD](arkts-ime-paneltype-e.md) panel and one  
 > [STATUS_BAR](arkts-ime-paneltype-e.md) panel can be created for a single input method.
 
-> The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such
-> as
-> [window.createWindow](../../../../windowmanager/application-window-fa.md#setting-the-child-window-of-an-application)
-> , [bindContextMenu](CommonMethod<T>.bindContextMenu),
-> and [CustomDialog](./@internal/component/ets/custom_dialog_controller). You are advised to adopt
-> alternative solutions to sub-windows, such as using a [dialog box](../../apis-arkui/arkts-apis/arkts-arkui-advanced-dialog.md) or
-> [bindMenu](CommonMethod<T>.bindMenu), or set
+> The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such  
+> as  
+> [window.createWindow](../../../../windowmanager/application-window-fa.md#setting-the-child-window-of-an-application)  
+> , [bindContextMenu](CommonMethod<T>.bindContextMenu),  
+> and [CustomDialog](./@internal/component/ets/custom_dialog_controller). You are advised to adopt  
+> alternative solutions to sub-windows, such as using a [dialog box](../../apis-arkui/arkts-apis/arkts-arkui-advanced-dialog.md) or  
+> [bindMenu](CommonMethod<T>.bindMenu), or set  
 > **showInSubwindow** to **false**.
 
 **Since:** 10
+
+<!--Device-InputMethodAbility-createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>--><!--Device-InputMethodAbility-createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -119,14 +119,14 @@ API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ctx | BaseContext | Yes | Current context of the input method. |
-| info | PanelInfo | Yes | Information about the input method panel. |
+| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Current context of the input method. |
+| info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-panelinfo-i-sys.md) | Yes | Information about the input method panel. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Panel&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Panel> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -173,14 +173,16 @@ Destroys the specified input method panel. This API uses an asynchronous callbac
 
 **Since:** 10
 
+<!--Device-InputMethodAbility-destroyPanel(panel: Panel, callback: AsyncCallback<void>): void--><!--Device-InputMethodAbility-destroyPanel(panel: Panel, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| panel | Panel | Yes | Input method panel to destroy. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| panel | [Panel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-panel-i.md) | Yes | Input method panel to destroy. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -233,19 +235,21 @@ Destroys the specified input method panel. This API uses a promise to return the
 
 **Since:** 10
 
+<!--Device-InputMethodAbility-destroyPanel(panel: Panel): Promise<void>--><!--Device-InputMethodAbility-destroyPanel(panel: Panel): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| panel | Panel | Yes | Input method panel to destroy. |
+| panel | [Panel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-panel-i.md) | Yes | Input method panel to destroy. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 
@@ -296,13 +300,15 @@ Obtains the current security mode of the input method.
 
 **Since:** 11
 
+<!--Device-InputMethodAbility-getSecurityMode(): SecurityMode--><!--Device-InputMethodAbility-getSecurityMode(): SecurityMode-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SecurityMode | Security mode. |
+| [SecurityMode](arkts-ime-securitymode-e.md) | Security mode. |
 
 **Error codes:**
 
@@ -324,10 +330,11 @@ console.error(`getSecurityMode, securityMode is : ${security}`);
 off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClient: InputClient) => void): void
 ```
 
-Disables listening for the input method binding event. This API uses an asynchronous callback to return the
-result.
+Disables listening for the input method binding event. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-InputMethodAbility-off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClient: InputClient) => void): void--><!--Device-InputMethodAbility-off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClient: InputClient) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -336,7 +343,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'inputStart' | Yes | Event type, which is **'inputStart'**. |
-| callback | (kbController: KeyboardController, inputClient: InputClient) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregistersall callbacks for the specified type. |
+| callback | (kbController: KeyboardController, inputClient: InputClient) => void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Example**
 
@@ -355,6 +362,8 @@ Disables listening for the input method stop event. This API uses an asynchronou
 
 **Since:** 9
 
+<!--Device-InputMethodAbility-off(type: 'inputStop', callback: () => void): void--><!--Device-InputMethodAbility-off(type: 'inputStop', callback: () => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -362,7 +371,7 @@ Disables listening for the input method stop event. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'inputStop' | Yes | Event type, which is **'inputStop'**. |
-| callback | () =&gt; void | Yes | Callback to unregister. If this parameter is not specified, this API unregistersall callbacks for the specified type. |
+| callback | () => void | Yes | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Example**
 
@@ -379,10 +388,11 @@ inputMethodEngine.getInputMethodAbility().off('inputStop', () => {
 off(type: 'setCallingWindow', callback: (wid: number) => void): void
 ```
 
-Disables listening for the window invocation setting event. This API uses an asynchronous callback to return the
-result.
+Disables listening for the window invocation setting event. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-InputMethodAbility-off(type: 'setCallingWindow', callback: (wid: number) => void): void--><!--Device-InputMethodAbility-off(type: 'setCallingWindow', callback: (wid: number) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -391,7 +401,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setCallingWindow' | Yes | Event type, which is **'setCallingWindow'**. |
-| callback | (wid: number) =&gt; void | Yes | Callback to unregister. If this parameter is not specified, this API unregistersall callbacks for the specified type. |
+| callback | (wid: number) => void | Yes | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Example**
 
@@ -412,6 +422,8 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 **Since:** 9
 
+<!--Device-InputMethodAbility-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void--><!--Device-InputMethodAbility-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -419,7 +431,7 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.<br>- The value **'keyboardShow'** indicates the keyboard display event.<br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
-| callback | () =&gt; void | No | Callback used to return the result. |
+| callback | () => void | No | Callback used to return the result. |
 
 **Example**
 
@@ -443,6 +455,8 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 **Since:** 9
 
+<!--Device-InputMethodAbility-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void--><!--Device-InputMethodAbility-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -450,7 +464,7 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.<br>- The value **'keyboardShow'** indicates the keyboard display event.<br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
-| callback | () =&gt; void | No | Callback used to return the result. |
+| callback | () => void | No | Callback used to return the result. |
 
 **Example**
 
@@ -470,10 +484,11 @@ inputMethodEngine.getInputMethodAbility().off('keyboardHide', () => {
 off(type: 'setSubtype', callback?: (inputMethodSubtype: InputMethodSubtype) => void): void
 ```
 
-Disables listening for the input method subtype setting event. This API uses an asynchronous callback to return
-the result.
+Disables listening for the input method subtype setting event. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-InputMethodAbility-off(type: 'setSubtype', callback?: (inputMethodSubtype: InputMethodSubtype) => void): void--><!--Device-InputMethodAbility-off(type: 'setSubtype', callback?: (inputMethodSubtype: InputMethodSubtype) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -482,7 +497,7 @@ the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setSubtype' | Yes | Event type, which is **'setSubtype'**. |
-| callback | (inputMethodSubtype: InputMethodSubtype) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregistersall callbacks for the specified type. |
+| callback | (inputMethodSubtype: InputMethodSubtype) => void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Example**
 
@@ -499,10 +514,11 @@ inputMethodEngine.getInputMethodAbility().off('setSubtype', () => {
 off(type: 'securityModeChange', callback?: Callback<SecurityMode>): void
 ```
 
-Disables listening for the security mode changes of the input method. This API uses an asynchronous callback to
-return the result.
+Disables listening for the security mode changes of the input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+<!--Device-InputMethodAbility-off(type: 'securityModeChange', callback?: Callback<SecurityMode>): void--><!--Device-InputMethodAbility-off(type: 'securityModeChange', callback?: Callback<SecurityMode>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -511,7 +527,7 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'securityModeChange' | Yes | Event type, which is **'securityModeChange'**. |
-| callback | Callback&lt;SecurityMode&gt; | No | Callback to unregister. If this parameter is not specified, thisAPI unregisters all callbacks for the specified type. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SecurityMode> | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Example**
 
@@ -532,10 +548,11 @@ inputMethodAbility.off('securityModeChange', securityChangeCallback);
 off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>): void
 ```
 
-Disables listening for the private data event of the input method. This API uses an asynchronous callback to
-return the result.
+Disables listening for the private data event of the input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
+
+<!--Device-InputMethodAbility-off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>): void--><!--Device-InputMethodAbility-off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -544,7 +561,7 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'privateCommand' | Yes | Event type, which is **'privateCommand'**. |
-| callback | Callback&lt;Record&lt;string, CommandDataType&gt;&gt; | No | Callback to unregister. If this parameter isnot specified, this API unregisters all callbacks for the specified type. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Record<string, CommandDataType>> | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Error codes:**
 
@@ -572,10 +589,11 @@ inputMethodEngine.getInputMethodAbility().off('privateCommand', privateCommandCa
 off(type: 'callingDisplayDidChange', callback?: Callback<number>): void
 ```
 
-Disables listening for changes of the screen ID of the window associated with the edit box. This API uses an
-asynchronous callback to return the result.
+Disables listening for changes of the screen ID of the window associated with the edit box. This API uses an asynchronous callback to return the result.
 
 **Since:** 18
+
+<!--Device-InputMethodAbility-off(type: 'callingDisplayDidChange', callback?: Callback<number>): void--><!--Device-InputMethodAbility-off(type: 'callingDisplayDidChange', callback?: Callback<number>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -584,7 +602,7 @@ asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callingDisplayDidChange' | Yes | Event type, which is **'callingDisplayDidChange'**. |
-| callback | Callback&lt;number&gt; | No | Callback to unregister. If this parameter is not specified, this APIunregisters all callbacks for the specified type. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Example**
 
@@ -601,10 +619,11 @@ inputMethodEngine.getInputMethodAbility().off('callingDisplayDidChange', (num: n
 off(type: 'discardTypingText', callback?: Callback<void>): void
 ```
 
-Unsubscribes from the event of discarding candidate words and sends the event to the input method. This API uses
-an asynchronous callback to return the result.
+Unsubscribes from the event of discarding candidate words and sends the event to the input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
+
+<!--Device-InputMethodAbility-off(type: 'discardTypingText', callback?: Callback<void>): void--><!--Device-InputMethodAbility-off(type: 'discardTypingText', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -612,8 +631,8 @@ an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'discardTypingText' | Yes | Event type, which is **'discardTypingText'**.<br> - **'discardTypingText'**: indicates unsubscribing from the event of discarding candidate words andsending the event to the input method. |
-| callback | Callback&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, this APIunregisters all callbacks for the specified type. |
+| type | 'discardTypingText' | Yes | Event type, which is **'discardTypingText'**.<br> - **'discardTypingText'**: indicates unsubscribing from the event of discarding candidate words and sending the event to the input method. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Example**
 
@@ -630,10 +649,11 @@ inputMethodEngine.getInputMethodAbility().off('discardTypingText', () => {
 on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) => void): void
 ```
 
-Enables listening for the input method binding event. This API uses an asynchronous callback to return the
-result.
+Enables listening for the input method binding event. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-InputMethodAbility-on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) => void): void--><!--Device-InputMethodAbility-on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -642,7 +662,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'inputStart' | Yes | Event type, which is **'inputStart'**. |
-| callback | (kbController: KeyboardController, inputClient: InputClient) =&gt; void | Yes | Callback used to return instances related to input method operations. |
+| callback | (kbController: KeyboardController, inputClient: InputClient) => void | Yes | Callback used to return instances related to input method operations. |
 
 **Example**
 
@@ -662,10 +682,11 @@ inputMethodEngine.getInputMethodAbility()
 on(type: 'inputStop', callback: () => void): void
 ```
 
-Enables listening for the input method unbinding event. This API uses an asynchronous callback to return the
-result.
+Enables listening for the input method unbinding event. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-InputMethodAbility-on(type: 'inputStop', callback: () => void): void--><!--Device-InputMethodAbility-on(type: 'inputStop', callback: () => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -674,7 +695,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'inputStop' | Yes | Event type, which is **'inputStop'**. |
-| callback | () =&gt; void | Yes | Callback used to return the result. |
+| callback | () => void | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -691,10 +712,11 @@ inputMethodEngine.getInputMethodAbility().on('inputStop', () => {
 on(type: 'setCallingWindow', callback: (wid: number) => void): void
 ```
 
-Enables listening for the window invocation setting event. This API uses an asynchronous callback to return the
-result.
+Enables listening for the window invocation setting event. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-InputMethodAbility-on(type: 'setCallingWindow', callback: (wid: number) => void): void--><!--Device-InputMethodAbility-on(type: 'setCallingWindow', callback: (wid: number) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -703,7 +725,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setCallingWindow' | Yes | Event type, which is **'setCallingWindow'**. |
-| callback | (wid: number) =&gt; void | Yes | Callback used to return the window ID of the caller. |
+| callback | (wid: number) => void | Yes | Callback used to return the window ID of the caller. |
 
 **Example**
 
@@ -724,6 +746,8 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 **Since:** 9
 
+<!--Device-InputMethodAbility-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void--><!--Device-InputMethodAbility-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -731,7 +755,7 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.<br>- The value **'keyboardShow'** indicates the keyboard display event.<br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
-| callback | () =&gt; void | Yes | Callback used to return the result. |
+| callback | () => void | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -755,6 +779,8 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 **Since:** 9
 
+<!--Device-InputMethodAbility-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void--><!--Device-InputMethodAbility-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**
@@ -762,7 +788,7 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.<br>- The value **'keyboardShow'** indicates the keyboard display event.<br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
-| callback | () =&gt; void | Yes | Callback used to return the result. |
+| callback | () => void | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -782,10 +808,11 @@ inputMethodEngine.getInputMethodAbility().on('keyboardHide', () => {
 on(type: 'setSubtype', callback: (inputMethodSubtype: InputMethodSubtype) => void): void
 ```
 
-Enables listening for the input method subtype setting event. This API uses an asynchronous callback to return
-the result.
+Enables listening for the input method subtype setting event. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-InputMethodAbility-on(type: 'setSubtype', callback: (inputMethodSubtype: InputMethodSubtype) => void): void--><!--Device-InputMethodAbility-on(type: 'setSubtype', callback: (inputMethodSubtype: InputMethodSubtype) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -794,7 +821,7 @@ the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setSubtype' | Yes | Event type, which is **'setSubtype'**. |
-| callback | (inputMethodSubtype: InputMethodSubtype) =&gt; void | Yes | Callback used to return the input method subtype. |
+| callback | (inputMethodSubtype: InputMethodSubtype) => void | Yes | Callback used to return the input method subtype. |
 
 **Example**
 
@@ -813,10 +840,11 @@ inputMethodEngine.getInputMethodAbility().on('setSubtype', (inputMethodSubtype: 
 on(type: 'securityModeChange', callback: Callback<SecurityMode>): void
 ```
 
-Enables listening for the security mode changes of the input method. This API uses an asynchronous callback to
-return the result.
+Enables listening for the security mode changes of the input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+<!--Device-InputMethodAbility-on(type: 'securityModeChange', callback: Callback<SecurityMode>): void--><!--Device-InputMethodAbility-on(type: 'securityModeChange', callback: Callback<SecurityMode>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -825,7 +853,7 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'securityModeChange' | Yes | Event type, which is **'securityModeChange'**. |
-| callback | Callback&lt;SecurityMode&gt; | Yes | Callback used to return the current security mode. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<SecurityMode> | Yes | Callback used to return the current security mode. |
 
 **Example**
 
@@ -843,10 +871,11 @@ inputMethodEngine.getInputMethodAbility()
 on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>): void
 ```
 
-Enables listening for the private data event of the input method. This API uses an asynchronous callback to
-return the result.
+Enables listening for the private data event of the input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
+
+<!--Device-InputMethodAbility-on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>): void--><!--Device-InputMethodAbility-on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -855,7 +884,7 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'privateCommand' | Yes | Event type, which is **'privateCommand'**. |
-| callback | Callback&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | Callback used to return the private data sent tothe input method application. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Record<string, CommandDataType>> | Yes | Callback used to return the private data sent to the input method application. |
 
 **Error codes:**
 
@@ -882,10 +911,11 @@ inputMethodEngine.getInputMethodAbility().on('privateCommand', privateCommandCal
 on(type: 'callingDisplayDidChange', callback: Callback<number>): void
 ```
 
-Enables listening for changes of the screen ID of the window associated with the edit box. This API uses an
-asynchronous callback to return the result.
+Enables listening for changes of the screen ID of the window associated with the edit box. This API uses an asynchronous callback to return the result.
 
 **Since:** 18
+
+<!--Device-InputMethodAbility-on(type: 'callingDisplayDidChange', callback: Callback<number>): void--><!--Device-InputMethodAbility-on(type: 'callingDisplayDidChange', callback: Callback<number>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -894,7 +924,7 @@ asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callingDisplayDidChange' | Yes | Event type, which is **'callingDisplayDidChange'**. |
-| callback | Callback&lt;number&gt; | Yes | Callback used to return the screen ID of the window corresponding to theedit box. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | Yes | Callback used to return the screen ID of the window corresponding to the edit box. |
 
 **Error codes:**
 
@@ -918,10 +948,11 @@ inputMethodEngine.getInputMethodAbility().on('callingDisplayDidChange', callingD
 on(type: 'discardTypingText', callback: Callback<void>): void
 ```
 
-Subscribes to the event of discarding candidate words and sends the event to the input method. This API uses an
-asynchronous callback to return the result.
+Subscribes to the event of discarding candidate words and sends the event to the input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
+
+<!--Device-InputMethodAbility-on(type: 'discardTypingText', callback: Callback<void>): void--><!--Device-InputMethodAbility-on(type: 'discardTypingText', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -930,7 +961,7 @@ asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discardTypingText' | Yes | Event type, which is **'discardTypingText'**.<br> - **'discardTypingText'**: indicates subscribing to the event of discarding candidate words and sending the event to the input method. |
-| callback | Callback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err**is **undefined**. Otherwise, **err** is an error object. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Example**
 

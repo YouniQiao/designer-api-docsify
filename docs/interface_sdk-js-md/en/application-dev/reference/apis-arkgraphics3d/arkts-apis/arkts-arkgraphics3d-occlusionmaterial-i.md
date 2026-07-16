@@ -6,5 +6,7 @@ Occlusion material resource
 
 **Since:** 23
 
+<!--Device-unnamed-export interface OcclusionMaterial extends Material--><!--Device-unnamed-export interface OcclusionMaterial extends Material-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

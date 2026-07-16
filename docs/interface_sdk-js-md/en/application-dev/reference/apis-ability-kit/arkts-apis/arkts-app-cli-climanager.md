@@ -4,6 +4,8 @@ The module provides the capability to interact with cli tools in the system.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-declare namespace cliManager--><!--Device-unnamed-declare namespace cliManager-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.

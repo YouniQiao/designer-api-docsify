@@ -17,14 +17,23 @@ function startVerticalPanel(
   ): Promise<void>
 ```
 
-Starts the vertical domain picker with panel config.
-If the target ability is visible, you can start the target ability; If the target ability is invisible,
-you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.
-If the caller application is in the background, it is not allowed to call this interface.
+Starts the vertical domain picker with panel config.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.If the caller application is in the background, it is not allowed to call this interface.
 
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-verticalPanelManager-function startVerticalPanel(
+      context: common.UIAbilityContext,
+      wantParam: Record<string, Object>,
+      panelConfig: PanelConfig,
+      panelStartCallback: PanelStartCallback
+  ): Promise<void>--><!--Device-verticalPanelManager-function startVerticalPanel(
+      context: common.UIAbilityContext,
+      wantParam: Record<string, Object>,
+      panelConfig: PanelConfig,
+      panelStartCallback: PanelStartCallback
+  ): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AppExtension.VerticalPanel
 
@@ -35,15 +44,15 @@ If the caller application is in the background, it is not allowed to call this i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | common.UIAbilityContext | Yes | Indicates the ui ability context of the application. |
-| wantParam | Record&lt;string, Object&gt; | Yes | Indicates the want parameter. |
-| panelConfig | PanelConfig | Yes | Indicates the panel config. |
-| panelStartCallback | PanelStartCallback | Yes | indicates the panelStartCallback. |
+| wantParam | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Object> | Yes | Indicates the want parameter. |
+| panelConfig | [PanelConfig](arkts-ability-panelconfig-i-sys.md) | Yes | Indicates the panel config. |
+| panelStartCallback | [PanelStartCallback](arkts-ability-panelstartcallback-i-sys.md) | Yes | indicates the panelStartCallback. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

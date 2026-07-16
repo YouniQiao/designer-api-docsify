@@ -19,6 +19,8 @@ Injects a mouse/touchpad event.
 **Required permissions:** 
 - API version 12+: ohos.permission.INJECT_INPUT_EVENT
 
+<!--Device-inputEventClient-function injectMouseEvent(mouseEvent: MouseEventData): void--><!--Device-inputEventClient-function injectMouseEvent(mouseEvent: MouseEventData): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Injects a mouse/touchpad event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mouseEvent | MouseEventData | Yes | Mouse/touchpad event to inject.[Action](arkts-input-action-e.md) in this parameter cannot be set to **CANCEL**. |
+| mouseEvent | [MouseEventData](arkts-input-mouseeventdata-i-sys.md) | Yes | Mouse/touchpad event to inject.[Action](arkts-input-action-e.md) in this parameter cannot be set to **CANCEL**. |
 
 **Error codes:**
 

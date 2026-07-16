@@ -1,5 +1,11 @@
 # offKey（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { inputConsumer } from '@kit.InputKit';
+```
+
 ## offKey
 
 ```TypeScript
@@ -12,6 +18,8 @@ function offKey(keyOptions: KeyOptions, callback?: KeyCommandCallback): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-inputConsumer-function offKey(keyOptions: KeyOptions, callback?: KeyCommandCallback): void--><!--Device-inputConsumer-function offKey(keyOptions: KeyOptions, callback?: KeyCommandCallback): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +28,8 @@ function offKey(keyOptions: KeyOptions, callback?: KeyCommandCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyOptions | KeyOptions | 是 | 组合键选项，需与订阅时传入的keyOptions一致。 |
-| callback | KeyCommandCallback | 否 | 需要取消订阅的回调函数。若不填，则取消当前应用组合键选项已订阅的所有回调函数。 |
+| keyOptions | [KeyOptions](../../apis-test-kit/arkts-apis/arkts-test-keyoptions-i.md) | 是 | 组合键选项，需与订阅时传入的keyOptions一致。 |
+| callback | [KeyCommandCallback](arkts-input-keycommandcallback-t-sys.md) | 否 | 需要取消订阅的回调函数。若不填，则取消当前应用组合键选项已订阅的所有回调函数。 |
 
 **错误码：**
 

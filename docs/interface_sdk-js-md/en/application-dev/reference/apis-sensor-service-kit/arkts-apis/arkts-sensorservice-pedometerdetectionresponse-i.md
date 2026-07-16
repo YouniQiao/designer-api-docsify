@@ -6,6 +6,8 @@ Describes the pedometer detection sensor data. It extends from [Response](arkts-
 
 **Since:** 8
 
+<!--Device-sensor-interface PedometerDetectionResponse extends Response--><!--Device-sensor-interface PedometerDetectionResponse extends Response-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
@@ -20,12 +22,13 @@ import { sensor } from '@kit.SensorServiceKit';
 scalar: number
 ```
 
-Pedometer detection. This parameter specifies whether a user takes a step. The value **0** means that the user
-does not take a step, and **1** means that the user takes a step.
+Pedometer detection. This parameter specifies whether a user takes a step. The value **0** means that the user does not take a step, and **1** means that the user takes a step.
 
 **Type:** number
 
 **Since:** 8
+
+<!--Device-PedometerDetectionResponse-scalar: double--><!--Device-PedometerDetectionResponse-scalar: double-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 

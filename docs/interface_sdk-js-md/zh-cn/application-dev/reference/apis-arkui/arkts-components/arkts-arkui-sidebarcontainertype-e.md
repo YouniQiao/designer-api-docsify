@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+<!--Device-unnamed-declare enum SideBarContainerType--><!--Device-unnamed-declare enum SideBarContainerType-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## Embed
@@ -16,8 +18,7 @@ Embed = 0
 
 整体容器大小不变时，显示侧边栏会导致内容区缩小，隐藏侧边栏会扩大内容区。
 
-组件尺寸小于[minContentWidth](SideBarContainerAttribute#minContentWidth) +
-[minSideBarWidth](SideBarContainerAttribute#minSideBarWidth(value: number))，并且未设置showSideBar时，侧边栏自动隐藏。
+组件尺寸小于[minContentWidth](SideBarContainerAttribute#minContentWidth) +[minSideBarWidth](SideBarContainerAttribute#minSideBarWidth(value: number))，并且未设置showSideBar时，侧边栏自动隐藏。
 
 未设置minSideBarWidth或者minContentWidth采用未设置接口的默认值进行计算。
 
@@ -25,7 +26,9 @@ Embed = 0
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SideBarContainerType-Embed = 0--><!--Device-SideBarContainerType-Embed = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -39,7 +42,9 @@ Overlay = 1
 
 **起始版本：** 8
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SideBarContainerType-Overlay = 1--><!--Device-SideBarContainerType-Overlay = 1-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,7 +64,9 @@ AUTO = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SideBarContainerType-AUTO = 2--><!--Device-SideBarContainerType-AUTO = 2-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -75,7 +82,9 @@ DISPLACE = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SideBarContainerType-DISPLACE = 3--><!--Device-SideBarContainerType-DISPLACE = 3-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

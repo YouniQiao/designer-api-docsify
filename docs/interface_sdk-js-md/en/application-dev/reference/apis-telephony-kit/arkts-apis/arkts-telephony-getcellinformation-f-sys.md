@@ -18,6 +18,8 @@ Get the current cell information.
 
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-radio-function getCellInformation(slotId: int, callback: AsyncCallback<Array<CellInformation>>): void--><!--Device-radio-function getCellInformation(slotId: int, callback: AsyncCallback<Array<CellInformation>>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Get the current cell information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slotindex number supported by the device. |
-| callback | AsyncCallback&lt;Array&lt;CellInformation&gt;&gt; | Yes | Indicates the callback for getting cell information. |
+| slotId | number | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<CellInformation>> | Yes | Indicates the callback for getting cell information. |
 
 **Error codes:**
 
@@ -70,6 +72,8 @@ Get the current cell information.
 
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-radio-function getCellInformation(slotId?: int): Promise<Array<CellInformation>>--><!--Device-radio-function getCellInformation(slotId?: int): Promise<Array<CellInformation>>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -78,13 +82,13 @@ Get the current cell information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | No | Indicates the card slot index number, ranging from 0 to the maximum card slotindex number supported by the device. |
+| slotId | number | No | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;CellInformation&gt;&gt; | Returns the current cell information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<CellInformation>> | Returns the current cell information. |
 
 **Error codes:**
 
@@ -125,6 +129,8 @@ Get the current cell information.
 
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
+<!--Device-radio-function getCellInformation(callback: AsyncCallback<Array<CellInformation>>): void--><!--Device-radio-function getCellInformation(callback: AsyncCallback<Array<CellInformation>>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -133,7 +139,7 @@ Get the current cell information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;CellInformation&gt;&gt; | Yes | Indicates the callback for getting cell information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<CellInformation>> | Yes | Indicates the callback for getting cell information. |
 
 **Error codes:**
 

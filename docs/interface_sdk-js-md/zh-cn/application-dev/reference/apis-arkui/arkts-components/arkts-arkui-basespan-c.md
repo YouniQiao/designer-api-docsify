@@ -6,6 +6,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare class BaseSpan<T> extends CommonMethod<T>--><!--Device-unnamed-declare class BaseSpan<T> extends CommonMethod<T>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## baselineOffset
@@ -20,7 +22,9 @@ baselineOffset(value: LengthMetrics): T
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BaseSpan-baselineOffset(value: LengthMetrics): T--><!--Device-BaseSpan-baselineOffset(value: LengthMetrics): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,7 +32,7 @@ baselineOffset(value: LengthMetrics): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | LengthMetrics | 是 | 设置Span基线的偏移量，设置该值为百分比时，按默认值显示。<br/>正数内容向上偏移，负数向下偏移。<br/>默认值：0<br/>在ImageSpan中，设置为非0时，[verticalAlign](ImageSpanAttribute#verticalAlign)将固定为ImageSpanAlignment.BASELINE对齐；设置为0时，要使基线对齐策略生效，需同时设置[verticalAlign](ImageSpanAttribute#verticalAlign)为ImageSpanAlignment.BASELINE。 |
+| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | 是 | 设置Span基线的偏移量，设置该值为百分比时，按默认值显示。<br/>正数内容向上偏移，负数向下偏移。<br/>默认值：0<br/>在ImageSpan中，设置为非0时，[verticalAlign](ImageSpanAttribute#verticalAlign)将固定为ImageSpanAlignment.BASELINE对齐；设置为0时，要使基线对齐策略生效，需同时设置[verticalAlign](ImageSpanAttribute#verticalAlign)为ImageSpanAlignment.BASELINE。 |
 
 **返回值：**
 
@@ -48,7 +52,9 @@ textBackgroundStyle(style: TextBackgroundStyle): T
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BaseSpan-textBackgroundStyle(style: TextBackgroundStyle): T--><!--Device-BaseSpan-textBackgroundStyle(style: TextBackgroundStyle): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,7 +62,7 @@ textBackgroundStyle(style: TextBackgroundStyle): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | TextBackgroundStyle | 是 | 背景样式。<br />默认值:<br />{<br /> color: Color.Transparent,<br /> radius: 0<br/>} |
+| style | [TextBackgroundStyle](arkts-arkui-textbackgroundstyle-i.md) | 是 | 背景样式。<br />默认值:<br />{<br /> color: Color.Transparent,<br /> radius: 0<br/>} |
 
 **返回值：**
 

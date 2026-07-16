@@ -10,6 +10,8 @@ Enumerates the types of custom event parameter values.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-hiAppEvent-type ParamType = int | long | double | string | boolean | Array<string>--><!--Device-hiAppEvent-type ParamType = int | long | double | string | boolean | Array<string>-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 | Type | Description |

@@ -1,14 +1,12 @@
 # AVImageGenerator
 
-AVImageGenerator is a class for video thumbnail retrieval. It provides APIs to obtain a thumbnail from a video.
-Before calling any API in AVImageGenerator, you must use
-[createAVImageGenerator()](arkts-media-createavimagegenerator-f.md#createavimagegenerator-3)
-to create an AVImageGenerator instance.
+AVImageGenerator is a class for video thumbnail retrieval. It provides APIs to obtain a thumbnail from a video.Before calling any API in AVImageGenerator, you must use [createAVImageGenerator()](arkts-media-createavimagegenerator-f.md#createavimagegenerator-3)to create an AVImageGenerator instance.
 
-For details about the demo for obtaining video thumbnails, see
-[Obtaining Video Thumbnails](../../../../media/media/avimagegenerator.md).
+For details about the demo for obtaining video thumbnails, see [Obtaining Video Thumbnails](../../../../media/media/avimagegenerator.md).
 
 **Since:** 12
+
+<!--Device-media-interface AVImageGenerator--><!--Device-media-interface AVImageGenerator-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
@@ -29,6 +27,10 @@ Obtains a video thumbnail. This API uses an asynchronous callback to return the 
 
 **Since:** 12
 
+<!--Device-AVImageGenerator-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams,
+      callback: AsyncCallback<image.PixelMap>): void--><!--Device-AVImageGenerator-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams,
+      callback: AsyncCallback<image.PixelMap>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
 **Parameters:**
@@ -36,9 +38,9 @@ Obtains a video thumbnail. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | timeUs | number | Yes | Time of the video for which a thumbnail is to be obtained, in μs. |
-| options | AVImageQueryOptions | Yes | Relationship between the thumbnail timestamp in and the video frame. |
-| param | PixelMapParams | Yes | Format parameters of the thumbnail to be obtained. |
-| callback | AsyncCallback&lt;image.PixelMap&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined** and **data** is the PixelMap instance obtained; otherwise, **err** is anerror object. |
+| options | [AVImageQueryOptions](arkts-media-avimagequeryoptions-e.md) | Yes | Relationship between the thumbnail timestamp in and the video frame. |
+| param | [PixelMapParams](arkts-media-pixelmapparams-i.md) | Yes | Format parameters of the thumbnail to be obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<image.PixelMap> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the PixelMap instance obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -57,6 +59,8 @@ Obtains a video thumbnail. This API uses a promise to return the result.
 
 **Since:** 12
 
+<!--Device-AVImageGenerator-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap>--><!--Device-AVImageGenerator-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
 **Parameters:**
@@ -64,14 +68,14 @@ Obtains a video thumbnail. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | timeUs | number | Yes | Time of the video for which a thumbnail is to be obtained, in μs. |
-| options | AVImageQueryOptions | Yes | Relationship between the thumbnail timestamp in and the video frame. |
-| param | PixelMapParams | Yes | Format parameters of the thumbnail to be obtained. |
+| options | [AVImageQueryOptions](arkts-media-avimagequeryoptions-e.md) | Yes | Relationship between the thumbnail timestamp in and the video frame. |
+| param | [PixelMapParams](arkts-media-pixelmapparams-i.md) | Yes | Format parameters of the thumbnail to be obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the video thumbnail. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<image.PixelMap> | Promise used to return the video thumbnail. |
 
 **Error codes:**
 
@@ -87,10 +91,13 @@ fetchScaledFrameByTime(timeUs: number, queryMode: AVImageQueryOptions, outputSiz
       Promise<image.PixelMap>
 ```
 
-Fetches a scaled thumbnail from the video at a particular timestamp. This API uses a promise to return the
-result.
+Fetches a scaled thumbnail from the video at a particular timestamp. This API uses a promise to return the result.
 
 **Since:** 20
+
+<!--Device-AVImageGenerator-fetchScaledFrameByTime(timeUs: number, queryMode: AVImageQueryOptions, outputSize?: OutputSize):
+      Promise<image.PixelMap>--><!--Device-AVImageGenerator-fetchScaledFrameByTime(timeUs: number, queryMode: AVImageQueryOptions, outputSize?: OutputSize):
+      Promise<image.PixelMap>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
@@ -98,15 +105,15 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeUs | number | Yes | Timestamp, in microseconds (μs), at which the thumbnail is to be fetched from thevideo. |
-| queryMode | AVImageQueryOptions | Yes | Relationship between the thumbnail timestamp in and the video frame. |
-| outputSize | OutputSize | No | Output size of the thumbnail. By default, the original image size is used. |
+| timeUs | number | Yes | Timestamp, in microseconds (μs), at which the thumbnail is to be fetched from the video. |
+| queryMode | [AVImageQueryOptions](arkts-media-avimagequeryoptions-e.md) | Yes | Relationship between the thumbnail timestamp in and the video frame. |
+| outputSize | [OutputSize](arkts-media-outputsize-i.md) | No | Output size of the thumbnail. By default, the original image size is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the video thumbnail. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<image.PixelMap> | Promise used to return the video thumbnail. |
 
 **Error codes:**
 
@@ -125,13 +132,15 @@ Releases this AVImageGenerator instance. This API uses an asynchronous callback 
 
 **Since:** 12
 
+<!--Device-AVImageGenerator-release(callback: AsyncCallback<void>): void--><!--Device-AVImageGenerator-release(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -149,13 +158,15 @@ Releases this AVImageGenerator instance. This API uses a promise to return the r
 
 **Since:** 12
 
+<!--Device-AVImageGenerator-release(): Promise<void>--><!--Device-AVImageGenerator-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -171,20 +182,17 @@ fdSrc ?: AVFileDescriptor
 
 Media file descriptor, which specifies the data source.
 
-There is a media file that stores continuous assets, the address offset is 0, and the byte length is 100. Its
-file descriptor is **AVFileDescriptor { fd = resourceHandle; offset = 0; length = 100; }**.
+There is a media file that stores continuous assets, the address offset is 0, and the byte length is 100. Its file descriptor is **AVFileDescriptor { fd = resourceHandle; offset = 0; length = 100; }**.
 
 **NOTE**
 
-After the resource handle (FD) is transferred to an AVImageGenerator instance, do not use the resource handle to
-perform other read and write operations, including but not limited to transferring this handle to other AVPlayer,
-AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance. Competition occurs when multiple
-AVImageGenerator use the same resource handle to read and write files at the same time, resulting in errors in
-obtaining data.
+After the resource handle (FD) is transferred to an AVImageGenerator instance, do not use the resource handle to perform other read and write operations, including but not limited to transferring this handle to other AVPlayer,AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance. Competition occurs when multiple AVImageGenerator use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.
 
 **Type:** AVFileDescriptor
 
 **Since:** 12
+
+<!--Device-AVImageGenerator-fdSrc ?: AVFileDescriptor--><!--Device-AVImageGenerator-fdSrc ?: AVFileDescriptor-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 

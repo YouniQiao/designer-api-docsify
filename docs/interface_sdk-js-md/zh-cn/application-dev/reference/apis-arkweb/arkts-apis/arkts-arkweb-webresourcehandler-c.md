@@ -1,11 +1,18 @@
 # WebResourceHandler
 
-Used to intercept url requests. Response headers and body can be sent through
-WebResourceHandler.
+Used to intercept url requests. Response headers and body can be sent through WebResourceHandler.
 
 **起始版本：** 12
 
+<!--Device-webview-class WebResourceHandler--><!--Device-webview-class WebResourceHandler-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
+
+## 导入模块
+
+```TypeScript
+import { webview } from '@kit.ArkWeb';
+```
 
 ## didFail
 
@@ -17,7 +24,9 @@ didFail(code: WebNetErrorList): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceHandler-didFail(code: WebNetErrorList): void--><!--Device-WebResourceHandler-didFail(code: WebNetErrorList): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -25,7 +34,7 @@ didFail(code: WebNetErrorList): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | WebNetErrorList | 是 | 网络错误码。 |
+| code | [WebNetErrorList](arkts-arkweb-webneterrorlist-e.md) | 是 | 网络错误码。 |
 
 **错误码：**
 
@@ -44,20 +53,22 @@ Notify that this request should be failed.
 
 **起始版本：** 20
 
+<!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void--><!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | WebNetErrorList | 是 | Set response error code to intercept. |
-| completeIfNoResponse | boolean | 是 | If completeIfNoResponse is true, when DidFailWithError is called, ifDidReceiveResponse has not been called, a response is automaticallyconstructed and the current request is terminated. |
+| code | [WebNetErrorList](arkts-arkweb-webneterrorlist-e.md) | 是 | Set response error code to intercept. |
+| completeIfNoResponse | boolean | 是 | If completeIfNoResponse is true, when DidFailWithError is called, if DidReceiveResponse has not been called, a response is automatically constructed and the current request is terminated. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100101](../errorcode-webview.md#17100101-使用了错误的网络错误码) | The errorCode is either ARKWEB_NET_OK or outside the range of error codesin WebNetErrorList. |
+| [17100101](../errorcode-webview.md#17100101-使用了错误的网络错误码) | The errorCode is either ARKWEB_NET_OK or outside the range of error codes in WebNetErrorList. |
 | [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
 
 ## didFail
@@ -70,15 +81,17 @@ Notify that this request should be failed.
 
 **起始版本：** 26.0.0
 
+<!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: number): void--><!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: number): void-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | WebNetErrorList | 是 | Set response error code to intercept. |
-| completeIfNoResponse | boolean | 是 | If completeIfNoResponse is true, when DidFailWithError is called,if DidReceiveResponse has not been called, a response is automatically constructed and the currentrequest is terminated. |
-| customErrorCode | number | 是 | The custom error code for this response, Web engine will pass the customerror code directly to the application through onErrorReceive. |
+| code | [WebNetErrorList](arkts-arkweb-webneterrorlist-e.md) | 是 | Set response error code to intercept. |
+| completeIfNoResponse | boolean | 是 | If completeIfNoResponse is true, when DidFailWithError is called,if DidReceiveResponse has not been called, a response is automatically constructed and the current request is terminated. |
+| customErrorCode | number | 是 | The custom error code for this response, Web engine will pass the custom error code directly to the application through onErrorReceive. |
 
 **错误码：**
 
@@ -96,7 +109,9 @@ didFinish(): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceHandler-didFinish(): void--><!--Device-WebResourceHandler-didFinish(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -116,7 +131,9 @@ didReceiveResponse(response: WebSchemeHandlerResponse): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceHandler-didReceiveResponse(response: WebSchemeHandlerResponse): void--><!--Device-WebResourceHandler-didReceiveResponse(response: WebSchemeHandlerResponse): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -124,7 +141,7 @@ didReceiveResponse(response: WebSchemeHandlerResponse): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| response | WebSchemeHandlerResponse | 是 | 该拦截请求的响应。 |
+| response | [WebSchemeHandlerResponse](arkts-arkweb-webschemehandlerresponse-c.md) | 是 | 该拦截请求的响应。 |
 
 **错误码：**
 
@@ -143,7 +160,9 @@ didReceiveResponseBody(data: ArrayBuffer): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebResourceHandler-didReceiveResponseBody(data: ArrayBuffer): void--><!--Device-WebResourceHandler-didReceiveResponseBody(data: ArrayBuffer): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -151,7 +170,7 @@ didReceiveResponseBody(data: ArrayBuffer): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | ArrayBuffer | 是 | 响应体数据。 |
+| data | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | 响应体数据。 |
 
 **错误码：**
 

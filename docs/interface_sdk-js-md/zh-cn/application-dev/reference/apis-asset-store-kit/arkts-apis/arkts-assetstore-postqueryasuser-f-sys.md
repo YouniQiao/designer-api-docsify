@@ -1,5 +1,11 @@
 # postQueryAsUser（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { asset } from '@kit.AssetStoreKit';
+```
+
 ## postQueryAsUser
 
 ```TypeScript
@@ -12,6 +18,8 @@ function postQueryAsUser(userId:number, handle: AssetMap): Promise<void>
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-asset-function postQueryAsUser(userId:number, handle: AssetMap): Promise<void>--><!--Device-asset-function postQueryAsUser(userId:number, handle: AssetMap): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -21,13 +29,13 @@ function postQueryAsUser(userId:number, handle: AssetMap): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID。取值范围大于等于100。 |
-| handle | AssetMap | 是 | 待处理的查询句柄，当前包含[asset.preQueryAsUser](arkts-assetstore-prequeryasuser-f-sys.md#prequeryasuser-1)执行成功返回的挑战值。 |
+| handle | [AssetMap](arkts-assetstore-assetmap-t.md) | 是 | 待处理的查询句柄，当前包含[asset.preQueryAsUser](arkts-assetstore-prequeryasuser-f-sys.md#prequeryasuser-1)执行成功返回的挑战值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

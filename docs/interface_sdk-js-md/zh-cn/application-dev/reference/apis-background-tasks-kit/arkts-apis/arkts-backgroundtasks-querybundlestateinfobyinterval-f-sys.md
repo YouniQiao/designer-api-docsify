@@ -1,5 +1,11 @@
 # queryBundleStateInfoByInterval（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleState } from '@kit.BackgroundTasksKit';
+```
+
 ## queryBundleStateInfoByInterval
 
 ```TypeScript
@@ -19,6 +25,18 @@ Queries usage information about each bundle within a specified period at a speci
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-bundleState-function queryBundleStateInfoByInterval(
+    byInterval: IntervalType,
+    begin: number,
+    end: number,
+    callback: AsyncCallback<Array<BundleStateInfo>>
+  ): void--><!--Device-bundleState-function queryBundleStateInfoByInterval(
+    byInterval: IntervalType,
+    begin: number,
+    end: number,
+    callback: AsyncCallback<Array<BundleStateInfo>>
+  ): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -27,10 +45,10 @@ Queries usage information about each bundle within a specified period at a speci
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| byInterval | IntervalType | 是 | Indicates the interval at which the usage statistics are queried. |
+| byInterval | [IntervalType](arkts-backgroundtasks-intervaltype-e.md) | 是 | Indicates the interval at which the usage statistics are queried. |
 | begin | number | 是 | Indicates the start time of the query period, in milliseconds. |
 | end | number | 是 | Indicates the end time of the query period, in milliseconds. |
-| callback | AsyncCallback&lt;Array&lt;BundleStateInfo&gt;&gt; | 是 | the callback of usage information about each bundle. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<BundleStateInfo>> | 是 | the callback of usage information about each bundle. |
 
 **示例：**
 
@@ -71,6 +89,16 @@ Queries usage information about each bundle within a specified period at a speci
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-bundleState-function queryBundleStateInfoByInterval(
+    byInterval: IntervalType,
+    begin: number,
+    end: number
+  ): Promise<Array<BundleStateInfo>>--><!--Device-bundleState-function queryBundleStateInfoByInterval(
+    byInterval: IntervalType,
+    begin: number,
+    end: number
+  ): Promise<Array<BundleStateInfo>>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -79,7 +107,7 @@ Queries usage information about each bundle within a specified period at a speci
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| byInterval | IntervalType | 是 | Indicates the interval at which the usage statistics are queried. |
+| byInterval | [IntervalType](arkts-backgroundtasks-intervaltype-e.md) | 是 | Indicates the interval at which the usage statistics are queried. |
 | begin | number | 是 | Indicates the start time of the query period, in milliseconds. |
 | end | number | 是 | Indicates the end time of the query period, in milliseconds. |
 
@@ -87,7 +115,7 @@ Queries usage information about each bundle within a specified period at a speci
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;BundleStateInfo&gt;&gt; | the usage information about each bundle. |
+| Promise<Array<BundleStateInfo>> | the usage information about each bundle. |
 
 **示例：**
 

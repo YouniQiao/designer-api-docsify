@@ -16,6 +16,8 @@ Obtains the proportion of the power consumption of an application.
 
 **Since:** 8
 
+<!--Device-batteryStats-function getAppPowerPercent(uid: int): double--><!--Device-batteryStats-function getAppPowerPercent(uid: int): double-End-->
+
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
 
 **System API:** This is a system API.
@@ -30,7 +32,7 @@ Obtains the proportion of the power consumption of an application.
 
 | Type | Description |
 | --- | --- |
-| number | Proportion of the power consumption of an application with this UID, which rangesfrom 0.00 to 1.00. |
+| number | Proportion of the power consumption of an application with this UID, which ranges from 0.00 to 1.00. |
 
 **Error codes:**
 

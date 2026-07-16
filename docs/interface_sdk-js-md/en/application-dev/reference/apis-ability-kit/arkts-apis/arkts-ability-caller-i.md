@@ -1,11 +1,10 @@
 # Caller
 
-A Caller UIAbility can use the
-[startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startabilitybycall-1) API to start the
-target Callee UIAbility. After the target UIAbility is started successfully, a Caller object is returned to the
-caller for communication.
+A Caller UIAbility can use the [startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startabilitybycall-1) API to start the target Callee UIAbility. After the target UIAbility is started successfully, a Caller object is returned to the caller for communication.
 
 **Since:** 9
+
+<!--Device-unnamed-export interface Caller--><!--Device-unnamed-export interface Caller-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -21,12 +20,13 @@ import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeC
 call(method: string, data: rpc.Parcelable): Promise<void>
 ```
 
-Used by a Caller UIAbility to send serialized data, as agreed upon by both parties, to the Callee UIAbility. This
-API uses a promise to return the result.
+Used by a Caller UIAbility to send serialized data, as agreed upon by both parties, to the Callee UIAbility. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Caller-call(method: string, data: rpc.Parcelable): Promise<void>--><!--Device-Caller-call(method: string, data: rpc.Parcelable): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -34,14 +34,14 @@ API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| method | string | Yes | Method name agreed upon by the Caller UIAbility and Callee UIAbility, used by the CalleeUIAbility to identify the type of message. |
-| data | rpc.Parcelable | Yes | Message content sent from the Caller UIAbility to the Callee UIAbility, which isin serialized form. |
+| method | string | Yes | Method name agreed upon by the Caller UIAbility and Callee UIAbility, used by the Callee UIAbility to identify the type of message. |
+| data | rpc.Parcelable | Yes | Message content sent from the Caller UIAbility to the Callee UIAbility, which is in serialized form. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -117,12 +117,13 @@ export default class MainUIAbility extends UIAbility {
 callWithResult(method: string, data: rpc.Parcelable): Promise<rpc.MessageSequence>
 ```
 
-Used by a Caller UIAbility to send serialized data to a Callee UIAbility and return the result after the Callee
-UIAbility processes the message. This API uses a promise to return the result.
+Used by a Caller UIAbility to send serialized data to a Callee UIAbility and return the result after the Callee UIAbility processes the message. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Caller-callWithResult(method: string, data: rpc.Parcelable): Promise<rpc.MessageSequence>--><!--Device-Caller-callWithResult(method: string, data: rpc.Parcelable): Promise<rpc.MessageSequence>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -130,14 +131,14 @@ UIAbility processes the message. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| method | string | Yes | Method name agreed upon by the Caller UIAbility and Callee UIAbility, used by the CalleeUIAbility to identify the type of message. |
-| data | rpc.Parcelable | Yes | Message content sent from the Caller UIAbility to the Callee UIAbility, which isin serialized form. |
+| method | string | Yes | Method name agreed upon by the Caller UIAbility and Callee UIAbility, used by the Callee UIAbility to identify the type of message. |
+| data | rpc.Parcelable | Yes | Message content sent from the Caller UIAbility to the Callee UIAbility, which is in serialized form. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;rpc.MessageSequence&gt; | Promise used to return the response data from the Callee UIAbility. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<rpc.MessageSequence> | Promise used to return the response data from the Callee UIAbility. |
 
 **Error codes:**
 
@@ -216,12 +217,13 @@ export default class MainUIAbility extends UIAbility {
 off(type: 'release', callback: OnReleaseCallback): void
 ```
 
-Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation
-of [on('release')](Caller.on). It is currently not supported.
+Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [on('release')](Caller.on). It is currently not supported.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Caller-off(type: 'release', callback: OnReleaseCallback): void--><!--Device-Caller-off(type: 'release', callback: OnReleaseCallback): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -230,7 +232,7 @@ of [on('release')](Caller.on). It is currently not supported.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'release' | Yes | Event type. The value is fixed at **'release'**. |
-| callback | OnReleaseCallback | Yes | Callback used to return the result. |
+| callback | [OnReleaseCallback](arkts-ability-onreleasecallback-i.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -276,12 +278,13 @@ export default class MainUIAbility extends UIAbility {
 off(type: 'release'): void
 ```
 
-Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation
-of [Caller.on('release')](Caller.on). It is currently not supported.
+Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [Caller.on('release')](Caller.on). It is currently not supported.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Caller-off(type: 'release'): void--><!--Device-Caller-off(type: 'release'): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -343,6 +346,8 @@ Used by the Caller UIAbility to register a listener for disconnection notificati
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Caller-on(type: 'release', callback: OnReleaseCallback): void--><!--Device-Caller-on(type: 'release', callback: OnReleaseCallback): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Parameters:**
@@ -350,7 +355,7 @@ Used by the Caller UIAbility to register a listener for disconnection notificati
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'release' | Yes | Event type. The value is fixed at **'release'**. |
-| callback | OnReleaseCallback | Yes | Callback used to return the result. |
+| callback | [OnReleaseCallback](arkts-ability-onreleasecallback-i.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -402,13 +407,15 @@ Used by the Caller UIAbility to register a listener for disconnection notificati
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Caller-onRelease(callback: OnReleaseCallback): void--><!--Device-Caller-onRelease(callback: OnReleaseCallback): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnReleaseCallback | Yes | Callback used to return the result. |
+| callback | [OnReleaseCallback](arkts-ability-onreleasecallback-i.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -453,12 +460,13 @@ export default class MainUIAbility extends UIAbility {
 onRemoteStateChange(callback: OnRemoteStateChangeCallback): void
 ```
 
-Called when the remote UIAbility state changes in the collaboration scenario. This API uses an asynchronous
-callback to return the result.
+Called when the remote UIAbility state changes in the collaboration scenario. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Caller-onRemoteStateChange(callback: OnRemoteStateChangeCallback): void--><!--Device-Caller-onRemoteStateChange(callback: OnRemoteStateChangeCallback): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -466,7 +474,7 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnRemoteStateChangeCallback | Yes | Callback used to return the result. |
+| callback | [OnRemoteStateChangeCallback](arkts-ability-onremotestatechangecallback-i.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -512,13 +520,13 @@ export default class MainAbility extends UIAbility {
 release(): void
 ```
 
-Used by a Caller UIAbility to proactively release the connection with the Callee UIAbility. After this API is
-called, the Caller UIAbility can no longer use **call** or **callWithResult** to send messages to the Callee
-UIAbility.
+Used by a Caller UIAbility to proactively release the connection with the Callee UIAbility. After this API is called, the Caller UIAbility can no longer use **call** or **callWithResult** to send messages to the Callee UIAbility.
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Caller-release(): void--><!--Device-Caller-release(): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

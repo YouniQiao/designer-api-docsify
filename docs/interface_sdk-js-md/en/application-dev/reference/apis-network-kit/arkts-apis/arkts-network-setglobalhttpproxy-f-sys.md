@@ -18,6 +18,8 @@ Set a network independent global {@link HttpProxy} proxy settings.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-connection-function setGlobalHttpProxy(httpProxy: HttpProxy, callback: AsyncCallback<void>): void--><!--Device-connection-function setGlobalHttpProxy(httpProxy: HttpProxy, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Set a network independent global {@link HttpProxy} proxy settings.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| httpProxy | HttpProxy | Yes | Indicates the global proxy settings. For details, see {@link HttpProxy}. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback of setGlobalHttpProxy. |
+| httpProxy | [HttpProxy](arkts-network-httpproxy-t.md) | Yes | Indicates the global proxy settings. For details, see {@link HttpProxy}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback of setGlobalHttpProxy. |
 
 **Error codes:**
 
@@ -76,6 +78,8 @@ Set a network independent global {@link HttpProxy} proxy settings.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-connection-function setGlobalHttpProxy(httpProxy: HttpProxy): Promise<void>--><!--Device-connection-function setGlobalHttpProxy(httpProxy: HttpProxy): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -84,13 +88,13 @@ Set a network independent global {@link HttpProxy} proxy settings.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| httpProxy | HttpProxy | Yes | Indicates the global proxy settings. For details, see {@link HttpProxy}. |
+| httpProxy | [HttpProxy](arkts-network-httpproxy-t.md) | Yes | Indicates the global proxy settings. For details, see {@link HttpProxy}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 

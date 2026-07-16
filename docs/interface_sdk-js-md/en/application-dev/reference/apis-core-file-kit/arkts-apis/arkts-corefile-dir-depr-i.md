@@ -1,13 +1,14 @@
 # Dir
 
-Manages directories. Before calling a method of the **Dir** class, use the **opendir()** method synchronously or
-asynchronously to create a **Dir** instance.
+Manages directories. Before calling a method of the **Dir** class, use the **opendir()** method synchronously or asynchronously to create a **Dir** instance.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
 **Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+
+<!--Device-unnamed-declare interface Dir--><!--Device-unnamed-declare interface Dir-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -17,8 +18,7 @@ asynchronously to create a **Dir** instance.
 close(): Promise<void>
 ```
 
-Closes a directory. This API uses a promise to return the result. After a directory is closed, the file descriptor
-in **Dir** will be released and no directory entry can be read from **Dir**.
+Closes a directory. This API uses a promise to return the result. After a directory is closed, the file descriptor in **Dir** will be released and no directory entry can be read from **Dir**.
 
 **Since:** 7
 
@@ -26,13 +26,15 @@ in **Dir** will be released and no directory entry can be read from **Dir**.
 
 **Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
 
+<!--Device-Dir-close(): Promise<void>--><!--Device-Dir-close(): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | return Promise |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | return Promise |
 
 **Example**
 
@@ -50,8 +52,7 @@ dir.close().then(() => {
 close(callback: AsyncCallback<void>): void
 ```
 
-Closes a directory. This API uses an asynchronous callback to return the result. After a directory is closed, the
-file descriptor in **Dir** will be released and no directory entry can be read from **Dir**.
+Closes a directory. This API uses an asynchronous callback to return the result. After a directory is closed, the file descriptor in **Dir** will be released and no directory entry can be read from **Dir**.
 
 **Since:** 7
 
@@ -59,13 +60,15 @@ file descriptor in **Dir** will be released and no directory entry can be read f
 
 **Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
 
+<!--Device-Dir-close(callback: AsyncCallback<void>): void--><!--Device-Dir-close(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | callback. |
 
 **Example**
 
@@ -83,14 +86,15 @@ dir.close((err: BusinessError) => {
 closeSync(): void
 ```
 
-Closes a directory. After a directory is closed, the file descriptor in **Dir** will be released and no directory
-entry can be read from **Dir**.
+Closes a directory. After a directory is closed, the file descriptor in **Dir** will be released and no directory entry can be read from **Dir**.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
 **Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+
+<!--Device-Dir-closeSync(): void--><!--Device-Dir-closeSync(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -115,13 +119,15 @@ Reads the next directory entry. This API uses a promise to return the result.
 
 **Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
 
+<!--Device-Dir-read(): Promise<Dirent>--><!--Device-Dir-read(): Promise<Dirent>-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Dirent&gt; | Promise that returns the next directory entry. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Dirent> | Promise that returns the next directory entry. |
 
 **Example**
 
@@ -149,13 +155,15 @@ Reads the next directory entry. This API uses an asynchronous callback to return
 
 **Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
 
+<!--Device-Dir-read(callback: AsyncCallback<Dirent>): void--><!--Device-Dir-read(callback: AsyncCallback<Dirent>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Dirent&gt; | Yes | Callback invoked when the next directory entry is asynchronouslyread. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Dirent> | Yes | Callback invoked when the next directory entry is asynchronously read. |
 
 **Example**
 
@@ -184,13 +192,15 @@ Reads the next directory entry. This API returns the result synchronously.
 
 **Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
 
+<!--Device-Dir-readSync(): Dirent--><!--Device-Dir-readSync(): Dirent-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Dirent | Directory entry read. |
+| [Dirent](arkts-corefile-dirent-depr-i.md) | Directory entry read. |
 
 **Example**
 

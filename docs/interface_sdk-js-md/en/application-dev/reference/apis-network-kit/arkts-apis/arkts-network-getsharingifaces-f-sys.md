@@ -18,6 +18,8 @@ Obtains the names of interfaces in each sharing state.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-sharing-function getSharingIfaces(state: SharingIfaceState, callback: AsyncCallback<Array<string>>): void--><!--Device-sharing-function getSharingIfaces(state: SharingIfaceState, callback: AsyncCallback<Array<string>>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Obtains the names of interfaces in each sharing state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | SharingIfaceState | Yes | Is the network sharing state. |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Returns an array of interface names that meet this status. |
+| state | [SharingIfaceState](arkts-network-sharingifacestate-e-sys.md) | Yes | Is the network sharing state. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Returns an array of interface names that meet this status. |
 
 **Error codes:**
 
@@ -67,6 +69,8 @@ Obtains the names of interfaces in each sharing state.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-sharing-function getSharingIfaces(state: SharingIfaceState): Promise<Array<string>>--><!--Device-sharing-function getSharingIfaces(state: SharingIfaceState): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
@@ -75,13 +79,13 @@ Obtains the names of interfaces in each sharing state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | SharingIfaceState | Yes | Is the network sharing state. |
+| state | [SharingIfaceState](arkts-network-sharingifacestate-e-sys.md) | Yes | Is the network sharing state. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | The promise returned by the function. |
 
 **Error codes:**
 

@@ -2,11 +2,11 @@
 
 Defines the parameter information used to update the database.
 
-The data provider needs to set the ID, read/write permissions, and basic information of the table to be shared
-under **proxyData** in the **module.json5** file. For details about the configuration method, see
-[Data Provider Application Development](../../../../database/share-data-by-silent-access-sys.md#data-provider-application-development)
+The data provider needs to set the ID, read/write permissions, and basic information of the table to be shared under **proxyData** in the **module.json5** file. For details about the configuration method, see [Data Provider Application Development](../../../../database/share-data-by-silent-access-sys.md#data-provider-application-development)
 
 **Since:** 11
+
+<!--Device-reminderAgentManager-interface DataShareUpdate--><!--Device-reminderAgentManager-interface DataShareUpdate-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -30,6 +30,8 @@ Filter criteria. Currently, only **equalTo** is supported.
 
 **Since:** 11
 
+<!--Device-DataShareUpdate-equalTo: Record<string, double | string | boolean>--><!--Device-DataShareUpdate-equalTo: Record<string, double | string | boolean>-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 **System API:** This is a system API.
@@ -46,6 +48,8 @@ URI of the data, which is the unique identifier for cross-application data acces
 
 **Since:** 11
 
+<!--Device-DataShareUpdate-uri: string--><!--Device-DataShareUpdate-uri: string-End-->
+
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 **System API:** This is a system API.
@@ -61,6 +65,8 @@ New data.
 **Type:** ValuesBucket
 
 **Since:** 11
+
+<!--Device-DataShareUpdate-value: ValuesBucket--><!--Device-DataShareUpdate-value: ValuesBucket-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 

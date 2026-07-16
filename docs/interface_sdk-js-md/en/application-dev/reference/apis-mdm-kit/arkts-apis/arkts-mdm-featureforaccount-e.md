@@ -4,6 +4,8 @@ Enumerates the features that can be disabled or enabled for a specified user.
 
 **Since:** 26.0.0
 
+<!--Device-restrictions-enum FeatureForAccount--><!--Device-restrictions-enum FeatureForAccount-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MULTI_WINDOW
@@ -12,13 +14,13 @@ Enumerates the features that can be disabled or enabled for a specified user.
 MULTI_WINDOW = 0
 ```
 
-System multi-window. Currently, this feature is available only on phones and tablets. Once disabled, the system
-multi-window feature (split-screen, one-click split-screen, Multi-Window, and floating window) cannot be used. If
-the feature is currently active, the current usage remains unaffected. However, it cannot be used once closed.
+System multi-window. Currently, this feature is available only on phones and tablets. Once disabled, the system multi-window feature (split-screen, one-click split-screen, Multi-Window, and floating window) cannot be used. If the feature is currently active, the current usage remains unaffected. However, it cannot be used once closed.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForAccount-MULTI_WINDOW = 0--><!--Device-FeatureForAccount-MULTI_WINDOW = 0-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -34,6 +36,8 @@ Distributed transmission.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForAccount-DISTRIBUTED_TRANSMISSION = 1--><!--Device-FeatureForAccount-DISTRIBUTED_TRANSMISSION = 1-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## SUPER_HUB
@@ -42,13 +46,13 @@ Distributed transmission.
 SUPER_HUB = 2
 ```
 
-SuperHub. Currently, this feature is available only on phones and tablets. Once disabled, the SuperHub feature
-cannot be used. If SuperHub is currently active, the current usage remains unaffected. However, it cannot be used
-once closed.
+SuperHub. Currently, this feature is available only on phones and tablets. Once disabled, the SuperHub feature cannot be used. If SuperHub is currently active, the current usage remains unaffected. However, it cannot be used once closed.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForAccount-SUPER_HUB = 2--><!--Device-FeatureForAccount-SUPER_HUB = 2-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -64,6 +68,8 @@ Device fingerprint authentication capability
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForAccount-FINGERPRINT = 3--><!--Device-FeatureForAccount-FINGERPRINT = 3-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## PRINT
@@ -77,6 +83,8 @@ Device printing capability.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForAccount-PRINT = 4--><!--Device-FeatureForAccount-PRINT = 4-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -92,6 +100,8 @@ Media Transfer Protocol (MTP) client capability (write only).
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForAccount-MTP_CLIENT = 5--><!--Device-FeatureForAccount-MTP_CLIENT = 5-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## USB_STORAGE_DEVICE_WRITE
@@ -105,6 +115,8 @@ USB storage device write capability.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForAccount-USB_STORAGE_DEVICE_WRITE = 6--><!--Device-FeatureForAccount-USB_STORAGE_DEVICE_WRITE = 6-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -120,6 +132,8 @@ Recovery key export capability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForAccount-DISK_RECOVERY_KEY = 7--><!--Device-FeatureForAccount-DISK_RECOVERY_KEY = 7-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## SUDO
@@ -133,6 +147,8 @@ Superuser do (execution with superuser privileges).
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForAccount-SUDO = 8--><!--Device-FeatureForAccount-SUDO = 8-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -148,6 +164,8 @@ One-way data transmission between devices (only data transmission to other devic
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FeatureForAccount-DISTRIBUTED_TRANSMISSION_OUTGOING = 9--><!--Device-FeatureForAccount-DISTRIBUTED_TRANSMISSION_OUTGOING = 9-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## OPEN_FILE_BOOST
@@ -161,6 +179,8 @@ File opening acceleration capability.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForAccount-OPEN_FILE_BOOST = 10--><!--Device-FeatureForAccount-OPEN_FILE_BOOST = 10-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

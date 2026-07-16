@@ -8,6 +8,8 @@ The enum of SPP type.
 
 **Substitutes:** SppType
 
+<!--Device-bluetoothManager-enum SppType--><!--Device-bluetoothManager-enum SppType-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## SPP_RFCOMM
@@ -23,6 +25,8 @@ RFCOMM
 **Deprecated since:** 10
 
 **Substitutes:** SPP_RFCOMM
+
+<!--Device-SppType-SPP_RFCOMM = 0--><!--Device-SppType-SPP_RFCOMM = 0-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

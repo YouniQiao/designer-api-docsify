@@ -4,6 +4,8 @@ Page begin event at the begin of web page loading.
 
 **Since:** 12
 
+<!--Device-unnamed-export declare interface OnPageBeginEvent--><!--Device-unnamed-export declare interface OnPageBeginEvent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,6 +27,8 @@ The url of page.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-OnPageBeginEvent-url: string--><!--Device-OnPageBeginEvent-url: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

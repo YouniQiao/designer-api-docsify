@@ -1,17 +1,22 @@
 # @ohos.arkui.uiExtension
 
-用于[EmbeddedUIExtensionAbility](../../../../application-models/embeddeduiextensionability.md)（或
-[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensionability-c.md)）中获取宿主应用的窗口信息或对应的
-[EmbeddedComponent](./@internal/component/ets/embedded_component)<!--Del-->（或
-[UIExtensionComponent](./@internal/component/ets/ui_extension_component)）<!--DelEnd-->组件的信息。
+用于[EmbeddedUIExtensionAbility](../../../../application-models/embeddeduiextensionability.md)（或[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensionability-c.md)）中获取宿主应用的窗口信息或对应的[EmbeddedComponent](./@internal/component/ets/embedded_component)<!--Del-->（或[UIExtensionComponent](./@internal/component/ets/ui_extension_component)）<!--DelEnd-->组件的信息。
 
-> **说明**
->
+> **说明**  
+>  
 > 从API version 12开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare namespace uiExtension--><!--Device-unnamed-declare namespace uiExtension-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { uiExtension } from '@kit.ArkUI';
+```
 
 ## 汇总
 

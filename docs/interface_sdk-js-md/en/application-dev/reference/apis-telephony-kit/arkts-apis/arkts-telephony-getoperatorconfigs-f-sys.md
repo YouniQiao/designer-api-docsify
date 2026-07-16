@@ -18,6 +18,8 @@ Obtains the operatorconfigs of the SIM card in a specified slot.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getOperatorConfigs(slotId: int, callback: AsyncCallback<Array<OperatorConfig>>): void--><!--Device-sim-function getOperatorConfigs(slotId: int, callback: AsyncCallback<Array<OperatorConfig>>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Obtains the operatorconfigs of the SIM card in a specified slot.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;Array&lt;OperatorConfig&gt;&gt; | Yes | Indicates the callback forgetting the operatorconfigs in a specified slot;returns empty OperatorConfig if no SIM card is inserted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<OperatorConfig>> | Yes | Indicates the callback for getting the operatorconfigs in a specified slot;returns empty OperatorConfig if no SIM card is inserted. |
 
 **Error codes:**
 
@@ -66,6 +68,8 @@ Obtains the operatorconfigs of the SIM card in a specified slot.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getOperatorConfigs(slotId: int): Promise<Array<OperatorConfig>>--><!--Device-sim-function getOperatorConfigs(slotId: int): Promise<Array<OperatorConfig>>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -80,7 +84,7 @@ Obtains the operatorconfigs of the SIM card in a specified slot.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;OperatorConfig&gt;&gt; | Returns the operatorconfigs in a specified slot;returns empty OperatorConfig if no SIM card is inserted. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<OperatorConfig>> | Returns the operatorconfigs in a specified slot;returns empty OperatorConfig if no SIM card is inserted. |
 
 **Error codes:**
 

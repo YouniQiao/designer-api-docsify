@@ -6,6 +6,8 @@ Calendar controller.
 
 **Deprecated since:** 20
 
+<!--Device-unnamed-declare class CalendarController--><!--Device-unnamed-declare class CalendarController-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -23,6 +25,8 @@ Back to day.
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-CalendarController-backToToday()--><!--Device-CalendarController-backToToday()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,6 +46,8 @@ Constructor.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
+<!--Device-CalendarController-constructor()--><!--Device-CalendarController-constructor()-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -59,6 +65,8 @@ To the specified element.
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+<!--Device-CalendarController-goTo(value: { year: number; month: number; day: number })--><!--Device-CalendarController-goTo(value: { year: number; month: number; day: number })-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

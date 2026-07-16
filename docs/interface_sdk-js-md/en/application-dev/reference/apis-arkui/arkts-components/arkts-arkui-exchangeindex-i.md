@@ -4,6 +4,8 @@ Defines position of exchange data.
 
 **Since:** 12
 
+<!--Device-unnamed-interface ExchangeIndex--><!--Device-unnamed-interface ExchangeIndex-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## end
@@ -22,6 +24,8 @@ Second position for the exchange. The value range is [0, data source length - 1]
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ExchangeIndex-end: number--><!--Device-ExchangeIndex-end: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## start
@@ -39,6 +43,8 @@ First position for the exchange. The value range is [0, data source length - 1].
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ExchangeIndex-start: number--><!--Device-ExchangeIndex-start: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,13 +1,14 @@
 # DistributedObject
 
-Provides APIs for managing a distributed data object. Before using any API of this class, use
-createDistributedObject() to create a DistributedObject object.
+Provides APIs for managing a distributed data object. Before using any API of this class, use createDistributedObject() to create a DistributedObject object.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** [null]
+
+<!--Device-distributedDataObject-interface DistributedObject--><!--Device-distributedDataObject-interface DistributedObject-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -31,6 +32,8 @@ Unsubscribes from data changes of this distributed data object.
 
 **Substitutes:** off(type:
 
+<!--Device-DistributedObject-off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void): void--><!--Device-DistributedObject-off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
@@ -38,7 +41,7 @@ Unsubscribes from data changes of this distributed data object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. The value is 'change', which indicates data changes. |
-| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unsubscribesfrom all callbacks for data changes of this distributed object.sessionId indicates the session ID of thedistributed data object. fields indicates the changed properties of the distributed data object. |
+| callback | (sessionId: string, fields: Array<string>) => void | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for data changes of this distributed object.sessionId indicates the session ID of the distributed data object. fields indicates the changed properties of the distributed data object. |
 
 **Example**
 
@@ -88,14 +91,22 @@ Unsubscribes from the status change of this distributed data object.
 
 **Substitutes:** off(
 
+<!--Device-DistributedObject-off(
+      type: 'status',
+      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
+    ): void--><!--Device-DistributedObject-off(
+      type: 'status',
+      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
+    ): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'status' | Yes | Event type. The value is 'status', which indicates the status change (online oroffline) of the distributed object. |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unsubscribesfrom all callbacks for status changes of this distributed object. sessionId indicates the session ID of thedistributed data object. networkId identifies the distributed data object. status indicates the objectstatus, which can be online or offline. |
+| type | 'status' | Yes | Event type. The value is 'status', which indicates the status change (online or offline) of the distributed object. |
+| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) => void | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for status changes of this distributed object. sessionId indicates the session ID of the distributed data object. networkId identifies the distributed data object. status indicates the object status, which can be online or offline. |
 
 **Example**
 
@@ -137,6 +148,8 @@ Subscribes to data changes of this distributed data object.
 
 **Substitutes:** on(type:
 
+<!--Device-DistributedObject-on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void): void--><!--Device-DistributedObject-on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
@@ -144,7 +157,7 @@ Subscribes to data changes of this distributed data object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. The value is 'change', which indicates data changes. |
-| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | Yes | Callback used to return the changes of the distributed data object. sessionIdindicates the session ID of the distributed data object. fields indicates the changed properties of thedistributed data object. |
+| callback | (sessionId: string, fields: Array<string>) => void | Yes | Callback used to return the changes of the distributed data object. sessionId indicates the session ID of the distributed data object. fields indicates the changed properties of the distributed data object. |
 
 **Example**
 
@@ -191,14 +204,22 @@ Subscribes to status changes of this distributed data object.
 
 **Substitutes:** on(
 
+<!--Device-DistributedObject-on(
+      type: 'status',
+      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
+    ): void--><!--Device-DistributedObject-on(
+      type: 'status',
+      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
+    ): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'status' | Yes | Event type. The value is 'status', which indicates the status change (online oroffline) of the distributed object. |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | Yes | Callback used to return the status change. sessionId indicates the session ID ofthe distributed data object. networkId identifies the device. status indicates the object status, which canbe online or offline. |
+| type | 'status' | Yes | Event type. The value is 'status', which indicates the status change (online or offline) of the distributed object. |
+| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) => void | Yes | Callback used to return the status change. sessionId indicates the session ID of the distributed data object. networkId identifies the device. status indicates the object status, which can be online or offline. |
 
 **Example**
 
@@ -230,8 +251,7 @@ g_object.on('status', (sessionId: string, networkId: string, status: 'online' | 
 setSessionId(sessionId?: string): boolean
 ```
 
-Sets a session ID. For the devices in the collaboration state in a trusted network, data of the distributed
-objects with the same session ID can be automatically synced across devices.
+Sets a session ID. For the devices in the collaboration state in a trusted network, data of the distributed objects with the same session ID can be automatically synced across devices.
 
 **Since:** 8
 
@@ -241,13 +261,15 @@ objects with the same session ID can be automatically synced across devices.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DistributedObject-setSessionId(sessionId?: string): boolean--><!--Device-DistributedObject-setSessionId(sessionId?: string): boolean-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | string | No | ID of a distributed data object on a trusted network. To remove a distributed dataobject from the network, set this parameter to "" or leave it empty. |
+| sessionId | string | No | ID of a distributed data object on a trusted network. To remove a distributed data object from the network, set this parameter to "" or leave it empty. |
 
 **Return value:**
 

@@ -4,6 +4,8 @@ Implements enroll intelligent voice engine.
 
 **Since:** 10
 
+<!--Device-intelligentVoice-interface EnrollIntelligentVoiceEngine--><!--Device-intelligentVoice-interface EnrollIntelligentVoiceEngine-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Commit enroll, This method uses an asynchronous callback to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-EnrollIntelligentVoiceEngine-commit(callback: AsyncCallback<void>): void--><!--Device-EnrollIntelligentVoiceEngine-commit(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -34,7 +38,7 @@ Commit enroll, This method uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -73,6 +77,8 @@ Commit enroll, This method uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-EnrollIntelligentVoiceEngine-commit(): Promise<void>--><!--Device-EnrollIntelligentVoiceEngine-commit(): Promise<void>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -81,7 +87,7 @@ Commit enroll, This method uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise used to return the result. |
 
 **Error codes:**
 
@@ -118,6 +124,8 @@ Enrolls for result, This method uses an asynchronous callback to return the resu
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE and ohos.permission.MICROPHONE
 
+<!--Device-EnrollIntelligentVoiceEngine-enrollForResult(isLast: boolean, callback: AsyncCallback<EnrollCallbackInfo>): void--><!--Device-EnrollIntelligentVoiceEngine-enrollForResult(isLast: boolean, callback: AsyncCallback<EnrollCallbackInfo>): void-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -127,7 +135,7 @@ Enrolls for result, This method uses an asynchronous callback to return the resu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isLast | boolean | Yes | isLast indicates if it is the last time to enroll. |
-| callback | AsyncCallback&lt;EnrollCallbackInfo&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<EnrollCallbackInfo> | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -169,6 +177,8 @@ Enrolls for result, This method uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE and ohos.permission.MICROPHONE
 
+<!--Device-EnrollIntelligentVoiceEngine-enrollForResult(isLast: boolean): Promise<EnrollCallbackInfo>--><!--Device-EnrollIntelligentVoiceEngine-enrollForResult(isLast: boolean): Promise<EnrollCallbackInfo>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -183,7 +193,7 @@ Enrolls for result, This method uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;EnrollCallbackInfo&gt; | the promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<EnrollCallbackInfo> | the promise used to return the result. |
 
 **Error codes:**
 
@@ -223,6 +233,8 @@ Evaluates for result, This method uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-EnrollIntelligentVoiceEngine-evaluateForResult(word: string): Promise<EvaluationResult>--><!--Device-EnrollIntelligentVoiceEngine-evaluateForResult(word: string): Promise<EvaluationResult>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -237,7 +249,7 @@ Evaluates for result, This method uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;EvaluationResult&gt; | the promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<EvaluationResult> | the promise used to return the result. |
 
 **Error codes:**
 
@@ -277,6 +289,8 @@ Obtains the value of an intelligent voice parameter. This method uses an asynchr
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-EnrollIntelligentVoiceEngine-getParameter(key: string, callback: AsyncCallback<string>): void--><!--Device-EnrollIntelligentVoiceEngine-getParameter(key: string, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -286,7 +300,7 @@ Obtains the value of an intelligent voice parameter. This method uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | the key of the intelligent voice parameter whose value is to be obtained. |
-| callback | AsyncCallback&lt;string&gt; | Yes | the callback used to return the value of the intelligent voice parameter. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | Yes | the callback used to return the value of the intelligent voice parameter. |
 
 **Error codes:**
 
@@ -327,6 +341,8 @@ Obtains the value of an intelligent voice parameter. This method uses a promise 
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-EnrollIntelligentVoiceEngine-getParameter(key: string): Promise<string>--><!--Device-EnrollIntelligentVoiceEngine-getParameter(key: string): Promise<string>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -341,7 +357,7 @@ Obtains the value of an intelligent voice parameter. This method uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | the promise used to return the value of the intelligent voice parameter. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | the promise used to return the value of the intelligent voice parameter. |
 
 **Error codes:**
 
@@ -380,6 +396,8 @@ Obtains the supported regions, This method uses an asynchronous callback to retu
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-EnrollIntelligentVoiceEngine-getSupportedRegions(callback: AsyncCallback<Array<string>>): void--><!--Device-EnrollIntelligentVoiceEngine-getSupportedRegions(callback: AsyncCallback<Array<string>>): void-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -388,7 +406,7 @@ Obtains the supported regions, This method uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | the callback used to return the supported regions. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | the callback used to return the supported regions. |
 
 **Error codes:**
 
@@ -429,6 +447,8 @@ Obtains the supported regions, This method uses a promise to return the query re
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-EnrollIntelligentVoiceEngine-getSupportedRegions(): Promise<Array<string>>--><!--Device-EnrollIntelligentVoiceEngine-getSupportedRegions(): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -437,7 +457,7 @@ Obtains the supported regions, This method uses a promise to return the query re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | the promise used to return the supported regions. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | the promise used to return the supported regions. |
 
 **Error codes:**
 
@@ -475,6 +495,8 @@ Initials the engine, This method uses an asynchronous callback to return the res
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-EnrollIntelligentVoiceEngine-init(config: EnrollEngineConfig, callback: AsyncCallback<void>): void--><!--Device-EnrollIntelligentVoiceEngine-init(config: EnrollEngineConfig, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -483,8 +505,8 @@ Initials the engine, This method uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | EnrollEngineConfig | Yes | config indicates enroll engine configuration. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback used to return the result. |
+| config | [EnrollEngineConfig](arkts-basicservices-enrollengineconfig-i-sys.md) | Yes | config indicates enroll engine configuration. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -529,6 +551,8 @@ Initials the engine, This method uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-EnrollIntelligentVoiceEngine-init(config: EnrollEngineConfig): Promise<void>--><!--Device-EnrollIntelligentVoiceEngine-init(config: EnrollEngineConfig): Promise<void>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -537,13 +561,13 @@ Initials the engine, This method uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | EnrollEngineConfig | Yes | config indicates enroll engine configuration. |
+| config | [EnrollEngineConfig](arkts-basicservices-enrollengineconfig-i-sys.md) | Yes | config indicates enroll engine configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise used to return the result. |
 
 **Error codes:**
 
@@ -587,6 +611,8 @@ Releases the engine, This method uses an asynchronous callback to return the res
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-EnrollIntelligentVoiceEngine-release(callback: AsyncCallback<void>): void--><!--Device-EnrollIntelligentVoiceEngine-release(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -595,7 +621,7 @@ Releases the engine, This method uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -633,6 +659,8 @@ Releases the engine, This method uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-EnrollIntelligentVoiceEngine-release(): Promise<void>--><!--Device-EnrollIntelligentVoiceEngine-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -641,7 +669,7 @@ Releases the engine, This method uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise used to return the result. |
 
 **Error codes:**
 
@@ -677,6 +705,8 @@ Sets an intelligent voice parameter. This method uses an asynchronous callback t
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-EnrollIntelligentVoiceEngine-setParameter(key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-EnrollIntelligentVoiceEngine-setParameter(key: string, value: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -687,7 +717,7 @@ Sets an intelligent voice parameter. This method uses an asynchronous callback t
 | --- | --- | --- | --- |
 | key | string | Yes | the key of the intelligent voice parameter to set. |
 | value | string | Yes | the value of the intelligent voice parameter to set. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -727,6 +757,8 @@ Sets an intelligent voice parameter. This method uses a promise to return the re
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-EnrollIntelligentVoiceEngine-setParameter(key: string, value: string): Promise<void>--><!--Device-EnrollIntelligentVoiceEngine-setParameter(key: string, value: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -742,7 +774,7 @@ Sets an intelligent voice parameter. This method uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise used to return the result. |
 
 **Error codes:**
 
@@ -780,6 +812,8 @@ Sets sensibility, This method uses an asynchronous callback to return the result
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-EnrollIntelligentVoiceEngine-setSensibility(sensibility: SensibilityType, callback: AsyncCallback<void>): void--><!--Device-EnrollIntelligentVoiceEngine-setSensibility(sensibility: SensibilityType, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -788,8 +822,8 @@ Sets sensibility, This method uses an asynchronous callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sensibility | SensibilityType | Yes | sensibility to set. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback used to return the result. |
+| sensibility | [SensibilityType](arkts-basicservices-sensibilitytype-e-sys.md) | Yes | sensibility to set. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -829,6 +863,8 @@ Sets sensibility, This method uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-EnrollIntelligentVoiceEngine-setSensibility(sensibility: SensibilityType): Promise<void>--><!--Device-EnrollIntelligentVoiceEngine-setSensibility(sensibility: SensibilityType): Promise<void>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -837,13 +873,13 @@ Sets sensibility, This method uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sensibility | SensibilityType | Yes | sensibility to set. |
+| sensibility | [SensibilityType](arkts-basicservices-sensibilitytype-e-sys.md) | Yes | sensibility to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise used to return the result. |
 
 **Error codes:**
 
@@ -881,6 +917,8 @@ Sets wakeup hap information, This method uses an asynchronous callback to return
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-EnrollIntelligentVoiceEngine-setWakeupHapInfo(info: WakeupHapInfo, callback: AsyncCallback<void>): void--><!--Device-EnrollIntelligentVoiceEngine-setWakeupHapInfo(info: WakeupHapInfo, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -889,8 +927,8 @@ Sets wakeup hap information, This method uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | WakeupHapInfo | Yes | info indicates wakeup hap information. |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback used to return the result. |
+| info | [WakeupHapInfo](arkts-basicservices-wakeuphapinfo-i-sys.md) | Yes | info indicates wakeup hap information. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -934,6 +972,8 @@ Sets wakeup hap information, This method uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-EnrollIntelligentVoiceEngine-setWakeupHapInfo(info: WakeupHapInfo): Promise<void>--><!--Device-EnrollIntelligentVoiceEngine-setWakeupHapInfo(info: WakeupHapInfo): Promise<void>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -942,13 +982,13 @@ Sets wakeup hap information, This method uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | WakeupHapInfo | Yes | info indicates wakeup hap information. |
+| info | [WakeupHapInfo](arkts-basicservices-wakeuphapinfo-i-sys.md) | Yes | info indicates wakeup hap information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise used to return the result. |
 
 **Error codes:**
 
@@ -990,6 +1030,8 @@ Stops the engine, This method uses an asynchronous callback to return the result
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-EnrollIntelligentVoiceEngine-stop(callback: AsyncCallback<void>): void--><!--Device-EnrollIntelligentVoiceEngine-stop(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -998,7 +1040,7 @@ Stops the engine, This method uses an asynchronous callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -1036,6 +1078,8 @@ Stops the engine, This method uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-EnrollIntelligentVoiceEngine-stop(): Promise<void>--><!--Device-EnrollIntelligentVoiceEngine-stop(): Promise<void>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -1044,7 +1088,7 @@ Stops the engine, This method uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise used to return the result. |
 
 **Error codes:**
 

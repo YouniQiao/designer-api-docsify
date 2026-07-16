@@ -4,7 +4,15 @@
 
 **起始版本：** 18
 
+<!--Device-unnamed-export class LevelOrder--><!--Device-unnamed-export class LevelOrder-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+```
 
 ## clamp
 
@@ -18,7 +26,9 @@ static clamp(order: number): LevelOrder
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LevelOrder-static clamp(order: number): LevelOrder--><!--Device-LevelOrder-static clamp(order: number): LevelOrder-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,7 +42,7 @@ static clamp(order: number): LevelOrder
 
 | 类型 | 说明 |
 | --- | --- |
-| LevelOrder | 返回当前对象实例。 |
+| [LevelOrder](arkts-arkui-levelorder-c.md) | 返回当前对象实例。 |
 
 ## getOrder
 
@@ -46,7 +56,9 @@ getOrder(): number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LevelOrder-getOrder(): number--><!--Device-LevelOrder-getOrder(): number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

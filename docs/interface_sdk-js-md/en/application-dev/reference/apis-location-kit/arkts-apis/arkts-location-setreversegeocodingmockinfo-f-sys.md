@@ -19,6 +19,8 @@ Set the configuration parameters for simulating reverse geocoding.
 **Required permissions:** 
 - API version 20+: ohos.permission.MOCK_LOCATION
 
+<!--Device-geoLocationManager-function setReverseGeocodingMockInfo(mockInfos: Array<ReverseGeocodingMockInfo>): void--><!--Device-geoLocationManager-function setReverseGeocodingMockInfo(mockInfos: Array<ReverseGeocodingMockInfo>): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Set the configuration parameters for simulating reverse geocoding.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mockInfos | Array&lt;ReverseGeocodingMockInfo&gt; | Yes | Indicates the set of locations and place names to besimulated. |
+| mockInfos | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ReverseGeocodingMockInfo> | Yes | Indicates the set of locations and place names to be simulated. |
 
 **Error codes:**
 
@@ -37,7 +39,7 @@ Set the configuration parameters for simulating reverse geocoding.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call ${geoLocationManager.setReverseGeocodingMockInfo} due to limited device capabilities. |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API.<br>**Applicable version:** 20 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 20 and later |
 
 **Example**
 

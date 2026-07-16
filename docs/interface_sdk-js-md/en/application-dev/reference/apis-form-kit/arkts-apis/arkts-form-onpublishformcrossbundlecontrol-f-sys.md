@@ -12,14 +12,15 @@ import { formProvider } from '@kit.FormKit';
 function onPublishFormCrossBundleControl(callback: formInfo.PublishFormCrossBundleControlCallback): void
 ```
 
-Subscribes to controls on cross-bundle widget addition to the home screen. This API uses an asynchronous callback
-to return the result.
+Subscribes to controls on cross-bundle widget addition to the home screen. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.PUBLISH_FORM_CROSS_BUNDLE_CONTROL
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-formProvider-function onPublishFormCrossBundleControl(callback: formInfo.PublishFormCrossBundleControlCallback): void--><!--Device-formProvider-function onPublishFormCrossBundleControl(callback: formInfo.PublishFormCrossBundleControlCallback): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -29,7 +30,7 @@ to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | formInfo.PublishFormCrossBundleControlCallback | Yes | Callback function used to return the controlresult on cross-bundle widget addition to the home screen. |
+| callback | formInfo.PublishFormCrossBundleControlCallback | Yes | Callback function used to return the control result on cross-bundle widget addition to the home screen. |
 
 **Error codes:**
 

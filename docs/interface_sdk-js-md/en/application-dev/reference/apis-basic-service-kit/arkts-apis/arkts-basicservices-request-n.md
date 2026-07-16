@@ -1,11 +1,12 @@
 # request
 
-The **request** module provides applications with basic upload, download, and background transmission agent
-capabilities.
+The **request** module provides applications with basic upload, download, and background transmission agent capabilities.
 
 - Currently, the **request** module cannot be called in extensions.
 
 **Since:** 6
+
+<!--Device-unnamed-declare namespace request--><!--Device-unnamed-declare namespace request-End-->
 
 **System capability:** 
 - API version 10 and later: SystemCapability.Request.FileTransferAgent
@@ -29,13 +30,13 @@ import { request } from '@kit.BasicServicesKit';
 | Name | Description |
 | --- | --- |
 | [download](arkts-basicservices-download-f.md#download-1) | Downloads a file. This API uses an asynchronous callback to return the result. |
-| [downloadFile](arkts-basicservices-downloadfile-f.md#downloadfile-1) | Downloads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use [on('complete'\|'pause'\|'remove')](request.DownloadTask.on(type: 'complete' \| 'pause' \| 'remove', callback: () =&gt; void))to obtain the download task state, including task completion, pause, and removal. You can also use [on('fail')](arkts-basicservices-downloadtask-i.md#on-5) to obtain the task downloaderror information.&gt; **NOTE**&gt;&gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)&gt; . |
+| [downloadFile](arkts-basicservices-downloadfile-f.md#downloadfile-1) | Downloads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use [on('complete'\|'pause'\|'remove')](request.DownloadTask.on(type: 'complete' \| 'pause' \| 'remove', callback: () =&gt; void))to obtain the download task state, including task completion, pause, and removal. You can also use [on('fail')](arkts-basicservices-downloadtask-i.md#on-5) to obtain the task download error information. |
 | [download](arkts-basicservices-download-f.md#download-2) | Downloads a file. This API uses a promise to return the result. |
-| [downloadFile](arkts-basicservices-downloadfile-f.md#downloadfile-2) | Downloads a file. This API uses a promise to return the result. HTTP is supported. You can use [on('complete'\|'pause'\|'remove')](request.DownloadTask.on(type: 'complete' \| 'pause' \| 'remove', callback: () =&gt; void))to obtain the download task state, including task completion, pause, and removal. You can also use [on('fail')](arkts-basicservices-downloadtask-i.md#on-5) to obtain the task downloaderror information.&gt; **NOTE**&gt;&gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)&gt; . |
+| [downloadFile](arkts-basicservices-downloadfile-f.md#downloadfile-2) | Downloads a file. This API uses a promise to return the result. HTTP is supported. You can use [on('complete'\|'pause'\|'remove')](request.DownloadTask.on(type: 'complete' \| 'pause' \| 'remove', callback: () =&gt; void))to obtain the download task state, including task completion, pause, and removal. You can also use [on('fail')](arkts-basicservices-downloadtask-i.md#on-5) to obtain the task download error information. |
 | [upload](arkts-basicservices-upload-f.md#upload-1) | Uploads a file. This API uses an asynchronous callback to return the result. |
-| [uploadFile](arkts-basicservices-uploadfile-f.md#uploadfile-1) | Uploads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use [on('complete'\|'fail')](request.UploadTask.on(type: 'complete' \| 'fail', callback: Callback&lt;Array&lt;TaskState&gt;&gt;))to obtain the upload success or error information.&gt; **NOTE**&gt;&gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)&gt; . |
+| [uploadFile](arkts-basicservices-uploadfile-f.md#uploadfile-1) | Uploads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use [on('complete'\|'fail')](request.UploadTask.on(type: 'complete' \| 'fail', callback: Callback&lt;Array&lt;TaskState&gt;&gt;))to obtain the upload success or error information. |
 | [upload](arkts-basicservices-upload-f.md#upload-2) | Uploads a file. This API uses a promise to return the result. |
-| [uploadFile](arkts-basicservices-uploadfile-f.md#uploadfile-2) | Uploads a file. This API uses a promise to return the result. HTTP is supported. You can use [on('complete'\|'fail')](request.UploadTask.on(type: 'complete' \| 'fail', callback: Callback&lt;Array&lt;TaskState&gt;&gt;))to obtain the upload success or error information.&gt; **NOTE**&gt;&gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)&gt; . |
+| [uploadFile](arkts-basicservices-uploadfile-f.md#uploadfile-2) | Uploads a file. This API uses a promise to return the result. HTTP is supported. You can use [on('complete'\|'fail')](request.UploadTask.on(type: 'complete' \| 'fail', callback: Callback&lt;Array&lt;TaskState&gt;&gt;))to obtain the upload success or error information. |
 
 ### Interfaces
 
@@ -43,7 +44,7 @@ import { request } from '@kit.BasicServicesKit';
 | --- | --- |
 | [DownloadConfig](arkts-basicservices-downloadconfig-i.md) | Defines the download task configuration. |
 | [DownloadInfo](arkts-basicservices-downloadinfo-i.md) | Defines the download task information, which is the callback parameter of the [getTaskInfo](arkts-basicservices-downloadtask-i.md#gettaskinfo-2) API. |
-| [DownloadTask](arkts-basicservices-downloadtask-i.md) | Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile](arkts-basicservices-downloadfile-f.md#downloadfile-2) orfrom a callback through [request.downloadFile](arkts-basicservices-downloadfile-f.md#downloadfile-1). |
+| [DownloadTask](arkts-basicservices-downloadtask-i.md) | Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile](arkts-basicservices-downloadfile-f.md#downloadfile-2) or from a callback through [request.downloadFile](arkts-basicservices-downloadfile-f.md#downloadfile-1). |
 | [File](arkts-basicservices-file-i.md) | Describes the list of files in [UploadConfig](arkts-basicservices-uploadconfig-i.md). |
 | [RequestData](arkts-basicservices-requestdata-i.md) | Describes the form data in [UploadConfig](arkts-basicservices-uploadconfig-i.md). |
 | [UploadConfig](arkts-basicservices-uploadconfig-i.md) | Describes the configuration of an upload task. |
@@ -71,7 +72,7 @@ import { request } from '@kit.BasicServicesKit';
 | [ERROR_INSUFFICIENT_SPACE](arkts-basicservices-request-con.md#error_insufficient_space) | (Download error codes) Insufficient storage space. |
 | [ERROR_TOO_MANY_REDIRECTS](arkts-basicservices-request-con.md#error_too_many_redirects) | (Download error codes) Error caused by too many network redirections. |
 | [ERROR_UNHANDLED_HTTP_CODE](arkts-basicservices-request-con.md#error_unhandled_http_code) | (Download error codes) Unidentified HTTP code. |
-| [ERROR_UNKNOWN](arkts-basicservices-request-con.md#error_unknown) | (Download error codes) Unknown error.In API version 12 or earlier, only serial connection to the IP addresses associated with the specified domain name is supported, and the connection time for a single IP address is not controllable. If the first IP address returnedby the DNS is blocked, a handshake timeout may occur, leading to an ERROR_UNKNOWN error. |
+| [ERROR_UNKNOWN](arkts-basicservices-request-con.md#error_unknown) | (Download error codes) Unknown error.In API version 12 or earlier, only serial connection to the IP addresses associated with the specified domain name is supported, and the connection time for a single IP address is not controllable. If the first IP address returned by the DNS is blocked, a handshake timeout may occur, leading to an ERROR_UNKNOWN error. |
 | [ERROR_OFFLINE](arkts-basicservices-request-con.md#error_offline) | (Download error codes) No network connection. |
 | [ERROR_UNSUPPORTED_NETWORK_TYPE](arkts-basicservices-request-con.md#error_unsupported_network_type) | (Download error codes) Network type mismatch. |
 | [PAUSED_QUEUED_FOR_WIFI](arkts-basicservices-request-con.md#paused_queued_for_wifi) | (Causes of download pause) Download paused and queuing for a WLAN connection because the file size exceeds the maximum value allowed for a mobile network session. |

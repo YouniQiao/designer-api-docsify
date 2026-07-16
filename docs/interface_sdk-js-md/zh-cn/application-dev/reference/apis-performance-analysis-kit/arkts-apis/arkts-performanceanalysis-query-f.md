@@ -1,5 +1,11 @@
 # query
 
+## 导入模块
+
+```TypeScript
+import { FaultLogger } from '@kit.PerformanceAnalysisKit';
+```
+
 ## query
 
 ```TypeScript
@@ -14,14 +20,16 @@ function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>
 
 **替代接口：** addWatcher
 
+<!--Device-FaultLogger-function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void--><!--Device-FaultLogger-function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| faultType | FaultType | 是 | 输入要查询的故障类型。 |
-| callback | AsyncCallback&lt;Array&lt;FaultLogInfo&gt;&gt; | 是 | 回调函数，在回调函数中获取故障信息数组。<br>value拿到故障信息数组；value为undefined表示获取过程中出现异常，error返回错误提示字符串。 |
+| faultType | [FaultType](arkts-performanceanalysis-faulttype-e.md) | 是 | 输入要查询的故障类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<FaultLogInfo>> | 是 | 回调函数，在回调函数中获取故障信息数组。<br>value拿到故障信息数组；value为undefined表示获取过程中出现异常，error返回错误提示字符串。 |
 
 **错误码：**
 
@@ -79,19 +87,21 @@ function query(faultType: FaultType): Promise<Array<FaultLogInfo>>
 
 **替代接口：** addWatcher
 
+<!--Device-FaultLogger-function query(faultType: FaultType): Promise<Array<FaultLogInfo>>--><!--Device-FaultLogger-function query(faultType: FaultType): Promise<Array<FaultLogInfo>>-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| faultType | FaultType | 是 | 输入要查询的故障类型。 |
+| faultType | [FaultType](arkts-performanceanalysis-faulttype-e.md) | 是 | 输入要查询的故障类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;FaultLogInfo&gt;&gt; | Promise实例，可以在其then()方法中获取故障信息实例，也可以使用await。<br>value拿到故障信息数组；value为undefined表示获取过程中出现异常。 |
+| Promise<Array<FaultLogInfo>> | Promise实例，可以在其then()方法中获取故障信息实例，也可以使用await。<br>value拿到故障信息数组；value为undefined表示获取过程中出现异常。 |
 
 **错误码：**
 

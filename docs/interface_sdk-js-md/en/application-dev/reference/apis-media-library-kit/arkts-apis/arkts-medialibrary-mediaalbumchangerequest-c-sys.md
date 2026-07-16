@@ -6,6 +6,8 @@ Provides APIs for managing the media album change request.
 
 **Since:** 11
 
+<!--Device-photoAccessHelper-class MediaAlbumChangeRequest implements MediaChangeRequest--><!--Device-photoAccessHelper-class MediaAlbumChangeRequest implements MediaChangeRequest-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -24,15 +26,17 @@ Creates a MediaAlbumChangeRequest instance.
 
 The album name must meet the following requirements:
 
-- The total length of the album name must be between 1 and 255 characters.
+- The total length of the album name must be between 1 and 255 characters.  
 - It must not contain any invalid characters, which are:
 
 . .. \ / : * ? " ' ` < > | { } [ ]
 
-- The characters are case insensitive.
+- The characters are case insensitive.  
 - Duplicate album names are not allowed.
 
 **Since:** 11
+
+<!--Device-MediaAlbumChangeRequest-static createAlbumRequest(context: Context, name: string): MediaAlbumChangeRequest--><!--Device-MediaAlbumChangeRequest-static createAlbumRequest(context: Context, name: string): MediaAlbumChangeRequest-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -42,14 +46,14 @@ The album name must meet the following requirements:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability instance. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the ability instance. |
 | name | string | Yes | Name of the album. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MediaAlbumChangeRequest | MediaAlbumChangeRequest instance created. |
+| [MediaAlbumChangeRequest](arkts-medialibrary-mediaalbumchangerequest-c-sys.md) | MediaAlbumChangeRequest instance created. |
 
 **Error codes:**
 
@@ -90,6 +94,8 @@ Deletes user albums. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-MediaAlbumChangeRequest-static deleteAlbums(context: Context, albums: Array<Album>): Promise<void>--><!--Device-MediaAlbumChangeRequest-static deleteAlbums(context: Context, albums: Array<Album>): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -98,14 +104,14 @@ Deletes user albums. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability instance. |
-| albums | Array&lt;Album&gt; | Yes | Albums to delete. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the ability instance. |
+| albums | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Album> | Yes | Albums to delete. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -154,6 +160,8 @@ Deletes user albums by URI. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
+<!--Device-MediaAlbumChangeRequest-static deleteAlbumsWithUri(context: Context, albumUris: Array<string>): Promise<void>--><!--Device-MediaAlbumChangeRequest-static deleteAlbumsWithUri(context: Context, albumUris: Array<string>): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -162,14 +170,14 @@ Deletes user albums by URI. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability instance. |
-| albumUris | Array&lt;string&gt; | Yes | Array of URIs of the albums to be deleted. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the ability instance. |
+| albumUris | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Array of URIs of the albums to be deleted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -203,12 +211,14 @@ deleteAssets(assets: Array<PhotoAsset>): void
 
 Permanently deletes assets from the trash.
 
-> **NOTE**
->
-> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
+> **NOTE**  
+>  
+> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this  
 > operation.
 
 **Since:** 11
+
+<!--Device-MediaAlbumChangeRequest-deleteAssets(assets: Array<PhotoAsset>): void--><!--Device-MediaAlbumChangeRequest-deleteAssets(assets: Array<PhotoAsset>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -218,7 +228,7 @@ Permanently deletes assets from the trash.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Assets to be permanently deleted. |
+| assets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PhotoAsset> | Yes | Assets to be permanently deleted. |
 
 **Error codes:**
 
@@ -276,12 +286,14 @@ deleteAssetsWithUri(assetUris: Array<string>): void
 
 Permanently deletes assets from the trash.
 
-> **NOTE**
->
-> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
+> **NOTE**  
+>  
+> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this  
 > operation.
 
 **Since:** 19
+
+<!--Device-MediaAlbumChangeRequest-deleteAssetsWithUri(assetUris: Array<string>): void--><!--Device-MediaAlbumChangeRequest-deleteAssetsWithUri(assetUris: Array<string>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -291,7 +303,7 @@ Permanently deletes assets from the trash.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assetUris | Array&lt;string&gt; | Yes | Array of URIs of the assets to be permanently deleted. |
+| assetUris | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Array of URIs of the assets to be permanently deleted. |
 
 **Error codes:**
 
@@ -311,6 +323,8 @@ dismiss(): void
 Removes this group photo album.
 
 **Since:** 13
+
+<!--Device-MediaAlbumChangeRequest-dismiss(): void--><!--Device-MediaAlbumChangeRequest-dismiss(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -358,6 +372,8 @@ Removes assets from this portrait album or group photo album.
 
 **Since:** 11
 
+<!--Device-MediaAlbumChangeRequest-dismissAssets(assets: Array<PhotoAsset>): void--><!--Device-MediaAlbumChangeRequest-dismissAssets(assets: Array<PhotoAsset>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -366,7 +382,7 @@ Removes assets from this portrait album or group photo album.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Assets to remove. |
+| assets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PhotoAsset> | Yes | Assets to remove. |
 
 **Error codes:**
 
@@ -424,6 +440,8 @@ Merges two portrait albums.
 
 **Since:** 11
 
+<!--Device-MediaAlbumChangeRequest-mergeAlbum(target: Album): void--><!--Device-MediaAlbumChangeRequest-mergeAlbum(target: Album): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -432,7 +450,7 @@ Merges two portrait albums.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | Album | Yes | Album generated after the merge. The album must be renamed. |
+| target | [Album](arkts-medialibrary-album-i-sys.md) | Yes | Album generated after the merge. The album must be renamed. |
 
 **Error codes:**
 
@@ -488,6 +506,8 @@ Moves assets to another album.
 
 **Since:** 11
 
+<!--Device-MediaAlbumChangeRequest-moveAssets(assets: Array<PhotoAsset>, targetAlbum: Album): void--><!--Device-MediaAlbumChangeRequest-moveAssets(assets: Array<PhotoAsset>, targetAlbum: Album): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -496,8 +516,8 @@ Moves assets to another album.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Assets to move. |
-| targetAlbum | Album | Yes | Album to which the assets are to be moved. |
+| assets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PhotoAsset> | Yes | Assets to move. |
+| targetAlbum | [Album](arkts-medialibrary-album-i-sys.md) | Yes | Album to which the assets are to be moved. |
 
 **Error codes:**
 
@@ -554,6 +574,8 @@ Moves assets in an album to another album.
 
 **Since:** 19
 
+<!--Device-MediaAlbumChangeRequest-moveAssetsWithUri(assetUris: Array<string>, targetAlbum: Album): void--><!--Device-MediaAlbumChangeRequest-moveAssetsWithUri(assetUris: Array<string>, targetAlbum: Album): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -562,8 +584,8 @@ Moves assets in an album to another album.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assetUris | Array&lt;string&gt; | Yes | Array of URIs of the assets to move. |
-| targetAlbum | Album | Yes | Album to which the assets are to be moved. |
+| assetUris | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Array of URIs of the assets to move. |
+| targetAlbum | [Album](arkts-medialibrary-album-i-sys.md) | Yes | Album to which the assets are to be moved. |
 
 **Error codes:**
 
@@ -588,6 +610,8 @@ Operates album attribute.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MediaAlbumChangeRequest-operateAttribute(operation: AlbumOperation): void--><!--Device-MediaAlbumChangeRequest-operateAttribute(operation: AlbumOperation): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -596,7 +620,7 @@ Operates album attribute.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| operation | AlbumOperation | Yes | operation to execute for the album. |
+| operation | [AlbumOperation](arkts-medialibrary-albumoperation-i-sys.md) | Yes | operation to execute for the album. |
 
 **Error codes:**
 
@@ -659,6 +683,8 @@ Places this album before an album.
 
 **Since:** 11
 
+<!--Device-MediaAlbumChangeRequest-placeBefore(album: Album): void--><!--Device-MediaAlbumChangeRequest-placeBefore(album: Album): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -667,7 +693,7 @@ Places this album before an album.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| album | Album | Yes | Target album. To place this album to the end, set **album** to null. |
+| album | [Album](arkts-medialibrary-album-i-sys.md) | Yes | Target album. To place this album to the end, set **album** to null. |
 
 **Error codes:**
 
@@ -713,6 +739,8 @@ Restores the assets corresponding to the specified PhotoAsset object array from 
 
 **Since:** 11
 
+<!--Device-MediaAlbumChangeRequest-recoverAssets(assets: Array<PhotoAsset>): void--><!--Device-MediaAlbumChangeRequest-recoverAssets(assets: Array<PhotoAsset>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -721,7 +749,7 @@ Restores the assets corresponding to the specified PhotoAsset object array from 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array&lt;PhotoAsset&gt; | Yes | Assets to recover. |
+| assets | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<PhotoAsset> | Yes | Assets to recover. |
 
 **Error codes:**
 
@@ -773,6 +801,8 @@ Restores the assets corresponding to the specified URI string array from the tra
 
 **Since:** 19
 
+<!--Device-MediaAlbumChangeRequest-recoverAssetsWithUri(assetUris: Array<string>): void--><!--Device-MediaAlbumChangeRequest-recoverAssetsWithUri(assetUris: Array<string>): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -781,7 +811,7 @@ Restores the assets corresponding to the specified URI string array from the tra
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assetUris | Array&lt;string&gt; | Yes | Array of URIs of the assets to recover. |
+| assetUris | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Array of URIs of the assets to recover. |
 
 **Error codes:**
 
@@ -801,6 +831,8 @@ resetCoverUri(): void
 Resets the cover.
 
 **Since:** 20
+
+<!--Device-MediaAlbumChangeRequest-resetCoverUri(): void--><!--Device-MediaAlbumChangeRequest-resetCoverUri(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -853,6 +885,8 @@ set album name by filemanger.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaAlbumChangeRequest-setAlbumNameByFile(name: string): void--><!--Device-MediaAlbumChangeRequest-setAlbumNameByFile(name: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -908,6 +942,8 @@ setCoverUri(coverUri: string): void
 Sets the album cover.
 
 **Since:** 11
+
+<!--Device-MediaAlbumChangeRequest-setCoverUri(coverUri: string): void--><!--Device-MediaAlbumChangeRequest-setCoverUri(coverUri: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -975,6 +1011,8 @@ Sets the display level of the portrait album.
 
 **Since:** 11
 
+<!--Device-MediaAlbumChangeRequest-setDisplayLevel(displayLevel: int): void--><!--Device-MediaAlbumChangeRequest-setDisplayLevel(displayLevel: int): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1033,6 +1071,8 @@ set hidden state of album.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MediaAlbumChangeRequest-setHiddenAttribute(hiddenState: boolean, isInherited:boolean):void--><!--Device-MediaAlbumChangeRequest-setHiddenAttribute(hiddenState: boolean, isInherited:boolean):void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1090,6 +1130,8 @@ Sets the relationship between people in the portrait album to **Me**.
 
 **Since:** 11
 
+<!--Device-MediaAlbumChangeRequest-setIsMe(): void--><!--Device-MediaAlbumChangeRequest-setIsMe(): void-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -1136,12 +1178,13 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 static setUploadStatus(context: Context, albums: Album[], allowUpload: boolean): Promise<void>
 ```
 
-Sets whether the albums can be synced to cloud storage or family storage. This API uses a promise to return the
-result.
+Sets whether the albums can be synced to cloud storage or family storage. This API uses a promise to return the result.
 
 **Since:** 22
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
+
+<!--Device-MediaAlbumChangeRequest-static setUploadStatus(context: Context, albums: Album[], allowUpload: boolean): Promise<void>--><!--Device-MediaAlbumChangeRequest-static setUploadStatus(context: Context, albums: Album[], allowUpload: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -1151,15 +1194,15 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the ability instance. |
-| albums | Album[] | Yes | Array of albums whose sync status is to be set. You can set the sync status for useralbums and source albums. The array can contain a maximum of 500 elements. |
-| allowUpload | boolean | Yes | Whether the albums can be synced to cloud storage or family storage. **true** ifthey can be synced, **false** otherwise. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the ability instance. |
+| albums | [Album](arkts-medialibrary-album-i-sys.md)[] | Yes | Array of albums whose sync status is to be set. You can set the sync status for user albums and source albums. The array can contain a maximum of 500 elements. |
+| allowUpload | boolean | Yes | Whether the albums can be synced to cloud storage or family storage. **true** if they can be synced, **false** otherwise. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

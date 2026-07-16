@@ -1,9 +1,10 @@
 # Schema
 
-Defines the schema of a KV store. You can create a **Schema** object and pass it in
-[Options](arkts-arkdata-options-i.md) when creating or opening a KV store.
+Defines the schema of a KV store. You can create a **Schema** object and pass it in [Options](arkts-arkdata-options-i.md) when creating or opening a KV store.
 
 **Since:** 9
+
+<!--Device-distributedKVStore-class Schema--><!--Device-distributedKVStore-class Schema-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -24,6 +25,8 @@ Defines a constructor used to create a **Schema** instance.
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Schema-constructor()--><!--Device-Schema-constructor()-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -63,6 +66,8 @@ Set the string array of json.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Schema-set indexes(indexes: Array<string>)--><!--Device-Schema-set indexes(indexes: Array<string>)-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## mode
@@ -78,6 +83,8 @@ Set the mode of schema.
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Schema-set mode(mode: int)--><!--Device-Schema-set mode(mode: int)-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -95,6 +102,8 @@ Set the root json object.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Schema-set root(root: FieldNode)--><!--Device-Schema-set root(root: FieldNode)-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## skip
@@ -110,6 +119,8 @@ Set the skip size of schema.
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Schema-set skip(skip: int)--><!--Device-Schema-set skip(skip: int)-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 

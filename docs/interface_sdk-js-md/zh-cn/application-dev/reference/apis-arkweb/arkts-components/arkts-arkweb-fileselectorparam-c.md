@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare class FileSelectorParam--><!--Device-unnamed-declare class FileSelectorParam-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## constructor
@@ -16,7 +18,9 @@ FileSelectorParam的构造函数。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FileSelectorParam-constructor()--><!--Device-FileSelectorParam-constructor()-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -30,7 +34,9 @@ getAcceptType(): Array<string>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FileSelectorParam-getAcceptType(): Array<string>--><!--Device-FileSelectorParam-getAcceptType(): Array<string>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -38,7 +44,7 @@ getAcceptType(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | Return an array of acceptable MIME type. |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | Return an array of acceptable MIME type. |
 
 ## getAcceptableFileTypes
 
@@ -50,13 +56,15 @@ getAcceptableFileTypes(): Array<Array<AcceptableFileType>>
 
 **起始版本：** 23
 
+<!--Device-FileSelectorParam-getAcceptableFileTypes(): Array<Array<AcceptableFileType>>--><!--Device-FileSelectorParam-getAcceptableFileTypes(): Array<Array<AcceptableFileType>>-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Array&lt;AcceptableFileType&gt;&gt; | Return an array of selected types for web page files. |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Array<AcceptableFileType>> | Return an array of selected types for web page files. |
 
 ## getDefaultPath
 
@@ -67,6 +75,8 @@ getDefaultPath(): string
 获取拉起选择器时默认打开的路径。
 
 **起始版本：** 23
+
+<!--Device-FileSelectorParam-getDefaultPath(): string--><!--Device-FileSelectorParam-getDefaultPath(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -86,13 +96,15 @@ getDescriptions(): Array<string>
 
 **起始版本：** 23
 
+<!--Device-FileSelectorParam-getDescriptions(): Array<string>--><!--Device-FileSelectorParam-getDescriptions(): Array<string>-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | Return an array of description of the file type. |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | Return an array of description of the file type. |
 
 ## getMimeTypes
 
@@ -104,13 +116,15 @@ getMimeTypes(): Array<string>
 
 **起始版本：** 18
 
+<!--Device-FileSelectorParam-getMimeTypes(): Array<string>--><!--Device-FileSelectorParam-getMimeTypes(): Array<string>-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | Return an array of raw acceptable MIME type. |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | Return an array of raw acceptable MIME type. |
 
 ## getMode
 
@@ -122,7 +136,9 @@ getMode(): FileSelectorMode
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FileSelectorParam-getMode(): FileSelectorMode--><!--Device-FileSelectorParam-getMode(): FileSelectorMode-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -130,7 +146,7 @@ getMode(): FileSelectorMode
 
 | 类型 | 说明 |
 | --- | --- |
-| FileSelectorMode | Return the FileSelectorMode of this file selector. |
+| [FileSelectorMode](arkts-arkweb-fileselectormode-e.md) | Return the FileSelectorMode of this file selector. |
 
 ## getSuggestedName
 
@@ -141,6 +157,8 @@ getSuggestedName(): string
 获取推荐文件名列表。
 
 **起始版本：** 23
+
+<!--Device-FileSelectorParam-getSuggestedName(): string--><!--Device-FileSelectorParam-getSuggestedName(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -160,7 +178,9 @@ getTitle(): string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FileSelectorParam-getTitle(): string--><!--Device-FileSelectorParam-getTitle(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -180,6 +200,8 @@ isAcceptAllOptionExcluded(): boolean
 
 **起始版本：** 23
 
+<!--Device-FileSelectorParam-isAcceptAllOptionExcluded(): boolean--><!--Device-FileSelectorParam-isAcceptAllOptionExcluded(): boolean-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -198,7 +220,9 @@ isCapture(): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FileSelectorParam-isCapture(): boolean--><!--Device-FileSelectorParam-isCapture(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

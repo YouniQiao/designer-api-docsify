@@ -18,13 +18,15 @@ Obtains the current Wi-Fi power mode.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManagerExt-function getPowerMode(): Promise<PowerMode>--><!--Device-wifiManagerExt-function getPowerMode(): Promise<PowerMode>-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.AP.Extension
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PowerMode&gt; | @throws {BusinessError} 201 - Permission denied. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PowerMode> | @throws {BusinessError} 201 - Permission denied. |
 
 **Error codes:**
 
@@ -61,13 +63,15 @@ Obtains the current Wi-Fi power mode.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
+<!--Device-wifiManagerExt-function getPowerMode(callback: AsyncCallback<PowerMode>): void--><!--Device-wifiManagerExt-function getPowerMode(callback: AsyncCallback<PowerMode>): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.AP.Extension
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;PowerMode&gt; | Yes | the callback of model |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<PowerMode> | Yes | the callback of model |
 
 **Error codes:**
 

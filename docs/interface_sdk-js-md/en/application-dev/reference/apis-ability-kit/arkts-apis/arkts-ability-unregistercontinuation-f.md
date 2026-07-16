@@ -24,6 +24,8 @@ Unregisters the continuation management service. This API uses an asynchronous c
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-continuationManager-function unregisterContinuation(token: number, callback: AsyncCallback<void>): void--><!--Device-continuationManager-function unregisterContinuation(token: number, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 **Parameters:**
@@ -31,7 +33,7 @@ Unregisters the continuation management service. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | token | number | Yes | Token obtained after the registration of the continuation management service. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the unregistration is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the unregistration is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -81,6 +83,8 @@ Unregisters the continuation management service. This API uses a promise to retu
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-continuationManager-function unregisterContinuation(token: number): Promise<void>--><!--Device-continuationManager-function unregisterContinuation(token: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 **Parameters:**
@@ -93,7 +97,7 @@ Unregisters the continuation management service. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise used to return the result. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Declare class TreeListenerV2
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class TreeListenerV2--><!--Device-unnamed-export declare class TreeListenerV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,13 +28,15 @@ Destroy node add callback event.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TreeListenerV2-offNodeAdd(callback?: OnChangedCallback): void--><!--Device-TreeListenerV2-offNodeAdd(callback?: OnChangedCallback): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnChangedCallback | No |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | No |  |
 
 ## offNodeClick
 
@@ -48,13 +52,15 @@ Destroy node click callback event.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TreeListenerV2-offNodeClick(callback?: OnChangedCallback): void--><!--Device-TreeListenerV2-offNodeClick(callback?: OnChangedCallback): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnChangedCallback | No |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | No |  |
 
 ## offNodeDelete
 
@@ -70,13 +76,15 @@ Destroy node delete callback event.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TreeListenerV2-offNodeDelete(callback?: OnChangedCallback): void--><!--Device-TreeListenerV2-offNodeDelete(callback?: OnChangedCallback): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnChangedCallback | No |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | No |  |
 
 ## offNodeModify
 
@@ -92,13 +100,15 @@ Destroy node modify callback event.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TreeListenerV2-offNodeModify(callback?: OnChangedCallback): void--><!--Device-TreeListenerV2-offNodeModify(callback?: OnChangedCallback): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnChangedCallback | No |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | No |  |
 
 ## offNodeMove
 
@@ -114,13 +124,15 @@ Destroy node move callback event.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TreeListenerV2-offNodeMove(callback?: OnChangedCallback): void--><!--Device-TreeListenerV2-offNodeMove(callback?: OnChangedCallback): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnChangedCallback | No |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | No |  |
 
 ## onNodeAdd
 
@@ -128,8 +140,7 @@ Destroy node move callback event.
 onNodeAdd(callback: OnChangedCallback): void
 ```
 
-Node add event registration and processing.
-The event will not be destroyed after being processed.
+Node add event registration and processing.The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
 
@@ -137,13 +148,15 @@ The event will not be destroyed after being processed.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TreeListenerV2-onNodeAdd(callback: OnChangedCallback): void--><!--Device-TreeListenerV2-onNodeAdd(callback: OnChangedCallback): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnChangedCallback | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onNodeClick
 
@@ -151,8 +164,7 @@ The event will not be destroyed after being processed.
 onNodeClick(callback: OnChangedCallback): void
 ```
 
-Node click event registration and processing.
-The event will not be destroyed after being processed.
+Node click event registration and processing.The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
 
@@ -160,13 +172,15 @@ The event will not be destroyed after being processed.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TreeListenerV2-onNodeClick(callback: OnChangedCallback): void--><!--Device-TreeListenerV2-onNodeClick(callback: OnChangedCallback): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnChangedCallback | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onNodeDelete
 
@@ -174,8 +188,7 @@ The event will not be destroyed after being processed.
 onNodeDelete(callback: OnChangedCallback): void
 ```
 
-Node delete event registration and processing.
-The event will not be destroyed after being processed.
+Node delete event registration and processing.The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
 
@@ -183,13 +196,15 @@ The event will not be destroyed after being processed.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TreeListenerV2-onNodeDelete(callback: OnChangedCallback): void--><!--Device-TreeListenerV2-onNodeDelete(callback: OnChangedCallback): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnChangedCallback | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onNodeModify
 
@@ -197,8 +212,7 @@ The event will not be destroyed after being processed.
 onNodeModify(callback: OnChangedCallback): void
 ```
 
-Node modify event registration and processing.
-The event will not be destroyed after being processed.
+Node modify event registration and processing.The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
 
@@ -206,13 +220,15 @@ The event will not be destroyed after being processed.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TreeListenerV2-onNodeModify(callback: OnChangedCallback): void--><!--Device-TreeListenerV2-onNodeModify(callback: OnChangedCallback): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnChangedCallback | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onNodeMove
 
@@ -220,8 +236,7 @@ The event will not be destroyed after being processed.
 onNodeMove(callback: OnChangedCallback): void
 ```
 
-Node move event registration and processing.
-The event will not be destroyed after being processed.
+Node move event registration and processing.The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
 
@@ -229,13 +244,15 @@ The event will not be destroyed after being processed.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TreeListenerV2-onNodeMove(callback: OnChangedCallback): void--><!--Device-TreeListenerV2-onNodeMove(callback: OnChangedCallback): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnChangedCallback | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeAdd
 
@@ -243,8 +260,7 @@ The event will not be destroyed after being processed.
 onceNodeAdd(callback: OnChangedCallback): void
 ```
 
-Node add event registration and processing.
-After the event is processed once, it will be destroyed.
+Node add event registration and processing.After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
 
@@ -252,13 +268,15 @@ After the event is processed once, it will be destroyed.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TreeListenerV2-onceNodeAdd(callback: OnChangedCallback): void--><!--Device-TreeListenerV2-onceNodeAdd(callback: OnChangedCallback): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnChangedCallback | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeClick
 
@@ -266,8 +284,7 @@ After the event is processed once, it will be destroyed.
 onceNodeClick(callback: OnChangedCallback): void
 ```
 
-Node click event registration and processing.
-After the event is processed once, it will be destroyed.
+Node click event registration and processing.After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
 
@@ -275,13 +292,15 @@ After the event is processed once, it will be destroyed.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TreeListenerV2-onceNodeClick(callback: OnChangedCallback): void--><!--Device-TreeListenerV2-onceNodeClick(callback: OnChangedCallback): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnChangedCallback | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeDelete
 
@@ -289,8 +308,7 @@ After the event is processed once, it will be destroyed.
 onceNodeDelete(callback: OnChangedCallback): void
 ```
 
-Node delete event registration and processing.
-After the event is processed once, it will be destroyed.
+Node delete event registration and processing.After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
 
@@ -298,13 +316,15 @@ After the event is processed once, it will be destroyed.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TreeListenerV2-onceNodeDelete(callback: OnChangedCallback): void--><!--Device-TreeListenerV2-onceNodeDelete(callback: OnChangedCallback): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnChangedCallback | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeModify
 
@@ -312,8 +332,7 @@ After the event is processed once, it will be destroyed.
 onceNodeModify(callback: OnChangedCallback): void
 ```
 
-Node modify event registration and processing.
-After the event is processed once, it will be destroyed.
+Node modify event registration and processing.After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
 
@@ -321,13 +340,15 @@ After the event is processed once, it will be destroyed.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TreeListenerV2-onceNodeModify(callback: OnChangedCallback): void--><!--Device-TreeListenerV2-onceNodeModify(callback: OnChangedCallback): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnChangedCallback | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeMove
 
@@ -335,8 +356,7 @@ After the event is processed once, it will be destroyed.
 onceNodeMove(callback: OnChangedCallback): void
 ```
 
-Node move event registration and processing.
-After the event is processed once, it will be destroyed.
+Node move event registration and processing.After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
 
@@ -344,11 +364,13 @@ After the event is processed once, it will be destroyed.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TreeListenerV2-onceNodeMove(callback: OnChangedCallback): void--><!--Device-TreeListenerV2-onceNodeMove(callback: OnChangedCallback): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnChangedCallback | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 

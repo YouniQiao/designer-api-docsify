@@ -1,5 +1,11 @@
 # getWindow
 
+## 导入模块
+
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+```
+
 ## getWindow
 
 ```TypeScript
@@ -12,13 +18,15 @@ function getWindow(callback: AsyncCallback<window.Window>): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-featureAbility-function getWindow(callback: AsyncCallback<window.Window>): void--><!--Device-featureAbility-function getWindow(callback: AsyncCallback<window.Window>): void-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;window.Window&gt; | 是 | 回调函数，返回当前Ability对应的窗口。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<window.Window> | 是 | 回调函数，返回当前Ability对应的窗口。 |
 
 **示例：**
 
@@ -50,13 +58,15 @@ function getWindow(): Promise<window.Window>
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-featureAbility-function getWindow(): Promise<window.Window>--><!--Device-featureAbility-function getWindow(): Promise<window.Window>-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;window.Window&gt; | Promise对象，返回当前Ability对应的窗口。 |
+| Promise<window.Window> | Promise对象，返回当前Ability对应的窗口。 |
 
 **示例：**
 

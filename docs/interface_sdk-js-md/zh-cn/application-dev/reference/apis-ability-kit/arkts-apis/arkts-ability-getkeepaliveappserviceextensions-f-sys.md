@@ -1,18 +1,24 @@
 # getKeepAliveAppServiceExtensions（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+```
+
 ## getKeepAliveAppServiceExtensions
 
 ```TypeScript
 function getKeepAliveAppServiceExtensions(): Promise<Array<KeepAliveBundleInfo>>
 ```
 
-获取所有保活的AppServiceExtensionAbility应用信息，此信息由[KeepAliveBundleInfo](arkts-ability-keepalivebundleinfo-i-sys.md)定义。使用Promise异步
-回调。
-该接口在PC/2in1中可正常调用，在其他设备类型中返回801错误码。
+获取所有保活的AppServiceExtensionAbility应用信息，此信息由[KeepAliveBundleInfo](arkts-ability-keepalivebundleinfo-i-sys.md)定义。使用Promise异步回调。该接口在PC/2in1中可正常调用，在其他设备类型中返回801错误码。
 
 **起始版本：** 20
 
 **需要权限：** ohos.permission.MANAGE_APP_KEEP_ALIVE
+
+<!--Device-appManager-function getKeepAliveAppServiceExtensions(): Promise<Array<KeepAliveBundleInfo>>--><!--Device-appManager-function getKeepAliveAppServiceExtensions(): Promise<Array<KeepAliveBundleInfo>>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -22,7 +28,7 @@ function getKeepAliveAppServiceExtensions(): Promise<Array<KeepAliveBundleInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;KeepAliveBundleInfo&gt;&gt; | Promise对象，返回用户保活应用信息的数组。 |
+| Promise<Array<KeepAliveBundleInfo>> | Promise对象，返回用户保活应用信息的数组。 |
 
 **错误码：**
 

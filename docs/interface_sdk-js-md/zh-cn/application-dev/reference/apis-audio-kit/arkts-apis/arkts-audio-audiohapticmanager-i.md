@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-audioHaptic-interface AudioHapticManager--><!--Device-audioHaptic-interface AudioHapticManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
+
+## 导入模块
+
+```TypeScript
+import { audioHaptic } from '@kit.AudioKit';
+```
 
 ## createPlayer
 
@@ -18,6 +26,8 @@ createPlayer(id: number, options?: AudioHapticPlayerOptions): Promise<AudioHapti
 
 **需要权限：** ohos.permission.VIBRATE
 
+<!--Device-AudioHapticManager-createPlayer(id: number, options?: AudioHapticPlayerOptions): Promise<AudioHapticPlayer>--><!--Device-AudioHapticManager-createPlayer(id: number, options?: AudioHapticPlayerOptions): Promise<AudioHapticPlayer>-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 **参数：**
@@ -25,13 +35,13 @@ createPlayer(id: number, options?: AudioHapticPlayerOptions): Promise<AudioHapti
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | number | 是 | 已注册资源的source id。 |
-| options | AudioHapticPlayerOptions | 否 | 音振播放器选项。 |
+| options | [AudioHapticPlayerOptions](arkts-audio-audiohapticplayeroptions-i.md) | 否 | 音振播放器选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AudioHapticPlayer&gt; | Promise对象，返回创建的音振播放器。 |
+| Promise<AudioHapticPlayer> | Promise对象，返回创建的音振播放器。 |
 
 **错误码：**
 
@@ -70,11 +80,13 @@ registerSource(audioUri: string, hapticUri: string): Promise<number>
 
 通过Uri注册音频和振动资源。使用Promise异步回调。
 
-> **注意：**
->
+> **注意：**  
+>  
 > 单个应用最多支持同时注册128个资源，超过之后将会注册失败（返回注册的资源ID为负数）。推荐应用合理控制注册资源数量，对于不再需要使用的资源，建议及时取消注册。
 
 **起始版本：** 11
+
+<!--Device-AudioHapticManager-registerSource(audioUri: string, hapticUri: string): Promise<int>--><!--Device-AudioHapticManager-registerSource(audioUri: string, hapticUri: string): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -89,7 +101,7 @@ registerSource(audioUri: string, hapticUri: string): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回注册的资源ID。<br>正常情况下返回注册的资源ID为非负数。若返回注册的资源ID为负数，则表示注册失败，需检查注册资源数量是否超过上限。 |
+| Promise<number> | Promise对象，返回注册的资源ID。<br>正常情况下返回注册的资源ID为非负数。若返回注册的资源ID为负数，则表示注册失败，需检查注册资源数量是否超过上限。 |
 
 **错误码：**
 
@@ -123,11 +135,13 @@ registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFi
 
 通过文件描述符注册音频和振动资源。使用Promise异步回调。
 
-> **注意：**
->
+> **注意：**  
+>  
 > 单个应用最多支持同时注册128个资源，超过之后将会注册失败（返回注册的资源ID为负数）。推荐应用合理控制注册资源数量，对于不再需要使用的资源，建议及时取消注册。
 
 **起始版本：** 20
+
+<!--Device-AudioHapticManager-registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<int>--><!--Device-AudioHapticManager-registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -135,14 +149,14 @@ registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| audioFd | AudioHapticFileDescriptor | 是 | 已打开的有效文件描述符对象，用于描述音频文件。配套的offset和length需符合实际文件长度。 |
-| hapticFd | AudioHapticFileDescriptor | 是 | 已打开的有效文件描述符对象，用于描述振动文件。配套的offset和length必须符合实际文件长度。 |
+| audioFd | [AudioHapticFileDescriptor](arkts-audio-audiohapticfiledescriptor-i.md) | 是 | 已打开的有效文件描述符对象，用于描述音频文件。配套的offset和length需符合实际文件长度。 |
+| hapticFd | [AudioHapticFileDescriptor](arkts-audio-audiohapticfiledescriptor-i.md) | 是 | 已打开的有效文件描述符对象，用于描述振动文件。配套的offset和length必须符合实际文件长度。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回注册的资源ID。<br>正常情况下返回注册的资源ID为非负数。若返回注册的资源ID为负数，则表示注册失败，需检查注册资源数量是否超过上限。 |
+| Promise<number> | Promise对象，返回注册的资源ID。<br>正常情况下返回注册的资源ID为非负数。若返回注册的资源ID为负数，则表示注册失败，需检查注册资源数量是否超过上限。 |
 
 **示例：**
 
@@ -187,6 +201,8 @@ setAudioLatencyMode(id:number, latencyMode: AudioLatencyMode): void
 
 **起始版本：** 11
 
+<!--Device-AudioHapticManager-setAudioLatencyMode(id:int, latencyMode: AudioLatencyMode): void--><!--Device-AudioHapticManager-setAudioLatencyMode(id:int, latencyMode: AudioLatencyMode): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 **参数：**
@@ -194,7 +210,7 @@ setAudioLatencyMode(id:number, latencyMode: AudioLatencyMode): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | number | 是 | 已注册资源的source id。 |
-| latencyMode | AudioLatencyMode | 是 | 音频时延模式。 |
+| latencyMode | [AudioLatencyMode](arkts-audio-audiolatencymode-e.md) | 是 | 音频时延模式。 |
 
 **错误码：**
 
@@ -225,6 +241,8 @@ setStreamUsage(id: number, usage: audio.StreamUsage): void
 设置音频流使用类型。
 
 **起始版本：** 11
+
+<!--Device-AudioHapticManager-setStreamUsage(id: int, usage: audio.StreamUsage): void--><!--Device-AudioHapticManager-setStreamUsage(id: int, usage: audio.StreamUsage): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -264,11 +282,13 @@ unregisterSource(id: number): Promise<void>
 
 取消注册音频和振动资源。使用Promise异步回调。
 
-> **注意：**
->
+> **注意：**  
+>  
 > 对于不再需要使用的资源，建议应用及时取消注册，避免出现资源泄漏或资源数量超上限等问题。
 
 **起始版本：** 11
+
+<!--Device-AudioHapticManager-unregisterSource(id: int): Promise<void>--><!--Device-AudioHapticManager-unregisterSource(id: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -282,7 +302,7 @@ unregisterSource(id: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-hiAppEvent-class AppEventPackageHolder--><!--Device-hiAppEvent-class AppEventPackageHolder-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
+
+## 导入模块
+
+```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+```
 
 ## constructor
 
@@ -16,7 +24,9 @@ constructor(watcherName: string)
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AppEventPackageHolder-constructor(watcherName: string)--><!--Device-AppEventPackageHolder-constructor(watcherName: string)-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -54,7 +64,9 @@ setRow(size: number): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AppEventPackageHolder-setRow(size: int): void--><!--Device-AppEventPackageHolder-setRow(size: int): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -69,7 +81,7 @@ setRow(size: number): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
-| [11104001](../errorcode-hiappevent.md#11104001-非法的事件包大小值) | Invalid size value. Possibly caused by the size value is less than or equalto zero. |
+| [11104001](../errorcode-hiappevent.md#11104001-非法的事件包大小值) | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
 
 **示例：**
 
@@ -91,7 +103,9 @@ setSize(size: number): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AppEventPackageHolder-setSize(size: int): void--><!--Device-AppEventPackageHolder-setSize(size: int): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -106,7 +120,7 @@ setSize(size: number): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types. |
-| [11104001](../errorcode-hiappevent.md#11104001-非法的事件包大小值) | Invalid size value. Possibly caused by the size value is less than or equalto zero. |
+| [11104001](../errorcode-hiappevent.md#11104001-非法的事件包大小值) | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
 
 **示例：**
 
@@ -132,7 +146,9 @@ takeNext(): AppEventPackage
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AppEventPackageHolder-takeNext(): AppEventPackage--><!--Device-AppEventPackageHolder-takeNext(): AppEventPackage-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -140,7 +156,7 @@ takeNext(): AppEventPackage
 
 | 类型 | 说明 |
 | --- | --- |
-| AppEventPackage | 取出的事件包对象，订阅事件数据被全部取出后会返回null。 |
+| [AppEventPackage](arkts-performanceanalysis-appeventpackage-i.md) | 取出的事件包对象，订阅事件数据被全部取出后会返回null。 |
 
 **示例：**
 

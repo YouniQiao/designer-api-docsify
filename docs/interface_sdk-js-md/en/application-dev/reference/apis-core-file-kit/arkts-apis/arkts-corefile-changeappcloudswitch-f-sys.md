@@ -16,6 +16,8 @@ Changes the device-cloud file sync switch for an application. This API uses a pr
 
 **Since:** 10
 
+<!--Device-cloudSyncManager-function changeAppCloudSwitch(accountId: string, bundleName: string, status: boolean): Promise<void>--><!--Device-cloudSyncManager-function changeAppCloudSwitch(accountId: string, bundleName: string, status: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Changes the device-cloud file sync switch for an application. This API uses a pr
 | --- | --- | --- | --- |
 | accountId | string | Yes | Account ID. |
 | bundleName | string | Yes | Bundle name. |
-| status | boolean | Yes | State of the cloud-device file sync switch to set. The value **true** means to enablethis function; the value **false** means the opposite. |
+| status | boolean | Yes | State of the cloud-device file sync switch to set. The value **true** means to enable this function; the value **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -40,7 +42,7 @@ Changes the device-cloud file sync switch for an application. This API uses a pr
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are leftunspecified;<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
 **Example**
 
@@ -64,10 +66,11 @@ cloudSyncManager.changeAppCloudSwitch(accountId, bundleName, true).then(() => {
 function changeAppCloudSwitch(accountId: string, bundleName: string, status: boolean, callback: AsyncCallback<void>): void
 ```
 
-Changes the device-cloud file sync switch for an application. This API uses an asynchronous callback to return the
-result.
+Changes the device-cloud file sync switch for an application. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-cloudSyncManager-function changeAppCloudSwitch(accountId: string, bundleName: string, status: boolean, callback: AsyncCallback<void>): void--><!--Device-cloudSyncManager-function changeAppCloudSwitch(accountId: string, bundleName: string, status: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -79,8 +82,8 @@ result.
 | --- | --- | --- | --- |
 | accountId | string | Yes | Account ID. |
 | bundleName | string | Yes | Bundle name of the application. |
-| status | boolean | Yes | State of the cloud-device file sync switch to set. The value **true** means to enablethis function; the value **false** means the opposite. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result of changing the device-cloud filesync switch for an application. |
+| status | boolean | Yes | State of the cloud-device file sync switch to set. The value **true** means to enable this function; the value **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result of changing the device-cloud file sync switch for an application. |
 
 **Error codes:**
 
@@ -88,7 +91,7 @@ result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are leftunspecified;<br>2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
 **Example**
 

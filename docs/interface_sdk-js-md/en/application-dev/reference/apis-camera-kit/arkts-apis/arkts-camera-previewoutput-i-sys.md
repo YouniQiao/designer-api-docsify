@@ -6,6 +6,8 @@ Implements preview output. It inherits from [CameraOutput](arkts-camera-cameraou
 
 **Since:** 10
 
+<!--Device-camera-interface PreviewOutput extends CameraOutput--><!--Device-camera-interface PreviewOutput extends CameraOutput-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Adds a deferred surface.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-PreviewOutput-addDeferredSurface(surfaceId: string): void--><!--Device-PreviewOutput-addDeferredSurface(surfaceId: string): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -41,7 +45,7 @@ Adds a deferred surface.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 13 - 23 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 13 - 23 |
 
 ## attachSketchSurface
 
@@ -53,6 +57,8 @@ Attaches a surface for PiP preview.
 
 **Since:** 11
 
+<!--Device-PreviewOutput-attachSketchSurface(surfaceId: string): void--><!--Device-PreviewOutput-attachSketchSurface(surfaceId: string): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -61,7 +67,7 @@ Attaches a surface for PiP preview.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| surfaceId | string | Yes | Surface ID, which is obtained from[XComponent](XComponent). |
+| surfaceId | string | Yes | Surface ID, which is obtained from [XComponent](XComponent). |
 
 **Error codes:**
 
@@ -103,6 +109,8 @@ enableSketch(enabled: boolean): void
 Enables or disables PiP preview.
 
 **Since:** 11
+
+<!--Device-PreviewOutput-enableSketch(enabled: boolean): void--><!--Device-PreviewOutput-enableSketch(enabled: boolean): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -154,6 +162,8 @@ Obtains the zoom ratio when PiP preview is enabled.
 
 **Since:** 11
 
+<!--Device-PreviewOutput-getSketchRatio(): double--><!--Device-PreviewOutput-getSketchRatio(): double-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -190,6 +200,8 @@ isSketchSupported(): boolean
 Checks whether Picture-in-Picture (PiP) preview is supported.
 
 **Since:** 11
+
+<!--Device-PreviewOutput-isSketchSupported(): boolean--><!--Device-PreviewOutput-isSketchSupported(): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -236,6 +248,8 @@ Unsubscribes from PiP status change events.
 
 **Since:** 11
 
+<!--Device-PreviewOutput-off(type: 'sketchStatusChanged', callback?: AsyncCallback<SketchStatusData>): void--><!--Device-PreviewOutput-off(type: 'sketchStatusChanged', callback?: AsyncCallback<SketchStatusData>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -244,8 +258,8 @@ Unsubscribes from PiP status change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'sketchStatusChanged' | Yes | Event type. The value is fixed at **'sketchStatusChanged'**. The eventcan be listened for when a PiP preview stream is created. |
-| callback | AsyncCallback&lt;SketchStatusData&gt; | No | Callback used to return the result. This parameter isoptional. If this parameter is specified, the subscription to the specified event**on('sketchStatusChanged')** with the specified callback is canceled. (The callback object cannot be ananonymous function.) |
+| type | 'sketchStatusChanged' | Yes | Event type. The value is fixed at **'sketchStatusChanged'**. The event can be listened for when a PiP preview stream is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<SketchStatusData> | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('sketchStatusChanged')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
 
@@ -272,6 +286,8 @@ Subscribes to PiP status change events. This API uses an asynchronous callback t
 
 **Since:** 11
 
+<!--Device-PreviewOutput-on(type: 'sketchStatusChanged', callback: AsyncCallback<SketchStatusData>): void--><!--Device-PreviewOutput-on(type: 'sketchStatusChanged', callback: AsyncCallback<SketchStatusData>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -280,8 +296,8 @@ Subscribes to PiP status change events. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'sketchStatusChanged' | Yes | Event type. The value is fixed at **'sketchStatusChanged'**. The eventcan be listened for when a PiP preview stream is created. This event is triggered when PiP preview is enabledor disabled or the zoom ratio changes while PiP preview is enabled. |
-| callback | AsyncCallback&lt;SketchStatusData&gt; | Yes | Callback used to return the PiP status data. |
+| type | 'sketchStatusChanged' | Yes | Event type. The value is fixed at **'sketchStatusChanged'**. The event can be listened for when a PiP preview stream is created. This event is triggered when PiP preview is enabled or disabled or the zoom ratio changes while PiP preview is enabled. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<SketchStatusData> | Yes | Callback used to return the PiP status data. |
 
 **Error codes:**
 

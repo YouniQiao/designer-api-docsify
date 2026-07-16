@@ -1,5 +1,11 @@
 # sendNotice（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+```
+
 ## sendNotice
 
 ```TypeScript
@@ -12,6 +18,8 @@ function sendNotice(noticeType: NoticeType, eventData: string): void
 
 **需要权限：** ohos.permission.SUPPORT_USER_AUTH
 
+<!--Device-userAuth-function sendNotice(noticeType: NoticeType, eventData: string): void--><!--Device-userAuth-function sendNotice(noticeType: NoticeType, eventData: string): void-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function sendNotice(noticeType: NoticeType, eventData: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| noticeType | NoticeType | 是 | 通知类型。用于标识通知的来源，当前支持WIDGET_NOTICE（1），表示来自身份认证组件的通知。 |
+| noticeType | [NoticeType](arkts-userauthentication-noticetype-e-sys.md) | 是 | 通知类型。用于标识通知的来源，当前支持WIDGET_NOTICE（1），表示来自身份认证组件的通知。 |
 | eventData | string | 是 | 事件数据。JSON格式的字符串，包含通知的具体内容，如认证类型就绪事件等。数据长度范围为(0, 65536)字节。 |
 
 **错误码：**

@@ -6,6 +6,8 @@ Inherits from [BaseEvent](arkts-arkui-baseevent-i.md).
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface ClickEvent extends BaseEvent--><!--Device-unnamed-declare interface ClickEvent extends BaseEvent-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## getCurrentLocalPosition
@@ -22,13 +24,15 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ClickEvent-getCurrentLocalPosition?(): Coordinate2D--><!--Device-ClickEvent-getCurrentLocalPosition?(): Coordinate2D-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Coordinate2D | - return the coordinates of the top-left corner of the current component based on itsreal-time position. |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | - return the coordinates of the top-left corner of the current component based on its real-time position. |
 
 ## displayX
 
@@ -47,6 +51,8 @@ Unit: vp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ClickEvent-displayX: number--><!--Device-ClickEvent-displayX: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,6 +74,8 @@ Unit: vp
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ClickEvent-displayY: number--><!--Device-ClickEvent-displayY: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## globalDisplayX
@@ -76,8 +84,7 @@ Unit: vp
 globalDisplayX?: number
 ```
 
-X coordinate of the click position in the
-[global coordinate system](../../../../windowmanager/window-terminology.md#global-coordinate-system).
+X coordinate of the click position in the [global coordinate system](../../../../windowmanager/window-terminology.md#global-coordinate-system).
 
 Unit: vp
 
@@ -90,6 +97,8 @@ Value range: (-∞, +∞).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-ClickEvent-globalDisplayX?: number--><!--Device-ClickEvent-globalDisplayX?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -99,8 +108,7 @@ Value range: (-∞, +∞).
 globalDisplayY?: number
 ```
 
-Y coordinate of the click position in the
-[global coordinate system](../../../../windowmanager/window-terminology.md#global-coordinate-system).
+Y coordinate of the click position in the [global coordinate system](../../../../windowmanager/window-terminology.md#global-coordinate-system).
 
 Unit: vp
 
@@ -113,6 +121,8 @@ Value range: (-∞, +∞).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-ClickEvent-globalDisplayY?: number--><!--Device-ClickEvent-globalDisplayY?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -132,6 +142,8 @@ Whether the event is triggered by a left-hand or right-hand tap.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
+<!--Device-ClickEvent-hand?: InteractionHand--><!--Device-ClickEvent-hand?: InteractionHand-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## preventDefault
@@ -142,9 +154,7 @@ preventDefault: () => void
 
 Blocks the default event.
 
-Note: This API is only supported by the following components: **RichEditor** and **Hyperlink**. An exception is
-thrown when this API is used with unsupported components. Currently, asynchronous calls and Modifier APIs are not
-supported.
+Note: This API is only supported by the following components: **RichEditor** and **Hyperlink**. An exception is thrown when this API is used with unsupported components. Currently, asynchronous calls and Modifier APIs are not supported.
 
 **Type:** () => void
 
@@ -153,6 +163,8 @@ supported.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ClickEvent-preventDefault: () => void--><!--Device-ClickEvent-preventDefault: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -166,8 +178,7 @@ X coordinate of the click position in the coordinate system of the current appli
 
 Unit: vp
 
-Note: This API is supported since API version 7 and deprecated since API version 10. You are advised to use
-**windowX** instead.
+Note: This API is supported since API version 7 and deprecated since API version 10. You are advised to use **windowX** instead.
 
 **Type:** number
 
@@ -176,6 +187,8 @@ Note: This API is supported since API version 7 and deprecated since API version
 **Deprecated since:** 10
 
 **Substitutes:** [windowX](arkts-arkui-clickevent-i.md#windowx)
+
+<!--Device-ClickEvent-screenX: number--><!--Device-ClickEvent-screenX: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -189,8 +202,7 @@ Y coordinate of the click position in the coordinate system of the current appli
 
 Unit: vp
 
-Note: This API is supported since API version 7 and deprecated since API version 10. You are advised to use
-**windowY** instead.
+Note: This API is supported since API version 7 and deprecated since API version 10. You are advised to use **windowY** instead.
 
 **Type:** number
 
@@ -200,6 +212,8 @@ Note: This API is supported since API version 7 and deprecated since API version
 
 **Substitutes:** [windowY](arkts-arkui-clickevent-i.md#windowy)
 
+<!--Device-ClickEvent-screenY: number--><!--Device-ClickEvent-screenY: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## windowX
@@ -208,8 +222,7 @@ Note: This API is supported since API version 7 and deprecated since API version
 windowX: number
 ```
 
-X coordinate of the click position in the coordinate system of the current application window. After
-distanceThreshold is set for **onClick**, the click position is the lift-off point.
+X coordinate of the click position in the coordinate system of the current application window. After distanceThreshold is set for **onClick**, the click position is the lift-off point.
 
 Unit: vp
 
@@ -220,6 +233,8 @@ Unit: vp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ClickEvent-windowX: number--><!--Device-ClickEvent-windowX: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -229,8 +244,7 @@ Unit: vp
 windowY: number
 ```
 
-Y coordinate of the click position in the coordinate system of the current application window. After
-distanceThreshold is set for **onClick**, the click position is the lift-off point.
+Y coordinate of the click position in the coordinate system of the current application window. After distanceThreshold is set for **onClick**, the click position is the lift-off point.
 
 Unit: vp
 
@@ -242,6 +256,8 @@ Unit: vp
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ClickEvent-windowY: number--><!--Device-ClickEvent-windowY: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## x
@@ -250,11 +266,7 @@ Unit: vp
 x: number
 ```
 
-X coordinate of the click position in the
-[component coordinate system](../../../../ui/arkui-glossary.md#component-coordinate-system) based on the clicked
-element. After [distanceThreshold](arkts-arkui-commonmethod-c.md#onclick-2)
-is set for **onClick**, the click position is the lift-off point. If the event is triggered by a keyboard or gamepad
-device, the click position is the center of the clicked element.
+X coordinate of the click position in the [component coordinate system](../../../../ui/arkui-glossary.md#component-coordinate-system) based on the clicked element. After [distanceThreshold](arkts-arkui-commonmethod-c.md#onclick-2)is set for **onClick**, the click position is the lift-off point. If the event is triggered by a keyboard or gamepad device, the click position is the center of the clicked element.
 
 Unit: vp
 
@@ -265,6 +277,8 @@ Unit: vp
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ClickEvent-x: number--><!--Device-ClickEvent-x: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -274,10 +288,7 @@ Unit: vp
 y: number
 ```
 
-Y coordinate of the click position in the
-[component coordinate system](../../../../ui/arkui-glossary.md#component-coordinate-system) based on the clicked
-element. After distanceThreshold is set for **onClick**, the click position is the lift-off point. If the event is
-triggered by a keyboard or gamepad device, the click position is the center of the clicked element.
+Y coordinate of the click position in the [component coordinate system](../../../../ui/arkui-glossary.md#component-coordinate-system) based on the clicked element. After distanceThreshold is set for **onClick**, the click position is the lift-off point. If the event is triggered by a keyboard or gamepad device, the click position is the center of the clicked element.
 
 Unit: vp
 
@@ -288,6 +299,8 @@ Unit: vp
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-ClickEvent-y: number--><!--Device-ClickEvent-y: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

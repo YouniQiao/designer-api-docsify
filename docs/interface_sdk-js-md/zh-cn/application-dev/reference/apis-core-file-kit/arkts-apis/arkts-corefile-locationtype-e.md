@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare enum LocationType--><!--Device-unnamed-declare enum LocationType-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## LOCAL
@@ -16,6 +18,8 @@ LOCAL = 1 << 0
 
 **起始版本：** 11
 
+<!--Device-LocationType-LOCAL = 1 << 0--><!--Device-LocationType-LOCAL = 1 << 0-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## CLOUD
@@ -27,6 +31,8 @@ CLOUD = 1 << 1
 文件在云端存在。
 
 **起始版本：** 11
+
+<!--Device-LocationType-CLOUD = 1 << 1--><!--Device-LocationType-CLOUD = 1 << 1-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

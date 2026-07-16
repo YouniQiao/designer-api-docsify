@@ -8,6 +8,8 @@ Enumerates the authentication result codes.
 
 **Substitutes:** [UserAuthResultCode](arkts-userauthentication-userauthresultcode-e.md)
 
+<!--Device-userAuth-enum ResultCode--><!--Device-userAuth-enum ResultCode-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## SUCCESS
@@ -23,6 +25,8 @@ The operation is successful.
 **Deprecated since:** 9
 
 **Substitutes:** [SUCCESS](arkts-userauthentication-userauthresultcode-e.md#success)
+
+<!--Device-ResultCode-SUCCESS = 0--><!--Device-ResultCode-SUCCESS = 0-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -40,6 +44,8 @@ The authentication failed.
 
 **Substitutes:** [FAIL](arkts-userauthentication-userauthresultcode-e.md#fail)
 
+<!--Device-ResultCode-FAIL = 1--><!--Device-ResultCode-FAIL = 1-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## GENERAL_ERROR
@@ -55,6 +61,8 @@ A general operation error occurred.
 **Deprecated since:** 9
 
 **Substitutes:** [GENERAL_ERROR](arkts-userauthentication-userauthresultcode-e.md#general_error)
+
+<!--Device-ResultCode-GENERAL_ERROR = 2--><!--Device-ResultCode-GENERAL_ERROR = 2-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -72,6 +80,8 @@ The authentication is canceled.
 
 **Substitutes:** [CANCELED](arkts-userauthentication-userauthresultcode-e.md#canceled)
 
+<!--Device-ResultCode-CANCELED = 3--><!--Device-ResultCode-CANCELED = 3-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## TIMEOUT
@@ -87,6 +97,8 @@ The authentication timed out.
 **Deprecated since:** 9
 
 **Substitutes:** [TIMEOUT](arkts-userauthentication-userauthresultcode-e.md#timeout)
+
+<!--Device-ResultCode-TIMEOUT = 4--><!--Device-ResultCode-TIMEOUT = 4-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -104,6 +116,8 @@ The authentication type is not supported.
 
 **Substitutes:** [TYPE_NOT_SUPPORT](arkts-userauthentication-userauthresultcode-e.md#type_not_support)
 
+<!--Device-ResultCode-TYPE_NOT_SUPPORT = 5--><!--Device-ResultCode-TYPE_NOT_SUPPORT = 5-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## TRUST_LEVEL_NOT_SUPPORT
@@ -119,6 +133,8 @@ The authentication trust level is not supported.
 **Deprecated since:** 9
 
 **Substitutes:** [TRUST_LEVEL_NOT_SUPPORT](arkts-userauthentication-userauthresultcode-e.md#trust_level_not_support)
+
+<!--Device-ResultCode-TRUST_LEVEL_NOT_SUPPORT = 6--><!--Device-ResultCode-TRUST_LEVEL_NOT_SUPPORT = 6-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -136,6 +152,8 @@ Indicates the busy state.
 
 **Substitutes:** [BUSY](arkts-userauthentication-userauthresultcode-e.md#busy)
 
+<!--Device-ResultCode-BUSY = 7--><!--Device-ResultCode-BUSY = 7-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## INVALID_PARAMETERS
@@ -151,6 +169,8 @@ Invalid parameters are detected.
 **Deprecated since:** 9
 
 **Substitutes:** [INVALID_PARAMETERS](arkts-userauthentication-userauthresultcode-e.md#invalid_parameters)
+
+<!--Device-ResultCode-INVALID_PARAMETERS = 8--><!--Device-ResultCode-INVALID_PARAMETERS = 8-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -168,6 +188,8 @@ The authentication executor is locked.
 
 **Substitutes:** [LOCKED](arkts-userauthentication-userauthresultcode-e.md#locked)
 
+<!--Device-ResultCode-LOCKED = 9--><!--Device-ResultCode-LOCKED = 9-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## NOT_ENROLLED
@@ -183,6 +205,8 @@ The user has not enrolled the authentication information.
 **Deprecated since:** 9
 
 **Substitutes:** [NOT_ENROLLED](arkts-userauthentication-userauthresultcode-e.md#not_enrolled)
+
+<!--Device-ResultCode-NOT_ENROLLED = 10--><!--Device-ResultCode-NOT_ENROLLED = 10-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 

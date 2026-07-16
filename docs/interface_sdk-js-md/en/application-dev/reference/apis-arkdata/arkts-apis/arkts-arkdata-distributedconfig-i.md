@@ -4,6 +4,8 @@ Defines a struct for distributed configuration of a table.
 
 **Since:** 10
 
+<!--Device-relationalStore-interface DistributedConfig--><!--Device-relationalStore-interface DistributedConfig-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Specifies the asset conflict policy.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DistributedConfig-assetConflictPolicy?: AssetConflictPolicy--><!--Device-DistributedConfig-assetConflictPolicy?: AssetConflictPolicy-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## assetDownloadOnDemand
@@ -41,6 +45,8 @@ Specifies whether to download assets on demand.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DistributedConfig-assetDownloadOnDemand?: boolean--><!--Device-DistributedConfig-assetDownloadOnDemand?: boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -58,6 +64,8 @@ Specifies the asset temp path.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DistributedConfig-assetTempPath?: string--><!--Device-DistributedConfig-assetTempPath?: string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## asyncDownloadAsset
@@ -66,15 +74,15 @@ Specifies the asset temp path.
 asyncDownloadAsset?: boolean
 ```
 
-Whether to download assets synchronously or asynchronously when device-cloud sync is being performed for the
-current RDB store. The value **true** means to use an asynchronous task to download assets after all data is
-downloaded; **false** means to download assets synchronously.
+Whether to download assets synchronously or asynchronously when device-cloud sync is being performed for the current RDB store. The value **true** means to use an asynchronous task to download assets after all data is downloaded; **false** means to download assets synchronously.
 
 Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 18
+
+<!--Device-DistributedConfig-asyncDownloadAsset?: boolean--><!--Device-DistributedConfig-asyncDownloadAsset?: boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -84,15 +92,13 @@ Default value: **false**.
 autoSync: boolean
 ```
 
-Whether the table supports automatic device-cloud synchronization. If the value is **true**, the system can
-automatically trigger device-cloud sync. If the value is **false**, the system cannot automatically trigger
-device-cloud sync, and the [cloudSync]
-{@link @ohos.data.relationalStore:relationalStore.RdbStore.cloudSync(mode: SyncMode, tables: string[])}
-API needs to be called to trigger device-cloud sync.
+Whether the table supports automatic device-cloud synchronization. If the value is **true**, the system can automatically trigger device-cloud sync. If the value is **false**, the system cannot automatically trigger device-cloud sync, and the [cloudSync](@ohos.data.relationalStore:relationalStore.RdbStore.cloudSync(mode: SyncMode, tables: string[]))API needs to be called to trigger device-cloud sync.
 
 **Type:** boolean
 
 **Since:** 10
+
+<!--Device-DistributedConfig-autoSync: boolean--><!--Device-DistributedConfig-autoSync: boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -110,6 +116,8 @@ Specifies the auto synchronization switch.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-DistributedConfig-autoSyncSwitch?: boolean--><!--Device-DistributedConfig-autoSyncSwitch?: boolean-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## enableCloud
@@ -118,12 +126,13 @@ Specifies the auto synchronization switch.
 enableCloud?: boolean
 ```
 
-Whether to enable device-cloud sync for this RDB store. The value **true** means to enable device-cloud sync;
-**false** means the opposite. The default value is **true**.
+Whether to enable device-cloud sync for this RDB store. The value **true** means to enable device-cloud sync;**false** means the opposite. The default value is **true**.
 
 **Type:** boolean
 
 **Since:** 18
+
+<!--Device-DistributedConfig-enableCloud?: boolean--><!--Device-DistributedConfig-enableCloud?: boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -133,14 +142,13 @@ Whether to enable device-cloud sync for this RDB store. The value **true** means
 tableType?: DistributedTableType
 ```
 
-Distributed table type. **DEVICE_COLLABORATION** indicates the device collaboration table, and **SINGLE_VERSION**
-indicates the single version table. For cross-device data sync, the default value is **DEVICE_COLLABORATION**.
-For device-cloud data sync, the default value is **SINGLE_VERSION**, and **DEVICE_COLLABORATION** is not
-supported.
+Distributed table type. **DEVICE_COLLABORATION** indicates the device collaboration table, and **SINGLE_VERSION** indicates the single version table. For cross-device data sync, the default value is **DEVICE_COLLABORATION**.For device-cloud data sync, the default value is **SINGLE_VERSION**, and **DEVICE_COLLABORATION** is not supported.
 
 **Type:** DistributedTableType
 
 **Since:** 23
+
+<!--Device-DistributedConfig-tableType?: DistributedTableType--><!--Device-DistributedConfig-tableType?: DistributedTableType-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 

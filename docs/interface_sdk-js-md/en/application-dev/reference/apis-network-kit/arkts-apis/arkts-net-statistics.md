@@ -4,6 +4,8 @@ Obtains traffic statistics.
 
 **Since:** 15
 
+<!--Device-unnamed-declare namespace statistics--><!--Device-unnamed-declare namespace statistics-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import

@@ -4,7 +4,15 @@
 
 **起始版本：** 20
 
+<!--Device-cryptoFramework-class SignatureUtils--><!--Device-cryptoFramework-class SignatureUtils-End-->
+
 **系统能力：** SystemCapability.Security.CryptoFramework.Signature
+
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+```
 
 ## genEccSignature
 
@@ -16,7 +24,9 @@ static genEccSignature(spec: EccSignatureSpec): Uint8Array
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SignatureUtils-static genEccSignature(spec: EccSignatureSpec): Uint8Array--><!--Device-SignatureUtils-static genEccSignature(spec: EccSignatureSpec): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Signature
 
@@ -24,13 +34,13 @@ static genEccSignature(spec: EccSignatureSpec): Uint8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| spec | EccSignatureSpec | 是 | （r、s）的ECC/SM2签名数据。 |
+| spec | [EccSignatureSpec](arkts-cryptoarchitecture-eccsignaturespec-i.md) | 是 | （r、s）的ECC/SM2签名数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | ASN1 DER格式的签名数据。 |
+| [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | ASN1 DER格式的签名数据。 |
 
 **错误码：**
 
@@ -75,7 +85,9 @@ static genEccSignatureSpec(data: Uint8Array): EccSignatureSpec
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SignatureUtils-static genEccSignatureSpec(data: Uint8Array): EccSignatureSpec--><!--Device-SignatureUtils-static genEccSignatureSpec(data: Uint8Array): EccSignatureSpec-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Signature
 
@@ -83,13 +95,13 @@ static genEccSignatureSpec(data: Uint8Array): EccSignatureSpec
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Uint8Array | 是 | ASN1 DER格式的签名数据。 |
+| data | [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 是 | ASN1 DER格式的签名数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| EccSignatureSpec | 包含r和s的数据对象。 |
+| [EccSignatureSpec](arkts-cryptoarchitecture-eccsignaturespec-i.md) | 包含r和s的数据对象。 |
 
 **错误码：**
 

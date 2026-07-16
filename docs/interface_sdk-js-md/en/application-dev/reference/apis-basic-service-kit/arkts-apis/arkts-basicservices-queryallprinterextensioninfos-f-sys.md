@@ -12,12 +12,13 @@ import { print } from '@kit.BasicServicesKit';
 function queryAllPrinterExtensionInfos(callback: AsyncCallback<Array<PrinterExtensionInfo>>): void
 ```
 
-Obtains the information of all installed printer extensions. This API uses an asynchronous callback to return the
-result.
+Obtains the information of all installed printer extensions. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
+
+<!--Device-print-function queryAllPrinterExtensionInfos(callback: AsyncCallback<Array<PrinterExtensionInfo>>): void--><!--Device-print-function queryAllPrinterExtensionInfos(callback: AsyncCallback<Array<PrinterExtensionInfo>>): void-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -27,7 +28,7 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;PrinterExtensionInfo&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<PrinterExtensionInfo>> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -65,6 +66,8 @@ Obtains the information of all installed printer extensions. This API uses a pro
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function queryAllPrinterExtensionInfos(): Promise<Array<PrinterExtensionInfo>>--><!--Device-print-function queryAllPrinterExtensionInfos(): Promise<Array<PrinterExtensionInfo>>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -73,7 +76,7 @@ Obtains the information of all installed printer extensions. This API uses a pro
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PrinterExtensionInfo&gt;&gt; | Promise used to return the information of all installed printerextensions. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<PrinterExtensionInfo>> | Promise used to return the information of all installed printer extensions. |
 
 **Error codes:**
 

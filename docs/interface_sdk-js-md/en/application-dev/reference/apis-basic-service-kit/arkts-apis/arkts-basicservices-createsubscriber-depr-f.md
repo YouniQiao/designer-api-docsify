@@ -17,14 +17,22 @@ Creates a subscriber. This API uses an asynchronous callback to return the resul
 
 **Substitutes:** createSubscriber(
 
+<!--Device-commonEvent-function createSubscriber(
+    subscribeInfo: CommonEventSubscribeInfo,
+    callback: AsyncCallback<CommonEventSubscriber>
+  ): void--><!--Device-commonEvent-function createSubscriber(
+    subscribeInfo: CommonEventSubscribeInfo,
+    callback: AsyncCallback<CommonEventSubscriber>
+  ): void-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeInfo | CommonEventSubscribeInfo | Yes | Subscriber information. |
-| callback | AsyncCallback&lt;CommonEventSubscriber&gt; | Yes | Callback used to return the result. |
+| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-t.md) | Yes | Subscriber information. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<CommonEventSubscriber> | Yes | Callback used to return the result. |
 
 **Example**
 
@@ -69,19 +77,21 @@ Creates a subscriber. This API uses a promise to return the result.
 
 **Substitutes:** createSubscriber(subscribeInfo:
 
+<!--Device-commonEvent-function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<CommonEventSubscriber>--><!--Device-commonEvent-function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<CommonEventSubscriber>-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeInfo | CommonEventSubscribeInfo | Yes | Subscriber information. |
+| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-t.md) | Yes | Subscriber information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CommonEventSubscriber&gt; | Promise used to return the subscriber object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CommonEventSubscriber> | Promise used to return the subscriber object. |
 
 **Example**
 

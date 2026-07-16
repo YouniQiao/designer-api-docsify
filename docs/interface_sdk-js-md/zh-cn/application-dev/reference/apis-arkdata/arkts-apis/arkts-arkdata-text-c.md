@@ -1,14 +1,20 @@
 # Text
 
-文本类型数据，是[UnifiedRecord](arkts-arkdata-unifiedrecord-c.md)的子类，也是文本类型数据的基类，用于描述文本类数据，推荐开发者优先使用Text的子类描述数据，如
-[PlainText](arkts-arkdata-plaintext-c.md)、[Hyperlink](arkts-arkdata-hyperlink-c.md)、
-[HTML](arkts-arkdata-html-c.md)等具体子类。
+文本类型数据，是[UnifiedRecord](arkts-arkdata-unifiedrecord-c.md)的子类，也是文本类型数据的基类，用于描述文本类数据，推荐开发者优先使用Text的子类描述数据，如[PlainText](arkts-arkdata-plaintext-c.md)、[Hyperlink](arkts-arkdata-hyperlink-c.md)、[HTML](arkts-arkdata-html-c.md)等具体子类。
 
 **继承/实现关系：** Text extends [UnifiedRecord](arkts-arkdata-unifiedrecord-c.md)
 
 **起始版本：** 10
 
+<!--Device-unifiedDataChannel-class Text extends UnifiedRecord--><!--Device-unifiedDataChannel-class Text extends UnifiedRecord-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+## 导入模块
+
+```TypeScript
+import { unifiedDataChannel } from '@kit.ArkData';
+```
 
 ## details
 
@@ -34,7 +40,9 @@ details?: Record<string, string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Text-details?: Record<string, string>--><!--Device-Text-details?: Record<string, string>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 

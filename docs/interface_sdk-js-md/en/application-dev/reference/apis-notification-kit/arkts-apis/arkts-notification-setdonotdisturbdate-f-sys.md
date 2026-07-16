@@ -14,12 +14,13 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, callback: AsyncCallback<voi
 
 Sets the DND time. This API uses an asynchronous callback to return the result.
 
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,
-error code 801 is returned.
+This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function setDoNotDisturbDate(date: DoNotDisturbDate, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function setDoNotDisturbDate(date: DoNotDisturbDate, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -29,8 +30,8 @@ error code 801 is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | DoNotDisturbDate | Yes | DND time to set. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| date | [DoNotDisturbDate](arkts-notification-donotdisturbdate-i-sys.md) | Yes | DND time to set. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -77,12 +78,13 @@ function setDoNotDisturbDate(date: DoNotDisturbDate): Promise<void>
 
 Sets the DND time. This API uses a promise to return the result.
 
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,
-error code 801 is returned.
+This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function setDoNotDisturbDate(date: DoNotDisturbDate): Promise<void>--><!--Device-notificationManager-function setDoNotDisturbDate(date: DoNotDisturbDate): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -92,13 +94,13 @@ error code 801 is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | DoNotDisturbDate | Yes | DND time to set. |
+| date | [DoNotDisturbDate](arkts-notification-donotdisturbdate-i-sys.md) | Yes | DND time to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -140,12 +142,13 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number, callback: A
 
 Sets the DND time for a specified user. This API uses an asynchronous callback to return the result.
 
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,
-error code 801 is returned.
+This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function setDoNotDisturbDate(date: DoNotDisturbDate, userId: int, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function setDoNotDisturbDate(date: DoNotDisturbDate, userId: int, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -155,9 +158,9 @@ error code 801 is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | DoNotDisturbDate | Yes | DND time to set. |
+| date | [DoNotDisturbDate](arkts-notification-donotdisturbdate-i-sys.md) | Yes | DND time to set. |
 | userId | number | Yes | ID of the user for whom you want to set the DND time. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -208,12 +211,13 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number): Promise<vo
 
 Sets the DND time for a specified user. This API uses a promise to return the result.
 
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,
-error code 801 is returned.
+This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function setDoNotDisturbDate(date: DoNotDisturbDate, userId: int): Promise<void>--><!--Device-notificationManager-function setDoNotDisturbDate(date: DoNotDisturbDate, userId: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -223,14 +227,14 @@ error code 801 is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | DoNotDisturbDate | Yes | DND time to set. |
+| date | [DoNotDisturbDate](arkts-notification-donotdisturbdate-i-sys.md) | Yes | DND time to set. |
 | userId | number | Yes | ID of the user for whom you want to set the DND time. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

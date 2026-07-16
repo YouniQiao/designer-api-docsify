@@ -14,17 +14,18 @@ function getProperty(resourceId: string, propertyId: string, params?: Array<Huks
 
 Obtains a property value. This API uses a promise to return the result.
 
-The **propertyId** indicates the ID of the property to be queried. Currently, only the SKF API names defined in GMT
-0016-2023 can be used as property IDs. The supported IDs are as follows:
+The **propertyId** indicates the ID of the property to be queried. Currently, only the SKF API names defined in GMT0016-2023 can be used as property IDs. The supported IDs are as follows:
 
-- SKF_EnumDev
-- SKF_GetDevInfo
-- SKF_EnumApplication
+- SKF_EnumDev  
+- SKF_GetDevInfo  
+- SKF_EnumApplication  
 - SKF_EnumContainer
 
 **Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-huksExternalCrypto-function getProperty(resourceId: string, propertyId: string, params?: Array<HuksExternalCryptoParam>): Promise<Array<HuksExternalCryptoParam>>--><!--Device-huksExternalCrypto-function getProperty(resourceId: string, propertyId: string, params?: Array<HuksExternalCryptoParam>): Promise<Array<HuksExternalCryptoParam>>-End-->
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -32,15 +33,15 @@ The **propertyId** indicates the ID of the property to be queried. Currently, on
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceId | string | Yes | Resource ID, which can be obtained using[certificateManagerDialog.openAuthorizeDialog22+](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-openauthorizedialog-f.md#openauthorizedialog-2). The result contains **resourceId**. |
+| resourceId | string | Yes | Resource ID, which can be obtained using [certificateManagerDialog.openAuthorizeDialog22+](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-openauthorizedialog-f.md#openauthorizedialog-2). The result contains **resourceId**. |
 | propertyId | string | Yes | Property name for the search operation, which is the SKF API name defined in GMT 0016-2023. You need to make adaptation based on the API name. |
-| params | Array&lt;HuksExternalCryptoParam&gt; | No | Parameters to be passed to[Extension Ability](arkts-security-cryptoextensionability.md). If a non-system application passes[HUKS_EXT_CRYPTO_TAG_UID](arkts-universalkeystore-huksexternalcryptotagtype-e.md), the parameter is invalid. |
+| params | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<HuksExternalCryptoParam> | No | Parameters to be passed to [Extension Ability](arkts-security-cryptoextensionability.md). If a non-system application passes [HUKS_EXT_CRYPTO_TAG_UID](arkts-universalkeystore-huksexternalcryptotagtype-e.md), the parameter is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;HuksExternalCryptoParam&gt;&gt; | Promise that returns the operation result. If the call issuccessful, an array of the **HuksExternalCryptoParam** type is returned, containing the properties to bequeried. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<HuksExternalCryptoParam>> | Promise that returns the operation result. If the call is successful, an array of the **HuksExternalCryptoParam** type is returned, containing the properties to be queried. |
 
 **Error codes:**
 

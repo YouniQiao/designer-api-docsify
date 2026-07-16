@@ -18,21 +18,23 @@ Compresses multiple specified files. This API uses a promise to return the resul
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-zlib-function compressFiles(inFiles: Array<string>, outFile: string, options: Options): Promise<void>--><!--Device-zlib-function compressFiles(inFiles: Array<string>, outFile: string, options: Options): Promise<void>-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inFiles | Array&lt;string&gt; | Yes | Path of the folder or file to compress. The path must be an application sandboxpath, which can be obtained from the context. For details about the context, see[FA Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md) and [Stage Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md). The folder to compress cannot be empty.Otherwise, an error will be reported when[decompressFile](zlib.decompressFile(inFile: string, outFile: string, options: Options,callback: AsyncCallback&lt;void&gt;)) is used to decompress the folder. |
-| outFile | string | Yes | Path of the compressed file. When multiple threads compress files at the same time, thevalues of **outFile** must be different. |
-| options | Options | Yes | Compression parameters. |
+| inFiles | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Path of the folder or file to compress. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see [FA Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md) and [Stage Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md). The folder to compress cannot be empty.Otherwise, an error will be reported when [decompressFile](arkts-basicservices-decompressfile-f.md#decompressfile-1) is used to decompress the folder. |
+| outFile | string | Yes | Path of the compressed file. When multiple threads compress files at the same time, the values of **outFile** must be different. |
+| options | [Options](arkts-basicservices-options-i.md) | Yes | Compression parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@ Provides information about the device or application's folding, rotation, and wi
 
 **Since:** 12
 
+<!--Device-unnamed-export interface HoverModeStatus--><!--Device-unnamed-export interface HoverModeStatus-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Rotation angle of the application.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HoverModeStatus-appRotation: number--><!--Device-HoverModeStatus-appRotation: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## foldStatus
@@ -46,6 +50,8 @@ Fold status of the device.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-HoverModeStatus-foldStatus: display.FoldStatus--><!--Device-HoverModeStatus-foldStatus: display.FoldStatus-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## isHoverMode
@@ -54,8 +60,7 @@ Fold status of the device.
 isHoverMode: boolean
 ```
 
-Whether the application is in the hover state. The value **true** means that the application
-is in the hover state, and **false** means the opposite.
+Whether the application is in the hover state. The value **true** means that the application is in the hover state, and **false** means the opposite.
 
 **Type:** boolean
 
@@ -64,6 +69,8 @@ is in the hover state, and **false** means the opposite.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HoverModeStatus-isHoverMode: boolean--><!--Device-HoverModeStatus-isHoverMode: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,6 +89,8 @@ Window mode.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HoverModeStatus-windowStatusType: window.WindowStatusType--><!--Device-HoverModeStatus-windowStatusType: window.WindowStatusType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

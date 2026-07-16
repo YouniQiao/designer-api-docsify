@@ -20,6 +20,8 @@ Gets all AgentCards on the device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-agentManager-function getAllAgentCards(): Promise<Array<AgentCard>>--><!--Device-agentManager-function getAllAgentCards(): Promise<Array<AgentCard>>-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Gets all AgentCards on the device.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AgentCard&gt;&gt; | Returns the array of AgentCard. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AgentCard>> | Returns the array of AgentCard. |
 
 **Error codes:**
 

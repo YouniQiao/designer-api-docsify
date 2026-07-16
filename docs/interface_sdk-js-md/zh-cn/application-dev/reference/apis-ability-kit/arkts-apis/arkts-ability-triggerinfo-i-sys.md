@@ -1,9 +1,10 @@
 # TriggerInfo
 
-作为[trigger](../../../../reference/apis-ability-kit/js-apis-app-ability-wantAgent.md#wantagenttrigger)的入参定义触发WantAgent所需
-要的信息。
+作为[trigger](../../../../reference/apis-ability-kit/js-apis-app-ability-wantAgent.md#wantagenttrigger)的入参定义触发WantAgent所需要的信息。
 
 **起始版本：** 7
+
+<!--Device-unnamed-export interface TriggerInfo--><!--Device-unnamed-export interface TriggerInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -20,6 +21,8 @@ startOptions?: StartOptions
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TriggerInfo-startOptions?: StartOptions--><!--Device-TriggerInfo-startOptions?: StartOptions-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

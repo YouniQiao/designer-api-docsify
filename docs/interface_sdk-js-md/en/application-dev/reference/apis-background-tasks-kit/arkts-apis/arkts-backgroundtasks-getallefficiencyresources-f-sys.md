@@ -12,10 +12,11 @@ import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>
 ```
 
-Obtains all information about the requested efficiency resources, including the resource type. This API uses a
-promise to return the result.
+Obtains all information about the requested efficiency resources, including the resource type. This API uses a promise to return the result.
 
 **Since:** 20
+
+<!--Device-backgroundTaskManager-function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>--><!--Device-backgroundTaskManager-function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
@@ -25,7 +26,7 @@ promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;EfficiencyResourcesInfo[]&gt; | Promise used to return all information about efficiency resources. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<EfficiencyResourcesInfo[]> | Promise used to return all information about efficiency resources. |
 
 **Error codes:**
 

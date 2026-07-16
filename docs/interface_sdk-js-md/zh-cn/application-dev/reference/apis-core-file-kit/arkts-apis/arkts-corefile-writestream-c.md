@@ -1,14 +1,20 @@
 # WriteStream
 
-文件可写流，需要先通过
-[fileIo.createWriteStream](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatewritestream12)方法来构建一
-个WriteStream实例。WriteStream继承自数据流基类[stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-writable-c.md)。
+文件可写流，需要先通过[fileIo.createWriteStream](../../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatewritestream12)方法来构建一个WriteStream实例。WriteStream继承自数据流基类[stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-writable-c.md)。
 
 **继承/实现关系：** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-writable-c.md)
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare class WriteStream extends stream.Writable--><!--Device-unnamed-declare class WriteStream extends stream.Writable-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+```
 
 ## close
 
@@ -19,6 +25,8 @@ close(): void
 关闭可写流。
 
 **起始版本：** 12
+
+<!--Device-WriteStream-close(): void--><!--Device-WriteStream-close(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -52,6 +60,8 @@ The WriteStream constructor.
 
 **起始版本：** 12
 
+<!--Device-WriteStream-constructor()--><!--Device-WriteStream-constructor()-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## seek
@@ -64,6 +74,8 @@ seek(offset: number, whence?: WhenceType): number
 
 **起始版本：** 12
 
+<!--Device-WriteStream-seek(offset: number, whence?: WhenceType): number--><!--Device-WriteStream-seek(offset: number, whence?: WhenceType): number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -71,7 +83,7 @@ seek(offset: number, whence?: WhenceType): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | offset | number | 是 | 相对偏移位置，单位为Byte。 |
-| whence | WhenceType | 否 | 偏移指针相对位置类型。默认值：SEEK_SET，文件起始位置处。 |
+| whence | [WhenceType](arkts-corefile-whencetype-e.md) | 否 | 偏移指针相对位置类型。默认值：SEEK_SET，文件起始位置处。 |
 
 **返回值：**
 
@@ -111,6 +123,8 @@ readonly bytesWritten: number
 
 **起始版本：** 12
 
+<!--Device-WriteStream-readonly bytesWritten: number--><!--Device-WriteStream-readonly bytesWritten: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## path
@@ -124,6 +138,8 @@ readonly path: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-WriteStream-readonly path: string--><!--Device-WriteStream-readonly path: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

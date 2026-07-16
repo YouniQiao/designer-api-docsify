@@ -1,5 +1,11 @@
 # getRunningMultiAppInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+```
+
 ## getRunningMultiAppInfo
 
 ```TypeScript
@@ -13,6 +19,8 @@ function getRunningMultiAppInfo(bundleName: string): Promise<RunningMultiAppInfo
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-appManager-function getRunningMultiAppInfo(bundleName: string): Promise<RunningMultiAppInfo>--><!--Device-appManager-function getRunningMultiAppInfo(bundleName: string): Promise<RunningMultiAppInfo>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -28,7 +36,7 @@ function getRunningMultiAppInfo(bundleName: string): Promise<RunningMultiAppInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;RunningMultiAppInfo&gt; | Promise对象。返回特定包名的运行态应用多开信息。 |
+| Promise<RunningMultiAppInfo> | Promise对象。返回特定包名的运行态应用多开信息。 |
 
 **错误码：**
 

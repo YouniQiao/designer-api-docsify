@@ -12,14 +12,15 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 function getShortcutInfoByAppIndex(bundleName: string, appIndex: number): Array<ShortcutInfo>
 ```
 
-Obtains the [shortcut information](arkts-ability-shortcutinfo-i.md) of the current user based on the index of an
-application clone.
+Obtains the [shortcut information](arkts-ability-shortcutinfo-i-sys.md) of the current user based on the index of an application clone.
 
 No permission is required for obtaining the caller's own information.
 
 **Since:** 20
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-launcherBundleManager-function getShortcutInfoByAppIndex(bundleName: string, appIndex: int): Array<ShortcutInfo>--><!--Device-launcherBundleManager-function getShortcutInfoByAppIndex(bundleName: string, appIndex: int): Array<ShortcutInfo>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -36,7 +37,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ShortcutInfo&gt; | Array of the [ShortcutInfo](arkts-ability-shortcutinfo-i.md) objects obtained. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ShortcutInfo> | Array of the [ShortcutInfo](arkts-ability-shortcutinfo-i-sys.md) objects obtained. |
 
 **Error codes:**
 

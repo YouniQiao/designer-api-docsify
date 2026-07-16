@@ -1,5 +1,11 @@
 # batchRemove
 
+## 导入模块
+
+```TypeScript
+import { asset } from '@kit.AssetStoreKit';
+```
+
 ## batchRemove
 
 ```TypeScript
@@ -14,19 +20,21 @@ function batchRemove(assetsToBeRemoved: Array<AssetMap>): Promise<void>
 
 **起始版本：** 26.0.0
 
+<!--Device-asset-function batchRemove(assetsToBeRemoved: Array<AssetMap>): Promise<void>--><!--Device-asset-function batchRemove(assetsToBeRemoved: Array<AssetMap>): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.Asset
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assetsToBeRemoved | Array&lt;AssetMap&gt; | 是 | 待删除关键资产的搜索条件数组，如别名、访问控制属性、自定义数据等。 |
+| assetsToBeRemoved | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<AssetMap> | 是 | 待删除关键资产的搜索条件数组，如别名、访问控制属性、自定义数据等。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

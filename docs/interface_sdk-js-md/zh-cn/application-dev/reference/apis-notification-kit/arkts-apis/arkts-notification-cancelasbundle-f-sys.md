@@ -23,6 +23,18 @@ function cancelAsBundle(
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
+<!--Device-notificationManager-function cancelAsBundle(
+    id: int,
+    representativeBundle: string,
+    userId: int,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-notificationManager-function cancelAsBundle(
+    id: int,
+    representativeBundle: string,
+    userId: int,
+    callback: AsyncCallback<void>
+  ): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -34,7 +46,7 @@ function cancelAsBundle(
 | id | number | 是 | 通知ID。 |
 | representativeBundle | string | 是 | 被代理应用的包名。 |
 | userId | number | 是 | 用户ID。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 取消代理通知的回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 取消代理通知的回调方法。 |
 
 **错误码：**
 
@@ -84,6 +96,8 @@ function cancelAsBundle(id: number, representativeBundle: string, userId: number
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
+<!--Device-notificationManager-function cancelAsBundle(id: int, representativeBundle: string, userId: int): Promise<void>--><!--Device-notificationManager-function cancelAsBundle(id: int, representativeBundle: string, userId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -100,7 +114,7 @@ function cancelAsBundle(id: number, representativeBundle: string, userId: number
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -146,6 +160,8 @@ function cancelAsBundle(representativeBundle: BundleOption, id: number): Promise
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
+<!--Device-notificationManager-function cancelAsBundle(representativeBundle: BundleOption, id: int): Promise<void>--><!--Device-notificationManager-function cancelAsBundle(representativeBundle: BundleOption, id: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -154,14 +170,14 @@ function cancelAsBundle(representativeBundle: BundleOption, id: number): Promise
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| representativeBundle | BundleOption | 是 | 被代理应用的包信息。 |
+| representativeBundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 被代理应用的包信息。 |
 | id | number | 是 | 通知ID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

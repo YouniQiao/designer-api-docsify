@@ -8,7 +8,15 @@
 
 **替代接口：** [systemDateTime:systemDateTime](arkts-systemdatetime.md)
 
+<!--Device-unnamed-declare namespace systemTime--><!--Device-unnamed-declare namespace systemTime-End-->
+
 **系统能力：** SystemCapability.MiscServices.Time
+
+## 导入模块
+
+```TypeScript
+import { systemTime } from '@kit.BasicServicesKit';
+```
 
 ## 汇总
 

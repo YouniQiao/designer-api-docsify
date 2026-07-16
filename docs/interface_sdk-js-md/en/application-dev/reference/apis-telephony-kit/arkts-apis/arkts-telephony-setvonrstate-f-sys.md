@@ -18,6 +18,8 @@ Set switch state for voice over NR.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function setVoNRState(slotId: int, state: VoNRState, callback: AsyncCallback<void>): void--><!--Device-call-function setVoNRState(slotId: int, state: VoNRState, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -27,8 +29,8 @@ Set switch state for voice over NR.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| state | VoNRState | Yes | Indicates the VoNR state. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of setVoNRState. |
+| state | [VoNRState](arkts-telephony-vonrstate-e-sys.md) | Yes | Indicates the VoNR state. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of setVoNRState. |
 
 **Error codes:**
 
@@ -72,6 +74,8 @@ Set switch state for voice over NR.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function setVoNRState(slotId: int, state: VoNRState): Promise<void>--><!--Device-call-function setVoNRState(slotId: int, state: VoNRState): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -81,13 +85,13 @@ Set switch state for voice over NR.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| state | VoNRState | Yes | Indicates the VoNR state. |
+| state | [VoNRState](arkts-telephony-vonrstate-e-sys.md) | Yes | Indicates the VoNR state. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setVoNRState. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the setVoNRState. |
 
 **Error codes:**
 

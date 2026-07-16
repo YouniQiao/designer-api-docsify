@@ -10,6 +10,8 @@ Indicates the pairing state.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-remoteDevice-type PairingState = nearlinkConstant.PairingState--><!--Device-remoteDevice-type PairingState = nearlinkConstant.PairingState-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Property type:** nearlinkConstant.PairingState

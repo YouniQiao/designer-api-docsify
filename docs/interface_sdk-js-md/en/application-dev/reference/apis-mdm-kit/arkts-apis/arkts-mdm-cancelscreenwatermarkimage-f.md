@@ -20,13 +20,15 @@ Cancels the watermark image displayed on the screen.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-securityManager-function cancelScreenWatermarkImage(admin: Want): void--><!--Device-securityManager-function cancelScreenWatermarkImage(admin: Want): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | admin indicates the administrator ability information. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | admin indicates the administrator ability information. |
 
 **Error codes:**
 

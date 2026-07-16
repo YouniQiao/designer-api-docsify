@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-declare struct AutoAdComponent--><!--Device-unnamed-declare struct AutoAdComponent-End-->
+
 **系统能力：** SystemCapability.Advertising.Ads
+
+## 导入模块
+
+```TypeScript
+import { AutoAdComponent } from '@kit.AdsKit';
+```
 
 ## build
 
@@ -16,7 +24,9 @@ build(): void
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AutoAdComponent-build(): void--><!--Device-AutoAdComponent-build(): void-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -32,7 +42,9 @@ adOptions: advertising.AdOptions
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AutoAdComponent-adOptions: advertising.AdOptions--><!--Device-AutoAdComponent-adOptions: advertising.AdOptions-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -48,7 +60,9 @@ adParam: advertising.AdRequestParams
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AutoAdComponent-adParam: advertising.AdRequestParams--><!--Device-AutoAdComponent-adParam: advertising.AdRequestParams-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -64,7 +78,9 @@ displayOptions: advertising.AdDisplayOptions
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AutoAdComponent-displayOptions: advertising.AdDisplayOptions--><!--Device-AutoAdComponent-displayOptions: advertising.AdDisplayOptions-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -80,7 +96,9 @@ interactionListener: advertising.AdInteractionListener
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AutoAdComponent-interactionListener: advertising.AdInteractionListener--><!--Device-AutoAdComponent-interactionListener: advertising.AdInteractionListener-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
 

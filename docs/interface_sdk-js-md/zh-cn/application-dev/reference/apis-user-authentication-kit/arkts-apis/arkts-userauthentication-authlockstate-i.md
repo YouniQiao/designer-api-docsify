@@ -4,7 +4,15 @@
 
 **起始版本：** 22
 
+<!--Device-userAuth-interface AuthLockState--><!--Device-userAuth-interface AuthLockState-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
+
+## 导入模块
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+```
 
 ## isLocked
 
@@ -18,7 +26,9 @@ isLocked: boolean
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AuthLockState-isLocked: boolean--><!--Device-AuthLockState-isLocked: boolean-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -30,15 +40,15 @@ lockoutDuration: number
 
 认证被冻结时的剩余冻结时间，单位为毫秒。此字段仅在isLocked为true时有效。
 
-当永久冻结时，值为
-[PERMANENT_LOCKOUT_DURATION](arkts-userauthentication-userauth-con.md#permanent_lockout_duration)，
-表示认证器已永久锁定，需要用户通过PIN认证解锁后才能继续使用该认证类型。临时冻结时，该值为实际的剩余冻结时长，冻结结束后用户可继续尝试认证。
+当永久冻结时，值为[PERMANENT_LOCKOUT_DURATION](arkts-userauthentication-userauth-con.md#permanent_lockout_duration)，表示认证器已永久锁定，需要用户通过PIN认证解锁后才能继续使用该认证类型。临时冻结时，该值为实际的剩余冻结时长，冻结结束后用户可继续尝试认证。
 
 **类型：** number
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AuthLockState-lockoutDuration: int--><!--Device-AuthLockState-lockoutDuration: int-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -54,7 +64,9 @@ remainingAuthAttempts: number
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AuthLockState-remainingAuthAttempts: int--><!--Device-AuthLockState-remainingAuthAttempts: int-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

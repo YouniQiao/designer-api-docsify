@@ -4,6 +4,8 @@
 
 **起始版本：** 22
 
+<!--Device-unnamed-enum AacProfile--><!--Device-unnamed-enum AacProfile-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## AAC_LC
@@ -16,7 +18,9 @@ AAC_LC = 0
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AacProfile-AAC_LC = 0--><!--Device-AacProfile-AAC_LC = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -30,7 +34,9 @@ AAC_HE = 1
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AacProfile-AAC_HE = 1--><!--Device-AacProfile-AAC_HE = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -44,7 +50,9 @@ AAC_HE_V2 = 2
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AacProfile-AAC_HE_V2 = 2--><!--Device-AacProfile-AAC_HE_V2 = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 

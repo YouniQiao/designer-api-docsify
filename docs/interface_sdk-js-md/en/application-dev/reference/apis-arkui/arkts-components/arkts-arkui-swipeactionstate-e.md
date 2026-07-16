@@ -4,6 +4,8 @@ Enumerates swipe states of list items.
 
 **Since:** 11
 
+<!--Device-unnamed-declare enum SwipeActionState--><!--Device-unnamed-declare enum SwipeActionState-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## COLLAPSED
@@ -19,6 +21,8 @@ Collapsed state.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SwipeActionState-COLLAPSED--><!--Device-SwipeActionState-COLLAPSED-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ Expanded state.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-SwipeActionState-EXPANDED--><!--Device-SwipeActionState-EXPANDED-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ACTIONING
@@ -51,6 +57,8 @@ Acting state.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SwipeActionState-ACTIONING--><!--Device-SwipeActionState-ACTIONING-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

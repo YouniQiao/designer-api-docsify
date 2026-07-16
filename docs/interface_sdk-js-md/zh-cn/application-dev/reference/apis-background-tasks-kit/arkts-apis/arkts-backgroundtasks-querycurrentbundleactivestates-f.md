@@ -1,5 +1,11 @@
 # queryCurrentBundleActiveStates
 
+## 导入模块
+
+```TypeScript
+import { bundleState } from '@kit.BackgroundTasksKit';
+```
+
 ## queryCurrentBundleActiveStates
 
 ```TypeScript
@@ -16,6 +22,16 @@ Queries state data of the current bundle within a specified period.
 
 **废弃版本：** 9
 
+<!--Device-bundleState-function queryCurrentBundleActiveStates(
+    begin: number,
+    end: number,
+    callback: AsyncCallback<Array<BundleActiveState>>
+  ): void--><!--Device-bundleState-function queryCurrentBundleActiveStates(
+    begin: number,
+    end: number,
+    callback: AsyncCallback<Array<BundleActiveState>>
+  ): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **参数：**
@@ -24,7 +40,7 @@ Queries state data of the current bundle within a specified period.
 | --- | --- | --- | --- |
 | begin | number | 是 | Indicates the start time of the query period, in milliseconds. |
 | end | number | 是 | Indicates the end time of the query period, in milliseconds. |
-| callback | AsyncCallback&lt;Array&lt;BundleActiveState&gt;&gt; | 是 | the state data of the current bundle. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<BundleActiveState>> | 是 | the state data of the current bundle. |
 
 **示例：**
 
@@ -59,6 +75,8 @@ Queries state data of the current bundle within a specified period.
 
 **废弃版本：** 9
 
+<!--Device-bundleState-function queryCurrentBundleActiveStates(begin: number, end: number): Promise<Array<BundleActiveState>>--><!--Device-bundleState-function queryCurrentBundleActiveStates(begin: number, end: number): Promise<Array<BundleActiveState>>-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **参数：**
@@ -72,7 +90,7 @@ Queries state data of the current bundle within a specified period.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;BundleActiveState&gt;&gt; | the state data of the current bundle. |
+| Promise<Array<BundleActiveState>> | the state data of the current bundle. |
 
 **示例：**
 

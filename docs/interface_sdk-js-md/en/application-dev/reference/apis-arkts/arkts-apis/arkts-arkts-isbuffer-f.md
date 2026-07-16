@@ -18,13 +18,15 @@ Returns true if obj is a FastBuffer, false otherwise
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-fastbuffer-function isBuffer(obj: Object): boolean--><!--Device-fastbuffer-function isBuffer(obj: Object): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | Object | Yes | The object to check if it's a FastBuffer |
+| obj | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | The object to check if it's a FastBuffer |
 
 **Return value:**
 

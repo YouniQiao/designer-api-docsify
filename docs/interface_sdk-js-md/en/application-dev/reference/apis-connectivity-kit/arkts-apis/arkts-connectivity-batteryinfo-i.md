@@ -4,6 +4,8 @@ Describes the contents of the battery information.
 
 **Since:** 12
 
+<!--Device-connection-interface BatteryInfo--><!--Device-connection-interface BatteryInfo-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Electricity value of the general device. {@code -1} means no power information.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BatteryInfo-batteryLevel: int--><!--Device-BatteryInfo-batteryLevel: int-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## boxBatteryLevel
@@ -41,6 +45,8 @@ Electricity value of the box. {@code -1} means no power information.
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BatteryInfo-boxBatteryLevel: int--><!--Device-BatteryInfo-boxBatteryLevel: int-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -58,6 +64,8 @@ The charge state of the box.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BatteryInfo-boxChargeState: DeviceChargeState--><!--Device-BatteryInfo-boxChargeState: DeviceChargeState-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## leftEarBatteryLevel
@@ -73,6 +81,8 @@ Electricity value of the left ear. {@code -1} means no power information.
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BatteryInfo-leftEarBatteryLevel: int--><!--Device-BatteryInfo-leftEarBatteryLevel: int-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -90,6 +100,8 @@ The charge state of the left ear.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BatteryInfo-leftEarChargeState: DeviceChargeState--><!--Device-BatteryInfo-leftEarChargeState: DeviceChargeState-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## rightEarBatteryLevel
@@ -106,6 +118,8 @@ Electricity value of the right ear. {@code -1} means no power information.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BatteryInfo-rightEarBatteryLevel: int--><!--Device-BatteryInfo-rightEarBatteryLevel: int-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## rightEarChargeState
@@ -121,6 +135,8 @@ The charge state of the right ear.
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BatteryInfo-rightEarChargeState: DeviceChargeState--><!--Device-BatteryInfo-rightEarChargeState: DeviceChargeState-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

@@ -1,10 +1,10 @@
 # AsyKeyGenerator
 
-Provides APIs for using the **AsyKeyGenerator**. Before using any API of the **AsyKeyGenerator** class, you must
-create an **AsyKeyGenerator** instance by using
-[createAsyKeyGenerator](arkts-cryptoarchitecture-createasykeygenerator-f.md#createasykeygenerator-1).
+Provides APIs for using the **AsyKeyGenerator**. Before using any API of the **AsyKeyGenerator** class, you must create an **AsyKeyGenerator** instance by using [createAsyKeyGenerator](arkts-cryptoarchitecture-createasykeygenerator-f.md#createasykeygenerator-1).
 
 **Since:** 9
+
+<!--Device-cryptoFramework-interface AsyKeyGenerator--><!--Device-cryptoFramework-interface AsyKeyGenerator-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -28,6 +28,8 @@ Converts asymmetric key data to a key pair object. This API uses an asynchronous
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob, callback: AsyncCallback<KeyPair>): void--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob, callback: AsyncCallback<KeyPair>): void-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
@@ -36,9 +38,9 @@ Converts asymmetric key data to a key pair object. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | DataBlob | Yes | The public key data blob. |
-| priKey | DataBlob | Yes | The private key data blob. |
-| callback | AsyncCallback&lt;KeyPair&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the asymmetric key pair obtained. Otherwise, **err** is an errorobject. |
+| pubKey | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | The public key data blob. |
+| priKey | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | The private key data blob. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<KeyPair> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the asymmetric key pair obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -61,6 +63,8 @@ Converts data into an asymmetric key pair. This API uses an asynchronous callbac
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCallback<KeyPair>): void--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCallback<KeyPair>): void-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 10 to 11: SystemCapability.Security.CryptoFramework
@@ -69,9 +73,9 @@ Converts data into an asymmetric key pair. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | DataBlob \| null | Yes | Public key material to convert. If no public key needs to be converted, setthis parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. SinceAPI version 10, **null** is also supported. |
-| priKey | DataBlob \| null | Yes | Private key material to convert. If no private key needs to be converted, setthis parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. SinceAPI version 10, **null** is also supported. |
-| callback | AsyncCallback&lt;KeyPair&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the key pair obtained. Otherwise, **err** is an error object. |
+| pubKey | DataBlob \| null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| priKey | DataBlob \| null | Yes | Private key material to convert. If no private key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<KeyPair> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the key pair obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -120,6 +124,8 @@ Converts asymmetric key data to a key pair object. This API uses a promise to re
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
@@ -128,14 +134,14 @@ Converts asymmetric key data to a key pair object. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | DataBlob | Yes | The public key data blob. |
-| priKey | DataBlob | Yes | The private key data blob. |
+| pubKey | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | The public key data blob. |
+| priKey | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | Yes | The private key data blob. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KeyPair&gt; | Promise used to return the asymmetric key pair. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<KeyPair> | Promise used to return the asymmetric key pair. |
 
 **Error codes:**
 
@@ -158,6 +164,8 @@ Converts data into an asymmetric key pair. This API uses a promise to return the
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 10 to 11: SystemCapability.Security.CryptoFramework
@@ -166,14 +174,14 @@ Converts data into an asymmetric key pair. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | DataBlob \| null | Yes | Public key material to convert. If no public key needs to be converted, setthis parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. SinceAPI version 10, **null** is also supported. |
-| priKey | DataBlob \| null | Yes | Private key material to convert. If no private key needs to be converted, setthis parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. SinceAPI version 10, **null** is also supported. |
+| pubKey | DataBlob \| null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| priKey | DataBlob \| null | Yes | Private key material to convert. If no private key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KeyPair&gt; | Promise used to return the asymmetric key pair. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<KeyPair> | Promise used to return the asymmetric key pair. |
 
 **Error codes:**
 
@@ -218,14 +226,13 @@ convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair
 
 Converts data into an asymmetric key pair. This API returns the result synchronously.
 
-<br><br>**NOTE**
-<br>It is recommended to prioritize the use of asynchronous API, {@link convertKey}. Synchronous API may
-take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,
-it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link convertKey}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeyGenerator-convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair--><!--Device-AsyKeyGenerator-convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -233,14 +240,14 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | DataBlob \| null | Yes | Public key material. If no public key needs to be converted, set thisparameter to **null**. Before API version 10, only **DataBlob** is supported. Since API version 10, **null**can be passed in. |
-| priKey | DataBlob \| null | Yes | Private key material. If no private key needs to be converted, set thisparameter to **null**. Before API version 10, only **DataBlob** is supported. Since API version 10, **null**can be passed in. |
+| pubKey | DataBlob \| null | Yes | Public key material. If no public key needs to be converted, set this parameter to **null**. Before API version 10, only **DataBlob** is supported. Since API version 10, **null** can be passed in. |
+| priKey | DataBlob \| null | Yes | Private key material. If no private key needs to be converted, set this parameter to **null**. Before API version 10, only **DataBlob** is supported. Since API version 10, **null** can be passed in. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| KeyPair | Asymmetric key pair. |
+| [KeyPair](arkts-cryptoarchitecture-keypair-i.md) | Asymmetric key pair. |
 
 **Error codes:**
 
@@ -288,21 +295,23 @@ convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>
 
 Converts data into an asymmetric key pair. This API uses a promise to return the result.
 
-> **NOTE**
->
-> 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by
-> the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM
-> encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM
-> encoding format.
-> 2. In **convertPemKey()**, you can pass in either **pubKey** or **priKey**, or both of them. If one of them is
-> passed in, the returned **KeyPair** instance contains only the key converted from the data you passed in.
-> 3. When **convertPemKey** is used to convert an external string into an asymmetric key object defined by the
-> Crypto framework, the system does not verify whether the specifications of the generated key object are the
+> **NOTE**  
+>  
+> 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by  
+> the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM  
+> encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM  
+> encoding format.  
+> 2. In **convertPemKey()**, you can pass in either **pubKey** or **priKey**, or both of them. If one of them is  
+> passed in, the returned **KeyPair** instance contains only the key converted from the data you passed in.  
+> 3. When **convertPemKey** is used to convert an external string into an asymmetric key object defined by the  
+> Crypto framework, the system does not verify whether the specifications of the generated key object are the  
 > same as the key specifications specified for the asymmetric key generator.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -310,14 +319,14 @@ Converts data into an asymmetric key pair. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | string \| null | Yes | Public key material to convert. If no public key needs to be converted, setthis parameter to **null**. |
-| priKey | string \| null | Yes | Private key material to convert. If no private key needs to be converted, setthis parameter to **null**.<br>Note: The public key and private key materials cannot be both null or emptystrings. |
+| pubKey | string \| null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. |
+| priKey | string \| null | Yes | Private key material to convert. If no private key needs to be converted, set this parameter to **null**.<br>Note: The public key and private key materials cannot be both null or empty strings. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KeyPair&gt; | Promise used to return the asymmetric key pair. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<KeyPair> | Promise used to return the asymmetric key pair. |
 
 **Error codes:**
 
@@ -375,25 +384,26 @@ async function TestConvertPemKeyByPromise() {
 convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>
 ```
 
-Converts data into an asymmetric key pair. Encrypted private keys are supported. The private key password is
-synchronously passed to decrypt the private key. This API uses a promise to return the result.
+Converts data into an asymmetric key pair. Encrypted private keys are supported. The private key password is synchronously passed to decrypt the private key. This API uses a promise to return the result.
 
-> **NOTE**
->
-> 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by
-> the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM
-> encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM
-> encoding format.
-> 2. In **convertPemKey()**, you can pass in either **pubKey** or **priKey**, or both of them. If one of them is
-> passed in, the returned **KeyPair** instance contains only the key converted from the data you passed in.
-> 3. When **convertPemKey** is used to convert an external string into an asymmetric key object defined by the
-> Crypto framework, the system does not verify whether the specifications of the generated key object are the
-> same as the key specifications specified for the asymmetric key generator.
+> **NOTE**  
+>  
+> 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by  
+> the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM  
+> encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM  
+> encoding format.  
+> 2. In **convertPemKey()**, you can pass in either **pubKey** or **priKey**, or both of them. If one of them is  
+> passed in, the returned **KeyPair** instance contains only the key converted from the data you passed in.  
+> 3. When **convertPemKey** is used to convert an external string into an asymmetric key object defined by the  
+> Crypto framework, the system does not verify whether the specifications of the generated key object are the  
+> same as the key specifications specified for the asymmetric key generator.  
 > 4. If **password** is passed in, it can be used to decrypt the encrypted private key.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -401,15 +411,15 @@ synchronously passed to decrypt the private key. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | string \| null | Yes | Public key material to convert. If no public key needs to be converted, setthis parameter to **null**. |
-| priKey | string \| null | Yes | Private key material to convert. If no private key needs to be converted, setthis parameter to **null**.<br>Note: The public key and private key materials cannot be both null or emptystrings. |
+| pubKey | string \| null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. |
+| priKey | string \| null | Yes | Private key material to convert. If no private key needs to be converted, set this parameter to **null**.<br>Note: The public key and private key materials cannot be both null or empty strings. |
 | password | string | Yes | Password used to decrypt the private key. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KeyPair&gt; | Promise used to return the asymmetric key pair. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<KeyPair> | Promise used to return the asymmetric key pair. |
 
 **Error codes:**
 
@@ -464,20 +474,19 @@ convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair
 
 Converts data into an asymmetric key pair. This API returns the result synchronously.
 
-> **NOTE**
-> The precautions for using **convertPemKeySync** are the same as those for **convertPemKey**. For details, see
-> the description of
-> [convertPemKey](arkts-cryptoarchitecture-asykeygenerator-i.md#convertpemkey-1)
+> **NOTE**  
+> The precautions for using **convertPemKeySync** are the same as those for **convertPemKey**. For details, see  
+> the description of  
+> [convertPemKey](arkts-cryptoarchitecture-asykeygenerator-i.md#convertpemkey-1)  
 > .
 
-<br><br>**NOTE**
-<br>It is recommended to prioritize the use of asynchronous API, {@link convertPemKey}. Synchronous API may
-take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,
-it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link convertPemKey}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair--><!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -485,14 +494,14 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | string \| null | Yes | Public key material to convert. If no public key needs to be converted, setthis parameter to **null**. |
-| priKey | string \| null | Yes | Private key material. If no private key needs to be converted, set thisparameter to **null**.<br>Note: The public key and private key materials cannot be both null or emptystrings. |
+| pubKey | string \| null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. |
+| priKey | string \| null | Yes | Private key material. If no private key needs to be converted, set this parameter to **null**.<br>Note: The public key and private key materials cannot be both null or empty strings. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| KeyPair | Asymmetric key pair. |
+| [KeyPair](arkts-cryptoarchitecture-keypair-i.md) | Asymmetric key pair. |
 
 **Error codes:**
 
@@ -553,22 +562,20 @@ function TestConvertPemKeyBySync() {
 convertPemKeySync(pubKey: string | null, priKey: string | null, password: string): KeyPair
 ```
 
-Converts data into an asymmetric key pair. Encrypted private keys are supported. The private key password is
-synchronously passed to decrypt the private key. This API is synchronous.
+Converts data into an asymmetric key pair. Encrypted private keys are supported. The private key password is synchronously passed to decrypt the private key. This API is synchronous.
 
-> **NOTE**
-> The precautions for using **convertPemKeySync** are the same as those for
-> [convertPemKey](arkts-cryptoarchitecture-asykeygenerator-i.md#convertpemkey-2)
+> **NOTE**  
+> The precautions for using **convertPemKeySync** are the same as those for  
+> [convertPemKey](arkts-cryptoarchitecture-asykeygenerator-i.md#convertpemkey-2)  
 > .
 
-<br><br>**NOTE**
-<br>It is recommended to prioritize the use of asynchronous API, {@link convertPemKey}. Synchronous API may
-take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,
-it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link convertPemKey}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null, password: string): KeyPair--><!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null, password: string): KeyPair-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -576,15 +583,15 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | string \| null | Yes | Public key material to convert. If no public key needs to be converted, setthis parameter to **null**. |
-| priKey | string \| null | Yes | Private key material. If no private key needs to be converted, set thisparameter to **null**. <br>Note: **pubKey** and **priKey** cannot be **null** at the same time. |
+| pubKey | string \| null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. |
+| priKey | string \| null | Yes | Private key material. If no private key needs to be converted, set this parameter to **null**. <br>Note: **pubKey** and **priKey** cannot be **null** at the same time. |
 | password | string | Yes | Password used to decrypt the private key. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| KeyPair | Asymmetric key pair. |
+| [KeyPair](arkts-cryptoarchitecture-keypair-i.md) | Asymmetric key pair. |
 
 **Error codes:**
 
@@ -640,12 +647,13 @@ function TestConvertPemKeyBySync() {
 generateKeyPair(callback: AsyncCallback<KeyPair>): void
 ```
 
-Generates a random key pair using this asymmetric key generator. This API uses an asynchronous callback to return
-the result.
+Generates a random key pair using this asymmetric key generator. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeyGenerator-generateKeyPair(callback: AsyncCallback<KeyPair>): void--><!--Device-AsyKeyGenerator-generateKeyPair(callback: AsyncCallback<KeyPair>): void-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -655,7 +663,7 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;KeyPair&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the key pair obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<KeyPair> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the key pair obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -693,6 +701,8 @@ Generates a random key pair using this asymmetric key generator. This API uses a
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AsyKeyGenerator-generateKeyPair(): Promise<KeyPair>--><!--Device-AsyKeyGenerator-generateKeyPair(): Promise<KeyPair>-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
@@ -701,7 +711,7 @@ Generates a random key pair using this asymmetric key generator. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KeyPair&gt; | Promise used to return the asymmetric key pair. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<KeyPair> | Promise used to return the asymmetric key pair. |
 
 **Error codes:**
 
@@ -735,14 +745,13 @@ generateKeyPairSync(): KeyPair
 
 Generates a random key pair using this asymmetric key generator. This API returns the result synchronously.
 
-<br><br>**NOTE**
-<br>It is recommended to prioritize the use of asynchronous API, {@link generateKeyPair}. Synchronous API may
-take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,
-it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+<br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link generateKeyPair}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeyGenerator-generateKeyPairSync(): KeyPair--><!--Device-AsyKeyGenerator-generateKeyPairSync(): KeyPair-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -750,7 +759,7 @@ it is advised to invoke synchronous API within a child thread to avoid blocking 
 
 | Type | Description |
 | --- | --- |
-| KeyPair | Asymmetric key pair. |
+| [KeyPair](arkts-cryptoarchitecture-keypair-i.md) | Asymmetric key pair. |
 
 **Error codes:**
 
@@ -792,6 +801,8 @@ The algName of the AsyKeyGenerator.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AsyKeyGenerator-readonly algName: string--><!--Device-AsyKeyGenerator-readonly algName: string-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey

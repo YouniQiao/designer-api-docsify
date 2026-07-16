@@ -12,10 +12,11 @@ import { sensor } from '@kit.SensorServiceKit';
 function getOrientation(rotationMatrix: Array<number>, callback: AsyncCallback<Array<number>>): void
 ```
 
-Obtains the device direction based on the rotation matrix. This API uses an asynchronous callback to return the
-result.
+Obtains the device direction based on the rotation matrix. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+<!--Device-sensor-function getOrientation(rotationMatrix: Array<double>, callback: AsyncCallback<Array<double>>): void--><!--Device-sensor-function getOrientation(rotationMatrix: Array<double>, callback: AsyncCallback<Array<double>>): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -23,8 +24,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotationMatrix | Array&lt;number&gt; | Yes | Rotation matrix. |
-| callback | AsyncCallback&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the rotation angle around the z, x, andy axes, in degrees. |
+| rotationMatrix | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Rotation matrix. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<number>> | Yes | Callback used to return the rotation angle around the z, x, and y axes, in degrees. |
 
 **Error codes:**
 
@@ -76,19 +77,21 @@ Obtains the device direction based on the rotation matrix. This API uses a promi
 
 **Since:** 9
 
+<!--Device-sensor-function getOrientation(rotationMatrix: Array<double>): Promise<Array<double>>--><!--Device-sensor-function getOrientation(rotationMatrix: Array<double>): Promise<Array<double>>-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotationMatrix | Array&lt;number&gt; | Yes | Rotation matrix. |
+| rotationMatrix | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Rotation matrix. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the rotation angle around the z, x, and y axes, indegrees. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | Promise used to return the rotation angle around the z, x, and y axes, in degrees. |
 
 **Error codes:**
 

@@ -1,5 +1,11 @@
 # getKeyboardTypeSync
 
+## 导入模块
+
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+```
+
 ## getKeyboardTypeSync
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getKeyboardTypeSync(deviceId: number): KeyboardType
 获取输入设备的键盘类型。
 
 **起始版本：** 10
+
+<!--Device-inputDevice-function getKeyboardTypeSync(deviceId: int): KeyboardType--><!--Device-inputDevice-function getKeyboardTypeSync(deviceId: int): KeyboardType-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -22,7 +30,7 @@ function getKeyboardTypeSync(deviceId: number): KeyboardType
 
 | 类型 | 说明 |
 | --- | --- |
-| KeyboardType | 返回查询结果。 |
+| [KeyboardType](arkts-input-keyboardtype-e.md) | 返回查询结果。 |
 
 **错误码：**
 

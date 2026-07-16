@@ -16,6 +16,8 @@ Obtains the ISO-defined country code of the country where the registered network
 
 **Since:** 10
 
+<!--Device-radio-function getISOCountryCodeForNetworkSync(slotId: int): string--><!--Device-radio-function getISOCountryCodeForNetworkSync(slotId: int): string-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**

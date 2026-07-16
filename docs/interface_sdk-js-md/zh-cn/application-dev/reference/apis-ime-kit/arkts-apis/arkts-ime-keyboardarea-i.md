@@ -4,7 +4,15 @@
 
 **起始版本：** 15
 
+<!--Device-inputMethodEngine-export interface KeyboardArea--><!--Device-inputMethodEngine-export interface KeyboardArea-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+## 导入模块
+
+```TypeScript
+import { inputMethodEngine } from '@kit.IMEKit';
+```
 
 ## bottom
 
@@ -17,6 +25,8 @@ bottom: number
 **类型：** number
 
 **起始版本：** 15
+
+<!--Device-KeyboardArea-bottom: int--><!--Device-KeyboardArea-bottom: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -32,6 +42,8 @@ left: number
 
 **起始版本：** 15
 
+<!--Device-KeyboardArea-left: int--><!--Device-KeyboardArea-left: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## right
@@ -46,6 +58,8 @@ right: number
 
 **起始版本：** 15
 
+<!--Device-KeyboardArea-right: int--><!--Device-KeyboardArea-right: int-End-->
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## top
@@ -59,6 +73,8 @@ top: number
 **类型：** number
 
 **起始版本：** 15
+
+<!--Device-KeyboardArea-top: int--><!--Device-KeyboardArea-top: int-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

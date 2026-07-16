@@ -18,6 +18,8 @@ Get the IMS registration state info of specified IMS service type.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-radio-function getImsRegInfo(slotId: int, imsType: ImsServiceType, callback: AsyncCallback<ImsRegInfo>): void--><!--Device-radio-function getImsRegInfo(slotId: int, imsType: ImsServiceType, callback: AsyncCallback<ImsRegInfo>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -27,8 +29,8 @@ Get the IMS registration state info of specified IMS service type.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| imsType | ImsServiceType | Yes | Indicates the ims service type of the {@link ImsServiceType}. |
-| callback | AsyncCallback&lt;ImsRegInfo&gt; | Yes | Indicates an instance of the {@link ImsRegInfo} class. |
+| imsType | [ImsServiceType](arkts-telephony-imsservicetype-e-sys.md) | Yes | Indicates the ims service type of the {@link ImsServiceType}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ImsRegInfo> | Yes | Indicates an instance of the {@link ImsRegInfo} class. |
 
 **Error codes:**
 
@@ -72,6 +74,8 @@ Get the IMS registration state info of specified IMS service type.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-radio-function getImsRegInfo(slotId: int, imsType: ImsServiceType): Promise<ImsRegInfo>--><!--Device-radio-function getImsRegInfo(slotId: int, imsType: ImsServiceType): Promise<ImsRegInfo>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -81,13 +85,13 @@ Get the IMS registration state info of specified IMS service type.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| imsType | ImsServiceType | Yes | Indicates the ims service type of the {@link ImsServiceType}. |
+| imsType | [ImsServiceType](arkts-telephony-imsservicetype-e-sys.md) | Yes | Indicates the ims service type of the {@link ImsServiceType}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ImsRegInfo&gt; | Returns an instance of the {@link ImsRegInfo} class. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ImsRegInfo> | Returns an instance of the {@link ImsRegInfo} class. |
 
 **Error codes:**
 

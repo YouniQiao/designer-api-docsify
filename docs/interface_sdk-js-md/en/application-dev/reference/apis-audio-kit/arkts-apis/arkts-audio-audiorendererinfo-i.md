@@ -4,6 +4,8 @@ Describes audio renderer information.
 
 **Since:** 8
 
+<!--Device-audio-interface AudioRendererInfo--><!--Device-audio-interface AudioRendererInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Audio content type.
 
 **Substitutes:** usage
 
+<!--Device-AudioRendererInfo-content?: ContentType--><!--Device-AudioRendererInfo-content?: ContentType-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## rendererFlags
@@ -46,6 +50,8 @@ Set this parameter to **0**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AudioRendererInfo-rendererFlags: int--><!--Device-AudioRendererInfo-rendererFlags: int-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## usage
@@ -62,6 +68,8 @@ Audio stream usage.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AudioRendererInfo-usage: StreamUsage--><!--Device-AudioRendererInfo-usage: StreamUsage-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## volumeMode
@@ -70,12 +78,13 @@ Audio stream usage.
 volumeMode?: AudioVolumeMode
 ```
 
-Audio volume mode config. If volumeMode is set to {@link AudioVolumeMode.APP_INDIVIDUAL}, this audio renderer
-will be affected by app volume percentage set by {@link setAppVolumePercentage}
+Audio volume mode config. If volumeMode is set to {@link AudioVolumeMode.APP_INDIVIDUAL}, this audio renderer will be affected by app volume percentage set by {@link setAppVolumePercentage}
 
 **Type:** AudioVolumeMode
 
 **Since:** 19
+
+<!--Device-AudioRendererInfo-volumeMode?: AudioVolumeMode--><!--Device-AudioRendererInfo-volumeMode?: AudioVolumeMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 

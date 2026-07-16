@@ -1,5 +1,11 @@
 # getUninstallDisposedRule（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appControl } from '@kit.AbilityKit';
+```
+
 ## getUninstallDisposedRule
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getUninstallDisposedRule(appIdentifier: string, appIndex?: number): Uni
 **起始版本：** 15
 
 **需要权限：** ohos.permission.GET_DISPOSED_APP_STATUS or ohos.permission.MANAGE_DISPOSED_APP_STATUS
+
+<!--Device-appControl-function getUninstallDisposedRule(appIdentifier: string, appIndex?: int): UninstallDisposedRule--><!--Device-appControl-function getUninstallDisposedRule(appIdentifier: string, appIndex?: int): UninstallDisposedRule-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -27,7 +35,7 @@ function getUninstallDisposedRule(appIdentifier: string, appIndex?: number): Uni
 
 | 类型 | 说明 |
 | --- | --- |
-| UninstallDisposedRule | 表示应用的卸载处置规则。 |
+| [UninstallDisposedRule](arkts-ability-uninstalldisposedrule-i-sys.md) | 表示应用的卸载处置规则。 |
 
 **错误码：**
 

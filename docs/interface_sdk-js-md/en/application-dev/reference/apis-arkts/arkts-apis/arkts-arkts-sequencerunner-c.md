@@ -4,6 +4,8 @@ Implements a serial queue, in which all tasks are executed in sequence.
 
 **Since:** 11
 
+<!--Device-taskpool-class SequenceRunner--><!--Device-taskpool-class SequenceRunner-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -24,13 +26,15 @@ A constructor used to create a **SequenceRunner** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-SequenceRunner-constructor(priority?: Priority)--><!--Device-SequenceRunner-constructor(priority?: Priority)-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| priority | Priority | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
+| priority | [Priority](arkts-arkts-priority-e.md) | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Example**
 
@@ -45,19 +49,20 @@ let runner: taskpool.SequenceRunner = new taskpool.SequenceRunner();
 constructor(name: string, priority?: Priority)
 ```
 
-A constructor used to create a **SequenceRunner** instance. This instance represents a global serial queue. If
-the passed-in name is the same as an existing name, the same serial queue is returned.
+A constructor used to create a **SequenceRunner** instance. This instance represents a global serial queue. If the passed-in name is the same as an existing name, the same serial queue is returned.
 
-> **NOTE**
->
-> - The bottom layer uses the singleton mode to ensure that the same instance is obtained when a serial queue
-> with the same name is created.
->
+> **NOTE**  
+>  
+> - The bottom layer uses the singleton mode to ensure that the same instance is obtained when a serial queue  
+> with the same name is created.  
+>  
 > - The priority of a serial queue cannot be modified.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SequenceRunner-constructor(name: string, priority?: Priority)--><!--Device-SequenceRunner-constructor(name: string, priority?: Priority)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -66,7 +71,7 @@ the passed-in name is the same as an existing name, the same serial queue is ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of a serial queue. |
-| priority | Priority | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
+| priority | [Priority](arkts-arkts-priority-e.md) | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Example**
 
@@ -81,19 +86,19 @@ let runner:taskpool.SequenceRunner = new taskpool.SequenceRunner("runner1", task
 execute(task: Task): Promise<Object>
 ```
 
-Adds a task to the serial queue for execution. Before using this API, you must create a **SequenceRunner**
-instance. Tasks in another task group, serial queue, or asynchronous queue, dependent tasks, and tasks that have
-been executed cannot be added to the serial queue. This API uses a promise to return the result.
+Adds a task to the serial queue for execution. Before using this API, you must create a **SequenceRunner** instance. Tasks in another task group, serial queue, or asynchronous queue, dependent tasks, and tasks that have been executed cannot be added to the serial queue. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - Tasks that depend others cannot be added to the serial queue.
->
+> **NOTE**  
+>  
+> - Tasks that depend others cannot be added to the serial queue.  
+>  
 > - The failure or cancellation of a task does not affect the execution of subsequent tasks in the serial queue.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SequenceRunner-execute(task: Task): Promise<Object>--><!--Device-SequenceRunner-execute(task: Task): Promise<Object>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -101,13 +106,13 @@ been executed cannot be added to the serial queue. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| task | Task | Yes | Task to be added to the serial queue. |
+| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-task-i.md) | Yes | Task to be added to the serial queue. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Object&gt; | Promise used to return the task execution result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Object> | Promise used to return the task execution result. |
 
 **Error codes:**
 

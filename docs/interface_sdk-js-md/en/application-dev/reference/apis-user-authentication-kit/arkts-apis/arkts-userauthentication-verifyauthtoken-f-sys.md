@@ -12,13 +12,13 @@ import { userAccessCtrl } from '@kit.UserAuthenticationKit';
 function verifyAuthToken(authToken: Uint8Array, allowableDuration: number): Promise<AuthToken>
 ```
 
-Verifies an authentication token. This API is used to verify the validity of an **AuthToken**, including the
-integrity and validity check. After the verification is successful, the detailed information about the parsed
-**AuthToken** is returned. This API uses a promise to return the result.
+Verifies an authentication token. This API is used to verify the validity of an **AuthToken**, including the integrity and validity check. After the verification is successful, the detailed information about the parsed **AuthToken** is returned. This API uses a promise to return the result.
 
 **Since:** 18
 
 **Required permissions:** ohos.permission.USE_USER_ACCESS_MANAGER
+
+<!--Device-userAccessCtrl-function verifyAuthToken(authToken: Uint8Array, allowableDuration: int): Promise<AuthToken>--><!--Device-userAccessCtrl-function verifyAuthToken(authToken: Uint8Array, allowableDuration: int): Promise<AuthToken>-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -28,14 +28,14 @@ integrity and validity check. After the verification is successful, the detailed
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authToken | Uint8Array | Yes | Authentication token to be verified. The value contains a maximum of 1024 bytesand is returned after the user is authenticated. The token contains the credentials information for userauthentication, which is used for subsequent security operation verification. |
-| allowableDuration | number | Yes | Authentication validity period. It indicates the maximum time interval for usingthe token from the time when the token is issued. The unit is millisecond. The value must be greater than 0 andless than or equal to 86400000 (24 hours). It is used to verify the validity of a token to prevent expiredtokens from being used. |
+| authToken | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | Authentication token to be verified. The value contains a maximum of 1024 bytes and is returned after the user is authenticated. The token contains the credentials information for user authentication, which is used for subsequent security operation verification. |
+| allowableDuration | number | Yes | Authentication validity period. It indicates the maximum time interval for using the token from the time when the token is issued. The unit is millisecond. The value must be greater than 0 and less than or equal to 86400000 (24 hours). It is used to verify the validity of a token to prevent expired tokens from being used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AuthToken&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AuthToken> | Promise used to return the result. |
 
 **Error codes:**
 

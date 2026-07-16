@@ -20,6 +20,8 @@ The system checks whether IP multimedia subsystem domain (IMS) can set call tran
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-call-function canSetCallTransferTime(slotId: int, callback: AsyncCallback<boolean>): void--><!--Device-call-function canSetCallTransferTime(slotId: int, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -29,7 +31,7 @@ The system checks whether IP multimedia subsystem domain (IMS) can set call tran
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Returns {@code true} if the device can set call transfer time;returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Returns {@code true} if the device can set call transfer time;returns {@code false} otherwise. |
 
 **Error codes:**
 
@@ -74,6 +76,8 @@ The system checks whether IP multimedia subsystem domain (IMS) can set call tran
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-call-function canSetCallTransferTime(slotId: int): Promise<boolean>--><!--Device-call-function canSetCallTransferTime(slotId: int): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -88,7 +92,7 @@ The system checks whether IP multimedia subsystem domain (IMS) can set call tran
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns {@code true} if the device can set call transfer time;returns {@code false} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns {@code true} if the device can set call transfer time;returns {@code false} otherwise. |
 
 **Error codes:**
 

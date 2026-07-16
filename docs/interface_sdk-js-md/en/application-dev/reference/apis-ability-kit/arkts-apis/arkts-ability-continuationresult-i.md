@@ -8,6 +8,8 @@ The ContinuationResult module describes the device information returned by the c
 
 **Substitutes:** [distributedDeviceManager:distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md)
 
+<!--Device-unnamed-export interface ContinuationResult--><!--Device-unnamed-export interface ContinuationResult-End-->
+
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 ## id
@@ -27,6 +29,8 @@ Device ID.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ContinuationResult-id: string--><!--Device-ContinuationResult-id: string-End-->
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
@@ -48,6 +52,8 @@ Device name.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ContinuationResult-name: string--><!--Device-ContinuationResult-name: string-End-->
+
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
 ## type
@@ -67,6 +73,8 @@ Device type.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ContinuationResult-type: string--><!--Device-ContinuationResult-type: string-End-->
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 

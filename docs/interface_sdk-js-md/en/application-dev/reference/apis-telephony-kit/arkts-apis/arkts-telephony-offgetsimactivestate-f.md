@@ -18,13 +18,15 @@ Cancel callback when the sim active state is updated.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-observer-function offGetSimActiveState(callback?: Callback<boolean>): void--><!--Device-observer-function offGetSimActiveState(callback?: Callback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;boolean&gt; | No | Indicates the callback to unsubscribe from the simActiveStateChange event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<boolean> | No | Indicates the callback to unsubscribe from the simActiveStateChange event. |
 
 **Error codes:**
 

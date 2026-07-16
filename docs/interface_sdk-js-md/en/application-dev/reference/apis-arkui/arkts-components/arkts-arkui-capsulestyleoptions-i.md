@@ -2,12 +2,13 @@
 
 Capsule style options.
 
-Inherits from [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md) and
-[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md).
+Inherits from [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md) and [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md).
 
 **Inheritance/Implementation:** CapsuleStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
 
 **Since:** 10
+
+<!--Device-unnamed-declare interface CapsuleStyleOptions extends ScanEffectOptions, CommonProgressStyleOptions--><!--Device-unnamed-declare interface CapsuleStyleOptions extends ScanEffectOptions, CommonProgressStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,6 +33,8 @@ API version 11 or later: **'#33007dff'**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CapsuleStyleOptions-borderColor?: ResourceColor--><!--Device-CapsuleStyleOptions-borderColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,6 +62,8 @@ If an invalid value is set, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-CapsuleStyleOptions-borderRadius?: LengthMetrics--><!--Device-CapsuleStyleOptions-borderRadius?: LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## borderWidth
@@ -79,6 +84,8 @@ Default value: **1vp**
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CapsuleStyleOptions-borderWidth?: Length--><!--Device-CapsuleStyleOptions-borderWidth?: Length-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## content
@@ -96,6 +103,8 @@ Text content, which can be customized.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CapsuleStyleOptions-content?: ResourceStr--><!--Device-CapsuleStyleOptions-content?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -121,6 +130,8 @@ Other text parameters are subject to the theme values of the [Text](../../apis-a
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CapsuleStyleOptions-font?: Font--><!--Device-CapsuleStyleOptions-font?: Font-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontColor
@@ -141,6 +152,8 @@ Default value: **'#ff182431'**
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-CapsuleStyleOptions-fontColor?: ResourceColor--><!--Device-CapsuleStyleOptions-fontColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## showDefaultPercentage
@@ -149,8 +162,7 @@ Default value: **'#ff182431'**
 showDefaultPercentage?: boolean
 ```
 
-Whether to display the percentage text. After this feature is enabled, the progress percentage is displayed on the
-progress indicator. This property does not take effect when **content** is set.
+Whether to display the percentage text. After this feature is enabled, the progress percentage is displayed on the progress indicator. This property does not take effect when **content** is set.
 
 **true**: The percentage text is displayed. **false**: The percentage text is not displayed.
 
@@ -165,6 +177,8 @@ Default value: **false**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-CapsuleStyleOptions-showDefaultPercentage?: boolean--><!--Device-CapsuleStyleOptions-showDefaultPercentage?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

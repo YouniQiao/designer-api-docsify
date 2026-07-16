@@ -4,6 +4,8 @@ Provides methods to operate or manage Bluetooth.
 
 **Since:** 10
 
+<!--Device-unnamed-declare namespace connection--><!--Device-unnamed-declare namespace connection-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import

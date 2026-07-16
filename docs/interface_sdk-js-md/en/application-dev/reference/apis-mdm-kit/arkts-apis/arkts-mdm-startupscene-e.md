@@ -1,11 +1,10 @@
 # StartupScene
 
-Startup wizard completion scenario. When the initial switch to a sub-user (only on PCs), OTA upgrade, and first-
-time startup wizard are complete, the device system calls the
-[onStartupGuideCompleted](arkts-mdm-enterpriseadminextensionability-c.md#onstartupguidecompleted-1)
-API to notify the device administrator application.
+Startup wizard completion scenario. When the initial switch to a sub-user (only on PCs), OTA upgrade, and first-time startup wizard are complete, the device system calls the [onStartupGuideCompleted](arkts-mdm-enterpriseadminextensionability-c.md#onstartupguidecompleted-1)API to notify the device administrator application.
 
 **Since:** 24
+
+<!--Device-common-export enum StartupScene--><!--Device-common-export enum StartupScene-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -15,12 +14,13 @@ API to notify the device administrator application.
 USER_SETUP = 0
 ```
 
-A sub-user is switched to for the first time and the startup wizard for the sub-user is complete (only on PCs).
-The callback will not be triggered when the sub-user is switched again.
+A sub-user is switched to for the first time and the startup wizard for the sub-user is complete (only on PCs).The callback will not be triggered when the sub-user is switched again.
 
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StartupScene-USER_SETUP = 0--><!--Device-StartupScene-USER_SETUP = 0-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -36,6 +36,8 @@ The OTA upgrade is complete.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-StartupScene-OTA = 1--><!--Device-StartupScene-OTA = 1-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## DEVICE_PROVISION
@@ -49,6 +51,8 @@ The initial startup wizard is complete.
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StartupScene-DEVICE_PROVISION = 2--><!--Device-StartupScene-DEVICE_PROVISION = 2-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

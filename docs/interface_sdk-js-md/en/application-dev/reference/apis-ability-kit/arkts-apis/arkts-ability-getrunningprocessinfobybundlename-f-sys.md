@@ -12,10 +12,11 @@ import { appManager } from '@kit.AbilityKit';
 function getRunningProcessInfoByBundleName(bundleName: string, callback: AsyncCallback<Array<ProcessInformation>>): void
 ```
 
-Obtains information about the running processes by bundle name. This API uses an asynchronous callback to return
-the result.
+Obtains information about the running processes by bundle name. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-appManager-function getRunningProcessInfoByBundleName(bundleName: string, callback: AsyncCallback<Array<ProcessInformation>>): void--><!--Device-appManager-function getRunningProcessInfoByBundleName(bundleName: string, callback: AsyncCallback<Array<ProcessInformation>>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -26,7 +27,7 @@ the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | AsyncCallback&lt;Array&lt;ProcessInformation&gt;&gt; | Yes | Callback used to return the API call result and theprocess running information. You can perform error handling or custom processing in this callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<ProcessInformation>> | Yes | Callback used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 
@@ -68,10 +69,11 @@ try {
 function getRunningProcessInfoByBundleName(bundleName: string, userId: number, callback: AsyncCallback<Array<ProcessInformation>>): void
 ```
 
-Obtains information about the running processes by bundle name and user ID. This API uses an asynchronous callback
-to return the result.
+Obtains information about the running processes by bundle name and user ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-appManager-function getRunningProcessInfoByBundleName(bundleName: string, userId: int, callback: AsyncCallback<Array<ProcessInformation>>): void--><!--Device-appManager-function getRunningProcessInfoByBundleName(bundleName: string, userId: int, callback: AsyncCallback<Array<ProcessInformation>>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -83,7 +85,7 @@ to return the result.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | userId | number | Yes | User ID. |
-| callback | AsyncCallback&lt;Array&lt;ProcessInformation&gt;&gt; | Yes | Callback used to return the API call result and theprocess running information. You can perform error handling or custom processing in this callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<ProcessInformation>> | Yes | Callback used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 
@@ -130,6 +132,8 @@ Obtains information about the running processes by bundle name. This API uses a 
 
 **Since:** 10
 
+<!--Device-appManager-function getRunningProcessInfoByBundleName(bundleName: string): Promise<Array<ProcessInformation>>--><!--Device-appManager-function getRunningProcessInfoByBundleName(bundleName: string): Promise<Array<ProcessInformation>>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -144,7 +148,7 @@ Obtains information about the running processes by bundle name. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ProcessInformation&gt;&gt; | Promise used to return the API call result and the process runninginformation. You can perform error handling or custom processing in this callback. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ProcessInformation>> | Promise used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 
@@ -183,10 +187,11 @@ try {
 function getRunningProcessInfoByBundleName(bundleName: string, userId: number): Promise<Array<ProcessInformation>>
 ```
 
-Obtains information about the running processes by bundle name and user ID. This API uses a promise to return the
-result.
+Obtains information about the running processes by bundle name and user ID. This API uses a promise to return the result.
 
 **Since:** 10
+
+<!--Device-appManager-function getRunningProcessInfoByBundleName(bundleName: string, userId: int): Promise<Array<ProcessInformation>>--><!--Device-appManager-function getRunningProcessInfoByBundleName(bundleName: string, userId: int): Promise<Array<ProcessInformation>>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -203,7 +208,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ProcessInformation&gt;&gt; | Promise used to return the API call result and the process runninginformation. You can perform error handling or custom processing in this callback. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ProcessInformation>> | Promise used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 

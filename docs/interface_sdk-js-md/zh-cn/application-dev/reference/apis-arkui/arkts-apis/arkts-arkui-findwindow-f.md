@@ -1,5 +1,11 @@
 # findWindow
 
+## 导入模块
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+```
+
 ## findWindow
 
 ```TypeScript
@@ -10,7 +16,9 @@ function findWindow(name: string): Window
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-window-function findWindow(name: string): Window--><!--Device-window-function findWindow(name: string): Window-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -24,7 +32,7 @@ function findWindow(name: string): Window
 
 | 类型 | 说明 |
 | --- | --- |
-| Window | 当前查找的窗口对象。如果查找指定名称对应的窗口不存在，会抛出1300002错误码 |
+| [Window](arkts-arkui-window-i.md) | 当前查找的窗口对象。如果查找指定名称对应的窗口不存在，会抛出1300002错误码 |
 
 **错误码：**
 

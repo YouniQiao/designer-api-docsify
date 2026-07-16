@@ -18,6 +18,8 @@ Deletes an .abc file based on the specified file path. This API uses a promise t
 
 **Required permissions:** ohos.permission.RUN_DYN_CODE
 
+<!--Device-bundleManager-function deleteAbc(abcPath: string): Promise<void>--><!--Device-bundleManager-function deleteAbc(abcPath: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -32,7 +34,7 @@ Deletes an .abc file based on the specified file path. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

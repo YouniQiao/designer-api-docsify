@@ -16,13 +16,15 @@ create the instance of PBAP server profile.
 
 **Since:** 11
 
+<!--Device-pbap-function createPbapServerProfile(): PbapServerProfile--><!--Device-pbap-function createPbapServerProfile(): PbapServerProfile-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PbapServerProfile | Returns the instance of pbap profile. |
+| [PbapServerProfile](arkts-connectivity-pbapserverprofile-i-sys.md) | Returns the instance of pbap profile. |
 
 **Error codes:**
 

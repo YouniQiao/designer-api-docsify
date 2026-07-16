@@ -12,14 +12,13 @@ import { notificationManager } from '@kit.NotificationKit';
 function getActiveNotificationCount(callback: AsyncCallback<number>): void
 ```
 
-Obtains the number of active notifications of this application. This API uses an asynchronous callback to return
-the result.
+Obtains the number of active notifications of this application. This API uses an asynchronous callback to return the result.
 
-This API is used to query the number of notifications of the current application that are still active in the
-notification center (not deleted by the user or canceled by the program). This is suitable for scenarios where
-an unread notification count prompt needs to be displayed.
+This API is used to query the number of notifications of the current application that are still active in the notification center (not deleted by the user or canceled by the program). This is suitable for scenarios where an unread notification count prompt needs to be displayed.
 
 **Since:** 9
+
+<!--Device-notificationManager-function getActiveNotificationCount(callback: AsyncCallback<long>): void--><!--Device-notificationManager-function getActiveNotificationCount(callback: AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -27,7 +26,7 @@ an unread notification count prompt needs to be displayed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and data is the obtained number of active notifications; otherwise, **err** is anerror object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and data is the obtained number of active notifications; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -64,10 +63,11 @@ function getActiveNotificationCount(): Promise<number>
 
 Obtains the number of active notifications of this application. This API uses a promise to return the result.
 
-This API is used to query the number of notifications of the current application in the notification center. This
-is suitable for scenarios where an unread notification count prompt needs to be displayed.
+This API is used to query the number of notifications of the current application in the notification center. This is suitable for scenarios where an unread notification count prompt needs to be displayed.
 
 **Since:** 9
+
+<!--Device-notificationManager-function getActiveNotificationCount(): Promise<long>--><!--Device-notificationManager-function getActiveNotificationCount(): Promise<long>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -75,7 +75,7 @@ is suitable for scenarios where an unread notification count prompt needs to be 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the result. |
 
 **Error codes:**
 

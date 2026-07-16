@@ -4,7 +4,15 @@
 
 **起始版本：** 10
 
+<!--Device-calendarManager-export interface Attendee--><!--Device-calendarManager-export interface Attendee-End-->
+
 **系统能力：** SystemCapability.Applications.CalendarData
+
+## 导入模块
+
+```TypeScript
+import { calendarManager } from '@kit.CalendarKit';
+```
 
 ## email
 
@@ -18,7 +26,9 @@ email: string
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Attendee-email: string--><!--Device-Attendee-email: string-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -34,7 +44,9 @@ name: string
 
 **起始版本：** 10
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Attendee-name: string--><!--Device-Attendee-name: string-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -50,7 +62,9 @@ role?: AttendeeRole
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Attendee-role?: AttendeeRole--><!--Device-Attendee-role?: AttendeeRole-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -66,7 +80,9 @@ status?: AttendeeStatus
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Attendee-status?: AttendeeStatus--><!--Device-Attendee-status?: AttendeeStatus-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
@@ -82,7 +98,9 @@ type?: AttendeeType
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Attendee-type?: AttendeeType--><!--Device-Attendee-type?: AttendeeType-End-->
 
 **系统能力：** SystemCapability.Applications.CalendarData
 

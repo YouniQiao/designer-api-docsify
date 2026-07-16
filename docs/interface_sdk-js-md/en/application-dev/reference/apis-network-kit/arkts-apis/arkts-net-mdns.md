@@ -4,6 +4,8 @@ Provides interfaces to discover DNS based services on a local network over Multi
 
 **Since:** 11
 
+<!--Device-unnamed-declare namespace mdns--><!--Device-unnamed-declare namespace mdns-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
 ## Modules to Import

@@ -6,6 +6,8 @@
 
 **废弃版本：** 10
 
+<!--Device-unnamed-export interface FileRmdirOption--><!--Device-unnamed-export interface FileRmdirOption-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## complete
@@ -21,6 +23,8 @@ complete?: () => void
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileRmdirOption-complete?: () => void--><!--Device-FileRmdirOption-complete?: () => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -38,6 +42,8 @@ fail?: (data: string, code: number) => void
 
 **废弃版本：** 10
 
+<!--Device-FileRmdirOption-fail?: (data: string, code: number) => void--><!--Device-FileRmdirOption-fail?: (data: string, code: number) => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## recursive
@@ -53,6 +59,8 @@ recursive?: boolean
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileRmdirOption-recursive?: boolean--><!--Device-FileRmdirOption-recursive?: boolean-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -70,6 +78,8 @@ success?: () => void
 
 **废弃版本：** 10
 
+<!--Device-FileRmdirOption-success?: () => void--><!--Device-FileRmdirOption-success?: () => void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
 ## uri
@@ -78,15 +88,15 @@ success?: () => void
 uri: string
 ```
 
-目录URI。由于轻量级穿戴设备底层文件系统的限制，该值必须满足以下要求：
-1. URI 中不得包含以下特殊字符：\"*+,:;<=>?[]|\x7F等。
-2. 最大允许字符长度为128个字符。
+目录URI。由于轻量级穿戴设备底层文件系统的限制，该值必须满足以下要求：1. URI 中不得包含以下特殊字符：\"*+,:;<=>?[]|\x7F等。2. 最大允许字符长度为128个字符。
 
 **类型：** string
 
 **起始版本：** 3
 
 **废弃版本：** 10
+
+<!--Device-FileRmdirOption-uri: string--><!--Device-FileRmdirOption-uri: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 

@@ -4,6 +4,8 @@ Defines the options of geometry transition.
 
 **Since:** 11
 
+<!--Device-unnamed-declare interface GeometryTransitionOptions--><!--Device-unnamed-declare interface GeometryTransitionOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## hierarchyStrategy
@@ -12,14 +14,11 @@ Defines the options of geometry transition.
 hierarchyStrategy?: TransitionHierarchyStrategy
 ```
 
-Strategy for the hierarchical position movement of **in** / **out** components in the component tree during the
-shared element transition process. Default value: **TransitionHierarchyStrategy.ADAPTIVE**.
+Strategy for the hierarchical position movement of **in** / **out** components in the component tree during the shared element transition process. Default value: **TransitionHierarchyStrategy.ADAPTIVE**.
 
-The setting significantly affects the front-to-back overlap relationship of the **in** / **out** components in
-comparison to other components. Exercise caution with it under normal conditions.
+The setting significantly affects the front-to-back overlap relationship of the **in** / **out** components in comparison to other components. Exercise caution with it under normal conditions.
 
-You are advised to adjust this setting only when there is an error in the component overlap relationship observed
-during the shared element transition process.
+You are advised to adjust this setting only when there is an error in the component overlap relationship observed during the shared element transition process.
 
 **Type:** TransitionHierarchyStrategy
 
@@ -30,6 +29,8 @@ during the shared element transition process.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12 - 12.
+
+<!--Device-GeometryTransitionOptions-hierarchyStrategy?: TransitionHierarchyStrategy--><!--Device-GeometryTransitionOptions-hierarchyStrategy?: TransitionHierarchyStrategy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-PiPWindow-enum PiPState--><!--Device-PiPWindow-enum PiPState-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## ABOUT_TO_START
@@ -16,7 +18,9 @@ ABOUT_TO_START = 1
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PiPState-ABOUT_TO_START = 1--><!--Device-PiPState-ABOUT_TO_START = 1-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -30,7 +34,9 @@ STARTED = 2
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PiPState-STARTED = 2--><!--Device-PiPState-STARTED = 2-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -44,7 +50,9 @@ ABOUT_TO_STOP = 3
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PiPState-ABOUT_TO_STOP = 3--><!--Device-PiPState-ABOUT_TO_STOP = 3-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -58,7 +66,9 @@ STOPPED = 4
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PiPState-STOPPED = 4--><!--Device-PiPState-STOPPED = 4-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -72,7 +82,9 @@ ABOUT_TO_RESTORE = 5
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PiPState-ABOUT_TO_RESTORE = 5--><!--Device-PiPState-ABOUT_TO_RESTORE = 5-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -86,7 +98,9 @@ ERROR = 6
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PiPState-ERROR = 6--><!--Device-PiPState-ERROR = 6-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 

@@ -4,6 +4,8 @@ Defines layout options of the **GridRow** container.
 
 **Since:** 9
 
+<!--Device-unnamed-declare interface GridRowOptions--><!--Device-unnamed-declare interface GridRowOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## breakpoints
@@ -35,6 +37,8 @@ Unit: vp.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-GridRowOptions-breakpoints?: BreakPoints--><!--Device-GridRowOptions-breakpoints?: BreakPoints-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## columns
@@ -47,7 +51,7 @@ Number of columns in the grid layout.
 
 The value is an integer greater than 0.
 
-- Before API version 20: The default value is 12.
+- Before API version 20: The default value is 12.  
 - API version 20 or later: The default value is { xs: 2, sm: 4, md: 8, lg: 12, xl: 12, xxl: 12 }.
 
 Invalid values are treated as the default value.
@@ -59,6 +63,8 @@ Invalid values are treated as the default value.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-GridRowOptions-columns?: number | GridRowColumnOption--><!--Device-GridRowOptions-columns?: number | GridRowColumnOption-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -81,6 +87,8 @@ Invalid values are treated as the default value.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-GridRowOptions-direction?: GridRowDirection--><!--Device-GridRowOptions-direction?: GridRowDirection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -105,6 +113,8 @@ Unit: vp.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-GridRowOptions-gutter?: Length | GutterOption--><!--Device-GridRowOptions-gutter?: Length | GutterOption-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

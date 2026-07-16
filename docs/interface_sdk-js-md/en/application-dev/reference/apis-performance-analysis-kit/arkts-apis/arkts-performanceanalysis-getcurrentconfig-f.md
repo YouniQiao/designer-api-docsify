@@ -18,11 +18,13 @@ Query the current HiRetrieval config.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-hiRetrieval-function getCurrentConfig(): HiRetrievalConfig--><!--Device-hiRetrieval-function getCurrentConfig(): HiRetrievalConfig-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiRetrieval
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| HiRetrievalConfig | Returns the current HiRetrieval config, an empty HiRetrievalConfig will be returnedif the result of invoking isParticipant function is false. |
+| [HiRetrievalConfig](arkts-performanceanalysis-hiretrievalconfig-i.md) | Returns the current HiRetrieval config, an empty HiRetrievalConfig will be returned if the result of invoking isParticipant function is false. |
 

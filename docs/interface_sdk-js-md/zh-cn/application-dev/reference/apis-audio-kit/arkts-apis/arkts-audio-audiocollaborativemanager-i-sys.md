@@ -4,9 +4,17 @@ Implements audio collaborative management.
 
 **起始版本：** 20
 
+<!--Device-audio-interface AudioCollaborativeManager--><!--Device-audio-interface AudioCollaborativeManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## isCollaborativePlaybackEnabledForDevice
 
@@ -18,6 +26,8 @@ isCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor)
 
 **起始版本：** 20
 
+<!--Device-AudioCollaborativeManager-isCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioCollaborativeManager-isCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -26,7 +36,7 @@ isCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceDescriptor | AudioDeviceDescriptor | 是 | Audio device descriptor. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i-sys.md) | 是 | Audio device descriptor. |
 
 **返回值：**
 
@@ -82,6 +92,8 @@ Checks whether the collaborative playback is supported by system.
 
 **起始版本：** 20
 
+<!--Device-AudioCollaborativeManager-isCollaborativePlaybackSupported(): boolean--><!--Device-AudioCollaborativeManager-isCollaborativePlaybackSupported(): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -126,6 +138,8 @@ isCollaborativePlaybackSupportedForDevice(deviceDescriptor: AudioDeviceDescripto
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioCollaborativeManager-isCollaborativePlaybackSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioCollaborativeManager-isCollaborativePlaybackSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -134,7 +148,7 @@ isCollaborativePlaybackSupportedForDevice(deviceDescriptor: AudioDeviceDescripto
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceDescriptor | AudioDeviceDescriptor | 是 | 用于查询的音频设备描述符。 |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i-sys.md) | 是 | 用于查询的音频设备描述符。 |
 
 **返回值：**
 
@@ -158,6 +172,8 @@ setCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor
 
 **起始版本：** 20
 
+<!--Device-AudioCollaborativeManager-setCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>--><!--Device-AudioCollaborativeManager-setCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -166,14 +182,14 @@ setCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceDescriptor | AudioDeviceDescriptor | 是 | Audio device descriptor. |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audiodevicedescriptor-i-sys.md) | 是 | Audio device descriptor. |
 | enabled | boolean | 是 | Whether to enable or disable collaborative playback. The value true means to enable it, and false means to disable it. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 设置结果 |
+| Promise<void> | 设置结果 |
 
 **错误码：**
 

@@ -4,6 +4,8 @@ The enum of node type.
 
 **Since:** 12
 
+<!--Device-unnamed-export enum NodeType--><!--Device-unnamed-export enum NodeType-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## NODE
@@ -15,6 +17,8 @@ NODE = 1
 The node is an empty node.
 
 **Since:** 12
+
+<!--Device-NodeType-NODE = 1--><!--Device-NodeType-NODE = 1-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -28,6 +32,8 @@ The node is a geometry node.
 
 **Since:** 12
 
+<!--Device-NodeType-GEOMETRY = 2--><!--Device-NodeType-GEOMETRY = 2-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## CAMERA
@@ -39,6 +45,8 @@ CAMERA = 3
 The node is a camera node.
 
 **Since:** 12
+
+<!--Device-NodeType-CAMERA = 3--><!--Device-NodeType-CAMERA = 3-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -52,6 +60,8 @@ The node is a light node.
 
 **Since:** 12
 
+<!--Device-NodeType-LIGHT = 4--><!--Device-NodeType-LIGHT = 4-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## CUSTOM
@@ -60,10 +70,11 @@ The node is a light node.
 CUSTOM = 255
 ```
 
-The node is of custom type.
-Usually this means that the node is of a type defined in an extension plugin.
+The node is of custom type.Usually this means that the node is of a type defined in an extension plugin.
 
 **Since:** 21
+
+<!--Device-NodeType-CUSTOM = 255--><!--Device-NodeType-CUSTOM = 255-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

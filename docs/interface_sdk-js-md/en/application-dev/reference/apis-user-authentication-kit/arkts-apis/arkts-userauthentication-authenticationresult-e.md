@@ -8,6 +8,8 @@ Enumerates the authentication results.
 
 **Substitutes:** [UserAuthResultCode](arkts-userauthentication-userauthresultcode-e.md)
 
+<!--Device-userAuth-export enum AuthenticationResult--><!--Device-userAuth-export enum AuthenticationResult-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## NO_SUPPORT
@@ -23,6 +25,8 @@ The device does not support the current authentication mode.
 **Deprecated since:** 8
 
 **Substitutes:** [TYPE_NOT_SUPPORT](arkts-userauthentication-resultcode-e.md#type_not_support)
+
+<!--Device-AuthenticationResult-NO_SUPPORT = -1--><!--Device-AuthenticationResult-NO_SUPPORT = -1-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -40,6 +44,8 @@ The authentication is successful.
 
 **Substitutes:** [SUCCESS](arkts-userauthentication-resultcode-e.md#success)
 
+<!--Device-AuthenticationResult-SUCCESS = 0--><!--Device-AuthenticationResult-SUCCESS = 0-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## COMPARE_FAILURE
@@ -55,6 +61,8 @@ The feature comparison failed.
 **Deprecated since:** 8
 
 **Substitutes:** [FAIL](arkts-userauthentication-resultcode-e.md#fail)
+
+<!--Device-AuthenticationResult-COMPARE_FAILURE = 1--><!--Device-AuthenticationResult-COMPARE_FAILURE = 1-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -72,6 +80,8 @@ The authentication was canceled by the user.
 
 **Substitutes:** [CANCELED](arkts-userauthentication-resultcode-e.md#canceled)
 
+<!--Device-AuthenticationResult-CANCELED = 2--><!--Device-AuthenticationResult-CANCELED = 2-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## TIMEOUT
@@ -88,6 +98,8 @@ The authentication has timed out.
 
 **Substitutes:** [TIMEOUT](arkts-userauthentication-resultcode-e.md#timeout)
 
+<!--Device-AuthenticationResult-TIMEOUT = 3--><!--Device-AuthenticationResult-TIMEOUT = 3-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## CAMERA_FAIL
@@ -101,6 +113,8 @@ The camera failed to start.
 **Since:** 6
 
 **Deprecated since:** 8
+
+<!--Device-AuthenticationResult-CAMERA_FAIL = 4--><!--Device-AuthenticationResult-CAMERA_FAIL = 4-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -118,6 +132,8 @@ The authentication service is not available. Try again later.
 
 **Substitutes:** [BUSY](arkts-userauthentication-resultcode-e.md#busy)
 
+<!--Device-AuthenticationResult-BUSY = 5--><!--Device-AuthenticationResult-BUSY = 5-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## INVALID_PARAMETERS
@@ -133,6 +149,8 @@ The authentication parameters are invalid.
 **Deprecated since:** 8
 
 **Substitutes:** [INVALID_PARAMETERS](arkts-userauthentication-resultcode-e.md#invalid_parameters)
+
+<!--Device-AuthenticationResult-INVALID_PARAMETERS = 6--><!--Device-AuthenticationResult-INVALID_PARAMETERS = 6-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -150,6 +168,8 @@ The user account is locked because the number of authentication failures has rea
 
 **Substitutes:** [LOCKED](arkts-userauthentication-resultcode-e.md#locked)
 
+<!--Device-AuthenticationResult-LOCKED = 7--><!--Device-AuthenticationResult-LOCKED = 7-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## NOT_ENROLLED
@@ -166,6 +186,8 @@ No authentication credential is registered.
 
 **Substitutes:** [NOT_ENROLLED](arkts-userauthentication-resultcode-e.md#not_enrolled)
 
+<!--Device-AuthenticationResult-NOT_ENROLLED = 8--><!--Device-AuthenticationResult-NOT_ENROLLED = 8-End-->
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## GENERAL_ERROR
@@ -181,6 +203,8 @@ Other errors.
 **Deprecated since:** 8
 
 **Substitutes:** [GENERAL_ERROR](arkts-userauthentication-resultcode-e.md#general_error)
+
+<!--Device-AuthenticationResult-GENERAL_ERROR = 100--><!--Device-AuthenticationResult-GENERAL_ERROR = 100-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 

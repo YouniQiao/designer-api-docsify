@@ -16,13 +16,15 @@ Queries the status of the caller app's sensitive data key under the lock screen 
 
 **Since:** 18
 
+<!--Device-screenLockFileManager-function queryAppKeyState(): KeyStatus--><!--Device-screenLockFileManager-function queryAppKeyState(): KeyStatus-End-->
+
 **System capability:** SystemCapability.Security.ScreenLockFileManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| KeyStatus | Status of the key for sensitive data under lock screen. |
+| [KeyStatus](arkts-ability-keystatus-e.md) | Status of the key for sensitive data under lock screen. |
 
 **Error codes:**
 

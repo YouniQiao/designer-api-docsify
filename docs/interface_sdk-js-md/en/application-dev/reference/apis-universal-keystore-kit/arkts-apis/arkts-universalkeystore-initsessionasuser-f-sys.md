@@ -12,12 +12,13 @@ import { huks } from '@kit.UniversalKeystoreKit';
 function initSessionAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<HuksSessionHandle>
 ```
 
-Initialize a key session for the specified user. This API uses a promise to return the result.
-**huks.initSessionAsUser**, **huks.updateSession**, and **huks.finishSession** must be used together.
+Initialize a key session for the specified user. This API uses a promise to return the result.**huks.initSessionAsUser**, **huks.updateSession**, and **huks.finishSession** must be used together.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-huks-function initSessionAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<HuksSessionHandle>--><!--Device-huks-function initSessionAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<HuksSessionHandle>-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -29,13 +30,13 @@ Initialize a key session for the specified user. This API uses a promise to retu
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
 | keyAlias | string | Yes | Alias of the key for the **initSessionAsUser** operation. |
-| huksOptions | HuksOptions | Yes | Parameters for **initSessionAsUser**. |
+| huksOptions | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Parameters for **initSessionAsUser**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksSessionHandle&gt; | Promise used to return a session handle for subsequent operations. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HuksSessionHandle> | Promise used to return a session handle for subsequent operations. |
 
 **Error codes:**
 

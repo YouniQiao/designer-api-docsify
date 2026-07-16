@@ -4,6 +4,8 @@ The request of standby resources.
 
 **Since:** 10
 
+<!--Device-deviceStandby-export interface ResourceRequest--><!--Device-deviceStandby-export interface ResourceRequest-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
 **System API:** This is a system API.
@@ -20,12 +22,13 @@ import { deviceStandby } from '@kit.BackgroundTasksKit';
 duration: number
 ```
 
-The exemption duration.
-<br>Unit:s
+The exemption duration.<br>Unit:s
 
 **Type:** number
 
 **Since:** 10
+
+<!--Device-ResourceRequest-duration: int--><!--Device-ResourceRequest-duration: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -43,6 +46,8 @@ The application name.
 
 **Since:** 10
 
+<!--Device-ResourceRequest-name: string--><!--Device-ResourceRequest-name: string-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
 **System API:** This is a system API.
@@ -58,6 +63,8 @@ The reason for the request.
 **Type:** string
 
 **Since:** 10
+
+<!--Device-ResourceRequest-reason: string--><!--Device-ResourceRequest-reason: string-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -75,6 +82,8 @@ The set of resource types that an application requests.
 
 **Since:** 10
 
+<!--Device-ResourceRequest-resourceTypes: int--><!--Device-ResourceRequest-resourceTypes: int-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
 **System API:** This is a system API.
@@ -90,6 +99,8 @@ The application uid.
 **Type:** number
 
 **Since:** 10
+
+<!--Device-ResourceRequest-uid: int--><!--Device-ResourceRequest-uid: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 

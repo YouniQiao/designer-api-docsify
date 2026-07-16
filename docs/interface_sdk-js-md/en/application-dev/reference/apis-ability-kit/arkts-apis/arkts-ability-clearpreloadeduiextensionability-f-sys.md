@@ -12,14 +12,15 @@ import { abilityManager } from '@kit.AbilityKit';
 function clearPreloadedUIExtensionAbility(preloadId: number): Promise<void>
 ```
 
-Clears a [UIExtensionAbility](arkts-ability-uiextensionability-c.md) instance. This API
-uses a promise to return the result.
+Clears a [UIExtensionAbility](arkts-ability-uiextensionability-c.md) instance. This API uses a promise to return the result.
 
 **Since:** 23
 
 **Required permissions:** ohos.permission.PRELOAD_UI_EXTENSION_ABILITY
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-abilityManager-function clearPreloadedUIExtensionAbility(preloadId: int): Promise<void>--><!--Device-abilityManager-function clearPreloadedUIExtensionAbility(preloadId: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -29,13 +30,13 @@ uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| preloadId | number | Yes | ID of a preloaded[UIExtensionAbility](arkts-ability-uiextensionability-c.md) instance. |
+| preloadId | number | Yes | ID of a preloaded [UIExtensionAbility](arkts-ability-uiextensionability-c.md) instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

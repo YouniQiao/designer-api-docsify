@@ -4,6 +4,8 @@ Describes the screen position information.
 
 **Since:** 13
 
+<!--Device-screen-interface MultiScreenPositionOptions--><!--Device-screen-interface MultiScreenPositionOptions-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -20,12 +22,13 @@ import { screen } from '@kit.ArkUI';
 id: number
 ```
 
-Screen ID. The value must be a positive integer. Any non-positive integer values will be considered invalid and
-result in an error.
+Screen ID. The value must be a positive integer. Any non-positive integer values will be considered invalid and result in an error.
 
 **Type:** number
 
 **Since:** 13
+
+<!--Device-MultiScreenPositionOptions-id: long--><!--Device-MultiScreenPositionOptions-id: long-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -37,13 +40,13 @@ result in an error.
 startX: number
 ```
 
-Start X coordinate of the screen. The top-left vertex of the bounding rectangle formed by the two screens is used
-as the origin, with the positive direction being rightwards. The value must be a positive integer. Any non-
-positive integer values will be considered invalid and result in an error.
+Start X coordinate of the screen. The top-left vertex of the bounding rectangle formed by the two screens is used as the origin, with the positive direction being rightwards. The value must be a positive integer. Any non-positive integer values will be considered invalid and result in an error.
 
 **Type:** number
 
 **Since:** 13
+
+<!--Device-MultiScreenPositionOptions-startX: long--><!--Device-MultiScreenPositionOptions-startX: long-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -55,13 +58,13 @@ positive integer values will be considered invalid and result in an error.
 startY: number
 ```
 
-Start Y coordinate of the screen. The top-left vertex of the bounding rectangle formed by the two screens is used
-as the origin, with the positive direction being downwards. The value must be a positive integer. Any non-
-positive integer values will be considered invalid and result in an error.
+Start Y coordinate of the screen. The top-left vertex of the bounding rectangle formed by the two screens is used as the origin, with the positive direction being downwards. The value must be a positive integer. Any non-positive integer values will be considered invalid and result in an error.
 
 **Type:** number
 
 **Since:** 13
+
+<!--Device-MultiScreenPositionOptions-startY: long--><!--Device-MultiScreenPositionOptions-startY: long-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

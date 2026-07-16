@@ -6,6 +6,8 @@ Defines the abstract interface of albums.
 
 **Since:** 12
 
+<!--Device-sendablePhotoAccessHelper-interface AbsAlbum extends lang.ISendable--><!--Device-sendablePhotoAccessHelper-interface AbsAlbum extends lang.ISendable-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Obtains media assets. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+<!--Device-AbsAlbum-getAssets(options: photoAccessHelper.FetchOptions): Promise<FetchResult<PhotoAsset>>--><!--Device-AbsAlbum-getAssets(options: photoAccessHelper.FetchOptions): Promise<FetchResult<PhotoAsset>>-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Parameters:**
@@ -38,7 +42,7 @@ Obtains media assets. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FetchResult&lt;PhotoAsset&gt;&gt; | Promise used to return the media assets obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<FetchResult<PhotoAsset>> | Promise used to return the media assets obtained. |
 
 **Error codes:**
 
@@ -60,6 +64,8 @@ Album name.
 
 **Since:** 12
 
+<!--Device-AbsAlbum-albumName: string--><!--Device-AbsAlbum-albumName: string-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## albumSubtype
@@ -73,6 +79,8 @@ Album subtype
 **Type:** AlbumSubtype
 
 **Since:** 12
+
+<!--Device-AbsAlbum-readonly albumSubtype: AlbumSubtype--><!--Device-AbsAlbum-readonly albumSubtype: AlbumSubtype-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -88,6 +96,8 @@ Album type
 
 **Since:** 12
 
+<!--Device-AbsAlbum-readonly albumType: AlbumType--><!--Device-AbsAlbum-readonly albumType: AlbumType-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## albumUri
@@ -101,6 +111,8 @@ Album uri.
 **Type:** string
 
 **Since:** 12
+
+<!--Device-AbsAlbum-readonly albumUri: string--><!--Device-AbsAlbum-readonly albumUri: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -116,6 +128,8 @@ Number of assets in the album
 
 **Since:** 12
 
+<!--Device-AbsAlbum-readonly count: number--><!--Device-AbsAlbum-readonly count: number-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## coverUri
@@ -129,6 +143,8 @@ Cover uri for the album
 **Type:** string
 
 **Since:** 12
+
+<!--Device-AbsAlbum-readonly coverUri: string--><!--Device-AbsAlbum-readonly coverUri: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

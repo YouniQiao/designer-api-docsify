@@ -2,15 +2,23 @@
 
 ChipItemStyle定义了Chip的共通属性。
 
-> **说明：**
->
-> 1. 操作块的大小有两种类型，一种是ChipSize，提供NORMAL和SMALL两种尺寸供选择；另一种是SizeOptions。
->
+> **说明：**  
+>  
+> 1. 操作块的大小有两种类型，一种是ChipSize，提供NORMAL和SMALL两种尺寸供选择；另一种是SizeOptions。  
+>  
 > 2. backgroundColor、selectedBackgroundColor传入undefined时，显示默认背景颜色，传入非法值时，背景色透明。
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface ChipItemStyle--><!--Device-unnamed-export interface ChipItemStyle-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixImageIconOptions, IconGroupSuffix, IconItemOptions, ChipItemStyle, ChipGroupItemOptions, ChipGroup, IconOptions } from '@kit.ArkUI';
+```
 
 ## backgroundColor
 
@@ -30,7 +38,9 @@ Chip背景颜色。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipItemStyle-backgroundColor?: ResourceColor--><!--Device-ChipItemStyle-backgroundColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,7 +62,9 @@ Chip文字颜色。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipItemStyle-fontColor?: ResourceColor--><!--Device-ChipItemStyle-fontColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,7 +86,9 @@ Chip激活时的背景颜色。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipItemStyle-selectedBackgroundColor?: ResourceColor--><!--Device-ChipItemStyle-selectedBackgroundColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,7 +110,9 @@ Chip激活时的文字颜色。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipItemStyle-selectedFontColor?: ResourceColor--><!--Device-ChipItemStyle-selectedFontColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -118,7 +134,9 @@ Chip尺寸，使用时需要从Chip组件引入ChipSize类型。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ChipItemStyle-size?: ChipSize | SizeOptions--><!--Device-ChipItemStyle-size?: ChipSize | SizeOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -18,6 +18,8 @@ Obtains the bundle name based on the given UID. This API uses an asynchronous ca
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundleManager-function getBundleNameByUid(uid: int, callback: AsyncCallback<string>): void--><!--Device-bundleManager-function getBundleNameByUid(uid: int, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **Parameters:**
@@ -25,7 +27,7 @@ Obtains the bundle name based on the given UID. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | number | Yes | UID of the application. |
-| callback | AsyncCallback&lt;string&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result.If the information is successfully obtained, **err** is **null** and **data** is the bundle name. Otherwise,**err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result.If the information is successfully obtained, **err** is **null** and **data** is the bundle name. Otherwise,**err** is an error object. |
 
 **Error codes:**
 
@@ -71,6 +73,8 @@ Obtains the bundle name based on the given UID. This API uses a promise to retur
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
+<!--Device-bundleManager-function getBundleNameByUid(uid: int): Promise<string>--><!--Device-bundleManager-function getBundleNameByUid(uid: int): Promise<string>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **Parameters:**
@@ -83,7 +87,7 @@ Obtains the bundle name based on the given UID. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the bundle name obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the bundle name obtained. |
 
 **Error codes:**
 

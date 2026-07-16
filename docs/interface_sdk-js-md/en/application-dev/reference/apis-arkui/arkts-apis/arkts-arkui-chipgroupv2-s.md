@@ -4,6 +4,8 @@ Defines chipGroupV2.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare struct ChipGroupV2--><!--Device-unnamed-export declare struct ChipGroupV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Build function for ChipGroupV2
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipGroupV2-build(): void--><!--Device-ChipGroupV2-build(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## $items
@@ -43,6 +47,8 @@ Two-way binding callback method for ChipV2 item.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2-$items?: Callback<ChipGroupV2Items>--><!--Device-ChipGroupV2-$items?: Callback<ChipGroupV2Items>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,6 +68,8 @@ Two-way binding callback method for selected ChipV2 item indexes.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipGroupV2-$selectedIndexes?: Callback<Array<number>>--><!--Device-ChipGroupV2-$selectedIndexes?: Callback<Array<number>>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## chipGroupPadding
@@ -79,6 +87,8 @@ ChipGroupV2 padding (only support top and bottom).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2-chipGroupPadding?: ChipGroupV2Padding--><!--Device-ChipGroupV2-chipGroupPadding?: ChipGroupV2Padding-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,6 +108,8 @@ Left and right inner margins and spacing between ChipV2.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipGroupV2-chipGroupSpace?: ChipGroupV2Space--><!--Device-ChipGroupV2-chipGroupSpace?: ChipGroupV2Space-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## itemStyle
@@ -115,6 +127,8 @@ ChipV2 item style.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2-itemStyle?: ChipGroupV2ItemStyle--><!--Device-ChipGroupV2-itemStyle?: ChipGroupV2ItemStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -134,6 +148,8 @@ ChipV2 item.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipGroupV2-items: ChipGroupV2Items--><!--Device-ChipGroupV2-items: ChipGroupV2Items-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## multiple
@@ -151,6 +167,8 @@ Support multiple ChipV2 item selection.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2-multiple?: boolean--><!--Device-ChipGroupV2-multiple?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -170,6 +188,8 @@ Callback method when the chipV2 status changes
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipGroupV2-onChange?: Callback<Array<number>>--><!--Device-ChipGroupV2-onChange?: Callback<Array<number>>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectedIndexes
@@ -187,6 +207,8 @@ Selected ChipV2 item indexes.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2-selectedIndexes?: Array<number>--><!--Device-ChipGroupV2-selectedIndexes?: Array<number>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -207,6 +229,8 @@ The builder function which will be rendered in the suffix of ChipGroupV2.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2-suffix?: Callback<void>--><!--Device-ChipGroupV2-suffix?: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

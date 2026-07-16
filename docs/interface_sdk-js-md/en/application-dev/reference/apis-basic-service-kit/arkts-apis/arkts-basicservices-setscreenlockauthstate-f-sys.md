@@ -18,6 +18,8 @@ Set the screen lock authentication state for os account local userId.
 
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK_INNER
 
+<!--Device-screenLock-function setScreenLockAuthState(state: AuthState, userId: int, authToken: Uint8Array): Promise<boolean>--><!--Device-screenLock-function setScreenLockAuthState(state: AuthState, userId: int, authToken: Uint8Array): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 **System API:** This is a system API.
@@ -26,15 +28,15 @@ Set the screen lock authentication state for os account local userId.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | AuthState | Yes | the screen lock authentication state. |
+| state | [AuthState](arkts-basicservices-authstate-e-sys.md) | Yes | the screen lock authentication state. |
 | userId | number | Yes | Os account local userId. |
-| authToken | Uint8Array | Yes | the authentication token for this state |
+| authToken | [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Yes | the authentication token for this state |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | the promise returned by the function. |
 
 **Error codes:**
 

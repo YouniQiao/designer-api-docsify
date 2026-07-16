@@ -1,12 +1,10 @@
 # DownloadTask
 
-Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a
-promise through [request.downloadFile](arkts-basicservices-downloadfile-f.md#downloadfile-2) or
-from a callback through
-[request.downloadFile](arkts-basicservices-downloadfile-f.md#downloadfile-1)
-.
+Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile](arkts-basicservices-downloadfile-f.md#downloadfile-2) or from a callback through [request.downloadFile](arkts-basicservices-downloadfile-f.md#downloadfile-1).
 
 **Since:** 6
+
+<!--Device-request-interface DownloadTask--><!--Device-request-interface DownloadTask-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -24,14 +22,16 @@ delete(callback: AsyncCallback<boolean>): void
 
 Deletes the download task. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> **NOTE**  
+>  
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
 > code is removed from API version 12.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-delete(callback: AsyncCallback<boolean>): void--><!--Device-DownloadTask-delete(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -39,7 +39,7 @@ Deletes the download task. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicatesthat the operation is successful; **false** indicates the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -83,14 +83,16 @@ delete(): Promise<boolean>
 
 Deletes the download task. This API uses a promise to return the result.
 
-> **NOTE**
->
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> **NOTE**  
+>  
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
 > code is removed from API version 12.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-delete(): Promise<boolean>--><!--Device-DownloadTask-delete(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -98,7 +100,7 @@ Deletes the download task. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operationis successful; **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -139,14 +141,16 @@ getTaskInfo(callback: AsyncCallback<DownloadInfo>): void
 
 Obtains the information about this download task. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> **NOTE**  
+>  
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
 > code is removed from API version 12.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-getTaskInfo(callback: AsyncCallback<DownloadInfo>): void--><!--Device-DownloadTask-getTaskInfo(callback: AsyncCallback<DownloadInfo>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -154,7 +158,7 @@ Obtains the information about this download task. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;DownloadInfo&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined** and **data** is the **DownloadInfo** object obtained. Otherwise, **err**is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<DownloadInfo> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadInfo** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -198,14 +202,16 @@ getTaskInfo(): Promise<DownloadInfo>
 
 Obtains the information about this download task. This API uses a promise to return the result.
 
-> **NOTE**
->
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> **NOTE**  
+>  
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
 > code is removed from API version 12.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-getTaskInfo(): Promise<DownloadInfo>--><!--Device-DownloadTask-getTaskInfo(): Promise<DownloadInfo>-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -213,7 +219,7 @@ Obtains the information about this download task. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DownloadInfo&gt; | Promise used to return a **DownloadInfo** object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DownloadInfo> | Promise used to return a **DownloadInfo** object. |
 
 **Error codes:**
 
@@ -253,17 +259,18 @@ try {
 getTaskMimeType(callback: AsyncCallback<string>): void
 ```
 
-Obtains the MIME type (that is, media type of resources in HTTP) of a download task. This API uses an
-asynchronous callback to return the result.
+Obtains the MIME type (that is, media type of resources in HTTP) of a download task. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> **NOTE**  
+>  
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
 > code is removed from API version 12.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-getTaskMimeType(callback: AsyncCallback<string>): void--><!--Device-DownloadTask-getTaskMimeType(callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -271,7 +278,7 @@ asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and data is the **MimeType** object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and data is the **MimeType** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -313,17 +320,18 @@ try {
 getTaskMimeType(): Promise<string>
 ```
 
-Obtains the MIME type (that is, media type of resources in HTTP) of a download task. This API uses a promise to
-return the result.
+Obtains the MIME type (that is, media type of resources in HTTP) of a download task. This API uses a promise to return the result.
 
-> **NOTE**
->
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> **NOTE**  
+>  
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
 > code is removed from API version 12.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-getTaskMimeType(): Promise<string>--><!--Device-DownloadTask-getTaskMimeType(): Promise<string>-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -331,7 +339,7 @@ return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the MIME type of a download task. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the MIME type of a download task. |
 
 **Error codes:**
 
@@ -375,6 +383,8 @@ Unsubscribes from download progress events.
 
 **Since:** 6
 
+<!--Device-DownloadTask-off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void): void--><!--Device-DownloadTask-off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Parameters:**
@@ -382,7 +392,7 @@ Unsubscribes from download progress events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'progress' | Yes | Event type.<br>- **'progress'**: download progress. |
-| callback | (receivedSize: number, totalSize: number) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of thecurrent type will be unregistered. |
+| callback | (receivedSize: number, totalSize: number) => void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -433,6 +443,8 @@ Unsubscribes from download events.
 
 **Since:** 7
 
+<!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Parameters:**
@@ -440,7 +452,7 @@ Unsubscribes from download events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.<br>- **'complete'**: download task completion.<br>-**'pause'**: download task pause.<br>- **'remove'**: download task removal. |
-| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of thecurrent type will be unregistered. |
+| callback | () => void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -517,6 +529,8 @@ Unsubscribes from download events.
 
 **Since:** 7
 
+<!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Parameters:**
@@ -524,7 +538,7 @@ Unsubscribes from download events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.<br>- **'complete'**: download task completion.<br>-**'pause'**: download task pause.<br>- **'remove'**: download task removal. |
-| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of thecurrent type will be unregistered. |
+| callback | () => void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -601,6 +615,8 @@ Unsubscribes from download events.
 
 **Since:** 7
 
+<!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Parameters:**
@@ -608,7 +624,7 @@ Unsubscribes from download events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.<br>- **'complete'**: download task completion.<br>-**'pause'**: download task pause.<br>- **'remove'**: download task removal. |
-| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of thecurrent type will be unregistered. |
+| callback | () => void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -685,6 +701,8 @@ Unsubscribes from download failure events.
 
 **Since:** 7
 
+<!--Device-DownloadTask-off(type: 'fail', callback?: (err: int) => void): void--><!--Device-DownloadTask-off(type: 'fail', callback?: (err: int) => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Parameters:**
@@ -692,7 +710,7 @@ Unsubscribes from download failure events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fail' | Yes | Event type.<br>- **'fail'**: download task failure. |
-| callback | (err: number) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of thecurrent type will be unregistered.For details about the error codes, see[Download Error Codes](../../../../reference/apis-basic-services-kit/js-apis-request.md#constants). |
+| callback | (err: number) => void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered.For details about the error codes, see [Download Error Codes](../../../../reference/apis-basic-services-kit/js-apis-request.md#constants). |
 
 **Error codes:**
 
@@ -741,12 +759,14 @@ on(type: 'progress', callback: (receivedSize: number, totalSize: number) => void
 
 Subscribes to download progress events. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> To maintain a balance between power consumption and performance, this API cannot be called when the application
+> **NOTE**  
+>  
+> To maintain a balance between power consumption and performance, this API cannot be called when the application  
 > is running in the background.
 
 **Since:** 6
+
+<!--Device-DownloadTask-on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void--><!--Device-DownloadTask-on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -755,7 +775,7 @@ Subscribes to download progress events. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'progress' | Yes | Event type.<br>- **'progress'**: download progress. |
-| callback | (receivedSize: number, totalSize: number) =&gt; void | Yes | Callback used to return the size of the uploaded file and the total size of thefile to upload, in bytes. If the server uses the chunk mode for data transmission and the total file sizecannot be obtained from the request header, the value of **totalSize** is treated as **-1**. |
+| callback | (receivedSize: number, totalSize: number) => void | Yes | Callback used to return the size of the uploaded file and the total size of the file to upload, in bytes. If the server uses the chunk mode for data transmission and the total file size cannot be obtained from the request header, the value of **totalSize** is treated as **-1**. |
 
 **Error codes:**
 
@@ -798,6 +818,8 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 
 **Since:** 7
 
+<!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Parameters:**
@@ -805,7 +827,7 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.<br>- **'complete'**: download task completion.<br>-**'pause'**: download task pause.<br>- **'remove'**: download task removal. |
-| callback | () =&gt; void | Yes | Callback used to return the result. |
+| callback | () => void | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -858,6 +880,8 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 
 **Since:** 7
 
+<!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Parameters:**
@@ -865,7 +889,7 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.<br>- **'complete'**: download task completion.<br>-**'pause'**: download task pause.<br>- **'remove'**: download task removal. |
-| callback | () =&gt; void | Yes | Callback used to return the result. |
+| callback | () => void | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -918,6 +942,8 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 
 **Since:** 7
 
+<!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Parameters:**
@@ -925,7 +951,7 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.<br>- **'complete'**: download task completion.<br>-**'pause'**: download task pause.<br>- **'remove'**: download task removal. |
-| callback | () =&gt; void | Yes | Callback used to return the result. |
+| callback | () => void | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -978,6 +1004,8 @@ Subscribes to download failure events. This API uses an asynchronous callback to
 
 **Since:** 7
 
+<!--Device-DownloadTask-on(type: 'fail', callback: (err: int) => void): void--><!--Device-DownloadTask-on(type: 'fail', callback: (err: int) => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Parameters:**
@@ -985,7 +1013,7 @@ Subscribes to download failure events. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fail' | Yes | Event type.<br>- **'fail'**: download task failure. |
-| callback | (err: number) =&gt; void | Yes | Callback for the download task failure event.For details about the error codes,see[Download Error Codes](../../../../reference/apis-basic-services-kit/js-apis-request.md#constants). |
+| callback | (err: number) => void | Yes | Callback for the download task failure event.For details about the error codes,see [Download Error Codes](../../../../reference/apis-basic-services-kit/js-apis-request.md#constants). |
 
 **Error codes:**
 
@@ -1034,13 +1062,15 @@ Pauses this download task. This API uses an asynchronous callback to return the 
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-pause(callback: AsyncCallback<void>): void--><!--Device-DownloadTask-pause(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1077,13 +1107,15 @@ Pauses this download task. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-pause(): Promise<void>--><!--Device-DownloadTask-pause(): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1118,13 +1150,15 @@ Queries this download task. This API uses an asynchronous callback to return the
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-query(callback: AsyncCallback<DownloadInfo>): void--><!--Device-DownloadTask-query(callback: AsyncCallback<DownloadInfo>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;DownloadInfo&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined** and **data** is the **DownloadInfo** object obtained. Otherwise, **err**is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<DownloadInfo> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadInfo** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1161,13 +1195,15 @@ Queries this download task. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-query(): Promise<DownloadInfo>--><!--Device-DownloadTask-query(): Promise<DownloadInfo>-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DownloadInfo&gt; | Promise used to return the **DownloadInfo** object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DownloadInfo> | Promise used to return the **DownloadInfo** object. |
 
 **Error codes:**
 
@@ -1202,13 +1238,15 @@ Queries the MIME type of this download task. This API uses an asynchronous callb
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-queryMimeType(callback: AsyncCallback<string>): void--><!--Device-DownloadTask-queryMimeType(callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and data is the **MimeType** object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and data is the **MimeType** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1245,13 +1283,15 @@ Queries the MIME type of this download task. This API uses a promise to return t
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-queryMimeType(): Promise<string>--><!--Device-DownloadTask-queryMimeType(): Promise<string>-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the MIME type of a download task. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the MIME type of a download task. |
 
 **Error codes:**
 
@@ -1286,13 +1326,15 @@ Deletes the download task. This API uses an asynchronous callback to return the 
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-remove(callback: AsyncCallback<boolean>): void--><!--Device-DownloadTask-remove(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicatesthat the operation is successful; **false** indicates the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -1329,13 +1371,15 @@ Deletes the download task. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-remove(): Promise<boolean>--><!--Device-DownloadTask-remove(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operationis successful; **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -1362,14 +1406,16 @@ restore(callback: AsyncCallback<boolean>): void
 
 Restores the download task. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> **NOTE**  
+>  
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
 > code is removed from API version 12.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-restore(callback: AsyncCallback<boolean>): void--><!--Device-DownloadTask-restore(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -1377,7 +1423,7 @@ Restores the download task. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicatesthat the operation is successful; **false** indicates the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -1421,14 +1467,16 @@ restore(): Promise<boolean>
 
 Restores the download task. This API uses a promise to return the result.
 
-> **NOTE**
->
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> **NOTE**  
+>  
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
 > code is removed from API version 12.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-restore(): Promise<boolean>--><!--Device-DownloadTask-restore(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -1436,7 +1484,7 @@ Restores the download task. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operationis successful; **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -1486,13 +1534,15 @@ Restores the download task. This API uses an asynchronous callback to return the
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-resume(callback: AsyncCallback<void>): void--><!--Device-DownloadTask-resume(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1529,13 +1579,15 @@ Restores the download task. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-DownloadTask-resume(): Promise<void>--><!--Device-DownloadTask-resume(): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.Download
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1560,17 +1612,18 @@ downloadTask.resume().then(() => {
 suspend(callback: AsyncCallback<boolean>): void
 ```
 
-Suspends this download task. You can use [restore](arkts-basicservices-downloadtask-i.md#restore-2) to restore the download.
-This API uses an asynchronous callback to return the result.
+Suspends this download task. You can use [restore](arkts-basicservices-downloadtask-i.md#restore-2) to restore the download.This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> **NOTE**  
+>  
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
 > code is removed from API version 12.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-suspend(callback: AsyncCallback<boolean>): void--><!--Device-DownloadTask-suspend(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -1578,7 +1631,7 @@ This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicatesthat the operation is successful; **false** indicates the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -1620,17 +1673,18 @@ try {
 suspend(): Promise<boolean>
 ```
 
-Suspends this download task. You can use [restore](arkts-basicservices-downloadtask-i.md#restore-2) to restore the download.
-This API uses a promise to return the result.
+Suspends this download task. You can use [restore](arkts-basicservices-downloadtask-i.md#restore-2) to restore the download.This API uses a promise to return the result.
 
-> **NOTE**
->
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> **NOTE**  
+>  
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
 > code is removed from API version 12.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-suspend(): Promise<boolean>--><!--Device-DownloadTask-suspend(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -1638,7 +1692,7 @@ This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operationis successful; **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 

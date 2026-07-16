@@ -4,6 +4,8 @@ Marquee初始化参数。
 
 **起始版本：** 18
 
+<!--Device-unnamed-declare interface TextMarqueeOptions--><!--Device-unnamed-declare interface TextMarqueeOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## delay
@@ -24,7 +26,9 @@ delay?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextMarqueeOptions-delay?: number--><!--Device-TextMarqueeOptions-delay?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,7 +52,9 @@ true表示支持渐隐效果，false表示不支持渐隐效果。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextMarqueeOptions-fadeout?: boolean--><!--Device-TextMarqueeOptions-fadeout?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,7 +76,9 @@ true表示从头开始滚动，false表示反向滚动。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextMarqueeOptions-fromStart?: boolean--><!--Device-TextMarqueeOptions-fromStart?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,7 +98,9 @@ loop?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextMarqueeOptions-loop?: number--><!--Device-TextMarqueeOptions-loop?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -110,7 +120,9 @@ marqueeStartPolicy?: MarqueeStartPolicy
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextMarqueeOptions-marqueeStartPolicy?: MarqueeStartPolicy--><!--Device-TextMarqueeOptions-marqueeStartPolicy?: MarqueeStartPolicy-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -132,7 +144,9 @@ marqueeUpdatePolicy?: MarqueeUpdatePolicy
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextMarqueeOptions-marqueeUpdatePolicy?: MarqueeUpdatePolicy--><!--Device-TextMarqueeOptions-marqueeUpdatePolicy?: MarqueeUpdatePolicy-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -152,7 +166,9 @@ spacing?: LengthMetrics
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextMarqueeOptions-spacing?: LengthMetrics--><!--Device-TextMarqueeOptions-spacing?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -172,7 +188,9 @@ true表示播放，false表示不播放。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextMarqueeOptions-start: boolean--><!--Device-TextMarqueeOptions-start: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -192,7 +210,9 @@ step?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextMarqueeOptions-step?: number--><!--Device-TextMarqueeOptions-step?: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

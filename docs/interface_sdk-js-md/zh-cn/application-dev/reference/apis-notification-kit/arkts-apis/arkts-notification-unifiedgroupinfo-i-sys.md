@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface UnifiedGroupInfo--><!--Device-unnamed-export interface UnifiedGroupInfo-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -19,6 +21,8 @@ content?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-UnifiedGroupInfo-content?: string--><!--Device-UnifiedGroupInfo-content?: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -36,6 +40,8 @@ extraInfo?: { [key: string]: any }
 
 **起始版本：** 12
 
+<!--Device-UnifiedGroupInfo-extraInfo?: { [key: string]: any }--><!--Device-UnifiedGroupInfo-extraInfo?: { [key: string]: any }-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +57,8 @@ key?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-UnifiedGroupInfo-key?: string--><!--Device-UnifiedGroupInfo-key?: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -68,6 +76,8 @@ sceneName?: string
 
 **起始版本：** 12
 
+<!--Device-UnifiedGroupInfo-sceneName?: string--><!--Device-UnifiedGroupInfo-sceneName?: string-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -83,6 +93,8 @@ title?: string
 **类型：** string
 
 **起始版本：** 12
+
+<!--Device-UnifiedGroupInfo-title?: string--><!--Device-UnifiedGroupInfo-title?: string-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

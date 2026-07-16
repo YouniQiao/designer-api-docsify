@@ -4,6 +4,8 @@ Provides the destination information.
 
 **Since:** 11
 
+<!--Device-unnamed-declare interface NavContentInfo--><!--Device-unnamed-declare interface NavContentInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## index
@@ -12,8 +14,7 @@ Provides the destination information.
 index: number
 ```
 
-Index of the navigation destination in the routing stack. If the view is a root view (**NavBar**), the return value
-is **-1**.
+Index of the navigation destination in the routing stack. If the view is a root view (**NavBar**), the return value is **-1**.
 
 Value range: [-1, +��)
 
@@ -24,6 +25,8 @@ Value range: [-1, +��)
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NavContentInfo-index: number--><!--Device-NavContentInfo-index: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,6 +46,8 @@ Mode of the navigation destination. If the view is a root view (**NavBar**), the
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavContentInfo-mode?: NavDestinationMode--><!--Device-NavContentInfo-mode?: NavDestinationMode-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## name
@@ -60,6 +65,8 @@ Name of the navigation destination. If the view is a root view (**NavBar**), the
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NavContentInfo-name?: string--><!--Device-NavContentInfo-name?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -79,6 +86,8 @@ Unique identifier of the navigation destination page.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavContentInfo-navDestinationId?: string--><!--Device-NavContentInfo-navDestinationId?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## param
@@ -96,6 +105,8 @@ Parameters loaded on the navigation destination page.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NavContentInfo-param?: Object--><!--Device-NavContentInfo-param?: Object-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -6,6 +6,8 @@ Sendable PixelMap instance.
 
 **Since:** 12
 
+<!--Device-sendableImage-interface PixelMap extends ISendable--><!--Device-sendableImage-interface PixelMap extends ISendable-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
@@ -20,15 +22,13 @@ import { sendableImage } from '@kit.ImageKit';
 applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>
 ```
 
-Apply color space of pixelmap, the pixels will be changed by input color space.
-This method uses a promise to return the result.
+Apply color space of pixelmap, the pixels will be changed by input color space.This method uses a promise to return the result.
 
-This method is used to change color space of PixelMap.
-Pixel data will be changed by calling this method.
-If you want to set the colorspace property of PixelMap only,
-use method {@Link #setColorSpace(colorSpaceManager.ColorSpaceManager)}.
+This method is used to change color space of PixelMap.Pixel data will be changed by calling this method.If you want to set the colorspace property of PixelMap only,use method {@Link #setColorSpace(colorSpaceManager.ColorSpaceManager)}.
 
 **Since:** 12
+
+<!--Device-PixelMap-applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>--><!--Device-PixelMap-applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -42,7 +42,7 @@ use method {@Link #setColorSpace(colorSpaceManager.ColorSpaceManager)}.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -84,13 +84,15 @@ Obtains new pixelmap with alpha information. This method uses a promise to retur
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PixelMap-createAlphaPixelmap(): Promise<PixelMap>--><!--Device-PixelMap-createAlphaPixelmap(): Promise<PixelMap>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | A Promise instance used to return the new image pixelmap.If the operation fails, an error message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PixelMap> | A Promise instance used to return the new image pixelmap.If the operation fails, an error message is returned. |
 
 **Example**
 
@@ -122,13 +124,15 @@ Obtains new pixelmap with alpha information.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PixelMap-createAlphaPixelmapSync(): PixelMap--><!--Device-PixelMap-createAlphaPixelmapSync(): PixelMap-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PixelMap | return the new image pixelmap.If the operation fails, an error message is returned. |
+| [PixelMap](arkts-image-pixelmap-i.md) | return the new image pixelmap.If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -161,6 +165,8 @@ Crop the image. This method uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PixelMap-crop(region: image.Region): Promise<void>--><!--Device-PixelMap-crop(region: image.Region): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
@@ -173,7 +179,7 @@ Crop the image. This method uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **Example**
 
@@ -207,6 +213,8 @@ Crop the image.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PixelMap-cropSync(region: image.Region): void--><!--Device-PixelMap-cropSync(region: image.Region): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -250,6 +258,8 @@ Image flipping. This method uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PixelMap-flip(horizontal: boolean, vertical: boolean): Promise<void>--><!--Device-PixelMap-flip(horizontal: boolean, vertical: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
@@ -263,7 +273,7 @@ Image flipping. This method uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **Example**
 
@@ -297,6 +307,8 @@ Image flipping.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PixelMap-flipSync(horizontal: boolean, vertical: boolean): void--><!--Device-PixelMap-flipSync(horizontal: boolean, vertical: boolean): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -341,6 +353,8 @@ Obtains the number of bytes in each line of the image pixelmap.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PixelMap-getBytesNumberPerRow(): number--><!--Device-PixelMap-getBytesNumberPerRow(): number-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
@@ -369,6 +383,8 @@ getColorSpace(): colorSpaceManager.ColorSpaceManager
 Get color space of pixelmap.
 
 **Since:** 12
+
+<!--Device-PixelMap-getColorSpace(): colorSpaceManager.ColorSpaceManager--><!--Device-PixelMap-getColorSpace(): colorSpaceManager.ColorSpaceManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -411,6 +427,8 @@ Obtains the density of the image pixelmap.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PixelMap-getDensity(): number--><!--Device-PixelMap-getDensity(): number-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
@@ -442,13 +460,15 @@ Obtains pixelmap information about this image. This method uses a promise to ret
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PixelMap-getImageInfo(): Promise<image.ImageInfo>--><!--Device-PixelMap-getImageInfo(): Promise<image.ImageInfo>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.ImageInfo&gt; | A Promise instance used to return the image pixelmap information.If the operation fails, an error message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<image.ImageInfo> | A Promise instance used to return the image pixelmap information.If the operation fails, an error message is returned. |
 
 **Example**
 
@@ -482,6 +502,8 @@ Get image information from image source.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PixelMap-getImageInfoSync(): image.ImageInfo--><!--Device-PixelMap-getImageInfoSync(): image.ImageInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -523,6 +545,8 @@ Obtains the total number of bytes of the image pixelmap.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PixelMap-getPixelBytesNumber(): number--><!--Device-PixelMap-getPixelBytesNumber(): number-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
@@ -551,6 +575,8 @@ marshalling(sequence: rpc.MessageSequence): void
 Marshalling PixelMap and write into MessageSequence.
 
 **Since:** 12
+
+<!--Device-PixelMap-marshalling(sequence: rpc.MessageSequence): void--><!--Device-PixelMap-marshalling(sequence: rpc.MessageSequence): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -639,6 +665,8 @@ Set the transparent rate of pixelmap. This method uses a promise to return the r
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PixelMap-opacity(rate: number): Promise<void>--><!--Device-PixelMap-opacity(rate: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
@@ -651,7 +679,7 @@ Set the transparent rate of pixelmap. This method uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **Example**
 
@@ -683,6 +711,8 @@ Set the transparent rate of pixelmap.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PixelMap-opacitySync(rate: number): void--><!--Device-PixelMap-opacitySync(rate: number): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -725,6 +755,8 @@ Reads image pixelmap data in an area. This method uses a promise to return the d
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PixelMap-readPixels(area: image.PositionArea): Promise<void>--><!--Device-PixelMap-readPixels(area: image.PositionArea): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
@@ -737,7 +769,7 @@ Reads image pixelmap data in an area. This method uses a promise to return the d
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **Example**
 
@@ -775,6 +807,8 @@ Reads image pixelmap data in an area.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PixelMap-readPixelsSync(area: image.PositionArea): void--><!--Device-PixelMap-readPixelsSync(area: image.PositionArea): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -817,12 +851,13 @@ async function Demo(pixelMap : sendableImage.PixelMap) {
 readPixelsToBuffer(dst: ArrayBuffer): Promise<void>
 ```
 
-Reads image pixelmap data and writes the data to an ArrayBuffer. This method uses
-a promise to return the result.
+Reads image pixelmap data and writes the data to an ArrayBuffer. This method uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PixelMap-readPixelsToBuffer(dst: ArrayBuffer): Promise<void>--><!--Device-PixelMap-readPixelsToBuffer(dst: ArrayBuffer): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -830,13 +865,13 @@ a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dst | ArrayBuffer | Yes | A buffer to which the image pixelmap data will be written. |
+| dst | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | A buffer to which the image pixelmap data will be written. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **Example**
 
@@ -869,13 +904,15 @@ Reads image pixelmap data and writes the data to an ArrayBuffer.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PixelMap-readPixelsToBufferSync(dst: ArrayBuffer): void--><!--Device-PixelMap-readPixelsToBufferSync(dst: ArrayBuffer): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dst | ArrayBuffer | Yes | A buffer to which the image pixelmap data will be written. |
+| dst | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | A buffer to which the image pixelmap data will be written. |
 
 **Error codes:**
 
@@ -911,13 +948,15 @@ Releases this PixelMap object. This method uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PixelMap-release(): Promise<void>--><!--Device-PixelMap-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the instance release result.If the operation fails, an error message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return the instance release result.If the operation fails, an error message is returned. |
 
 **Example**
 
@@ -949,6 +988,8 @@ Image rotation. This method uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PixelMap-rotate(angle: number): Promise<void>--><!--Device-PixelMap-rotate(angle: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
@@ -961,7 +1002,7 @@ Image rotation. This method uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **Example**
 
@@ -993,6 +1034,8 @@ Image rotation.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PixelMap-rotateSync(angle: number): void--><!--Device-PixelMap-rotateSync(angle: number): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1035,6 +1078,8 @@ Image zoom in width and height. This method uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PixelMap-scale(x: number, y: number): Promise<void>--><!--Device-PixelMap-scale(x: number, y: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
@@ -1048,7 +1093,7 @@ Image zoom in width and height. This method uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **Example**
 
@@ -1082,6 +1127,8 @@ Image zoom in width and height.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PixelMap-scaleSync(x: number, y: number): void--><!--Device-PixelMap-scaleSync(x: number, y: number): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1122,12 +1169,11 @@ setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void
 
 Set color space of pixelmap.
 
-This method is only used to set the colorspace property of PixelMap,
-while all pixel data remains the same after calling this method.
-If you want to change colorspace for all pixels, use method
-{@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)}.
+This method is only used to set the colorspace property of PixelMap,while all pixel data remains the same after calling this method.If you want to change colorspace for all pixels, use method{@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)}.
 
 **Since:** 12
+
+<!--Device-PixelMap-setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void--><!--Device-PixelMap-setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1172,6 +1218,8 @@ Image position transformation. This method uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PixelMap-translate(x: number, y: number): Promise<void>--><!--Device-PixelMap-translate(x: number, y: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
@@ -1185,7 +1233,7 @@ Image position transformation. This method uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **Example**
 
@@ -1218,6 +1266,8 @@ Image position transformation.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PixelMap-translateSync(x: number, y: number): void--><!--Device-PixelMap-translateSync(x: number, y: number): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1260,6 +1310,8 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 **Since:** 12
 
+<!--Device-PixelMap-unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>--><!--Device-PixelMap-unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
@@ -1272,7 +1324,7 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PixelMap&gt; | A Promise instance used to return the PixelMap object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PixelMap> | A Promise instance used to return the PixelMap object. |
 
 **Error codes:**
 
@@ -1348,12 +1400,13 @@ async function Demo() {
 writeBufferToPixels(src: ArrayBuffer): Promise<void>
 ```
 
-Reads image data in an ArrayBuffer and writes the data to a PixelMap object. This method
-uses a promise to return the result.
+Reads image data in an ArrayBuffer and writes the data to a PixelMap object. This method uses a promise to return the result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PixelMap-writeBufferToPixels(src: ArrayBuffer): Promise<void>--><!--Device-PixelMap-writeBufferToPixels(src: ArrayBuffer): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1361,13 +1414,13 @@ uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | ArrayBuffer | Yes | A buffer from which the image data will be read. |
+| src | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | A buffer from which the image data will be read. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **Example**
 
@@ -1404,13 +1457,15 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PixelMap-writeBufferToPixelsSync(src: ArrayBuffer): void--><!--Device-PixelMap-writeBufferToPixelsSync(src: ArrayBuffer): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | ArrayBuffer | Yes | A buffer from which the image data will be read. |
+| src | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | Yes | A buffer from which the image data will be read. |
 
 **Error codes:**
 
@@ -1444,12 +1499,13 @@ async function Demo(pixelMap: sendableImage.PixelMap) {
 writePixels(area: image.PositionArea): Promise<void>
 ```
 
-Writes image pixelmap data to the specified area. This method uses a promise to return
-the operation result.
+Writes image pixelmap data to the specified area. This method uses a promise to return the operation result.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PixelMap-writePixels(area: image.PositionArea): Promise<void>--><!--Device-PixelMap-writePixels(area: image.PositionArea): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1463,7 +1519,7 @@ the operation result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | A Promise instance used to return the operation result.If the operation fails, an error message is returned. |
 
 **Example**
 
@@ -1505,6 +1561,8 @@ Writes image pixelmap data to the specified area.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PixelMap-writePixelsSync(area: image.PositionArea): void--><!--Device-PixelMap-writePixelsSync(area: image.PositionArea): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1559,6 +1617,8 @@ Whether the image pixelmap can be edited.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PixelMap-readonly isEditable: boolean--><!--Device-PixelMap-readonly isEditable: boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## isStrideAlignment
@@ -1572,6 +1632,8 @@ Is it stride Alignment
 **Type:** boolean
 
 **Since:** 12
+
+<!--Device-PixelMap-readonly isStrideAlignment: boolean--><!--Device-PixelMap-readonly isStrideAlignment: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

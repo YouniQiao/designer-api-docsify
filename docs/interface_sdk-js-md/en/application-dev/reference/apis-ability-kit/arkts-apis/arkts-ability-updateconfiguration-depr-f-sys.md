@@ -16,6 +16,8 @@ Updates the configuration. This API uses an asynchronous callback to return the 
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-abilityManager-function updateConfiguration(config: Configuration, callback: AsyncCallback<void>): void--><!--Device-abilityManager-function updateConfiguration(config: Configuration, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -24,8 +26,8 @@ Updates the configuration. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | Configuration | Yes | New configuration. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the configuration is updated, **err**is undefined; otherwise, **err** is an error object. |
+| config | [Configuration](../../apis-arkui/arkts-components/arkts-arkui-configuration-i.md) | Yes | New configuration. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the configuration is updated, **err** is undefined; otherwise, **err** is an error object. |
 
 
 ## updateConfiguration
@@ -44,6 +46,8 @@ Updates the configuration. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-abilityManager-function updateConfiguration(config: Configuration): Promise<void>--><!--Device-abilityManager-function updateConfiguration(config: Configuration): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -52,11 +56,11 @@ Updates the configuration. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | Configuration | Yes | New configuration. |
+| config | [Configuration](../../apis-arkui/arkts-components/arkts-arkui-configuration-i.md) | Yes | New configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 

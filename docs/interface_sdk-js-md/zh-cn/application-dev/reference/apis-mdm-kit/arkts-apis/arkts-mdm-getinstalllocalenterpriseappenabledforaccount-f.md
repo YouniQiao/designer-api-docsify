@@ -1,5 +1,11 @@
 # getInstallLocalEnterpriseAppEnabledForAccount
 
+## 导入模块
+
+```TypeScript
+import { systemManager } from '@kit.MDMKit';
+```
+
 ## getInstallLocalEnterpriseAppEnabledForAccount
 
 ```TypeScript
@@ -14,6 +20,8 @@ function getInstallLocalEnterpriseAppEnabledForAccount(admin: Want | null, accou
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-systemManager-function getInstallLocalEnterpriseAppEnabledForAccount(admin: Want | null, accountId: number): boolean--><!--Device-systemManager-function getInstallLocalEnterpriseAppEnabledForAccount(admin: Want | null, accountId: number): boolean-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -21,7 +29,7 @@ function getInstallLocalEnterpriseAppEnabledForAccount(admin: Want | null, accou
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | Want \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。<br/>当设备有多个MDM应用时，传入admin查询对应admin设置的策略。传入null时查询整机实际生效的策略。 |
-| accountId | number | 是 | 用户ID，取值范围：大于等于0。<br/>accountId可以通过[getOsAccountLocalId](@ohos.account.osAccount:osAccount.AccountManager.getOsAccountLocalId(callback:AsyncCallback&lt;int&gt;))等接口来获取<br>取值应为≥0的整数。 |
+| accountId | number | 是 | 用户ID，取值范围：大于等于0。<br/>accountId可以通过[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)等接口来获取<br>取值应为≥0的整数。 |
 
 **返回值：**
 

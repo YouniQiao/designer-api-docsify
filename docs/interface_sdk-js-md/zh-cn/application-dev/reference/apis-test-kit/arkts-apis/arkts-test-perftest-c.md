@@ -4,7 +4,15 @@ PerfTest类为白盒性能测试框架的总入口，提供测试任务创建、
 
 **起始版本：** 20
 
+<!--Device-unnamed-declare class PerfTest--><!--Device-unnamed-declare class PerfTest-End-->
+
 **系统能力：** SystemCapability.Test.PerfTest
+
+## 导入模块
+
+```TypeScript
+import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from '@kit.TestKit';
+```
 
 ## create
 
@@ -16,7 +24,9 @@ static create(strategy: PerfTestStrategy): PerfTest
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PerfTest-static create(strategy: PerfTestStrategy): PerfTest--><!--Device-PerfTest-static create(strategy: PerfTestStrategy): PerfTest-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -24,13 +34,13 @@ static create(strategy: PerfTestStrategy): PerfTest
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strategy | PerfTestStrategy | 是 | 性能测试执行策略。 |
+| strategy | [PerfTestStrategy](arkts-test-perfteststrategy-i.md) | 是 | 性能测试执行策略。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| PerfTest | 返回构造的PerfTest对象。 |
+| [PerfTest](arkts-test-perftest-c.md) | 返回构造的PerfTest对象。 |
 
 **错误码：**
 
@@ -81,7 +91,9 @@ destroy(): void
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PerfTest-destroy(): void--><!--Device-PerfTest-destroy(): void-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -127,7 +139,9 @@ getMeasureResult(metric: PerfMetric): PerfMeasureResult
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PerfTest-getMeasureResult(metric: PerfMetric): PerfMeasureResult--><!--Device-PerfTest-getMeasureResult(metric: PerfMetric): PerfMeasureResult-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -135,13 +149,13 @@ getMeasureResult(metric: PerfMetric): PerfMeasureResult
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| metric | PerfMetric | 是 | 性能指标。 |
+| metric | [PerfMetric](arkts-test-perfmetric-e.md) | 是 | 性能指标。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| PerfMeasureResult | - 性能指标对应测量结果数据。 |
+| [PerfMeasureResult](arkts-test-perfmeasureresult-i.md) | - 性能指标对应测量结果数据。 |
 
 **错误码：**
 
@@ -187,7 +201,9 @@ run(): Promise<void>
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PerfTest-run(): Promise<void>--><!--Device-PerfTest-run(): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -195,7 +211,7 @@ run(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -203,7 +219,7 @@ run(): Promise<void>
 | --- | --- |
 | [32400004](../errorcode-perftest.md#32400004-执行回调函数失败) | Failed to execute the callback. Possible causes: 1. An exception is thrown in the callback. 2. Callback execution timed out. |
 | [32400005](../errorcode-perftest.md#32400005-采集性能数据失败) | Failed to collect metric data. |
-| [32400007](../errorcode-perftest.md#32400007-接口不支持并行调用) | The API does not support concurrent calls. |
+| [32400007](../errorcode-perftest.md#32400007-接口不支持并行调用) | The API does not support concurrent calls.* |
 
 **示例：**
 

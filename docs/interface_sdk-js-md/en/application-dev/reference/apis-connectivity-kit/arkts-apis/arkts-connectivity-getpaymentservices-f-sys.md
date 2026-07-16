@@ -20,6 +20,8 @@ Gets all payment services.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-cardEmulation-function getPaymentServices(): AbilityInfo[]--><!--Device-cardEmulation-function getPaymentServices(): AbilityInfo[]-End-->
+
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Gets all payment services.
 
 | Type | Description |
 | --- | --- |
-| AbilityInfo[] | Returns all payment services. |
+| [AbilityInfo](../../apis-ability-kit/arkts-apis/arkts-ability-abilityinfo-i.md)[] | Returns all payment services. |
 
 **Error codes:**
 

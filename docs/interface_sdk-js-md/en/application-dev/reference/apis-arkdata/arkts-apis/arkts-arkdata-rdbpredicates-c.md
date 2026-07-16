@@ -1,10 +1,10 @@
 # RdbPredicates
 
-Defines the predicates for an RDB store. This class determines whether the conditional expression for the RDB store
-is true or false. Multiple predicates statements can be concatenated by using **and()** by default.
-**RdbPredicates** cannot be passed across threads using Sendable.
+Defines the predicates for an RDB store. This class determines whether the conditional expression for the RDB store is true or false. Multiple predicates statements can be concatenated by using **and()** by default.**RdbPredicates** cannot be passed across threads using Sendable.
 
 **Since:** 9
+
+<!--Device-relationalStore-class RdbPredicates--><!--Device-relationalStore-class RdbPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -24,13 +24,15 @@ Creates an **RdbPredicates** object to add the AND condition.
 
 **Since:** 9
 
+<!--Device-RdbPredicates-and(): RdbPredicates--><!--Device-RdbPredicates-and(): RdbPredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 ## beginWrap
 
@@ -42,13 +44,15 @@ Creates an **RdbPredicates** object to add a left parenthesis.
 
 **Since:** 9
 
+<!--Device-RdbPredicates-beginWrap(): RdbPredicates--><!--Device-RdbPredicates-beginWrap(): RdbPredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 ## beginsWith
 
@@ -56,10 +60,11 @@ Creates an **RdbPredicates** object to add a left parenthesis.
 beginsWith(field: string, value: string): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records in the specified column that begin with the given
-value.
+Creates an **RdbPredicates** object to search for the records in the specified column that begin with the given value.
 
 **Since:** 9
+
+<!--Device-RdbPredicates-beginsWith(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-beginsWith(field: string, value: string): RdbPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -74,7 +79,7 @@ value.
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -88,10 +93,11 @@ value.
 between(field: string, low: ValueType, high: ValueType): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records that are within the given range (including the min.
-and max. values) in the specified column.
+Creates an **RdbPredicates** object to search for the records that are within the given range (including the min.and max. values) in the specified column.
 
 **Since:** 9
+
+<!--Device-RdbPredicates-between(field: string, low: ValueType, high: ValueType): RdbPredicates--><!--Device-RdbPredicates-between(field: string, low: ValueType, high: ValueType): RdbPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -100,14 +106,14 @@ and max. values) in the specified column.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| low | ValueType | Yes | Minimum value of the range to set. |
-| high | ValueType | Yes | Maximum value of the range to set. |
+| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Minimum value of the range to set. |
+| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Maximum value of the range to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -124,6 +130,8 @@ constructor(name: string)
 Defines a constructor used to create an **RdbPredicates** object.
 
 **Since:** 9
+
+<!--Device-RdbPredicates-constructor(name: string)--><!--Device-RdbPredicates-constructor(name: string)-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -145,10 +153,11 @@ Defines a constructor used to create an **RdbPredicates** object.
 contains(field: string, value: string): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records in the specified column that contain the given
-value.
+Creates an **RdbPredicates** object to search for the records in the specified column that contain the given value.
 
 **Since:** 9
+
+<!--Device-RdbPredicates-contains(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-contains(field: string, value: string): RdbPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -163,7 +172,7 @@ value.
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -181,13 +190,15 @@ Creates an **RdbPredicates** object to filter out duplicate records.
 
 **Since:** 9
 
+<!--Device-RdbPredicates-distinct(): RdbPredicates--><!--Device-RdbPredicates-distinct(): RdbPredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object that can filter out duplicate records. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object that can filter out duplicate records. |
 
 ## endWrap
 
@@ -199,13 +210,15 @@ Creates an **RdbPredicates** object to add a right parenthesis.
 
 **Since:** 9
 
+<!--Device-RdbPredicates-endWrap(): RdbPredicates--><!--Device-RdbPredicates-endWrap(): RdbPredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 ## endsWith
 
@@ -213,10 +226,11 @@ Creates an **RdbPredicates** object to add a right parenthesis.
 endsWith(field: string, value: string): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records in the specified column that end with the given
-value.
+Creates an **RdbPredicates** object to search for the records in the specified column that end with the given value.
 
 **Since:** 9
+
+<!--Device-RdbPredicates-endsWith(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-endsWith(field: string, value: string): RdbPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -231,7 +245,7 @@ value.
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -245,10 +259,11 @@ value.
 equalTo(field: string, value: ValueType): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records in the specified column that are equal to the given
-value.
+Creates an **RdbPredicates** object to search for the records in the specified column that are equal to the given value.
 
 **Since:** 9
+
+<!--Device-RdbPredicates-equalTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-equalTo(field: string, value: ValueType): RdbPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -257,13 +272,13 @@ value.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | ValueType | Yes | Value to match. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -277,10 +292,11 @@ value.
 glob(field: string, value: string): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records in the specified column that match the given
-string.
+Creates an **RdbPredicates** object to search for the records in the specified column that match the given string.
 
 **Since:** 9
+
+<!--Device-RdbPredicates-glob(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-glob(field: string, value: string): RdbPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -289,13 +305,13 @@ string.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | string | Yes | Value to match.<br>Wildcards are supported. An asterisk (*) indicates zero, one, ormultiple digits or characters, and a question mark (?) indicates a single digit or character. |
+| value | string | Yes | Value to match.<br>Wildcards are supported. An asterisk (*) indicates zero, one, or multiple digits or characters, and a question mark (?) indicates a single digit or character. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -309,10 +325,11 @@ string.
 greaterThan(field: string, value: ValueType): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records that are greater than the given value in the
-specified column.
+Creates an **RdbPredicates** object to search for the records that are greater than the given value in the specified column.
 
 **Since:** 9
+
+<!--Device-RdbPredicates-greaterThan(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-greaterThan(field: string, value: ValueType): RdbPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -321,13 +338,13 @@ specified column.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | ValueType | Yes | Value to match. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -341,10 +358,11 @@ specified column.
 greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records that are greater than or equal to the given value
-in the specified column.
+Creates an **RdbPredicates** object to search for the records that are greater than or equal to the given value in the specified column.
 
 **Since:** 9
+
+<!--Device-RdbPredicates-greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -353,13 +371,13 @@ in the specified column.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | ValueType | Yes | Value to match. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -377,19 +395,21 @@ Creates a **RdbPredicates** object to group the query results based on the speci
 
 **Since:** 9
 
+<!--Device-RdbPredicates-groupBy(fields: Array<string>): RdbPredicates--><!--Device-RdbPredicates-groupBy(fields: Array<string>): RdbPredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fields | Array&lt;string&gt; | Yes | Names of columns to group. |
+| fields | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Names of columns to group. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | Predicates that group rows with the same value. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | Predicates that group rows with the same value. |
 
 **Error codes:**
 
@@ -407,20 +427,22 @@ Filters for group data that meets the conditions.
 
 **Since:** 20
 
+<!--Device-RdbPredicates-having(conditions: string, args?: Array<ValueType>): RdbPredicates--><!--Device-RdbPredicates-having(conditions: string, args?: Array<ValueType>): RdbPredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| conditions | string | Yes | Condition used to filter the data obtained using[groupBy](arkts-arkdata-rdbpredicates-c.md#groupby-1). This parameter cannot be empty and must be used with[groupBy](arkts-arkdata-rdbpredicates-c.md#groupby-1). |
-| args | Array&lt;ValueType&gt; | No | Parameters used in **conditions**, which replace the placeholder in theconditional statement. If this parameter is not specified, the default value is an empty array. |
+| conditions | string | Yes | Condition used to filter the data obtained using [groupBy](arkts-arkdata-rdbpredicates-c.md#groupby-1). This parameter cannot be empty and must be used with [groupBy](arkts-arkdata-rdbpredicates-c.md#groupby-1). |
+| args | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ValueType> | No | Parameters used in **conditions**, which replace the placeholder in the conditional statement. If this parameter is not specified, the default value is an empty array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -434,16 +456,17 @@ Filters for group data that meets the conditions.
 in(field: string, value: Array<ValueType>): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records that are in the given range in the specified
-column.
+Creates an **RdbPredicates** object to search for the records that are in the given range in the specified column.
 
-> **NOTE**
->
-> The **value** array cannot be empty; otherwise, this condition becomes invalid. As a result, the operation (
-> such as full query, update, or deletion) is performed on all data. Before calling this API, check whether the
+> **NOTE**  
+>  
+> The **value** array cannot be empty; otherwise, this condition becomes invalid. As a result, the operation (  
+> such as full query, update, or deletion) is performed on all data. Before calling this API, check whether the  
 > **value** array is empty to avoid misoperations.
 
 **Since:** 9
+
+<!--Device-RdbPredicates-in(field: string, value: Array<ValueType>): RdbPredicates--><!--Device-RdbPredicates-in(field: string, value: Array<ValueType>): RdbPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -452,13 +475,13 @@ column.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | Array&lt;ValueType&gt; | Yes | Array of **ValueType**s to match. |
+| value | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ValueType> | Yes | Array of **ValueType**s to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -472,10 +495,11 @@ column.
 inAllDevices(): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to specify all remote devices on the network to connect during distributed
-database sync.
+Creates an **RdbPredicates** object to specify all remote devices on the network to connect during distributed database sync.
 
 **Since:** 9
+
+<!--Device-RdbPredicates-inAllDevices(): RdbPredicates--><!--Device-RdbPredicates-inAllDevices(): RdbPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -483,7 +507,7 @@ database sync.
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 ## inDevices
 
@@ -491,17 +515,18 @@ database sync.
 inDevices(devices: Array<string>): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to specify the remote devices to connect on the network during distributed
-database sync.
+Creates an **RdbPredicates** object to specify the remote devices to connect on the network during distributed database sync.
 
-> **NOTE**
->
-> **devices** can be obtained by using [deviceManager.getAvailableDeviceListSync]
-> {@link @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.getAvailableDeviceListSync}.
-> When calling **sync()**, you need to call **inDevices** to specify the devices. If **inDevices** is not used,
+> **NOTE**  
+>  
+> **devices** can be obtained by using [deviceManager.getAvailableDeviceListSync]  
+> {@link @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.getAvailableDeviceListSync}.  
+> When calling **sync()**, you need to call **inDevices** to specify the devices. If **inDevices** is not used,  
 > data will be synced to all devices on the network by default.
 
 **Since:** 9
+
+<!--Device-RdbPredicates-inDevices(devices: Array<string>): RdbPredicates--><!--Device-RdbPredicates-inDevices(devices: Array<string>): RdbPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -509,13 +534,13 @@ database sync.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| devices | Array&lt;string&gt; | Yes | IDs of the remote devices to connect. |
+| devices | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | IDs of the remote devices to connect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -533,6 +558,8 @@ Creates a **RdbPredicates** object to specify the index column.
 
 **Since:** 9
 
+<!--Device-RdbPredicates-indexedBy(field: string): RdbPredicates--><!--Device-RdbPredicates-indexedBy(field: string): RdbPredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
@@ -545,7 +572,7 @@ Creates a **RdbPredicates** object to specify the index column.
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -563,6 +590,8 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Since:** 9
 
+<!--Device-RdbPredicates-isNotNull(field: string): RdbPredicates--><!--Device-RdbPredicates-isNotNull(field: string): RdbPredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
@@ -575,7 +604,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -593,6 +622,8 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Since:** 9
 
+<!--Device-RdbPredicates-isNull(field: string): RdbPredicates--><!--Device-RdbPredicates-isNull(field: string): RdbPredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
@@ -605,7 +636,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -619,10 +650,11 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 lessThan(field: string, value: ValueType): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records that are less than the given value in the specified
-column.
+Creates an **RdbPredicates** object to search for the records that are less than the given value in the specified column.
 
 **Since:** 9
+
+<!--Device-RdbPredicates-lessThan(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-lessThan(field: string, value: ValueType): RdbPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -631,13 +663,13 @@ column.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | ValueType | Yes | Value to match. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -651,10 +683,11 @@ column.
 lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records that are less than or equal to the given value in
-the specified column.
+Creates an **RdbPredicates** object to search for the records that are less than or equal to the given value in the specified column.
 
 **Since:** 9
+
+<!--Device-RdbPredicates-lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -663,13 +696,13 @@ the specified column.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | ValueType | Yes | Value to match. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -683,10 +716,11 @@ the specified column.
 like(field: string, value: string): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records in the specified column that are similar to the
-given value.
+Creates an **RdbPredicates** object to search for the records in the specified column that are similar to the given value.
 
 **Since:** 9
+
+<!--Device-RdbPredicates-like(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-like(field: string, value: string): RdbPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -695,13 +729,13 @@ given value.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | string | Yes | Condition for fuzzy match. Generally, this parameter is used together with a wildcard.A percent sign (%) represents any character of any length, and an underscore (_) represents a singlecharacter. |
+| value | string | Yes | Condition for fuzzy match. Generally, this parameter is used together with a wildcard.A percent sign (%) represents any character of any length, and an underscore (_) represents a single character. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -719,19 +753,21 @@ Creates a **RdbPredicates** object to limit the number of records.
 
 **Since:** 9
 
+<!--Device-RdbPredicates-limitAs(value: int): RdbPredicates--><!--Device-RdbPredicates-limitAs(value: int): RdbPredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Maximum number of data records. The value should be a positive integer. If a value lessthan or equal to **0** is specified, the number of records is not limited. |
+| value | number | Yes | Maximum number of data records. The value should be a positive integer. If a value less than or equal to **0** is specified, the number of records is not limited. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | Predicates that specify the maximum number of records. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | Predicates that specify the maximum number of records. |
 
 **Error codes:**
 
@@ -745,10 +781,11 @@ Creates a **RdbPredicates** object to limit the number of records.
 notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records that are out of the given range (excluding the min.
-and max. values) in the specified column.
+Creates an **RdbPredicates** object to search for the records that are out of the given range (excluding the min.and max. values) in the specified column.
 
 **Since:** 9
+
+<!--Device-RdbPredicates-notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates--><!--Device-RdbPredicates-notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -757,14 +794,14 @@ and max. values) in the specified column.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| low | ValueType | Yes | Minimum value of the range to set. |
-| high | ValueType | Yes | Maximum value of the range to set. |
+| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Minimum value of the range to set. |
+| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Maximum value of the range to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -778,10 +815,11 @@ and max. values) in the specified column.
 notContains(field: string, value: string): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records that do not contain the given value in the
-specified column.
+Creates an **RdbPredicates** object to search for the records that do not contain the given value in the specified column.
 
 **Since:** 12
+
+<!--Device-RdbPredicates-notContains(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-notContains(field: string, value: string): RdbPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -796,7 +834,7 @@ specified column.
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -810,10 +848,11 @@ specified column.
 notEqualTo(field: string, value: ValueType): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records in the specified column that are not equal to the
-given value.
+Creates an **RdbPredicates** object to search for the records in the specified column that are not equal to the given value.
 
 **Since:** 9
+
+<!--Device-RdbPredicates-notEqualTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-notEqualTo(field: string, value: ValueType): RdbPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -822,13 +861,13 @@ given value.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | ValueType | Yes | Value to match. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -842,10 +881,11 @@ given value.
 notIn(field: string, value: Array<ValueType>): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records that are out of the given range in the specified
-column.
+Creates an **RdbPredicates** object to search for the records that are out of the given range in the specified column.
 
 **Since:** 9
+
+<!--Device-RdbPredicates-notIn(field: string, value: Array<ValueType>): RdbPredicates--><!--Device-RdbPredicates-notIn(field: string, value: Array<ValueType>): RdbPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -854,13 +894,13 @@ column.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | Array&lt;ValueType&gt; | Yes | Array of **ValueType**s to match. |
+| value | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ValueType> | Yes | Array of **ValueType**s to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -874,10 +914,11 @@ column.
 notLike(field: string, value: string): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to search for the records in the specified column that are not similar to the
-given value.
+Creates an **RdbPredicates** object to search for the records in the specified column that are not similar to the given value.
 
 **Since:** 12
+
+<!--Device-RdbPredicates-notLike(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-notLike(field: string, value: string): RdbPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -886,13 +927,13 @@ given value.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | string | Yes | Condition for fuzzy match. Generally, this parameter is used together with a wildcard.A percent sign (%) represents any character of any length, and an underscore (_) represents a singlecharacter. |
+| value | string | Yes | Condition for fuzzy match. Generally, this parameter is used together with a wildcard.A percent sign (%) represents any character of any length, and an underscore (_) represents a single character. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -906,11 +947,11 @@ given value.
 offsetAs(rowOffset: number): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to set the start position of the query result. This API must be used together
-with **limitAs**. Otherwise, no result will be returned. To query all rows after the specified offset, pass in a
-parameter less than or equal to **0** in **limitAs**.
+Creates an **RdbPredicates** object to set the start position of the query result. This API must be used together with **limitAs**. Otherwise, no result will be returned. To query all rows after the specified offset, pass in a parameter less than or equal to **0** in **limitAs**.
 
 **Since:** 9
+
+<!--Device-RdbPredicates-offsetAs(rowOffset: int): RdbPredicates--><!--Device-RdbPredicates-offsetAs(rowOffset: int): RdbPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -918,13 +959,13 @@ parameter less than or equal to **0** in **limitAs**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rowOffset | number | Yes | Start position of the query result. By default, the start position is the beginning ofthe result set. If **rowOffset** is a negative number, the start position is the beginning of the result set.If **rowOffset** exceeds the end of the result set, the query result is empty. |
+| rowOffset | number | Yes | Start position of the query result. By default, the start position is the beginning of the result set. If **rowOffset** is a negative number, the start position is the beginning of the result set.If **rowOffset** exceeds the end of the result set, the query result is empty. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | Predicates that specify the start position of the returned result. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | Predicates that specify the start position of the returned result. |
 
 **Error codes:**
 
@@ -942,13 +983,15 @@ Creates an **RdbPredicates** object to add the OR condition.
 
 **Since:** 9
 
+<!--Device-RdbPredicates-or(): RdbPredicates--><!--Device-RdbPredicates-or(): RdbPredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 ## orderByAsc
 
@@ -959,6 +1002,8 @@ orderByAsc(field: string): RdbPredicates
 Creates an **RdbPredicates** object to sort the records in the specified column in ascending order.
 
 **Since:** 9
+
+<!--Device-RdbPredicates-orderByAsc(field: string): RdbPredicates--><!--Device-RdbPredicates-orderByAsc(field: string): RdbPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -972,7 +1017,7 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -990,6 +1035,8 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 **Since:** 9
 
+<!--Device-RdbPredicates-orderByDesc(field: string): RdbPredicates--><!--Device-RdbPredicates-orderByDesc(field: string): RdbPredicates-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
@@ -1002,7 +1049,7 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 | Type | Description |
 | --- | --- |
-| RdbPredicates | **RdbPredicates** object created. |
+| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
 **Error codes:**
 

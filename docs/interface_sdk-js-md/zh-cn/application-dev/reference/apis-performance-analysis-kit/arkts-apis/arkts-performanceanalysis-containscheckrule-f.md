@@ -1,5 +1,11 @@
 # containsCheckRule
 
+## 导入模块
+
+```TypeScript
+import { hichecker } from '@kit.PerformanceAnalysisKit';
+```
+
 ## containsCheckRule
 
 ```TypeScript
@@ -9,6 +15,8 @@ function containsCheckRule(rule: bigint) : boolean
 ��ǰ�����ӵĹ������Ƿ������ĳһ���ض��Ĺ����������Ĺ��򼶱�Ϊ�̼߳�������ڵ�ǰ�߳��н��в�ѯ��
 
 **起始版本：** 9
+
+<!--Device-hichecker-function containsCheckRule(rule: bigint) : boolean--><!--Device-hichecker-function containsCheckRule(rule: bigint) : boolean-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 

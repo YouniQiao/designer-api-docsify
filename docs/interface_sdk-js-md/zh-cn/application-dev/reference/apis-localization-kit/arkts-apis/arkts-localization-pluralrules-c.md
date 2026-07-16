@@ -8,7 +8,15 @@
 
 **替代接口：** org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules)
 
+<!--Device-intl-export class PluralRules--><!--Device-intl-export class PluralRules-End-->
+
 **系统能力：** SystemCapability.Global.I18n
+
+## 导入模块
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+```
 
 ## constructor
 
@@ -24,7 +32,9 @@ constructor()
 
 **替代接口：** org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PluralRules-constructor()--><!--Device-PluralRules-constructor()-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -52,7 +62,9 @@ constructor(locale: string | Array<string>, options?: PluralRulesOptions)
 
 **替代接口：** org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PluralRules-constructor(locale: string | Array<string>, options?: PluralRulesOptions)--><!--Device-PluralRules-constructor(locale: string | Array<string>, options?: PluralRulesOptions)-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -60,8 +72,8 @@ constructor(locale: string | Array<string>, options?: PluralRulesOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
-| options | PluralRulesOptions | 否 | 创建单复数对象时设置的配置项。<br>默认值：所有属性都取默认值时的配置项。 |
+| locale | string \| Array<string> | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
+| options | [PluralRulesOptions](arkts-localization-pluralrulesoptions-i.md) | 否 | 创建单复数对象时设置的配置项。<br>默认值：所有属性都取默认值时的配置项。 |
 
 **示例：**
 
@@ -87,7 +99,9 @@ select(n: number): string
 
 **替代接口：** org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select)
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PluralRules-select(n: double): string--><!--Device-PluralRules-select(n: double): string-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 

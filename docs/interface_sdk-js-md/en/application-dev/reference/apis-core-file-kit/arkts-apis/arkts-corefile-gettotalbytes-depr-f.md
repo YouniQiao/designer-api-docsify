@@ -6,14 +6,15 @@
 function getTotalBytes(path: string, callback: AsyncCallback<number>): void
 ```
 
-Obtains the total size of the specified file system, in bytes. This API uses an asynchronous callback to return the
-result.
+Obtains the total size of the specified file system, in bytes. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** getTotalBytes
+
+<!--Device-Statfs-function getTotalBytes(path: string, callback: AsyncCallback<number>): void--><!--Device-Statfs-function getTotalBytes(path: string, callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -22,7 +23,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the file system. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the total size obtained, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the total size obtained, in bytes. |
 
 **Example**
 
@@ -56,6 +57,8 @@ Obtains the total size of the specified file system, in byte. This API uses a pr
 
 **Substitutes:** getTotalBytes
 
+<!--Device-Statfs-function getTotalBytes(path: string): Promise<number>--><!--Device-Statfs-function getTotalBytes(path: string): Promise<number>-End-->
+
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
@@ -68,7 +71,7 @@ Obtains the total size of the specified file system, in byte. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the total size obtained, in bytes. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the total size obtained, in bytes. |
 
 **Example**
 

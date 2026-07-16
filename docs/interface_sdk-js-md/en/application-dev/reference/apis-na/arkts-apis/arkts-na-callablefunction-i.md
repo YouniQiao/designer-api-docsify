@@ -2,6 +2,8 @@
 
 **Inheritance/Implementation:** CallableFunction extends [Function](arkts-na-function-i.md)
 
+<!--Device-unnamed-interface CallableFunction extends Function--><!--Device-unnamed-interface CallableFunction extends Function-End-->
+
 ## apply
 
 ```TypeScript
@@ -10,11 +12,13 @@ apply<T, R>(this: (this: T) => R, thisArg: T): R
 
 Calls the function with the specified object as the this value and the elements of specified array as the arguments.
 
+<!--Device-CallableFunction-apply<T, R>(this: (this: T) => R, thisArg: T): R--><!--Device-CallableFunction-apply<T, R>(this: (this: T) => R, thisArg: T): R-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | (this: T) =&gt; R | Yes |  |
+| this | (this: T) => R | Yes |  |
 | thisArg | T | Yes |  |
 
 **Return value:**
@@ -29,11 +33,13 @@ Calls the function with the specified object as the this value and the elements 
 apply<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, args: A): R
 ```
 
+<!--Device-CallableFunction-apply<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, args: A): R--><!--Device-CallableFunction-apply<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, args: A): R-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | (this: T, ...args: A) =&gt; R | Yes |  |
+| this | (this: T, ...args: A) => R | Yes |  |
 | thisArg | T | Yes |  |
 | args | A | Yes |  |
 
@@ -49,21 +55,22 @@ apply<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, args:
 bind<T>(this: T, thisArg: ThisParameterType<T>): OmitThisParameter<T>
 ```
 
-For a given function, creates a bound function that has the same body as the original function.
-The this object of the bound function is associated with the specified object, and has the specified initial parameters.
+For a given function, creates a bound function that has the same body as the original function.The this object of the bound function is associated with the specified object, and has the specified initial parameters.
+
+<!--Device-CallableFunction-bind<T>(this: T, thisArg: ThisParameterType<T>): OmitThisParameter<T>--><!--Device-CallableFunction-bind<T>(this: T, thisArg: ThisParameterType<T>): OmitThisParameter<T>-End-->
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | this | T | Yes |  |
-| thisArg | ThisParameterType&lt;T&gt; | Yes |  |
+| thisArg | [ThisParameterType](arkts-na-thisparametertype-t.md)<T> | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| OmitThisParameter&lt;T&gt; |  |
+| [OmitThisParameter](arkts-na-omitthisparameter-t.md)<T> |  |
 
 ## bind
 
@@ -71,11 +78,13 @@ The this object of the bound function is associated with the specified object, a
 bind<T, A0, A extends any[], R>(this: (this: T, arg0: A0, ...args: A) => R, thisArg: T, arg0: A0): (...args: A) => R
 ```
 
+<!--Device-CallableFunction-bind<T, A0, A extends any[], R>(this: (this: T, arg0: A0, ...args: A) => R, thisArg: T, arg0: A0): (...args: A) => R--><!--Device-CallableFunction-bind<T, A0, A extends any[], R>(this: (this: T, arg0: A0, ...args: A) => R, thisArg: T, arg0: A0): (...args: A) => R-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | (this: T, arg0: A0, ...args: A) =&gt; R | Yes |  |
+| this | (this: T, arg0: A0, ...args: A) => R | Yes |  |
 | thisArg | T | Yes |  |
 | arg0 | A0 | Yes |  |
 
@@ -83,7 +92,7 @@ bind<T, A0, A extends any[], R>(this: (this: T, arg0: A0, ...args: A) => R, this
 
 | Type | Description |
 | --- | --- |
-| (...args: A) =&gt; R |  |
+| (...args: A) => R |  |
 
 ## bind
 
@@ -91,11 +100,13 @@ bind<T, A0, A extends any[], R>(this: (this: T, arg0: A0, ...args: A) => R, this
 bind<T, A0, A1, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, ...args: A) => R, thisArg: T, arg0: A0, arg1: A1): (...args: A) => R
 ```
 
+<!--Device-CallableFunction-bind<T, A0, A1, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, ...args: A) => R, thisArg: T, arg0: A0, arg1: A1): (...args: A) => R--><!--Device-CallableFunction-bind<T, A0, A1, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, ...args: A) => R, thisArg: T, arg0: A0, arg1: A1): (...args: A) => R-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | (this: T, arg0: A0, arg1: A1, ...args: A) =&gt; R | Yes |  |
+| this | (this: T, arg0: A0, arg1: A1, ...args: A) => R | Yes |  |
 | thisArg | T | Yes |  |
 | arg0 | A0 | Yes |  |
 | arg1 | A1 | Yes |  |
@@ -104,7 +115,7 @@ bind<T, A0, A1, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, ...args:
 
 | Type | Description |
 | --- | --- |
-| (...args: A) =&gt; R |  |
+| (...args: A) => R |  |
 
 ## bind
 
@@ -112,11 +123,13 @@ bind<T, A0, A1, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, ...args:
 bind<T, A0, A1, A2, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, arg2: A2, ...args: A) => R, thisArg: T, arg0: A0, arg1: A1, arg2: A2): (...args: A) => R
 ```
 
+<!--Device-CallableFunction-bind<T, A0, A1, A2, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, arg2: A2, ...args: A) => R, thisArg: T, arg0: A0, arg1: A1, arg2: A2): (...args: A) => R--><!--Device-CallableFunction-bind<T, A0, A1, A2, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, arg2: A2, ...args: A) => R, thisArg: T, arg0: A0, arg1: A1, arg2: A2): (...args: A) => R-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | (this: T, arg0: A0, arg1: A1, arg2: A2, ...args: A) =&gt; R | Yes |  |
+| this | (this: T, arg0: A0, arg1: A1, arg2: A2, ...args: A) => R | Yes |  |
 | thisArg | T | Yes |  |
 | arg0 | A0 | Yes |  |
 | arg1 | A1 | Yes |  |
@@ -126,7 +139,7 @@ bind<T, A0, A1, A2, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, arg2
 
 | Type | Description |
 | --- | --- |
-| (...args: A) =&gt; R |  |
+| (...args: A) => R |  |
 
 ## bind
 
@@ -134,11 +147,13 @@ bind<T, A0, A1, A2, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, arg2
 bind<T, A0, A1, A2, A3, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...args: A) => R, thisArg: T, arg0: A0, arg1: A1, arg2: A2, arg3: A3): (...args: A) => R
 ```
 
+<!--Device-CallableFunction-bind<T, A0, A1, A2, A3, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...args: A) => R, thisArg: T, arg0: A0, arg1: A1, arg2: A2, arg3: A3): (...args: A) => R--><!--Device-CallableFunction-bind<T, A0, A1, A2, A3, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...args: A) => R, thisArg: T, arg0: A0, arg1: A1, arg2: A2, arg3: A3): (...args: A) => R-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | (this: T, arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...args: A) =&gt; R | Yes |  |
+| this | (this: T, arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...args: A) => R | Yes |  |
 | thisArg | T | Yes |  |
 | arg0 | A0 | Yes |  |
 | arg1 | A1 | Yes |  |
@@ -149,7 +164,7 @@ bind<T, A0, A1, A2, A3, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, 
 
 | Type | Description |
 | --- | --- |
-| (...args: A) =&gt; R |  |
+| (...args: A) => R |  |
 
 ## bind
 
@@ -157,11 +172,13 @@ bind<T, A0, A1, A2, A3, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, 
 bind<T, AX, R>(this: (this: T, ...args: AX[]) => R, thisArg: T, ...args: AX[]): (...args: AX[]) => R
 ```
 
+<!--Device-CallableFunction-bind<T, AX, R>(this: (this: T, ...args: AX[]) => R, thisArg: T, ...args: AX[]): (...args: AX[]) => R--><!--Device-CallableFunction-bind<T, AX, R>(this: (this: T, ...args: AX[]) => R, thisArg: T, ...args: AX[]): (...args: AX[]) => R-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | (this: T, ...args: AX[]) =&gt; R | Yes |  |
+| this | (this: T, ...args: AX[]) => R | Yes |  |
 | thisArg | T | Yes |  |
 | args | AX[] | Yes |  |
 
@@ -169,7 +186,7 @@ bind<T, AX, R>(this: (this: T, ...args: AX[]) => R, thisArg: T, ...args: AX[]): 
 
 | Type | Description |
 | --- | --- |
-| (...args: AX[]) =&gt; R |  |
+| (...args: AX[]) => R |  |
 
 ## call
 
@@ -179,11 +196,13 @@ call<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, ...arg
 
 Calls the function with the specified object as the this value and the specified rest arguments as the arguments.
 
+<!--Device-CallableFunction-call<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, ...args: A): R--><!--Device-CallableFunction-call<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, ...args: A): R-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | (this: T, ...args: A) =&gt; R | Yes |  |
+| this | (this: T, ...args: A) => R | Yes |  |
 | thisArg | T | Yes |  |
 | args | A | Yes |  |
 

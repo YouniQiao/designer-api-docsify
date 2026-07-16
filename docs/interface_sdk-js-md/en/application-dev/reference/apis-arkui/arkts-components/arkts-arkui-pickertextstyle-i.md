@@ -4,6 +4,8 @@ Provide an interface for the text style of picker
 
 **Since:** 11
 
+<!--Device-unnamed-declare interface PickerTextStyle--><!--Device-unnamed-declare interface PickerTextStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## color
@@ -22,6 +24,8 @@ Font color.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PickerTextStyle-color?: ResourceColor--><!--Device-PickerTextStyle-color?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## font
@@ -39,6 +43,8 @@ Text style.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PickerTextStyle-font?: Font--><!--Device-PickerTextStyle-font?: Font-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -20,6 +20,8 @@ Query all printer ppds.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-print-function queryAllPrinterPpds(): Promise<PpdInfo[]>--><!--Device-print-function queryAllPrinterPpds(): Promise<PpdInfo[]>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Query all printer ppds.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PpdInfo[]&gt; | - Promise that resolves with all printer ppd info. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PpdInfo[]> | - Promise that resolves with all printer ppd info. |
 
 **Error codes:**
 

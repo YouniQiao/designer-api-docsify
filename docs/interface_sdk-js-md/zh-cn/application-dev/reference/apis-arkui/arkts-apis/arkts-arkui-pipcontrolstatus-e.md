@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-PiPWindow-enum PiPControlStatus--><!--Device-PiPWindow-enum PiPControlStatus-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## PLAY
@@ -16,7 +18,9 @@ PLAY = 1
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PiPControlStatus-PLAY = 1--><!--Device-PiPControlStatus-PLAY = 1-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -30,7 +34,9 @@ PAUSE = 0
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PiPControlStatus-PAUSE = 0--><!--Device-PiPControlStatus-PAUSE = 0-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -44,7 +50,9 @@ OPEN = 1
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PiPControlStatus-OPEN = 1--><!--Device-PiPControlStatus-OPEN = 1-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -58,7 +66,9 @@ CLOSE = 0
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PiPControlStatus-CLOSE = 0--><!--Device-PiPControlStatus-CLOSE = 0-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 

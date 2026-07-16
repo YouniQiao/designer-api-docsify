@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-notificationManager-export interface SystemLiveViewSubscriber--><!--Device-notificationManager-export interface SystemLiveViewSubscriber-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -25,6 +27,8 @@ onResponse?: (notificationId: number, buttonOptions: ButtonOptions) => void
 **类型：** (notificationId: number, buttonOptions: ButtonOptions) => void
 
 **起始版本：** 11
+
+<!--Device-SystemLiveViewSubscriber-onResponse?: (notificationId: int, buttonOptions: ButtonOptions) => void--><!--Device-SystemLiveViewSubscriber-onResponse?: (notificationId: int, buttonOptions: ButtonOptions) => void-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

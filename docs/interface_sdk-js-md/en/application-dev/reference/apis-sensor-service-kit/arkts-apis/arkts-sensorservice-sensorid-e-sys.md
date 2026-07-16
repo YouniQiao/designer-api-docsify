@@ -4,6 +4,8 @@ Enumerates the sensor types.
 
 **Since:** 9
 
+<!--Device-sensor-enum SensorId--><!--Device-sensor-enum SensorId-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## COLOR
@@ -17,6 +19,8 @@ Color sensor.
 System API: This is a system API.
 
 **Since:** 10
+
+<!--Device-SensorId-COLOR = 14--><!--Device-SensorId-COLOR = 14-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -33,6 +37,8 @@ Sodium Adsorption Ratio (SAR) sensor.
 System API: This is a system API.
 
 **Since:** 10
+
+<!--Device-SensorId-SAR = 15--><!--Device-SensorId-SAR = 15-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 

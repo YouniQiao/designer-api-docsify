@@ -1,5 +1,11 @@
 # setVoiceMailInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## setVoiceMailInfo
 
 ```TypeScript
@@ -12,6 +18,8 @@ Sets the voice mail information.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function setVoiceMailInfo(slotId: int, mailName: string, mailNumber: string, callback: AsyncCallback<void>): void--><!--Device-sim-function setVoiceMailInfo(slotId: int, mailName: string, mailNumber: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -23,7 +31,7 @@ Sets the voice mail information.
 | slotId | number | 是 | Indicates the card slot index number,ranging from {@code 0} to the maximum card slot index number supported by the device. |
 | mailName | string | 是 | Indicates the name of voice mail. |
 | mailNumber | string | 是 | Indicates the number of voice mail. |
-| callback | AsyncCallback&lt;void&gt; | 是 | The callback of setVoiceMailInfo. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | The callback of setVoiceMailInfo. |
 
 **错误码：**
 
@@ -64,6 +72,8 @@ Sets the voice mail information.
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-sim-function setVoiceMailInfo(slotId: int, mailName: string, mailNumber: string): Promise<void>--><!--Device-sim-function setVoiceMailInfo(slotId: int, mailName: string, mailNumber: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -80,7 +90,7 @@ Sets the voice mail information.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the setVoiceMailInfo. |
+| Promise<void> | The promise returned by the setVoiceMailInfo. |
 
 **错误码：**
 

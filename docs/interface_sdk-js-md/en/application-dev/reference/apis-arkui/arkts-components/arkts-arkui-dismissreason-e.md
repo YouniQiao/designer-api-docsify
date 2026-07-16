@@ -4,6 +4,8 @@ Enumerates the reasons for popup dismissal.
 
 **Since:** 12
 
+<!--Device-unnamed-declare enum DismissReason--><!--Device-unnamed-declare enum DismissReason-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PRESS_BACK
@@ -19,6 +21,8 @@ Touching the **Back** button, swiping left or right on the screen, or pressing t
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DismissReason-PRESS_BACK = 0--><!--Device-DismissReason-PRESS_BACK = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +40,8 @@ Touching the mask.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DismissReason-TOUCH_OUTSIDE = 1--><!--Device-DismissReason-TOUCH_OUTSIDE = 1-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CLOSE_BUTTON
@@ -51,6 +57,8 @@ Touching the close button.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DismissReason-CLOSE_BUTTON = 2--><!--Device-DismissReason-CLOSE_BUTTON = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,6 +80,8 @@ This API is effective only in [sheet transition](../../apis-ability-kit/arkts-ap
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DismissReason-SLIDE_DOWN = 3--><!--Device-DismissReason-SLIDE_DOWN = 3-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SLIDE
@@ -80,8 +90,7 @@ This API is effective only in [sheet transition](../../apis-ability-kit/arkts-ap
 SLIDE = 4
 ```
 
-Swiping left or right on the screen. By default, swiping right dismisses the popup, while swiping left is used in
-the mirror scenario. This setting is not user-defined.
+Swiping left or right on the screen. By default, swiping right dismisses the popup, while swiping left is used in the mirror scenario. This setting is not user-defined.
 
 **NOTE**
 
@@ -92,6 +101,8 @@ This API is effective only in [sheet transition](../../apis-ability-kit/arkts-ap
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-DismissReason-SLIDE = 4--><!--Device-DismissReason-SLIDE = 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

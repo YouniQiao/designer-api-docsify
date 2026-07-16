@@ -8,6 +8,8 @@ Describes the parameters of the Gatt client's characteristic read request.
 
 **Substitutes:** CharacteristicReadRequest
 
+<!--Device-bluetoothManager-interface CharacteristicReadRequest--><!--Device-bluetoothManager-interface CharacteristicReadRequest-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -32,6 +34,8 @@ The UUID of a CharacteristicReadRequest instance
 
 **Substitutes:** characteristicUuid
 
+<!--Device-CharacteristicReadRequest-characteristicUuid: string--><!--Device-CharacteristicReadRequest-characteristicUuid: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## deviceId
@@ -49,6 +53,8 @@ Indicates the address of the client that initiates the read request
 **Deprecated since:** 10
 
 **Substitutes:** deviceId
+
+<!--Device-CharacteristicReadRequest-deviceId: string--><!--Device-CharacteristicReadRequest-deviceId: string-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -68,6 +74,8 @@ Indicates the byte offset of the start position for reading characteristic value
 
 **Substitutes:** offset
 
+<!--Device-CharacteristicReadRequest-offset: number--><!--Device-CharacteristicReadRequest-offset: number-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## serviceUuid
@@ -86,6 +94,8 @@ The UUID of the service to which the characteristic belongs
 
 **Substitutes:** serviceUuid
 
+<!--Device-CharacteristicReadRequest-serviceUuid: string--><!--Device-CharacteristicReadRequest-serviceUuid: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## transId
@@ -103,6 +113,8 @@ The Id of the read request
 **Deprecated since:** 10
 
 **Substitutes:** transId
+
+<!--Device-CharacteristicReadRequest-transId: number--><!--Device-CharacteristicReadRequest-transId: number-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

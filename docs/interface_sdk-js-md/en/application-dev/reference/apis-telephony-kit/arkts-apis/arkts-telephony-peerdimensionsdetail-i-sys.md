@@ -4,6 +4,8 @@ Indicates the peer dimension.
 
 **Since:** 11
 
+<!--Device-call-export interface PeerDimensionsDetail--><!--Device-call-export interface PeerDimensionsDetail-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Indicates the id of call.
 
 **Since:** 11
 
+<!--Device-PeerDimensionsDetail-callId: int--><!--Device-PeerDimensionsDetail-callId: int-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ Indicates the the peer dimensions height.
 
 **Since:** 11
 
+<!--Device-PeerDimensionsDetail-height: int--><!--Device-PeerDimensionsDetail-height: int-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ Indicates the peer dimensions width.
 **Type:** number
 
 **Since:** 11
+
+<!--Device-PeerDimensionsDetail-width: int--><!--Device-PeerDimensionsDetail-width: int-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
 

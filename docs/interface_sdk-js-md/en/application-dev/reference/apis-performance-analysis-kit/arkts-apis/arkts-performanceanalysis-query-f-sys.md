@@ -18,6 +18,8 @@ Queries system events.
 
 **Required permissions:** ohos.permission.READ_DFX_SYSEVENT
 
+<!--Device-hiSysEvent-function query(queryArg: QueryArg, rules: QueryRule[], querier: Querier): void--><!--Device-hiSysEvent-function query(queryArg: QueryArg, rules: QueryRule[], querier: Querier): void-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
@@ -26,9 +28,9 @@ Queries system events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| queryArg | QueryArg | Yes | Arguments for event query. |
-| rules | QueryRule[] | Yes | Array of event query rules. |
-| querier | Querier | Yes | Event query instance. |
+| queryArg | [QueryArg](arkts-performanceanalysis-queryarg-i-sys.md) | Yes | Arguments for event query. |
+| rules | [QueryRule](arkts-performanceanalysis-queryrule-i-sys.md)[] | Yes | Array of event query rules. |
+| querier | [Querier](../../apis-security-guard-kit/arkts-apis/arkts-securityguard-querier-i-sys.md) | Yes | Event query instance. |
 
 **Error codes:**
 

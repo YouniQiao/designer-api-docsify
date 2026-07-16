@@ -12,25 +12,17 @@ import { audio } from '@kit.AudioKit';
 function createAudioRenderer(options: AudioRendererOptions, callback: AsyncCallback<AudioRenderer>): void
 ```
 
-Obtains an {@link AudioRenderer} instance.
-This method uses a promise to return the renderer instance.
+Obtains an {@link AudioRenderer} instance.This method uses a promise to return the renderer instance.
 
-The AudioRenderer instance is used to play streaming audio data.
-When using AudioRenderer apis, there are many instructions for application
-to achieve better performance and lower power consumption:
-In music or audiobook background playback situation, you can have low power
-consumption by following this best practices document **Low-Power Rules in Music Playback Scenarios**.
-And for navigation situation, you can follow **Low-Power Rules in Navigation and Positioning Scenarios**.
+The AudioRenderer instance is used to play streaming audio data.When using AudioRenderer apis, there are many instructions for application to achieve better performance and lower power consumption:In music or audiobook background playback situation, you can have low power consumption by following this best practices document **Low-Power Rules in Music Playback Scenarios**.And for navigation situation, you can follow **Low-Power Rules in Navigation and Positioning Scenarios**.
 
-Application developer should also be careful when app goes to background, please check if your audio playback
-is still needed, see **Audio Resources** in best practices document.
-And avoiding to send silence audio data continuously to waste system resources, otherwise system will take
-control measures when this behavior is detected, see **Audio Playback** in best practices document.
+Application developer should also be careful when app goes to background, please check if your audio playback is still needed, see **Audio Resources** in best practices document.And avoiding to send silence audio data continuously to waste system resources, otherwise system will take control measures when this behavior is detected, see **Audio Playback** in best practices document.
 
-If you want to use AudioRenderer api to implement a music playback application, there are also many interactive
-scenes to consider, see **Developing an Audio Application** in best practices document.
+If you want to use AudioRenderer api to implement a music playback application, there are also many interactive scenes to consider, see **Developing an Audio Application** in best practices document.
 
 **Since:** 8
+
+<!--Device-audio-function createAudioRenderer(options: AudioRendererOptions, callback: AsyncCallback<AudioRenderer>): void--><!--Device-audio-function createAudioRenderer(options: AudioRendererOptions, callback: AsyncCallback<AudioRenderer>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -38,8 +30,8 @@ scenes to consider, see **Developing an Audio Application** in best practices do
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | AudioRendererOptions | Yes | Renderer configurations. |
-| callback | AsyncCallback&lt;AudioRenderer&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined** and **data** is the AudioRenderer instance obtained; otherwise, **err** isan error object. |
+| options | [AudioRendererOptions](arkts-audio-audiorendereroptions-i.md) | Yes | Renderer configurations. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AudioRenderer> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the AudioRenderer instance obtained; otherwise, **err** is an error object. |
 
 **Example**
 
@@ -83,25 +75,17 @@ audio.createAudioRenderer(audioRendererOptions,(err, data) => {
 function createAudioRenderer(options: AudioRendererOptions): Promise<AudioRenderer>
 ```
 
-Obtains an {@link AudioRenderer} instance.
-This method uses a promise to return the renderer instance.
+Obtains an {@link AudioRenderer} instance.This method uses a promise to return the renderer instance.
 
-The AudioRenderer instance is used to play streaming audio data.
-When using AudioRenderer apis, there are many instructions for application
-to achieve better performance and lower power consumption:
-In music or audiobook background playback situation, you can have low power
-consumption by following this best practices document **Low-Power Rules in Music Playback Scenarios**.
-And for navigation situation, you can follow **Low-Power Rules in Navigation and Positioning Scenarios**.
+The AudioRenderer instance is used to play streaming audio data.When using AudioRenderer apis, there are many instructions for application to achieve better performance and lower power consumption:In music or audiobook background playback situation, you can have low power consumption by following this best practices document **Low-Power Rules in Music Playback Scenarios**.And for navigation situation, you can follow **Low-Power Rules in Navigation and Positioning Scenarios**.
 
-Application developer should also be careful when app goes to background, please check if your audio playback
-is still needed, see **Audio Resources** in best practices document.
-And avoiding to send silence audio data continuously to waste system resources, otherwise system will take
-control measures when this behavior is detected, see **Audio Playback** in best practices document.
+Application developer should also be careful when app goes to background, please check if your audio playback is still needed, see **Audio Resources** in best practices document.And avoiding to send silence audio data continuously to waste system resources, otherwise system will take control measures when this behavior is detected, see **Audio Playback** in best practices document.
 
-If you want to use AudioRenderer api to implement a music playback application, there are also many interactive
-scenes to consider, see **Developing an Audio Application** in best practices document.
+If you want to use AudioRenderer api to implement a music playback application, there are also many interactive scenes to consider, see **Developing an Audio Application** in best practices document.
 
 **Since:** 8
+
+<!--Device-audio-function createAudioRenderer(options: AudioRendererOptions): Promise<AudioRenderer>--><!--Device-audio-function createAudioRenderer(options: AudioRendererOptions): Promise<AudioRenderer>-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -109,13 +93,13 @@ scenes to consider, see **Developing an Audio Application** in best practices do
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | AudioRendererOptions | Yes | Renderer configurations. |
+| options | [AudioRendererOptions](arkts-audio-audiorendereroptions-i.md) | Yes | Renderer configurations. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioRenderer&gt; | Promise used to return the AudioRenderer instance. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AudioRenderer> | Promise used to return the AudioRenderer instance. |
 
 **Example**
 

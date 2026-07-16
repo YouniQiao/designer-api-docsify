@@ -4,6 +4,8 @@ Represents the configuration parameters of a serial port.
 
 **Since:** 19
 
+<!--Device-serialManager-interface SerialAttribute--><!--Device-serialManager-interface SerialAttribute-End-->
+
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Baud rate.
 
 **Since:** 19
 
+<!--Device-SerialAttribute-baudRate: BaudRates--><!--Device-SerialAttribute-baudRate: BaudRates-End-->
+
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## dataBits
@@ -39,6 +43,8 @@ Data bits. The default value is **8**.
 **Default:** DATABIT_8
 
 **Since:** 19
+
+<!--Device-SerialAttribute-dataBits?: DataBits--><!--Device-SerialAttribute-dataBits?: DataBits-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -56,6 +62,8 @@ Parity check. The default value is **None**, indicating that no parity check is 
 
 **Since:** 19
 
+<!--Device-SerialAttribute-parity?: Parity--><!--Device-SerialAttribute-parity?: Parity-End-->
+
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## stopBits
@@ -71,6 +79,8 @@ Stop bits. The default value is **1**.
 **Default:** STOPBIT_1
 
 **Since:** 19
+
+<!--Device-SerialAttribute-stopBits?: StopBits--><!--Device-SerialAttribute-stopBits?: StopBits-End-->
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 

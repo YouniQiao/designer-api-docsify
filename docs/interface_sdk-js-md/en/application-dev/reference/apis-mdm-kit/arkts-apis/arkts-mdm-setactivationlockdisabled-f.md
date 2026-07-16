@@ -12,8 +12,7 @@ import { systemManager } from '@kit.MDMKit';
 function setActivationLockDisabled(admin: Want, isDisabled: boolean, credential?: string): Promise<void>
 ```
 
-Enables or disables the device activation lock. After the device activation lock is disabled, the Find Device
-function will no longer be available. This function applies only to specific devices.<!--RP5--><!--RP5End-->
+Enables or disables the device activation lock. After the device activation lock is disabled, the Find Device function will no longer be available. This function applies only to specific devices.<!--RP5--><!--RP5End-->
 
 **Since:** 24
 
@@ -21,21 +20,23 @@ function will no longer be available. This function applies only to specific dev
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-systemManager-function setActivationLockDisabled(admin: Want, isDisabled: boolean, credential?: string): Promise<void>--><!--Device-systemManager-function setActivationLockDisabled(admin: Want, isDisabled: boolean, credential?: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| isDisabled | boolean | Yes | Whether to disable the activation lock. The value **true** indicates yes, and thevalue **false** indicates no. |
-| credential | string | No | Credential for disabling the activation lock. To disable the activation lock, youmust set this parameter to a valid credential&lt;!--RP6--&gt;&lt;!--RP6End--&gt;. Leave this parameter empty when enablingthe activation lock. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| isDisabled | boolean | Yes | Whether to disable the activation lock. The value **true** indicates yes, and the value **false** indicates no. |
+| credential | string | No | Credential for disabling the activation lock. To disable the activation lock, you must set this parameter to a valid credential&lt;!--RP6--&gt;&lt;!--RP6End--&gt;. Leave this parameter empty when enabling the activation lock. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. An error object is thrown when the activation lock failsto be enabled or disabled. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. An error object is thrown when the activation lock fails to be enabled or disabled. |
 
 **Error codes:**
 

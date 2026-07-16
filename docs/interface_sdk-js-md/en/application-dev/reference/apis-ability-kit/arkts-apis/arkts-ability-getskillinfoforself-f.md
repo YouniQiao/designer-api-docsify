@@ -20,6 +20,8 @@ Obtains SkillInfo of the calling application based on moduleName and skillName.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-skillManager-function getSkillInfoForSelf(moduleName: string, skillName: string, flags: int): Promise<SkillInfo>--><!--Device-skillManager-function getSkillInfoForSelf(moduleName: string, skillName: string, flags: int): Promise<SkillInfo>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **Parameters:**
@@ -34,7 +36,7 @@ Obtains SkillInfo of the calling application based on moduleName and skillName.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SkillInfo&gt; | Returns the SkillInfo object of the specified skill. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SkillInfo> | Returns the SkillInfo object of the specified skill. |
 
 **Error codes:**
 

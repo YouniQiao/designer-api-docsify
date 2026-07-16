@@ -4,6 +4,8 @@ The current parse info.
 
 **Since:** 8
 
+<!--Device-xml-interface ParseInfo--><!--Device-xml-interface ParseInfo-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
@@ -23,6 +25,8 @@ Obtains the number of attributes for the current start tag.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ParseInfo-getAttributeCount(): int--><!--Device-ParseInfo-getAttributeCount(): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -65,6 +69,8 @@ Obtains the current column number, starting from 1.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ParseInfo-getColumnNumber(): int--><!--Device-ParseInfo-getColumnNumber(): int-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -105,6 +111,8 @@ Obtains the depth of this element.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ParseInfo-getDepth(): int--><!--Device-ParseInfo-getDepth(): int-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -151,6 +159,8 @@ Obtains the current line number, starting from 1.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ParseInfo-getLineNumber(): int--><!--Device-ParseInfo-getLineNumber(): int-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -192,6 +202,8 @@ Obtains the name of this element.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ParseInfo-getName(): string--><!--Device-ParseInfo-getName(): string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -232,6 +244,8 @@ Obtains the namespace of this element.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ParseInfo-getNamespace(): string--><!--Device-ParseInfo-getNamespace(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -278,6 +292,8 @@ Obtains the prefix of this element.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ParseInfo-getPrefix(): string--><!--Device-ParseInfo-getPrefix(): string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -323,6 +339,8 @@ Obtains the text of the current event.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ParseInfo-getText(): string--><!--Device-ParseInfo-getText(): string-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
@@ -363,6 +381,8 @@ Checks whether the current element is empty.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ParseInfo-isEmptyElementTag(): boolean--><!--Device-ParseInfo-isEmptyElementTag(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -408,6 +428,8 @@ Checks whether the current event contains only whitespace characters.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ParseInfo-isWhitespace(): boolean--><!--Device-ParseInfo-isWhitespace(): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

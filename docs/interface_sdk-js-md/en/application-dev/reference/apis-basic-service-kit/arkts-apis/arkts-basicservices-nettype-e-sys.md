@@ -4,6 +4,8 @@ Enumerates network types.
 
 **Since:** 9
 
+<!--Device-update-export enum NetType--><!--Device-update-export enum NetType-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -17,6 +19,8 @@ CELLULAR = 1
 Data network.
 
 **Since:** 9
+
+<!--Device-NetType-CELLULAR = 1--><!--Device-NetType-CELLULAR = 1-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -32,6 +36,8 @@ Wi-Fi hotspot.
 
 **Since:** 9
 
+<!--Device-NetType-METERED_WIFI = 2--><!--Device-NetType-METERED_WIFI = 2-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -45,6 +51,8 @@ NOT_METERED_WIFI = 4
 Non Wi-Fi hotspot.
 
 **Since:** 9
+
+<!--Device-NetType-NOT_METERED_WIFI = 4--><!--Device-NetType-NOT_METERED_WIFI = 4-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -60,6 +68,8 @@ Wi-Fi.
 
 **Since:** 9
 
+<!--Device-NetType-WIFI = 6--><!--Device-NetType-WIFI = 6-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -73,6 +83,8 @@ CELLULAR_AND_WIFI = 7
 Data network and Wi-Fi.
 
 **Since:** 9
+
+<!--Device-NetType-CELLULAR_AND_WIFI = 7--><!--Device-NetType-CELLULAR_AND_WIFI = 7-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 

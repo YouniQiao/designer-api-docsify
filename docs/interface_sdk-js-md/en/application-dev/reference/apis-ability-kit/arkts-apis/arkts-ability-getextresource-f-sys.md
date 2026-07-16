@@ -12,12 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getExtResource(bundleName: string): Promise<Array<string>>
 ```
 
-Obtains the module names corresponding to the extended resources based on the given bundle name. This API uses a
-promise to return the result.
+Obtains the module names corresponding to the extended resources based on the given bundle name. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getExtResource(bundleName: string): Promise<Array<string>>--><!--Device-bundleManager-function getExtResource(bundleName: string): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -33,7 +34,7 @@ promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the API call result and the module names correspondingto the extended resources. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return the API call result and the module names corresponding to the extended resources. |
 
 **Error codes:**
 

@@ -1,5 +1,11 @@
 # startScannerDiscovery
 
+## 导入模块
+
+```TypeScript
+import { scan } from '@kit.BasicServicesKit';
+```
+
 ## startScannerDiscovery
 
 ```TypeScript
@@ -12,13 +18,15 @@ function startScannerDiscovery(): Promise<void>
 
 **需要权限：** ohos.permission.PRINT
 
+<!--Device-scan-function startScannerDiscovery(): Promise<void>--><!--Device-scan-function startScannerDiscovery(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

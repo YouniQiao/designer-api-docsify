@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-userAuth-enum ReuseMode--><!--Device-userAuth-enum ReuseMode-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## AUTH_TYPE_RELEVANT
@@ -18,7 +20,9 @@ AUTH_TYPE_RELEVANT = 1
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ReuseMode-AUTH_TYPE_RELEVANT = 1--><!--Device-ReuseMode-AUTH_TYPE_RELEVANT = 1-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -34,7 +38,9 @@ AUTH_TYPE_IRRELEVANT = 2
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ReuseMode-AUTH_TYPE_IRRELEVANT = 2--><!--Device-ReuseMode-AUTH_TYPE_IRRELEVANT = 2-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -50,7 +56,9 @@ CALLER_IRRELEVANT_AUTH_TYPE_RELEVANT = 3
 
 **起始版本：** 14
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ReuseMode-CALLER_IRRELEVANT_AUTH_TYPE_RELEVANT = 3--><!--Device-ReuseMode-CALLER_IRRELEVANT_AUTH_TYPE_RELEVANT = 3-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -66,7 +74,9 @@ CALLER_IRRELEVANT_AUTH_TYPE_IRRELEVANT = 4
 
 **起始版本：** 14
 
-**元服务API：** 从API版本14开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ReuseMode-CALLER_IRRELEVANT_AUTH_TYPE_IRRELEVANT = 4--><!--Device-ReuseMode-CALLER_IRRELEVANT_AUTH_TYPE_IRRELEVANT = 4-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

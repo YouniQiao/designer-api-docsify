@@ -4,6 +4,8 @@ Parameters of the exit or entrance animation.
 
 **Since:** 7
 
+<!--Device-unnamed-declare interface PageTransitionOptions--><!--Device-unnamed-declare interface PageTransitionOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## curve
@@ -16,8 +18,7 @@ Animation curve.
 
 You are advised to specify the curve using the **Curve** or **ICurve** type.
 
-For the string type, this parameter indicates an animation interpolation curve. For available values, see the
-**curve** parameter in [AnimateParam](arkts-arkui-animateparam-i.md).
+For the string type, this parameter indicates an animation interpolation curve. For available values, see the **curve** parameter in [AnimateParam](arkts-arkui-animateparam-i.md).
 
 Default value: **Curve.Linear**
 
@@ -28,6 +29,8 @@ Default value: **Curve.Linear**
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PageTransitionOptions-curve?: Curve | string | ICurve--><!--Device-PageTransitionOptions-curve?: Curve | string | ICurve-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -45,8 +48,7 @@ Default value: **0**
 
 **NOTE**
 
-If no match is found, the default page transition effect is used (which may vary according to the device). To
-disable the default page transition effect, set **duration** to **0**.
+If no match is found, the default page transition effect is used (which may vary according to the device). To disable the default page transition effect, set **duration** to **0**.
 
 **Type:** number
 
@@ -55,6 +57,8 @@ disable the default page transition effect, set **duration** to **0**.
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PageTransitionOptions-delay?: number--><!--Device-PageTransitionOptions-delay?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,6 +82,8 @@ Value range: [0, +∞)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-PageTransitionOptions-duration?: number--><!--Device-PageTransitionOptions-duration?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## type
@@ -95,6 +101,8 @@ Default value: **RouteType.None**
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PageTransitionOptions-type?: RouteType--><!--Device-PageTransitionOptions-type?: RouteType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

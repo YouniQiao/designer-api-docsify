@@ -4,6 +4,8 @@ Defines the executor property.
 
 **Since:** 8
 
+<!--Device-osAccount-interface ExecutorProperty--><!--Device-osAccount-interface ExecutorProperty-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Authentication credential subtype.
 
 **Since:** 8
 
+<!--Device-ExecutorProperty-authSubType: AuthSubType--><!--Device-ExecutorProperty-authSubType: AuthSubType-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -36,12 +40,13 @@ Authentication credential subtype.
 credentialLength?: number
 ```
 
-Credential length, which is **undefined** by default. When credentials with indefinite-length attributes such as
-biometric information are queried, **undefined** is returned.
+Credential length, which is **undefined** by default. When credentials with indefinite-length attributes such as biometric information are queried, **undefined** is returned.
 
 **Type:** number
 
 **Since:** 20
+
+<!--Device-ExecutorProperty-credentialLength?: int--><!--Device-ExecutorProperty-credentialLength?: int-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -59,6 +64,8 @@ Enrollment progress, which is left blank by default.
 
 **Since:** 10
 
+<!--Device-ExecutorProperty-enrollmentProgress?: string--><!--Device-ExecutorProperty-enrollmentProgress?: string-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -74,6 +81,8 @@ Freezing time, in milliseconds. The default value is **-1**.
 **Type:** number
 
 **Since:** 8
+
+<!--Device-ExecutorProperty-freezingTime?: int--><!--Device-ExecutorProperty-freezingTime?: int-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -91,6 +100,8 @@ Next freezing time, in milliseconds. The default value is **undefined**.
 
 **Since:** 12
 
+<!--Device-ExecutorProperty-nextPhaseFreezingTime?: int--><!--Device-ExecutorProperty-nextPhaseFreezingTime?: int-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -106,6 +117,8 @@ Number of remaining authentication times, which is **-1** by default.
 **Type:** number
 
 **Since:** 8
+
+<!--Device-ExecutorProperty-remainTimes?: int--><!--Device-ExecutorProperty-remainTimes?: int-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -123,6 +136,8 @@ Result.
 
 **Since:** 8
 
+<!--Device-ExecutorProperty-result: int--><!--Device-ExecutorProperty-result: int-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -138,6 +153,8 @@ Sensor information, which is left blank by default.
 **Type:** string
 
 **Since:** 10
+
+<!--Device-ExecutorProperty-sensorInfo?: string--><!--Device-ExecutorProperty-sensorInfo?: string-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 

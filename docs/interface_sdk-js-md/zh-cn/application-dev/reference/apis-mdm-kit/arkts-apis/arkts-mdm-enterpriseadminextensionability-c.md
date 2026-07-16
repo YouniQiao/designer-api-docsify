@@ -4,13 +4,21 @@
 
 设备管理应用需要存在一个EnterpriseAdminExtensionAbility并重写相关接口，以此具备模块提供的各项能力，比如接收由系统发送的该应用被激活或者解除激活的通知。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 本模块接口仅可在Stage模型下使用。
 
 **起始版本：** 12
 
+<!--Device-unnamed-export default class EnterpriseAdminExtensionAbility--><!--Device-unnamed-export default class EnterpriseAdminExtensionAbility-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
+```
 
 ## onAccountAdded
 
@@ -18,13 +26,13 @@
 onAccountAdded(accountId: number): void
 ```
 
-系统账号新增事件回调。通过接口
-[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)
-注册MANAGED_EVENT_ACCOUNT_ADDED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅系统账号新增事件，系统账号新增事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
+系统账号新增事件回调。通过接口[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)注册MANAGED_EVENT_ACCOUNT_ADDED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅系统账号新增事件，系统账号新增事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onAccountAdded(accountId: number): void--><!--Device-EnterpriseAdminExtensionAbility-onAccountAdded(accountId: number): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -68,13 +76,13 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onAccountRemoved(accountId: number): void
 ```
 
-系统账号删除事件回调。通过接口
-[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)
-注册MANAGED_EVENT_ACCOUNT_REMOVED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅系统账号删除事件，系统账号删除事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
+系统账号删除事件回调。通过接口[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)注册MANAGED_EVENT_ACCOUNT_REMOVED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅系统账号删除事件，系统账号删除事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onAccountRemoved(accountId: number): void--><!--Device-EnterpriseAdminExtensionAbility-onAccountRemoved(accountId: number): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -118,14 +126,13 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onAccountSwitched(accountId: number): void
 ```
 
-系统账号切换事件回调。通过接口
-[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)
-注册MANAGED_EVENT_ACCOUNT_SWITCHED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅系统账号切换事件，系统账号切换事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员
-。
+系统账号切换事件回调。通过接口[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)注册MANAGED_EVENT_ACCOUNT_SWITCHED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅系统账号切换事件，系统账号切换事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onAccountSwitched(accountId: number): void--><!--Device-EnterpriseAdminExtensionAbility-onAccountSwitched(accountId: number): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -175,6 +182,8 @@ onAdminDisabled(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EnterpriseAdminExtensionAbility-onAdminDisabled(): void--><!--Device-EnterpriseAdminExtensionAbility-onAdminDisabled(): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **示例：**
@@ -202,6 +211,8 @@ onAdminEnabled(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EnterpriseAdminExtensionAbility-onAdminEnabled(): void--><!--Device-EnterpriseAdminExtensionAbility-onAdminEnabled(): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **示例：**
@@ -228,6 +239,8 @@ onAdminPolicyChanged(event: common.PolicyChangedEvent): void
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onAdminPolicyChanged(event: common.PolicyChangedEvent): void--><!--Device-EnterpriseAdminExtensionAbility-onAdminPolicyChanged(event: common.PolicyChangedEvent): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -272,13 +285,13 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onAppStart(bundleName: string): void
 ```
 
-应用启动事件回调。通过接口
-[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)
-注册MANAGED_EVENT_APP_START事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用启动事件，端侧应用启动事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
+应用启动事件回调。通过接口[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)注册MANAGED_EVENT_APP_START事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用启动事件，端侧应用启动事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onAppStart(bundleName: string): void--><!--Device-EnterpriseAdminExtensionAbility-onAppStart(bundleName: string): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -322,13 +335,13 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onAppStop(bundleName: string): void
 ```
 
-应用停止事件回调。通过接口
-[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)
-注册MANAGED_EVENT_APP_STOP事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用停止事件，端侧应用停止事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
+应用停止事件回调。通过接口[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)注册MANAGED_EVENT_APP_STOP事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用停止事件，端侧应用停止事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onAppStop(bundleName: string): void--><!--Device-EnterpriseAdminExtensionAbility-onAppStop(bundleName: string): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -372,13 +385,13 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onBundleAdded(bundleName: string): void
 ```
 
-应用安装事件回调，回调中包含应用包名。通过接口
-[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)
-注册MANAGED_EVENT_BUNDLE_ADDED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用安装事件，端侧应用安装事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
+应用安装事件回调，回调中包含应用包名。通过接口[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)注册MANAGED_EVENT_BUNDLE_ADDED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用安装事件，端侧应用安装事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onBundleAdded(bundleName: string): void--><!--Device-EnterpriseAdminExtensionAbility-onBundleAdded(bundleName: string): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -422,13 +435,13 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onBundleAdded(bundleName: string, accountId: number): void
 ```
 
-应用安装事件回调，回调中包含应用包名和账号ID。通过接口
-[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)
-注册MANAGED_EVENT_BUNDLE_ADDED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用安装事件，端侧应用安装事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
+应用安装事件回调，回调中包含应用包名和账号ID。通过接口[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)注册MANAGED_EVENT_BUNDLE_ADDED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用安装事件，端侧应用安装事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onBundleAdded(bundleName: string, accountId: number): void--><!--Device-EnterpriseAdminExtensionAbility-onBundleAdded(bundleName: string, accountId: number): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -474,13 +487,13 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onBundleRemoved(bundleName: string): void
 ```
 
-应用卸载事件回调，回调中包含应用包名。通过接口
-[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)
-注册MANAGED_EVENT_BUNDLE_REMOVED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用卸载事件，端侧应用卸载事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
+应用卸载事件回调，回调中包含应用包名。通过接口[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)注册MANAGED_EVENT_BUNDLE_REMOVED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用卸载事件，端侧应用卸载事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onBundleRemoved(bundleName: string): void--><!--Device-EnterpriseAdminExtensionAbility-onBundleRemoved(bundleName: string): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -524,13 +537,13 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onBundleRemoved(bundleName: string, accountId: number): void
 ```
 
-应用卸载事件回调，回调中包含应用包名和账号ID。通过接口
-[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)
-注册MANAGED_EVENT_BUNDLE_REMOVED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用卸载事件，端侧应用卸载事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
+应用卸载事件回调，回调中包含应用包名和账号ID。通过接口[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)注册MANAGED_EVENT_BUNDLE_REMOVED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用卸载事件，端侧应用卸载事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onBundleRemoved(bundleName: string, accountId: number): void--><!--Device-EnterpriseAdminExtensionAbility-onBundleRemoved(bundleName: string, accountId: number): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -576,14 +589,13 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onBundleUpdated(bundleName: string, accountId: number): void
 ```
 
-应用更新事件回调，回调中包含应用包名和用户ID。通过接口
-[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)
-注册MANAGED_EVENT_BUNDLE_UPDATED事件才能收到此回调。企业设备管理场景下，设备管理应用可订阅所有用户下的应用更新事件，应用更新事件触发时会通知当前用户下的设备管理应用，设备管理应用可以在此回调函数中进行事
-件上报，通知主用户下的企业管理员。
+应用更新事件回调，回调中包含应用包名和用户ID。通过接口[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)注册MANAGED_EVENT_BUNDLE_UPDATED事件才能收到此回调。企业设备管理场景下，设备管理应用可订阅所有用户下的应用更新事件，应用更新事件触发时会通知当前用户下的设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知主用户下的企业管理员。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onBundleUpdated(bundleName: string, accountId: number): void--><!--Device-EnterpriseAdminExtensionAbility-onBundleUpdated(bundleName: string, accountId: number): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -628,12 +640,13 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onDeviceAdminDisabled(bundleName: string): void
 ```
 
-仅超级设备管理应用在普通设备管理应用被解除激活时会触发此回调。企业管理员或者员工解除激活普通设备管理应用，系统通知超级设备管理应用已解除激活admin权限。超级设备管理应用可在此回调函数中通知企业管理员设备已脱管。不需要注册，解除
-激活后默认触发该回调。
+仅超级设备管理应用在普通设备管理应用被解除激活时会触发此回调。企业管理员或者员工解除激活普通设备管理应用，系统通知超级设备管理应用已解除激活admin权限。超级设备管理应用可在此回调函数中通知企业管理员设备已脱管。不需要注册，解除激活后默认触发该回调。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onDeviceAdminDisabled(bundleName: string): void--><!--Device-EnterpriseAdminExtensionAbility-onDeviceAdminDisabled(bundleName: string): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -661,12 +674,13 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onDeviceAdminEnabled(bundleName: string): void
 ```
 
-仅超级设备管理应用在普通设备管理应用被激活时会触发此回调。企业管理员或者员工部署并激活普通设备管理应用，系统通知超级设备管理应用已激活admin权限。超级设备管理应用可在此回调函数中进行初始化策略设置。不需要注册，激活后默认触发该
-回调。
+仅超级设备管理应用在普通设备管理应用被激活时会触发此回调。企业管理员或者员工部署并激活普通设备管理应用，系统通知超级设备管理应用已激活admin权限。超级设备管理应用可在此回调函数中进行初始化策略设置。不需要注册，激活后默认触发该回调。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onDeviceAdminEnabled(bundleName: string): void--><!--Device-EnterpriseAdminExtensionAbility-onDeviceAdminEnabled(bundleName: string): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -694,14 +708,13 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onDeviceBootCompleted(): void
 ```
 
-设备开机完成事件回调。通过接口
-[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)
-注册MANAGED_EVENT_BOOT_COMPLETED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅设备启动完成事件，端侧系统在设备开机完成后会通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业
-管理员。
+设备开机完成事件回调。通过接口[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)注册MANAGED_EVENT_BOOT_COMPLETED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅设备启动完成事件，端侧系统在设备开机完成后会通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onDeviceBootCompleted(): void--><!--Device-EnterpriseAdminExtensionAbility-onDeviceBootCompleted(): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -744,6 +757,8 @@ onKeyEvent(keyEvent: systemManager.KeyEvent): void
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onKeyEvent(keyEvent: systemManager.KeyEvent): void--><!--Device-EnterpriseAdminExtensionAbility-onKeyEvent(keyEvent: systemManager.KeyEvent): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -867,6 +882,8 @@ Kiosk模式为系统层面提供的一种应用运行模式，该模式下会将
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EnterpriseAdminExtensionAbility-onKioskModeEntering(bundleName: string, accountId: number): void--><!--Device-EnterpriseAdminExtensionAbility-onKioskModeEntering(bundleName: string, accountId: number): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -901,6 +918,8 @@ onKioskModeExiting(bundleName: string, accountId: number): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EnterpriseAdminExtensionAbility-onKioskModeExiting(bundleName: string, accountId: number): void--><!--Device-EnterpriseAdminExtensionAbility-onKioskModeExiting(bundleName: string, accountId: number): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
@@ -934,6 +953,8 @@ onLogCollected(result: common.Result): void
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onLogCollected(result: common.Result): void--><!--Device-EnterpriseAdminExtensionAbility-onLogCollected(result: common.Result): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -992,12 +1013,13 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onMarketAppInstallResult(bundleName: string, result: common.InstallationResult): void
 ```
 
-安装应用市场应用接口[bundleManager.installMarketApps](arkts-mdm-installmarketapps-f.md#installmarketapps-1)安装
-结果回调，回调中包含应用包名和安装结果。
+安装应用市场应用接口[bundleManager.installMarketApps](arkts-mdm-installmarketapps-f.md#installmarketapps-1)安装结果回调，回调中包含应用包名和安装结果。
 
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onMarketAppInstallResult(bundleName: string, result: common.InstallationResult): void--><!--Device-EnterpriseAdminExtensionAbility-onMarketAppInstallResult(bundleName: string, result: common.InstallationResult): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -1033,6 +1055,8 @@ EnterpriseAdminExtensionAbility启动事件回调。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-EnterpriseAdminExtensionAbility-onStart(): void--><!--Device-EnterpriseAdminExtensionAbility-onStart(): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **示例：**
@@ -1054,14 +1078,13 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onStartupGuideCompleted(scene: common.StartupScene): void
 ```
 
-开机向导完成事件回调。通过接口
-[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)
-注册MANAGED_EVENT_STARTUP_GUIDE_COMPLETED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅开机向导完成事件，端侧系统在首次切换子用户完成（仅限PC）、OTA升级完成、首次开机完成开机向导
-时会通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
+开机向导完成事件回调。通过接口[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)注册MANAGED_EVENT_STARTUP_GUIDE_COMPLETED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅开机向导完成事件，端侧系统在首次切换子用户完成（仅限PC）、OTA升级完成、首次开机完成开机向导时会通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onStartupGuideCompleted(scene: common.StartupScene): void--><!--Device-EnterpriseAdminExtensionAbility-onStartupGuideCompleted(scene: common.StartupScene): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -1111,13 +1134,13 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onSystemUpdate(systemUpdateInfo: systemManager.SystemUpdateInfo): void
 ```
 
-系统更新事件回调。通过接口
-[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)
-注册MANAGED_EVENT_SYSTEM_UPDATE事件才能收到此回调。企业设备管理场景下，设备管理应用订阅系统更新事件，端侧系统更新事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
+系统更新事件回调。通过接口[adminManager.subscribeManagedEventSync](arkts-mdm-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)注册MANAGED_EVENT_SYSTEM_UPDATE事件才能收到此回调。企业设备管理场景下，设备管理应用订阅系统更新事件，端侧系统更新事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-onSystemUpdate(systemUpdateInfo: systemManager.SystemUpdateInfo): void--><!--Device-EnterpriseAdminExtensionAbility-onSystemUpdate(systemUpdateInfo: systemManager.SystemUpdateInfo): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -1168,6 +1191,8 @@ EnterpriseAdminExtensionAbility的上下文。继承自[ExtensionContext](../../
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-EnterpriseAdminExtensionAbility-context: EnterpriseAdminExtensionContext--><!--Device-EnterpriseAdminExtensionAbility-context: EnterpriseAdminExtensionContext-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

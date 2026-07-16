@@ -4,6 +4,8 @@ A picker view to show available streaming device list.
 
 **Since:** 10
 
+<!--Device-unnamed-declare struct AVCastPicker--><!--Device-unnamed-declare struct AVCastPicker-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Assigns the color of picker component at active state.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVCastPicker-activeColor?: Color | number | string--><!--Device-AVCastPicker-activeColor?: Color | number | string-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## colorMode
@@ -46,6 +50,8 @@ Set the picker color mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVCastPicker-colorMode?: AVCastPickerColorMode--><!--Device-AVCastPicker-colorMode?: AVCastPickerColorMode-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## customPicker
@@ -54,8 +60,7 @@ Set the picker color mode.
 customPicker?: CustomBuilder
 ```
 
-Set the custom builder for the picker appearance.
-If not set, system will show the default appearance for different device type.
+Set the custom builder for the picker appearance.If not set, system will show the default appearance for different device type.
 
 **Type:** CustomBuilder
 
@@ -64,6 +69,8 @@ If not set, system will show the default appearance for different device type.
 **Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCastPicker-customPicker?: CustomBuilder--><!--Device-AVCastPicker-customPicker?: CustomBuilder-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -83,6 +90,8 @@ Assigns the color of picker component at normal state .
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVCastPicker-normalColor?: Color | number | string--><!--Device-AVCastPicker-normalColor?: Color | number | string-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## onStateChange
@@ -98,6 +107,8 @@ Picker state change callback.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCastPicker-onStateChange?: (state: AVCastPickerState) => void--><!--Device-AVCastPicker-onStateChange?: (state: AVCastPickerState) => void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -117,6 +128,8 @@ Set the picker style.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-AVCastPicker-pickerStyle?: AVCastPickerStyle--><!--Device-AVCastPicker-pickerStyle?: AVCastPickerStyle-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## sessionType
@@ -125,8 +138,7 @@ Set the picker style.
 sessionType?: string
 ```
 
-Set the session type used by current picker component which can refer to AVSessionType in avSession.
-If not set, default value is 'audio'.
+Set the session type used by current picker component which can refer to AVSessionType in avSession.If not set, default value is 'audio'.
 
 **Type:** string
 
@@ -135,6 +147,8 @@ If not set, default value is 'audio'.
 **Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCastPicker-sessionType?: string--><!--Device-AVCastPicker-sessionType?: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 

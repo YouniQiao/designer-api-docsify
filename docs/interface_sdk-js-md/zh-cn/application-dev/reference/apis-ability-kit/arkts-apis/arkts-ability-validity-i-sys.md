@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-export interface Validity--><!--Device-unnamed-export interface Validity-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -20,6 +22,8 @@ readonly notAfter: number
 
 **起始版本：** 10
 
+<!--Device-Validity-readonly notAfter: long--><!--Device-Validity-readonly notAfter: long-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -35,6 +39,8 @@ readonly notBefore: number
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-Validity-readonly notBefore: long--><!--Device-Validity-readonly notBefore: long-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

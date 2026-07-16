@@ -2,13 +2,15 @@
 
 Describes the initialization options of the **Marquee** component.
 
-> **NOTE**
->
-> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> **NOTE**  
+>  
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element  
 > 's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
+
+<!--Device-unnamed-interface MarqueeOptions--><!--Device-unnamed-interface MarqueeOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,6 +35,8 @@ Unit: ms.
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-MarqueeOptions-delay?: number--><!--Device-MarqueeOptions-delay?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,6 +64,8 @@ Default value: **true**.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-MarqueeOptions-fromStart?: boolean--><!--Device-MarqueeOptions-fromStart?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## loop
@@ -68,8 +74,7 @@ Default value: **true**.
 loop?: number
 ```
 
-Number of times the marquee will scroll. If the value is less than or equal to **0**, the marquee will scroll
-continuously.
+Number of times the marquee will scroll. If the value is less than or equal to **0**, the marquee will scroll continuously.
 
 Default value: **-1**
 
@@ -86,6 +91,8 @@ Regardless of the value, the marquee scrolls only once on an ArkTS widget.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-MarqueeOptions-loop?: number--><!--Device-MarqueeOptions-loop?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -109,6 +116,8 @@ Default value is marquee width.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-MarqueeOptions-spacing?: LengthMetrics--><!--Device-MarqueeOptions-spacing?: LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## src
@@ -126,6 +135,8 @@ Text to scroll.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-MarqueeOptions-src: string--><!--Device-MarqueeOptions-src: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -151,6 +162,8 @@ This parameter cannot be used to restart scrolling that has been completed.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-MarqueeOptions-start: boolean--><!--Device-MarqueeOptions-start: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## step
@@ -159,8 +172,7 @@ This parameter cannot be used to restart scrolling that has been completed.
 step?: number
 ```
 
-Step length of the scrolling animation text. If the value is greater than the text width of the marquee, the
-default value is used.
+Step length of the scrolling animation text. If the value is greater than the text width of the marquee, the default value is used.
 
 Default value: **6**
 
@@ -175,6 +187,8 @@ Unit: [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-MarqueeOptions-step?: number--><!--Device-MarqueeOptions-step?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

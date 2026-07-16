@@ -4,6 +4,8 @@ ColorManagementQuery provides the APIs for color space query.
 
 **Since:** 12
 
+<!--Device-camera-interface ColorManagementQuery--><!--Device-camera-interface ColorManagementQuery-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Obtains the supported color spaces.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-ColorManagementQuery-getSupportedColorSpaces(): Array<colorSpaceManager.ColorSpace>--><!--Device-ColorManagementQuery-getSupportedColorSpaces(): Array<colorSpaceManager.ColorSpace>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;colorSpaceManager.ColorSpace&gt; | Array of color spaces supported. If the API call fails,undefined is returned. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<colorSpaceManager.ColorSpace> | Array of color spaces supported. If the API call fails,undefined is returned. |
 
 **Error codes:**
 

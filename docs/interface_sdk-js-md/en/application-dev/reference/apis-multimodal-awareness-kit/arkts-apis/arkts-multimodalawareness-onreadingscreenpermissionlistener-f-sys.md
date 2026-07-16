@@ -20,6 +20,8 @@ Enables the screen content access permission monitoring and returns the permissi
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-onScreen-function onReadingScreenPermissionListener(callback: Callback<ReadingScreenPermissionStatus>): void--><!--Device-onScreen-function onReadingScreenPermissionListener(callback: Callback<ReadingScreenPermissionStatus>): void-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Enables the screen content access permission monitoring and returns the permissi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;ReadingScreenPermissionStatus&gt; | Yes | Callback used to return the status of the permission<br> for reading screen information. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ReadingScreenPermissionStatus> | Yes | Callback used to return the status of the permission<br> for reading screen information. |
 
 **Error codes:**
 

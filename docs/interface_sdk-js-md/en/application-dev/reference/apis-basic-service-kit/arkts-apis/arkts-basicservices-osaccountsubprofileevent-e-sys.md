@@ -4,6 +4,8 @@ Enumerates the events of an OS account sub-profile.
 
 **Since:** 26.0.0
 
+<!--Device-osAccount-enum OsAccountSubProfileEvent--><!--Device-osAccount-enum OsAccountSubProfileEvent-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -14,12 +16,13 @@ Enumerates the events of an OS account sub-profile.
 CREATED = 0
 ```
 
-CREATED event.
-Triggered when an OS account sub-profile creation is completed.
+CREATED event.Triggered when an OS account sub-profile creation is completed.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OsAccountSubProfileEvent-CREATED = 0--><!--Device-OsAccountSubProfileEvent-CREATED = 0-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -31,12 +34,13 @@ Triggered when an OS account sub-profile creation is completed.
 DELETED = 1
 ```
 
-DELETED event.
-Triggered when an OS account sub-profile deletion is completed.
+DELETED event.Triggered when an OS account sub-profile deletion is completed.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OsAccountSubProfileEvent-DELETED = 1--><!--Device-OsAccountSubProfileEvent-DELETED = 1-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -48,12 +52,13 @@ Triggered when an OS account sub-profile deletion is completed.
 SWITCHING = 2
 ```
 
-SWITCHING event.
-Triggered when an OS account sub-profile switch is about to happen.
+SWITCHING event.Triggered when an OS account sub-profile switch is about to happen.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OsAccountSubProfileEvent-SWITCHING = 2--><!--Device-OsAccountSubProfileEvent-SWITCHING = 2-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -65,12 +70,13 @@ Triggered when an OS account sub-profile switch is about to happen.
 SWITCHED = 3
 ```
 
-SWITCHED event.
-Triggered when an OS account sub-profile switch is completed.
+SWITCHED event.Triggered when an OS account sub-profile switch is completed.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OsAccountSubProfileEvent-SWITCHED = 3--><!--Device-OsAccountSubProfileEvent-SWITCHED = 3-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 

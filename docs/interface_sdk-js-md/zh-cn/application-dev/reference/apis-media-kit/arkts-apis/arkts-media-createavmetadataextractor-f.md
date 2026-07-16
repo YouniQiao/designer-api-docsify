@@ -1,5 +1,11 @@
 # createAVMetadataExtractor
 
+## 导入模块
+
+```TypeScript
+import { media } from '@kit.MediaKit';
+```
+
 ## createAVMetadataExtractor
 
 ```TypeScript
@@ -10,13 +16,15 @@ function createAVMetadataExtractor(): Promise<AVMetadataExtractor>
 
 **起始版本：** 11
 
+<!--Device-media-function createAVMetadataExtractor(): Promise<AVMetadataExtractor>--><!--Device-media-function createAVMetadataExtractor(): Promise<AVMetadataExtractor>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AVMetadataExtractor&gt; | Promise对象。异步返回元数据获取类对象（AVMetadataExtractor）。 |
+| Promise<AVMetadataExtractor> | Promise对象。异步返回元数据获取类对象（AVMetadataExtractor）。 |
 
 **错误码：**
 
@@ -54,13 +62,15 @@ function createAVMetadataExtractor(callback: AsyncCallback<AVMetadataExtractor>)
 
 **起始版本：** 11
 
+<!--Device-media-function createAVMetadataExtractor(callback: AsyncCallback<AVMetadataExtractor>): void--><!--Device-media-function createAVMetadataExtractor(callback: AsyncCallback<AVMetadataExtractor>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;AVMetadataExtractor&gt; | 是 | 回调函数。当创建AVMetadataExtractor实例成功，err为undefined，data为获取到的AVMetadataExtractor实例，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AVMetadataExtractor> | 是 | 回调函数。当创建AVMetadataExtractor实例成功，err为undefined，data为获取到的AVMetadataExtractor实例，否则为错误对象。 |
 
 **错误码：**
 

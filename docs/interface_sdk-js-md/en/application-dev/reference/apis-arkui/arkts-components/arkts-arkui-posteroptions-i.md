@@ -4,6 +4,8 @@ Defines display options for the first frame of the video.
 
 **Since:** 18
 
+<!--Device-unnamed-declare interface PosterOptions--><!--Device-unnamed-declare interface PosterOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## contentTransitionEffect
@@ -12,8 +14,7 @@ Defines display options for the first frame of the video.
 contentTransitionEffect?: ContentTransitionEffect
 ```
 
-Transition effect to apply when the video preview image changes. This parameter does not take effect if
-**showFirstFrame** is **true**, or if a valid **previewUri** in [VideoOptions](arkts-arkui-videooptions-i.md) is not provided.
+Transition effect to apply when the video preview image changes. This parameter does not take effect if **showFirstFrame** is **true**, or if a valid **previewUri** in [VideoOptions](arkts-arkui-videooptions-i.md) is not provided.
 
 Default value: **ContentTransitionEffect.IDENTITY**.
 
@@ -29,6 +30,8 @@ If this parameter is set to **undefined** or **null**, it defaults to **ContentT
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-PosterOptions-contentTransitionEffect?: ContentTransitionEffect--><!--Device-PosterOptions-contentTransitionEffect?: ContentTransitionEffect-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## showFirstFrame
@@ -37,8 +40,7 @@ If this parameter is set to **undefined** or **null**, it defaults to **ContentT
 showFirstFrame?: boolean
 ```
 
-Whether to enable first frame display, showing the first frame of the video as a preview. When first frame display
-is enabled, the previewUri field in [VideoOptions](arkts-arkui-videooptions-i.md) has no effect.
+Whether to enable first frame display, showing the first frame of the video as a preview. When first frame display is enabled, the previewUri field in [VideoOptions](arkts-arkui-videooptions-i.md) has no effect.
 
 **true**: Enable first frame display.
 
@@ -55,6 +57,8 @@ Default value: **false**.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-PosterOptions-showFirstFrame?: boolean--><!--Device-PosterOptions-showFirstFrame?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

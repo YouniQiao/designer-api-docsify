@@ -4,7 +4,15 @@ ComponentObserver用于监听布局和绘制事件。
 
 **起始版本：** 10
 
+<!--Device-inspector-interface ComponentObserver--><!--Device-inspector-interface ComponentObserver-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { inspector } from '@kit.ArkUI';
+```
 
 ## off('layout')
 
@@ -12,14 +20,15 @@ ComponentObserver用于监听布局和绘制事件。
 off(type: 'layout', callback?: () => void): void
 ```
 
-使用句柄注销具有相应查询条件的回调。
-当组件布局完成时不再触发此回调。
+使用句柄注销具有相应查询条件的回调。当组件布局完成时不再触发此回调。
 
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ComponentObserver-off(type: 'layout', callback?: () => void): void--><!--Device-ComponentObserver-off(type: 'layout', callback?: () => void): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,7 +37,7 @@ off(type: 'layout', callback?: () => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'layout' | 是 | 监听事件的类型。<br>**起始版本：** 12 |
-| callback | () =&gt; void | 否 | 监听事件的回调。<br>**起始版本：** 12 |
+| callback | () => void | 否 | 监听事件的回调。<br>**起始版本：** 12 |
 
 ## off('draw')
 
@@ -36,14 +45,15 @@ off(type: 'layout', callback?: () => void): void
 off(type: 'draw', callback?: () => void): void
 ```
 
-使用句柄注销具有相应查询条件的回调。
-当组件绘制完成时不再触发此回调。
+使用句柄注销具有相应查询条件的回调。当组件绘制完成时不再触发此回调。
 
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ComponentObserver-off(type: 'draw', callback?: () => void): void--><!--Device-ComponentObserver-off(type: 'draw', callback?: () => void): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,7 +62,7 @@ off(type: 'draw', callback?: () => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'draw' | 是 | 监听事件的类型。<br>**起始版本：** 12 |
-| callback | () =&gt; void | 否 | 监听事件的回调。<br>**起始版本：** 12 |
+| callback | () => void | 否 | 监听事件的回调。<br>**起始版本：** 12 |
 
 ## off('drawChildren')
 
@@ -60,14 +70,15 @@ off(type: 'draw', callback?: () => void): void
 off(type: 'drawChildren', callback?: Callback<void>): void
 ```
 
-使用句柄注销具有相应查询条件的回调。
-当组件的子级绘制完成时，不会触发此回调。
+使用句柄注销具有相应查询条件的回调。当组件的子级绘制完成时，不会触发此回调。
 
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ComponentObserver-off(type: 'drawChildren', callback?: Callback<void>): void--><!--Device-ComponentObserver-off(type: 'drawChildren', callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,7 +87,7 @@ off(type: 'drawChildren', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'drawChildren' | 是 | 监听事件的类型。 |
-| callback | Callback&lt;void&gt; | 否 | 监听事件的回调。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<void> | 否 | 监听事件的回调。 |
 
 ## offDrawChildren
 
@@ -90,7 +101,9 @@ offDrawChildren(callback?: Callback<number[]>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本24开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ComponentObserver-offDrawChildren(callback?: Callback<int[]>): void--><!--Device-ComponentObserver-offDrawChildren(callback?: Callback<int[]>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -98,7 +111,7 @@ offDrawChildren(callback?: Callback<number[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;number[]&gt; | 否 | 监听事件的回调函数。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<number[]> | 否 | 监听事件的回调函数。 |
 
 **示例：**
 
@@ -151,7 +164,9 @@ offLayoutChildren(callback?: Callback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ComponentObserver-offLayoutChildren(callback?: Callback<void>): void--><!--Device-ComponentObserver-offLayoutChildren(callback?: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -159,7 +174,7 @@ offLayoutChildren(callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; | 否 | 监听事件的回调。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<void> | 否 | 监听事件的回调。 |
 
 **示例：**
 
@@ -237,14 +252,15 @@ struct ImageExample {
 on(type: 'layout', callback: () => void): void
 ```
 
-使用句柄注册具有相应查询条件的回调。
-当组件布局完成时会触发此回调。
+使用句柄注册具有相应查询条件的回调。当组件布局完成时会触发此回调。
 
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ComponentObserver-on(type: 'layout', callback: () => void): void--><!--Device-ComponentObserver-on(type: 'layout', callback: () => void): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -253,7 +269,7 @@ on(type: 'layout', callback: () => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'layout' | 是 | 监听事件的类型。<br>**起始版本：** 12 |
-| callback | () =&gt; void | 是 | 监听事件的回调。<br>**起始版本：** 12 |
+| callback | () => void | 是 | 监听事件的回调。<br>**起始版本：** 12 |
 
 ## on('draw')
 
@@ -261,14 +277,15 @@ on(type: 'layout', callback: () => void): void
 on(type: 'draw', callback: () => void): void
 ```
 
-使用句柄注册具有相应查询条件的回调。
-当组件绘制完成时会触发此回调。
+使用句柄注册具有相应查询条件的回调。当组件绘制完成时会触发此回调。
 
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ComponentObserver-on(type: 'draw', callback: () => void): void--><!--Device-ComponentObserver-on(type: 'draw', callback: () => void): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -277,7 +294,7 @@ on(type: 'draw', callback: () => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'draw' | 是 | 监听事件的类型。<br>**起始版本：** 12 |
-| callback | () =&gt; void | 是 | 监听事件的回调。<br>**起始版本：** 12 |
+| callback | () => void | 是 | 监听事件的回调。<br>**起始版本：** 12 |
 
 ## on('drawChildren')
 
@@ -285,14 +302,15 @@ on(type: 'draw', callback: () => void): void
 on(type: 'drawChildren', callback: Callback<void>): void
 ```
 
-使用句柄注册具有相应查询条件的回调。
-当组件的子级绘制完成时，会触发此回调。
+使用句柄注册具有相应查询条件的回调。当组件的子级绘制完成时，会触发此回调。
 
 **起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ComponentObserver-on(type: 'drawChildren', callback: Callback<void>): void--><!--Device-ComponentObserver-on(type: 'drawChildren', callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -301,7 +319,7 @@ on(type: 'drawChildren', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'drawChildren' | 是 | 监听事件的类型。 |
-| callback | Callback&lt;void&gt; | 是 | 监听事件的回调。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<void> | 是 | 监听事件的回调。 |
 
 ## onDrawChildren
 
@@ -315,7 +333,9 @@ onDrawChildren(callback: Callback<number[]>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本24开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ComponentObserver-onDrawChildren(callback: Callback<int[]>): void--><!--Device-ComponentObserver-onDrawChildren(callback: Callback<int[]>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -323,7 +343,7 @@ onDrawChildren(callback: Callback<number[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;number[]&gt; | 是 | 监听事件的回调函数，回调函数的参数为发生绘制送显节点的UniqueId。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<number[]> | 是 | 监听事件的回调函数，回调函数的参数为发生绘制送显节点的UniqueId。 |
 
 **示例：**
 
@@ -376,7 +396,9 @@ onLayoutChildren(callback: Callback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本23开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ComponentObserver-onLayoutChildren(callback: Callback<void>): void--><!--Device-ComponentObserver-onLayoutChildren(callback: Callback<void>): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -384,5 +406,5 @@ onLayoutChildren(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; | 是 | 事件触发时的回调方法。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<void> | 是 | 事件触发时的回调方法。 |
 

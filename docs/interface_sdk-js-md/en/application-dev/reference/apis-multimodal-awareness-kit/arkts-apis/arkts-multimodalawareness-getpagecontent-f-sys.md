@@ -18,6 +18,8 @@ Obtains the onscreen content when a window is displayed on the screen.
 
 **Required permissions:** ohos.permission.GET_SCREEN_CONTENT
 
+<!--Device-onScreen-function getPageContent(options?: ContentOptions): Promise<PageContent>--><!--Device-onScreen-function getPageContent(options?: ContentOptions): Promise<PageContent>-End-->
+
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Obtains the onscreen content when a window is displayed on the screen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ContentOptions | No | Options for obtaining the onscreen screen content. By default, the window IDis not specified, and other options are **False**. |
+| options | [ContentOptions](arkts-multimodalawareness-contentoptions-i-sys.md) | No | Options for obtaining the onscreen screen content. By default, the window ID is not specified, and other options are **False**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PageContent&gt; | Indicates the promise which carries retrieved page content |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<PageContent> | Indicates the promise which carries retrieved page content |
 
 **Error codes:**
 

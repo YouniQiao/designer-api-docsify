@@ -8,7 +8,15 @@
 
 **起始版本：** 12
 
+<!--Device-sendableImage-interface Size extends lang.ISendable--><!--Device-sendableImage-interface Size extends lang.ISendable-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
+
+## 导入模块
+
+```TypeScript
+import { sendableImage } from '@kit.ImageKit';
+```
 
 ## height
 
@@ -22,9 +30,11 @@ height: number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Size-height: number--><!--Device-Size-height: number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -40,9 +50,11 @@ width: number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-Size-width: number--><!--Device-Size-width: number-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

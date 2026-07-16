@@ -18,6 +18,8 @@ Obtains the size of the GPU memory summary. This API uses a promise to return th
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
+<!--Device-hidebug-function getGraphicsMemorySummary(interval?: int): Promise<GraphicsMemorySummary>--><!--Device-hidebug-function getGraphicsMemorySummary(interval?: int): Promise<GraphicsMemorySummary>-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Parameters:**
@@ -30,7 +32,7 @@ Obtains the size of the GPU memory summary. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GraphicsMemorySummary&gt; | Returns the size of the GPU memory summary, in KB. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<GraphicsMemorySummary> | Returns the size of the GPU memory summary, in KB. |
 
 **Error codes:**
 

@@ -2,12 +2,14 @@
 
 Represents the parameters used to construct an **ArcScrollBar** component.
 
-> **NOTE**
->
-> **ArcScrollBar** must be bound to a scrollable component through **scroller** to achieve synchronization. Only a
+> **NOTE**  
+>  
+> **ArcScrollBar** must be bound to a scrollable component through **scroller** to achieve synchronization. Only a  
 > one-to-one binding is allowed between **ArcScrollBar** and a scrollable component.
 
 **Since:** 18
+
+<!--Device-unnamed-declare interface ArcScrollBarOptions--><!--Device-unnamed-declare interface ArcScrollBarOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -31,6 +33,8 @@ Scroller, which can be bound to scrollable components for scrolling control.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcScrollBarOptions-scroller: Scroller--><!--Device-ArcScrollBarOptions-scroller: Scroller-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## state
@@ -46,6 +50,8 @@ State of the scrollbar.<br/>Default value: **BarState.Auto**
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcScrollBarOptions-state?: BarState--><!--Device-ArcScrollBarOptions-state?: BarState-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 

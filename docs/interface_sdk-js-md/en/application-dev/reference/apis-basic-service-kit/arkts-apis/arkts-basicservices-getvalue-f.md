@@ -22,15 +22,17 @@ Obtains the value of a specified character string in the database.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-settings-function getValue(dataAbilityHelper: DataAbilityHelper, name: string, callback: AsyncCallback<object>): void--><!--Device-settings-function getValue(dataAbilityHelper: DataAbilityHelper, name: string, callback: AsyncCallback<object>): void-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataAbilityHelper | DataAbilityHelper | Yes | Indicates the {@link ohos.aafwk.ability.DataAbilityHelper} usedto access the database. |
+| dataAbilityHelper | [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-i.md) | Yes | Indicates the {@link ohos.aafwk.ability.DataAbilityHelper} used to access the database. |
 | name | string | Yes | Indicates the name of the character string. |
-| callback | AsyncCallback&lt;object&gt; | Yes | The callback of getValue result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<object> | Yes | The callback of getValue result. |
 
 **Example**
 
@@ -66,20 +68,22 @@ Obtains the value of a specified character string in the database.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-settings-function getValue(dataAbilityHelper: DataAbilityHelper, name: string): Promise<object>--><!--Device-settings-function getValue(dataAbilityHelper: DataAbilityHelper, name: string): Promise<object>-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataAbilityHelper | DataAbilityHelper | Yes | Indicates the {@link ohos.aafwk.ability.DataAbilityHelper} usedto access the database. |
+| dataAbilityHelper | [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-i.md) | Yes | Indicates the {@link ohos.aafwk.ability.DataAbilityHelper} used to access the database. |
 | name | string | Yes | Indicates the name of the character string. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;object&gt; | Returns the value of the character string in the domain if any is found; returns {@codenull} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<object> | Returns the value of the character string in the domain if any is found; returns {@code null} otherwise. |
 
 **Example**
 
@@ -107,15 +111,17 @@ Get value from settingsdata
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-settings-function getValue(context: Context, name: string, callback: AsyncCallback<string>): void--><!--Device-settings-function getValue(context: Context, name: string, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
 | name | string | Yes | Indicates the name of the character string. |
-| callback | AsyncCallback&lt;string&gt; | Yes | The callback of getValue result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<string> | Yes | The callback of getValue result. |
 
 **Example**
 
@@ -148,20 +154,22 @@ Get value from settingsdata
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-settings-function getValue(context: Context, name: string): Promise<string>--><!--Device-settings-function getValue(context: Context, name: string): Promise<string>-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
 | name | string | Yes | Indicates the name of the character string. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the value of the character string in the domain if any is found; returns {@codenull} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the value of the character string in the domain if any is found; returns {@code null} otherwise. |
 
 **Example**
 
@@ -184,12 +192,13 @@ settings.getValue(context, settings.display.SCREEN_BRIGHTNESS_STATUS).then((valu
 function getValue(context: Context, name: string, domainName: string): Promise<string>
 ```
 
-Get value from settingsdata
-[USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
+Get value from settingsdata [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-settings-function getValue(context: Context, name: string, domainName: string): Promise<string>--><!--Device-settings-function getValue(context: Context, name: string, domainName: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -197,7 +206,7 @@ Get value from settingsdata
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
 | name | string | Yes | Indicates the name of the character string. |
 | domainName | string | Yes | Indicates the name of the domain name to set. |
 
@@ -205,7 +214,7 @@ Get value from settingsdata
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the value of the character string in the domain if any is found; returns {@codenull} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the value of the character string in the domain if any is found; returns {@code null} otherwise. |
 
 **Example**
 

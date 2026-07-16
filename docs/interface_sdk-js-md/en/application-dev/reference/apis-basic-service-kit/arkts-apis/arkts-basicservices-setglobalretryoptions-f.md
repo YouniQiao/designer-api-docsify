@@ -12,12 +12,13 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 function setGlobalRetryOptions(options?: RetryOptions): void
 ```
 
-Sets retry options for all tasks.
-Used when task-specific retry configuration is not configured.
+Sets retry options for all tasks.Used when task-specific retry configuration is not configured.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-cacheDownload-function setGlobalRetryOptions(options?: RetryOptions): void--><!--Device-cacheDownload-function setGlobalRetryOptions(options?: RetryOptions): void-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -25,7 +26,7 @@ Used when task-specific retry configuration is not configured.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | RetryOptions | No | Task retry configurations.<br>Default value: Refer to the default value of RetryOptions. |
+| options | [RetryOptions](arkts-basicservices-retryoptions-i.md) | No | Task retry configurations.<br>Default value: Refer to the default value of RetryOptions. |
 
 **Example**
 

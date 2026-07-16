@@ -12,9 +12,7 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 function setDevicePairingConfirmation(device: string, accept: boolean): void
 ```
 
-Sets the confirmation of pairing with a certain device.
-On API 10 and above, the permission required by this interface is changed from MANAGE_BLUETOOTH to ACCESS_BLUETOOTH
-and MANAGE_BLUETOOTH.
+Sets the confirmation of pairing with a certain device.On API 10 and above, the permission required by this interface is changed from MANAGE_BLUETOOTH to ACCESS_BLUETOOTH and MANAGE_BLUETOOTH.
 
 **Since:** 9
 
@@ -25,6 +23,8 @@ and MANAGE_BLUETOOTH.
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 - API version 9: ohos.permission.MANAGE_BLUETOOTH
+
+<!--Device-bluetoothManager-function setDevicePairingConfirmation(device: string, accept: boolean): void--><!--Device-bluetoothManager-function setDevicePairingConfirmation(device: string, accept: boolean): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

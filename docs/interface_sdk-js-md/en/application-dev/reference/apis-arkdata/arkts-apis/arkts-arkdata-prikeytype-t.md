@@ -8,6 +8,8 @@ The type of the priority key can be number or string
 
 **Since:** 10
 
+<!--Device-relationalStore-type PRIKeyType = long | double | string--><!--Device-relationalStore-type PRIKeyType = long | double | string-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 | Type | Description |

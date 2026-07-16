@@ -2,6 +2,8 @@
 
 **Since:** 9
 
+<!--Device-usageStatistics-interface HapFormInfo--><!--Device-usageStatistics-interface HapFormInfo-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -24,6 +26,8 @@ The click count of module.
 
 **Since:** 9
 
+<!--Device-HapFormInfo-count: int--><!--Device-HapFormInfo-count: int-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -39,6 +43,8 @@ The form dimension.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-HapFormInfo-formDimension: int--><!--Device-HapFormInfo-formDimension: int-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -56,6 +62,8 @@ The form id.
 
 **Since:** 9
 
+<!--Device-HapFormInfo-formId: long--><!--Device-HapFormInfo-formId: long-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -66,12 +74,13 @@ The form id.
 formLastUsedTime: number
 ```
 
-The last time when the form was accessed, in milliseconds.
-<br> Unit:ms
+The last time when the form was accessed, in milliseconds.<br> Unit:ms
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-HapFormInfo-formLastUsedTime: long--><!--Device-HapFormInfo-formLastUsedTime: long-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -88,6 +97,8 @@ The form name.
 **Type:** string
 
 **Since:** 9
+
+<!--Device-HapFormInfo-formName: string--><!--Device-HapFormInfo-formName: string-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 

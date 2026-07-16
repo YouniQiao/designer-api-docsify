@@ -4,6 +4,8 @@ Defines the request for setting property information.
 
 **Since:** 8
 
+<!--Device-osAccount-interface SetPropertyRequest--><!--Device-osAccount-interface SetPropertyRequest-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Authentication credential type.
 
 **Since:** 8
 
+<!--Device-SetPropertyRequest-authType: AuthType--><!--Device-SetPropertyRequest-authType: AuthType-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ Type of the property to set.
 
 **Since:** 8
 
+<!--Device-SetPropertyRequest-key: SetPropertyType--><!--Device-SetPropertyRequest-key: SetPropertyType-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ Information to set.
 **Type:** Uint8Array
 
 **Since:** 8
+
+<!--Device-SetPropertyRequest-setInfo: Uint8Array--><!--Device-SetPropertyRequest-setInfo: Uint8Array-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 

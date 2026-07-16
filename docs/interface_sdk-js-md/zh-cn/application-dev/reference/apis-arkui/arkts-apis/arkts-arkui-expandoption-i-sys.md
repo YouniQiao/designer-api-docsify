@@ -4,9 +4,17 @@
 
 **起始版本：** 9
 
+<!--Device-screen-interface ExpandOption--><!--Device-screen-interface ExpandOption-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { screen } from '@kit.ArkUI';
+```
 
 ## screenId
 
@@ -19,6 +27,8 @@ screenId: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-ExpandOption-screenId: long--><!--Device-ExpandOption-screenId: long-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -36,6 +46,8 @@ startX: number
 
 **起始版本：** 9
 
+<!--Device-ExpandOption-startX: long--><!--Device-ExpandOption-startX: long-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -51,6 +63,8 @@ startY: number
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-ExpandOption-startY: long--><!--Device-ExpandOption-startY: long-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 

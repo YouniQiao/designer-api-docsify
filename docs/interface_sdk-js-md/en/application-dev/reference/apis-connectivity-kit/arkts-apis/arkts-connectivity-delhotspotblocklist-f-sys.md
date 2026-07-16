@@ -18,6 +18,8 @@ Delete the station from block list, the station can access the hotspot.
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_HOTSPOT
 
+<!--Device-wifiManager-function delHotspotBlockList(stationInfo: StationInfo): void--><!--Device-wifiManager-function delHotspotBlockList(stationInfo: StationInfo): void-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Delete the station from block list, the station can access the hotspot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stationInfo | StationInfo | Yes | station which will be deleted in the block list. |
+| stationInfo | [StationInfo](arkts-connectivity-stationinfo-i-sys.md) | Yes | station which will be deleted in the block list. |
 
 **Error codes:**
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-notificationManager-export enum DoNotDisturbType--><!--Device-notificationManager-export enum DoNotDisturbType-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -17,6 +19,8 @@ TYPE_NONE = 0
 非通知勿扰类型。
 
 **起始版本：** 9
+
+<!--Device-DoNotDisturbType-TYPE_NONE = 0--><!--Device-DoNotDisturbType-TYPE_NONE = 0-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -32,6 +36,8 @@ TYPE_ONCE = 1
 
 **起始版本：** 9
 
+<!--Device-DoNotDisturbType-TYPE_ONCE = 1--><!--Device-DoNotDisturbType-TYPE_ONCE = 1-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -46,6 +52,8 @@ TYPE_DAILY = 2
 
 **起始版本：** 9
 
+<!--Device-DoNotDisturbType-TYPE_DAILY = 2--><!--Device-DoNotDisturbType-TYPE_DAILY = 2-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -59,6 +67,8 @@ TYPE_CLEARLY = 3
 以设置时间段(明确月日时)执行勿扰。
 
 **起始版本：** 9
+
+<!--Device-DoNotDisturbType-TYPE_CLEARLY = 3--><!--Device-DoNotDisturbType-TYPE_CLEARLY = 3-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

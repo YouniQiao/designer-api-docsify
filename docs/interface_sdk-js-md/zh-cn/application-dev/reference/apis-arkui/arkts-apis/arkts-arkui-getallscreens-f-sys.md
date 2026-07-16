@@ -1,5 +1,11 @@
 # getAllScreens（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { screen } from '@kit.ArkUI';
+```
+
 ## getAllScreens
 
 ```TypeScript
@@ -10,6 +16,8 @@ function getAllScreens(callback: AsyncCallback<Array<Screen>>): void
 
 **起始版本：** 9
 
+<!--Device-screen-function getAllScreens(callback: AsyncCallback<Array<Screen>>): void--><!--Device-screen-function getAllScreens(callback: AsyncCallback<Array<Screen>>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -18,7 +26,7 @@ function getAllScreens(callback: AsyncCallback<Array<Screen>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;Screen&gt;&gt; | 是 | 回调函数。返回当前获取的屏幕对象集合。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Screen>> | 是 | 回调函数。返回当前获取的屏幕对象集合。 |
 
 **错误码：**
 
@@ -59,6 +67,8 @@ function getAllScreens(): Promise<Array<Screen>>
 
 **起始版本：** 9
 
+<!--Device-screen-function getAllScreens(): Promise<Array<Screen>>--><!--Device-screen-function getAllScreens(): Promise<Array<Screen>>-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -67,7 +77,7 @@ function getAllScreens(): Promise<Array<Screen>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Screen&gt;&gt; | Promise对象。返回当前获取的屏幕对象集合。 |
+| Promise<Array<Screen>> | Promise对象。返回当前获取的屏幕对象集合。 |
 
 **错误码：**
 

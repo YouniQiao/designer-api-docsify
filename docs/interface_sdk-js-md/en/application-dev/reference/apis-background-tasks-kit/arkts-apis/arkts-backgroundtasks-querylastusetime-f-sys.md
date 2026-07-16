@@ -18,6 +18,8 @@ Queries the last usage timestamp by bundleName and app index.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryLastUseTime(appInfo: Record<string, Array<long>>): Promise<AppStatsMap>--><!--Device-usageStatistics-function queryLastUseTime(appInfo: Record<string, Array<long>>): Promise<AppStatsMap>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Queries the last usage timestamp by bundleName and app index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appInfo | Record&lt;string, Array&lt;number&gt;&gt; | Yes | bundle name and app index info for each application. |
+| appInfo | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Array<number>> | Yes | bundle name and app index info for each application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AppStatsMap&gt; | the promise returned by queryLastUseTime.the {@link AppStatsMap} objects containing the usage information about each application. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AppStatsMap> | the promise returned by queryLastUseTime.the {@link AppStatsMap} objects containing the usage information about each application. |
 
 **Error codes:**
 

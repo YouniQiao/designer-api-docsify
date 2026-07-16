@@ -1,13 +1,20 @@
 # AsyKeyGenerator
 
-非对称密钥生成器。在使用该类的方法前，需要先使用[createAsyKeyGenerator](arkts-cryptoarchitecture-createasykeygenerator-f.md#createasykeygenerator-1)方法构建
-一个AsyKeyGenerator实例。
+非对称密钥生成器。在使用该类的方法前，需要先使用[createAsyKeyGenerator](arkts-cryptoarchitecture-createasykeygenerator-f.md#createasykeygenerator-1)方法构建一个AsyKeyGenerator实例。
 
 **起始版本：** 9
+
+<!--Device-cryptoFramework-interface AsyKeyGenerator--><!--Device-cryptoFramework-interface AsyKeyGenerator-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API版本9-11：SystemCapability.Security.CryptoFramework
+
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+```
 
 ## convertKey
 
@@ -19,7 +26,9 @@ convertKey(pubKey: DataBlob, priKey: DataBlob, callback: AsyncCallback<KeyPair>)
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob, callback: AsyncCallback<KeyPair>): void--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob, callback: AsyncCallback<KeyPair>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -29,9 +38,9 @@ convertKey(pubKey: DataBlob, priKey: DataBlob, callback: AsyncCallback<KeyPair>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pubKey | DataBlob | 是 | 公钥材料。 |
-| priKey | DataBlob | 是 | 私钥材料。 |
-| callback | AsyncCallback&lt;KeyPair&gt; | 是 | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则为错误对象。 |
+| pubKey | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | 是 | 公钥材料。 |
+| priKey | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | 是 | 私钥材料。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<KeyPair> | 是 | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则为错误对象。 |
 
 **错误码：**
 
@@ -52,7 +61,9 @@ convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCall
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCallback<KeyPair>): void--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCallback<KeyPair>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -64,7 +75,7 @@ convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCall
 | --- | --- | --- | --- |
 | pubKey | DataBlob \| null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增加支持null。 |
 | priKey | DataBlob \| null | 是 | 指定的私钥材料。如果私钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增加支持null。 |
-| callback | AsyncCallback&lt;KeyPair&gt; | 是 | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<KeyPair> | 是 | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则为错误对象。 |
 
 **错误码：**
 
@@ -111,7 +122,9 @@ convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -121,14 +134,14 @@ convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pubKey | DataBlob | 是 | 公钥材料。 |
-| priKey | DataBlob | 是 | 私钥材料。 |
+| pubKey | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | 是 | 公钥材料。 |
+| priKey | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-datablob-i.md) | 是 | 私钥材料。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;KeyPair&gt; | Promise对象，返回非对称密钥KeyPair。 |
+| Promise<KeyPair> | Promise对象，返回非对称密钥KeyPair。 |
 
 **错误码：**
 
@@ -149,7 +162,9 @@ convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -166,7 +181,7 @@ convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;KeyPair&gt; | Promise对象，返回非对称密钥KeyPair。 |
+| Promise<KeyPair> | Promise对象，返回非对称密钥KeyPair。 |
 
 **错误码：**
 
@@ -211,13 +226,13 @@ convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair
 
 同步获取指定数据生成非对称密钥。
 
-<br><br>**说明：**
-<br>建议优先使用异步API{@link convertKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。
-因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：**<br>建议优先使用异步API{@link convertKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGenerator-convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair--><!--Device-AsyKeyGenerator-convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -232,7 +247,7 @@ convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair
 
 | 类型 | 说明 |
 | --- | --- |
-| KeyPair | 非对称密钥。 |
+| [KeyPair](arkts-cryptoarchitecture-keypair-i.md) | 非对称密钥。 |
 
 **错误码：**
 
@@ -280,18 +295,20 @@ convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>
 
 获取指定数据生成非对称密钥。使用Promise异步回调。
 
-> **说明：**
->
-> 1. 使用convertPemKey()将外部字符串转换为Crypto框架定义的非对称密钥对象时，公钥需满足ASN.1语法、X.509规范和PEM编码格式，私钥需
-> 满足ASN.1语法、PKCS#8规范和PEM编码格式。
-> 2. 在convertPemKey()中，可以只传入pubKey或priKey中的一个，也可以两个都传入。如果只传入其中一个，返回的KeyPair实例中只包含从传
-> 入数据转换而来的密钥。
-> 3. 使用convertPemKey将外部字符串转换为Crypto框架定义的非对称密钥对象时，系统不会校验生成的密钥对象规格是否与为非对称密钥生成器指
+> **说明：**  
+>  
+> 1. 使用convertPemKey()将外部字符串转换为Crypto框架定义的非对称密钥对象时，公钥需满足ASN.1语法、X.509规范和PEM编码格式，私钥需  
+> 满足ASN.1语法、PKCS#8规范和PEM编码格式。  
+> 2. 在convertPemKey()中，可以只传入pubKey或priKey中的一个，也可以两个都传入。如果只传入其中一个，返回的KeyPair实例中只包含从传  
+> 入数据转换而来的密钥。  
+> 3. 使用convertPemKey将外部字符串转换为Crypto框架定义的非对称密钥对象时，系统不会校验生成的密钥对象规格是否与为非对称密钥生成器指  
 > 定的密钥规格相同。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -306,7 +323,7 @@ convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;KeyPair&gt; | Promise对象，返回非对称密钥KeyPair。 |
+| Promise<KeyPair> | Promise对象，返回非对称密钥KeyPair。 |
 
 **错误码：**
 
@@ -366,19 +383,21 @@ convertPemKey(pubKey: string | null, priKey: string | null, password: string): P
 
 获取指定数据生成非对称密钥。支持加密的私钥，同步传入私钥口令解密私钥。使用Promise异步回调。
 
-> **说明：**
->
-> 1. 使用convertPemKey()将外部字符串转换为Crypto框架定义的非对称密钥对象时，公钥需满足ASN.1语法、X.509规范和PEM编码格式，私钥需
-> 满足ASN.1语法、PKCS#8规范和PEM编码格式。
-> 2. 在convertPemKey()中，可以只传入pubKey或priKey中的一个，也可以两个都传入。如果只传入其中一个，返回的KeyPair实例中只包含从传
-> 入数据转换而来的密钥。
-> 3. 使用convertPemKey将外部字符串转换为Crypto框架定义的非对称密钥对象时，系统不会校验生成的密钥对象规格是否与为非对称密钥生成器指
-> 定的密钥规格相同。
+> **说明：**  
+>  
+> 1. 使用convertPemKey()将外部字符串转换为Crypto框架定义的非对称密钥对象时，公钥需满足ASN.1语法、X.509规范和PEM编码格式，私钥需  
+> 满足ASN.1语法、PKCS#8规范和PEM编码格式。  
+> 2. 在convertPemKey()中，可以只传入pubKey或priKey中的一个，也可以两个都传入。如果只传入其中一个，返回的KeyPair实例中只包含从传  
+> 入数据转换而来的密钥。  
+> 3. 使用convertPemKey将外部字符串转换为Crypto框架定义的非对称密钥对象时，系统不会校验生成的密钥对象规格是否与为非对称密钥生成器指  
+> 定的密钥规格相同。  
 > 4. 如果传入了password参数，可用于解密加密的私钥。
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -394,7 +413,7 @@ convertPemKey(pubKey: string | null, priKey: string | null, password: string): P
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;KeyPair&gt; | Promise对象，返回非对称密钥KeyPair。 |
+| Promise<KeyPair> | Promise对象，返回非对称密钥KeyPair。 |
 
 **错误码：**
 
@@ -449,18 +468,18 @@ convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair
 
 同步获取指定数据，生成非对称密钥。
 
-> **说明：**
-> convertPemKeySync接口与convertPemKey接口注意事项相同，见
-> [convertPemKey](arkts-cryptoarchitecture-asykeygenerator-i.md#convertpemkey-1)
+> **说明：**  
+> convertPemKeySync接口与convertPemKey接口注意事项相同，见  
+> [convertPemKey](arkts-cryptoarchitecture-asykeygenerator-i.md#convertpemkey-1)  
 > 接口说明。
 
-<br><br>**说明：**
-<br>建议优先使用异步API{@link convertPemKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。
-因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：**<br>建议优先使用异步API{@link convertPemKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair--><!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -475,7 +494,7 @@ convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair
 
 | 类型 | 说明 |
 | --- | --- |
-| KeyPair | 非对称密钥。 |
+| [KeyPair](arkts-cryptoarchitecture-keypair-i.md) | 非对称密钥。 |
 
 **错误码：**
 
@@ -538,18 +557,18 @@ convertPemKeySync(pubKey: string | null, priKey: string | null, password: string
 
 获取指定数据生成非对称密钥。支持加密的私钥，同步传入私钥口令解密私钥。使用同步方法。
 
-> **说明：**
-> convertPemKeySync接口与convertPemKey接口注意事项相同，见
-> [convertPemKey](arkts-cryptoarchitecture-asykeygenerator-i.md#convertpemkey-2)
+> **说明：**  
+> convertPemKeySync接口与convertPemKey接口注意事项相同，见  
+> [convertPemKey](arkts-cryptoarchitecture-asykeygenerator-i.md#convertpemkey-2)  
 > 接口说明。
 
-<br><br>**说明：**
-<br>建议优先使用异步API{@link convertPemKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。
-因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：**<br>建议优先使用异步API{@link convertPemKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null, password: string): KeyPair--><!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null, password: string): KeyPair-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -565,7 +584,7 @@ convertPemKeySync(pubKey: string | null, priKey: string | null, password: string
 
 | 类型 | 说明 |
 | --- | --- |
-| KeyPair | 非对称密钥。 |
+| [KeyPair](arkts-cryptoarchitecture-keypair-i.md) | 非对称密钥。 |
 
 **错误码：**
 
@@ -625,7 +644,9 @@ generateKeyPair(callback: AsyncCallback<KeyPair>): void
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGenerator-generateKeyPair(callback: AsyncCallback<KeyPair>): void--><!--Device-AsyKeyGenerator-generateKeyPair(callback: AsyncCallback<KeyPair>): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -635,7 +656,7 @@ generateKeyPair(callback: AsyncCallback<KeyPair>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;KeyPair&gt; | 是 | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<KeyPair> | 是 | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则为错误对象。 |
 
 **错误码：**
 
@@ -671,7 +692,9 @@ generateKeyPair(): Promise<KeyPair>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGenerator-generateKeyPair(): Promise<KeyPair>--><!--Device-AsyKeyGenerator-generateKeyPair(): Promise<KeyPair>-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -681,7 +704,7 @@ generateKeyPair(): Promise<KeyPair>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;KeyPair&gt; | Promise对象，返回非对称密钥KeyPair。 |
+| Promise<KeyPair> | Promise对象，返回非对称密钥KeyPair。 |
 
 **错误码：**
 
@@ -715,13 +738,13 @@ generateKeyPairSync(): KeyPair
 
 同步获取非对称密钥生成器随机生成的密钥。
 
-<br><br>**说明：**
-<br>建议优先使用异步API{@link generateKeyPair}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。
-因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：**<br>建议优先使用异步API{@link generateKeyPair}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGenerator-generateKeyPairSync(): KeyPair--><!--Device-AsyKeyGenerator-generateKeyPairSync(): KeyPair-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
@@ -729,7 +752,7 @@ generateKeyPairSync(): KeyPair
 
 | 类型 | 说明 |
 | --- | --- |
-| KeyPair | 非对称密钥。 |
+| [KeyPair](arkts-cryptoarchitecture-keypair-i.md) | 非对称密钥。 |
 
 **错误码：**
 
@@ -770,7 +793,9 @@ readonly algName: string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AsyKeyGenerator-readonly algName: string--><!--Device-AsyKeyGenerator-readonly algName: string-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey

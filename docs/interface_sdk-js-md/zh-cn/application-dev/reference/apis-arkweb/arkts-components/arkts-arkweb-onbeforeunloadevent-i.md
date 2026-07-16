@@ -4,6 +4,8 @@ Defines the triggered function when the web page wants to confirm navigation fro
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface OnBeforeUnloadEvent--><!--Device-unnamed-declare interface OnBeforeUnloadEvent-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## isReload
@@ -17,6 +19,8 @@ isReload?: boolean
 **类型：** boolean
 
 **起始版本：** 20
+
+<!--Device-OnBeforeUnloadEvent-isReload?: boolean--><!--Device-OnBeforeUnloadEvent-isReload?: boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -32,7 +36,9 @@ message: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnBeforeUnloadEvent-message: string--><!--Device-OnBeforeUnloadEvent-message: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -48,7 +54,9 @@ result: JsResult
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnBeforeUnloadEvent-result: JsResult--><!--Device-OnBeforeUnloadEvent-result: JsResult-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -64,7 +72,9 @@ url: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-OnBeforeUnloadEvent-url: string--><!--Device-OnBeforeUnloadEvent-url: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

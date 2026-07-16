@@ -4,6 +4,8 @@ Describes the ISO information.
 
 **Since:** 22
 
+<!--Device-camera-interface IsoInfo--><!--Device-camera-interface IsoInfo-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -27,6 +29,8 @@ ISO value.
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-IsoInfo-readonly iso?: int--><!--Device-IsoInfo-readonly iso?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

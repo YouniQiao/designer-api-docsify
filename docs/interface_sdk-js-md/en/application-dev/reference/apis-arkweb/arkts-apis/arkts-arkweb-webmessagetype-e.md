@@ -4,6 +4,8 @@ Enum type supplied to {@link onMessageEventExt} for indicating the type of web m
 
 **Since:** 10
 
+<!--Device-webview-enum WebMessageType--><!--Device-webview-enum WebMessageType-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## NOT_SUPPORT
@@ -17,6 +19,8 @@ Unsupported data type.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebMessageType-NOT_SUPPORT = 0--><!--Device-WebMessageType-NOT_SUPPORT = 0-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,6 +36,8 @@ The string data type.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebMessageType-STRING = 1--><!--Device-WebMessageType-STRING = 1-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## NUMBER
@@ -45,6 +51,8 @@ The number data type.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebMessageType-NUMBER = 2--><!--Device-WebMessageType-NUMBER = 2-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -60,6 +68,8 @@ The boolean data type.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebMessageType-BOOLEAN = 3--><!--Device-WebMessageType-BOOLEAN = 3-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## ARRAY_BUFFER
@@ -73,6 +83,8 @@ The arraybuffer data type.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebMessageType-ARRAY_BUFFER = 4--><!--Device-WebMessageType-ARRAY_BUFFER = 4-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -88,6 +100,8 @@ The array data type.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebMessageType-ARRAY = 5--><!--Device-WebMessageType-ARRAY = 5-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## ERROR
@@ -101,6 +115,8 @@ The error data type.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebMessageType-ERROR = 6--><!--Device-WebMessageType-ERROR = 6-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

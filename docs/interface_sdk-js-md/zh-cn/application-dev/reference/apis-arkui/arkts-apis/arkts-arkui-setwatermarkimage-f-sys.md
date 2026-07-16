@@ -1,5 +1,11 @@
 # setWaterMarkImage（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+```
+
 ## setWaterMarkImage
 
 ```TypeScript
@@ -9,6 +15,8 @@ function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean): Promise<v
 设置屏幕水印图片显示状态。使用Promise异步回调。
 
 **起始版本：** 10
+
+<!--Device-window-function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean): Promise<void>--><!--Device-window-function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -25,7 +33,7 @@ function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean): Promise<v
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -74,13 +82,13 @@ image.createPixelMap(color, initializationOptions).then((pixelMap: image.PixelMa
 function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, priority: number): Promise<void>
 ```
 
-设置屏幕水印图片的显示状态，并设定水印的优先级。使用Promise异步回调。当priority等于0时，当前接口与
-[setWaterMarkImage](arkts-arkui-setwatermarkimage-f-sys.md#setwatermarkimage-3)
-等价。
+设置屏幕水印图片的显示状态，并设定水印的优先级。使用Promise异步回调。当priority等于0时，当前接口与[setWaterMarkImage](arkts-arkui-setwatermarkimage-f-sys.md#setwatermarkimage-3)等价。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-window-function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, priority: int): Promise<void>--><!--Device-window-function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, priority: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -98,7 +106,7 @@ function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, priority: 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise对象，无返回结果。 |
+| Promise<void> | - Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -150,6 +158,8 @@ function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, callback: 
 
 **起始版本：** 10
 
+<!--Device-window-function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, callback: AsyncCallback<void>): void--><!--Device-window-function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -160,7 +170,7 @@ function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, callback: 
 | --- | --- | --- | --- |
 | pixelMap | image.PixelMap | 是 | 水印图片。可通过[createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-createpixelmap-f.md#createpixelmap-2)接口获取。 |
 | enable | boolean | 是 | 设置是否显示水印图片。true显示水印图片；false表示不显示水印图片。设置显示水印后需主动设置为false才能关闭水印图片显示。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调信息。 |
 
 **错误码：**
 

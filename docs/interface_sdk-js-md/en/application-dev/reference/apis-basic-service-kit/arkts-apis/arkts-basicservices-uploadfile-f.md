@@ -12,19 +12,19 @@ import { request } from '@kit.BasicServicesKit';
 function uploadFile(context: BaseContext, config: UploadConfig, callback: AsyncCallback<UploadTask>): void
 ```
 
-Uploads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use
-[on('complete'|'fail')](arkts-basicservices-uploadtask-i.md#on-3)
-to obtain the upload success or error information.
+Uploads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use [on('complete'|'fail')](arkts-basicservices-uploadtask-i.md#on-3)to obtain the upload success or error information.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-request-function uploadFile(context: BaseContext, config: UploadConfig, callback: AsyncCallback<UploadTask>): void--><!--Device-request-function uploadFile(context: BaseContext, config: UploadConfig, callback: AsyncCallback<UploadTask>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -32,9 +32,9 @@ to obtain the upload success or error information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Application-based context. |
-| config | UploadConfig | Yes | Upload configurations. |
-| callback | AsyncCallback&lt;UploadTask&gt; | Yes | Callback used to return the **UploadTask** object. If the operationis successful, **err** is **undefined**, and **data** is the **UploadTask** object obtained. Otherwise, **err**is an error object. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Application-based context. |
+| config | [UploadConfig](arkts-basicservices-uploadconfig-i.md) | Yes | Upload configurations. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<UploadTask> | Yes | Callback used to return the **UploadTask** object. If the operation is successful, **err** is **undefined**, and **data** is the **UploadTask** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -81,19 +81,19 @@ try {
 function uploadFile(context: BaseContext, config: UploadConfig): Promise<UploadTask>
 ```
 
-Uploads a file. This API uses a promise to return the result. HTTP is supported. You can use
-[on('complete'|'fail')](arkts-basicservices-uploadtask-i.md#on-3)
-to obtain the upload success or error information.
+Uploads a file. This API uses a promise to return the result. HTTP is supported. You can use [on('complete'|'fail')](arkts-basicservices-uploadtask-i.md#on-3)to obtain the upload success or error information.
 
-> **NOTE**
->
-> For details about how to obtain the context in the example, see
-> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> **NOTE**  
+>  
+> For details about how to obtain the context in the example, see  
+> [Obtaining the Context of UIAbility](../../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-request-function uploadFile(context: BaseContext, config: UploadConfig): Promise<UploadTask>--><!--Device-request-function uploadFile(context: BaseContext, config: UploadConfig): Promise<UploadTask>-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -101,14 +101,14 @@ to obtain the upload success or error information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Application-based context. |
-| config | UploadConfig | Yes | Upload configurations. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Application-based context. |
+| config | [UploadConfig](arkts-basicservices-uploadconfig-i.md) | Yes | Upload configurations. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;UploadTask&gt; | Promise used to return the **UploadTask** object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<UploadTask> | Promise used to return the **UploadTask** object. |
 
 **Error codes:**
 

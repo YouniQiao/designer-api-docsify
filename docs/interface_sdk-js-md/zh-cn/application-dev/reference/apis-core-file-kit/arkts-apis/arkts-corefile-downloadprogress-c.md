@@ -4,7 +4,15 @@
 
 **起始版本：** 20
 
+<!--Device-cloudSyncManager-class DownloadProgress--><!--Device-cloudSyncManager-class DownloadProgress-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
+
+## 导入模块
+
+```TypeScript
+import { cloudSyncManager } from '@kit.CoreFileKit';
+```
 
 ## downloadedSize
 
@@ -17,6 +25,8 @@ downloadedSize: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-DownloadProgress-downloadedSize: long--><!--Device-DownloadProgress-downloadedSize: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -32,6 +42,8 @@ failedCount: number
 
 **起始版本：** 20
 
+<!--Device-DownloadProgress-failedCount: int--><!--Device-DownloadProgress-failedCount: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## state
@@ -45,6 +57,8 @@ state: DownloadState
 **类型：** DownloadState
 
 **起始版本：** 20
+
+<!--Device-DownloadProgress-state: DownloadState--><!--Device-DownloadProgress-state: DownloadState-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -60,6 +74,8 @@ stopReason: DownloadStopReason
 
 **起始版本：** 20
 
+<!--Device-DownloadProgress-stopReason: DownloadStopReason--><!--Device-DownloadProgress-stopReason: DownloadStopReason-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## successfulCount
@@ -73,6 +89,8 @@ successfulCount: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-DownloadProgress-successfulCount: int--><!--Device-DownloadProgress-successfulCount: int-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -88,6 +106,8 @@ totalCount: number
 
 **起始版本：** 20
 
+<!--Device-DownloadProgress-totalCount: int--><!--Device-DownloadProgress-totalCount: int-End-->
+
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## totalSize
@@ -101,6 +121,8 @@ totalSize: number
 **类型：** number
 
 **起始版本：** 20
+
+<!--Device-DownloadProgress-totalSize: long--><!--Device-DownloadProgress-totalSize: long-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 

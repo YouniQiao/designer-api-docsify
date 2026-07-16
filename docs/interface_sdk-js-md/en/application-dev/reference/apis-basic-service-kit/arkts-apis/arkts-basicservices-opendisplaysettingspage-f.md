@@ -18,13 +18,15 @@ Open the display settings page.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-settings-function openDisplaySettingsPage(context: Context): void--><!--Device-settings-function openDisplaySettingsPage(context: Context): void-End-->
+
 **System capability:** SystemCapability.Applications.Settings.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context. Only UIAbilityContext and UIExtensionContext are supported. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. Only UIAbilityContext and UIExtensionContext are supported. |
 
 **Error codes:**
 

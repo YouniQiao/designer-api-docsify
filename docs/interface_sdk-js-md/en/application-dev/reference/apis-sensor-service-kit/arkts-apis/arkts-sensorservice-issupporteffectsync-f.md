@@ -16,6 +16,8 @@ Checks whether the preset vibration effect is supported.
 
 **Since:** 12
 
+<!--Device-vibrator-function isSupportEffectSync(effectId: string): boolean--><!--Device-vibrator-function isSupportEffectSync(effectId: string): boolean-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Parameters:**
@@ -28,7 +30,7 @@ Checks whether the preset vibration effect is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returned object. The value **true** means that the effect ID is supported, and the value**false** means the opposite. |
+| boolean | Returned object. The value **true** means that the effect ID is supported, and the value **false** means the opposite. |
 
 **Error codes:**
 

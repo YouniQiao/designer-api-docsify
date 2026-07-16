@@ -1,10 +1,10 @@
 # InputMethodController
 
-A control class that encapsulates APIs for input method management, which can only be invoked after an
-**InputMethodController** instance is obtained via
-[getController](arkts-ime-getcontroller-f.md#getcontroller-1).
+A control class that encapsulates APIs for input method management, which can only be invoked after an **InputMethodController** instance is obtained via [getController](arkts-ime-getcontroller-f.md#getcontroller-1).
 
 **Since:** 6
+
+<!--Device-inputMethod-interface InputMethodController--><!--Device-inputMethod-interface InputMethodController-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -22,9 +22,9 @@ hideSoftKeyboard(displayId: number): Promise<void>
 
 Hides the soft keyboard on a specified screen. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API can be called only when the edit box is attached to the input method. That is, it can be called to
+> **NOTE**  
+>  
+> This API can be called only when the edit box is attached to the input method. That is, it can be called to  
 > hide the soft keyboard only when the edit box is focused.
 
 **Since:** 23
@@ -32,6 +32,8 @@ Hides the soft keyboard on a specified screen. This API uses a promise to return
 **Required permissions:** ohos.permission.CONNECT_IME_ABILITY
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-InputMethodController-hideSoftKeyboard(displayId: long): Promise<void>--><!--Device-InputMethodController-hideSoftKeyboard(displayId: long): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -47,7 +49,7 @@ Hides the soft keyboard on a specified screen. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -80,9 +82,9 @@ showSoftKeyboard(displayId: number): Promise<void>
 
 Shows the soft keyboard on a specified screen. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API can be called only when the edit box is attached to the input method. That is, it can be called to
+> **NOTE**  
+>  
+> This API can be called only when the edit box is attached to the input method. That is, it can be called to  
 > show the soft keyboard only when the edit box is focused.
 
 **Since:** 23
@@ -90,6 +92,8 @@ Shows the soft keyboard on a specified screen. This API uses a promise to return
 **Required permissions:** ohos.permission.CONNECT_IME_ABILITY
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-InputMethodController-showSoftKeyboard(displayId: long): Promise<void>--><!--Device-InputMethodController-showSoftKeyboard(displayId: long): Promise<void>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -105,7 +109,7 @@ Shows the soft keyboard on a specified screen. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

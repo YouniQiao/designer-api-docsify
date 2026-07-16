@@ -18,6 +18,8 @@ Performs SIM card authentication.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getSimAuthentication(slotId: int, authType: AuthType, authData: string): Promise<SimAuthenticationResponse>--><!--Device-sim-function getSimAuthentication(slotId: int, authType: AuthType, authData: string): Promise<SimAuthenticationResponse>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -27,14 +29,14 @@ Performs SIM card authentication.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Sim slot id. |
-| authType | AuthType | Yes | The authentication type. |
+| authType | [AuthType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-authtype-e-sys.md) | Yes | The authentication type. |
 | authData | string | Yes | Ser password or other authentication information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SimAuthenticationResponse&gt; | A string the response of authentication.This value will be null inthe following cases: Authentication error, incorrect MAC Authentication error, security context not supported Keyfreshness failure Authentication error, no memory space available Authentication error, no memory space availablein EFMUK. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SimAuthenticationResponse> | A string the response of authentication.This value will be null in the following cases: Authentication error, incorrect MAC Authentication error, security context not supported Key freshness failure Authentication error, no memory space available Authentication error, no memory space available in EFMUK. |
 
 **Error codes:**
 

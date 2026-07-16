@@ -4,6 +4,8 @@ Provide an interface for ArcSwiper.
 
 **Since:** 18
 
+<!--Device-unnamed-interface ArcSwiperInterface--><!--Device-unnamed-interface ArcSwiperInterface-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
@@ -24,17 +26,19 @@ Creates an **ArcSwiper** component.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ArcSwiperInterface-(controller?: ArcSwiperController): ArcSwiperAttribute--><!--Device-ArcSwiperInterface-(controller?: ArcSwiperController): ArcSwiperAttribute-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | ArcSwiperController | No | Controller bound to the component to control the page turning. |
+| controller | [ArcSwiperController](arkts-arkui-arcswipercontroller-c.md) | No | Controller bound to the component to control the page turning. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArcSwiperAttribute | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
+| [ArcSwiperAttribute](arkts-arkui-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 

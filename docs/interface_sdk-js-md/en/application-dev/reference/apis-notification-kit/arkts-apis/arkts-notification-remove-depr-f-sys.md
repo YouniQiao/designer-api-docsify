@@ -21,6 +21,18 @@ Removes a notification for a specified bundle. This API uses an asynchronous cal
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function remove(
+    bundle: BundleOption,
+    notificationKey: NotificationKey,
+    reason: RemoveReason,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-notification-function remove(
+    bundle: BundleOption,
+    notificationKey: NotificationKey,
+    reason: RemoveReason,
+    callback: AsyncCallback<void>
+  ): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -29,10 +41,10 @@ Removes a notification for a specified bundle. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
-| notificationKey | NotificationKey | Yes | Notification key. |
-| reason | RemoveReason | Yes | Reason for deleting a notification. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
+| notificationKey | [NotificationKey](arkts-notification-notificationkey-i-sys.md) | Yes | Notification key. |
+| reason | [RemoveReason](arkts-notification-removereason-e-sys.md) | Yes | Reason for deleting a notification. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 
 ## remove
@@ -51,6 +63,8 @@ Removes a notification for a specified bundle. This API uses a promise to return
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: RemoveReason): Promise<void>--><!--Device-notification-function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: RemoveReason): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -59,15 +73,15 @@ Removes a notification for a specified bundle. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | BundleOption | Yes | Bundle information of the application. |
-| notificationKey | NotificationKey | Yes | Notification key. |
-| reason | RemoveReason | Yes | Reason for deleting a notification. |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Bundle information of the application. |
+| notificationKey | [NotificationKey](arkts-notification-notificationkey-i-sys.md) | Yes | Notification key. |
+| reason | [RemoveReason](arkts-notification-removereason-e-sys.md) | Yes | Reason for deleting a notification. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 
 ## remove
@@ -86,6 +100,8 @@ Removes a notification for a specified bundle. This API uses an asynchronous cal
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function remove(hashCode: string, reason: RemoveReason, callback: AsyncCallback<void>): void--><!--Device-notification-function remove(hashCode: string, reason: RemoveReason, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -94,9 +110,9 @@ Removes a notification for a specified bundle. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hashCode | string | Yes | Unique notification ID. It is the value of **hashCode**in the [NotificationRequest](arkts-notification-notificationrequest-i.md) object of[SubscribeCallbackData](arkts-notification-subscribecallbackdata-i-sys.md) used in the[onConsume](arkts-notification-notificationsubscriber-i-sys.md#onconsume) callback. |
-| reason | RemoveReason | Yes | Reason for deleting a notification. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| hashCode | string | Yes | Unique notification ID. It is the value of **hashCode** in the [NotificationRequest](arkts-notification-notificationrequest-i.md) object of [SubscribeCallbackData](arkts-notification-subscribecallbackdata-i-sys.md) used in the [onConsume](arkts-notification-notificationsubscriber-i-sys.md#onconsume) callback. |
+| reason | [RemoveReason](arkts-notification-removereason-e-sys.md) | Yes | Reason for deleting a notification. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 
 ## remove
@@ -115,6 +131,8 @@ Removes a notification for a specified bundle. This API uses a promise to return
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function remove(hashCode: string, reason: RemoveReason): Promise<void>--><!--Device-notification-function remove(hashCode: string, reason: RemoveReason): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -124,11 +142,11 @@ Removes a notification for a specified bundle. This API uses a promise to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hashCode | string | Yes | Unique notification ID. |
-| reason | RemoveReason | Yes | Reason for deleting a notification. |
+| reason | [RemoveReason](arkts-notification-removereason-e-sys.md) | Yes | Reason for deleting a notification. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 

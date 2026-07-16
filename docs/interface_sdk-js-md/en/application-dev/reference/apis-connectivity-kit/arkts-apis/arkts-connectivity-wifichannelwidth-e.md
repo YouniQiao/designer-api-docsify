@@ -4,6 +4,8 @@ Describes the wifi channel width.
 
 **Since:** 9
 
+<!--Device-wifiManager-enum WifiChannelWidth--><!--Device-wifiManager-enum WifiChannelWidth-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## WIDTH_20MHZ
@@ -15,6 +17,8 @@ WIDTH_20MHZ = 0
 20MHz.
 
 **Since:** 9
+
+<!--Device-WifiChannelWidth-WIDTH_20MHZ = 0--><!--Device-WifiChannelWidth-WIDTH_20MHZ = 0-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -28,6 +32,8 @@ WIDTH_40MHZ = 1
 
 **Since:** 9
 
+<!--Device-WifiChannelWidth-WIDTH_40MHZ = 1--><!--Device-WifiChannelWidth-WIDTH_40MHZ = 1-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## WIDTH_80MHZ
@@ -39,6 +45,8 @@ WIDTH_80MHZ = 2
 80MHz.
 
 **Since:** 9
+
+<!--Device-WifiChannelWidth-WIDTH_80MHZ = 2--><!--Device-WifiChannelWidth-WIDTH_80MHZ = 2-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -52,6 +60,8 @@ WIDTH_160MHZ = 3
 
 **Since:** 9
 
+<!--Device-WifiChannelWidth-WIDTH_160MHZ = 3--><!--Device-WifiChannelWidth-WIDTH_160MHZ = 3-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## WIDTH_80MHZ_PLUS
@@ -64,6 +74,8 @@ WIDTH_80MHZ_PLUS = 4
 
 **Since:** 9
 
+<!--Device-WifiChannelWidth-WIDTH_80MHZ_PLUS = 4--><!--Device-WifiChannelWidth-WIDTH_80MHZ_PLUS = 4-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## WIDTH_INVALID
@@ -75,6 +87,8 @@ WIDTH_INVALID
 Invalid.
 
 **Since:** 9
+
+<!--Device-WifiChannelWidth-WIDTH_INVALID--><!--Device-WifiChannelWidth-WIDTH_INVALID-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 

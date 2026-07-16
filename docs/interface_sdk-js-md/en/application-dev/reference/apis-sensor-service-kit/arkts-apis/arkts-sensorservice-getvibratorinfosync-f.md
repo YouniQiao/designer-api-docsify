@@ -16,19 +16,21 @@ Queries the vibrator list of one or all devices.
 
 **Since:** 19
 
+<!--Device-vibrator-function getVibratorInfoSync(param?: VibratorInfoParam): Array<VibratorInfo>--><!--Device-vibrator-function getVibratorInfoSync(param?: VibratorInfoParam): Array<VibratorInfo>-End-->
+
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | VibratorInfoParam | No | Vibrator parameters, such as the specified device and vibrator. If thisparameter is left unspecified, this API applies to all vibrators of the local device by default. |
+| param | [VibratorInfoParam](arkts-sensorservice-vibratorinfoparam-i.md) | No | Vibrator parameters, such as the specified device and vibrator. If this parameter is left unspecified, this API applies to all vibrators of the local device by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;VibratorInfo&gt; | Vibrator information. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<VibratorInfo> | Vibrator information. |
 
 **Example**
 

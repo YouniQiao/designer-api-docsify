@@ -4,6 +4,8 @@ Defines information about the images or videos selected.
 
 **Since:** 10
 
+<!--Device-photoAccessHelper-class PhotoSelectResult--><!--Device-photoAccessHelper-class PhotoSelectResult-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -18,15 +20,15 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 contextRecoveryInfo: ContextRecoveryInfo
 ```
 
-Information about the context of exiting the PhotoPicker. This information is returned when the selection process
-is complete and is used by the application within **PhotoSelectOptions** during the subsequent launch of the
-PhotoPicker to restore the state from the previous exit.
+Information about the context of exiting the PhotoPicker. This information is returned when the selection process is complete and is used by the application within **PhotoSelectOptions** during the subsequent launch of the PhotoPicker to restore the state from the previous exit.
 
 **Type:** ContextRecoveryInfo
 
 **Since:** 21
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-PhotoSelectResult-contextRecoveryInfo: ContextRecoveryInfo--><!--Device-PhotoSelectResult-contextRecoveryInfo: ContextRecoveryInfo-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -36,14 +38,15 @@ PhotoPicker to restore the state from the previous exit.
 isOriginalPhoto: boolean
 ```
 
-Whether the selected media file is the original image. **true** if yes, **false** otherwise. The default value is
-**false**.
+Whether the selected media file is the original image. **true** if yes, **false** otherwise. The default value is **false**.
 
 **Type:** boolean
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PhotoSelectResult-isOriginalPhoto: boolean--><!--Device-PhotoSelectResult-isOriginalPhoto: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -55,14 +58,15 @@ movingPhotoBadgeStates: Array<MovingPhotoBadgeStateType>
 
 Array of moving photo badge states for the media files selected from Gallery.
 
-If **isMovingPhotoBadgeShown** is set to **true**, this array contains the moving photo badge states. Otherwise,
-it is empty.
+If **isMovingPhotoBadgeShown** is set to **true**, this array contains the moving photo badge states. Otherwise,it is empty.
 
 **Type:** Array<MovingPhotoBadgeStateType>
 
 **Since:** 22
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-PhotoSelectResult-movingPhotoBadgeStates: Array<MovingPhotoBadgeStateType>--><!--Device-PhotoSelectResult-movingPhotoBadgeStates: Array<MovingPhotoBadgeStateType>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -74,16 +78,15 @@ photoUris: Array<string>
 
 URIs of the media files selected.
 
-This URI array can be used only by calling the
-[photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-i.md#getassets-1)
-API through temporary authorization. For details, see
-[Using a Media File URI](../../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
+This URI array can be used only by calling the [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-i.md#getassets-1)API through temporary authorization. For details, see [Using a Media File URI](../../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
 **Type:** Array<string>
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PhotoSelectResult-photoUris: Array<string>--><!--Device-PhotoSelectResult-photoUris: Array<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

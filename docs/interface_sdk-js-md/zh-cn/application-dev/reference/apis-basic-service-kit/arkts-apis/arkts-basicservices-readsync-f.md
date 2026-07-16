@@ -1,5 +1,11 @@
 # readSync
 
+## 导入模块
+
+```TypeScript
+import { serialManager } from '@kit.BasicServicesKit';
+```
+
 ## readSync
 
 ```TypeScript
@@ -10,6 +16,8 @@ function readSync(portId: number, buffer: Uint8Array, timeout?: number): number
 
 **起始版本：** 19
 
+<!--Device-serialManager-function readSync(portId: int, buffer: Uint8Array, timeout?: int): int--><!--Device-serialManager-function readSync(portId: int, buffer: Uint8Array, timeout?: int): int-End-->
+
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 **参数：**
@@ -17,7 +25,7 @@ function readSync(portId: number, buffer: Uint8Array, timeout?: number): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | portId | number | 是 | 目标设备的端口号，来自[getPortList](arkts-basicservices-getportlist-f.md#getportlist-1)获取的串口参数SerialPort。 |
-| buffer | Uint8Array | 是 | 读取数据的缓冲区，最大长度为8192比特。 |
+| buffer | [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 是 | 读取数据的缓冲区，最大长度为8192比特。 |
 | timeout | number | 否 | 超时时间（单位：毫秒）。API在目标端口缓冲区无数据时，等待指定时间后返回。默认值0表示不等待直接返回。 |
 
 **返回值：**

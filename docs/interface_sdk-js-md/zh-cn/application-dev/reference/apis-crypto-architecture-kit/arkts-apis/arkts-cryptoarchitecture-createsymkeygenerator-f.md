@@ -1,5 +1,11 @@
 # createSymKeyGenerator
 
+## 导入模块
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+```
+
 ## createSymKeyGenerator
 
 ```TypeScript
@@ -8,12 +14,13 @@ function createSymKeyGenerator(algName: string): SymKeyGenerator
 
 通过指定算法名称获取相应的对称密钥生成器实例。
 
-支持的规格详见
-[对称密钥生成和转换规格](../../../../security/CryptoArchitectureKit/crypto-sym-key-generation-conversion-spec.md)。
+支持的规格详见[对称密钥生成和转换规格](../../../../security/CryptoArchitectureKit/crypto-sym-key-generation-conversion-spec.md)。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-cryptoFramework-function createSymKeyGenerator(algName: string): SymKeyGenerator--><!--Device-cryptoFramework-function createSymKeyGenerator(algName: string): SymKeyGenerator-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.SymKey
@@ -29,7 +36,7 @@ function createSymKeyGenerator(algName: string): SymKeyGenerator
 
 | 类型 | 说明 |
 | --- | --- |
-| SymKeyGenerator | 返回对称密钥生成器的对象。 |
+| [SymKeyGenerator](arkts-cryptoarchitecture-symkeygenerator-i.md) | 返回对称密钥生成器的对象。 |
 
 **错误码：**
 

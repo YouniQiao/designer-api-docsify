@@ -4,6 +4,8 @@
 
 **废弃版本：** 6
 
+<!--Device-unnamed-export default class Storage--><!--Device-unnamed-export default class Storage-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 ## clear
@@ -22,13 +24,15 @@ static clear(options?: ClearStorageOptions): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Storage-static clear(options?: ClearStorageOptions): void--><!--Device-Storage-static clear(options?: ClearStorageOptions): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | ClearStorageOptions | 否 | Indicates the target options. |
+| options | [ClearStorageOptions](arkts-arkdata-clearstorageoptions-i.md) | 否 | Indicates the target options. |
 
 ## delete
 
@@ -46,13 +50,15 @@ static delete(options: DeleteStorageOptions): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Storage-static delete(options: DeleteStorageOptions): void--><!--Device-Storage-static delete(options: DeleteStorageOptions): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | DeleteStorageOptions | 是 | Indicates the target options. |
+| options | [DeleteStorageOptions](arkts-arkdata-deletestorageoptions-i.md) | 是 | Indicates the target options. |
 
 ## get
 
@@ -70,13 +76,15 @@ static get(options: GetStorageOptions): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Storage-static get(options: GetStorageOptions): void--><!--Device-Storage-static get(options: GetStorageOptions): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | GetStorageOptions | 是 | Indicates the target options. |
+| options | [GetStorageOptions](arkts-arkdata-getstorageoptions-i.md) | 是 | Indicates the target options. |
 
 ## set
 
@@ -92,11 +100,13 @@ static set(options: SetStorageOptions): void
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
+<!--Device-Storage-static set(options: SetStorageOptions): void--><!--Device-Storage-static set(options: SetStorageOptions): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | SetStorageOptions | 是 | Indicates the target options. |
+| options | [SetStorageOptions](arkts-arkdata-setstorageoptions-i.md) | 是 | Indicates the target options. |
 

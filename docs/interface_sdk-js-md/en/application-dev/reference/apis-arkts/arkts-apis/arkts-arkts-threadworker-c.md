@@ -1,11 +1,12 @@
 # ThreadWorker
 
-Before using the following APIs, you must create a ThreadWorker instance. The ThreadWorker class inherits from
-WorkerEventTarget.
+Before using the following APIs, you must create a ThreadWorker instance. The ThreadWorker class inherits from WorkerEventTarget.
 
 **Inheritance/Implementation:** ThreadWorker implements [WorkerEventTarget](arkts-arkts-workereventtarget-i.md)
 
 **Since:** 9
+
+<!--Device-worker-class ThreadWorker implements WorkerEventTarget--><!--Device-worker-class ThreadWorker implements WorkerEventTarget-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,6 +28,8 @@ Adds an event listener for the Worker thread. This API provides the same functio
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ThreadWorker-addEventListener(type: string, listener: WorkerEventListener): void--><!--Device-ThreadWorker-addEventListener(type: string, listener: WorkerEventListener): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -34,7 +37,7 @@ Adds an event listener for the Worker thread. This API provides the same functio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the event to listen for. |
-| listener | WorkerEventListener | Yes | Callback to invoke when an event of the specified type occurs. |
+| listener | [WorkerEventListener](arkts-arkts-workereventlistener-i.md) | Yes | Callback to invoke when an event of the specified type occurs. |
 
 **Error codes:**
 
@@ -72,14 +75,16 @@ A constructor used to create a ThreadWorker instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ThreadWorker-constructor(scriptURL: string, options?: WorkerOptions)--><!--Device-ThreadWorker-constructor(scriptURL: string, options?: WorkerOptions)-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scriptURL | string | Yes | URL of the Worker thread file. For details about the rules, see Precautions forFile URLs. |
-| options | WorkerOptions | No | Options that can be set for the Worker instance. |
+| scriptURL | string | Yes | URL of the Worker thread file. For details about the rules, see Precautions for File URLs. |
+| options | [WorkerOptions](arkts-arkts-workeroptions-i.md) | No | Options that can be set for the Worker instance. |
 
 **Error codes:**
 
@@ -113,13 +118,15 @@ Dispatches the event defined for the Worker thread.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ThreadWorker-dispatchEvent(event: Event): boolean--><!--Device-ThreadWorker-dispatchEvent(event: Event): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Event | Yes | Event to dispatch. |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-event-c.md) | Yes | Event to dispatch. |
 
 **Return value:**
 
@@ -157,12 +164,13 @@ console.info("dispatchEvent result is: ", result);
 off(type: string, listener?: WorkerEventListener): void
 ```
 
-Removes an event listener for the Worker thread. This API provides the same functionality as removeEventListener9
-+.
+Removes an event listener for the Worker thread. This API provides the same functionality as removeEventListener9+.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ThreadWorker-off(type: string, listener?: WorkerEventListener): void--><!--Device-ThreadWorker-off(type: string, listener?: WorkerEventListener): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -171,7 +179,7 @@ Removes an event listener for the Worker thread. This API provides the same func
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the event for which the event listener is removed. |
-| listener | WorkerEventListener | No | listener Callback of the event listener to remove. |
+| listener | [WorkerEventListener](arkts-arkts-workereventlistener-i.md) | No | listener Callback of the event listener to remove. |
 
 **Error codes:**
 
@@ -221,6 +229,8 @@ Adds an event listener for the Worker thread. This API provides the same functio
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ThreadWorker-on(type: string, listener: WorkerEventListener): void--><!--Device-ThreadWorker-on(type: string, listener: WorkerEventListener): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -228,7 +238,7 @@ Adds an event listener for the Worker thread. This API provides the same functio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the event to listen for. |
-| listener | WorkerEventListener | Yes | Callback to invoke when an event of the specified type occurs. |
+| listener | [WorkerEventListener](arkts-arkts-workereventlistener-i.md) | Yes | Callback to invoke when an event of the specified type occurs. |
 
 **Error codes:**
 
@@ -267,6 +277,8 @@ Adds an event listener for the Worker thread and removes the event listener afte
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ThreadWorker-once(type: string, listener: WorkerEventListener): void--><!--Device-ThreadWorker-once(type: string, listener: WorkerEventListener): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -274,7 +286,7 @@ Adds an event listener for the Worker thread and removes the event listener afte
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the event to listen for |
-| listener | WorkerEventListener | Yes | listener Callback to invoke when an event of the specified type occurs |
+| listener | [WorkerEventListener](arkts-arkts-workereventlistener-i.md) | Yes | listener Callback to invoke when an event of the specified type occurs |
 
 **Error codes:**
 
@@ -314,14 +326,16 @@ Sends a message from the host thread to the Worker thread by transferring object
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ThreadWorker-postMessage(message: Object, transfer: ArrayBuffer[]): void--><!--Device-ThreadWorker-postMessage(message: Object, transfer: ArrayBuffer[]): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | Object | Yes | Data to be sent to the Worker thread. The data object must be sequenceable.For details about the supported parameter types, see Sequenceable Data Types. |
-| transfer | ArrayBuffer[] | Yes | ArrayBuffer instance holding an array of objects for which the ownershipis transferred to the Worker thread. After the transfer, the objects are available only in the Worker thread.The array cannot be null. |
+| message | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Data to be sent to the Worker thread. The data object must be sequenceable.For details about the supported parameter types, see Sequenceable Data Types. |
+| transfer | [ArrayBuffer](arkts-arkts-arraybuffer-c.md)[] | Yes | ArrayBuffer instance holding an array of objects for which the ownership is transferred to the Worker thread. After the transfer, the objects are available only in the Worker thread.The array cannot be null. |
 
 **Error codes:**
 
@@ -419,14 +433,16 @@ Sends a message from the host thread to the Worker thread by transferring object
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ThreadWorker-postMessage(message: Object, options?: PostMessageOptions): void--><!--Device-ThreadWorker-postMessage(message: Object, options?: PostMessageOptions): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | Object | Yes | Data to be sent to the Worker thread. The data object must be sequenceable.For details about the supported parameter types, see Sequenceable Data Types. |
-| options | PostMessageOptions | No | If this parameter is specified, it functions the same as ArrayBuffer[].Specifically, the ownership of the objects in the array is transferred to the Worker thread and becomesunavailable in the host thread.The objects are available only in the Worker thread. If this parameter is not specified, the default valueundefined is used,and information is transferred to the Worker thread by copying data. |
+| message | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Data to be sent to the Worker thread. The data object must be sequenceable.For details about the supported parameter types, see Sequenceable Data Types. |
+| options | [PostMessageOptions](arkts-arkts-postmessageoptions-i.md) | No | If this parameter is specified, it functions the same as ArrayBuffer[].Specifically, the ownership of the objects in the array is transferred to the Worker thread and becomes unavailable in the host thread.The objects are available only in the Worker thread. If this parameter is not specified, the default value undefined is used,and information is transferred to the Worker thread by copying data. |
 
 **Error codes:**
 
@@ -460,13 +476,13 @@ workerInstance.postMessage(buffer);
 postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void
 ```
 
-Sends a message from the host thread to the Worker thread. In the message, a sendable object is passed by
-reference,
-and a non-sendable object is passed by serialization.
+Sends a message from the host thread to the Worker thread. In the message, a sendable object is passed by reference,and a non-sendable object is passed by serialization.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ThreadWorker-postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void--><!--Device-ThreadWorker-postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -474,8 +490,8 @@ and a non-sendable object is passed by serialization.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | Object | Yes | Data to be sent to the Worker thread. The data object must be sequenceable orsendable.For details about the supported sequenceable types, see Sequenceable Data Types.For details about the supported sendable types, see Sendable Data Types. |
-| transfer | ArrayBuffer[] | No | ArrayBuffer instance holding an array of objects for which the ownershipis transferred to the Worker thread. After the transfer, the objects are available only in the Worker thread.The array cannot be null. The default value is an empty array. |
+| message | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Data to be sent to the Worker thread. The data object must be sequenceable or sendable.For details about the supported sequenceable types, see Sequenceable Data Types.For details about the supported sendable types, see Sendable Data Types. |
+| transfer | [ArrayBuffer](arkts-arkts-arraybuffer-c.md)[] | No | ArrayBuffer instance holding an array of objects for which the ownership is transferred to the Worker thread. After the transfer, the objects are available only in the Worker thread.The array cannot be null. The default value is an empty array. |
 
 **Error codes:**
 
@@ -536,12 +552,13 @@ workerPort.onmessage = (e: MessageEvents) => {
 registerGlobalCallObject(instanceName: string, globalCallObject: Object): void
 ```
 
-Registers an object with the ThreadWorker instance of the host thread.
-In this way, the methods of the object can be called in the Worker thread through callGlobalCallObjectMethod.
+Registers an object with the ThreadWorker instance of the host thread.In this way, the methods of the object can be called in the Worker thread through callGlobalCallObjectMethod.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ThreadWorker-registerGlobalCallObject(instanceName: string, globalCallObject: Object): void--><!--Device-ThreadWorker-registerGlobalCallObject(instanceName: string, globalCallObject: Object): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -549,8 +566,8 @@ In this way, the methods of the object can be called in the Worker thread throug
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instanceName | string | Yes | Key used for registration, based on which the registered object is identifiedduring method calling. |
-| globalCallObject | Object | Yes | Object to register. The ThreadWorker instance holds a strong reference tothe object. |
+| instanceName | string | Yes | Key used for registration, based on which the registered object is identified during method calling. |
+| globalCallObject | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Yes | Object to register. The ThreadWorker instance holds a strong reference to the object. |
 
 **Error codes:**
 
@@ -619,6 +636,8 @@ Removes all event listeners for the Worker thread.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ThreadWorker-removeAllListener(): void--><!--Device-ThreadWorker-removeAllListener(): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
@@ -653,6 +672,8 @@ Removes an event listener for the Worker thread. This API provides the same func
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ThreadWorker-removeEventListener(type: string, callback?: WorkerEventListener): void--><!--Device-ThreadWorker-removeEventListener(type: string, callback?: WorkerEventListener): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -660,7 +681,7 @@ Removes an event listener for the Worker thread. This API provides the same func
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the event for which the event listener is to be removed. |
-| callback | WorkerEventListener | No | Callback to invoke when the listener is removed. |
+| callback | [WorkerEventListener](arkts-arkts-workereventlistener-i.md) | No | Callback to invoke when the listener is removed. |
 
 **Error codes:**
 
@@ -698,6 +719,8 @@ Terminates the Worker thread to stop it from receiving messages.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ThreadWorker-terminate(): void--><!--Device-ThreadWorker-terminate(): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Error codes:**
@@ -723,12 +746,13 @@ workerInstance.terminate();
 unregisterGlobalCallObject(instanceName?: string): void
 ```
 
-Unregisters an object with the ThreadWorker instance of the host thread. This API releases the strong reference
-between the ThreadWorker instance and the target object. No error is reported if no object is matched.
+Unregisters an object with the ThreadWorker instance of the host thread. This API releases the strong reference between the ThreadWorker instance and the target object. No error is reported if no object is matched.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ThreadWorker-unregisterGlobalCallObject(instanceName?: string): void--><!--Device-ThreadWorker-unregisterGlobalCallObject(instanceName?: string): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -776,23 +800,19 @@ workerInstance.postMessage("start worker");
 onAllErrors?: ErrorCallback
 ```
 
-Called when an exception occurs within the lifecycle of the Worker thread.
-The event handler is executed in the host thread.
+Called when an exception occurs within the lifecycle of the Worker thread.The event handler is executed in the host thread.
 
-onerror can capture only exceptions generated by synchronous methods within the onmessage callback.
-It cannot capture exceptions from multithreaded callbacks or modularization-related exceptions.
-Once an exception is captured, the Worker thread will proceed to the destruction process and cannot be used.
+onerror can capture only exceptions generated by synchronous methods within the onmessage callback.It cannot capture exceptions from multithreaded callbacks or modularization-related exceptions.Once an exception is captured, the Worker thread will proceed to the destruction process and cannot be used.
 
-onAllErrors can capture global exceptions generated during the onmessage callback, timer callback,
-and file execution of the Worker thread. After an exception is captured by onAllErrors,
-the Worker thread remains alive and can continue to be used.
-You are advised to use onAllErrors instead of onerror.
+onAllErrors can capture global exceptions generated during the onmessage callback, timer callback,and file execution of the Worker thread. After an exception is captured by onAllErrors,the Worker thread remains alive and can continue to be used.You are advised to use onAllErrors instead of onerror.
 
 **Type:** ErrorCallback
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ThreadWorker-onAllErrors?: ErrorCallback--><!--Device-ThreadWorker-onAllErrors?: ErrorCallback-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -802,14 +822,15 @@ You are advised to use onAllErrors instead of onerror.
 onerror?: (err: ErrorEvent) => void
 ```
 
-Called when an exception occurs during worker execution. The event handler is executed in the host thread.
-In the callback function, the err type is ErrorEvent, indicating the received abnormal data.
+Called when an exception occurs during worker execution. The event handler is executed in the host thread.In the callback function, the err type is ErrorEvent, indicating the received abnormal data.
 
 **Type:** (err: ErrorEvent) => void
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ThreadWorker-onerror?: (err: ErrorEvent) => void--><!--Device-ThreadWorker-onerror?: (err: ErrorEvent) => void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -819,14 +840,15 @@ In the callback function, the err type is ErrorEvent, indicating the received ab
 onexit?: (code: number) => void
 ```
 
-Called when the Worker thread exits. The event handler is executed in the host thread. In the callback function,
-the code value is of the number type, where the value 1 indicates abnormal exit and 0 indicates normal exit.The default value is undefined.
+Called when the Worker thread exits. The event handler is executed in the host thread. In the callback function,the code value is of the number type, where the value 1 indicates abnormal exit and 0 indicates normal exit.The default value is undefined.
 
 **Type:** (code: number) => void
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ThreadWorker-onexit?: (code: number) => void--><!--Device-ThreadWorker-onexit?: (code: number) => void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -836,15 +858,15 @@ the code value is of the number type, where the value 1 indicates abnormal exit 
 onmessage?: (event: MessageEvents) => void
 ```
 
-Called when the host thread receives a message sent by the Worker thread through workerPort.postMessage.
-The event handler is executed in the host thread. In the callback function, the event type is MessageEvents,
-indicating the received message data.
+Called when the host thread receives a message sent by the Worker thread through workerPort.postMessage.The event handler is executed in the host thread. In the callback function, the event type is MessageEvents,indicating the received message data.
 
 **Type:** (event: MessageEvents) => void
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ThreadWorker-onmessage?: (event: MessageEvents) => void--><!--Device-ThreadWorker-onmessage?: (event: MessageEvents) => void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -854,15 +876,15 @@ indicating the received message data.
 onmessageerror?: (event: MessageEvents) => void
 ```
 
-Called when the Worker thread receives a message that cannot be serialized. The event handler is executed in the
-host thread.
-In the callback function, the event type is MessageEvents, indicating the received message data.
+Called when the Worker thread receives a message that cannot be serialized. The event handler is executed in the host thread.In the callback function, the event type is MessageEvents, indicating the received message data.
 
 **Type:** (event: MessageEvents) => void
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ThreadWorker-onmessageerror?: (event: MessageEvents) => void--><!--Device-ThreadWorker-onmessageerror?: (event: MessageEvents) => void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

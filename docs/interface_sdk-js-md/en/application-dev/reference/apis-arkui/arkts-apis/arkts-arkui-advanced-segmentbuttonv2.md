@@ -36,7 +36,7 @@ import { OnSelectedIndexesChange, TabSegmentButtonV2, SegmentButtonV2Items, Mult
 
 | Name | Description |
 | --- | --- |
-| [SegmentButtonV2ItemOptions](arkts-arkui-segmentbuttonv2itemoptions-i.md) | Defines segmented button item options.&gt; **Description**&gt;&gt; 1. If both **symbol** and **icon** are configured, **symbol** takes precedence.&gt;&gt; 2. If both **symbol** and **symbolModifier** are configured with HM Symbol resources, the resources specified by &gt; **symbolModifier** take precedence. |
+| [SegmentButtonV2ItemOptions](arkts-arkui-segmentbuttonv2itemoptions-i.md) | Defines segmented button item options.&gt; **Description** &gt; &gt; 1. If both **symbol** and **icon** are configured, **symbol** takes precedence. &gt; &gt; 2. If both **symbol** and **symbolModifier** are configured with HM Symbol resources, the resources specified by &gt; **symbolModifier** take precedence. |
 
 ### Types
 

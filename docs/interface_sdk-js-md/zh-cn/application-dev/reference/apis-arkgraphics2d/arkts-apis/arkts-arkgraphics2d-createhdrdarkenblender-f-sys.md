@@ -1,5 +1,11 @@
 # createHdrDarkenBlender（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
+```
+
 ## createHdrDarkenBlender
 
 ```TypeScript
@@ -12,6 +18,10 @@ function createHdrDarkenBlender(hdrBrightnessRatio: number,
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-uiEffect-function createHdrDarkenBlender(hdrBrightnessRatio: double,
+    grayscaleFactor?: [double, double, double]): HdrDarkenBlender--><!--Device-uiEffect-function createHdrDarkenBlender(hdrBrightnessRatio: double,
+    grayscaleFactor?: [double, double, double]): HdrDarkenBlender-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -28,7 +38,7 @@ function createHdrDarkenBlender(hdrBrightnessRatio: number,
 
 | 类型 | 说明 |
 | --- | --- |
-| HdrDarkenBlender | 返回HDR压暗混合器，用于将压暗效果添加到指定的组件上。 |
+| [HdrDarkenBlender](arkts-arkgraphics2d-hdrdarkenblender-i-sys.md) | 返回HDR压暗混合器，用于将压暗效果添加到指定的组件上。 |
 
 **示例：**
 

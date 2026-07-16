@@ -18,6 +18,8 @@ Obtains scanner parameters. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.PRINT
 
+<!--Device-scan-function getScannerParameter(scannerId: string): Promise<ScannerParameter[]>--><!--Device-scan-function getScannerParameter(scannerId: string): Promise<ScannerParameter[]>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**
@@ -30,7 +32,7 @@ Obtains scanner parameters. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ScannerParameter[]&gt; | Promise used to return the scanner parameters. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ScannerParameter[]> | Promise used to return the scanner parameters. |
 
 **Error codes:**
 

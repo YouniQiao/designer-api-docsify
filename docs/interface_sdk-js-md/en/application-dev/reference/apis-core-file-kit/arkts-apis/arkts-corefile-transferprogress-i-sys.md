@@ -4,6 +4,8 @@ Defines the TransferProgress data structure.
 
 **Since:** 26.0.0
 
+<!--Device-cloudSyncManager-interface TransferProgress--><!--Device-cloudSyncManager-interface TransferProgress-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **System API:** This is a system API.
@@ -20,15 +22,15 @@ import { cloudSyncManager } from '@kit.CoreFileKit';
 failedCount: number
 ```
 
-failed count in TransferProgress.
-The value should be an integer.
-<br>Unit:Pcs.
+failed count in TransferProgress.The value should be an integer.<br>Unit:Pcs.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TransferProgress-failedCount: int--><!--Device-TransferProgress-failedCount: int-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -48,6 +50,8 @@ Describes the state type of transfer task.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-TransferProgress-state: TransferState--><!--Device-TransferProgress-state: TransferState-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **System API:** This is a system API.
@@ -66,6 +70,8 @@ Describes the state type of transfer stop reason.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-TransferProgress-stopReason: TransferStopReason--><!--Device-TransferProgress-stopReason: TransferStopReason-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **System API:** This is a system API.
@@ -76,15 +82,15 @@ Describes the state type of transfer stop reason.
 successfulCount: number
 ```
 
-successful count in TransferProgress.
-The value should be an integer.
-<br>Unit:Pcs.
+successful count in TransferProgress.The value should be an integer.<br>Unit:Pcs.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TransferProgress-successfulCount: int--><!--Device-TransferProgress-successfulCount: int-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -96,15 +102,15 @@ The value should be an integer.
 totalCount: number
 ```
 
-total count in TransferProgress.
-The value should be an integer.
-<br>Unit:Pcs.
+total count in TransferProgress.The value should be an integer.<br>Unit:Pcs.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TransferProgress-totalCount: int--><!--Device-TransferProgress-totalCount: int-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -116,14 +122,15 @@ The value should be an integer.
 totalSize: number
 ```
 
-Total size in TransferProgress.
-<br>Unit:Byte.
+Total size in TransferProgress.<br>Unit:Byte.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TransferProgress-totalSize: long--><!--Device-TransferProgress-totalSize: long-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -135,14 +142,15 @@ Total size in TransferProgress.
 transferredSize: number
 ```
 
-transferred size in TransferProgress.
-<br>Unit:Byte.
+transferred size in TransferProgress.<br>Unit:Byte.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TransferProgress-transferredSize: long--><!--Device-TransferProgress-transferredSize: long-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 

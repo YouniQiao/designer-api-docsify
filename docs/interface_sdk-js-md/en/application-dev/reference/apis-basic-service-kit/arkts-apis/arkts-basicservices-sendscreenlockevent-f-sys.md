@@ -18,6 +18,8 @@ The screen lock app sends the event to the screen lock service.
 
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK_INNER
 
+<!--Device-screenLock-function sendScreenLockEvent(event: String, parameter: int, callback: AsyncCallback<boolean>): void--><!--Device-screenLock-function sendScreenLockEvent(event: String, parameter: int, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 **System API:** This is a system API.
@@ -26,9 +28,9 @@ The screen lock app sends the event to the screen lock service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | String | Yes | event type. |
+| event | [String](../../apis-na/arkts-apis/arkts-na-string-i.md) | Yes | event type. |
 | parameter | number | Yes | operation result of the event. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | the callback of sendScreenLockEvent. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | the callback of sendScreenLockEvent. |
 
 **Error codes:**
 
@@ -67,6 +69,8 @@ The screen lock app sends the event to the screen lock service.
 
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK_INNER
 
+<!--Device-screenLock-function sendScreenLockEvent(event: String, parameter: int): Promise<boolean>--><!--Device-screenLock-function sendScreenLockEvent(event: String, parameter: int): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 **System API:** This is a system API.
@@ -75,14 +79,14 @@ The screen lock app sends the event to the screen lock service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | String | Yes | event type. |
+| event | [String](../../apis-na/arkts-apis/arkts-na-string-i.md) | Yes | event type. |
 | parameter | number | Yes | operation result of the event. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | the promise returned by the function. |
 
 **Error codes:**
 

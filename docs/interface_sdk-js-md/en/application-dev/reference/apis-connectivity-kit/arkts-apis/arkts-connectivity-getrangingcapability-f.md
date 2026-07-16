@@ -20,13 +20,15 @@ Queries whether the current device supports ranging capability.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ranging-function getRangingCapability(): Promise<RangingCapabilitySupported>--><!--Device-ranging-function getRangingCapability(): Promise<RangingCapabilitySupported>-End-->
+
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RangingCapabilitySupported&gt; | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<RangingCapabilitySupported> | Promise used to return the result. |
 
 **Error codes:**
 

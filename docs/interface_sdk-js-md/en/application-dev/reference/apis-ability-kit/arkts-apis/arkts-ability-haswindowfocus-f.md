@@ -12,12 +12,13 @@ import { featureAbility } from '@kit.AbilityKit';
 function hasWindowFocus(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the main window of this ability has the focus. This API uses an asynchronous callback to return the
-result.
+Checks whether the main window of this ability has the focus. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-featureAbility-function hasWindowFocus(callback: AsyncCallback<boolean>): void--><!--Device-featureAbility-function hasWindowFocus(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
@@ -25,7 +26,7 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result.<br>If the main window has thefocus, **true** is returned. Otherwise, **false** is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result.<br>If the main window has the focus, **true** is returned. Otherwise, **false** is returned. |
 
 **Example**
 
@@ -55,13 +56,15 @@ Checks whether the main window of this ability has the focus. This API uses a pr
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-featureAbility-function hasWindowFocus(): Promise<boolean>--><!--Device-featureAbility-function hasWindowFocus(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. If the main window has the focus, **true** isreturned. Otherwise, **false** is returned. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. If the main window has the focus, **true** is returned. Otherwise, **false** is returned. |
 
 **Example**
 

@@ -12,12 +12,13 @@ import { notificationExtensionSubscription } from '@kit.NotificationKit';
 function getUserGrantedState(targetBundle: BundleOption): Promise<boolean>
 ```
 
-Obtains the enabling state of the **Allow access to notifications on this device** switch
-of a specified application. This API uses a promise to return the result.
+Obtains the enabling state of the **Allow access to notifications on this device** switch of a specified application. This API uses a promise to return the result.
 
 **Since:** 22
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationExtensionSubscription-function getUserGrantedState(targetBundle: BundleOption): Promise<boolean>--><!--Device-notificationExtensionSubscription-function getUserGrantedState(targetBundle: BundleOption): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -27,13 +28,13 @@ of a specified application. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetBundle | BundleOption | Yes | Information about the target application. The application must haverequested the ohos.permission.SUBSCRIBE_NOTIFICATION permission and implemented[NotificationSubscriberExtensionAbility](arkts-notification-notificationsubscriberextensionability-c.md).Otherwise, error code 1600022 is returned. |
+| targetBundle | [BundleOption](arkts-notification-bundleoption-i.md) | Yes | Information about the target application. The application must have requested the ohos.permission.SUBSCRIBE_NOTIFICATION permission and implemented [NotificationSubscriberExtensionAbility](arkts-notification-notificationsubscriberextensionability-c.md).Otherwise, error code 1600022 is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates thatthe device notification access is enabled, and **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** indicates that the device notification access is enabled, and **false** indicates the opposite. |
 
 **Error codes:**
 

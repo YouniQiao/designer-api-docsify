@@ -20,13 +20,15 @@ Input method setting
 
 **Substitutes:** [getSetting](arkts-ime-getsetting-f.md#getsetting-1)
 
+<!--Device-inputMethod-function getInputMethodSetting(): InputMethodSetting--><!--Device-inputMethod-function getInputMethodSetting(): InputMethodSetting-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| InputMethodSetting | the object of InputMethodSetting |
+| [InputMethodSetting](arkts-ime-inputmethodsetting-i.md) | the object of InputMethodSetting |
 
 **Example**
 

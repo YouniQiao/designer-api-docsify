@@ -1,5 +1,11 @@
 # getDLPGatheringPolicy（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+```
+
 ## getDLPGatheringPolicy
 
 ```TypeScript
@@ -14,6 +20,8 @@ function getDLPGatheringPolicy(): Promise<GatheringPolicyType>
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
+<!--Device-dlpPermission-function getDLPGatheringPolicy(): Promise<GatheringPolicyType>--><!--Device-dlpPermission-function getDLPGatheringPolicy(): Promise<GatheringPolicyType>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ function getDLPGatheringPolicy(): Promise<GatheringPolicyType>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;GatheringPolicyType&gt; | Promise对象。返回当前DLP沙箱聚合策略。 |
+| Promise<GatheringPolicyType> | Promise对象。返回当前DLP沙箱聚合策略。 |
 
 **错误码：**
 
@@ -61,6 +69,8 @@ function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): vo
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
+<!--Device-dlpPermission-function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): void--><!--Device-dlpPermission-function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): void-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -69,7 +79,7 @@ function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;GatheringPolicyType&gt; | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<GatheringPolicyType> | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
 
 **错误码：**
 

@@ -4,9 +4,17 @@
 
 **起始版本：** 9
 
+<!--Device-hiSysEvent-interface Querier--><!--Device-hiSysEvent-interface Querier-End-->
+
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
+```
 
 ## onComplete
 
@@ -19,6 +27,8 @@ onComplete: (reason: number, total: number) => void
 **类型：** (reason: number, total: number) => void
 
 **起始版本：** 9
+
+<!--Device-Querier-onComplete: (reason: int, total: int) => void--><!--Device-Querier-onComplete: (reason: int, total: int) => void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -35,6 +45,8 @@ onQuery: (infos: SysEventInfo[]) => void
 **类型：** (infos: SysEventInfo[]) => void
 
 **起始版本：** 9
+
+<!--Device-Querier-onQuery: (infos: SysEventInfo[]) => void--><!--Device-Querier-onQuery: (infos: SysEventInfo[]) => void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 

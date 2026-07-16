@@ -1,5 +1,11 @@
 # resetAllEfficiencyResources（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+```
+
 ## resetAllEfficiencyResources
 
 ```TypeScript
@@ -9,6 +15,8 @@ function resetAllEfficiencyResources(): void
 释放已申请的全部能效资源。
 
 **起始版本：** 9
+
+<!--Device-backgroundTaskManager-function resetAllEfficiencyResources(): void--><!--Device-backgroundTaskManager-function resetAllEfficiencyResources(): void-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 

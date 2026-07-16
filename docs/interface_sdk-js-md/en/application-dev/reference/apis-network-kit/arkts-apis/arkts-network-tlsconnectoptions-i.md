@@ -4,6 +4,8 @@ Defines TLS connection options.
 
 **Since:** 10
 
+<!--Device-socket-export interface TLSConnectOptions--><!--Device-socket-export interface TLSConnectOptions-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Application layer protocol negotiation extension, such as "spdy/1", "http/1.1", 
 
 **Since:** 10
 
+<!--Device-TLSConnectOptions-ALPNProtocols?: Array<string>--><!--Device-TLSConnectOptions-ALPNProtocols?: Array<string>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## address
@@ -37,6 +41,8 @@ Gateway address.
 **Type:** NetAddress
 
 **Since:** 10
+
+<!--Device-TLSConnectOptions-address: NetAddress--><!--Device-TLSConnectOptions-address: NetAddress-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -52,6 +58,8 @@ Set this option for the proxy feature.
 
 **Since:** 18
 
+<!--Device-TLSConnectOptions-proxy?: ProxyOptions--><!--Device-TLSConnectOptions-proxy?: ProxyOptions-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## secureOptions
@@ -65,6 +73,8 @@ Protocol http2TLS security related operations.
 **Type:** TLSSecureOptions
 
 **Since:** 10
+
+<!--Device-TLSConnectOptions-secureOptions: TLSSecureOptions--><!--Device-TLSConnectOptions-secureOptions: TLSSecureOptions-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -80,6 +90,8 @@ Skip identity verification for remote servers. The default value is false.
 
 **Since:** 24
 
+<!--Device-TLSConnectOptions-skipRemoteValidation?: boolean--><!--Device-TLSConnectOptions-skipRemoteValidation?: boolean-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## timeout
@@ -93,6 +105,8 @@ Timeout duration of the TLSSocket connection, in milliseconds.
 **Type:** number
 
 **Since:** 22
+
+<!--Device-TLSConnectOptions-timeout?: int--><!--Device-TLSConnectOptions-timeout?: int-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

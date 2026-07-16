@@ -1,5 +1,11 @@
 # getAllBundleInstallInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getAllBundleInstallInfo
 
 ```TypeScript
@@ -14,6 +20,8 @@ function getAllBundleInstallInfo(): Promise<Array<Record<string, Object>>>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-bundleManager-function getAllBundleInstallInfo(): Promise<Array<Record<string, Object>>>--><!--Device-bundleManager-function getAllBundleInstallInfo(): Promise<Array<Record<string, Object>>>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ function getAllBundleInstallInfo(): Promise<Array<Record<string, Object>>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Record&lt;string, Object&gt;&gt;&gt; | The install information. |
+| Promise<Array<Record<string, Object>>> | The install information. |
 
 **错误码：**
 

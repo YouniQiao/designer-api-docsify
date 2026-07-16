@@ -2,12 +2,11 @@
 
 Defines the [physical screen](../../../../displaymanager/display-terminology.md#physical-screen) instance.
 
-Before calling any API in Screen, you must use
-[getAllScreens()](arkts-arkui-getallscreens-f-sys.md#getallscreens-1) or
-[createVirtualScreen()](arkts-arkui-createvirtualscreen-f-sys.md#createvirtualscreen-1)
-to obtain a Screen instance.
+Before calling any API in Screen, you must use [getAllScreens()](arkts-arkui-getallscreens-f-sys.md#getallscreens-1) or [createVirtualScreen()](arkts-arkui-createvirtualscreen-f-sys.md#createvirtualscreen-1)to obtain a Screen instance.
 
 **Since:** 9
+
+<!--Device-screen-interface Screen--><!--Device-screen-interface Screen-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -29,6 +28,8 @@ Sets the pixel density of the screen. This API uses an asynchronous callback to 
 
 **Since:** 9
 
+<!--Device-Screen-setDensityDpi(densityDpi: double, callback: AsyncCallback<void>): void--><!--Device-Screen-setDensityDpi(densityDpi: double, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -38,7 +39,7 @@ Sets the pixel density of the screen. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | densityDpi | number | Yes | Pixel density. The value must be an integer in the range [80, 640]. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the pixel density issuccessfully set, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the pixel density is successfully set, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -101,6 +102,8 @@ Sets the pixel density of the screen. This API uses a promise to return the resu
 
 **Since:** 9
 
+<!--Device-Screen-setDensityDpi(densityDpi: double): Promise<void>--><!--Device-Screen-setDensityDpi(densityDpi: double): Promise<void>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -115,7 +118,7 @@ Sets the pixel density of the screen. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -171,14 +174,11 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 setOrientation(orientation: Orientation, callback: AsyncCallback<void>): void
 ```
 
-Sets the screen orientation. This API uses an asynchronous callback to return the result. The screen orientation
-changes only when the specified orientation complies with the
-[application rotation policy](../../../../quick-start/module-configuration-file.md#abilities) (you can configure
-the application rotation policy by setting the **orientation** field in the **abilities** tag in the
-**module.json5** file). If the specified orientation does not comply with the application rotation policy, the
-screen orientation does not change and no exception is thrown.
+Sets the screen orientation. This API uses an asynchronous callback to return the result. The screen orientation changes only when the specified orientation complies with the [application rotation policy](../../../../quick-start/module-configuration-file.md#abilities) (you can configure the application rotation policy by setting the **orientation** field in the **abilities** tag in the **module.json5** file). If the specified orientation does not comply with the application rotation policy, the screen orientation does not change and no exception is thrown.
 
 **Since:** 9
+
+<!--Device-Screen-setOrientation(orientation: Orientation, callback: AsyncCallback<void>): void--><!--Device-Screen-setOrientation(orientation: Orientation, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -188,8 +188,8 @@ screen orientation does not change and no exception is thrown.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| orientation | Orientation | Yes | Screen orientation. The value must be an enumerated value of**Orientation**. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the screen orientation issuccessfully set, **err** is **undefined**; otherwise, **err** is an error object. |
+| orientation | [Orientation](arkts-arkui-orientation-e.md) | Yes | Screen orientation. The value must be an enumerated value of **Orientation**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the screen orientation is successfully set, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -247,14 +247,11 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 setOrientation(orientation: Orientation): Promise<void>
 ```
 
-Sets the screen orientation. This API uses a promise to return the result. The screen orientation changes only
-when the specified orientation complies with the
-[application rotation policy](../../../../quick-start/module-configuration-file.md#abilities) (you can configure
-the application rotation policy by setting the **orientation** field in the **abilities** tag in the
-**module.json5** file). If the specified orientation does not comply with the application rotation policy, the
-screen orientation does not change and no exception is thrown.
+Sets the screen orientation. This API uses a promise to return the result. The screen orientation changes only when the specified orientation complies with the [application rotation policy](../../../../quick-start/module-configuration-file.md#abilities) (you can configure the application rotation policy by setting the **orientation** field in the **abilities** tag in the **module.json5** file). If the specified orientation does not comply with the application rotation policy, the screen orientation does not change and no exception is thrown.
 
 **Since:** 9
+
+<!--Device-Screen-setOrientation(orientation: Orientation): Promise<void>--><!--Device-Screen-setOrientation(orientation: Orientation): Promise<void>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -264,13 +261,13 @@ screen orientation does not change and no exception is thrown.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| orientation | Orientation | Yes | Screen orientation. The value must be an enumerated value of**Orientation**. |
+| orientation | [Orientation](arkts-arkui-orientation-e.md) | Yes | Screen orientation. The value must be an enumerated value of **Orientation**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -332,6 +329,8 @@ Set the orientation of the screen
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Screen-setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions): Promise<void>--><!--Device-Screen-setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
@@ -340,14 +339,14 @@ Set the orientation of the screen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| orientation | Orientation | Yes | Screen orientation. orientation value must from enum Orientation. |
-| orientationOptions | OrientationOptions | No | Options of setting orientation. |
+| orientation | [Orientation](arkts-arkui-orientation-e.md) | Yes | Screen orientation. orientation value must from enum Orientation. |
+| orientationOptions | [OrientationOptions](arkts-arkui-orientationoptions-i-sys.md) | No | Options of setting orientation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -396,6 +395,8 @@ Sets the active mode of the screen. This API uses an asynchronous callback to re
 
 **Since:** 9
 
+<!--Device-Screen-setScreenActiveMode(modeIndex: long, callback: AsyncCallback<void>): void--><!--Device-Screen-setScreenActiveMode(modeIndex: long, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -404,8 +405,8 @@ Sets the active mode of the screen. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modeIndex | number | Yes | Index of the mode to set. The current value and value range of this parameter varyaccording to the screen resolution, refresh rate, and device hardware. The value must be an integer. Theindex is the mode ID in the [ScreenModeInfo](arkts-arkui-screenmodeinfo-i-sys.md) property of the screen. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the active mode is successfullyset, **err** is **undefined**; otherwise, **err** is an error object. |
+| modeIndex | number | Yes | Index of the mode to set. The current value and value range of this parameter vary according to the screen resolution, refresh rate, and device hardware. The value must be an integer. The index is the mode ID in the [ScreenModeInfo](arkts-arkui-screenmodeinfo-i-sys.md) property of the screen. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the active mode is successfully set, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -468,6 +469,8 @@ Sets the active mode of the screen. This API uses a promise to return the result
 
 **Since:** 9
 
+<!--Device-Screen-setScreenActiveMode(modeIndex: long): Promise<void>--><!--Device-Screen-setScreenActiveMode(modeIndex: long): Promise<void>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -476,13 +479,13 @@ Sets the active mode of the screen. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modeIndex | number | Yes | Index of the mode to set. The current value and value range of this parameter varyaccording to the screen resolution, refresh rate, and device hardware. The value must be an integer. |
+| modeIndex | number | Yes | Index of the mode to set. The current value and value range of this parameter vary according to the screen resolution, refresh rate, and device hardware. The value must be an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -539,12 +542,13 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 readonly activeModeIndex: number
 ```
 
-Index of the active screen mode. The current value and value range of this parameter vary according to the
-screen resolution, refresh rate, and device hardware. The value is an integer.
+Index of the active screen mode. The current value and value range of this parameter vary according to the screen resolution, refresh rate, and device hardware. The value is an integer.
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-Screen-readonly activeModeIndex: long--><!--Device-Screen-readonly activeModeIndex: long-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -564,6 +568,8 @@ Physical pixel density of the screen, that is, the number of pixels per inch.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Screen-readonly densityDpi?: double--><!--Device-Screen-readonly densityDpi?: double-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -579,6 +585,8 @@ Screen ID, which is an integer.
 **Type:** number
 
 **Since:** 9
+
+<!--Device-Screen-readonly id: long--><!--Device-Screen-readonly id: long-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -598,6 +606,8 @@ The screen is in use
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Screen-readonly isInUse?: boolean--><!--Device-Screen-readonly isInUse?: boolean-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -613,6 +623,8 @@ Screen orientation.
 **Type:** Orientation
 
 **Since:** 9
+
+<!--Device-Screen-readonly orientation: Orientation--><!--Device-Screen-readonly orientation: Orientation-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -630,6 +642,8 @@ ID of the group to which a screen belongs, where the ID is an integer.
 
 **Since:** 9
 
+<!--Device-Screen-readonly parent: long--><!--Device-Screen-readonly parent: long-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -645,6 +659,8 @@ Screen port ID, which is an integer.
 **Type:** number
 
 **Since:** 21
+
+<!--Device-Screen-readonly rsId: long--><!--Device-Screen-readonly rsId: long-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -662,6 +678,8 @@ Serial number of the extended screen. By default, the value is an empty string.
 
 **Since:** 15
 
+<!--Device-Screen-readonly serialNumber?: string--><!--Device-Screen-readonly serialNumber?: string-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -678,6 +696,8 @@ Source mode of the screen
 
 **Since:** 10
 
+<!--Device-Screen-readonly sourceMode: ScreenSourceMode--><!--Device-Screen-readonly sourceMode: ScreenSourceMode-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -693,6 +713,8 @@ Mode set supported by the screen.
 **Type:** Array<ScreenModeInfo>
 
 **Since:** 9
+
+<!--Device-Screen-readonly supportedModeInfo: Array<ScreenModeInfo>--><!--Device-Screen-readonly supportedModeInfo: Array<ScreenModeInfo>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

@@ -8,6 +8,8 @@ Defines the options for saving images or videos.
 
 **Substitutes:** [SaveButtonOptions](../../apis-arkui/arkts-components/arkts-arkui-savebuttonoptions-i.md)
 
+<!--Device-picker-class PhotoSaveOptions--><!--Device-picker-class PhotoSaveOptions-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 ## Modules to Import
@@ -22,8 +24,7 @@ import { picker } from '@kit.CoreFileKit';
 newFileNames?: Array<string>
 ```
 
-File name of the image or video to save. If this parameter is not specified, the user needs to enter the file
-name.
+File name of the image or video to save. If this parameter is not specified, the user needs to enter the file name.
 
 **Type:** Array<string>
 
@@ -32,6 +33,8 @@ name.
 **Deprecated since:** 18
 
 **Substitutes:** [SaveButtonOptions](../../apis-arkui/arkts-components/arkts-arkui-savebuttonoptions-i.md)
+
+<!--Device-PhotoSaveOptions-newFileNames?: Array<string>--><!--Device-PhotoSaveOptions-newFileNames?: Array<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 

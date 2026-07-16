@@ -8,7 +8,15 @@
 
 **替代接口：** [IAuthCallback](arkts-userauthentication-iauthcallback-i.md)
 
+<!--Device-userAuth-interface AuthEvent--><!--Device-userAuth-interface AuthEvent-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
+
+## 导入模块
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+```
 
 ## callback
 
@@ -24,13 +32,15 @@ callback(result: EventInfo): void
 
 **替代接口：** onResult(result:
 
+<!--Device-AuthEvent-callback(result: EventInfo): void--><!--Device-AuthEvent-callback(result: EventInfo): void-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| result | EventInfo | 是 | 返回的认证结果信息或提示信息。 |
+| result | [EventInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-eventinfo-i-sys.md) | 是 | 返回的认证结果信息或提示信息。 |
 
 **示例：**
 

@@ -14,14 +14,16 @@ Unsubscribes from common events. This API uses an asynchronous callback to retur
 
 **Substitutes:** [unsubscribe](arkts-basicservices-unsubscribe-f.md#unsubscribe-1)
 
+<!--Device-commonEvent-function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback<void>): void--><!--Device-commonEvent-function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | CommonEventSubscriber | Yes | Subscriber object. |
-| callback | AsyncCallback&lt;void&gt; | No | Callback used to return the result. |
+| subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-i.md) | Yes | Subscriber object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | No | Callback used to return the result. |
 
 **Example**
 

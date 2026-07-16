@@ -4,6 +4,8 @@ Provides manages model function. Including get inputs, predict ,resize.
 
 **Since:** 10
 
+<!--Device-mindSporeLite-interface Model--><!--Device-mindSporeLite-interface Model-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 ## Modules to Import
@@ -28,6 +30,16 @@ Export train model to file
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Model-exportModel(
+      modelFile: string,
+      quantizationType?: QuantizationType,
+      exportInferenceOnly?: boolean,
+      outputTensorName?: string[]): boolean--><!--Device-Model-exportModel(
+      modelFile: string,
+      quantizationType?: QuantizationType,
+      exportInferenceOnly?: boolean,
+      outputTensorName?: string[]): boolean-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Parameters:**
@@ -35,7 +47,7 @@ Export train model to file
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | modelFile | string | Yes | model file path. |
-| quantizationType | QuantizationType | No | the quantization type, default NO_QUANT. |
+| quantizationType | [QuantizationType](arkts-mindsporelite-quantizationtype-e.md) | No | the quantization type, default NO_QUANT. |
 | exportInferenceOnly | boolean | No | whether to export a inference only model, default true. |
 | outputTensorName | string[] | No | the set of name of output tensor the exported inference model, |
 
@@ -82,6 +94,16 @@ Export model's weights, which can be used in micro only. Only valid for Lite Tra
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Model-exportWeightsCollaborateWithMicro(
+      weightFile: string,
+      isInference?: boolean,
+      enableFp16?: boolean,
+      changeableWeightsName?: string[]): boolean--><!--Device-Model-exportWeightsCollaborateWithMicro(
+      weightFile: string,
+      isInference?: boolean,
+      enableFp16?: boolean,
+      changeableWeightsName?: string[]): boolean-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -130,13 +152,15 @@ Get model input tensors.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Model-getInputs(): MSTensor[]--><!--Device-Model-getInputs(): MSTensor[]-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MSTensor[] | the MSTensor array of the inputs. |
+| [MSTensor](arkts-mindsporelite-mstensor-i.md)[] | the MSTensor array of the inputs. |
 
 **Example**
 
@@ -169,13 +193,15 @@ Obtain all weights of the model
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Model-getWeights(): MSTensor[]--><!--Device-Model-getWeights(): MSTensor[]-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| MSTensor[] | the weight tensors of the model |
+| [MSTensor](arkts-mindsporelite-mstensor-i.md)[] | the weight tensors of the model |
 
 **Example**
 
@@ -227,14 +253,16 @@ Infer model
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Model-predict(inputs: MSTensor[], callback: Callback<MSTensor[]>): void--><!--Device-Model-predict(inputs: MSTensor[], callback: Callback<MSTensor[]>): void-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputs | MSTensor[] | Yes | indicates the MSTensor array of the inputs. |
-| callback | Callback&lt;MSTensor[]&gt; | Yes | the callback of MSTensor array. |
+| inputs | [MSTensor](arkts-mindsporelite-mstensor-i.md)[] | Yes | indicates the MSTensor array of the inputs. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<MSTensor[]> | Yes | the callback of MSTensor array. |
 
 **Example**
 
@@ -296,19 +324,21 @@ Infer model
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Model-predict(inputs: MSTensor[]): Promise<MSTensor[]>--><!--Device-Model-predict(inputs: MSTensor[]): Promise<MSTensor[]>-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputs | MSTensor[] | Yes | indicates the MSTensor array of the inputs. |
+| inputs | [MSTensor](arkts-mindsporelite-mstensor-i.md)[] | Yes | indicates the MSTensor array of the inputs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MSTensor[]&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<MSTensor[]> | the promise returned by the function. |
 
 **Example**
 
@@ -372,14 +402,16 @@ resize model input
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Model-resize(inputs: MSTensor[], dims: Array<Array<int>>): boolean--><!--Device-Model-resize(inputs: MSTensor[], dims: Array<Array<int>>): boolean-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputs | MSTensor[] | Yes | indicates the MSTensor array of the inputs. |
-| dims | Array&lt;Array&lt;number&gt;&gt; | Yes | indicates the target new shape array |
+| inputs | [MSTensor](arkts-mindsporelite-mstensor-i.md)[] | Yes | indicates the MSTensor array of the inputs. |
+| dims | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Array<number>> | Yes | indicates the target new shape array |
 
 **Return value:**
 
@@ -422,13 +454,15 @@ Train model by step
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Model-runStep(inputs: MSTensor[]): boolean--><!--Device-Model-runStep(inputs: MSTensor[]): boolean-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputs | MSTensor[] | Yes | indicates the MSTensor array of the inputs. |
+| inputs | [MSTensor](arkts-mindsporelite-mstensor-i.md)[] | Yes | indicates the MSTensor array of the inputs. |
 
 **Return value:**
 
@@ -473,6 +507,8 @@ Setup training with virtual batches
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Model-setupVirtualBatch(virtualBatchMultiplier: int, lr: double, momentum: double): boolean--><!--Device-Model-setupVirtualBatch(virtualBatchMultiplier: int, lr: double, momentum: double): boolean-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -541,13 +577,15 @@ Update weights of the model
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Model-updateWeights(weights: MSTensor[]): boolean--><!--Device-Model-updateWeights(weights: MSTensor[]): boolean-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| weights | MSTensor[] | Yes | indicates the MSTensor array of the inputs |
+| weights | [MSTensor](arkts-mindsporelite-mstensor-i.md)[] | Yes | indicates the MSTensor array of the inputs |
 
 **Return value:**
 
@@ -610,6 +648,8 @@ The learning rate of the training model
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Model-learningRate?: double--><!--Device-Model-learningRate?: double-End-->
+
 **System capability:** SystemCapability.AI.MindSporeLite
 
 ## trainMode
@@ -625,6 +665,8 @@ The running mode of the model
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Model-trainMode?: boolean--><!--Device-Model-trainMode?: boolean-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 

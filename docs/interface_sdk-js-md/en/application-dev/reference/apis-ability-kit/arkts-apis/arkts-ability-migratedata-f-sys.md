@@ -18,6 +18,8 @@ Migrates files from the source path to the destination path. This API uses a pro
 
 **Required permissions:** ohos.permission.MIGRATE_DATA
 
+<!--Device-bundleManager-function migrateData(sourcePaths: Array<string>, destinationPath: string): Promise<void>--><!--Device-bundleManager-function migrateData(sourcePaths: Array<string>, destinationPath: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -26,14 +28,14 @@ Migrates files from the source path to the destination path. This API uses a pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourcePaths | Array&lt;string&gt; | Yes | Array of source paths. The value can be a single file path such as**\/example1/test.txt** or a directory path such as **\/example2/test**. |
+| sourcePaths | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Array of source paths. The value can be a single file path such as **\/example1/test.txt** or a directory path such as **\/example2/test**. |
 | destinationPath | string | Yes | Destination path. Only one directory path is supported, for example,**\/example2/test**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

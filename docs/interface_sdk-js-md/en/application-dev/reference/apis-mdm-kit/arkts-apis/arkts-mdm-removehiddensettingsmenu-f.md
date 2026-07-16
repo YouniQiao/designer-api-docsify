@@ -12,11 +12,7 @@ import { deviceSettings } from '@kit.MDMKit';
 function removeHiddenSettingsMenu(admin: Want, menusToHidden: Array<SettingsMenu>): void
 ```
 
-Removes a setting item from the hidden setting item list of the current user. Setting items in the hidden setting
-item list are hidden in the current user's settings menu and cannot be found in settings search. Even if a setting
-item is located through some means, it cannot be opened when tapped. If the remaining hidden setting item list is
-empty after the removal, all setting items are displayed. The settings take effect immediately after the API is
-called. The Settings application does not need to be restarted.
+Removes a setting item from the hidden setting item list of the current user. Setting items in the hidden setting item list are hidden in the current user's settings menu and cannot be found in settings search. Even if a setting item is located through some means, it cannot be opened when tapped. If the remaining hidden setting item list is empty after the removal, all setting items are displayed. The settings take effect immediately after the API is called. The Settings application does not need to be restarted.
 
 **Since:** 24
 
@@ -24,14 +20,16 @@ called. The Settings application does not need to be restarted.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-deviceSettings-function removeHiddenSettingsMenu(admin: Want, menusToHidden: Array<SettingsMenu>): void--><!--Device-deviceSettings-function removeHiddenSettingsMenu(admin: Want, menusToHidden: Array<SettingsMenu>): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| menusToHidden | Array&lt;SettingsMenu&gt; | Yes | Hidden setting item list<br>The maximum length is 43 and cannot be empty. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| menusToHidden | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<SettingsMenu> | Yes | Hidden setting item list<br>The maximum length is 43 and cannot be empty. |
 
 **Error codes:**
 

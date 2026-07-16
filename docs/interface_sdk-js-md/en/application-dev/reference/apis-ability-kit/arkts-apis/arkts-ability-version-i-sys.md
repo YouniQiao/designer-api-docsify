@@ -4,6 +4,8 @@ Version: the bundle version class.
 
 **Since:** 9
 
+<!--Device-unnamed-export interface Version--><!--Device-unnamed-export interface Version-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
@@ -14,12 +16,13 @@ Version: the bundle version class.
 readonly code: number
 ```
 
-Version number of the bundle used only for bundle management. The value is a 32-bit non-negative integer. It is
-used only to determine whether a version is later than another version. A larger value indicates a later version.
+Version number of the bundle used only for bundle management. The value is a 32-bit non-negative integer. It is used only to determine whether a version is later than another version. A larger value indicates a later version.
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-Version-readonly code: int--><!--Device-Version-readonly code: int-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -31,12 +34,13 @@ used only to determine whether a version is later than another version. A larger
 readonly minCompatibleVersionCode: number
 ```
 
-Minimum compatible version of the bundle. It is used to check whether the bundle is compatible with a version on
-other devices in the cross-device scenario. The value is a 32-bit non-negative integer.
+Minimum compatible version of the bundle. It is used to check whether the bundle is compatible with a version on other devices in the cross-device scenario. The value is a 32-bit non-negative integer.
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-Version-readonly minCompatibleVersionCode: int--><!--Device-Version-readonly minCompatibleVersionCode: int-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -53,6 +57,8 @@ Version number of the bundle visible to users.
 **Type:** string
 
 **Since:** 9
+
+<!--Device-Version-readonly name: string--><!--Device-Version-readonly name: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 

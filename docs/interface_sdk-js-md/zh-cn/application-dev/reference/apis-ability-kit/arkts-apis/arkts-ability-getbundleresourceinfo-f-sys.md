@@ -1,5 +1,11 @@
 # getBundleResourceInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleResourceManager } from '@kit.AbilityKit';
+```
+
 ## getBundleResourceInfo
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getBundleResourceInfo(bundleName: string, resourceFlags?: number): Bund
 **起始版本：** 11
 
 **需要权限：** ohos.permission.GET_BUNDLE_RESOURCES
+
+<!--Device-bundleResourceManager-function getBundleResourceInfo(bundleName: string, resourceFlags?: int): BundleResourceInfo--><!--Device-bundleResourceManager-function getBundleResourceInfo(bundleName: string, resourceFlags?: int): BundleResourceInfo-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -27,7 +35,7 @@ function getBundleResourceInfo(bundleName: string, resourceFlags?: number): Bund
 
 | 类型 | 说明 |
 | --- | --- |
-| BundleResourceInfo | 返回指定应用的BundleResourceInfo。 |
+| [BundleResourceInfo](arkts-ability-bundleresourceinfo-i-sys.md) | 返回指定应用的BundleResourceInfo。 |
 
 **错误码：**
 
@@ -51,6 +59,8 @@ function getBundleResourceInfo(bundleName: string, resourceFlags?: number, appIn
 
 **需要权限：** ohos.permission.GET_BUNDLE_RESOURCES
 
+<!--Device-bundleResourceManager-function getBundleResourceInfo(bundleName: string, resourceFlags?: int, appIndex?: int): BundleResourceInfo--><!--Device-bundleResourceManager-function getBundleResourceInfo(bundleName: string, resourceFlags?: int, appIndex?: int): BundleResourceInfo-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
 **系统接口：** 此接口为系统接口。
@@ -67,7 +77,7 @@ function getBundleResourceInfo(bundleName: string, resourceFlags?: number, appIn
 
 | 类型 | 说明 |
 | --- | --- |
-| BundleResourceInfo | 返回指定应用的BundleResourceInfo。 |
+| [BundleResourceInfo](arkts-ability-bundleresourceinfo-i-sys.md) | 返回指定应用的BundleResourceInfo。 |
 
 **错误码：**
 

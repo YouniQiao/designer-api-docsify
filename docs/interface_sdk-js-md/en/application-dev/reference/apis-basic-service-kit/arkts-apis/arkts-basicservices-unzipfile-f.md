@@ -12,12 +12,11 @@ import { zlib } from '@kit.BasicServicesKit';
 function unzipFile(inFile: string, outFile: string, options: Options): Promise<void>
 ```
 
-Unzips a file. The execution result is returned after the decompression is complete. This API uses a promise to
-return the result.
+Unzips a file. The execution result is returned after the decompression is complete. This API uses a promise to return the result.
 
-> **NOTE**
->
-> The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise,
+> **NOTE**  
+>  
+> The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise,  
 > the error code -1 is returned.
 
 **Since:** 7
@@ -26,21 +25,23 @@ return the result.
 
 **Substitutes:** decompressFile(inFile:
 
+<!--Device-zlib-function unzipFile(inFile: string, outFile: string, options: Options): Promise<void>--><!--Device-zlib-function unzipFile(inFile: string, outFile: string, options: Options): Promise<void>-End-->
+
 **System capability:** SystemCapability.BundleManager.Zlib
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inFile | string | Yes | Path of the file to unzip. The path must be an application sandbox path, which can beobtained from the context. For details about the context, see [FA Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md) and[Stage Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md). If the.zip file to be unzipped contains Chinese file names or folder names,use UTF-8 to encode them. Otherwise, garbled characters may be displayed after unzipping. |
+| inFile | string | Yes | Path of the file to unzip. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see [FA Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md) and [Stage Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md). If the.zip file to be unzipped contains Chinese file names or folder names,use UTF-8 to encode them. Otherwise, garbled characters may be displayed after unzipping. |
 | outFile | string | Yes | Path of the unzipped file. |
-| options | Options | Yes | Optional parameters for the unzip operation. |
+| options | [Options](arkts-basicservices-options-i.md) | Yes | Optional parameters for the unzip operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 

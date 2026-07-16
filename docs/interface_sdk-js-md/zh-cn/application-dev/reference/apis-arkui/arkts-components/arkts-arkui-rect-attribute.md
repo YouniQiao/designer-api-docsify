@@ -6,6 +6,8 @@
 
 **起始版本：** 7
 
+<!--Device-unnamed-declare class RectAttribute extends CommonShapeMethod<RectAttribute>--><!--Device-unnamed-declare class RectAttribute extends CommonShapeMethod<RectAttribute>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## radius
@@ -18,9 +20,11 @@ radius(value: Length | Array<any>)
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-RectAttribute-radius(value: Length | Array<any>): RectAttribute--><!--Device-RectAttribute-radius(value: Length | Array<any>): RectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,7 +32,7 @@ radius(value: Length | Array<any>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Length \| Array&lt;any&gt; | 是 | 圆角半径大小。<br/>默认值：0<br/>默认单位：vp <br/>异常值undefined和null按照[[0, 0], [0, 0], [0, 0], [0, 0]]处理。<br>**起始版本：** 20 |
+| value | Length \| Array<any> | 是 | 圆角半径大小。<br/>默认值：0<br/>默认单位：vp <br/>异常值undefined和null按照[[0, 0], [0, 0], [0, 0], [0, 0]]处理。<br>**起始版本：** 20 |
 
 ## radiusHeight
 
@@ -40,9 +44,11 @@ radiusHeight(value: Length)
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-RectAttribute-radiusHeight(value: Length): RectAttribute--><!--Device-RectAttribute-radiusHeight(value: Length): RectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,7 +56,7 @@ radiusHeight(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Length | 是 | 圆角的高度，取值范围≥0。<br/>默认值：0<br/>默认单位：vp <br/>异常值undefined按照默认值处理。<br>**起始版本：** 20 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 圆角的高度，取值范围≥0。<br/>默认值：0<br/>默认单位：vp <br/>异常值undefined按照默认值处理。<br>**起始版本：** 20 |
 
 ## radiusWidth
 
@@ -62,9 +68,11 @@ radiusWidth(value: Length)
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-RectAttribute-radiusWidth(value: Length): RectAttribute--><!--Device-RectAttribute-radiusWidth(value: Length): RectAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,5 +80,5 @@ radiusWidth(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Length | 是 | 圆角的宽度，取值范围≥0。<br/>默认值：0<br/>默认单位：vp <br/>异常值undefined按照默认值处理。<br>**起始版本：** 20 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 圆角的宽度，取值范围≥0。<br/>默认值：0<br/>默认单位：vp <br/>异常值undefined按照默认值处理。<br>**起始版本：** 20 |
 

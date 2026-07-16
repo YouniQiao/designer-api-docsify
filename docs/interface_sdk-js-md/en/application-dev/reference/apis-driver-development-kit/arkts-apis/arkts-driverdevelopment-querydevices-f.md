@@ -12,12 +12,13 @@ import { deviceManager } from '@kit.DriverDevelopmentKit';
 function queryDevices(busType?: number): Array<Readonly<Device>>
 ```
 
-Queries the list of peripheral devices. If the device has no peripheral device connected, an empty list is
-returned.
+Queries the list of peripheral devices. If the device has no peripheral device connected, an empty list is returned.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
+
+<!--Device-deviceManager-function queryDevices(busType?: int): Array<Readonly<Device>>--><!--Device-deviceManager-function queryDevices(busType?: int): Array<Readonly<Device>>-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -25,13 +26,13 @@ returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| busType | number | No | Device bus type specified by [BusType](arkts-driverdevelopment-bustype-e.md). If this parameter isleft empty, all types of devices are searched. |
+| busType | number | No | Device bus type specified by [BusType](arkts-driverdevelopment-bustype-e.md). If this parameter is left empty, all types of devices are searched. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Readonly&lt;Device&gt;&gt; | List of peripheral devices obtained. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Readonly<Device>> | List of peripheral devices obtained. |
 
 **Error codes:**
 

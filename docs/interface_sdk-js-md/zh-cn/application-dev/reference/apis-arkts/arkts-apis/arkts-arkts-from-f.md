@@ -1,5 +1,11 @@
 # from
 
+## 导入模块
+
+```TypeScript
+import { fastbuffer } from '@kit.ArkTS';
+```
+
 ## from
 
 ```TypeScript
@@ -10,7 +16,9 @@ function from(array: number[]): FastBuffer
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-fastbuffer-function from(array: number[]): FastBuffer--><!--Device-fastbuffer-function from(array: number[]): FastBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -24,7 +32,7 @@ function from(array: number[]): FastBuffer
 
 | 类型 | 说明 |
 | --- | --- |
-| FastBuffer | 新的FastBuffer对象。 |
+| [FastBuffer](arkts-arkts-fastbuffer-c.md) | 新的FastBuffer对象。 |
 
 **示例：**
 
@@ -48,7 +56,9 @@ function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number,
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-fastbuffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): FastBuffer--><!--Device-fastbuffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): FastBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -64,7 +74,7 @@ function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number,
 
 | 类型 | 说明 |
 | --- | --- |
-| FastBuffer | 返回一个FastBuffer对象，该对象与入参对象`arrayBuffer`共享相同的内存区域。 |
+| [FastBuffer](arkts-arkts-fastbuffer-c.md) | 返回一个FastBuffer对象，该对象与入参对象`arrayBuffer`共享相同的内存区域。 |
 
 **错误码：**
 
@@ -98,7 +108,9 @@ function from(buffer: FastBuffer | Uint8Array): FastBuffer
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-fastbuffer-function from(buffer: FastBuffer | Uint8Array): FastBuffer--><!--Device-fastbuffer-function from(buffer: FastBuffer | Uint8Array): FastBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -112,7 +124,7 @@ function from(buffer: FastBuffer | Uint8Array): FastBuffer
 
 | 类型 | 说明 |
 | --- | --- |
-| FastBuffer | 返回新的FastBuffer对象。 |
+| [FastBuffer](arkts-arkts-fastbuffer-c.md) | 返回新的FastBuffer对象。 |
 
 **错误码：**
 
@@ -151,7 +163,9 @@ function from(value: string, encoding?: BufferEncoding): FastBuffer
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-fastbuffer-function from(value: string, encoding?: BufferEncoding): FastBuffer--><!--Device-fastbuffer-function from(value: string, encoding?: BufferEncoding): FastBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -160,13 +174,13 @@ function from(value: string, encoding?: BufferEncoding): FastBuffer
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | string | 是 | 字符串。 |
-| encoding | BufferEncoding | 否 | 编码格式。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
+| encoding | [BufferEncoding](arkts-arkts-bufferencoding-t.md) | 否 | 编码格式。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| FastBuffer | 返回新的FastBuffer对象。 |
+| [FastBuffer](arkts-arkts-fastbuffer-c.md) | 返回新的FastBuffer对象。 |
 
 **示例：**
 

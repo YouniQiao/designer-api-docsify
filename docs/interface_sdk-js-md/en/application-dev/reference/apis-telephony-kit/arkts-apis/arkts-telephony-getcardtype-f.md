@@ -16,6 +16,8 @@ Obtains the type of the SIM card installed in a specified slot.
 
 **Since:** 7
 
+<!--Device-sim-function getCardType(slotId: int, callback: AsyncCallback<CardType>): void--><!--Device-sim-function getCardType(slotId: int, callback: AsyncCallback<CardType>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -23,7 +25,7 @@ Obtains the type of the SIM card installed in a specified slot.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from {@code 0} to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;CardType&gt; | Yes | Indicates the callback for getting the SIM card type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<CardType> | Yes | Indicates the callback for getting the SIM card type. |
 
 **Error codes:**
 
@@ -59,6 +61,8 @@ Obtains the type of the SIM card installed in a specified slot.
 
 **Since:** 7
 
+<!--Device-sim-function getCardType(slotId: int): Promise<CardType>--><!--Device-sim-function getCardType(slotId: int): Promise<CardType>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -71,7 +75,7 @@ Obtains the type of the SIM card installed in a specified slot.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CardType&gt; | Returns the SIM card type. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CardType> | Returns the SIM card type. |
 
 **Error codes:**
 

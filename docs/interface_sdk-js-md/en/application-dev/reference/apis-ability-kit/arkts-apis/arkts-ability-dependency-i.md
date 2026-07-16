@@ -4,6 +4,8 @@ Describes the information about the dynamic shared library on which the module d
 
 **Since:** 9
 
+<!--Device-unnamed-export interface Dependency--><!--Device-unnamed-export interface Dependency-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## bundleName
@@ -19,6 +21,8 @@ Name of the shared bundle on which the current module depends.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Dependency-readonly bundleName: string--><!--Device-Dependency-readonly bundleName: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -36,6 +40,8 @@ Module name of the shared bundle on which the current module depends.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-Dependency-readonly moduleName: string--><!--Device-Dependency-readonly moduleName: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## versionCode
@@ -51,6 +57,8 @@ Version number of the shared bundle.
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Dependency-readonly versionCode: long--><!--Device-Dependency-readonly versionCode: long-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

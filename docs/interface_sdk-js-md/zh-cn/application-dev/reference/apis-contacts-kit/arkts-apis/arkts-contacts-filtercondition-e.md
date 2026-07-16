@@ -4,6 +4,8 @@
 
 **起始版本：** 15
 
+<!--Device-contact-enum FilterCondition--><!--Device-contact-enum FilterCondition-End-->
+
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## EQUAL_TO
@@ -16,7 +18,9 @@ EQUAL_TO = 1
 
 **起始版本：** 15
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FilterCondition-EQUAL_TO = 1--><!--Device-FilterCondition-EQUAL_TO = 1-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -30,7 +34,9 @@ NOT_EQUAL_TO = 2
 
 **起始版本：** 15
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FilterCondition-NOT_EQUAL_TO = 2--><!--Device-FilterCondition-NOT_EQUAL_TO = 2-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -44,7 +50,9 @@ IN = 3
 
 **起始版本：** 15
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FilterCondition-IN = 3--><!--Device-FilterCondition-IN = 3-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -58,7 +66,9 @@ IS_NOT_NULL = 0
 
 **起始版本：** 15
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FilterCondition-IS_NOT_NULL = 0--><!--Device-FilterCondition-IS_NOT_NULL = 0-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -72,7 +82,9 @@ NOT_IN = 4
 
 **起始版本：** 15
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FilterCondition-NOT_IN = 4--><!--Device-FilterCondition-NOT_IN = 4-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 
@@ -86,7 +98,9 @@ CONTAINS = 5
 
 **起始版本：** 15
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FilterCondition-CONTAINS = 5--><!--Device-FilterCondition-CONTAINS = 5-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
 

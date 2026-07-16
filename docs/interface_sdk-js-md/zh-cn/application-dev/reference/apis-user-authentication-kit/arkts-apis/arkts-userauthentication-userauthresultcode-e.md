@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-userAuth-enum UserAuthResultCode--><!--Device-userAuth-enum UserAuthResultCode-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## SUCCESS
@@ -16,7 +18,9 @@ SUCCESS = 12500000
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthResultCode-SUCCESS = 12500000--><!--Device-UserAuthResultCode-SUCCESS = 12500000-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -30,7 +34,9 @@ FAIL = 12500001
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthResultCode-FAIL = 12500001--><!--Device-UserAuthResultCode-FAIL = 12500001-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -44,7 +50,9 @@ GENERAL_ERROR = 12500002
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthResultCode-GENERAL_ERROR = 12500002--><!--Device-UserAuthResultCode-GENERAL_ERROR = 12500002-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -58,7 +66,9 @@ CANCELED = 12500003
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthResultCode-CANCELED = 12500003--><!--Device-UserAuthResultCode-CANCELED = 12500003-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -72,7 +82,9 @@ TIMEOUT = 12500004
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthResultCode-TIMEOUT = 12500004--><!--Device-UserAuthResultCode-TIMEOUT = 12500004-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -86,7 +98,9 @@ TYPE_NOT_SUPPORT = 12500005
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthResultCode-TYPE_NOT_SUPPORT = 12500005--><!--Device-UserAuthResultCode-TYPE_NOT_SUPPORT = 12500005-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -100,7 +114,9 @@ TRUST_LEVEL_NOT_SUPPORT = 12500006
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthResultCode-TRUST_LEVEL_NOT_SUPPORT = 12500006--><!--Device-UserAuthResultCode-TRUST_LEVEL_NOT_SUPPORT = 12500006-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -114,7 +130,9 @@ BUSY = 12500007
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthResultCode-BUSY = 12500007--><!--Device-UserAuthResultCode-BUSY = 12500007-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -128,7 +146,9 @@ INVALID_PARAMETERS = 12500008
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthResultCode-INVALID_PARAMETERS = 12500008--><!--Device-UserAuthResultCode-INVALID_PARAMETERS = 12500008-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -138,12 +158,13 @@ INVALID_PARAMETERS = 12500008
 LOCKED = 12500009
 ```
 
-认证器已锁定。表示认证器因连续多次认证不通过而进入冻结状态，用户需等待冻结解除或使用PIN解锁后才能继续认证。可通过[getAuthLockState](arkts-userauthentication-getauthlockstate-f.md#getauthlockstate-1)查询具体
-冻结状态。
+认证器已锁定。表示认证器因连续多次认证不通过而进入冻结状态，用户需等待冻结解除或使用PIN解锁后才能继续认证。可通过[getAuthLockState](arkts-userauthentication-getauthlockstate-f.md#getauthlockstate-1)查询具体冻结状态。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthResultCode-LOCKED = 12500009--><!--Device-UserAuthResultCode-LOCKED = 12500009-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -157,7 +178,9 @@ NOT_ENROLLED = 12500010
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthResultCode-NOT_ENROLLED = 12500010--><!--Device-UserAuthResultCode-NOT_ENROLLED = 12500010-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -171,7 +194,9 @@ CANCELED_FROM_WIDGET = 12500011
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthResultCode-CANCELED_FROM_WIDGET = 12500011--><!--Device-UserAuthResultCode-CANCELED_FROM_WIDGET = 12500011-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -185,7 +210,9 @@ PIN_EXPIRED = 12500013
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthResultCode-PIN_EXPIRED = 12500013--><!--Device-UserAuthResultCode-PIN_EXPIRED = 12500013-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

@@ -18,6 +18,8 @@ Get latest connection time of device.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function getLastConnectionTime(deviceId: string): Promise<long>--><!--Device-connection-function getLastConnectionTime(deviceId: string): Promise<long>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -30,7 +32,7 @@ Get latest connection time of device.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns latest connection time. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Returns latest connection time. |
 
 **Error codes:**
 

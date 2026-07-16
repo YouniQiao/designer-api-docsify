@@ -19,15 +19,19 @@ Resolves an mDNS service.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-mdns-function resolveLocalService(context: Context, serviceInfo: LocalServiceInfo,
+    callback: AsyncCallback<LocalServiceInfo>): void--><!--Device-mdns-function resolveLocalService(context: Context, serviceInfo: LocalServiceInfo,
+    callback: AsyncCallback<LocalServiceInfo>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| serviceInfo | LocalServiceInfo | Yes | Information about the mDNS service. {@link LocalServiceInfo} |
-| callback | AsyncCallback&lt;LocalServiceInfo&gt; | Yes | the callback of resolveLocalService. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| serviceInfo | [LocalServiceInfo](arkts-network-localserviceinfo-i.md) | Yes | Information about the mDNS service. {@link LocalServiceInfo} |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<LocalServiceInfo> | Yes | the callback of resolveLocalService. |
 
 **Error codes:**
 
@@ -82,20 +86,22 @@ Resolves an mDNS service.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-mdns-function resolveLocalService(context: Context, serviceInfo: LocalServiceInfo): Promise<LocalServiceInfo>--><!--Device-mdns-function resolveLocalService(context: Context, serviceInfo: LocalServiceInfo): Promise<LocalServiceInfo>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| serviceInfo | LocalServiceInfo | Yes | Information about the mDNS service. {@link LocalServiceInfo} |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| serviceInfo | [LocalServiceInfo](arkts-network-localserviceinfo-i.md) | Yes | Information about the mDNS service. {@link LocalServiceInfo} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;LocalServiceInfo&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<LocalServiceInfo> | The promise returned by the function. |
 
 **Error codes:**
 

@@ -22,13 +22,15 @@ Obtain last known location
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function getLastLocation(callback: AsyncCallback<Location>): void--><!--Device-geolocation-function getLastLocation(callback: AsyncCallback<Location>): void-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Location> | Yes | Indicates the callback for reporting the location result. |
 
 **Example**
 
@@ -62,13 +64,15 @@ Obtain last known location
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-function getLastLocation(): Promise<Location>--><!--Device-geolocation-function getLastLocation(): Promise<Location>-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Location&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Location> | The promise returned by the function. |
 
 **Example**
 

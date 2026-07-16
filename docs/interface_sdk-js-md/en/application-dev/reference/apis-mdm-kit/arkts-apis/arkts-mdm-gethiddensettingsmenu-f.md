@@ -20,19 +20,21 @@ Obtains the hidden setting item list of the current user.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-deviceSettings-function getHiddenSettingsMenu(admin: Want): Array<SettingsMenu>--><!--Device-deviceSettings-function getHiddenSettingsMenu(admin: Want): Array<SettingsMenu>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;SettingsMenu&gt; | Hidden setting item list. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<SettingsMenu> | Hidden setting item list. |
 
 **Error codes:**
 

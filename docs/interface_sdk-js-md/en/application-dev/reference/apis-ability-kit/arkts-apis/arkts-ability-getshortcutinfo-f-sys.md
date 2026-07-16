@@ -12,16 +12,15 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 function getShortcutInfo(bundleName :string, callback: AsyncCallback<Array<ShortcutInfo>>) : void
 ```
 
-Obtains the [shortcut information](arkts-ability-shortcutinfo-i.md) of the current user based on the given
-bundle name of a main application. To obtain shortcut information about an application clone, use
-[getShortcutInfoByAppIndex](arkts-ability-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex-1). This API uses an asynchronous
-callback to return the result.
+Obtains the [shortcut information](arkts-ability-shortcutinfo-i-sys.md) of the current user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use [getShortcutInfoByAppIndex](arkts-ability-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex-1). This API uses an asynchronous callback to return the result.
 
 No permission is required for obtaining the caller's own information.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-launcherBundleManager-function getShortcutInfo(bundleName :string, callback: AsyncCallback<Array<ShortcutInfo>>) : void--><!--Device-launcherBundleManager-function getShortcutInfo(bundleName :string, callback: AsyncCallback<Array<ShortcutInfo>>) : void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -32,7 +31,7 @@ No permission is required for obtaining the caller's own information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | AsyncCallback&lt;Array&lt;ShortcutInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to returnthe result. If the operation is successful, **err** is **null**, and **data** is the array of[ShortcutInfo](arkts-ability-shortcutinfo-i.md) objects obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<ShortcutInfo>> | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**, and **data** is the array of [ShortcutInfo](arkts-ability-shortcutinfo-i-sys.md) objects obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -75,16 +74,15 @@ try {
 function getShortcutInfo(bundleName : string) : Promise<Array<ShortcutInfo>>
 ```
 
-Obtains the [shortcut information](arkts-ability-shortcutinfo-i.md) of the current user based on the given
-bundle name of a main application. To obtain shortcut information about an application clone, use
-[getShortcutInfoByAppIndex](arkts-ability-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex-1). This API uses a promise to
-return the result.
+Obtains the [shortcut information](arkts-ability-shortcutinfo-i-sys.md) of the current user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use [getShortcutInfoByAppIndex](arkts-ability-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex-1). This API uses a promise to return the result.
 
 No permission is required for obtaining the caller's own information.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-launcherBundleManager-function getShortcutInfo(bundleName : string) : Promise<Array<ShortcutInfo>>--><!--Device-launcherBundleManager-function getShortcutInfo(bundleName : string) : Promise<Array<ShortcutInfo>>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -100,7 +98,7 @@ No permission is required for obtaining the caller's own information.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ShortcutInfo&gt;&gt; | Promise used to return the array of[ShortcutInfo](arkts-ability-shortcutinfo-i.md) objects obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ShortcutInfo>> | Promise used to return the array of [ShortcutInfo](arkts-ability-shortcutinfo-i-sys.md) objects obtained. |
 
 **Error codes:**
 

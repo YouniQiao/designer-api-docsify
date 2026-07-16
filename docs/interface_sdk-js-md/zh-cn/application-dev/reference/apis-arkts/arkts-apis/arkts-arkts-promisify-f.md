@@ -1,5 +1,11 @@
 # promisify
 
+## 导入模块
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+```
+
 ## promisify
 
 ```TypeScript
@@ -10,7 +16,9 @@ function promisify(original: (err: Object, value: Object) => void): Function
 
 **起始版本：** 9
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-util-function promisify(original: (err: Object, value: Object) => void): Function--><!--Device-util-function promisify(original: (err: Object, value: Object) => void): Function-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -18,7 +26,7 @@ function promisify(original: (err: Object, value: Object) => void): Function
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| original | (err: Object, value: Object) =&gt; void | 是 | 函数，其中第一个参数 **err** 表示拒绝的原因（如果 promise 已经 resolved，该值为**null**），第二个参数 **value** 表示 resolved 的值。 |
+| original | (err: Object, value: Object) => void | 是 | 函数，其中第一个参数 **err** 表示拒绝的原因（如果 promise 已经 resolved，该值为**null**），第二个参数 **value** 表示 resolved 的值。 |
 
 **返回值：**
 

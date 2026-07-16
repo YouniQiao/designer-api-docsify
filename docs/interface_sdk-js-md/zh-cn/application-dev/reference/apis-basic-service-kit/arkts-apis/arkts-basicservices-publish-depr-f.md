@@ -14,6 +14,8 @@ function publish(event: string, callback: AsyncCallback<void>): void
 
 **替代接口：** publish(event:
 
+<!--Device-commonEvent-function publish(event: string, callback: AsyncCallback<void>): void--><!--Device-commonEvent-function publish(event: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **参数：**
@@ -21,7 +23,7 @@ function publish(event: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | 表示要发送的公共事件。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 表示指定的回调方法。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 表示指定的回调方法。 |
 
 **示例：**
 
@@ -57,6 +59,8 @@ function publish(event: string, options: CommonEventPublishData, callback: Async
 
 **替代接口：** publish(event:
 
+<!--Device-commonEvent-function publish(event: string, options: CommonEventPublishData, callback: AsyncCallback<void>): void--><!--Device-commonEvent-function publish(event: string, options: CommonEventPublishData, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **参数：**
@@ -64,8 +68,8 @@ function publish(event: string, options: CommonEventPublishData, callback: Async
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | 表示要发布的公共事件。 |
-| options | CommonEventPublishData | 是 | 表示发布公共事件的属性。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 表示指定的回调方法。 |
+| options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-i.md) | 是 | 表示发布公共事件的属性。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | 是 | 表示指定的回调方法。 |
 
 **示例：**
 

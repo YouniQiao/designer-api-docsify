@@ -12,12 +12,13 @@ import { notificationSubscribe } from '@kit.NotificationKit';
 function distributeOperation(hashcode: string, operationInfo?: OperationInfo): Promise<void>
 ```
 
-Triggers a notification for cross-device operations, such as tap-to-redirect and quick reply. This API uses a
-promise to return the result.
+Triggers a notification for cross-device operations, such as tap-to-redirect and quick reply. This API uses a promise to return the result.
 
 **Since:** 18
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationSubscribe-function distributeOperation(hashcode: string, operationInfo?: OperationInfo): Promise<void>--><!--Device-notificationSubscribe-function distributeOperation(hashcode: string, operationInfo?: OperationInfo): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -28,13 +29,13 @@ promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hashcode | string | Yes | Unique notification ID. |
-| operationInfo | OperationInfo | No | Cross-device operation information. This parameter is left empty bydefault. |
+| operationInfo | [OperationInfo](arkts-notification-operationinfo-i-sys.md) | No | Cross-device operation information. This parameter is left empty by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

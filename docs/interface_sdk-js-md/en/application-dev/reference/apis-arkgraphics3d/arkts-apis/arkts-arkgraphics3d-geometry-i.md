@@ -6,6 +6,8 @@ Defines Geometry interface.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface Geometry extends Node--><!--Device-unnamed-export interface Geometry extends Node-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## mesh
@@ -20,6 +22,8 @@ Mesh of the node.
 
 **Since:** 12
 
+<!--Device-Geometry-readonly mesh: Mesh--><!--Device-Geometry-readonly mesh: Mesh-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## morpher
@@ -33,6 +37,8 @@ Morpher target definition.
 **Type:** Morpher
 
 **Since:** 20
+
+<!--Device-Geometry-readonly morpher?: Morpher--><!--Device-Geometry-readonly morpher?: Morpher-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

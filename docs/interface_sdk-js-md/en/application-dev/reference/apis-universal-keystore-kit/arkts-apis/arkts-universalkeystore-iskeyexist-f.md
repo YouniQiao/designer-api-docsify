@@ -20,6 +20,8 @@ Checks whether a key exists. This API uses an asynchronous callback to return th
 
 **Substitutes:** isKeyItemExist(keyAlias:
 
+<!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void--><!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **Parameters:**
@@ -27,8 +29,8 @@ Checks whether a key exists. This API uses an asynchronous callback to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key to check. |
-| options | HuksOptions | Yes | Options for checking the key. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the keyexists; the value **false** means the opposite. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Options for checking the key. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** means the key exists; the value **false** means the opposite. |
 
 **Example**
 
@@ -60,6 +62,8 @@ Checks whether a key exists. This API uses a promise to return the result.
 
 **Substitutes:** isKeyItemExist(keyAlias:
 
+<!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions): Promise<boolean>--><!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **Parameters:**
@@ -67,13 +71,13 @@ Checks whether a key exists. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key to check. |
-| options | HuksOptions | Yes | Options for checking the key. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Options for checking the key. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the key exists; the value**false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means the key exists; the value **false** means the opposite. |
 
 **Example**
 

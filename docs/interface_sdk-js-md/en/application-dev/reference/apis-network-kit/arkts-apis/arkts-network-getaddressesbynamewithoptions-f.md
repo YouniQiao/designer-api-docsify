@@ -20,6 +20,8 @@ Resolves a host name to obtain all IP addresses with specified query option.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function getAddressesByNameWithOptions(host: string, option?: QueryOptions): Promise<Array<NetAddress>>--><!--Device-connection-function getAddressesByNameWithOptions(host: string, option?: QueryOptions): Promise<Array<NetAddress>>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -27,13 +29,13 @@ Resolves a host name to obtain all IP addresses with specified query option.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | host | string | Yes | Indicates the host name or the domain. |
-| option | QueryOptions | No | Indicates the query option. |
+| option | [QueryOptions](arkts-network-queryoptions-i.md) | No | Indicates the query option. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;NetAddress&gt;&gt; | - The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<NetAddress>> | - The promise returned by the function. |
 
 **Error codes:**
 

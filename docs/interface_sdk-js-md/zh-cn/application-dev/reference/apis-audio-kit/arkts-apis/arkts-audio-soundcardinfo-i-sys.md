@@ -4,9 +4,17 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-audio-interface SoundCardInfo--><!--Device-audio-interface SoundCardInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## busAddress
 
@@ -21,6 +29,8 @@ busAddress: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SoundCardInfo-busAddress: string--><!--Device-SoundCardInfo-busAddress: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -40,6 +50,8 @@ driver: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SoundCardInfo-driver: string--><!--Device-SoundCardInfo-driver: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -57,6 +69,8 @@ model: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SoundCardInfo-model: string--><!--Device-SoundCardInfo-model: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -76,6 +90,8 @@ name: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-SoundCardInfo-name: string--><!--Device-SoundCardInfo-name: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -93,6 +109,8 @@ vendor: string
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SoundCardInfo-vendor: string--><!--Device-SoundCardInfo-vendor: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 

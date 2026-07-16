@@ -6,6 +6,8 @@ The module allows you to query the charging status and remaining power of a devi
 
 **Deprecated since:** 6
 
+<!--Device-unnamed-export default class Battery--><!--Device-unnamed-export default class Battery-End-->
+
 **System capability:** SystemCapability.PowerManager.BatteryManager.Lite
 
 ## Modules to Import
@@ -26,13 +28,15 @@ Obtains the current charging state and battery level.
 
 **Deprecated since:** 6
 
+<!--Device-Battery-static getStatus(options?: GetStatusOptions): void--><!--Device-Battery-static getStatus(options?: GetStatusOptions): void-End-->
+
 **System capability:** SystemCapability.PowerManager.BatteryManager.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | GetStatusOptions | No | Object that contains the API calling result. This parameter is optional and |
+| options | [GetStatusOptions](arkts-basicservices-getstatusoptions-i.md) | No | Object that contains the API calling result. This parameter is optional and |
 
 **Example**
 

@@ -8,6 +8,8 @@ Defines the size type.
 
 **替代接口：** grid_col/GridColColumnOption
 
+<!--Device-unnamed-declare enum SizeType--><!--Device-unnamed-declare enum SizeType-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## Auto
@@ -23,6 +25,8 @@ Auto
 **废弃版本：** 9
 
 **替代接口：** grid_col/GridColColumnOption
+
+<!--Device-SizeType-Auto--><!--Device-SizeType-Auto-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,6 +44,8 @@ XS
 
 **替代接口：** grid_col/GridColColumnOption
 
+<!--Device-SizeType-XS--><!--Device-SizeType-XS-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## SM
@@ -55,6 +61,8 @@ SM
 **废弃版本：** 9
 
 **替代接口：** grid_col/GridColColumnOption
+
+<!--Device-SizeType-SM--><!--Device-SizeType-SM-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -72,6 +80,8 @@ MD
 
 **替代接口：** grid_col/GridColColumnOption
 
+<!--Device-SizeType-MD--><!--Device-SizeType-MD-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## LG
@@ -87,6 +97,8 @@ LG
 **废弃版本：** 9
 
 **替代接口：** grid_col/GridColColumnOption
+
+<!--Device-SizeType-LG--><!--Device-SizeType-LG-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

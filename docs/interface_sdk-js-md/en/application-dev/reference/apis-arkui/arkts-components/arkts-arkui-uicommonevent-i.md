@@ -1,9 +1,10 @@
 # UICommonEvent
 
-Implements a common event callback. Passing **undefined** as the input parameter resets the corresponding event
-callback.
+Implements a common event callback. Passing **undefined** as the input parameter resets the corresponding event callback.
 
 **Since:** 12
+
+<!--Device-unnamed-declare interface UICommonEvent--><!--Device-unnamed-declare interface UICommonEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,13 +22,15 @@ Sets the callback for the [onAppear](arkts-arkui-commonmethod-c.md#onappear-1) e
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UICommonEvent-setOnAppear(callback: Callback<void> | undefined): void--><!--Device-UICommonEvent-setOnAppear(callback: Callback<void> | undefined): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; \| undefined | Yes | Callback invoked when the component appears. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<void> \| undefined | Yes | Callback invoked when the component appears. |
 
 ## setOnBlur
 
@@ -43,13 +46,15 @@ Sets the callback for the [onBlur](arkts-arkui-commonmethod-c.md#onblur-1) event
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UICommonEvent-setOnBlur(callback: Callback<void> | undefined): void--><!--Device-UICommonEvent-setOnBlur(callback: Callback<void> | undefined): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; \| undefined | Yes | Callback for the blur event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<void> \| undefined | Yes | Callback for the blur event. |
 
 ## setOnClick
 
@@ -65,13 +70,15 @@ Set the callback for the [click event](arkts-arkui-commonmethod-c.md#onclick-1).
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UICommonEvent-setOnClick(callback: Callback<ClickEvent> | undefined): void--><!--Device-UICommonEvent-setOnClick(callback: Callback<ClickEvent> | undefined): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;ClickEvent&gt; \| undefined | Yes | Callback for the click event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<ClickEvent> \| undefined | Yes | Callback for the click event. |
 
 ## setOnDisappear
 
@@ -87,13 +94,15 @@ Sets the callback for the [onDisAppear](arkts-arkui-commonmethod-c.md#ondisappea
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UICommonEvent-setOnDisappear(callback: Callback<void> | undefined): void--><!--Device-UICommonEvent-setOnDisappear(callback: Callback<void> | undefined): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; \| undefined | Yes | Callback invoked when the component disappears. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<void> \| undefined | Yes | Callback invoked when the component disappears. |
 
 ## setOnFocus
 
@@ -109,13 +118,15 @@ Sets the callback for the [onFocus](arkts-arkui-commonmethod-c.md#onfocus-1) eve
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UICommonEvent-setOnFocus(callback: Callback<void> | undefined): void--><!--Device-UICommonEvent-setOnFocus(callback: Callback<void> | undefined): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; \| undefined | Yes | Callback for the focus event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<void> \| undefined | Yes | Callback for the focus event. |
 
 ## setOnHover
 
@@ -130,6 +141,8 @@ Sets the callback for the [onHover](arkts-arkui-commonmethod-c.md#onhover-1) eve
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UICommonEvent-setOnHover(callback: HoverCallback | undefined): void--><!--Device-UICommonEvent-setOnHover(callback: HoverCallback | undefined): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -153,13 +166,15 @@ Sets the callback for the [key event](../../apis-ability-kit/arkts-apis/arkts-ap
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UICommonEvent-setOnKeyEvent(callback: Callback<KeyEvent> | undefined): void--><!--Device-UICommonEvent-setOnKeyEvent(callback: Callback<KeyEvent> | undefined): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;KeyEvent&gt; \| undefined | Yes | Callback for the key event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<KeyEvent> \| undefined | Yes | Callback for the key event. |
 
 ## setOnMouse
 
@@ -175,13 +190,15 @@ Sets the callback for the [onMouse](arkts-arkui-commonmethod-c.md#onmouse-1) eve
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UICommonEvent-setOnMouse(callback: Callback<MouseEvent> | undefined): void--><!--Device-UICommonEvent-setOnMouse(callback: Callback<MouseEvent> | undefined): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;MouseEvent&gt; \| undefined | Yes | Callback for the mouse event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<MouseEvent> \| undefined | Yes | Callback for the mouse event. |
 
 ## setOnSizeChange
 
@@ -189,14 +206,15 @@ Sets the callback for the [onMouse](arkts-arkui-commonmethod-c.md#onmouse-1) eve
 setOnSizeChange(callback: SizeChangeCallback | undefined): void
 ```
 
-Sets the callback for the [onSizeChange](arkts-arkui-commonmethod-c.md#onsizechange-1) event, which is triggered when the
-component's size changes.
+Sets the callback for the [onSizeChange](arkts-arkui-commonmethod-c.md#onsizechange-1) event, which is triggered when the component's size changes.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UICommonEvent-setOnSizeChange(callback: SizeChangeCallback | undefined): void--><!--Device-UICommonEvent-setOnSizeChange(callback: SizeChangeCallback | undefined): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -220,13 +238,15 @@ Sets the callback for the [touch event](arkts-arkui-commonmethod-c.md#ontouch-1)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UICommonEvent-setOnTouch(callback: Callback<TouchEvent> | undefined): void--><!--Device-UICommonEvent-setOnTouch(callback: Callback<TouchEvent> | undefined): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;TouchEvent&gt; \| undefined | Yes | Callback for the touch event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<TouchEvent> \| undefined | Yes | Callback for the touch event. |
 
 ## setOnVisibleAreaApproximateChange
 
@@ -234,9 +254,7 @@ Sets the callback for the [touch event](arkts-arkui-commonmethod-c.md#ontouch-1)
 setOnVisibleAreaApproximateChange(options: VisibleAreaEventOptions, event: VisibleAreaChangeCallback | undefined): void
 ```
 
-Sets the callback for the
-[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange-1)
-visible area change event.
+Sets the callback for the [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange-1)visible area change event.
 
 **Since:** 12
 
@@ -244,12 +262,14 @@ visible area change event.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-UICommonEvent-setOnVisibleAreaApproximateChange(options: VisibleAreaEventOptions, event: VisibleAreaChangeCallback | undefined): void--><!--Device-UICommonEvent-setOnVisibleAreaApproximateChange(options: VisibleAreaEventOptions, event: VisibleAreaChangeCallback | undefined): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | VisibleAreaEventOptions | Yes | Configuration options for visible area change detection. |
-| event | VisibleAreaChangeCallback \| undefined | Yes | Callback invoked when the ratio of the component's visiblearea to its total area crosses the threshold specified in **options**. |
+| options | [VisibleAreaEventOptions](arkts-arkui-visibleareaeventoptions-i.md) | Yes | Configuration options for visible area change detection. |
+| event | VisibleAreaChangeCallback \| undefined | Yes | Callback invoked when the ratio of the component's visible area to its total area crosses the threshold specified in **options**. |
 

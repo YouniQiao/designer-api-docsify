@@ -1,5 +1,11 @@
 # setBackgroundTaskState（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+```
+
 ## setBackgroundTaskState
 
 ```TypeScript
@@ -14,6 +20,8 @@ function setBackgroundTaskState(stateInfo: BackgroundTaskStateInfo): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-backgroundTaskManager-function setBackgroundTaskState(stateInfo: BackgroundTaskStateInfo): void--><!--Device-backgroundTaskManager-function setBackgroundTaskState(stateInfo: BackgroundTaskStateInfo): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ function setBackgroundTaskState(stateInfo: BackgroundTaskStateInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| stateInfo | BackgroundTaskStateInfo | 是 | 授权的必要信息，包括用户ID、应用包名、应用分身ID等。 |
+| stateInfo | [BackgroundTaskStateInfo](arkts-backgroundtasks-backgroundtaskstateinfo-i-sys.md) | 是 | 授权的必要信息，包括用户ID、应用包名、应用分身ID等。 |
 
 **错误码：**
 

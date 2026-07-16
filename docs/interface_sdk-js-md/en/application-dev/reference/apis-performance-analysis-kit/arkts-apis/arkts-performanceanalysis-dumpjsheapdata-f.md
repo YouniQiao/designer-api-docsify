@@ -14,12 +14,14 @@ function dumpJsHeapData(filename : string) : void
 
 Dumps VM heap data.
 
-> **NOTE**
->
-> Exporting the VM heap is time-consuming, and this API is a synchronous API. Therefore, you are advised not to
+> **NOTE**  
+>  
+> Exporting the VM heap is time-consuming, and this API is a synchronous API. Therefore, you are advised not to  
 > call this API in the release version. Otherwise, the application screen may freeze, affecting user experience.
 
 **Since:** 9
+
+<!--Device-hidebug-function dumpJsHeapData(filename : string) : void--><!--Device-hidebug-function dumpJsHeapData(filename : string) : void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -27,7 +29,7 @@ Dumps VM heap data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filename | string | Yes | User-defined name of the VM heap data output file. The .heapsnapshot file is generatedin the **files** directory of the application based on the specified file name. The maximum length of a stringis 128 bytes. |
+| filename | string | Yes | User-defined name of the VM heap data output file. The .heapsnapshot file is generated in the **files** directory of the application based on the specified file name. The maximum length of a string is 128 bytes. |
 
 **Error codes:**
 
@@ -56,9 +58,7 @@ try {
 function dumpJsHeapData(filename: string, needClean: boolean): void
 ```
 
-Exports the heap data.
-The input parameter is a user-defined file name, excluding the file suffix.
-The generated file is in the files folder under the application directory.
+Exports the heap data.The input parameter is a user-defined file name, excluding the file suffix.The generated file is in the files folder under the application directory.
 
 **Since:** 24
 
@@ -66,13 +66,15 @@ The generated file is in the files folder under the application directory.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-hidebug-function dumpJsHeapData(filename: string, needClean: boolean): void--><!--Device-hidebug-function dumpJsHeapData(filename: string, needClean: boolean): void-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filename | string | Yes | User-defined file name of the sampling data. The .heapsnapshot file is generatedin the files directory of the application based on the specified file name. |
+| filename | string | Yes | User-defined file name of the sampling data. The .heapsnapshot file is generated in the files directory of the application based on the specified file name. |
 | needClean | boolean | Yes | Whether to release the snapshot cache before dumping the heap snapshot.The default value is false. |
 
 **Example**

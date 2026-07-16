@@ -16,6 +16,8 @@ Destroys a virtual screen. This API uses an asynchronous callback to return the 
 
 **Since:** 9
 
+<!--Device-screen-function destroyVirtualScreen(screenId:long, callback: AsyncCallback<void>): void--><!--Device-screen-function destroyVirtualScreen(screenId:long, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -25,7 +27,7 @@ Destroys a virtual screen. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | screenId | number | Yes | Screen ID. The value must be an integer. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the virtual screen is destroyed,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the virtual screen is destroyed,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -66,6 +68,8 @@ Destroys a virtual screen. This API uses a promise to return the result.
 
 **Since:** 9
 
+<!--Device-screen-function destroyVirtualScreen(screenId:long): Promise<void>--><!--Device-screen-function destroyVirtualScreen(screenId:long): Promise<void>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -80,7 +84,7 @@ Destroys a virtual screen. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

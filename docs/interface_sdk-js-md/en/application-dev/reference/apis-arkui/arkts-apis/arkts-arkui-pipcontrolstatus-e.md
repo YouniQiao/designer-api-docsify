@@ -4,6 +4,8 @@ Enumerates the statuses of components displayed on the PiP controller.
 
 **Since:** 12
 
+<!--Device-PiPWindow-enum PiPControlStatus--><!--Device-PiPWindow-enum PiPControlStatus-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## PLAY
@@ -17,6 +19,8 @@ Play.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PiPControlStatus-PLAY = 1--><!--Device-PiPControlStatus-PLAY = 1-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -32,6 +36,8 @@ Pause.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PiPControlStatus-PAUSE = 0--><!--Device-PiPControlStatus-PAUSE = 0-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## OPEN
@@ -46,6 +52,8 @@ Open.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-PiPControlStatus-OPEN = 1--><!--Device-PiPControlStatus-OPEN = 1-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 ## CLOSE
@@ -59,6 +67,8 @@ Close.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PiPControlStatus-CLOSE = 0--><!--Device-PiPControlStatus-CLOSE = 0-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

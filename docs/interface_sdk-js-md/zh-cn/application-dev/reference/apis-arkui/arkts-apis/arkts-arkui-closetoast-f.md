@@ -1,5 +1,11 @@
 # closeToast
 
+## 导入模块
+
+```TypeScript
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+```
+
 ## closeToast
 
 ```TypeScript
@@ -8,18 +14,19 @@ function closeToast(toastId: number): void
 
 关闭即时反馈。
 
-> **说明：**
->
-> 直接使用closeToast可能导致[UI上下文不明确](../../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用
-UIContext中的getPromptAction方法获取
-> 到PromptAction对象，再通过该对象调用
+> **说明：**  
+>  
+> 直接使用closeToast可能导致[UI上下文不明确](../../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用UIContext中的getPromptAction方法获取  
+> 到PromptAction对象，再通过该对象调用  
 > [closeToast](../../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#closetoast18)实现。
 
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-promptAction-function closeToast(toastId: number): void--><!--Device-promptAction-function closeToast(toastId: number): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

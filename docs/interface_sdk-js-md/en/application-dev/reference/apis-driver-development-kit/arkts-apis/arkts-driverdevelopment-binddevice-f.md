@@ -13,9 +13,7 @@ function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>,
     callback: AsyncCallback<{deviceId: number; remote: rpc.IRemoteObject;}>): void
 ```
 
-Binds a peripheral device based on the device information returned by **queryDevices()**.
-You need to use [deviceManager.queryDevices()](arkts-driverdevelopment-querydevices-f.md#querydevices-1) to obtain the peripheral device
-information and device.
+Binds a peripheral device based on the device information returned by **queryDevices()**.You need to use [deviceManager.queryDevices()](arkts-driverdevelopment-querydevices-f.md#querydevices-1) to obtain the peripheral device information and device.
 
 **Since:** 10
 
@@ -25,6 +23,10 @@ information and device.
 
 **Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
+<!--Device-deviceManager-function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>,
+    callback: AsyncCallback<{deviceId: number; remote: rpc.IRemoteObject;}>): void--><!--Device-deviceManager-function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>,
+    callback: AsyncCallback<{deviceId: number; remote: rpc.IRemoteObject;}>): void-End-->
+
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **Parameters:**
@@ -32,8 +34,8 @@ information and device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | number | Yes | Device ID, which can be obtained via **queryDevices()**. |
-| onDisconnect | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. When the bound device isdisconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device.Otherwise, **err** is an error object. |
-| callback | AsyncCallback&lt;{deviceId: number; remote: rpc.IRemoteObject;}&gt; | Yes |  |
+| onDisconnect | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. When the bound device is disconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device.Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<{deviceId: number; remote: rpc.IRemoteObject;}> | Yes |  |
 
 **Error codes:**
 
@@ -80,10 +82,7 @@ function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>): Prom
     remote: rpc.IRemoteObject;}>
 ```
 
-Binds a peripheral device based on the device information returned by **queryDevices()**. This API uses a promise
-to return the result.
-You need to use [deviceManager.queryDevices](arkts-driverdevelopment-querydevices-f.md#querydevices-1) to obtain the peripheral device
-information and device.
+Binds a peripheral device based on the device information returned by **queryDevices()**. This API uses a promise to return the result.You need to use [deviceManager.queryDevices](arkts-driverdevelopment-querydevices-f.md#querydevices-1) to obtain the peripheral device information and device.
 
 **Since:** 10
 
@@ -93,6 +92,10 @@ information and device.
 
 **Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
+<!--Device-deviceManager-function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>): Promise<{deviceId: number;
+    remote: rpc.IRemoteObject;}>--><!--Device-deviceManager-function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>): Promise<{deviceId: number;
+    remote: rpc.IRemoteObject;}>-End-->
+
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **Parameters:**
@@ -100,13 +103,13 @@ information and device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | number | Yes | Device ID, which can be obtained via **queryDevices()**. |
-| onDisconnect | AsyncCallback&lt;number&gt; | Yes | Callback used to return the result. When the bound device isdisconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device.Otherwise, **err** is an error object. |
+| onDisconnect | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the result. When the bound device is disconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device.Otherwise, **err** is an error object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;{deviceId: number;    remote: rpc.IRemoteObject;}&gt; |  |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<{deviceId: number;     remote: rpc.IRemoteObject;}> |  |
 
 **Error codes:**
 

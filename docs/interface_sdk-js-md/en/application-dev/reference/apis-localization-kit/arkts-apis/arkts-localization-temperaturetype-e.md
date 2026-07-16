@@ -4,6 +4,8 @@ Enumerates temperature units.
 
 **Since:** 18
 
+<!--Device-i18n-export enum TemperatureType--><!--Device-i18n-export enum TemperatureType-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## CELSIUS
@@ -17,6 +19,8 @@ Celsius.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TemperatureType-CELSIUS = 1--><!--Device-TemperatureType-CELSIUS = 1-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -32,6 +36,8 @@ Fahrenheit.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TemperatureType-FAHRENHEIT = 2--><!--Device-TemperatureType-FAHRENHEIT = 2-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## KELVIN
@@ -45,6 +51,8 @@ Kelvin.
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TemperatureType-KELVIN = 3--><!--Device-TemperatureType-KELVIN = 3-End-->
 
 **System capability:** SystemCapability.Global.I18n
 

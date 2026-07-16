@@ -6,6 +6,8 @@ Defines a UDP MulticastSocket connection.
 
 **Since:** 12
 
+<!--Device-socket-export interface MulticastSocket extends UDPSocket--><!--Device-socket-export interface MulticastSocket extends UDPSocket-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -26,14 +28,16 @@ Add the socket to the multicast group.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-MulticastSocket-addMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-addMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| multicastAddress | NetAddress | Yes | Multicast address information. {@link NetAddress}. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of addMembership. |
+| multicastAddress | [NetAddress](arkts-network-netaddress-i.md) | Yes | Multicast address information. {@link NetAddress}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of addMembership. |
 
 **Error codes:**
 
@@ -77,19 +81,21 @@ Add the socket to the multicast group.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-MulticastSocket-addMembership(multicastAddress: NetAddress): Promise<void>--><!--Device-MulticastSocket-addMembership(multicastAddress: NetAddress): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| multicastAddress | NetAddress | Yes | Multicast address information. {@link NetAddress}. |
+| multicastAddress | [NetAddress](arkts-network-netaddress-i.md) | Yes | Multicast address information. {@link NetAddress}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -130,14 +136,16 @@ Drop the socket from the multicast group.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| multicastAddress | NetAddress | Yes | Multicast address information. {@link NetAddress}. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of dropMembership. |
+| multicastAddress | [NetAddress](arkts-network-netaddress-i.md) | Yes | Multicast address information. {@link NetAddress}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of dropMembership. |
 
 **Error codes:**
 
@@ -180,19 +188,21 @@ Drop the socket from the multicast group.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress): Promise<void>--><!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| multicastAddress | NetAddress | Yes | Multicast address information. {@link NetAddress}. |
+| multicastAddress | [NetAddress](arkts-network-netaddress-i.md) | Yes | Multicast address information. {@link NetAddress}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -231,13 +241,15 @@ Get the loopback mode of the socket.
 
 **Since:** 12
 
+<!--Device-MulticastSocket-getLoopbackMode(callback: AsyncCallback<boolean>): void--><!--Device-MulticastSocket-getLoopbackMode(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | The callback of getLoopbackMode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | The callback of getLoopbackMode. |
 
 **Error codes:**
 
@@ -272,13 +284,15 @@ Get the loopback mode of the socket.
 
 **Since:** 12
 
+<!--Device-MulticastSocket-getLoopbackMode(): Promise<boolean>--><!--Device-MulticastSocket-getLoopbackMode(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -311,13 +325,15 @@ Get the TTL value of socket multicast packet.
 
 **Since:** 12
 
+<!--Device-MulticastSocket-getMulticastTTL(callback: AsyncCallback<number>): void--><!--Device-MulticastSocket-getMulticastTTL(callback: AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;number&gt; | Yes | The callback of getMulticastTTL. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | The callback of getMulticastTTL. |
 
 **Error codes:**
 
@@ -352,13 +368,15 @@ Get the TTL value of socket multicast packet.
 
 **Since:** 12
 
+<!--Device-MulticastSocket-getMulticastTTL(): Promise<number>--><!--Device-MulticastSocket-getMulticastTTL(): Promise<number>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -395,13 +413,15 @@ Obtains the file descriptor of the MulticastSocket.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MulticastSocket-getSocketFd(): Promise<int>--><!--Device-MulticastSocket-getSocketFd(): Promise<int>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | The promise returns the file descriptor of the Multicast socket. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | The promise returns the file descriptor of the Multicast socket. |
 
 **Error codes:**
 
@@ -444,6 +464,8 @@ Set the loopback mode for the socket.
 
 **Since:** 12
 
+<!--Device-MulticastSocket-setLoopbackMode(flag: boolean, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-setLoopbackMode(flag: boolean, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -451,7 +473,7 @@ Set the loopback mode for the socket.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | flag | boolean | Yes | Whether to enable loopback mode. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of setLoopbackMode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of setLoopbackMode. |
 
 **Error codes:**
 
@@ -486,6 +508,8 @@ Set the loopback mode for the socket.
 
 **Since:** 12
 
+<!--Device-MulticastSocket-setLoopbackMode(flag: boolean): Promise<void>--><!--Device-MulticastSocket-setLoopbackMode(flag: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -498,7 +522,7 @@ Set the loopback mode for the socket.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -531,6 +555,8 @@ Set the TTL value for socket multicast packets.
 
 **Since:** 12
 
+<!--Device-MulticastSocket-setMulticastTTL(ttl: number, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-setMulticastTTL(ttl: number, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -538,7 +564,7 @@ Set the TTL value for socket multicast packets.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ttl | number | Yes | The TTL value to set. Valid range is typically 0 to 255. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of setMulticastTTL. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of setMulticastTTL. |
 
 **Error codes:**
 
@@ -575,6 +601,8 @@ Set the TTL value for socket multicast packet.
 
 **Since:** 12
 
+<!--Device-MulticastSocket-setMulticastTTL(ttl: number): Promise<void>--><!--Device-MulticastSocket-setMulticastTTL(ttl: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -587,7 +615,7 @@ Set the TTL value for socket multicast packet.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -622,6 +650,8 @@ Sets whether the multicast socket supports address reuse.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MulticastSocket-setReuseAddress(reuse: boolean): void--><!--Device-MulticastSocket-setReuseAddress(reuse: boolean): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

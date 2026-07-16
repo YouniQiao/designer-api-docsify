@@ -20,16 +20,18 @@ Adds a list of applications that are not allowed to use a feature for a specifie
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-restrictions-function addDisallowedListForAccount(admin: Want, feature: string, list: Array<string>, accountId: number): void--><!--Device-restrictions-function addDisallowedListForAccount(admin: Want, feature: string, list: Array<string>, accountId: number): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | feature | string | Yes | Feature to set.<br>- **snapshotSkip**: screen snapshot capability. |
-| list | Array&lt;string&gt; | Yes | List of content such as the bundle names. |
-| accountId | number | Yes | User ID, which must be greater than or equal to 0.<br>You can call[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)to obtain the user ID. |
+| list | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | List of content such as the bundle names. |
+| accountId | number | Yes | User ID, which must be greater than or equal to 0.<br>You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)to obtain the user ID. |
 
 **Error codes:**
 
@@ -37,7 +39,7 @@ Adds a list of applications that are not allowed to use a feature for a specifie
 | --- | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Example**

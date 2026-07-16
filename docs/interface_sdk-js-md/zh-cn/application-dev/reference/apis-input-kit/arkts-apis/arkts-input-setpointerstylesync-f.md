@@ -1,15 +1,22 @@
 # setPointerStyleSync
 
+## 导入模块
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+```
+
 ## setPointerStyleSync
 
 ```TypeScript
 function setPointerStyleSync(windowId: number, pointerStyle: PointerStyle): void
 ```
 
-设置指定窗口的鼠标样式类型，使用同步方式返回结果。此接口仅支持设置本应用进程内窗口的鼠标样式类型，如需通过UIExtensionAbility进程设置宿主窗口的鼠标样式类型，请参阅
-[setCursor](../../../../reference/apis-arkui/arkts-apis-uicontext-cursorcontroller.md#setcursor12)。
+设置指定窗口的鼠标样式类型，使用同步方式返回结果。此接口仅支持设置本应用进程内窗口的鼠标样式类型，如需通过UIExtensionAbility进程设置宿主窗口的鼠标样式类型，请参阅[setCursor](../../../../reference/apis-arkui/arkts-apis-uicontext-cursorcontroller.md#setcursor12)。
 
 **起始版本：** 10
+
+<!--Device-pointer-function setPointerStyleSync(windowId: int, pointerStyle: PointerStyle): void--><!--Device-pointer-function setPointerStyleSync(windowId: int, pointerStyle: PointerStyle): void-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -18,14 +25,14 @@ function setPointerStyleSync(windowId: number, pointerStyle: PointerStyle): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | windowId | number | 是 | 窗口ID。取值范围为大于等于0的整数。<br>窗口ID合法并且对应窗口存在时，可以设置窗口的鼠标光标样式。<br>窗口ID合法但窗口不存在时，也可以设置鼠标光标样式。<br>设置结果可通过[getPointerStyleSync](arkts-input-getpointerstylesync-f.md#getpointerstylesync-1)获取。 |
-| pointerStyle | PointerStyle | 是 | 鼠标样式。 |
+| pointerStyle | [PointerStyle](../../apis-arkui/arkts-apis/arkts-arkui-pointerstyle-t.md) | 是 | 鼠标样式。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. <br> When the windowId value is -1, the system permission is required to set the global style.**ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api.<br> When the windowId value is -1, the system permission is required to set the global style.**ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 **示例：**
 

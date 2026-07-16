@@ -18,6 +18,8 @@ Allocates a new FastBuffer for a fixed size bytes. If fill is undefined, the Fas
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-fastbuffer-function alloc(size: number, fill?: string | FastBuffer | number, encoding?: BufferEncoding): FastBuffer--><!--Device-fastbuffer-function alloc(size: number, fill?: string | FastBuffer | number, encoding?: BufferEncoding): FastBuffer-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -26,13 +28,13 @@ Allocates a new FastBuffer for a fixed size bytes. If fill is undefined, the Fas
 | --- | --- | --- | --- |
 | size | number | Yes | The desired size (in bytes) of the new FastBuffer |
 | fill | string \| FastBuffer \| number | No | fill [fill=0] A value to pre-fill the new FastBuffer with |
-| encoding | BufferEncoding | No | encoding [encoding='utf8'] If `fill` is a string, this is its encoding |
+| encoding | [BufferEncoding](arkts-arkts-bufferencoding-t.md) | No | encoding [encoding='utf8'] If `fill` is a string, this is its encoding |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| FastBuffer | Return a new allocated FastBuffer |
+| [FastBuffer](arkts-arkts-fastbuffer-c.md) | Return a new allocated FastBuffer |
 
 **Example**
 

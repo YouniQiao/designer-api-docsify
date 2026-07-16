@@ -4,6 +4,8 @@ The policy event.
 
 **Since:** 26.0.0
 
+<!--Device-common-export interface PolicyChangedEvent--><!--Device-common-export interface PolicyChangedEvent-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## Modules to Import
@@ -26,6 +28,8 @@ The bundle name of the application that sets the policy.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PolicyChangedEvent-bundleName : string--><!--Device-PolicyChangedEvent-bundleName : string-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## functionName
@@ -41,6 +45,8 @@ The function name for setting policy.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PolicyChangedEvent-functionName : string--><!--Device-PolicyChangedEvent-functionName : string-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -58,6 +64,8 @@ The JSON string containing policy parameters.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-PolicyChangedEvent-parameters: string--><!--Device-PolicyChangedEvent-parameters: string-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## time
@@ -66,14 +74,15 @@ The JSON string containing policy parameters.
 time: number
 ```
 
-The timestamp when the policy was set.
-Unit: milliseconds, The value must be an integer greater than or equal to 0.
+The timestamp when the policy was set.Unit: milliseconds, The value must be an integer greater than or equal to 0.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PolicyChangedEvent-time: number--><!--Device-PolicyChangedEvent-time: number-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

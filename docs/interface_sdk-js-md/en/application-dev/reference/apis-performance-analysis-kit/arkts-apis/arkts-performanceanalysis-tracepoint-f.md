@@ -12,17 +12,15 @@ import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
 function tracepoint(mode: HiTraceCommunicationMode, type: HiTraceTracepointType, id: HiTraceId, msg?: string): void
 ```
 
-Adds a trace point for the [@ohos.hiTraceMeter (Performance Tracing)](arkts-hitracemeter.md)
-logging, which is synchronous.
+Adds a trace point for the [@ohos.hiTraceMeter (Performance Tracing)](arkts-hitracemeter.md)logging, which is synchronous.
 
-When type is set to **CS** and **SR**, the HiTraceMeter tracing starts. When type is set to **CR** and **SS**, the
-HiTraceMeter tracing ends. When type is set to **GENERAL**, the HiTraceMeter tracing does not start.
+When type is set to **CS** and **SR**, the HiTraceMeter tracing starts. When type is set to **CR** and **SS**, the HiTraceMeter tracing ends. When type is set to **GENERAL**, the HiTraceMeter tracing does not start.
 
-The trace points for **CS** and **CR** types must be used as a pair; likewise, trace points for **SR** and **SS**
-types must also be used together. Otherwise, the start and end trace points of HiTraceMeter cannot match each
-other.
+The trace points for **CS** and **CR** types must be used as a pair; likewise, trace points for **SR** and **SS** types must also be used together. Otherwise, the start and end trace points of HiTraceMeter cannot match each other.
 
 **Since:** 8
+
+<!--Device-hiTraceChain-function tracepoint(mode: HiTraceCommunicationMode, type: HiTraceTracepointType, id: HiTraceId, msg?: string): void--><!--Device-hiTraceChain-function tracepoint(mode: HiTraceCommunicationMode, type: HiTraceTracepointType, id: HiTraceId, msg?: string): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
@@ -30,9 +28,9 @@ other.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | HiTraceCommunicationMode | Yes | Communication mode for the trace point. |
-| type | HiTraceTracepointType | Yes | Trace point type. |
-| id | HiTraceId | Yes | **HiTraceId** instance for trace point triggering. |
+| mode | [HiTraceCommunicationMode](arkts-performanceanalysis-hitracecommunicationmode-e.md) | Yes | Communication mode for the trace point. |
+| type | [HiTraceTracepointType](arkts-performanceanalysis-hitracetracepointtype-e.md) | Yes | Trace point type. |
+| id | [HiTraceId](arkts-performanceanalysis-hitraceid-i.md) | Yes | **HiTraceId** instance for trace point triggering. |
 | msg | string | No | Trace description information passed by the HiTraceMeter logging. The default value is "". |
 
 **Example**

@@ -1,11 +1,18 @@
 # @ohos.buffer
 
-Buffer对象用于表示固定长度的字节序列，是专门存放二进制数据的缓存区。
-**推荐使用场景**：适用于处理大量二进制数据，如图片处理和文件接收上传等。
+Buffer对象用于表示固定长度的字节序列，是专门存放二进制数据的缓存区。**推荐使用场景**：适用于处理大量二进制数据，如图片处理和文件接收上传等。
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace buffer--><!--Device-unnamed-declare namespace buffer-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+```
 
 ## 汇总
 

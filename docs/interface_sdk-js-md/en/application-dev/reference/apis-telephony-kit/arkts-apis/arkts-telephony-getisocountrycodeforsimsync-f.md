@@ -16,6 +16,8 @@ Obtains the ISO country code of the SIM card in a specified slot.
 
 **Since:** 10
 
+<!--Device-sim-function getISOCountryCodeForSimSync(slotId: int): string--><!--Device-sim-function getISOCountryCodeForSimSync(slotId: int): string-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -28,7 +30,7 @@ Obtains the ISO country code of the SIM card in a specified slot.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the country code defined in ISO 3166-2; returns an empty string if no SIM cardis inserted. |
+| string | Returns the country code defined in ISO 3166-2; returns an empty string if no SIM card is inserted. |
 
 **Example**
 

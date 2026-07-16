@@ -18,6 +18,8 @@ Creates an **IndexUtil** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-i18n-export function getInstance(locale?:string): IndexUtil--><!--Device-i18n-export function getInstance(locale?:string): IndexUtil-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -30,5 +32,5 @@ Creates an **IndexUtil** object.
 
 | Type | Description |
 | --- | --- |
-| IndexUtil | **IndexUtil** object created based on the specified locale ID. |
+| [IndexUtil](arkts-localization-indexutil-c.md) | **IndexUtil** object created based on the specified locale ID. |
 

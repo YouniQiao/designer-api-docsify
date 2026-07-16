@@ -4,6 +4,8 @@ Describes the initialization options of the **Marquee** component.
 
 **Since:** 18
 
+<!--Device-unnamed-declare interface TextMarqueeOptions--><!--Device-unnamed-declare interface TextMarqueeOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## delay
@@ -26,6 +28,8 @@ Unit: millisecond
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextMarqueeOptions-delay?: number--><!--Device-TextMarqueeOptions-delay?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fadeout
@@ -38,9 +42,7 @@ Whether to apply a fade-out effect when the text is too long.
 
 **true** to apply a fade-out effect when the text is too long, **false** otherwise.
 
-When this parameter is set to **true**: if the text content exceeds the display range, a fade-out effect is applied
-to the edges of the partially visible text; if text is partially visible at both ends, the fade-out effect is
-applied to both ends. The **clip** attribute is automatically locked to **true** and cannot be set to **false**.
+When this parameter is set to **true**: if the text content exceeds the display range, a fade-out effect is applied to the edges of the partially visible text; if text is partially visible at both ends, the fade-out effect is applied to both ends. The **clip** attribute is automatically locked to **true** and cannot be set to **false**.
 
 Default value: **false**
 
@@ -51,6 +53,8 @@ Default value: **false**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TextMarqueeOptions-fadeout?: boolean--><!--Device-TextMarqueeOptions-fadeout?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,6 +78,8 @@ Default value: **true**
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextMarqueeOptions-fromStart?: boolean--><!--Device-TextMarqueeOptions-fromStart?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## loop
@@ -82,8 +88,7 @@ Default value: **true**
 loop?: number
 ```
 
-Number of times the marquee will scroll. If the value is less than or equal to **0**, the marquee will scroll
-continuously.
+Number of times the marquee will scroll. If the value is less than or equal to **0**, the marquee will scroll continuously.
 
 Default value: **-1**
 
@@ -94,6 +99,8 @@ Default value: **-1**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TextMarqueeOptions-loop?: number--><!--Device-TextMarqueeOptions-loop?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -115,6 +122,8 @@ Default value: **MarqueeStartPolicy.DEFAULT**
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextMarqueeOptions-marqueeStartPolicy?: MarqueeStartPolicy--><!--Device-TextMarqueeOptions-marqueeStartPolicy?: MarqueeStartPolicy-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## marqueeUpdatePolicy
@@ -125,8 +134,7 @@ marqueeUpdatePolicy?: MarqueeUpdatePolicy
 
 Scrolling policy of the marquee after its attributes are updated.
 
-This attribute takes effect when the marquee is in the playing state and the text width exceeds the width of the
-marquee component.
+This attribute takes effect when the marquee is in the playing state and the text width exceeds the width of the marquee component.
 
 Default value: **MarqueeUpdatePolicy.DEFAULT**
 
@@ -138,6 +146,8 @@ Default value: **MarqueeUpdatePolicy.DEFAULT**
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-TextMarqueeOptions-marqueeUpdatePolicy?: MarqueeUpdatePolicy--><!--Device-TextMarqueeOptions-marqueeUpdatePolicy?: MarqueeUpdatePolicy-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## spacing
@@ -146,8 +156,7 @@ Default value: **MarqueeUpdatePolicy.DEFAULT**
 spacing?: LengthMetrics
 ```
 
-Spacing between two marquee rounds. If the unit of **LengthMetrics** is **PERCENT**, the current setting does not
-take effect and the default value is used.
+Spacing between two marquee rounds. If the unit of **LengthMetrics** is **PERCENT**, the current setting does not take effect and the default value is used.
 
 Default value: **48.0vp**
 
@@ -158,6 +167,8 @@ Default value: **48.0vp**
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-TextMarqueeOptions-spacing?: LengthMetrics--><!--Device-TextMarqueeOptions-spacing?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -179,6 +190,8 @@ Whether to start the marquee.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-TextMarqueeOptions-start: boolean--><!--Device-TextMarqueeOptions-start: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## step
@@ -198,6 +211,8 @@ Default value: **4.0** (in vp)
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-TextMarqueeOptions-step?: number--><!--Device-TextMarqueeOptions-step?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,5 +1,11 @@
 # getRule
 
+## 导入模块
+
+```TypeScript
+import { hichecker } from '@kit.PerformanceAnalysisKit';
+```
+
 ## getRule
 
 ```TypeScript
@@ -9,6 +15,8 @@ function getRule() : bigint
 ��ȡ��ǰ�̹߳��򡢽��̹��򡢸澯����ĺϼ���
 
 **起始版本：** 8
+
+<!--Device-hichecker-function getRule() : bigint--><!--Device-hichecker-function getRule() : bigint-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 

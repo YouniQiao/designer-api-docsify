@@ -20,6 +20,8 @@ Convert from ImmersiveMaterial to another ImmersiveMaterial set on sub component
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-uiMaterial-function convertToECSubMaterial(material: uiMaterial.ImmersiveMaterial) : uiMaterial.ImmersiveMaterial--><!--Device-uiMaterial-function convertToECSubMaterial(material: uiMaterial.ImmersiveMaterial) : uiMaterial.ImmersiveMaterial-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.

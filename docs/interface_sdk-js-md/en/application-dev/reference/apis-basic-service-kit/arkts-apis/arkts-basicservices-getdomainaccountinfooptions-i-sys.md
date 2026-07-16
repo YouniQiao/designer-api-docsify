@@ -4,6 +4,8 @@ Defines the options for obtaining domain account information.
 
 **Since:** 10
 
+<!--Device-osAccount-interface GetDomainAccountInfoOptions--><!--Device-osAccount-interface GetDomainAccountInfoOptions-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Domain account name.
 
 **Since:** 10
 
+<!--Device-GetDomainAccountInfoOptions-accountName: string--><!--Device-GetDomainAccountInfoOptions-accountName: string-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -42,6 +46,8 @@ Domain name, which is **undefined** by default.
 
 **Since:** 10
 
+<!--Device-GetDomainAccountInfoOptions-domain?: string--><!--Device-GetDomainAccountInfoOptions-domain?: string-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -57,6 +63,8 @@ ID of the server to which the domain account belongs, which is **undefined** by 
 **Type:** string
 
 **Since:** 12
+
+<!--Device-GetDomainAccountInfoOptions-serverConfigId?: string--><!--Device-GetDomainAccountInfoOptions-serverConfigId?: string-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 

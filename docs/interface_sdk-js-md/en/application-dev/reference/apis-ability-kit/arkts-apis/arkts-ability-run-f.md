@@ -14,15 +14,17 @@ function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>
 
 Runs startup tasks or loads .so files.
 
-> **NOTE**
->
-> This API cannot be used to run startup tasks defined in a feature-type HAP. To run those tasks, use
-> [startupManager.run](arkts-ability-run-f.md#run-2)
+> **NOTE**  
+>  
+> This API cannot be used to run startup tasks defined in a feature-type HAP. To run those tasks, use  
+> [startupManager.run](arkts-ability-run-f.md#run-2)  
 > .
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-startupManager-function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>--><!--Device-startupManager-function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AppStartup
 
@@ -30,14 +32,14 @@ Runs startup tasks or loads .so files.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startupTasks | Array&lt;string&gt; | Yes | Array of [StartupTask](arkts-ability-startuptask-c.md)names or names of .so files to be preloaded. |
-| config | StartupConfig | No | Configuration for the timeout duration and listener of startup tasks inAppStartup. |
+| startupTasks | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Array of [StartupTask](arkts-ability-startuptask-c.md)names or names of .so files to be preloaded. |
+| config | [StartupConfig](arkts-ability-startupconfig-i.md) | No | Configuration for the timeout duration and listener of startup tasks in AppStartup. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -87,13 +89,13 @@ export default class EntryAbility extends UIAbility {
 function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>
 ```
 
-Runs startup tasks or loads .so files. You can specify
-[AbilityStageContext](arkts-ability-abilitystagecontext-c.md) for loading startup tasks. This
-API uses a promise to return the result.
+Runs startup tasks or loads .so files. You can specify [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) for loading startup tasks. This API uses a promise to return the result.
 
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-startupManager-function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>--><!--Device-startupManager-function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AppStartup
 
@@ -101,15 +103,15 @@ API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startupTasks | Array&lt;string&gt; | Yes | Array of [StartupTask](arkts-ability-startuptask-c.md)names or names of .so files to be preloaded. |
-| context | common.AbilityStageContext | Yes | AbilityStage context that executes the[StartupTask](arkts-ability-startuptask-c.md). It is passed as an input parameter to[init](arkts-ability-startuptask-c.md#init-1) of the task. |
-| config | StartupConfig | Yes | Configuration for the timeout duration and listener of startup tasks inAppStartup. |
+| startupTasks | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Array of [StartupTask](arkts-ability-startuptask-c.md)names or names of .so files to be preloaded. |
+| context | common.AbilityStageContext | Yes | AbilityStage context that executes the [StartupTask](arkts-ability-startuptask-c.md). It is passed as an input parameter to [init](@ohos.app.appstartup.StartupTask:StartupTask#init(context: AbilityStageContext)) of the task. |
+| config | [StartupConfig](arkts-ability-startupconfig-i.md) | Yes | Configuration for the timeout duration and listener of startup tasks in AppStartup. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

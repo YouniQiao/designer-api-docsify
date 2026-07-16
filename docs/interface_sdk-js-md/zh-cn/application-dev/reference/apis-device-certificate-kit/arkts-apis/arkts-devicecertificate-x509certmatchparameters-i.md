@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-cert-interface X509CertMatchParameters--><!--Device-cert-interface X509CertMatchParameters-End-->
+
 **系统能力：** SystemCapability.Security.Cert
+
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
 
 ## authorityKeyIdentifier
 
@@ -18,7 +26,9 @@ authorityKeyIdentifier?: Uint8Array
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CertMatchParameters-authorityKeyIdentifier?: Uint8Array--><!--Device-X509CertMatchParameters-authorityKeyIdentifier?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -34,7 +44,9 @@ certPolicy?: Array<string>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CertMatchParameters-certPolicy?: Array<string>--><!--Device-X509CertMatchParameters-certPolicy?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -50,7 +62,9 @@ extendedKeyUsage?: Array<string>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CertMatchParameters-extendedKeyUsage?: Array<string>--><!--Device-X509CertMatchParameters-extendedKeyUsage?: Array<string>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -66,7 +80,9 @@ issuer?: Uint8Array
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CertMatchParameters-issuer?: Uint8Array--><!--Device-X509CertMatchParameters-issuer?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -82,7 +98,9 @@ keyUsage?: Array<boolean>
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CertMatchParameters-keyUsage?: Array<boolean>--><!--Device-X509CertMatchParameters-keyUsage?: Array<boolean>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -98,7 +116,9 @@ matchAllSubjectAltNames?: boolean
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CertMatchParameters-matchAllSubjectAltNames?: boolean--><!--Device-X509CertMatchParameters-matchAllSubjectAltNames?: boolean-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -114,7 +134,9 @@ minPathLenConstraint?: number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CertMatchParameters-minPathLenConstraint?: int--><!--Device-X509CertMatchParameters-minPathLenConstraint?: int-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -130,7 +152,9 @@ nameConstraints?: Uint8Array
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CertMatchParameters-nameConstraints?: Uint8Array--><!--Device-X509CertMatchParameters-nameConstraints?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -148,7 +172,9 @@ privateKey?: string | Uint8Array
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本26.0.0开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CertMatchParameters-privateKey?: string | Uint8Array--><!--Device-X509CertMatchParameters-privateKey?: string | Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -164,7 +190,9 @@ privateKeyValid?: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CertMatchParameters-privateKeyValid?: string--><!--Device-X509CertMatchParameters-privateKeyValid?: string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -180,7 +208,9 @@ publicKey?: DataBlob
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CertMatchParameters-publicKey?: DataBlob--><!--Device-X509CertMatchParameters-publicKey?: DataBlob-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -196,7 +226,9 @@ publicKeyAlgID?: string
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CertMatchParameters-publicKeyAlgID?: string--><!--Device-X509CertMatchParameters-publicKeyAlgID?: string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -212,7 +244,9 @@ serialNumber?: bigint
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CertMatchParameters-serialNumber?: bigint--><!--Device-X509CertMatchParameters-serialNumber?: bigint-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -228,7 +262,9 @@ subject?: Uint8Array
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CertMatchParameters-subject?: Uint8Array--><!--Device-X509CertMatchParameters-subject?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -244,7 +280,9 @@ subjectAlternativeNames?: Array<GeneralName>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CertMatchParameters-subjectAlternativeNames?: Array<GeneralName>--><!--Device-X509CertMatchParameters-subjectAlternativeNames?: Array<GeneralName>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -260,7 +298,9 @@ subjectKeyIdentifier?: Uint8Array
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CertMatchParameters-subjectKeyIdentifier?: Uint8Array--><!--Device-X509CertMatchParameters-subjectKeyIdentifier?: Uint8Array-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -276,7 +316,9 @@ validDate?: string
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CertMatchParameters-validDate?: string--><!--Device-X509CertMatchParameters-validDate?: string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -292,7 +334,9 @@ x509Cert?: X509Cert
 
 **起始版本：** 11
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-X509CertMatchParameters-x509Cert?: X509Cert--><!--Device-X509CertMatchParameters-x509Cert?: X509Cert-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

@@ -6,6 +6,8 @@ The definition of the tab page content.
 
 **Since:** 23
 
+<!--Device-avMusicTemplate-interface MediaTabContent extends OperResult--><!--Device-avMusicTemplate-interface MediaTabContent extends OperResult-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Compilations content of the tab page.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-MediaTabContent-compilations: Compilation[]--><!--Device-MediaTabContent-compilations: Compilation[]-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## tabId
@@ -43,6 +47,8 @@ Tab id corresponding to the content.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaTabContent-tabId: string--><!--Device-MediaTabContent-tabId: string-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 

@@ -4,6 +4,8 @@ Enumerates the PBKDF2 algorithms for the database. Use the enum name rather than
 
 **Since:** 14
 
+<!--Device-relationalStore-enum KdfAlgo--><!--Device-relationalStore-enum KdfAlgo-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## KDF_SHA1
@@ -15,6 +17,8 @@ KDF_SHA1 = 0
 KDF_SHA1: PBKDF2_HMAC_SHA1 algorithm.
 
 **Since:** 14
+
+<!--Device-KdfAlgo-KDF_SHA1 = 0--><!--Device-KdfAlgo-KDF_SHA1 = 0-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -28,6 +32,8 @@ KDF_SHA256: PBKDF2_HMAC_SHA256 algorithm.
 
 **Since:** 14
 
+<!--Device-KdfAlgo-KDF_SHA256 = 1--><!--Device-KdfAlgo-KDF_SHA256 = 1-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## KDF_SHA512
@@ -39,6 +45,8 @@ KDF_SHA512 = 2
 KDF_SHA512: PBKDF2_HMAC_SHA512 algorithm.
 
 **Since:** 14
+
+<!--Device-KdfAlgo-KDF_SHA512 = 2--><!--Device-KdfAlgo-KDF_SHA512 = 2-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 

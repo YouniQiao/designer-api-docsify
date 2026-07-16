@@ -1,5 +1,11 @@
 # createPicture
 
+## 导入模块
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+```
+
 ## createPicture
 
 ```TypeScript
@@ -12,19 +18,21 @@ function createPicture(mainPixelmap : PixelMap): Picture
 
 **起始版本：** 13
 
+<!--Device-image-function createPicture(mainPixelmap : PixelMap): Picture--><!--Device-image-function createPicture(mainPixelmap : PixelMap): Picture-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mainPixelmap | PixelMap | 是 | 主图的PixelMap。 |
+| mainPixelmap | [PixelMap](arkts-image-pixelmap-i.md) | 是 | 主图的PixelMap。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Picture | 返回Picture对象。 |
+| [Picture](arkts-image-picture-i.md) | 返回Picture对象。 |
 
 **错误码：**
 

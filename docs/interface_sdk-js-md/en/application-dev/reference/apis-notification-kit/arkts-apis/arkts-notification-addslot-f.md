@@ -14,13 +14,11 @@ function addSlot(type: SlotType, callback: AsyncCallback<void>): void
 
 Adds a notification slot of a specified type. This API uses an asynchronous callback to return the result.
 
-The notification slot NotificationSlot defines the reminder type (such as alert sound, vibration, and
-banner) and level of a notification. Before publishing a notification, the application needs to
-create a corresponding type of notification slot first, or the system will automatically create a
-corresponding type of notification slot when the notification is published. Only one notification
-slot of the same type can be created.
+The notification slot NotificationSlot defines the reminder type (such as alert sound, vibration, and banner) and level of a notification. Before publishing a notification, the application needs to create a corresponding type of notification slot first, or the system will automatically create a corresponding type of notification slot when the notification is published. Only one notification slot of the same type can be created.
 
 **Since:** 9
+
+<!--Device-notificationManager-function addSlot(type: SlotType, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function addSlot(type: SlotType, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -28,8 +26,8 @@ slot of the same type can be created.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SlotType | Yes | Notification slot type to create. Different slot types correspond todifferent default SlotLevel values, which affect the notification alert method. For example,**SOCIAL_COMMUNICATION** corresponds to **LEVEL_HIGH** (status bar icon + banner + sound), and**CONTENT_INFORMATION** corresponds to **LEVEL_MIN** (no status bar icon + no banner + no sound). |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| type | [SlotType](arkts-notification-slottype-e.md) | Yes | Notification slot type to create. Different slot types correspond to different default SlotLevel values, which affect the notification alert method. For example,**SOCIAL_COMMUNICATION** corresponds to **LEVEL_HIGH** (status bar icon + banner + sound), and **CONTENT_INFORMATION** corresponds to **LEVEL_MIN** (no status bar icon + no banner + no sound). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -67,13 +65,11 @@ function addSlot(type: SlotType): Promise<void>
 
 Adds a notification slot of a specified type. This API uses a promise to return the result.
 
-The notification slot NotificationSlot defines the reminder type (such as alert sound, vibration, and
-banner) and level of a notification. Before publishing a notification, the application needs to
-create a corresponding type of notification slot first, or the system will automatically create a
-corresponding type of notification slot when the notification is published. Only one notification
-slot of the same type can be created.
+The notification slot NotificationSlot defines the reminder type (such as alert sound, vibration, and banner) and level of a notification. Before publishing a notification, the application needs to create a corresponding type of notification slot first, or the system will automatically create a corresponding type of notification slot when the notification is published. Only one notification slot of the same type can be created.
 
 **Since:** 9
+
+<!--Device-notificationManager-function addSlot(type: SlotType): Promise<void>--><!--Device-notificationManager-function addSlot(type: SlotType): Promise<void>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -81,13 +77,13 @@ slot of the same type can be created.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SlotType | Yes | Notification slot type to create. Different slot types correspond todifferent default SlotLevel values, which affect the notification alert method. For example,**SOCIAL_COMMUNICATION** corresponds to **LEVEL_HIGH** (status bar icon + banner + sound), and**CONTENT_INFORMATION** corresponds to **LEVEL_MIN** (no status bar icon + no banner + no sound). |
+| type | [SlotType](arkts-notification-slottype-e.md) | Yes | Notification slot type to create. Different slot types correspond to different default SlotLevel values, which affect the notification alert method. For example,**SOCIAL_COMMUNICATION** corresponds to **LEVEL_HIGH** (status bar icon + banner + sound), and **CONTENT_INFORMATION** corresponds to **LEVEL_MIN** (no status bar icon + no banner + no sound). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

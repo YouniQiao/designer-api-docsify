@@ -18,6 +18,8 @@ Obtains the uniform data type IDs based on the given MIME type and data type.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-uniformTypeDescriptor-function getUniformDataTypesByMIMEType(mimeType: string, belongsTo?: string): Array<string>--><!--Device-uniformTypeDescriptor-function getUniformDataTypesByMIMEType(mimeType: string, belongsTo?: string): Array<string>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 **Parameters:**
@@ -25,13 +27,13 @@ Obtains the uniform data type IDs based on the given MIME type and data type.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mimeType | string | Yes | MIME type. |
-| belongsTo | string | No | ID of the uniform data type, to which the data type to be obtained belongs. Thisparameter has no default value. If it is not specified, the[uniform data type ID] is queried based on the MIME name. |
+| belongsTo | string | No | ID of the uniform data type, to which the data type to be obtained belongs. This parameter has no default value. If it is not specified, the [uniform data type ID] is queried based on the MIME name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Uniform data type IDs that match the specified MIME type and **belongsTo** (if specified). If no match is found, the data types dynamically generated based on the rules specified by the inputparameters are returned. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Uniform data type IDs that match the specified MIME type and **belongsTo** (if specified). If no match is found, the data types dynamically generated based on the rules specified by the input parameters are returned. |
 
 **Error codes:**
 

@@ -4,13 +4,21 @@
 
 使用以下接口前，需先通过[getUserAuthInstance](arkts-userauthentication-getuserauthinstance-f.md#getuserauthinstance-1)方法获取UserAuthInstance对象。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 每个UserAuthInstance实例只能用于一次认证过程。若需要再次认证，必须重新获取UserAuthInstance实例。
 
 **起始版本：** 10
 
+<!--Device-userAuth-interface UserAuthInstance--><!--Device-userAuth-interface UserAuthInstance-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
+
+## 导入模块
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+```
 
 ## cancel
 
@@ -20,15 +28,17 @@ cancel(): void
 
 取消认证。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 此时UserAuthInstance必须是正在进行认证的对象。
 
 **起始版本：** 10
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthInstance-cancel(): void--><!--Device-UserAuthInstance-cancel(): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -92,13 +102,15 @@ off(type: 'result', callback?: IAuthCallback): void
 
 取消订阅用户身份认证的结果。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 需要使用已经成功订阅事件的[UserAuthInstance](arkts-userauthentication-userauthinstance-i.md)对象调用该接口进行取消订阅。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthInstance-off(type: 'result', callback?: IAuthCallback): void--><!--Device-UserAuthInstance-off(type: 'result', callback?: IAuthCallback): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -107,7 +119,7 @@ off(type: 'result', callback?: IAuthCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'result' | 是 | 订阅事件类型，表明该事件用来返回认证结果。 |
-| callback | IAuthCallback | 否 | 认证接口的回调函数，用于返回认证结果。当不传该参数时默认值为调用[on('result')](arkts-userauthentication-userauthinstance-i.md#on-1)接口时传递的参数值。 |
+| callback | [IAuthCallback](arkts-userauthentication-iauthcallback-i.md) | 否 | 认证接口的回调函数，用于返回认证结果。当不传该参数时默认值为调用[on('result')](arkts-userauthentication-userauthinstance-i.md#on-1)接口时传递的参数值。 |
 
 **错误码：**
 
@@ -169,13 +181,15 @@ off(type: 'authTip', callback?: AuthTipCallback): void
 
 取消订阅用户身份认证中间状态。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 需要使用已经成功订阅事件的[UserAuthInstance](arkts-userauthentication-userauthinstance-i.md)对象调用该接口进行取消订阅。
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthInstance-off(type: 'authTip', callback?: AuthTipCallback): void--><!--Device-UserAuthInstance-off(type: 'authTip', callback?: AuthTipCallback): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -184,7 +198,7 @@ off(type: 'authTip', callback?: AuthTipCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'authTip' | 是 | 取消订阅的事件类型，支持的事件为'authTip'，当[start()](arkts-userauthentication-userauthinstance-i.md#start-1)调用完成，发起身份认证并调用[on('authTip')](arkts-userauthentication-userauthinstance-i.md#on-2)订阅该事件后，调用该方法可取消订阅，不会再触发该事件。 |
-| callback | AuthTipCallback | 否 | 认证接口的回调函数，用于返回认证中间状态。 当不传该参数时默认值为调用[on('authTip')](arkts-userauthentication-userauthinstance-i.md#on-2)接口时传递的参数值。 |
+| callback | [AuthTipCallback](arkts-userauthentication-authtipcallback-t.md) | 否 | 认证接口的回调函数，用于返回认证中间状态。 当不传该参数时默认值为调用[on('authTip')](arkts-userauthentication-userauthinstance-i.md#on-2)接口时传递的参数值。 |
 
 **错误码：**
 
@@ -241,20 +255,20 @@ try {
 on(type: 'result', callback: IAuthCallback): void
 ```
 
-订阅用户身份认证的最终结果。通过该接口获取到的是用户在认证控件完成身份认证交互后的最终身份认证结果。认证控件消失前，用户中间的认证不通过尝试并不会通过该接口返回，只有最终的认证结果（成功或最终失败）会通过此接口返回。如果需要感
-知整个认证过程中用户的每一次认证不通过尝试和中间状态，请通过
-[on('authTip')](arkts-userauthentication-userauthinstance-i.md#on-2)接口订阅。
+订阅用户身份认证的最终结果。通过该接口获取到的是用户在认证控件完成身份认证交互后的最终身份认证结果。认证控件消失前，用户中间的认证不通过尝试并不会通过该接口返回，只有最终的认证结果（成功或最终失败）会通过此接口返回。如果需要感知整个认证过程中用户的每一次认证不通过尝试和中间状态，请通过[on('authTip')](arkts-userauthentication-userauthinstance-i.md#on-2)接口订阅。
 
-> **说明：**
->
-> 在PC/2in1设备上，应用如果使用模应用弹窗方式发起认证（即配置用户界面参数[widgetParam](arkts-userauthentication-widgetparam-i.md)时传入了有效的uiContext），收到认证结果后，若需弹出其
-> 他窗口，应先获取控件弹窗释放的标志消息，通过
-> [on('authTip')](arkts-userauthentication-userauthinstance-i.md#on-2)接口订阅控件释放消息（
+> **说明：**  
+>  
+> 在PC/2in1设备上，应用如果使用模应用弹窗方式发起认证（即配置用户界面参数[widgetParam](arkts-userauthentication-widgetparam-i.md)时传入了有效的uiContext），收到认证结果后，若需弹出其  
+> 他窗口，应先获取控件弹窗释放的标志消息，通过  
+> [on('authTip')](arkts-userauthentication-userauthinstance-i.md#on-2)接口订阅控件释放消息（  
 > authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED）。
 
 **起始版本：** 10
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthInstance-on(type: 'result', callback: IAuthCallback): void--><!--Device-UserAuthInstance-on(type: 'result', callback: IAuthCallback): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -263,7 +277,7 @@ on(type: 'result', callback: IAuthCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'result' | 是 | 订阅事件类型，表明该事件用来返回认证结果。 |
-| callback | IAuthCallback | 是 | 认证接口的回调函数，用于返回认证结果。 |
+| callback | [IAuthCallback](arkts-userauthentication-iauthcallback-i.md) | 是 | 认证接口的回调函数，用于返回认证结果。 |
 
 **错误码：**
 
@@ -280,16 +294,18 @@ on(type: 'authTip', callback: AuthTipCallback): void
 
 订阅身份认证过程中的提示信息。通过该接口可以获取到认证过程中控件的拉起和退出提示，以及认证过程中用户的每一次认证不通过尝试。使用callback异步回调。
 
-> **说明：**
->
-> 在PC/2in1设备上，应用如果使用模应用弹窗方式发起认证（即配置用户界面参数[widgetParam](arkts-userauthentication-widgetparam-i.md)时传入了有效的uiContext），收到认证结果后，若需弹出其
-> 他窗口，应先获取控件弹窗释放的标志消息，通过
-> [on('authTip')](arkts-userauthentication-userauthinstance-i.md#on-2)接口订阅控件释放消息（
+> **说明：**  
+>  
+> 在PC/2in1设备上，应用如果使用模应用弹窗方式发起认证（即配置用户界面参数[widgetParam](arkts-userauthentication-widgetparam-i.md)时传入了有效的uiContext），收到认证结果后，若需弹出其  
+> 他窗口，应先获取控件弹窗释放的标志消息，通过  
+> [on('authTip')](arkts-userauthentication-userauthinstance-i.md#on-2)接口订阅控件释放消息（  
 > authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED）。
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthInstance-on(type: 'authTip', callback: AuthTipCallback): void--><!--Device-UserAuthInstance-on(type: 'authTip', callback: AuthTipCallback): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -298,7 +314,7 @@ on(type: 'authTip', callback: AuthTipCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'authTip' | 是 | 订阅事件类型，支持的事件为'authTip'，当[start()](arkts-userauthentication-userauthinstance-i.md#start-1)调用完成，发起身份认证，触发该事件。 |
-| callback | AuthTipCallback | 是 | 认证接口的回调函数，用于返回认证中间状态。 |
+| callback | [AuthTipCallback](arkts-userauthentication-authtipcallback-t.md) | 是 | 认证接口的回调函数，用于返回认证中间状态。 |
 
 **错误码：**
 
@@ -360,8 +376,8 @@ start(): void
 
 开始认证。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 每个UserAuthInstance只能进行一次认证，需要再次认证时，必须重新获取UserAuthInstance。
 
 **起始版本：** 10
@@ -370,7 +386,9 @@ start(): void
 - API版本20+：ohos.permission.ACCESS_BIOMETRIC or ohos.permission.USER_AUTH_FROM_BACKGROUND
 - API版本10 - 19：ohos.permission.ACCESS_BIOMETRIC
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UserAuthInstance-start(): void--><!--Device-UserAuthInstance-start(): void-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

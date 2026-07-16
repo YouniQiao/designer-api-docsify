@@ -4,6 +4,8 @@ Represents the callback invoked when the web page is overscrolled.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface OnOverScrollEvent--><!--Device-unnamed-declare interface OnOverScrollEvent-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## xOffset
@@ -22,6 +24,8 @@ Unit: vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-OnOverScrollEvent-xOffset: number--><!--Device-OnOverScrollEvent-xOffset: number-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## yOffset
@@ -39,6 +43,8 @@ Unit: vp.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-OnOverScrollEvent-yOffset: number--><!--Device-OnOverScrollEvent-yOffset: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

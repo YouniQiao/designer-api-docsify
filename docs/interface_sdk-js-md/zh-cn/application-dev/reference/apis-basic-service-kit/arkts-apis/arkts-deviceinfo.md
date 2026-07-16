@@ -2,15 +2,23 @@
 
 本模块提供终端设备信息查询，开发者不可配置。
 
-> **说明：**
->
-> 本模块首批接口从API version 6开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
-> hardwareProfile、incrementalVersion、buildType、buildUser、buildHost、buildTime、buildRootHash等参数返回值为default，这些参数会在设备正式商用版本中配置具体值。
+> **说明：**  
+>  
+> 本模块首批接口从API version 6开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。  
+> hardwareProfile、incrementalVersion、buildType、buildUser、buildHost、buildTime、buildRootHash等参数返回值为default，这些参数会在设备正式商用版本中配置具体值。  
 > 本模块接口返回设备常量信息，建议应用只调用一次，不需要频繁调用。
 
 **起始版本：** 6
 
+<!--Device-unnamed-declare namespace deviceInfo--><!--Device-unnamed-declare namespace deviceInfo-End-->
+
 **系统能力：** SystemCapability.Startup.SystemInfo
+
+## 导入模块
+
+```TypeScript
+import { deviceInfo } from '@kit.BasicServicesKit';
+```
 
 ## 汇总
 
@@ -45,7 +53,7 @@
 | [chipType](arkts-basicservices-deviceinfo-con.md#chiptype) | 当前设备CPU芯片型号示例：xxxxx |
 | [deviceColor](arkts-basicservices-deviceinfo-con.md#devicecolor) | 当前设备颜色。如果无法获取，则返回空字符串示例：gold |
 | [deviceType](arkts-basicservices-deviceinfo-con.md#devicetype) | 设备类型。详细请参考[deviceTypes标签](../../../../quick-start/module-configuration-file.md#devicetypes标签)。示例：&lt;!--RP1--&gt;wearable&lt;!--RP1End--&gt; |
-| [diskSN](arkts-basicservices-deviceinfo-con.md#disksn) | 硬盘序列号。**说明** ：该字段只能在2in1设备进行查询，其他设备查询结果为空。ohos.permission.ACCESS_DISK_PHY_INFO 示例：2502EM400567 |
+| [diskSN](arkts-basicservices-deviceinfo-con.md#disksn) | 硬盘序列号。**说明** ：该字段只能在2in1设备进行查询，其他设备查询结果为空。ohos.permission.ACCESS_DISK_PHY_INFO示例：2502EM400567 |
 | [displayVersion](arkts-basicservices-deviceinfo-con.md#displayversion) | 产品版本。示例：&lt;!--RP8--&gt;XXX X.X.X.X&lt;!--RP8End--&gt; |
 | [distributionOSApiName](arkts-basicservices-deviceinfo-con.md#distributionosapiname) | 发行版系统api版本名称&lt;!--Del--&gt;，由发行方定义&lt;!--DelEnd--&gt;。 |
 | [distributionOSApiVersion](arkts-basicservices-deviceinfo-con.md#distributionosapiversion) | 发行版系统api版本&lt;!--Del--&gt;，由发行方定义&lt;!--DelEnd--&gt;。示例：50001 |

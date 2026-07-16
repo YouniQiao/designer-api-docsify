@@ -4,6 +4,8 @@ Wi-Fi information elements.
 
 **Since:** 9
 
+<!--Device-wifiManager-interface WifiInfoElem--><!--Device-wifiManager-interface WifiInfoElem-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Element content
 
 **Since:** 9
 
+<!--Device-WifiInfoElem-content: Uint8Array--><!--Device-WifiInfoElem-content: Uint8Array-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## eid
@@ -37,6 +41,8 @@ Element id
 **Type:** number
 
 **Since:** 9
+
+<!--Device-WifiInfoElem-eid: int--><!--Device-WifiInfoElem-eid: int-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 

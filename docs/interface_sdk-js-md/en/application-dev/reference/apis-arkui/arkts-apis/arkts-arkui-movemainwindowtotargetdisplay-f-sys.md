@@ -18,6 +18,8 @@ Move a window to the target display. The window must be a main window.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-window-function moveMainWindowToTargetDisplay(displayId: long, windowId: int, userId?: int): Promise<void>--><!--Device-window-function moveMainWindowToTargetDisplay(displayId: long, windowId: int, userId?: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
@@ -34,7 +36,7 @@ Move a window to the target display. The window must be a main window.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value indicates complete. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value indicates complete. |
 
 **Error codes:**
 

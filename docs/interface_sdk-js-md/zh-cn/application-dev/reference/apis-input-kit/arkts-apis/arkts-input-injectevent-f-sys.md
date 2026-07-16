@@ -1,5 +1,11 @@
 # injectEvent（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { inputEventClient } from '@kit.InputKit';
+```
+
 ## injectEvent
 
 ```TypeScript
@@ -12,6 +18,8 @@ function injectEvent({ KeyEvent: KeyEvent }): void
 
 **需要权限：** 
 - API版本12+：ohos.permission.INJECT_INPUT_EVENT
+
+<!--Device-inputEventClient-function injectEvent({ KeyEvent: KeyEvent }): void--><!--Device-inputEventClient-function injectEvent({ KeyEvent: KeyEvent }): void-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 

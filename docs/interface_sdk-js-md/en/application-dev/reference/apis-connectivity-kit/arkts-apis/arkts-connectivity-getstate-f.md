@@ -18,13 +18,15 @@ Gets the NearLink state.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-manager-function getState(): NearlinkState--><!--Device-manager-function getState(): NearlinkState-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| NearlinkState | Returns the NearLink state. |
+| [NearlinkState](arkts-connectivity-nearlinkstate-e.md) | Returns the NearLink state. |
 
 **Error codes:**
 

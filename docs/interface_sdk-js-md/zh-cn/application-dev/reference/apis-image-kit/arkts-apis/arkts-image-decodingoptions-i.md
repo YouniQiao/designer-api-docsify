@@ -4,7 +4,15 @@
 
 **起始版本：** 7
 
+<!--Device-image-interface DecodingOptions--><!--Device-image-interface DecodingOptions-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
+
+## 导入模块
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+```
 
 ## cropAndScaleStrategy
 
@@ -20,6 +28,8 @@ cropAndScaleStrategy?: CropAndScaleStrategy
 
 **起始版本：** 18
 
+<!--Device-DecodingOptions-cropAndScaleStrategy?: CropAndScaleStrategy--><!--Device-DecodingOptions-cropAndScaleStrategy?: CropAndScaleStrategy-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 ## desiredColorSpace
@@ -33,6 +43,8 @@ desiredColorSpace?: colorSpaceManager.ColorSpaceManager
 **类型：** colorSpaceManager.ColorSpaceManager
 
 **起始版本：** 11
+
+<!--Device-DecodingOptions-desiredColorSpace?: colorSpaceManager.ColorSpaceManager--><!--Device-DecodingOptions-desiredColorSpace?: colorSpaceManager.ColorSpaceManager-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -52,6 +64,8 @@ desiredDynamicRange?: DecodingDynamicRange
 
 **起始版本：** 12
 
+<!--Device-DecodingOptions-desiredDynamicRange?: DecodingDynamicRange--><!--Device-DecodingOptions-desiredDynamicRange?: DecodingDynamicRange-End-->
+
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 ## desiredPixelFormat
@@ -66,9 +80,11 @@ desiredPixelFormat?: PixelMapFormat
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DecodingOptions-desiredPixelFormat?: PixelMapFormat--><!--Device-DecodingOptions-desiredPixelFormat?: PixelMapFormat-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -86,9 +102,11 @@ desiredRegion?: Region
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DecodingOptions-desiredRegion?: Region--><!--Device-DecodingOptions-desiredRegion?: Region-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -106,9 +124,11 @@ desiredSize?: Size
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DecodingOptions-desiredSize?: Size--><!--Device-DecodingOptions-desiredSize?: Size-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -126,9 +146,11 @@ editable?: boolean
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DecodingOptions-editable?: boolean--><!--Device-DecodingOptions-editable?: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -144,9 +166,11 @@ fitDensity?: number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DecodingOptions-fitDensity?: int--><!--Device-DecodingOptions-fitDensity?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -162,9 +186,11 @@ index?: number
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DecodingOptions-index?: int--><!--Device-DecodingOptions-index?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -180,9 +206,11 @@ rotate?: number
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DecodingOptions-rotate?: int--><!--Device-DecodingOptions-rotate?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -198,9 +226,11 @@ sampleSize?: number
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-DecodingOptions-sampleSize?: int--><!--Device-DecodingOptions-sampleSize?: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 

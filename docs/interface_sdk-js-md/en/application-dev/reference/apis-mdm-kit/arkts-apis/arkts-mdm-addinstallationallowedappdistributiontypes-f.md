@@ -12,12 +12,9 @@ import { bundleManager } from '@kit.MDMKit';
 function addInstallationAllowedAppDistributionTypes(admin: Want, appDistributionTypes: Array<AppDistributionType>): void
 ```
 
-Adds the distribution type of the application that can be installed. Only applications of the distribution type
-that is added to [AppDistributionType](arkts-mdm-appdistributiontype-e.md) can be installed on the current
-device.
+Adds the distribution type of the application that can be installed. Only applications of the distribution type that is added to [AppDistributionType](arkts-mdm-appdistributiontype-e.md) can be installed on the current device.
 
-For details about the distribution type of the application signing certificate, refer to the
-**appDistributionType** attribute in [ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md).
+For details about the distribution type of the application signing certificate, refer to the **appDistributionType** attribute in [ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md).
 
 **Since:** 20
 
@@ -25,14 +22,16 @@ For details about the distribution type of the application signing certificate, 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-bundleManager-function addInstallationAllowedAppDistributionTypes(admin: Want, appDistributionTypes: Array<AppDistributionType>): void--><!--Device-bundleManager-function addInstallationAllowedAppDistributionTypes(admin: Want, appDistributionTypes: Array<AppDistributionType>): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| appDistributionTypes | Array&lt;AppDistributionType&gt; | Yes | Distribution types of the application signingcertificate. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| appDistributionTypes | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<AppDistributionType> | Yes | Distribution types of the application signing certificate. |
 
 **Error codes:**
 
@@ -41,7 +40,7 @@ For details about the distribution type of the application signing certificate, 
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 **Example**
 

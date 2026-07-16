@@ -1,5 +1,11 @@
 # getLocationPolicy
 
+## 导入模块
+
+```TypeScript
+import { locationManager } from '@kit.MDMKit';
+```
+
 ## getLocationPolicy
 
 ```TypeScript
@@ -14,19 +20,21 @@ function getLocationPolicy(admin: Want): LocationPolicy
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-locationManager-function getLocationPolicy(admin: Want): LocationPolicy--><!--Device-locationManager-function getLocationPolicy(admin: Want): LocationPolicy-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| LocationPolicy | 位置服务策略枚举值。0：默认策略。1：禁用。2：强制启用。 |
+| [LocationPolicy](arkts-mdm-locationpolicy-e.md) | 位置服务策略枚举值。0：默认策略。1：禁用。2：强制启用。 |
 
 **错误码：**
 

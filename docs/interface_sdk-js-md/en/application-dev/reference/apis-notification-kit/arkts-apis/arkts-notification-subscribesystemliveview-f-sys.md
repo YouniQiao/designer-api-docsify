@@ -16,6 +16,8 @@ Subscribes to the system live view notification. This API uses a promise to retu
 
 **Since:** 11
 
+<!--Device-notificationManager-function subscribeSystemLiveView(subscriber: SystemLiveViewSubscriber): Promise<void>--><!--Device-notificationManager-function subscribeSystemLiveView(subscriber: SystemLiveViewSubscriber): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -24,13 +26,13 @@ Subscribes to the system live view notification. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | SystemLiveViewSubscriber | Yes | Subscriber of the system live view notification. |
+| subscriber | [SystemLiveViewSubscriber](arkts-notification-systemliveviewsubscriber-i-sys.md) | Yes | Subscriber of the system live view notification. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

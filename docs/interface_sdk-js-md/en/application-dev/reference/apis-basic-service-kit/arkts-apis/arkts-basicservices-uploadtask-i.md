@@ -1,12 +1,10 @@
 # UploadTask
 
-Implements file uploads. Before using any APIs of this class, you must obtain an **UploadTask** object, from a
-promise through [request.uploadFile](arkts-basicservices-uploadfile-f.md#uploadfile-2) or from
-a callback through
-[request.uploadFile](arkts-basicservices-uploadfile-f.md#uploadfile-1)
-.
+Implements file uploads. Before using any APIs of this class, you must obtain an **UploadTask** object, from a promise through [request.uploadFile](arkts-basicservices-uploadfile-f.md#uploadfile-2) or from a callback through [request.uploadFile](arkts-basicservices-uploadfile-f.md#uploadfile-1).
 
 **Since:** 6
+
+<!--Device-request-interface UploadTask--><!--Device-request-interface UploadTask-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -24,14 +22,16 @@ delete(callback: AsyncCallback<boolean>): void
 
 Deletes the upload task. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> **NOTE**  
+>  
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
 > code is removed from API version 12.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-UploadTask-delete(callback: AsyncCallback<boolean>): void--><!--Device-UploadTask-delete(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -39,7 +39,7 @@ Deletes the upload task. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicatesthat the operation is successful; **false** indicates the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -68,14 +68,16 @@ delete(): Promise<boolean>
 
 Deletes the upload task. This API uses a promise to return the result.
 
-> **NOTE**
->
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> **NOTE**  
+>  
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
 > code is removed from API version 12.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.INTERNET
+
+<!--Device-UploadTask-delete(): Promise<boolean>--><!--Device-UploadTask-delete(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -83,7 +85,7 @@ Deletes the upload task. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operationis successful; **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -112,6 +114,8 @@ Unsubscribes from upload progress events.
 
 **Since:** 6
 
+<!--Device-UploadTask-off(type: 'progress', callback?: (uploadedSize: long, totalSize: long) => void): void--><!--Device-UploadTask-off(type: 'progress', callback?: (uploadedSize: long, totalSize: long) => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Upload
 
 **Parameters:**
@@ -119,7 +123,7 @@ Unsubscribes from upload progress events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'progress' | Yes | Event type.<br>- **'progress'**: upload progress. |
-| callback | (uploadedSize: number, totalSize: number) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of thecurrent type will be unregistered. |
+| callback | (uploadedSize: number, totalSize: number) => void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -155,6 +159,8 @@ Unsubscribes from HTTP response events for the upload task.
 
 **Since:** 7
 
+<!--Device-UploadTask-off(type: 'headerReceive', callback?: (header: object) => void): void--><!--Device-UploadTask-off(type: 'headerReceive', callback?: (header: object) => void): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Upload
 
 **Parameters:**
@@ -162,7 +168,7 @@ Unsubscribes from HTTP response events for the upload task.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'headerReceive' | Yes | Event type.<br>- **'headerReceive'**: The HTTP request receives a response. |
-| callback | (header: object) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of thecurrent type will be unregistered. |
+| callback | (header: object) => void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -198,6 +204,8 @@ Unsubscribes from upload completion or failure events.
 
 **Since:** 9
 
+<!--Device-UploadTask-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Upload
 
 **Parameters:**
@@ -205,7 +213,7 @@ Unsubscribes from upload completion or failure events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'fail' | Yes | Event type.<br>- **'complete'**: upload task completion.<br>- **'fail'**:upload task failure. |
-| callback | Callback&lt;Array&lt;TaskState&gt;&gt; | No | Callback to unregister. If this parameter is not specified,all callbacks of the current type will be unregistered. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<TaskState>> | No | Callback to unregister. If this parameter is not specified,all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -266,6 +274,8 @@ Unsubscribes from upload completion or failure events.
 
 **Since:** 9
 
+<!--Device-UploadTask-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Upload
 
 **Parameters:**
@@ -273,7 +283,7 @@ Unsubscribes from upload completion or failure events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'fail' | Yes | Event type.<br>- **'complete'**: upload task completion.<br>- **'fail'**:upload task failure. |
-| callback | Callback&lt;Array&lt;TaskState&gt;&gt; | No | Callback to unregister. If this parameter is not specified,all callbacks of the current type will be unregistered. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<TaskState>> | No | Callback to unregister. If this parameter is not specified,all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -332,12 +342,14 @@ on(type: 'progress', callback: (uploadedSize: number, totalSize: number) => void
 
 Subscribes to upload progress events. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> To maintain a balance between power consumption and performance, this API cannot be called when the application
+> **NOTE**  
+>  
+> To maintain a balance between power consumption and performance, this API cannot be called when the application  
 > is running in the background.
 
 **Since:** 6
+
+<!--Device-UploadTask-on(type: 'progress', callback: (uploadedSize: long, totalSize: long) => void): void--><!--Device-UploadTask-on(type: 'progress', callback: (uploadedSize: long, totalSize: long) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -346,7 +358,7 @@ Subscribes to upload progress events. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'progress' | Yes | Event type. The value is fixed at **'progress'**, indicating upload progress. |
-| callback | (uploadedSize: number, totalSize: number) =&gt; void | Yes | Callback used to return the size of the uploaded file and the total size of thefile to upload, in bytes. |
+| callback | (uploadedSize: number, totalSize: number) => void | Yes | Callback used to return the size of the uploaded file and the total size of the file to upload, in bytes. |
 
 **Error codes:**
 
@@ -370,10 +382,11 @@ uploadTask.on('progress', upProgressCallback);
 on(type: 'headerReceive', callback: (header: object) => void): void
 ```
 
-Subscribes to HTTP response events for the upload task.This API uses an asynchronous callback to return the
-result.
+Subscribes to HTTP response events for the upload task.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
+
+<!--Device-UploadTask-on(type: 'headerReceive', callback: (header: object) => void): void--><!--Device-UploadTask-on(type: 'headerReceive', callback: (header: object) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -382,7 +395,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'headerReceive' | Yes | Event type.<br>- **'headerReceive'**: The HTTP request receives a response. |
-| callback | (header: object) =&gt; void | Yes | Callback used to return the response content. |
+| callback | (header: object) => void | Yes | Callback used to return the response content. |
 
 **Error codes:**
 
@@ -410,6 +423,8 @@ Subscribes to upload completion or failure events. This API uses an asynchronous
 
 **Since:** 9
 
+<!--Device-UploadTask-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Upload
 
 **Parameters:**
@@ -417,7 +432,7 @@ Subscribes to upload completion or failure events. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'fail' | Yes | Type of the event to subscribe to. |
-| callback | Callback&lt;Array&lt;TaskState&gt;&gt; | Yes | Callback used to return the state of the upload task. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<TaskState>> | Yes | Callback used to return the state of the upload task. |
 
 **Error codes:**
 
@@ -454,6 +469,8 @@ Subscribes to upload completion or failure events. This API uses an asynchronous
 
 **Since:** 9
 
+<!--Device-UploadTask-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Upload
 
 **Parameters:**
@@ -461,7 +478,7 @@ Subscribes to upload completion or failure events. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'fail' | Yes | Type of the event to subscribe to. |
-| callback | Callback&lt;Array&lt;TaskState&gt;&gt; | Yes | Callback used to return the state of the upload task. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<Array<TaskState>> | Yes | Callback used to return the state of the upload task. |
 
 **Error codes:**
 
@@ -504,13 +521,15 @@ Deletes the upload task. This API uses an asynchronous callback to return the re
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-UploadTask-remove(callback: AsyncCallback<boolean>): void--><!--Device-UploadTask-remove(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.MiscServices.Upload
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicatesthat the operation is successful; **false** indicates the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -549,13 +568,15 @@ Deletes the upload task. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.INTERNET
 
+<!--Device-UploadTask-remove(): Promise<boolean>--><!--Device-UploadTask-remove(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.MiscServices.Upload
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operationis successful; **false** indicates the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 

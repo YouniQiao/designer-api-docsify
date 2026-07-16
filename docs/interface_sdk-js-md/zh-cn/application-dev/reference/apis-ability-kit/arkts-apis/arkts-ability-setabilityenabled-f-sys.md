@@ -1,5 +1,11 @@
 # setAbilityEnabled（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## setAbilityEnabled
 
 ```TypeScript
@@ -12,6 +18,8 @@ function setAbilityEnabled(info: AbilityInfo, appIndex: number, isEnabled: boole
 
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
+<!--Device-bundleManager-function setAbilityEnabled(info: AbilityInfo, appIndex: int, isEnabled: boolean): Promise<void>--><!--Device-bundleManager-function setAbilityEnabled(info: AbilityInfo, appIndex: int, isEnabled: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ function setAbilityEnabled(info: AbilityInfo, appIndex: number, isEnabled: boole
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | AbilityInfo | 是 | 需要被设置的组件。 |
+| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | 是 | 需要被设置的组件。 |
 | appIndex | number | 是 | 表示分身应用的索引。<br> appIndex为0时，表示设置主应用组件的禁用或使能状态。appIndex大于0时，表示设置指定分身应用组件的禁用或使能状态。 |
 | isEnabled | boolean | 是 | 值为true表示使能，值为false表示禁用。 |
 
@@ -28,7 +36,7 @@ function setAbilityEnabled(info: AbilityInfo, appIndex: number, isEnabled: boole
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -89,6 +97,8 @@ function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean, callback: Asyn
 
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
+<!--Device-bundleManager-function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean, callback: AsyncCallback<void>): void--><!--Device-bundleManager-function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -97,9 +107,9 @@ function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean, callback: Asyn
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | AbilityInfo | 是 | 需要被设置的组件。 |
+| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | 是 | 需要被设置的组件。 |
 | isEnabled | boolean | 是 | 值为true表示使能，值为false表示禁用。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当设置组件禁用或使能状态成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)，当设置组件禁用或使能状态成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -161,6 +171,8 @@ function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean): Promise<void>
 
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
+<!--Device-bundleManager-function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean): Promise<void>--><!--Device-bundleManager-function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean): Promise<void>-End-->
+
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -169,14 +181,14 @@ function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | AbilityInfo | 是 | 需要被设置的组件。 |
+| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | 是 | 需要被设置的组件。 |
 | isEnabled | boolean | 是 | 值为true表示使能，值为false表示禁用。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

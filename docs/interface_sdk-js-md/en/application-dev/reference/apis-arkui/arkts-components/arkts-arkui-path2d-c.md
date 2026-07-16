@@ -1,22 +1,23 @@
 # Path2D
 
-**Path2D** allows you to describe a path through an existing path. This path can be drawn
-through the **stroke** or **fill** API of **Canvas**.
+**Path2D** allows you to describe a path through an existing path. This path can be drawn through the **stroke** or **fill** API of **Canvas**.
 
-> **NOTE**
->
-> The Path2D object does not support the resetting of an existing path. If a new path
-> is required, you can create an empty Path2D object.
->
-> The methods of the Path2D object do not take effect for the paths set in the
-> [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)
-> and
-> [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md)
+> **NOTE**  
+>  
+> The Path2D object does not support the resetting of an existing path. If a new path  
+> is required, you can create an empty Path2D object.  
+>  
+> The methods of the Path2D object do not take effect for the paths set in the  
+> [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)  
+> and  
+> [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md)  
 > objects.
 
 **Inheritance/Implementation:** Path2D extends [CanvasPath](arkts-arkui-canvaspath-c.md)
 
 **Since:** 8
+
+<!--Device-unnamed-declare class Path2D extends CanvasPath--><!--Device-unnamed-declare class Path2D extends CanvasPath-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,14 +35,16 @@ Adds a path to this path.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-Path2D-addPath(path: Path2D, transform?: Matrix2D): void--><!--Device-Path2D-addPath(path: Path2D, transform?: Matrix2D): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | Path2D | Yes | Path to be added to this path. Unit: px.<br>The **undefined** and **null** values are treated as invalid. |
-| transform | Matrix2D | No | Transformation matrix of the new path.<br>The **undefined** and **null** values are treated as invalid.<br>Default value: **null**. |
+| path | [Path2D](arkts-arkui-path2d-c.md) | Yes | Path to be added to this path. Unit: px.<br>The **undefined** and **null** values are treated as invalid. |
+| transform | [Matrix2D](../arkts-apis/arkts-arkui-matrix2d-c.md) | No | Transformation matrix of the new path.<br>The **undefined** and **null** values are treated as invalid.<br>Default value: **null**. |
 
 ## constructor
 
@@ -56,6 +59,8 @@ Constructs an empty **Path2D** object.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+<!--Device-Path2D-constructor()--><!--Device-Path2D-constructor()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -75,13 +80,15 @@ Constructs an empty Path2D object. The unit mode of the Path2D object can be con
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-Path2D-constructor(unit: LengthMetricsUnit)--><!--Device-Path2D-constructor(unit: LengthMetricsUnit)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unit | LengthMetricsUnit | Yes | Unit mode of the Path2D object.The value cannot be dynamically changed once set. The configuration method is the sameas that of[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).<br>Invalid values **NaN** and **Infinity** are treated as the default value.<br>Default value: **DEFAULT** |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-e.md) | Yes | Unit mode of the Path2D object.The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).<br>Invalid values **NaN** and **Infinity** are treated as the default value.<br>Default value: **DEFAULT** |
 
 ## constructor
 
@@ -97,13 +104,15 @@ Constructs a Path2D object using a path object.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-Path2D-constructor(path: Path2D)--><!--Device-Path2D-constructor(path: Path2D)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | Path2D | Yes | **Path** object. |
+| path | [Path2D](arkts-arkui-path2d-c.md) | Yes | **Path** object. |
 
 ## constructor
 
@@ -111,8 +120,7 @@ Constructs a Path2D object using a path object.
 constructor(path: Path2D, unit: LengthMetricsUnit)
 ```
 
-When a path object is used to construct a Path2D object, the unit mode of the Path2D
-object can be configured.
+When a path object is used to construct a Path2D object, the unit mode of the Path2D object can be configured.
 
 **Since:** 12
 
@@ -122,14 +130,16 @@ object can be configured.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-Path2D-constructor(path: Path2D, unit: LengthMetricsUnit)--><!--Device-Path2D-constructor(path: Path2D, unit: LengthMetricsUnit)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | Path2D | Yes | **Path** object. |
-| unit | LengthMetricsUnit | Yes | Unit mode of the Path2D object.The value cannot be dynamically changed once set. The configuration method is the sameas that of[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).<br>Invalid values **NaN** and **Infinity** are treated as the default value.<br>Default value: **DEFAULT** |
+| path | [Path2D](arkts-arkui-path2d-c.md) | Yes | **Path** object. |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-e.md) | Yes | Unit mode of the Path2D object.The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).<br>Invalid values **NaN** and **Infinity** are treated as the default value.<br>Default value: **DEFAULT** |
 
 ## constructor
 
@@ -137,8 +147,7 @@ object can be configured.
 constructor(d: string)
 ```
 
-Constructs a Path2D object using a path string that complies with the SVG path
-description specifications.
+Constructs a Path2D object using a path string that complies with the SVG path description specifications.
 
 **Since:** 8
 
@@ -146,13 +155,15 @@ description specifications.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
+<!--Device-Path2D-constructor(d: string)--><!--Device-Path2D-constructor(d: string)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| d | string | Yes | Path that complies with the[SVG path syntax](arkts-arkui-path2d-c.md).Invalid values are treated as invalid inputs. |
+| d | string | Yes | Path that complies with the [SVG path syntax](arkts-arkui-path2d-c.md).Invalid values are treated as invalid inputs. |
 
 ## constructor
 
@@ -160,8 +171,7 @@ description specifications.
 constructor(description: string, unit: LengthMetricsUnit)
 ```
 
-Constructs a Path2D object using a path string that complies with the SVG path
-specifications. The unit mode of the Path2D object can be configured.
+Constructs a Path2D object using a path string that complies with the SVG path specifications. The unit mode of the Path2D object can be configured.
 
 **Since:** 12
 
@@ -171,12 +181,14 @@ specifications. The unit mode of the Path2D object can be configured.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-Path2D-constructor(description: string, unit: LengthMetricsUnit)--><!--Device-Path2D-constructor(description: string, unit: LengthMetricsUnit)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| description | string | Yes | Path that complies with the[SVG path syntax](arkts-arkui-path2d-c.md).Invalid values are treated as invalid inputs. |
-| unit | LengthMetricsUnit | Yes | Unit mode of the Path2D object.The value cannot be dynamically changed once set. The configuration method is the sameas that of[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).<br>Invalid values **NaN** and **Infinity** are treated as the default value.<br>Default value: **DEFAULT** |
+| description | string | Yes | Path that complies with the [SVG path syntax](arkts-arkui-path2d-c.md).Invalid values are treated as invalid inputs. |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-e.md) | Yes | Unit mode of the Path2D object.The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).<br>Invalid values **NaN** and **Infinity** are treated as the default value.<br>Default value: **DEFAULT** |
 

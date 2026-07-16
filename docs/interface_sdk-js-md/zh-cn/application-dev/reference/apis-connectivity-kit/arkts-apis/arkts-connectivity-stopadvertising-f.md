@@ -1,5 +1,11 @@
 # stopAdvertising
 
+## 导入模块
+
+```TypeScript
+import { advertising } from '@kit.ConnectivityKit';
+```
+
 ## stopAdvertising
 
 ```TypeScript
@@ -14,6 +20,8 @@ function stopAdvertising(advertisingId: number): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-advertising-function stopAdvertising(advertisingId: int): Promise<void>--><!--Device-advertising-function stopAdvertising(advertisingId: int): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **参数：**
@@ -26,7 +34,7 @@ function stopAdvertising(advertisingId: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise<void> | 返回promise对象。 |
 
 **错误码：**
 

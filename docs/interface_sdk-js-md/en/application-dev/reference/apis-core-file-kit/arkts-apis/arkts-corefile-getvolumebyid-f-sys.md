@@ -12,12 +12,13 @@ import { volumeManager } from '@kit.CoreFileKit';
 function getVolumeById(volumeId: string, callback: AsyncCallback<Volume>): void
 ```
 
-Obtains information about a volume based on the volume ID. This API uses an asynchronous callback to return the
-result.
+Obtains information about a volume based on the volume ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
+
+<!--Device-volumeManager-function getVolumeById(volumeId: string, callback: AsyncCallback<Volume>): void--><!--Device-volumeManager-function getVolumeById(volumeId: string, callback: AsyncCallback<Volume>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -28,7 +29,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volumeId | string | Yes | Volume ID. |
-| callback | AsyncCallback&lt;Volume&gt; | Yes | Callback used to return the volume information obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Volume> | Yes | Callback used to return the volume information obtained. |
 
 **Error codes:**
 
@@ -54,6 +55,8 @@ Obtains information about a volume based on the volume ID. This API uses a promi
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
+<!--Device-volumeManager-function getVolumeById(volumeId: string): Promise<Volume>--><!--Device-volumeManager-function getVolumeById(volumeId: string): Promise<Volume>-End-->
+
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -68,7 +71,7 @@ Obtains information about a volume based on the volume ID. This API uses a promi
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Volume&gt; | Promise used to return the volume information of the current ID. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Volume> | Promise used to return the volume information of the current ID. |
 
 **Error codes:**
 

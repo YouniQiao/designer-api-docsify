@@ -4,6 +4,8 @@ Defines ChipV2 options interface.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export interface IChipV2OptionsConfig--><!--Device-unnamed-export interface IChipV2OptionsConfig-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Set accessibility description for Chip.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-IChipV2OptionsConfig-accessibilityDescription?: ResourceStr--><!--Device-IChipV2OptionsConfig-accessibilityDescription?: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityLevel
@@ -45,6 +49,8 @@ Set accessibility level for Chip.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-IChipV2OptionsConfig-accessibilityLevel?: string--><!--Device-IChipV2OptionsConfig-accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,6 +70,8 @@ Set accessibility selected type for Chip.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-IChipV2OptionsConfig-accessibilitySelectedType?: ChipV2AccessibilitySelectedType--><!--Device-IChipV2OptionsConfig-accessibilitySelectedType?: ChipV2AccessibilitySelectedType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## activated
@@ -81,6 +89,8 @@ Set whether chip is active or not.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-IChipV2OptionsConfig-activated?: boolean--><!--Device-IChipV2OptionsConfig-activated?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,6 +110,8 @@ Chip background color when chip is activated.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-IChipV2OptionsConfig-activatedBackgroundColor?: ColorMetrics--><!--Device-IChipV2OptionsConfig-activatedBackgroundColor?: ColorMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## activatedBackgroundSystemMaterial
@@ -108,8 +120,7 @@ Chip background color when chip is activated.
 activatedBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
-Set system-styled materials for the component which is activated. Different materials have different effects,
-which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
+Set system-styled materials for the component which is activated. Different materials have different effects,which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
 
 **Type:** uiMaterial.Material
 
@@ -118,6 +129,8 @@ which can influence the backgroundColor, border, shadow, and other visual attrib
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-IChipV2OptionsConfig-activatedBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-IChipV2OptionsConfig-activatedBackgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -137,6 +150,8 @@ Show close icon.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-IChipV2OptionsConfig-allowClose?: boolean--><!--Device-IChipV2OptionsConfig-allowClose?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundColor
@@ -155,6 +170,8 @@ Chip background color.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-IChipV2OptionsConfig-backgroundColor?: ColorMetrics--><!--Device-IChipV2OptionsConfig-backgroundColor?: ColorMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundSystemMaterial
@@ -163,8 +180,7 @@ Chip background color.
 backgroundSystemMaterial?: uiMaterial.Material
 ```
 
-Set system-styled materials for the component. Different materials have different effects, which can influence
-the backgroundColor, border, shadow, and other visual attributes of the component.
+Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
 
 **Type:** uiMaterial.Material
 
@@ -173,6 +189,8 @@ the backgroundColor, border, shadow, and other visual attributes of the componen
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-IChipV2OptionsConfig-backgroundSystemMaterial?: uiMaterial.Material--><!--Device-IChipV2OptionsConfig-backgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -192,6 +210,8 @@ Chip radius.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-IChipV2OptionsConfig-borderRadius?: LengthMetrics--><!--Device-IChipV2OptionsConfig-borderRadius?: LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## closeIcon
@@ -209,6 +229,8 @@ Set config for default close icon when 'allowClose' is true.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-IChipV2OptionsConfig-closeIcon?: ChipV2CloseIcon--><!--Device-IChipV2OptionsConfig-closeIcon?: ChipV2CloseIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -228,6 +250,8 @@ Indicates the attribute of the current chip direction.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-IChipV2OptionsConfig-direction?: Direction--><!--Device-IChipV2OptionsConfig-direction?: Direction-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enabled
@@ -245,6 +269,8 @@ Enable chip.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-IChipV2OptionsConfig-enabled?: boolean--><!--Device-IChipV2OptionsConfig-enabled?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -264,6 +290,8 @@ Set font size for the label text and the close icon.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-IChipV2OptionsConfig-fontSize?: LengthMetrics--><!--Device-IChipV2OptionsConfig-fontSize?: LengthMetrics-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## label
@@ -281,6 +309,8 @@ Chip label.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-IChipV2OptionsConfig-label: ChipV2Label--><!--Device-IChipV2OptionsConfig-label: ChipV2Label-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -300,6 +330,8 @@ Maximum font scale for Chip.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-IChipV2OptionsConfig-maxFontScale?: number | Resource--><!--Device-IChipV2OptionsConfig-maxFontScale?: number | Resource-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## minFontScale
@@ -317,6 +349,8 @@ Minimum font scale for Chip.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-IChipV2OptionsConfig-minFontScale?: number | Resource--><!--Device-IChipV2OptionsConfig-minFontScale?: number | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -336,6 +370,8 @@ On clicked action.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-IChipV2OptionsConfig-onClicked?: Callback<void>--><!--Device-IChipV2OptionsConfig-onClicked?: Callback<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onClose
@@ -353,6 +389,8 @@ On close action.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-IChipV2OptionsConfig-onClose?: VoidCallback--><!--Device-IChipV2OptionsConfig-onClose?: VoidCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -372,6 +410,8 @@ Chip padding.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-IChipV2OptionsConfig-padding?: LocalizedPadding--><!--Device-IChipV2OptionsConfig-padding?: LocalizedPadding-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## prefixIcon
@@ -389,6 +429,8 @@ Chip prefix icon.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-IChipV2OptionsConfig-prefixIcon?: ChipV2Icon--><!--Device-IChipV2OptionsConfig-prefixIcon?: ChipV2Icon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -408,6 +450,8 @@ Chip size.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-IChipV2OptionsConfig-size?: ChipV2Size | SizeT<LengthMetrics>--><!--Device-IChipV2OptionsConfig-size?: ChipV2Size | SizeT<LengthMetrics>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## suffixIcon
@@ -425,6 +469,8 @@ Chip suffix icon.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-IChipV2OptionsConfig-suffixIcon?: ChipV2Icon--><!--Device-IChipV2OptionsConfig-suffixIcon?: ChipV2Icon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

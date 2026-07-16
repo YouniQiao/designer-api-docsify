@@ -1,9 +1,10 @@
 # ScopeHelper
 
-Provides APIs to define the valid range of a field. The constructor of this class creates comparable objects with
-lower and upper limits.
+Provides APIs to define the valid range of a field. The constructor of this class creates comparable objects with lower and upper limits.
 
 **Since:** 9
+
+<!--Device-util-class ScopeHelper--><!--Device-util-class ScopeHelper-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,19 +26,21 @@ Limits a value to this **Scope**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ScopeHelper-clamp(value: ScopeType): ScopeType--><!--Device-ScopeHelper-clamp(value: ScopeType): ScopeType-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ScopeType | Yes | Value specified. |
+| value | [ScopeType](arkts-arkts-scopetype-t.md) | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ScopeType | Returns **lowerObj** if the specified value is less than the lower limit; returns**upperObj** if the specified value is greater than the upper limit; returns the specified value if it iswithin this **Scope**. |
+| [ScopeType](arkts-arkts-scopetype-t.md) | Returns **lowerObj** if the specified value is less than the lower limit; returns **upperObj** if the specified value is greater than the upper limit; returns the specified value if it is within this **Scope**. |
 
 **Example**
 
@@ -84,14 +87,16 @@ A constructor used to create a **ScopeHelper** object with the specified upper a
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ScopeHelper-constructor(lowerObj: ScopeType, upperObj: ScopeType)--><!--Device-ScopeHelper-constructor(lowerObj: ScopeType, upperObj: ScopeType)-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | ScopeType | Yes | Lower limit of the **Scope** object. |
-| upperObj | ScopeType | Yes | Upper limit of the **Scope** object. |
+| lowerObj | [ScopeType](arkts-arkts-scopetype-t.md) | Yes | Lower limit of the **Scope** object. |
+| upperObj | [ScopeType](arkts-arkts-scopetype-t.md) | Yes | Upper limit of the **Scope** object. |
 
 **Example**
 
@@ -135,13 +140,15 @@ Checks whether a range is within this **Scope**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ScopeHelper-contains(value: ScopeType): boolean--><!--Device-ScopeHelper-contains(value: ScopeType): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ScopeType | Yes | Value specified. |
+| value | [ScopeType](arkts-arkts-scopetype-t.md) | Yes | Value specified. |
 
 **Return value:**
 
@@ -194,13 +201,15 @@ Checks whether a range is within this **Scope**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ScopeHelper-contains(range: ScopeHelper): boolean--><!--Device-ScopeHelper-contains(range: ScopeHelper): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | ScopeHelper | Yes | **Scope** specified. |
+| range | [ScopeHelper](arkts-arkts-scopehelper-c.md) | Yes | **Scope** specified. |
 
 **Return value:**
 
@@ -255,20 +264,22 @@ Obtains the union set of this **Scope** and the given lower and upper limits.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ScopeHelper-expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper--><!--Device-ScopeHelper-expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | ScopeType | Yes | Lower limit. |
-| upperObj | ScopeType | Yes | Upper limit. |
+| lowerObj | [ScopeType](arkts-arkts-scopetype-t.md) | Yes | Lower limit. |
+| upperObj | [ScopeType](arkts-arkts-scopetype-t.md) | Yes | Upper limit. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ScopeHelper | Union set of this **Scope** and the given lower and upper limits. |
+| [ScopeHelper](arkts-arkts-scopehelper-c.md) | Union set of this **Scope** and the given lower and upper limits. |
 
 **Example**
 
@@ -316,19 +327,21 @@ Obtains the union set of this **Scope** and the given **Scope**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ScopeHelper-expand(range: ScopeHelper): ScopeHelper--><!--Device-ScopeHelper-expand(range: ScopeHelper): ScopeHelper-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | ScopeHelper | Yes | **Scope** specified. |
+| range | [ScopeHelper](arkts-arkts-scopehelper-c.md) | Yes | **Scope** specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ScopeHelper | Union set of this **Scope** and the given **Scope**. |
+| [ScopeHelper](arkts-arkts-scopehelper-c.md) | Union set of this **Scope** and the given **Scope**. |
 
 **Example**
 
@@ -377,19 +390,21 @@ Obtains the union set of this **Scope** and the given value.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ScopeHelper-expand(value: ScopeType): ScopeHelper--><!--Device-ScopeHelper-expand(value: ScopeType): ScopeHelper-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ScopeType | Yes | Value specified. |
+| value | [ScopeType](arkts-arkts-scopetype-t.md) | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ScopeHelper | Union set of this **Scope** and the given value. |
+| [ScopeHelper](arkts-arkts-scopehelper-c.md) | Union set of this **Scope** and the given value. |
 
 **Example**
 
@@ -436,13 +451,15 @@ Obtains the lower limit of this **Scope**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ScopeHelper-getLower(): ScopeType--><!--Device-ScopeHelper-getLower(): ScopeType-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ScopeType | Lower limit of this **Scope**. |
+| [ScopeType](arkts-arkts-scopetype-t.md) | Lower limit of this **Scope**. |
 
 **Example**
 
@@ -488,13 +505,15 @@ Obtains the upper limit of this **Scope**.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ScopeHelper-getUpper(): ScopeType--><!--Device-ScopeHelper-getUpper(): ScopeType-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ScopeType | Upper limit of this **Scope**. |
+| [ScopeType](arkts-arkts-scopetype-t.md) | Upper limit of this **Scope**. |
 
 **Example**
 
@@ -534,12 +553,13 @@ console.info("result = " + result);
 intersect(range: ScopeHelper): ScopeHelper
 ```
 
-Obtains the intersection of this **Scope** and the given **Scope**. If the intersection is empty, an exception is
-thrown.
+Obtains the intersection of this **Scope** and the given **Scope**. If the intersection is empty, an exception is thrown.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ScopeHelper-intersect(range: ScopeHelper): ScopeHelper--><!--Device-ScopeHelper-intersect(range: ScopeHelper): ScopeHelper-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -547,13 +567,13 @@ thrown.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | ScopeHelper | Yes | **Scope** specified. |
+| range | [ScopeHelper](arkts-arkts-scopehelper-c.md) | Yes | **Scope** specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ScopeHelper | Intersection of this **Scope** and the given **Scope**. |
+| [ScopeHelper](arkts-arkts-scopehelper-c.md) | Intersection of this **Scope** and the given **Scope**. |
 
 **Example**
 
@@ -596,12 +616,13 @@ console.info("result = " + result);
 intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper
 ```
 
-Obtains the intersection of this **Scope** and the given lower and upper limits. If the intersection is empty, an
-exception is thrown.
+Obtains the intersection of this **Scope** and the given lower and upper limits. If the intersection is empty, an exception is thrown.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ScopeHelper-intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper--><!--Device-ScopeHelper-intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -609,14 +630,14 @@ exception is thrown.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | ScopeType | Yes | Lower limit. |
-| upperObj | ScopeType | Yes | Upper limit. |
+| lowerObj | [ScopeType](arkts-arkts-scopetype-t.md) | Yes | Lower limit. |
+| upperObj | [ScopeType](arkts-arkts-scopetype-t.md) | Yes | Upper limit. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ScopeHelper | Intersection of this **Scope** and the given lower and upper limits. |
+| [ScopeHelper](arkts-arkts-scopehelper-c.md) | Intersection of this **Scope** and the given lower and upper limits. |
 
 **Example**
 
@@ -663,6 +684,8 @@ Obtains a string representation that contains this **Scope**.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ScopeHelper-toString(): string--><!--Device-ScopeHelper-toString(): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

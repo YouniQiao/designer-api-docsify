@@ -4,6 +4,8 @@ Defines the result of the request for the modal dialog box. It contains **Result
 
 **Since:** 9
 
+<!--Device-dialogRequest-export interface RequestResult--><!--Device-dialogRequest-export interface RequestResult-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
@@ -26,6 +28,8 @@ Result code of the request.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-RequestResult-result: ResultCode--><!--Device-RequestResult-result: ResultCode-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## want
@@ -41,6 +45,8 @@ Want information, such as the ability name and bundle name.
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RequestResult-want?: Want--><!--Device-RequestResult-want?: Want-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

@@ -1,9 +1,10 @@
 # UIExtensionContentSession
 
-UIExtensionContentSession is the UI operation class for the UIExtensionAbility. It provides control over page loading
-and allows configuration of the window privacy mode of the host application.
+UIExtensionContentSession is the UI operation class for the UIExtensionAbility. It provides control over page loading and allows configuration of the window privacy mode of the host application.
 
 **Since:** 10
+
+<!--Device-unnamed-declare class UIExtensionContentSession--><!--Device-unnamed-declare class UIExtensionContentSession-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -19,12 +20,13 @@ import { UIExtensionContentSession } from '@kit.AbilityKit';
 getUIExtensionHostWindowProxy(): uiExtensionHost.UIExtensionHostWindowProxy
 ```
 
-Obtains the window object corresponding to the current UIExtension to notify the width, height, position, and
-avoided area.
+Obtains the window object corresponding to the current UIExtension to notify the width, height, position, and avoided area.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-getUIExtensionHostWindowProxy(): uiExtensionHost.UIExtensionHostWindowProxy--><!--Device-UIExtensionContentSession-getUIExtensionHostWindowProxy(): uiExtensionHost.UIExtensionHostWindowProxy-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -102,6 +104,8 @@ Sends data to the UIExtensionComponent.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-UIExtensionContentSession-sendData(data: Record<string, Object>): void--><!--Device-UIExtensionContentSession-sendData(data: Record<string, Object>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -110,7 +114,7 @@ Sends data to the UIExtensionComponent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | Yes | Data to send.<br>**Since:** 11 |
+| data | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Object> | Yes | Data to send.<br>**Since:** 11 |
 
 **Error codes:**
 
@@ -161,12 +165,13 @@ struct Index {
 setReceiveDataCallback(callback: (data: Record<string, Object>) => void): void
 ```
 
-Sets a callback to receive data from the UIExtensionComponent. This API uses an asynchronous callback to return the
-result.
+Sets a callback to receive data from the UIExtensionComponent. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-setReceiveDataCallback(callback: (data: Record<string, Object>) => void): void--><!--Device-UIExtensionContentSession-setReceiveDataCallback(callback: (data: Record<string, Object>) => void): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -176,7 +181,7 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (data: Record&lt;string, Object&gt;) =&gt; void | Yes | Callback used to return the received data. |
+| callback | (data: Record<string, Object>) => void | Yes | Callback used to return the received data. |
 
 **Error codes:**
 
@@ -220,12 +225,13 @@ struct Index {
 setReceiveDataForResultCallback(callback: (data: Record<string, Object>) => Record<string, Object>): void
 ```
 
-Sets a callback with a return value to receive data from the UIExtensionComponent. This API uses an asynchronous
-callback to return the result.
+Sets a callback with a return value to receive data from the UIExtensionComponent. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-setReceiveDataForResultCallback(callback: (data: Record<string, Object>) => Record<string, Object>): void--><!--Device-UIExtensionContentSession-setReceiveDataForResultCallback(callback: (data: Record<string, Object>) => Record<string, Object>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -235,7 +241,7 @@ callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (data: Record&lt;string, Object&gt;) =&gt; Record&lt;string, Object&gt; | Yes | Callback used to return the received data with a return value. |
+| callback | (data: Record<string, Object>) => Record<string, Object> | Yes | Callback used to return the received data with a return value. |
 
 **Error codes:**
 
@@ -280,13 +286,13 @@ struct Index {
 setWindowBackgroundColor(color: string): void
 ```
 
-Sets the background color for the loading page of the UIExtensionAbility. This API can be used only after
-[loadContent()](arkts-ability-uiextensioncontentsession-c.md#loadcontent-1) is called
-and takes effect.
+Sets the background color for the loading page of the UIExtensionAbility. This API can be used only after [loadContent()](arkts-ability-uiextensioncontentsession-c.md#loadcontent-1) is called and takes effect.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-setWindowBackgroundColor(color: string): void--><!--Device-UIExtensionContentSession-setWindowBackgroundColor(color: string): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -296,7 +302,7 @@ and takes effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | string | Yes | Background color to set. The value is a hexadecimal RGB or ARGB color code and is caseinsensitive, for example, **#00FF00** or **#FF00FF00**. |
+| color | string | Yes | Background color to set. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, **#00FF00** or **#FF00FF00**. |
 
 **Error codes:**
 
@@ -342,23 +348,19 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbility(want: Want, callback: AsyncCallback<void>): void
 ```
 
-Starts an ability. This API uses an asynchronous callback to return the result.
-UI extension uses this method to start a specific ability.If the caller application is in foreground,
-you can use this method to start ability; If the caller application is in the background,
-you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND.
-If the target ability is visible, you can start the target ability; If the target ability is invisible,
-you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.
-If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
+Starts an ability. This API uses an asynchronous callback to return the result.UI extension uses this method to start a specific ability.If the caller application is in foreground,you can use this method to start ability; If the caller application is in the background,you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
 
-> **NOTE**
->
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../../application-models/component-startup-rules.md).
+> **NOTE**  
+>  
+> For details about the startup rules for the components in the stage model, see  
+> [Component Startup Rules (Stage Model)](../../../../application-models/component-startup-rules.md).  
 > > The application where the UIExtensionComponent is located must be running in the foreground and gain focus.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-startAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-startAbility(want: Want, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -368,8 +370,8 @@ If the target ability is in cross-device, you need to apply for permission:ohos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information about the target ability. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the ability is started, **err** is**undefined**; otherwise, **err** is an error object. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information about the target ability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the ability is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -424,23 +426,19 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void
 ```
 
-Starts an ability with **options** specified. This API uses an asynchronous callback to return the result.
-UI extension uses this method to start a specific ability.If the caller application is in foreground,
-you can use this method to start ability; If the caller application is in the background,
-you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND.
-If the target ability is visible, you can start the target ability; If the target ability is invisible,
-you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.
-If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
+Starts an ability with **options** specified. This API uses an asynchronous callback to return the result.UI extension uses this method to start a specific ability.If the caller application is in foreground,you can use this method to start ability; If the caller application is in the background,you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
 
-> **NOTE**
->
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../../application-models/component-startup-rules.md).
+> **NOTE**  
+>  
+> For details about the startup rules for the components in the stage model, see  
+> [Component Startup Rules (Stage Model)](../../../../application-models/component-startup-rules.md).  
 > > The application where the UIExtensionComponent is located must be running in the foreground and gain focus.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -450,9 +448,9 @@ If the target ability is in cross-device, you need to apply for permission:ohos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information about the target ability. |
-| options | StartOptions | Yes | Parameters used for starting the ability. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the ability is started, **err** is**undefined**; otherwise, **err** is an error object. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information about the target ability. |
+| options | [StartOptions](arkts-ability-startoptions-c-sys.md) | Yes | Parameters used for starting the ability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the ability is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -509,23 +507,19 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbility(want: Want, options?: StartOptions): Promise<void>
 ```
 
-Starts an ability. This API uses a promise to return the result.
-UI extension uses this method to start a specific ability.If the caller application is in foreground,
-you can use this method to start ability; If the caller application is in the background,
-you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND.
-If the target ability is visible, you can start the target ability; If the target ability is invisible,
-you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.
-If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
+Starts an ability. This API uses a promise to return the result.UI extension uses this method to start a specific ability.If the caller application is in foreground,you can use this method to start ability; If the caller application is in the background,you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
 
-> **NOTE**
->
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../../application-models/component-startup-rules.md).
+> **NOTE**  
+>  
+> For details about the startup rules for the components in the stage model, see  
+> [Component Startup Rules (Stage Model)](../../../../application-models/component-startup-rules.md).  
 > > The application where the UIExtensionComponent is located must be running in the foreground and gain focus.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-startAbility(want: Want, options?: StartOptions): Promise<void>--><!--Device-UIExtensionContentSession-startAbility(want: Want, options?: StartOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -535,14 +529,14 @@ If the target ability is in cross-device, you need to apply for permission:ohos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information about the target ability. |
-| options | StartOptions | No | Parameters used for starting the ability. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information about the target ability. |
+| options | [StartOptions](arkts-ability-startoptions-c-sys.md) | No | Parameters used for starting the ability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -601,20 +595,13 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void
 ```
 
-Starts an ability as the caller. The initial ability places its caller information (such as the bundle name and
-ability name) in the **want** parameter and transfers the information to an ExtensionAbility at the middle layer.
-When the ExtensionAbility starts another ability by calling this API, the started ability can obtain the caller
-information of the initial ability from the **onCreate** lifecycle. This API uses an asynchronous callback to
-return the result.
-If the caller application is in foreground, you can use this method to start ability; If the caller application is
-in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND.
-If the target ability is visible, you can start the target ability; If the target ability is invisible,
-you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.
-If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
+Starts an ability as the caller. The initial ability places its caller information (such as the bundle name and ability name) in the **want** parameter and transfers the information to an ExtensionAbility at the middle layer.When the ExtensionAbility starts another ability by calling this API, the started ability can obtain the caller information of the initial ability from the **onCreate** lifecycle. This API uses an asynchronous callback to return the result.If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -624,8 +611,8 @@ If the target ability is in cross-device, you need to apply for permission:ohos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information about the target ability. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**; otherwise, **err** is an error object. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information about the target ability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -685,20 +672,13 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<void>): void
 ```
 
-Starts an ability as the caller, with **options** specified. The initial ability places its caller information (
-such as the bundle name and ability name) in the **want** parameter and transfers the information to an
-ExtensionAbility at the middle layer. When the ExtensionAbility starts another ability by calling this API, the
-started ability can obtain the caller information of the initial ability from the **onCreate** lifecycle. This API
-uses an asynchronous callback to return the result.
-If the caller application is in foreground, you can use this method to start ability; If the caller application is
-in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND.
-If the target ability is visible, you can start the target ability; If the target ability is invisible,
-you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.
-If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
+Starts an ability as the caller, with **options** specified. The initial ability places its caller information (such as the bundle name and ability name) in the **want** parameter and transfers the information to an ExtensionAbility at the middle layer. When the ExtensionAbility starts another ability by calling this API, the started ability can obtain the caller information of the initial ability from the **onCreate** lifecycle. This API uses an asynchronous callback to return the result.If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -708,9 +688,9 @@ If the target ability is in cross-device, you need to apply for permission:ohos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information about the target ability. |
-| options | StartOptions | Yes | Parameters used for starting the ability. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is**undefined**; otherwise, **err** is an error object. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information about the target ability. |
+| options | [StartOptions](arkts-ability-startoptions-c-sys.md) | Yes | Parameters used for starting the ability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -772,19 +752,13 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 ```
 
-Starts an ability as the caller. The initial ability places its caller information (such as the bundle name and
-ability name) in the **want** parameter and transfers the information to an ExtensionAbility at the middle layer.
-When the ExtensionAbility starts another ability by calling this API, the started ability can obtain the caller
-information of the initial ability from the **onCreate** lifecycle. This API uses a promise to return the result.
-If the caller application is in foreground, you can use this method to start ability; If the caller application is
-in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND.
-If the target ability is visible, you can start the target ability; If the target ability is invisible,
-you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.
-If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
+Starts an ability as the caller. The initial ability places its caller information (such as the bundle name and ability name) in the **want** parameter and transfers the information to an ExtensionAbility at the middle layer.When the ExtensionAbility starts another ability by calling this API, the started ability can obtain the caller information of the initial ability from the **onCreate** lifecycle. This API uses a promise to return the result.If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>--><!--Device-UIExtensionContentSession-startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -794,14 +768,14 @@ If the target ability is in cross-device, you need to apply for permission:ohos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information about the target ability. |
-| options | StartOptions | No | Parameters used for starting the ability. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information about the target ability. |
+| options | [StartOptions](arkts-ability-startoptions-c-sys.md) | No | Parameters used for starting the ability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -865,35 +839,25 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 ```
 
-Starts an ability and returns the result to the caller after the ability is terminated. This API uses an
-asynchronous callback to return the result.
-If the caller application is in foreground, you can use this method to start ability; If the caller application
-is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND.
-If the target ability is visible, you can start the target ability; If the target ability is invisible,
-you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.
-If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
+Starts an ability and returns the result to the caller after the ability is terminated. This API uses an asynchronous callback to return the result.If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
 
 An ability can be terminated in the following ways:
 
-- Normally, you can call
-[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult-1)
-to terminate the ability. The result is returned to the caller.
-- If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**,
-is returned to the caller.
-- If different applications call this API to start an ability that uses the singleton mode and then call
-[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult-1)
-to terminate the ability, the normal result is returned to the last caller, and an exception message, in which
-**resultCode** is **-1**, is returned to others.
+- Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult-1)to terminate the ability. The result is returned to the caller.  
+- If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**,is returned to the caller.  
+- If different applications call this API to start an ability that uses the singleton mode and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult-1)to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
-> **NOTE**
->
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../../application-models/component-startup-rules.md).
+> **NOTE**  
+>  
+> For details about the startup rules for the components in the stage model, see  
+> [Component Startup Rules (Stage Model)](../../../../application-models/component-startup-rules.md).  
 > > The application where the UIExtensionComponent is located must be running in the foreground and gain focus.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void--><!--Device-UIExtensionContentSession-startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -903,8 +867,8 @@ to terminate the ability, the normal result is returned to the last caller, and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information about the target ability. |
-| callback | AsyncCallback&lt;AbilityResult&gt; | Yes | Callback used to return the result. If the ability is started andterminated, **err** is **undefined** and **data** is the obtained result code and data; otherwise, **err** is anerror object. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information about the target ability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AbilityResult> | Yes | Callback used to return the result. If the ability is started and terminated, **err** is **undefined** and **data** is the obtained result code and data; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -959,35 +923,25 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback<AbilityResult>): void
 ```
 
-Starts an ability with **options** specified and returns the result to the caller after the ability is terminated.
-This API uses an asynchronous callback to return the result.
-If the caller application is in foreground, you can use this method to start ability; If the caller application
-is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND.
-If the target ability is visible, you can start the target ability; If the target ability is invisible,
-you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.
-If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
+Starts an ability with **options** specified and returns the result to the caller after the ability is terminated.This API uses an asynchronous callback to return the result.If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
 
 An ability can be terminated in the following ways:
 
-- Normally, you can call
-[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult-1)
-to terminate the ability. The result is returned to the caller.
-- If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**,
-is returned to the caller.
-- If different applications call this API to start an ability that uses the singleton mode and then call
-[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult-1)
-to terminate the ability, the normal result is returned to the last caller, and an exception message, in which
-**resultCode** is **-1**, is returned to others.
+- Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult-1)to terminate the ability. The result is returned to the caller.  
+- If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**,is returned to the caller.  
+- If different applications call this API to start an ability that uses the singleton mode and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult-1)to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
-> **NOTE**
->
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../../application-models/component-startup-rules.md).
+> **NOTE**  
+>  
+> For details about the startup rules for the components in the stage model, see  
+> [Component Startup Rules (Stage Model)](../../../../application-models/component-startup-rules.md).  
 > The application where the UIExtensionComponent is located must be running in the foreground and gain focus.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback<AbilityResult>): void--><!--Device-UIExtensionContentSession-startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback<AbilityResult>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -997,9 +951,9 @@ to terminate the ability, the normal result is returned to the last caller, and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information about the target ability. |
-| options | StartOptions | Yes | Parameters used for starting the ability. |
-| callback | AsyncCallback&lt;AbilityResult&gt; | Yes | Callback used to return the result. If the ability is started andterminated, **err** is **undefined** and **data** is the obtained result code and data; otherwise, **err** is anerror object. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information about the target ability. |
+| options | [StartOptions](arkts-ability-startoptions-c-sys.md) | Yes | Parameters used for starting the ability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AbilityResult> | Yes | Callback used to return the result. If the ability is started and terminated, **err** is **undefined** and **data** is the obtained result code and data; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1056,35 +1010,25 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult>
 ```
 
-Starts an ability and returns the result to the caller after the ability is terminated. This API uses a promise to
-return the result.
-If the caller application is in foreground, you can use this method to start ability; If the caller application
-is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND.
-If the target ability is visible, you can start the target ability; If the target ability is invisible,
-you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.
-If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
+Starts an ability and returns the result to the caller after the ability is terminated. This API uses a promise to return the result.If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
 
 An ability can be terminated in the following ways:
 
-- Normally, you can call
-[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult-1)
-to terminate the ability. The result is returned to the caller.
-- If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**,
-is returned to the caller.
-- If different applications call this API to start an ability that uses the singleton mode and then call
-[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult-1)
-to terminate the ability, the normal result is returned to the last caller, and an exception message, in which
-**resultCode** is **-1**, is returned to others.
+- Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult-1)to terminate the ability. The result is returned to the caller.  
+- If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**,is returned to the caller.  
+- If different applications call this API to start an ability that uses the singleton mode and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult-1)to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
-> **NOTE**
->
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../../application-models/component-startup-rules.md).
+> **NOTE**  
+>  
+> For details about the startup rules for the components in the stage model, see  
+> [Component Startup Rules (Stage Model)](../../../../application-models/component-startup-rules.md).  
 > The application where the UIExtensionComponent is located must be running in the foreground and gain focus.
 
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIExtensionContentSession-startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult>--><!--Device-UIExtensionContentSession-startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -1094,14 +1038,14 @@ to terminate the ability, the normal result is returned to the last caller, and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information about the target ability. |
-| options | StartOptions | No | Parameters used for starting the ability. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information about the target ability. |
+| options | [StartOptions](arkts-ability-startoptions-c-sys.md) | No | Parameters used for starting the ability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AbilityResult&gt; | Promise used to return the result code and data. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AbilityResult> | Promise used to return the result code and data. |
 
 **Error codes:**
 

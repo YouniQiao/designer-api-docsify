@@ -12,14 +12,15 @@ import { abilityManager } from '@kit.AbilityKit';
 function notifySaveAsResult(parameter: AbilityResult, requestCode: number, callback: AsyncCallback<void>): void
 ```
 
-Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-apis/arkts-dlppermission.md) management application to notify
-a sandbox application of the data saving result. This API uses an asynchronous callback to return the result.
+Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-apis/arkts-dlppermission.md) management application to notify a sandbox application of the data saving result. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Deprecated since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-abilityManager-function notifySaveAsResult(parameter: AbilityResult, requestCode: int, callback: AsyncCallback<void>): void--><!--Device-abilityManager-function notifySaveAsResult(parameter: AbilityResult, requestCode: int, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -29,9 +30,9 @@ a sandbox application of the data saving result. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | AbilityResult | Yes | Information returned to the caller. |
+| parameter | [AbilityResult](arkts-ability-abilityresult-i.md) | Yes | Information returned to the caller. |
 | requestCode | number | Yes | Request code passed in by the DLP management application. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is**undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -49,14 +50,15 @@ a sandbox application of the data saving result. This API uses an asynchronous c
 function notifySaveAsResult(parameter: AbilityResult, requestCode: number): Promise<void>
 ```
 
-Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-apis/arkts-dlppermission.md) management application to notify
-a sandbox application of the data saving result. This API uses a promise to return the result.
+Used by the [Data Loss Prevention (DLP)](../../apis-data-protection-kit/arkts-apis/arkts-dlppermission.md) management application to notify a sandbox application of the data saving result. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Deprecated since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-abilityManager-function notifySaveAsResult(parameter: AbilityResult, requestCode: int): Promise<void>--><!--Device-abilityManager-function notifySaveAsResult(parameter: AbilityResult, requestCode: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -66,14 +68,14 @@ a sandbox application of the data saving result. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | AbilityResult | Yes | Information returned to the caller. |
+| parameter | [AbilityResult](arkts-ability-abilityresult-i.md) | Yes | Information returned to the caller. |
 | requestCode | number | Yes | Request code passed in by the DLP management application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

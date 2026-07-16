@@ -18,6 +18,8 @@ Sets the system hotkey shield status.
 
 **Required permissions:** ohos.permission.INPUT_CONTROL_DISPATCHING
 
+<!--Device-inputConsumer-function setShieldStatus(shieldMode: ShieldMode, isShield: boolean): void--><!--Device-inputConsumer-function setShieldStatus(shieldMode: ShieldMode, isShield: boolean): void-End-->
+
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Sets the system hotkey shield status.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shieldMode | ShieldMode | Yes | System hotkey shield mode. Currently, only **FACTORY_MODE** is supported, whichmeans to shield all system hotkeys. |
-| isShield | boolean | Yes | Whether to enable shortcut key shielding. The value **true** means to enable shortcutkey shielding, and the value **false** indicates the opposite. |
+| shieldMode | [ShieldMode](arkts-input-shieldmode-e-sys.md) | Yes | System hotkey shield mode. Currently, only **FACTORY_MODE** is supported, which means to shield all system hotkeys. |
+| isShield | boolean | Yes | Whether to enable shortcut key shielding. The value **true** means to enable shortcut key shielding, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

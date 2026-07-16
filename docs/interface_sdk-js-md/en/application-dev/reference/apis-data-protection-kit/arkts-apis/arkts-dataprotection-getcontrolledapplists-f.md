@@ -20,13 +20,15 @@ Obtain the list of applications that are subject to enterprise DLP control for t
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-dlpPermission-function getControlledAppLists(): Promise<Array<string>>--><!--Device-dlpPermission-function getControlledAppLists(): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise that returns the appIdentifiers of controlled applicationfor the current user. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise that returns the appIdentifiers of controlled application for the current user. |
 
 **Error codes:**
 

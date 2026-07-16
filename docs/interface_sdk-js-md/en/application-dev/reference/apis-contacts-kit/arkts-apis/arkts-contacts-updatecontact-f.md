@@ -22,14 +22,16 @@ Updates a contact. This API uses an asynchronous callback to return the result.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function updateContact(contact: Contact, callback: AsyncCallback<void>): void--><!--Device-contact-function updateContact(contact: Contact, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contact | Contact | Yes | Indicates the contact information. The ID is mandatory and can be obtained through[selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2). |
-| callback | AsyncCallback&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, theID of the updated contact is returned. If the operation fails, an error code is returned. |
+| contact | [Contact](arkts-contacts-contact-c.md) | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the updated contact is returned. If the operation fails, an error code is returned. |
 
 **Example**
 
@@ -73,15 +75,17 @@ Updates a contact. This API uses an asynchronous callback to return the result.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function updateContact(context: Context, contact: Contact, callback: AsyncCallback<void>): void--><!--Device-contact-function updateContact(context: Context, contact: Contact, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| contact | Contact | Yes | Indicates the contact information. The ID is mandatory and can be obtained through[selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2). |
-| callback | AsyncCallback&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, theID of the updated contact is returned. If the operation fails, an error code is returned. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| contact | [Contact](arkts-contacts-contact-c.md) | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the updated contact is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -130,8 +134,7 @@ contact.selectContacts().then((data) => {
 function updateContact(contact: Contact, attrs: ContactAttributes, callback: AsyncCallback<void>): void
 ```
 
-Updates a contact. (The contact attribute list can be imported.) This API uses an asynchronous callback to return
-the result.
+Updates a contact. (The contact attribute list can be imported.) This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -141,15 +144,17 @@ the result.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function updateContact(contact: Contact, attrs: ContactAttributes, callback: AsyncCallback<void>): void--><!--Device-contact-function updateContact(contact: Contact, attrs: ContactAttributes, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contact | Contact | Yes | Indicates the contact information. The ID is mandatory and can be obtained through[selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2). |
-| attrs | ContactAttributes | Yes | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, theID of the updated contact is returned. If the operation fails, an error code is returned. |
+| contact | [Contact](arkts-contacts-contact-c.md) | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2). |
+| attrs | [ContactAttributes](arkts-contacts-contactattributes-c.md) | Yes | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the updated contact is returned. If the operation fails, an error code is returned. |
 
 **Example**
 
@@ -188,12 +193,13 @@ contact.selectContacts().then((data) => {
 function updateContact(context: Context, contact: Contact, attrs: ContactAttributes, callback: AsyncCallback<void>): void
 ```
 
-Updates a contact. (The contact attribute list can be imported.) This API uses an asynchronous callback to return
-the result.
+Updates a contact. (The contact attribute list can be imported.) This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
+
+<!--Device-contact-function updateContact(context: Context, contact: Contact, attrs: ContactAttributes, callback: AsyncCallback<void>): void--><!--Device-contact-function updateContact(context: Context, contact: Contact, attrs: ContactAttributes, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -201,10 +207,10 @@ the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| contact | Contact | Yes | Indicates the contact information. The ID is mandatory and can be obtained through[selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2). |
-| attrs | ContactAttributes | Yes | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, theID of the updated contact is returned. If the operation fails, an error code is returned. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| contact | [Contact](arkts-contacts-contact-c.md) | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2). |
+| attrs | [ContactAttributes](arkts-contacts-contactattributes-c.md) | Yes | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the updated contact is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -264,20 +270,22 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function updateContact(contact: Contact, attrs?: ContactAttributes): Promise<void>--><!--Device-contact-function updateContact(contact: Contact, attrs?: ContactAttributes): Promise<void>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contact | Contact | Yes | Indicates the contact information. The ID is mandatory and can be obtained through[selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2). |
-| attrs | ContactAttributes | No | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
+| contact | [Contact](arkts-contacts-contact-c.md) | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2). |
+| attrs | [ContactAttributes](arkts-contacts-contactattributes-c.md) | No | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -317,21 +325,23 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
+<!--Device-contact-function updateContact(context: Context, contact: Contact, attrs?: ContactAttributes): Promise<void>--><!--Device-contact-function updateContact(context: Context, contact: Contact, attrs?: ContactAttributes): Promise<void>-End-->
+
 **System capability:** SystemCapability.Applications.ContactsData
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Indicates the context of application or capability. |
-| contact | Contact | Yes | Indicates the contact information. The ID is mandatory and can be obtained through[selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2). |
-| attrs | ContactAttributes | No | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| contact | [Contact](arkts-contacts-contact-c.md) | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts](arkts-contacts-selectcontacts-f.md#selectcontacts-2). |
+| attrs | [ContactAttributes](arkts-contacts-contactattributes-c.md) | No | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

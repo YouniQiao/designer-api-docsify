@@ -2,16 +2,24 @@
 
 本模块提供发起主动拖拽的能力，当应用接收到触摸或长按等事件时可以主动发起拖拽的动作，并在其中携带拖拽信息。
 
-> **说明：**
->
-> - 本模块功能依赖UI的执行上下文，不可在[UI上下文不明确](../../../../ui/arkts-global-interface.md#ui上下文不明确)的地方使用，参见
-> [UIContext](arkts-arkui-uicontext.md)说明。
->
+> **说明：**  
+>  
+> - 本模块功能依赖UI的执行上下文，不可在[UI上下文不明确](../../../../ui/arkts-global-interface.md#ui上下文不明确)的地方使用，参见  
+> [UIContext](arkts-arkui-uicontext.md)说明。  
+>  
 > - 示例效果请以真机运行为准，当前 DevEco Studio预览器不支持。
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace dragController--><!--Device-unnamed-declare namespace dragController-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { dragController } from '@kit.ArkUI';
+```
 
 ## 汇总
 
@@ -19,10 +27,10 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [createDragAction](arkts-arkui-createdragaction-f.md#createdragaction-1) | 创建拖拽的Action对象，需要显式指定拖拽背板图（可多个），以及拖拽的数据，跟手点等信息；当通过一个已创建的 Action 对象发起的拖拽未结束时，无法再次创建新的 Action 对象，接口会抛出异常；当Action对象的生命周期结束后，注册在该对象上的回调函数会失效，因此需要在一个尽量长的作用域下持有该对象，并在每次发起拖拽前通过createDragAction返回新的对象覆盖旧值。@link @ohos.arkui.UIContext}中的&gt; [getDragController](arkts-arkui-uicontext-c.md#getdragcontroller-1)方法获取当前UI&gt; 上下文关联的[DragController](arkts-arkui-dragcontroller-c.md)对象。&gt;&gt; - 建议控制传递的拖拽背板数量，传递过多容易导致拖起的效率问题。 |
+| [createDragAction](arkts-arkui-createdragaction-f.md#createdragaction-1) | 创建拖拽的Action对象，需要显式指定拖拽背板图（可多个），以及拖拽的数据，跟手点等信息；当通过一个已创建的 Action 对象发起的拖拽未结束时，无法再次创建新的 Action 对象，接口会抛出异常；当Action对象的生命周期结束后，注册在该对象上的回调函数会失效，因此需要在一个尽量长的作用域下持有该对象，并在每次发起拖拽前通过createDragAction返回新的对象覆盖旧值。 |
 | [executeDrag](arkts-arkui-executedrag-f.md#executedrag-1) | Execute a drag event. |
-| [executeDrag](arkts-arkui-executedrag-f.md#executedrag-2) | 主动发起拖拽能力，传入拖拽发起后跟手效果所拖拽的对象以及携带拖拽信息。使用Promise异步回调。@link @ohos.arkui.UIContext}中的&gt; [getDragController](arkts-arkui-uicontext-c.md#getdragcontroller-1)方法获取当前UI&gt; 上下文关联的[DragController](arkts-arkui-dragcontroller-c.md)对象。 |
-| [getDragPreview](arkts-arkui-getdragpreview-f.md#getdragpreview-1) | 返回一个代表拖拽背板的对象。@link @ohos.arkui.UIContext}中的&gt; [getDragController](arkts-arkui-uicontext-c.md#getdragcontroller-1)方法获取当前UI&gt; 上下文关联的[DragController](arkts-arkui-dragcontroller-c.md)对象。 |
+| [executeDrag](arkts-arkui-executedrag-f.md#executedrag-2) | 主动发起拖拽能力，传入拖拽发起后跟手效果所拖拽的对象以及携带拖拽信息。使用Promise异步回调。 |
+| [getDragPreview](arkts-arkui-getdragpreview-f.md#getdragpreview-1) | 返回一个代表拖拽背板的对象。 |
 
 ### 类
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-interface EncoderInfo--><!--Device-unnamed-interface EncoderInfo-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
+
+## 导入模块
+
+```TypeScript
+import { media } from '@kit.MediaKit';
+```
 
 ## bitRate
 
@@ -17,6 +25,8 @@ bitRate?: Range
 **类型：** Range
 
 **起始版本：** 11
+
+<!--Device-EncoderInfo-bitRate?: Range--><!--Device-EncoderInfo-bitRate?: Range-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -32,6 +42,8 @@ channels?: Range
 
 **起始版本：** 11
 
+<!--Device-EncoderInfo-channels?: Range--><!--Device-EncoderInfo-channels?: Range-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## frameRate
@@ -45,6 +57,8 @@ frameRate?: Range
 **类型：** Range
 
 **起始版本：** 11
+
+<!--Device-EncoderInfo-frameRate?: Range--><!--Device-EncoderInfo-frameRate?: Range-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -60,6 +74,8 @@ height?: Range
 
 **起始版本：** 11
 
+<!--Device-EncoderInfo-height?: Range--><!--Device-EncoderInfo-height?: Range-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## mimeType
@@ -73,6 +89,8 @@ mimeType: CodecMimeType
 **类型：** CodecMimeType
 
 **起始版本：** 11
+
+<!--Device-EncoderInfo-mimeType: CodecMimeType--><!--Device-EncoderInfo-mimeType: CodecMimeType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -88,6 +106,8 @@ sampleRate?: Array<number>
 
 **起始版本：** 11
 
+<!--Device-EncoderInfo-sampleRate?: Array<int>--><!--Device-EncoderInfo-sampleRate?: Array<int>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## type
@@ -102,6 +122,8 @@ type: string
 
 **起始版本：** 11
 
+<!--Device-EncoderInfo-type: string--><!--Device-EncoderInfo-type: string-End-->
+
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## width
@@ -115,6 +137,8 @@ width?: Range
 **类型：** Range
 
 **起始版本：** 11
+
+<!--Device-EncoderInfo-width?: Range--><!--Device-EncoderInfo-width?: Range-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 

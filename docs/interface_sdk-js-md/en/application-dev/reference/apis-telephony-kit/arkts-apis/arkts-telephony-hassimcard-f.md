@@ -16,6 +16,8 @@ Checks whether a SIM card is inserted in a specified slot.
 
 **Since:** 7
 
+<!--Device-sim-function hasSimCard(slotId: int, callback: AsyncCallback<boolean>): void--><!--Device-sim-function hasSimCard(slotId: int, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -23,7 +25,7 @@ Checks whether a SIM card is inserted in a specified slot.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Indicates the callback for hasSimCard.Returns {@code true} if a SIM card is inserted; return {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Indicates the callback for hasSimCard.Returns {@code true} if a SIM card is inserted; return {@code false} otherwise. |
 
 **Error codes:**
 
@@ -58,6 +60,8 @@ Checks whether a SIM card is inserted in a specified slot.
 
 **Since:** 7
 
+<!--Device-sim-function hasSimCard(slotId: int): Promise<boolean>--><!--Device-sim-function hasSimCard(slotId: int): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **Parameters:**
@@ -70,7 +74,7 @@ Checks whether a SIM card is inserted in a specified slot.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns {@code true} if a SIM card is inserted; return {@code false} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns {@code true} if a SIM card is inserted; return {@code false} otherwise. |
 
 **Error codes:**
 

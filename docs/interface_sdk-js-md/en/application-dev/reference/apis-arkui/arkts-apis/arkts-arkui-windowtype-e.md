@@ -4,6 +4,8 @@ Enumerates the window types.
 
 **Since:** 7
 
+<!--Device-window-enum WindowType--><!--Device-window-enum WindowType-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## TYPE_APP
@@ -18,6 +20,8 @@ Child window of an application.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-WindowType-TYPE_APP = 0--><!--Device-WindowType-TYPE_APP = 0-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## TYPE_SYSTEM_ALERT
@@ -31,6 +35,8 @@ System alert window.
 **Since:** 7
 
 **Deprecated since:** 11
+
+<!--Device-WindowType-TYPE_SYSTEM_ALERT = 1--><!--Device-WindowType-TYPE_SYSTEM_ALERT = 1-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -48,6 +54,8 @@ Global floating window.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WindowType-TYPE_FLOAT = 8--><!--Device-WindowType-TYPE_FLOAT = 8-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## TYPE_DIALOG
@@ -64,6 +72,8 @@ Modal window.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WindowType-TYPE_DIALOG = 16--><!--Device-WindowType-TYPE_DIALOG = 16-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## TYPE_MAIN
@@ -77,6 +87,8 @@ Main window of an application.
 This window type cannot be used during window creation.
 
 **Since:** 18
+
+<!--Device-WindowType-TYPE_MAIN = 32--><!--Device-WindowType-TYPE_MAIN = 32-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

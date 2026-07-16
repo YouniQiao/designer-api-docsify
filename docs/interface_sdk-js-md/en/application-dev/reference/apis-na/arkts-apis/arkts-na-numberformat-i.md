@@ -1,10 +1,14 @@
 # NumberFormat
 
+<!--Device-Intl-interface NumberFormat--><!--Device-Intl-interface NumberFormat-End-->
+
 ## format
 
 ```TypeScript
 format(value: number): string
 ```
+
+<!--Device-NumberFormat-format(value: number): string--><!--Device-NumberFormat-format(value: number): string-End-->
 
 **Parameters:**
 
@@ -24,9 +28,11 @@ format(value: number): string
 resolvedOptions(): ResolvedNumberFormatOptions
 ```
 
+<!--Device-NumberFormat-resolvedOptions(): ResolvedNumberFormatOptions--><!--Device-NumberFormat-resolvedOptions(): ResolvedNumberFormatOptions-End-->
+
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ResolvedNumberFormatOptions |  |
+| [ResolvedNumberFormatOptions](arkts-na-resolvednumberformatoptions-i.md) |  |
 

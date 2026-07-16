@@ -4,6 +4,8 @@ Defines the options for implicitly creating an application account.
 
 **Since:** 9
 
+<!--Device-appAccount-interface CreateAccountImplicitlyOptions--><!--Device-appAccount-interface CreateAccountImplicitlyOptions-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Authentication type.
 
 **Since:** 9
 
+<!--Device-CreateAccountImplicitlyOptions-authType?: string--><!--Device-CreateAccountImplicitlyOptions-authType?: string-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 ## parameters
@@ -38,6 +42,8 @@ Custom parameter object. By default, no value is passed in.
 
 **Since:** 9
 
+<!--Device-CreateAccountImplicitlyOptions-parameters?: Record<string, Object>--><!--Device-CreateAccountImplicitlyOptions-parameters?: Record<string, Object>-End-->
+
 **System capability:** SystemCapability.Account.AppAccount
 
 ## requiredLabels
@@ -51,6 +57,8 @@ Required labels. By default, no value is passed in.
 **Type:** Array<string>
 
 **Since:** 9
+
+<!--Device-CreateAccountImplicitlyOptions-requiredLabels?: Array<string>--><!--Device-CreateAccountImplicitlyOptions-requiredLabels?: Array<string>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 

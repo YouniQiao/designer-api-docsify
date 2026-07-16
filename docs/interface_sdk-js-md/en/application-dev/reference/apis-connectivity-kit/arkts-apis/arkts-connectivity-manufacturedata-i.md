@@ -8,6 +8,8 @@ Describes the manufacturer data.
 
 **Substitutes:** ManufactureData
 
+<!--Device-bluetoothManager-interface ManufactureData--><!--Device-bluetoothManager-interface ManufactureData-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -32,6 +34,8 @@ Indicates the manufacturer ID assigned by Bluetooth SIG
 
 **Substitutes:** manufactureId
 
+<!--Device-ManufactureData-manufactureId: number--><!--Device-ManufactureData-manufactureId: number-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## manufactureValue
@@ -49,6 +53,8 @@ Indicates the manufacturer data to add
 **Deprecated since:** 10
 
 **Substitutes:** manufactureValue
+
+<!--Device-ManufactureData-manufactureValue: ArrayBuffer--><!--Device-ManufactureData-manufactureValue: ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

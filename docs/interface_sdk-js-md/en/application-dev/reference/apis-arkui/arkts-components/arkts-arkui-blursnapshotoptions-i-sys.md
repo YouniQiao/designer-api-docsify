@@ -1,9 +1,10 @@
 # BlurSnapshotOptions (System API)
 
-Defines the options for blur snapshot optimization.
-Setting this object enables blur optimization.
+Defines the options for blur snapshot optimization.Setting this object enables blur optimization.
 
 **Since:** 26.0.0
+
+<!--Device-unnamed-declare interface BlurSnapshotOptions--><!--Device-unnamed-declare interface BlurSnapshotOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -15,8 +16,7 @@ Setting this object enables blur optimization.
 enableFreeze?: boolean
 ```
 
-Whether to enable freeze optimization for the blur snapshot.
-When enabled, freeze optimization is applied to reduce rendering overhead during blur snapshot.
+Whether to enable freeze optimization for the blur snapshot.When enabled, freeze optimization is applied to reduce rendering overhead during blur snapshot.
 
 **Type:** boolean
 
@@ -25,6 +25,8 @@ When enabled, freeze optimization is applied to reduce rendering overhead during
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BlurSnapshotOptions-enableFreeze?: boolean--><!--Device-BlurSnapshotOptions-enableFreeze?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

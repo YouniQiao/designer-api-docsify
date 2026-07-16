@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-audio-interface AudioDeviceEnhanceManager--><!--Device-audio-interface AudioDeviceEnhanceManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.DeviceEnhance
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## getSoundCardInfo
 
@@ -18,6 +26,8 @@ getSoundCardInfo(): Promise<SoundCardInfo>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioDeviceEnhanceManager-getSoundCardInfo(): Promise<SoundCardInfo>--><!--Device-AudioDeviceEnhanceManager-getSoundCardInfo(): Promise<SoundCardInfo>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.DeviceEnhance
 
 **系统接口：** 此接口为系统接口。
@@ -26,7 +36,7 @@ getSoundCardInfo(): Promise<SoundCardInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;SoundCardInfo&gt; | Promise用于返回声卡信息。 |
+| Promise<SoundCardInfo> | Promise用于返回声卡信息。 |
 
 **错误码：**
 

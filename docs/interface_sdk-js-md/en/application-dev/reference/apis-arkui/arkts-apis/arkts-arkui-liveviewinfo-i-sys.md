@@ -4,6 +4,8 @@ Information for LiveView in AI image generation.
 
 **Since:** 26.0.0
 
+<!--Device-imageGeneration-interface LiveViewInfo--><!--Device-imageGeneration-interface LiveViewInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -25,6 +27,8 @@ Get the long-term task ID for LiveView.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-LiveViewInfo-getLongTermTaskId(): int--><!--Device-LiveViewInfo-getLongTermTaskId(): int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +52,8 @@ Get the Want object for LiveView.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-LiveViewInfo-getWant(): Want--><!--Device-LiveViewInfo-getWant(): Want-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -56,7 +62,7 @@ Get the Want object for LiveView.
 
 | Type | Description |
 | --- | --- |
-| Want | Returns the Want object. |
+| [Want](arkts-arkui-want-t-sys.md) | Returns the Want object. |
 
 ## isLiveViewNeeded
 
@@ -69,6 +75,8 @@ Check whether LiveView is needed.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-LiveViewInfo-isLiveViewNeeded(): boolean--><!--Device-LiveViewInfo-isLiveViewNeeded(): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
